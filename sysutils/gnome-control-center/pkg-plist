@@ -11,13 +11,13 @@ bin/gnome-keyboard-properties
 bin/gnome-mouse-properties
 bin/gnome-network-preferences
 bin/gnome-sound-properties
-bin/themus-theme-applier
 bin/gnome-theme-manager
 bin/gnome-theme-thumbnailer
 bin/gnome-thumbnail-font
 bin/gnome-typing-monitor
 bin/gnome-ui-properties
 bin/gnome-window-properties
+bin/themus-theme-applier
 @unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas > /dev/null || /usr/bin/true
 etc/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas
 @exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas > /dev/null || /usr/bin/true
@@ -222,6 +222,5 @@ share/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 @dirrm share/gnome/control-center-2.0/pixmaps
 @dirrm share/gnome/control-center-2.0/interfaces
 @dirrm share/gnome/control-center-2.0/icons
-@dirrm share/gnome/applications
 @dirrm lib/window-manager-settings
 @dirrm include/gnome-window-settings-2.0
