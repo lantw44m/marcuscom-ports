@@ -1,0 +1,22 @@
+--- gtk/src/Makefile.in.orig	Tue Dec 23 00:13:53 2003
++++ gtk/src/Makefile.in	Tue Dec 23 00:24:04 2003
+@@ -77,9 +77,7 @@
+ .SUFFIXES: .java .class
+ 
+ .c.o:
+-	$(CC) -c $(CFLAGS) $< -o $@ $(JAVA_INCLUDES) $(GTK_CFLAGS) \
+-	    $(LIBGTKHTML_CFLAGS) $(GNOME_CFLAGS) $(LIBGLADE_CFLAGS)
+-		#-D@MACRO_FLAG@
++	$(CC) -c $(CFLAGS) $< -o $@ $(JAVA_INCLUDES) $(GTK_CFLAGS)
+ 
+ .java.o:
+ 	$(GCJ) $(GCJFLAGS) -g -O --classpath=${GCJ_CLASSPATH} -o $@ -c $<
+@@ -146,7 +144,7 @@
+ 	@(test ! -d ../lib && mkdir ../lib) || exit 0
+ 	$(CC) $(CFLAGS) -shared -o ../lib/libgtkjava${gtkapiversion}.so.${gtkversion} \
+ 		$(OBJECTS) \
+-		$(CFLAGS) $(GTK_LIBS) $(JAVA_INCLUDES) -Xlinker --no-undefined
++		$(CFLAGS) $(GTK_LIBS) -lc $(JAVA_INCLUDES) -Xlinker --no-undefined
+ 	@(cd ../lib; test ! -L libgtkjava${gtkapiversion}.so && ln -s libgtkjava${gtkapiversion}.so.${gtkversion} libgtkjava${gtkapiversion}.so) || exit 0
+ 
+ nativelib: ../lib/libgtkjava${gtkapiversion}.so.${gtkversion}
