@@ -1,0 +1,19 @@
+--- configure.orig	Wed Mar 26 00:23:46 2003
++++ configure	Sat Apr 12 15:36:31 2003
+@@ -7653,6 +7653,7 @@
+ 
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
++$ac_aux_dir/ltconfig $LIBTOOL_DEPS
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+@@ -7839,7 +7840,7 @@
+ GNOME_PLATFORM=2
+ GNOME_MINOR=3
+ GNOME_MICRO=0
+-GNOME_VENDOR="Gnome.Org"
++GNOME_VENDOR="FreeBSD GNOME Project"
+ GNOME_DATE=""
+ 
+ 
