@@ -1,18 +1,6 @@
 --- sysdeps/freebsd/procmap.c.orig	Wed Mar 10 21:23:52 2004
-+++ sysdeps/freebsd/procmap.c	Thu Mar 11 16:04:21 2004
-@@ -33,7 +33,11 @@
- #include <sys/resource.h>
- #if defined(__NetBSD__) && (__NetBSD_Version__ < 105020000)
- #include <vm/vm_object.h>
-+#if (__FreeBSD_version >= 400011)
-+#include <vm/vm.h>
-+#else
- #include <vm/vm_prot.h>
-+#endif
- #include <vm/vm_map.h>
- #elif defined(__NetBSD__) && (__NetBSD_Version__ >= 105020000)
- #include <uvm/uvm_extern.h>
-@@ -104,7 +108,7 @@
++++ sysdeps/freebsd/procmap.c	Thu Mar 11 21:45:33 2004
+@@ -104,7 +104,7 @@
  	glibtop_map_entry *maps;
  #if defined __FreeBSD__
  	struct vnode vnode;
@@ -21,7 +9,7 @@
  	struct inode inode;
  #endif
  #endif
-@@ -122,8 +126,10 @@
+@@ -122,8 +122,10 @@
  
  	/* Get the process data */
  	pinfo = kvm_getprocs (server->machine.kd, KERN_PROC_PID, pid, &count);
@@ -33,7 +21,7 @@
  
  	/* Now we get the memory maps. */
  
-@@ -280,10 +286,6 @@
+@@ -280,13 +282,9 @@
  			      &inode, sizeof (inode)) != sizeof (inode))
  			glibtop_error_io_r (server, "kvm_read (inode)");
  
@@ -41,6 +29,10 @@
 -			      (unsigned long) vnode.v_mount,
 -			      &mount, sizeof (mount)) != sizeof (mount))
 -			glibtop_error_io_r (server, "kvm_read (mount)");
- #endif
+-#endif
  		maps [i-1].inode  = inode.i_number;
  		maps [i-1].device = inode.i_dev;
++#endif
+ #endif
+ 	} while (entry.next != first);
+ 
