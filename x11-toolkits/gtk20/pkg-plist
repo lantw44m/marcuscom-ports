@@ -231,7 +231,6 @@ lib/gtk-2.0/%%GTK_VERSION%%/loaders/libpixbufloader-xpm.so
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-am-et.so
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-cedilla.so
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-cyrillic-translit.so
-lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-hangul.so
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-inuktitut.so
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-ipa.so
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-thai-broken.so
@@ -241,16 +240,16 @@ lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-viqr.so
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-xim.so
 lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.so
-lib/libgdk-x11-2.0.so.302
+lib/libgdk-x11-2.0.so.303
 lib/libgdk_pixbuf-2.0.a
 lib/libgdk_pixbuf-2.0.so
-lib/libgdk_pixbuf-2.0.so.302
+lib/libgdk_pixbuf-2.0.so.303
 lib/libgdk_pixbuf_xlib-2.0.a
 lib/libgdk_pixbuf_xlib-2.0.so
-lib/libgdk_pixbuf_xlib-2.0.so.302
+lib/libgdk_pixbuf_xlib-2.0.so.303
 lib/libgtk-x11-2.0.a
 lib/libgtk-x11-2.0.so
-lib/libgtk-x11-2.0.so.302
+lib/libgtk-x11-2.0.so.303
 libdata/pkgconfig/gdk-2.0.pc
 libdata/pkgconfig/gdk-pixbuf-2.0.pc
 libdata/pkgconfig/gdk-pixbuf-xlib-2.0.pc
@@ -317,6 +316,8 @@ share/locale/de/LC_MESSAGES/gtk20-properties.mo
 share/locale/de/LC_MESSAGES/gtk20.mo
 share/locale/el/LC_MESSAGES/gtk20-properties.mo
 share/locale/el/LC_MESSAGES/gtk20.mo
+share/locale/en_CA/LC_MESSAGES/gtk20-properties.mo
+share/locale/en_CA/LC_MESSAGES/gtk20.mo
 share/locale/en_GB/LC_MESSAGES/gtk20-properties.mo
 share/locale/en_GB/LC_MESSAGES/gtk20.mo
 share/locale/es/LC_MESSAGES/gtk20-properties.mo
@@ -359,6 +360,8 @@ share/locale/lt/LC_MESSAGES/gtk20-properties.mo
 share/locale/lt/LC_MESSAGES/gtk20.mo
 share/locale/lv/LC_MESSAGES/gtk20-properties.mo
 share/locale/lv/LC_MESSAGES/gtk20.mo
+share/locale/mi/LC_MESSAGES/gtk20-properties.mo
+share/locale/mi/LC_MESSAGES/gtk20.mo
 share/locale/mk/LC_MESSAGES/gtk20-properties.mo
 share/locale/mk/LC_MESSAGES/gtk20.mo
 share/locale/ml/LC_MESSAGES/gtk20-properties.mo
@@ -407,8 +410,8 @@ share/locale/uk/LC_MESSAGES/gtk20-properties.mo
 share/locale/uk/LC_MESSAGES/gtk20.mo
 share/locale/uz/LC_MESSAGES/gtk20-properties.mo
 share/locale/uz/LC_MESSAGES/gtk20.mo
-share/locale/uz@Cyrl/LC_MESSAGES/gtk20-properties.mo
-share/locale/uz@Cyrl/LC_MESSAGES/gtk20.mo
+share/locale/uz@Latn/LC_MESSAGES/gtk20-properties.mo
+share/locale/uz@Latn/LC_MESSAGES/gtk20.mo
 share/locale/vi/LC_MESSAGES/gtk20-properties.mo
 share/locale/vi/LC_MESSAGES/gtk20.mo
 share/locale/wa/LC_MESSAGES/gtk20-properties.mo
