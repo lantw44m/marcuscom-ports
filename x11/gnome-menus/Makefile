@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome-menus
 PORTVERSION=	2.9.90
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.9
@@ -27,6 +28,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/gnome|${X11BASE}/share/gnome|g' \
-		${WRKSRC}/layout/applications.menu
+		${WRKSRC}/layout/applications.menu \
+		${WRKSRC}/layout/settings.menu
 
 .include <bsd.port.mk>
