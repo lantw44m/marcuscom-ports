@@ -492,11 +492,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/cdplayer
 @dirrm share/gnome/gweather
 @dirrm share/gnome/gkb
-@dirrm share/gnome/geyes/Horrid
-@dirrm share/gnome/geyes/Default-tiny
-@dirrm share/gnome/geyes/Default
-@dirrm share/gnome/geyes/Bloodshot
-@dirrm share/gnome/geyes/Bizarre
 @dirrm share/gnome/geyes
 %%BATTERY%%@dirrm share/gnome/battstat_applet
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/multiload/prefs
