@@ -15,8 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An integrated mail, calendar and address book distributed suite
 
-LIB_DEPENDS=	edataserver.2:${PORTSDIR}/databases/evolution-data-server \
-		nss3.1:${PORTSDIR}/security/nss
+LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss
 
 RUN_DEPENDS=	${X11BASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnomespell
 .if defined(WITH_PILOT)
@@ -30,7 +29,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack gnometarget intlhack
+USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver
 USE_REINPLACE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-nss=yes \
