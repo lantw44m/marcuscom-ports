@@ -15,6 +15,7 @@ include/libgnomeprint-2.2/libgnomeprint/private/gnome-font-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-fontmap.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-glyphlist-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-config-private.h
+include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-pango.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gp-gc-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gpa-config.h
@@ -103,6 +104,7 @@ share/locale/ms/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/nl/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/nn/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/no/LC_MESSAGES/libgnomeprint-2.2.mo
+share/locale/pa/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/pl/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/pt/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/pt_BR/LC_MESSAGES/libgnomeprint-2.2.mo
