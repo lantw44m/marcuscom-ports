@@ -30,8 +30,10 @@ libdata/pkgconfig/gnome-python-2.0.pc
 %%PORTDOCS%%share/examples/py-gnome/gconf/simple-controller.py
 %%PORTDOCS%%share/examples/py-gnome/gconf/simple-view.py
 %%PORTDOCS%%share/examples/py-gnome/popt/popt.py
+%%PORTDOCS%%share/examples/py-gnome/vfs/async-xfer.py
 %%PORTDOCS%%share/examples/py-gnome/vfs/async.py
 %%PORTDOCS%%share/examples/py-gnome/vfs/shell.py
+%%PORTDOCS%%share/examples/py-gnome/vfs/sync-xfer.py
 share/pygtk/2.0/argtypes/bonobo-arg-types.py
 share/pygtk/2.0/argtypes/bonobo-arg-types.pyc
 share/pygtk/2.0/argtypes/bonobo-arg-types.pyo
