@@ -6,11 +6,10 @@
 #
 
 PORTNAME=	ghex2
-PORTVERSION=	2.3.0
-PORTREVISION=	1
+PORTVERSION=	2.4.0.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.3
+MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.4
 DISTNAME=	${PORTNAME:S/2$//}-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -25,6 +24,6 @@ USE_GNOME=	gnomeprefix gnomehack gail libgnomeprintui libgnomeui
 USE_LIBTOOL=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>
