@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomegames2
-PORTVERSION=	2.3.3
+PORTVERSION=	2.3.4
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-games/2.3
@@ -27,11 +27,5 @@ USE_LIBTOOL=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-
-post-patch:
-	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
-		's|malloc\.h|stdlib.h|g'
-	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
-		's|games\.games|games:games|g'
 
 .include <bsd.port.mk>

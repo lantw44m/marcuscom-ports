@@ -1,3 +1,4 @@
+bin/blackjack
 bin/gataxx
 bin/glines
 bin/gnect
@@ -13,30 +14,77 @@ bin/iagno
 bin/mahjongg
 bin/same-gnome
 bin/sol
+etc/gconf/gconf.xml.defaults/apps/aisleriot/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/blackjack/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/blackjack/deck/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/blackjack/global/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/blackjack/settings/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gataxx/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/glines/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/glines/preferences/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/glines/saved/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnect/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnibbles/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/0/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/1/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/2/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/3/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnobots2/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnobots2/preferences/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnome-stones/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnome-stones/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnometris/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnometris/options/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnomine/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnomine/geometry/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnotravex/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gtali/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/iagno/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/mahjongg/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/same-gnome/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/aisleriot/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/blackjack/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/blackjack/deck/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/blackjack/global/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/blackjack/settings/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gataxx/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/glines/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/glines/preferences/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/glines/saved/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnect/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/0/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/1/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/2/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/3/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnobots2/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnobots2/preferences/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnome-stones/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnome-stones/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnometris/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnometris/options/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnomine/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnomine/geometry/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnotravex/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gtali/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/iagno/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/mahjongg/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/same-gnome/%gconf.xml
+etc/gconf/schemas/aisleriot.schemas
+etc/gconf/schemas/blackjack.schemas
 etc/gconf/schemas/gataxx.schemas
+etc/gconf/schemas/glines.schemas
 etc/gconf/schemas/gnect.schemas
+etc/gconf/schemas/gnibbles.schemas
+etc/gconf/schemas/gnobots2.schemas
+etc/gconf/schemas/gnome-stones.schemas
 etc/gconf/schemas/gnometris.schemas
 etc/gconf/schemas/gnomine.schemas
+etc/gconf/schemas/gnotravex.schemas
 etc/gconf/schemas/gtali.schemas
 etc/gconf/schemas/iagno.schemas
 etc/gconf/schemas/mahjongg.schemas
@@ -102,11 +150,11 @@ share/gnome/blackjack/Vegas_Strip.rules.dat
 @unexec [ -s %D/share/gnome/games/gnomine.Large.scores ] || rm -f %D/share/gnome/games/gnomine.Large.scores
 @unexec [ -s %D/share/gnome/games/gnomine.Medium.scores ] || rm -f %D/share/gnome/games/gnomine.Medium.scores
 @unexec [ -s %D/share/gnome/games/gnomine.Small.scores ] || rm -f %D/share/gnome/games/gnomine.Small.scores
-@unexec [ -s %D/share/gnome/games/gnotravex.2.scores ] || rm -f %D/share/gnome/games/gnotravex.2.scores
-@unexec [ -s %D/share/gnome/games/gnotravex.3.scores ] || rm -f %D/share/gnome/games/gnotravex.3.scores
-@unexec [ -s %D/share/gnome/games/gnotravex.4.scores ] || rm -f %D/share/gnome/games/gnotravex.4.scores
-@unexec [ -s %D/share/gnome/games/gnotravex.5.scores ] || rm -f %D/share/gnome/games/gnotravex.5.scores
-@unexec [ -s %D/share/gnome/games/gnotravex.6.scores ] || rm -f %D/share/gnome/games/gnotravex.6.scores
+@unexec [ -s %D/share/gnome/games/gnotravex.2x2.scores ] || rm -f %D/share/gnome/games/gnotravex.2x2.scores
+@unexec [ -s %D/share/gnome/games/gnotravex.3x3.scores ] || rm -f %D/share/gnome/games/gnotravex.3x3.scores
+@unexec [ -s %D/share/gnome/games/gnotravex.4x4.scores ] || rm -f %D/share/gnome/games/gnotravex.4x4.scores
+@unexec [ -s %D/share/gnome/games/gnotravex.5x5.scores ] || rm -f %D/share/gnome/games/gnotravex.5x5.scores
+@unexec [ -s %D/share/gnome/games/gnotravex.6x6.scores ] || rm -f %D/share/gnome/games/gnotravex.6x6.scores
 @unexec [ -s %D/share/gnome/games/gnotski.1.scores ] || rm -f %D/share/gnome/games/gnotski.1.scores
 @unexec [ -s %D/share/gnome/games/gnotski.11.scores ] || rm -f %D/share/gnome/games/gnotski.11.scores
 @unexec [ -s %D/share/gnome/games/gnotski.12.scores ] || rm -f %D/share/gnome/games/gnotski.12.scores
@@ -445,12 +493,10 @@ share/gnome/pixmaps/gataxx/sunmoon.png
 share/gnome/pixmaps/gataxx/woodtrim.png
 share/gnome/pixmaps/glines.png
 share/gnome/pixmaps/glines/ball.png
-share/gnome/pixmaps/glines/black.xpm
 share/gnome/pixmaps/glines/classic.png
 share/gnome/pixmaps/glines/dots.png
-share/gnome/pixmaps/glines/gray.xpm
+share/gnome/pixmaps/glines/gumball.png
 share/gnome/pixmaps/glines/pulse.png
-share/gnome/pixmaps/glines/woody.xpm
 share/gnome/pixmaps/gnect-icon.png
 share/gnome/pixmaps/gnect/bg_grotty.jpg
 share/gnome/pixmaps/gnect/bg_nightfall.jpg
@@ -511,7 +557,7 @@ share/gnome/pixmaps/gnome-stones/explosion.png
 share/gnome/pixmaps/gnome-stones/firefly.png
 share/gnome/pixmaps/gnome-stones/frame.png
 share/gnome/pixmaps/gnome-stones/gnome.png
-share/gnome/pixmaps/gnome-stones/title.png
+share/gnome/pixmaps/gnome-stones/title-tile.png
 share/gnome/pixmaps/gnome-stones/wall.png
 share/gnome/pixmaps/gnometris/5blocks-tig.png
 share/gnome/pixmaps/gnometris/5blocks-tim.png
@@ -542,7 +588,6 @@ share/gnome/pixmaps/gnomine/face-worried.xpm
 share/gnome/pixmaps/gnomine/flag-question.png
 share/gnome/pixmaps/gnomine/flag.png
 share/gnome/pixmaps/gnomine/mine.png
-share/gnome/pixmaps/gnotravex/gnotravex.png
 share/gnome/pixmaps/gnotski-icon.png
 share/gnome/pixmaps/gnotski.png
 share/gnome/pixmaps/iagno.png
@@ -684,6 +729,7 @@ share/locale/ga/LC_MESSAGES/gnome-games.mo
 share/locale/gl/LC_MESSAGES/gnome-games.mo
 share/locale/he/LC_MESSAGES/gnome-games.mo
 share/locale/hu/LC_MESSAGES/gnome-games.mo
+share/locale/id/LC_MESSAGES/gnome-games.mo
 share/locale/it/LC_MESSAGES/gnome-games.mo
 share/locale/ja/LC_MESSAGES/gnome-games.mo
 share/locale/ko/LC_MESSAGES/gnome-games.mo
@@ -730,22 +776,62 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mahjongg
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/iagno
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gtali
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnotravex
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-stones/preferences
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-stones
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnobots2/preferences
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnobots2
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnomine/geometry
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnomine
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnometris/options
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnometris
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/3
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/2
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/1
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/0
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnect
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/glines/saved
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/glines/preferences
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/glines
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gataxx
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/blackjack/settings
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/blackjack/global
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/blackjack/deck
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/blackjack
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/aisleriot
 @dirrm etc/gconf/gconf.xml.defaults/apps/same-gnome
 @dirrm etc/gconf/gconf.xml.defaults/apps/mahjongg
 @dirrm etc/gconf/gconf.xml.defaults/apps/iagno
 @dirrm etc/gconf/gconf.xml.defaults/apps/gtali
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnotravex
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnomine/geometry
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnomine
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnometris/options
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnometris
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-stones/preferences
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-stones
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnobots2/preferences
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnobots2
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/3
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/2
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/1
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/0
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnibbles
+@dirrm etc/gconf/gconf.xml.defaults/apps/glines/saved
+@dirrm etc/gconf/gconf.xml.defaults/apps/glines/preferences
+@dirrm etc/gconf/gconf.xml.defaults/apps/glines
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnect
 @dirrm etc/gconf/gconf.xml.defaults/apps/gataxx
+@dirrm etc/gconf/gconf.xml.defaults/apps/blackjack/settings
+@dirrm etc/gconf/gconf.xml.defaults/apps/blackjack/global
+@dirrm etc/gconf/gconf.xml.defaults/apps/blackjack/deck
+@dirrm etc/gconf/gconf.xml.defaults/apps/blackjack
+@dirrm etc/gconf/gconf.xml.defaults/apps/aisleriot
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/aisleriot-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/blackjack-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gataxx-C.omf 2>/dev/null || /usr/bin/true
