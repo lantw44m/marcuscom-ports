@@ -36,6 +36,8 @@ lib/gstreamer-0.5/libgsteffectv.so
 %%ESOUND%%lib/gstreamer-0.5/libgstesdmon.so
 %%ESOUND%%lib/gstreamer-0.5/libgstesdsink.so
 lib/gstreamer-0.5/libgstfestival.so
+lib/gstreamer-0.5/libgstffmpeg.so
+lib/gstreamer-0.5/libgstffmpegall.so
 lib/gstreamer-0.5/libgstfilter.so
 %%FLAC%%lib/gstreamer-0.5/libgstflac.so
 lib/gstreamer-0.5/libgstflxdec.so
@@ -69,6 +71,7 @@ lib/gstreamer-0.5/libgstmpegaudio.so
 lib/gstreamer-0.5/libgstmpegaudioparse.so
 lib/gstreamer-0.5/libgstmpegstream.so
 lib/gstreamer-0.5/libgstmulaw.so
+lib/gstreamer-0.5/libgstoneton.so
 %%OPENQUICKTIME%%lib/gstreamer-0.5/libgstopenquicktimedecoder.so
 %%OPENQUICKTIME%%lib/gstreamer-0.5/libgstopenquicktimedemux.so
 %%OPENQUICKTIME%%lib/gstreamer-0.5/libgstopenquicktimetypes.so
@@ -95,6 +98,7 @@ lib/gstreamer-0.5/libgststereo2mono.so
 lib/gstreamer-0.5/libgststereosplit.so
 lib/gstreamer-0.5/libgstsynaesthesia.so
 lib/gstreamer-0.5/libgstudp.so
+lib/gstreamer-0.5/libgstvbidec.so
 lib/gstreamer-0.5/libgstvideo.so
 lib/gstreamer-0.5/libgstvideocrop.so
 lib/gstreamer-0.5/libgstvideoscale.so
