@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.1.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -42,7 +42,8 @@ RUN_DEPENDS=	${X11BASE}/libexec/battstat-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		${X11BASE}/share/themes/HighContrast/gtk-2.0/gtkrc:${PORTSDIR}/x11-toolkits/gnome-themes \
 		ggv:${PORTSDIR}/print/ggv2 \
 		pkgview:${PORTSDIR}/sysutils/pkgview \
-		acme:${PORTSDIR}/x11/acme
+		acme:${PORTSDIR}/x11/acme \
+		gst-launch-ext:${PORTSDIR}/multimedia/gst-plugins
 
 NO_BUILD=	yes
 
