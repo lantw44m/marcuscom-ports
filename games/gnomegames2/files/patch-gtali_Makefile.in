@@ -1,0 +1,11 @@
+--- gtali/Makefile.in.orig	Wed Nov 19 19:18:18 2003
++++ gtali/Makefile.in	Wed Nov 19 19:18:26 2003
+@@ -688,7 +688,7 @@
+ @INTLTOOL_DESKTOP_RULE@
+ 
+ install-data-local:
+-@GCONF_SCHEMAS_INSTALL_TRUE@	-GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_buildir)/gtali/$(schema_DATA)
++@GCONF_SCHEMAS_INSTALL_TRUE@	-GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_builddir)/gtali/$(schema_DATA)
+ 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
+ 	-touch $(DESTDIR)$(scoredir)/gtali.scores
+ 	-chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gtali.scores
