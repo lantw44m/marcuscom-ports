@@ -47,6 +47,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		magnifier:${PORTSDIR}/x11/gnomemag \
 		gcalctool:${PORTSDIR}/math/gcalctool \
 		gucharmap:${PORTSDIR}/misc/gucharmap \
+		zenity:${PORTSDIR}/x11/zenity \
 		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media
 
 NO_BUILD=	yes
