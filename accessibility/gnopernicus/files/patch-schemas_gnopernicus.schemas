@@ -1,0 +1,10 @@
+--- schemas/gnopernicus.schemas.orig	Mon Jan 12 18:27:02 2004
++++ schemas/gnopernicus.schemas	Mon Jan 12 18:27:28 2004
+@@ -1824,7 +1824,6 @@
+ <default>default</default>
+ <locale name="C"></locale>
+ </schema>
+-<schema>
+ 
+ </schemalist>
+   

@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnopernicus
-PORTVERSION=	0.7.1
-PORTREVISION=	1
+PORTVERSION=	0.7.3
 CATEGORIES=	x11 gnome accessibility
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.7
@@ -22,9 +21,10 @@ LIB_DEPENDS=	gnome-mag.1:${PORTSDIR}/x11/gnomemag \
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeui atspi
+USE_GNOME=	gnomeprefix gnomehack lthack libgnomeui atspi
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+MAKE_ENV=	SED="${SED}"
 
 .include <bsd.port.mk>
