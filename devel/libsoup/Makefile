@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libsoup
-PORTVERSION=	2.1.2
+PORTVERSION=	2.1.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.1
@@ -18,7 +18,7 @@ COMMENT=	A SOAP (Simple Object Access Protocol) implementation in C
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack glib20
+USE_GNOME=	gnomehack lthack glib20
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
 USE_GMAKE=	yes
