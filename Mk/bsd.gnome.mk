@@ -434,6 +434,14 @@ desktopfileutils_USE_GNOME_IMPL=glib20
 
 # End component definition section
 
+########
+#### NOTE: DO NOT COMMIT THIS NEXT PART TO THE MAIN FREEBSD REPO
+########
+.if exists(${PORTSDIR}/Mk/bsd.gnome-experimental.mk)
+.include <bsd.gnome-experimental.mk>
+.endif
+# end part you shouldn't commit.
+
 # This section defines tests for optional software.  These work off four
 # types of variables:  WANT_GNOME, WITH_GNOME, HAVE_GNOME and USE_GNOME.
 # The logic of this is that a port can WANT support for a package; a user
