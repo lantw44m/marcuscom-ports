@@ -3,12 +3,14 @@ bin/gnome-panel
 bin/gnome-panel-preferences
 bin/gnome-panel-screenshot
 bin/panel-test-applets
+etc/gconf/gconf.xml.defaults/apps/gnome_panel_screenshot/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/panel/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/panel/global/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/clock_applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/clock_applet/prefs/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/fish_applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/fish_applet/prefs/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnome_panel_screenshot/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/mailcheck_applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/mailcheck_applet/prefs/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/pager_applet/%gconf.xml
@@ -42,6 +44,7 @@ etc/gconf/gconf.xml.defaults/schemas/apps/tasklist_applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/tasklist_applet/prefs/%gconf.xml
 etc/gconf/schemas/clock.schemas
 etc/gconf/schemas/fish.schemas
+etc/gconf/schemas/gnome-panel-screenshot.schemas
 etc/gconf/schemas/mailcheck.schemas
 etc/gconf/schemas/pager.schemas
 etc/gconf/schemas/panel-global-config.schemas
@@ -51,12 +54,14 @@ etc/sound/events/mailcheck.soundlist
 include/panel-2.0/GNOME_Panel.h
 include/panel-2.0/panel-applet-gconf.h
 include/panel-2.0/panel-applet.h
+lib/gnome-panel/libnotification-area-applet.so
 lib/libgen_util_applet-2.so
 lib/libpanel-applet-2.a
 lib/libpanel-applet-2.so
 lib/libpanel-applet-2.so.0
 libdata/bonobo/servers/GNOME_FishApplet_Factory.server
 libdata/bonobo/servers/GNOME_GenUtilApplet_Factory.server
+libdata/bonobo/servers/GNOME_NotificationAreaApplet.server
 libdata/bonobo/servers/GNOME_Panel.server
 libdata/pkgconfig/libpanelapplet-2.0.pc
 libexec/fish-applet-2
@@ -66,6 +71,7 @@ share/gnome/gen_util/tasklist.glade
 share/gnome/gnome-2.0/ui/GNOME_ClockApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_FishApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_MailCheckApplet.xml
+share/gnome/gnome-2.0/ui/GNOME_NotificationAreaApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_PagerApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_Panel_Popup.xml
 share/gnome/gnome-2.0/ui/GNOME_ShowDesktopApplet.xml
@@ -127,6 +133,7 @@ share/gnome/pixmaps/mailcheck/tux-anim.png
 share/gnome/pixmaps/gnome-show-desktop.png
 share/locale/ar/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/be/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-panel-2.0.mo
@@ -190,6 +197,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/gnome-panel/glade
 @dirrm share/gnome/gnome-panel
 @dirrm share/doc/panel-applet
+@dirrm lib/gnome-panel
 @dirrm include/panel-2.0
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/tasklist_applet/prefs
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/tasklist_applet
@@ -222,9 +230,11 @@ share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/pager_applet
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mailcheck_applet/prefs
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mailcheck_applet
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome_panel_screenshot
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/fish_applet/prefs
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/fish_applet
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/clock_applet/prefs
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/clock_applet
 @dirrm etc/gconf/gconf.xml.defaults/apps/panel/global
 @dirrm etc/gconf/gconf.xml.defaults/apps/panel
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnome_panel_screenshot
