@@ -28,7 +28,8 @@ USE_LIBTOOL=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lm" \
 		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
 	
-OPTIONS=	XINE "Use xine backend instead of GStreamer" off
+OPTIONS=	XINE "Use xine backend instead of GStreamer" off \
+		MONKEYMEDIA "Use MonkeyMedia metadata reader" off
 
 .include <bsd.port.pre.mk>
 
@@ -38,6 +39,12 @@ CONFIGURE_ARGS+=	--with-player=xine
 .else
 CONFIGURE_ARGS+=	--with-player=gstreamer
 USE_GNOME+=		gstreamerplugins
+.endif
+
+.ifdef (WITH_MONKEYMEDIA)
+CONFIGURE_ARGS+=	--with-metadata=monkeymedia
+.else
+CONFIGURE_ARGS+=	--with-metadata=gstreamer
 .endif
 
 .if exists(${LOCALBASE}/lib/libvorbis.so)
