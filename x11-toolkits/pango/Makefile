@@ -17,7 +17,7 @@ COMMENT=	An open-source framework for the layout and rendering of i18n text
 
 BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
 LIB_DEPENDS=	Xft.2:${PORTSDIR}/x11-fonts/libXft
-RUN_DEPENDS=	${FONTSCALE}:${X_FOTNS_TTF_PORT} \
+RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
 		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT}
 
 USE_BZIP2=	yes
