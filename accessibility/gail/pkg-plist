@@ -14,11 +14,16 @@ share/doc/gail-libgail-util/gail-libgail-util-gailmisc.html
 share/doc/gail-libgail-util/gail-libgail-util-gailtextutil.html
 share/doc/gail-libgail-util/index.html
 share/doc/gail-libgail-util/libgail-util-main.html
+share/locale/ca/LC_MESSAGES/gail.mo
 share/locale/cs/LC_MESSAGES/gail.mo
 share/locale/cy/LC_MESSAGES/gail.mo
 share/locale/de/LC_MESSAGES/gail.mo
+share/locale/el/LC_MESSAGES/gail.mo
 share/locale/es/LC_MESSAGES/gail.mo
+share/locale/ms/LC_MESSAGES/gail.mo
 share/locale/nl/LC_MESSAGES/gail.mo
+share/locale/no/LC_MESSAGES/gail.mo
+share/locale/pt/LC_MESSAGES/gail.mo
 share/locale/sr/LC_MESSAGES/gail.mo
 share/locale/sr@Latn/LC_MESSAGES/gail.mo
 share/locale/sv/LC_MESSAGES/gail.mo
