@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	AbiWord2
-PORTVERSION=	2.1.0
-PORTREVISION=	2
+PORTVERSION=	2.1.1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.abisource.com/downloads/Version-${PORTVERSION}/lf/
@@ -31,9 +30,6 @@ WRKSRC=		${WRKDIR}/abiword-${PORTVERSION}/abi
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_ICONV=	yes
-#USE_AUTOMAKE=	yes
-#USE_AUTOMAKE_VER=14
-#USE_AUTOCONF_VER=213
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
@@ -46,6 +42,7 @@ MAKEFILE=	GNUmakefile
 
 ABIVERSION=	2.2
 PLIST_SUB+=	"ABIVERSION=${ABIVERSION}"
+
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/include/wv.h)
@@ -90,17 +87,13 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g' ${WRKSRC}/configure
 
 pre-configure:
-#	@cd ${WRKSRC} && ${TOUCH} NEWS README AUTHORS ChangeLog INSTALL
-#	@cd ${WRKSRC}/ac-helpers && ${RM} -f install-sh mkinstalldirs missing
-#	@${RM} -f ${WRKSRC}/configure.ac
-#	@cd ${WRKSRC} && ./autogen.sh && ${TRUE}
 	@${FIND} ${WRKSRC} -name GNUmakefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/@PACKAGE@|(datadir)/@PACKAGE@|g ; \
 		 s|[(]libdir[)]/bonobo/servers|(prefix)/libdata/bonobo/servers|g; \
 		 s|@DEFS@|-I${WRKSRC}/../libiconv/include @DEFS@|g' && ${TRUE}
 
 post-install:
-	@${INSTALL_DATA} ${WRKSRC}/src/pkg/linux/rpm/data/abiword.desktop \
+	@${INSTALL_DATA} ${WRKSRC}/abiword.desktop \
 		${PREFIX}/share/gnome/apps/Applications/abiword.desktop
 	@${LN} -sf ${PREFIX}/share/AbiSuite-2.0/icons/abiword_48.png \
 		${PREFIX}/share/gnome/pixmaps/abiword_48.png

@@ -9,6 +9,7 @@ share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Break.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Field.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_FormatFootnotes.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_FormatFrame.glade
+share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_FormatTOC.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_FormatTable.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_HdrFtr.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_InsertTable.glade
@@ -18,12 +19,16 @@ share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_MetaData.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_New.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_PageNumbers.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Replace.glade
+share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Stylist_modal.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Stylist.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_WordCount.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_About.glade
+share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_DocComparison.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_Encoding.glade
+share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_History.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_Image.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_Language.glade
+share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_ListDocuments.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_Password.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_PluginManager.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_WindowMore.glade
@@ -31,6 +36,7 @@ share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/xap_UnixDlg_Zoom.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/readme.txt
 share/AbiSuite-%%ABIVERSION%%/AbiWord/scripts/abw2html.pl
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/am-ET.strings
+share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/ar.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/be-BY.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/bg-BG.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/br-FR.strings
@@ -190,6 +196,8 @@ share/AbiSuite-%%ABIVERSION%%/templates/A4.awt
 share/AbiSuite-%%ABIVERSION%%/templates/Business-Report.awt
 share/AbiSuite-%%ABIVERSION%%/templates/Employee-Directory.awt
 share/AbiSuite-%%ABIVERSION%%/templates/Fax-Coversheet.awt
+share/AbiSuite-%%ABIVERSION%%/templates/Memo.awt
+share/AbiSuite-%%ABIVERSION%%/templates/Resume.awt
 share/AbiSuite-%%ABIVERSION%%/templates/Two-Columns.awt
 share/AbiSuite-%%ABIVERSION%%/templates/US-Letter.awt
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt
@@ -215,10 +223,10 @@ share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-en_NZ
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-en_ZA
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-es
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-es_ES
-share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-es_FI
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-es_IR
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-es_MX
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-fa_IR
+share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-fi_FI
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-fr
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-fr_BE
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-fr_CA
@@ -263,40 +271,6 @@ share/gnome/pixmaps/abiword_48.png
 @dirrm share/AbiSuite-%%ABIVERSION%%/clipart
 @dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/strings
 @dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/scripts
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/sample/en-US
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/sample
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/images
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/tutorial
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/problems
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/plugins
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/interface/workspace.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/interface/rulers.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/interface/dialogreplace.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/interface
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/info
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/images
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/howto/howtoword.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/howto/howtoweb.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR/howto
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/fr-FR
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/es-ES
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/tutorial
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/problems
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/interface/workspace.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/interface/rulers.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/interface/menufile.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/interface/dialogreplace.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/interface
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/info
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/images
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/howto/howtoword.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/howto/howtoweb.xhtml_data
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US/howto
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/en-US
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/de-DE/images
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/de-DE/de_DE
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help/de-DE
-@dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/help
 @dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/glade
 @dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord
 @dirrm share/AbiSuite-%%ABIVERSION%%
