@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2-fifth-toe
 PORTVERSION=	2.5.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -32,7 +32,8 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		inkscape:${PORTSDIR}/graphics/inkscape \
 		straw:${PORTSDIR}/net/straw \
 		liferea:${PORTSDIR}/net/liferea \
-		gnotime:${PORTSDIR}/deskutils/gnotime
+		gnotime:${PORTSDIR}/deskutils/gnotime \
+		sound-juicer:${PORTSDIR}/audio/sound-juicer
 # not yet buildable under GNOME 2.5
 #		jamboree:${PORTSDIR}/audio/jamboree
 
