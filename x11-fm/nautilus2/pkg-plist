@@ -122,14 +122,11 @@ share/gnome/nautilus/starthere-link.desktop
 share/gnome/nautilus/starthere.desktop
 share/gnome/nautilus/static_bookmarks.xml
 share/gnome/network/nautilus-server-connect.desktop
-share/gnome/pixmaps/nautilus/CD_drive.png
-share/gnome/pixmaps/nautilus/HD_drive.png
 share/gnome/pixmaps/nautilus/Search.png
 share/gnome/pixmaps/nautilus/audio.png
 share/gnome/pixmaps/nautilus/backgrounds.png
 share/gnome/pixmaps/nautilus/chit_frame.png
 share/gnome/pixmaps/nautilus/colors.png
-share/gnome/pixmaps/nautilus/cpu.png
 share/gnome/pixmaps/nautilus/crux_eggplant/Search.png
 share/gnome/pixmaps/nautilus/crux_eggplant/crux_eggplant.xml
 share/gnome/pixmaps/nautilus/crux_teal/Search.png
@@ -142,7 +139,6 @@ share/gnome/pixmaps/nautilus/erase.png
 share/gnome/pixmaps/nautilus/gnome/Services.png
 share/gnome/pixmaps/nautilus/gnome/gnome.xml
 share/gnome/pixmaps/nautilus/knob.png
-share/gnome/pixmaps/nautilus/memory_chip.gif
 share/gnome/pixmaps/nautilus/nautilus-desktop.png
 share/gnome/pixmaps/nautilus/nautilus-file-management-properties.png
 share/gnome/pixmaps/nautilus/nautilus-launch-icon.png
