@@ -108,3 +108,4 @@ share/locale/zh_TW/LC_MESSAGES/gdm-2.4.mo
 @dirrm share/gnome/gdm/themes/happygnome
 @dirrm share/gnome/gdm/themes/circles
 @dirrm share/gnome/gdm/themes
+@dirrm etc/pam.d
