@@ -2,7 +2,7 @@
 # Date created:        30 May 2004
 # Whom:                kiesel
 #
-# $FreeBSD: ports/mail/ximian-connector/Makefile,v 1.5 2004/11/12 16:49:30 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	ximian

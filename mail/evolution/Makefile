@@ -2,7 +2,7 @@
 # Date created:				28th June 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/evolution/Makefile,v 1.100 2004/11/10 03:19:13 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	evolution
