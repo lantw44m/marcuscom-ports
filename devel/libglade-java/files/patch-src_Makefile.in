@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	Sun Feb 29 00:06:56 2004
++++ src/Makefile.in	Sun Feb 29 00:07:36 2004
+@@ -105,7 +105,7 @@
+ COMPILED_CLASSES:=$(shell echo $(CLASSES) | sed -e 's=\.class=\.o=g' )
+ 
+ ../lib/glade${apiversion}.jar: $(CLASSES)
+-	@(cd build-java; $(JAR) cf ../../lib/glade${apiversion}-${version}.jar `find -name "*.class"` )
++	@(cd build-java; $(JAR) cf ../../lib/glade${apiversion}-${version}.jar `find . -name "*.class"` )
+ 	@(cd ../lib; test ! -L glade${apiversion}.jar && ln -s glade${apiversion}-${version}.jar glade${apiversion}.jar) || exit 0
+ 
+ jar: dirs ../lib/glade${apiversion}.jar
