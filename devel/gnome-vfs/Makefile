@@ -43,7 +43,7 @@ OPTIONS=	KDE_MENUS "Integrated KDE menu picks" on
 .undef WITHOUT_SAMBA
 .if ${ARCH} == "i386"
 .undef WITHOUT_MDNS
-WITH_MDNS=		yes
+#WITH_MDNS=		yes
 .endif
 WITH_CDPARANOIA=	yes
 WITH_SAMBA=		yes
@@ -87,7 +87,7 @@ PLIST_SUB+=	SAMBA="@comment "
 .endif
 
 .if defined(WITH_MDNS)
-LIB_DEPENDS+=	howl:${PORTSDIR}/net/howl
+#LIB_DEPENDS+=	howl:${PORTSDIR}/net/howl
 .endif
 
 post-patch:
