@@ -1,9 +1,4 @@
 bin/bug-buddy
-etc/gconf/gconf.xml.defaults/apps/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/bug-buddy/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/bug-buddy/%gconf.xml
 share/gnome/application-registry/bug-buddy.applications
 share/gnome/applications/bug-buddy-core.desktop
 share/gnome/applications/bug-buddy.desktop
