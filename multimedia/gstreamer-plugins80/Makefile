@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.8.5
+PORTVERSION=	0.8.6
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://gstreamer.freedesktop.org/src/gst-plugins/
@@ -51,6 +51,8 @@ INSTALLS_SHLIB=	yes
 
 PLIST_SUB=	VERSION="${VERSION}" \
 		SHLIB_VERSION="${SHLIB_VERSION}"
+
+MAN1=		gst-launch-ext-0.8.1 gst-visualise-0.8.1
 
 ## Additional directories which should be both built and installed
 ## but configure neglected to correctly identify them
@@ -124,6 +126,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|@CXXF|-fgcse @CXXF|g' \
 		${WRKSRC}/gst/modplug/Makefile.in \
 		${WRKSRC}/gst/modplug/libmodplug/Makefile.in
+# tell configure where the musepack includes live
+	@${REINPLACE_CMD} -e 's|/usr/include/musepack|${LOCALBASE}/include/musepack|g' \
+		${WRKSRC}/configure
 
 post-build:
 .ifdef(EXTRA_BUILD_DIR)

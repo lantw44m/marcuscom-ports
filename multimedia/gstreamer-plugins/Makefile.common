@@ -4,8 +4,10 @@ GST_ALL_PLUGINS= \
 		aalibtest \
 		alsa \
 		arts \
+		artstest \
 		artsc \
 		audiofile \
+		cdaudio \
 		cdparanoia \
 		dirac \
 		divx \
@@ -17,7 +19,6 @@ GST_ALL_PLUGINS= \
 		faac \
 		faad \
 		flac \
-		freetypetest \
 		gdk_pixbuf \
 		gnome_vfs \
 		gsm \
@@ -31,20 +32,25 @@ GST_ALL_PLUGINS= \
 		libcaca \
 		libdv \
 		libfame \
+		libfametest\
 		libmng \
 		libpng \
 		librfb \
 		libvisual \
 		mad \
 		mikmod \
+		libmikmodtest \
 		mpeg2dec \
 		mpeg2enc \
 		mplex \
+		musepack \
 		musicbrainz \
 		nas \
 		ogg \
-		osx_audio \
+		opengl \
 		pango \
+		polyp \
+		dv1394 \
 		qcam \
 		raw1394 \
 		sdl \
@@ -58,8 +64,6 @@ GST_ALL_PLUGINS= \
 		swfdec \
 		tarkin \
 		theora \
-		v4l \
-		v4l2 \
 		vcd \
 		vorbis \
 		xine \
@@ -73,9 +77,15 @@ CONFIGURE_ARGS+=	--disable-${d}
 CONFIGURE_ARGS+=--disable-tests \
 		--disable-alsa \
 		--disable-http \
+		--enable-cdrom \
 		--enable-gconf \
-		--enable-gconftoo \
+		--enable-gconftool \
+		--enable-oss \
+		--disable-osx_audio \
+		--disable-osx_video \
 		--enable-static \
+		--enable-gst_v4l \
+		--enable-gst_v4l2 \
 		--enable-x \
 		--enable-xshm \
 		--enable-xvideo
