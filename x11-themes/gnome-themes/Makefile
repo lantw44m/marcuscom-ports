@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome-themes
 PORTVERSION=	2.5.92
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -25,6 +26,8 @@ USE_LIBTOOL_VER=13
 USE_GNOME=	gnomehack lthack metacity libgnomeui
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 	       	LDFLAGS="-L${LOCALBASE}/lib"
+
+PLIST_SUB=	GTK_VERSION="2.4.0"
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \

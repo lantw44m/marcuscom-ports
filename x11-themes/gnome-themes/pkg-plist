@@ -1,8 +1,8 @@
-lib/gtk-2.0/2.2.0/engines/libcrux-engine.so
-lib/gtk-2.0/2.2.0/engines/libhcengine.so
-lib/gtk-2.0/2.2.0/engines/liblighthouseblue.so
-lib/gtk-2.0/2.2.0/engines/libmist.so
-lib/gtk-2.0/2.2.0/engines/libthinice.so
+lib/gtk-2.0/%%GTK_VERSION%%/engines/libcrux-engine.so
+lib/gtk-2.0/%%GTK_VERSION%%/engines/libhcengine.so
+lib/gtk-2.0/%%GTK_VERSION%%/engines/liblighthouseblue.so
+lib/gtk-2.0/%%GTK_VERSION%%/engines/libmist.so
+lib/gtk-2.0/%%GTK_VERSION%%/engines/libthinice.so
 share/eazel-engine/arrow_down-spinner.png
 share/eazel-engine/arrow_down.png
 share/eazel-engine/arrow_left.png

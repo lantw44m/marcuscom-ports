@@ -7,7 +7,7 @@
 
 PORTNAME=	librsvg2
 PORTVERSION=	2.6.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.6
@@ -36,7 +36,7 @@ CONFIGURE_ARGS=	--with-svgz \
 		--disable-gtk-doc \
 		--without-gimp \
 		--with-croco
-PLIST_SUB=	GTK_VERSION="2.2.0"
+PLIST_SUB=	GTK_VERSION="2.4.0"
 
 MAN1=		rsvg.1
 
