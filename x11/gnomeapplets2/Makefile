@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomeapplets2
 PORTVERSION=	2.9.6
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-applets/2.9
@@ -16,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Applets components for the Gnome 2 Desktop Environment
 
-BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/system-tools-backends.pc:${PORTSDIR}/sysutils/gnomesystemtools
+BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-system-tools.pc:${PORTSDIR}/sysutils/gnomesystemtools
 LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop2 \
 		xklavier.10:${PORTSDIR}/x11/libxklavier \
 		gucharmap.4:${PORTSDIR}/deskutils/gucharmap
