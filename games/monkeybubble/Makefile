@@ -7,7 +7,7 @@
 
 PORTNAME=	monkeybubble
 PORTVERSION=	0.1.9
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	games gnome
 #MASTER_SITES=	http://monkey-bubble.tuxfamily.org/ #OMG where did the website go?!?!
 MASTER_SITES=	${MASTER_SITE_LOCAL}
@@ -28,7 +28,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 
 post-patch:
-	@${REINPLACE_CMD} -e "s|gstreamer-0.6|gstreamer-0.7|g" \
+	@${REINPLACE_CMD} -e "s|gstreamer-0.6|gstreamer-0.8|g" \
 		${WRKSRC}/configure
 
 .include <bsd.port.mk>
