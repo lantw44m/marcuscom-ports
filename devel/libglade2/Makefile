@@ -7,7 +7,7 @@
 
 PORTNAME=	libglade2
 PORTVERSION=	2.3.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.3
@@ -17,10 +17,9 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME glade library
 
-RUN_DEPENDS=	xmlcatmgr:${PORTSDIR}/textproc/xmlcatmgr
-
 BUILD_DEPENDS=	${PYEXPAT}
-RUN_DEPENDS=	${PYEXPAT}
+RUN_DEPENDS=	${PYEXPAT} \
+		xmlcatmgr:${PORTSDIR}/textproc/xmlcatmgr
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
