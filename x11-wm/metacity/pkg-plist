@@ -8,12 +8,24 @@ etc/gconf/gconf.xml.defaults/apps/metacity/general/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/metacity/global_keybindings/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/metacity/keybinding_commands/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/metacity/window_keybindings/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/metacity/workspace_names/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/metacity/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/metacity/general/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/metacity/global_keybindings/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/metacity/keybinding_commands/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/metacity/window_keybindings/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/metacity/workspace_names/%gconf.xml
 etc/gconf/schemas/metacity.schemas
+include/metacity-1/metacity-private/common.h
+include/metacity-1/metacity-private/gradient.h
+include/metacity-1/metacity-private/preview-widget.h
+include/metacity-1/metacity-private/theme-parser.h
+include/metacity-1/metacity-private/theme.h
+include/metacity-1/metacity-private/util.h
+lib/libmetacity-private.a
+lib/libmetacity-private.so
+lib/libmetacity-private.so.0
+libdata/pkgconfig/libmetacity-private.pc
 libexec/metacity-dialog
 share/gnome/control-center-2.0/capplets/metacity-properties.desktop
 share/gnome/metacity/glade/metacity-properties.glade
@@ -41,6 +53,7 @@ share/gnome/themes/Crux/metacity-1/active-menu-button-prelight.png
 share/gnome/themes/Crux/metacity-1/active-menu-button-pressed.png
 share/gnome/themes/Crux/metacity-1/active-menu-button.png
 share/gnome/themes/Crux/metacity-1/active-minimize-button.png
+share/gnome/themes/Crux/metacity-1/active-restore-button.png
 share/gnome/themes/Crux/metacity-1/active-right-border.png
 share/gnome/themes/Crux/metacity-1/active-right-top-border-shaded.png
 share/gnome/themes/Crux/metacity-1/active-right-top-border.png
@@ -73,6 +86,7 @@ share/gnome/themes/Crux/metacity-1/inactive-menu-button-prelight.png
 share/gnome/themes/Crux/metacity-1/inactive-menu-button-pressed.png
 share/gnome/themes/Crux/metacity-1/inactive-menu-button.png
 share/gnome/themes/Crux/metacity-1/inactive-minimize-button.png
+share/gnome/themes/Crux/metacity-1/inactive-restore-button.png
 share/gnome/themes/Crux/metacity-1/inactive-right-border.png
 share/gnome/themes/Crux/metacity-1/inactive-right-top-border-shaded.png
 share/gnome/themes/Crux/metacity-1/inactive-right-top-border.png
@@ -144,11 +158,15 @@ share/locale/zh_TW/LC_MESSAGES/metacity.mo
 @dirrm share/gnome/metacity/icons
 @dirrm share/gnome/metacity/glade
 @dirrm share/gnome/metacity
+@dirrm include/metacity-1/metacity-private
+@dirrm include/metacity-1
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/workspace_names
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/window_keybindings
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/keybinding_commands
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/global_keybindings
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity/general
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/metacity
+@dirrm etc/gconf/gconf.xml.defaults/apps/metacity/workspace_names
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity/window_keybindings
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity/keybinding_commands
 @dirrm etc/gconf/gconf.xml.defaults/apps/metacity/global_keybindings
