@@ -11,7 +11,7 @@ $FreeBSD: ports/x11/libgnome/files/patch-ag,v 1.11 2004/04/05 03:11:34 marcus Ex
 -		"/bin/zsh", "/usr/bin/zsh",
 -		"/bin/tcsh", "/usr/bin/tcsh",
 -		"/bin/ksh", "/usr/bin/ksh",
--		"/bin/csh", "/bin/sh", 0
+-		"/bin/csh", "/bin/sh", NULL
 +		"/bin/csh", "/bin/sh",
 +		LOCALBASE "/bin/bash",
 +		LOCALBASE "/bin/zsh",

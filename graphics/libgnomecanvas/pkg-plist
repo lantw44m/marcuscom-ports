@@ -15,7 +15,7 @@ include/libgnomecanvas-2.0/libgnomecanvas/libgnomecanvas.h
 lib/libglade/2.0/libcanvas.so
 lib/libgnomecanvas-2.a
 lib/libgnomecanvas-2.so
-lib/libgnomecanvas-2.so.701
+lib/libgnomecanvas-2.so.791
 libdata/pkgconfig/libgnomecanvas-2.0.pc
 share/doc/libgnomecanvas/GnomeCanvas.html
 share/doc/libgnomecanvas/GnomeCanvasBpath.html
@@ -84,6 +84,7 @@ share/locale/mk/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/ml/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/mn/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/ms/LC_MESSAGES/libgnomecanvas-2.0.mo
+share/locale/nb/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/ne/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/nl/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/nn/LC_MESSAGES/libgnomecanvas-2.0.mo
