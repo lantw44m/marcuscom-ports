@@ -255,7 +255,7 @@ libbonobo_USE_GNOME_IMPL=libxml2 orbit2
 
 gconf2_LIB_DEPENDS=	gconf-2.5:${PORTSDIR}/devel/gconf2
 gconf2_DETECT=		${X11BASE}/libdata/pkgconfig/gconf-2.0.pc
-gconf2_USE_GNOME_IMPL=	orbit2 libxml2 gtk20
+gconf2_USE_GNOME_IMPL=	orbit2 libxml2 gtk20 linc
 
 gnomevfs2_LIB_DEPENDS=	gnomevfs-2.300:${PORTSDIR}/devel/gnomevfs2
 gnomevfs2_DETECT=	${X11BASE}/libdata/pkgconfig/gnome-vfs-2.0.pc
