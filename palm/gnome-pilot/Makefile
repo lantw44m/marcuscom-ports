@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomepilot2
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.3
 CATEGORIES=	palm comms gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-pilot/2.0
