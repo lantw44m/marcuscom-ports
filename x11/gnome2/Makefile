@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.3.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -50,7 +50,8 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gucharmap:${PORTSDIR}/misc/gucharmap \
 		zenity:${PORTSDIR}/x11/zenity \
 		battfink:${PORTSDIR}/sysutils/battfink \
-		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media
+		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media \
+		${X11BASE}/lib/X11/fonts/bitsream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera
 
 NO_BUILD=	yes
 
