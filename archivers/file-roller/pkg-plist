@@ -21,7 +21,11 @@ share/gnome/help/file-roller/C/legal.xml
 share/gnome/help/file-roller/de/figures/file-roller_main_window.png
 share/gnome/help/file-roller/de/file-roller.xml
 share/gnome/help/file-roller/de/legal.xml
+share/gnome/help/file-roller/es/figures/file-roller_home.png
+share/gnome/help/file-roller/es/figures/file-roller_leftarrow.png
 share/gnome/help/file-roller/es/figures/file-roller_main_window.png
+share/gnome/help/file-roller/es/figures/file-roller_rightarrow.png
+share/gnome/help/file-roller/es/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/es/file-roller.xml
 share/gnome/help/file-roller/es/legal.xml
 share/gnome/help/file-roller/fr/figures/file-roller_main_window.png
