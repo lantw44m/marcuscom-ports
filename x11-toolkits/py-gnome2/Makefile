@@ -24,8 +24,7 @@ LATEST_LINK=	py-gnome2
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
-USE_GNOME=	gnomehack libgnomeprintui libgtkhtml gnomepanel \
-		nautilus2 pygtk2
+USE_GNOME=	gnomehack libgnomeui pygtk2
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
