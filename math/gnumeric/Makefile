@@ -20,7 +20,7 @@ USE_X_PREFIX=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier libgnomeprintui \
-		libgnomedb libgsf_gnome pygtk2
+		libgnomedb libgsf_gnome pygtk2 desktopfileutils
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
@@ -61,6 +61,7 @@ post-patch:
 	@${RM} -f ${WRKSRC}/GNOME_Gnumeric.server.in
 
 post-install:
+	@-update-desktop-database
 .for dir in share/gnome lib
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${PREFIX}/${dir}/gnumeric
 .endfor
