@@ -38,6 +38,8 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		desktop_gnome_peripherals_keyboard_xkb.schemas \
 		fontilus.schemas themus.schemas
 
+BROKEN=	"Does not build with new Nautilus"
+
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[{]prefix[}]/share/pixmaps|{datadir}/pixmaps|g'
