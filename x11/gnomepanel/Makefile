@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomepanel
 PORTVERSION=	2.10.0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/2.10
@@ -54,8 +55,6 @@ CONFIGURE_ARGS+=--disable-eds
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|@DATADIR@/|@DATADIR@/applications/|g' \
-		${WRKSRC}/gnome-panel/panel-default-setup.entries.in
 .if ( ${OSVERSION} > 600000 && ${OSVERSION} < 600006 ) || \
 	( ${OSVERSION} < 503101 )
 .for po in da.po it.po zh_CN.po zh_TW.po
