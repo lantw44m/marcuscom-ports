@@ -1375,6 +1375,7 @@ share/gnome/pixmaps/wireless-applet/signal-61-80.png
 share/gnome/pixmaps/wireless-applet/signal-81-100.png
 share/gnome/stickynotes/stickynotes.glade
 share/gnome/wireless-applet/wireless-applet.glade
+share/gnome/xmodmap/base.xml
 share/gnome/xmodmap/xmodmap.am
 share/gnome/xmodmap/xmodmap.ar
 share/gnome/xmodmap/xmodmap.be
