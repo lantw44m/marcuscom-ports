@@ -1,6 +1,6 @@
-# New ports collection makefile for:	py-gnome
-# Date created:				09 February 2003
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+# New ports collection makefile for:	py-gnome-extras
+# Date created:				22 November 2005
+# Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
 #
