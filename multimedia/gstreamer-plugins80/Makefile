@@ -7,6 +7,7 @@
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.5.1
+PORTREVISION=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -507,7 +508,7 @@ CONFIGURE_ARGS+=	--disable-sdl \
 			--disable-sdltest
 PLIST_SUB+=	SDL="@comment "
 .else
-LIB_DEPENDS+=	SDL-1.1.4:${PORTSDIR}/devel/sdl12
+LIB_DEPENDS+=	SDL-1.1.5:${PORTSDIR}/devel/sdl12
 
 CONFIGURE_ARGS+=	--with-sdl-prefix=${LOCALBASE}  \
 			--with-sdl-exec-prefix=${LOCALBASE}
