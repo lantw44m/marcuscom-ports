@@ -1,5 +1,5 @@
---- configure.orig	Fri Feb  6 21:34:33 2004
-+++ configure	Fri Feb  6 21:35:22 2004
+--- configure.orig	Sun Feb  8 16:04:02 2004
++++ configure	Sun Feb  8 16:04:36 2004
 @@ -22816,6 +22816,8 @@
  if eval "test \"\${$as_ac_var+set}\" = set"; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
@@ -55,10 +55,22 @@
  else
  
 -		LDFLAGS="$LDFLAGS -L$with_openssl_libs -lssl -lcrypto -ldl"
-+		LDFLAGS="$LDFLAGS -L$with_openssl_libs -lssl -lcrypto"
++		LDFLAGS="$LDFLAGS -L$with_openssl_libs -lssl -lcryptofoo"
  		cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
+@@ -27613,9 +27617,9 @@
+ 
+ 		msg_openssl="yes"
+                 if test x$with_openssl_libs != x/usr/lib; then
+-                        OPENSSL_LIBS="-L$with_openssl_libs -lssl -lcrypto"
++                        OPENSSL_LIBS="-L$with_openssl_libs -lssl -lcryptofoo"
+                 else
+-                	OPENSSL_LIBS="-lssl -lcrypto"
++                	OPENSSL_LIBS="-lssl -lcryptofoo"
+                 fi
+ 
+ 
 @@ -30543,6 +30547,7 @@
  s,@ORBIT_IDL@,$ORBIT_IDL,;t t
  s,@BONOBO_IDLDIR@,$BONOBO_IDLDIR,;t t

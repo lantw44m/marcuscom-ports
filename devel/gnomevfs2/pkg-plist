@@ -49,7 +49,6 @@ etc/gconf/schemas/system_smb.schemas
 %%CDPARANOIA%%etc/gnome-vfs-2.0/modules/cdda-module.conf
 etc/gnome-vfs-2.0/modules/default-modules.conf
 %%SAMBA%%etc/gnome-vfs-2.0/modules/smb-module.conf
-etc/gnome-vfs-2.0/modules/ssl-modules.conf
 etc/gnome-vfs-2.0/vfolders/applications-all-users.vfolder-info
 etc/gnome-vfs-2.0/vfolders/favorites.vfolder-info
 etc/gnome-vfs-2.0/vfolders/network.vfolder-info
