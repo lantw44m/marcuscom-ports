@@ -227,7 +227,7 @@ PLIST_FILES=	${GST_LIB_DIR}/libgstjpeg.so
 .endif
 
 # ladspa
-.if ${GST_PLUGIN}=="ldspa"
+.if ${GST_PLUGIN}=="ladspa"
 BUILD_DEPENDS+=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 .endif
 
