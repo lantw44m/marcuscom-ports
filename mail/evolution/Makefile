@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	1.5.1
-PORTREVISION=	1
+PORTVERSION=	1.5.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
@@ -16,7 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An integrated mail, calendar and address book distributed suite
 
-LIB_DEPENDS=	edataserver.1:${PORTSDIR}/databases/evolution-data-server \
+LIB_DEPENDS=	edataserver.2:${PORTSDIR}/databases/evolution-data-server \
 		nss3.1:${PORTSDIR}/security/nss
 
 RUN_DEPENDS=	${X11BASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnomespell
@@ -63,7 +62,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 PLIST_SUB+=	VERSION=${EVO_VERSION}
-PKGINSTALL=	${WRKDIR}/pkg-install
 
 pre-everything::
 	@${ECHO_MSG} ""
@@ -72,9 +70,5 @@ pre-everything::
 	@${ECHO_MSG} "	WITHOUT_LDAP		Disable LDAP support"
 	@${ECHO_MSG} "	WITHOUT_SPAMASSASSIN	Do not add a runtime dependency on SpamAssassin (Evo uses SpamAssassin for spam filtering)"
 	@${ECHO_MSG} ""
-
-post-install:
-	@${FIND} ${PREFIX}/share/gnome/evolution/${EVO_VERSION}/default_user \
-		-type f | ${XARGS} ${CHMOD} u+w
 
 .include <bsd.port.mk>
