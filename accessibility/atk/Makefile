@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	atk
-PORTVERSION=	1.7.1
+PORTVERSION=	1.7.2
 CATEGORIES=	accessibility devel
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		ftp://ftp.gtk.org/pub/gtk/v2.3/
@@ -18,8 +18,8 @@ COMMENT=	A GNOME accessibility toolkit (ATK)
 
 USE_BZIP2=	yes
 INSTALLS_SHLIB=	yes
-USE_INC_LIBTOOL_VER=13
-USE_GNOME=	gnomehack lthack glib20
+USE_LIBTOOL_VER=15
+USE_GNOME=	gnomehack glib20
 CONFIGURE_ARGS=	--enable-static \
 		--disable-gtk-doc \
 		--with-html-dir=${PREFIX}/share/doc
