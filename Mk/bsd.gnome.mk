@@ -493,7 +493,7 @@ CONFIGURE_ENV+=	${${component}_CONFIGURE_ENV}
 MAKE_ENV+=	${${component}_MAKE_ENV}
 
 .    if !defined(CONFIGURE_TARGET) && defined(${component}_CONFIGURE_TARGET)
-CONFIGURE_TARGET=${${component}_CONFIGURE_TARGET}
+CONFIGURE_TARGET=	${${component}_CONFIGURE_TARGET}
 .    endif
 
 .    if defined(${component}_PRE_PATCH)
