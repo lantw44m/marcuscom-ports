@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	totem
-PORTVERSION=	0.99.22
-PORTREVISION?=	2
+PORTVERSION=	0.100
+PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/...$//}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER?=	hendrik@scholz.net
@@ -27,8 +27,10 @@ USE_LIBTOOL_VER=15
 INSTALLS_OMF=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 	       	LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lXrandr"
+CONFIGURE_ARGS+=--disable-mozilla
 
-OPTIONS=	DVDNAV "Enable DVD support" on
+OPTIONS?=	DVDNAV "Enable DVD support" on \
+		GSTREAMER "Use Gstreamer instead of Xine" off
 
 MAN1=	totem.1
 GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
@@ -37,12 +39,14 @@ CONFLICTS=	totem-gstreamer-[0-9]*
 
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_GSTREAMER_OVERRIDE)
+.if defined(WITH_GSTREAMER)
 CONFIGURE_ARGS+=--enable-gstreamer
 USE_GSTREAMER+=	gnomevfs core
 WITHOUT_DVDNAV=	yes
+PLIST_SUB=	GSTREAMER=""
 .else
 LIB_DEPENDS+=	xine.12:${PORTSDIR}/multimedia/libxine
+PLIST_SUB=	GSTREAMER="@comment "
 .endif
 
 .if defined(WITH_DVDNAV) && !defined(WITHOUT_DVDNAV)
@@ -82,7 +86,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/dev/cdrom|${DEFAULT_CDROM_DEVICE}|' \
 		${WRKSRC}/src/totem-preferences.c \
 		${WRKSRC}/src/bacon-video-widget-gst.c
-.if defined(WITH_GSTREAMER_OVERRIDE)
+.if defined(WITH_GSTREAMER)
 	@${REINPLACE_CMD} -e 's|/dev/dvd|${DEFAULT_DVD_DEVICE}|' \
 		${WRKSRC}/src/bacon-video-widget-gst.c
 .endif

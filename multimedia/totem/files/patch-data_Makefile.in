@@ -1,0 +1,13 @@
+--- data/Makefile.in.orig	Mon Jan  3 22:50:19 2005
++++ data/Makefile.in	Mon Jan  3 22:50:55 2005
+@@ -167,8 +167,8 @@
+ 
+ desktop_in_in_files_all = totem.desktop.in.in.in vanity.desktop.in.in
+ desktop_in_files_all = totem.desktop.in.in vanity.desktop.in
+-@TOTEM_VANITY_TRUE@desktop_in_files = @TOTEM_VANITY_TRUE@totem.desktop.in.in vanity.desktop.in
+-@TOTEM_VANITY_FALSE@desktop_in_files = @TOTEM_VANITY_FALSE@totem.desktop.in.in
++@TOTEM_VANITY_TRUE@desktop_in_files = @TOTEM_VANITY_TRUE@totem.desktop.in vanity.desktop.in
++@TOTEM_VANITY_FALSE@desktop_in_files = @TOTEM_VANITY_FALSE@totem.desktop.in
+ 
+ desktopdir = $(datadir)/applications/
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
