@@ -53,7 +53,6 @@ lib/pygtk/2.0/demos/images/gnome-gmush.png
 lib/pygtk/2.0/demos/images/gnome-gsame.png
 lib/pygtk/2.0/demos/images/gnu-keys.png
 lib/pygtk/2.0/demos/images/gtk-logo-rgb.gif
-lib/pygtk/2.0/demos/itemfactory.pyc
 lib/pygtk/2.0/demos/list_store.py
 lib/pygtk/2.0/demos/list_store.pyc
 lib/pygtk/2.0/demos/list_store.pyo
@@ -75,7 +74,6 @@ lib/pygtk/2.0/demos/stock_browser.pyo
 lib/pygtk/2.0/demos/textview.py
 lib/pygtk/2.0/demos/textview.pyc
 lib/pygtk/2.0/demos/textview.pyo
-lib/pygtk/2.0/demos/toolbar.pyc
 lib/pygtk/2.0/demos/tree_store.py
 lib/pygtk/2.0/demos/tree_store.pyc
 lib/pygtk/2.0/demos/tree_store.pyo
@@ -157,27 +155,18 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/examples/py-gtk/neil/question.xpm
 %%PORTDOCS%%share/examples/py-gtk/pango/utf8-demo.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/__init__.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/__init__.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/appwindow.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/appwindow.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/buttonbox.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/buttonbox.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/changedisplay.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/colorsel.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/colorsel.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/dialogs.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/dialogs.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/dnd.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/dnd.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/dndpixmap.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/dndpixmap.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/editable_cells.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/editable_cells.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/entry_completion.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/expander.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/hypertext.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/images.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/images.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/images/alphatest.png
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/images/apple-red.png
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/images/background.jpg
@@ -190,23 +179,15 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/images/gnome-gsame.png
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/images/gnu-keys.png
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/images/gtk-logo-rgb.gif
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/itemfactory.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/list_store.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/list_store.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/menu.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/menu.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/panes.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/panes.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/pixbufs.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/sizegroup.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/sizegroup.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/stock_browser.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/stock_browser.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/textview.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/toolbar.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/tree_store.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/treemodel.py
-%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/treemodel.pyc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/ui_manager.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/pygtk-demo
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/pygtk-demo.in
@@ -286,9 +267,5 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%@dirrm share/doc/py-gtk
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0
-@dirrm lib/pygtk/2.0/demos/images
-@dirrm lib/pygtk/2.0/demos
-@dirrm lib/pygtk/2.0
-@dirrm lib/pygtk
 @dirrm include/pygtk-2.0/pygtk
 @dirrm include/pygtk-2.0
