@@ -132,11 +132,8 @@ share/locale/zh_CN/LC_MESSAGES/mrproject.mo
 @dirrm share/gnome/pixmaps/mrproject
 @dirrm share/gnome/omf/mrproject
 @dirrm share/gnome/mrproject/glade
-@dirrm share/gnome/mrproject
 @dirrm share/gnome/help/mrproject/C/figures
 @dirrm share/gnome/help/mrproject/C
 @dirrm share/gnome/help/mrproject
 @dirrm lib/mrproject/views
-@dirrm lib/mrproject/plugins
-@dirrm lib/mrproject
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/mrproject/mrproject-C.omf 2>/dev/null || /usr/bin/true
