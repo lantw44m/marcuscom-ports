@@ -25,6 +25,7 @@ share/locale/cy/LC_MESSAGES/libwnck.mo
 share/locale/da/LC_MESSAGES/libwnck.mo
 share/locale/de/LC_MESSAGES/libwnck.mo
 share/locale/el/LC_MESSAGES/libwnck.mo
+share/locale/eo/LC_MESSAGES/libwnck.mo
 share/locale/es/LC_MESSAGES/libwnck.mo
 share/locale/et/LC_MESSAGES/libwnck.mo
 share/locale/fa/LC_MESSAGES/libwnck.mo
@@ -36,10 +37,13 @@ share/locale/he/LC_MESSAGES/libwnck.mo
 share/locale/hi/LC_MESSAGES/libwnck.mo
 share/locale/hu/LC_MESSAGES/libwnck.mo
 share/locale/id/LC_MESSAGES/libwnck.mo
+share/locale/is/LC_MESSAGES/libwnck.mo
 share/locale/it/LC_MESSAGES/libwnck.mo
 share/locale/ja/LC_MESSAGES/libwnck.mo
 share/locale/kn/LC_MESSAGES/libwnck.mo
 share/locale/ko/LC_MESSAGES/libwnck.mo
+share/locale/li/LC_MESSAGES/libwnck.mo
+share/locale/lt/LC_MESSAGES/libwnck.mo
 share/locale/lv/LC_MESSAGES/libwnck.mo
 share/locale/mk/LC_MESSAGES/libwnck.mo
 share/locale/ml/LC_MESSAGES/libwnck.mo
