@@ -5,7 +5,6 @@ include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
 include/pango-1.0/pango/pango-context.h
 include/pango-1.0/pango/pango-coverage.h
-include/pango-1.0/pango/pangofc-decoder.h
 include/pango-1.0/pango/pango-engine.h
 include/pango-1.0/pango/pango-enum-types.h
 include/pango-1.0/pango/pango-font.h
@@ -22,6 +21,7 @@ include/pango-1.0/pango/pango-tabs.h
 include/pango-1.0/pango/pango-types.h
 include/pango-1.0/pango/pango-utils.h
 include/pango-1.0/pango/pango.h
+include/pango-1.0/pango/pangofc-decoder.h
 include/pango-1.0/pango/pangofc-font.h
 include/pango-1.0/pango/pangofc-fontmap.h
 include/pango-1.0/pango/pangoft2.h
@@ -55,6 +55,7 @@ libdata/pkgconfig/pangoxft.pc
 %%DOCSDIR%%/PangoFcDecoder.html
 %%DOCSDIR%%/PangoFcFont.html
 %%DOCSDIR%%/PangoFcFontMap.html
+%%DOCSDIR%%/PangoMarkupFormat.html
 %%DOCSDIR%%/home.png
 %%DOCSDIR%%/index.html
 %%DOCSDIR%%/index.sgml
@@ -62,7 +63,6 @@ libdata/pkgconfig/pangoxft.pc
 %%DOCSDIR%%/layout.gif
 %%DOCSDIR%%/left.png
 %%DOCSDIR%%/lowlevel.html
-%%DOCSDIR%%/PangoMarkupFormat.html
 %%DOCSDIR%%/pango-Coverage-Maps.html
 %%DOCSDIR%%/pango-Engines.html
 %%DOCSDIR%%/pango-Fonts.html
