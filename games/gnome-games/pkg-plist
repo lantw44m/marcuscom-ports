@@ -92,11 +92,6 @@ etc/sound/events/gnect.soundlist
 etc/sound/events/gnibbles.soundlist
 etc/sound/events/gnobots2.soundlist
 etc/sound/events/iagno.soundlist
-include/gdkcardimage/card-style-file.h
-include/gdkcardimage/gdk-card-image.h
-lib/libgdkcardimage.a
-lib/libgdkcardimage.so
-lib/libgdkcardimage.so.1
 share/gnome/applications/blackjack.desktop
 share/gnome/applications/freecell.desktop
 share/gnome/applications/gataxx.desktop
@@ -430,42 +425,8 @@ share/gnome/pixmaps/blackjack/chip-1.png
 share/gnome/pixmaps/blackjack/chip-100.png
 share/gnome/pixmaps/blackjack/chip-25.png
 share/gnome/pixmaps/blackjack/chip-5.png
-share/gnome/pixmaps/cards/backs/antique-red.png
-share/gnome/pixmaps/cards/backs/beige.png
-share/gnome/pixmaps/cards/backs/dondorf-flower.png
-share/gnome/pixmaps/cards/backs/face.png
-share/gnome/pixmaps/cards/backs/grey.png
-share/gnome/pixmaps/cards/backs/rods.png
-share/gnome/pixmaps/cards/backs/tux.png
 share/gnome/pixmaps/cards/baize.png
-share/gnome/pixmaps/cards/card-styles.xml
-share/gnome/pixmaps/cards/honors/bonded.png
-share/gnome/pixmaps/cards/honors/dondorf.png
-share/gnome/pixmaps/cards/honors/xpat.png
-share/gnome/pixmaps/cards/jokers/gnome.png
-share/gnome/pixmaps/cards/ranks/bold-09x14.png
-share/gnome/pixmaps/cards/ranks/fine-07x12.png
-share/gnome/pixmaps/cards/slots/hand.png
-share/gnome/pixmaps/cards/slots/plain.png
 share/gnome/pixmaps/cards/slots/white-outline.png
-share/gnome/pixmaps/cards/suits_large/knuth-09x10.png
-share/gnome/pixmaps/cards/suits_large/knuth-15x19.png
-share/gnome/pixmaps/cards/suits_large/knuth-18x21.png
-share/gnome/pixmaps/cards/suits_large/knuth-21x25.png
-share/gnome/pixmaps/cards/suits_large/xpat-11x11.png
-share/gnome/pixmaps/cards/suits_large/xpat-15x15.png
-share/gnome/pixmaps/cards/suits_large/xpat-21x21.png
-share/gnome/pixmaps/cards/suits_large/xpat-41x41.png
-share/gnome/pixmaps/cards/suits_medium/knuth-09x10.png
-share/gnome/pixmaps/cards/suits_medium/knuth-15x19.png
-share/gnome/pixmaps/cards/suits_medium/knuth-18x21.png
-share/gnome/pixmaps/cards/suits_medium/knuth-21x25.png
-share/gnome/pixmaps/cards/suits_medium/xpat-11x11.png
-share/gnome/pixmaps/cards/suits_medium/xpat-15x15.png
-share/gnome/pixmaps/cards/suits_medium/xpat-21x21.png
-share/gnome/pixmaps/cards/suits_small/knuth-09x10.png
-share/gnome/pixmaps/cards/suits_small/xpat-11x11.png
-share/gnome/pixmaps/cards/suits_small/xpat-15x15.png
 share/gnome/pixmaps/gataxx.png
 share/gnome/pixmaps/glines.png
 share/gnome/pixmaps/glines/balls.svg
@@ -745,6 +706,7 @@ share/locale/sq/LC_MESSAGES/gnome-games.mo
 share/locale/sr/LC_MESSAGES/gnome-games.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-games.mo
 share/locale/sv/LC_MESSAGES/gnome-games.mo
+share/locale/ta/LC_MESSAGES/gnome-games.mo
 share/locale/tr/LC_MESSAGES/gnome-games.mo
 share/locale/uk/LC_MESSAGES/gnome-games.mo
 share/locale/vi/LC_MESSAGES/gnome-games.mo
@@ -769,14 +731,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/pixmaps/gnibbles
 @dirrm share/gnome/pixmaps/gnect
 @dirrm share/gnome/pixmaps/glines
-@dirrm share/gnome/pixmaps/cards/suits_small
-@dirrm share/gnome/pixmaps/cards/suits_medium
-@dirrm share/gnome/pixmaps/cards/suits_large
 @dirrm share/gnome/pixmaps/cards/slots
-@dirrm share/gnome/pixmaps/cards/ranks
-@dirrm share/gnome/pixmaps/cards/jokers
-@dirrm share/gnome/pixmaps/cards/honors
-@dirrm share/gnome/pixmaps/cards/backs
 @dirrm share/gnome/pixmaps/cards
 @dirrm share/gnome/pixmaps/blackjack
 @dirrm share/gnome/help/same-gnome/C/figures

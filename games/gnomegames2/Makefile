@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomegames2
-PORTVERSION=	2.7.2
+PORTVERSION=	2.7.3
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-games/2.7
@@ -25,7 +25,6 @@ USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack lthack libgnomeui \
 		librsvg2
 USE_LIBTOOL_VER=13
-INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
