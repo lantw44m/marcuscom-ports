@@ -34,7 +34,8 @@ _USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 libglade2 libxml2 \
 		libgnomecanvas libartlgpl2 libgnomeprint libgnomeprintui \
 		libgnome libbonoboui libgnomeui atspi libgailgnome \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
-		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2
+		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
+		libgnomedb
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -345,6 +346,14 @@ gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
 gnomecontrolcenter2_LIB_DEPENDS=gnome-window-settings.1:${PORTSDIR}/sysutils/gnomecontrolcenter2
 gnomecontrolcenter2_DETECT=${X11BASE}/libdata/pkgconfig/gnome-window-settings-2.0.pc
 gnomecontrolcenter2_USE_GNOME_IMPL=gnomedesktop metacity
+
+libgda2_LIB_DEPENDS=	gda-2.1:${PORTSDIR}/databases/libgda2
+libgda2_DETECT=			${X11BASE}/libdata/pkgconfig/libgda.pc
+libgda2_USE_GNOME_IMPL=	glib20 libxslt
+
+libgnomedb_LIB_DEPENDS=	gnomedb-2.2:${PORTSDIR}/databases/libgnomedb
+libgnomedb_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomedb.pc
+libgnomedb_USE_GNOME_IMPL=libgnomeui libgda2
 
 # End component definition section
 
