@@ -887,6 +887,7 @@ share/icons/hicolor/16x16/stock/io/stock_print.png
 share/icons/hicolor/16x16/stock/io/stock_printers.png
 share/icons/hicolor/16x16/stock/io/stock_reload.png
 share/icons/hicolor/16x16/stock/io/stock_save-as.png
+share/icons/hicolor/16x16/stock/io/stock_save_as.png
 share/icons/hicolor/16x16/stock/io/stock_save-pdf.png
 share/icons/hicolor/16x16/stock/io/stock_save-template.png
 share/icons/hicolor/16x16/stock/io/stock_save.png
@@ -1678,6 +1679,7 @@ share/icons/hicolor/24x24/stock/io/stock_print.png
 share/icons/hicolor/24x24/stock/io/stock_printers.png
 share/icons/hicolor/24x24/stock/io/stock_reload.png
 share/icons/hicolor/24x24/stock/io/stock_save-as.png
+share/icons/hicolor/24x24/stock/io/stock_save_as.png
 share/icons/hicolor/24x24/stock/io/stock_save-pdf.png
 share/icons/hicolor/24x24/stock/io/stock_save-template.png
 share/icons/hicolor/24x24/stock/io/stock_save.png
