@@ -1,0 +1,10 @@
+--- libgnomeprintui/Makefile.in.orig	Sat Oct 25 13:53:53 2003
++++ libgnomeprintui/Makefile.in	Sat Oct 25 13:58:23 2003
+@@ -197,7 +197,6 @@
+ 	\
+ 	-DG_DISABLE_DEPRECATED				\
+ 	-DGDK_DISABLE_DEPRECATED				\
+-	-DGTK_DISABLE_DEPRECATED				\
+ 	-DGDK_PIXBUF_DISABLE_DEPRECATED		\
+ 	-DGNOME_DISABLE_DEPRECATED
+ 
