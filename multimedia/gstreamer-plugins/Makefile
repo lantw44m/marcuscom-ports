@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.7.2
+PORTVERSION=	0.7.3
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gst-plugins/0.7
@@ -17,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	GStreamer written collection of plugins handling several media types
 
-LIB_DEPENDS=	gstreamer-0.7.3:${PORTSDIR}/multimedia/gstreamer \
+LIB_DEPENDS=	gstreamer-0.7.5:${PORTSDIR}/multimedia/gstreamer \
 		popt.0:${PORTSDIR}/devel/popt
 
 USE_X_PREFIX=	yes
@@ -60,7 +60,7 @@ XMMS_CONFIG?="${LOCALBASE}/bin/xmms-config"
 GST_VERSION=${PORTVERSION:C/..$//}
 
 # library minor number
-SHLIB_VERSION=  1
+SHLIB_VERSION=  2
 
 post-patch:
 # as of this writing, FreeBSD does not support lrint* C99 math functions
@@ -100,16 +100,13 @@ post-configure:
 	@${ECHO_CMD} "CC=${CC}" >> \
 		${WRKSRC}/gst-libs/ext/ffmpeg/ffmpeg/config.mak
 	@${MKDIR} ${WRKSRC}/gst-libs/ext/ffmpeg/.deps
-
-.include <bsd.port.pre.mk>
+	@${RM} -f ${WRKSRC}/gst-libs/ext/ffmpeg/patch/*.bak
 
 post-install:
-.if ${ARCH} == "ia64" || ${ARCH} == "amd64"
 # register plugins
-	@-${X11BASE}/bin/gst-register-${GST_VERSION} 2>/dev/null
-.else
-	@${X11BASE}/bin/gst-register-${GST_VERSION} 2>/dev/null
-.endif
+	-@${X11BASE}/bin/gst-register-${GST_VERSION} 2>/dev/null
+
+.include <bsd.port.pre.mk>
 
 # Fix build on ia64.  This patch breaks other archs, so include it
 # conditionally
@@ -122,6 +119,8 @@ EXTRA_PATCHES=	${FILESDIR}/ia64-patch-ffmpeg::configure
 WITH_HERMES=	yes
 # gnomevfs is required for gstreamer-player to work
 WITH_GNOMEVFS=	yes
+# Add default MAD support.  This is required for rhythmbox to work.
+WITH_MAD=	yes
 
 ##
 ## auto detect possible plugins
@@ -246,6 +245,11 @@ WITH_LIBSIDPLAY=yes
 # mad
 .if exists(${LOCALBASE}/lib/libmad.a)
 WITH_MAD=yes
+.endif
+
+# ogg
+.if exists(${LOCALBASE}/lib/libogg.a)
+WITH_OGG=yes
 .endif
 
 # openquicktime
@@ -552,6 +556,16 @@ LIB_DEPENDS+=	mad.2:${PORTSDIR}/audio/libmad \
 		id3tag.2:${PORTSDIR}/audio/libid3tag
 
 PLIST_SUB+=	LIBMAD=""
+.endif
+
+# ogg
+.ifndef(WITH_OGG)
+CONFIGURE_ARGS+=	--disable-ogg \
+			--disable-oggtest
+PLIST_SUB+=	OGG="@comment "
+.else
+LIB_DEPENDS+=	ogg.4:${PORTSDIR}/audio/libogg
+PLIST_SUB+=	OGG=""
 .endif
 
 # openquicktime

@@ -16,10 +16,13 @@ include/gstreamer-%%VERSION%%/gst/media-info/media-info.h
 include/gstreamer-%%VERSION%%/gst/mixer/mixer.h
 include/gstreamer-%%VERSION%%/gst/mixer/mixertrack.h
 include/gstreamer-%%VERSION%%/gst/navigation/navigation.h
-include/gstreamer-%%VERSION%%/gst/play/play.h
+include/gstreamer-%%VERSION%%/gst/play/gstplay.h
 include/gstreamer-%%VERSION%%/gst/propertyprobe/propertyprobe.h
 include/gstreamer-%%VERSION%%/gst/resample/resample.h
-include/gstreamer-%%VERSION%%/gst/riff/riff.h
+include/gstreamer-%%VERSION%%/gst/riff/riff-ids.h
+include/gstreamer-%%VERSION%%/gst/riff/riff-media.h
+include/gstreamer-%%VERSION%%/gst/riff/riff-read.h
+include/gstreamer-%%VERSION%%/gst/tag/tag.h
 include/gstreamer-%%VERSION%%/gst/tuner/tuner.h
 include/gstreamer-%%VERSION%%/gst/tuner/tunerchannel.h
 include/gstreamer-%%VERSION%%/gst/tuner/tunernorm.h
@@ -33,12 +36,7 @@ lib/gstreamer-%%VERSION%%/libgstac3parse.so
 lib/gstreamer-%%VERSION%%/libgstadder.so
 lib/gstreamer-%%VERSION%%/libgstalaw.so
 %%ARTS%%lib/gstreamer-%%VERSION%%/libgstartsdsink.so
-lib/gstreamer-%%VERSION%%/libgstasfdemux.a
-lib/gstreamer-%%VERSION%%/libgstasfdemux.so
-lib/gstreamer-%%VERSION%%/libgstasfdemux.so.0
-lib/gstreamer-%%VERSION%%/libgstasfmux.a
-lib/gstreamer-%%VERSION%%/libgstasfmux.so
-lib/gstreamer-%%VERSION%%/libgstasfmux.so.0
+lib/gstreamer-%%VERSION%%/libgstasf.so
 lib/gstreamer-%%VERSION%%/libgstaudioconvert.so
 lib/gstreamer-%%VERSION%%/libgstaudio.so
 %%LIBAUDIOFILE%%lib/gstreamer-%%VERSION%%/libgstaudiofile.so
@@ -93,6 +91,7 @@ lib/gstreamer-%%VERSION%%/libgstmplex.a
 lib/gstreamer-%%VERSION%%/libgstmplex.so
 lib/gstreamer-%%VERSION%%/libgstmulaw.so
 lib/gstreamer-%%VERSION%%/libgstnavigationtest.so
+%%OGG%%lib/gstreamer-%%VERSION%%/libgstogg.so
 lib/gstreamer-%%VERSION%%/libgstoneton.so
 lib/gstreamer-%%VERSION%%/libgstoverlay.so
 %%OPENQUICKTIME%%lib/gstreamer-%%VERSION%%/libgstopenquicktimedecoder.so
@@ -122,7 +121,9 @@ lib/gstreamer-%%VERSION%%/libgstspeed.so
 %%SPEEX%%lib/gstreamer-%%VERSION%%/libgstspeex.so
 lib/gstreamer-%%VERSION%%/libgststereo.so
 %%SWFDEC%%lib/gstreamer-%%VERSION%%/libgstswfdec.so
+lib/gstreamer-%%VERSION%%/libgstswitch.so
 lib/gstreamer-%%VERSION%%/libgstsynaesthesia.so
+lib/gstreamer-%%VERSION%%/libgsttagediting.so
 lib/gstreamer-%%VERSION%%/libgsttcp.so
 lib/gstreamer-%%VERSION%%/libgsttextoverlay.so
 lib/gstreamer-%%VERSION%%/libgsttimeoverlay.so
@@ -151,13 +152,12 @@ lib/gstreamer-%%VERSION%%/libgstxwindowlistener.so
 lib/gstreamer-%%VERSION%%/libgstxwindowlistener.so.0
 lib/gstreamer-%%VERSION%%/libgsty4menc.so
 lib/gstreamer-%%VERSION%%/libmixmatrix.so
-lib/gtk-2.0/2.2.0/loaders/gst_loader.so
 lib/libgstgconf-%%VERSION%%.a
 lib/libgstgconf-%%VERSION%%.so
 lib/libgstgconf-%%VERSION%%.so.%%SHLIB_VERSION%%
 lib/libgstinterfaces-%%VERSION%%.a
 lib/libgstinterfaces-%%VERSION%%.so
-lib/libgstinterfaces-%%VERSION%%.so.1
+lib/libgstinterfaces-%%VERSION%%.so.%%SHLIB_VERSION%%
 lib/libgstmedia-info-%%VERSION%%.a
 lib/libgstmedia-info-%%VERSION%%.so
 lib/libgstmedia-info-%%VERSION%%.so.0
@@ -191,5 +191,5 @@ libdata/pkgconfig/gstreamer-play-%%VERSION%%.pc
 @dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer
 @unexec rmdir %D/include/gstreamer-%%VERSION%%/gst 2>/dev/null || true
 @unexec rmdir %D/include/gstreamer-%%VERSION%% 2>/dev/null || true
-@exec %%X11BASE%%/bin/gst-register-%%VERSION%% 2>/dev/null
-@unexec %%X11BASE%%/bin/gst-register-%%VERSION%% 2>/dev/null
+@exec %%X11BASE%%/bin/gst-register-%%VERSION%% 2>/dev/null || true
+@unexec %%X11BASE%%/bin/gst-register-%%VERSION%% 2>/dev/null || true
