@@ -1,0 +1,158 @@
+bin/scaffold
+bin/scaffold-clean.sh
+etc/gconf/gconf.xml.defaults/apps/scaffold/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/scaffold/plugins/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/scaffold/plugins/document_manager/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/scaffold/plugins/project_manager/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/scaffold/state/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins/document_manager/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins/project_manager/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/state/%gconf.xml
+etc/gconf/schemas/scaffold.schemas
+include/libscaffold-1.0/libscaffold/glue-factory.c
+include/libscaffold-1.0/libscaffold/glue-plugin.c
+include/libscaffold-1.0/libscaffold/libscaffold.h
+include/libscaffold-1.0/libscaffold/scaffold-doc.h
+include/libscaffold-1.0/libscaffold/scaffold-document-manager.h
+include/libscaffold-1.0/libscaffold/scaffold-document.h
+include/libscaffold-1.0/libscaffold/scaffold-marshal.h
+include/libscaffold-1.0/libscaffold/scaffold-session.h
+include/libscaffold-1.0/libscaffold/scaffold-shell.h
+include/libscaffold-1.0/libscaffold/scaffold-tool.h
+include/libscaffold-1.0/libscaffold/scaffold-utils.h
+include/scaffold-1.0/project-manager/scaffold-project-manager.h
+include/scaffold-1.0/project-manager/scaffold-project-type.h
+lib/libscaffold-1.a
+lib/libscaffold-1.so
+lib/libscaffold-1.so.0
+lib/scaffold/plugins/libscaffold-docman.a
+lib/scaffold/plugins/libscaffold-docman.so
+lib/scaffold/plugins/libscaffold-docman.so.0
+lib/scaffold/plugins/libscaffold-gnome-project-types.a
+lib/scaffold/plugins/libscaffold-gnome-project-types.so
+lib/scaffold/plugins/libscaffold-gnome-project-types.so.0
+lib/scaffold/plugins/libscaffold-project.a
+lib/scaffold/plugins/libscaffold-project.so
+lib/scaffold/plugins/libscaffold-project.so.0
+lib/scaffold/plugins/libscaffold-sample.a
+lib/scaffold/plugins/libscaffold-sample.so
+lib/scaffold/plugins/libscaffold-sample.so.0
+lib/scaffold/plugins/libscaffold-shelloutput.a
+lib/scaffold/plugins/libscaffold-shelloutput.so
+lib/scaffold/plugins/libscaffold-shelloutput.so.0
+lib/scaffold/plugins/libscaffold-symbol-browser.a
+lib/scaffold/plugins/libscaffold-symbol-browser.so
+lib/scaffold/plugins/libscaffold-symbol-browser.so.0
+lib/scaffold/plugins/libscaffold-terminal.a
+lib/scaffold/plugins/libscaffold-terminal.so
+lib/scaffold/plugins/libscaffold-terminal.so.0
+lib/scaffold/plugins/libscaffold-text.a
+lib/scaffold/plugins/libscaffold-text.so
+lib/scaffold/plugins/libscaffold-text.so.0
+lib/scaffold/plugins/scaffold-document-manager.plugin
+lib/scaffold/plugins/scaffold-gnome-project-types.plugin
+lib/scaffold/plugins/scaffold-project-manager.plugin
+lib/scaffold/plugins/scaffold-sample.plugin
+lib/scaffold/plugins/scaffold-shelloutput.plugin
+lib/scaffold/plugins/scaffold-symbol-browser.plugin
+lib/scaffold/plugins/scaffold-terminal.plugin
+lib/scaffold/plugins/scaffold-text.plugin
+libdata/pkgconfig/libscaffold-1.0.pc
+share/gnome/application-registry/scaffold.applications
+share/gnome/applications/scaffold.desktop
+share/gnome/gnome-2.0/ui/scaffold-document-manager.xml
+share/gnome/gnome-2.0/ui/scaffold-project-manager.xml
+share/gnome/gnome-2.0/ui/scaffold-sample-plugin.xml
+share/gnome/gnome-2.0/ui/scaffold-shelloutput-plugin.xml
+share/gnome/gnome-2.0/ui/scaffold-terminal-plugin.xml
+share/gnome/gnome-2.0/ui/scaffold-text-plugin.xml
+share/gnome/gnome-2.0/ui/scaffold.xml
+share/gnome/mime-info/scaffold.keys
+share/gnome/mime-info/scaffold.mime
+share/gnome/pixmaps/scaffold-close-project.png
+share/gnome/pixmaps/scaffold-new-project.png
+share/gnome/pixmaps/scaffold-open-project.png
+share/gnome/pixmaps/scaffold.png
+share/gnome/scaffold/glade/scaffold-document-manager.glade
+share/gnome/scaffold/glade/scaffold-gnome-project-types.glade
+share/gnome/scaffold/glade/scaffold-project-manager.glade
+share/gnome/scaffold/glade/scaffold.glade
+share/gnome/scaffold/images/dock.png
+share/gnome/scaffold/images/gnome-terminal.png
+share/gnome/scaffold/images/layout-manager.png
+share/gnome/scaffold/images/plugins.png
+share/gnome/scaffold/images/scaffold-document-manager.png
+share/gnome/scaffold/images/scaffold-project-manager.png
+share/gnome/scaffold/images/scaffold-sample-plugin.png
+share/gnome/scaffold/images/scaffold-splash.png
+share/gnome/scaffold/images/unknown-components.png
+share/gnome/scaffold/layout.xml
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/AUTHORS.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/COPYING.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/ChangeLog.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/MAINTAINERS.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/Makefile.am.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/NEWS.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/README.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/app.c.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/autogen.sh.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/configure.in.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/src_Makefile.am.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/window.c.template
+share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates/window.h.template
+share/gnome/scaffold/plugins/gnome-project-types/scaffold-gnome-application-create.py
+share/gnome/scaffold/templates/template.c
+share/gnome/scaffold/templates/template.h
+share/gnome/scaffold/templates/template.html
+share/locale/am/LC_MESSAGES/scaffold.mo
+share/locale/az/LC_MESSAGES/scaffold.mo
+share/locale/be/LC_MESSAGES/scaffold.mo
+share/locale/ca/LC_MESSAGES/scaffold.mo
+share/locale/cs/LC_MESSAGES/scaffold.mo
+share/locale/da/LC_MESSAGES/scaffold.mo
+share/locale/de/LC_MESSAGES/scaffold.mo
+share/locale/el/LC_MESSAGES/scaffold.mo
+share/locale/es/LC_MESSAGES/scaffold.mo
+share/locale/fr/LC_MESSAGES/scaffold.mo
+share/locale/hi/LC_MESSAGES/scaffold.mo
+share/locale/it/LC_MESSAGES/scaffold.mo
+share/locale/ja/LC_MESSAGES/scaffold.mo
+share/locale/ko/LC_MESSAGES/scaffold.mo
+share/locale/lv/LC_MESSAGES/scaffold.mo
+share/locale/nl/LC_MESSAGES/scaffold.mo
+share/locale/no/LC_MESSAGES/scaffold.mo
+share/locale/pl/LC_MESSAGES/scaffold.mo
+share/locale/pt/LC_MESSAGES/scaffold.mo
+share/locale/pt_BR/LC_MESSAGES/scaffold.mo
+share/locale/ru/LC_MESSAGES/scaffold.mo
+share/locale/sk/LC_MESSAGES/scaffold.mo
+share/locale/sv/LC_MESSAGES/scaffold.mo
+share/locale/tr/LC_MESSAGES/scaffold.mo
+share/locale/uk/LC_MESSAGES/scaffold.mo
+share/locale/vi/LC_MESSAGES/scaffold.mo
+share/locale/zh_CN/LC_MESSAGES/scaffold.mo
+@dirrm share/gnome/scaffold/templates
+@dirrm share/gnome/scaffold/plugins/gnome-project-types/gnome-application-templates
+@dirrm share/gnome/scaffold/plugins/gnome-project-types
+@dirrm share/gnome/scaffold/plugins
+@dirrm share/gnome/scaffold/images
+@dirrm share/gnome/scaffold/glade
+@dirrm share/gnome/scaffold
+@dirrm lib/scaffold/plugins
+@dirrm lib/scaffold
+@dirrm include/scaffold-1.0/project-manager
+@dirrm include/scaffold-1.0
+@dirrm include/libscaffold-1.0/libscaffold
+@dirrm include/libscaffold-1.0
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/state
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins/project_manager
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins/document_manager
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/scaffold
+@dirrm etc/gconf/gconf.xml.defaults/apps/scaffold/state
+@dirrm etc/gconf/gconf.xml.defaults/apps/scaffold/plugins/project_manager
+@dirrm etc/gconf/gconf.xml.defaults/apps/scaffold/plugins/document_manager
+@dirrm etc/gconf/gconf.xml.defaults/apps/scaffold/plugins
+@dirrm etc/gconf/gconf.xml.defaults/apps/scaffold
