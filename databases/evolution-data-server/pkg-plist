@@ -274,7 +274,7 @@ lib/libcamel-provider-%%VERSION%%.so
 lib/libcamel-provider-%%VERSION%%.so.4
 lib/libebook-%%VERSION%%.a
 lib/libebook-%%VERSION%%.so
-lib/libebook-%%VERSION%%.so.3
+lib/libebook-%%VERSION%%.so.4
 lib/libecal-%%VERSION%%.a
 lib/libecal-%%VERSION%%.so
 lib/libecal-%%VERSION%%.so.2
