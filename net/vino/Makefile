@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.8
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A GNOME 2 frontend for vncviewer
+COMMENT=	VNC server that allows for remote access to your GNOME desktop
 
 LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls
 
