@@ -158,6 +158,7 @@ share/gnome/gnobots2/robots2.cfg
 share/gnome/gnobots2/robots2_easy.cfg
 share/gnome/gnobots2/robots_with_safe_teleport.cfg
 share/gnome/gnome-games/mahjongg/maps/mahjongg.map
+share/gnome/gnome-games/same-gnome/themes/planets.png
 share/gnome/gnome-stones/atari.caves
 share/gnome/gnome-stones/default.caves
 share/gnome/gnome-stones/gnome-stonesrc
@@ -543,8 +544,6 @@ share/gnome/pixmaps/iagno/woodtrim.png
 share/gnome/pixmaps/mahjongg/postmodern.svg
 share/gnome/pixmaps/mahjongg/smooth.png
 share/gnome/pixmaps/rteleport.png
-share/gnome/pixmaps/same-gnome/planets.png
-share/gnome/pixmaps/same-gnome/stones.png
 share/gnome/pixmaps/teleport.png
 share/gnome/sol-games/agnes.scm
 share/gnome/sol-games/auld_lang_syne.scm
@@ -711,7 +710,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/sounds/gnibbles
 @dirrm share/gnome/sol-games/glade
 @dirrm share/gnome/sol-games
-@dirrm share/gnome/pixmaps/same-gnome
 @dirrm share/gnome/pixmaps/mahjongg
 @dirrm share/gnome/pixmaps/iagno
 @dirrm share/gnome/pixmaps/gtali
@@ -782,10 +780,14 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/aisleriot/C
 @dirrm share/gnome/help/aisleriot
 @dirrm share/gnome/gnome-stones
+@dirrm share/gnome/gnome-games/same-gnome/themes
+@dirrm share/gnome/gnome-games/same-gnome
+@dirrm share/gnome/gnome-games/mahjongg/maps
+@dirrm share/gnome/gnome-games/mahjongg
+@dirrm share/gnome/gnome-games
 @dirrm share/gnome/gnobots2
 @dirrm share/gnome/gnibbles
 @dirrm share/gnome/gnect
-@dirrm share/gnome/games
 @dirrm share/gnome/blackjack
 @dirrm lib/gnome-stones/objects
 @dirrm lib/gnome-stones
