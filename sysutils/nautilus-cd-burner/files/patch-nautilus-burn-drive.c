@@ -1,6 +1,6 @@
---- nautilus-burn-drive.c.orig	Sat Jan  8 16:59:57 2005
-+++ nautilus-burn-drive.c	Wed Jan 12 03:25:59 2005
-@@ -61,6 +61,13 @@
+--- nautilus-burn-drive.c.orig	Wed Jan 26 17:42:58 2005
++++ nautilus-burn-drive.c	Thu Feb 10 16:59:01 2005
+@@ -62,6 +62,13 @@
  
  #define CD_ROM_SPEED 176
  
@@ -14,7 +14,7 @@
  static struct {
  	const char *name;
  	gboolean can_write_cdr;
-@@ -148,7 +155,7 @@
+@@ -149,7 +156,7 @@
  		   int                   *max_wr_speed,
  		   NautilusBurnDriveType *type)
  {
@@ -23,7 +23,7 @@
  
  	*max_rd_speed = -1;
  	*max_wr_speed = -1;
-@@ -274,9 +281,21 @@
+@@ -278,6 +285,9 @@
  {
  	int fd;
  	int mmc_profile;
@@ -32,6 +32,10 @@
 +#endif
  
  	g_return_val_if_fail (device != NULL, NAUTILUS_BURN_MEDIA_TYPE_ERROR);
+ 
+@@ -286,6 +296,15 @@
+ 	if (has_data) *has_data = FALSE;
+ 	if (has_audio) *has_audio = FALSE;
  
 +#ifdef __FreeBSD__
 +	cam = cam_open_device (device, O_RDWR);
@@ -45,7 +49,7 @@
  	fd = open (device, O_RDWR|O_EXCL|O_NONBLOCK);
  	if (fd < 0) {
  		if (errno == EBUSY) {
-@@ -284,6 +303,7 @@
+@@ -293,6 +312,7 @@
  		}
  		return NAUTILUS_BURN_MEDIA_TYPE_ERROR;
  	}
@@ -53,7 +57,7 @@
  
  	mmc_profile = get_mmc_profile (fd);
  
-@@ -311,7 +331,11 @@
+@@ -333,7 +353,11 @@
  		}
  	}
  
@@ -65,7 +69,7 @@
  
  	switch (mmc_profile) {
  	case -1:
-@@ -481,10 +505,21 @@
+@@ -563,10 +587,21 @@
  	int    secs;
  	int    mmc_profile;
  	gint64 size;
@@ -87,7 +91,7 @@
  
  	fd = open (device, O_RDWR|O_EXCL|O_NONBLOCK);
  	if (fd < 0) {
-@@ -493,6 +528,7 @@
+@@ -575,6 +610,7 @@
  		}
  		return NAUTILUS_BURN_MEDIA_SIZE_UNKNOWN;
  	}
@@ -95,7 +99,7 @@
  
  	mmc_profile = get_mmc_profile (fd);
  
-@@ -515,7 +551,11 @@
+@@ -597,7 +633,11 @@
  		size = NAUTILUS_BURN_MEDIA_SIZE_NA;
  	}
  
@@ -107,7 +111,7 @@
  
  	return size;
  }
-@@ -639,9 +679,81 @@
+@@ -890,9 +930,81 @@
  #endif /* USE_HAL */
  
  #if defined(__linux__) || defined(__FreeBSD__)
@@ -189,7 +193,7 @@
  #endif /* __linux__ || __FreeBSD__ */
  
  #if defined (__linux__)
-@@ -853,49 +965,7 @@
+@@ -1104,49 +1216,7 @@
  	return NULL;
  }
  
