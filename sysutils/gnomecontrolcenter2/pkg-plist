@@ -22,6 +22,7 @@ bin/gnome-window-properties
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/editor/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/screensaver/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/font_rendering/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard/xkb/%gconf.xml
@@ -236,6 +237,7 @@ share/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard/xkb
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/font_rendering
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/font_rendering
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/screensaver
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/editor
@@ -249,7 +251,6 @@ share/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard/xkb
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals
-@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/font_rendering
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/screensaver
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/editor
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon

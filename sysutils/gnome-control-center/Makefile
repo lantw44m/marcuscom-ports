@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomecontrolcenter2
-PORTVERSION=	2.5.1
-PORTREVISION=	1
+PORTVERSION=	2.5.1.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/2.5
@@ -33,7 +32,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[{]prefix[}]/share/pixmaps|{datadir}/pixmaps|g'
-	@${REINPLACE_CMD} -e 's|/local/gnome-head/test|${PREFIX}|g' \
-		${WRKSRC}/gnome-settings-daemon/GNOME_SettingsDaemon.server.in
 
 .include <bsd.port.mk>
