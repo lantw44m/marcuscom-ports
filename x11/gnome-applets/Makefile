@@ -7,7 +7,7 @@
 
 PORTNAME=	gnomeapplets2
 PORTVERSION=	2.9.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-applets/2.9
@@ -63,6 +63,13 @@ pre-everything::
 	@${ECHO_MSG} "* correct path.                                     *"
 	@${ECHO_MSG} "*****************************************************"
 	@${ECHO_MSG} ""
+.endif
+
+.if ${ARCH} != "i386" && ${ARCH} != "amd64"
+PLIST_SUB+=	CPUFREQ="@comment "
+.else
+PLIST_SUB+=	CPUFREQ=""
+GCONF_SCHEMAS+=	cpufreq-applet.schemas
 .endif
 
 .include <bsd.port.post.mk>

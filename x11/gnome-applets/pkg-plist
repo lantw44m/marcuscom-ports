@@ -1,3 +1,4 @@
+%%CPUFREQ%%bin/cpufreq-selector
 bin/gswitchit-plugins-capplet
 %%BATTERY%%etc/sound/events/battstat_applet.soundlist
 include/libgswitchit/gswitchit_config.h
@@ -5,6 +6,7 @@ include/libgswitchit/gswitchit_plugin.h
 libdata/bonobo/servers/GNOME_AccessxStatusApplet.server
 %%BATTERY%%libdata/bonobo/servers/GNOME_BattstatApplet.server
 libdata/bonobo/servers/GNOME_CDPlayerApplet.server
+%%CPUFREQ%%libdata/bonobo/servers/GNOME_CPUFreqApplet.server
 libdata/bonobo/servers/GNOME_CharpickerApplet.server
 libdata/bonobo/servers/GNOME_DriveMountApplet.server
 libdata/bonobo/servers/GNOME_GWeatherApplet_Factory.server
@@ -24,6 +26,7 @@ libdata/pkgconfig/gswitchit.pc
 libexec/accessx-status-applet
 %%BATTERY%%libexec/battstat-applet-2
 libexec/charpick_applet2
+%%CPUFREQ%%libexec/cpufreq-applet
 libexec/drivemount_applet2
 libexec/geyes_applet2
 libexec/gnome-applets/mc-install-default-macros
@@ -40,6 +43,7 @@ libexec/trashapplet
 share/gnome/gnome-2.0/ui/GNOME_AccessxApplet.xml
 %%BATTERY%%share/gnome/gnome-2.0/ui/GNOME_BattstatApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_CharpickerApplet.xml
+%%CPUFREQ%%share/gnome/gnome-2.0/ui/GNOME_CPUFreqApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_DriveMountApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GSwitchItApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GWeatherApplet.xml
@@ -67,6 +71,7 @@ share/gnome/gnome-applets/geyes/Horrid/config
 share/gnome/gnome-applets/geyes/Horrid/horrid_eye.png
 share/gnome/gnome-applets/geyes/Horrid/horrid_pupil.png
 %%BATTERY%%share/gnome/gnome-applets/glade/battstat_applet.glade
+%%CPUFREQ%%share/gnome/gnome-applets/glade/cpufreq-preferences.glade
 share/gnome/gnome-applets/glade/gswitchit-plugins.glade
 share/gnome/gnome-applets/glade/gswitchit-properties.glade
 share/gnome/gnome-applets/glade/mini-commander.glade
@@ -326,6 +331,15 @@ share/gnome/help/command-line/zh_HK/legal.xml
 share/gnome/help/command-line/zh_TW/command-line.xml
 share/gnome/help/command-line/zh_TW/figures/command-line.png
 share/gnome/help/command-line/zh_TW/legal.xml
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/cpufreq-applet.xml
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-performance1.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-performance2.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-powersave1.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-powersave2.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-preferences-smp.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-preferences.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-selector.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/legal.xml
 share/gnome/help/drivemount/C/drivemount.xml
 share/gnome/help/drivemount/C/figures/drivemount-applet_window.png
 share/gnome/help/drivemount/C/figures/drivemount_applet_all.png
@@ -711,6 +725,7 @@ share/gnome/omf/gnome-applets/command-line-sv.omf
 share/gnome/omf/gnome-applets/command-line-zh_CN.omf
 share/gnome/omf/gnome-applets/command-line-zh_HK.omf
 share/gnome/omf/gnome-applets/command-line-zh_TW.omf
+%%CPUFREQ%%share/gnome/omf/gnome-applets/cpufreq-applet-C.omf
 share/gnome/omf/gnome-applets/drivemount-C.omf
 share/gnome/omf/gnome-applets/drivemount-de.omf
 share/gnome/omf/gnome-applets/drivemount-es.omf
@@ -833,6 +848,12 @@ share/gnome/pixmaps/accessx-status-applet/sticky-shift-none.png
 share/gnome/pixmaps/accessx-status-applet/sticky-super-latched.png
 share/gnome/pixmaps/accessx-status-applet/sticky-super-locked.png
 share/gnome/pixmaps/accessx-status-applet/sticky-super-none.png
+%%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-100.png
+%%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-25.png
+%%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-50.png
+%%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-75.png
+%%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-applet.png
+%%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-na.png
 share/gnome/pixmaps/stickynotes/close.png
 share/gnome/pixmaps/stickynotes/locked.png
 share/gnome/pixmaps/stickynotes/resize_se.png
@@ -999,6 +1020,7 @@ share/locale/wa/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/pixmaps/stickynotes
+%%CPUFREQ%%@dirrm share/gnome/pixmaps/cpufreq-applet
 @dirrm share/gnome/pixmaps/accessx-status-applet
 @dirrm share/gnome/omf/gnome-applets
 @dirrm share/gnome/help/trashapplet/C
@@ -1179,6 +1201,9 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/drivemount/C/figures
 @dirrm share/gnome/help/drivemount/C
 @dirrm share/gnome/help/drivemount
+%%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/C/figures
+%%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/C
+%%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet
 @dirrm share/gnome/help/command-line/zh_TW/figures
 @dirrm share/gnome/help/command-line/zh_TW
 @dirrm share/gnome/help/command-line/zh_HK/figures
