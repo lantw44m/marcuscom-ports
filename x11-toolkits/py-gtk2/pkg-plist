@@ -267,6 +267,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%@dirrm share/doc/py-gtk
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0
+@dirrm lib/pygtk/2.0/demos/images
 @dirrm lib/pygtk/2.0/demos
 @dirrm lib/pygtk/2.0
 @dirrm lib/pygtk
