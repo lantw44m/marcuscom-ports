@@ -6,7 +6,8 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.8.6
+PORTVERSION=	0.8.7
+PORTREVISION?=	0
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://gstreamer.freedesktop.org/src/gst-plugins/
@@ -110,27 +111,16 @@ post-patch:
 		${WRKSRC}/sys/cdrom/gstcdplayer_ioctl.c \
 		${WRKSRC}/sys/vcd/vcdsrc.c \
 		${WRKSRC}/sys/vcd/vcdsrc.h
-# KDE libkio required thread support
-	@${REINPLACE_CMD} -E \
-		-e 's|(KIO_CFLAGS=.+)"$$|\1 ${PTHREAD_CFLAGS}"|' \
-		-e 's|(KIO_LIBS=.+)"$$|\1 ${PTHREAD_LIBS}"|' \
-		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
 # mplex fix -- gst configure does not use mjpegtool's config to find include.
 	@${REINPLACE_CMD} -E \
 		-e 's|PFLAGS@|PFLAGS@ -I${LOCALBASE}/include/mjpegtools -I${LOCALBASE}/include/mjpegtools/mplex|' \
 		${WRKSRC}/ext/mplex/Makefile.in
-# speex fix -- speex.h has moved to include/speex/speex.h
-	@${REINPLACE_CMD} -e 's|-I.|-I. -I${LOCALBASE}/include/speex|' \
-		${WRKSRC}/ext/speex/Makefile.in
 .if ${CXXFLAGS:M*=athlon-4} || ${CXXFLAGS:M*=athlon-mp} || ${CXXFLAGS:M*=athlon-xp}
 # Fix gst-register when using -O -march=athlon-xp
 	@${REINPLACE_CMD} -e 's|@CXXF|-fgcse @CXXF|g' \
 		${WRKSRC}/gst/modplug/Makefile.in \
 		${WRKSRC}/gst/modplug/libmodplug/Makefile.in
 .endif
-# tell configure where the musepack includes live
-	@${REINPLACE_CMD} -e 's|/usr/include/musepack|${LOCALBASE}/include/musepack|g' \
-		${WRKSRC}/configure
 
 pre-build:
 # This port cannot be CFLAGS safe, when using p4 optimizations

@@ -7,6 +7,7 @@ GST_ALL_PLUGINS= \
 		artstest \
 		artsc \
 		audiofile \
+		cairo \
 		cdaudio \
 		cdparanoia \
 		dirac \
@@ -34,6 +35,7 @@ GST_ALL_PLUGINS= \
 		libfame \
 		libfametest\
 		libmng \
+		libmms \
 		libpng \
 		librfb \
 		libvisual \
@@ -121,6 +123,11 @@ PLIST_FILES=	${GST_LIB_DIR}/libgstaasink.so
 .if ${GST_PLUGIN}=="artsd"
 LIB_DEPENDS+=	artsc.0:${PORTSDIR}/audio/arts
 GST_PLIST_SUFFIX=	sink
+.endif
+
+# cairo
+.if ${GST_PLUGIN}=="cairo"
+LIB_DEPENDS+=	cairo.1:${PORTSDIR}/graphics/cairo
 .endif
 
 # cdparanoia
@@ -266,10 +273,15 @@ PLIST_FILES=	${GST_LIB_DIR}/libgstdvdnavsrc.so \
 LIB_DEPENDS+=	fame-0.9.1:${PORTSDIR}/multimedia/libfame
 .endif
 
+# libmms
+.if ${GST_PLUGIN}=="libmng"
+LIB_DEPENDS+=   mms.0:${PORTSDIR}/multimedia/libmms
+.endif
+
 # libmng
 .if ${GST_PLUGIN}=="libmng"
 LIB_DEPENDS+=	mng.1:${PORTSDIR}/graphics/libmng
-PLIST_FILES=    ${GST_LIB_DIR}/libgstmng.so
+#PLIST_FILES=    ${GST_LIB_DIR}/libgstmng.so
 .endif
 
 # mikmod
@@ -413,8 +425,8 @@ do-build:
 		${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET}
 .endfor
 	@${ECHO_CMD} "@unexec ${PREFIX}/bin/gst-register-${GST_VERSION} \
-		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST_VERSION}/registry.xml \
-		>> ${TMPPLIST}"
+		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST_VERSION}/registry.xml" \
+		>> ${TMPPLIST}
 
 
 post-build:

@@ -2,6 +2,8 @@ bin/gst-launch-ext-%%VERSION%%
 bin/gst-visualise-%%VERSION%%
 include/gstreamer-%%VERSION%%/gst/audio/audio.h
 include/gstreamer-%%VERSION%%/gst/audio/audioclock.h
+include/gstreamer-%%VERSION%%/gst/audio/multichannel-enumtypes.h
+include/gstreamer-%%VERSION%%/gst/audio/multichannel.h
 include/gstreamer-%%VERSION%%/gst/audio/gstaudiofilter.h
 include/gstreamer-%%VERSION%%/gst/colorbalance/colorbalance-enumtypes.h
 include/gstreamer-%%VERSION%%/gst/colorbalance/colorbalance.h
@@ -36,6 +38,7 @@ lib/gstreamer-%%VERSION%%/libgstadder.so
 lib/gstreamer-%%VERSION%%/libgstalaw.so
 lib/gstreamer-%%VERSION%%/libgstalpha.so
 lib/gstreamer-%%VERSION%%/libgstalphacolor.so
+lib/gstreamer-%%VERSION%%/libgstapetag.so	
 lib/gstreamer-%%VERSION%%/libgstasf.so
 lib/gstreamer-%%VERSION%%/libgstaudio.so
 lib/gstreamer-%%VERSION%%/libgstaudioconvert.so
@@ -101,6 +104,7 @@ lib/gstreamer-%%VERSION%%/libgstswitch.so
 lib/gstreamer-%%VERSION%%/libgstsynaesthesia.so
 lib/gstreamer-%%VERSION%%/libgsttagedit.so
 lib/gstreamer-%%VERSION%%/libgsttcp.so
+lib/gstreamer-%%VERSION%%/libgsttta.so
 lib/gstreamer-%%VERSION%%/libgsttypefindfunctions.so
 lib/gstreamer-%%VERSION%%/libgstudp.so
 lib/gstreamer-%%VERSION%%/libgstvbidec.so
