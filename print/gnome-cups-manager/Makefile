@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome-cups-manager
-PORTVERSION=	0.24
+PORTVERSION=	0.27
 PORTEPOCH=	1
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -37,6 +37,7 @@ post-patch:
 		"s|-D.*_DISABLE_DEPRECATED||g"
 
 post-install:
+	${MKDIR} ${PREFIX}/share/gnome/applications
 	${INSTALL_DATA} ${WRKSRC}/gnome-cups-manager.desktop \
 		${PREFIX}/share/gnome/applications
 

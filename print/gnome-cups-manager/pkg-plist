@@ -26,8 +26,8 @@ share/gnome/pixmaps/gnome-cups-manager/printer-tray-stopped.png
 share/icons/hicolor/48x48/devices/gnome-dev-printer-network.png
 share/icons/hicolor/48x48/devices/gnome-dev-printer-new.png
 share/icons/hicolor/48x48/devices/gnome-dev-printer.png
-share/icons/hicolor/48x48/emblems/emblem-default.png
-share/icons/hicolor/48x48/emblems/emblem-paused.png
+share/icons/hicolor/48x48/stock/data/emblem-default.png
+share/icons/hicolor/48x48/stock/data/emblem-paused.png
 share/locale/bg/LC_MESSAGES/gnome-cups-manager.mo
 share/locale/ca/LC_MESSAGES/gnome-cups-manager.mo
 share/locale/cs/LC_MESSAGES/gnome-cups-manager.mo
@@ -50,10 +50,13 @@ share/locale/no/LC_MESSAGES/gnome-cups-manager.mo
 share/locale/pa/LC_MESSAGES/gnome-cups-manager.mo
 share/locale/pt/LC_MESSAGES/gnome-cups-manager.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-cups-manager.mo
+share/locale/sq/LC_MESSAGES/gnome-cups-manager.mo
 share/locale/sr/LC_MESSAGES/gnome-cups-manager.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-cups-manager.mo
 share/locale/sv/LC_MESSAGES/gnome-cups-manager.mo
 share/locale/tr/LC_MESSAGES/gnome-cups-manager.mo
 share/locale/uk/LC_MESSAGES/gnome-cups-manager.mo
+share/locale/zh_CN/LC_MESSAGES/gnome-cups-manager.mo
+share/locale/zh_TW/LC_MESSAGES/gnome-cups-manager.mo
 @dirrm share/gnome/pixmaps/gnome-cups-manager
 @dirrm share/gnome/gnome-cups-manager
