@@ -548,8 +548,11 @@ share/gnome/pixmaps/gnomine/face-smile.xpm
 share/gnome/pixmaps/gnomine/face-win.xpm
 share/gnome/pixmaps/gnomine/face-worried.xpm
 share/gnome/pixmaps/gnomine/flag-question.png
+share/gnome/pixmaps/gnomine/flag-question.svg
 share/gnome/pixmaps/gnomine/flag.png
+share/gnome/pixmaps/gnomine/flag.svg
 share/gnome/pixmaps/gnomine/mine.png
+share/gnome/pixmaps/gnomine/mine.svg
 share/gnome/pixmaps/gnotski-icon.png
 share/gnome/pixmaps/gnotski.png
 share/gnome/pixmaps/iagno.png
@@ -562,6 +565,8 @@ share/gnome/pixmaps/iagno/shrink.png
 share/gnome/pixmaps/iagno/sunmoon.png
 share/gnome/pixmaps/iagno/woodtrim.png
 share/gnome/pixmaps/mahjongg/default.png
+share/gnome/pixmaps/mahjongg/postmodern.svg
+share/gnome/pixmaps/mahjongg/smooth.png
 share/gnome/pixmaps/same-gnome/blink-sync.png
 share/gnome/pixmaps/same-gnome/glass.png
 share/gnome/pixmaps/same-gnome/marbles.png
