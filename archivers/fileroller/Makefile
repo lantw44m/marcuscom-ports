@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	fileroller
-PORTVERSION=	2.9.1
+PORTVERSION=	2.9.2
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/file-roller/2.9
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui desktopfileutils
+USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils nautilus2
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
