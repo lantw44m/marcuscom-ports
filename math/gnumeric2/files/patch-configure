@@ -1,0 +1,11 @@
+--- configure.orig	Wed Dec 24 13:17:48 2003
++++ configure	Wed Dec 24 13:17:48 2003
+@@ -25411,7 +25412,7 @@
+ }'
+ fi
+ 
+-DEFS=-DHAVE_CONFIG_H
++DEFS="$DEFS -DHAVE_CONFIG_H"
+ 
+ ac_libobjs=
+ ac_ltlibobjs=
