@@ -7,6 +7,7 @@
 
 PORTNAME=	monkeybubble
 PORTVERSION=	0.1.9
+PORTREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	http://monkey-bubble.tuxfamily.org/
 DISTNAME=	monkey-bubble-${PORTVERSION}
@@ -18,8 +19,9 @@ USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+USE_LIBTOOL=	yes
 USE_GNOME=	gnomehack gnomeprefix librsvg2 libgnomeui \
-		gstreamerplugins intlhack
+		gstreamerplugins intlhack lthack
 
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
