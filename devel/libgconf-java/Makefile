@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	libgconf-java
-PORTVERSION=	2.5.5
-PORTREVISION=	1
+PORTVERSION=	2.5.6
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -30,11 +29,12 @@ CONFIGURE_ARGS=	--without-gcj-compile \
 		--with-java-prefix=${JAVA_HOME}
 CONFIGURE_ENV=	DB2="/dev/null"
 
-GCONF_API_VERSION=	2.5
-GTK_API_VERSION=	2.3
-GTK_JAVA_VERSION=	2.3.5
+GCONF_API_VERSION=	2.6
+GTK_API_VERSION=	2.4
+VERSION=		beta1
+GTK_JAVA_VERSION=	beta1
 PLIST_SUB=		GCONF_API_VERSION=${GCONF_API_VERSION} \
-			PORTVERSION=${PORTVERSION}
+			PORTVERSION=${VERSION}
 
 PKGMESSAGE=		${WRKDIR}/pkg-message
 
@@ -44,13 +44,13 @@ post-patch:
 
 do-install:
 	${MKDIR} ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/lib/libgconfjava${GCONF_API_VERSION}.so.${PORTVERSION} \
+	${INSTALL_DATA} ${WRKSRC}/lib/libgconfjava${GCONF_API_VERSION}.so.${VERSION} \
 		${PREFIX}/lib
-	${LN} -sf ${PREFIX}/lib/libgconfjava${GCONF_API_VERSION}.so.${PORTVERSION} ${PREFIX}/lib/libgconfjava${GCONF_API_VERSION}.so
+	${LN} -sf ${PREFIX}/lib/libgconfjava${GCONF_API_VERSION}.so.${VERSION} ${PREFIX}/lib/libgconfjava${GCONF_API_VERSION}.so
 	${MKDIR} ${JAVAJARDIR}
-	${INSTALL_DATA} ${WRKSRC}/lib/gconf${GCONF_API_VERSION}-${PORTVERSION}.jar \
+	${INSTALL_DATA} ${WRKSRC}/lib/gconf${GCONF_API_VERSION}-${VERSION}.jar \
 		${JAVAJARDIR}
-	${LN} -sf ${JAVAJARDIR}/gconf${GCONF_API_VERSION}-${PORTVERSION}.jar \
+	${LN} -sf ${JAVAJARDIR}/gconf${GCONF_API_VERSION}-${VERSION}.jar \
 		${JAVAJARDIR}/gconf${GCONF_API_VERSION}.jar
 
 post-install:
