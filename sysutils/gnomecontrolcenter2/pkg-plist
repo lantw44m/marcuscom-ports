@@ -1,5 +1,6 @@
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
+bin/gnome-background-properties
 bin/gnome-control-center
 bin/gnome-default-applications-properties
 bin/gnome-display-properties
@@ -17,14 +18,12 @@ bin/gnome-theme-thumbnailer
 bin/gnome-thumbnail-font
 bin/gnome-typing-monitor
 bin/gnome-ui-properties
-bin/gnome-wallpaper-properties
 bin/gnome-window-properties
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/editor/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/keybindings/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/screensaver/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/font_rendering/%gconf.xml
-etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard/xkb/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-otf/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-pcf/%gconf.xml
@@ -37,7 +36,6 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/editor/%gconf.xm
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/keybindings/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/screensaver/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/font_rendering/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard/xkb/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-otf/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-pcf/%gconf.xml
@@ -95,6 +93,7 @@ share/gnome/control-center-2.0/interfaces/at-enable-dialog.glade
 share/gnome/control-center-2.0/interfaces/file-types-properties.glade
 share/gnome/control-center-2.0/interfaces/font-properties.glade
 share/gnome/control-center-2.0/interfaces/gnome-accessibility-keyboard-properties.glade
+share/gnome/control-center-2.0/interfaces/gnome-background-properties.glade
 share/gnome/control-center-2.0/interfaces/gnome-default-applications-properties.glade
 share/gnome/control-center-2.0/interfaces/gnome-keybinding-properties.glade
 share/gnome/control-center-2.0/interfaces/gnome-keyboard-properties.glade
@@ -240,8 +239,6 @@ share/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-pcf
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-otf
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard/xkb
-@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard
-@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/font_rendering
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/font_rendering
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/screensaver
@@ -255,8 +252,6 @@ share/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-pcf
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-otf
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard/xkb
-@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard
-@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/screensaver
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/keybindings
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/editor

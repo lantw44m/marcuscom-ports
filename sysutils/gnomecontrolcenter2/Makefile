@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomecontrolcenter2
-PORTVERSION=	2.5.2
-PORTREVISION=	3
+PORTVERSION=	2.5.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/2.5
@@ -17,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Control center for GNOME 2 project
 
-LIB_DEPENDS=	xklavier.7:${PORTSDIR}/x11/libxklavier
+LIB_DEPENDS=	xklavier.8:${PORTSDIR}/x11/libxklavier
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
