@@ -34,6 +34,5 @@ CONFLICTS=	sol-1.0.*
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|malloc\.h|stdlib.h|g'
-	@${REINPLACE_CMD} -e '/%[85].2lf%%/s|.2lf%%|.2f%%|g' ${WRKSRC}/blackjack/src/player.cpp
 
 .include <bsd.port.mk>
