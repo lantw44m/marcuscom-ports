@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libgnomeui
-PORTVERSION=	2.3.3
+PORTVERSION=	2.3.3.1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -22,7 +22,6 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
-USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier libbonoboui
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
