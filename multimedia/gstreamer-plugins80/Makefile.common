@@ -274,7 +274,7 @@ LIB_DEPENDS+=	fame-0.9.1:${PORTSDIR}/multimedia/libfame
 .endif
 
 # libmms
-.if ${GST_PLUGIN}=="libmng"
+.if ${GST_PLUGIN}=="libmms"
 LIB_DEPENDS+=   mms.0:${PORTSDIR}/multimedia/libmms
 PLIST_FILES=	${GST_LIB_DIR}/libgstmms.so
 .endif
