@@ -92,13 +92,24 @@ share/doc/gok/gok-switchapi.html
 share/doc/gok/gok-word-complete.html
 share/doc/gok/index.html
 share/doc/gok/index.sgml
+share/gnome/applications/gok.desktop
+share/gnome/gok/East.png
 share/gnome/gok/Keyboard.kbd
+share/gnome/gok/East.png
+share/gnome/gok/NE.png
+share/gnome/gok/NW.png
+share/gnome/gok/North.png
+share/gnome/gok/SE.png
+share/gnome/gok/SW.png
+share/gnome/gok/South.png
+share/gnome/gok/West.png
 share/gnome/gok/alphabet.kbd
 share/gnome/gok/automatic-scanning.xam
 share/gnome/gok/dictionary.txt
 share/gnome/gok/direct-selection.xam
 share/gnome/gok/dwell-selection.xam
 share/gnome/gok/empty.png
+share/gnome/gok/gok.png
 share/gnome/gok/gok.rc
 share/gnome/gok/gok-controls.kbd
 share/gnome/gok/goklogo.png
@@ -118,6 +129,7 @@ share/gnome/gok/small-empty.png
 share/gnome/gok/text-operations.kbd
 share/gnome/help/gok/C/gok.xml
 share/gnome/omf/gok/gok-C.omf
+share/gnome/pixmaps/gok.png
 @exec scrollkeeper-install -q %D/share/gnome/omf/gok/gok-C.omf
 share/locale/am/LC_MESSAGES/gok.mo
 share/locale/ca/LC_MESSAGES/gok.mo
