@@ -95,6 +95,7 @@ share/locale/am/LC_MESSAGES/epiphany.mo
 share/locale/az/LC_MESSAGES/epiphany.mo
 share/locale/ar/LC_MESSAGES/epiphany.mo
 share/locale/be/LC_MESSAGES/epiphany.mo
+share/locale/bn/LC_MESSAGES/epiphany.mo
 share/locale/ca/LC_MESSAGES/epiphany.mo
 share/locale/cs/LC_MESSAGES/epiphany.mo
 share/locale/cy/LC_MESSAGES/epiphany.mo
@@ -104,11 +105,14 @@ share/locale/el/LC_MESSAGES/epiphany.mo
 share/locale/en_GB/LC_MESSAGES/epiphany.mo
 share/locale/es/LC_MESSAGES/epiphany.mo
 share/locale/et/LC_MESSAGES/epiphany.mo
+share/locale/fa/LC_MESSAGES/epiphany.mo
 share/locale/fi/LC_MESSAGES/epiphany.mo
 share/locale/fr/LC_MESSAGES/epiphany.mo
 share/locale/ga/LC_MESSAGES/epiphany.mo
 share/locale/hi/LC_MESSAGES/epiphany.mo
+share/locale/hr/LC_MESSAGES/epiphany.mo
 share/locale/hu/LC_MESSAGES/epiphany.mo
+share/locale/id/LC_MESSAGES/epiphany.mo
 share/locale/is/LC_MESSAGES/epiphany.mo
 share/locale/it/LC_MESSAGES/epiphany.mo
 share/locale/ja/LC_MESSAGES/epiphany.mo
