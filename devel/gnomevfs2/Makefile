@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomevfs2
-PORTVERSION=	2.5.6
-PORTREVISION=	4
+PORTVERSION=	2.5.7
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.5
@@ -27,6 +26,7 @@ USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack gnomemimedata gconf2 \
 USE_REINPLACE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_SHLIB=	yes
+CONFIGURE_ARGS=	--disable-openssl
 CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		BSD_PTHREAD_LIBS=${PTHREAD_LIBS}
@@ -44,6 +44,9 @@ WITH_SAMBA=		yes
 
 .if !defined(WITHOUT_KDE_MENUS)
 EXTRA_PATCHES=	${FILESDIR}/modules_vfolder_applications-all-users.vfolder-info.in
+PLIST_SUB+=	KDEMENUS=""
+.else
+PLIST_SUB+=	KDEMENUS="@comment "
 .endif
 
 .if exists(${LOCALBASE}/lib/libcdda_paranoia.a)
@@ -79,7 +82,17 @@ post-patch:
 		${WRKSRC}/libgnomevfs/Makefile.in \
 		${WRKSRC}/libgnomevfs/xdgmime.c \
 		${WRKSRC}/modules/vfolder/applications-all-users.vfolder-info.in
+.if !defined(WITHOUT_KDE_MENUS)
+	@${SED} -e 's|/usr/local|${LOCALBASE}|g' \
+		< ${FILESDIR}/KDE.directory > ${WRKSRC}/KDE.directory
+.endif
 	@${REINPLACE_CMD} -e "/^SUBDIRS =/s/test//" \
 		${WRKSRC}/Makefile.in
+
+post-install:
+	@${MKDIR} ${PREFIX}/share/gnome/vfolders
+.if !defined(WITHOUT_KDE_MENUS)
+	@${INSTALL_DATA} ${WRKSRC}/KDE.directory ${PREFIX}/share/gnome/vfolders
+.endif
 
 .include <bsd.port.post.mk>
