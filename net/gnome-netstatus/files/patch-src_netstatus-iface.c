@@ -1,6 +1,6 @@
---- src/netstatus-iface.c.orig	Wed Mar  3 08:07:35 2004
-+++ src/netstatus-iface.c	Mon Mar  8 22:18:03 2004
-@@ -32,12 +32,15 @@
+--- src/netstatus-iface.c.orig	Mon Mar 22 17:49:17 2004
++++ src/netstatus-iface.c	Mon Mar 22 17:50:12 2004
+@@ -32,6 +32,8 @@
  
  #include <libgnome/gnome-i18n.h>
  
@@ -9,7 +9,8 @@
  #include <sys/ioctl.h>
  #ifdef HAVE_SYS_SOCKIO_H
  #include <sys/sockio.h>
- #endif /* HAVE_SYS_SOCKIO_H */
+@@ -39,6 +41,7 @@
+ #include <sys/param.h>
  #include <net/if.h>
  #include <net/if_arp.h>
 +#include <netinet/in.h>

@@ -133,10 +133,12 @@ share/locale/da/LC_MESSAGES/gnome-netstatus.mo
 share/locale/de/LC_MESSAGES/gnome-netstatus.mo
 share/locale/el/LC_MESSAGES/gnome-netstatus.mo
 share/locale/en_CA/LC_MESSAGES/gnome-netstatus.mo
+share/locale/en_GB/LC_MESSAGES/gnome-netstatus.mo
 share/locale/es/LC_MESSAGES/gnome-netstatus.mo
 share/locale/fi/LC_MESSAGES/gnome-netstatus.mo
 share/locale/fr/LC_MESSAGES/gnome-netstatus.mo
 share/locale/ga/LC_MESSAGES/gnome-netstatus.mo
+share/locale/hi/LC_MESSAGES/gnome-netstatus.mo
 share/locale/hr/LC_MESSAGES/gnome-netstatus.mo
 share/locale/it/LC_MESSAGES/gnome-netstatus.mo
 share/locale/ja/LC_MESSAGES/gnome-netstatus.mo
@@ -150,6 +152,7 @@ share/locale/pa/LC_MESSAGES/gnome-netstatus.mo
 share/locale/pl/LC_MESSAGES/gnome-netstatus.mo
 share/locale/pt/LC_MESSAGES/gnome-netstatus.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-netstatus.mo
+share/locale/ro/LC_MESSAGES/gnome-netstatus.mo
 share/locale/ru/LC_MESSAGES/gnome-netstatus.mo
 share/locale/sk/LC_MESSAGES/gnome-netstatus.mo
 share/locale/sq/LC_MESSAGES/gnome-netstatus.mo
