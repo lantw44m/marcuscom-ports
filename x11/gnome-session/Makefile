@@ -27,12 +27,8 @@ USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
 USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
-CONFIGURE_ARGS=	--with-halt-command=/sbin/shutdown \
-		--with-reboot-command=/sbin/shutdown
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
-MAKE_ENV+=	HALT_COMMAND="/sbin/halt -p" \
-		REBOOT_COMMAND="/sbin/reboot"
 
 MAN1=		gnome-session.1 gnome-smproxy.1 gnome-wm.1 \
 		session-properties.1 gnome-session-save.1
