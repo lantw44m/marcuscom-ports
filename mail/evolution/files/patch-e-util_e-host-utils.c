@@ -9,7 +9,7 @@
  		return NO_ADDRESS;
  		break;
 +#endif
-+#ifdef EAI_NODATA && EAI_NODATA != EAI_NONAME
++#if defined(EAI_NODATA) && EAI_NODATA != EAI_NONAME
  	case EAI_NODATA:
  		return NO_DATA;
  		break;
