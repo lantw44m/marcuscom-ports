@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomeapplets2
-PORTVERSION=	2.3.2
+PORTVERSION=	2.3.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-applets/2.3
@@ -26,7 +26,7 @@ GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomehier gnomeprefix gnomehack gnomepanel gail
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.pre.mk>
 

@@ -45,7 +45,8 @@ etc/gconf/schemas/multiload.schemas
 etc/gconf/schemas/stickynotes.schemas
 %%BATTERY%%etc/sound/events/battstat_applet.soundlist
 etc/sound/events/mailcheck.soundlist
-libdata/bonobo/servers/GNOME_BattstatApplet.server
+libdata/bonobo/servers/GNOME_AccessxStatusApplet.server
+%%BATTERY%%libdata/bonobo/servers/GNOME_BattstatApplet.server
 libdata/bonobo/servers/GNOME_CDPlayerApplet.server
 libdata/bonobo/servers/GNOME_CharpickerApplet.server
 libdata/bonobo/servers/GNOME_DriveMountApplet.server
@@ -60,6 +61,7 @@ libdata/bonobo/servers/GNOME_ModemLightsApplet.server
 libdata/bonobo/servers/GNOME_MultiLoadApplet_Factory.server
 libdata/bonobo/servers/GNOME_Panel_WirelessApplet.server
 libdata/bonobo/servers/GNOME_StickyNotesApplet.server
+libexec/accessx-status-applet
 %%BATTERY%%libexec/battstat-applet-2
 libexec/cdplayer_applet2
 libexec/charpick_applet2
@@ -163,6 +165,9 @@ share/gnome/gkb/LT_Prog.keyprop
 share/gnome/gkb/LT_Standard.keyprop
 share/gnome/gkb/MK_Macedonian.keyprop
 share/gnome/gkb/MN_Mongolian.keyprop
+share/gnome/gkb/MN_Mongolian_x.keyprop
+share/gnome/gkb/MN_Mongolian_x_rev.keyprop
+share/gnome/gkb/MN_Mongolian_x_uni.keyprop
 share/gnome/gkb/Macedonian.keyprop
 share/gnome/gkb/NL_Dutch_x.keyprop
 share/gnome/gkb/NO_Norwegian.keyprop
@@ -188,6 +193,8 @@ share/gnome/gkb/Slovak.keyprop
 share/gnome/gkb/Slovene.keyprop
 share/gnome/gkb/Slovenian.keyprop
 share/gnome/gkb/Swedish.keyprop
+share/gnome/gkb/Syriac.keyprop
+share/gnome/gkb/Syriac_Phonetic.keyprop
 share/gnome/gkb/TH_Thai.keyprop
 share/gnome/gkb/TH_Thai_x.keyprop
 share/gnome/gkb/TR-f.keyprop
@@ -220,7 +227,8 @@ share/gnome/gkb/YU_Serb_x.keyprop
 share/gnome/gkb/YU_Serbo-Croatian_x.keyprop
 share/gnome/gkb/Yugoslav.keyprop
 share/gnome/gkb/presets.xml
-share/gnome/gnome-2.0/ui/GNOME_BattstatApplet.xml
+share/gnome/gnome-2.0/ui/GNOME_AccessxApplet.xml
+%%BATTERY%%share/gnome/gnome-2.0/ui/GNOME_BattstatApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_CDPlayerApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_CharpickerApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_DriveMountApplet.xml
@@ -235,6 +243,10 @@ share/gnome/gnome-2.0/ui/GNOME_ModemlightsApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_MultiloadApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_StickyNotesApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_WirelessApplet.xml
+share/gnome/help/accessx-status/C/accessx-status.xml
+share/gnome/help/accessx-status/C/figures/accessx-status-applet.png
+share/gnome/help/accessx-status/C/legal.xml
+share/gnome/help/accessx-status/C/topic.dat
 %%BATTERY%%share/gnome/help/battstat/C/battstat.xml
 %%BATTERY%%share/gnome/help/battstat/C/figures/battstat-apperance.png
 %%BATTERY%%share/gnome/help/battstat/C/figures/battstat-applet.png
@@ -643,12 +655,18 @@ share/gnome/help/mixer_applet2/zh_CN/mixer_applet2.xml
 share/gnome/help/mixer_applet2/zh_TW/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/zh_TW/legal.xml
 share/gnome/help/mixer_applet2/zh_TW/mixer_applet2.xml
+share/gnome/help/stickynotes_applet/C/figures/applet_menu.png
+share/gnome/help/stickynotes_applet/C/figures/note_menu.png
+share/gnome/help/stickynotes_applet/C/figures/preferences_dialog.png
+share/gnome/help/stickynotes_applet/C/figures/stickynotes_applet.png
 share/gnome/help/stickynotes_applet/C/legal.xml
 share/gnome/help/stickynotes_applet/C/stickynotes_applet.xml
+share/gnome/omf/gnome-applets/accessx-status-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/accessx-status-C.omf 2>/dev/null || /usr/bin/true
 %%BATTERY%%share/gnome/omf/gnome-applets/battstat-C.omf
-@exec scrollkeeper-install -q %D/%%BATTERY%%share/gnome/omf/gnome-applets/battstat-C.omf 2>/dev/null || /usr/bin/true
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/battstat-C.omf 2>/dev/null || /usr/bin/true
 %%BATTERY%%share/gnome/omf/gnome-applets/battstat-ja.omf
-@exec scrollkeeper-install -q %D/%%BATTERY%%share/gnome/omf/gnome-applets/battstat-ja.omf 2>/dev/null || /usr/bin/true
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/battstat-ja.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/cdplayer-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/cdplayer-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/cdplayer-de.omf
@@ -833,6 +851,42 @@ share/gnome/omf/gnome-applets/mixer_applet2-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/mixer_applet2-zh_TW.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/stickynotes_applet-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/stickynotes_applet-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/pixmaps/accessx-status-applet/ax-applet.png
+share/gnome/pixmaps/accessx-status-applet/ax-bouncekeys.png
+share/gnome/pixmaps/accessx-status-applet/ax-key-base.png
+share/gnome/pixmaps/accessx-status-applet/ax-key-inverse.png
+share/gnome/pixmaps/accessx-status-applet/ax-key-no.png
+share/gnome/pixmaps/accessx-status-applet/ax-key-none.png
+share/gnome/pixmaps/accessx-status-applet/ax-key-yes.png
+share/gnome/pixmaps/accessx-status-applet/ax-slowkeys-no.png
+share/gnome/pixmaps/accessx-status-applet/ax-slowkeys-pending.png
+share/gnome/pixmaps/accessx-status-applet/ax-slowkeys-yes.png
+share/gnome/pixmaps/accessx-status-applet/ax-slowkeys.png
+share/gnome/pixmaps/accessx-status-applet/mousekeys-base.png
+share/gnome/pixmaps/accessx-status-applet/mousekeys-default-left.png
+share/gnome/pixmaps/accessx-status-applet/mousekeys-default-middle.png
+share/gnome/pixmaps/accessx-status-applet/mousekeys-default-right.png
+share/gnome/pixmaps/accessx-status-applet/mousekeys-pressed-left.png
+share/gnome/pixmaps/accessx-status-applet/mousekeys-pressed-middle.png
+share/gnome/pixmaps/accessx-status-applet/mousekeys-pressed-right.png
+share/gnome/pixmaps/accessx-status-applet/sticky-alt-latched.png
+share/gnome/pixmaps/accessx-status-applet/sticky-alt-locked.png
+share/gnome/pixmaps/accessx-status-applet/sticky-alt-none.png
+share/gnome/pixmaps/accessx-status-applet/sticky-ctrl-latched.png
+share/gnome/pixmaps/accessx-status-applet/sticky-ctrl-locked.png
+share/gnome/pixmaps/accessx-status-applet/sticky-ctrl-none.png
+share/gnome/pixmaps/accessx-status-applet/sticky-hyper-latched.png
+share/gnome/pixmaps/accessx-status-applet/sticky-hyper-locked.png
+share/gnome/pixmaps/accessx-status-applet/sticky-hyper-none.png
+share/gnome/pixmaps/accessx-status-applet/sticky-meta-latched.png
+share/gnome/pixmaps/accessx-status-applet/sticky-meta-locked.png
+share/gnome/pixmaps/accessx-status-applet/sticky-meta-none.png
+share/gnome/pixmaps/accessx-status-applet/sticky-shift-latched.png
+share/gnome/pixmaps/accessx-status-applet/sticky-shift-locked.png
+share/gnome/pixmaps/accessx-status-applet/sticky-shift-none.png
+share/gnome/pixmaps/accessx-status-applet/sticky-super-latched.png
+share/gnome/pixmaps/accessx-status-applet/sticky-super-locked.png
+share/gnome/pixmaps/accessx-status-applet/sticky-super-none.png
 %%BATTERY%%share/gnome/pixmaps/battstat.png
 share/gnome/pixmaps/charpick.png
 share/gnome/pixmaps/drivemount-applet.png
@@ -934,9 +988,12 @@ share/gnome/pixmaps/mixer/volume-min.png
 share/gnome/pixmaps/mixer/volume-mute.png
 share/gnome/pixmaps/mixer/volume-zero.png
 share/gnome/pixmaps/stickynotes/close.png
-share/gnome/pixmaps/stickynotes/resize.png
+share/gnome/pixmaps/stickynotes/lock.png
+share/gnome/pixmaps/stickynotes/resize_se.png
+share/gnome/pixmaps/stickynotes/resize_sw.png
 share/gnome/pixmaps/stickynotes/stickynotes.png
 share/gnome/pixmaps/stickynotes/stickynotes_prelight.png
+share/gnome/pixmaps/stickynotes/unlock.png
 share/gnome/pixmaps/wireless-applet/broken-0.png
 share/gnome/pixmaps/wireless-applet/no-link-0.png
 share/gnome/pixmaps/wireless-applet/signal-1-40.png
@@ -995,6 +1052,7 @@ share/gnome/xmodmap/xmodmap.mk
 share/gnome/xmodmap/xmodmap.mn
 share/gnome/xmodmap/xmodmap.mn-phonet
 share/gnome/xmodmap/xmodmap.mn-rev
+share/gnome/xmodmap/xmodmap.mn-uni
 share/gnome/xmodmap/xmodmap.nl
 share/gnome/xmodmap/xmodmap.no
 share/gnome/xmodmap/xmodmap.pl
@@ -1037,6 +1095,7 @@ share/locale/be/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/cy/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/de/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/el/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1071,6 +1130,8 @@ share/locale/ro/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ru/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/sr/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/sr@Latn/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1084,6 +1145,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/pixmaps/wireless-applet
 @dirrm share/gnome/pixmaps/stickynotes
 @dirrm share/gnome/pixmaps/mixer
+@dirrm share/gnome/pixmaps/accessx-status-applet
 @dirrm share/gnome/help/stickynotes_applet/C/figures
 @dirrm share/gnome/help/stickynotes_applet/C
 @dirrm share/gnome/help/stickynotes_applet
@@ -1289,6 +1351,9 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 %%BATTERY%%@dirrm share/gnome/help/battstat/C
 %%BATTERY%%@dirrm share/gnome/help/battstat
 %%BATTERY%%@dirrm share/gnome/battstat_applet
+@dirrm share/gnome/help/accessx-status/C/figures
+@dirrm share/gnome/help/accessx-status/C
+@dirrm share/gnome/help/accessx-status
 @dirrm libexec/gnome-applets
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/stickynotes_applet/settings
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/stickynotes_applet/defaults
@@ -1320,8 +1385,9 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/stickynotes_applet/settings
 @dirrm etc/gconf/gconf.xml.defaults/apps/stickynotes_applet/defaults
 @dirrm etc/gconf/gconf.xml.defaults/apps/stickynotes_applet
-@unexec scrollkeeper-uninstall -q %D/%%BATTERY%%share/gnome/omf/gnome-applets/battstat-C.omf 2>/dev/null || /usr/bin/true
-@unexec scrollkeeper-uninstall -q %D/%%BATTERY%%share/gnome/omf/gnome-applets/battstat-ja.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/accessx-status-C.omf 2>/dev/null || /usr/bin/true
+%%BATTERY%%@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/battstat-C.omf 2>/dev/null || /usr/bin/true
+%%BATTERY%%@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/battstat-ja.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/cdplayer-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/cdplayer-de.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/cdplayer-es.omf 2>/dev/null || /usr/bin/true
