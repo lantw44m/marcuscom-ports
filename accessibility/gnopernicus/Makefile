@@ -16,7 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Collection of accessibility apps for GNOME 2
 
 LIB_DEPENDS=	gnome-mag.1:${PORTSDIR}/x11/gnomemag \
-		gnomespeech.2:${PORTSDIR}/audio/gnomespeech
+		gnomespeech.5:${PORTSDIR}/audio/gnomespeech
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
