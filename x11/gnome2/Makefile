@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.3.0
-PORTREVISION=	4
+PORTVERSION=	2.3.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -55,7 +54,8 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gnomemeeting:${PORTSDIR}/net/gnomemeeting2 \
 		seahorse:${PORTSDIR}/security/seahorse \
 		totem:${PORTSDIR}/multimedia/totem \
-		epiphany:${PORTSDIR}/www/epiphany
+		epiphany:${PORTSDIR}/www/epiphany \
+		gswitchit-properties-capplet:${PORTSDIR}/x11/gswitchit
 #		gnopernicus:${PORTSDIR}/x11/gnopernicus
 
 NO_BUILD=	yes
