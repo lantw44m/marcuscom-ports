@@ -1,0 +1,59 @@
+# New ports collection makefile for:   pango
+# Date Created:			18 July 2000
+# Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
+#
+# $FreeBSD: ports/x11-toolkits/pango/Makefile,v 1.36 2002/09/20 17:07:40 marcus Exp $
+#
+
+PORTNAME=	pango
+PORTVERSION=	1.1.1
+CATEGORIES=	x11-toolkits
+MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/1.1,} \
+		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
+		ftp://ftp.cs.umn.edu/pub/gimp/gtk/v1.3/ \
+		http://www.ameth.org/gimp/gtk/v1.3/
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+
+BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2	# XXX
+LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20 \
+		Xft2.2:${PORTSDIR}/x11-fonts/Xft \
+		intl.4:${PORTSDIR}/devel/gettext
+
+USE_BZIP2=	yes
+USE_X_PREFIX=	yes
+USE_GMAKE=	yes
+USE_REINPLACE=	yes
+INSTALLS_SHLIB=	yes
+GNU_CONFIGURE=	yes
+USE_GNOMENG=	yes
+USE_GNOME=	gnomehack
+CONFIGURE_ARGS=	--with-qt=no \
+		--with-html-dir=${PREFIX}/share/doc \
+		--enable-static
+# Hmm.. tough one.  Found this one when I had graphics/hdf installed
+# (which installs glist.h) which is picked up before the glib-2.0
+# stuff, with Bad Results[tm]
+#
+GLIB2_CFLAGS=	`pkg-config glib-2.0 --cflags`
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
+			${GLIB2_CFLAGS} -I${LOCALBASE}/include \
+			-I${X11BASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
+CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
+PLIST_SUB=	VERSION="1.1.0"
+
+.include <bsd.port.pre.mk>
+
+.if ${XFREE86_VERSION} == 3
+PLIST_SUB+=	XFREE4:="@comment "
+.else
+PLIST_SUB+=	XFREE4:=""
+.endif
+
+post-patch:
+	@${FIND} ${WRKSRC}/pango/opentype -name "*.[ch]" | xargs ${REINPLACE_CMD} -e \
+		's|internal/tterrors\.h|fterrors.h| ; s|TT_Err_|FT_Err_|g'
+
+.include <bsd.port.post.mk>
