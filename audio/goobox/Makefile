@@ -9,8 +9,8 @@ PORTNAME=	goobox
 PORTVERSION=	0.7.1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=     sources/${PORTNAME}/${PORTVERSION:R}
-DIST_SUBDIR=    gnome2
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CD player and ripper for GNOME Desktop environment
