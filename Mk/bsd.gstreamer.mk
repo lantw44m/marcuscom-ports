@@ -52,7 +52,7 @@ GST_SHLIB_VERSION=	1
 #
 # These are the current supported gstreamer-plugins modules
 #
-_USE_GSTREAMER_ALL=	a52dec aalib artsd audiofile cdparanoia dirac \
+_USE_GSTREAMER_ALL=	a52dec aalib artsd audiofile cdaudio cdparanoia dirac \
 			dts dv dvd esound faac faad ffmpeg flac gdkpixbuf \
 			gnomevfs gsm hermes ivorbis jack jpeg jpeg-mmx ladspa \
 			lame libcaca libfame libmng libpng libvisual mad mikmod \
@@ -78,6 +78,8 @@ artsd_DEPENDS=	audio/gstreamer-plugins-artsd
 artsd_PLIST=	libgstartsdsink
 
 audiofile_DEPENDS=	audio/gstreamer-plugins-audiofile
+
+cdaudio_DEPENDS=	audio/gstreamer-plugins-cdaudio
 
 cdparanoia_DEPENDS=	audio/gstreamer-plugins-cdparanoia
 
