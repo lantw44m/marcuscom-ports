@@ -7,7 +7,7 @@
 
 PORTNAME=	gnomedocutils
 PORTVERSION=	0.1.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-doc-utils/0.1
@@ -27,6 +27,7 @@ USE_GNOME=	gnomehier gnometarget gnomehack libxslt
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-omf-dir=${PREFIX}/share/gnome/omf
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
