@@ -1,5 +1,5 @@
---- cd-drive.c.orig	Tue May 20 15:47:01 2003
-+++ cd-drive.c	Tue May 20 17:55:56 2003
+--- cd-drive.c.orig	Mon May 19 06:16:13 2003
++++ cd-drive.c	Tue May 20 22:57:34 2003
 @@ -40,6 +40,12 @@
  #include <scsi/sg.h>
  #endif /* __linux__ */
@@ -35,7 +35,7 @@
 +
 +		if (!g_file_test(dev, G_FILE_TEST_EXISTS)) {
 +		    	g_free(dev);
-+			return NULL;
++			break;
 +		}
 +
 +		if ((cam_dev = cam_open_spec_device(dev_type, i, O_RDWR, NULL)) == NULL) {
