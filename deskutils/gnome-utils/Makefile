@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomeutils2
-PORTVERSION=	2.9.2
-PORTREVISION=	2
+PORTVERSION=	2.9.3
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -32,5 +31,10 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAN1=		gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1
 GCONF_SCHEMAS=	gdict.schemas gnome-screenshot.schemas \
 		gnome-search-tool.schemas logview.schemas
+
+post-patch:
+	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
+		's|$$||g'
+	@${FIND} ${WRKSRC} -type f | ${XARGS} ${TOUCH} -f
 
 .include <bsd.port.mk>
