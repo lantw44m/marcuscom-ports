@@ -146,6 +146,14 @@ share/gnome/gok/en_CA/mouse.kbd
 share/gnome/gok/en_CA/move-resize.kbd
 share/gnome/gok/en_CA/quit.kbd
 share/gnome/gok/en_CA/text-operations.kbd
+share/gnome/gok/en_GB/gok-controls.kbd
+share/gnome/gok/en_GB/hide.kbd
+share/gnome/gok/en_GB/launcher.kbd
+share/gnome/gok/en_GB/main.kbd
+share/gnome/gok/en_GB/mouse.kbd
+share/gnome/gok/en_GB/move-resize.kbd
+share/gnome/gok/en_GB/quit.kbd
+share/gnome/gok/en_GB/text-operations.kbd
 share/gnome/gok/empty.png
 share/gnome/gok/es/gok-controls.kbd
 share/gnome/gok/es/hide.kbd
@@ -282,6 +290,14 @@ share/gnome/gok/no/mouse.kbd
 share/gnome/gok/no/move-resize.kbd
 share/gnome/gok/no/quit.kbd
 share/gnome/gok/no/text-operations.kbd
+share/gnome/gok/pa/gok-controls.kbd
+share/gnome/gok/pa/hide.kbd
+share/gnome/gok/pa/launcher.kbd
+share/gnome/gok/pa/main.kbd
+share/gnome/gok/pa/mouse.kbd
+share/gnome/gok/pa/move-resize.kbd
+share/gnome/gok/pa/quit.kbd
+share/gnome/gok/pa/text-operations.kbd
 share/gnome/gok/pl/gok-controls.kbd
 share/gnome/gok/pl/hide.kbd
 share/gnome/gok/pl/launcher.kbd
@@ -407,6 +423,7 @@ share/locale/da/LC_MESSAGES/gok.mo
 share/locale/de/LC_MESSAGES/gok.mo
 share/locale/el/LC_MESSAGES/gok.mo
 share/locale/en_CA/LC_MESSAGES/gok.mo
+share/locale/en_GB/LC_MESSAGES/gok.mo
 share/locale/es/LC_MESSAGES/gok.mo
 share/locale/fr/LC_MESSAGES/gok.mo
 share/locale/ga/LC_MESSAGES/gok.mo
@@ -422,6 +439,7 @@ share/locale/mn/LC_MESSAGES/gok.mo
 share/locale/ms/LC_MESSAGES/gok.mo
 share/locale/nl/LC_MESSAGES/gok.mo
 share/locale/no/LC_MESSAGES/gok.mo
+share/locale/pa/LC_MESSAGES/gok.mo
 share/locale/pl/LC_MESSAGES/gok.mo
 share/locale/pt/LC_MESSAGES/gok.mo
 share/locale/pt_BR/LC_MESSAGES/gok.mo
@@ -451,6 +469,7 @@ share/locale/zh_TW/LC_MESSAGES/gok.mo
 @dirrm share/gnome/gok/pt_BR
 @dirrm share/gnome/gok/pt
 @dirrm share/gnome/gok/pl
+@dirrm share/gnome/gok/pa
 @dirrm share/gnome/gok/no
 @dirrm share/gnome/gok/nl
 @dirrm share/gnome/gok/ms
@@ -466,6 +485,7 @@ share/locale/zh_TW/LC_MESSAGES/gok.mo
 @dirrm share/gnome/gok/ga
 @dirrm share/gnome/gok/fr
 @dirrm share/gnome/gok/es
+@dirrm share/gnome/gok/en_GB
 @dirrm share/gnome/gok/en_CA
 @dirrm share/gnome/gok/el
 @dirrm share/gnome/gok/de
