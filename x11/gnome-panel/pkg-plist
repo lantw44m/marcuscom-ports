@@ -28,6 +28,21 @@ etc/gconf/gconf.xml.defaults/schemas/apps/fish_applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/fish_applet/prefs/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome_panel_screenshot/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/panel/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000001/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000002/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000003/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000004/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/show_desktop_button/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/general/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/objects/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/objects/00000001/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/objects/00000002/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/panels/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/panels/00000001/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/panels/00000002/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/panel/general/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/panel/global/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/panel/objects/%gconf.xml
@@ -40,6 +55,7 @@ etc/gconf/gconf.xml.defaults/schemas/apps/workspace_switcher_applet/prefs/%gconf
 etc/gconf/schemas/clock.schemas
 etc/gconf/schemas/fish.schemas
 etc/gconf/schemas/gnome-panel-screenshot.schemas
+etc/gconf/schemas/panel-compatibility.schemas
 etc/gconf/schemas/panel-default-setup.entries
 etc/gconf/schemas/panel-general.schemas
 etc/gconf/schemas/panel-global.schemas
@@ -85,9 +101,9 @@ share/gnome/gnome-2.0/ui/GNOME_WindowListApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_WindowMenuApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_WorkspaceSwitcherApplet.xml
 share/gnome/gnome-panel/glade/fish.glade
+share/gnome/gnome-panel/glade/panel-test-applets.glade
 share/gnome/gnome-panel/glade/window-list.glade
 share/gnome/gnome-panel/glade/workspace-switcher.glade
-share/gnome/gnome-panel/glade/panel-test-applets.glade
 share/gnome/gnome-panelrc
 share/gnome/help/clock/C/clock.xml
 share/gnome/help/clock/C/figures/clock_applet.png
@@ -324,9 +340,18 @@ share/gnome/omf/gnome-panel/workspace-switcher-zh_CN.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/workspace-switcher-zh_CN.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-panel/workspace-switcher-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/workspace-switcher-zh_TW.omf 2>/dev/null || /usr/bin/true
+share/gnome/panel/gnome-panel-preferences.glade
+share/gnome/panel/gnome-panel-screenshot.glade
+share/gnome/panel/panel-properties-dialog.glade
+share/gnome/panel/panel-run-dialog.glade
 share/gnome/pixmaps/cdeappmenu.png
+share/gnome/pixmaps/fish/fishanim.png
+share/gnome/pixmaps/fish/footguy.png
+share/gnome/pixmaps/fish/monkey.png
+share/gnome/pixmaps/fish/oldwanda.png
 share/gnome/pixmaps/gnome-amusements.png
 share/gnome/pixmaps/gnome-clock.png
+share/gnome/pixmaps/gnome-fish.png
 share/gnome/pixmaps/gnome-gegl.png
 share/gnome/pixmaps/gnome-gegl2-2.png
 share/gnome/pixmaps/gnome-gegl2.png
@@ -339,18 +364,9 @@ share/gnome/pixmaps/gnome-panel-type-sliding.png
 share/gnome/pixmaps/gnome-panel.png
 share/gnome/pixmaps/gnome-run.png
 share/gnome/pixmaps/gnome-screenshot.png
+share/gnome/pixmaps/gnome-show-desktop.png
 share/gnome/pixmaps/panel-drawer.png
 share/gnome/pixmaps/panel-force-quit.png
-share/gnome/panel/gnome-panel-preferences.glade
-share/gnome/panel/gnome-panel-screenshot.glade
-share/gnome/panel/panel-properties-dialog.glade
-share/gnome/panel/panel-run-dialog.glade
-share/gnome/pixmaps/fish/fishanim.png
-share/gnome/pixmaps/fish/footguy.png
-share/gnome/pixmaps/fish/monkey.png
-share/gnome/pixmaps/fish/oldwanda.png
-share/gnome/pixmaps/gnome-fish.png
-share/gnome/pixmaps/gnome-show-desktop.png
 share/locale/am/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-panel-2.0.mo
@@ -508,6 +524,21 @@ share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/objects
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/global
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/general
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/panels/00000002
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/panels/00000001
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/panels
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/objects/00000002
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/objects/00000001
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/objects
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/general
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/show_desktop_button
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000004
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000003
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000002
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000001
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome_panel_screenshot
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/fish_applet/prefs
