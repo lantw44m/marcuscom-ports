@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.7.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -52,7 +52,8 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		evolution-1.5:${PORTSDIR}/mail/evolution \
 		${X11BASE}/libexec/evolution-webcal:${PORTSDIR}/www/evolution-webcal \
 		boot-admin:${PORTSDIR}/sysutils/gnomesystemtools \
-		gnome-nettool:${PORTSDIR}/net/gnomenettool
+		gnome-nettool:${PORTSDIR}/net/gnomenettool \
+		vino-session:${PORTSDIR}/net/vino
 
 NO_BUILD=	yes
 
