@@ -367,7 +367,7 @@ eel2_LIB_DEPENDS=	eel-2.11:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${X11BASE}/libdata/pkgconfig/eel-2.0.pc
 eel2_USE_GNOME_IMPL=	gnomevfs2 gnomedesktop gail
 
-gnomepanel_LIB_DEPENDS=	panel-applet-2.0:${PORTSDIR}/x11/gnomepanel
+gnomepanel_LIB_DEPENDS=	panel-applet-2.1:${PORTSDIR}/x11/gnomepanel
 gnomepanel_DETECT=	${X11BASE}/libdata/pkgconfig/libpanelapplet-2.0.pc
 gnomepanel_USE_GNOME_IMPL=gnomedesktop libwnck
 gnomepanel_GNOME_DESKTOP_VERSION=2
