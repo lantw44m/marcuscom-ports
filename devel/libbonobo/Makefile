@@ -18,7 +18,6 @@ COMMENT=	A component and compound document system for GNOME2
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	yes
-USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes
