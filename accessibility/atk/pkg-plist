@@ -79,6 +79,7 @@ share/locale/he/LC_MESSAGES/atk10.mo
 share/locale/hu/LC_MESSAGES/atk10.mo
 share/locale/id/LC_MESSAGES/atk10.mo
 share/locale/it/LC_MESSAGES/atk10.mo
+share/locale/ja/LC_MESSAGES/atk10.mo
 share/locale/kn/LC_MESSAGES/atk10.mo
 share/locale/ko/LC_MESSAGES/atk10.mo
 share/locale/lv/LC_MESSAGES/atk10.mo
@@ -98,6 +99,7 @@ share/locale/sv/LC_MESSAGES/atk10.mo
 share/locale/tr/LC_MESSAGES/atk10.mo
 share/locale/uk/LC_MESSAGES/atk10.mo
 share/locale/vi/LC_MESSAGES/atk10.mo
+share/locale/yi/LC_MESSAGES/atk10.mo
 share/locale/zh_CN/LC_MESSAGES/atk10.mo
 share/locale/zh_TW/LC_MESSAGES/atk10.mo
 @dirrm share/doc/atk
