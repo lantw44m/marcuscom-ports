@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	gnomecontrolcenter2
-PORTVERSION=	2.3.6
+PORTVERSION=	2.4.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/control-center/2.3
+MASTER_SITE_SUBDIR=	sources/control-center/2.4
 DISTNAME=	control-center-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
