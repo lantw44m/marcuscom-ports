@@ -29,3 +29,16 @@
  	nautilus_bonobo_set_hidden (view->details->ui, 
  				    FM_DIRECTORY_VIEW_POPUP_PATH_BACKGROUND_SCRIPTS_SEPARATOR, 
  				    !any_scripts);
+@@ -5149,10 +5149,11 @@
+ 			GList *selection,
+ 			gint selection_count)
+ {
+-	selection_count = g_list_length (selection);
+ 	gboolean can_paste_files_into;
+ 	gboolean selection_is_read_only;
+ 	gboolean is_read_only;
++
++	selection_count = g_list_length (selection);
+ 
+ 	selection_is_read_only = selection_count == 1
+ 		&& !nautilus_file_can_write (NAUTILUS_FILE (selection->data));
