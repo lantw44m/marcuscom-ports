@@ -15,6 +15,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME On-Screen Keyboard (GOK)
 
+LIB_DEPENDS=	gnomespeech.7:${PORTSDIR}/accessibility/gnomespeech
+
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack lthack libgnomeui atspi libwnck
