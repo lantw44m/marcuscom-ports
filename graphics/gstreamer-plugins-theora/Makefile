@@ -6,7 +6,7 @@
 #
 
 CATEGORIES=	graphics
-PORTREVISION=	1
+PORTREVISION=	2
 
 GST_PLUGIN=	theora
 
