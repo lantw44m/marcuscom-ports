@@ -1,0 +1,20 @@
+--- src/Makefile.in.orig	Sat Feb  7 03:17:47 2004
++++ src/Makefile.in	Sat Feb  7 03:19:58 2004
+@@ -110,7 +110,7 @@
+ LIBGLADE_CFLAGS = @LIBGLADE_CFLAGS@
+ LIBGLADE_LIBS = @LIBGLADE_LIBS@
+ LIBOBJS = @LIBOBJS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lcam
+ LTLIBOBJS = @LTLIBOBJS@
+ MAINT = @MAINT@
+ MAINTAINER_MODE_FALSE = @MAINTAINER_MODE_FALSE@
+@@ -171,7 +171,7 @@
+ target_alias = @target_alias@
+ 
+ # General compiler flags
+-AM_CFLAGS = -Wall -Werror -export-dynamic -W -Wno-unused-parameter
++AM_CFLAGS = -Wall -export-dynamic -W
+ 
+ # General CPP flags. When I can demand automake 1.8, this can become
+ # sound_juicer_CPPFLAGS.
