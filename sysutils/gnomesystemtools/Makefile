@@ -7,7 +7,7 @@
 
 PORTNAME=	gnomesystemtools
 PORTVERSION=	1.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-tools/1.0
@@ -34,5 +34,9 @@ PLIST_SUB+=		SERVICES=""
 .else
 PLIST_SUB+=		SERVICES="@comment "
 .endif
+
+post-configure:
+	@${FIND} ${WRKSRC}/backends \( -name "*.pl" -or -name "*-conf" \) | \
+		${XARGS} ${REINPLACE_CMD} -e 's|@scriptsdir|[@]scriptsdir|g'
 
 .include <bsd.port.post.mk>
