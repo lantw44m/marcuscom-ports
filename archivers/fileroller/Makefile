@@ -18,11 +18,15 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An archive manager for zip files, tar, etc
 
-RUN_DEPENDS=	gtar:${PORTSDIR}/archivers/gtar
+# XXX: We need the ports version of gtar since gtar-1.13.25 included with
+# FreeBSD is not sufficient.  If the base version of GNU tar is updated, then
+# we can do away with this dependency.
+RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar
 
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
+USE_REINPLACE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils nautilus2
 USE_LIBTOOL_VER=15
@@ -30,6 +34,10 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	file-roller.schemas
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+		${WRKSRC}/src/fr-command-tar.c
 
 post-install:
 	@-update-desktop-database
