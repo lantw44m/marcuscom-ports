@@ -7,6 +7,7 @@
 
 PORTNAME=	vte
 PORTVERSION=	0.11.6
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.11
@@ -24,7 +25,7 @@ INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
 USE_GNOME=	gnomeprefix gnomehack gtk20
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+		LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--disable-python
 
 post-patch:
