@@ -20,7 +20,7 @@ COMMENT=	A configuration database system for GNOME
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomehack orbit2 gtk20 libxml2 linc
+USE_GNOME=	gnomehier gnomehack orbit2 gtk20 libxml2 linc
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL_VER=15
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
