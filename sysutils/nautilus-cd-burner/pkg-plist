@@ -1,12 +1,12 @@
 bin/nautilus-cd-burner
 etc/gnome-vfs-2.0/modules/mapping-modules.conf
-include/libnautilus-burn/bacon-cd-selection.h
-include/libnautilus-burn/cd-drive.h
-include/libnautilus-burn/cd-recorder.h
+include/libnautilus-burn/nautilus-burn-drive-selection.h
+include/libnautilus-burn/nautilus-burn-drive.h
+include/libnautilus-burn/nautilus-burn-recorder.h
 lib/gnome-vfs-2.0/modules/libmapping.so
 lib/libnautilus-burn.a
 lib/libnautilus-burn.so
-lib/libnautilus-burn.so.0
+lib/libnautilus-burn.so.1
 lib/nautilus/extensions-1.0/libnautilus-burn-extension.so
 libdata/pkgconfig/libnautilus-burn.pc
 libexec/mapping-daemon
