@@ -22,6 +22,9 @@ RUN_DEPENDS=	${X11BASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSD
 .if defined(WITH_PILOT)
 LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
 .endif
+.if !defined(WITHOUT_SPAMASSASSIN)
+RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
+.endif
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -63,8 +66,9 @@ PKGINSTALL=	${WRKDIR}/pkg-install
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "evolution has the following configurable option(s):"
-	@${ECHO_MSG} "	WITH_PILOT	Build Palm Pilot sync support"
-	@${ECHO_MSG} "	WITHOUT_LDAP	Disable LDAP support"
+	@${ECHO_MSG} "	WITH_PILOT		Build Palm Pilot sync support"
+	@${ECHO_MSG} "	WITHOUT_LDAP		Disable LDAP support"
+	@${ECHO_MSG} "	WITHOUT_SPAMASSASSIN	Do not add a runtime dependency on SpamAssassin (Evo uses SpamAssassin for spam filtering)"
 	@${ECHO_MSG} ""
 
 post-install:
