@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomesession
-PORTVERSION=	2.7.3
+PORTVERSION=	2.7.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://people.FreeBSD.org/~marcus/:local \
@@ -24,9 +24,9 @@ COMMENT=	Session component for the GNOME 2 desktop
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack lthack libgnomeui
+USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack libgnomeui
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=13
+USE_LIBTOOL_VER=15
 CONFIGURE_ARGS=	--with-halt-command=/sbin/shutdown \
 		--with-reboot-command=/sbin/shutdown
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
