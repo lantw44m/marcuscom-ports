@@ -1,0 +1,30 @@
+# New ports collection makefile for:	gok
+# Date created:			12 April 2003
+# Whom:				Adam Weinberger <adamw@freebsd.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	gok
+PORTVERSION=	0.7.0
+CATEGORIES=	sysutils gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.7
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	GNOME On-screen Keyboard (GOK)
+
+USE_X_PREFIX=	yes
+USE_GNOME=	gnomehack gnomeprefix libgnomeui atspi libwnck atk
+USE_REINPLACE=	yes
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>

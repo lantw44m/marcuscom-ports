@@ -1,0 +1,10 @@
+The GNOME On-screen Keyboard (GOK) project aims to enable users to control
+their computer without having to rely on a standard keyboard or mouse.  Many
+individuals must control the computer using alternative input methods.  Using
+innovative dynamic keyboard strategies, and leveraging GNOME2's built-in
+accessibility framework, the GOK will make control more efficient and enable
+use of the GNOME2 desktop.  With the right hardware support and the GOK
+individuals will have full access to applications that support the AT SPI, and
+therefore, full access to the functionality these applications provide.
+
+WWW: http://www.gok.ca
