@@ -8,8 +8,7 @@
 PORTNAME=	gnomespell
 PORTVERSION=	1.0.3
 CATEGORIES=	textproc gnome
-MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
-		${MASTER_SITE_GNOME}
+MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-spell/1.0
 DISTNAME=	gnome-spell-${PORTVERSION}
 DIST_SUBDIR=	gnome
