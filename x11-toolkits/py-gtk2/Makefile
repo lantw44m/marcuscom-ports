@@ -20,7 +20,7 @@ RUN_DEPENDS=	${PYNUMERIC}
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnometarget libglade2
+USE_GNOME=	gnomehack gnometarget libglade2 lthack
 USE_PYTHON=	yes
 USE_LIBTOOL_VER=13
 
