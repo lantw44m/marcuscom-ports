@@ -19,8 +19,8 @@ MAINTAINER=	gnome@FreeBSD.org
 LIB_DEPENDS=	gnomeui-2.200:${PORTSDIR}/x11-toolkits/libgnomeui
 RUN_DEPENDS=	bzip:${PORTSDIR}/archivers/bzip \
 		lha:${PORTSDIR}/archivers/lha \
-		rar:${PORTSDIR}/archivers/rar \
 		lzop:${PORTSDIR}/archivers/lzop
+
 
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
@@ -31,6 +31,12 @@ CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+.include <bsd.port.pre.mk>
+
+.if defined(WITH_RAR) || exists(${LOCALBASE}/bin/rar)
+RUN_DEPENDS+=	rar:${PORTSDIR}/archivers/rar
+.endif
+
 post-install:
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
@@ -39,4 +45,4 @@ post-install:
 .endfor
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
