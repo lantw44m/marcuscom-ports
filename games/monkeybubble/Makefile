@@ -19,7 +19,6 @@ COMMENT=	GTK2 Puzzle Bobble clone with monkeys
 
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
-GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 USE_GNOME=	gnomehack gnomeprefix librsvg2 libgnomeui \
