@@ -21,11 +21,14 @@ RUN_DEPENDS=	mlv:${PORTSDIR}/editors/mlview \
 		ghex2:${PORTSDIR}/editors/ghex2 \
 		gob2:${PORTSDIR}/devel/gob2 \
 		conglomerate:${PORTSDIR}/editors/conglomerate \
-		anjuta:${PORTSDIR}/devel/anjuta \
 		meld:${PORTSDIR}/textproc/meld \
 		gtranslator:${PORTSDIR}/devel/gtranslator
 # not yet buildable under GNOME 2.5
 #		regexxer:${PORTSDIR}/devel/regexxer
+
+.if ${OSVERSION} < 500000
+RUN_DEPENDS+=	anjuta:${PORTSDIR}/devel/anjuta
+.endif
 
 NO_BUILD=	yes
 
