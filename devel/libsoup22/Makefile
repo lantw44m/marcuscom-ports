@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libsoup
-PORTVERSION=	2.1.3
+PORTVERSION=	2.1.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.1
@@ -29,11 +29,11 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION="2.2"
 
-.if !defined(WITHOUT_SSL)
-LIB_DEPENDS+=	gnutls.7:${PORTSDIR}/security/gnutls
-.else
+#.if !defined(WITHOUT_SSL)
+#LIB_DEPENDS+=	gnutls.7:${PORTSDIR}/security/gnutls
+#.else
 CONFIGURE_ARGS+=--disable-ssl
-.endif
+#.endif
 
 pre-everything::
 	@${ECHO_MSG} ""
