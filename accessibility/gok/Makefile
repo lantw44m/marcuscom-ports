@@ -26,5 +26,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|<malloc.h>|<stdlib.h>|' \
+		${WRKSRC}/gok/word-complete.c
 
 .include <bsd.port.mk>
