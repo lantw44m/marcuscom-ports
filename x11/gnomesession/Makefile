@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomesession
-PORTVERSION=	2.9.2
+PORTVERSION=	2.9.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://people.FreeBSD.org/~marcus/:local \
@@ -31,6 +31,8 @@ CONFIGURE_ARGS=	--with-halt-command=/sbin/shutdown \
 		--with-reboot-command=/sbin/shutdown
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+MAKE_ENV+=	HALT_COMMAND="/sbin/halt -p" \
+		REBOOT_COMMAND="/sbin/reboot"
 
 MAN1=		gnome-session.1 gnome-smproxy.1 gnome-wm.1 \
 		session-properties.1 gnome-session-save.1
