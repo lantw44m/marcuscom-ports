@@ -60,6 +60,9 @@ include/evolution-data-server-%%VERSION%%/camel/camel-multipart-signed.h
 include/evolution-data-server-%%VERSION%%/camel/camel-multipart.h
 include/evolution-data-server-%%VERSION%%/camel/camel-net-utils.h
 include/evolution-data-server-%%VERSION%%/camel/camel-object.h
+include/evolution-data-server-%%VERSION%%/camel/camel-offline-folder.h
+include/evolution-data-server-%%VERSION%%/camel/camel-offline-journal.h
+include/evolution-data-server-%%VERSION%%/camel/camel-offline-store.h
 include/evolution-data-server-%%VERSION%%/camel/camel-operation.h
 include/evolution-data-server-%%VERSION%%/camel/camel-partition-table.h
 include/evolution-data-server-%%VERSION%%/camel/camel-provider.h
@@ -109,6 +112,7 @@ include/evolution-data-server-%%VERSION%%/groupwise/e-gw-container.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-filter.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-item.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-message.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-sendoptions.h
 include/evolution-data-server-%%VERSION%%/libebook/Evolution-DataServer-Addressbook.h
 include/evolution-data-server-%%VERSION%%/libebook/e-address-western.h
 include/evolution-data-server-%%VERSION%%/libebook/e-book-listener.h
@@ -133,6 +137,7 @@ include/evolution-data-server-%%VERSION%%/libecal/e-cal-view-listener.h
 include/evolution-data-server-%%VERSION%%/libecal/e-cal-view.h
 include/evolution-data-server-%%VERSION%%/libecal/e-cal.h
 include/evolution-data-server-%%VERSION%%/libedata-book/Evolution-DataServer-Addressbook.h
+include/evolution-data-server-%%VERSION%%/libedata-book/e-book-backend-cache.h
 include/evolution-data-server-%%VERSION%%/libedata-book/e-book-backend-factory.h
 include/evolution-data-server-%%VERSION%%/libedata-book/e-book-backend-sexp.h
 include/evolution-data-server-%%VERSION%%/libedata-book/e-book-backend-summary.h
@@ -155,6 +160,7 @@ include/evolution-data-server-%%VERSION%%/libedata-cal/e-data-cal-view.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-data-cal.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-account-list.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-account.h
+include/evolution-data-server-%%VERSION%%/libedataserver/e-categories.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-component-listener.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-data-server-module.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-db3-utils.h
@@ -177,8 +183,10 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-url.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-util.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-xml-hash-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserver/md5-utils.h
+include/evolution-data-server-%%VERSION%%/libedataserverui/e-categories-dialog.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-contact-store.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-destination-store.h
+include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-dialog.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-entry.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-model.h
@@ -261,33 +269,35 @@ lib/evolution-data-server-%%VERSION%%/extensions/libecalbackendgroupwise.a
 lib/evolution-data-server-%%VERSION%%/extensions/libecalbackendgroupwise.so
 lib/evolution-data-server-%%VERSION%%/extensions/libecalbackendhttp.a
 lib/evolution-data-server-%%VERSION%%/extensions/libecalbackendhttp.so
+lib/evolution-data-server-%%VERSION%%/extensions/libecalbackendweather.a
+lib/evolution-data-server-%%VERSION%%/extensions/libecalbackendweather.so
 lib/libcamel-%%VERSION%%.a
 lib/libcamel-%%VERSION%%.so
 lib/libcamel-%%VERSION%%.so.0
 lib/libcamel-provider-%%VERSION%%.a
 lib/libcamel-provider-%%VERSION%%.so
-lib/libcamel-provider-%%VERSION%%.so.0
+lib/libcamel-provider-%%VERSION%%.so.1
 lib/libebook-%%VERSION%%.a
 lib/libebook-%%VERSION%%.so
-lib/libebook-%%VERSION%%.so.2
+lib/libebook-%%VERSION%%.so.3
 lib/libecal-%%VERSION%%.a
 lib/libecal-%%VERSION%%.so
-lib/libecal-%%VERSION%%.so.0
+lib/libecal-%%VERSION%%.so.1
 lib/libedata-book-%%VERSION%%.a
 lib/libedata-book-%%VERSION%%.so
-lib/libedata-book-%%VERSION%%.so.1
+lib/libedata-book-%%VERSION%%.so.2
 lib/libedata-cal-%%VERSION%%.a
 lib/libedata-cal-%%VERSION%%.so
-lib/libedata-cal-%%VERSION%%.so.1
+lib/libedata-cal-%%VERSION%%.so.2
 lib/libedataserver-%%VERSION%%.a
 lib/libedataserver-%%VERSION%%.so
-lib/libedataserver-%%VERSION%%.so.1
+lib/libedataserver-%%VERSION%%.so.2
 lib/libedataserverui-%%VERSION%%.a
 lib/libedataserverui-%%VERSION%%.so
-lib/libedataserverui-%%VERSION%%.so.2
+lib/libedataserverui-%%VERSION%%.so.3
 lib/libegroupwise-%%VERSION%%.a
 lib/libegroupwise-%%VERSION%%.so
-lib/libegroupwise-%%VERSION%%.so.1
+lib/libegroupwise-%%VERSION%%.so.2
 libdata/bonobo/servers/GNOME_Evolution_DataServer_%%VERSION%%.server
 libdata/pkgconfig/camel-%%VERSION%%.pc
 libdata/pkgconfig/camel-provider-%%VERSION%%.pc
@@ -341,7 +351,9 @@ share/doc/libecal/right.png
 share/doc/libecal/style.css
 share/doc/libecal/up.png
 share/gnome/evolution-data-server-%%VERSION%%/evolutionperson.schema
+share/gnome/evolution-data-server-%%VERSION%%/glade/e-categories-dialog.glade
 share/gnome/evolution-data-server-%%VERSION%%/glade/e-name-selector-dialog.glade
+share/gnome/evolution-data-server-%%VERSION%%/weather/Locations.xml
 share/gnome/evolution-data-server-%%VERSION%%/zoneinfo/Africa/Abidjan.ics
 share/gnome/evolution-data-server-%%VERSION%%/zoneinfo/Africa/Accra.ics
 share/gnome/evolution-data-server-%%VERSION%%/zoneinfo/Africa/Addis_Ababa.ics
@@ -724,6 +736,24 @@ share/gnome/evolution-data-server-%%VERSION%%/zoneinfo/zones.tab
 share/gnome/idl/evolution-data-server-%%VERSION%%/Evolution-DataServer-Addressbook.idl
 share/gnome/idl/evolution-data-server-%%VERSION%%/Evolution-DataServer-Calendar.idl
 share/gnome/idl/evolution-data-server-%%VERSION%%/Evolution-DataServer.idl
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_birthday_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_business_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_favorites_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_gifts_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_goals_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_holiday-cards_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_holiday_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_hot-contacts_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_ideas_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_international_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_key-customer_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_miscellaneous_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_personal_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_phonecalls_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_status_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_strategies_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_suppliers_16.png
+share/gnome/pixmaps/evolution-data-server-%%VERSION%%/category_time-and-expenses_16.png
 share/locale/am/LC_MESSAGES/evolution-data-server-%%EVO_VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-data-server-%%EVO_VERSION%%.mo
 share/locale/be/LC_MESSAGES/evolution-data-server-%%EVO_VERSION%%.mo
@@ -778,6 +808,7 @@ share/locale/uk/LC_MESSAGES/evolution-data-server-%%EVO_VERSION%%.mo
 share/locale/vi/LC_MESSAGES/evolution-data-server-%%EVO_VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/evolution-data-server-%%EVO_VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/evolution-data-server-%%EVO_VERSION%%.mo
+@dirrm share/gnome/pixmaps/evolution-data-server-%%VERSION%%
 @dirrm share/gnome/idl/evolution-data-server-%%VERSION%%
 @dirrm share/gnome/evolution-data-server-%%VERSION%%/zoneinfo/Pacific
 @dirrm share/gnome/evolution-data-server-%%VERSION%%/zoneinfo/Indian
@@ -793,6 +824,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-data-server-%%EVO_VERSION%%.mo
 @dirrm share/gnome/evolution-data-server-%%VERSION%%/zoneinfo/America
 @dirrm share/gnome/evolution-data-server-%%VERSION%%/zoneinfo/Africa
 @dirrm share/gnome/evolution-data-server-%%VERSION%%/zoneinfo
+@dirrm share/gnome/evolution-data-server-%%VERSION%%/weather
 @dirrm share/gnome/evolution-data-server-%%VERSION%%/glade
 @dirrm share/gnome/evolution-data-server-%%VERSION%%
 @dirrm share/doc/libecal
