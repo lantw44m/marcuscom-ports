@@ -233,7 +233,7 @@ pango_LIB_DEPENDS=	pango-1.0.300:${PORTSDIR}/x11-toolkits/pango
 pango_DETECT=		${X11BASE}/libdata/pkgconfig/pango.pc
 pango_USE_GNOME_IMPL=	glib20
 
-gtk20_LIB_DEPENDS=	gtk-x11-2.0.303:${PORTSDIR}/x11-toolkits/gtk20
+gtk20_LIB_DEPENDS=	gtk-x11-2.0.304:${PORTSDIR}/x11-toolkits/gtk20
 gtk20_DETECT=		${X11BASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
 gtk20_USE_GNOME_IMPL=	intltool atk pango
 
