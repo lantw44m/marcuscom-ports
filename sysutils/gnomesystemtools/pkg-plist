@@ -3,8 +3,7 @@ bin/network-admin
 bin/shares-admin
 bin/time-admin
 bin/users-admin
-lib/bonobo/libgst-shares-component.so
-libdata/bonobo/servers/GST_Shares_Component.server
+lib/nautilus/extensions-1.0/libnautilus-gst-shares.so
 libdata/pkgconfig/gnome-system-tools.pc
 libdata/pkgconfig/system-tools-backends.pc
 share/aclocal/system-tools-backends.m4
