@@ -186,6 +186,7 @@ share/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/ghelp
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/applications
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/sound
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/mouse
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard
@@ -213,6 +214,7 @@ share/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/ghelp
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/applications
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/sound
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/mouse
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard
