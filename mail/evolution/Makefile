@@ -48,7 +48,7 @@ PLIST_SUB=	VERSION=${EVO_VERSION} \
 
 OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 		LDAP "Enable LDAP support" on \
-		SPAMASSASSIN "Enable SpamAssassin spam filtering" on
+		SPAMASSASSIN "Enable SpamAssassin spam filtering" off
 
 .include <bsd.port.pre.mk>
 
