@@ -1,0 +1,23 @@
+# New ports collection makefile for:	evince
+# Date created:				09 January 2005
+# Whom:					Adam Weinberger <adamw@FreeBSD.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	evince
+PORTVERSION=	0.1.0
+CATEGORIES=	graphics gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.1
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	GNOME 2 Document Viewer
+
+USE_BZIP2=	yes
+USE_LIBTOOL_VER=15
+USE_X_PREFIX=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gnomehack gnomeprefix libgnomeui libgnomeprintui
+
+.include <bsd.port.mk>
