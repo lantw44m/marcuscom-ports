@@ -2,20 +2,20 @@
 # Date created:				05 October 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/vte/Makefile,v 1.1 2002/10/06 01:49:09 marcus Exp $
+# $FreeBSD: ports/x11-toolkits/vte/Makefile,v 1.5 2002/11/08 18:23:31 marcus Exp $
 #
 
 PORTNAME=	vte
-PORTVERSION=	0.9.2
+PORTVERSION=	0.10.3
 PORTREVISION=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.9
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.10
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS=	gtk-x11-2.0.101:${PORTSDIR}/x11-toolkits/gtk20
+LIB_DEPENDS=	gtk-x11-2.0.102:${PORTSDIR}/x11-toolkits/gtk20
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
@@ -35,7 +35,5 @@ post-patch:
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|malloc\.h|stdlib.h|g' \
 		${WRKSRC}/gnome-pty-helper/gnome-pty-helper.c
-	@${REINPLACE_CMD} -e 's|Xft\.h|Xft2.h|g' \
-		${WRKSRC}/src/vte.c
 
 .include <bsd.port.mk>
