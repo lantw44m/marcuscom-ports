@@ -16,6 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The "meta-port" for the GNOME 2 "Fifth-Toe" extra package set
 
 RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric2 \
+		AbiWord-2.2:${PORTSDIR}/editors/AbiWord2 \
 		pan:${PORTSDIR}/news/pan2 \
 		xchat:${PORTSDIR}/irc/xchat2 \
 		balsa:${PORTSDIR}/mail/balsa2 \
@@ -38,9 +39,9 @@ RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric2 \
 		gcompris:${PORTSDIR}/games/gcompris2 \
 		galeon:${PORTSDIR}/www/galeon2 \
 		seahorse:${PORTSDIR}/security/seahorse \
-		gnotime:${PORTSDIR}/deskutils/gnotime
+		gnotime:${PORTSDIR}/deskutils/gnotime \
+		monkeybubble:${PORTSDIR}/games/monkeybubble
 # These apps do not yet build under GNOME 2.5
-#		AbiWord-2.0:${PORTSDIR}/editors/AbiWord2
 #		regexxer:${PORTSDIR}/devel/regexxer
 #		workrave:${PORTSDIR}/x11/workrave
 
