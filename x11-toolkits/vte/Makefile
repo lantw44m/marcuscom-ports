@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	vte
-PORTVERSION=	0.10.7
-PORTREVISION=	1
+PORTVERSION=	0.10.8
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.10
@@ -39,5 +38,7 @@ post-patch:
 		${WRKSRC}/src/vte.c
 	@${REINPLACE_CMD} -Ee '/^(libvte_la_LIBADD|vte_LDADD)/s/(.*)/\1 -lXft2/' \
 		${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
+		${WRKSRC}/po/Makefile.in.in
 
 .include <bsd.port.mk>
