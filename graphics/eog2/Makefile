@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	eog2
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/1.1
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 
 LIB_DEPENDS=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui \
-		gnomeprint-2.0:${PORTSDIR}/print/libgnomeprint \
+		gnomeprint-2-2.0:${PORTSDIR}/print/libgnomeprint \
 		rsvg-2.3:${PORTSDIR}/graphics/librsvg2
 
 USE_BZIP2=	yes
