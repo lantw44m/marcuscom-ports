@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome-backgrounds
-PORTVERSION=	2.9.90
+PORTVERSION=	2.9.91
 CATEGORIES=	x11-themes graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.9
