@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gpdf
-PORTVERSION=	0.101
+PORTVERSION=	0.102
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION}
@@ -22,7 +22,7 @@ USE_GNOME=	gnomeprefix gnomehack libgnomeui libgnomeprintui
 USE_X_PREFIX=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 	
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
