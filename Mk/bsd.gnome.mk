@@ -58,7 +58,7 @@ _USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 \
 		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
 		libgnomedb gtksourceview libgsf libgsf_gnome pygtk2 pygnome2 \
 		gstreamerplugins gtkhtml3 gnomespeech evolutiondataserver \
-		desktopfileutils nautiluscdburner
+		desktopfileutils nautiluscdburner gnomemenus
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -451,6 +451,10 @@ desktopfileutils_USE_GNOME_IMPL=glib20
 nautiluscdburner_LIB_DEPENDS=nautilus-burn.0:${PORTSDIR}/sysutils/nautilus-cd-burner
 nautiluscdburner_DETECT=	${X11BASE}/libdata/pkgconfig/libnautilus-burn.pc
 nautiluscdburner_USE_GNOME_IMPL=nautilus2
+
+gnomemenus_LIB_DEPENDS=		gnome-menu.0:${PORTSDIR}/x11/gnome-menus
+gnomemenus_DETECT=			${X11BASE}/libdata/pkgconfig/libgnome-menu.pc
+gnomemenus_USE_GNOME_IMPL=	gnomevfs2
 
 # End component definition section
 
