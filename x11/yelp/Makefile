@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	yelp
-PORTVERSION=	2.1.3
+PORTVERSION=	2.1.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.1
@@ -34,5 +34,7 @@ post-patch:
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|\@prefix\@/share|\@datadir\@|g' \
 		${WRKSRC}/stylesheets/docbook/catalog.in
+	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
+		${WRKSRC}/po/Makefile.in.in
 
 .include <bsd.port.mk>
