@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Mon Dec  8 15:44:58 2003
++++ Makefile.in	Mon Dec  8 15:45:28 2003
+@@ -139,7 +139,7 @@
+ YACC = @YACC@
+ gnomelocaledir = @gnomelocaledir@
+ 
+-SUBDIRS = po gal tests docs art
++SUBDIRS = po gal docs art
+ 
+ pkgconfigdir = $(prefix)/libdata/pkgconfig
+ pkgconfig_DATA = gal-2.2.pc
