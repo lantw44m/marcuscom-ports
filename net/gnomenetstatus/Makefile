@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomenetstatus
-PORTVERSION=	2.7.3.1
+PORTVERSION=	2.7.90
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-netstatus/2.7
@@ -18,9 +18,10 @@ COMMENT=	A GNOME applet that shows network status
 
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
+GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnome gnomepanel libglade2
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=13
+USE_LIBTOOL_VER=15
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
