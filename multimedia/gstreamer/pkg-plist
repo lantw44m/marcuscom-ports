@@ -20,7 +20,6 @@ include/gstreamer-%%VERSION%%/gst/control/unitconvert.h
 include/gstreamer-%%VERSION%%/gst/getbits/getbits.h
 include/gstreamer-%%VERSION%%/gst/gst.h
 include/gstreamer-%%VERSION%%/gst/gstatomic.h
-include/gstreamer-%%VERSION%%/gst/gstautoplug.h
 include/gstreamer-%%VERSION%%/gst/gstbin.h
 include/gstreamer-%%VERSION%%/gst/gstbuffer.h
 include/gstreamer-%%VERSION%%/gst/gstbufferpool-default.h
@@ -57,6 +56,8 @@ include/gstreamer-%%VERSION%%/gst/gstregistry.h
 include/gstreamer-%%VERSION%%/gst/gstscheduler.h
 include/gstreamer-%%VERSION%%/gst/gststructure.h
 include/gstreamer-%%VERSION%%/gst/gstsystemclock.h
+include/gstreamer-%%VERSION%%/gst/gsttag.h
+include/gstreamer-%%VERSION%%/gst/gsttaginterface.h
 include/gstreamer-%%VERSION%%/gst/gstthread.h
 include/gstreamer-%%VERSION%%/gst/gsttrace.h
 include/gstreamer-%%VERSION%%/gst/gsttrashstack.h
@@ -68,8 +69,6 @@ include/gstreamer-%%VERSION%%/gst/gstutils.h
 include/gstreamer-%%VERSION%%/gst/gstvalue.h
 include/gstreamer-%%VERSION%%/gst/gstversion.h
 include/gstreamer-%%VERSION%%/gst/gstxml.h
-lib/gstreamer-%%VERSION%%/libgstautoplugcache.so
-lib/gstreamer-%%VERSION%%/libgstautoplugger.so
 lib/gstreamer-%%VERSION%%/libgstbasicgthreadscheduler.so
 lib/gstreamer-%%VERSION%%/libgstbasicomegascheduler.so
 lib/gstreamer-%%VERSION%%/libgstbytestream.so
@@ -80,8 +79,6 @@ lib/gstreamer-%%VERSION%%/libgstoptgthreadscheduler.so
 lib/gstreamer-%%VERSION%%/libgstoptomegascheduler.so
 lib/gstreamer-%%VERSION%%/libgstoptscheduler.so
 lib/gstreamer-%%VERSION%%/libgstspider.so
-lib/gstreamer-%%VERSION%%/libgststaticautoplug.so
-lib/gstreamer-%%VERSION%%/libgststaticautoplugrender.so
 lib/libgstcontrol-%%VERSION%%.a
 lib/libgstcontrol-%%VERSION%%.so
 lib/libgstcontrol-%%VERSION%%.so.%%SHLIB_VERSION%%

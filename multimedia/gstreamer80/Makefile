@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.7.2
+PORTVERSION=	0.7.3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.7
@@ -20,6 +20,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 USE_X_PREFIX=	yes
 USE_BISON=	yes
 USE_BZIP2=	yes
+USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
 WANT_GNOME=	yes
@@ -34,7 +35,6 @@ CONFIGURE_ARGS= --disable-tests \
 CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
 		CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
-CONFIGURE_TARGET=
 PLIST_SUB=	\
 		VERSION="${GST_VERSION}" \
 		SHLIB_VERSION="${SHLIB_VERSION}"
@@ -49,11 +49,11 @@ PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 GST_VERSION=${PORTVERSION:C/..$//}
 
 # library minor number
-SHLIB_VERSION=	3
+SHLIB_VERSION=	5
 
 post-install:
 # register plugins
-	@${PREFIX}/bin/gst-register-${GST_VERSION} 2>/dev/null
+	-@${PREFIX}/bin/gst-register-${GST_VERSION} 2>/dev/null
 
 .include <bsd.port.pre.mk>
 
