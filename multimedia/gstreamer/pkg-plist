@@ -97,8 +97,8 @@ lib/libgstreamer-%%VERSION%%.so.%%SHLIB_VERSION%%
 libdata/pkgconfig/gstreamer-%%VERSION%%.pc
 libdata/pkgconfig/gstreamer-control-%%VERSION%%.pc
 share/aclocal/gst-element-check-%%VERSION%%.m4
-share/locale/fr/LC_MESSAGES/gstreamer-%%VERSION%%.mo
-share/locale/nl/LC_MESSAGES/gstreamer-%%VERSION%%.mo
+share/locale/fr/LC_MESSAGES/gstreamer-0.7.mo
+share/locale/nl/LC_MESSAGES/gstreamer-0.7.mo
 @unexec rm %D/share/gnome/cache/gstreamer-%%VERSION%%/registry.xml 2>/dev/null || true
 @dirrm share/gnome/cache/gstreamer-%%VERSION%%
 @unexec rmdir %D/share/gnome/cache 2>/dev/null || true
