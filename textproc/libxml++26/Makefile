@@ -38,7 +38,7 @@ post-patch:
 
 .if !defined(NOPORTDOCS)
 post-configure:
-	@${TOUCH} ${WRKSRC}/docs/reference/html/index.html
+	@${TOUCH} ${WRKSRC}/docs/reference/${PORTVERSION:R}/html/index.html
 .endif
 
 patch-autotools:
