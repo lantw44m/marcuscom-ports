@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	0.0.3
+PORTVERSION=	0.0.4
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.0
@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
-LIB_DEPENDS=	gtkhtml-3.1.4:${PORTSDIR}/www/gtkhtml3
+LIB_DEPENDS=	gtkhtml-3.1.5:${PORTSDIR}/www/gtkhtml3
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
