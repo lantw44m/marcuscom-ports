@@ -110,13 +110,13 @@ include/evolution-data-server-%%VERSION%%/libical/vcc.h
 include/evolution-data-server-%%VERSION%%/libical/vobject.h
 lib/libebook.a
 lib/libebook.so
-lib/libebook.so.7
+lib/libebook.so.8
 lib/libecal.a
 lib/libecal.so
 lib/libecal.so.7
 lib/libedata-book.a
 lib/libedata-book.so
-lib/libedata-book.so.0
+lib/libedata-book.so.1
 lib/libedata-cal.a
 lib/libedata-cal.so
 lib/libedata-cal.so.6
@@ -125,7 +125,7 @@ lib/libedataserver.so
 lib/libedataserver.so.4
 lib/libegroupwise.a
 lib/libegroupwise.so
-lib/libegroupwise.so.1
+lib/libegroupwise.so.2
 libdata/bonobo/servers/GNOME_Evolution_DataServer_%%VERSION%%.server
 libdata/pkgconfig/evolution-data-server-%%VERSION%%.pc
 libdata/pkgconfig/libebook-%%VERSION%%.pc
