@@ -20,7 +20,6 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_JAVA=	1.2+
-USE_REINPLACE=	yes
 USE_GNOME=	gnomehack gtk20
 CONFIGURE_ARGS=	--without-gcj-compile \
 		--with-java-prefix=${JAVA_HOME}
