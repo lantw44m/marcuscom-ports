@@ -25,6 +25,7 @@ etc/gconf/gconf.xml.defaults/apps/evolution/mail/junk/sa/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/mail/message_window/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/mail/notify/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/mail/prompts/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/evolution/mail/subscribe_window/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/mail/trash/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/shell/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/shell/default_folders/%gconf.xml
@@ -58,6 +59,7 @@ etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/junk/sa/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/message_window/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/notify/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/prompts/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/subscribe_window/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/trash/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/shell/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/shell/default_folders/%gconf.xml
@@ -78,6 +80,7 @@ include/evolution-%%VERSION%%/camel/camel-charset-map.h
 include/evolution-%%VERSION%%/camel/camel-cipher-context.h
 include/evolution-%%VERSION%%/camel/camel-data-cache.h
 include/evolution-%%VERSION%%/camel/camel-data-wrapper.h
+include/evolution-%%VERSION%%/camel/camel-debug.h
 include/evolution-%%VERSION%%/camel/camel-digest-folder.h
 include/evolution-%%VERSION%%/camel/camel-digest-store.h
 include/evolution-%%VERSION%%/camel/camel-digest-summary.h
@@ -235,6 +238,8 @@ include/evolution-%%VERSION%%/e-util/e-passwords.h
 include/evolution-%%VERSION%%/e-util/e-path.h
 include/evolution-%%VERSION%%/e-util/e-request.h
 include/evolution-%%VERSION%%/e-util/e-sexp.h
+include/evolution-%%VERSION%%/e-util/e-signature-list.h
+include/evolution-%%VERSION%%/e-util/e-signature.h
 include/evolution-%%VERSION%%/e-util/e-time-utils.h
 include/evolution-%%VERSION%%/e-util/e-trie.h
 include/evolution-%%VERSION%%/e-util/e-uid.h
@@ -310,6 +315,8 @@ lib/evolution/%%VERSION%%/libeutil.so
 lib/evolution/%%VERSION%%/libeutil.so.0
 lib/evolution/%%VERSION%%/libevolution-a11y.so
 lib/evolution/%%VERSION%%/libevolution-a11y.so.0
+lib/evolution/%%VERSION%%/libevolution-addressbook-a11y.so
+lib/evolution/%%VERSION%%/libevolution-addressbook-a11y.so.0
 lib/evolution/%%VERSION%%/libevolution-calendar-a11y.so
 lib/evolution/%%VERSION%%/libevolution-calendar-a11y.so.0
 lib/evolution/%%VERSION%%/libevolution-importer.so
@@ -385,7 +392,6 @@ share/gnome/evolution/%%VERSION%%/glade/im.glade
 share/gnome/evolution/%%VERSION%%/glade/import.glade
 share/gnome/evolution/%%VERSION%%/glade/import.png
 share/gnome/evolution/%%VERSION%%/glade/ldap-config.glade
-share/gnome/evolution/%%VERSION%%/glade/local-config.glade
 share/gnome/evolution/%%VERSION%%/glade/mail-config-druid-account-name.png
 share/gnome/evolution/%%VERSION%%/glade/mail-config-druid-identity.png
 share/gnome/evolution/%%VERSION%%/glade/mail-config-druid-receive.png
@@ -417,6 +423,7 @@ share/gnome/evolution/%%VERSION%%/images/all_contacts.xpm
 share/gnome/evolution/%%VERSION%%/images/apply-filters-16.xpm
 share/gnome/evolution/%%VERSION%%/images/appointment-reminder-excl.png
 share/gnome/evolution/%%VERSION%%/images/appointment-reminder.png
+share/gnome/evolution/%%VERSION%%/images/autocompletion.png
 share/gnome/evolution/%%VERSION%%/images/bcg.png
 share/gnome/evolution/%%VERSION%%/images/briefcase.png
 share/gnome/evolution/%%VERSION%%/images/butterfly.png
@@ -627,7 +634,9 @@ share/gnome/evolution/%%VERSION%%/images/show_all_messages.xpm
 share/gnome/evolution/%%VERSION%%/images/splash.png
 share/gnome/evolution/%%VERSION%%/images/stock-edit-16.png
 share/gnome/evolution/%%VERSION%%/images/stock-edit-24.png
+share/gnome/evolution/%%VERSION%%/images/stock-junk-16.png
 share/gnome/evolution/%%VERSION%%/images/stock-junk-24.png
+share/gnome/evolution/%%VERSION%%/images/stock-notjunk-16.png
 share/gnome/evolution/%%VERSION%%/images/stock-notjunk-24.png
 share/gnome/evolution/%%VERSION%%/images/summary-settings.png
 share/gnome/evolution/%%VERSION%%/images/summary_preferences-16.png
@@ -669,6 +678,7 @@ share/gnome/evolution/%%VERSION%%/views/addressbook/Address_Cards.galview
 share/gnome/evolution/%%VERSION%%/views/addressbook/By_Company.galview
 share/gnome/evolution/%%VERSION%%/views/addressbook/Phone_List.galview
 share/gnome/evolution/%%VERSION%%/views/addressbook/galview.xml
+share/gnome/evolution/%%VERSION%%/views/calendar/List_View.galview
 share/gnome/evolution/%%VERSION%%/views/calendar/galview.xml
 share/gnome/evolution/%%VERSION%%/views/mail/As_Sent_Folder.galview
 share/gnome/evolution/%%VERSION%%/views/mail/By_Follow_Up_Flag.galview
@@ -678,7 +688,8 @@ share/gnome/evolution/%%VERSION%%/views/mail/By_Subject.galview
 share/gnome/evolution/%%VERSION%%/views/mail/Messages.galview
 share/gnome/evolution/%%VERSION%%/views/mail/galview.xml
 share/gnome/evolution/%%VERSION%%/views/tasks/Tasks.galview
-share/gnome/evolution/%%VERSION%%/views/tasks/With_Category.galview
+share/gnome/evolution/%%VERSION%%/views/tasks/With_DueDate.galview
+share/gnome/evolution/%%VERSION%%/views/tasks/With_Status.galview
 share/gnome/evolution/%%VERSION%%/views/tasks/galview.xml
 %%PILOT:%%share/gnome/gnome-pilot/conduits/e-address.conduit
 %%PILOT:%%share/gnome/gnome-pilot/conduits/e-calendar.conduit
@@ -840,6 +851,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/shell/default_folders
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/shell
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/trash
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/subscribe_window
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/prompts
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/notify
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/message_window
@@ -873,6 +885,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/shell/default_folders
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/shell
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/trash
+@dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/subscribe_window
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/prompts
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/notify
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/message_window
