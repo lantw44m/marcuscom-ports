@@ -233,7 +233,7 @@ atk_LIB_DEPENDS=	atk-1.0.700:${PORTSDIR}/accessibility/atk
 atk_DETECT=		${LOCALBASE}/libdata/pkgconfig/atk.pc
 atk_USE_GNOME_IMPL=	glib20
 
-pango_LIB_DEPENDS=	pango-1.0.500:${PORTSDIR}/x11-toolkits/pango
+pango_LIB_DEPENDS=	pango-1.0.501:${PORTSDIR}/x11-toolkits/pango
 pango_DETECT=		${X11BASE}/libdata/pkgconfig/pango.pc
 pango_USE_GNOME_IMPL=	glib20
 
