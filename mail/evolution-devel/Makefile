@@ -27,7 +27,7 @@ LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss \
 .if defined(WITH_LDAP)
 LIB_DEPENDS+=	ldap.2:${PORTSDIR}/net/openldap20
 .endif
-RUN_DEPENDS=	${X11BASE}/lib/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnomespell-devel
+RUN_DEPENDS=	${X11BASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnomespell-devel
 .if !defined(WITHOUT_PILOT)
 LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
 .endif
