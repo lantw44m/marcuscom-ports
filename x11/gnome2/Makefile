@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.5.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -53,6 +53,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gswitchit-plugins-capplet:${PORTSDIR}/x11/gswitchit \
 		gnome-netinfo:${PORTSDIR}/net/gnomenetwork \
 		gdesklets:${PORTSDIR}/deskutils/gdesklets \
+		monkey-bubble:${PORTSDIR}/games/monkeybubble \
 		dasher:${PORTSDIR}/x11/dasher
 
 NO_BUILD=	yes
