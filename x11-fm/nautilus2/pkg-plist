@@ -44,14 +44,14 @@ libdata/bonobo/servers/Nautilus_View_image_properties.server
 libdata/bonobo/servers/Nautilus_View_notes.server
 libdata/bonobo/servers/Nautilus_View_text.server
 libdata/bonobo/servers/Nautilus_shell.server
-libdata/pkgconfig/libnautilus.pc
 libdata/pkgconfig/libnautilus-extension.pc
+libdata/pkgconfig/libnautilus.pc
 libexec/nautilus-adapter
 libexec/nautilus-text-view
 libexec/nautilus-throbber
-share/gnome/applications/nautilus.desktop
 share/gnome/applications/nautilus-computer.desktop
 share/gnome/applications/nautilus-home.desktop
+share/gnome/applications/nautilus.desktop
 share/gnome/applications/network-scheme.desktop
 share/gnome/control-center-2.0/capplets/nautilus-file-management-properties.desktop
 share/gnome/gnome-2.0/ui/nautilus-clipboard-ui.xml
