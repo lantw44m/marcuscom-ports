@@ -23,7 +23,8 @@ RUN_DEPENDS=	${X11BASE}/lib/epiphany/extensions/libgesturesextension.so:${PORTSD
 		splashsetter:${PORTSDIR}/deskutils/splashsetter \
 		gdesklets:${PORTSDIR}/deskutils/gdesklets \
 		cog:${PORTSDIR}/sysutils/cog \
-		gnome-blog-poster:${PORTSDIR}/deskutils/gnomeblog
+		gnome-blog-poster:${PORTSDIR}/deskutils/gnomeblog \
+		gnomesu:${PORTSDIR}/sysutils/gnomesu
 
 NO_BUILD=	yes
 
