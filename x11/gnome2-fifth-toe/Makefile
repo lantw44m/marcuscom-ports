@@ -39,12 +39,14 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 RUN_DEPENDS+=	totem:${PORTSDIR}/multimedia/totem
 .endif
 
+NO_BUILD=	yes
+
+.include <bsd.port.pre.mk>
+
 .if ${OSVERSION} >= 500000
 RUN_DEPENDS+=	inkscape:${PORTSDIR}/graphics/inkscape
 .endif
 
-NO_BUILD=	yes
-
 do-install:	# empty
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
