@@ -1,5 +1,5 @@
---- cd-recorder.c.orig	Sun Apr 13 03:27:14 2003
-+++ cd-recorder.c	Sun Apr 13 03:30:37 2003
+--- cd-recorder.c.orig	Mon May 19 03:17:14 2003
++++ cd-recorder.c	Thu May 22 19:10:49 2003
 @@ -9,10 +9,16 @@
  #include <fcntl.h>
  #include <sys/wait.h>
@@ -17,7 +17,7 @@
  #include <glib.h>
  #include <signal.h>
  #include <libgnome/gnome-i18n.h>
-@@ -39,9 +45,9 @@
+@@ -41,9 +47,9 @@
  	GMainLoop *loop;
  	int result;
  	int pid;
@@ -29,7 +29,7 @@
  	gboolean changed_text;
  	gboolean send_return;
  	gboolean expect_cdrecord_to_die;
-@@ -109,7 +115,7 @@
+@@ -112,7 +118,7 @@
  {
  	if (is_reload) {
  		if (cdrecorder->priv->send_return) {
@@ -38,7 +38,7 @@
  		} else {
  			kill (cdrecorder->priv->pid, SIGUSR1);
  		}
-@@ -214,7 +220,7 @@
+@@ -221,7 +227,7 @@
  #endif
  	/* TODO: Handle errors */
  	if (status == G_IO_STATUS_NORMAL && !cdrecorder->priv->expect_cdrecord_to_die) {
@@ -47,7 +47,7 @@
  		if (strstr (line, "No disk / Wrong disk!") != NULL) {
  			g_signal_emit (G_OBJECT (cdrecorder),
  				       cd_recorder_table_signals[INSERT_CD_REQUEST], 0,
-@@ -277,15 +283,15 @@
+@@ -293,15 +299,15 @@
  	argv[i++] = filename;
  	argv[i++] = NULL;
  
@@ -67,7 +67,7 @@
  	}
  
  	g_signal_emit (G_OBJECT (cdrecorder),
-@@ -309,7 +315,7 @@
+@@ -325,7 +331,7 @@
  					G_SPAWN_SEARCH_PATH,
  					NULL, NULL,
  					&cdrecorder->priv->pid,
@@ -76,7 +76,7 @@
  					&stdout_pipe,
  					&stderr_pipe,
  					&error)) {
-@@ -374,7 +380,7 @@
+@@ -390,7 +396,7 @@
  {
  	g_return_val_if_fail (cdrecorder->priv->result != RESULT_ERROR, NULL);
  
@@ -85,7 +85,7 @@
  }
  
  const char *
-@@ -392,7 +398,7 @@
+@@ -408,7 +414,7 @@
  
  	g_return_if_fail (object != NULL);
  
