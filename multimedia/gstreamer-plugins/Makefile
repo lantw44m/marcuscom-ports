@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.7.1
+PORTVERSION=	0.7.2
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gst-plugins/0.7
@@ -37,6 +37,7 @@ CONFIGURE_ARGS=	--disable-tests \
 		--disable-qcam \
 		--disable-v4l2 \
 		--disable-v4l \
+		--disable-dependency-tracking \
 		--enable-static
 CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
 		CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \

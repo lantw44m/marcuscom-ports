@@ -1,0 +1,11 @@
+--- gst-libs/ext/ffmpeg/Makefile.in.orig	Tue Nov 25 02:24:22 2003
++++ gst-libs/ext/ffmpeg/Makefile.in	Tue Nov 25 02:24:35 2003
+@@ -809,7 +809,7 @@
+ 	libavformat_la-file.lo libavformat_la-flvdec.lo \
+ 	libavformat_la-flvenc.lo libavformat_la-framehook.lo \
+ 	libavformat_la-gif.lo libavformat_la-gifdec.lo \
+-	libavformat_la-grab.lo libavformat_la-idcin.lo \
++	libavformat_la-idcin.lo \
+ 	libavformat_la-idroq.lo libavformat_la-img.lo \
+ 	libavformat_la-ipmovie.lo libavformat_la-jpeg.lo \
+ 	libavformat_la-mov.lo libavformat_la-movenc.lo \

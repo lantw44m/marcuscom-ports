@@ -17,6 +17,7 @@ include/gstreamer-%%VERSION%%/gst/mixer/mixer.h
 include/gstreamer-%%VERSION%%/gst/mixer/mixertrack.h
 include/gstreamer-%%VERSION%%/gst/navigation/navigation.h
 include/gstreamer-%%VERSION%%/gst/play/play.h
+include/gstreamer-%%VERSION%%/gst/propertyprobe/propertyprobe.h
 include/gstreamer-%%VERSION%%/gst/resample/resample.h
 include/gstreamer-%%VERSION%%/gst/riff/riff.h
 include/gstreamer-%%VERSION%%/gst/tuner/tuner.h
@@ -43,8 +44,7 @@ lib/gstreamer-%%VERSION%%/libgstaudio.so
 %%LIBAUDIOFILE%%lib/gstreamer-%%VERSION%%/libgstaudiofile.so
 lib/gstreamer-%%VERSION%%/libgstaudioscale.so
 lib/gstreamer-%%VERSION%%/libgstauparse.so
-lib/gstreamer-%%VERSION%%/libgstavidemux.so
-lib/gstreamer-%%VERSION%%/libgstavimux.so
+lib/gstreamer-%%VERSION%%/libgstavi.so
 %%CDPARANOIA%%lib/gstreamer-%%VERSION%%/libgstcdparanoia.so
 lib/gstreamer-%%VERSION%%/libgstcdxaparse.so
 lib/gstreamer-%%VERSION%%/libgstchart.so
@@ -63,8 +63,7 @@ lib/gstreamer-%%VERSION%%/libgstfilter.so
 %%FLAC%%lib/gstreamer-%%VERSION%%/libgstflac.so
 lib/gstreamer-%%VERSION%%/libgstflxdec.so
 lib/gstreamer-%%VERSION%%/libgstgdkpixbuf.so
-%%GNOMEVFS%%lib/gstreamer-%%VERSION%%/libgstgnomevfssink.so
-%%GNOMEVFS%%lib/gstreamer-%%VERSION%%/libgstgnomevfssrc.so
+%%GNOMEVFS%%lib/gstreamer-%%VERSION%%/libgstgnomevfs.so
 lib/gstreamer-%%VERSION%%/libgstgoom.so
 %%GSM%%lib/gstreamer-%%VERSION%%/libgstgsm.so
 %%HTTP%%lib/gstreamer-%%VERSION%%/libgsthttpsrc.so
@@ -77,6 +76,7 @@ lib/gstreamer-%%VERSION%%/libgstid3types.so
 lib/gstreamer-%%VERSION%%/libgstlevel.so
 %%LIBFAME%%lib/gstreamer-%%VERSION%%/libgstlibfame.so
 %%LIBMAD%%lib/gstreamer-%%VERSION%%/libgstmad.so
+lib/gstreamer-%%VERSION%%/libgstmatroska.so
 lib/gstreamer-%%VERSION%%/libgstmedian.so
 %%LIBMIKMOD%%lib/gstreamer-%%VERSION%%/libgstmikmod.so
 lib/gstreamer-%%VERSION%%/libgstmodplug.a
@@ -85,15 +85,14 @@ lib/gstreamer-%%VERSION%%/libgstmonoscope.so
 lib/gstreamer-%%VERSION%%/libgstmp1videoparse.so
 lib/gstreamer-%%VERSION%%/libgstmpeg1systemencode.so
 %%LIBMPEG2%%lib/gstreamer-%%VERSION%%/libgstmpeg2dec.so
-lib/gstreamer-%%VERSION%%/libgstmpeg2enc.so
 lib/gstreamer-%%VERSION%%/libgstmpeg2subt.so
 lib/gstreamer-%%VERSION%%/libgstmpegaudio.so
 lib/gstreamer-%%VERSION%%/libgstmpegaudioparse.so
 lib/gstreamer-%%VERSION%%/libgstmpegstream.so
-lib/gstreamer-%%VERSION%%/libgstmpegtypes.so
 lib/gstreamer-%%VERSION%%/libgstmplex.a
 lib/gstreamer-%%VERSION%%/libgstmplex.so
 lib/gstreamer-%%VERSION%%/libgstmulaw.so
+lib/gstreamer-%%VERSION%%/libgstnavigationtest.so
 lib/gstreamer-%%VERSION%%/libgstoneton.so
 lib/gstreamer-%%VERSION%%/libgstoverlay.so
 %%OPENQUICKTIME%%lib/gstreamer-%%VERSION%%/libgstopenquicktimedecoder.so
@@ -127,6 +126,7 @@ lib/gstreamer-%%VERSION%%/libgstsynaesthesia.so
 lib/gstreamer-%%VERSION%%/libgsttcp.so
 lib/gstreamer-%%VERSION%%/libgsttextoverlay.so
 lib/gstreamer-%%VERSION%%/libgsttimeoverlay.so
+lib/gstreamer-%%VERSION%%/libgsttypefindfunctions.so
 lib/gstreamer-%%VERSION%%/libgstudp.so
 lib/gstreamer-%%VERSION%%/libgstvbidec.so
 lib/gstreamer-%%VERSION%%/libgstvideo.so
@@ -142,28 +142,30 @@ lib/gstreamer-%%VERSION%%/libgstvolume.so
 %%VORBIS%%lib/gstreamer-%%VERSION%%/libgstvorbis.so
 lib/gstreamer-%%VERSION%%/libgstwavenc.so
 lib/gstreamer-%%VERSION%%/libgstwavparse.so
+lib/gstreamer-%%VERSION%%/libgstximagesink.so
 %%XVID%%lib/gstreamer-%%VERSION%%/libgstxvid.so
 lib/gstreamer-%%VERSION%%/libgstxvideosink.so
+lib/gstreamer-%%VERSION%%/libgstxvimagesink.so
 lib/gstreamer-%%VERSION%%/libgstxwindowlistener.a
 lib/gstreamer-%%VERSION%%/libgstxwindowlistener.so
 lib/gstreamer-%%VERSION%%/libgstxwindowlistener.so.0
 lib/gstreamer-%%VERSION%%/libgsty4menc.so
 lib/gstreamer-%%VERSION%%/libmixmatrix.so
-lib/libgstcolorbalance.so
+lib/gtk-2.0/2.2.0/loaders/gst_loader.so
 lib/libgstgconf-%%VERSION%%.a
 lib/libgstgconf-%%VERSION%%.so
 lib/libgstgconf-%%VERSION%%.so.%%SHLIB_VERSION%%
+lib/libgstinterfaces-%%VERSION%%.a
+lib/libgstinterfaces-%%VERSION%%.so
+lib/libgstinterfaces-%%VERSION%%.so.1
 lib/libgstmedia-info-%%VERSION%%.a
 lib/libgstmedia-info-%%VERSION%%.so
 lib/libgstmedia-info-%%VERSION%%.so.0
-lib/libgstmixer.so
-lib/libgstnavigation.so
 lib/libgstplay-%%VERSION%%.a
 lib/libgstplay-%%VERSION%%.so
 lib/libgstplay-%%VERSION%%.so.%%SHLIB_VERSION%%
-lib/libgsttuner.so
-lib/libgstxoverlay.so
 libdata/pkgconfig/gstreamer-gconf-%%VERSION%%.pc
+libdata/pkgconfig/gstreamer-interfaces-%%VERSION%%.pc
 libdata/pkgconfig/gstreamer-libs-%%VERSION%%.pc
 libdata/pkgconfig/gstreamer-play-%%VERSION%%.pc
 @unexec rmdir %D/lib/gstreamer-%%VERSION%% 2>/dev/null || true
@@ -173,6 +175,7 @@ libdata/pkgconfig/gstreamer-play-%%VERSION%%.pc
 @dirrm include/gstreamer-%%VERSION%%/gst/tuner
 @dirrm include/gstreamer-%%VERSION%%/gst/riff
 @dirrm include/gstreamer-%%VERSION%%/gst/resample
+@dirrm include/gstreamer-%%VERSION%%/gst/propertyprobe
 @dirrm include/gstreamer-%%VERSION%%/gst/play
 @dirrm include/gstreamer-%%VERSION%%/gst/navigation
 @dirrm include/gstreamer-%%VERSION%%/gst/mixer
