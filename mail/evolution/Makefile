@@ -26,6 +26,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver gal2 \
 		gtkhtml3 desktopfileutils
 USE_REINPLACE=	yes
 USE_LIBTOOL_VER=15
+INSTALLS_OMF=	yes
 CONFIGURE_ARGS=	--enable-nss=yes \
 		--with-nss-includes=${LOCALBASE}/include/nss/nss \
 		--with-nss-libs=${LOCALBASE}/lib \
