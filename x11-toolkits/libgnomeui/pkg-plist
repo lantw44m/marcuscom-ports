@@ -53,7 +53,7 @@ lib/gtk-2.0/%%GTK_VERSION%%/filesystems/libgnome-vfs.so
 lib/libglade/2.0/libgnome.so
 lib/libgnomeui-2.a
 lib/libgnomeui-2.so
-lib/libgnomeui-2.so.591
+lib/libgnomeui-2.so.592
 libdata/pkgconfig/libgnomeui-2.0.pc
 libexec/gnome_segv2
 %%DOCSDIR%%/GnomeAbout.html
