@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	coaster
-PORTVERSION=	0.1.2
-PORTREVISION=	2
+PORTVERSION=	0.1.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.coaster-burn.org/files/coaster/
 
@@ -20,6 +19,7 @@ LIB_DEPENDS=	bakery-2.3.11:${PORTSDIR}/x11-toolkits/bakery \
 USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack desktopfileutils
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
+INSTALLS_OMF=	yes
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
