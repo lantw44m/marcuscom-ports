@@ -346,6 +346,29 @@ share/gnome/pixmaps/gnome-cd/media-rewind.png
 share/gnome/pixmaps/gnome-cd/media-stop.png
 share/gnome/pixmaps/gnome-cd/once.png
 share/gnome/pixmaps/gnome-cd/repeat.png
+share/gnome/pixmaps/gnome-cd/themes/None/None.theme
+share/gnome/pixmaps/gnome-cd/themes/None/a-eject-menu.png
+share/gnome/pixmaps/gnome-cd/themes/None/a-first-menu.png
+share/gnome/pixmaps/gnome-cd/themes/None/a-last-menu.png
+share/gnome/pixmaps/gnome-cd/themes/None/a-play-menu.png
+share/gnome/pixmaps/gnome-cd/themes/None/a-stop-menu.png
+share/gnome/pixmaps/gnome-cd/themes/None/bottom-left.png
+share/gnome/pixmaps/gnome-cd/themes/None/bottom-right.png
+share/gnome/pixmaps/gnome-cd/themes/None/bottom.png
+share/gnome/pixmaps/gnome-cd/themes/None/media-eject.png
+share/gnome/pixmaps/gnome-cd/themes/None/media-fwd.png
+share/gnome/pixmaps/gnome-cd/themes/None/media-next.png
+share/gnome/pixmaps/gnome-cd/themes/None/media-pause.png
+share/gnome/pixmaps/gnome-cd/themes/None/media-play.png
+share/gnome/pixmaps/gnome-cd/themes/None/media-prev.png
+share/gnome/pixmaps/gnome-cd/themes/None/media-rew.png
+share/gnome/pixmaps/gnome-cd/themes/None/media-stop.png
+share/gnome/pixmaps/gnome-cd/themes/None/middle-left.png
+share/gnome/pixmaps/gnome-cd/themes/None/middle-right.png
+share/gnome/pixmaps/gnome-cd/themes/None/middle.png
+share/gnome/pixmaps/gnome-cd/themes/None/top-left.png
+share/gnome/pixmaps/gnome-cd/themes/None/top-right.png
+share/gnome/pixmaps/gnome-cd/themes/None/top.png
 share/gnome/pixmaps/gnome-cd/themes/lcd/bottom-left.png
 share/gnome/pixmaps/gnome-cd/themes/lcd/bottom-right.png
 share/gnome/pixmaps/gnome-cd/themes/lcd/bottom.png
@@ -408,6 +431,7 @@ share/locale/gl/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/he/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/hi/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/hu/LC_MESSAGES/gnome-media-2.0.mo
+share/locale/id/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-media-2.0.mo
@@ -441,6 +465,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm share/gnome/pixmaps/gnome-cd/themes/red-lcd
 @dirrm share/gnome/pixmaps/gnome-cd/themes/media
 @dirrm share/gnome/pixmaps/gnome-cd/themes/lcd
+@dirrm share/gnome/pixmaps/gnome-cd/themes/None
 @dirrm share/gnome/pixmaps/gnome-cd/themes
 @dirrm share/gnome/pixmaps/gnome-cd
 @dirrm share/gnome/gnome-media-2.0/interfaces
@@ -448,14 +473,23 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm share/gnome/gnome-media-2.0
 @dirrm share/gnome/gnome-sound-recorder/ui
 @dirrm share/gnome/gnome-sound-recorder
+@dirrm share/gnome/help/grecord/zh_TW/figures
 @dirrm share/gnome/help/grecord/zh_TW
+@dirrm share/gnome/help/grecord/zh_CN/figures
 @dirrm share/gnome/help/grecord/zh_CN
+@dirrm share/gnome/help/grecord/sv/figures
 @dirrm share/gnome/help/grecord/sv
+@dirrm share/gnome/help/grecord/ko/figures
 @dirrm share/gnome/help/grecord/ko
+@dirrm share/gnome/help/grecord/ja/figures
 @dirrm share/gnome/help/grecord/ja
+@dirrm share/gnome/help/grecord/it/figures
 @dirrm share/gnome/help/grecord/it
+@dirrm share/gnome/help/grecord/fr/figures
 @dirrm share/gnome/help/grecord/fr
+@dirrm share/gnome/help/grecord/es/figures
 @dirrm share/gnome/help/grecord/es
+@dirrm share/gnome/help/grecord/de/figures
 @dirrm share/gnome/help/grecord/de
 @dirrm share/gnome/help/grecord
 @dirrm share/gnome/help/gnome-volume-control/C/figures
@@ -464,14 +498,23 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm share/gnome/help/gnome-sound-recorder/C/figures
 @dirrm share/gnome/help/gnome-sound-recorder/C
 @dirrm share/gnome/help/gnome-sound-recorder
+@dirrm share/gnome/help/gnome-cd/zh_TW/figures
 @dirrm share/gnome/help/gnome-cd/zh_TW
+@dirrm share/gnome/help/gnome-cd/zh_CN/figures
 @dirrm share/gnome/help/gnome-cd/zh_CN
+@dirrm share/gnome/help/gnome-cd/sv/figures
 @dirrm share/gnome/help/gnome-cd/sv
+@dirrm share/gnome/help/gnome-cd/ko/figures
 @dirrm share/gnome/help/gnome-cd/ko
+@dirrm share/gnome/help/gnome-cd/ja/figures
 @dirrm share/gnome/help/gnome-cd/ja
+@dirrm share/gnome/help/gnome-cd/it/figures
 @dirrm share/gnome/help/gnome-cd/it
+@dirrm share/gnome/help/gnome-cd/fr/figures
 @dirrm share/gnome/help/gnome-cd/fr
+@dirrm share/gnome/help/gnome-cd/es/figures
 @dirrm share/gnome/help/gnome-cd/es
+@dirrm share/gnome/help/gnome-cd/de/figures
 @dirrm share/gnome/help/gnome-cd/de
 @dirrm share/gnome/help/gnome-cd/C/figures
 @dirrm share/gnome/help/gnome-cd/C
