@@ -2,7 +2,7 @@
 # Date created:         		04 December 2003
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/glibmm/Makefile,v 1.7 2005/02/06 21:06:14 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	glibmm

@@ -2,7 +2,7 @@
 # Date created:				08/13/2002
 # Whom:					marc@informatik.uni-bremen.de
 #
-# $FreeBSD: ports/x11-toolkits/py-gtk2/Makefile,v 1.79 2004/11/07 22:50:43 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtk

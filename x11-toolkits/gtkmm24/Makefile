@@ -2,7 +2,7 @@
 # Date created:        30 September 2002
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
-# $FreeBSD: ports/x11-toolkits/gtkmm24/Makefile,v 1.82 2005/02/06 21:34:57 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtkmm
