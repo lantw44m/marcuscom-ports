@@ -1,3 +1,0 @@
-Scaffold aids software development.  It provides an editor with syntax
-hilightighting, a rudimentary project/build system, an interface to
-the gdb debugger, and a plugin system.
