@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome-icon-theme
-PORTVERSION=	1.1.3
+PORTVERSION=	1.1.4
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
@@ -19,7 +19,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack gtk20 intlhack
+USE_GNOME=	gnomehack intlhack gnometarget
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
