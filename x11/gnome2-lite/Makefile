@@ -20,7 +20,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		gnome-cd:${PORTSDIR}/audio/gnomemedia2 \
 	 	gnome-dictionary:${PORTSDIR}/deskutils/gnomeutils2 \
 		eog:${PORTSDIR}/graphics/eog \
-		gedit:${PORTSDIR}/editors/gedit2 \
+		gedit:${PORTSDIR}/editors/gedit \
 		gnome-terminal:${PORTSDIR}/x11/gnometerminal \
 		gnome-session:${PORTSDIR}/x11/gnomesession \
 		gnome-system-monitor:${PORTSDIR}/sysutils/gnomesystemmonitor \

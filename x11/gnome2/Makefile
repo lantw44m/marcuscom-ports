@@ -21,7 +21,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		eog:${PORTSDIR}/graphics/eog \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
 		gnect:${PORTSDIR}/games/gnomegames2 \
-		gedit:${PORTSDIR}/editors/gedit2 \
+		gedit:${PORTSDIR}/editors/gedit \
 		gnome-terminal:${PORTSDIR}/x11/gnometerminal \
 		gnome-session:${PORTSDIR}/x11/gnomesession \
 		bug-buddy:${PORTSDIR}/devel/bugbuddy \
