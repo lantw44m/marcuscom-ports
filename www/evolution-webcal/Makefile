@@ -13,7 +13,7 @@ MASTER_SITE_SUBDIR=	sources/${PKGNAMEPREFIX}${PORTNAME}/2.0
 PKGNAMEPREFIX=	evolution-
 DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	kwm@rainbow-runner.nl
+MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Webcal(endar) handler for gnome
 
 USE_X_PREFIX=	yes
