@@ -15,7 +15,7 @@ include/libgnomecanvas-2.0/libgnomecanvas/libgnomecanvas.h
 lib/libglade/2.0/libcanvas.so
 lib/libgnomecanvas-2.a
 lib/libgnomecanvas-2.so
-lib/libgnomecanvas-2.so.501
+lib/libgnomecanvas-2.so.502
 libdata/pkgconfig/libgnomecanvas-2.0.pc
 share/doc/libgnomecanvas/c35.html
 share/doc/libgnomecanvas/c4.html
