@@ -22,7 +22,7 @@ RUN_DEPENDS=	mlv:${PORTSDIR}/editors/mlview \
 		gob2:${PORTSDIR}/devel/gob2 \
 		conglomerate:${PORTSDIR}/editors/conglomerate \
 		meld:${PORTSDIR}/textproc/meld \
-		gtranslator:${PORTSDIR}/devel/gtranslator
+		gtranslator:${PORTSDIR}/devel/gtranslator \
 		regexxer:${PORTSDIR}/devel/regexxer \
 		anjuta:${PORTSDIR}/devel/anjuta
 
