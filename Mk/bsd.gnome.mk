@@ -29,7 +29,7 @@ _USE_GNOME_ALL=	gnomehack gnomeprefix gnomehier gnomeaudio esound libghttp \
 		gnomecanvas oaf gnomemimedata gconf gnomevfs libcapplet \
 		gnomeprint bonobo libgda gnomedb libglade gal glibwww gtkhtml \
 		libpanel gnometarget
-_USE_GNOME_ALL+=glib20 atk pango gtk20 libidl orbit2 libglade2 libxml2 \
+_USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 libglade2 libxml2 \
 		libxslt libbonobo gconf2 gnomevfs2 gail \
 		libgnomecanvas libartlgpl2 libgnomeprint libgnomeprintui \
 		libgnome libbonoboui libgnomeui atspi libgailgnome \
@@ -224,6 +224,10 @@ pango_USE_GNOME_IMPL=	glib20
 gtk20_LIB_DEPENDS=	gtk-x11-2.0.200:${PORTSDIR}/x11-toolkits/gtk20
 gtk20_DETECT=		${X11BASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
 gtk20_USE_GNOME_IMPL=	atk pango
+
+linc_LIB_DEPENDS=	linc.1:${PORTSDIR}/net/linc
+linc_DETECT=		${LOCALBASE}/libdata/pkgconfig/linc.pc
+linc_USE_GNOME_IMPL=glib20
 
 libidl_LIB_DEPENDS=	IDL-2.0:${PORTSDIR}/devel/libIDL
 libidl_DETECT=		${LOCALBASE}/libdata/pkgconfig/libIDL-2.0.pc
