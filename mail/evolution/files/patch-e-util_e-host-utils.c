@@ -1,5 +1,5 @@
---- e-util/e-host-utils.c.orig	Thu Sep 30 16:39:55 2004
-+++ e-util/e-host-utils.c	Thu Sep 30 16:45:00 2004
+--- e-util/e-host-utils.c.orig	Tue Apr 13 15:19:43 2004
++++ e-util/e-host-utils.c	Sun Oct  3 01:17:57 2004
 @@ -136,12 +136,21 @@
  	case EAI_SERVICE:
  		return NO_DATA;
@@ -9,7 +9,7 @@
  		return NO_ADDRESS;
  		break;
 +#endif
-+#ifdef EAI_NODATA
++#ifdef EAI_NODATA && EAI_NODATA != EAI_NONAME
  	case EAI_NODATA:
  		return NO_DATA;
  		break;
