@@ -1,0 +1,183 @@
+--- configure.orig	Wed Jan 12 23:30:59 2005
++++ configure	Wed Jan 12 23:35:07 2005
+@@ -19408,23 +19408,23 @@
+   else
+      PKG_CONFIG_MIN_VERSION=0.9.0
+      if $PKG_CONFIG --atleast-pkgconfig-version $PKG_CONFIG_MIN_VERSION; then
+-        echo "$as_me:$LINENO: checking for glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.8.1 $MM" >&5
+-echo $ECHO_N "checking for glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.8.1 $MM... $ECHO_C" >&6
++        echo "$as_me:$LINENO: checking for glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.9.0 $MM" >&5
++echo $ECHO_N "checking for glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.9.0 $MM... $ECHO_C" >&6
+ 
+-        if $PKG_CONFIG --exists "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.8.1 $MM" ; then
++        if $PKG_CONFIG --exists "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.9.0 $MM" ; then
+             echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+             succeeded=yes
+ 
+             echo "$as_me:$LINENO: checking EXTRA_GNOME_CFLAGS" >&5
+ echo $ECHO_N "checking EXTRA_GNOME_CFLAGS... $ECHO_C" >&6
+-            EXTRA_GNOME_CFLAGS=`$PKG_CONFIG --cflags "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.8.1 $MM"`
++            EXTRA_GNOME_CFLAGS=`$PKG_CONFIG --cflags "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.9.0 $MM"`
+             echo "$as_me:$LINENO: result: $EXTRA_GNOME_CFLAGS" >&5
+ echo "${ECHO_T}$EXTRA_GNOME_CFLAGS" >&6
+ 
+             echo "$as_me:$LINENO: checking EXTRA_GNOME_LIBS" >&5
+ echo $ECHO_N "checking EXTRA_GNOME_LIBS... $ECHO_C" >&6
+-            EXTRA_GNOME_LIBS=`$PKG_CONFIG --libs "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.8.1 $MM"`
++            EXTRA_GNOME_LIBS=`$PKG_CONFIG --libs "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.9.0 $MM"`
+             echo "$as_me:$LINENO: result: $EXTRA_GNOME_LIBS" >&5
+ echo "${ECHO_T}$EXTRA_GNOME_LIBS" >&6
+         else
+@@ -19432,7 +19432,7 @@
+             EXTRA_GNOME_LIBS=""
+             ## If we have a custom action on failure, don't print errors, but
+             ## do set a variable so people can do so.
+-            EXTRA_GNOME_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.8.1 $MM"`
++            EXTRA_GNOME_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.9.0 $MM"`
+             echo $EXTRA_GNOME_PKG_ERRORS
+         fi
+ 
+@@ -19447,8 +19447,8 @@
+   if test $succeeded = yes; then
+      :
+   else
+-     { { echo "$as_me:$LINENO: error: Library requirements (glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.8.1 $MM) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
+-echo "$as_me: error: Library requirements (glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.8.1 $MM) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
++     { { echo "$as_me:$LINENO: error: Library requirements (glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.9.0 $MM) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
++echo "$as_me: error: Library requirements (glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libgnomeui-2.0 >= 2.3.3 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 gnome-desktop-2.0 >= 2.1.5 libnautilus-burn >= 2.9.0 $MM) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
+    { (exit 1); exit 1; }; }
+   fi
+ 
+@@ -19508,23 +19508,23 @@
+   else
+      PKG_CONFIG_MIN_VERSION=0.9.0
+      if $PKG_CONFIG --atleast-pkgconfig-version $PKG_CONFIG_MIN_VERSION; then
+-        echo "$as_me:$LINENO: checking for glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.8.1 $MM" >&5
+-echo $ECHO_N "checking for glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.8.1 $MM... $ECHO_C" >&6
++        echo "$as_me:$LINENO: checking for glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.9.0 $MM" >&5
++echo $ECHO_N "checking for glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.9.0 $MM... $ECHO_C" >&6
+ 
+-        if $PKG_CONFIG --exists "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.8.1 $MM" ; then
++        if $PKG_CONFIG --exists "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.9.0 $MM" ; then
+             echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+             succeeded=yes
+ 
+             echo "$as_me:$LINENO: checking EXTRA_GNOME_CFLAGS" >&5
+ echo $ECHO_N "checking EXTRA_GNOME_CFLAGS... $ECHO_C" >&6
+-            EXTRA_GNOME_CFLAGS=`$PKG_CONFIG --cflags "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.8.1 $MM"`
++            EXTRA_GNOME_CFLAGS=`$PKG_CONFIG --cflags "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.9.0 $MM"`
+             echo "$as_me:$LINENO: result: $EXTRA_GNOME_CFLAGS" >&5
+ echo "${ECHO_T}$EXTRA_GNOME_CFLAGS" >&6
+ 
+             echo "$as_me:$LINENO: checking EXTRA_GNOME_LIBS" >&5
+ echo $ECHO_N "checking EXTRA_GNOME_LIBS... $ECHO_C" >&6
+-            EXTRA_GNOME_LIBS=`$PKG_CONFIG --libs "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.8.1 $MM"`
++            EXTRA_GNOME_LIBS=`$PKG_CONFIG --libs "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.9.0 $MM"`
+             echo "$as_me:$LINENO: result: $EXTRA_GNOME_LIBS" >&5
+ echo "${ECHO_T}$EXTRA_GNOME_LIBS" >&6
+         else
+@@ -19532,7 +19532,7 @@
+             EXTRA_GNOME_LIBS=""
+             ## If we have a custom action on failure, don't print errors, but
+             ## do set a variable so people can do so.
+-            EXTRA_GNOME_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.8.1 $MM"`
++            EXTRA_GNOME_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.9.0 $MM"`
+             echo $EXTRA_GNOME_PKG_ERRORS
+         fi
+ 
+@@ -19547,8 +19547,8 @@
+   if test $succeeded = yes; then
+      :
+   else
+-     { { echo "$as_me:$LINENO: error: Library requirements (glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.8.1 $MM) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
+-echo "$as_me: error: Library requirements (glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.8.1 $MM) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
++     { { echo "$as_me:$LINENO: error: Library requirements (glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.9.0 $MM) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
++echo "$as_me: error: Library requirements (glib-2.0 >= 2.1.0 gtk+-2.0 >= 2.3.1 libglade-2.0 gnome-vfs-2.0 >= 2.1.6 gnome-vfs-module-2.0 >= 2.1.6 libnautilus-burn >= 2.9.0 $MM) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
+    { (exit 1); exit 1; }; }
+   fi
+ 
+--- src/totem.c.orig	Wed Jan 12 23:31:14 2005
++++ src/totem.c	Wed Jan 12 23:35:32 2005
+@@ -42,7 +42,6 @@
+ #include "bacon-video-widget.h"
+ #include "bacon-video-widget-properties.h"
+ #include "rb-ellipsizing-label.h"
+-#include "bacon-cd-selection.h"
+ #include "totem-statusbar.h"
+ #include "totem-time-label.h"
+ #include "totem-screenshot.h"
+--- src/bacon-v4l-selection.h.orig	Wed Jan 12 23:31:33 2005
++++ src/bacon-v4l-selection.h	Wed Jan 12 23:36:21 2005
+@@ -22,7 +22,6 @@
+ #define HAVE_BACON_V4L_SELECTION_H
+ 
+ #include <gtk/gtkcomboboxentry.h>
+-#include <cd-drive.h>
+ 
+ G_BEGIN_DECLS
+ 
+--- src/totem-preferences.c.orig	Wed Jan 12 23:31:46 2005
++++ src/totem-preferences.c	Wed Jan 12 23:40:02 2005
+@@ -23,7 +23,7 @@
+ #include <stdio.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
+-#include <bacon-cd-selection.h>
++#include <nautilus-burn-drive-selection.h>
+ 
+ #include "totem.h"
+ #include "totem-private.h"
+@@ -209,11 +209,11 @@
+ }
+ 
+ static void
+-on_combo_entry1_changed (BaconCdSelection *bcs, char *device, Totem *totem)
++on_combo_entry1_changed (NautilusBurnDriveSelection *bcs, char *device, Totem *totem)
+ {
+ 	const char *str;
+ 
+-	str = bacon_cd_selection_get_device (bcs);
++	str = nautilus_burn_drive_selection_get_device (bcs);
+ 	gconf_client_set_string (totem->gc, GCONF_PREFIX"/mediadev", str, NULL);
+ 	bacon_video_widget_set_media_device
+ 		(BACON_VIDEO_WIDGET (totem->bvw), str);
+@@ -272,7 +272,7 @@
+ 	if (mediadev == NULL || strcmp (mediadev, "") == 0)
+ 		mediadev = g_strdup ("/dev/cdrom");
+ 
+-	bacon_cd_selection_set_device (BACON_CD_SELECTION (item), mediadev);
++	nautilus_burn_drive_selection_set_device (NAUTILUS_BURN_DRIVE_SELECTION (item), mediadev);
+ 	bacon_video_widget_set_media_device
+ 		(BACON_VIDEO_WIDGET (totem->bvw), mediadev);
+ 
+@@ -357,7 +357,7 @@
+ {
+ 	GtkWidget *widget;
+ 
+-	widget = bacon_cd_selection_new ();
++	widget = nautilus_burn_drive_selection_new ();
+ 	gtk_widget_show (widget);
+ 
+ 	return widget;
+@@ -480,8 +480,8 @@
+ 	if (mediadev == NULL || (strcmp (mediadev, "") == 0)
+ 			|| (strcmp (mediadev, "auto") == 0))
+ 	{
+-		mediadev = g_strdup (bacon_cd_selection_get_default_device
+-				     (BACON_CD_SELECTION (item)));
++		mediadev = g_strdup (nautilus_burn_drive_selection_get_default_device
++				     (NAUTILUS_BURN_DRIVE_SELECTION (item)));
+ 		gconf_client_set_string (totem->gc, GCONF_PREFIX"/mediadev",
+ 				mediadev, NULL);
+ 	}
+@@ -491,7 +491,7 @@
+ 	g_signal_connect (G_OBJECT (item), "device-changed",
+ 			G_CALLBACK (on_combo_entry1_changed), totem);
+ 
+-	bacon_cd_selection_set_device (BACON_CD_SELECTION (item), mediadev);
++	nautilus_burn_drive_selection_set_device (NAUTILUS_BURN_DRIVE_SELECTION (item), mediadev);
+ 	g_free (mediadev);
+ 
+ 	/* Connection Speed */
