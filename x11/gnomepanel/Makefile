@@ -57,7 +57,8 @@ CONFIGURE_ARGS+=--disable-eds
 post-patch:
 	@${REINPLACE_CMD} -e 's|@DATADIR@/|@DATADIR@/applications/|g' \
 		${WRKSRC}/gnome-panel/panel-default-setup.entries.in
-.if ${OSVERSION} < 600006
+.if ( ${OSVERSION} > 600000 && ${OSVERSION} < 600006 ) || \
+	( ${OSVERSION} < 503101 )
 .for po in da.po it.po zh_CN.po zh_TW.po
 	@${REINPLACE_CMD} -e 's|%-|%|g' ${WRKSRC}/po/${po}
 .endfor
