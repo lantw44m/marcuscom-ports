@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Fri May 17 20:27:51 2002
++++ Makefile.in	Fri May 17 20:29:00 2002
+@@ -115,7 +115,7 @@
+ VERSION = @VERSION@
+ YACC = @YACC@
+ 
+-SUBDIRS = libgnomeui glade images demos test-gnome doc po #tests
++SUBDIRS = libgnomeui glade images demos doc po #tests
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = config.h
