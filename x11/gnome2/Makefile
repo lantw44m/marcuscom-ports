@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.9.91
+PORTVERSION=	2.10.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -56,7 +56,8 @@ RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		totem:${PORTSDIR}/multimedia/totem-gstreamer \
 		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2 \
 		${X11BASE}/share/gnome/gnome-background-properties/gnome-branded.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
-		sound-juicer:${PORTSDIR}/audio/sound-juicer
+		sound-juicer:${PORTSDIR}/audio/sound-juicer \
+		${X11BASE}/libdata/pkgconfig/libgtkhtml-2.0.pc:${PORTSDIR}/www/libgtkhtml
 
 NO_BUILD=	yes
 
