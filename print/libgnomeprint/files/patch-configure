@@ -1,6 +1,6 @@
---- configure.orig	Fri Nov  1 17:24:17 2002
-+++ configure	Sat Nov  9 03:19:14 2002
-@@ -8294,6 +8294,7 @@
+--- configure.orig	Wed Dec  4 13:33:02 2002
++++ configure	Wed Dec  4 23:10:38 2002
+@@ -8160,6 +8160,7 @@
  
  # This can be used to rebuild libtool when needed
  LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
@@ -8,12 +8,12 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-@@ -10884,7 +10885,7 @@
-   FONTMAPDIR_STATIC=${ac_default_prefix}/share/gnome/libgnomeprint-2.0/fonts
-   FONTMAPDIR_DYNAMIC=${ac_default_prefix}/etc/gnome/libgnomeprint-2.0/fonts
+@@ -10890,7 +10891,7 @@
+ if test "x${prefix}" = "xNONE"; then
+   GNOME_PRINT_DATA_DIR=${ac_default_prefix}/share/${gnome_print_datadir}
  else
--  FONTMAPDIR_STATIC=${datadir}/gnome/libgnomeprint-2.0/fonts
-+  FONTMAPDIR_STATIC=${datadir}/libgnomeprint-2.0/fonts
-   FONTMAPDIR_DYNAMIC=${sysconfdir}/gnome/libgnomeprint-2.0/fonts
+-  GNOME_PRINT_DATA_DIR="${prefix}/share/${gnome_print_datadir}"
++  GNOME_PRINT_DATA_DIR="${prefix}/share/gnome/${gnome_print_datadir}"
  fi
- FONTMAPDIR_STATIC=`eval echo "$FONTMAPDIR_STATIC"`
+ GNOME_PRINT_DATA_DIR=`eval echo "$GNOME_PRINT_DATA_DIR"`
+ cat >>confdefs.h <<_ACEOF
