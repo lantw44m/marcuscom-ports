@@ -1,4 +1,3 @@
-bin/brlmonitor
 bin/gnopernicus
 bin/srcore
 @unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/brlmonitor.schemas > /dev/null || /usr/bin/true
@@ -48,6 +47,7 @@ lib/gnopernicus-1.0/libsrutil.a
 lib/gnopernicus-1.0/libsrutil.so
 lib/gnopernicus-1.0/libsrutil.so.%%SHLIB_VERSION%%
 libdata/pkgconfig/gnopernicus-1.0.pc
+libexec/brlmonitor
 share/gnome/applications/gnopernicus.desktop
 share/gnome/gnopernicus/glade/gnopi_files/Braille_Monitor_Settings/braille_monitor_settings.glade2
 share/gnome/gnopernicus/glade/gnopi_files/Braille_Settings/attribute_settings.glade2
@@ -99,6 +99,7 @@ share/locale/ar/LC_MESSAGES/gnopernicus.mo
 share/locale/az/LC_MESSAGES/gnopernicus.mo
 share/locale/be/LC_MESSAGES/gnopernicus.mo
 share/locale/bg/LC_MESSAGES/gnopernicus.mo
+share/locale/bn/LC_MESSAGES/gnopernicus.mo
 share/locale/ca/LC_MESSAGES/gnopernicus.mo
 share/locale/cs/LC_MESSAGES/gnopernicus.mo
 share/locale/cy/LC_MESSAGES/gnopernicus.mo
