@@ -5,24 +5,32 @@ etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/default/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/gstreamer/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/gstreamer/default/%gconf.xml
 etc/gconf/schemas/gstreamer.schemas
+include/gstreamer-%%VERSION%%/gst/audio/gstaudiofilter.h
 include/gstreamer-%%VERSION%%/gst/audio/audioclock.h
 include/gstreamer-%%VERSION%%/gst/audio/audio.h
+include/gstreamer-%%VERSION%%/gst/colorbalance/colorbalance-enumtypes.h
+include/gstreamer-%%VERSION%%/gst/colorbalance/colorbalance-marshal.h
 include/gstreamer-%%VERSION%%/gst/colorbalance/colorbalance.h
 include/gstreamer-%%VERSION%%/gst/colorbalance/colorbalancechannel.h
 include/gstreamer-%%VERSION%%/gst/floatcast/floatcast.h
 include/gstreamer-%%VERSION%%/gst/gconf/gconf.h
 include/gstreamer-%%VERSION%%/gst/idct/idct.h
 include/gstreamer-%%VERSION%%/gst/media-info/media-info.h
+include/gstreamer-%%VERSION%%/gst/mixer/mixer-enumtypes.h
+include/gstreamer-%%VERSION%%/gst/mixer/mixer-marshal.h
 include/gstreamer-%%VERSION%%/gst/mixer/mixer.h
 include/gstreamer-%%VERSION%%/gst/mixer/mixertrack.h
 include/gstreamer-%%VERSION%%/gst/navigation/navigation.h
-include/gstreamer-%%VERSION%%/gst/play/gstplay.h
+include/gstreamer-%%VERSION%%/gst/play/play-enumtypes.h
+include/gstreamer-%%VERSION%%/gst/play/play.h
 include/gstreamer-%%VERSION%%/gst/propertyprobe/propertyprobe.h
 include/gstreamer-%%VERSION%%/gst/resample/resample.h
 include/gstreamer-%%VERSION%%/gst/riff/riff-ids.h
 include/gstreamer-%%VERSION%%/gst/riff/riff-media.h
 include/gstreamer-%%VERSION%%/gst/riff/riff-read.h
 include/gstreamer-%%VERSION%%/gst/tag/tag.h
+include/gstreamer-%%VERSION%%/gst/tuner/tuner-enumtypes.h
+include/gstreamer-%%VERSION%%/gst/tuner/tuner-marshal.h
 include/gstreamer-%%VERSION%%/gst/tuner/tuner.h
 include/gstreamer-%%VERSION%%/gst/tuner/tunerchannel.h
 include/gstreamer-%%VERSION%%/gst/tuner/tunernorm.h
@@ -38,6 +46,7 @@ lib/gstreamer-%%VERSION%%/libgstalaw.so
 %%ARTS%%lib/gstreamer-%%VERSION%%/libgstartsdsink.so
 lib/gstreamer-%%VERSION%%/libgstasf.so
 lib/gstreamer-%%VERSION%%/libgstaudioconvert.so
+lib/gstreamer-%%VERSION%%/libgstaudiofilter.so
 lib/gstreamer-%%VERSION%%/libgstaudio.so
 %%LIBAUDIOFILE%%lib/gstreamer-%%VERSION%%/libgstaudiofile.so
 lib/gstreamer-%%VERSION%%/libgstaudioscale.so
@@ -60,10 +69,12 @@ lib/gstreamer-%%VERSION%%/libgstffmpeg.so
 lib/gstreamer-%%VERSION%%/libgstfilter.so
 %%FLAC%%lib/gstreamer-%%VERSION%%/libgstflac.so
 lib/gstreamer-%%VERSION%%/libgstflxdec.so
+lib/gstreamer-%%VERSION%%/libgstgamma.so
 lib/gstreamer-%%VERSION%%/libgstgdkpixbuf.so
 %%GNOMEVFS%%lib/gstreamer-%%VERSION%%/libgstgnomevfs.so
 lib/gstreamer-%%VERSION%%/libgstgoom.so
 %%GSM%%lib/gstreamer-%%VERSION%%/libgstgsm.so
+%%HERMES%%lib/gstreamer-%%VERSION%%/libgsthermescolorspace.so
 %%HTTP%%lib/gstreamer-%%VERSION%%/libgsthttpsrc.so
 lib/gstreamer-%%VERSION%%/libgstidct.so
 lib/gstreamer-%%VERSION%%/libgstintfloat.so
@@ -87,8 +98,6 @@ lib/gstreamer-%%VERSION%%/libgstmpeg2subt.so
 lib/gstreamer-%%VERSION%%/libgstmpegaudio.so
 lib/gstreamer-%%VERSION%%/libgstmpegaudioparse.so
 lib/gstreamer-%%VERSION%%/libgstmpegstream.so
-lib/gstreamer-%%VERSION%%/libgstmplex.a
-lib/gstreamer-%%VERSION%%/libgstmplex.so
 lib/gstreamer-%%VERSION%%/libgstmulaw.so
 lib/gstreamer-%%VERSION%%/libgstnavigationtest.so
 %%OGG%%lib/gstreamer-%%VERSION%%/libgstogg.so
@@ -168,6 +177,7 @@ libdata/pkgconfig/gstreamer-gconf-%%VERSION%%.pc
 libdata/pkgconfig/gstreamer-interfaces-%%VERSION%%.pc
 libdata/pkgconfig/gstreamer-libs-%%VERSION%%.pc
 libdata/pkgconfig/gstreamer-play-%%VERSION%%.pc
+share/locale/nl/LC_MESSAGES/gst-plugins-%%VERSION%%.mo
 @unexec rmdir %D/lib/gstreamer-%%VERSION%% 2>/dev/null || true
 @dirrm include/gstreamer-%%VERSION%%/gst/xwindowlistener
 @dirrm include/gstreamer-%%VERSION%%/gst/xoverlay

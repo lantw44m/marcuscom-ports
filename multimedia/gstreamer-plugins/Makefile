@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.7.3
-PORTREVISION=	2
+PORTVERSION=	0.7.4
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gst-plugins/0.7
@@ -18,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	GStreamer written collection of plugins handling several media types
 
-LIB_DEPENDS=	gstreamer-0.7.5:${PORTSDIR}/multimedia/gstreamer \
+LIB_DEPENDS=	gstreamer-0.7.6:${PORTSDIR}/multimedia/gstreamer \
 		popt.0:${PORTSDIR}/devel/popt
 
 USE_X_PREFIX=	yes
@@ -133,7 +132,7 @@ WITH_AALIB=yes
 .endif
 
 # arts
-.if exists(${LOCALBASE}/lib/libartsc.so.0)
+.if exists(${LOCALBASE}/lib/libartsc.so.0) && !defined(WITHOUT_ARTS)
 WITH_ARTS=yes
 .endif
 
@@ -672,9 +671,12 @@ pre-everything::
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_AALIB to enable aalib Video plugin'
 .endif
-.ifndef(WITH_ARTS)
+.ifdef(WITH_ARTS)
 	@${ECHO_MSG} '===>'
-	@${ECHO_MSG} '===> Define WITH_ARTS to enable arts Audio plugin'
+	@${ECHO_MSG} '===> Define WITHOUT_ARTS to disable aRts Audio plugin'
+.else
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_ARTS to enable aRts Audio plugin'
 .endif
 .ifndef(WITH_AVIFILE)
 	@${ECHO_MSG} '===>'
