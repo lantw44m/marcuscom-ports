@@ -1,12 +1,12 @@
---- src/ephy-nautilus-view.c.orig	Sat Nov 29 13:00:19 2003
-+++ src/ephy-nautilus-view.c	Sat Nov 29 13:02:41 2003
+--- src/ephy-nautilus-view.c.orig	Sat Oct 18 00:41:25 2003
++++ src/ephy-nautilus-view.c	Sat Nov 29 14:36:38 2003
 @@ -312,8 +312,8 @@
  
  		g_return_val_if_fail (url, FALSE);
  
 -		nautilus_view_open_location_force_new_window (NAUTILUS_VIEW (view),
 -							      url, NULL);
-+		nautilus_view_open_location (NAUTILUS_VIEW (view), url
++		nautilus_view_open_location (NAUTILUS_VIEW (view), url,
 +			Nautilus_ViewFrame_OPEN_IN_NAVIGATION, 0, NULL);
  	}
  
