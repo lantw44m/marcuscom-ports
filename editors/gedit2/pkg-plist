@@ -3,6 +3,7 @@ bin/gnome-text-editor
 etc/gconf/gconf.xml.defaults/apps/gedit-2/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/editor/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/editor/auto_indent/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/editor/colors/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/editor/font/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/editor/line_numbers/%gconf.xml
@@ -21,6 +22,7 @@ etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/ui/toolbar/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/editor/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/editor/auto_indent/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/editor/colors/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/editor/font/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/editor/line_numbers/%gconf.xml
@@ -45,6 +47,7 @@ lib/gedit-2/plugins/libemail.so
 lib/gedit-2/plugins/libindent.so
 lib/gedit-2/plugins/libsample.so
 lib/gedit-2/plugins/libshell_output.so
+lib/gedit-2/plugins/libsort.so
 lib/gedit-2/plugins/libspell.so
 lib/gedit-2/plugins/libtaglist.so
 lib/gedit-2/plugins/libtime.so
@@ -53,7 +56,7 @@ share/gnome/applications/gedit.desktop
 share/gnome/gedit-2/glade/asciitable.glade2
 share/gnome/gedit-2/glade/diff.glade2
 share/gnome/gedit-2/glade/docinfo.glade2
-share/gnome/gedit-2/glade/email.glade
+share/gnome/gedit-2/glade/email.glade2
 share/gnome/gedit-2/glade/gedit-encodings-dialog.glade2
 share/gnome/gedit-2/glade/gedit-preferences.glade2
 share/gnome/gedit-2/glade/goto-line.glade2
@@ -62,6 +65,7 @@ share/gnome/gedit-2/glade/plugin-manager.glade2
 share/gnome/gedit-2/glade/program-location-dialog.glade2
 share/gnome/gedit-2/glade/replace.glade2
 share/gnome/gedit-2/glade/shell_output.glade2
+share/gnome/gedit-2/glade/sort.glade2
 share/gnome/gedit-2/glade/spell-checker.glade2
 share/gnome/gedit-2/glade/time.glade2
 share/gnome/gedit-2/glade/uri.glade2
@@ -151,6 +155,7 @@ share/locale/zh_TW/LC_MESSAGES/gedit-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/editor/load
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/editor/font
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/editor/colors
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/editor/auto_indent
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/editor
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2
@@ -169,6 +174,7 @@ share/locale/zh_TW/LC_MESSAGES/gedit-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/editor/load
 @dirrm etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/editor/font
 @dirrm etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/editor/colors
+@dirrm etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/editor/auto_indent
 @dirrm etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences/editor
 @dirrm etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences
 @dirrm etc/gconf/gconf.xml.defaults/apps/gedit-2
