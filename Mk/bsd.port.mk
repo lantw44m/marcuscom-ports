@@ -1,7 +1,7 @@
 #-*- mode: makefile; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.port.mk,v 1.501 2004/12/09 21:44:48 krion Exp $
+# $FreeBSD$
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -1575,14 +1575,15 @@ PKG_IGNORE_DEPENDS?=		'^XFree86-3\.'
 
 .else
 
-.if defined(USE_IMAKE)
-RUN_DEPENDS+=			mkhtmlindex:${X_IMAKE_PORT}
-.endif
 .if defined(USE_XPM) || defined(USE_GL)
 USE_XLIB=			yes
 .endif
 
+.if ${X_WINDOW_SYSTEM:L} == xorg
+XAWVER=				8
+.else
 XAWVER=				7
+.endif
 PKG_IGNORE_DEPENDS?=		'this_port_does_not_exist'
 
 .endif
@@ -1780,7 +1781,6 @@ NONEXISTENT?=	/nonexistent
 # Miscellaneous overridable commands:
 GMAKE?=			gmake
 XMKMF?=			xmkmf -a
-MKHTMLINDEX?=		${X11BASE}/bin/mkhtmlindex
 .if exists(/sbin/md5)
 MD5?=			/sbin/md5
 .elif exists(/bin/md5)
@@ -2646,16 +2646,6 @@ INFO_PATH?=	share/info
 INFO_PATH?=	info
 .endif
 
-.if ${X_WINDOW_SYSTEM:L} == xfree86-3
-XFREE86_HTML_MAN=	no
-.else
-.if defined(USE_IMAKE)
-XFREE86_HTML_MAN?=	yes
-.else
-XFREE86_HTML_MAN?=	no
-.endif
-.endif
-
 DOCSDIR?=	${PREFIX}/share/doc/${PORTNAME}
 EXAMPLESDIR?=	${PREFIX}/share/examples/${PORTNAME}
 DATADIR?=	${PREFIX}/share/${PORTNAME}
@@ -3292,9 +3282,6 @@ do-install:
 	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
 .if defined(USE_IMAKE) && !defined(NO_INSTALL_MANPAGES)
 	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} install.man)
-.if ${XFREE86_HTML_MAN:L} == yes
-	@${MKHTMLINDEX} ${PREFIX}/lib/X11/doc/html
-.endif
 .endif
 .else # !defined(USE_GMAKE)
 .if defined(PERL_MODBUILD)
@@ -3303,9 +3290,6 @@ do-install:
 	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
 .if defined(USE_IMAKE) && !defined(NO_INSTALL_MANPAGES)
 	@(cd ${INSTALL_WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} install.man)
-.if ${XFREE86_HTML_MAN:L} == yes
-	@${MKHTMLINDEX} ${PREFIX}/lib/X11/doc/html
-.endif
 .endif
 .endif
 .endif
@@ -4720,21 +4704,6 @@ generate-plist:
 	@for i in $$(${ECHO_CMD} ${__MANPAGES} ${_TMLINKS:M${_PREFIX}*:S|^${_PREFIX}/||} ' ' | ${SED} -E -e 's|man([1-9ln])/([^/ ]+) |cat\1/\2 |g'); do \
 		${ECHO_CMD} "@unexec rm -f %D/$${i%.gz} %D/$${i%.gz}.gz" >> ${TMPPLIST}; \
 	done
-.if ${XFREE86_HTML_MAN:L} == "yes"
-.for mansect in 1 2 3 4 5 6 7 8 9 L N
-.for man in ${MAN${mansect}}
-	@${ECHO_CMD} lib/X11/doc/html/${man}.html >> ${TMPPLIST}
-.endfor
-.endfor
-	@${ECHO_CMD} "@unexec %D/bin/mkhtmlindex %D/lib/X11/doc/html" >> ${TMPPLIST}
-	@${ECHO_CMD} "@exec %D/bin/mkhtmlindex %D/lib/X11/doc/html" >> ${TMPPLIST}
-.if defined(MLINKS)
-	@${ECHO_CMD} ${MLINKS} | ${AWK} \
-	'{ for (i=1; i<=NF; i++) { \
-		if (i % 2 == 0) { printf "lib/X11/doc/html/%s.html\n", $$i } \
-	} }' >> ${TMPPLIST}
-.endif
-.endif
 .endfor
 	@if [ -f ${PLIST} ]; then \
 		${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} ${PLIST} >> ${TMPPLIST}; \
