@@ -215,10 +215,6 @@ share/gnome/gnumeric/%%VERSION%%/glade/gog-axis-prefs.glade
 share/gnome/gnumeric/%%VERSION%%/glade/gog-guru.glade
 share/gnome/gnumeric/%%VERSION%%/glade/gog-style-prefs.glade
 share/gnome/gnumeric/%%VERSION%%/glade/goto.glade
-share/gnome/gnumeric/%%VERSION%%/glade/gradient_n2s.png
-share/gnome/gnumeric/%%VERSION%%/glade/gradient_ne2sw.png
-share/gnome/gnumeric/%%VERSION%%/glade/gradient_nw2se.png
-share/gnome/gnumeric/%%VERSION%%/glade/gradient_w2e.png
 share/gnome/gnumeric/%%VERSION%%/glade/hf-config.glade
 share/gnome/gnumeric/%%VERSION%%/glade/histogram.glade
 share/gnome/gnumeric/%%VERSION%%/glade/hyperlink.glade
