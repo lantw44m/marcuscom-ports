@@ -7,6 +7,7 @@
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.7.3
+PORTREVISION=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gst-plugins/0.7
@@ -564,7 +565,7 @@ CONFIGURE_ARGS+=	--disable-ogg \
 			--disable-oggtest
 PLIST_SUB+=	OGG="@comment "
 .else
-LIB_DEPENDS+=	ogg.4:${PORTSDIR}/audio/libogg
+LIB_DEPENDS+=	ogg.5:${PORTSDIR}/audio/libogg
 PLIST_SUB+=	OGG=""
 .endif
 
@@ -636,7 +637,7 @@ CONFIGURE_ARGS+=	--disable-vorbis \
 			--disable-vorbistest
 PLIST_SUB+=	VORBIS="@comment "
 .else
-LIB_DEPENDS+=	vorbis.2:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS+=	vorbis.3:${PORTSDIR}/audio/libvorbis
 
 CONFIGURE_ARGS+=	--with-vorbis=${LOCALBASE} \
 			--with-vorbis-libraries=${LOCALBASE}/lib \
