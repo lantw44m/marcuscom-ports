@@ -7,6 +7,7 @@
 
 PORTNAME=	libglade-java
 PORTVERSION=	2.3.5
+PORTREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -48,21 +49,23 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|@gtkapiversion@|${GTK_API_VERSION}|g ; \
 		s|@apiversion@|${GLADE_API_VERSION}|g ; \
 		s|@version@|${PORTVERSION}|g' \
-		${WRKSRC}/src/Makefile.in
+		${WRKSRC}/src/Makefile.in \
+		${WRKSRC}/java/org/gnu/glade/LibGlade.java.in
 
 do-install:
 	${MKDIR} ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/lib/libgladejava${GLADE_API_VERSION}.so.${PORTVERSION} \
 		${PREFIX}/lib
-	${LN} -sf ${PREFIX}/lib/libgladejava${GLADE_API_VERSION}.so.${PORTVERSION} ${PREFIX}/lib/libgconfjava${GLADE_API_VERSION}.so
+	${LN} -sf ${PREFIX}/lib/libgladejava${GLADE_API_VERSION}.so.${PORTVERSION} ${PREFIX}/lib/libgladejava${GLADE_API_VERSION}.so
 	${MKDIR} ${JAVAJARDIR}
 	${INSTALL_DATA} ${WRKSRC}/lib/glade${GLADE_API_VERSION}-${PORTVERSION}.jar \
 		${JAVAJARDIR}
+	${LN} -sf ${JAVAJARDIR}/lib/glade${GLADE_API_VERSION}-${PORTVERSION}.jar \
+		${JAVAJARDIR}/glade${GLADE_API_VERSION}.jar
 
 post-install:
 	@${SED} -e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|g ; \
 		s|%%PREFIX%%|${PREFIX}|g ; \
-		s|%%PORTVERSION%%|${PORTVERSION}|g ; \
 		s|%%GLADE_API_VERSION%%|${GLADE_API_VERSION}|g' \
 		 < ${PKGDIR}/pkg-message > ${PKGMESSAGE}
 	@${CAT} ${PKGMESSAGE}
