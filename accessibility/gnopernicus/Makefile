@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnopernicus
-PORTVERSION=	0.9.14
+PORTVERSION=	0.9.16
 CATEGORIES=	accessibility x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.9
@@ -27,7 +27,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAKE_ENV=	SED="${SED}"
 
 GCONF_SCHEMAS=	brlmonitor.schemas gnopernicus.schemas remote.schemas
-SHLIB_VERSION=	14
+SHLIB_VERSION=	16
 PLIST_SUB=	SHLIB_VERSION=${SHLIB_VERSION}
 
 .include <bsd.port.mk>
