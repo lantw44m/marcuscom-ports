@@ -35,6 +35,6 @@ MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
 post-install:
 	${MKDIR} ${PREFIX}/lib/nautilus/extensions-1.0
-	@${CHMOD} u+w ${PREFIX}/share/gnome/nautilus/*.desktop
+#	@${CHMOD} u+w ${PREFIX}/share/gnome/nautilus/*.desktop
 
 .include <bsd.port.mk>
