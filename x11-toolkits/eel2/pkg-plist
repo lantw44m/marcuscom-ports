@@ -6,7 +6,6 @@ include/eel-2/eel/eel-background.h
 include/eel-2/eel/eel-canvas-rect-ellipse.h
 include/eel-2/eel/eel-canvas-util.h
 include/eel-2/eel/eel-canvas.h
-include/eel-2/eel/eel-caption-table.h
 include/eel-2/eel/eel-caption.h
 include/eel-2/eel/eel-cell-renderer-pixbuf-list.h
 include/eel-2/eel/eel-dateedit-extensions.h
@@ -33,7 +32,6 @@ include/eel-2/eel/eel-input-event-box.h
 include/eel-2/eel/eel-labeled-image.h
 include/eel-2/eel/eel-marshal.h
 include/eel-2/eel/eel-pango-extensions.h
-include/eel-2/eel/eel-password-dialog.h
 include/eel-2/eel/eel-preferences-glade.h
 include/eel-2/eel/eel-preferences.h
 include/eel-2/eel/eel-radio-button-group.h
