@@ -24,10 +24,12 @@ share/locale/gl/LC_MESSAGES/gpdf.mo
 share/locale/he/LC_MESSAGES/gpdf.mo
 share/locale/hu/LC_MESSAGES/gpdf.mo
 share/locale/is/LC_MESSAGES/gpdf.mo
+share/locale/it/LC_MESSAGES/gpdf.mo
 share/locale/ja/LC_MESSAGES/gpdf.mo
 share/locale/kn/LC_MESSAGES/gpdf.mo
 share/locale/ko/LC_MESSAGES/gpdf.mo
 share/locale/lv/LC_MESSAGES/gpdf.mo
+share/locale/mk/LC_MESSAGES/gpdf.mo
 share/locale/ms/LC_MESSAGES/gpdf.mo
 share/locale/nl/LC_MESSAGES/gpdf.mo
 share/locale/nn/LC_MESSAGES/gpdf.mo
@@ -37,10 +39,12 @@ share/locale/pt/LC_MESSAGES/gpdf.mo
 share/locale/pt_BR/LC_MESSAGES/gpdf.mo
 share/locale/ru/LC_MESSAGES/gpdf.mo
 share/locale/sk/LC_MESSAGES/gpdf.mo
+share/locale/sq/LC_MESSAGES/gpdf.mo
 share/locale/sr/LC_MESSAGES/gpdf.mo
 share/locale/sr@Latn/LC_MESSAGES/gpdf.mo
 share/locale/sv/LC_MESSAGES/gpdf.mo
 share/locale/ta/LC_MESSAGES/gpdf.mo
+share/locale/th/LC_MESSAGES/gpdf.mo
 share/locale/tr/LC_MESSAGES/gpdf.mo
 share/locale/uk/LC_MESSAGES/gpdf.mo
 share/locale/vi/LC_MESSAGES/gpdf.mo
