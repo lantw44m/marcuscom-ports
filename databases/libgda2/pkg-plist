@@ -240,7 +240,10 @@ share/locale/zh_TW/LC_MESSAGES/libgda-2.mo
 @dirrm share/gnome/omf/libgda
 @dirrm share/gnome/libgda/xml
 @dirrm share/gnome/libgda
-@dirrm %%DOCSDIR%%
 @dirrm lib/libgda/providers
 @dirrm lib/libgda
+@dirrm include/libgda-1.2/sql
+@dirrm include/libgda-1.2/libgda-report
+@dirrm include/libgda-1.2/libgda
+@dirrm include/libgda-1.2
 @dirrm etc/libgda
