@@ -1,0 +1,19 @@
+--- configure.orig	Mon Sep  9 14:00:04 2002
++++ configure	Fri Oct 11 00:34:03 2002
+@@ -5885,6 +5885,7 @@
+ 
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
++$ac_aux_dir/ltconfig $LIBTOOL_DEPS
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+@@ -7748,7 +7749,7 @@
+ 
+ if test "x$enable_xim" = "xyes"; then
+ 	BACKUP_LDFLAGS=$LDFLAGS
+-	LDFLAGS="$LDFLAGS `gtk-config --libs`"
++	LDFLAGS="$LDFLAGS `$GTK_CONFIG --libs`"
+ 	echo $ac_n "checking for gdk_im_begin""... $ac_c" 1>&6
+ echo "configure:7754: checking for gdk_im_begin" >&5
+ if eval "test \"`echo '$''{'ac_cv_func_gdk_im_begin'+set}'`\" = set"; then
