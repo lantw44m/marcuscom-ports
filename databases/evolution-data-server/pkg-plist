@@ -32,6 +32,7 @@ include/evolution-data-server-%%VERSION%%/camel/camel-junk-plugin.h
 include/evolution-data-server-%%VERSION%%/camel/camel-list-utils.h
 include/evolution-data-server-%%VERSION%%/camel/camel-lock-client.h
 include/evolution-data-server-%%VERSION%%/camel/camel-lock.h
+include/evolution-data-server-%%VERSION%%/camel/camel-nntp-address.h
 include/evolution-data-server-%%VERSION%%/camel/camel-medium.h
 include/evolution-data-server-%%VERSION%%/camel/camel-mime-filter-basic.h
 include/evolution-data-server-%%VERSION%%/camel/camel-mime-filter-bestenc.h
@@ -183,6 +184,7 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-url.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-util.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-xml-hash-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserver/md5-utils.h
+include/evolution-data-server-%%VERSION%%/libedataserverui/e-book-auth-util.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-categories-dialog.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-contact-store.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-destination-store.h
@@ -190,6 +192,7 @@ include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-dialog.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-entry.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-model.h
+include/evolution-data-server-%%VERSION%%/libedataserverui/e-passwords.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-source-option-menu.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-source-selector-dialog.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-source-selector.h
@@ -268,7 +271,7 @@ lib/libcamel-%%VERSION%%.so
 lib/libcamel-%%VERSION%%.so.0
 lib/libcamel-provider-%%VERSION%%.a
 lib/libcamel-provider-%%VERSION%%.so
-lib/libcamel-provider-%%VERSION%%.so.3
+lib/libcamel-provider-%%VERSION%%.so.4
 lib/libebook-%%VERSION%%.a
 lib/libebook-%%VERSION%%.so
 lib/libebook-%%VERSION%%.so.3
@@ -280,16 +283,16 @@ lib/libedata-book-%%VERSION%%.so
 lib/libedata-book-%%VERSION%%.so.2
 lib/libedata-cal-%%VERSION%%.a
 lib/libedata-cal-%%VERSION%%.so
-lib/libedata-cal-%%VERSION%%.so.2
+lib/libedata-cal-%%VERSION%%.so.3
 lib/libedataserver-%%VERSION%%.a
 lib/libedataserver-%%VERSION%%.so
 lib/libedataserver-%%VERSION%%.so.4
 lib/libedataserverui-%%VERSION%%.a
 lib/libedataserverui-%%VERSION%%.so
-lib/libedataserverui-%%VERSION%%.so.4
+lib/libedataserverui-%%VERSION%%.so.5
 lib/libegroupwise-%%VERSION%%.a
 lib/libegroupwise-%%VERSION%%.so
-lib/libegroupwise-%%VERSION%%.so.4
+lib/libegroupwise-%%VERSION%%.so.5
 libdata/bonobo/servers/GNOME_Evolution_DataServer_%%VERSION%%.server
 libdata/pkgconfig/camel-%%VERSION%%.pc
 libdata/pkgconfig/camel-provider-%%VERSION%%.pc
