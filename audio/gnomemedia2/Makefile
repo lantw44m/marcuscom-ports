@@ -7,7 +7,7 @@
 
 PORTNAME=	gnomemedia2
 PORTVERSION=	2.10.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-media/2.10
@@ -40,9 +40,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|[$$][(]CDROM_HOST[)]|freebsd|g' \
 		${WRKSRC}/gnome-cd/Makefile.in
 .if ${OSVERSION} > 501107
-	@${REINPLACE_CMD} -e 's|%%CDROM%%|cd0|' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|%%CDROM%%|acd0|' ${WRKSRC}/configure
 .else
-	@${REINPLACE_CMD} -e 's|%%CDROM%%|cd0c|' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|%%CDROM%%|acd0c|' ${WRKSRC}/configure
 .endif
 
 .include <bsd.port.post.mk>
