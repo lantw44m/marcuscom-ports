@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.4.2
-PORTREVISION=	1
+PORTVERSION=	0.5.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -43,6 +42,12 @@ MAN1=	gst-complete.1 gst-compprep.1 gst-inspect.1 gst-launch.1 \
 
 PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 
+.include <bsd.port.pre.mk>
+
+.if exists(${X11BASE}/libdata/pkgconfig/libgnomeui-2.0.pc)
+LIB_DEPENDS+=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui
+.endif
+
 post-patch:
 # use proper dir
 # remove version number from include dir name
@@ -65,4 +70,4 @@ post-install:
 # register plugins
 	@${PREFIX}/bin/gst-register 2>/dev/null
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
