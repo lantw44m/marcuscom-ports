@@ -27,6 +27,8 @@ share/gnome/pixmaps/apple-red.png
 share/gnome/pixmaps/gnome-aorta.png
 share/gnome/pixmaps/gnome-applets.png
 share/gnome/pixmaps/gnome-applications.png
+share/gnome/pixmaps/gnome-background-image.png
+share/gnome/pixmaps/gnome-background-pattern.png
 share/gnome/pixmaps/gnome-background.png
 share/gnome/pixmaps/gnome-calc2.png
 share/gnome/pixmaps/gnome-calc3.png
@@ -34,12 +36,9 @@ share/gnome/pixmaps/gnome-calendar.png
 share/gnome/pixmaps/gnome-ccbackground.png
 share/gnome/pixmaps/gnome-ccdesktop.png
 share/gnome/pixmaps/gnome-ccdialog.png
-share/gnome/pixmaps/gnome-cckeyboard-bell.png
-share/gnome/pixmaps/gnome-cckeyboard.png
 share/gnome/pixmaps/gnome-ccmime.png
 share/gnome/pixmaps/gnome-ccperiph.png
 share/gnome/pixmaps/gnome-ccscreensaver.png
-share/gnome/pixmaps/gnome-ccthemes.png
 share/gnome/pixmaps/gnome-ccwindowmanager.png
 share/gnome/pixmaps/gnome-color-browser.png
 share/gnome/pixmaps/gnome-color-xterm.png
@@ -114,6 +113,7 @@ share/gnome/vfolders/Graphics.directory
 share/gnome/vfolders/Internet.directory
 share/gnome/vfolders/Multimedia.directory
 share/gnome/vfolders/Office.directory
+share/gnome/vfolders/Other.directory
 share/gnome/vfolders/Root.directory
 share/gnome/vfolders/Settings.directory
 share/gnome/vfolders/System.directory
