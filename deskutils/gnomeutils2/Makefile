@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomeutils2
-PORTVERSION=	2.5.0
+PORTVERSION=	2.5.1
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -22,7 +22,7 @@ USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
-USE_GNOME=	gnomeprefix gnomehack gnomehier gnomepanel
+USE_GNOME=	gnomeprefix gnomehack lthack gnomehier gnomepanel
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
