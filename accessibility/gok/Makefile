@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gok
-PORTVERSION=	0.9.3
+PORTVERSION=	0.9.4
 CATEGORIES=	sysutils gnome accessibility
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.9
@@ -17,10 +17,10 @@ COMMENT=	GNOME On-Screen Keyboard (GOK)
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomehack gnomeprefix libgnomeui atspi libwnck
+USE_GNOME=	gnomehack gnomeprefix intlhack lthack libgnomeui atspi libwnck
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
