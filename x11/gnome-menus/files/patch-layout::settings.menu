@@ -1,6 +1,16 @@
---- layout/settings.menu.orig	Sun Feb 27 03:02:51 2005
-+++ layout/settings.menu	Sun Feb 27 03:04:13 2005
-@@ -30,6 +30,12 @@
+--- layout/settings.menu.orig	Wed Jan  5 20:12:16 2005
++++ layout/settings.menu	Tue Mar  1 01:28:57 2005
+@@ -15,9 +15,6 @@
+   <DefaultAppDirs/>
+   <DefaultDirectoryDirs/>
+ 
+-  <!-- Read in overrides and child menus from applications-merged/ -->
+-  <DefaultMergeDirs/>
+-
+   <!-- Merge in these other files as submenus -->
+   <Menu>
+     <Name>Preferences</Name>
+@@ -30,10 +27,19 @@
      <Directory>System-Settings.directory</Directory>
      <Include>
        <And>
@@ -13,3 +23,10 @@
          <Category>Settings</Category>
          <Category>System</Category>
        </And>
+     </Include>
+   </Menu>     <!-- End System Settings -->
++
++  <!-- Read in overrides and child menus from settings-merged/ -->
++  <DefaultMergeDirs/>
+ 
+ </Menu> <!-- End Applications -->
