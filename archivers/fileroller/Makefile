@@ -2,7 +2,7 @@
 # Date created:				18 May 2002
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
-# $FreeBSD: ports/archivers/fileroller/Makefile,v 1.7 2002/10/06 22:19:14 marcus Exp $
+# $FreeBSD: ports/archivers/fileroller/Makefile,v 1.8 2002/10/11 16:15:28 marcus Exp $
 #
 
 PORTNAME=	fileroller
