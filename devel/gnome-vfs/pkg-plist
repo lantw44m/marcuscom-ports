@@ -38,12 +38,15 @@ etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/trash/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/http_proxy/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/proxy/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/system/smb/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/http_proxy/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/proxy/%gconf.xml
+etc/gconf/gconf.xml.defaults/system/smb/%gconf.xml
 etc/gconf/schemas/desktop_default_applications.schemas
 etc/gconf/schemas/desktop_gnome_url_handlers.schemas
 etc/gconf/schemas/system_http_proxy.schemas
+etc/gconf/schemas/system_smb.schemas
 %%CDPARANOIA%%etc/gnome-vfs-2.0/modules/cdda-module.conf
 etc/gnome-vfs-2.0/modules/default-modules.conf
 etc/gnome-vfs-2.0/vfolders/applications-all-users.vfolder-info
@@ -104,7 +107,9 @@ lib/gnome-vfs-2.0/modules/libfile.so
 lib/gnome-vfs-2.0/modules/libftp.so
 lib/gnome-vfs-2.0/modules/libgzip.so
 lib/gnome-vfs-2.0/modules/libhttp.so
+lib/gnome-vfs-2.0/modules/libnetwork.so
 lib/gnome-vfs-2.0/modules/libnntp.so
+lib/gnome-vfs-2.0/modules/libsftp.so
 lib/gnome-vfs-2.0/modules/libssh.so
 lib/gnome-vfs-2.0/modules/libtar.so
 lib/gnome-vfs-2.0/modules/libvfolder-desktop.so
