@@ -44,7 +44,9 @@ share/locale/de/LC_MESSAGES/file-roller.mo
 share/locale/el/LC_MESSAGES/file-roller.mo
 share/locale/es/LC_MESSAGES/file-roller.mo
 share/locale/et/LC_MESSAGES/file-roller.mo
+share/locale/fi/LC_MESSAGES/file-roller.mo
 share/locale/fr/LC_MESSAGES/file-roller.mo
+share/locale/hi/LC_MESSAGES/file-roller.mo
 share/locale/hu/LC_MESSAGES/file-roller.mo
 share/locale/it/LC_MESSAGES/file-roller.mo
 share/locale/ja/LC_MESSAGES/file-roller.mo
@@ -58,8 +60,11 @@ share/locale/pl/LC_MESSAGES/file-roller.mo
 share/locale/pt_BR/LC_MESSAGES/file-roller.mo
 share/locale/ro/LC_MESSAGES/file-roller.mo
 share/locale/ru/LC_MESSAGES/file-roller.mo
+share/locale/sq/LC_MESSAGES/file-roller.mo
 share/locale/sv/LC_MESSAGES/file-roller.mo
+share/locale/uk/LC_MESSAGES/file-roller.mo
 share/locale/vi/LC_MESSAGES/file-roller.mo
+share/locale/zh_CN/LC_MESSAGES/file-roller.mo
 @dirrm share/gnome/omf/file-roller
 @dirrm share/gnome/help/file-roller/ru/figures
 @dirrm share/gnome/help/file-roller/ru

@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	fileroller
-PORTVERSION=	2.1.5
+PORTVERSION=	2.2.0
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/file-roller/2.1
+MASTER_SITE_SUBDIR=	sources/file-roller/2.2
 DISTNAME=	file-roller-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
