@@ -179,6 +179,7 @@ share/locale/ro/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/ru/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-utils-2.0.mo
+share/locale/sq/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/sr/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-utils-2.0.mo
@@ -237,11 +238,11 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/gnome-dictionary
 @dirrm share/gnome/gnome-system-log
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-system-log
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-search-tool/select
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-search-tool/select
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-search-tool
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-dictionary
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-system-log
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-search-tool/select
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-search-tool/select
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-search-tool
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-dictionary
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gnome-dictionary-C.omf 2>/dev/null || /usr/bin/true
