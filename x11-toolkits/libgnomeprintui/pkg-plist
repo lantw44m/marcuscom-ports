@@ -8,6 +8,17 @@ lib/libgnomeprintui-2-2.a
 lib/libgnomeprintui-2-2.so
 lib/libgnomeprintui-2-2.so.0
 libdata/pkgconfig/libgnomeprintui-2.2.pc
+share/doc/libgnomeprintui/c7.html
+share/doc/libgnomeprintui/index.html
+share/doc/libgnomeprintui/index.sgml
+share/doc/libgnomeprintui/libgnomeprintui-gnome-font-dialog.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-copies.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-dialog.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-job-preview.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-paper-selector.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-print-preview.html
+share/doc/libgnomeprintui/libgnomeprintui-gnome-printer-dialog.html
+share/doc/libgnomeprintui/libgnomeprintui.html
 share/locale/az/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/be/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/bg/LC_MESSAGES/libgnomeprintui-2.2.mo

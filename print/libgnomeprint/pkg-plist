@@ -19,21 +19,38 @@ include/libgnomeprint-2.2/libgnomeprint/private/gpa-utils.h
 lib/libgnomeprint-2-2.a
 lib/libgnomeprint-2-2.so
 lib/libgnomeprint-2-2.so.0
-lib/libgnomeprint/2.1.2/modules/drivers/libgnomeprint-fax.so
-lib/libgnomeprint/2.1.2/modules/transports/libgnomeprint-custom.so
-lib/libgnomeprint/2.1.2/modules/transports/libgnomeprint-file.so
-lib/libgnomeprint/2.1.2/modules/transports/libgnomeprint-lpr.so
+lib/libgnomeprint/%%VERSION%%/modules/drivers/libgnomeprint-fax.so
+lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-custom.so
+lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-file.so
+lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-lpr.so
 libdata/pkgconfig/libgnomeprint-2.2.pc
-share/gnome/gnome-print-2.2/models/GNOME-GENERIC-PS.model
-share/gnome/gnome-print-2.2/models/GNOME-PDF-WRITER.model
-share/gnome/gnome-print-2.2/models/HP-LASERJET-4ML.model
-share/gnome/gnome-print-2.2/models/STYLUS-COLOR-740.model
-share/gnome/gnome-print-2.2/printers/GENERIC.printer
-share/gnome/gnome-print-2.2/printers/PDF-WRITER.printer
-share/gnome/gnome-print-2.2/media/media.xml
-share/gnome/gnome-print-2.2/vendors/EPSON.vendor
-share/gnome/gnome-print-2.2/vendors/GNOME.vendor
-share/gnome/gnome-print-2.2/vendors/HP.vendor
+share/doc/libgnomeprint/index.html
+share/doc/libgnomeprint/index.sgml
+share/doc/libgnomeprint/libgnomeprint-building.html
+share/doc/libgnomeprint/libgnomeprint-compiling.html
+share/doc/libgnomeprint/libgnomeprint-gnome-font-face.html
+share/doc/libgnomeprint/libgnomeprint-gnome-font.html
+share/doc/libgnomeprint/libgnomeprint-gnome-glyphlist.html
+share/doc/libgnomeprint/libgnomeprint-gnome-pgl.html
+share/doc/libgnomeprint/libgnomeprint-gnome-print-config.html
+share/doc/libgnomeprint/libgnomeprint-gnome-print-job.html
+share/doc/libgnomeprint/libgnomeprint-gnome-print-paper.html
+share/doc/libgnomeprint/libgnomeprint-gnome-print-unit.html
+share/doc/libgnomeprint/libgnomeprint-gnome-print.html
+share/doc/libgnomeprint/libgnomeprint-gnome-rfont.html
+share/doc/libgnomeprint/libgnomeprint-resources.html
+share/doc/libgnomeprint/libgnomeprint.html
+share/doc/libgnomeprint/libgnomeprintunsorted.html
+share/gnome/libgnomeprint/%%VERSION%%/media/media.xml
+share/gnome/libgnomeprint/%%VERSION%%/models/GNOME-GENERIC-PS.model
+share/gnome/libgnomeprint/%%VERSION%%/models/GNOME-PDF-WRITER.model
+share/gnome/libgnomeprint/%%VERSION%%/models/HP-LASERJET-4ML.model
+share/gnome/libgnomeprint/%%VERSION%%/models/STYLUS-COLOR-740.model
+share/gnome/libgnomeprint/%%VERSION%%/printers/GENERIC.printer
+share/gnome/libgnomeprint/%%VERSION%%/printers/PDF-WRITER.printer
+share/gnome/libgnomeprint/%%VERSION%%/vendors/EPSON.vendor
+share/gnome/libgnomeprint/%%VERSION%%/vendors/GNOME.vendor
+share/gnome/libgnomeprint/%%VERSION%%/vendors/HP.vendor
 share/locale/az/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/be/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/bg/LC_MESSAGES/libgnomeprint-2.2.mo
@@ -68,16 +85,17 @@ share/locale/vi/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/wa/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/zh_CN/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomeprint-2.2.mo
-@dirrm share/gnome/gnome-print-2.2/vendors
-@dirrm share/gnome/gnome-print-2.2/media
-@dirrm share/gnome/gnome-print-2.2/printers
-@dirrm share/gnome/gnome-print-2.2/models
-@dirrm share/gnome/gnome-print-2.2
+@dirrm share/gnome/libgnomeprint/%%VERSION%%/vendors
+@dirrm share/gnome/libgnomeprint/%%VERSION%%/printers
+@dirrm share/gnome/libgnomeprint/%%VERSION%%/models
+@dirrm share/gnome/libgnomeprint/%%VERSION%%/media
+@dirrm share/gnome/libgnomeprint/%%VERSION%%
+@dirrm share/gnome/libgnomeprint
 @dirrm share/doc/libgnomeprint
-@dirrm lib/libgnomeprint/2.1.2/modules/transports
-@dirrm lib/libgnomeprint/2.1.2/modules/drivers
-@dirrm lib/libgnomeprint/2.1.2/modules
-@dirrm lib/libgnomeprint/2.1.2
+@dirrm lib/libgnomeprint/%%VERSION%%/modules/transports
+@dirrm lib/libgnomeprint/%%VERSION%%/modules/drivers
+@dirrm lib/libgnomeprint/%%VERSION%%/modules
+@dirrm lib/libgnomeprint/%%VERSION%%
 @dirrm lib/libgnomeprint
 @dirrm include/libgnomeprint-2.2/libgnomeprint/private
 @dirrm include/libgnomeprint-2.2/libgnomeprint

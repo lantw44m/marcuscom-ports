@@ -1,5 +1,5 @@
---- configure.orig	Wed Dec  4 13:33:02 2002
-+++ configure	Wed Dec  4 23:10:38 2002
+--- configure.orig	Mon Dec  9 21:18:12 2002
++++ configure	Tue Dec 10 14:56:42 2002
 @@ -8160,6 +8160,7 @@
  
  # This can be used to rebuild libtool when needed
@@ -8,12 +8,15 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-@@ -10890,7 +10891,7 @@
+@@ -10932,9 +10933,9 @@
+ 
+ 
  if test "x${prefix}" = "xNONE"; then
-   GNOME_PRINT_DATA_DIR=${ac_default_prefix}/share/${gnome_print_datadir}
+-	GNOME_PRINT_DATA_DIR='${ac_default_prefix}/share/libgnomeprint/${VERSION}'
++	GNOME_PRINT_DATA_DIR='${ac_default_prefix}/share/gnome/libgnomeprint/${VERSION}'
  else
--  GNOME_PRINT_DATA_DIR="${prefix}/share/${gnome_print_datadir}"
-+  GNOME_PRINT_DATA_DIR="${prefix}/share/gnome/${gnome_print_datadir}"
+-	GNOME_PRINT_DATA_DIR='${prefix}/share/libgnomeprint/${VERSION}'
++	GNOME_PRINT_DATA_DIR='${prefix}/share/gnome/libgnomeprint/${VERSION}'
  fi
- GNOME_PRINT_DATA_DIR=`eval echo "$GNOME_PRINT_DATA_DIR"`
- cat >>confdefs.h <<_ACEOF
+ GNOME_PRINT_DATA_DIR=$GNOME_PRINT_DATA_DIR
+ 
