@@ -22,9 +22,9 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GCC=	3.3
-USE_GNOME=	gnomeprefix gnomehack libgnomeprint
+USE_GNOME=	gnomeprefix gnomehack lthack libgnomeprint
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL_VER=15
+USE_INC_LIBTOOL_VER=13
 CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.5" API_VERSION="2.6"

@@ -22,10 +22,10 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack libgnomeprintui
+USE_GNOME=	gnomeprefix gnomehack lthack libgnomeprintui
 INSTALLS_SHLIB=	yes
 USE_REINPLACE=	yes
-USE_LIBTOOL_VER=15
+USE_INC_LIBTOOL_VER=13
 CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.5" API_VERSION="2.6"
