@@ -188,13 +188,11 @@ share/locale/yi/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/yo/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 @dirrm share/gnome/omf/gnome-desktop
 @dirrm share/gnome/help/lgpl/eu
-@dirrm share/gnome/help/lgpl/C
 @dirrm share/gnome/help/lgpl
 @dirrm share/gnome/help/gpl/eu
-@dirrm share/gnome/help/gpl/C
-@dirrm share/gnome/help/gpl
 @dirrm share/gnome/help/gnome-feedback/eu
 @dirrm share/gnome/help/gnome-feedback/C
 @dirrm share/gnome/help/gnome-feedback
