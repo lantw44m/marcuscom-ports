@@ -1,0 +1,29 @@
+--- gweather/Locations.xml.orig	Wed Mar  2 14:01:38 2005
++++ gweather/Locations.xml	Wed Mar  2 14:01:40 2005
+@@ -44522,7 +44522,7 @@
+          <name xml:lang="gu">ગ્લાયન્કો</name>
+          <name xml:lang="hi">ग्लायंको</name>
+          <name xml:lang="hu">Glynco</name>
+-         <name xml:lang="ja">グロスターシャー<</name>
++         <name xml:lang="ja">グロスターシャー&lt;</name>
+          <name xml:lang="ko">Glynco</name>
+          <name xml:lang="lt">Glynco</name>
+          <name xml:lang="mk">Glynco</name>
+@@ -245575,7 +245575,7 @@
+   <name xml:lang="no">Australasia &amp; Oseania</name>
+   <name xml:lang="pa">ਅਸਟ੍ਰਾਲੀਏਸ਼ੀਆ &amp; ਮਹਾਂਸਾਗਰ</name>
+   <name xml:lang="pl">Australazja &amp; Oceania</name>
+-  <name xml:lang="pt">Australásia & Oceânia</name>
++  <name xml:lang="pt">Australásia &amp; Oceânia</name>
+   <name xml:lang="pt_BR">Australásia e Oceania</name>
+   <name xml:lang="ru">Австралайзия и Океания</name>
+   <name xml:lang="sq">Australasia &amp; Oceania</name>
+@@ -295346,7 +295346,7 @@
+       <name xml:lang="gu">ગ્યુયાના/મેન્યુએલ કાર</name>
+       <name xml:lang="hi">गुयाना/मैनुअल कार</name>
+       <name xml:lang="hu">Guayana/Manuel Car</name>
+-      <name xml:lang="ja">Guarulhos<</name>
++      <name xml:lang="ja">Guarulhos&lt;</name>
+       <name xml:lang="ko">Guayana/Manuel Car</name>
+       <name xml:lang="lt">Guayana/Manuel Car</name>
+       <name xml:lang="mk">Guayana/Manuel Car</name>
