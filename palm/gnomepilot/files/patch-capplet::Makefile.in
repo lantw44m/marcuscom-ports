@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/palm/gnomepilot/files/patch-capplet::Makefile.in,v 1.1 2002/04/25 17:15:06 sobomax Exp $
+
+--- capplet/Makefile.in	2002/04/25 16:25:08	1.1
++++ capplet/Makefile.in	2002/04/25 16:25:15
+@@ -174,7 +174,7 @@
+ 	$(NULL)
+ 
+ 
+-CFLAGS = @CFLAGS@ -g
++CFLAGS = @CFLAGS@
+ 
+ gpilotd_control_applet_SOURCES = \
+ 	gpilotd-control-applet.c 	\
