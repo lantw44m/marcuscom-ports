@@ -36,7 +36,7 @@ _USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 libglade2 libxml2 \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
 		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
 		libgnomedb gtksourceview pkgconfig libgsf pygtk2 pygnome2 \
-		gstreamerplugins
+		gstreamerplugins intlhack
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -53,8 +53,6 @@ gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLA
 			${FIND} ${WRKSRC} -name "configure" | ${XARGS} ${REINPLACE_CMD} -e \
 				's|-lpthread|${PTHREAD_LIBS}|g ; \
 				 s|DATADIRNAME=lib|DATADIRNAME=share|g' ; \
-			${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${REINPLACE_CMD} -e \
-				's|mkdir $$lang or|mkdir $$lang, 0777 or|'
 
 lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" | ${XARGS} ${REINPLACE_CMD} -e \
 				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
@@ -396,6 +394,9 @@ gstreamerplugins_LIB_DEPENDS=	gstplay-0.7.1:${PORTSDIR}/multimedia/gstreamer-plu
 								gstreamer-0.7:${PORTSDIR}/multimedia/gstreamer
 gstreamerplugins_DETECT=	${X11BASE}/libdata/pkgconfig/gstreamer-play-0.7.pc
 gstreamerplugins_USE_GNOME_IMPL=	gconf2
+
+intlhack_PRE_PATCH=		${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${REINPLACE_CMD} -e \
+				's|mkdir $$lang or|mkdir $$lang, 0777 or|'
 
 # End component definition section
 
