@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	yelp
-PORTVERSION=	2.5.5
+PORTVERSION=	2.5.6
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -19,7 +19,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui libgtkhtml
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui libgtkhtml lthack
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
