@@ -1,23 +1,20 @@
 bin/cddb-slave2-properties
 bin/gnome-cd
 bin/gnome-sound-recorder
-bin/gnome-volume-control
+bin/gst-mixer
 bin/gstreamer-properties
 bin/vumeter
 etc/gconf/gconf.xml.defaults/apps/CDDB-Slave2/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-cd/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/system-state/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/gnome-volume-control/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/CDDB-Slave2/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-cd/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/system-state/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnome-volume-control/%gconf.xml
 etc/gconf/schemas/CDDB-Slave2.schemas
 etc/gconf/schemas/gnome-cd.schemas
 etc/gconf/schemas/gnome-sound-recorder.schemas
-etc/gconf/schemas/gnome-volume-control.schemas
 include/cddb-slave2/cddb-slave-client.h
 lib/libcddb-slave2.a
 lib/libcddb-slave2.so
@@ -28,12 +25,13 @@ libexec/cddb-track-editor
 share/gnome/applications/gnome-cd.desktop
 share/gnome/applications/gnome-sound-recorder.desktop
 share/gnome/applications/gnome-volume-control.desktop
+share/gnome/applications/gstreamer-properties.desktop
 share/gnome/applications/reclevel.desktop
 share/gnome/applications/vumeter.desktop
 share/gnome/control-center-2.0/capplets/cddb-slave.desktop
-share/gnome/gnome-media-2.0/icons/gstreamer-properties.png
-share/gnome/gnome-media-2.0/interfaces/gstreamer-properties.glade
 share/gnome/gnome-sound-recorder/ui/gsr.xml
+share/gnome/gstreamer-properties/glade/gstreamer-properties.glade
+share/gnome/gstreamer-properties/icons/gstreamer-properties.png
 share/gnome/help/gnome-cd/C/figures/cdplayer_trackeditor_button.png
 share/gnome/help/gnome-cd/C/figures/cdplayer_trackeditor_window.png
 share/gnome/help/gnome-cd/C/figures/cdplayer_window.png
@@ -408,6 +406,10 @@ share/gnome/pixmaps/gnome-mixer.png
 share/gnome/pixmaps/gnome-reclevel.png
 share/gnome/pixmaps/gnome-vumeter.png
 share/gnome/pixmaps/gstreamer-properties.png
+share/gnome/pixmaps/mixer.png
+share/gnome/pixmaps/phone.png
+share/gnome/pixmaps/tone.png
+share/gnome/pixmaps/video.png
 share/locale/am/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-media-2.0.mo
@@ -456,6 +458,7 @@ share/locale/sq/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/sr/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-media-2.0.mo
+share/locale/ta/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/uk/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/vi/LC_MESSAGES/gnome-media-2.0.mo
@@ -470,9 +473,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm share/gnome/pixmaps/gnome-cd/themes/None
 @dirrm share/gnome/pixmaps/gnome-cd/themes
 @dirrm share/gnome/pixmaps/gnome-cd
-@dirrm share/gnome/gnome-media-2.0/interfaces
-@dirrm share/gnome/gnome-media-2.0/icons
-@dirrm share/gnome/gnome-media-2.0
 @dirrm share/gnome/gnome-sound-recorder/ui
 @dirrm share/gnome/gnome-sound-recorder
 @dirrm share/gnome/help/grecord/zh_TW/figures
@@ -522,12 +522,10 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm share/gnome/help/gnome-cd/C
 @dirrm share/gnome/help/gnome-cd
 @dirrm include/cddb-slave2
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-volume-control
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/system-state
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-cd
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/CDDB-Slave2
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-volume-control
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/system-state
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-cd
