@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome2-fifth-toe
-PORTVERSION=	2.3.2
+PORTVERSION=	2.3.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -37,7 +37,10 @@ RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric2 \
 		regexxer:${PORTSDIR}/devel/regexxer \
 		streamtuner:${PORTSDIR}/audio/streamtuner \
 		meld:${PORTSDIR}/textproc/meld \
-		gcompris:${PORTSDIR}/games/gcompris2
+		gcompris:${PORTSDIR}/games/gcompris2 \
+		galeon:${PORTSDIR}/www/galeon2 \
+		gswitchit-properties-capplet:${PORTSDIR}/x11/gswitchit \
+		seahorse:${PORTSDIR}/security/seahorse
 
 NO_BUILD=	yes
 
