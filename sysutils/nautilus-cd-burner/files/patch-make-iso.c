@@ -16,14 +16,3 @@
  	}
  	argv[i++] = "-graft-points";
  	argv[i++] = "-path-list";
-@@ -755,8 +757,8 @@
- 			backing = get_backing_file (info->name);
- 			track = g_new0 (Track, 1);
- 			track->type = TRACK_TYPE_AUDIO;
--			track->audio.filename = backing;
--			track->audio.cdtext = NULL;
-+			track->contents.audio.filename = backing;
-+			track->contents.audio.cdtext = NULL;
- 			list = g_list_prepend (list, track);
- 		}
- 	}
