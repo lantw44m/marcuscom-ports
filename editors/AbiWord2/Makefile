@@ -22,7 +22,7 @@ LIB_DEPENDS=	png.5:${PORTSDIR}/graphics/png \
 		iconv.3:${PORTSDIR}/converters/libiconv \
 		fribidi.0:${PORTSDIR}/converters/fribidi \
 		popt.0:${PORTSDIR}/devel/popt \
-		aspell.15:${PORTSDIR}/textproc/aspell
+		enchant.2:${PORTSDIR}/textproc/enchant
 
 DIST_SUBDIR=	AbiWord
 
