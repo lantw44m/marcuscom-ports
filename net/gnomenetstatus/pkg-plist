@@ -14,30 +14,36 @@ share/gnome/help/gnome-netstatus/C/figures/gnome-netstatus-tx.png
 share/gnome/help/gnome-netstatus/C/figures/gnome-netstatus-txrx.png
 share/gnome/help/gnome-netstatus/C/gnome-netstatus.xml
 share/gnome/help/gnome-netstatus/C/legal.xml
-share/gnome/icons/gnome-netstatus/gnome-netstatus-disconn.png
-share/gnome/icons/gnome-netstatus/gnome-netstatus-error.png
-share/gnome/icons/gnome-netstatus/gnome-netstatus-idle.png
-share/gnome/icons/gnome-netstatus/gnome-netstatus-rx.png
-share/gnome/icons/gnome-netstatus/gnome-netstatus-tx.png
-share/gnome/icons/gnome-netstatus/gnome-netstatus-txrx.png
 share/gnome/omf/gnome-netstatus/gnome-netstatus-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-netstatus/gnome-netstatus-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gnome-netstatus-tx.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-disconn.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-error.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-idle.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-rx.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-tx.png
+share/icons/hicolor/48x48/apps/gnome-netstatus-txrx.png
 share/locale/ar/LC_MESSAGES/gnome-netstatus.mo
 share/locale/az/LC_MESSAGES/gnome-netstatus.mo
+share/locale/ca/LC_MESSAGES/gnome-netstatus.mo
 share/locale/cs/LC_MESSAGES/gnome-netstatus.mo
+share/locale/da/LC_MESSAGES/gnome-netstatus.mo
 share/locale/de/LC_MESSAGES/gnome-netstatus.mo
 share/locale/el/LC_MESSAGES/gnome-netstatus.mo
+share/locale/en_CA/LC_MESSAGES/gnome-netstatus.mo
 share/locale/es/LC_MESSAGES/gnome-netstatus.mo
+share/locale/fi/LC_MESSAGES/gnome-netstatus.mo
 share/locale/fr/LC_MESSAGES/gnome-netstatus.mo
 share/locale/ga/LC_MESSAGES/gnome-netstatus.mo
 share/locale/hr/LC_MESSAGES/gnome-netstatus.mo
 share/locale/it/LC_MESSAGES/gnome-netstatus.mo
 share/locale/ja/LC_MESSAGES/gnome-netstatus.mo
 share/locale/ko/LC_MESSAGES/gnome-netstatus.mo
+share/locale/lt/LC_MESSAGES/gnome-netstatus.mo
 share/locale/mn/LC_MESSAGES/gnome-netstatus.mo
 share/locale/ms/LC_MESSAGES/gnome-netstatus.mo
 share/locale/nl/LC_MESSAGES/gnome-netstatus.mo
+share/locale/pa/LC_MESSAGES/gnome-netstatus.mo
 share/locale/pl/LC_MESSAGES/gnome-netstatus.mo
 share/locale/pt/LC_MESSAGES/gnome-netstatus.mo
 share/locale/ru/LC_MESSAGES/gnome-netstatus.mo
@@ -46,11 +52,11 @@ share/locale/sq/LC_MESSAGES/gnome-netstatus.mo
 share/locale/sr/LC_MESSAGES/gnome-netstatus.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-netstatus.mo
 share/locale/sv/LC_MESSAGES/gnome-netstatus.mo
+share/locale/th/LC_MESSAGES/gnome-netstatus.mo
 share/locale/tr/LC_MESSAGES/gnome-netstatus.mo
 share/locale/vi/LC_MESSAGES/gnome-netstatus.mo
 share/locale/wa/LC_MESSAGES/gnome-netstatus.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-netstatus.mo
-@dirrm share/gnome/icons/gnome-netstatus
 @dirrm share/gnome/help/gnome-netstatus/C/figures
 @dirrm share/gnome/help/gnome-netstatus/C
 @dirrm share/gnome/help/gnome-netstatus
