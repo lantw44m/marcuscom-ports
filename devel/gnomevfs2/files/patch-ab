@@ -1,10 +1,11 @@
---- Makefile.in.orig	Mon May 19 19:28:43 2003
-+++ Makefile.in	Mon May 19 19:29:31 2003
-@@ -183,7 +183,6 @@
- 	devel-docs				\
- 	doc					\
- 	programs				\
--	test					\
- 	monikers				\
- 	po
+--- Makefile.in.orig	Sun Aug  3 14:56:58 2003
++++ Makefile.in	Sun Aug  3 14:57:30 2003
+@@ -179,7 +179,7 @@
  
+ SUBDIRS_GNOME = monikers doc schemas
+ 
+-SUBDIRS =  	libgnomevfs					modules						schemas						devel-docs					doc						programs					test						monikers					po
++SUBDIRS =  	libgnomevfs					modules						schemas						devel-docs					doc						programs										monikers					po
+ 
+ 
+ EXTRA_DIST =  	HACKING						TODO						autogen.sh					gnome-vfs.spec					gnome-vfs-2.0.pc.in				gnome-vfs-module-2.0.pc.in			intltool-extract.in				intltool-merge.in				intltool-update.in
