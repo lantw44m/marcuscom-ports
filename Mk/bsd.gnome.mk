@@ -43,7 +43,8 @@ _USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
 		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
 		libgnomedb gtksourceview libgsf libgsf_gnome pygtk2 pygnome2 \
-		gstreamerplugins gtkhtml3 gnomespeech evolutiondataserver
+		gstreamerplugins gtkhtml3 gnomespeech evolutiondataserver \
+		desktopfileutils
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -426,6 +427,10 @@ gnomespeech_USE_GNOME_IMPL=libbonobo
 evolutiondataserver_LIB_DEPENDS=edataserver.5:${PORTSDIR}/databases/evolution-data-server
 evolutiondataserver_DETECT=		${X11BASE}/libdata/pkgconfig/evolution-data-server-1.0.pc
 evolutiondataserver_USE_GNOME_IMPL=libgnome
+
+desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
+desktopfileutils_RUN_DEPENDS=	${X11BASE}/bin/update-desktop-database
+desktopfileutils_USE_GNOME_IMPL=glib20
 
 # End component definition section
 
