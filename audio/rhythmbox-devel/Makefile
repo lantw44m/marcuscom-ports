@@ -2,11 +2,11 @@
 # Date created:		17 August 2003
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/rhythmbox/Makefile,v 1.16 2003/11/12 03:03:08 marcus Exp $
+# $FreeBSD: ports/audio/rhythmbox/Makefile,v 1.19 2003/12/07 03:58:43 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
-PORTVERSION=	0.6.0
+PORTVERSION=	0.6.1
 PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -18,7 +18,8 @@ COMMENT=	Audio player for the Gnome 2 desktop environment
 
 LIB_DEPENDS=	musicbrainz.3:${PORTSDIR}/audio/libmusicbrainz \
 		FLAC.5:${PORTSDIR}/audio/flac \
-		mad.1:${PORTSDIR}/audio/mad
+		mad.2:${PORTSDIR}/audio/libmad \
+		id3tag.2:${PORTSDIR}/audio/libid3tag
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
