@@ -6,10 +6,12 @@ bin/vumeter
 etc/gconf/gconf.xml.defaults/apps/CDDB-Slave2/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-cd/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/system-state/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-volume-control/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/CDDB-Slave2/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-cd/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/system-state/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-volume-control/%gconf.xml
 etc/gconf/schemas/CDDB-Slave2.schemas
 etc/gconf/schemas/gnome-cd.schemas
@@ -28,6 +30,7 @@ share/gnome/applications/gnome-volume-control.desktop
 share/gnome/applications/reclevel.desktop
 share/gnome/applications/vumeter.desktop
 share/gnome/control-center-2.0/capplets/cddb-slave.desktop
+share/gnome/gnome-sound-recorder/ui/gsr.xml
 share/gnome/help/gnome-cd/C/figures/cdplayer_trackeditor_button.png
 share/gnome/help/gnome-cd/C/figures/cdplayer_trackeditor_window.png
 share/gnome/help/gnome-cd/C/figures/cdplayer_window.png
@@ -233,6 +236,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm share/gnome/pixmaps/gnome-cd/themes/lcd
 @dirrm share/gnome/pixmaps/gnome-cd/themes
 @dirrm share/gnome/pixmaps/gnome-cd
+@dirrm share/gnome/gnome-sound-recorder
 @dirrm share/gnome/help/grecord/C/figures
 @dirrm share/gnome/help/grecord/C
 @dirrm share/gnome/help/grecord
@@ -243,10 +247,12 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm share/gnome/help/gnome-cd/C
 @dirrm share/gnome/help/gnome-cd
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-volume-control
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/system-state
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-cd
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/CDDB-Slave2
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-volume-control
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/system-state
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-cd
 @dirrm etc/gconf/gconf.xml.defaults/apps/CDDB-Slave2
