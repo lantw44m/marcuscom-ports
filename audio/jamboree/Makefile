@@ -19,7 +19,7 @@ LIB_DEPENDS=	gdbm.3:${PORTSDIR}/databases/gdbm
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui libglade2 gstreamerplugins
+USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui libglade2
 USE_GSTREAMER=	vorbis mad
 USE_LIBTOOL_VER=15
 USE_GMAKE=	yes
