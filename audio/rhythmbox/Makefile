@@ -29,7 +29,8 @@ CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lm" \
 		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
 
 OPTIONS=	XINE "Use xine backend instead of GStreamer" off \
-		MONKEYMEDIA "Use MonkeyMedia metadata reader" off
+		MONKEYMEDIA "Use MonkeyMedia metadata reader" off \
+		IPOD "Enable iPod support" off
 
 .include <bsd.port.pre.mk>
 
@@ -46,6 +47,10 @@ CONFIGURE_ARGS+=	--with-metadata=monkeymedia
 .else
 CONFIGURE_ARGS+=	--with-metadata=gstreamer
 USE_GNOME+=		gstreamerplugins
+.endif
+
+.ifdef (WITH_IPOD)
+CONFIGURE_ARGS+=	--enable-ipod
 .endif
 
 .if exists(${LOCALBASE}/lib/libvorbis.so)
