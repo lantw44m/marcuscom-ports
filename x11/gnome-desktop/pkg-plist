@@ -17,14 +17,11 @@ share/gnome/vfolders/Applications.directory
 share/gnome/vfolders/Development.directory
 share/gnome/vfolders/Games.directory
 share/gnome/vfolders/Graphics.directory
-share/gnome/vfolders/Home.directory
 share/gnome/vfolders/Internet.directory
 share/gnome/vfolders/Multimedia.directory
 share/gnome/vfolders/Office.directory
 share/gnome/vfolders/Root.directory
-share/gnome/vfolders/Root.order
 share/gnome/vfolders/Settings.directory
-share/gnome/vfolders/Settings.order
 share/gnome/vfolders/System.directory
 share/gnome/pixmaps/advanced-directory.png
 share/gnome/pixmaps/apple-green.png
@@ -197,6 +194,7 @@ share/locale/sp/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/sr/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/th/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/uk/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/vi/LC_MESSAGES/gnome-desktop-2.0.mo
