@@ -26,6 +26,7 @@ share/gnome/help/gnome-terminal/ro/legal.xml
 share/gnome/omf/gnome-terminal/gnome-terminal-C.omf
 share/gnome/omf/gnome-terminal/gnome-terminal-ro.omf
 share/gnome/pixmaps/gnome-terminal.png
+share/locale/be/LC_MESSAGES/gnome-terminal.mo
 share/locale/bg/LC_MESSAGES/gnome-terminal.mo
 share/locale/ca/LC_MESSAGES/gnome-terminal.mo
 share/locale/cs/LC_MESSAGES/gnome-terminal.mo
