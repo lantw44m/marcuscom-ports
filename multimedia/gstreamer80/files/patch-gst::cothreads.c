@@ -19,7 +19,7 @@
  #define COTHREAD_MAGIC_NUMBER 0xabcdef
  
 -#define COTHREAD_MAXTHREADS 16
-+#define COTHREAD_MAXTHREADS 8
++#define COTHREAD_MAXTHREADS 16
  #define COTHREAD_STACKSIZE (STACK_SIZE/COTHREAD_MAXTHREADS)
  
  static void 	cothread_destroy 	(cothread_state *cothread);
