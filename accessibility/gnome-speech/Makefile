@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomespeech
-PORTVERSION=	0.2.3
+PORTVERSION=	0.2.5
 CATEGORIES=	audio gnome accessibility
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-speech/0.2
@@ -35,8 +35,5 @@ WITH_FESTIVAL=	yes
 .if defined(WITH_FESTIVAL)
 RUN_DEPENDS=	festival:${PORTSDIR}/audio/festival
 .endif
-
-pre-build:
-	@cd ${WRKSRC}/gnome-speech && ${GMAKE} clean
 
 .include <bsd.port.post.mk>
