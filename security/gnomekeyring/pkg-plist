@@ -6,10 +6,13 @@ lib/libgnome-keyring.so
 lib/libgnome-keyring.so.0
 libdata/pkgconfig/gnome-keyring-1.pc
 share/locale/cs/LC_MESSAGES/gnome-keyring.mo
+share/locale/de/LC_MESSAGES/gnome-keyring.mo
 share/locale/el/LC_MESSAGES/gnome-keyring.mo
 share/locale/es/LC_MESSAGES/gnome-keyring.mo
 share/locale/fr/LC_MESSAGES/gnome-keyring.mo
 share/locale/ja/LC_MESSAGES/gnome-keyring.mo
+share/locale/ko/LC_MESSAGES/gnome-keyring.mo
+share/locale/lt/LC_MESSAGES/gnome-keyring.mo
 share/locale/ms/LC_MESSAGES/gnome-keyring.mo
 share/locale/no/LC_MESSAGES/gnome-keyring.mo
 share/locale/pl/LC_MESSAGES/gnome-keyring.mo
