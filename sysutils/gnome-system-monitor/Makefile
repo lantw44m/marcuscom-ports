@@ -2,12 +2,11 @@
 # Date created:				09 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gnomesystemmonitor/Makefile,v 1.40 2002/09/20 17:07:17 marcus Exp $
+# $FreeBSD: ports/sysutils/gnomesystemmonitor/Makefile,v 1.41 2003/01/19 19:59:08 marcus Exp $
 #
 
 PORTNAME=	gnomesystemmonitor
-PORTVERSION=	2.0.2
-PORTREVISION=	2
+PORTVERSION=	2.0.4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-monitor/2.0
