@@ -186,12 +186,12 @@ share/doc/gnome-vfs-2.0/gnome-vfs-directory-operations.html
 share/doc/gnome-vfs-2.0/gnome-vfs-file-operations.html
 share/doc/gnome-vfs-2.0/gnome-vfs-first-steps.html
 share/doc/gnome-vfs-2.0/gnome-vfs-writing-modules.html
+share/doc/gnome-vfs-2.0/home.png
 share/doc/gnome-vfs-2.0/index.html
 share/doc/gnome-vfs-2.0/index.sgml
+share/doc/gnome-vfs-2.0/left.png
 share/doc/gnome-vfs-2.0/mime-registry.html
 share/doc/gnome-vfs-2.0/modules.html
-share/doc/gnome-vfs-2.0/home.png
-share/doc/gnome-vfs-2.0/left.png
 share/doc/gnome-vfs-2.0/right.png
 share/doc/gnome-vfs-2.0/up.png
 %%KDEMENUS%%share/gnome/vfolders/KDE.directory
