@@ -5,7 +5,7 @@
 # $FreeBSD$
 
 PORTNAME=	marlin
-PORTVERSION=	0.4
+PORTVERSION=	0.5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -18,7 +18,7 @@ LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget gstreamerplugins
+USE_GNOME=	gnomeprefix gnomehack gnometarget gstreamerplugins intlhack libgnomeui
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
