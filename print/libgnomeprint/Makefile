@@ -37,7 +37,7 @@ WITH_CUPS=	yes
 
 .if defined(WITH_CUPS) && !defined(WITHOUT_CUPS)
 CONFIGURE_ARGS+=	--with-cups
-LIB_DEPENDS+=		cups.2:${PORTSDIR}/print/cups-base
+LIB_DEPENDS+=		gnomecups-1.0:${PORTSDIR}/print/libgnomecups
 PLIST_SUB+=		CUPS:=""
 .else
 CONFIGURE_ARGS+=	--without-cups
