@@ -290,7 +290,7 @@ libgnomeui_LIB_DEPENDS=		gnomeui-2.300:${PORTSDIR}/x11-toolkits/libgnomeui
 libgnomeui_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomeui-2.0.pc
 libgnomeui_USE_GNOME_IMPL=	libbonoboui
 
-atspi_LIB_DEPENDS=	spi.8:${PORTSDIR}/x11-toolkits/at-spi
+atspi_LIB_DEPENDS=	spi.9:${PORTSDIR}/x11-toolkits/at-spi
 atspi_DETECT=		${X11BASE}/libdata/pkgconfig/cspi-1.0.pc
 atspi_USE_GNOME_IMPL=	gail libbonobo
 
