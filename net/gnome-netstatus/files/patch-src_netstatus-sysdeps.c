@@ -1,5 +1,5 @@
 --- src/netstatus-sysdeps.c.orig	Mon Jun  9 13:18:04 2003
-+++ src/netstatus-sysdeps.c	Sat Dec  6 17:25:49 2003
++++ src/netstatus-sysdeps.c	Fri Jan  2 23:29:16 2004
 @@ -27,10 +27,13 @@
  
  #include <stdio.h>
@@ -31,7 +31,7 @@
  static inline FILE *
  get_proc_net_dev_fh (void)
  {
-@@ -206,3 +212,125 @@
+@@ -206,3 +212,126 @@
  
    return error_message;
  }
@@ -145,6 +145,7 @@
 +       close (pout);
 +   }
 +   else {
++      g_strfreev (command_line);
 +      if (error_message)
 +        g_free (error_message);
 +      error_message = g_strdup_printf ("Error running /usr/bin/netstat for '%s': %s", 

@@ -1,5 +1,5 @@
 --- src/netstatus-iface.c.orig	Fri Oct 31 08:49:51 2003
-+++ src/netstatus-iface.c	Sat Dec  6 01:17:12 2003
++++ src/netstatus-iface.c	Fri Jan  2 23:29:27 2004
 @@ -32,9 +32,12 @@
  
  #include <libgnome/gnome-i18n.h>
@@ -51,7 +51,7 @@
  }
  
  gboolean
-@@ -1083,10 +1095,13 @@
+@@ -1083,8 +1095,11 @@
    struct ifconf *if_conf;
    GList         *interfaces;
    GList         *loopbacks;
@@ -62,11 +62,8 @@
 +  int            len;
 +  gboolean       loopback;
    
--  if ((fd = socket (AF_INET, SOCK_DGRAM, 0)) < 0)
-+  if ((fd = socket (AF_INET, SOCK_STREAM, 0)) < 0)
+   if ((fd = socket (AF_INET, SOCK_DGRAM, 0)) < 0)
      {
-       if (error)
- 	*error = g_error_new (NETSTATUS_ERROR,
 @@ -1105,12 +1120,25 @@
    interfaces = NULL;
    loopbacks  = NULL;
@@ -83,8 +80,7 @@
 +      if (if_req->ifr_addr.sa_len > len)
 +	len = if_req->ifr_addr.sa_len;
 +#endif
- 
--      if (ioctl (fd, SIOCGIFFLAGS, &if_req) < 0)
++
 +      ptr += sizeof(if_req->ifr_name) + len;
 + 
 +      if (g_list_find_custom (interfaces, if_req->ifr_name, 
@@ -92,7 +88,8 @@
 +	      || g_list_find_custom (loopbacks, if_req->ifr_name,
 +		  (GCompareFunc) g_ascii_strcasecmp) != NULL)
 +	continue;
-+
+ 
+-      if (ioctl (fd, SIOCGIFFLAGS, &if_req) < 0)
 +      if (ioctl (fd, SIOCGIFFLAGS, if_req) < 0)
  	{
  	  if (error)
