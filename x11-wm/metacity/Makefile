@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	metacity
-PORTVERSION=	2.4.21
+PORTVERSION=	2.4.34
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.4
@@ -34,7 +34,5 @@ MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
-		${WRKSRC}/po/Makefile.in.in
 
 .include <bsd.port.mk>
