@@ -26,6 +26,7 @@ share/gnome/vfolders/Root.order
 share/gnome/vfolders/Settings.directory
 share/gnome/vfolders/Settings.order
 share/gnome/vfolders/System.directory
+share/gnome/pixmaps/advanced-directory.png
 share/gnome/pixmaps/apple-green.png
 share/gnome/pixmaps/apple-red.png
 share/gnome/pixmaps/cdeappmenu.png
