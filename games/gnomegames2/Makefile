@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomegames2
-PORTVERSION=	2.9.2
+PORTVERSION=	2.9.1
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-games/2.9
@@ -30,10 +30,10 @@ USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-GCONF_SCHEMAS=	aisleriot.schemas gataxx.schemas glines.schemas \
-		gnect.schemas gnibbles.schemas gnobots2.schemas \
-		gnome-stones.schemas gnomine.schemas gnotravex.schemas \
-		gnotski.schemas gtali.schemas iagno.schemas \
+GCONF_SCHEMAS=	aisleriot.schemas blackjack.schemas gataxx.schemas \
+		glines.schemas gnect.schemas gnibbles.schemas gnobots2.schemas \
+		gnome-stones.schemas gnometris.schemas gnomine.schemas \
+		gnotravex.schemas gnotski.schemas gtali.schemas iagno.schemas \
 		libgnomegames.schemas mahjongg.schemas same-gnome.schemas
 
 CONFLICTS=	sol-1.0.*
