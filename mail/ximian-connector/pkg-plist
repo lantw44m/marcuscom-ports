@@ -49,6 +49,7 @@ share/gnome/ximian-connector/%%VERSION%%/images/exchange-oof-48.png
 share/gnome/ximian-connector/%%VERSION%%/ui/ximian-connector.xml
 share/locale/ar/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
+share/locale/bg/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/bn/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/cs/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/cy/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
