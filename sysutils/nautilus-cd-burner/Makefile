@@ -7,6 +7,7 @@
 
 PORTNAME=	nautilus-cd-burner
 PORTVERSION=	2.8.3
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.8
@@ -31,6 +32,11 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 GCONF_SCHEMAS=	ncb.schemas
 
 .include <bsd.port.pre.mk>
+
+.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.undef WITHOUT_DVD
+WITH_DVD=	yes
+.endif
 
 .if exists(${LOCALBASE}/bin/growisofs)
 WITH_DVD=	yes
