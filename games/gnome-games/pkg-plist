@@ -390,13 +390,10 @@ share/gnome/help/iagno/C/figures/PLAYER.png
 share/gnome/help/iagno/C/figures/START.png
 share/gnome/help/iagno/C/iagno.xml
 share/gnome/help/iagno/C/legal.xml
-share/gnome/help/mahjongg/C/figures/color.png
-share/gnome/help/mahjongg/C/figures/confirm.png
 share/gnome/help/mahjongg/C/figures/mahjongg.png
 share/gnome/help/mahjongg/C/figures/no-match.png
 share/gnome/help/mahjongg/C/figures/no-move.png
 share/gnome/help/mahjongg/C/figures/preferences.png
-share/gnome/help/mahjongg/C/figures/scores.png
 share/gnome/help/mahjongg/C/figures/seed.png
 share/gnome/help/mahjongg/C/figures/toolbar.png
 share/gnome/help/mahjongg/C/legal.xml
@@ -405,7 +402,6 @@ share/gnome/help/same-gnome/C/figures/blink-sync.png
 share/gnome/help/same-gnome/C/figures/preferences.png
 share/gnome/help/same-gnome/C/figures/same-main-window.png
 share/gnome/help/same-gnome/C/figures/same-planets-fig.png
-share/gnome/help/same-gnome/C/figures/score-dialog.png
 share/gnome/help/same-gnome/C/legal.xml
 share/gnome/help/same-gnome/C/same-gnome.xml
 share/gnome/mime-info/gnome-stones.keys
@@ -483,14 +479,6 @@ share/gnome/pixmaps/cards/suits_small/knuth-09x10.png
 share/gnome/pixmaps/cards/suits_small/xpat-11x11.png
 share/gnome/pixmaps/cards/suits_small/xpat-15x15.png
 share/gnome/pixmaps/gataxx.png
-share/gnome/pixmaps/gataxx/blend.png
-share/gnome/pixmaps/gataxx/classic.png
-share/gnome/pixmaps/gataxx/flipblend.png
-share/gnome/pixmaps/gataxx/metal.png
-share/gnome/pixmaps/gataxx/metal2.png
-share/gnome/pixmaps/gataxx/shrink.png
-share/gnome/pixmaps/gataxx/sunmoon.png
-share/gnome/pixmaps/gataxx/woodtrim.png
 share/gnome/pixmaps/glines.png
 share/gnome/pixmaps/glines/ball.png
 share/gnome/pixmaps/glines/classic.png
