@@ -62,8 +62,13 @@ pre-everything::
 	@${ECHO_MSG} ""
 
 post-patch:
+.if defined(WITH_MOZILLA) && ${WITH_MOZILLA}=="firefox"
+	@${REINPLACE_CMD} -e 's|mozilla-gtkmozembed|firefox-gtkmozembed|g' \
+		${WRKSRC}/configure
+.else
 	@${REINPLACE_CMD} -e 's|mozilla-gtkmozembed|mozilla-gtkmozembed${HEADERS_SUFX}|g' \
 		${WRKSRC}/configure
+.endif
 
 post-configure:
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g ; \
