@@ -1,14 +1,5 @@
 --- configure.orig	Sat Mar  6 04:31:08 2004
 +++ configure	Sat Mar  6 04:35:09 2004
-@@ -24518,7 +24518,7 @@
- 	LDFLAGS_save="$LDFLAGS"
- 
- 	mitlibs="-lkrb5 -lk5crypto -lcom_err -lgssapi_krb5"
--	heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi"
-+	heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi -lcrypt"
- 	echo "$as_me:$LINENO: checking for Kerberos 5" >&5
- echo $ECHO_N "checking for Kerberos 5... $ECHO_C" >&6
- if test "${ac_cv_lib_kerberos5+set}" = set; then
 @@ -25368,10 +25368,10 @@
  Example: --with-nspr-libs=/usr/lib" >&2;}
     { (exit 1); exit 1; }; }
