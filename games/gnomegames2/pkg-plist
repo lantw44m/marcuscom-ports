@@ -23,7 +23,6 @@ etc/gconf/gconf.xml.defaults/apps/gataxx/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/glines/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/glines/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/glines/saved/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/gnect/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnibbles/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/%gconf.xml
@@ -53,7 +52,6 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gataxx/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/glines/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/glines/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/glines/saved/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnect/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/%gconf.xml
@@ -186,22 +184,6 @@ share/gnome/blackjack/Vegas_Strip.rules.dat
 @unexec [ -s %D/share/gnome/games/mahjongg.difficult.scores ] || rm -f %D/share/gnome/games/mahjongg.difficult.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.easy.scores ] || rm -f %D/share/gnome/games/mahjongg.easy.scores
 @unexec [ -s %D/share/gnome/games/same-gnome.scores ] || rm -f %D/share/gnome/games/same-gnome.scores
-share/gnome/gnect/catseyes_40x40.gnect
-share/gnome/gnect/classic_40x40.gnect
-share/gnome/gnect/classic_50x50.gnect
-share/gnome/gnect/clean_40x40.gnect
-share/gnome/gnect/clean_40x40_nightfall.gnect
-share/gnome/gnect/clean_50x50.gnect
-share/gnome/gnect/clean_50x50_nightfall.gnect
-share/gnome/gnect/default.gnect
-share/gnome/gnect/emulator_48x32.gnect
-share/gnome/gnect/glassy_40x40.gnect
-share/gnome/gnect/glassy_40x40_grotty.gnect
-share/gnome/gnect/glassy_50x50.gnect
-share/gnome/gnect/glassy_50x50_grotty.gnect
-share/gnome/gnect/safari_45x45.gnect
-share/gnome/gnect/square_40x40.gnect
-share/gnome/gnect/square_50x50.gnect
 share/gnome/gnect/white_ob.cn4
 share/gnome/gnibbles/level001.gnl
 share/gnome/gnibbles/level002.gnl
@@ -453,7 +435,6 @@ share/gnome/pixmaps/cards/ranks/fine-07x12.png
 share/gnome/pixmaps/cards/slots/hand.png
 share/gnome/pixmaps/cards/slots/plain.png
 share/gnome/pixmaps/cards/slots/white-outline.png
-share/gnome/pixmaps/cards/splash.png
 share/gnome/pixmaps/cards/suits_large/knuth-09x10.png
 share/gnome/pixmaps/cards/suits_large/knuth-15x19.png
 share/gnome/pixmaps/cards/suits_large/knuth-18x21.png
@@ -474,25 +455,20 @@ share/gnome/pixmaps/cards/suits_small/xpat-11x11.png
 share/gnome/pixmaps/cards/suits_small/xpat-15x15.png
 share/gnome/pixmaps/gataxx.png
 share/gnome/pixmaps/glines.png
-share/gnome/pixmaps/glines/ball.png
+share/gnome/pixmaps/glines/balls.svg
 share/gnome/pixmaps/glines/classic.png
 share/gnome/pixmaps/glines/dots.png
 share/gnome/pixmaps/glines/gumball.png
 share/gnome/pixmaps/glines/pulse.png
+share/gnome/pixmaps/glines/shapes.svg
 share/gnome/pixmaps/gnect-icon.png
 share/gnome/pixmaps/gnect/bg_grotty.jpg
 share/gnome/pixmaps/gnect/bg_nightfall.jpg
-share/gnome/pixmaps/gnect/tileset_40x40_catseyes.png
-share/gnome/pixmaps/gnect/tileset_40x40_classic.png
-share/gnome/pixmaps/gnect/tileset_40x40_clean.png
-share/gnome/pixmaps/gnect/tileset_40x40_glassy.png
-share/gnome/pixmaps/gnect/tileset_40x40_square.png
-share/gnome/pixmaps/gnect/tileset_45x45_safari.png
-share/gnome/pixmaps/gnect/tileset_48x32_emulator.png
+share/gnome/pixmaps/gnect/bg_toplight.png
 share/gnome/pixmaps/gnect/tileset_50x50_catseyes.png
 share/gnome/pixmaps/gnect/tileset_50x50_classic.png
-share/gnome/pixmaps/gnect/tileset_50x50_clean.png
 share/gnome/pixmaps/gnect/tileset_50x50_glassy.png
+share/gnome/pixmaps/gnect/tileset_50x50_hcontrast.png
 share/gnome/pixmaps/gnect/tileset_50x50_square.png
 share/gnome/pixmaps/gnibbles/gnibbles-logo.png
 share/gnome/pixmaps/gnibbles/gnibbles.png
@@ -544,6 +520,7 @@ share/gnome/pixmaps/gnome-stones/wall.png
 share/gnome/pixmaps/gnometris/5blocks-tig.png
 share/gnome/pixmaps/gnometris/5blocks-tim.png
 share/gnome/pixmaps/gnometris/5blocks.png
+share/gnome/pixmaps/gnometris/7blocks-gw.png
 share/gnome/pixmaps/gnometris/7blocks-tig.png
 share/gnome/pixmaps/gnometris/7blocks.png
 share/gnome/pixmaps/gnometris/7stones-gn.png
@@ -552,6 +529,7 @@ share/gnome/pixmaps/gnometris/bg/dog-bg.jpg
 share/gnome/pixmaps/gnometris/bg/fishy-bg.jpg
 share/gnome/pixmaps/gnometris/bg/geschier-bg.jpg
 share/gnome/pixmaps/gnometris/bg/gitter-bg.jpg
+share/gnome/pixmaps/gnometris/bg/gnome2-foot.png
 share/gnome/pixmaps/gnometris/bg/gnometris-bg.jpg
 share/gnome/pixmaps/gnometris/bg/greyprint-bg.jpg
 share/gnome/pixmaps/gnometris/bg/leaves-bg.jpg
@@ -588,6 +566,7 @@ share/gnome/pixmaps/same-gnome/marbles.png
 share/gnome/pixmaps/same-gnome/planets.png
 share/gnome/pixmaps/same-gnome/rotate.png
 share/gnome/pixmaps/same-gnome/stones.png
+share/gnome/sol-games/glade/statistics.glade
 share/gnome/sol-games/agnes.scm
 share/gnome/sol-games/auld_lang_syne.scm
 share/gnome/sol-games/bakers_dozen.scm
@@ -728,6 +707,7 @@ share/locale/ro/LC_MESSAGES/gnome-games.mo
 share/locale/ru/LC_MESSAGES/gnome-games.mo
 share/locale/sk/LC_MESSAGES/gnome-games.mo
 share/locale/sl/LC_MESSAGES/gnome-games.mo
+share/locale/sq/LC_MESSAGES/gnome-games.mo
 share/locale/sr/LC_MESSAGES/gnome-games.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-games.mo
 share/locale/sv/LC_MESSAGES/gnome-games.mo
@@ -742,6 +722,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/sounds/gnobots2
 @dirrm share/gnome/sounds/gnibbles
 @dirrm share/gnome/sounds/gataxx
+@dirrm share/gnome/sol-games/glade
 @dirrm share/gnome/sol-games
 @dirrm share/gnome/pixmaps/same-gnome
 @dirrm share/gnome/pixmaps/mahjongg
@@ -832,7 +813,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnect
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/glines/saved
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/glines/preferences
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/glines
@@ -865,7 +845,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/glines/saved
 @dirrm etc/gconf/gconf.xml.defaults/apps/glines/preferences
 @dirrm etc/gconf/gconf.xml.defaults/apps/glines
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnect
 @dirrm etc/gconf/gconf.xml.defaults/apps/gataxx
 @dirrm etc/gconf/gconf.xml.defaults/apps/blackjack/settings
 @dirrm etc/gconf/gconf.xml.defaults/apps/blackjack/global
