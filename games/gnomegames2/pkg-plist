@@ -63,6 +63,8 @@ etc/sound/events/gnect.soundlist
 etc/sound/events/gnibbles.soundlist
 etc/sound/events/gnobots2.soundlist
 etc/sound/events/iagno.soundlist
+lib/gnome-stones/objects/libgnome-stones.so
+lib/gnome-stones/objects/libgnomekoban.so
 share/gnome/applications/blackjack.desktop
 share/gnome/applications/freecell.desktop
 share/gnome/applications/gataxx.desktop
@@ -187,8 +189,6 @@ share/gnome/gnome-stones/default.caves
 share/gnome/gnome-stones/gnome-stonesrc
 share/gnome/gnome-stones/gnome-stonesrc.ko
 share/gnome/gnome-stones/gnomekoban.caves
-share/gnome/gnome-stones/objects/libgnome-stones.so
-share/gnome/gnome-stones/objects/libgnomekoban.so
 share/gnome/gnome-stones/tutorial.caves
 share/gnome/help/aisleriot/C/agnes.xml
 share/gnome/help/aisleriot/C/aisleriot.xml
@@ -771,12 +771,13 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/aisleriot/C/figures
 @dirrm share/gnome/help/aisleriot/C
 @dirrm share/gnome/help/aisleriot
-@dirrm share/gnome/gnome-stones/objects
 @dirrm share/gnome/gnome-stones
 @dirrm share/gnome/gnobots2
 @dirrm share/gnome/gnibbles
 @dirrm share/gnome/gnect
 @dirrm share/gnome/blackjack
+@dirrm lib/gnome-stones/objects
+@dirrm lib/gnome-stones
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/aisleriot-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/blackjack-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gataxx-C.omf 2>/dev/null || /usr/bin/true
