@@ -20,10 +20,11 @@ RUN_DEPENDS=	mlv:${PORTSDIR}/editors/mlview \
 		glade-2:${PORTSDIR}/devel/glade2 \
 		ghex2:${PORTSDIR}/editors/ghex2 \
 		gob2:${PORTSDIR}/devel/gob2 \
-		regexxer:${PORTSDIR}/devel/regexxer \
 		conglomerate:${PORTSDIR}/editors/conglomerate \
 		anjuta:${PORTSDIR}/devel/anjuta \
 		meld:${PORTSDIR}/textproc/meld
+# not yet buildable under GNOME 2.5
+#		regexxer:${PORTSDIR}/devel/regexxer
 
 NO_BUILD=	yes
 
