@@ -47,6 +47,7 @@ share/locale/sq/LC_MESSAGES/gail.mo
 share/locale/sr/LC_MESSAGES/gail.mo
 share/locale/sr@Latn/LC_MESSAGES/gail.mo
 share/locale/sv/LC_MESSAGES/gail.mo
+share/locale/ta/LC_MESSAGES/gail.mo
 share/locale/uk/LC_MESSAGES/gail.mo
 @dirrm share/doc/gail-libgail-util
 @dirrm lib/gtk-2.0/modules
