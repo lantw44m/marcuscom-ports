@@ -1,6 +1,14 @@
---- src/openfiles.c.orig	Fri Jan 14 03:16:02 2005
-+++ src/openfiles.c	Fri Jan 14 03:16:34 2005
-@@ -106,7 +106,7 @@
+--- src/openfiles.c.orig	Fri Jan 21 18:35:43 2005
++++ src/openfiles.c	Tue Jan 25 19:02:29 2005
+@@ -8,6 +8,7 @@
+ #include <netdb.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
++#include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include "procman.h"
+ #include "openfiles.h"
+@@ -143,7 +144,7 @@
  	const glibtop_open_files_entry *o2 = b;
  
  	/* Falta manejar los diferentes tipos! */
@@ -9,7 +17,7 @@
  }
  
  
-@@ -115,10 +115,10 @@
+@@ -152,10 +153,10 @@
  {
  	ProcInfo *info;
  	GtkTreeModel *model;
