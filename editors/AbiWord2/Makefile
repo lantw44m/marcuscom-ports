@@ -20,7 +20,6 @@ COMMENT=	An open-source, cross-platform WYSIWYG word processor
 # unzip is needed during the installation process
 BUILD_DEPENDS=	unzip:${PORTSDIR}/archivers/unzip
 LIB_DEPENDS=	png.5:${PORTSDIR}/graphics/png \
-		iconv.3:${PORTSDIR}/converters/libiconv \
 		fribidi.0:${PORTSDIR}/converters/fribidi \
 		popt.0:${PORTSDIR}/devel/popt \
 		enchant.2:${PORTSDIR}/textproc/enchant
@@ -31,6 +30,7 @@ WRKSRC=		${WRKDIR}/abiword-${PORTVERSION}/abi
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
+USE_ICONV=	yes
 #USE_AUTOMAKE=	yes
 #USE_AUTOMAKE_VER=14
 #USE_AUTOCONF_VER=213
