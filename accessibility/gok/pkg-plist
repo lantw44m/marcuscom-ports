@@ -2,6 +2,10 @@ bin/create-branching-keyboard
 bin/gok
 libdata/bonobo/servers/GNOME_Gok.server
 libdata/pkgconfig/gok-1.0.pc
+%%DOCSDIR%%/home.png
+%%DOCSDIR%%/left.png
+%%DOCSDIR%%/right.png
+%%DOCSDIR%%/up.png
 share/gnome/applications/gok.desktop
 share/gnome/gok/East.png
 share/gnome/gok/Keyboard.kbd
