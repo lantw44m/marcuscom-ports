@@ -1,0 +1,79 @@
+# New ports collection makefile for:	yelp
+# Date created:				18 May 2002
+# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
+#
+# $FreeBSD: ports/x11/yelp/Makefile,v 1.33 2004/11/07 22:24:25 marcus Exp $
+#
+
+PORTNAME=	yelp
+PORTVERSION=	2.9.1
+CATEGORIES=	x11 gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.9
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	A help browser for the GNOME 2 desktop
+
+BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc:${PORTSDIR}/textproc/gnomedocutils \
+		${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
+RUN_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc:${PORTSDIR}/textproc/gnomedocutils \
+		${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
+
+MOZILLA=	mozilla
+HEADERS_SUFX=
+
+.if !defined(WITH_MOZILLA)
+MOZILLA=	mozilla
+HEADERS_SUFX=
+.else
+.if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
+MOZILLA=	mozilla-devel
+HEADERS_SUFX=	-devel
+.else
+MOZILLA=	mozilla
+HEADERS_SUFX=
+.endif
+.endif
+
+USE_BZIP2=	yes
+USE_X_PREFIX=	yes
+USE_GMAKE=	yes
+USE_REINPLACE=	yes
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
+USE_LIBTOOL_VER=15
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
+
+GCONF_SCHEMAS=	yelp.schemas
+
+pre-everything::
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} " By default epiphany uses www/mozilla for html rendering, but you can"
+	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
+	@${ECHO_MSG}
+	@${ECHO_MSG} "  mozilla-devel "
+	@${ECHO_MSG} ""
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|mozilla-gtkmozembed|mozilla-gtkmozembed${HEADERS_SUFX}|g' \
+		${WRKSRC}/configure
+
+post-configure:
+	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g ; \
+		s|%%X11BASE%%|${X11BASE}|g ; \
+		s|%%MOZILLA%%|${MOZILLA}|g' <${FILESDIR}/yelp.sh \
+		> ${WRKDIR}/yelp.sh
+	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g ; \
+		s|%%X11BASE%%|${X11BASE}|g ; \
+		s|%%MOZILLA%%|${MOZILLA}|g' <${FILESDIR}/gnome-help.sh \
+		> ${WRKDIR}/gnome-help.sh
+
+post-install:
+	${MV} -f ${PREFIX}/bin/yelp ${PREFIX}/bin/yelp-bin
+	${MV} -f ${PREFIX}/bin/gnome-help ${PREFIX}/bin/gnome-help-bin
+	${INSTALL_SCRIPT} ${WRKDIR}/yelp.sh ${PREFIX}/bin/yelp
+	${INSTALL_SCRIPT} ${WRKDIR}/gnome-help.sh ${PREFIX}/bin/gnome-help
+
+.include <bsd.port.mk>
