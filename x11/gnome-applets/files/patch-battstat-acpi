@@ -66,7 +66,7 @@
 + *  along with this program; if not, write to the Free Software
 + *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02111-1307, USA.
 + *
-+ $Id: patch-battstat-acpi,v 1.9 2005-02-14 01:45:28 marcus Exp $
++ $Id: patch-battstat-acpi,v 1.10 2005-02-14 06:32:22 marcus Exp $
 + */
 +
 +/*
@@ -321,8 +321,8 @@
  	NULL
     };
  
---- battstat/power-management.c.orig	Thu Jan 13 23:06:40 2005
-+++ battstat/power-management.c	Sun Feb 13 20:44:23 2005
+--- battsta/power-management.c.orig	Thu Jan 13 23:06:40 2005
++++ battsta/power-management.c	Mon Feb 14 01:31:18 2005
 @@ -76,6 +76,14 @@
  #ifdef __FreeBSD__
  
@@ -338,7 +338,7 @@
  
  #define APMDEVICE "/dev/apm"
  
-@@ -86,25 +94,37 @@
+@@ -86,25 +94,38 @@
       FreeBSD.  Each time this functions is called (once every second)
       the APM device is opened, read from and then closed.
    */
@@ -382,12 +382,13 @@
 +  }
 +
 +  if (using_acpi) {
++    acpi_process_event(&acpiinfo);
 +    acpi_freebsd_read(&apminfo, &acpiinfo);
 +  }
  
    status->present = TRUE;
    status->on_ac_power = apminfo.ai_acline ? 1 : 0;
-@@ -339,6 +359,13 @@
+@@ -339,6 +360,13 @@
          G_IO_IN | G_IO_ERR | G_IO_HUP,
          acpi_callback, NULL);
    }
@@ -401,7 +402,7 @@
  #endif
    pm_initialised = 1;
  
-@@ -360,6 +387,10 @@
+@@ -360,6 +388,10 @@
        g_source_remove(acpiwatch);
       acpiwatch = 0;
       acpi_linux_cleanup(&acpiinfo);
