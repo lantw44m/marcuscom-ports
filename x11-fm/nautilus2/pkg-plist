@@ -140,6 +140,7 @@ share/gnome/pixmaps/nautilus/gnome/gnome.xml
 share/gnome/pixmaps/nautilus/knob.png
 share/gnome/pixmaps/nautilus/memory_chip.gif
 share/gnome/pixmaps/nautilus/nautilus-desktop.png
+share/gnome/pixmaps/nautilus/nautilus-file-management-properties.png
 share/gnome/pixmaps/nautilus/nautilus-launch-icon.png
 share/gnome/pixmaps/nautilus/nautilus-mini-logo.png
 share/gnome/pixmaps/nautilus/nautilus-server-connect.png
@@ -159,6 +160,7 @@ share/locale/bg/LC_MESSAGES/nautilus.mo
 share/locale/bn/LC_MESSAGES/nautilus.mo
 share/locale/ca/LC_MESSAGES/nautilus.mo
 share/locale/cs/LC_MESSAGES/nautilus.mo
+share/locale/cy/LC_MESSAGES/nautilus.mo
 share/locale/da/LC_MESSAGES/nautilus.mo
 share/locale/de/LC_MESSAGES/nautilus.mo
 share/locale/el/LC_MESSAGES/nautilus.mo
