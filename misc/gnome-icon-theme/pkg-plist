@@ -3,6 +3,11 @@ share/icons/gnome/12x12/emblems/emblem-symbolic-link.png
 share/icons/gnome/12x12/filesystems/gnome-fs-directory-accept.png
 share/icons/gnome/12x12/filesystems/gnome-fs-directory-visiting.png
 share/icons/gnome/12x12/filesystems/gnome-fs-directory.png
+share/icons/gnome/16x16/filesystems/gnome-fs-locally-shared.png
+share/icons/gnome/16x16/filesystems/gnome-fs-share-private.png
+share/icons/gnome/16x16/filesystems/gnome-fs-share.png
+share/icons/gnome/16x16/filesystems/gnome-fs-trash-empty.png
+share/icons/gnome/16x16/filesystems/gnome-fs-trash-full.png
 share/icons/gnome/16x16/devices/gnome-dev-cdrom-audio.png
 share/icons/gnome/16x16/devices/gnome-dev-cdrom.png
 share/icons/gnome/16x16/devices/gnome-dev-dvd.png
@@ -38,8 +43,6 @@ share/icons/gnome/16x16/mimetypes/gnome-mime-x-directory-smb-workgroup.png
 share/icons/gnome/192x192/devices/gnome-dev-cdrom.png
 share/icons/gnome/192x192/filesystems/gnome-fs-regular.icon
 share/icons/gnome/192x192/filesystems/gnome-fs-regular.png
-share/icons/gnome/192x192/filesystems/gnome-fs-trash-empty.png
-share/icons/gnome/192x192/filesystems/gnome-fs-trash-full.png
 share/icons/gnome/24x24/devices/gnome-dev-battery.png
 share/icons/gnome/24x24/devices/gnome-dev-cdrom-audio.png
 share/icons/gnome/24x24/devices/gnome-dev-cdrom.png
@@ -81,14 +84,21 @@ share/icons/gnome/24x24/filesystems/gnome-fs-directory-visiting.icon
 share/icons/gnome/24x24/filesystems/gnome-fs-directory-visiting.png
 share/icons/gnome/24x24/filesystems/gnome-fs-directory.icon
 share/icons/gnome/24x24/filesystems/gnome-fs-directory.png
+share/icons/gnome/24x24/filesystems/gnome-fs-locally-shared.png
 share/icons/gnome/24x24/filesystems/gnome-fs-network.png
 share/icons/gnome/24x24/filesystems/gnome-fs-server.png
+share/icons/gnome/24x24/filesystems/gnome-fs-share-private.png
+share/icons/gnome/24x24/filesystems/gnome-fs-share.png
+share/icons/gnome/24x24/filesystems/gnome-fs-trash-empty.png
+share/icons/gnome/24x24/filesystems/gnome-fs-trash-full.png
 share/icons/gnome/24x24/mimetypes/gnome-mime-x-directory-nfs-server.png
 share/icons/gnome/32x32/devices/gnome-dev-ipod.png
 share/icons/gnome/32x32/filesystems/gnome-fs-bookmark-missing.png
 share/icons/gnome/32x32/filesystems/gnome-fs-bookmark.png
 share/icons/gnome/32x32/filesystems/gnome-fs-client.png
 share/icons/gnome/32x32/filesystems/gnome-fs-desktop.png
+share/icons/gnome/32x32/filesystems/gnome-fs-trash-empty.png
+share/icons/gnome/32x32/filesystems/gnome-fs-trash-full.png
 share/icons/gnome/32x32/filesystems/gnome-fs-network.png
 share/icons/gnome/32x32/filesystems/gnome-fs-server.png
 share/icons/gnome/32x32/mimetypes/gnome-mime-application-msword.png
@@ -171,6 +181,8 @@ share/icons/gnome/48x48/emblems/emblem-danger.icon
 share/icons/gnome/48x48/emblems/emblem-danger.png
 share/icons/gnome/48x48/emblems/emblem-desktop.icon
 share/icons/gnome/48x48/emblems/emblem-desktop.png
+share/icons/gnome/48x48/emblems/emblem-distinguished.icon
+share/icons/gnome/48x48/emblems/emblem-distinguished.png
 share/icons/gnome/48x48/emblems/emblem-documents.icon
 share/icons/gnome/48x48/emblems/emblem-documents.png
 share/icons/gnome/48x48/emblems/emblem-draft.icon
@@ -738,6 +750,7 @@ share/icons/hicolor/16x16/stock/generic/stock_home.png
 share/icons/hicolor/16x16/stock/generic/stock_id.png
 share/icons/hicolor/16x16/stock/generic/stock_keyring.png
 share/icons/hicolor/16x16/stock/generic/stock_landline-phone.png
+share/icons/hicolor/16x16/stock/generic/stock_leave-fullscreen.png
 share/icons/hicolor/16x16/stock/generic/stock_mark.png
 share/icons/hicolor/16x16/stock/generic/stock_new-24h-appointment.png
 share/icons/hicolor/16x16/stock/generic/stock_new-appointment.png
@@ -1572,6 +1585,7 @@ share/icons/hicolor/24x24/stock/generic/stock_home.png
 share/icons/hicolor/24x24/stock/generic/stock_id.png
 share/icons/hicolor/24x24/stock/generic/stock_keyring.png
 share/icons/hicolor/24x24/stock/generic/stock_landline-phone.png
+share/icons/hicolor/24x24/stock/generic/stock_leave-fullscreen.png
 share/icons/hicolor/24x24/stock/generic/stock_mark.png
 share/icons/hicolor/24x24/stock/generic/stock_new-24h-appointment.png
 share/icons/hicolor/24x24/stock/generic/stock_new-appointment.png
