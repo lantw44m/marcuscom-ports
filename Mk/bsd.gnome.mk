@@ -40,25 +40,25 @@ Gnome_Pre_Include=			bsd.gnome.mk
 #
 
 # non-version specific components
-_USE_GNOME_ALL=	gnomehack lthack gnomeprefix gnomehier esound gnomemimedata \
-		gnometarget pkgconfig intltool intlhack
+_USE_GNOME_ALL= esound intlhack intltool lthack gnomehack \
+		gnomehier gnomemimedata gnomeprefix gnometarget pkgconfig 
 
 # GNOME 1 components
-_USE_GNOME_ALL+=libghttp glib12 gtk12 libxml gdkpixbuf imlib orbit \
-		gnomelibs gnomecanvas oaf gconf gnomevfs libcapplet \
-		gnomeprint bonobo libgda gnomedb libglade gal glibwww \
-		gtkhtml pygtk pygnome
+_USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
+		gnomecanvas gnomedb gnomelibs gnomeprint gnomevfs gtk12 \
+		gtkhtml libcapplet libgda libghttp libglade libxml imlib \
+		oaf orbit pygnome pygtk 
 
 # GNOME 2 components
-_USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 \
-		libglade2 libxml2 libxslt libbonobo gconf2 gnomevfs2 gail \
-		libgnomecanvas libartlgpl2 libgnomeprint libgnomeprintui \
-		libgnome libbonoboui libgnomeui atspi libgailgnome \
-		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
-		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
-		libgnomedb gtksourceview libgsf libgsf_gnome pygtk2 pygnome2 \
-		gstreamerplugins gtkhtml3 gnomespeech evolutiondataserver \
-		desktopfileutils nautiluscdburner gnomemenus pygnomeextras
+_USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver \
+		gail gal2 gconf2 glib20 gnomecontrolcenter2 gnomedesktop \
+		gnomemenus gnomepanel gnomespeech gnomevfs2 gstreamerplugins \
+		gtk20 gtkhtml3 gtksourceview libartlgpl2 libbonobo libbonoboui \
+		libgailgnome libgda2 libglade2 libgnome libgnomecanvas libgnomedb \
+		libgnomeprint libgnomeprintui libgnomeui libgsf libgsf_gnome \
+		libgtkhtml libidl librsvg2 libwnck libxml2 libxslt libzvt linc \
+		metacity nautilus2 nautiluscdburner orbit2 pango pygnome2 \
+		pygnomeextras pygtk2 vte 
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -361,7 +361,7 @@ libzvt_USE_GNOME_IMPL=	gtk20
 
 librsvg2_LIB_DEPENDS=	rsvg-2.11:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${X11BASE}/libdata/pkgconfig/librsvg-2.0.pc
-librsvg2_USE_GNOME_IMPL=libartlgpl2 libgsf gnomevfs2
+librsvg2_USE_GNOME_IMPL=libartlgpl2 libgsf gtk20
 
 eel2_LIB_DEPENDS=	eel-2.12:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${X11BASE}/libdata/pkgconfig/eel-2.0.pc
@@ -463,11 +463,9 @@ gnomemenus_DETECT=			${X11BASE}/libdata/pkgconfig/libgnome-menu.pc
 gnomemenus_USE_GNOME_IMPL=	gnomevfs2
 
 pygnomeextras_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/egg/__init__.py
-pygnomeextras_BUILD_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
-pygnomeextras_RUN_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
+pygnomeextras_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
+pygnomeextras_RUN_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
 pygnomeextras_USE_GNOME_IMPL=pygnome2 libgnomeprintui libgtkhtml gnomepanel gtksourceview libwnck nautiluscdburner
-
-# End component definition section
 
 ########
 #### NOTE: DO NOT COMMIT THIS NEXT PART TO THE MAIN FREEBSD REPO
@@ -476,6 +474,8 @@ pygnomeextras_USE_GNOME_IMPL=pygnome2 libgnomeprintui libgtkhtml gnomepanel gtks
 .include "${PORTSDIR}/Mk/bsd.gnome-experimental.mk"
 .endif
 # end part you shouldn't commit.
+
+# End component definition section
 
 # This section defines tests for optional software.  These work off four
 # types of variables:  WANT_GNOME, WITH_GNOME, HAVE_GNOME and USE_GNOME.
