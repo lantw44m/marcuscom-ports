@@ -137,6 +137,8 @@ share/locale/ga/LC_MESSAGES/metacity.mo
 share/locale/gl/LC_MESSAGES/metacity.mo
 share/locale/he/LC_MESSAGES/metacity.mo
 share/locale/hu/LC_MESSAGES/metacity.mo
+share/locale/id/LC_MESSAGES/metacity.mo
+share/locale/is/LC_MESSAGES/metacity.mo
 share/locale/it/LC_MESSAGES/metacity.mo
 share/locale/ja/LC_MESSAGES/metacity.mo
 share/locale/ko/LC_MESSAGES/metacity.mo
@@ -160,6 +162,7 @@ share/locale/sv/LC_MESSAGES/metacity.mo
 share/locale/tr/LC_MESSAGES/metacity.mo
 share/locale/uk/LC_MESSAGES/metacity.mo
 share/locale/vi/LC_MESSAGES/metacity.mo
+share/locale/wa/LC_MESSAGES/metacity.mo
 share/locale/zh_CN/LC_MESSAGES/metacity.mo
 share/locale/zh_TW/LC_MESSAGES/metacity.mo
 @dirrm share/gnome/themes/Simple/metacity-1
