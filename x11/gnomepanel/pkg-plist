@@ -28,6 +28,7 @@ etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/
 etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000002/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000003/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000004/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/show_desktop_button/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/general/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/objects/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/objects/00000001/%gconf.xml
@@ -54,7 +55,6 @@ etc/sound/events/mailcheck.soundlist
 include/panel-2.0/GNOME_Panel.h
 include/panel-2.0/panel-applet-gconf.h
 include/panel-2.0/panel-applet.h
-lib/gnome-panel/libnotification-area-applet.so
 lib/libgen_util_applet-2.so
 lib/libpanel-applet-2.a
 lib/libpanel-applet-2.so
@@ -65,6 +65,7 @@ libdata/bonobo/servers/GNOME_NotificationAreaApplet.server
 libdata/bonobo/servers/GNOME_Panel.server
 libdata/pkgconfig/libpanelapplet-2.0.pc
 libexec/fish-applet-2
+libexec/notification-area-applet
 share/gnome/control-center-2.0/capplets/gnome-panel-preferences.desktop
 share/gnome/gen_util/pager.glade
 share/gnome/gen_util/tasklist.glade
@@ -195,7 +196,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/gnome-panel
 @dirrm share/gnome/fish
 @dirrm share/doc/panel-applet
-@dirrm lib/gnome-panel
 @dirrm include/panel-2.0
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/tasklist_applet/prefs
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/tasklist_applet
@@ -211,6 +211,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/objects/00000001
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/objects
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/general
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/show_desktop_button
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000004
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000003
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/panel/default_profiles/medium/applets/00000002
