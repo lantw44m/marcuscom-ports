@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomesystemtools
-PORTVERSION=	1.1.90
+PORTVERSION=	1.1.91
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-tools/1.1
@@ -16,9 +16,11 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Tools to configure workstations
 
+BUILD_DEPENDS=	${X11BASE}/share/setup-tool-backends/scripts/xml.pl:${PORTSDIR}/sysutils/system-tools-backends
+RUN_DEPENDS=	${X11BASE}/share/setup-tool-backends/scripts/xml.pl:${PORTSDIR}/sysutils/system-tools-backends
+
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_PERL5=	yes
 USE_X_PREFIX=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack nautilus2
@@ -36,16 +38,6 @@ CONFIGURE_ARGS+=	--enable-services
 PLIST_SUB+=		SERVICES=""
 .else
 PLIST_SUB+=		SERVICES="@comment "
-.endif
-
-.if ${PERL_LEVEL} <= 500800
-RUN_DEPENDS+=	${SITE_PERL}/File/Temp.pm:${PORTSDIR}/devel/p5-File-Temp
-.endif
-
-.if ${PERL_LEVEL} < 500600
-post-configure:
-	@${FIND} ${WRKSRC}/backends \( -name "*.pl" -or -name "*-conf" \) | \
-		${XARGS} ${REINPLACE_CMD} -e 's|@scriptsdir|[@]scriptsdir|g'
 .endif
 
 .include <bsd.port.post.mk>
