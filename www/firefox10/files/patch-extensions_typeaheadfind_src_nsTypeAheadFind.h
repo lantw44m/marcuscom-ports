@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/firefox/files/patch-extensions_typeaheadfind_src_nsTypeAheadFind.h,v 1.1 2004/02/11 07:16:17 marcus Exp $
+$FreeBSD$
 
 --- extensions/typeaheadfind/src/nsTypeAheadFind.h.orig	Fri May 23 22:00:33 2003
 +++ extensions/typeaheadfind/src/nsTypeAheadFind.h	Mon Feb  9 22:21:43 2004

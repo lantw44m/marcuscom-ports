@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/firefox/files/patch-nspr-unix.c,v 1.2 2004/02/11 07:16:17 marcus Exp $
+$FreeBSD$
 
 --- nsprpub/pr/src/md/unix/unix.c.orig	Sat May 31 18:06:04 2003
 +++ nsprpub/pr/src/md/unix/unix.c	Sat May 31 18:04:43 2003

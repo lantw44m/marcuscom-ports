@@ -2,7 +2,7 @@
 # Date created:			4 September 2003
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/thunderbird/Makefile,v 1.38 2004/12/28 00:51:57 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	thunderbird

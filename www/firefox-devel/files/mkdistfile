@@ -33,7 +33,7 @@
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: ports/www/firefox/files/mkdistfile,v 1.6 2004/02/11 07:16:17 marcus Exp $
+# $FreeBSD$
 #
 # 2002/10/21 alane@geeksrus.net
 #
@@ -87,7 +87,7 @@ EOF
 ############################################################
 # show version and exit
 ############################################################
-VERSION='$Revision: 1.1 $'
+VERSION='$Revision: 1.2 $'
 VERSION=${VERSION#* }; VERSION=${VERSION% *}
 version() { echo "$APPNAME $VERSION" \
     "Copyright (c) 2002 Alan Eldridge"; exit $1;}

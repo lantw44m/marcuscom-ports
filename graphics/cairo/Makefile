@@ -2,7 +2,7 @@
 # Date created:		2004-10-06
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/cairo/Makefile,v 1.7 2005/02/24 11:15:30 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	cairo

@@ -2,7 +2,7 @@
 # Date created:		31 Mar 1998
 # Whom:			eivind/dima/jseger
 #
-# $FreeBSD: ports/www/mozilla/Makefile,v 1.186 2005/02/13 07:20:57 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME?=	mozilla

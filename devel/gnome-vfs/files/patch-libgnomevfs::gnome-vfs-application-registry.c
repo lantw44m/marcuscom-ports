@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/gnomevfs2/files/patch-libgnomevfs::gnome-vfs-application-registry.c,v 1.5 2004/11/07 22:24:12 marcus Exp $
+$FreeBSD$
 
 --- libgnomevfs/gnome-vfs-application-registry.c	2002/06/13 07:31:15	1.1
 +++ libgnomevfs/gnome-vfs-application-registry.c	2002/06/13 08:25:24

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/print/freetype2/files/patch-builds::unix::configure,v 1.2 2002/06/21 16:42:45 sobomax Exp $
+$FreeBSD$
 
 --- builds/unix/configure.orig	Mon Apr 22 19:50:27 2002
 +++ builds/unix/configure	Fri Jun 21 15:48:06 2002

@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/firefox/files/patch-nsprpub-pr-src-pthreads-ptio.c,v 1.4 2004/02/11 07:16:17 marcus Exp $
+$FreeBSD$
 
 --- nsprpub/pr/src/pthreads/ptio.c.orig	Mon Jul 14 21:59:47 2003
 +++ nsprpub/pr/src/pthreads/ptio.c	Fri Oct 17 05:25:43 2003

@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/firefox/files/patch-nsprpub-pr-include-md-_freebsd.h,v 1.3 2004/02/11 07:16:17 marcus Exp $
+$FreeBSD$
 
 --- nsprpub/pr/include/md/_freebsd.h.orig	Sat Nov 15 23:36:13 2003
 +++ nsprpub/pr/include/md/_freebsd.h	Mon Feb  9 22:24:39 2004

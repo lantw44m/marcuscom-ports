@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/mozilla/files/patch-build_unix_run-mozilla.sh,v 1.5 2004/11/07 22:24:21 marcus Exp $
+$FreeBSD$
 
 --- build/unix/run-mozilla.sh.orig	Mon Dec 15 12:27:28 2003
 +++ build/unix/run-mozilla.sh	Wed Feb 11 14:24:17 2004

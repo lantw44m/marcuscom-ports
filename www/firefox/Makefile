@@ -2,7 +2,7 @@
 # Date created:			2002/10/21
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
-# $FreeBSD: ports/www/firefox/Makefile,v 1.116 2005/03/02 06:50:12 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	firefox

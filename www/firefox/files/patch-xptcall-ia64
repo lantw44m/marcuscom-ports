@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/firefox/files/patch-xptcall-ia64,v 1.2 2004/02/11 07:16:17 marcus Exp $
+$FreeBSD$
 
 --- xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ipf64.s.orig	Sun Jul 20 00:05:32 2003
 +++ xpcom/reflect/xptcall/src/md/unix/xptcinvoke_asm_ipf64.s	Sun Jul 20 00:06:37 2003

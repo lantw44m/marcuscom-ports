@@ -1,4 +1,4 @@
-$FreeBSD: ports/www/firefox/files/patch-config-rules.mk,v 1.3 2004/02/11 07:16:17 marcus Exp $
+$FreeBSD$
 
 --- config/rules.mk.orig	Tue Aug 26 13:28:47 2003
 +++ config/rules.mk	Sun Feb  1 15:11:41 2004
