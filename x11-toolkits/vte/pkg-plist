@@ -12,6 +12,7 @@ lib/vte/iso8859mode
 lib/vte/nativeecho
 lib/vte/osc
 lib/vte/slowcat
+lib/vte/vterdb
 lib/vte/utf8echo
 lib/vte/utf8mode
 lib/vte/window
