@@ -20,6 +20,7 @@ BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
 LIB_DEPENDS=	rsvg-2.3:${PORTSDIR}/graphics/librsvg2 \
 		eel-2.3:${PORTSDIR}/x11-toolkits/eel2 \
 		gnome-desktop-2.3:${PORTSDIR}/x11/gnomedesktop
+RUN_DEPENDS=	gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
