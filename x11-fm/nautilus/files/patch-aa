@@ -1,13 +1,5 @@
 --- configure.orig	Mon Jan 13 10:45:25 2003
 +++ configure	Tue Jan 14 13:11:53 2003
-@@ -8294,6 +8294,7 @@
- 
- # This can be used to rebuild libtool when needed
- LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
-+$ac_aux_dir/ltconfig $LIBTOOL_DEPS
- 
- # Always use our own libtool.
- LIBTOOL='$(SHELL) $(top_builddir)/libtool'
 @@ -12661,7 +12662,7 @@
  
  LIBNAUTILUS_LIBS="`$PKG_CONFIG --libs $LIBNAUTILUS_MODULES`"
