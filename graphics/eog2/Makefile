@@ -7,6 +7,8 @@
 
 PORTNAME=	eog2
 PORTVERSION=	2.3.0
+PORTREVISION=	1
+#PORTREVISION=	0
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.3
@@ -19,8 +21,7 @@ COMMENT=	The Eye Of Gnome image viewer
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeui libgnomeprintui \
-	   	librsvg2
+USE_GNOME=	gnomeprefix gnomehack gnomehier eel2 libgnomeprintui librsvg2
 USE_X_PREFIX=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
