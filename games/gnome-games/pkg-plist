@@ -94,6 +94,7 @@ etc/sound/events/gnect.soundlist
 etc/sound/events/gnibbles.soundlist
 etc/sound/events/gnobots2.soundlist
 etc/sound/events/iagno.soundlist
+include/gdkcardimage/card-style-file.h
 include/gdkcardimage/gdk-card-image.h
 lib/libgdkcardimage.a
 lib/libgdkcardimage.so
@@ -442,6 +443,7 @@ share/gnome/pixmaps/cards/backs/grey.png
 share/gnome/pixmaps/cards/backs/rods.png
 share/gnome/pixmaps/cards/backs/tux.png
 share/gnome/pixmaps/cards/baize.png
+share/gnome/pixmaps/cards/card-styles.xml
 share/gnome/pixmaps/cards/honors/bonded.png
 share/gnome/pixmaps/cards/honors/dondorf.png
 share/gnome/pixmaps/cards/honors/xpat.png
