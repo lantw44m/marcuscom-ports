@@ -1,18 +1,6 @@
---- docs/Makefile.in.orig	Fri Nov  8 17:15:31 2002
-+++ docs/Makefile.in	Fri Nov  8 17:17:43 2002
-@@ -126,9 +126,9 @@
- # The directory containing the source code (if it contains documentation).
- DOC_SOURCE_DIR = ../atk
- 
--INSTALLDIR = $(prefix)/share/gtk-doc
-+INSTALLDIR = $(prefix)/share/doc
- 
--HTML_DIR = ${datadir}/gtk-doc/html
-+HTML_DIR = ${prefix}/share/doc
- 
- # Header files to ignore when scanning
- IGNORE_HFILES = atkmarshal.h atkintl.h
-@@ -276,6 +276,7 @@
+--- docs/Makefile.in.orig	Fri Jan 24 16:45:09 2003
++++ docs/Makefile.in	Fri Jan 24 16:45:09 2003
+@@ -274,6 +274,7 @@
  dist-hook-local: all-local
  
  @ENABLE_GTK_DOC_TRUE@all-local: html-build.stamp

@@ -28,6 +28,7 @@ lib/libatk-1.0.a
 lib/libatk-1.0.so
 lib/libatk-1.0.so.200
 libdata/pkgconfig/atk.pc
+share/doc/atk/atk-atkstate.html
 share/doc/atk/atk.html
 share/doc/atk/atkaction.html
 share/doc/atk/atkcomponent.html
@@ -61,9 +62,11 @@ share/locale/de/LC_MESSAGES/atk10.mo
 share/locale/el/LC_MESSAGES/atk10.mo
 share/locale/en_GB/LC_MESSAGES/atk10.mo
 share/locale/es/LC_MESSAGES/atk10.mo
+share/locale/fi/LC_MESSAGES/atk10.mo
 share/locale/fr/LC_MESSAGES/atk10.mo
 share/locale/he/LC_MESSAGES/atk10.mo
 share/locale/hu/LC_MESSAGES/atk10.mo
+share/locale/it/LC_MESSAGES/atk10.mo
 share/locale/ko/LC_MESSAGES/atk10.mo
 share/locale/lv/LC_MESSAGES/atk10.mo
 share/locale/ms/LC_MESSAGES/atk10.mo
@@ -71,9 +74,11 @@ share/locale/nl/LC_MESSAGES/atk10.mo
 share/locale/no/LC_MESSAGES/atk10.mo
 share/locale/pl/LC_MESSAGES/atk10.mo
 share/locale/ru/LC_MESSAGES/atk10.mo
+share/locale/sq/LC_MESSAGES/atk10.mo
 share/locale/sv/LC_MESSAGES/atk10.mo
 share/locale/uk/LC_MESSAGES/atk10.mo
 share/locale/vi/LC_MESSAGES/atk10.mo
+share/locale/zh_CN/LC_MESSAGES/atk10.mo
 @dirrm share/doc/atk
 @dirrm include/atk-1.0/atk
 @dirrm include/atk-1.0
