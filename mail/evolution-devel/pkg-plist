@@ -1268,7 +1268,6 @@ share/locale/zh_TW/LC_MESSAGES/evolution-1.4.mo
 @dirrm share/gnome/evolution/%%VERSION%%/default_user/views/calendar
 @dirrm share/gnome/evolution/%%VERSION%%/default_user/views/addressbook
 @dirrm share/gnome/evolution/%%VERSION%%/default_user/views
-@dirrm share/gnome/evolution/%%VERSION%%/default_user/private
 @dirrm share/gnome/evolution/%%VERSION%%/default_user/local/Trash
 @dirrm share/gnome/evolution/%%VERSION%%/default_user/local/Tasks
 @dirrm share/gnome/evolution/%%VERSION%%/default_user/local/Sent

@@ -6,11 +6,10 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	1.3.2
+PORTVERSION=	1.3.3
 CATEGORIES=	mail gnome
-MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
-		${MASTER_SITE_GNOME} \
-		http://people.FreeBSD.org/~marcus/:local
+MASTER_SITES=	${MASTER_SITE_GNOME} \
+		http://people.FreeBSD.org/~sobomax/:local
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.3 \
 			sobomax/:local
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
@@ -32,7 +31,7 @@ RUN_DEPENDS=	${X11BASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSD
 LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
 .endif
 
-#USE_BZIP2=	yes
+USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	yes
 USE_X_PREFIX=	yes
