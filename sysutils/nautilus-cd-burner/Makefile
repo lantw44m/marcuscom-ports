@@ -1,0 +1,35 @@
+# New ports collection makefile for:	nautilus-cd-burner
+# Date created:				13 April 2003
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	nautilus-cd-burner
+PORTVERSION=	0.4.0
+CATEGORIES=	multimedia gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.4
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	CD burner view for Nautilus
+
+RUN_DEPENDS=	mkisofs:${PORTSDIR}/sysutils/mkisofs \
+		cdrecord:${PORTSDIR}/sysutils/cdrtools
+
+USE_BZIP2=	yes
+USE_X_PREFIX=	yes
+USE_REINPLACE=	yes
+USE_GMAKE=	yes
+GNOME_DESKTOP_VERSION=2
+USE_GNOME=	gnomeprefix gnomehack nautilus2
+USE_LIBTOOL=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="-L${LOCALBASE}/lib"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>
