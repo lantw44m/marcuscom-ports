@@ -74,6 +74,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/dnd.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/dndpixmap.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/editable_cells.py
+%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/entrycompletion.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/itemfactory.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/list_store.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/menu.py
