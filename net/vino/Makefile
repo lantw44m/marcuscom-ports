@@ -2,7 +2,7 @@
 # Date created:				16 July 2004
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/net/vino/Makefile,v 1.5 2004/08/30 19:05:46 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	vino

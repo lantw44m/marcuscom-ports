@@ -2,7 +2,7 @@
 # Date created:				04 April 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gnomecommon/Makefile,v 1.17 2004/02/04 05:19:32 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomecommon
