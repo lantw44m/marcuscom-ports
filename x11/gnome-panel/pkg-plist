@@ -1,6 +1,5 @@
 bin/gnome-desktop-item-edit
 bin/gnome-panel
-bin/gnome-panel-preferences
 bin/gnome-panel-screenshot
 bin/panel-test-applets
 @unexec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --unload %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel/profiles/default > /dev/null || /usr/bin/true
@@ -43,7 +42,6 @@ share/doc/panel-applet/server-files.html
 share/doc/panel-applet/session-saving.html
 share/doc/panel-applet/style.css
 share/doc/panel-applet/up.png
-share/gnome/control-center-2.0/capplets/gnome-panel-preferences.desktop
 share/gnome/gnome-2.0/ui/GNOME_ClockApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_FishApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_NotificationAreaApplet.xml
@@ -292,7 +290,6 @@ share/gnome/omf/gnome-panel/workspace-switcher-zh_CN.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/workspace-switcher-zh_CN.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-panel/workspace-switcher-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/workspace-switcher-zh_TW.omf 2>/dev/null || /usr/bin/true
-share/gnome/panel/gnome-panel-preferences.glade
 share/gnome/panel/gnome-panel-screenshot.glade
 share/gnome/panel/panel-properties-dialog.glade
 share/gnome/panel/panel-run-dialog.glade
@@ -360,6 +357,7 @@ share/locale/ml/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/mn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/mr/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ms/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/nb/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/no/LC_MESSAGES/gnome-panel-2.0.mo
