@@ -252,7 +252,6 @@ post-patch:
 		${WRKSRC}/modules/libpref/src/init/all.js
 	@for pcfile in ${PKGCONFIG_FILES}; do \
 		${REINPLACE_CMD} -e 's|mozilla-xpcom|mozilla-xpcom${MOZ_SUFX}${PKGNAMESUFFIX}|g ; \
-			s|${FAKEDIR}|${PREFIX}|g ; \
 			s|mozilla-nspr|mozilla-nspr${MOZ_SUFX}${PKGNAMESUFFIX}|g' \
 			${WRKSRC}/build/unix/$${pcfile}.pc.in; \
 	done
@@ -334,6 +333,8 @@ do-install:
 		done; \
 	fi
 	for pcfile in ${PKGCONFIG_FILES}; do \
+		${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
+			${WRKSRC}/build/unix/$${pcfile}.pc
 		${INSTALL_DATA} ${WRKSRC}/build/unix/$${pcfile}.pc \
 			${PREFIX}/libdata/pkgconfig/$${pcfile}${MOZ_SUFX}${PKGNAMESUFFIX}.pc ; \
 	done
