@@ -1,5 +1,6 @@
 bin/gnumeric
 bin/gnumeric-%%VERSION%%
+bin/ssconvert
 lib/gnumeric/%%VERSION%%/plugins/applix/applix.so
 lib/gnumeric/%%VERSION%%/plugins/applix/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/corba/corba.so
@@ -214,6 +215,7 @@ share/gnome/help/gnumeric/C/analysis-solver.xml
 share/gnome/help/gnumeric/C/analysis-statistical.xml
 share/gnome/help/gnumeric/C/appendix-glossary.xml
 share/gnome/help/gnumeric/C/appendix-keybindings.xml
+share/gnome/help/gnumeric/C/bugs.xml
 share/gnome/help/gnumeric/C/configuration-localization.xml
 share/gnome/help/gnumeric/C/configuration-overview.xml
 share/gnome/help/gnumeric/C/configuration-plugins.xml
