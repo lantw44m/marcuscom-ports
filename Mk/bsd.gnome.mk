@@ -373,7 +373,7 @@ gnomepanel_USE_GNOME_IMPL=gnomedesktop libwnck
 gnomepanel_GNOME_DESKTOP_VERSION=2
 
 nautilus2_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus2
-nautilus2_DETECT=	${X11BASE}/libdata/pkgconfig/libnautilus.pc
+nautilus2_DETECT=	${X11BASE}/libdata/pkgconfig/libnautilus-extension.pc
 nautilus2_USE_GNOME_IMPL=librsvg2 eel2 gnomedesktop
 nautilus2_GNOME_DESKTOP_VERSION=2
 
@@ -425,7 +425,7 @@ pygnome2_USE_GNOME_IMPL=libgnomeui pygtk2
 
 gstreamerplugins_LIB_DEPENDS=	gstplay-0.8.1:${PORTSDIR}/multimedia/gstreamer-plugins \
 								gstreamer-0.8:${PORTSDIR}/multimedia/gstreamer
-gstreamerplugins_DETECT=	${X11BASE}/libdata/pkgconfig/gstreamer-play-0.7.pc
+gstreamerplugins_DETECT=	${X11BASE}/libdata/pkgconfig/gstreamer-play-0.8.pc
 gstreamerplugins_USE_GNOME_IMPL=	gconf2
 
 intltool_DETECT=		${LOCALBASE}/bin/intltool-extract
