@@ -498,6 +498,7 @@ share/gnome/pixmaps/gnome-stones/frame.png
 share/gnome/pixmaps/gnome-stones/gnome.png
 share/gnome/pixmaps/gnome-stones/title.png
 share/gnome/pixmaps/gnome-stones/wall.png
+share/gnome/pixmaps/gnome-xbill.png
 share/gnome/pixmaps/gnometris/5blocks-tig.png
 share/gnome/pixmaps/gnometris/5blocks-tim.png
 share/gnome/pixmaps/gnometris/5blocks.png
@@ -549,7 +550,6 @@ share/gnome/pixmaps/same-gnome/marbles.png
 share/gnome/pixmaps/same-gnome/planets.png
 share/gnome/pixmaps/same-gnome/rotate.png
 share/gnome/pixmaps/same-gnome/stones.png
-share/gnome/pixmaps/xbill.png
 share/gnome/sol-games/agnes.scm
 share/gnome/sol-games/auld_lang_syne.scm
 share/gnome/sol-games/bakers_dozen.scm
