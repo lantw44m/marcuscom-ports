@@ -1,9 +1,9 @@
---- blackjack/src/player.cpp.orig	Mon May 31 16:07:01 2004
-+++ blackjack/src/player.cpp	Mon May 31 16:13:37 2004
+--- blackjack/src/player.cpp.orig	Tue Jul  6 12:56:50 2004
++++ blackjack/src/player.cpp	Tue Jul  6 12:59:29 2004
 @@ -262,8 +262,8 @@
          // Player can always stand.
  
-         bestValue = value = getValueStand (*player, upCard);
+         bestValue = value = getValueStand (*lplayer, upCard);
 -        mark_list[num_options++] = g_strdup_printf ("  %s     %8.2lf%%\n", 
 -                                                    _("Stand"), value * 100);
 +        mark_list[num_options++] = g_strdup_printf ("  %s     %8.2Lf%%\n", 
@@ -13,7 +13,7 @@
  
 @@ -271,8 +271,8 @@
          if (bj_hand_can_be_hit ()) {
-                 value = getValueHit (*player, upCard);
+                 value = getValueHit (*lplayer, upCard);
                  
 -                mark_list[num_options++] = g_strdup_printf ("  %s       %8.2lf%%\n", 
 -                                                            _("Hit"), value * 100);
@@ -25,7 +25,7 @@
 @@ -282,8 +282,8 @@
                  // Check if player can double down.
                  if (bj_hand_can_be_doubled ()) {
-                         value = getValueDoubleDown (*player, upCard);
+                         value = getValueDoubleDown (*lplayer, upCard);
 -                        mark_list[num_options++] = g_strdup_printf ("  %s    %8.2lf%%\n", 
 -                                                                    _("Double"), value * 100);
 +                        mark_list[num_options++] = g_strdup_printf ("  %s    %8.2Lf%%\n", 
@@ -36,7 +36,7 @@
 @@ -296,8 +296,8 @@
  
          if (bj_hand_can_be_split ()) {
-                 value = getValueSplit(player->cards[0].value (), upCard);
+                 value = getValueSplit(lplayer->cards[0].value (), upCard);
 -                mark_list[num_options++] = g_strdup_printf ("  %s     %8.2lf%%\n", 
 -                                                            _("Split"), value * 100);
 +                mark_list[num_options++] = g_strdup_printf ("  %s     %8.2Lf%%\n", 
@@ -60,15 +60,15 @@
  
          mark_list[0] = g_strdup_printf ("<b>%s</b>\n", _("Dealer hand probabilities"));
 -        mark_list[1] = g_strdup_printf ("  %s         %5.2lf%%\n", _("Bust"),
--                                        getProbabilityBust (upCard) * 100.0 / notBlackjack);
+-                                        getProbabilityBust (lupCard) * 100.0 / notBlackjack);
 +        mark_list[1] = g_strdup_printf ("  %s         %5.2Lf%%\n", _("Bust"),
-+                                        (long double)(getProbabilityBust (upCard) * 100.0 / notBlackjack));
++                                        (long double)(getProbabilityBust (lupCard) * 100.0 / notBlackjack));
          for (int count = 17; count <= 21; count++) {
 -                mark_list[count-15] = g_strdup_printf ("  %2d           %5.2lf%%\n", count,
--                                                       getProbabilityCount (count, upCard)
+-                                                       getProbabilityCount (count, lupCard)
 -                                                       * 100.0 / notBlackjack);
 +                mark_list[count-15] = g_strdup_printf ("  %2d           %5.2Lf%%\n", count,
-+                                                       (long double)(getProbabilityCount (count, upCard)
++                                                       (long double)(getProbabilityCount (count, lupCard)
 +                                                       * 100.0 / notBlackjack));
          }
  
