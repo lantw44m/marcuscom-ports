@@ -1,0 +1,24 @@
+bin/acme
+bin/acme-properties
+etc/gconf/gconf.xml.defaults/apps/acme/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/acme/%gconf.xml
+etc/gconf/schemas/acme.schemas
+share/gnome/acme/acme-16.png
+share/gnome/acme/acme-48.png
+share/gnome/acme/acme-brightness.png
+share/gnome/acme/acme-eject.png
+share/gnome/acme/acme-properties.glade
+share/gnome/acme/acme.glade
+share/gnome/acme/gnome-speakernotes-muted.png
+share/gnome/acme/gnome-speakernotes.png
+share/gnome/control-center-2.0/capplets/acme.desktop
+share/locale/es/LC_MESSAGES/acme.mo
+share/locale/fr/LC_MESSAGES/acme.mo
+share/locale/lv/LC_MESSAGES/acme.mo
+share/locale/no/LC_MESSAGES/acme.mo
+share/locale/pt_BR/LC_MESSAGES/acme.mo
+share/locale/sv/LC_MESSAGES/acme.mo
+share/locale/vi/LC_MESSAGES/acme.mo
+@dirrm share/gnome/acme
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/acme
+@dirrm etc/gconf/gconf.xml.defaults/apps/acme
