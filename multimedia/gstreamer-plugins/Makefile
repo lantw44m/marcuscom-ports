@@ -7,6 +7,7 @@
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.7.4
+PORTREVISION=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gst-plugins/0.7

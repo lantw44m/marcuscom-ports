@@ -1,6 +1,22 @@
---- gst-libs/ext/ffmpeg/Makefile.in.orig	Fri Dec 19 14:31:01 2003
-+++ gst-libs/ext/ffmpeg/Makefile.in	Fri Dec 19 14:40:11 2003
-@@ -866,7 +866,7 @@
+--- gst-libs/ext/ffmpeg/Makefile.in.orig	Sat Feb 21 18:56:31 2004
++++ gst-libs/ext/ffmpeg/Makefile.in	Sat Feb 21 19:04:32 2004
+@@ -532,15 +532,12 @@
+  $(defs_powerpc) \
+  -DTUNECPU=generic \
+  -DHAVE_STRPTIME=1 \
+- -DHAVE_LRINTF=1 \
+  -DCONFIG_ENCODERS=1 \
+  -DCONFIG_DECODERS=1 \
+  -DCONFIG_PP=1 \
+  -DCONFIG_MPEGAUDIO_HP=1 \
+  -DCONFIG_HAVE_DLOPEN=1 \
+  -DCONFIG_HAVE_DLFCN=1 \
+- -DHAVE_MALLOC_H=1 \
+- -DHAVE_MEMALIGN=1 \
+  -DSIMPLE_IDCT=1 \
+  -DCONFIG_RISKY=1
+ 
+@@ -904,7 +901,7 @@
  	libavformat_la-file.lo libavformat_la-flvdec.lo \
  	libavformat_la-flvenc.lo libavformat_la-framehook.lo \
  	libavformat_la-gif.lo libavformat_la-gifdec.lo \
@@ -9,7 +25,7 @@
  	libavformat_la-idroq.lo libavformat_la-img.lo \
  	libavformat_la-ipmovie.lo libavformat_la-jpeg.lo \
  	libavformat_la-mov.lo libavformat_la-movenc.lo \
-@@ -5659,7 +5659,7 @@
+@@ -5697,7 +5694,7 @@
  
  patches:
  	@echo -n Patching ffmpeg if necessary ...
