@@ -8,7 +8,8 @@
 PORTNAME=	cairo
 PORTVERSION=	0.3.0.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://people.freebsd.org/~ahze/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	ahze
 #MASTER_SITES=	http://cairographics.org/snapshots/
 
 MAINTAINER=	gnome@FreeBSD.org
