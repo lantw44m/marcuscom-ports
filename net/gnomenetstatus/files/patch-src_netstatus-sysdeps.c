@@ -1,5 +1,5 @@
 --- src/netstatus-sysdeps.c.orig	Mon Jun  9 13:18:04 2003
-+++ src/netstatus-sysdeps.c	Sat Dec  6 01:19:49 2003
++++ src/netstatus-sysdeps.c	Sat Dec  6 17:11:01 2003
 @@ -27,10 +27,13 @@
  
  #include <stdio.h>
@@ -14,7 +14,24 @@
  static inline char *
  parse_iface_name (const char *buf)
  {
-@@ -206,3 +209,158 @@
+@@ -90,6 +93,7 @@
+ 	}
+     }
+ }
++#endif
+ 
+ static inline int
+ parse_stats (char  *buf,
+@@ -124,6 +128,8 @@
+   return TRUE;
+ }
+ 
++#if !defined(__FreeBSD__)
++
+ static inline FILE *
+ get_proc_net_dev_fh (void)
+ {
+@@ -206,3 +212,125 @@
  
    return error_message;
  }
@@ -34,8 +51,8 @@
 +   *prx_idx = *ptx_idx = -1;
 +   *brx_idx = *btx_idx = -1;
 +
-+   p = strtok (buf, " ");
-+   for (i = 0; p; i++, p = strtok (NULL, " "))
++   p = strtok (buf, " \n\t");
++   for (i = 0; p; i++, p = strtok (NULL, " \t\n"))
 +     {
 +        if (!strcmp (p, "Ipkts"))
 +	  {
@@ -54,39 +71,6 @@
 +	     *btx_idx = i;
 +	  }
 +     }
-+}
-+
-+static inline int
-+parse_stats (char  *buf,
-+	     int    prx_idx,
-+	     int    ptx_idx,
-+	     long  *in_packets,
-+	     long  *out_packets,
-+	     int    brx_idx,
-+	     int    btx_idx,
-+	     long  *in_bytes,
-+	     long  *out_bytes)
-+{
-+   char *p;
-+   int   i;
-+
-+   p = strtok (buf, " ");
-+   for (i = 0; p; i++, p = strtok (NULL, " "))
-+     {
-+        if (i == prx_idx)
-+	   *in_packets = g_ascii_strtoull (p, NULL, 10);
-+	if (i == ptx_idx)
-+	   *out_packets = g_ascii_strtoull (p, NULL, 10);
-+	if (i == brx_idx)
-+	   *in_bytes = g_ascii_strtoull (p, NULL, 10);
-+	if (i == btx_idx)
-+	   *out_bytes = g_ascii_strtoull (p, NULL, 10);
-+     }
-+ 
-+   if (i <= prx_idx || i <= ptx_idx || i <= brx_idx || i <=btx_idx)
-+      return FALSE;
-+
-+   return TRUE;
 +}
 +
 +char *
@@ -162,9 +146,9 @@
 +   }
 +   else {
 +      if (error_message)
-+         g_free (error_message);
-+      error_message = g_strdup_printf ("Error running /usr/bin/netstat for '%s': %s", iface,
-+	      	       err->message);
++        g_free (error_message);
++      error_message = g_strdup_printf ("Error running /usr/bin/netstat for '%s': %s", 
++	iface, err->message);
 +      g_error_free (err);
 +   }
 +
