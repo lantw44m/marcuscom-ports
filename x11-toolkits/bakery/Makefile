@@ -14,10 +14,10 @@ MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A C++ Application Framework for use with Gtkmm
 
-LIB_DEPENDS=	gconfmm-2.6.1:${PORTSDIR}/devel/gconfmm26 \
-		glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
-		gnomevfsmm-2.6.1:${PORTSDIR}/devel/gnome-vfsmm \
-		xml\\+\\+-2.6.1:${PORTSDIR}/textproc/libxml++26
+LIB_DEPENDS=	gconfmm-2.6:${PORTSDIR}/devel/gconfmm26 \
+		glademm-2.4:${PORTSDIR}/devel/libglademm24 \
+		gnomevfsmm-2.6:${PORTSDIR}/devel/gnome-vfsmm \
+		xml\\+\\+-2.6:${PORTSDIR}/textproc/libxml++26
 
 USE_GNOME=	gnomehack gnomeprefix gnometarget intltool
 USE_BZIP2=	yes
