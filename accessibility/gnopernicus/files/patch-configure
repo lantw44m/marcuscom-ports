@@ -1,6 +1,6 @@
---- configure.orig	Tue Jun  3 05:45:52 2003
-+++ configure	Fri Jun 20 13:34:28 2003
-@@ -7885,6 +7885,7 @@
+--- configure.orig	Wed Aug 13 10:44:17 2003
++++ configure	Wed Aug 13 13:47:43 2003
+@@ -7555,6 +7555,7 @@
  
  # This can be used to rebuild libtool when needed
  LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
@@ -8,19 +8,3 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-@@ -10891,6 +10892,7 @@
-             BRLMON_CFLAGS=`$PKG_CONFIG --cflags "\
- 		  libgnome-2.0 >= $LIBGNOME_REQUIRED \
- 		  gtk+-2.0 >= $GTK_REQUIRED \
-+		  linc  >= $LINC_REQUIRED \
- 		  libxml-2.0 >= $LIBXML_REQUIRED\
- 		  libglade-2.0 >= $LIBGLADE_REQUIRED \
- 		  libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED"`
-@@ -10902,6 +10904,7 @@
-             BRLMON_LIBS=`$PKG_CONFIG --libs "\
- 		  libgnome-2.0 >= $LIBGNOME_REQUIRED \
- 		  gtk+-2.0 >= $GTK_REQUIRED \
-+		  linc  >= $LINC_REQUIRED \
- 		  libxml-2.0 >= $LIBXML_REQUIRED\
- 		  libglade-2.0 >= $LIBGLADE_REQUIRED \
- 		  libgnomeui-2.0 >= $LIBGNOMEUI_REQUIRED"`
