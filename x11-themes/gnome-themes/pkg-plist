@@ -320,7 +320,10 @@ share/icons/HighContrastLargePrint/48x48/apps/gnome-panel.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-pdf.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-planner.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-remote-desktop.png
+share/icons/HighContrastLargePrint/48x48/apps/gnome-run.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-screensaver.png
+share/icons/HighContrastLargePrint/48x48/apps/gnome-screenshot.png
+share/icons/HighContrastLargePrint/48x48/apps/gnome-searchtool.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-server-config.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-session.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-settings-accessibility-keyboard.png
@@ -684,7 +687,10 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-panel.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-pdf.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-planner.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-remote-desktop.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-run.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-screensaver.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-screenshot.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-searchtool.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-server-config.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-session.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-settings-accessibility-keyboard.png
@@ -1011,6 +1017,9 @@ share/icons/LowContrastLargePrint/48x48/apps/gnome-mixer-applet.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-mixer.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-multimedia.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-panel.png
+share/icons/LowContrastLargePrint/48x48/apps/gnome-run.png
+share/icons/LowContrastLargePrint/48x48/apps/gnome-screenshot.png
+share/icons/LowContrastLargePrint/48x48/apps/gnome-searchtool.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-session.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-settings-accessibility-keyboard.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-settings-accessibility-technologies.png
