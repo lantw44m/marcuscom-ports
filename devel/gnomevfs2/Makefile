@@ -24,7 +24,7 @@ USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack gnomemimedata gconf2 \
 		libbonobo
 USE_REINPLACE=	yes
-GNU_CONFIGURE=	yes
+USE_LIBTOOL_VER=15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--disable-openssl \
 		--disable-gnutls \
@@ -40,10 +40,8 @@ OPTIONS=	KDE_MENUS "Integrated KDE menu picks" on
 .if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
 .undef WITHOUT_CDPARANOIA
 .undef WITHOUT_SAMBA
-.if ${ARCH} == "i386"
 .undef WITHOUT_MDNS
-#WITH_MDNS=		yes
-.endif
+WITH_MDNS=		yes
 WITH_CDPARANOIA=	yes
 WITH_SAMBA=		yes
 .endif
@@ -74,8 +72,12 @@ PLIST_SUB+=	CDPARANOIA=""
 PLIST_SUB+=	CDPARANOIA="@comment "
 .endif
 
-.if exists(${LOCALBASE}/lib/libfam) || !defined(WITHOUT_FAM)
+.if exists(${LOCALBASE}/lib/libfam.so) || !defined(WITHOUT_FAM)
 LIB_DEPENDS+=	fam.0:${PORTSDIR}/devel/fam
+.endif
+
+.if exists(${LOCALBASE}/lib/libkrb5.so)
+LIB_DEPENDS+=	krb5:${PORTSDIR}/security/heimdal
 .endif
 
 .if defined(WITH_SAMBA)
@@ -86,7 +88,7 @@ PLIST_SUB+=	SAMBA="@comment "
 .endif
 
 .if defined(WITH_MDNS)
-#LIB_DEPENDS+=	howl:${PORTSDIR}/net/howl
+LIB_DEPENDS+=	howl:${PORTSDIR}/net/howl
 .endif
 
 post-patch:
