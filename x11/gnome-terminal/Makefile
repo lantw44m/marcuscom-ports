@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnometerminal
-PORTVERSION=	2.5.0
+PORTVERSION=	2.5.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-terminal/2.5
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeui vte
+USE_GNOME=	gnomeprefix gnomehack intlhack lthack gnomehier libgnomeui vte
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
