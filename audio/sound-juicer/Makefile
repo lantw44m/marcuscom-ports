@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	sound-juicer
-PORTVERSION=	0.6.0
-PORTREVISION=	1
+PORTVERSION=	2.9.91
 CATEGORIES=	audio gnome
-MASTER_SITES=	http://www.burtonini.com/computing/
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.9
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -17,11 +17,12 @@ COMMENT=	Clean, mean and lean CD ripper for GNOME2
 
 LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
 
+USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui
+USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui nautiluscdburner
 USE_GSTREAMER=	cdparanoia
 USE_LIBTOOL_VER=15
 CONFIGURE_ARGS=	--enable-ignore-missing-cd
