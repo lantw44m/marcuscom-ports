@@ -38,16 +38,20 @@ share/gnome/gtksourceview-1.0/language-specs/ada.lang
 share/gnome/gtksourceview-1.0/language-specs/c.lang
 share/gnome/gtksourceview-1.0/language-specs/cpp.lang
 share/gnome/gtksourceview-1.0/language-specs/csharp.lang
+share/gnome/gtksourceview-1.0/language-specs/css.lang
 share/gnome/gtksourceview-1.0/language-specs/desktop.lang
 share/gnome/gtksourceview-1.0/language-specs/diff.lang
+share/gnome/gtksourceview-1.0/language-specs/fortran.lang
 share/gnome/gtksourceview-1.0/language-specs/haskell.lang
 share/gnome/gtksourceview-1.0/language-specs/html.lang
 share/gnome/gtksourceview-1.0/language-specs/idl.lang
 share/gnome/gtksourceview-1.0/language-specs/java.lang
+share/gnome/gtksourceview-1.0/language-specs/javascript.lang
 share/gnome/gtksourceview-1.0/language-specs/language.dtd
 share/gnome/gtksourceview-1.0/language-specs/latex.lang
 share/gnome/gtksourceview-1.0/language-specs/lua.lang
 share/gnome/gtksourceview-1.0/language-specs/msil.lang
+share/gnome/gtksourceview-1.0/language-specs/pascal.lang
 share/gnome/gtksourceview-1.0/language-specs/perl.lang
 share/gnome/gtksourceview-1.0/language-specs/php.lang
 share/gnome/gtksourceview-1.0/language-specs/po.lang
@@ -63,6 +67,7 @@ share/locale/az/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/be/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/bg/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/bn/LC_MESSAGES/gtksourceview-1.0.mo
+share/locale/bs/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/ca/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/cs/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/cy/LC_MESSAGES/gtksourceview-1.0.mo
@@ -92,6 +97,7 @@ share/locale/mk/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/ml/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/mn/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/ms/LC_MESSAGES/gtksourceview-1.0.mo
+share/locale/nb/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/nl/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/no/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/pa/LC_MESSAGES/gtksourceview-1.0.mo
@@ -105,6 +111,7 @@ share/locale/sr/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/sr@Latn/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/sv/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/ta/LC_MESSAGES/gtksourceview-1.0.mo
+share/locale/th/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/tr/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/uk/LC_MESSAGES/gtksourceview-1.0.mo
 share/locale/vi/LC_MESSAGES/gtksourceview-1.0.mo
