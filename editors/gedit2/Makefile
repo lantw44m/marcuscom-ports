@@ -35,6 +35,6 @@ MAN1=		gedit.1
 GCONF_SCHEMAS=	gedit.schemas
 
 post-install:
-	@${X11BASE}/bin/update-desktop-database
+	@-update-desktop-database
 
 .include <bsd.port.mk>

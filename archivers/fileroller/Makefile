@@ -28,7 +28,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 GCONF_SCHEMAS=	file-roller.schemas
 
 post-install:
-	@${X11BASE}/bin/update-desktop-database
+	@-update-desktop-database
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
 .for f in AUTHORS NEWS README TODO

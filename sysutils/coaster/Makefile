@@ -28,7 +28,7 @@ DOCS=		AUTHORS COPYING ChangeLog NEWS README TODO
 GCONF_SCHEMAS=	coaster.schemas
 
 post-install:
-	@${X11BASE}/bin/update-desktop-database
+	@-update-desktop-database
 .ifndef (NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
 .for i in ${DOCS}
