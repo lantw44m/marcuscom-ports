@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome2-power-tools
 PORTVERSION=	2.7.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -21,7 +22,6 @@ RUN_DEPENDS=	${X11BASE}/lib/epiphany/extensions/libgesturesextension.so:${PORTSD
 		${X11BASE}/libexec/netspeed_applet2:${PORTSDIR}/net/netspeed_applet \
 		${LOCALBASE}/sbin/gkrellmd:${PORTSDIR}/sysutils/gkrellm2 \
 		splashsetter:${PORTSDIR}/deskutils/splashsetter \
-		gnome-netinfo:${PORTSDIR}/net/gnomenetwork \
 		gdesklets:${PORTSDIR}/deskutils/gdesklets
 
 NO_BUILD=	yes
