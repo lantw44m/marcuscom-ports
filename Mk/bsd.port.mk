@@ -1,7 +1,7 @@
 #-*- mode: makefile; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.port.mk,v 1.507 2005/02/02 09:34:04 tobez Exp $
+# $FreeBSD: ports/Mk/bsd.port.mk,v 1.508 2005/02/07 11:17:50 krion Exp $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -155,10 +155,10 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # IGNORE		- Package build should be skipped entirely (e.g.
 #				  because of serious unfixable problems in the build,
 #				  because it cannot be manually fetched, etc).  Error
-#				  logs will not appear on bento, so this should be
+#				  logs will not appear on pointyhat, so this should be
 #				  used sparingly.
 # BROKEN		- Port is believed to be broken.  Package builds will
-#				  still be attempted on the bento package cluster to
+#				  still be attempted on the pointyhat package cluster to
 #				  test this assumption.
 # DEPRECATED	- Port is deprecated to install. Advisory only.
 # EXPIRATION_DATE
@@ -166,6 +166,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  the port is planed to remove. The date format is
 #				  ISO 8601 (YYYY-MM-DD).
 #
+# DISABLE_VULNERABILITIES
+#				- If set, do not check if the port is listed in the
+#				  vulnerabilities database.
 # In addition to RESTRICTED or NO_CDROM, if only a subset of distfiles
 # or patchfiles have redistribution restrictions, set the following
 # to the list of such files.
@@ -380,8 +383,12 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  one or more versions of PostgreSQL.
 ##
 # USE_RC_SUBR	- If set, the ports startup/shutdown script uses the common
-#				  routines found in etc/rc.subr and may need to
-#				  depend on the sysutils/rc_subr port.
+# 				  routines found in etc/rc.subr and may need to
+# 				  depend on the sysutils/rc_subr port.
+# 				  If this is set to a list of files, these files will be
+# 				  automatically added to ${SUB_FILES} and some "variable=value"
+# 				  pairs will be added to ${SUB_LIST}. These files will be
+# 				  installed in ${PREFIX}/etc/rc.d and added to the packing list.
 # RC_SUBR		- Set to path of rc.subr.
 #				  Default: ${LOCALBASE}/etc/rc.subr.
 ##
@@ -628,8 +635,12 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # config		- Configure options for this port (using ${DIALOG}).
 #				  Automatically run prior to extract, patch, configure, build,
 #				  install, and package.
-# showconfig	- Display options config for this port
-# rmconfig		- Remove the options config for this port
+# config-recursive
+#				- Configure options for this port for this port and all dependencies.
+# showconfig	- Display options config for this port.
+# rmconfig		- Remove the options config for this port.
+# rmconfig-recursive
+#				- Remove the options config for this port and all dependencies.
 #
 # Default sequence for "all" is:
 #
@@ -1022,6 +1033,14 @@ PORTOBJFORMAT!=		${TEST} -x /usr/bin/objformat && /usr/bin/objformat || ${ECHO_C
 
 MASTERDIR?=	${.CURDIR}
 
+.if ${MASTERDIR} != ${.CURDIR}
+SLAVE_PORT?=	yes
+MASTER_PORT?=${MASTERDIR:C/[^\/]+\/\.\.\///:C/[^\/]+\/\.\.\///:C/^.*\/([^\/]+\/[^\/]+)$/\\1/}
+.else
+SLAVE_PORT?=	no
+MASTER_PORT?=
+.endif
+
 # If they exist, include Makefile.inc, then architecture/operating
 # system specific Makefiles, then local Makefile.local.
 
@@ -1062,12 +1081,37 @@ UNIQUENAME?=	${PKGNAMEPREFIX}${PORTNAME}
 OPTIONSFILE?=	${PORT_DBDIR}/${UNIQUENAME}/options
 _OPTIONSFILE!=	${ECHO_CMD} "${OPTIONSFILE}"
 .if defined(OPTIONS)
-.if exists(${_OPTIONSFILE}) && !make(rmconfig)
-.include "${_OPTIONSFILE}"
-.endif
-.if exists(${_OPTIONSFILE}.local)
-.include "${_OPTIONSFILE}.local"
-.endif
+.	if defined(PACKAGE_BUILDING) || (defined(BATCH) && !exists(${_OPTIONSFILE}))
+.	if defined(OPTIONS)
+REALOPTIONS=${OPTIONS:C/".*"//g}
+.	for O in ${REALOPTIONS}
+RO:=${O}
+.	if ${RO:L} == off
+WITHOUT:=	${WITHOUT} ${OPT}
+.	endif
+.	if ${RO:L} == on
+WITH:=		${WITH} ${OPT}
+.	endif
+OPT:=${RO}
+.	endfor
+.	endif
+.	for W in ${WITH}
+WITH_${W}:=	true
+.	endfor
+.	for W in ${WITHOUT}
+WITHOUT_${W}:=	true
+.	endfor
+.	undef WITH
+.	undef WITHOUT
+.	undef RO
+.	undef REALOPTIONS
+.	endif
+.	if exists(${_OPTIONSFILE}) && !make(rmconfig)
+.	include "${_OPTIONSFILE}"
+.	endif
+.	if exists(${_OPTIONSFILE}.local)
+.	include "${_OPTIONSFILE}.local"
+.	endif
 .endif
 
 # check for old, crufty, makefile types, part 1:
@@ -1388,62 +1432,7 @@ CONFIGURE_ENV+=	MAKE=${GMAKE}
 .endif
 
 .if defined(USE_GCC)
-.if ${OSVERSION} < 400012
-GCCVERSION=		020702
-.endif
-.if ${OSVERSION} >= 400012 && ${OSVERSION} < 500035
-GCCVERSION=		029500
-.endif
-.if ${OSVERSION} >= 500035 && ${OSVERSION} < 500039
-GCCVERSION=		030100
-.endif
-.if ${OSVERSION} >= 500039 && ${OSVERSION} < 501103
-GCCVERSION=		030200
-.endif
-.if ${OSVERSION} >= 501103 && ${OSVERSION} < 502126
-GCCVERSION=		030301
-.endif
-.if ${OSVERSION} >= 502126
-GCCVERSION=		030402
-.endif
-.endif
-
-.if defined(USE_GCC)
-.if ${USE_GCC} == 2.95 && ( ${OSVERSION} < 400012 || ${OSVERSION} > 500034 )
-CC=				gcc295
-CXX=			g++295
-BUILD_DEPENDS+=	gcc295:${PORTSDIR}/lang/gcc295
-GCCVERSION=		029500
-.endif
-.if ${USE_GCC} == 3.1 && ( ${OSVERSION} < 500035 || ${OSVERSION} > 500038 )
-CC=				gcc31
-CXX=			g++31
-F77=			g77-31
-BUILD_DEPENDS+=	gcc31:${PORTSDIR}/lang/gcc31
-GCCVERSION=		030100
-.endif
-.if ${USE_GCC} == 3.2 && ( ${OSVERSION} < 500039 || ${OSVERSION} > 501102 )
-CC=				gcc32
-CXX=			g++32
-F77=			g77-32
-BUILD_DEPENDS+=	gcc32:${PORTSDIR}/lang/gcc32
-GCCVERSION=		030200
-.endif
-.if ${USE_GCC} == 3.3 && ( ${OSVERSION} < 501103 || ${OSVERSION} > 502125 )
-CC=				gcc33
-CXX=			g++33
-F77=			g77-33
-BUILD_DEPENDS+=	gcc33:${PORTSDIR}/lang/gcc33
-GCCVERSION=		030301
-.endif
-.if ${USE_GCC} == 3.4 && ${OSVERSION} < 502126
-CC=				gcc34
-CXX=			g++34
-F77=			g77-34
-BUILD_DEPENDS+=	gcc34:${PORTSDIR}/lang/gcc34
-GCCVERSION=		030402
-.endif
-MAKE_ENV+=	CC="${CC}" CXX="${CXX}"
+.include "${PORTSDIR}/Mk/bsd.gcc.mk"
 .endif
 
 .if defined(USE_OPENLDAP_VER)
@@ -1481,6 +1470,10 @@ RUN_DEPENDS+=	${LOCALBASE}/etc/rc.subr:${PORTSDIR}/sysutils/rc_subr
 RC_SUBR=	${LOCALBASE}/etc/rc.subr
 .else
 RC_SUBR=	/etc/rc.subr
+.endif
+.if ${USE_RC_SUBR:U} != "YES"
+SUB_LIST+=	RC_SUBR=${RC_SUBR}
+SUB_FILES+=	${USE_RC_SUBR}
 .endif
 .endif
 
@@ -1712,20 +1705,28 @@ BROKEN=		"unknown MySQL version: ${MYSQL_VER}"
 DEFAULT_PGSQL_VER?=	74
 
 # Setting/finding PostgreSQL version we want.
-.if defined(WANT_PGSQL_VER)
+.if exists(${LOCALBASE}/bin/pg_config)
+_PGSQL_VER!=	${LOCALBASE}/bin/pg_config --version | ${SED} -n 's/PostgreSQL[^0-9]*\([0-9][0-9]*\)\.\([0-9][0-9]*\)\..*/\1\2/p'
+.endif
+
+.if defined(WANT_PGSQL_VER) && defined(_PGSQL_VER) && ${WANT_PGSQL_VER} != ${_PGSQL_VER}
+IGNORE=		"The port wants postgresql${WANT_PGSQL_VER}-client but you have postgresql${_PGSQL_VER}-client installed"
+.endif
+
+.if defined(_PGSQL_VER)
+PGSQL_VER=	${_PGSQL_VER}
+.elif defined(WANT_PGSQL_VER)
 PGSQL_VER=	${WANT_PGSQL_VER}
-.elif exists(${LOCALBASE}/bin/pg_config)
-PGSQL_VER!=	${LOCALBASE}/bin/pg_config --version | ${SED} -n 's/PostgreSQL[^0-9]*\([0-9][0-9]*\)\.\([0-9][0-9]*\)\..*/\1\2/p'
 .else
 PGSQL_VER=	${DEFAULT_PGSQL_VER}
-.endif # WANT_PGSQL_VER
+.endif
 
 # And now we are checking if we can use it
 .if exists(${PORTSDIR}/databases/postgresql${PGSQL_VER}-client)
 .if defined(BROKEN_WITH_PGSQL)
 .	for VER in ${BROKEN_WITH_PGSQL}
 .		if (${PGSQL_VER} == "${VER}")
-BROKEN=		"Doesn't work with PostgreSQL version : ${PGSQL_VER} (Doesn't support PostgresSQL ${BROKEN_WITH_PGSQL})"
+IGNORE=		"Does not work with postgresql${PGSQL_VER}-client PostgresSQL \(${BROKEN_WITH_PGSQL} not supported\)"
 .		endif
 .	endfor
 .endif # BROKEN_WITH_PGSQL
@@ -3014,8 +3015,8 @@ check-vulnerable:
 		if [ "$$audit_created" -lt "$$audit_expiry" ]; then \
 			${ECHO_MSG} "===>  WARNING: Vulnerability database out of date, checking anyway"; \
 		fi; \
-		vlist=`${_EXTRACT_AUDITFILE} | ${AWK} -F\| ' \
-			/^[^#]/ { \
+		vlist=`${_EXTRACT_AUDITFILE} | ${GREP} "${PORTNAME}" | \
+			${AWK} -F\| ' /^[^#]/ { \
 				if (!system("${PKG_VERSION} -T \"${PKGNAME}\" \"" $$1 "\"")) \
 					print "=> " $$3 ".\n   Reference: <" $$2 ">" \
 			} \
@@ -3712,7 +3713,8 @@ _INSTALL_SEQ=	install-message check-conflicts \
 _INSTALL_SUSEQ= check-umask install-mtree pre-su-install \
 				pre-su-install-script do-install post-install \
 				post-install-script add-plist-info add-plist-docs \
-				add-plist-post compress-man run-ldconfig fake-pkg security-check
+				add-plist-post install-rc-script compress-man run-ldconfig \
+				fake-pkg security-check
 _PACKAGE_DEP=	install
 _PACKAGE_SEQ=	package-message pre-package pre-package-script \
 				do-package post-package-script
@@ -4797,13 +4799,17 @@ add-plist-docs:
 		[ "`${SED} -En -e '/^@cw?d[ 	]*/s,,,p' ${TMPPLIST} | ${TAIL} -n 1`" != "${PREFIX}" ]; then \
 		${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}; \
 	fi
+.for x in ${PORTDOCS}
+	@if [ ! -e ${DOCSDIR}/${x} ]; then \
+		@${ECHO_CMD} ${DOCSDIR}/${x} | \
+			${SED} -e 's,^${PREFIX}/,,' >> ${TMPPLIST}; \
+	fi
+.endfor
 	@${FIND} -P ${PORTDOCS:S/^/${DOCSDIR}\//} ! -type d 2>/dev/null | \
 		${SED} -ne 's,^${PREFIX}/,,p' >> ${TMPPLIST}
 	@${FIND} -P -d ${PORTDOCS:S/^/${DOCSDIR}\//} -type d 2>/dev/null | \
 		${SED} -ne 's,^${PREFIX}/,@dirrm ,p' >> ${TMPPLIST}
-	@if [ -d "${DOCSDIR}" ]; then \
-		${ECHO_CMD} "@unexec rmdir %D/${DOCSDIR:S,^${PREFIX}/,,} 2>/dev/null || true" >> ${TMPPLIST}; \
-	fi
+	@${ECHO_CMD} "@dirrm ${DOCSDIR:S,^${PREFIX}/,,}" >> ${TMPPLIST}
 .else
 	@${DO_NADA}
 .endif
@@ -4812,6 +4818,7 @@ add-plist-docs:
 add-plist-info:
 # Process GNU INFO files at package install/deinstall time
 .for i in ${INFO}
+	install-info --quiet ${PREFIX}/${INFO_PATH}/$i.info ${PREFIX}/${INFO_PATH}/dir
 	@${ECHO_CMD} "@unexec install-info --delete %D/${INFO_PATH}/$i.info %D/${INFO_PATH}/dir" \
 		>> ${TMPPLIST}
 	@${LS} ${PREFIX}/${INFO_PATH}/$i.info* | ${SED} -e s:${PREFIX}/::g >> ${TMPPLIST}
@@ -4832,6 +4839,25 @@ add-plist-post:
 	@${ECHO_CMD} "@unexec rmdir %D 2> /dev/null || true" >> ${TMPPLIST}
 .else
 	@${DO_NADA}
+.endif
+
+.if !target(install-rc-script)
+install-rc-script:
+.if defined(USE_RC_SUBR)
+.if ${USE_RC_SUBR:U} != "YES"
+	@${ECHO_CMD} "===> Installing startup script(s) in ${PREFIX}/etc/rc.d"
+	@if ${EGREP} -qe '^@cw?d' ${TMPPLIST} && \
+		[ "`${SED} -En -e '/^@cw?d[ 	]*/s,,,p' ${TMPPLIST} | ${TAIL} -n 1`" != "${PREFIX}" ]; then \
+		${ECHO_CMD} "@cwd ${PREFIX}" >> ${TMPPLIST}; \
+	fi
+	@for i in ${USE_RC_SUBR}; do \
+		${INSTALL_SCRIPT} ${WRKDIR}/$${i} ${PREFIX}/etc/rc.d; \
+		${ECHO_CMD} etc/rc.d/$${i} >> ${TMPPLIST}; \
+	done
+.endif
+.else
+	@${DO_NADA}
+.endif
 .endif
 
 # Compress (or uncompress) and symlink manpages.
@@ -5030,6 +5056,21 @@ config:
 .endif
 .endif
 
+.if !target(config-recursive)
+config-recursive:
+	@${ECHO_MSG} "===> Setting user-specified options for ${PKGNAME} and dependencies";
+	@for dir in ${.CURDIR} $$(${ALL-DEPENDS-LIST}); do \
+		(cd $$dir; ${MAKE} config-conditional); \
+	done
+.endif
+
+.if !target(config-conditional)
+config-conditional:
+.if defined(OPTIONS) && !exists(${_OPTIONSFILE})
+	cd ${.CURDIR} && ${MAKE} config;
+.endif
+.endif
+
 .if !target(showconfig)
 showconfig:
 .if defined(OPTIONS) && exists(${_OPTIONSFILE})
@@ -5078,6 +5119,14 @@ rmconfig:
 .else
 	@${ECHO_MSG} "===> No user-specified options configured for ${PKGNAME}"
 .endif
+.endif
+
+.if !target(rmconfig-recursive)
+rmconfig-recursive:
+	@${ECHO_MSG} "===> Removing user-specified options for ${PKGNAME} and dependencies";
+	@for dir in ${.CURDIR} $$(${ALL-DEPENDS-LIST}); do \
+		(cd $$dir; ${MAKE} rmconfig); \
+	done
 .endif
 
 .endif
