@@ -25,16 +25,16 @@ include/pango-1.0/pango/pangox.h
 %%XFREE4:%%include/pango-1.0/pango/pangoxft.h
 lib/libpango-1.0.a
 lib/libpango-1.0.so
-lib/libpango-1.0.so.102
+lib/libpango-1.0.so.104
 lib/libpangoft2-1.0.a
 lib/libpangoft2-1.0.so
-lib/libpangoft2-1.0.so.102
+lib/libpangoft2-1.0.so.104
 lib/libpangox-1.0.a
 lib/libpangox-1.0.so
-lib/libpangox-1.0.so.102
+lib/libpangox-1.0.so.104
 %%XFREE4:%%lib/libpangoxft-1.0.a
 %%XFREE4:%%lib/libpangoxft-1.0.so
-%%XFREE4:%%lib/libpangoxft-1.0.so.102
+%%XFREE4:%%lib/libpangoxft-1.0.so.104
 lib/pango/%%VERSION%%/modules/pango-arabic-ft2.so
 lib/pango/%%VERSION%%/modules/pango-arabic-x.so
 %%XFREE4:%%lib/pango/%%VERSION%%/modules/pango-arabic-xft.so
@@ -59,9 +59,11 @@ libdata/pkgconfig/pango.pc
 libdata/pkgconfig/pangoft2.pc
 libdata/pkgconfig/pangox.pc
 %%XFREE4:%%libdata/pkgconfig/pangoxft.pc
+share/doc/pango/home.png
 share/doc/pango/index.html
 share/doc/pango/index.sgml
 share/doc/pango/layout.gif
+share/doc/pango/left.png
 share/doc/pango/lowlevel.html
 share/doc/pango/PangoMarkupFormat.html
 share/doc/pango/pango-Coverage-Maps.html
@@ -83,6 +85,8 @@ share/doc/pango/pango-Xft-Fonts-and-Rendering.html
 share/doc/pango/pango.devhelp
 share/doc/pango/pango.html
 share/doc/pango/rendering.html
+share/doc/pango/right.png
+share/doc/pango/up.png
 @dirrm share/doc/pango
 @dirrm lib/pango/%%VERSION%%/modules
 @dirrm lib/pango/%%VERSION%%
