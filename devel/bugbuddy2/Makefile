@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	bugbuddy2
-PORTVERSION=	2.5.0
+PORTVERSION=	2.5.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/bug-buddy/2.5
@@ -21,7 +21,7 @@ USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomedesktop
+USE_GNOME=	gnomeprefix gnomehack intlhack lthack gnomedesktop
 GNOME_DESKTOP_VERSION=2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
