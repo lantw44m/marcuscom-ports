@@ -1,16 +1,18 @@
---- configure.orig	Thu Jul 22 13:59:05 2004
-+++ configure	Thu Jul 22 15:12:55 2004
-@@ -23429,7 +23429,7 @@
- 
- 		case $with_static_ldap in
- 		no|"")
--			if test -f $with_openldap/lib/libldap.la; then
-+			if test -f $with_openldap/lib/libldap.so; then
- 				with_static_ldap=no
+--- configure.orig	Fri Aug 20 15:26:49 2004
++++ configure	Fri Aug 20 15:27:21 2004
+@@ -23754,8 +23754,8 @@
+ 				# libldap might depend on OpenSSL... We need to pull
+ 				# in the dependency libs explicitly here since we're
+ 				# not using libtool for the configure test.
+-				if test -f $with_openldap/lib/libldap.la; then
+-					LDAP_LIBS="`. $with_openldap/lib/libldap.la; echo $dependency_libs` $LDAP_LIBS"
++				if test -f $with_openldap/lib/libldap.so; then
++					LDAP_LIBS="`. $with_openldap/lib/libldap.so; echo $dependency_libs` $LDAP_LIBS"
+ 				fi
  			else
- 				with_static_ldap=yes
-@@ -23985,7 +23985,7 @@
- fi;
+ 				LDAP_LIBS="-llber $LDAP_LIBS"
+@@ -24006,7 +24006,7 @@
+ 
  
  mitlibs="-lkrb5 -lk5crypto -lcom_err -lgssapi_krb5"
 -heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi"
