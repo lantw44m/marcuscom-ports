@@ -279,7 +279,9 @@ share/gnome/help/brlmonitor/C/legal.xml
 share/gnome/help/gnopernicus/C/gnopernicus.xml
 share/gnome/help/gnopernicus/C/legal.xml
 share/gnome/omf/gnopernicus/brlmonitor-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnopernicus/brlmonitor-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnopernicus/gnopernicus-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnopernicus/gnopernicus-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gnopernicus.png
 share/locale/az/LC_MESSAGES/gnopernicus.mo
 share/locale/be/LC_MESSAGES/gnopernicus.mo
@@ -540,3 +542,5 @@ share/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/brlmon
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/braille
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnopernicus/brlmonitor-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnopernicus/gnopernicus-C.omf 2>/dev/null || /usr/bin/true
