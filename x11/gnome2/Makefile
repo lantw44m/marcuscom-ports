@@ -56,7 +56,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		${X11BASE}/lib/gstreamer-0.8/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins-core \
 		totem:${PORTSDIR}/multimedia/totem-gstreamer \
 		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2 \
-		${X11BASE}/share/gnome/gnome-background-properties/gnome-abstract.xml:${PORTSDIR}/x11-themes/gnome-backgrounds
+		${X11BASE}/share/gnome/gnome-background-properties/gnome-branded.xml:${PORTSDIR}/x11-themes/gnome-backgrounds
 
 NO_BUILD=	yes
 
