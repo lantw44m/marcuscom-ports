@@ -50,9 +50,9 @@ OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
 CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE} \
 			--enable-pilot-conduits=yes
-PLIST_SUB=	PILOT:=""
+PLIST_SUB+=	PILOT:=""
 .else
-PLIST_SUB=	PILOT:="@comment "
+PLIST_SUB+=	PILOT:="@comment "
 .endif
 
 .if !defined(WITHOUT_LDAP)
