@@ -6,12 +6,10 @@
 #
 
 PORTNAME=	gtkhtml3
-PORTVERSION=	3.0.2
-PORTREVISION=	1
+PORTVERSION=	3.0.3
 CATEGORIES=	www gnome
-MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
-		${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/3.0
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/3.0
 DISTNAME=	${PORTNAME:S/3$//}-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -20,7 +18,7 @@ COMMENT=	Lightweight HTML rendering/printing/editing engine
 
 LIB_DEPENDS=	soup-2.0.0:${PORTSDIR}/devel/libsoup
 		
-#USE_BZIP2=	yes
+USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
