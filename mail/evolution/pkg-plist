@@ -308,6 +308,9 @@ lib/evolution/%%VERSION%%/libevolution-importer.so
 lib/evolution/%%VERSION%%/libevolution-importer.so.0
 lib/evolution/%%VERSION%%/libevolution-widgets-a11y.so
 lib/evolution/%%VERSION%%/libevolution-widgets-a11y.so.0
+%%PILOT:%%lib/gnome-pilot/conduits/libeaddress_conduit.so
+%%PILOT:%%lib/gnome-pilot/conduits/libecalendar_conduit.so
+%%PILOT:%%lib/gnome-pilot/conduits/libetodo_conduit.so
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_SelectNames_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Calendar_%%VERSION%%.server
@@ -661,6 +664,9 @@ share/gnome/evolution/%%VERSION%%/views/mail/galview.xml
 share/gnome/evolution/%%VERSION%%/views/tasks/Tasks.galview
 share/gnome/evolution/%%VERSION%%/views/tasks/With_Category.galview
 share/gnome/evolution/%%VERSION%%/views/tasks/galview.xml
+%%PILOT:%%share/gnome/gnome-pilot/conduits/e-address.conduit
+%%PILOT:%%share/gnome/gnome-pilot/conduits/e-calendar.conduit
+%%PILOT:%%share/gnome/gnome-pilot/conduits/e-todo.conduit
 share/gnome/help/evolution-%%VERSION%%/C/apx-authors.xml
 share/gnome/help/evolution-%%VERSION%%/C/apx-bugs.xml
 share/gnome/help/evolution-%%VERSION%%/C/apx-fdl.xml
@@ -722,6 +728,7 @@ share/gnome/idl/evolution-%%VERSION%%/evolution-calendar.idl
 share/gnome/mime-info/evolution-%%VERSION%%.keys
 share/gnome/mime-info/evolution-%%VERSION%%.mime
 share/gnome/omf/evolution/evolution-%%VERSION%%-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/evolution/evolution-%%VERSION%%-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/evolution-%%VERSION%%.png
 share/locale/am/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -865,3 +872,4 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/addressbook/completion
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/addressbook
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/evolution/evolution-%%VERSION%%-C.omf 2>/dev/null || /usr/bin/true
