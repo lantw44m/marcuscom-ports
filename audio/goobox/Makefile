@@ -2,7 +2,7 @@
 # Date created:		11 Nov 2004
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/goobox/Makefile,v 1.3 2004/11/22 03:09:24 bland Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	goobox

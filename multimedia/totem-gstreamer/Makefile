@@ -2,7 +2,7 @@
 # Date created:         04 December 2004
 # Whom:                 Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/totem-gstreamer/Makefile,v 1.1 2004/12/04 19:39:03 marcus Exp $
+# $FreeBSD$
 #
 
 PORTREVISION=	0

@@ -2,7 +2,7 @@
 # Date created:		29 September 2002
 # Whom:			Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
-# $FreeBSD: ports/deskutils/glabels/Makefile,v 1.29 2004/11/23 02:22:59 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	glabels

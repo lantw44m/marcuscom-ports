@@ -2,7 +2,7 @@
 # Date created:				07 January 2004
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gnome2-hacker-tools/Makefile,v 1.12 2004/11/07 22:24:12 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome2-hacker-tools

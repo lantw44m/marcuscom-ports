@@ -2,7 +2,7 @@
 # Date created:			08 Oct 2003
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
-# $FreeBSD: ports/audio/jamboree/Makefile,v 1.13 2004/11/07 22:35:52 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	jamboree

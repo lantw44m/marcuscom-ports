@@ -2,7 +2,7 @@
 # Date created:		17 August 2003
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/rhythmbox/Makefile,v 1.52 2004/12/31 17:47:42 pav Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	rhythmbox

@@ -2,7 +2,7 @@
 # Date created:				2 July 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/gnomehier/Makefile,v 1.27 2004/12/18 01:54:05 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomehier

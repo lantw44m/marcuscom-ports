@@ -1,8 +1,8 @@
-# New ports collection makefile for:   atk
-# Date Created:			14 May 2001
-# Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
+# New ports collection makefile for:	atk
+# Date Created:				14 May 2001
+# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/atk/Makefile,v 1.40 2004/11/07 22:24:10 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	atk

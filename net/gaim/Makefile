@@ -1,10 +1,11 @@
 # New ports collection makefile for:	gaim
 # Date created:			26 Mar 1999
 # Whom:				Jim Mock <jim@FreeBSD.org>
-# $FreeBSD: ports/net/gaim/Makefile,v 1.160 2004/12/04 20:44:44 marcus Exp $
+#
+# $FreeBSD$
 #
 
-PORTNAME=	gaim
+PORTNAME$
 PORTVERSION=	1.1.2
 PORTREVISION=	1
 CATEGORIES?=	net
