@@ -1,19 +1,17 @@
-bin/archive-generator
 bin/gdialog
 bin/gnome-calculator
 bin/gnome-character-map
 bin/gnome-dictionary
 bin/gnome-search-tool
 bin/gnome-system-log
-etc/gconf/gconf.xml.defaults/apps/logview/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-dictionary/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/logview/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnome-system-log/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-dictionary/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnome-system-log/%gconf.xml
 etc/gconf/schemas/logview.schemas
 etc/gconf/schemas/gdict.schemas
 libdata/bonobo/servers/GNOME_GDictApplet.server
 libexec/gdict-applet
-share/gnome/applications/archive-generator.desktop
 share/gnome/applications/gnome-calculator.desktop
 share/gnome/applications/gnome-character-map.desktop
 share/gnome/applications/gnome-dictionary.desktop
@@ -23,10 +21,6 @@ share/gnome/gnome-2.0/ui/GNOME_GDictApplet.xml
 share/gnome/gnome-system-log/gnome-system-log-actions.db
 share/gnome/gnome-system-log/gnome-system-log-descript.db
 share/gnome/gnome-system-log/gnome-system-log-regexp.db
-share/gnome/help/archive-generator/C/archive-generator.xml
-share/gnome/help/archive-generator/C/figures/archive-generator-contents.png
-share/gnome/help/archive-generator/C/figures/archive-generator.png
-share/gnome/help/archive-generator/C/legal.xml
 share/gnome/help/gdialog/C/figures/example-dialog.png
 share/gnome/help/gdialog/C/figures/gdialog-msgbox.png
 share/gnome/help/gdialog/C/figures/gdialog-yesno.png
@@ -38,11 +32,6 @@ share/gnome/help/gnome-calculator/C/legal.xml
 share/gnome/help/gnome-character-map/C/figures/gnome-character-map.png
 share/gnome/help/gnome-character-map/C/gnome-character-map.xml
 share/gnome/help/gnome-character-map/C/legal.xml
-share/gnome/help/gnome-dictionary/C/figures/gdict-find.png
-share/gnome/help/gnome-dictionary/C/figures/gdict-main.png
-share/gnome/help/gnome-dictionary/C/figures/gdict-prefs.png
-share/gnome/help/gnome-dictionary/C/figures/gdict-soundex.png
-share/gnome/help/gnome-dictionary/C/figures/gdict-spell.png
 share/gnome/help/gnome-dictionary/C/figures/gdict_applet.png
 share/gnome/help/gnome-dictionary/C/figures/gdict_window.png
 share/gnome/help/gnome-dictionary/C/gnome-dictionary.xml
@@ -53,7 +42,6 @@ share/gnome/help/gnome-search-tool/C/legal.xml
 share/gnome/help/gnome-system-log/C/figures/syslog_window.png
 share/gnome/help/gnome-system-log/C/gnome-system-log.xml
 share/gnome/help/gnome-system-log/C/legal.xml
-share/gnome/omf/gnome-utils/archive-generator-C.omf
 share/gnome/omf/gnome-utils/gdialog-C.omf
 share/gnome/omf/gnome-utils/gnome-calculator-C.omf
 share/gnome/omf/gnome-utils/gnome-character-map-C.omf
@@ -65,6 +53,7 @@ share/gnome/pixmaps/gnome-character-map.png
 share/gnome/pixmaps/gnome-searchtool.png
 share/gnome/pixmaps/gnome-system-log/logview.xpm
 share/locale/az/LC_MESSAGES/gnome-utils-2.0.mo
+share/locale/be/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-utils-2.0.mo
@@ -124,6 +113,4 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/gdialog/C
 @dirrm share/gnome/gnome-system-log
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-dictionary
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/logview
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-dictionary
-@dirrm etc/gconf/gconf.xml.defaults/apps/logview

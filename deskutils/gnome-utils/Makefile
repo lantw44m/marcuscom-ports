@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomeutils2
-PORTVERSION=	2.1.2
+PORTVERSION=	2.1.3
 PORTEPOCH=	1
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -29,7 +29,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
 
-MAN1=	archive-generator.1 gnome-calculator.1 \
+MAN1=	gnome-calculator.1 \
 	gnome-character-map.1 gnome-dictionary.1 \
 	gnome-search-tool.1 gnome-system-log.1 gdialog.1
 
