@@ -1,0 +1,41 @@
+include/bakery-2.4/bakery/App/App.h
+include/bakery-2.4/bakery/App/AppInstanceManager.h
+include/bakery-2.4/bakery/App/App_Gtk.h
+include/bakery-2.4/bakery/App/App_WithDoc.h
+include/bakery-2.4/bakery/App/App_WithDoc_Gtk.h
+include/bakery-2.4/bakery/App/Dialog_OfferSave.h
+include/bakery-2.4/bakery/App/Dialog_OverwriteFile.h
+include/bakery-2.4/bakery/App/GtkDialogs.h
+include/bakery-2.4/bakery/App/libegg/recent-files/egg-recent-item.h
+include/bakery-2.4/bakery/App/libegg/recent-files/egg-recent-model.h
+include/bakery-2.4/bakery/App/libegg/recent-files/egg-recent-util.h
+include/bakery-2.4/bakery/App/libegg/recent-files/egg-recent-view-gtk.h
+include/bakery-2.4/bakery/App/libegg/recent-files/egg-recent-view.h
+include/bakery-2.4/bakery/App/libegg/recent-files/egg-recent.h
+include/bakery-2.4/bakery/Configuration/Association.h
+include/bakery-2.4/bakery/Configuration/AssociationBase.h
+include/bakery-2.4/bakery/Configuration/Client.h
+include/bakery-2.4/bakery/Configuration/Dialog_Preferences.h
+include/bakery-2.4/bakery/Document/Document.h
+include/bakery-2.4/bakery/Document/Document_XML.h
+include/bakery-2.4/bakery/Utilities/BusyCursor.h
+include/bakery-2.4/bakery/Utilities/sharedptr.h
+include/bakery-2.4/bakery/View/View.h
+include/bakery-2.4/bakery/View/ViewBase.h
+include/bakery-2.4/bakery/View/View_Composite.h
+include/bakery-2.4/bakery/bakery.h
+include/bakery-2.4/bakery/init.h
+lib/libbakery-2.3.a
+lib/libbakery-2.3.so
+lib/libbakery-2.3.so.10
+libdata/pkgconfig/bakery-2.4.pc
+share/locale/de/LC_MESSAGES/bakery.mo
+@dirrm include/bakery-2.4/bakery/View
+@dirrm include/bakery-2.4/bakery/Utilities
+@dirrm include/bakery-2.4/bakery/Document
+@dirrm include/bakery-2.4/bakery/Configuration
+@dirrm include/bakery-2.4/bakery/App/libegg/recent-files
+@dirrm include/bakery-2.4/bakery/App/libegg
+@dirrm include/bakery-2.4/bakery/App
+@dirrm include/bakery-2.4/bakery
+@dirrm include/bakery-2.4
