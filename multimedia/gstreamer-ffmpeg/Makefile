@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.7.1
+PORTVERSION=	0.8.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-ffmpeg/
 PKGNAMESUFFIX=	-ffmpeg
@@ -15,11 +15,12 @@ DISTNAME=	gst-ffmpeg-${PORTVERSION}
 MAINTAINER=	kwm@rainbow-runner.nl
 COMMENT=	GStreamer plug-in for manipulating MPEG video streams
 
-LIB_DEPENDS=	gstreamer-0.7.7:${PORTSDIR}/multimedia/gstreamer
+LIB_DEPENDS=	gstreamer-0.8.1:${PORTSDIR}/multimedia/gstreamer
 
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
 USE_REINPLACE=	yes
+USE_GMAKE=	yes
 USE_GNOME=	gnomehack \
 		gnomeprefix
 GNU_CONFIGURE=	yes
@@ -33,16 +34,19 @@ INSTALLS_SHLIB=	yes
 PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 GST_VERSION=${PORTVERSION:C/..$//}
 
-BROKEN=	"Needs an update for gst-0.7.6"
-
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "amd64"
 EXTRA_PATCHES+=	${FILESDIR}/ia64-patch-ffmpeg::configure
 .endif
 
+post-patch:
+	@${REINPLACE_CMD} -E -e \
+		's|make|${GMAKE}|' \
+		${WRKSRC}/gst-libs/ext/Makefile.in
+
 post-install:
 # register plugins
-	-@${PREFIX}/bin/gst-register-${GST_VERSION} 2>/dev/null
+	-@${X11BASE}/bin/gst-register-${GST_VERSION} 2>/dev/null
 
 .include <bsd.port.post.mk>
