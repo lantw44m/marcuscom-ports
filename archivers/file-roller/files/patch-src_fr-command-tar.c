@@ -1,5 +1,5 @@
---- src/fr-command-tar.c.orig	Mon Mar  8 04:20:07 2004
-+++ src/fr-command-tar.c	Mon Mar  8 14:50:03 2004
+--- src/fr-command-tar.c.orig	Mon Mar  8 18:20:07 2004
++++ src/fr-command-tar.c	Sun Mar 14 00:14:41 2004
 @@ -196,6 +196,11 @@
  	return g_strndup (f_start + 1, f_end - f_start);
  }
@@ -21,7 +21,7 @@
 +	int          i;
 +	struct tm    tm = {0, };
 +	char       **time_fields;
-+	char        *field_name;
++	const char  *field_name;
  
  	g_return_if_fail (line != NULL);
  
@@ -62,3 +62,11 @@
  	fields = g_strsplit (field_name, " -> ", 2);
  
  	if (fields[1] == NULL) {
+@@ -244,7 +257,6 @@
+ 	if (fields[1] != NULL)
+ 		fdata->link = g_strdup (fields[1]);
+ 	g_strfreev (fields);
+-	g_free (field_name);
+ 
+ 	fdata->name = g_strdup (file_name_from_path (fdata->full_path));
+ 	fdata->path = remove_level_from_path (fdata->full_path);
