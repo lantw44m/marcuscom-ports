@@ -40,7 +40,7 @@ GST_PLUGIN?=	base
 CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
 		CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 		CPPFLAGS="${CPPFLAGS} -I${X11BASE}/include -I${LOCALBASE}/include" \
-		LDFLAGS="${LDFLAGS} -L${X11BASE}/lib -L${LOCALBASE}/lib"
+		LDFLAGS="${LDFLAGS} -L${X11BASE}/lib -L${LOCALBASE}/lib ${EXTRA_LIBS}"
 
 .include <bsd.port.pre.mk>
 
