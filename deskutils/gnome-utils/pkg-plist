@@ -1,4 +1,3 @@
-bin/gdialog
 bin/gnome-dictionary
 bin/gnome-search-tool
 bin/gnome-system-log
@@ -24,16 +23,6 @@ share/gnome/gnome-2.0/ui/GNOME_GDictApplet.xml
 share/gnome/gnome-system-log/gnome-system-log-actions.db
 share/gnome/gnome-system-log/gnome-system-log-descript.db
 share/gnome/gnome-system-log/gnome-system-log-regexp.db
-share/gnome/help/gdialog/C/figures/example-dialog.png
-share/gnome/help/gdialog/C/figures/gdialog-msgbox.png
-share/gnome/help/gdialog/C/figures/gdialog-yesno.png
-share/gnome/help/gdialog/C/gdialog.xml
-share/gnome/help/gdialog/C/legal.xml
-share/gnome/help/gdialog/ja/figures/example-dialog.png
-share/gnome/help/gdialog/ja/figures/gdialog-msgbox.png
-share/gnome/help/gdialog/ja/figures/gdialog-yesno.png
-share/gnome/help/gdialog/ja/gdialog.xml
-share/gnome/help/gdialog/ja/legal.xml
 share/gnome/help/gnome-dictionary/C/figures/gdict_applet.png
 share/gnome/help/gnome-dictionary/C/figures/gdict_window.png
 share/gnome/help/gnome-dictionary/C/gnome-dictionary.xml
@@ -99,10 +88,6 @@ share/gnome/help/gnome-system-log/zh_CN/legal.xml
 share/gnome/help/gnome-system-log/zh_TW/figures/syslog_window.png
 share/gnome/help/gnome-system-log/zh_TW/gnome-system-log.xml
 share/gnome/help/gnome-system-log/zh_TW/legal.xml
-share/gnome/omf/gnome-utils/gdialog-C.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gdialog-C.omf 2>/dev/null || /usr/bin/true
-share/gnome/omf/gnome-utils/gdialog-ja.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gdialog-ja.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-utils/gnome-dictionary-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gnome-dictionary-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-utils/gnome-dictionary-ja.omf
@@ -146,12 +131,14 @@ share/gnome/omf/gnome-utils/gnome-system-log-zh_CN.omf
 share/gnome/omf/gnome-utils/gnome-system-log-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gnome-system-log-zh_TW.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gdict.png
+share/gnome/pixmaps/gnome-search-tool/gnome-search-tool-animation.png
 share/gnome/pixmaps/gnome-searchtool.png
 share/locale/am/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-utils-2.0.mo
+share/locale/bn/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-utils-2.0.mo
@@ -199,6 +186,7 @@ share/locale/wa/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/pixmaps/gnome-system-log
+@dirrm share/gnome/pixmaps/gnome-search-tool
 @dirrm share/gnome/help/gnome-system-log/zh_TW/figures
 @dirrm share/gnome/help/gnome-system-log/zh_TW
 @dirrm share/gnome/help/gnome-system-log/zh_CN/figures
@@ -244,10 +232,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/gnome-dictionary/C/figures
 @dirrm share/gnome/help/gnome-dictionary/C
 @dirrm share/gnome/help/gnome-dictionary
-@dirrm share/gnome/help/gdialog/ja/figures
-@dirrm share/gnome/help/gdialog/ja
-@dirrm share/gnome/help/gdialog/C/figures
-@dirrm share/gnome/help/gdialog/C
 @dirrm share/gnome/gnome-system-log
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-system-log
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-search-tool
@@ -255,8 +239,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-system-log
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-search-tool
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-dictionary
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gdialog-C.omf 2>/dev/null || /usr/bin/true
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gdialog-ja.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gnome-dictionary-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gnome-dictionary-ja.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gnome-search-tool-C.omf 2>/dev/null || /usr/bin/true

@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomeutils2
-PORTVERSION=	2.3.2.1
+PORTVERSION=	2.3.3
 PORTEPOCH=	1
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -27,7 +27,7 @@ USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-MAN1=	gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1 gdialog.1
+MAN1=	gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
