@@ -102,15 +102,6 @@ share/doc/libgnomeui/libgnomeui-gnomethumbnail.html
 share/doc/libgnomeui/libgnomeui-gnometypebuiltins.html
 share/doc/libgnomeui/libgnomeui-objects.html
 share/doc/libgnomeui/miscellaneous.html
-share/doc/libgnomeui/x1427.html
-share/doc/libgnomeui/x15511.html
-share/doc/libgnomeui/x15523.html
-share/doc/libgnomeui/x17961.html
-share/doc/libgnomeui/x18126.html
-share/doc/libgnomeui/x6088.html
-share/doc/libgnomeui/x6113.html
-share/doc/libgnomeui/x7859.html
-share/doc/libgnomeui/x7888.html
 share/gnome/pixmaps/gnome-about-logo.png
 share/gnome/pixmaps/gnome-default-dlg.png
 share/gnome/pixmaps/gnome-error.png
@@ -130,6 +121,7 @@ share/locale/es/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/et/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/fi/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/fr/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/he/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/hi/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/hu/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/it/LC_MESSAGES/libgnomeui-2.0.mo
