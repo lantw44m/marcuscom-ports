@@ -12,8 +12,11 @@ share/gnome/acme/acme.glade
 share/gnome/acme/gnome-speakernotes-muted.png
 share/gnome/acme/gnome-speakernotes.png
 share/gnome/control-center-2.0/capplets/acme.desktop
+share/locale/cs/LC_MESSAGES/acme.mo
+share/locale/da/LC_MESSAGES/acme.mo
 share/locale/es/LC_MESSAGES/acme.mo
 share/locale/fr/LC_MESSAGES/acme.mo
+share/locale/ko/LC_MESSAGES/acme.mo
 share/locale/lv/LC_MESSAGES/acme.mo
 share/locale/no/LC_MESSAGES/acme.mo
 share/locale/pt_BR/LC_MESSAGES/acme.mo
