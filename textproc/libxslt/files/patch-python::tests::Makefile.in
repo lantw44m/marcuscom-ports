@@ -1,0 +1,11 @@
+--- python/tests/Makefile.in.orig	Fri Sep 12 15:25:00 2003
++++ python/tests/Makefile.in	Fri Sep 12 15:25:38 2003
+@@ -133,7 +133,7 @@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+ pythondir = @pythondir@
+-EXAMPLE_DIR = $(datadir)/doc/libxslt-python-$(LIBXSLT_VERSION)/examples
++EXAMPLE_DIR = $(datadir)/doc/libxslt-python/examples
+ 
+ TESTSPY = \
+     basic.py	\

@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/textproc/libxslt/files/patch-python::Makefile.in,v 1.3 2002/04/18 11:31:24 sobomax Exp $
+
+--- python/Makefile.in.orig	Mon Apr 15 21:07:35 2002
++++ python/Makefile.in	Thu Apr 18 14:23:11 2002
+@@ -129,7 +129,7 @@
+ 	-I$(top_srcdir)
+ 
+ 
+-DOCS_DIR = $(datadir)/doc/libxslt-python-$(LIBXSLT_VERSION)
++DOCS_DIR = $(datadir)/doc/libxslt-python
+ # libxsltclass.txt is generated
+ DOCS = TODO
+ 

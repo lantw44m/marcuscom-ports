@@ -1,0 +1,51 @@
+# New ports collection makefile for:	libxslt
+# Date created:				9th February 2001
+# Whom:					Ade Lovett <ade@FreeBSD.org>
+#
+# $FreeBSD: ports/textproc/libxslt/Makefile,v 1.47 2003/08/10 17:43:00 adamw Exp $
+#
+
+PORTNAME=	libxslt
+PORTVERSION=	1.0.33
+CATEGORIES=	textproc gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.0
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	The XSLT C library for GNOME
+
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_LIBTOOL=	yes
+INSTALLS_SHLIB=	yes
+USE_GNOME=	gnomehack gnometarget libxml2
+CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include"
+
+MAN3=		libexslt.3 libxslt.3
+MAN1=		xsltproc.1
+
+.if !defined(WITHOUT_PYTHON)
+USE_PYTHON=	yes
+PLIST_SUB+=	PYTHON:=""
+CONFIGURE_ARGS+=	--with-python=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-python
+PLIST_SUB+=	PYTHON:="@comment "
+PKGNAMESUFFIX=	-nopython
+.endif
+
+.if defined(WITH_MEM_DEBUG)
+CONFIGURE_ARGS+=	--with-mem-debug
+.endif
+
+pre-everything::
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "libxslt has several tunables:"
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "	WITHOUT_PYTHON=yes		Turns off python support"
+	@${ECHO_MSG} "	WITH_MEM_DEBUG=yes		Turns on memory debugging"
+	@${ECHO_MSG} ""
+
+.include <bsd.port.mk>
