@@ -7,6 +7,7 @@
 
 PORTNAME=	libgconf-java
 PORTVERSION=	2.5.5
+PORTREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -49,11 +50,12 @@ do-install:
 	${MKDIR} ${JAVAJARDIR}
 	${INSTALL_DATA} ${WRKSRC}/lib/gconf${GCONF_API_VERSION}-${PORTVERSION}.jar \
 		${JAVAJARDIR}
+	${LN} -sf ${JAVAJARDIR}/gconf${GCONF_API_VERSION}-${PORTVERSION}.jar \
+		${JAVAJARDIR}/gconf${GCONF_API_VERSION}.jar
 
 post-install:
 	@${SED} -e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|g ; \
 		s|%%PREFIX%%|${PREFIX}|g ; \
-		s|%%PORTVERSION%%|${PORTVERSION}|g ; \
 		s|%%GCONF_API_VERSION%%|${GCONF_API_VERSION}|g' \
 		 < ${PKGDIR}/pkg-message > ${PKGMESSAGE}
 	@${CAT} ${PKGMESSAGE}
