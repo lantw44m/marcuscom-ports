@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gtkhtml3
-PORTVERSION=	3.1.14
+PORTVERSION=	3.1.16
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/3.1
@@ -21,7 +21,7 @@ LIB_DEPENDS=	soup-2.2.4:${PORTSDIR}/devel/libsoup
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gal2 gail
+USE_GNOME=	gnomeprefix gnomehack intlhack gail libgnomeui libgnomeprintui
 INSTALLS_SHLIB=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
