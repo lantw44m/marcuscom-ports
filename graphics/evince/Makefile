@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.1
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	GNOME 2 Document Viewer
+COMMENT=	GNOME 2 multi-format document viewer
 
 USE_BZIP2=	yes
 USE_LIBTOOL_VER=15
