@@ -1,9 +1,6 @@
-
-$FreeBSD: ports/devel/gconf2/files/patch-configure,v 1.7 2003/02/07 18:42:02 marcus Exp $
-
---- configure.orig	Fri Apr 26 12:18:08 2002
-+++ configure	Fri Apr 26 12:18:36 2002
-@@ -6797,6 +6797,7 @@
+--- configure.orig	Sat May  3 13:11:21 2003
++++ configure	Sun Jun 15 01:22:52 2003
+@@ -8029,6 +8029,7 @@
  
  # This can be used to rebuild libtool when needed
  LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
@@ -11,3 +8,12 @@ $FreeBSD: ports/devel/gconf2/files/patch-configure,v 1.7 2003/02/07 18:42:02 mar
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+@@ -8300,7 +8301,7 @@
+ 
+ 
+ 
+-PKGCONFIG_MODULES='gmodule-2.0 >= 2.0.1 gobject-2.0 >= 2.0.1 ORBit-2.0 >= 2.4.0 linc >= 0.5.0'
++PKGCONFIG_MODULES='gmodule-2.0 >= 2.0.1 gobject-2.0 >= 2.0.1 ORBit-2.0 >= 2.4.0 '
+ PKGCONFIG_MODULES_WITH_XML="$PKGCONFIG_MODULES libxml-2.0"
+ PKGCONFIG_MODULES_WITH_GTK=" $PKGCONFIG_MODULES gtk+-2.0 >= 2.0.0"
+ PKGCONFIG_MODULES_WITH_XML_AND_GTK=" $PKGCONFIG_MODULES gtk+-2.0 libxml-2.0"
