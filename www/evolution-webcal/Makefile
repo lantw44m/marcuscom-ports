@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	webcal
-PORTVERSION=	1.0.5
+PORTVERSION=	1.0.6
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PKGNAMEPREFIX}${PORTNAME}/1.0
@@ -22,7 +22,7 @@ USE_GMAKE=	yes
 USE_PERL=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver libgnomeui
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>
