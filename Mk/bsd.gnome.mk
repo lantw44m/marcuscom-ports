@@ -394,7 +394,7 @@ pygnome2_BUILD_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_RUN_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_USE_GNOME_IMPL=libgnomeprintui libgtkhtml gnomepanel libzvt nautilus2 pygtk2
 
-gstreamerplugins_LIB_DEPENDS=	gstplay-0.8.0:${PORTSDIR}/multimedia/gstreamer-plugins \
+gstreamerplugins_LIB_DEPENDS=	gstplay-0.8.1:${PORTSDIR}/multimedia/gstreamer-plugins \
 								gstreamer-0.8:${PORTSDIR}/multimedia/gstreamer
 gstreamerplugins_DETECT=	${X11BASE}/libdata/pkgconfig/gstreamer-play-0.7.pc
 gstreamerplugins_USE_GNOME_IMPL=	gconf2
