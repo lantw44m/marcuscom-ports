@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	libgtk-java
-PORTVERSION=	2.3.3
-PORTREVISION=	1
+PORTVERSION=	2.3.4
 CATEGORIES=	x11-toolkits java
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -43,6 +42,7 @@ do-install:
 post-install:
 	@${SED} -e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|g ; \
 		s|%%PREFIX%%|${PREFIX}|g ; \
+		s|%%PORTVERSION%%|${PORTVERSION}|g ; \
 		s|%%GTK_API_VERSION%%|${GTK_API_VERSION}|g' \
 		 < ${PKGDIR}/pkg-message > ${PKGMESSAGE}
 	@${CAT} ${PKGMESSAGE}
