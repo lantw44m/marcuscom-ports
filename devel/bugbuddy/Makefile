@@ -7,7 +7,7 @@
 
 PORTNAME=	bugbuddy
 PORTVERSION=	2.9.91
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/bug-buddy/2.9
@@ -16,6 +16,9 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A bug reporting tool for GNOME 2
+
+BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc:${PORTSDIR}/textproc/gnomedocutils
+RUN_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc:${PORTSDIR}/textproc/gnomedocutils
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
