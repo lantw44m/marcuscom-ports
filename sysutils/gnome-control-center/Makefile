@@ -17,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Control center for GNOME 2 project
 
-LIB_DEPENDS=	xklavier.8:${PORTSDIR}/x11/libxklavier
+LIB_DEPENDS=	xklavier.7:${PORTSDIR}/x11/libxklavier
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
