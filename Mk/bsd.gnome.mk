@@ -260,7 +260,7 @@ gail_LIB_DEPENDS=	gailutil.17:${PORTSDIR}/x11-toolkits/gail
 gail_DETECT=		${X11BASE}/libdata/pkgconfig/gail.pc
 gail_USE_GNOME_IMPL=	libgnomecanvas
 
-libgnomecanvas_LIB_DEPENDS=	gnomecanvas-2.306:${PORTSDIR}/graphics/libgnomecanvas
+libgnomecanvas_LIB_DEPENDS=	gnomecanvas-2.307:${PORTSDIR}/graphics/libgnomecanvas
 libgnomecanvas_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomecanvas-2.0.pc
 libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2
 
@@ -276,7 +276,7 @@ libgnomeprintui_LIB_DEPENDS=	gnomeprintui-2-2.1:${PORTSDIR}/x11-toolkits/libgnom
 libgnomeprintui_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomeprintui-2.0.pc
 libgnomeprintui_USE_GNOME_IMPL=	libgnomeprint libgnomecanvas
 
-libgnome_LIB_DEPENDS=	gnome-2.306:${PORTSDIR}/x11/libgnome
+libgnome_LIB_DEPENDS=	gnome-2.307:${PORTSDIR}/x11/libgnome
 libgnome_DETECT=	${X11BASE}/libdata/pkgconfig/libgnome-2.0.pc
 libgnome_USE_GNOME_IMPL=libxslt gnomevfs2 esound
 
@@ -284,7 +284,7 @@ libbonoboui_LIB_DEPENDS=	bonoboui-2.0:${PORTSDIR}/x11-toolkits/libbonoboui
 libbonoboui_DETECT=		${X11BASE}/libdata/pkgconfig/libbonoboui-2.0.pc
 libbonoboui_USE_GNOME_IMPL=	libgnomecanvas libgnome
 
-libgnomeui_LIB_DEPENDS=		gnomeui-2.306:${PORTSDIR}/x11-toolkits/libgnomeui
+libgnomeui_LIB_DEPENDS=		gnomeui-2.307:${PORTSDIR}/x11-toolkits/libgnomeui
 libgnomeui_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomeui-2.0.pc
 libgnomeui_USE_GNOME_IMPL=	libbonoboui
 
