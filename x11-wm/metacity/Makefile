@@ -15,8 +15,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS=	gtk-x11-2.0.102:${PORTSDIR}/x11-toolkits/gtk20 \
-		gconf-2:${PORTSDIR}/devel/gconf2 \
+LIB_DEPENDS=	gconf-2:${PORTSDIR}/devel/gconf2 \
 		glade-2.0.0:${PORTSDIR}/devel/libglade2
 
 USE_BZIP2=	yes
