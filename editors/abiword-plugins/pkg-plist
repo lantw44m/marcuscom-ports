@@ -10,16 +10,12 @@
 %%FREETRANSLATION:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiFreeTranslation.so
 %%GDICT:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiGdict.so
 %%GTKPIXBUF:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiGdkPixbuf.so
-%%GIMP:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiGimp.so
 %%GOOGLE:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiGoogle.so
-%%GYPSYTHON:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiGypsython.so
 %%HRTEXT:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiHRText.so
 %%HANCOM:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiHancom.so
 %%JPEG:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiJPEG.so
-%%KWORD:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiKWord.so
 %%LATEX:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiLaTeX.so
 %%MSWRITE:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiMSWrite.so
-%%MAGICK:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiMagick.so
 %%NROFF:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiNroff.so
 %%OPENWRITER:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiOpenWriter.so
 %%PDB:%%lib/AbiWord-%%ABIVERSION%%/plugins/libAbiPalmDoc.so

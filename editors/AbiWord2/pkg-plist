@@ -18,6 +18,7 @@ share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_New.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Options.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Options_ColorSel.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_PageNumbers.glade
+share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_PageSetup.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Replace.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Stylist.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Stylist_modal.glade

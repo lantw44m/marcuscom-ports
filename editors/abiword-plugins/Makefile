@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	abiword
-PORTVERSION=	2.1.7
+PORTVERSION=	2.1.8
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.abisource.com/downloads/Version-${PORTVERSION}/lf/
@@ -77,7 +77,7 @@ PLIST_SUB+=		BZ2ABW:=""
 PLIST_SUB+=		BZ2ABW:="@comment "
 .endif
 
-.if defined(WITH_CLARISWORKS) || defined(PACKAGE_BUILDING) # Untest...
+.if defined(WITH_CLARISWORKS) # Untest...
 CONFIGURE_ARGS+=	--enable-clarisworks
 PLIST_SUB+=		CLARISWORKS:=""
 .else
@@ -91,14 +91,14 @@ PLIST_SUB+=		COMMAND:=""
 PLIST_SUB+=		COMMAND:="@comment "
 .endif
 
-.if defined(WITH_DOCBOOK) || defined(PACKAGE_BUILDING) # Untest...
+.if defined(WITH_DOCBOOK) # Untest...
 CONFIGURE_ARGS+=	--enable-docbook
 PLIST_SUB+=		DOCBOOK:=""
 .else
 PLIST_SUB+=		DOCBOOK:="@comment "
 .endif
 
-.if defined(WITH_EML) || defined(PACKAGE_BUILDING) # Untest...
+.if defined(WITH_EML) # Untest...
 CONFIGURE_ARGS+=	--enable-eml
 PLIST_SUB+=		EML:=""
 .else
@@ -120,27 +120,11 @@ PLIST_SUB+=		GDICT:=""
 PLIST_SUB+=		GDICT:="@comment "
 .endif
 
-.if defined(WITH_GIMP) # Doesn't work, can't load plugin.
-#RUN_DEPENDS+=
-CONFIGURE_ARGS+=	--enable-abigimp
-PLIST_SUB+=		GIMP:=""
-.else
-PLIST_SUB+=		GIMP:="@comment "
-.endif
-
 .if defined(WITH_GOOGLE) || defined(PACKAGE_BUILDING)
 CONFIGURE_ARGS+=	--enable-google
 PLIST_SUB+=		GOOGLE:=""
 .else
 PLIST_SUB+=		GOOGLE:="@comment "
-.endif
-
-.if defined(WITH_GYPSYTHON) # Doesn't work, can load but no error.
-USE_PYTHON=		2.3+
-CONFIGURE_ARGS+=	--enable-gypsython
-PLIST_SUB+=		GYPSYTHON:=""
-.else
-PLIST_SUB+=		GYPSYTHON:="@comment "
 .endif
 
 .if defined(WITH_HANCOM) # Untest...
@@ -150,7 +134,7 @@ PLIST_SUB+=		HANCOM:=""
 PLIST_SUB+=		HANCOM:="@comment "
 .endif
 
-.if defined(WITH_HRTEXT) || defined(PACKAGE_BUILDING) # Untest...
+.if defined(WITH_HRTEXT) # Untest...
 CONFIGURE_ARGS+=	--enable-hrtext
 PLIST_SUB+=		HRTEXT:=""
 .else
@@ -164,26 +148,11 @@ PLIST_SUB+=		JPEG:=""
 PLIST_SUB+=		JPEG:="@comment "
 .endif
 
-.if defined(WITH_KWORD) || defined(PACKAGE_BUILDING) # Unstable, crashed.
-CONFIGURE_ARGS+=	--enable-kword
-PLIST_SUB+=		KWORD:=""
-.else
-PLIST_SUB+=		KWORD:="@comment "
-.endif
-
-.if defined(WITH_LATEX) || defined(PACKAGE_BUILDING) # Untest...
+.if defined(WITH_LATEX) # Untest...
 CONFIGURE_ARGS+=	--enable-latex
 PLIST_SUB+=		LATEX:=""
 .else
 PLIST_SUB+=		LATEX:="@comment "
-.endif
-
-.if defined(WITH_MAGICK) # Unstable, crashed.
-BUILD_DEPENDS+=		Magick++-config:${PORTSDIR}/graphics/ImageMagick
-CONFIGURE_ARGS+=	--enable-magick
-PLIST_SUB+=		MAGICK:=""
-.else
-PLIST_SUB+=		MAGICK:="@comment "
 .endif
 
 .if defined(WITH_MSWRITE) || defined(PACKAGE_BUILDING)
@@ -193,7 +162,7 @@ PLIST_SUB+=		MSWRITE:=""
 PLIST_SUB+=		MSWRITE:="@comment "
 .endif
 
-.if defined(WITH_NROFF) || defined(PACKAGE_BUILDING) # Untest...
+.if defined(WITH_NROFF) # Untest...
 CONFIGURE_ARGS+=	--enable-nroff
 PLIST_SUB+=		NROFF:=""
 .else
@@ -207,20 +176,12 @@ PLIST_SUB+=		OPENWRITER:=""
 PLIST_SUB+=		OPENWRITER:="@comment "
 .endif
 
-.if defined(WITH_PDB) || defined(PACKAGE_BUILDING) # Untest...
+.if defined(WITH_PDB) # Untest...
 CONFIGURE_ARGS+=	--enable-pdb
 PLIST_SUB+=		PDB:=""
 .else
 PLIST_SUB+=		PDB:="@comment "
 .endif
-
-# Need to update converters/psiconv to 0.9.6 first.
-#.if defined(WITH_PSION)
-#CONFIGURE_ARGS+=	--enable-psion
-#PLIST_SUB+=		PSION:=""
-#.else
-#PLIST_SUB+=		PSION:="@comment "
-#.endif
 
 .if defined(WITH_SDW)
 USE_GNOME+=		libgsf
@@ -237,7 +198,7 @@ PLIST_SUB+=		SHELL:=""
 PLIST_SUB+=		SHELL:="@comment "
 .endif
 
-.if defined(WITH_T602) || defined(PACKAGE_BUILDING) # Untest...
+.if defined(WITH_T602) # Untest...
 CONFIGURE_ARGS+=	--enable-t602
 PLIST_SUB+=		T602:=""
 .else
@@ -338,14 +299,8 @@ pre-everything::
 .if !defined(WITH_GDICT)
 	@${ECHO_MSG} "WITH_GDICT=yes		Look up definitions of selected text."
 .endif
-.if !defined(WITH_GIMP)
-	@${ECHO_MSG} "WITH_GIMP=yes		Edit Embedded Images with the Gimp."
-.endif
 .if !defined(WITH_GOOGLE)
 	@${ECHO_MSG} "WITH_GOOGLE=yes		Search Google for your selected text."
-.endif
-.if !defined(WITH_GYPSYTHON)
-	@${ECHO_MSG} "WITH_GYPSYTHON=yes	Python MailMerge."
 .endif
 .if !defined(WITH_HANCOM)
 	@${ECHO_MSG} "WITH_HANCOM=yes		Hancom Word Importer. Only does text."
@@ -356,14 +311,8 @@ pre-everything::
 .if !defined(WITH_JPEG)
 	@${ECHO_MSG} "WITH_JPEG=yes		View JPEG Images."
 .endif
-.if !defined(WITH_KWORD)
-	@${ECHO_MSG} "WITH_KWORD=yes		KWord import/export."
-.endif
 .if !defined(WITH_LATEX)
 	@${ECHO_MSG} "WITH_LATEX=yes		LaTeX export."
-.endif
-.if !defined(WITH_MAGICK)
-	@${ECHO_MSG} "WITH_MAGICK=yes		View and format images that ImageMagick supports."
 .endif
 .if !defined(WITH_MSWRITE)
 	@${ECHO_MSG} "WITH_MSWRITE=yes	Import MSWrite files."
@@ -377,9 +326,6 @@ pre-everything::
 .if !defined(WITH_PDB)
 	@${ECHO_MSG} "WITH_PDB=yes		Import/export Palm Database files."
 .endif
-#.if !defined(WITH_PSION)
-#	@${ECHO_MSG} "WITH_PSION=yes		Import/export Psion files."
-#.endif
 .if !defined(WITH_SDW)
 	@${ECHO_MSG} "WITH_SDW=yes		Import StarOffice 5.x files."
 .endif
