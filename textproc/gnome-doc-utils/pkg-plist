@@ -39,7 +39,6 @@ share/gnome/help/gnome-doc-xslt/C/format2xsl.xml
 share/gnome/help/gnome-doc-xslt/C/gettext.xml
 share/gnome/help/gnome-doc-xslt/C/gnome-doc-xslt.xml
 share/gnome/help/gnome-doc-xslt/C/legal.xml
-share/gnome/help/gnome-doc-xslt/C/rngdoc.xml
 share/gnome/help/gnome-doc-xslt/C/translating.xml
 share/gnome/help/gnome-doc-xslt/C/xsldoc.xml
 share/omf/gnome-doc-make/gnome-doc-make-C.omf
@@ -77,14 +76,12 @@ share/xml/gnome/xslt/docbook/utils/ids.xsl
 share/xml/gnome/xslt/gettext/format2xsl.xsl
 share/xml/gnome/xslt/gettext/gettext.xsl
 share/xml/gnome/xslt/gettext/l10n.xml
-share/xml/gnome/xslt/rngdoc/rngdoc.xsl
 share/xml/gnome/xslt/xsldoc/xsldoc.xsl
 share/xml2po/docbook.py
 share/xml2po/empty.py
 share/xml2po/gs.py
 @dirrm share/xml2po
 @dirrm share/xml/gnome/xslt/xsldoc
-@dirrm share/xml/gnome/xslt/rngdoc
 @dirrm share/xml/gnome/xslt/gettext
 @dirrm share/xml/gnome/xslt/docbook/utils
 @dirrm share/xml/gnome/xslt/docbook/omf
