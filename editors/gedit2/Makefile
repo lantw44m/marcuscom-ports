@@ -16,8 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A small but powerful text editor for Gnome 2 Desktop Environment
 
-LIB_DEPENDS=	pspell.15:${PORTSDIR}/textproc/aspell \
-		gtksourceview-1.0.0:${PORTSDIR}/x11-toolkits/gtksourceview
+LIB_DEPENDS=	pspell.15:${PORTSDIR}/textproc/aspell
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
@@ -26,7 +25,7 @@ INSTALLS_SHLIB=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeprintui libgnomeui \
-	   	eel2
+	   	eel2 gtksourceview
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 PLIST_SUB=	VERSION="2.4"
