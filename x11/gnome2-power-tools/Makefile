@@ -24,7 +24,7 @@ RUN_DEPENDS=	${X11BASE}/lib/epiphany-1.5/extensions/libgesturesextension.so:${PO
 		gdesklets:${PORTSDIR}/deskutils/gdesklets \
 		cog:${PORTSDIR}/sysutils/cog \
 		gnome-blog-poster:${PORTSDIR}/deskutils/gnomeblog \
-		gnomesu:${PORTSDIR}/sysutils/gnomesu \
+		gnomesu:${PORTSDIR}/security/libgnomesu \
 		bpm:${PORTSDIR}/sysutils/bpm
 
 NO_BUILD=	yes
