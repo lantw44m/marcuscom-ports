@@ -31,10 +31,11 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		straw:${PORTSDIR}/net/straw \
 		liferea:${PORTSDIR}/net/liferea \
 		gnotime:${PORTSDIR}/deskutils/gnotime \
-		sound-juicer:${PORTSDIR}/audio/sound-juicer \
 		rhythmbox:${PORTSDIR}/audio/rhythmbox \
 		jamboree:${PORTSDIR}/audio/jamboree \
 		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data
+## Currently broken ports:
+#		sound-juicer:${PORTSDIR}/audio/sound-juicer \
 
 .if !defined(PACKAGE_BUILDING) && !defined(PARALLEL_PACKAGE_BUILD)
 RUN_DEPENDS+=	totem:${PORTSDIR}/multimedia/totem
