@@ -1,5 +1,5 @@
---- sysdeps/freebsd/proctime.c.orig	Thu Feb 15 06:36:42 2001
-+++ sysdeps/freebsd/proctime.c	Tue Sep  9 11:17:56 2003
+--- sysdeps/freebsd/proctime.c.orig	Tue Oct 21 18:54:24 2003
++++ sysdeps/freebsd/proctime.c	Sun Feb 15 15:45:44 2004
 @@ -57,6 +57,7 @@
   * system, and interrupt time usage.
   */
@@ -24,7 +24,7 @@
  
 -#if (defined __FreeBSD__) && (__FreeBSD_version >= 300003)
 -
--	/* This was changed from a `struct timeval' into a `u_int64_t'
+-	/* This was changed from a `struct timeval' into a `guint64'
 -	 * on FreeBSD 3.0 and renamed p_rtime -> p_runtime.
 -	 */
 -

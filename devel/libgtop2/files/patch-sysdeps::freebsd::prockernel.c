@@ -1,5 +1,5 @@
---- sysdeps/freebsd/prockernel.c.orig	Sun Oct 17 03:31:43 1999
-+++ sysdeps/freebsd/prockernel.c	Tue Sep  9 11:36:35 2003
+--- sysdeps/freebsd/prockernel.c.orig	Tue Oct 21 18:54:24 2003
++++ sysdeps/freebsd/prockernel.c	Sun Feb 15 15:34:42 2004
 @@ -34,12 +34,6 @@
  #if (!defined __OpenBSD__) && (!defined __bsdi__)
  #include <sys/user.h>
@@ -96,10 +96,10 @@
 -			 * leave them 0.
 -			 */
 -
--			buf->min_flt = (u_int64_t) pstats.p_ru.ru_minflt;
--			buf->maj_flt = (u_int64_t) pstats.p_ru.ru_majflt;
--			buf->cmin_flt = (u_int64_t) pstats.p_cru.ru_minflt;
--			buf->cmaj_flt = (u_int64_t) pstats.p_cru.ru_majflt;
+-			buf->min_flt = (guint64) pstats.p_ru.ru_minflt;
+-			buf->maj_flt = (guint64) pstats.p_ru.ru_majflt;
+-			buf->cmin_flt = (guint64) pstats.p_cru.ru_minflt;
+-			buf->cmaj_flt = (guint64) pstats.p_cru.ru_majflt;
 -			
 -			buf->flags |= _glibtop_sysdeps_proc_kernel_pstats;
 -		}
@@ -112,21 +112,21 @@
 -#ifdef __FreeBSD__
 -#ifndef __alpha__
 -#if (__FreeBSD_version >= 300003)
--			buf->kstk_esp = (u_int64_t) pcb.pcb_esp;
--			buf->kstk_eip = (u_int64_t) pcb.pcb_eip;
+-			buf->kstk_esp = (guint64) pcb.pcb_esp;
+-			buf->kstk_eip = (guint64) pcb.pcb_eip;
 -#else
--			buf->kstk_esp = (u_int64_t) pcb.pcb_ksp;
--			buf->kstk_eip = (u_int64_t) pcb.pcb_pc;
+-			buf->kstk_esp = (guint64) pcb.pcb_ksp;
+-			buf->kstk_eip = (guint64) pcb.pcb_pc;
 -#endif
 -#else
 -			/*xxx FreeBSD/Alpha? */
 -#endif
 -#else
--			buf->kstk_esp = (u_int64_t) pcb.pcb_tss.tss_esp0;
+-			buf->kstk_esp = (guint64) pcb.pcb_tss.tss_esp0;
 -#ifdef __bsdi__
--			buf->kstk_eip = (u_int64_t) pcb.pcb_tss.tss_eip;
+-			buf->kstk_eip = (guint64) pcb.pcb_tss.tss_eip;
 -#else
--			buf->kstk_eip = (u_int64_t) pcb.pcb_tss.__tss_eip;
+-			buf->kstk_eip = (guint64) pcb.pcb_tss.__tss_eip;
 -#endif
 -
 -			buf->flags |= _glibtop_sysdeps_proc_kernel_pcb;
