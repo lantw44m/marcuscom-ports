@@ -5,7 +5,7 @@
 # $FreeBSD: ports/print/gnome-cups-manager/Makefile,v 1.8 2004/07/27 13:53:04 marcus Exp $
 
 PORTNAME=	gnome-cups-manager
-PORTVERSION=	0.23
+PORTVERSION=	0.24
 PORTEPOCH=	1
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -20,7 +20,8 @@ LIB_DEPENDS=	gnomecups-1.0.1:${PORTSDIR}/print/libgnomecups
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprintui libgnomeui
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprintui libgnomeui \
+		desktopfileutils
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL_VER=15
 USE_REINPLACE=	yes
