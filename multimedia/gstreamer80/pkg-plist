@@ -22,7 +22,6 @@ include/gstreamer-0.5/gst/gstautoplug.h
 include/gstreamer-0.5/gst/gstbin.h
 include/gstreamer-0.5/gst/gstbuffer.h
 include/gstreamer-0.5/gst/gstbufferpool-default.h
-include/gstreamer-0.5/gst/gstcache.h
 include/gstreamer-0.5/gst/gstcaps.h
 include/gstreamer-0.5/gst/gstclock.h
 include/gstreamer-0.5/gst/gstconfig.h
@@ -33,6 +32,7 @@ include/gstreamer-0.5/gst/gstenumtypes.h
 include/gstreamer-0.5/gst/gstevent.h
 include/gstreamer-0.5/gst/gstextratypes.h
 include/gstreamer-0.5/gst/gstformat.h
+include/gstreamer-0.5/gst/gstindex.h
 include/gstreamer-0.5/gst/gstinfo.h
 include/gstreamer-0.5/gst/gstlog.h
 include/gstreamer-0.5/gst/gstmacros.h
@@ -46,12 +46,14 @@ include/gstreamer-0.5/gst/gstplugin.h
 include/gstreamer-0.5/gst/gstpluginfeature.h
 include/gstreamer-0.5/gst/gstprobe.h
 include/gstreamer-0.5/gst/gstprops.h
+include/gstreamer-0.5/gst/gstquery.h
 include/gstreamer-0.5/gst/gstqueue.h
 include/gstreamer-0.5/gst/gstregistry.h
 include/gstreamer-0.5/gst/gstscheduler.h
 include/gstreamer-0.5/gst/gstsystemclock.h
 include/gstreamer-0.5/gst/gstthread.h
 include/gstreamer-0.5/gst/gsttrace.h
+include/gstreamer-0.5/gst/gsttrashstack.h
 include/gstreamer-0.5/gst/gsttype.h
 include/gstreamer-0.5/gst/gsttypefind.h
 include/gstreamer-0.5/gst/gsttypes.h
@@ -64,12 +66,11 @@ lib/gstreamer-0.5/libgstautoplugger.so
 lib/gstreamer-0.5/libgstbasicomegascheduler.so
 lib/gstreamer-0.5/libgstbasicwingoscheduler.so
 lib/gstreamer-0.5/libgstbytestream.so
-lib/gstreamer-0.5/libgstcaches.so
 lib/gstreamer-0.5/libgstelements.so
-lib/gstreamer-0.5/libgstfastomegascheduler.so
-lib/gstreamer-0.5/libgstfastwingoscheduler.so
 lib/gstreamer-0.5/libgstgetbits.so
+lib/gstreamer-0.5/libgstindexers.so
 lib/gstreamer-0.5/libgstoptomegascheduler.so
+lib/gstreamer-0.5/libgstoptscheduler.so
 lib/gstreamer-0.5/libgstoptwingoscheduler.so
 lib/gstreamer-0.5/libgstputbits.so
 lib/gstreamer-0.5/libgstspider.so
@@ -78,10 +79,10 @@ lib/gstreamer-0.5/libgststaticautoplugrender.so
 lib/gstreamer-0.5/libgsttypes.so
 lib/libgstcontrol-0.5.a
 lib/libgstcontrol-0.5.so
-lib/libgstcontrol-0.5.so.1
+lib/libgstcontrol-0.5.so.2
 lib/libgstreamer-0.5.a
 lib/libgstreamer-0.5.so
-lib/libgstreamer-0.5.so.1
+lib/libgstreamer-0.5.so.2
 libdata/pkgconfig/gstreamer-0.5.pc
 @exec %D/bin/gst-register 2>/dev/null
 @unexec rm %D/share/gnome/cache/gstreamer-0.5/registry.xml 2>/dev/null || true
