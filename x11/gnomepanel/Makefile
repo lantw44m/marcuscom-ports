@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	gnomepanel
-PORTVERSION=	2.5.93
+PORTVERSION=	2.6.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome-panel/2.5
+MASTER_SITE_SUBDIR=	sources/gnome-panel/2.6
 DISTNAME=	gnome-panel-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
