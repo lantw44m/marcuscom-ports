@@ -66,7 +66,7 @@ USE_GCC=	3.4
 
 pre-everything::
 	@${ECHO_MSG} ""
-	@${ECHO_MSG} " By default epiphany uses www/mozilla for html rendering, but you can"
+	@${ECHO_MSG} " By default yelp uses www/mozilla for html rendering, but you can"
 	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
 	@${ECHO_MSG}
 	@${ECHO_MSG} "  mozilla-devel "
