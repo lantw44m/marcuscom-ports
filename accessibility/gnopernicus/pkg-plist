@@ -8,7 +8,6 @@ etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/braille_key/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/key_pad/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/ACS-S/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/DK00/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/DK01/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/DK01DK02/%gconf.xml
@@ -96,7 +95,6 @@ etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/L10K01/%gconf
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/L10K02/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/L10K03/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/L10K04/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/user_key/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/config/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/config/brlmon/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/config/remote/%gconf.xml
@@ -117,7 +115,6 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/braille_key/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/key_pad/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/ACS-S/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/DK00/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/DK01/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/DK01DK02/%gconf.xml
@@ -205,7 +202,6 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/L10K0
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/L10K02/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/L10K03/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/L10K04/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/user_key/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/config/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/config/brlmon/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/config/remote/%gconf.xml
@@ -240,30 +236,27 @@ include/gnopernicus-1.0/libsrutil/srintl.h
 include/gnopernicus-1.0/libsrutil/util.h
 lib/gnopernicus-1.0/libbrl.a
 lib/gnopernicus-1.0/libbrl.so
-lib/gnopernicus-1.0/libbrl.so.2
+lib/gnopernicus-1.0/libbrl.so.4
 lib/gnopernicus-1.0/libke.a
 lib/gnopernicus-1.0/libke.so
-lib/gnopernicus-1.0/libke.so.2
+lib/gnopernicus-1.0/libke.so.4
 lib/gnopernicus-1.0/libmag.a
 lib/gnopernicus-1.0/libmag.so
-lib/gnopernicus-1.0/libmag.so.2
+lib/gnopernicus-1.0/libmag.so.4
 lib/gnopernicus-1.0/libsrconf.a
 lib/gnopernicus-1.0/libsrconf.so
-lib/gnopernicus-1.0/libsrconf.so.2
+lib/gnopernicus-1.0/libsrconf.so.4
 lib/gnopernicus-1.0/libsrlow.a
 lib/gnopernicus-1.0/libsrlow.so
-lib/gnopernicus-1.0/libsrlow.so.2
+lib/gnopernicus-1.0/libsrlow.so.4
 lib/gnopernicus-1.0/libsrs.a
 lib/gnopernicus-1.0/libsrs.so
-lib/gnopernicus-1.0/libsrs.so.2
+lib/gnopernicus-1.0/libsrs.so.4
 lib/gnopernicus-1.0/libsrutil.a
 lib/gnopernicus-1.0/libsrutil.so
-lib/gnopernicus-1.0/libsrutil.so.2
+lib/gnopernicus-1.0/libsrutil.so.4
 libdata/pkgconfig/gnopernicus-1.0.pc
 share/gnome/applications/gnopernicus.desktop
-share/gnome/gnopernicus/fonts/braillehc.afm
-share/gnome/gnopernicus/fonts/braillehc.pfb
-share/gnome/gnopernicus/fonts/braillehc.pfm
 share/gnome/gnopernicus/glade/gnopi_files/Braille_Monitor_Settings/braille_monitor_settings.glade2
 share/gnome/gnopernicus/glade/gnopi_files/Braille_Settings/attribute_settings.glade2
 share/gnome/gnopernicus/glade/gnopi_files/Braille_Settings/braille_device.glade2
@@ -295,18 +288,18 @@ share/gnome/gnopernicus/presentation/default.xml
 share/gnome/gnopernicus/presentation/verbose.xml
 share/gnome/help/brlmonitor/C/brlmonitor.xml
 share/gnome/help/brlmonitor/C/legal.xml
-share/gnome/help/gnopernicus/C/gnopernicus.xml
-share/gnome/help/gnopernicus/C/legal.xml
 share/gnome/help/brlmonitor/es/brlmonitor.xml
 share/gnome/help/brlmonitor/es/legal.xml
+share/gnome/help/gnopernicus/C/gnopernicus.xml
+share/gnome/help/gnopernicus/C/legal.xml
 share/gnome/help/gnopernicus/es/gnopernicus.xml
 share/gnome/help/gnopernicus/es/legal.xml
 share/gnome/omf/gnopernicus/brlmonitor-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnopernicus/brlmonitor-C.omf 2>/dev/null || /usr/bin/true
-share/gnome/omf/gnopernicus/gnopernicus-C.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/gnopernicus/gnopernicus-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnopernicus/brlmonitor-es.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnopernicus/brlmonitor-es.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnopernicus/gnopernicus-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnopernicus/gnopernicus-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnopernicus/gnopernicus-es.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnopernicus/gnopernicus-es.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gnopernicus.png
@@ -370,7 +363,6 @@ share/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
 @dirrm share/gnome/gnopernicus/glade/gnopi_files/Braille_Monitor_Settings
 @dirrm share/gnome/gnopernicus/glade/gnopi_files
 @dirrm share/gnome/gnopernicus/glade
-@dirrm share/gnome/gnopernicus/fonts
 @dirrm share/gnome/gnopernicus
 @dirrm lib/gnopernicus-1.0
 @dirrm include/gnopernicus-1.0/libsrutil
@@ -396,7 +388,6 @@ share/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/config/remote
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/config/brlmon
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/config
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/user_key
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/L10K04
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/L10K03
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/L10K02
@@ -484,7 +475,6 @@ share/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/DK01DK02
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/DK01
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/DK00
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard/ACS-S
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/keyboard
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/key_pad
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/command_map/braille_key
@@ -505,7 +495,6 @@ share/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/config/remote
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/config/brlmon
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/config
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/user_key
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/L10K04
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/L10K03
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/L10K02
@@ -593,7 +582,6 @@ share/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/DK01DK02
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/DK01
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/DK00
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard/ACS-S
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/keyboard
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/key_pad
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/command_map/braille_key
@@ -602,6 +590,6 @@ share/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/braille
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnopernicus/brlmonitor-C.omf 2>/dev/null || /usr/bin/true
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnopernicus/gnopernicus-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnopernicus/brlmonitor-es.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnopernicus/gnopernicus-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnopernicus/gnopernicus-es.omf 2>/dev/null || /usr/bin/true
