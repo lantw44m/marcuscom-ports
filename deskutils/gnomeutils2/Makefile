@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	gnomeutils2
-PORTVERSION=	2.1.5
+PORTVERSION=	2.2.0.1
 PORTEPOCH=	1
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome-utils/2.1
+MASTER_SITE_SUBDIR=	sources/gnome-utils/2.2
 DISTNAME=	gnome-utils-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
