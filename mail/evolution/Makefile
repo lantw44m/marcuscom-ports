@@ -7,6 +7,7 @@
 
 PORTNAME=	evolution
 PORTVERSION=	2.1.6
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.1
@@ -52,6 +53,14 @@ OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 
 .include <bsd.port.pre.mk>
 
+.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+WITH_GSTREAMER=	yes
+.endif
+
+.if exists(${LOCALBASE}/lib/libdbus-glib-1.so)
+WITH_DBUS=	yes
+.endif
+
 .if defined(WITH_PILOT)
 LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
 CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE} \
@@ -70,6 +79,20 @@ CONFIGURE_ARGS+=--with-openldap=no
 
 .if defined(WITH_SPAMASSASSIN)
 RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
+.endif
+
+.if defined(WITH_GSTREAMER)
+LIB_DEPENDS+=	gstreamer-0.8.5:${PORTSDIR}/multimedia/gstreamer
+PLIST_SUB+=	GSTREAMER=""
+.else
+PLIST_SUB+=	GSTREAMER="@comment "
+.endif
+
+.if defined(WITH_DBUS)
+LIB_DEPENDS+=	dbus-glib-1.0:${PORTSDIR}/devel/dbus
+PLIST_SUB+=	DBUS=""
+.else
+PLIST_SUB+=	DBUS="@comment "
 .endif
 
 post-install:
