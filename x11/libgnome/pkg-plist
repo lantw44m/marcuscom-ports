@@ -72,31 +72,6 @@ lib/libgnome-2.so
 lib/libgnome-2.so.590
 libdata/bonobo/servers/GNOME_Moniker_std.server
 libdata/pkgconfig/libgnome-2.0.pc
-share/doc/libgnome/ch01s02.html
-share/doc/libgnome/ch01s03.html
-share/doc/libgnome/ch01s04.html
-share/doc/libgnome/ch01s05.html
-share/doc/libgnome/home.png
-share/doc/libgnome/index.html
-share/doc/libgnome/index.sgml
-share/doc/libgnome/left.png
-share/doc/libgnome/libgnome-gnome-config.html
-share/doc/libgnome/libgnome-gnome-exec.html
-share/doc/libgnome/libgnome-gnome-gconf.html
-share/doc/libgnome/libgnome-gnome-help.html
-share/doc/libgnome/libgnome-gnome-i18n.html
-share/doc/libgnome/libgnome-gnome-init.html
-share/doc/libgnome/libgnome-gnome-program.html
-share/doc/libgnome/libgnome-gnome-score.html
-share/doc/libgnome/libgnome-gnome-sound.html
-share/doc/libgnome/libgnome-gnome-triggers.html
-share/doc/libgnome/libgnome-gnome-url.html
-share/doc/libgnome/libgnome-gnome-util.html
-share/doc/libgnome/libgnome-libgnometypebuiltins.html
-share/doc/libgnome/libgnome.devhelp
-share/doc/libgnome/libgnome.html
-share/doc/libgnome/right.png
-share/doc/libgnome/up.png
 share/locale/am/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ar/LC_MESSAGES/libgnome-2.0.mo
 share/locale/az/LC_MESSAGES/libgnome-2.0.mo
@@ -167,13 +142,13 @@ share/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/mouse
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/lockdown
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/interface
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/file-views
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/background
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/window_manager
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/help_viewer
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/browser
-@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/accessibility/startup
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/accessibility/keyboard
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/accessibility
@@ -183,13 +158,13 @@ share/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/mouse
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/lockdown
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/interface
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/file_views
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/background
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/window_manager
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/help_viewer
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/browser
-@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/accessibility/startup
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/accessibility/keyboard
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/accessibility
