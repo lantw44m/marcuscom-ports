@@ -19,6 +19,8 @@ lib/gnumeric/%%VERSION%%/plugins/fn-date/plugin.so
 lib/gnumeric/%%VERSION%%/plugins/fn-date/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/fn-eng/plugin.so
 lib/gnumeric/%%VERSION%%/plugins/fn-eng/plugin.xml
+lib/gnumeric/%%VERSION%%/plugins/fn-erlang/erlang.so
+lib/gnumeric/%%VERSION%%/plugins/fn-erlang/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/fn-financial/plugin.so
 lib/gnumeric/%%VERSION%%/plugins/fn-financial/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/fn-info/plugin.so
@@ -89,6 +91,9 @@ lib/gnumeric/%%VERSION%%/plugins/sc/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/sc/sc.so
 lib/gnumeric/%%VERSION%%/plugins/sylk/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/sylk/sylk.so
+lib/gnumeric/%%VERSION%%/plugins/uihello/hello.xml
+lib/gnumeric/%%VERSION%%/plugins/uihello/plugin.so
+lib/gnumeric/%%VERSION%%/plugins/uihello/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/xbase.so
 lib/gnumeric/%%VERSION%%/plugins/xml_sax/plugin.xml
@@ -767,6 +772,7 @@ share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
 @dirrm share/gnome/gnumeric
 @dirrm lib/gnumeric/%%VERSION%%/plugins/xml_sax
 @dirrm lib/gnumeric/%%VERSION%%/plugins/xbase
+@dirrm lib/gnumeric/%%VERSION%%/plugins/uihello
 @dirrm lib/gnumeric/%%VERSION%%/plugins/sylk
 @dirrm lib/gnumeric/%%VERSION%%/plugins/sc
 @dirrm lib/gnumeric/%%VERSION%%/plugins/sample_datasource
@@ -795,6 +801,7 @@ share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
 @dirrm lib/gnumeric/%%VERSION%%/plugins/fn-logical
 @dirrm lib/gnumeric/%%VERSION%%/plugins/fn-info
 @dirrm lib/gnumeric/%%VERSION%%/plugins/fn-financial
+@dirrm lib/gnumeric/%%VERSION%%/plugins/fn-erlang
 @dirrm lib/gnumeric/%%VERSION%%/plugins/fn-eng
 @dirrm lib/gnumeric/%%VERSION%%/plugins/fn-date
 @dirrm lib/gnumeric/%%VERSION%%/plugins/fn-database

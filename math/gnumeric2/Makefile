@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnumeric2
-PORTVERSION=	1.3.91
+PORTVERSION=	1.3.92
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:R}
@@ -36,6 +36,13 @@ GCONF_SCHEMAS=	gnumeric-dialogs.schemas gnumeric-general.schemas \
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
+.include <bsd.port.pre.mk>
+
+.if ${PERL_LEVEL} < 500600
+# The Perl plug-ins don't build with Perl < 5.6.1
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-plugins_Makefile.in
+.endif
+
 post-patch:
 	@cd ${WRKSRC} && ${REINPLACE_CMD} -e 's,malloc.h,stdlib.h,' \
 		src/tools/solver/lp_solve/commonlib.h \
@@ -56,4 +63,4 @@ post-install:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${PREFIX}/${dir}/gnumeric
 .endfor
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
