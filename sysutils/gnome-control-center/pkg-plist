@@ -13,6 +13,7 @@ bin/gnome-mouse-properties
 bin/gnome-network-preferences
 bin/gnome-settings-daemon
 bin/gnome-sound-properties
+bin/themus-theme-applier
 bin/gnome-theme-manager
 bin/gnome-theme-thumbnailer
 bin/gnome-thumbnail-font
@@ -48,7 +49,6 @@ etc/gnome-vfs-2.0/modules/font-method.conf
 etc/gnome-vfs-2.0/modules/theme-method.conf
 include/gnome-window-settings-2.0/gnome-window-manager.h
 include/gnome-window-settings-2.0/gnome-wm-manager.h
-lib/bonobo/libthemus-component.so
 lib/bonobo/libthemus-theme-properties-view.so
 lib/gnome-vfs-2.0/modules/libfont-method.so
 lib/gnome-vfs-2.0/modules/libtheme-method.so
@@ -58,12 +58,12 @@ lib/libgnome-window-settings.so.1
 lib/window-manager-settings/libmetacity.a
 lib/window-manager-settings/libmetacity.so
 libdata/bonobo/servers/GNOME_SettingsDaemon.server
-libdata/bonobo/servers/Themus_Component.server
 libdata/bonobo/servers/Themus_Properties_View.server
 libdata/bonobo/servers/fontilus.server
 libdata/pkgconfig/gnome-window-settings-2.0.pc
 libexec/fontilus-context-menu
 share/gnome/application-registry/fontilus.applications
+share/gnome/application-registry/themus.applications
 share/gnome/applications/gnomecc.desktop
 share/gnome/control-center-2.0/capplets/accessibility-keyboard.desktop
 share/gnome/control-center-2.0/capplets/at-properties.desktop
@@ -88,6 +88,7 @@ share/gnome/control-center-2.0/icons/behavior-capplet.png
 share/gnome/control-center-2.0/icons/default-applications-capplet.png
 share/gnome/control-center-2.0/icons/display-capplet.png
 share/gnome/control-center-2.0/icons/font-capplet.png
+share/gnome/control-center-2.0/icons/gnome-network-capplet.png
 share/gnome/control-center-2.0/icons/mouse-capplet.png
 share/gnome/control-center-2.0/icons/sound-capplet.png
 share/gnome/control-center-2.0/icons/window-capplet.png
@@ -147,6 +148,7 @@ share/gnome/control-center-2.0/xrdb/General.ad
 share/gnome/control-center-2.0/xrdb/Motif.ad
 share/gnome/control-center-2.0/xrdb/Tk.ad
 share/gnome/control-center-2.0/xrdb/Xaw.ad
+share/gnome/control-center/apply-font.glade
 share/gnome/cursor-fonts/cursor-large-white.pcf
 share/gnome/cursor-fonts/cursor-large.pcf
 share/gnome/cursor-fonts/cursor-white.pcf
@@ -155,6 +157,7 @@ share/gnome/idl/ConfigArchiver.idl
 share/gnome/idl/GNOME_SettingsDaemon.idl
 share/gnome/mime-info/fontilus.keys
 share/gnome/mime-info/fontilus.mime
+share/gnome/mime-info/themus.keys
 share/gnome/pixmaps/accessibility-keyboard-capplet.png
 share/gnome/pixmaps/at-enable-capplet.png
 share/gnome/pixmaps/background-capplet.png
@@ -184,6 +187,7 @@ share/locale/bg/LC_MESSAGES/control-center-2.0.mo
 share/locale/bn/LC_MESSAGES/control-center-2.0.mo
 share/locale/ca/LC_MESSAGES/control-center-2.0.mo
 share/locale/cs/LC_MESSAGES/control-center-2.0.mo
+share/locale/cy/LC_MESSAGES/control-center-2.0.mo
 share/locale/da/LC_MESSAGES/control-center-2.0.mo
 share/locale/de/LC_MESSAGES/control-center-2.0.mo
 share/locale/el/LC_MESSAGES/control-center-2.0.mo
