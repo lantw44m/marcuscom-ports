@@ -15,6 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME On-Screen Keyboard (GOK)
 
+USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomehack gnomeprefix libgnomeui atspi libwnck
 USE_REINPLACE=	yes
