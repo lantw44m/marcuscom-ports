@@ -1,10 +1,10 @@
 bin/gst-launch-ext-%%VERSION%%
 bin/gst-visualise-%%VERSION%%
-etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/default/%gconf.xml
-etc/gconf/gconf.xml.defaults/system/gstreamer/%gconf.xml
-etc/gconf/gconf.xml.defaults/system/gstreamer/default/%gconf.xml
-etc/gconf/schemas/gstreamer.schemas
+etc/gconf/gconf.xml.defaults/schemas/system/gstreamer-%%VERSION%%/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/system/gstreamer-%%VERSION%%/default/%gconf.xml
+etc/gconf/gconf.xml.defaults/system/gstreamer-%%VERSION%%/%gconf.xml
+etc/gconf/gconf.xml.defaults/system/gstreamer-%%VERSION%%/default/%gconf.xml
+etc/gconf/schemas/gstreamer-%%VERSION%%.schemas
 include/gstreamer-%%VERSION%%/gst/audio/gstaudiofilter.h
 include/gstreamer-%%VERSION%%/gst/audio/audioclock.h
 include/gstreamer-%%VERSION%%/gst/audio/audio.h
@@ -52,7 +52,9 @@ lib/gstreamer-%%VERSION%%/libgstaudio.so
 lib/gstreamer-%%VERSION%%/libgstaudioscale.so
 lib/gstreamer-%%VERSION%%/libgstauparse.so
 lib/gstreamer-%%VERSION%%/libgstavi.so
+%%LIBCACA%%lib/gstreamer-%%VERSION%%/libgstcacasink.so
 %%CDPARANOIA%%lib/gstreamer-%%VERSION%%/libgstcdparanoia.so
+lib/gstreamer-0.7/libgstcdplayer.so
 lib/gstreamer-%%VERSION%%/libgstcdxaparse.so
 lib/gstreamer-%%VERSION%%/libgstchart.so
 %%HERMES%%lib/gstreamer-%%VERSION%%/libgstcolorspace.so
@@ -64,21 +66,22 @@ lib/gstreamer-%%VERSION%%/libgstdeinterlace.so
 lib/gstreamer-%%VERSION%%/libgstefence.so
 lib/gstreamer-%%VERSION%%/libgsteffectv.so
 %%ESOUND%%lib/gstreamer-%%VERSION%%/libgstesd.so
+%%FAAD%%lib/gstreamer-%%VERSION%%/libgstfaad.so
 lib/gstreamer-%%VERSION%%/libgstfestival.so
-lib/gstreamer-%%VERSION%%/libgstffmpeg.so
 lib/gstreamer-%%VERSION%%/libgstfilter.so
 %%FLAC%%lib/gstreamer-%%VERSION%%/libgstflac.so
 lib/gstreamer-%%VERSION%%/libgstflxdec.so
 lib/gstreamer-%%VERSION%%/libgstgamma.so
-lib/gstreamer-%%VERSION%%/libgstgdkpixbuf.so
+%%GDKPIXBUF%%lib/gstreamer-%%VERSION%%/libgstgdkpixbuf.so
 %%GNOMEVFS%%lib/gstreamer-%%VERSION%%/libgstgnomevfs.so
 lib/gstreamer-%%VERSION%%/libgstgoom.so
 %%GSM%%lib/gstreamer-%%VERSION%%/libgstgsm.so
 %%HERMES%%lib/gstreamer-%%VERSION%%/libgsthermescolorspace.so
 %%HTTP%%lib/gstreamer-%%VERSION%%/libgsthttpsrc.so
 lib/gstreamer-%%VERSION%%/libgstidct.so
-lib/gstreamer-%%VERSION%%/libgstintfloat.so
 lib/gstreamer-%%VERSION%%/libgstid3types.so
+lib/gstreamer-%%VERSION%%/libgstinterleave.so
+%%IVORBIS%%lib/gstreamer-0.7/libgstivorbis.so
 %%JPEG%%lib/gstreamer-%%VERSION%%/libgstjpeg.so
 %%LADSPA%%lib/gstreamer-%%VERSION%%/libgstladspa.so
 %%LAME%%lib/gstreamer-%%VERSION%%/libgstlame.so
@@ -88,7 +91,6 @@ lib/gstreamer-%%VERSION%%/libgstlevel.so
 lib/gstreamer-%%VERSION%%/libgstmatroska.so
 lib/gstreamer-%%VERSION%%/libgstmedian.so
 %%LIBMIKMOD%%lib/gstreamer-%%VERSION%%/libgstmikmod.so
-lib/gstreamer-%%VERSION%%/libgstmodplug.a
 lib/gstreamer-%%VERSION%%/libgstmodplug.so
 lib/gstreamer-%%VERSION%%/libgstmonoscope.so
 lib/gstreamer-%%VERSION%%/libgstmp1videoparse.so
@@ -101,11 +103,7 @@ lib/gstreamer-%%VERSION%%/libgstmpegstream.so
 lib/gstreamer-%%VERSION%%/libgstmulaw.so
 lib/gstreamer-%%VERSION%%/libgstnavigationtest.so
 %%OGG%%lib/gstreamer-%%VERSION%%/libgstogg.so
-lib/gstreamer-%%VERSION%%/libgstoneton.so
 lib/gstreamer-%%VERSION%%/libgstoverlay.so
-%%OPENQUICKTIME%%lib/gstreamer-%%VERSION%%/libgstopenquicktimedecoder.so
-%%OPENQUICKTIME%%lib/gstreamer-%%VERSION%%/libgstopenquicktimedemux.so
-%%OPENQUICKTIME%%lib/gstreamer-%%VERSION%%/libgstopenquicktimetypes.so
 %%OSS%%lib/gstreamer-%%VERSION%%/libgstossaudio.so
 lib/gstreamer-%%VERSION%%/libgstpassthrough.so
 lib/gstreamer-%%VERSION%%/libgstplayondemand.so
@@ -121,10 +119,11 @@ lib/gstreamer-%%VERSION%%/libgstrtp.so
 %%LIBSIDPLAY%%lib/gstreamer-%%VERSION%%/libgstsid.so
 lib/gstreamer-%%VERSION%%/libgstsilence.so
 lib/gstreamer-%%VERSION%%/libgstsinesrc.so
-lib/gstreamer-%%VERSION%%/libgstsmoothwave.so
+%%SMOOTHWAVE%%lib/gstreamer-%%VERSION%%/libgstsmoothwave.so
 lib/gstreamer-%%VERSION%%/libgstsmooth.so
 lib/gstreamer-%%VERSION%%/libgstsmpte.so
 %%PNG%%lib/gstreamer-%%VERSION%%/libgstsnapshot.so
+%%LIBSNDFILE%%lib/gstreamer-0.7/libgstsndfile.so
 lib/gstreamer-%%VERSION%%/libgstspectrum.so
 lib/gstreamer-%%VERSION%%/libgstspeed.so
 %%SPEEX%%lib/gstreamer-%%VERSION%%/libgstspeex.so
@@ -135,6 +134,7 @@ lib/gstreamer-%%VERSION%%/libgstsynaesthesia.so
 lib/gstreamer-%%VERSION%%/libgsttagediting.so
 lib/gstreamer-%%VERSION%%/libgsttcp.so
 lib/gstreamer-%%VERSION%%/libgsttextoverlay.so
+%%LIBTHEORA%%lib/gstreamer-%%VERSION%%/libgsttheora.so
 lib/gstreamer-%%VERSION%%/libgsttimeoverlay.so
 lib/gstreamer-%%VERSION%%/libgsttypefindfunctions.so
 lib/gstreamer-%%VERSION%%/libgstudp.so
@@ -195,10 +195,10 @@ share/locale/nl/LC_MESSAGES/gst-plugins-%%VERSION%%.mo
 @dirrm include/gstreamer-%%VERSION%%/gst/floatcast
 @dirrm include/gstreamer-%%VERSION%%/gst/colorbalance
 @dirrm include/gstreamer-%%VERSION%%/gst/audio
-@dirrm etc/gconf/gconf.xml.defaults/system/gstreamer/default
-@dirrm etc/gconf/gconf.xml.defaults/system/gstreamer
-@dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/default
-@dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer
+@dirrm etc/gconf/gconf.xml.defaults/system/gstreamer-%%VERSION%%/default
+@dirrm etc/gconf/gconf.xml.defaults/system/gstreamer-%%VERSION%%
+@dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer-%%VERSION%%/default
+@dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer-%%VERSION%%
 @unexec rmdir %D/include/gstreamer-%%VERSION%%/gst 2>/dev/null || true
 @unexec rmdir %D/include/gstreamer-%%VERSION%% 2>/dev/null || true
 @exec %%X11BASE%%/bin/gst-register-%%VERSION%% 2>/dev/null || true

@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.7.4
-PORTREVISION=	1
+PORTVERSION=	0.7.5
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gst-plugins/0.7
@@ -18,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	GStreamer written collection of plugins handling several media types
 
-LIB_DEPENDS=	gstreamer-0.7.6:${PORTSDIR}/multimedia/gstreamer \
+LIB_DEPENDS=	gstreamer-0.7.7:${PORTSDIR}/multimedia/gstreamer \
 		popt.0:${PORTSDIR}/devel/popt
 
 USE_X_PREFIX=	yes
@@ -33,13 +32,32 @@ USE_REINPLACE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tests \
 		--disable-alsa \
-		--disable-cdrom \
+		--enable-cdrom \
 		--disable-mjpegtools \
+		--disable-divx \
+		--disable-dxr3 \
+		--disable-http \
 		--disable-qcam \
+		--disable-raw1394 \
 		--disable-v4l2 \
 		--disable-v4l \
+		--disable-vcd \
 		--disable-dependency-tracking \
+		--enable-xshm \
 		--enable-static
+
+# list of plugins that need some work in one way or the other to work
+# probable the lib needs to be ported, disable them for now.
+CONFIGURE_ARGS+=--disable-mas \
+		--disable-faac \
+		--disable-jack \
+		--disable-nas \
+		--disable-tarkin \
+		--disable-lcs \
+		--disable-mplex \
+		--disable-shout2 \
+		--disable-librfb
+
 CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
 		CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 		CPPFLAGS="${CPPFLAGS} -I${X11BASE}/include -I${LOCALBASE}/include" \
@@ -50,18 +68,17 @@ PLIST_SUB=	\
 		SHLIB_VERSION="${SHLIB_VERSION}"
 INSTALLS_SHLIB=	yes
 
-# for esound detection
+# for various GNOME-related component detection
 WANT_GNOME=	yes
 
 MAN1=	gst-launch-ext-${GST_VERSION}.1 gst-visualise-${GST_VERSION}.1
 
 PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 SDL_CONFIG?="${LOCALBASE}/bin/sdl11-config"
-XMMS_CONFIG?="${LOCALBASE}/bin/xmms-config"
 GST_VERSION=${PORTVERSION:C/..$//}
 
 # library minor number
-SHLIB_VERSION=  2
+SHLIB_VERSION=	2
 
 post-patch:
 # as of this writing, FreeBSD does not support lrint* C99 math functions
@@ -87,33 +104,16 @@ post-patch:
 		${XARGS} -n 10 ${REINPLACE_CMD} -e \
 		's|malloc\.h|stdlib.h|; \
 		s|stdint\.h|inttypes.h|'
-# use GMAKE, not MAKE
-	@${REINPLACE_CMD} -E -e \
-		's|make|${GMAKE}|' \
-		${WRKSRC}/gst-libs/ext/ffmpeg/Makefile.in
 # force libaudiofile detection
 	@${REINPLACE_CMD} -E -e \
 		's|^.*afOpenVirtualFile[[:space:]]*\(\);|;|' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
-
-post-configure:
-# CC safeness
-	@${ECHO_CMD} "CC=${CC}" >> \
-		${WRKSRC}/gst-libs/ext/ffmpeg/ffmpeg/config.mak
-	@${MKDIR} ${WRKSRC}/gst-libs/ext/ffmpeg/.deps
-	@${RM} -f ${WRKSRC}/gst-libs/ext/ffmpeg/patch/*.bak
 
 post-install:
 # register plugins
 	-@${X11BASE}/bin/gst-register-${GST_VERSION} 2>/dev/null
 
 .include <bsd.port.pre.mk>
-
-# Fix build on ia64.  This patch breaks other archs, so include it
-# conditionally
-.if ${ARCH} == "ia64" || ${ARCH} == "amd64"
-EXTRA_PATCHES=	${FILESDIR}/ia64-patch-ffmpeg::configure
-.endif
 
 # hermes is required for gstreamer-player to work
 # since it is currently the only colorspace plugin available
@@ -137,11 +137,6 @@ WITH_AALIB=yes
 WITH_ARTS=yes
 .endif
 
-# avifile
-.if exists(${LOCALBASE}/lib/libaviplay.a)
-WITH_AVIFILE=yes
-.endif
-
 # cdparanoia
 .if exists(${LOCALBASE}/lib/libcdda_paranoia.a)
 WITH_CDPARANOIA=yes
@@ -150,6 +145,11 @@ WITH_CDPARANOIA=yes
 # esound
 .if (${HAVE_GNOME:Mesound}!="")
 WITH_ESOUND=yes
+.endif
+
+# faad
+.if exists(${LOCALBASE}/lib/libfaad.a)
+WITH_FAAD=yes
 .endif
 
 # flac
@@ -162,6 +162,11 @@ WITH_FLAC=yes
 WITH_FREETYPE=yes
 .endif
 
+# gdkpixbuf
+.if ${HAVE_GNOME:Mgtk20}!=""
+WITH_GDKPIXBUF=yes
+.endif
+
 # lame
 .if exists(${LOCALBASE}/lib/libmp3lame.a)
 WITH_LAME=yes
@@ -170,6 +175,11 @@ WITH_LAME=yes
 # gnomevfs
 .if ${HAVE_GNOME:Mgnomevfs2}!=""
 WITH_GNOMEVFS=yes
+.endif
+
+# libcaca
+.if exists(${LOCALBASE}/lib/libcaca.a)
+WITH_LIBCACA=yes
 .endif
 
 # gsm
@@ -232,14 +242,29 @@ WITH_LIBMIKMOD=yes
 WITH_LIBMPEG2=yes
 .endif
 
+# libmusicbrainz
+.if exists(${LOCALBASE}/lib/libmusicbrainz.a)
+WITH_LIBMUSICBRAINZ=yes
+.endif
+
 # libshout
-.if exists(${LOCALBASE}/lib/libshout.a)
+.if exists(${LOCALBASE}/lib/libshout.so.2)
 WITH_LIBSHOUT=yes
 .endif
 
 # libsidplay
 .if exists(${LOCALBASE}/lib/libsidplay.a)
 WITH_LIBSIDPLAY=yes
+.endif
+
+# libsndfile
+.if exists(${LOCALBASE}/lib/libsndfile.a)
+WITH_LIBSNDFILE=yes
+.endif
+
+# libtheora
+.if exists(${LOCALBASE}/lib/libtheora.a)
+WITH_LIBTHEORA=yes
 .endif
 
 # mad
@@ -252,9 +277,9 @@ WITH_MAD=yes
 WITH_OGG=yes
 .endif
 
-# openquicktime
-.if exists(${LOCALBASE}/lib/libopenquicktime.so)
-WITH_OPENQUICKTIME=yes
+# pango
+.if exists(${X11BASE}/lib/libpangoft2-1.0.a)
+WITH_PANGO=yes
 .endif
 
 # png
@@ -267,6 +292,16 @@ WITH_PNG=yes
 WITH_SDL=yes
 .endif
 
+# smoothwave
+.if exists(${X11BASE}/lib/libgtk-x11-2.0.a)
+WITH_SMOOTHWAVE=yes
+.endif
+
+# speex
+.if exists(${LOCALBASE}/lib/libspeex.a)
+WITH_SPEEX=yes
+.endif
+
 # swfdec
 .if exists(${X11BASE}/lib/libswfdec.a)
 WITH_SWFDEC=yes
@@ -277,9 +312,9 @@ WITH_SWFDEC=yes
 WITH_VORBIS=yes
 .endif
 
-# xmms
-.if exists(${X11BASE}/lib/libxmms.a)
-#WITH_XMMS=yes
+# vorbisidec
+.if exists(${LOCALBASE}/lib/libvorbisidec.a)
+WITH_VORBISIDEC=yes
 .endif
 
 # xvid
@@ -318,16 +353,6 @@ CONFIGURE_ARGS+=	--with-arts-prefix=${LOCALBASE} \
 PLIST_SUB+=	ARTS=""
 .endif
 
-# avifile
-.ifndef(WITH_AVIFILE)
-CONFIGURE_ARGS+=	--disable-avifile
-PLIST_SUB+=	AVIFILE="@comment "
-.else
-LIB_DEPENDS+=	aviplay.0:${PORTSDIR}/multimedia/avifile
-
-PLIST_SUB+=	AVIFILE=""
-.endif
-
 # cdparanoia
 .ifndef(WITH_CDPARANOIA)
 CONFIGURE_ARGS+=	--disable-cdparanoia
@@ -350,6 +375,15 @@ CONFIGURE_ARGS+=	--with-esd-prefix=${LOCALBASE}  \
 PLIST_SUB+=	ESOUND=""
 .endif
 
+# faad
+.ifndef(WITH_FAAD)
+CONFIGURE_ARGS+=	--disable-faad
+PLIST_SUB+=	FAAD="@comment "
+.else
+LIB_DEPENDS+=	faad.0:${PORTSDIR}/audio/libfaad
+PLIST_SUB+=	FAAD=""
+.endif
+
 # flac
 .ifndef(WITH_FLAC)
 CONFIGURE_ARGS+=	--disable-flac
@@ -370,6 +404,15 @@ LIB_DEPENDS+=	freetype.9:${PORTSDIR}/print/freetype2
 CONFIGURE_ARGS+=	--with-ft-prefix=${LOCALBASE}  \
 			--with-ft-exec-prefix=${LOCALBASE}
 PLIST_SUB+=	FREETYPE=""
+.endif
+
+# gdkpixbuf
+.ifndef(WITH_GDKPIXBUF)
+CONFIGURE_ARGS+=	--disable-gdk_pixbuf
+PLIST_SUB+=	GDKPIXBUF="@comment "
+.else
+USE_GNOME+=	gtk20
+PLIST_SUB+=	GDKPIXBUF=""
 .endif
 
 # gnomevfs
@@ -460,6 +503,15 @@ LIB_DEPENDS+=	audiofile.0:${PORTSDIR}/audio/libaudiofile
 PLIST_SUB+=	LIBAUDIOFILE=""
 .endif
 
+# libcaca
+.ifndef(WITH_LIBCACA)
+CONFIGURE_ARGS+=	--disable-libcaca
+PLIST_SUB+=	LIBCACA="@comment "
+.else
+BUILD_DEPENDS+=	${LOCALBASE}/lib/libcaca.a:${PORTSDIR}/graphics/libcaca
+PLIST_SUB+=	LIBCACA=""
+.endif
+
 # libdv
 .ifndef(WITH_LIBDV)
 CONFIGURE_ARGS+=	--disable-libdv
@@ -527,6 +579,17 @@ CONFIGURE_ARGS+=	--with-mpeg2dec-prefix=${LOCALBASE}
 PLIST_SUB+=	LIBMPEG2=""
 .endif
 
+# libmusicbrainz
+# the musicbrainz people need to release a new version to get this to work
+# .ifndef(WITH_LIBMUSICBRAINZ)
+CONFIGURE_ARGS+=	--disable-musicbrainz
+.undef WITH_LIBMUSICBRAINZ
+#PLIST_SUB+=	LIBMUSICBRAINZ="@comment "
+#.else
+#LIB_DEPENDS+=	libmusicbrainz.3:${PORTSDIR}/audio/libmusicbrainz
+#PLIST_SUB+=	LIBMUSICBRAINZ=""
+#.endif
+
 # libshout
 .ifndef(WITH_LIBSHOUT)
 CONFIGURE_ARGS+=	--disable-shout
@@ -545,6 +608,24 @@ PLIST_SUB+=	LIBSIDPLAY="@comment "
 LIB_DEPENDS+=	sidplay.1:${PORTSDIR}/audio/libsidplay
 
 PLIST_SUB+=	LIBSIDPLAY=""
+.endif
+
+# libsndfile
+.ifndef(WITH_LIBSNDFILE)
+CONFIGURE_ARGS+=	--disable-sndfile
+PLIST_SUB+=	LIBSNDFILE="@comment "
+.else
+LIB_DEPENDS+=	sndfile.1:${PORTSDIR}/audio/libsndfile
+PLIST_SUB+=	LIBSNDFILE=""
+.endif
+
+# libtheora
+.ifndef(WITH_LIBTHEORA)
+CONFIGURE_ARGS+=	--disable-theora
+PLIST_SUB+=	LIBTHEORA="@comment "
+.else
+LIB_DEPENDS+=	theora.0:${PORTSDIR}/audio/libtheora
+PLIST_SUB+=	LIBTHEORA=""
 .endif
 
 # mad
@@ -568,22 +649,21 @@ LIB_DEPENDS+=	ogg.5:${PORTSDIR}/audio/libogg
 PLIST_SUB+=	OGG=""
 .endif
 
-# openquicktime
-.ifndef(WITH_OPENQUICKTIME)
-CONFIGURE_ARGS+=	--disable-openquicktime
-PLIST_SUB+=	OPENQUICKTIME="@comment "
-.else
-LIB_DEPENDS+=	openquicktime.0:${PORTSDIR}/multimedia/openquicktime
-
-PLIST_SUB+=	OPENQUICKTIME=""
-.endif
-
 # oss
 .ifdef(WITHOUT_OSS)
 CONFIGURE_ARGS+=	--disable-oss
 PLIST_SUB+=	OSS="@comment "
 .else
 PLIST_SUB+=	OSS=""
+.endif
+
+# pango
+.ifndef(WITH_PANGO)
+CONFIGURE_ARGS+=	--disable-pango
+PLIST_SUB+=	PANGO="@comment "
+.else
+USE_GNOME+=	pango
+PLIST_SUB+=	PANGO=""
 .endif
 
 # png
@@ -608,6 +688,15 @@ CONFIGURE_ARGS+=	--with-sdl-prefix=${LOCALBASE}  \
 			--with-sdl-exec-prefix=${LOCALBASE}
 CONFIGURE_ENV+=		SDL_CONFIG=${SDL_CONFIG}
 PLIST_SUB+=	SDL=""
+.endif
+
+# smoothwave
+.ifndef(WITH_SMOOTHWAVE)
+CONFIGURE_ARGS+=	--disable-smoothwave
+PLIST_SUB+=	SMOOTHWAVE="@comment "
+.else
+USE_GNOME+=	gtk20
+PLIST_SUB+=	SMOOTHWAVE=""
 .endif
 
 # speex
@@ -644,17 +733,13 @@ CONFIGURE_ARGS+=	--with-vorbis=${LOCALBASE} \
 PLIST_SUB+=	VORBIS=""
 .endif
 
-# xmms
-.ifndef(WITH_XMMS)
-CONFIGURE_ARGS+=	--disable-xmms
-PLIST_SUB+=	XMMS="@comment "
+# vorbisidec
+.ifndef(WITH_VORBISIDEC)
+CONFIGURE_ARGS+=	--disable-ivorbis
+PLIST_SUB+=	IVORBIS="@comment "
 .else
-LIB_DEPENDS+=	xmms.4:${PORTSDIR}/multimedia/xmms
-
-CONFIGURE_ARGS+=	--with-xmms-prefix=${X11BASE} \
-			--with-xmms-exec-prefix=${X11BASE}
-CONFIGURE_ENV+=		XMMS_CONFIG=${XMMS_CONFIG}
-PLIST_SUB+=	XMMS=""
+LIB_DEPENDS+=	vorbisidec.1:${PORTSDIR}/audio/libtremor
+PLIST_SUB+=	IVORBIS=""
 .endif
 
 # xvid
@@ -678,10 +763,6 @@ pre-everything::
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_ARTS to enable aRts Audio plugin'
 .endif
-.ifndef(WITH_AVIFILE)
-	@${ECHO_MSG} '===>'
-	@${ECHO_MSG} '===> Define WITH_AVIFILE to enable avifile Video plugin'
-.endif
 .ifndef(WITH_CDPARANOIA)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_CDPARANOIA to enable cdparanoia Audio plugin'
@@ -690,6 +771,10 @@ pre-everything::
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_ESOUND to enable esound Audio plugin'
 .endif
+.ifndef(WITH_FAAD)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_FAAD to enable faad Audio plugin'
+.endif
 .ifndef(WITH_FLAC)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_FLAC to enable flac Audio plugin'
@@ -697,6 +782,10 @@ pre-everything::
 .ifndef(WITH_FREETYPE)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_FREETYPE to enable freetype support'
+.endif
+.ifndef(WITH_GDKPIXBUF)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_GDKPIXBUF to enable gdk-pixbuf plugin'
 .endif
 .ifndef(WITH_GSM)
 	@${ECHO_MSG} '===>'
@@ -734,6 +823,10 @@ pre-everything::
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_LIBAUDIOFILE to enable libaudiofile Audio plugin'
 .endif
+.ifndef(WITH_LIBCACA)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_LIBCACA to enable libcaca Video plugin'
+.endif
 .ifndef(WITH_LIBDV)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_LIBDV to enable libdv Video plugin'
@@ -758,6 +851,10 @@ pre-everything::
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_LIBMPEG2 to enable libmpeg2 Video plugin'
 .endif
+.ifndef(WITH_LIBMUSICBRAINZ)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_LIBMUSICBRAINZ to enable libmusicbrainz Audio plugin'
+.endif
 .ifndef(WITH_LIBSHOUT)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_LIBSHOUT to enable libshout Audio plugin'
@@ -766,17 +863,25 @@ pre-everything::
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_LIBSIDPLAY to enable libsidplay Audio plugin'
 .endif
+.ifndef(WITH_LIBSNDFILE)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_LIBSNDFILE to enable libsndfile Audio plugin'
+.endif
+.ifndef(WITH_LIBTHEORA)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_LIBTHEORA to enable libtheora Video plugin'
+.endif
 .ifndef(WITH_MAD)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_MAD to enable mad Audio plugin'
 .endif
-.ifndef(WITH_OPENQUICKTIME)
-	@${ECHO_MSG} '===>'
-	@${ECHO_MSG} '===> Define WITH_OPENQUICKTIME to enable openquicktime Video plugin'
-.endif
 .ifndef(WITHOUT_OSS)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITHOUT_OSS to disable OSS Audio plugin'
+.endif
+.ifndef(WITH_PANGO)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_PANGO to enable pango textoverlay plugin'
 .endif
 .ifndef(WITH_PNG)
 	@${ECHO_MSG} '===>'
@@ -786,6 +891,14 @@ pre-everything::
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_SDL to enable SDL Video plugin'
 .endif
+.ifndef(WITH_SMOOTHWAVE)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_SMOOTHWAVE to enable Smoothwave Video plugin'
+.endif
+.ifndef(WITH_SPEEX)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_SPEEX to enable Speex Video plugin'
+.endif
 .ifndef(WITH_SWFDEC)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_SWFDEC to enable Flash Video plugin'
@@ -794,9 +907,9 @@ pre-everything::
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_VORBIS to enable vorbis Audio plugin'
 .endif
-.ifndef(WITH_XMMS)
+.ifndef(WITH_VORBISIDEC)
 	@${ECHO_MSG} '===>'
-	@${ECHO_MSG} '===> Define WITH_XMMS to enable xmms Audio plugin'
+	@${ECHO_MSG} '===> Define WITH_VORBISIDEC to enable vorbisidec Audio plugin'
 .endif
 .ifndef(WITH_XVID)
 	@${ECHO_MSG} '===>'
