@@ -40,6 +40,7 @@ etc/gconf/gconf.xml.defaults/schemas/apps/workspace_switcher_applet/prefs/%gconf
 etc/gconf/schemas/clock.schemas
 etc/gconf/schemas/fish.schemas
 etc/gconf/schemas/gnome-panel-screenshot.schemas
+etc/gconf/schemas/panel-default-setup.entries
 etc/gconf/schemas/panel-general.schemas
 etc/gconf/schemas/panel-global.schemas
 etc/gconf/schemas/panel-object.schemas
@@ -75,9 +76,6 @@ share/doc/panel-applet/panelapplet.html
 share/doc/panel-applet/server-files.html
 share/doc/panel-applet/session-saving.html
 share/gnome/control-center-2.0/capplets/gnome-panel-preferences.desktop
-share/gnome/fish/fish.glade
-share/gnome/gen_util/window-list.glade
-share/gnome/gen_util/workspace-switcher.glade
 share/gnome/gnome-2.0/ui/GNOME_ClockApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_FishApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_NotificationAreaApplet.xml
@@ -86,6 +84,9 @@ share/gnome/gnome-2.0/ui/GNOME_ShowDesktopApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_WindowListApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_WindowMenuApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_WorkspaceSwitcherApplet.xml
+share/gnome/gnome-panel/glade/fish.glade
+share/gnome/gnome-panel/glade/window-list.glade
+share/gnome/gnome-panel/glade/workspace-switcher.glade
 share/gnome/gnome-panel/glade/panel-test-applets.glade
 share/gnome/gnome-panelrc
 share/gnome/help/clock/C/clock.xml
@@ -329,7 +330,6 @@ share/gnome/pixmaps/gnome-clock.png
 share/gnome/pixmaps/gnome-gegl.png
 share/gnome/pixmaps/gnome-gegl2-2.png
 share/gnome/pixmaps/gnome-gegl2.png
-share/gnome/pixmaps/gnome-lockscreen.png
 share/gnome/pixmaps/gnome-panel-type-corner.png
 share/gnome/pixmaps/gnome-panel-type-edge.png
 share/gnome/pixmaps/gnome-panel-type-floating.png
@@ -494,8 +494,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/help/clock
 @dirrm share/gnome/gnome-panel/glade
 @dirrm share/gnome/gnome-panel
-@dirrm share/gnome/gen_util
-@dirrm share/gnome/fish
 @dirrm share/doc/panel-applet
 @dirrm include/panel-2.0
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/workspace_switcher_applet/prefs
