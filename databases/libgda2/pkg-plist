@@ -74,7 +74,7 @@ lib/libgda-report-2.so
 lib/libgda-report-2.so.3
 lib/libgdasql.a
 lib/libgdasql.so
-lib/libgdasql.so.0
+lib/libgdasql.so.3
 %%FIREBIRD:%%lib/libgda/providers/libgda-firebird.so
 %%FREETDS:%%lib/libgda/providers/libgda-freetds.so
 %%LDAP:%%lib/libgda/providers/libgda-ldap.so
@@ -192,6 +192,7 @@ libdata/pkgconfig/libgda.pc
 %%DOCSDIR%%/migration.html
 %%DOCSDIR%%/processing-queries.html
 %%DOCSDIR%%/right.png
+%%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
 share/gnome/libgda/xml/gda-report.dtd
 share/gnome/libgda/xml/gda-report-result.dtd
