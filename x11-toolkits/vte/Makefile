@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	vte
-PORTVERSION=	0.11.5
+PORTVERSION=	0.11.6
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.11
@@ -32,7 +32,5 @@ post-patch:
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|malloc\.h|stdlib.h|g' \
 		${WRKSRC}/gnome-pty-helper/gnome-pty-helper.c
-	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
-		${WRKSRC}/po/Makefile.in.in
 
 .include <bsd.port.mk>
