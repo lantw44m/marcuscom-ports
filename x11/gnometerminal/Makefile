@@ -21,18 +21,10 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeui
+USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeui vte
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
-
-.if defined(WITH_ZVT)
-USE_GNOME+=	libzvt
-CONFIGURE_ARGS=	--with-widget=zvt
-.else
-USE_GNOME+=	vte
-CONFIGURE_ARGS=	--with-widget=vte
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
