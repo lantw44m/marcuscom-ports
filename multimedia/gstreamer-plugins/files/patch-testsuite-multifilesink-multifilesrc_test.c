@@ -1,5 +1,5 @@
---- multifilesrc_test.c.orig	Tue Nov 23 23:46:51 2004
-+++ multifilesrc_test.c	Tue Nov 23 23:47:18 2004
+--- testsuite/multifilesink/multifilesrc_test.c.orig	Tue Nov 23 23:46:51 2004
++++ testsuite/multifilesink/multifilesrc_test.c	Tue Nov 23 23:47:18 2004
 @@ -3,7 +3,6 @@
  int
  main (int argc, char **argv)
