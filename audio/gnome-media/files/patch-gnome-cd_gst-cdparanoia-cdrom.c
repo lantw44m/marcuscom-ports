@@ -1,14 +1,13 @@
 --- gnome-cd/gst-cdparanoia-cdrom.c.orig	Sat Mar 12 00:09:14 2005
-+++ gnome-cd/gst-cdparanoia-cdrom.c	Sat Mar 12 00:10:19 2005
-@@ -1443,15 +1443,19 @@
++++ gnome-cd/gst-cdparanoia-cdrom.c	Sat Mar 12 00:19:15 2005
+@@ -1443,15 +1443,18 @@
  		return FALSE;
  	}
  
-+#if defined(__FreeBSD__)
++#if !defined(__FreeBSD__)
 +	/* XXX: One cannot send CDIOCCAPABILITY to an atapicam CD-ROM
-+	 * device. */
-+	return TRUE;
-+#endif
++	 * device.
++	 */
 +
  	fd = open (device, O_RDONLY | O_NONBLOCK);
  	if (fd < 0) {
@@ -23,3 +22,11 @@
  	if (ioctl (fd, CDIOCGETVOL, 0) < 0) {
  #else
  	if (ioctl (fd, CDROM_GET_CAPABILITY, 0) < 0) {
+@@ -1463,6 +1466,7 @@
+ 	}
+ 
+ 	close (fd);
++#endif /* __FreeBSD__ */
+ 
+ 	return TRUE;
+ }
