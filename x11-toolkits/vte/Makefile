@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	vte
-PORTVERSION=	0.10.3
-PORTREVISION=	2
+PORTVERSION=	0.10.4
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.10
@@ -15,7 +14,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS=	gtk-x11-2.0.102:${PORTSDIR}/x11-toolkits/gtk20 \
+LIB_DEPENDS=	gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20 \
 		Xft2.2:${PORTSDIR}/x11-fonts/Xft
 
 USE_BZIP2=	yes
@@ -38,5 +37,7 @@ post-patch:
 		${WRKSRC}/gnome-pty-helper/gnome-pty-helper.c
 	@${REINPLACE_CMD} -e 's|Xft\.h|Xft2.h|g' \
 		${WRKSRC}/src/vte.c
+	@${REINPLACE_CMD} -Ee '/^(libvte_la_LIBADD|vte_LDADD)/s/(.*)/\1 -lXft2/' \
+		${WRKSRC}/src/Makefile.in
 
 .include <bsd.port.mk>
