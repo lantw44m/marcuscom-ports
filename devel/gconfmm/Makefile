@@ -7,6 +7,7 @@
 
 PORTNAME=	gconfmm
 PORTVERSION=	2.5.0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -15,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	bland@FreeBSD.org
 COMMENT=	C++ wrapper for gconf2 API library
 
-LIB_DEPENDS=	gtkmm-2.3.2:${PORTSDIR}/x11-toolkits/gtk--2
+LIB_DEPENDS=	glibmm-2.3.2:${PORTSDIR}/devel/glibmm
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_X_PREFIX=	yes
