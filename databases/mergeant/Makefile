@@ -7,6 +7,7 @@
 
 PORTNAME=	mergeant
 PORTVERSION=	0.52
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.52
@@ -22,7 +23,7 @@ USE_GNOME=	gnomeprefix intlhack gnomehack libgnomedb libgnomeprintui
 USE_PERL5=	yes
 USE_LIBTOOL_VER=15
 INSTALLS_OMF=	yes
-INSTALL_SHLIB=	yes
+INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
