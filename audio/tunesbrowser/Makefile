@@ -2,12 +2,11 @@
 # Date created:		2004-07-27
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
-# $FreeBSD$
+# $FreeBSD: ports/audio/tunesbrowser/Makefile,v 1.10 2005/02/03 03:32:25 ahze Exp $
 #
 
 PORTNAME=	tunesbrowser
-PORTVERSION=	0.1.6
-PORTREVISION=	3
+PORTVERSION=	0.2.0
 CATEGORIES=	audio
 MASTER_SITES=	http://craz.net/programs/itunes/files/
 
@@ -19,14 +18,10 @@ LIB_DEPENDS=	opendaap.0:${PORTSDIR}/devel/libopendaap
 USE_BZIP2=	yes
 USE_INC_LIBTOOL_VER=15
 USE_X_PREFIX=	yes
-USE_GNOME=	libglade2 gnometarget gnomehack
+USE_GNOME=	libglade2 gnometarget gnomehack gnomeprefix
 USE_GSTREAMER=	mad
-WANT_GNOME=	yes
-DATADIR=	${PREFIX}/share/gnome/${PORTNAME}
 
-PLIST_FILES=	bin/tunesbrowser \
-		%%DATADIR%%/tunesbrowser.glade
-PLIST_DIRS=	%%DATADIR%%
+DATADIR=	${PREFIX}/share/gnome/${PORTNAME}
 
 pre-everything::
 	@${ECHO_MSG} '===>'
@@ -34,15 +29,4 @@ pre-everything::
 	@${ECHO_MSG} '===> on the FreeBSD 4.x branch, and may not run at all'
 	@${ECHO_MSG} '===>'
 
-do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/tunesbrowser ${PREFIX}/bin
-	@${MKDIR} ${DATADIR}
-	@${INSTALL_DATA} ${WRKSRC}/tunesbrowser.glade ${DATADIR}
-
-.include <bsd.port.pre.mk>
-
-.if ${HAVE_GNOME:Mesound}!="" || defined(WITH_ESOUND)
-USE_GSTREAMER+=	esound
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
