@@ -26,4 +26,6 @@ USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+BROKEN=	"Does not build with new Nautilus"
+
 .include <bsd.port.mk>
