@@ -66,7 +66,7 @@
 + *  along with this program; if not, write to the Free Software
 + *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02111-1307, USA.
 + *
-+ $Id: patch-battstat-acpi,v 1.10 2005-02-14 06:32:22 marcus Exp $
++ $Id: patch-battstat-acpi,v 1.11 2005-02-14 12:29:35 kwm Exp $
 + */
 +
 +/*
@@ -321,8 +321,8 @@
  	NULL
     };
  
---- battsta/power-management.c.orig	Thu Jan 13 23:06:40 2005
-+++ battsta/power-management.c	Mon Feb 14 01:31:18 2005
+--- battstat/power-management.c.orig	Thu Jan 13 23:06:40 2005
++++ battstat/power-management.c	Mon Feb 14 01:31:18 2005
 @@ -76,6 +76,14 @@
  #ifdef __FreeBSD__
  
