@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomesystemtools
-PORTVERSION=	1.1.4
+PORTVERSION=	1.1.4.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-tools/1.1
