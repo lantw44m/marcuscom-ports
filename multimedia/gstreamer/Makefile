@@ -45,7 +45,7 @@ PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 .include <bsd.port.pre.mk>
 
 .if exists(${X11BASE}/libdata/pkgconfig/libgnomeui-2.0.pc)
-LIB_DEPENDS+=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui
+LIB_DEPENDS+=	gnomeui-2.200:${PORTSDIR}/x11-toolkits/libgnomeui
 .endif
 
 post-patch:

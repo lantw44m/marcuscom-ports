@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui
+LIB_DEPENDS=	gnomeui-2.200:${PORTSDIR}/x11-toolkits/libgnomeui
 
 .if defined(WITH_ZVT)
 LIB_DEPENDS+=	zvt-2.0.0:${PORTSDIR}/x11-toolkits/libzvt

@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 
 RUN_DEPENDS=	sox:${PORTSDIR}/audio/sox
-LIB_DEPENDS=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui \
+LIB_DEPENDS=	gnomeui-2.200:${PORTSDIR}/x11-toolkits/libgnomeui \
 		gailutil.17:${PORTSDIR}/x11-toolkits/gail \
 		gstreamer-0.5.3:${PORTSDIR}/multimedia/gstreamer
 

@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui
+LIB_DEPENDS=	gnomeui-2.200:${PORTSDIR}/x11-toolkits/libgnomeui
 RUN_DEPENDS=	bzip:${PORTSDIR}/archivers/bzip \
 		lha:${PORTSDIR}/archivers/lha \
 		rar:${PORTSDIR}/archivers/rar \

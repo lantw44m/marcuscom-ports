@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 
 BUILD_DEPENDS=	gob2:${PORTSDIR}/devel/gob2
-LIB_DEPENDS=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui \
+LIB_DEPENDS=	gnomeui-2.200:${PORTSDIR}/x11-toolkits/libgnomeui \
 		wnck-1.9:${PORTSDIR}/x11-toolkits/libwnck	
 
 USE_BZIP2=	yes
