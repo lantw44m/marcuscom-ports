@@ -91,6 +91,12 @@ post-patch:
 	@${REINPLACE_CMD} -e "/^SUBDIRS =/s/test//" \
 		${WRKSRC}/Makefile.in
 
+pre-configure:
+	@if [ -n "`${PKG_INFO} -xI '^bind[0-9]*-base-[0-9]'`" ]; then \
+		${ECHO_CMD} "${PKGNAME}: bind installed with PORT_REPLACES_BASE_BIND causes build problems."; \
+		${FALSE}; \
+	fi
+
 post-install:
 	@${MKDIR} ${PREFIX}/share/gnome/vfolders
 .if !defined(WITHOUT_KDE_MENUS)
