@@ -115,6 +115,7 @@ share/locale/ar/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/az/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/be/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/bg/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/bn/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ca/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/cs/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/cy/LC_MESSAGES/libgnomeui-2.0.mo
@@ -155,6 +156,7 @@ share/locale/ro/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ru/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/sk/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/sl/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/sq/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/sr/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/sr@Latn/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/sv/LC_MESSAGES/libgnomeui-2.0.mo
