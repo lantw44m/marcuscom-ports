@@ -104,7 +104,6 @@ share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-file-advanced-ops.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-file-basic-ops.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-file-info-ops.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-file-info.html
-share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-resolve.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-file-rw-ops.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-file-size.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-file-trunc-ops.html
@@ -120,6 +119,7 @@ share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-module-shared.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-module.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-monitor.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-parse-ls.html
+share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-resolve.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-result.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-socket-buffer.html
 share/doc/gnome-vfs-2.0/gnome-vfs-20-gnome-vfs-socket.html
