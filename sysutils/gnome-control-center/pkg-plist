@@ -186,13 +186,11 @@ share/locale/zh_CN/LC_MESSAGES/control-center-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 @unexec rmdir %D/share/locale/nso/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/ share/locale/nso 2> /dev/null || true
-@dirrm share/gnome/vfolders
 @dirrm share/gnome/gnome-background-properties
 @dirrm share/gnome/cursor-fonts
 @dirrm share/gnome/control-center-2.0/xrdb
 @dirrm share/gnome/control-center-2.0/pixmaps
 @dirrm share/gnome/control-center-2.0/interfaces
 @dirrm share/gnome/control-center-2.0/icons
-@dirrm share/gnome/control-center-2.0
 @dirrm lib/window-manager-settings
 @dirrm include/gnome-window-settings-2.0
