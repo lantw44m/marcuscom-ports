@@ -79,6 +79,7 @@ share/eazel-engine/tab_usel-bottom-left.png
 share/eazel-engine/tab_usel-bottom.png
 share/eazel-engine/tab_usel-left.png
 share/eazel-engine/tab_usel.png
+share/gnome/themes/Glider/metacity-1/metacity-theme-1.xml
 share/gnome/themes/Mist/metacity-1/metacity-theme-1.xml
 share/gnome/themes/Sandwish/metacity-1/active-border-top-left-border.png
 share/gnome/themes/Sandwish/metacity-1/active-border-top-right-border.png
@@ -144,7 +145,6 @@ share/gnome/themes/Sandwish/metacity-1/inactive-top-mid-border.png
 share/gnome/themes/Sandwish/metacity-1/inactive-top-right-border.png
 share/gnome/themes/Sandwish/metacity-1/inactive-top-right-corner.png
 share/gnome/themes/Sandwish/metacity-1/metacity-theme-1.xml
-share/gnome/themes/SimplySmooth/metacity-1/metacity-theme-1.xml
 share/gnome/themes/Smokey/metacity-1/button-base.png
 share/gnome/themes/Smokey/metacity-1/button-pressed-shine.png
 share/gnome/themes/Smokey/metacity-1/button-pressed.png
@@ -1258,6 +1258,7 @@ share/locale/az/LC_MESSAGES/gnome-themes.mo
 share/locale/be/LC_MESSAGES/gnome-themes.mo
 share/locale/bg/LC_MESSAGES/gnome-themes.mo
 share/locale/bn/LC_MESSAGES/gnome-themes.mo
+share/locale/bs/LC_MESSAGES/gnome-themes.mo
 share/locale/ca/LC_MESSAGES/gnome-themes.mo
 share/locale/cs/LC_MESSAGES/gnome-themes.mo
 share/locale/cy/LC_MESSAGES/gnome-themes.mo
@@ -1290,6 +1291,7 @@ share/locale/mk/LC_MESSAGES/gnome-themes.mo
 share/locale/ml/LC_MESSAGES/gnome-themes.mo
 share/locale/mn/LC_MESSAGES/gnome-themes.mo
 share/locale/ms/LC_MESSAGES/gnome-themes.mo
+share/locale/nb/LC_MESSAGES/gnome-themes.mo
 share/locale/nl/LC_MESSAGES/gnome-themes.mo
 share/locale/nn/LC_MESSAGES/gnome-themes.mo
 share/locale/no/LC_MESSAGES/gnome-themes.mo
@@ -1315,6 +1317,21 @@ share/locale/zh_CN/LC_MESSAGES/gnome-themes.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-themes.mo
 share/themes/Crux/gtk-2.0/gtkrc
 share/themes/Crux/index.theme
+share/themes/Glider/gtk-2.0/gtkrc
+share/themes/Glider/gtk-2.0/iconrc
+share/themes/Glider/gtk-2.0/stock_apply.png
+share/themes/Glider/gtk-2.0/stock_bottom.png
+share/themes/Glider/gtk-2.0/stock_cancel.png
+share/themes/Glider/gtk-2.0/stock_down.png
+share/themes/Glider/gtk-2.0/stock_first.png
+share/themes/Glider/gtk-2.0/stock_last.png
+share/themes/Glider/gtk-2.0/stock_left.png
+share/themes/Glider/gtk-2.0/stock_ok.png
+share/themes/Glider/gtk-2.0/stock_refresh.png
+share/themes/Glider/gtk-2.0/stock_right.png
+share/themes/Glider/gtk-2.0/stock_top.png
+share/themes/Glider/gtk-2.0/stock_up.png
+share/themes/Glider/index.theme
 share/themes/Grand-Canyon/gtk-2.0/3d_all_flat.png
 share/themes/Grand-Canyon/gtk-2.0/3d_all_normal.png
 share/themes/Grand-Canyon/gtk-2.0/3d_all_prelight.png
@@ -1912,9 +1929,6 @@ share/themes/Mist/index.theme
 share/themes/Ocean-Dream/index.theme
 share/themes/Simple/gtk-2.0/gtkrc
 share/themes/Simple/index.theme
-share/themes/SimplySmooth/gtk-2.0/gtkrc
-share/themes/SimplySmooth/gtk-2.0/iconrc
-share/themes/SimplySmooth/index.theme
 share/themes/Smokey-Blue/gtk-2.0/bubble-blue-prelight.png
 share/themes/Smokey-Blue/gtk-2.0/bubble-blue-pressed.png
 share/themes/Smokey-Blue/gtk-2.0/bubble-blue-sb.png
@@ -1945,8 +1959,6 @@ share/themes/Traditional/index.theme
 @dirrm share/themes/ThinIce
 @dirrm share/themes/Smokey-Blue/gtk-2.0
 @dirrm share/themes/Smokey-Blue
-@dirrm share/themes/SimplySmooth/gtk-2.0
-@dirrm share/themes/SimplySmooth
 @dirrm share/themes/Simple/gtk-2.0
 @dirrm share/themes/Simple
 @dirrm share/themes/Ocean-Dream
@@ -1974,6 +1986,8 @@ share/themes/Traditional/index.theme
 @dirrm share/themes/HighContrast
 @dirrm share/themes/Grand-Canyon/gtk-2.0
 @dirrm share/themes/Grand-Canyon
+@dirrm share/themes/Glider/gtk-2.0
+@dirrm share/themes/Glider
 @dirrm share/themes/Crux/gtk-2.0
 @dirrm share/themes/Crux
 @dirrm share/icons/Smokey-Red/48x48/filesystems
@@ -2069,11 +2083,11 @@ share/themes/Traditional/index.theme
 @dirrm share/icons/Crux
 @dirrm share/gnome/themes/Smokey/metacity-1
 @dirrm share/gnome/themes/Smokey
-@dirrm share/gnome/themes/SimplySmooth/metacity-1
-@dirrm share/gnome/themes/SimplySmooth
 @dirrm share/gnome/themes/Sandwish/metacity-1
 @dirrm share/gnome/themes/Sandwish
 @dirrm share/gnome/themes/Mist/metacity-1
 @dirrm share/gnome/themes/Mist
+@dirrm share/gnome/themes/Glider/metacity-1
+@dirrm share/gnome/themes/Glider
 @dirrm share/eazel-engine
 @unexec /bin/rmdir %D/share/icons 2>/dev/null || /usr/bin/true
