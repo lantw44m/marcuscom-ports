@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	eel2
-PORTVERSION=	2.5.4
+PORTVERSION=	2.5.5
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.5
@@ -15,8 +15,6 @@ DISTNAME=	eel-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Generally useful classes and extensions to GNOME
-
-BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
