@@ -27,6 +27,13 @@ USE_LIBTOOL=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lm" \
 		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
 
+.ifdef (WITH_XINE)
+LIB_DEPENDS+=		xine.7:${PORTSDIR}/multimedia/libxine
+CONFIGURE_ARGS+=	--enable-xine
+.else
+LIB_DEPENDS+=		gstplay-0.7.1:${PORTSDIR}/multimedia/gstreamer-plugins
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libvorbis.so)
@@ -37,13 +44,6 @@ WITH_VORBIS=	yes
 LIB_DEPENDS+=		vorbis.2:${PORTSDIR}/audio/libvorbis
 .else
 CONFIGURE_ARGS+=	--disable-vorbis --disable-vorbistest
-.endif
-
-.ifdef (WITH_XINE)
-LIB_DEPENDS+=		xine.7:${PORTSDIR}/multimedia/libxine
-CONFIGURE_ARGS+=	--enable-xine
-.else
-LIB_DEPENDS+=		gstplay-0.7.1:${PORTSDIR}/multimedia/gstreamer-plugins
 .endif
 
 pre-everything::
