@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libsoup
-PORTVERSION=	1.99.17
+PORTVERSION=	1.99.20
 CATEGORIES=	devel gnome
 MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
 		${MASTER_SITE_GNOME}
