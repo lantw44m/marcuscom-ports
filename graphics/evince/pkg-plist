@@ -1,6 +1,17 @@
 bin/dviviewer
 bin/evince
+share/gnome/applications/evince.desktop
+share/gnome/evince/evince-password.glade
 share/gnome/evince/evince-ui.xml
 share/gnome/pixmaps/evince/ev-stock-zoom-fit-width.png
+share/locale/cs/LC_MESSAGES/evince.mo
+share/locale/de/LC_MESSAGES/evince.mo
+share/locale/en_CA/LC_MESSAGES/evince.mo
+share/locale/ja/LC_MESSAGES/evince.mo
+share/locale/nb/LC_MESSAGES/evince.mo
+share/locale/nl/LC_MESSAGES/evince.mo
+share/locale/pt_BR/LC_MESSAGES/evince.mo
+share/locale/sv/LC_MESSAGES/evince.mo
+share/locale/zh_CN/LC_MESSAGES/evince.mo
 @dirrm share/gnome/pixmaps/evince
 @dirrm share/gnome/evince

@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evince
-PORTVERSION=	0.1.0
+PORTVERSION=	0.1.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.1
@@ -20,5 +20,7 @@ USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GHOSTSCRIPT=yes
 USE_GNOME=	gnomehack gnomeprefix libgnomeui libgnomeprintui
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>
