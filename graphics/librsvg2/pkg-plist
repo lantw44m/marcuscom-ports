@@ -1,7 +1,8 @@
-etc/gtk-2.0/gdk-pixbuf.loaders
+bin/rsvg
 include/librsvg-2/librsvg/librsvg-features.h
 include/librsvg-2/librsvg/rsvg.h
-lib/gtk-2.0/2.0.100/engines/libsvg.so
+lib/gtk-2.0/%%GTK_VERSION%%/engines/libsvg.so
+lib/gtk-2.0/%%GTK_VERSION%%/loaders/svg_loader.so
 lib/librsvg-2.a
 lib/librsvg-2.so
 lib/librsvg-2.so.3
