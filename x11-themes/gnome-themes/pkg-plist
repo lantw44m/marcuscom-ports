@@ -967,6 +967,7 @@ share/themes/HighContrast/index.theme
 share/themes/HighContrastInverse/gtk-2.0/gtkrc
 share/themes/HighContrastInverse/index.theme
 share/themes/HighContrastLargePrint/gtk-2.0/gtkrc
+share/themes/HighContrastLargePrint/index.theme~
 share/themes/HighContrastLargePrint/pixmaps/double-click-maybe.png
 share/themes/HighContrastLargePrint/pixmaps/double-click-off.png
 share/themes/HighContrastLargePrint/pixmaps/double-click-on.png
@@ -1099,6 +1100,7 @@ share/themes/HighContrastLargePrint/pixmaps/volume-min.png
 share/themes/HighContrastLargePrint/pixmaps/volume-mute.png
 share/themes/HighContrastLargePrint/pixmaps/volume-zero.png
 share/themes/HighContrastLargePrintInverse/gtk-2.0/gtkrc
+share/themes/HighContrastLargePrintInverse/index.theme~
 share/themes/HighContrastLargePrintInverse/pixmaps/double-click-maybe.png
 share/themes/HighContrastLargePrintInverse/pixmaps/double-click-off.png
 share/themes/HighContrastLargePrintInverse/pixmaps/double-click-on.png
@@ -1365,7 +1367,9 @@ share/themes/LargePrint/pixmaps/volume-mute.png
 share/themes/LargePrint/pixmaps/volume-zero.png
 share/themes/LighthouseBlue/gtk-2.0/gtkrc
 share/themes/LowContrast/gtk-2.0/gtkrc
+share/themes/LowContrast/index.theme~
 share/themes/LowContrastLargePrint/gtk-2.0/gtkrc
+share/themes/LowContrastLargePrint/index.theme~
 share/themes/LowContrastLargePrint/pixmaps/double-click-maybe.png
 share/themes/LowContrastLargePrint/pixmaps/double-click-off.png
 share/themes/LowContrastLargePrint/pixmaps/double-click-on.png
