@@ -33,9 +33,8 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		gnotime:${PORTSDIR}/deskutils/gnotime \
 		rhythmbox:${PORTSDIR}/audio/rhythmbox \
 		jamboree:${PORTSDIR}/audio/jamboree \
-		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data
-## Currently broken ports:
-#		sound-juicer:${PORTSDIR}/audio/sound-juicer \
+		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data \
+		sound-juicer:${PORTSDIR}/audio/sound-juicer
 
 .include <bsd.port.pre.mk>
 
