@@ -82,4 +82,5 @@ share/locale/zh_TW/LC_MESSAGES/gconf-editor.mo
 @dirrm share/gnome/omf/gconf-editor
 @dirrm share/gnome/help/gconf-editor/C/figures
 @dirrm share/gnome/help/gconf-editor/C
+@dirrm share/gnome/help/gconf-editor
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gconf-editor/gconf-editor-C.omf 2>/dev/null || /usr/bin/true
