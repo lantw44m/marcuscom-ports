@@ -10,6 +10,7 @@ etc/gconf/gconf.xml.defaults/desktop/gnome/applications/terminal/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/applications/window_manager/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/background/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/file_views/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/interface/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/mouse/%gconf.xml
@@ -37,6 +38,7 @@ etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/terminal/%gconf.
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/window_manager/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/background/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/file-views/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/interface/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/mouse/%gconf.xml
@@ -170,6 +172,7 @@ share/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/mouse
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/interface
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/file-views
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/background
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/window_manager
@@ -196,6 +199,7 @@ share/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/mouse
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/interface
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/file_views
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/background
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/window_manager
