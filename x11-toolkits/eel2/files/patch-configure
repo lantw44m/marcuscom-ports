@@ -1,0 +1,13 @@
+
+$FreeBSD: ports/x11-toolkits/eel2/files/patch-configure,v 1.2 2002/05/20 17:47:26 sobomax Exp $
+
+--- configure	2002/04/25 19:15:15	1.1
++++ configure	2002/04/25 19:17:28
+@@ -5331,6 +5331,7 @@
+ 
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
++$ac_aux_dir/ltconfig $LIBTOOL_DEPS
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'

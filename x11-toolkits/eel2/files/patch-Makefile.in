@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/x11-toolkits/eel2/files/patch-Makefile.in,v 1.4 2002/06/13 16:06:24 sobomax Exp $
+
+--- Makefile.in	2002/06/13 16:05:09	1.1
++++ Makefile.in	2002/06/13 16:05:18
+@@ -119,7 +119,7 @@
+ 
+ NULL = 
+ 
+-SUBDIRS = eel test po
++SUBDIRS = eel po
+ 
+ EXTRA_DIST =  	COPYING.LIB					HACKING						MAINTAINERS					eel.spec.in					$(NULL)
+ 
