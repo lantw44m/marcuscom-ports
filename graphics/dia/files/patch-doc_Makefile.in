@@ -1,12 +1,11 @@
---- doc/Makefile.in.orig	Mon Jul 26 20:16:44 2004
-+++ doc/Makefile.in	Mon Jul 26 20:17:11 2004
-@@ -237,9 +237,7 @@
- 	shape.dtd \
+--- doc/Makefile.in.orig	Sun Aug  8 11:20:14 2004
++++ doc/Makefile.in	Sun Aug  8 11:20:32 2004
+@@ -238,8 +238,7 @@
  	sheet.dtd
  
--@HAVE_GNOME_FALSE@helpdir = $(pkgdatadir)/help
--
+ 
 -@HAVE_GNOME_TRUE@helpdir = $(datadir)/help/dia
+-@HAVE_GNOME_FALSE@helpdir = $(pkgdatadir)/help
 +helpdir = $(datadir)/help/dia
  subdir = doc
  ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
