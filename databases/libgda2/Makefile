@@ -159,15 +159,6 @@ pre-everything::
 .if !defined(WITH_MYSQL)
 	@${ECHO_MSG} "You can enable support for MySQL databases by defining WITH_MYSQL."
 .endif
-.if !defined(WITH_POSTGRES73)
-	@${ECHO_MSG} "You can enable support for Postgres 7.3 databases by defining WITH_POSTGRES73."
-.endif
-.if !defined(WITH_POSTGRES74)
-	@${ECHO_MSG} "You can enable support for Postgres 7.4 databases by defining WITH_POSTGRES74."
-.endif
-.if !defined(WITH_POSTGRES80)
-	@${ECHO_MSG} "You can enable support for Postgres 8.0 databases by defining WITH_POSTGRES80."
-.endif
 .if !defined(WITH_LDAP)
 	@${ECHO_MSG} "You can enable support for LDAP databases by defining WITH_LDAP."
 .endif
