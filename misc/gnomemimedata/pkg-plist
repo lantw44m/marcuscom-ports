@@ -50,5 +50,3 @@ share/locale/wa/LC_MESSAGES/gnome-mime-data.mo
 share/locale/yi/LC_MESSAGES/gnome-mime-data.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-mime-data.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-mime-data.mo
-@dirrm share/gnome/mime-info
-@dirrm share/gnome/application-registry
