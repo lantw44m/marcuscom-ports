@@ -351,6 +351,13 @@ PLIST_FILES=	${GST_LIB_DIR}/libgstpng.so \
 		${GST_LIB_DIR}/libgstsnapshot.so
 .endif
 
+# polypaudio
+.if ${GST_PLUGIN}=="polypaudio"
+LIB_DEPENDS+=	polyp-0.7.0:${PORTSDIR}/audio/polypaudio
+PLIST_FILES=	${GST_LIB_DIR}/libpolypaudio.so
+GST_PLUGIN_DIR=	ext/polyp
+.endif
+
 # sdl
 .if ${GST_PLUGIN}=="sdl"
 USE_SDL+=	sdl

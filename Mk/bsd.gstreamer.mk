@@ -58,7 +58,7 @@ _USE_GSTREAMER_ALL=	a52dec aalib artsd audiofile cdparanoia dirac \
 			lame libcaca libfame libmng libpng libvisual mad mikmod \
 			mpeg2dec mpeg2enc mplex musepack musicbrainz nas sdl \
 			shout sidplay smoothwave sndfile speex theora ogg pango \
-			swfdec vorbis xine xvid
+			polypaudio swfdec vorbis xine xvid
 
 # other plugins
 OTHER_GSTREAMER_PLUGINS+=	core yes
@@ -113,6 +113,9 @@ nas_DEPENDS=	audio/gstreamer-plugins-nas
 nas_PLIST=	libgstnassink
 
 ogg_DEPENDS=	audio/gstreamer-plugins-ogg
+
+polypaudio_DEPENDS=	audio/gstreamer-plugins-polypaudio
+polypaudio_PLIST=	libpolypaudio
 
 shout_DEPENDS=	audio/gstreamer-plugins-shout
 
