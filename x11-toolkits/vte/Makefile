@@ -28,6 +28,16 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		BSD_PTHREAD_LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--disable-python
 
+.ifdef(WITH_GLX)
+CONFIGURE_ARGS+=	--with-glX
+.endif
+
+pre-everything::
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "Vte supports the following configurable option(s):"
+	@${ECHO_MSG} "	WITH_GLX=yes	Enable support for DRI rendering (may improve performance)"
+	@${ECHO_MSG} ""
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc\.h|stdlib.h|g' \
 		${WRKSRC}/gnome-pty-helper/gnome-pty-helper.c
