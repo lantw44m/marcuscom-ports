@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 
 LIB_DEPENDS=	nautilus.2:${PORTSDIR}/x11-fm/nautilus2 \
-		gstreamer-0.5.3:${PORTSDIR}/multimedia/gstreamer
+		gstplay-0.5.2:${PORTSDIR}/multimedia/gstreamer-plugins
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
