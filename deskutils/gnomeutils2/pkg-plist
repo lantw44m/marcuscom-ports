@@ -128,9 +128,6 @@ share/gnome/omf/gnome-utils/gnome-system-log-zh_CN.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gnome-system-log-zh_CN.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-utils/gnome-system-log-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gnome-system-log-zh_TW.omf 2>/dev/null || /usr/bin/true
-share/gnome/pixmaps/gdict.png
-share/gnome/pixmaps/gnome-search-tool/gnome-search-tool-animation.png
-share/gnome/pixmaps/gnome-searchtool.png
 share/locale/am/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-utils-2.0.mo
@@ -154,6 +151,7 @@ share/locale/ga/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/gl/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/he/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/hi/LC_MESSAGES/gnome-utils-2.0.mo
+share/locale/hr/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/hu/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/id/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-utils-2.0.mo
