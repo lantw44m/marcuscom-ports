@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.1.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -44,7 +44,8 @@ RUN_DEPENDS=	${X11BASE}/libexec/battstat-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		ggv:${PORTSDIR}/print/ggv2 \
 		pkgview:${PORTSDIR}/sysutils/pkgview \
 		acme:${PORTSDIR}/multimedia/acme \
-		gst-launch-ext:${PORTSDIR}/multimedia/gst-plugins
+		gst-launch-ext:${PORTSDIR}/multimedia/gst-plugins \
+		gst-tumbnail:${PORTSDIR}/multimedia/nautilus-media
 
 NO_BUILD=	yes
 
