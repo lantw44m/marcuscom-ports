@@ -15,6 +15,7 @@ bin/sol
 etc/gconf/gconf.xml.defaults/apps/freecell/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/freecell/option/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/freecell/score/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnect/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnometris/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnometris/options/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnomine/%gconf.xml
@@ -27,6 +28,7 @@ etc/gconf/gconf.xml.defaults/schemas/apps/freecell/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/freecell/option/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/freecell/score/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gataxx/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnect/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnometris/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnometris/options/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnomine/%gconf.xml
@@ -369,6 +371,7 @@ share/gnome/pixmaps/gnect/tileset_50x50_clean.png
 share/gnome/pixmaps/gnect/tileset_50x50_glassy.png
 share/gnome/pixmaps/gnect/tileset_50x50_square.png
 share/gnome/pixmaps/gnome-aisleriot.png
+share/gnome/pixmaps/gnome-gnotravex.png
 share/gnome/pixmaps/gnome-gtali.png
 share/gnome/pixmaps/gnome-gtetris.png
 share/gnome/pixmaps/gnome-mahjongg.png
@@ -420,7 +423,6 @@ share/gnome/pixmaps/gnomine/face-worried.xpm
 share/gnome/pixmaps/gnomine/flag-question.png
 share/gnome/pixmaps/gnomine/flag.png
 share/gnome/pixmaps/gnomine/mine.png
-share/gnome/pixmaps/gnotravex/gnome-gnotravex.png
 share/gnome/pixmaps/gnotravex/gnotravex.png
 share/gnome/pixmaps/gnotski-icon.png
 share/gnome/pixmaps/gnotski.png
@@ -526,6 +528,8 @@ share/gnome/sounds/gnome-stones/get_diamond.wav
 share/gnome/sounds/gnome-stones/title.wav
 share/gnome/sounds/iagno/flip-piece.wav
 share/gnome/sounds/iagno/gameover.wav
+share/locale/am/LC_MESSAGES/gnome-games.mo
+share/locale/ar/LC_MESSAGES/gnome-games.mo
 share/locale/be/LC_MESSAGES/gnome-games.mo
 share/locale/bg/LC_MESSAGES/gnome-games.mo
 share/locale/bn/LC_MESSAGES/gnome-games.mo
@@ -549,6 +553,8 @@ share/locale/it/LC_MESSAGES/gnome-games.mo
 share/locale/ja/LC_MESSAGES/gnome-games.mo
 share/locale/ko/LC_MESSAGES/gnome-games.mo
 share/locale/lt/LC_MESSAGES/gnome-games.mo
+share/locale/lv/LC_MESSAGES/gnome-games.mo
+share/locale/mk/LC_MESSAGES/gnome-games.mo
 share/locale/ml/LC_MESSAGES/gnome-games.mo
 share/locale/mn/LC_MESSAGES/gnome-games.mo
 share/locale/ms/LC_MESSAGES/gnome-games.mo
@@ -589,6 +595,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnomine
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnometris/options
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnometris
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnect
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gataxx
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/freecell/score
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/freecell/option
@@ -601,6 +608,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnomine
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnometris/options
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnometris
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnect
 @dirrm etc/gconf/gconf.xml.defaults/apps/freecell/score
 @dirrm etc/gconf/gconf.xml.defaults/apps/freecell/option
 @dirrm etc/gconf/gconf.xml.defaults/apps/freecell
