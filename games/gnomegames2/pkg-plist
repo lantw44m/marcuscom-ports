@@ -120,7 +120,6 @@ share/gnome/blackjack/Ameristar.rules
 share/gnome/blackjack/Atlantic_City.rules
 share/gnome/blackjack/Vegas_Downtown.rules
 share/gnome/blackjack/Vegas_Strip.rules
-share/gnome/blackjack/Vegas_Strip.rules.dat
 @unexec [ -s %D/share/gnome/games/glines.scores ] || rm -f %D/share/gnome/games/glines.scores
 @unexec [ -s %D/share/gnome/games/gnibbles.1.0.scores ] || rm -f %D/share/gnome/games/gnibbles.1.0.scores
 @unexec [ -s %D/share/gnome/games/gnibbles.1.1.scores ] || rm -f %D/share/gnome/games/gnibbles.1.1.scores
@@ -329,6 +328,10 @@ share/gnome/help/gnibbles/C/legal.xml
 share/gnome/help/gnobots2/C/figures/gnobots2-main.png
 share/gnome/help/gnobots2/C/gnobots2.xml
 share/gnome/help/gnobots2/C/legal.xml
+share/gnome/help/gnobots2/da/gnobots2.xml
+share/gnome/help/gnobots2/da/legal.xml
+share/gnome/help/gnobots2/es/gnobots2.xml
+share/gnome/help/gnobots2/es/legal.xml
 share/gnome/help/gnome-stones/C/figures/main-game.png
 share/gnome/help/gnome-stones/C/figures/main-start.png
 share/gnome/help/gnome-stones/C/figures/preferences-joystick.png
@@ -360,6 +363,8 @@ share/gnome/help/gtali/C/figures/mainwindow.png
 share/gnome/help/gtali/C/figures/preferences.png
 share/gnome/help/gtali/C/gtali.xml
 share/gnome/help/gtali/C/legal.xml
+share/gnome/help/gtali/da/gtali.xml
+share/gnome/help/gtali/da/legal.xml
 share/gnome/help/iagno/C/figures/ANIMATION.png
 share/gnome/help/iagno/C/figures/BLOCK.png
 share/gnome/help/iagno/C/figures/FIRST.png
@@ -397,6 +402,10 @@ share/gnome/omf/gnome-games/gnibbles-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnibbles-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnobots2-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnobots2-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-games/gnobots2-da.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnobots2-da.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-games/gnobots2-es.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnobots2-es.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnome-stones-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnome-stones-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnomine-C.omf
@@ -407,6 +416,8 @@ share/gnome/omf/gnome-games/gnotski-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnotski-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gtali-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gtali-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-games/gtali-da.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gtali-da.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/iagno-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/iagno-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/mahjongg-C.omf
@@ -547,11 +558,8 @@ share/gnome/pixmaps/gnomine/face-sad.xpm
 share/gnome/pixmaps/gnomine/face-smile.xpm
 share/gnome/pixmaps/gnomine/face-win.xpm
 share/gnome/pixmaps/gnomine/face-worried.xpm
-share/gnome/pixmaps/gnomine/flag-question.png
 share/gnome/pixmaps/gnomine/flag-question.svg
-share/gnome/pixmaps/gnomine/flag.png
 share/gnome/pixmaps/gnomine/flag.svg
-share/gnome/pixmaps/gnomine/mine.png
 share/gnome/pixmaps/gnomine/mine.svg
 share/gnome/pixmaps/gnotski-icon.png
 share/gnome/pixmaps/gnotski.png
@@ -693,6 +701,7 @@ share/locale/ga/LC_MESSAGES/gnome-games.mo
 share/locale/gl/LC_MESSAGES/gnome-games.mo
 share/locale/he/LC_MESSAGES/gnome-games.mo
 share/locale/hi/LC_MESSAGES/gnome-games.mo
+share/locale/hr/LC_MESSAGES/gnome-games.mo
 share/locale/hu/LC_MESSAGES/gnome-games.mo
 share/locale/id/LC_MESSAGES/gnome-games.mo
 share/locale/it/LC_MESSAGES/gnome-games.mo
@@ -761,6 +770,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/iagno/C/figures
 @dirrm share/gnome/help/iagno/C
 @dirrm share/gnome/help/iagno
+@dirrm share/gnome/help/gtali/da
 @dirrm share/gnome/help/gtali/C/figures
 @dirrm share/gnome/help/gtali/C
 @dirrm share/gnome/help/gtali
@@ -776,6 +786,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/gnome-stones/C/figures
 @dirrm share/gnome/help/gnome-stones/C
 @dirrm share/gnome/help/gnome-stones
+@dirrm share/gnome/help/gnobots2/es
+@dirrm share/gnome/help/gnobots2/da
 @dirrm share/gnome/help/gnobots2/C/figures
 @dirrm share/gnome/help/gnobots2/C
 @dirrm share/gnome/help/gnobots2
@@ -867,11 +879,14 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnect-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnibbles-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnobots2-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnobots2-da.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnobots2-es.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnome-stones-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnomine-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnotravex-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnotski-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gtali-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gtali-da.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/iagno-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/mahjongg-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/same-gnome-C.omf 2>/dev/null || /usr/bin/true
