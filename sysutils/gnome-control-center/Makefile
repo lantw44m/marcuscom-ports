@@ -6,12 +6,12 @@
 #
 
 PORTNAME=	gnomecontrolcenter2
-PORTVERSION=	2.8.1.20041212
+PORTVERSION=	2.8.1.20041219
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://people.freebsd.org/~ahze/
 #		${MASTER_SITE_GNOME}
 #MASTER_SITE_SUBDIR=	sources/control-center/2.8
-DISTNAME=	gnome-control-center
+DISTNAME=	gnome-control-center-1
 #		control-center-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -20,13 +20,14 @@ COMMENT=	Control center for GNOME 2 project
 
 LIB_DEPENDS=	xklavier.10:${PORTSDIR}/x11/libxklavier
 
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-1//}
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack metacity nautilus2 \
-		gstreamerplugins
+		gstreamerplugins gnomemenus desktopfileutils
 USE_LIBTOOL_VER=15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
