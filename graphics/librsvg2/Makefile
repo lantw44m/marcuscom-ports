@@ -100,6 +100,9 @@ post-patch:
 .endif
 .endif
 
+pre-build:
+	@${REINPLACE_CMD} -E -e 's|O2|O|g' ${WRKSRC}/Makefile
+
 .if defined(WITH_MOZILLA_PLUGIN)
 post-install:
 	${MKDIR} ${PREFIX}/lib/browser_plugins
