@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gedit2
-PORTVERSION=	2.3.1
+PORTVERSION=	2.3.2
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.3
@@ -14,7 +14,7 @@ DISTNAME=	gedit-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A small but powerful text editor for Gnome 2.0 Desktop Environment
+COMMENT=	A small but powerful text editor for Gnome 2 Desktop Environment
 
 LIB_DEPENDS=	pspell.15:${PORTSDIR}/textproc/aspell \
 		gtksourceview-1.0.0:${PORTSDIR}/x11-toolkits/gtksourceview
@@ -28,10 +28,10 @@ USE_LIBTOOL=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeprintui libgnomeui \
 	   	eel2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 PLIST_SUB=	VERSION="2.4"
 
-MAN1=	gedit.1
+MAN1=		gedit.1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \

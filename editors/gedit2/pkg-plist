@@ -49,6 +49,7 @@ include/gedit-%%VERSION%%/gedit/gedit-file.h
 include/gedit-%%VERSION%%/gedit/gedit-mdi-child.h
 include/gedit-%%VERSION%%/gedit/gedit-mdi.h
 include/gedit-%%VERSION%%/gedit/gedit-menus.h
+include/gedit-%%VERSION%%/gedit/gedit-metadata-manager.h
 include/gedit-%%VERSION%%/gedit/gedit-output-window.h
 include/gedit-%%VERSION%%/gedit/gedit-plugin.h
 include/gedit-%%VERSION%%/gedit/gedit-prefs-manager-app.h
