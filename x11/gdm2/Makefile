@@ -7,6 +7,7 @@
 
 PORTNAME=	gdm2
 PORTVERSION=	2.6.0.5
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=		sources/${PORTNAME:S/2$//}/2.6
@@ -54,6 +55,9 @@ post-extract:
 
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e 's|[(]datadir[)]/icons/hicolor|(prefix)/share/icons/hicolor|g'
+.for po in zh_CN.po
+	@${REINPLACE_CMD} -e 's|%-|%|g' ${WRKSRC}/po/${po}
+.endfor
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
