@@ -8,8 +8,7 @@
 PORTNAME=	pkgconfig
 PORTVERSION=	0.14.0
 CATEGORIES=	devel
-MASTER_SITES=	http://www.freedesktop.org/software/pkgconfig/releases/ \
-		${MASTER_SITE_GNOME}
+MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.14
 DIST_SUBDIR=	gnome2
 
