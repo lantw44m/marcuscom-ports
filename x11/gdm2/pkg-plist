@@ -31,6 +31,7 @@ etc/rc.d/gdm.sh.sample
 lib/gtk-2.0/modules/libdwellmouselistener.so
 lib/gtk-2.0/modules/libkeymouselistener.so
 %%PAM_MISC%%libexec/gdmaskpass
+libexec/gdmtranslate
 sbin/gdm-restart
 sbin/gdm-safe-restart
 sbin/gdm-stop
@@ -66,6 +67,10 @@ share/gnome/gdm/themes/circles/flower.png
 share/gnome/gdm/themes/circles/help.png
 share/gnome/gdm/themes/circles/options.png
 share/gnome/gdm/themes/circles/screenshot.png
+share/gnome/help/gdm/C/gdm.xml
+share/gnome/help/gdm/C/legal.xml
+share/gnome/omf/gdm/gdm-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gdm-foot-logo.png
 share/gnome/pixmaps/gdm.png
 share/gnome/pixmaps/login-photo.png
@@ -126,6 +131,8 @@ share/locale/vi/LC_MESSAGES/gdm-2.4.mo
 share/locale/wa/LC_MESSAGES/gdm-2.4.mo
 share/locale/zh_CN/LC_MESSAGES/gdm-2.4.mo
 share/locale/zh_TW/LC_MESSAGES/gdm-2.4.mo
+@dirrm share/gnome/omf/gdm
+@dirrm share/gnome/help/gdm/C
 @dirrm share/gnome/gdm/themes/happygnome
 @dirrm share/gnome/gdm/themes/happygnome-list
 @dirrm share/gnome/gdm/themes/circles
@@ -133,3 +140,4 @@ share/locale/zh_TW/LC_MESSAGES/gdm-2.4.mo
 @dirrm etc/pam.d
 @dirrm etc/gdm/modules
 @unexec /bin/rmdir %D/etc/dm 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-C.omf 2>/dev/null || /usr/bin/true

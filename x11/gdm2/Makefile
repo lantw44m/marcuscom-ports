@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gdm2
-PORTVERSION=	2.4.2.97
+PORTVERSION=	2.4.2.98
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=		sources/${PORTNAME:S/2$//}/2.4
@@ -33,15 +33,6 @@ GDMDIR?=	${PREFIX}/etc/gdm
 PLIST_SUB=	PAM_MISC=""
 .else
 PLIST_SUB=	PAM_MISC="@comment "
-.endif
-
-.if !defined(BATCH) && !defined(PACKAGE_BUILDING)
-IS_INTERACTIVE=	yes
-.endif
-
-.if !defined(BATCH) && !defined(PACKAGE_BUILDING)
-pre-fetch:
-	${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
 .endif
 
 post-extract:
