@@ -225,6 +225,7 @@ share/locale/wa/LC_MESSAGES/control-center-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/control-center-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 @dirrm share/gnome/pixmaps/gnomecc-2
+@dirrm share/gnome/gnome-background-properties
 @dirrm share/gnome/cursor-fonts
 @dirrm share/gnome/control-center-2.0/xrdb
 @dirrm share/gnome/control-center-2.0/pixmaps
