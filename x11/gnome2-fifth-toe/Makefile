@@ -27,7 +27,7 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		galeon:${PORTSDIR}/www/galeon \
 		seahorse:${PORTSDIR}/security/seahorse \
 		${X11BASE}/share/gnome/themes/Gorilla/metacity-1/metacity-theme-1.xml:${PORTSDIR}/x11-themes/gnome-themes-extras \
-		bluefish:${PORTSDIR}/www/bluefish-devel \
+		bluefish:${PORTSDIR}/www/bluefish \
 		gossip:${PORTSDIR}/net/gossip \
 		straw:${PORTSDIR}/net/straw \
 		liferea:${PORTSDIR}/net/liferea \
