@@ -1,4 +1,5 @@
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-font-dialog.h
+include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-config-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-job-preview.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-paper-selector.h
