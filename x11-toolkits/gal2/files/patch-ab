@@ -1,11 +1,11 @@
---- Makefile.in.orig	Mon Dec  8 15:44:58 2003
-+++ Makefile.in	Mon Dec  8 15:45:28 2003
-@@ -139,7 +139,7 @@
- YACC = @YACC@
- gnomelocaledir = @gnomelocaledir@
+--- Makefile.in.orig	Sat Mar  6 00:40:30 2004
++++ Makefile.in	Sat Mar  6 00:40:40 2004
+@@ -136,7 +136,7 @@
+ 
+ DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc
  
 -SUBDIRS = po gal tests docs art
 +SUBDIRS = po gal docs art
  
- pkgconfigdir = $(prefix)/libdata/pkgconfig
+ pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = gal-2.2.pc
