@@ -47,10 +47,14 @@ share/gnome/ximian-connector/%%VERSION%%/images/connector.png
 share/gnome/ximian-connector/%%VERSION%%/images/exchange-delegates-48.png
 share/gnome/ximian-connector/%%VERSION%%/images/exchange-oof-48.png
 share/gnome/ximian-connector/%%VERSION%%/ui/ximian-connector.xml
+share/locale/ar/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/bn/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/cs/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
+share/locale/cy/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
+share/locale/da/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/de/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
+share/locale/el/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/en_CA/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/en_GB/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/es/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
@@ -72,6 +76,7 @@ share/locale/sr/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/sr@Latn/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/sv/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/ta/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
+share/locale/tr/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/uk/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 @dirrm share/gnome/ximian-connector/%%VERSION%%/ui
 @dirrm share/gnome/ximian-connector/%%VERSION%%/images
