@@ -30,6 +30,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/battstat-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		metacity-setup:${PORTSDIR}/x11-wm/metacity-setup \
 		bug-buddy:${PORTSDIR}/devel/bugbuddy2 \
 		gnome-system-monitor:${PORTSDIR}/sysutils/gnomesystemmonitor \
+		nautilus:${PORTSDIR}/x11-fm/nautilus2 \
 		yelp:${PORTSDIR}/x11/yelp \
 		gdm:${PORTSDIR}/x11/gdm2 \
 		${X11BASE}/share/themes/Metal/gtk-2.0/gtkrc:${PORTSDIR}/x11-toolkits/gtk-engines2 \
