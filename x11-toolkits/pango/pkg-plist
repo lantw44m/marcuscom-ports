@@ -80,8 +80,7 @@ share/doc/pango/pango-Tab-Stops.html
 share/doc/pango/pango-Text-Attributes.html
 share/doc/pango/pango-Text-Processing.html
 share/doc/pango/pango-Win32-Fonts-and-Rendering.html
-share/doc/pango/pango-X-Fonts.html
-share/doc/pango/pango-X-Rendering.html
+share/doc/pango/pango-X-Fonts-and-Rendering.html
 share/doc/pango/pango-Xft-Fonts-and-Rendering.html
 share/doc/pango/pango.devhelp
 share/doc/pango/pango.html

@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	pango
-PORTVERSION=	1.1.5
+PORTVERSION=	1.1.6
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/1.1,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
@@ -42,7 +42,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			-I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
-PLIST_SUB=	VERSION="1.1.0"
+PLIST_SUB=	VERSION="1.2.0"
 
 .include <bsd.port.pre.mk>
 
