@@ -1,5 +1,5 @@
---- nautilus-burn-drive.c.orig	Mon Feb 28 19:51:06 2005
-+++ nautilus-burn-drive.c	Mon Feb 28 20:01:09 2005
+--- nautilus-burn-drive.c.orig	Tue Feb 22 19:34:17 2005
++++ nautilus-burn-drive.c	Tue Mar  1 00:46:50 2005
 @@ -62,6 +62,13 @@
  
  #define CD_ROM_SPEED 176
@@ -57,7 +57,37 @@
  
  	mmc_profile = get_mmc_profile (fd);
  
-@@ -330,7 +350,11 @@
+@@ -303,12 +323,20 @@
+ 		opened = nautilus_burn_drive_door_open (mmc_profile, fd);
+ 
+ 		if (opened != FALSE) {
++#ifdef __FreeBSD__
++			cam_close_device (cam);
++#else
+ 			close (fd);
++#endif
+ 			return NAUTILUS_BURN_MEDIA_TYPE_ERROR;
+ 		} else {
+ 			int blank, rewrite, empty;
+ 			if (get_disc_status (fd, &empty, &rewrite, &blank) == 0) {
++#ifdef __FreeBSD__
++				cam_close_device (cam);
++#else
+ 				close (fd);
++#endif
+ 
+ 				if (is_rewritable)
+ 					*is_rewritable = rewrite;
+@@ -325,12 +353,20 @@
+ 				else
+ 					return NAUTILUS_BURN_MEDIA_TYPE_UNKNOWN;
+ 			}
++#ifdef __FreeBSD__
++			cam_close_device (cam);
++#else
+ 			close (fd);
++#endif
+ 			return NAUTILUS_BURN_MEDIA_TYPE_UNKNOWN;
  		}
  	}
  
@@ -69,7 +99,7 @@
  
  	if (is_blank)
  		*is_blank = mmc_profile & 0x10000;
-@@ -569,11 +593,21 @@
+@@ -569,11 +605,21 @@
  	int    secs;
  	int    mmc_profile;
  	gint64 size;
@@ -91,7 +121,7 @@
  	if ((fd = open (device, O_RDWR | O_EXCL | O_NONBLOCK)) < 0
  	    && (fd = open (device, O_RDONLY | O_EXCL | O_NONBLOCK)) < 0) {
  		if (errno == EBUSY) {
-@@ -581,6 +615,7 @@
+@@ -581,6 +627,7 @@
  		}
  		return NAUTILUS_BURN_MEDIA_SIZE_UNKNOWN;
  	}
@@ -99,7 +129,7 @@
  
  	mmc_profile = get_mmc_profile (fd);
  
-@@ -603,7 +638,11 @@
+@@ -603,7 +650,11 @@
  		size = NAUTILUS_BURN_MEDIA_SIZE_NA;
  	}
  
@@ -111,7 +141,7 @@
  
  	return size;
  }
-@@ -896,9 +935,81 @@
+@@ -896,9 +947,81 @@
  #endif /* USE_HAL */
  
  #if defined(__linux__) || defined(__FreeBSD__)
@@ -134,7 +164,7 @@
 +
 +	fd = cam->fd;
 +#else
- 
++
 +	fd = open (device, O_RDWR|O_EXCL|O_NONBLOCK);
 +	if (fd < 0) {
 +		return -1;
@@ -148,10 +178,10 @@
 +	close (fd);
 +#endif
 +	max_speed = (int)floor  (write_speed) / CD_ROM_SPEED;
- 
++
 +	return max_speed;
 +}
-+
+ 
 +#if !defined(__linux)
 +static int
 +get_device_max_read_speed (char *device)
@@ -162,7 +192,7 @@
 +#ifdef __FreeBSD__
 +	struct cam_device *cam;
 +#endif
-+
+ 
 +	max_speed = -1;
 +#ifdef __FreeBSD__
 +	cam = cam_open_device (device, O_RDWR);
@@ -193,7 +223,7 @@
  #endif /* __linux__ || __FreeBSD__ */
  
  #if defined (__linux__)
-@@ -1111,50 +1222,6 @@
+@@ -1111,50 +1234,6 @@
  		}
  	}
  	return NULL;
