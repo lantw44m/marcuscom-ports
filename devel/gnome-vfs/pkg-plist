@@ -4,7 +4,6 @@ bin/gnomevfs-info
 bin/gnomevfs-ls
 bin/gnomevfs-mkdir
 bin/vfs-daemon
-etc/gconf/gconf.xml.defaults/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/applications/%gconf.xml
@@ -20,6 +19,7 @@ etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/info/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/mailto/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/man/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/trash/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/%gconf.xml
