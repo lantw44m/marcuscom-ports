@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomevfs2
 PORTVERSION=	2.7.5
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.7
@@ -26,7 +27,7 @@ USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack gnomemimedata gconf2 \
 USE_REINPLACE=	yes
 USE_LIBTOOL_VER=15
 INSTALLS_SHLIB=	yes
-CONFIGURE_ARGS=	--disable-openssl \
+CONFIGURE_ARGS=	--enable-openssl \
 		--disable-gnutls \
 		--with-gtk=no
 CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${LOCALBASE}/include" \
