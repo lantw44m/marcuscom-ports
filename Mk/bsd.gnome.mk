@@ -30,7 +30,7 @@ _USE_GNOME_ALL=	gnomehack gnomeprefix gnomehier gnomeaudio esound libghttp \
 		gnomeprint bonobo libgda gnomedb libglade gal glibwww gtkhtml \
 		libpanel gnometarget
 _USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 libglade2 libxml2 \
-		libxslt bonoboactivation libbonobo gconf2 gnomevfs2 gail \
+		libxslt libbonobo gconf2 gnomevfs2 gail \
 		libgnomecanvas libartlgpl2 libgnomeprint libgnomeprintui \
 		libgnome libbonoboui libgnomeui atspi libgailgnome \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
@@ -243,13 +243,9 @@ libxslt_LIB_DEPENDS=	xslt.1:${PORTSDIR}/textproc/libxslt
 libxslt_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxslt.pc
 libxslt_USE_GNOME_IMPL=	libxml2
 
-bonoboactivation_LIB_DEPENDS=	bonobo-activation.4:${PORTSDIR}/devel/bonobo-activation
-bonoboactivation_DETECT=	${LOCALBASE}/libdata/pkgconfig/bonobo-activation-2.0.pc
-bonoboactivation_USE_GNOME_IMPL=libxml2 orbit2
-
 libbonobo_LIB_DEPENDS=	bonobo-2.0:${PORTSDIR}/devel/libbonobo
 libbonobo_DETECT=	${LOCALBASE}/libdata/pkgconfig/libbonobo-2.0.pc
-libbonobo_USE_GNOME_IMPL=bonoboactivation
+libbonobo_USE_GNOME_IMPL=libxml2 orbit2
 
 gconf2_LIB_DEPENDS=	gconf-2.5:${PORTSDIR}/devel/gconf2
 gconf2_DETECT=		${X11BASE}/libdata/pkgconfig/gconf-2.0.pc
