@@ -19,9 +19,9 @@ COMMENT=	A user interface builder for GTK+/GNOME
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_LIBTOOL_VER=	13
-USE_GNOME=	gnomeprefix gnomehack lthack libgnomedb libgnomeui
+USE_GNOME=	gnomeprefix intlhack gnomehack lthack libgnomedb libgnomeui
 USE_GMAKE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>
