@@ -27,6 +27,7 @@ USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL_VER=13
+USE_REINPLACE=	yes
 USE_GNOME=	gnomehack gnomeprefix lthack libartlgpl2 libgsf gnomevfs2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
@@ -42,5 +43,9 @@ GTK_VERSION=	2.4.0
 PLIST_SUB=	GTK_VERSION=${GTK_VERSION}
 
 MAN1=		rsvg.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|%%PTHREAD_LIBS%%|${PTHREAD_LIBS}|' \
+		${WRKSRC}/librsvg-2.0.pc.in
 
 .include <bsd.port.mk>
