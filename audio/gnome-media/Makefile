@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	gnomemedia2
-PORTVERSION=	2.1.5
+PORTVERSION=	2.2.0
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome-media/2.1
+MASTER_SITE_SUBDIR=	sources/gnome-media/2.2
 DISTNAME=	gnome-media-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -18,7 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 RUN_DEPENDS=	sox:${PORTSDIR}/audio/sox
 LIB_DEPENDS=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui \
 		gailutil.17:${PORTSDIR}/x11-toolkits/gail \
-		gstreamer-0.5.2:${PORTSDIR}/multimedia/gstreamer
+		gstreamer-0.5.3:${PORTSDIR}/multimedia/gstreamer
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
