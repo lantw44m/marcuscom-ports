@@ -81,6 +81,7 @@ share/gnome/gnome-2.0/ui/nautilus-clipboard-ui.xml
 share/gnome/gnome-2.0/ui/nautilus-desktop-icon-view-ui.xml
 share/gnome/gnome-2.0/ui/nautilus-directory-view-ui.xml
 share/gnome/gnome-2.0/ui/nautilus-icon-view-ui.xml
+share/gnome/gnome-2.0/ui/nautilus-list-view-ui.xml
 share/gnome/gnome-2.0/ui/nautilus-navigation-window-ui.xml
 share/gnome/gnome-2.0/ui/nautilus-search-list-view-ui.xml
 share/gnome/gnome-2.0/ui/nautilus-shell-ui.xml
