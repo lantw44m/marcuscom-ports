@@ -183,7 +183,6 @@ share/gnome/gkb/SE_Swedish.keyprop
 share/gnome/gkb/SE_Swedish_x.keyprop
 share/gnome/gkb/SI_Slovenian.keyprop
 share/gnome/gkb/SI_Slovenian_x.keyprop
-share/gnome/gkb/SK__x.keyprop
 share/gnome/gkb/SR_Dutch.keyprop
 share/gnome/gkb/Slovak.keyprop
 share/gnome/gkb/Slovene.keyprop
@@ -1058,6 +1057,7 @@ share/locale/ja/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/mk/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ml/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/mn/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ms/LC_MESSAGES/gnome-applets-2.0.mo
