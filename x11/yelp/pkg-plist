@@ -8,6 +8,7 @@ share/gnome/sgml/docbook/yelp/db2html.xsl
 share/gnome/sgml/docbook/yelp/info2html.xsl
 share/gnome/sgml/docbook/yelp/man2html.xsl
 share/gnome/sgml/docbook/yelp/toc2html.xsl
+@exec mkdir -p %D/share/gnome/sgml/docbook/gnome-customization-0.1
 share/gnome/yelp/default.css
 share/gnome/yelp/icons/yelp-icon-caution.png
 share/gnome/yelp/icons/yelp-icon-important.png
@@ -102,5 +103,6 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 @dirrm share/gnome/yelp/icons
 @dirrm share/gnome/yelp
 @dirrm share/gnome/sgml/docbook/yelp
+@dirrm share/gnome/sgml/docbook/gnome-customization-0.1
 @dirrm share/gnome/sgml/docbook
 @dirrm share/gnome/sgml

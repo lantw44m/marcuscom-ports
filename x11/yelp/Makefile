@@ -7,6 +7,7 @@
 
 PORTNAME=	yelp
 PORTVERSION=	2.9.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.9
@@ -48,6 +49,8 @@ USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--enable-man \
+		--enable-info
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
 GCONF_SCHEMAS=	yelp.schemas
