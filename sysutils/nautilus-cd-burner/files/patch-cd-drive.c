@@ -1,6 +1,6 @@
 --- cd-drive.c.orig	Mon May 19 06:16:13 2003
 +++ cd-drive.c	Thu May 22 19:10:36 2003
-@@ -40,6 +40,13 @@
+@@ -40,6 +40,12 @@
  #include <scsi/sg.h>
  #endif /* __linux__ */
  
@@ -8,7 +8,6 @@
 +#include <sys/cdio.h>
 +#include <sys/cdrio.h>
 +#include <camlib.h>
-+#include <errno.h>
 +#endif
 +
  #include <glib.h>
