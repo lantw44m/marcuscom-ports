@@ -7,6 +7,7 @@
 
 PORTNAME=	atk
 PORTVERSION=	1.1.3
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		ftp://ftp.gtk.org/pub/gtk/v2.0/
@@ -20,7 +21,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20
+LIB_DEPENDS=	glib-2.0.103:${PORTSDIR}/devel/glib20
 
 USE_BZIP2=	yes
 USE_REINPLACE=	yes
