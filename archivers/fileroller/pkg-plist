@@ -43,8 +43,7 @@ share/gnome/omf/file-roller/file-roller-C.omf
 share/gnome/omf/file-roller/file-roller-ru.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/file-roller/file-roller-ru.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/file-roller/file-roller-uk.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/file-roller/file-roller-uk.omf
-2>/dev/null || /usr/bin/true
+@exec scrollkeeper-install -q %D/share/gnome/omf/file-roller/file-roller-uk.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/file-roller.png
 share/locale/am/LC_MESSAGES/file-roller.mo
 share/locale/az/LC_MESSAGES/file-roller.mo
@@ -64,6 +63,7 @@ share/locale/ga/LC_MESSAGES/file-roller.mo
 share/locale/he/LC_MESSAGES/file-roller.mo
 share/locale/hi/LC_MESSAGES/file-roller.mo
 share/locale/hu/LC_MESSAGES/file-roller.mo
+share/locale/is/LC_MESSAGES/file-roller.mo
 share/locale/it/LC_MESSAGES/file-roller.mo
 share/locale/ja/LC_MESSAGES/file-roller.mo
 share/locale/kn/LC_MESSAGES/file-roller.mo
@@ -76,13 +76,17 @@ share/locale/ms/LC_MESSAGES/file-roller.mo
 share/locale/nl/LC_MESSAGES/file-roller.mo
 share/locale/no/LC_MESSAGES/file-roller.mo
 share/locale/pl/LC_MESSAGES/file-roller.mo
+share/locale/pt/LC_MESSAGES/file-roller.mo
 share/locale/pt_BR/LC_MESSAGES/file-roller.mo
 share/locale/ro/LC_MESSAGES/file-roller.mo
 share/locale/ru/LC_MESSAGES/file-roller.mo
 share/locale/sk/LC_MESSAGES/file-roller.mo
 share/locale/sl/LC_MESSAGES/file-roller.mo
 share/locale/sq/LC_MESSAGES/file-roller.mo
+share/locale/sr/LC_MESSAGES/file-roller.mo
+share/locale/sr@Latn/LC_MESSAGES/file-roller.mo
 share/locale/sv/LC_MESSAGES/file-roller.mo
+share/locale/th/LC_MESSAGES/file-roller.mo
 share/locale/tr/LC_MESSAGES/file-roller.mo
 share/locale/uk/LC_MESSAGES/file-roller.mo
 share/locale/vi/LC_MESSAGES/file-roller.mo
