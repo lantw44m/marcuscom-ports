@@ -40,12 +40,12 @@ GCONF_SCHEMAS=	clock.schemas fish.schemas \
 		panel-toplevel.schemas window-list.schemas \
 		workspace-switcher.schemas
 
-.include <bsd.port.pre.mk>
-
 .if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
 .undef WITHOUT_GNOME
 WITH_GNOME=	yes
 .endif
+
+.include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mevolutiondataserver}!=""
 USE_GNOME+=	evolutiondataserver
