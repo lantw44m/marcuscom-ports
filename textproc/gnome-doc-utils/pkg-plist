@@ -71,6 +71,7 @@ share/xml/gnome/xslt/docbook/html/db2html-title.xsl
 share/xml/gnome/xslt/docbook/html/db2html-xref.xsl
 share/xml/gnome/xslt/docbook/html/db2html.xsl
 share/xml/gnome/xslt/docbook/omf/db2omf.xsl
+share/xml/gnome/xslt/docbook/utils/chunks.xsl
 share/xml/gnome/xslt/docbook/utils/credits.xsl
 share/xml/gnome/xslt/docbook/utils/ids.xsl
 share/xml/gnome/xslt/gettext/format2xsl.xsl

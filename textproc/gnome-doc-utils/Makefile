@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomedocutils
-PORTVERSION=	0.1.2
-PORTREVISION=	2
+PORTVERSION=	0.1.3
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-doc-utils/0.1
@@ -31,19 +30,13 @@ CONFIGURE_ARGS=	--with-omf-dir=${PREFIX}/share/gnome/omf
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+MAN1=		xml2po.1
+
 DOCBOOK_VERSION=4.1.2
-
-.include <bsd.port.pre.mk>
-
-.if ${X_WINDOW_SYSTEM:L} == xfree86-3
-MTREE_FILE=	/etc/mtree/BSD.x11.dist
-.else
-MTREE_FILE=	/etc/mtree/BSD.x11-4.dist
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|4\.2|${DOCBOOK_VERSION}|g' \
 		${WRKSRC}/doc/xslt/C/gnome-doc-xslt.xml \
 		${WRKSRC}/doc/gnome-doc-make/C/gnome-doc-make.xml
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
