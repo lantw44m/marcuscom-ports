@@ -45,4 +45,8 @@ LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal
 CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
 .endif
 
+.if ${ARCH} == "amd64"
+CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -fPIC"
+.endif
+
 .include <bsd.port.post.mk>
