@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	goobox
-PORTVERSION=	0.7.1
+PORTVERSION=	0.7.2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -27,5 +27,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	goobox.schemas
+INSTALLS_OMF=	yes
 
 .include <bsd.port.mk>
