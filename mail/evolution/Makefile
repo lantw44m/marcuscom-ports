@@ -32,7 +32,7 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 		--with-nspr-includes=${LOCALBASE}/include/nspr \
 		--with-nspr-libs=${LOCALBASE}/lib \
 		--enable-openssl=no \
-		--with-sub-version="FreeBSD GNOME Team Port" \
+		--with-sub-version=" FreeBSD GNOME Team Port" \
 		--with-krb5=/usr
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
