@@ -1,3 +1,4 @@
+bin/evolution
 bin/evolution-%%VERSION%%
 include/evolution-%%VERSION%%/camel/broken-date-parser.h
 include/evolution-%%VERSION%%/camel/camel-address.h

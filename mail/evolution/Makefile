@@ -7,6 +7,7 @@
 
 PORTNAME=	evolution
 PORTVERSION=	1.5.94.1
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
@@ -74,5 +75,7 @@ RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 
 post-install:
 	@${CHMOD} u+w ${PREFIX}/share/gnome/evolution/${EVO_VERSION}/default/C/mail/local/Inbox
+	@${LN} -s ${PREFIX}/bin/evolution-${EVO_VERSION} \
+		${PREFIX}/bin/evolution
 
 .include <bsd.port.post.mk>
