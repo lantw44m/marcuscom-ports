@@ -415,7 +415,7 @@ intlhack_PRE_PATCH=		${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${RE
 				 s|^push @INC, "/.*|push @INC, "${LOCALBASE}/share/intltool";|'
 intlhack_USE_GNOME_IMPL=intltool
 
-gtkhtml3_LIB_DEPENDS=	gtkhtml-3.1.10:${PORTSDIR}/www/gtkhtml3
+gtkhtml3_LIB_DEPENDS=	gtkhtml-3.1.11:${PORTSDIR}/www/gtkhtml3
 gtkhtml3_DETECT=		${X11BASE}/libdata/pkgconfig/libgtkhtml-3.1.pc
 gtkhtml3_USE_GNOME_IMPL=gail libgnomeui libgnomeprintui
 
