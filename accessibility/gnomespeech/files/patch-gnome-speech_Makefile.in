@@ -1,0 +1,16 @@
+--- gnome-speech/Makefile.in.orig	Sun May 11 19:44:13 2003
++++ gnome-speech/Makefile.in	Sun May 11 22:31:41 2003
+@@ -146,11 +146,11 @@
+ 	--add-imodule
+ 
+ 
+-orbittypelibdir = $(libdir)/orbit
++orbittypelibdir = $(libdir)/orbit-2.0
+ orbittypelib_LTLIBRARIES = GNOME_Speech_SynthesisDriver_module.la
+ 
+ GNOME_Speech_SynthesisDriver_module_la_LDFLAGS = \
+-	-export-dynamic -module
++	-export-dynamic -module -avoid-version
+ 
+ 
+ GNOME_Speech_SynthesisDriver_module_la_SOURCES = \
