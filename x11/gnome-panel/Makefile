@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomepanel
 PORTVERSION=	2.1.3
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/2.1
@@ -15,7 +16,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS=	wnck-1.7:${PORTSDIR}/x11-toolkits/libwnck \
+LIB_DEPENDS=	wnck-1.9:${PORTSDIR}/x11-toolkits/libwnck \
 		gnome-desktop-2.3:${PORTSDIR}/x11/gnomedesktop
 
 USE_BZIP2=	yes
