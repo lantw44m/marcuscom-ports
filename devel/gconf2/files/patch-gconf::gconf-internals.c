@@ -1,8 +1,5 @@
-
-$FreeBSD: ports/devel/gconf2/files/patch-gconf::gconf-internals.c,v 1.3 2003/02/07 18:42:02 marcus Exp $
-
---- gconf/gconf-internals.c	2002/02/15 19:13:07	1.1
-+++ gconf/gconf-internals.c	2002/02/15 19:13:32
+--- gconf/gconf-internals.c.orig	Wed Mar 26 13:52:31 2003
++++ gconf/gconf-internals.c	Sat Apr 12 02:02:23 2003
 @@ -26,6 +26,9 @@
  #include <string.h>
  #include <sys/stat.h>
@@ -13,3 +10,12 @@ $FreeBSD: ports/devel/gconf2/files/patch-gconf::gconf-internals.c,v 1.3 2003/02/
  #include <unistd.h>
  #include <stdlib.h>
  #include <stdio.h>
+@@ -2781,7 +2784,7 @@
+ char*
+ gconf_get_daemon_dir (void)
+ {
+-  if (gconf_use_local_locks ())
++  if (!gconf_use_local_locks ())
+     return linc_get_tmpdir ();
+   else
+     return g_strconcat (g_get_home_dir (), "/.gconfd", NULL);
