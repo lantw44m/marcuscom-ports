@@ -1,5 +1,5 @@
 bin/charmap
-@unexec if test -L %D/bin/gnome-character-map; then rm -f %D/bin/gnome-character-map; fi
+bin/gnome-character-map
 bin/gucharmap
 include/gucharmap/gucharmap-block-chapters.h
 include/gucharmap/gucharmap-chapters.h
@@ -22,12 +22,57 @@ share/gnome/help/gucharmap/C/figures/gucharmap_start_window.png
 share/gnome/help/gucharmap/C/figures/gucharmap_window.png
 share/gnome/help/gucharmap/C/gucharmap.xml
 share/gnome/help/gucharmap/C/legal.xml
+share/gnome/help/gucharmap/de/figures/gucharmap_window.png
+share/gnome/help/gucharmap/de/gucharmap.xml
+share/gnome/help/gucharmap/de/legal.xml
+share/gnome/help/gucharmap/es/figures/gucharmap_window.png
+share/gnome/help/gucharmap/es/gucharmap.xml
+share/gnome/help/gucharmap/es/legal.xml
+share/gnome/help/gucharmap/fr/figures/gucharmap_window.png
+share/gnome/help/gucharmap/fr/gucharmap.xml
+share/gnome/help/gucharmap/fr/legal.xml
+share/gnome/help/gucharmap/it/figures/gucharmap_window.png
+share/gnome/help/gucharmap/it/gucharmap.xml
+share/gnome/help/gucharmap/it/legal.xml
+share/gnome/help/gucharmap/ja/figures/gucharmap_window.png
+share/gnome/help/gucharmap/ja/gucharmap.xml
+share/gnome/help/gucharmap/ja/legal.xml
+share/gnome/help/gucharmap/ko/figures/gucharmap_window.png
+share/gnome/help/gucharmap/ko/gucharmap.xml
+share/gnome/help/gucharmap/ko/legal.xml
+share/gnome/help/gucharmap/sv/figures/gucharmap_window.png
+share/gnome/help/gucharmap/sv/gucharmap.xml
+share/gnome/help/gucharmap/sv/legal.xml
+share/gnome/help/gucharmap/zh_CN/figures/gucharmap_window.png
+share/gnome/help/gucharmap/zh_CN/gucharmap.xml
+share/gnome/help/gucharmap/zh_CN/legal.xml
+share/gnome/help/gucharmap/zh_TW/figures/gucharmap_window.png
+share/gnome/help/gucharmap/zh_TW/gucharmap.xml
+share/gnome/help/gucharmap/zh_TW/legal.xml
 share/gnome/omf/gucharmap/gucharmap-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gucharmap/gucharmap-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gucharmap/gucharmap-de.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gucharmap/gucharmap-de.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gucharmap/gucharmap-es.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gucharmap/gucharmap-es.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gucharmap/gucharmap-fr.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gucharmap/gucharmap-fr.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gucharmap/gucharmap-it.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gucharmap/gucharmap-it.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gucharmap/gucharmap-ja.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gucharmap/gucharmap-ja.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gucharmap/gucharmap-ko.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gucharmap/gucharmap-ko.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gucharmap/gucharmap-sv.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gucharmap/gucharmap-sv.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gucharmap/gucharmap-zh_CN.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gucharmap/gucharmap-zh_CN.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gucharmap/gucharmap-zh_TW.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gucharmap/gucharmap-zh_TW.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gucharmap.png
+share/locale/am/LC_MESSAGES/gucharmap.mo
 share/locale/ar/LC_MESSAGES/gucharmap.mo
 share/locale/az/LC_MESSAGES/gucharmap.mo
-share/locale/am/LC_MESSAGES/gucharmap.mo
 share/locale/be/LC_MESSAGES/gucharmap.mo
 share/locale/bn/LC_MESSAGES/gucharmap.mo
 share/locale/ca/LC_MESSAGES/gucharmap.mo
@@ -37,6 +82,7 @@ share/locale/da/LC_MESSAGES/gucharmap.mo
 share/locale/de/LC_MESSAGES/gucharmap.mo
 share/locale/el/LC_MESSAGES/gucharmap.mo
 share/locale/en_CA/LC_MESSAGES/gucharmap.mo
+share/locale/en_GB/LC_MESSAGES/gucharmap.mo
 share/locale/eo/LC_MESSAGES/gucharmap.mo
 share/locale/es/LC_MESSAGES/gucharmap.mo
 share/locale/fa/LC_MESSAGES/gucharmap.mo
@@ -57,6 +103,7 @@ share/locale/mn/LC_MESSAGES/gucharmap.mo
 share/locale/ms/LC_MESSAGES/gucharmap.mo
 share/locale/nl/LC_MESSAGES/gucharmap.mo
 share/locale/no/LC_MESSAGES/gucharmap.mo
+share/locale/pa/LC_MESSAGES/gucharmap.mo
 share/locale/pl/LC_MESSAGES/gucharmap.mo
 share/locale/pt/LC_MESSAGES/gucharmap.mo
 share/locale/pt_BR/LC_MESSAGES/gucharmap.mo
@@ -74,10 +121,35 @@ share/locale/wa/LC_MESSAGES/gucharmap.mo
 share/locale/zh_CN/LC_MESSAGES/gucharmap.mo
 share/locale/zh_TW/LC_MESSAGES/gucharmap.mo
 @dirrm share/gnome/omf/gucharmap
+@dirrm share/gnome/help/gucharmap/zh_TW/figures
+@dirrm share/gnome/help/gucharmap/zh_TW
+@dirrm share/gnome/help/gucharmap/zh_CN/figures
+@dirrm share/gnome/help/gucharmap/zh_CN
+@dirrm share/gnome/help/gucharmap/sv/figures
+@dirrm share/gnome/help/gucharmap/sv
+@dirrm share/gnome/help/gucharmap/ko/figures
+@dirrm share/gnome/help/gucharmap/ko
+@dirrm share/gnome/help/gucharmap/ja/figures
+@dirrm share/gnome/help/gucharmap/ja
+@dirrm share/gnome/help/gucharmap/it/figures
+@dirrm share/gnome/help/gucharmap/it
+@dirrm share/gnome/help/gucharmap/fr/figures
+@dirrm share/gnome/help/gucharmap/fr
+@dirrm share/gnome/help/gucharmap/es/figures
+@dirrm share/gnome/help/gucharmap/es
+@dirrm share/gnome/help/gucharmap/de/figures
+@dirrm share/gnome/help/gucharmap/de
 @dirrm share/gnome/help/gucharmap/C/figures
 @dirrm share/gnome/help/gucharmap/C
 @dirrm share/gnome/help/gucharmap
 @dirrm include/gucharmap
-@exec %D/bin/gtk-query-immodules-2.0 >/dev/null 2>&1 && %D/bin/gtk-query-immodules-2.0 > %D/etc/gtk-2.0/gtk.immodules 2>/dev/null || /usr/bin/true
-@unexec %D/bin/gtk-query-immodules-2.0 >/dev/null 2>&1 && %D/bin/gtk-query-immodules-2.0 > %D/etc/gtk-2.0/gtk.immodules 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gucharmap/gucharmap-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gucharmap/gucharmap-de.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gucharmap/gucharmap-es.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gucharmap/gucharmap-fr.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gucharmap/gucharmap-it.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gucharmap/gucharmap-ja.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gucharmap/gucharmap-ko.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gucharmap/gucharmap-sv.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gucharmap/gucharmap-zh_CN.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gucharmap/gucharmap-zh_TW.omf 2>/dev/null || /usr/bin/true

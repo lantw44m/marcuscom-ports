@@ -6,16 +6,18 @@
 #
 
 PORTNAME=	gucharmap
-PORTVERSION=	1.3.2
+PORTVERSION=	1.4.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.3
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.4
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A Unicode/ISO10646 character map and font viewer
 
+BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
+RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
