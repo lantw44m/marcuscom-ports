@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2-power-tools
 PORTVERSION=	2.7.92
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -26,8 +26,7 @@ RUN_DEPENDS=	${X11BASE}/lib/epiphany/extensions/libgesturesextension.so:${PORTSD
 		cog:${PORTSDIR}/sysutils/cog \
 		gnome-blog-poster:${PORTSDIR}/deskutils/gnomeblog \
 		gnome-keyring-manager:${PORTSDIR}/security/gnomekeyringmanager \
-		gnomesu:${PORTSDIR}/sysutils/gnomesu \
-		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data
+		gnomesu:${PORTSDIR}/sysutils/gnomesu
 
 NO_BUILD=	yes
 

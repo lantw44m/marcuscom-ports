@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome2-fifth-toe
 PORTVERSION=	2.7.92
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -33,7 +34,8 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		gnotime:${PORTSDIR}/deskutils/gnotime \
 		sound-juicer:${PORTSDIR}/audio/sound-juicer \
 		rhythmbox:${PORTSDIR}/audio/rhythmbox \
-		jamboree:${PORTSDIR}/audio/jamboree
+		jamboree:${PORTSDIR}/audio/jamboree \
+		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data
 
 .if !defined(PACKAGE_BUILDING) && !defined(PARALLEL_PACKAGE_BUILD)
 RUN_DEPENDS+=	totem:${PORTSDIR}/multimedia/totem
