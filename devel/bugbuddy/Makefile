@@ -23,7 +23,8 @@ INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop gnomemenus
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop gnomemenus \
+		desktopfileutils
 GNOME_DESKTOP_VERSION=2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
@@ -31,5 +32,8 @@ CONFIGURE_ARGS=	--with-help-dir=${PREFIX}/share/gnome/help
 
 MAN1=		bug-buddy.1
 GCONF_SCHEMAS=	bug-buddy.schemas
+
+post-install:
+	@-update-desktop-database
 
 .include <bsd.port.mk>
