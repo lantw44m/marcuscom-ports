@@ -8,7 +8,6 @@ lib/nautilus/extensions-1.0/libnautilus-burn.a
 lib/nautilus/extensions-1.0/libnautilus-burn.so
 lib/nautilus/extensions-1.0/libnautilus-burn.so.0
 libexec/mapping-daemon
-libexec/nautilus-cd-burner-context-menu
 share/gnome/nautilus-cd-burner/cdburn.glade
 share/gnome/nautilus-cd-burner/cdspin1.png
 share/gnome/nautilus-cd-burner/cdspin2.png
