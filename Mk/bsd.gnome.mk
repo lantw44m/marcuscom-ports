@@ -24,19 +24,26 @@ Gnome_Include_MAINTAINER=	gnome@FreeBSD.org
 # As a result proper LIB_DEPENDS/RUN_DEPENDS will be added and CONFIGURE_ENV
 # and MAKE_ENV defined.
 
-_USE_GNOME_ALL=	gnomehack lthack gnomeprefix gnomehier gnomeaudio esound libghttp \
-		glib12 gtk12 libxml gdkpixbuf imlib orbit gnomelibs \
-		gnomecanvas oaf gnomemimedata gconf gnomevfs libcapplet \
-		gnomeprint bonobo libgda gnomedb libglade gal glibwww gtkhtml \
-		gnometarget pygtk pygnome 
-_USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 libglade2 libxml2 \
-		libxslt libbonobo gconf2 gnomevfs2 gail \
+
+# non-version specific components
+_USE_GNOME_ALL=	gnomehack lthack gnomeprefix gnomehier esound gnomemimedata \
+		gnometarget pkgconfig intlhack
+
+# GNOME 1 components
+_USE_GNOME_ALL+=libghttp glib12 gtk12 libxml gdkpixbuf imlib orbit \
+		gnomelibs gnomecanvas oaf gconf gnomevfs libcapplet \
+		gnomeprint bonobo libgda gnomedb libglade gal glibwww \
+		gtkhtml pygtk pygnome
+
+# GNOME 2 components
+_USE_GNOME_ALL+=gnomeaudio glib20 atk pango gtk20 linc libidl orbit2 \
+		libglade2 libxml2 libxslt libbonobo gconf2 gnomevfs2 gail \
 		libgnomecanvas libartlgpl2 libgnomeprint libgnomeprintui \
 		libgnome libbonoboui libgnomeui atspi libgailgnome \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
 		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
-		libgnomedb gtksourceview pkgconfig libgsf pygtk2 pygnome2 \
-		gstreamerplugins intlhack
+		libgnomedb gtksourceview libgsf pygtk2 pygnome2 gstreamerplugins
+
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
