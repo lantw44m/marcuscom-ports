@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	metacity
-PORTVERSION=	2.4.8
+PORTVERSION=	2.4.13
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.4
@@ -15,7 +15,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 
 LIB_DEPENDS=	gconf-2:${PORTSDIR}/devel/gconf2 \
-		glade-2.0.0:${PORTSDIR}/devel/libglade2
+		glade-2.0.0:${PORTSDIR}/devel/libglade2 \
+		startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
@@ -33,5 +34,7 @@ MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
+		${WRKSRC}/po/Makefile.in.in
 
 .include <bsd.port.mk>
