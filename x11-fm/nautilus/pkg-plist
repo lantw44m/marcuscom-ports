@@ -1,6 +1,5 @@
 bin/nautilus
 bin/nautilus-file-management-properties
-bin/nautilus-server-connect
 etc/X11/serverconfig/.directory
 etc/X11/starthere/.directory
 etc/X11/starthere/applications.desktop
@@ -90,10 +89,8 @@ share/gnome/gnome-2.0/ui/nautilus-text-view-ui.xml
 share/gnome/idl/nautilus-distributed-undo.idl
 share/gnome/idl/nautilus-view-component.idl
 share/gnome/nautilus/browser.xml
-share/gnome/nautilus/filesystem-attributes.xml
 share/gnome/nautilus/glade/nautilus-bookmarks-window.glade
 share/gnome/nautilus/glade/nautilus-file-management-properties.glade
-share/gnome/nautilus/glade/nautilus-server-connect.glade
 share/gnome/nautilus/nautilus-extras.placeholder
 share/gnome/nautilus/nautilus-suggested.placeholder
 share/gnome/nautilus/patterns/.striated.png
@@ -131,7 +128,6 @@ share/gnome/nautilus/patterns/wavy_white.png
 share/gnome/nautilus/starthere-link.desktop
 share/gnome/nautilus/starthere.desktop
 share/gnome/nautilus/static_bookmarks.xml
-share/gnome/network/nautilus-server-connect.desktop
 share/gnome/pixmaps/nautilus/Search.png
 share/gnome/pixmaps/nautilus/audio.png
 share/gnome/pixmaps/nautilus/backgrounds.png
@@ -174,6 +170,7 @@ share/locale/cy/LC_MESSAGES/nautilus.mo
 share/locale/da/LC_MESSAGES/nautilus.mo
 share/locale/de/LC_MESSAGES/nautilus.mo
 share/locale/el/LC_MESSAGES/nautilus.mo
+share/locale/en_CA/LC_MESSAGES/nautilus.mo
 share/locale/en_GB/LC_MESSAGES/nautilus.mo
 share/locale/es/LC_MESSAGES/nautilus.mo
 share/locale/et/LC_MESSAGES/nautilus.mo
@@ -224,7 +221,6 @@ share/locale/yi/LC_MESSAGES/nautilus.mo
 share/locale/zh_CN/LC_MESSAGES/nautilus.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus.mo
 @dirrm share/gnome/pixmaps/nautilus/default
-@dirrm share/gnome/network
 @dirrm share/gnome/nautilus/glade
 @dirrm include/nautilus/libnautilus-extension
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/nautilus/sidebar_panels/tree
