@@ -1,5 +1,8 @@
 bin/gkb_xmmap
 bin/gnome-keyboard-layout
+bin/gswitchit-plugins-capplet
+etc/gconf/gconf.xml.defaults/apps/gswitchit/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gswitchit/Applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/stickynotes_applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/stickynotes_applet/defaults/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/stickynotes_applet/settings/%gconf.xml
@@ -15,6 +18,8 @@ etc/gconf/gconf.xml.defaults/schemas/apps/geyes/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/geyes/prefs/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gkb-applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gkb-applet/prefs/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gswitchit/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gswitchit/Applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gtik/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gtik/prefs/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gweather/%gconf.xml
@@ -38,6 +43,7 @@ etc/gconf/schemas/charpick.schemas
 etc/gconf/schemas/drivemount.schemas
 etc/gconf/schemas/geyes.schemas
 etc/gconf/schemas/gkb.schemas
+etc/gconf/schemas/gswitchit.schemas
 etc/gconf/schemas/gtik.schemas
 etc/gconf/schemas/gweather.schemas
 etc/gconf/schemas/mailcheck.schemas
@@ -48,6 +54,8 @@ etc/gconf/schemas/multiload.schemas
 etc/gconf/schemas/stickynotes.schemas
 %%BATTERY%%etc/sound/events/battstat_applet.soundlist
 etc/sound/events/mailcheck.soundlist
+include/libgswitchit/gswitchit_plugin.h
+include/libgswitchit/gswitchit_xkb_config.h
 libdata/bonobo/servers/GNOME_AccessxStatusApplet.server
 %%BATTERY%%libdata/bonobo/servers/GNOME_BattstatApplet.server
 libdata/bonobo/servers/GNOME_CDPlayerApplet.server
@@ -56,7 +64,7 @@ libdata/bonobo/servers/GNOME_DriveMountApplet.server
 libdata/bonobo/servers/GNOME_GWeatherApplet_Factory.server
 libdata/bonobo/servers/GNOME_GeyesApplet.server
 libdata/bonobo/servers/GNOME_GtikApplet.server
-libdata/bonobo/servers/GNOME_KeyboardApplet_Factory.server
+libdata/bonobo/servers/GNOME_KeyboardApplet.server
 libdata/bonobo/servers/GNOME_MailcheckApplet_Factory.server
 libdata/bonobo/servers/GNOME_MiniCommanderApplet.server
 libdata/bonobo/servers/GNOME_MixerApplet.server
@@ -64,14 +72,15 @@ libdata/bonobo/servers/GNOME_ModemLightsApplet.server
 libdata/bonobo/servers/GNOME_MultiLoadApplet_Factory.server
 libdata/bonobo/servers/GNOME_Panel_WirelessApplet.server
 libdata/bonobo/servers/GNOME_StickyNotesApplet.server
+libdata/pkgconfig/gswitchit.pc
 libexec/accessx-status-applet
 %%BATTERY%%libexec/battstat-applet-2
 libexec/cdplayer_applet2
 libexec/charpick_applet2
 libexec/drivemount_applet2
 libexec/geyes_applet2
-libexec/gkb-applet-2
 libexec/gnome-applets/mc-install-default-macros
+libexec/gnome-keyboard-applet
 libexec/gtik2_applet2
 libexec/gweather-applet-2
 libexec/mailcheck-applet
@@ -83,21 +92,17 @@ libexec/stickynotes_applet
 libexec/wireless-applet
 %%BATTERY%%share/gnome/battstat_applet/battstat_applet.glade
 share/gnome/gen_util/mini-commander.glade
-share/gnome/geyes/Bizarre/Bizarre-eye.png
-share/gnome/geyes/Bizarre/Bizarre-pupil.png
-share/gnome/geyes/Bizarre/config
-share/gnome/geyes/Bloodshot/Bloodshot-eye.png
-share/gnome/geyes/Bloodshot/Bloodshot-pupil.png
-share/gnome/geyes/Bloodshot/config
-share/gnome/geyes/Default-tiny/Default-tiny-eye.png
-share/gnome/geyes/Default-tiny/Default-tiny-pupil.png
-share/gnome/geyes/Default-tiny/config
-share/gnome/geyes/Default/Default-eye.png
-share/gnome/geyes/Default/Default-pupil.png
-share/gnome/geyes/Default/config
-share/gnome/geyes/Horrid/config
-share/gnome/geyes/Horrid/horrid_eye.png
-share/gnome/geyes/Horrid/horrid_pupil.png
+share/gnome/geyes/Bizarre-eye.png
+share/gnome/geyes/Bizarre-pupil.png
+share/gnome/geyes/Bloodshot-eye.png
+share/gnome/geyes/Bloodshot-pupil.png
+share/gnome/geyes/Default-eye.png
+share/gnome/geyes/Default-pupil.png
+share/gnome/geyes/Default-tiny-eye.png
+share/gnome/geyes/Default-tiny-pupil.png
+share/gnome/geyes/config
+share/gnome/geyes/horrid_eye.png
+share/gnome/geyes/horrid_pupil.png
 share/gnome/gkb/AM_Armenian.keyprop
 share/gnome/gkb/AR_Arabic.keyprop
 share/gnome/gkb/AR_Arabic_x.keyprop
@@ -238,6 +243,7 @@ share/gnome/gnome-2.0/ui/GNOME_DriveMountApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GWeatherApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GeyesApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GtikApplet.xml
+share/gnome/gnome-2.0/ui/GNOME_GSwitchItApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_KeyboardApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_MailCheckApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_MiniCommanderApplet.xml
@@ -246,6 +252,8 @@ share/gnome/gnome-2.0/ui/GNOME_ModemlightsApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_MultiloadApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_StickyNotesApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_WirelessApplet.xml
+share/gnome/gswitchit/gswitchit-plugins.glade
+share/gnome/gswitchit/gswitchit-properties.glade
 share/gnome/gweather/Locations
 share/gnome/help/accessx-status/C/accessx-status.xml
 share/gnome/help/accessx-status/C/figures/accessx-status-applet.png
@@ -1031,11 +1039,11 @@ share/gnome/pixmaps/gkb/uy.png
 share/gnome/pixmaps/gkb/vn.png
 share/gnome/pixmaps/gkb/ye.png
 share/gnome/pixmaps/gkb/yu.png
-share/gnome/pixmaps/gnome-cdplayer-icon.png
 share/gnome/pixmaps/gnome-cpu.png
 share/gnome/pixmaps/gnome-eyes.png
 share/gnome/pixmaps/gnome-mini-commander.png
-share/gnome/pixmaps/gweather/tstorm.xpm
+share/gnome/pixmaps/gswitchit-applet.png
+share/gnome/pixmaps/gswitchit-properties-capplet.png
 share/gnome/pixmaps/mailcheck/eclouds.png
 share/gnome/pixmaps/mailcheck/email-e.png
 share/gnome/pixmaps/mailcheck/email-eclouds.png
@@ -1418,9 +1426,11 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/accessx-status/C/figures
 @dirrm share/gnome/help/accessx-status/C
 @dirrm share/gnome/help/accessx-status
+@dirrm share/gnome/gswitchit
 @dirrm share/gnome/gen_util
 %%BATTERY%%@dirrm share/gnome/battstat_applet
 @dirrm libexec/gnome-applets
+@dirrm include/libgswitchit
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/stickynotes_applet/settings
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/stickynotes_applet/defaults
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/stickynotes_applet
@@ -1436,6 +1446,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mailcheck_applet
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gweather/prefs
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gweather
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gswitchit/Applet
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gswitchit
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gtik/prefs
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gtik
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gkb-applet/prefs
@@ -1453,6 +1465,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/stickynotes_applet/settings
 @dirrm etc/gconf/gconf.xml.defaults/apps/stickynotes_applet/defaults
 @dirrm etc/gconf/gconf.xml.defaults/apps/stickynotes_applet
+@dirrm etc/gconf/gconf.xml.defaults/apps/gswitchit/Applet
+@dirrm etc/gconf/gconf.xml.defaults/apps/gswitchit
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/accessx-status-C.omf 2>/dev/null || /usr/bin/true
 %%BATTERY%%@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/battstat-C.omf 2>/dev/null || /usr/bin/true
 %%BATTERY%%@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/battstat-ja.omf 2>/dev/null || /usr/bin/true
