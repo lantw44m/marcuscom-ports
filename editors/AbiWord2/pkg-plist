@@ -17,6 +17,8 @@ share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Insert_DateTime.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_MailMerge.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_MetaData.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_New.glade
+share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Options.glade
+share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Options_ColorSel.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_PageNumbers.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Replace.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Stylist_modal.glade
@@ -197,6 +199,7 @@ share/AbiSuite-%%ABIVERSION%%/templates/Business-Report.awt
 share/AbiSuite-%%ABIVERSION%%/templates/Employee-Directory.awt
 share/AbiSuite-%%ABIVERSION%%/templates/Fax-Coversheet.awt
 share/AbiSuite-%%ABIVERSION%%/templates/Memo.awt
+share/AbiSuite-%%ABIVERSION%%/templates/Press-Release.awt
 share/AbiSuite-%%ABIVERSION%%/templates/Resume.awt
 share/AbiSuite-%%ABIVERSION%%/templates/Two-Columns.awt
 share/AbiSuite-%%ABIVERSION%%/templates/US-Letter.awt
