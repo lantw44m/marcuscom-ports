@@ -29,7 +29,7 @@ USE_GSTREAMER+=	ffmpeg dts dvd xvid
 do-install:
 	if [ ! -d ${PREFIX}/${GST_DIR} ]; then \
 		${MKDIR} ${PREFIX}${GST_DIR} ; \
-	fi	
+	fi
 	${TOUCH} -f ${PREFIX}${GST_DIR}/.gstreamer-plugins-core.keep
 
 .include <bsd.port.mk>
