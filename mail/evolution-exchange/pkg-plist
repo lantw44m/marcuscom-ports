@@ -1,6 +1,6 @@
 bin/ximian-connector-setup-%%VERSION%%
-lib/evolution/%%EVO_VERSION%%/camel-providers/libcamelexchange.so
-lib/evolution/%%EVO_VERSION%%/camel-providers/libcamelexchange.urls
+lib/evolution-data-server-%%EDS_VERSION%%/camel-providers/libcamelexchange.so
+lib/evolution-data-server-%%EDS_VERSION%%/camel-providers/libcamelexchange.urls
 libdata/bonobo/servers/GNOME_Evolution_Exchange_Storage_%%VERSION%%.server
 libexec/evolution/%%EVO_VERSION%%/evolution-exchange-storage
 %%DOCSDIR%%/E2kContext.html
@@ -66,7 +66,9 @@ share/gnome/ximian-connector/%%VERSION%%/glade/e-foreign-folder-dialog.glade
 share/gnome/ximian-connector/%%VERSION%%/glade/exchange-autoconfig-wizard.glade
 share/gnome/ximian-connector/%%VERSION%%/glade/exchange-change-password.glade
 share/gnome/ximian-connector/%%VERSION%%/glade/exchange-delegates.glade
+share/gnome/ximian-connector/%%VERSION%%/glade/exchange-folder-tree.glade
 share/gnome/ximian-connector/%%VERSION%%/glade/exchange-oof.glade
+share/gnome/ximian-connector/%%VERSION%%/glade/exchange-passwd-expiry.glade
 share/gnome/ximian-connector/%%VERSION%%/glade/exchange-permissions-dialog.glade
 share/gnome/ximian-connector/%%VERSION%%/images/connector-mini.png
 share/gnome/ximian-connector/%%VERSION%%/images/connector.png
