@@ -1,5 +1,5 @@
 --- src/netstatus-sysdeps.c.orig	Fri Jul 30 04:19:31 2004
-+++ src/netstatus-sysdeps.c	Mon Sep 20 17:34:19 2004
++++ src/netstatus-sysdeps.c	Tue Sep 21 00:27:19 2004
 @@ -35,6 +35,16 @@
  #include <glib.h>
  #include <libgnome/gnome-i18n.h>
@@ -30,7 +30,7 @@
 +  struct ifreq ifr;
 +  int s;
 +
-+  memcpy ((char *) &ifr, 0, sizeof (ifr));
++  memset (&ifr, 0, sizeof (ifr));
 +
 +  strlcpy (ifr.ifr_name, iface, sizeof (ifr.ifr_name));
 +  ifr.ifr_data = (caddr_t) req;
@@ -99,7 +99,7 @@
 +  int level;
 +  char *error = NULL;
 +
-+  memcpy ((char *) &wreq, 0, sizeof (wreq));
++  memset (&wreq, 0, sizeof (wreq));
 +
 +  wreq.wi_len  = WI_MAX_DATALEN;
 +  wreq.wi_type = WI_RID_COMMS_QUALITY;
@@ -129,7 +129,7 @@
 +			  return error;
 +		  nstations = *(int *)wreq.wi_val;
 +		  if (nstations > 0) {
-+			  w = (struct wi_apinfo *)(((char *)&wreq.wi_val) sizeof(int));
++			  w = (struct wi_apinfo *)(((char *)&wreq.wi_val) + sizeof(int));
 +			  signal_strength = (long int)w->signal;
 +		  }
 +
