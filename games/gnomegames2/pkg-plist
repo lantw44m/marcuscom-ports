@@ -50,6 +50,7 @@ include/gdkcardimage/gdk-card-image.h
 lib/libgdkcardimage.a
 lib/libgdkcardimage.so
 lib/libgdkcardimage.so.1
+share/gnome/applications/blackjack.desktop
 share/gnome/applications/freecell.desktop
 share/gnome/applications/gataxx.desktop
 share/gnome/applications/glines.desktop
@@ -66,71 +67,76 @@ share/gnome/applications/iagno.desktop
 share/gnome/applications/mahjongg.desktop
 share/gnome/applications/same-gnome.desktop
 share/gnome/applications/sol.desktop
-share/gnome/games/glines.scores
-share/gnome/games/gnibbles.1.0.scores
-share/gnome/games/gnibbles.1.1.scores
-share/gnome/games/gnibbles.2.0.scores
-share/gnome/games/gnibbles.2.1.scores
-share/gnome/games/gnibbles.3.0.scores
-share/gnome/games/gnibbles.3.1.scores
-share/gnome/games/gnibbles.4.0.scores
-share/gnome/games/gnibbles.4.1.scores
-share/gnome/games/gnobots2.classic_robots-safe.scores
-share/gnome/games/gnobots2.classic_robots-super-safe.scores
-share/gnome/games/gnobots2.classic_robots.scores
-share/gnome/games/gnobots2.nightmare-safe.scores
-share/gnome/games/gnobots2.nightmare-super-safe.scores
-share/gnome/games/gnobots2.nightmare.scores
-share/gnome/games/gnobots2.robots2-safe.scores
-share/gnome/games/gnobots2.robots2-super-safe.scores
-share/gnome/games/gnobots2.robots2.scores
-share/gnome/games/gnobots2.robots2_easy-safe.scores
-share/gnome/games/gnobots2.robots2_easy-super-safe.scores
-share/gnome/games/gnobots2.robots2_easy.scores
-share/gnome/games/gnobots2.robots_with_safe_teleport-safe.scores
-share/gnome/games/gnobots2.robots_with_safe_teleport-super-safe.scores
-share/gnome/games/gnobots2.robots_with_safe_teleport.scores
-share/gnome/games/gnome-stones.scores
-share/gnome/games/gnometris.scores
-share/gnome/games/gnomine.Custom.scores
-share/gnome/games/gnomine.Large.scores
-share/gnome/games/gnomine.Medium.scores
-share/gnome/games/gnomine.Small.scores
-share/gnome/games/gnotravex.2x2.scores
-share/gnome/games/gnotravex.3x3.scores
-share/gnome/games/gnotravex.4x4.scores
-share/gnome/games/gnotravex.5x5.scores
-share/gnome/games/gnotravex.6x6.scores
-share/gnome/games/gnotski.1.scores
-share/gnome/games/gnotski.11.scores
-share/gnome/games/gnotski.12.scores
-share/gnome/games/gnotski.13.scores
-share/gnome/games/gnotski.14.scores
-share/gnome/games/gnotski.15.scores
-share/gnome/games/gnotski.16.scores
-share/gnome/games/gnotski.17.scores
-share/gnome/games/gnotski.2.scores
-share/gnome/games/gnotski.21.scores
-share/gnome/games/gnotski.22.scores
-share/gnome/games/gnotski.23.scores
-share/gnome/games/gnotski.24.scores
-share/gnome/games/gnotski.25.scores
-share/gnome/games/gnotski.26.scores
-share/gnome/games/gnotski.3.scores
-share/gnome/games/gnotski.4.scores
-share/gnome/games/gnotski.5.scores
-share/gnome/games/gnotski.6.scores
-share/gnome/games/gnotski.7.scores
-share/gnome/games/gtali.scores
-share/gnome/games/iagno.b1.scores
-share/gnome/games/iagno.b2.scores
-share/gnome/games/iagno.b3.scores
-share/gnome/games/iagno.w1.scores
-share/gnome/games/iagno.w2.scores
-share/gnome/games/iagno.w3.scores
-share/gnome/games/mahjongg.difficult.scores
-share/gnome/games/mahjongg.easy.scores
-share/gnome/games/same-gnome.scores
+share/gnome/blackjack/Ameristar.rules
+share/gnome/blackjack/Atlantic_City.rules
+share/gnome/blackjack/Vegas_Downtown.rules
+share/gnome/blackjack/Vegas_Strip.rules
+share/gnome/blackjack/Vegas_Strip.rules.dat
+@unexec [ -s %D/share/gnome/games/glines.scores ] || rm -f %D/share/gnome/games/glines.scores
+@unexec [ -s %D/share/gnome/games/gnibbles.1.0.scores ] || rm -f %D/share/gnome/games/gnibbles.1.0.scores
+@unexec [ -s %D/share/gnome/games/gnibbles.1.1.scores ] || rm -f %D/share/gnome/games/gnibbles.1.1.scores
+@unexec [ -s %D/share/gnome/games/gnibbles.2.0.scores ] || rm -f %D/share/gnome/games/gnibbles.2.0.scores
+@unexec [ -s %D/share/gnome/games/gnibbles.2.1.scores ] || rm -f %D/share/gnome/games/gnibbles.2.1.scores
+@unexec [ -s %D/share/gnome/games/gnibbles.3.0.scores ] || rm -f %D/share/gnome/games/gnibbles.3.0.scores
+@unexec [ -s %D/share/gnome/games/gnibbles.3.1.scores ] || rm -f %D/share/gnome/games/gnibbles.3.1.scores
+@unexec [ -s %D/share/gnome/games/gnibbles.4.0.scores ] || rm -f %D/share/gnome/games/gnibbles.4.0.scores
+@unexec [ -s %D/share/gnome/games/gnibbles.4.1.scores ] || rm -f %D/share/gnome/games/gnibbles.4.1.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.classic_robots-safe.scores ] || rm -f %D/share/gnome/games/gnobots2.classic_robots-safe.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.classic_robots-super-safe.scores ] || rm -f %D/share/gnome/games/gnobots2.classic_robots-super-safe.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.classic_robots.scores ] || rm -f %D/share/gnome/games/gnobots2.classic_robots.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.nightmare-safe.scores ] || rm -f %D/share/gnome/games/gnobots2.nightmare-safe.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.nightmare-super-safe.scores ] || rm -f %D/share/gnome/games/gnobots2.nightmare-super-safe.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.nightmare.scores ] || rm -f %D/share/gnome/games/gnobots2.nightmare.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.robots2-safe.scores ] || rm -f %D/share/gnome/games/gnobots2.robots2-safe.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.robots2-super-safe.scores ] || rm -f %D/share/gnome/games/gnobots2.robots2-super-safe.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.robots2.scores ] || rm -f %D/share/gnome/games/gnobots2.robots2.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.robots2_easy-safe.scores ] || rm -f %D/share/gnome/games/gnobots2.robots2_easy-safe.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.robots2_easy-super-safe.scores ] || rm -f %D/share/gnome/games/gnobots2.robots2_easy-super-safe.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.robots2_easy.scores ] || rm -f %D/share/gnome/games/gnobots2.robots2_easy.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.robots_with_safe_teleport-safe.scores ] || rm -f %D/share/gnome/games/gnobots2.robots_with_safe_teleport-safe.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.robots_with_safe_teleport-super-safe.scores ] || rm -f %D/share/gnome/games/gnobots2.robots_with_safe_teleport-super-safe.scores
+@unexec [ -s %D/share/gnome/games/gnobots2.robots_with_safe_teleport.scores ] || rm -f %D/share/gnome/games/gnobots2.robots_with_safe_teleport.scores
+@unexec [ -s %D/share/gnome/games/gnome-stones.scores ] || rm -f %D/share/gnome/games/gnome-stones.scores
+@unexec [ -s %D/share/gnome/games/gnometris.scores ] || rm -f %D/share/gnome/games/gnometris.scores
+@unexec [ -s %D/share/gnome/games/gnomine.Custom.scores ] || rm -f %D/share/gnome/games/gnomine.Custom.scores
+@unexec [ -s %D/share/gnome/games/gnomine.Large.scores ] || rm -f %D/share/gnome/games/gnomine.Large.scores
+@unexec [ -s %D/share/gnome/games/gnomine.Medium.scores ] || rm -f %D/share/gnome/games/gnomine.Medium.scores
+@unexec [ -s %D/share/gnome/games/gnomine.Small.scores ] || rm -f %D/share/gnome/games/gnomine.Small.scores
+@unexec [ -s %D/share/gnome/games/gnotravex.2.scores ] || rm -f %D/share/gnome/games/gnotravex.2.scores
+@unexec [ -s %D/share/gnome/games/gnotravex.3.scores ] || rm -f %D/share/gnome/games/gnotravex.3.scores
+@unexec [ -s %D/share/gnome/games/gnotravex.4.scores ] || rm -f %D/share/gnome/games/gnotravex.4.scores
+@unexec [ -s %D/share/gnome/games/gnotravex.5.scores ] || rm -f %D/share/gnome/games/gnotravex.5.scores
+@unexec [ -s %D/share/gnome/games/gnotravex.6.scores ] || rm -f %D/share/gnome/games/gnotravex.6.scores
+@unexec [ -s %D/share/gnome/games/gnotski.1.scores ] || rm -f %D/share/gnome/games/gnotski.1.scores
+@unexec [ -s %D/share/gnome/games/gnotski.11.scores ] || rm -f %D/share/gnome/games/gnotski.11.scores
+@unexec [ -s %D/share/gnome/games/gnotski.12.scores ] || rm -f %D/share/gnome/games/gnotski.12.scores
+@unexec [ -s %D/share/gnome/games/gnotski.13.scores ] || rm -f %D/share/gnome/games/gnotski.13.scores
+@unexec [ -s %D/share/gnome/games/gnotski.14.scores ] || rm -f %D/share/gnome/games/gnotski.14.scores
+@unexec [ -s %D/share/gnome/games/gnotski.15.scores ] || rm -f %D/share/gnome/games/gnotski.15.scores
+@unexec [ -s %D/share/gnome/games/gnotski.16.scores ] || rm -f %D/share/gnome/games/gnotski.16.scores
+@unexec [ -s %D/share/gnome/games/gnotski.17.scores ] || rm -f %D/share/gnome/games/gnotski.17.scores
+@unexec [ -s %D/share/gnome/games/gnotski.2.scores ] || rm -f %D/share/gnome/games/gnotski.2.scores
+@unexec [ -s %D/share/gnome/games/gnotski.21.scores ] || rm -f %D/share/gnome/games/gnotski.21.scores
+@unexec [ -s %D/share/gnome/games/gnotski.22.scores ] || rm -f %D/share/gnome/games/gnotski.22.scores
+@unexec [ -s %D/share/gnome/games/gnotski.23.scores ] || rm -f %D/share/gnome/games/gnotski.23.scores
+@unexec [ -s %D/share/gnome/games/gnotski.24.scores ] || rm -f %D/share/gnome/games/gnotski.24.scores
+@unexec [ -s %D/share/gnome/games/gnotski.25.scores ] || rm -f %D/share/gnome/games/gnotski.25.scores
+@unexec [ -s %D/share/gnome/games/gnotski.26.scores ] || rm -f %D/share/gnome/games/gnotski.26.scores
+@unexec [ -s %D/share/gnome/games/gnotski.3.scores ] || rm -f %D/share/gnome/games/gnotski.3.scores
+@unexec [ -s %D/share/gnome/games/gnotski.4.scores ] || rm -f %D/share/gnome/games/gnotski.4.scores
+@unexec [ -s %D/share/gnome/games/gnotski.5.scores ] || rm -f %D/share/gnome/games/gnotski.5.scores
+@unexec [ -s %D/share/gnome/games/gnotski.6.scores ] || rm -f %D/share/gnome/games/gnotski.6.scores
+@unexec [ -s %D/share/gnome/games/gnotski.7.scores ] || rm -f %D/share/gnome/games/gnotski.7.scores
+@unexec [ -s %D/share/gnome/games/gtali.scores ] || rm -f %D/share/gnome/games/gtali.scores
+@unexec [ -s %D/share/gnome/games/iagno.b1.scores ] || rm -f %D/share/gnome/games/iagno.b1.scores
+@unexec [ -s %D/share/gnome/games/iagno.b2.scores ] || rm -f %D/share/gnome/games/iagno.b2.scores
+@unexec [ -s %D/share/gnome/games/iagno.b3.scores ] || rm -f %D/share/gnome/games/iagno.b3.scores
+@unexec [ -s %D/share/gnome/games/iagno.w1.scores ] || rm -f %D/share/gnome/games/iagno.w1.scores
+@unexec [ -s %D/share/gnome/games/iagno.w2.scores ] || rm -f %D/share/gnome/games/iagno.w2.scores
+@unexec [ -s %D/share/gnome/games/iagno.w3.scores ] || rm -f %D/share/gnome/games/iagno.w3.scores
+@unexec [ -s %D/share/gnome/games/mahjongg.difficult.scores ] || rm -f %D/share/gnome/games/mahjongg.difficult.scores
+@unexec [ -s %D/share/gnome/games/mahjongg.easy.scores ] || rm -f %D/share/gnome/games/mahjongg.easy.scores
+@unexec [ -s %D/share/gnome/games/same-gnome.scores ] || rm -f %D/share/gnome/games/same-gnome.scores
 share/gnome/gnect/catseyes_40x40.gnect
 share/gnome/gnect/classic_40x40.gnect
 share/gnome/gnect/classic_50x50.gnect
@@ -262,6 +268,10 @@ share/gnome/help/aisleriot/C/will_o_the_wisp.xml
 share/gnome/help/aisleriot/C/yield.xml
 share/gnome/help/aisleriot/C/yukon.xml
 share/gnome/help/aisleriot/C/zebra.xml
+share/gnome/help/blackjack/C/blackjack.xml
+share/gnome/help/blackjack/C/figures/blackjack_start_window.png
+share/gnome/help/blackjack/C/figures/blackjack_win_window.png
+share/gnome/help/blackjack/C/legal.xml
 share/gnome/help/gataxx/C/figures/gataxx-legalmoves.png
 share/gnome/help/gataxx/C/figures/gataxx-prefs.png
 share/gnome/help/gataxx/C/figures/gataxx-startgame.png
@@ -354,6 +364,8 @@ share/gnome/mime-info/gnome-stones.keys
 share/gnome/mime-info/gnome-stones.mime
 share/gnome/omf/gnome-games/aisleriot-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/aisleriot-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-games/blackjack-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/blackjack-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gataxx-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gataxx-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/glines-C.omf
@@ -380,18 +392,29 @@ share/gnome/omf/gnome-games/mahjongg-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/mahjongg-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/same-gnome-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/same-gnome-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/pixmaps/blackjack/baize.png
+share/gnome/pixmaps/blackjack/blackjack-splash.png
+share/gnome/pixmaps/blackjack/chip-1.png
+share/gnome/pixmaps/blackjack/chip-100.png
+share/gnome/pixmaps/blackjack/chip-25.png
+share/gnome/pixmaps/blackjack/chip-5.png
+share/gnome/pixmaps/cards/backs/antique-red.png
 share/gnome/pixmaps/cards/backs/beige.png
+share/gnome/pixmaps/cards/backs/dondorf-flower.png
 share/gnome/pixmaps/cards/backs/face.png
 share/gnome/pixmaps/cards/backs/grey.png
 share/gnome/pixmaps/cards/backs/rods.png
+share/gnome/pixmaps/cards/backs/tux.png
 share/gnome/pixmaps/cards/baize.png
 share/gnome/pixmaps/cards/honors/bonded.png
+share/gnome/pixmaps/cards/honors/dondorf.png
 share/gnome/pixmaps/cards/honors/xpat.png
 share/gnome/pixmaps/cards/jokers/gnome.png
 share/gnome/pixmaps/cards/ranks/bold-09x14.png
 share/gnome/pixmaps/cards/ranks/fine-07x12.png
 share/gnome/pixmaps/cards/slots/hand.png
 share/gnome/pixmaps/cards/slots/plain.png
+share/gnome/pixmaps/cards/slots/white-outline.png
 share/gnome/pixmaps/cards/splash.png
 share/gnome/pixmaps/cards/suits_large/knuth-09x10.png
 share/gnome/pixmaps/cards/suits_large/knuth-15x19.png
@@ -455,6 +478,7 @@ share/gnome/pixmaps/gnobots2/splat.png
 share/gnome/pixmaps/gnobots2/windows.png
 share/gnome/pixmaps/gnobots2/yahoo.png
 share/gnome/pixmaps/gnome-aisleriot.png
+share/gnome/pixmaps/gnome-blackjack.png
 share/gnome/pixmaps/gnome-cardgame.png
 share/gnome/pixmaps/gnome-die1.png
 share/gnome/pixmaps/gnome-die2.png
@@ -496,20 +520,20 @@ share/gnome/pixmaps/gnometris/7blocks-tig.png
 share/gnome/pixmaps/gnometris/7blocks.png
 share/gnome/pixmaps/gnometris/7stones-gn.png
 share/gnome/pixmaps/gnometris/7stones2-gn.png
-share/gnome/pixmaps/gnometris/bg/dog-bg.png
-share/gnome/pixmaps/gnometris/bg/fishy-bg.png
-share/gnome/pixmaps/gnometris/bg/geschier-bg.png
-share/gnome/pixmaps/gnometris/bg/gitter-bg.png
-share/gnome/pixmaps/gnometris/bg/gnometris-bg.png
-share/gnome/pixmaps/gnometris/bg/greyprint-bg.png
-share/gnome/pixmaps/gnometris/bg/leaves-bg.png
-share/gnome/pixmaps/gnometris/bg/rhinoceros-bg.png
-share/gnome/pixmaps/gnometris/bg/scrcow-bg.png
-share/gnome/pixmaps/gnometris/bg/sweet-bg.png
-share/gnome/pixmaps/gnometris/bg/trees-bg.png
-share/gnome/pixmaps/gnometris/bg/vortex-bg.png
-share/gnome/pixmaps/gnometris/bg/watery-bg.png
-share/gnome/pixmaps/gnometris/bg/weirdo-bg.png
+share/gnome/pixmaps/gnometris/bg/dog-bg.jpg
+share/gnome/pixmaps/gnometris/bg/fishy-bg.jpg
+share/gnome/pixmaps/gnometris/bg/geschier-bg.jpg
+share/gnome/pixmaps/gnometris/bg/gitter-bg.jpg
+share/gnome/pixmaps/gnometris/bg/gnometris-bg.jpg
+share/gnome/pixmaps/gnometris/bg/greyprint-bg.jpg
+share/gnome/pixmaps/gnometris/bg/leaves-bg.jpg
+share/gnome/pixmaps/gnometris/bg/rhinoceros-bg.jpg
+share/gnome/pixmaps/gnometris/bg/scrcow-bg.jpg
+share/gnome/pixmaps/gnometris/bg/sweet-bg.jpg
+share/gnome/pixmaps/gnometris/bg/trees-bg.jpg
+share/gnome/pixmaps/gnometris/bg/vortex-bg.jpg
+share/gnome/pixmaps/gnometris/bg/watery-bg.jpg
+share/gnome/pixmaps/gnometris/bg/weirdo-bg.jpg
 share/gnome/pixmaps/gnomine/face-cool.xpm
 share/gnome/pixmaps/gnomine/face-sad.xpm
 share/gnome/pixmaps/gnomine/face-smile.xpm
@@ -645,6 +669,7 @@ share/locale/bg/LC_MESSAGES/gnome-games.mo
 share/locale/bn/LC_MESSAGES/gnome-games.mo
 share/locale/ca/LC_MESSAGES/gnome-games.mo
 share/locale/cs/LC_MESSAGES/gnome-games.mo
+share/locale/cy/LC_MESSAGES/gnome-games.mo
 share/locale/da/LC_MESSAGES/gnome-games.mo
 share/locale/de/LC_MESSAGES/gnome-games.mo
 share/locale/el/LC_MESSAGES/gnome-games.mo
@@ -689,6 +714,7 @@ share/locale/zh_CN/LC_MESSAGES/gnome-games.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/sounds/gnome-stones
 @dirrm share/gnome/pixmaps/gnomine
+@dirrm share/gnome/pixmaps/blackjack
 @dirrm share/gnome/help/same-gnome/C/figures
 @dirrm share/gnome/help/gnotski/C/figures
 @dirrm share/gnome/help/gnotski/C
@@ -699,6 +725,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/glines/C/figures
 @dirrm share/gnome/help/glines/C
 @dirrm share/gnome/help/glines
+@dirrm share/gnome/blackjack
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/same-gnome
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mahjongg
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/iagno
@@ -720,6 +747,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnect
 @dirrm etc/gconf/gconf.xml.defaults/apps/gataxx
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/aisleriot-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/blackjack-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gataxx-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/glines-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnect-C.omf 2>/dev/null || /usr/bin/true
