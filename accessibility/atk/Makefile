@@ -9,7 +9,7 @@ PORTNAME=	atk
 PORTVERSION=	1.9.0
 CATEGORIES=	accessibility devel
 MASTER_SITES=	${MASTER_SITE_GNOME} \
-		ftp://ftp.gtk.org/pub/gtk/v2.3/
+		ftp://ftp.gtk.org/pub/gtk/v2.6/
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.9
 DIST_SUBDIR=	gnome2
 
