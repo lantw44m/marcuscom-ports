@@ -9,7 +9,7 @@ PORTNAME=	nautilus-media
 PORTVERSION=	0.0.3
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	desktop/2.1/2.1.2/sources
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.0
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
