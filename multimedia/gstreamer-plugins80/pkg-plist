@@ -1,15 +1,16 @@
-bin/gst-launch-ext-%%VERSION%%
-bin/gst-visualise-%%VERSION%%
-etc/gconf/gconf.xml.defaults/schemas/system/gstreamer-%%VERSION%%/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/system/gstreamer-%%VERSION%%/default/%gconf.xml
-etc/gconf/gconf.xml.defaults/system/gstreamer-%%VERSION%%/%gconf.xml
-etc/gconf/gconf.xml.defaults/system/gstreamer-%%VERSION%%/default/%gconf.xml
+bin/gst-launch-ext-0.7
+bin/gst-visualise-0.7
+etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/%%VERSION%%/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/%%VERSION%%/default/%gconf.xml
+etc/gconf/gconf.xml.defaults/system/gstreamer/%gconf.xml
+etc/gconf/gconf.xml.defaults/system/gstreamer/%%VERSION%%/%gconf.xml
+etc/gconf/gconf.xml.defaults/system/gstreamer/%%VERSION%%/default/%gconf.xml
 etc/gconf/schemas/gstreamer-%%VERSION%%.schemas
 include/gstreamer-%%VERSION%%/gst/audio/gstaudiofilter.h
 include/gstreamer-%%VERSION%%/gst/audio/audioclock.h
 include/gstreamer-%%VERSION%%/gst/audio/audio.h
 include/gstreamer-%%VERSION%%/gst/colorbalance/colorbalance-enumtypes.h
-include/gstreamer-%%VERSION%%/gst/colorbalance/colorbalance-marshal.h
 include/gstreamer-%%VERSION%%/gst/colorbalance/colorbalance.h
 include/gstreamer-%%VERSION%%/gst/colorbalance/colorbalancechannel.h
 include/gstreamer-%%VERSION%%/gst/floatcast/floatcast.h
@@ -17,7 +18,6 @@ include/gstreamer-%%VERSION%%/gst/gconf/gconf.h
 include/gstreamer-%%VERSION%%/gst/idct/idct.h
 include/gstreamer-%%VERSION%%/gst/media-info/media-info.h
 include/gstreamer-%%VERSION%%/gst/mixer/mixer-enumtypes.h
-include/gstreamer-%%VERSION%%/gst/mixer/mixer-marshal.h
 include/gstreamer-%%VERSION%%/gst/mixer/mixer.h
 include/gstreamer-%%VERSION%%/gst/mixer/mixertrack.h
 include/gstreamer-%%VERSION%%/gst/navigation/navigation.h
@@ -30,12 +30,11 @@ include/gstreamer-%%VERSION%%/gst/riff/riff-media.h
 include/gstreamer-%%VERSION%%/gst/riff/riff-read.h
 include/gstreamer-%%VERSION%%/gst/tag/tag.h
 include/gstreamer-%%VERSION%%/gst/tuner/tuner-enumtypes.h
-include/gstreamer-%%VERSION%%/gst/tuner/tuner-marshal.h
 include/gstreamer-%%VERSION%%/gst/tuner/tuner.h
 include/gstreamer-%%VERSION%%/gst/tuner/tunerchannel.h
 include/gstreamer-%%VERSION%%/gst/tuner/tunernorm.h
-include/gstreamer-%%VERSION%%/gst/video/gstvideosink.h
 include/gstreamer-%%VERSION%%/gst/video/video.h
+include/gstreamer-%%VERSION%%/gst/video/videosink.h
 include/gstreamer-%%VERSION%%/gst/xoverlay/xoverlay.h
 include/gstreamer-%%VERSION%%/gst/xwindowlistener/xwindowlistener.h
 %%LIBA52%%lib/gstreamer-%%VERSION%%/libgsta52dec.so
@@ -54,7 +53,7 @@ lib/gstreamer-%%VERSION%%/libgstauparse.so
 lib/gstreamer-%%VERSION%%/libgstavi.so
 %%LIBCACA%%lib/gstreamer-%%VERSION%%/libgstcacasink.so
 %%CDPARANOIA%%lib/gstreamer-%%VERSION%%/libgstcdparanoia.so
-lib/gstreamer-0.7/libgstcdplayer.so
+lib/gstreamer-%%VERSION%%/libgstcdplayer.so
 lib/gstreamer-%%VERSION%%/libgstcdxaparse.so
 lib/gstreamer-%%VERSION%%/libgstchart.so
 %%HERMES%%lib/gstreamer-%%VERSION%%/libgstcolorspace.so
@@ -79,7 +78,6 @@ lib/gstreamer-%%VERSION%%/libgstgoom.so
 %%HERMES%%lib/gstreamer-%%VERSION%%/libgsthermescolorspace.so
 %%HTTP%%lib/gstreamer-%%VERSION%%/libgsthttpsrc.so
 lib/gstreamer-%%VERSION%%/libgstidct.so
-lib/gstreamer-%%VERSION%%/libgstid3types.so
 lib/gstreamer-%%VERSION%%/libgstinterleave.so
 %%IVORBIS%%lib/gstreamer-0.7/libgstivorbis.so
 %%JPEG%%lib/gstreamer-%%VERSION%%/libgstjpeg.so
@@ -91,6 +89,8 @@ lib/gstreamer-%%VERSION%%/libgstlevel.so
 lib/gstreamer-%%VERSION%%/libgstmatroska.so
 lib/gstreamer-%%VERSION%%/libgstmedian.so
 %%LIBMIKMOD%%lib/gstreamer-%%VERSION%%/libgstmikmod.so
+lib/gstreamer-%%VERSION%%/libgstmixmatrix.so
+lib/gstreamer-%%VERSION%%/libgstmodplug.a
 lib/gstreamer-%%VERSION%%/libgstmodplug.so
 lib/gstreamer-%%VERSION%%/libgstmonoscope.so
 lib/gstreamer-%%VERSION%%/libgstmp1videoparse.so
@@ -131,7 +131,7 @@ lib/gstreamer-%%VERSION%%/libgststereo.so
 %%SWFDEC%%lib/gstreamer-%%VERSION%%/libgstswfdec.so
 lib/gstreamer-%%VERSION%%/libgstswitch.so
 lib/gstreamer-%%VERSION%%/libgstsynaesthesia.so
-lib/gstreamer-%%VERSION%%/libgsttagediting.so
+lib/gstreamer-%%VERSION%%/libgsttagedit.so
 lib/gstreamer-%%VERSION%%/libgsttcp.so
 lib/gstreamer-%%VERSION%%/libgsttextoverlay.so
 %%LIBTHEORA%%lib/gstreamer-%%VERSION%%/libgsttheora.so
@@ -154,13 +154,9 @@ lib/gstreamer-%%VERSION%%/libgstwavenc.so
 lib/gstreamer-%%VERSION%%/libgstwavparse.so
 lib/gstreamer-%%VERSION%%/libgstximagesink.so
 %%XVID%%lib/gstreamer-%%VERSION%%/libgstxvid.so
-lib/gstreamer-%%VERSION%%/libgstxvideosink.so
 lib/gstreamer-%%VERSION%%/libgstxvimagesink.so
-lib/gstreamer-%%VERSION%%/libgstxwindowlistener.a
 lib/gstreamer-%%VERSION%%/libgstxwindowlistener.so
-lib/gstreamer-%%VERSION%%/libgstxwindowlistener.so.0
 lib/gstreamer-%%VERSION%%/libgsty4menc.so
-lib/gstreamer-%%VERSION%%/libmixmatrix.so
 lib/libgstgconf-%%VERSION%%.a
 lib/libgstgconf-%%VERSION%%.so
 lib/libgstgconf-%%VERSION%%.so.%%SHLIB_VERSION%%
@@ -195,10 +191,12 @@ share/locale/nl/LC_MESSAGES/gst-plugins-%%VERSION%%.mo
 @dirrm include/gstreamer-%%VERSION%%/gst/floatcast
 @dirrm include/gstreamer-%%VERSION%%/gst/colorbalance
 @dirrm include/gstreamer-%%VERSION%%/gst/audio
-@dirrm etc/gconf/gconf.xml.defaults/system/gstreamer-%%VERSION%%/default
-@dirrm etc/gconf/gconf.xml.defaults/system/gstreamer-%%VERSION%%
-@dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer-%%VERSION%%/default
-@dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer-%%VERSION%%
+@dirrm etc/gconf/gconf.xml.defaults/system/gstreamer/%%VERSION%%/default
+@dirrm etc/gconf/gconf.xml.defaults/system/gstreamer/%%VERSION%%
+@dirrm etc/gconf/gconf.xml.defaults/system/gstreamer
+@dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/%%VERSION%%/default
+@dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/%%VERSION%%
+@dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer
 @unexec rmdir %D/include/gstreamer-%%VERSION%%/gst 2>/dev/null || true
 @unexec rmdir %D/include/gstreamer-%%VERSION%% 2>/dev/null || true
 @exec %%X11BASE%%/bin/gst-register-%%VERSION%% 2>/dev/null || true

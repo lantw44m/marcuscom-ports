@@ -1,6 +1,6 @@
---- sys/cdrom/gstcdplayer_ioctl_bsd.h.orig	Mon Dec  8 21:01:50 2003
-+++ sys/cdrom/gstcdplayer_ioctl_bsd.h	Mon Dec  8 23:13:54 2003
-@@ -139,6 +139,7 @@
+--- sys/cdrom/gstcdplayer_ioctl_bsd.h.orig	Mon Mar  1 06:52:03 2004
++++ sys/cdrom/gstcdplayer_ioctl_bsd.h	Tue Mar  9 16:05:36 2004
+@@ -142,6 +142,7 @@
  {
  	struct ioc_toc_header toc_header;
  	struct ioc_read_toc_entry toc_entry;
@@ -8,7 +8,7 @@
  	guint i;
  
  	cd->fd = open(device,O_RDONLY | O_NONBLOCK);
-@@ -148,7 +149,7 @@
+@@ -151,7 +152,7 @@
  	}
  
  	/* get the toc header information */
@@ -17,7 +17,7 @@
  		close(cd->fd);
  		cd->fd = -1;
  		return FALSE;
-@@ -158,6 +159,8 @@
+@@ -161,6 +162,8 @@
  	for (i = 1; i <= toc_header.ending_track; i++) {
  		toc_entry.address_format = CD_MSF_FORMAT;
  		toc_entry.starting_track = i;
@@ -26,7 +26,7 @@
  
  		if (ioctl(cd->fd,CDIOREADTOCENTRYS,&toc_entry) != 0) {
  			close(cd->fd);
-@@ -165,9 +168,9 @@
+@@ -168,9 +171,9 @@
  			return FALSE;
  		}
  
@@ -39,7 +39,7 @@
  		cd->tracks[i].data_track = (toc_entry.data->control & 4) == 4;
  	}
  
-@@ -183,9 +186,9 @@
+@@ -186,9 +189,9 @@
  		return FALSE;
  	}
  
@@ -52,7 +52,7 @@
  
  	cd->num_tracks = toc_header.ending_track;
  
-@@ -221,6 +224,8 @@
+@@ -224,6 +227,8 @@
  		return FALSE;
  	}
  
@@ -61,12 +61,12 @@
  }
  
  gboolean cd_pause(struct cd *cd)
-@@ -318,7 +323,7 @@
+@@ -321,7 +326,7 @@
  		return -1;
  	}
  
--	return sub_channel.data->track_number;
-+	return sub_channel.data->what.track_info.track_number;
- }
- 
- gboolean cd_close(struct cd *cd)
+-#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__FreeBSD__)
+ 	return sub_channel.data->what.track_info.track_number;
+ #else
+ 	return sub_channel.data->track_number;

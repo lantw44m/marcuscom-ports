@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.7.5
+PORTVERSION=	0.7.6
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gst-plugins/0.7
@@ -17,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	GStreamer written collection of plugins handling several media types
 
-LIB_DEPENDS=	gstreamer-0.7.7:${PORTSDIR}/multimedia/gstreamer \
+LIB_DEPENDS=	gstreamer-0.8.0:${PORTSDIR}/multimedia/gstreamer \
 		popt.0:${PORTSDIR}/devel/popt
 
 USE_X_PREFIX=	yes
@@ -71,14 +71,15 @@ INSTALLS_SHLIB=	yes
 # for various GNOME-related component detection
 WANT_GNOME=	yes
 
-MAN1=	gst-launch-ext-${GST_VERSION}.1 gst-visualise-${GST_VERSION}.1
+MAN1=	gst-launch-ext-0.7.1 gst-visualise-0.7.1
 
 PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 SDL_CONFIG?="${LOCALBASE}/bin/sdl11-config"
-GST_VERSION=${PORTVERSION:C/..$//}
+VERSION=0.8.0
+GST_VERSION=${VERSION:C/..$//}
 
 # library minor number
-SHLIB_VERSION=	2
+SHLIB_VERSION=	0
 
 post-patch:
 # as of this writing, FreeBSD does not support lrint* C99 math functions
