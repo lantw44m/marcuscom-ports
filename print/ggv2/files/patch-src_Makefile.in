@@ -1,6 +1,6 @@
---- src/Makefile.in.orig	Mon Dec 29 17:22:01 2003
-+++ src/Makefile.in	Mon Dec 29 17:22:21 2003
-@@ -145,7 +145,7 @@
+--- src/Makefile.in.orig	Sat Mar  6 00:07:03 2004
++++ src/Makefile.in	Sat Mar  6 00:10:34 2004
+@@ -133,7 +133,7 @@
  
  SUBDIRS = recent-files stock cursors
  
