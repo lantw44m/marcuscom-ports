@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/pango/files/patch-ac,v 1.6 2004/04/05 03:11:39 marcus Exp $
+$FreeBSD$
 
 --- Makefile.in.orig	Mon Aug  2 19:12:56 2004
 +++ Makefile.in	Mon Aug  2 19:13:11 2004

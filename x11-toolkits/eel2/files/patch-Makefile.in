@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/eel2/files/patch-Makefile.in,v 1.7 2004/04/05 03:11:36 marcus Exp $
+$FreeBSD$
 
 --- Makefile.in	2002/06/13 16:05:09	1.1
 +++ Makefile.in	2002/06/13 16:05:18
