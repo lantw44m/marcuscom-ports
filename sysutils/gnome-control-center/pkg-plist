@@ -65,6 +65,7 @@ share/gnome/control-center-2.0/interfaces/gnome-mouse-properties.glade
 share/gnome/control-center-2.0/interfaces/gnome-network-preferences.glade
 share/gnome/control-center-2.0/interfaces/gnome-ui-properties.glade
 share/gnome/control-center-2.0/interfaces/gnome-window-properties.glade
+share/gnome/control-center-2.0/interfaces/modmap-dialog.glade
 share/gnome/control-center-2.0/interfaces/sound-properties.glade
 share/gnome/control-center-2.0/interfaces/theme-install.glade
 share/gnome/control-center-2.0/interfaces/theme-properties.glade
@@ -193,6 +194,6 @@ share/locale/zu/LC_MESSAGES/control-center-2.0.mo
 @dirrm share/gnome/control-center-2.0/xrdb
 @dirrm share/gnome/control-center-2.0/pixmaps
 @dirrm share/gnome/control-center-2.0/interfaces
-@dirrm share/gnome/control-center-2.0/icons
+@unexec rmdir %D/share/gnome/control-center-2.0/icons 2> /dev/null || true
 @dirrm lib/window-manager-settings
 @dirrm include/gnome-window-settings-2.0
