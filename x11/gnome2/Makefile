@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.9.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,7 +20,6 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gnome-cd:${PORTSDIR}/audio/gnomemedia2 \
 	 	gnome-dictionary:${PORTSDIR}/deskutils/gnomeutils2 \
 		eog:${PORTSDIR}/graphics/eog2 \
-		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2 \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
 		gnect:${PORTSDIR}/games/gnomegames2 \
 		gedit:${PORTSDIR}/editors/gedit2 \
@@ -56,6 +55,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		ximian-connector-setup-2.2:${PORTSDIR}/mail/ximian-connector \
 		${X11BASE}/lib/gstreamer-0.8/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins-core
 #		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media
+#		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2
 
 NO_BUILD=	yes
 
