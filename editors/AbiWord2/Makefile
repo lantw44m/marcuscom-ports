@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	AbiWord2
-PORTVERSION=	2.1.3
-PORTREVISION=	1
+PORTVERSION=	2.1.5
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.abisource.com/downloads/Version-${PORTVERSION}/lf/
@@ -58,7 +57,7 @@ PLIST_SUB+=		DICT:=""
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mnautilus2}!="" && ${HAVE_GNOME:Mlibgnomeprintui}!=""
-USE_GNOME+=		nautilus2 libgnomeprintui
+USE_GNOME+=		nautilus2 libgnomeprintui desktopfileutils
 CONFIGURE_ARGS+=	--enable-gnome
 PKGNAMESUFFIX=		-gnome
 GNOME_ENABLED=		yes
@@ -92,13 +91,14 @@ post-install:
 	@${MKDIR} ${PREFIX}/lib/AbiWord-${ABIVERSION}/plugins
 .if defined(GNOME_ENABLED)
 	@${INSTALL_DATA} ${WRKSRC}/abiword.desktop \
-		${X11BASE}/share/gnome/apps/Applications/abiword.desktop
+		${X11BASE}/share/gnome/applications/abiword.desktop
 	@${LN} -sf ${PREFIX}/share/AbiSuite-${ABIVERSION}/icons/abiword_48.png \
 		${X11BASE}/share/gnome/pixmaps/abiword_48.png
 	@${LN} -sf ${PREFIX}/share/AbiSuite-${ABIVERSION}/GNOME_AbiWord_Control_${ABIVERSION:S/./_/}.server \
 		${X11BASE}/libdata/bonobo/servers/GNOME_AbiWord_Control_${ABIVERSION:S/./_/}.server
 	@${LN} -sf ${PREFIX}/share/AbiSuite-${ABIVERSION}/abi-nautilus-view-file.xml \
 		${X11BASE}/share/gnome/gnome-2.0/ui/abi-nautilus-view-file.xml
+	@${X11BASE}/bin/update-desktop-database
 .endif
 
 .include <bsd.port.post.mk>
