@@ -66,7 +66,7 @@ share/gnome/gnome-applets/geyes/Default/config
 share/gnome/gnome-applets/geyes/Horrid/config
 share/gnome/gnome-applets/geyes/Horrid/horrid_eye.png
 share/gnome/gnome-applets/geyes/Horrid/horrid_pupil.png
-share/gnome/gnome-applets/glade/battstat_applet.glade
+%%BATTERY%%share/gnome/gnome-applets/glade/battstat_applet.glade
 share/gnome/gnome-applets/glade/gswitchit-plugins.glade
 share/gnome/gnome-applets/glade/gswitchit-properties.glade
 share/gnome/gnome-applets/glade/mini-commander.glade
