@@ -636,16 +636,18 @@ gnome-pre-install:
 .  endif
 .endif
 
+.if defined(GCONF_SCHEMAS)
 post-install: gnome-post-install
 
 gnome-post-install:
-.for i in ${GCONF_SCHEMAS}
+.  for i in ${GCONF_SCHEMAS}
 	@${ECHO_CMD} "@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/$i > /dev/null || /usr/bin/true" \
 		>> ${TMPPLIST}
 	@${ECHO_CMD} "etc/gconf/schemas/$i" >> ${TMPPLIST}
 	@${ECHO_CMD} "@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/$i > /dev/null || /usr/bin/true" \
 		>> ${TMPPLIST}
-.endfor
+.  endfor
+.endif
 
 .endif
 # End of use part.
