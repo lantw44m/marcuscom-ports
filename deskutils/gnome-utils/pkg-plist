@@ -43,11 +43,17 @@ share/gnome/help/gnome-system-log/C/figures/syslog_window.png
 share/gnome/help/gnome-system-log/C/gnome-system-log.xml
 share/gnome/help/gnome-system-log/C/legal.xml
 share/gnome/omf/gnome-utils/gdialog-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gdialog-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-utils/gnome-calculator-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gnome-calculator-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-utils/gnome-character-map-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gnome-character-map-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-utils/gnome-dictionary-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gnome-dictionary-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-utils/gnome-search-tool-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gnome-search-tool-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-utils/gnome-system-log-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-utils/gnome-system-log-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gdict.png
 share/gnome/pixmaps/gnome-character-map.png
 share/gnome/pixmaps/gnome-searchtool.png
@@ -118,3 +124,9 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/gnome-system-log
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-dictionary
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-dictionary
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gdialog-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gnome-calculator-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gnome-character-map-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gnome-dictionary-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gnome-search-tool-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gnome-system-log-C.omf 2>/dev/null || /usr/bin/true
