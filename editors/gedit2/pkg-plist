@@ -243,6 +243,8 @@ share/locale/zh_TW/LC_MESSAGES/gedit-%%VERSION%%.mo
 @dirrm share/gnome/help/gedit/it
 @dirrm share/gnome/help/gedit/fr/figures
 @dirrm share/gnome/help/gedit/fr
+@dirrm share/gnome/help/gedit/eu/figures
+@dirrm share/gnome/help/gedit/eu
 @dirrm share/gnome/help/gedit/es/figures
 @dirrm share/gnome/help/gedit/es
 @dirrm share/gnome/help/gedit/de/figures
