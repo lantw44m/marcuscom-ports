@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gedit2
-PORTVERSION=	2.1.6
+PORTVERSION=	2.1.91
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.1
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 
 LIB_DEPENDS=	gnomeprintui-2-2.0:${PORTSDIR}/x11-toolkits/libgnomeprintui \
 		gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui \
-		eel-2.3:${PORTSDIR}/x11-toolkits/eel2 \
+		eel-2.4:${PORTSDIR}/x11-toolkits/eel2 \
 		pspell.15:${PORTSDIR}/textproc/aspell
 
 WRKSRC=	${WRKDIR}/gedit-${PORTVERSION}
@@ -38,7 +38,5 @@ MAN1=	gedit.1
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
-		${WRKSRC}/po/Makefile.in.in
 
 .include <bsd.port.mk>
