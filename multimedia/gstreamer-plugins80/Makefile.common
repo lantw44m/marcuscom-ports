@@ -154,7 +154,7 @@ LIB_DEPENDS+=	FLAC.5:${PORTSDIR}/audio/flac
 
 # gdkpixbuf
 .if ${GST_PLUGIN}=="gdkpixbuf"
-USE_GNOME+=	gdkpixbuf
+USE_GNOME+=	gtk20
 GST_PLUGIN_DIR=	ext/gdk_pixbuf
 .endif
 
