@@ -626,16 +626,16 @@ MAKE_ENV+=	${${component}_MAKE_ENV}
 CONFIGURE_TARGET=	${${component}_CONFIGURE_TARGET}
 .    endif
 
-.if ${_USE_GNOME:Mgnomeprefix}!=""
-MTREE_FILE?=	${X11BASE}/etc/mtree/BSD.gnome-x11.dist
-.endif
-
 .    if defined(${component}_PRE_PATCH)
 GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 .    endif
 
 .  endif
 . endfor
+.endif
+
+.if ${_USE_GNOME:Mgnomeprefix}!=""
+MTREE_FILE?=	${X11BASE}/etc/mtree/BSD.gnome-x11.dist
 .endif
 
 .if defined(GNOME_PRE_PATCH)
