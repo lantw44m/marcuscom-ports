@@ -326,7 +326,7 @@ eel2_USE_GNOME_IMPL=	gnomevfs2 libgnomeui gail
 
 gnomepanel_LIB_DEPENDS=	panel-applet-2.0:${PORTSDIR}/x11/gnomepanel
 gnomepanel_DETECT=	${X11BASE}/libdata/pkgconfig/libpanelapplet-2.0.pc
-gnomepanel_USE_GNOME_IMPL=libwnck gnomedesktop
+gnomepanel_USE_GNOME_IMPL=gnomedesktop
 gnomepanel_GNOME_DESKTOP_VERSION=2
 
 nautilus2_LIB_DEPENDS=	nautilus.2:${PORTSDIR}/x11-fm/nautilus2
