@@ -69,6 +69,7 @@ share/locale/wa/LC_MESSAGES/gpdf.mo
 share/locale/zh_CN/LC_MESSAGES/gpdf.mo
 share/locale/zh_TW/LC_MESSAGES/gpdf.mo
 @dirrm share/gnome/pixmaps/gpdf
+@dirrm share/gnome/omf/gpdf
 @dirrm share/gnome/help/gpdf/C/figures
 @dirrm share/gnome/help/gpdf/C
 @dirrm share/gnome/help/gpdf

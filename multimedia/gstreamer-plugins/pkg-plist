@@ -189,6 +189,7 @@ libdata/pkgconfig/gstreamer-play-%%VERSION%%.pc
 @dirrm etc/gconf/gconf.xml.defaults/system/gstreamer
 @dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/default
 @dirrm etc/gconf/gconf.xml.defaults/schemas/system/gstreamer
+@unexec rmdir %D/include/gstreamer-%%VERSION%%/gst 2>/dev/null || true
 @unexec rmdir %D/include/gstreamer-%%VERSION%% 2>/dev/null || true
 @exec %%X11BASE%%/bin/gst-register-%%VERSION%% 2>/dev/null
 @unexec %%X11BASE%%/bin/gst-register-%%VERSION%% 2>/dev/null
