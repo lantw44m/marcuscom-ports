@@ -1,5 +1,5 @@
---- nautilus-cd-burner.c.orig	Mon Jan 10 16:38:54 2005
-+++ nautilus-cd-burner.c	Wed Jan 12 03:20:29 2005
+--- nautilus-cd-burner.c.orig	Mon Feb 28 19:40:05 2005
++++ nautilus-cd-burner.c	Mon Feb 28 20:05:56 2005
 @@ -23,6 +23,8 @@
   *          Bastien Nocera <hadess@hadess.net>
   */
@@ -9,7 +9,7 @@
  #include <gtk/gtk.h>
  #include <gtk/gtkfilesel.h>
  #include <gtk/gtkseparatormenuitem.h>
-@@ -720,8 +722,19 @@
+@@ -843,8 +845,19 @@
  		}
  
  		if (res == NAUTILUS_BURN_RECORDER_RESULT_RETRY) {

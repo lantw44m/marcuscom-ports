@@ -1,18 +1,18 @@
---- make-iso.c.orig	Sun Jan  9 06:49:01 2005
-+++ make-iso.c	Wed Jan 12 03:11:15 2005
-@@ -631,6 +631,7 @@
+--- make-iso.c.orig	Mon Feb 28 19:34:57 2005
++++ make-iso.c	Mon Feb 28 19:36:39 2005
+@@ -719,6 +719,7 @@
  	argv [i++] = "-r";
  	if (use_joliet) {
  		argv [i++] = "-J";
 +		argv[i++] = "-joliet-long";
  	}
- 	/* Undocumented -input-charset option */
- 	argv [i++] = "-input-charset";
-@@ -722,6 +723,7 @@
+ 	if (has_utf8_support) {
+ 		argv [i++] = "-input-charset";
+@@ -806,6 +807,7 @@
  	argv [i++] = "-r";
  	if (use_joliet) {
  		argv [i++] = "-J";
 +		argv[i++] = "-joliet-long";
  	}
- 	argv [i++] = "-input-charset";
- 	argv [i++] = "utf8";
+ 	if (has_utf8_support) {
+ 		argv [i++] = "-input-charset";
