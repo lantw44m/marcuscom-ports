@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomemimedata
-PORTVERSION=	2.3.0
+PORTVERSION=	2.3.1
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-mime-data/2.3
@@ -20,7 +20,7 @@ LIB_DEPENDS=	intl.4:${PORTSDIR}/devel/gettext
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomehack gnomehier gnomeprefix pkgconfig
+USE_GNOME=	gnomehack gnomehier gnomeprefix gnometarget pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lintl"
