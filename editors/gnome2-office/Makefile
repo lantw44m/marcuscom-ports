@@ -16,7 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 office applications
 
 RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric2 \
-		mrproject:${PORTSDIR}/deskutils/mrproject \
+		planner:${PORTSDIR}/deskutils/planner \
 		dia:${PORTSDIR}/graphics/dia \
 		glabels:${PORTSDIR}/deskutils/glabels \
 		evolution-1.5:${PORTSDIR}/mail/evolution \
