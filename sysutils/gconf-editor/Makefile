@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gconf-editor
-PORTVERSION=	2.7.0
+PORTVERSION=	2.7.1
 PORTEPOCH=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -19,7 +19,7 @@ COMMENT=	A gconf database editor for the GNOME 2 environment
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui
+USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui lthack
 USE_LIBTOOL_VER=13
 USE_REINPLACE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
