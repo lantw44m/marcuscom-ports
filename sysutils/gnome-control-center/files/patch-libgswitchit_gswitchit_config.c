@@ -1,5 +1,5 @@
---- libgswitchit/gswitchit_config.c.orig	Tue Nov 23 23:22:30 2004
-+++ libgswitchit/gswitchit_config.c	Tue Nov 23 23:29:11 2004
+--- libgswitchit/gswitchit_config.c.orig	Thu Oct 14 14:44:52 2004
++++ libgswitchit/gswitchit_config.c	Wed Nov 24 00:26:59 2004
 @@ -380,44 +380,6 @@
  }
  
@@ -45,13 +45,20 @@
  _GSListStrEqual (GSList * l1, GSList * l2)
  {
  	if (l1 == l2)
-@@ -752,7 +714,16 @@
+@@ -752,15 +714,16 @@
  gboolean
  GSwitchItXkbConfigActivate (GSwitchItXkbConfig * xkbConfig)
  {
 -	return _GSwitchItXkbConfigDoWithSettings (xkbConfig, TRUE, NULL);
+-}
 +	gboolean rv = FALSE;
-+
+ 
+-gboolean
+-GSwitchItXkbConfigDumpSettings (GSwitchItXkbConfig * xkbConfig,
+-				const char *fileName)
+-{
+-	return _GSwitchItXkbConfigDoWithSettings (xkbConfig, FALSE,
+-						  fileName);
 +	XklConfigRec data;
 +	XklConfigRecInit (&data);
 +
@@ -62,4 +69,4 @@
 +	return rv;
  }
  
- gboolean
+ void
