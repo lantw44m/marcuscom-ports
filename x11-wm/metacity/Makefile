@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
-USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier gconf2
+USE_GNOME=	gnomeprefix intlhack gnomehack gconf2
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-render
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \

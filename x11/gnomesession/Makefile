@@ -24,7 +24,7 @@ COMMENT=	Session component for the GNOME 2 desktop
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack libgnomeui
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
 USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
 CONFIGURE_ARGS=	--with-halt-command=/sbin/shutdown \

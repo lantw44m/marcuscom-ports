@@ -23,7 +23,7 @@ USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
-USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack metacity nautilus2 \
+USE_GNOME=	gnomeprefix gnomehack intlhack metacity nautilus2 \
 		gstreamerplugins gnomemenus desktopfileutils
 USE_LIBTOOL_VER=15
 INSTALLS_SHLIB=	yes

@@ -23,7 +23,7 @@ INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier gnomepanel \
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
 		libgnomeprintui gnomedesktop
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

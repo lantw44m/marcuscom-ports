@@ -24,7 +24,7 @@ USE_LIBTOOL_VER=15
 INSTALLS_SHLIB=	yes
 USE_REINPLACE=	yes
 GNOME_DESKTOP_VERSION=2
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier gnomedesktop \
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
 		gail nautiluscdburner
 USE_GSTREAMER=	esound
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

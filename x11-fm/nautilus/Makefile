@@ -19,7 +19,7 @@ COMMENT=	GNOME file manager and graphical shell developed by Eazel
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack gnomedesktop eel2 \
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop eel2 \
 		librsvg2
 GNOME_DESKTOP_VERSION=2
 INSTALLS_SHLIB=	yes

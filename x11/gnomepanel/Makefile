@@ -21,7 +21,7 @@ INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack gnomedesktop \
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
 		libwnck gnomemenus
 WANT_GNOME=	yes
 GNOME_DESKTOP_VERSION=2

@@ -19,7 +19,7 @@ COMMENT=	The Eye Of Gnome image viewer
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack libgnomeprintui \
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprintui \
 		librsvg2 desktopfileutils libgnomeui
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes

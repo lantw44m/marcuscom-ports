@@ -25,7 +25,7 @@ USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 INSTALLS_OMF=	yes
-USE_GNOME=	gnomehier gnomeprefix gnomehack intlhack gnomepanel \
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
 		gstreamerplugins gail
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

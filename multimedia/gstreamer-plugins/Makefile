@@ -30,7 +30,6 @@ USE_X_PREFIX=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME+=	gnomehack \
-		gnomehier \
 		gnomeprefix \
 		pkgconfig \
 		gconf2

@@ -20,8 +20,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix gnomehier intlhack  \
-		libgnomeui libgnomeprintui
+USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui libgnomeprintui
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL_VER=15
 CONFIGURE_ARGS=	--enable-static --with-libiconv
