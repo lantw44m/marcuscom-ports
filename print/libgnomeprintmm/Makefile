@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	gnome@FreeBSD.org
+MAINTAINER=	bland@FreeBSD.org
 COMMENT=	C++ bindings for the GNOME print support library
 
 LIB_DEPENDS=	gtkmm-2.3.2:${PORTSDIR}/x11-toolkits/gtk--2
