@@ -38,9 +38,10 @@ PLIST_SUB=	VERSION="1.5" EVO_VERSION=${EVO_VERSION}
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500000 && defined(MAKE_KERBEROS5) && \
-	exists(/usr/lib/libkrb5.so)
+	exists(/usr/lib/libkrb5.so) && !defined(PACKAGE_BUILDING)
 CONFIGURE_ARGS+=	--with-krb5=/usr
-.elif ${OSVERSION} < 500000 && !defined(MAKE_KERBEROS5)
+.elif ( ${OSVERSION} < 500000 && !defined(MAKE_KERBEROS5) ) || \
+	defined(PACKAGE_BUILDING)
 LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal
 CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
 .elif ${OSVERSION} >= 500000 && !defined(NO_KERBEROS) && \
