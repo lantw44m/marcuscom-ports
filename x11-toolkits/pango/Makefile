@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	pango
-PORTVERSION=	1.8.0
+PORTVERSION=	1.8.1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/1.8,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.6/

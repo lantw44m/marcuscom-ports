@@ -87,7 +87,6 @@ libdata/pkgconfig/pangoxft.pc
 %%DOCSDIR%%/pango.html
 %%DOCSDIR%%/rendering.html
 %%DOCSDIR%%/right.png
-%%DOCSDIR%%/style.css
 %%DOCSDIR%%/tools.html
 %%DOCSDIR%%/up.png
 @dirrm %%DOCSDIR%%
