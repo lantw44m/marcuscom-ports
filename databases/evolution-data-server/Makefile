@@ -24,6 +24,7 @@ USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget
 USE_REINPLACE=	yes
 GNU_CONFIGURE=	yes
+INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
