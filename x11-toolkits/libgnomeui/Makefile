@@ -7,7 +7,7 @@
 
 PORTNAME=	libgnomeui
 PORTVERSION=	2.5.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -30,5 +30,9 @@ USE_LIBTOOL=	yes
 USE_BISON=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|availible|available|g' \
+		${WRKSRC}/libgnomeui/gnome-authentication-manager.c
 
 .include <bsd.port.mk>
