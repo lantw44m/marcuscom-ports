@@ -39,6 +39,7 @@ share/locale/sq/LC_MESSAGES/epiphany-extensions-1.0.mo
 share/locale/sr/LC_MESSAGES/epiphany-extensions-1.0.mo
 share/locale/sr@Latn/LC_MESSAGES/epiphany-extensions-1.0.mo
 share/locale/sv/LC_MESSAGES/epiphany-extensions-1.0.mo
+@dirrm share/gnome/epiphany-extensions/icons
 @dirrm share/gnome/epiphany-extensions/glade
 @dirrm share/gnome/epiphany-extensions
 @dirrm lib/epiphany/extensions
