@@ -7,6 +7,7 @@
 
 PORTNAME=	metacity
 PORTVERSION=	2.9.13
+PORTREVISION=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -30,5 +31,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
 GCONF_SCHEMAS=	metacity.schemas
+
+MAN1=		metacity-theme-viewer.1 metacity-window-demo.1
 
 .include <bsd.port.mk>
