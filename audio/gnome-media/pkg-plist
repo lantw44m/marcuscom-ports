@@ -66,8 +66,11 @@ share/gnome/help/gnome-volume-control/C/gnome-volume-control.xml
 share/gnome/help/gnome-volume-control/C/legal.xml
 share/gnome/idl/GNOME_Media_CDDBSlave2.idl
 share/gnome/omf/gnome-media/gnome-cd-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-media/gnome-cd-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-media/gnome-volume-control-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-media/gnome-volume-control-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-media/grecord-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-media/grecord-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gnome-cd.png
 share/gnome/pixmaps/gnome-cd/cd.png
 share/gnome/pixmaps/gnome-cd/disc.png
@@ -194,3 +197,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-cd
 @dirrm etc/gconf/gconf.xml.defaults/apps/CDDB-Slave2
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-media/gnome-cd-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-media/gnome-volume-control-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-media/grecord-C.omf 2>/dev/null || /usr/bin/true

@@ -262,15 +262,25 @@ share/gnome/help/mixer_applet2/C/legal.xml
 share/gnome/help/mixer_applet2/C/mixer_applet2.xml
 share/gnome/help/mixer_applet2/C/topic.dat
 %%BATTERY%%share/gnome/omf/gnome-applets/battstat-C.omf
+@exec scrollkeeper-install -q %D/%%BATTERY%%share/gnome/omf/gnome-applets/battstat-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/cdplayer-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/cdplayer-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/char-palette-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/char-palette-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/command-line-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/command-line-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/drivemount-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/drivemount-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/geyes-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/geyes-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/gkb-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/gkb-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/gtik2_applet2-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/gtik2_applet2-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/gweather-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/gweather-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/mixer_applet2-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/mixer_applet2-C.omf 2>/dev/null || /usr/bin/true
 %%BATTERY%%share/gnome/pixmaps/battstat.png
 share/gnome/pixmaps/charpick.png
 share/gnome/pixmaps/drivemount-applet.png
@@ -560,3 +570,13 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/cdplayer-applet
 %%BATTERY%%@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/battstat-applet/prefs
 %%BATTERY%%@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/battstat-applet
+@unexec scrollkeeper-uninstall -q %D/%%BATTERY%%share/gnome/omf/gnome-applets/battstat-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/cdplayer-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/char-palette-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/command-line-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/drivemount-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/geyes-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/gkb-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/gtik2_applet2-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/gweather-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/mixer_applet2-C.omf 2>/dev/null || /usr/bin/true

@@ -385,20 +385,35 @@ share/gnome/help/xbill/C/xbill.xml
 share/gnome/mime-info/gnome-stones.keys
 share/gnome/mime-info/gnome-stones.mime
 share/gnome/omf/gnome-games/aisleriot-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/aisleriot-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gataxx-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gataxx-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/glines-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/glines-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnect-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnect-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnibbles-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnibbles-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnobots2-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnobots2-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnome-stones-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnome-stones-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnomine-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnomine-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnotravex-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnotravex-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnotski-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnotski-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gtali-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gtali-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/iagno-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/iagno-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/mahjongg-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/mahjongg-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/same-gnome-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/same-gnome-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/xbill-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/xbill-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/cards/backs/beige.png
 share/gnome/pixmaps/cards/backs/face.png
 share/gnome/pixmaps/cards/backs/grey.png
@@ -795,3 +810,18 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/freecell/score
 @dirrm etc/gconf/gconf.xml.defaults/apps/freecell/option
 @dirrm etc/gconf/gconf.xml.defaults/apps/freecell
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/aisleriot-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gataxx-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/glines-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnect-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnibbles-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnobots2-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnome-stones-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnomine-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnotravex-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnotski-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gtali-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/iagno-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/mahjongg-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/same-gnome-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/xbill-C.omf 2>/dev/null || /usr/bin/true
