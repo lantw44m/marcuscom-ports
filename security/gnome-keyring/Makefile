@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	gnomekeyring
-PORTVERSION=	0.3.3
+PORTVERSION=	0.4.0
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome-keyring/0.3
+MASTER_SITE_SUBDIR=	sources/gnome-keyring/0.4
 DISTNAME=	gnome-keyring-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
