@@ -53,9 +53,11 @@ CONFIGURE_ARGS+=--enable-eds
 CONFIGURE_ARGS+=--disable-eds
 .endif
 
+.if ${OSVERSION} < 600006
 post-patch:
 .for po in da.po it.po zh_CN.po zh_TW.po
 	@${REINPLACE_CMD} -e 's|%-|%|g' ${WRKSRC}/po/${po}
 .endfor
+.endif
 
 .include <bsd.port.post.mk>

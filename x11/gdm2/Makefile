@@ -54,9 +54,11 @@ post-extract:
 
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e 's|[(]datadir[)]/icons/hicolor|(prefix)/share/icons/hicolor|g'
+.if ${OSVERSION} < 600006
 .for po in zh_CN.po
 	@${REINPLACE_CMD} -e 's|%-|%|g' ${WRKSRC}/po/${po}
 .endfor
+.endif
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
