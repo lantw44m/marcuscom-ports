@@ -11,6 +11,7 @@ etc/gconf/schemas/eog.schemas
 libdata/bonobo/servers/GNOME_EOG.server
 libexec/eog-image-viewer
 share/gnome/applications/eog.desktop
+share/gnome/eog/glade/eog.glade
 share/gnome/gnome-2.0/ui/eog-image-view-ctrl-ui.xml
 share/gnome/gnome-2.0/ui/eog-image-view-ui.xml
 share/gnome/gnome-2.0/ui/eog-shell-ui.xml
@@ -43,6 +44,7 @@ share/locale/it/LC_MESSAGES/eog.mo
 share/locale/ja/LC_MESSAGES/eog.mo
 share/locale/ko/LC_MESSAGES/eog.mo
 share/locale/lt/LC_MESSAGES/eog.mo
+share/locale/lv/LC_MESSAGES/eog.mo
 share/locale/ms/LC_MESSAGES/eog.mo
 share/locale/nl/LC_MESSAGES/eog.mo
 share/locale/nn/LC_MESSAGES/eog.mo
@@ -65,3 +67,5 @@ share/locale/zh_CN/LC_MESSAGES/eog.mo
 share/locale/zh_TW/LC_MESSAGES/eog.mo
 @dirrm share/gnome/omf/eog
 @dirrm share/gnome/help/eog/C/figures
+@dirrm share/gnome/eog/glade
+@dirrm share/gnome/eog
