@@ -1,5 +1,6 @@
 bin/gnome-session
 bin/gnome-session-properties
+bin/gnome-session-remove
 bin/gnome-session-save
 bin/gnome-smproxy
 bin/gnome-wm
