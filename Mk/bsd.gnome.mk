@@ -184,7 +184,7 @@ libglade_MAKE_ENV=	LIBGLADE_CONFIG="${LIBGLADE_CONFIG}"
 libglade_DETECT=	${LIBGLADE_CONFIG}
 libglade_USE_GNOME_IMPL=gnomedb
 
-gal_LIB_DEPENDS=	gal.22:${PORTSDIR}/x11-toolkits/gal
+gal_LIB_DEPENDS=	gal.23:${PORTSDIR}/x11-toolkits/gal
 gal_DETECT=		${X11BASE}/etc/galConf.sh
 gal_USE_GNOME_IMPL=	libglade
 
