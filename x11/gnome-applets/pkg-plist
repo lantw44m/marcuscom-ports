@@ -143,6 +143,7 @@ share/gnome/gkb/IT_Italian.keyprop
 share/gnome/gkb/IT_Italian_x.keyprop
 share/gnome/gkb/JP_Japanese.keyprop
 share/gnome/gkb/JP_Japanese_x.keyprop
+share/gnome/gkb/KR_Korean.keyprop
 share/gnome/gkb/LA_Lao_x.keyprop
 share/gnome/gkb/LT_Lithuanian.keyprop
 share/gnome/gkb/LT_Lithuanian_x.keyprop
@@ -195,9 +196,10 @@ share/gnome/gkb/US.keyprop
 share/gnome/gkb/US_English.keyprop
 share/gnome/gkb/US_international.keyprop
 share/gnome/gkb/VN_Vietnamese.keyprop
-share/gnome/gkb/YU_Serbo-Croatian_x.keyprop
+share/gnome/gkb/YU_Serb_x.keyprop
 share/gnome/gkb/Yugoslav.keyprop
-%%BATTER%%share/gnome/gnome-2.0/ui/GNOME_BattstatApplet.xml
+share/gnome/gkb/presets.xml
+%%BATTERY%%share/gnome/gnome-2.0/ui/GNOME_BattstatApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_CDPlayerApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_CharpickerApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_DriveMountApplet.xml
@@ -305,6 +307,7 @@ share/gnome/pixmaps/gkb/it.png
 share/gnome/pixmaps/gkb/jo.png
 share/gnome/pixmaps/gkb/jp.png
 share/gnome/pixmaps/gkb/km.png
+share/gnome/pixmaps/gkb/kr.png
 share/gnome/pixmaps/gkb/kw.png
 share/gnome/pixmaps/gkb/lam.png
 share/gnome/pixmaps/gkb/la.png
@@ -329,6 +332,7 @@ share/gnome/pixmaps/gkb/se.png
 share/gnome/pixmaps/gkb/si.png
 share/gnome/pixmaps/gkb/sk.png
 share/gnome/pixmaps/gkb/so.png
+share/gnome/pixmaps/gkb/sr.png
 share/gnome/pixmaps/gkb/su.png
 share/gnome/pixmaps/gkb/sv.png
 share/gnome/pixmaps/gkb/sy.png
@@ -351,6 +355,11 @@ share/gnome/pixmaps/gweather/tstorm.xpm
 share/gnome/pixmaps/mini-commander/browser-mini.xpm
 share/gnome/pixmaps/mini-commander/history-mini.xpm
 share/gnome/pixmaps/mixer/gnome-mixer-applet.png
+share/gnome/pixmaps/mixer/volume-max.png
+share/gnome/pixmaps/mixer/volume-medium.png
+share/gnome/pixmaps/mixer/volume-min.png
+share/gnome/pixmaps/mixer/volume-mute.png
+share/gnome/pixmaps/mixer/volume-zero.png
 share/gnome/pixmaps/wireless-applet/broken-0.png
 share/gnome/pixmaps/wireless-applet/no-link-0.png
 share/gnome/pixmaps/wireless-applet/signal-1-40.png
@@ -399,6 +408,7 @@ share/gnome/xmodmap/xmodmap.il_phonetic
 share/gnome/xmodmap/xmodmap.is
 share/gnome/xmodmap/xmodmap.it
 share/gnome/xmodmap/xmodmap.jp
+share/gnome/xmodmap/xmodmap.kr
 share/gnome/xmodmap/xmodmap.la
 share/gnome/xmodmap/xmodmap.lt
 share/gnome/xmodmap/xmodmap.lt_b
@@ -461,6 +471,7 @@ share/locale/it/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/lv/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ms/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-applets-2.0.mo
@@ -511,7 +522,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/gweather
 @dirrm share/gnome/gkb
 @dirrm share/gnome/gen_util
-@dirrm share/gnome/geyes
 %%BATTERY%%@dirrm share/gnome/battstat_applet
 @dirrm libexec/gnome-applets
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/multiload/prefs
