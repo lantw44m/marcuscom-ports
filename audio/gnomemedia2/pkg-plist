@@ -501,6 +501,7 @@ share/locale/wa/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm share/gnome/pixmaps/gnome-media/gnome-sound-recorder
+@dirrm share/gnome/pixmaps/gnome-media
 @dirrm share/gnome/pixmaps/gnome-cd/themes/red-lcd
 @dirrm share/gnome/pixmaps/gnome-cd/themes/media
 @dirrm share/gnome/pixmaps/gnome-cd/themes/lcd
