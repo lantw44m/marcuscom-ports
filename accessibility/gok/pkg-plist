@@ -130,8 +130,6 @@ share/gnome/gok/qwerty.kbd
 share/gnome/gok/small-empty.png
 share/gnome/gok/text-operations.kbd
 share/gnome/help/gok/C/gok.xml
-share/gnome/omf/gok/gok-C.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/gok/gok-C.omf || /usr/bin/true
 share/gnome/pixmaps/gok.png
 share/locale/am/LC_MESSAGES/gok.mo
 share/locale/az/LC_MESSAGES/gok.mo
@@ -165,7 +163,6 @@ share/locale/uk/LC_MESSAGES/gok.mo
 share/locale/vi/LC_MESSAGES/gok.mo
 share/locale/zh_CN/LC_MESSAGES/gok.mo
 share/locale/zh_TW/LC_MESSAGES/gok.mo
-@dirrm share/gnome/omf/gok
 @dirrm share/gnome/help/gok/C/figures
 @dirrm share/gnome/help/gok/C
 @dirrm share/gnome/help/gok
@@ -213,4 +210,3 @@ share/locale/zh_TW/LC_MESSAGES/gok.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gok/actions/dwell
 @dirrm etc/gconf/gconf.xml.defaults/apps/gok/actions
 @dirrm etc/gconf/gconf.xml.defaults/apps/gok
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gok/gok-C.omf || /usr/bin/true
