@@ -1,5 +1,5 @@
 --- src/netstatus-sysdeps.c.orig	Mon Jun  9 13:18:04 2003
-+++ src/netstatus-sysdeps.c	Fri Dec  5 18:47:38 2003
++++ src/netstatus-sysdeps.c	Fri Dec  5 19:38:31 2003
 @@ -31,6 +31,8 @@
  #include <glib.h>
  #include <libgnome/gnome-i18n.h>
@@ -9,7 +9,7 @@
  static inline char *
  parse_iface_name (const char *buf)
  {
-@@ -206,3 +208,145 @@
+@@ -206,3 +208,158 @@
  
    return error_message;
  }
@@ -92,7 +92,7 @@
 +					 long       *out_bytes)
 +{
 +   gchar *buf;
-+   gchar cmd[512];
++   gchar *cmd = NULL;
 +   gchar **command_line;
 +   int prx_idx, ptx_idx;
 +   int brx_idx, btx_idx;
@@ -107,9 +107,9 @@
 +   *in_bytes = -1;
 +   *out_bytes = -1;
 +
-+   g_snprintf (cmd, sizeof(cmd), "/usr/bin/netstat -I %s -b -f inet",
-+	   	     iface);
++   cmd = g_strdup_printf ("/usr/bin/netstat netstat -I %s -b -f inet", iface);
 +   command_line = g_strsplit (cmd, " ", -1);
++   g_free (cmd);
 +
 +   if (g_spawn_async_with_pipes (dir, command_line, NULL,
 +	       			 G_SPAWN_FILE_AND_ARGV_ZERO, NULL,
@@ -122,8 +122,17 @@
 +       parse_header (buf, &prx_idx, &ptx_idx, &brx_idx, &btx_idx);
 +       if (prx_idx == -1 || ptx_idx == -1 ||
 +	   brx_idx == -1 || btx_idx == -1)
-+	 return g_strdup ("Could not parse netstat output.  Unknown format.");
++         {
++	   if (buf)
++	     g_free (buf);
++	   g_io_channel_unref (channel);
++	   g_io_channel_shutdown (channel, TRUE, NULL);
++	   close (pout);
++	   return g_strdup ("Could not parse netstat output.  Unknown format");
++	 }
 +
++       if (buf)
++          g_free (buf);
 +       g_io_channel_read_line (channel, &buf, NULL, NULL, NULL);
 +
 +       if (!parse_stats (buf, prx_idx, ptx_idx, in_packets, out_packets,
@@ -136,11 +145,15 @@
 +		  	     buf, prx_idx, ptx_idx, brx_idx, btx_idx);
 +       }
 +
++       if (buf)
++	 g_free (buf);
++
 +       if ((*in_packets == -1 || *out_packets == -1 || *in_bytes == -1 || *out_bytes == -1) && !error_message)
 +	   error_message = g_strdup_printf ("Could not obtain information on interface '%s' from netstat", iface);
 +
 +       g_io_channel_unref (channel);
 +       g_io_channel_shutdown (channel, TRUE, NULL);
++       close (pout);
 +   }
 +   else {
 +      if (error_message)
