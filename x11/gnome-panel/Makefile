@@ -7,6 +7,8 @@
 
 PORTNAME=	gnomepanel
 PORTVERSION=	2.3.0
+PORTREVISION=	1
+#PORTREVISION=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/2.3
@@ -20,8 +22,7 @@ USE_BZIP2=	yes
 INSTALLS_SHLIB=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
-USE_GNOMENG=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier gnomedesktop
+USE_GNOME=	gnomeprefix gnomehack gnomehier gnomedesktop libwnck
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS=	--with-kde-datadir=${LOCALBASE}/share \
