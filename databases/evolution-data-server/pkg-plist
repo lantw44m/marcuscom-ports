@@ -5,7 +5,6 @@ include/evolution-data-server-%%VERSION%%/groupwise/e-gw-item.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-message.h
 include/evolution-data-server-%%VERSION%%/libebook/Evolution-DataServer-Addressbook.h
 include/evolution-data-server-%%VERSION%%/libebook/e-address-western.h
-include/evolution-data-server-%%VERSION%%/libebook/e-book-async.h
 include/evolution-data-server-%%VERSION%%/libebook/e-book-listener.h
 include/evolution-data-server-%%VERSION%%/libebook/e-book-query.h
 include/evolution-data-server-%%VERSION%%/libebook/e-book-types.h
