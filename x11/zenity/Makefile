@@ -20,7 +20,6 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOMENG=	yes
 USE_GNOME=	gnomeprefix gnomehack gconf2 libgnomecanvas
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
