@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome2-power-tools
 PORTVERSION=	2.9.90
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,7 +25,10 @@ RUN_DEPENDS=	${X11BASE}/lib/epiphany-1.5/extensions/libgesturesextension.so:${PO
 		gdesklets:${PORTSDIR}/deskutils/gdesklets \
 		cog:${PORTSDIR}/sysutils/cog \
 		gnome-blog-poster:${PORTSDIR}/deskutils/gnomeblog \
-		bpm:${PORTSDIR}/sysutils/bpm
+		bpm:${PORTSDIR}/sysutils/bpm \
+		nautilus-sendto:${PORTSDIR}/deskutils/nautilus-sendto \
+		gnome-file-share-properties:${PORTSDIR}/www/gnome-user-share \
+		gnome-keyring-manager:${PORTSDIR}/security/gnomekeyringmanager
 
 NO_BUILD=	yes
 
