@@ -133,8 +133,8 @@ libdata/pkgconfig/sigc++-2.0.pc
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/classSigC_1_1Slot7__inherit__graph.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/class__slot_8h.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/classes.html
-%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/classlambda__base.html
-%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/classlambda__base__inherit__graph.png
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/classinternal_1_1lambda__core.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/classinternal_1_1lambda__core__inherit__graph.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/classsigc_1_1bound__const__mem__functor0-members.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/classsigc_1_1bound__const__mem__functor0.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/classsigc_1_1bound__const__mem__functor0__inherit__graph.png
@@ -504,6 +504,7 @@ libdata/pkgconfig/sigc++-2.0.pc
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/group__functors.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/group__group__.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/group__hide.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/group__lambdas.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/group__mem__fun.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/group__ptr__fun.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/group__retype.html
@@ -679,7 +680,9 @@ libdata/pkgconfig/sigc++-2.0.pc
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/inherit__graph__246.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/inherit__graph__247.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/inherit__graph__248.png
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/inherit__graph__249.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/inherit__graph__25.png
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/inherit__graph__250.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/inherit__graph__26.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/inherit__graph__27.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/inherit__graph__28.png
@@ -1049,6 +1052,16 @@ libdata/pkgconfig/sigc++-2.0.pc
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1hide__functor_3_016_00_01T__functor_01_4_1_1deduce__result__type-members.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1hide__functor_3_016_00_01T__functor_01_4_1_1deduce__result__type.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1hide__functor_3_016_00_01T__functor_01_4__inherit__graph.png
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__core_3_01T__type_00_01false_01_4-members.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__core_3_01T__type_00_01false_01_4.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__core_3_01T__type_00_01false_01_4_1_1deduce__result__type-members.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__core_3_01T__type_00_01false_01_4_1_1deduce__result__type.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__core_3_01T__type_00_01false_01_4__inherit__graph.png
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__core_3_01T__type_00_01true_01_4-members.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__core_3_01T__type_00_01true_01_4.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__core_3_01T__type_00_01true_01_4_1_1deduce__result__type-members.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__core_3_01T__type_00_01true_01_4_1_1deduce__result__type.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__core_3_01T__type_00_01true_01_4__inherit__graph.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__select1-members.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__select1.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1internal_1_1lambda__select1_1_1deduce__result__type-members.html
@@ -1186,6 +1199,8 @@ libdata/pkgconfig/sigc++-2.0.pc
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1is__base__and__derived.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1is__base__and__derived_3_01T__base_00_01T__base_01_4-members.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1is__base__and__derived_3_01T__base_00_01T__base_01_4.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda-members.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__action.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__action_3_01arithmetic_3_01divides_01_4_01_4-members.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__action_3_01arithmetic_3_01divides_01_4_01_4.html
@@ -1291,6 +1306,8 @@ libdata/pkgconfig/sigc++-2.0.pc
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__action__unary__deduce__result__type_3_01unary__other_3_01address_01_4_00_01T__test_01_4.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__action__unary__deduce__result__type_3_01unary__other_3_01dereference_01_4_00_01T__test_01_4-members.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__action__unary__deduce__result__type_3_01unary__other_3_01dereference_01_4_00_01T__test_01_4.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__base.html
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__base__inherit__graph.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__group1-members.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__group1.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__group1_1_1deduce__result__type-members.html
@@ -1306,6 +1323,7 @@ libdata/pkgconfig/sigc++-2.0.pc
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__group3_1_1deduce__result__type-members.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__group3_1_1deduce__result__type.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__group3__inherit__graph.png
+%%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__inherit__graph.png
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__operator-members.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__operator.html
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/reference/html/structsigc_1_1lambda__operator_1_1deduce__result__type-members.html
