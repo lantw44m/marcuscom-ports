@@ -7,6 +7,7 @@
 
 PORTNAME=	librsvg2
 PORTVERSION=	2.9.5
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.9
@@ -28,13 +29,13 @@ USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL_VER=15
 USE_REINPLACE=	yes
-USE_GNOME=	gnomehack gnomeprefix libartlgpl2 libgsf gnomevfs2
+WANT_GNOME=	yes
+USE_GNOME=	gnomehack gnomeprefix libartlgpl2 libgsf gtk20
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-svgz \
 		--disable-gtk-doc \
 		--without-gimp \
-		--enable-gnome-vfs \
 		--with-croco
 
 CROCO_VERSION=	0.6
@@ -46,7 +47,19 @@ MAN1=		rsvg.1
 
 OPTIONS=	MOZILLA_PLUGIN "Enable the RSVG browser plug-in" no
 
+.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.undef WITHOUT_GNOME
+WITH_GNOME=	yes
+.endif
+
 .include <bsd.port.pre.mk>
+
+.if ${HAVE_GNOME:Mgnomevfs2}!=""
+USE_GNOME+=	gnomevfs2
+CONFIGURE_ARGS+=--enable-gnome-vfs
+.else
+CONFIGURE_ARGS+=--disable-gnome-vfs
+.endif
 
 .if defined(WITH_MOZILLA_PLUGIN)
 .if defined(WITH_MOZILLA) && ${WITH_MOZILLA}=="firefox"
