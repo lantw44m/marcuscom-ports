@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	eog2
-PORTVERSION=	2.5.3
+PORTVERSION=	2.5.4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.5
@@ -23,8 +23,8 @@ USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack eel2 libgnomeprintui \
 		librsvg2
 USE_X_PREFIX=	yes
 USE_LIBTOOL=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
 .include <bsd.port.pre.mk>
 
