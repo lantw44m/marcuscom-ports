@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	1.1.0
-PORTREVISION=	1
+PORTVERSION=	1.1.1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/1.1
@@ -26,8 +25,6 @@ RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany \
 MOZILLA=	mozilla
 HEADERS_SUFX=
 
-MOZ_CONFIGURE_ARGS=	--with-mozilla-snapshot="1.7"
-
 .if !defined(WITH_MOZILLA)
 MOZILLA=	mozilla
 HEADERS_SUFX=
@@ -35,7 +32,6 @@ HEADERS_SUFX=
 .if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
 MOZILLA=	mozilla-devel
 HEADERS_SUFX=	-devel
-MOZ_CONFIGURE_ARGS=	--with-mozilla-snapshot="1.8a"
 .else
 MOZILLA=	mozilla
 HEADERS_SUFX=
@@ -49,8 +45,7 @@ USE_LIBTOOL_VER=13
 USE_GMAKE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
-CONFIGURE_ARGS=	--with-extensions="all" \
-		${MOZ_CONFIGURE_ARGS}
+CONFIGURE_ARGS=	--with-extensions="all"
 
 PLIST_SUB=	VERSION="1.3"
 
@@ -68,7 +63,7 @@ WITH_OPENSP=	yes
 .if defined(WITH_OPENSP)
 CONFIGURE_ARGS+=	--enable-opensp=yes
 .else
-CONFIGURE_ARGS+=	--enable-opensp=no
+CONFIGURE_ARGS+=	--disable-opensp
 .endif
 
 pre-everything::

@@ -1,5 +1,5 @@
---- configure.orig	Mon Feb  2 01:47:03 2004
-+++ configure	Mon Feb  2 01:47:33 2004
+--- configure.orig	Wed Jul  7 14:09:38 2004
++++ configure	Wed Jul  7 14:10:16 2004
 @@ -22050,6 +22050,10 @@
  ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
  ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
@@ -10,4 +10,18 @@
 +  HAVE_OPENSP_FALSE=
  
  fi
+
+@@ -23149,11 +23149,11 @@
+ echo "$as_me:$LINENO: result: $MOZILLA_VERSION$autodetect" >&5
+ echo "${ECHO_T}$MOZILLA_VERSION$autodetect" >&6
+ 
+-if test $MOZILLA_VERSION == "trunk"; then
++if test $MOZILLA_VERSION = "trunk"; then
+ 	MOZILLA_VERSION=99.0 # use a high number
+ fi
+ 
+-version=$(echo $MOZILLA_VERSION | sed -e 's/\([0-9]\+\|[a-z]\+\)/\1 /g' -e 's/\.//g')
++version=$(echo $MOZILLA_VERSION | sed -E -e 's/([0-9]+|[a-z]+)/\1 /g' -e 's/\.//g')
+ 
+ set -- $version;
  
