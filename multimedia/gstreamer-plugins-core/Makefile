@@ -23,7 +23,7 @@ GST_DIR=	lib/gstreamer-${PORTVERSION}
 PLIST_FILES=	${GST_DIR}/.gstreamer-plugins-core.keep
 
 # Audio plugins
-USE_GSTREAMER+=	a52dec lame mad vorbis
+USE_GSTREAMER+=	a52dec mad vorbis
 
 # Graphics plugins
 USE_GSTREAMER+=	libpng

@@ -148,6 +148,9 @@ post-build:
 	@cd ${WRKSRC}/${dir}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET}
 . endfor
 .endif
+#	@${ECHO_CMD} "@unexec ${PREFIX}/bin/gst-register-${GST_VERSION} \
+#		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST_VERSION}/registry.xml \
+#		>> ${TMPPLIST}"
 
 post-install:
 .ifdef(EXTRA_BUILD_DIR)

@@ -412,6 +412,14 @@ do-build:
 	@cd ${WRKSRC}/${dir}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET}
 .endfor
+	@${ECHO_CMD} "@unexec ${PREFIX}/bin/gst-register-${GST_VERSION} \
+		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST_VERSION}/registry.xml \
+		>> ${TMPPLIST}"
+
+
+post-build:
+	@${ECHO_CMD} ${PREFIX}/bin/gst-register-${GST_VERSION} \
+		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST_VERSION}/registry.xml
 
 do-install:
 .for dir in ${GST_PLUGIN_DIR}
