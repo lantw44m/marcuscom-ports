@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libgtk-java
-PORTVERSION=	2.3.4
+PORTVERSION=	2.3.5
 CATEGORIES=	x11-toolkits java
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -23,6 +23,7 @@ USE_JAVA=	1.2+
 USE_GNOME=	gnomehack gtk20
 CONFIGURE_ARGS=	--without-gcj-compile \
 		--with-java-prefix=${JAVA_HOME}
+CONFIGURE_ENV=	DB2="/dev/null"
 
 GTK_API_VERSION=	2.3
 PLIST_SUB=		GTK_API_VERSION=${GTK_API_VERSION} \
