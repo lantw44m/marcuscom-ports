@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	Tue Jul  1 02:26:52 2003
++++ src/Makefile.in	Tue Jul  1 02:27:19 2003
+@@ -135,7 +135,7 @@
+ 
+ SUBDIRS = stock cursors
+ 
+-INCLUDES =  	-I$(includedir)						-DG_LOG_DOMAIN=\"GGV\"					-DGNOMELOCALEDIR=\""${prefix}/${DATADIRNAME}/locale"\"		-DGNOMEICONDIR=\""${prefix}/${DATADIRNAME}/pixmaps"\"			-DDATADIR=\""$(datadir)"\"				$(GGV_EXTRA_CFLAGS)					$(GGV_CFLAGS)
++INCLUDES =  	-I$(includedir)						-DG_LOG_DOMAIN=\"GGV\"					-DGNOMELOCALEDIR=\""${prefix}/${DATADIRNAME}/locale"\"		-DGNOMEICONDIR=\""${datadir}/pixmaps"\"			-DDATADIR=\""$(datadir)"\"				$(GGV_EXTRA_CFLAGS)					$(GGV_CFLAGS)
+ 
+ 
+ bin_PROGRAMS = ggv
