@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gconf-editor
-PORTVERSION=	2.5.4
-PORTREVISION=	1
+PORTVERSION=	2.5.91
 PORTEPOCH=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -25,5 +24,7 @@ USE_LIBTOOL=	yes
 USE_REINPLACE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+MAN1=		gconf-editor.1
 
 .include <bsd.port.mk>
