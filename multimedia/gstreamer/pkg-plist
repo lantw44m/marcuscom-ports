@@ -100,6 +100,9 @@ share/locale/fr/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/nl/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/sr/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 @unexec rm %D/share/gnome/cache/gstreamer-%%VERSION%%/registry.xml 2>/dev/null || true
+@dirrm share/gnome/doc/gstreamer-%%VERSION%%.0/pwg
+@dirrm share/gnome/doc/gstreamer-%%VERSION%%.0/manual
+@dirrm share/gnome/doc/gstreamer-%%VERSION%%.0/faq
 @dirrm share/gnome/cache/gstreamer-%%VERSION%%
 @unexec rmdir %D/share/gnome/cache 2>/dev/null || true
 @dirrm lib/gstreamer-%%VERSION%%
