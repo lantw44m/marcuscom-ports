@@ -6,13 +6,13 @@
 #
 
 PORTNAME=	libgnome
-PORTVERSION=	2.7.1
-CATEGORIES?=	x11 gnome
+PORTVERSION=	2.7.2
+CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.7
 DIST_SUBDIR=	gnome2
 
-MAINTAINER?=	gnome@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Libraries for GNOME, a GNU desktop environment
 
 BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
@@ -23,11 +23,11 @@ USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack lthack gnomehier intlhack esound \
+USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack esound \
 		gnomevfs2 libxslt
 USE_BISON=	yes
 INSTALLS_SHLIB=	yes
-USE_INC_LIBTOOL_VER=13
+USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
