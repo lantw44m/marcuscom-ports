@@ -50,6 +50,7 @@ share/icons/gnome/24x24/filesystems/gnome-fs-bookmark.png
 share/icons/gnome/24x24/filesystems/gnome-fs-client.png
 share/icons/gnome/24x24/filesystems/gnome-fs-directory-accept.icon
 share/icons/gnome/24x24/filesystems/gnome-fs-directory-accept.png
+share/icons/gnome/24x24/filesystems/gnome-fs-directory-visiting.icon
 share/icons/gnome/24x24/filesystems/gnome-fs-directory-visiting.png
 share/icons/gnome/24x24/filesystems/gnome-fs-directory.icon
 share/icons/gnome/24x24/filesystems/gnome-fs-directory.png
@@ -74,6 +75,7 @@ share/icons/gnome/32x32/mimetypes/gnome-mime-image-wmf.png
 share/icons/gnome/36x36/emblems/emblem-symbolic-link.png
 share/icons/gnome/36x36/filesystems/gnome-fs-directory-accept.icon
 share/icons/gnome/36x36/filesystems/gnome-fs-directory-accept.png
+share/icons/gnome/36x36/filesystems/gnome-fs-directory-visiting.icon
 share/icons/gnome/36x36/filesystems/gnome-fs-directory-visiting.png
 share/icons/gnome/36x36/filesystems/gnome-fs-directory.icon
 share/icons/gnome/36x36/filesystems/gnome-fs-directory.png
@@ -174,6 +176,7 @@ share/icons/gnome/48x48/filesystems/gnome-fs-client.png
 share/icons/gnome/48x48/filesystems/gnome-fs-desktop.png
 share/icons/gnome/48x48/filesystems/gnome-fs-directory-accept.icon
 share/icons/gnome/48x48/filesystems/gnome-fs-directory-accept.png
+share/icons/gnome/48x48/filesystems/gnome-fs-directory-visiting.icon
 share/icons/gnome/48x48/filesystems/gnome-fs-directory-visiting.png
 share/icons/gnome/48x48/filesystems/gnome-fs-directory.icon
 share/icons/gnome/48x48/filesystems/gnome-fs-directory.png
@@ -376,6 +379,7 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-x-font-afm.png
 share/icons/gnome/48x48/mimetypes/gnome-package.png
 share/icons/gnome/72x72/filesystems/gnome-fs-directory-accept.icon
 share/icons/gnome/72x72/filesystems/gnome-fs-directory-accept.png
+share/icons/gnome/72x72/filesystems/gnome-fs-directory-visiting.icon
 share/icons/gnome/72x72/filesystems/gnome-fs-directory-visiting.png
 share/icons/gnome/72x72/filesystems/gnome-fs-directory.icon
 share/icons/gnome/72x72/filesystems/gnome-fs-directory.png
@@ -383,6 +387,7 @@ share/icons/gnome/72x72/filesystems/gnome-fs-regular.icon
 share/icons/gnome/72x72/filesystems/gnome-fs-regular.png
 share/icons/gnome/96x96/filesystems/gnome-fs-directory-accept.icon
 share/icons/gnome/96x96/filesystems/gnome-fs-directory-accept.png
+share/icons/gnome/96x96/filesystems/gnome-fs-directory-visiting.icon
 share/icons/gnome/96x96/filesystems/gnome-fs-directory-visiting.png
 share/icons/gnome/96x96/filesystems/gnome-fs-directory.icon
 share/icons/gnome/96x96/filesystems/gnome-fs-directory.png
@@ -587,6 +592,9 @@ share/icons/hicolor/16x16/stock/generic/stock_copy.png
 share/icons/hicolor/16x16/stock/generic/stock_cut.png
 share/icons/hicolor/16x16/stock/generic/stock_default-folder.png
 share/icons/hicolor/16x16/stock/generic/stock_delete.png
+share/icons/hicolor/16x16/stock/generic/stock_dialog-error.png
+share/icons/hicolor/16x16/stock/generic/stock_dialog-info.png
+share/icons/hicolor/16x16/stock/generic/stock_dialog-warning.png
 share/icons/hicolor/16x16/stock/generic/stock_drag-mode.png
 share/icons/hicolor/16x16/stock/generic/stock_edit.png
 share/icons/hicolor/16x16/stock/generic/stock_equals.png
@@ -1399,6 +1407,9 @@ share/icons/hicolor/24x24/stock/generic/stock_close.png
 share/icons/hicolor/24x24/stock/generic/stock_copy.png
 share/icons/hicolor/24x24/stock/generic/stock_cut.png
 share/icons/hicolor/24x24/stock/generic/stock_delete.png
+share/icons/hicolor/24x24/stock/generic/stock_dialog-error.png
+share/icons/hicolor/24x24/stock/generic/stock_dialog-info.png
+share/icons/hicolor/24x24/stock/generic/stock_dialog-warning.png
 share/icons/hicolor/24x24/stock/generic/stock_edit.png
 share/icons/hicolor/24x24/stock/generic/stock_equals.png
 share/icons/hicolor/24x24/stock/generic/stock_example.png
@@ -2169,6 +2180,9 @@ share/icons/hicolor/48x48/stock/generic/stock_calendar-and-tasks.png
 share/icons/hicolor/48x48/stock/generic/stock_calendar.png
 share/icons/hicolor/48x48/stock/generic/stock_cell-phone.png
 share/icons/hicolor/48x48/stock/generic/stock_creditcard.png
+share/icons/hicolor/48x48/stock/generic/stock_dialog-error.png
+share/icons/hicolor/48x48/stock/generic/stock_dialog-info.png
+share/icons/hicolor/48x48/stock/generic/stock_dialog-warning.png
 share/icons/hicolor/48x48/stock/generic/stock_edit.png
 share/icons/hicolor/48x48/stock/generic/stock_example.png
 share/icons/hicolor/48x48/stock/generic/stock_home.png
