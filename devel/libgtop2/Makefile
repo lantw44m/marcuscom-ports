@@ -2,12 +2,11 @@
 # Date Created:			29 April 2002
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libgtop2/Makefile,v 1.59 2002/11/01 23:42:37 marcus Exp $
+# $FreeBSD: ports/devel/libgtop2/Makefile,v 1.60 2003/01/19 19:44:28 marcus Exp $
 #
 
 PORTNAME=	libgtop2
-PORTVERSION=	2.0.0
-PORTREVISION=	5
+PORTVERSION=	2.0.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.0
@@ -21,18 +20,14 @@ LIB_DEPENDS=	glib-2.0.200:${PORTSDIR}/devel/glib20
 USE_BZIP2=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
+USE_GNOMENG=	yes
+USE_GNOME=	gnomehack
 USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
-
-pre-patch:
-	@find ${WRKSRC} -name "Makefile.in" | xargs ${REINPLACE_CMD} -e \
-		's|[(]datadir[)]/gnome/|(datadir)/|g ; \
-		 s|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g ; \
-		 s|[(]datadir[)]/locale|(prefix)/share/locale|g'
 
 post-install:
 	install-info --section="Programming \& development tools" \
