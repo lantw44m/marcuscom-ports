@@ -48,6 +48,8 @@ etc/gconf/schemas/system_http_proxy.schemas
 etc/gconf/schemas/system_smb.schemas
 %%CDPARANOIA%%etc/gnome-vfs-2.0/modules/cdda-module.conf
 etc/gnome-vfs-2.0/modules/default-modules.conf
+%%SAMBA%%etc/gnome-vfs-2.0/modules/smb-module.conf
+etc/gnome-vfs-2.0/modules/ssl-modules.conf
 etc/gnome-vfs-2.0/vfolders/applications-all-users.vfolder-info
 etc/gnome-vfs-2.0/vfolders/favorites.vfolder-info
 etc/gnome-vfs-2.0/vfolders/network.vfolder-info
@@ -109,6 +111,7 @@ lib/gnome-vfs-2.0/modules/libhttp.so
 lib/gnome-vfs-2.0/modules/libnetwork.so
 lib/gnome-vfs-2.0/modules/libnntp.so
 lib/gnome-vfs-2.0/modules/libsftp.so
+%%SAMBA%%lib/gnome-vfs-2.0/modules/libsmb.so
 lib/gnome-vfs-2.0/modules/libssh.so
 lib/gnome-vfs-2.0/modules/libtar.so
 lib/gnome-vfs-2.0/modules/libvfolder-desktop.so

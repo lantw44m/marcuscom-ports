@@ -5,7 +5,7 @@
  
    <!-- Merge dirs optional -->
 -  <MergeDir>/etc/X11/applnk/</MergeDir>
-+  <MergeDir>%%LOCALBASE%%/share/applnk/</MergeDir>
++  <MergeDir>/usr/local/share/applnk/</MergeDir>
  
    <!-- Root folder -->
    <Folder>
