@@ -92,17 +92,21 @@ libexec/stickynotes_applet
 libexec/wireless-applet
 %%BATTERY%%share/gnome/battstat_applet/battstat_applet.glade
 share/gnome/gen_util/mini-commander.glade
-share/gnome/geyes/Bizarre-eye.png
-share/gnome/geyes/Bizarre-pupil.png
-share/gnome/geyes/Bloodshot-eye.png
-share/gnome/geyes/Bloodshot-pupil.png
-share/gnome/geyes/Default-eye.png
-share/gnome/geyes/Default-pupil.png
-share/gnome/geyes/Default-tiny-eye.png
-share/gnome/geyes/Default-tiny-pupil.png
-share/gnome/geyes/config
-share/gnome/geyes/horrid_eye.png
-share/gnome/geyes/horrid_pupil.png
+share/gnome/geyes/Bizarre/Bizarre-eye.png
+share/gnome/geyes/Bizarre/Bizarre-pupil.png
+share/gnome/geyes/Bizarre/config
+share/gnome/geyes/Bloodshot/Bloodshot-eye.png
+share/gnome/geyes/Bloodshot/Bloodshot-pupil.png
+share/gnome/geyes/Bloodshot/config
+share/gnome/geyes/Default-tiny/Default-tiny-eye.png
+share/gnome/geyes/Default-tiny/Default-tiny-pupil.png
+share/gnome/geyes/Default-tiny/config
+share/gnome/geyes/Default/Default-eye.png
+share/gnome/geyes/Default/Default-pupil.png
+share/gnome/geyes/Default/config
+share/gnome/geyes/Horrid/config
+share/gnome/geyes/Horrid/horrid_eye.png
+share/gnome/geyes/Horrid/horrid_pupil.png
 share/gnome/gkb/AM_Armenian.keyprop
 share/gnome/gkb/AR_Arabic.keyprop
 share/gnome/gkb/AR_Arabic_x.keyprop
@@ -259,9 +263,18 @@ share/gnome/help/accessx-status/C/accessx-status.xml
 share/gnome/help/accessx-status/C/figures/accessx-status-applet.png
 share/gnome/help/accessx-status/C/legal.xml
 %%BATTERY%%share/gnome/help/battstat/C/battstat.xml
+%%BATTERY%%share/gnome/help/battstat/C/figures/ac_small.png
 %%BATTERY%%share/gnome/help/battstat/C/figures/battstat-apperance.png
 %%BATTERY%%share/gnome/help/battstat/C/figures/battstat-applet.png
 %%BATTERY%%share/gnome/help/battstat/C/figures/battstat-general.png
+%%BATTERY%%share/gnome/help/battstat/C/figures/batt_green.png
+%%BATTERY%%share/gnome/help/battstat/C/figures/batt_orange.png
+%%BATTERY%%share/gnome/help/battstat/C/figures/batt_red.png
+%%BATTERY%%share/gnome/help/battstat/C/figures/batt_yellow.png
+%%BATTERY%%share/gnome/help/battstat/C/figures/battery_small.png
+%%BATTERY%%share/gnome/help/battstat/C/figures/battstat-applet_window.png
+%%BATTERY%%share/gnome/help/battstat/C/figures/flash_small.png
+%%BATTERY%%share/gnome/help/battstat/C/figures/warning_small.png
 %%BATTERY%%share/gnome/help/battstat/C/legal.xml
 %%BATTERY%%share/gnome/help/battstat/ja/battstat.xml
 %%BATTERY%%share/gnome/help/battstat/ja/figures/battstat-apperance.png
@@ -463,6 +476,7 @@ share/gnome/help/command-line/zh_TW/command-line.xml
 share/gnome/help/command-line/zh_TW/figures/command-line.png
 share/gnome/help/command-line/zh_TW/legal.xml
 share/gnome/help/drivemount/C/drivemount.xml
+share/gnome/help/drivemount/C/figures/drivemount-applet_window.png
 share/gnome/help/drivemount/C/figures/drivemount_applet_all.png
 share/gnome/help/drivemount/C/figures/drivemount_applet_floppy.png
 share/gnome/help/drivemount/C/figures/drivemount_applet_settings.png
@@ -726,6 +740,11 @@ share/gnome/help/modemlights/C/figures/modemlights_applet_prefs_connecting.png
 share/gnome/help/modemlights/C/figures/modemlights_applet_prefs_display.png
 share/gnome/help/modemlights/C/legal.xml
 share/gnome/help/modemlights/C/modemlights.xml
+share/gnome/help/multiload/C/figures/system-monitor-applet_window.png
+share/gnome/help/multiload/C/figures/system_monitor.png
+share/gnome/help/multiload/C/figures/system_monitor_prefs.png
+share/gnome/help/multiload/C/legal.xml
+share/gnome/help/multiload/C/multiload.xml
 share/gnome/help/stickynotes_applet/C/legal.xml
 share/gnome/help/stickynotes_applet/C/stickynotes_applet.xml
 share/gnome/help/wireless/C/legal.xml
@@ -918,6 +937,8 @@ share/gnome/omf/gnome-applets/mixer_applet2-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/mixer_applet2-zh_TW.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/modemlights-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/modemlights-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-applets/multiload-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/multiload-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/stickynotes_applet-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/stickynotes_applet-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/wireless-C.omf
@@ -1171,6 +1192,7 @@ share/locale/cy/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/de/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/el/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/en_CA/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/es/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/et/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1225,6 +1247,9 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/wireless
 @dirrm share/gnome/help/stickynotes_applet/C
 @dirrm share/gnome/help/stickynotes_applet
+@dirrm share/gnome/help/multiload/C/figures
+@dirrm share/gnome/help/multiload/C
+@dirrm share/gnome/help/multiload
 @dirrm share/gnome/help/modemlights/C/figures
 @dirrm share/gnome/help/modemlights/C
 @dirrm share/gnome/help/modemlights
@@ -1418,6 +1443,11 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/cdplayer/C/figures
 @dirrm share/gnome/help/cdplayer/C
 @dirrm share/gnome/help/cdplayer
+@dirrm share/gnome/geyes/Horrid
+@dirrm share/gnome/geyes/Default
+@dirrm share/gnome/geyes/Default-tiny
+@dirrm share/gnome/geyes/Bloodshot
+@dirrm share/gnome/geyes/Bizarre
 %%BATTERY%%@dirrm share/gnome/help/battstat/ja/figures
 %%BATTERY%%@dirrm share/gnome/help/battstat/ja
 %%BATTERY%%@dirrm share/gnome/help/battstat/C/figures
@@ -1561,5 +1591,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/mixer_applet2-zh_CN.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/mixer_applet2-zh_TW.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/modemlights-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/multiload-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/stickynotes_applet-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/wireless-C.omf 2>/dev/null || /usr/bin/true
