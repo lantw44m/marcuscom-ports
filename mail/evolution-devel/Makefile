@@ -10,7 +10,7 @@ PORTVERSION=	1.1.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://people.FreeBSD.org/~sobomax/:local
-MASTER_SITE_SUBDIR=	sources/evolution/1.1 \
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1 \
 			sobomax/:local
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
 		db-3.1.17${EXTRACT_SUFX}:local
