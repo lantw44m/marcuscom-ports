@@ -40,6 +40,11 @@ GCONF_SCHEMAS=	clock.schemas fish.schemas gnome-panel-screenshot.schemas \
 
 .include <bsd.port.pre.mk>
 
+.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.undef WITHOUT_GNOME
+WITH_GNOME=	yes
+.endif
+
 .if ${HAVE_GNOME:Mevolutiondataserver}!=""
 USE_GNOME+=	evolutiondataserver
 CONFIGURE_ARGS+=--enable-eds
