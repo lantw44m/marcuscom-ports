@@ -27,7 +27,7 @@ GNOME_DESKTOP_VERSION=2
 INSTALLS_SHLIB=	yes
 GNU_CONFIGURE=	yes
 USE_REINPLACE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -fno-rtti -fno-exceptions" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="${PTHREAD_LIBS} -L${LOCALBASE}/lib -L${X11BASE}/lib -liconv" \
 		LIBPNG="-L${LOCALBASE}/lib -lpng -lz ${MOZILLA_LIBS}"
 CONFIGURE_ARGS=	--with-freetype2-lib-place=${LOCALBASE}/lib \
