@@ -33,6 +33,12 @@ CONFIGURE_ARGS=	--enable-static=yes \
 
 PLIST_SUB=	VERSION="2.3" API_VERSION="2.4"
 
+.include <bsd.port.pre.mk>
+
+.if !exists(${LOCALBASE}/bin/doxygen) && !defined (WITH_DOCUMENTATION)
+NOPORTDOCS=	yes
+.endif
+
 .if !defined(NOPORTDOCS)
 BUILD_DEPENDS+= doxygen:${PORTSDIR}/devel/doxygen
 .endif
@@ -50,8 +56,8 @@ post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/examples//' \
 		${WRKSRC}/Makefile.in
 .endif
-.if defined(NOPORTDOCS)
-	@${REINPLACE_CMD} -e 's|^\(SUBDIRS =\)\(docs\)\(.*\)|\1\3|' ${WRKSRC}/Makefile.in
+.if !defined(NOPORTDOCS)
+	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/docs//' ${WRKSRC}/Makefile.in
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
