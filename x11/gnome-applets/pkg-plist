@@ -86,6 +86,7 @@ share/gnome/help/accessx-status/eu/accessx-status.xml
 share/gnome/help/accessx-status/eu/figures/accessx-status-applet.png
 share/gnome/help/accessx-status/eu/legal.xml
 %%BATTERY%%share/gnome/help/battstat/C/battstat.xml
+%%BATTERY%%share/gnome/help/battstat/C/figures/battstat-preferences.png
 %%BATTERY%%share/gnome/help/battstat/C/figures/ac_small.png
 %%BATTERY%%share/gnome/help/battstat/C/figures/batt_green.png
 %%BATTERY%%share/gnome/help/battstat/C/figures/batt_orange.png
@@ -226,6 +227,7 @@ share/gnome/help/char-palette/C/char-palette.xml
 share/gnome/help/char-palette/C/figures/charpalette_applet.png
 share/gnome/help/char-palette/C/figures/charpalette_chargroup.png
 share/gnome/help/char-palette/C/figures/charpick_characters.png
+share/gnome/help/char-palette/C/figures/charpick-preferences.png
 share/gnome/help/char-palette/C/legal.xml
 share/gnome/help/char-palette/de/char-palette.xml
 share/gnome/help/char-palette/de/figures/charpalette_applet.png
@@ -297,6 +299,8 @@ share/gnome/help/char-palette/zh_TW/figures/charpick_chargroup.png
 share/gnome/help/char-palette/zh_TW/legal.xml
 share/gnome/help/command-line/C/command-line.xml
 share/gnome/help/command-line/C/figures/command-line.png
+share/gnome/help/command-line/C/figures/prefs-macros.png
+share/gnome/help/command-line/C/figures/prefs.png
 share/gnome/help/command-line/C/legal.xml
 share/gnome/help/command-line/de/command-line.xml
 share/gnome/help/command-line/de/figures/command-line.png
@@ -332,20 +336,20 @@ share/gnome/help/command-line/zh_TW/command-line.xml
 share/gnome/help/command-line/zh_TW/figures/command-line.png
 share/gnome/help/command-line/zh_TW/legal.xml
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/cpufreq-applet.xml
-%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-performance1.png
-%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-performance2.png
-%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-powersave1.png
-%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-powersave2.png
-%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-preferences-smp.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-100.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-25.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-50.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-75.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-preferences.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-applet-selector.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/legal.xml
 share/gnome/help/drivemount/C/drivemount.xml
-share/gnome/help/drivemount/C/figures/drivemount-applet_window.png
-share/gnome/help/drivemount/C/figures/drivemount_applet_all.png
-share/gnome/help/drivemount/C/figures/drivemount_applet_floppy.png
-share/gnome/help/drivemount/C/figures/drivemount_applet_settings.png
-share/gnome/help/drivemount/C/figures/drivemount_applet_tooltip.png
+share/gnome/help/drivemount/C/figures/drivemount-applet_eject.png
+share/gnome/help/drivemount/C/figures/drivemount-applet_example.png
+share/gnome/help/drivemount/C/figures/drivemount-applet_mount.png
+share/gnome/help/drivemount/C/figures/drivemount-applet_open.png
+share/gnome/help/drivemount/C/figures/drivemount-applet_status.png
 share/gnome/help/drivemount/C/legal.xml
 share/gnome/help/drivemount/de/drivemount.xml
 share/gnome/help/drivemount/de/figures/drivemount-applet_window.png
@@ -507,8 +511,18 @@ share/gnome/help/gtik2_applet2/zh_TW/figures/gtik_applet.png
 share/gnome/help/gtik2_applet2/zh_TW/gtik2_applet2.xml
 share/gnome/help/gtik2_applet2/zh_TW/legal.xml
 share/gnome/help/gweather/C/figures/gweather_applet.png
-share/gnome/help/gweather/C/figures/gweather_settings.png
-share/gnome/help/gweather/C/figures/gweather_weather.png
+share/gnome/help/gweather/C/figures/gweather-details.png
+share/gnome/help/gweather/C/figures/gweather-prefs-general.png
+share/gnome/help/gweather/C/figures/gweather-prefs-locations.png
+share/gnome/help/gweather/C/figures/stock_weather-cloudy.png
+share/gnome/help/gweather/C/figures/stock_weather-few-clouds.png
+share/gnome/help/gweather/C/figures/stock_weather-fog.png
+share/gnome/help/gweather/C/figures/stock_weather-night-clear.png
+share/gnome/help/gweather/C/figures/stock_weather-night-few-clouds.png
+share/gnome/help/gweather/C/figures/stock_weather-showers.png
+share/gnome/help/gweather/C/figures/stock_weather-snow.png
+share/gnome/help/gweather/C/figures/stock_weather-storm.png
+share/gnome/help/gweather/C/figures/stock_weather-sunny.png
 share/gnome/help/gweather/C/gweather.xml
 share/gnome/help/gweather/C/legal.xml
 share/gnome/help/gweather/de/figures/gweather_applet.png
@@ -611,9 +625,9 @@ share/gnome/help/mixer_applet2/zh_TW/figures/mixer_applet.png
 share/gnome/help/mixer_applet2/zh_TW/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/zh_TW/legal.xml
 share/gnome/help/mixer_applet2/zh_TW/mixer_applet2.xml
+share/gnome/help/multiload/C/figures/multiload-preferences.png
 share/gnome/help/multiload/C/figures/system-monitor-applet_window.png
 share/gnome/help/multiload/C/figures/system_monitor.png
-share/gnome/help/multiload/C/figures/system_monitor_prefs.png
 share/gnome/help/multiload/C/legal.xml
 share/gnome/help/multiload/C/multiload.xml
 share/gnome/help/multiload/de/figures/system-monitor-applet_window.png
@@ -652,6 +666,11 @@ share/gnome/help/multiload/zh_TW/legal.xml
 share/gnome/help/multiload/zh_TW/multiload.xml
 share/gnome/help/stickynotes_applet/C/legal.xml
 share/gnome/help/stickynotes_applet/C/stickynotes_applet.xml
+share/gnome/help/stickynotes_applet/C/figures/stickynote-left-menu.png
+share/gnome/help/stickynotes_applet/C/figures/stickynote-right-menu.png
+share/gnome/help/stickynotes_applet/C/figures/stickynotes-note-prefs.png
+share/gnome/help/stickynotes_applet/C/figures/stickynotes-prefs.png
+share/gnome/help/stickynotes_applet/C/figures/stickynotes_applet.png
 share/gnome/help/stickynotes_applet/de/figures/stickynotes_applet.png
 share/gnome/help/stickynotes_applet/de/legal.xml
 share/gnome/help/stickynotes_applet/de/stickynotes_applet.xml
@@ -686,6 +705,7 @@ share/gnome/help/stickynotes_applet/zh_TW/figures/stickynotes_applet.png
 share/gnome/help/stickynotes_applet/zh_TW/legal.xml
 share/gnome/help/stickynotes_applet/zh_TW/stickynotes_applet.xml
 share/gnome/help/trashapplet/C/legal.xml
+share/gnome/help/trashapplet/C/figures/trash-applet.png
 share/gnome/help/trashapplet/C/trashapplet.xml
 share/gnome/omf/gnome-applets/accessx-status-C.omf
 share/gnome/omf/gnome-applets/accessx-status-eu.omf
@@ -1023,6 +1043,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 %%CPUFREQ%%@dirrm share/gnome/pixmaps/cpufreq-applet
 @dirrm share/gnome/pixmaps/accessx-status-applet
 @dirrm share/gnome/omf/gnome-applets
+@dirrm share/gnome/help/trashapplet/C/figures
 @dirrm share/gnome/help/trashapplet/C
 @dirrm share/gnome/help/trashapplet
 @dirrm share/gnome/help/stickynotes_applet/zh_TW/figures
@@ -1047,6 +1068,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/stickynotes_applet/es
 @dirrm share/gnome/help/stickynotes_applet/de/figures
 @dirrm share/gnome/help/stickynotes_applet/de
+@dirrm share/gnome/help/stickynotes_applet/C/figures
 @dirrm share/gnome/help/stickynotes_applet/C
 @dirrm share/gnome/help/stickynotes_applet
 @dirrm share/gnome/help/multiload/zh_TW/figures
