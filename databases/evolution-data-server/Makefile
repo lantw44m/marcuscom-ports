@@ -7,6 +7,7 @@
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	1.1.0
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
@@ -21,7 +22,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget libgnome
+USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget libgnomeui
 USE_REINPLACE=	yes
 USE_LIBTOOL_VER=15
 INSTALLS_SHLIB=	yes
