@@ -9,7 +9,7 @@ PORTNAME=	eel
 PORTVERSION=	2.9.90
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.9
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.9
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -18,6 +18,7 @@ COMMENT=	Generally useful classes and extensions to GNOME
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
+GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack gnomevfs2 gail gnomedesktop
 USE_LIBTOOL_VER=15
 USE_REINPLACE=	yes
