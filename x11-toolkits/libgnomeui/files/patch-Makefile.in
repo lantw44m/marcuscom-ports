@@ -1,7 +1,7 @@
---- Makefile.in.orig	Sat Nov  9 02:33:58 2002
-+++ Makefile.in	Sat Nov  9 02:36:36 2002
-@@ -122,7 +122,7 @@
- cxxflags_set = @cxxflags_set@
+--- Makefile.in.orig	Tue Dec  9 19:35:35 2003
++++ Makefile.in	Tue Dec  9 19:35:41 2003
+@@ -133,7 +133,7 @@
+ YACC = @YACC@
  gnomelocaledir = @gnomelocaledir@
  
 -SUBDIRS = libgnomeui glade images demos test-gnome doc po #tests

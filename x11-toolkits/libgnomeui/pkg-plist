@@ -17,6 +17,7 @@ include/libgnomeui-2.0/libgnomeui/gnome-druid.h
 include/libgnomeui-2.0/libgnomeui/gnome-entry.h
 include/libgnomeui-2.0/libgnomeui/gnome-file-entry.h
 include/libgnomeui-2.0/libgnomeui/gnome-font-picker.h
+include/libgnomeui-2.0/libgnomeui/gnome-help.h
 include/libgnomeui-2.0/libgnomeui/gnome-href.h
 include/libgnomeui-2.0/libgnomeui/gnome-ice.h
 include/libgnomeui-2.0/libgnomeui/gnome-icon-entry.h
@@ -42,6 +43,7 @@ include/libgnomeui-2.0/libgnomeui/gnome-thumbnail.h
 include/libgnomeui-2.0/libgnomeui/gnome-types.h
 include/libgnomeui-2.0/libgnomeui/gnome-ui-init.h
 include/libgnomeui-2.0/libgnomeui/gnome-uidefs.h
+include/libgnomeui-2.0/libgnomeui/gnome-url.h
 include/libgnomeui-2.0/libgnomeui/gnome-vfs-util.h
 include/libgnomeui-2.0/libgnomeui/gnome-window-icon.h
 include/libgnomeui-2.0/libgnomeui/gnome-window.h
@@ -50,7 +52,7 @@ include/libgnomeui-2.0/libgnomeui/libgnomeui.h
 lib/libglade/2.0/libgnome.so
 lib/libgnomeui-2.a
 lib/libgnomeui-2.so
-lib/libgnomeui-2.so.500
+lib/libgnomeui-2.so.501
 libdata/pkgconfig/libgnomeui-2.0.pc
 libexec/gnome_segv2
 share/doc/libgnomeui/GnomeAbout.html

@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libgnomeui
-PORTVERSION=	2.5.0
+PORTVERSION=	2.5.1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -15,14 +15,15 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Libraries for the GNOME GUI, a GNU desktop environment
 
-LIB_DEPENDS+=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
+LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/gnomekeyring \
+		startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 RUN_DEPENDS=	${X11BASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier libbonoboui
+USE_GNOME=	gnomeprefix gnomehack lthack gnomehier libbonoboui
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
 USE_BISON=	yes
