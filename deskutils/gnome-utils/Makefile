@@ -1,0 +1,38 @@
+# New ports collection makefile for:	gnomeutils2
+# Date created:				06 May 2002
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD: ports/deskutils/gnomeutils2/Makefile,v 1.61 2003/04/06 21:16:03 marcus Exp $
+#
+
+PORTNAME=	gnomeutils2
+PORTVERSION=	2.3.0
+PORTEPOCH=	1
+CATEGORIES=	misc gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/gnome-utils/2.3
+DISTNAME=	gnome-utils-${PORTVERSION}
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	GNOME 2.0 support utilities
+
+USE_BZIP2=	yes
+USE_X_PREFIX=	yes
+USE_REINPLACE=	yes
+USE_GMAKE=	yes
+GNOME_DESKTOP_VERSION=2
+USE_GNOME=	gnomeprefix gnomehack gnomehier gnomepanel
+USE_LIBTOOL=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="-L${LOCALBASE}/lib"
+
+MAN1=	gnome-calculator.1 \
+	gnome-character-map.1 gnome-dictionary.1 \
+	gnome-search-tool.1 gnome-system-log.1 gdialog.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>
