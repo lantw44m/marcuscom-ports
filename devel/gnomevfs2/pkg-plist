@@ -1,6 +1,15 @@
+bin/gnomevfs-cat
+bin/gnomevfs-copy
+bin/gnomevfs-info
+bin/gnomevfs-ls
+bin/gnomevfs-mkdir
+etc/gconf/gconf.xml.defaults/desktop/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/applications/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/applications/component_viewer/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/applications/terminal/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/component_viewer/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/terminal/%gconf.xml
@@ -8,6 +17,7 @@ etc/gconf/gconf.xml.defaults/schemas/system/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/http_proxy/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/http_proxy/%gconf.xml
+etc/gconf/schemas/desktop_default_applications.schemas
 etc/gconf/schemas/system_http_proxy.schemas
 %%CDPARANOIA%%etc/gnome-vfs-2.0/modules/cdda-module.conf
 etc/gnome-vfs-2.0/modules/default-modules.conf
@@ -194,6 +204,7 @@ share/locale/bn/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/cy/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/de/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/el/LC_MESSAGES/gnome-vfs-2.0.mo
@@ -210,6 +221,7 @@ share/locale/he/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/hi/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/hu/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/id/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/is/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-vfs-2.0.mo
@@ -230,6 +242,8 @@ share/locale/ru/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/sr/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/sr@Latn/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/uk/LC_MESSAGES/gnome-vfs-2.0.mo
@@ -253,6 +267,10 @@ share/locale/zh_TW/LC_MESSAGES/gnome-vfs-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/terminal
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/component_viewer
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/terminal
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/component_viewer
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome
+@dirrm etc/gconf/gconf.xml.defaults/desktop

@@ -1,9 +1,9 @@
---- Makefile.in.orig	Tue Jan 14 00:48:58 2003
-+++ Makefile.in	Tue Jan 14 00:50:11 2003
-@@ -177,7 +177,6 @@
- 	schemas					\
+--- Makefile.in.orig	Mon May 19 19:28:43 2003
++++ Makefile.in	Mon May 19 19:29:31 2003
+@@ -183,7 +183,6 @@
  	devel-docs				\
  	doc					\
+ 	programs				\
 -	test					\
  	monikers				\
  	po
