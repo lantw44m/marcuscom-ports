@@ -1,0 +1,47 @@
+--- config/gdm.conf.in.orig	Wed Aug 20 13:40:45 2003
++++ config/gdm.conf.in	Wed Aug 20 22:29:47 2003
+@@ -73,7 +73,7 @@
+ # To try to kill all clients started at greeter time or in the Init script.
+ # doesn't always work, only if those clients have a window of their own
+ #KillInitClients=true
+-LogDir=@EXPANDED_LOGDIR@
++LogDir=/var/log
+ # You should probably never change this value unless you have a weird setup
+ PidFile=/var/run/gdm.pid
+ # Note that a post login script is run before a PreSession script.
+@@ -93,7 +93,7 @@
+ # Reboot, Halt and suspend commands, you can add different commands
+ # separated by a semicolon and gdm will use the first one it can find
+ #RebootCommand=/usr/bin/reboot;/sbin/reboot;/sbin/shutdown -r now;/usr/sbin/shutdown -r now
+-#HaltCommand=/usr/bin/poweroff;/sbin/poweroff;/sbin/shutdown -h now;/usr/sbin/shutdown -h now
++HaltCommand=/sbin/shutdown -p now;/usr/sbin/shutdown -p now
+ #SuspendCommand=
+ # Probably should not touch the below this is the standard setup
+ ServAuthDir=@EXPANDED_AUTHDIR@
+@@ -123,7 +123,7 @@
+ # we force X to use specific vts.  turn VTAllocation to false if this
+ # is causing problems.
+ #FirstVT=7
+-#VTAllocation=true
++VTAllocation=false
+ # Should double login be treated with a warning (and possibility to change
+ # vts on linux systems for console logins)
+ #DoubleLoginWarning=true
+@@ -200,7 +200,7 @@
+ # The 'theme'.  By default we're using the default gtk theme
+ # Of course assuming that gtk got installed in the same prefix,
+ # if not change this.
+-#GtkRC=@EXPANDED_DATADIR@/themes/Default/gtk/gtkrc
++GtkRC=@EXPANDED_DATADIR@/../themes/Default/gtk-2.0/gtkrc
+ # Maximum size of an icon, larger icons are scaled down
+ #MaxIconWidth=128
+ #MaxIconHeight=128
+@@ -372,7 +372,7 @@
+ # to the command line
+ [server-Chooser]
+ name=Chooser server
+-command=@X_SERVER@
++command=@X_SERVER@ vt9
+ # Make this not appear in the flexible servers for now, but if you
+ # wish to allow a chooser server then make this true.  This is the
+ # only way to make a flexible chooser server that behaves nicely.
