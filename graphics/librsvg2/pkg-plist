@@ -23,6 +23,7 @@ share/doc/librsvg/html/rsvg-core-api.html
 share/doc/librsvg/html/rsvg-creating-a-svgz-reader.html
 share/doc/librsvg/html/rsvg.html
 share/doc/librsvg/html/up.png
+share/gnome/pixmaps/svg-viewer.svg
 @dirrm share/doc/librsvg/html
 @dirrm share/doc/librsvg
 @dirrm include/librsvg-2/librsvg
