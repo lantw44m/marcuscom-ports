@@ -483,7 +483,7 @@ ${component}_USE_GNOME_IMPL+=${${subcomponent}_USE_GNOME_IMPL}
 .         if ${GNOME_DESKTOP_VERSION}!=${${component}_GNOME_DESKTOP_VERSION}
 BROKEN=	${PORTNAME} wants to use the GNOME 
 BROKEN+=${${component}_GNOME_DESKTOP_VERSION} desktop, but you wish to use 
-BROKEN+=the GNOME ${GNOME_DESKTOP_VERSION} desktop.
+BROKEN+=the GNOME ${GNOME_DESKTOP_VERSION} desktop
 .         endif
 .      endif
 .  if ${_USE_GNOME_ALL:M${component}}==""
