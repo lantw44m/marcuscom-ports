@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gail
-PORTVERSION=	1.1.6
+PORTVERSION=	1.1.7
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
@@ -25,7 +25,8 @@ USE_GNOMENG=	yes
 USE_GNOME=	gnomehack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--disable-gtk-doc
+CONFIGURE_ARGS=	--disable-gtk-doc \
+		--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
 
 .include <bsd.port.mk>
