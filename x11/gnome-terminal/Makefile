@@ -2,7 +2,7 @@
 # Date created:				1 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnometerminal/Makefile,v 1.13 2003/03/07 06:36:13 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnometerminal

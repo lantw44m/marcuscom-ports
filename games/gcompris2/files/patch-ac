@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/gcompris2/files/patch-ac,v 1.11 2003/04/26 03:59:37 marcus Exp $
+$FreeBSD$
 
 --- Makefile.in.orig	Sun Aug  4 23:01:03 2002
 +++ Makefile.in	Sun Aug  4 23:22:07 2002

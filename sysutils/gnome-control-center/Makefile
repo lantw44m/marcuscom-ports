@@ -2,7 +2,7 @@
 # Date created:				04 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.61 2003/04/07 20:21:09 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomecontrolcenter2

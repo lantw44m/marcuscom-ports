@@ -2,7 +2,7 @@
 # Date created:				28th June 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gnomevfs2/Makefile,v 1.64 2003/04/22 04:21:46 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomevfs2

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/gail/files/patch-tests::ferret.c,v 1.2 2003/02/07 18:42:20 marcus Exp $
+$FreeBSD$
 
 --- tests/ferret.c	2002/02/17 09:45:53	1.1
 +++ tests/ferret.c	2002/02/17 10:10:16

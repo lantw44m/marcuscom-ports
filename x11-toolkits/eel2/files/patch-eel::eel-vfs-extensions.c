@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/eel2/files/patch-eel::eel-vfs-extensions.c,v 1.3 2003/02/07 18:42:19 marcus Exp $
+$FreeBSD$
 
 --- eel/eel-vfs-extensions.c	2001/12/20 13:41:21	1.1
 +++ eel/eel-vfs-extensions.c	2001/12/20 13:47:36

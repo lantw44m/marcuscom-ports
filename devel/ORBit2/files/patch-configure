@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/ORBit2/files/patch-configure,v 1.2 2003/02/07 18:41:59 marcus Exp $
+$FreeBSD$
 
 --- configure	2002/04/26 07:38:33	1.1
 +++ configure	2002/04/26 07:38:42

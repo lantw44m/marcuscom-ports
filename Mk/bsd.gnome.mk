@@ -1,7 +1,7 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.gnome.mk,v 1.29 2003/04/08 01:11:35 marcus Exp $
+# $FreeBSD$
 #	$NetBSD: $
 #
 # Please view me with 4 column tabs!

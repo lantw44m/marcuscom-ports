@@ -2,7 +2,7 @@
 # Date created:				30 November 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/nautilus-media/Makefile,v 1.5 2003/06/11 22:45:58 lioux Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	nautilus-media

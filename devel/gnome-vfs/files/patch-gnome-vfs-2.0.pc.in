@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/gnomevfs2/files/patch-gnome-vfs-2.0.pc.in,v 1.2 2003/02/07 18:42:03 marcus Exp $
+$FreeBSD$
 
 --- gnome-vfs-2.0.pc.in	2002/02/16 13:07:24	1.1
 +++ gnome-vfs-2.0.pc.in	2002/02/16 13:07:38

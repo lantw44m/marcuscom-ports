@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/libwnck/files/patch-configure,v 1.2 2003/02/07 18:42:23 marcus Exp $
+$FreeBSD$
 
 --- configure	2002/04/26 13:54:14	1.1
 +++ configure	2002/04/26 13:54:34

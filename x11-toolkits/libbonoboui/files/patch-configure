@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/libbonoboui/files/patch-configure,v 1.4 2003/02/07 18:42:22 marcus Exp $
+$FreeBSD$
 
 --- configure	2002/04/26 11:11:58	1.1
 +++ configure	2002/04/26 11:12:23

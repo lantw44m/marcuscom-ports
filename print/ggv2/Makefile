@@ -2,7 +2,7 @@
 # Date created:				07 July 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/print/ggv2/Makefile,v 1.42 2003/06/03 01:46:47 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	ggv2

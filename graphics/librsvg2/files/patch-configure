@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/librsvg2/files/patch-configure,v 1.3 2003/02/07 18:42:08 marcus Exp $
+$FreeBSD$
 
 --- configure	2002/04/25 19:16:30	1.1
 +++ configure	2002/04/25 19:16:42

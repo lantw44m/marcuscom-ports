@@ -2,7 +2,7 @@
 # Date created:				28 September 1998
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
-# $FreeBSD: ports/textproc/libxml2/Makefile,v 1.100 2003/08/15 02:31:28 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libxml2

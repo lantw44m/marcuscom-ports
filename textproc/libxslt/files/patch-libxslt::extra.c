@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/libxslt/files/patch-libxslt::extra.c,v 1.1 2001/08/27 10:33:03 sobomax Exp $
+$FreeBSD$
 
 --- libxslt/extra.c.orig	Wed Aug 15 05:55:12 2001
 +++ libxslt/extra.c	Mon Aug 27 13:24:28 2001

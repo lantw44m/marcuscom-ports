@@ -2,7 +2,7 @@
 # Date created:				23 April 2003
 # Whom:					Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
-# $FreeBSD: ports/games/gcompris2/Makefile,v 1.25 2003/04/26 03:59:37 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gcompris2

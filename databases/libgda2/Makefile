@@ -2,7 +2,7 @@
 # Date created:				02 June 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgda2/Makefile,v 1.46 2003/08/30 04:17:18 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgda2

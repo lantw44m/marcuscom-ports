@@ -2,7 +2,7 @@
 # Date created:				20 September 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome2-fifth-toe/Makefile,v 1.28 2003/04/07 18:10:56 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome2-fifth-toe

@@ -2,7 +2,7 @@
 # Date created:				02 June 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgnomedb/Makefile,v 1.22 2003/08/06 12:33:17 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgnomedb

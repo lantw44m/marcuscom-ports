@@ -2,7 +2,7 @@
 # Date created:				28th June 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gconf2/Makefile,v 1.47 2003/03/07 06:00:20 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gconf2

@@ -2,7 +2,7 @@
 # Date created:				22 January 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/gnomemimedata/Makefile,v 1.21 2003/03/07 06:07:00 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomemimedata

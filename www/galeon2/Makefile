@@ -2,7 +2,7 @@
 # Date created:				16 November 2002
 # Whom:					Maxime Romano <verbophobe@jewcrew.org>
 #
-# $FreeBSD: ports/www/galeon2/Makefile,v 1.116 2003/08/29 20:28:20 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	galeon2

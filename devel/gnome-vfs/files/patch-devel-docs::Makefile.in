@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/gnomevfs2/files/patch-devel-docs::Makefile.in,v 1.2 2003/02/07 18:42:03 marcus Exp $
+$FreeBSD$
 
 --- devel-docs/Makefile.in	2002/02/16 16:44:53	1.1
 +++ devel-docs/Makefile.in	2002/02/16 16:45:47

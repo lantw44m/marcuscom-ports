@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/libgnomecanvas/files/patch-configure,v 1.2 2003/02/07 18:42:07 marcus Exp $
+$FreeBSD$
 
 --- configure	2002/04/26 10:26:12	1.1
 +++ configure	2002/04/26 10:26:32

@@ -2,7 +2,7 @@
 # Date created:				9th February 2001
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/libxslt/Makefile,v 1.47 2003/08/10 17:43:00 adamw Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libxslt

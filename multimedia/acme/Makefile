@@ -2,7 +2,7 @@
 # Date created:				15 November 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/acme/Makefile,v 1.8 2003/08/07 16:32:03 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	acme

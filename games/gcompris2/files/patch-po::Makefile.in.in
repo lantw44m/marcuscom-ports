@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/games/gcompris2/files/patch-po::Makefile.in.in,v 1.4 2003/04/26 03:59:37 marcus Exp $
+$FreeBSD$
 
 --- po/Makefile.in.in	2002/05/30 13:59:02	1.1
 +++ po/Makefile.in.in	2002/05/30 13:59:32

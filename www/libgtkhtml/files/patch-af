@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/libgtkhtml/files/patch-af,v 1.4 2003/02/07 18:42:13 marcus Exp $
+$FreeBSD$
 
 --- configure.orig	Fri May 17 13:34:46 2002
 +++ configure	Fri May 17 13:37:13 2002
