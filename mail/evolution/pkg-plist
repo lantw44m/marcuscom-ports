@@ -22,6 +22,7 @@ etc/gconf/gconf.xml.defaults/apps/evolution/mail/filters/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/mail/format/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/mail/junk/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/mail/junk/sa/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/evolution/mail/message_window/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/mail/notify/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/mail/prompts/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/mail/trash/%gconf.xml
@@ -54,6 +55,7 @@ etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/filters/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/format/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/junk/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/junk/sa/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/message_window/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/notify/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/prompts/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/trash/%gconf.xml
@@ -244,15 +246,13 @@ include/evolution-%%VERSION%%/importer/evolution-importer-listener.h
 include/evolution-%%VERSION%%/importer/evolution-importer.h
 include/evolution-%%VERSION%%/importer/evolution-intelligent-importer.h
 include/evolution-%%VERSION%%/shell/Evolution.h
-include/evolution-%%VERSION%%/shell/e-activity-handler.h
 include/evolution-%%VERSION%%/shell/e-icon-factory.h
 include/evolution-%%VERSION%%/shell/e-shell-corba-icon-utils.h
 include/evolution-%%VERSION%%/shell/e-shell-utils.h
-include/evolution-%%VERSION%%/shell/e-task-bar.h
-include/evolution-%%VERSION%%/shell/e-task-widget.h
 include/evolution-%%VERSION%%/shell/evolution-config-control.h
 include/evolution-%%VERSION%%/shell/evolution-shell-component-utils.h
 include/evolution-%%VERSION%%/shell/evolution-wizard.h
+include/evolution-%%VERSION%%/widgets/e-activity-handler.h
 include/evolution-%%VERSION%%/widgets/e-calendar-item.h
 include/evolution-%%VERSION%%/widgets/e-calendar.h
 include/evolution-%%VERSION%%/widgets/e-cell-date-edit.h
@@ -266,11 +266,14 @@ include/evolution-%%VERSION%%/widgets/e-config-page.h
 include/evolution-%%VERSION%%/widgets/e-dateedit.h
 include/evolution-%%VERSION%%/widgets/e-dropdown-button.h
 include/evolution-%%VERSION%%/widgets/e-expander.h
+include/evolution-%%VERSION%%/widgets/e-image-chooser.h
 include/evolution-%%VERSION%%/widgets/e-map.h
 include/evolution-%%VERSION%%/widgets/e-multi-config-dialog.h
 include/evolution-%%VERSION%%/widgets/e-search-bar.h
 include/evolution-%%VERSION%%/widgets/e-source-option-menu.h
 include/evolution-%%VERSION%%/widgets/e-source-selector.h
+include/evolution-%%VERSION%%/widgets/e-task-bar.h
+include/evolution-%%VERSION%%/widgets/e-task-widget.h
 include/evolution-%%VERSION%%/widgets/e-title-bar.h
 include/evolution-%%VERSION%%/widgets/e-url-entry.h
 lib/evolution/%%VERSION%%/camel-providers/libcamelgroupwise.so
@@ -396,6 +399,7 @@ share/gnome/evolution/%%VERSION%%/glade/task-page.glade
 share/gnome/evolution/%%VERSION%%/glade/thankyou.png
 share/gnome/evolution/%%VERSION%%/glade/timezone-48.png
 share/gnome/evolution/%%VERSION%%/glade/url-editor-dialog.glade
+share/gnome/evolution/%%VERSION%%/help/quickref/C/quickref.pdf
 share/gnome/evolution/%%VERSION%%/images/16_copy.png
 share/gnome/evolution/%%VERSION%%/images/16_customize.png
 share/gnome/evolution/%%VERSION%%/images/16_cut.png
@@ -796,6 +800,9 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/gnome/evolution/%%VERSION%%/images/conduits
 @dirrm share/gnome/evolution/%%VERSION%%/images/buttons
 @dirrm share/gnome/evolution/%%VERSION%%/images
+@dirrm share/gnome/evolution/%%VERSION%%/help/quickref/C
+@dirrm share/gnome/evolution/%%VERSION%%/help/quickref
+@dirrm share/gnome/evolution/%%VERSION%%/help
 @dirrm share/gnome/evolution/%%VERSION%%/glade
 @dirrm share/gnome/evolution/%%VERSION%%/etspec
 @dirrm share/gnome/evolution/%%VERSION%%/ecps
@@ -829,6 +836,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/trash
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/prompts
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/notify
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/message_window
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/junk/sa
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/junk
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/mail/format
@@ -861,6 +869,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/trash
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/prompts
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/notify
+@dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/message_window
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/junk/sa
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/junk
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/mail/format
