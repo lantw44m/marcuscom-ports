@@ -26,6 +26,8 @@ RUN_DEPENDS=	mlv:${PORTSDIR}/editors/mlview \
 # not yet buildable under GNOME 2.5
 #		regexxer:${PORTSDIR}/devel/regexxer
 
+.include <bsd.port.pre.mk>
+
 .if ${OSVERSION} < 500000
 RUN_DEPENDS+=	anjuta:${PORTSDIR}/devel/anjuta
 .endif
@@ -34,4 +36,4 @@ NO_BUILD=	yes
 
 do-install:	# empty
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
