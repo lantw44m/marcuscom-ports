@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	pango
-PORTVERSION=	1.1.3
+PORTVERSION=	1.1.4
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/1.1,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
@@ -17,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 
 BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2	# XXX
-LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20 \
+LIB_DEPENDS=	glib-2.0.103:${PORTSDIR}/devel/glib20 \
 		Xft2.2:${PORTSDIR}/x11-fonts/Xft \
 		intl.4:${PORTSDIR}/devel/gettext
 
