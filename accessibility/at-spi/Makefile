@@ -1,0 +1,28 @@
+# New ports collection makefile for:   at-spi
+# Date Created:			12 April 2002
+# Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
+#
+# $FreeBSD: ports/x11-toolkits/at-spi/Makefile,v 1.19 2003/03/07 06:13:58 ade Exp $
+#
+
+PORTNAME=	at-spi
+PORTVERSION=	1.1.9
+CATEGORIES=	x11-toolkits
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	An Assistive Technology Service Provider Interface
+
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gnomeprefix gnomehack gnomehier gail libbonobo
+USE_X_PREFIX=	yes
+INSTALLS_SHLIB=	yes
+USE_LIBTOOL=	yes
+CONFIGURE_ARGS=	--enable-static
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+
+.include <bsd.port.mk>
