@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome-themes
 PORTVERSION=	2.9.2.1
+PORTREVISION=	1
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.9
@@ -32,7 +33,9 @@ PLIST_SUB=	GTK_VERSION="2.4.0"
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|noinst_PROGRAMS = |noinst_PROGRAMS = #|g'
-	@${REINPLACE_CMD} -e 's|GTK_BINARY_VERSION|GTK_VERSION|g' \
-		${WRKSRC}/gtk-engines/Smooth/Makefile.in
+	${REINPLACE_CMD} -e 's|gtk-themes gtk-engines|gtk-themes |g' \
+		${WRKSRC}/Makefile.in
+	${REINPLACE_CMD} -e 's|Crux Glider Grand-Canyon LightHouseBlue Mist Simple Smokey-Blue ThinIce|Glider Grand-Canyon Simple Smokey-Blue|g' \
+		${WRKSRC}/gtk-themes/Makefile.in
 
 .include <bsd.port.mk>

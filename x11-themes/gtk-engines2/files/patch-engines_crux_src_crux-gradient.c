@@ -1,5 +1,5 @@
---- gtk-themes/Crux/src/crux-gradient.c.orig	Thu Oct 16 20:57:05 2003
-+++ gtk-themes/Crux/src/crux-gradient.c	Thu Oct 16 21:01:18 2003
+--- engines/crux/src/crux-gradient.c.orig	Thu Oct 16 20:57:05 2003
++++ engines/crux/src/crux-gradient.c	Thu Oct 16 21:01:18 2003
 @@ -207,7 +207,7 @@
  			const eazel_engine_gradient *gradient)
  {
