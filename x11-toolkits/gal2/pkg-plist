@@ -3,6 +3,7 @@ include/gal-%%VERSION%%/gal/a11y/e-table/gal-a11y-e-cell-registry.h
 include/gal-%%VERSION%%/gal/a11y/e-table/gal-a11y-e-cell-text.h
 include/gal-%%VERSION%%/gal/a11y/e-table/gal-a11y-e-cell-toggle.h
 include/gal-%%VERSION%%/gal/a11y/e-table/gal-a11y-e-cell-tree.h
+include/gal-%%VERSION%%/gal/a11y/e-table/gal-a11y-e-cell-vbox.h
 include/gal-%%VERSION%%/gal/a11y/e-table/gal-a11y-e-cell.h
 include/gal-%%VERSION%%/gal/a11y/e-table/gal-a11y-e-table-click-to-add-factory.h
 include/gal-%%VERSION%%/gal/a11y/e-table/gal-a11y-e-table-click-to-add.h
