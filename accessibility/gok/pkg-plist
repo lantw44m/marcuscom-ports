@@ -2,6 +2,10 @@ bin/create-branching-keyboard
 bin/gok
 libdata/bonobo/servers/GNOME_Gok.server
 libdata/pkgconfig/gok-1.0.pc
+share/doc/gok/home.png
+share/doc/gok/left.png
+share/doc/gok/right.png
+share/doc/gok/up.png
 share/gnome/applications/gok.desktop
 share/gnome/gok/East.png
 share/gnome/gok/Keyboard.kbd
@@ -636,4 +640,5 @@ share/locale/zh_TW/LC_MESSAGES/gok.mo
 @dirrm share/gnome/gok/ar
 @dirrm share/gnome/gok/am
 @dirrm share/gnome/gok
+@dirrm share/doc/gok
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gok/gok-C.omf || /usr/bin/true
