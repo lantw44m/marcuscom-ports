@@ -67,6 +67,7 @@ include/sigc++-2.0/sigc++/visit_each.h
 lib/libsigc-2.0.a
 lib/libsigc-2.0.so
 lib/libsigc-2.0.so.0
+lib/sigc++-1.9/include/sigc++config.h
 libdata/pkgconfig/sigc++-2.0.pc
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/images/libsigc_logo.gif
 %%PORTDOCS%%share/doc/libsigc-2.0/docs/images/top.gif
@@ -1458,6 +1459,8 @@ libdata/pkgconfig/sigc++-2.0.pc
 @dirrm %%PORTDOCS%%share/doc/libsigc-2.0/docs/images
 @dirrm %%PORTDOCS%%share/doc/libsigc-2.0/docs
 @dirrm %%PORTDOCS%%share/doc/libsigc-2.0
+@dirrm lib/sigc++-1.9/include
+@dirrm lib/sigc++-1.9
 @dirrm include/sigc++-2.0/sigc++/macros
 @dirrm include/sigc++-2.0/sigc++/functors/macros
 @dirrm include/sigc++-2.0/sigc++/functors

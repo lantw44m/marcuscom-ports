@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libsigc++
-PORTVERSION=	1.9.15
+PORTVERSION=	1.9.16
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	libsigc
@@ -24,14 +24,5 @@ LATEST_LINK=	libsigc++2
 INSTALLS_SHLIB=	yes
 USE_GNOME=	gnomehack lthack gnometarget pkgconfig
 USE_LIBTOOL_VER=13
-
-.if !defined(NOPORTDOCS)
-BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
-.else
-USE_REINPLACE=	yes
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|^\(SUBDIRS =\)\(docs\)\(.*\)|\1\3|' ${WRKSRC}/Makefile.in
-.endif
 
 .include <bsd.port.mk>
