@@ -1161,24 +1161,25 @@ share/icons/Sandy/96x96/filesystems/gnome-fs-directory-accept.png
 share/icons/Sandy/96x96/filesystems/gnome-fs-directory.png
 share/icons/Sandy/index.theme
 share/icons/Smokey-Blue/48x48/emblems/emblem-nowrite.png
-share/icons/Smokey-Blue/48x48/filesystems/gnome-fs-directory-72.png
-share/icons/Smokey-Blue/48x48/filesystems/gnome-fs-directory-96.png
-share/icons/Smokey-Blue/48x48/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Blue/48x48/filesystems/gnome-fs-nfs.png
-share/icons/Smokey-Blue/48x48/filesystems/gnome-fs-trash-empty-accept.png
-share/icons/Smokey-Blue/48x48/filesystems/gnome-fs-trash-empty.png
-share/icons/Smokey-Blue/48x48/filesystems/gnome-fs-trash-full-accept.png
-share/icons/Smokey-Blue/48x48/filesystems/gnome-fs-trash-full.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-directory.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-nfs.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty-accept.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full-accept.png
+share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full.png
+share/icons/Smokey-Blue/72x72/filesystems/gnome-fs-directory.png
+share/icons/Smokey-Blue/96x96/filesystems/gnome-fs-directory.png
 share/icons/Smokey-Blue/index.theme
 share/icons/Smokey-Red/48x48/emblems/emblem-nowrite.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-directory-72.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-directory-96.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-nfs.png
 share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty-accept.png
 share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty.png
 share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full-accept.png
 share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full.png
+share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.icon
+share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.png
+share/icons/Smokey-Red/64x64/filesystems/gnome-fs-nfs.png
+share/icons/Smokey-Red/72x72/filesystems/gnome-fs-directory.png
+share/icons/Smokey-Red/96x96/filesystems/gnome-fs-directory.png
 share/icons/Smokey-Red/index.theme
 share/locale/am/LC_MESSAGES/gnome-themes.mo
 share/locale/ar/LC_MESSAGES/gnome-themes.mo
@@ -1220,6 +1221,7 @@ share/locale/ml/LC_MESSAGES/gnome-themes.mo
 share/locale/mn/LC_MESSAGES/gnome-themes.mo
 share/locale/ms/LC_MESSAGES/gnome-themes.mo
 share/locale/nb/LC_MESSAGES/gnome-themes.mo
+share/locale/ne/LC_MESSAGES/gnome-themes.mo
 share/locale/nl/LC_MESSAGES/gnome-themes.mo
 share/locale/nn/LC_MESSAGES/gnome-themes.mo
 share/locale/no/LC_MESSAGES/gnome-themes.mo
@@ -1906,11 +1908,22 @@ share/themes/Traditional/index.theme
 @dirrm share/themes/Grand-Canyon
 @dirrm share/themes/Glider/gtk-2.0
 @dirrm share/themes/Glider
+@dirrm share/icons/Smokey-Red/96x96/filesystems
+@dirrm share/icons/Smokey-Red/96x96
+@dirrm share/icons/Smokey-Red/72x72/filesystems
+@dirrm share/icons/Smokey-Red/72x72
+@dirrm share/icons/Smokey-Red/64x64/filesystems
+@dirrm share/icons/Smokey-Red/64x64
 @dirrm share/icons/Smokey-Red/48x48/filesystems
 @dirrm share/icons/Smokey-Red/48x48/emblems
 @dirrm share/icons/Smokey-Red/48x48
 @dirrm share/icons/Smokey-Red
-@dirrm share/icons/Smokey-Blue/48x48/filesystems
+@dirrm share/icons/Smokey-Blue/96x96/filesystems
+@dirrm share/icons/Smokey-Blue/96x96
+@dirrm share/icons/Smokey-Blue/72x72/filesystems
+@dirrm share/icons/Smokey-Blue/72x72
+@dirrm share/icons/Smokey-Blue/64x64/filesystems
+@dirrm share/icons/Smokey-Blue/64x64
 @dirrm share/icons/Smokey-Blue/48x48/emblems
 @dirrm share/icons/Smokey-Blue/48x48
 @dirrm share/icons/Smokey-Blue
