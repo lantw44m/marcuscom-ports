@@ -72,7 +72,7 @@ gnomeprefix_USE_GNOME_IMPL=gnomehier
 gnometarget_CONFIGURE_TARGET=--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
 
 gnomeaudio_DETECT=	${X11BASE}/share/gnome/sounds/login.wav
-gnomeaudio_RUN_DEPENDS=	${gnomeaudio_DETECT}:${PORTSDIR}/audio/gnomeaudio
+gnomeaudio_RUN_DEPENDS=	${gnomeaudio_DETECT}:${PORTSDIR}/audio/gnomeaudio2
 
 ESD_CONFIG?=		${LOCALBASE}/bin/esd-config
 esound_LIB_DEPENDS=	esd.2:${PORTSDIR}/audio/esound
