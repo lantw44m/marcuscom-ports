@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	gnomemag
-PORTVERSION=	0.9.1
+PORTVERSION=	0.10.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome-mag/0.9
+MASTER_SITE_SUBDIR=	sources/gnome-mag/0.10
 DISTNAME=	gnome-mag-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -22,8 +22,8 @@ USE_REINPLACE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 INSTALLS_SHLIB=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
