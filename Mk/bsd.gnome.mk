@@ -35,7 +35,8 @@ _USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 libglade2 libxml2 \
 		libgnome libbonoboui libgnomeui atspi libgailgnome \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
 		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
-		libgnomedb gtksourceview pkgconfig libgsf pygtk2 pygnome2
+		libgnomedb gtksourceview pkgconfig libgsf pygtk2 pygnome2 \
+		gstreamerplugins
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -388,6 +389,11 @@ pygnome2_BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py:${PORTSDI
 pygnome2_RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py
 pygnome2_USE_GNOME_IMPL=	libgnomeprintui libgtkhtml gnomepanel libzvt nautilus2 pygtk2
+
+gstreamerplugins_LIB_DEPENDS=	gstplay-0.7.1:${PORTSDIR}/multimedia/gstreamer-plugins \
+								gstreamer-0.7:${PORTSDIR}/multimedia/gstreamer
+gstreamerplugins_DETECT=	${X11BASE}/libdata/pkgconfig/gstreamer-play-0.7.pc
+gstreamerplugins_USE_GNOME_IMPL=	gconf2
 
 # End component definition section
 
