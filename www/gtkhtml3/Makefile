@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gtkhtml3
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	www gnome
 MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
 		${MASTER_SITE_GNOME}
@@ -17,21 +17,17 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Lightweight HTML rendering/printing/editing engine
 
-LIB_DEPENDS=	gal-2.0.1:${PORTSDIR}/x11-toolkits/gal2 \
-		soup-2.0.0:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	soup-2.0.0:${PORTSDIR}/devel/libsoup
 		
 #USE_BZIP2=	yes
-LATEST_LINK=	gtkhtml3
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
-USE_GNOMENG=	yes
-USE_GNOME=	gnomeprefix gnomehack
+USE_GNOME=	gnomeprefix gnomehack gal2
 INSTALLS_SHLIB=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
-CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \

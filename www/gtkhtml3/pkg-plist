@@ -1,8 +1,6 @@
-bin/gnome-gtkhtml-editor-3.0
 include/libgtkhtml-3.0/gtkhtml/gtkhtml-compat.h
 include/libgtkhtml-3.0/gtkhtml/gtkhtml-embedded.h
 include/libgtkhtml-3.0/gtkhtml/gtkhtml-enums.h
-include/libgtkhtml-3.0/gtkhtml/gtkhtml-im.h
 include/libgtkhtml-3.0/gtkhtml/gtkhtml-keybinding.h
 include/libgtkhtml-3.0/gtkhtml/gtkhtml-private.h
 include/libgtkhtml-3.0/gtkhtml/gtkhtml-properties.h
@@ -85,12 +83,13 @@ include/libgtkhtml-3.0/gtkhtml/htmltype.h
 include/libgtkhtml-3.0/gtkhtml/htmltypes.h
 include/libgtkhtml-3.0/gtkhtml/htmlundo-action.h
 include/libgtkhtml-3.0/gtkhtml/htmlundo.h
+lib/gtkhtml/libgnome-gtkhtml-editor-3.0.so
 lib/libgtkhtml-3.0.a
 lib/libgtkhtml-3.0.so
-lib/libgtkhtml-3.0.so.0
+lib/libgtkhtml-3.0.so.1
 lib/libgtkhtml-a11y-3.0.a
 lib/libgtkhtml-a11y-3.0.so
-lib/libgtkhtml-a11y-3.0.so.0
+lib/libgtkhtml-a11y-3.0.so.1
 libdata/bonobo/servers/GNOME_GtkHTML_Editor.server
 libdata/pkgconfig/libgtkhtml-3.0.pc
 share/gnome/gtkhtml-3.0/Editor.idl
@@ -148,6 +147,7 @@ share/gnome/gtkhtml-3.0/icons/texture.png
 share/gnome/gtkhtml-3.0/icons/transparent.png
 share/gnome/gtkhtml-3.0/icons/undo-16.png
 share/gnome/gtkhtml-3.0/icons/undo-24.png
+share/gnome/gtkhtml-3.0/keybindingsrc.emacs
 share/locale/am/LC_MESSAGES/gtkhtml-3.0.mo
 share/locale/ar/LC_MESSAGES/gtkhtml-3.0.mo
 share/locale/az/LC_MESSAGES/gtkhtml-3.0.mo
@@ -162,6 +162,7 @@ share/locale/eu/LC_MESSAGES/gtkhtml-3.0.mo
 share/locale/fi/LC_MESSAGES/gtkhtml-3.0.mo
 share/locale/fr/LC_MESSAGES/gtkhtml-3.0.mo
 share/locale/gl/LC_MESSAGES/gtkhtml-3.0.mo
+share/locale/he/LC_MESSAGES/gtkhtml-3.0.mo
 share/locale/hi/LC_MESSAGES/gtkhtml-3.0.mo
 share/locale/hu/LC_MESSAGES/gtkhtml-3.0.mo
 share/locale/it/LC_MESSAGES/gtkhtml-3.0.mo
@@ -187,5 +188,6 @@ share/locale/zh_CN/LC_MESSAGES/gtkhtml-3.0.mo
 share/locale/zh_TW/LC_MESSAGES/gtkhtml-3.0.mo
 @dirrm share/gnome/gtkhtml-3.0/icons
 @dirrm share/gnome/gtkhtml-3.0
+@dirrm lib/gtkhtml
 @dirrm include/libgtkhtml-3.0/gtkhtml
 @dirrm include/libgtkhtml-3.0
