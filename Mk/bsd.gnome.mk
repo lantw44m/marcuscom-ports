@@ -635,8 +635,10 @@ GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 . endfor
 .endif
 
+.if defined(_USE_GNOME)
 .if ${_USE_GNOME:Mgnomeprefix}!=""
 MTREE_FILE?=	${GNOME_MTREE}
+.endif
 .endif
 
 .if defined(GNOME_PRE_PATCH)
