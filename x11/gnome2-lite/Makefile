@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.9.90
+PORTVERSION=	2.9.91
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 PKGNAMESUFFIX=	-lite
@@ -36,8 +36,8 @@ RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		gucharmap:${PORTSDIR}/deskutils/gucharmap \
 		${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
-		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2
-#		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media
+		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2 \
+		totem:${PORTSDIR}/multimedia/totem-gstreamer
 
 NO_BUILD=	yes
 

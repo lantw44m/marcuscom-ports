@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnome2-fifth-toe
-PORTVERSION=	2.9.90
-PORTREVISION=	1
+PORTVERSION=	2.9.91
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -35,7 +34,6 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		rhythmbox:${PORTSDIR}/audio/rhythmbox \
 		jamboree:${PORTSDIR}/audio/jamboree \
 		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data \
-		sound-juicer:${PORTSDIR}/audio/sound-juicer \
 		nautilus-sendto:${PORTSDIR}/deskutils/nautilus-sendto \
 		goobox:${PORTSDIR}/audio/goobox
 
