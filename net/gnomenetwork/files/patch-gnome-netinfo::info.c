@@ -1,5 +1,5 @@
---- info.c.orig	Thu Mar 20 15:04:48 2003
-+++ info.c	Sat Jun 28 20:45:20 2003
+--- gnome-netinfo/info.c.orig	Thu Mar 20 15:04:48 2003
++++ gnome-netinfo/info.c	Sat Jun 28 20:45:20 2003
 @@ -26,6 +26,10 @@
  #endif
  
