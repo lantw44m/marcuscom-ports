@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomekeyring
-PORTVERSION=	0.1.4
+PORTVERSION=	0.1.90
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-keyring/0.1
@@ -18,7 +18,7 @@ COMMENT=	A program that keeps passwords and other secrets
 
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gtk20
+USE_GNOME=	gnomehack lthack gtk20
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 INSTALLS_SHLIB=	yes
