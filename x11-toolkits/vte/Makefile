@@ -35,5 +35,7 @@ post-patch:
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|malloc\.h|stdlib.h|g' \
 		${WRKSRC}/gnome-pty-helper/gnome-pty-helper.c
+	@${REINPLACE_CMD} -e 's|Xft\.h|Xft2.h|g' \
+		${WRKSRC}/src/vte.c
 
 .include <bsd.port.mk>
