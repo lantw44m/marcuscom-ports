@@ -324,23 +324,23 @@ share/gnome/omf/gnome-panel/workspace-switcher-zh_CN.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/workspace-switcher-zh_CN.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-panel/workspace-switcher-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/workspace-switcher-zh_TW.omf 2>/dev/null || /usr/bin/true
-share/gnome/icons/cdeappmenu.png
-share/gnome/icons/gnome-amusements.png
-share/gnome/icons/gnome-clock.png
-share/gnome/icons/gnome-gegl.png
-share/gnome/icons/gnome-gegl2-2.png
-share/gnome/icons/gnome-gegl2.png
-share/gnome/icons/gnome-lockscreen.png
-share/gnome/icons/gnome-panel-type-corner.png
-share/gnome/icons/gnome-panel-type-edge.png
-share/gnome/icons/gnome-panel-type-floating.png
-share/gnome/icons/gnome-panel-type-menu.png
-share/gnome/icons/gnome-panel-type-sliding.png
-share/gnome/icons/gnome-panel.png
-share/gnome/icons/gnome-run.png
-share/gnome/icons/gnome-screenshot.png
-share/gnome/icons/panel-drawer.png
-share/gnome/icons/panel-force-quit.png
+share/gnome/pixmaps/cdeappmenu.png
+share/gnome/pixmaps/gnome-amusements.png
+share/gnome/pixmaps/gnome-clock.png
+share/gnome/pixmaps/gnome-gegl.png
+share/gnome/pixmaps/gnome-gegl2-2.png
+share/gnome/pixmaps/gnome-gegl2.png
+share/gnome/pixmaps/gnome-lockscreen.png
+share/gnome/pixmaps/gnome-panel-type-corner.png
+share/gnome/pixmaps/gnome-panel-type-edge.png
+share/gnome/pixmaps/gnome-panel-type-floating.png
+share/gnome/pixmaps/gnome-panel-type-menu.png
+share/gnome/pixmaps/gnome-panel-type-sliding.png
+share/gnome/pixmaps/gnome-panel.png
+share/gnome/pixmaps/gnome-run.png
+share/gnome/pixmaps/gnome-screenshot.png
+share/gnome/pixmaps/panel-drawer.png
+share/gnome/pixmaps/panel-force-quit.png
 share/gnome/panel/gnome-panel-preferences.glade
 share/gnome/panel/gnome-panel-screenshot.glade
 share/gnome/panel/panel-properties-dialog.glade
@@ -408,7 +408,6 @@ share/locale/zh_CN/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/omf/gnome-panel
 @dirrm share/gnome/idl/gnome-panel-2.0
-@dirrm share/gnome/icons
 @dirrm share/gnome/help/workspace-switcher/zh_TW/figures
 @dirrm share/gnome/help/workspace-switcher/zh_TW
 @dirrm share/gnome/help/workspace-switcher/zh_CN/figures

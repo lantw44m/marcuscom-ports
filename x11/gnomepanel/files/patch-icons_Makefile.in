@@ -1,0 +1,11 @@
+--- icons/Makefile.in.orig	Wed May 21 19:00:47 2003
++++ icons/Makefile.in	Wed May 21 19:01:10 2003
+@@ -169,7 +169,7 @@
+ 
+ NULL = 
+ 
+-icondir = $(datadir)/icons
++icondir = $(datadir)/pixmaps
+ icon_DATA = \
+ 	panel-force-quit.png		\
+ 	cdeappmenu.png			\
