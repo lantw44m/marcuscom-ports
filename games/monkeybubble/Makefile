@@ -9,7 +9,9 @@ PORTNAME=	monkeybubble
 PORTVERSION=	0.1.9
 PORTREVISION=	1
 CATEGORIES=	games gnome
-MASTER_SITES=	http://monkey-bubble.tuxfamily.org/
+#MASTER_SITES=	http://monkey-bubble.tuxfamily.org/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	adamw
 DISTNAME=	monkey-bubble-${PORTVERSION}
 
 MAINTAINER=	adamw@FreeBSD.org
