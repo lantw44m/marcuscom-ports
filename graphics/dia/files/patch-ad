@@ -1,0 +1,20 @@
+--- configure.orig	Mon Jul 26 20:14:01 2004
++++ configure	Mon Jul 26 20:13:35 2004
+@@ -20497,7 +20497,7 @@
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define GNOME_ICONDIR "${prefix}/share/pixmaps"
++#define GNOME_ICONDIR "${datadir}/pixmaps"
+ _ACEOF
+ 
+     have_gnome=true
+@@ -23874,6 +23874,8 @@
+     PYTHON_EXEC_PREFIX=/usr
+ 
+   fi
++
++  PYTHON_EXEC_PREFIX=${LOCALBASE}
+ 
+ 
+ 
