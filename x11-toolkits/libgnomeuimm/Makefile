@@ -21,6 +21,7 @@ LIB_DEPENDS=	gnomemm-2.5.1:${PORTSDIR}/x11/libgnomemm \
 		glademm-2.3.1:${PORTSDIR}/devel/libglademm
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
+USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack lthack libgnomeui
