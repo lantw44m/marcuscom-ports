@@ -1,0 +1,31 @@
+# New ports collection makefile for:	gnome2-office
+# Date created:				07 January 2004
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD: ports/editors/gnome2-office/Makefile,v 1.12 2004/04/05 19:38:21 marcus Exp $
+#
+
+PORTNAME=	gnome2-office
+PORTVERSION=	2.6.0
+PORTREVISION=	1
+CATEGORIES=	editors gnome
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+EXTRACT_ONLY=	# empty
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	GNOME 2 office applications
+
+RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric2 \
+		planner:${PORTSDIR}/deskutils/planner \
+		dia:${PORTSDIR}/graphics/dia \
+		glabels:${PORTSDIR}/deskutils/glabels \
+		evolution-1.5:${PORTSDIR}/mail/evolution \
+		AbiWord-2.2:${PORTSDIR}/editors/AbiWord2 \
+		mergeant:${PORTSDIR}/databases/mergeant
+
+NO_BUILD=	yes
+
+do-install:	# empty
+
+.include <bsd.port.mk>
