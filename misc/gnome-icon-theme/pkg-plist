@@ -108,6 +108,7 @@ share/icons/gnome/36x36/filesystems/gnome-fs-directory-visiting.icon
 share/icons/gnome/36x36/filesystems/gnome-fs-directory-visiting.png
 share/icons/gnome/36x36/filesystems/gnome-fs-directory.icon
 share/icons/gnome/36x36/filesystems/gnome-fs-directory.png
+@exec mkdir -p %D/share/icons/gnome/48x48/apps
 share/icons/gnome/48x48/devices/gnome-dev-battery.png
 share/icons/gnome/48x48/devices/gnome-dev-cdrom-audio.png
 share/icons/gnome/48x48/devices/gnome-dev-cdrom.png
@@ -2513,6 +2514,7 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @unexec /bin/rmdir %D/share/icons/gnome/48x48/filesystems 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/48x48/emblems 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/48x48/devices 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/icons/gnome/48x48/apps 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/48x48 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/36x36/mimetypes 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/36x36/filesystems 2>/dev/null || /usr/bin/true
