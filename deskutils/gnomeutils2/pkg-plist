@@ -1,4 +1,6 @@
 bin/gnome-dictionary
+bin/gnome-panel-screenshot
+bin/gnome-screenshot
 bin/gnome-search-tool
 bin/gnome-system-log
 libdata/bonobo/servers/GNOME_GDictApplet.server
@@ -7,6 +9,7 @@ share/gnome/applications/gnome-dictionary.desktop
 share/gnome/applications/gnome-search-tool.desktop
 share/gnome/applications/gnome-system-log.desktop
 share/gnome/gnome-2.0/ui/GNOME_GDictApplet.xml
+share/gnome/gnome-screenshot/glade/gnome-screenshot.glade
 share/gnome/gnome-system-log/gnome-system-log-actions.db
 share/gnome/gnome-system-log/gnome-system-log-descript.db
 share/gnome/gnome-system-log/gnome-system-log-regexp.db
@@ -212,3 +215,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/gnome-dictionary/C
 @dirrm share/gnome/help/gnome-dictionary
 @dirrm share/gnome/gnome-system-log
+@dirrm share/gnome/gnome-screenshot/glade
+@dirrm share/gnome/gnome-screenshot

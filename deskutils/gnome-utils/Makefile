@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomeutils2
-PORTVERSION=	2.9.0
+PORTVERSION=	2.9.2
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -29,6 +29,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1
-GCONF_SCHEMAS=	gdict.schemas gnome-search-tool.schemas logview.schemas
+GCONF_SCHEMAS=	gdict.schemas gnome-screenshot.schemas \
+		gnome-search-tool.schemas logview.schemas
 
 .include <bsd.port.mk>
