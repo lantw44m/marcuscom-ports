@@ -2329,6 +2329,7 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/gnome/48x48/filesystems
 @dirrm share/icons/gnome/48x48/emblems
 @dirrm share/icons/gnome/48x48/devices
+@dirrm share/icons/gnome/48x48/apps
 @dirrm share/icons/gnome/48x48
 @dirrm share/icons/gnome/36x36/mimetypes
 @dirrm share/icons/gnome/36x36/filesystems
