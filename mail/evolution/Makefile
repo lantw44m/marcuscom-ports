@@ -16,14 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An integrated mail, calendar and address book distributed suite
 
 LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss
-
 RUN_DEPENDS=	${X11BASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnomespell
-.if defined(WITH_PILOT)
-LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
-.endif
-.if !defined(WITHOUT_SPAMASSASSIN)
-RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
-.endif
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -40,8 +33,27 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 		--enable-openssl=no \
 		--with-sub-version="FreeBSD GNOME Team Port" \
 		--with-krb5=/usr
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="${PTHREAD_LIBS}" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 EVO_VERSION=	1.5
+PLIST_SUB=	VERSION=${EVO_VERSION}
+
+OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
+		LDAP "Enable LDAP support" on \
+		SPAMASSASSIN "Enable SpamAssassin spam filtering" on
+
+.include <bsd.port.pre.mk>
+
+.if defined(WITH_PILOT)
+LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
+CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE} \
+			--enable-pilot-conduits=yes
+PLIST_SUB=	PILOT:=""
+.else
+PLIST_SUB=	PILOT:="@comment "
+.endif
 
 .if !defined(WITHOUT_LDAP)
 USE_OPENLDAP=	yes
@@ -50,28 +62,11 @@ CONFIGURE_ARGS+=--with-openldap=${LOCALBASE}
 CONFIGURE_ARGS+=--with-openldap=no
 .endif
 
-.if defined(WITH_PILOT)
-CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE} \
-			--enable-pilot-conduits=yes
-PLIST_SUB=	PILOT:=""
-.else
-PLIST_SUB=	PILOT:="@comment "
+.if !defined(WITHOUT_SPAMASSASSIN)
+RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 .endif
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="${PTHREAD_LIBS}" \
-		LDFLAGS="-L${LOCALBASE}/lib"
-
-PLIST_SUB+=	VERSION=${EVO_VERSION}
-
-pre-everything::
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "evolution has the following configurable option(s):"
-	@${ECHO_MSG} "	WITH_PILOT		Build Palm Pilot sync support"
-	@${ECHO_MSG} "	WITHOUT_LDAP		Disable LDAP support"
-	@${ECHO_MSG} "	WITHOUT_SPAMASSASSIN	Do not add a runtime dependency on SpamAssassin (Evo uses SpamAssassin for spam filtering)"
-	@${ECHO_MSG} ""
 
 post-install:
 	@${CHMOD} u+w ${PREFIX}/share/gnome/evolution/${EVO_VERSION}/default/C/mail/local/Inbox
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
