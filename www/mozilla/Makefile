@@ -7,7 +7,7 @@
 
 PORTNAME?=	mozilla
 PORTVERSION=	1.7.3
-PORTREVISION?=	1
+PORTREVISION?=	2
 PORTEPOCH?=	2
 CATEGORIES?=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA} \
@@ -252,6 +252,7 @@ post-patch:
 		${WRKSRC}/modules/libpref/src/init/all.js
 	@for pcfile in ${PKGCONFIG_FILES}; do \
 		${REINPLACE_CMD} -e 's|mozilla-xpcom|mozilla-xpcom${MOZ_SUFX}${PKGNAMESUFFIX}|g ; \
+			s|${FAKEDIR}|${PREFIX}|g ; \
 			s|mozilla-nspr|mozilla-nspr${MOZ_SUFX}${PKGNAMESUFFIX}|g' \
 			${WRKSRC}/build/unix/$${pcfile}.pc.in; \
 	done
@@ -311,6 +312,9 @@ do-install:
 	${CHMOD} 755 ${PREFIX}/lib/${MOZILLA}
 	${INSTALL_SCRIPT} ${FAKEDIR}/bin/mozilla ${PREFIX}/lib/${MOZILLA}
 	${INSTALL_SCRIPT} ${FAKEDIR}/bin/mozilla-config ${PREFIX}/lib/${MOZILLA}
+	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
+		${PREFIX}/lib/${MOZILLA}/mozilla \
+		${PREFIX}/lib/${MOZILLA}/mozilla-config
 	cd ${FAKEDIR}/lib/mozilla && ${FIND} . | \
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${MOZILLA}
 	${INSTALL_SCRIPT} ${WRKSRC}/${MOZILLA} ${PREFIX}/bin
