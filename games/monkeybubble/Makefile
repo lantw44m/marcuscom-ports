@@ -2,12 +2,11 @@
 # Date created:				06 October 2003
 # Whom:					Adam Weinberger
 #
-# $FreeBSD: ports/games/monkeybubble/Makefile,v 1.3 2003/12/31 22:13:20 pav Exp $
+# $FreeBSD: ports/games/monkeybubble/Makefile,v 1.6 2004/01/17 20:37:00 adamw Exp $
 #
 
 PORTNAME=	monkeybubble
-PORTVERSION=	0.1.7
-PORTREVISION=	2
+PORTVERSION=	0.1.8
 CATEGORIES=	games gnome
 MASTER_SITES=	http://monkey-bubble.tuxfamily.org/
 DISTNAME=	monkey-bubble-${PORTVERSION}
@@ -17,11 +16,10 @@ COMMENT=	GTK2 Puzzle Bobble clone with monkeys
 
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
-INSTALLS_SHLIB=	yes
-USE_LIBTOOL=	yes
+GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix librsvg2 libgnomeui lthack intlhack \
-		gstreamerplugins
+USE_GNOME=	gnomehack gnomeprefix librsvg2 libgnomeui \
+		gstreamerplugins intlhack
 
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
