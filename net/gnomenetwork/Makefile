@@ -1,4 +1,4 @@
-# New ports collection makefile for:   gnomenetwork2
+# New ports collection makefile for:   gnomenetwork
 # Date Created:			03 June 2003
 # Whom:				Adam Weinberger <adamw@FreeBSD.org>
 #
@@ -7,7 +7,8 @@
 
 PORTNAME=	gnomenetwork
 PORTVERSION=	1.99.0
-CATEGORIES=	net
+PORTREVISION=	1
+CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-network/1.99
 DISTNAME=	gnome-network-${PORTVERSION}
@@ -19,6 +20,8 @@ COMMENT=	A library for writing networked servers & clients
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix libgnomeui
 USE_GMAKE=	yes
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>
