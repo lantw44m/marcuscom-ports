@@ -17,6 +17,7 @@ include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-extension.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-extensions-manager.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-history.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-lib-type-builtins.h
+include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-link.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-loader.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-node-db.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-node.h
