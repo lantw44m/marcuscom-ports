@@ -25,19 +25,21 @@ USE_X_PREFIX=	yes
 do-fetch:
 	@${DO_NADA}
 
-pre-su-install:
+pre-install:
 	@${CP} -f ${FILESDIR}/dirlist ${WRKDIR}
 	@${RM} -f ${PLIST} ${WRKDIR}/${GNOME_MTREE}
 	@${TOUCH} -f ${PLIST}
+	@${ECHO_CMD} etc/mtree/${GNOME_MTREE} >> ${PLIST}
 	@${MKDIR} ${WRKSRC}
 	@${CAT} ${FILESDIR}/dirlist | ${SORT} -r | ${SED} -e \
 		's|^|@dirrm |' >> ${PLIST}
-	@${ECHO_CMD} etc/mtree/${GNOME_MTREE} >> ${PLIST}
 	@${ECHO_CMD} "@unexec ${RMDIR} %D/etc/mtree 2>/dev/null || ${TRUE}" >> ${PLIST}
 	@for dir in `${CAT} ${WRKDIR}/dirlist`; \
 	do \
 		${MKDIR} ${WRKSRC}/$${dir}; \
 	done
+
+pre-su-install:
 	${CHGRP} games ${WRKSRC}/share/gnome/games
 	${CHMOD} g=rwXs ${WRKSRC}/share/gnome/games
 	${MTREE_CMD} ${MTREE_ARGS} ${WRKSRC}/
