@@ -23,6 +23,7 @@ include/libgtop-2.0/glibtop/prockernel.h
 include/libgtop-2.0/glibtop/proclist.h
 include/libgtop-2.0/glibtop/procmap.h
 include/libgtop-2.0/glibtop/procmem.h
+include/libgtop-2.0/glibtop/procopenfiles.h
 include/libgtop-2.0/glibtop/procsegment.h
 include/libgtop-2.0/glibtop/procsignal.h
 include/libgtop-2.0/glibtop/procstate.h
@@ -89,6 +90,7 @@ share/locale/ml/LC_MESSAGES/libgtop-2.0.mo
 share/locale/mn/LC_MESSAGES/libgtop-2.0.mo
 share/locale/ms/LC_MESSAGES/libgtop-2.0.mo
 share/locale/nb/LC_MESSAGES/libgtop-2.0.mo
+share/locale/ne/LC_MESSAGES/libgtop-2.0.mo
 share/locale/nl/LC_MESSAGES/libgtop-2.0.mo
 share/locale/nn/LC_MESSAGES/libgtop-2.0.mo
 share/locale/no/LC_MESSAGES/libgtop-2.0.mo
