@@ -27,6 +27,7 @@ RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric2 \
 		ghex2:${PORTSDIR}/editors/ghex2 \
 		glade-2:${PORTSDIR}/devel/glade2 \
 		gob2:${PORTSDIR}/devel/gob2 \
+		gtetrinet:${PORTSDIR}/games/gtetrinet \
 		${X11BASE}/lib/gaim/docklet.so:${PORTSDIR}/net/gaim \
 		sawfish:${PORTSDIR}/x11-wm/sawfish2 \
 		dia:${PORTSDIR}/graphics/dia \
@@ -40,7 +41,6 @@ RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric2 \
 		gnotime:${PORTSDIR}/deskutils/gnotime
 # These apps do not yet build under GNOME 2.5
 #		AbiWord-2.0:${PORTSDIR}/editors/AbiWord2
-#		gtetrinet:${PORTSDIR}/games/gtetrinet
 #		regexxer:${PORTSDIR}/devel/regexxer
 #		workrave:${PORTSDIR}/x11/workrave
 
