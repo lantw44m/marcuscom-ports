@@ -41,7 +41,8 @@ _USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 \
 		libgnome libbonoboui libgnomeui atspi libgailgnome \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
 		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
-		libgnomedb gtksourceview libgsf pygtk2 pygnome2 gstreamerplugins
+		libgnomedb gtksourceview libgsf pygtk2 pygnome2 gstreamerplugins \
+		gtkhtml3 evolutiondataserver
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -401,6 +402,14 @@ intlhack_BUILD_DEPENDS=	intltool-extract:${PORTSDIR}/textproc/intltool
 intlhack_PRE_PATCH=		${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${REINPLACE_CMD} -e \
 				's|mkdir $$lang or|mkdir $$lang, 0777 or| ; \
 				 s|^push @INC, "/.*|push @INC, "${LOCALBASE}/share/intltool";|'
+
+gtkhtml3_LIB_DEPENDS=	gtkhtml-3.1.5:${PORTSDIR}/www/gtkhtml3
+gtkhtml3_DETECT=		${X11BASE}/libdata/pkgconfig/libgtkhtml-3.1.pc
+gtkhtml3_USE_GNOME_IMPL=gal2 gail
+
+evolutiondataserver_LIB_DEPENDS=edataserver.2:${PORTSDIR}/databases/evolution-data-server
+evolutiondataserver_DETECT=		${X11BASE}/libdata/pkgconfig/evolution-data-server-1.0.pc
+evolutiondataserver_USE_GNOME_IMPL=gtkhtml3
 
 # End component definition section
 
