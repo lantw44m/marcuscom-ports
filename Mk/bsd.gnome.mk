@@ -311,7 +311,7 @@ libwnck_LIB_DEPENDS=	wnck-1.11:${PORTSDIR}/x11-toolkits/libwnck
 libwnck_DETECT=		${X11BASE}/libdata/pkgconfig/libwnck-1.0.pc
 libwnck_USE_GNOME_IMPL=	gtk20
 
-vte_LIB_DEPENDS=	vte.4:${PORTSDIR}/x11-toolkits/vte
+vte_LIB_DEPENDS=	vte.5:${PORTSDIR}/x11-toolkits/vte
 vte_DETECT=		${X11BASE}/libdata/pkgconfig/vte.pc
 vte_USE_GNOME_IMPL=	gtk20
 
