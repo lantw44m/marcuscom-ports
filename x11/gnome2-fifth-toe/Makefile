@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome2-fifth-toe
-PORTVERSION=	2.9.1
+PORTVERSION=	2.9.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -36,10 +36,6 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data
 ## Currently broken ports:
 #		sound-juicer:${PORTSDIR}/audio/sound-juicer \
-
-.if !defined(PACKAGE_BUILDING) && !defined(PARALLEL_PACKAGE_BUILD)
-RUN_DEPENDS+=	totem:${PORTSDIR}/multimedia/totem
-.endif
 
 .include <bsd.port.pre.mk>
 

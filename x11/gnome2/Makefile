@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.9.1
-PORTREVISION=	2
+PORTVERSION=	2.9.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -53,7 +52,11 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gnome-nettool:${PORTSDIR}/net/gnomenettool \
 		vino-session:${PORTSDIR}/net/vino \
 		ximian-connector-setup-2.2:${PORTSDIR}/mail/ximian-connector \
-		${X11BASE}/lib/gstreamer-0.8/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins-core
+		${X11BASE}/lib/gstreamer-0.8/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins-core \
+		goobox:${PORTSDIR}/audio/goobox \
+		gnome-file-share-properties:${PORTSDIR}/www/gnome-user-share \
+		totem:${PORTSDIR}/multimedia/totem-gstreamer \
+		gnome-keyring-manager:${PORTSDIR}/security/gnomekeyringmanager
 #		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media
 #		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2
 
