@@ -124,7 +124,9 @@ share/gnome/blackjack/Vegas_Strip.rules
 @unexec [ -s %D/share/gnome/games/mahjongg.pyramid.scores ] || rm -f %D/share/gnome/games/mahjongg.pyramid.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.tictactoe.scores ] || rm -f %D/share/gnome/games/mahjongg.tictactoe.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.ziggurat.scores ] || rm -f %D/share/gnome/games/mahjongg.ziggurat.scores
-@unexec [ -s %D/share/gnome/games/same-gnome.scores ] || rm -f %D/share/gnome/games/same-gnome.scores
+@unexec [ -s %D/share/gnome/games/same-gnome.Large.scores ] || rm -f %D/share/gnome/games/same-gnome.Large.scores
+@unexec [ -s %D/share/gnome/games/same-gnome.Medium.scores ] || rm -f %D/share/gnome/games/same-gnome.Medium.scores
+@unexec [ -s %D/share/gnome/games/same-gnome.Small.scores ] || rm -f %D/share/gnome/games/same-gnome.Small.scores
 share/gnome/gnect/white_ob.cn4
 share/gnome/gnibbles/level001.gnl
 share/gnome/gnibbles/level002.gnl
@@ -158,7 +160,8 @@ share/gnome/gnobots2/robots2.cfg
 share/gnome/gnobots2/robots2_easy.cfg
 share/gnome/gnobots2/robots_with_safe_teleport.cfg
 share/gnome/gnome-games/mahjongg/maps/mahjongg.map
-share/gnome/gnome-games/same-gnome/themes/planets.png
+share/gnome/gnome-games/same-gnome/themes/2.10/planets.png
+share/gnome/gnome-games/same-gnome/themes/2.10/stones.png
 share/gnome/gnome-stones/atari.caves
 share/gnome/gnome-stones/default.caves
 share/gnome/gnome-stones/gnome-stonesrc
@@ -780,6 +783,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/aisleriot/C
 @dirrm share/gnome/help/aisleriot
 @dirrm share/gnome/gnome-stones
+@dirrm share/gnome/gnome-games/same-gnome/themes/2.10
 @dirrm share/gnome/gnome-games/same-gnome/themes
 @dirrm share/gnome/gnome-games/same-gnome
 @dirrm share/gnome/gnome-games/mahjongg/maps
