@@ -53,9 +53,9 @@ GST_SHLIB_VERSION=	1
 # These are the current supported gstreamer-plugins modules
 #
 _USE_GSTREAMER_ALL=	a52dec aalib artsd audiofile cdparanoia dirac \
-			dts dv dvd esound faac faad flac gdkpixbuf gnomevfs \
-			gsm hermes ivorbis jack jpeg jpeg-mmx ladspa lame \
-			libcaca libfame libmng libpng mad mikmod mpeg2dec \
+			dts dv dvd esound faac faad ffmpeg flac gdkpixbuf \
+			gnomevfs gsm hermes ivorbis jack jpeg jpeg-mmx ladspa \
+			lame libcaca libfame libmng libpng mad mikmod mpeg2dec \
 			mpeg2enc mplex musicbrainz nas sdl shout sidplay \
 			smoothwave sndfile speex theora ogg pango swfdec \
 			vorbis xine xvid
@@ -160,6 +160,8 @@ dirac_DEPENDS=	multimedia/gstreamer-plugins-dirac
 
 dts_DEPENDS=	multimedia/gstreamer-plugins-dts
 dts_PLIST=	libgstdtsdec
+
+ffmpeg_DEPENDS=	multimedia/gstreamer-ffmpeg
 
 libcaca_PLIST=	libgstcacasink
 
