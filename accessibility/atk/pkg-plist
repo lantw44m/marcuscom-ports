@@ -26,7 +26,7 @@ include/atk-1.0/atk/atkutil.h
 include/atk-1.0/atk/atkvalue.h
 lib/libatk-1.0.a
 lib/libatk-1.0.so
-lib/libatk-1.0.so.501
+lib/libatk-1.0.so.600
 libdata/pkgconfig/atk.pc
 %%DOCSDIR%%/AtkAction.html
 %%DOCSDIR%%/AtkComponent.html
@@ -75,6 +75,7 @@ share/locale/en_CA/LC_MESSAGES/atk10.mo
 share/locale/en_GB/LC_MESSAGES/atk10.mo
 share/locale/eo/LC_MESSAGES/atk10.mo
 share/locale/es/LC_MESSAGES/atk10.mo
+share/locale/et/LC_MESSAGES/atk10.mo
 share/locale/fa/LC_MESSAGES/atk10.mo
 share/locale/fi/LC_MESSAGES/atk10.mo
 share/locale/fr/LC_MESSAGES/atk10.mo
@@ -110,6 +111,7 @@ share/locale/sl/LC_MESSAGES/atk10.mo
 share/locale/sq/LC_MESSAGES/atk10.mo
 share/locale/sr/LC_MESSAGES/atk10.mo
 share/locale/sr@Latn/LC_MESSAGES/atk10.mo
+share/locale/sr@ije/LC_MESSAGES/atk10.mo
 share/locale/sv/LC_MESSAGES/atk10.mo
 share/locale/ta/LC_MESSAGES/atk10.mo
 share/locale/tr/LC_MESSAGES/atk10.mo
