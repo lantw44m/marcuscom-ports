@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomevfs2
-PORTVERSION=	2.1.3
-PORTREVISION=	1
+PORTVERSION=	2.1.3.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.1
@@ -16,7 +15,6 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-BUILD_DEPENDS=	gob2:${PORTSDIR}/devel/gob2
 LIB_DEPENDS=	gconf-2.5:${PORTSDIR}/devel/gconf2 \
 		bonobo-2.0:${PORTSDIR}/devel/libbonobo
 
@@ -30,7 +28,7 @@ USE_LIBTOOL=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--with-gconf-source=xml::${PREFIX}/etc/gconf/gconf.xml.defaults
 CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
+		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		BSD_PTHREAD_LIBS=${PTHREAD_LIBS}
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
 

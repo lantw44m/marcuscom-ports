@@ -22,7 +22,6 @@ include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-find-directory.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-handle.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-init.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-job-limit.h
-include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-metadata.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-handlers.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-monitor.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-utils.h
@@ -51,6 +50,7 @@ include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-ssl.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-transform.h
 lib/bonobo/monikers/libmoniker_gnome_vfs_std.so
 lib/gnome-vfs-2.0/modules/libbzip2.so
+lib/gnome-vfs-2.0/modules/libconsole.so
 lib/gnome-vfs-2.0/modules/libextfs.so
 lib/gnome-vfs-2.0/modules/libfile.so
 lib/gnome-vfs-2.0/modules/libftp.so
@@ -87,7 +87,7 @@ libdata/bonobo/servers/GNOME_VFS_Moniker_std.server
 libdata/pkgconfig/gnome-vfs-2.0.pc
 libdata/pkgconfig/gnome-vfs-module-2.0.pc
 share/doc/gnome-vfs-2.0/advanced-operations.html
-share/doc/gnome-vfs-2.0/c9746.html
+share/doc/gnome-vfs-2.0/c9466.html
 share/doc/gnome-vfs-2.0/data-types.html
 share/doc/gnome-vfs-2.0/directory-operations.html
 share/doc/gnome-vfs-2.0/file-operations.html
@@ -129,6 +129,7 @@ share/doc/gnome-vfs-2.0/modules.html
 share/doc/gnome-vfs-2.0/writing-modules.html
 share/locale/ar/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/be/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-vfs-2.0.mo
@@ -159,6 +160,7 @@ share/locale/ro/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ru/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/sq/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/uk/LC_MESSAGES/gnome-vfs-2.0.mo
