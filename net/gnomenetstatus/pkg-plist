@@ -174,6 +174,7 @@ share/locale/uk/LC_MESSAGES/gnome-netstatus.mo
 share/locale/vi/LC_MESSAGES/gnome-netstatus.mo
 share/locale/wa/LC_MESSAGES/gnome-netstatus.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-netstatus.mo
+share/locale/zh_TW/LC_MESSAGES/gnome-netstatus.mo
 @dirrm share/gnome/omf/gnome-netstatus
 @dirrm share/gnome/help/gnome-netstatus/zh_TW/figures
 @dirrm share/gnome/help/gnome-netstatus/zh_TW
