@@ -289,7 +289,7 @@ libbonoboui_LIB_DEPENDS=	bonoboui-2.0:${PORTSDIR}/x11-toolkits/libbonoboui
 libbonoboui_DETECT=		${X11BASE}/libdata/pkgconfig/libbonoboui-2.0.pc
 libbonoboui_USE_GNOME_IMPL=	libgnomecanvas libgnome
 
-libgnomeui_LIB_DEPENDS=		gnomeui-2.303:${PORTSDIR}/x11-toolkits/libgnomeui
+libgnomeui_LIB_DEPENDS=		gnomeui-2.306:${PORTSDIR}/x11-toolkits/libgnomeui
 libgnomeui_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomeui-2.0.pc
 libgnomeui_USE_GNOME_IMPL=	libbonoboui
 
