@@ -33,6 +33,12 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 
 MAN1=	gnome-panel.1 gnome-panel-preferences.1
 
+.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.undef WITHOUT_GNOME
+.undef WITHOUT_ALL
+WITH_GNOME=	yes
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mevolutiondataserver}!=""
