@@ -205,6 +205,8 @@ share/gnome/help/aisleriot/C/scuffle.xml
 share/gnome/help/aisleriot/C/seahaven.xml
 share/gnome/help/aisleriot/C/sir_tommy.xml
 share/gnome/help/aisleriot/C/spider.xml
+share/gnome/help/aisleriot/C/spider_one_suit.xml
+share/gnome/help/aisleriot/C/spider_two_suit.xml
 share/gnome/help/aisleriot/C/spiderette.xml
 share/gnome/help/aisleriot/C/straight_up.xml
 share/gnome/help/aisleriot/C/streets_and_alleys.xml
@@ -606,6 +608,7 @@ share/locale/mk/LC_MESSAGES/gnome-games.mo
 share/locale/ml/LC_MESSAGES/gnome-games.mo
 share/locale/mn/LC_MESSAGES/gnome-games.mo
 share/locale/ms/LC_MESSAGES/gnome-games.mo
+share/locale/nb/LC_MESSAGES/gnome-games.mo
 share/locale/nl/LC_MESSAGES/gnome-games.mo
 share/locale/nn/LC_MESSAGES/gnome-games.mo
 share/locale/no/LC_MESSAGES/gnome-games.mo
