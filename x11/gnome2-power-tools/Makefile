@@ -26,7 +26,6 @@ RUN_DEPENDS=	${X11BASE}/lib/epiphany-1.5/extensions/libgesturesextension.so:${PO
 		cog:${PORTSDIR}/sysutils/cog \
 		gnome-blog-poster:${PORTSDIR}/deskutils/gnomeblog \
 		bpm:${PORTSDIR}/sysutils/bpm \
-		nautilus-sendto:${PORTSDIR}/deskutils/nautilus-sendto \
 		gnome-file-share-properties:${PORTSDIR}/www/gnome-user-share \
 		gnome-keyring-manager:${PORTSDIR}/security/gnomekeyringmanager
 

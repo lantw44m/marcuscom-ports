@@ -36,6 +36,7 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		jamboree:${PORTSDIR}/audio/jamboree \
 		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data \
 		sound-juicer:${PORTSDIR}/audio/sound-juicer \
+		nautilus-sendto:${PORTSDIR}/deskutils/nautilus-sendto \
 		goobox:${PORTSDIR}/audio/goobox
 
 .include <bsd.port.pre.mk>
