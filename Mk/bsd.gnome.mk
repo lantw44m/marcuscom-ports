@@ -421,7 +421,7 @@ pygtk2_USE_GNOME_IMPL=	libglade2
 pygnome2_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py
 pygnome2_BUILD_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_RUN_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
-pygnome2_USE_GNOME_IMPL=libgnomeprintui libgtkhtml gnomepanel libzvt nautilus2 pygtk2
+pygnome2_USE_GNOME_IMPL=libgnomeui pygtk2
 
 gstreamerplugins_LIB_DEPENDS=	gstplay-0.8.1:${PORTSDIR}/multimedia/gstreamer-plugins \
 								gstreamer-0.8:${PORTSDIR}/multimedia/gstreamer
