@@ -1879,6 +1879,7 @@ share/themes/Traditional/index.theme
 @dirrm share/themes/Simple/gtk-2.0
 @dirrm share/themes/Simple
 @dirrm share/themes/Ocean-Dream
+@dirrm share/themes/Mist
 @dirrm share/themes/LowContrastLargePrint/pixmaps
 @dirrm share/themes/LowContrastLargePrint/gtk-2.0
 @dirrm share/themes/LowContrastLargePrint
@@ -1901,6 +1902,7 @@ share/themes/Traditional/index.theme
 @dirrm share/themes/Grand-Canyon
 @dirrm share/themes/Glider/gtk-2.0
 @dirrm share/themes/Glider
+@dirrm share/themes/Crux
 @dirrm share/icons/Smokey-Red/96x96/filesystems
 @dirrm share/icons/Smokey-Red/96x96
 @dirrm share/icons/Smokey-Red/72x72/filesystems
