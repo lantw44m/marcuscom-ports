@@ -114,8 +114,6 @@ share/gnome/nautilus/starthere-link.desktop
 share/gnome/nautilus/starthere.desktop
 share/gnome/nautilus/static_bookmarks.xml
 share/gnome/network/nautilus-server-connect.desktop
-share/gnome/pixmaps/gnome-starthere-96.png
-share/gnome/pixmaps/gnome-starthere.png
 share/gnome/pixmaps/nautilus/nautilus-desktop.png
 share/gnome/pixmaps/nautilus/CD_drive.png
 share/gnome/pixmaps/nautilus/HD_drive.png
