@@ -7,9 +7,7 @@ lib/gnome-vfs-2.0/modules/libmapping.so
 lib/libnautilus-burn.a
 lib/libnautilus-burn.so
 lib/libnautilus-burn.so.0
-lib/nautilus/extensions-1.0/libnautilus-burn-extension.a
 lib/nautilus/extensions-1.0/libnautilus-burn-extension.so
-lib/nautilus/extensions-1.0/libnautilus-burn-extension.so.0
 libdata/pkgconfig/libnautilus-burn.pc
 libexec/mapping-daemon
 share/gnome/nautilus-cd-burner/cdburn.glade

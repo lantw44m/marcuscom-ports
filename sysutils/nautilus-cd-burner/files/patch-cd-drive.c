@@ -19,7 +19,7 @@
 +	fd = cam->fd;
 +#else
 +
- 	fd = open (device, O_RDONLY|O_EXCL|O_NONBLOCK);
+ 	fd = open (device, O_RDWR|O_EXCL|O_NONBLOCK);
  	if (fd < 0) {
  		if (errno == EBUSY) {
 @@ -280,6 +292,7 @@
@@ -62,7 +62,7 @@
 +	fd = cam->fd;
 +#else
  
- 	fd = open (device, O_RDONLY|O_EXCL|O_NONBLOCK);
+ 	fd = open (device, O_RDWR|O_EXCL|O_NONBLOCK);
  	if (fd < 0) {
 @@ -454,6 +482,7 @@
  		}
@@ -108,7 +108,7 @@
 +	fd = cam->fd;
 +#else
 +
-+	fd = open (device, O_RDONLY|O_EXCL|O_NONBLOCK);
++	fd = open (device, O_RDWR|O_EXCL|O_NONBLOCK);
 +	if (fd < 0) {
 +		return -1;
 +	}
@@ -146,7 +146,7 @@
 +	fd = cam->fd;
 +#else
 +
-+	fd = open (device, O_RDONLY|O_EXCL|O_NONBLOCK);
++	fd = open (device, O_RDWR|O_EXCL|O_NONBLOCK);
 +	if (fd < 0) {
 +		return -1;
 +	}
@@ -180,7 +180,7 @@
  
 -	max_speed = -1;
 -
--	fd = open (device, O_RDONLY|O_EXCL|O_NONBLOCK);
+-	fd = open (device, O_RDWR|O_EXCL|O_NONBLOCK);
 -	if (fd < 0) {
 -		return -1;
 -	}
@@ -202,7 +202,7 @@
 -
 -	max_speed = -1;
 -
--	fd = open (device, O_RDONLY|O_EXCL|O_NONBLOCK);
+-	fd = open (device, O_RDWR|O_EXCL|O_NONBLOCK);
 -	if (fd < 0) {
 -		return -1;
 -	}
