@@ -18,8 +18,6 @@ COMMENT=	A collection of themes and icons for GNOME2 designed for accessibility
 BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-themes/gtk-engines2
 RUN_DEPENDS=	${X11BASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-themes/gtk-engines2
 
-CONFLICTS=	gtk-smooth-engine-[0-9]*
-
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
@@ -34,9 +32,5 @@ PLIST_SUB=	GTK_VERSION="2.4.0"
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|noinst_PROGRAMS = |noinst_PROGRAMS = #|g'
-	${REINPLACE_CMD} -e 's|gtk-themes gtk-engines|gtk-themes |g' \
-		${WRKSRC}/Makefile.in
-	${REINPLACE_CMD} -e 's|Crux Glider Grand-Canyon LightHouseBlue Mist Simple Smokey-Blue ThinIce|Glider Grand-Canyon Simple Smokey-Blue|g' \
-		${WRKSRC}/gtk-themes/Makefile.in
 
 .include <bsd.port.mk>
