@@ -1,5 +1,5 @@
---- configure.orig	Tue Oct 12 17:23:32 2004
-+++ configure	Tue Oct 12 17:24:57 2004
+--- configure.orig	Sat Oct 16 15:45:26 2004
++++ configure	Sat Oct 16 15:47:04 2004
 @@ -463,7 +463,7 @@
  # include <unistd.h>
  #endif"
@@ -25,17 +25,21 @@
  build_battstat_applet=no
  
  if test x$disable_battstat = xno; then
-@@ -24535,7 +24537,8 @@
+@@ -24535,7 +24537,12 @@
  
  	   ;;
         # list of supported OS cores that do not use libapm
 -       *-*-freebsd*|*-*-netbsd*|*-*-openbsd*)
 +       i386-*-freebsd*|*-*-netbsd*|*-*-openbsd*)
-+           ACPIINC="-I/usr/src/sys"
++           if [ -n "${FREEBSD_SYS}" ]; then
++	       ACPIINC="-I${FREEBSD_SYS}"
++	   else
++               ACPIINC="-I/usr/src/sys"
++	   fi
  	   ;;
         *)
  	   echo "warning: ${host} is not supported by battstat_applet, not building" >&2
-@@ -26615,14 +26618,14 @@
+@@ -26615,14 +26622,14 @@
  ACLOCAL="$ACLOCAL $ACLOCAL_FLAGS"
  
  cat >>confdefs.h <<_ACEOF
@@ -52,7 +56,7 @@
  _ACEOF
  
  cat >>confdefs.h <<_ACEOF
-@@ -27773,6 +27776,7 @@
+@@ -27773,6 +27780,7 @@
  s,@APPLET_CDPLAYER_FALSE@,$APPLET_CDPLAYER_FALSE,;t t
  s,@CDROM_HOST@,$CDROM_HOST,;t t
  s,@CDROM_LIBS@,$CDROM_LIBS,;t t
