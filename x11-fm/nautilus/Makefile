@@ -7,6 +7,7 @@
 
 PORTNAME=	nautilus2
 PORTVERSION=	2.1.3
+PORTREVISION=	1
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.1
@@ -18,7 +19,7 @@ MAINTAINER=	gnome@FreeBSD.org
 BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
 LIB_DEPENDS=	rsvg-2.3:${PORTSDIR}/graphics/librsvg2 \
 		eel-2.3:${PORTSDIR}/x11-toolkits/eel2 \
-		gnome-desktop-2.2:${PORTSDIR}/x11/gnomedesktop
+		gnome-desktop-2.3:${PORTSDIR}/x11/gnomedesktop
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes

@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomecontrolcenter2
 PORTVERSION=	2.1.3
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/2.1
@@ -15,7 +16,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS=	gnome-desktop-2.2:${PORTSDIR}/x11/gnomedesktop \
+LIB_DEPENDS=	gnome-desktop-2.3:${PORTSDIR}/x11/gnomedesktop \
 		metacity-private.0:${PORTSDIR}/x11-wm/metacity
 
 USE_BZIP2=	yes
