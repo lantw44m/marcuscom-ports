@@ -1,6 +1,6 @@
-devel/bonobo-activation|devel/libbonobo|2003-08-29|merged into libbonobo
-x11/themus|sysutils/gnomecontrolcenter2|2003-08-29|merged into gnomecontrolcenter2
-x11-fonts/fontilus|sysutils/gnomecontrolcenter2|2003-08-29|merged into gnomecontrolcenter2
-misc/stickynotes_applet|x11/gnomeapplets2|2003-08-29|merged into gnomeapplets2
-editors/gedit-plugins||2003-08-29|to be readded later
-x11-toolkits/gtk-thinice-engine|x11-toolkits/gnome-themes|2003-08-29|merged into gnome-themes
+devel/bonobo-activation|devel/libbonobo|%%DATE%%|merged into libbonobo
+x11/themus|sysutils/gnomecontrolcenter2|%%DATE%%|merged into gnomecontrolcenter2
+x11-fonts/fontilus|sysutils/gnomecontrolcenter2|%%DATE%%|merged into gnomecontrolcenter2
+misc/stickynotes_applet|x11/gnomeapplets2|%%DATE%%|merged into gnomeapplets2
+editors/gedit-plugins||%%DATE%%|to be readded later
+x11-toolkits/gtk-thinice-engine|x11-toolkits/gnome-themes|%%DATE%%|merged into gnome-themes
