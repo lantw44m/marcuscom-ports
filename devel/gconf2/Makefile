@@ -7,7 +7,7 @@
 
 PORTNAME=	gconf2
 PORTVERSION=	1.2.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/GConf/1.2
@@ -18,7 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 
 LIB_DEPENDS=	ORBit-2.0:${PORTSDIR}/devel/ORBit2 \
 		xml2.5:${PORTSDIR}/textproc/libxml2 \
-		gtk-x11-2.0.103:${PORTSDIR}/x11-toolkits/gtk20
+		gtk-x11-2.0.200:${PORTSDIR}/x11-toolkits/gtk20
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes

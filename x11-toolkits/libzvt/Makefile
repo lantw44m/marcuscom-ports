@@ -7,7 +7,7 @@
 
 PORTNAME=	libzvt
 PORTVERSION=	2.0.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.0
@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS=	gtk-x11-2.0.103:${PORTSDIR}/x11-toolkits/gtk20 \
+LIB_DEPENDS=	gtk-x11-2.0.200:${PORTSDIR}/x11-toolkits/gtk20 \
 		art_lgpl_2.5:${PORTSDIR}/graphics/libart_lgpl2
 
 USE_BZIP2=	yes

@@ -7,7 +7,7 @@
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkgconfig
 LIB_DEPENDS=	glib-2.0.200:${PORTSDIR}/devel/glib20 \
 		gconf-2.5:${PORTSDIR}/devel/gconf2 \
 		gstreamer-0.5.1:${PORTSDIR}/multimedia/gstreamer \
-		gtk-x11-2.0.103:${PORTSDIR}/x11-toolkits/gtk20 \
+		gtk-x11-2.0.200:${PORTSDIR}/x11-toolkits/gtk20 \
 		popt.0:${PORTSDIR}/devel/popt \
 		xml2.5:${PORTSDIR}/textproc/libxml2
 
