@@ -1,15 +1,15 @@
---- configure.orig	Fri Dec 19 13:32:43 2003
-+++ configure	Fri Dec 19 13:49:52 2003
-@@ -19973,7 +19973,7 @@
- test "x$prefix" = xNONE && prefix=$ac_default_prefix
- test "x$exec_prefix" = xNONE && exec_prefix=$prefix
- if test "x$CATOBJEXT" = "x.mo" ; then
--  localedir=`eval echo "${libdir}/locale"`
-+  localedir=`eval echo "${prefix}/share/locale"`
- else
-   localedir=`eval echo "${datadir}/locale"`
- fi
-@@ -20047,7 +20047,7 @@
+--- configure.orig	Fri Feb  6 13:01:39 2004
++++ configure	Fri Feb  6 13:03:19 2004
+@@ -20288,7 +20288,7 @@
+ 
+ 
+   EXP_VAR=LOCALEDIR
+-  FROM_VAR=$datadir/locale
++  FROM_VAR=$prefix/share/locale
+ 
+     prefix_save=$prefix
+   if test "x$prefix" = "xNONE"; then
+@@ -20380,7 +20380,7 @@
  echo $ECHO_N "checking to see if compiler understands -Werror... $ECHO_C" >&6
  
    save_CFLAGS="$CFLAGS"
@@ -18,7 +18,7 @@
  
    cat >conftest.$ac_ext <<_ACEOF
  #line $LINENO "configure"
-@@ -20088,7 +20088,7 @@
+@@ -20421,7 +20421,7 @@
    CFLAGS="$save_CFLAGS"
  
    if test "X$flag_ok" = Xyes ; then
@@ -27,12 +27,12 @@
      true
    else
      GST_ERROR="$GST_ERROR"
-@@ -21732,7 +21732,7 @@
-     :
- fi
+@@ -21031,7 +21031,7 @@
+ echo "${ECHO_T}$XSLTPROC_WORKS" >&6
+   fi
  
--if test "$ac_cv_check_mcsc" == "yes"; then
-+if test "$ac_cv_check_mcsc" = "yes"; then
- 
- cat >>confdefs.h <<_ACEOF
- #define HAVE_MAKECONTEXT $HAVE_MAKECONTEXT
+-  if test "x$XSLTPROC_WORKS" == "xyes"; then
++  if test "x$XSLTPROC_WORKS" = "xyes"; then
+         HAVE_DOCBOOK=true
+   else
+         HAVE_DOCBOOK=false

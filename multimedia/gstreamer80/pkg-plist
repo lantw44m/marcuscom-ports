@@ -1,13 +1,22 @@
 @unexec %D/bin/gst-register 2>/dev/null || true
+bin/gst-complete
 bin/gst-complete-%%VERSION%%
+bin/gst-compprep
 bin/gst-compprep-%%VERSION%%
-bin/gst-feedback-%%VERSION%%
+bin/gst-feedback
+bin/gst-inspect
 bin/gst-inspect-%%VERSION%%
+bin/gst-launch
 bin/gst-launch-%%VERSION%%
+bin/gst-md5sum
 bin/gst-md5sum-%%VERSION%%
+bin/gst-register
 bin/gst-register-%%VERSION%%
+bin/gst-typefind
 bin/gst-typefind-%%VERSION%%
+bin/gst-xmlinspect
 bin/gst-xmlinspect-%%VERSION%%
+bin/gst-xmllaunch
 bin/gst-xmllaunch-%%VERSION%%
 include/gstreamer-%%VERSION%%/gst/bytestream/bytestream.h
 include/gstreamer-%%VERSION%%/gst/control/control.h
@@ -22,7 +31,6 @@ include/gstreamer-%%VERSION%%/gst/gst.h
 include/gstreamer-%%VERSION%%/gst/gstatomic.h
 include/gstreamer-%%VERSION%%/gst/gstbin.h
 include/gstreamer-%%VERSION%%/gst/gstbuffer.h
-include/gstreamer-%%VERSION%%/gst/gstbufferpool-default.h
 include/gstreamer-%%VERSION%%/gst/gstcaps.h
 include/gstreamer-%%VERSION%%/gst/gstclock.h
 include/gstreamer-%%VERSION%%/gst/gstcompat.h
@@ -31,6 +39,7 @@ include/gstreamer-%%VERSION%%/gst/gstcpu.h
 include/gstreamer-%%VERSION%%/gst/gstdata.h
 include/gstreamer-%%VERSION%%/gst/gstelement.h
 include/gstreamer-%%VERSION%%/gst/gstenumtypes.h
+include/gstreamer-%%VERSION%%/gst/gsterror.h
 include/gstreamer-%%VERSION%%/gst/gstevent.h
 include/gstreamer-%%VERSION%%/gst/gstfilter.h
 include/gstreamer-%%VERSION%%/gst/gstformat.h
@@ -48,7 +57,6 @@ include/gstreamer-%%VERSION%%/gst/gstpipeline.h
 include/gstreamer-%%VERSION%%/gst/gstplugin.h
 include/gstreamer-%%VERSION%%/gst/gstpluginfeature.h
 include/gstreamer-%%VERSION%%/gst/gstprobe.h
-include/gstreamer-%%VERSION%%/gst/gstprops.h
 include/gstreamer-%%VERSION%%/gst/gstquery.h
 include/gstreamer-%%VERSION%%/gst/gstqueue.h
 include/gstreamer-%%VERSION%%/gst/gstregistrypool.h
@@ -88,13 +96,15 @@ lib/libgstreamer-%%VERSION%%.so.%%SHLIB_VERSION%%
 libdata/pkgconfig/gstreamer-%%VERSION%%.pc
 libdata/pkgconfig/gstreamer-control-%%VERSION%%.pc
 share/aclocal/gst-element-check-%%VERSION%%.m4
+share/locale/fr/LC_MESSAGES/gstreamer-%%VERSION%%.mo
+share/locale/nl/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 @unexec rm %D/share/gnome/cache/gstreamer-%%VERSION%%/registry.xml 2>/dev/null || true
 @dirrm share/gnome/cache/gstreamer-%%VERSION%%
 @unexec rmdir %D/share/gnome/cache 2>/dev/null || true
 @dirrm lib/gstreamer-%%VERSION%%
 @dirrm include/gstreamer-%%VERSION%%/gst/getbits
 @dirrm include/gstreamer-%%VERSION%%/gst/control
-@dirrm include/gstreamer-%%VERSION%%/gst
 @dirrm include/gstreamer-%%VERSION%%/gst/bytestream
+@dirrm include/gstreamer-%%VERSION%%/gst
 @dirrm include/gstreamer-%%VERSION%%
 @exec %D/bin/gst-register 2>/dev/null || true
