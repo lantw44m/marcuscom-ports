@@ -1,11 +1,18 @@
---- modules/vfolder/applications-all-users.vfolder-info.in.orig	Sat Oct 18 19:04:37 2003
-+++ modules/vfolder/applications-all-users.vfolder-info.in	Sat Oct 18 19:05:18 2003
-@@ -19,7 +19,7 @@
+--- modules/vfolder/applications-all-users.vfolder-info.in.orig	Sun Feb  8 14:02:33 2004
++++ modules/vfolder/applications-all-users.vfolder-info.in	Sun Feb  8 14:00:32 2004
+@@ -19,7 +19,14 @@
    <MergeDir>/usr/share/gnome/apps/</MergeDir>
  
    <!-- Merge dirs optional -->
--  <MergeDir>/etc/X11/applnk/</MergeDir>
-+  <MergeDir>/usr/local/share/applnk/</MergeDir>
+-  <MergeDir>/usr/local/share/applnk/</MergeDir>
++  <MergeDir>/usr/local/share/applnk/Toys/</MergeDir>
++  <MergeDir>/usr/local/share/applnk/Utilities/</MergeDir>
++  <MergeDir>/usr/local/share/applnk/Internet/</MergeDir>
++  <MergeDir>/usr/local/share/applnk/Office/</MergeDir>
++  <MergeDir>/usr/local/share/applnk/Applications/</MergeDir>
++  <MergeDir>/usr/local/share/applnk/Development/</MergeDir>
++  <MergeDir>/usr/local/share/applnk/Games/</MergeDir>
++  <MergeDir>/usr/local/share/applnk/Multimedia/</MergeDir>
  
    <!-- Root folder -->
    <Folder>

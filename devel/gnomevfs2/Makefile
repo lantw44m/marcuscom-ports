@@ -7,7 +7,7 @@
 
 PORTNAME=	gnomevfs2
 PORTVERSION=	2.5.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.5
@@ -31,8 +31,7 @@ CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		BSD_PTHREAD_LIBS=${PTHREAD_LIBS}
 
-OPTIONS=	KDE_MENUS "Integrated KDE menu picks" on \
-		FAM "Dynamic file system updates" on
+OPTIONS=	KDE_MENUS "Integrated KDE menu picks" on
 
 .include <bsd.port.pre.mk>
 
@@ -62,7 +61,7 @@ PLIST_SUB+=	CDPARANOIA=""
 PLIST_SUB+=	CDPARANOIA="@comment "
 .endif
 
-.if !defined(WITHOUT_FAM)
+.if exists(${LOCALBASE}/lib/libfam) || !defined(WITHOUT_FAM)
 LIB_DEPENDS+=	fam.0:${PORTSDIR}/devel/fam
 .endif
 
