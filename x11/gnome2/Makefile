@@ -48,11 +48,10 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media \
 		${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		gnopernicus:${PORTSDIR}/x11/gnopernicus \
-		evolution:${PORTSDIR}/mail/evolution \
+		evolution-1.5:${PORTSDIR}/mail/evolution \
 		rhythmbox:${PORTSDIR}/audio/rhythmbox \
 		gswitchit-plugins-capplet:${PORTSDIR}/x11/gswitchit \
 		gnome-netinfo:${PORTSDIR}/net/gnomenetwork \
-		gdesklets:${PORTSDIR}/deskutils/gdesklets \
 		dasher:${PORTSDIR}/x11/dasher
 
 NO_BUILD=	yes
