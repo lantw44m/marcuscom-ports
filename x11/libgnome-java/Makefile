@@ -7,6 +7,7 @@
 
 PORTNAME=	libgnome-java
 PORTVERSION=	2.5.5
+PORTREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -43,21 +44,24 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|@gtkapiversion@|${GTK_API_VERSION}|g ; \
 		s|@apiversion@|${GNOME_API_VERSION}|g ; \
 		s|@version@|${PORTVERSION}|g' \
-		${WRKSRC}/src/Makefile.in
+		${WRKSRC}/src/Makefile.in \
+		${WRKSRC}/src/java/org/gnu/gnome/Gnome.java.in \
+		${WRKSRC}/src/java/org/gnu/gnome/Program.java.in
 
 do-install:
 	${MKDIR} ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/lib/libgnomejava${GNOME_API_VERSION}.so.${PORTVERSION} \
 		${PREFIX}/lib
-	${LN} -sf ${PREFIX}/lib/libgnomejava${GNOME_API_VERSION}.so.${PORTVERSION} ${PREFIX}/lib/libgconfjava${GNOME_API_VERSION}.so
+	${LN} -sf ${PREFIX}/lib/libgnomejava${GNOME_API_VERSION}.so.${PORTVERSION} ${PREFIX}/lib/libgnomejava${GNOME_API_VERSION}.so
 	${MKDIR} ${JAVAJARDIR}
 	${INSTALL_DATA} ${WRKSRC}/lib/gnome${GNOME_API_VERSION}-${PORTVERSION}.jar \
 		${JAVAJARDIR}
+	${LN} -sf ${JAVAJARDIR}/gnome${GNOME_API_VERSION}-${PORTVERSION}.jar \
+		${JAVAJARDIR}/gnome${GNOME_API_VERSION}.jar
 
 post-install:
 	@${SED} -e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|g ; \
 		s|%%PREFIX%%|${PREFIX}|g ; \
-		s|%%PORTVERSION%%|${PORTVERSION}|g ; \
 		s|%%GNOME_API_VERSION%%|${GNOME_API_VERSION}|g' \
 		 < ${PKGDIR}/pkg-message > ${PKGMESSAGE}
 	@${CAT} ${PKGMESSAGE}
