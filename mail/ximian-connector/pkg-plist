@@ -49,7 +49,10 @@ share/gnome/ximian-connector/%%VERSION%%/ui/ximian-connector.xml
 share/locale/az/LC_MESSAGES/ximian-connector.mo
 share/locale/cs/LC_MESSAGES/ximian-connector.mo
 share/locale/de/LC_MESSAGES/ximian-connector.mo
+share/locale/en_CA/LC_MESSAGES/ximian-connector.mo
 share/locale/en_GB/LC_MESSAGES/ximian-connector.mo
+share/locale/es/LC_MESSAGES/ximian-connector.mo
+share/locale/nn/LC_MESSAGES/ximian-connector.mo
 share/locale/no/LC_MESSAGES/ximian-connector.mo
 share/locale/pt/LC_MESSAGES/ximian-connector.mo
 share/locale/sq/LC_MESSAGES/ximian-connector.mo
