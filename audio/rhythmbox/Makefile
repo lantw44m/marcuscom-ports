@@ -32,7 +32,7 @@ CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lm" \
 LIB_DEPENDS+=		xine.7:${PORTSDIR}/multimedia/libxine
 CONFIGURE_ARGS+=	--enable-xine
 .else
-LIB_DEPENDS+=		gstplay-0.7.1:${PORTSDIR}/multimedia/gstreamer-plugins
+USE_GNOME+=		gstreamerplugins
 .endif
 
 .include <bsd.port.pre.mk>
