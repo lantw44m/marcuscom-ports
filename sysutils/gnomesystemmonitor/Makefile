@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomesystemmonitor
-PORTVERSION=	2.5.2
-PORTREVISION=	1
+PORTVERSION=	2.5.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-monitor/2.5
@@ -23,7 +22,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
-USE_GNOME=	gnomeprefix lthack gnomehack libgnomeui libwnck
+USE_GNOME=	gnomeprefix intlhack lthack gnomehack libgnomeui libwnck
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lutil"

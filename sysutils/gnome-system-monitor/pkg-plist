@@ -13,6 +13,7 @@ share/gnome/help/gnome-system-monitor/C/figures/addColumn.png
 share/gnome/help/gnome-system-monitor/C/figures/changePriority.png
 share/gnome/help/gnome-system-monitor/C/figures/colorPanel.png
 share/gnome/help/gnome-system-monitor/C/figures/columnContextMenu.png
+share/gnome/help/gnome-system-monitor/C/figures/gnome-system-monitor_window.png
 share/gnome/help/gnome-system-monitor/C/figures/memoryMaps.png
 share/gnome/help/gnome-system-monitor/C/figures/moreInfo.png
 share/gnome/help/gnome-system-monitor/C/figures/processListing.png
@@ -46,6 +47,7 @@ share/locale/ga/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/gl/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/he/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/hi/LC_MESSAGES/gnome-system-monitor.mo
+share/locale/hr/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/hu/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/id/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/it/LC_MESSAGES/gnome-system-monitor.mo
