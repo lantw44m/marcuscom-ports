@@ -16,6 +16,7 @@ share/gnome/pixmaps/gconf-editor/entry-list.png
 share/gnome/pixmaps/gconf-editor/entry-number.png
 share/gnome/pixmaps/gconf-editor/entry-schema.png
 share/gnome/pixmaps/gconf-editor/entry-string.png
+share/gnome/pixmaps/gconf-editor/folder-closed.png
 share/gnome/pixmaps/gconf-editor/folder-open.png
 share/icons/hicolor/48x48/apps/gconf-editor.png
 share/locale/am/LC_MESSAGES/gconf-editor.mo
