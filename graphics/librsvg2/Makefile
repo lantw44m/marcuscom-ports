@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	librsvg2
-PORTVERSION=	2.3.0
+PORTVERSION=	2.3.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.3
@@ -30,7 +30,7 @@ USE_LIBTOOL=	yes
 USE_REINPLACE=	yes
 USE_GNOME=	gnomehack gtk20 libartlgpl2 libxml2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-svgz \
 		--disable-gtk-doc
 PLIST_SUB=	GTK_VERSION="2.2.0"

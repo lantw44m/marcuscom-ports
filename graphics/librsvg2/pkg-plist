@@ -10,13 +10,13 @@ lib/librsvg-2.so.5
 libdata/pkgconfig/librsvg-2.0.pc
 %%GIMP:%%libexec/gimp/1.3/plug-ins/svg
 share/doc/librsvg/html/home.png
-share/doc/librsvg/html/i912.html
+share/doc/librsvg/html/i919.html
 share/doc/librsvg/html/index.html
 share/doc/librsvg/html/index.sgml
 share/doc/librsvg/html/left.png
 share/doc/librsvg/html/r22.html
-share/doc/librsvg/html/r323.html
-share/doc/librsvg/html/r357.html
+share/doc/librsvg/html/r325.html
+share/doc/librsvg/html/r359.html
 share/doc/librsvg/html/right.png
 share/doc/librsvg/html/rsvg-convenience-functions.html
 share/doc/librsvg/html/rsvg-core-api.html
