@@ -1,0 +1,28 @@
+--- examples/simple/main.cc.orig	Mon Dec 22 15:42:58 2003
++++ examples/simple/main.cc	Mon Dec 22 15:46:19 2003
+@@ -90,7 +90,6 @@
+   MyApplet *myapplet = static_cast<MyApplet*>(applet);
+   std::ostringstream output;
+ 
+-  output.imbue(std::locale(""));
+   output << "Applet size: " << myapplet->get_size();
+   
+   Gtk::MessageDialog dialog(Glib::locale_to_utf8(output.str()));
+@@ -102,7 +101,6 @@
+   MyApplet* myapplet = static_cast<MyApplet*>(applet);
+ 
+   std::ostringstream output;
+-  output.imbue(std::locale(""));
+ 
+   Gdk::Color back_color;
+   Glib::RefPtr<Gdk::Pixmap> back_pixmap;
+--- examples/gconf/main.cc.orig	Mon Dec 22 15:48:35 2003
++++ examples/gconf/main.cc	Mon Dec 22 15:48:42 2003
+@@ -65,7 +65,6 @@
+   MyApplet *myapplet = static_cast<MyApplet*>(applet);
+   std::ostringstream output;
+ 
+-  output.imbue(std::locale(""));
+   output << "Applet gconf key: " << myapplet->gconf_get_full_key("");
+   
+   Gtk::MessageDialog dialog(Glib::locale_to_utf8(output.str()));
