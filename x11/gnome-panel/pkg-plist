@@ -204,11 +204,6 @@ share/gnome/help/workspace-switcher/zh_TW/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/zh_TW/figures/workspacelist_applet.png
 share/gnome/help/workspace-switcher/zh_TW/legal.xml
 share/gnome/help/workspace-switcher/zh_TW/workspace-switcher.xml
-share/gnome/icons/hicolor/48x48/apps/gnome-fish.png
-share/gnome/icons/hicolor/48x48/apps/gnome-gegl.png
-share/gnome/icons/hicolor/48x48/apps/gnome-main-menu.png
-share/gnome/icons/hicolor/48x48/apps/gnome-run.png
-share/gnome/icons/hicolor/48x48/apps/panel-force-quit.png
 share/gnome/idl/gnome-panel-2.0/GNOME_Panel.idl
 share/gnome/omf/gnome-panel/clock-C.omf
 share/gnome/omf/gnome-panel/clock-de.omf
@@ -262,6 +257,11 @@ share/gnome/panel/pixmaps/gnome-gegl2-2.png
 share/gnome/panel/pixmaps/gnome-gegl2.png
 share/gnome/panel/pixmaps/monkey.png
 share/gnome/panel/pixmaps/oldwanda.png
+share/icons/hicolor/48x48/apps/gnome-fish.png
+share/icons/hicolor/48x48/apps/gnome-gegl.png
+share/icons/hicolor/48x48/apps/gnome-main-menu.png
+share/icons/hicolor/48x48/apps/gnome-run.png
+share/icons/hicolor/48x48/apps/panel-force-quit.png
 share/locale/af/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-panel-2.0.mo
