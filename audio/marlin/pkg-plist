@@ -1,0 +1,89 @@
+bin/marlin
+etc/gconf/gconf.xml.defaults/apps/marlin/system-state/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/marlin/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/marlin/system-state/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/marlin/%gconf.xml
+etc/gconf/schemas/marlin.schemas
+include/libmarlin/marlin-a11y-helper.h
+include/libmarlin/marlin-block.h
+include/libmarlin/marlin-cursors.h
+include/libmarlin/marlin-file-selection.h
+include/libmarlin/marlin-file-utils.h
+include/libmarlin/marlin-gst-extras.h
+include/libmarlin/marlin-channel.h
+include/libmarlin/marlin-load-pipeline.h
+include/libmarlin/marlin-marker-model.h
+include/libmarlin/marlin-marker-view.h
+include/libmarlin/marlin-msgport.h
+include/libmarlin/marlin-mt.h
+include/libmarlin/marlin-object.h
+include/libmarlin/marlin-operation.h
+include/libmarlin/marlin-overview-bar.h
+include/libmarlin/marlin-pipeline.h
+include/libmarlin/marlin-play-pipeline.h
+include/libmarlin/marlin-position-spinner.h
+include/libmarlin/marlin-program.h
+include/libmarlin/marlin-read-write-lock.h
+include/libmarlin/marlin-record-pipeline.h
+include/libmarlin/marlin-sample.h
+include/libmarlin/marlin-sample-drawing.h
+include/libmarlin/marlin-sample-element.h
+include/libmarlin/marlin-sample-selection.h
+include/libmarlin/marlin-sample-view.h
+include/libmarlin/marlin-save-pipeline.h
+include/libmarlin/marlin-stock.h
+include/libmarlin/marlin-time-line.h
+include/libmarlin/marlin-types.h
+include/libmarlin/marlin-utils.h
+include/libmarlin/marlin-x-utils.h
+lib/libmarlinx.a
+lib/libmarlinx.so
+lib/libmarlinx.so.0
+lib/libmarlin.a
+lib/libmarlin.so
+lib/libmarlin.so.0
+share/gnome/help/marlin/C/figures/marlin-main-window.png
+share/gnome/help/marlin/C/figures/new_sample_dialog.png
+share/gnome/help/marlin/C/figures/new_sample_dialog_cancel.png
+share/gnome/help/marlin/C/figures/new_sample_dialog_create.png
+share/gnome/help/marlin/C/figures/new_sample_dialog_help.png
+share/gnome/help/marlin/C/figures/new_sample_dialog_channels.png
+share/gnome/help/marlin/C/figures/new_sample_dialog_rate.png
+share/gnome/help/marlin/C/legal.xml
+share/gnome/help/marlin/C/marlin.xml
+share/gnome/marlin/ui/marlin.xml
+share/gnome/marlin/ui/toolbars.xml
+share/gnome/marlin/ui/toolbar-popup-ui.xml
+share/gnome/omf/marlin/marlin-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/marlin/marlin-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/pixmaps/marlin/marlin-cdda-extract.png
+share/gnome/pixmaps/marlin/marlin-ffwd.png
+share/gnome/pixmaps/marlin/marlin-icon.png
+share/gnome/pixmaps/marlin/marlin-logo.png
+share/gnome/pixmaps/marlin/marlin-new-sample.png
+share/gnome/pixmaps/marlin/marlin-next.png
+share/gnome/pixmaps/marlin/marlin-paste-as-new.png
+share/gnome/pixmaps/marlin/marlin-pause.png
+share/gnome/pixmaps/marlin/marlin-play.png
+share/gnome/pixmaps/marlin/marlin-previous.png
+share/gnome/pixmaps/marlin/marlin-record.png
+share/gnome/pixmaps/marlin/marlin-repeat.png
+share/gnome/pixmaps/marlin/marlin-rewind.png
+share/gnome/pixmaps/marlin/marlin-selection-grow.png
+share/gnome/pixmaps/marlin/marlin-selection-shrink.png
+share/gnome/pixmaps/marlin/marlin-select-all.png
+share/gnome/pixmaps/marlin/marlin-select-none.png
+share/gnome/pixmaps/marlin/marlin-stop.png
+@dirrm share/gnome/pixmaps/marlin
+@dirrm share/gnome/omf/marlin
+@dirrm share/gnome/marlin/ui
+@dirrm share/gnome/marlin
+@dirrm share/gnome/help/marlin/C/figures
+@dirrm share/gnome/help/marlin/C
+@dirrm share/gnome/help/marlin
+@dirrm include/libmarlin
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/marlin/system-state
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/marlin
+@dirrm etc/gconf/gconf.xml.defaults/apps/marlin/system-state
+@dirrm etc/gconf/gconf.xml.defaults/apps/marlin
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/marlin/marlin-C.omf 2>/dev/null || /usr/bin/true
