@@ -42,6 +42,6 @@ post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[{]prefix[}]/share/pixmaps|{datadir}/pixmaps|g'
 	@${REINPLACE_CMD} -e 's|mozilla-thunderbird|thunderbird|g' \
-		${WKRSRC}/capplets/default-applications/gnome-default-applications-properties-structs.c
+		${WRKSRC}/capplets/default-applications/gnome-default-applications-properties-structs.c
 
 .include <bsd.port.mk>
