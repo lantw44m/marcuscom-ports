@@ -1,3 +1,8 @@
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-connection.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-container.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-filter.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-item.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-message.h
 include/evolution-data-server-%%VERSION%%/libebook/Evolution-DataServer-Addressbook.h
 include/evolution-data-server-%%VERSION%%/libebook/e-address-western.h
 include/evolution-data-server-%%VERSION%%/libebook/e-book-async.h
@@ -118,6 +123,9 @@ lib/libedata-cal.so.5
 lib/libedataserver.a
 lib/libedataserver.so
 lib/libedataserver.so.3
+lib/libegroupwise.a
+lib/libegroupwise.so
+lib/libegroupwise.so.0
 libdata/bonobo/servers/GNOME_Evolution_DataServer_%%VERSION%%.server
 libdata/pkgconfig/evolution-data-server-%%VERSION%%.pc
 libdata/pkgconfig/libebook-%%VERSION%%.pc
@@ -125,6 +133,7 @@ libdata/pkgconfig/libecal-%%VERSION%%.pc
 libdata/pkgconfig/libedata-book-%%VERSION%%.pc
 libdata/pkgconfig/libedata-cal-%%VERSION%%.pc
 libdata/pkgconfig/libedataserver-%%VERSION%%.pc
+libdata/pkgconfig/libegroupwise-%%VERSION%%.pc
 libexec/evolution-data-server-%%VERSION%%
 share/doc/libebook/EBook.html
 share/doc/libebook/EBookListener.html
@@ -615,4 +624,5 @@ share/locale/zh_TW/LC_MESSAGES/evolution-data-server-%%EVO_VERSION%%.mo
 @dirrm include/evolution-data-server-%%VERSION%%/libedata-book
 @dirrm include/evolution-data-server-%%VERSION%%/libecal
 @dirrm include/evolution-data-server-%%VERSION%%/libebook
+@dirrm include/evolution-data-server-%%VERSION%%/groupwise
 @dirrm include/evolution-data-server-%%VERSION%%

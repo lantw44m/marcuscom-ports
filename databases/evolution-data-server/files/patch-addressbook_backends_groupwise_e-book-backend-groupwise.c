@@ -1,6 +1,6 @@
---- addressbook/backends/groupwise/e-book-backend-groupwise.c.orig	Mon Apr  5 18:55:00 2004
-+++ addressbook/backends/groupwise/e-book-backend-groupwise.c	Mon Apr  5 18:56:21 2004
-@@ -382,10 +382,10 @@
+--- addressbook/backends/groupwise/e-book-backend-groupwise.c.orig	Mon Apr 19 09:10:40 2004
++++ addressbook/backends/groupwise/e-book-backend-groupwise.c	Tue Apr 20 14:46:07 2004
+@@ -384,10 +384,10 @@
  populate_birth_date (EContact *contact, gpointer data)
  {
  	EGwItem *item;
@@ -13,7 +13,7 @@
  	value = e_gw_item_get_field_value (item, "birthday");
   	if (value) {
  		date =  e_contact_date_from_string (value);
-@@ -466,8 +466,8 @@
+@@ -468,8 +468,8 @@
  	GList *email_list;
  	EContact *contact;
  	char *email;
@@ -23,7 +23,7 @@
  
  	email_list = NULL;
  	for (i =0 ; i < 3; i++) {
-@@ -524,9 +524,9 @@
+@@ -526,9 +526,9 @@
  populate_full_name (EContact *contact, gpointer data)
  {
  	EGwItem *item;
@@ -34,13 +34,3 @@
  
  	full_name = e_gw_item_get_full_name (item);
  	if (full_name) {
-@@ -640,8 +640,8 @@
- {
-   
- 	EContact *contact;
--	contact = E_CONTACT (data);
- 	GList*  members ;
-+	contact = E_CONTACT (data);
- 	members = e_contact_get (contact, E_CONTACT_EMAIL);
- 	e_gw_item_set_member_list (item, members);
-   
