@@ -37,7 +37,6 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		file-roller:${PORTSDIR}/archivers/fileroller \
 		${X11BASE}/share/themes/HighContrast/gtk-2.0/gtkrc:${PORTSDIR}/x11-toolkits/gnome-themes \
 		ggv:${PORTSDIR}/print/ggv2 \
-		acme:${PORTSDIR}/multimedia/acme \
 		gok:${PORTSDIR}/sysutils/gok \
 		gpdf:${PORTSDIR}/graphics/gpdf \
 		nautilus-cd-burner:${PORTSDIR}/sysutils/nautilus-cd-burner \
