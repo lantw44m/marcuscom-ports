@@ -438,7 +438,7 @@ desktopfileutils_USE_GNOME_IMPL=glib20
 #### NOTE: DO NOT COMMIT THIS NEXT PART TO THE MAIN FREEBSD REPO
 ########
 .if exists(${PORTSDIR}/Mk/bsd.gnome-experimental.mk)
-.include <bsd.gnome-experimental.mk>
+.include "${PORTSDIR}/Mk/bsd.gnome-experimental.mk"
 .endif
 # end part you shouldn't commit.
 
