@@ -1,6 +1,6 @@
---- configure.orig	Tue May  7 01:02:03 2002
-+++ configure	Tue May  7 01:04:35 2002
-@@ -7978,6 +7978,7 @@
+--- configure.orig	Thu Jan 23 17:55:03 2003
++++ configure	Tue Feb  4 20:31:01 2003
+@@ -8336,6 +8336,7 @@
  
  # This can be used to rebuild libtool when needed
  LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
@@ -8,3 +8,21 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+@@ -12019,7 +12020,7 @@
+ # FIXME: COMMON_MODULES should go because it is silly ...
+ # ... and I'm sure we can narrow down some of these dependencies because
+ # ... they depend on each other
+-COMMON_MODULES="gtk+-2.0 gconf-2.0 libgnomeui-2.0 libglade-2.0 >= 1.99.12 libglade-2.0 gconf-2.0 gnome-desktop-2.0 gstreamer-0.5 gstreamer-libs-0.5"
++COMMON_MODULES="gtk+-2.0 gconf-2.0 libgnomeui-2.0 libglade-2.0 >= 1.99.12 libglade-2.0 gconf-2.0 gnome-desktop-2.0 gstreamer-$GST_MAJORMINOR gstreamer-libs-$GST_MAJORMINOR"
+ 
+   succeeded=no
+ 
+@@ -12117,7 +12118,7 @@
+   fi
+ 
+ 
+-GSTPROPS_LIBS="$GSTPROPS_LIBS $x_libs -lgstgconf-0.5"
++GSTPROPS_LIBS="$GSTPROPS_LIBS $x_libs -lgstgconf-$GST_MAJORMINOR"
+ 
+ 
+ 
