@@ -27,8 +27,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
-		 s|GETTEXT_PACKAGE=gedit-2.0|GETTEXT_PACKAGE=gedit-plugins|g ; \
-		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e \
+		's|GETTEXT_PACKAGE=gedit-2.0|GETTEXT_PACKAGE=gedit-plugins|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

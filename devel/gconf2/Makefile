@@ -28,10 +28,6 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
-		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
-
 post-install:
 	@${MKDIR} ${PREFIX}/etc/gconf/gconf.xml.defaults/apps
 	@${MKDIR} ${PREFIX}/etc/gconf/gconf.xml.defaults/schemas/apps

@@ -47,8 +47,6 @@ MAN1=		gdk-pixbuf-csource.1
 post-patch:
 	@find ${WRKSRC} -name "Makefile.in" | xargs ${GREP} -l lgmodule | \
 		xargs ${REINPLACE_CMD} -e 's|-lgmodule|@GMODULE_LIBS@|g'
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
-		s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
 
 pre-build:
 	${RM} -rf ${WRKSRC}/docs/gtk.info*

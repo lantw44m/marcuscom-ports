@@ -32,8 +32,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAN1=	gnome-about.1
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
-		 s|GNOME_DISTRIBUTOR=.*$$|GNOME_DISTRIBUTOR="FreeBSD GNOME Project"| ; \
-		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e \
+		 's|GNOME_DISTRIBUTOR=.*$$|GNOME_DISTRIBUTOR="FreeBSD GNOME Project"|' \
+		 ${WRKSRC}/configure
 
 .include <bsd.port.mk>

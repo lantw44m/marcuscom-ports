@@ -39,8 +39,4 @@ RUN_DEPENDS=	festival:${PORTSDIR}/audio/festival
 pre-build:
 	@cd ${WRKSRC}/gnome-speech && ${GMAKE} clean
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
-		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
-
 .include <bsd.port.post.mk>

@@ -54,8 +54,4 @@ pre-everything::
 	@${ECHO_MSG} "	WITH_GIMP=yes	Build an svg plugin for gimp-devel (default: auto)"
 	@${ECHO_MSG} ""
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
-		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
-
 .include <bsd.port.post.mk>
