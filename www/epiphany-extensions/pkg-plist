@@ -1,0 +1,17 @@
+lib/epiphany/extensions/libgesturesextension.a
+lib/epiphany/extensions/libgesturesextension.so
+lib/epiphany/extensions/libgesturesextension.so.0
+lib/epiphany/extensions/libpopupblockerextension.a
+lib/epiphany/extensions/libpopupblockerextension.so
+lib/epiphany/extensions/libpopupblockerextension.so.0
+lib/epiphany/extensions/libtabsmenuextension.a
+lib/epiphany/extensions/libtabsmenuextension.so
+lib/epiphany/extensions/libtabsmenuextension.so.0
+share/gnome/epiphany-extensions/ephy-gestures.xml
+share/locale/de/LC_MESSAGES/epiphany-extensions-1.0.mo
+share/locale/en_GB/LC_MESSAGES/epiphany-extensions-1.0.mo
+share/locale/fr/LC_MESSAGES/epiphany-extensions-1.0.mo
+share/locale/ja/LC_MESSAGES/epiphany-extensions-1.0.mo
+@dirrm share/gnome/epiphany-extensions
+@dirrm lib/epiphany/extensions
+@dirrm lib/epiphany
