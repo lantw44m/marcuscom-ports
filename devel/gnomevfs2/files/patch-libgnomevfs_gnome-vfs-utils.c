@@ -1,6 +1,26 @@
---- libgnomevfs/gnome-vfs-utils.c.orig	Mon Nov 24 15:43:38 2003
-+++ libgnomevfs/gnome-vfs-utils.c	Mon Nov 24 15:44:01 2003
-@@ -852,7 +852,7 @@
+--- gnome-vfs-utils.c.orig	Sat Mar 13 18:57:02 2004
++++ gnome-vfs-utils.c	Sat Mar 13 18:51:21 2004
+@@ -797,8 +797,10 @@
+ 	
+ #if HAVE_STATVFS
+ 	statfs_result = statvfs (unescaped_path, &statfs_buffer);
++#define statfs_bsize f_frsize
+ #else
+ 	statfs_result = statfs (unescaped_path, &statfs_buffer);   
++#define statfs_bsize f_bsize
+ #endif  
+ 
+ 	if (statfs_result != 0) {
+@@ -831,7 +833,7 @@
+ 		}
+ 	}
+ 
+-	block_size = statfs_buffer.f_bsize; 
++	block_size = statfs_buffer.statfs_bsize; 
+ 	free_blocks = statfs_buffer.f_bavail;
+ 
+ 	*size = block_size * free_blocks;
+@@ -859,7 +861,7 @@
  	paths = g_strsplit (gnome_var, ":", 0); 
  
  	for (temp_paths = paths; *temp_paths != NULL; temp_paths++) {
