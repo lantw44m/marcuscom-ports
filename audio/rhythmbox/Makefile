@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	rhythmbox
-PORTVERSION=	0.6.1
-PORTREVISION=	1
+PORTVERSION=	0.6.2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.6
@@ -24,7 +23,7 @@ LIB_DEPENDS=	musicbrainz.3:${PORTSDIR}/audio/libmusicbrainz \
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix libgnomeui
+USE_GNOME=	gnomehack gnomeprefix lthack libgnomeui
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lm" \
 		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
