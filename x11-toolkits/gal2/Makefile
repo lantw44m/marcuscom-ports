@@ -8,8 +8,7 @@
 PORTNAME=	gal2
 PORTVERSION=	1.99.2
 CATEGORIES=	x11-toolkits gnome
-MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
-		${MASTER_SITE_GNOME}
+MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/1.99
 DISTNAME=	${PORTNAME:S/2$//}-${PORTVERSION}
 DIST_SUBDIR=	gnome2
@@ -20,7 +19,7 @@ COMMENT=	A collection of widgets taken from GNOME 2 gnumeric
 LIB_DEPENDS=	gnomeui-2.200:${PORTSDIR}/x11-toolkits/libgnomeui \
 		gnomeprintui-2-2.0:${PORTSDIR}/x11-toolkits/libgnomeprintui
 
-#USE_BZIP2=	yes
+USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
