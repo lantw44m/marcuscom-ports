@@ -168,6 +168,7 @@ share/icons/HighContrastLargePrint/48x48/apps/administration.png
 share/icons/HighContrastLargePrint/48x48/apps/advanced-directory.png
 share/icons/HighContrastLargePrint/48x48/apps/ax-applet.png
 share/icons/HighContrastLargePrint/48x48/apps/charpick.png
+share/icons/HighContrastLargePrint/48x48/apps/clock.png
 share/icons/HighContrastLargePrint/48x48/apps/config-language.png
 share/icons/HighContrastLargePrint/48x48/apps/config-users.png
 share/icons/HighContrastLargePrint/48x48/apps/config-xfree.png
@@ -200,7 +201,6 @@ share/icons/HighContrastLargePrint/48x48/apps/gnome-ccscreensaver.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-cd.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-cdplayer-icon.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-character-map.png
-share/icons/HighContrastLargePrint/48x48/apps/gnome-clock.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-desktop-config.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-devel.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-eog.png
@@ -243,6 +243,8 @@ share/icons/HighContrastLargePrint/48x48/apps/gnome-run.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-screensaver.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-screenshot.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-searchtool.png
+share/icons/HighContrastLargePrint/48x48/apps/gnome-searchtool-animation-rest.png
+share/icons/HighContrastLargePrint/48x48/apps/gnome-searchtool-animation.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-server-config.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-session.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-settings-accessibility-keyboard.png
@@ -535,6 +537,7 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/administration.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/advanced-directory.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/ax-applet.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/charpick.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/clock.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/config-language.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/config-users.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/config-xfree.png
@@ -567,7 +570,6 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-ccscreensaver.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-cd.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-cdplayer-icon.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-character-map.png
-share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-clock.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-desktop-config.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-devel.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-eog.png
@@ -610,6 +612,8 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-run.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-screensaver.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-screenshot.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-searchtool.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-searchtool-animation-rest.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-searchtool-animation.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-server-config.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-session.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-settings-accessibility-keyboard.png
@@ -901,6 +905,7 @@ share/icons/LowContrastLargePrint/48x48/apps/accessibility-directory.png
 share/icons/LowContrastLargePrint/48x48/apps/advanced-directory.png
 share/icons/LowContrastLargePrint/48x48/apps/ax-applet.png
 share/icons/LowContrastLargePrint/48x48/apps/charpick.png
+share/icons/LowContrastLargePrint/48x48/apps/clock.png
 share/icons/LowContrastLargePrint/48x48/apps/display-capplet.png
 share/icons/LowContrastLargePrint/48x48/apps/file-manager.png
 share/icons/LowContrastLargePrint/48x48/apps/file-roller.png
@@ -916,7 +921,6 @@ share/icons/LowContrastLargePrint/48x48/apps/gnome-ccscreensaver.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-cd.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-cdplayer-icon.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-character-map.png
-share/icons/LowContrastLargePrint/48x48/apps/gnome-clock.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-devel.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-eog.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-ghex.png
@@ -939,6 +943,8 @@ share/icons/LowContrastLargePrint/48x48/apps/gnome-panel.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-run.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-screenshot.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-searchtool.png
+share/icons/LowContrastLargePrint/48x48/apps/gnome-searchtool-animation-rest.png
+share/icons/LowContrastLargePrint/48x48/apps/gnome-searchtool-animation.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-session.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-settings-accessibility-keyboard.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-settings-accessibility-technologies.png
@@ -1247,19 +1253,6 @@ share/locale/zh_CN/LC_MESSAGES/gnome-themes.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-themes.mo
 share/themes/Crux/index.theme
 share/themes/Glider/gtk-2.0/gtkrc
-share/themes/Glider/gtk-2.0/iconrc
-share/themes/Glider/gtk-2.0/stock_apply.png
-share/themes/Glider/gtk-2.0/stock_bottom.png
-share/themes/Glider/gtk-2.0/stock_cancel.png
-share/themes/Glider/gtk-2.0/stock_down.png
-share/themes/Glider/gtk-2.0/stock_first.png
-share/themes/Glider/gtk-2.0/stock_last.png
-share/themes/Glider/gtk-2.0/stock_left.png
-share/themes/Glider/gtk-2.0/stock_ok.png
-share/themes/Glider/gtk-2.0/stock_refresh.png
-share/themes/Glider/gtk-2.0/stock_right.png
-share/themes/Glider/gtk-2.0/stock_top.png
-share/themes/Glider/gtk-2.0/stock_up.png
 share/themes/Glider/index.theme
 share/themes/Grand-Canyon/gtk-2.0/3d_all_flat.png
 share/themes/Grand-Canyon/gtk-2.0/3d_all_normal.png
