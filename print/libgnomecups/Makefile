@@ -5,7 +5,7 @@
 # $FreeBSD: ports/print/libgnomecups/Makefile,v 1.9 2004/07/27 13:53:04 marcus Exp $
 
 PORTNAME=	libgnomecups
-PORTVERSION=	0.1.9
+PORTVERSION=	0.1.10
 PORTEPOCH=	1
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
