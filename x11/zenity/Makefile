@@ -6,17 +6,18 @@
 #
 
 PORTNAME=	zenity
-PORTVERSION=	1.0
-PORTREVISION=	2
+PORTVERSION=	1.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.0
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	klammer@webonaut.com
 COMMENT=	Display GNOME dialogs from the command line
 
+BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
+RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
@@ -24,8 +25,9 @@ USE_GNOME=	gnomeprefix gnomehack gconf2 libgnomecanvas
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_REINPLACE=	yes
-
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib"
+
+MAN1=		zenity.1
 
 pre-configure:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
