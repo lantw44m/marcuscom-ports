@@ -408,6 +408,8 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/gnome/evolution/%%VERSION%%/default
 @dirrm share/gnome/evolution/%%VERSION%%
 @dirrm share/gnome/evolution
+@dirrm share/gnome/evolution-%%VERSION%%/weather
+@dirrm share/gnome/evolution-%%VERSION%%
 @dirrm libexec/evolution/%%VERSION%%
 @dirrm libexec/evolution
 @dirrm lib/evolution/%%VERSION%%/plugins
