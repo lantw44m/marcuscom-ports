@@ -113,6 +113,7 @@ lib/evolution/%%VERSION%%/libevolution-widgets-a11y.a
 lib/evolution/%%VERSION%%/libevolution-widgets-a11y.so
 lib/evolution/%%VERSION%%/libevolution-widgets-a11y.so.0
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-addressbook-file.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-addressbook-groupwise.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-file.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-http.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-weather.so
@@ -126,6 +127,7 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-send-options.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-shared-folder.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-status-track.so
 lib/evolution/%%VERSION%%/plugins/org-gnome-addressbook-file.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-addressbook-groupwise.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-file.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-http.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-weather.eplug
@@ -162,6 +164,7 @@ share/gnome/evolution/%%VERSION%%/addresstypes.xml
 share/gnome/evolution/%%VERSION%%/default/C/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/default/ja/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/default/nl/mail/local/Inbox
+share/gnome/evolution/%%VERSION%%/default/pt/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/default/zh_CN/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/ecps/medbook.ecps
 share/gnome/evolution/%%VERSION%%/ecps/phonelist.ecps
@@ -257,13 +260,13 @@ share/gnome/evolution/%%VERSION%%/views/tasks/Tasks.galview
 share/gnome/evolution/%%VERSION%%/views/tasks/With_DueDate.galview
 share/gnome/evolution/%%VERSION%%/views/tasks/With_Status.galview
 share/gnome/evolution/%%VERSION%%/views/tasks/galview.xml
-share/gnome/evolution-%%VERSION%%/weather/category_weather_cloudy_16.png
-share/gnome/evolution-%%VERSION%%/weather/category_weather_fog_16.png
-share/gnome/evolution-%%VERSION%%/weather/category_weather_partly_cloudy_16.png
-share/gnome/evolution-%%VERSION%%/weather/category_weather_rain_16.png
-share/gnome/evolution-%%VERSION%%/weather/category_weather_snow_16.png
-share/gnome/evolution-%%VERSION%%/weather/category_weather_sun_16.png
-share/gnome/evolution-%%VERSION%%/weather/category_weather_tstorm_16.png
+share/gnome/evolution/%%VERSION%%/weather/category_weather_cloudy_16.png
+share/gnome/evolution/%%VERSION%%/weather/category_weather_fog_16.png
+share/gnome/evolution/%%VERSION%%/weather/category_weather_partly_cloudy_16.png
+share/gnome/evolution/%%VERSION%%/weather/category_weather_rain_16.png
+share/gnome/evolution/%%VERSION%%/weather/category_weather_snow_16.png
+share/gnome/evolution/%%VERSION%%/weather/category_weather_sun_16.png
+share/gnome/evolution/%%VERSION%%/weather/category_weather_tstorm_16.png
 %%PILOT:%%share/gnome/gnome-pilot/conduits/e-address-%%VERSION%%.conduit
 %%PILOT:%%share/gnome/gnome-pilot/conduits/e-calendar-%%VERSION%%.conduit
 %%PILOT:%%share/gnome/gnome-pilot/conduits/e-todo-%%VERSION%%.conduit
@@ -391,6 +394,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/gnome/help/evolution-%%PORTVERSION%%/C/figures
 @dirrm share/gnome/help/evolution-%%PORTVERSION%%/C
 @dirrm share/gnome/help/evolution-%%PORTVERSION%%
+@dirrm share/gnome/evolution/%%VERSION%%/weather
 @dirrm share/gnome/evolution/%%VERSION%%/views/tasks
 @dirrm share/gnome/evolution/%%VERSION%%/views/mail
 @dirrm share/gnome/evolution/%%VERSION%%/views/calendar
@@ -408,6 +412,9 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/gnome/evolution/%%VERSION%%/default/zh_CN/mail/local
 @dirrm share/gnome/evolution/%%VERSION%%/default/zh_CN/mail
 @dirrm share/gnome/evolution/%%VERSION%%/default/zh_CN
+@dirrm share/gnome/evolution/%%VERSION%%/default/pt/mail/local
+@dirrm share/gnome/evolution/%%VERSION%%/default/pt/mail
+@dirrm share/gnome/evolution/%%VERSION%%/default/pt
 @dirrm share/gnome/evolution/%%VERSION%%/default/nl/mail/local
 @dirrm share/gnome/evolution/%%VERSION%%/default/nl/mail
 @dirrm share/gnome/evolution/%%VERSION%%/default/nl
@@ -420,8 +427,6 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/gnome/evolution/%%VERSION%%/default
 @dirrm share/gnome/evolution/%%VERSION%%
 @dirrm share/gnome/evolution
-@dirrm share/gnome/evolution-%%VERSION%%/weather
-@dirrm share/gnome/evolution-%%VERSION%%
 @dirrm libexec/evolution/%%VERSION%%
 @dirrm libexec/evolution
 @dirrm lib/evolution/%%VERSION%%/plugins
