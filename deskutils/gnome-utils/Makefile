@@ -32,9 +32,11 @@ MAN1=		gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1
 GCONF_SCHEMAS=	gdict.schemas gnome-screenshot.schemas \
 		gnome-search-tool.schemas logview.schemas
 
-post-patch:
+post-extract:
 	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|$$||g'
+
+post-patch:
 	@${FIND} ${WRKSRC} -type f | ${XARGS} ${TOUCH} -f
 
 .include <bsd.port.mk>
