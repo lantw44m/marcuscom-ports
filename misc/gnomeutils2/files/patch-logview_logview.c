@@ -1,5 +1,5 @@
---- logview/logview.c.orig	Sun Feb 16 15:34:59 2003
-+++ logview/logview.c	Wed Apr 23 14:51:26 2003
+--- logview/logview.c.orig	Sun Feb 16 15:36:07 2003
++++ logview/logview.c	Thu Apr 24 12:53:35 2003
 @@ -774,7 +774,7 @@
  
  	if ( ! found) {
@@ -31,7 +31,7 @@
  		else
  			prefs->logfile = NULL;
  	}
--	g_free (logfile);	
+-	g_free (logfile);
  }
  
  void SaveUserPrefs(UserPrefsStruct *prefs)
