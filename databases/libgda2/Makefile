@@ -106,7 +106,7 @@ CONFIGURE_ARGS+=	--without-postgres
 .endif
 
 .if !defined(WITHOUT_LDAP) && defined(WITH_LDAP)
-LIB_DEPENDS+=		ldap.2:${PORTSDIR}/net/openldap20-client
+USE_OPENLDAP=		yes
 CONFIGURE_ARGS+=	--with-ldap=${LOCALBASE}
 PLIST_SUB+=		LDAP:=""
 .else
