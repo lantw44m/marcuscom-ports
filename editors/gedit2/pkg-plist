@@ -62,6 +62,7 @@ lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
 libdata/bonobo/servers/GNOME_Gedit.server
+share/gnome/application-registry/gedit.applications
 share/gnome/applications/gedit.desktop
 share/gnome/gedit-2/glade/asciitable.glade2
 share/gnome/gedit-2/glade/diff.glade2
@@ -97,7 +98,6 @@ share/gnome/omf/gedit/gedit-ro.omf
 share/gnome/pixmaps/gedit-icon.png
 share/gnome/pixmaps/gedit-logo.png
 share/gnome/pixmaps/gedit-plugin-manager.png
-share/gnome/pixmaps/shell-output-logo.png
 share/locale/ar/LC_MESSAGES/gedit-2.0.mo
 share/locale/az/LC_MESSAGES/gedit-2.0.mo
 share/locale/be/LC_MESSAGES/gedit-2.0.mo
