@@ -4,8 +4,4 @@ Java applications, you must add the following to your CLASSPATH:
 
 %%JAVAJARDIR%%/gtk%%GTK_API_VERSION%%-%%PORTVERSION%%.jar
 
-Then add the following to your LD_LIBRARY_PATH:
-
-%%PREFIX%%/lib
-
 ************************************************************************
