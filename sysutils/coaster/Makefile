@@ -7,7 +7,7 @@
 
 PORTNAME=	coaster
 PORTVERSION=	0.1.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.coaster-burn.org/files/coaster/
 
@@ -17,19 +17,19 @@ COMMENT=	A disc burning application for Gnome 2
 LIB_DEPENDS=	bakery-2.3.11:${PORTSDIR}/x11-toolkits/bakery \
 		nautilus-burn.0:${PORTSDIR}/sysutils/nautilus-cd-burner
 
-USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack
+USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack desktopfileutils
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--enable-update-mimedb=yes
 
 DOCS=		AUTHORS COPYING ChangeLog NEWS README TODO
 GCONF_SCHEMAS=	coaster.schemas
 
-.ifndef (NOPORTDOCS)
 post-install:
+	@${X11BASE}/bin/update-desktop-database
+.ifndef (NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
 .for i in ${DOCS}
 	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}

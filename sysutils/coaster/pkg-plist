@@ -18,16 +18,18 @@ share/gnome/coaster/ui/coaster-other-menu.ui
 share/gnome/coaster/ui/coaster-toolbar.ui
 share/gnome/mime-info/coaster.keys
 share/gnome/mime-info/coaster.mime
-share/gnome/mime/packages/coaster.xml
 share/gnome/pixmaps/coaster.png
 share/gnome/xml/coaster/coaster-audio.dtd
 share/gnome/xml/coaster/coaster-catalog.xml
 share/gnome/xml/coaster/coaster-data.dtd
 share/gnome/xml/coaster/coaster-video.dtd
 share/locale/nl/LC_MESSAGES/coaster.mo
+share/mime/packages/coaster.xml
 @dirrm share/gnome/xml/coaster
 @dirrm share/gnome/coaster/ui
 @dirrm share/gnome/coaster/glade
 @dirrm share/gnome/coaster
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
 @unexec update-desktop-database > /dev/null || /usr/bin/true
+@exec update-mime-database %D/share/mime
+@unexec update-mime-database %D/share/mime
