@@ -1,0 +1,63 @@
+# New ports collection makefile for:	gnome2
+# Date created:		21 May 2002
+# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD: ports/x11/gnome2/Makefile,v 1.62 2003/04/06 23:55:17 marcus Exp $
+#
+
+PORTNAME=	gnome2
+PORTVERSION=	2.3.0
+CATEGORIES=	x11 gnome
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+EXTRACT_ONLY=	# empty
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	The "meta-port" for the GNOME 2 integrated X11 desktop
+
+RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
+		gnome-cd:${PORTSDIR}/audio/gnomemedia2 \
+	 	gnome-calculator:${PORTSDIR}/misc/gnomeutils2 \
+		eog:${PORTSDIR}/graphics/eog2 \
+		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2 \
+		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
+		gnect:${PORTSDIR}/games/gnomegames2 \
+		gedit:${PORTSDIR}/editors/gedit2 \
+		gnome-terminal:${PORTSDIR}/x11/gnometerminal \
+		gnome-session:${PORTSDIR}/x11/gnomesession \
+		bug-buddy:${PORTSDIR}/devel/bugbuddy2 \
+		gnome-system-monitor:${PORTSDIR}/sysutils/gnomesystemmonitor \
+		nautilus:${PORTSDIR}/x11-fm/nautilus2 \
+		yelp:${PORTSDIR}/x11/yelp \
+		gdm:${PORTSDIR}/x11/gdm2 \
+		screensaver-properties-capplet:${PORTSDIR}/x11/xscreensaver-gnome \
+		${X11BASE}/share/gnome/help/user-guide/C/user-guide.xml:${PORTSDIR}/misc/gnomeuserdocs2 \
+		${X11BASE}/share/gnome/sounds/login.wav:${PORTSDIR}/audio/gnomeaudio \
+		${X11BASE}/libdata/pkgconfig/libgail-gnome.pc:${PORTSDIR}/x11-toolkits/libgail-gnome \
+		file-roller:${PORTSDIR}/archivers/fileroller \
+		${X11BASE}/share/themes/HighContrast/gtk-2.0/gtkrc:${PORTSDIR}/x11-toolkits/gnome-themes \
+		ggv:${PORTSDIR}/print/ggv2 \
+		acme:${PORTSDIR}/multimedia/acme \
+		gok:${PORTSDIR}/sysutils/gok \
+		gpdf:${PORTSDIR}/graphics/gpdf \
+		galeon:${PORTSDIR}/www/galeon2 \
+		nautilus-cd-burner:${PORTSDIR}/sysutils/nautilus-cd-burner \
+		gnome-theme-thumbnailer:${PORTSDIR}/x11/themus \
+		gnome-font-viewer:${PORTSDIR}/x11-fonts/fontilus \
+		magnifier:${PORTSDIR}/x11/gnomemag \
+		gcalctool:${PORTSDIR}/math/gcalctool \
+		gucharmap:${PORTSDIR}/misc/gucharmap \
+		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media
+
+NO_BUILD=	yes
+
+USE_PYTHON=	yes
+
+.if !defined(BATCH) && !defined(PACKAGE_BUILDING)
+pre-configure:
+	@${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
+.endif
+
+do-install:	# empty
+
+.include <bsd.port.mk>
