@@ -13,7 +13,6 @@ include/gucharmap/gucharmap-table.h
 include/gucharmap/gucharmap-unicode-info.h
 include/gucharmap/gucharmap-window.h
 include/gucharmap/gucharmap.h
-lib/gtk-2.0/2.2.0/immodules/im-gucharmap.so
 lib/libgucharmap.a
 lib/libgucharmap.so
 lib/libgucharmap.so.4
@@ -67,6 +66,7 @@ share/locale/sr/LC_MESSAGES/gucharmap.mo
 share/locale/sr@Latn/LC_MESSAGES/gucharmap.mo
 share/locale/sv/LC_MESSAGES/gucharmap.mo
 share/locale/ta/LC_MESSAGES/gucharmap.mo
+share/locale/th/LC_MESSAGES/gucharmap.mo
 share/locale/uk/LC_MESSAGES/gucharmap.mo
 share/locale/vi/LC_MESSAGES/gucharmap.mo
 share/locale/wa/LC_MESSAGES/gucharmap.mo

@@ -1,17 +1,6 @@
---- gucharmap/gucharmap-window.c.orig	Sat Feb  7 03:58:10 2004
-+++ gucharmap/gucharmap-window.c	Sat Feb  7 03:59:36 2004
-@@ -121,9 +121,9 @@
-               GucharmapWindow       *guw)
- {
-   GucharmapWindowPrivate *priv = GUCHARMAP_WINDOW_GET_PRIVATE (guw);
-+  GdkCursor *cursor = gdk_cursor_new (GDK_WATCH);
-   g_assert (IS_GUCHARMAP_WINDOW (guw));
- 
--  GdkCursor *cursor = gdk_cursor_new (GDK_WATCH);
-   gdk_window_set_cursor (GTK_WIDGET (guw)->window, cursor);
-   gdk_cursor_unref (cursor);
- 
-@@ -361,8 +361,8 @@
+--- gucharmap/gucharmap-window.c.orig	Fri Feb 27 13:11:01 2004
++++ gucharmap/gucharmap-window.c	Wed Mar  3 22:45:21 2004
+@@ -417,8 +417,8 @@
      {
        GucharmapWindowPrivate *priv = GUCHARMAP_WINDOW_GET_PRIVATE (guw);
        gucharmap_charmap_set_chapters (guw->charmap, GUCHARMAP_CHAPTERS (gucharmap_script_chapters_new ()));
@@ -22,7 +11,7 @@
      }
  }
  
-@@ -374,8 +374,8 @@
+@@ -430,8 +430,8 @@
      {
        GucharmapWindowPrivate *priv = GUCHARMAP_WINDOW_GET_PRIVATE (guw);
        gucharmap_charmap_set_chapters (guw->charmap, GUCHARMAP_CHAPTERS (gucharmap_block_chapters_new ()));
@@ -33,7 +22,7 @@
      }
  }
  
-@@ -778,12 +778,12 @@
+@@ -834,12 +834,12 @@
    g_signal_connect (priv->status, "realize", G_CALLBACK (status_realize), guw);
  
    priv->progress = gtk_progress_bar_new ();
