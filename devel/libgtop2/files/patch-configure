@@ -1,6 +1,6 @@
---- configure.orig	Tue Jan  6 09:20:30 2004
-+++ configure	Tue Jan  6 21:32:03 2004
-@@ -1854,9 +1854,9 @@
+--- configure.orig	Thu Mar 11 15:38:00 2004
++++ configure	Thu Mar 11 15:38:00 2004
+@@ -1917,9 +1917,9 @@
  
  # libtool versioning
  LT_RELEASE=$LIBGTOP_MAJOR_VERSION.$LIBGTOP_MINOR_VERSION
@@ -13,12 +13,3 @@
  LT_VERSION_INFO="-version-info ${LT_CURRENT}:${LT_REVISION}:${LT_AGE}"
  
  
-@@ -10200,7 +10200,7 @@
- 
-             echo "$as_me:$LINENO: checking GLIB_LIBS" >&5
- echo $ECHO_N "checking GLIB_LIBS... $ECHO_C" >&6
--            GLIB_LIBS=`$PKG_CONFIG --libs "glib-2.0 >= $GLIB_REQUIRED libgnome-2.0"`
-+            GLIB_LIBS=`$PKG_CONFIG --libs "glib-2.0 >= $GLIB_REQUIRED"`
-             echo "$as_me:$LINENO: result: $GLIB_LIBS" >&5
- echo "${ECHO_T}$GLIB_LIBS" >&6
-         else

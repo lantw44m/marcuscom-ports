@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libgtop2
-PORTVERSION=	2.5.1
+PORTVERSION=	2.5.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.5
@@ -16,11 +16,13 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 top library
 
+LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
+
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
 USE_PERL5=	yes
+USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack libgnome
+USE_GNOME=	gnomehack glib20
 USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
 GNU_CONFIGURE=	yes
