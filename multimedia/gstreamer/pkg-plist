@@ -24,6 +24,7 @@ include/gstreamer-0.5/gst/gstbuffer.h
 include/gstreamer-0.5/gst/gstbufferpool-default.h
 include/gstreamer-0.5/gst/gstcaps.h
 include/gstreamer-0.5/gst/gstclock.h
+include/gstreamer-0.5/gst/gstcompat.h
 include/gstreamer-0.5/gst/gstconfig.h
 include/gstreamer-0.5/gst/gstcpu.h
 include/gstreamer-0.5/gst/gstdata.h
@@ -57,6 +58,7 @@ include/gstreamer-0.5/gst/gsttrashstack.h
 include/gstreamer-0.5/gst/gsttype.h
 include/gstreamer-0.5/gst/gsttypefind.h
 include/gstreamer-0.5/gst/gsttypes.h
+include/gstreamer-0.5/gst/gsturi.h
 include/gstreamer-0.5/gst/gstutils.h
 include/gstreamer-0.5/gst/gstversion.h
 include/gstreamer-0.5/gst/gstxml.h
@@ -79,10 +81,10 @@ lib/gstreamer-0.5/libgststaticautoplugrender.so
 lib/gstreamer-0.5/libgsttypes.so
 lib/libgstcontrol-0.5.a
 lib/libgstcontrol-0.5.so
-lib/libgstcontrol-0.5.so.2
+lib/libgstcontrol-0.5.so.3
 lib/libgstreamer-0.5.a
 lib/libgstreamer-0.5.so
-lib/libgstreamer-0.5.so.2
+lib/libgstreamer-0.5.so.3
 libdata/pkgconfig/gstreamer-0.5.pc
 @exec %D/bin/gst-register 2>/dev/null
 @unexec rm %D/share/gnome/cache/gstreamer-0.5/registry.xml 2>/dev/null || true
