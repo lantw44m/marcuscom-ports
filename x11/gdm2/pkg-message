@@ -4,3 +4,15 @@ Do _NOT_ use /etc/ttys to start gdm at boot time.  This will result in gdm
 hanging or restarting constantly.  Instead, copy the included gdm.sh.sample 
 script to gdm.sh, and restart.  This script is found, by default, in
 /usr/X11R6/etc/rc.d.
+
+If you are running 5.x and you are running 5.1-RELEASE or earlier, GDM will 
+fail to work due to a bug in OpenPAM.  You can download a patch from
+http://www.FreeBSD.org/~marcus/pam_get_user.c.diff.  You must also have the
+FreeBSD src tree on your system.  Do the following to apply the patch:
+
+# cd /usr
+# patch -p < /path/to/pam_get_user.c.diff
+
+
+Then rebuild and install world.  Note, this bug does _NOT_ affect FreeBSD
+4.x.
