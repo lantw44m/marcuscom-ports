@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome2-fifth-toe
 PORTVERSION=	2.9.3
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,7 +26,7 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		tsclient:${PORTSDIR}/net/tsclient \
 		galeon:${PORTSDIR}/www/galeon \
 		seahorse:${PORTSDIR}/security/seahorse \
-		${X11BASE}/lib/gtk-2.0/2.4.0/engines/libindustrial.so:${PORTSDIR}/x11-themes/gnome-themes-extras \
+		${X11BASE}/share/gnome/themes/Gorilla/metacity-1/metacity-theme-1.xml:${PORTSDIR}/x11-themes/gnome-themes-extras \
 		bluefish:${PORTSDIR}/www/bluefish-devel \
 		gossip:${PORTSDIR}/net/gossip \
 		straw:${PORTSDIR}/net/straw \
