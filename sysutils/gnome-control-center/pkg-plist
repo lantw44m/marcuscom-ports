@@ -166,6 +166,7 @@ share/gnome/vfolders/Advanced.directory
 share/gnome/vfolders/font-method.directory
 share/gnome/vfolders/theme-method.directory
 share/icons/gnome/48x48/apps/accessibility-directory.png
+share/locale/af/LC_MESSAGES/control-center-2.0.mo
 share/locale/am/LC_MESSAGES/control-center-2.0.mo
 share/locale/ar/LC_MESSAGES/control-center-2.0.mo
 share/locale/az/LC_MESSAGES/control-center-2.0.mo
@@ -205,6 +206,7 @@ share/locale/ms/LC_MESSAGES/control-center-2.0.mo
 share/locale/nl/LC_MESSAGES/control-center-2.0.mo
 share/locale/nn/LC_MESSAGES/control-center-2.0.mo
 share/locale/no/LC_MESSAGES/control-center-2.0.mo
+share/locale/pa/LC_MESSAGES/control-center-2.0.mo
 share/locale/pl/LC_MESSAGES/control-center-2.0.mo
 share/locale/pt/LC_MESSAGES/control-center-2.0.mo
 share/locale/pt_BR/LC_MESSAGES/control-center-2.0.mo
