@@ -1,0 +1,14 @@
+bin/magnifier
+include/gnome-mag-1.0/magnifier/GNOME_Magnifier.h
+lib/libgnome-mag.a
+lib/libgnome-mag.so
+lib/libgnome-mag.so.1
+libdata/bonobo/servers/GNOME_Magnifier.server.in
+libdata/pkgconfig/gnome-mag-1.0.pc
+share/gnome/gnome-mag/crosshair-cursor.xpm
+share/gnome/gnome-mag/default-cursor.xpm
+share/gnome/idl/gnome-mag-1.0/GNOME_Magnifier.idl
+@dirrm share/gnome/idl/gnome-mag-1.0
+@dirrm share/gnome/gnome-mag
+@dirrm include/gnome-mag-1.0/magnifier
+@dirrm include/gnome-mag-1.0
