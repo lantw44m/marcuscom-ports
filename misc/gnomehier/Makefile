@@ -7,7 +7,7 @@
 
 PORTNAME=	gnomehier
 PORTVERSION=	2.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc gnome
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -23,7 +23,7 @@ GNOME_MTREE=	BSD.gnome-x11.dist
 
 USE_X_PREFIX=	yes
 
-GNOME_MTREE_ARGS=${MTREE_ARGS:S|${MTREE_FILE}|${WRKDIR}/${GNOME_MTREE}|}
+GNOME_MTREE_ARGS=${MTREE_ARGS:S|${MTREE_FILE}|${PREFIX}/etc/mtree/${GNOME_MTREE}|}
 
 do-fetch:
 	@${DO_NADA}
@@ -57,8 +57,6 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/${GNOME_MTREE} ${PREFIX}/etc/mtree
 
 post-install:
-.if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-.endif
 
 .include <bsd.port.mk>
