@@ -2,7 +2,8 @@ bin/AbiWord-%%ABIVERSION%%
 bin/abiword
 bin/ttfadmin.sh
 bin/ttftool
-%%GNOME:%%libdata/bonobo/servers/GNOME_AbiWord_Control_%%ABIVERSION%%.server
+libdata/bonobo/servers/GNOME_AbiWord_Control_2_0.server
+libdata/bonobo/servers/GNOME_AbiWord_Control_2_2.server
 share/AbiSuite-%%ABIVERSION%%/AbiWord.exe.MANIFEST
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Break.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Field.glade
@@ -180,8 +181,6 @@ share/AbiSuite-%%ABIVERSION%%/clipart/tree.png
 share/AbiSuite-%%ABIVERSION%%/clipart/tux_bordelais.png
 share/AbiSuite-%%ABIVERSION%%/clipart/weather.png
 share/AbiSuite-%%ABIVERSION%%/clipart/write.png
-share/AbiSuite-%%ABIVERSION%%/dictionary/american.hash
-share/AbiSuite-%%ABIVERSION%%/dictionary/ispell_dictionary_list.xml
 share/AbiSuite-%%ABIVERSION%%/icons/abiword_16.xpm
 share/AbiSuite-%%ABIVERSION%%/icons/abiword_48.png
 share/AbiSuite-%%ABIVERSION%%/icons/abiword_48.tif
@@ -256,7 +255,7 @@ share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-zh_TW
 share/applications/abiword.desktop
 share/icons/abiword_48.png
 share/gnome/apps/Applications/abiword.desktop
-%%GNOME:%%share/gnome/gnome-%%ABIVERSION%%/ui/abi-nautilus-view-file.xml
+%%GNOME:%%share/gnome/gnome-2.0/ui/abi-nautilus-view-file.xml
 share/gnome/pixmaps/abiword_48.png
 @dirrm share/AbiSuite-%%ABIVERSION%%/templates
 @dirrm share/AbiSuite-%%ABIVERSION%%/icons
