@@ -7,14 +7,14 @@
 
 PORTNAME=	gtranslator
 PORTVERSION=	1.1.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://www.gtranslator.org/download/releases/${PORTVERSION}/ \
 		${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A GNOME application for developing ".pot" files used with GNU Gettext
+COMMENT=	A GNOME application for creating GNU gettext translation files
 
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomehack gnomeprefix gnometarget gnomevfs2 libgnomeui
@@ -23,8 +23,14 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -lgnuregex"
 CONFIGURE_ARGS=	--disable-debug
+USE_REINPLACE=	yes
 
 MAN1=		gtranslator.1 pozilla.sh.1
 MANCOMPRESSED=	yes
+
+post-patch:
+	        @${REINPLACE_CMD} -e "s|/usr/local/share/gtranslator|${PREFIX}/share/gnome/${PORTNAME}|g; \
+			s|/usr/local/share/pixmaps|${PREFIX}/share/gnome/pixmaps|g" \
+			${WRKSRC}/src/defines.h
 
 .include <bsd.port.mk>
