@@ -2,7 +2,8 @@
 # Date created:				16 Nov 2003
 # Whom:					Pav Lucistnik <pav@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/marlin/Makefile,v 1.6 2004/11/23 19:33:05 mezz Exp $
+# $FreeBSD$
+#
 
 PORTNAME=	marlin
 PORTVERSION=	0.7

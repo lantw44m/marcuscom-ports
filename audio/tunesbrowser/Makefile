@@ -2,7 +2,7 @@
 # Date created:		2004-07-27
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/audio/tunesbrowser/Makefile,v 1.10 2005/02/03 03:32:25 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	tunesbrowser

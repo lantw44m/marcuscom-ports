@@ -2,7 +2,7 @@
 # Date created:		Fri Apr  9 16:24:13 CEST 2004
 # Whom:			Koop Mast <kwm@rainbow-runner.nl>
 #
-# $FreeBSD: ports/multimedia/py-gstreamer/Makefile,v 1.9 2004/11/29 20:08:17 kwm Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gstreamer

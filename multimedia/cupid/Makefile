@@ -2,7 +2,7 @@
 # Date created:		Thu Jan  6 06:00:19 UTC 2005
 # Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/cupid/Makefile,v 1.1 2005/01/08 21:10:10 lioux Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	cupid

@@ -2,7 +2,7 @@
 # Date created:			26 Jul 2004
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
-# $FreeBSD: ports/audio/lindele/Makefile,v 1.6 2005/01/19 23:16:24 pav Exp $
+# $FreeBSD$
 #
 
 PORTNAME=		lindele

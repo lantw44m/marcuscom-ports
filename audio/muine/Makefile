@@ -2,7 +2,7 @@
 # Date created:				20040615
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/audio/muine/Makefile,v 1.6 2004/12/30 00:59:14 nobutaka Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	muine

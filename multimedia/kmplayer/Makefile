@@ -2,7 +2,7 @@
 # Date created:				Jan 31, 2003
 # Whom:					will
 #
-# $FreeBSD: ports/multimedia/kmplayer/Makefile,v 1.18 2005/01/10 00:48:49 lioux Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	kmplayer
