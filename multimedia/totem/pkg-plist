@@ -1,8 +1,14 @@
 bin/totem
 bin/totem-video-thumbnailer
-libdata/bonobo/servers/Totem_properties.server
-libexec/totem-properties-page
-share/gnome/application-registry/totem.applications
+include/totem/1/plparser/totem-disc.h
+include/totem/1/plparser/totem-pl-parser-builtins.h
+include/totem/1/plparser/totem-pl-parser.h
+lib/libtotem-plparser.a
+lib/libtotem-plparser.so
+lib/libtotem-plparser.so.0
+lib/nautilus/extensions-1.0/libtotem-properties-page.a
+lib/nautilus/extensions-1.0/libtotem-properties-page.so
+libdata/pkgconfig/totem-plparser.pc
 share/gnome/applications/totem.desktop
 share/gnome/help/totem/C/figures/totem_next_button.png
 share/gnome/help/totem/C/figures/totem_pause_button.png
@@ -38,7 +44,6 @@ share/gnome/help/totem/ru/figures/totem_screenshot.png
 share/gnome/help/totem/ru/figures/totem_start_window.png
 share/gnome/help/totem/ru/legal.xml
 share/gnome/help/totem/ru/totem.xml
-share/gnome/mime-info/totem.keys
 share/gnome/omf/totem/totem-C.omf
 share/gnome/omf/totem/totem-de.omf
 share/gnome/omf/totem/totem-es.omf
@@ -135,5 +140,8 @@ share/locale/zh_TW/LC_MESSAGES/totem.mo
 @dirrm share/gnome/help/totem
 %%GSTREAMER%%@unexec rmdir lib/mozilla/plugins 2>/dev/null || /usr/bin/true
 %%GSTREAMER%%@unexec rmdir lib/mozilla 2>/dev/null || /usr/bin/true
+@dirrm include/totem/1/plparser
+@dirrm include/totem/1
+@dirrm include/totem
 @exec update-desktop-database > /dev/null || /usr/bin/true
 @unexec update-desktop-database > /dev/null || /usr/bin/true
