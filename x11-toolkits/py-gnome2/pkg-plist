@@ -37,6 +37,9 @@ libdata/pkgconfig/gnome-python-2.0.pc
 share/pygtk/2.0/argtypes/bonobo-arg-types.py
 share/pygtk/2.0/argtypes/bonobo-arg-types.pyc
 share/pygtk/2.0/argtypes/bonobo-arg-types.pyo
+share/pygtk/2.0/argtypes/gconf-arg-types.py
+share/pygtk/2.0/argtypes/gconf-arg-types.pyc
+share/pygtk/2.0/argtypes/gconf-arg-types.pyo
 share/pygtk/2.0/defs/bonobo-types.defs
 share/pygtk/2.0/defs/bonobo.defs
 share/pygtk/2.0/defs/bonoboui-types.defs
