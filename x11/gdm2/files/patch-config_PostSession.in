@@ -1,12 +1,11 @@
---- config/PostSession.in.orig	Mon Jun 16 16:42:51 2003
-+++ config/PostSession.in	Mon Jun 16 16:43:18 2003
+--- config/PostSession.in.orig	Fri May 30 06:21:12 2003
++++ config/PostSession.in	Mon Jun 16 17:31:05 2003
 @@ -2,7 +2,7 @@
  
  PATH=@X_PATH@:$PATH
  
 -if command -v sessreg > /dev/null 2>&1; then
--	sessreg -d -w /var/log/wtmp -u /var/run/utmp -x "$X_SERVERS" -h "$REMOTE_HOST" -l $DISPLAY $USER
 +if /usr/bin/which -s sessreg > /dev/null 2>&1; then
-+	sessreg -d -w /var/log/wtmp -u /var/run/utmp -x "$X_SERVERS" -h "$REMOTE_HOST" $USER
+ 	sessreg -d -w /var/log/wtmp -u /var/run/utmp -x "$X_SERVERS" -h "$REMOTE_HOST" -l $DISPLAY $USER
  fi
  exit 0
