@@ -93,14 +93,12 @@ pre-configure:
 		 s|@DEFS@|-I${WRKSRC}/../libiconv/include @DEFS@|g' && ${TRUE}
 
 post-install:
+.if defined(GNOME_ENABLED)
 	@${INSTALL_DATA} ${WRKSRC}/abiword.desktop \
 		${PREFIX}/share/gnome/apps/Applications/abiword.desktop
-	@${LN} -sf ${PREFIX}/share/AbiSuite-2.0/icons/abiword_48.png \
+	@${LN} -sf ${PREFIX}/share/AbiSuite-${ABIVERSION}/icons/abiword_48.png \
 		${PREFIX}/share/gnome/pixmaps/abiword_48.png
-.if defined(GNOME_ENABLED)
-	@${LN} -sf ${PREFIX}/share/AbiSuite-2.0/GNOME_AbiWord_Control_2_0.server\
-		${PREFIX}/libdata/bonobo/servers/GNOME_AbiWord_Control_2_0.server
-	@${LN} -sf ${PREFIX}/share/AbiSuite-2.0/abi-nautilus-view-file.xml \
+	@${LN} -sf ${PREFIX}/share/AbiSuite-${ABIVERSION}/abi-nautilus-view-file.xml \
 		${PREFIX}/share/gnome/gnome-2.0/ui/abi-nautilus-view-file.xml
 .endif
 
