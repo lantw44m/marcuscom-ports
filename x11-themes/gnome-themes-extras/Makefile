@@ -27,8 +27,15 @@ USE_GNOME=	gnomehack libgnomeui intlhack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 503001
+EXTRACT_DEPENDS+=	gtar:${PORTSDIR}/archivers/gtar
+TAR=			${LOCALBASE}/bin/gtar
+.endif
+
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 		"/^themedir =.*metacity-1$$/s|themes|gnome/themes|"
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
