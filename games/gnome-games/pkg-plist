@@ -82,6 +82,7 @@ share/gnome/applications/iagno.desktop
 share/gnome/applications/mahjongg.desktop
 share/gnome/applications/same-gnome.desktop
 share/gnome/applications/sol.desktop
+@exec update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/blackjack/Ameristar.rules
 share/gnome/blackjack/Atlantic_City.rules
 share/gnome/blackjack/Vegas_Downtown.rules
@@ -800,3 +801,4 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/iagno-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/mahjongg-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/same-gnome-C.omf 2>/dev/null || /usr/bin/true
+@unexec update-desktop-database > /dev/null || /usr/bin/true

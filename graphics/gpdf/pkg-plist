@@ -6,6 +6,7 @@ libdata/bonobo/servers/GNOME_PDF.server
 libexec/gnome-pdf-viewer
 share/gnome/application-registry/gpdf.applications
 share/gnome/applications/gpdf.desktop
+@exec update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/gnome-2.0/ui/gpdf-control-ui.xml
 share/gnome/gnome-2.0/ui/gpdf-window-ui.xml
 share/gnome/gpdf/glade/gpdf-print-progress-dialog.glade
@@ -110,3 +111,4 @@ share/locale/zh_TW/LC_MESSAGES/gpdf.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gpdf/gpdf-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gpdf/gpdf-de.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gpdf/gpdf-es.omf 2>/dev/null || /usr/bin/true
+@unexec update-desktop-database > /dev/null || /usr/bin/true

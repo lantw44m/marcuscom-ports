@@ -303,6 +303,7 @@ libexec/evolution/%%VERSION%%/evolution-addressbook-export
 libexec/evolution/%%VERSION%%/evolution-alarm-notify
 libexec/evolution/%%VERSION%%/killev
 share/gnome/applications/evolution-%%VERSION%%.desktop
+@exec update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/evolution/%%VERSION%%/addresstypes.xml
 share/gnome/evolution/%%VERSION%%/default/C/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/ecps/medbook.ecps
@@ -560,3 +561,4 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm include/evolution-%%VERSION%%/camel
 @dirrm include/evolution-%%VERSION%%
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/evolution/evolution-%%VERSION%%-C.omf 2>/dev/null || /usr/bin/true
+@unexec update-desktop-database > /dev/null || /usr/bin/true

@@ -7,6 +7,7 @@
 
 PORTNAME=	gedit2
 PORTVERSION=	2.7.90
+PORTREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.7
@@ -24,7 +25,7 @@ INSTALLS_SHLIB=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier \
-		libgnomeprintui libgnomeui eel2 gtksourceview
+		libgnomeprintui libgnomeui eel2 gtksourceview desktopfileutils
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 PLIST_SUB=	VERSION="2.6"

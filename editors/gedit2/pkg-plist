@@ -52,6 +52,7 @@ libdata/bonobo/servers/GNOME_Gedit.server
 libdata/pkgconfig/gedit-%%VERSION%%.pc
 share/gnome/application-registry/gedit.applications
 share/gnome/applications/gedit.desktop
+@exec update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/gedit-2/glade/docinfo.glade2
 share/gnome/gedit-2/glade/gedit-encodings-dialog.glade2
 share/gnome/gedit-2/glade/gedit-preferences.glade2
@@ -274,3 +275,4 @@ share/locale/zh_TW/LC_MESSAGES/gedit-%%VERSION%%.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-zh_CN.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-zh_HK.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-zh_TW.omf 2>/dev/null || /usr/bin/true
+@unexec update-desktop-database > /dev/null || /usr/bin/true
