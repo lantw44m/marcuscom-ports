@@ -97,7 +97,7 @@ lib/gnome-vfs-2.0/modules/libvfs-test.so
 lib/gnome-vfs-2.0/modules/libvfs-translate.so
 lib/libgnomevfs-2.a
 lib/libgnomevfs-2.so
-lib/libgnomevfs-2.so.701
+lib/libgnomevfs-2.so.790
 lib/vfs/2.0/extfs/README
 lib/vfs/2.0/extfs/a
 lib/vfs/2.0/extfs/ar
@@ -171,6 +171,7 @@ share/doc/gnome-vfs-2.0/left.png
 share/doc/gnome-vfs-2.0/mime-registry.html
 share/doc/gnome-vfs-2.0/modules.html
 share/doc/gnome-vfs-2.0/right.png
+share/doc/gnome-vfs-2.0/style.css
 share/doc/gnome-vfs-2.0/up.png
 @exec mkdir -p %D/share/gnome/vfolders
 %%KDEMENUS%%share/gnome/vfolders/KDE.directory
