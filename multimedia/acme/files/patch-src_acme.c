@@ -5,11 +5,11 @@
  		return;
  
 -	if (g_file_test ("/usr/bin/esdplay",
-+	if (g_file_test ("/usr/local/bin/esdplay",
++	if (g_file_test ("%%LOCALBASE%%/bin/esdplay",
  			(G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE)))
  	{
 -		command = g_strdup_printf ("/usr/bin/esdplay %s",
-+		command = g_strdup_printf ("/usr/local/bin/esdplay %s",
++		command = g_strdup_printf ("%%LOCALBASE%%/bin/esdplay %s",
  				soundfile);
  	} else if (g_file_test ("/usr/bin/play",
  			(G_FILE_TEST_EXISTS | G_FILE_TEST_IS_EXECUTABLE)))
