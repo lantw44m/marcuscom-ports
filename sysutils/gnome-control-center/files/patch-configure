@@ -1,6 +1,15 @@
---- configure.orig	Wed Dec 18 16:10:09 2002
-+++ configure	Sun Dec 22 16:36:03 2002
-@@ -12607,7 +12608,7 @@
+--- configure.orig	Tue Dec 30 15:29:25 2003
++++ configure	Tue Dec 30 16:00:39 2003
+@@ -25519,7 +25519,7 @@
+ if test "x$CATOBJEXT" = "x.mo" ; then
+   localedir=`eval echo "${libdir}/locale"`
+ else
+-  localedir=`eval echo "${datadir}/locale"`
++  localedir=`eval echo "${prefix}/share/locale"`
+ fi
+ prefix="$glib_save_prefix"
+ exec_prefix="$glib_save_exec_prefix"
+@@ -25791,7 +25791,7 @@
  
  
  cat >>confdefs.h <<_ACEOF
