@@ -7,6 +7,7 @@
 
 PORTNAME=	epiphany
 PORTVERSION=	1.5.8
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
@@ -36,7 +37,8 @@ HEADERS_SUFX=
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui desktopfileutils
+GNOME_DESKTOP_VERSION=2
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop desktopfileutils
 USE_LIBTOOL_VER=15
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
