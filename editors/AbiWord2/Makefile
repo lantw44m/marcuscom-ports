@@ -66,7 +66,7 @@ post-install:
 	@${CAT} ${PKGMESSAGE}
 	@${INSTALL_DATA} ${WRKSRC}/src/pkg/linux/rpm/data/abiword.desktop \
 		${PREFIX}/share/gnome/apps/Applications/abiword.desktop
-	@${LN} -sf ${PREFIX}/share/AbiSuite/icons/abiword_48.png \
+	@${LN} -sf ${PREFIX}/share/AbiSuite-2.0/icons/abiword_48.png \
 		${PREFIX}/share/gnome/pixmaps/abiword_48.png
 
 .include <bsd.port.post.mk>
