@@ -55,10 +55,10 @@ GST_SHLIB_VERSION=	1
 _USE_GSTREAMER_ALL=	a52dec aalib artsd audiofile cdparanoia dirac \
 			dts dv dvd esound faac faad ffmpeg flac gdkpixbuf \
 			gnomevfs gsm hermes ivorbis jack jpeg jpeg-mmx ladspa \
-			lame libcaca libfame libmng libpng mad mikmod mpeg2dec \
-			mpeg2enc mplex musicbrainz nas sdl shout sidplay \
-			smoothwave sndfile speex theora ogg pango swfdec \
-			vorbis xine xvid
+			lame libcaca libfame libmng libpng libvisual mad mikmod \
+			mpeg2dec mpeg2enc mplex musepack musicbrainz nas sdl \
+			shout sidplay smoothwave sndfile speex theora ogg pango \
+			swfdec vorbis xine xvid
 
 # other plugins
 OTHER_GSTREAMER_PLUGINS+=	core yes
@@ -103,6 +103,8 @@ lame_DEPENDS=	audio/gstreamer-plugins-lame
 mad_DEPENDS=	audio/gstreamer-plugins-mad
 
 mikmod_DEPENDS=	audio/gstreamer-plugins-mikmod
+
+musepack_DEPENDS=	audio/gstreamer-plugins-musepack
 
 musicbrainz_DEPENDS=	audio/gstreamer-plugins-musicbrainz
 musicbrainz_PLIST=	libgsttrm
@@ -154,6 +156,8 @@ libmng_PLIST=	libgstmng
 
 libpng_DEPENDS=	graphics/gstreamer-plugins-libpng
 libpng_PLIST=	libgstpng
+
+libvisual_DEPNDS=	graphics/gstreamer-plugins-libvisual
 
 swfdec_DEPENDS=	graphics/gstreamer-plugins-swfdec
 

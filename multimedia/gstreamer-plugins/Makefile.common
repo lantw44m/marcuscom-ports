@@ -183,6 +183,16 @@ LIB_DEPENDS+=	gsm.1:${PORTSDIR}/audio/gsm
 LIB_DEPENDS+=	jack.0:${PORTSDIR}/audio/jack
 .endif
 
+# libvisual
+.if ${GST_PLUGIN}=="libvisual"
+LIB_DEPENDS+=	visual.0:${PORTSDIR}/graphics/libvisual
+.endif
+
+# musepack
+.if ${GST_PLUGIN}=="musepack"
+LIB_DEPENDS+=	musepack.1:${PORTSDIR}/audio/libmusepack
+.endif
+
 # hermes
 .if ${GST_PLUGIN}=="hermes"
 LIB_DEPENDS+	Hermes.1:${PORTSDIR}/graphics/Hermes
