@@ -1,0 +1,26 @@
+--- configure.orig	Mon Oct 28 13:56:09 2002
++++ configure	Thu Dec 12 22:31:57 2002
+@@ -5649,6 +5649,7 @@
+ 
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
++$ac_aux_dir/ltconfig $LIBTOOL_DEPS
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+@@ -7897,11 +7898,11 @@
+ fi
+ 
+ if test x$APXS != xno; then
+-	APACHE_CFLAGS="-I`apxs -q INCLUDEDIR CFLAGS`"
+-	APACHE_LIBS=`apxs -q LDFLAGS_SHLIB LIBS_SHLIB`
++#	APACHE_CFLAGS="-I`apxs -q INCLUDEDIR CFLAGS`"
++#	APACHE_LIBS=`apxs -q LDFLAGS_SHLIB LIBS_SHLIB`
+ 
+-	save_CPPFLAGS=$CPPFLAGS
+-	CPPFLAGS=$APACHE_CFLAGS
++#	save_CPPFLAGS=$CPPFLAGS
++#	CPPFLAGS=$APACHE_CFLAGS
+ 	for ac_hdr in httpd.h http_config.h http_core.h http_log.h http_main.h http_protocol.h
+ do
+ ac_safe=`echo "$ac_hdr" | sed 'y%./+-%__p_%'`
