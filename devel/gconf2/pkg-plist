@@ -1,3 +1,4 @@
+bin/gconf-merge-tree
 bin/gconftool-2
 etc/gconf/2/path
 include/gconf/2/gconf/gconf-changeset.h
