@@ -170,6 +170,8 @@ share/locale/zh_TW/LC_MESSAGES/libgnomedb-2.mo
 @dirrm share/gnome/pixmaps/libgnomedb
 @dirrm share/gnome/omf/libgnomedb
 @dirrm share/gnome/gtk-doc/html/libgnomedb
+@unexec rmdir %D/share/gnome/gtk-doc/html 2> /dev/null || true
+@unexec rmdir %D/share/gnome/gtk-doc 2> /dev/null || true
 @dirrm share/gnome/gnome-db/ui
 @dirrm share/gnome/gnome-db
 @dirrm include/libgnomedb-1.2/libgnomedb
