@@ -11,6 +11,7 @@ share/locale/cs/LC_MESSAGES/gnome-keyring.mo
 share/locale/da/LC_MESSAGES/gnome-keyring.mo
 share/locale/de/LC_MESSAGES/gnome-keyring.mo
 share/locale/el/LC_MESSAGES/gnome-keyring.mo
+share/locale/en_CA/LC_MESSAGES/gnome-keyring.mo
 share/locale/es/LC_MESSAGES/gnome-keyring.mo
 share/locale/fi/LC_MESSAGES/gnome-keyring.mo
 share/locale/fr/LC_MESSAGES/gnome-keyring.mo
@@ -24,10 +25,13 @@ share/locale/ms/LC_MESSAGES/gnome-keyring.mo
 share/locale/no/LC_MESSAGES/gnome-keyring.mo
 share/locale/pl/LC_MESSAGES/gnome-keyring.mo
 share/locale/pt/LC_MESSAGES/gnome-keyring.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-keyring.mo
+share/locale/ru/LC_MESSAGES/gnome-keyring.mo
 share/locale/sk/LC_MESSAGES/gnome-keyring.mo
 share/locale/sq/LC_MESSAGES/gnome-keyring.mo
 share/locale/sr/LC_MESSAGES/gnome-keyring.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-keyring.mo
 share/locale/sv/LC_MESSAGES/gnome-keyring.mo
 share/locale/th/LC_MESSAGES/gnome-keyring.mo
+share/locale/uk/LC_MESSAGES/gnome-keyring.mo
 @dirrm include/gnome-keyring-1
