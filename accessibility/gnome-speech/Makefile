@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomespeech
 PORTVERSION=	0.2.1
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome_speech/0.2
@@ -18,10 +19,10 @@ COMMENT=	GNOME text-to-speech API
 
 RUN_DEPENDS=	festival:${PORTSDIR}/audio/festival
 
-USE_X_PREFIX=	yes
-USE_GNOME=	gnomehack gnomeprefix libbonobo
+USE_BZIP2=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
+USE_GNOME=	gnomehack libbonobo
 GNU_CONFIGURE=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static
