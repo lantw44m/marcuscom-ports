@@ -11,14 +11,3 @@
  
  noinst_PROGRAMS = test-gdk-pixbuf
  test_gdk_pixbuf_LDADD = $(LDADDS)
-@@ -1346,8 +1348,8 @@
- 
- info-am:
- 
--install-data-am: install-data-local install-libgdk_pixbufincludeHEADERS \
--	install-loaderLTLIBRARIES
-+install-data-am: install-libgdk_pixbufincludeHEADERS \
-+	install-loaderLTLIBRARIES install-data-local
- 
- install-exec-am: install-binPROGRAMS install-libLTLIBRARIES
- 
