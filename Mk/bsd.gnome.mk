@@ -338,7 +338,7 @@ librsvg2_LIB_DEPENDS=	rsvg-2.9:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${X11BASE}/libdata/pkgconfig/librsvg-2.0.pc
 librsvg2_USE_GNOME_IMPL=libartlgpl2 libxml2 gtk20 libgsf
 
-eel2_LIB_DEPENDS=	eel-2.8:${PORTSDIR}/x11-toolkits/eel2
+eel2_LIB_DEPENDS=	eel-2.9:${PORTSDIR}/x11-toolkits/eel2
 eel2_DETECT=		${X11BASE}/libdata/pkgconfig/eel-2.0.pc
 eel2_USE_GNOME_IMPL=	gnomevfs2 libgnomeui gail
 
