@@ -108,13 +108,13 @@ lib/libebook.so
 lib/libebook.so.5
 lib/libecal.a
 lib/libecal.so
-lib/libecal.so.4
+lib/libecal.so.5
 lib/libedata-book.a
 lib/libedata-book.so
 lib/libedata-book.so.0
 lib/libedata-cal.a
 lib/libedata-cal.so
-lib/libedata-cal.so.4
+lib/libedata-cal.so.5
 lib/libedataserver.a
 lib/libedataserver.so
 lib/libedataserver.so.3
