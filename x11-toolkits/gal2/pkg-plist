@@ -154,13 +154,13 @@ lib/libgal-a11y-%%VERSION%%.a
 lib/libgal-a11y-%%VERSION%%.so
 lib/libgal-a11y-%%VERSION%%.so.0
 libdata/pkgconfig/gal-%%VERSION%%.pc
-share/doc/gal2/gal-api.html
-share/doc/gal2/gal-api.sgml
-share/doc/gal2/gal-decl.txt
-share/doc/gal2/gal-sections.txt
-share/doc/gal2/gal.hierarchy
-share/doc/gal2/gal.signals
-share/doc/gal2/gal.types
+share/doc/gal-%%VERSION%%/gal-api.html
+share/doc/gal-%%VERSION%%/gal-api.sgml
+share/doc/gal-%%VERSION%%/gal-decl.txt
+share/doc/gal-%%VERSION%%/gal-sections.txt
+share/doc/gal-%%VERSION%%/gal.hierarchy
+share/doc/gal-%%VERSION%%/gal.signals
+share/doc/gal-%%VERSION%%/gal.types
 share/gnome/gal-%%VERSION%%/%%PORTVERSION%%/glade/e-categories-master-list-dialog.glade
 share/gnome/gal-%%VERSION%%/%%PORTVERSION%%/glade/e-table-config-no-group.glade
 share/gnome/gal-%%VERSION%%/%%PORTVERSION%%/glade/e-table-config.glade
@@ -201,12 +201,14 @@ share/locale/eu/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/fi/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/fr/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/gl/LC_MESSAGES/gal-%%VERSION%%.mo
+share/locale/hr/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/hu/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/it/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/ja/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/ko/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/lt/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/lv/LC_MESSAGES/gal-%%VERSION%%.mo
+share/locale/mn/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/ms/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/nl/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/nn/LC_MESSAGES/gal-%%VERSION%%.mo
@@ -233,8 +235,7 @@ share/locale/zh_TW/LC_MESSAGES/gal-%%VERSION%%.mo
 @dirrm share/gnome/gal-%%VERSION%%/%%PORTVERSION%%/glade
 @dirrm share/gnome/gal-%%VERSION%%/%%PORTVERSION%%
 @dirrm share/gnome/gal-%%VERSION%%
-@dirrm share/doc/gal2/gal
-@dirrm share/doc/gal2
+@dirrm share/doc/gal-%%VERSION%%
 @dirrm include/gal-%%VERSION%%/gal/widgets
 @dirrm include/gal-%%VERSION%%/gal/util
 @dirrm include/gal-%%VERSION%%/gal/shortcut-bar

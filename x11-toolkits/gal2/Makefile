@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gal2
-PORTVERSION=	2.1.4
-PORTREVISION=	1
+PORTVERSION=	2.1.5
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.1
@@ -23,7 +22,6 @@ USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix gnomehier intlhack libgnomeui  \
 		libgnomeprintui
-GNOME_HTML_DIR=	${PREFIX}/share/doc/gal2
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS=	--enable-static --with-libiconv
