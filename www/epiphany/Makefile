@@ -55,6 +55,12 @@ XXX_FILES=	EphyAutomation-common.c EphyAutomation-stubs.c \
 	   	EphyAutomation-skels.c EphyAutomation.h
 PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/\.[0-9]+$//}"
 
+.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.undef WITHOUT_GNOME
+.undef WITHOUT_ALL
+WITH_GNOME=	yes
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mnautilus2}!=""
