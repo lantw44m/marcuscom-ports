@@ -7,6 +7,7 @@
 
 PORTNAME=	gtk
 PORTVERSION=	2.1.0
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.1,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
@@ -22,7 +23,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 
 LIB_DEPENDS=	atk-1.0.100:${PORTSDIR}/devel/atk \
-		pango-1.0.100:${PORTSDIR}/x11-toolkits/pango \
+		pango-1.0.102:${PORTSDIR}/x11-toolkits/pango \
 		png.5:${PORTSDIR}/graphics/png \
 		tiff.4:${PORTSDIR}/graphics/tiff \
 		jpeg.9:${PORTSDIR}/graphics/jpeg
