@@ -1,0 +1,45 @@
+--- config/gdm.conf.in.orig	Mon Aug  2 18:20:59 2004
++++ config/gdm.conf.in	Thu Aug 19 12:54:26 2004
+@@ -77,7 +77,7 @@
+ # To try to kill all clients started at greeter time or in the Init script.
+ # doesn't always work, only if those clients have a window of their own
+ #KillInitClients=true
+-LogDir=@EXPANDED_LOGDIR@
++LogDir=/var/log
+ # You should probably never change this value unless you have a weird setup
+ PidFile=/var/run/gdm.pid
+ # Note that a post login script is run before a PreSession script.
+@@ -97,7 +97,7 @@
+ # Reboot, Halt and suspend commands, you can add different commands
+ # separated by a semicolon and gdm will use the first one it can find
+ #RebootCommand=/usr/bin/reboot;/sbin/reboot;/sbin/shutdown -r now;/usr/sbin/shutdown -r now
+-#HaltCommand=/usr/bin/poweroff;/sbin/poweroff;/sbin/shutdown -h now;/usr/sbin/shutdown -h now
++HaltCommand=/sbin/shutdown -p now;/usr/sbin/shutdown -p now
+ #SuspendCommand=
+ # Probably should not touch the below this is the standard setup
+ ServAuthDir=@EXPANDED_AUTHDIR@
+@@ -132,11 +132,10 @@
+ #FlexiReapDelayMinutes=5
+ # the X nest command
+ Xnest=@X_SERVER_PATH@/Xnest -audit 0 -name Xnest
+-# Automatic VT allocation.  Right now only works on Linux.  This way
+-# we force X to use specific vts.  turn VTAllocation to false if this
+-# is causing problems.
+-#FirstVT=7
+-#VTAllocation=true
++# Automatic VT allocation. This way we force X to use specific vts.
++# Turn VTAllocation to false if this is causing problems.
++#FirstVT=9
++VTAllocation=false
+ # Should double login be treated with a warning (and possibility to change
+ # vts on linux systems for console logins)
+ #DoubleLoginWarning=true
+@@ -241,7 +240,7 @@
+ # The specific gtkrc file we use.  It should be the full path to the gtkrc
+ # that we need.  Unless you need a specific gtkrc that doesn't correspond to
+ # a specific theme, then just use the GtkTheme key
+-#GtkRC=@EXPANDED_DATADIR@/themes/Default/gtk/gtkrc
++GtkRC=@EXPANDED_DATADIR@/../themes/Default/gtk-2.0/gtkrc
+ 
+ # The GTK+ theme to use for the gui
+ #GtkTheme=Default

@@ -1,0 +1,11 @@
+--- config/Makefile.in.orig	Fri Jun 11 15:40:03 2004
++++ config/Makefile.in	Fri Jun 11 15:41:30 2004
+@@ -400,7 +400,7 @@
+ 
+ 	if test '!' -d $(DESTDIR)$(logdir); then \
+ 		$(mkinstalldirs) $(DESTDIR)$(logdir); \
+-		chown root:root $(DESTDIR)$(logdir); \
++		chown root:wheel $(DESTDIR)$(logdir); \
+ 		chmod 755 $(DESTDIR)$(logdir); \
+ 	fi
+ 
