@@ -61,21 +61,18 @@ share/gnome/help/screem/C/figures/tree.png
 share/gnome/help/screem/C/legal.xml
 share/gnome/help/screem/C/screem.xml
 share/gnome/mime-info/screem.keys
-share/gnome/mime/XMLnamespaces
-share/gnome/mime/application/vnd.wap.wmlc.xml
-share/gnome/mime/application/vnd.wap.wmlscriptc.xml
-share/gnome/mime/application/x-screem-tag-tree.xml
-share/gnome/mime/application/x-screem.xml
-share/gnome/mime/application/xhtml+xml.xml
-share/gnome/mime/globs
-share/gnome/mime/image/vnd.wap.wbmp.xml
-share/gnome/mime/magic
-share/gnome/mime/packages/screem.xml
-share/gnome/mime/text/html.xml
-share/gnome/mime/text/vnd.wap.wml.xml
-share/gnome/mime/text/vnd.wap.wmlscript.xml
-share/gnome/mime/text/x-component.xml
-share/gnome/mime/text/x-javascript.xml
+share/mime/application/vnd.wap.wmlc.xml
+share/mime/application/vnd.wap.wmlscriptc.xml
+share/mime/application/x-screem-tag-tree.xml
+share/mime/application/x-screem.xml
+share/mime/application/xhtml+xml.xml
+share/mime/image/vnd.wap.wbmp.xml
+share/mime/packages/screem.xml
+share/mime/text/html.xml
+share/mime/text/vnd.wap.wml.xml
+share/mime/text/vnd.wap.wmlscript.xml
+share/mime/text/x-component.xml
+share/mime/text/x-javascript.xml
 share/gnome/omf/screem/screem-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/screem/screem-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/screem.png
@@ -229,3 +226,5 @@ share/locale/zh_CN/LC_MESSAGES/screem.mo
 @dirrm share/gnome/screem/ui
 @dirrm share/gnome/screem
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/screem/screem-C.omf 2>/dev/null || /usr/bin/true
+@exec update-mime-database %D/share/mime
+@unexec update-mime-database %D/share/mime

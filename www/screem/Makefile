@@ -35,8 +35,6 @@ USE_OPENSSL=	yes
 CONFIGURE_ARGS+=	--with-ssl
 .endif
 
-IGNORE=	Has some MIME-related plist issues
-
 USE_PERL5=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
@@ -45,6 +43,10 @@ CONFIGURE_ARGS+=	--without-included-neon
 post-patch:
 	@${REINPLACE_CMD} -e 's|\$${DATADIRNAME}/\$${PACKAGE}/pixmaps|\$${DATADIRNAME}/gnome/\$${PACKAGE}/pixmaps|g' \
 		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|$$(datadir)/mime/|${PREFIX}/share/mime/| ; \
+		s|$$(datadir)/mime$$|${PREFIX}/share/mime|' \
+		${WRKSRC}/data/mime/Makefile.in \
+		${WRKSRC}/data/tagtrees/Makefile.in
 
 post-configure:
 	@${REINPLACE_CMD} -e 's|\/\* #undef HAVE_LIMITS_H \*\/|#define HAVE_LIMITS_H 1|g' ${WRKSRC}/config.h
