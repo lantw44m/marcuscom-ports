@@ -68,6 +68,8 @@ share/doc/panel-applet/applet-writing.html
 share/doc/panel-applet/index.sgml
 share/doc/panel-applet/libpanel-applet.html
 share/doc/panel-applet/multi-applets.html
+share/doc/panel-applet/panel-applet-gconf.html
+share/doc/panel-applet/panel-applet-panel-applet-gconf-utilities.html
 share/doc/panel-applet/panel-applet.html
 share/doc/panel-applet/panel-signals.html
 share/doc/panel-applet/panelapplet.html
@@ -322,9 +324,27 @@ share/gnome/omf/gnome-panel/workspace-switcher-zh_CN.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/workspace-switcher-zh_CN.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-panel/workspace-switcher-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/workspace-switcher-zh_TW.omf 2>/dev/null || /usr/bin/true
+share/gnome/icons/cdeappmenu.png
+share/gnome/icons/gnome-amusements.png
+share/gnome/icons/gnome-clock.png
+share/gnome/icons/gnome-gegl.png
+share/gnome/icons/gnome-gegl2-2.png
+share/gnome/icons/gnome-gegl2.png
+share/gnome/icons/gnome-lockscreen.png
+share/gnome/icons/gnome-panel-type-corner.png
+share/gnome/icons/gnome-panel-type-edge.png
+share/gnome/icons/gnome-panel-type-floating.png
+share/gnome/icons/gnome-panel-type-menu.png
+share/gnome/icons/gnome-panel-type-sliding.png
+share/gnome/icons/gnome-panel.png
+share/gnome/icons/gnome-run.png
+share/gnome/icons/gnome-screenshot.png
+share/gnome/icons/panel-drawer.png
+share/gnome/icons/panel-force-quit.png
 share/gnome/panel/gnome-panel-preferences.glade
 share/gnome/panel/gnome-panel-screenshot.glade
 share/gnome/panel/panel-properties-dialog.glade
+share/gnome/panel/panel-run-dialog.glade
 share/gnome/pixmaps/fish/fishanim.png
 share/gnome/pixmaps/fish/footguy.png
 share/gnome/pixmaps/fish/monkey.png
@@ -336,6 +356,7 @@ share/locale/ar/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/bn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-panel-2.0.mo
@@ -356,6 +377,7 @@ share/locale/hu/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/li/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-panel-2.0.mo
@@ -372,9 +394,9 @@ share/locale/ro/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ru/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-panel-2.0.mo
-share/locale/sp/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sr/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/sr@Latn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-panel-2.0.mo
@@ -386,6 +408,7 @@ share/locale/zh_CN/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/omf/gnome-panel
 @dirrm share/gnome/idl/gnome-panel-2.0
+@dirrm share/gnome/icons
 @dirrm share/gnome/help/workspace-switcher/zh_TW/figures
 @dirrm share/gnome/help/workspace-switcher/zh_TW
 @dirrm share/gnome/help/workspace-switcher/zh_CN/figures
