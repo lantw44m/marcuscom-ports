@@ -698,6 +698,26 @@ share/gnome/help/mixer_applet2/zh_TW/figures/mixer_applet.png
 share/gnome/help/mixer_applet2/zh_TW/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/zh_TW/legal.xml
 share/gnome/help/mixer_applet2/zh_TW/mixer_applet2.xml
+share/gnome/help/modemlights/C/figures/modemlights-advanced.png
+share/gnome/help/modemlights/C/figures/modemlights-advpref.png
+share/gnome/help/modemlights/C/figures/modemlights-color.png
+share/gnome/help/modemlights/C/figures/modemlights-general.png
+share/gnome/help/modemlights/C/figures/modemlights-prefs.png
+share/gnome/help/modemlights/C/figures/modemlights.png
+share/gnome/help/modemlights/C/figures/modemlights_applet.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_advanced.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_awaiting.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_button.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_button_2.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_colors.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_connected.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_general.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_if_connect.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_not_connected.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_prefs_connecting.png
+share/gnome/help/modemlights/C/figures/modemlights_applet_prefs_display.png
+share/gnome/help/modemlights/C/legal.xml
+share/gnome/help/modemlights/C/modemlights.xml
 share/gnome/help/stickynotes_applet/C/legal.xml
 share/gnome/help/stickynotes_applet/C/stickynotes_applet.xml
 share/gnome/omf/gnome-applets/accessx-status-C.omf
@@ -886,6 +906,8 @@ share/gnome/omf/gnome-applets/mixer_applet2-zh_CN.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/mixer_applet2-zh_CN.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/mixer_applet2-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/mixer_applet2-zh_TW.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-applets/modemlights-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/modemlights-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/stickynotes_applet-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/stickynotes_applet-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/accessx-status-applet/ax-applet.png
@@ -1148,6 +1170,7 @@ share/locale/gl/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/he/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hi/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hu/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/is/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1185,6 +1208,9 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/pixmaps/accessx-status-applet
 @dirrm share/gnome/help/stickynotes_applet/C
 @dirrm share/gnome/help/stickynotes_applet
+@dirrm share/gnome/help/modemlights/C/figures
+@dirrm share/gnome/help/modemlights/C
+@dirrm share/gnome/help/modemlights
 @dirrm share/gnome/help/mixer_applet2/zh_TW/figures
 @dirrm share/gnome/help/mixer_applet2/zh_TW
 @dirrm share/gnome/help/mixer_applet2/zh_CN/figures
@@ -1510,4 +1536,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/mixer_applet2-sv.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/mixer_applet2-zh_CN.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/mixer_applet2-zh_TW.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/modemlights-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/stickynotes_applet-C.omf 2>/dev/null || /usr/bin/true
