@@ -30,14 +30,16 @@ GCONF_SCHEMAS=	screem.schemas
 
 CROCO_VERSION=	0.6
 
-.if !defined(WITHOUT_OPENSS)
+.if !defined(WITHOUT_OPENSSL)
 USE_OPENSSL=	yes
 CONFIGURE_ARGS+=	--with-ssl
 .endif
 
+IGNORE=	Has some MIME-related plist issues
+
 USE_PERL5=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+		LIBS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--without-included-neon
 
 post-patch:
