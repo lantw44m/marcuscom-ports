@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libsoup
-PORTVERSION=	1.99.12
+PORTVERSION=	1.99.17
 CATEGORIES=	devel gnome
 MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
 		${MASTER_SITE_GNOME}
@@ -16,12 +16,10 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A SOAP (Simple Object Access Protocol) implementation in C
 
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
-		glib-2.0.200:${PORTSDIR}/devel/glib20
+LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 #USE_BZIP2=	yes
-USE_GNOMENG=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack glib20
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
 USE_OPENSSL=	yes
