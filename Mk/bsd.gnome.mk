@@ -24,7 +24,6 @@ Gnome_Include_MAINTAINER=	gnome@FreeBSD.org
 # As a result proper LIB_DEPENDS/RUN_DEPENDS will be added and CONFIGURE_ENV
 # and MAKE_ENV defined.
 
-
 # non-version specific components
 _USE_GNOME_ALL=	gnomehack lthack gnomeprefix gnomehier esound gnomemimedata \
 		gnometarget pkgconfig intlhack
@@ -43,7 +42,6 @@ _USE_GNOME_ALL+=gnomeaudio glib20 atk pango gtk20 linc libidl orbit2 \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
 		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
 		libgnomedb gtksourceview libgsf pygtk2 pygnome2 gstreamerplugins
-
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -219,7 +217,7 @@ pygtk_BUILD_DEPENDS=	${pygtk_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk
 pygtk_RUN_DEPENDS=		${pygtk_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk
 pygtk_USE_GNOME_IMPL=	gnomelibs gdkpixbuf libglade
 
-pygnome_DETECT=	${PYTHON_SITELIBDIR}/gtk-1.2/gnome/__init__.py
+pygnome_DETECT=			${PYTHON_SITELIBDIR}/gtk-1.2/gnome/__init__.py
 pygnome_BUILD_DEPENDS=	${pygnome_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome
 pygnome_RUN_DEPENDS=	${pygnome_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome
 pygnome_USE_GNOME_IMPL=	gtkhtml pygtk
@@ -395,7 +393,7 @@ pygtk2_USE_GNOME_IMPL=	libglade2
 pygnome2_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py
 pygnome2_BUILD_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_RUN_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
-pygnome2_USE_GNOME_IMPL=	libgnomeprintui libgtkhtml gnomepanel libzvt nautilus2 pygtk2
+pygnome2_USE_GNOME_IMPL=libgnomeprintui libgtkhtml gnomepanel libzvt nautilus2 pygtk2
 
 gstreamerplugins_LIB_DEPENDS=	gstplay-0.7.2:${PORTSDIR}/multimedia/gstreamer-plugins \
 								gstreamer-0.7:${PORTSDIR}/multimedia/gstreamer
