@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	screem
-PORTVERSION=	0.10.2
-PORTREVISION=	1
+PORTVERSION=	0.12.0
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -16,34 +15,33 @@ MAINTAINER=	coop9211@uidaho.edu
 COMMENT=	Nice GNOME/GTK-based HTML editor
 
 LIB_DEPENDS+=	neon.24:${PORTSDIR}/www/neon \
-		croco-${CROCO_VERSION}.3:${PORTSDIR}/textproc/libcroco
+		croco-${CROCO_VERSION}.3:${PORTSDIR}/textproc/libcroco \
+		dbus-1.0:${PORTSDIR}/devel/dbus
 
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
 USE_X_PREFIX=	yes
 USE_XPM=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui libgnomeprintui libgtkhtml \
-		gtksourceview lthack intlhack
-USE_INC_LIBTOOL_VER=13
-INSTALLS_SHLIB=	yes
+		gtksourceview intlhack
+USE_LIBTOOL_VER=15
 
 GCONF_SCHEMAS=	screem.schemas
 
 CROCO_VERSION=	0.6
 
-.ifndef WITHOUT_OPENSSL
+.if !defined(WITHOUT_OPENSS)
 USE_OPENSSL=	yes
 CONFIGURE_ARGS+=	--with-ssl
 .endif
 
 USE_PERL5=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS+=	--without-included-neon
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|\$${DATADIRNAME}/\$${PACKAGE}/pixmaps|\$${DATADIRNAME}/gnome/\$${PACKAGE}/pixmaps|g ; \
-		s|libcroco|libcroco-${CROCO_VERSION}|g' \
+	@${REINPLACE_CMD} -e 's|\$${DATADIRNAME}/\$${PACKAGE}/pixmaps|\$${DATADIRNAME}/gnome/\$${PACKAGE}/pixmaps|g' \
 		${WRKSRC}/configure
 
 post-configure:
