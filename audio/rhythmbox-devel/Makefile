@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	rhythmbox
-PORTVERSION=	0.7.0
-PORTREVISION=	2
+PORTVERSION=	0.7.1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.7
@@ -28,7 +27,7 @@ USE_GNOME=	gnomehack gnomeprefix libgnomeui
 USE_LIBTOOL_VER=13
 CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lm" \
 		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
-	
+
 OPTIONS=	XINE "Use xine backend instead of GStreamer" off \
 		MONKEYMEDIA "Use MonkeyMedia metadata reader" off
 

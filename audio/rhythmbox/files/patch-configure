@@ -8,12 +8,3 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-@@ -20739,7 +20740,7 @@
- else if test "x$with_player" = "xgstreamer"; then
- 			HAVE_SOUNDSYSTEM=no
- 
--		GST_MAJORMINOR=0.7
-+		GST_MAJORMINOR=0.8
- 
-   succeeded=no
- 

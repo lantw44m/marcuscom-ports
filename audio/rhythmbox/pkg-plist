@@ -69,6 +69,7 @@ share/gnome/rhythmbox/art/rhythmbox-album.png
 share/gnome/rhythmbox/art/rhythmbox-audiocd.png
 share/gnome/rhythmbox/art/rhythmbox-automatic-playlist.png
 share/gnome/rhythmbox/art/rhythmbox-dnd.png
+share/gnome/rhythmbox/art/rhythmbox-ipod.png
 share/gnome/rhythmbox/art/rhythmbox-iradio.png
 share/gnome/rhythmbox/art/rhythmbox-library.png
 share/gnome/rhythmbox/art/rhythmbox-next.png
@@ -98,6 +99,7 @@ share/gnome/rhythmbox/glade/druid.glade
 share/gnome/rhythmbox/glade/general-prefs.glade
 share/gnome/rhythmbox/glade/library-prefs.glade
 share/gnome/rhythmbox/glade/load-failure.glade
+share/gnome/rhythmbox/glade/song-info-multiple.glade
 share/gnome/rhythmbox/glade/song-info.glade
 share/gnome/rhythmbox/glade/station-new.glade
 share/gnome/rhythmbox/glade/station-properties.glade
@@ -107,6 +109,7 @@ share/locale/am/LC_MESSAGES/rhythmbox.mo
 share/locale/ar/LC_MESSAGES/rhythmbox.mo
 share/locale/az/LC_MESSAGES/rhythmbox.mo
 share/locale/be/LC_MESSAGES/rhythmbox.mo
+share/locale/bg/LC_MESSAGES/rhythmbox.mo
 share/locale/ca/LC_MESSAGES/rhythmbox.mo
 share/locale/cs/LC_MESSAGES/rhythmbox.mo
 share/locale/cy/LC_MESSAGES/rhythmbox.mo
@@ -114,9 +117,12 @@ share/locale/da/LC_MESSAGES/rhythmbox.mo
 share/locale/de/LC_MESSAGES/rhythmbox.mo
 share/locale/el/LC_MESSAGES/rhythmbox.mo
 share/locale/es/LC_MESSAGES/rhythmbox.mo
+share/locale/et/LC_MESSAGES/rhythmbox.mo
 share/locale/fi/LC_MESSAGES/rhythmbox.mo
 share/locale/fr/LC_MESSAGES/rhythmbox.mo
 share/locale/ga/LC_MESSAGES/rhythmbox.mo
+share/locale/hr/LC_MESSAGES/rhythmbox.mo
+share/locale/hu/LC_MESSAGES/rhythmbox.mo
 share/locale/id/LC_MESSAGES/rhythmbox.mo
 share/locale/it/LC_MESSAGES/rhythmbox.mo
 share/locale/ja/LC_MESSAGES/rhythmbox.mo
@@ -136,6 +142,7 @@ share/locale/sr/LC_MESSAGES/rhythmbox.mo
 share/locale/sr@Latn/LC_MESSAGES/rhythmbox.mo
 share/locale/sv/LC_MESSAGES/rhythmbox.mo
 share/locale/tr/LC_MESSAGES/rhythmbox.mo
+share/locale/uk/LC_MESSAGES/rhythmbox.mo
 share/locale/vi/LC_MESSAGES/rhythmbox.mo
 share/locale/zh_TW/LC_MESSAGES/rhythmbox.mo
 @dirrm share/gnome/rhythmbox/glade
