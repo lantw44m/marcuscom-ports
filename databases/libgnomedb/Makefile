@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	libgnomedb
-PORTVERSION=	1.1.5
-PORTREVISION=	2
+PORTVERSION=	1.1.6
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/libgnomedb/1.1
@@ -20,8 +19,8 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui libgda2 gtksourceview \
-		intlhack lthack
-USE_INC_LIBTOOL_VER=	13
+		intlhack
+USE_LIBTOOL_VER=15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

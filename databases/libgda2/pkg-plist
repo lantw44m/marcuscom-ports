@@ -101,6 +101,10 @@ libdata/pkgconfig/libgda.pc
 %%DOCSDIR%%/ch09s04.html
 %%DOCSDIR%%/ch09s05.html
 %%DOCSDIR%%/ch09s06.html
+%%DOCSDIR%%/compiling.html
+%%DOCSDIR%%/connecting.html
+%%DOCSDIR%%/connections.html
+%%DOCSDIR%%/data-model.html
 %%DOCSDIR%%/fdl-section1.html
 %%DOCSDIR%%/fdl-section10.html
 %%DOCSDIR%%/fdl-section2.html
@@ -113,12 +117,15 @@ libdata/pkgconfig/libgda.pc
 %%DOCSDIR%%/fdl-section9.html
 %%DOCSDIR%%/fdl-using.html
 %%DOCSDIR%%/fdl.html
+%%DOCSDIR%%/home.png
 %%DOCSDIR%%/index.html
 %%DOCSDIR%%/index.sgml
 %%DOCSDIR%%/installation-configuring.html
 %%DOCSDIR%%/installation-installing.html
 %%DOCSDIR%%/installation.html
 %%DOCSDIR%%/introduction.html
+%%DOCSDIR%%/left.png
+%%DOCSDIR%%/libgda.devhelp
 %%DOCSDIR%%/libgda-GdaClient.html
 %%DOCSDIR%%/libgda-GdaConnection.html
 %%DOCSDIR%%/libgda-GdaDataModel.html
@@ -187,6 +194,15 @@ libdata/pkgconfig/libgda.pc
 %%DOCSDIR%%/libgda-reports.html
 %%DOCSDIR%%/libgda-server-provider-details.html
 %%DOCSDIR%%/libgda-xql.html
+%%DOCSDIR%%/main_example.html
+%%DOCSDIR%%/manage-gdavalue.html
+%%DOCSDIR%%/managing-errors.html
+%%DOCSDIR%%/migration-configuration.html
+%%DOCSDIR%%/migration-executing-commands.html
+%%DOCSDIR%%/migration.html
+%%DOCSDIR%%/processing-queries.html
+%%DOCSDIR%%/right.png
+%%DOCSDIR%%/up.png
 share/gnome/libgda/xml/gda-report.dtd
 share/gnome/libgda/xml/gda-report-result.dtd
 share/gnome/libgda/xml/gda-xml-query.dtd
@@ -233,6 +249,7 @@ share/locale/zh_TW/LC_MESSAGES/libgda-2.mo
 @dirrm share/gnome/omf/libgda
 @dirrm share/gnome/libgda/xml
 @dirrm share/gnome/libgda
+@dirrm %%DOCSDIR%%
 @dirrm lib/libgda/providers
 @dirrm lib/libgda
 @dirrm include/libgda/sql
