@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,7 +25,6 @@ RUN_DEPENDS=	${X11BASE}/libexec/battstat-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		gedit:${PORTSDIR}/editors/gedit2 \
 		gnome-terminal:${PORTSDIR}/x11/gnometerminal \
 		gnome-session:${PORTSDIR}/x11/gnomesession \
-		glade-2:${PORTSDIR}/devel/glade2 \
 		metacity:${PORTSDIR}/x11-wm/metacity \
 		sawfish:${PORTSDIR}/x11-wm/sawfish2 \
 		metacity-setup:${PORTSDIR}/x11-wm/metacity-setup \
