@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomevfs2
 PORTVERSION=	2.5.5
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.5
@@ -15,6 +16,8 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME Virtual File System
+
+RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
