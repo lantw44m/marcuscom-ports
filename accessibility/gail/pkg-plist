@@ -6,6 +6,16 @@ lib/libgailutil.a
 lib/libgailutil.so
 lib/libgailutil.so.17
 libdata/pkgconfig/gail.pc
+share/doc/gail-libgail-util/gail-libgail-util-GailMisc.html
+share/doc/gail-libgail-util/gail-libgail-util-GailTextUtil.html
+share/doc/gail-libgail-util/gail-libgail-util.devhelp
+share/doc/gail-libgail-util/home.png
+share/doc/gail-libgail-util/index.html
+share/doc/gail-libgail-util/index.sgml
+share/doc/gail-libgail-util/left.png
+share/doc/gail-libgail-util/libgail-util-main.html
+share/doc/gail-libgail-util/right.png
+share/doc/gail-libgail-util/up.png
 share/locale/ar/LC_MESSAGES/gail.mo
 share/locale/az/LC_MESSAGES/gail.mo
 share/locale/be/LC_MESSAGES/gail.mo
@@ -56,6 +66,7 @@ share/locale/sr/LC_MESSAGES/gail.mo
 share/locale/sr@Latn/LC_MESSAGES/gail.mo
 share/locale/sv/LC_MESSAGES/gail.mo
 share/locale/ta/LC_MESSAGES/gail.mo
+share/locale/th/LC_MESSAGES/gail.mo
 share/locale/tk/LC_MESSAGES/gail.mo
 share/locale/tr/LC_MESSAGES/gail.mo
 share/locale/uk/LC_MESSAGES/gail.mo
