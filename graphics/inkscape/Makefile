@@ -42,4 +42,7 @@ patch-autotools:
 		${RM} $$file.tmp; \
 	done);
 
+post-install:
+	@-update-desktop-database
+
 .include <bsd.port.mk>
