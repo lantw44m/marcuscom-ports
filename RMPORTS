@@ -3,3 +3,4 @@ x11/themus
 x11-fonts/fontilus
 misc/stickynotes_applet
 editors/gedit-plugins
+x11-toolkits/gtk-thinice-engine
