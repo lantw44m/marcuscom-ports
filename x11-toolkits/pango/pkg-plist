@@ -25,16 +25,16 @@ include/pango-1.0/pango/pangox.h
 %%XFREE4:%%include/pango-1.0/pango/pangoxft.h
 lib/libpango-1.0.a
 lib/libpango-1.0.so
-lib/libpango-1.0.so.100
+lib/libpango-1.0.so.102
 lib/libpangoft2-1.0.a
 lib/libpangoft2-1.0.so
-lib/libpangoft2-1.0.so.100
+lib/libpangoft2-1.0.so.102
 lib/libpangox-1.0.a
 lib/libpangox-1.0.so
-lib/libpangox-1.0.so.100
+lib/libpangox-1.0.so.102
 %%XFREE4:%%lib/libpangoxft-1.0.a
 %%XFREE4:%%lib/libpangoxft-1.0.so
-%%XFREE4:%%lib/libpangoxft-1.0.so.100
+%%XFREE4:%%lib/libpangoxft-1.0.so.102
 lib/pango/%%VERSION%%/modules/pango-arabic-ft2.so
 lib/pango/%%VERSION%%/modules/pango-arabic-x.so
 %%XFREE4:%%lib/pango/%%VERSION%%/modules/pango-arabic-xft.so
@@ -80,6 +80,7 @@ share/doc/pango/pango-Win32-Fonts-and-Rendering.html
 share/doc/pango/pango-X-Fonts.html
 share/doc/pango/pango-X-Rendering.html
 share/doc/pango/pango-Xft-Fonts-and-Rendering.html
+share/doc/pango/pango.devhelp
 share/doc/pango/pango.html
 share/doc/pango/rendering.html
 @dirrm share/doc/pango
