@@ -10,6 +10,7 @@ libdata/bonobo/servers/File_Roller_Component.server
 %%PORTDOCS%%%%DOCSDIR%%/TODO
 share/gnome/application-registry/file-roller.applications
 share/gnome/applications/file-roller.desktop
+@exec update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/file-roller/glade/file_roller.glade
 share/gnome/help/file-roller/C/figures/file-roller_home.png
 share/gnome/help/file-roller/C/figures/file-roller_leftarrow.png
@@ -198,3 +199,4 @@ share/locale/zh_TW/LC_MESSAGES/file-roller.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/file-roller/file-roller-zh_CN.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/file-roller/file-roller-zh_HK.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/file-roller/file-roller-zh_TW.omf 2>/dev/null || /usr/bin/true
+@unexec update-desktop-database > /dev/null || /usr/bin/true

@@ -7,6 +7,7 @@
 
 PORTNAME=	fileroller
 PORTVERSION=	2.7.3
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -20,7 +21,7 @@ COMMENT=	An archive manager for zip files, tar, etc
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui
+USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui desktopfileutils
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
