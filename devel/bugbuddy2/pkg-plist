@@ -19,10 +19,48 @@ share/gnome/bug-buddy/gnome.png
 share/gnome/bug-buddy/ximian.png
 share/gnome/help/bug-buddy/C/bug-buddy.xml
 share/gnome/help/bug-buddy/C/legal.xml
+share/gnome/help/bug-buddy/de/bug-buddy.xml
+share/gnome/help/bug-buddy/de/figures/bug-buddy_window.png
+share/gnome/help/bug-buddy/de/legal.xml
+share/gnome/help/bug-buddy/es/bug-buddy.xml
+share/gnome/help/bug-buddy/es/figures/bug-buddy_window.png
+share/gnome/help/bug-buddy/es/legal.xml
+share/gnome/help/bug-buddy/fr/bug-buddy.xml
+share/gnome/help/bug-buddy/fr/figures/bug-buddy_window.png
+share/gnome/help/bug-buddy/fr/legal.xml
+share/gnome/help/bug-buddy/it/bug-buddy.xml
+share/gnome/help/bug-buddy/it/figures/bug-buddy_window.png
+share/gnome/help/bug-buddy/it/legal.xml
+share/gnome/help/bug-buddy/ja/bug-buddy.xml
+share/gnome/help/bug-buddy/ja/figures/bug-buddy_window.png
+share/gnome/help/bug-buddy/ja/legal.xml
+share/gnome/help/bug-buddy/ko/bug-buddy.xml
+share/gnome/help/bug-buddy/ko/figures/bug-buddy_window.png
+share/gnome/help/bug-buddy/ko/legal.xml
+share/gnome/help/bug-buddy/sv/bug-buddy.xml
+share/gnome/help/bug-buddy/sv/figures/bug-buddy_window.png
+share/gnome/help/bug-buddy/sv/legal.xml
+share/gnome/help/bug-buddy/zh_CN/bug-buddy.xml
+share/gnome/help/bug-buddy/zh_CN/figures/bug-buddy_window.png
+share/gnome/help/bug-buddy/zh_CN/legal.xml
+share/gnome/help/bug-buddy/zh_HK/bug-buddy.xml
+share/gnome/help/bug-buddy/zh_HK/figures/bug-buddy_window.png
+share/gnome/help/bug-buddy/zh_HK/legal.xml
+share/gnome/help/bug-buddy/zh_TW/bug-buddy.xml
+share/gnome/help/bug-buddy/zh_TW/figures/bug-buddy_window.png
+share/gnome/help/bug-buddy/zh_TW/legal.xml
 share/gnome/mime-info/bug-buddy.keys
-share/gnome/mime-info/bug-buddy.mime
 share/gnome/omf/bug-buddy/bug-buddy-C.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/bug-buddy/bug-buddy-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/bug-buddy/bug-buddy-de.omf
+share/gnome/omf/bug-buddy/bug-buddy-es.omf
+share/gnome/omf/bug-buddy/bug-buddy-fr.omf
+share/gnome/omf/bug-buddy/bug-buddy-it.omf
+share/gnome/omf/bug-buddy/bug-buddy-ja.omf
+share/gnome/omf/bug-buddy/bug-buddy-ko.omf
+share/gnome/omf/bug-buddy/bug-buddy-sv.omf
+share/gnome/omf/bug-buddy/bug-buddy-zh_CN.omf
+share/gnome/omf/bug-buddy/bug-buddy-zh_HK.omf
+share/gnome/omf/bug-buddy/bug-buddy-zh_TW.omf
 share/gnome/pixmaps/bug-buddy.png
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
@@ -36,6 +74,7 @@ share/locale/cy/LC_MESSAGES/bug-buddy.mo
 share/locale/da/LC_MESSAGES/bug-buddy.mo
 share/locale/de/LC_MESSAGES/bug-buddy.mo
 share/locale/el/LC_MESSAGES/bug-buddy.mo
+share/locale/en_CA/LC_MESSAGES/bug-buddy.mo
 share/locale/es/LC_MESSAGES/bug-buddy.mo
 share/locale/et/LC_MESSAGES/bug-buddy.mo
 share/locale/eu/LC_MESSAGES/bug-buddy.mo
@@ -81,6 +120,26 @@ share/locale/wa/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_CN/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
 @dirrm share/gnome/omf/bug-buddy
+@dirrm share/gnome/help/bug-buddy/zh_TW/figures
+@dirrm share/gnome/help/bug-buddy/zh_TW
+@dirrm share/gnome/help/bug-buddy/zh_HK/figures
+@dirrm share/gnome/help/bug-buddy/zh_HK
+@dirrm share/gnome/help/bug-buddy/zh_CN/figures
+@dirrm share/gnome/help/bug-buddy/zh_CN
+@dirrm share/gnome/help/bug-buddy/sv/figures
+@dirrm share/gnome/help/bug-buddy/sv
+@dirrm share/gnome/help/bug-buddy/ko/figures
+@dirrm share/gnome/help/bug-buddy/ko
+@dirrm share/gnome/help/bug-buddy/ja/figures
+@dirrm share/gnome/help/bug-buddy/ja
+@dirrm share/gnome/help/bug-buddy/it/figures
+@dirrm share/gnome/help/bug-buddy/it
+@dirrm share/gnome/help/bug-buddy/fr/figures
+@dirrm share/gnome/help/bug-buddy/fr
+@dirrm share/gnome/help/bug-buddy/es/figures
+@dirrm share/gnome/help/bug-buddy/es
+@dirrm share/gnome/help/bug-buddy/de/figures
+@dirrm share/gnome/help/bug-buddy/de
 @dirrm share/gnome/help/bug-buddy/C
 @dirrm share/gnome/help/bug-buddy
 @dirrm share/gnome/bug-buddy/bugzilla/ximian
@@ -89,4 +148,3 @@ share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
 @dirrm share/gnome/bug-buddy
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/bug-buddy
 @dirrm etc/gconf/gconf.xml.defaults/apps/bug-buddy
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/bug-buddy/bug-buddy-C.omf 2>/dev/null || /usr/bin/true
