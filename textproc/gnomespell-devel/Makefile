@@ -1,0 +1,37 @@
+# New ports collection makefile for:	gnomespell
+# Date created:				29 December 2001
+# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	gnomespell
+PORTVERSION=	1.0.1
+CATEGORIES=	textproc gnome
+MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
+		${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/gnome-spell/1.0
+DISTNAME=	gnome-spell-${PORTVERSION}
+DIST_SUBDIR=	gnome
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	A GNOME/Bonobo component for spell checking
+
+LIB_DEPENDS=	aspell.15:${PORTSDIR}/textproc/aspell \
+		bonoboui-2.0:${PORTSDIR}/x11-toolkits/libbonoboui
+
+#USE_BZIP2=	yes
+USE_X_PREFIX=	yes
+USE_PERL5=	yes
+USE_GMAKE=	yes
+USE_GNOMENG=	yes
+USE_GNOME=	gnomeprefix gnomehack
+USE_LIBTOOL=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="-L${LOCALBASE}/lib"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>
