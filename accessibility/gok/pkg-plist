@@ -147,6 +147,8 @@ share/locale/fr/LC_MESSAGES/gok.mo
 share/locale/hi/LC_MESSAGES/gok.mo
 share/locale/it/LC_MESSAGES/gok.mo
 share/locale/ja/LC_MESSAGES/gok.mo
+share/locale/ko/LC_MESSAGES/gok.mo
+share/locale/mk/LC_MESSAGES/gok.mo
 share/locale/ml/LC_MESSAGES/gok.mo
 share/locale/ms/LC_MESSAGES/gok.mo
 share/locale/nl/LC_MESSAGES/gok.mo
@@ -154,12 +156,15 @@ share/locale/no/LC_MESSAGES/gok.mo
 share/locale/pl/LC_MESSAGES/gok.mo
 share/locale/pt/LC_MESSAGES/gok.mo
 share/locale/pt_BR/LC_MESSAGES/gok.mo
+share/locale/sl/LC_MESSAGES/gok.mo
+share/locale/sq/LC_MESSAGES/gok.mo
 share/locale/sr/LC_MESSAGES/gok.mo
 share/locale/sr@Latn/LC_MESSAGES/gok.mo
 share/locale/sv/LC_MESSAGES/gok.mo
 share/locale/uk/LC_MESSAGES/gok.mo
 share/locale/vi/LC_MESSAGES/gok.mo
 share/locale/zh_CN/LC_MESSAGES/gok.mo
+share/locale/zh_TW/LC_MESSAGES/gok.mo
 @dirrm share/gnome/omf/gok
 @dirrm share/gnome/help/gok/C/figures
 @dirrm share/gnome/help/gok/C
