@@ -1,8 +1,10 @@
 bin/evince
+bin/evince-thumbnailer
 share/gnome/applications/evince.desktop
 @exec update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/evince/evince-password.glade
 share/gnome/evince/evince-ui.xml
+share/gnome/evince/pdf-icon.png
 share/locale/bg/LC_MESSAGES/evince.mo
 share/locale/ca/LC_MESSAGES/evince.mo
 share/locale/cs/LC_MESSAGES/evince.mo

@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evince
-PORTVERSION=	0.1.6
+PORTVERSION=	0.1.7
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.1
@@ -26,7 +26,7 @@ USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui libgnomeprintui \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-GCONF_SCHEMAS=	evince.schemas
+GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas
 
 post-install:
 	@-update-desktop-database
