@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	1.5.9.2
+PORTVERSION=	1.5.90
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
@@ -35,7 +35,6 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 		--with-sub-version="FreeBSD GNOME Team Port" \
 		--with-krb5=/usr
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="${PTHREAD_LIBS}" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 EVO_VERSION=	1.5

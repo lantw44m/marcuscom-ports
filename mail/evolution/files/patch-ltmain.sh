@@ -1,14 +1,5 @@
 --- ltmain.sh.orig	Fri Mar  5 10:05:44 2004
-+++ ltmain.sh	Sat Mar  6 04:33:50 2004
-@@ -1349,7 +1349,7 @@
- 	  esac
- 	elif test "X$arg" = "X-lc_r"; then
- 	 case $host in
--	 *-*-openbsd* | *-*-freebsd*)
-+	 *-*-openbsd* | *-*-freebsd4*)
- 	   # Do not include libc_r directly, use -pthread flag.
- 	   continue
- 	   ;;
++++ ltmain.sh	Mon Jul  5 17:36:23 2004
 @@ -1364,8 +1364,16 @@
  	continue
  	;;
@@ -26,7 +17,15 @@
  	continue
  	;;
  
-@@ -3059,6 +3067,9 @@
+@@ -1849,6 +1857,7 @@
+ 	    finalize_deplibs="$deplib $finalize_deplibs"
+ 	  else
+ 	    deplibs="$deplib $deplibs"
++	    test "$linkmode" = lib && newdependency_libs="$deplib $newdependency_libs"
+ 	  fi
+ 	  continue
+ 	  ;;
+@@ -3059,6 +3068,9 @@
  	    # problems, so we reset it completely
  	    verstring=
  	    ;;
@@ -36,7 +35,7 @@
  	  *)
  	    verstring="0.0"
  	    ;;
-@@ -5531,10 +5542,12 @@
+@@ -5531,10 +5543,12 @@
  	fi
  
  	# Install the pseudo-library for information purposes.
