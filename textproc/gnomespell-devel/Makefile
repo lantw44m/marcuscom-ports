@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomespell
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.2
 CATEGORIES=	textproc gnome
 MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
 		${MASTER_SITE_GNOME}
@@ -17,18 +17,17 @@ DIST_SUBDIR=	gnome
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNOME/Bonobo component for spell checking
 
-LIB_DEPENDS=	aspell.15:${PORTSDIR}/textproc/aspell \
-		bonoboui-2.0:${PORTSDIR}/x11-toolkits/libbonoboui
+LIB_DEPENDS=	aspell.15:${PORTSDIR}/textproc/aspell
 
 #USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
-USE_GNOMENG=	yes
-USE_GNOME=	gnomeprefix gnomehack
+USE_GNOME=	gnomeprefix gnomehack libbonoboui
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
+PLIST_SUB=	VERSION=${PORTVERSION}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
