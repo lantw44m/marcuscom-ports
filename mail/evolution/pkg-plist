@@ -1,5 +1,6 @@
 bin/evolution
 bin/evolution-%%VERSION%%
+include/evolution-%%VERSION%%/calendar/gui/e-cal-config.h
 include/evolution-%%VERSION%%/camel/broken-date-parser.h
 include/evolution-%%VERSION%%/camel/camel-address.h
 include/evolution-%%VERSION%%/camel/camel-arg.h
@@ -138,6 +139,7 @@ include/evolution-%%VERSION%%/camel/camel-url.h
 include/evolution-%%VERSION%%/camel/camel-utf8.h
 include/evolution-%%VERSION%%/camel/camel-vee-folder.h
 include/evolution-%%VERSION%%/camel/camel-vee-store.h
+include/evolution-%%VERSION%%/camel/camel-vee-summary.h
 include/evolution-%%VERSION%%/camel/camel-vtrash-folder.h
 include/evolution-%%VERSION%%/camel/camel.h
 include/evolution-%%VERSION%%/e-conduit/e-pilot-map.h
@@ -216,7 +218,6 @@ include/evolution-%%VERSION%%/widgets/e-multi-config-dialog.h
 include/evolution-%%VERSION%%/widgets/e-search-bar.h
 include/evolution-%%VERSION%%/widgets/e-task-bar.h
 include/evolution-%%VERSION%%/widgets/e-task-widget.h
-include/evolution-%%VERSION%%/widgets/e-title-bar.h
 include/evolution-%%VERSION%%/widgets/e-url-entry.h
 lib/evolution/%%VERSION%%/camel-providers/libcamelgroupwise.so
 lib/evolution/%%VERSION%%/camel-providers/libcamelgroupwise.urls
@@ -279,6 +280,11 @@ lib/evolution/%%VERSION%%/libevolution-mail-importers.so.0
 lib/evolution/%%VERSION%%/libevolution-widgets-a11y.a
 lib/evolution/%%VERSION%%/libevolution-widgets-a11y.so
 lib/evolution/%%VERSION%%/libevolution-widgets-a11y.so.0
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-http.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-plugin-manager.so
+lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-http.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-plugin-manager.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-plugin-manager.xml
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_LDIF_Importer_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_SelectNames_%%VERSION%%.server
@@ -325,7 +331,6 @@ share/gnome/evolution/%%VERSION%%/glade/alarm-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/alarm-list-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/alarm-notify.glade
 share/gnome/evolution/%%VERSION%%/glade/cal-prefs-dialog.glade
-share/gnome/evolution/%%VERSION%%/glade/calendar-setup.glade
 share/gnome/evolution/%%VERSION%%/glade/contact-editor.glade
 share/gnome/evolution/%%VERSION%%/glade/contact-list-editor.glade
 share/gnome/evolution/%%VERSION%%/glade/e-active-connection-dialog.glade
@@ -550,6 +555,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm libexec/evolution/%%VERSION%%/camel
 @dirrm libexec/evolution/%%VERSION%%
 @dirrm libexec/evolution
+@dirrm lib/evolution/%%VERSION%%/plugins
 @dirrm lib/evolution/%%VERSION%%/evolution-calendar-importers
 @dirrm lib/evolution/%%VERSION%%/evolution-addressbook-importers
 %%PILOT:%%@dirrm lib/evolution/%%VERSION%%/conduits
@@ -563,5 +569,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm include/evolution-%%VERSION%%/e-util
 @dirrm include/evolution-%%VERSION%%/e-conduit
 @dirrm include/evolution-%%VERSION%%/camel
+@dirrm include/evolution-%%VERSION%%/calendar/gui
+@dirrm include/evolution-%%VERSION%%/calendar
 @dirrm include/evolution-%%VERSION%%
 @unexec update-desktop-database > /dev/null || /usr/bin/true
