@@ -1,5 +1,5 @@
---- src/acme.c.orig	Mon Jan 27 17:58:12 2003
-+++ src/acme.c	Mon Jan 27 17:58:42 2003
+--- src/acme.c.orig	Sun Jan 19 06:43:45 2003
++++ src/acme.c	Mon Jan 27 18:09:38 2003
 @@ -201,10 +201,10 @@
  	if ((soundfile == NULL) || (strcmp (soundfile, "") == 0)) 
  		return;
