@@ -1,9 +1,6 @@
-
-$FreeBSD: ports/x11/gnomepanel/files/patch-applets_clock_clock.c,v 1.1 2003/09/18 06:49:26 marcus Exp $
-
---- applets/clock/clock.c	2002/05/14 14:08:16	1.1
-+++ applets/clock/clock.c	2002/05/14 14:12:56
-@@ -14,7 +14,9 @@
+--- applets/clock/clock.c.orig	Thu Dec  4 17:57:00 2003
++++ applets/clock/clock.c	Wed Dec 10 23:23:38 2003
+@@ -37,7 +37,9 @@
  #include <dirent.h>
  #include <string.h>
  #include <time.h>
@@ -13,15 +10,15 @@ $FreeBSD: ports/x11/gnomepanel/files/patch-applets_clock_clock.c,v 1.1 2003/09/1
  
  #include <panel-applet.h>
  #include <panel-applet-gconf.h>
-@@ -684,7 +686,11 @@
- 	cd->hourformat = panel_applet_gconf_get_int (applet, KEY_HOUR_FORMAT, &error);
- 	if (error || (cd->hourformat != 12 && cd->hourformat != 24)) {
- 		/* if value is not valid, set it according to locale */
-+#ifdef HAVE_LANGINFO_H
- 		const char *am = nl_langinfo (AM_STR);
-+#else
-+		const char *am = "AM";
-+#endif
- 		cd->hourformat = (am[0] == '\0') ? 24 : 12;
+@@ -1117,7 +1119,11 @@
+ {
+ 	const char *am;
  
- 		if (error)
++#ifdef HAVE_LANGINFO_H
+ 	am = nl_langinfo (AM_STR);
++#else
++	am = "AM";
++#endif
+ 	return (am[0] == '\0') ? CLOCK_FORMAT_24 : CLOCK_FORMAT_12;
+ }
+ 
