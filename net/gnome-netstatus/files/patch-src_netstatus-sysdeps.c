@@ -1,5 +1,5 @@
---- src/netstatus-sysdeps.c.orig	Tue Mar 30 04:25:42 2004
-+++ src/netstatus-sysdeps.c	Thu Jun 10 13:29:42 2004
+--- src/netstatus-sysdeps.c.orig	Fri Jul 30 04:19:31 2004
++++ src/netstatus-sysdeps.c	Mon Sep 20 17:34:19 2004
 @@ -35,6 +35,16 @@
  #include <glib.h>
  #include <libgnome/gnome-i18n.h>
@@ -15,9 +15,9 @@
 +#endif
 +
  static inline gboolean
- parse_stats (char  *buf,
- 	     int    prx_idx,
-@@ -385,6 +395,131 @@
+ parse_stats (char    *buf,
+ 	     int      prx_idx,
+@@ -384,6 +394,163 @@
       }
  }
  
@@ -109,6 +109,38 @@
 +
 +  level = (int) (wreq.wi_val[1]);
 +
++#ifdef WI_RID_READ_APS
++  if (signal_strength <= 0) {
++	  /* we fail to get signal strength by usual means, try another way */
++	  static time_t last_scan;
++	  static long int cached;
++	  time_t now = time (NULL);
++
++	  /* XXX: this is long operation, and we will scan station not often then one in 5 secs */
++	  if (now > last_scan + 5) {
++		  struct wi_apinfo *w;
++		  int nstations;
++
++		  bzero ((char *)&wreq, sizeof(wreq));
++		  wreq.wi_len = WI_MAX_DATALEN;
++		  wreq.wi_type = WI_RID_READ_APS;
++
++		  if (!wireless_getval (iface, (gpointer) &wreq, SIOCGWAVELAN, &error))
++			  return error;
++		  nstations = *(int *)wreq.wi_val;
++		  if (nstations > 0) {
++			  w = (struct wi_apinfo *)(((char *)&wreq.wi_val) sizeof(int));
++			  signal_strength = (long int)w->signal;
++		  }
++
++		  cached = signal_strength;
++		  last_scan = now;
++	  } else {
++		  signal_strength = cached;
++	  }
++  }
++#endif
++
 +  memcpy (signal_strength, &level, sizeof (signal_strength));
 +
 +  return error;
@@ -131,7 +163,7 @@
 +    *signal_strength = 0;
 +
 +  if (g_strncasecmp (iface, "an", 2) && g_strncasecmp (iface, "wi", 2) &&
-+    g_strncasecmp (iface, "ath", 3))
++    g_strncasecmp (iface, "ath", 3) && g_strncasecmp (iface, "ndis", 4))
 +    return error_message;
 +
 +  if (g_strncasecmp (iface, "an", 2) == 0) {
@@ -148,8 +180,8 @@
 +
  char *
  netstatus_sysdeps_read_iface_statistics (const char *iface,
- 					 long       *in_packets,
-@@ -486,23 +621,6 @@
+ 					 gulong     *in_packets,
+@@ -485,23 +652,6 @@
    g_strfreev (argv);
  
    return error_message;
