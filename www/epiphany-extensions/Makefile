@@ -22,21 +22,21 @@ BUILD_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany \
 RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany \
 		${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
 
-MOZILLA=	mozilla-gtk2
+MOZILLA=	mozilla
 HEADERS_SUFX=
 
 MOZ_CONFIGURE_ARGS=	--with-mozilla-snapshot="1.6"
 
 .if !defined(WITH_MOZILLA)
-MOZILLA=	mozilla-gtk2
+MOZILLA=	mozilla
 HEADERS_SUFX=
 .else
-.if ${WITH_MOZILLA}=="mozilla-devel-gtk2"
+.if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
 MOZILLA=	${WITH_MOZILLA}
 HEADERS_SUFX=	-devel
 MOZ_CONFIGURE_ARGS=	--with-mozilla-snapshot="trunk"
 .else
-MOZILLA=	mozilla-gtk2
+MOZILLA=	mozilla
 HEADERS_SUFX=
 .endif
 .endif
@@ -70,10 +70,10 @@ CONFIGURE_ARGS+=	--enable-opensp=no
 
 pre-everything::
 	@${ECHO_MSG} ""
-	@${ECHO_MSG} " By default epiphany-extensions builds with www/mozilla-gtk2 support, but you can"
+	@${ECHO_MSG} " By default epiphany-extensions builds with www/mozilla support, but you can"
 	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
 	@${ECHO_MSG}
-	@${ECHO_MSG} "  mozilla-devel-gtk2 "
+	@${ECHO_MSG} "  mozilla-devel "
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "Epiphany-extensions also supports the following tunable option(s):"
 	@${ECHO_MSG} "	WITH_OPENSP=yes		Enable support for OpenSP SGML validation"
