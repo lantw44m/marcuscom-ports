@@ -13,6 +13,5 @@ share/themes/bubble/gtk-2.0/orange.svg
 share/themes/bubble/gtk-2.0/red.svg
 @dirrm share/themes/bubble/gtk-2.0
 @dirrm share/themes/bubble
-@dirrm lib/gtk-2.0/%%GTK_VERSION%%/engines
 @dirrm include/librsvg-2/librsvg
 @dirrm include/librsvg-2

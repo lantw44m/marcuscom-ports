@@ -21,6 +21,7 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 		xml2.5:${PORTSDIR}/textproc/libxml2 \
 		gdk_pixbuf-2.0.100:${PORTSDIR}/x11-toolkits/gtk20 \
 		popt.0:${PORTSDIR}/devel/popt
+RUN_DEPENDS=	${X11BASE}/lib/gtk-2.0/2.0.100/engines/libmetal.so:${PORTSDIR}/x11-toolkits/gtk-engines2
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
