@@ -1,6 +1,6 @@
---- gnome-netinfo/info.c.orig	Thu Jul 24 18:10:39 2003
-+++ gnome-netinfo/info.c	Mon Sep  1 00:36:32 2003
-@@ -26,6 +26,7 @@
+--- gnome-netinfo/info.c.orig	Mon Nov 24 18:29:43 2003
++++ gnome-netinfo/info.c	Sat Dec  6 23:37:03 2003
+@@ -27,6 +27,7 @@
  #endif
  
  
@@ -8,8 +8,8 @@
  #include <sys/socket.h>	/* basic socket definitions */
  #include <arpa/inet.h>	/* inet(3) functions */
  #include <sys/un.h>	/* for Unix domain sockets */
-@@ -180,7 +181,7 @@
- 	gboolean loopback;
+@@ -164,7 +165,7 @@
+ 	gint flags;
  	mii_data_result data;
  		
 -	sockfd = socket (AF_INET, SOCK_DGRAM, 0);
@@ -17,7 +17,7 @@
  
  	ifc.ifc_len = sizeof (buf);
  	ifc.ifc_req = (struct ifreq *) buf;
-@@ -189,7 +190,7 @@
+@@ -173,7 +174,7 @@
  	for (ptr = buf; ptr < buf + ifc.ifc_len;) {
  		ifr = (struct ifreq *) ptr;
  		len = sizeof (struct sockaddr);
@@ -26,15 +26,28 @@
  		if (ifr->ifr_addr.sa_len > len)
  			len = ifr->ifr_addr.sa_len;	/* length > 16 */
  #endif
-@@ -322,7 +323,6 @@
+@@ -182,8 +183,12 @@
+ 		if (strcmp (ifr->ifr_name, nic) != 0) {
+ 			continue;
+ 		}
++
++		bzero (&data, sizeof(data));
+ 		
++#ifdef __linux__
+ 		data = mii_get_basic (nic);
++#endif
+ 		
+ 		switch (ifr->ifr_addr.sa_family) {
+ 		case AF_INET:
+@@ -306,7 +311,6 @@
  			break;
  		}
  	}
 -	g_free (ifr);
  }
  
- GList *
-@@ -336,8 +336,10 @@
+ static GList *
+@@ -319,8 +323,10 @@
  	struct ifreq *ifr;
  	int sockfd, len;
  
@@ -46,7 +59,7 @@
  	ifc.ifc_len = sizeof (buf);
  	ifc.ifc_req = (struct ifreq *) buf;
  
-@@ -348,9 +350,11 @@
+@@ -331,9 +337,11 @@
  		len = sizeof (struct sockaddr);
  
  		iface = g_strdup (ifr->ifr_name);
