@@ -19,6 +19,7 @@ USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget gnomehack libxml2
 INSTALLS_SHLIB=	yes
+USE_GETOPT_LONG=yes
 USE_LIBTOOL_VER=15
 CONFIGURE_ARGS=	--disable-doxygen \
 		--with-xkb-base=${X11BASE}/lib/X11/xkb
