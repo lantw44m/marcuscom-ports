@@ -1,0 +1,5 @@
+Gstreamer ffmpeg package provides:
+ * codecs for most popular formats
+ * optimized colorspace conversion
+
+WWW: http://gstreamer.freedesktop.org/
