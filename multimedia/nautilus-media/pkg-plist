@@ -12,6 +12,7 @@ etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@mpeg/%gcon
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@quicktime/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-avi/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-fli/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-ms-asf/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-ms-wmv/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-msvideo/%gconf.xml
 etc/gconf/schemas/gst-thumbnail.schemas
@@ -86,9 +87,19 @@ share/locale/vi/LC_MESSAGES/nautilus-media.mo
 share/locale/zh_CN/LC_MESSAGES/nautilus-media.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus-media.mo
 @dirrm share/gnome/pixmaps/nautilus-media
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-msvideo
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-ms-wmv
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-ms-asf
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-fli
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-avi
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@quicktime
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@mpeg
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-shockwave-flash
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-msvideo
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-ms-wmv
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-ms-asf
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-fli
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-avi
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@quicktime
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@mpeg
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-shockwave-flash
