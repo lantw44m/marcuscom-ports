@@ -29,14 +29,6 @@ INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
-XXX_FILES=	GNOME_SettingsDaemon-common.c GNOME_SettingsDaemon-skels.c \
-		GNOME_SettingsDaemon-stubs.c GNOME_SettingsDaemon.h
-
-post-extract:
-.for i in ${XXX_FILES}
-	@${RM} -f ${WRKSRC}/gnome-settings-daemon/${i}
-.endfor
-
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[{]prefix[}]/share/pixmaps|{datadir}/pixmaps|g'

@@ -32,12 +32,4 @@ PLIST_SUB=	VERSION="2.4"
 
 MAN1=		gedit.1
 
-XXX_FILES=	GNOME_Gedit-common.c GNOME_Gedit-skels.c \
-		GNOME_Gedit-stubs.c GNOME_Gedit.h
-
-post-extract:
-.for i in ${XXX_FILES}
-	@${RM} -f ${WRKSRC}/gedit/${i}
-.endfor
-
 .include <bsd.port.mk>
