@@ -117,25 +117,47 @@ share/gnome/help/gedit/C/figures/gedit_recent_files_menu_icon.png
 share/gnome/help/gedit/C/figures/gedit_window.png
 share/gnome/help/gedit/C/gedit.xml
 share/gnome/help/gedit/C/legal.xml
+share/gnome/help/gedit/de/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/de/figures/gedit_window.png
 share/gnome/help/gedit/de/gedit.xml
 share/gnome/help/gedit/de/legal.xml
+share/gnome/help/gedit/es/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/es/figures/gedit_window.png
 share/gnome/help/gedit/es/gedit.xml
 share/gnome/help/gedit/es/legal.xml
+share/gnome/help/gedit/fr/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/fr/figures/gedit_window.png
 share/gnome/help/gedit/fr/gedit.xml
 share/gnome/help/gedit/fr/legal.xml
+share/gnome/help/gedit/it/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/it/figures/gedit_window.png
 share/gnome/help/gedit/it/gedit.xml
 share/gnome/help/gedit/it/legal.xml
+share/gnome/help/gedit/ja/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/ja/figures/gedit_window.png
 share/gnome/help/gedit/ja/gedit.xml
 share/gnome/help/gedit/ja/legal.xml
+share/gnome/help/gedit/ko/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/ko/figures/gedit_window.png
 share/gnome/help/gedit/ko/gedit.xml
 share/gnome/help/gedit/ko/legal.xml
 share/gnome/help/gedit/ro/figures/gedit_window.png
 share/gnome/help/gedit/ro/gedit.xml
 share/gnome/help/gedit/ro/legal.xml
+share/gnome/help/gedit/sv/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/sv/figures/gedit_window.png
 share/gnome/help/gedit/sv/gedit.xml
 share/gnome/help/gedit/sv/legal.xml
+share/gnome/help/gedit/zh_CN/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/zh_CN/figures/gedit_window.png
 share/gnome/help/gedit/zh_CN/gedit.xml
 share/gnome/help/gedit/zh_CN/legal.xml
+share/gnome/help/gedit/zh_HK/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/zh_HK/figures/gedit_window.png
+share/gnome/help/gedit/zh_HK/gedit.xml
+share/gnome/help/gedit/zh_HK/legal.xml
+share/gnome/help/gedit/zh_TW/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/zh_TW/figures/gedit_window.png
 share/gnome/help/gedit/zh_TW/gedit.xml
 share/gnome/help/gedit/zh_TW/legal.xml
 share/gnome/idl/GNOME_Gedit.idl
@@ -160,6 +182,8 @@ share/gnome/omf/gedit/gedit-sv.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-sv.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gedit/gedit-zh_CN.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-zh_CN.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gedit/gedit-zh_HK.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-zh_HK.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gedit/gedit-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-zh_TW.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gedit-icon.png
@@ -178,6 +202,7 @@ share/locale/da/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/de/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/el/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/en_CA/LC_MESSAGES/gedit-%%VERSION%%.mo
+share/locale/en_GB/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/es/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/et/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/eu/LC_MESSAGES/gedit-%%VERSION%%.mo
@@ -200,6 +225,7 @@ share/locale/mi/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/mk/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/ml/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/mn/LC_MESSAGES/gedit-%%VERSION%%.mo
+share/locale/mr/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/ms/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/ne/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/nl/LC_MESSAGES/gedit-%%VERSION%%.mo
@@ -226,16 +252,27 @@ share/locale/wa/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/gedit-%%VERSION%%.mo
 @dirrm share/gnome/omf/gedit
+@dirrm share/gnome/help/gedit/zh_TW/figures
 @dirrm share/gnome/help/gedit/zh_TW
+@dirrm share/gnome/help/gedit/zh_HK/figures
+@dirrm share/gnome/help/gedit/zh_HK
+@dirrm share/gnome/help/gedit/zh_CN/figures
 @dirrm share/gnome/help/gedit/zh_CN
+@dirrm share/gnome/help/gedit/sv/figures
 @dirrm share/gnome/help/gedit/sv
 @dirrm share/gnome/help/gedit/ro/figures
 @dirrm share/gnome/help/gedit/ro
+@dirrm share/gnome/help/gedit/ko/figures
 @dirrm share/gnome/help/gedit/ko
+@dirrm share/gnome/help/gedit/ja/figures
 @dirrm share/gnome/help/gedit/ja
+@dirrm share/gnome/help/gedit/it/figures
 @dirrm share/gnome/help/gedit/it
+@dirrm share/gnome/help/gedit/fr/figures
 @dirrm share/gnome/help/gedit/fr
+@dirrm share/gnome/help/gedit/es/figures
 @dirrm share/gnome/help/gedit/es
+@dirrm share/gnome/help/gedit/de/figures
 @dirrm share/gnome/help/gedit/de
 @dirrm share/gnome/help/gedit/C/figures
 @dirrm share/gnome/gedit-2/ui
@@ -299,4 +336,5 @@ share/locale/zh_TW/LC_MESSAGES/gedit-%%VERSION%%.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-ro.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-sv.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-zh_CN.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-zh_HK.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-zh_TW.omf 2>/dev/null || /usr/bin/true
