@@ -2,7 +2,7 @@
 # Date created:         22 May 2003
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
-# $FreeBSD: ports/devel/libglademm/Makefile,v 1.5 2003/09/30 06:21:39 bland Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libglademm

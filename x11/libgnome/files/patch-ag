@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/libgnome/files/patch-ag,v 1.10 2003/09/18 12:55:46 bland Exp $
+$FreeBSD$
 
 --- libgnome/gnome-util.c	2002/03/19 17:16:21	1.1
 +++ libgnome/gnome-util.c	2002/03/19 17:21:31

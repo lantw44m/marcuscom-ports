@@ -2,7 +2,7 @@
 # Date created:				01 Mar 2003
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
-# $FreeBSD: ports/x11/zenity/Makefile,v 1.12 2003/10/14 19:28:28 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	zenity

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/gtk20/files/patch-ak,v 1.4 2003/02/07 18:42:22 marcus Exp $
+$FreeBSD$
 
 --- gdk/Makefile.in.orig	Thu Feb 14 12:38:26 2002
 +++ gdk/Makefile.in	Thu Feb 14 12:45:37 2002

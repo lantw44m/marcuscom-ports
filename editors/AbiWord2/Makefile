@@ -2,7 +2,7 @@
 # Date created:         22 February 2003
 # Whom:                 Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/AbiWord2/Makefile,v 1.75 2003/12/15 07:16:18 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	AbiWord2

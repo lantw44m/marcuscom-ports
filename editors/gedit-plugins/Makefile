@@ -2,7 +2,7 @@
 # Date created:				19 September 2003
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/gedit-plugins/Makefile,v 1.2 2003/10/18 07:18:32 bland Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gedit-plugins

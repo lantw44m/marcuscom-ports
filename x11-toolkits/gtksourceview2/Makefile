@@ -2,7 +2,7 @@
 # Date created:				07 May 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gtksourceview/Makefile,v 1.10 2003/11/17 12:29:09 trevor Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtksourceview

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/glib20/files/patch-gmodule::gmodule-dl.c,v 1.2 2003/02/07 18:42:03 marcus Exp $
+$FreeBSD$
 
 --- gmodule/gmodule-dl.c.orig	Sat Feb 17 08:28:07 2001
 +++ gmodule/gmodule-dl.c	Fri Jan 18 09:48:45 2002

@@ -2,7 +2,7 @@
 # Date created:				06 October 2003
 # Whom:					Adam Weinberger
 #
-# $FreeBSD: ports/games/monkeybubble/Makefile,v 1.6 2004/01/17 20:37:00 adamw Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	monkeybubble

@@ -2,7 +2,7 @@
 # Date created:				13 April 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/nautilus-cd-burner/Makefile,v 1.4 2003/10/02 19:22:43 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	nautilus-cd-burner

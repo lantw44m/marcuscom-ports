@@ -2,7 +2,7 @@
 # Date created:				12 March 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libsoup/Makefile,v 1.16 2003/09/25 03:09:24 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libsoup

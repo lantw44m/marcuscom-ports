@@ -2,7 +2,7 @@
 # Date Created:			29 April 2002
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libgtop2/Makefile,v 1.77 2003/11/14 14:35:23 bland Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgtop2

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/x11/gdm2/files/gdm.sh.sample,v 1.4 2003/09/18 06:49:24 marcus Exp $
+# $FreeBSD$
 
 PREFIX=%%PREFIX%%
 

@@ -2,7 +2,7 @@
 # Date created:				11 December 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/libgnetwork/Makefile,v 1.1 2004/01/03 08:32:57 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgnetwork

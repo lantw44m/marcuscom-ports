@@ -2,7 +2,7 @@
 # Date created:				25 August 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gal2/Makefile,v 1.50 2003/11/17 12:29:09 trevor Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gal2

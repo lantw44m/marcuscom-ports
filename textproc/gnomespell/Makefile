@@ -2,7 +2,7 @@
 # Date created:				29 December 2001
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/gnomespell/Makefile,v 1.12 2003/08/01 22:13:04 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomespell

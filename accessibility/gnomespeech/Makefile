@@ -2,7 +2,7 @@
 # Date created:			11 May 2003
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/gnomespeech/Makefile,v 1.2 2003/11/17 12:28:51 trevor Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomespeech

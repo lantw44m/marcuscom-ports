@@ -2,7 +2,7 @@
 # Date Created:				21 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gtk-engines2/Makefile,v 1.37 2004/03/14 06:17:45 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtk-engines2

@@ -2,7 +2,7 @@
 # Date created:		Fri Jul 12 06:02:42 UTC 2002
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/gstreamer-player/Makefile,v 1.20 2004/03/14 06:17:00 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gstreamer

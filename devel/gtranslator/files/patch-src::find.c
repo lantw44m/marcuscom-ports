@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/gtranslator/files/patch-src::find.c,v 1.3 2002/03/15 09:39:01 sobomax Exp $
+$FreeBSD$
 
 --- src/find.c	2002/03/15 09:02:54	1.1
 +++ src/find.c	2002/03/15 09:03:04

@@ -2,7 +2,7 @@
 # Date created:         22 May 2003
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
-# $FreeBSD: ports/devel/gconfmm/Makefile,v 1.2 2003/08/17 04:01:02 bland Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gconfmm

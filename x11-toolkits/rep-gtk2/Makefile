@@ -2,7 +2,7 @@
 # Date created:        06 October 1999
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/rep-gtk2/Makefile,v 1.47 2004/03/18 20:10:42 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	rep-gtk2

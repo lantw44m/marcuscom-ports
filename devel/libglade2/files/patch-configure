@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/libglade2/files/patch-configure,v 1.2 2003/02/07 18:42:05 marcus Exp $
+$FreeBSD$
 
 --- configure	2002/04/26 09:41:08	1.1
 +++ configure	2002/04/26 09:41:27

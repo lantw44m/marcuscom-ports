@@ -2,7 +2,7 @@
 # Date created:				16 September 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gtranslator/Makefile,v 1.31 2003/10/16 06:01:48 adamw Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtranslator

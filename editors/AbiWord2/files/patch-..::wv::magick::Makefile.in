@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/editors/AbiWord2/files/patch-..::wv::magick::Makefile.in,v 1.2 2003/02/23 18:39:35 marcus Exp $
+$FreeBSD$
 
 --- ../wv/magick/Makefile.in	2001/08/08 11:44:02	1.1
 +++ ../wv/magick/Makefile.in	2001/08/08 11:44:13

@@ -2,7 +2,7 @@
 # Date created:				15 September 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/ghex2/Makefile,v 1.28 2003/11/17 12:28:56 trevor Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	ghex2

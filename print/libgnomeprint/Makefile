@@ -2,7 +2,7 @@
 # Date created:				15 Jan 1999
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
-# $FreeBSD: ports/print/libgnomeprint/Makefile,v 1.75 2003/10/28 16:31:33 bland Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgnomeprint

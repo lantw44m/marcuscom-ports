@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/deskutils/gnomeutils2/files/patch-logview::logrtns.h,v 1.3 2003/09/18 06:49:29 marcus Exp $
+$FreeBSD$
 
 --- logview/logrtns.h	2001/11/23 16:04:00	1.1
 +++ logview/logrtns.h	2001/11/23 16:04:14

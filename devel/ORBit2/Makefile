@@ -2,7 +2,7 @@
 # Date Created:			16 Aug 1998
 # Whom:				Chia-liang Kao <clkao@CirX.ORG>
 #
-# $FreeBSD: ports/devel/ORBit2/Makefile,v 1.91 2003/10/10 19:14:17 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	ORBit2

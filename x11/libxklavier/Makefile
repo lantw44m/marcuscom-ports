@@ -2,7 +2,7 @@
 # Date created:				31 May 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/libxklavier/Makefile,v 1.11 2004/02/04 05:09:47 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libxklavier

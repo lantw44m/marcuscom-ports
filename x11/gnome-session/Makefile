@@ -2,7 +2,7 @@
 # Date created:				08 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnomesession/Makefile,v 1.29 2003/10/26 18:23:08 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomesession

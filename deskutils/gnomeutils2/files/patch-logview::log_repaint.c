@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/deskutils/gnomeutils2/files/patch-logview::log_repaint.c,v 1.3 2003/09/18 06:49:29 marcus Exp $
+$FreeBSD$
 
 --- logview/log_repaint.c	2001/11/23 16:01:55	1.1
 +++ logview/log_repaint.c	2001/11/23 16:02:30

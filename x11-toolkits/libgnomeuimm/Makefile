@@ -2,7 +2,7 @@
 # Date created:         22 May 2003
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
-# $FreeBSD: ports/x11-toolkits/libgnomeuimm/Makefile,v 1.7 2003/10/12 15:27:25 bland Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgnomeuimm

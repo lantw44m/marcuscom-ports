@@ -2,7 +2,7 @@
 # Date Created:			28 Sep 1997
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
-# $FreeBSD: ports/x11-toolkits/gtk20/Makefile,v 1.119 2003/10/06 01:13:39 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtk

@@ -2,7 +2,7 @@
 # Date created:         22 May 2003
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
-# $FreeBSD: ports/graphics/libgnomecanvasmm/Makefile,v 1.4 2003/08/25 23:37:58 bland Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgnomecanvasmm

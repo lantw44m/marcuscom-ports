@@ -2,7 +2,7 @@
 # Date created:				18 January 2004
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome2-power-tools/Makefile,v 1.3 2004/01/19 22:05:00 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome2-power-tools

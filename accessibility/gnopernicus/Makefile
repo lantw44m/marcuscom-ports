@@ -2,7 +2,7 @@
 # Date created:				11 May 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnopernicus/Makefile,v 1.3 2003/11/17 12:29:07 trevor Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnopernicus

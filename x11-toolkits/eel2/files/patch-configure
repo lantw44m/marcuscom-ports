@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/eel2/files/patch-configure,v 1.4 2003/09/18 06:49:22 marcus Exp $
+$FreeBSD$
 
 --- configure	2002/04/25 19:15:15	1.1
 +++ configure	2002/04/25 19:17:28

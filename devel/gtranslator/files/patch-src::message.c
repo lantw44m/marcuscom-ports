@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/gtranslator/files/patch-src::message.c,v 1.3 2002/03/15 09:39:01 sobomax Exp $
+$FreeBSD$
 
 --- src/message.c	2002/03/15 09:03:55	1.1
 +++ src/message.c	2002/03/15 09:04:04

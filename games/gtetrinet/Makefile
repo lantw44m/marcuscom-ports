@@ -2,7 +2,7 @@
 # Date created:				27 Feb 2000
 # Whom:					Dan Papasian <bugg@bugg.strangled.net>
 #
-# $FreeBSD: ports/games/gtetrinet/Makefile,v 1.21 2003/11/17 12:03:14 trevor Exp $
+# $FreeBSD$
 
 PORTNAME=	gtetrinet
 PORTVERSION=	0.7.5

@@ -2,7 +2,7 @@
 # Date created:				18 May 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/yelp/Makefile,v 1.26 2003/11/10 19:50:27 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	yelp
