@@ -330,7 +330,7 @@ gnomepanel_GNOME_DESKTOP_VERSION=2
 
 nautilus2_LIB_DEPENDS=	nautilus.2:${PORTSDIR}/x11-fm/nautilus2
 nautilus2_DETECT=	${X11BASE}/libdata/pkgconfig/libnautilus.pc
-nautilus2_USE_GNOME_IMPL=librsvg2 eel2 gnomedesktop gnomecontrolcenter2
+nautilus2_USE_GNOME_IMPL=librsvg2 eel2 gnomedesktop
 nautilus2_GNOME_DESKTOP_VERSION=2
 
 metacity_LIB_DEPENDS=	metacity-private.0:${PORTSDIR}/x11-wm/metacity
@@ -343,7 +343,7 @@ gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
 
 gnomecontrolcenter2_LIB_DEPENDS=gnome-window-settings.1:${PORTSDIR}/sysutils/gnomecontrolcenter2
 gnomecontrolcenter2_DETECT=${X11BASE}/libdata/pkgconfig/gnome-window-settings-2.0.pc
-gnomecontrolcenter2_USE_GNOME_IMPL=gnomedesktop metacity
+gnomecontrolcenter2_USE_GNOME_IMPL=gnomedesktop metacity nautilus2
 
 libgda2_LIB_DEPENDS=	gda-2.1:${PORTSDIR}/databases/libgda2
 libgda2_DETECT=			${X11BASE}/libdata/pkgconfig/libgda.pc
