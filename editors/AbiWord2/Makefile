@@ -73,7 +73,7 @@ pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "AbiWord2 has the following tunable option(s):"
 	@${ECHO_MSG} "	WITH_GUCHARMAP=yes	Enable use of Gucharmap as the symbol insertion tool (default: auto)"
-	@${ECHO_MSG} "	WITHOUT_GTKSPELL=yes	Don't use Enchant, but still has spell enable and install dictionary."
+	@${ECHO_MSG} "	WITHOUT_GTKSPELL=yes	Don't use Enchant, but still enable spellchecking and install the dictionary."
 	@${ECHO_MSG} ""
 
 post-patch:
