@@ -1,10 +1,10 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD$
-#	$NetBSD: $
+# FreeBSD: $FreeBSD$
+#	NetBSD: $NetBSD: $
 #	
-# MarcusCOM: $Id: bsd.mozilla.mk,v 1.2 2004-06-11 05:20:07 marcus Exp $
+# MarcusCOM: $Id: bsd.mozilla.mk,v 1.3 2004-06-26 01:28:58 adamw Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -25,10 +25,11 @@ Mozilla_Pre_Include=			bsd.mozilla.mk
 # MOZILLA_INCLUDE_DIR:  for use in --with-mozilla-includes="${MOZILLA_INCLUDE_DIR}"
 # MOZILLA_LIB_DIR:      for use in --with-mozilla-libs="${MOZILLA_LIB_DIR}"
 
-MOZ_DEVEL_SNAPSHOT_VER=			1.7rc2
-MOZ_STABLE_SNAPSHOT_VER=		1.6
-MOZ_GTK1_DEVEL_SNAPSHOT_VER=	trunk
-MOZ_GTK1_STABLE_SNAPSHOT_VER=	trunk
+# These can be overridden as necessary within port Makefiles.
+MOZ_DEVEL_SNAPSHOT_VER?=		1.7rc2
+MOZ_STABLE_SNAPSHOT_VER?=		1.6
+MOZ_GTK1_DEVEL_SNAPSHOT_VER?=	trunk
+MOZ_GTK1_STABLE_SNAPSHOT_VER?=	trunk
 
 .if defined(USE_MOZILLA_GTK1)
 
@@ -56,8 +57,9 @@ RUN_DEPENDS+=			${X11BASE}/lib/mozilla-devel/components/libwidget_gtk2.so:${PORT
 MOZILLA_SNAPSHOT_VER=	${MOZ_DEVEL_SNAPSHOT_VER}
 MOZILLA_INCLUDE_DIR=	${X11BASE}/include/mozilla-devel
 MOZILLA_LIB_DIR=		${X11BASE}/lib/mozilla-devel
-# XXX We can't use pre-patch here, since it conflicts with bsd.gnome.mk
-pre-patch:
+
+pre-patch: mozilla-pre-patch
+mozilla-pre-patch:
 	@${REINPLACE_CMD} -e "s|mozilla-gtkmozembed|mozilla-gtkmozembed-devel|g; \
 		s|mozilla-xpcom|mozilla-xpcom-devel|g; \
 		s|mozilla-nspr|mozilla-nspr-devel|g; \
