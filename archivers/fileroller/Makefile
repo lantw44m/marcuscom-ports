@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	fileroller
-PORTVERSION=	2.3.3
+PORTVERSION=	2.3.4
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -24,6 +24,7 @@ RUN_DEPENDS=	lha:${PORTSDIR}/archivers/lha \
 RUN_DEPENDS+=	bzip2:${PORTSDIR}/archivers/bzip2
 .endif
 
+USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui
