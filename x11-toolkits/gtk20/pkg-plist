@@ -500,6 +500,8 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @unexec rmdir %D/share/locale/mr 2> /dev/null || true
 @unexec rmdir %D/share/locale/nso/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/nso 2> /dev/null || true
+@unexec rmdir %D/share/locale/rw/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/rw 2> /dev/null || true
 @unexec rmdir %D/share/locale/sr@ije/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/sr@ije 2> /dev/null || true
 @unexec rmdir %D/share/locale/uz@Latn/LC_MESSAGES 2> /dev/null || true
