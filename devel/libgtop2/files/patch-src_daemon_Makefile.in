@@ -1,0 +1,19 @@
+--- src/daemon/Makefile.in.orig	Fri Nov 14 14:38:11 2003
++++ src/daemon/Makefile.in	Fri Nov 14 14:59:16 2003
+@@ -86,7 +86,7 @@
+ LIBGTOP_EXTRA_LIBS = @LIBGTOP_EXTRA_LIBS@
+ LIBGTOP_INCS = @LIBGTOP_INCS@
+ LIBGTOP_INTERFACE_AGE = @LIBGTOP_INTERFACE_AGE@
+-LIBGTOP_LIBS = @LIBGTOP_LIBS@
++LIBGTOP_LIBS =
+ LIBGTOP_MAJOR_VERSION = @LIBGTOP_MAJOR_VERSION@
+ LIBGTOP_MICRO_VERSION = @LIBGTOP_MICRO_VERSION@
+ LIBGTOP_MINOR_VERSION = @LIBGTOP_MINOR_VERSION@
+@@ -160,6 +160,7 @@
+ 				  @sysdeps_suid_lib@ \
+ 				  $(suid_sysdeps) $(suid_common)\
+ 				  $(LIBGTOP_LIBS)\
++				  $(GLIB_LIBS) \
+ 				  @libs_xauth@
+ 
+ 
