@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomevfs-extras
-PORTVERSION=	0.99.12
+PORTVERSION=	0.99.13
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs-extras/0.99
