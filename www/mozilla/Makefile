@@ -7,7 +7,7 @@
 
 PORTNAME?=	mozilla
 PORTVERSION=	1.7.3
-PORTREVISION?=	0
+PORTREVISION?=	1
 PORTEPOCH?=	2
 CATEGORIES?=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA} \
@@ -290,6 +290,8 @@ pre-install:
 		done; \
 		${ECHO_CMD} @dirrm lib/browser_plugins >> ${PLIST} ; \
 	fi
+	${ECHO_CMD} lib/${MOZILLA}/mozilla >> ${PLIST}
+	${ECHO_CMD} lib/${MOZILLA}/mozilla-config >> ${PLIST}
 	cd ${FAKEDIR}/lib/mozilla && ${FIND} -s * -type f -o -type l | \
 		${SED} -e 's:^:lib/${MOZILLA}/:' >> ${PLIST} \
 			&& ${FIND} -d * -type d | \
@@ -307,6 +309,8 @@ pre-install:
 do-install:
 	${MKDIR} ${PREFIX}/lib/${MOZILLA}
 	${CHMOD} 755 ${PREFIX}/lib/${MOZILLA}
+	${INSTALL_SCRIPT} ${FAKEDIR}/bin/mozilla ${PREFIX}/lib/${MOZILLA}
+	${INSTALL_SCRIPT} ${FAKEDIR}/bin/mozilla-config ${PREFIX}/lib/${MOZILLA}
 	cd ${FAKEDIR}/lib/mozilla && ${FIND} . | \
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${MOZILLA}
 	${INSTALL_SCRIPT} ${WRKSRC}/${MOZILLA} ${PREFIX}/bin
