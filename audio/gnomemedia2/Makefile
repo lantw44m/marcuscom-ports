@@ -29,4 +29,18 @@ USE_GNOME=	gnomeprefix gnomehack gnomehier gnomedesktop gail
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 
+# XXX Note, these hacks can probably go away in the next release.
+CDDB_FILES=	GNOME_Media_CDDBSlave2-common.c GNOME_Media_CDDBSlave2-skels.c \
+		GNOME_Media_CDDBSlave2-stubs.c GNOME_Media_CDDBSlave2.h
+CD_FILES=	GNOME_Media_CDDBSlave2-common.c GNOME_Media_CDDBSlave2-skels.c \
+		GNOME_Media_CDDBSlave2.h
+
+post-extract:
+.for i in ${CDDB_FILES}
+	@${RM} -f ${WRKSRC}/cddb-slave2/${i}
+.endfor
+.for i in ${CD_FILES}
+	@${RM} -f ${WRKSRC}/gnome-cd/${i}
+.endfor
+
 .include <bsd.port.mk>
