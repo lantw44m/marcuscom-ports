@@ -98,6 +98,7 @@ share/gnome/pixmaps/gnopernicus.png
 share/locale/ar/LC_MESSAGES/gnopernicus.mo
 share/locale/az/LC_MESSAGES/gnopernicus.mo
 share/locale/be/LC_MESSAGES/gnopernicus.mo
+share/locale/bg/LC_MESSAGES/gnopernicus.mo
 share/locale/ca/LC_MESSAGES/gnopernicus.mo
 share/locale/cs/LC_MESSAGES/gnopernicus.mo
 share/locale/cy/LC_MESSAGES/gnopernicus.mo
@@ -127,6 +128,7 @@ share/locale/pl/LC_MESSAGES/gnopernicus.mo
 share/locale/pt/LC_MESSAGES/gnopernicus.mo
 share/locale/pt_BR/LC_MESSAGES/gnopernicus.mo
 share/locale/ro/LC_MESSAGES/gnopernicus.mo
+share/locale/sk/LC_MESSAGES/gnopernicus.mo
 share/locale/sq/LC_MESSAGES/gnopernicus.mo
 share/locale/sr/LC_MESSAGES/gnopernicus.mo
 share/locale/sr@Latn/LC_MESSAGES/gnopernicus.mo
