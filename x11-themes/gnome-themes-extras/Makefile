@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnome-themes-extras
-PORTVERSION=	0.8.0
-PORTREVISION=	2
+PORTVERSION=	0.8.1
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.8
@@ -31,7 +30,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 		"/^themedir =.*metacity-1$$/s|themes|gnome/themes|"
-	@${REINPLACE_CMD} -e 's|Wasp Smooth Industrial |Wasp |g' \
-		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
