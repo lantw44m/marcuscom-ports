@@ -336,7 +336,7 @@ libzvt_USE_GNOME_IMPL=	gtk20
 
 librsvg2_LIB_DEPENDS=	rsvg-2.9:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${X11BASE}/libdata/pkgconfig/librsvg-2.0.pc
-librsvg2_USE_GNOME_IMPL=libartlgpl2 libxml2 gtk20 libgsf
+librsvg2_USE_GNOME_IMPL=libartlgpl2 libgsf gnomevfs2
 
 eel2_LIB_DEPENDS=	eel-2.9:${PORTSDIR}/x11-toolkits/eel2
 eel2_DETECT=		${X11BASE}/libdata/pkgconfig/eel-2.0.pc
