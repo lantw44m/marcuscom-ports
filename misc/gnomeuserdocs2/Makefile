@@ -7,10 +7,11 @@
 
 PORTNAME=	gnomeuserdocs2
 PORTVERSION=	2.8.0
+PORTREVISION=	1
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome2-user-docs/2.8
-DISTNAME=	gnome2-user-docs-${PORTVERSION}
+DISTNAME=	gnome2-user-docs-${PORTVERSION}-1
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
