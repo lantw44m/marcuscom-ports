@@ -395,6 +395,7 @@ gstreamerplugins_LIB_DEPENDS=	gstplay-0.7.1:${PORTSDIR}/multimedia/gstreamer-plu
 gstreamerplugins_DETECT=	${X11BASE}/libdata/pkgconfig/gstreamer-play-0.7.pc
 gstreamerplugins_USE_GNOME_IMPL=	gconf2
 
+intlhack_BUILD_DEPENDS=	intltool-extract:${PORTSDIR}/textproc/intltool
 intlhack_PRE_PATCH=		${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${REINPLACE_CMD} -e \
 				's|mkdir $$lang or|mkdir $$lang, 0777 or| ; \
 				 s|^push @INC, "/.*|push @INC, "${LOCALBASE}/share/intltool";|'
