@@ -69,6 +69,9 @@ share/locale/wa/LC_MESSAGES/gpdf.mo
 share/locale/zh_CN/LC_MESSAGES/gpdf.mo
 share/locale/zh_TW/LC_MESSAGES/gpdf.mo
 @dirrm share/gnome/pixmaps/gpdf
+@dirrm share/gnome/help/gpdf/C/figures
+@dirrm share/gnome/help/gpdf/C
+@dirrm share/gnome/help/gpdf
 @dirrm share/gnome/gpdf/glade
 @dirrm share/gnome/gpdf
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gpdf/gpdf-C.omf 2>/dev/null || /usr/bin/true
