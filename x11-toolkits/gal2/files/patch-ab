@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Wed Jun 11 00:44:55 2003
++++ Makefile.in	Wed Jun 11 00:45:19 2003
+@@ -138,7 +138,7 @@
+ cxxflags_set = @cxxflags_set@
+ gnomelocaledir = @gnomelocaledir@
+ install_sh = @install_sh@
+-SUBDIRS = po gal tests docs art
++SUBDIRS = po gal docs art
+ 
+ pkgconfigdir = $(prefix)/libdata/pkgconfig
+ pkgconfig_DATA = gal-2.0.pc
