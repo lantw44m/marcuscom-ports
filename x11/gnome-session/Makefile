@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomesession
 PORTVERSION=	2.8.0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://people.FreeBSD.org/~marcus/:local \
@@ -37,7 +38,7 @@ MAN1=		gnome-session.1 gnome-smproxy.1 gnome-wm.1 \
 MAN5=		default.session.5
 GCONF_SCHEMAS=	gnome-session.schemas
 
-SPLASH_IMG=	gnome-splash04-12.png
+SPLASH_IMG=	gnome-splash28.png
 
 post-extract:
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${SPLASH_IMG} ${WRKDIR}
