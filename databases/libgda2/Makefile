@@ -46,12 +46,16 @@ post-patch:
 WITH_MYSQL=	yes
 .endif
 
-.if exists(${LOCALBASE}/lib/libpq.so.3)
-WITH_POSTGRES7=	yes
+.if exists(${LOCALBASE}/include/postgresql/server/access/subtrans.h)
+WITH_POSTGRES80=yes
 .endif
 
-.if exists(${LOCALBASE}/lib/libpgeasy.so.2)
-WITH_POSTGRES72=yes
+.if exists(${LOCALBASE}/include/postgresql/server/access/strat.h)
+WITH_POSTGRES74=yes
+.endif
+
+.if exists(${LOCALBASE}/lib/libecpg.so.3)
+WITH_POSTGRES73=yes
 .endif
 
 .if exists(${LOCALBASE}/lib/libldap.so.2)
@@ -91,21 +95,30 @@ CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
 PLIST_SUB+=		MYSQL:=""
 .endif
 
-.if !defined(WITHOUT_POSTGRES7) && defined(WITH_POSTGRES7)
-POSTGRESQL_PORT?=	databases/postgresql7
+.if !defined(WITHOUT_POSTGRES73) && defined(WITH_POSTGRES73)
+POSTGRESQL_PORT?=	databases/postgresql73-client
 LIB_DEPENDS+=		pq.3:${PORTSDIR}/${POSTGRESQL_PORT}
 CONFIGURE_ARGS+=	--with-postgres=${LOCALBASE}
 PLIST_SUB+=		POSTGRES:=""
 .endif
 
-.if !defined(WITHOUT_POSTGRES72) && defined(WITH_POSTGRES72)
-POSTGRESQL_PORT?=	databases/postgresql72
-LIB_DEPENDS+=		pgeasy.2:${PORTSDIR}/${POSTGRESQL_PORT}
+.if !defined(WITHOUT_POSTGRES74) && defined(WITH_POSTGRES74)
+POSTGRESQL_PORT?=	databases/postgresql74-client
+LIB_DEPENDS+=		pg.3:${PORTSDIR}/${POSTGRESQL_PORT}
 CONFIGURE_ARGS+=	--with-postgres=${LOCALBASE}
 PLIST_SUB+=		POSTGRES:=""
 .endif
 
-.if !defined(WITH_POSTGRES7) && !defined(WITH_POSTGRES72)
+.if !defined(WITHOUT_POSTGRES80) && defined(WITH_POSTGRES80)
+POSTGRESQL_PORT?=       databases/postgresql80-client
+LIB_DEPENDS+=           pg.3:${PORTSDIR}/${POSTGRESQL_PORT}
+CONFIGURE_ARGS+=        --with-postgres=${LOCALBASE}
+PLIST_SUB+=             POSTGRES:=""
+.endif
+
+
+.if !defined(WITH_POSTGRES73) && !defined(WITH_POSTGRES74) && \
+    !defined(WITH_POSTGRES80)
 PLIST_SUB+=		POSTGRES:="@comment "
 CONFIGURE_ARGS+=	--without-postgres
 .endif
@@ -177,11 +190,14 @@ pre-everything::
 .if !defined(WITH_MYSQL)
 	@${ECHO_MSG} "You can enable support for MySQL databases by defining WITH_MYSQL."
 .endif
-.if !defined(WITH_POSTGRES7)
-	@${ECHO_MSG} "You can enable support for Postgres 7.0 databases by defining WITH_POSTGRES7."
+.if !defined(WITH_POSTGRES73)
+	@${ECHO_MSG} "You can enable support for Postgres 7.3 databases by defining WITH_POSTGRES73."
 .endif
-.if !defined(WITH_POSTGRES72)
-	@${ECHO_MSG} "You can enable support for Postgres 7.2 databases by defining WITH_POSTGRES72."
+.if !defined(WITH_POSTGRES74)
+	@${ECHO_MSG} "You can enable support for Postgres 7.4 databases by defining WITH_POSTGRES74."
+.endif
+.if !defined(WITH_POSTGRES80)
+	@${ECHO_MSG} "You can enable support for Postgres 8.0 databases by defining WITH_POSTGRES80."
 .endif
 .if !defined(WITH_LDAP)
 	@${ECHO_MSG} "You can enable support for LDAP databases by defining WITH_LDAP."
