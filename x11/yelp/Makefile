@@ -13,7 +13,7 @@ MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A help browser for GNOME 2.0 desktop
+COMMENT=	A help browser for the GNOME 2 desktop
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
@@ -22,8 +22,7 @@ USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui libgtkhtml
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
-CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
+		LDFLAGS="-L${LOCALBASE}/lib"
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
 post-patch:
