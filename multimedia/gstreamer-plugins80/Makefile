@@ -7,6 +7,7 @@
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.5.0
+PORTREVISION=	1
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -16,7 +17,7 @@ DISTNAME=	gst-plugins-${PORTVERSION}
 MAINTAINER=	lioux@FreeBSD.org
 
 BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkgconfig
-LIB_DEPENDS=	glib-2.0.103:${PORTSDIR}/devel/glib20 \
+LIB_DEPENDS=	glib-2.0.200:${PORTSDIR}/devel/glib20 \
 		gconf-2.5:${PORTSDIR}/devel/gconf2 \
 		gstreamer-0.5.1:${PORTSDIR}/multimedia/gstreamer \
 		gtk-x11-2.0.103:${PORTSDIR}/x11-toolkits/gtk20 \
