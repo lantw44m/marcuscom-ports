@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libsoup
-PORTVERSION=	2.1.4
+PORTVERSION=	2.1.5
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.1
@@ -36,9 +36,9 @@ CONFIGURE_ARGS+=--disable-ssl
 #.endif
 
 pre-everything::
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "libsoup has the following configurable option(s):"
-	@${ECHO_MSG} "	WITHOUT_SSL	Disable GnuTLS SSL support"
-	@${ECHO_MSG} ""
+#	@${ECHO_MSG} ""
+#	@${ECHO_MSG} "libsoup has the following configurable option(s):"
+#	@${ECHO_MSG} "	WITHOUT_SSL	Disable GnuTLS SSL support"
+#	@${ECHO_MSG} ""
 
 .include <bsd.port.mk>
