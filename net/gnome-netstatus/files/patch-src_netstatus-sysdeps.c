@@ -1,5 +1,5 @@
 --- src/netstatus-sysdeps.c.orig	Mon Jun  9 13:18:04 2003
-+++ src/netstatus-sysdeps.c	Sat Dec  6 17:11:01 2003
++++ src/netstatus-sysdeps.c	Sat Dec  6 17:25:49 2003
 @@ -27,10 +27,13 @@
  
  #include <stdio.h>
@@ -96,7 +96,7 @@
 +   *in_bytes = -1;
 +   *out_bytes = -1;
 +
-+   cmd = g_strdup_printf ("/usr/bin/netstat netstat -I %s -b -f inet", iface);
++   cmd = g_strdup_printf ("/usr/bin/netstat netstat -n -I %s -b -f inet", iface);
 +   command_line = g_strsplit (cmd, " ", -1);
 +   g_free (cmd);
 +
