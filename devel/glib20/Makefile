@@ -39,7 +39,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
 pre-everything::
-	@if [ `${LS} ${PKG_DBDIR} | ${GREP} "^glib-2\." | ${CUT} -f 1,2 -d'.'` != glib-2.5 ]; then \
+	@if [ `${LS} ${PKG_DBDIR} | ${GREP} "^glib-2\." | ${CUT} -f 1,2 -d'.'` != glib-2.3 ]; then \
 		if [ "x${GNOME_UPGRADE_SH_VER}" = "x" -a "x${FORCE_MANUAL_UPGRADE}" = "x" ]; then \
 			${ECHO_CMD}; \
 			${ECHO_CMD} "You are attempting to perform a GNOME upgrade manually.  Unless you know"; \
