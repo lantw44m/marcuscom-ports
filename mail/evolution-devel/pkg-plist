@@ -359,13 +359,18 @@ share/gnome/evolution/default_user/vfolders.xml
 share/gnome/evolution/ecps/medbook.ecps
 share/gnome/evolution/ecps/phonelist.ecps
 share/gnome/evolution/ecps/smallbook.ecps
+share/gnome/evolution/etspec/addressbook-config.etspec
+share/gnome/evolution/etspec/e-addressbook-view.etspec
 share/gnome/evolution/etspec/e-calendar-table.etspec
+share/gnome/evolution/etspec/e-contact-list-editor.etspec
 share/gnome/evolution/etspec/e-meeting-time-sel.etspec
 share/gnome/evolution/etspec/e-storage-set-view.etspec
 share/gnome/evolution/etspec/mail-accounts.etspec
 share/gnome/evolution/etspec/meeting-page.etspec
 share/gnome/evolution/etspec/message-list.etspec
+share/gnome/evolution/etspec/e-select-names.etspec
 share/gnome/evolution/etspec/subscribe-dialog.etspec
+share/gnome/evolution/evolutionperson.schema
 share/gnome/evolution/filtertypes.xml
 share/gnome/evolution/glade/alarm-notify.glade
 share/gnome/evolution/glade/alarm-options.glade
@@ -886,6 +891,8 @@ share/gnome/images/evolution/service-right-disabled.png
 share/gnome/images/evolution/service-right.png
 share/gnome/images/evolution/service-up-disabled.png
 share/gnome/images/evolution/service-up.png
+share/gnome/images/evolution/settings-16.png
+share/gnome/images/evolution/settings.png
 share/gnome/images/evolution/show_all_messages.xpm
 share/gnome/images/evolution/splash.png
 share/gnome/images/evolution/summary-settings.png
