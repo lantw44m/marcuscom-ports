@@ -230,7 +230,7 @@ glib20_LIB_DEPENDS=	glib-2.0.400:${PORTSDIR}/devel/glib20
 glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
 glib20_USE_GNOME_IMPL=gnometarget pkgconfig
 
-atk_LIB_DEPENDS=	atk-1.0.700:${PORTSDIR}/accessibility/atk
+atk_LIB_DEPENDS=	atk-1.0.800:${PORTSDIR}/accessibility/atk
 atk_DETECT=		${LOCALBASE}/libdata/pkgconfig/atk.pc
 atk_USE_GNOME_IMPL=	glib20
 
