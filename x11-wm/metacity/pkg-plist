@@ -13,9 +13,7 @@ lib/libmetacity-private.so
 lib/libmetacity-private.so.0
 libdata/pkgconfig/libmetacity-private.pc
 libexec/metacity-dialog
-share/gnome/metacity/glade/metacity-properties.glade
 share/gnome/metacity/icons/metacity-window-demo.png
-share/gnome/pixmaps/metacity-properties.png
 share/gnome/themes/AgingGorilla/metacity-1/active-button.png
 share/gnome/themes/AgingGorilla/metacity-1/active-close-button.png
 share/gnome/themes/AgingGorilla/metacity-1/active-close-menu-icon.png
@@ -185,7 +183,6 @@ share/locale/zh_TW/LC_MESSAGES/metacity.mo
 @dirrm share/gnome/themes/AgingGorilla/metacity-1
 @dirrm share/gnome/themes/AgingGorilla
 @dirrm share/gnome/metacity/icons
-@dirrm share/gnome/metacity/glade
 @dirrm share/gnome/metacity
 @dirrm include/metacity-1/metacity-private
 @dirrm include/metacity-1

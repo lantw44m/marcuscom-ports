@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	metacity
-PORTVERSION=	2.9.1
+PORTVERSION=	2.9.2
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
-USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier gconf2 libglade2
+USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier gconf2
 INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
