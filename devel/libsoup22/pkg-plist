@@ -1,0 +1,24 @@
+include/libsoup-%%VERSION%%/libsoup/soup-address.h
+include/libsoup-%%VERSION%%/libsoup/soup-connection.h
+include/libsoup-%%VERSION%%/libsoup/soup-headers.h
+include/libsoup-%%VERSION%%/libsoup/soup-message.h
+include/libsoup-%%VERSION%%/libsoup/soup-method.h
+include/libsoup-%%VERSION%%/libsoup/soup-misc.h
+include/libsoup-%%VERSION%%/libsoup/soup-server-auth.h
+include/libsoup-%%VERSION%%/libsoup/soup-server-message.h
+include/libsoup-%%VERSION%%/libsoup/soup-server.h
+include/libsoup-%%VERSION%%/libsoup/soup-session.h
+include/libsoup-%%VERSION%%/libsoup/soup-soap-message.h
+include/libsoup-%%VERSION%%/libsoup/soup-soap-response.h
+include/libsoup-%%VERSION%%/libsoup/soup-socket.h
+include/libsoup-%%VERSION%%/libsoup/soup-status.h
+include/libsoup-%%VERSION%%/libsoup/soup-types.h
+include/libsoup-%%VERSION%%/libsoup/soup-uri.h
+include/libsoup-%%VERSION%%/libsoup/soup.h
+lib/libsoup-%%VERSION%%.a
+lib/libsoup-%%VERSION%%.so
+lib/libsoup-%%VERSION%%.so.0
+libdata/pkgconfig/libsoup-%%VERSION%%.pc
+@dirrm share/doc/libsoup
+@dirrm include/libsoup-%%VERSION%%/libsoup
+@dirrm include/libsoup-%%VERSION%%
