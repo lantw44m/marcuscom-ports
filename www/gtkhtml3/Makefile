@@ -7,6 +7,7 @@
 
 PORTNAME=	gtkhtml3
 PORTVERSION=	3.0.2
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
 		${MASTER_SITE_GNOME}
