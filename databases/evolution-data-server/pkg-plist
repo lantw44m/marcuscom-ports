@@ -110,10 +110,10 @@ include/evolution-data-server-%%VERSION%%/libical/vcc.h
 include/evolution-data-server-%%VERSION%%/libical/vobject.h
 lib/libebook.a
 lib/libebook.so
-lib/libebook.so.6
+lib/libebook.so.7
 lib/libecal.a
 lib/libecal.so
-lib/libecal.so.6
+lib/libecal.so.7
 lib/libedata-book.a
 lib/libedata-book.so
 lib/libedata-book.so.0
@@ -122,7 +122,7 @@ lib/libedata-cal.so
 lib/libedata-cal.so.6
 lib/libedataserver.a
 lib/libedataserver.so
-lib/libedataserver.so.3
+lib/libedataserver.so.4
 lib/libegroupwise.a
 lib/libegroupwise.so
 lib/libegroupwise.so.1
