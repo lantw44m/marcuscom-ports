@@ -75,7 +75,7 @@ RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 
 post-install:
 	@${CHMOD} u+w ${PREFIX}/share/gnome/evolution/${EVO_VERSION}/default/C/mail/local/Inbox
-	@${LN} -s ${PREFIX}/bin/evolution-${EVO_VERSION} \
+	@${LN} -sf ${PREFIX}/bin/evolution-${EVO_VERSION} \
 		${PREFIX}/bin/evolution
 
 .include <bsd.port.post.mk>
