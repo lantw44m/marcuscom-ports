@@ -47,18 +47,6 @@ post-patch:
 WITH_MYSQL=	yes
 .endif
 
-.if exists(${LOCALBASE}/include/postgresql/server/access/subtrans.h)
-WITH_POSTGRES80=yes
-.endif
-
-.if exists(${LOCALBASE}/include/postgresql/server/access/strat.h)
-WITH_POSTGRES74=yes
-.endif
-
-.if exists(${LOCALBASE}/lib/libecpg.so.3)
-WITH_POSTGRES73=yes
-.endif
-
 .if exists(${LOCALBASE}/lib/libldap.so.2)
 WITH_LDAP=yes
 .endif
@@ -96,33 +84,13 @@ CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
 PLIST_SUB+=		MYSQL:=""
 .endif
 
-.if !defined(WITHOUT_POSTGRES73) && defined(WITH_POSTGRES73)
-POSTGRESQL_PORT?=	databases/postgresql73-client
-LIB_DEPENDS+=		pq.3:${PORTSDIR}/${POSTGRESQL_PORT}
+.if !defined(WITHOUT_PGSQL) && defined(WITH_PGSQL)
+USE_PGSQL=		yes
 CONFIGURE_ARGS+=	--with-postgres=${LOCALBASE}
 PLIST_SUB+=		POSTGRES:=""
-.endif
-
-.if !defined(WITHOUT_POSTGRES74) && defined(WITH_POSTGRES74)
-POSTGRESQL_PORT?=	databases/postgresql74-client
-LIB_DEPENDS+=		pg.3:${PORTSDIR}/${POSTGRESQL_PORT}
-CONFIGURE_ARGS+=	--with-postgres=${LOCALBASE}
-PLIST_SUB+=		POSTGRES:=""
-.endif
-
-.if !defined(WITHOUT_POSTGRES80) && defined(WITH_POSTGRES80)
-POSTGRESQL_PORT?=       databases/postgresql80-client
-LIB_DEPENDS+=           pg.3:${PORTSDIR}/${POSTGRESQL_PORT}
-CONFIGURE_ARGS+=        --with-postgres=${LOCALBASE}
-PLIST_SUB+=             POSTGRES:=""
-.endif
-
-
-.if !defined(WITH_POSTGRES73) && !defined(WITH_POSTGRES74) && \
-    !defined(WITH_POSTGRES80)
+.else
 PLIST_SUB+=		POSTGRES:="@comment "
 CONFIGURE_ARGS+=	--without-postgres
-.endif
 
 .if !defined(WITHOUT_LDAP) && defined(WITH_LDAP)
 USE_OPENLDAP=		yes
