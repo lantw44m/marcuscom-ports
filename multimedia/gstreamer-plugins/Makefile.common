@@ -276,12 +276,13 @@ LIB_DEPENDS+=	fame-0.9.1:${PORTSDIR}/multimedia/libfame
 # libmms
 .if ${GST_PLUGIN}=="libmng"
 LIB_DEPENDS+=   mms.0:${PORTSDIR}/multimedia/libmms
+PLIST_FILES=	${GST_LIB_DIR}/libgstmms.so
 .endif
 
 # libmng
 .if ${GST_PLUGIN}=="libmng"
 LIB_DEPENDS+=	mng.1:${PORTSDIR}/graphics/libmng
-#PLIST_FILES=    ${GST_LIB_DIR}/libgstmng.so
+PLIST_FILES=    ${GST_LIB_DIR}/libgstmng.so
 .endif
 
 # mikmod
@@ -323,7 +324,7 @@ LIB_DEPENDS+=	sndfile.1:${PORTSDIR}/audio/libsndfile
 
 # theora
 .if ${GST_PLUGIN}=="theora"
-LIB_DEPENDS+=	theora.0:${PORTSDIR}/graphics/libtheora
+LIB_DEPENDS+=	theora.1:${PORTSDIR}/multimedia/libtheora
 .endif
 
 # mad
