@@ -1,0 +1,16 @@
+
+$FreeBSD: ports/x11-wm/sawfish2/files/patch-ae,v 1.2 2002/05/14 22:26:39 sobomax Exp $
+
+--- capplet/Makefile.in.orig	Mon Apr 29 21:43:11 2002
++++ capplet/Makefile.in	Mon Apr 29 21:44:12 2002
+@@ -26,8 +26,8 @@
+ srcdir=@srcdir@
+ VPATH=@srcdir@:@top_srcdir@
+ 
+-G_CC_DIR = $(GNOMEDIR)/share/control-center-2.0/capplets
+-G_PIXMAP_DIR = $(GNOMEDIR)/share/pixmaps
++G_CC_DIR = $(GNOMEDIR)/share/gnome/control-center-2.0/capplets
++G_PIXMAP_DIR = $(GNOMEDIR)/share/gnome/pixmaps
+ 
+ all :
+ 
