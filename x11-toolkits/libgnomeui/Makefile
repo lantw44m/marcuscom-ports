@@ -7,6 +7,7 @@
 
 PORTNAME=	libgnomeui
 PORTVERSION=	2.1.4
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.1
@@ -14,7 +15,8 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS+=	bonoboui-2.0:${PORTSDIR}/x11-toolkits/libbonoboui
+LIB_DEPENDS+=	bonoboui-2.0:${PORTSDIR}/x11-toolkits/libbonoboui \
+		startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
