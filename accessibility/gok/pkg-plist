@@ -47,6 +47,10 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gok/spy/%gconf.xml
 etc/gconf/schemas/gok.schemas
 libdata/bonobo/servers/GNOME_Gok.server
 libdata/pkgconfig/gok-1.0.pc
+%%DOCSDIR%%/home.png
+%%DOCSDIR%%/left.png
+%%DOCSDIR%%/right.png
+%%DOCSDIR%%/up.png
 share/gnome/applications/gok.desktop
 share/gnome/gok/East.png
 share/gnome/gok/Keyboard.kbd
@@ -633,6 +637,7 @@ share/locale/zh_TW/LC_MESSAGES/gok.mo
 @dirrm share/gnome/gok/ar
 @dirrm share/gnome/gok/am
 @dirrm share/gnome/gok
+@dirrm %%DOCSDIR%%
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gok/spy
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gok/layout
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gok/feedbacks/none
