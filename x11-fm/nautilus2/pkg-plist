@@ -239,3 +239,4 @@ share/locale/zh_TW/LC_MESSAGES/nautilus.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/nautilus/icon_view
 @dirrm etc/gconf/gconf.xml.defaults/apps/nautilus/desktop
 @dirrm etc/gconf/gconf.xml.defaults/apps/nautilus
+@unexec /bin/rmdir %D/lib/nautilus/extensions-1.0 2>/dev/null || /usr/bin/true
