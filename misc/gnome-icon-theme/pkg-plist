@@ -2212,6 +2212,10 @@ share/icons/hicolor/48x48/stock/generic/stock_web-calendar.png
 share/icons/hicolor/48x48/stock/io/stock_bluetooth.png
 share/icons/hicolor/48x48/stock/io/stock_network-printer.png
 share/icons/hicolor/48x48/stock/io/stock_print-driver.png
+share/icons/hicolor/48x48/stock/io/stock_print-duplex-no-tumble.png
+share/icons/hicolor/48x48/stock/io/stock_print-duplex-tumble.png
+share/icons/hicolor/48x48/stock/io/stock_print-duplex.png
+share/icons/hicolor/48x48/stock/io/stock_print-non-duplex.png
 share/icons/hicolor/48x48/stock/io/stock_print-preview-print.png
 share/icons/hicolor/48x48/stock/io/stock_print-preview.png
 share/icons/hicolor/48x48/stock/io/stock_print-setup.png
