@@ -293,6 +293,8 @@ lib/evolution/%%VERSION%%/camel-providers/libcamelsmtp.urls
 lib/evolution/%%VERSION%%/components/libevolution-addressbook.so
 lib/evolution/%%VERSION%%/components/libevolution-calendar.so
 lib/evolution/%%VERSION%%/components/libevolution-mail.so
+lib/evolution/%%VERSION%%/evolution-addressbook-importers/libevolution-addressbook-ldif-importer.so
+lib/evolution/%%VERSION%%/evolution-addressbook-importers/libevolution-addressbook-vcard-importer.so
 lib/evolution/%%VERSION%%/evolution-calendar-importers/libevolution-calendar-importers.so
 lib/evolution/%%VERSION%%/libcamel.so
 lib/evolution/%%VERSION%%/libcamel.so.0
@@ -312,17 +314,22 @@ lib/evolution/%%VERSION%%/libevolution-calendar-a11y.so
 lib/evolution/%%VERSION%%/libevolution-calendar-a11y.so.0
 lib/evolution/%%VERSION%%/libevolution-importer.so
 lib/evolution/%%VERSION%%/libevolution-importer.so.0
+lib/evolution/%%VERSION%%/libevolution-mail-importers.so
+lib/evolution/%%VERSION%%/libevolution-mail-importers.so.0
 lib/evolution/%%VERSION%%/libevolution-widgets-a11y.so
 lib/evolution/%%VERSION%%/libevolution-widgets-a11y.so.0
 %%PILOT:%%lib/gnome-pilot/conduits/libeaddress_conduit.so
 %%PILOT:%%lib/gnome-pilot/conduits/libecalendar_conduit.so
 %%PILOT:%%lib/gnome-pilot/conduits/libetodo_conduit.so
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_%%VERSION%%.server
+libdata/bonobo/servers/GNOME_Evolution_Addressbook_LDIF_Importer_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_SelectNames_%%VERSION%%.server
+libdata/bonobo/servers/GNOME_Evolution_Addressbook_VCard_Importer_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Calendar_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Calendar_AlarmNotify_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Calendar_Importer_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Mail_%%VERSION%%.server
+libdata/bonobo/servers/GNOME_Evolution_Mail_Importers_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Shell_%%VERSION%%.server
 libdata/pkgconfig/camel-%%VERSION%%.pc
 libdata/pkgconfig/evolution-shell-%%VERSION%%.pc
@@ -426,6 +433,7 @@ share/gnome/evolution/%%VERSION%%/images/buttons/delete-message.png
 share/gnome/evolution/%%VERSION%%/images/buttons/fetch-mail.png
 share/gnome/evolution/%%VERSION%%/images/buttons/forward.png
 share/gnome/evolution/%%VERSION%%/images/buttons/goto-24.png
+share/gnome/evolution/%%VERSION%%/images/im-nov.png
 share/gnome/evolution/%%VERSION%%/images/buttons/listview.xpm
 share/gnome/evolution/%%VERSION%%/images/buttons/monthview.xpm
 share/gnome/evolution/%%VERSION%%/images/buttons/move-message.png
@@ -656,7 +664,6 @@ share/gnome/evolution/%%VERSION%%/ui/evolution-subscribe.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-task-editor.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-tasks.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution.xml
-share/gnome/evolution/%%VERSION%%/ui/my-evolution.xml
 share/gnome/evolution/%%VERSION%%/vfoldertypes.xml
 share/gnome/evolution/%%VERSION%%/views/addressbook/Address_Cards.galview
 share/gnome/evolution/%%VERSION%%/views/addressbook/By_Company.galview
@@ -706,8 +713,6 @@ share/gnome/help/evolution-%%VERSION%%/C/figures/mail-inbox.png
 share/gnome/help/evolution-%%VERSION%%/C/figures/mail-threaded.png
 share/gnome/help/evolution-%%VERSION%%/C/figures/mainwindow-pic.png
 share/gnome/help/evolution-%%VERSION%%/C/figures/newmsg.png
-share/gnome/help/evolution-%%VERSION%%/C/figures/print-dest.png
-share/gnome/help/evolution-%%VERSION%%/C/figures/print-preview.png
 share/gnome/help/evolution-%%VERSION%%/C/figures/replymsg.png
 share/gnome/help/evolution-%%VERSION%%/C/figures/schedule.png
 share/gnome/help/evolution-%%VERSION%%/C/figures/vfolder-createrule-fig.png
@@ -720,7 +725,6 @@ share/gnome/help/evolution-%%VERSION%%/C/usage-exchange.xml
 share/gnome/help/evolution-%%VERSION%%/C/usage-mail-org.xml
 share/gnome/help/evolution-%%VERSION%%/C/usage-mail.xml
 share/gnome/help/evolution-%%VERSION%%/C/usage-mainwindow.xml
-share/gnome/help/evolution-%%VERSION%%/C/usage-print.xml
 share/gnome/help/evolution-%%VERSION%%/C/usage-sync.xml
 share/gnome/idl/evolution-%%VERSION%%/Composer.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution-Addressbook-SelectNames.idl
@@ -749,6 +753,7 @@ share/locale/da/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/de/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/el/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/en_AU/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/en_CA/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/en_GB/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/es/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/et/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -816,6 +821,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm libexec/evolution/%%VERSION%%
 @dirrm libexec/evolution
 @dirrm lib/evolution/%%VERSION%%/evolution-calendar-importers
+@dirrm lib/evolution/%%VERSION%%/evolution-addressbook-importers
 @dirrm lib/evolution/%%VERSION%%/components
 @dirrm lib/evolution/%%VERSION%%/camel-providers
 @dirrm lib/evolution/%%VERSION%%
