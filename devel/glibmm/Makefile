@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	glibmm
-PORTVERSION=	2.3.2
+PORTVERSION=	2.3.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -26,5 +26,14 @@ INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.3" API_VERSION="2.4"
+
+.if !defined(NOPORTDOCS)
+BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen
+.else
+USE_REINPLACE=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|^\(SUBDIRS =\)\(docs\)\(.*\)|\1\3|' ${WRKSRC}/Makefile.in
+.endif
 
 .include <bsd.port.mk>
