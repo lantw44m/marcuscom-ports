@@ -1,6 +1,33 @@
---- configure.orig	Tue Dec 17 05:27:57 2002
-+++ configure	Sun Dec 22 17:31:25 2002
-@@ -10758,17 +10759,17 @@
+--- configure.orig	Thu Jan 15 13:50:59 2004
++++ configure	Thu Jan 15 15:10:20 2004
+@@ -21254,7 +21254,9 @@
+ if eval "test \"\${$as_ac_var+set}\" = set"; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+-  cat >conftest.$ac_ext <<_ACEOF
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lintl  $LIBS"
++cat >conftest.$ac_ext <<_ACEOF
+ #line $LINENO "configure"
+ /* confdefs.h.  */
+ _ACEOF
+@@ -21318,6 +21320,7 @@
+ eval "$as_ac_var=no"
+ fi
+ rm -f conftest.$ac_objext conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
+ fi
+ echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_var'}'`" >&5
+ echo "${ECHO_T}`eval echo '${'$as_ac_var'}'`" >&6
+@@ -21325,6 +21328,7 @@
+   cat >>confdefs.h <<_ACEOF
+ #define `echo "HAVE_$ac_func" | $as_tr_cpp` 1
+ _ACEOF
++  LIBS="-lintl $LIBS"
+ 
+ else
+   { { echo "$as_me:$LINENO: error: ngettext function is required to build gedit." >&5
+@@ -21359,17 +21363,17 @@
  if test "x${prefix}" = "xNONE"; then
  
  cat >>confdefs.h <<_ACEOF
