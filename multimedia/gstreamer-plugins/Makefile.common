@@ -191,7 +191,7 @@ LIB_DEPENDS+=	jack.0:${PORTSDIR}/audio/jack
 .endif
 
 # libcdaudio
-.if ${GST_PLUGIN}=="libcdaudio"
+.if ${GST_PLUGIN}=="cdaudio"
 LIB_DEPENDS+=	cdaudio.1:${PORTSDIR}/audio/libcdaudio
 .endif
 
