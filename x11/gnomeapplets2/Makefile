@@ -25,7 +25,7 @@ USE_GMAKE=	yes
 USE_REINPLACE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomehier gnomeprefix gnomehack intlhack lthack gnomepanel gail
-USE_LIBTOOL=	yes
+USE_LIBTOOL_VER=13
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

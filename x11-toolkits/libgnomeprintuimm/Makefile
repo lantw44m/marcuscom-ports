@@ -24,7 +24,7 @@ USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack lthack libgnomeprintui
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL=	yes
+USE_LIBTOOL_VER=13
 CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.5" API_VERSION="2.6"

@@ -24,7 +24,7 @@ USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack lthack gnomepanel
 GNOME_DESKTOP_VERSION=2
-USE_LIBTOOL=	yes
+USE_LIBTOOL_VER=13
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static
 

@@ -20,7 +20,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack lthack glib20 libxml2
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL=	yes
+USE_LIBTOOL_VER=13
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc

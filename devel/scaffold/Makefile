@@ -20,7 +20,7 @@ RUN_DEPENDS=	gnome-autogen.sh:${PORTSDIR}/devel/gnomecommon
 
 USE_X_PREFIX=	yes
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+USE_LIBTOOL_VER=13
 INSTALLS_SHLIB=	yes
 USE_GNOME=	gnomehack gnomeprefix gnometarget libbonoboui
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

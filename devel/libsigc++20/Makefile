@@ -23,7 +23,7 @@ USE_GMAKE=	yes
 LATEST_LINK=	libsigc++2
 INSTALLS_SHLIB=	yes
 USE_GNOME=	gnomehack lthack gnometarget pkgconfig
-USE_LIBTOOL=	yes
+USE_LIBTOOL_VER=13
 
 .if !defined(NOPORTDOCS)
 BUILD_DEPENDS+=	doxygen:${PORTSDIR}/devel/doxygen

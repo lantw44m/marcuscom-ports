@@ -25,7 +25,7 @@ USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack lthack gnomedesktop \
 WANT_GNOME=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
-USE_LIBTOOL=	yes
+USE_LIBTOOL_VER=13
 CONFIGURE_ARGS=	--with-kde-datadir=${LOCALBASE}/share \
 		--with-kde-docdir=${LOCALBASE}/share/doc
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \

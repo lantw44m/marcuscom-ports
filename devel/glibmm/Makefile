@@ -21,7 +21,7 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnometarget lthack glib20
-USE_LIBTOOL=	yes
+USE_LIBTOOL_VER=13
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static
 
