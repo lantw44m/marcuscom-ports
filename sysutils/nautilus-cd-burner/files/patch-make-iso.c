@@ -15,7 +15,7 @@
  			}
  
  			g_free (line);
-+		} else if (G_IO_STATUS_EOF) {
++		} else if (status == G_IO_STATUS_EOF) {
 +			if (mkisofs_output->debug)
 +				g_print ("make_iso stderr: EOF\n");
 +			nautilus_burn_progress_set_fraction (1.0);
