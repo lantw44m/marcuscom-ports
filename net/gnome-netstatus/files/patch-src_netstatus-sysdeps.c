@@ -1,5 +1,5 @@
---- src/netstatus-sysdeps.c.orig	Fri Jul 30 04:19:31 2004
-+++ src/netstatus-sysdeps.c	Tue Sep 21 00:27:19 2004
+--- src/netstatus-sysdeps.c	30 Jul 2004 08:21:30 -0000	1.10
++++ src/netstatus-sysdeps.c	22 Feb 2005 04:54:48 -0000
 @@ -35,6 +35,16 @@
  #include <glib.h>
  #include <libgnome/gnome-i18n.h>
@@ -17,7 +17,7 @@
  static inline gboolean
  parse_stats (char    *buf,
  	     int      prx_idx,
-@@ -384,6 +394,163 @@
+@@ -384,6 +394,165 @@
       }
  }
  
@@ -163,7 +163,9 @@
 +    *signal_strength = 0;
 +
 +  if (g_strncasecmp (iface, "an", 2) && g_strncasecmp (iface, "wi", 2) &&
-+    g_strncasecmp (iface, "ath", 3) && g_strncasecmp (iface, "ndis", 4))
++    g_strncasecmp (iface, "ath", 3) && g_strncasecmp (iface, "ndis", 4) &&
++    g_strncasecmp (iface, "ipw", 3) && g_strncasecmp (iface, "iwi", 3) &&
++    g_strncasecmp (iface, "acx", 3))
 +    return error_message;
 +
 +  if (g_strncasecmp (iface, "an", 2) == 0) {
@@ -181,7 +183,7 @@
  char *
  netstatus_sysdeps_read_iface_statistics (const char *iface,
  					 gulong     *in_packets,
-@@ -485,23 +652,6 @@
+@@ -485,23 +654,6 @@
    g_strfreev (argv);
  
    return error_message;
