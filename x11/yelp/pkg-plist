@@ -1,5 +1,3 @@
-bin/gman
-bin/gnome-help
 bin/yelp
 bin/yelp-pregenerate
 libdata/bonobo/servers/GNOME_Yelp.server
@@ -136,6 +134,7 @@ share/gnome/sgml/docbook/yelp/yelp-custom.xsl
 share/gnome/sgml/docbook/yelp/yelp-customization.xsl
 share/gnome/yelp/catalog
 share/gnome/yelp/important_docs.xml
+share/gnome/yelp/ui/yelp.glade
 share/locale/az/LC_MESSAGES/yelp.mo
 share/locale/bg/LC_MESSAGES/yelp.mo
 share/locale/ca/LC_MESSAGES/yelp.mo
@@ -169,6 +168,7 @@ share/locale/vi/LC_MESSAGES/yelp.mo
 share/locale/wa/LC_MESSAGES/yelp.mo
 share/locale/zh_CN/LC_MESSAGES/yelp.mo
 share/locale/zh_TW/LC_MESSAGES/yelp.mo
+@dirrm share/gnome/yelp/ui
 @dirrm share/gnome/yelp
 @dirrm share/gnome/sgml/docbook/yelp/docbook/lib
 @dirrm share/gnome/sgml/docbook/yelp/docbook/images
