@@ -88,6 +88,7 @@ share/doc/panel-applet/panel-signals.html
 share/doc/panel-applet/panelapplet.html
 share/doc/panel-applet/server-files.html
 share/doc/panel-applet/session-saving.html
+share/gnome/fish/fish.glade
 share/gnome/gnome-panel/glade/panel-test-applets.glade
 share/gnome/help/clock/C/clock.xml
 share/gnome/help/clock/C/figures/clock_applet.png
@@ -196,6 +197,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/gen_util
 @dirrm share/gnome/gnome-panel/glade
 @dirrm share/gnome/gnome-panel
+@dirrm share/gnome/fish
 @dirrm share/doc/panel-applet
 @dirrm lib/gnome-panel
 @dirrm include/panel-2.0
