@@ -16,13 +16,11 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNOME accessibility toolkit (ATK)
 
-LIB_DEPENDS=	glib-2.0.200:${PORTSDIR}/devel/glib20
-
 USE_BZIP2=	yes
 USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack glib20
 CONFIGURE_ARGS=	--enable-static \
 		--disable-gtk-doc \
 		--with-html-dir=${PREFIX}/share/doc
