@@ -32,10 +32,9 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAN1=		dia.1
 
 .if !defined(WITHOUT_PYTHON)
-USE_PYTHON=	yes
-BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/pygtk.py:${PORTSDIR}/x11-toolkits/py-gtk2
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/pygtk.py:${PORTSDIR}/x11-toolkits/py-gtk2
-CONFIGURE_ARGS=	--with-python
+USE_PYTHON=		yes
+USE_GNOME+=		pygtk2
+CONFIGURE_ARGS+=	--with-python
 PLIST_SUB=	PYTHON:=""
 .else
 PLIST_SUB=	PYTHON:="@comment "
