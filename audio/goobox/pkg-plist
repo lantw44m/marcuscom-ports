@@ -30,5 +30,8 @@ share/locale/ru/LC_MESSAGES/goobox.mo
 share/locale/sv/LC_MESSAGES/goobox.mo
 share/locale/zh_CN/LC_MESSAGES/goobox.mo
 @unexec rmdir %D/share/locale/ar 2> /dev/null || true
+@dirrm share/gnome/omf/goobox
+@dirrm share/gnome/help/goobox/C
+@dirrm share/gnome/help/goobox
 @dirrm share/gnome/goobox/glade
 @dirrm share/gnome/goobox
