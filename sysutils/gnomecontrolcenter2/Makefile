@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomecontrolcenter2
 PORTVERSION=	2.9.91
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/2.9
@@ -40,5 +41,7 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[{]prefix[}]/share/pixmaps|{datadir}/pixmaps|g'
+	@${REINPLACE_CMD} -e 's|mozilla-thunderbird|thunderbird|g' \
+		${WKRSRC}/capplets/default-applications/gnome-default-applications-properties-structs.c
 
 .include <bsd.port.mk>
