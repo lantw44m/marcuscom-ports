@@ -42,7 +42,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/battstat-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		${X11BASE}/share/themes/HighContrast/gtk-2.0/gtkrc:${PORTSDIR}/x11-toolkits/gnome-themes \
 		ggv:${PORTSDIR}/print/ggv2 \
 		pkgview:${PORTSDIR}/sysutils/pkgview \
-		acme:${PORTSDIR}/x11/acme \
+		acme:${PORTSDIR}/multimedia/acme \
 		gst-launch-ext:${PORTSDIR}/multimedia/gst-plugins
 
 NO_BUILD=	yes
