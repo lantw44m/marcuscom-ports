@@ -2,6 +2,7 @@ bin/evolution-%%VERSION%%
 etc/gconf/gconf.xml.defaults/apps/evolution/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/addressbook/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/addressbook/completion/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/evolution/addressbook/display/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/addressbook/select_names/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/calendar/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/evolution/calendar/date_navigator/%gconf.xml
@@ -33,6 +34,7 @@ etc/gconf/gconf.xml.defaults/apps/evolution/shell/view_defaults/shortcut_bar/%gc
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/addressbook/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/addressbook/completion/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/evolution/addressbook/display/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/addressbook/select_names/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/calendar/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/evolution/calendar/date_navigator/%gconf.xml
@@ -206,6 +208,7 @@ include/evolution-%%VERSION%%/e-conduit/e-pilot-settings.h
 include/evolution-%%VERSION%%/e-conduit/e-pilot-util.h
 include/evolution-%%VERSION%%/e-util/e-account-list.h
 include/evolution-%%VERSION%%/e-util/e-account.h
+include/evolution-%%VERSION%%/e-util/e-bconf-map.h
 include/evolution-%%VERSION%%/e-util/e-categories-config.h
 include/evolution-%%VERSION%%/e-util/e-categories-master-list-wombat.h
 include/evolution-%%VERSION%%/e-util/e-component-listener.h
@@ -213,6 +216,7 @@ include/evolution-%%VERSION%%/e-util/e-config-listener.h
 include/evolution-%%VERSION%%/e-util/e-corba-utils.h
 include/evolution-%%VERSION%%/e-util/e-dialog-utils.h
 include/evolution-%%VERSION%%/e-util/e-dialog-widgets.h
+include/evolution-%%VERSION%%/e-util/e-folder-map.h
 include/evolution-%%VERSION%%/e-util/e-gtk-utils.h
 include/evolution-%%VERSION%%/e-util/e-gui-utils.h
 include/evolution-%%VERSION%%/e-util/e-host-utils.h
@@ -233,7 +237,6 @@ include/evolution-%%VERSION%%/e-util/e-time-utils.h
 include/evolution-%%VERSION%%/e-util/e-trie.h
 include/evolution-%%VERSION%%/e-util/e-uid.h
 include/evolution-%%VERSION%%/e-util/e-url.h
-include/evolution-%%VERSION%%/e-util/e-xml-hash-utils.h
 include/evolution-%%VERSION%%/e-util/md5-utils.h
 include/evolution-%%VERSION%%/importer/GNOME_Evolution_Importer.h
 include/evolution-%%VERSION%%/importer/evolution-importer-client.h
@@ -320,13 +323,13 @@ libdata/bonobo/servers/GNOME_Evolution_Mail_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Shell_%%VERSION%%.server
 libdata/pkgconfig/camel-%%VERSION%%.pc
 libdata/pkgconfig/evolution-shell-%%VERSION%%.pc
-libexec/evolution-mbox-upgrade
 libexec/evolution/%%VERSION%%/camel/camel-index-control
 libexec/evolution/%%VERSION%%/camel/camel-lock-helper
 libexec/evolution/%%VERSION%%/evolution-alarm-notify
 libexec/evolution/%%VERSION%%/killev
 share/gnome/applications/evolution-%%VERSION%%.desktop
 share/gnome/evolution/%%VERSION%%/addresstypes.xml
+share/gnome/evolution/%%VERSION%%/default/C/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/ecps/medbook.ecps
 share/gnome/evolution/%%VERSION%%/ecps/phonelist.ecps
 share/gnome/evolution/%%VERSION%%/ecps/smallbook.ecps
@@ -363,6 +366,7 @@ share/gnome/evolution/%%VERSION%%/glade/event-page.glade
 share/gnome/evolution/%%VERSION%%/glade/evolution-startup-wizard.glade
 share/gnome/evolution/%%VERSION%%/glade/evolution.png
 share/gnome/evolution/%%VERSION%%/glade/filter.glade
+share/gnome/evolution/%%VERSION%%/glade/flag-for-followup-done-48.png
 share/gnome/evolution/%%VERSION%%/glade/flag-for-followup-48.png
 share/gnome/evolution/%%VERSION%%/glade/fulladdr.glade
 share/gnome/evolution/%%VERSION%%/glade/fullname.glade
@@ -484,6 +488,7 @@ share/gnome/evolution/%%VERSION%%/images/faq-16.png
 share/gnome/evolution/%%VERSION%%/images/fetch-mail.png
 share/gnome/evolution/%%VERSION%%/images/find_contact.xpm
 share/gnome/evolution/%%VERSION%%/images/find_message.xpm
+share/gnome/evolution/%%VERSION%%/images/flag-for-followup-done-16.png
 share/gnome/evolution/%%VERSION%%/images/flag-for-followup-16.png
 share/gnome/evolution/%%VERSION%%/images/folder-copy-16.png
 share/gnome/evolution/%%VERSION%%/images/folder-mini.png
@@ -756,6 +761,7 @@ share/locale/ja/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ko/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/lt/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/lv/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/mn/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ms/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/nl/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/nn/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -793,6 +799,10 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/gnome/evolution/%%VERSION%%/glade
 @dirrm share/gnome/evolution/%%VERSION%%/etspec
 @dirrm share/gnome/evolution/%%VERSION%%/ecps
+@dirrm share/gnome/evolution/%%VERSION%%/default/C/mail/local
+@dirrm share/gnome/evolution/%%VERSION%%/default/C/mail
+@dirrm share/gnome/evolution/%%VERSION%%/default/C
+@dirrm share/gnome/evolution/%%VERSION%%/default
 @dirrm share/gnome/evolution/%%VERSION%%
 @dirrm share/gnome/evolution
 @dirrm libexec/evolution/%%VERSION%%/camel
@@ -838,6 +848,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/calendar/date_navigator
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/calendar
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/addressbook/select_names
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/addressbook/display
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/addressbook/completion
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/addressbook
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution
@@ -869,6 +880,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/calendar/date_navigator
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/calendar
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/addressbook/select_names
+@dirrm etc/gconf/gconf.xml.defaults/apps/evolution/addressbook/display
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/addressbook/completion
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution/addressbook
 @dirrm etc/gconf/gconf.xml.defaults/apps/evolution
