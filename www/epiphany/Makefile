@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
@@ -40,7 +40,7 @@ HEADERS_SUFX=
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack libgnomeui
+USE_GNOME=	gnomeprefix gnomehack intlhack lthack libgnomeui
 WANT_GNOME=	yes
 USE_LIBTOOL=	yes
 USE_GMAKE=	yes

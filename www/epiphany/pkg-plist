@@ -4,51 +4,66 @@ etc/gconf/gconf.xml.defaults/apps/epiphany/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/epiphany/dialogs/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/epiphany/directories/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/epiphany/general/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/epiphany/lockdown/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/epiphany/web/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/dialogs/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/directories/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/general/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/lockdown/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/web/%gconf.xml
+etc/gconf/schemas/epiphany-lockdown.schemas
 etc/gconf/schemas/epiphany.schemas
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-bookmarks.h
+include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-command-manager.h
+include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-cookie-manager.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-dialog.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-embed-event.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-embed-persist.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-embed-prefs.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-embed-shell.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-embed-single.h
-include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-embed-types.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-embed.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-encodings.h
+include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-extension.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-history.h
-include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-langs.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-node-db.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-node.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-notebook.h
+include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-password-manager.h
+include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-permission-manager.h
+include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-session.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-shell.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-tab.h
-include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-types.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-window.h
-include/epiphany-%%EPHY_VERSION%%/epiphany/session.h
 libdata/bonobo/servers/GNOME_Epiphany_Automation.server
 libdata/bonobo/servers/GNOME_Epiphany_NautilusView.server
 libdata/pkgconfig/epiphany-1.0.pc
+%%DOCSDIR%%/ch01.html
+%%DOCSDIR%%/epiphany-ephy-cookie-manager.html
+%%DOCSDIR%%/epiphany-ephy-embed-factory.html
+%%DOCSDIR%%/epiphany-ephy-embed-single.html
+%%DOCSDIR%%/epiphany-ephy-password-manager.html
+%%DOCSDIR%%/epiphany-ephy-permission-manager.html
+%%DOCSDIR%%/epiphany-ephy-session.html
+%%DOCSDIR%%/epiphany-ephy-shell.html
+%%DOCSDIR%%/epiphany.devhelp
+%%DOCSDIR%%/home.png
+%%DOCSDIR%%/index.html
+%%DOCSDIR%%/index.sgml
+%%DOCSDIR%%/left.png
+%%DOCSDIR%%/right.png
+%%DOCSDIR%%/up.png
 share/gnome/application-registry/epiphany.applications
 share/gnome/applications/bme.desktop
 share/gnome/applications/epiphany.desktop
-share/gnome/epiphany/art/epiphany-bookmark-page.png
 share/gnome/epiphany/art/epiphany-bookmarks.png
 share/gnome/epiphany/art/epiphany-download.png
 share/gnome/epiphany/art/epiphany-entry.png
-share/gnome/epiphany/art/epiphany-fullscreen.png
 share/gnome/epiphany/art/epiphany-history.png
-share/gnome/epiphany/art/epiphany-new-tab.png
 share/gnome/epiphany/art/epiphany-secure.png
-share/gnome/epiphany/art/epiphany-send-link.png
 share/gnome/epiphany/art/epiphany-tab-loading.gif
 share/gnome/epiphany/art/epiphany-unsecure.png
-share/gnome/epiphany/art/epiphany-viewsource.png
 share/gnome/epiphany/art/hand-open.png
 share/gnome/epiphany/conspiracy.xhtml
 share/gnome/epiphany/default-prefs.js
@@ -58,9 +73,11 @@ share/gnome/epiphany/epiphany-history-window-ui.xml
 share/gnome/epiphany/epiphany-toolbar.xml
 share/gnome/epiphany/epiphany-ui.xml
 share/gnome/epiphany/epiphany.xhtml
+share/gnome/epiphany/glade/certificate-dialogs.glade
 share/gnome/epiphany/glade/epiphany.glade
 share/gnome/epiphany/glade/prefs-dialog.glade
 share/gnome/epiphany/glade/print.glade
+share/gnome/epiphany/mime-types-permissions.xml
 share/gnome/epiphany/nautilus-epiphany-view.xml
 share/gnome/help/epiphany/C/epiphany.xml
 share/gnome/help/epiphany/C/figures/ephy-history-window-screenshot.png
@@ -129,12 +146,15 @@ share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 @dirrm share/gnome/epiphany/glade
 @dirrm share/gnome/epiphany/art
 @dirrm share/gnome/epiphany
+@dirrm %%DOCSDIR%%
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/web
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/lockdown
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/general
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/directories
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/epiphany/dialogs
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/epiphany
 @dirrm etc/gconf/gconf.xml.defaults/apps/epiphany/web
+@dirrm etc/gconf/gconf.xml.defaults/apps/epiphany/lockdown
 @dirrm etc/gconf/gconf.xml.defaults/apps/epiphany/general
 @dirrm etc/gconf/gconf.xml.defaults/apps/epiphany/directories
 @dirrm etc/gconf/gconf.xml.defaults/apps/epiphany/dialogs
