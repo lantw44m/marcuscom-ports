@@ -131,6 +131,8 @@ post-patch:
 # tell configure where the musepack includes live
 	@${REINPLACE_CMD} -e 's|/usr/include/musepack|${LOCALBASE}/include/musepack|g' \
 		${WRKSRC}/configure
+
+pre-build:
 # This port cannot be CFLAGS safe, when using p4 optimizations
 # because it breaks the mod plugin
 	@${REINPLACE_CMD} -E \
