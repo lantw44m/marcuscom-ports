@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ORBit2
-PORTVERSION=	2.9.5
+PORTVERSION=	2.9.6
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.9
@@ -23,7 +23,7 @@ USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
 USE_GNOME=	gnomehack libidl
-CONFIGURE_ARGS= --disable-indent \
+CONFIGURE_ARGS=	--disable-indent \
 		--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
