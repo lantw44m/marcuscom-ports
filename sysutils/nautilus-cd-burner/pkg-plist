@@ -4,7 +4,9 @@ etc/gconf/gconf.xml.defaults/schemas/apps/nautilus-cd-burner/%gconf.xml
 etc/gconf/schemas/ncb.schemas
 etc/gnome-vfs-2.0/modules/mapping-modules.conf
 lib/gnome-vfs-2.0/modules/libmapping.so
-libdata/bonobo/servers/Nautilus_CD_Burner_Context_Menu.server
+lib/nautilus/extensions-1.0/libnautilus-burn.a
+lib/nautilus/extensions-1.0/libnautilus-burn.so
+lib/nautilus/extensions-1.0/libnautilus-burn.so.0
 libexec/mapping-daemon
 libexec/nautilus-cd-burner-context-menu
 share/gnome/nautilus-cd-burner/cdburn.glade
