@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gtkmm
-PORTVERSION=	2.3.1
+PORTVERSION=	2.3.2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		${MASTER_SITE_SOURCEFORGE}
@@ -15,9 +15,9 @@ MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3 \
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	C++ wrapper for Gtk+, Pango, Atk, and Glib
+COMMENT=	C++ wrapper for Gtk+, Pango, Atk
 
-LIB_DEPENDS=	glibmm-2.3.2:${PORTSDIR}/devel/glibmm
+LIB_DEPENDS=	glibmm-2.3.3:${PORTSDIR}/devel/glibmm
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_BZIP2=	yes
@@ -33,6 +33,10 @@ CONFIGURE_ARGS=	--enable-static=yes \
 
 PLIST_SUB=	VERSION="2.3" API_VERSION="2.4"
 
+.if !defined(NOPORTDOCS)
+BUILD_DEPENDS+= doxygen:${PORTSDIR}/devel/doxygen
+.endif
+
 .if defined(WITH_EXAMPLES)
 PLIST_SUB+=	EXAMPLES=""
 .else
@@ -45,6 +49,9 @@ post-patch:
 .if !defined(WITH_EXAMPLES)
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/examples//' \
 		${WRKSRC}/Makefile.in
+.endif
+.if defined(NOPORTDOCS)
+	@${REINPLACE_CMD} -e 's|^\(SUBDIRS =\)\(docs\)\(.*\)|\1\3|' ${WRKSRC}/Makefile.in
 .endif
 
 .include <bsd.port.mk>
