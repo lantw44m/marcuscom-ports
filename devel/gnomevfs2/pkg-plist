@@ -157,12 +157,12 @@ share/doc/gnome-vfs-2.0/gnome-vfs-types.html
 share/doc/gnome-vfs-2.0/gnome-vfs-uri.html
 share/doc/gnome-vfs-2.0/gnome-vfs-utils.html
 share/doc/gnome-vfs-2.0/gnome-vfs-xfer.html
-share/doc/gnome-vfs-2.0/x27.html
 share/doc/gnome-vfs-2.0/index.html
 share/doc/gnome-vfs-2.0/index.sgml
 share/doc/gnome-vfs-2.0/mime-registry.html
 share/doc/gnome-vfs-2.0/modules.html
 share/doc/gnome-vfs-2.0/writing-modules.html
+share/doc/gnome-vfs-2.0/x27.html
 share/locale/ar/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-vfs-2.0.mo
