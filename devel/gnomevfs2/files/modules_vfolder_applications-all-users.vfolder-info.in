@@ -4,7 +4,7 @@
    <MergeDir>/usr/share/gnome/apps/</MergeDir>
  
    <!-- Merge dirs optional -->
--  <MergeDir>/usr/local/share/applnk/</MergeDir>
+-  <MergeDir>/etc/X11/applnk/</MergeDir>
 +  <MergeDir>/usr/local/share/applnk/Toys/</MergeDir>
 +  <MergeDir>/usr/local/share/applnk/Utilities/</MergeDir>
 +  <MergeDir>/usr/local/share/applnk/Internet/</MergeDir>
