@@ -1,22 +1,5 @@
 --- configure.orig	Fri Jun 11 17:40:51 2004
 +++ configure	Fri Jun 11 17:43:37 2004
-@@ -19674,6 +19674,16 @@
- echo "$as_me:$LINENO: checking for architecture specific defines" >&5
- echo $ECHO_N "checking for architecture specific defines... $ECHO_C" >&6
- case "$host" in
-+	*-freebsd5*)
-+	        echo "$as_me:$LINENO: result: has discovery" >&5
-+echo "${ECHO_T}has discovery and libstdc++ hack" >&6
-+		IS_LINUX="yes"
-+		(
-+cat >>confdefs.h <<\_ACEOF
-+#define LIBSTDCXX_HACK 1
-+_ACEOF
-+)
-+		;;
- 	*-freebsd*)
- 		echo "$as_me:$LINENO: result: has discovery" >&5
- echo "${ECHO_T}has discovery" >&6
 @@ -21006,6 +21016,8 @@
  if eval "test \"\${$as_ac_var+set}\" = set"; then
    echo $ECHO_N "(cached) $ECHO_C" >&6

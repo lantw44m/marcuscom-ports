@@ -7,10 +7,8 @@ include/libnautilus-burn/bacon-cd-selection.h
 include/libnautilus-burn/cd-drive.h
 include/libnautilus-burn/cd-recorder.h
 lib/gnome-vfs-2.0/modules/libmapping.so
-lib/libnautilus-burn.a
 lib/libnautilus-burn.so
 lib/libnautilus-burn.so.0
-lib/nautilus/extensions-1.0/libnautilus-burn-extension.a
 lib/nautilus/extensions-1.0/libnautilus-burn-extension.so
 lib/nautilus/extensions-1.0/libnautilus-burn-extension.so.0
 libdata/pkgconfig/libnautilus-burn.pc
