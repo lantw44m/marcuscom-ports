@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomeapplets2
-PORTVERSION=	2.9.2
-PORTREVISION=	3
+PORTVERSION=	2.9.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-applets/2.9
@@ -33,7 +32,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		FREEBSD_SYS=${FREEBSD_SYS}
 
-GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas gkb.schemas \
+GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas \
 		gswitchit.schemas gtik.schemas gweather.schemas \
 		mini-commander-global.schemas mini-commander.schemas \
 		mixer.schemas modemlights.schemas multiload.schemas \

@@ -1,9 +1,7 @@
-bin/gkb_xmmap
-bin/gnome-keyboard-layout
 bin/gswitchit-plugins-capplet
 %%BATTERY%%etc/sound/events/battstat_applet.soundlist
+include/libgswitchit/gswitchit_config.h
 include/libgswitchit/gswitchit_plugin.h
-include/libgswitchit/gswitchit_xkb_config.h
 libdata/bonobo/servers/GNOME_AccessxStatusApplet.server
 %%BATTERY%%libdata/bonobo/servers/GNOME_BattstatApplet.server
 libdata/bonobo/servers/GNOME_CDPlayerApplet.server
@@ -57,143 +55,6 @@ share/gnome/geyes/Default/config
 share/gnome/geyes/Horrid/config
 share/gnome/geyes/Horrid/horrid_eye.png
 share/gnome/geyes/Horrid/horrid_pupil.png
-share/gnome/gkb/AM_Armenian.keyprop
-share/gnome/gkb/AR_Arabic.keyprop
-share/gnome/gkb/AR_Arabic_x.keyprop
-share/gnome/gkb/AZ_Azerbaidjani_Turkic.keyprop
-share/gnome/gkb/Armenian.keyprop
-share/gnome/gkb/BE_Dutch.keyprop
-share/gnome/gkb/BG_Bulgarian.keyprop
-share/gnome/gkb/BG_Bulgarian_x.keyprop
-share/gnome/gkb/BR_Portuguese.keyprop
-share/gnome/gkb/BR_Portuguese_x.keyprop
-share/gnome/gkb/BY_Belarussian.keyprop
-share/gnome/gkb/Basque.keyprop
-share/gnome/gkb/Belgian.keyprop
-share/gnome/gkb/BulgarianCyril.keyprop
-share/gnome/gkb/CA_English.keyprop
-share/gnome/gkb/CH_German_x.keyprop
-share/gnome/gkb/CZ_Czech.keyprop
-share/gnome/gkb/CZ_Czech_Slovak.keyprop
-share/gnome/gkb/CZ_Czech_x.keyprop
-share/gnome/gkb/Catalan.keyprop
-share/gnome/gkb/DE_German.keyprop
-share/gnome/gkb/DE_German_x.keyprop
-share/gnome/gkb/DK_Danish.keyprop
-share/gnome/gkb/DK_Danish_x.keyprop
-share/gnome/gkb/Default.keyprop
-share/gnome/gkb/Dvorak.keyprop
-share/gnome/gkb/EE_Estonian.keyprop
-share/gnome/gkb/EE_Estonian_x.keyprop
-share/gnome/gkb/ES_Spanish-x86.keyprop
-share/gnome/gkb/ES_Spanish.keyprop
-share/gnome/gkb/ES_Spanish_x.keyprop
-share/gnome/gkb/FI_Finnish.keyprop
-share/gnome/gkb/FI_Finnish_x.keyprop
-share/gnome/gkb/FR_French-x86.keyprop
-share/gnome/gkb/FR_French.keyprop
-share/gnome/gkb/FR_French_x.keyprop
-share/gnome/gkb/FrenchCanadian.keyprop
-share/gnome/gkb/FrenchCanadian2.keyprop
-share/gnome/gkb/FrenchSwiss.keyprop
-share/gnome/gkb/GE_Georgian_x.keyprop
-share/gnome/gkb/GR_Greek.keyprop
-share/gnome/gkb/GR_Greek_x.keyprop
-share/gnome/gkb/GeorgianLatin.keyprop
-share/gnome/gkb/GeorgianRussian.keyprop
-share/gnome/gkb/German.keyprop
-share/gnome/gkb/GermanSwiss.keyprop
-share/gnome/gkb/HR_Croatian.keyprop
-share/gnome/gkb/HU_Hungarian.keyprop
-share/gnome/gkb/Hungarian-101.keyprop
-share/gnome/gkb/Hungarian-lat1.keyprop
-share/gnome/gkb/Hungarian-sun.keyprop
-share/gnome/gkb/Hungarian-x86.keyprop
-share/gnome/gkb/Hungarian.keyprop
-share/gnome/gkb/Hungarian101-1.keyprop
-share/gnome/gkb/Hungarian101.keyprop
-share/gnome/gkb/IL_Hebrew.keyprop
-share/gnome/gkb/IL_Hebrew_x.keyprop
-share/gnome/gkb/IS_Icelandic.keyprop
-share/gnome/gkb/IS_Icelandic_x.keyprop
-share/gnome/gkb/IT_Italian.keyprop
-share/gnome/gkb/IT_Italian_x.keyprop
-share/gnome/gkb/JP_Japanese.keyprop
-share/gnome/gkb/JP_Japanese_x.keyprop
-share/gnome/gkb/KR_Korean.keyprop
-share/gnome/gkb/LA_Lao_x.keyprop
-share/gnome/gkb/LT_Lithuanian.keyprop
-share/gnome/gkb/LT_Lithuanian_x.keyprop
-share/gnome/gkb/LT_Prog.keyprop
-share/gnome/gkb/LT_Standard.keyprop
-share/gnome/gkb/LV_Apostrophe.keyprop
-share/gnome/gkb/LV_Standard.keyprop
-share/gnome/gkb/LV_Tilde.keyprop
-share/gnome/gkb/MK_Macedonian.keyprop
-share/gnome/gkb/MN_Mongolian.keyprop
-share/gnome/gkb/MN_Mongolian_x.keyprop
-share/gnome/gkb/MN_Mongolian_x_rev.keyprop
-share/gnome/gkb/MN_Mongolian_x_uni.keyprop
-share/gnome/gkb/Macedonian.keyprop
-share/gnome/gkb/NL_Dutch_x.keyprop
-share/gnome/gkb/NO_Norwegian.keyprop
-share/gnome/gkb/Norwegian.keyprop
-share/gnome/gkb/PL_Polish.keyprop
-share/gnome/gkb/PT_Portuguese.keyprop
-share/gnome/gkb/PT_Portuguese_x.keyprop
-share/gnome/gkb/Polish.keyprop
-share/gnome/gkb/PolishDeadkeys.keyprop
-share/gnome/gkb/Portugal.keyprop
-share/gnome/gkb/PortugalDeadkeys.keyprop
-share/gnome/gkb/RO_Romanian.keyprop
-share/gnome/gkb/RU_Russian.keyprop
-share/gnome/gkb/RU_Russian_x.keyprop
-share/gnome/gkb/RU_Russian_x_rev.keyprop
-share/gnome/gkb/RussianCyril.keyprop
-share/gnome/gkb/SE_Swedish.keyprop
-share/gnome/gkb/SE_Swedish_x.keyprop
-share/gnome/gkb/SI_Slovenian.keyprop
-share/gnome/gkb/SI_Slovenian_x.keyprop
-share/gnome/gkb/SK__x.keyprop
-share/gnome/gkb/SR_Dutch.keyprop
-share/gnome/gkb/Slovak.keyprop
-share/gnome/gkb/Slovene.keyprop
-share/gnome/gkb/Slovenian.keyprop
-share/gnome/gkb/Swedish.keyprop
-share/gnome/gkb/Syriac.keyprop
-share/gnome/gkb/Syriac_Phonetic.keyprop
-share/gnome/gkb/TH_Thai.keyprop
-share/gnome/gkb/TH_Thai_x.keyprop
-share/gnome/gkb/TR-f.keyprop
-share/gnome/gkb/TR-q.keyprop
-share/gnome/gkb/TR_Turkish.keyprop
-share/gnome/gkb/TR_Turkish_x.keyprop
-share/gnome/gkb/Thai.keyprop
-share/gnome/gkb/Thai2.keyprop
-share/gnome/gkb/UA_Ukrainian.keyprop
-share/gnome/gkb/UK-102.keyprop
-share/gnome/gkb/UK-x86.keyprop
-share/gnome/gkb/UK.keyprop
-share/gnome/gkb/UK_English.keyprop
-share/gnome/gkb/UK_English_x.keyprop
-share/gnome/gkb/UK_United_Kingdom.keyprop
-share/gnome/gkb/US-101.keyprop
-share/gnome/gkb/US-101A-x86.keyprop
-share/gnome/gkb/US-84.keyprop
-share/gnome/gkb/US-dec.keyprop
-share/gnome/gkb/US-ibm.keyprop
-share/gnome/gkb/US-int.keyprop
-share/gnome/gkb/US-mac.keyprop
-share/gnome/gkb/US-sgi-101.keyprop
-share/gnome/gkb/US-sun.keyprop
-share/gnome/gkb/US.keyprop
-share/gnome/gkb/US_English.keyprop
-share/gnome/gkb/US_international.keyprop
-share/gnome/gkb/VN_Vietnamese.keyprop
-share/gnome/gkb/YU_Serb_x.keyprop
-share/gnome/gkb/YU_Serbo-Croatian_x.keyprop
-share/gnome/gkb/Yugoslav.keyprop
-share/gnome/gkb/presets.xml
 share/gnome/gnome-2.0/ui/GNOME_AccessxApplet.xml
 %%BATTERY%%share/gnome/gnome-2.0/ui/GNOME_BattstatApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_CDPlayerApplet.xml
@@ -203,7 +64,6 @@ share/gnome/gnome-2.0/ui/GNOME_GSwitchItApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GWeatherApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GeyesApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GtikApplet.xml
-share/gnome/gnome-2.0/ui/GNOME_KeyboardApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_MiniCommanderApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_MixerApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_ModemlightsApplet.xml
@@ -214,6 +74,7 @@ share/gnome/gnome-2.0/ui/GNOME_WirelessApplet.xml
 share/gnome/gswitchit/gswitchit-plugins.glade
 share/gnome/gswitchit/gswitchit-properties.glade
 share/gnome/gweather/Locations.xml
+share/gnome/gweather/locations.dtd
 share/gnome/help/accessx-status/C/accessx-status.xml
 share/gnome/help/accessx-status/C/figures/accessx-status-applet.png
 share/gnome/help/accessx-status/C/legal.xml
@@ -738,42 +599,6 @@ share/gnome/help/geyes/zh_TW/figures/geyes_applet.png
 share/gnome/help/geyes/zh_TW/figures/geyes_settings.png
 share/gnome/help/geyes/zh_TW/geyes.xml
 share/gnome/help/geyes/zh_TW/legal.xml
-share/gnome/help/gkb/C/figures/gkb_applet.png
-share/gnome/help/gkb/C/gkb.xml
-share/gnome/help/gkb/C/legal.xml
-share/gnome/help/gkb/de/figures/gkb_applet.png
-share/gnome/help/gkb/de/gkb.xml
-share/gnome/help/gkb/de/legal.xml
-share/gnome/help/gkb/es/figures/gkb_applet.png
-share/gnome/help/gkb/es/gkb.xml
-share/gnome/help/gkb/es/legal.xml
-share/gnome/help/gkb/eu/figures/gkb_applet.png
-share/gnome/help/gkb/eu/gkb.xml
-share/gnome/help/gkb/eu/legal.xml
-share/gnome/help/gkb/fr/figures/gkb_applet.png
-share/gnome/help/gkb/fr/gkb.xml
-share/gnome/help/gkb/fr/legal.xml
-share/gnome/help/gkb/it/figures/gkb_applet.png
-share/gnome/help/gkb/it/gkb.xml
-share/gnome/help/gkb/it/legal.xml
-share/gnome/help/gkb/ja/figures/gkb_applet.png
-share/gnome/help/gkb/ja/gkb.xml
-share/gnome/help/gkb/ja/legal.xml
-share/gnome/help/gkb/ko/figures/gkb_applet.png
-share/gnome/help/gkb/ko/gkb.xml
-share/gnome/help/gkb/ko/legal.xml
-share/gnome/help/gkb/sv/figures/gkb_applet.png
-share/gnome/help/gkb/sv/gkb.xml
-share/gnome/help/gkb/sv/legal.xml
-share/gnome/help/gkb/zh_CN/figures/gkb_applet.png
-share/gnome/help/gkb/zh_CN/gkb.xml
-share/gnome/help/gkb/zh_CN/legal.xml
-share/gnome/help/gkb/zh_HK/figures/gkb_applet.png
-share/gnome/help/gkb/zh_HK/gkb.xml
-share/gnome/help/gkb/zh_HK/legal.xml
-share/gnome/help/gkb/zh_TW/figures/gkb_applet.png
-share/gnome/help/gkb/zh_TW/gkb.xml
-share/gnome/help/gkb/zh_TW/legal.xml
 share/gnome/help/gswitchit/C/gswitchit.xml
 share/gnome/help/gswitchit/C/legal.xml
 share/gnome/help/gtik2_applet2/C/figures/gtik_applet.png
@@ -1151,18 +976,6 @@ share/gnome/omf/gnome-applets/geyes-sv.omf
 share/gnome/omf/gnome-applets/geyes-zh_CN.omf
 share/gnome/omf/gnome-applets/geyes-zh_HK.omf
 share/gnome/omf/gnome-applets/geyes-zh_TW.omf
-share/gnome/omf/gnome-applets/gkb-C.omf
-share/gnome/omf/gnome-applets/gkb-de.omf
-share/gnome/omf/gnome-applets/gkb-es.omf
-share/gnome/omf/gnome-applets/gkb-eu.omf
-share/gnome/omf/gnome-applets/gkb-fr.omf
-share/gnome/omf/gnome-applets/gkb-it.omf
-share/gnome/omf/gnome-applets/gkb-ja.omf
-share/gnome/omf/gnome-applets/gkb-ko.omf
-share/gnome/omf/gnome-applets/gkb-sv.omf
-share/gnome/omf/gnome-applets/gkb-zh_CN.omf
-share/gnome/omf/gnome-applets/gkb-zh_HK.omf
-share/gnome/omf/gnome-applets/gkb-zh_TW.omf
 share/gnome/omf/gnome-applets/gswitchit-C.omf
 share/gnome/omf/gnome-applets/gtik2_applet2-C.omf
 share/gnome/omf/gnome-applets/gtik2_applet2-de.omf
@@ -1275,84 +1088,6 @@ share/gnome/pixmaps/accessx-status-applet/sticky-shift-none.png
 share/gnome/pixmaps/accessx-status-applet/sticky-super-latched.png
 share/gnome/pixmaps/accessx-status-applet/sticky-super-locked.png
 share/gnome/pixmaps/accessx-status-applet/sticky-super-none.png
-share/gnome/pixmaps/gkb/ae.png
-share/gnome/pixmaps/gkb/am.png
-share/gnome/pixmaps/gkb/ar.png
-share/gnome/pixmaps/gkb/at.png
-share/gnome/pixmaps/gkb/az.png
-share/gnome/pixmaps/gkb/be.png
-share/gnome/pixmaps/gkb/bg.png
-share/gnome/pixmaps/gkb/bh.png
-share/gnome/pixmaps/gkb/br.png
-share/gnome/pixmaps/gkb/by.png
-share/gnome/pixmaps/gkb/ca.png
-share/gnome/pixmaps/gkb/ch.png
-share/gnome/pixmaps/gkb/ct.png
-share/gnome/pixmaps/gkb/cu.png
-share/gnome/pixmaps/gkb/cz.png
-share/gnome/pixmaps/gkb/de.png
-share/gnome/pixmaps/gkb/dj.png
-share/gnome/pixmaps/gkb/dk.png
-share/gnome/pixmaps/gkb/dz.png
-share/gnome/pixmaps/gkb/ee.png
-share/gnome/pixmaps/gkb/eg.png
-share/gnome/pixmaps/gkb/es.png
-share/gnome/pixmaps/gkb/eu.png
-share/gnome/pixmaps/gkb/fi.png
-share/gnome/pixmaps/gkb/fr.png
-share/gnome/pixmaps/gkb/ge.png
-share/gnome/pixmaps/gkb/gkb.png
-share/gnome/pixmaps/gkb/gr.png
-share/gnome/pixmaps/gkb/hr.png
-share/gnome/pixmaps/gkb/hu.png
-share/gnome/pixmaps/gkb/il.png
-share/gnome/pixmaps/gkb/iq.png
-share/gnome/pixmaps/gkb/is.png
-share/gnome/pixmaps/gkb/it.png
-share/gnome/pixmaps/gkb/jo.png
-share/gnome/pixmaps/gkb/jp.png
-share/gnome/pixmaps/gkb/km.png
-share/gnome/pixmaps/gkb/kr.png
-share/gnome/pixmaps/gkb/kw.png
-share/gnome/pixmaps/gkb/la.png
-share/gnome/pixmaps/gkb/lam.png
-share/gnome/pixmaps/gkb/lb.png
-share/gnome/pixmaps/gkb/lt.png
-share/gnome/pixmaps/gkb/lv.png
-share/gnome/pixmaps/gkb/ly.png
-share/gnome/pixmaps/gkb/ma.png
-share/gnome/pixmaps/gkb/mk.png
-share/gnome/pixmaps/gkb/mn.png
-share/gnome/pixmaps/gkb/mx.png
-share/gnome/pixmaps/gkb/nl.png
-share/gnome/pixmaps/gkb/no.png
-share/gnome/pixmaps/gkb/om.png
-share/gnome/pixmaps/gkb/pl.png
-share/gnome/pixmaps/gkb/ps.png
-share/gnome/pixmaps/gkb/pt.png
-share/gnome/pixmaps/gkb/qa.png
-share/gnome/pixmaps/gkb/qc.png
-share/gnome/pixmaps/gkb/ro.png
-share/gnome/pixmaps/gkb/ru.png
-share/gnome/pixmaps/gkb/sa.png
-share/gnome/pixmaps/gkb/sd.png
-share/gnome/pixmaps/gkb/se.png
-share/gnome/pixmaps/gkb/si.png
-share/gnome/pixmaps/gkb/sk.png
-share/gnome/pixmaps/gkb/so.png
-share/gnome/pixmaps/gkb/sr.png
-share/gnome/pixmaps/gkb/sy.png
-share/gnome/pixmaps/gkb/th.png
-share/gnome/pixmaps/gkb/tn.png
-share/gnome/pixmaps/gkb/tr.png
-share/gnome/pixmaps/gkb/ua.png
-share/gnome/pixmaps/gkb/uk.png
-share/gnome/pixmaps/gkb/un.png
-share/gnome/pixmaps/gkb/us.png
-share/gnome/pixmaps/gkb/uy.png
-share/gnome/pixmaps/gkb/vn.png
-share/gnome/pixmaps/gkb/ye.png
-share/gnome/pixmaps/gkb/yu.png
 share/gnome/pixmaps/mini-commander/browser-mini.xpm
 share/gnome/pixmaps/mini-commander/history-mini.xpm
 share/gnome/pixmaps/mixer/volume-max.png
@@ -1464,8 +1199,6 @@ share/gnome/xmodmap/xmodmap.yu
 %%BATTERY%%share/icons/hicolor/48x48/apps/battstat.png
 share/icons/hicolor/48x48/apps/charpick.png
 share/icons/hicolor/48x48/apps/drivemount-applet.png
-share/icons/hicolor/48x48/apps/gkb-icon.png
-share/icons/hicolor/48x48/apps/gkb.png
 share/icons/hicolor/48x48/apps/gnome-cpu.png
 share/icons/hicolor/48x48/apps/gnome-eyes.png
 share/icons/hicolor/48x48/apps/gnome-mini-commander.png
@@ -1544,7 +1277,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/pixmaps/stickynotes
 @dirrm share/gnome/pixmaps/mixer
 @dirrm share/gnome/pixmaps/mini-commander
-@dirrm share/gnome/pixmaps/gkb
 @dirrm share/gnome/pixmaps/accessx-status-applet
 @dirrm share/gnome/omf/gnome-applets
 @dirrm share/gnome/help/wireless/zh_TW/figures
@@ -1703,31 +1435,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/gtik2_applet2
 @dirrm share/gnome/help/gswitchit/C
 @dirrm share/gnome/help/gswitchit
-@dirrm share/gnome/help/gkb/zh_TW/figures
-@dirrm share/gnome/help/gkb/zh_TW
-@dirrm share/gnome/help/gkb/zh_HK/figures
-@dirrm share/gnome/help/gkb/zh_HK
-@dirrm share/gnome/help/gkb/zh_CN/figures
-@dirrm share/gnome/help/gkb/zh_CN
-@dirrm share/gnome/help/gkb/sv/figures
-@dirrm share/gnome/help/gkb/sv
-@dirrm share/gnome/help/gkb/ko/figures
-@dirrm share/gnome/help/gkb/ko
-@dirrm share/gnome/help/gkb/ja/figures
-@dirrm share/gnome/help/gkb/ja
-@dirrm share/gnome/help/gkb/it/figures
-@dirrm share/gnome/help/gkb/it
-@dirrm share/gnome/help/gkb/fr/figures
-@dirrm share/gnome/help/gkb/fr
-@dirrm share/gnome/help/gkb/eu/figures
-@dirrm share/gnome/help/gkb/eu
-@dirrm share/gnome/help/gkb/es/figures
-@dirrm share/gnome/help/gkb/es
-@dirrm share/gnome/help/gkb/de/figures
-@dirrm share/gnome/help/gkb/de
-@dirrm share/gnome/help/gkb/C/figures
-@dirrm share/gnome/help/gkb/C
-@dirrm share/gnome/help/gkb
 @dirrm share/gnome/help/geyes/zh_TW/figures
 @dirrm share/gnome/help/geyes/zh_TW
 @dirrm share/gnome/help/geyes/zh_HK/figures
@@ -1885,7 +1592,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/accessx-status
 @dirrm share/gnome/gweather
 @dirrm share/gnome/gswitchit
-@dirrm share/gnome/gkb
 @dirrm share/gnome/geyes/Horrid
 @dirrm share/gnome/geyes/Default-tiny
 @dirrm share/gnome/geyes/Default
