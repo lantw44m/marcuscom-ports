@@ -6,10 +6,11 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.7.6
+PORTVERSION=	0.8.0
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.7
+MASTER_SITES=	${MASTER_SITE_GNOME} \
+		http://gstreamer.freedesktop.org/src/gstreamer/
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.8
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	lioux@FreeBSD.org
@@ -47,11 +48,11 @@ MAN1=	gst-complete-${GST_VERSION}.1 gst-compprep-${GST_VERSION}.1 \
 	gst-xmllaunch-${GST_VERSION}.1
 
 PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
-VERSION=0.8.0
+VERSION=0.8.1
 GST_VERSION=${VERSION:C/..$//}
 
 # library minor number
-SHLIB_VERSION=	0
+SHLIB_VERSION=	1
 
 post-install:
 # register plugins
