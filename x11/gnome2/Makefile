@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.3.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -23,7 +24,6 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
 		gnect:${PORTSDIR}/games/gnomegames2 \
 		gedit:${PORTSDIR}/editors/gedit2 \
-		${X11BASE}/lib/gedit-2/plugins/ascii.gedit-plugin:${PORTSDIR}/editors/gedit-plugins \
 		gnome-terminal:${PORTSDIR}/x11/gnometerminal \
 		gnome-session:${PORTSDIR}/x11/gnomesession \
 		bug-buddy:${PORTSDIR}/devel/bugbuddy2 \
