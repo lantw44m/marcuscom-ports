@@ -35,5 +35,7 @@ post-patch:
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
 	@find ${WRKSRC} -name "*.[ch]" | xargs ${REINPLACE_CMD} -e \
 		's|malloc\.h|stdlib.h|g'
+	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
+		's|games\.games|games:games|g'
 
 .include <bsd.port.mk>
