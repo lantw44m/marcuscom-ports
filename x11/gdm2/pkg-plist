@@ -41,6 +41,13 @@ share/gnome/capplets/gdmphotosetup.desktop
 share/gnome/gdm/BuiltInSessions/default.desktop
 share/gnome/gdm/gdmchooser.glade
 share/gnome/gdm/gdmsetup.glade
+share/gnome/gdm/themes/circles/GdmGreeterTheme.desktop
+share/gnome/gdm/themes/circles/background.svg
+share/gnome/gdm/themes/circles/circles.xml
+share/gnome/gdm/themes/circles/flower.png
+share/gnome/gdm/themes/circles/help.png
+share/gnome/gdm/themes/circles/options.png
+share/gnome/gdm/themes/circles/screenshot.png
 share/gnome/gdm/themes/happygnome-list/GdmGreeterTheme.desktop
 share/gnome/gdm/themes/happygnome-list/background.svg
 share/gnome/gdm/themes/happygnome-list/disconnect.png
@@ -59,17 +66,60 @@ share/gnome/gdm/themes/happygnome/options.png
 share/gnome/gdm/themes/happygnome/screenshot.png
 share/gnome/gdm/themes/happygnome/session.png
 share/gnome/gdm/themes/happygnome/system.png
-share/gnome/gdm/themes/circles/GdmGreeterTheme.desktop
-share/gnome/gdm/themes/circles/background.svg
-share/gnome/gdm/themes/circles/circles.xml
-share/gnome/gdm/themes/circles/flower.png
-share/gnome/gdm/themes/circles/help.png
-share/gnome/gdm/themes/circles/options.png
-share/gnome/gdm/themes/circles/screenshot.png
 share/gnome/help/gdm/C/gdm.xml
 share/gnome/help/gdm/C/legal.xml
+share/gnome/help/gdm/de/figures/gdm_window.png
+share/gnome/help/gdm/de/gdm.xml
+share/gnome/help/gdm/de/legal.xml
+share/gnome/help/gdm/es/figures/gdm_window.png
+share/gnome/help/gdm/es/gdm.xml
+share/gnome/help/gdm/es/legal.xml
+share/gnome/help/gdm/fr/figures/gdm_window.png
+share/gnome/help/gdm/fr/gdm.xml
+share/gnome/help/gdm/fr/legal.xml
+share/gnome/help/gdm/it/figures/gdm_window.png
+share/gnome/help/gdm/it/gdm.xml
+share/gnome/help/gdm/it/legal.xml
+share/gnome/help/gdm/ja/figures/gdm_window.png
+share/gnome/help/gdm/ja/gdm.xml
+share/gnome/help/gdm/ja/legal.xml
+share/gnome/help/gdm/ko/figures/gdm_window.png
+share/gnome/help/gdm/ko/gdm.xml
+share/gnome/help/gdm/ko/legal.xml
+share/gnome/help/gdm/sv/figures/gdm_window.png
+share/gnome/help/gdm/sv/gdm.xml
+share/gnome/help/gdm/sv/legal.xml
+share/gnome/help/gdm/zh_CN/figures/gdm_window.png
+share/gnome/help/gdm/zh_CN/gdm.xml
+share/gnome/help/gdm/zh_CN/legal.xml
+share/gnome/help/gdm/zh_HK/figures/gdm_window.png
+share/gnome/help/gdm/zh_HK/gdm.xml
+share/gnome/help/gdm/zh_HK/legal.xml
+share/gnome/help/gdm/zh_TW/figures/gdm_window.png
+share/gnome/help/gdm/zh_TW/gdm.xml
+share/gnome/help/gdm/zh_TW/legal.xml
 share/gnome/omf/gdm/gdm-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gdm/gdm-de.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-de.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gdm/gdm-es.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-es.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gdm/gdm-fr.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-fr.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gdm/gdm-it.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-it.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gdm/gdm-ja.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-ja.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gdm/gdm-ko.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-ko.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gdm/gdm-sv.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-sv.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gdm/gdm-zh_CN.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-zh_CN.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gdm/gdm-zh_HK.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-zh_HK.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gdm/gdm-zh_TW.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gdm/gdm-zh_TW.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gdm-foot-logo.png
 share/gnome/pixmaps/gdm.png
 share/gnome/pixmaps/login-photo.png
@@ -149,3 +199,13 @@ share/locale/zh_TW/LC_MESSAGES/gdm-2.4.mo
 @unexec /bin/rmdir %D/etc/dm/Sessions 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/etc/dm 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-de.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-es.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-fr.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-it.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-ja.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-ko.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-sv.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-zh_CN.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-zh_HK.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-zh_TW.omf 2>/dev/null || /usr/bin/true
