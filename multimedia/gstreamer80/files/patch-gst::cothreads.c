@@ -1,8 +1,8 @@
---- gst/cothreads.c.orig	Tue Dec 31 23:28:32 2002
-+++ gst/cothreads.c	Mon Jan 13 19:31:54 2003
-@@ -37,16 +37,20 @@
- #include "gstlog.h"
- #include "gstutils.h"
+--- gst/cothreads.c.orig	Sat Feb  1 19:09:00 2003
++++ gst/cothreads.c	Mon Feb  3 10:57:44 2003
+@@ -41,12 +41,16 @@
+ #include <ucontext.h>
+ #endif
  
 +#ifdef HAVE_MAKECONTEXT
 +#include <ucontext.h>
@@ -18,8 +18,3 @@
  
  #define COTHREAD_MAGIC_NUMBER 0xabcdef
  
--#define COTHREAD_MAXTHREADS 16
-+#define COTHREAD_MAXTHREADS 16
- #define COTHREAD_STACKSIZE (STACK_SIZE/COTHREAD_MAXTHREADS)
- 
- static void 	cothread_destroy 	(cothread_state *cothread);

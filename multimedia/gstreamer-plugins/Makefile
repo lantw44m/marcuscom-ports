@@ -2,11 +2,11 @@
 # Date created:		Wed Jul 10 23:38:01 UTC 2002
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/multimedia/gstreamer-plugins/Makefile,v 1.10 2003/01/16 18:44:33 lioux Exp $
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.5.2
+PORTVERSION=	0.6.0
 CATEGORIES=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -18,7 +18,7 @@ MAINTAINER=	lioux@FreeBSD.org
 BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkgconfig
 LIB_DEPENDS=	glib-2.0.200:${PORTSDIR}/devel/glib20 \
 		gconf-2.5:${PORTSDIR}/devel/gconf2 \
-		gstreamer-0.5.3:${PORTSDIR}/multimedia/gstreamer \
+		gstreamer-0.6.0:${PORTSDIR}/multimedia/gstreamer \
 		gtk-x11-2.0.200:${PORTSDIR}/x11-toolkits/gtk20 \
 		popt.0:${PORTSDIR}/devel/popt \
 		xml2.5:${PORTSDIR}/textproc/libxml2
@@ -44,6 +44,9 @@ CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
 		CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
 CONFIGURE_TARGET=
+PLIST_SUB=	\
+		VERSION="${PORTVERSION:C/..$//}" \
+		SHLIB_VERSION="${SHLIB_VERSION}"
 INSTALLS_SHLIB=	yes
 
 # for esound detection
@@ -55,28 +58,19 @@ PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 SDL_CONFIG?="${LOCALBASE}/bin/sdl11-config"
 XMMS_CONFIG?="${LOCALBASE}/bin/xmms-config"
 
+# library minor number
+SHLIB_VERSION=  0
+
 post-patch:
 # as of this writing, FreeBSD does not support lrint* C99 math functions
 	@${REINPLACE_CMD} -E -e \
 		's|^#define.*LRINT.*$$||' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
-# remove version number from include dir name
-	@${REINPLACE_CMD} -E -e \
-		's|-@VERSION@||' \
-		${WRKSRC}/gstreamer-libs.pc.in \
-		${WRKSRC}/gstreamer-play.pc.in
-# remove version number from include dir name
 # respect CFLAGS
 	@${FIND} ${WRKSRC} -type f -name Makefile.in | \
 		${XARGS} -n 10 ${REINPLACE_CMD} -E -e \
-		's|^(lib[[:alpha:]]+includedir.+)-@VERSION@|\1|; \
-		s,-O(2|3),,; \
+		's,-O(2|3),,; \
 		s|-mcpu=i486||'
-# gconf is not working in this release
-	@${REINPLACE_CMD} -E -e \
-		's,^((DIST_SUBDIRS|SUBDIRS).+)gconf,\1,' \
-		${WRKSRC}/Makefile.in \
-		${WRKSRC}/gst-libs/gst/Makefile.in
 # mcopidl takes the file as the last argument
 	@${REINPLACE_CMD} -E -e \
 		's|(mcopidl.+)(\$$<)(.+)$$|\1 \3 \2|' \
@@ -91,6 +85,19 @@ post-patch:
 		${XARGS} -n 10 ${REINPLACE_CMD} -e \
 		's|malloc.h|stdlib.h|; \
 		s|stdint.h|inttypes.h|'
+# use GMAKE, not MAKE
+	@${REINPLACE_CMD} -E -e \
+		's|make|${GMAKE}|' \
+		${WRKSRC}/gst-libs/ext/ffmpeg/Makefile.in
+# force libaudiofile detection
+	@${REINPLACE_CMD} -E -e \
+		's|^.*afOpenVirtualFile[[:space:]]*\(\);|;|' \
+		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
+
+post-configure:
+# CC safeness
+	@${ECHO_CMD} "CC=${CC}" >> \
+		${WRKSRC}/gst-libs/ext/ffmpeg/ffmpeg/config.mak
 
 post-install:
 # register plugins
@@ -142,19 +149,24 @@ WITH_LAME=yes
 WITH_GNOMEVFS=yes
 .endif
 
-# Hermes
-.if exists (${LOCALBASE}/lib/libHermes.a)
-WITH_HERMES=yes
-.endif
-
 # gsm
 .if exists(${LOCALBASE}/lib/libgsm.a)
 WITH_GSM=yes
 .endif
 
+# Hermes
+.if exists (${LOCALBASE}/lib/libHermes.a)
+WITH_HERMES=yes
+.endif
+
 # jpeg
 .if exists(${LOCALBASE}/lib/libjpeg.a)
 WITH_JPEG=yes
+.endif
+
+# ladspa
+.if exists(${LOCALBASE}/include/ladspa.h)
+WITH_LADSPA=yes
 .endif
 
 # liba52
@@ -234,7 +246,7 @@ WITH_VORBIS=yes
 
 # xmms
 .if exists(${X11BASE}/lib/libxmms.a)
-WITH_XMMS=yes
+#WITH_XMMS=yes
 .endif
 
 ##
@@ -322,15 +334,6 @@ LIB_DEPENDS+=	gnomevfs-2.0:${PORTSDIR}/devel/gnomevfs2
 PLIST_SUB+=	GNOMEVFS=""
 .endif
 
-# Hermes
-.ifndef(WITH_HERMES)
-CONFIGURE_ARGS+=	--disable-hermes
-PLIST_SUB+=	HERMES="@comment "
-.else
-LIB_DEPENDS+=	Hermes.1:${PORTSDIR}/graphics/Hermes
-PLIST_SUB+=	HERMES=""
-.endif
-
 # gsm
 .ifndef(WITH_GSM)
 CONFIGURE_ARGS+=	--disable-gsm
@@ -339,6 +342,15 @@ PLIST_SUB+=	GSM="@comment "
 LIB_DEPENDS+=	gsm.1:${PORTSDIR}/audio/gsm
 
 PLIST_SUB+=	GSM=""
+.endif
+
+# Hermes
+.ifndef(WITH_HERMES)
+CONFIGURE_ARGS+=	--disable-hermes
+PLIST_SUB+=	HERMES="@comment "
+.else
+LIB_DEPENDS+=	Hermes.1:${PORTSDIR}/graphics/Hermes
+PLIST_SUB+=	HERMES=""
 .endif
 
 # http
@@ -357,6 +369,16 @@ PLIST_SUB+=	JPEG="@comment "
 LIB_DEPENDS+=	jpeg.9:${PORTSDIR}/graphics/jpeg
 
 PLIST_SUB+=	JPEG=""
+.endif
+
+# ladspa
+.ifndef(WITH_LADSPA)
+CONFIGURE_ARGS+=	--disable-ladspa
+PLIST_SUB+=	LADSPA="@comment "
+.else
+BUILD_DEPENDS+=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
+
+PLIST_SUB+=	LADSPA=""
 .endif
 
 # lame
@@ -600,6 +622,10 @@ pre-everything::
 .ifndef(WITH_JPEG)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_JPEG to enable jpeg Video plugin'
+.endif
+.ifndef(WITH_LADSPA)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_LADSPA to enable LADSPA framework Audio plugin'
 .endif
 .ifndef(WITH_LAME)
 	@${ECHO_MSG} '===>'
