@@ -1,16 +1,16 @@
---- battstat/Makefile.in.orig	Thu Jan 15 23:31:49 2004
-+++ battstat/Makefile.in	Thu Jan 15 23:33:58 2004
+--- battstat/Makefile.in.orig	Sun Feb  1 22:56:01 2004
++++ battstat/Makefile.in	Sun Feb  1 22:57:34 2004
 @@ -243,11 +243,11 @@
  pixmaps_DATA = battstat.png
  
  @HAVE_LIBAPM_TRUE@APMLIB = -lapm
 -@HAVE_LIBAPM_FALSE@APMLIB = apmlib/libapm.a
-+@HAVE_LIBAPM_FALSE@APMLIB =
++@HAVE_LIBAPM_FALSE@APMLIB = 
  @HAVE_LIBAPM_TRUE@APMDIR = 
 -@HAVE_LIBAPM_FALSE@APMDIR = apmlib
 +@HAVE_LIBAPM_FALSE@APMDIR =
  @HAVE_LIBAPM_TRUE@APMINC = 
--@HAVE_LIBAPM_FALSE@APMINC = -Iapmlib/
+-@HAVE_LIBAPM_FALSE@APMINC = -I$(srcdir)/apmlib/
 +@HAVE_LIBAPM_FALSE@APMINC =
  
  SUBDIRS = docs sounds $(APMDIR)
