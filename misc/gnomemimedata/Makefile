@@ -7,6 +7,8 @@
 
 PORTNAME=	gnomemimedata
 PORTVERSION=	2.3.2
+#PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-mime-data/2.3
@@ -16,7 +18,7 @@ DIST_SUBDIR=	gnome
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A MIME and Application database for GNOME
 
-LIB_DEPENDS=	intl.4:${PORTSDIR}/devel/gettext
+LIB_DEPENDS=	intl.5:${PORTSDIR}/devel/gettext
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
