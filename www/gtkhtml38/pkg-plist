@@ -85,7 +85,7 @@ include/libgtkhtml-%%VERSION%%/gtkhtml/htmlundo.h
 lib/gtkhtml/libgnome-gtkhtml-editor-%%VERSION%%.so
 lib/libgtkhtml-%%VERSION%%.a
 lib/libgtkhtml-%%VERSION%%.so
-lib/libgtkhtml-%%VERSION%%.so.13
+lib/libgtkhtml-%%VERSION%%.so.14
 libdata/bonobo/servers/GNOME_GtkHTML_Editor-%%VERSION%%.server
 libdata/pkgconfig/libgtkhtml-%%VERSION%%.pc
 share/gnome/gtkhtml-%%VERSION%%/Editor.idl
