@@ -55,6 +55,7 @@ share/gnome/applications/bme.desktop
 share/gnome/applications/epiphany.desktop
 @exec update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/epiphany/art/epiphany-bookmarks.png
+share/gnome/epiphany/art/epiphany-close-tab.png
 share/gnome/epiphany/art/epiphany-download.png
 share/gnome/epiphany/art/epiphany-entry.png
 share/gnome/epiphany/art/epiphany-history.png
