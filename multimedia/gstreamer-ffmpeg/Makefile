@@ -33,6 +33,8 @@ INSTALLS_SHLIB=	yes
 PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 GST_VERSION=${PORTVERSION:C/..$//}
 
+BROKEN=	"Needs an update for gst-0.7.6"
+
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "ia64" || ${ARCH} == "amd64"
