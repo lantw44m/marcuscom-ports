@@ -1,7 +1,11 @@
 %%PYTHON_SITELIBDIR%%/gtk-2.0/egg/__init__.py
 %%PYTHON_SITELIBDIR%%/gtk-2.0/egg/__init__.pyc
 %%PYTHON_SITELIBDIR%%/gtk-2.0/egg/__init__.pyo
+%%PYTHON_SITELIBDIR%%/gtk-2.0/egg/recent.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/egg/trayicon.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/applet.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/applet.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/applet.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeapplet.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/__init__.py
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/__init__.pyc
@@ -10,6 +14,7 @@
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/ui.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtkhtml2.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtksourceviewmodule.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/wnck.so
 libdata/pkgconfig/gnome-python-extras-2.0.pc
 %%PORTDOCS%%share/examples/py-gnome/applet/GNOME_PythonAppletSample.server
 %%PORTDOCS%%share/examples/py-gnome/applet/README
@@ -37,6 +42,7 @@ share/pygtk/2.0/defs/gtkhtml2.defs
 share/pygtk/2.0/defs/print.defs
 share/pygtk/2.0/defs/printui.defs
 share/pygtk/2.0/defs/trayicon.defs
+share/pygtk/2.0/defs/wnck.defs
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtksourceview
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtkhtml2
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gnomeprint

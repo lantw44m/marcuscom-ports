@@ -9,9 +9,6 @@
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/__init__.pyc
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/__init__.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/_gnome.so
-%%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/applet.py
-%%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/applet.pyc
-%%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/applet.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/canvas.py
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/canvas.pyc
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/canvas.pyo
