@@ -7,7 +7,7 @@
 
 PORTNAME=	gtk
 PORTVERSION=	2.2.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.2,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
@@ -49,8 +49,6 @@ post-patch:
 		xargs ${REINPLACE_CMD} -e 's|-lgmodule|@GMODULE_LIBS@|g'
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
-		${WRKSRC}/po/Makefile.in.in
 
 pre-build:
 	${RM} -rf ${WRKSRC}/docs/gtk.info*
