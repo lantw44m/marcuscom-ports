@@ -4,7 +4,7 @@
 # FreeBSD: $FreeBSD$
 #	NetBSD: $NetBSD: $
 #	
-# MarcusCOM: $Id: bsd.mozilla.mk,v 1.3 2004-06-26 01:28:58 adamw Exp $
+# MarcusCOM: $Id: bsd.mozilla.mk,v 1.4 2004-06-28 02:25:02 marcus Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -26,8 +26,8 @@ Mozilla_Pre_Include=			bsd.mozilla.mk
 # MOZILLA_LIB_DIR:      for use in --with-mozilla-libs="${MOZILLA_LIB_DIR}"
 
 # These can be overridden as necessary within port Makefiles.
-MOZ_DEVEL_SNAPSHOT_VER?=		1.7rc2
-MOZ_STABLE_SNAPSHOT_VER?=		1.6
+MOZ_DEVEL_SNAPSHOT_VER?=		1.8a
+MOZ_STABLE_SNAPSHOT_VER?=		1.7
 MOZ_GTK1_DEVEL_SNAPSHOT_VER?=	trunk
 MOZ_GTK1_STABLE_SNAPSHOT_VER?=	trunk
 
