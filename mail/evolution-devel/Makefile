@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	1.3.1
+PORTVERSION=	1.3.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
 		${MASTER_SITE_GNOME} \
@@ -22,12 +22,12 @@ COMMENT=	An integrated mail, calendar and address book distributed suite
 
 LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss \
 		soup-2.0.0:${PORTSDIR}/devel/libsoup \
-		gtkhtml-3.0.0:${PORTSDIR}/www/gtkhtml3
+		gtkhtml-3.0.1:${PORTSDIR}/www/gtkhtml3
 
 .if defined(WITH_LDAP)
 LIB_DEPENDS+=	ldap.2:${PORTSDIR}/net/openldap20
 .endif
-RUN_DEPENDS=	gnome-spell-component-1.0.1:${PORTSDIR}/textproc/gnomespell-devel
+RUN_DEPENDS=	${X11BASE}/lib/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnomespell-devel
 .if !defined(WITHOUT_PILOT)
 LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
 .endif
@@ -36,7 +36,6 @@ LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
 USE_GMAKE=	yes
 USE_BISON=	yes
 USE_X_PREFIX=	yes
-USE_GNOMENG=	yes
 USE_GNOME=	gnomeprefix gnomehack
 USE_REINPLACE=	yes
 USE_OPENSSL=	yes
@@ -47,6 +46,7 @@ CONFIGURE_ARGS=	--with-db3-libs=${DB3_WRKSRC} \
 		--with-nspr-libs=${LOCALBASE}/lib \
 		--with-nss-includes=${LOCALBASE}/include/nss/nss \
 		--with-nss-libs=${LOCALBASE}/lib
+CONFIGURE_TARGET=--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
 
 .if defined(WITH_LDAP)
 CONFIGURE_ARGS+= --with-openldap=${LOCALBASE}
