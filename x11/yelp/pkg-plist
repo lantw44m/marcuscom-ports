@@ -6,9 +6,6 @@ libexec/yelp-db2html
 libexec/yelp-info2html
 libexec/yelp-man2html
 share/gnome/applications/yelp.desktop
-share/gnome/images/yelp/bcg.png
-share/gnome/images/yelp/empty.png
-share/gnome/images/yelp/gnome2-button.png
 share/gnome/sgml/docbook/yelp/db2html-admon.xsl
 share/gnome/sgml/docbook/yelp/db2html-biblio.xsl
 share/gnome/sgml/docbook/yelp/db2html-block.xsl
@@ -18,14 +15,12 @@ share/gnome/sgml/docbook/yelp/db2html-common.xsl
 share/gnome/sgml/docbook/yelp/db2html-division.xsl
 share/gnome/sgml/docbook/yelp/db2html-ebnf.xsl
 share/gnome/sgml/docbook/yelp/db2html-footnote.xsl
-share/gnome/sgml/docbook/yelp/db2html-formal.xsl
 share/gnome/sgml/docbook/yelp/db2html-glossary.xsl
 share/gnome/sgml/docbook/yelp/db2html-header.xsl
 share/gnome/sgml/docbook/yelp/db2html-html.xsl
 share/gnome/sgml/docbook/yelp/db2html-index.xsl
 share/gnome/sgml/docbook/yelp/db2html-inline.xsl
 share/gnome/sgml/docbook/yelp/db2html-list.xsl
-share/gnome/sgml/docbook/yelp/db2html-lists.xsl
 share/gnome/sgml/docbook/yelp/db2html-math.xsl
 share/gnome/sgml/docbook/yelp/db2html-media.xsl
 share/gnome/sgml/docbook/yelp/db2html-navbar.xsl
@@ -37,12 +32,15 @@ share/gnome/sgml/docbook/yelp/db2html-synopsis.xsl
 share/gnome/sgml/docbook/yelp/db2html-table.xsl
 share/gnome/sgml/docbook/yelp/db2html-title.xsl
 share/gnome/sgml/docbook/yelp/db2html-titlepage.xsl
-share/gnome/sgml/docbook/yelp/db2html-tmp.xsl
 share/gnome/sgml/docbook/yelp/db2html-toc.xsl
 share/gnome/sgml/docbook/yelp/db2html-xref.xsl
 share/gnome/sgml/docbook/yelp/db2html.xsl
 share/gnome/sgml/docbook/yelp/gettext.xsl
-share/gnome/sgml/docbook/yelp/yelp-customization.xsl
+share/gnome/yelp/icons/caution.png
+share/gnome/yelp/icons/important.png
+share/gnome/yelp/icons/note.png
+share/gnome/yelp/icons/tip.png
+share/gnome/yelp/icons/warning.png
 share/gnome/yelp/important_docs.xml
 share/gnome/yelp/toc.xml
 share/gnome/yelp/ui/yelp.glade
@@ -107,6 +105,7 @@ share/locale/wa/LC_MESSAGES/yelp.mo
 share/locale/zh_CN/LC_MESSAGES/yelp.mo
 share/locale/zh_TW/LC_MESSAGES/yelp.mo
 @dirrm share/gnome/yelp/ui
+@dirrm share/gnome/yelp/icons
 @dirrm share/gnome/yelp
 @dirrm share/gnome/sgml/docbook/yelp
 @dirrm share/gnome/sgml/docbook
