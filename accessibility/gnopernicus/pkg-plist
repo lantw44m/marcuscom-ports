@@ -98,7 +98,7 @@ etc/gconf/gconf.xml.defaults/apps/gnopernicus/remote/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/speech/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/speech/dictionary/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/speech/settings/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/gnopernicus/speech/voice_parameters/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnopernicus/speech/voices_parameters/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/srcore/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/braille/%gconf.xml
@@ -202,7 +202,7 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/remote/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/dictionary/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/settings/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/voice_parameters/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/voices_parameters/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/srcore/%gconf.xml
 etc/gconf/schemas/brlmonitor.schemas
 etc/gconf/schemas/gnopernicus.schemas
@@ -225,25 +225,25 @@ include/gnopernicus-1.0/libsrutil/srintl.h
 include/gnopernicus-1.0/libsrutil/util.h
 lib/gnopernicus-1.0/libbrl.a
 lib/gnopernicus-1.0/libbrl.so
-lib/gnopernicus-1.0/libbrl.so.2
+lib/gnopernicus-1.0/libbrl.so.3
 lib/gnopernicus-1.0/libke.a
 lib/gnopernicus-1.0/libke.so
-lib/gnopernicus-1.0/libke.so.2
+lib/gnopernicus-1.0/libke.so.3
 lib/gnopernicus-1.0/libmag.a
 lib/gnopernicus-1.0/libmag.so
-lib/gnopernicus-1.0/libmag.so.2
+lib/gnopernicus-1.0/libmag.so.3
 lib/gnopernicus-1.0/libsrconf.a
 lib/gnopernicus-1.0/libsrconf.so
-lib/gnopernicus-1.0/libsrconf.so.2
+lib/gnopernicus-1.0/libsrconf.so.3
 lib/gnopernicus-1.0/libsrlow.a
 lib/gnopernicus-1.0/libsrlow.so
-lib/gnopernicus-1.0/libsrlow.so.2
+lib/gnopernicus-1.0/libsrlow.so.3
 lib/gnopernicus-1.0/libsrs.a
 lib/gnopernicus-1.0/libsrs.so
-lib/gnopernicus-1.0/libsrs.so.2
+lib/gnopernicus-1.0/libsrs.so.3
 lib/gnopernicus-1.0/libsrutil.a
 lib/gnopernicus-1.0/libsrutil.so
-lib/gnopernicus-1.0/libsrutil.so.2
+lib/gnopernicus-1.0/libsrutil.so.3
 libdata/pkgconfig/gnopernicus-1.0.pc
 share/gnome/applications/gnopernicus.desktop
 share/gnome/gnopernicus/braille_fonts/braille14.bdf
@@ -314,7 +314,7 @@ share/locale/ro/LC_MESSAGES/gnopernicus0.mo
 @dirrm etc/gnopernicus-1.0/translation_tables
 @dirrm etc/gnopernicus-1.0
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/srcore
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/voice_parameters
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/voices_parameters
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/settings
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/dictionary
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech
@@ -418,7 +418,7 @@ share/locale/ro/LC_MESSAGES/gnopernicus0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/braille
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/srcore
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/speech/voice_parameters
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/speech/voices_parameters
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/speech/settings
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/speech/dictionary
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/speech
