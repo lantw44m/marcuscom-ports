@@ -1,5 +1,5 @@
---- gconftool.c.orig	Sun Jul  4 11:15:23 2004
-+++ gconftool.c	Thu Jul  8 17:23:03 2004
+--- gconf/gconftool.c.orig	Sun Jul  4 11:15:23 2004
++++ gconf/gconftool.c	Thu Jul  8 17:23:03 2004
 @@ -460,8 +460,7 @@
  
  static int do_break_key(GConfEngine* conf, const gchar** args);
