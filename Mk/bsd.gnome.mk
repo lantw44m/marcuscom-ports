@@ -365,7 +365,7 @@ librsvg2_USE_GNOME_IMPL=libartlgpl2 libgsf gnomevfs2
 
 eel2_LIB_DEPENDS=	eel-2.11:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${X11BASE}/libdata/pkgconfig/eel-2.0.pc
-eel2_USE_GNOME_IMPL=	gnomevfs2 gnomedesktop gail
+eel2_USE_GNOME_IMPL=	gnomemenus gnomedesktop gail
 
 gnomepanel_LIB_DEPENDS=	panel-applet-2.1:${PORTSDIR}/x11/gnomepanel
 gnomepanel_DETECT=	${X11BASE}/libdata/pkgconfig/libpanelapplet-2.0.pc
