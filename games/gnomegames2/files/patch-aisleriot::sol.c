@@ -1,9 +1,10 @@
---- aisleriot/sol.c.orig	Wed Oct  1 20:19:36 2003
-+++ aisleriot/sol.c	Tue Nov 25 16:30:44 2003
-@@ -83,6 +83,15 @@
+--- aisleriot/sol.c.orig	Sun Apr 25 03:03:33 2004
++++ aisleriot/sol.c	Mon May 31 17:25:15 2004
+@@ -90,6 +90,16 @@
  #define DEFAULT_VARIATION "klondike.scm"
  #define GNOME_SESSION_BUG
  
++gchar* game_file_to_variation (const gchar* file);
 +gchar* game_file_to_variation (const gchar* file)
 +{
 +  char* p, *buf = g_path_get_basename(file);
@@ -16,7 +17,16 @@
  gchar* game_file_to_name (const gchar* file)
  {
    char* p, *buf = g_path_get_basename(file);
-@@ -545,14 +554,14 @@
+@@ -472,7 +482,7 @@
+   dir = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_DATADIR,
+ 	                                        GAMESDIR, FALSE, NULL);
+ 
+-  records = scandir (dir, &game_dents, is_game, alphasort);
++  records = scandir (dir, &game_dents, (gpointer)is_game, alphasort);
+   g_free(dir);
+ 
+   if (records >= 0)
+@@ -481,14 +491,14 @@
  	  n_games = 0;
  
    for (i = 0; i < n_games; i++) {

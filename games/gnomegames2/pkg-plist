@@ -181,7 +181,7 @@ share/gnome/blackjack/Vegas_Strip.rules
 @unexec [ -s %D/share/gnome/games/mahjongg.easy.scores ] || rm -f %D/share/gnome/games/mahjongg.easy.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.pyramid.scores ] || rm -f %D/share/gnome/games/mahjongg.pyramid.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.tictactoe.scores ] || rm -f %D/share/gnome/games/mahjongg.tictactoe.scores
-@unexec [ -s %D/share/gnome/games/mahjongg.ziggurat.scores ] || rm -f %D/share/gnome/games/mahjongg.zigurrat.scores
+@unexec [ -s %D/share/gnome/games/mahjongg.ziggurat.scores ] || rm -f %D/share/gnome/games/mahjongg.ziggurat.scores
 @unexec [ -s %D/share/gnome/games/same-gnome.scores ] || rm -f %D/share/gnome/games/same-gnome.scores
 share/gnome/gnect/white_ob.cn4
 share/gnome/gnibbles/level001.gnl
@@ -720,6 +720,7 @@ share/locale/hi/LC_MESSAGES/gnome-games.mo
 share/locale/hr/LC_MESSAGES/gnome-games.mo
 share/locale/hu/LC_MESSAGES/gnome-games.mo
 share/locale/id/LC_MESSAGES/gnome-games.mo
+share/locale/is/LC_MESSAGES/gnome-games.mo
 share/locale/it/LC_MESSAGES/gnome-games.mo
 share/locale/ja/LC_MESSAGES/gnome-games.mo
 share/locale/ko/LC_MESSAGES/gnome-games.mo

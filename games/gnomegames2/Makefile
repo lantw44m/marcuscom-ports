@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomegames2
-PORTVERSION=	2.7.1
+PORTVERSION=	2.7.2
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-games/2.7
@@ -34,5 +34,6 @@ CONFLICTS=	sol-1.0.*
 post-patch:
 	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|malloc\.h|stdlib.h|g'
+	@${REINPLACE_CMD} -e '/%[85].2lf%%/s|.2lf%%|.2f%%|g' ${WRKSRC}/blackjack/src/player.cpp
 
 .include <bsd.port.mk>
