@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	gnomesession
-PORTVERSION=	2.1.90
+PORTVERSION=	2.2.0.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome-session/2.1
+MASTER_SITE_SUBDIR=	sources/gnome-session/2.2
 DISTNAME=	gnome-session-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -35,7 +35,5 @@ MAN5=	default.session.5
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
-		${WRKSRC}/po/Makefile.in.in
 
 .include <bsd.port.mk>
