@@ -18,7 +18,7 @@ COMMENT=	The "meta-port" for the GNOME 2 integrated X11 desktop
 RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 \
 		gnome-cd:${PORTSDIR}/audio/gnomemedia2 \
 	 	gnome-dictionary:${PORTSDIR}/deskutils/gnomeutils2 \
-		eog:${PORTSDIR}/graphics/eog2 \
+		eog:${PORTSDIR}/graphics/eog \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
 		gnect:${PORTSDIR}/games/gnomegames2 \
 		gedit:${PORTSDIR}/editors/gedit2 \
