@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	1.5.8
-PORTREVISION=	1
+PORTVERSION=	1.5.9.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
@@ -23,7 +22,8 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver
+USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver gal2 \
+		gtkhtml3
 USE_REINPLACE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-nss=yes \
