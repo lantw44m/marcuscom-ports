@@ -73,6 +73,7 @@ share/gnome/omf/eog/eog-zh_CN.omf
 share/gnome/omf/eog/eog-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/eog/eog-zh_TW.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/eog/down-right.png
+share/gnome/pixmaps/eog/loading.png
 share/gnome/pixmaps/eog/orient-horizontal.png
 share/gnome/pixmaps/eog/orient-vertical.png
 share/gnome/pixmaps/eog/right-down.png
