@@ -18,7 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 RUN_DEPENDS=	sox:${PORTSDIR}/audio/sox
 LIB_DEPENDS=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui \
 		gailutil.17:${PORTSDIR}/x11-toolkits/gail \
-		gstreamer.0:${PORTSDIR}/graphics/gstreamer
+		gstreamer.0:${PORTSDIR}/multimedia/gstreamer
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
