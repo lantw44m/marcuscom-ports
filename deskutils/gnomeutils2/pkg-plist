@@ -5,11 +5,13 @@ etc/gconf/gconf.xml.defaults/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-dictionary/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-search-tool/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnome-search-tool/select/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-system-log/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-dictionary/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-search-tool/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnome-search-tool/select/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-system-log/%gconf.xml
 etc/gconf/schemas/gdict.schemas
 etc/gconf/schemas/gnome-search-tool.schemas
@@ -187,7 +189,6 @@ share/locale/vi/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/wa/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
-@dirrm share/gnome/pixmaps/gnome-system-log
 @dirrm share/gnome/pixmaps/gnome-search-tool
 @dirrm share/gnome/help/gnome-system-log/zh_TW/figures
 @dirrm share/gnome/help/gnome-system-log/zh_TW
@@ -236,9 +237,11 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/gnome-dictionary
 @dirrm share/gnome/gnome-system-log
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-system-log
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnome-search-tool/select
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-search-tool
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-dictionary
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-system-log
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-search-tool/select
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-search-tool
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-dictionary
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-utils/gnome-dictionary-C.omf 2>/dev/null || /usr/bin/true
