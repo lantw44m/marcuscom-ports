@@ -6,8 +6,8 @@ etc/gconf/gconf.xml.defaults/apps/file-roller/general/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/file-roller/listing/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/file-roller/ui/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/file-roller/dialogs/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/file-roller/dialogs/extract/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/dialogs/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/dialogs/extract/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/general/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/listing/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/file-roller/ui/%gconf.xml
