@@ -431,8 +431,8 @@ intlhack_PRE_PATCH=		${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${RE
 				 s|unpack *[(]'"'"'U\*'"'"'|unpack ('"'"'C*'"'"'|'
 intlhack_USE_GNOME_IMPL=intltool
 
-gtkhtml3_LIB_DEPENDS=	gtkhtml-3.1.11:${PORTSDIR}/www/gtkhtml3
-gtkhtml3_DETECT=		${X11BASE}/libdata/pkgconfig/libgtkhtml-3.1.pc
+gtkhtml3_LIB_DEPENDS=	gtkhtml-3.6.12:${PORTSDIR}/www/gtkhtml3
+gtkhtml3_DETECT=		${X11BASE}/libdata/pkgconfig/libgtkhtml-3.6.pc
 gtkhtml3_USE_GNOME_IMPL=gail libgnomeui libgnomeprintui
 
 gnomespeech_LIB_DEPENDS=gnomespeech.7:${PORTSDIR}/accessibility/gnomespeech
