@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	pyphany
-PORTVERSION=	0.1.1
+PORTVERSION=	0.1.2
 CATEGORIES=	www python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.1
@@ -15,15 +15,13 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A set of Python bindings for Epiphany
 
-BUILD_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany \
-		${PYTHON_SITELIBDIR}/gtk-2.0/gnome/_gnome.so:${PORTSDIR}/x11-toolkits/py-gnome2
-RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany \
-		${PYTHON_SITELIBDIR}/gtk-2.0/gnome/_gnome.so:${PORTSDIR}/x11-toolkits/py-gnome2
+BUILD_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
+RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
-USE_GNOME=	gnomehack gnometarget intlhack
+USE_GNOME=	gnomehack gnometarget intlhack pygnome2
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
