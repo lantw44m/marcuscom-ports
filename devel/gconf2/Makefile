@@ -6,11 +6,10 @@
 #
 
 PORTNAME=	gconf2
-PORTVERSION=	1.2.1
-PORTREVISION=	5
+PORTVERSION=	2.1.90
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/GConf/1.2
+MASTER_SITE_SUBDIR=	sources/GConf/2.1
 DISTNAME=	GConf-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -36,6 +35,8 @@ CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
+		${WRKSRC}/po/Makefile.in.in
 
 post-install:
 	@${MKDIR} ${PREFIX}/etc/gconf/gconf.xml.defaults/apps
