@@ -47,6 +47,7 @@ share/gnome/omf/file-roller/file-roller-uk.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/file-roller/file-roller-uk.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/file-roller.png
 share/locale/am/LC_MESSAGES/file-roller.mo
+share/locale/ar/LC_MESSAGES/file-roller.mo
 share/locale/az/LC_MESSAGES/file-roller.mo
 share/locale/be/LC_MESSAGES/file-roller.mo
 share/locale/bg/LC_MESSAGES/file-roller.mo
