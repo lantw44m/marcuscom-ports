@@ -5,7 +5,7 @@
 # $FreeBSD$
 #
 
-PORTNAME=	bugbuddy2
+PORTNAME=	bugbuddy
 PORTVERSION=	2.9.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
