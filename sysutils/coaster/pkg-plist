@@ -1,0 +1,33 @@
+bin/coaster
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+share/gnome/application-registry/coaster.applications
+share/gnome/applications/coaster.desktop
+@exec update-desktop-database > /dev/null || /usr/bin/true
+share/gnome/coaster/glade/coaster-dialogs.glade
+share/gnome/coaster/glade/coaster-preferences.glade
+share/gnome/coaster/glade/coaster.glade
+share/gnome/coaster/ui/coaster-audio-menu.ui
+share/gnome/coaster/ui/coaster-data-menu.ui
+share/gnome/coaster/ui/coaster-edit-menu.ui
+share/gnome/coaster/ui/coaster-other-menu.ui
+share/gnome/coaster/ui/coaster-toolbar.ui
+share/gnome/mime-info/coaster.keys
+share/gnome/mime-info/coaster.mime
+share/gnome/mime/packages/coaster.xml
+share/gnome/pixmaps/coaster.png
+share/gnome/xml/coaster/coaster-audio.dtd
+share/gnome/xml/coaster/coaster-catalog.xml
+share/gnome/xml/coaster/coaster-data.dtd
+share/gnome/xml/coaster/coaster-video.dtd
+share/locale/nl/LC_MESSAGES/coaster.mo
+@dirrm share/gnome/xml/coaster
+@dirrm share/gnome/coaster/ui
+@dirrm share/gnome/coaster/glade
+@dirrm share/gnome/coaster
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@unexec update-desktop-database > /dev/null || /usr/bin/true
