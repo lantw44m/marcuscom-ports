@@ -1,6 +1,22 @@
---- gui/gdmsetup.c.orig	Fri Jun  6 19:34:07 2003
-+++ gui/gdmsetup.c	Mon Jun 16 16:45:20 2003
-@@ -1587,7 +1587,7 @@
+--- gui/gdmsetup.c.orig	Tue Jul 15 13:23:37 2003
++++ gui/gdmsetup.c	Thu Jul 17 00:57:18 2003
+@@ -1550,13 +1550,14 @@
+ 	if (dir_exists (theme_dir, dir)) {
+ 		char *fname = g_filename_to_utf8 (dir, -1, NULL, NULL, NULL);
+ 		char *s;
++		GtkWidget *dlg;
+ 		GtkWidget *button;
+ 		/* FIXME: if exists already perhaps we could also have an
+ 		 * option to change the dir name */
+ 		s = g_strdup_printf (_("Theme directory '%s' seems to be already "
+ 				       "installed, install again anyway?"),
+ 				     fname);
+-		GtkWidget *dlg =
++		dlg =
+ 			ve_hig_dialog_new
+ 			(GTK_WINDOW (fs),
+ 			 GTK_DIALOG_MODAL | 
+@@ -1602,7 +1603,7 @@
  			success = TRUE;
  
  			/* HACK! */
