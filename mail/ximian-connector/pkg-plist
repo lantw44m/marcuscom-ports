@@ -59,8 +59,10 @@ share/locale/en_CA/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/en_GB/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/es/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/fi/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
+share/locale/fr/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/gu/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/hu/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
+share/locale/it/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/ja/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/ko/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/ms/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
@@ -71,6 +73,7 @@ share/locale/no/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/pa/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/pl/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/pt/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
+share/locale/pt_BR/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/sq/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/sr/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/sr@Latn/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
@@ -78,6 +81,8 @@ share/locale/sv/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/ta/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/tr/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 share/locale/uk/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
+share/locale/zh_CN/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
+share/locale/zh_TW/LC_MESSAGES/ximian-connector-%%VERSION%%.mo
 @dirrm share/gnome/ximian-connector/%%VERSION%%/ui
 @dirrm share/gnome/ximian-connector/%%VERSION%%/images
 @dirrm share/gnome/ximian-connector/%%VERSION%%/glade
