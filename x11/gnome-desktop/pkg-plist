@@ -34,12 +34,10 @@ share/gnome/omf/gnome-desktop/gpl-C.omf
 share/gnome/omf/gnome-desktop/gpl-eu.omf
 share/gnome/omf/gnome-desktop/lgpl-C.omf
 share/gnome/omf/gnome-desktop/lgpl-eu.omf
-share/gnome/pixmaps/advanced-directory.png
 share/gnome/pixmaps/apple-green.png
 share/gnome/pixmaps/apple-red.png
 share/gnome/pixmaps/gnome-aorta.png
 share/gnome/pixmaps/gnome-applets.png
-share/gnome/pixmaps/gnome-applications.png
 share/gnome/pixmaps/gnome-background-image.png
 share/gnome/pixmaps/gnome-background-pattern.png
 share/gnome/pixmaps/gnome-background.png
@@ -62,7 +60,6 @@ share/gnome/pixmaps/gnome-debian.png
 share/gnome/pixmaps/gnome-diskfree.png
 share/gnome/pixmaps/gnome-emacs.png
 share/gnome/pixmaps/gnome-eterm.png
-share/gnome/pixmaps/gnome-favorites.png
 share/gnome/pixmaps/gnome-file-c.png
 share/gnome/pixmaps/gnome-file-h.png
 share/gnome/pixmaps/gnome-folder.png
@@ -83,14 +80,11 @@ share/gnome/pixmaps/gnome-logo-icon.png
 share/gnome/pixmaps/gnome-logo-large.png
 share/gnome/pixmaps/gnome-mdi.png
 share/gnome/pixmaps/gnome-mnemonic.png
-share/gnome/pixmaps/gnome-monitor.png
 share/gnome/pixmaps/gnome-month.png
 share/gnome/pixmaps/gnome-mouse.png
-share/gnome/pixmaps/gnome-networktool.png
 share/gnome/pixmaps/gnome-news.png
 share/gnome/pixmaps/gnome-note.png
 share/gnome/pixmaps/gnome-qeye.png
-share/gnome/pixmaps/gnome-session.png
 share/gnome/pixmaps/gnome-set-time.png
 share/gnome/pixmaps/gnome-spider.png
 share/gnome/pixmaps/gnome-squeak.png
@@ -104,7 +98,6 @@ share/gnome/pixmaps/gnome-term.png
 share/gnome/pixmaps/gnome-tigert.png
 share/gnome/pixmaps/gnome-touristinfo.png
 share/gnome/pixmaps/gnome-user-interface.png
-share/gnome/pixmaps/gnome-util.png
 share/gnome/pixmaps/gnome-week.png
 share/gnome/pixmaps/gnome-windows.png
 share/gnome/pixmaps/gnome-word.png
@@ -185,6 +178,7 @@ share/locale/tr/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/uk/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/vi/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/wa/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/xh/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/yi/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/yo/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-desktop-2.0.mo
