@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomekeyringmanager
 PORTVERSION=	0.0.3
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-keyring-manager/0.0
@@ -18,12 +19,12 @@ COMMENT=	GNOME keyring manager
 
 LIB_DEPENDS=	gnome-keyring:${PORTSDIR}/security/gnomekeyring
 
+USE_X_PREFIX=	yes
 USE_BZIP2=	yes
-
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+USE_LIBTOOL_VER=15
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>
