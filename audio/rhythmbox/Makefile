@@ -45,6 +45,7 @@ USE_GNOME+=		gstreamerplugins
 CONFIGURE_ARGS+=	--with-metadata=monkeymedia
 .else
 CONFIGURE_ARGS+=	--with-metadata=gstreamer
+USE_GNOME+=		gstreamerplugins
 .endif
 
 .if exists(${LOCALBASE}/lib/libvorbis.so)
