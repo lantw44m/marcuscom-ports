@@ -94,21 +94,15 @@ share/gnome/help/clock/C/clock.xml
 share/gnome/help/clock/C/figures/clock_applet.png
 share/gnome/help/clock/C/legal.xml
 share/gnome/help/fish-applet-2/C/figures/fish_applet.png
-share/gnome/help/fish-applet-2/C/figures/fish_settings.png
 share/gnome/help/fish-applet-2/C/fish-applet-2.xml
 share/gnome/help/fish-applet-2/C/legal.xml
-share/gnome/help/mailcheck/C/figures/mailcheck-applet.png
-share/gnome/help/mailcheck/C/figures/mailcheck-properties-mailbox.png
-share/gnome/help/mailcheck/C/figures/mailcheck-properties-mailcheck.png
 share/gnome/help/mailcheck/C/figures/mailcheck_applet.png
 share/gnome/help/mailcheck/C/legal.xml
 share/gnome/help/mailcheck/C/mailcheck.xml
 share/gnome/help/window-list/C/figures/window_list_applet.png
-share/gnome/help/window-list/C/figures/window_list_group.png
 share/gnome/help/window-list/C/figures/window_list_group_applet.png
 share/gnome/help/window-list/C/legal.xml
 share/gnome/help/window-list/C/window-list.xml
-share/gnome/help/workspace-switcher/C/figures/workspacelist_applet.png
 share/gnome/help/workspace-switcher/C/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/C/legal.xml
 share/gnome/help/workspace-switcher/C/workspace-switcher.xml
@@ -132,6 +126,7 @@ share/gnome/pixmaps/mailcheck/email-tiny.png
 share/gnome/pixmaps/mailcheck/email.png
 share/gnome/pixmaps/mailcheck/tux-anim.png
 share/gnome/pixmaps/gnome-show-desktop.png
+share/locale/am/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-panel-2.0.mo
@@ -149,6 +144,7 @@ share/locale/fi/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/fr/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ga/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/gl/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/he/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/hu/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-panel-2.0.mo
