@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	libbonobo
-PORTVERSION=	2.3.3
-PORTREVISION=	1
+PORTVERSION=	2.3.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -30,9 +29,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAKE_ENV=	gnomelocaledir=${PREFIX}/share/locale
 
 MAN1=		bonobo-activation-server.1
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|template|tmpl|g' \
-		${WRKSRC}/bonobo/bonobo-main.[ch]
 
 .include <bsd.port.mk>
