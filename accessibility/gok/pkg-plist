@@ -19,6 +19,7 @@ etc/gconf/gconf.xml.defaults/apps/gok/feedbacks/goksound2/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gok/feedbacks/key_flashing/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gok/feedbacks/none/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gok/layout/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gok/spy/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gok/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gok/actions/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gok/actions/dwell/%gconf.xml
@@ -39,8 +40,60 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gok/feedbacks/goksound2/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gok/feedbacks/key_flashing/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gok/feedbacks/none/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gok/layout/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gok/spy/%gconf.xml
 etc/gconf/schemas/gok.schemas
 libdata/pkgconfig/gok-1.0.pc
+%%DOCSDIR%%/gok/c4.html
+%%DOCSDIR%%/gok/gok-arraylist.html
+%%DOCSDIR%%/gok/gok-callbacks.html
+%%DOCSDIR%%/gok/gok-command-common.html
+%%DOCSDIR%%/gok/gok-command-edge-data.html
+%%DOCSDIR%%/gok/gok-command-edge.html
+%%DOCSDIR%%/gok/gok-command-graph.html
+%%DOCSDIR%%/gok/gok-command-predictor.html
+%%DOCSDIR%%/gok/gok-command-vertex-data.html
+%%DOCSDIR%%/gok/gok-command-vertex.html
+%%DOCSDIR%%/gok/gok-global.html
+%%DOCSDIR%%/gok/gok-gok-action.html
+%%DOCSDIR%%/gok/gok-gok-branchback-stack.html
+%%DOCSDIR%%/gok/gok-gok-chunker.html
+%%DOCSDIR%%/gok/gok-gok-control.html
+%%DOCSDIR%%/gok/gok-gok-data.html
+%%DOCSDIR%%/gok/gok-gok-editor.html
+%%DOCSDIR%%/gok/gok-gok-feedback.html
+%%DOCSDIR%%/gok/gok-gok-file-util.html
+%%DOCSDIR%%/gok/gok-gok-gconf-keys.html
+%%DOCSDIR%%/gok/gok-gok-gconf.html
+%%DOCSDIR%%/gok/gok-gok-key.html
+%%DOCSDIR%%/gok/gok-gok-keyboard.html
+%%DOCSDIR%%/gok/gok-gok-keyslotter.html
+%%DOCSDIR%%/gok/gok-gok-log-priv.html
+%%DOCSDIR%%/gok/gok-gok-log-reader.html
+%%DOCSDIR%%/gok/gok-gok-log.html
+%%DOCSDIR%%/gok/gok-gok-modifier.html
+%%DOCSDIR%%/gok/gok-gok-output.html
+%%DOCSDIR%%/gok/gok-gok-page-accessmethod.html
+%%DOCSDIR%%/gok/gok-gok-page-actions.html
+%%DOCSDIR%%/gok/gok-gok-page-feedbacks.html
+%%DOCSDIR%%/gok/gok-gok-page-keysizespace.html
+%%DOCSDIR%%/gok/gok-gok-page-wordcomplete.html
+%%DOCSDIR%%/gok/gok-gok-predictor.html
+%%DOCSDIR%%/gok/gok-gok-scanner.html
+%%DOCSDIR%%/gok/gok-gok-settings-dialog.html
+%%DOCSDIR%%/gok/gok-gok-sound.html
+%%DOCSDIR%%/gok/gok-gok-spy-priv.html
+%%DOCSDIR%%/gok/gok-gok-spy.html
+%%DOCSDIR%%/gok/gok-gok-word-complete.html
+%%DOCSDIR%%/gok/gok-gok.html
+%%DOCSDIR%%/gok/gok-gokbutton.html
+%%DOCSDIR%%/gok/gok-gtkjoyswitch.html
+%%DOCSDIR%%/gok/gok-interface.html
+%%DOCSDIR%%/gok/gok-main.html
+%%DOCSDIR%%/gok/gok-support.html
+%%DOCSDIR%%/gok/gok-switchapi.html
+%%DOCSDIR%%/gok/gok-word-complete.html
+%%DOCSDIR%%/gok/index.html
+%%DOCSDIR%%/gok/index.sgml
 share/gnome/applications/gok.desktop
 share/gnome/gok/East.png
 share/gnome/gok/Keyboard.kbd
@@ -72,25 +125,33 @@ share/gnome/gok/main.kbd
 share/gnome/gok/manage.kbd
 share/gnome/gok/mouse.kbd
 share/gnome/gok/move-resize.kbd
+share/gnome/gok/quit.kbd
 share/gnome/gok/qwerty.kbd
 share/gnome/gok/small-empty.png
 share/gnome/gok/text-operations.kbd
 share/gnome/help/gok/C/gok.xml
 share/gnome/omf/gok/gok-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gok/gok-C.omf || /usr/bin/true
 share/gnome/pixmaps/gok.png
-@exec scrollkeeper-install -q %D/share/gnome/omf/gok/gok-C.omf
 share/locale/am/LC_MESSAGES/gok.mo
+share/locale/az/LC_MESSAGES/gok.mo
+share/locale/be/LC_MESSAGES/gok.mo
 share/locale/ca/LC_MESSAGES/gok.mo
 share/locale/cs/LC_MESSAGES/gok.mo
+share/locale/cy/LC_MESSAGES/gok.mo
 share/locale/da/LC_MESSAGES/gok.mo
 share/locale/de/LC_MESSAGES/gok.mo
+share/locale/el/LC_MESSAGES/gok.mo
 share/locale/es/LC_MESSAGES/gok.mo
 share/locale/fr/LC_MESSAGES/gok.mo
+share/locale/hi/LC_MESSAGES/gok.mo
 share/locale/it/LC_MESSAGES/gok.mo
 share/locale/ja/LC_MESSAGES/gok.mo
 share/locale/ml/LC_MESSAGES/gok.mo
+share/locale/ms/LC_MESSAGES/gok.mo
 share/locale/nl/LC_MESSAGES/gok.mo
 share/locale/no/LC_MESSAGES/gok.mo
+share/locale/pl/LC_MESSAGES/gok.mo
 share/locale/pt/LC_MESSAGES/gok.mo
 share/locale/pt_BR/LC_MESSAGES/gok.mo
 share/locale/sr/LC_MESSAGES/gok.mo
@@ -98,12 +159,14 @@ share/locale/sr@Latn/LC_MESSAGES/gok.mo
 share/locale/sv/LC_MESSAGES/gok.mo
 share/locale/uk/LC_MESSAGES/gok.mo
 share/locale/vi/LC_MESSAGES/gok.mo
+share/locale/zh_CN/LC_MESSAGES/gok.mo
 @dirrm share/gnome/omf/gok
 @dirrm share/gnome/help/gok/C/figures
 @dirrm share/gnome/help/gok/C
 @dirrm share/gnome/help/gok
 @dirrm share/gnome/gok
-@dirrm share/doc/gok
+@dirrm %%DOCSDIR%%/gok
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gok/spy
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gok/layout
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gok/feedbacks/none
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gok/feedbacks/key_flashing
@@ -124,6 +187,7 @@ share/locale/vi/LC_MESSAGES/gok.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gok/actions/dwell
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gok/actions
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gok
+@dirrm etc/gconf/gconf.xml.defaults/apps/gok/spy
 @dirrm etc/gconf/gconf.xml.defaults/apps/gok/layout
 @dirrm etc/gconf/gconf.xml.defaults/apps/gok/feedbacks/none
 @dirrm etc/gconf/gconf.xml.defaults/apps/gok/feedbacks/key_flashing
@@ -144,4 +208,4 @@ share/locale/vi/LC_MESSAGES/gok.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gok/actions/dwell
 @dirrm etc/gconf/gconf.xml.defaults/apps/gok/actions
 @dirrm etc/gconf/gconf.xml.defaults/apps/gok
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gok/gok-C.omf
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gok/gok-C.omf || /usr/bin/true
