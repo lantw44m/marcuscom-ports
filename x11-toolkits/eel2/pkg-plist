@@ -35,6 +35,7 @@ include/eel-2/eel/eel-marshal.h
 include/eel-2/eel/eel-pango-extensions.h
 include/eel-2/eel/eel-password-dialog.h
 include/eel-2/eel/eel-preferences-box.h
+include/eel-2/eel/eel-preferences-glade.h
 include/eel-2/eel/eel-preferences-group.h
 include/eel-2/eel/eel-preferences-item.h
 include/eel-2/eel/eel-preferences-pane.h
