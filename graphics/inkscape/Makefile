@@ -40,5 +40,9 @@ IGNORE=		"Can not be built with stock C++ compiller"
 post-patch:
 	@${REINPLACE_CMD} -e 's|<malloc.h>|<stdlib.h>|g' \
 		${WRKSRC}/src/helper/action.cpp
+.if ${OSVERSION} >= 600000
+	@${REINPLACE_CMD} -e 's|fpresetsticky|fpsetsticky|g' \
+		${WRKSRC}/src/main.cpp
+.endif
 
 .include <bsd.port.post.mk>
