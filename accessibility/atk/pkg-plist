@@ -15,6 +15,7 @@ include/atk-1.0/atk/atkobjectfactory.h
 include/atk-1.0/atk/atkregistry.h
 include/atk-1.0/atk/atkrelation.h
 include/atk-1.0/atk/atkrelationset.h
+include/atk-1.0/atk/atkrelationtype.h
 include/atk-1.0/atk/atkselection.h
 include/atk-1.0/atk/atkstate.h
 include/atk-1.0/atk/atkstateset.h
@@ -25,7 +26,34 @@ include/atk-1.0/atk/atkutil.h
 include/atk-1.0/atk/atkvalue.h
 lib/libatk-1.0.a
 lib/libatk-1.0.so
-lib/libatk-1.0.so.100
+lib/libatk-1.0.so.101
 libdata/pkgconfig/atk.pc
+share/doc/atk/atk-atkaction.html
+share/doc/atk/atk-atkcomponent.html
+share/doc/atk/atk-atkdocument.html
+share/doc/atk/atk-atkeditabletext.html
+share/doc/atk/atk-atkhypertext.html
+share/doc/atk/atk-atkimage.html
+share/doc/atk/atk-atkselection.html
+share/doc/atk/atk-atkstate.html
+share/doc/atk/atk-atkstreamablecontent.html
+share/doc/atk/atk-atktable.html
+share/doc/atk/atk-atktext.html
+share/doc/atk/atk-atkvalue.html
+share/doc/atk/atk.html
+share/doc/atk/atkgobjectaccessible.html
+share/doc/atk/atkhyperlink.html
+share/doc/atk/atknoopobject.html
+share/doc/atk/atknoopobjectfactory.html
+share/doc/atk/atkobject.html
+share/doc/atk/atkobjectfactory.html
+share/doc/atk/atkregistry.html
+share/doc/atk/atkrelation.html
+share/doc/atk/atkrelationset.html
+share/doc/atk/atkstateset.html
+share/doc/atk/atkutil.html
+share/doc/atk/book1.html
+share/doc/atk/index.sgml
+@dirrm share/doc/atk
 @dirrm include/atk-1.0/atk
 @dirrm include/atk-1.0

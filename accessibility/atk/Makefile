@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	atk
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		ftp://ftp.gtk.org/pub/gtk/v2.0/
@@ -28,7 +28,8 @@ INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
 USE_GNOMENG=	yes
 USE_GNOME=	gnomehack
-CONFIGURE_ARGS=	--enable-static
+CONFIGURE_ARGS=	--enable-static \
+		--disable-gtk-doc
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
