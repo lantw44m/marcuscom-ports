@@ -8,12 +8,3 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-@@ -8559,7 +8560,7 @@
- GNOME_PLATFORM=2
- GNOME_MINOR=3
- GNOME_MICRO=1
--GNOME_DISTRIBUTOR="GNOME.Org"
-+GNOME_DISTRIBUTOR="FreeBSD GNOME Project"
- GNOME_DATE="4th May,2003"
- 
- 
