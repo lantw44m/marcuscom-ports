@@ -1,7 +1,0 @@
-include/libxklavier/xklavier.h
-include/libxklavier/xklavier_config.h
-lib/libxklavier.a
-lib/libxklavier.so
-lib/libxklavier.so.5
-libdata/pkgconfig/libxklavier.pc
-@dirrm include/libxklavier
