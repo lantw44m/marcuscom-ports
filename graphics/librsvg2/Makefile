@@ -7,7 +7,7 @@
 
 PORTNAME=	librsvg2
 PORTVERSION=	2.1.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.1
@@ -22,7 +22,7 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 		xml2.5:${PORTSDIR}/textproc/libxml2 \
 		gdk_pixbuf-2.0.103:${PORTSDIR}/x11-toolkits/gtk20 \
 		popt.0:${PORTSDIR}/devel/popt
-RUN_DEPENDS=	${X11BASE}/lib/gtk-2.0/2.0.102/engines/libmetal.so:${PORTSDIR}/x11-toolkits/gtk-engines2
+RUN_DEPENDS=	${X11BASE}/lib/gtk-2.0/2.2.0/engines/libmetal.so:${PORTSDIR}/x11-toolkits/gtk-engines2
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -35,7 +35,7 @@ USE_GNOME=	gnomehack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
-PLIST_SUB=	GTK_VERSION="2.0.103"
+PLIST_SUB=	GTK_VERSION="2.2.0"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
