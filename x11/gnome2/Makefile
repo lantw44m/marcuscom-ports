@@ -46,7 +46,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		zenity:${PORTSDIR}/x11/zenity \
 		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media \
 		${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
-		gnomemeeting:${PORTSDIR}/net/gnomemeeting2 \
+		gnomemeeting:${PORTSDIR}/net/gnomemeeting \
 		epiphany:${PORTSDIR}/www/epiphany \
 		gnopernicus:${PORTSDIR}/x11/gnopernicus
 
