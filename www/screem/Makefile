@@ -41,7 +41,8 @@ CONFIGURE_ARGS+=	--without-included-neon
 #			--with-neon="${LOCALBASE}/lib"
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|\$${DATADIRNAME}/\$${PACKAGE}/pixmaps|\$${DATADIRNAME}/gnome/\$${PACKAGE}/pixmaps|g' \
+	@${REINPLACE_CMD} -e 's|\$${DATADIRNAME}/\$${PACKAGE}/pixmaps|\$${DATADIRNAME}/gnome/\$${PACKAGE}/pixmaps|g ; \
+		s|libcroco|libcroco-${CROCO_VERSION}|g' \
 		${WRKSRC}/configure
 
 post-configure:
