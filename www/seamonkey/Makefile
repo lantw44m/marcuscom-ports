@@ -292,7 +292,7 @@ pre-install:
 	fi
 	${ECHO_CMD} lib/${MOZILLA}/mozilla >> ${PLIST}
 	${ECHO_CMD} lib/${MOZILLA}/mozilla-config >> ${PLIST}
-	cd ${FAKEDIR}/lib/mozilla && ${FIND} -s * -type f -o -type l | \
+	cd ${FAKEDIR}/lib/${MOZILLA} && ${FIND} -s * -type f -o -type l | \
 		${SED} -e 's:^:lib/${MOZILLA}/:' >> ${PLIST} \
 			&& ${FIND} -d * -type d | \
 			${SED} -e 's:^:@dirrm lib/${MOZILLA}/:' >> ${PLIST}
@@ -314,7 +314,7 @@ do-install:
 	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
 		${PREFIX}/lib/${MOZILLA}/mozilla \
 		${PREFIX}/lib/${MOZILLA}/mozilla-config
-	cd ${FAKEDIR}/lib/mozilla && ${FIND} . | \
+	cd ${FAKEDIR}/lib/${MOZILLA} && ${FIND} . | \
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${MOZILLA}
 	${INSTALL_SCRIPT} ${WRKSRC}/${MOZILLA} ${PREFIX}/bin
 	if [ ! -x ${PREFIX}/bin/mozilla -a ! -L ${PREFIX}/bin/mozilla ]; then \
