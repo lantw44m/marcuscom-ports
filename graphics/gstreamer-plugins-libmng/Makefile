@@ -5,9 +5,11 @@
 # $FreeBSD$
 #
 
+PORTREVISION=	1
+
 CATEGORIES=	graphics
 
-GST_PLUGIN=	libpng
+GST_PLUGIN=	libmng
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins
 
