@@ -1,0 +1,5 @@
+libdata/bonobo/servers/GNOME_ContactLookupApplet.server
+libexec/contact-lookup-applet
+share/gnome/lookup-applet/GNOME_ContactLookupApplet.xml
+share/gnome/lookup-applet/contact-lookup-applet.glade
+@dirrm share/gnome/lookup-applet
