@@ -25,6 +25,10 @@ include/pygtk-2.0/pygtk/pygtk.h
 libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/doc/py-gtk/MAPPING
 %%PORTDOCS%%share/doc/py-gtk/THREADS
+%%PORTDOCS%%share/examples/py-gtk/Makefile
+%%PORTDOCS%%share/examples/py-gtk/Makefile.am
+%%PORTDOCS%%share/examples/py-gtk/Makefile.in
+%%PORTDOCS%%share/examples/py-gtk/Makefile.in.bak
 %%PORTDOCS%%share/examples/py-gtk/atk/atk-demo.py
 %%PORTDOCS%%share/examples/py-gtk/glade/README
 %%PORTDOCS%%share/examples/py-gtk/glade/glade-demo.py
@@ -33,6 +37,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/examples/py-gtk/gobject/signal.py
 %%PORTDOCS%%share/examples/py-gtk/gtk/filechooser.py
 %%PORTDOCS%%share/examples/py-gtk/gtk/uimanager.py
+%%PORTDOCS%%share/examples/py-gtk/gtk/widget.py
 %%PORTDOCS%%share/examples/py-gtk/ide/README
 %%PORTDOCS%%share/examples/py-gtk/ide/break.xpm
 %%PORTDOCS%%share/examples/py-gtk/ide/browse.py

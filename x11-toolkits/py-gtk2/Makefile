@@ -5,7 +5,7 @@
 # $FreeBSD$
 
 PORTNAME=	gtk
-PORTVERSION=	2.3.92
+PORTVERSION=	2.3.93
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/pygtk/2.3
@@ -20,9 +20,9 @@ RUN_DEPENDS=	${PYNUMERIC}
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnometarget libglade2 lthack
+USE_GNOME=	gnomehack gnometarget libglade2
 USE_PYTHON=	yes
-USE_LIBTOOL_VER=13
+USE_LIBTOOL_VER=15
 
 EG_SRC_DIR=	${WRKSRC}/examples
 EG_DST_DIR=	${PREFIX}/share/examples/py-gtk
