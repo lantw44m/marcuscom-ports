@@ -6,12 +6,12 @@
 #
 
 PORTNAME=	gnomesession
-PORTVERSION=	2.9.4
+PORTVERSION=	2.10.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://people.FreeBSD.org/~marcus/:local \
 		${MASTER_SITE_LOCAL:S/$/:local/}
-MASTER_SITE_SUBDIR=	sources/gnome-session/2.9 \
+MASTER_SITE_SUBDIR=	sources/gnome-session/2.10 \
 		    	marcus/:local
 DISTNAME=	gnome-session-${PORTVERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
