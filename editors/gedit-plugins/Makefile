@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	2.3.1
+PORTVERSION=	2.3.2
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -24,10 +24,11 @@ USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 USE_GNOME=	gnomeprefix gnomehack gnometarget
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		 s|GETTEXT_PACKAGE=gedit-2.0|GETTEXT_PACKAGE=gedit-plugins|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
 
 .include <bsd.port.mk>
