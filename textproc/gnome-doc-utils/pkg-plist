@@ -1,3 +1,4 @@
+bin/gnome-doc-prepare
 bin/xml2po
 libdata/pkgconfig/gnome-doc-utils.pc
 libdata/pkgconfig/xml2po.pc
@@ -10,6 +11,7 @@ share/gnome/help/gnome-doc-xslt/C/db-chunk.xml
 share/gnome/help/gnome-doc-xslt/C/db-common.xml
 share/gnome/help/gnome-doc-xslt/C/db-format.xml
 share/gnome/help/gnome-doc-xslt/C/db-label.xml
+share/gnome/help/gnome-doc-xslt/C/db-title.xml
 share/gnome/help/gnome-doc-xslt/C/db-xref.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-admon.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-autotoc.xml
@@ -26,6 +28,7 @@ share/gnome/help/gnome-doc-xslt/C/db2html-inline.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-list.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-media.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-qanda.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-refentry.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-suppressed.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-table.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-title.xml
@@ -45,6 +48,7 @@ share/xml/gnome/xslt/docbook/common/db-chunk.xsl
 share/xml/gnome/xslt/docbook/common/db-common.xsl
 share/xml/gnome/xslt/docbook/common/db-format.xsl
 share/xml/gnome/xslt/docbook/common/db-label.xsl
+share/xml/gnome/xslt/docbook/common/db-title.xsl
 share/xml/gnome/xslt/docbook/common/db-xref.xsl
 share/xml/gnome/xslt/docbook/html/db2html-admon.xsl
 share/xml/gnome/xslt/docbook/html/db2html-autotoc.xsl
@@ -61,6 +65,7 @@ share/xml/gnome/xslt/docbook/html/db2html-inline.xsl
 share/xml/gnome/xslt/docbook/html/db2html-list.xsl
 share/xml/gnome/xslt/docbook/html/db2html-media.xsl
 share/xml/gnome/xslt/docbook/html/db2html-qanda.xsl
+share/xml/gnome/xslt/docbook/html/db2html-refentry.xsl
 share/xml/gnome/xslt/docbook/html/db2html-suppressed.xsl
 share/xml/gnome/xslt/docbook/html/db2html-table.xsl
 share/xml/gnome/xslt/docbook/html/db2html-title.xsl
