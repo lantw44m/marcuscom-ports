@@ -1,7 +1,4 @@
 bin/ximian-connector-setup-%%VERSION%%
-etc/gconf/gconf.xml.defaults/apps/evolution/exchange/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/evolution/exchange/%gconf.xml
-etc/gconf/schemas/apps_evolution_exchange.schemas
 lib/evolution/%%EVO_VERSION%%/camel-providers/libcamelexchange.so
 lib/evolution/%%EVO_VERSION%%/camel-providers/libcamelexchange.urls
 libdata/bonobo/servers/GNOME_Evolution_Exchange_Storage_%%VERSION%%.server
@@ -49,10 +46,13 @@ share/gnome/ximian-connector/%%VERSION%%/images/connector.png
 share/gnome/ximian-connector/%%VERSION%%/images/exchange-delegates-48.png
 share/gnome/ximian-connector/%%VERSION%%/images/exchange-oof-48.png
 share/gnome/ximian-connector/%%VERSION%%/ui/ximian-connector.xml
+share/locale/az/LC_MESSAGES/ximian-connector.mo
 share/locale/cs/LC_MESSAGES/ximian-connector.mo
 share/locale/de/LC_MESSAGES/ximian-connector.mo
 share/locale/en_GB/LC_MESSAGES/ximian-connector.mo
 share/locale/no/LC_MESSAGES/ximian-connector.mo
+share/locale/pt/LC_MESSAGES/ximian-connector.mo
+share/locale/sq/LC_MESSAGES/ximian-connector.mo
 share/locale/sv/LC_MESSAGES/ximian-connector.mo
 @dirrm share/gnome/ximian-connector/%%VERSION%%/ui
 @dirrm share/gnome/ximian-connector/%%VERSION%%/images
@@ -61,5 +61,3 @@ share/locale/sv/LC_MESSAGES/ximian-connector.mo
 @dirrm share/gnome/ximian-connector/%%VERSION%%
 @dirrm share/gnome/ximian-connector
 @dirrm %%DOCSDIR%%
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/exchange
-@dirrm etc/gconf/gconf.xml.defaults/apps/evolution/exchange
