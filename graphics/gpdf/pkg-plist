@@ -18,12 +18,17 @@ share/gnome/help/gpdf/C/figures/gpdf_start_window.png
 share/gnome/help/gpdf/C/figures/gpdf_window.png
 share/gnome/help/gpdf/C/gpdf.xml
 share/gnome/help/gpdf/C/legal.xml
+share/gnome/help/gpdf/de/figures/gpdf_window.png
+share/gnome/help/gpdf/de/gpdf.xml
+share/gnome/help/gpdf/de/legal.xml
 share/gnome/help/gpdf/es/figures/gpdf_start_window.png
 share/gnome/help/gpdf/es/gpdf.xml
 share/gnome/help/gpdf/es/legal.xml
 share/gnome/mime-info/gpdf.keys
 share/gnome/omf/gpdf/gpdf-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gpdf/gpdf-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gpdf/gpdf-de.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gpdf/gpdf-de.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gpdf/gpdf-es.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gpdf/gpdf-es.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gnome-pdf.png
@@ -95,6 +100,8 @@ share/locale/zh_TW/LC_MESSAGES/gpdf.mo
 @dirrm share/gnome/omf/gpdf
 @dirrm share/gnome/help/gpdf/es/figures
 @dirrm share/gnome/help/gpdf/es
+@dirrm share/gnome/help/gpdf/de/figures
+@dirrm share/gnome/help/gpdf/de
 @dirrm share/gnome/help/gpdf/C/figures
 @dirrm share/gnome/help/gpdf/C
 @dirrm share/gnome/help/gpdf
@@ -107,4 +114,5 @@ share/locale/zh_TW/LC_MESSAGES/gpdf.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gpdf/UI
 @dirrm etc/gconf/gconf.xml.defaults/apps/gpdf
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gpdf/gpdf-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gpdf/gpdf-de.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gpdf/gpdf-es.omf 2>/dev/null || /usr/bin/true
