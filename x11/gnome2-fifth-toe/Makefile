@@ -28,7 +28,6 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		${X11BASE}/lib/gtk-2.0/2.4.0/engines/libindustrial.so:${PORTSDIR}/x11-themes/gnome-themes-extras \
 		bluefish:${PORTSDIR}/www/bluefish-devel \
 		gossip:${PORTSDIR}/net/gossip \
-		inkscape:${PORTSDIR}/graphics/inkscape \
 		straw:${PORTSDIR}/net/straw \
 		liferea:${PORTSDIR}/net/liferea \
 		gnotime:${PORTSDIR}/deskutils/gnotime \
@@ -38,6 +37,10 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 
 .if !defined(PACKAGE_BUILDING) && !defined(PARALLEL_PACKAGE_BUILD)
 RUN_DEPENDS+=	totem:${PORTSDIR}/multimedia/totem
+.endif
+
+.if ${OSVERSION} >= 500000
+RUN_DEPENDS+=	inkscape:${PORTSDIR}/graphics/inkscape
 .endif
 
 NO_BUILD=	yes
