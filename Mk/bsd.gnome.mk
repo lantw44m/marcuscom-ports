@@ -33,7 +33,7 @@ _USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 libglade2 libxml2 \
 		libxslt libbonobo gconf2 gnomevfs2 gail \
 		libgnomecanvas libartlgpl2 libgnomeprint libgnomeprintui \
 		libgnome libbonoboui libgnomeui atspi libgailgnome \
-		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
+		libgtkhtml gnomedesktop libwnck vte librsvg2 eel2 \
 		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
 		libgnomedb gtksourceview pkgconfig libgsf
 
@@ -317,10 +317,6 @@ libwnck_USE_GNOME_IMPL=	gtk20
 vte_LIB_DEPENDS=	vte.5:${PORTSDIR}/x11-toolkits/vte
 vte_DETECT=		${X11BASE}/libdata/pkgconfig/vte.pc
 vte_USE_GNOME_IMPL=	gtk20
-
-libzvt_LIB_DEPENDS=	zvt-2.0.0:${PORTSDIR}/x11-toolkits/libzvt
-libzvt_DETECT=		${X11BASE}/libdata/pkgconfig/libzvt-2.0.pc
-libzvt_USE_GNOME_IMPL=	gtk20
 
 librsvg2_LIB_DEPENDS=	rsvg-2.5:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${X11BASE}/libdata/pkgconfig/librsvg-2.0.pc
