@@ -22,12 +22,15 @@ LIB_DEPENDS=	gconfmm-2.6.1:${PORTSDIR}/devel/gconfmm26 \
 USE_GNOME=	gnomehack gnomeprefix gnometarget intltool
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_GCC=	3.4
 USE_PERL5=	yes
 USE_X_PREFIX=	yes
 USE_LIBTOOL_VER=15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
+
+PLIST_SUB=	VERSION="2.3" API_VERSION="2.4"
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/examples//' \
