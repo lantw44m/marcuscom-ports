@@ -1,0 +1,11 @@
+--- src/orb/util/Makefile.in.orig	Tue Jul 15 13:16:53 2003
++++ src/orb/util/Makefile.in	Tue Jul 15 13:17:32 2003
+@@ -189,7 +189,7 @@
+ INCLUDES = \
+ 	-I$(top_srcdir)/include				\
+ 	-I$(top_builddir)/include			\
+-	-DORBIT_SYSTEM_RCFILE=\"$(sysconfdir)/orbitrc\"	\
++	-DORBIT_SYSTEM_RCFILE=\"$(sysconfdir)/orbit2rc\"	\
+ 	-DORBIT2_INTERNAL_API				\
+ 	$(WARN_CFLAGS)					\
+ 	$(ORBIT_DEBUG_CFLAGS)				\
