@@ -38,7 +38,7 @@ lib/gstreamer-%%VERSION%%/libgstadder.so
 lib/gstreamer-%%VERSION%%/libgstalaw.so
 lib/gstreamer-%%VERSION%%/libgstalpha.so
 lib/gstreamer-%%VERSION%%/libgstalphacolor.so
-lib/gstreamer-%%VERSION%%/libgstapetag.so	
+lib/gstreamer-%%VERSION%%/libgstapetag.so
 lib/gstreamer-%%VERSION%%/libgstasf.so
 lib/gstreamer-%%VERSION%%/libgstaudio.so
 lib/gstreamer-%%VERSION%%/libgstaudioconvert.so
