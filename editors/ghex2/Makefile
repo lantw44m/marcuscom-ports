@@ -16,17 +16,12 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 hex editor
 
-LIB_DEPENDS=	gailutil.17:${PORTSDIR}/x11-toolkits/gail \
-		gnomeprintui-2-2.0:${PORTSDIR}/x11-toolkits/libgnomeprintui \
-		gnomeui-2.200:${PORTSDIR}/x11-toolkits/libgnomeui
-
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOMENG=	yes
-USE_GNOME=	gnomeprefix gnomehack
-USE_LIBTOOL=	yes
 USE_REINPLACE=	yes
+USE_GNOME=	gnomeprefix gnomehack gail libgnomeprintui libgnomeui
+USE_LIBTOOL=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
