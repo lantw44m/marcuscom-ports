@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gail
-PORTVERSION=	1.7.0
+PORTVERSION=	1.7.1
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.7
@@ -28,6 +28,7 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-html-dir=${PREFIX}/share/doc
 
 post-patch:
-	@${REINPLACE_CMD} -e "/^SUBDIRS =/s|tests||" ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e "/^SUBDIRS =/s|tests||" ${WRKSRC}/configure \
+		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
