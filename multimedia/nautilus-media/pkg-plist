@@ -1,10 +1,19 @@
 bin/gst-thumbnail
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-shockwave-flash/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@mpeg/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@quicktime/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-avi/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-fli/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-ms-asf/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-ms-wmv/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-msvideo/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-shockwave-flash/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@mpeg/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@quicktime/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-avi/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-fli/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-ms-wmv/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-msvideo/%gconf.xml
 etc/gconf/schemas/gst-thumbnail.schemas
 lib/bonobo/libnautilus-audio-properties-view.so
 libdata/bonobo/servers/Nautilus_View_audio.server
@@ -30,6 +39,7 @@ share/locale/cy/LC_MESSAGES/nautilus-media.mo
 share/locale/da/LC_MESSAGES/nautilus-media.mo
 share/locale/de/LC_MESSAGES/nautilus-media.mo
 share/locale/el/LC_MESSAGES/nautilus-media.mo
+share/locale/en_GB/LC_MESSAGES/nautilus-media.mo
 share/locale/es/LC_MESSAGES/nautilus-media.mo
 share/locale/et/LC_MESSAGES/nautilus-media.mo
 share/locale/eu/LC_MESSAGES/nautilus-media.mo
@@ -56,6 +66,7 @@ share/locale/ms/LC_MESSAGES/nautilus-media.mo
 share/locale/nl/LC_MESSAGES/nautilus-media.mo
 share/locale/nn/LC_MESSAGES/nautilus-media.mo
 share/locale/no/LC_MESSAGES/nautilus-media.mo
+share/locale/pa/LC_MESSAGES/nautilus-media.mo
 share/locale/pl/LC_MESSAGES/nautilus-media.mo
 share/locale/pt/LC_MESSAGES/nautilus-media.mo
 share/locale/pt_BR/LC_MESSAGES/nautilus-media.mo
