@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome
-PORTVERSION=	2.9.1
+PORTVERSION=	2.9.2
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -21,12 +21,14 @@ COMMENT=	A set of Python bindings for GNOME 2
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/_gnome.so:${PORTSDIR}/x11-toolkits/py-gnome2
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/_gnome.so:${PORTSDIR}/x11-toolkits/py-gnome2
 
+LIB_DEPENDS+=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2
+
 LATEST_LINK=	py-gnome-extras
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gnomehack libgnomeprintui libgtkhtml gnomepanel \
-		nautilus2 pygtk2
+		gtksourceview libwnck
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
@@ -35,6 +37,16 @@ EG_SRC_DIR=	${WRKSRC}/examples
 EG_DST_DIR=	${PREFIX}/share/examples/py-gnome
 
 CONFLICTS=	py*-gnome-1*
+
+.include <bsd.port.pre.mk>
+
+.if exists(${X11BASE}/libdata/pkgconfig/mozilla-gtkmozembed.pc) || defined(WITH_MOZILLA)
+BUILD_DEPENDS+=	${X11BASE}/lib/mozilla/components/libwidget_gtk2.so:${PORTSDIR}/www/mozilla
+RUN_DEPENDS+=	${X11BASE}/lib/mozilla/components/libwidget_gtk2.so:${PORTSDIR}/www/mozilla
+PLIST_SUB+=	MOZILLA=""
+.else
+PLIST_SUB+=	MOZILLA="@comment "
+.endif
 
 .if !defined(NOPORTDOCS)
 post-install:
@@ -45,4 +57,11 @@ post-install:
 	${FIND} ${EG_DST_DIR} -type f -print | ${XARGS} ${CHMOD} 0444
 .endif
 
-.include <bsd.port.mk>
+pre-everything::
+.ifndef(WITH_MOZILLA)
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "Set WITH_MOZILLA to enable build of python gtkmozembed module"
+	@${ECHO_MSG} ""
+.endif
+
+.include <bsd.port.post.mk>

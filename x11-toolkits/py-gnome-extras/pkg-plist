@@ -13,13 +13,19 @@
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/_print.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/ui.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtkhtml2.so
+%%MOZILLA%%%%PYTHON_SITELIBDIR%%/gtk-2.0/gtkmozembedmodule.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtksourceviewmodule.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/wnck.so
+%%PYTHON_SITELIBDIR%%/gtkspell.so
 libdata/pkgconfig/gnome-python-extras-2.0.pc
 %%PORTDOCS%%share/examples/py-gnome/applet/GNOME_PythonAppletSample.server
 %%PORTDOCS%%share/examples/py-gnome/applet/README
 %%PORTDOCS%%share/examples/py-gnome/applet/applet.py
 %%PORTDOCS%%share/examples/py-gnome/egg/trayicon.py
+%%PORTDOCS%%share/examples/py-gnome/egg/recent/Bonobo_Sample_Hello.xml
+%%PORTDOCS%%share/examples/py-gnome/egg/recent/bonobo-view.py
+%%PORTDOCS%%share/examples/py-gnome/egg/recent/gtk-view.py
+%%PORTDOCS%%share/examples/py-gnome/egg/recent/populate-recent.py
 %%PORTDOCS%%share/examples/py-gnome/gnomeprint/README
 %%PORTDOCS%%share/examples/py-gnome/gnomeprint/example_01.py
 %%PORTDOCS%%share/examples/py-gnome/gnomeprint/example_02.py
@@ -36,6 +42,7 @@ libdata/pkgconfig/gnome-python-extras-2.0.pc
 %%PORTDOCS%%share/examples/py-gnome/gnomeprint/test-print.py
 %%PORTDOCS%%share/examples/py-gnome/gtkhtml2/simple-browser.py
 %%PORTDOCS%%share/examples/py-gnome/gtksourceview/test-widget.py
+%%PORTDOCS%%share/examples/py-gnome/gtkspell/test.py
 share/pygtk/2.0/defs/applet.defs
 share/pygtk/2.0/defs/art.defs
 share/pygtk/2.0/defs/gtkhtml2.defs
@@ -46,5 +53,6 @@ share/pygtk/2.0/defs/wnck.defs
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtksourceview
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtkhtml2
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gnomeprint
+%%PORTDOCS%%@dirrm share/examples/py-gnome/egg/recent
 %%PORTDOCS%%@dirrm share/examples/py-gnome/egg
 %%PORTDOCS%%@dirrm share/examples/py-gnome/applet
