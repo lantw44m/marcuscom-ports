@@ -15,7 +15,11 @@ share/gnome/control-center-2.0/capplets/battfink-preferences.desktop
 share/gnome/omf/battfink/battfink-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/battfink/battfink-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/battfink.png
+share/locale/da/LC_MESSAGES/battfink-0.1.mo
+share/locale/de/LC_MESSAGES/battfink-0.1.mo
 share/locale/es/LC_MESSAGES/battfink-0.1.mo
+share/locale/fr/LC_MESSAGES/battfink-0.1.mo
+share/locale/ja/LC_MESSAGES/battfink-0.1.mo
 share/locale/pt/LC_MESSAGES/battfink-0.1.mo
 share/locale/pt_BR/LC_MESSAGES/battfink-0.1.mo
 share/locale/sv/LC_MESSAGES/battfink-0.1.mo
