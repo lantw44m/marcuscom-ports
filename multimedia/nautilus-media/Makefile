@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	nautilus-media
-PORTVERSION=	0.1.0
+PORTVERSION=	0.1.2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.1
@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 
 LIB_DEPENDS=	nautilus.2:${PORTSDIR}/x11-fm/nautilus2 \
-		gstreamer-0.5.1:${PORTSDIR}/multimedia/gstreamer
+		gstreamer-0.5.2:${PORTSDIR}/multimedia/gstreamer
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
