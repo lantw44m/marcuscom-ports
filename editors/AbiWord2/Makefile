@@ -7,47 +7,55 @@
 
 PORTNAME=	AbiWord2
 PORTVERSION=	2.1.2
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.abisource.com/downloads/Version-${PORTVERSION}/lf/
 MASTER_SITE_SUBDIR=	abiword
 DISTNAME=	abiword-${PORTVERSION}
+DIST_SUBDIR=	AbiWord
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An open-source, cross-platform WYSIWYG word processor
 
 # unzip is needed during the installation process
 BUILD_DEPENDS=	unzip:${PORTSDIR}/archivers/unzip
-LIB_DEPENDS=	png.5:${PORTSDIR}/graphics/png \
-		fribidi.0:${PORTSDIR}/converters/fribidi \
-		popt.0:${PORTSDIR}/devel/popt \
-		enchant.2:${PORTSDIR}/textproc/enchant
-
-DIST_SUBDIR=	AbiWord
-
-WRKSRC=		${WRKDIR}/abiword-${PORTVERSION}/abi
+LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
+		png.5:${PORTSDIR}/graphics/png \
+		wv-1.0.0:${PORTSDIR}/textproc/wv \
+		fribidi.0:${PORTSDIR}/converters/fribidi
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
-USE_ICONV=	yes
-GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_REINPLACE=	yes
+USE_ICONV=	yes
 USE_GNOME=	gnomehier libglade2 libxml2
 WANT_GNOME=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib -liconv"
-CONFIGURE_ARGS=	--enable-xft
+USE_X_PREFIX=	yes
+USE_REINPLACE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--enable-xft \
+		--with-sys-wv \
+		--with-popt=${LOCALBASE} \
+		--with-zlib=${LOCALBASE} \
+		--with-libpng=${LOCALBASE} \
+		--with-libiconv=${LOCALBASE} \
+		--with-libjpeg-prefix=${LOCALBASE} \
+		--disable-peer-config
 MAKEFILE=	GNUmakefile
 
 ABIVERSION=	2.2
 PLIST_SUB+=	"ABIVERSION=${ABIVERSION}"
+WRKSRC=		${WRKDIR}/abiword-${PORTVERSION}/abi
+
+.ifndef(WITHOUT_GTKSPELL)
+LIB_DEPENDS+=		enchant.2:${PORTSDIR}/textproc/enchant
+PLIST_SUB+=		DICT:="@comment "
+.else
+CONFIGURE_ARGS+=	--disable-enchant
+PLIST_SUB+=		DICT:=""
+.endif
 
 .include <bsd.port.pre.mk>
-
-.if exists(${LOCALBASE}/include/wv.h)
-BROKEN=	"This port cannot be built when textproc/wv is installed because of a header conflict.  Please remove textproc/wv, and resume the build.  If textproc/wv is no longer installed, please remove ${LOCALBASE}/include/wv.h, and resume the AbiWord2 build"
-.endif
 
 .if ${HAVE_GNOME:Mnautilus2}!="" && ${HAVE_GNOME:Mlibgnomeprintui}!=""
 USE_GNOME+=		nautilus2 libgnomeprintui
@@ -66,31 +74,20 @@ pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "AbiWord2 has the following tunable option(s):"
 	@${ECHO_MSG} "	WITH_GUCHARMAP=yes	Enable use of Gucharmap as the symbol insertion tool (default: auto)"
+	@${ECHO_MSG} "	WITHOUT_HELP_DOCS=yes	Disable install the AbiWord HTML Help docs"
+	@${ECHO_MSG} "	WITHOUT_GTKSPELL=yes	Don't use Enchant, but still has spell enable and install dictionary."
 	@${ECHO_MSG} ""
 
-#Hopefully this will be fixed in the next version
-post-extract:
-	@${CP} ${WRKSRC}/abiword.desktop ${WRKSRC}/src/pkg/linux/rpm/data
-
 post-patch:
-	@${REINPLACE_CMD} -e 's|%%AUTOMAKE%%|${AUTOMAKE}|g ; \
-		s|%%ACLOCAL%%|${ACLOCAL}|g ; \
-		s|%%AUTOCONF%%|${AUTOCONF}|g' ${WRKSRC}/autogen.sh
-	@${FIND} ${WRKSRC}/ac-helpers -name "*.m4" | ${XARGS} ${REINPLACE_CMD} \
-		's|-ansi||g ; \
-		s|-pedantic||g'
+	@${REINPLACE_CMD} -e 's|-ansi||g ; s|-pedantic||g' \
+		${WRKSRC}/configure
 	@${FIND} ${WRKSRC}/src/config/platforms -name "*.mk" | ${XARGS} \
-		${REINPLACE_CMD} 's|-ansi||g ; \
-		s|-pedantic||g'
-#Next line is needed for a couple GTK_OPTION_MENUs that it seems they forgot about. Hopefully this REINPLACE
-#will be unnecessary soon.
-	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g' ${WRKSRC}/configure
-
-pre-configure:
+		${REINPLACE_CMD} 's|-ansi||g ; s|-pedantic||g'
 	@${FIND} ${WRKSRC} -name GNUmakefile.in | ${XARGS} ${REINPLACE_CMD} -e \
-		's|[(]libdir[)]/@PACKAGE@|(datadir)/@PACKAGE@|g ; \
-		 s|[(]libdir[)]/bonobo/servers|(prefix)/libdata/bonobo/servers|g; \
-		 s|@DEFS@|-I${WRKSRC}/../libiconv/include @DEFS@|g' && ${TRUE}
+		's|@.*PEER.*@||g ; \
+		 s|WV_INCLUDES = |#WV_INCLUDES = |g ; \
+		 s|[(]libdir[)]/@PACKAGE@|(datadir)/@PACKAGE@|g ; \
+		 s|[(]libdir[)]/bonobo/servers|(prefix)/libdata/bonobo/servers|g'
 
 post-install:
 .if defined(GNOME_ENABLED)
@@ -98,6 +95,8 @@ post-install:
 		${PREFIX}/share/gnome/apps/Applications/abiword.desktop
 	@${LN} -sf ${PREFIX}/share/AbiSuite-${ABIVERSION}/icons/abiword_48.png \
 		${PREFIX}/share/gnome/pixmaps/abiword_48.png
+	@${LN} -sf ${PREFIX}/share/AbiSuite-2.0/GNOME_AbiWord_Control_${ABIVERSION:S/./_/}.server \
+		${PREFIX}/libdata/bonobo/servers/GNOME_AbiWord_Control_${ABIVERSION:S/./_/}.server
 	@${LN} -sf ${PREFIX}/share/AbiSuite-${ABIVERSION}/abi-nautilus-view-file.xml \
 		${PREFIX}/share/gnome/gnome-2.0/ui/abi-nautilus-view-file.xml
 .endif

@@ -32,7 +32,7 @@
  	@$(subst xxxx,$(CANONDIR)/icons,$(VERIFY_DIRECTORY))
 -	(cd $(ABI_ROOT)/../abidistfiles/icons; cp abi* $(CANONDIR)/icons)
 +	(cd $(ABI_ROOT)/../abidistfiles/icons; $(ABICOPY) abi* $(CANONDIR)/icons)
-+	@(cd $(CANONDIR)/icons; $(ABICHMOD) ugo=r *_48*)
++	@(cd $(CANONDIR)/icons; $(ABICHMOD) ugo=r abi*)
  endif
  
  	@$(subst xxxx,$(CANONDIR)/clipart,$(VERIFY_DIRECTORY))

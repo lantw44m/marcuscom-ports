@@ -2,7 +2,7 @@ bin/AbiWord-%%ABIVERSION%%
 bin/abiword
 bin/ttfadmin.sh
 bin/ttftool
-libdata/bonobo/servers/GNOME_AbiWord_Control_2_2.server
+%%GNOME:%%libdata/bonobo/servers/GNOME_AbiWord_Control_2_2.server
 share/AbiSuite-%%ABIVERSION%%/AbiWord.exe.MANIFEST
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Break.glade
 share/AbiSuite-%%ABIVERSION%%/AbiWord/glade/ap_UnixDialog_Field.glade
@@ -159,6 +159,7 @@ share/AbiSuite-%%ABIVERSION%%/AbiWord/system.profile-ur-PK
 share/AbiSuite-%%ABIVERSION%%/AbiWord/system.profile-yi
 share/AbiSuite-%%ABIVERSION%%/AbiWord/system.profile-zh-CN
 share/AbiSuite-%%ABIVERSION%%/AbiWord/system.profile-zh-TW
+share/AbiSuite-%%ABIVERSION%%/GNOME_AbiWord_Control_2_2.server
 share/AbiSuite-%%ABIVERSION%%/README
 share/AbiSuite-%%ABIVERSION%%/abi-nautilus-view-file.xml
 share/AbiSuite-%%ABIVERSION%%/clipart/book.png
@@ -188,6 +189,8 @@ share/AbiSuite-%%ABIVERSION%%/clipart/tree.png
 share/AbiSuite-%%ABIVERSION%%/clipart/tux_bordelais.png
 share/AbiSuite-%%ABIVERSION%%/clipart/weather.png
 share/AbiSuite-%%ABIVERSION%%/clipart/write.png
+%%DICT:%%share/AbiSuite-%%ABIVERSION%%/dictionary/american.hash
+%%DICT:%%share/AbiSuite-%%ABIVERSION%%/dictionary/ispell_dictionary_list.xml
 share/AbiSuite-%%ABIVERSION%%/icons/abiword_16.xpm
 share/AbiSuite-%%ABIVERSION%%/icons/abiword_48.png
 share/AbiSuite-%%ABIVERSION%%/icons/abiword_48.tif
@@ -262,11 +265,9 @@ share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-ur_PK
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-yi
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-zh_CN
 share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-zh_TW
-share/applications/abiword.desktop
 %%GNOME:%%share/gnome/apps/Applications/abiword.desktop
 %%GNOME:%%share/gnome/gnome-2.0/ui/abi-nautilus-view-file.xml
 %%GNOME:%%share/gnome/pixmaps/abiword_48.png
-share/icons/abiword_48.png
 @dirrm share/AbiSuite-%%ABIVERSION%%/templates
 @dirrm share/AbiSuite-%%ABIVERSION%%/icons
 @dirrm share/AbiSuite-%%ABIVERSION%%/dictionary
