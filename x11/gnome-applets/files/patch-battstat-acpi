@@ -66,7 +66,7 @@
 + *  along with this program; if not, write to the Free Software
 + *  Foundation, Inc., 59 Temple Street #330, Boston, MA 02111-1307, USA.
 + *
-+ $Id: patch-battstat-acpi,v 1.6 2005-01-14 05:51:02 marcus Exp $
++ $Id: patch-battstat-acpi,v 1.7 2005-01-24 20:04:35 kwm Exp $
 + */
 +
 +/*
@@ -262,9 +262,9 @@
 +  return TRUE;
 +}
 +#endif
---- battstat/Makefile.in.orig	Thu Jan 13 23:29:04 2005
-+++ battstat/Makefile.in	Thu Jan 13 23:31:24 2005
-@@ -55,7 +55,7 @@
+--- battstat/Makefile.in.orig	Mon Jan 24 20:20:49 2005
++++ battstat/Makefile.in	Mon Jan 24 20:22:02 2005
+@@ -55,9 +55,10 @@
  PROGRAMS = $(libexec_PROGRAMS)
  am_battstat_applet_2_OBJECTS = properties.$(OBJEXT) \
  	battstat_applet.$(OBJEXT) power-management.$(OBJEXT) \
@@ -272,8 +272,11 @@
 +	acpi-freebsd.$(OBJEXT) acpi-linux.$(OBJEXT)
  battstat_applet_2_OBJECTS = $(am_battstat_applet_2_OBJECTS)
  am__DEPENDENCIES_1 =
++ACPIINC = @ACPIINC@
  @HAVE_LIBAPM_FALSE@@NEED_LIBAPM_TRUE@am__DEPENDENCIES_2 =  \
-@@ -66,6 +66,7 @@
+ @HAVE_LIBAPM_FALSE@@NEED_LIBAPM_TRUE@	apmlib/libapm.a
+ battstat_applet_2_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+@@ -66,6 +67,7 @@
  depcomp = $(SHELL) $(top_srcdir)/depcomp
  am__depfiles_maybe = depfiles
  @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/acpi-linux.Po \
@@ -281,15 +284,7 @@
  @AMDEP_TRUE@	./$(DEPDIR)/battstat_applet.Po \
  @AMDEP_TRUE@	./$(DEPDIR)/power-management.Po \
  @AMDEP_TRUE@	./$(DEPDIR)/properties.Po
-@@ -324,6 +325,7 @@
- glade_DATA = battstat_applet.glade
- desktop_iconsdir = $(iconsdir)/hicolor/48x48/apps
- desktop_icons_DATA = battstat.png
-+ACPIINC = @ACPIINC@
- @HAVE_LIBAPM_FALSE@@NEED_LIBAPM_TRUE@APMLIB = apmlib/libapm.a
- @HAVE_LIBAPM_TRUE@@NEED_LIBAPM_TRUE@APMLIB = -lapm
- @NEED_LIBAPM_FALSE@APMLIB = 
-@@ -339,6 +341,7 @@
+@@ -336,6 +338,7 @@
  	$(GNOME_APPLETS_CFLAGS)			\
  	$(LIBGLADE_CFLAGS)			\
  	$(APMINC)				\
@@ -297,7 +292,7 @@
  	-DG_LOG_DOMAIN=\"battstat_applet\"
  
  battstat_applet_2_SOURCES = \
-@@ -348,7 +351,9 @@
+@@ -345,7 +348,9 @@
  	battstat_applet.c \
  	power-management.c \
  	acpi-linux.c \
@@ -308,7 +303,7 @@
  
  battstat_applet_2_LDADD = \
  		     $(GNOME_APPLETS_LIBS) \
-@@ -443,6 +448,7 @@
+@@ -439,6 +444,7 @@
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/acpi-linux.Po@am__quote@
@@ -316,9 +311,9 @@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/battstat_applet.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/power-management.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/properties.Po@am__quote@
---- battstat/battstat_applet.c.orig	Thu Jan 13 08:21:14 2005
-+++ battstat/battstat_applet.c	Thu Jan 13 23:50:43 2005
-@@ -828,6 +828,7 @@
+--- battstat/battstat_applet.c.orig	Mon Jan 24 12:51:51 2005
++++ battstat/battstat_applet.c	Mon Jan 24 20:20:50 2005
+@@ -953,6 +953,7 @@
  	"Seth Nickell <snickell@stanford.edu> (GNOME2 port)",
  	"Davyd Madeley <davyd@madeley.id.au>",
  	"Ryan Lortie <desrt@desrt.ca>",
@@ -326,9 +321,9 @@
  	NULL
     };
  
---- battstat/power-management.c.orig	Thu Jan 13 08:21:14 2005
-+++ battstat/power-management.c	Fri Jan 14 00:25:07 2005
-@@ -75,6 +75,24 @@
+--- battstat/power-management.c.orig	Fri Jan 14 05:06:40 2005
++++ battstat/power-management.c	Mon Jan 24 20:26:46 2005
+@@ -76,6 +76,24 @@
  #ifdef __FreeBSD__
  
  #include <machine/apm_bios.h>
@@ -351,9 +346,9 @@
 +	return TRUE;
 +}
  
- static const char *
- apm_readinfo (BatteryStatus *status)
-@@ -83,23 +101,37 @@
+ #define APMDEVICE "/dev/apm"
+ 
+@@ -86,26 +104,37 @@
       FreeBSD.  Each time this functions is called (once every second)
       the APM device is opened, read from and then closed.
    */
@@ -364,6 +359,8 @@
  
 -  fd = open(APMDEVICE, O_RDONLY);
 -  if (fd == -1)
+-  {
+-    pm_initialised = 0;
 -    return ERR_OPEN_APMDEV;
 +  if (using_acpi) {
 +    fd = -1;
@@ -372,7 +369,7 @@
 +      acpi_freebsd_read(&apminfo, &acpiinfo);
 +    }
 +    acpi_count--;
-+  }
+   }
 +  else {
 +    fd = open(APMDEVICE, O_RDONLY);
 +    if (fd == -1) {
@@ -398,7 +395,7 @@
    status->present = TRUE;
    status->on_ac_power = apminfo.ai_acline ? 1 : 0;
    status->state = apminfo.ai_batt_stat;
-@@ -320,6 +352,13 @@
+@@ -339,6 +368,13 @@
          G_IO_IN | G_IO_ERR | G_IO_HUP,
          acpi_callback, NULL);
    }
@@ -410,9 +407,9 @@
 +  else
 +    using_acpi = FALSE;
  #endif
+   pm_initialised = 1;
  
-   return NULL;
-@@ -340,6 +379,13 @@
+@@ -360,6 +396,13 @@
        g_source_remove(acpiwatch);
       acpiwatch = 0;
       acpi_linux_cleanup(&acpiinfo);
@@ -425,4 +422,4 @@
 +    acpi_freebsd_cleanup(&acpiinfo);
    }
  #endif
- }
+ 

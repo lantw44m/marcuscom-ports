@@ -833,11 +833,6 @@ share/gnome/pixmaps/accessx-status-applet/sticky-shift-none.png
 share/gnome/pixmaps/accessx-status-applet/sticky-super-latched.png
 share/gnome/pixmaps/accessx-status-applet/sticky-super-locked.png
 share/gnome/pixmaps/accessx-status-applet/sticky-super-none.png
-share/gnome/pixmaps/mixer/volume-max.png
-share/gnome/pixmaps/mixer/volume-medium.png
-share/gnome/pixmaps/mixer/volume-min.png
-share/gnome/pixmaps/mixer/volume-mute.png
-share/gnome/pixmaps/mixer/volume-zero.png
 share/gnome/pixmaps/stickynotes/close.png
 share/gnome/pixmaps/stickynotes/locked.png
 share/gnome/pixmaps/stickynotes/resize_se.png
@@ -931,13 +926,10 @@ share/gnome/xmodmap/xmodmap.us.old
 share/gnome/xmodmap/xmodmap.us101A_x86
 share/gnome/xmodmap/xmodmap.us_intl
 share/gnome/xmodmap/xmodmap.yu
-%%BATTERY%%share/icons/hicolor/48x48/apps/battstat.png
 share/icons/hicolor/48x48/apps/charpick.png
-share/icons/hicolor/48x48/apps/drivemount-applet.png
 share/icons/hicolor/48x48/apps/gnome-cpu.png
 share/icons/hicolor/48x48/apps/gnome-eyes.png
 share/icons/hicolor/48x48/apps/gnome-mini-commander.png
-share/icons/hicolor/48x48/apps/gnome-mixer-applet.png
 share/icons/hicolor/48x48/apps/gnome-modem.png
 share/icons/hicolor/48x48/apps/gnome-money.png
 share/icons/hicolor/48x48/apps/gswitchit-applet.png
@@ -1006,7 +998,6 @@ share/locale/wa/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/pixmaps/stickynotes
-@dirrm share/gnome/pixmaps/mixer
 @dirrm share/gnome/pixmaps/accessx-status-applet
 @dirrm share/gnome/omf/gnome-applets
 @dirrm share/gnome/help/trashapplet/C
