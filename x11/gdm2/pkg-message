@@ -1,0 +1,20 @@
+GDM is installed.
+
+Please note the following:
+- This port has been tested on 5.0-CURRENT and 4.4-RELEASE and higher.
+- If you are running a version of FreeBSD prior to 4.5-PRERELEASE, you should 
+  append these lines to your /etc/pam.conf, otherwise GDM will refuse all 
+  logins:
+
+# gdm config
+gdm     auth            requisite       pam_unix.so     try_first_pass
+gdm     account         requisite       pam_unix.so     try_first_pass
+gdm     session         required        pam_permit.so
+
+- Do _NOT_ use /etc/ttys to start gdm at boot time.  This will result in gdm 
+  hanging or restarting constantly.  Instead, copy the included gdm.sh.sample 
+  script to gdm.sh, and restart.  This script is found, by default, in
+  /usr/X11R6/etc/rc.d.
+
+These notes were written by:  Yukihiro Nakai <nakai@FreeBSD.org>
+and updated by: Joe Marcus Clarke <marcus@FreeBSD.org>
