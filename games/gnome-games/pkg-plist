@@ -1,7 +1,8 @@
-bin/freecell
 bin/gataxx
 bin/glines
 bin/gnect
+bin/gnibbles
+bin/gnobots2
 bin/gnome-stones
 bin/gnometris
 bin/gnomine
@@ -12,9 +13,7 @@ bin/iagno
 bin/mahjongg
 bin/same-gnome
 bin/sol
-etc/gconf/gconf.xml.defaults/apps/freecell/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/freecell/option/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/freecell/score/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gataxx/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnect/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnometris/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnometris/options/%gconf.xml
@@ -24,9 +23,6 @@ etc/gconf/gconf.xml.defaults/apps/gtali/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/iagno/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/mahjongg/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/same-gnome/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/freecell/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/freecell/option/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/freecell/score/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gataxx/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnect/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnometris/%gconf.xml
@@ -37,7 +33,6 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gtali/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/iagno/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/mahjongg/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/same-gnome/%gconf.xml
-etc/gconf/schemas/freecell.schemas
 etc/gconf/schemas/gataxx.schemas
 etc/gconf/schemas/gnect.schemas
 etc/gconf/schemas/gnometris.schemas
@@ -48,6 +43,8 @@ etc/gconf/schemas/mahjongg.schemas
 etc/gconf/schemas/same-gnome.schemas
 etc/sound/events/gataxx.soundlist
 etc/sound/events/gnect.soundlist
+etc/sound/events/gnibbles.soundlist
+etc/sound/events/gnobots2.soundlist
 etc/sound/events/iagno.soundlist
 include/gdkcardimage/gdk-card-image.h
 lib/libgdkcardimage.a
@@ -57,6 +54,8 @@ share/gnome/applications/freecell.desktop
 share/gnome/applications/gataxx.desktop
 share/gnome/applications/glines.desktop
 share/gnome/applications/gnect.desktop
+share/gnome/applications/gnibbles.desktop
+share/gnome/applications/gnobots2.desktop
 share/gnome/applications/gnome-stones.desktop
 share/gnome/applications/gnometris.desktop
 share/gnome/applications/gnomine.desktop
@@ -68,12 +67,35 @@ share/gnome/applications/mahjongg.desktop
 share/gnome/applications/same-gnome.desktop
 share/gnome/applications/sol.desktop
 share/gnome/games/glines.scores
+share/gnome/games/gnibbles.1.0.scores
+share/gnome/games/gnibbles.1.1.scores
+share/gnome/games/gnibbles.2.0.scores
+share/gnome/games/gnibbles.2.1.scores
+share/gnome/games/gnibbles.3.0.scores
+share/gnome/games/gnibbles.3.1.scores
+share/gnome/games/gnibbles.4.0.scores
+share/gnome/games/gnibbles.4.1.scores
+share/gnome/games/gnobots2.classic_robots-safe.scores
+share/gnome/games/gnobots2.classic_robots-super-safe.scores
+share/gnome/games/gnobots2.classic_robots.scores
+share/gnome/games/gnobots2.nightmare-safe.scores
+share/gnome/games/gnobots2.nightmare-super-safe.scores
+share/gnome/games/gnobots2.nightmare.scores
+share/gnome/games/gnobots2.robots2-safe.scores
+share/gnome/games/gnobots2.robots2-super-safe.scores
+share/gnome/games/gnobots2.robots2.scores
+share/gnome/games/gnobots2.robots2_easy-safe.scores
+share/gnome/games/gnobots2.robots2_easy-super-safe.scores
+share/gnome/games/gnobots2.robots2_easy.scores
+share/gnome/games/gnobots2.robots_with_safe_teleport-safe.scores
+share/gnome/games/gnobots2.robots_with_safe_teleport-super-safe.scores
+share/gnome/games/gnobots2.robots_with_safe_teleport.scores
 share/gnome/games/gnome-stones.scores
 share/gnome/games/gnometris.scores
-share/gnome/games/gnomine.Biiiig.scores
 share/gnome/games/gnomine.Custom.scores
+share/gnome/games/gnomine.Large.scores
 share/gnome/games/gnomine.Medium.scores
-share/gnome/games/gnomine.Tiny.scores
+share/gnome/games/gnomine.Small.scores
 share/gnome/games/gnotravex.2x2.scores
 share/gnome/games/gnotravex.3x3.scores
 share/gnome/games/gnotravex.4x4.scores
@@ -126,6 +148,37 @@ share/gnome/gnect/safari_45x45.gnect
 share/gnome/gnect/square_40x40.gnect
 share/gnome/gnect/square_50x50.gnect
 share/gnome/gnect/white_ob.cn4
+share/gnome/gnibbles/level001.gnl
+share/gnome/gnibbles/level002.gnl
+share/gnome/gnibbles/level003.gnl
+share/gnome/gnibbles/level004.gnl
+share/gnome/gnibbles/level005.gnl
+share/gnome/gnibbles/level006.gnl
+share/gnome/gnibbles/level007.gnl
+share/gnome/gnibbles/level008.gnl
+share/gnome/gnibbles/level009.gnl
+share/gnome/gnibbles/level010.gnl
+share/gnome/gnibbles/level011.gnl
+share/gnome/gnibbles/level012.gnl
+share/gnome/gnibbles/level013.gnl
+share/gnome/gnibbles/level014.gnl
+share/gnome/gnibbles/level015.gnl
+share/gnome/gnibbles/level016.gnl
+share/gnome/gnibbles/level017.gnl
+share/gnome/gnibbles/level018.gnl
+share/gnome/gnibbles/level019.gnl
+share/gnome/gnibbles/level020.gnl
+share/gnome/gnibbles/level021.gnl
+share/gnome/gnibbles/level022.gnl
+share/gnome/gnibbles/level023.gnl
+share/gnome/gnibbles/level024.gnl
+share/gnome/gnibbles/level025.gnl
+share/gnome/gnibbles/level026.gnl
+share/gnome/gnobots2/classic_robots.cfg
+share/gnome/gnobots2/nightmare.cfg
+share/gnome/gnobots2/robots2.cfg
+share/gnome/gnobots2/robots2_easy.cfg
+share/gnome/gnobots2/robots_with_safe_teleport.cfg
 share/gnome/gnome-stones/atari.caves
 share/gnome/gnome-stones/default.caves
 share/gnome/gnome-stones/gnome-stonesrc
@@ -223,6 +276,22 @@ share/gnome/help/gnect/C/figures/mainwindow.png
 share/gnome/help/gnect/C/figures/tileset.png
 share/gnome/help/gnect/C/gnect.xml
 share/gnome/help/gnect/C/legal.xml
+share/gnome/help/gnibbles/C/figures/game.png
+share/gnome/help/gnibbles/C/figures/graphics.png
+share/gnome/help/gnibbles/C/figures/intro.png
+share/gnome/help/gnibbles/C/figures/playing.png
+share/gnome/help/gnibbles/C/figures/worm_op.png
+share/gnome/help/gnibbles/C/gnibbles.xml
+share/gnome/help/gnibbles/C/legal.xml
+share/gnome/help/gnobots2/C/figures/gnobots2-main.png
+share/gnome/help/gnobots2/C/gnobots2.xml
+share/gnome/help/gnobots2/C/legal.xml
+share/gnome/help/gnobots2/da/index.html
+share/gnome/help/gnobots2/da/topic.dat
+share/gnome/help/gnobots2/es/index.html
+share/gnome/help/gnobots2/es/topic.dat
+share/gnome/help/gnobots2/it/index.html
+share/gnome/help/gnobots2/it/topic.dat
 share/gnome/help/gnome-stones/C/figures/main-game.png
 share/gnome/help/gnome-stones/C/figures/main-start.png
 share/gnome/help/gnome-stones/C/figures/preferences-joystick.png
@@ -291,6 +360,10 @@ share/gnome/omf/gnome-games/glines-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/glines-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnect-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnect-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-games/gnibbles-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnibbles-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-games/gnobots2-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnobots2-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnome-stones-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnome-stones-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnomine-C.omf
@@ -370,11 +443,33 @@ share/gnome/pixmaps/gnect/tileset_50x50_classic.png
 share/gnome/pixmaps/gnect/tileset_50x50_clean.png
 share/gnome/pixmaps/gnect/tileset_50x50_glassy.png
 share/gnome/pixmaps/gnect/tileset_50x50_square.png
+share/gnome/pixmaps/gnibbles/gnibbles-logo.png
+share/gnome/pixmaps/gnibbles/gnibbles.png
+share/gnome/pixmaps/gnobots2/aieee.png
+share/gnome/pixmaps/gnobots2/cows.png
+share/gnome/pixmaps/gnobots2/eggs.png
+share/gnome/pixmaps/gnobots2/gnomes.png
+share/gnome/pixmaps/gnobots2/mice.png
+share/gnome/pixmaps/gnobots2/robots.png
+share/gnome/pixmaps/gnobots2/splat.png
+share/gnome/pixmaps/gnobots2/windows.png
+share/gnome/pixmaps/gnobots2/yahoo.png
 share/gnome/pixmaps/gnome-aisleriot.png
+share/gnome/pixmaps/gnome-cardgame.png
+share/gnome/pixmaps/gnome-die1.png
+share/gnome/pixmaps/gnome-die2.png
+share/gnome/pixmaps/gnome-die3.png
+share/gnome/pixmaps/gnome-die4.png
+share/gnome/pixmaps/gnome-die5.png
+share/gnome/pixmaps/gnome-die6.png
+share/gnome/pixmaps/gnome-gnobots2.png
+share/gnome/pixmaps/gnome-gnomine.png
 share/gnome/pixmaps/gnome-gnotravex.png
+share/gnome/pixmaps/gnome-gsame.png
 share/gnome/pixmaps/gnome-gtali.png
 share/gnome/pixmaps/gnome-gtetris.png
 share/gnome/pixmaps/gnome-mahjongg.png
+share/gnome/pixmaps/gnome-nibbles.png
 share/gnome/pixmaps/gnome-stones-file.png
 share/gnome/pixmaps/gnome-stones.png
 share/gnome/pixmaps/gnome-stones/amoeba.png
@@ -519,6 +614,21 @@ share/gnome/sol-games/yukon.scm
 share/gnome/sol-games/zebra.scm
 share/gnome/sounds/gataxx/flip-piece.wav
 share/gnome/sounds/gataxx/gameover.wav
+share/gnome/sounds/gnibbles/appear.wav
+share/gnome/sounds/gnibbles/bonus.wav
+share/gnome/sounds/gnibbles/crash.wav
+share/gnome/sounds/gnibbles/gobble.wav
+share/gnome/sounds/gnibbles/laughter.wav
+share/gnome/sounds/gnibbles/life.wav
+share/gnome/sounds/gnibbles/pop.wav
+share/gnome/sounds/gnibbles/reverse.wav
+share/gnome/sounds/gnibbles/teleport.wav
+share/gnome/sounds/gnobots2/bad.wav
+share/gnome/sounds/gnobots2/die.wav
+share/gnome/sounds/gnobots2/splat.wav
+share/gnome/sounds/gnobots2/teleport.wav
+share/gnome/sounds/gnobots2/victory.wav
+share/gnome/sounds/gnobots2/yahoo.wav
 share/gnome/sounds/gnome-stones/born.wav
 share/gnome/sounds/gnome-stones/boulder.wav
 share/gnome/sounds/gnome-stones/dig.wav
@@ -568,6 +678,8 @@ share/locale/ro/LC_MESSAGES/gnome-games.mo
 share/locale/ru/LC_MESSAGES/gnome-games.mo
 share/locale/sk/LC_MESSAGES/gnome-games.mo
 share/locale/sl/LC_MESSAGES/gnome-games.mo
+share/locale/sr/LC_MESSAGES/gnome-games.mo
+share/locale/sr@Latn/LC_MESSAGES/gnome-games.mo
 share/locale/sv/LC_MESSAGES/gnome-games.mo
 share/locale/tr/LC_MESSAGES/gnome-games.mo
 share/locale/uk/LC_MESSAGES/gnome-games.mo
@@ -597,9 +709,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnometris
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnect
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gataxx
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/freecell/score
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/freecell/option
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/freecell
 @dirrm etc/gconf/gconf.xml.defaults/apps/same-gnome
 @dirrm etc/gconf/gconf.xml.defaults/apps/mahjongg
 @dirrm etc/gconf/gconf.xml.defaults/apps/iagno
@@ -609,13 +718,13 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnometris/options
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnometris
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnect
-@dirrm etc/gconf/gconf.xml.defaults/apps/freecell/score
-@dirrm etc/gconf/gconf.xml.defaults/apps/freecell/option
-@dirrm etc/gconf/gconf.xml.defaults/apps/freecell
+@dirrm etc/gconf/gconf.xml.defaults/apps/gataxx
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/aisleriot-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gataxx-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/glines-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnect-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnibbles-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnobots2-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnome-stones-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnomine-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnotravex-C.omf 2>/dev/null || /usr/bin/true

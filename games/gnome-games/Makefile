@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomegames2
-PORTVERSION=	2.3.1
+PORTVERSION=	2.3.2
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-games/2.3
@@ -14,7 +14,7 @@ DISTNAME=	gnome-games-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	The game applications package for the Gnome 2.0 Desktop Environment
+COMMENT=	The game applications package for the Gnome 2 Desktop Environment
 
 LIB_DEPENDS=	guile.15:${PORTSDIR}/lang/guile
 
@@ -26,7 +26,7 @@ USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeui
 USE_LIBTOOL=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
