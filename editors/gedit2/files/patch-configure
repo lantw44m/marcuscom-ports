@@ -1,6 +1,6 @@
---- configure.orig	Mon Dec  9 17:24:48 2002
-+++ configure	Tue Dec 10 22:17:37 2002
-@@ -7274,6 +7274,7 @@
+--- configure.orig	Tue Dec 17 05:27:57 2002
++++ configure	Sun Dec 22 17:31:25 2002
+@@ -7270,6 +7270,7 @@
  
  # This can be used to rebuild libtool when needed
  LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
@@ -8,10 +8,18 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-@@ -10761,10 +10762,10 @@
+@@ -10758,17 +10759,17 @@
+ if test "x${prefix}" = "xNONE"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+-#define PIXMAPS_DIR "${ac_default_prefix}/${DATADIRNAME}/${PACKAGE}/pixmaps"
++
+ _ACEOF
+ 
    pixmapsdir="${ac_default_prefix}/${DATADIRNAME}/${PACKAGE}/pixmaps"
  else
-   cat >>confdefs.h <<_ACEOF
+ 
+ cat >>confdefs.h <<_ACEOF
 -#define PIXMAPS_DIR "${prefix}/${DATADIRNAME}/${PACKAGE}/pixmaps"
 +#define PIXMAPS_DIR "${datadir}/pixmaps"
  _ACEOF

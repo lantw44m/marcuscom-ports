@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gedit2
-PORTVERSION=	2.1.4
+PORTVERSION=	2.1.5
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.1
@@ -38,5 +38,7 @@ MAN1=	gedit.1
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
+		${WRKSRC}/po/Makefile.in.in
 
 .include <bsd.port.mk>
