@@ -7,12 +7,13 @@
 
 PORTNAME=	abiword
 PORTVERSION=	2.1.3
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.abisource.com/downloads/Version-${PORTVERSION}/lf/
 MASTER_SITE_SUBDIR=	abiword
-DIST_SUBDIR=	AbiWord
 PKGNAMESUFFIX=	-plugins
+DIST_SUBDIR=	AbiWord
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Multi-plugins for AbiWord
@@ -32,7 +33,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 CONFIGURE_ARGS=	--disable-all
 MAKEFILE=	GNUmakefile
 
-
 WRKSRC=		${WRKDIR}/abiword-${PORTVERSION}/abiword-plugins
 MD5_FILE=	${.CURDIR}/../AbiWord2/distinfo
 
@@ -41,13 +41,13 @@ PLIST_SUB+=	"ABIVERSION=${ABIVERSION}"
 
 # NOTE: Please, keep those knobs in the ABC's order.
 
-# Not yet, need to port Aiksaurus: http://aiksaurus.sourceforge.net
-#.if defined(WITH_AIKSAURUS) || defined(PACKAGE_BUILDING)
-#CONFIGURE_ARGS+=	--enable-aiksaurus
-#PLIST_SUB+=		AIKSAURUS:=""
-#.else
-#PLIST_SUB+=		AIKSAURUS:="@comment "
-#.endif
+.if defined(WITH_AIKSAURUS) || defined(PACKAGE_BUILDING)
+LIB_DEPENDS+=		AiksaurusGTK-1.2.0:${PORTSDIR}/textproc/aiksaurus-gtk
+CONFIGURE_ARGS+=	--enable-aiksaurus
+PLIST_SUB+=		AIKSAURUS:=""
+.else
+PLIST_SUB+=		AIKSAURUS:="@comment "
+.endif
 
 .if defined(WITH_APPLIX) || defined(PACKAGE_BUILDING)
 CONFIGURE_ARGS+=	--enable-applix
@@ -122,7 +122,7 @@ PLIST_SUB+=		GDICT:="@comment "
 .endif
 
 .if defined(WITH_GIMP) # Doesn't work, can't load plugin.
-#RUN_DEPENDS+=		
+#RUN_DEPENDS+=
 CONFIGURE_ARGS+=	--enable-abigimp
 PLIST_SUB+=		GIMP:=""
 .else
@@ -309,9 +309,9 @@ PLIST_SUB+=		SVG:="@comment "
 pre-everything::
 	@${ECHO_MSG} "You may specify the following on the command line:"
 	@${ECHO_MSG} ""
-#.if !defined(WITH_AIKSAURUS)
-#	@${ECHO_MSG} "WITH_AIKSAURUS=yes	English language thesaurus."
-#.endif
+.if !defined(WITH_AIKSAURUS)
+	@${ECHO_MSG} "WITH_AIKSAURUS=yes	English language thesaurus."
+.endif
 .if !defined(WITH_APPLIX)
 	@${ECHO_MSG} "WITH_APPLIX=yes		Import/Export Applix Word files."
 .endif
