@@ -22,6 +22,7 @@ include/pygtk-2.0/pygtk/pygtk.h
 %%PYTHON_SITELIBDIR%%/pygtk.py
 %%PYTHON_SITELIBDIR%%/pygtk.pyc
 %%PYTHON_SITELIBDIR%%/pygtk.pyo
+libdata/pkgconfig/pygobject-2.0.pc
 libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/doc/py-gtk/MAPPING
 %%PORTDOCS%%share/doc/py-gtk/THREADS
@@ -161,6 +162,9 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/pygtk/2.0/codegen/override.py
 %%PORTDOCS%%share/pygtk/2.0/codegen/override.pyc
 %%PORTDOCS%%share/pygtk/2.0/codegen/override.pyo
+%%PORTDOCS%%share/pygtk/2.0/codegen/reversewrapper.py
+%%PORTDOCS%%share/pygtk/2.0/codegen/reversewrapper.pyc
+%%PORTDOCS%%share/pygtk/2.0/codegen/reversewrapper.pyo
 %%PORTDOCS%%share/pygtk/2.0/codegen/scmexpr.py
 %%PORTDOCS%%share/pygtk/2.0/codegen/scmexpr.pyc
 %%PORTDOCS%%share/pygtk/2.0/codegen/scmexpr.pyo
