@@ -1,0 +1,17 @@
+bin/gnome-remote-shell
+bin/gnome-backup
+bin/gnome-remote-desktop
+bin/gnome-netinfo
+share/gnome/applications/gnome-network-utilities.desktop
+share/gnome/applications/gnome-backup.desktop
+share/gnome/applications/gnome-remote-desktop.desktop
+share/gnome/applications/gnome-netinfo.desktop
+share/gnome/gnome-backup/glade/gnome-backup.glade
+share/gnome/gnome-remote-desktop/glade/gnome-remote-desktop.glade
+share/gnome/gnome-network/dialogs/gnome-netinfo.glade
+@dirrm share/gnome/gnome-network/dialogs
+@dirrm share/gnome/gnome-network
+@dirrm share/gnome/gnome-remote-desktop/glade
+@dirrm share/gnome/gnome-remote-desktop
+@dirrm share/gnome/gnome-backup/glade
+@dirrm share/gnome/gnome-backup
