@@ -60,12 +60,16 @@ _USE_GSTREAMER_ALL=	a52dec aalib artsd audiofile cdparanoia dirac \
 			smoothwave sndfile speex theora ogg pango swfdec \
 			vorbis xine xvid
 
-# yes will depend on gstreamer-plugins
-OTHER_GSTREAMER_PLUGINS+=	yes
+# other plugins
+OTHER_GSTREAMER_PLUGINS+=	core yes
 _USE_GSTREAMER_ALL+=	${OTHER_GSTREAMER_PLUGINS}
 
+core_DEPENDS=	multimedia/gstreamer-plugins-core
+core_PLIST=	.gstreamer-plugins-core
+core_GST_EXT=	.keep
+
 yes_DEPENDS=	multimedia/gstreamer-plugins
-yes_PLIST=	ac3parse
+yes_PLIST=	libgstac3parse
 
 # Audio Plugins Section
 a52dec_DEPENDS=	audio/gstreamer-plugins-a52dec
@@ -193,13 +197,14 @@ Gstreamer_Post_Include=	bsd.gstreamer.mk
 # defined ext_PLIST="" for each port that uses auto plist
 .for ext in ${USE_GSTREAMER}
 ${ext}_PLIST?=
+${ext}_GST_EXT?=	.so
 .endfor
 
 .for ext in ${USE_GSTREAMER}
 . if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS})
 .  if ${${ext}_PLIST} != ""
-BUILD_DEPENDS+=	${_GST_LIB_BASE}/libgst${${ext}_PLIST}.so:${PORTSDIR}/${${ext}_DEPENDS}
-RUN_DEPENDS+=	${_GST_LIB_BASE}/libgst${${ext}_PLIST}.so:${PORTSDIR}/${${ext}_DEPENDS}
+BUILD_DEPENDS+=	${_GST_LIB_BASE}/${${ext}_PLIST}${${ext}_GST_EXT}:${PORTSDIR}/${${ext}_DEPENDS}
+RUN_DEPENDS+=	${_GST_LIB_BASE}/${${ext}_PLIST}${${ext}_GST_EXT}:${PORTSDIR}/${${ext}_DEPENDS}
 .  else
 BUILD_DEPENDS+= ${_GST_LIB_BASE}/libgst${ext}.so:${PORTSDIR}/${${ext}_DEPENDS}
 RUN_DEPENDS+=   ${_GST_LIB_BASE}/libgst${ext}.so:${PORTSDIR}/${${ext}_DEPENDS}
