@@ -1,5 +1,5 @@
---- src/fr-command-tar.c.orig	Mon May 19 14:15:50 2003
-+++ src/fr-command-tar.c	Tue May 20 20:43:39 2003
+--- src/fr-command-tar.c.orig	Mon Feb 16 10:53:20 2004
++++ src/fr-command-tar.c	Wed Feb 18 17:30:26 2004
 @@ -83,6 +83,11 @@
  	return mktime (&tm);
  }
@@ -50,3 +50,39 @@
  	fields = g_strsplit (name_field, " -> ", 2);
  
  	if (fields[1] == NULL) {
+@@ -176,7 +196,7 @@
+ 				      process_line,
+ 				      comm);
+ 
+-	fr_process_begin_command (comm->process, "gtar");
++	fr_process_begin_command (comm->process, "tar");
+ 	fr_process_add_arg (comm->process, "--force-local");
+ 	fr_process_add_arg (comm->process, "-tvf");
+ 	fr_process_add_arg (comm->process, comm->e_filename);
+@@ -234,7 +254,7 @@
+ 				      process_line__add,
+ 				      comm);
+ 
+-	fr_process_begin_command (comm->process, "gtar");
++	fr_process_begin_command (comm->process, "tar");
+ 	fr_process_add_arg (comm->process, "--force-local");
+ 	fr_process_add_arg (comm->process, "-v");
+ 
+@@ -285,7 +305,7 @@
+ 				      process_line__delete,
+ 				      comm);
+ 
+-	fr_process_begin_command (comm->process, "gtar");
++	fr_process_begin_command (comm->process, "tar");
+ 	fr_process_set_begin_func (comm->process, begin_func__delete, comm);
+ 	fr_process_add_arg (comm->process, "--force-local");
+ 	fr_process_add_arg (comm->process, "-v");
+@@ -322,7 +342,7 @@
+ 				      process_line__extract,
+ 				      comm);
+ 
+-	fr_process_begin_command (comm->process, "gtar");
++	fr_process_begin_command (comm->process, "tar");
+ 	fr_process_add_arg (comm->process, "--force-local");
+ 	fr_process_add_arg (comm->process, "-v");
+ 	fr_process_add_arg (comm->process, "-xf");
