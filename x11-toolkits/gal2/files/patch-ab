@@ -1,11 +1,11 @@
---- Makefile.in.orig	Sat Mar  6 00:40:30 2004
-+++ Makefile.in	Sat Mar  6 00:40:40 2004
-@@ -136,7 +136,7 @@
- 
- DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc
- 
+--- Makefile.in.orig	Fri Jun  4 17:24:13 2004
++++ Makefile.in	Fri Jun  4 17:25:02 2004
+@@ -145,7 +145,7 @@
+ am__quote = @am__quote@
+ gnomelocaledir = @gnomelocaledir@
+ install_sh = @install_sh@
 -SUBDIRS = po gal tests docs art
 +SUBDIRS = po gal docs art
  
- pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfigdir = $(prefix)/libdata/pkgconfig
  pkgconfig_DATA = gal-2.2.pc
