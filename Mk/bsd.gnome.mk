@@ -24,7 +24,7 @@ Gnome_Include_MAINTAINER=	gnome@FreeBSD.org
 # As a result proper LIB_DEPENDS/RUN_DEPENDS will be added and CONFIGURE_ENV
 # and MAKE_ENV defined.
 
-_USE_GNOME_ALL=	gnomehack gnomeprefix gnomehier gnomeaudio esound libghttp \
+_USE_GNOME_ALL=	gnomehack lthack gnomeprefix gnomehier gnomeaudio esound libghttp \
 		glib12 gtk12 libxml gdkpixbuf imlib orbit gnomelibs \
 		gnomecanvas oaf gnomemimedata gconf gnomevfs libcapplet \
 		gnomeprint bonobo libgda gnomedb libglade gal glibwww gtkhtml \
@@ -53,6 +53,8 @@ gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLA
 				's|-lpthread|${PTHREAD_LIBS}|g ; \
 				 s|DATADIRNAME=lib|DATADIRNAME=share|g'
 
+lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" | ${XARGS} ${REINPLACE_CMD} -e \
+				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
 
 gnomehier_RUN_DEPENDS=	${X11BASE}/share/gnome/.keep_me:${PORTSDIR}/misc/gnomehier
 gnomehier_DETECT=	${X11BASE}/share/gnome/.keep_me
@@ -537,7 +539,7 @@ CONFIGURE_TARGET=	${${component}_CONFIGURE_TARGET}
 .    endif
 
 .    if defined(${component}_PRE_PATCH)
-GNOME_PRE_PATCH+=	${${component}_PRE_PATCH}
+GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 .    endif
 
 .  endif
@@ -548,7 +550,7 @@ GNOME_PRE_PATCH+=	${${component}_PRE_PATCH}
 USE_REINPLACE=	yes
 
 pre-patch:
-	@${GNOME_PRE_PATCH}
+	@${GNOME_PRE_PATCH:C/^;//1}
 .endif
 
 .if defined(WANT_GNOME)
