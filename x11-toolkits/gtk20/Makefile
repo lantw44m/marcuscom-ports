@@ -2,11 +2,11 @@
 # Date Created:			28 Sep 1997
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
-# $FreeBSD: ports/x11-toolkits/gtk20/Makefile,v 1.131 2004/08/04 18:31:49 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.5.5
+PORTVERSION=	2.5.6
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.5,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.5/ \
