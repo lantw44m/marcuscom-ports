@@ -1,3 +1,3 @@
-lib/libgtkjava2.3.so.2.3.1
-lib/libgtkjava2.5.so
-share/java/classes/gtk2.3-2.3.1.jar
+lib/libgtkjava%%GTK_API_VERSION%%.so.%%PORTVERSION%%
+lib/libgtkjava%%GTK_API_VERSION%%.so
+share/java/classes/gtk%%GTK_API_VERSION%%-%%PORTVERSION%%.jar

@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	libgtk-java
-PORTVERSION=	2.3.1
-PORTREVISION=	1
+PORTVERSION=	2.3.2
 CATEGORIES=	x11-toolkits java
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -26,7 +25,8 @@ CONFIGURE_ARGS=	--without-gcj-compile \
 		--with-java-prefix=${JAVA_HOME}
 
 GTK_API_VERSION=	2.3
-API_VERSION=		2.5
+PLIST_SUB=		GTK_API_VERSION=${GTK_API_VERSION} \
+			PORTVERSION=${PORTVERSION}
 
 PKGMESSAGE=		${WRKDIR}/pkg-message
 
@@ -34,7 +34,7 @@ do-install:
 	${MKDIR} ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/gtk/lib/libgtkjava${GTK_API_VERSION}.so.${PORTVERSION} \
 		${PREFIX}/lib
-	${LN} -s ${PREFIX}/lib/libgtkjava${GTK_API_VERSION}.so.${PORTVERSION} ${PREFIX}/lib/libgtkjava${API_VERSION}.so
+	${LN} -sf ${PREFIX}/lib/libgtkjava${GTK_API_VERSION}.so.${PORTVERSION} ${PREFIX}/lib/libgtkjava${GTK_API_VERSION}.so
 	${MKDIR} ${JAVAJARDIR}
 	${INSTALL_DATA} ${WRKSRC}/gtk/lib/gtk${GTK_API_VERSION}-${PORTVERSION}.jar \
 		${JAVAJARDIR}
@@ -42,8 +42,7 @@ do-install:
 post-install:
 	@${SED} -e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|g ; \
 		s|%%PREFIX%%|${PREFIX}|g ; \
-		s|%%GTK_API_VERSION%%|${GTK_API_VERSION}|g ; \
-		s|%%PORTVERSION%%|${API_VERSION}|g' \
+		s|%%GTK_API_VERSION%%|${GTK_API_VERSION}|g' \
 		 < ${PKGDIR}/pkg-message > ${PKGMESSAGE}
 	@${CAT} ${PKGMESSAGE}
 
