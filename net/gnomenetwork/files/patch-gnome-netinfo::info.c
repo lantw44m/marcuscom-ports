@@ -1,5 +1,5 @@
 --- gnome-netinfo/info.c.orig	Mon Nov 24 18:29:43 2003
-+++ gnome-netinfo/info.c	Sat Dec  6 23:37:03 2003
++++ gnome-netinfo/info.c	Wed Dec 17 22:27:46 2003
 @@ -27,6 +27,7 @@
  #endif
  
@@ -8,15 +8,6 @@
  #include <sys/socket.h>	/* basic socket definitions */
  #include <arpa/inet.h>	/* inet(3) functions */
  #include <sys/un.h>	/* for Unix domain sockets */
-@@ -164,7 +165,7 @@
- 	gint flags;
- 	mii_data_result data;
- 		
--	sockfd = socket (AF_INET, SOCK_DGRAM, 0);
-+	sockfd = socket (AF_INET, SOCK_STREAM, 0);
- 
- 	ifc.ifc_len = sizeof (buf);
- 	ifc.ifc_req = (struct ifreq *) buf;
 @@ -173,7 +174,7 @@
  	for (ptr = buf; ptr < buf + ifc.ifc_len;) {
  		ifr = (struct ifreq *) ptr;
@@ -31,7 +22,7 @@
  			continue;
  		}
 +
-+		bzero (&data, sizeof(data));
++		memset (&data, 0, sizeof(data));
  		
 +#ifdef __linux__
  		data = mii_get_basic (nic);
@@ -47,15 +38,12 @@
  }
  
  static GList *
-@@ -319,8 +323,10 @@
- 	struct ifreq *ifr;
- 	int sockfd, len;
+@@ -321,6 +325,8 @@
  
--	sockfd = socket (AF_INET, SOCK_DGRAM, 0);
-+	sockfd = socket (AF_INET, SOCK_STREAM, 0);
+ 	sockfd = socket (AF_INET, SOCK_DGRAM, 0);
  
-+	bzero (&ifc, sizeof (struct ifconf));
-+	bzero (&buf, sizeof (buf));
++	memset (&ifc, 0, sizeof (struct ifconf));
++	memset (&buf, 0, sizeof (buf));
  	ifc.ifc_len = sizeof (buf);
  	ifc.ifc_req = (struct ifreq *) buf;
  

@@ -112,7 +112,7 @@
  	column =
  	    gtk_tree_view_column_new_with_attributes
 +#ifdef __FreeBSD__
-+	    ("Destination/Prefix", renderer, "text", 0, NULL);
++	    (_("Destination/Prefix"), renderer, "text", 0, NULL);
 +#else
  	    (_("Destination"), renderer, "text", 0, NULL);
 +#endif
