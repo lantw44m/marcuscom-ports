@@ -141,8 +141,10 @@ share/locale/ar/LC_MESSAGES/yelp.mo
 share/locale/az/LC_MESSAGES/yelp.mo
 share/locale/be/LC_MESSAGES/yelp.mo
 share/locale/bg/LC_MESSAGES/yelp.mo
+share/locale/bn/LC_MESSAGES/yelp.mo
 share/locale/ca/LC_MESSAGES/yelp.mo
 share/locale/cs/LC_MESSAGES/yelp.mo
+share/locale/cy/LC_MESSAGES/yelp.mo
 share/locale/da/LC_MESSAGES/yelp.mo
 share/locale/de/LC_MESSAGES/yelp.mo
 share/locale/el/LC_MESSAGES/yelp.mo
@@ -152,6 +154,7 @@ share/locale/et/LC_MESSAGES/yelp.mo
 share/locale/fa/LC_MESSAGES/yelp.mo
 share/locale/fi/LC_MESSAGES/yelp.mo
 share/locale/fr/LC_MESSAGES/yelp.mo
+share/locale/ga/LC_MESSAGES/yelp.mo
 share/locale/gl/LC_MESSAGES/yelp.mo
 share/locale/he/LC_MESSAGES/yelp.mo
 share/locale/hi/LC_MESSAGES/yelp.mo
@@ -162,6 +165,7 @@ share/locale/it/LC_MESSAGES/yelp.mo
 share/locale/ja/LC_MESSAGES/yelp.mo
 share/locale/kn/LC_MESSAGES/yelp.mo
 share/locale/ko/LC_MESSAGES/yelp.mo
+share/locale/li/LC_MESSAGES/yelp.mo
 share/locale/lv/LC_MESSAGES/yelp.mo
 share/locale/mk/LC_MESSAGES/yelp.mo
 share/locale/ml/LC_MESSAGES/yelp.mo
@@ -178,6 +182,8 @@ share/locale/ru/LC_MESSAGES/yelp.mo
 share/locale/sk/LC_MESSAGES/yelp.mo
 share/locale/sl/LC_MESSAGES/yelp.mo
 share/locale/sq/LC_MESSAGES/yelp.mo
+share/locale/sr/LC_MESSAGES/yelp.mo
+share/locale/sr@Latn/LC_MESSAGES/yelp.mo
 share/locale/sv/LC_MESSAGES/yelp.mo
 share/locale/ta/LC_MESSAGES/yelp.mo
 share/locale/th/LC_MESSAGES/yelp.mo
