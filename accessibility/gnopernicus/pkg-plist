@@ -1,6 +1,5 @@
 bin/brlmonitor
 bin/gnopernicus
-bin/gnopernicus.bin
 bin/srcore
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnopernicus/braille/%gconf.xml
@@ -224,25 +223,25 @@ include/gnopernicus-1.0/libsrutil/srintl.h
 include/gnopernicus-1.0/libsrutil/util.h
 lib/gnopernicus-1.0/libbrl.a
 lib/gnopernicus-1.0/libbrl.so
-lib/gnopernicus-1.0/libbrl.so.6
+lib/gnopernicus-1.0/libbrl.so.0
 lib/gnopernicus-1.0/libke.a
 lib/gnopernicus-1.0/libke.so
-lib/gnopernicus-1.0/libke.so.6
+lib/gnopernicus-1.0/libke.so.0
 lib/gnopernicus-1.0/libmag.a
 lib/gnopernicus-1.0/libmag.so
-lib/gnopernicus-1.0/libmag.so.6
+lib/gnopernicus-1.0/libmag.so.0
 lib/gnopernicus-1.0/libsrconf.a
 lib/gnopernicus-1.0/libsrconf.so
-lib/gnopernicus-1.0/libsrconf.so.6
+lib/gnopernicus-1.0/libsrconf.so.0
 lib/gnopernicus-1.0/libsrlow.a
 lib/gnopernicus-1.0/libsrlow.so
-lib/gnopernicus-1.0/libsrlow.so.6
+lib/gnopernicus-1.0/libsrlow.so.0
 lib/gnopernicus-1.0/libsrs.a
 lib/gnopernicus-1.0/libsrs.so
-lib/gnopernicus-1.0/libsrs.so.6
+lib/gnopernicus-1.0/libsrs.so.0
 lib/gnopernicus-1.0/libsrutil.a
 lib/gnopernicus-1.0/libsrutil.so
-lib/gnopernicus-1.0/libsrutil.so.6
+lib/gnopernicus-1.0/libsrutil.so.0
 libdata/pkgconfig/gnopernicus-1.0.pc
 share/gnome/applications/gnopernicus.desktop
 share/gnome/gnopernicus/fonts/braillehc.afm
@@ -280,26 +279,33 @@ share/gnome/help/brlmonitor/C/legal.xml
 share/gnome/help/gnopernicus/C/gnopernicus.xml
 share/gnome/help/gnopernicus/C/legal.xml
 share/gnome/omf/gnopernicus/brlmonitor-C.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/gnopernicus/brlmonitor-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnopernicus/gnopernicus-C.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/gnopernicus/gnopernicus-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gnopernicus.png
 share/locale/az/LC_MESSAGES/gnopernicus.mo
 share/locale/be/LC_MESSAGES/gnopernicus.mo
 share/locale/cs/LC_MESSAGES/gnopernicus.mo
+share/locale/cy/LC_MESSAGES/gnopernicus.mo
+share/locale/da/LC_MESSAGES/gnopernicus.mo
 share/locale/de/LC_MESSAGES/gnopernicus.mo
+share/locale/el/LC_MESSAGES/gnopernicus.mo
+share/locale/es/LC_MESSAGES/gnopernicus.mo
+share/locale/fr/LC_MESSAGES/gnopernicus.mo
 share/locale/ga/LC_MESSAGES/gnopernicus.mo
 share/locale/hi/LC_MESSAGES/gnopernicus.mo
+share/locale/it/LC_MESSAGES/gnopernicus.mo
 share/locale/ko/LC_MESSAGES/gnopernicus.mo
 share/locale/ms/LC_MESSAGES/gnopernicus.mo
 share/locale/nl/LC_MESSAGES/gnopernicus.mo
+share/locale/no/LC_MESSAGES/gnopernicus.mo
 share/locale/pl/LC_MESSAGES/gnopernicus.mo
 share/locale/pt/LC_MESSAGES/gnopernicus.mo
 share/locale/pt_BR/LC_MESSAGES/gnopernicus.mo
 share/locale/ro/LC_MESSAGES/gnopernicus.mo
+share/locale/sq/LC_MESSAGES/gnopernicus.mo
 share/locale/sr/LC_MESSAGES/gnopernicus.mo
 share/locale/sr@Latn/LC_MESSAGES/gnopernicus.mo
 share/locale/sv/LC_MESSAGES/gnopernicus.mo
+share/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
 @dirrm share/gnome/omf/gnopernicus
 @dirrm share/gnome/help/gnopernicus/C
 @dirrm share/gnome/help/gnopernicus
@@ -332,6 +338,7 @@ share/locale/sv/LC_MESSAGES/gnopernicus.mo
 @dirrm include/gnopernicus-1.0
 @dirrm etc/gnopernicus-1.0/translation_tables
 @dirrm etc/gnopernicus-1.0
+@dirrm etc/gconf/schemas
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/srcore
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/voices_parameters
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnopernicus/speech/settings
@@ -533,5 +540,3 @@ share/locale/sv/LC_MESSAGES/gnopernicus.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/brlmon
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus/braille
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnopernicus
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnopernicus/brlmonitor-C.omf 2>/dev/null || /usr/bin/true
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnopernicus/gnopernicus-C.omf 2>/dev/null || /usr/bin/true
