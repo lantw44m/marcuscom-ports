@@ -4,6 +4,7 @@ bin/gst-complete-%%VERSION%%
 bin/gst-compprep
 bin/gst-compprep-%%VERSION%%
 bin/gst-feedback
+bin/gst-feedback-%%VERSION%%
 bin/gst-inspect
 bin/gst-inspect-%%VERSION%%
 bin/gst-launch

@@ -1,6 +1,6 @@
---- configure.orig	Fri Feb  6 13:01:39 2004
-+++ configure	Fri Feb  6 13:03:19 2004
-@@ -20288,7 +20288,7 @@
+--- configure.orig	Thu Feb 26 14:03:31 2004
++++ configure	Thu Feb 26 14:03:31 2004
+@@ -21858,7 +21858,7 @@
  
  
    EXP_VAR=LOCALEDIR
@@ -8,8 +8,8 @@
 +  FROM_VAR=$prefix/share/locale
  
      prefix_save=$prefix
-   if test "x$prefix" = "xNONE"; then
-@@ -20380,7 +20380,7 @@
+   exec_prefix_save=$exec_prefix
+@@ -21961,7 +21961,7 @@
  echo $ECHO_N "checking to see if compiler understands -Werror... $ECHO_C" >&6
  
    save_CFLAGS="$CFLAGS"
@@ -17,8 +17,8 @@
 +  CFLAGS="$CFLAGS"
  
    cat >conftest.$ac_ext <<_ACEOF
- #line $LINENO "configure"
-@@ -20421,7 +20421,7 @@
+ /* confdefs.h.  */
+@@ -22011,7 +22011,7 @@
    CFLAGS="$save_CFLAGS"
  
    if test "X$flag_ok" = Xyes ; then
@@ -27,12 +27,3 @@
      true
    else
      GST_ERROR="$GST_ERROR"
-@@ -21031,7 +21031,7 @@
- echo "${ECHO_T}$XSLTPROC_WORKS" >&6
-   fi
- 
--  if test "x$XSLTPROC_WORKS" == "xyes"; then
-+  if test "x$XSLTPROC_WORKS" = "xyes"; then
-         HAVE_DOCBOOK=true
-   else
-         HAVE_DOCBOOK=false

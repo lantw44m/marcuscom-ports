@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.7.4
-PORTREVISION=	2
+PORTVERSION=	0.7.5
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.7
@@ -41,14 +40,17 @@ PLIST_SUB=	\
 		SHLIB_VERSION="${SHLIB_VERSION}"
 INSTALLS_SHLIB=	yes
 
-MAN1=	gst-inspect-${GST_VERSION}.1 gst-launch-${GST_VERSION}.1 \
-	gst-md5sum-${GST_VERSION}.1 gst-typefind-${GST_VERSION}.1
+MAN1=	gst-complete-${GST_VERSION}.1 gst-compprep-${GST_VERSION}.1 \
+	gst-feedback-${GST_VERSION}.1 gst-inspect-${GST_VERSION}.1 \
+	gst-launch-${GST_VERSION}.1 gst-md5sum-${GST_VERSION}.1 \
+	gst-register-${GST_VERSION}.1 gst-typefind-${GST_VERSION}.1 \
+	gst-xmllaunch-${GST_VERSION}.1
 
 PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 GST_VERSION=${PORTVERSION:C/..$//}
 
 # library minor number
-SHLIB_VERSION=	6
+SHLIB_VERSION=	7
 
 post-install:
 # register plugins
