@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	atk
-PORTVERSION=	1.7.3
+PORTVERSION=	1.8.0
 CATEGORIES=	accessibility devel
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		ftp://ftp.gtk.org/pub/gtk/v2.3/
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.7
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.8
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
