@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	fileroller
-PORTVERSION=	2.8.1
+PORTVERSION=	2.8.2
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -27,14 +27,12 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	file-roller.schemas
 
-.include <bsd.port.pre.mk>
-
-post-install:
 .if !defined(NOPORTDOCS)
+post-install:
 	${MKDIR} ${DOCSDIR}
 .for f in AUTHORS NEWS README TODO
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
