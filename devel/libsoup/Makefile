@@ -29,16 +29,16 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION="2.2"
 
-#.if !defined(WITHOUT_SSL)
-#LIB_DEPENDS+=	gnutls.7:${PORTSDIR}/security/gnutls
-#.else
+.if !defined(WITHOUT_SSL)
+LIB_DEPENDS+=	gnutls.13:${PORTSDIR}/security/gnutls
+.else
 CONFIGURE_ARGS+=--disable-ssl
-#.endif
+.endif
 
 pre-everything::
-#	@${ECHO_MSG} ""
-#	@${ECHO_MSG} "libsoup has the following configurable option(s):"
-#	@${ECHO_MSG} "	WITHOUT_SSL	Disable GnuTLS SSL support"
-#	@${ECHO_MSG} ""
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "libsoup has the following configurable option(s):"
+	@${ECHO_MSG} "	WITHOUT_SSL	Disable GnuTLS SSL support"
+	@${ECHO_MSG} ""
 
 .include <bsd.port.mk>
