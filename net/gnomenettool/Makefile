@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	gnomenettool
-PORTVERSION=	1.1.0
+PORTVERSION=	1.2.0
 PORTEPOCH=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome-nettool/1.1
+MASTER_SITE_SUBDIR=	sources/gnome-nettool/1.2
 DISTNAME=	gnome-nettool-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
