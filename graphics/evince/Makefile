@@ -18,6 +18,7 @@ USE_BZIP2=	yes
 USE_LIBTOOL_VER=15
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
+USE_GHOSTSCRIPT=yes
 USE_GNOME=	gnomehack gnomeprefix libgnomeui libgnomeprintui
 
 .include <bsd.port.mk>
