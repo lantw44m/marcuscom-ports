@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 
 LIB_DEPENDS=	gnomeprint-2-2.0:${PORTSDIR}/print/libgnomeprint \
-		gnomecanvas-2.0:${PORTSDIR}/graphics/libgnomecanvas
+		gnomecanvas-2.200:${PORTSDIR}/graphics/libgnomecanvas
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
