@@ -410,7 +410,7 @@ gtkhtml3_LIB_DEPENDS=	gtkhtml-3.1.5:${PORTSDIR}/www/gtkhtml3
 gtkhtml3_DETECT=		${X11BASE}/libdata/pkgconfig/libgtkhtml-3.1.pc
 gtkhtml3_USE_GNOME_IMPL=gal2 gail
 
-evolutiondataserver_LIB_DEPENDS=edataserver.2:${PORTSDIR}/databases/evolution-data-server
+evolutiondataserver_LIB_DEPENDS=edataserver.3:${PORTSDIR}/databases/evolution-data-server
 evolutiondataserver_DETECT=		${X11BASE}/libdata/pkgconfig/evolution-data-server-1.0.pc
 evolutiondataserver_USE_GNOME_IMPL=gtkhtml3
 
