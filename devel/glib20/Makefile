@@ -45,7 +45,7 @@ pre-everything::
 			${ECHO_CMD} "You are strongly urged to upgrade GNOME according to the steps outlined in:"; \
 			${ECHO_CMD} "	http://www.freebsd.org/gnome/develfaq.html"; \
 			${ECHO_CMD} "If you wish to to continue with this upgrade manually,"; \
-			${ECHO_CMD} "define FORCE_MANUAL_UPGRADE." \
+			${ECHO_CMD} "define FORCE_MANUAL_UPGRADE."; \
 			exit 1; fi; fi
 
 .include <bsd.port.mk>
