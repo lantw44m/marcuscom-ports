@@ -1,6 +1,6 @@
---- config/gdm.conf.in.orig	Mon Jun  9 18:29:06 2003
-+++ config/gdm.conf.in	Mon Jun 16 16:32:38 2003
-@@ -62,7 +62,7 @@
+--- config/gdm.conf.in.orig	Wed Jun 25 16:42:37 2003
++++ config/gdm.conf.in	Sat Jun 28 18:14:11 2003
+@@ -63,7 +63,7 @@
  # To try to kill all clients started at greeter time or in the Init script.
  # doesn't always work, only if those clients have a window of their own
  KillInitClients=true
@@ -9,7 +9,7 @@
  # You should probably never change this value unless you have a weird setup
  PidFile=/var/run/gdm.pid
  # Note that a post login script is run before a PreSession script.
-@@ -81,7 +81,7 @@
+@@ -82,7 +82,7 @@
  # Reboot, Halt and suspend commands, you can add different commands
  # separated by a semicolon and gdm will use the first one it can find
  RebootCommand=/sbin/shutdown -r now;/usr/sbin/shutdown -r now
@@ -18,16 +18,16 @@
  SuspendCommand=
  # Probably should not touch the below this is the standard setup
  ServAuthDir=@EXPANDED_AUTHDIR@
-@@ -109,7 +109,7 @@
+@@ -110,7 +110,7 @@
  # we force X to use specific vts.  turn VTAllocation to false if this
  # is causing problems.
  FirstVT=7
 -VTAllocation=true
 +VTAllocation=false
- 
- [security]
- # If any distributions ship with this one off, they should be shot
-@@ -184,7 +184,7 @@
+ # Should double login be treated with a warning (and possibility to change
+ # vts on linux systems for console logins)
+ DoubleLoginWarning=true
+@@ -188,7 +188,7 @@
  # The 'theme'.  By default we're using the default gtk theme
  # Of course assuming that gtk got installed in the same prefix,
  # if not change this.
@@ -36,7 +36,7 @@
  # Maximum size of an icon, larger icons are scaled down
  MaxIconWidth=128
  MaxIconHeight=128
-@@ -357,7 +357,7 @@
+@@ -361,7 +361,7 @@
  # to the command line
  [server-Chooser]
  name=Chooser server
