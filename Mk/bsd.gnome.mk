@@ -419,9 +419,9 @@ gnomespeech_LIB_DEPENDS=gnomespeech.7:${PORTSDIR}/accessibility/gnomespeech
 gnomespeech_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-speech-1.0.pc
 gnomespeech_USE_GNOME_IMPL=libbonobo
 
-evolutiondataserver_LIB_DEPENDS=edataserver.3:${PORTSDIR}/databases/evolution-data-server
+evolutiondataserver_LIB_DEPENDS=edataserver.4:${PORTSDIR}/databases/evolution-data-server
 evolutiondataserver_DETECT=		${X11BASE}/libdata/pkgconfig/evolution-data-server-1.0.pc
-evolutiondataserver_USE_GNOME_IMPL=gtkhtml3
+evolutiondataserver_USE_GNOME_IMPL=libgnome
 
 # End component definition section
 
