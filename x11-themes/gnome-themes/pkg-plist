@@ -26,7 +26,7 @@ share/icons/HighContrast/48x48/apps/gnome-grecord.png
 share/icons/HighContrast/48x48/apps/gnome-help.png
 share/icons/HighContrast/48x48/apps/gnome-home.png
 share/icons/HighContrast/48x48/apps/gnome-log.png
-share/icons/HighContrast/48x48/apps/gnome-logo-icon-transparen.png
+share/icons/HighContrast/48x48/apps/gnome-logo-icon-transparent.png
 share/icons/HighContrast/48x48/apps/gnome-mailcheck.png
 share/icons/HighContrast/48x48/apps/gnome-mini-commander.png
 share/icons/HighContrast/48x48/apps/gnome-mixer-applet.png
@@ -75,7 +75,7 @@ share/icons/HighContrastInverse/48x48/apps/gnome-grecord.png
 share/icons/HighContrastInverse/48x48/apps/gnome-help.png
 share/icons/HighContrastInverse/48x48/apps/gnome-home.png
 share/icons/HighContrastInverse/48x48/apps/gnome-log.png
-share/icons/HighContrastInverse/48x48/apps/gnome-logo-icon-transparen.png
+share/icons/HighContrastInverse/48x48/apps/gnome-logo-icon-transparent.png
 share/icons/HighContrastInverse/48x48/apps/gnome-mailcheck.png
 share/icons/HighContrastInverse/48x48/apps/gnome-mini-commander.png
 share/icons/HighContrastInverse/48x48/apps/gnome-mixer-applet.png
@@ -124,7 +124,7 @@ share/icons/HighContrastLargePrint/48x48/apps/gnome-grecord.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-help.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-home.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-log.png
-share/icons/HighContrastLargePrint/48x48/apps/gnome-logo-icon-transparen.png
+share/icons/HighContrastLargePrint/48x48/apps/gnome-logo-icon-transparent.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-mailcheck.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-mini-commander.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-mixer-applet.png
@@ -173,7 +173,7 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-grecord.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-help.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-home.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-log.png
-share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-logo-icon-transparen.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-logo-icon-transparent.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-mailcheck.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-mini-commander.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-mixer-applet.png
@@ -223,7 +223,7 @@ share/icons/LowContrast/48x48/apps/gnome-grecord.png
 share/icons/LowContrast/48x48/apps/gnome-help.png
 share/icons/LowContrast/48x48/apps/gnome-home.png
 share/icons/LowContrast/48x48/apps/gnome-log.png
-share/icons/LowContrast/48x48/apps/gnome-logo-icon-transparen.png
+share/icons/LowContrast/48x48/apps/gnome-logo-icon-transparent.png
 share/icons/LowContrast/48x48/apps/gnome-mailcheck.png
 share/icons/LowContrast/48x48/apps/gnome-mini-commander.png
 share/icons/LowContrast/48x48/apps/gnome-mixer-applet.png
@@ -272,7 +272,7 @@ share/icons/LowContrastLargePrint/48x48/apps/gnome-grecord.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-help.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-home.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-log.png
-share/icons/LowContrastLargePrint/48x48/apps/gnome-logo-icon-transparen.png
+share/icons/LowContrastLargePrint/48x48/apps/gnome-logo-icon-transparent.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-mailcheck.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-mini-commander.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-mixer-applet.png
