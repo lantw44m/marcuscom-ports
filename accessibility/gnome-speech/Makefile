@@ -6,18 +6,15 @@
 #
 
 PORTNAME=	gnomespeech
-PORTVERSION=	0.2.1
-PORTREVISION=	1
+PORTVERSION=	0.2.2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome_speech/0.2
-DISTNAME=	gnome_speech-${PORTVERSION}
+MASTER_SITE_SUBDIR=	sources/gnome-speech/0.2
+DISTNAME=	gnome-speech-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME text-to-speech API
-
-RUN_DEPENDS=	festival:${PORTSDIR}/audio/festival
 
 USE_BZIP2=	yes
 USE_REINPLACE=	yes
@@ -29,8 +26,21 @@ CONFIGURE_ARGS=	--enable-static
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
+.include <bsd.port.pre.mk>
+
+.if exists(${LOCALBASE}/bin/festival)
+WITH_FESTIVAL=	yes
+.endif
+
+.if defined(WITH_FESTIVAL)
+RUN_DEPENDS=	festival:${PORTSDIR}/audio/festival
+.endif
+
+pre-build:
+	@cd ${WRKSRC}/gnome-speech && ${GMAKE} clean
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
