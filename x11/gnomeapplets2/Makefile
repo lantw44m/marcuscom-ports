@@ -53,6 +53,7 @@ PLIST_SUB=	BATTERY="@comment "
 GCONF_SCHEMAS+=	battstat.schemas
 PLIST_SUB=	BATTERY=""
 
+.if ${OSVERSION} < 600019
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "              W  A  R  N  I  N  G"
@@ -64,6 +65,7 @@ pre-everything::
 	@${ECHO_MSG} "* correct path.                                     *"
 	@${ECHO_MSG} "*****************************************************"
 	@${ECHO_MSG} ""
+.endif
 .endif
 
 .if ${ARCH} != "i386" && ${ARCH} != "amd64"
