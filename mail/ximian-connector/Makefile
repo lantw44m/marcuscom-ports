@@ -41,7 +41,11 @@ PLIST_SUB=	VERSION="2.2" EVO_VERSION=${EVO_VERSION} EDS_VERSION="1.2"
 CONFIGURE_ARGS+=	--with-krb5=/usr
 .else
 LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal
+.if defined(HEIMDAL_HOME)
+CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} --with-krb5-includes=${HEIMDAL_HOME}/include
+.else
 CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
+.endif
 .endif
 
 .if ${ARCH} == "amd64"
