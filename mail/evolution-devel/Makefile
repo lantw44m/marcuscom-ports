@@ -6,11 +6,11 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://people.FreeBSD.org/~sobomax/:local
-MASTER_SITE_SUBDIR=	unstable/sources/evolution \
+MASTER_SITE_SUBDIR=	sources/evolution/1.1 \
 			sobomax/:local
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX} \
 		db-3.1.17${EXTRACT_SUFX}:local
@@ -21,7 +21,7 @@ MAINTAINER=	gnome@FreeBSD.org
 LIB_DEPENDS=	bonobo_conf.0:${PORTSDIR}/devel/bonobo-conf \
 		nss3.1:${PORTSDIR}/security/nss \
 		gal.20:${PORTSDIR}/x11-toolkits/gal \
-		gtkhtml-1.1.1:${PORTSDIR}/www/gtkhtml
+		gtkhtml-1.1.2:${PORTSDIR}/www/gtkhtml
 
 .if defined(WITH_LDAP)
 LIB_DEPENDS+=	ldap.2:${PORTSDIR}/net/openldap2

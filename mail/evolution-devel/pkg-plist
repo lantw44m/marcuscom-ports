@@ -301,6 +301,9 @@ lib/evolution/1.1/libversit.a
 lib/evolution_addressbookConf.sh
 lib/evolution_calendarConf.sh
 lib/evolution_shellConf.sh
+%%PILOT:%%lib/gnome-pilot/conduits/libeaddress_conduit.so
+%%PILOT:%%lib/gnome-pilot/conduits/libecalendar_conduit.so
+%%PILOT:%%lib/gnome-pilot/conduits/libetodo_conduit.so
 lib/libcal-client.a
 lib/libcal-client.so
 lib/libcal-client.so.0
@@ -430,6 +433,9 @@ share/gnome/evolution/views/mail/galview.xml
 share/gnome/evolution/views/tasks/Tasks.galview
 share/gnome/evolution/views/tasks/With_Category.galview
 share/gnome/evolution/views/tasks/galview.xml
+%%PILOT:%%share/gnome/gnome-pilot/conduits/e-address.conduit
+%%PILOT:%%share/gnome/gnome-pilot/conduits/e-calendar.conduit
+%%PILOT:%%share/gnome/gnome-pilot/conduits/e-todo.conduit
 share/gnome/help/evolution/C/access.html
 share/gnome/help/evolution/C/apx-gloss.html
 share/gnome/help/evolution/C/authors.html
@@ -445,7 +451,6 @@ share/gnome/help/evolution/C/contact-search.html
 share/gnome/help/evolution/C/customizing-summary.html
 share/gnome/help/evolution/C/docbook.css
 share/gnome/help/evolution/C/encryption.html
-share/gnome/help/evolution/C/features.html
 share/gnome/help/evolution/C/figures/calendar.png
 share/gnome/help/evolution/C/figures/config-cal.png
 share/gnome/help/evolution/C/figures/config-mail.png
@@ -695,6 +700,7 @@ share/gnome/idl/Evolution-Wombat.idl
 share/gnome/idl/Evolution-common.idl
 share/gnome/idl/Evolution.idl
 share/gnome/idl/GNOME_Evolution_Importer.idl
+share/gnome/idl/Mailer.idl
 share/gnome/idl/addressbook.idl
 share/gnome/idl/evolution-calendar.idl
 share/gnome/images/evolution/16_copy.png
@@ -851,6 +857,7 @@ share/gnome/images/evolution/pgp-signature-bad.png
 share/gnome/images/evolution/pgp-signature-nokey.png
 share/gnome/images/evolution/pgp-signature-ok.png
 share/gnome/images/evolution/post-message-16.png
+share/gnome/images/evolution/post-reply-24.png
 share/gnome/images/evolution/print-preview.xpm
 share/gnome/images/evolution/print.xpm
 share/gnome/images/evolution/priority-high.xpm
