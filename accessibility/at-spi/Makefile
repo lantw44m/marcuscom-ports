@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	at-spi
-PORTVERSION=	1.5.2
+PORTVERSION=	1.5.3
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
@@ -17,10 +17,11 @@ COMMENT=	An Assistive Technology Service Provider Interface
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier intltool gail libbonobo lthack intlhack
+USE_GNOME=	gnomeprefix gnomehack gnomehier intltool gail libbonobo \
+		intlhack
 USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
-USE_INC_LIBTOOL_VER=	13
+USE_LIBTOOL_VER=15
 USE_REINPLACE=	yes
 CONFIGURE_ARGS=	--enable-static
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
