@@ -54,8 +54,13 @@ share/doc/atk/atkstateset.html
 share/doc/atk/atkutil.html
 share/doc/atk/book1.html
 share/doc/atk/index.sgml
+share/locale/cs/LC_MESSAGES/atk10.mo
+share/locale/da/LC_MESSAGES/atk10.mo
+share/locale/de/LC_MESSAGES/atk10.mo
 share/locale/en_GB/LC_MESSAGES/atk10.mo
+share/locale/es/LC_MESSAGES/atk10.mo
 share/locale/ms/LC_MESSAGES/atk10.mo
+share/locale/no/LC_MESSAGES/atk10.mo
 share/locale/sv/LC_MESSAGES/atk10.mo
 @dirrm share/doc/atk
 @dirrm include/atk-1.0/atk
