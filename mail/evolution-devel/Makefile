@@ -36,7 +36,7 @@ LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
 USE_GMAKE=	yes
 USE_BISON=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack
+USE_GNOME=	gnomeprefix gnomehack gnometarget
 USE_REINPLACE=	yes
 USE_OPENSSL=	yes
 GNU_CONFIGURE=	yes
@@ -46,7 +46,6 @@ CONFIGURE_ARGS=	--with-db3-libs=${DB3_WRKSRC} \
 		--with-nspr-libs=${LOCALBASE}/lib \
 		--with-nss-includes=${LOCALBASE}/include/nss/nss \
 		--with-nss-libs=${LOCALBASE}/lib
-CONFIGURE_TARGET=--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
 
 .if defined(WITH_LDAP)
 CONFIGURE_ARGS+= --with-openldap=${LOCALBASE}
