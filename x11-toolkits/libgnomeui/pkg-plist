@@ -53,7 +53,7 @@ lib/gtk-2.0/%%GTK_VERSION%%/filesystems/libgnome-vfs.so
 lib/libglade/2.0/libgnome.so
 lib/libgnomeui-2.a
 lib/libgnomeui-2.so
-lib/libgnomeui-2.so.701
+lib/libgnomeui-2.so.702
 libdata/pkgconfig/libgnomeui-2.0.pc
 libexec/gnome_segv2
 %%DOCSDIR%%/GnomeAbout.html
@@ -193,6 +193,7 @@ share/locale/ml/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/mn/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/mr/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ms/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/ne/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/nl/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/nn/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/no/LC_MESSAGES/libgnomeui-2.0.mo
