@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomesystemtools
-PORTVERSION=	1.1.3
+PORTVERSION=	1.1.4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-tools/1.1
@@ -25,7 +25,6 @@ USE_LIBTOOL_VER=15
 INSTALLS_OMF=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--disable-boot
 
 GCONF_SCHEMAS=	gnome-system-tools.schemas
 
@@ -35,8 +34,11 @@ GCONF_SCHEMAS=	gnome-system-tools.schemas
 CONFIGURE_ARGS+=	--enable-services
 PLIST_SUB+=		SERVICES=""
 .else
-CONFIGURE_ARGS+=	--disable-services
 PLIST_SUB+=		SERVICES="@comment "
+.endif
+
+.if ${PERL_LEVEL} <= 500800
+RUN_DEPENDS+=	${SITE_PERL}/File/Temp.pm:${PORTSDIR}/devel/p5-File-Temp
 .endif
 
 .if ${PERL_LEVEL} < 500600

@@ -1,6 +1,33 @@
---- configure.orig	Wed May 26 12:02:51 2004
-+++ configure	Wed May 26 12:03:23 2004
-@@ -22623,7 +22623,7 @@
+--- configure.orig	Thu Jan 13 01:56:41 2005
++++ configure	Thu Jan 13 02:14:07 2005
+@@ -21160,7 +21160,7 @@
+ 
+ 
+ 
+-if test x$enable_boot = xno; then
++if test x$enable_boot = xyes; then
+   BUILD_BOOT_TRUE=
+   BUILD_BOOT_FALSE='#'
+ else
+@@ -21178,7 +21178,7 @@
+ fi
+ 
+ 
+-if test x$enable_services = xno; then
++if test x$enable_services = xyes; then
+   BUILD_SERVICES_TRUE=
+   BUILD_SERVICES_FALSE='#'
+ else
+@@ -21205,7 +21205,7 @@
+ fi
+ 
+ 
+-if test x$enable_disks = xno; then
++if test x$enable_disks = xyes; then
+   BUILD_DISKS_TRUE=
+   BUILD_DISKS_FALSE='#'
+ else
+@@ -22990,7 +22990,7 @@
  GST_CFLAGS="$GST_DEPENDS_CFLAGS $GST_CRACK_LIB_CFLAGS $GST_DEPRECATED_FLAGS"
  
  GST_TOOL_LIBS="$GST_LIBS -lutil \$(top_builddir)/src/common/libsetuptool.a"
