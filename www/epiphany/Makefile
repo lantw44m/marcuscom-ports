@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	1.3.4
-PORTREVISION=	2
+PORTVERSION=	1.3.5
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.3
@@ -79,13 +78,18 @@ post-patch:
 		's|malloc\.h|stdlib.h|g'
 
 post-configure:
-	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g ; \
+	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g ; \
 		s|%%LOCALBASE%%|${LOCALBASE}|g ; \
 		s|%%X11BASE%%|${X11BASE}|g ; \
 		s|%%MOZILLA%%|${MOZILLA}|g ; \
-		s|%%FLASHPLAYER%%|${FLASHPLAYER}|g' ${WRKSRC}/src/epiphany
+		s|%%FLASHPLAYER%%|${FLASHPLAYER}|g' <${FILESDIR}/epiphany \
+		> ${WRKDIR}/epiphany
 
 pre-install:
 	@-${X11BASE}/bin/gconftool-2 --shutdown
+
+post-install:
+		@${MV} -f ${PREFIX}/bin/epiphany ${PREFIX}/bin/epiphany-bin
+		${INSTALL_SCRIPT} ${WRKDIR}/epiphany ${PREFIX}/bin
 
 .include <bsd.port.post.mk>
