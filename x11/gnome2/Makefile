@@ -41,9 +41,9 @@ RUN_DEPENDS=	${X11BASE}/libexec/battstat-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		file-roller:${PORTSDIR}/archivers/fileroller \
 		${X11BASE}/share/themes/HighContrast/gtk-2.0/gtkrc:${PORTSDIR}/x11-toolkits/gnome-themes \
 		ggv:${PORTSDIR}/print/ggv2 \
-		pkgview:${PORTSDIR}/sysutils/pkgview \
+		pkgview:${PORTSDIR}/sysutils/gnome-pkgview \
 		acme:${PORTSDIR}/multimedia/acme \
-		gst-launch-ext:${PORTSDIR}/multimedia/gst-plugins \
+		gst-launch-ext:${PORTSDIR}/multimedia/gstreamer-plugins \
 		gst-tumbnail:${PORTSDIR}/multimedia/nautilus-media
 
 NO_BUILD=	yes
