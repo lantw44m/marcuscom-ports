@@ -31,7 +31,6 @@ include/libgnomeprint-2.2/libgnomeprint/private/gpa-utils.h
 lib/libgnomeprint-2-2.a
 lib/libgnomeprint-2-2.so
 lib/libgnomeprint-2-2.so.0
-lib/libgnomeprint/%%VERSION%%/modules/drivers/libgnomeprint-fax.so
 lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-custom.so
 lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-file.so
 lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-lpr.so
@@ -67,7 +66,9 @@ share/locale/da/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/de/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/es/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/et/LC_MESSAGES/libgnomeprint-2.2.mo
+share/locale/fi/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/fr/LC_MESSAGES/libgnomeprint-2.2.mo
+share/locale/he/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/hu/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/hi/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/it/LC_MESSAGES/libgnomeprint-2.2.mo
@@ -98,7 +99,6 @@ share/locale/zh_TW/LC_MESSAGES/libgnomeprint-2.2.mo
 @dirrm share/gnome/libgnomeprint
 @dirrm share/doc/libgnomeprint
 @dirrm lib/libgnomeprint/%%VERSION%%/modules/transports
-@dirrm lib/libgnomeprint/%%VERSION%%/modules/drivers
 @dirrm lib/libgnomeprint/%%VERSION%%/modules
 @dirrm lib/libgnomeprint/%%VERSION%%
 @dirrm lib/libgnomeprint
