@@ -6,10 +6,9 @@
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.3.6
-PORTREVISION=	1
+PORTVERSION=	2.4.0
 CATEGORIES=	x11-toolkits
-MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.3,} \
+MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.4,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.3/ \
 		ftp://ftp.gimp.org/pub/%SUBDIR%/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/%SUBDIR%/ \
@@ -42,7 +41,7 @@ CONFIGURE_ARGS=	--enable-static --with-xinput=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
-PLIST_SUB=	GTK_VERSION="2.2.0"
+PLIST_SUB=	GTK_VERSION="2.4.0"
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${GREP} -l lgmodule | \
