@@ -86,7 +86,8 @@ gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLA
 lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" | ${XARGS} ${REINPLACE_CMD} -e \
 				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
 
-gnomehier_DETECT=	${X11BASE}/etc/mtree/BSD.gnome-x11.dist
+GNOME_MTREE=		${X11BASE}/etc/mtree/BSD.gnome-x11.dist
+gnomehier_DETECT=	${GNOME_MTREE}
 gnomehier_RUN_DEPENDS=	${gnomehier_DETECT}:${PORTSDIR}/misc/gnomehier
 
 GNOME_HTML_DIR?=	${PREFIX}/share/doc
@@ -635,7 +636,7 @@ GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 .endif
 
 .if ${_USE_GNOME:Mgnomeprefix}!=""
-MTREE_FILE?=	${X11BASE}/etc/mtree/BSD.gnome-x11.dist
+MTREE_FILE?=	${GNOME_MTREE}
 .endif
 
 .if defined(GNOME_PRE_PATCH)
