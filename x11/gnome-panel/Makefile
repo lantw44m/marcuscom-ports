@@ -23,6 +23,7 @@ INSTALLS_SHLIB=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier gnomedesktop libwnck
+GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS=	--with-kde-datadir=${LOCALBASE}/share \
