@@ -27,6 +27,7 @@ share/icons/gnome/48x48/devices/gnome-dev-floppy.png
 share/icons/gnome/48x48/devices/gnome-dev-harddisk.png
 share/icons/gnome/48x48/devices/gnome-dev-jazdisk.png
 share/icons/gnome/48x48/devices/gnome-dev-memory.png
+share/icons/gnome/48x48/devices/gnome-dev-printer.png
 share/icons/gnome/48x48/devices/gnome-dev-zipdisk.png
 share/icons/gnome/48x48/emblems/emblem-art.icon
 share/icons/gnome/48x48/emblems/emblem-art.png
@@ -53,6 +54,7 @@ share/icons/gnome/48x48/filesystems/gnome-fs-blockdev.png
 share/icons/gnome/48x48/filesystems/gnome-fs-bookmark-missing.png
 share/icons/gnome/48x48/filesystems/gnome-fs-bookmark.png
 share/icons/gnome/48x48/filesystems/gnome-fs-chardev.png
+share/icons/gnome/48x48/filesystems/gnome-fs-desktop.png
 share/icons/gnome/48x48/filesystems/gnome-fs-directory-accept.icon
 share/icons/gnome/48x48/filesystems/gnome-fs-directory-accept.png
 share/icons/gnome/48x48/filesystems/gnome-fs-directory.icon
