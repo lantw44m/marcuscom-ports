@@ -1,16 +1,8 @@
 bin/scaffold
 bin/scaffold-clean.sh
-etc/gconf/gconf.xml.defaults/apps/scaffold/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/scaffold/plugins/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/scaffold/plugins/document_manager/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/scaffold/plugins/project_manager/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/scaffold/state/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins/document_manager/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins/project_manager/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/state/%gconf.xml
+@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/scaffold.schemas > /dev/null || /usr/bin/true
 etc/gconf/schemas/scaffold.schemas
+@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/scaffold.schemas > /dev/null || /usr/bin/true
 include/libscaffold-1.0/libscaffold/glue-factory.c
 include/libscaffold-1.0/libscaffold/glue-plugin.c
 include/libscaffold-1.0/libscaffold/libscaffold.h
@@ -146,13 +138,3 @@ share/locale/zh_CN/LC_MESSAGES/scaffold.mo
 @dirrm include/scaffold-1.0
 @dirrm include/libscaffold-1.0/libscaffold
 @dirrm include/libscaffold-1.0
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/state
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins/project_manager
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins/document_manager
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/scaffold/plugins
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/scaffold
-@dirrm etc/gconf/gconf.xml.defaults/apps/scaffold/state
-@dirrm etc/gconf/gconf.xml.defaults/apps/scaffold/plugins/project_manager
-@dirrm etc/gconf/gconf.xml.defaults/apps/scaffold/plugins/document_manager
-@dirrm etc/gconf/gconf.xml.defaults/apps/scaffold/plugins
-@dirrm etc/gconf/gconf.xml.defaults/apps/scaffold

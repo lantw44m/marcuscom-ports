@@ -1,9 +1,7 @@
 bin/marlin
-etc/gconf/gconf.xml.defaults/apps/marlin/system-state/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/marlin/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/marlin/system-state/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/marlin/%gconf.xml
+@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/marlin.schemas > /dev/null || /usr/bin/true
 etc/gconf/schemas/marlin.schemas
+@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/marlin.schemas > /dev/null || /usr/bin/true
 include/libmarlin/marlin-a11y-helper.h
 include/libmarlin/marlin-block.h
 include/libmarlin/marlin-cursors.h
@@ -82,8 +80,4 @@ share/gnome/pixmaps/marlin/marlin-stop.png
 @dirrm share/gnome/help/marlin/C
 @dirrm share/gnome/help/marlin
 @dirrm include/libmarlin
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/marlin/system-state
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/marlin
-@dirrm etc/gconf/gconf.xml.defaults/apps/marlin/system-state
-@dirrm etc/gconf/gconf.xml.defaults/apps/marlin
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/marlin/marlin-C.omf 2>/dev/null || /usr/bin/true

@@ -1,9 +1,7 @@
 bin/gnotime
-etc/gconf/gconf.xml.defaults/apps/gnotime/%gconf.xml
-etc/gconf/gconf.xml.defaults/apps/gnotime/Display/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnotime/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/gnotime/Display/%gconf.xml
+@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gnotime.schemas > /dev/null || /usr/bin/true
 etc/gconf/schemas/gnotime.schemas
+@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gnotime.schemas > /dev/null || /usr/bin/true
 include/gnotime/gnc-date.h
 include/gnotime/gnc-engine-util.h
 include/gnotime/gnc-event.h
@@ -127,10 +125,6 @@ share/locale/zh_TW/LC_MESSAGES/gnotime-2.0.mo
 @dirrm share/gnome/gnotime/ghtml
 @dirrm share/gnome/gnotime
 @dirrm include/gnotime
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnotime/Display
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnotime
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnotime/Display
-@dirrm etc/gconf/gconf.xml.defaults/apps/gnotime
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnotime/gnotime-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnotime/gnotime-es.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnotime/gnotime-eu.omf 2>/dev/null || /usr/bin/true
