@@ -23,7 +23,7 @@ USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack gnomedesktop eel2 \
 		librsvg2
 GNOME_DESKTOP_VERSION=2
 INSTALLS_SHLIB=	yes
-GNU_CONFIGURE=	yes
+USE_LIBTOOL_VER=15
 USE_REINPLACE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="${PTHREAD_LIBS} -L${LOCALBASE}/lib -L${X11BASE}/lib -liconv" \
