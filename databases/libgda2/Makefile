@@ -91,6 +91,7 @@ PLIST_SUB+=		POSTGRES:=""
 .else
 PLIST_SUB+=		POSTGRES:="@comment "
 CONFIGURE_ARGS+=	--without-postgres
+.endif
 
 .if !defined(WITHOUT_LDAP) && defined(WITH_LDAP)
 USE_OPENLDAP=		yes
