@@ -40,26 +40,21 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/ui/statusbar/%gcon
 etc/gconf/gconf.xml.defaults/schemas/apps/gedit-2/preferences/ui/toolbar/%gconf.xml
 etc/gconf/schemas/gedit.schemas
 include/gedit-%%VERSION%%/gedit/bonobo-mdi-child.h
-include/gedit-%%VERSION%%/gedit/bonobo-mdi-session.h
 include/gedit-%%VERSION%%/gedit/bonobo-mdi.h
-include/gedit-%%VERSION%%/gedit/gedit-application-server.h
-include/gedit-%%VERSION%%/gedit/gedit-commands.h
+include/gedit-%%VERSION%%/gedit/gedit-convert.h
 include/gedit-%%VERSION%%/gedit/gedit-debug.h
 include/gedit-%%VERSION%%/gedit/gedit-document.h
 include/gedit-%%VERSION%%/gedit/gedit-encodings.h
-include/gedit-%%VERSION%%/gedit/gedit-file-selector-util.h
 include/gedit-%%VERSION%%/gedit/gedit-file.h
 include/gedit-%%VERSION%%/gedit/gedit-mdi-child.h
 include/gedit-%%VERSION%%/gedit/gedit-mdi.h
 include/gedit-%%VERSION%%/gedit/gedit-menus.h
 include/gedit-%%VERSION%%/gedit/gedit-output-window.h
 include/gedit-%%VERSION%%/gedit/gedit-plugin.h
-include/gedit-%%VERSION%%/gedit/gedit-plugins-engine.h
+include/gedit-%%VERSION%%/gedit/gedit-prefs-manager-app.h
 include/gedit-%%VERSION%%/gedit/gedit-prefs-manager.h
 include/gedit-%%VERSION%%/gedit/gedit-print.h
 include/gedit-%%VERSION%%/gedit/gedit-recent.h
-include/gedit-%%VERSION%%/gedit/gedit-session.h
-include/gedit-%%VERSION%%/gedit/gedit-undo-manager.h
 include/gedit-%%VERSION%%/gedit/gedit-utils.h
 include/gedit-%%VERSION%%/gedit/gedit-view.h
 include/gedit-%%VERSION%%/gedit/gedit2.h
@@ -77,6 +72,9 @@ lib/gedit-2/plugins/libtime.so
 lib/gedit-2/plugins/sample.gedit-plugin
 lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
+lib/libgedit-control.a
+lib/libgedit-control.so
+lib/libgedit-control.so.0
 libdata/bonobo/servers/GNOME_Gedit.server
 libdata/pkgconfig/gedit-%%VERSION%%.pc
 share/gnome/application-registry/gedit.applications
@@ -93,19 +91,56 @@ share/gnome/gedit-2/glade/spell-checker.glade2
 share/gnome/gedit-2/glade/time.glade2
 share/gnome/gedit-2/glade/uri.glade2
 share/gnome/gedit-2/ui/gedit-ui.xml
+share/gnome/gnome-2.0/ui/gedit-viewer-ui.xml
 share/gnome/help/gedit/C/figures/gedit_recent_files_menu_icon.png
 share/gnome/help/gedit/C/figures/gedit_window.png
 share/gnome/help/gedit/C/gedit.xml
 share/gnome/help/gedit/C/legal.xml
+share/gnome/help/gedit/de/gedit.xml
+share/gnome/help/gedit/de/legal.xml
+share/gnome/help/gedit/es/gedit.xml
+share/gnome/help/gedit/es/legal.xml
+share/gnome/help/gedit/fr/gedit.xml
+share/gnome/help/gedit/fr/legal.xml
+share/gnome/help/gedit/it/gedit.xml
+share/gnome/help/gedit/it/legal.xml
+share/gnome/help/gedit/ja/gedit.xml
+share/gnome/help/gedit/ja/legal.xml
+share/gnome/help/gedit/ko/gedit.xml
+share/gnome/help/gedit/ko/legal.xml
 share/gnome/help/gedit/ro/figures/gedit_window.png
 share/gnome/help/gedit/ro/gedit.xml
 share/gnome/help/gedit/ro/legal.xml
+share/gnome/help/gedit/sv/gedit.xml
+share/gnome/help/gedit/sv/legal.xml
+share/gnome/help/gedit/zh_CN/gedit.xml
+share/gnome/help/gedit/zh_CN/legal.xml
+share/gnome/help/gedit/zh_TW/gedit.xml
+share/gnome/help/gedit/zh_TW/legal.xml
 share/gnome/idl/GNOME_Gedit.idl
 share/gnome/mime-info/gedit.keys
 share/gnome/omf/gedit/gedit-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gedit/gedit-de.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-de.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gedit/gedit-es.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-es.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gedit/gedit-fr.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-fr.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gedit/gedit-it.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-it.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gedit/gedit-ja.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-ja.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gedit/gedit-ko.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-ko.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gedit/gedit-ro.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-ro.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gedit/gedit-sv.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-sv.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gedit/gedit-zh_CN.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-zh_CN.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gedit/gedit-zh_TW.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gedit/gedit-zh_TW.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gedit-icon.png
 share/gnome/pixmaps/gedit-logo.png
 share/gnome/pixmaps/gedit-plugin-manager.png
@@ -116,6 +151,7 @@ share/locale/be/LC_MESSAGES/gedit-2.0.mo
 share/locale/bg/LC_MESSAGES/gedit-2.0.mo
 share/locale/ca/LC_MESSAGES/gedit-2.0.mo
 share/locale/cs/LC_MESSAGES/gedit-2.0.mo
+share/locale/cy/LC_MESSAGES/gedit-2.0.mo
 share/locale/da/LC_MESSAGES/gedit-2.0.mo
 share/locale/de/LC_MESSAGES/gedit-2.0.mo
 share/locale/el/LC_MESSAGES/gedit-2.0.mo
@@ -150,6 +186,8 @@ share/locale/ro/LC_MESSAGES/gedit-2.0.mo
 share/locale/ru/LC_MESSAGES/gedit-2.0.mo
 share/locale/sk/LC_MESSAGES/gedit-2.0.mo
 share/locale/sl/LC_MESSAGES/gedit-2.0.mo
+share/locale/sr/LC_MESSAGES/gedit-2.0.mo
+share/locale/sr@Latn/LC_MESSAGES/gedit-2.0.mo
 share/locale/sv/LC_MESSAGES/gedit-2.0.mo
 share/locale/ta/LC_MESSAGES/gedit-2.0.mo
 share/locale/th/LC_MESSAGES/gedit-2.0.mo
@@ -160,9 +198,19 @@ share/locale/wa/LC_MESSAGES/gedit-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gedit-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gedit-2.0.mo
 @dirrm share/gnome/omf/gedit
+@dirrm share/gnome/help/gedit/zh_TW
+@dirrm share/gnome/help/gedit/zh_CN
+@dirrm share/gnome/help/gedit/sv
 @dirrm share/gnome/help/gedit/ro/figures
 @dirrm share/gnome/help/gedit/ro
+@dirrm share/gnome/help/gedit/ko
+@dirrm share/gnome/help/gedit/ja
+@dirrm share/gnome/help/gedit/it
+@dirrm share/gnome/help/gedit/fr
+@dirrm share/gnome/help/gedit/es
+@dirrm share/gnome/help/gedit/de
 @dirrm share/gnome/help/gedit/C/figures
+@dirrm share/gnome/help/gedit/C
 @dirrm share/gnome/gedit-2/ui
 @dirrm share/gnome/gedit-2/glade
 @dirrm share/gnome/gedit-2
@@ -210,4 +258,13 @@ share/locale/zh_TW/LC_MESSAGES/gedit-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gedit-2/preferences
 @dirrm etc/gconf/gconf.xml.defaults/apps/gedit-2
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-de.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-es.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-fr.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-it.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-ja.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-ko.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-ro.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-sv.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-zh_CN.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gedit/gedit-zh_TW.omf 2>/dev/null || /usr/bin/true
