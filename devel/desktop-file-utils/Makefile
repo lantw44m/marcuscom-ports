@@ -2,7 +2,7 @@
 # Date created:			11 Jun 2004
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
-# $FreeBSD: ports/devel/desktop-file-utils/Makefile,v 1.3 2004/08/06 21:38:23 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=		desktop-file-utils

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/mozilla/pkg-deinstall.in,v 1.1 2004/08/08 07:07:35 marcus Exp $
+# $FreeBSD$
 #
 # Date created:			Mon Nov 29, 2003
 # Whom:				Thierry Thomas (<thierry@pompo.net>)

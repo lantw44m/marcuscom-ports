@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/gtk20/files/patch-ad,v 1.13 2004/04/05 03:11:37 marcus Exp $
+$FreeBSD$
 
 --- gtk/gtkrc.c.orig	Thu Dec 13 21:51:18 2001
 +++ gtk/gtkrc.c	Fri Jan 18 11:14:14 2002

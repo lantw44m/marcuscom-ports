@@ -2,7 +2,7 @@
 # Date created:				04 March 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/py-orbit2/Makefile,v 1.22 2004/08/25 18:38:39 marcus Exp $
+# $FreeBSD$
 
 PORTNAME=	orbit
 PORTVERSION=	2.0.1
