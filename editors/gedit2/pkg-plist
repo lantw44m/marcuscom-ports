@@ -5,6 +5,7 @@ include/gedit-%%VERSION%%/gedit/bonobo-mdi.h
 include/gedit-%%VERSION%%/gedit/gedit-convert.h
 include/gedit-%%VERSION%%/gedit/gedit-debug.h
 include/gedit-%%VERSION%%/gedit/gedit-document.h
+include/gedit-%%VERSION%%/gedit/gedit-encodings-option-menu.h
 include/gedit-%%VERSION%%/gedit/gedit-encodings.h
 include/gedit-%%VERSION%%/gedit/gedit-file.h
 include/gedit-%%VERSION%%/gedit/gedit-mdi-child.h
@@ -33,12 +34,14 @@ lib/gedit-2/plugins/libchangecase.so
 lib/gedit-2/plugins/libdocinfo.so
 lib/gedit-2/plugins/libindent.so
 lib/gedit-2/plugins/libsample.so
+lib/gedit-2/plugins/libsavecopy.so
 lib/gedit-2/plugins/libshell_output.so
 lib/gedit-2/plugins/libsort.so
 lib/gedit-2/plugins/libspell.so
 lib/gedit-2/plugins/libtaglist.so
 lib/gedit-2/plugins/libtime.so
 lib/gedit-2/plugins/sample.gedit-plugin
+lib/gedit-2/plugins/savecopy.gedit-plugin
 lib/gedit-2/plugins/shell_output.gedit-plugin
 lib/gedit-2/plugins/sort.gedit-plugin
 lib/gedit-2/plugins/spell.gedit-plugin
