@@ -1,0 +1,37 @@
+# New ports collection makefile for:	gnomecontrolcenter2
+# Date created:				04 May 2002
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.54 2002/10/05 16:29:32 marcus Exp $
+#
+
+PORTNAME=	gnomecontrolcenter2
+PORTVERSION=	2.1.0.1
+CATEGORIES=	sysutils gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/control-center/2.1
+DISTNAME=	control-center-${PORTVERSION}
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+
+LIB_DEPENDS=	gnome-desktop-2.2:${PORTSDIR}/x11/gnomedesktop
+
+USE_BZIP2=	yes
+USE_X_PREFIX=	yes
+USE_REINPLACE=	yes
+USE_GMAKE=	yes
+USE_GNOMENG=	yes
+USE_GNOME=	gnomeprefix gnomehack gnomehier
+USE_LIBTOOL=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="-L${LOCALBASE}/lib"
+CONFIGURE_TARGET=       --target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|Xft\.h|Xft2.h|g' \
+		${WRKSRC}/capplets/font/main.c
+
+.include <bsd.port.mk>
