@@ -769,6 +769,8 @@ share/gnome/help/gkb/zh_HK/legal.xml
 share/gnome/help/gkb/zh_TW/figures/gkb_applet.png
 share/gnome/help/gkb/zh_TW/gkb.xml
 share/gnome/help/gkb/zh_TW/legal.xml
+share/gnome/help/gswitchit/C/gswitchit.xml
+share/gnome/help/gswitchit/C/legal.xml
 share/gnome/help/gtik2_applet2/C/figures/gtik_applet.png
 share/gnome/help/gtik2_applet2/C/gtik2_applet2.xml
 share/gnome/help/gtik2_applet2/C/legal.xml
@@ -1300,6 +1302,8 @@ share/gnome/omf/gnome-applets/gkb-zh_HK.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/gkb-zh_HK.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/gkb-zh_TW.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/gkb-zh_TW.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-applets/gswitchit-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/gswitchit-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/gtik2_applet2-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-applets/gtik2_applet2-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-applets/gtik2_applet2-de.omf
@@ -1592,6 +1596,7 @@ share/gnome/pixmaps/gkb/yu.png
 share/gnome/pixmaps/gnome-cpu.png
 share/gnome/pixmaps/gnome-eyes.png
 share/gnome/pixmaps/gnome-mini-commander.png
+share/gnome/pixmaps/gnome-mixer-applet.png
 share/gnome/pixmaps/gswitchit-applet.png
 share/gnome/pixmaps/gswitchit-properties-capplet.png
 share/gnome/pixmaps/mailcheck/eclouds.png
@@ -1602,7 +1607,6 @@ share/gnome/pixmaps/mailcheck/email.png
 share/gnome/pixmaps/mailcheck/tux-anim.png
 share/gnome/pixmaps/mini-commander/browser-mini.xpm
 share/gnome/pixmaps/mini-commander/history-mini.xpm
-share/gnome/pixmaps/mixer/gnome-mixer-applet.png
 share/gnome/pixmaps/mixer/volume-max.png
 share/gnome/pixmaps/mixer/volume-medium.png
 share/gnome/pixmaps/mixer/volume-min.png
@@ -1715,6 +1719,7 @@ share/locale/az/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/bs/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/cy/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1958,6 +1963,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/gtik2_applet2/C/figures
 @dirrm share/gnome/help/gtik2_applet2/C
 @dirrm share/gnome/help/gtik2_applet2
+@dirrm share/gnome/help/gswitchit/C
+@dirrm share/gnome/help/gswitchit
 @dirrm share/gnome/help/gkb/zh_TW/figures
 @dirrm share/gnome/help/gkb/zh_TW
 @dirrm share/gnome/help/gkb/zh_HK/figures
@@ -2235,6 +2242,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/gkb-zh_CN.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/gkb-zh_HK.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/gkb-zh_TW.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/gswitchit-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/gtik2_applet2-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/gtik2_applet2-de.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-applets/gtik2_applet2-es.omf 2>/dev/null || /usr/bin/true
