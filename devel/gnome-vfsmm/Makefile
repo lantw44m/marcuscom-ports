@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome-vfsmm
 PORTVERSION=	2.5.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	bland@FreeBSD.org
 COMMENT=	C++ wrapper for gnomevfs2 library
 
-LIB_DEPENDS=	gtkmm-2.3.3:${PORTSDIR}/x11-toolkits/gtk--2
+LIB_DEPENDS=	gtkmm-2.3.4:${PORTSDIR}/x11-toolkits/gtk--2
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_BZIP2=	yes
