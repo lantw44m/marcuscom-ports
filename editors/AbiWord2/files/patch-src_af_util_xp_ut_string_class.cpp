@@ -1,5 +1,5 @@
---- src/af/util/xp/ut_string_class.cpp.orig	Mon Aug 25 03:34:03 2003
-+++ src/af/util/xp/ut_string_class.cpp	Mon Aug 25 03:42:00 2003
+--- src/af/util/xp/ut_string_class.cpp.orig	Thu Jun 17 15:00:46 2004
++++ src/af/util/xp/ut_string_class.cpp	Thu Jun 17 15:02:15 2004
 @@ -28,6 +28,7 @@
  #include <locale.h>
  #include <ctype.h>
@@ -8,7 +8,7 @@
  
  #include "ut_string.h"
  #include "ut_string_class.h"
-@@ -340,13 +341,13 @@
+@@ -342,13 +343,13 @@
    return len;
  }
  
@@ -19,7 +19,7 @@
  #  define VA_COPY(ap1, ap2)	  (*(ap1) = *(ap2))
  #  elif defined (VA_COPY_AS_ARRAY)
  #  define VA_COPY(ap1, ap2)	  memmove ((ap1), (ap2), sizeof (va_list))
--#  elif defined (__GNUC__)
+-#  elif defined (__GNUC__) && defined (__va_copy)
 -#  define VA_COPY(ap1,ap2)     __va_copy((ap1),(ap2))
  #  else /* va_list is a pointer */
  #  define VA_COPY(ap1, ap2)	  ((ap1) = (ap2))

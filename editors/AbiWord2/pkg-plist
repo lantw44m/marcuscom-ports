@@ -68,6 +68,7 @@ share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/jbo.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/lt-LT.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/lv-LV.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/mh-MH.strings
+share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/mk-MK.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/ms-MY.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/nb-NO.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/nl-NL.strings

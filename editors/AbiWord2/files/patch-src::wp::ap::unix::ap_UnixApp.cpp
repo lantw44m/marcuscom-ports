@@ -1,9 +1,9 @@
 
 $FreeBSD$
 
---- src/wp/ap/unix/ap_UnixApp.cpp.orig	Thu Dec  6 09:00:14 2001
-+++ src/wp/ap/unix/ap_UnixApp.cpp	Mon Dec 17 13:49:48 2001
-@@ -612,7 +612,7 @@
+--- src/wp/ap/unix/ap_UnixApp.cpp.orig	Thu Jun 17 14:57:19 2004
++++ src/wp/ap/unix/ap_UnixApp.cpp	Thu Jun 17 14:58:01 2004
+@@ -788,7 +788,7 @@
    {
        pluginDir = pluginList[i];
  
@@ -12,3 +12,4 @@ $FreeBSD$
        UT_DEBUGMSG(("DOM: found %d plugins in %s\n", n, pluginDir.c_str()));
  
        if (n > 0)
+
