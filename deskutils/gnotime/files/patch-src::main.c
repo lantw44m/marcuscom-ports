@@ -1,6 +1,37 @@
---- src/main.c.orig	Mon May 24 20:21:51 2004
-+++ src/main.c	Mon May 24 20:23:18 2004
-@@ -689,11 +689,7 @@
+--- src/main.c.orig	Sun May 23 16:08:47 2004
++++ src/main.c	Thu Jul  8 00:25:04 2004
+@@ -299,6 +299,7 @@
+ 	char * xml_filepath;
+ 	gboolean read_is_ok;
+ 	char *errmsg, *qmsg;
++	GtkWidget *mb;
+ 
+ 	xml_filepath = resolve_old_path (config_data_url);
+ 
+@@ -347,7 +348,6 @@
+ 			_("Do you want to continue?"),
+ 			NULL);
+ 
+-	GtkWidget *mb;
+ 	mb = gtk_message_dialog_new (NULL,
+ 	         GTK_DIALOG_MODAL,
+ 	         GTK_MESSAGE_ERROR,
+@@ -398,13 +398,13 @@
+ 	{
+ 		const char *fp;
+ 		char *errmsg, *qmsg;
++		GtkWidget *mb;
+ 		fp = gtt_get_config_filepath();
+ 		errmsg = gtt_err_to_string (conf_errcode, fp);
+ 		qmsg = g_strconcat (errmsg, 
+ 			_("Shall I setup a new configuration?"),
+ 			NULL);
+ 
+-		GtkWidget *mb;
+ 		mb = gtk_message_dialog_new (NULL,
+ 		         GTK_DIALOG_MODAL,
+ 		         GTK_MESSAGE_ERROR,
+@@ -719,11 +719,7 @@
  int 
  main(int argc, char *argv[])
  {
@@ -13,7 +44,7 @@
  	static char *geometry_string = NULL;
  	static const struct poptOption geo_options[] =
  	{
-@@ -704,6 +700,11 @@
+@@ -734,6 +730,11 @@
  		{NULL, '\0', 0, NULL, 0}
  	};
  
@@ -25,7 +56,7 @@
  	gnome_program_init(PACKAGE, VERSION, LIBGNOMEUI_MODULE, argc, argv, 
  		                   GNOME_PARAM_POPT_TABLE, geo_options, 
  		                   GNOME_PROGRAM_STANDARD_PROPERTIES, NULL);
-@@ -713,7 +714,7 @@
+@@ -745,7 +746,7 @@
  	bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
  	textdomain(GETTEXT_PACKAGE);
  
