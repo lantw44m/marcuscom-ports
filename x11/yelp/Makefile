@@ -27,12 +27,16 @@ HEADERS_SUFX=
 MOZILLA=	mozilla
 HEADERS_SUFX=
 .else
+.if ${WITH_MOZILLA}=="firefox"
+MOZILLA=	firefox
+.else
 .if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
 MOZILLA=	mozilla-devel
 HEADERS_SUFX=	-devel
 .else
 MOZILLA=	mozilla
 HEADERS_SUFX=
+.endif
 .endif
 .endif
 
@@ -54,6 +58,7 @@ pre-everything::
 	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
 	@${ECHO_MSG}
 	@${ECHO_MSG} "  mozilla-devel "
+	@${ECHO_MSG} "  firefox "
 	@${ECHO_MSG} ""
 
 post-patch:
