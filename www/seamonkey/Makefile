@@ -334,7 +334,7 @@ do-install:
 	fi
 	for pcfile in ${PKGCONFIG_FILES}; do \
 		${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
-			${WRKSRC}/build/unix/$${pcfile}.pc
+			${WRKSRC}/build/unix/$${pcfile}.pc; \
 		${INSTALL_DATA} ${WRKSRC}/build/unix/$${pcfile}.pc \
 			${PREFIX}/libdata/pkgconfig/$${pcfile}${MOZ_SUFX}${PKGNAMESUFFIX}.pc ; \
 	done
