@@ -23,6 +23,7 @@ etc/gconf/gconf.xml.defaults/apps/gataxx/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/glines/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/glines/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/glines/saved/%gconf.xml
+etc/gconf/gconf.xml.defaults/apps/gnect/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnibbles/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm/%gconf.xml
@@ -52,6 +53,7 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gataxx/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/glines/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/glines/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/glines/saved/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/gnect/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm/%gconf.xml
@@ -813,6 +815,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences/worm
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles/preferences
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnibbles
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnect
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/glines/saved
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/glines/preferences
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/glines
@@ -842,6 +845,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences/worm
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnibbles/preferences
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnibbles
+@dirrm etc/gconf/gconf.xml.defaults/apps/gnect
 @dirrm etc/gconf/gconf.xml.defaults/apps/glines/saved
 @dirrm etc/gconf/gconf.xml.defaults/apps/glines/preferences
 @dirrm etc/gconf/gconf.xml.defaults/apps/glines
