@@ -4,7 +4,7 @@
 # FreeBSD: $FreeBSD$
 #	NetBSD: $NetBSD: $
 #	
-# MarcusCOM: $Id: bsd.mozilla.mk,v 1.4 2004-06-28 02:25:02 marcus Exp $
+# MarcusCOM: $Id: bsd.mozilla.mk,v 1.5 2004-06-28 02:29:33 marcus Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -28,25 +28,15 @@ Mozilla_Pre_Include=			bsd.mozilla.mk
 # These can be overridden as necessary within port Makefiles.
 MOZ_DEVEL_SNAPSHOT_VER?=		1.8a
 MOZ_STABLE_SNAPSHOT_VER?=		1.7
-MOZ_GTK1_DEVEL_SNAPSHOT_VER?=	trunk
-MOZ_GTK1_STABLE_SNAPSHOT_VER?=	trunk
+MOZ_GTK1_STABLE_SNAPSHOT_VER?=	1.7
 
 .if defined(USE_MOZILLA_GTK1)
 
-.if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk1" || \
-	exists(${X11BASE}/bin/mozilla-devel)
-BUILD_DEPENDS+=			${X11BASE}/lib/mozilla-devel-gtk1/components/libgtkembedmoz.so:${PORTSDIR}/www/mozilla-devel-gtk1
-RUN_DEPENDS+=			${X11BASE}/lib/mozilla-devel-gtk1/components/libgtkembedmoz.so:${PORTSDIR}/www/mozilla-devel-gtk1
-MOZILLA_SNAPSHOT_VER=	${MOZ_GTK1_DEVEL_SNAPSHOT_VER}
-MOZILLA_INCLUDE_DIR=	${X11BASE}/include/mozilla-devel-gtk1
-MOZILLA_LIB_DIR=		${X11BASE}/lib/mozilla-devel-gtk1
-.else
 BUILD_DEPENDS+=			${X11BASE}/lib/mozilla-gtk1/components/libgtkembedmoz.so:${PORTSDIR}/www/mozilla-devel-gtk1
 RUN_DEPENDS+=			${X11BASE}/lib/mozilla-gtk1/components/libgtkembedmoz.so:${PORTSDIR}/www/mozilla-devel-gtk1
 MOZILLA_SNAPSHOT_VER=	${MOZ_GTK1_STABLE_SNAPSHOT_VER}
 MOZILLA_INCLUDE_DIR=	${X11BASE}/include/mozilla-gtk1
 MOZILLA_LIB_DIR=		${X11BASE}/lib/mozilla-gtk1
-.endif
 
 .else	# if defined(USE_MOZILLA_GTK1)
 
@@ -59,6 +49,7 @@ MOZILLA_INCLUDE_DIR=	${X11BASE}/include/mozilla-devel
 MOZILLA_LIB_DIR=		${X11BASE}/lib/mozilla-devel
 
 pre-patch: mozilla-pre-patch
+
 mozilla-pre-patch:
 	@${REINPLACE_CMD} -e "s|mozilla-gtkmozembed|mozilla-gtkmozembed-devel|g; \
 		s|mozilla-xpcom|mozilla-xpcom-devel|g; \
