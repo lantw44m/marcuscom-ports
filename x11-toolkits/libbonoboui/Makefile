@@ -26,4 +26,8 @@ INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
+post-patch:
+	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
+		's|libgnome\/gnome-i18n.h|glib/gi18n.h|g'
+
 .include <bsd.port.mk>
