@@ -1,0 +1,11 @@
+--- gst-mixer/gnome-volume-control.desktop.in.orig	Sat Feb 21 15:33:42 2004
++++ gst-mixer/gnome-volume-control.desktop.in	Sat Feb 21 15:33:56 2004
+@@ -2,7 +2,7 @@
+ Encoding=UTF-8
+ _Name=Volume Control
+ _Comment=Adjust the volume level
+-Exec=gst-mixer
++Exec=gnome-volume-control
+ Icon=gnome-mixer.png
+ StartupNotify=true
+ Info=Gnome Mixer
