@@ -436,7 +436,6 @@ share/locale/vi/LC_MESSAGES/gok.mo
 share/locale/zh_CN/LC_MESSAGES/gok.mo
 share/locale/zh_TW/LC_MESSAGES/gok.mo
 @dirrm share/gnome/omf/gok
-@dirrm share/gnome/help/gok/C/figures
 @dirrm share/gnome/help/gok/C
 @dirrm share/gnome/help/gok
 @dirrm share/gnome/gok/zh_TW
