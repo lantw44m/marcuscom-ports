@@ -2,14 +2,15 @@
 # Date Created:				05 October 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gnome-themes/Makefile,v 1.8 2003/04/04 07:46:10 marcus Exp $
+# $FreeBSD: ports/x11-toolkits/gnome-themes/Makefile,v 1.9 2003/04/16 14:38:10 marcus Exp $
 #
 
 PORTNAME=	gnome-themes
-PORTVERSION=	2.3.1
+PORTVERSION=	2.2.1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.2
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -24,7 +25,9 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_LIBTOOL=	yes
-USE_GNOME=	metacity
+USE_GNOME=	gnomehack metacity
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+	       	LIBS="-L${LOCALBASE}/lib"
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
