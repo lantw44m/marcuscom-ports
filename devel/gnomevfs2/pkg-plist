@@ -36,15 +36,18 @@ etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/mailto/%gconf.xm
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/man/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/trash/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/system/dns_sd/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/http_proxy/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/proxy/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/smb/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/%gconf.xml
+etc/gconf/gconf.xml.defaults/system/dns_sd/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/http_proxy/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/proxy/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/smb/%gconf.xml
 etc/gconf/schemas/desktop_default_applications.schemas
 etc/gconf/schemas/desktop_gnome_url_handlers.schemas
+etc/gconf/schemas/system_dns_sd.schemas
 etc/gconf/schemas/system_http_proxy.schemas
 etc/gconf/schemas/system_smb.schemas
 %%CDPARANOIA%%etc/gnome-vfs-2.0/modules/cdda-module.conf
@@ -63,6 +66,7 @@ include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-async-ops.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-cancellation.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-context.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-directory.h
+include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-dns-sd.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-drive.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-enum-types.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-file-info.h
@@ -103,6 +107,7 @@ lib/bonobo/monikers/libmoniker_gnome_vfs_std.so
 lib/gnome-vfs-2.0/modules/libbzip2.so
 %%CDPARANOIA%%lib/gnome-vfs-2.0/modules/libcdda.so
 lib/gnome-vfs-2.0/modules/libcomputer.so
+lib/gnome-vfs-2.0/modules/libdns-sd.so
 lib/gnome-vfs-2.0/modules/libextfs.so
 lib/gnome-vfs-2.0/modules/libfile.so
 lib/gnome-vfs-2.0/modules/libftp.so
@@ -278,10 +283,12 @@ share/locale/zh_TW/LC_MESSAGES/gnome-vfs-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/system/smb
 @dirrm etc/gconf/gconf.xml.defaults/system/proxy
 @dirrm etc/gconf/gconf.xml.defaults/system/http_proxy
+@dirrm etc/gconf/gconf.xml.defaults/system/dns_sd
 @dirrm etc/gconf/gconf.xml.defaults/system
 @dirrm etc/gconf/gconf.xml.defaults/schemas/system/smb
 @dirrm etc/gconf/gconf.xml.defaults/schemas/system/proxy
 @dirrm etc/gconf/gconf.xml.defaults/schemas/system/http_proxy
+@dirrm etc/gconf/gconf.xml.defaults/schemas/system/dns_sd
 @dirrm etc/gconf/gconf.xml.defaults/schemas/system
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/trash
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/man
