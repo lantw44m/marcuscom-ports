@@ -7,7 +7,7 @@
 
 PORTNAME=	gok
 PORTVERSION=	0.7.11
-CATEGORIES=	sysutils gnome
+CATEGORIES=	sysutils gnome accessibility
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.7
 DIST_SUBDIR=	gnome2
