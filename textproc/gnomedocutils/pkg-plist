@@ -40,9 +40,7 @@ share/gnome/help/gnome-doc-xslt/C/rngdoc.xml
 share/gnome/help/gnome-doc-xslt/C/translating.xml
 share/gnome/help/gnome-doc-xslt/C/xsldoc.xml
 share/omf/gnome-doc-make/gnome-doc-make-C.omf
-@exec scrollkeeper-install -q %D/share/omf/gnome-doc-make/gnome-doc-make-C.omf 2>/dev/null || /usr/bin/true
 share/omf/gnome-doc-xslt/gnome-doc-xslt-C.omf
-@exec scrollkeeper-install -q %D/share/omf/gnome-doc-xslt/gnome-doc-xslt-C.omf 2>/dev/null || /usr/bin/true
 share/xml/gnome/xslt/docbook/common/db-chunk.xsl
 share/xml/gnome/xslt/docbook/common/db-common.xsl
 share/xml/gnome/xslt/docbook/common/db-format.xsl
@@ -92,5 +90,3 @@ share/xml2po/gs.py
 @dirrm share/gnome/help/gnome-doc-xslt/C
 @dirrm share/gnome/help/gnome-doc-make/C
 @dirrm share/gnome-doc-utils
-@unexec scrollkeeper-uninstall -q %D/share/omf/gnome-doc-make/gnome-doc-make-C.omf 2>/dev/null || /usr/bin/true
-@unexec scrollkeeper-uninstall -q %D/share/omf/gnome-doc-xslt/gnome-doc-xslt-C.omf 2>/dev/null || /usr/bin/true

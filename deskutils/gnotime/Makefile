@@ -19,6 +19,7 @@ LIB_DEPENDS=	guile.15:${PORTSDIR}/lang/guile
 USE_GNOME=	gnomehack gnomeprefix gtkhtml3 libgnomeui
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
+INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib"

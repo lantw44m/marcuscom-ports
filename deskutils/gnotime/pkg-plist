@@ -73,11 +73,8 @@ share/gnome/help/gnotime/eu/figures/gtt_mainwin.png
 share/gnome/help/gnotime/eu/figures/gtt_prefswin.png
 share/gnome/help/gnotime/eu/gnotime.xml
 share/gnome/omf/gnotime/gnotime-C.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/gnotime/gnotime-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnotime/gnotime-es.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/gnotime/gnotime-es.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnotime/gnotime-eu.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/gnotime/gnotime-eu.omf 2>/dev/null || /usr/bin/true
 share/locale/az/LC_MESSAGES/gnotime-2.0.mo
 share/locale/bg/LC_MESSAGES/gnotime-2.0.mo
 share/locale/ca/LC_MESSAGES/gnotime-2.0.mo
@@ -131,6 +128,3 @@ share/locale/zh_TW/LC_MESSAGES/gnotime-2.0.mo
 @dirrm share/gnome/gnotime/ghtml
 @dirrm share/gnome/gnotime
 @dirrm include/gnotime
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnotime/gnotime-C.omf 2>/dev/null || /usr/bin/true
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnotime/gnotime-es.omf 2>/dev/null || /usr/bin/true
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnotime/gnotime-eu.omf 2>/dev/null || /usr/bin/true

@@ -18,6 +18,7 @@ LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
 
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
+INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui
 USE_GSTREAMER=	cdparanoia

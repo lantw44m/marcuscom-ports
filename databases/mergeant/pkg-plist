@@ -247,9 +247,7 @@ share/gnome/mergeant/ui/mergeant.xml
 share/gnome/mime-info/mergeant.keys
 share/gnome/mime-info/mergeant.mime
 share/gnome/omf/libmergeant/libmergeant-C.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/libmergeant/libmergeant-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/mergeant/mergeant-C.omf
-@exec scrollkeeper-install -q %D/share/gnome/omf/mergeant/mergeant-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/document-icons/gnome-application-x-mergeant.png
 share/gnome/pixmaps/mergeant/mergeant.png
 share/gnome/pixmaps/mergeant/mergeant_connect.png
@@ -311,5 +309,3 @@ share/locale/zh_CN/LC_MESSAGES/mergeant.mo
 @dirrm include/libmergeant/handlers
 @dirrm include/libmergeant/graph
 @dirrm include/libmergeant
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/libmergeant/libmergeant-C.omf 2>/dev/null || /usr/bin/true
-@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/mergeant/mergeant-C.omf 2>/dev/null || /usr/bin/true
