@@ -1,0 +1,34 @@
+# New ports collection makefile for:	gnomesystemmonitor
+# Date created:				09 May 2002
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD: ports/sysutils/gnomesystemmonitor/Makefile,v 1.43 2003/03/07 06:11:10 ade Exp $
+#
+
+PORTNAME=	gnomesystemmonitor
+PORTVERSION=	2.3.0
+CATEGORIES=	sysutils gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/gnome-system-monitor/2.3
+DISTNAME=	gnome-system-monitor-${PORTVERSION}
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	GNOME 2 system monitor program
+
+LIB_DEPENDS=	gtop-2.0.2:${PORTSDIR}/devel/libgtop2
+
+USE_BZIP2=	yes
+USE_X_PREFIX=	yes
+USE_GMAKE=	yes
+USE_REINPLACE=	yes
+USE_GNOME=	gnomeprefix gnomehack libgnomeui libwnck
+USE_LIBTOOL=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="-L${LOCALBASE}/lib -lutil"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>
