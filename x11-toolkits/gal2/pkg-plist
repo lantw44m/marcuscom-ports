@@ -188,8 +188,10 @@ share/gnome/gal-%%VERSION%%/%%PORTVERSION%%/pixmaps/categories/category_strategi
 share/gnome/gal-%%VERSION%%/%%PORTVERSION%%/pixmaps/categories/category_suppliers_16.png
 share/gnome/gal-%%VERSION%%/%%PORTVERSION%%/pixmaps/categories/category_time-and-expenses_16.png
 share/locale/am/LC_MESSAGES/gal-%%VERSION%%.mo
+share/locale/ar/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/be/LC_MESSAGES/gal-%%VERSION%%.mo
+share/locale/bg/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/bn/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/ca/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/cs/LC_MESSAGES/gal-%%VERSION%%.mo
