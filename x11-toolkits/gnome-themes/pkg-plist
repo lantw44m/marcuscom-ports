@@ -295,7 +295,10 @@ share/icons/HighContrastLargePrint/48x48/apps/window-capplet.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-cdrom-audio.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-cdrom.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-floppy.png
+share/icons/HighContrastLargePrint/48x48/emblems/emblem-important.png
 share/icons/HighContrastLargePrint/48x48/emblems/emblem-noread.png
+share/icons/HighContrastLargePrint/48x48/emblems/emblem-personal.png
+share/icons/HighContrastLargePrint/48x48/emblems/emblem-special.png
 share/icons/HighContrastLargePrint/48x48/filesystems/gnome-fs-directory-accept.icon
 share/icons/HighContrastLargePrint/48x48/filesystems/gnome-fs-directory-accept.png
 share/icons/HighContrastLargePrint/48x48/filesystems/gnome-fs-directory.icon
@@ -503,7 +506,10 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/window-capplet.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-cdrom-audio.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-cdrom.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-floppy.png
+share/icons/HighContrastLargePrintInverse/48x48/emblems/emblem-important.png
 share/icons/HighContrastLargePrintInverse/48x48/emblems/emblem-noread.png
+share/icons/HighContrastLargePrintInverse/48x48/emblems/emblem-personal.png
+share/icons/HighContrastLargePrintInverse/48x48/emblems/emblem-special.png
 share/icons/HighContrastLargePrintInverse/48x48/filesystems/gnome-fs-directory-accept.icon
 share/icons/HighContrastLargePrintInverse/48x48/filesystems/gnome-fs-directory-accept.png
 share/icons/HighContrastLargePrintInverse/48x48/filesystems/gnome-fs-directory.icon
