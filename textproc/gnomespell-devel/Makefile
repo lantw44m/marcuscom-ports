@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomespell
-PORTVERSION=	1.0.2
+PORTVERSION=	1.0.3
 CATEGORIES=	textproc gnome
 MASTER_SITES=	ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/ \
 		${MASTER_SITE_GNOME}
@@ -19,7 +19,7 @@ COMMENT=	A GNOME/Bonobo component for spell checking
 
 LIB_DEPENDS=	aspell.15:${PORTSDIR}/textproc/aspell
 
-#USE_BZIP2=	yes
+USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes

@@ -1,6 +1,6 @@
-lib/libgnome-spell-component-0.3.so
-lib/libgnome-spell-component.a
-lib/libgnome-spell-component.so
+lib/gnome-spell/libgnome-spell-component-0.3.so
+lib/gnome-spell/libgnome-spell-component.a
+lib/gnome-spell/libgnome-spell-component.so
 libdata/bonobo/servers/GNOME_Spell.server
 share/gnome/control-center-2.0/icons/spell-checker.png
 share/gnome/gnome-spell-%%VERSION%%/spell-checker.glade
@@ -38,3 +38,4 @@ share/locale/vi/LC_MESSAGES/gnome-spell-%%VERSION%%.mo
 share/locale/wa/LC_MESSAGES/gnome-spell-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-spell-%%VERSION%%.mo
 @dirrm share/gnome/gnome-spell-%%VERSION%%
+@dirrm lib/gnome-spell
