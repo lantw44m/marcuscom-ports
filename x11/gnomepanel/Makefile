@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomepanel
-PORTVERSION=	2.7.91.1
+PORTVERSION=	2.7.92
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/2.7
@@ -30,7 +30,7 @@ CONFIGURE_ARGS=	--with-kde-datadir=${LOCALBASE}/share \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-MAN1=		gnome-panel.1 gnome-panel-preferences.1
+MAN1=		gnome-panel.1
 GCONF_SCHEMAS=	clock.schemas fish.schemas gnome-panel-screenshot.schemas \
 		panel-compatibility.schemas panel-general.schemas \
 		panel-global.schemas panel-object.schemas \
