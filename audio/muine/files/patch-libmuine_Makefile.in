@@ -1,0 +1,23 @@
+--- libmuine/Makefile.in.orig	Sun Feb 20 14:21:04 2005
++++ libmuine/Makefile.in	Sun Feb 20 14:21:27 2005
+@@ -210,19 +210,12 @@
+ INCLUDES = \
+ 	-I$(top_srcdir)						\
+         -DG_LOG_DOMAIN=\"libmuine\"				\
+-	-DG_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED		\
+-	-DGDK_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED	\
+ 	-DGNOMELOCALEDIR=\""$(prefix)/share/locale"\"		\
+ 	$(MUINE_CFLAGS)						\
+ 	$(OGG_CFLAGS)						\
+ 	$(VORBIS_CFLAGS)					\
+ 	$(VORBISFILE_CFLAGS)					\
+-	$(WARN_CFLAGS)						\
+-	-DG_DISABLE_DEPRECATED					\
+-	-DGTK_DISABLE_DEPRECATED				\
+-	-DGDK_DISABLE_DEPRECATED				\
+-	-DGDK_PIXBUF_DISABLE_DEPRECATED				\
+-	-DGNOME_DISABLE_DEPRECATED
++	$(WARN_CFLAGS)
+ 
+ 
+ muinelibdir = $(prefix)/lib/muine
