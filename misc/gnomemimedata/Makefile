@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomemimedata
-PORTVERSION=	2.3.1
+PORTVERSION=	2.3.2
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-mime-data/2.3
