@@ -1,6 +1,6 @@
---- ltmain.sh.orig	Fri Sep 13 15:38:11 2002
-+++ ltmain.sh	Fri Oct 11 01:44:24 2002
-@@ -1073,8 +1073,16 @@
+--- ltmain.sh.orig	Fri Mar  5 10:05:44 2004
++++ ltmain.sh	Mon Jul  5 17:36:23 2004
+@@ -1364,8 +1364,16 @@
  	continue
  	;;
  
@@ -17,17 +17,25 @@
  	continue
  	;;
  
-@@ -2502,6 +2510,9 @@
- 	  *-*-openbsd*)
- 	    # Do not include libc due to us having libc/libc_r.
+@@ -1849,6 +1857,7 @@
+ 	    finalize_deplibs="$deplib $finalize_deplibs"
+ 	  else
+ 	    deplibs="$deplib $deplibs"
++	    test "$linkmode" = lib && newdependency_libs="$deplib $newdependency_libs"
+ 	  fi
+ 	  continue
+ 	  ;;
+@@ -3059,6 +3068,9 @@
+ 	    # problems, so we reset it completely
+ 	    verstring=
  	    ;;
 +	  *-*-freebsd*)
 +	    # FreeBSD doesn't need this...
 +	    ;;
  	  *)
- 	    # Add libc to deplibs on all other systems if necessary.
- 	    if test $build_libtool_need_lc = "yes"; then
-@@ -4286,10 +4297,12 @@
+ 	    verstring="0.0"
+ 	    ;;
+@@ -5531,10 +5543,12 @@
  	fi
  
  	# Install the pseudo-library for information purposes.

@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gtkhtml3
-PORTVERSION=	3.1.16
+PORTVERSION=	3.1.17
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/3.1
@@ -25,7 +25,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gail libgnomeui libgnomeprintui
 INSTALLS_SHLIB=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 PLIST_SUB=	VERSION="3.1"
 
