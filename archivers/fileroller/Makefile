@@ -7,6 +7,7 @@
 
 PORTNAME=	fileroller
 PORTVERSION=	2.9.91
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -16,6 +17,8 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An archive manager for zip files, tar, etc
+
+RUN_DEPENDS=	gtar:${PORTSDIR}/archivers/gtar
 
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
