@@ -1,5 +1,5 @@
---- src/daemon/Makefile.in.orig	Fri Nov 14 14:38:11 2003
-+++ src/daemon/Makefile.in	Fri Nov 14 14:59:16 2003
+--- src/daemon/Makefile.in.orig	Tue Jan  6 21:32:29 2004
++++ src/daemon/Makefile.in	Tue Jan  6 21:41:46 2004
 @@ -86,7 +86,7 @@
  LIBGTOP_EXTRA_LIBS = @LIBGTOP_EXTRA_LIBS@
  LIBGTOP_INCS = @LIBGTOP_INCS@
@@ -9,11 +9,18 @@
  LIBGTOP_MAJOR_VERSION = @LIBGTOP_MAJOR_VERSION@
  LIBGTOP_MICRO_VERSION = @LIBGTOP_MICRO_VERSION@
  LIBGTOP_MINOR_VERSION = @LIBGTOP_MINOR_VERSION@
-@@ -160,6 +160,7 @@
+@@ -160,11 +160,14 @@
  				  @sysdeps_suid_lib@ \
  				  $(suid_sysdeps) $(suid_common)\
  				  $(LIBGTOP_LIBS)\
 +				  $(GLIB_LIBS) \
++				  -lpopt \
  				  @libs_xauth@
+ 
+ 
+ libgtop_server2_SOURCES = server.c slave.c io.c version.c daemon.h
+ libgtop_server2_LDADD = $(GLIB_LIBS) $(top_builddir)/sysdeps/@sysdeps_dir@/libgtop_sysdeps_suid-2.0.la \
++				  -lpopt \
+ 				  $(top_builddir)/sysdeps/common/libgtop_suid_common-2.0.la
  
  

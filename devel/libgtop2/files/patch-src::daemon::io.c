@@ -16,7 +16,7 @@
  	if (s == 0) {
 -		if (write (1, (const void *) resp, sizeof (glibtop_response)) < 0)
 +		if (write (1, (const void *) resp, sizeof (glibtop_response)) < 0) {
-+			if (errno == EINTR || errno == EAGAIN)
++			if (errno == EINTR)
 +				goto retry1;
  			glibtop_warn_io ("write");
 +		}
@@ -32,7 +32,7 @@
  		if (s == 0) {
 -			if (write (1, data, resp->data_size) < 0)
 +			if (write (1, data, resp->data_size) < 0) {
-+				if (errno == EINTR || errno == EAGAIN)
++				if (errno == EINTR)
 +					goto retry2;
  				glibtop_warn_io ("write");
 +			}
@@ -51,7 +51,7 @@
  		}
  
  		if (nread <= 0) {
-+			if (errno == EINTR || errno == EAGAIN)
++			if (errno == EINTR)
 +				goto retry;
  			glibtop_warn_io ("recv");
  			return 0;
