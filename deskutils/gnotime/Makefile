@@ -21,10 +21,16 @@ USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
+USE_REINPLACE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		gnotime.1
 GCONF_SCHEMAS=	gnotime.schemas
+
+# until a new version comes out...
+post-patch:
+	@${REINPLACE_CMD} -e "s|gtkhtml-3.1|gtkhtml-3.6|g" \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
