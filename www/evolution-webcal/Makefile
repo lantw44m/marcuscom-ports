@@ -2,7 +2,7 @@
 # Date created:				Mon Apr 26 18:08:00 CEST 2004
 # Whom:					Koop Mast <kwm@rainbow-runner.nl>
 #
-# $FreeBSD: ports/www/evolution-webcal/Makefile,v 1.2 2004/11/10 03:19:14 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	webcal
