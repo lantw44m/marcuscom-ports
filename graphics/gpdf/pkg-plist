@@ -15,6 +15,7 @@ share/gnome/gnome-2.0/ui/gpdf-window-ui.xml
 share/gnome/gpdf/glade/gpdf-print-progress-dialog.glade
 share/gnome/gpdf/glade/gpdf-properties-dialog.glade
 share/gnome/help/gpdf/C/figures/gpdf_start_window.png
+share/gnome/help/gpdf/C/figures/gpdf_window.png
 share/gnome/help/gpdf/C/gpdf.xml
 share/gnome/help/gpdf/C/legal.xml
 share/gnome/help/gpdf/es/figures/gpdf_start_window.png
@@ -76,6 +77,7 @@ share/locale/pt_BR/LC_MESSAGES/gpdf.mo
 share/locale/ro/LC_MESSAGES/gpdf.mo
 share/locale/ru/LC_MESSAGES/gpdf.mo
 share/locale/sk/LC_MESSAGES/gpdf.mo
+share/locale/sl/LC_MESSAGES/gpdf.mo
 share/locale/sq/LC_MESSAGES/gpdf.mo
 share/locale/sr/LC_MESSAGES/gpdf.mo
 share/locale/sr@Latn/LC_MESSAGES/gpdf.mo
