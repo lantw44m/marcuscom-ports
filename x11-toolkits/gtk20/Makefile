@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.1.4
+PORTVERSION=	2.1.5
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.1,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.0/ \
@@ -42,7 +42,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
-PLIST_SUB=	GTK_VERSION="2.0.103"
+PLIST_SUB=	GTK_VERSION="2.2.0"
 
 MAN1=		gdk-pixbuf-csource.1
 
