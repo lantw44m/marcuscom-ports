@@ -12,6 +12,7 @@ include/libgnomeprint-2.2/libgnomeprint/gnome-rfont.h
 include/libgnomeprint-2.2/libgnomeprint/gp-gc.h
 include/libgnomeprint-2.2/libgnomeprint/libgnomeprint-enum-types.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-font-private.h
+include/libgnomeprint-2.2/libgnomeprint/private/gnome-glyphlist-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gp-gc-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gpa-node.h
