@@ -2145,6 +2145,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/accessx-status/C/figures
 @dirrm share/gnome/help/accessx-status/C
 @dirrm share/gnome/help/accessx-status
+@dirrm share/gnome/gweather
 @dirrm share/gnome/gswitchit
 @dirrm share/gnome/gkb
 @dirrm share/gnome/geyes/Horrid
@@ -2152,6 +2153,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/geyes/Default
 @dirrm share/gnome/geyes/Bloodshot
 @dirrm share/gnome/geyes/Bizarre
+@dirrm share/gnome/geyes
 @dirrm share/gnome/gen_util
 %%BATTERY%%@dirrm share/gnome/battstat_applet
 @dirrm libexec/gnome-applets
