@@ -555,14 +555,8 @@ _USE_GNOME+=	${${component}_USE_GNOME_IMPL} ${component}
 _COMP_TEST=	${_USE_GNOME:M${component}}
 .  if ${_COMP_TEST:S/${component}//}!=${_COMP_TEST:S/  / /g}
 BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
-#######################################################
-#
-# *** WARNING: DO NOT MERGE THIS NEXT LINE TO FREEBSD
-#
-.if !defined(NODEPENDS)
 LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
 RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
-.endif
 
 CONFIGURE_ARGS+=${${component}_CONFIGURE_ARGS}
 CONFIGURE_ENV+=	${${component}_CONFIGURE_ENV}
