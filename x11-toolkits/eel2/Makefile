@@ -6,13 +6,12 @@
 #
 
 PORTNAME=	eel2
-PORTVERSION=	2.7.3
-PORTREVISION=	1
+PORTVERSION=	2.7.4
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.7
-DIST_SUBDIR=	gnome2
 DISTNAME=	eel-${PORTVERSION}
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Generally useful classes and extensions to GNOME
