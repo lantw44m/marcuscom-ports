@@ -5,7 +5,7 @@
  	xdg_data_dirs = g_getenv ("XDG_DATA_DIRS");
  	if (!xdg_data_dirs) {
 -		xdg_data_dirs = "/usr/local/share/:/usr/share/";
-+		xdg_data_dirs = "/usr/local/share/:%%X11BASE%%/share/:/usr/share/:/usr/local/share/gnome:%%X11BASE%%/share/gnome/:/usr/share/gnome/";
++		xdg_data_dirs = "%%X11BASE%%/share/gnome/:/usr/local/share/gnome/:%%X11BASE%%/share/:/usr/local/share/:/usr/share/";
  	}
  	
  	split_data_dirs = g_strsplit (xdg_data_dirs, ":", 0);
