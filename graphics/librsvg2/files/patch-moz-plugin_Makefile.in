@@ -1,0 +1,27 @@
+--- moz-plugin/Makefile.in.orig	Tue Jan 25 23:31:56 2005
++++ moz-plugin/Makefile.in	Tue Jan 25 23:32:32 2005
+@@ -252,15 +252,15 @@
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@ $(am__depfiles_maybe)
+ pluginLTLIBRARIES_INSTALL = $(INSTALL)
+ install-pluginLTLIBRARIES: $(plugin_LTLIBRARIES)
+-	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(plugindir)
+-	@list='$(plugin_LTLIBRARIES)'; for p in $$list; do \
+-	  if test -f $$p; then \
+-	    f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	    echo " $(LIBTOOL) --mode=install $(pluginLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(plugindir)/$$f"; \
+-	    $(LIBTOOL) --mode=install $(pluginLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(plugindir)/$$f; \
+-	  else :; fi; \
+-	done
++#	@$(NORMAL_INSTALL)
++#	$(mkinstalldirs) $(DESTDIR)$(plugindir)
++#	@list='$(plugin_LTLIBRARIES)'; for p in $$list; do \
++#	  if test -f $$p; then \
++#	    f="`echo $$p | sed -e 's|^.*/||'`"; \
++#	    echo " $(LIBTOOL) --mode=install $(pluginLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(plugindir)/$$f"; \
++#	    $(LIBTOOL) --mode=install $(pluginLTLIBRARIES_INSTALL) $(INSTALL_STRIP_FLAG) $$p $(DESTDIR)$(plugindir)/$$f; \
++#	  else :; fi; \
++#	done
+ 
+ uninstall-pluginLTLIBRARIES:
+ 	@$(NORMAL_UNINSTALL)
