@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome
-PORTVERSION=	2.9.2
+PORTVERSION=	2.9.3
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -19,34 +19,53 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A set of Python bindings for GNOME 2
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/_gnome.so:${PORTSDIR}/x11-toolkits/py-gnome2
+LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2 \
+		gtop-2.0.2:${PORTSDIR}/devel/libgtop2 \
+		totem-plparser.0:${PORTSDIR}/multimedia/totem-gstreamer
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/_gnome.so:${PORTSDIR}/x11-toolkits/py-gnome2
 
-LIB_DEPENDS+=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2
+MOZILLA=	mozilla
+HEADERS_SUFX=
 
-LATEST_LINK=	py-gnome-extras
+.if !defined(WITH_MOZILLA)
+MOZILLA=	mozilla
+HEADERS_SUFX=
+.else
+.if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
+MOZILLA=	mozilla-devel
+HEADERS_SUFX=	-devel
+.else
+MOZILLA=	mozilla
+HEADERS_SUFX=
+.endif
+.endif
+
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gnomehack libgnomeprintui libgtkhtml gnomepanel \
-		gtksourceview libwnck
+		gtksourceview libwnck nautiluscdburner
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 EG_SRC_DIR=	${WRKSRC}/examples
 EG_DST_DIR=	${PREFIX}/share/examples/py-gnome
 
-CONFLICTS=	py*-gnome-1*
-
 .include <bsd.port.pre.mk>
 
-.if exists(${X11BASE}/libdata/pkgconfig/mozilla-gtkmozembed.pc) || defined(WITH_MOZILLA)
-BUILD_DEPENDS+=	${X11BASE}/lib/mozilla/components/libwidget_gtk2.so:${PORTSDIR}/www/mozilla
-RUN_DEPENDS+=	${X11BASE}/lib/mozilla/components/libwidget_gtk2.so:${PORTSDIR}/www/mozilla
-PLIST_SUB+=	MOZILLA=""
-.else
-PLIST_SUB+=	MOZILLA="@comment "
+.if ${OSVERSION} < 500000
+.if ${MOZILLA}=="mozilla-devel"
+USE_GCC=	3.4
 .endif
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|mozilla-gtkmozembed|mozilla-gtkmozembed${HEADERS_SUFX}|g ; \
+		s|mozilla-xpcom|mozilla-xpcom${HEADERS_SUFX}|g ; \
+		s|$$MOZILLA-gtkmozembed|$$MOZILLA-gtkmozembed${HEADERS_SUFX}|g ; \
+		s|$$MOZILLA-xpcom|$$MOZILLA-xpcom${HEADERS_SUFX}|g' \
+		${WRKSRC}/configure
 
 .if !defined(NOPORTDOCS)
 post-install:
@@ -58,10 +77,11 @@ post-install:
 .endif
 
 pre-everything::
-.ifndef(WITH_MOZILLA)
 	@${ECHO_MSG} ""
-	@${ECHO_MSG} "Set WITH_MOZILLA to enable build of python gtkmozembed module"
+	@${ECHO_MSG} " By default py-gnome-extras uses www/mozilla for html rendering, but you can"
+	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
+	@${ECHO_MSG}
+	@${ECHO_MSG} "  mozilla-devel "
 	@${ECHO_MSG} ""
-.endif
 
 .include <bsd.port.post.mk>
