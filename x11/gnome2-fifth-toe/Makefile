@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome2-fifth-toe
-PORTVERSION=	2.3.5
+PORTVERSION=	2.3.6
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -40,6 +40,7 @@ RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric2 \
 		gcompris:${PORTSDIR}/games/gcompris2 \
 		galeon:${PORTSDIR}/www/galeon2 \
 		gswitchit-properties-capplet:${PORTSDIR}/x11/gswitchit \
+		totem:${PORTSDIR}/multimedia/totem \
 		seahorse:${PORTSDIR}/security/seahorse \
 		workrave:${PORTSDIR}/x11/workrave
 
