@@ -1,6 +1,6 @@
---- configure.orig	Tue Jun  1 20:52:34 2004
-+++ configure	Tue Jun  1 20:52:55 2004
-@@ -22992,7 +22992,7 @@
+--- configure.orig	Thu Jul 22 13:59:05 2004
++++ configure	Thu Jul 22 15:12:55 2004
+@@ -23429,7 +23429,7 @@
  
  		case $with_static_ldap in
  		no|"")
@@ -9,3 +9,12 @@
  				with_static_ldap=no
  			else
  				with_static_ldap=yes
+@@ -23985,7 +23985,7 @@
+ fi;
+ 
+ mitlibs="-lkrb5 -lk5crypto -lcom_err -lgssapi_krb5"
+-heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi"
++heimlibs="-lkrb5 -lcrypt -lcrypto -lasn1 -lcom_err -lroken -lgssapi"
+ echo "$as_me:$LINENO: checking for Kerberos 5" >&5
+ echo $ECHO_N "checking for Kerberos 5... $ECHO_C" >&6
+ if test "${ac_cv_lib_kerberos5+set}" = set; then
