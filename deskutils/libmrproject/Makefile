@@ -7,6 +7,7 @@
 
 PORTNAME=	libmrproject
 PORTVERSION=	0.10
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.10
@@ -16,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library backend for MrProject project management application
 
 USE_BZIP2=	yes
-USE_XLIB=	yes
+USE_X_PREFIX=	yes
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnometarget libgsf

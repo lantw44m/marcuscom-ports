@@ -20,7 +20,6 @@ lib/libmrproject.so.0
 lib/mrproject/file-modules/libmrp-xml.so
 lib/mrproject/file-modules/libmrp-xsl.so
 lib/mrproject/storage-modules/libstorage-mrproject-1.so
-lib/python2.3/site-packages/mrprojectmodule.so
 libdata/pkgconfig/libmrproject.pc
 %%DOCSDIR%%/MrpAssignment.html
 %%DOCSDIR%%/MrpCalendar.html
@@ -90,3 +89,5 @@ share/locale/zh_CN/LC_MESSAGES/libmrproject.mo
 @dirrm lib/mrproject
 @dirrm include/mrproject-1.0/mrproject
 @dirrm include/mrproject-1.0
+@cwd %%LOCALBASE%%
+lib/python2.3/site-packages/mrprojectmodule.so
