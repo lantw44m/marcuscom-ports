@@ -3,6 +3,7 @@ bin/gnomevfs-copy
 bin/gnomevfs-info
 bin/gnomevfs-ls
 bin/gnomevfs-mkdir
+etc/gconf/gconf.xml.defaults/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/applications/%gconf.xml
@@ -260,6 +261,7 @@ share/locale/is/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/li/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-vfs-2.0.mo
