@@ -1,10 +1,10 @@
---- configure.orig	Sat Apr 12 00:04:35 2003
-+++ configure	Sat Apr 12 00:05:32 2003
-@@ -5218,6 +5218,7 @@
- # which needs '.lib').
- libext=a
- ltmain="$ac_aux_dir/ltmain.sh"
+--- configure.orig	Wed Dec 11 18:31:51 2002
++++ configure	Thu Dec 12 12:07:17 2002
+@@ -7414,6 +7414,7 @@
+ 
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
 +$ac_aux_dir/ltconfig $LIBTOOL_DEPS
- ofile="$default_ofile"
- with_gnu_ld="$lt_cv_prog_gnu_ld"
- need_locks="$enable_libtool_lock"
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'

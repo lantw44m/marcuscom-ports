@@ -3,7 +3,6 @@ etc/gconf/gconf.xml.defaults/apps/ghex2/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/ghex2/%gconf.xml
 etc/gconf/schemas/ghex2.schemas
 lib/libgtkhex.a
-lib/libgtkhex.la
 lib/libgtkhex.so
 lib/libgtkhex.so.0
 libdata/pkgconfig/gtkhex.pc
