@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	libgtk-java
-PORTVERSION=	2.3.5
-PORTREVISION=	1
+PORTVERSION=	2.3.6
 CATEGORIES=	x11-toolkits java
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -26,21 +25,22 @@ CONFIGURE_ARGS=	--without-gcj-compile \
 		--with-java-prefix=${JAVA_HOME}
 CONFIGURE_ENV=	DB2="/dev/null"
 
-GTK_API_VERSION=	2.3
+GTK_API_VERSION=	2.4
+VERSION=		beta1
 PLIST_SUB=		GTK_API_VERSION=${GTK_API_VERSION} \
-			PORTVERSION=${PORTVERSION}
+			PORTVERSION=${VERSION}
 
 PKGMESSAGE=		${WRKDIR}/pkg-message
 
 do-install:
 	${MKDIR} ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/gtk/lib/libgtkjava${GTK_API_VERSION}.so.${PORTVERSION} \
+	${INSTALL_DATA} ${WRKSRC}/gtk/lib/libgtkjava${GTK_API_VERSION}.so.${VERSION} \
 		${PREFIX}/lib
-	${LN} -sf ${PREFIX}/lib/libgtkjava${GTK_API_VERSION}.so.${PORTVERSION} ${PREFIX}/lib/libgtkjava${GTK_API_VERSION}.so
+	${LN} -sf ${PREFIX}/lib/libgtkjava${GTK_API_VERSION}.so.${VERSION} ${PREFIX}/lib/libgtkjava${GTK_API_VERSION}.so
 	${MKDIR} ${JAVAJARDIR}
-	${INSTALL_DATA} ${WRKSRC}/gtk/lib/gtk${GTK_API_VERSION}-${PORTVERSION}.jar \
+	${INSTALL_DATA} ${WRKSRC}/gtk/lib/gtk${GTK_API_VERSION}-${VERSION}.jar \
 		${JAVAJARDIR}
-	${LN} -sf ${JAVAJARDIR}/gtk${GTK_API_VERSION}-${PORTVERSION}.jar \
+	${LN} -sf ${JAVAJARDIR}/gtk${GTK_API_VERSION}-${VERSION}.jar \
 		${JAVAJARDIR}/gtk${GTK_API_VERSION}.jar
 
 post-install:
