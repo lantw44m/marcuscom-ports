@@ -1,5 +1,5 @@
 --- src/netstatus-sysdeps.c.orig	Tue Mar 30 04:25:42 2004
-+++ src/netstatus-sysdeps.c	Wed Jun  9 15:17:03 2004
++++ src/netstatus-sysdeps.c	Thu Jun 10 13:29:42 2004
 @@ -35,6 +35,16 @@
  #include <glib.h>
  #include <libgnome/gnome-i18n.h>
@@ -17,7 +17,7 @@
  static inline gboolean
  parse_stats (char  *buf,
  	     int    prx_idx,
-@@ -385,6 +395,130 @@
+@@ -385,6 +395,131 @@
       }
  }
  
@@ -44,6 +44,7 @@
 +
 +  if (ioctl (s, req_type, &ifr) == -1) {
 +    *error = g_strdup_printf (_("Could not send ioctl to interface, '%s'"), iface);
++    close (s);
 +    return FALSE;
 +  }
 +
@@ -148,7 +149,7 @@
  char *
  netstatus_sysdeps_read_iface_statistics (const char *iface,
  					 long       *in_packets,
-@@ -486,23 +620,6 @@
+@@ -486,23 +621,6 @@
    g_strfreev (argv);
  
    return error_message;
