@@ -120,6 +120,7 @@ lib/gstreamer-%%VERSION%%/libgstsmpte.so
 %%PNG%%lib/gstreamer-%%VERSION%%/libgstsnapshot.so
 lib/gstreamer-%%VERSION%%/libgstspectrum.so
 lib/gstreamer-%%VERSION%%/libgstspeed.so
+%%SPEEX%%lib/gstreamer-%%VERSION%%/libgstspeex.so
 lib/gstreamer-%%VERSION%%/libgststereo.so
 %%SWFDEC%%lib/gstreamer-%%VERSION%%/libgstswfdec.so
 lib/gstreamer-%%VERSION%%/libgstsynaesthesia.so
@@ -141,6 +142,7 @@ lib/gstreamer-%%VERSION%%/libgstvolume.so
 %%VORBIS%%lib/gstreamer-%%VERSION%%/libgstvorbis.so
 lib/gstreamer-%%VERSION%%/libgstwavenc.so
 lib/gstreamer-%%VERSION%%/libgstwavparse.so
+%%XVID%%lib/gstreamer-%%VERSION%%/libgstxvid.so
 lib/gstreamer-%%VERSION%%/libgstxvideosink.so
 lib/gstreamer-%%VERSION%%/libgstxwindowlistener.a
 lib/gstreamer-%%VERSION%%/libgstxwindowlistener.so

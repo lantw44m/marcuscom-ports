@@ -277,6 +277,11 @@ WITH_VORBIS=yes
 #WITH_XMMS=yes
 .endif
 
+# xvid
+.if exists(${LOCALBASE}/lib/libxvidcore.so.2)
+WITH_XVID=yes
+.endif
+
 ##
 ## control CONFIGURE options
 ##
@@ -589,6 +594,15 @@ CONFIGURE_ENV+=		SDL_CONFIG=${SDL_CONFIG}
 PLIST_SUB+=	SDL=""
 .endif
 
+# speex
+.ifndef(WITH_SPEEX)
+CONFIGURE_ARGS+=	--disable-speex
+PLIST_SUB+=	SPEEX="@comment "
+.else
+LIB_DEPENDS+=	speex.2:${PORTSDIR}/audio/speex
+PLIST_SUB+=	SPEEX=""
+.endif
+
 # swfdec
 .ifndef(WITH_SWFDEC)
 CONFIGURE_ARGS+=	--disable-swfdec
@@ -625,6 +639,15 @@ CONFIGURE_ARGS+=	--with-xmms-prefix=${X11BASE} \
 			--with-xmms-exec-prefix=${X11BASE}
 CONFIGURE_ENV+=		XMMS_CONFIG=${XMMS_CONFIG}
 PLIST_SUB+=	XMMS=""
+.endif
+
+# xvid
+.ifndef(WITH_XVID)
+CONFIGURE_ARGS+=	--disable-xvid
+PLIST_SUB+=	XVID="@comment "
+.else
+LIB_DEPENDS+=	xvidcore.2:${PORTSDIR}/multimedia/xvid
+PLIST_SUB+=	XVID=""
 .endif
 
 pre-everything::
@@ -755,6 +778,10 @@ pre-everything::
 .ifndef(WITH_XMMS)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_XMMS to enable xmms Audio plugin'
+.endif
+.ifndef(WITH_XVID)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_XVID to enable xvid Video plgin'
 .endif
 
 .include <bsd.port.post.mk>
