@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	1.5
+PORTVERSION=	1.5.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An integrated mail, calendar and address book distributed suite
 
-LIB_DEPENDS=	edataserver.0:${PORTSDIR}/databases/evolution-data-server \
+LIB_DEPENDS=	edataserver.1:${PORTSDIR}/databases/evolution-data-server \
 		nss3.1:${PORTSDIR}/security/nss
 
 RUN_DEPENDS=	${X11BASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnomespell
@@ -58,7 +58,8 @@ PLIST_SUB=	PILOT:=""
 PLIST_SUB=	PILOT:="@comment "
 .endif
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="${PTHREAD_LIBS} -L${LOCALBASE}/lib"
+		LIBS="${PTHREAD_LIBS}" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 PLIST_SUB+=	VERSION=${EVO_VERSION}
 PKGINSTALL=	${WRKDIR}/pkg-install
