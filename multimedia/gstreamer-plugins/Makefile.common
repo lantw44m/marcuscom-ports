@@ -137,7 +137,7 @@ LIB_DEPENDS+=	cdda_interface.0:${PORTSDIR}/audio/cdparanoia
 
 # dirac
 .if ${GST_PLUGIN}=="dirac"
-BUILD_DEPENDS+=	${LOCALBASE}/lib/libconv_common.a:${PORTSDIR}/multimedia/dirac
+LIB_DEPENDS+=	dirac_encoder.0:${PORTSDIR}/multimedia/dirac
 .endif
 
 # dts
@@ -207,7 +207,7 @@ LIB_DEPENDS+=	musepack.1:${PORTSDIR}/audio/libmusepack
 
 # hermes
 .if ${GST_PLUGIN}=="hermes"
-LIB_DEPENDS+	Hermes.1:${PORTSDIR}/graphics/Hermes
+LIB_DEPENDS+=	Hermes.1:${PORTSDIR}/graphics/Hermes
 PLIST_FILES=	${GST_LIB_DIR}/libgsthermescolorspace.so
 .endif
 
