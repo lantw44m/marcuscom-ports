@@ -7,6 +7,7 @@
 
 PORTNAME=	gtk
 PORTVERSION=	2.5.6
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.5,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.5/ \
@@ -72,5 +73,8 @@ post-patch:
 
 pre-build:
 	@${RM} -rf ${WRKSRC}/docs/gtk.info*
+
+post-install:
+	${MKDIR} ${PREFIX}/lib/gtk-2.0/modules
 
 .include <bsd.port.mk>
