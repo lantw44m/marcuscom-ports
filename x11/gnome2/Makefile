@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.3.0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -48,6 +49,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gcalctool:${PORTSDIR}/math/gcalctool \
 		gucharmap:${PORTSDIR}/misc/gucharmap \
 		zenity:${PORTSDIR}/x11/zenity \
+		battfink:${PORTSDIR}/sysutils/battfink \
 		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media
 
 NO_BUILD=	yes
