@@ -1,4 +1,6 @@
 bin/nautilus
+bin/nautilus-file-management-properties
+bin/nautilus-server-connect
 etc/X11/serverconfig/.directory
 etc/X11/starthere/.directory
 etc/X11/starthere/applications.desktop
@@ -33,6 +35,7 @@ include/libnautilus/nautilus-view-standard-main.h
 include/libnautilus/nautilus-view.h
 lib/bonobo/libnautilus-emblem-view.so
 lib/bonobo/libnautilus-history-view.so
+lib/bonobo/libnautilus-image-properties-view.so
 lib/bonobo/libnautilus-notes-view.so
 lib/bonobo/libnautilus-tree-view.so
 lib/libnautilus-adapter.a
@@ -49,7 +52,7 @@ libdata/bonobo/servers/Nautilus_Control_throbber.server
 libdata/bonobo/servers/Nautilus_View_content-loser.server
 libdata/bonobo/servers/Nautilus_View_emblem.server
 libdata/bonobo/servers/Nautilus_View_history.server
-libdata/bonobo/servers/Nautilus_View_music.server
+libdata/bonobo/servers/Nautilus_View_image_properties.server
 libdata/bonobo/servers/Nautilus_View_notes.server
 libdata/bonobo/servers/Nautilus_View_sample.server
 libdata/bonobo/servers/Nautilus_View_sidebar-loser.server
@@ -59,12 +62,13 @@ libdata/bonobo/servers/Nautilus_shell.server
 libdata/pkgconfig/libnautilus.pc
 libexec/nautilus-adapter
 libexec/nautilus-content-loser
-libexec/nautilus-music-view
 libexec/nautilus-sample-content-view
 libexec/nautilus-sidebar-loser
 libexec/nautilus-text-view
 libexec/nautilus-throbber
 share/gnome/applications/nautilus.desktop
+share/gnome/applications/nautilus-file-management-properties.desktop
+share/gnome/applications/network-scheme.desktop
 share/gnome/gnome-2.0/ui/nautilus-clipboard-ui.xml
 share/gnome/gnome-2.0/ui/nautilus-content-loser-ui.xml
 share/gnome/gnome-2.0/ui/nautilus-desktop-icon-view-ui.xml
@@ -79,6 +83,8 @@ share/gnome/idl/nautilus-view-component.idl
 share/gnome/nautilus/browser.xml
 share/gnome/nautilus/filesystem-attributes.xml
 share/gnome/nautilus/glade/nautilus-bookmarks-window.glade
+share/gnome/nautilus/glade/nautilus-file-management-properties.glade
+share/gnome/nautilus/glade/nautilus-server-connect.glade
 share/gnome/nautilus/nautilus-extras.placeholder
 share/gnome/nautilus/nautilus-suggested.placeholder
 share/gnome/nautilus/patterns/.striated.png
@@ -118,6 +124,7 @@ share/gnome/nautilus/services/text/webster.xml
 share/gnome/nautilus/starthere-link.desktop
 share/gnome/nautilus/starthere.desktop
 share/gnome/nautilus/static_bookmarks.xml
+share/gnome/network/nautilus-server-connect.desktop
 share/gnome/pixmaps/gnome-starthere-96.png
 share/gnome/pixmaps/gnome-starthere.png
 share/gnome/pixmaps/nautilus/CD_drive.png
@@ -234,6 +241,7 @@ share/gnome/pixmaps/nautilus/knob.png
 share/gnome/pixmaps/nautilus/memory_chip.gif
 share/gnome/pixmaps/nautilus/nautilus-launch-icon.png
 share/gnome/pixmaps/nautilus/nautilus-mini-logo.png
+share/gnome/pixmaps/nautilus/nautilus-server-connect.png
 share/gnome/pixmaps/nautilus/note-indicator.png
 share/gnome/pixmaps/nautilus/number_strip.png
 share/gnome/pixmaps/nautilus/sierra/green_weave.png
@@ -318,6 +326,7 @@ share/locale/vi/LC_MESSAGES/nautilus.mo
 share/locale/zh_CN/LC_MESSAGES/nautilus.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus.mo
 @dirrm share/gnome/pixmaps/nautilus/default
+@dirrm share/gnome/network
 @dirrm share/gnome/nautilus/glade
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/nautilus/sidebar_panels/tree
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/nautilus/sidebar_panels

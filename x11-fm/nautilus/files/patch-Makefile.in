@@ -1,11 +1,10 @@
---- Makefile.in.orig	Mon Oct 14 22:08:24 2002
-+++ Makefile.in	Mon Oct 14 22:08:53 2002
-@@ -145,7 +145,7 @@
- DESKTOP_IN_FILES = nautilus.desktop.in
- DESKTOP_FILES = $(DESKTOP_IN_FILES:.desktop.in=.desktop)
- 
--SUBDIRS =  	libnautilus 			cut-n-paste-code 		libbackground			libnautilus-private 		libnautilus-adapter		src 				test 				components			po 				data 				icons 				docs				$(NULL)
-+SUBDIRS =  	libnautilus 			cut-n-paste-code 		libbackground			libnautilus-private 		libnautilus-adapter		src 								components			po 				data 				icons 				docs				$(NULL)
- 
- 
- EXTRA_DIST =  	COPYING.LIB					COPYING-DOCS					HACKING						MAINTAINERS					nautilus.spec.in				nautilus.desktop				nautilus.desktop.in				gnome-starthere-96.png				gnome-starthere.png				ChangeLog-20000414				ChangeLog-20000625				ChangeLog-20000831				ChangeLog-20001018				intltool-extract.in				intltool-merge.in				intltool-update.in				Makefile.shared					add-include-prefix				$(DESKTOP_IN_FILES)				$(DESKTOP_FILES)				$(NULL)
+--- Makefile.in.orig	Mon Nov 11 01:18:40 2002
++++ Makefile.in	Mon Nov 11 01:19:14 2002
+@@ -164,7 +164,6 @@
+ 	libnautilus-private 	\
+ 	libnautilus-adapter	\
+ 	src 			\
+-	test 			\
+ 	components		\
+ 	po 			\
+ 	data 			\
