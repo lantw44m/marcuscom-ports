@@ -182,8 +182,14 @@ share/gnome/blackjack/Vegas_Strip.rules
 @unexec [ -s %D/share/gnome/games/iagno.w1.scores ] || rm -f %D/share/gnome/games/iagno.w1.scores
 @unexec [ -s %D/share/gnome/games/iagno.w2.scores ] || rm -f %D/share/gnome/games/iagno.w2.scores
 @unexec [ -s %D/share/gnome/games/iagno.w3.scores ] || rm -f %D/share/gnome/games/iagno.w3.scores
+@unexec [ -s %D/share/gnome/games/mahjongg.bridges.scores ] || rm -f %D/share/gnome/games/mahjongg.bridges.scores
+@unexec [ -s %D/share/gnome/games/mahjongg.cloud.scores ] || rm -f %D/share/gnome/games/mahjongg.cloud.scores
+@unexec [ -s %D/share/gnome/games/mahjongg.confounding.scores ] || rm -f %D/share/gnome/games/mahjongg.confounding.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.difficult.scores ] || rm -f %D/share/gnome/games/mahjongg.difficult.scores
+@unexec [ -s %D/share/gnome/games/mahjongg.dragon.scores ] || rm -f %D/share/gnome/games/mahjongg.dragon.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.easy.scores ] || rm -f %D/share/gnome/games/mahjongg.easy.scores
+@unexec [ -s %D/share/gnome/games/mahjongg.pyramid.scores ] || rm -f %D/share/gnome/games/mahjongg.pyramid.scores
+@unexec [ -s %D/share/gnome/games/mahjongg.tictactoe.scores ] || rm -f %D/share/gnome/games/mahjongg.tictactoe.scores
 @unexec [ -s %D/share/gnome/games/same-gnome.scores ] || rm -f %D/share/gnome/games/same-gnome.scores
 share/gnome/gnect/white_ob.cn4
 share/gnome/gnibbles/level001.gnl
@@ -332,12 +338,16 @@ share/gnome/help/gnobots2/da/gnobots2.xml
 share/gnome/help/gnobots2/da/legal.xml
 share/gnome/help/gnobots2/es/gnobots2.xml
 share/gnome/help/gnobots2/es/legal.xml
+share/gnome/help/gnobots2/it/gnobots2.xml
+share/gnome/help/gnobots2/it/legal.xml
 share/gnome/help/gnome-stones/C/figures/main-game.png
 share/gnome/help/gnome-stones/C/figures/main-start.png
 share/gnome/help/gnome-stones/C/figures/preferences-joystick.png
 share/gnome/help/gnome-stones/C/figures/preferences-main.png
 share/gnome/help/gnome-stones/C/gnome-stones.xml
 share/gnome/help/gnome-stones/C/legal.xml
+share/gnome/help/gnometris/C/gnometris.xml
+share/gnome/help/gnometris/C/legal.xml
 share/gnome/help/gnomine/C/figures/advanced_121_a.png
 share/gnome/help/gnomine/C/figures/advanced_121_b.png
 share/gnome/help/gnomine/C/figures/advanced_121_c.png
@@ -406,8 +416,12 @@ share/gnome/omf/gnome-games/gnobots2-da.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnobots2-da.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnobots2-es.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnobots2-es.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-games/gnobots2-it.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnobots2-it.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnome-stones-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnome-stones-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-games/gnometris-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnometris-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnomine-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-games/gnomine-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-games/gnotravex-C.omf
@@ -574,6 +588,7 @@ share/gnome/pixmaps/iagno/sunmoon.png
 share/gnome/pixmaps/iagno/woodtrim.png
 share/gnome/pixmaps/mahjongg/default.png
 share/gnome/pixmaps/mahjongg/postmodern.svg
+share/gnome/pixmaps/mahjongg/maya.png
 share/gnome/pixmaps/mahjongg/smooth.png
 share/gnome/pixmaps/same-gnome/blink-sync.png
 share/gnome/pixmaps/same-gnome/glass.png
@@ -690,6 +705,7 @@ share/locale/cy/LC_MESSAGES/gnome-games.mo
 share/locale/da/LC_MESSAGES/gnome-games.mo
 share/locale/de/LC_MESSAGES/gnome-games.mo
 share/locale/el/LC_MESSAGES/gnome-games.mo
+share/locale/en_CA/LC_MESSAGES/gnome-games.mo
 share/locale/en_GB/LC_MESSAGES/gnome-games.mo
 share/locale/es/LC_MESSAGES/gnome-games.mo
 share/locale/et/LC_MESSAGES/gnome-games.mo
@@ -786,6 +802,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/gnome-stones/C/figures
 @dirrm share/gnome/help/gnome-stones/C
 @dirrm share/gnome/help/gnome-stones
+@dirrm share/gnome/help/gnobots2/it
 @dirrm share/gnome/help/gnobots2/es
 @dirrm share/gnome/help/gnobots2/da
 @dirrm share/gnome/help/gnobots2/C/figures
@@ -881,7 +898,9 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnobots2-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnobots2-da.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnobots2-es.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnobots2-it.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnome-stones-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnometris-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnomine-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnotravex-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-games/gnotski-C.omf 2>/dev/null || /usr/bin/true
