@@ -20,6 +20,7 @@ libdata/bonobo/servers/Nautilus_shell.server
 libdata/pkgconfig/libnautilus-extension.pc
 share/gnome/applications/nautilus-computer.desktop
 share/gnome/applications/nautilus-file-management-properties.desktop
+share/gnome/applications/nautilus-folder-handler.desktop
 share/gnome/applications/nautilus-home.desktop
 share/gnome/applications/nautilus.desktop
 share/gnome/applications/network-scheme.desktop
@@ -60,7 +61,6 @@ share/gnome/nautilus/patterns/snow_ridge.png
 share/gnome/nautilus/patterns/stucco.jpg
 share/gnome/nautilus/patterns/terracotta.png
 share/gnome/nautilus/patterns/wavy_white.png
-share/gnome/nautilus/static_bookmarks.xml
 share/gnome/nautilus/ui/nautilus-desktop-icon-view-ui.xml
 share/gnome/nautilus/ui/nautilus-directory-view-ui.xml
 share/gnome/nautilus/ui/nautilus-icon-view-ui.xml
