@@ -10,7 +10,7 @@ bin/gnome-mouse-properties
 bin/gnome-network-preferences
 bin/gnome-settings-daemon
 bin/gnome-sound-properties
-bin/gnome-theme-properties
+bin/gnome-theme-manager
 bin/gnome-ui-properties
 bin/gnome-window-properties
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/%gconf.xml

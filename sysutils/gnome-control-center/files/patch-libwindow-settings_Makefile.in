@@ -1,11 +1,11 @@
---- libwindow-settings/Makefile.in.orig	Thu Oct 10 16:46:50 2002
-+++ libwindow-settings/Makefile.in	Thu Oct 10 16:49:14 2002
-@@ -143,7 +143,7 @@
- XF86MISC_LIBS = @XF86MISC_LIBS@
- cxxflags_set = @cxxflags_set@
+--- libwindow-settings/Makefile.in.orig	Mon Nov 11 00:36:25 2002
++++ libwindow-settings/Makefile.in	Mon Nov 11 00:38:07 2002
+@@ -146,7 +146,7 @@
  
--INCLUDES =          -DGNOMELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\" 			-DGNOME_ICONDIR=\""${prefix}/share/pixmaps"\"				-DG_LOG_DOMAIN=\"capplet-common\"					-DGNOME_WINDOW_MANAGER_MODULE_PATH=\""$(libdir)/window-manager-settings"\" 	-I$(top_srcdir)/							@CAPPLET_CFLAGS@
-+INCLUDES =          -DGNOMELOCALEDIR=\""$(prefix)/share/locale"\" 			-DGNOME_ICONDIR=\""${datadir}/pixmaps"\"				-DG_LOG_DOMAIN=\"capplet-common\"					-DGNOME_WINDOW_MANAGER_MODULE_PATH=\""$(libdir)/window-manager-settings"\" 	-I$(top_srcdir)/							@CAPPLET_CFLAGS@
+ WM_MODULE_DIR = $(libdir)/window-manager-settings
+ 
+-INCLUDES =          -DGNOMELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\" 			-DGNOME_ICONDIR=\""${prefix}/share/pixmaps"\"				-DG_LOG_DOMAIN=\"capplet-common\"					-DGNOME_WINDOW_MANAGER_MODULE_PATH=\""$(WM_MODULE_DIR)"\" 	-I$(top_srcdir)/							@CAPPLET_CFLAGS@							-DMETACITY_THEME_DIR=\""$(datadir)/themes"\"
++INCLUDES =          -DGNOMELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\" 			-DGNOME_ICONDIR=\""${prefix}/pixmaps"\"				-DG_LOG_DOMAIN=\"capplet-common\"					-DGNOME_WINDOW_MANAGER_MODULE_PATH=\""$(WM_MODULE_DIR)"\" 	-I$(top_srcdir)/							@CAPPLET_CFLAGS@							-DMETACITY_THEME_DIR=\""$(datadir)/themes"\"
  
  
  lib_LTLIBRARIES = libgnome-window-settings.la
