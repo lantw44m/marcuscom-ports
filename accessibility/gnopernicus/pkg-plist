@@ -21,7 +21,7 @@ include/gnopernicus-1.0/libsrconf/libsrconf.h
 include/gnopernicus-1.0/libsrlow/SRLow.h
 include/gnopernicus-1.0/libsrlow/SRObject.h
 include/gnopernicus-1.0/libsrlow/screen-review.h
-include/gnopernicus-1.0/libsrs/srsxmlapi.h
+include/gnopernicus-1.0/libsrs/srs-xml.h
 include/gnopernicus-1.0/libsrutil/SREvent.h
 include/gnopernicus-1.0/libsrutil/SRMessages.h
 include/gnopernicus-1.0/libsrutil/srintl.h
