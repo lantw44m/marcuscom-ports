@@ -1,0 +1,11 @@
+--- gnome-settings-daemon/Makefile.in.orig	Fri May  9 11:57:23 2003
++++ gnome-settings-daemon/Makefile.in	Fri May  9 11:57:49 2003
+@@ -160,7 +160,7 @@
+ 
+ #	$(AccessX_files)		
+ 
+-gnome_settings_daemon_LDADD =  	$(GNOME_SETTINGS_DAEMON_LIBS)						$(top_builddir)/libbackground/libbackground.la				$(top_builddir)/libsounds/libsounds.a					-L$(top_builddir)/libwindow-settings/ -lgnome-window-settings 		$(XF86MISC_LIBS)
++gnome_settings_daemon_LDADD =  	$(GNOME_SETTINGS_DAEMON_LIBS)						$(top_builddir)/libbackground/libbackground.la				$(top_builddir)/libsounds/libsounds.a					-L$(top_builddir)/libwindow-settings/.libs -lgnome-window-settings 		$(XF86MISC_LIBS)
+ 
+ 
+ #AccessX_files = \
