@@ -7,6 +7,7 @@
 
 PORTNAME=	libglade2
 PORTVERSION=	2.3.2
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.3
@@ -15,6 +16,8 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME glade library
+
+RUN_DEPENDS=	xmlcatmgr:${PORTSDIR}/textproc/xmlcatmgr
 
 BUILD_DEPENDS=	${PYEXPAT}
 RUN_DEPENDS=	${PYEXPAT}
@@ -31,5 +34,8 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+PLIST_SUB=	XMLCATALOG="${LOCALBASE}/bin/xmlcatalog" \
+		CATALOG_PORTS_XML="${LOCALBASE}/share/xml/catalog.ports"
 
 .include <bsd.port.mk>
