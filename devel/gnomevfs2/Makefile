@@ -59,7 +59,7 @@ post-patch:
 		's|\@datadir\@/gnome|\@datadir\@|g'
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/libgnomevfs/Makefile.in \
-		${WRKSRC}/libgnomevfs/xdgmime.c
+		${WRKSRC}/libgnomevfs/xdgmime.c \
 		${WRKSRC}/modules/vfolder/applications-all-users.vfolder-info.in
 	@${REINPLACE_CMD} -e "/^SUBDIRS =/s/test//" \
 		${WRKSRC}/Makefile.in
