@@ -7,6 +7,7 @@
 
 PORTNAME=	libgnomecups
 PORTVERSION=	0.1.5
+PORTREVISION=	1
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.1
@@ -17,8 +18,7 @@ COMMENT=	GNOME interface to the CUPS printing system
 LIB_DEPENDS=	cups.2:${PORTSDIR}/print/cups-base
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 USE_GMAKE=	yes
 INSTALLS_SHLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack glib20
