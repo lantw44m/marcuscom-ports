@@ -7,7 +7,7 @@
 
 PORTNAME=	abiword
 PORTVERSION=	2.1.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.abisource.com/downloads/Version-${PORTVERSION}/lf/
@@ -144,15 +144,12 @@ PLIST_SUB+=		GYPSYTHON:=""
 PLIST_SUB+=		GYPSYTHON:="@comment "
 .endif
 
-# libole2-devel is in my local, haven't commit it yet.
-#.if defined(WITH_HANCOM) # Untest...
-#LIB_DEPENDS+=		gnomeole2.4:${PORTSDIR}/devel/libole2-devel
-#CONFIGURE_ENV+=		CPPFLAGS="-I${LOCALBASE}/include/libole2-2.0"
-#CONFIGURE_ARGS+=	--enable-hancom
-#PLIST_SUB+=		HANCOM:=""
-#.else
+.if defined(WITH_HANCOM) # Untest...
+CONFIGURE_ARGS+=	--enable-hancom
+PLIST_SUB+=		HANCOM:=""
+.else
 PLIST_SUB+=		HANCOM:="@comment "
-#.endif
+.endif
 
 .if defined(WITH_HRTEXT) || defined(PACKAGE_BUILDING) # Untest...
 CONFIGURE_ARGS+=	--enable-hrtext
@@ -351,9 +348,9 @@ pre-everything::
 .if !defined(WITH_GYPSYTHON)
 	@${ECHO_MSG} "WITH_GYPSYTHON=yes	Python MailMerge."
 .endif
-#.if !defined(WITH_HANCOM)
-#	@${ECHO_MSG} "WITH_HANCOM=yes		Hancom Word Importer. Only does text."
-#.endif
+.if !defined(WITH_HANCOM)
+	@${ECHO_MSG} "WITH_HANCOM=yes		Hancom Word Importer. Only does text."
+.endif
 .if !defined(WITH_HRTEXT)
 	@${ECHO_MSG} "WITH_HRTEXT=yes		Export text with "newsgroup" markup."
 .endif
@@ -410,7 +407,7 @@ pre-everything::
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|[$$]abi_plugin_source/../wv|${LOCALBASE}/wv|g' \
+	@${REINPLACE_CMD} -e 's|[$$]abi_plugin_source/../wv|${LOCALBASE}/include/wv|g' \
 		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
