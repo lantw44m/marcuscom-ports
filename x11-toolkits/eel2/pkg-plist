@@ -16,7 +16,6 @@ include/eel-2/eel/eel-editable-label.h
 include/eel-2/eel/eel-ellipsizing-label.h
 include/eel-2/eel/eel-enumeration.h
 include/eel-2/eel/eel-features.h
-include/eel-2/eel/eel-font-picker.h
 include/eel-2/eel/eel-gconf-extensions.h
 include/eel-2/eel/eel-gdk-extensions.h
 include/eel-2/eel/eel-gdk-pixbuf-extensions.h
@@ -34,11 +33,7 @@ include/eel-2/eel/eel-labeled-image.h
 include/eel-2/eel/eel-marshal.h
 include/eel-2/eel/eel-pango-extensions.h
 include/eel-2/eel/eel-password-dialog.h
-include/eel-2/eel/eel-preferences-box.h
 include/eel-2/eel/eel-preferences-glade.h
-include/eel-2/eel/eel-preferences-group.h
-include/eel-2/eel/eel-preferences-item.h
-include/eel-2/eel/eel-preferences-pane.h
 include/eel-2/eel/eel-preferences.h
 include/eel-2/eel/eel-radio-button-group.h
 include/eel-2/eel/eel-self-checks.h
@@ -46,7 +41,6 @@ include/eel-2/eel/eel-stock-dialogs.h
 include/eel-2/eel/eel-string-list.h
 include/eel-2/eel/eel-string-picker.h
 include/eel-2/eel/eel-string.h
-include/eel-2/eel/eel-text-caption.h
 include/eel-2/eel/eel-type-builtins.h
 include/eel-2/eel/eel-types.h
 include/eel-2/eel/eel-vfs-extensions.h
@@ -59,6 +53,7 @@ lib/libeel-2.so.3
 libdata/pkgconfig/eel-2.0.pc
 share/locale/ar/LC_MESSAGES/eel-2.0.mo
 share/locale/az/LC_MESSAGES/eel-2.0.mo
+share/locale/be/LC_MESSAGES/eel-2.0.mo
 share/locale/bg/LC_MESSAGES/eel-2.0.mo
 share/locale/bs/LC_MESSAGES/eel-2.0.mo
 share/locale/ca/LC_MESSAGES/eel-2.0.mo
