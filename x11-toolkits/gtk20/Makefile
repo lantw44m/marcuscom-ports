@@ -7,6 +7,7 @@
 
 PORTNAME=	gtk
 PORTVERSION=	2.3.5
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.3,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.3/ \
