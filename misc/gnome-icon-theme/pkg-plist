@@ -370,6 +370,7 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-text-x-java.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-text-x-literate-haskell.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-text-x-lyx.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-text-x-makefile.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-text-x-objcsrc.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-text-x-patch.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-text-x-readme.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-text-x-scheme.png
@@ -892,7 +893,9 @@ share/icons/hicolor/16x16/stock/io/stock_save-pdf.png
 share/icons/hicolor/16x16/stock/io/stock_save-template.png
 share/icons/hicolor/16x16/stock/io/stock_save.png
 share/icons/hicolor/16x16/stock/io/stock_up-one-dir.png
+share/icons/hicolor/16x16/stock/media/stock_3dsound.png
 share/icons/hicolor/16x16/stock/media/stock_effects-sound.png
+share/icons/hicolor/16x16/stock/media/stock_headphones.png
 share/icons/hicolor/16x16/stock/media/stock_insert-video-plugin.png
 share/icons/hicolor/16x16/stock/media/stock_line_in.png
 share/icons/hicolor/16x16/stock/media/stock_media-fwd.png
@@ -1683,7 +1686,9 @@ share/icons/hicolor/24x24/stock/io/stock_save_as.png
 share/icons/hicolor/24x24/stock/io/stock_save-pdf.png
 share/icons/hicolor/24x24/stock/io/stock_save-template.png
 share/icons/hicolor/24x24/stock/io/stock_save.png
+share/icons/hicolor/24x24/stock/media/stock_3dsound.png
 share/icons/hicolor/24x24/stock/media/stock_effects-sound.png
+share/icons/hicolor/24x24/stock/media/stock_headphones.png
 share/icons/hicolor/24x24/stock/media/stock_insert-video-plugin.png
 share/icons/hicolor/24x24/stock/media/stock_line_in.png
 share/icons/hicolor/24x24/stock/media/stock_media-fwd.png
