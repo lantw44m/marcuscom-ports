@@ -158,6 +158,7 @@ share/locale/am/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/ar/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/be/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
+share/locale/bg/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/ca/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/cs/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/da/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
@@ -191,6 +192,7 @@ share/locale/pt_BR/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/ru/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/sk/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/sl/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
+share/locale/sq/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/sr/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/sr@Latn/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/sv/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
