@@ -107,10 +107,10 @@ lib/glibmm-%%VERSION%%/proc/pm/Util.pm
 lib/glibmm-%%VERSION%%/proc/pm/WrapParser.pm
 lib/libglibmm-%%VERSION%%.a
 lib/libglibmm-%%VERSION%%.so
-lib/libglibmm-%%VERSION%%.so.3
+lib/libglibmm-%%VERSION%%.so.4
 lib/libglibmm_generate_extra_defs-%%VERSION%%.a
 lib/libglibmm_generate_extra_defs-%%VERSION%%.so
-lib/libglibmm_generate_extra_defs-%%VERSION%%.so.3
+lib/libglibmm_generate_extra_defs-%%VERSION%%.so.4
 libdata/pkgconfig/glibmm-%%API_VERSION%%.pc
 share/aclocal/glibmm_check_perl.m4
 %%PORTDOCS%%share/doc/glibmm-%%API_VERSION%%/docs/images/gtkmm_logo.gif

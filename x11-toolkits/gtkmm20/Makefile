@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gtkmm
-PORTVERSION=	2.3.2
-PORTREVISION=	1
+PORTVERSION=	2.3.3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		${MASTER_SITE_SOURCEFORGE}
@@ -18,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for Gtk+, Pango, Atk
 
-LIB_DEPENDS=	glibmm-2.3.3:${PORTSDIR}/devel/glibmm
+LIB_DEPENDS=	glibmm-2.3.4:${PORTSDIR}/devel/glibmm
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_BZIP2=	yes
