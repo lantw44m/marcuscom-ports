@@ -457,6 +457,8 @@ share/locale/vi/LC_MESSAGES/gtk20-properties.mo
 share/locale/vi/LC_MESSAGES/gtk20.mo
 share/locale/wa/LC_MESSAGES/gtk20-properties.mo
 share/locale/wa/LC_MESSAGES/gtk20.mo
+share/locale/xh/LC_MESSAGES/gtk20-properties.mo
+share/locale/xh/LC_MESSAGES/gtk20.mo
 share/locale/yi/LC_MESSAGES/gtk20-properties.mo
 share/locale/yi/LC_MESSAGES/gtk20.mo
 share/locale/zh_CN/LC_MESSAGES/gtk20-properties.mo
@@ -508,3 +510,5 @@ share/themes/Emacs/gtk-2.0-key/gtkrc
 @unexec rmdir %D/share/locale/uz@Latn 2> /dev/null || true
 @unexec rmdir %D/share/locale/yi/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/yi 2> /dev/null || true
+@unexec rmdir %D/share/locale/xh/LC_MESSAGES/ 2> /dev/null || true
+@unexec rmdir %D/share/locale/xh 2> /dev/null || true
