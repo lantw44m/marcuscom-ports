@@ -34,14 +34,25 @@ include/libnautilus/nautilus-undo.h
 include/libnautilus/nautilus-view-component.h
 include/libnautilus/nautilus-view-standard-main.h
 include/libnautilus/nautilus-view.h
+include/nautilus/libnautilus-extension/nautilus-column-provider.h
+include/nautilus/libnautilus-extension/nautilus-column.h
+include/nautilus/libnautilus-extension/nautilus-extension-types.h
+include/nautilus/libnautilus-extension/nautilus-file-info.h
+include/nautilus/libnautilus-extension/nautilus-info-provider.h
+include/nautilus/libnautilus-extension/nautilus-menu-item.h
+include/nautilus/libnautilus-extension/nautilus-menu-provider.h
+include/nautilus/libnautilus-extension/nautilus-property-page-provider.h
+include/nautilus/libnautilus-extension/nautilus-property-page.h
 lib/bonobo/libnautilus-emblem-view.so
 lib/bonobo/libnautilus-history-view.so
 lib/bonobo/libnautilus-image-properties-view.so
 lib/bonobo/libnautilus-notes-view.so
-lib/bonobo/libnautilus-tree-view.so
 lib/libnautilus-adapter.a
 lib/libnautilus-adapter.so
 lib/libnautilus-adapter.so.2
+lib/libnautilus-extension.a
+lib/libnautilus-extension.so
+lib/libnautilus-extension.so.1
 lib/libnautilus-private.a
 lib/libnautilus-private.so
 lib/libnautilus-private.so.2
@@ -55,9 +66,9 @@ libdata/bonobo/servers/Nautilus_View_history.server
 libdata/bonobo/servers/Nautilus_View_image_properties.server
 libdata/bonobo/servers/Nautilus_View_notes.server
 libdata/bonobo/servers/Nautilus_View_text.server
-libdata/bonobo/servers/Nautilus_View_tree.server
 libdata/bonobo/servers/Nautilus_shell.server
 libdata/pkgconfig/libnautilus.pc
+libdata/pkgconfig/libnautilus-extension.pc
 libexec/nautilus-adapter
 libexec/nautilus-text-view
 libexec/nautilus-throbber
@@ -116,8 +127,6 @@ share/gnome/nautilus/patterns/snow_ridge.png
 share/gnome/nautilus/patterns/stucco.jpg
 share/gnome/nautilus/patterns/terracotta.png
 share/gnome/nautilus/patterns/wavy_white.png
-share/gnome/nautilus/services/text/google.xml
-share/gnome/nautilus/services/text/webster.xml
 share/gnome/nautilus/starthere-link.desktop
 share/gnome/nautilus/starthere.desktop
 share/gnome/nautilus/static_bookmarks.xml
@@ -214,6 +223,7 @@ share/locale/zh_TW/LC_MESSAGES/nautilus.mo
 @dirrm share/gnome/pixmaps/nautilus/default
 @dirrm share/gnome/network
 @dirrm share/gnome/nautilus/glade
+@dirrm include/nautilus/libnautilus-extension
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/nautilus/sidebar_panels/tree
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/nautilus/sidebar_panels
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/nautilus/preferences
