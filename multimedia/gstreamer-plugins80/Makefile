@@ -746,9 +746,10 @@ PLIST_SUB+=	IVORBIS=""
 .ifndef(WITH_XVID)
 CONFIGURE_ARGS+=	--disable-xvid
 PLIST_SUB+=	XVID="@comment "
-.else
-LIB_DEPENDS+=	xvidcore.2:${PORTSDIR}/multimedia/xvid
-PLIST_SUB+=	XVID=""
+.undef WITH_XVID
+#.else
+#LIB_DEPENDS+=	xvidcore.2:${PORTSDIR}/multimedia/xvid
+#PLIST_SUB+=	XVID=""
 .endif
 
 pre-everything::
