@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	nautilus-cd-burner
-PORTVERSION=	0.6.1
-PORTREVISION=	1
+PORTVERSION=	0.6.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.6
@@ -38,6 +37,12 @@ WITH_DVD=	yes
 .if defined(WITH_DVD)
 RUN_DEPENDS+=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools
 .endif
+
+pre-everything::
+	@${ECHO_MSG} ""
+	@${ECHO_MSG} "${PORTNAME} has the following configurable option(s):"
+	@${ECHO_MSG} "	WITH_DVD	Enable DVD burning support"
+	@${ECHO_MSG} ""
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
