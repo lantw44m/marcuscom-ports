@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnometerminal
-PORTVERSION=	2.5.4
+PORTVERSION=	2.5.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-terminal/2.5
