@@ -61,6 +61,14 @@ share/gnome/gok/am/mouse.kbd
 share/gnome/gok/am/move-resize.kbd
 share/gnome/gok/am/quit.kbd
 share/gnome/gok/am/text-operations.kbd
+share/gnome/gok/ar/gok-controls.kbd
+share/gnome/gok/ar/hide.kbd
+share/gnome/gok/ar/launcher.kbd
+share/gnome/gok/ar/main.kbd
+share/gnome/gok/ar/mouse.kbd
+share/gnome/gok/ar/move-resize.kbd
+share/gnome/gok/ar/quit.kbd
+share/gnome/gok/ar/text-operations.kbd
 share/gnome/gok/automatic-scanning.xam
 share/gnome/gok/az/gok-controls.kbd
 share/gnome/gok/az/hide.kbd
@@ -161,6 +169,14 @@ share/gnome/gok/hi/move-resize.kbd
 share/gnome/gok/hi/quit.kbd
 share/gnome/gok/hi/text-operations.kbd
 share/gnome/gok/hide.kbd
+share/gnome/gok/hr/gok-controls.kbd
+share/gnome/gok/hr/hide.kbd
+share/gnome/gok/hr/launcher.kbd
+share/gnome/gok/hr/main.kbd
+share/gnome/gok/hr/mouse.kbd
+share/gnome/gok/hr/move-resize.kbd
+share/gnome/gok/hr/quit.kbd
+share/gnome/gok/hr/text-operations.kbd
 share/gnome/gok/inverse-scanning.xam
 share/gnome/gok/it/gok-controls.kbd
 share/gnome/gok/it/hide.kbd
@@ -189,6 +205,14 @@ share/gnome/gok/ko/text-operations.kbd
 share/gnome/gok/latched.png
 share/gnome/gok/launcher.kbd
 share/gnome/gok/locked.png
+share/gnome/gok/lt/gok-controls.kbd
+share/gnome/gok/lt/hide.kbd
+share/gnome/gok/lt/launcher.kbd
+share/gnome/gok/lt/main.kbd
+share/gnome/gok/lt/mouse.kbd
+share/gnome/gok/lt/move-resize.kbd
+share/gnome/gok/lt/quit.kbd
+share/gnome/gok/lt/text-operations.kbd
 share/gnome/gok/main.kbd
 share/gnome/gok/manage.kbd
 share/gnome/gok/mk/gok-controls.kbd
@@ -348,6 +372,7 @@ share/gnome/omf/gok/gok-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gok/gok-C.omf || /usr/bin/true
 share/gnome/pixmaps/gok.png
 share/locale/am/LC_MESSAGES/gok.mo
+share/locale/ar/LC_MESSAGES/gok.mo
 share/locale/az/LC_MESSAGES/gok.mo
 share/locale/be/LC_MESSAGES/gok.mo
 share/locale/ca/LC_MESSAGES/gok.mo
@@ -359,9 +384,11 @@ share/locale/el/LC_MESSAGES/gok.mo
 share/locale/es/LC_MESSAGES/gok.mo
 share/locale/fr/LC_MESSAGES/gok.mo
 share/locale/hi/LC_MESSAGES/gok.mo
+share/locale/hr/LC_MESSAGES/gok.mo
 share/locale/it/LC_MESSAGES/gok.mo
 share/locale/ja/LC_MESSAGES/gok.mo
 share/locale/ko/LC_MESSAGES/gok.mo
+share/locale/lt/LC_MESSAGES/gok.mo
 share/locale/mk/LC_MESSAGES/gok.mo
 share/locale/ml/LC_MESSAGES/gok.mo
 share/locale/ms/LC_MESSAGES/gok.mo
@@ -402,9 +429,11 @@ share/locale/zh_TW/LC_MESSAGES/gok.mo
 @dirrm share/gnome/gok/ms
 @dirrm share/gnome/gok/ml
 @dirrm share/gnome/gok/mk
+@dirrm share/gnome/gok/lt
 @dirrm share/gnome/gok/ko
 @dirrm share/gnome/gok/ja
 @dirrm share/gnome/gok/it
+@dirrm share/gnome/gok/hr
 @dirrm share/gnome/gok/hi
 @dirrm share/gnome/gok/fr
 @dirrm share/gnome/gok/es
@@ -416,6 +445,7 @@ share/locale/zh_TW/LC_MESSAGES/gok.mo
 @dirrm share/gnome/gok/ca
 @dirrm share/gnome/gok/be
 @dirrm share/gnome/gok/az
+@dirrm share/gnome/gok/ar
 @dirrm share/gnome/gok/am
 @dirrm share/gnome/gok
 @dirrm %%DOCSDIR%%
