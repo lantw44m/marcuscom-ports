@@ -5,9 +5,11 @@ bin/gnome-sound-recorder
 bin/gnome-volume-control
 bin/gstreamer-properties
 bin/vumeter
+etc/gconf/gconf.xml.defaults/apps/CDDB-Slave2/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-cd/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/system-state/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/CDDB-Slave2/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-cd/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/system-state/%gconf.xml
@@ -583,9 +585,11 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/system-state
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-cd
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/CDDB-Slave2
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/system-state
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-cd
+@dirrm etc/gconf/gconf.xml.defaults/apps/CDDB-Slave2
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-media/gnome-cd-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-media/gnome-cd-de.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-media/gnome-cd-es.omf 2>/dev/null || /usr/bin/true
