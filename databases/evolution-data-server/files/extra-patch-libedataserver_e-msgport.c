@@ -1,6 +1,6 @@
---- libedataserver/e-msgport.c.orig	Wed Jan 14 00:04:04 2004
-+++ libedataserver/e-msgport.c	Sun Sep 19 14:01:25 2004
-@@ -921,9 +921,13 @@
+--- libedataserver/e-msgport.c.orig	Thu Dec  2 22:33:06 2004
++++ libedataserver/e-msgport.c	Wed Mar  9 14:31:46 2005
+@@ -921,9 +921,18 @@
  void e_thread_put(EThread *e, EMsg *msg)
  {
  	pthread_t id;
@@ -9,12 +9,17 @@
  
  	pthread_mutex_lock(&e->mutex);
 +	pthread_attr_init(&attr);
-+	/* Give us a 1 MB thread stack size. */
-+	pthread_attr_setstacksize(&attr, 0x100000);
++	/* Give us a 1 MB thread stacksize on 32-bit architectures, and
++	 * a 2 MB thread stacksize on 64-bit architectures. */
++	if (sizeof (void *) == 8) {
++		pthread_attr_setstacksize(&attr, 0x200000);
++	} else {
++		pthread_attr_setstacksize(&attr, 0x100000);
++	}
  
  	/* the caller forgot to tell us what to do, well, we can't do anything can we */
  	if (e->received == NULL) {
-@@ -962,13 +966,14 @@
+@@ -962,13 +971,14 @@
  		e_msgport_put(e->server_port, msg);
  		if (e->waiting == 0
  		    && g_list_length(e->id_list) < e->queue_limit
@@ -30,7 +35,7 @@
  		pthread_mutex_unlock(&e->mutex);
  		return;
  	}
-@@ -977,12 +982,13 @@
+@@ -977,12 +987,13 @@
  	if (e->id == E_THREAD_NONE) {
  		int err;
  

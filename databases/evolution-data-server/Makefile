@@ -7,6 +7,7 @@
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	1.2.0
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.2
@@ -38,6 +39,12 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 
 PLIST_SUB=	VERSION="1.2" EVO_VERSION="1.2"
 
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 600012
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-libedataserver_e-msgport.c
+.endif
+
 .if !defined(WITHOUT_LDAP)
 USE_OPENLDAP=	yes
 CONFIGURE_ARGS+=--with-openldap=yes
@@ -51,4 +58,4 @@ pre-everything::
 	@${ECHO_MSG} "	WITHOUT_LDAP	Disable LDAP support"
 	@${ECHO_MSG} ""
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
