@@ -35,23 +35,23 @@ lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-custom.so
 lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-file.so
 lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-lpr.so
 libdata/pkgconfig/libgnomeprint-2.2.pc
-share/doc/libgnomeprint/index.html
-share/doc/libgnomeprint/index.sgml
-share/doc/libgnomeprint/libgnomeprint-building.html
-share/doc/libgnomeprint/libgnomeprint-compiling.html
-share/doc/libgnomeprint/libgnomeprint-gnome-font-face.html
-share/doc/libgnomeprint/libgnomeprint-gnome-font.html
-share/doc/libgnomeprint/libgnomeprint-gnome-glyphlist.html
-share/doc/libgnomeprint/libgnomeprint-gnome-pgl.html
-share/doc/libgnomeprint/libgnomeprint-gnome-print-config.html
-share/doc/libgnomeprint/libgnomeprint-gnome-print-job.html
-share/doc/libgnomeprint/libgnomeprint-gnome-print-paper.html
-share/doc/libgnomeprint/libgnomeprint-gnome-print-unit.html
-share/doc/libgnomeprint/libgnomeprint-gnome-print.html
-share/doc/libgnomeprint/libgnomeprint-gnome-rfont.html
-share/doc/libgnomeprint/libgnomeprint-resources.html
-share/doc/libgnomeprint/libgnomeprint.html
-share/doc/libgnomeprint/libgnomeprintunsorted.html
+share/doc/libgnomeprint-2.2/index.html
+share/doc/libgnomeprint-2.2/index.sgml
+share/doc/libgnomeprint-2.2/libgnomeprint-building.html
+share/doc/libgnomeprint-2.2/libgnomeprint-compiling.html
+share/doc/libgnomeprint-2.2/libgnomeprint-gnome-font-face.html
+share/doc/libgnomeprint-2.2/libgnomeprint-gnome-font.html
+share/doc/libgnomeprint-2.2/libgnomeprint-gnome-glyphlist.html
+share/doc/libgnomeprint-2.2/libgnomeprint-gnome-pgl.html
+share/doc/libgnomeprint-2.2/libgnomeprint-gnome-print-config.html
+share/doc/libgnomeprint-2.2/libgnomeprint-gnome-print-job.html
+share/doc/libgnomeprint-2.2/libgnomeprint-gnome-print-paper.html
+share/doc/libgnomeprint-2.2/libgnomeprint-gnome-print-unit.html
+share/doc/libgnomeprint-2.2/libgnomeprint-gnome-print.html
+share/doc/libgnomeprint-2.2/libgnomeprint-gnome-rfont.html
+share/doc/libgnomeprint-2.2/libgnomeprint-resources.html
+share/doc/libgnomeprint-2.2/libgnomeprint.html
+share/doc/libgnomeprint-2.2/libgnomeprintunsorted.html
 share/gnome/libgnomeprint/%%VERSION%%/globals.xml
 share/gnome/libgnomeprint/%%VERSION%%/models/GNOME-GENERIC-PS.xml
 share/gnome/libgnomeprint/%%VERSION%%/models/GNOME-PDF-WRITER.xml
@@ -78,6 +78,7 @@ share/locale/it/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/ja/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/ko/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/lv/LC_MESSAGES/libgnomeprint-2.2.mo
+share/locale/mn/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/ms/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/nl/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/nn/LC_MESSAGES/libgnomeprint-2.2.mo
@@ -101,7 +102,7 @@ share/locale/zh_TW/LC_MESSAGES/libgnomeprint-2.2.mo
 @dirrm share/gnome/libgnomeprint/%%VERSION%%/models
 @dirrm share/gnome/libgnomeprint/%%VERSION%%
 @dirrm share/gnome/libgnomeprint
-@dirrm share/doc/libgnomeprint
+@dirrm share/doc/libgnomeprint-2.2
 @dirrm lib/libgnomeprint/%%VERSION%%/modules/transports
 @dirrm lib/libgnomeprint/%%VERSION%%/modules
 @dirrm lib/libgnomeprint/%%VERSION%%

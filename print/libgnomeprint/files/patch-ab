@@ -1,11 +1,11 @@
---- Makefile.in.orig	Wed Dec  4 22:51:56 2002
-+++ Makefile.in	Wed Dec  4 22:53:28 2002
-@@ -112,7 +112,7 @@
- WARN_CFLAGS = @WARN_CFLAGS@
+--- Makefile.in.orig	Tue Feb  4 00:35:09 2003
++++ Makefile.in	Tue Feb  4 00:36:01 2003
+@@ -135,7 +135,7 @@
+ am__quote = @am__quote@
  cxxflags_set = @cxxflags_set@
- 
+ install_sh = @install_sh@
 -SUBDIRS = libgnomeprint tests data po doc
 +SUBDIRS = libgnomeprint data po doc
  
- EXTRA_DIST = ChangeLog ChangeLog.old ChangeLog.old.2
- ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ EXTRA_DIST = \
+     ChangeLog \
