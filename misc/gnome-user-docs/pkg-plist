@@ -47,6 +47,7 @@ share/gnome/help/user-guide/C/figures/applet_popup.png
 share/gnome/help/user-guide/C/figures/ask_pointer.png
 share/gnome/help/user-guide/C/figures/caution.png
 share/gnome/help/user-guide/C/figures/column_resize_pointer.png
+share/gnome/help/user-guide/C/figures/com_file_manager_menu.png
 share/gnome/help/user-guide/C/figures/copy_pointer.png
 share/gnome/help/user-guide/C/figures/corner_resize_pointer.png
 share/gnome/help/user-guide/C/figures/file_manager_menu.png
@@ -67,6 +68,10 @@ share/gnome/help/user-guide/C/figures/menu_panel.png
 share/gnome/help/user-guide/C/figures/move_panel_object_pointer.png
 share/gnome/help/user-guide/C/figures/move_pointer.png
 share/gnome/help/user-guide/C/figures/naut_audioview_window.png
+share/gnome/help/user-guide/C/figures/naut_browser_filesystem.png
+share/gnome/help/user-guide/C/figures/naut_browser_window.png
+share/gnome/help/user-guide/C/figures/naut_computer_contents.png
+share/gnome/help/user-guide/C/figures/naut_computer_launcher.png
 share/gnome/help/user-guide/C/figures/naut_home_launcher.png
 share/gnome/help/user-guide/C/figures/naut_iconview_anno_window.png
 share/gnome/help/user-guide/C/figures/naut_iconview_window.png
@@ -126,6 +131,7 @@ share/gnome/help/user-guide/C/gosstartsession.xml
 share/gnome/help/user-guide/C/legal.xml
 share/gnome/help/user-guide/C/part1.xml
 share/gnome/help/user-guide/C/part2.xml
+share/gnome/help/user-guide/C/plaingnomestartpreftools.xml
 share/gnome/help/user-guide/C/user-guide.xml
 share/gnome/help/user-guide/C/wgosbasic.xml
 share/gnome/help/user-guide/C/wgoscustaccess.xml

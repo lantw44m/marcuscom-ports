@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomeuserdocs2
-PORTVERSION=	2.5.0
+PORTVERSION=	2.5.90
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome2-user-docs/2.5
