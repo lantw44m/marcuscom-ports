@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	libgtkhtml
-PORTVERSION=	2.3.2
-PORTREVISION=	1
+PORTVERSION=	2.3.3
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -24,7 +23,7 @@ USE_GNOME=	gnomeprefix gnomehack libxslt gnomevfs2 gail
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
