@@ -1,9 +1,7 @@
 bin/gst-thumbnail
-etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@mpeg/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-avi/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-fli/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@mpeg/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-avi/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-fli/%gconf.xml
@@ -54,8 +52,6 @@ share/locale/zh_TW/LC_MESSAGES/nautilus-media.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-fli
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@x-avi
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/video@mpeg
-@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-fli
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@x-avi
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/video@mpeg
-@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers
