@@ -6,11 +6,10 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	1.5.94.1
-PORTREVISION=	1
+PORTVERSION=	2.0.0
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.0
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -45,7 +44,7 @@ GCONF_SCHEMAS=	apps_evolution_addressbook-${EVO_VERSION}.schemas \
 
 EVO_VERSION=	2.0
 PLIST_SUB=	VERSION=${EVO_VERSION} \
-		PORTVERSION=1.5
+		PORTVERSION=2.0
 
 OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 		LDAP "Enable LDAP support" on \
