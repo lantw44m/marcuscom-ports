@@ -1,6 +1,11 @@
 --- src/netstatus-sysdeps.c.orig	Mon Jun  9 13:18:04 2003
-+++ src/netstatus-sysdeps.c	Fri Dec  5 19:38:31 2003
-@@ -31,6 +31,8 @@
++++ src/netstatus-sysdeps.c	Sat Dec  6 01:19:49 2003
+@@ -27,10 +27,13 @@
+ 
+ #include <stdio.h>
+ #include <string.h>
++#include <unistd.h>
+ #include <errno.h>
  #include <glib.h>
  #include <libgnome/gnome-i18n.h>
  
@@ -9,7 +14,7 @@
  static inline char *
  parse_iface_name (const char *buf)
  {
-@@ -206,3 +208,158 @@
+@@ -206,3 +209,158 @@
  
    return error_message;
  }

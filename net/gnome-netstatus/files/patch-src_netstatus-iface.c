@@ -1,5 +1,5 @@
---- src/netstatus-iface.c.orig	Fri Dec  5 18:27:45 2003
-+++ src/netstatus-iface.c	Fri Dec  5 18:35:36 2003
+--- src/netstatus-iface.c.orig	Fri Oct 31 08:49:51 2003
++++ src/netstatus-iface.c	Sat Dec  6 01:17:12 2003
 @@ -32,9 +32,12 @@
  
  #include <libgnome/gnome-i18n.h>
@@ -13,7 +13,15 @@
  #include <arpa/inet.h>
  #include <errno.h>
  #include <unistd.h>
-@@ -646,7 +649,11 @@
+@@ -577,6 +580,7 @@
+ 					       iface);
+ 
+       netstatus_iface_monitor_timeout (iface);
++
+     }
+ }
+ 
+@@ -646,7 +650,11 @@
    strncpy (if_req.ifr_name, iface->priv->name, IF_NAMESIZE - 1);
    if_req.ifr_name [IF_NAMESIZE - 1] = '\0';
    if (mask && ioctl (fd, SIOCGIFNETMASK, &if_req) == 0)
@@ -25,7 +33,7 @@
  
    close (fd);
  
-@@ -925,6 +932,7 @@
+@@ -925,6 +933,7 @@
  				char           **hw_addr)
  				
  {
@@ -33,7 +41,7 @@
    static struct HwType *hw_type = NULL;
    struct ifreq          if_req;
    int                   fd;
-@@ -973,6 +981,9 @@
+@@ -973,6 +982,9 @@
      *hw_addr = hw_type->print_hw_addr (if_req.ifr_hwaddr.sa_data);
  
    return hw_type;
@@ -43,3 +51,67 @@
  }
  
  gboolean
+@@ -1083,10 +1095,13 @@
+   struct ifconf *if_conf;
+   GList         *interfaces;
+   GList         *loopbacks;
++  gchar         *ptr;
+   int            fd;
+-  int            i;
++  struct ifreq  *if_req;
++  int            len;
++  gboolean       loopback;
+   
+-  if ((fd = socket (AF_INET, SOCK_DGRAM, 0)) < 0)
++  if ((fd = socket (AF_INET, SOCK_STREAM, 0)) < 0)
+     {
+       if (error)
+ 	*error = g_error_new (NETSTATUS_ERROR,
+@@ -1105,12 +1120,25 @@
+   interfaces = NULL;
+   loopbacks  = NULL;
+ 
+-  for (i = 0; i < if_conf->ifc_len / sizeof (struct ifreq); i++)
++  for (ptr = if_conf->ifc_buf; ptr < if_conf->ifc_buf + if_conf->ifc_len;)
+     {
+-      struct ifreq if_req = if_conf->ifc_req [i];
+-      gboolean     loopback = FALSE;
++      if_req = (struct ifreq *) ptr;
++      loopback = FALSE;
++      len      = sizeof(struct sockaddr);
++#if defined(HAVE_SOCKADDR_SA_LEN) || defined(__FreeBSD__)
++      if (if_req->ifr_addr.sa_len > len)
++	len = if_req->ifr_addr.sa_len;
++#endif
+ 
+-      if (ioctl (fd, SIOCGIFFLAGS, &if_req) < 0)
++      ptr += sizeof(if_req->ifr_name) + len;
++ 
++      if (g_list_find_custom (interfaces, if_req->ifr_name, 
++		  (GCompareFunc) g_ascii_strcasecmp) != NULL
++	      || g_list_find_custom (loopbacks, if_req->ifr_name,
++		  (GCompareFunc) g_ascii_strcasecmp) != NULL)
++	continue;
++
++      if (ioctl (fd, SIOCGIFFLAGS, if_req) < 0)
+ 	{
+ 	  if (error)
+ 	    *error = g_error_new (NETSTATUS_ERROR,
+@@ -1120,13 +1148,14 @@
+ 	}
+       else
+ 	{
+-	  loopback = (if_req.ifr_flags & IFF_LOOPBACK);
++	  loopback = (if_req->ifr_flags & IFF_LOOPBACK);
+ 	}
+ 
+       if (!loopback)
+-	interfaces = g_list_prepend (interfaces, g_strdup (if_req.ifr_name));
++	interfaces = g_list_prepend (interfaces, g_strdup (if_req->ifr_name));
+       else
+-	loopbacks  = g_list_prepend (loopbacks,  g_strdup (if_req.ifr_name));
++	loopbacks  = g_list_prepend (loopbacks,  g_strdup (if_req->ifr_name));
++
+     }
+ 
+   interfaces = g_list_concat (interfaces, loopbacks);
