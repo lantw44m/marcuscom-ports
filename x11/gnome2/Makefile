@@ -50,7 +50,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		dasher:${PORTSDIR}/accessibility/dasher \
 		evolution-1.5:${PORTSDIR}/mail/evolution \
 		${X11BASE}/libexec/evolution-webcal:${PORTSDIR}/www/evolution-webcal \
-		boot-admin:${PORTSDIR}/sysutils/gnomesystemtools \
+		network-admin:${PORTSDIR}/sysutils/gnomesystemtools \
 		gnome-nettool:${PORTSDIR}/net/gnomenettool \
 		vino-session:${PORTSDIR}/net/vino \
 		gnome-keyring-manager:${PORTSDIR}/security/gnomekeyringmanager \
