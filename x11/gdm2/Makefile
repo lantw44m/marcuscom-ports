@@ -7,7 +7,7 @@
 
 PORTNAME=	gdm2
 PORTVERSION=	2.4.1.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=		sources/${PORTNAME:S/2$//}/2.4
@@ -15,7 +15,7 @@ DISTNAME=	gdm-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	GNOME 2.0 version of xdm display manager
+COMMENT=	GNOME 2 version of xdm display manager
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
