@@ -27,11 +27,3 @@
  		if (access (full_name, R_OK) == 0) {
  			found = TRUE;
  			g_free (cfg->action_db_path);
-@@ -882,7 +882,6 @@
- 		else
- 			prefs->logfile = NULL;
- 	}
--	g_free (logfile);
- }
- 
- void SaveUserPrefs(UserPrefsStruct *prefs)
