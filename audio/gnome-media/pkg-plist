@@ -5,20 +5,20 @@ bin/gnome-sound-recorder
 bin/gnome-volume-control
 bin/gstreamer-properties
 bin/vumeter
-etc/gconf/gconf.xml.defaults/apps/CDDB-Slave2/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-cd/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/system-state/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/apps/CDDB-Slave2/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-cd/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/system-state/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/audio/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/audio/global/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/audio/profiles/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/audio/profiles/cdlossless/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/audio/profiles/cdlossy/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/gstreamer/audio/profiles/voice/%gconf.xml
+etc/gconf/gconf.xml.defaults/system/gstreamer/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/gstreamer/audio/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/gstreamer/audio/global/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/gstreamer/audio/profiles/%gconf.xml
@@ -233,6 +233,7 @@ share/gnome/help/gnome-sound-recorder/C/gnome-sound-recorder.xml
 share/gnome/help/gnome-sound-recorder/C/legal.xml
 share/gnome/help/gnome-volume-control/C/figures/gmix-prefs.png
 share/gnome/help/gnome-volume-control/C/figures/gmix.png
+share/gnome/help/gnome-volume-control/C/figures/gnome-volume-control_window.png
 share/gnome/help/gnome-volume-control/C/gnome-volume-control.xml
 share/gnome/help/gnome-volume-control/C/legal.xml
 share/gnome/help/grecord/de/figures/grecord-prefs-path.png
@@ -579,11 +580,9 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder/system-state
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-sound-recorder
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome-cd
-@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/CDDB-Slave2
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder/system-state
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-sound-recorder
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome-cd
-@dirrm etc/gconf/gconf.xml.defaults/apps/CDDB-Slave2
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-media/gnome-cd-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-media/gnome-cd-de.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-media/gnome-cd-es.omf 2>/dev/null || /usr/bin/true
