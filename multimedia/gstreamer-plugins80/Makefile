@@ -380,7 +380,7 @@ PLIST_SUB+=	ESOUND=""
 CONFIGURE_ARGS+=	--disable-faad
 PLIST_SUB+=	FAAD="@comment "
 .else
-LIB_DEPENDS+=	faad.0:${PORTSDIR}/audio/libfaad
+LIB_DEPENDS+=	faad.0:${PORTSDIR}/audio/faad
 PLIST_SUB+=	FAAD=""
 .endif
 
@@ -624,7 +624,7 @@ PLIST_SUB+=	LIBSNDFILE=""
 CONFIGURE_ARGS+=	--disable-theora
 PLIST_SUB+=	LIBTHEORA="@comment "
 .else
-LIB_DEPENDS+=	theora.0:${PORTSDIR}/audio/libtheora
+LIB_DEPENDS+=	theora.0:${PORTSDIR}/graphics/libtheora
 PLIST_SUB+=	LIBTHEORA=""
 .endif
 
