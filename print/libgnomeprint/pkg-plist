@@ -13,9 +13,20 @@ include/libgnomeprint-2.2/libgnomeprint/gp-gc.h
 include/libgnomeprint-2.2/libgnomeprint/libgnomeprint-enum-types.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-font-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-glyphlist-private.h
+include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-config-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gnome-print-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gp-gc-private.h
+include/libgnomeprint-2.2/libgnomeprint/private/gpa-config.h
+include/libgnomeprint-2.2/libgnomeprint/private/gpa-key.h
+include/libgnomeprint-2.2/libgnomeprint/private/gpa-list.h
+include/libgnomeprint-2.2/libgnomeprint/private/gpa-model.h
+include/libgnomeprint-2.2/libgnomeprint/private/gpa-node-private.h
 include/libgnomeprint-2.2/libgnomeprint/private/gpa-node.h
+include/libgnomeprint-2.2/libgnomeprint/private/gpa-option.h
+include/libgnomeprint-2.2/libgnomeprint/private/gpa-printer.h
+include/libgnomeprint-2.2/libgnomeprint/private/gpa-reference.h
+include/libgnomeprint-2.2/libgnomeprint/private/gpa-root.h
+include/libgnomeprint-2.2/libgnomeprint/private/gpa-settings.h
 include/libgnomeprint-2.2/libgnomeprint/private/gpa-utils.h
 lib/libgnomeprint-2-2.a
 lib/libgnomeprint-2-2.so
@@ -42,16 +53,11 @@ share/doc/libgnomeprint/libgnomeprint-gnome-rfont.html
 share/doc/libgnomeprint/libgnomeprint-resources.html
 share/doc/libgnomeprint/libgnomeprint.html
 share/doc/libgnomeprint/libgnomeprintunsorted.html
-share/gnome/libgnomeprint/%%VERSION%%/media/media.xml
-share/gnome/libgnomeprint/%%VERSION%%/models/GNOME-GENERIC-PS.model
-share/gnome/libgnomeprint/%%VERSION%%/models/GNOME-PDF-WRITER.model
-share/gnome/libgnomeprint/%%VERSION%%/models/HP-LASERJET-4ML.model
-share/gnome/libgnomeprint/%%VERSION%%/models/STYLUS-COLOR-740.model
-share/gnome/libgnomeprint/%%VERSION%%/printers/GENERIC.printer
-share/gnome/libgnomeprint/%%VERSION%%/printers/PDF-WRITER.printer
-share/gnome/libgnomeprint/%%VERSION%%/vendors/EPSON.vendor
-share/gnome/libgnomeprint/%%VERSION%%/vendors/GNOME.vendor
-share/gnome/libgnomeprint/%%VERSION%%/vendors/HP.vendor
+share/gnome/libgnomeprint/%%VERSION%%/globals.xml
+share/gnome/libgnomeprint/%%VERSION%%/models/GNOME-GENERIC-PS.xml
+share/gnome/libgnomeprint/%%VERSION%%/models/GNOME-PDF-WRITER.xml
+share/gnome/libgnomeprint/%%VERSION%%/printers/GENERIC.xml
+share/gnome/libgnomeprint/%%VERSION%%/printers/PDF-WRITER.xml
 share/locale/az/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/be/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/bg/LC_MESSAGES/libgnomeprint-2.2.mo
@@ -86,10 +92,8 @@ share/locale/vi/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/wa/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/zh_CN/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomeprint-2.2.mo
-@dirrm share/gnome/libgnomeprint/%%VERSION%%/vendors
 @dirrm share/gnome/libgnomeprint/%%VERSION%%/printers
 @dirrm share/gnome/libgnomeprint/%%VERSION%%/models
-@dirrm share/gnome/libgnomeprint/%%VERSION%%/media
 @dirrm share/gnome/libgnomeprint/%%VERSION%%
 @dirrm share/gnome/libgnomeprint
 @dirrm share/doc/libgnomeprint
