@@ -92,6 +92,7 @@ lib/gnome-vfs-2.0/modules/libvfs-help.la
 lib/gnome-vfs-2.0/modules/libvfs-help.so
 lib/libgnome-2.a
 lib/libgnome-2.la
+lib/libgnome-2.so
 lib/libgnome-2.so.0
 libdata/bonobo/servers/GNOME_Moniker_std.server
 libdata/pkgconfig/libgnome-2.0.pc
