@@ -194,6 +194,7 @@ share/doc/gnome-vfs-2.0/mime-registry.html
 share/doc/gnome-vfs-2.0/modules.html
 share/doc/gnome-vfs-2.0/right.png
 share/doc/gnome-vfs-2.0/up.png
+@exec mkdir -p %D/share/gnome/vfolders
 %%KDEMENUS%%share/gnome/vfolders/KDE.directory
 share/locale/am/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-vfs-2.0.mo
