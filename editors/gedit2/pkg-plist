@@ -173,6 +173,7 @@ share/locale/cy/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/da/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/de/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/el/LC_MESSAGES/gedit-%%VERSION%%.mo
+share/locale/en_CA/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/es/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/et/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/eu/LC_MESSAGES/gedit-%%VERSION%%.mo
@@ -191,6 +192,7 @@ share/locale/kn/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/ko/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/lt/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/lv/LC_MESSAGES/gedit-%%VERSION%%.mo
+share/locale/mi/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/mk/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/ml/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/mn/LC_MESSAGES/gedit-%%VERSION%%.mo
