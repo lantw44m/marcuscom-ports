@@ -7,6 +7,7 @@
 
 PORTNAME=	bugbuddy
 PORTVERSION=	2.9.91
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/bug-buddy/2.9
@@ -22,7 +23,7 @@ INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop gnomemenus
 GNOME_DESKTOP_VERSION=2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
