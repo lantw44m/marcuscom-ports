@@ -6,11 +6,10 @@
 #
 
 PORTNAME=	vino
-PORTVERSION=	2.9.2
-PORTREVISION=	1
+PORTVERSION=	2.10.0
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.9
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.10
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC server that allows for remote access to your GNOME desktop
