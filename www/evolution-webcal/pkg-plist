@@ -3,7 +3,11 @@ etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/webcal/%gconf.xm
 etc/gconf/schemas/evolution-webcal.schemas
 libexec/evolution-webcal
 share/gnome/application-registry/evolution-webcal.applications
+share/locale/cs/LC_MESSAGES/evolution-webcal.mo
+share/locale/en_GB/LC_MESSAGES/evolution-webcal.mo
 share/locale/ja/LC_MESSAGES/evolution-webcal.mo
+share/locale/pt/LC_MESSAGES/evolution-webcal.mo
 share/locale/sq/LC_MESSAGES/evolution-webcal.mo
+share/locale/sv/LC_MESSAGES/evolution-webcal.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/webcal
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/webcal
