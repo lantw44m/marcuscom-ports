@@ -32,5 +32,7 @@ share/locale/sr@Latn/LC_MESSAGES/libgnomecups.mo
 share/locale/sv/LC_MESSAGES/libgnomecups.mo
 share/locale/uk/LC_MESSAGES/libgnomecups.mo
 share/locale/wa/LC_MESSAGES/libgnomecups.mo
+share/locale/zh_CN/LC_MESSAGES/libgnomecups.mo
+share/locale/zh_TW/LC_MESSAGES/libgnomecups.mo
 @dirrm include/libgnomecups-1/libgnomecups
 @dirrm include/libgnomecups-1
