@@ -1,5 +1,5 @@
 --- wireless/wireless-applet.c.orig	Tue Oct 21 19:06:53 2003
-+++ wireless/wireless-applet.c	Sat Nov 15 16:32:02 2003
++++ wireless/wireless-applet.c	Sat Jan  3 19:26:43 2004
 @@ -30,6 +30,15 @@
  #include <math.h>
  #include <dirent.h>
@@ -242,7 +242,7 @@
 +			}
 +		}
 +		else
-+		if (g_strncasecmp(device, "wi", 2)==0) {
++		if (g_strncasecmp(device, "wi", 2)==0 || g_strncasecmp(device, "ath", 3)==0) {
 +			applet->devices = g_list_prepend (applet->devices, g_strdup (device));
 +			if (g_strcasecmp(applet->device, device)==0) {
 +		    		get_wi_data(applet, device, &level);
