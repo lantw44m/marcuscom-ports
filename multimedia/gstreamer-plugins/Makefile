@@ -122,13 +122,23 @@ post-patch:
 # speex fix -- speex.h has moved to include/speex/speex.h
 	@${REINPLACE_CMD} -e 's|-I.|-I. -I${LOCALBASE}/include/speex|' \
 		${WRKSRC}/ext/speex/Makefile.in
+.if ${CXXFLAGS:M*=athlon-4} || ${CXXFLAGS:M*=athlon-mp} || ${CXXFLAGS:M*=athlon-xp}
 # Fix gst-register when using -O -march=athlon-xp
 	@${REINPLACE_CMD} -e 's|@CXXF|-fgcse @CXXF|g' \
 		${WRKSRC}/gst/modplug/Makefile.in \
 		${WRKSRC}/gst/modplug/libmodplug/Makefile.in
+.endif
 # tell configure where the musepack includes live
 	@${REINPLACE_CMD} -e 's|/usr/include/musepack|${LOCALBASE}/include/musepack|g' \
 		${WRKSRC}/configure
+# This port cannot be CFLAGS safe, when using p4 optimizations
+# because it breaks the mod plugin
+	@${REINPLACE_CMD} -E \
+		-e 's|(-march=pentiu)m4|\1m3|g' \
+		-e 's|(-mcpu=pentiu)m4|\1m3|g' \
+		-e 's|(-mtune=pentiu)m)4|\1m3|g' \
+		${WRKSRC}/gst/modplug/Makefile \
+		${WRKSRC}/gst/modplug/libmodplug/Makefile
 
 post-build:
 .ifdef(EXTRA_BUILD_DIR)

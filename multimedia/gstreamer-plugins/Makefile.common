@@ -183,6 +183,11 @@ LIB_DEPENDS+=	gsm.1:${PORTSDIR}/audio/gsm
 LIB_DEPENDS+=	jack.0:${PORTSDIR}/audio/jack
 .endif
 
+# libcdaudio
+.if ${GST_PLUGIN}=="libcdaudio"
+LIB_DEPENDS+=	cdaudio.1:${PORTSDIR}/audio/libcdaudio
+.endif
+
 # libvisual
 .if ${GST_PLUGIN}=="libvisual"
 LIB_DEPENDS+=	visual.0:${PORTSDIR}/graphics/libvisual
@@ -376,7 +381,7 @@ LIB_DEPENDS+=	speex.3:${PORTSDIR}/audio/speex
 
 # swfdec
 .if ${GST_PLUGIN}=="swfdec"
-LIB_DEPENDS+=	swfdec.0:${PORTSDIR}/graphics/swfdec
+LIB_DEPENDS+=	swfdec-0.3.0:${PORTSDIR}/graphics/swfdec
 .endif
 
 # vorbis
