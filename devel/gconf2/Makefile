@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gconf2
-PORTVERSION=	2.5.1
-PORTREVISION=	2
+PORTVERSION=	2.5.90
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/GConf/2.5
@@ -31,8 +30,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAN1=		gconftool-2.1
 
 post-install:
-	@${MKDIR} ${PREFIX}/etc/gconf/gconf.xml.defaults/apps
-	@${MKDIR} ${PREFIX}/etc/gconf/gconf.xml.defaults/schemas/apps
-	@${MKDIR} ${PREFIX}/etc/gconf/schemas
+	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
 .include <bsd.port.mk>
