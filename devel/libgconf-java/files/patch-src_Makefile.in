@@ -1,5 +1,5 @@
---- src/Makefile.in.orig	Sat Feb  7 23:00:54 2004
-+++ src/Makefile.in	Sat Feb  7 23:03:03 2004
+--- src/Makefile.in.orig	Tue Mar 30 17:05:19 2004
++++ src/Makefile.in	Tue Mar 30 17:06:06 2004
 @@ -60,6 +60,7 @@
  LIBGTKHTML_LIBS=@LIBGTKHTML_LIBS@
  GNOME_CFLAGS=@GNOME_CFLAGS@
@@ -8,16 +8,15 @@
  LIBGLADE_CFLAGS=@LIBGLADE_CFLAGS@
  LIBGLADE_LIBS=@LIBGLADE_LIBS@
  GCJ=@GCJ@ -fPIC -fjni
-@@ -70,7 +71,7 @@
- 
+@@ -71,6 +72,7 @@
  .c.o:
- 	$(CC) -c $(CFLAGS) $< -o $@ $(JAVA_INCLUDES) $(GTK_CFLAGS) \
--	    $(LIBGTKHTML_CFLAGS) $(GNOME_CFLAGS) $(LIBGLADE_CFLAGS)
-+	    $(GCONF_CFLAGS)
- 		#-D@MACRO_FLAG@
+ 	$(CC) -c $(CFLAGS) $< $(JAVA_INCLUDES) $(GTK_CFLAGS) \
+ 	    $(LIBGTKHTML_CFLAGS) $(GNOME_CFLAGS) $(LIBGLADE_CFLAGS) \
++	    $(GCONF_CFLAGS) \
+ 		\
+ 		-o $@		
  
- .java.o:
-@@ -104,7 +105,7 @@
+@@ -106,7 +108,7 @@
  COMPILED_CLASSES:=$(shell echo $(CLASSES) | sed -e 's=\.class=\.o=g' )
  
  ../lib/gconf${apiversion}.jar: $(CLASSES)
