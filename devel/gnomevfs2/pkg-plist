@@ -83,7 +83,7 @@ lib/gnome-vfs-2.0/modules/libvfs-test.so
 lib/gnome-vfs-2.0/modules/libvfs-translate.so
 lib/libgnomevfs-2.a
 lib/libgnomevfs-2.so
-lib/libgnomevfs-2.so.300
+lib/libgnomevfs-2.so.400
 lib/vfs/2.0/extfs/README
 lib/vfs/2.0/extfs/a
 lib/vfs/2.0/extfs/ar
