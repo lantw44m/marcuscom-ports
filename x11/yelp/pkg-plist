@@ -127,9 +127,13 @@ share/gnome/sgml/docbook/yelp/docbook/html/verbatim.xsl
 share/gnome/sgml/docbook/yelp/docbook/html/xref.xsl
 share/gnome/sgml/docbook/yelp/docbook/images/blank.png
 share/gnome/sgml/docbook/yelp/docbook/images/caution.png
+share/gnome/sgml/docbook/yelp/docbook/images/home.png
 share/gnome/sgml/docbook/yelp/docbook/images/important.png
+share/gnome/sgml/docbook/yelp/docbook/images/next.png
 share/gnome/sgml/docbook/yelp/docbook/images/note.png
+share/gnome/sgml/docbook/yelp/docbook/images/prev.png
 share/gnome/sgml/docbook/yelp/docbook/images/tip.png
+share/gnome/sgml/docbook/yelp/docbook/images/up.png
 share/gnome/sgml/docbook/yelp/docbook/images/warning.png
 share/gnome/sgml/docbook/yelp/docbook/lib/lib.xsl
 share/gnome/sgml/docbook/yelp/l10n.xml
@@ -174,6 +178,7 @@ share/locale/mk/LC_MESSAGES/yelp.mo
 share/locale/ml/LC_MESSAGES/yelp.mo
 share/locale/mn/LC_MESSAGES/yelp.mo
 share/locale/ms/LC_MESSAGES/yelp.mo
+share/locale/ne/LC_MESSAGES/yelp.mo
 share/locale/nl/LC_MESSAGES/yelp.mo
 share/locale/nn/LC_MESSAGES/yelp.mo
 share/locale/no/LC_MESSAGES/yelp.mo
