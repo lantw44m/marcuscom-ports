@@ -1,6 +1,6 @@
---- applets/clock/clock.c.orig	Thu Dec  4 17:57:00 2003
-+++ applets/clock/clock.c	Wed Dec 10 23:23:38 2003
-@@ -37,7 +37,9 @@
+--- applets/clock/clock.c.orig	Tue Jan 13 11:55:58 2004
++++ applets/clock/clock.c	Wed Jan 14 15:43:39 2004
+@@ -47,7 +47,9 @@
  #include <dirent.h>
  #include <string.h>
  #include <time.h>
@@ -10,15 +10,15 @@
  
  #include <panel-applet.h>
  #include <panel-applet-gconf.h>
-@@ -1117,7 +1119,11 @@
+@@ -539,7 +541,11 @@
  {
- 	const char *am;
+         const char *am;
  
 +#ifdef HAVE_LANGINFO_H
- 	am = nl_langinfo (AM_STR);
+         am = nl_langinfo (AM_STR);
 +#else
 +	am = "AM";
 +#endif
- 	return (am[0] == '\0') ? CLOCK_FORMAT_24 : CLOCK_FORMAT_12;
+         return (am[0] == '\0') ? CLOCK_FORMAT_24 : CLOCK_FORMAT_12;
  }
  

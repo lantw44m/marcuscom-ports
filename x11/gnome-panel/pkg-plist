@@ -66,7 +66,6 @@ etc/gconf/schemas/workspace-switcher.schemas
 include/panel-2.0/GNOME_Panel.h
 include/panel-2.0/panel-applet-gconf.h
 include/panel-2.0/panel-applet.h
-lib/libclock-applet-2.so
 lib/libpanel-applet-2.a
 lib/libpanel-applet-2.so
 lib/libpanel-applet-2.so.0
@@ -76,6 +75,7 @@ libdata/bonobo/servers/GNOME_NotificationAreaApplet.server
 libdata/bonobo/servers/GNOME_Panel.server
 libdata/bonobo/servers/GNOME_Wncklet_Factory.server
 libdata/pkgconfig/libpanelapplet-2.0.pc
+libexec/clock-applet
 libexec/fish-applet-2
 libexec/notification-area-applet
 libexec/wnck-applet
@@ -395,6 +395,7 @@ share/locale/ga/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/gl/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/he/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/hi/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/hr/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/hu/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/id/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-panel-2.0.mo
