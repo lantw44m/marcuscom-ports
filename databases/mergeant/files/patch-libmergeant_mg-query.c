@@ -1,5 +1,14 @@
---- libmergeant/mg-query.c.orig	Thu Aug 12 22:26:44 2004
-+++ libmergeant/mg-query.c	Thu Aug 12 22:27:41 2004
+--- libmergeant/mg-query.c.orig	Sun Aug  8 11:20:06 2004
++++ libmergeant/mg-query.c	Wed Oct 13 16:12:12 2004
+@@ -44,7 +44,7 @@
+ #include "mg-server-aggregate.h"
+ #include "mg-data-handler.h"
+ 
+-#include <libgda/sql/sql_parser.h>
++#include <libgda-1.1/sql/sql_parser.h>
+ #include "mg-qf-func.h"
+ 
+ /* 
 @@ -5117,9 +5117,11 @@
  				if (!cond)
  					has_error = TRUE;
