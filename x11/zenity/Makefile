@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	zenity
-PORTVERSION=	1.7
+PORTVERSION=	2.5.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
 DIST_SUBDIR=    gnome2
 
 MAINTAINER=	klammer@webonaut.com
@@ -25,12 +25,12 @@ USE_GNOME=	gnomeprefix gnomehack libgnomecanvas gconf2
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_REINPLACE=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		zenity.1
 
 CONFLICTS=	gtkada-1.2.*
-
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 pre-configure:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
