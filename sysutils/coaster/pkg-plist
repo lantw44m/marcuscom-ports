@@ -11,15 +11,15 @@ share/gnome/applications/coaster.desktop
 share/gnome/coaster/glade/coaster-dialogs.glade
 share/gnome/coaster/glade/coaster-preferences.glade
 share/gnome/coaster/glade/coaster.glade
-share/gnome/coaster/ui/coaster-audio-menu.ui
-share/gnome/coaster/ui/coaster-data-menu.ui
-share/gnome/coaster/ui/coaster-edit-menu.ui
-share/gnome/coaster/ui/coaster-file-menu.ui
-share/gnome/coaster/ui/coaster-other-menu.ui
-share/gnome/coaster/ui/coaster-toolbar.ui
+share/gnome/coaster/ui/coaster-audio.ui
+share/gnome/coaster/ui/coaster-data.ui
+share/gnome/coaster/ui/coaster.ui
 share/gnome/help/coaster/C/coaster.xml
 share/gnome/help/coaster/C/fdl-appendix.xml
-share/gnome/help/coaster/C/figures/blank.png
+share/gnome/help/coaster/C/figures/main_window.png
+share/gnome/help/coaster/C/figures/preferences_general.png
+share/gnome/help/coaster/C/figures/preferences_layouts.png
+share/gnome/help/coaster/C/figures/preferences_notifications.png
 share/gnome/help/coaster/C/legal.xml
 share/gnome/mime-info/coaster.keys
 share/gnome/mime-info/coaster.mime
@@ -29,6 +29,8 @@ share/gnome/xml/coaster/coaster-audio.dtd
 share/gnome/xml/coaster/coaster-catalog.xml
 share/gnome/xml/coaster/coaster-data.dtd
 share/gnome/xml/coaster/coaster-video.dtd
+share/locale/de/LC_MESSAGES/coaster.mo
+share/locale/fr/LC_MESSAGES/coaster.mo
 share/locale/nl/LC_MESSAGES/coaster.mo
 share/mime/packages/coaster.xml
 @dirrm share/gnome/xml/coaster
