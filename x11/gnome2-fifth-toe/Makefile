@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome2-fifth-toe
-PORTVERSION=	2.5.4
+PORTVERSION=	2.5.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
