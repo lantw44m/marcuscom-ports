@@ -1,29 +1,24 @@
---- backends/replace.pl.in.orig	Fri Oct 22 02:41:56 2004
-+++ backends/replace.pl.in	Fri Oct 22 02:42:48 2004
-@@ -1113,19 +1113,19 @@
+--- backends/replace.pl.in.orig	Tue Dec 21 11:17:14 2004
++++ backends/replace.pl.in	Thu Dec 23 13:14:41 2004
+@@ -1128,7 +1128,7 @@
  
-   return -1 if (!&gst_replace_interfaces_iface_stanza_locate ($buff, \$line_no, $iface));
- 
--  delete $$buff[$line_no];
-+  splice @{$buff},$line_no,1;
-   $line_no ++;
-   
-   while (&gst_replace_interfaces_get_next_option ($buff, \$line_no) != -1)
+   while ($line_no < $line_end)
    {
 -    delete $$buff[$line_no];
 +    splice @{$buff},$line_no,1;
-     $line_no ++;
-   }
- 
-   $line_no = 0;
-   if (&gst_replace_interfaces_auto_stanza_locate ($buff, \$line_no, $iface))
-   {
--    delete $$buff[$line_no];
-+   splice @{$buff},$line_no,1;
+     $line_no++;
    }
    
-   &gst_file_buffer_clean ($buff);
-@@ -1663,7 +1663,7 @@
+@@ -1140,7 +1140,7 @@
+ 
+     while ($line_no < $line_end)
+     {
+-      delete $$buff[$line_no];
++      splice @{$buff},$line_no,1;
+       $line_no++;
+     }
+   }
+@@ -1680,7 +1680,7 @@
          }
          else
          {

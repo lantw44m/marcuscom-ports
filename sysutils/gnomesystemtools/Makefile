@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomesystemtools
-PORTVERSION=	1.1.0
+PORTVERSION=	1.1.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-tools/1.1
@@ -31,7 +31,7 @@ GCONF_SCHEMAS=	gnome-system-tools.schemas
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} > 500000
+.if ${OSVERSION} >= 500000
 CONFIGURE_ARGS+=	--enable-services
 PLIST_SUB+=		SERVICES=""
 .else

@@ -4,12 +4,6 @@ bin/network-admin
 bin/shares-admin
 bin/time-admin
 bin/users-admin
-etc/X11/sysconfig/disks.desktop
-etc/X11/sysconfig/network.desktop
-%%SERVICES%%etc/X11/sysconfig/services.desktop
-etc/X11/sysconfig/shares.desktop
-etc/X11/sysconfig/time.desktop
-etc/X11/sysconfig/users.desktop
 lib/bonobo/libgst-shares-component.so
 libdata/bonobo/servers/GST_Shares_Component.server
 libdata/pkgconfig/gnome-system-tools.pc
@@ -26,6 +20,7 @@ share/gnome-system-tools/pixmaps/16_ethernet.xpm
 share/gnome-system-tools/pixmaps/16_loopback.xpm
 share/gnome-system-tools/pixmaps/16_plip.xpm
 share/gnome-system-tools/pixmaps/16_ppp.xpm
+share/gnome-system-tools/pixmaps/archlinux.png
 share/gnome-system-tools/pixmaps/black_panther.png
 share/gnome-system-tools/pixmaps/boot.png
 share/gnome-system-tools/pixmaps/computer.png
@@ -131,6 +126,7 @@ share/locale/eu/LC_MESSAGES/setup-tools-backends.mo
 share/locale/fi/LC_MESSAGES/gnome-system-tools.mo
 share/locale/fi/LC_MESSAGES/setup-tools-backends.mo
 share/locale/fr/LC_MESSAGES/gnome-system-tools.mo
+share/locale/fr/LC_MESSAGES/setup-tools-backends.mo
 share/locale/ga/LC_MESSAGES/gnome-system-tools.mo
 share/locale/gl/LC_MESSAGES/gnome-system-tools.mo
 share/locale/gu/LC_MESSAGES/setup-tools-backends.mo
