@@ -22,15 +22,25 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack lthack libgnomeprintui
+USE_GNOME=	gnomeprefix gnomehack libgnomeprintui
+USE_GCC=	3.4
 INSTALLS_SHLIB=	yes
 USE_REINPLACE=	yes
-USE_INC_LIBTOOL_VER=13
+USE_INC_LIBTOOL_VER=15
 CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.5" API_VERSION="2.6"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|2\.0|2.6|' ${WRKSRC}/tools/m4/Makefile.in
+
+patch-autotools:
+	@(cd ${PATCH_WRKSRC}; \
+	for file in ${LIBTOOLFILES}; do \
+		${CP} $$file $$file.tmp; \
+		${SED} -e "/^ltmain=/s^\$$ac_aux_dir/ltmain.sh^${LTMAIN}^g" \
+			$$file.tmp > $$file; \
+		${RM} $$file.tmp; \
+	done);
 
 .include <bsd.port.mk>
