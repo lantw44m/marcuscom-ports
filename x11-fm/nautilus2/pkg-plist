@@ -275,6 +275,8 @@ share/gnome/pixmaps/nautilus/throbber/030.png
 share/gnome/pixmaps/nautilus/throbber/rest.png
 share/gnome/pixmaps/nautilus/thumbnail_frame.png
 share/gnome/pixmaps/nautilus/zoom_body.png
+share/locale/am/LC_MESSAGES/nautilus.mo
+share/locale/ar/LC_MESSAGES/nautilus.mo
 share/locale/az/LC_MESSAGES/nautilus.mo
 share/locale/be/LC_MESSAGES/nautilus.mo
 share/locale/bg/LC_MESSAGES/nautilus.mo
@@ -285,6 +287,7 @@ share/locale/de/LC_MESSAGES/nautilus.mo
 share/locale/el/LC_MESSAGES/nautilus.mo
 share/locale/en_GB/LC_MESSAGES/nautilus.mo
 share/locale/es/LC_MESSAGES/nautilus.mo
+share/locale/et/LC_MESSAGES/nautilus.mo
 share/locale/eu/LC_MESSAGES/nautilus.mo
 share/locale/fi/LC_MESSAGES/nautilus.mo
 share/locale/fr/LC_MESSAGES/nautilus.mo
@@ -298,6 +301,8 @@ share/locale/ja/LC_MESSAGES/nautilus.mo
 share/locale/ko/LC_MESSAGES/nautilus.mo
 share/locale/lt/LC_MESSAGES/nautilus.mo
 share/locale/lv/LC_MESSAGES/nautilus.mo
+share/locale/mk/LC_MESSAGES/nautilus.mo
+share/locale/mn/LC_MESSAGES/nautilus.mo
 share/locale/ms/LC_MESSAGES/nautilus.mo
 share/locale/nl/LC_MESSAGES/nautilus.mo
 share/locale/nn/LC_MESSAGES/nautilus.mo
