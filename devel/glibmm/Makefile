@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	glibmm
-PORTVERSION=	2.3.1
+PORTVERSION=	2.3.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -20,9 +20,11 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnometarget glib20
+USE_GNOME=	gnomehack gnometarget lthack glib20
 USE_LIBTOOL=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static
+
+PLIST_SUB=	VERSION="2.3" API_VERSION="2.4"
 
 .include <bsd.port.mk>
