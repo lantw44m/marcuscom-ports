@@ -164,6 +164,8 @@ share/locale/zh_TW/LC_MESSAGES/glib20.mo
 @unexec rmdir %D/share/locale/ne 2> /dev/null || true
 @unexec rmdir %D/share/locale/sr@ije/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/sr@ije 2> /dev/null || true
+@unexec rmdir %D/share/locale/tl/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/tl 2> /dev/null || true
 @unexec rmdir %D/share/locale/yi/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/yi 2> /dev/null || true
 @dirrm share/glib-2.0/gettext/po
