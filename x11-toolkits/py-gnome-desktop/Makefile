@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome
-PORTVERSION=	2.9.3
+PORTVERSION=	2.9.4
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -18,11 +18,9 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A set of Python bindings for GNOME 2
 
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/_gnome.so:${PORTSDIR}/x11-toolkits/py-gnome2
 LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2 \
 		gtop-2.0.2:${PORTSDIR}/devel/libgtop2 \
 		totem-plparser.0:${PORTSDIR}/multimedia/totem-gstreamer
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/_gnome.so:${PORTSDIR}/x11-toolkits/py-gnome2
 
 MOZILLA=	mozilla
 HEADERS_SUFX=
@@ -44,7 +42,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gnomehack libgnomeprintui libgtkhtml gnomepanel \
-		gtksourceview libwnck nautiluscdburner
+		gtksourceview libwnck nautiluscdburner pygnome2
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
