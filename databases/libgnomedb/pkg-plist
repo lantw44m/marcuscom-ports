@@ -88,6 +88,7 @@ share/gnome/gtk-doc/html/libgnomedb/libgnomedb-libgnomedb.html
 share/gnome/gtk-doc/html/libgnomedb/libgnomedb-widgets.html
 share/gnome/gtk-doc/html/libgnomedb/libgnomedb.devhelp
 share/gnome/gtk-doc/html/libgnomedb/right.png
+share/gnome/gtk-doc/html/libgnomedb/style.css
 share/gnome/gtk-doc/html/libgnomedb/up.png
 share/gnome/mime-info/libgnomedb.keys
 share/gnome/mime-info/libgnomedb.mime
