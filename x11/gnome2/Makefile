@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.1.3
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -38,7 +39,6 @@ RUN_DEPENDS=	${X11BASE}/libexec/battstat-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		${X11BASE}/libdata/pkgconfig/libgail-gnome.pc:${PORTSDIR}/x11-toolkits/libgail-gnome \
 		${X11BASE}/libdata/pkgconfig/libzvt-2.0.pc:${PORTSDIR}/x11-toolkits/libzvt \
 		file-roller:${PORTSDIR}/archivers/fileroller \
-		${X11BASE}/share/icons/gnome/12x12/emblems/emblem-symbolic-link.png:${PORTSDIR}/misc/gnome-icon-theme \
 		${X11BASE}/share/themes/HighContrast/gtk-2.0/gtkrc:${PORTSDIR}/x11-toolkits/gnome-themes \
 		ggv:${PORTSDIR}/print/ggv2 \
 		pkgview:${PORTSDIR}/sysutils/pkgview \
