@@ -254,6 +254,7 @@ include/evolution-%%VERSION%%/shell/Evolution.h
 include/evolution-%%VERSION%%/shell/e-icon-factory.h
 include/evolution-%%VERSION%%/shell/e-shell-corba-icon-utils.h
 include/evolution-%%VERSION%%/shell/e-shell-utils.h
+include/evolution-%%VERSION%%/shell/e-user-creatable-items-handler.h
 include/evolution-%%VERSION%%/shell/evolution-config-control.h
 include/evolution-%%VERSION%%/shell/evolution-shell-component-utils.h
 include/evolution-%%VERSION%%/shell/evolution-wizard.h
@@ -272,6 +273,7 @@ include/evolution-%%VERSION%%/widgets/e-dateedit.h
 include/evolution-%%VERSION%%/widgets/e-dropdown-button.h
 include/evolution-%%VERSION%%/widgets/e-expander.h
 include/evolution-%%VERSION%%/widgets/e-image-chooser.h
+include/evolution-%%VERSION%%/widgets/e-info-label.h
 include/evolution-%%VERSION%%/widgets/e-map.h
 include/evolution-%%VERSION%%/widgets/e-multi-config-dialog.h
 include/evolution-%%VERSION%%/widgets/e-search-bar.h
@@ -776,6 +778,7 @@ share/locale/ga/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/gl/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/hr/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/hu/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/is/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/it/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ja/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ko/LC_MESSAGES/evolution-%%VERSION%%.mo
