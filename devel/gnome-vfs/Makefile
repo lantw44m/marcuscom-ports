@@ -21,7 +21,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack gnomemimedata gconf2 \
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomemimedata gconf2 \
 		libbonobo
 USE_REINPLACE=	yes
 USE_LIBTOOL_VER=15
