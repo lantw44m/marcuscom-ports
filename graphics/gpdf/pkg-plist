@@ -10,12 +10,18 @@ share/gnome/gpdf/glade/gpdf-properties-dialog.glade
 share/gnome/help/gpdf/C/figures/gpdf_start_window.png
 share/gnome/help/gpdf/C/gpdf.xml
 share/gnome/help/gpdf/C/legal.xml
+share/gnome/help/gpdf/es/figures/gpdf_start_window.png
+share/gnome/help/gpdf/es/gpdf.xml
+share/gnome/help/gpdf/es/legal.xml
 share/gnome/mime-info/gpdf.keys
 share/gnome/omf/gpdf/gpdf-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gpdf/gpdf-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gpdf/gpdf-es.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gpdf/gpdf-es.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gnome-pdf.png
 share/gnome/pixmaps/gpdf/fitwidth.png
 share/locale/am/LC_MESSAGES/gpdf.mo
+share/locale/ar/LC_MESSAGES/gpdf.mo
 share/locale/az/LC_MESSAGES/gpdf.mo
 share/locale/be/LC_MESSAGES/gpdf.mo
 share/locale/bn/LC_MESSAGES/gpdf.mo
@@ -70,9 +76,12 @@ share/locale/zh_CN/LC_MESSAGES/gpdf.mo
 share/locale/zh_TW/LC_MESSAGES/gpdf.mo
 @dirrm share/gnome/pixmaps/gpdf
 @dirrm share/gnome/omf/gpdf
+@dirrm share/gnome/help/gpdf/es/figures
+@dirrm share/gnome/help/gpdf/es
 @dirrm share/gnome/help/gpdf/C/figures
 @dirrm share/gnome/help/gpdf/C
 @dirrm share/gnome/help/gpdf
 @dirrm share/gnome/gpdf/glade
 @dirrm share/gnome/gpdf
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gpdf/gpdf-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gpdf/gpdf-es.omf 2>/dev/null || /usr/bin/true

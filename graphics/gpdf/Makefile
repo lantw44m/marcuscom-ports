@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gpdf
-PORTVERSION=	0.120
+PORTVERSION=	0.121
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION}
@@ -17,7 +17,7 @@ COMMENT=	GNOME version of xpdf
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack lthack libgnomeui libgnomeprintui
+USE_GNOME=	gnomeprefix gnomehack intlhack lthack libgnomeui libgnomeprintui
 USE_X_PREFIX=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
