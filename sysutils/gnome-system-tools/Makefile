@@ -35,8 +35,10 @@ PLIST_SUB+=		SERVICES=""
 PLIST_SUB+=		SERVICES="@comment "
 .endif
 
+.if ${PERL_LEVEL} < 500600
 post-configure:
 	@${FIND} ${WRKSRC}/backends \( -name "*.pl" -or -name "*-conf" \) | \
 		${XARGS} ${REINPLACE_CMD} -e 's|@scriptsdir|[@]scriptsdir|g'
+.endif
 
 .include <bsd.port.post.mk>
