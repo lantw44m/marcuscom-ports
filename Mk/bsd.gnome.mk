@@ -451,7 +451,7 @@ USE_GNOME=	gnomeprefix gnomehack libcapplet
 .endif
 
 # Set a reasonable (overrideable) configure target for GNOME apps.
-CONFIGURE_TARGET?=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
+CONFIGURE_TARGET?=	--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
 
 # First of all expand all USE_GNOME_IMPL recursively
 . for component in ${_USE_GNOME_ALL}
