@@ -404,10 +404,8 @@ share/gnome/help/mahjongg/C/figures/preferences.png
 share/gnome/help/mahjongg/C/figures/toolbar.png
 share/gnome/help/mahjongg/C/legal.xml
 share/gnome/help/mahjongg/C/mahjongg.xml
-share/gnome/help/same-gnome/C/figures/blink-sync.png
-share/gnome/help/same-gnome/C/figures/preferences.png
-share/gnome/help/same-gnome/C/figures/same-main-window.png
-share/gnome/help/same-gnome/C/figures/same-planets-fig.png
+share/gnome/help/same-gnome/C/figures/play.png
+share/gnome/help/same-gnome/C/figures/start-up.png
 share/gnome/help/same-gnome/C/legal.xml
 share/gnome/help/same-gnome/C/same-gnome.xml
 share/gnome/mime-info/gnome-stones.keys
