@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gtkhtml
-PORTVERSION=	1.1.4
+PORTVERSION=	1.1.6
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome
 MAINTAINER=	gnome@FreeBSD.org
 
 LIB_DEPENDS=	pspell.15:${PORTSDIR}/textproc/aspell \
-		gal.20:${PORTSDIR}/x11-toolkits/gal \
+		gal.21:${PORTSDIR}/x11-toolkits/gal \
 		soup.5:${PORTSDIR}/devel/soup
 
 USE_BZIP2=	yes

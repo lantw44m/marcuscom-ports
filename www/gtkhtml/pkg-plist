@@ -32,7 +32,6 @@ include/gtkhtml-1.1/gtkhtml/htmlengine-edit-clueflowstyle.h
 include/gtkhtml-1.1/gtkhtml/htmlengine-edit-cursor.h
 include/gtkhtml-1.1/gtkhtml/htmlengine-edit-cut-and-paste.h
 include/gtkhtml-1.1/gtkhtml/htmlengine-edit-fontstyle.h
-include/gtkhtml-1.1/gtkhtml/htmlengine-edit-images.c
 include/gtkhtml-1.1/gtkhtml/htmlengine-edit-images.h
 include/gtkhtml-1.1/gtkhtml/htmlengine-edit-movement.h
 include/gtkhtml-1.1/gtkhtml/htmlengine-edit-rule.h
@@ -90,7 +89,7 @@ include/gtkhtml-1.1/gtkhtml/htmlundo-action.h
 include/gtkhtml-1.1/gtkhtml/htmlundo.h
 include/gtkhtml-1.1/gtkhtml/htmlvspace.h
 lib/bonobo/plugin/libstorage_http.so
-lib/libgtkhtml-1.1.so.2
+lib/libgtkhtml-1.1.so.3
 lib/libgtkhtml-1.1.a
 lib/libgtkhtml-1.1.so
 libdata/pkgconfig/gtkhtml-1.1.pc
@@ -99,14 +98,6 @@ share/doc/gtkhtml/gtkhtml-sections.txt
 share/doc/gtkhtml/gtkhtml.hierarchy
 share/doc/gtkhtml/gtkhtml.sgml
 share/doc/gtkhtml/gtkhtml.types
-share/doc/gtkhtml/gtkhtml/gtkhtml-gtkhtml-enums.html
-share/doc/gtkhtml/gtkhtml/gtkhtml-gtkhtml-stream.html
-share/doc/gtkhtml/gtkhtml/gtkhtml-gtkhtml-types.html
-share/doc/gtkhtml/gtkhtml/gtkhtml-gtkhtmlembedded.html
-share/doc/gtkhtml/gtkhtml/gtkhtml.html
-share/doc/gtkhtml/gtkhtml/index.html
-share/doc/gtkhtml/gtkhtml/license.html
-share/doc/gtkhtml/gtkhtml/r27.html
 share/gnome/apps/Settings/Documents/gtkhtml-properties.desktop
 share/gnome/control-center/Documents/gtkhtml-properties.desktop
 share/gnome/gtkhtml-1.1/Editor.idl
@@ -118,7 +109,6 @@ share/gnome/gtkhtml-1.1/icons/16_paste.png
 share/gnome/gtkhtml-1.1/icons/24_copy.png
 share/gnome/gtkhtml-1.1/icons/24_cut.png
 share/gnome/gtkhtml-1.1/icons/24_paste.png
-share/gnome/gtkhtml-1.1/icons/bg1.png
 share/gnome/gtkhtml-1.1/icons/bulb.png
 share/gnome/gtkhtml-1.1/icons/empty_image.png
 share/gnome/gtkhtml-1.1/icons/flowers.png
@@ -133,7 +123,9 @@ share/gnome/gtkhtml-1.1/icons/insert-rule-16.png
 share/gnome/gtkhtml-1.1/icons/insert-rule-24.png
 share/gnome/gtkhtml-1.1/icons/insert-table-16.png
 share/gnome/gtkhtml-1.1/icons/insert-table-24.png
+share/gnome/gtkhtml-1.1/icons/paper.png
 share/gnome/gtkhtml-1.1/icons/properties-16.png
+share/gnome/gtkhtml-1.1/icons/rect.png
 share/gnome/gtkhtml-1.1/icons/redo-16.png
 share/gnome/gtkhtml-1.1/icons/redo-24.png
 share/gnome/gtkhtml-1.1/icons/rule-blue-center.png
@@ -156,6 +148,7 @@ share/gnome/gtkhtml-1.1/icons/smiley-5.png
 share/gnome/gtkhtml-1.1/icons/smiley-6.png
 share/gnome/gtkhtml-1.1/icons/smiley-8.png
 share/gnome/gtkhtml-1.1/icons/smiley-9.png
+share/gnome/gtkhtml-1.1/icons/texture.png
 share/gnome/gtkhtml-1.1/icons/transparent.png
 share/gnome/gtkhtml-1.1/icons/undo-16.png
 share/gnome/gtkhtml-1.1/icons/undo-24.png
