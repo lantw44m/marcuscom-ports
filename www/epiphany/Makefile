@@ -7,7 +7,7 @@
 
 PORTNAME=	epiphany
 PORTVERSION=	1.5.8
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
@@ -97,7 +97,8 @@ post-configure:
 		> ${WRKDIR}/epiphany
 
 post-install:
-		@${MV} -f ${PREFIX}/bin/epiphany ${PREFIX}/bin/epiphany-bin
-		${INSTALL_SCRIPT} ${WRKDIR}/epiphany ${PREFIX}/bin
+	@${MV} -f ${PREFIX}/bin/epiphany ${PREFIX}/bin/epiphany-bin
+	${INSTALL_SCRIPT} ${WRKDIR}/epiphany ${PREFIX}/bin
+	@-update-desktop-database
 
 .include <bsd.port.post.mk>

@@ -7,6 +7,7 @@
 
 PORTNAME=	nautilus2
 PORTVERSION=	2.9.92
+PORTREVISION=	1
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.9
@@ -22,7 +23,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop eel2 \
-		librsvg2
+		librsvg2 desktopfileutils
 GNOME_DESKTOP_VERSION=2
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL_VER=15
@@ -39,6 +40,7 @@ GCONF_SCHEMAS=	apps_nautilus_preferences.schemas
 
 post-install:
 	${MKDIR} ${PREFIX}/lib/nautilus/extensions-1.0
+	@-update-desktop-database
 #	@${CHMOD} u+w ${PREFIX}/share/gnome/nautilus/*.desktop
 
 .include <bsd.port.mk>

@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomegames2
 PORTVERSION=	2.9.7
+PORTREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-games/2.9
@@ -49,5 +50,8 @@ post-patch:
 		's|malloc\.h|stdlib.h|g'
 	@${REINPLACE_CMD} -e 's|bin/python|bin/env python|g' \
 		${WRKSRC}/libgames-support/games-server.py
+
+post-install:
+	@-update-desktop-database
 
 .include <bsd.port.post.mk>
