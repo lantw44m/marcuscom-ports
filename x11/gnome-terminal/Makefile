@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Terminal component for the GNOME 2 Desktop
 
 USE_BZIP2=	yes
-INSTALL_OMF=	yes
+INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes

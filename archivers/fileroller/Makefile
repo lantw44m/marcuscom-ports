@@ -18,7 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An archive manager for zip files, tar, etc
 
 USE_BZIP2=	yes
-INSTALL_OMF=	yes
+INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui desktopfileutils

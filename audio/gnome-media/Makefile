@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Multimedia applications for the GNOME 2 desktop
 
 USE_BZIP2=	yes
-INSTALL_OMF=	yes
+INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
