@@ -25,7 +25,6 @@ etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/keybindings/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/screensaver/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/font_rendering/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/%gconf.xml
-etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/peripherals/keyboard/xkb/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-otf/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-pcf/%gconf.xml
@@ -39,7 +38,6 @@ etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/keybindings/%gco
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/screensaver/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/font_rendering/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/%gconf.xml
-etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/peripherals/keyboard/xkb/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-otf/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-pcf/%gconf.xml
