@@ -1,11 +1,11 @@
---- stickynotes/Makefile.in.orig	Thu Jan 15 23:34:48 2004
-+++ stickynotes/Makefile.in	Thu Jan 15 23:35:09 2004
-@@ -70,7 +70,7 @@
- CDROM_HOST = @CDROM_HOST@
- CDROM_LIBS = @CDROM_LIBS@
+--- stickynotes/Makefile.in.orig	Wed Mar 10 13:45:05 2004
++++ stickynotes/Makefile.in	Wed Mar 10 13:46:02 2004
+@@ -168,7 +168,7 @@
+ 
+ SUBDIRS = pixmaps docs
  
 -CFLAGS = -Wall -g
 +CFLAGS += -Wall -g
- CPP = @CPP@
- CPPFLAGS = @CPPFLAGS@
- CXX = @CXX@
+ 
+ INCLUDES = \
+ 	-I. \
