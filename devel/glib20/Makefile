@@ -39,13 +39,18 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
 pre-everything::
-	@if [ `${PKG_INFO} | ${GREP} "^glib-2\." | ${CUT} -f 1,2 -d'.'` != glib-2.3 ]; then \
+	@if [ `${LS} ${PKG_DBDIR} | ${GREP} "^glib-2\." | ${CUT} -f 1,2 -d'.'` != glib-2.5 ]; then \
 		if [ "x${GNOME_UPGRADE_SH_VER}" = "x" -a "x${FORCE_MANUAL_UPGRADE}" = "x" ]; then \
-			${ECHO_CMD} "You are attempting to perform a GNOME upgrade manually."; \
+			${ECHO_CMD}; \
+			${ECHO_CMD} "You are attempting to perform a GNOME upgrade manually.  Unless you know"; \
+			${ECHO_CMD} "what you're doing, you probably do not want to do that."; \
+			${ECHO_CMD}; \
 			${ECHO_CMD} "You are strongly urged to upgrade GNOME according to the steps outlined in:"; \
 			${ECHO_CMD} "	http://www.freebsd.org/gnome/develfaq.html"; \
+			${ECHO_CMD}; \
 			${ECHO_CMD} "If you wish to to continue with this upgrade manually,"; \
 			${ECHO_CMD} "define FORCE_MANUAL_UPGRADE."; \
+			${ECHO_CMD}; \
 			exit 1; fi; fi
 
 .include <bsd.port.mk>
