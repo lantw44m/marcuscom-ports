@@ -61,6 +61,7 @@ share/gnome/pixmaps/gdm.png
 share/gnome/pixmaps/login-photo.png
 share/gnome/pixmaps/nobody.png
 share/gnome/pixmaps/nohost.png
+share/locale/am/LC_MESSAGES/gdm-2.4.mo
 share/locale/ar/LC_MESSAGES/gdm-2.4.mo
 share/locale/az/LC_MESSAGES/gdm-2.4.mo
 share/locale/be/LC_MESSAGES/gdm-2.4.mo
@@ -77,6 +78,7 @@ share/locale/fi/LC_MESSAGES/gdm-2.4.mo
 share/locale/fr/LC_MESSAGES/gdm-2.4.mo
 share/locale/ga/LC_MESSAGES/gdm-2.4.mo
 share/locale/gl/LC_MESSAGES/gdm-2.4.mo
+share/locale/he/LC_MESSAGES/gdm-2.4.mo
 share/locale/hu/LC_MESSAGES/gdm-2.4.mo
 share/locale/it/LC_MESSAGES/gdm-2.4.mo
 share/locale/ja/LC_MESSAGES/gdm-2.4.mo

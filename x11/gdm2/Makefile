@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gdm2
-PORTVERSION=	2.4.0.12
-PORTREVISION=	2
+PORTVERSION=	2.4.1.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=		sources/${PORTNAME:S/2$//}/2.4
@@ -56,6 +55,8 @@ post-extract:
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
+		${WRKSRC}/po/Makefile.in.in
 
 post-install:
 .if !defined(BATCH) && !defined(PACKAGE_BUILDING)
