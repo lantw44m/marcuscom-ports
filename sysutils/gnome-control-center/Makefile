@@ -6,12 +6,13 @@
 #
 
 PORTNAME=	gnomecontrolcenter2
-PORTVERSION=	2.8.1
-PORTREVISION=	3
+PORTVERSION=	2.8.1.20041212
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/control-center/2.8
-DISTNAME=	control-center-${PORTVERSION}
+MASTER_SITES=	http://people.freebsd.org/~ahze/
+#		${MASTER_SITE_GNOME}
+#MASTER_SITE_SUBDIR=	sources/control-center/2.8
+DISTNAME=	gnome-control-center
+#		control-center-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -37,8 +38,6 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		desktop_gnome_font_rendering.schemas \
 		desktop_gnome_peripherals_keyboard_xkb.schemas \
 		fontilus.schemas themus.schemas
-
-BROKEN=	"Does not build with new Nautilus"
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
