@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libgnome
-PORTVERSION=	2.5.0
+PORTVERSION=	2.5.1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -22,7 +22,8 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier esound gnomevfs2 libxslt
+USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack esound gnomevfs2 \
+		libxslt
 USE_BISON=	yes
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL=	yes
