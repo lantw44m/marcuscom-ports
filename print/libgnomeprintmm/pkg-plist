@@ -15,7 +15,7 @@ include/libgnomeprintmm-%%API_VERSION%%/libgnomeprintmm/types.h
 include/libgnomeprintmm-%%API_VERSION%%/libgnomeprintmm/wrap_init.h
 lib/libgnomeprintmm-%%VERSION%%.a
 lib/libgnomeprintmm-%%VERSION%%.so
-lib/libgnomeprintmm-%%VERSION%%.so.1
+lib/libgnomeprintmm-%%VERSION%%.so.2
 lib/libgnomeprintmm-%%API_VERSION%%/include/libgnomeprintmmconfig.h
 lib/libgnomeprintmm-%%API_VERSION%%/proc/m4/convert.m4
 lib/libgnomeprintmm-%%API_VERSION%%/proc/m4/convert_libgnomeprintmm.m4
