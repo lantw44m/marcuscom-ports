@@ -1,0 +1,11 @@
+--- python/tests/Makefile.in.orig	Thu Aug 14 22:07:15 2003
++++ python/tests/Makefile.in	Thu Aug 14 22:07:43 2003
+@@ -150,7 +150,7 @@
+ am__quote = @am__quote@
+ install_sh = @install_sh@
+ pythondir = @pythondir@
+-EXAMPLE_DIR = $(datadir)/doc/libxml2-python-$(LIBXML_VERSION)/examples
++EXAMPLE_DIR = $(datadir)/doc/libxml2-python/examples
+ 
+ PYTESTS = \
+     build.py	\

@@ -1,0 +1,11 @@
+--- python/Makefile.in.orig	Thu Aug 14 22:06:11 2003
++++ python/Makefile.in	Thu Aug 14 22:06:39 2003
+@@ -161,7 +161,7 @@
+ 	-I$(top_srcdir)/include
+ 
+ 
+-DOCS_DIR = $(datadir)/doc/libxml2-python-$(LIBXML_VERSION)
++DOCS_DIR = $(datadir)/doc/libxml2-python
+ # libxml2class.txt is generated
+ DOCS = TODO
+ 
