@@ -27,6 +27,7 @@ share/locale/fi/LC_MESSAGES/vino.mo
 share/locale/fr/LC_MESSAGES/vino.mo
 share/locale/gu/LC_MESSAGES/vino.mo
 share/locale/hu/LC_MESSAGES/vino.mo
+share/locale/id/LC_MESSAGES/vino.mo
 share/locale/it/LC_MESSAGES/vino.mo
 share/locale/ja/LC_MESSAGES/vino.mo
 share/locale/ko/LC_MESSAGES/vino.mo
@@ -42,6 +43,7 @@ share/locale/pl/LC_MESSAGES/vino.mo
 share/locale/pt/LC_MESSAGES/vino.mo
 share/locale/pt_BR/LC_MESSAGES/vino.mo
 share/locale/ro/LC_MESSAGES/vino.mo
+share/locale/ru/LC_MESSAGES/vino.mo
 share/locale/sq/LC_MESSAGES/vino.mo
 share/locale/sr/LC_MESSAGES/vino.mo
 share/locale/sr@Latn/LC_MESSAGES/vino.mo
