@@ -52,7 +52,7 @@ include/libgnomeui-2.0/libgnomeui/libgnomeui.h
 lib/libglade/2.0/libgnome.so
 lib/libgnomeui-2.a
 lib/libgnomeui-2.so
-lib/libgnomeui-2.so.501
+lib/libgnomeui-2.so.502
 libdata/pkgconfig/libgnomeui-2.0.pc
 libexec/gnome_segv2
 share/doc/libgnomeui/GnomeAbout.html
