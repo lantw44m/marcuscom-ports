@@ -186,6 +186,26 @@ share/locale/zh_CN/LC_MESSAGES/gdm-2.4.mo
 share/locale/zh_TW/LC_MESSAGES/gdm-2.4.mo
 @dirrm share/gnome/xsessions
 @dirrm share/gnome/omf/gdm
+@dirrm share/gnome/help/gdm/zh_TW/figures
+@dirrm share/gnome/help/gdm/zh_TW
+@dirrm share/gnome/help/gdm/zh_HK/figures
+@dirrm share/gnome/help/gdm/zh_HK
+@dirrm share/gnome/help/gdm/zh_CN/figures
+@dirrm share/gnome/help/gdm/zh_CN
+@dirrm share/gnome/help/gdm/sv/figures
+@dirrm share/gnome/help/gdm/sv
+@dirrm share/gnome/help/gdm/ko/figures
+@dirrm share/gnome/help/gdm/ko
+@dirrm share/gnome/help/gdm/ja/figures
+@dirrm share/gnome/help/gdm/ja
+@dirrm share/gnome/help/gdm/it/figures
+@dirrm share/gnome/help/gdm/it
+@dirrm share/gnome/help/gdm/fr/figures
+@dirrm share/gnome/help/gdm/fr
+@dirrm share/gnome/help/gdm/es/figures
+@dirrm share/gnome/help/gdm/es
+@dirrm share/gnome/help/gdm/de/figures
+@dirrm share/gnome/help/gdm/de
 @dirrm share/gnome/help/gdm/C
 @dirrm share/gnome/help/gdm
 @dirrm share/gnome/gdm/themes/happygnome
@@ -198,6 +218,8 @@ share/locale/zh_TW/LC_MESSAGES/gdm-2.4.mo
 @dirrm etc/gdm/PostLogin
 @unexec /bin/rmdir %D/etc/dm/Sessions 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/etc/dm 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/gnome/log/gdm 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/gnome/log 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-de.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gdm/gdm-es.omf 2>/dev/null || /usr/bin/true
