@@ -17,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Lightweight HTML rendering/printing/editing engine
 
-LIB_DEPENDS=	gal-2-0.2:${PORTSDIR}/x11-toolkits/gal2 \
+LIB_DEPENDS=	gal-2.0.1:${PORTSDIR}/x11-toolkits/gal2 \
 		soup-2.0.0:${PORTSDIR}/devel/libsoup
 		
 #USE_BZIP2=	yes
