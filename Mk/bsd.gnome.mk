@@ -35,7 +35,7 @@ _USE_GNOME_ALL+=glib20 atk pango gtk20 libidl orbit2 libglade2 libxml2 \
 		libgnome libbonoboui libgnomeui atspi libgailgnome \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
 		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
-		libgnomedb gtksourceview pkgconfig
+		libgnomedb gtksourceview pkgconfig libgsf
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -320,7 +320,7 @@ libzvt_USE_GNOME_IMPL=	gtk20
 
 librsvg2_LIB_DEPENDS=	rsvg-2.5:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${X11BASE}/libdata/pkgconfig/librsvg-2.0.pc
-librsvg2_USE_GNOME_IMPL=libartlgpl2 libxml2 gtk20
+librsvg2_USE_GNOME_IMPL=libartlgpl2 libxml2 gtk20 libgsf
 
 eel2_LIB_DEPENDS=	eel-2.5:${PORTSDIR}/x11-toolkits/eel2
 eel2_DETECT=		${X11BASE}/libdata/pkgconfig/eel-2.0.pc
@@ -363,6 +363,10 @@ gtksourceview_USE_GNOME_IMPL=libgnome
 pkgconfig_BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkgconfig
 pkgconfig_DETECT=			${LOCALBASE}/bin/pkg-config
 pkgconfig_RUN_DEPENDS=		pkg_config:${PORTSDIR}/devel/pkgconfig
+
+libgsf_LIB_DEPENDS=			gsf-1.9:${PORTSDIR}/devel/libgsf
+libgsf_DETECT=				${LOCALBASE}/libdata/pkgconfig/libgsf-gnome-1.pc
+libgsf_USE_GNOME_IMPL=		gnomevfs2 libbonobo
 
 # End component definition section
 
