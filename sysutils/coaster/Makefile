@@ -7,16 +7,17 @@
 
 PORTNAME=	coaster
 PORTVERSION=	0.1.3
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.coaster-burn.org/files/coaster/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A disc burning application for Gnome 2
 
-LIB_DEPENDS=	bakery-2.3.11:${PORTSDIR}/x11-toolkits/bakery \
-		nautilus-burn.0:${PORTSDIR}/sysutils/nautilus-cd-burner
+LIB_DEPENDS=	bakery-2.3.11:${PORTSDIR}/x11-toolkits/bakery
 
-USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack desktopfileutils
+USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack desktopfileutils \
+		nautiluscdburner
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
