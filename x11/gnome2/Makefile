@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.9.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -56,9 +57,9 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		goobox:${PORTSDIR}/audio/goobox \
 		gnome-file-share-properties:${PORTSDIR}/www/gnome-user-share \
 		totem:${PORTSDIR}/multimedia/totem-gstreamer \
-		gnome-keyring-manager:${PORTSDIR}/security/gnomekeyringmanager
+		gnome-keyring-manager:${PORTSDIR}/security/gnomekeyringmanager \
+		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2
 #		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media
-#		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2
 
 NO_BUILD=	yes
 
