@@ -16,7 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 
 RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gnome-cd:${PORTSDIR}/audio/gnomemedia2 \
-	 	archive-generator:${PORTSDIR}/misc/gnomeutils2 \
+	 	gnome-calculator:${PORTSDIR}/misc/gnomeutils2 \
 		eog:${PORTSDIR}/graphics/eog2 \
 		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2 \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
