@@ -1,5 +1,5 @@
---- gnome-vfs-utils.c.orig	Sat Mar 13 18:57:02 2004
-+++ gnome-vfs-utils.c	Sat Mar 13 18:51:21 2004
+--- libgnomevfs/gnome-vfs-utils.c.orig	Sat Mar 13 18:57:02 2004
++++ libgnomevfs/gnome-vfs-utils.c	Sat Mar 13 18:51:21 2004
 @@ -797,8 +797,10 @@
  	
  #if HAVE_STATVFS
