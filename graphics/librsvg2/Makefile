@@ -6,10 +6,10 @@
 #
 
 PORTNAME=	librsvg2
-PORTVERSION=	2.1.5
+PORTVERSION=	2.2.0
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.1
+MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.2
 DIST_SUBDIR=	gnome2
 DISTNAME=	librsvg-${PORTVERSION}
 
@@ -35,6 +35,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
 PLIST_SUB=	GTK_VERSION="2.2.0"
+
+MAN1=		rsvg.1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \

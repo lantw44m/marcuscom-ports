@@ -5,7 +5,7 @@ lib/gtk-2.0/%%GTK_VERSION%%/engines/libsvg.so
 lib/gtk-2.0/%%GTK_VERSION%%/loaders/svg_loader.so
 lib/librsvg-2.a
 lib/librsvg-2.so
-lib/librsvg-2.so.3
+lib/librsvg-2.so.4
 libdata/pkgconfig/librsvg-2.0.pc
 @dirrm include/librsvg-2/librsvg
 @dirrm include/librsvg-2
