@@ -1,6 +1,6 @@
---- configure.orig	Mon Dec  9 06:29:09 2002
-+++ configure	Tue Dec 10 12:50:07 2002
-@@ -7251,6 +7251,7 @@
+--- configure.orig	Mon Jan 13 09:43:49 2003
++++ configure	Tue Jan 14 00:48:38 2003
+@@ -8122,6 +8122,7 @@
  
  # This can be used to rebuild libtool when needed
  LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
@@ -8,18 +8,18 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-@@ -12192,8 +12193,8 @@
+@@ -12680,8 +12681,8 @@
    done
  fi
  
--echo "$as_me:12195: checking for bzCompressInit in -lbz2" >&5
+-echo "$as_me:$LINENO: checking for bzCompressInit in -lbz2" >&5
 -echo $ECHO_N "checking for bzCompressInit in -lbz2... $ECHO_C" >&6
-+echo "$as_me:12195: checking for BZ2_bzCompressInit in -lbz2" >&5
++echo "$as_me:$LINENO: checking for BZ2_bzCompressInit in -lbz2" >&5
 +echo $ECHO_N "checking for BZ2_bzCompressInit in -lbz2... $ECHO_C" >&6
  if test "${ac_cv_lib_bz2_bzCompressInit+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -12209,11 +12210,11 @@
+@@ -12697,11 +12698,11 @@
  #endif
  /* We use char because int might match the return type of a gcc2
     builtin and then its argument prototype would still apply.  */
@@ -33,16 +33,16 @@
    ;
    return 0;
  }
-@@ -12546,7 +12547,7 @@
+@@ -13245,7 +13246,7 @@
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
  
 -		LDFLAGS="$LDFLAGS -L$with_openssl_libs -lssl -lcrypto -ldl"
 +		LDFLAGS="$LDFLAGS -L$with_openssl_libs -lssl -lcryptofoo -ldl"
  		cat >conftest.$ac_ext <<_ACEOF
- #line 12551 "configure"
+ #line $LINENO "configure"
  #include "confdefs.h"
-@@ -12597,9 +12598,9 @@
+@@ -13296,9 +13297,9 @@
  
  		msg_openssl="yes"
                  if test x$with_openssl_libs != x/usr/lib; then
@@ -53,13 +53,13 @@
 +                	OPENSSL_LIBS="-lssl -lcryptofoo"
                  fi
  
- if true; then
-@@ -13794,7 +13795,7 @@
+ 
+@@ -14894,7 +14895,7 @@
  s,@ORBIT_IDL@,$ORBIT_IDL,;t t
  s,@BONOBO_IDLDIR@,$BONOBO_IDLDIR,;t t
  s,@WARN_CFLAGS@,$WARN_CFLAGS,;t t
 -s,@PTHREAD_LIB@,$PTHREAD_LIB,;t t
 +s,@PTHREAD_LIB@,$BSD_PTHREAD_LIBS,;t t
  s,@GETTEXT_PACKAGE@,$GETTEXT_PACKAGE,;t t
- s,@ALLOCA@,$ALLOCA,;t t
  s,@USE_NLS@,$USE_NLS,;t t
+ s,@MSGFMT@,$MSGFMT,;t t
