@@ -6,13 +6,15 @@
 #
 
 PORTNAME=	evince
-PORTVERSION=	0.1.5
+PORTVERSION=	0.1.6
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.1
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 multi-format document viewer
+
+LIB_DEPENDS=	poppler.0:${PORTSDIR}/graphics/poppler
 
 USE_BZIP2=	yes
 USE_LIBTOOL_VER=15
