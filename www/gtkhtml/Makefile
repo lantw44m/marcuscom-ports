@@ -7,6 +7,7 @@
 
 PORTNAME=	gtkhtml
 PORTVERSION=	1.1.6
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
@@ -31,8 +32,21 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
 
+VERSION=	${PORTNAME}-${PORTVERSION}
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+
+post-configure:
+	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g ; \
+		s|%%LOCALBASE%%|${LOCALBASE}|g ; \
+		s|%%X11BASE%%|${X11BASE}|g ; \
+		s|%%VERSION%%|${VERSION}|g' ${FILESDIR}/gtkhtmlConf.sh \
+			> ${WRKSRC}/gtkhtmlConf.sh
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/gtkhtmlConf.sh \
+		${PREFIX}/etc/gtkhtmlConf.sh
 
 .include <bsd.port.mk>

@@ -1,6 +1,7 @@
 bin/ebrowser
 bin/gnome-gtkhtml-editor-1.1
 bin/gtkhtml-properties-capplet
+etc/gtkhtmlConf.sh
 include/gtkhtml-1.1/gtkhtml/gtkhtml-compat.h
 include/gtkhtml-1.1/gtkhtml/gtkhtml-embedded.h
 include/gtkhtml-1.1/gtkhtml/gtkhtml-enums.h
