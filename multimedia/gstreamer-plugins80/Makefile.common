@@ -420,8 +420,8 @@ LIB_DEPENDS+=	xvidcore.4:${PORTSDIR}/multimedia/xvid
 
 LIB_DEPENDS+=	gstgconf-${VERSION}.${SHLIB_VERSION}:${PORTSDIR}/multimedia/gstreamer-plugins
 
-PLIST_FILES+=	'@exec %D/bin/gst-register --gst-registry=%D/share/gnome/cache/gstreamer-%%VERSION%%/registry.xml 2>/dev/null || true'
-PLIST_FILES+=	'@unexec %D/bin/gst-register --gst-registry=%D/share/gnome/cache/gstreamer-%%VERSION%%/registry.xml 2>/dev/null || true'
+PLIST_FILES+=	'@exec %D/bin/gst-register --gst-registry=%D/share/gnome/cache/gstreamer-${VERSION}/registry.xml 2>/dev/null || true'
+PLIST_FILES+=	'@unexec %D/bin/gst-register --gst-registry=%D/share/gnome/cache/gstreamer-${VERSION}/registry.xml 2>/dev/null || true'
 
 do-build:
 .for dir in ${GST_PREBUILD_DIR} ${GST_PLUGIN_DIR} ${GST_POSTBUILD_DIR}
