@@ -5,7 +5,7 @@ include/gnome-speech-1.0/gnome-speech/gnome-speech.h
 include/gnome-speech-1.0/gnome-speech/speaker.h
 lib/libgnomespeech.a
 lib/libgnomespeech.so
-lib/libgnomespeech.so.1
+lib/libgnomespeech.so.2
 lib/orbit-2.0/GNOME_Speech_SynthesisDriver_module.so
 libdata/bonobo/servers/GNOME_Speech_SynthesisDriver_Dectalk.server
 libdata/bonobo/servers/GNOME_Speech_SynthesisDriver_Festival.server
