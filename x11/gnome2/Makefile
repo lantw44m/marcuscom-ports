@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.3.1
-PORTREVISION=	1
+PORTVERSION=	2.3.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -44,8 +43,6 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gpdf:${PORTSDIR}/graphics/gpdf \
 		galeon:${PORTSDIR}/www/galeon2 \
 		nautilus-cd-burner:${PORTSDIR}/sysutils/nautilus-cd-burner \
-		gnome-theme-thumbnailer:${PORTSDIR}/x11/themus \
-		gnome-font-viewer:${PORTSDIR}/x11-fonts/fontilus \
 		gcalctool:${PORTSDIR}/math/gcalctool \
 		gucharmap:${PORTSDIR}/misc/gucharmap \
 		zenity:${PORTSDIR}/x11/zenity \
