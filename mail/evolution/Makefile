@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=--with-openldap=${LOCALBASE}
 CONFIGURE_ARGS+=--with-openldap=no
 .endif
 
-.if !defined(WITHOUT_SPAMASSASSIN)
+.if defined(WITH_SPAMASSASSIN)
 RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 .endif
 
