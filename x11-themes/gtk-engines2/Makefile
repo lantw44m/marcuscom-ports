@@ -16,6 +16,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Theme engine for the gtk+-2.0 toolkit
 
+CONFLICTS=	gtk-smooth-engine-[0-9]*
+
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
