@@ -1,0 +1,37 @@
+# New ports collection makefile for:	libgnomeui
+# Date created:				07 April 2002
+# Whom:					Joe Marcus Clarke <marcus@FreBSD.org>
+#
+# $FreeBSD: ports/x11-toolkits/libgnomeui/Makefile,v 1.22 2003/03/07 06:14:03 ade Exp $
+#
+
+PORTNAME=	libgnomeui
+PORTVERSION=	2.3.0
+CATEGORIES=	x11-toolkits gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	Libraries for the GNOME GUI, a GNU desktop environment
+
+LIB_DEPENDS+=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
+RUN_DEPENDS=	${X11BASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
+
+USE_BZIP2=	yes
+USE_X_PREFIX=	yes
+USE_XPM=	yes
+USE_GMAKE=	yes
+USE_REINPLACE=	yes
+USE_GNOME=	gnomeprefix gnomehack gnomehier libbonoboui
+INSTALLS_SHLIB=	yes
+USE_LIBTOOL=	yes
+USE_BISON=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>
