@@ -14,6 +14,7 @@ libexec/eog-collection-view
 libexec/eog-image-viewer
 share/gnome/applications/eog.desktop
 share/gnome/eog/glade/eog.glade
+share/gnome/eog/gpi-dialog.glade
 share/gnome/gnome-2.0/ui/eog-collection-view-ui.xml
 share/gnome/gnome-2.0/ui/eog-image-view-ctrl-ui.xml
 share/gnome/gnome-2.0/ui/eog-image-view-ui.xml
@@ -115,8 +116,11 @@ share/locale/ru/LC_MESSAGES/eog.mo
 share/locale/sk/LC_MESSAGES/eog.mo
 share/locale/sl/LC_MESSAGES/eog.mo
 share/locale/sq/LC_MESSAGES/eog.mo
+share/locale/sr/LC_MESSAGES/eog.mo
+share/locale/sr@Latn/LC_MESSAGES/eog.mo
 share/locale/sv/LC_MESSAGES/eog.mo
 share/locale/ta/LC_MESSAGES/eog.mo
+share/locale/th/LC_MESSAGES/eog.mo
 share/locale/tr/LC_MESSAGES/eog.mo
 share/locale/uk/LC_MESSAGES/eog.mo
 share/locale/vi/LC_MESSAGES/eog.mo
