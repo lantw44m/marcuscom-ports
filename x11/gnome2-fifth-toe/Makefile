@@ -32,8 +32,9 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		inkscape:${PORTSDIR}/graphics/inkscape \
 		straw:${PORTSDIR}/net/straw \
 		liferea:${PORTSDIR}/net/liferea \
-		jamboree:${PORTSDIR}/audio/jamboree \
 		gnotime:${PORTSDIR}/deskutils/gnotime
+# not yet buildable under GNOME 2.5
+#		jamboree:${PORTSDIR}/audio/jamboree
 
 .if !defined(PACKAGE_BUILDING) && !defined(PARALLEL_PACKAGE_BUILD)
 RUN_DEPENDS+=	totem:${PORTSDIR}/multimedia/totem
