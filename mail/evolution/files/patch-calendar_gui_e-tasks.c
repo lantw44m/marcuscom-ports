@@ -3,8 +3,8 @@ RCS file: /cvs/gnome/evolution/calendar/gui/e-tasks.c,v
 retrieving revision 1.95
 retrieving revision 1.96
 diff -u -r1.95 -r1.96
---- evolution/calendar/gui/e-tasks.c	2004/06/02 09:33:36	1.95
-+++ evolution/calendar/gui/e-tasks.c	2004/06/03 17:54:24	1.96
+--- calendar/gui/e-tasks.c	2004/06/02 09:33:36	1.95
++++ calendar/gui/e-tasks.c	2004/06/03 17:54:24	1.96
 @@ -679,15 +679,18 @@
  {
  	ETasksPrivate *priv;
