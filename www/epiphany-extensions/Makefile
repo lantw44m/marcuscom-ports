@@ -78,6 +78,11 @@ pre-everything::
 	@${ECHO_MSG} ""
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|mozilla-gtkmozembed|mozilla-gtkmozembed${HEADERS_SUFX}|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e \
+		's|mozilla-gtkmozembed|mozilla-gtkmozembed${HEADERS_SUFX}|g; \
+		 s|mozilla-xpcom|mozilla-xpcom${HEADERS_SUFX}|g; \
+		 s|$$MOZILLA-gtkmozembed|$$MOZILLA-gtkmozembed${HEADERS_SUFX}|g; \
+		 s|$$MOZILLA-xpcom|$$MOZILLA-xpcom${HEADERS_SUFX}|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
