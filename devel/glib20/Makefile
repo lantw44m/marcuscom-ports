@@ -9,7 +9,7 @@ PORTNAME=	glib
 PORTVERSION=	2.6.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/2.6,} \
-		ftp://ftp.gtk.org/pub/gtk/v2.5/ \
+		ftp://ftp.gtk.org/pub/gtk/v2.6/ \
 		ftp://ftp.gimp.org/pub/%SUBDIR%/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/%SUBDIR%/ \
 		http://www.ameth.org/gimp/%SUBDIR%/ \
