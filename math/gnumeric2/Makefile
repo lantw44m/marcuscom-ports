@@ -37,6 +37,14 @@ GCONF_SCHEMAS=	gnumeric-dialogs.schemas gnumeric-general.schemas \
 PLIST_SUB=	VERSION=${PORTVERSION}
 
 post-patch:
+	@cd ${WRKSRC} && ${REINPLACE_CMD} -e 's,malloc.h,stdlib.h,' \
+		src/tools/solver/lp_solve/commonlib.h \
+		src/tools/solver/lp_solve/fortify.c \
+		src/tools/solver/lp_solve/lp_Hash.c \
+		src/tools/solver/lp_solve/lp_etaPFI.c \
+		src/tools/solver/lp_solve/lp_lib.h \
+		src/tools/solver/lp_solve/lp_rlp.c \
+		src/tools/solver/lp_solve/lp_rlpt.c
 	@${FIND} ${WRKSRC}/plugins -name "plugin.xml.in" | ${XARGS} \
 		${REINPLACE_CMD} -e 's|\.la|.so|g'
 	@${FIND} ${WRKSRC}/src/cut-n-paste-code/goffice/graph/plugins -name \
