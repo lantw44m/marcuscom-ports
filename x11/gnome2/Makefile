@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.3.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -52,11 +52,11 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		battfink:${PORTSDIR}/sysutils/battfink \
 		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media \
 		${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
-		gnopernicus:${PORTSDIR}/x11/gnopernicus \
 		gnomemeeting:${PORTSDIR}/net/gnomemeeting2 \
 		seahorse:${PORTSDIR}/security/seahorse \
 		totem:${PORTSDIR}/multimedia/totem \
 		epiphany:${PORTSDIR}/www/epiphany
+#		gnopernicus:${PORTSDIR}/x11/gnopernicus
 
 NO_BUILD=	yes
 
