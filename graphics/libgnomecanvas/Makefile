@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libgnomecanvas
-PORTVERSION=	2.7.91
+PORTVERSION=	2.7.92
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.7
@@ -19,8 +19,8 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
-USE_INC_LIBTOOL_VER=13
-USE_GNOME=	gnomehack lthack libglade2 libartlgpl2
+USE_LIBTOOL_VER=15
+USE_GNOME=	gnomehack libglade2 libartlgpl2
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
