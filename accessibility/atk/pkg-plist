@@ -44,13 +44,13 @@ libdata/pkgconfig/atk.pc
 %%DOCSDIR%%/AtkRelation.html
 %%DOCSDIR%%/AtkRelationSet.html
 %%DOCSDIR%%/AtkSelection.html
-%%DOCSDIR%%/AtkStateSet.html
 %%DOCSDIR%%/AtkStreamableContent.html
 %%DOCSDIR%%/AtkTable.html
 %%DOCSDIR%%/AtkText.html
 %%DOCSDIR%%/AtkUtil.html
 %%DOCSDIR%%/AtkValue.html
 %%DOCSDIR%%/atk-AtkState.html
+%%DOCSDIR%%/atk-AtkStateSet.html
 %%DOCSDIR%%/atk.devhelp
 %%DOCSDIR%%/atk.html
 %%DOCSDIR%%/home.png
@@ -58,6 +58,7 @@ libdata/pkgconfig/atk.pc
 %%DOCSDIR%%/index.sgml
 %%DOCSDIR%%/left.png
 %%DOCSDIR%%/right.png
+%%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
 share/locale/af/LC_MESSAGES/atk10.mo
 share/locale/am/LC_MESSAGES/atk10.mo
@@ -118,6 +119,7 @@ share/locale/sr@Latn/LC_MESSAGES/atk10.mo
 share/locale/sr@ije/LC_MESSAGES/atk10.mo
 share/locale/sv/LC_MESSAGES/atk10.mo
 share/locale/ta/LC_MESSAGES/atk10.mo
+share/locale/tk/LC_MESSAGES/atk10.mo
 share/locale/tr/LC_MESSAGES/atk10.mo
 share/locale/uk/LC_MESSAGES/atk10.mo
 share/locale/vi/LC_MESSAGES/atk10.mo
