@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomemedia2
 PORTVERSION=	2.5.5
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-media/2.5
@@ -25,9 +26,8 @@ USE_LIBTOOL=	yes
 INSTALLS_SHLIB=	yes
 USE_REINPLACE=	yes
 GNOME_DESKTOP_VERSION=2
-#USE_GNOME=	gnomeprefix gnomehack intlhack lthack gnomehier gnomedesktop \
-#		gail gstreamerplugins
-USE_GNOME=	gnomeprefix gnomehack intlhack lthack gnomehier
+USE_GNOME=	gnomeprefix gnomehack intlhack lthack gnomehier gnomedesktop \
+		gail gstreamerplugins
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
