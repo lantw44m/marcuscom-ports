@@ -8,21 +8,3 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
-@@ -12019,7 +12020,7 @@
- # FIXME: COMMON_MODULES should go because it is silly ...
- # ... and I'm sure we can narrow down some of these dependencies because
- # ... they depend on each other
--COMMON_MODULES="gtk+-2.0 gconf-2.0 libgnomeui-2.0 libglade-2.0 >= 1.99.12 libglade-2.0 gconf-2.0 gnome-desktop-2.0 gstreamer-0.5 gstreamer-libs-0.5"
-+COMMON_MODULES="gtk+-2.0 gconf-2.0 libgnomeui-2.0 libglade-2.0 >= 1.99.12 libglade-2.0 gconf-2.0 gnome-desktop-2.0 gstreamer-$GST_MAJORMINOR gstreamer-libs-$GST_MAJORMINOR"
- 
-   succeeded=no
- 
-@@ -12117,7 +12118,7 @@
-   fi
- 
- 
--GSTPROPS_LIBS="$GSTPROPS_LIBS $x_libs -lgstgconf-0.5"
-+GSTPROPS_LIBS="$GSTPROPS_LIBS $x_libs -lgstgconf-$GST_MAJORMINOR"
- 
- 
- 
