@@ -22,6 +22,6 @@ USE_PERL5=	yes
 USE_X_PREFIX=	yes
 USE_LIBTOOL=	yes
 INSTALLS_SHLIB=	yes
-USE_GNOME=	gnomehack gnomeprefix
+USE_GNOME=	gnomehack gnomeprefix gnometarget
 
 .include <bsd.port.mk>
