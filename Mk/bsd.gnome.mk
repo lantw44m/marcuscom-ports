@@ -326,7 +326,7 @@ libwnck_LIB_DEPENDS=	wnck-1.13:${PORTSDIR}/x11-toolkits/libwnck
 libwnck_DETECT=		${X11BASE}/libdata/pkgconfig/libwnck-1.0.pc
 libwnck_USE_GNOME_IMPL=	gtk20
 
-vte_LIB_DEPENDS=	vte.5:${PORTSDIR}/x11-toolkits/vte
+vte_LIB_DEPENDS=	vte.8:${PORTSDIR}/x11-toolkits/vte
 vte_DETECT=		${X11BASE}/libdata/pkgconfig/vte.pc
 vte_USE_GNOME_IMPL=	gtk20
 
@@ -380,7 +380,7 @@ pkgconfig_DETECT=			${LOCALBASE}/bin/pkg-config
 pkgconfig_BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkgconfig
 pkgconfig_RUN_DEPENDS=		pkg-config:${PORTSDIR}/devel/pkgconfig
 
-libgsf_LIB_DEPENDS=			gsf-1.9:${PORTSDIR}/devel/libgsf
+libgsf_LIB_DEPENDS=			gsf-1.10:${PORTSDIR}/devel/libgsf
 libgsf_DETECT=				${LOCALBASE}/libdata/pkgconfig/libgsf-gnome-1.pc
 libgsf_USE_GNOME_IMPL=		gnomevfs2 libbonobo
 
