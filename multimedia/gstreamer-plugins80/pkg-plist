@@ -28,6 +28,7 @@ lib/gstreamer-0.5/libgstavimux.so
 lib/gstreamer-0.5/libgstaviparse.so
 lib/gstreamer-0.5/libgstcdxaparse.so
 lib/gstreamer-0.5/libgstchart.so
+%%HERMES%%lib/gstreamer-0.5/libgstcolorspace.so
 lib/gstreamer-0.5/libgstcutter.so
 lib/gstreamer-0.5/libgstdeinterlace.so
 %%LIBDV%%lib/gstreamer-0.5/libgstdvdec.so

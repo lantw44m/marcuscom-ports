@@ -142,6 +142,11 @@ WITH_LAME=yes
 WITH_GNOMEVFS=yes
 .endif
 
+# Hermes
+.if exists (${LOCALBASE}/lib/libHermes.a)
+WITH_HERMES=yes
+.endif
+
 # gsm
 .if exists(${LOCALBASE}/lib/libgsm.a)
 WITH_GSM=yes
@@ -315,6 +320,15 @@ PLIST_SUB+=	GNOMEVFS="@comment "
 LIB_DEPENDS+=	gnomevfs-2.0:${PORTSDIR}/devel/gnomevfs2
 
 PLIST_SUB+=	GNOMEVFS=""
+.endif
+
+# Hermes
+.ifndef(WITH_HERMES)
+CONFIGURE_ARGS+=	--disable-hermes
+PLIST_SUB+=	HERMES="@comment "
+.else
+LIB_DEPENDS+=	Hermes.1:${PORTSDIR}/graphics/Hermes
+PLIST_SUB+=	HERMES=""
 .endif
 
 # gsm
@@ -574,6 +588,10 @@ pre-everything::
 .ifndef(WITH_GNOMEVFS)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_GNOMEVFS to enable gnomevfs Network plugin'
+.endif
+.ifndef(WITH_HERMES)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_HERMES to enable Hermes colorspace plugin'
 .endif
 .ifndef(WITH_HTTP)
 	@${ECHO_MSG} '===>'
