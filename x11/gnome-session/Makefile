@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnomesession
-PORTVERSION=	2.1.3
+PORTVERSION=	2.1.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-session/2.1
@@ -28,8 +28,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
 
-MAN1=	gnome-session.1 gnome-smproxy.1 gnome-wm.1 save-session.1 \
-	session-properties.1
+MAN1=	gnome-session.1 gnome-smproxy.1 gnome-wm.1 session-properties.1 \
+	gnome-session-save.1
 MAN5=	default.session.5
 
 post-patch:
