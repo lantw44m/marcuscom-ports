@@ -6,11 +6,10 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.1.6
-PORTREVISION=	1
+PORTVERSION=	2.2.0
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.1
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.2
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -53,7 +52,8 @@ OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 
 .include <bsd.port.pre.mk>
 
-.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.if exists(${X11BASE}/lib/libgstreamer-0.8.so.5) || \
+	defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
 WITH_GSTREAMER=	yes
 .endif
 
