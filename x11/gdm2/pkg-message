@@ -1,0 +1,6 @@
+GDM is installed.
+
+Do _NOT_ use /etc/ttys to start gdm at boot time.  This will result in gdm 
+hanging or restarting constantly.  Instead, copy the included gdm.sh.sample 
+script to gdm.sh, and restart.  This script is found, by default, in
+/usr/X11R6/etc/rc.d.

@@ -1,0 +1,11 @@
+--- configure.orig	Mon May  5 12:32:19 2003
++++ configure	Mon May  5 21:45:38 2003
+@@ -9772,6 +9772,8 @@
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
++#include <sys/types.h>
++#include <sys/socket.h>
+ $ac_includes_default
+ int
+ main ()

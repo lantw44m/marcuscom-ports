@@ -1,0 +1,23 @@
+--- config/PreSession.in.orig	Mon Jun 16 16:40:28 2003
++++ config/PreSession.in	Mon Jun 16 16:41:15 2003
+@@ -8,16 +8,16 @@
+ #
+ PATH=@X_PATH@:$PATH
+ 
+-if command -v xsetroot > /dev/null 2>&1; then
++if /usr/bin/which -s xsetroot > /dev/null 2>&1; then
+ 	xsetroot -cursor_name left_ptr -solid "#363047"
+ fi
+ 
+-if command -v sessreg > /dev/null 2>&1; then
++if /usr/bin/which -s sessreg > /dev/null 2>&1; then
+ 	# some output for easy debugging
+ 	echo "$0: Registering your session with wtmp and utmp"
+-	echo "$0: running: sessreg -a -w /var/log/wtmp -u /var/run/utmp -x \"$X_SERVERS\" -h \"$REMOTE_HOST\" -l $DISPLAY $USER"
++	echo "$0: running: sessreg -a -w /var/log/wtmp -u /var/run/utmp -x \"$X_SERVERS\" -h \"$REMOTE_HOST\" $USER"
+ 
+-	exec sessreg -a -w /var/log/wtmp -u /var/run/utmp -x "$X_SERVERS" -h "$REMOTE_HOST" -l $DISPLAY $USER
++	exec sessreg -a -w /var/log/wtmp -u /var/run/utmp -x "$X_SERVERS" -h "$REMOTE_HOST" $USER
+ 	# this is not reached
+ fi
+ 
