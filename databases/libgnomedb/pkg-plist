@@ -15,6 +15,7 @@ include/libgnomedb/gnome-db-dsn-config.h
 include/libgnomedb/gnome-db-editor.h
 include/libgnomedb/gnome-db-error-dialog.h
 include/libgnomedb/gnome-db-error.h
+include/libgnomedb/gnome-db-find-dialog.h
 include/libgnomedb/gnome-db-form.h
 include/libgnomedb/gnome-db-gray-bar.h
 include/libgnomedb/gnome-db-grid.h

@@ -28,6 +28,9 @@ include/eel-2/eel/eel-i18n.h
 include/eel-2/eel/eel-image-table.h
 include/eel-2/eel/eel-labeled-image.h
 include/eel-2/eel/eel-marshal.h
+include/eel-2/eel/eel-mime-application-chooser.h
+include/eel-2/eel/eel-mime-extensions.h
+include/eel-2/eel/eel-open-with-dialog.h
 include/eel-2/eel/eel-pango-extensions.h
 include/eel-2/eel/eel-preferences-glade.h
 include/eel-2/eel/eel-preferences.h
