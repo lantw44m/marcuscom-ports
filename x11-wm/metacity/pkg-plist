@@ -1,6 +1,5 @@
 bin/metacity
 bin/metacity-message
-bin/metacity-properties
 bin/metacity-theme-viewer
 bin/metacity-window-demo
 etc/gconf/gconf.xml.defaults/apps/metacity/%gconf.xml
