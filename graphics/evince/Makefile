@@ -19,7 +19,7 @@ USE_LIBTOOL_VER=15
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GHOSTSCRIPT=yes
-USE_GNOME=	gnomehack gnomeprefix libgnomeui libgnomeprintui
+USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui libgnomeprintui
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
