@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	fileroller
-PORTVERSION=	2.9.2
+PORTVERSION=	2.9.3
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/file-roller/2.9
