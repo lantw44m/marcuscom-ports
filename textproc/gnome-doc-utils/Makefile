@@ -32,9 +32,17 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 DOCBOOK_VERSION=4.1.2
 
+.include <bsd.port.pre.mk>
+
+.if ${X_WINDOW_SYSTEM:L} == xfree86-3
+MTREE_FILE=	/etc/mtree/BSD.x11.dist
+.else
+MTREE_FILE=	/etc/mtree/BSD.x11-4.dist
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|4\.2|${DOCBOOK_VERSION}|g' \
 		${WRKSRC}/doc/xslt/C/gnome-doc-xslt.xml \
 		${WRKSRC}/doc/gnome-doc-make/C/gnome-doc-make.xml
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
