@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libgnomeprint
-PORTVERSION=	2.7.1
+PORTVERSION=	2.7.90
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.7
@@ -20,9 +20,9 @@ USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier libbonobo libartlgpl2 \
-		gtk20 lthack
+		gtk20
 INSTALLS_SHLIB=	yes
-USE_INC_LIBTOOL_VER=13
+USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

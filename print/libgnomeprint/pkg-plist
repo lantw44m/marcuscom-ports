@@ -44,12 +44,12 @@ libdata/pkgconfig/libgnomeprint-%%LIBVERSION%%.pc
 %%DOCSDIR%%/index.html
 %%DOCSDIR%%/index.sgml
 %%DOCSDIR%%/left.png
+%%DOCSDIR%%/libgnomeprint-Pango-Integration.html
 %%DOCSDIR%%/libgnomeprint-building.html
 %%DOCSDIR%%/libgnomeprint-compiling.html
 %%DOCSDIR%%/libgnomeprint-gnome-font-face.html
 %%DOCSDIR%%/libgnomeprint-gnome-font.html
 %%DOCSDIR%%/libgnomeprint-gnome-glyphlist.html
-%%DOCSDIR%%/libgnomeprint-pango-integration.html
 %%DOCSDIR%%/libgnomeprint-gnome-pgl.html
 %%DOCSDIR%%/libgnomeprint-gnome-print-config.html
 %%DOCSDIR%%/libgnomeprint-gnome-print-job.html
@@ -58,6 +58,7 @@ libdata/pkgconfig/libgnomeprint-%%LIBVERSION%%.pc
 %%DOCSDIR%%/libgnomeprint-gnome-print.html
 %%DOCSDIR%%/libgnomeprint-gnome-rfont.html
 %%DOCSDIR%%/libgnomeprint-resources.html
+%%DOCSDIR%%/libgnomeprint.devhelp
 %%DOCSDIR%%/libgnomeprint.html
 %%DOCSDIR%%/libgnomeprintunsorted.html
 %%DOCSDIR%%/right.png
@@ -76,6 +77,7 @@ share/locale/az/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/be/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/bg/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/bn/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
+share/locale/bs/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/ca/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/cs/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/cy/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
@@ -108,6 +110,7 @@ share/locale/ml/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/mn/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/mr/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/ms/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
+share/locale/nb/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/nl/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/nn/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/no/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
