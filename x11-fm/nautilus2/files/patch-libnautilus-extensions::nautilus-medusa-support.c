@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-fm/nautilus2/files/patch-libnautilus-extensions::nautilus-medusa-support.c,v 1.3 2002/05/20 18:03:39 sobomax Exp $
+$FreeBSD$
 
 --- libnautilus-private/nautilus-medusa-support.c.orig	Wed Apr 11 21:36:16 2001
 +++ libnautilus-private/nautilus-medusa-support.c	Mon May 14 17:45:24 2001

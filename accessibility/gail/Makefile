@@ -2,7 +2,7 @@
 # Date Created:			12 February 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gail/Makefile,v 1.18 2002/09/20 17:07:29 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gail

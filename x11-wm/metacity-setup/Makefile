@@ -2,7 +2,7 @@
 # Date created:        23 May 2002
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-wm/metacity-setup/Makefile,v 1.14 2002/10/12 19:13:24 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	metacity-setup

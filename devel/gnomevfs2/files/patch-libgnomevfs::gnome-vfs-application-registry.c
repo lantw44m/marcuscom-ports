@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/gnomevfs2/files/patch-libgnomevfs::gnome-vfs-application-registry.c,v 1.1 2002/06/13 08:46:21 sobomax Exp $
+$FreeBSD$
 
 --- libgnomevfs/gnome-vfs-application-registry.c	2002/06/13 07:31:15	1.1
 +++ libgnomevfs/gnome-vfs-application-registry.c	2002/06/13 08:25:24

@@ -2,7 +2,7 @@
 # Date created:				12 April 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/libwnck/Makefile,v 1.15 2002/09/20 17:07:39 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libwnck

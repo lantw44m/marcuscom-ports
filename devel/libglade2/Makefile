@@ -2,7 +2,7 @@
 # Date created:				18 August 1999
 # Whom:					Ade Lovett <ade@lovett.com>
 #
-# $FreeBSD: ports/devel/libglade2/Makefile,v 1.45 2002/09/20 17:06:37 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libglade2

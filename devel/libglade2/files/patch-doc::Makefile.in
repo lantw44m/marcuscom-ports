@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/libglade2/files/patch-doc::Makefile.in,v 1.1 2002/02/14 13:40:29 sobomax Exp $
+$FreeBSD$
 
 --- doc/Makefile.in	2002/02/14 10:10:45	1.1
 +++ doc/Makefile.in	2002/02/14 10:11:18

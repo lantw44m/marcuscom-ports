@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/libgnome/files/patch-help-converters::gnome-vfs-module::help-method.c,v 1.1 2002/03/19 17:31:43 sobomax Exp $
+$FreeBSD$
 
 --- help-converters/gnome-vfs-module/help-method.c.orig	Sat Jan 26 17:43:22 2002
 +++ help-converters/gnome-vfs-module/help-method.c	Wed Feb 20 20:01:17 2002

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-fm/nautilus2/files/patch-libnautilus-private::nautilus-volume-monitor.c,v 1.9 2002/09/11 14:32:13 sobomax Exp $
+$FreeBSD$
 
 --- libnautilus-private/nautilus-volume-monitor.c.orig	Wed Aug 28 16:37:20 2002
 +++ libnautilus-private/nautilus-volume-monitor.c	Wed Sep 11 16:39:15 2002

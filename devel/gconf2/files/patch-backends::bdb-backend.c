@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/gconf2/files/patch-backends::bdb-backend.c,v 1.2 2002/02/16 09:13:28 sobomax Exp $
+$FreeBSD$
 
 --- backends/bdb-backend.c	2002/02/15 19:10:46	1.1
 +++ backends/bdb-backend.c	2002/02/15 19:11:25

@@ -2,7 +2,7 @@
 # Date Created:				05 October 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gnome-themes/Makefile,v 1.1 2002/10/06 01:56:00 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-themes

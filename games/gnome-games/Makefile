@@ -2,7 +2,7 @@
 # Date created:				08 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/games/gnomegames2/Makefile,v 1.54 2002/09/20 17:06:50 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomegames2

@@ -2,7 +2,7 @@
 # Date created:				12 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gconf-editor/Makefile,v 1.11 2002/09/20 17:07:16 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gconf-editor

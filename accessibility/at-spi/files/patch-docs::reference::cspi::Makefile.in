@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/at-spi/files/patch-docs::reference::cspi::Makefile.in,v 1.1 2002/04/12 11:41:51 sobomax Exp $
+$FreeBSD$
 
 --- docs/reference/cspi/Makefile.in	2002/04/12 10:18:10	1.1
 +++ docs/reference/cspi/Makefile.in	2002/04/12 10:18:49

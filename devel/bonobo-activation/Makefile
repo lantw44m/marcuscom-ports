@@ -2,7 +2,7 @@
 # Date Created:			13 February 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/bonobo-activation/Makefile,v 1.24 2002/09/20 17:06:23 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	bonobo-activation

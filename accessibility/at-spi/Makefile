@@ -2,7 +2,7 @@
 # Date Created:			12 April 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/at-spi/Makefile,v 1.17 2002/09/20 17:07:28 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	at-spi

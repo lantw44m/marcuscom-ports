@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/net/linc/files/patch-Makefile.in,v 1.1 2002/02/12 13:12:30 sobomax Exp $
+$FreeBSD$
 
 --- Makefile.in	2002/02/12 12:58:07	1.1
 +++ Makefile.in	2002/02/12 13:09:12

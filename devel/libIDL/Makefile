@@ -2,7 +2,7 @@
 # Date Created:			12 February 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libIDL/Makefile,v 1.16 2002/09/20 17:06:34 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libIDL

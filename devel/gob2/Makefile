@@ -2,7 +2,7 @@
 # Date created:        09 November 2002
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gob2/Makefile,v 1.28 2003/01/17 06:12:16 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gob2

@@ -2,7 +2,7 @@
 # Date created:         		8th May 2001
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/eel2/Makefile,v 1.26 2002/09/20 17:07:29 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	eel2

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/libbonobo/files/patch-Makefile.in,v 1.1 2002/02/14 09:39:16 sobomax Exp $
+$FreeBSD$
 
 --- Makefile.in	2002/02/14 09:30:47	1.1
 +++ Makefile.in	2002/02/14 09:30:57

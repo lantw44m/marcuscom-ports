@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/gnomepanel/files/patch-applets::gen_util::clock.c,v 1.1 2002/05/14 14:32:33 sobomax Exp $
+$FreeBSD$
 
 --- applets/gen_util/clock.c	2002/05/14 14:08:16	1.1
 +++ applets/gen_util/clock.c	2002/05/14 14:12:56

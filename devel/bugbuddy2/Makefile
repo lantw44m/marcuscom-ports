@@ -2,7 +2,7 @@
 # Date created:				14 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/bugbuddy2/Makefile,v 1.33 2002/10/07 17:51:29 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	bugbuddy2

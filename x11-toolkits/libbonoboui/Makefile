@@ -2,7 +2,7 @@
 # Date created:				04 April 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/libbonoboui/Makefile,v 1.21 2002/10/19 00:02:38 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libbonoboui

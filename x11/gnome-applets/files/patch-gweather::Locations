@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/gnomeapplets2/files/patch-gweather::Locations,v 1.1 2002/05/21 16:13:00 sobomax Exp $
+$FreeBSD$
 
 --- gweather/Locations.orig	Wed May 15 00:32:46 2002
 +++ gweather/Locations	Tue May 21 19:00:43 2002

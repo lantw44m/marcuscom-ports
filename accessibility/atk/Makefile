@@ -2,7 +2,7 @@
 # Date Created:			14 May 2001
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/atk/Makefile,v 1.24 2002/09/20 17:06:23 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	atk

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/libgtkhtml/files/patch-af,v 1.3 2002/05/20 17:51:09 sobomax Exp $
+$FreeBSD$
 
 --- configure.orig	Fri May 17 13:34:46 2002
 +++ configure	Fri May 17 13:37:13 2002

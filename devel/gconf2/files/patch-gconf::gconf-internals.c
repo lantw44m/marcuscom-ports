@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/gconf2/files/patch-gconf::gconf-internals.c,v 1.2 2002/02/16 09:13:28 sobomax Exp $
+$FreeBSD$
 
 --- gconf/gconf-internals.c	2002/02/15 19:13:07	1.1
 +++ gconf/gconf-internals.c	2002/02/15 19:13:32

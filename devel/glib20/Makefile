@@ -2,7 +2,7 @@
 # Date Created:			28 July 1998
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/glib20/Makefile,v 1.77 2002/11/04 23:48:32 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	glib

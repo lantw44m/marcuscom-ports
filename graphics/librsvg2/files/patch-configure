@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/librsvg2/files/patch-configure,v 1.2 2002/05/20 17:42:24 sobomax Exp $
+$FreeBSD$
 
 --- configure	2002/04/25 19:16:30	1.1
 +++ configure	2002/04/25 19:16:42

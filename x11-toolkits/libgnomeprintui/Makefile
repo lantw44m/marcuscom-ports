@@ -2,7 +2,7 @@
 # Date created:				12 April 2002
 # Whom:					Maxim Sobolev <sobomax@FreBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.15 2002/09/20 17:07:38 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgnomeprintui

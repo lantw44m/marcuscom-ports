@@ -2,7 +2,7 @@
 # Date Created:			12 February 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/net/linc/Makefile,v 1.23 2002/09/20 17:07:10 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	linc

@@ -2,7 +2,7 @@
 # Date created:				13 April 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnomedesktop/Makefile,v 1.18 2002/09/20 17:07:48 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomedesktop

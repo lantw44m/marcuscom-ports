@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/gail/files/patch-tests::ferret.c,v 1.1 2002/02/17 10:27:29 sobomax Exp $
+$FreeBSD$
 
 --- tests/ferret.c	2002/02/17 09:45:53	1.1
 +++ tests/ferret.c	2002/02/17 10:10:16

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/glib20/files/patch-glib::libcharset::Makefile.in,v 1.2 2002/06/04 00:48:56 sobomax Exp $
+$FreeBSD$
 
 --- glib/libcharset/Makefile.in.orig	Tue Jun  4 01:47:05 2002
 +++ glib/libcharset/Makefile.in	Tue Jun  4 03:41:15 2002

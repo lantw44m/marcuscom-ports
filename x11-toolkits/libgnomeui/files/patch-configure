@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/libgnomeui/files/patch-configure,v 1.1 2002/04/26 12:55:16 sobomax Exp $
+$FreeBSD$
 
 --- configure	2002/04/26 12:31:45	1.1
 +++ configure	2002/04/26 12:32:10
