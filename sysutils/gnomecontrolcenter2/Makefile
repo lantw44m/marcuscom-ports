@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomecontrolcenter2
-PORTVERSION=	2.1.3
-PORTREVISION=	1
+PORTVERSION=	2.1.5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/2.1
@@ -36,5 +35,7 @@ post-patch:
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|Xft\.h|Xft2.h|g' \
 		${WRKSRC}/capplets/font/main.c
+	@${REINPLACE_CMD} -e 's|[(]libdir[)]/locale|(prefix)/share/locale|g' \
+		${WRKSRC}/po/Makefile.in.in
 
 .include <bsd.port.mk>

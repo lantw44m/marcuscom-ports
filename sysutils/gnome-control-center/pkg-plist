@@ -48,7 +48,6 @@ share/gnome/control-center-2.0/capplets/sound.desktop
 share/gnome/control-center-2.0/capplets/window-properties.desktop
 share/gnome/control-center-2.0/icons/accessibility-directory.png
 share/gnome/control-center-2.0/icons/accessibility-keyboard-capplet.png
-share/gnome/control-center-2.0/icons/advanced-directory.png
 share/gnome/control-center-2.0/icons/background-capplet.png
 share/gnome/control-center-2.0/icons/behavior-capplet.png
 share/gnome/control-center-2.0/icons/default-applications-capplet.png
@@ -151,6 +150,7 @@ share/locale/ru/LC_MESSAGES/control-center-2.0.mo
 share/locale/sk/LC_MESSAGES/control-center-2.0.mo
 share/locale/sl/LC_MESSAGES/control-center-2.0.mo
 share/locale/sv/LC_MESSAGES/control-center-2.0.mo
+share/locale/ta/LC_MESSAGES/control-center-2.0.mo
 share/locale/tr/LC_MESSAGES/control-center-2.0.mo
 share/locale/uk/LC_MESSAGES/control-center-2.0.mo
 share/locale/vi/LC_MESSAGES/control-center-2.0.mo
