@@ -32,6 +32,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/examples/py-gtk/gobject/properties.py
 %%PORTDOCS%%share/examples/py-gtk/gobject/signal.py
 %%PORTDOCS%%share/examples/py-gtk/gtk/filechooser.py
+%%PORTDOCS%%share/examples/py-gtk/gtk/uimanager.py
 %%PORTDOCS%%share/examples/py-gtk/ide/README
 %%PORTDOCS%%share/examples/py-gtk/ide/break.xpm
 %%PORTDOCS%%share/examples/py-gtk/ide/browse.py
@@ -59,6 +60,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/examples/py-gtk/neil/notebook.py
 %%PORTDOCS%%share/examples/py-gtk/neil/question.xpm
 %%PORTDOCS%%share/examples/py-gtk/pango/utf8-demo.py
+%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/alphatest.png
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/__init__.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/appwindow.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/buttonbox.py
@@ -75,6 +77,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/stock_browser.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/toolbar.py
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/demos/treemodel.py
+%%PORTDOCS%%share/examples/py-gtk/pygtk-demo/floppybuddy.gif
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/gtk-logo-rgb.gif
 %%PORTDOCS%%share/examples/py-gtk/pygtk-demo/pygtk-demo.py
 %%PORTDOCS%%share/examples/py-gtk/simple/README
