@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	libgnome-java
-PORTVERSION=	2.5.5
-PORTREVISION=	1
+PORTVERSION=	2.5.6
 CATEGORIES=	x11 java
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -30,11 +29,12 @@ CONFIGURE_ARGS=	--without-gcj-compile \
 		--with-java-prefix=${JAVA_HOME}
 CONFIGURE_ENV=	DB2="/dev/null"
 
-GNOME_API_VERSION=	2.5
-GTK_API_VERSION=	2.3
-GTK_JAVA_VERSION=	2.3.5
+GNOME_API_VERSION=	2.6
+GTK_API_VERSION=	2.4
+GTK_JAVA_VERSION=	beta1
+VERSION=		beta1
 PLIST_SUB=		GNOME_API_VERSION=${GNOME_API_VERSION} \
-			PORTVERSION=${PORTVERSION}
+			PORTVERSION=${VERSION}
 
 PKGMESSAGE=		${WRKDIR}/pkg-message
 
@@ -43,20 +43,20 @@ post-patch:
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|@gtkapiversion@|${GTK_API_VERSION}|g ; \
 		s|@apiversion@|${GNOME_API_VERSION}|g ; \
-		s|@version@|${PORTVERSION}|g' \
+		s|@version@|${VERSION}|g' \
 		${WRKSRC}/src/Makefile.in \
 		${WRKSRC}/src/java/org/gnu/gnome/Gnome.java.in \
 		${WRKSRC}/src/java/org/gnu/gnome/Program.java.in
 
 do-install:
 	${MKDIR} ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/lib/libgnomejava${GNOME_API_VERSION}.so.${PORTVERSION} \
+	${INSTALL_DATA} ${WRKSRC}/lib/libgnomejava${GNOME_API_VERSION}.so.${VERSION} \
 		${PREFIX}/lib
-	${LN} -sf ${PREFIX}/lib/libgnomejava${GNOME_API_VERSION}.so.${PORTVERSION} ${PREFIX}/lib/libgnomejava${GNOME_API_VERSION}.so
+	${LN} -sf ${PREFIX}/lib/libgnomejava${GNOME_API_VERSION}.so.${VERSION} ${PREFIX}/lib/libgnomejava${GNOME_API_VERSION}.so
 	${MKDIR} ${JAVAJARDIR}
-	${INSTALL_DATA} ${WRKSRC}/lib/gnome${GNOME_API_VERSION}-${PORTVERSION}.jar \
+	${INSTALL_DATA} ${WRKSRC}/lib/gnome${GNOME_API_VERSION}-${VERSION}.jar \
 		${JAVAJARDIR}
-	${LN} -sf ${JAVAJARDIR}/gnome${GNOME_API_VERSION}-${PORTVERSION}.jar \
+	${LN} -sf ${JAVAJARDIR}/gnome${GNOME_API_VERSION}-${VERSION}.jar \
 		${JAVAJARDIR}/gnome${GNOME_API_VERSION}.jar
 
 post-install:
