@@ -24,7 +24,7 @@ USE_X_PREFIX=	yes
 USE_XPM=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui libgnomeprintui libgtkhtml \
 		gtksourceview lthack intlhack
-USE_LIBTOOL_VER=13
+USE_INC_LIBTOOL_VER=13
 INSTALLS_SHLIB=	yes
 
 CROCO_VERSION=	0.6
