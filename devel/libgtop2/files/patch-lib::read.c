@@ -21,7 +21,7 @@
  
 -	if (ret < 0)
 +	if (ret < 0) {
-+		if (errno == EINTR)
++		if (errno == EINTR || errno == EAGAIN)
 +			goto retry;
  		glibtop_error_io_r (server, _("read %d bytes"), size);
 +	}
