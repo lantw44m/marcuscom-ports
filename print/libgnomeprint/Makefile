@@ -6,18 +6,17 @@
 #
 
 PORTNAME=	libgnomeprint
-PORTVERSION=	1.116.1
-PORTREVISION=	2
+PORTVERSION=	2.1.1
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.116
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.1
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
 LIB_DEPENDS=	bonobo-2.0:${PORTSDIR}/devel/libbonobo \
 		art_lgpl_2.5:${PORTSDIR}/graphics/libart_lgpl2 \
-		gtk-x11-2.0.101:${PORTSDIR}/x11-toolkits/gtk20
+		gtk-x11-2.0.102:${PORTSDIR}/x11-toolkits/gtk20
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
