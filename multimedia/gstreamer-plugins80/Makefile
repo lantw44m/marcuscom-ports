@@ -6,10 +6,11 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.7.6
+PORTVERSION=	0.8.0
 CATEGORIES=	multimedia audio
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gst-plugins/0.7
+MASTER_SITES=	${MASTER_SITE_GNOME} \
+		http://gstreamer.freedesktop.org/src/gst-plugins/
+MASTER_SITE_SUBDIR=	sources/gst-plugins/0.8
 PKGNAMESUFFIX=	-plugins
 DISTNAME=	gst-plugins-${PORTVERSION}
 DIST_SUBDIR=	gnome2
@@ -17,7 +18,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	lioux@FreeBSD.org
 COMMENT=	GStreamer written collection of plugins handling several media types
 
-LIB_DEPENDS=	gstreamer-0.8.0:${PORTSDIR}/multimedia/gstreamer \
+LIB_DEPENDS=	gstreamer-0.8.1:${PORTSDIR}/multimedia/gstreamer \
 		popt.0:${PORTSDIR}/devel/popt
 
 USE_X_PREFIX=	yes
@@ -50,8 +51,6 @@ CONFIGURE_ARGS=	--disable-tests \
 # probable the lib needs to be ported, disable them for now.
 CONFIGURE_ARGS+=--disable-mas \
 		--disable-faac \
-		--disable-jack \
-		--disable-nas \
 		--disable-tarkin \
 		--disable-lcs \
 		--disable-mplex \
@@ -71,15 +70,14 @@ INSTALLS_SHLIB=	yes
 # for various GNOME-related component detection
 WANT_GNOME=	yes
 
-MAN1=	gst-launch-ext-0.7.1 gst-visualise-0.7.1
+MAN1=	gst-launch-ext-${GST_VERSION}.1 gst-visualise-${GST_VERSION}.1
 
 PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
 SDL_CONFIG?="${LOCALBASE}/bin/sdl11-config"
-VERSION=0.8.0
-GST_VERSION=${VERSION:C/..$//}
+GST_VERSION=${PORTVERSION:C/..$//}
 
 # library minor number
-SHLIB_VERSION=	0
+SHLIB_VERSION=	1
 
 post-patch:
 # as of this writing, FreeBSD does not support lrint* C99 math functions
@@ -178,6 +176,11 @@ WITH_LAME=yes
 WITH_GNOMEVFS=yes
 .endif
 
+# jack
+.if exists(${LOCALBASE}/lib/libjack.so.0)
+WITH_JACK=YES
+.endif
+
 # libcaca
 .if exists(${LOCALBASE}/lib/libcaca.a)
 WITH_LIBCACA=yes
@@ -273,6 +276,11 @@ WITH_LIBTHEORA=yes
 WITH_MAD=yes
 .endif
 
+# nas
+.if exists(${X11BASE}/lib/libaudio.a)
+WITH_NAS=YES
+.endif
+
 # ogg
 .if exists(${LOCALBASE}/lib/libogg.a)
 WITH_OGG=yes
@@ -316,6 +324,12 @@ WITH_VORBIS=yes
 # vorbisidec
 .if exists(${LOCALBASE}/lib/libvorbisidec.a)
 WITH_VORBISIDEC=yes
+.endif
+
+# xine
+# this plugins is meant to support plugins that gstreamer doesn't have (yet)
+.if exists(${X11BASE}/lib/libxine.so.9)
+WITH_XINE=yes
 .endif
 
 # xvid
@@ -433,6 +447,15 @@ PLIST_SUB+=	GSM="@comment "
 LIB_DEPENDS+=	gsm.1:${PORTSDIR}/audio/gsm
 
 PLIST_SUB+=	GSM=""
+.endif
+
+# jack
+.ifndef(WITH_JACK)
+CONFIGURE_ARGS+=	--disable-jack
+PLIST_SUB+=	JACK="@comment "
+.else
+LIB_DEPENDS+=	jack.0:${PORTSDIR}/audio/jack
+PLIST_SUB+=	JACK=""
 .endif
 
 # Hermes
@@ -581,15 +604,13 @@ PLIST_SUB+=	LIBMPEG2=""
 .endif
 
 # libmusicbrainz
-# the musicbrainz people need to release a new version to get this to work
-# .ifndef(WITH_LIBMUSICBRAINZ)
+.ifndef(WITH_LIBMUSICBRAINZ)
 CONFIGURE_ARGS+=	--disable-musicbrainz
-.undef WITH_LIBMUSICBRAINZ
-#PLIST_SUB+=	LIBMUSICBRAINZ="@comment "
-#.else
-#LIB_DEPENDS+=	libmusicbrainz.3:${PORTSDIR}/audio/libmusicbrainz
-#PLIST_SUB+=	LIBMUSICBRAINZ=""
-#.endif
+PLIST_SUB+=	LIBMUSICBRAINZ="@comment "
+.else
+LIB_DEPENDS+=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
+PLIST_SUB+=	LIBMUSICBRAINZ=""
+.endif
 
 # libshout
 .ifndef(WITH_LIBSHOUT)
@@ -640,6 +661,16 @@ LIB_DEPENDS+=	mad.2:${PORTSDIR}/audio/libmad \
 PLIST_SUB+=	LIBMAD=""
 .endif
 
+# nas
+.ifndef(WITH_NAS)
+CONFIGURE_ARGS+=	--disable-nas
+PLIST_SUB+=	NAS="@comment "
+.else
+LIB_DEPENDS+=	audio.2:${PORTSDIR}/audio/nas
+
+PLIST_SUB+=	NAS=""
+.endif
+
 # ogg
 .ifndef(WITH_OGG)
 CONFIGURE_ARGS+=	--disable-ogg \
@@ -683,7 +714,7 @@ CONFIGURE_ARGS+=	--disable-sdl \
 			--disable-sdltest
 PLIST_SUB+=	SDL="@comment "
 .else
-LIB_DEPENDS+=	SDL-1.1.5:${PORTSDIR}/devel/sdl12
+LIB_DEPENDS+=	SDL-1.1.7:${PORTSDIR}/devel/sdl12
 
 CONFIGURE_ARGS+=	--with-sdl-prefix=${LOCALBASE}  \
 			--with-sdl-exec-prefix=${LOCALBASE}
@@ -743,6 +774,17 @@ LIB_DEPENDS+=	vorbisidec.1:${PORTSDIR}/audio/libtremor
 PLIST_SUB+=	IVORBIS=""
 .endif
 
+# xine
+.ifndef(WITH_XINE)
+CONFIGURE_ARGS+=	--disable-xine
+PLIST_SUB+=	XINE="@comment "
+.else
+CONFIGURE_ARGS+=	--enable-xine
+LIB_DEPENDS+=	xine.9:${PORTSDIR}/multimedia/libxine
+
+PLIST_SUB+=	XINE=""
+.endif
+
 # xvid
 .ifndef(WITH_XVID)
 CONFIGURE_ARGS+=	--disable-xvid
@@ -796,6 +838,10 @@ pre-everything::
 .ifndef(WITH_GNOMEVFS)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_GNOMEVFS to enable gnomevfs Network plugin'
+.endif
+.ifndef(WITH_JACK)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_JACK to enable jackd audio plugin'
 .endif
 .ifndef(WITH_HERMES)
 	@${ECHO_MSG} '===>'
@@ -877,6 +923,10 @@ pre-everything::
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_MAD to enable mad Audio plugin'
 .endif
+.ifndef(WITH_NAS)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_NAS to enable nas Audio plugin'
+.endif
 .ifndef(WITHOUT_OSS)
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITHOUT_OSS to disable OSS Audio plugin'
@@ -913,9 +963,13 @@ pre-everything::
 	@${ECHO_MSG} '===>'
 	@${ECHO_MSG} '===> Define WITH_VORBISIDEC to enable vorbisidec Audio plugin'
 .endif
+.ifndef(WITH_XINE)
+	@${ECHO_MSG} '===>'
+	@${ECHO_MSG} '===> Define WITH_XINE to enable xine plugin'
+.endif
 .ifndef(WITH_XVID)
 	@${ECHO_MSG} '===>'
-	@${ECHO_MSG} '===> Define WITH_XVID to enable xvid Video plgin'
+	@${ECHO_MSG} '===> Define WITH_XVID to enable xvid Video plugin'
 .endif
 
 .include <bsd.port.post.mk>
