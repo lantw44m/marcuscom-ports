@@ -100,6 +100,9 @@ share/gnome/help/fish-applet-2/C/legal.xml
 share/gnome/help/mailcheck/C/figures/mailcheck_applet.png
 share/gnome/help/mailcheck/C/legal.xml
 share/gnome/help/mailcheck/C/mailcheck.xml
+share/gnome/help/notification-area/C/figures/notification-area.png
+share/gnome/help/notification-area/C/legal.xml
+share/gnome/help/notification-area/C/notification-area.xml
 share/gnome/help/window-list/C/figures/window_list_applet.png
 share/gnome/help/window-list/C/figures/window_list_group_applet.png
 share/gnome/help/window-list/C/legal.xml
@@ -114,6 +117,8 @@ share/gnome/omf/gnome-panel/fish-applet-2-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/fish-applet-2-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-panel/mailcheck-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/mailcheck-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/omf/gnome-panel/notification-area-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/notification-area-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-panel/window-list-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-panel/window-list-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/omf/gnome-panel/workspace-switcher-C.omf
@@ -158,6 +163,7 @@ share/locale/ko/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/mn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ms/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-panel-2.0.mo
@@ -170,6 +176,7 @@ share/locale/ru/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sp/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/sq/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sr/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-panel-2.0.mo
@@ -245,5 +252,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-panel/clock-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-panel/fish-applet-2-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-panel/mailcheck-C.omf 2>/dev/null || /usr/bin/true
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-panel/notification-area-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-panel/window-list-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/gnome-panel/workspace-switcher-C.omf 2>/dev/null || /usr/bin/true
