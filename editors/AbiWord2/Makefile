@@ -7,6 +7,7 @@
 
 PORTNAME=	AbiWord2
 PORTVERSION=	2.1.3
+PORTREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.abisource.com/downloads/Version-${PORTVERSION}/lf/
@@ -88,6 +89,7 @@ post-patch:
 		 s|[(]libdir[)]/bonobo/servers|(prefix)/libdata/bonobo/servers|g'
 
 post-install:
+	@${MKDIR} ${PREFIX}/lib/AbiWord-${ABIVERSION}/plugins
 .if defined(GNOME_ENABLED)
 	@${INSTALL_DATA} ${WRKSRC}/abiword.desktop \
 		${X11BASE}/share/gnome/apps/Applications/abiword.desktop

@@ -278,3 +278,5 @@ share/AbiSuite-%%ABIVERSION%%/templates/normal.awt-zh_TW
 @dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord/glade
 @dirrm share/AbiSuite-%%ABIVERSION%%/AbiWord
 @dirrm share/AbiSuite-%%ABIVERSION%%
+@dirrm lib/AbiWord-%%ABIVERSION%%/plugins
+@dirrm lib/AbiWord-%%ABIVERSION%%
