@@ -38,6 +38,7 @@ share/locale/sr/LC_MESSAGES/setup-tools-backends.mo
 share/locale/sr@Latn/LC_MESSAGES/setup-tools-backends.mo
 share/locale/sv/LC_MESSAGES/setup-tools-backends.mo
 share/locale/ta/LC_MESSAGES/setup-tools-backends.mo
+share/locale/th/LC_MESSAGES/setup-tools-backends.mo
 share/locale/tr/LC_MESSAGES/setup-tools-backends.mo
 share/locale/uk/LC_MESSAGES/setup-tools-backends.mo
 share/locale/zh_CN/LC_MESSAGES/setup-tools-backends.mo
@@ -72,6 +73,7 @@ share/setup-tool-backends/scripts/partition.pl
 share/setup-tool-backends/scripts/platform.pl
 share/setup-tool-backends/scripts/print-conf
 share/setup-tool-backends/scripts/print.pl
+share/setup-tool-backends/scripts/process.pl
 share/setup-tool-backends/scripts/replace.pl
 share/setup-tool-backends/scripts/report.pl
 share/setup-tool-backends/scripts/service-list.pl
