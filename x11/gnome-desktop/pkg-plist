@@ -125,6 +125,7 @@ share/gnome/vfolders/Other.directory
 share/gnome/vfolders/Root.directory
 share/gnome/vfolders/Settings.directory
 share/gnome/vfolders/System.directory
+share/locale/af/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-desktop-2.0.mo
