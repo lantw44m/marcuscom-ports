@@ -7,7 +7,7 @@
 
 PORTNAME=	gnomehier
 PORTVERSION=	2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc gnome
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -17,10 +17,13 @@ COMMENT=	A utility port that creates the GNOME directory tree
 
 NO_BUILD=	yes
 PLIST?=		${WRKDIR}/pkg-plist
+PKGINSTALL=	${WRKDIR}/pkg-install
 
 GNOME_MTREE=	BSD.gnome-x11.dist
 
 USE_X_PREFIX=	yes
+
+GNOME_MTREE_ARGS=${MTREE_ARGS:S|${MTREE_FILE}|${WRKDIR}/${GNOME_MTREE}|}
 
 do-fetch:
 	@${DO_NADA}
@@ -38,6 +41,8 @@ pre-install:
 	do \
 		${MKDIR} ${WRKSRC}/$${dir}; \
 	done
+	@${SED} -e 's|%%MTREE_ARGS%%|${GNOME_MTREE_ARGS}|' \
+		< ${FILESDIR}/pkg-install.in > ${PKGINSTALL}
 
 pre-su-install:
 	${CHGRP} games ${WRKSRC}/share/gnome/games
@@ -48,8 +53,12 @@ pre-su-install:
 			> ${WRKDIR}/${GNOME_MTREE}
 
 do-install:
-	${MTREE_CMD} ${MTREE_ARGS:S|${MTREE_FILE}|${WRKDIR}/${GNOME_MTREE}|} ${PREFIX}
 	${MKDIR} ${PREFIX}/etc/mtree
 	${INSTALL_DATA} ${WRKDIR}/${GNOME_MTREE} ${PREFIX}/etc/mtree
+
+post-install:
+.if !defined(PACKAGE_BUILDING)
+	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+.endif
 
 .include <bsd.port.mk>
