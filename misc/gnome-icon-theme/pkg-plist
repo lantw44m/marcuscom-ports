@@ -86,6 +86,7 @@ share/icons/gnome/48x48/devices/gnome-dev-harddisk.png
 share/icons/gnome/48x48/devices/gnome-dev-jazdisk.png
 share/icons/gnome/48x48/devices/gnome-dev-keyboard.png
 share/icons/gnome/48x48/devices/gnome-dev-memory.png
+share/icons/gnome/48x48/devices/gnome-dev-mouse-ball.png
 share/icons/gnome/48x48/devices/gnome-dev-mouse-optical.png
 share/icons/gnome/48x48/devices/gnome-dev-pcmcia.png
 share/icons/gnome/48x48/devices/gnome-dev-printer.png
@@ -395,6 +396,7 @@ share/icons/hicolor/16x16/apps/gnome-globe.png
 share/icons/hicolor/16x16/apps/gnome-settings.png
 share/icons/hicolor/16x16/apps/im-aim.png
 share/icons/hicolor/16x16/apps/im-icq.png
+share/icons/hicolor/16x16/apps/im-jabber.png
 share/icons/hicolor/16x16/apps/im-msn.png
 share/icons/hicolor/16x16/apps/im-yahoo.png
 share/icons/hicolor/16x16/apps/panel-notification-area.png
@@ -563,6 +565,7 @@ share/icons/hicolor/16x16/stock/form/stock_show-hidden-controls.png
 share/icons/hicolor/16x16/stock/form/stock_view-fields.png
 share/icons/hicolor/16x16/stock/generic/stock_3d-favourites.png
 share/icons/hicolor/16x16/stock/generic/stock_about.png
+share/icons/hicolor/16x16/stock/generic/stock_active.png
 share/icons/hicolor/16x16/stock/generic/stock_allow-effects.png
 share/icons/hicolor/16x16/stock/generic/stock_anchor.png
 share/icons/hicolor/16x16/stock/generic/stock_animation.png
@@ -626,6 +629,7 @@ share/icons/hicolor/16x16/stock/generic/stock_people.png
 share/icons/hicolor/16x16/stock/generic/stock_person.png
 share/icons/hicolor/16x16/stock/generic/stock_presentation-box.png
 share/icons/hicolor/16x16/stock/generic/stock_presentation-styles.png
+share/icons/hicolor/16x16/stock/generic/stock_properties.png
 share/icons/hicolor/16x16/stock/generic/stock_redo.png
 share/icons/hicolor/16x16/stock/generic/stock_refresh.png
 share/icons/hicolor/16x16/stock/generic/stock_score-high.png
@@ -1370,6 +1374,7 @@ share/icons/hicolor/24x24/stock/form/stock_show-form-dialog.png
 share/icons/hicolor/24x24/stock/form/stock_show-hidden-controls.png
 share/icons/hicolor/24x24/stock/form/stock_view-fields.png
 share/icons/hicolor/24x24/stock/generic/stock_about.png
+share/icons/hicolor/24x24/stock/generic/stock_active.png
 share/icons/hicolor/24x24/stock/generic/stock_allow-effects.png
 share/icons/hicolor/24x24/stock/generic/stock_anchor.png
 share/icons/hicolor/24x24/stock/generic/stock_animation.png
@@ -1427,6 +1432,7 @@ share/icons/hicolor/24x24/stock/generic/stock_paste.png
 share/icons/hicolor/24x24/stock/generic/stock_people.png
 share/icons/hicolor/24x24/stock/generic/stock_person.png
 share/icons/hicolor/24x24/stock/generic/stock_presentation-box.png
+share/icons/hicolor/24x24/stock/generic/stock_properties.png
 share/icons/hicolor/24x24/stock/generic/stock_redo.png
 share/icons/hicolor/24x24/stock/generic/stock_refresh.png
 share/icons/hicolor/24x24/stock/generic/stock_scores.png
@@ -2114,6 +2120,7 @@ share/icons/hicolor/48x48/apps/hwbrowser.png
 share/icons/hicolor/48x48/apps/iagno.png
 share/icons/hicolor/48x48/apps/im-aim.png
 share/icons/hicolor/48x48/apps/im-icq.png
+share/icons/hicolor/48x48/apps/im-jabber.png
 share/icons/hicolor/48x48/apps/im-msn.png
 share/icons/hicolor/48x48/apps/im-yahoo.png
 share/icons/hicolor/48x48/apps/keyboard.png
