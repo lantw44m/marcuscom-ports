@@ -205,6 +205,7 @@ share/locale/fi/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/fr/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/ga/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/gl/LC_MESSAGES/gal-%%VERSION%%.mo
+share/locale/gu/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/hr/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/hu/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/it/LC_MESSAGES/gal-%%VERSION%%.mo
@@ -217,6 +218,7 @@ share/locale/ms/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/nl/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/nn/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/no/LC_MESSAGES/gal-%%VERSION%%.mo
+share/locale/pa/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/pl/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/pt/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/pt_BR/LC_MESSAGES/gal-%%VERSION%%.mo
