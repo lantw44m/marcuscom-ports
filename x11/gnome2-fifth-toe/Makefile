@@ -41,6 +41,8 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 RUN_DEPENDS+=	totem:${PORTSDIR}/multimedia/totem
 .endif
 
+.include <bsd.port.pre.mk>
+
 #inkscape currently needs 5.X to build. this should hopefully
 #change soon
 .if ${OSVERSION} > 500000
@@ -51,4 +53,4 @@ NO_BUILD=	yes
 
 do-install:	# empty
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
