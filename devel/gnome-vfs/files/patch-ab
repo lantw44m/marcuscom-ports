@@ -1,6 +1,12 @@
---- Makefile.in.orig	Fri Sep  6 02:29:04 2002
-+++ Makefile.in	Fri Sep  6 02:29:27 2002
-@@ -183,7 +183,6 @@
+--- Makefile.in.orig	Wed Nov 13 13:29:42 2002
++++ Makefile.in	Wed Nov 13 13:33:11 2002
+@@ -171,13 +171,11 @@
+ SUBDIRS_GNOME = monikers doc schemas
+ 
+ SUBDIRS = \
+-	gob					\
+ 	libgnomevfs				\
+ 	modules					\
  	schemas					\
  	devel-docs				\
  	doc					\

@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomevfs2
 PORTVERSION=	2.1.3
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.1
@@ -15,6 +16,7 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
+BUILD_DEPENDS=	gob2:${PORTSDIR}/devel/gob2
 LIB_DEPENDS=	gconf-2.5:${PORTSDIR}/devel/gconf2 \
 		bonobo-2.0:${PORTSDIR}/devel/libbonobo
 
@@ -34,7 +36,9 @@ CONFIGURE_TARGET=	--target=${MACHINE_ARCH}-unknown-freebsd${OSREL}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g' ${WRKSRC}/configure
-	@find ${WRKSRC} -name "*info.in" | xargs ${REINPLACE_CMD} -e \
+	@${FIND} ${WRKSRC} -name "*info.in" | xargs ${REINPLACE_CMD} -e \
 		's|\@datadir\@/gnome|\@datadir\@|g'
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		${WRKSRC}/libgnomevfs/Makefile.in
 
 .include <bsd.port.mk>

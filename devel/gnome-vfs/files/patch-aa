@@ -1,5 +1,23 @@
 --- configure.orig	Sat Nov  2 03:18:30 2002
-+++ configure	Sat Nov  9 03:35:18 2002
++++ configure	Wed Nov 13 13:33:48 2002
+@@ -261,7 +261,7 @@
+ : ${ac_max_here_lines=38}
+ 
+ ac_unique_file="libgnomevfs/gnome-vfs.h"
+-ac_subdirs_all="$ac_subdirs_all gob"
++ac_subdirs_all="$ac_subdirs_all"
+ # Factoring default headers for most tests.
+ ac_includes_default="\
+ #include <stdio.h>
+@@ -1666,7 +1666,7 @@
+ 
+ touch NOINST_GOB
+ 
+-subdirs="$subdirs gob"
++subdirs="$subdirs"
+ 
+ ac_ext=c
+ ac_cpp='$CPP $CPPFLAGS'
 @@ -7268,6 +7268,7 @@
  
  # This can be used to rebuild libtool when needed

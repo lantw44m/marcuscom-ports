@@ -1,6 +1,6 @@
---- libgnomevfs/Makefile.in.orig	Fri Sep  6 02:29:53 2002
-+++ libgnomevfs/Makefile.in	Fri Sep  6 02:30:42 2002
-@@ -329,7 +329,7 @@
+--- libgnomevfs/Makefile.in.orig	Wed Nov 13 13:29:42 2002
++++ libgnomevfs/Makefile.in	Wed Nov 13 13:32:39 2002
+@@ -335,7 +335,7 @@
  
  
  # Platform specific includes
@@ -9,3 +9,12 @@
  libgnomevfsplatforminclude_HEADERS = \
  	gnome-vfs-file-size.h
  
+@@ -935,7 +935,7 @@
+ 
+ 
+ %.c %.h: %.gob
+-	$(top_srcdir)/gob/src/gob2 $<
++	%%LOCALBASE%%/bin/gob2 $<
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

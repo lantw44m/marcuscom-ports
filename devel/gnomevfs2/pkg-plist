@@ -86,7 +86,6 @@ lib/vfs/2.0/extfs/zoo
 libdata/bonobo/servers/GNOME_VFS_Moniker_std.server
 libdata/pkgconfig/gnome-vfs-2.0.pc
 libdata/pkgconfig/gnome-vfs-module-2.0.pc
-share/aclocal/gob2.m4
 share/doc/gnome-vfs-2.0/advanced-operations.html
 share/doc/gnome-vfs-2.0/c9746.html
 share/doc/gnome-vfs-2.0/data-types.html
