@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	1.1.1
+PORTVERSION=	1.1.2
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
@@ -15,7 +15,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
-LIB_DEPENDS=	soup-2.2.7:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	soup-2.2.7:${PORTSDIR}/devel/libsoup \
+		nss3.1:${PORTSDIR}/security/nss
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -25,7 +26,12 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget libgnomeui
 USE_REINPLACE=	yes
 USE_LIBTOOL_VER=15
 INSTALLS_SHLIB=	yes
-CONFIGURE_ARGS=	--enable-static
+CONFIGURE_ARGS=	--enable-static \
+		--with-nss-includes=${LOCALBASE}/include/nss/nss \
+		--with-nss-libs=${LOCALBASE}/lib \
+		--with-nspr-includes=${LOCALBASE}/include/nspr \
+		--with-nspr-libs=${LOCALBASE}/lib \
+		--with-krb5=/usr
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
