@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.1.1
+PORTVERSION=	2.1.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.1
@@ -32,7 +32,6 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 		--with-nss-libs=${LOCALBASE}/lib \
 		--with-nspr-includes=${LOCALBASE}/include/nspr \
 		--with-nspr-libs=${LOCALBASE}/lib \
-		--enable-openssl=no \
 		--with-sub-version=" FreeBSD GNOME Team Port" \
 		--with-krb5=/usr
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
@@ -74,7 +73,6 @@ RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 .endif
 
 post-install:
-	@${CHMOD} u+w ${PREFIX}/share/gnome/evolution/${EVO_VERSION}/default/C/mail/local/Inbox
 	@${LN} -sf ${PREFIX}/bin/evolution-${EVO_VERSION} \
 		${PREFIX}/bin/evolution
 
