@@ -25,6 +25,7 @@ lib/gstreamer-0.5/libgstaudioscale.so
 lib/gstreamer-0.5/libgstauparse.so
 lib/gstreamer-0.5/libgstavidemux.so
 lib/gstreamer-0.5/libgstavimux.so
+lib/gstreamer-0.5/libgstaviparse.so
 lib/gstreamer-0.5/libgstcdxaparse.so
 lib/gstreamer-0.5/libgstchart.so
 lib/gstreamer-0.5/libgstcutter.so
@@ -115,13 +116,13 @@ lib/gstreamer-0.5/libgsty4menc.so
 lib/gstreamer-0.5/libmixmatrix.so
 lib/libgstgconf-0.5.a
 lib/libgstgconf-0.5.so
-lib/libgstgconf-0.5.so.1
+lib/libgstgconf-0.5.so.2
 lib/libgstmedia-info-0.5.a
 lib/libgstmedia-info-0.5.so
 lib/libgstmedia-info-0.5.so.0
 lib/libgstplay-0.5.a
 lib/libgstplay-0.5.so
-lib/libgstplay-0.5.so.1
+lib/libgstplay-0.5.so.2
 libdata/pkgconfig/gstreamer-libs-0.5.pc
 libdata/pkgconfig/gstreamer-play-0.5.pc
 share/aclocal/gst-element-check-0.5.m4
