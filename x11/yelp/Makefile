@@ -55,6 +55,14 @@ MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
 GCONF_SCHEMAS=	yelp.schemas
 
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 500000
+.if ${MOZILLA}=="mozilla-devel"
+USE_GCC=	3.4
+.endif
+.endif
+
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} " By default epiphany uses www/mozilla for html rendering, but you can"
@@ -89,4 +97,4 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/yelp.sh ${PREFIX}/bin/yelp
 	${INSTALL_SCRIPT} ${WRKDIR}/gnome-help.sh ${PREFIX}/bin/gnome-help
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
