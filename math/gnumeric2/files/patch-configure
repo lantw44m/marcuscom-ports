@@ -1,24 +1,6 @@
---- configure.orig	Mon Nov  1 23:57:51 2004
-+++ configure	Tue Nov  2 00:04:09 2004
-@@ -26725,9 +26725,6 @@
- if test "${ac_cv_prog_python_val+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
--  if test -n "$python_val"; then
--  ac_cv_prog_python_val="$python_val" # Let the user override the test.
--else
- as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
- for as_dir in $PATH
- do
-@@ -26743,7 +26740,6 @@
- done
- 
- fi
--fi
- python_val=$ac_cv_prog_python_val
- if test -n "$python_val"; then
-   echo "$as_me:$LINENO: result: $python_val" >&5
-@@ -27124,7 +27120,7 @@
+--- configure.orig	Sun Nov  7 14:51:35 2004
++++ configure	Sun Nov  7 14:52:12 2004
+@@ -27270,7 +27270,7 @@
  }'
  fi
  
