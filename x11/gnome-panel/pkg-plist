@@ -68,7 +68,6 @@ share/doc/panel-applet/applet-writing.html
 share/doc/panel-applet/index.sgml
 share/doc/panel-applet/libpanel-applet.html
 share/doc/panel-applet/multi-applets.html
-share/doc/panel-applet/panel-applet-gconf.html
 share/doc/panel-applet/panel-applet-panel-applet-gconf-utilities.html
 share/doc/panel-applet/panel-applet.html
 share/doc/panel-applet/panel-signals.html
@@ -359,6 +358,7 @@ share/locale/bg/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/cy/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/de/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/el/LC_MESSAGES/gnome-panel-2.0.mo
