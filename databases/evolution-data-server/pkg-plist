@@ -131,13 +131,13 @@ lib/evolution-data-server-%%VERSION%%/extensions/libecalbackendhttp.a
 lib/evolution-data-server-%%VERSION%%/extensions/libecalbackendhttp.so
 lib/libebook-%%VERSION%%.a
 lib/libebook-%%VERSION%%.so
-lib/libebook-%%VERSION%%.so.0
+lib/libebook-%%VERSION%%.so.1
 lib/libecal-%%VERSION%%.a
 lib/libecal-%%VERSION%%.so
 lib/libecal-%%VERSION%%.so.0
 lib/libedata-book-%%VERSION%%.a
 lib/libedata-book-%%VERSION%%.so
-lib/libedata-book-%%VERSION%%.so.0
+lib/libedata-book-%%VERSION%%.so.1
 lib/libedata-cal-%%VERSION%%.a
 lib/libedata-cal-%%VERSION%%.so
 lib/libedata-cal-%%VERSION%%.so.0
@@ -146,7 +146,7 @@ lib/libedataserver-%%VERSION%%.so
 lib/libedataserver-%%VERSION%%.so.0
 lib/libedataserverui-%%VERSION%%.a
 lib/libedataserverui-%%VERSION%%.so
-lib/libedataserverui-%%VERSION%%.so.0
+lib/libedataserverui-%%VERSION%%.so.1
 lib/libegroupwise-%%VERSION%%.a
 lib/libegroupwise-%%VERSION%%.so
 lib/libegroupwise-%%VERSION%%.so.0
