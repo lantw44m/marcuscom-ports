@@ -1,0 +1,59 @@
+--- configure.orig	Sun Mar 30 09:19:47 2003
++++ configure	Sun Apr 13 02:46:35 2003
+@@ -7842,6 +7842,7 @@
+ 
+ # This can be used to rebuild libtool when needed
+ LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
++$ac_aux_dir/ltconfig $LIBTOOL_DEPS
+ 
+ # Always use our own libtool.
+ LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+@@ -8109,23 +8110,23 @@
+   else
+      PKG_CONFIG_MIN_VERSION=0.9.0
+      if $PKG_CONFIG --atleast-pkgconfig-version $PKG_CONFIG_MIN_VERSION; then
+-        echo "$as_me:$LINENO: checking for gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0" >&5
+-echo $ECHO_N "checking for gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0... $ECHO_C" >&6
++        echo "$as_me:$LINENO: checking for gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf-2.0 >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0" >&5
++echo $ECHO_N "checking for gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf-2.0 >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0... $ECHO_C" >&6
+ 
+-        if $PKG_CONFIG --exists "gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0" ; then
++        if $PKG_CONFIG --exists "gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf-2.0 >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0" ; then
+             echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+             succeeded=yes
+ 
+             echo "$as_me:$LINENO: checking LIBTHEME_CFLAGS" >&5
+ echo $ECHO_N "checking LIBTHEME_CFLAGS... $ECHO_C" >&6
+-            LIBTHEME_CFLAGS=`$PKG_CONFIG --cflags "gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0"`
++            LIBTHEME_CFLAGS=`$PKG_CONFIG --cflags "gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf-2.0 >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0"`
+             echo "$as_me:$LINENO: result: $LIBTHEME_CFLAGS" >&5
+ echo "${ECHO_T}$LIBTHEME_CFLAGS" >&6
+ 
+             echo "$as_me:$LINENO: checking LIBTHEME_LIBS" >&5
+ echo $ECHO_N "checking LIBTHEME_LIBS... $ECHO_C" >&6
+-            LIBTHEME_LIBS=`$PKG_CONFIG --libs "gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0"`
++            LIBTHEME_LIBS=`$PKG_CONFIG --libs "gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf-2.0 >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0"`
+             echo "$as_me:$LINENO: result: $LIBTHEME_LIBS" >&5
+ echo "${ECHO_T}$LIBTHEME_LIBS" >&6
+         else
+@@ -8133,7 +8134,7 @@
+             LIBTHEME_LIBS=""
+             ## If we have a custom action on failure, don't print errors, but
+             ## do set a variable so people can do so.
+-            LIBTHEME_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0"`
++            LIBTHEME_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf-2.0 >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0"`
+             echo $LIBTHEME_PKG_ERRORS
+         fi
+ 
+@@ -8148,8 +8149,8 @@
+   if test $succeeded = yes; then
+      :
+   else
+-     { { echo "$as_me:$LINENO: error: Library requirements (gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
+-echo "$as_me: error: Library requirements (gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
++     { { echo "$as_me:$LINENO: error: Library requirements (gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf-2.0 >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
++echo "$as_me: error: Library requirements (gnome-vfs-module-2.0 >= 2.2.0 glib-2.0 >= 2.2.0 gnome-desktop-2.0 >= 2.2.1 gnome-vfs-2.0 >= 2.2.0 gconf-2.0 >= 1.0.0 gnome-window-settings-2.0 >= 2.2.0) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
+    { (exit 1); exit 1; }; }
+   fi
+ 

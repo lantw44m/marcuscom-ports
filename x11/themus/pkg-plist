@@ -1,0 +1,18 @@
+bin/gnome-theme-thumbnailer
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-gnome-theme-installed/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-gnome-theme/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-gnome-theme-installed/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-gnome-theme/%gconf.xml
+etc/gconf/schemas/themus.schemas
+etc/gnome-vfs-2.0/modules/theme-method.conf
+lib/bonobo/libthemus-component.so
+lib/bonobo/libthemus-theme-properties-view.so
+lib/gnome-vfs-2.0/modules/libtheme-method.so
+libdata/bonobo/servers/Themus_Component.server
+libdata/bonobo/servers/Themus_Properties_View.server
+share/gnome/mime-info/themus.keys
+share/gnome/vfolders/theme-method.directory
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-gnome-theme-installed
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-gnome-theme
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-gnome-theme-installed
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-gnome-theme
