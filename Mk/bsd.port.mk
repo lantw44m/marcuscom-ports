@@ -341,7 +341,9 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # USE_QT_VER	- Set to 3 to use the QT libraries.
 #				  Implies inclusion of bsd.kde.mk.
 ##
-# USE_LINUX		- Set to yes to say the port needs emulators/linux_base.
+# USE_LINUX		- Set to yes to say the port needs emulators/linux_base-8.
+#				  Set to value <X>, if the port needs emulators/linux_base-<X>.
+#				  If set to "7", a dependency is registered to emulators/linux_base.
 # USE_LINUX_PREFIX
 #				- controls the action of PREFIX (see above).
 ##
@@ -1134,9 +1136,6 @@ USE_X_PREFIX=	yes
 .if defined(USE_X_PREFIX)
 USE_XLIB=		yes
 .endif
-.if defined(USE_LINUX_PREFIX)
-USE_LINUX=		yes
-.endif
 .if defined(USE_X_PREFIX)
 PREFIX?=		${X11BASE}
 .elif defined(USE_LINUX_PREFIX)
@@ -1483,7 +1482,15 @@ LIB_DEPENDS+=	intl.${USE_GETTEXT}:${PORTSDIR}/devel/gettext
 .endif
 
 .if defined(USE_LINUX)
-RUN_DEPENDS+=	${LINUXBASE}/etc/redhat-release:${PORTSDIR}/emulators/linux_base
+.	if exists(${PORTSDIR}/emulators/linux_base-${USE_LINUX})
+RUN_DEPENDS+=	${LINUXBASE}/bin/sh:${PORTSDIR}/emulators/linux_base-${USE_LINUX}
+.	else
+.		if ${USE_LINUX} == "7"
+RUN_DEPENDS+= ${LINUXBASE}/etc/redhat-release:${PORTSDIR}/emulators/linux_base
+.		else
+RUN_DEPENDS+=	${LINUXBASE}/etc/redhat-release:${PORTSDIR}/emulators/linux_base-8
+.		endif
+.	endif
 .endif
 
 .if defined(USE_MOTIF)
@@ -1892,20 +1899,18 @@ EXTRACT_CMD?=			${GZIP_CMD}
 
 # Figure out where the local mtree file is
 .if !defined(MTREE_FILE) && !defined(NO_MTREE)
-.if ${PREFIX} == ${X11BASE}
+.if ${PREFIX} == ${X11BASE} || defined(USE_X_PREFIX)
+# User may have specified non-standard PREFIX for installing a port that
+# uses X
 .if ${X_WINDOW_SYSTEM:L} == xfree86-3
 MTREE_FILE=	/etc/mtree/BSD.x11.dist
 .else
 MTREE_FILE=	/etc/mtree/BSD.x11-4.dist
 .endif
-.else
-.if ${PREFIX} == ${LOCALBASE}
-MTREE_FILE=	/etc/mtree/BSD.local.dist
 .elif ${PREFIX} == /usr
 MTREE_FILE=	/etc/mtree/BSD.usr.dist
 .else
-NO_MTREE=	yes	# Can't figure out prefix, assume nonstandard
-.endif
+MTREE_FILE=	/etc/mtree/BSD.local.dist
 .endif
 .endif
 MTREE_CMD?=	/usr/sbin/mtree
