@@ -1,0 +1,11 @@
+--- capplets/theme-switcher/Makefile.in.orig	Thu Oct 10 17:26:56 2002
++++ capplets/theme-switcher/Makefile.in	Thu Oct 10 17:27:46 2002
+@@ -159,7 +159,7 @@
+ gladedir = $(GNOMECC_GLADE_DIR)
+ glade_DATA = theme-properties.glade theme-install.glade
+ 
+-INCLUDES =  	-I$(top_srcdir)				$(GNOMECC_CAPPLETS_CFLAGS)		-DGLADEDIR=\""$(gladedir)"\"
++INCLUDES =  	-I$(top_srcdir)				$(GNOMECC_CAPPLETS_CFLAGS)		-DGLADEDIR=\""$(gladedir)"\" -DMETACITY_THEME_LOCATION=\""$(datadir)/themes"\"
+ 
+ 
+ CLEANFILES = $(GNOMECC_CAPPLETS_CLEANFILES)

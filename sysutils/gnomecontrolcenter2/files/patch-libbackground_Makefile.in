@@ -1,0 +1,11 @@
+--- libbackground/Makefile.in.orig	Thu Oct 10 17:34:06 2002
++++ libbackground/Makefile.in	Thu Oct 10 17:34:31 2002
+@@ -145,7 +145,7 @@
+ 
+ EXTRA_DIST = ChangeLog
+ 
+-INCLUDES =          -DGNOMELOCALEDIR=\""$(prefix)/$(DATADIRNAME)/locale"\" 			-DGNOME_ICONDIR=\""${prefix}/share/pixmaps"\"				-DG_LOG_DOMAIN=\"capplet-common\"					-I$(top_srcdir)/							@CAPPLET_CFLAGS@
++INCLUDES =          -DGNOMELOCALEDIR=\""$(prefix)/share/locale"\" 			-DGNOME_ICONDIR=\""${datadir}/pixmaps"\"				-DG_LOG_DOMAIN=\"capplet-common\"					-I$(top_srcdir)/							@CAPPLET_CFLAGS@
+ 
+ 
+ noinst_LTLIBRARIES = libbackground.la
