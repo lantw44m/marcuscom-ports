@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gdm2
-PORTVERSION=	2.4.2.101
+PORTVERSION=	2.4.2.102
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=		sources/${PORTNAME:S/2$//}/2.4
@@ -26,6 +26,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GDMDIR?=	${PREFIX}/etc/gdm
+
+MAN1=		gdm.1
 
 .include <bsd.port.pre.mk>
 
