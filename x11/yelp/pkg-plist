@@ -3,6 +3,8 @@ bin/yelp
 bin/yelp-pregenerate
 libdata/bonobo/servers/GNOME_Yelp.server
 libexec/yelp-db2html
+libexec/yelp-info2html
+libexec/yelp-man2html
 share/gnome/applications/yelp.desktop
 share/gnome/images/yelp/bcg.png
 share/gnome/images/yelp/empty.png
@@ -133,6 +135,7 @@ share/gnome/sgml/docbook/yelp/docbook/lib/lib.xsl
 share/gnome/sgml/docbook/yelp/l10n.xml
 share/gnome/sgml/docbook/yelp/yelp-custom.xsl
 share/gnome/sgml/docbook/yelp/yelp-customization.xsl
+share/gnome/sgml/docbook/yelp/yelp-functions.xsl
 share/gnome/yelp/catalog
 share/gnome/yelp/important_docs.xml
 share/gnome/yelp/ui/yelp.glade
