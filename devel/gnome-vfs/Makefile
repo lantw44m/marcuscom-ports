@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomevfs2
-PORTVERSION=	2.5.5
-PORTREVISION=	2
+PORTVERSION=	2.5.6
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.5
@@ -40,9 +39,6 @@ EXTRA_PATCHES=	${FILESDIR}/modules_vfolder_applications-all-users.vfolder-info.i
 .if exists(${LOCALBASE}/lib/libcdda_paranoia.a)
 WITH_CDPARANOIA=	yes
 .endif
-.if exists(${LOCALBASE}/lib/libfam.a)
-WITH_FAM=	yes
-.endif
 
 .if defined(WITH_CDPARANOIA)
 LIB_DEPENDS+=	cdda_paranoia.0:${PORTSDIR}/audio/cdparanoia
@@ -50,14 +46,14 @@ PLIST_SUB+=	CDPARANOIA=""
 .else
 PLIST_SUB+=	CDPARANOIA="@comment "
 .endif
-.if defined(WITH_FAM)
+.if !defined(WITHOUT_FAM)
 LIB_DEPENDS+=	fam.0:${PORTSDIR}/devel/fam
 .endif
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "*info.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|\@datadir\@/gnome|\@datadir\@|g'
-	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/libgnomevfs/Makefile.in \
 		${WRKSRC}/libgnomevfs/xdgmime.c \
 		${WRKSRC}/modules/vfolder/applications-all-users.vfolder-info.in
