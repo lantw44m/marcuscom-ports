@@ -238,6 +238,7 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-font-sunos-news.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-font-ttf.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gameboy-rom.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-genesis-rom.png
+share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-glade.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gnome-app-info.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gnucash.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gnumeric.png
@@ -546,6 +547,7 @@ share/icons/hicolor/16x16/stock/generic/stock_book_green.png
 share/icons/hicolor/16x16/stock/generic/stock_book_open.png
 share/icons/hicolor/16x16/stock/generic/stock_book_red.png
 share/icons/hicolor/16x16/stock/generic/stock_book_yellow.png
+share/icons/hicolor/16x16/stock/generic/stock_briefcase.png
 share/icons/hicolor/16x16/stock/generic/stock_calc-accept.png
 share/icons/hicolor/16x16/stock/generic/stock_calc-cancel.png
 share/icons/hicolor/16x16/stock/generic/stock_calendar.png
@@ -1335,6 +1337,7 @@ share/icons/hicolor/24x24/stock/generic/stock_book_green.png
 share/icons/hicolor/24x24/stock/generic/stock_book_open.png
 share/icons/hicolor/24x24/stock/generic/stock_book_red.png
 share/icons/hicolor/24x24/stock/generic/stock_book_yellow.png
+share/icons/hicolor/24x24/stock/generic/stock_briefcase.png
 share/icons/hicolor/24x24/stock/generic/stock_calc-accept.png
 share/icons/hicolor/24x24/stock/generic/stock_calc-cancel.png
 share/icons/hicolor/24x24/stock/generic/stock_calendar-view-day.png
@@ -1914,6 +1917,7 @@ share/icons/hicolor/32x32/stock/document/stock_new.png
 share/icons/hicolor/32x32/stock/document/stock_todo.png
 share/icons/hicolor/32x32/stock/generic/stock_alarm.png
 share/icons/hicolor/32x32/stock/generic/stock_autopilot.png
+share/icons/hicolor/32x32/stock/generic/stock_briefcase.png
 share/icons/hicolor/32x32/stock/generic/stock_calendar.png
 share/icons/hicolor/32x32/stock/generic/stock_cell-phone.png
 share/icons/hicolor/32x32/stock/generic/stock_dialog-info.png
@@ -2082,6 +2086,7 @@ share/icons/hicolor/48x48/stock/document/stock_new-text.png
 share/icons/hicolor/48x48/stock/document/stock_todo.png
 share/icons/hicolor/48x48/stock/generic/stock_alarm.png
 share/icons/hicolor/48x48/stock/generic/stock_autopilot.png
+share/icons/hicolor/48x48/stock/generic/stock_briefcase.png
 share/icons/hicolor/48x48/stock/generic/stock_calendar-and-tasks.png
 share/icons/hicolor/48x48/stock/generic/stock_calendar.png
 share/icons/hicolor/48x48/stock/generic/stock_cell-phone.png
@@ -2138,8 +2143,6 @@ share/icons/hicolor/48x48/stock/net/stock_spam.png
 share/icons/hicolor/72x72/apps/gnome-globe.png
 share/icons/hicolor/96x96/apps/gnome-globe.png
 share/icons/hicolor/96x96/apps/gnome-starthere.png
-@dirrm share/icons/hicolor/96x96/apps
-@dirrm share/icons/hicolor/96x96
 @dirrm share/icons/hicolor/72x72/apps
 @dirrm share/icons/hicolor/72x72
 @dirrm share/icons/hicolor/48x48/stock/net
@@ -2150,7 +2153,6 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/hicolor/48x48/stock/code
 @dirrm share/icons/hicolor/48x48/stock
 @dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/48x48
 @dirrm share/icons/hicolor/36x36/stock/generic
 @dirrm share/icons/hicolor/36x36/stock/document
 @dirrm share/icons/hicolor/36x36/stock
@@ -2167,7 +2169,6 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/hicolor/32x32/stock/chart
 @dirrm share/icons/hicolor/32x32/stock
 @dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/32x32
 @dirrm share/icons/hicolor/24x24/stock/text
 @dirrm share/icons/hicolor/24x24/stock/table
 @dirrm share/icons/hicolor/24x24/stock/object
@@ -2203,8 +2204,6 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/hicolor/16x16/stock/chart
 @dirrm share/icons/hicolor/16x16/stock
 @dirrm share/icons/hicolor/16x16/apps
-@dirrm share/icons/hicolor/16x16
-@dirrm share/icons/hicolor
 @dirrm share/icons/gnome/scalable/mimetypes
 @dirrm share/icons/gnome/scalable/filesystems
 @dirrm share/icons/gnome/scalable/emblems
@@ -2253,4 +2252,3 @@ share/icons/hicolor/96x96/apps/gnome-starthere.png
 @dirrm share/icons/gnome/12x12/devices
 @dirrm share/icons/gnome/12x12
 @dirrm share/icons/gnome
-@unexec /bin/rmdir %D/share/icons 2> /dev/null || /usr/bin/true
