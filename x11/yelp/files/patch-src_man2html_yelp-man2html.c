@@ -1,5 +1,5 @@
---- src/man2html/yelp-man2html.c.orig	Thu Jul 24 14:06:36 2003
-+++ src/man2html/yelp-man2html.c	Thu Jul 24 14:06:06 2003
+--- src/man2html/yelp-man2html.c.orig	Tue Jun 24 05:03:50 2003
++++ src/man2html/yelp-man2html.c	Thu Aug 14 15:47:14 2003
 @@ -129,6 +129,7 @@
  #include <string.h>
  #include <sys/stat.h>
@@ -18,7 +18,7 @@
  	int i,len;
  	char *buf;
  	char *h = '\0';
-@@ -3845,6 +3849,20 @@
+@@ -3845,6 +3849,24 @@
  		 * right.
  		 */
  		
@@ -34,12 +34,16 @@
 +				}
 +			}
 +			output[j] = '\0';
++		} else {
++			i = strlen(output) - 1;
++			while (g_ascii_isspace((unsigned char)output[i])) 
++				output[i--] = '\0';
 +		}
 +#else
  		len = strlen(output);
  		for(i = 0; i < len; i++)
  		{
-@@ -3855,8 +3873,7 @@
+@@ -3855,8 +3877,7 @@
  		i = strlen(output) - 1;
  		while (g_ascii_isspace((unsigned char)output[i])) 
  			output[i--] = '\0';
