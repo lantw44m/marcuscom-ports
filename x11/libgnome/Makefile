@@ -20,6 +20,7 @@ RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
+USE_REINPLACE=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack lthack gnomehier intlhack esound \
@@ -29,5 +30,11 @@ INSTALLS_SHLIB=	yes
 USE_LIBTOOL_VER=13
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+.if defined(NOPORTDOCS)
+post-patch:
+	@${REINPLACE_CMD} -e 's|gnome-data po doc|gnome-data po|g' \
+		${WRKSRC}/Makefile.in
+.endif
 
 .include <bsd.port.mk>
