@@ -6,15 +6,16 @@
 #
 
 PORTNAME=	gnomesession
-PORTVERSION=	2.5.2
+PORTVERSION=	2.5.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
+		http://people.FreeBSD.org/~marcus/:local \
 		${MASTER_SITE_LOCAL:S/$/:local/}
 MASTER_SITE_SUBDIR=	sources/gnome-session/2.5 \
 		    	marcus/:local
 DISTNAME=	gnome-session-${PORTVERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		splash.png:local
+		${SPLASH_IMG}:local
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -22,7 +23,7 @@ COMMENT=	Session component for the GNOME 2 desktop
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier lthack libgnomeui
+USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack lthack libgnomeui
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
@@ -32,11 +33,13 @@ MAN1=	gnome-session.1 gnome-smproxy.1 gnome-wm.1 session-properties.1 \
 	gnome-session-save.1
 MAN5=	default.session.5
 
+SPLASH_IMG=	gnome-splash04-10.png
+
 post-extract:
-	@${CP} ${DISTDIR}/${DIST_SUBDIR}/splash.png ${WRKDIR}
+	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${SPLASH_IMG} ${WRKDIR}
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/splash.png \
+	${INSTALL_DATA} ${WRKDIR}/${SPLASH_IMG} \
 		${PREFIX}/share/gnome/pixmaps/splash/gnome-splash.png
 
 .include <bsd.port.mk>
