@@ -7,6 +7,7 @@
 
 PORTNAME=	evolution
 PORTVERSION=	1.5.3
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
@@ -69,5 +70,8 @@ pre-everything::
 	@${ECHO_MSG} "	WITHOUT_LDAP		Disable LDAP support"
 	@${ECHO_MSG} "	WITHOUT_SPAMASSASSIN	Do not add a runtime dependency on SpamAssassin (Evo uses SpamAssassin for spam filtering)"
 	@${ECHO_MSG} ""
+
+post-install:
+	@${CHMOD} u+w ${PREFIX}/share/gnome/evolution/${EVO_VERSION}/default/C/mail/local/Inbox
 
 .include <bsd.port.mk>
