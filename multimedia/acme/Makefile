@@ -1,0 +1,35 @@
+# New ports collection makefile for:	acme
+# Date created:				15 November 2002
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD: ports/multimedia/acme/Makefile,v 1.3 2003/04/04 07:18:35 marcus Exp $
+#
+
+PORTNAME=	acme
+PORTVERSION=	2.0.3
+CATEGORIES=	multimedia gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.0
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	Tool to make multimedia keys work on laptops
+
+BUILD_DEPENDS=	gob2:${PORTSDIR}/devel/gob2
+
+USE_BZIP2=	yes
+USE_X_PREFIX=	yes
+USE_REINPLACE=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gnomeprefix gnomehack libgnomeui libwnck
+USE_LIBTOOL=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+		LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		 s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		${WRKSRC}/src/acme.c
+
+.include <bsd.port.mk>
