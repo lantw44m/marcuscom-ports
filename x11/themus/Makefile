@@ -17,6 +17,7 @@ COMMENT=	A theme view for Nautilus
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix nautilus2
+GNOME_DESKTOP_VERSION=2
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
