@@ -7,14 +7,17 @@
 
 PORTNAME=	acme
 PORTVERSION=	1.99.10
-CATEGORIES=	x11 gnome
+PORTREVISION=	1
+CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.99
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 
-LIB_DEPENDS=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui
+BUILD_DEPENDS=	gob2:${PORTSDIR}/devel/gob2
+LIB_DEPENDS=	gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui \
+		wnck-1.7:${PORTSDIR}/x11-toolkits/libwnck	
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
