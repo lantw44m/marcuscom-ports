@@ -19,7 +19,7 @@ COMMENT=	A library for writing networked servers & clients
 
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gnomeprefix libgnomeui
+USE_GNOME=	gnomehack gnomeprefix intlhack lthack libgnomeui
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
