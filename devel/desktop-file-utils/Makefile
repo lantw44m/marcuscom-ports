@@ -6,7 +6,7 @@
 #
 
 PORTNAME=		desktop-file-utils
-PORTVERSION=		0.8
+PORTVERSION=		0.9
 CATEGORIES=		devel
 MASTER_SITES=		http://freedesktop.org/Software/desktop-file-utils/releases/
 
