@@ -25,4 +25,6 @@ USE_LIBTOOL=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lcam"
 
+BROKEN=	"Doesn't build with latest gstreamer"
+
 .include <bsd.port.mk>
