@@ -166,7 +166,7 @@ libvisual_DEPNDS=	graphics/gstreamer-plugins-libvisual
 
 swfdec_DEPENDS=	graphics/gstreamer-plugins-swfdec
 
-theora_DEPENDS=	graphics/gstreamer-plugins-theora
+theora_DEPENDS=	multimedia/gstreamer-plugins-theora
 
 # Multimedia Plugins Section
 dirac_DEPENDS=	multimedia/gstreamer-plugins-dirac
