@@ -34,7 +34,7 @@ _USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 libglade2 libxml2 \
 		libgnomecanvas libartlgpl2 libgnomeprint libgnomeprintui \
 		libgnome libbonoboui libgnomeui atspi libgailgnome \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
-		gnomepanel nautilus2 metacity gal2
+		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -331,7 +331,7 @@ gnomepanel_GNOME_DESKTOP_VERSION=2
 
 nautilus2_LIB_DEPENDS=	nautilus.2:${PORTSDIR}/x11-fm/nautilus2
 nautilus2_DETECT=	${X11BASE}/libdata/pkgconfig/libnautilus.pc
-nautilus2_USE_GNOME_IMPL=librsvg2 eel2 gnomedesktop
+nautilus2_USE_GNOME_IMPL=librsvg2 eel2 gnomedesktop gnomecontrolcenter2
 nautilus2_GNOME_DESKTOP_VERSION=2
 
 metacity_LIB_DEPENDS=	metacity-private.0:${PORTSDIR}/x11-wm/metacity
@@ -341,6 +341,10 @@ metacity_USE_GNOME_IMPL=gconf2 glade2
 gal2_LIB_DEPENDS=	gal-2.0.1:${PORTSDIR}/x11-toolkits/gal2
 gal2_DETECT=		${X11BASE}/libdata/pkgconfig/gal-2.0.pc
 gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
+
+gnomecontrolcenter2_LIB_DEPENDS=gnome-window-settings.1:${PORTSDIR}/sysutils/gnomecontrolcenter2
+gnomecontrolcenter2_DETECT=${X11BASE}/libdata/pkgconfig/gnome-window-settings-2.0.pc
+gnomecontrolcenter2_USE_GNOME_IMPL=gnomedesktop metacity
 
 # End component definition section
 
