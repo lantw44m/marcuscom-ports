@@ -2,7 +2,7 @@
 # Date created:				24 April 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/www/epiphany/Makefile,v 1.49 2004/05/03 22:43:11 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	epiphany

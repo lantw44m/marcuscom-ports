@@ -2,7 +2,7 @@
 # Date created:				26 August 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/math/gnumeric2/Makefile,v 1.129 2004/06/30 05:36:19 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnumeric2

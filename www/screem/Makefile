@@ -2,7 +2,7 @@
 # Date created:		05 Nov 1999
 # Whom:			Will Andrews <andrews@technologist.com>
 #
-# $FreeBSD: ports/www/screem/Makefile,v 1.45 2004/04/18 17:58:59 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	screem

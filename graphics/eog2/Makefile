@@ -2,7 +2,7 @@
 # Date created:		21 May 2002
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/eog2/Makefile,v 1.46 2004/04/29 02:51:39 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	eog2

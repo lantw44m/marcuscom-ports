@@ -2,7 +2,7 @@
 # Date created:		12 April 2002
 # Whom:			Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/gpdf/Makefile,v 1.8 2004/04/05 03:11:26 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gpdf

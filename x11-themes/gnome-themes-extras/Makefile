@@ -2,7 +2,7 @@
 # Date Created:				12 June 2003
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-themes/gnome-themes-extras/Makefile,v 1.21 2004/07/26 21:21:18 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-themes-extras

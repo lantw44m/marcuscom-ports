@@ -2,7 +2,7 @@
 # Date created:				07 January 2004
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/gnome2-office/Makefile,v 1.12 2004/04/05 19:38:21 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome2-office

@@ -2,7 +2,7 @@
 # Date created:        21 December 1999
 # Whom:                saper@system.pl
 #
-# $FreeBSD: ports/graphics/dia/Makefile,v 1.46 2004/07/26 05:05:59 adamw Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	dia

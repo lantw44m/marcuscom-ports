@@ -2,7 +2,7 @@
 # Date created:				18 May 2001
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/libgnomecanvas/Makefile,v 1.37 2004/04/28 18:34:04 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgnomecanvas

@@ -2,7 +2,7 @@
 # Date created:				26th May 2000
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnomeapplets2/Makefile,v 1.66 2004/06/29 04:51:38 adamw Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomeapplets2

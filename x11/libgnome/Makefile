@@ -2,7 +2,7 @@
 # Date created:				17 June 1998
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
-# $FreeBSD: ports/x11/libgnome/Makefile,v 1.136 2004/04/28 18:28:42 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgnome

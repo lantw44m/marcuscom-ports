@@ -2,7 +2,7 @@
 # Date Created:			05 December 2003
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/gnomenetstatus/Makefile,v 1.8 2004/04/20 05:12:04 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomenetstatus

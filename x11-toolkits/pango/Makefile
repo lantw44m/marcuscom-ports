@@ -2,7 +2,7 @@
 # Date Created:			18 July 2000
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/pango/Makefile,v 1.62 2004/05/31 19:41:46 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	pango

@@ -2,7 +2,7 @@
 # Date created:			12 April 2003
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/gnomemag/Makefile,v 1.15 2004/04/19 22:50:55 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomemag

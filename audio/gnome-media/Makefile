@@ -2,7 +2,7 @@
 # Date created:				06 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/gnomemedia2/Makefile,v 1.50 2004/05/13 19:07:46 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomemedia2

@@ -2,7 +2,7 @@
 # Date created:        21 May 2002
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
-# $FreeBSD: ports/x11-wm/metacity/Makefile,v 1.32 2004/08/06 20:04:42 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	metacity

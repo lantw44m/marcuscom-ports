@@ -2,7 +2,7 @@
 # Date created:				08 July 2003
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/libcroco/Makefile,v 1.9 2004/04/18 17:57:53 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libcroco

@@ -2,7 +2,7 @@
 # Date created:				09 February 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/py-gnome2/Makefile,v 1.76 2004/08/07 18:59:49 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome

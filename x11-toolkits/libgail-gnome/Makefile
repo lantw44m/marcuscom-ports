@@ -2,7 +2,7 @@
 # Date Created:			12 April 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/libgail-gnome/Makefile,v 1.30 2004/07/24 15:18:05 adamw Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgail-gnome

@@ -2,7 +2,8 @@
 # Date created:				14 Jul 2003
 # Whom:					Glenn Johnson <glennpj@charter.net>
 #
-# $FreeBSD: ports/print/gnome-cups-manager/Makefile,v 1.8 2004/07/27 13:53:04 marcus Exp $
+# $FreeBSD$
+#
 
 PORTNAME=	gnome-cups-manager
 PORTVERSION=	0.24

@@ -2,7 +2,7 @@
 # Date created:         		28th August 2000
 # Whom:                 		ade, archie
 #
-# $FreeBSD: ports/x11-fm/nautilus2/Makefile,v 1.93 2004/04/19 21:50:05 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	nautilus2
