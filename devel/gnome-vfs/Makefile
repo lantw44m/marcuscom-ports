@@ -33,6 +33,7 @@ CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		BSD_PTHREAD_LIBS=${PTHREAD_LIBS}
 
+PKGINSTALL=	${WRKDIR}/pkg-install
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 
 GCONF_SCHEMAS=	desktop_default_applications.schemas \
@@ -96,6 +97,8 @@ post-patch:
 		${WRKSRC}/libgnomevfs/xdgmime.c \
 		${WRKSRC}/libgnomevfs/gnome-vfs-mime-info.c
 	@${SED} -e 's|%%X11BASE%%|${X11BASE}|g' \
+		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
+	@${SED} -e 's|%%X11BASE%%|${X11BASE}|g' \
 		< ${MASTERDIR}/pkg-deinstall.in > ${PKGDEINSTALL}
 
 pre-configure:
@@ -103,5 +106,8 @@ pre-configure:
 		${ECHO_CMD} "${PKGNAME}: bind installed with PORT_REPLACES_BASE_BIND causes build problems."; \
 		${FALSE}; \
 	fi
+
+post-install:
+	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
 .include <bsd.port.post.mk>
