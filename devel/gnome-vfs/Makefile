@@ -45,7 +45,7 @@ OPTIONS=	KDE_MENUS "Integrated KDE menu picks" on
 .undef WITHOUT_CDPARANOIA
 .undef WITHOUT_SAMBA
 .undef WITHOUT_MDNS
-#WITH_MDNS=		yes
+WITH_MDNS=		yes
 WITH_CDPARANOIA=	yes
 WITH_SAMBA=		yes
 .endif
@@ -65,9 +65,9 @@ WITH_CDPARANOIA=	yes
 WITH_SAMBA=		yes
 .endif
 
-#.if exists(${LOCALBASE}/lib/libhowl.so)
-#WITH_MDNS=		yes
-#.endif
+.if exists(${LOCALBASE}/lib/libhowl.so)
+WITH_MDNS=		yes
+.endif
 
 .if defined(WITH_CDPARANOIA)
 LIB_DEPENDS+=	cdda_paranoia.0:${PORTSDIR}/audio/cdparanoia
@@ -91,9 +91,9 @@ PLIST_SUB+=	SAMBA=""
 PLIST_SUB+=	SAMBA="@comment "
 .endif
 
-#.if defined(WITH_MDNS)
-#LIB_DEPENDS+=	howl:${PORTSDIR}/net/howl
-#.endif
+.if defined(WITH_MDNS)
+LIB_DEPENDS+=	howl:${PORTSDIR}/net/howl
+.endif
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "*info.in" | ${XARGS} ${REINPLACE_CMD} -e \
