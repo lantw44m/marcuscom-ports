@@ -24,6 +24,15 @@ Gnome_Pre_Include=			bsd.gnome.mk
 #
 # As a result proper LIB_DEPENDS/RUN_DEPENDS will be added and CONFIGURE_ENV
 # and MAKE_ENV defined.
+#
+#
+# GCONF_SCHEMAS		- Set the following to specify list of all schema files
+#					  that your port installs. These schema files and
+#					  %gconf.xml files will be automatically listed in
+#					  ${PLIST}. For example, if your port has
+#					  "etc/gconf/schemas/(foo.schemas and bar.schemas)", set
+#					  it as "GCONF_SCHEMAS=foo.schemas bar.schemas".
+#
 
 # non-version specific components
 _USE_GNOME_ALL=	gnomehack lthack gnomeprefix gnomehier esound gnomemimedata \
