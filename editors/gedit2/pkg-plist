@@ -189,6 +189,7 @@ share/locale/mk/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/ml/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/mn/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/ms/LC_MESSAGES/gedit-%%VERSION%%.mo
+share/locale/ne/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/nl/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/nn/LC_MESSAGES/gedit-%%VERSION%%.mo
 share/locale/no/LC_MESSAGES/gedit-%%VERSION%%.mo
@@ -223,7 +224,6 @@ share/locale/zh_TW/LC_MESSAGES/gedit-%%VERSION%%.mo
 @dirrm share/gnome/help/gedit/es
 @dirrm share/gnome/help/gedit/de
 @dirrm share/gnome/help/gedit/C/figures
-@dirrm share/gnome/help/gedit/C
 @dirrm share/gnome/gedit-2/ui
 @dirrm share/gnome/gedit-2/taglist
 @dirrm share/gnome/gedit-2/glade
