@@ -1,0 +1,65 @@
+bin/ximian-connector-setup-%%VERSION%%
+etc/gconf/gconf.xml.defaults/apps/evolution/exchange/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/evolution/exchange/%gconf.xml
+etc/gconf/schemas/apps_evolution_exchange.schemas
+lib/evolution/%%EVO_VERSION%%/camel-providers/libcamelexchange.so
+lib/evolution/%%EVO_VERSION%%/camel-providers/libcamelexchange.urls
+libdata/bonobo/servers/GNOME_Evolution_Exchange_Storage_%%VERSION%%.server
+libexec/evolution/%%EVO_VERSION%%/evolution-exchange-storage
+%%DOCSDIR%%/E2kContext.html
+%%DOCSDIR%%/E2kGlobalCatalog.html
+%%DOCSDIR%%/E2kSecurityDescriptor.html
+%%DOCSDIR%%/E2kSid.html
+%%DOCSDIR%%/E2kUserDialog.html
+%%DOCSDIR%%/ch01.html
+%%DOCSDIR%%/home.png
+%%DOCSDIR%%/index.html
+%%DOCSDIR%%/index.sgml
+%%DOCSDIR%%/left.png
+%%DOCSDIR%%/right.png
+%%DOCSDIR%%/up.png
+%%DOCSDIR%%/ximian-connector-e2k-action.html
+%%DOCSDIR%%/ximian-connector-e2k-autoconfig.html
+%%DOCSDIR%%/ximian-connector-e2k-encoding-utils.html
+%%DOCSDIR%%/ximian-connector-e2k-freebusy.html
+%%DOCSDIR%%/ximian-connector-e2k-http-utils.html
+%%DOCSDIR%%/ximian-connector-e2k-properties.html
+%%DOCSDIR%%/ximian-connector-e2k-restriction.html
+%%DOCSDIR%%/ximian-connector-e2k-result.html
+%%DOCSDIR%%/ximian-connector-e2k-rule-xml.html
+%%DOCSDIR%%/ximian-connector-e2k-rule.html
+%%DOCSDIR%%/ximian-connector-e2k-uri.html
+%%DOCSDIR%%/ximian-connector-e2k-utils.html
+%%DOCSDIR%%/ximian-connector-e2k-xml-utils.html
+%%DOCSDIR%%/ximian-connector-test-utils.html
+%%DOCSDIR%%/ximian-connector-xntlm-des.html
+%%DOCSDIR%%/ximian-connector-xntlm-md4.html
+%%DOCSDIR%%/ximian-connector-xntlm.html
+%%DOCSDIR%%/ximian-connector.devhelp
+share/gnome/ximian-connector/%%VERSION%%/etspec/e-storage-set-view.etspec
+share/gnome/ximian-connector/%%VERSION%%/glade/e-folder-creation-dialog.glade
+share/gnome/ximian-connector/%%VERSION%%/glade/e-foreign-folder-dialog.glade
+share/gnome/ximian-connector/%%VERSION%%/glade/exchange-autoconfig-wizard.glade
+share/gnome/ximian-connector/%%VERSION%%/glade/exchange-change-password.glade
+share/gnome/ximian-connector/%%VERSION%%/glade/exchange-delegates.glade
+share/gnome/ximian-connector/%%VERSION%%/glade/exchange-oof.glade
+share/gnome/ximian-connector/%%VERSION%%/glade/exchange-permissions-dialog.glade
+share/gnome/ximian-connector/%%VERSION%%/images/connector-mini.png
+share/gnome/ximian-connector/%%VERSION%%/images/connector.png
+share/gnome/ximian-connector/%%VERSION%%/images/exchange-delegates-48.png
+share/gnome/ximian-connector/%%VERSION%%/images/exchange-oof-48.png
+share/gnome/ximian-connector/%%VERSION%%/ui/ximian-connector.xml
+share/locale/cs/LC_MESSAGES/ximian-connector.mo
+share/locale/de/LC_MESSAGES/ximian-connector.mo
+share/locale/en_GB/LC_MESSAGES/ximian-connector.mo
+share/locale/no/LC_MESSAGES/ximian-connector.mo
+share/locale/sv/LC_MESSAGES/ximian-connector.mo
+@dirrm share/gnome/ximian-connector/%%VERSION%%/ui
+@dirrm share/gnome/ximian-connector/%%VERSION%%/images
+@dirrm share/gnome/ximian-connector/%%VERSION%%/glade
+@dirrm share/gnome/ximian-connector/%%VERSION%%/etspec
+@dirrm share/gnome/ximian-connector/%%VERSION%%
+@dirrm share/gnome/ximian-connector
+@dirrm %%DOCSDIR%%
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/evolution/exchange
+@dirrm etc/gconf/gconf.xml.defaults/apps/evolution/exchange
