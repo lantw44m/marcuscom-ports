@@ -4,6 +4,7 @@ share/gnome/applications/eog.desktop
 share/gnome/eog/glade/eog.glade
 share/gnome/gnome-2.0/ui/eog-gtk-ui.xml
 share/gnome/help/eog/C/eog.xml
+share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
 share/gnome/help/eog/C/legal.xml
 share/gnome/help/eog/de/eog.xml
