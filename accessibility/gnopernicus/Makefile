@@ -26,6 +26,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 MAKE_ENV=	SED="${SED}"
 
+GCONF_SCHEMAS=	brlmonitor.schemas gnopernicus.schemas remote.schemas
 SHLIB_VERSION=	9
 PLIST_SUB=	SHLIB_VERSION=${SHLIB_VERSION}
 

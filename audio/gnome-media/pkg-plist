@@ -5,18 +5,6 @@ bin/gnome-sound-recorder
 bin/gnome-volume-control
 bin/gstreamer-properties
 bin/vumeter
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/CDDB-Slave2.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/CDDB-Slave2.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/CDDB-Slave2.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gnome-audio-profiles.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gnome-audio-profiles.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gnome-audio-profiles.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gnome-cd.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gnome-cd.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gnome-cd.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gnome-sound-recorder.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gnome-sound-recorder.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gnome-sound-recorder.schemas > /dev/null || /usr/bin/true
 include/cddb-slave2/cddb-slave-client.h
 include/gnome-media/profiles/audio-profile-choose.h
 include/gnome-media/profiles/audio-profile-edit.h

@@ -26,6 +26,8 @@ USE_LIBTOOL_VER=13
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
+GCONF_SCHEMAS=	eog.schemas
+
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_EXIF) || exists(${LOCALBASE}/lib/libexif.so.10)

@@ -4,21 +4,6 @@ bin/gnomevfs-info
 bin/gnomevfs-ls
 bin/gnomevfs-mkdir
 bin/gnomevfs-rm
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_default_applications.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_default_applications.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_default_applications.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_url_handlers.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_url_handlers.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_url_handlers.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/system_dns_sd.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/system_dns_sd.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/system_dns_sd.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/system_http_proxy.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/system_http_proxy.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/system_http_proxy.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/system_smb.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/system_smb.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/system_smb.schemas > /dev/null || /usr/bin/true
 %%CDPARANOIA%%etc/gnome-vfs-2.0/modules/cdda-module.conf
 etc/gnome-vfs-2.0/modules/default-modules.conf
 %%SAMBA%%etc/gnome-vfs-2.0/modules/smb-module.conf

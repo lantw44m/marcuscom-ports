@@ -1,14 +1,5 @@
 bin/gnopernicus
 bin/srcore
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/brlmonitor.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/brlmonitor.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/brlmonitor.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gnopernicus.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gnopernicus.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gnopernicus.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/remote.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/remote.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/remote.schemas > /dev/null || /usr/bin/true
 etc/gnopernicus-1.0/translation_tables/de.a2b
 etc/gnopernicus-1.0/translation_tables/en_US.a2b
 etc/gnopernicus-1.0/translation_tables/es.a2b

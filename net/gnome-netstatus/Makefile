@@ -25,4 +25,6 @@ USE_LIBTOOL_VER=15
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+GCONF_SCHEMAS=	netstatus.schemas
+
 .include <bsd.port.mk>

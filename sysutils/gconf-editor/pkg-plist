@@ -1,7 +1,4 @@
 bin/gconf-editor
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gconf-editor.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gconf-editor.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gconf-editor.schemas > /dev/null || /usr/bin/true
 share/gnome/applications/gconf-editor.desktop
 share/gnome/help/gconf-editor/C/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/C/gconf-editor.xml

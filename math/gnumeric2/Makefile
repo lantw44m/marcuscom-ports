@@ -31,6 +31,9 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		DEFS="-I${X11BASE}/include/gal-2.0" \
 		python_prog=${PYTHON_VERSION}
 
+GCONF_SCHEMAS=	gnumeric-dialogs.schemas gnumeric-general.schemas \
+		gnumeric-plugins.schemas
+
 PLIST_SUB=	VERSION=${PORTVERSION}
 
 post-patch:

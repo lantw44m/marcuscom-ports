@@ -30,7 +30,12 @@ CONFIGURE_ARGS=	--with-kde-datadir=${LOCALBASE}/share \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-MAN1=	gnome-panel.1 gnome-panel-preferences.1
+MAN1=		gnome-panel.1 gnome-panel-preferences.1
+GCONF_SCHEMAS=	clock.schemas fish.schemas gnome-panel-screenshot.schemas \
+		panel-compatibility.schemas panel-general.schemas \
+		panel-global.schemas panel-object.schemas \
+		panel-toplevel.schemas window-list.schemas \
+		workspace-switcher.schemas
 
 post-patch:
 .for po in da.po it.po zh_TW.po

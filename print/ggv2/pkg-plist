@@ -1,7 +1,4 @@
 bin/ggv
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/ggv.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/ggv.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/ggv.schemas > /dev/null || /usr/bin/true
 libdata/bonobo/servers/GNOME_GGV.server
 libexec/ggv-postscript-viewer
 share/gnome/applications/ggv.desktop

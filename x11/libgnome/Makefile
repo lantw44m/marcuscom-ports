@@ -31,6 +31,20 @@ USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+GCONF_SCHEMAS=	desktop_gnome_accessibility_keyboard.schemas \
+		desktop_gnome_accessibility_startup.schemas \
+		desktop_gnome_applications_browser.schemas \
+		desktop_gnome_applications_help_viewer.schemas \
+		desktop_gnome_applications_terminal.schemas \
+		desktop_gnome_applications_window_manager.schemas \
+		desktop_gnome_background.schemas \
+		desktop_gnome_file_views.schemas \
+		desktop_gnome_interface.schemas desktop_gnome_lockdown.schemas \
+		desktop_gnome_peripherals_keyboard.schemas \
+		desktop_gnome_peripherals_mouse.schemas \
+		desktop_gnome_sound.schemas desktop_gnome_thumbnailers.schemas \
+		desktop_gnome_typing_break.schemas
+
 .if defined(NOPORTDOCS)
 post-patch:
 	@${REINPLACE_CMD} -e 's|gnome-data po doc|gnome-data po|g' \

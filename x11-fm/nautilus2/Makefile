@@ -33,6 +33,8 @@ CONFIGURE_ARGS=	--with-freetype2-lib-place=${LOCALBASE}/lib \
 		--enable-static
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
+GCONF_SCHEMAS=	apps_nautilus_preferences.schemas
+
 post-install:
 	${MKDIR} ${PREFIX}/lib/nautilus/extensions-1.0
 #	@${CHMOD} u+w ${PREFIX}/share/gnome/nautilus/*.desktop

@@ -25,4 +25,6 @@ INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+GCONF_SCHEMAS=	libgnomedb.schemas
+
 .include <bsd.port.mk>

@@ -4,9 +4,6 @@ bin/gnome-session-remove
 bin/gnome-session-save
 bin/gnome-smproxy
 bin/gnome-wm
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gnome-session.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gnome-session.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gnome-session.schemas > /dev/null || /usr/bin/true
 share/gnome/control-center-2.0/capplets/session-properties.desktop
 share/gnome/default.session
 share/gnome/default.wm

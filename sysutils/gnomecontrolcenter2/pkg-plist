@@ -18,27 +18,6 @@ bin/gnome-typing-monitor
 bin/gnome-ui-properties
 bin/gnome-window-properties
 bin/themus-theme-applier
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/apps_gnome_settings_daemon_keybindings.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/apps_gnome_settings_daemon_keybindings.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/apps_gnome_settings_daemon_keybindings.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/apps_gnome_settings_daemon_screensaver.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/apps_gnome_settings_daemon_screensaver.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/apps_gnome_settings_daemon_screensaver.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_font_rendering.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_font_rendering.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_font_rendering.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_peripherals_keyboard_xkb.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_peripherals_keyboard_xkb.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_peripherals_keyboard_xkb.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/fontilus.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/fontilus.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/fontilus.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/themus.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/themus.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/themus.schemas > /dev/null || /usr/bin/true
 etc/gnome-vfs-2.0/modules/font-method.conf
 etc/gnome-vfs-2.0/modules/theme-method.conf
 include/gnome-window-settings-2.0/gnome-window-manager.h

@@ -29,6 +29,9 @@ USE_GNOME=	gnomeprefix gnomehack intlhack lthack gnomehier gnomedesktop \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+GCONF_SCHEMAS=	CDDB-Slave2.schemas gnome-audio-profiles.schemas \
+		gnome-cd.schemas gnome-sound-recorder.schemas
+
 .include <bsd.port.pre.mk>
 
 post-patch:

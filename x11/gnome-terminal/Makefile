@@ -26,4 +26,6 @@ USE_LIBTOOL_VER=13
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+GCONF_SCHEMAS=	gnome-terminal.schemas
+
 .include <bsd.port.mk>

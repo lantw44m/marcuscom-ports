@@ -1,16 +1,4 @@
 bin/evolution-%%VERSION%%
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/apps_evolution_addressbook-%%VERSION%%.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/apps_evolution_addressbook-%%VERSION%%.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/apps_evolution_addressbook-%%VERSION%%.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/apps_evolution_calendar-%%VERSION%%.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/apps_evolution_calendar-%%VERSION%%.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/apps_evolution_calendar-%%VERSION%%.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/apps_evolution_shell-%%VERSION%%.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/apps_evolution_shell-%%VERSION%%.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/apps_evolution_shell-%%VERSION%%.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/evolution-mail-%%VERSION%%.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/evolution-mail-%%VERSION%%.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/evolution-mail-%%VERSION%%.schemas > /dev/null || /usr/bin/true
 include/evolution-%%VERSION%%/camel/broken-date-parser.h
 include/evolution-%%VERSION%%/camel/camel-address.h
 include/evolution-%%VERSION%%/camel/camel-arg.h

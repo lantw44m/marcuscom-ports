@@ -28,6 +28,8 @@ INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+GCONF_SCHEMAS=	ncb.schemas
+
 .include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/bin/growisofs)

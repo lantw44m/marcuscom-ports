@@ -28,6 +28,7 @@ USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-MAN1=	gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1
+MAN1=		gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1
+GCONF_SCHEMAS=	gdict.schemas gnome-search-tool.schemas logview.schemas
 
 .include <bsd.port.mk>

@@ -1,8 +1,5 @@
 bin/create-branching-keyboard
 bin/gok
-@unexec GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gok.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gok.schemas
-@exec GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gok.schemas > /dev/null || /usr/bin/true
 libdata/bonobo/servers/GNOME_Gok.server
 libdata/pkgconfig/gok-1.0.pc
 share/gnome/applications/gok.desktop

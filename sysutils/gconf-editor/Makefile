@@ -26,5 +26,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		gconf-editor.1
+GCONF_SCHEMAS=	gconf-editor.schemas
 
 .include <bsd.port.mk>

@@ -27,4 +27,6 @@ USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+GCONF_SCHEMAS=	gnome-keyring-manager.schemas
+
 .include <bsd.port.mk>

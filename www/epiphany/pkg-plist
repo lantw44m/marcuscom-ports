@@ -1,11 +1,5 @@
 bin/epiphany
 bin/epiphany-bin
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/epiphany-lockdown.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/epiphany-lockdown.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/epiphany-lockdown.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/epiphany.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/epiphany.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/epiphany.schemas > /dev/null || /usr/bin/true
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-bookmarks.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-command-manager.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-cookie-manager.h

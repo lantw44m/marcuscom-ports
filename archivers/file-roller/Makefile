@@ -25,6 +25,8 @@ USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+GCONF_SCHEMAS=	file-roller.schemas
+
 .include <bsd.port.pre.mk>
 
 post-install:

@@ -45,6 +45,8 @@ CONFIGURE_ARGS=	--with-mozilla-includes="${X11BASE}/include/mozilla${HEADERS_SUF
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
+GCONF_SCHEMAS=	epiphany-lockdown.schemas epiphany.schemas
+
 FLASHPLAYER=	${LOCALBASE}/lib/libflashplayer.so.1
 PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/\.[0-9]+$//}"
 

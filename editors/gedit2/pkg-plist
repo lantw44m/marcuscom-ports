@@ -1,8 +1,5 @@
 bin/gedit
 bin/gnome-text-editor
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gedit.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gedit.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gedit.schemas > /dev/null || /usr/bin/true
 include/gedit-%%VERSION%%/gedit/bonobo-mdi-child.h
 include/gedit-%%VERSION%%/gedit/bonobo-mdi.h
 include/gedit-%%VERSION%%/gedit/gedit-convert.h

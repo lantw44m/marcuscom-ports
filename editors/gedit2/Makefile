@@ -30,5 +30,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 PLIST_SUB=	VERSION="2.6"
 
 MAN1=		gedit.1
+GCONF_SCHEMAS=	gedit.schemas
 
 .include <bsd.port.mk>

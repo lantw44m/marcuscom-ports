@@ -1,8 +1,5 @@
 bin/gcalctool
 bin/gnome-calculator
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gcalctool.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gcalctool.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gcalctool.schemas > /dev/null || /usr/bin/true
 share/gnome/applications/gcalctool.desktop
 share/gnome/help/gcalctool/C/figures/gcalctool_basic_window.png
 share/gnome/help/gcalctool/C/figures/gcalctool_financial_window.png

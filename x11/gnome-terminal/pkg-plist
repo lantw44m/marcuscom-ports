@@ -1,7 +1,4 @@
 bin/gnome-terminal
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gnome-terminal.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gnome-terminal.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gnome-terminal.schemas > /dev/null || /usr/bin/true
 libdata/bonobo/servers/gnome-terminal.server
 share/gnome/application-registry/gnome-terminal.applications
 share/gnome/applications/gnome-terminal.desktop

@@ -27,6 +27,8 @@ USE_GNOME=	gnomeprefix gnomehack libgnomeui libgnomeprintui libgtkhtml \
 USE_INC_LIBTOOL_VER=13
 INSTALLS_SHLIB=	yes
 
+GCONF_SCHEMAS=	screem.schemas
+
 CROCO_VERSION=	0.6
 
 .ifndef WITHOUT_OPENSSL

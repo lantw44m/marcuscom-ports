@@ -28,4 +28,6 @@ USE_LIBTOOL_VER=13
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lutil"
 
+GCONF_SCHEMAS=	gnome-system-monitor.schemas
+
 .include <bsd.port.mk>

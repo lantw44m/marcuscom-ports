@@ -1,7 +1,4 @@
 bin/eog
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/eog.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/eog.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/eog.schemas > /dev/null || /usr/bin/true
 share/gnome/applications/eog.desktop
 share/gnome/eog/glade/eog.glade
 share/gnome/gnome-2.0/ui/eog-gtk-ui.xml

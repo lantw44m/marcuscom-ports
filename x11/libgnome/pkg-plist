@@ -1,49 +1,4 @@
 bin/gnome-open
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_accessibility_keyboard.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_accessibility_keyboard.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_accessibility_keyboard.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_accessibility_startup.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_accessibility_startup.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_accessibility_startup.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_applications_browser.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_applications_browser.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_applications_browser.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_applications_help_viewer.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_applications_help_viewer.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_applications_help_viewer.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_applications_terminal.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_applications_terminal.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_applications_terminal.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_applications_window_manager.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_applications_window_manager.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_applications_window_manager.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_background.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_background.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_background.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_file_views.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_file_views.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_file_views.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_interface.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_interface.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_interface.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_lockdown.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_lockdown.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_lockdown.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_peripherals_keyboard.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_peripherals_keyboard.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_peripherals_keyboard.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_peripherals_mouse.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_peripherals_mouse.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_peripherals_mouse.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_sound.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_sound.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_sound.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_thumbnailers.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_thumbnailers.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_thumbnailers.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/desktop_gnome_typing_break.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/desktop_gnome_typing_break.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/desktop_gnome_typing_break.schemas > /dev/null || /usr/bin/true
 etc/sound/events/gnome-2.soundlist
 etc/sound/events/gtk-events-2.soundlist
 include/libgnome-2.0/libgnome/gnome-config.h

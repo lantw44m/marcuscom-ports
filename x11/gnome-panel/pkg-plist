@@ -3,41 +3,11 @@ bin/gnome-panel
 bin/gnome-panel-preferences
 bin/gnome-panel-screenshot
 bin/panel-test-applets
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/clock.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/clock.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/clock.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/fish.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/fish.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/fish.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gnome-panel-screenshot.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gnome-panel-screenshot.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gnome-panel-screenshot.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/panel-compatibility.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/panel-compatibility.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/panel-compatibility.schemas > /dev/null || /usr/bin/true
 @unexec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --unload %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel/profiles/default > /dev/null || /usr/bin/true
 @unexec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --unload %D/etc/gconf/schemas/panel-default-setup.entries > /dev/null || /usr/bin/true
 etc/gconf/schemas/panel-default-setup.entries
 @exec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --load %D/etc/gconf/schemas/panel-default-setup.entries > /dev/null || /usr/bin/true
 @exec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --load %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel/profiles/default > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/panel-general.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/panel-general.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/panel-general.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/panel-global.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/panel-global.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/panel-global.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/panel-object.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/panel-object.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/panel-object.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/panel-toplevel.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/panel-toplevel.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/panel-toplevel.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/window-list.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/window-list.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/window-list.schemas > /dev/null || /usr/bin/true
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/workspace-switcher.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/workspace-switcher.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/workspace-switcher.schemas > /dev/null || /usr/bin/true
 include/panel-2.0/GNOME_Panel.h
 include/panel-2.0/panel-applet-enums.h
 include/panel-2.0/panel-applet-gconf.h

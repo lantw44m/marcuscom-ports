@@ -28,6 +28,12 @@ USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+GCONF_SCHEMAS=	aisleriot.schemas blackjack.schemas gataxx.schemas \
+		glines.schemas gnect.schemas gnibbles.schemas gnobots2.schemas \
+		gnome-stones.schemas gnometris.schemas gnomine.schemas \
+		gnotravex.schemas gtali.schemas iagno.schemas mahjongg.schemas \
+		same-gnome.schemas
+
 CONFLICTS=	sol-1.0.*
 
 post-patch:

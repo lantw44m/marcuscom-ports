@@ -32,9 +32,10 @@ CONFIGURE_ARGS=	--with-halt-command=/sbin/shutdown \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
-MAN1=	gnome-session.1 gnome-smproxy.1 gnome-wm.1 session-properties.1 \
-	gnome-session-save.1
-MAN5=	default.session.5
+MAN1=		gnome-session.1 gnome-smproxy.1 gnome-wm.1 \
+		session-properties.1 gnome-session-save.1
+MAN5=		default.session.5
+GCONF_SCHEMAS=	gnome-session.schemas
 
 SPLASH_IMG=	gnome-splash04-12.png
 

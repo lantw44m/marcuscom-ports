@@ -28,5 +28,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 USE_PYTHON=	yes
 
 MAN1=		scaffold.1
+GCONF_SCHEMAS=	scaffold.schemas
 
 .include <bsd.port.mk>

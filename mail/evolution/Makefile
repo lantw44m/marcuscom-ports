@@ -37,6 +37,11 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+GCONF_SCHEMAS=	apps_evolution_addressbook-${EVO_VERSION}.schemas \
+		apps_evolution_calendar-${EVO_VERSION}.schemas \
+		apps_evolution_shell-${EVO_VERSION}.schemas \
+		evolution-mail-${EVO_VERSION}.schemas
+
 EVO_VERSION=	1.5
 PLIST_SUB=	VERSION=${EVO_VERSION}
 

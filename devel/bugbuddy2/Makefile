@@ -26,6 +26,7 @@ GNOME_DESKTOP_VERSION=2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-MAN1=	bug-buddy.1
+MAN1=		bug-buddy.1
+GCONF_SCHEMAS=	bug-buddy.schemas
 
 .include <bsd.port.mk>

@@ -24,5 +24,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		gnotime.1
+GCONF_SCHEMAS=	gnotime.schemas
 
 .include <bsd.port.mk>

@@ -33,6 +33,10 @@ CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		BSD_PTHREAD_LIBS=${PTHREAD_LIBS}
 
+GCONF_SCHEMAS=	desktop_default_applications.schemas \
+		desktop_gnome_url_handlers.schemas system_dns_sd.schemas \
+		system_http_proxy.schemas system_smb.schemas
+
 OPTIONS=	KDE_MENUS "Integrated KDE menu picks" on
 
 .include <bsd.port.pre.mk>

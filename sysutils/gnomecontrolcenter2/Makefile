@@ -31,6 +31,13 @@ INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
+GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
+		apps_gnome_settings_daemon_keybindings.schemas \
+		apps_gnome_settings_daemon_screensaver.schemas \
+		desktop_gnome_font_rendering.schemas \
+		desktop_gnome_peripherals_keyboard_xkb.schemas \
+		fontilus.schemas themus.schemas
+
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[{]prefix[}]/share/pixmaps|{datadir}/pixmaps|g'

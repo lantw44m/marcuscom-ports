@@ -1,7 +1,4 @@
 bin/gnotime
-@unexec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/gnotime.schemas > /dev/null || /usr/bin/true
-etc/gconf/schemas/gnotime.schemas
-@exec env GCONF_CONFIG_SOURCE=xml::%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/gnotime.schemas > /dev/null || /usr/bin/true
 include/gnotime/gnc-date.h
 include/gnotime/gnc-engine-util.h
 include/gnotime/gnc-event.h
