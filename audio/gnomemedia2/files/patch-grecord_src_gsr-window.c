@@ -59,13 +59,13 @@
 +		} else {
 +			gchar *error_message;
  
--		error_message = g_strdup_printf (_("Could not save the file \" %s\""), error->message);
+-		error_message = g_strdup_printf (_("Could not save the file \"%s\""), error->message);
 -		show_error_dialog (GTK_WINDOW (window), error_message);
 -		g_free (error_message);
 -	}
 -	
 -	if (status) {
-+			error_message = g_strdup_printf (_("Could not save the file \" %s\""), gnome_vfs_result_to_string (result));
++			error_message = g_strdup_printf (_("Could not save the file \"%s\""), gnome_vfs_result_to_string (result));
 +			show_error_dialog (GTK_WINDOW (window), error_message);
 +			g_free (error_message);
 +		}
@@ -74,8 +74,8 @@
 +	} else {
  		gchar *error_message;
  
--		error_message = g_strdup_printf (_("Could not save the file \" %s\""), tmp);
-+		error_message = g_strdup_printf (_("Could not save the file \" %s.%s\""), name, gm_audio_profile_get_extension (profile));
+-		error_message = g_strdup_printf (_("Could not save the file \"%s\""), tmp);
++		error_message = g_strdup_printf (_("Could not save the file \"%s.%s\""), name, gm_audio_profile_get_extension (profile));
  		show_error_dialog (GTK_WINDOW (window), error_message);
  		g_free (error_message);
  	}
