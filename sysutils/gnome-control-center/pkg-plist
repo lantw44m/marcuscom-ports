@@ -5,6 +5,7 @@ bin/gnome-default-applications-properties
 bin/gnome-display-properties
 bin/gnome-file-types-properties
 bin/gnome-font-properties
+bin/gnome-font-viewer
 bin/gnome-keybinding-properties
 bin/gnome-keyboard-properties
 bin/gnome-mouse-properties
@@ -12,27 +13,55 @@ bin/gnome-network-preferences
 bin/gnome-settings-daemon
 bin/gnome-sound-properties
 bin/gnome-theme-manager
+bin/gnome-theme-thumbnailer
+bin/gnome-thumbnail-font
 bin/gnome-ui-properties
 bin/gnome-window-properties
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/editor/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/screensaver/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/font_rendering/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-otf/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-pcf/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-ttf/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-type1/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-gnome-theme-installed/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-gnome-theme/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/editor/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/screensaver/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/font_rendering/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-otf/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-pcf/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-ttf/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-type1/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-gnome-theme-installed/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-gnome-theme/%gconf.xml
 etc/gconf/schemas/apps_gnome_settings_daemon_default_editor.schemas
 etc/gconf/schemas/apps_gnome_settings_daemon_screensaver.schemas
 etc/gconf/schemas/desktop_gnome_font_rendering.schemas
+etc/gconf/schemas/fontilus.schemas
+etc/gconf/schemas/themus.schemas
+etc/gnome-vfs-2.0/modules/font-method.conf
+etc/gnome-vfs-2.0/modules/theme-method.conf
 include/gnome-window-settings-2.0/gnome-window-manager.h
 include/gnome-window-settings-2.0/gnome-wm-manager.h
+lib/bonobo/libthemus-component.so
+lib/bonobo/libthemus-theme-properties-view.so
+lib/gnome-vfs-2.0/modules/libfont-method.so
+lib/gnome-vfs-2.0/modules/libtheme-method.so
 lib/libgnome-window-settings.a
 lib/libgnome-window-settings.so
 lib/libgnome-window-settings.so.1
+lib/window-manager-settings/libmetacity.a
 lib/window-manager-settings/libmetacity.so
 libdata/bonobo/servers/GNOME_SettingsDaemon.server
+libdata/bonobo/servers/Themus_Component.server
+libdata/bonobo/servers/Themus_Properties_View.server
+libdata/bonobo/servers/fontilus.server
 libdata/pkgconfig/gnome-window-settings-2.0.pc
+libexec/fontilus-context-menu
+share/gnome/application-registry/fontilus.applications
 share/gnome/applications/gnomecc.desktop
 share/gnome/control-center-2.0/capplets/accessibility-keyboard.desktop
 share/gnome/control-center-2.0/capplets/background.desktop
@@ -108,6 +137,8 @@ share/gnome/cursor-fonts/cursor-white.pcf
 share/gnome/gnome-2.0/ui/gnomecc-ui.xml
 share/gnome/idl/ConfigArchiver.idl
 share/gnome/idl/GNOME_SettingsDaemon.idl
+share/gnome/mime-info/fontilus.keys
+share/gnome/mime-info/fontilus.mime
 share/gnome/pixmaps/accessibility-keyboard-capplet.png
 share/gnome/pixmaps/background-capplet.png
 share/gnome/pixmaps/behavior-capplet.png
@@ -126,6 +157,8 @@ share/gnome/pixmaps/sound-capplet.png
 share/gnome/pixmaps/window-capplet.png
 share/gnome/vfolders/Accessibility.directory
 share/gnome/vfolders/Advanced.directory
+share/gnome/vfolders/font-method.directory
+share/gnome/vfolders/theme-method.directory
 share/locale/am/LC_MESSAGES/control-center-2.0.mo
 share/locale/ar/LC_MESSAGES/control-center-2.0.mo
 share/locale/az/LC_MESSAGES/control-center-2.0.mo
@@ -167,6 +200,8 @@ share/locale/ru/LC_MESSAGES/control-center-2.0.mo
 share/locale/sk/LC_MESSAGES/control-center-2.0.mo
 share/locale/sl/LC_MESSAGES/control-center-2.0.mo
 share/locale/sq/LC_MESSAGES/control-center-2.0.mo
+share/locale/sr/LC_MESSAGES/control-center-2.0.mo
+share/locale/sr@Latn/LC_MESSAGES/control-center-2.0.mo
 share/locale/sv/LC_MESSAGES/control-center-2.0.mo
 share/locale/ta/LC_MESSAGES/control-center-2.0.mo
 share/locale/tr/LC_MESSAGES/control-center-2.0.mo
@@ -184,10 +219,22 @@ share/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 @dirrm share/gnome/applications
 @dirrm lib/window-manager-settings
 @dirrm include/gnome-window-settings-2.0
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-gnome-theme
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-gnome-theme-installed
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-type1
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-ttf
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-pcf
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/thumbnailers/application@x-font-otf
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/font_rendering
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/screensaver
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon/editor
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/gnome_settings_daemon
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-gnome-theme
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-gnome-theme-installed
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-type1
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-ttf
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-pcf
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/thumbnailers/application@x-font-otf
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/font_rendering
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/screensaver
 @dirrm etc/gconf/gconf.xml.defaults/apps/gnome_settings_daemon/editor
