@@ -75,7 +75,7 @@ lib/gnome-vfs-2.0/modules/libvfs-test.so
 lib/gnome-vfs-2.0/modules/libvfs-translate.so
 lib/libgnomevfs-2.a
 lib/libgnomevfs-2.so
-lib/libgnomevfs-2.so.900
+lib/libgnomevfs-2.so.1000
 libdata/bonobo/servers/GNOME_VFS_Daemon.server
 libdata/bonobo/servers/GNOME_VFS_Moniker_std.server
 libdata/pkgconfig/gnome-vfs-2.0.pc
