@@ -1,0 +1,21 @@
+include/libglademm-%%API_VERSION%%/libglademm.h
+include/libglademm-%%API_VERSION%%/libglademm/init.h
+include/libglademm-%%API_VERSION%%/libglademm/private/xml_p.h
+include/libglademm-%%API_VERSION%%/libglademm/variablesmap.h
+include/libglademm-%%API_VERSION%%/libglademm/wrap_init.h
+include/libglademm-%%API_VERSION%%/libglademm/xml.h
+lib/libglademm-2.0/proc/m4/convert.m4
+lib/libglademm-2.0/proc/m4/convert_libglademm.m4
+lib/libglademm-%%VERSION%%.a
+lib/libglademm-%%VERSION%%.so
+lib/libglademm-%%VERSION%%.so.1
+lib/libglademm-%%API_VERSION%%/include/libglademmconfig.h
+libdata/pkgconfig/libglademm-%%API_VERSION%%.pc
+@dirrm lib/libglademm-%%API_VERSION%%/include
+@dirrm lib/libglademm-%%API_VERSION%%
+@dirrm lib/libglademm-2.0/proc/m4
+@dirrm lib/libglademm-2.0/proc
+@dirrm lib/libglademm-2.0
+@dirrm include/libglademm-%%API_VERSION%%/libglademm/private
+@dirrm include/libglademm-%%API_VERSION%%/libglademm
+@dirrm include/libglademm-%%API_VERSION%%
