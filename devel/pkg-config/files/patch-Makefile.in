@@ -1,0 +1,23 @@
+
+$FreeBSD: ports/devel/pkgconfig/files/patch-Makefile.in,v 1.3 2002/02/07 12:54:53 sobomax Exp $
+
+--- Makefile.in.orig	Sun Feb  3 20:23:27 2002
++++ Makefile.in	Thu Feb  7 11:46:04 2002
+@@ -35,7 +35,7 @@
+ DESTDIR =
+ 
+ pkgdatadir = $(datadir)/@PACKAGE@
+-pkglibdir = $(libdir)/@PACKAGE@
++pkglibdir = $(prefix)/libdata/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+ 
+ top_builddir = .
+@@ -91,7 +91,7 @@
+ 
+ bin_PROGRAMS = pkg-config
+ 
+-INCLUDES = -DPKGLIBDIR="\"$(pkglibdir)\"" $(included_glib_includes)
++INCLUDES = -DPKGLIBDIR="\"$(pkglibdir)\"" -DXPKGLIBDIR="\"$(X11BASE)/libdata/@PACKAGE@\"" -DLPKGLIBDIR="\"$(LOCALBASE)/libdata/@PACKAGE@\"" $(included_glib_includes)
+ 
+ pkg_config_SOURCES = \
+ 	pkg.h \
