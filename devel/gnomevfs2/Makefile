@@ -16,8 +16,6 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME Virtual File System
 
-BUILD_DEPENDS=	intltool-extract:${PORTSDIR}/textproc/intltool
-
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
