@@ -1,4 +1,5 @@
 bin/gkb_xmmap
+bin/gnome-keyboard-layout
 etc/gconf/gconf.xml.defaults/apps/stickynotes_applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/stickynotes_applet/defaults/%gconf.xml
 etc/gconf/gconf.xml.defaults/apps/stickynotes_applet/settings/%gconf.xml
@@ -22,6 +23,8 @@ etc/gconf/gconf.xml.defaults/schemas/apps/mailcheck_applet/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/mailcheck_applet/prefs/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/mini-commander/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/mini-commander/prefs/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/mixer_applet/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/mixer_applet/prefs/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/modemlights/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/modemlights/prefs/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/apps/multiload/%gconf.xml
@@ -563,19 +566,8 @@ share/gnome/help/gweather_applet/it/figures/gweather_settings.png
 share/gnome/help/gweather_applet/it/figures/gweather_weather.png
 share/gnome/help/gweather_applet/it/gweather.sgml
 share/gnome/help/gweather_applet/it/gweather_applet.sgml
-share/gnome/help/gweather_applet/it/index.html
-share/gnome/help/gweather_applet/it/stylesheet-images/caution.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/home.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/important.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/next.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/note.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/prev.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/tip.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/toc-blank.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/toc-minus.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/toc-plus.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/up.gif
-share/gnome/help/gweather_applet/it/stylesheet-images/warning.gif
+share/gnome/help/gweather_applet/it/ln10.html
+share/gnome/help/gweather_applet/it/t1.html
 share/gnome/help/gweather_applet/it/topic.dat
 share/gnome/help/mailcheck/C/figures/mailcheck_applet.png
 share/gnome/help/mailcheck/C/legal.xml
@@ -632,21 +624,10 @@ share/gnome/help/mailcheck/zh_TW/figures/mailcheck_applet.png
 share/gnome/help/mailcheck/zh_TW/legal.xml
 share/gnome/help/mailcheck/zh_TW/mailcheck.xml
 share/gnome/help/mixer_applet/it/figures/mixer_applet.png
-share/gnome/help/mixer_applet/it/index.html
+share/gnome/help/mixer_applet/it/ln10.html
 share/gnome/help/mixer_applet/it/mixer.sgml
 share/gnome/help/mixer_applet/it/mixer_applet.sgml
-share/gnome/help/mixer_applet/it/stylesheet-images/caution.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/home.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/important.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/next.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/note.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/prev.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/tip.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/toc-blank.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/toc-minus.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/toc-plus.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/up.gif
-share/gnome/help/mixer_applet/it/stylesheet-images/warning.gif
+share/gnome/help/mixer_applet/it/t1.html
 share/gnome/help/mixer_applet/it/topic.dat
 share/gnome/help/mixer_applet2/C/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/C/legal.xml
@@ -1384,6 +1365,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/multiload
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/modemlights/prefs
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/modemlights
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mixer_applet/prefs
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mixer_applet
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mini-commander/prefs
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mini-commander
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mailcheck_applet/prefs
