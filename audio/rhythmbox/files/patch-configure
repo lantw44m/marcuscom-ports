@@ -1,6 +1,6 @@
---- configure.orig	Wed Dec 17 23:50:24 2003
-+++ configure	Thu Dec 18 13:02:58 2003
-@@ -19377,6 +19377,7 @@
+--- configure.orig	Sat Mar 13 18:39:02 2004
++++ configure	Sat Mar 13 18:39:32 2004
+@@ -19381,6 +19381,7 @@
  
  # This can be used to rebuild libtool when needed
  LIBTOOL_DEPS="$ac_aux_dir/ltmain.sh"
@@ -8,3 +8,12 @@
  
  # Always use our own libtool.
  LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+@@ -20739,7 +20740,7 @@
+ else if test "x$with_player" = "xgstreamer"; then
+ 			HAVE_SOUNDSYSTEM=no
+ 
+-		GST_MAJORMINOR=0.7
++		GST_MAJORMINOR=0.8
+ 
+   succeeded=no
+ 
