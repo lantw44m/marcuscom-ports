@@ -34,11 +34,12 @@ include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-password-manager.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-permission-manager.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-session.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-shell.h
+include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-statusbar.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-tab.h
 include/epiphany-%%EPHY_VERSION%%/epiphany/ephy-window.h
 libdata/bonobo/servers/GNOME_Epiphany_Automation.server
 libdata/bonobo/servers/GNOME_Epiphany_NautilusView.server
-libdata/pkgconfig/epiphany-1.0.pc
+libdata/pkgconfig/epiphany-1.2.pc
 %%DOCSDIR%%/ch01.html
 %%DOCSDIR%%/epiphany-ephy-cookie-manager.html
 %%DOCSDIR%%/epiphany-ephy-embed-factory.html
@@ -119,6 +120,7 @@ share/locale/ja/LC_MESSAGES/epiphany.mo
 share/locale/ko/LC_MESSAGES/epiphany.mo
 share/locale/li/LC_MESSAGES/epiphany.mo
 share/locale/lt/LC_MESSAGES/epiphany.mo
+share/locale/mi/LC_MESSAGES/epiphany.mo
 share/locale/mk/LC_MESSAGES/epiphany.mo
 share/locale/mn/LC_MESSAGES/epiphany.mo
 share/locale/ms/LC_MESSAGES/epiphany.mo
@@ -137,6 +139,7 @@ share/locale/sr@Latn/LC_MESSAGES/epiphany.mo
 share/locale/sv/LC_MESSAGES/epiphany.mo
 share/locale/ta/LC_MESSAGES/epiphany.mo
 share/locale/tr/LC_MESSAGES/epiphany.mo
+share/locale/uk/LC_MESSAGES/epiphany.mo
 share/locale/vi/LC_MESSAGES/epiphany.mo
 share/locale/wa/LC_MESSAGES/epiphany.mo
 share/locale/zh_CN/LC_MESSAGES/epiphany.mo
