@@ -17,7 +17,9 @@ share/locale/eu/LC_MESSAGES/setup-tools-backends.mo
 share/locale/fi/LC_MESSAGES/setup-tools-backends.mo
 share/locale/fr/LC_MESSAGES/setup-tools-backends.mo
 share/locale/gu/LC_MESSAGES/setup-tools-backends.mo
+share/locale/hi/LC_MESSAGES/setup-tools-backends.mo
 share/locale/hr/LC_MESSAGES/setup-tools-backends.mo
+share/locale/hu/LC_MESSAGES/setup-tools-backends.mo
 share/locale/id/LC_MESSAGES/setup-tools-backends.mo
 share/locale/it/LC_MESSAGES/setup-tools-backends.mo
 share/locale/ja/LC_MESSAGES/setup-tools-backends.mo
@@ -41,6 +43,7 @@ share/locale/ta/LC_MESSAGES/setup-tools-backends.mo
 share/locale/th/LC_MESSAGES/setup-tools-backends.mo
 share/locale/tr/LC_MESSAGES/setup-tools-backends.mo
 share/locale/uk/LC_MESSAGES/setup-tools-backends.mo
+share/locale/vi/LC_MESSAGES/setup-tools-backends.mo
 share/locale/zh_CN/LC_MESSAGES/setup-tools-backends.mo
 share/locale/zh_TW/LC_MESSAGES/setup-tools-backends.mo
 share/setup-tool-backends/files/general_isdn_ppp_options
