@@ -23,6 +23,7 @@ share/gnome/icons/gnome-netstatus/gnome-netstatus-txrx.png
 share/gnome/omf/gnome-netstatus/gnome-netstatus-C.omf
 @exec scrollkeeper-install -q %D/share/gnome/omf/gnome-netstatus/gnome-netstatus-C.omf 2>/dev/null || /usr/bin/true
 share/gnome/pixmaps/gnome-netstatus-tx.png
+share/locale/ar/LC_MESSAGES/gnome-netstatus.mo
 share/locale/az/LC_MESSAGES/gnome-netstatus.mo
 share/locale/cs/LC_MESSAGES/gnome-netstatus.mo
 share/locale/de/LC_MESSAGES/gnome-netstatus.mo
