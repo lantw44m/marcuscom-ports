@@ -43,7 +43,6 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		ggv:${PORTSDIR}/print/ggv2 \
 		gnome-pkgview:${PORTSDIR}/sysutils/gnome-pkgview \
 		acme:${PORTSDIR}/multimedia/acme \
-		gst-launch-ext:${PORTSDIR}/multimedia/gstreamer-plugins \
 		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media
 
 NO_BUILD=	yes
