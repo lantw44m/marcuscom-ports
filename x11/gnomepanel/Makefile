@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomepanel
-PORTVERSION=	2.9.1
-PORTREVISION=	1
+PORTVERSION=	2.9.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/2.9
@@ -23,7 +22,7 @@ INSTALLS_SHLIB=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack gnomedesktop \
-		libwnck
+		libwnck gnomemenus
 WANT_GNOME=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes

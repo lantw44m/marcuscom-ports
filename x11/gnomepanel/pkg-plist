@@ -1,11 +1,11 @@
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
-@unexec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --unload %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel/profiles/default > /dev/null || /usr/bin/true
+@unexec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --unload %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel > /dev/null || /usr/bin/true
 @unexec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --unload %D/etc/gconf/schemas/panel-default-setup.entries > /dev/null || /usr/bin/true
 etc/gconf/schemas/panel-default-setup.entries
 @exec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --load %D/etc/gconf/schemas/panel-default-setup.entries > /dev/null || /usr/bin/true
-@exec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --load %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel/profiles/default > /dev/null || /usr/bin/true
+@exec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --load %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel > /dev/null || /usr/bin/true
 include/panel-2.0/GNOME_Panel.h
 include/panel-2.0/panel-applet-enums.h
 include/panel-2.0/panel-applet-gconf.h
@@ -309,6 +309,7 @@ share/locale/nb/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/no/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/nso/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/or/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-panel-2.0.mo
@@ -420,7 +421,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/help/clock/C/figures
 @dirrm share/gnome/help/clock/C
 @dirrm share/gnome/help/clock
-@dirrm share/gnome/gnome-panel/glade
-@dirrm share/gnome/gnome-panel
 @dirrm share/doc/panel-applet
 @dirrm include/panel-2.0
