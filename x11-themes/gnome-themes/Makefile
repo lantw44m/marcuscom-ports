@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome-themes
-PORTVERSION=	2.7.90
+PORTVERSION=	2.7.90.1
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.7
@@ -22,6 +22,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_LIBTOOL_VER=15
+USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack metacity libgnomeui
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 	       	LDFLAGS="-L${LOCALBASE}/lib"
