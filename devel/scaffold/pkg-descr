@@ -1,6 +1,3 @@
-Scaffold is meant to aid users with development work.  It provides an
-editor with syntax hilightlighting, a rudimentary project/build system
-and an interface to the gdb debugger.  The functionality can be
-extended with plugins that create various tools.
-
-Scaffold is based on the gIDE codebase.
+Scaffold aids software development.  It provides an editor with syntax
+hilightighting, a rudimentary project/build system, an interface to
+the gdb debugger, and a plugin system.
