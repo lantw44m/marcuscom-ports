@@ -2,17 +2,17 @@
 # Date created:        13 September 1999
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-wm/sawfish2/Makefile,v 1.64 2002/09/20 17:07:45 marcus Exp $
+# $FreeBSD: ports/x11-wm/sawfish2/Makefile,v 1.65 2002/11/12 22:32:08 marcus Exp $
 #
 
 PORTNAME=	sawfish2
-PORTVERSION=	2.0
+PORTVERSION=	1.2
 PORTREVISION=	1
-PORTEPOCH=	1
+PORTEPOCH=	2
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.0
-DISTNAME=	${PORTNAME:S/2$//}-${PORTVERSION}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/1.2
+DISTNAME=	sawfish-${PORTVERSION}-gtk2
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -22,15 +22,15 @@ BUILD_DEPENDS=	${X11BASE}/libexec/rep/${GNUHOST}/gui/gtk-2/gtk.so:${PORTSDIR}/x1
 RUN_DEPENDS=	${X11BASE}/libexec/rep/${GNUHOST}/gui/gtk-2/gtk.so:${PORTSDIR}/x11-toolkits/rep-gtk2
 
 GNUHOST=	${ARCH}-pc-freebsd${OSREL:C/\..*//}
-PLIST_SUB=	GNUHOST=${GNUHOST} VERSION=2.0
+PLIST_SUB=	GNUHOST=${GNUHOST} VERSION=1.2
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
-GNU_CONFIGURE=	yes
 USE_GNOMENG=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehier gnomehack
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-readline \
 		--localstatedir=${PREFIX}/share \
 		--datadir=${PREFIX}/share \
@@ -40,7 +40,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 CONFIGURE_TARGET=	${ARCH}-pc-freebsd${OSREL:C/\..*//}
 
-post-patch:
+pre-patch:
 	@${REINPLACE_CMD} -e 's^-l(pthread|c_r)^${PTHREAD_LIBS}^g ; \
 		 s|DATADIRNAME=lib|DATADIRNAME=share|g ; \
 		 s|USE_INCLUDED_LIBINTL=yes|#USE_INCLUDED_LIBINTL=yes|g ; \
