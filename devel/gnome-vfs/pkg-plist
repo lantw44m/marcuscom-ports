@@ -38,6 +38,7 @@ include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-async-ops.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-cancellation.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-context.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-directory.h
+include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-drive.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-file-info.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-file-size.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-find-directory.h
@@ -55,6 +56,8 @@ include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-standard-callbacks.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-types.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-uri.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-utils.h
+include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-volume-monitor.h
+include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-volume.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-xfer.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-cancellable-ops.h
@@ -73,6 +76,7 @@ include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-transform.h
 lib/bonobo/monikers/libmoniker_gnome_vfs_std.so
 lib/gnome-vfs-2.0/modules/libbzip2.so
 %%CDPARANOIA%%lib/gnome-vfs-2.0/modules/libcdda.so
+lib/gnome-vfs-2.0/modules/libcomputer.so
 lib/gnome-vfs-2.0/modules/libextfs.so
 lib/gnome-vfs-2.0/modules/libfile.so
 lib/gnome-vfs-2.0/modules/libftp.so
