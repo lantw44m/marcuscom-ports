@@ -7,6 +7,7 @@
 
 PORTNAME=	gnomevfs2
 PORTVERSION=	2.7.2
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.7
@@ -94,8 +95,10 @@ post-patch:
 		's|\@datadir\@/gnome|\@datadir\@|g'
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/libgnomevfs/Makefile.in \
-		${WRKSRC}/libgnomevfs/xdgmime.c \
 		${WRKSRC}/modules/vfolder/applications-all-users.vfolder-info.in
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
+		s|%%X11BASE%%|${X11BASE}|g' \
+		${WRKSRC}/libgnomevfs/xdgmime.c
 .if !defined(WITHOUT_KDE_MENUS)
 	@${SED} -e 's|/usr/local|${LOCALBASE}|g' \
 		< ${FILESDIR}/KDE.directory > ${WRKSRC}/KDE.directory
