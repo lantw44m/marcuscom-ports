@@ -5,7 +5,7 @@
 # $FreeBSD: ports/multimedia/totem-gstreamer/Makefile,v 1.1 2004/12/04 19:39:03 marcus Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	2
 PKGNAMESUFFIX=	-gstreamer
 
 MAINTAINER=	gnome@FreeBSD.org
