@@ -48,8 +48,7 @@ MAN1=	gst-complete-${GST_VERSION}.1 gst-compprep-${GST_VERSION}.1 \
 	gst-xmllaunch-${GST_VERSION}.1
 
 PKG_CONFIG?="${LOCALBASE}/bin/pkg-config"
-VERSION=0.8.1
-GST_VERSION=${VERSION:C/..$//}
+GST_VERSION=${PORTVERSION:C/..$//}
 
 # library minor number
 SHLIB_VERSION=	1
