@@ -7,6 +7,7 @@
 
 PORTNAME=	gtranslator
 PORTVERSION=	1.1.4
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://www.gtranslator.org/download/releases/${PORTVERSION}/ \
 		${MASTER_SITE_SOURCEFORGE}
@@ -16,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNOME application for developing ".pot" files used with GNU Gettext
 
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomehack gnomeprefix gnometarget gnomevfs2 libgnomeui 
+USE_GNOME=	gnomehack gnomeprefix gnometarget gnomevfs2 libgnomeui
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
