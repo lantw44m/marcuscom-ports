@@ -1,5 +1,5 @@
---- gconf/gconftool.c.orig	Thu Jul  8 17:10:37 2004
-+++ gconf/gconftool.c	Thu Jul  8 17:15:05 2004
+--- gconftool.c.orig	Sun Jul  4 11:15:23 2004
++++ gconftool.c	Thu Jul  8 17:23:03 2004
 @@ -460,8 +460,7 @@
  
  static int do_break_key(GConfEngine* conf, const gchar** args);
@@ -24,7 +24,7 @@
      {
        const gchar** args = poptGetArgs(ctx);
 -      gint retval = do_makefile_uninstall (conf, args);
-+      gint retval = do_makefile_uninstall (conf, args, TRUE);
++      gint retval = do_makefile_install (conf, args, TRUE);
        
        gconf_engine_unref (conf);
  
