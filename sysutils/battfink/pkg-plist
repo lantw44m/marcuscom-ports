@@ -1,0 +1,29 @@
+bin/battfink
+etc/gconf/gconf.xml.defaults/apps/battfink/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/apps/battfink/%gconf.xml
+etc/gconf/schemas/battfink.schemas
+libdata/bonobo/servers/GNOME_Battfink.server
+share/gnome/battfink/battfink.glade
+share/gnome/battfink/help/C/battfink.xml
+share/gnome/battfink/help/C/legal.xml
+share/gnome/battfink/icons/battfink-100.png
+share/gnome/battfink/icons/battfink-25.png
+share/gnome/battfink/icons/battfink-50.png
+share/gnome/battfink/icons/battfink-75.png
+share/gnome/battfink/icons/battfink-charge.png
+share/gnome/control-center-2.0/capplets/battfink-preferences.desktop
+share/gnome/omf/battfink/battfink-C.omf
+@exec scrollkeeper-install -q %D/share/gnome/omf/battfink/battfink-C.omf 2>/dev/null || /usr/bin/true
+share/gnome/pixmaps/battfink.png
+share/locale/es/LC_MESSAGES/battfink-0.1.mo
+share/locale/pt/LC_MESSAGES/battfink-0.1.mo
+share/locale/pt_BR/LC_MESSAGES/battfink-0.1.mo
+share/locale/sv/LC_MESSAGES/battfink-0.1.mo
+@dirrm share/gnome/omf/battfink
+@dirrm share/gnome/battfink/icons
+@dirrm share/gnome/battfink/help/C
+@dirrm share/gnome/battfink/help
+@dirrm share/gnome/battfink
+@dirrm etc/gconf/gconf.xml.defaults/schemas/apps/battfink
+@dirrm etc/gconf/gconf.xml.defaults/apps/battfink
+@unexec scrollkeeper-uninstall -q %D/share/gnome/omf/battfink/battfink-C.omf 2>/dev/null || /usr/bin/true
