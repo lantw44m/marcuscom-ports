@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomeutils2
-PORTVERSION=	2.9.3
-PORTREVISION=	1
+PORTVERSION=	2.9.4
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -25,7 +24,7 @@ USE_REINPLACE=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier gnomepanel \
-		libgnomeprintui
+		libgnomeprintui gnomedesktop
 USE_LIBTOOL_VER=15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
