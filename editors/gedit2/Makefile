@@ -23,8 +23,8 @@ USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier libgnomeprintui libgnomeui \
-	   	eel2 gtksourceview
+USE_GNOME=	gnomeprefix gnomehack intlhack lthack gnomehier \
+		libgnomeprintui libgnomeui eel2 gtksourceview
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 PLIST_SUB=	VERSION="2.6"
