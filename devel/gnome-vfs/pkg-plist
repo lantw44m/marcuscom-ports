@@ -10,11 +10,31 @@ etc/gconf/gconf.xml.defaults/desktop/gnome/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/applications/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/applications/component_viewer/%gconf.xml
 etc/gconf/gconf.xml.defaults/desktop/gnome/applications/terminal/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/callto/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/ghelp/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/h323/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/http/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/https/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/info/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/mailto/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/man/%gconf.xml
+etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/trash/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/component_viewer/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/terminal/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/callto/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/ghelp/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/h323/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/http/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/https/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/info/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/mailto/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/man/%gconf.xml
+etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/trash/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/http_proxy/%gconf.xml
 etc/gconf/gconf.xml.defaults/schemas/system/proxy/%gconf.xml
@@ -22,6 +42,7 @@ etc/gconf/gconf.xml.defaults/system/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/http_proxy/%gconf.xml
 etc/gconf/gconf.xml.defaults/system/proxy/%gconf.xml
 etc/gconf/schemas/desktop_default_applications.schemas
+etc/gconf/schemas/desktop_gnome_url_handlers.schemas
 etc/gconf/schemas/system_http_proxy.schemas
 %%CDPARANOIA%%etc/gnome-vfs-2.0/modules/cdda-module.conf
 etc/gnome-vfs-2.0/modules/default-modules.conf
@@ -39,6 +60,7 @@ include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-cancellation.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-context.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-directory.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-drive.h
+include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-enum-types.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-file-info.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-file-size.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-find-directory.h
@@ -241,11 +263,31 @@ share/locale/zh_TW/LC_MESSAGES/gnome-vfs-2.0.mo
 @dirrm etc/gconf/gconf.xml.defaults/schemas/system/proxy
 @dirrm etc/gconf/gconf.xml.defaults/schemas/system/http_proxy
 @dirrm etc/gconf/gconf.xml.defaults/schemas/system
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/trash
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/man
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/mailto
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/info
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/https
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/http
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/h323
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/ghelp
+@dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers/callto
+@unexec /bin/rmdir %D/etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/url-handlers 2>/dev/null || true
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/terminal
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications/component_viewer
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome/applications
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop/gnome
 @dirrm etc/gconf/gconf.xml.defaults/schemas/desktop
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/trash
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/man
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/mailto
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/info
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/https
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/http
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/h323
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/ghelp
+@dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers/callto
+@unexec /bin/rmdir %D/etc/gconf/gconf.xml.defaults/desktop/gnome/url-handlers 2>/dev/null || true
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/terminal
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications/component_viewer
 @dirrm etc/gconf/gconf.xml.defaults/desktop/gnome/applications
