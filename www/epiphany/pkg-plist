@@ -57,6 +57,7 @@ libdata/pkgconfig/epiphany-1.4.pc
 share/gnome/application-registry/epiphany.applications
 share/gnome/applications/bme.desktop
 share/gnome/applications/epiphany.desktop
+@exec update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/epiphany/art/epiphany-bookmarks.png
 share/gnome/epiphany/art/epiphany-download.png
 share/gnome/epiphany/art/epiphany-entry.png
@@ -180,3 +181,4 @@ share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/epiphany/epiphany-C.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/epiphany/epiphany-es.omf 2>/dev/null || /usr/bin/true
 @unexec scrollkeeper-uninstall -q %D/share/gnome/omf/epiphany/epiphany-eu.omf 2>/dev/null || /usr/bin/true
+@unexec update-desktop-database > /dev/null || /usr/bin/true
