@@ -28,6 +28,8 @@ CONFIGURE_ARGS=	--without-gcj-compile \
 GTK_API_VERSION=	2.3
 API_VERSION=		2.5
 
+PKGMESSAGE=		${WRKDIR}/pkg-message
+
 do-install:
 	${MKDIR} ${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/gtk/lib/libgtkjava${GTK_API_VERSION}.so.${PORTVERSION} \
@@ -36,5 +38,13 @@ do-install:
 	${MKDIR} ${JAVAJARDIR}
 	${INSTALL_DATA} ${WRKSRC}/gtk/lib/gtk${GTK_API_VERSION}-${PORTVERSION}.jar \
 		${JAVAJARDIR}
+
+post-install:
+	@${SED} -e 's|%%JAVAJARDIR%%|${JAVAJARDIR}|g ; \
+		s|%%PREFIX%%|${PREFIX}|g ; \
+		s|%%GTK_API_VERSION%%|${GTK_API_VERSION}|g ; \
+		s|%%PORTVERSION%%|${API_VERSION}|g' \
+		 < ${PKGDIR}/pkg-message > ${PKGMESSAGE}
+	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
