@@ -132,7 +132,6 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-send-options.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-shared-folder.eplug
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_LDIF_Importer_%%VERSION%%.server
-libdata/bonobo/servers/GNOME_Evolution_Addressbook_SelectNames_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_VCard_Importer_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Calendar_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Calendar_AlarmNotify_%%VERSION%%.server
