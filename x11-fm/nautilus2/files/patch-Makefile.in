@@ -1,0 +1,10 @@
+--- Makefile.in.orig	Sat Sep 14 16:54:42 2002
++++ Makefile.in	Sat Sep 14 16:55:17 2002
+@@ -161,7 +161,6 @@
+ 	libnautilus-private 	\
+ 	libnautilus-adapter	\
+ 	src 			\
+-	test 			\
+ 	components		\
+ 	po 			\
+ 	data 			\
