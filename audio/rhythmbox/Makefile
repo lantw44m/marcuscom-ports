@@ -37,6 +37,7 @@ OPTIONS=	XINE "Use xine backend instead of GStreamer" off \
 .ifdef (WITH_XINE)
 LIB_DEPENDS+=		xine.9:${PORTSDIR}/multimedia/libxine
 CONFIGURE_ARGS+=	--with-player=xine
+WITH_MONKEYMEDIA=	yes
 .else
 CONFIGURE_ARGS+=	--with-player=gstreamer
 USE_GNOME+=		gstreamerplugins
