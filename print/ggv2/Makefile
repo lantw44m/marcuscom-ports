@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	ggv2
-PORTVERSION=	2.5.99
+PORTVERSION=	2.5.99.1
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.5
@@ -16,23 +16,11 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 ghostscript viewer
 
-.if defined(WITH_GHOSTSCRIPT_AFPL)
-.if ${WITH_GHOSTSCRIPT_AFPL} == yes
-GSPORT?=	print/ghostscript-afpl
-.else
-GSPORT?=	print/ghostscript-gnu
-.endif
-.else
-GSPORT?=	print/ghostscript-gnu
-.endif
-
-BUILD_DEPENDS=	gs:${PORTSDIR}/${GSPORT}
-RUN_DEPENDS=	gs:${PORTSDIR}/${GSPORT}
-
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack lthack intlhack libgnomeui
+USE_GHOSTSCRIPT=yes
 USE_LIBTOOL_VER=13
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
