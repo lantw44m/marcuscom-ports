@@ -43,7 +43,7 @@ _USE_GNOME_ALL+=glib20 atk pango gtk20 linc libidl orbit2 \
 		libgtkhtml gnomedesktop libwnck vte libzvt librsvg2 eel2 \
 		gnomepanel nautilus2 metacity gal2 gnomecontrolcenter2 libgda2 \
 		libgnomedb gtksourceview libgsf pygtk2 pygnome2 gstreamerplugins \
-		gtkhtml3 evolutiondataserver
+		gtkhtml3
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
@@ -356,7 +356,7 @@ metacity_LIB_DEPENDS=	metacity-private.0:${PORTSDIR}/x11-wm/metacity
 metacity_DETECT=	${X11BASE}/libdata/pkgconfig/libmetacity-private.pc
 metacity_USE_GNOME_IMPL=gconf2 glade2
 
-gal2_LIB_DEPENDS=	gal-2.2.0:${PORTSDIR}/x11-toolkits/gal2
+gal2_LIB_DEPENDS=	gal-2.0.6:${PORTSDIR}/x11-toolkits/gal2
 gal2_DETECT=		${X11BASE}/libdata/pkgconfig/gal-2.0.pc
 gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
 
@@ -407,13 +407,9 @@ intlhack_PRE_PATCH=		${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${RE
 				 s|^push @INC, "/.*|push @INC, "${LOCALBASE}/share/intltool";|'
 intlhack_USE_GNOME_IMPL=intltool
 
-gtkhtml3_LIB_DEPENDS=	gtkhtml-3.1.6:${PORTSDIR}/www/gtkhtml3
-gtkhtml3_DETECT=		${X11BASE}/libdata/pkgconfig/libgtkhtml-3.1.pc
+gtkhtml3_LIB_DEPENDS=	gtkhtml-3.0.4:${PORTSDIR}/www/gtkhtml3
+gtkhtml3_DETECT=		${X11BASE}/libdata/pkgconfig/libgtkhtml-3.0.pc
 gtkhtml3_USE_GNOME_IMPL=gal2 gail
-
-evolutiondataserver_LIB_DEPENDS=edataserver.3:${PORTSDIR}/databases/evolution-data-server
-evolutiondataserver_DETECT=		${X11BASE}/libdata/pkgconfig/evolution-data-server-1.0.pc
-evolutiondataserver_USE_GNOME_IMPL=gtkhtml3
 
 # End component definition section
 
@@ -555,14 +551,8 @@ _USE_GNOME+=	${${component}_USE_GNOME_IMPL} ${component}
 _COMP_TEST=	${_USE_GNOME:M${component}}
 .  if ${_COMP_TEST:S/${component}//}!=${_COMP_TEST:S/  / /g}
 BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
-#######################################################
-#
-# *** WARNING: DO NOT MERGE THIS NEXT LINE TO FREEBSD
-#
-.if !defined(NODEPENDS)
 LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
 RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
-.endif
 
 CONFIGURE_ARGS+=${${component}_CONFIGURE_ARGS}
 CONFIGURE_ENV+=	${${component}_CONFIGURE_ENV}
