@@ -811,9 +811,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/aisleriot
 @dirrm share/gnome/gnome-stones/objects
 @dirrm share/gnome/gnome-stones
-@dirrm share/gnome/gnobots2
-@dirrm share/gnome/gnibbles
-@dirrm share/gnome/gnect
 @dirrm share/gnome/blackjack
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/same-gnome
 @dirrm etc/gconf/gconf.xml.defaults/schemas/apps/mahjongg
