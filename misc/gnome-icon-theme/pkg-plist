@@ -2,6 +2,7 @@ share/icons/gnome/12x12/emblems/emblem-symbolic-link.png
 share/icons/gnome/12x12/filesystems/gnome-fs-directory-accept.png
 share/icons/gnome/12x12/filesystems/gnome-fs-directory.png
 share/icons/gnome/16x16/apps/blender.png
+share/icons/gnome/16x16/apps/config-language.png
 share/icons/gnome/16x16/apps/gnome-devel.png
 share/icons/gnome/16x16/apps/panel-notification-area.png
 share/icons/gnome/16x16/apps/panel-window-list.png
@@ -110,7 +111,13 @@ share/icons/gnome/16x16/stock/data/stock_format-scientific.png
 share/icons/gnome/16x16/stock/data/stock_function-autopilot.png
 share/icons/gnome/16x16/stock/data/stock_goal-seek.png
 share/icons/gnome/16x16/stock/data/stock_insert-fields.png
+share/icons/gnome/16x16/stock/data/stock_lock-broken.png
+share/icons/gnome/16x16/stock/data/stock_lock-ok.png
+share/icons/gnome/16x16/stock/data/stock_lock.png
 share/icons/gnome/16x16/stock/data/stock_record-number.png
+share/icons/gnome/16x16/stock/data/stock_signature-bad.png
+share/icons/gnome/16x16/stock/data/stock_signature-ok.png
+share/icons/gnome/16x16/stock/data/stock_signature.png
 share/icons/gnome/16x16/stock/data/stock_sort-ascending.png
 share/icons/gnome/16x16/stock/data/stock_sort-column-ascending.png
 share/icons/gnome/16x16/stock/data/stock_sort-criteria.png
@@ -1032,6 +1039,7 @@ share/icons/gnome/192x192/filesystems/gnome-fs-trash-full.png
 share/icons/gnome/24x24/apps/advanced-directory.png
 share/icons/gnome/24x24/apps/applets-screenshooter.png
 share/icons/gnome/24x24/apps/blender.png
+share/icons/gnome/24x24/apps/config-language.png
 share/icons/gnome/24x24/apps/gnome-amusements.png
 share/icons/gnome/24x24/apps/gnome-devel.png
 share/icons/gnome/24x24/apps/gnome-favorites.png
@@ -1122,7 +1130,13 @@ share/icons/gnome/24x24/stock/data/stock_format-scientific.png
 share/icons/gnome/24x24/stock/data/stock_function-autopilot.png
 share/icons/gnome/24x24/stock/data/stock_goal-seek.png
 share/icons/gnome/24x24/stock/data/stock_insert-fields.png
+share/icons/gnome/24x24/stock/data/stock_lock-broken.png
+share/icons/gnome/24x24/stock/data/stock_lock-ok.png
+share/icons/gnome/24x24/stock/data/stock_lock.png
 share/icons/gnome/24x24/stock/data/stock_record-number.png
+share/icons/gnome/24x24/stock/data/stock_signature-bad.png
+share/icons/gnome/24x24/stock/data/stock_signature-ok.png
+share/icons/gnome/24x24/stock/data/stock_signature.png
 share/icons/gnome/24x24/stock/data/stock_sort-ascending.png
 share/icons/gnome/24x24/stock/data/stock_sort-column-ascending.png
 share/icons/gnome/24x24/stock/data/stock_sort-criteria.png
@@ -1745,6 +1759,12 @@ share/icons/gnome/32x32/stock/chart/stock_chart.png
 share/icons/gnome/32x32/stock/code/stock_script.png
 share/icons/gnome/32x32/stock/data/stock_data-sources-hand.png
 share/icons/gnome/32x32/stock/data/stock_data-sources.png
+share/icons/gnome/32x32/stock/data/stock_lock-broken.png
+share/icons/gnome/32x32/stock/data/stock_lock-ok.png
+share/icons/gnome/32x32/stock/data/stock_lock.png
+share/icons/gnome/32x32/stock/data/stock_signature-bad.png
+share/icons/gnome/32x32/stock/data/stock_signature-ok.png
+share/icons/gnome/32x32/stock/data/stock_signature.png
 share/icons/gnome/32x32/stock/document/stock_new-drawing.png
 share/icons/gnome/32x32/stock/document/stock_new-formula.png
 share/icons/gnome/32x32/stock/document/stock_new-html.png
@@ -1767,7 +1787,6 @@ share/icons/gnome/32x32/stock/generic/stock_example.png
 share/icons/gnome/32x32/stock/generic/stock_folder.png
 share/icons/gnome/32x32/stock/generic/stock_id.png
 share/icons/gnome/32x32/stock/generic/stock_landline-phone.png
-share/icons/gnome/32x32/stock/generic/stock_language.png
 share/icons/gnome/32x32/stock/generic/stock_new-24h-appointment.png
 share/icons/gnome/32x32/stock/generic/stock_new-appointment.png
 share/icons/gnome/32x32/stock/generic/stock_new-meeting.png
@@ -1883,6 +1902,7 @@ share/icons/gnome/48x48/apps/iagno.png
 share/icons/gnome/48x48/apps/keyboard.png
 share/icons/gnome/48x48/apps/logviewer.png
 share/icons/gnome/48x48/apps/network-config.png
+share/icons/gnome/48x48/apps/panel-notification-area.png
 share/icons/gnome/48x48/apps/panel-window-list.png
 share/icons/gnome/48x48/apps/panel-window-menu.png
 share/icons/gnome/48x48/apps/postscript-viewer.png
@@ -2157,6 +2177,12 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-x-directory-smb-workgroup.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-x-font-afm.png
 share/icons/gnome/48x48/mimetypes/gnome-package.png
 share/icons/gnome/48x48/stock/code/stock_script.png
+share/icons/gnome/48x48/stock/data/stock_lock-broken.png
+share/icons/gnome/48x48/stock/data/stock_lock-ok.png
+share/icons/gnome/48x48/stock/data/stock_lock.png
+share/icons/gnome/48x48/stock/data/stock_signature-bad.png
+share/icons/gnome/48x48/stock/data/stock_signature-ok.png
+share/icons/gnome/48x48/stock/data/stock_signature.png
 share/icons/gnome/48x48/stock/document/stock_certificate.png
 share/icons/gnome/48x48/stock/document/stock_new-drawing.png
 share/icons/gnome/48x48/stock/document/stock_new-formula.png
@@ -2250,6 +2276,7 @@ share/icons/gnome/index.theme
 @dirrm share/icons/gnome/48x48/stock/io
 @dirrm share/icons/gnome/48x48/stock/generic
 @dirrm share/icons/gnome/48x48/stock/document
+@dirrm share/icons/gnome/48x48/stock/data
 @dirrm share/icons/gnome/48x48/stock/code
 @dirrm share/icons/gnome/48x48/stock
 @dirrm share/icons/gnome/48x48/mimetypes
