@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome2-fifth-toe
 PORTVERSION=	2.10.0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -35,6 +36,7 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		jamboree:${PORTSDIR}/audio/jamboree \
 		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data \
 		nautilus-sendto:${PORTSDIR}/deskutils/nautilus-sendto \
+		evince:${PORTSDIR}/graphics/evince \
 		goobox:${PORTSDIR}/audio/goobox
 
 .include <bsd.port.pre.mk>
