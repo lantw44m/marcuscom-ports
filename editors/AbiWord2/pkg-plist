@@ -48,6 +48,7 @@ share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/de-CH.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/de-DE.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/el-GR.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/en-AU.strings
+share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/en-CA.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/en-GB.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/en-IE.strings
 share/AbiSuite-%%ABIVERSION%%/AbiWord/strings/es-ES.strings
