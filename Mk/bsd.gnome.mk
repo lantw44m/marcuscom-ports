@@ -57,8 +57,8 @@ gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLA
 lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" | ${XARGS} ${REINPLACE_CMD} -e \
 				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
 
-gnomehier_RUN_DEPENDS=	${X11BASE}/share/gnome/.keep_me:${PORTSDIR}/misc/gnomehier
 gnomehier_DETECT=	${X11BASE}/share/gnome/.keep_me
+gnomehier_RUN_DEPENDS=	${gnomehier_DETECT}:${PORTSDIR}/misc/gnomehier
 
 GNOME_HTML_DIR?=	${PREFIX}/share/doc
 gnomeprefix_CONFIGURE_ENV=GTKDOC="false"
@@ -71,8 +71,8 @@ gnomeprefix_USE_GNOME_IMPL=gnomehier
 
 gnometarget_CONFIGURE_TARGET=--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
 
-gnomeaudio_RUN_DEPENDS=	${X11BASE}/share/gnome/sounds/login.wav:${PORTSDIR}/audio/gnomeaudio
 gnomeaudio_DETECT=	${X11BASE}/share/gnome/sounds/login.wav
+gnomeaudio_RUN_DEPENDS=	${gnomeaudio_DETECT}:${PORTSDIR}/audio/gnomeaudio
 
 ESD_CONFIG?=		${LOCALBASE}/bin/esd-config
 esound_LIB_DEPENDS=	esd.2:${PORTSDIR}/audio/esound
@@ -143,9 +143,9 @@ oaf_MAKE_ENV=		OAF_CONFIG="${OAF_CONFIG}"
 oaf_DETECT=		${OAF_CONFIG}
 oaf_USE_GNOME_IMPL=	glib12 orbit libxml
 
-gnomemimedata_BUILD_DEPENDS=${X11BASE}/libdata/pkgconfig/gnome-mime-data-2.0.pc:${PORTSDIR}/misc/gnomemimedata
-gnomemimedata_RUN_DEPENDS=${X11BASE}/libdata/pkgconfig/gnome-mime-data-2.0.pc:${PORTSDIR}/misc/gnomemimedata
 gnomemimedata_DETECT=	${X11BASE}/libdata/pkgconfig/gnome-mime-data-2.0.pc
+gnomemimedata_BUILD_DEPENDS=${gnomemimedata_DETECT}:${PORTSDIR}/misc/gnomemimedata
+gnomemimedata_RUN_DEPENDS=${gnomemimedata_DETECT}:${PORTSDIR}/misc/gnomemimedata
 gnomemimedata_USE_GNOME_IMPL=gnomehier pkgconfig
 
 GCONF_CONFIG?=		${X11BASE}/bin/gconf-config
@@ -207,14 +207,14 @@ gtkhtml_LIB_DEPENDS=	gtkhtml-1.1.3:${PORTSDIR}/www/gtkhtml
 gtkhtml_DETECT=		${X11BASE}/etc/gtkhtmlConf.sh
 gtkhtml_USE_GNOME_IMPL=	glibwww gal libghttp libcapplet
 
-pygtk_BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-1.2/gtk.py:${PORTSDIR}/x11-toolkits/py-gtk
-pygtk_RUN_DEPENDS=		${PYTHON_SITELIBDIR}/gtk-1.2/gtk.py:${PORTSDIR}/x11-toolkits/py-gtk
 pygtk_DETECT=			${PYTHON_SITELIBDIR}/gtk-1.2/gtk.py
+pygtk_BUILD_DEPENDS=	${pygtk_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk
+pygtk_RUN_DEPENDS=		${pygtk_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk
 pygtk_USE_GNOME_IMPL=	gnomelibs gdkpixbuf libglade
 
-pygnome_BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-1.2/gnome/__init__.py:${PORTSDIR}/x11-toolkits/py-gnome
-pygnome_RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-1.2/gnome/__init__.py:${PORTSDIR}/x11-toolkits/py-gnome
 pygnome_DETECT=	${PYTHON_SITELIBDIR}/gtk-1.2/gnome/__init__.py
+pygnome_BUILD_DEPENDS=	${pygnome_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome
+pygnome_RUN_DEPENDS=	${pygnome_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome
 pygnome_USE_GNOME_IMPL=	gtkhtml pygtk
 
 glib20_LIB_DEPENDS=	glib-2.0.301:${PORTSDIR}/devel/glib20
@@ -279,7 +279,7 @@ libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2
 
 libartlgpl2_LIB_DEPENDS=	art_lgpl_2.5:${PORTSDIR}/graphics/libart_lgpl2
 libartlgpl2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libart-2.0.pc
-libartlgpl1_USE_GNOME_IMPL=	pkgconfig
+libartlgpl2_USE_GNOME_IMPL=	pkgconfig
 
 libgnomeprint_LIB_DEPENDS=	gnomeprint-2-2.1:${PORTSDIR}/print/libgnomeprint
 libgnomeprint_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomeprint-2.2.pc
@@ -305,8 +305,8 @@ atspi_LIB_DEPENDS=	spi.9:${PORTSDIR}/x11-toolkits/at-spi
 atspi_DETECT=		${X11BASE}/libdata/pkgconfig/cspi-1.0.pc
 atspi_USE_GNOME_IMPL=	gail libbonobo
 
-libgailgnome_RUN_DEPENDS=	${X11BASE}/lib/gtk-2.0/modules/libgail-gnome.so:${PORTSDIR}/x11-toolkits/libgail-gnome
 libgailgnome_DETECT=		${X11BASE}/libdata/pkgconfig/libgail-gnome.pc
+libgailgnome_RUN_DEPENDS=	${libgailgnome_DETECT}:${PORTSDIR}/x11-toolkits/libgail-gnome
 libgailgnome_USE_GNOME_IMPL=	libgnomeui atspi
 
 libgtkhtml_LIB_DEPENDS=	gtkhtml-2.0:${PORTSDIR}/www/libgtkhtml
@@ -372,22 +372,22 @@ gtksourceview_LIB_DEPENDS=	gtksourceview-1.0.0:${PORTSDIR}/x11-toolkits/gtksourc
 gtksourceview_DETECT=	${X11BASE}/libdata/pkgconfig/gtksourceview-1.0.pc
 gtksourceview_USE_GNOME_IMPL=libgnome libgnomeprintui
 
-pkgconfig_BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkgconfig
 pkgconfig_DETECT=			${LOCALBASE}/bin/pkg-config
+pkgconfig_BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkgconfig
 pkgconfig_RUN_DEPENDS=		pkg-config:${PORTSDIR}/devel/pkgconfig
 
 libgsf_LIB_DEPENDS=			gsf-1.9:${PORTSDIR}/devel/libgsf
 libgsf_DETECT=				${LOCALBASE}/libdata/pkgconfig/libgsf-gnome-1.pc
 libgsf_USE_GNOME_IMPL=		gnomevfs2 libbonobo
 
-pygtk2_BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gtk/__init__.py:${PORTSDIR}/x11-toolkits/py-gtk2
-pygtk2_RUN_DEPENDS=		${PYTHON_SITELIBDIR}/gtk-2.0/gtk/__init__.py:${PORTSDIR}/x11-toolkits/py-gtk2
 pygtk2_DETECT=			${PYTHON_SITELIBDIR}/gtk-2.0/gtk/__init__.py
+pygtk2_BUILD_DEPENDS=	${pygtk2_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk2
+pygtk2_RUN_DEPENDS=		${pygtk2_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk2
 pygtk2_USE_GNOME_IMPL=	libglade2
 
-pygnome2_BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py:${PORTSDIR}/x11-toolkits/py-gnome2
-pygnome2_RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py
+pygnome2_BUILD_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
+pygnome2_RUN_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_USE_GNOME_IMPL=	libgnomeprintui libgtkhtml gnomepanel libzvt nautilus2 pygtk2
 
 gstreamerplugins_LIB_DEPENDS=	gstplay-0.7.1:${PORTSDIR}/multimedia/gstreamer-plugins \
