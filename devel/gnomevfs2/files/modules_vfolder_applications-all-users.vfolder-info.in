@@ -1,5 +1,5 @@
---- modules/vfolder/applications-all-users.vfolder-info.in.orig	Tue Feb 10 19:49:19 2004
-+++ modules/vfolder/applications-all-users.vfolder-info.in	Tue Feb 10 19:59:22 2004
+--- modules/vfolder/applications-all-users.vfolder-info.in.orig	Fri Oct 17 10:11:22 2003
++++ modules/vfolder/applications-all-users.vfolder-info.in	Thu Feb 12 15:15:40 2004
 @@ -19,7 +19,14 @@
    <MergeDir>/usr/share/gnome/apps/</MergeDir>
  
@@ -163,7 +163,7 @@
            <Keyword>Application</Keyword>
            <Not>
              <Keyword>Settings</Keyword>
-@@ -204,6 +273,117 @@
+@@ -204,6 +273,118 @@
        </Query>
        <DontShowIfEmpty/>
      </Folder>
@@ -278,6 +278,7 @@
 +        </Query>
 +        <DontShowIfEmpty/>
 +      </Folder>
++      <DontShowIfEmpty/>
 +    </Folder> <!-- KDE -->
 +
    </Folder>
