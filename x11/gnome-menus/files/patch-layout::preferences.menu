@@ -1,0 +1,28 @@
+--- layout/preferences.menu.orig	Sun Feb 27 02:57:23 2005
++++ layout/preferences.menu	Sun Feb 27 02:57:40 2005
+@@ -15,6 +15,12 @@
+   <!-- Stuff in the toplevel -->
+   <Include>
+     <And>
++      <Not>
++        <Or>
++          <Category>Qt</Category>
++          <Category>KDE</Category>
++        </Or>
++      </Not>
+       <Category>Settings</Category>
+       <Not>
+         <Or>
+@@ -36,6 +42,12 @@
+     <Directory>Settings-Accessibility.directory</Directory>
+     <Include>
+       <And>
++        <Not>
++          <Or>
++            <Category>Qt</Category>
++            <Category>KDE</Category>
++          </Or>
++        </Not>
+         <Category>Settings</Category>
+         <Category>Accessibility</Category>
+       </And>

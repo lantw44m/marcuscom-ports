@@ -15,6 +15,7 @@ share/gnome/desktop-directories/Edutainment.directory
 share/gnome/desktop-directories/Games.directory
 share/gnome/desktop-directories/Graphics.directory
 share/gnome/desktop-directories/Internet.directory
+share/gnome/desktop-directories/KDE.directory
 share/gnome/desktop-directories/Multimedia.directory
 share/gnome/desktop-directories/Office.directory
 share/gnome/desktop-directories/Other.directory

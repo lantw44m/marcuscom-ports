@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome-menus
 PORTVERSION=	2.9.90
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.9
@@ -30,5 +30,11 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/gnome|${X11BASE}/share/gnome|g' \
 		${WRKSRC}/layout/applications.menu \
 		${WRKSRC}/layout/settings.menu
+	@${SED} -e 's|/usr/local|${LOCALBASE}|g' \
+		< ${FILESDIR}/KDE.directory > ${WRKSRC}/KDE.directory
+
+post-install:
+	@${MKDIR} ${PREFIX}/share/gnome/desktop-directories
+	@${INSTALL_DATA} ${WRKSRC}/KDE.directory ${PREFIX}/share/gnome/desktop-directories
 
 .include <bsd.port.mk>

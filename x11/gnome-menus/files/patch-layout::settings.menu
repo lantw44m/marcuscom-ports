@@ -1,0 +1,15 @@
+--- layout/settings.menu.orig	Sun Feb 27 03:02:51 2005
++++ layout/settings.menu	Sun Feb 27 03:04:13 2005
+@@ -30,6 +30,12 @@
+     <Directory>System-Settings.directory</Directory>
+     <Include>
+       <And>
++        <Not>
++          <Or>
++            <Category>Qt</Category>
++            <Category>KDE</Category>
++          </Or>
++        </Not>
+         <Category>Settings</Category>
+         <Category>System</Category>
+       </And>
