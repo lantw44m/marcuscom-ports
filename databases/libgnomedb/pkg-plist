@@ -37,8 +37,6 @@ lib/libgnomedb-2.a
 lib/libgnomedb-2.so
 lib/libgnomedb-2.so.4
 libdata/pkgconfig/libgnomedb.pc
-libdata/bonobo/servers/GNOME_Database_Components.server
-libdata/bonobo/servers/GNOME_Database_Monikers.server
 %%DOCSDIR%%/fdl-section1.html
 %%DOCSDIR%%/fdl-section10.html
 %%DOCSDIR%%/fdl-section2.html
