@@ -7,7 +7,7 @@
 
 PORTNAME=	rhythmbox
 PORTVERSION=	0.6.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.6
@@ -44,7 +44,7 @@ WITH_VORBIS=	yes
 .endif
 
 .ifdef (WITH_VORBIS)
-LIB_DEPENDS+=		vorbis.2:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS+=		vorbis.3:${PORTSDIR}/audio/libvorbis
 .else
 CONFIGURE_ARGS+=	--disable-vorbis --disable-vorbistest
 .endif
