@@ -7,7 +7,7 @@
 
 PORTNAME=	evince
 PORTVERSION=	0.1.1
-CATEGORIES=	graphics gnome
+CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.1
 
