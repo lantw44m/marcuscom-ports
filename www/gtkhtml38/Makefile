@@ -7,6 +7,7 @@
 
 PORTNAME=	gtkhtml3
 PORTVERSION=	3.1.20
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/3.1
@@ -16,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Lightweight HTML rendering/printing/editing engine
 
-LIB_DEPENDS=	soup-2.2.6:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	soup-2.2.7:${PORTSDIR}/devel/libsoup
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes

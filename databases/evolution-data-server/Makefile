@@ -7,6 +7,7 @@
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	0.0.98
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.0
@@ -15,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
-LIB_DEPENDS=	soup-2.2.6:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	soup-2.2.7:${PORTSDIR}/devel/libsoup
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
