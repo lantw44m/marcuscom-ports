@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.3.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -24,6 +24,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
 		gnect:${PORTSDIR}/games/gnomegames2 \
 		gedit:${PORTSDIR}/editors/gedit2 \
+		${X11BASE}/lib/gedit-2/plugins/ascii.gedit-plugin:${PORTSDIR}/editors/gedit-plugins \
 		gnome-terminal:${PORTSDIR}/x11/gnometerminal \
 		gnome-session:${PORTSDIR}/x11/gnomesession \
 		bug-buddy:${PORTSDIR}/devel/bugbuddy2 \
@@ -45,13 +46,17 @@ RUN_DEPENDS=	${X11BASE}/libexec/cdplayer_applet2:${PORTSDIR}/x11/gnomeapplets2 \
 		nautilus-cd-burner:${PORTSDIR}/sysutils/nautilus-cd-burner \
 		gnome-theme-thumbnailer:${PORTSDIR}/x11/themus \
 		gnome-font-viewer:${PORTSDIR}/x11-fonts/fontilus \
-		magnifier:${PORTSDIR}/x11/gnomemag \
 		gcalctool:${PORTSDIR}/math/gcalctool \
 		gucharmap:${PORTSDIR}/misc/gucharmap \
 		zenity:${PORTSDIR}/x11/zenity \
 		battfink:${PORTSDIR}/sysutils/battfink \
 		gst-thumbnail:${PORTSDIR}/multimedia/nautilus-media \
-		${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera
+		${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
+		gnopernicus:${PORTSDIR}/x11/gnopernicus \
+		gnomemeeting:${PORTSDIR}/net/gnomemeeting2 \
+		seahorse:${PORTSDIR}/security/seahorse \
+		totem:${PORTSDIR}/multimedia/totem \
+		epiphany:${PORTSDIR}/www/epiphany
 
 NO_BUILD=	yes
 

@@ -7,7 +7,7 @@
 
 PORTNAME=	gnome2-fifth-toe
 PORTVERSION=	2.3.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -31,9 +31,6 @@ RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric2 \
 		gob2:${PORTSDIR}/devel/gob2 \
 		gtetrinet:${PORTSDIR}/games/gtetrinet \
 		${X11BASE}/lib/gaim/docklet.so:${PORTSDIR}/net/gaim \
-		gnomemeeting:${PORTSDIR}/net/gnomemeeting2 \
-		seahorse:${PORTSDIR}/security/seahorse \
-		totem:${PORTSDIR}/multimedia/totem \
 		sawfish:${PORTSDIR}/x11-wm/sawfish2 \
 		dia:${PORTSDIR}/graphics/dia \
 		mrproject:${PORTSDIR}/deskutils/mrproject \
