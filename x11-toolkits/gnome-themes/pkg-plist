@@ -661,7 +661,9 @@ share/themes/HighContrastLargePrint/index.theme
 share/themes/HighContrastLargePrint/pixmaps/double-click-maybe.png
 share/themes/HighContrastLargePrint/pixmaps/double-click-off.png
 share/themes/HighContrastLargePrint/pixmaps/double-click-on.png
+share/themes/HighContrastLargePrint/pixmaps/media-backward.png
 share/themes/HighContrastLargePrint/pixmaps/media-eject.png
+share/themes/HighContrastLargePrint/pixmaps/media-forward.png
 share/themes/HighContrastLargePrint/pixmaps/media-next.png
 share/themes/HighContrastLargePrint/pixmaps/media-pause.png
 share/themes/HighContrastLargePrint/pixmaps/media-play.png
@@ -673,6 +675,7 @@ share/themes/HighContrastLargePrint/pixmaps/printer-inkjet.png
 share/themes/HighContrastLargePrint/pixmaps/printer-personal-laser.png
 share/themes/HighContrastLargePrint/pixmaps/printer-workgroup-laser.png
 share/themes/HighContrastLargePrint/pixmaps/stock_about.png
+share/themes/HighContrastLargePrint/pixmaps/stock_accessories.png
 share/themes/HighContrastLargePrint/pixmaps/stock_add.png
 share/themes/HighContrastLargePrint/pixmaps/stock_amusements.png
 share/themes/HighContrastLargePrint/pixmaps/stock_apply.png
@@ -787,7 +790,9 @@ share/themes/HighContrastLargePrintInverse/index.theme
 share/themes/HighContrastLargePrintInverse/pixmaps/double-click-maybe.png
 share/themes/HighContrastLargePrintInverse/pixmaps/double-click-off.png
 share/themes/HighContrastLargePrintInverse/pixmaps/double-click-on.png
+share/themes/HighContrastLargePrintInverse/pixmaps/media-backward.png
 share/themes/HighContrastLargePrintInverse/pixmaps/media-eject.png
+share/themes/HighContrastLargePrintInverse/pixmaps/media-forward.png
 share/themes/HighContrastLargePrintInverse/pixmaps/media-next.png
 share/themes/HighContrastLargePrintInverse/pixmaps/media-pause.png
 share/themes/HighContrastLargePrintInverse/pixmaps/media-play.png
@@ -799,6 +804,7 @@ share/themes/HighContrastLargePrintInverse/pixmaps/printer-inkjet.png
 share/themes/HighContrastLargePrintInverse/pixmaps/printer-personal-laser.png
 share/themes/HighContrastLargePrintInverse/pixmaps/printer-workgroup-laser.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_about.png
+share/themes/HighContrastLargePrintInverse/pixmaps/stock_accessories.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_add.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_amusements.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_apply.png
@@ -913,7 +919,9 @@ share/themes/LargePrint/index.theme
 share/themes/LargePrint/pixmaps/double-click-maybe.png
 share/themes/LargePrint/pixmaps/double-click-off.png
 share/themes/LargePrint/pixmaps/double-click-on.png
+share/themes/LargePrint/pixmaps/media-backward.png
 share/themes/LargePrint/pixmaps/media-eject.png
+share/themes/LargePrint/pixmaps/media-forward.png
 share/themes/LargePrint/pixmaps/media-next.png
 share/themes/LargePrint/pixmaps/media-pause.png
 share/themes/LargePrint/pixmaps/media-play.png
@@ -925,6 +933,7 @@ share/themes/LargePrint/pixmaps/printer-inkjet.png
 share/themes/LargePrint/pixmaps/printer-personal-laser.png
 share/themes/LargePrint/pixmaps/printer-workgroup-laser.png
 share/themes/LargePrint/pixmaps/stock_about.png
+share/themes/LargePrint/pixmaps/stock_accessories.png
 share/themes/LargePrint/pixmaps/stock_add.png
 share/themes/LargePrint/pixmaps/stock_amusements.png
 share/themes/LargePrint/pixmaps/stock_apply.png
@@ -1041,7 +1050,9 @@ share/themes/LowContrastLargePrint/index.theme
 share/themes/LowContrastLargePrint/pixmaps/double-click-maybe.png
 share/themes/LowContrastLargePrint/pixmaps/double-click-off.png
 share/themes/LowContrastLargePrint/pixmaps/double-click-on.png
+share/themes/LowContrastLargePrint/pixmaps/media-backward.png
 share/themes/LowContrastLargePrint/pixmaps/media-eject.png
+share/themes/LowContrastLargePrint/pixmaps/media-forward.png
 share/themes/LowContrastLargePrint/pixmaps/media-next.png
 share/themes/LowContrastLargePrint/pixmaps/media-pause.png
 share/themes/LowContrastLargePrint/pixmaps/media-play.png
@@ -1053,6 +1064,7 @@ share/themes/LowContrastLargePrint/pixmaps/printer-inkjet.png
 share/themes/LowContrastLargePrint/pixmaps/printer-personal-laser.png
 share/themes/LowContrastLargePrint/pixmaps/printer-workgroup-laser.png
 share/themes/LowContrastLargePrint/pixmaps/stock_about.png
+share/themes/LowContrastLargePrint/pixmaps/stock_accessories.png
 share/themes/LowContrastLargePrint/pixmaps/stock_add.png
 share/themes/LowContrastLargePrint/pixmaps/stock_amusements.png
 share/themes/LowContrastLargePrint/pixmaps/stock_apply.png
