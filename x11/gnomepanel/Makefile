@@ -22,6 +22,7 @@ USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack gnomedesktop \
 		libwnck
+WANT_GNOME=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
@@ -37,9 +38,18 @@ GCONF_SCHEMAS=	clock.schemas fish.schemas gnome-panel-screenshot.schemas \
 		panel-toplevel.schemas window-list.schemas \
 		workspace-switcher.schemas
 
+.include <bsd.port.pre.mk>
+
+.if ${HAVE_GNOME:Mevolutiondataserver}!=""
+USE_GNOME+=	evolutiondataserver
+CONFIGURE_ARGS+=--enable-eds
+.else
+CONFIGURE_ARGS+=--disable-eds
+.endif
+
 post-patch:
 .for po in da.po it.po zh_TW.po
 	@${REINPLACE_CMD} -e 's|%-|%|g' ${WRKSRC}/po/${po}
 .endfor
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
