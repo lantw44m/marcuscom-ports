@@ -2,7 +2,7 @@
 # Date created:        			07 July 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/gnomeuserdocs2/Makefile,v 1.22 2004/04/05 03:11:27 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomeuserdocs2
