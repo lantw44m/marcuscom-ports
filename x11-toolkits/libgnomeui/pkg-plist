@@ -176,6 +176,7 @@ share/locale/wa/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/yi/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomeui-2.0.mo
+@dirrm %%DOCSDIR%%
 @dirrm include/libgnomeui-2.0/libgnomeui
 @dirrm include/libgnomeui-2.0
 @dirrm lib/gtk-2.0/%%GTK_VERSION%%/filesystems
