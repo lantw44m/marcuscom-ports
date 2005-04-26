@@ -1,0 +1,41 @@
+--- configure.orig	Wed Sep 29 14:06:43 2004
++++ configure	Wed Sep 29 14:24:28 2004
+@@ -24206,6 +24206,7 @@
+ 		#include <sys/socket.h>
+ 		#include <netinet/in.h>
+ 		#include <netdb.h>
++		#include <stdio.h>
+ 
+ 
+ int
+@@ -25772,7 +25773,7 @@
+ 	LDFLAGS_save="$LDFLAGS"
+ 
+ 	mitlibs="-lkrb5 -lk5crypto -lcom_err -lgssapi_krb5"
+-	heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi"
++	heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi -lcrypt"
+ 	echo "$as_me:$LINENO: checking for Kerberos 5" >&5
+ echo $ECHO_N "checking for Kerberos 5... $ECHO_C" >&6
+ if test "${ac_cv_lib_kerberos5+set}" = set; then
+@@ -26928,10 +26929,10 @@
+ Example: --with-nspr-libs=/usr/lib" >&2;}
+    { (exit 1); exit 1; }; }
+        				else
+-	       				nsprlibs="-ldl $with_nspr_libs/libplc4.a $with_nspr_libs/libplds4.a $with_nspr_libs/libnspr4.a $PTHREAD_LIB"
++				    nsprlibs="$with_nspr_libs/libplc4.a $with_nspr_libs/libplds4.a $with_nspr_libs/libnspr4.a $PTHREAD_LIB"
+ 				fi
+ 			else
+-				nsprlibs="-ldl -lplc4 -lplds4 -lnspr4 $PTHREAD_LIB"
++			    nsprlibs="-lplc4 -lplds4 -lnspr4 $PTHREAD_LIB"
+ 			fi
+ 
+ 			echo "$as_me:$LINENO: checking for Mozilla nspr libraries" >&5
+@@ -30807,7 +30808,7 @@
+ idldir="$datadir/idl/evolution-$BASE_VERSION"
+ 
+ 
+-serverdir="$libdir/bonobo/servers"
++serverdir="$prefix/libdata/bonobo/servers"
+ 
+ 
+ evolutionuidir="$privdatadir/ui"
