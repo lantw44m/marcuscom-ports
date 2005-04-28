@@ -7,6 +7,7 @@
 
 PORTNAME=	evolution
 PORTVERSION=	2.3.1
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -110,6 +111,9 @@ post-patch:
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}| ; \
 		s|%%EVO_VERSION%%|${EVO_VERSION}|' \
 		${FILESDIR}/evolibs.sh > ${WRKDIR}/evolibs.sh
+	@${REINPLACE_CMD} -e "s|gal-2.4|gal-2.6|g" \
+		${WRKSRC}/evolution-shell.pc.in \
+		${WRKSRC}/evolution-plugin.pc.in
 
 post-install:
 	@${LN} -sf ${PREFIX}/bin/evolution-${EVO_VERSION} \
