@@ -14,7 +14,6 @@ PATH=/bin:/usr/bin:/usr/local/bin
 
 MOZDIR=%%MOZDIR%%
 REGXPCOM=${MOZDIR}/regxpcom
-REGCHROME=${MOZDIR}/regchrome
 SUNBIRD=${MOZDIR}/sunbird-bin
 
 echo "===> Building Chrome's registry..."
@@ -26,7 +25,6 @@ rm -rf ${MOZDIR}/extensions
 
 cd ${MOZDIR} || exit 1
 ./run-mozilla.sh ${REGXPCOM} || true
-./run-mozilla.sh ${REGCHROME} || true
 ./run-mozilla.sh ${SUNBIRD} -register > /dev/null 2>&1
 
 exit 0

@@ -27,7 +27,7 @@ USE_REINPLACE=	yes
 HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gtk20 libidl gnomehier
+USE_GNOME=	gtk20 libidl
 USE_ICONV=	yes
 USE_PERL5_BUILD=yes
 USE_X_PREFIX=	yes
@@ -38,8 +38,7 @@ PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 
 SUNBIRD=	${PORTNAME}
 
-SUNBIRD_ICON=	sunbird.xpm
-SUNBIRD_ICON_SRC=	${WRKSRC}/calendar/sunbird/app/default.xpm
+SUNBIRD_ICON=	${PREFIX}/lib/sunbird/icons/default.xpm
 
 PKGCONFIG_FILES=sunbird-gtkmozembed sunbird-js sunbird-xpcom \
 		sunbird-nspr sunbird-nss sunbird-plugin
@@ -96,9 +95,6 @@ post-extract::
 		<${FILESDIR}/mozconfig.in >${WRKSRC}/.mozconfig
 
 post-patch:
-# Stupid hack 
-	@${ECHO_CMD} "LDFLAGS += -L${LOCALBASE}/lib" \
-		>> ${WRKSRC}/toolkit/components/gnome/Makefile.in
 	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${SUNBIRD}|g ; \
 		s|%%PREFIX%%|${PREFIX}|g ; \
 		s|%%X11BASE%%|${X11BASE}|g' \
@@ -134,8 +130,8 @@ pre-install:
 	@${RM} -rf ${FAKEDIR} ${PLIST}
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		Makefile ${MAKE_ARGS} install
-	${ECHO_CMD} 'share/gnome/pixmaps/${SUNBIRD_ICON}' >> ${PLIST}
-	${ECHO_CMD} 'share/gnome/applications/sunbird.desktop' >> ${PLIST}
+	${ECHO_CMD} 'share/applications/sunbird.desktop' >> ${PLIST}
+	${ECHO_CMD} '@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}' >> ${PLIST}
 	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
 		${FAKEDIR}/bin/sunbird \
 		${FAKEDIR}/bin/sunbird-config
@@ -173,12 +169,12 @@ do-install:
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/include/${SUNBIRD}
 	cd ${FAKEDIR}/lib/${SUNBIRD} && ${FIND} . | \
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${SUNBIRD}
+	${MKDIR} ${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKDIR}/sunbird.desktop ${PREFIX}/share/applications
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
-	${INSTALL_DATA} ${SUNBIRD_ICON_SRC} ${PREFIX}/share/gnome/pixmaps/${SUNBIRD_ICON}
-	${INSTALL_DATA} ${WRKDIR}/sunbird.desktop ${PREFIX}/share/gnome/applications
 
 .include <bsd.port.post.mk>
