@@ -458,7 +458,7 @@ nautiluscdburner_LIB_DEPENDS=nautilus-burn.1:${PORTSDIR}/sysutils/nautilus-cd-bu
 nautiluscdburner_DETECT=	${X11BASE}/libdata/pkgconfig/libnautilus-burn.pc
 nautiluscdburner_USE_GNOME_IMPL=nautilus2
 
-gnomemenus_LIB_DEPENDS=		gnome-menu.0:${PORTSDIR}/x11/gnome-menus
+gnomemenus_LIB_DEPENDS=		gnome-menu.2:${PORTSDIR}/x11/gnome-menus
 gnomemenus_DETECT=			${X11BASE}/libdata/pkgconfig/libgnome-menu.pc
 gnomemenus_USE_GNOME_IMPL=	gnomevfs2
 
