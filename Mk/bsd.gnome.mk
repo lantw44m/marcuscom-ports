@@ -454,7 +454,7 @@ desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-f
 desktopfileutils_DETECT=	${LOCALBASE}/bin/update-desktop-database
 desktopfileutils_USE_GNOME_IMPL=glib20
 
-nautiluscdburner_LIB_DEPENDS=nautilus-burn.1:${PORTSDIR}/sysutils/nautilus-cd-burner
+nautiluscdburner_LIB_DEPENDS=nautilus-burn.2:${PORTSDIR}/sysutils/nautilus-cd-burner
 nautiluscdburner_DETECT=	${X11BASE}/libdata/pkgconfig/libnautilus-burn.pc
 nautiluscdburner_USE_GNOME_IMPL=nautilus2
 
