@@ -27,6 +27,26 @@ include/pygda-1.2/pygdavalue_conversions.h
 %%PYTHON_SITELIBDIR%%/gtk-2.0/wnck.so
 libdata/pkgconfig/gnome-python-extras-2.0.pc
 libdata/pkgconfig/pygda-1.2.pc
+%%PORTDOCS%%%%DOCSDIR%%/pygtkmozembed/class-gtkmozembed.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtkmozembed/gtkmozembed-class-reference.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtkmozembed/index.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtkmozembed/pygtkmozembed.devhelp
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcebuffer.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcelanguage.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcelanguagesmanager.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcemarker.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcestylescheme.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcetag.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcetagstyle.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcetagtable.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourceview.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/gtksourcesview-class-reference.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/index.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/pygtksourceview.devhelp
+%%PORTDOCS%%%%DOCSDIR%%/pygtkspell/class-gtkspell.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtkspell/gtkspell-class-reference.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtkspell/index.html
+%%PORTDOCS%%%%DOCSDIR%%/pygtkspell/pygtkspell.devhelp
 %%PORTDOCS%%share/examples/py-gnome/applet/GNOME_PythonAppletSample.server
 %%PORTDOCS%%share/examples/py-gnome/applet/README
 %%PORTDOCS%%share/examples/py-gnome/applet/applet.py
@@ -52,6 +72,7 @@ libdata/pkgconfig/pygda-1.2.pc
 %%PORTDOCS%%share/examples/py-gnome/gnomeprint/test-print.py
 %%PORTDOCS%%share/examples/py-gnome/gtkhtml2/simple-browser.py
 %%PORTDOCS%%share/examples/py-gnome/gtksourceview/test-widget.py
+%%PORTDOCS%%share/examples/py-gnome/gtkspell/gtkspell.py
 %%PORTDOCS%%share/examples/py-gnome/gtkspell/test.py
 %%PORTDOCS%%share/examples/py-gnome/nautilusburn/blank_disc.py
 %%PORTDOCS%%share/examples/py-gnome/nautilusburn/drive_selection.py
@@ -75,6 +96,10 @@ share/pygtk/2.0/defs/wnck.defs
 %%PORTDOCS%%@dirrm share/examples/py-gnome/egg/recent
 %%PORTDOCS%%@dirrm share/examples/py-gnome/egg
 %%PORTDOCS%%@dirrm share/examples/py-gnome/applet
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/pygtkspell
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/pygtksourceview
+%%PORTDOCS%%@dirrm %%DOCSDIR%%/pygtkmozembed
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/totem
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/egg

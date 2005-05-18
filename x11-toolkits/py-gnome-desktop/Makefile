@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome
-PORTVERSION=	2.11.0
+PORTVERSION=	2.11.2
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -58,6 +58,11 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 EG_SRC_DIR=	${WRKSRC}/examples
 EG_DST_DIR=	${PREFIX}/share/examples/py-gnome
+.if !defined(NOPORTDOCS)
+DOCSDIR=	${PREFIX}/share/doc/py-gnome-extras
+.else
+DOCSDIR=	${WRKSRC}/share/doc/py-gnome-extras
+.endif
 
 .include <bsd.port.pre.mk>
 
@@ -73,6 +78,8 @@ post-patch:
 		s|$$MOZILLA-gtkmozembed|$$MOZILLA-gtkmozembed${HEADERS_SUFX}|g ; \
 		s|$$MOZILLA-xpcom|$$MOZILLA-xpcom${HEADERS_SUFX}|g' \
 		${WRKSRC}/configure
+	@${FIND} ${WRKSRC}/docs -name Makefile.in | ${XARGS} ${REINPLACE_CMD} \
+		-e 's|^HTML_DIR =.*|HTML_DIR = ${DOCSDIR}|g'
 
 .if !defined(NOPORTDOCS)
 post-install:
