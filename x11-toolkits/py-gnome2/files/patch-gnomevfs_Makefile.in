@@ -1,0 +1,11 @@
+--- gnomevfs/Makefile.in.orig	Wed May 18 00:36:24 2005
++++ gnomevfs/Makefile.in	Wed May 18 00:41:38 2005
+@@ -272,7 +272,7 @@
+  vfs-handle.c pygnomevfs.h pygnomevfs-private.h vfs-xfer-progress-info.c \
+  vfs-context.c vfs-async-handle.c vfs-volume.c vfs-drive.c vfs-volume-monitor.c
+ 
+-vfsmethoddir = $(libdir)/gnome-vfs-2.0/modules
++vfsmethoddir = %%X11BASE%%/lib/gnome-vfs-2.0/modules
+ @BUILD_PYVFSMODULE_FALSE@vfsmethod_LTLIBRARIES = 
+ @BUILD_PYVFSMODULE_TRUE@vfsmethod_LTLIBRARIES = libpythonmethod.la
+ libpythonmethod_la_CFLAGS = $(GNOME_VFS_MODULE_CFLAGS) -DGNOME_VFS_PYTHON_DIR="\"$(vfsmethoddir)\""
