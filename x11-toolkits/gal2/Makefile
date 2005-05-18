@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gal2
-PORTVERSION=	2.5.1
+PORTVERSION=	2.5.2
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.5
@@ -32,6 +32,9 @@ PLIST_SUB=	VERSION="2.6" PORTVERSION=${PORTVERSION} \
 		SHLIBVERSION="2.4"
 
 .include <bsd.port.pre.mk>
+
+post-extract:
+	${TOUCH} -f ${WRKSRC}/gal/util/e-util-private.h
 
 post-patch:
 .if ( ${OSVERSION} > 600000 && ${OSVERSION} < 600006 ) || \
