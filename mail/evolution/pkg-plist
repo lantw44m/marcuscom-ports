@@ -15,6 +15,7 @@ include/evolution-%%VERSION%%/e-util/e-config.h
 include/evolution-%%VERSION%%/e-util/e-corba-utils.h
 include/evolution-%%VERSION%%/e-util/e-dialog-utils.h
 include/evolution-%%VERSION%%/e-util/e-dialog-widgets.h
+include/evolution-%%VERSION%%/e-util/e-error.h
 include/evolution-%%VERSION%%/e-util/e-event.h
 include/evolution-%%VERSION%%/e-util/e-folder-map.h
 include/evolution-%%VERSION%%/e-util/e-fsutils.h
@@ -30,6 +31,7 @@ include/evolution-%%VERSION%%/e-util/e-mktemp.h
 include/evolution-%%VERSION%%/e-util/e-plugin.h
 include/evolution-%%VERSION%%/e-util/e-popup.h
 include/evolution-%%VERSION%%/e-util/e-print.h
+include/evolution-%%VERSION%%/e-util/e-profile-event.h
 include/evolution-%%VERSION%%/e-util/e-request.h
 include/evolution-%%VERSION%%/e-util/e-signature-list.h
 include/evolution-%%VERSION%%/e-util/e-signature.h
@@ -41,13 +43,44 @@ include/evolution-%%VERSION%%/importer/evolution-importer-client.h
 include/evolution-%%VERSION%%/importer/evolution-importer-listener.h
 include/evolution-%%VERSION%%/importer/evolution-importer.h
 include/evolution-%%VERSION%%/importer/evolution-intelligent-importer.h
+include/evolution-%%VERSION%%/mail/em-composer-utils.h
+include/evolution-%%VERSION%%/mail/em-config.h
+include/evolution-%%VERSION%%/mail/em-event.h
+include/evolution-%%VERSION%%/mail/em-folder-browser.h
+include/evolution-%%VERSION%%/mail/em-folder-tree-model.h
+include/evolution-%%VERSION%%/mail/em-folder-tree.h
+include/evolution-%%VERSION%%/mail/em-folder-utils.h
+include/evolution-%%VERSION%%/mail/em-folder-view.h
+include/evolution-%%VERSION%%/mail/em-format-hook.h
+include/evolution-%%VERSION%%/mail/em-format-html-display.h
+include/evolution-%%VERSION%%/mail/em-format-html-print.h
+include/evolution-%%VERSION%%/mail/em-format-html.h
+include/evolution-%%VERSION%%/mail/em-format-quote.h
+include/evolution-%%VERSION%%/mail/em-format.h
+include/evolution-%%VERSION%%/mail/em-html-stream.h
+include/evolution-%%VERSION%%/mail/em-icon-stream.h
+include/evolution-%%VERSION%%/mail/em-inline-filter.h
+include/evolution-%%VERSION%%/mail/em-menu.h
+include/evolution-%%VERSION%%/mail/em-message-browser.h
+include/evolution-%%VERSION%%/mail/em-popup.h
+include/evolution-%%VERSION%%/mail/em-stripsig-filter.h
+include/evolution-%%VERSION%%/mail/em-sync-stream.h
+include/evolution-%%VERSION%%/mail/em-utils.h
+include/evolution-%%VERSION%%/mail/em-vfs-stream.h
+include/evolution-%%VERSION%%/mail/mail-autofilter.h
+include/evolution-%%VERSION%%/mail/mail-component.h
+include/evolution-%%VERSION%%/mail/mail-config.h
+include/evolution-%%VERSION%%/mail/mail-mt.h
+include/evolution-%%VERSION%%/mail/mail-ops.h
+include/evolution-%%VERSION%%/mail/mail-session.h
+include/evolution-%%VERSION%%/mail/mail-tools.h
+include/evolution-%%VERSION%%/mail/mail-vfolder.h
+include/evolution-%%VERSION%%/mail/message-list.h
 include/evolution-%%VERSION%%/shell/Evolution.h
-include/evolution-%%VERSION%%/shell/e-shell-corba-icon-utils.h
 include/evolution-%%VERSION%%/shell/e-shell-utils.h
 include/evolution-%%VERSION%%/shell/e-user-creatable-items-handler.h
 include/evolution-%%VERSION%%/shell/evolution-config-control.h
 include/evolution-%%VERSION%%/shell/evolution-shell-component-utils.h
-include/evolution-%%VERSION%%/shell/evolution-wizard.h
 include/evolution-%%VERSION%%/widgets/e-activity-handler.h
 include/evolution-%%VERSION%%/widgets/e-calendar-item.h
 include/evolution-%%VERSION%%/widgets/e-calendar.h
@@ -61,7 +94,6 @@ include/evolution-%%VERSION%%/widgets/e-combo-cell-editable.h
 include/evolution-%%VERSION%%/widgets/e-config-page.h
 include/evolution-%%VERSION%%/widgets/e-dateedit.h
 include/evolution-%%VERSION%%/widgets/e-dropdown-button.h
-include/evolution-%%VERSION%%/widgets/e-error.h
 include/evolution-%%VERSION%%/widgets/e-expander.h
 include/evolution-%%VERSION%%/widgets/e-image-chooser.h
 include/evolution-%%VERSION%%/widgets/e-info-label.h
@@ -225,16 +257,16 @@ share/gnome/evolution/%%VERSION%%/default/zh_CN/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/ecps/medbook.ecps
 share/gnome/evolution/%%VERSION%%/ecps/phonelist.ecps
 share/gnome/evolution/%%VERSION%%/ecps/smallbook.ecps
-share/gnome/evolution/%%VERSION%%/errors/addressbook-errors.xml
-share/gnome/evolution/%%VERSION%%/errors/calendar-errors.xml
-share/gnome/evolution/%%VERSION%%/errors/e-system-errors.xml
-share/gnome/evolution/%%VERSION%%/errors/filter-errors.xml
-share/gnome/evolution/%%VERSION%%/errors/org-gnome-itip-formatter-errors.xml
-share/gnome/evolution/%%VERSION%%/errors/org-gnome-mailing-list-actions-errors.xml
-share/gnome/evolution/%%VERSION%%/errors/org-gnome-shared-folder-errors.xml
-share/gnome/evolution/%%VERSION%%/errors/mail-composer-errors.xml
-share/gnome/evolution/%%VERSION%%/errors/mail-errors.xml
-share/gnome/evolution/%%VERSION%%/errors/shell-errors.xml
+share/gnome/evolution/%%VERSION%%/errors/addressbook.error
+share/gnome/evolution/%%VERSION%%/errors/calendar.error
+share/gnome/evolution/%%VERSION%%/errors/e-system.error
+share/gnome/evolution/%%VERSION%%/errors/filter.error
+share/gnome/evolution/%%VERSION%%/errors/mail-composer.error
+share/gnome/evolution/%%VERSION%%/errors/mail.error
+share/gnome/evolution/%%VERSION%%/errors/org-gnome-itip-formatter.error
+share/gnome/evolution/%%VERSION%%/errors/org-gnome-mailing-list-actions.error
+share/gnome/evolution/%%VERSION%%/errors/org-gnome-shared-folder.error
+share/gnome/evolution/%%VERSION%%/errors/shell.error
 share/gnome/evolution/%%VERSION%%/etspec/e-addressbook-view.etspec
 share/gnome/evolution/%%VERSION%%/etspec/e-cal-list-view.etspec
 share/gnome/evolution/%%VERSION%%/etspec/e-calendar-table.etspec
@@ -259,7 +291,6 @@ share/gnome/evolution/%%VERSION%%/glade/e-timezone-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/eab-contact-commit-duplicate-detected.glade
 share/gnome/evolution/%%VERSION%%/glade/eab-contact-duplicate-detected.glade
 share/gnome/evolution/%%VERSION%%/glade/event-page.glade
-share/gnome/evolution/%%VERSION%%/glade/evolution-startup-wizard.glade
 share/gnome/evolution/%%VERSION%%/glade/filter.glade
 share/gnome/evolution/%%VERSION%%/glade/fulladdr.glade
 share/gnome/evolution/%%VERSION%%/glade/fullname.glade
@@ -380,8 +411,6 @@ share/gnome/idl/evolution-%%VERSION%%/Evolution-Composer.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution-ConfigControl.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution-Offline.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution-Shell.idl
-share/gnome/idl/evolution-%%VERSION%%/Evolution-Wizard.idl
-share/gnome/idl/evolution-%%VERSION%%/Evolution-common.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution.idl
 share/gnome/idl/evolution-%%VERSION%%/GNOME_Evolution_Importer.idl
 share/gnome/idl/evolution-%%VERSION%%/evolution-calendar.idl
@@ -502,6 +531,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm lib/evolution
 @dirrm include/evolution-%%VERSION%%/widgets
 @dirrm include/evolution-%%VERSION%%/shell
+@dirrm include/evolution-%%VERSION%%/mail
 @dirrm include/evolution-%%VERSION%%/importer
 @dirrm include/evolution-%%VERSION%%/e-util
 @dirrm include/evolution-%%VERSION%%/e-conduit
