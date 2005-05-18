@@ -1,6 +1,6 @@
---- configure.orig	Tue Dec 21 13:46:01 2004
-+++ configure	Tue Dec 21 13:50:02 2004
-@@ -7894,10 +7894,10 @@
+--- configure.orig	Wed May 18 14:34:16 2005
++++ configure	Wed May 18 15:02:20 2005
+@@ -24809,10 +24809,10 @@
  Example: --with-nspr-libs=/usr/lib" >&2;}
     { (exit 1); exit 1; }; }
         				else
@@ -13,7 +13,7 @@
  			fi
  
  			echo "$as_me:$LINENO: checking for Mozilla nspr libraries" >&5
-@@ -10011,6 +10011,7 @@
+@@ -26926,6 +26926,7 @@
  		#include <sys/socket.h>
  		#include <netinet/in.h>
  		#include <netdb.h>
@@ -21,7 +21,7 @@
  
  
  int
-@@ -10777,7 +10778,7 @@
+@@ -27664,7 +27665,7 @@
  	LDFLAGS_save="$LDFLAGS"
  
  	mitlibs="-lkrb5 -lk5crypto -lcom_err -lgssapi_krb5"
@@ -30,12 +30,29 @@
  	echo "$as_me:$LINENO: checking for Kerberos 5" >&5
  echo $ECHO_N "checking for Kerberos 5... $ECHO_C" >&6
  if test "${ac_cv_lib_kerberos5+set}" = set; then
-@@ -29833,7 +29834,7 @@
- idldir="$datadir/idl/evolution-data-server-$BASE_VERSION"
+@@ -30957,7 +30958,7 @@
+ imagesdir="$datadir/pixmaps/evolution-data-server-$BASE_VERSION"
  
  
 -serverdir="$libdir/bonobo/servers"
 +serverdir="$prefix/libdata/bonobo/servers"
  
  
- extensiondir='${privlibdir}'/extensions
+ extensiondir='${libdir}'/evolution-data-server-$API_VERSION/extensions
+@@ -31206,7 +31207,7 @@
+ subdirs="$subdirs libdb/dist"
+ 
+ 
+-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ac_config_files="$ac_config_files Makefile evolution-data-server.pc addressbook/Makefile addressbook/idl/Makefile addressbook/libebook/Makefile addressbook/libebook/libebook.pc addressbook/libedata-book/Makefile addressbook/libedata-book/libedata-book.pc addressbook/backends/Makefile addressbook/backends/file/Makefile addressbook/backends/vcf/Makefile addressbook/backends/ldap/Makefile addressbook/backends/groupwise/Makefile addressbook/tests/Makefile addressbook/tests/ebook/Makefile addressbook/tests/vcard/Makefile art/Makefile calendar/Makefile calendar/idl/Makefile calendar/libecal/Makefile calendar/libecal/libecal.pc calendar/libedata-cal/Makefile calendar/libedata-cal/libedata-cal.pc calendar/backends/Makefile calendar/backends/file/Makefile calendar/backends/groupwise/Makefile calendar/backends/http/Makefile calendar/backends/contacts/Makefile calendar/backends/weather/Makefile calendar/tests/Makefile calendar/tests/ecal/Makefile camel/Makefile camel/providers/Makefile camel/providers/groupwise/Makefile camel/providers/imap/Makefile camel/providers/imapp/Makefile camel/providers/imap4/Makefile camel/providers/local/Makefile camel/providers/nntp/Makefile camel/providers/pop3/Makefile camel/providers/sendmail/Makefile camel/providers/smtp/Makefile camel/tests/Makefile camel/tests/folder/Makefile camel/tests/lib/Makefile camel/tests/message/Makefile camel/tests/mime-filter/Makefile camel/tests/misc/Makefile camel/tests/smime/Makefile camel/tests/stream/Makefile camel/camel.pc camel/camel-provider.pc libdb/Makefile libedataserver/Makefile libedataserver/libedataserver.pc libedataserverui/Makefile libedataserverui/libedataserverui.pc servers/Makefile servers/groupwise/Makefile servers/groupwise/libegroupwise.pc src/Makefile docs/Makefile docs/reference/Makefile docs/reference/addressbook/Makefile docs/reference/addressbook/libebook/Makefile docs/reference/calendar/Makefile docs/reference/calendar/libecal/Makefile docs/reference/camel/Makefile docs/reference/calendar/libedata-cal/Makefile docs/reference/libedataserver/Makefile po/Makefile.in"
++                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ac_config_files="$ac_config_files Makefile evolution-data-server.pc addressbook/Makefile addressbook/idl/Makefile addressbook/libebook/Makefile addressbook/libebook/libebook.pc addressbook/libedata-book/Makefile addressbook/libedata-book/libedata-book.pc addressbook/backends/Makefile addressbook/backends/file/Makefile addressbook/backends/vcf/Makefile addressbook/backends/ldap/Makefile addressbook/backends/groupwise/Makefile addressbook/tests/Makefile addressbook/tests/ebook/Makefile addressbook/tests/vcard/Makefile art/Makefile calendar/Makefile calendar/idl/Makefile calendar/libecal/Makefile calendar/libecal/libecal.pc calendar/libedata-cal/Makefile calendar/libedata-cal/libedata-cal.pc calendar/backends/Makefile calendar/backends/file/Makefile calendar/backends/groupwise/Makefile calendar/backends/http/Makefile calendar/backends/contacts/Makefile calendar/backends/weather/Makefile calendar/tests/Makefile calendar/tests/ecal/Makefile camel/Makefile camel/providers/Makefile camel/providers/groupwise/Makefile camel/providers/imap/Makefile camel/providers/imapp/Makefile camel/providers/imap4/Makefile camel/providers/local/Makefile camel/providers/nntp/Makefile camel/providers/pop3/Makefile camel/providers/sendmail/Makefile camel/providers/smtp/Makefile camel/tests/Makefile camel/tests/folder/Makefile camel/tests/lib/Makefile camel/tests/message/Makefile camel/tests/mime-filter/Makefile camel/tests/misc/Makefile camel/tests/smime/Makefile camel/tests/stream/Makefile camel/camel.pc camel/camel-provider.pc libdb/Makefile libedataserver/Makefile libedataserver/libedataserver.pc libedataserverui/Makefile libedataserverui/libedataserverui.pc servers/Makefile servers/groupwise/Makefile servers/groupwise/libegroupwise.pc src/Makefile docs/Makefile docs/reference/Makefile docs/reference/addressbook/Makefile docs/reference/addressbook/libebook/Makefile docs/reference/calendar/Makefile docs/reference/calendar/libecal/Makefile docs/reference/calendar/libedata-cal/Makefile docs/reference/libedataserver/Makefile po/Makefile.in"
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+ # tests run on this system so they can be shared between configure
+@@ -31933,7 +31934,6 @@
+   "docs/reference/addressbook/libebook/Makefile" ) CONFIG_FILES="$CONFIG_FILES docs/reference/addressbook/libebook/Makefile" ;;
+   "docs/reference/calendar/Makefile" ) CONFIG_FILES="$CONFIG_FILES docs/reference/calendar/Makefile" ;;
+   "docs/reference/calendar/libecal/Makefile" ) CONFIG_FILES="$CONFIG_FILES docs/reference/calendar/libecal/Makefile" ;;
+-  "docs/reference/camel/Makefile" ) CONFIG_FILES="$CONFIG_FILES docs/reference/camel/Makefile" ;;
+   "docs/reference/calendar/libedata-cal/Makefile" ) CONFIG_FILES="$CONFIG_FILES docs/reference/calendar/libedata-cal/Makefile" ;;
+   "docs/reference/libedataserver/Makefile" ) CONFIG_FILES="$CONFIG_FILES docs/reference/libedataserver/Makefile" ;;
+   "po/Makefile.in" ) CONFIG_FILES="$CONFIG_FILES po/Makefile.in" ;;
