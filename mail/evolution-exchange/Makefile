@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evolution-exchange
-PORTVERSION=	2.3.1
+PORTVERSION=	2.3.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/2.3
@@ -29,7 +29,8 @@ USE_REINPLACE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-openldap=${LOCALBASE} \
-		--with-static-ldap=no
+		--with-static-ldap=no \
+		--disable-compile-warnings
 
 EVO_VERSION=	2.4
 PLIST_SUB=	VERSION="2.4" EVO_VERSION=${EVO_VERSION} EDS_VERSION="1.2" \
