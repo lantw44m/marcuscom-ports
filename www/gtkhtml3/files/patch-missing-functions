@@ -1,0 +1,75 @@
+--- src/gtkhtml.c	2005/05/05 11:21:47	1.600
++++ src/gtkhtml.c	2005/05/17 14:17:48	1.601
+@@ -5871,3 +5871,47 @@
+ 
+ 	return id;
+ }
++
++char *
++gtk_html_get_url_at (GtkHTML *html, int x, int y)
++{
++	HTMLObject *obj;
++	int offset;
++
++	g_return_val_if_fail (GTK_IS_HTML (html), NULL);
++
++	obj = html_engine_get_object_at (html->engine, x, y, &offset, FALSE);
++
++	if (obj)
++		return gtk_html_get_url_object_relative (html, obj, html_object_get_url (obj, offset));
++
++	return NULL;
++}
++
++char *
++gtk_html_get_cursor_url (GtkHTML *html)
++{
++	HTMLObject *obj;
++	int offset;
++
++	g_return_val_if_fail (GTK_IS_HTML (html), NULL);
++
++	if (html->engine->caret_mode) {
++		obj = html->engine->cursor->object;
++		offset = html->engine->cursor->offset;
++	} else
++		obj = html_engine_get_focus_object (html->engine, &offset);
++
++	if (obj)
++		return gtk_html_get_url_object_relative (html, obj, html_object_get_url (obj, offset));
++
++	return NULL;
++}
++
++void
++gtk_html_set_tokenizer (GtkHTML *html, HTMLTokenizer *tokenizer)
++{
++	g_return_if_fail (GTK_IS_HTML (html));
++
++	html_engine_set_tokenizer (html->engine, tokenizer);
++}
+
+--- src/gtkhtml.h	2005/05/05 11:21:47	1.156
++++ src/gtkhtml.h	2005/05/17 14:17:48	1.157
+@@ -314,6 +314,12 @@
+ 								   gboolean                   block);
+ gboolean                   gtk_html_has_undo                      (GtkHTML                   *html);
+ void                       gtk_html_drop_undo                     (GtkHTML                   *html);
++char *                     gtk_html_get_url_at                    (GtkHTML                   *html,
++								   int                        x,
++								   int                        y);
++char *                     gtk_html_get_cursor_url                (GtkHTML                   *html);
++void                       gtk_html_set_tokenizer                 (GtkHTML                   *html,
++								   HTMLTokenizer             *tokenizer);
+ 
+ /* DEPRECATED */
+ #if 1
+@@ -329,6 +335,7 @@
+ GtkHTMLStream             *gtk_html_begin_content                 (GtkHTML                   *html,
+ 								   gchar                     *content_type);
+ void                       gtk_html_drag_dest_set                 (GtkHTML                   *html);
++
+ #endif
+ 
+ #endif /* _GTKHTML_H_ */
+
