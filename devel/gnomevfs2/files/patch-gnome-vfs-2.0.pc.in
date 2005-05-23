@@ -1,0 +1,9 @@
+--- gnome-vfs-2.0.pc.in.orig	Sun May 22 23:05:33 2005
++++ gnome-vfs-2.0.pc.in	Sun May 22 23:05:46 2005
+@@ -8,5 +8,5 @@
+ Description: The GNOME virtual file-system libraries
+ Version: @VERSION@
+ Requires: bonobo-activation-2.0 libbonobo-2.0 gconf-2.0 gthread-2.0 gmodule-no-export-2.0
+-Libs: -L${libdir} -lgnomevfs-2
++Libs: -L${libdir} -lgnomevfs-2 @PTHREAD_LIB@
+ Cflags: -I${includedir}/gnome-vfs-2.0 -I${libdir}/gnome-vfs-2.0/include
