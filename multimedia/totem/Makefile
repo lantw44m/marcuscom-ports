@@ -7,6 +7,7 @@
 
 PORTNAME=	totem
 PORTVERSION=	1.1.2
+PORTREVISION=	1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -38,6 +39,8 @@ GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
 CONFLICTS=	totem-gstreamer-[0-9]*
 
 .include <bsd.port.pre.mk>
+
+LIB_DEPENDS+=	musicbrainz:${PORTSDIR}/audio/libmusicbrainz
 
 .if defined(WITH_GSTREAMER)
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
