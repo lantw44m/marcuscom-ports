@@ -1,0 +1,158 @@
+--- ext/cairo/gsttextoverlay.c.orig	Mon May 23 13:54:19 2005
++++ ext/cairo/gsttextoverlay.c	Mon May 23 13:54:19 2005
+@@ -223,22 +223,20 @@
+     g_free (overlay->text_fill_image);
+   overlay->text_fill_image =
+       g_malloc (4 * overlay->width * overlay->text_height);
+-  cairo_set_target_image (overlay->cr, overlay->text_fill_image,
++  cairo_image_surface_create_for_data (overlay->text_fill_image,
+       CAIRO_FORMAT_ARGB32, overlay->width, overlay->text_height,
+       overlay->width * 4);
+ 
+   cairo_save (overlay->cr);
+   cairo_rectangle (overlay->cr, 0, 0, overlay->width, overlay->text_height);
+-  cairo_set_rgb_color (overlay->cr, 0, 0, 0);
+-  cairo_set_alpha (overlay->cr, 1.0);
+-  cairo_set_operator (overlay->cr, CAIRO_OPERATOR_SRC);
+-  cairo_fill (overlay->cr);
++  cairo_set_source_rgba (overlay->cr, 0, 0, 0, 1.0);
++  cairo_set_operator (overlay->cr, CAIRO_OPERATOR_SOURCE);
++  cairo_paint (overlay->cr);
+   cairo_restore (overlay->cr);
+ 
+   cairo_save (overlay->cr);
+   cairo_text_extents (overlay->cr, string, &extents);
+-  cairo_set_rgb_color (overlay->cr, 1, 1, 1);
+-  cairo_set_alpha (overlay->cr, 1.0);
++  cairo_set_source_rgba (overlay->cr, 1, 1, 1, 1.0);
+   switch (overlay->halign) {
+     case GST_TEXT_OVERLAY_HALIGN_LEFT:
+       x = overlay->x0;
+@@ -261,22 +259,19 @@
+     g_free (overlay->text_outline_image);
+   overlay->text_outline_image =
+       g_malloc (4 * overlay->width * overlay->text_height);
+-  cairo_set_target_image (overlay->cr, overlay->text_outline_image,
++  cairo_image_surface_create_for_data ( overlay->text_outline_image,
+       CAIRO_FORMAT_ARGB32, overlay->width, overlay->text_height,
+       overlay->width * 4);
+ 
+   cairo_save (overlay->cr);
+-  cairo_rectangle (overlay->cr, 0, 0, overlay->width, overlay->text_height);
+-  cairo_set_rgb_color (overlay->cr, 0, 0, 0);
+-  cairo_set_alpha (overlay->cr, 1.0);
+-  cairo_set_operator (overlay->cr, CAIRO_OPERATOR_SRC);
+-  cairo_fill (overlay->cr);
++  cairo_set_source_rgba (overlay->cr, 0, 0, 0, 1.0);
++  cairo_set_operator (overlay->cr, CAIRO_OPERATOR_SOURCE);
++  cairo_paint (overlay->cr);
+   cairo_restore (overlay->cr);
+ 
+   cairo_save (overlay->cr);
+   cairo_move_to (overlay->cr, x, y);
+-  cairo_set_rgb_color (overlay->cr, 1, 1, 1);
+-  cairo_set_alpha (overlay->cr, 1.0);
++  cairo_set_source_rgba (overlay->cr, 1, 1, 1, 1.0);
+   cairo_set_line_width (overlay->cr, 1.0);
+   cairo_text_path (overlay->cr, string);
+   cairo_stroke (overlay->cr);
+@@ -538,11 +533,11 @@
+ {
+   cairo_font_extents_t font_extents;
+ 
+-  cairo_select_font (overlay->cr, overlay->font, overlay->slant,
++  cairo_select_font_face (overlay->cr, overlay->font, overlay->slant,
+       overlay->weight);
+-  cairo_scale_font (overlay->cr, overlay->scale);
++  cairo_set_font_size (overlay->cr, overlay->scale);
+ 
+-  cairo_current_font_extents (overlay->cr, &font_extents);
++  cairo_font_extents (overlay->cr, &font_extents);
+   overlay->text_height = font_extents.height;
+   if (overlay->text_height & 1)
+     overlay->text_height++;
+@@ -586,6 +581,7 @@
+ static void
+ gst_textoverlay_init (GstTextOverlay * overlay)
+ {
++  cairo_surface_t *surface;
+   /* video sink */
+   overlay->video_sinkpad =
+       gst_pad_new_from_template (gst_static_pad_template_get
+@@ -606,7 +602,7 @@
+       (&textoverlay_src_template_factory), "src");
+   gst_element_add_pad (GST_ELEMENT (overlay), overlay->srcpad);
+ 
+-  overlay->cr = cairo_create ();
++  overlay->cr = cairo_create (surface);
+ 
+   overlay->halign = GST_TEXT_OVERLAY_HALIGN_CENTER;
+   overlay->valign = GST_TEXT_OVERLAY_VALIGN_BASELINE;
+--- ext/cairo/gsttimeoverlay.c.orig	Mon May 23 13:54:19 2005
++++ ext/cairo/gsttimeoverlay.c	Mon May 23 14:05:58 2005
+@@ -31,6 +31,7 @@
+ #include <gsttimeoverlay.h>
+ #include <string.h>
+ #include <math.h>
++#include <inttypes.h>
+ 
+ #include <cairo.h>
+ 
+@@ -196,22 +197,25 @@
+ {
+   GstTimeoverlay *timeoverlay;
+   cairo_font_extents_t font_extents;
++  cairo_surface_t *surface;
+ 
+   g_return_if_fail (GST_IS_TIMEOVERLAY (videofilter));
+   timeoverlay = GST_TIMEOVERLAY (videofilter);
+ 
+   /* if any setup needs to be done, do it here */
+ 
+-  timeoverlay->cr = cairo_create ();
++//  timeoverlay->cr = cairo_create ();
++  timeoverlay->cr = cairo_create (surface);
+ 
+-  cairo_set_rgb_color (timeoverlay->cr, 0, 0, 0);
++  cairo_set_source_rgba (timeoverlay->cr, 0, 0, 0, 0);
+ 
+-  cairo_select_font (timeoverlay->cr, "monospace", 0, 0);
+-  cairo_scale_font (timeoverlay->cr, 20);
++  cairo_select_font_face (timeoverlay->cr, "monospace", 0, 0);
++  cairo_set_font_size (timeoverlay->cr, 20);
+ 
+-  cairo_current_font_extents (timeoverlay->cr, &font_extents);
++  cairo_font_extents (timeoverlay->cr, &font_extents);
+   timeoverlay->text_height = font_extents.height;
+ 
++  cairo_surface_destroy (surface);
+ }
+ 
+ static char *
+@@ -260,20 +264,19 @@
+ 
+   image = g_malloc (4 * width * timeoverlay->text_height);
+ 
+-  cairo_set_target_image (timeoverlay->cr, image, CAIRO_FORMAT_ARGB32,
++  cairo_image_surface_create_for_data (image, CAIRO_FORMAT_ARGB32,
+       width, timeoverlay->text_height, width * 4);
+ 
+   cairo_save (timeoverlay->cr);
+-  cairo_rectangle (timeoverlay->cr, 0, 0, width, timeoverlay->text_height);
+-  cairo_set_alpha (timeoverlay->cr, 0);
+-  cairo_set_operator (timeoverlay->cr, CAIRO_OPERATOR_SRC);
+-  cairo_fill (timeoverlay->cr);
+-  cairo_restore (timeoverlay->cr);
++
++  cairo_set_source_rgba (0, 0, width, timeoverlay->text_height, 0);
++  cairo_set_operator (timeoverlay->cr, CAIRO_OPERATOR_SOURCE);
++  cairo_paint (timeoverlay->cr);
+ 
+   cairo_save (timeoverlay->cr);
+   cairo_text_extents (timeoverlay->cr, string, &extents);
+ 
+-  cairo_set_rgb_color (timeoverlay->cr, 1, 1, 1);
++  cairo_set_source_rgb (timeoverlay->cr, 1, 1, 1);
+   cairo_move_to (timeoverlay->cr, 0, timeoverlay->text_height - 2);
+   cairo_show_text (timeoverlay->cr, string);
+   g_free (string);
