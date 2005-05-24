@@ -114,7 +114,7 @@
 +  timeoverlay->cr = cairo_create (surface);
  
 -  cairo_set_rgb_color (timeoverlay->cr, 0, 0, 0);
-+  cairo_set_source_rgba (timeoverlay->cr, 0, 0, 0, 0);
++  cairo_set_source_rgb (timeoverlay->cr, 0, 0, 0);
  
 -  cairo_select_font (timeoverlay->cr, "monospace", 0, 0);
 -  cairo_scale_font (timeoverlay->cr, 20);
