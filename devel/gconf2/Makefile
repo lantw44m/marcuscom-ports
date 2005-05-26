@@ -32,4 +32,20 @@ MAN1=		gconftool-2.1
 
 .include <bsd.port.pre.mk>
 
+.if defined(WITH_LDAP) || exists(${LOCALBASE}/include/ldap.h)
+USE_OPENLDAP=	yes
+
+PLIST_SUB+=	LDAP=""
+.else
+PLIST_SUB+=	LDAP="@comment "
+.endif
+
+pre-everything::
+.if !defined(WITH_LDAP)
+	@${ECHO_MSG}
+	@${ECHO_MSG} "You can enable ldap support by defining"
+	@${ECHO_MSG} "WITH_LDAP"
+	@${ECHO_MSG}
+.endif
+
 .include <bsd.port.post.mk>

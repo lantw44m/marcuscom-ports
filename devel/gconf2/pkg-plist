@@ -1,6 +1,6 @@
 bin/gconf-merge-tree
 bin/gconftool-2
-etc/gconf/2/evoldap.conf
+%%LDAP%%etc/gconf/2/evoldap.conf
 etc/gconf/2/path
 include/gconf/2/gconf/gconf-changeset.h
 include/gconf/2/gconf/gconf-client.h
@@ -11,7 +11,7 @@ include/gconf/2/gconf/gconf-listeners.h
 include/gconf/2/gconf/gconf-schema.h
 include/gconf/2/gconf/gconf-value.h
 include/gconf/2/gconf/gconf.h
-lib/GConf/2/libgconfbackend-evoldap.so
+%%LDAP%%lib/GConf/2/libgconfbackend-evoldap.so
 lib/GConf/2/libgconfbackend-oldxml.so
 lib/GConf/2/libgconfbackend-xml.so
 lib/libgconf-2.a
@@ -20,7 +20,7 @@ lib/libgconf-2.so.5
 libdata/pkgconfig/gconf-2.0.pc
 libexec/gconf-sanity-check-2
 libexec/gconfd-2
-share/GConf/schema/evoldap.schema
+%%LDAP%%share/GConf/schema/evoldap.schema
 share/aclocal/gconf-2.m4
 share/doc/gconf/ch01.html
 share/doc/gconf/gconf-GConfClient.html
