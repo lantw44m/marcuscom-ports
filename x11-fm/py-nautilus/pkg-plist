@@ -1,0 +1,17 @@
+lib/nautilus-python/nautilus.so
+lib/nautilus/extensions-1.0/libnautilus-python.so
+lib/nautilus/extensions-1.0/python/background-image.py
+lib/nautilus/extensions-1.0/python/background-image.pyc
+lib/nautilus/extensions-1.0/python/background-image.pyo
+lib/nautilus/extensions-1.0/python/block-size-column.py
+lib/nautilus/extensions-1.0/python/block-size-column.pyc
+lib/nautilus/extensions-1.0/python/block-size-column.pyo
+lib/nautilus/extensions-1.0/python/md5sum-property-page.py
+lib/nautilus/extensions-1.0/python/md5sum-property-page.pyc
+lib/nautilus/extensions-1.0/python/md5sum-property-page.pyo
+lib/nautilus/extensions-1.0/python/open-terminal.py
+lib/nautilus/extensions-1.0/python/open-terminal.pyc
+lib/nautilus/extensions-1.0/python/open-terminal.pyo
+libdata/pkgconfig/nautilus-python.pc
+@dirrm lib/nautilus/extensions-1.0/python
+@dirrm lib/nautilus-python
