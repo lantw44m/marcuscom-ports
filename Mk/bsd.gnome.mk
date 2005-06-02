@@ -389,7 +389,7 @@ gnomecontrolcenter2_LIB_DEPENDS=gnome-window-settings.1:${PORTSDIR}/sysutils/gno
 gnomecontrolcenter2_DETECT=${X11BASE}/libdata/pkgconfig/gnome-window-settings-2.0.pc
 gnomecontrolcenter2_USE_GNOME_IMPL=gnomedesktop metacity nautilus2
 
-libgda2_LIB_DEPENDS=	gda-2.3:${PORTSDIR}/databases/libgda2
+libgda2_LIB_DEPENDS=	gda-3.3:${PORTSDIR}/databases/libgda2
 libgda2_DETECT=			${X11BASE}/libdata/pkgconfig/libgda.pc
 libgda2_USE_GNOME_IMPL=	glib20 libxslt
 
