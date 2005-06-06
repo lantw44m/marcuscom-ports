@@ -111,6 +111,10 @@ IGNORE=	core dumps on alpha during post-build
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-config_make-jars.pl
 .endif
 
+.if ${OSVERSION} < 500000
+USE_GCC=	3.4
+.endif
+
 pre-extract::
 	@${ECHO_MSG}
 	@${ECHO_MSG} "Extracting source (this takes a while) ..."
