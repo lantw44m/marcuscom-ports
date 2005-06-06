@@ -94,8 +94,6 @@ post-patch:
 .endif
 	@${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
 		 's|-lpthread|${PTHREAD_LIBS}|g'
-	@${FIND} ${WRKSRC} -name "*.cpp" | ${XARGS} ${REINPLACE_CMD} -e \
-		's|malloc\.h|stdlib.h|g'
 
 post-configure:
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g ; \
