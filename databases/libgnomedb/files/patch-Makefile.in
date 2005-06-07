@@ -1,0 +1,18 @@
+--- Makefile.in.orig	Tue Jun  7 16:32:20 2005
++++ Makefile.in	Tue Jun  7 16:44:37 2005
+@@ -270,14 +270,12 @@
+ @HAVE_LIBGLADE_TRUE@LIBGLADE_DIRECTORY = glade
+ @BUILD_WITH_GNOME_FALSE@GNOME_DIRECTORY = 
+ @BUILD_WITH_GNOME_TRUE@GNOME_DIRECTORY = control-center
+-@ENABLE_GTK_DOC_FALSE@DOC_DIRECTORY = 
+-@ENABLE_GTK_DOC_TRUE@DOC_DIRECTORY = doc
++DOC_DIRECTORY = doc
+ SUBDIRS = \
+ 	po \
+ 	libgnomedb \
+ 	$(LIBGLADE_DIRECTORY) \
+ 	$(GNOME_DIRECTORY) \
+-	testing \
+ 	extra \
+ 	examples \
+ 	$(DOC_DIRECTORY) \
