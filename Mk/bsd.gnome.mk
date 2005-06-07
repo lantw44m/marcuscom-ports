@@ -393,7 +393,7 @@ libgda2_LIB_DEPENDS=	gda-3.3:${PORTSDIR}/databases/libgda2
 libgda2_DETECT=			${X11BASE}/libdata/pkgconfig/libgda.pc
 libgda2_USE_GNOME_IMPL=	glib20 libxslt
 
-libgnomedb_LIB_DEPENDS=	gnomedb-2.4:${PORTSDIR}/databases/libgnomedb
+libgnomedb_LIB_DEPENDS=	gnomedb-3.4:${PORTSDIR}/databases/libgnomedb
 libgnomedb_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomedb.pc
 libgnomedb_USE_GNOME_IMPL=libgnomeui libgda2
 
