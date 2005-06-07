@@ -2,11 +2,11 @@
 # Date Created:				05 October 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-themes/gnome-themes/Makefile,v 1.28 2005/04/11 16:45:33 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-themes
-PORTVERSION=	2.11.1
+PORTVERSION=	2.11.3
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.11
