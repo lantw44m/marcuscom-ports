@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnumeric
-PORTVERSION=	1.5.0
+PORTVERSION=	1.5.1
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -14,6 +14,8 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The GNOME 2 spreadsheet
+
+LIB_DEPENDS=	goffice.0:${PORTSDIR}/devel/goffice
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
@@ -28,7 +30,6 @@ USE_LIBTOOL_VER=15
 CONFIGURE_ARGS=	--without-guile --with-bonobo --with-gnome-db
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib -liconv ${PTHREAD_LIBS}" \
-		DEFS="-I${X11BASE}/include/gal-2.0" \
 		python_prog=${PYTHON_VERSION}
 
 GCONF_SCHEMAS=	gnumeric-dialogs.schemas gnumeric-general.schemas \
@@ -42,7 +43,7 @@ PLIST_SUB=	VERSION=${PORTVERSION}
 
 .if ${PERL_LEVEL} < 500600
 # The Perl plug-ins don't build with Perl < 5.6.1
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-plugins_Makefile.in
+#EXTRA_PATCHES+=	${FILESDIR}/extra-patch-plugins_Makefile.in
 .endif
 
 post-patch:
