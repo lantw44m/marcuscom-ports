@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The GNOME 2 spreadsheet
 
-LIB_DEPENDS=	goffice.0:${PORTSDIR}/devel/goffice
+LIB_DEPENDS=	goffice-1.0:${PORTSDIR}/devel/goffice
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
