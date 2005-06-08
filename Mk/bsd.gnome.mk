@@ -571,6 +571,7 @@ Gnome_Post_Include=		bsd.gnome.mk
 # backward compatibility with old ports that have not converted to the new
 # GNOME infrastructure.
 .if defined(USE_GTK)
+.warning The USE_GTK macro is deprecated. It should be replaced by USE_GNOME=gtk12.
 USE_GNOME+=	gtk12
 .endif
 # End of obsolete macros
@@ -579,6 +580,7 @@ USE_GNOME+=	gtk12
 # Hack USE_GNOME to the modular infrastructure for port maintainers that
 # didn't do so themselves.  New ports should NOT set USE_GNOME=yes.
 . if ${USE_GNOME}=="yes"
+.warning The USE_GNOME=yes component is deprecated. It should be replaced by some combination of gnomeprefix, gnomehack, and gtkhtml
 USE_GNOME:=	${USE_GNOME:S/yes//}
 USE_GNOME+=	gnomeprefix gnomehack gtkhtml
 . endif
@@ -672,7 +674,7 @@ PLIST_SUB+=	GNOMEDESKTOP:="@comment " NOGNOMEDESKTOP:=""
 .endif
 
 .if ${MAINTAINER}=="gnome@FreeBSD.org"
-CONFIGURE_FAIL_MESSAGE=	"Please direct the output of the failure of the make command to a file, and then feed that file to the gnomelogalyzer, available from "http://www.freebsd.org/gnome/gnomelogalyzer.sh", which will diagnose the problem and suggest a solution.  If - and only if - the gnomelogalyzer cannot solve the problem, report the problem to the FreeBSD GNOME team at ${MAINTAINER}, and attach \"${CONFIGURE_WRKSRC}/${CONFIGURE_LOG}\" and the output of the failure of the make command.  Also, it might be a good idea to provide an overview of all packages installed on your system (e.g. an \`ls ${PKG_DBDIR}\`)."
+CONFIGURE_FAIL_MESSAGE= "Please run the gnomelogalyzer, available from \"http://www.freebsd.org/gnome/gnomelogalyzer.sh\", which will diagnose the problem and suggest a solution. If - and only if - the gnomelogalyzer cannot solve the problem, report the build failure to the FreeBSD GNOME team at ${MAINTAINER}, and attach (a) \"${CONFIGURE_WRKSRC}/${CONFIGURE_LOG}\", (b) the output of the failure of the make command, and (c) the gnomelogalyzer output. Also, it might be a good idea to provide an overview of all packages installed on your system (i.e. an \`ls ${PKG_DBDIR}\`)."
 .endif
 
 .if defined(GCONF_SCHEMAS) || defined(INSTALLS_OMF)
