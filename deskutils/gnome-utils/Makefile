@@ -2,11 +2,11 @@
 # Date created:				06 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/gnomeutils2/Makefile,v 1.81 2005/04/07 05:21:03 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomeutils2
-PORTVERSION=	2.11.0
+PORTVERSION=	2.11.1
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
