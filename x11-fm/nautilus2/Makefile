@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	nautilus2
-PORTVERSION=	2.11.1
+PORTVERSION=	2.11.2
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.11
@@ -14,7 +14,7 @@ DISTNAME=	nautilus-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	GNOME file manager and graphical shell developed by Eazel
+COMMENT=	File manager for the GNOME desktop
 
 LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif
 
