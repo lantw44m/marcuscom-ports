@@ -1,0 +1,11 @@
+bin/gnome-screensaver
+bin/gnome-screensaver-command
+bin/gnome-screensaver-preferences
+libexec/gnome-screensaver-dialog
+libexec/gnome-screensaver/popsquares
+share/gnome/applications/gnome-screensaver-preferences.desktop
+share/gnome/gnome-screensaver/gnome-screensaver-preferences.glade
+share/gnome/gnome-screensaver/themes/popsquares.xml
+@dirrm share/gnome/gnome-screensaver/themes
+@dirrm share/gnome/gnome-screensaver
+@dirrm libexec/gnome-screensaver

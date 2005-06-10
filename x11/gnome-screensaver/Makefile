@@ -1,0 +1,39 @@
+# New ports collection makefile for:	gnome-screensaver
+# Date created:		09 June 2005
+# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	gnome-screensaver
+PORTVERSION=	0.0.5
+CATEGORIES=	x11 gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.0
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	GNOME screen saver and locker
+
+LIB_DEPENDS=	dbus-1.1:${PORTSDIR}/devel/dbus
+
+USE_BZIP2=	yes
+USE_X_PREFIX=	yes
+USE_GMAKE=	yes
+USE_REINPLACE=	yes
+USE_LIBTOOL_VER=15
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
+CONFIGURE_ARGS=	--disable-pam
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+
+GCONF_SCHEMAS=	gnome-screensaver.schemas
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|%%X11BASE%%|${X11BASE}|g' \
+		${WRKSRC}/configure
+
+post-install:
+	${CHOWN} root ${PREFIX}/libexec/gnome-screensaver-dialog
+	${CHMOD} +s ${PREFIX}/libexec/gnome-screensaver-dialog
+
+.include <bsd.port.mk>

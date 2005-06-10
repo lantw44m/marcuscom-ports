@@ -1,0 +1,20 @@
+--- configure.orig	Wed Jun  8 23:43:39 2005
++++ configure	Wed Jun  8 23:44:22 2005
+@@ -23792,7 +23792,7 @@
+   gdmconfigfile="$withval"
+ fi;
+ 
+-if test "x$gdmconfigfile" == "x" -o "x$gdmconfigfile" == "xno"; then
++if test "x$gdmconfigfile" = "x" -o "x$gdmconfigfile" = "xno"; then
+ 	echo "$as_me:$LINENO: checking for gdm.conf" >&5
+ echo $ECHO_N "checking for gdm.conf... $ECHO_C" >&6
+ 
+@@ -23800,6 +23800,8 @@
+ 		gdmconfigfile="/etc/gdm/gdm.conf"
+ 	elif test -f "/etc/X11/gdm/gdm.conf"; then
+ 		gdmconfigfile="/etc/X11/gdm/gdm.conf"
++	elif test -f "%%X11BASE%%/etc/gdm/gdm.conf"; then
++	    	gdmconfigfile="%%X11BASE%%/etc/gdm/gdm.conf"
+ 	else
+ 		{ { echo "$as_me:$LINENO: error: The GDM config file could not be found, please specify it manually" >&5
+ echo "$as_me: error: The GDM config file could not be found, please specify it manually" >&2;}
