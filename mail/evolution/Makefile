@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.3.2
+PORTVERSION=	2.3.3
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -32,6 +32,7 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 		--with-nss-libs=${LOCALBASE}/lib \
 		--with-nspr-includes=${LOCALBASE}/include/nspr \
 		--with-nspr-libs=${LOCALBASE}/lib \
+		--enable-mono=no \
 		--with-sub-version=" FreeBSD GNOME Team Port"
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
@@ -113,6 +114,8 @@ post-patch:
 	@${REINPLACE_CMD} -e "s|gal-2.4|gal-2.6|g" \
 		${WRKSRC}/evolution-shell.pc.in \
 		${WRKSRC}/evolution-plugin.pc.in
+	@${REINPLACE_CMD} -e 's|plugins/mono/Makefile||g' \
+		${WRKSRC}/configure
 
 post-install:
 	@${LN} -sf ${PREFIX}/bin/evolution-${EVO_VERSION} \

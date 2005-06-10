@@ -1,6 +1,6 @@
---- configure.orig	Wed Sep 29 14:06:43 2004
-+++ configure	Wed Sep 29 14:24:28 2004
-@@ -24206,6 +24206,7 @@
+--- configure.orig	Wed Jun  8 18:17:36 2005
++++ configure	Wed Jun  8 18:18:04 2005
+@@ -25553,6 +25553,7 @@
  		#include <sys/socket.h>
  		#include <netinet/in.h>
  		#include <netdb.h>
@@ -8,7 +8,7 @@
  
  
  int
-@@ -25772,7 +25773,7 @@
+@@ -27123,7 +27124,7 @@
  	LDFLAGS_save="$LDFLAGS"
  
  	mitlibs="-lkrb5 -lk5crypto -lcom_err -lgssapi_krb5"
@@ -17,7 +17,7 @@
  	echo "$as_me:$LINENO: checking for Kerberos 5" >&5
  echo $ECHO_N "checking for Kerberos 5... $ECHO_C" >&6
  if test "${ac_cv_lib_kerberos5+set}" = set; then
-@@ -26928,10 +26929,10 @@
+@@ -28293,10 +28294,10 @@
  Example: --with-nspr-libs=/usr/lib" >&2;}
     { (exit 1); exit 1; }; }
         				else
@@ -30,7 +30,7 @@
  			fi
  
  			echo "$as_me:$LINENO: checking for Mozilla nspr libraries" >&5
-@@ -30807,7 +30808,7 @@
+@@ -32154,7 +32155,7 @@
  idldir="$datadir/idl/evolution-$BASE_VERSION"
  
  
