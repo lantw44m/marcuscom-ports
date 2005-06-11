@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	sunbird
-PORTVERSION=	0.2.1.1
+PORTVERSION=	0.2.1.2
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	ahze
@@ -19,6 +19,7 @@ LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg \
 		Xft.2:${PORTSDIR}/x11-fonts/libXft
 BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 
+USE_GCC=	3.4
 ALL_TARGET=	default
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 FAKEDIR=	${WRKDIR}/fake
@@ -34,11 +35,9 @@ WRKSRC=		${WRKDIR}/mozilla
 PLIST=		${WRKDIR}/plist
 PKGINSTALL=	${WRKDIR}/pkg-install
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
-
 SUNBIRD=	${PORTNAME}
-
-SUNBIRD_ICON=	${PREFIX}/lib/sunbird/icons/default.xpm
-
+SUNBIRD_ICON_SRC=	${PREFIX}/lib/sunbird/icons/default.xpm
+SUNBIRD_ICON=		${PORTNAME}.xpm
 PKGCONFIG_FILES=sunbird-gtkmozembed sunbird-js sunbird-xpcom \
 		sunbird-nspr sunbird-nss sunbird-plugin
 
@@ -120,17 +119,14 @@ post-patch:
 		${WRKSRC}/${ii}/all.js
 .endfor
 
-post-build:
-# Bug fix, from http://www.mozilla.org/projects/calendar/sunbird_build.html
-	cd ${WRKSRC}/xpfe/communicator && ${SETENV} ${MAKE_ENV} ${GMAKE} \
-		${MAKE_FLAGS} Makefile ${MAKE_ARGS}
-
 pre-install:
 	@${RM} -rf ${FAKEDIR} ${PLIST}
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		Makefile ${MAKE_ARGS} install
 	${ECHO_CMD} 'share/applications/sunbird.desktop' >> ${PLIST}
+	${ECHO_CMD} 'share/pixmaps/${SUNBIRD_ICON}' >> ${PLIST}
 	${ECHO_CMD} '@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}' >> ${PLIST}
+	${ECHO_CMD} '@unexec ${RMDIR} %D/share/pixmaps 2>/dev/null || ${TRUE}' >> ${PLIST}
 	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
 		${FAKEDIR}/bin/sunbird \
 		${FAKEDIR}/bin/sunbird-config
@@ -168,8 +164,9 @@ do-install:
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/include/${SUNBIRD}
 	cd ${FAKEDIR}/lib/${SUNBIRD} && ${FIND} . | \
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${SUNBIRD}
-	${MKDIR} ${PREFIX}/share/applications
+	${MKDIR} ${PREFIX}/share/applications ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKDIR}/sunbird.desktop ${PREFIX}/share/applications
+	${LN} -sf ${SUNBIRD_ICON_SRC} ${PREFIX}/share/pixmaps/${SUNBIRD_ICON}
 
 post-install:
 .if !defined(PACKAGE_BUILDING)

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/www/firefox/pkg-install.in,v 1.9 2004/12/04 09:47:27 marcus Exp $
+# $FreeBSD$
 #
 # Date created:			Mon Nov 29, 2003
 # Whom:				Thierry Thomas (<thierry@pompo.net>)
@@ -17,11 +17,6 @@ REGXPCOM=${MOZDIR}/regxpcom
 SUNBIRD=${MOZDIR}/sunbird-bin
 
 echo "===> Building Chrome's registry..."
-rm -rf ${MOZDIR}/chrome/overlayinfo
-rm -f ${MOZDIR}/chrome/*.rdf
-mkdir -p ${MOZDIR}/chrome/overlayinfo
-rm -f ${MOZDIR}/component.reg
-rm -rf ${MOZDIR}/extensions
 
 cd ${MOZDIR} || exit 1
 ./run-mozilla.sh ${REGXPCOM} || true
