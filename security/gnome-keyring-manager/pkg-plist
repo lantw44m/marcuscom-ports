@@ -1,5 +1,6 @@
 bin/gnome-keyring-manager
 share/gnome/applications/gnome-keyring-manager.desktop
+share/gnome/gnome-keyring-manager/gnome-keyring-manager-ui.xml
 share/gnome/gnome-keyring-manager/gnome-keyring-manager.glade
 share/gnome/gnome-keyring-manager/stock_delete-key.png
 share/gnome/gnome-keyring-manager/stock_delete-keyring.png
@@ -33,6 +34,7 @@ share/locale/pa/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/pl/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/pt/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-keyring-manager.mo
+share/locale/rw/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/sq/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/sv/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/uk/LC_MESSAGES/gnome-keyring-manager.mo
