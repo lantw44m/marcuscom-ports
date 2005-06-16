@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.3.3
+PORTVERSION=	2.3.3.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -114,8 +114,6 @@ post-patch:
 	@${REINPLACE_CMD} -e "s|gal-2.4|gal-2.6|g" \
 		${WRKSRC}/evolution-shell.pc.in \
 		${WRKSRC}/evolution-plugin.pc.in
-	@${REINPLACE_CMD} -e 's|plugins/mono/Makefile||g' \
-		${WRKSRC}/configure
 
 post-install:
 	@${LN} -sf ${PREFIX}/bin/evolution-${EVO_VERSION} \
