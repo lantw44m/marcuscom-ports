@@ -1,5 +1,5 @@
-bin/gnome-menu-spec-test
 bin/gmenu-simple-editor
+bin/gnome-menu-spec-test
 etc/xdg/menus/applications.menu
 etc/xdg/menus/preferences.menu
 etc/xdg/menus/settings.menu
@@ -7,7 +7,6 @@ include/gnome-menus/gmenu-tree.h
 lib/libgnome-menu.a
 lib/libgnome-menu.so
 lib/libgnome-menu.so.2
-libdata/pkgconfig/libgnome-menu.pc
 %%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/__init__.py
 %%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/__init__.pyc
 %%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/__init__.pyo
@@ -27,6 +26,7 @@ libdata/pkgconfig/libgnome-menu.pc
 %%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/menutreemodel.pyc
 %%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/menutreemodel.pyo
 %%PYTHON_SITELIBDIR%%/gmenu.so
+libdata/pkgconfig/libgnome-menu.pc
 share/gnome/desktop-directories/Accessibility.directory
 share/gnome/desktop-directories/Accessories.directory
 share/gnome/desktop-directories/Applications.directory
@@ -52,8 +52,8 @@ share/locale/cy/LC_MESSAGES/gnome-menus.mo
 share/locale/da/LC_MESSAGES/gnome-menus.mo
 share/locale/de/LC_MESSAGES/gnome-menus.mo
 share/locale/el/LC_MESSAGES/gnome-menus.mo
-share/locale/en_GB/LC_MESSAGES/gnome-menus.mo
 share/locale/en_CA/LC_MESSAGES/gnome-menus.mo
+share/locale/en_GB/LC_MESSAGES/gnome-menus.mo
 share/locale/es/LC_MESSAGES/gnome-menus.mo
 share/locale/et/LC_MESSAGES/gnome-menus.mo
 share/locale/eu/LC_MESSAGES/gnome-menus.mo
@@ -94,7 +94,14 @@ share/locale/vi/LC_MESSAGES/gnome-menus.mo
 share/locale/xh/LC_MESSAGES/gnome-menus.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-menus.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-menus.mo
+@unexec rmdir %D/share/locale/xh/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/xh 2> /dev/null || true
+@unexec rmdir %D/share/locale/rw/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/rw 2> /dev/null || true
+@dirrm share/gnome/gnome-menus/glade
+@dirrm share/gnome/gnome-menus
 @dirrm share/gnome/desktop-directories
+@dirrm %%PYTHON_SITELIBDIR%%/GMenuSimpleEditor
 @dirrm include/gnome-menus
 @dirrm etc/xdg/menus
 @dirrm etc/xdg
