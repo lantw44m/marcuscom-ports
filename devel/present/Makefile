@@ -20,6 +20,6 @@ USE_BZIP2=	yes
 USE_LIBTOOL_VER=15
 
 CONFIGURE_ENV=	LDFLAGS="${PTHREAD_LIBS}"
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack intlhack
 
 .include <bsd.port.mk>
