@@ -7,7 +7,7 @@
 
 PORTNAME=	glade3
 PORTVERSION=	0.0.0.${SNAPDATE}
-CATEGORIES=	multimedia
+CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_LOCAL:S|%SUBDIR%|kwm|} \
 		http://people.freebsd.org/~kwm/distfiles/
 
