@@ -9,7 +9,7 @@ PORTNAME=	pango
 PORTVERSION=	1.9.0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/1.9,} \
-		ftp://ftp.gtk.org/pub/gtk/v2.6/
+		ftp://ftp.gtk.org/pub/gtk/v2.7/
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
