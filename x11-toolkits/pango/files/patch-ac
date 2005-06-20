@@ -1,0 +1,15 @@
+
+$FreeBSD$
+
+--- Makefile.in.orig	Mon Aug  2 19:12:56 2004
++++ Makefile.in	Mon Aug  2 19:13:11 2004
+@@ -234,7 +234,7 @@
+ 
+ AUTOMAKE_OPTIONS = 1.7
+ 
+-SUBDIRS = pango modules examples docs tools tests
++SUBDIRS = pango modules examples docs tools
+ 
+ EXTRA_DIST = \
+ 	pango.pc.in	\
+
