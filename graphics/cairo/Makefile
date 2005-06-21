@@ -2,11 +2,11 @@
 # Date created:		2004-10-06
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/cairo/Makefile,v 1.12 2005/03/10 18:31:38 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	cairo
-PORTVERSION=	0.5.0
+PORTVERSION=	0.5.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 
@@ -18,6 +18,7 @@ LIB_DEPENDS=	pixman.1:${PORTSDIR}/graphics/libpixman \
 		png.5:${PORTSDIR}/graphics/png \
 		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig
 
+CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR}
 USE_GNOME=	gnometarget gnomehack
 USE_LIBTOOL_VER=15
 INSTALLS_SHLIB=	yes
