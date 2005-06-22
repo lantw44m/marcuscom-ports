@@ -2,7 +2,7 @@
 # Date created:				11 September 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libgsf-gnome/Makefile,v 1.4 2005/03/12 10:39:16 marcus Exp $
+# $FreeBSD$
 #
 
 CATEGORIES=	devel gnome

@@ -2,7 +2,7 @@
 # Date created:				14 September 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/mergeant/Makefile,v 1.22 2005/03/12 10:39:22 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	mergeant

@@ -2,7 +2,7 @@
 # Date created:		2005-03-01
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/gnome-menu-editor/Makefile,v 1.1 2005/03/12 11:07:59 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-menu-editor

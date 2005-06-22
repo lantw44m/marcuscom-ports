@@ -2,7 +2,7 @@
 # Date created:				27 April 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnomepanel/Makefile,v 1.56 2005/04/14 00:06:04 adamw Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomepanel

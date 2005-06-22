@@ -2,7 +2,7 @@
 # Date created:				12 Jun 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/math/gcalctool/Makefile,v 1.47 2005/04/11 17:58:28 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gcalctool

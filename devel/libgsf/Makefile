@@ -2,7 +2,7 @@
 # Date created:				11 September 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libgsf/Makefile,v 1.22 2005/03/12 10:39:15 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgsf

@@ -2,7 +2,7 @@
 # Date created:				22 November 2005
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.7 2005/04/16 17:13:26 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome

@@ -2,7 +2,7 @@
 # Date created:         03 March 2005
 # Whom:                 marcus@FreeBSD.org
 #
-# $FreeBSD: ports/graphics/poppler/Makefile,v 1.6 2005/04/29 20:25:14 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	poppler
