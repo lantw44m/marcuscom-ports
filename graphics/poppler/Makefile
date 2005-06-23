@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	poppler
-PORTVERSION=	0.3.2
+PORTVERSION=	0.3.3
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
 

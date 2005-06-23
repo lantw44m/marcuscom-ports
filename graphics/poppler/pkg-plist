@@ -17,6 +17,7 @@ include/poppler/Dict.h
 include/poppler/Error.h
 include/poppler/ErrorCodes.h
 include/poppler/FontEncodingTables.h
+include/poppler/FontInfo.h
 include/poppler/Function.cc
 include/poppler/Function.h
 include/poppler/Gfx.h
