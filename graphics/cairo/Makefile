@@ -33,13 +33,16 @@ OPTIONS+=	GLITZ "Enable Glitz OpenGL Support" On
 .if !defined(WITHOUT_GLITZ)
 LIB_DEPENDS+=	glitz-glx.1:${PORTSDIR}/graphics/glitz
 PLIST_SUB+=	GLITZ=""
-PLIST_SUB+=	X11=""
 .else
 PLIST_SUB+=	GLITZ="@comment "
+.endif
+
 .if defined(WITHOUT_X11)
 CONFIGURE_ARGS+=--disable-xlib
 PLIST_SUB+=	X11="@comment "
-.endif
+.else
+USE_XLIB=	yes
+PLIST_SUB+=	X11=""
 .endif
 
 post-patch:
