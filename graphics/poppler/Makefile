@@ -13,8 +13,6 @@ MASTER_SITES=	http://poppler.freedesktop.org/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A PDF rendering library
 
-LIB_DEPENDS=	cairo.1:${PORTSDIR}/graphics/cairo
-
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
