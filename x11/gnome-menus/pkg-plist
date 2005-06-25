@@ -105,3 +105,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-menus.mo
 @dirrm include/gnome-menus
 @dirrm etc/xdg/menus
 @dirrm etc/xdg
+@unexec rmdir %D/%%PYTHON_SITELIBDIR%% 2> /dev/null || true
+@unexec rmdir %D/%%PYTHON_LIBDIR%% 2> /dev/null || true
