@@ -37,4 +37,6 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 MASTERDIR=	${.CURDIR}/../gnome2
 GNOME_SLAVE=	yes
 
+DESCR=		${.CURDIR}/pkg-descr
+
 .include "${MASTERDIR}/Makefile"

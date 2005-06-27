@@ -36,4 +36,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 MASTERDIR=	${.CURDIR}/../gnome2
 CONFLICTS=	gnome2-[0-9]*
 
+DESCR=		${.CURDIR}/pkg-descr
+PKGMESSAGE=	${.CURDIR}/pkg-message
+
 .include "${MASTERDIR}/Makefile"

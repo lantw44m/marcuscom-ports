@@ -20,4 +20,6 @@ RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric \
 MASTERDIR=	${.CURDIR}/../../x11/gnome2
 GNOME_SLAVE=	yes
 
+DESCR=		${.CURDIR}/pkg-descr
+
 .include "${MASTERDIR}/Makefile"
