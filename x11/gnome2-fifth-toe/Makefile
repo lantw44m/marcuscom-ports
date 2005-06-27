@@ -2,17 +2,12 @@
 # Date created:				20 September 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome2-fifth-toe/Makefile,v 1.65 2005/04/18 21:02:56 marcus Exp $
+# $FreeBSD$
 #
 
-PORTNAME=	gnome2-fifth-toe
-PORTVERSION=	2.11.3
 CATEGORIES=	x11 gnome
-MASTER_SITES=	# empty
-DISTFILES=	# empty
-EXTRACT_ONLY=	# empty
+PKGNAMESUFFIX=	-fifth-toe
 
-MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Additional GNOME 2 applications not included in the core desktop
 
 RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
@@ -39,10 +34,7 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		goobox:${PORTSDIR}/audio/goobox \
 		inkscape:${PORTSDIR}/graphics/inkscape
 
-.include <bsd.port.pre.mk>
+MASTERDIR=	${.CURDIR}/../gnome2
+GNOME_SLAVE=	yes
 
-NO_BUILD=	yes
-
-do-install:	# empty
-
-.include <bsd.port.post.mk>
+.include "${MASTERDIR}/Makefile"

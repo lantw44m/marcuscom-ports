@@ -5,14 +5,9 @@
 # $FreeBSD$
 #
 
-PORTNAME=	gnome2-power-tools
-PORTVERSION=	2.11.3
 CATEGORIES=	x11 gnome
-MASTER_SITES=	# empty
-DISTFILES=	# empty
-EXTRACT_ONLY=	# empty
+PKGNAMESUFFIX=	-power-tools
 
-MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	"Geektoys" for the GNOME 2 power user
 
 RUN_DEPENDS=	${X11BASE}/lib/epiphany-1.6/extensions/libgesturesextension.so:${PORTSDIR}/www/epiphany-extensions \
@@ -29,8 +24,8 @@ RUN_DEPENDS=	${X11BASE}/lib/epiphany-1.6/extensions/libgesturesextension.so:${PO
 		gnome-menu-editor:${PORTSDIR}/deskutils/gnome-menu-editor
 #		${X11BASE}/libexec/quick-lounge-applet:${PORTSDIR}/misc/quick-lounge-applet \
 
-NO_BUILD=	yes
+MASTERDIR=	${.CURDIR}/../gnome2
+GNOME_SLAVE=	yes
 
-do-install:	# empty
+.include "${MASTERDIR}/Makefile"
 
-.include <bsd.port.mk>

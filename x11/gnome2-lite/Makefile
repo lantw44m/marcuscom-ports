@@ -2,18 +2,12 @@
 # Date created:		30 November 2003
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome2-lite/Makefile,v 1.21 2005/04/18 21:02:55 marcus Exp $
+# $FreeBSD$
 #
 
-PORTNAME=	gnome2
-PORTVERSION=	2.11.3
 CATEGORIES=	x11 gnome
-MASTER_SITES=	# empty
 PKGNAMESUFFIX=	-lite
-DISTFILES=	# empty
-EXTRACT_ONLY=	# empty
 
-MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The "meta-port" of the GNOME desktop slimmed down for FreeBSD releases
 
 RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 \
@@ -39,23 +33,7 @@ RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2 \
 		totem:${PORTSDIR}/multimedia/totem-gstreamer
 
-NO_BUILD=	yes
-
-USE_PYTHON=	yes
-
+MASTERDIR=	${.CURDIR}/../gnome2
 CONFLICTS=	gnome2-[0-9]*
 
-.if !defined(BATCH) && !defined(PACKAGE_BUILDING)
-pre-configure:
-	@${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
-.endif
-
-do-install:	# empty
-
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "i386" || ${OSVERSION} > 500035
-RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-.endif
-
-.include <bsd.port.post.mk>
+.include "${MASTERDIR}/Makefile"

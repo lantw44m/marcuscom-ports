@@ -7,15 +7,15 @@
 
 PORTNAME=	gnome2
 PORTVERSION=	2.11.3
-CATEGORIES=	x11 gnome
+CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 EXTRACT_ONLY=	# empty
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	The "meta-port" for the GNOME 2 integrated X11 desktop
+COMMENT?=	The "meta-port" for the GNOME 2 integrated X11 desktop
 
-RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 \
+RUN_DEPENDS?=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 \
 		gnome-cd:${PORTSDIR}/audio/gnomemedia2 \
 	 	gnome-dictionary:${PORTSDIR}/deskutils/gnomeutils2 \
 		eog:${PORTSDIR}/graphics/eog \
@@ -62,9 +62,11 @@ RUN_DEPENDS=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 
 
 NO_BUILD=	yes
 
+.if !defined(GNOME_SLAVE)
 USE_PYTHON=	yes
+.endif
 
-.if !defined(BATCH) && !defined(PACKAGE_BUILDING)
+.if !defined(BATCH) && !defined(PACKAGE_BUILDING) && !defined(GNOME_SLAVE)
 pre-configure:
 	@${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
 .endif
@@ -73,8 +75,10 @@ do-install:	# empty
 
 .include <bsd.port.pre.mk>
 
+.if !defined(GNOME_SLAVE)
 .if ${ARCH} == "i386" || ${OSVERSION} > 500035
 RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+.endif
 .endif
 
 .include <bsd.port.post.mk>
