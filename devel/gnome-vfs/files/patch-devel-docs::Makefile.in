@@ -1,5 +1,6 @@
 
 $FreeBSD$
+  $MCom$
 
 --- devel-docs/Makefile.in	2002/02/16 16:44:53	1.1
 +++ devel-docs/Makefile.in	2002/02/16 16:45:47

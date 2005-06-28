@@ -1,6 +1,7 @@
 #!/bin/sh
 #
 # $FreeBSD$
+#   $MCom$
 #
 # Restore gconf keys of libgnome.
 

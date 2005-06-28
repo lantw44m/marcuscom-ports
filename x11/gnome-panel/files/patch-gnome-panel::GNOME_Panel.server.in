@@ -1,5 +1,6 @@
 
 $FreeBSD$
+  $MCom$
 
 --- gnome-panel/GNOME_Panel.server.in	2002/05/09 21:00:58	1.1
 +++ gnome-panel/GNOME_Panel.server.in	2002/05/09 21:01:11

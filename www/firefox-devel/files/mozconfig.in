@@ -1,5 +1,6 @@
 # .mozconfig.in -*-shell-script-*-
 # $FreeBSD$
+#   $MCom$
 ######################################################################
 # standard opts from README
 ac_add_options --enable-application=browser

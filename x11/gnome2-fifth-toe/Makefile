@@ -3,6 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 CATEGORIES=	x11 gnome

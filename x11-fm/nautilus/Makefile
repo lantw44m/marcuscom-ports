@@ -3,6 +3,7 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	nautilus2

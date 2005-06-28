@@ -1,5 +1,6 @@
 
 $FreeBSD$
+  $MCom$
 
 --- gmodule/gmodule-dl.c.orig	Sat Feb 17 08:28:07 2001
 +++ gmodule/gmodule-dl.c	Fri Jan 18 09:48:45 2002

@@ -3,6 +3,7 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	totem

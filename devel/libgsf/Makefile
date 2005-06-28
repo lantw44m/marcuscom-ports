@@ -3,6 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libgsf

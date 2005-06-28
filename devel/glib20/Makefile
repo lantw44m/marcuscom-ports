@@ -3,6 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	glib

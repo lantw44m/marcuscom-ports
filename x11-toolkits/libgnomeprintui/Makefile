@@ -3,6 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libgnomeprintui

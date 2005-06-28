@@ -3,6 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	cairo

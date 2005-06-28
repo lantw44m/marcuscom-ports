@@ -3,6 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnomekeyringmanager

@@ -3,6 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
+#     $MCom$
 #
 # Please view me with 4 column tabs!
 

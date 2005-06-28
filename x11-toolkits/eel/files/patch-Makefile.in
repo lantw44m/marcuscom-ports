@@ -1,5 +1,6 @@
 
 $FreeBSD$
+  $MCom$
 
 --- Makefile.in	2002/06/13 16:05:09	1.1
 +++ Makefile.in	2002/06/13 16:05:18

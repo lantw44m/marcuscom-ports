@@ -3,6 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	firefox

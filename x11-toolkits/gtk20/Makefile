@@ -3,6 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gtk

@@ -1,4 +1,5 @@
 $FreeBSD$
+  $MCom$
 
 --- config/mkdepend/imakemdep.h	Fri Sep  4 21:22:25 1998
 +++ config/mkdepend/imakemdep.h	Thu Oct 16 22:43:25 2003

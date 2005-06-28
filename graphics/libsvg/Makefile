@@ -3,6 +3,7 @@
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libsvg

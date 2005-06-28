@@ -1,8 +1,9 @@
-\# New ports collection makefile for:	present
+# New ports collection makefile for:	present
 # Date created:		2005-06-13
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	present

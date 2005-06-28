@@ -3,6 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gstreamer

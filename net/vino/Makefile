@@ -3,6 +3,7 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	vino

@@ -1,5 +1,6 @@
 # .mozconfig.in -*-shell-script-*-
 # $FreeBSD$
+#   $MCom$
 ######################################################################
 # standard opts from README
 export MOZ_THUNDERBIRD=1

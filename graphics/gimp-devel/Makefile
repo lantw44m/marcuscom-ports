@@ -3,6 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gimp

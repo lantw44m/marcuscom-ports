@@ -3,6 +3,7 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	sound-juicer

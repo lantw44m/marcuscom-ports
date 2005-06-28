@@ -1,5 +1,6 @@
 # .mozconfig.in -*-shell-script-*-
 # $FreeBSD$
+#   $MCom$
 ######################################################################
 # standard opts from README
 mk_add_options MOZ_CO_PROJECT=calendar

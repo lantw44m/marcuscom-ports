@@ -4,7 +4,7 @@
 # FreeBSD: $FreeBSD$
 #	NetBSD: $NetBSD: $
 #	
-# MarcusCOM: $Id: bsd.mozilla.mk,v 1.5 2004-06-28 02:29:33 marcus Exp $
+# MarcusCOM: $MCom$
 #
 # 4 column tabs prevent hair loss and tooth decay!
 

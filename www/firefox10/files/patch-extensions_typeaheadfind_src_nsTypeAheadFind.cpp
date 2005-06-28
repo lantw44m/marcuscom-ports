@@ -1,4 +1,5 @@
 $FreeBSD$
+  $MCom$
 
 --- extensions/typeaheadfind/src/nsTypeAheadFind.cpp.orig	Wed Nov 19 01:20:47 2003
 +++ extensions/typeaheadfind/src/nsTypeAheadFind.cpp	Tue Feb 10 02:52:26 2004

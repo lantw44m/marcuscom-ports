@@ -1,5 +1,6 @@
 
 $FreeBSD$
+  $MCom$
 
 --- gimptool-2.0.in.orig	Tue Jan 15 12:21:05 2002
 +++ gimptool-2.0.in	Fri May 17 20:46:18 2002

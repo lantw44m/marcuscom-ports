@@ -3,6 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnumeric

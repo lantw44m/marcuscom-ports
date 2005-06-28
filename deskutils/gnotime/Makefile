@@ -3,6 +3,7 @@
 # Whom:			Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnotime

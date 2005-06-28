@@ -3,6 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	evolution-exchange

@@ -3,6 +3,7 @@
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libgnomecanvasmm
