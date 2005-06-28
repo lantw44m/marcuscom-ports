@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/security/gnomekeyringmanager/Makefile,v 1.8 2005/06/28 05:40:09 adamw Exp $
 #
 
 PORTNAME=	gnomekeyringmanager
@@ -17,6 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME keyring manager
 
+BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc:${PORTSDIR}/textproc/gnomedocutils
 LIB_DEPENDS=	gnome-keyring:${PORTSDIR}/security/gnomekeyring
 
 USE_X_PREFIX=	yes
