@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnomekeyringmanager/Makefile,v 1.8 2005/06/28 05:40:09 adamw Exp $
+#   $MCom: ports/security/gnomekeyringmanager/Makefile,v 1.9 2005/06/28 17:28:31 marcus Exp $
 #
 
 PORTNAME=	gnomekeyringmanager
 PORTVERSION=	2.11.1
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-keyring-manager/2.11
@@ -26,6 +27,7 @@ USE_LIBTOOL_VER=15
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui
+CONFIGURE_ARGS=	--with-help-dir=${PREFIX}/share/gnome/help
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

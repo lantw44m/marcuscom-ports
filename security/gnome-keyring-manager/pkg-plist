@@ -6,8 +6,8 @@ share/gnome/gnome-keyring-manager/stock_delete-key.png
 share/gnome/gnome-keyring-manager/stock_delete-keyring.png
 share/gnome/gnome-keyring-manager/stock_new-key.png
 share/gnome/gnome-keyring-manager/stock_new-keyring.png
-share/gnome/gnome/help/gnome-keyring-manager/C/gnome-keyring-manager.xml
-share/gnome/gnome/help/gnome-keyring-manager/C/legal.xml
+share/gnome/help/gnome-keyring-manager/C/gnome-keyring-manager.xml
+share/gnome/help/gnome-keyring-manager/C/legal.xml
 share/gnome/omf/gnome-keyring-manager/gnome-keyring-manager-C.omf
 share/locale/bg/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/bn/LC_MESSAGES/gnome-keyring-manager.mo
@@ -39,3 +39,7 @@ share/locale/sq/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/sv/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/uk/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-keyring-manager.mo
+@dirrm share/gnome/omf/gnome-keyring-manager
+@dirrm share/gnome/help/gnome-keyring-manager/C
+@dirrm share/gnome/help/gnome-keyring-manager
+@dirrm share/gnome/gnome-keyring-manager
