@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/databases/glom/Makefile,v 1.3 2005/06/28 05:39:57 adamw Exp $
 #
 
 PORTNAME=	glom
@@ -24,7 +24,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_PYTHON=	yes
 
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix pygnomeextras
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \

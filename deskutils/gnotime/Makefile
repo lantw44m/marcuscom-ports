@@ -3,7 +3,7 @@
 # Whom:			Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/deskutils/gnotime/Makefile,v 1.14 2005/06/28 05:39:58 adamw Exp $
 #
 
 PORTNAME=	gnotime
@@ -24,7 +24,7 @@ USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

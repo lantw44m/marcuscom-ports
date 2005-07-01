@@ -3,7 +3,7 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/multimedia/totem/Makefile,v 1.15 2005/06/28 05:40:08 adamw Exp $
 #
 
 PORTNAME=	totem
@@ -24,7 +24,7 @@ USE_GNOME=	gnomeprefix intlhack gnomehack gnomedesktop desktopfileutils \
 		nautiluscdburner
 WANT_GSTREAMER=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 INSTALLS_OMF=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \

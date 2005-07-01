@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.13 2005/06/28 05:40:16 adamw Exp $
 #
 
 PORTNAME=	gnome
@@ -52,7 +52,7 @@ USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gnomehack libgnomeprintui libgtkhtml gnomepanel \
 		gtksourceview libwnck nautiluscdburner pygnome2 libgda2
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--with-gtkmozembed=${MOZ_BUILD}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-fm/py-nautilus/Makefile,v 1.2 2005/06/28 05:40:14 adamw Exp $
 #
 
 PORTNAME=	nautilus
@@ -22,7 +22,7 @@ LIB_DEPENDS=	nautilus-extension:${PORTSDIR}/x11-fm/nautilus2
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack pygnome2
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.74 2005/06/28 05:39:56 adamw Exp $
 #
 
 PORTNAME=	gnomemedia2
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 USE_REINPLACE=	yes
 GNOME_DESKTOP_VERSION=2

@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnomekeyringmanager/Makefile,v 1.9 2005/06/28 17:28:31 marcus Exp $
+#   $MCom: ports/security/gnomekeyringmanager/Makefile,v 1.10 2005/06/29 01:10:22 marcus Exp $
 #
 
 PORTNAME=	gnomekeyringmanager
@@ -23,7 +23,7 @@ LIB_DEPENDS=	gnome-keyring:${PORTSDIR}/security/gnomekeyring
 
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui

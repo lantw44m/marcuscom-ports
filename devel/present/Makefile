@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/present/Makefile,v 1.3 2005/06/28 05:40:03 adamw Exp $
 #
 
 PORTNAME=	present
@@ -18,7 +18,7 @@ COMMENT=	A library for reading Microsoft PowerPoint(tm) documents
 LIB_DEPENDS=	goffice-1.0:${PORTSDIR}/devel/goffice
 
 USE_BZIP2=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 
 CONFIGURE_ENV=	LDFLAGS="${PTHREAD_LIBS}"
 USE_GNOME=	gnomehack intlhack

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/bugbuddy/Makefile,v 1.11 2005/06/28 05:39:59 adamw Exp $
 #
 
 PORTNAME=	bugbuddy
@@ -26,7 +26,7 @@ USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop gnomemenus \
 		desktopfileutils
 GNOME_DESKTOP_VERSION=2

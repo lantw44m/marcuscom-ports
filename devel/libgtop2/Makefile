@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/libgtop2/Makefile,v 1.40 2005/06/28 05:40:03 adamw Exp $
 #
 
 PORTNAME=	libgtop2
@@ -27,7 +27,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20
 USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

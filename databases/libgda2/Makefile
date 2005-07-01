@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/databases/libgda2/Makefile,v 1.24 2005/06/28 05:39:57 adamw Exp $
 #
 
 PORTNAME=	libgda2
@@ -27,7 +27,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack glib20 libxslt
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_REINPLACE=	yes
 CONFIGURE_ARGS=	--without-bdb
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
