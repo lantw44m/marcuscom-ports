@@ -3,12 +3,11 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.5 2005/06/28 05:40:04 adamw Exp $
 #
 
 PORTNAME=	gimp
-PORTVERSION=	2.3.1
-PORTREVISION=	1
+PORTVERSION=	2.3.2
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -32,7 +31,7 @@ LIB_DEPENDS=	wmf.2:${PORTSDIR}/graphics/libwmf \
 
 CONFLICTS=	gimp-1.* gimp-2.2.*
 
-SHLIBVER?=	301
+SHLIBVER?=	302
 
 USE_REINPLACE=	yes
 USE_BZIP2=	yes
@@ -54,7 +53,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 
 GIMP_DISTFILE=	${DISTDIR}/${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
 
-MAN1=	gimp-2.3.1 gimp-remote-2.3.1 gimptool-2.0.1
+MAN1=	gimp-2.3.1 gimp-console-2.3.1 gimp-remote-2.3.1 gimptool-2.0.1
 MAN5=	gimprc-2.3.5
 
 OPTIONS=	DEBUG "debugging" off \
@@ -104,7 +103,7 @@ CONFIGURE_ARGS+=	--enable-mp
 USE_GNOME+=		gnomepanel desktopfileutils
 CONFIGURE_ARGS+=	--with-desktop-dir=${X11BASE}/share/gnome
 CONFIGURE_ENV+=		GIMP_THREAD_LIBS=${PTHREAD_LIBS}
-PKGNAMESUFFIX=		-gnome
+PKGNAMESUFFIX:=		-gnome
 PLIST_SUB+=		GNOMEPANEL:=""
 GNOME_ENABLED=		yes
 .else
