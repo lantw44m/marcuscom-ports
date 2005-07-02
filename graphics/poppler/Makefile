@@ -3,7 +3,7 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/poppler/Makefile,v 1.7 2005/06/28 05:40:06 adamw Exp $
 #
 
 PORTNAME=	poppler
@@ -19,13 +19,7 @@ USE_GMAKE=	yes
 USE_LIBTOOL_VER=15
 USE_GNOME=	gnomeprefix gnomehack gtk20
 INSTALLS_SHLIB=	yes
-USE_REINPLACE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|poppler-[@]VERSION[@]|poppler|g' \
-		${WRKSRC}/poppler-cairo.pc.in \
-		${WRKSRC}/poppler-splash.pc.in
 
 .include <bsd.port.mk>
