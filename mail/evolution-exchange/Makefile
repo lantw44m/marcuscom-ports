@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.31 2005/06/28 05:40:07 adamw Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -22,7 +22,7 @@ RUN_DEPENDS=	evolution-${EVO_VERSION}:${PORTSDIR}/mail/evolution
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
 USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnometarget
