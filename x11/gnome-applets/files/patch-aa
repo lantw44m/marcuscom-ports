@@ -1,0 +1,101 @@
+--- configure.orig	Tue Mar  1 12:35:29 2005
++++ configure	Tue Mar  1 12:36:09 2005
+@@ -23136,8 +23136,7 @@
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${prefix}/share/locale"`
+-  ac_define_dir=`eval echo $ac_define_dir`
++  ac_define_dir=`eval echo "${prefix}/share/locale"`
+   GNOMELOCALEDIR="$ac_define_dir"
+ 
+ 
+@@ -25795,6 +25800,9 @@
+       *linux*)
+          build_cpufreq_applet=yes
+ 	 ;;
++      i386-*-freebsd*|amd64-*-freebsd*)
++         build_cpufreq_applet=yes
++	 ;;
+       *)
+          echo "warning: ${host} is not supported by cpufreq applet, not building" >&2
+ 	 build_cpufreq_applet=no
+@@ -26085,7 +26093,7 @@
+ ACLOCAL_AMFLAGS="\${ACLOCAL_FLAGS}"
+ 
+ 
+-iconsdir="${datadir}/icons"
++iconsdir="${prefix}/share/icons"
+ 
+ pixmapsdir="${datadir}/pixmaps"
+ 
+@@ -26099,8 +26107,7 @@
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${iconsdir}"`
+-  ac_define_dir=`eval echo $ac_define_dir`
++  ac_define_dir=`eval echo "${iconsdir}"`
+   GNOME_ICONDIR="$ac_define_dir"
+ 
+ 
+@@ -26112,8 +26119,7 @@
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${pixmapsdir}"`
+-  ac_define_dir=`eval echo $ac_define_dir`
++  ac_define_dir=`eval echo "${pixmapsdir}"`
+   GNOME_PIXMAPSDIR="$ac_define_dir"
+ 
+ 
+@@ -26125,8 +26131,7 @@
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${gladedir}"`
+-  ac_define_dir=`eval echo $ac_define_dir`
++  ac_define_dir=`eval echo "${gladedir}"`
+   GNOME_GLADEDIR="$ac_define_dir"
+ 
+ 
+@@ -26138,8 +26143,7 @@
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${datadir}"`
+-  ac_define_dir=`eval echo $ac_define_dir`
++  ac_define_dir=`eval echo "${datadir}"`
+   DATADIR="$ac_define_dir"
+ 
+ 
+@@ -26151,8 +26155,7 @@
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${sysconfdir}"`
+-  ac_define_dir=`eval echo $ac_define_dir`
++  ac_define_dir=`eval echo "${sysconfdir}"`
+   SYSCONFDIR="$ac_define_dir"
+ 
+ 
+@@ -26164,8 +26167,7 @@
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${libdir}"`
+-  ac_define_dir=`eval echo $ac_define_dir`
++  ac_define_dir=`eval echo "${libdir}"`
+   LIBDIR="$ac_define_dir"
+ 
+ 
+@@ -26177,8 +26179,7 @@
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"$prefix"`
+-  ac_define_dir=`eval echo $ac_define_dir`
++  ac_define_dir=`eval echo "$prefix"`
+   PREFIX="$ac_define_dir"
+ 
+ 
