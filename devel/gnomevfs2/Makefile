@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.97 2005/06/28 05:40:01 adamw Exp $
+#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.98 2005/07/01 18:00:50 marcus Exp $
 #
 
 PORTNAME=	gnomevfs2
-PORTVERSION=	2.11.2
+PORTVERSION=	2.11.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.11
@@ -38,7 +38,8 @@ PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 
 GCONF_SCHEMAS=	desktop_default_applications.schemas \
 		desktop_gnome_url_handlers.schemas system_dns_sd.schemas \
-		system_http_proxy.schemas system_smb.schemas
+		system_http_proxy.schemas system_smb.schemas \
+		system_storage.schemas
 
 .include <bsd.port.pre.mk>
 
