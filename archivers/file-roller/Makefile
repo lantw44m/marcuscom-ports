@@ -3,11 +3,11 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/fileroller/Makefile,v 1.72 2005/06/28 05:39:56 adamw Exp $
+#   $MCom: ports/archivers/fileroller/Makefile,v 1.73 2005/07/01 17:53:21 marcus Exp $
 #
 
 PORTNAME=	fileroller
-PORTVERSION=	2.11.1
+PORTVERSION=	2.11.2
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -38,6 +38,8 @@ GCONF_SCHEMAS=	file-roller.schemas
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/src/fr-command-tar.c
+	@${FIND} ${WRKSRC} -name "fr-command-*.c" | ${XARGS} ${REINPLACE_CMD} \
+		-e 's|atoll|fr_atoll|g'
 
 post-install:
 	@-update-desktop-database
