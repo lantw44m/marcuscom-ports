@@ -39,12 +39,3 @@
  
  
  evolutionuidir="$privdatadir/ui"
-@@ -31514,7 +31515,7 @@
-   enable_plugins=all
- fi;
- 
--plugins_base="calendar-file calendar-http calendar-weather itip-formatter plugin-manager exchange-account-setup default-source addressbook-file startup-wizard print-message mark-all-read groupwise-features mono"
-+plugins_base="calendar-file calendar-http calendar-weather itip-formatter plugin-manager exchange-account-setup default-source addressbook-file startup-wizard print-message mark-all-read groupwise-features"
- 
- plugins_standard="bbdb subject-thread save-attachments prefer-plain save-calendar select-one-source copy-tool mail-to-task mark-calendar-offline audio-inline mailing-list-actions new-mail-notify"
- 

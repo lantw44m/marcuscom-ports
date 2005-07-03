@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.66 2005/06/28 05:40:06 adamw Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.67 2005/07/02 04:53:04 marcus Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.3.3.1
+PORTVERSION=	2.3.4
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -40,6 +40,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	apps_evolution_addressbook-${EVO_VERSION}.schemas \
 		apps_evolution_calendar-${EVO_VERSION}.schemas \
+		apps-evolution-mail-prompts-checkdefault-2.4.schemas \
 		apps_evolution_shell-${EVO_VERSION}.schemas \
 		evolution-mail-${EVO_VERSION}.schemas
 
