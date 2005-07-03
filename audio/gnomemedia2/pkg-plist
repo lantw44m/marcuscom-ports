@@ -346,14 +346,6 @@ share/gnome/pixmaps/gnome-cd.png
 share/gnome/pixmaps/gnome-cd/cd.png
 share/gnome/pixmaps/gnome-cd/disc.png
 share/gnome/pixmaps/gnome-cd/media-eject.png
-share/gnome/pixmaps/gnome-cd/media-ffwd.png
-share/gnome/pixmaps/gnome-cd/media-next.png
-share/gnome/pixmaps/gnome-cd/media-pause.png
-share/gnome/pixmaps/gnome-cd/media-play.png
-share/gnome/pixmaps/gnome-cd/media-prev.png
-share/gnome/pixmaps/gnome-cd/media-record.png
-share/gnome/pixmaps/gnome-cd/media-rewind.png
-share/gnome/pixmaps/gnome-cd/media-stop.png
 share/gnome/pixmaps/gnome-cd/once.png
 share/gnome/pixmaps/gnome-cd/repeat.png
 share/gnome/pixmaps/gnome-cd/themes/None/None.theme
