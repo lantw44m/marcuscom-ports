@@ -21,7 +21,7 @@ USE_X_PREFIX=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libglade2 gconf2
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CFLAGS+=	-DHAVE_SOCKADDR_SA_LEN
