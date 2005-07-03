@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.297 2005/07/03 17:22:02 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.298 2005/07/03 17:31:08 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -319,7 +319,7 @@ libgnomeprintui_LIB_DEPENDS=	gnomeprintui-2-2.1:${PORTSDIR}/x11-toolkits/libgnom
 libgnomeprintui_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomeprintui-2.2.pc
 libgnomeprintui_USE_GNOME_IMPL=	libgnomeprint libgnomecanvas
 
-libgnome_LIB_DEPENDS=	gnome-2.1000:${PORTSDIR}/x11/libgnome
+libgnome_LIB_DEPENDS=	gnome-2.1100:${PORTSDIR}/x11/libgnome
 libgnome_DETECT=	${X11BASE}/libdata/pkgconfig/libgnome-2.0.pc
 libgnome_USE_GNOME_IMPL=libxslt gnomevfs2 esound
 
