@@ -2,7 +2,8 @@
 # Date created:		21 May 2002
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/eog/Makefile,v 1.35 2005/06/28 02:21:20 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	eog

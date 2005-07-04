@@ -2,7 +2,8 @@
 # Date Created:			03 June 2003
 # Whom:				Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/net/gnomenettool/Makefile,v 1.15 2005/03/12 10:39:31 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnomenettool
