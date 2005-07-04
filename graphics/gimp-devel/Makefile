@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.5 2005/06/28 05:40:04 adamw Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.6 2005/07/02 21:28:37 marcus Exp $
 #
 
 PORTNAME=	gimp
@@ -38,7 +38,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack intltool intlhack gtk20 libartlgpl2 librsvg2
 WANT_GNOME=	yes
 INSTALLS_SHLIB=	yes

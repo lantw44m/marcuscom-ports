@@ -3,7 +3,7 @@
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/libgnomecanvasmm26/Makefile,v 1.6 2005/06/28 05:40:05 adamw Exp $
 #
 
 PORTNAME=	libgnomecanvasmm
@@ -27,7 +27,7 @@ USE_GMAKE=	yes
 USE_GCC=	3.4
 USE_REINPLACE=	yes
 USE_GNOME=	gnomehack libgnomecanvas
-USE_INC_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15:inc
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static
 

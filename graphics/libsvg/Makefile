@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/libsvg/Makefile,v 1.2 2005/06/28 05:40:05 adamw Exp $
 #
 
 PORTNAME=	libsvg
@@ -18,7 +18,7 @@ LIB_DEPENDS=	fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig \
 		png.5:${PORTSDIR}/graphics/png \
 		jpeg.9:${PORTSDIR}/graphics/jpeg
 
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	libxml2 gnomehack gnometarget
 USE_ICONV=	yes
 USE_REINPLACE=	yes

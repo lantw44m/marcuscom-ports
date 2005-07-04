@@ -30,7 +30,7 @@ INSTALLS_OMF=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
 		gail
 USE_GSTREAMER=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		FREEBSD_SYS=${FREEBSD_SYS}

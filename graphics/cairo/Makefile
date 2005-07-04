@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/cairo/Makefile,v 1.11 2005/06/28 05:40:04 adamw Exp $
 #
 
 PORTNAME=	cairo
@@ -21,7 +21,7 @@ LIB_DEPENDS=	pixman.1:${PORTSDIR}/graphics/libpixman \
 
 CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR}
 USE_GNOME=	gnometarget gnomehack
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 
 CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${X11BASE}/include" \

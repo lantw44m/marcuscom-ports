@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom$
+#	$MCom: ports/graphics/py-cairo/Makefile,v 1.3 2005/06/28 05:23:51 ahze Exp $
 #
 
 PORTNAME=	cairo
@@ -23,7 +23,7 @@ RUN_DEPENDS=	${BUILD_DEPENDS}
 USE_PYTHON=	yes
 USE_REINPLACE=	yes
 WANT_GNOME=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 
 .include <bsd.port.pre.mk>
 

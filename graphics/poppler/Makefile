@@ -3,7 +3,7 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.7 2005/06/28 05:40:06 adamw Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.8 2005/07/02 23:25:15 ahze Exp $
 #
 
 PORTNAME=	poppler
@@ -16,7 +16,7 @@ COMMENT=	A PDF rendering library
 
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix gnomehack gtk20
 INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
