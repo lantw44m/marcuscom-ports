@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/graphics/py-cairo/Makefile,v 1.3 2005/06/28 05:23:51 ahze Exp $
+#	$MCom: ports/graphics/py-cairo/Makefile,v 1.4 2005/07/04 00:11:30 marcus Exp $
 #
 
 PORTNAME=	cairo
@@ -18,7 +18,7 @@ COMMENT=	Python bindings for Cairo
 
 BUILD_DEPENDS=	${PYNUMERIC}
 LIB_DEPENDS=	cairo.1:${PORTSDIR}/graphics/cairo
-RUN_DEPENDS=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${PYNUMERIC}
 
 USE_PYTHON=	yes
 USE_REINPLACE=	yes
