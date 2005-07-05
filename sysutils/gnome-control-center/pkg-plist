@@ -1,3 +1,4 @@
+%%ABOUTME%%bin/gnome-about-me
 bin/gnome-accessibility-keyboard-properties
 bin/gnome-at-properties
 bin/gnome-background-properties
@@ -34,6 +35,7 @@ lib/window-manager-settings/libmetacity.so
 libdata/bonobo/servers/GNOME_SettingsDaemon.server
 libdata/pkgconfig/gnome-window-settings-2.0.pc
 libexec/gnome-settings-daemon
+%%ABOUTME%%share/gnome/applications/gnome-about-me.desktop
 share/gnome/applications/accessibility-keyboard.desktop
 share/gnome/applications/at-properties.desktop
 share/gnome/applications/background.desktop
@@ -53,6 +55,7 @@ share/gnome/applications/themus-theme-applier.desktop
 share/gnome/applications/window-properties.desktop
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/control-center-2.0/icons/display-capplet.png
+%%ABOUTME%%share/gnome/control-center-2.0/interfaces/gnome-about-me.glade
 share/gnome/control-center-2.0/interfaces/acme.glade
 share/gnome/control-center-2.0/interfaces/apply-font.glade
 share/gnome/control-center-2.0/interfaces/at-enable-dialog.glade
@@ -84,6 +87,9 @@ share/gnome/control-center-2.0/pixmaps/bar.png
 share/gnome/control-center-2.0/pixmaps/double-click-maybe.png
 share/gnome/control-center-2.0/pixmaps/double-click-off.png
 share/gnome/control-center-2.0/pixmaps/double-click-on.png
+%%ABOUTME%%share/gnome/control-center-2.0/pixmaps/gnome-about-me-bulb-off.png
+%%ABOUTME%%share/gnome/control-center-2.0/pixmaps/gnome-about-me-bulb-on.png
+%%ABOUTME%%share/gnome/control-center-2.0/pixmaps/gnome-about-me.png
 share/gnome/control-center-2.0/pixmaps/keyboard-bell.png
 share/gnome/control-center-2.0/pixmaps/keyboard-cursor.png
 share/gnome/control-center-2.0/pixmaps/keyboard-repeat.png

@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.74 2005/06/28 05:40:09 adamw Exp $
+#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.75 2005/07/01 18:06:17 marcus Exp $
 #
 
 PORTNAME=	gnomecontrolcenter2
-PORTVERSION=	2.11.4
+PORTVERSION=	2.11.5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/2.11
@@ -39,6 +39,17 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		desktop_gnome_peripherals_keyboard_xkb.schemas \
 		fontilus.schemas themus.schemas
 
+.include <bsd.port.pre.mk>
+
+.if ${HAVE_GNOME:Mevolutiondataserver}!=""
+USE_GNOME+=	evolutiondataserver
+CONFIGURE_ARGS+=--enable-aboutme
+PLIST_SUB+=	ABOUTME=""
+.else
+CONFIGURE_ARGS+=--disable-aboutme
+PLIST_SUB+=	ABOUTME="@comment "
+.endif
+
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[{]prefix[}]/share/pixmaps|{datadir}/pixmaps|g'
@@ -51,4 +62,4 @@ post-patch:
 post-install:
 	@-update-desktop-database
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
