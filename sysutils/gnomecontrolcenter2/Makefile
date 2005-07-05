@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.75 2005/07/01 18:06:17 marcus Exp $
+#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.76 2005/07/05 18:31:19 marcus Exp $
 #
 
 PORTNAME=	gnomecontrolcenter2
@@ -38,6 +38,11 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		desktop_gnome_font_rendering.schemas \
 		desktop_gnome_peripherals_keyboard_xkb.schemas \
 		fontilus.schemas themus.schemas
+
+.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.undef WITHOUT_GNOME
+WITH_GNOME=	yes
+.endif
 
 .include <bsd.port.pre.mk>
 
