@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11/gnome2/Makefile,v 1.110 2005/06/28 05:40:12 adamw Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.11.3
+PORTREVISION=	1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -54,6 +55,7 @@ RUN_DEPENDS?=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2
 		vino-session:${PORTSDIR}/net/vino \
 		ximian-connector-setup-2.4:${PORTSDIR}/mail/evolution-exchange \
 		${X11BASE}/lib/gstreamer-0.8/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins-core \
+		${X11BASE}/lib/gstreamer-0.8/libgstgconfelements.so:${PORTSDIR}/devel/gstreamer-plugins-gconf \
 		totem:${PORTSDIR}/multimedia/totem-gstreamer \
 		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2 \
 		${X11BASE}/share/gnome/gnome-background-properties/gnome-branded.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
