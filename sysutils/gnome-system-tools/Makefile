@@ -2,7 +2,8 @@
 # Date created:				17 May 2004
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gnomesystemtools/Makefile,v 1.15 2005/03/12 10:39:34 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnomesystemtools

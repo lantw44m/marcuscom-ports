@@ -2,7 +2,8 @@
 # Date created:		02 June 2002
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/glade2/Makefile,v 1.65 2005/07/02 05:41:03 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	glade

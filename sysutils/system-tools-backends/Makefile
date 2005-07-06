@@ -2,7 +2,8 @@
 # Date created:				11 February 2005
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/system-tools-backends/Makefile,v 1.4 2005/04/24 06:37:56 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	system-tools-backends
