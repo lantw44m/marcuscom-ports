@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.48 2005/07/01 17:55:37 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.49 2005/07/03 22:19:35 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -25,11 +25,13 @@ USE_GMAKE=	yes
 USE_BISON=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget libgnomeui
+USE_OPENLDAP=	yes
 USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--enable-nss=yes \
+		--with-openldap=yes \
 		--with-nss-includes=${LOCALBASE}/include/nss/nss \
 		--with-nss-libs=${LOCALBASE}/lib \
 		--with-nspr-includes=${LOCALBASE}/include/nspr \
@@ -46,13 +48,6 @@ PLIST_SUB=	VERSION="1.4" EVO_VERSION="1.2"
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-libedataserver_e-msgport.c
 .endif
 
-.if !defined(WITHOUT_LDAP)
-USE_OPENLDAP=	yes
-CONFIGURE_ARGS+=--with-openldap=yes
-.else
-CONFIGURE_ARGS+=--with-openldap=no
-.endif
-
 .if ${OSVERSION} >= 500000 && !defined(NO_KERBEROS) && \
 	exists(/usr/lib/libkrb5.so)
 CONFIGURE_ARGS+=	--with-krb5=/usr
@@ -64,11 +59,5 @@ CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} --with-krb5-includes=${HEIMDAL_HOME
 CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
 .endif
 .endif
-
-pre-everything::
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "evolution-data-server has the following configurable option(s):"
-	@${ECHO_MSG} "	WITHOUT_LDAP	Disable LDAP support"
-	@${ECHO_MSG} ""
 
 .include <bsd.port.post.mk>
