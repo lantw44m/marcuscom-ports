@@ -3,16 +3,16 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/glade2/Makefile,v 1.12 2005/07/06 05:36:06 marcus Exp $
 #
 
 PORTNAME=	glade
 PORTVERSION=	2.10.0
-PKGNAMESUFFIX=	2
 PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
+PKGNAMESUFFIX=	2
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
