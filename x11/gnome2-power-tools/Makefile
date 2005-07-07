@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.48 2005/06/28 05:40:12 adamw Exp $
+#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.49 2005/06/29 07:44:54 ahze Exp $
 #
 
 CATEGORIES=	x11 gnome
@@ -23,7 +23,11 @@ RUN_DEPENDS=	${X11BASE}/lib/epiphany-1.6/extensions/libgesturesextension.so:${PO
 		bpm:${PORTSDIR}/sysutils/bpm \
 		gnome-file-share-properties:${PORTSDIR}/www/gnome-user-share \
 		gnome-menu-editor:${PORTSDIR}/deskutils/gnome-menu-editor \
-		serpentine:${PORTSDIR}/sysutils/serpentine
+		serpentine:${PORTSDIR}/sysutils/serpentine \
+		devilspie:${PORTSDIR}/x11-wm/devilspie \
+		${X11BASE}/lib/nautilus/extensions-1.0/libnautilus-open-terminal.so:${PORTSDIR}/deskutils/nautilus-open-terminal \
+		gtweakui-menus:${PORTSDIR}/deskutils/gtweakui \
+		gnome-art:${PORTSDIR}/x11-themes/gnome-art
 #		${X11BASE}/libexec/quick-lounge-applet:${PORTSDIR}/misc/quick-lounge-applet \
 
 MASTERDIR=	${.CURDIR}/../gnome2
