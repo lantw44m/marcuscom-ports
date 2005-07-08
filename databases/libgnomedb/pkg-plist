@@ -22,6 +22,7 @@ include/libgnomedb-1.3/libgnomedb/gnome-db-decl.h
 include/libgnomedb-1.3/libgnomedb/gnome-db-dict.h
 include/libgnomedb-1.3/libgnomedb/gnome-db-dsn-config-druid.h
 include/libgnomedb-1.3/libgnomedb/gnome-db-dsn-config.h
+include/libgnomedb-1.3/libgnomedb/gnome-db-dsn-spec.h
 include/libgnomedb-1.3/libgnomedb/gnome-db-editor.h
 include/libgnomedb-1.3/libgnomedb/gnome-db-entity.h
 include/libgnomedb-1.3/libgnomedb/gnome-db-enums.h
@@ -126,7 +127,7 @@ lib/libgnomedb_handlers-3.so.4
 lib/libgnomedb_parser-3.a
 lib/libgnomedb_parser-3.so
 lib/libgnomedb_parser-3.so.4
-libdata/pkgconfig/libgnomedb.pc
+libdata/pkgconfig/libgnomedb-2.0.pc
 %%DOCSDIR%%/GnomeDbBase.html
 %%DOCSDIR%%/GnomeDbBasicForm.html
 %%DOCSDIR%%/GnomeDbCanvas.html
@@ -258,6 +259,7 @@ libdata/pkgconfig/libgnomedb.pc
 %%DOCSDIR%%/libgnomedb-GnomeDbDataSourceSelector.html
 %%DOCSDIR%%/libgnomedb-GnomeDbDsnConfig.html
 %%DOCSDIR%%/libgnomedb-GnomeDbDsnConfigDruid.html
+%%DOCSDIR%%/libgnomedb-GnomeDbDsnSpec.html
 %%DOCSDIR%%/libgnomedb-GnomeDbEditor.html
 %%DOCSDIR%%/libgnomedb-GnomeDbError.html
 %%DOCSDIR%%/libgnomedb-GnomeDbErrorDialog.html
