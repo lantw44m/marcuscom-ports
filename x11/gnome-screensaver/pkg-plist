@@ -6,6 +6,14 @@ libexec/gnome-screensaver/popsquares
 share/gnome/applications/gnome-screensaver-preferences.desktop
 share/gnome/gnome-screensaver/gnome-screensaver-preferences.glade
 share/gnome/gnome-screensaver/themes/popsquares.xml
+share/locale/de/LC_MESSAGES/gnome-screensaver.mo
+share/locale/en_CA/LC_MESSAGES/gnome-screensaver.mo
+share/locale/en_GB/LC_MESSAGES/gnome-screensaver.mo
+share/locale/es/LC_MESSAGES/gnome-screensaver.mo
+share/locale/ja/LC_MESSAGES/gnome-screensaver.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-screensaver.mo
+share/locale/sv/LC_MESSAGES/gnome-screensaver.mo
+share/locale/zh_CN/LC_MESSAGES/gnome-screensaver.mo
 @dirrm share/gnome/gnome-screensaver/themes
 @dirrm share/gnome/gnome-screensaver
 @dirrm libexec/gnome-screensaver
