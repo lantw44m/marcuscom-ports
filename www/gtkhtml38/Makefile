@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml3/Makefile,v 1.51 2005/07/01 18:07:12 marcus Exp $
+#   $MCom: ports/www/gtkhtml3/Makefile,v 1.52 2005/07/03 19:23:41 kwm Exp $
 #
 
 PORTNAME=	gtkhtml3
-PORTVERSION=	3.7.3
+PORTVERSION=	3.7.4
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/3.7
