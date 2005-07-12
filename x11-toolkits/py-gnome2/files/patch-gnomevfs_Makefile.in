@@ -1,18 +1,11 @@
---- gnomevfs/Makefile.in.orig	Thu May 19 12:37:04 2005
-+++ gnomevfs/Makefile.in	Thu May 19 12:37:30 2005
-@@ -272,13 +272,13 @@
+--- gnomevfs/Makefile.in.orig	Mon Jul 11 23:57:09 2005
++++ gnomevfs/Makefile.in	Tue Jul 12 00:02:34 2005
+@@ -272,7 +272,7 @@
   vfs-handle.c pygnomevfs.h pygnomevfs-private.h vfs-xfer-progress-info.c \
   vfs-context.c vfs-async-handle.c vfs-volume.c vfs-drive.c vfs-volume-monitor.c
  
 -vfsmethoddir = $(libdir)/gnome-vfs-2.0/modules
-+vfsmethoddir = %%X11BASE%%/lib/gnome-vfs-2.0/modules
++vfsmethoddir = /usr/X11R6/lib/gnome-vfs-2.0/modules
  @BUILD_PYVFSMODULE_FALSE@vfsmethod_LTLIBRARIES = 
  @BUILD_PYVFSMODULE_TRUE@vfsmethod_LTLIBRARIES = libpythonmethod.la
  libpythonmethod_la_CFLAGS = $(GNOME_VFS_MODULE_CFLAGS) -DGNOME_VFS_PYTHON_DIR="\"$(vfsmethoddir)\""
- libpythonmethod_la_SOURCES = gnome-vfs-python-method.c
- libpythonmethod_la_LDFLAGS = $(common_ldflags) -export-symbols-regex "vfs_module_(init|shutdown)"
--libpythonmethod_la_LIBADD = $(GNOME_VFS_MODULE_LIBS) -lpython$(PYTHON_VERSION)
-+libpythonmethod_la_LIBADD = $(GNOME_VFS_MODULE_LIBS) -l$(PYTHON_VERSION)
- all: all-am
- 
- .SUFFIXES:
