@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/mergeant/Makefile,v 1.12 2005/07/01 17:55:37 marcus Exp $
+#   $MCom: ports/databases/mergeant/Makefile,v 1.13 2005/07/09 06:11:49 adamw Exp $
 #
 
 PORTNAME=	mergeant
-PORTVERSION=	0.60
+PORTVERSION=	0.61
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.60
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.61
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -27,11 +27,5 @@ INSTALLS_SHLIB=	yes
 USE_REINPLACE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-
-#remove this with the next update
-post-patch:
-	@${REINPLACE_CMD} -e "s|libgda|libgda-2.0|g; \
-		s|libgnomedb|libgnomedb-2.0|g" \
-		${WRKSRC}/configure
 
 .include <bsd.port.mk>
