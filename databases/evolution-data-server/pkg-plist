@@ -125,6 +125,7 @@ include/evolution-data-server-%%VERSION%%/exchange/e2k-propnames.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-restriction.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-result.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-security-descriptor.h
+include/evolution-data-server-%%VERSION%%/exchange/e2k-sid.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-types.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-uri.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-utils.h
@@ -133,6 +134,7 @@ include/evolution-data-server-%%VERSION%%/exchange/e2k-xml-utils.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-account.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-constants.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-folder-size.h
+include/evolution-data-server-%%VERSION%%/exchange/exchange-hierarchy-foreign.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-hierarchy-somedav.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-hierarchy-webdav.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-hierarchy.h
@@ -144,6 +146,8 @@ include/evolution-data-server-%%VERSION%%/groupwise/e-gw-container.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-filter.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-item.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-message.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-proxy.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-recur-utils.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-sendoptions.h
 include/evolution-data-server-%%VERSION%%/libebook/Evolution-DataServer-Addressbook.h
 include/evolution-data-server-%%VERSION%%/libebook/e-address-western.h
@@ -302,7 +306,7 @@ lib/libcamel-%%EVO_VERSION%%.so
 lib/libcamel-%%EVO_VERSION%%.so.0
 lib/libcamel-provider-%%EVO_VERSION%%.a
 lib/libcamel-provider-%%EVO_VERSION%%.so
-lib/libcamel-provider-%%EVO_VERSION%%.so.5
+lib/libcamel-provider-%%EVO_VERSION%%.so.6
 lib/libebook-%%EVO_VERSION%%.a
 lib/libebook-%%EVO_VERSION%%.so
 lib/libebook-%%EVO_VERSION%%.so.4
@@ -323,7 +327,7 @@ lib/libedataserverui-%%EVO_VERSION%%.so
 lib/libedataserverui-%%EVO_VERSION%%.so.5
 lib/libegroupwise-%%EVO_VERSION%%.a
 lib/libegroupwise-%%EVO_VERSION%%.so
-lib/libegroupwise-%%EVO_VERSION%%.so.7
+lib/libegroupwise-%%EVO_VERSION%%.so.8
 lib/libexchange-storage-%%EVO_VERSION%%.a
 lib/libexchange-storage-%%EVO_VERSION%%.so
 lib/libexchange-storage-%%EVO_VERSION%%.so.0
