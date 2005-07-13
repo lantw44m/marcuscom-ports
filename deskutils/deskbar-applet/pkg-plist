@@ -1,0 +1,6 @@
+libdata/bonobo/servers/DeskbarApplet.server
+libexec/deskbar-applet.py
+%%DATADIR%%/default-engines.txt
+%%DATADIR%%/deskbar-applet.glade
+%%DATADIR%%/deskbar-applet.png
+@dirrm %%DATADIR%%
