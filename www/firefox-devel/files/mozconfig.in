@@ -1,6 +1,6 @@
 # .mozconfig.in -*-shell-script-*-
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/firefox/files/mozconfig.in,v 1.5 2005/06/28 05:40:11 adamw Exp $
 ######################################################################
 # standard opts from README
 ac_add_options --enable-application=browser

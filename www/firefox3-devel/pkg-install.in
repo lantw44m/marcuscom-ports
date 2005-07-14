@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/firefox/pkg-install.in,v 1.5 2005/06/28 05:40:11 adamw Exp $
 #
 # Date created:			Mon Nov 29, 2003
 # Whom:				Thierry Thomas (<thierry@pompo.net>)
@@ -15,7 +15,6 @@ PATH=/bin:/usr/bin:/usr/local/bin
 
 MOZDIR=%%MOZDIR%%
 REGXPCOM=${MOZDIR}/regxpcom
-REGCHROME=${MOZDIR}/regchrome
 FIREFOX=${MOZDIR}/firefox-bin
 
 echo "===> Building Chrome's registry..."
@@ -28,7 +27,6 @@ rm -rf ${MOZDIR}/extensions
 
 cd ${MOZDIR} || exit 1
 ./run-mozilla.sh ${REGXPCOM} || true
-./run-mozilla.sh ${REGCHROME} || true
 ./run-mozilla.sh ${FIREFOX} -register > /dev/null 2>&1
 
 exit 0

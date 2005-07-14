@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.8 2005/06/28 05:40:11 adamw Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.9 2005/07/14 00:03:59 ahze Exp $
 #
 
 PORTNAME=	firefox
@@ -49,11 +49,13 @@ EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude */CVS/* \
 			--exclude MANIFEST
 
 FIREFOX=	${PORTNAME}
+FF_SUFX=	-devel
+FF=		${FIREFOX}${FF_SUFX}
 FF_VER=		1.0+
 #FF_VER=	${PORTVERSION}
 
-FIREFOX_ICON=	${FIREFOX}.xpm
-FIREFOX_ICON_SRC=	${PREFIX}/lib/${FIREFOX}/chrome/icons/default/default.xpm
+FIREFOX_ICON=	${FF}.xpm
+FIREFOX_ICON_SRC=	${PREFIX}/lib/${FF}/chrome/icons/default/default.xpm
 
 PKGCONFIG_FILES=firefox-gtkmozembed firefox-js firefox-xpcom \
 		firefox-nspr firefox-nss firefox-plugin
@@ -64,8 +66,8 @@ JPI_LIST?=\
 	${LOCALBASE}/diablo-jdk1.3.1/jre/plugin/${ARCH}/ns600/libjavaplugin_oji.so \
 	${LOCALBASE}/jdk1.3.1/jre/plugin/${ARCH}/ns600/libjavaplugin_oji.so
 
-SYSTEM_PREFS=		${FAKEDIR}/lib/${FIREFOX}-${FF_VER}/defaults/pref/firefox.js
-SCRIPTS_DIR=		${FAKEDIR}/lib/${FIREFOX}-${FF_VER}
+SYSTEM_PREFS=		${FAKEDIR}/lib/${FF}/defaults/pref/firefox.js
+SCRIPTS_DIR=		${FAKEDIR}/lib/${FF}
 MOZ_PIS_SCRIPTS=	S50cleanhome
 MOZ_PIS_DIR=		${SCRIPTS_DIR}/init.d
 CPPFLAGS+=	-I${X11BASE}/include -I${LOCALBASE}/include
@@ -130,17 +132,19 @@ post-extract::
 		-e 's|@PERL@|${PERL5}|'			\
 		<${FILESDIR}/mozconfig.in >${WRKSRC}/.mozconfig
 	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' \
-		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/firefox.desktop
+		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${FF}.desktop
 
 post-patch:
-	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${FIREFOX}|g ; \
+	@${REINPLACE_CMD} -e 's|%%FIREFOX%%|${FF}|' \
+		${WRKSRC}/config/autoconf.mk.in
+	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${FF}|g ; \
 		s|%%PREFIX%%|${PREFIX}|g ; \
 		s|%%X11BASE%%|${X11BASE}|g' \
 		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
-	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${FIREFOX}|g' \
+	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${FF}|g' \
 		< ${MASTERDIR}/pkg-deinstall.in > ${PKGDEINSTALL}
 .for ii in ${MOZ_PIS_SCRIPTS}
-	@${SED} -e 's|%%MOZILLA%%|${FIREFOX}|g ; \
+	@${SED} -e 's|%%MOZILLA%%|${FF}|g ; \
 		s|%%PREFIX%%|${PREFIX}|g ; \
 		s|%%X11BASE%%|${X11BASE}|g' \
 		< ${FILESDIR}/moz_pis_${ii} > ${WRKDIR}/moz_pis_${ii}
@@ -177,17 +181,18 @@ pre-install:
 	@${RM} -rf ${FAKEDIR} ${PLIST}
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		Makefile ${MAKE_ARGS} install
-	@${INSTALL_PROGRAM} ${WRKSRC}/rdf/chrome/tools/chromereg/regchrome ${FAKEDIR}/lib/${FIREFOX}-${FF_VER}
 	@${MKDIR} ${SCRIPTS_DIR}
 	@${MKDIR} ${MOZ_PIS_DIR}
-	${ECHO_CMD} 'share/applications/firefox.desktop' >> ${PLIST}
+	${ECHO_CMD} 'share/applications/${FF}.desktop' >> ${PLIST}
 	${ECHO_CMD} 'share/pixmaps/${FIREFOX_ICON}' >> ${PLIST}
 	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g; \
-		s|${FIREFOX}-${FF_VER}|${FIREFOX}|' \
+		s|${FIREFOX}|${FF}|; \
+		s|-devel||; \
+		s|$${progbase}-bin|${FIREFOX}-bin|' \
 		${FAKEDIR}/bin/firefox \
 		${FAKEDIR}/bin/firefox-config
-	${ECHO_CMD} bin/firefox >> ${PLIST}
-	${ECHO_CMD} bin/firefox-config >> ${PLIST}
+	${ECHO_CMD} bin/${FF} >> ${PLIST}
+	${ECHO_CMD} bin/${FF}-config >> ${PLIST}
 .for ii in ${MOZ_PIS_SCRIPTS}
 	${INSTALL_SCRIPT} ${WRKDIR}/moz_pis_${ii} ${MOZ_PIS_DIR}/${ii}
 .endfor
@@ -197,35 +202,35 @@ pre-install:
 	${ECHO_CMD} "pref(\"browser.link.open_external\", 3);" \
 		>> ${SYSTEM_PREFS}
 .endif # !defined(WITHOUT_NEWTAB)
-	cd ${FAKEDIR}/lib/${FIREFOX}-${FF_VER} && ${FIND} -s * -type f -o -type l | \
-		${SED} -e 's|^|lib/${FIREFOX}/|' >> ${PLIST} \
+	cd ${FAKEDIR}/lib/${FF} && ${FIND} -s * -type f -o -type l | \
+		${SED} -e 's|^|lib/${FF}/|' >> ${PLIST} \
 		&& ${FIND} -d * -type d | \
-		${SED} -e 's|^|@dirrm lib/${FIREFOX}/|' >> ${PLIST}
-	${ECHO_CMD} @dirrm lib/firefox >> ${PLIST}
+		${SED} -e 's|^|@dirrm lib/${FF}/|' >> ${PLIST}
+	${ECHO_CMD} @dirrm lib/${FF} >> ${PLIST}
 	for pcfile in ${PKGCONFIG_FILES}; do \
-		${REINPLACE_CMD} -e 's|${FIREFOX}-${FF_VER}|${FIREFOX}|g; \
+		${REINPLACE_CMD} -e 's|${FF}|${FF}|g; \
 			s|${FAKEDIR}|${PREFIX}|' \
 			${FAKEDIR}/lib/pkgconfig/$${pcfile}.pc ; \
-		${ECHO_CMD} libdata/pkgconfig/$${pcfile}.pc >> ${PLIST} ; \
+		${ECHO_CMD} libdata/pkgconfig/$${pcfile}${FF_SUFX}.pc >> ${PLIST} ; \
 	done
-	cd ${FAKEDIR}/include/${FIREFOX}-${FF_VER} && ${FIND} -s * -type f -o -type l | \
-		${SED} -e 's|^|include/${FIREFOX}/|' >> ${PLIST} \
+	cd ${FAKEDIR}/include/${FF} && ${FIND} -s * -type f -o -type l | \
+		${SED} -e 's|^|include/${FF}/|' >> ${PLIST} \
 		&& ${FIND} -d * -type d | \
-		${SED} -e 's|^|@dirrm include/${FIREFOX}/|' >> ${PLIST}
-	${ECHO_CMD} @dirrm include/${FIREFOX} >> ${PLIST}
-	${ECHO_CMD} lib/browser_plugins/.${PORTNAME}.keep >> ${PLIST}
+		${SED} -e 's|^|@dirrm include/${FF}/|' >> ${PLIST}
+	${ECHO_CMD} @dirrm include/${FF} >> ${PLIST}
+	${ECHO_CMD} lib/browser_plugins/.${FF}.keep >> ${PLIST}
 	${ECHO_CMD} "@unexec ${RMDIR} %D/lib/browser_plugins 2>/dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@unexec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/${FIREFOX}
-	${CHMOD} 755 ${PREFIX}/lib/${FIREFOX}
-	${INSTALL_SCRIPT} ${FAKEDIR}/bin/firefox ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${FAKEDIR}/bin/firefox-config ${PREFIX}/bin
+	${MKDIR} ${PREFIX}/lib/${FF}
+	${CHMOD} 755 ${PREFIX}/lib/${FF}
+	${INSTALL_SCRIPT} ${FAKEDIR}/bin/firefox ${PREFIX}/bin/${FF}
+	${INSTALL_SCRIPT} ${FAKEDIR}/bin/firefox-config ${PREFIX}/bin/${FF}-config
 	${MKDIR} ${PREFIX}/lib/browser_plugins
-	${TOUCH} -f ${PREFIX}/lib/browser_plugins/.${PORTNAME}.keep
+	${TOUCH} -f ${PREFIX}/lib/browser_plugins/.${FF}.keep
 	if [ ! -L ${PREFIX}/lib/browser_plugins/libjavaplugin_oji.so ]; then \
 		for jpi in ${JPI_LIST}; do \
 			if [ -f $${jpi} ]; then \
@@ -237,22 +242,22 @@ do-install:
 	fi
 	for pcfile in ${PKGCONFIG_FILES}; do \
 		${INSTALL_DATA} ${FAKEDIR}/lib/pkgconfig/$${pcfile}.pc \
-			${PREFIX}/libdata/pkgconfig/$${pcfile}.pc ; \
+			${PREFIX}/libdata/pkgconfig/$${pcfile}${FF_SUFX}.pc ; \
 	done
-	-${RM} -fr ${PREFIX}/include/${FIREFOX}
-	${MKDIR} ${PREFIX}/include/${FIREFOX}
-	${CHMOD} 755 ${PREFIX}/include/${FIREFOX}
-	cd ${FAKEDIR}/include/${FIREFOX}-${FF_VER} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/include/${FIREFOX}
-	cd ${FAKEDIR}/lib/${FIREFOX}-${FF_VER} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${FIREFOX}
+	-${RM} -fr ${PREFIX}/include/${FF}
+	${MKDIR} ${PREFIX}/include/${FF}
+	${CHMOD} 755 ${PREFIX}/include/${FF}
+	cd ${FAKEDIR}/include/${FF} && ${FIND} . | \
+		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/include/${FF}
+	cd ${FAKEDIR}/lib/${FF} && ${FIND} . | \
+		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${FF}
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
 	${MKDIR} ${PREFIX}/share/applications ${PREFIX}/share/pixmaps
-	${INSTALL_DATA} ${WRKDIR}/firefox.desktop ${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKDIR}/${FF}.desktop ${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/other-licenses/branding/firefox/default.xpm ${FIREFOX_ICON_SRC}
 	${LN} -sf ${FIREFOX_ICON_SRC} ${PREFIX}/share/pixmaps/${FIREFOX_ICON}
 	@-update-desktop-database

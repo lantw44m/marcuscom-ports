@@ -1,5 +1,5 @@
 $FreeBSD$
-  $MCom$
+  $MCom: ports/www/firefox/files/patch-config-rules.mk,v 1.5 2005/06/28 05:40:11 adamw Exp $
 
 --- config/rules.mk.orig	Tue Aug 26 13:28:47 2003
 +++ config/rules.mk	Sun Feb  1 15:11:41 2004

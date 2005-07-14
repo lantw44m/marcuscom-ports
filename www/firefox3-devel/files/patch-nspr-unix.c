@@ -1,5 +1,5 @@
 $FreeBSD$
-  $MCom$
+  $MCom: ports/www/firefox/files/patch-nspr-unix.c,v 1.5 2005/06/28 05:40:11 adamw Exp $
 
 --- nsprpub/pr/src/md/unix/unix.c.orig	Sat May 31 18:06:04 2003
 +++ nsprpub/pr/src/md/unix/unix.c	Sat May 31 18:04:43 2003

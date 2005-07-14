@@ -1,5 +1,5 @@
 $FreeBSD$
-  $MCom$
+  $MCom: ports/www/firefox/files/patch-config-mkdepend-imakemdep.h,v 1.5 2005/06/28 05:40:11 adamw Exp $
 
 --- config/mkdepend/imakemdep.h	Fri Sep  4 21:22:25 1998
 +++ config/mkdepend/imakemdep.h	Thu Oct 16 22:43:25 2003
