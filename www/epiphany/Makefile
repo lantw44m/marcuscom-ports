@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.73 2005/07/01 18:07:12 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.74 2005/07/11 22:06:11 marcus Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	1.7.2
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.7
@@ -26,8 +27,9 @@ HEADERS_SUFX=
 MOZ_BUILD=	mozilla
 
 .if !defined(WITH_MOZILLA)
-MOZILLA=	mozilla
+MOZILLA=	firefox
 HEADERS_SUFX=
+MOZ_BUILD=	firefox
 .else
 .if ${WITH_MOZILLA}=="firefox"
 MOZILLA=	firefox
@@ -37,8 +39,9 @@ MOZ_BUILD=	firefox
 MOZILLA=	mozilla-devel
 HEADERS_SUFX=	-devel
 .else
-MOZILLA=	mozilla
+MOZILLA=	firefox
 HEADERS_SUFX=
+MOZ_BUILD=	firefox
 .endif
 .endif
 .endif
@@ -79,10 +82,10 @@ USE_GCC=	3.4
 
 pre-everything::
 	@${ECHO_MSG} ""
-	@${ECHO_MSG} " By default epiphany uses www/mozilla for html rendering, but you can"
+	@${ECHO_MSG} " By default epiphany uses www/firefox for html rendering, but you can"
 	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
 	@${ECHO_MSG}
-	@${ECHO_MSG} "  firefox       "
+	@${ECHO_MSG} "  mozilla       "
 	@${ECHO_MSG} "  mozilla-devel "
 	@${ECHO_MSG} ""
 

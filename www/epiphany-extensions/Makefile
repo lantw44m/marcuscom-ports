@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.46 2005/07/01 18:07:12 marcus Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.47 2005/07/11 22:24:34 marcus Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	1.7.2
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/1.7
@@ -28,8 +29,9 @@ HEADERS_SUFX=
 MOZ_BUILD=	mozilla
 
 .if !defined(WITH_MOZILLA)
-MOZILLA=	mozilla
+MOZILLA=	firefox
 HEADERS_SUFX=
+MOZ_BUILD=	firefox
 .else
 .if ${WITH_MOZILLA}=="firefox"
 MOZILLA=	firefox
@@ -39,8 +41,9 @@ MOZ_BUILD=	firefox
 MOZILLA=	mozilla-devel
 HEADERS_SUFX=	-devel
 .else
-MOZILLA=	mozilla
+MOZILLA=	firefox
 HEADERS_SUFX=
+MOZ_BUILD=	firefox
 .endif
 .endif
 .endif
@@ -82,10 +85,10 @@ USE_GCC=	3.4
 
 pre-everything::
 	@${ECHO_MSG} ""
-	@${ECHO_MSG} " By default epiphany-extensions builds with www/mozilla support, but you can"
+	@${ECHO_MSG} " By default epiphany-extensions builds with www/firefox support, but you can"
 	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
 	@${ECHO_MSG}
-	@${ECHO_MSG} "  firefox       "
+	@${ECHO_MSG} "  mozilla       "
 	@${ECHO_MSG} "  mozilla-devel "
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "Epiphany-extensions also supports the following tunable option(s):"
