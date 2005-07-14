@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11/yelp/Makefile,v 1.54 2005/07/12 18:17:23 marcus Exp $
 #
 
 PORTNAME=	yelp
 PORTVERSION=	2.11.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.11
@@ -25,7 +26,7 @@ MOZILLA=	mozilla
 HEADERS_SUFX=
 
 .if !defined(WITH_MOZILLA)
-MOZILLA=	mozilla
+MOZILLA=	firefox
 HEADERS_SUFX=
 .else
 .if ${WITH_MOZILLA}=="firefox"
@@ -75,11 +76,11 @@ CONFIGURE_ARGS+=--enable-info
 
 pre-everything::
 	@${ECHO_MSG} ""
-	@${ECHO_MSG} " By default yelp uses www/mozilla for html rendering, but you can"
+	@${ECHO_MSG} " By default yelp uses www/firefox for html rendering, but you can"
 	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
 	@${ECHO_MSG}
 	@${ECHO_MSG} "  mozilla-devel "
-	@${ECHO_MSG} "  firefox "
+	@${ECHO_MSG} "  mozilla"
 	@${ECHO_MSG} ""
 
 post-patch:
