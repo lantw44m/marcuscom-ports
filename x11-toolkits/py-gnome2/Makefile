@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome2/Makefile,v 1.20 2005/07/01 18:11:44 marcus Exp $
+#   $MCom: ports/x11-toolkits/py-gnome2/Makefile,v 1.21 2005/07/12 04:11:03 marcus Exp $
 #
 
 PORTNAME=	gnome
@@ -36,6 +36,12 @@ EG_DST_DIR=	${PREFIX}/share/examples/py-gnome
 
 CONFLICTS=	py*-gnome-1*
 
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} >= 503001
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gnomevfs_Makefile.in
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%X11BASE%%|${X11BASE}|' \
 		${WRKSRC}/gnomevfs/Makefile.in
@@ -49,4 +55,4 @@ post-install:
 	${FIND} ${EG_DST_DIR} -type f -print | ${XARGS} ${CHMOD} 0444
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
