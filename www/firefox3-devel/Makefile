@@ -3,18 +3,17 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/firefox/Makefile,v 1.8 2005/06/28 05:40:11 adamw Exp $
 #
 
 PORTNAME=	firefox
-PORTVERSION=	1.1.a1
-PORTREVISION=	1
+DISTVERSION=	1.1a2
+PORTREVISION=	0
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	${PORTNAME}/releases/deerpark/alpha1/source/
-#DISTNAME=	${PORTNAME}-${PORTVERSION}-source
-DISTNAME=	deerpark-alpha1-source
+MASTER_SITE_SUBDIR=	${PORTNAME}/releases/deerpark/alpha2/source/
+DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
@@ -73,7 +72,6 @@ CPPFLAGS+=	-I${X11BASE}/include -I${LOCALBASE}/include
 CFLAGS+=	${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${X11BASE}/lib
 LIBS+=		${PTHREAD_LIBS}
-EXTRA_SCRIPTS=	${PORTNAME}.rb
 
 OPTIONS=	DEBUG "Build a debugging image" off \
 		LOGGING "Enable additional log messages" off \
@@ -141,12 +139,6 @@ post-patch:
 		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
 	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${FIREFOX}|g' \
 		< ${MASTERDIR}/pkg-deinstall.in > ${PKGDEINSTALL}
-.for ii in ${EXTRA_SCRIPTS}
-	@${SED} -e 's|%%MOZILLA%%|${FIREFOX}|g ; \
-		s|%%PREFIX%%|${PREFIX}|g ; \
-		s|%%X11BASE%%|${X11BASE}|g' \
-		< ${FILESDIR}/${ii} > ${WRKDIR}/${ii}
-.endfor
 .for ii in ${MOZ_PIS_SCRIPTS}
 	@${SED} -e 's|%%MOZILLA%%|${FIREFOX}|g ; \
 		s|%%PREFIX%%|${PREFIX}|g ; \
@@ -181,9 +173,6 @@ pre-configure:
 		${FALSE}; \
 	fi
 
-post-build:
-	cd ${WRKSRC}/rdf/chrome/tools/chromereg && ${GMAKE}
-
 pre-install:
 	@${RM} -rf ${FAKEDIR} ${PLIST}
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
@@ -197,9 +186,6 @@ pre-install:
 		s|${FIREFOX}-${FF_VER}|${FIREFOX}|' \
 		${FAKEDIR}/bin/firefox \
 		${FAKEDIR}/bin/firefox-config
-	for i in ${EXTRA_SCRIPTS}; do \
-		${ECHO_CMD} bin/$${i} >> ${PLIST}; \
-	done
 	${ECHO_CMD} bin/firefox >> ${PLIST}
 	${ECHO_CMD} bin/firefox-config >> ${PLIST}
 .for ii in ${MOZ_PIS_SCRIPTS}
@@ -265,9 +251,6 @@ post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
-.for i in ${EXTRA_SCRIPTS}
-	${INSTALL_SCRIPT} ${FILESDIR}/${i} ${PREFIX}/bin
-.endfor
 	${MKDIR} ${PREFIX}/share/applications ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKDIR}/firefox.desktop ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/other-licenses/branding/firefox/default.xpm ${FIREFOX_ICON_SRC}
