@@ -5,7 +5,7 @@ include/totem/1/plparser/totem-pl-parser-builtins.h
 include/totem/1/plparser/totem-pl-parser.h
 lib/libtotem-plparser.a
 lib/libtotem-plparser.so
-lib/libtotem-plparser.so.0
+lib/libtotem-plparser.so.1
 lib/nautilus/extensions-1.0/libtotem-properties-page.a
 lib/nautilus/extensions-1.0/libtotem-properties-page.so
 lib/nautilus/extensions-1.0/libtotem-properties-page.so.0
@@ -56,8 +56,6 @@ share/gnome/totem/filmholes-big-right.png
 share/gnome/totem/filmholes.png
 share/gnome/totem/media-player-48.png
 share/gnome/totem/mozilla-viewer.glade
-share/gnome/totem/playlist-16.png
-share/gnome/totem/playlist-24.png
 share/gnome/totem/playlist-playing.png
 share/gnome/totem/playlist.glade
 share/gnome/totem/popup.glade
@@ -96,6 +94,7 @@ share/locale/eu/LC_MESSAGES/totem.mo
 share/locale/fi/LC_MESSAGES/totem.mo
 share/locale/fr/LC_MESSAGES/totem.mo
 share/locale/ga/LC_MESSAGES/totem.mo
+share/locale/gl/LC_MESSAGES/totem.mo
 share/locale/gu/LC_MESSAGES/totem.mo
 share/locale/he/LC_MESSAGES/totem.mo
 share/locale/hi/LC_MESSAGES/totem.mo

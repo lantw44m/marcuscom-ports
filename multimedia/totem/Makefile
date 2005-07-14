@@ -3,12 +3,11 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.15 2005/06/28 05:40:08 adamw Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.16 2005/07/01 18:03:50 marcus Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	1.1.2
-PORTREVISION=	1
+PORTVERSION=	1.1.3
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
