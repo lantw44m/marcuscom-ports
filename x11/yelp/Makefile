@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.54 2005/07/12 18:17:23 marcus Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.55 2005/07/14 05:38:03 ahze Exp $
 #
 
 PORTNAME=	yelp
@@ -36,7 +36,7 @@ MOZILLA=	firefox
 MOZILLA=	mozilla-devel
 HEADERS_SUFX=	-devel
 .else
-MOZILLA=	mozilla
+MOZILLA=	firefox
 HEADERS_SUFX=
 .endif
 .endif
