@@ -89,6 +89,8 @@ share/locale/wa/LC_MESSAGES/bug-buddy.mo
 share/locale/xh/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_CN/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
+@unexec rmdir %D/share/locale/ug/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/ug 2> /dev/null || true
 @dirrm share/gnome/omf/bug-buddy
 @dirrm share/gnome/help/bug-buddy/C
 @dirrm share/gnome/help/bug-buddy
