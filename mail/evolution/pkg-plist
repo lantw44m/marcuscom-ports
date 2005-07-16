@@ -141,7 +141,7 @@ include/evolution-%%VERSION%%/misc/e-image-chooser.h
 include/evolution-%%VERSION%%/misc/e-info-label.h
 include/evolution-%%VERSION%%/misc/e-map.h
 include/evolution-%%VERSION%%/misc/e-multi-config-dialog.h
-include/evolution-%%VERSION%%/misc/e-pilot-settings.h
+%%PILOT:%%include/evolution-%%VERSION%%/misc/e-pilot-settings.h
 include/evolution-%%VERSION%%/misc/e-popup-menu.h
 include/evolution-%%VERSION%%/misc/e-printable.h
 include/evolution-%%VERSION%%/misc/e-reflow-model.h
@@ -325,7 +325,7 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-mail-to-task.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-mailing-list-actions.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-mark-all-read.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-mark-calendar-offline.so
-lib/evolution/%%VERSION%%/plugins/liborg-gnome-new-mail-notify.so
+%%DBUS%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-new-mail-notify.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-plugin-manager.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-print-message.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-proxy.so
@@ -354,7 +354,7 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-mailing-list-actions.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mailing-list-actions.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-mark-all-read.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mark-calendar-offline.eplug
-lib/evolution/%%VERSION%%/plugins/org-gnome-new-mail-notify.eplug
+%%DBUS%%lib/evolution/%%VERSION%%/plugins/org-gnome-new-mail-notify.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-plugin-manager.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-plugin-manager.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-print-message.eplug

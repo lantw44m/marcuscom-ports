@@ -3,11 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.68 2005/07/03 22:20:16 kwm Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.69 2005/07/13 21:44:30 marcus Exp $
 #
 
 PORTNAME=	evolution
 PORTVERSION=	2.3.5.1
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.3
@@ -54,13 +55,17 @@ OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 
 .include <bsd.port.pre.mk>
 
-.if exists(${X11BASE}/lib/libgstreamer-0.8.so.5) || \
-	defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
 WITH_GSTREAMER=	yes
+WITH_DBUS=	yes
 .endif
 
 .if exists(${LOCALBASE}/lib/libdbus-glib-1.so)
 WITH_DBUS=	yes
+.endif
+
+.if exists(${X11BASE}/lib/libgstreamer-0.8.so)
+WITH_GSTREAMER=	yes
 .endif
 
 .if defined(WITH_PILOT)
