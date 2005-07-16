@@ -139,6 +139,8 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @unexec rmdir %D/share/locale/rw 2> /dev/null || true
 @unexec rmdir %D/share/locale/nso/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/nso 2> /dev/null || true
+@unexec rmdir %D/share/locale/ug/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/ug 2> /dev/null || true
 @dirrm share/gnome/pixmaps/eog
 @dirrm share/gnome/omf/eog
 @dirrm share/gnome/help/eog/zh_TW/figures
