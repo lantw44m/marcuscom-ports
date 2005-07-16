@@ -3,10 +3,9 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.50 2005/07/07 09:33:59 ahze Exp $
+#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.51 2005/07/07 21:53:38 marcus Exp $
 #
 
-PORTREVISION=	1
 CATEGORIES=	x11 gnome
 PKGNAMESUFFIX=	-power-tools
 
