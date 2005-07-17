@@ -3,11 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.13 2005/06/28 05:40:16 adamw Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.14 2005/07/01 18:11:44 marcus Exp $
 #
 
 PORTNAME=	gnome
 PORTVERSION=	2.11.2
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -25,23 +26,23 @@ LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2 \
 		totem-plparser.0:${PORTSDIR}/multimedia/totem-gstreamer
 RUN_DEPENDS=	${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
 
-MOZILLA=	mozilla
+MOZILLA=	firefox
 HEADERS_SUFX=
-MOZ_BUILD=	mozilla
+MOZ_BUILD=	firefox
 
 .if !defined(WITH_MOZILLA)
-MOZILLA=	mozilla
-HEADERS_SUFX=
-.else
-.if ${WITH_MOZILLA}=="firefox"
 MOZILLA=	firefox
-MOZ_BUILD=	firefox
+.else
+.if ${WITH_MOZILLA}=="mozilla"
+MOZILLA=	mozilla
+MOZ_BUILD=	mozilla
 .else
 .if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
 MOZILLA=	mozilla-devel
 HEADERS_SUFX=	-devel
+MOZ_BUILD=	mozilla
 .else
-MOZILLA=	mozilla
+MOZILLA=	firefox
 HEADERS_SUFX=
 .endif
 .endif
