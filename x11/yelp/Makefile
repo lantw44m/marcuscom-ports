@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.55 2005/07/14 05:38:03 ahze Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.56 2005/07/14 05:40:50 ahze Exp $
 #
 
 PORTNAME=	yelp
@@ -22,15 +22,15 @@ BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc:${PORTSDIR}/textp
 RUN_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc:${PORTSDIR}/textproc/gnomedocutils \
 		${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
 
-MOZILLA=	mozilla
+MOZILLA=	firefox
 HEADERS_SUFX=
 
 .if !defined(WITH_MOZILLA)
 MOZILLA=	firefox
 HEADERS_SUFX=
 .else
-.if ${WITH_MOZILLA}=="firefox"
-MOZILLA=	firefox
+.if ${WITH_MOZILLA}=="mozilla"
+MOZILLA=	mozilla
 .else
 .if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
 MOZILLA=	mozilla-devel
