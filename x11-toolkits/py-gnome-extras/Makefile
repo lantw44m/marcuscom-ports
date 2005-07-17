@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.14 2005/07/01 18:11:44 marcus Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.15 2005/07/17 07:45:04 ahze Exp $
 #
 
 PORTNAME=	gnome
@@ -23,7 +23,7 @@ COMMENT=	A set of Python bindings for GNOME 2
 BUILD_DEPENDS=	${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
 LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2 \
 		gtop-2.0.2:${PORTSDIR}/devel/libgtop2 \
-		totem-plparser.0:${PORTSDIR}/multimedia/totem-gstreamer
+		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer
 RUN_DEPENDS=	${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
 
 MOZILLA=	firefox
