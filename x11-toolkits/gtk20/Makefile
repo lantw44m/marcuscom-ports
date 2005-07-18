@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.59 2005/07/05 02:25:37 ahze Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.60 2005/07/08 20:02:37 ahze Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.7.2
+PORTVERSION=	2.7.3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.7,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.7/ \
@@ -65,9 +65,12 @@ CONFIGURE_ARGS+=	--enable-debug=no
 .else
 .if ${WITH_DEBUG:L} == "yes"
 CONFIGURE_ARGS+=	--enable-debug=yes
+STRIP=
 .else
 CONFIGURE_ARGS+=	--enable-debug=minimum
+CFLAGS+=		-g
 .endif
+STRIP=
 .endif
 .endif
 
