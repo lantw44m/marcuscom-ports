@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.69 2005/06/28 05:40:12 adamw Exp $
 #
 
 CATEGORIES=	x11 gnome
@@ -31,7 +31,6 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		jamboree:${PORTSDIR}/audio/jamboree \
 		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data \
 		nautilus-sendto:${PORTSDIR}/deskutils/nautilus-sendto \
-		evince:${PORTSDIR}/graphics/evince \
 		goobox:${PORTSDIR}/audio/goobox \
 		inkscape:${PORTSDIR}/graphics/inkscape
 
