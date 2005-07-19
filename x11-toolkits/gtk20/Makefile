@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.60 2005/07/08 20:02:37 ahze Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.61 2005/07/18 21:20:53 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -25,7 +25,6 @@ DIST_SUBDIR=	gnome2
 #PATCH_SITE_SUBDIR=	xfce
 #PATCHFILES=	gtk+-2.4.0-menushadow.patch
 #PATCH_DIST_STRIP=	-p1
-EXTRA_PATCHES=	${FILESDIR}/gtk-shadow-patch
 .endif
 
 MAINTAINER=	gnome@FreeBSD.org
