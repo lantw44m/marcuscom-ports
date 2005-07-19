@@ -3,11 +3,12 @@
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/libgnomeprint/Makefile,v 1.44 2005/06/28 05:40:09 adamw Exp $
+#   $MCom: ports/print/libgnomeprint/Makefile,v 1.45 2005/07/01 18:05:05 marcus Exp $
 #
 
 PORTNAME=	libgnomeprint
 PORTVERSION=	2.11.0
+PORTREVISION=	1
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.11
@@ -39,7 +40,7 @@ PLIST_SUB=	VERSION=${PORTVERSION} \
 WITH_CUPS=	yes
 .endif
 
-.if defined(WITH_CUPS) && !defined(WITHOUT_CUPS)
+.if !defined(WITHOUT_CUPS)
 CONFIGURE_ARGS+=	--with-cups
 LIB_DEPENDS+=		gnomecups-1.0:${PORTSDIR}/print/libgnomecups
 PLIST_SUB+=		CUPS:=""
