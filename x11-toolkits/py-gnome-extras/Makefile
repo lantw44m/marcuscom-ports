@@ -3,12 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.15 2005/07/17 07:45:04 ahze Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.16 2005/07/17 12:45:16 kwm Exp $
 #
 
 PORTNAME=	gnome
-PORTVERSION=	2.11.2
-PORTREVISION=	1
+PORTVERSION=	2.11.3
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -23,7 +22,9 @@ COMMENT=	A set of Python bindings for GNOME 2
 BUILD_DEPENDS=	${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
 LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2 \
 		gtop-2.0.2:${PORTSDIR}/devel/libgtop2 \
-		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer
+		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
+		gksu1.2.0:${PORTSDIR}/sysutils/libgksu \
+		gksuui1.0.0:${PORTSDIR}/sysutils/libgksuui
 RUN_DEPENDS=	${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
 
 MOZILLA=	firefox
@@ -75,13 +76,15 @@ USE_GCC=	3.4
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|mozilla-gtkmozembed|mozilla-gtkmozembed${HEADERS_SUFX}|g ; \
-		s|mozilla-xpcom|mozilla-xpcom${HEADERS_SUFX}|g ; \
+	@${REINPLACE_CMD} -e 's|mozilla-gtkmozembed|${MOZ_BUILD}-gtkmozembed${HEADERS_SUFX}|g ; \
+		s|mozilla-xpcom|${MOZ_BUILD}-xpcom${HEADERS_SUFX}|g ; \
 		s|$$MOZILLA-gtkmozembed|$$MOZILLA-gtkmozembed${HEADERS_SUFX}|g ; \
 		s|$$MOZILLA-xpcom|$$MOZILLA-xpcom${HEADERS_SUFX}|g' \
 		${WRKSRC}/configure
 	@${FIND} ${WRKSRC}/docs -name Makefile.in | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|^HTML_DIR =.*|HTML_DIR = ${DOCSDIR}|g'
+	@${REINPLACE_CMD} -e 's|-DHAVE_GNOMEPRINT28||g' \
+		${WRKSRC}/configure
 
 .if !defined(NOPORTDOCS)
 post-install:
