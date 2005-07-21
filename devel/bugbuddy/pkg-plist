@@ -17,8 +17,12 @@ share/gnome/bug-buddy/gnome.png
 share/gnome/bug-buddy/ximian.png
 share/gnome/help/bug-buddy/C/bug-buddy.xml
 share/gnome/help/bug-buddy/C/legal.xml
+share/gnome/help/bug-buddy/pa/bug-buddy.xml
+share/gnome/help/bug-buddy/sr/bug-buddy.xml
 share/gnome/mime-info/bug-buddy.keys
 share/gnome/omf/bug-buddy/bug-buddy-C.omf
+share/gnome/omf/bug-buddy/bug-buddy-pa.omf
+share/gnome/omf/bug-buddy/bug-buddy-sr.omf
 share/gnome/pixmaps/bug-buddy.png
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
@@ -89,9 +93,17 @@ share/locale/wa/LC_MESSAGES/bug-buddy.mo
 share/locale/xh/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_CN/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
+@unexec rmdir %D/share/locale/xh/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/xh 2> /dev/null || true
 @unexec rmdir %D/share/locale/ug/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/ug 2> /dev/null || true
+@unexec rmdir %D/share/locale/rw/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/rw 2> /dev/null || true
+@unexec rmdir %D/share/locale/mr/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/mr 2> /dev/null || true
 @dirrm share/gnome/omf/bug-buddy
+@dirrm share/gnome/help/bug-buddy/sr
+@dirrm share/gnome/help/bug-buddy/pa
 @dirrm share/gnome/help/bug-buddy/C
 @dirrm share/gnome/help/bug-buddy
 @dirrm share/gnome/bug-buddy/bugzilla/ximian
