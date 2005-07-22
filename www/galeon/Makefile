@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/www/galeon/Makefile,v 1.1 2005/07/22 04:27:17 ahze Exp $
 #
 
 PORTNAME=	galeon
@@ -61,8 +61,6 @@ MAN1=		galeon.1
 GCONF_SCHEMAS=	galeon.schemas
 
 FLASHPLAYER=	${LOCALBASE}/lib/libflashplayer.so.1
-
-CONFLICTS=	galeon-[0-9]*
 
 .include <bsd.port.pre.mk>
 
