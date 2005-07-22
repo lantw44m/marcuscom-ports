@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.74 2005/07/11 22:06:11 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.75 2005/07/14 05:52:04 ahze Exp $
 #
 
 PORTNAME=	epiphany
@@ -75,7 +75,7 @@ CONFIGURE_ARGS+=	--enable-compile-warnings=no
 .endif
 
 .if ${OSVERSION} < 500000
-.if ${MOZILLA}=="mozilla-devel" || ${MOZILLA}=="firefox"
+.if ${MOZILLA}=="mozilla-devel"
 USE_GCC=	3.4
 .endif
 .endif
