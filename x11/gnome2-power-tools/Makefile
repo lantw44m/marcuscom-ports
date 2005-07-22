@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.52 2005/07/16 02:08:12 marcus Exp $
+#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.53 2005/07/20 08:27:30 ahze Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	2
 
 CATEGORIES=	x11 gnome
 PKGNAMESUFFIX=	-power-tools
@@ -31,7 +31,8 @@ RUN_DEPENDS=	${X11BASE}/lib/epiphany-1.6/extensions/libgesturesextension.so:${PO
 		gtweakui-menus:${PORTSDIR}/deskutils/gtweakui \
 		gnome-art:${PORTSDIR}/x11-themes/gnome-art \
 		${X11BASE}/libdata/bonobo/servers/DeskbarApplet.server:${PORTSDIR}/deskutils/deskbar-applet \
-		brightside:${PORTSDIR}/x11/brightside
+		brightside:${PORTSDIR}/x11/brightside \
+		evolution-gconf-filter-exchange:${PORTSDIR}/devel/evolution-gconf-tools
 #		${X11BASE}/libexec/quick-lounge-applet:${PORTSDIR}/misc/quick-lounge-applet \
 
 MASTERDIR=	${.CURDIR}/../gnome2
