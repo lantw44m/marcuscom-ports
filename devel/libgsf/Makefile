@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgsf/Makefile,v 1.12 2005/07/01 18:00:50 marcus Exp $
+#   $MCom: ports/devel/libgsf/Makefile,v 1.13 2005/07/23 18:59:02 marcus Exp $
 #
 
 PORTNAME=	libgsf
 PORTVERSION=	1.12.1
+PORTREVISION?=	1
 CATEGORIES?=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
