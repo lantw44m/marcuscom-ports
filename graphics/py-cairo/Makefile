@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/graphics/py-cairo/Makefile,v 1.6 2005/07/22 23:32:22 marcus Exp $
+#	$MCom: ports/graphics/py-cairo/Makefile,v 1.7 2005/07/22 23:37:35 ahze Exp $
 #
 
 PORTNAME=	cairo
@@ -25,6 +25,7 @@ USE_PYTHON=	yes
 USE_REINPLACE=	yes
 USE_GNOME=	gnometarget gnomehack
 USE_AUTOTOOLS=	libtool:15
+CONFIGURE_ARGS=	--without-pygtk
 
 .include <bsd.port.pre.mk>
 
@@ -42,5 +43,9 @@ pre-everything::
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.in
+.if ${OSVERSION} < 500000
+	@${REINPLACE_CMD} -e 's|-std=c99||' \
+		${WRKSRC}/configure
+.endif
 
 .include <bsd.port.post.mk>
