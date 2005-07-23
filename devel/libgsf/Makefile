@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgsf/Makefile,v 1.11 2005/06/28 05:40:02 adamw Exp $
+#   $MCom: ports/devel/libgsf/Makefile,v 1.12 2005/07/01 18:00:50 marcus Exp $
 #
 
 PORTNAME=	libgsf
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	An extensible i/o abstraction for dealing with structured file formats
 
-.if !exists(/usr/lib/libbz2.so.1)
+.if !exists(/usr/lib/libbz2.so)
 LIB_DEPENDS+=	bz2.1:${PORTSDIR}/archivers/bzip2
 .endif
 
