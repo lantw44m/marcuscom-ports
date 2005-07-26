@@ -3,11 +3,12 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile,v 1.14 2005/07/13 08:45:47 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile,v 1.15 2005/07/22 00:00:13 marcus Exp $
 #
 
 PORTNAME=	mozilla
 PORTVERSION=	1.7.10
+PORTREVISION?=	1
 PORTEPOCH=	2
 CATEGORIES?=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA} \
@@ -319,6 +320,13 @@ pre-install:
 	${ECHO_CMD} @dirrm include/${MOZILLA} >> ${PLIST}
 	${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@unexec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
+	cd ${FAKEDIR}/share/idl/${MOZILLA}-${PORTVERSION} \
+		&& ${FIND} -s * -type f -o -type l | \
+		${SED} -e 's:^:share/idl/${MOZILLA}/:' >> ${PLIST} \
+		&& ${FIND} -d * -type d | \
+		${SED} -e 's:^:@dirrm share/idl/${MOZILLA}/:' >> ${PLIST}
+		${ECHO_CMD} "@dirrm share/idl/${MOZILLA}" >> ${PLIST}
+		${ECHO_CMD} "@unexec rmdir %D/share/idl 2>/dev/null || true" >> ${PLIST}
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/${MOZILLA}
@@ -358,6 +366,9 @@ do-install:
 	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKDIR}/mozilla.desktop \
 		${PREFIX}/share/applications
+	${MKDIR} ${PREFIX}/share/idl/${MOZILLA}
+	cd ${FAKEDIR}/share/idl/${MOZILLA}-${PORTVERSION} && ${FIND} . | \
+		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/idl/${MOZILLA}
 
 post-install:
 	@${CHMOD} -R u-w ${PREFIX}/lib/${MOZILLA}/components
