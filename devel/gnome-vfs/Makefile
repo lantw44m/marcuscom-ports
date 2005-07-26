@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.99 2005/07/03 19:36:58 marcus Exp $
+#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.100 2005/07/11 21:20:18 marcus Exp $
 #
 
 PORTNAME=	gnomevfs2
-PORTVERSION=	2.11.4
+PORTVERSION=	2.11.90
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.11
@@ -44,16 +44,10 @@ GCONF_SCHEMAS=	desktop_default_applications.schemas \
 .include <bsd.port.pre.mk>
 
 .if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
-.undef WITHOUT_CDPARANOIA
 .undef WITHOUT_SAMBA
 .undef WITHOUT_MDNS
 WITH_MDNS=		yes
-WITH_CDPARANOIA=	yes
 WITH_SAMBA=		yes
-.endif
-
-.if exists(${LOCALBASE}/lib/libcdda_paranoia.a)
-WITH_CDPARANOIA=	yes
 .endif
 
 .if exists(${LOCALBASE}/lib/libsmbclient.so)
@@ -62,13 +56,6 @@ WITH_SAMBA=		yes
 
 .if exists(${LOCALBASE}/lib/libhowl.so)
 WITH_MDNS=		yes
-.endif
-
-.if defined(WITH_CDPARANOIA)
-LIB_DEPENDS+=	cdda_paranoia.0:${PORTSDIR}/audio/cdparanoia
-PLIST_SUB+=	CDPARANOIA=""
-.else
-PLIST_SUB+=	CDPARANOIA="@comment "
 .endif
 
 .if exists(${LOCALBASE}/lib/libfam.so) || !defined(WITHOUT_FAM)
