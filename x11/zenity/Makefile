@@ -3,11 +3,11 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity/Makefile,v 1.37 2005/07/16 07:57:47 marcus Exp $
+#   $MCom: ports/x11/zenity/Makefile,v 1.38 2005/07/18 21:22:45 marcus Exp $
 #
 
 PORTNAME=	zenity
-PORTVERSION=	2.11.1
+PORTVERSION=	2.11.90
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.11
@@ -22,7 +22,7 @@ RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack libgnomecanvas gconf2
+USE_GNOME=	gnomeprefix gnomehack libgnomecanvas gconf2 gnomedocutils
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_REINPLACE=	yes
