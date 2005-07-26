@@ -1,11 +1,9 @@
 bin/sound-juicer
 share/gnome/applications/sound-juicer.desktop
 share/gnome/help/sound-juicer/C/fdl-appendix.xml
-share/gnome/help/sound-juicer/C/figures/prefs.png
-share/gnome/help/sound-juicer/C/figures/startup.png
 share/gnome/help/sound-juicer/C/legal.xml
 share/gnome/help/sound-juicer/C/sound-juicer.xml
-share/gnome/omf/sound-juicer/sound-juicer-manual-C.omf
+share/gnome/omf/sound-juicer/sound-juicer-C.omf
 share/gnome/pixmaps/sound-juicer.png
 share/gnome/sound-juicer/orange-slice.png
 share/gnome/sound-juicer/sj-play.png
@@ -60,12 +58,12 @@ share/locale/sv/LC_MESSAGES/sound-juicer.mo
 share/locale/ta/LC_MESSAGES/sound-juicer.mo
 share/locale/th/LC_MESSAGES/sound-juicer.mo
 share/locale/tr/LC_MESSAGES/sound-juicer.mo
+share/locale/ug/LC_MESSAGES/sound-juicer.mo
 share/locale/uk/LC_MESSAGES/sound-juicer.mo
 share/locale/xh/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_CN/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_TW/LC_MESSAGES/sound-juicer.mo
 @dirrm share/gnome/sound-juicer
 @dirrm share/gnome/omf/sound-juicer
-@dirrm share/gnome/help/sound-juicer/C/figures
 @dirrm share/gnome/help/sound-juicer/C
 @dirrm share/gnome/help/sound-juicer

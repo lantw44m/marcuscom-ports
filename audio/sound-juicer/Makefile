@@ -3,11 +3,11 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/sound-juicer/Makefile,v 1.21 2005/07/03 19:27:24 marcus Exp $
+#   $MCom: ports/audio/sound-juicer/Makefile,v 1.22 2005/07/14 20:45:29 marcus Exp $
 #
 
 PORTNAME=	sound-juicer
-PORTVERSION=	2.11.4
+PORTVERSION=	2.11.90
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.11
@@ -24,7 +24,8 @@ USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui nautiluscdburner
+USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui nautiluscdburner \
+		gnomedocutils
 USE_GSTREAMER=	cdparanoia vorbis flac gconf
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--enable-ignore-missing-cd
