@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/bugbuddy/Makefile,v 1.14 2005/07/16 17:44:49 marcus Exp $
+#   $MCom: ports/devel/bugbuddy/Makefile,v 1.15 2005/07/21 18:42:38 mezz Exp $
 #
 
 PORTNAME=	bugbuddy
@@ -17,9 +17,6 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A bug reporting tool for GNOME 2
 
-BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc:${PORTSDIR}/textproc/gnomedocutils
-RUN_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc:${PORTSDIR}/textproc/gnomedocutils
-
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
@@ -27,11 +24,10 @@ USE_REINPLACE=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop gnomemenus \
-		desktopfileutils
+		desktopfileutils gnomedocutils
 GNOME_DESKTOP_VERSION=2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--with-help-dir=${PREFIX}/share/gnome/help
 
 MAN1=		bug-buddy.1
 GCONF_SCHEMAS=	bug-buddy.schemas
