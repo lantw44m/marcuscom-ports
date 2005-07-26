@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomesession/Makefile,v 1.60 2005/06/28 05:40:13 adamw Exp $
+#   $MCom: ports/x11/gnomesession/Makefile,v 1.61 2005/07/01 18:08:46 marcus Exp $
 #
 
 PORTNAME=	gnomesession
-PORTVERSION=	2.11.1
+PORTVERSION=	2.11.90
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
@@ -31,8 +31,8 @@ USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
-MAN1=		gnome-session.1 gnome-smproxy.1 gnome-wm.1 \
-		session-properties.1 gnome-session-save.1
+MAN1=		gnome-session.1 gnome-wm.1 session-properties.1 \
+		gnome-session-save.1
 MAN5=		default.session.5
 GCONF_SCHEMAS=	gnome-session.schemas
 

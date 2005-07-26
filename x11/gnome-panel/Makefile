@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomepanel/Makefile,v 1.99 2005/07/05 08:37:59 mezz Exp $
+#   $MCom: ports/x11/gnomepanel/Makefile,v 1.100 2005/07/13 10:23:44 ahze Exp $
 #
 
 PORTNAME=	gnomepanel
-PORTVERSION=	2.11.5
+PORTVERSION=	2.11.90
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/2.11
@@ -23,7 +23,7 @@ INSTALLS_SHLIB=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
-		libwnck gnomemenus
+		libwnck gnomemenus gnomedocutils
 WANT_GNOME=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
