@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.301 2005/07/08 20:02:35 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.302 2005/07/18 21:21:17 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -53,12 +53,12 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
 # GNOME 2 components
 _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver \
 		gail gal2 gconf2 glib20 gnomecontrolcenter2 gnomedesktop \
-		gnomemenus gnomepanel gnomespeech gnomevfs2 gstreamerplugins \
-		gtk20 gtkhtml3 gtksourceview libartlgpl2 libbonobo libbonoboui \
-		libgailgnome libgda2 libglade2 libgnome libgnomecanvas libgnomedb \
-		libgnomeprint libgnomeprintui libgnomeui libgsf libgsf_gnome \
-		libgtkhtml libidl librsvg2 libwnck libxml2 libxslt libzvt linc \
-		metacity nautilus2 nautiluscdburner orbit2 pango pygnome2 \
+		gnomedocutils gnomemenus gnomepanel gnomespeech gnomevfs2 \
+		gstreamerplugins gtk20 gtkhtml3 gtksourceview libartlgpl2 libbonobo \
+		libbonoboui libgailgnome libgda2 libglade2 libgnome libgnomecanvas \
+		libgnomedb libgnomeprint libgnomeprintui libgnomeui libgsf \
+		libgsf_gnome libgtkhtml libidl librsvg2 libwnck libxml2 libxslt \
+		libzvt linc metacity nautilus2 nautiluscdburner orbit2 pango pygnome2 \
 		pygnomeextras pygtk2 vte
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
@@ -98,6 +98,7 @@ gnomeprefix_CONFIGURE_ENV=GTKDOC="false"
 gnomeprefix_CONFIGURE_ARGS=--localstatedir=${PREFIX}/share/gnome \
 			   --datadir=${PREFIX}/share/gnome \
 			   --with-html-dir=${GNOME_HTML_DIR} \
+			   --with-help-dir=${PREFIX}/share/gnome/help \
 			   --disable-gtk-doc \
 			   --with-gconf-source=${GCONF_CONFIG_SOURCE}
 gnomeprefix_USE_GNOME_IMPL=gnomehier
@@ -467,6 +468,11 @@ pygnomeextras_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/egg/__init__.py
 pygnomeextras_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
 pygnomeextras_RUN_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
 pygnomeextras_USE_GNOME_IMPL=pygnome2 libgnomeprintui libgtkhtml gnomepanel gtksourceview libwnck nautiluscdburner libgda2
+
+gnomedocutils_DETECT=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc
+gnomedocutils_BUILD_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnomedocutils
+gnomedocutils_RUN_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnomedocutils
+gnomedocutils_USE_GNOME_IMPL=libxslt
 
 ########
 #### NOTE: DO NOT COMMIT THIS NEXT PART TO THE MAIN FREEBSD REPO
