@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.47 2005/07/11 22:24:34 marcus Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.48 2005/07/14 05:52:04 ahze Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	1.7.2
-PORTREVISION=	1
+PORTVERSION=	1.7.3
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/1.7
@@ -33,9 +32,9 @@ MOZILLA=	firefox
 HEADERS_SUFX=
 MOZ_BUILD=	firefox
 .else
-.if ${WITH_MOZILLA}=="firefox"
-MOZILLA=	firefox
-MOZ_BUILD=	firefox
+.if ${WITH_MOZILLA}=="mozilla"
+MOZILLA=	mozilla
+MOZ_BUILD=	mozilla
 .else
 .if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
 MOZILLA=	mozilla-devel
