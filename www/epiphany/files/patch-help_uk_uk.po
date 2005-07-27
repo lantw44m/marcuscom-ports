@@ -1,0 +1,18 @@
+--- help/uk/uk.po.orig	Wed Jul 27 02:52:17 2005
++++ help/uk/uk.po	Wed Jul 27 02:34:45 2005
+@@ -1866,14 +1866,9 @@
+ #: epiphany.xml:2550 
+ msgid "This manual was written by David Bordoley (<email>bordoley@msu.edu</email>), Piers Cornwell (<email>piers@gnome.org</email>) and Patanjali Somayaji (<email>patanjali@codito.com</email>)."
+ msgstr ""
+-"Цю довідку написав David Bordoley (<email>bordoley@msu.edu</email>), Piers Cornwell (<email>piers@gnome.org</email>) та Patanjali Somayaji (<email>patanjali@codito.com</email>). Переклад виконав Максим Дзюманенко (<email>mvd@mylinux.com.ua</email>)"
++"Цю довідку написав David Bordoley (<email>bordoley@msu.edu</email>), Piers Cornwell (<email>piers@gnome.org</email>) та Patanjali Somayaji (<email>patanjali@codito.com</email>)."
+ 
+ #: epiphany.xml:2557 
+ msgid "This program is distributed under the terms of the GNU General Public license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. A copy of this license can be found at this <ulink url=\"ghelp:gpl\" type=\"help\">link</ulink>, or in the file COPYING included with the source code of this program."
+ msgstr ""
+ "Ця програма поширюється на умовах Публічної ліцензії GNU, яку опубліковано Фондом вільного ПЗ; версією 2 цієї ліцензії, або (на ваш розсуд) будь-якою пізнішою версією ліцензією. Копію цієї ліцензії можна знайти за цим <ulink url=\"ghelp:gpl\" type=\"help\">посиланням</ulink>, або у файлі COPYING, що включений у код цієї програми."
+-
+-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+-#: epiphany.xml:0 
+-msgid "translator-credits"
+-msgstr "Максим Дзюманенко <mvd@mylinux.com.ua>, 2003, 2005"
