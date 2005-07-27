@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.302 2005/07/18 21:21:17 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.303 2005/07/26 02:14:22 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -256,7 +256,7 @@ atk_LIB_DEPENDS=	atk-1.0.1011:${PORTSDIR}/accessibility/atk
 atk_DETECT=		${LOCALBASE}/libdata/pkgconfig/atk.pc
 atk_USE_GNOME_IMPL=	glib20
 
-pango_LIB_DEPENDS=	pango-1.0.900:${PORTSDIR}/x11-toolkits/pango
+pango_LIB_DEPENDS=	pango-1.0.901:${PORTSDIR}/x11-toolkits/pango
 pango_DETECT=		${X11BASE}/libdata/pkgconfig/pango.pc
 pango_USE_GNOME_IMPL=	glib20
 
