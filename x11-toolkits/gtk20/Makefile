@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.62 2005/07/19 00:12:27 ahze Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.63 2005/07/27 08:27:14 mezz Exp $
 #
 
 PORTNAME=	gtk
@@ -74,15 +74,15 @@ STRIP=
 .endif
 
 pre-everything::
-.if !defined(WITH_DROPSHADOW)
-	@${ECHO_MSG}
-	@${ECHO_MSG} "If you want to compile with experimental menu dropshadow patch,"
-	@${ECHO_MSG} "hit Ctrl-C right now and use make \"WITH_DROPSHADOW=yes\""
-	@${ECHO_MSG} "NOTE: This option is not supported by the FreeBSD GNOME Team."
-	@${ECHO_MSG} "If the patch does not work or causes the build to fail, just"
-	@${ECHO_MSG} "stop using the patch; we will not further debug it."
-	@${ECHO_MSG}
-.endif
+#.if !defined(WITH_DROPSHADOW)
+#	@${ECHO_MSG}
+#	@${ECHO_MSG} "If you want to compile with experimental menu dropshadow patch,"
+#	@${ECHO_MSG} "hit Ctrl-C right now and use make \"WITH_DROPSHADOW=yes\""
+#	@${ECHO_MSG} "NOTE: This option is not supported by the FreeBSD GNOME Team."
+#	@${ECHO_MSG} "If the patch does not work or causes the build to fail, just"
+#	@${ECHO_MSG} "stop using the patch; we will not further debug it."
+#	@${ECHO_MSG}
+#.endif
 .if !defined(WITH_DEBUG)
 	@${ECHO_MSG}
 	@${ECHO_MSG} "Enable or disable debugging with the following knob"
