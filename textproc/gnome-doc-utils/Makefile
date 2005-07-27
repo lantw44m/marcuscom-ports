@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomedocutils
-PORTVERSION=	0.3.1
-PORTREVISION=	1
+PORTVERSION=	0.3.2
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-doc-utils/0.3
@@ -40,5 +39,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|4\.2|${DOCBOOK_VERSION}|g' \
 		${WRKSRC}/doc/xslt/C/gnome-doc-xslt.xml \
 		${WRKSRC}/doc/gnome-doc-make/C/gnome-doc-make.xml
+
+post-install:
+	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PREFIX}/share/xml2po
 
 .include <bsd.port.mk>

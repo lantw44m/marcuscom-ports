@@ -75,8 +75,11 @@ share/xml/gnome/xslt/gettext/gettext.xsl
 share/xml/gnome/xslt/gettext/l10n.xml
 share/xml/gnome/xslt/xsldoc/xsldoc.xsl
 share/xml2po/docbook.py
+share/xml2po/docbook.pyc
 share/xml2po/empty.py
+share/xml2po/empty.pyc
 share/xml2po/gs.py
+share/xml2po/gs.pyc
 @dirrm share/xml2po
 @dirrm share/xml/gnome/xslt/xsldoc
 @dirrm share/xml/gnome/xslt/gettext
