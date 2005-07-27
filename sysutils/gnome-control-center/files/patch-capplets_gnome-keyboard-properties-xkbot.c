@@ -1,6 +1,6 @@
---- capplets/keyboard/gnome-keyboard-properties-xkbot.c.orig	Sun May 22 22:57:24 2005
-+++ capplets/keyboard/gnome-keyboard-properties-xkbot.c	Sun May 22 22:58:27 2005
-@@ -243,11 +243,12 @@ xkb_options_add_group (const XklConfigIt
+--- capplets/keyboard/gnome-keyboard-properties-xkbot.c.orig	Wed Jul 27 13:48:58 2005
++++ capplets/keyboard/gnome-keyboard-properties-xkbot.c	Wed Jul 27 13:49:37 2005
+@@ -265,11 +265,12 @@
                                           GladeXML * dialog)
  {
    GtkWidget *expander, *align, *vbox;

@@ -1,6 +1,6 @@
---- capplets/about-me/gnome-about-me.c.orig	Tue Jul  5 14:17:38 2005
-+++ capplets/about-me/gnome-about-me.c	Tue Jul  5 14:20:06 2005
-@@ -260,12 +260,10 @@ about_me_focus_out (GtkWidget *widget, G
+--- capplets/about-me/gnome-about-me.c.orig	Wed Jul 27 13:45:17 2005
++++ capplets/about-me/gnome-about-me.c	Wed Jul 27 13:47:09 2005
+@@ -258,12 +258,10 @@
  static char *
  get_user_login (void)
  {
@@ -16,7 +16,7 @@
  }
  
  /*
-@@ -655,6 +653,7 @@ about_me_setup_dialog (void)
+@@ -664,6 +662,7 @@
  	struct passwd *pwent;
  	char *user = NULL;
  	gchar *str;
@@ -24,7 +24,7 @@
  
  	me = g_new0 (GnomeAboutMe, 1);
  
-@@ -711,7 +710,6 @@ about_me_setup_dialog (void)
+@@ -733,7 +732,6 @@
  				_("Unknown login ID, the user database might be corrupted"));
  		return ;
  	}
