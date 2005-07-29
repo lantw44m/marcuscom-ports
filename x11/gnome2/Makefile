@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.114 2005/07/18 11:45:59 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.115 2005/07/28 17:27:46 marcus Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.11.90
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -37,9 +37,7 @@ RUN_DEPENDS?=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2
 		${X11BASE}/libdata/pkgconfig/libgail-gnome.pc:${PORTSDIR}/x11-toolkits/libgail-gnome \
 		file-roller:${PORTSDIR}/archivers/fileroller \
 		${X11BASE}/share/themes/HighContrast/gtk-2.0/gtkrc:${PORTSDIR}/x11-themes/gnome-themes \
-		ggv:${PORTSDIR}/print/ggv \
 		gok:${PORTSDIR}/accessibility/gok \
-		gpdf:${PORTSDIR}/graphics/gpdf \
 		nautilus-cd-burner:${PORTSDIR}/sysutils/nautilus-cd-burner \
 		gcalctool:${PORTSDIR}/math/gcalctool \
 		gucharmap:${PORTSDIR}/deskutils/gucharmap \
