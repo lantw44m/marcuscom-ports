@@ -3,12 +3,12 @@
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/libgnomeprint/Makefile,v 1.46 2005/07/19 07:26:38 ahze Exp $
+#   $MCom: ports/print/libgnomeprint/Makefile,v 1.47 2005/07/20 10:26:25 ahze Exp $
 #
 
 PORTNAME=	libgnomeprint
 PORTVERSION=	2.11.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.11
@@ -36,11 +36,7 @@ PLIST_SUB=	VERSION=${PORTVERSION} \
 
 .include <bsd.port.pre.mk>
 
-.if exists(${LOCALBASE}/lib/libcups.so)
-WITH_CUPS=	yes
-.endif
-
-.if !defined(WITHOUT_CUPS)
+.if defined(WITH_CUPS) || exists(${LOCALBASE}/lib/libcups.so)
 CONFIGURE_ARGS+=	--with-cups
 LIB_DEPENDS+=		gnomecups-1.0:${PORTSDIR}/print/libgnomecups
 PLIST_SUB+=		CUPS:=""
@@ -50,9 +46,9 @@ PLIST_SUB+=		CUPS:="@comment "
 .endif
 
 pre-everything::
-.if !defined(WITHOUT_CUPS)
-	@${ECHO_MSG} " Disable cups support by defining"
-	@${ECHO_MSG} " WITHOUT_CUPS"
+.if !defined(WITH_CUPS)
+	@${ECHO_MSG} " Enagle cups support by defining"
+	@${ECHO_MSG} " WITH_CUPS"
 	@${ECHO_MSG} ""
 .endif
 
