@@ -1,6 +1,6 @@
---- plugins/proxy-login/proxy-login.c.orig	Wed Jul 13 17:26:56 2005
-+++ plugins/proxy-login/proxy-login.c	Wed Jul 13 17:27:15 2005
-@@ -237,7 +237,6 @@ proxy_login_get_cnc (EAccount *account)
+--- plugins/groupwise-features/proxy-login.c.orig	Fri Jul 29 18:55:40 2005
++++ plugins/groupwise-features/proxy-login.c	Fri Jul 29 18:55:58 2005
+@@ -236,7 +236,6 @@ proxy_login_get_cnc (EAccount *account)
  {
  	EGwConnection *cnc;
  	CamelURL *url;

@@ -328,12 +328,10 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-mark-calendar-offline.so
 %%DBUS%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-new-mail-notify.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-plugin-manager.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-print-message.so
-lib/evolution/%%VERSION%%/plugins/liborg-gnome-proxy.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-sa-junk-plugin.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-save-calendar.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-select-one-source.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-subject-thread.so
-lib/evolution/%%VERSION%%/plugins/libproxy-login.so
 lib/evolution/%%VERSION%%/plugins/org-gnome-addressbook-file.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-audio-inline.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-file.eplug
@@ -359,8 +357,6 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-plugin-manager.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-plugin-manager.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-print-message.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-print-message.xml
-lib/evolution/%%VERSION%%/plugins/org-gnome-proxy-login.eplug
-lib/evolution/%%VERSION%%/plugins/org-gnome-proxy.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-sa-junk-plugin.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-save-calendar.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-select-one-source.eplug
