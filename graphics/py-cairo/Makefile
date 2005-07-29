@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/graphics/py-cairo/Makefile,v 1.8 2005/07/23 01:43:48 ahze Exp $
+#	$MCom: ports/graphics/py-cairo/Makefile,v 1.9 2005/07/28 22:49:31 ahze Exp $
 #
 
 PORTNAME=	cairo
@@ -30,11 +30,11 @@ CONFIGURE_ARGS=	--without-pygtk
 
 .include <bsd.port.pre.mk>
 
-.if !defined(WITHOUT_SVG)
-LIB_DEPENDS+=	svg-cairo.1:${PORTSDIR}/graphics/libsvg-cairo
-PLIST_SUB+=	SVG=""
+.if defined(WITHOUT_SVG) && !exists(${LOCALBASE}/lib/libsvg-cairo.a)
+PLIST_SUB+=	SVG="@comment "
 .else
 PLIST_SUB+=	SVG="@comment "
+LIB_DEPENDS+=	svg-cairo.1:${PORTSDIR}/graphics/libsvg-cairo
 .endif
 
 pre-everything::
