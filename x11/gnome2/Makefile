@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.115 2005/07/28 17:27:46 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.116 2005/07/29 01:30:05 ahze Exp $
 #
 
 PORTNAME=	gnome2
@@ -60,8 +60,7 @@ RUN_DEPENDS?=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2
 		sound-juicer:${PORTSDIR}/audio/sound-juicer \
 		gnome-keyring-manager:${PORTSDIR}/security/gnomekeyringmanager \
 		${X11BASE}/libdata/pkgconfig/libgtkhtml-2.0.pc:${PORTSDIR}/www/libgtkhtml \
-		evince:${PORTSDIR}/graphics/evince \
-		${X11BASE}/lib/libgnomecups-1.0.so:${PORTSDIR}/print/libgnomecups
+		evince:${PORTSDIR}/graphics/evince
 
 NO_BUILD=	yes
 
