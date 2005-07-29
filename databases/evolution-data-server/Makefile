@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.50 2005/07/06 18:22:17 mezz Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.51 2005/07/13 06:31:57 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	1.3.5
+PORTVERSION=	1.3.6.1
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.3

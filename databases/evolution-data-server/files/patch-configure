@@ -1,19 +1,20 @@
---- configure.orig	Wed Jun  8 17:33:56 2005
-+++ configure	Wed Jun  8 17:38:06 2005
-@@ -25007,10 +25007,10 @@
- Example: --with-nspr-libs=/usr/lib" >&2;}
-    { (exit 1); exit 1; }; }
-        				else
--	       				nsprlibs="-ldl $with_nspr_libs/libplc4.a $with_nspr_libs/libplds4.a $with_nspr_libs/libnspr4.a $PTHREAD_LIB"
-+	       				nsprlibs="$with_nspr_libs/libplc4.a $with_nspr_libs/libplds4.a $with_nspr_libs/libnspr4.a $PTHREAD_LIB"
- 				fi
- 			else
--				nsprlibs="-ldl -lplc4 -lplds4 -lnspr4 $PTHREAD_LIB"
-+				nsprlibs="-lplc4 -lplds4 -lnspr4 $PTHREAD_LIB"
- 			fi
- 
- 			echo "$as_me:$LINENO: checking for Mozilla nspr libraries" >&5
-@@ -27124,7 +27124,7 @@
+--- configure.orig	Fri Jul 29 17:13:44 2005
++++ configure	Fri Jul 29 17:15:52 2005
+@@ -23461,6 +23461,13 @@
+     DL_LIB=''
+     SOFTOKN3_LIB=''
+     ;;
++*freebsd*)
++    os_win32=no
++    NO_UNDEFINED=''
++    SOCKET_LIBS=''
++    DL_LIB=''
++    SOFTOKN3_LIB='-lsoftokn3'
++    ;;
+ *)  os_win32=no
+     NO_UNDEFINED=''
+     SOCKET_LIBS=''
+@@ -27135,7 +27142,7 @@
  		#include <sys/socket.h>
  		#include <netinet/in.h>
  		#include <netdb.h>
@@ -22,7 +23,7 @@
  
  int
  main ()
-@@ -27862,7 +27862,7 @@
+@@ -27873,7 +27880,7 @@
  	LDFLAGS_save="$LDFLAGS"
  
  	mitlibs="-lkrb5 -lk5crypto -lcom_err -lgssapi_krb5"
@@ -31,7 +32,7 @@
  	echo "$as_me:$LINENO: checking for Kerberos 5" >&5
  echo $ECHO_N "checking for Kerberos 5... $ECHO_C" >&6
  if test "${ac_cv_lib_kerberos5+set}" = set; then
-@@ -31155,7 +31155,7 @@
+@@ -31176,7 +31183,7 @@
  imagesdir="$datadir/pixmaps/evolution-data-server-$BASE_VERSION"
  
  
