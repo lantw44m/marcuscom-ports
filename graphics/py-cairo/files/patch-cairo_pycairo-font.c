@@ -17,3 +17,15 @@
      if (o) {
  	cairo_scaled_font_t *scaled_font = cairo_scaled_font_create 
  	    (ff->font_face, &mx1->matrix, &mx2->matrix);
+@@ -211,8 +210,9 @@
+ scaled_font_extents (PycairoScaledFont *o)
+ {
+     cairo_font_extents_t e;
+-    cairo_status_t status = cairo_scaled_font_extents (o->scaled_font, &e);
+-    if (Pycairo_Check_Status (status))
++
++    cairo_scaled_font_extents (o->scaled_font, &e);
++    if (Pycairo_Check_Status (cairo_scaled_font_status(o->scaled_font)))
+ 	return NULL;
+     return Py_BuildValue ("(ddddd)", e.ascent, e.descent, e.height, 
+ 			  e.max_x_advance, e.max_y_advance);
