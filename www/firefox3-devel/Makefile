@@ -3,12 +3,12 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.9 2005/07/14 00:03:59 ahze Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.10 2005/07/14 05:25:43 ahze Exp $
 #
 
 PORTNAME=	firefox
 DISTVERSION=	1.1a2
-PORTREVISION=	0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -223,6 +223,13 @@ pre-install:
 	${ECHO_CMD} "@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@unexec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
+	cd ${FAKEDIR}/share/idl/${FF} \
+		&& ${FIND} -s * -type f -o -type l | \
+		${SED} -e 's:^:share/idl/${FF}/:' >> ${PLIST} \
+		&& ${FIND} -d * -type d | \
+		${SED} -e 's:^:@dirrm share/idl/${FF}/:' >> ${PLIST}
+		${ECHO_CMD} "@dirrm share/idl/${FF}" >> ${PLIST}
+		${ECHO_CMD} "@unexec rmdir %D/share/idl 2>/dev/null || true" >> ${PLIST}
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/${FF}
@@ -251,6 +258,9 @@ do-install:
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/include/${FF}
 	cd ${FAKEDIR}/lib/${FF} && ${FIND} . | \
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${FF}
+	${MKDIR} ${PREFIX}/share/idl/${FF}
+	cd ${FAKEDIR}/share/idl/${FF} && ${FIND} . | \
+		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/idl/${FF}
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
