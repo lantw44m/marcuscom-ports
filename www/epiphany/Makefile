@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.77 2005/07/27 06:55:16 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.78 2005/07/27 18:13:57 mezz Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	1.7.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.7
@@ -49,7 +49,8 @@ MOZ_BUILD=	firefox
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 GNOME_DESKTOP_VERSION=2
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop desktopfileutils
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop desktopfileutils \
+		libgnomeprintui
 USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
