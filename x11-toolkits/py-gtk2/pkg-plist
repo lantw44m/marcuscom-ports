@@ -103,6 +103,7 @@ lib/pygtk/2.0/pygtk-demo.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/keysyms.pyc
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/keysyms.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/pango.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/pangocairo.so
 %%PYTHON_SITELIBDIR%%/pygtk.pth
 %%PYTHON_SITELIBDIR%%/pygtk.py
 %%PYTHON_SITELIBDIR%%/pygtk.pyc
@@ -239,6 +240,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/pygtk/2.0/defs/libglade.defs
 %%PORTDOCS%%share/pygtk/2.0/defs/pango-types.defs
 %%PORTDOCS%%share/pygtk/2.0/defs/pango.defs
+%%PORTDOCS%%share/pygtk/2.0/defs/pangocairo.defs
 %%PORTDOCS%%@dirrm share/pygtk/2.0/defs
 %%PORTDOCS%%@dirrm share/pygtk/2.0/codegen
 %%PORTDOCS%%@dirrm share/pygtk/2.0
