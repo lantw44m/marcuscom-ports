@@ -17,6 +17,7 @@ libexec/evolution/%%EVO_VERSION%%/evolution-exchange-storage
 %%OLDDOCSDIR%%/index.sgml
 %%OLDDOCSDIR%%/left.png
 %%OLDDOCSDIR%%/right.png
+%%OLDDOCSDIR%%/style.css
 %%OLDDOCSDIR%%/up.png
 %%OLDDOCSDIR%%/ximian-connector-E2kAutoconfig.html
 %%OLDDOCSDIR%%/ximian-connector-E2kContext-(private).html
@@ -86,6 +87,7 @@ share/locale/en_GB/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/es/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/fi/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/fr/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/gl/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/gu/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/hi/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/hu/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
