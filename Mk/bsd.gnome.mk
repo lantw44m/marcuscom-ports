@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.303 2005/07/26 02:14:22 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.304 2005/07/27 04:49:37 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -41,7 +41,7 @@ Gnome_Pre_Include=			bsd.gnome.mk
 #
 
 # non-version specific components
-_USE_GNOME_ALL= esound intlhack intltool lthack gnomehack \
+_USE_GNOME_ALL= esound intlhack intltool lthack ltverhack gnomehack \
 		gnomehier gnomemimedata gnomeprefix gnometarget pkgconfig
 
 # GNOME 1 components
@@ -86,6 +86,10 @@ gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | ${XARGS} $
 
 lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
+
+ltverhack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | \
+							${XARGS} ${REINPLACE_CMD} -Ee
+							's|(^\|[[:space:]=])-version-info[[:space:]]+[^[:space:]\\]+|\1|'
 
 GNOME_MTREE=		${X11BASE}/etc/mtree/BSD.gnome-x11.dist
 gnomehier_DETECT=	${GNOME_MTREE}
