@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.304 2005/07/27 04:49:37 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.305 2005/08/02 18:25:30 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -88,7 +88,7 @@ lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" -type f | ${XARGS} ${REINP
 				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
 
 ltverhack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | \
-							${XARGS} ${REINPLACE_CMD} -Ee
+							${XARGS} ${REINPLACE_CMD} -Ee \
 							's|(^\|[[:space:]=])-version-info[[:space:]]+[^[:space:]\\]+|\1|'
 
 GNOME_MTREE=		${X11BASE}/etc/mtree/BSD.gnome-x11.dist
