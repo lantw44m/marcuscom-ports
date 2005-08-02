@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.305 2005/08/02 18:25:30 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.306 2005/08/02 18:31:22 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -252,7 +252,7 @@ pygnome_BUILD_DEPENDS=	${pygnome_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome
 pygnome_RUN_DEPENDS=	${pygnome_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome
 pygnome_USE_GNOME_IMPL=	gtkhtml pygtk
 
-glib20_LIB_DEPENDS=	glib-2.0.701:${PORTSDIR}/devel/glib20
+glib20_LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20
 glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
 glib20_USE_GNOME_IMPL=gnometarget pkgconfig
 
