@@ -3,14 +3,13 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/graphics/py-cairo/Makefile,v 1.9 2005/07/28 22:49:31 ahze Exp $
+#	$MCom: ports/graphics/py-cairo/Makefile,v 1.10 2005/07/29 02:42:54 ahze Exp $
 #
 
 PORTNAME=	cairo
-PORTVERSION=	0.5.1.1
+PORTVERSION=	0.6.0
 CATEGORIES=	graphics python
-MASTER_SITES=	http://cairographics.org/snapshots/ \
-		http://people.freebsd.org/~ahze/distfiles/
+MASTER_SITES=	http://cairographics.org/snapshots/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
@@ -33,7 +32,7 @@ CONFIGURE_ARGS=	--without-pygtk
 .if defined(WITHOUT_SVG) && !exists(${LOCALBASE}/lib/libsvg-cairo.a)
 PLIST_SUB+=	SVG="@comment "
 .else
-PLIST_SUB+=	SVG="@comment "
+PLIST_SUB+=	SVG=""
 LIB_DEPENDS+=	svg-cairo.1:${PORTSDIR}/graphics/libsvg-cairo
 .endif
 
