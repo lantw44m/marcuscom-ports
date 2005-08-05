@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.308 2005/08/03 22:25:37 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.309 2005/08/05 17:05:56 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -332,7 +332,7 @@ libbonoboui_LIB_DEPENDS=	bonoboui-2.0:${PORTSDIR}/x11-toolkits/libbonoboui
 libbonoboui_DETECT=		${X11BASE}/libdata/pkgconfig/libbonoboui-2.0.pc
 libbonoboui_USE_GNOME_IMPL=	libgnomecanvas libgnome
 
-libgnomeui_LIB_DEPENDS=		gnomeui-2.1100:${PORTSDIR}/x11-toolkits/libgnomeui
+libgnomeui_LIB_DEPENDS=		gnomeui-2.0:${PORTSDIR}/x11-toolkits/libgnomeui
 libgnomeui_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomeui-2.0.pc
 libgnomeui_USE_GNOME_IMPL=	libbonoboui
 
