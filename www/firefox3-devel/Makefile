@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox-devel/Makefile,v 1.10 2005/07/14 05:25:43 ahze Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.11 2005/07/30 04:48:00 marcus Exp $
 #
 
 PORTNAME=	firefox
@@ -183,6 +183,7 @@ pre-install:
 		Makefile ${MAKE_ARGS} install
 	@${MKDIR} ${SCRIPTS_DIR}
 	@${MKDIR} ${MOZ_PIS_DIR}
+	@${RM} -rf ${FAKEDIR}/lib/${FF}/extensions
 	${ECHO_CMD} 'share/applications/${FF}.desktop' >> ${PLIST}
 	${ECHO_CMD} 'share/pixmaps/${FIREFOX_ICON}' >> ${PLIST}
 	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g; \
@@ -223,7 +224,7 @@ pre-install:
 	${ECHO_CMD} "@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@unexec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
-	cd ${FAKEDIR}/share/idl/${FF} \
+	cd ${FAKEDIR}/share/idl/${FIREFOX}-${FF_VER} \
 		&& ${FIND} -s * -type f -o -type l | \
 		${SED} -e 's:^:share/idl/${FF}/:' >> ${PLIST} \
 		&& ${FIND} -d * -type d | \
@@ -259,7 +260,7 @@ do-install:
 	cd ${FAKEDIR}/lib/${FF} && ${FIND} . | \
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${FF}
 	${MKDIR} ${PREFIX}/share/idl/${FF}
-	cd ${FAKEDIR}/share/idl/${FF} && ${FIND} . | \
+	cd ${FAKEDIR}/share/idl/${FIREFOX}-${FF_VER} && ${FIND} . | \
 		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/idl/${FF}
 
 post-install:
