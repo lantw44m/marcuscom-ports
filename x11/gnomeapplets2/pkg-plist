@@ -41,8 +41,8 @@ libexec/null_applet
 libexec/stickynotes_applet
 libexec/trashapplet
 share/gnome/gnome-2.0/ui/GNOME_AccessxApplet.xml
-share/gnome/gnome-2.0/ui/GNOME_BattstatApplet.xml
-share/gnome/gnome-2.0/ui/GNOME_CPUFreqApplet.xml
+%%BATTERY%%share/gnome/gnome-2.0/ui/GNOME_BattstatApplet.xml
+%%CPUFREQ%%share/gnome/gnome-2.0/ui/GNOME_CPUFreqApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_CharpickerApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_DriveMountApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GSwitchItApplet.xml
