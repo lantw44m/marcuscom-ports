@@ -24,6 +24,7 @@ include/libgda-1.3/libgda/gda-column-index.h
 include/libgda-1.3/libgda/gda-column.h
 include/libgda-1.3/libgda/gda-command.h
 include/libgda-1.3/libgda/gda-config.h
+include/libgda-1.3/libgda/gda-connection-event.h
 include/libgda-1.3/libgda/gda-connection.h
 include/libgda-1.3/libgda/gda-data-model-array.h
 include/libgda-1.3/libgda/gda-data-model-base.h
@@ -32,7 +33,6 @@ include/libgda-1.3/libgda/gda-data-model-index.h
 include/libgda-1.3/libgda/gda-data-model-list.h
 include/libgda-1.3/libgda/gda-data-model.h
 include/libgda-1.3/libgda/gda-enum-types.h
-include/libgda-1.3/libgda/gda-error.h
 include/libgda-1.3/libgda/gda-log.h
 include/libgda-1.3/libgda/gda-marshal.h
 include/libgda-1.3/libgda/gda-parameter.h
