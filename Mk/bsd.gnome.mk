@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.309 2005/08/05 17:05:56 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.310 2005/08/05 17:27:08 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -86,10 +86,6 @@ gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | ${XARGS} $
 
 lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
-
-ltverhack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | \
-							${XARGS} ${REINPLACE_CMD} -Ee \
-							's|(^\|[[:space:]=])-version-info[[:space:]]+[^[:space:]\\]+|\1|'
 
 GNOME_MTREE=		${X11BASE}/etc/mtree/BSD.gnome-x11.dist
 gnomehier_DETECT=	${GNOME_MTREE}
@@ -621,6 +617,38 @@ BROKEN=	"Unknown component ${component}"
 .  endif
 _USE_GNOME+=	${${component}_USE_GNOME_IMPL} ${component}
 . endfor
+
+# Then handle the ltverhack component (it has to be done here, because
+# we rely on some bsd.autotools.mk variables, and bsd.autotools.mk is
+# included in the post-makefile section).
+.if defined(AUTOTOOL_libtool_inc)
+ltverhack_PRE_PATCH=	${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
+						for file in ${LIBTOOLFILES}; do \
+							${REINPLACE_CMD} -e \
+								'/^ltmain=/!s|$$ac_aux_dir/ltmain\.sh|${LIBTOOLFLAGS} ${WRKDIR}/gnome-ltmain.sh|g' \
+								${PATCH_WRKSRC}/$$file; \
+						done;
+.elif defined(AUTOTOOL_libtool)
+ltverhack_PRE_PATCH=	${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
+						${CP} -pf ${LIBTOOL} ${WRKDIR}/gnome-libtool && \
+						for file in ${LIBTOOLFILES}; do \
+							${REINPLACE_CMD} -e \
+								'/^ltmain=/!s|$$ac_aux_dir/ltmain\.sh|${LIBTOOLFLAGS} ${WRKDIR}/gnome-ltmain.sh|g; \
+								 /^LIBTOOL=/s|$$(top_builddir)/libtool|${WRKDIR}/gnome-libtool|g' \
+								${PATCH_WRKSRC}/$$file; \
+						done;
+.else
+BROKEN= "${PORTNAME} uses the ltverhack GNOME component but does not use libtool"
+.endif
+
+ltverhack_PRE_PATCH+=	for file in gnome-ltmain.sh gnome-libtool; do \
+							if [ -f ${WRKDIR}/$$file ]; then \
+								${REINPLACE_CMD} -e \
+									'/freebsd-elf)/,/;;/ s|major="\.$$current"|major=.`expr $$current - $$age`|; \
+									 /freebsd-elf)/,/;;/ s|versuffix="\.$$current"|versuffix="$$major"|' \
+									${WRKDIR}/$$file; \
+							fi; \
+						done
 
 # Then traverse through all components, check which of them
 # exist in ${_USE_GNOME} and set variables accordingly
