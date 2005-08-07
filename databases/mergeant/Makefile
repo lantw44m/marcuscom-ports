@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/mergeant/Makefile,v 1.13 2005/07/09 06:11:49 adamw Exp $
+#   $MCom: ports/databases/mergeant/Makefile,v 1.14 2005/07/12 04:25:56 marcus Exp $
 #
 
 PORTNAME=	mergeant
-PORTVERSION=	0.61
+PORTVERSION=	0.62
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.61
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
