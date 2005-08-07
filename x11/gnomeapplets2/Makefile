@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomeapplets2/Makefile,v 1.86 2005/07/13 23:13:18 marcus Exp $
+#   $MCom: ports/x11/gnomeapplets2/Makefile,v 1.87 2005/07/16 17:08:46 marcus Exp $
 #
 
 PORTNAME=	gnomeapplets2
-PORTVERSION=	2.11.2
-PORTREVISION=	1
+PORTVERSION=	2.11.91
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-applets/2.11
@@ -30,7 +29,7 @@ USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
-		gail
+		gail gnomedocutils
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
