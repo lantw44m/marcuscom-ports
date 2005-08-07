@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.310 2005/08/05 17:27:08 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.311 2005/08/07 21:06:40 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -638,7 +638,9 @@ ltverhack_PRE_PATCH=	${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
 								${PATCH_WRKSRC}/$$file; \
 						done;
 .else
+.if ${USE_GNOME:Mltverhack}!=""
 BROKEN= "${PORTNAME} uses the ltverhack GNOME component but does not use libtool"
+.endif
 .endif
 
 ltverhack_PRE_PATCH+=	for file in gnome-ltmain.sh gnome-libtool; do \
