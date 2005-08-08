@@ -3,6 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/x11-themes/clearlooks/Makefile,v 1.20 2005/06/30 12:22:32 ahze Exp $
+#      $MCom$
 #
 
 PORTNAME?=	clearlooks
@@ -16,7 +17,7 @@ MAINTAINER=	ahze@FreeBSD.org
 COMMENT?=	GTK+ 2.x engine based on Bluecurve
 
 USE_BZIP2=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gtk20
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
