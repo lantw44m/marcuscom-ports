@@ -79,3 +79,4 @@ share/locale/zh_TW/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 @dirrm share/gnome/epiphany-extensions
 @unexec rmdir %D/lib/epiphany/%%VERSION%%/extensions 2>/dev/null || true
 @unexec rmdir %D/lib/epiphany/%%VERSION%% 2>/dev/null || true
+@unexec rmdir %D/lib/epiphany 2>/dev/null || true
