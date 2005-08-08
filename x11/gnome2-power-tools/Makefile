@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.55 2005/07/24 19:17:44 jylefort Exp $
+#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.56 2005/07/28 17:27:46 marcus Exp $
 #
 
 CATEGORIES=	x11 gnome
@@ -11,7 +11,7 @@ PKGNAMESUFFIX=	-power-tools
 
 COMMENT=	"Geektoys" for the GNOME 2 power user
 
-RUN_DEPENDS=	${X11BASE}/lib/epiphany-1.6/extensions/libgesturesextension.so:${PORTSDIR}/www/epiphany-extensions \
+RUN_DEPENDS=	${X11BASE}/lib/epiphany-1.7/extensions/libgesturesextension.so:${PORTSDIR}/www/epiphany-extensions \
 		gnome-pkgview:${PORTSDIR}/sysutils/gnome-pkgview \
 		${X11BASE}/libexec/netspeed_applet2:${PORTSDIR}/net/netspeed_applet \
 		${LOCALBASE}/sbin/gkrellmd:${PORTSDIR}/sysutils/gkrellm2 \
