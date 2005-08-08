@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda2/Makefile,v 1.26 2005/07/08 20:10:43 adamw Exp $
+#   $MCom: ports/databases/libgda2/Makefile,v 1.27 2005/08/07 21:05:16 marcus Exp $
 #
 
 PORTNAME=	libgda2
 PORTVERSION=	1.3.90
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:R}
