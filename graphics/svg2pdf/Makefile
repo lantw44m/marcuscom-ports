@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/svg2pdf/Makefile,v 1.1 2005/08/06 02:21:07 marcus Exp $
 #
 
 PORTNAME=	svg2pdf
@@ -12,7 +12,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Render an SVG image to a PNG image (using cairo)
+COMMENT=	Render an SVG image to a PDF file (using cairo)
 
 LIB_DEPENDS=	svg-cairo.1:${PORTSDIR}/graphics/libsvg-cairo
 
