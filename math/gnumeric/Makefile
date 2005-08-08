@@ -3,11 +3,12 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.6 2005/06/28 05:40:08 adamw Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.7 2005/07/01 18:03:12 marcus Exp $
 #
 
 PORTNAME=	gnumeric
 PORTVERSION=	1.5.2
+PORTREVISION=	1
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -23,12 +24,12 @@ USE_X_PREFIX=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier libgnomeprintui \
-		libgnomedb libgsf_gnome pygtk2 desktopfileutils
+		libgsf_gnome pygtk2 desktopfileutils
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
-CONFIGURE_ARGS=	--without-guile --with-bonobo --with-gnome-db
+CONFIGURE_ARGS=	--without-guile --with-bonobo --without-gnome-db
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib -liconv ${PTHREAD_LIBS}" \
 		python_prog=${PYTHON_VERSION}
