@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda2/Makefile,v 1.27 2005/08/07 21:05:16 marcus Exp $
+#   $MCom: ports/databases/libgda2/Makefile,v 1.28 2005/08/08 06:54:00 marcus Exp $
 #
 
 PORTNAME=	libgda2
