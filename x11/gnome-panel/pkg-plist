@@ -70,6 +70,8 @@ share/gnome/help/clock/ja/legal.xml
 share/gnome/help/clock/ko/clock.xml
 share/gnome/help/clock/ko/figures/clock_applet.png
 share/gnome/help/clock/ko/legal.xml
+share/gnome/help/clock/nl/clock.xml
+share/gnome/help/clock/nl/legal.xml
 share/gnome/help/clock/sr/clock.xml
 share/gnome/help/clock/sr/legal.xml
 share/gnome/help/clock/sv/clock.xml
@@ -224,6 +226,7 @@ share/gnome/omf/clock/clock-fr.omf
 share/gnome/omf/clock/clock-it.omf
 share/gnome/omf/clock/clock-ja.omf
 share/gnome/omf/clock/clock-ko.omf
+share/gnome/omf/clock/clock-nl.omf
 share/gnome/omf/clock/clock-sr.omf
 share/gnome/omf/clock/clock-sv.omf
 share/gnome/omf/clock/clock-uk.omf
@@ -355,6 +358,7 @@ share/locale/sr@Latn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sr@ije/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/te/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/th/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/uk/LC_MESSAGES/gnome-panel-2.0.mo
@@ -468,6 +472,7 @@ share/locale/zu/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/help/clock/sv/figures
 @dirrm share/gnome/help/clock/sv
 @dirrm share/gnome/help/clock/sr
+@dirrm share/gnome/help/clock/nl
 @dirrm share/gnome/help/clock/ko/figures
 @dirrm share/gnome/help/clock/ko
 @dirrm share/gnome/help/clock/ja/figures
