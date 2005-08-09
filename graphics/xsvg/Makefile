@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/xsvg/Makefile,v 1.2 2005/06/28 05:40:06 adamw Exp $
 #
 
 PORTNAME=	xsvg
@@ -11,7 +11,7 @@ PORTVERSION=	0.2.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 
-MAINTAINER=	ahze@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	X11 SVG viewer
 
 LIB_DEPENDS=	svg-cairo.1:${PORTSDIR}/graphics/libsvg-cairo
