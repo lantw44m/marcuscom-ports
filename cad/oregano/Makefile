@@ -3,7 +3,7 @@
 # Whom:				Anders Andersson <anders@hack.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/cad/oregano/Makefile,v 1.1 2005/08/09 04:35:36 ahze Exp $
 #
 
 PORTNAME=	oregano
@@ -13,8 +13,6 @@ MASTER_SITES=	http://gforge.lug.fi.uba.ar/frs/download.php/64/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Schematic capture and simulation of electrical circuits
-
-LIB_DEPENDS=	cairo.1:${PORTSDIR}/graphics/cairo
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
