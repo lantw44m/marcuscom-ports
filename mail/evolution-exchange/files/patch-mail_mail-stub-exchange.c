@@ -1,6 +1,6 @@
---- mail/mail-stub-exchange.c.orig	Wed Jul 13 17:45:44 2005
-+++ mail/mail-stub-exchange.c	Wed Jul 13 17:46:22 2005
-@@ -2508,12 +2508,12 @@ subscribe_folder (MailStub *stub, const 
+--- mail/mail-stub-exchange.c.orig	Mon Aug  8 22:00:52 2005
++++ mail/mail-stub-exchange.c	Mon Aug  8 22:01:11 2005
+@@ -2587,11 +2587,11 @@ subscribe_folder (MailStub *stub, const 
  static void
  unsubscribe_folder (MailStub *stub, const char *folder_name)
  {
@@ -8,8 +8,7 @@
  	MailStubExchange *mse = MAIL_STUB_EXCHANGE (stub);
  	ExchangeAccountFolderResult result;
  	EFolder *folder;
- 	char *path;
- 	const char *folder_type, *physical_uri;
+ 	char *path, *pub_name;
 +	d(printf ("unsubscribe folder : %s\n", folder_name));
  
  	path = g_build_filename ("/", folder_name, NULL);
