@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgtop2/Makefile,v 1.45 2005/08/01 19:31:11 marcus Exp $
+#   $MCom: ports/devel/libgtop2/Makefile,v 1.46 2005/08/08 19:21:28 marcus Exp $
 #
 
 PORTNAME=	libgtop2
@@ -36,7 +36,9 @@ INFO=		libgtop2
 
 .if ${OSVERSION} >= 600000
 PKGMESSAGE=	${FILESDIR}/pkg-message
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-sysdeps_freebsd_Makefile.in
+EXTRA_PATCHES+=	${FILESDIR}/extra-67-patch-sysdeps_freebsd_Makefile.in
+.else
+EXTRA_PATCHES+=	${FILESDIR}/extra-45-patch-sysdeps_freebsd_Makefile.in
 .endif
 
 post-patch:
