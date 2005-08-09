@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.311 2005/08/07 21:06:40 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.312 2005/08/07 22:05:10 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -349,7 +349,7 @@ gnomedesktop_DETECT=		${X11BASE}/libdata/pkgconfig/gnome-desktop-2.0.pc
 gnomedesktop_USE_GNOME_IMPL=	libgnomeui
 gnomedesktop_GNOME_DESKTOP_VERSION=2
 
-libwnck_LIB_DEPENDS=	wnck-1.17:${PORTSDIR}/x11-toolkits/libwnck
+libwnck_LIB_DEPENDS=	wnck-1.18:${PORTSDIR}/x11-toolkits/libwnck
 libwnck_DETECT=		${X11BASE}/libdata/pkgconfig/libwnck-1.0.pc
 libwnck_USE_GNOME_IMPL=	gtk20
 
