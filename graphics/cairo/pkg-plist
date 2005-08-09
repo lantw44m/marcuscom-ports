@@ -1,5 +1,6 @@
 include/cairo/cairo-features.h
 include/cairo/cairo-ft.h
+%%GLITZ%%include/cairo/cairo-glitz.h
 include/cairo/cairo-pdf.h
 include/cairo/cairo-ps.h
 %%X11%%include/cairo/cairo-xlib-xrender.h
