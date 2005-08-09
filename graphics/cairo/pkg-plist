@@ -7,7 +7,7 @@ include/cairo/cairo-xlib-xrender.h
 %%X11%%include/cairo/cairo.h
 lib/libcairo.a
 lib/libcairo.so
-lib/libcairo.so.1
+lib/libcairo.so.2
 libdata/pkgconfig/cairo.pc
 %%DOCSDIR%%/cairo/bindings-errors.html
 %%DOCSDIR%%/cairo/bindings-fonts.html
