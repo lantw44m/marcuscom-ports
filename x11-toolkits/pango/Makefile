@@ -3,11 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.38 2005/07/01 18:11:44 marcus Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.39 2005/07/27 04:49:13 ahze Exp $
 #
 
 PORTNAME=	pango
 PORTVERSION=	1.9.1
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/1.9,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.7/
@@ -18,7 +19,7 @@ COMMENT=	An open-source framework for the layout and rendering of i18n text
 
 BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
 LIB_DEPENDS=	Xft.2:${PORTSDIR}/x11-fonts/libXft \
-		cairo.1:${PORTSDIR}/graphics/cairo
+		cairo.2:${PORTSDIR}/graphics/cairo
 RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
 		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT}
 
