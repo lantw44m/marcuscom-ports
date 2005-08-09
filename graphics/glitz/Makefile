@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/glitz/Makefile,v 1.2 2005/06/28 05:40:05 adamw Exp $
+#   $MCom: ports/graphics/glitz/Makefile,v 1.3 2005/07/04 00:11:29 marcus Exp $
 #
 
 PORTNAME=	glitz
-PORTVERSION=	0.4.3
+PORTVERSION=	0.4.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/snapshots/
 
