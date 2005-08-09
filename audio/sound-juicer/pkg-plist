@@ -69,5 +69,6 @@ share/locale/zh_CN/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_TW/LC_MESSAGES/sound-juicer.mo
 @dirrm share/gnome/sound-juicer
 @dirrm share/gnome/omf/sound-juicer
+@dirrm share/gnome/help/sound-juicer/es
 @dirrm share/gnome/help/sound-juicer/C
 @dirrm share/gnome/help/sound-juicer
