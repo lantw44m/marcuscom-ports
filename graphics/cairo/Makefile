@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.15 2005/07/28 19:20:35 ahze Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.16 2005/08/09 04:47:30 ahze Exp $
 #
 
 PORTNAME=	cairo
@@ -20,7 +20,7 @@ LIB_DEPENDS=	pixman.1:${PORTSDIR}/graphics/libpixman \
 		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig
 
 CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR}
-USE_GNOME=	gnometarget gnomehack
+USE_GNOME=	gnometarget gnomehack ltverhack
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 
