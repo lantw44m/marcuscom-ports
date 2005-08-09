@@ -3,7 +3,11 @@ share/gnome/applications/sound-juicer.desktop
 share/gnome/help/sound-juicer/C/fdl-appendix.xml
 share/gnome/help/sound-juicer/C/legal.xml
 share/gnome/help/sound-juicer/C/sound-juicer.xml
+share/gnome/help/sound-juicer/es/fdl-appendix.xml
+share/gnome/help/sound-juicer/es/legal.xml
+share/gnome/help/sound-juicer/es/sound-juicer.xml
 share/gnome/omf/sound-juicer/sound-juicer-C.omf
+share/gnome/omf/sound-juicer/sound-juicer-es.omf
 share/gnome/pixmaps/sound-juicer.png
 share/gnome/sound-juicer/orange-slice.png
 share/gnome/sound-juicer/sj-play.png
