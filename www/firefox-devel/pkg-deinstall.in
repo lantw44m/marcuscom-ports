@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/pkg-deinstall.in,v 1.5 2005/06/28 05:40:11 adamw Exp $
+#   $MCom: ports/www/firefox-devel/pkg-deinstall.in,v 1.6 2005/07/14 05:25:43 ahze Exp $
 #
 # Date created:			Mon Nov 29, 2003
 # Whom:				Thierry Thomas (<thierry@pompo.net>)
@@ -23,5 +23,6 @@ rm -f ${MOZDIR}/components.ini
 rm -f ${MOZDIR}/defaults.ini
 rm -f ${MOZDIR}/components/*.dat
 rm -rf ${MOZDIR}/extensions
+rm -rf ${MOZDIR}/updates
 
 exit 0
