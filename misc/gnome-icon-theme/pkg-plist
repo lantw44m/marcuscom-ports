@@ -30,6 +30,7 @@ share/icons/gnome/16x16/filesystems/gnome-fs-bookmark-missing.png
 share/icons/gnome/16x16/filesystems/gnome-fs-bookmark.png
 share/icons/gnome/16x16/filesystems/gnome-fs-client.png
 share/icons/gnome/16x16/filesystems/gnome-fs-desktop.png
+share/icons/gnome/16x16/filesystems/gnome-fs-directory-accept.png
 share/icons/gnome/16x16/filesystems/gnome-fs-ftp.png
 share/icons/gnome/16x16/filesystems/gnome-fs-network.png
 share/icons/gnome/16x16/filesystems/gnome-fs-nfs.png
@@ -107,7 +108,6 @@ share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-gtktalog.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-gzip.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-ipod-firmware.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-jar.png
-share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-kde-app-info.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-killustrator.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-kpresenter.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-kspread.png
@@ -214,7 +214,6 @@ share/icons/gnome/16x16/mimetypes/gnome-mime-x-font-afm.png
 share/icons/gnome/16x16/mimetypes/gnome-package.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-x-directory-nfs-server.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-x-directory-smb-workgroup.png
-share/icons/gnome/192x192/devices/gnome-dev-cdrom.png
 share/icons/gnome/192x192/filesystems/gnome-fs-regular.icon
 share/icons/gnome/192x192/filesystems/gnome-fs-regular.png
 share/icons/gnome/24x24/devices/gnome-dev-battery.png
@@ -461,7 +460,6 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-template.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.rn-realmedia.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.stardivision.calc.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.stardivision.impress.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.stardivision.writer.png
@@ -517,7 +515,6 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-gzip.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-ipod-firmware.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-jar.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-java-byte-code.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-kde-app-info.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-killustrator.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-kpresenter.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-kspread.png
@@ -558,7 +555,6 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-audio-x-it.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-audio-x-midi.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-audio-x-mod.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-audio-x-mp3.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-audio-x-pn-realaudio.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-audio-x-s3m.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-audio-x-stm.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-audio-x-ulaw.png
@@ -1631,8 +1627,6 @@ share/icons/hicolor/24x24/apps/gnome-status.png
 share/icons/hicolor/24x24/apps/gnome-terminal.png
 share/icons/hicolor/24x24/apps/gnome-unknown.png
 share/icons/hicolor/24x24/apps/gnome-window-manager.png
-share/icons/hicolor/24x24/apps/mozilla-firefox.png
-share/icons/hicolor/24x24/apps/mozilla-icon.png
 share/icons/hicolor/24x24/apps/ooo_calc.png
 share/icons/hicolor/24x24/apps/ooo_draw.png
 share/icons/hicolor/24x24/apps/ooo_gulls.png
@@ -1646,7 +1640,6 @@ share/icons/hicolor/24x24/apps/panel-notification-area.png
 share/icons/hicolor/24x24/apps/panel-window-list.png
 share/icons/hicolor/24x24/apps/panel-window-menu.png
 share/icons/hicolor/24x24/apps/postscript-viewer.png
-share/icons/hicolor/24x24/apps/realplayer.png
 share/icons/hicolor/24x24/apps/screensaver.png
 share/icons/hicolor/24x24/apps/shares.png
 share/icons/hicolor/24x24/apps/stock-ticker.png
@@ -2595,7 +2588,6 @@ share/icons/hicolor/48x48/apps/panel-notification-area.png
 share/icons/hicolor/48x48/apps/panel-window-list.png
 share/icons/hicolor/48x48/apps/panel-window-menu.png
 share/icons/hicolor/48x48/apps/postscript-viewer.png
-share/icons/hicolor/48x48/apps/realplayer.png
 share/icons/hicolor/48x48/apps/screensaver.png
 share/icons/hicolor/48x48/apps/serviceconf.png
 share/icons/hicolor/48x48/apps/sodipodi.png
