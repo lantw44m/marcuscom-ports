@@ -309,7 +309,7 @@ lib/libcamel-provider-%%EVO_VERSION%%.so
 lib/libcamel-provider-%%EVO_VERSION%%.so.6
 lib/libebook-%%EVO_VERSION%%.a
 lib/libebook-%%EVO_VERSION%%.so
-lib/libebook-%%EVO_VERSION%%.so.4
+lib/libebook-%%EVO_VERSION%%.so.5
 lib/libecal-%%EVO_VERSION%%.a
 lib/libecal-%%EVO_VERSION%%.so
 lib/libecal-%%EVO_VERSION%%.so.4
@@ -324,7 +324,7 @@ lib/libedataserver-%%EVO_VERSION%%.so
 lib/libedataserver-%%EVO_VERSION%%.so.4
 lib/libedataserverui-%%EVO_VERSION%%.a
 lib/libedataserverui-%%EVO_VERSION%%.so
-lib/libedataserverui-%%EVO_VERSION%%.so.5
+lib/libedataserverui-%%EVO_VERSION%%.so.6
 lib/libegroupwise-%%EVO_VERSION%%.a
 lib/libegroupwise-%%EVO_VERSION%%.so
 lib/libegroupwise-%%EVO_VERSION%%.so.8
