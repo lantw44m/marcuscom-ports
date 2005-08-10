@@ -3,7 +3,7 @@
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/libgnomeprint/Makefile,v 1.47 2005/07/20 10:26:25 ahze Exp $
+#   $MCom: ports/print/libgnomeprint/Makefile,v 1.48 2005/07/29 01:34:45 ahze Exp $
 #
 
 PORTNAME=	libgnomeprint
@@ -47,7 +47,7 @@ PLIST_SUB+=		CUPS:="@comment "
 
 pre-everything::
 .if !defined(WITH_CUPS)
-	@${ECHO_MSG} " Enagle cups support by defining"
+	@${ECHO_MSG} " Enable cups support by defining"
 	@${ECHO_MSG} " WITH_CUPS"
 	@${ECHO_MSG} ""
 .endif
