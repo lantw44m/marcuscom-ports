@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.16 2005/07/17 12:45:16 kwm Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.17 2005/07/21 16:02:49 mezz Exp $
 #
 
 PORTNAME=	gnome
-PORTVERSION=	2.11.3
+PORTVERSION=	2.11.4
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -24,7 +24,8 @@ LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2 \
 		gtop-2.0.2:${PORTSDIR}/devel/libgtop2 \
 		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
 		gksu1.2.0:${PORTSDIR}/sysutils/libgksu \
-		gksuui1.0.0:${PORTSDIR}/sysutils/libgksuui
+		gksuui1.0.0:${PORTSDIR}/sysutils/libgksuui \
+		gdl-1.0:${PORTSDIR}/x11-toolkits/gdl
 RUN_DEPENDS=	${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
 
 MOZILLA=	firefox
@@ -53,7 +54,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gnomehack libgnomeprintui libgtkhtml gnomepanel \
-		gtksourceview libwnck nautiluscdburner pygnome2 libgda2
+		gtksourceview libwnck nautiluscdburner pygnome2
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--with-gtkmozembed=${MOZ_BUILD}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

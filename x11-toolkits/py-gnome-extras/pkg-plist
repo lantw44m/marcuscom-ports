@@ -22,6 +22,7 @@
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtksourceview.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtkspell.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtop.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/mediaprofiles.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/nautilusburn.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/totem/__init__.py
 %%PYTHON_SITELIBDIR%%/gtk-2.0/totem/__init__.pyc
@@ -101,6 +102,7 @@ libdata/pkgconfig/gnome-python-extras-2.0.pc
 %%PORTDOCS%%share/examples/py-gnome/gtksourceview/test-widget.py
 %%PORTDOCS%%share/examples/py-gnome/gtkspell/gtkspell.py
 %%PORTDOCS%%share/examples/py-gnome/gtkspell/test.py
+%%PORTDOCS%%share/examples/py-gnome/mediaprofiles/profiles.py
 %%PORTDOCS%%share/examples/py-gnome/nautilusburn/blank_disc.py
 %%PORTDOCS%%share/examples/py-gnome/nautilusburn/drive_selection.py
 %%PORTDOCS%%share/examples/py-gnome/nautilusburn/write_iso.py
@@ -114,6 +116,7 @@ share/pygtk/2.0/defs/printui.defs
 share/pygtk/2.0/defs/trayicon.defs
 share/pygtk/2.0/defs/wnck.defs
 %%PORTDOCS%%@dirrm share/examples/py-gnome/nautilusburn
+%%PORTDCOS%%@dirrm share/examples/py-gnome/mediaprofiles
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtkspell
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtksourceview
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtkhtml2
