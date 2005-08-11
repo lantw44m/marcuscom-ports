@@ -3,9 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnome2-hacker-tools/Makefile,v 1.38 2005/06/28 05:40:01 adamw Exp $
+#   $MCom: ports/devel/gnome2-hacker-tools/Makefile,v 1.39 2005/08/06 18:31:32 marcus Exp $
 #
 
+PORTREVISION=	0
 CATEGORIES=	devel gnome
 PKGNAMESUFFIX=	-hacker-tools
 
