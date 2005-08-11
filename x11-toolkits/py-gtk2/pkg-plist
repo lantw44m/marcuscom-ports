@@ -241,6 +241,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/pygtk/2.0/defs/pango-types.defs
 %%PORTDOCS%%share/pygtk/2.0/defs/pango.defs
 %%PORTDOCS%%share/pygtk/2.0/defs/pangocairo.defs
+%%PORTDOCS%%share/pygtk/2.0/defs/pangocairo.override
 %%PORTDOCS%%@dirrm share/pygtk/2.0/defs
 %%PORTDOCS%%@dirrm share/pygtk/2.0/codegen
 %%PORTDOCS%%@dirrm share/pygtk/2.0
