@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.70 2005/07/18 11:45:59 marcus Exp $
+#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.71 2005/08/11 02:55:30 marcus Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 PKGNAMESUFFIX=	-fifth-toe
 
@@ -33,7 +33,9 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		${X11BASE}/share/gnome/pixmaps/glines/classic.png:${PORTSDIR}/games/gnomegames2-extra-data \
 		nautilus-sendto:${PORTSDIR}/deskutils/nautilus-sendto \
 		goobox:${PORTSDIR}/audio/goobox \
-		inkscape:${PORTSDIR}/graphics/inkscape
+		inkscape:${PORTSDIR}/graphics/inkscape \
+		gpdf:${PORTSDIR}/graphics/gpdf \
+		ggv:${PORTSDIR}/print/ggv
 
 MASTERDIR=	${.CURDIR}/../gnome2
 GNOME_SLAVE=	yes
