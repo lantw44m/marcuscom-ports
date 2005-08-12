@@ -3,12 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.39 2005/07/27 04:49:13 ahze Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.40 2005/08/09 04:49:38 ahze Exp $
 #
 
 PORTNAME=	pango
 PORTVERSION=	1.9.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/1.9,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.7/
@@ -30,7 +30,7 @@ USE_GMAKE=	yes
 USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_GNOME=	gnomehack glib20
+USE_GNOME=	gnomehack glib20 ltverhack
 CONFIGURE_ARGS=	--with-qt=no \
 		--with-html-dir=${PREFIX}/share/doc \
 		--enable-static

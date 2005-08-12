@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.101 2005/07/26 02:35:06 marcus Exp $
+#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.102 2005/08/04 06:12:00 marcus Exp $
 #
 
 PORTNAME=	gnomevfs2
 PORTVERSION=	2.11.90
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.11
@@ -24,7 +24,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomemimedata gconf2 \
-		libbonobo
+		libbonobo ltverhack
 USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes

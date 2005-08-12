@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/atk/Makefile,v 1.52 2005/06/28 05:39:56 adamw Exp $
+#   $MCom: ports/accessibility/atk/Makefile,v 1.53 2005/07/01 17:52:47 marcus Exp $
 #
 
 PORTNAME=	atk
 PORTVERSION=	1.10.1
+PORTREVISION=	1
 CATEGORIES=	accessibility devel
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		ftp://ftp.gtk.org/pub/gtk/v2.6/
@@ -20,7 +21,7 @@ COMMENT=	A GNOME accessibility toolkit (ATK)
 USE_BZIP2=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_GNOME=	gnomehack glib20
+USE_GNOME=	gnomehack glib20 ltverhack
 CONFIGURE_ARGS=	--enable-static \
 		--disable-gtk-doc \
 		--with-html-dir=${PREFIX}/share/doc
