@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.314 2005/08/12 20:05:58 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.315 2005/08/12 20:07:01 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -304,7 +304,7 @@ gail_LIB_DEPENDS=	gailutil.17:${PORTSDIR}/accessibility/gail
 gail_DETECT=		${X11BASE}/libdata/pkgconfig/gail.pc
 gail_USE_GNOME_IMPL=	libgnomecanvas
 
-libgnomecanvas_LIB_DEPENDS=	gnomecanvas-2.1101:${PORTSDIR}/graphics/libgnomecanvas
+libgnomecanvas_LIB_DEPENDS=	gnomecanvas-2.0:${PORTSDIR}/graphics/libgnomecanvas
 libgnomecanvas_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomecanvas-2.0.pc
 libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2
 
