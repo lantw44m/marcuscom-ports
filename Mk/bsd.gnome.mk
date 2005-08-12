@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.313 2005/08/09 04:56:39 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.314 2005/08/12 20:05:58 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -292,7 +292,7 @@ libbonobo_LIB_DEPENDS=	bonobo-2.0:${PORTSDIR}/devel/libbonobo
 libbonobo_DETECT=	${LOCALBASE}/libdata/pkgconfig/libbonobo-2.0.pc
 libbonobo_USE_GNOME_IMPL=libxml2 orbit2
 
-gconf2_LIB_DEPENDS=	gconf-2.5:${PORTSDIR}/devel/gconf2
+gconf2_LIB_DEPENDS=	gconf-2.4:${PORTSDIR}/devel/gconf2
 gconf2_DETECT=		${X11BASE}/libdata/pkgconfig/gconf-2.0.pc
 gconf2_USE_GNOME_IMPL=	orbit2 libxml2 gtk20 linc
 
