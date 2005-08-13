@@ -30,7 +30,6 @@ libdata/pkgconfig/cairo.pc
 %%DOCSDIR%%/cairo/cairo-XCB-Backend.html
 %%DOCSDIR%%/cairo/cairo-XLib-Backend.html
 %%DOCSDIR%%/cairo/cairo-cairo-matrix-t.html
-%%DOCSDIR%%/cairo/cairo-cairo-pattern-t.html
 %%DOCSDIR%%/cairo/cairo-cairo-surface-t.html
 %%DOCSDIR%%/cairo/cairo-cairo-t.html
 %%DOCSDIR%%/cairo/cairo.devhelp
