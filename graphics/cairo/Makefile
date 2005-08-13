@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.19 2005/08/13 12:55:59 ahze Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.20 2005/08/13 18:53:46 marcus Exp $
 #
 
 PORTNAME=	cairo
@@ -54,7 +54,10 @@ PLIST_SUB+=	X11=""
 post-patch:
 .if ${OSVERSION} < 500000
 	@${REINPLACE_CMD} -e 's|stdint.h|inttypes.h|' \
-		${WRKSRC}/src/*.*
+		${WRKSRC}/src/*.* \
+		${WRKSRC}/pixman/src/*.*
 .endif
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|' \
+		${WRKSRC}/test/Makefile.in
 
 .include <bsd.port.post.mk>
