@@ -2045,4 +2045,6 @@ share/themes/Traditional/index.theme
 @dirrm share/gnome/themes/Mist
 @dirrm share/gnome/themes/Glider/metacity-1
 @dirrm share/gnome/themes/Glider
+@dirrm share/gnome/themes/Clearlooks/metacity-1
+@dirrm share/gnome/themes/Clearlooks
 @unexec /bin/rmdir %D/share/icons 2>/dev/null || /usr/bin/true
