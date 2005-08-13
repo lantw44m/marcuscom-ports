@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.317 2005/08/12 20:15:30 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.318 2005/08/12 20:21:55 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -643,6 +643,7 @@ BROKEN= "${PORTNAME} uses the ltverhack GNOME component but does not use libtool
 .endif
 .endif
 
+ltverhack_PATCH_DEPENDS=${LIBTOOL_DEPENDS}
 ltverhack_PRE_PATCH+=	for file in gnome-ltmain.sh gnome-libtool; do \
 							if [ -f ${WRKDIR}/$$file ]; then \
 								${REINPLACE_CMD} -e \
@@ -657,6 +658,9 @@ ltverhack_PRE_PATCH+=	for file in gnome-ltmain.sh gnome-libtool; do \
 . for component in ${_USE_GNOME_ALL}
 _COMP_TEST=	${_USE_GNOME:M${component}}
 .  if ${_COMP_TEST:S/${component}//}!=${_COMP_TEST:S/  / /g}
+PATCH_DEPENDS+=	${${component}_PATCH_DEPENDS}
+FETCH_DEPENDS+=	${${component}_FETCH_DEPENDS}
+EXTRACT_DEPENDS+=${${component}_EXTRACT_DEPENDS}
 BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
 #######################################################
 #
