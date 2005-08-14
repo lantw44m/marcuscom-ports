@@ -7,6 +7,7 @@
 
 PORTNAME=	rhythmbox
 PORTVERSION=	0.9.0
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.9
@@ -16,14 +17,15 @@ MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Audio player for the Gnome 2 desktop environment
 
 LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
-		id3tag.2:${PORTSDIR}/audio/libid3tag
+		id3tag.2:${PORTSDIR}/audio/libid3tag \
+		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui nautiluscdburner
-WANT_GSTREAMER=	yes
+USE_GSTREAMER=	flac mad gnomevfs gconf jpeg
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--enable-nautilus-menu
 CONFIGURE_ENV=	LIBS="-lm" \
@@ -32,22 +34,9 @@ CONFIGURE_ENV=	LIBS="-lm" \
 
 GCONF_SCHEMAS=	rhythmbox.schemas
 
-OPTIONS=	XINE "Use xine backend instead of GStreamer" off \
-		IPOD "Enable iPod support" off
+OPTIONS=	IPOD "Enable iPod support" off
 
 .include <bsd.port.pre.mk>
-
-.ifdef (WITH_XINE)
-LIB_DEPENDS+=		xine.13:${PORTSDIR}/multimedia/libxine \
-			FLAC.7:${PORTSDIR}/audio/flac \
-			mad.2:${PORTSDIR}/audio/libmad \
-			totem-plparser.1:${PORTSDIR}/multimedia/totem
-CONFIGURE_ARGS+=	--with-player=xine
-.else
-LIB_DEPENDS+=		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer
-CONFIGURE_ARGS+=	--with-player=gstreamer
-USE_GSTREAMER+=		flac mad gnomevfs gconf
-.endif
 
 .ifdef (WITH_IPOD)
 CONFIGURE_ARGS+=	--enable-ipod
@@ -58,11 +47,7 @@ WITH_VORBIS=	yes
 .endif
 
 .ifdef (WITH_VORBIS)
-.ifndef (WITH_XINE)
 USE_GSTREAMER+=		vorbis
-.else
-LIB_DEPENDS+=		vorbis.3:${PORTSDIR}/audio/libvorbis
-.endif
 .else
 CONFIGURE_ARGS+=	--disable-vorbis --disable-vorbistest
 .endif
@@ -77,7 +62,7 @@ pre-everything::
 	@${ECHO_MSG} "Define WITH_VORBIS to enable Vorbis support"
 	@${ECHO_MSG}
 .endif
-.if !defined(WITH_XINE) && !defined(WITH_FAAD)
+.if !defined(WITH_FAAD)
 	@${ECHO_MSG}
 	@${ECHO_MSG} "Define WITH_FAAD to enable Faad support"
 	@${ECHO_MSG}
