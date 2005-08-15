@@ -36,15 +36,15 @@ share/themes/Clearlooks-Olive/gtk-2.0/gtkrc
 share/themes/Clearlooks-Quicksilver/gtk-2.0/gtkrc
 %%ENGINE%%share/themes/Clearlooks/gtk-2.0/gtkrc
 share/themes/Clearlooks/index.theme
-@dirrm share/themes/Clearlooks/gtk-2.0
+@unexec rmdir %D/share/themes/Clearlooks/gtk-2.0 2>/dev/null || true
 @dirrm share/themes/Clearlooks-Quicksilver/gtk-2.0
 @dirrm share/themes/Clearlooks-Quicksilver
 @dirrm share/themes/Clearlooks-Olive/gtk-2.0
 @dirrm share/themes/Clearlooks-Olive
 @dirrm share/themes/Clearlooks-DeepSky/gtk-2.0
 @dirrm share/themes/Clearlooks-DeepSky
-@dirrm share/themes/Clearlooks
-@dirrm share/gnome/themes/Clearlooks
+@unexec rmdir %D/share/themes/Clearlooks 2>/dev/null || true
+@unexec rmdir %D/share/gnome/themes/Clearlooks 2>/dev/null || true
 @dirrm share/icons/Clearlooks/24x24/gtk
 @dirrm share/icons/Clearlooks/24x24
 @dirrm share/icons/Clearlooks/16x16/gtk
