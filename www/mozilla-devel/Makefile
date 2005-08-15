@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla-devel/Makefile,v 1.3 2005/08/02 04:42:25 marcus Exp $
+#    $MCom: ports/www/mozilla-devel/Makefile,v 1.4 2005/08/06 18:33:08 marcus Exp $
 #
 
 PORTNAME?=	mozilla
@@ -214,6 +214,8 @@ USE_GNOME+=	gnomehier
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e  's/%{idldir}/%idldir%/g' \
+		${WRKSRC}/build/unix/mozilla-config.in
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
 		${WRKSRC}/build/unix/run-mozilla.sh
 	@${REINPLACE_CMD} -e 's|%%MOZILLA%%|${MOZILLA}|g' \

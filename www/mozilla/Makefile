@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile,v 1.15 2005/07/22 00:00:13 marcus Exp $
+#    $MCom: ports/www/mozilla/Makefile,v 1.16 2005/07/26 04:14:23 marcus Exp $
 #
 
 PORTNAME=	mozilla
@@ -216,6 +216,8 @@ CONFIGURE_ARGS+=	--enable-optimize=-O2
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e  's/%{idldir}/%idldir%/g' \
+		${WRKSRC}/build/unix/mozilla-config.in
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
 		${WRKSRC}/build/unix/run-mozilla.sh
 	@${REINPLACE_CMD} -e 's|%%MOZILLA%%|${MOZILLA}|g' \
