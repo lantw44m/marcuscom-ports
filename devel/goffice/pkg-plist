@@ -74,6 +74,7 @@ include/libgoffice-1/goffice/graph/gog-renderer-pixbuf.h
 include/libgoffice-1/goffice/graph/gog-renderer-svg.h
 include/libgoffice-1/goffice/graph/gog-renderer.h
 include/libgoffice-1/goffice/graph/gog-series-impl.h
+include/libgoffice-1/goffice/graph/gog-series-lines.h
 include/libgoffice-1/goffice/graph/gog-series.h
 include/libgoffice-1/goffice/graph/gog-style.h
 include/libgoffice-1/goffice/graph/gog-styled-object.h
@@ -108,6 +109,7 @@ include/libgoffice-1/goffice/utils/go-file.h
 include/libgoffice-1/goffice/utils/go-font.h
 include/libgoffice-1/goffice/utils/go-format-match.h
 include/libgoffice-1/goffice/utils/go-format.h
+include/libgoffice-1/goffice/utils/go-geometry.h
 include/libgoffice-1/goffice/utils/go-glib-extras.h
 include/libgoffice-1/goffice/utils/go-gradient.h
 include/libgoffice-1/goffice/utils/go-libxml-extras.h
@@ -118,49 +120,51 @@ include/libgoffice-1/goffice/utils/go-pattern.h
 include/libgoffice-1/goffice/utils/go-units.h
 include/libgoffice-1/goffice/utils/goffice-utils.h
 include/libgoffice-1/goffice/utils/regutf8.h
-lib/goffice/0.0.2/plugins/plot_barcol/barcol.so
-lib/goffice/0.0.2/plugins/plot_barcol/gog-barcol-prefs.glade
-lib/goffice/0.0.2/plugins/plot_barcol/gog-minmax-prefs.glade
-lib/goffice/0.0.2/plugins/plot_barcol/plot-types.xml
-lib/goffice/0.0.2/plugins/plot_barcol/plugin.xml
-lib/goffice/0.0.2/plugins/plot_boxes/boxplot.so
-lib/goffice/0.0.2/plugins/plot_boxes/gog-boxplot-prefs.glade
-lib/goffice/0.0.2/plugins/plot_boxes/plot-types.xml
-lib/goffice/0.0.2/plugins/plot_boxes/plugin.xml
-lib/goffice/0.0.2/plugins/plot_pie/gog-pie-prefs.glade
-lib/goffice/0.0.2/plugins/plot_pie/gog-pie-series.glade
-lib/goffice/0.0.2/plugins/plot_pie/gog-ring-prefs.glade
-lib/goffice/0.0.2/plugins/plot_pie/pie.so
-lib/goffice/0.0.2/plugins/plot_pie/plot-types.xml
-lib/goffice/0.0.2/plugins/plot_pie/plugin.xml
-lib/goffice/0.0.2/plugins/plot_radar/plot-types.xml
-lib/goffice/0.0.2/plugins/plot_radar/plugin.xml
-lib/goffice/0.0.2/plugins/plot_radar/radar.so
-lib/goffice/0.0.2/plugins/plot_surface/gog-contour-prefs.glade
-lib/goffice/0.0.2/plugins/plot_surface/plot-types.xml
-lib/goffice/0.0.2/plugins/plot_surface/plugin.xml
-lib/goffice/0.0.2/plugins/plot_surface/surface.so
-lib/goffice/0.0.2/plugins/plot_xy/gog-bubble-prefs.glade
-lib/goffice/0.0.2/plugins/plot_xy/plot-types.xml
-lib/goffice/0.0.2/plugins/plot_xy/plugin.xml
-lib/goffice/0.0.2/plugins/plot_xy/xy.so
-lib/goffice/0.0.2/plugins/reg_linear/linreg.so
-lib/goffice/0.0.2/plugins/reg_linear/plugin.xml
-lib/goffice/0.0.2/plugins/reg_linear/reg-types.xml
+lib/goffice/%%VERSION%%/plugins/plot_barcol/barcol.so
+lib/goffice/%%VERSION%%/plugins/plot_barcol/gog-barcol-prefs.glade
+lib/goffice/%%VERSION%%/plugins/plot_barcol/gog-minmax-prefs.glade
+lib/goffice/%%VERSION%%/plugins/plot_barcol/plot-types.xml
+lib/goffice/%%VERSION%%/plugins/plot_barcol/plugin.xml
+lib/goffice/%%VERSION%%/plugins/plot_boxes/boxplot.so
+lib/goffice/%%VERSION%%/plugins/plot_boxes/gog-boxplot-prefs.glade
+lib/goffice/%%VERSION%%/plugins/plot_boxes/plot-types.xml
+lib/goffice/%%VERSION%%/plugins/plot_boxes/plugin.xml
+lib/goffice/%%VERSION%%/plugins/plot_pie/gog-pie-prefs.glade
+lib/goffice/%%VERSION%%/plugins/plot_pie/gog-pie-series.glade
+lib/goffice/%%VERSION%%/plugins/plot_pie/gog-ring-prefs.glade
+lib/goffice/%%VERSION%%/plugins/plot_pie/pie.so
+lib/goffice/%%VERSION%%/plugins/plot_pie/plot-types.xml
+lib/goffice/%%VERSION%%/plugins/plot_pie/plugin.xml
+lib/goffice/%%VERSION%%/plugins/plot_radar/plot-types.xml
+lib/goffice/%%VERSION%%/plugins/plot_radar/plugin.xml
+lib/goffice/%%VERSION%%/plugins/plot_radar/radar.so
+lib/goffice/%%VERSION%%/plugins/plot_surface/gog-contour-prefs.glade
+lib/goffice/%%VERSION%%/plugins/plot_surface/plot-types.xml
+lib/goffice/%%VERSION%%/plugins/plot_surface/plugin.xml
+lib/goffice/%%VERSION%%/plugins/plot_surface/surface.so
+lib/goffice/%%VERSION%%/plugins/plot_xy/gog-bubble-prefs.glade
+lib/goffice/%%VERSION%%/plugins/plot_xy/plot-types.xml
+lib/goffice/%%VERSION%%/plugins/plot_xy/plugin.xml
+lib/goffice/%%VERSION%%/plugins/plot_xy/xy.so
+lib/goffice/%%VERSION%%/plugins/reg_linear/linreg.so
+lib/goffice/%%VERSION%%/plugins/reg_linear/plugin.xml
+lib/goffice/%%VERSION%%/plugins/reg_linear/reg-types.xml
 lib/libgoffice-1.a
 lib/libgoffice-1.so
 lib/libgoffice-1.so.0
 libdata/pkgconfig/libgoffice-1.pc
-share/gnome/goffice/0.0.2/glade/go-font-sel.glade
-share/gnome/goffice/0.0.2/glade/go-format-sel.glade
-share/gnome/goffice/0.0.2/glade/gog-axis-prefs.glade
-share/gnome/goffice/0.0.2/glade/gog-error-bar-prefs.glade
-share/gnome/goffice/0.0.2/glade/gog-guru-type-selector.glade
-share/gnome/goffice/0.0.2/glade/gog-guru.glade
-share/gnome/goffice/0.0.2/glade/gog-object-prefs.glade
-share/gnome/goffice/0.0.2/glade/gog-reg-curve-prefs.glade
-share/gnome/goffice/0.0.2/glade/gog-reg-eqn-prefs.glade
-share/gnome/goffice/0.0.2/glade/gog-style-prefs.glade
+share/gnome/goffice/%%VERSION%%/glade/go-font-sel.glade
+share/gnome/goffice/%%VERSION%%/glade/go-format-sel.glade
+share/gnome/goffice/%%VERSION%%/glade/gog-axis-prefs.glade
+share/gnome/goffice/%%VERSION%%/glade/gog-chart-prefs.glade
+share/gnome/goffice/%%VERSION%%/glade/gog-error-bar-prefs.glade
+share/gnome/goffice/%%VERSION%%/glade/gog-guru-type-selector.glade
+share/gnome/goffice/%%VERSION%%/glade/gog-guru.glade
+share/gnome/goffice/%%VERSION%%/glade/gog-object-prefs.glade
+share/gnome/goffice/%%VERSION%%/glade/gog-reg-curve-prefs.glade
+share/gnome/goffice/%%VERSION%%/glade/gog-reg-eqn-prefs.glade
+share/gnome/goffice/%%VERSION%%/glade/gog-style-prefs.glade
+share/gnome/goffice/%%VERSION%%/patterns/svg-patterns.xml
 share/gnome/pixmaps/goffice/area.xpm
 share/gnome/pixmaps/goffice/bar-hboth.png
 share/gnome/pixmaps/goffice/bar-hminus.png
@@ -305,18 +309,19 @@ share/locale/zh_TW/LC_MESSAGES/goffice.mo
 @unexec rmdir %D/share/locale/mr/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/mr 2> /dev/null || true
 @dirrm share/gnome/pixmaps/goffice
-@dirrm share/gnome/goffice/0.0.2/glade
-@dirrm share/gnome/goffice/0.0.2
+@dirrm share/gnome/goffice/%%VERSION%%/patterns
+@dirrm share/gnome/goffice/%%VERSION%%/glade
+@dirrm share/gnome/goffice/%%VERSION%%
 @dirrm share/gnome/goffice
-@dirrm lib/goffice/0.0.2/plugins/reg_linear
-@dirrm lib/goffice/0.0.2/plugins/plot_xy
-@dirrm lib/goffice/0.0.2/plugins/plot_surface
-@dirrm lib/goffice/0.0.2/plugins/plot_radar
-@dirrm lib/goffice/0.0.2/plugins/plot_pie
-@dirrm lib/goffice/0.0.2/plugins/plot_boxes
-@dirrm lib/goffice/0.0.2/plugins/plot_barcol
-@dirrm lib/goffice/0.0.2/plugins
-@dirrm lib/goffice/0.0.2
+@dirrm lib/goffice/%%VERSION%%/plugins/reg_linear
+@dirrm lib/goffice/%%VERSION%%/plugins/plot_xy
+@dirrm lib/goffice/%%VERSION%%/plugins/plot_surface
+@dirrm lib/goffice/%%VERSION%%/plugins/plot_radar
+@dirrm lib/goffice/%%VERSION%%/plugins/plot_pie
+@dirrm lib/goffice/%%VERSION%%/plugins/plot_boxes
+@dirrm lib/goffice/%%VERSION%%/plugins/plot_barcol
+@dirrm lib/goffice/%%VERSION%%/plugins
+@dirrm lib/goffice/%%VERSION%%
 @dirrm lib/goffice
 @dirrm include/libgoffice-1/goffice/utils
 @dirrm include/libgoffice-1/goffice/ms-compat

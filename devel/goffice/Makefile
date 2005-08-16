@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/goffice/Makefile,v 1.3 2005/06/28 05:40:02 adamw Exp $
+#   $MCom: ports/devel/goffice/Makefile,v 1.4 2005/07/01 18:00:50 marcus Exp $
 #
 
 PORTNAME=	goffice
-PORTVERSION=	0.0.2
+PORTVERSION=	0.0.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.0
@@ -24,5 +24,7 @@ USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+PLIST_SUB=	VERSION=${PORTVERSION}
 
 .include <bsd.port.mk>
