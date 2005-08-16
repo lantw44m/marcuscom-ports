@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.21 2005/08/16 17:22:38 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.22 2005/08/16 17:30:24 marcus Exp $
 #
 
 PORTNAME=	evince
@@ -65,8 +65,8 @@ LIB_DEPENDS+=	dbus-glib-1.1:${PORTSDIR}/devel/dbus
 pre-everything::
 .if !defined(WITHOUT_NAUTILUS)
 	@${ECHO_MSG}
-	@${ECHO_MSG} "You can disable nautilus plugins by defining"
-	@${ECHO_MSG} "WITHOUT_NAUTILUS=yes"
+	@${ECHO_MSG} "If you don't want Nautilus plugin hit Ctrl-C now and
+	@${ECHO_MSG} "use \"make WITHOUT_NAUTILUS=yes\""
 	@${ECHO_MSG}
 .endif
 .if !defined(WITH_DJVU)
