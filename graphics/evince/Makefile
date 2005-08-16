@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.17 2005/06/28 05:40:04 adamw Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.18 2005/07/04 00:11:28 marcus Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	0.3.2
+PORTVERSION=	0.3.3
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.3
@@ -30,6 +30,17 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 
 GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas
 
+.include <bsd.port.pre.mk>
+
+.if !defined(WITHOUT_NAUTILUS)
+USE_GNOME+=	nautilus2
+CONFIGURE_ARGS+=	--enable-nautilus
+PLIST_SUB+=	NAUTILUS=""
+.else
+CONFIGURE_ARGS+=	--disable-nautilus
+PLIST_SUB+=	NAUTILUS="@comment "
+.endif
+
 .if defined(WITH_DJVU)
 LIB_DEPENDS+=		djvulibre.14:${PORTSDIR}/graphics/djvulibre
 CONFIGURE_ARGS+=	--enable-djvu
@@ -39,8 +50,13 @@ CONFIGURE_ARGS+=	--disable-djvu
 .endif
 
 pre-everything::
-.if !defined(WITH_DJVU)
+.if !defined(WITHOUT_NAUTILUS)
 	@${ECHO_MSG}
+	@${ECHO_MSG} "You can disable nautilus plugins by defining"
+	@${ECHO_MSG} "WITHOUT_NAUTILUS=yes"
+	@${ECHO_MSG}
+.endif
+.if !defined(WITH_DJVU)
 	@${ECHO_MSG} "If you want DjVu support included, hit Ctrl-C now and use"
 	@${ECHO_MSG} "\"make WITH_DJVU=yes\""
 	@${ECHO_MSG} "NOTE: GNOME/Gtk+ users may want to avoid QT dependency required"
@@ -52,4 +68,4 @@ pre-everything::
 post-install:
 	@-update-desktop-database
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
