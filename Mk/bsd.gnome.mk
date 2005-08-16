@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.318 2005/08/12 20:21:55 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.319 2005/08/13 05:34:00 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -408,11 +408,11 @@ pkgconfig_BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkgconfig
 pkgconfig_RUN_DEPENDS=		pkg-config:${PORTSDIR}/devel/pkgconfig
 
 libgsf_LIB_DEPENDS=			gsf-1.13:${PORTSDIR}/devel/libgsf
-libgsf_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgsf-1.pc
+libgsf_DETECT=			${X11BASE}/libdata/pkgconfig/libgsf-1.pc
 libgsf_USE_GNOME_IMPL=		glib20 libxml2
 
-libgsf_gnome_LIB_DEPENDS=	gsf-gnome-1.13:${PORTSDIR}/devel/libgsf-gnome
-libgsf_gnome_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgsf-gnome-1.pc
+libgsf_gnome_LIB_DEPENDS=	gsf-gnome-1.1:${PORTSDIR}/devel/libgsf-gnome
+libgsf_gnome_DETECT=		${X11BASE}/libdata/pkgconfig/libgsf-gnome-1.pc
 libgsf_gnome_USE_GNOME_IMPL=	libgsf gnomevfs2
 
 pygtk2_DETECT=			${PYTHON_SITELIBDIR}/gtk-2.0/gtk/__init__.py
