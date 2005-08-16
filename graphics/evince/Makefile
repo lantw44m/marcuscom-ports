@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.20 2005/08/16 17:16:41 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.21 2005/08/16 17:22:38 marcus Exp $
 #
 
 PORTNAME=	evince
@@ -82,6 +82,9 @@ pre-everything::
 	@${ECHO_MSG} "use \"make WITH_DBUS=yes\""
 	@${ECHO_MSG}
 .endif
+
+post-patch:
+	@${CP} ${FILESDIR}/ev-application-service.xml ${WRKSRC}/shell
 
 post-install:
 	@-update-desktop-database
