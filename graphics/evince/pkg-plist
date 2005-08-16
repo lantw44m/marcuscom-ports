@@ -81,6 +81,6 @@ share/locale/zh_TW/LC_MESSAGES/evince.mo
 @dirrm share/gnome/help/evince
 @dirrm share/gnome/evince
 %%NAUTILUS%%@unexec rmdir %D/lib/nautilus/extensions-1.0 2>/dev/null || /usr/bin/true
-%%NAUTILUS%%@unexec rmdir %D/lib/nautilus 2>/dev/null || /usr/bintrue
+%%NAUTILUS%%@unexec rmdir %D/lib/nautilus 2>/dev/null || /usr/bin/true
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
