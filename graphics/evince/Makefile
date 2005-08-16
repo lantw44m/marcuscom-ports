@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.19 2005/08/16 15:25:01 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.20 2005/08/16 17:16:41 marcus Exp $
 #
 
 PORTNAME=	evince
@@ -16,8 +16,7 @@ MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 multi-format document viewer
 
-LIB_DEPENDS=	poppler.0:${PORTSDIR}/graphics/poppler \
-		dbus-glib-1.1:${PORTSDIR}/devel/dbus
+LIB_DEPENDS=	poppler.0:${PORTSDIR}/graphics/poppler
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool:15
@@ -33,6 +32,14 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas
 
 .include <bsd.port.pre.mk>
+
+.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+WITH_DBUS=	yes
+.endif
+
+.if exists(${LOCALBASE}/lib/libdbus-glib-1.so)
+WITH_DBUS=	yes
+.endif
 
 .if !defined(WITHOUT_NAUTILUS)
 USE_GNOME+=	nautilus2
@@ -51,6 +58,10 @@ GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
 CONFIGURE_ARGS+=	--disable-djvu
 .endif
 
+.if defined(WITH_DBUS)
+LIB_DEPENDS+=	dbus-glib-1.1:${PORTSDIR}/devel/dbus
+.endif
+
 pre-everything::
 .if !defined(WITHOUT_NAUTILUS)
 	@${ECHO_MSG}
@@ -64,6 +75,11 @@ pre-everything::
 	@${ECHO_MSG} "NOTE: GNOME/Gtk+ users may want to avoid QT dependency required"
 	@${ECHO_MSG} "by defaut djvulibre installation. They need to use
 	@${ECHO_MSG} "\"make WITHOUT_X11=yes\" when build that library then."
+	@${ECHO_MSG}
+.endif
+.if !defined(WITH_DBUS)
+	@${ECHO_MSG} "If you want D-BUS support included, hit Ctrl-C now and"
+	@${ECHO_MSG} "use \"make WITH_DBUS=yes\""
 	@${ECHO_MSG}
 .endif
 
