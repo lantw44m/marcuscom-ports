@@ -6,8 +6,6 @@ include/poppler/BuiltinFontTables.h
 include/poppler/CMap.h
 include/poppler/CairoFontEngine.h
 include/poppler/CairoOutputDev.h
-include/poppler/CairoOutputDevImage.h
-include/poppler/CairoOutputDevX.h
 include/poppler/Catalog.h
 include/poppler/CharCodeToUnicode.h
 include/poppler/CharTypes.h
