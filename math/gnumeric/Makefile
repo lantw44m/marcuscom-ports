@@ -3,12 +3,11 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.7 2005/07/01 18:03:12 marcus Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.8 2005/08/08 07:21:59 marcus Exp $
 #
 
 PORTNAME=	gnumeric
-PORTVERSION=	1.5.2
-PORTREVISION=	1
+PORTVERSION=	1.5.3
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -24,12 +23,12 @@ USE_X_PREFIX=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier libgnomeprintui \
-		libgsf_gnome pygtk2 desktopfileutils
+		libgsf_gnome pygtk2 desktopfileutils libgnomedb
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
-CONFIGURE_ARGS=	--without-guile --with-bonobo --without-gnome-db
+CONFIGURE_ARGS=	--without-guile --with-bonobo
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib -liconv ${PTHREAD_LIBS}" \
 		python_prog=${PYTHON_VERSION}
@@ -44,8 +43,9 @@ PLIST_SUB=	VERSION=${PORTVERSION}
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 500600
-# The Perl plug-ins don't build with Perl < 5.6.1
-#EXTRA_PATCHES+=	${FILESDIR}/extra-patch-plugins_Makefile.in
+PLIST_SUB+=	PERL="@comment "
+.else
+PLIST_SUB+=	PERL=""
 .endif
 
 post-patch:
