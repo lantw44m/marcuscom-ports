@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.18 2005/07/04 00:11:28 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.19 2005/08/16 15:25:01 ahze Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	0.3.3
+PORTREVISION=	1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.3
@@ -15,7 +16,8 @@ MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 multi-format document viewer
 
-LIB_DEPENDS=	poppler.0:${PORTSDIR}/graphics/poppler
+LIB_DEPENDS=	poppler.0:${PORTSDIR}/graphics/poppler \
+		dbus-glib-1.1:${PORTSDIR}/devel/dbus
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool:15
@@ -24,7 +26,7 @@ USE_GMAKE=	yes
 USE_GHOSTSCRIPT=yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui libgnomeprintui \
-		desktopfileutils
+		desktopfileutils gnomedocutils
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
