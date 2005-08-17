@@ -79,8 +79,10 @@ include/gimp-2.0/libgimp/gimppixelfetcher.h
 include/gimp-2.0/libgimp/gimppixelrgn.h
 include/gimp-2.0/libgimp/gimpplugin.h
 include/gimp-2.0/libgimp/gimpplugin_pdb.h
+include/gimp-2.0/libgimp/gimpprocbrowserdialog.h
 include/gimp-2.0/libgimp/gimpproceduraldb.h
 include/gimp-2.0/libgimp/gimpproceduraldb_pdb.h
+include/gimp-2.0/libgimp/gimpprocview.h
 include/gimp-2.0/libgimp/gimpprogress.h
 include/gimp-2.0/libgimp/gimpprogress_pdb.h
 include/gimp-2.0/libgimp/gimpprogressbar.h
@@ -184,6 +186,7 @@ include/gimp-2.0/libgimpwidgets/gimppreview.h
 include/gimp-2.0/libgimpwidgets/gimppreviewarea.h
 include/gimp-2.0/libgimpwidgets/gimppropwidgets.h
 include/gimp-2.0/libgimpwidgets/gimpquerybox.h
+include/gimp-2.0/libgimpwidgets/gimpresolutionentry.h
 include/gimp-2.0/libgimpwidgets/gimpscrolledpreview.h
 include/gimp-2.0/libgimpwidgets/gimpsizeentry.h
 include/gimp-2.0/libgimpwidgets/gimpstock.h
@@ -320,6 +323,7 @@ libexec/gimp/2.2/plug-ins/plugin-browser
 libexec/gimp/2.2/plug-ins/png
 libexec/gimp/2.2/plug-ins/pnm
 libexec/gimp/2.2/plug-ins/polar
+libexec/gimp/2.2/plug-ins/poppler
 libexec/gimp/2.2/plug-ins/postscript
 %%PRINT%%libexec/gimp/2.2/plug-ins/print
 libexec/gimp/2.2/plug-ins/procedure-browser
@@ -430,6 +434,8 @@ lib/libgimpwidgets-2.0.so.%%SHLIBVER%%
 libdata/pkgconfig/gimp-2.0.pc
 libdata/pkgconfig/gimpthumb-2.0.pc
 libdata/pkgconfig/gimpui-2.0.pc
+@comment this is a simlink to gimp-2.3.1, so put it here because it gives me trouble with MAN1.
+man/man1/gimp-console-2.3.1
 share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimp/ix01.html
 %%DOCSDIR%%/libgimp/ix02.html
@@ -441,6 +447,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimp/GimpFontSelectButton.html
 %%DOCSDIR%%/libgimp/GimpImageComboBox.html
 %%DOCSDIR%%/libgimp/GimpProgressBar.html
+%%DOCSDIR%%/libgimp/GimpProcBrowserDialog.html
 %%DOCSDIR%%/libgimp/gimpdefinitions.html
 %%DOCSDIR%%/libgimp/home.png
 %%DOCSDIR%%/libgimp/index.html
@@ -494,6 +501,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimp/libgimp-gimpplugin.html
 %%DOCSDIR%%/libgimp/libgimp-gimpproceduraldb.html
 %%DOCSDIR%%/libgimp/libgimp-gimpprogress.html
+%%DOCSDIR%%/libgimp/libgimp-gimpprocview.html
 %%DOCSDIR%%/libgimp/libgimp-gimpregioniterator.html
 %%DOCSDIR%%/libgimp/libgimp-gimpselection.html
 %%DOCSDIR%%/libgimp/libgimp-gimptexttool.html
@@ -631,6 +639,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpthumb/style.css
 %%DOCSDIR%%/libgimpthumb/up.png
 %%DOCSDIR%%/libgimpwidgets/GimpButton.html
+%%DOCSDIR%%/libgimpwidgets/GimpBrowser.html
 %%DOCSDIR%%/libgimpwidgets/GimpCellRendererColor.html
 %%DOCSDIR%%/libgimpwidgets/GimpCellRendererToggle.html
 %%DOCSDIR%%/libgimpwidgets/GimpChainButton.html
@@ -656,12 +665,14 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpwidgets/GimpIntStore.html
 %%DOCSDIR%%/libgimpwidgets/GimpMemsizeEntry.html
 %%DOCSDIR%%/libgimpwidgets/GimpOffsetArea.html
+%%DOCSDIR%%/libgimpwidgets/GimpPageSelector.html
 %%DOCSDIR%%/libgimpwidgets/GimpPathEditor.html
 %%DOCSDIR%%/libgimpwidgets/GimpPickButton.html
 %%DOCSDIR%%/libgimpwidgets/GimpPixmap.html
 %%DOCSDIR%%/libgimpwidgets/GimpPreview.html
 %%DOCSDIR%%/libgimpwidgets/GimpPreviewArea.html
 %%DOCSDIR%%/libgimpwidgets/GimpSizeEntry.html
+%%DOCSDIR%%/libgimpwidgets/GimpScrolledPreview.html
 %%DOCSDIR%%/libgimpwidgets/GimpUnitMenu.html
 %%DOCSDIR%%/libgimpwidgets/gimp-browser.png
 %%DOCSDIR%%/libgimpwidgets/gimp-button.png
@@ -679,6 +690,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpwidgets/gimp-int-combo-box.png
 %%DOCSDIR%%/libgimpwidgets/gimp-memsize-entry.png
 %%DOCSDIR%%/libgimpwidgets/gimp-offset-area.png
+%%DOCSDIR%%/libgimpwidgets/gimp-page-selector.png
 %%DOCSDIR%%/libgimpwidgets/gimp-path-editor.png
 %%DOCSDIR%%/libgimpwidgets/gimp-pick-button.png
 %%DOCSDIR%%/libgimpwidgets/gimp-preview-area.png
@@ -691,13 +703,10 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpwidgets/ix03.html
 %%DOCSDIR%%/libgimpwidgets/ix04.html
 %%DOCSDIR%%/libgimpwidgets/left.png
-%%DOCSDIR%%/libgimpwidgets/libgimpwidgets-GimpBrowser.html
 %%DOCSDIR%%/libgimpwidgets/libgimpwidgets-GimpEnumWidgets.html
 %%DOCSDIR%%/libgimpwidgets/libgimpwidgets-GimpHelpUI.html
-%%DOCSDIR%%/libgimpwidgets/libgimpwidgets-GimpPageSelector.html
 %%DOCSDIR%%/libgimpwidgets/libgimpwidgets-GimpPropWidgets.html
 %%DOCSDIR%%/libgimpwidgets/libgimpwidgets-GimpQueryBox.html
-%%DOCSDIR%%/libgimpwidgets/libgimpwidgets-GimpScrolledPreview.html
 %%DOCSDIR%%/libgimpwidgets/libgimpwidgets-GimpStock.html
 %%DOCSDIR%%/libgimpwidgets/libgimpwidgets-GimpWidgets.html
 %%DOCSDIR%%/libgimpwidgets/libgimpwidgets-cell-renderers.html
@@ -927,6 +936,8 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpwidgets/stock-tool-eraser-22.png
 %%DOCSDIR%%/libgimpwidgets/stock-tool-flip-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-tool-flip-22.png
+%%DOCSDIR%%/libgimpwidgets/stock-tool-foreground-select-16.png
+%%DOCSDIR%%/libgimpwidgets/stock-tool-foreground-select-22.png
 %%DOCSDIR%%/libgimpwidgets/stock-tool-free-select-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-tool-free-select-22.png
 %%DOCSDIR%%/libgimpwidgets/stock-tool-fuzzy-select-16.png
@@ -1276,6 +1287,7 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/menus/buffers-menu.xml
 %%DATADIR%%/menus/channels-menu.xml
 %%DATADIR%%/menus/colormap-editor-menu.xml
+%%DATADIR%%/menus/cursor-info-menu.xml
 %%DATADIR%%/menus/dockable-menu.xml
 %%DATADIR%%/menus/documents-menu.xml
 %%DATADIR%%/menus/error-console-menu.xml
@@ -1289,6 +1301,7 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/menus/palettes-menu.xml
 %%DATADIR%%/menus/patterns-menu.xml
 %%DATADIR%%/menus/qmask-menu.xml
+%%DATADIR%%/menus/sample-point-editor-menu.xml
 %%DATADIR%%/menus/selection-editor-menu.xml
 %%DATADIR%%/menus/templates-menu.xml
 %%DATADIR%%/menus/text-editor-toolbar.xml
@@ -1296,13 +1309,11 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/menus/toolbox-menu.xml
 %%DATADIR%%/menus/tools-menu.xml
 %%DATADIR%%/menus/vectors-menu.xml
-%%DATADIR%%/misc/gimp.applications
-%%DATADIR%%/misc/gimp.desktop
-%%DATADIR%%/misc/gimp.keys
-%%GNOMEPANEL:%%share/gnome/application-registry/gimp-2.3.applications
-%%GNOMEPANEL:%%share/gnome/applications/gimp-2.3.desktop
-%%GNOMEPANEL:%%@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-%%GNOMEPANEL:%%share/gnome/mime-info/gimp-2.3.keys
+share/%%GTK%%application-registry/gimp.applications
+share/%%GTK%%applications/gimp.desktop
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+share/%%GTK%%icons/hicolor/48x48/apps/gimp.png
+share/%%GTK%%mime-info/gimp.keys
 %%DATADIR%%/palettes/Bears.gpl
 %%DATADIR%%/palettes/Bgold.gpl
 %%DATADIR%%/palettes/Blues.gpl
@@ -1457,7 +1468,6 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/scripts/guides-remove-all.scm
 %%DATADIR%%/scripts/hsv-graph.scm
 %%DATADIR%%/scripts/i26-gunya2.scm
-%%DATADIR%%/scripts/image-structure.scm
 %%DATADIR%%/scripts/images/beavis.jpg
 %%DATADIR%%/scripts/images/texture.jpg
 %%DATADIR%%/scripts/images/texture1.jpg
@@ -1751,6 +1761,8 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/themes/Default/images/stock-tool-eraser-22.png
 %%DATADIR%%/themes/Default/images/stock-tool-flip-16.png
 %%DATADIR%%/themes/Default/images/stock-tool-flip-22.png
+%%DATADIR%%/themes/Default/images/stock-tool-foreground-select-16.png
+%%DATADIR%%/themes/Default/images/stock-tool-foreground-select-22.png
 %%DATADIR%%/themes/Default/images/stock-tool-free-select-16.png
 %%DATADIR%%/themes/Default/images/stock-tool-free-select-22.png
 %%DATADIR%%/themes/Default/images/stock-tool-fuzzy-select-16.png
@@ -1947,6 +1959,11 @@ share/locale/nb/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/nb/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/nb/LC_MESSAGES/gimp20-tips.mo
 share/locale/nb/LC_MESSAGES/gimp20.mo
+share/locale/ne/LC_MESSAGES/gimp20-libgimp.mo
+share/locale/ne/LC_MESSAGES/gimp20-script-fu.mo
+share/locale/ne/LC_MESSAGES/gimp20-std-plug-ins.mo
+share/locale/ne/LC_MESSAGES/gimp20-tips.mo
+share/locale/ne/LC_MESSAGES/gimp20.mo
 share/locale/nl/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/nl/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/nl/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -2057,7 +2074,6 @@ share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 @dirrm %%DATADIR%%/scripts
 @dirrm %%DATADIR%%/patterns
 @dirrm %%DATADIR%%/palettes
-@dirrm %%DATADIR%%/misc
 @dirrm %%DATADIR%%/menus
 @dirrm %%DATADIR%%/images
 @dirrm %%DATADIR%%/gradients
@@ -2098,4 +2114,4 @@ share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 @dirrm include/gimp-2.0
 @dirrm etc/gimp/2.2
 @dirrm etc/gimp
-%%GNOMEPANEL:%%@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
