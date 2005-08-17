@@ -3,12 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.23 2005/08/16 18:33:13 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.24 2005/08/17 08:03:26 mezz Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	0.3.3
-PORTREVISION=	2
+PORTVERSION=	0.3.4
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.3
@@ -42,12 +41,12 @@ WITH_DBUS=	yes
 .endif
 
 .if !defined(WITHOUT_NAUTILUS)
-USE_GNOME+=	nautilus2
+USE_GNOME+=		nautilus2
 CONFIGURE_ARGS+=	--enable-nautilus
-PLIST_SUB+=	NAUTILUS=""
+PLIST_SUB+=		NAUTILUS=""
 .else
 CONFIGURE_ARGS+=	--disable-nautilus
-PLIST_SUB+=	NAUTILUS="@comment "
+PLIST_SUB+=		NAUTILUS="@comment "
 .endif
 
 .if defined(WITH_DJVU)
@@ -82,9 +81,6 @@ pre-everything::
 	@${ECHO_MSG} "use \"make WITH_DBUS=yes\""
 	@${ECHO_MSG}
 .endif
-
-post-patch:
-	@${CP} ${FILESDIR}/ev-application-service.xml ${WRKSRC}/shell
 
 post-install:
 	@-update-desktop-database
