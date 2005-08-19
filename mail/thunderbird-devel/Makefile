@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/mail/thunderbird-devel/Makefile,v 1.6 2005/06/28 05:40:07 adamw Exp $
 #
 
 PORTNAME=	thunderbird
@@ -59,7 +59,7 @@ OPTIONS=	DEBUG "Build a debugging image" off \
 .include <bsd.port.pre.mk>
 
 .if ${ARCH} == "alpha" && ${OSVERSION} < 500035
-IGNORE=	"core dumps at runtime"
+IGNORE=	core dumps at runtime
 .endif # ${ARCH} == "alpha" && ${OSVERSION} < 500035
 
 .if ${PERL_LEVEL} < 500600
@@ -156,7 +156,7 @@ pre-install:
 # package, replacing the traditional pkg-plist file.
 	@${RM} -rf ${FAKEDIR} ${PLIST}
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		Makefile ${MAKE_ARGS} install
+		Makefile ${MAKE_ARGS} ${INSTALL_TARGET}
 	@${MKDIR} ${SCRIPTS_DIR}
 	@${MKDIR} ${MOZ_PIS_DIR}
 .for ii in mac win
