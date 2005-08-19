@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gal2/Makefile,v 1.50 2005/06/28 05:40:14 adamw Exp $
+#   $MCom: ports/x11-toolkits/gal2/Makefile,v 1.51 2005/07/01 18:11:43 marcus Exp $
 #
 
 PORTNAME=	gal2
@@ -22,7 +22,8 @@ USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui libgnomeprintui
+USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui libgnomeprintui \
+		ltverhack
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--enable-static --with-libiconv
