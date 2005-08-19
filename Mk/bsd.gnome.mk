@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.326 2005/08/19 07:49:28 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.327 2005/08/19 13:03:50 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -312,11 +312,11 @@ libartlgpl2_LIB_DEPENDS=	art_lgpl_2.5:${PORTSDIR}/graphics/libart_lgpl2
 libartlgpl2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libart-2.0.pc
 libartlgpl2_USE_GNOME_IMPL=	pkgconfig
 
-libgnomeprint_LIB_DEPENDS=	gnomeprint-2-2.1:${PORTSDIR}/print/libgnomeprint
+libgnomeprint_LIB_DEPENDS=	gnomeprint-2-2.0:${PORTSDIR}/print/libgnomeprint
 libgnomeprint_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomeprint-2.2.pc
 libgnomeprint_USE_GNOME_IMPL=	libbonobo libartlgpl2 gtk20
 
-libgnomeprintui_LIB_DEPENDS=	gnomeprintui-2-2.1:${PORTSDIR}/x11-toolkits/libgnomeprintui
+libgnomeprintui_LIB_DEPENDS=	gnomeprintui-2-2.0:${PORTSDIR}/x11-toolkits/libgnomeprintui
 libgnomeprintui_DETECT=		${X11BASE}/libdata/pkgconfig/libgnomeprintui-2.2.pc
 libgnomeprintui_USE_GNOME_IMPL=	libgnomeprint libgnomecanvas
 
