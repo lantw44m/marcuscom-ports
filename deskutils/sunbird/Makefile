@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/deskutils/sunbird/Makefile,v 1.6 2005/06/28 05:39:59 adamw Exp $
 #
 
 PORTNAME=	sunbird
@@ -123,7 +123,7 @@ post-patch:
 pre-install:
 	@${RM} -rf ${FAKEDIR} ${PLIST}
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		Makefile ${MAKE_ARGS} install
+		Makefile ${MAKE_ARGS} ${INSTALL}
 	${ECHO_CMD} 'share/applications/sunbird.desktop' >> ${PLIST}
 	${ECHO_CMD} 'share/pixmaps/${SUNBIRD_ICON}' >> ${PLIST}
 	${ECHO_CMD} '@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}' >> ${PLIST}
