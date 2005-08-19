@@ -32,7 +32,6 @@ include/evolution-data-server-%%VERSION%%/camel/camel-junk-plugin.h
 include/evolution-data-server-%%VERSION%%/camel/camel-list-utils.h
 include/evolution-data-server-%%VERSION%%/camel/camel-lock-client.h
 include/evolution-data-server-%%VERSION%%/camel/camel-lock.h
-include/evolution-data-server-%%VERSION%%/camel/camel-nntp-address.h
 include/evolution-data-server-%%VERSION%%/camel/camel-medium.h
 include/evolution-data-server-%%VERSION%%/camel/camel-mime-filter-basic.h
 include/evolution-data-server-%%VERSION%%/camel/camel-mime-filter-bestenc.h
@@ -61,6 +60,7 @@ include/evolution-data-server-%%VERSION%%/camel/camel-multipart-encrypted.h
 include/evolution-data-server-%%VERSION%%/camel/camel-multipart-signed.h
 include/evolution-data-server-%%VERSION%%/camel/camel-multipart.h
 include/evolution-data-server-%%VERSION%%/camel/camel-net-utils.h
+include/evolution-data-server-%%VERSION%%/camel/camel-nntp-address.h
 include/evolution-data-server-%%VERSION%%/camel/camel-object.h
 include/evolution-data-server-%%VERSION%%/camel/camel-offline-folder.h
 include/evolution-data-server-%%VERSION%%/camel/camel-offline-journal.h
@@ -223,10 +223,10 @@ include/evolution-data-server-%%VERSION%%/libedataserverui/e-book-auth-util.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-categories-dialog.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-contact-store.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-destination-store.h
-include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-dialog.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-entry.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-model.h
+include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-passwords.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-source-option-menu.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-source-selector-dialog.h
@@ -312,13 +312,13 @@ lib/libebook-%%EVO_VERSION%%.so
 lib/libebook-%%EVO_VERSION%%.so.5
 lib/libecal-%%EVO_VERSION%%.a
 lib/libecal-%%EVO_VERSION%%.so
-lib/libecal-%%EVO_VERSION%%.so.4
+lib/libecal-%%EVO_VERSION%%.so.3
 lib/libedata-book-%%EVO_VERSION%%.a
 lib/libedata-book-%%EVO_VERSION%%.so
-lib/libedata-book-%%EVO_VERSION%%.so.3
+lib/libedata-book-%%EVO_VERSION%%.so.2
 lib/libedata-cal-%%EVO_VERSION%%.a
 lib/libedata-cal-%%EVO_VERSION%%.so
-lib/libedata-cal-%%EVO_VERSION%%.so.3
+lib/libedata-cal-%%EVO_VERSION%%.so.1
 lib/libedataserver-%%EVO_VERSION%%.a
 lib/libedataserver-%%EVO_VERSION%%.so
 lib/libedataserver-%%EVO_VERSION%%.so.4
