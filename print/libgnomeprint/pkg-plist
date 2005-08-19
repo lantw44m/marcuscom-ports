@@ -2,13 +2,12 @@ etc/gnome/libgnomeprint-2.0/fonts/gnome-print.fontmap
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-font-face.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-font.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-glyphlist.h
-include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-pango.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-pgl.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-config.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-job.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-meta.h
+include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-pango.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-paper.h
-include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gnome-print-path.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-transport.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-unit.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print.h
@@ -19,6 +18,7 @@ include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gnome-font-private.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gnome-fontmap.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gnome-glyphlist-private.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gnome-print-config-private.h
+include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gnome-print-path.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gnome-print-private.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gp-gc-private.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gpa-config.h
@@ -36,7 +36,7 @@ include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gpa-state.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/private/gpa-utils.h
 lib/libgnomeprint-2-2.a
 lib/libgnomeprint-2-2.so
-lib/libgnomeprint-2-2.so.1
+lib/libgnomeprint-2-2.so.0
 %%CUPS:%%lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintcups.so
 lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintlpd.so
 lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-custom.so
