@@ -3,12 +3,12 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.54 2005/07/17 07:42:29 ahze Exp $
 #
 
 PORTNAME=	librsvg2
 PORTVERSION=	2.9.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.9
@@ -30,8 +30,7 @@ USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
 USE_LIBTOOL_VER=15
 USE_REINPLACE=	yes
-WANT_GNOME=	yes
-USE_GNOME=	gnomehack gnomeprefix libartlgpl2 libgsf gtk20
+USE_GNOME=	gnomehack gnomeprefix libartlgpl2 libgsf gtk20 ltverhack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-svgz \
@@ -48,11 +47,6 @@ PLIST_SUB=	GTK_VERSION=${GTK_VERSION}
 MAN1=		rsvg.1
 
 OPTIONS=	MOZILLA_PLUGIN "Enable the RSVG browser plug-in" no
-
-.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
-.undef WITHOUT_GNOME
-WITH_GNOME=	yes
-.endif
 
 .include <bsd.port.pre.mk>
 

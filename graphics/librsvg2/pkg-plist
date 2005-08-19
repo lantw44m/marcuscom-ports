@@ -9,7 +9,7 @@ lib/gtk-2.0/%%GTK_VERSION%%/engines/libsvg.so
 lib/gtk-2.0/%%GTK_VERSION%%/loaders/svg_loader.so
 lib/librsvg-2.a
 lib/librsvg-2.so
-lib/librsvg-2.so.11
+lib/librsvg-2.so.2
 libdata/pkgconfig/librsvg-2.0.pc
 share/doc/librsvg/html/home.png
 share/doc/librsvg/html/index.html
