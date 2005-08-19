@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox-devel/Makefile,v 1.11 2005/07/30 04:48:00 marcus Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.12 2005/08/06 18:21:08 marcus Exp $
 #
 
 PORTNAME=	firefox
@@ -180,7 +180,7 @@ pre-configure:
 pre-install:
 	@${RM} -rf ${FAKEDIR} ${PLIST}
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		Makefile ${MAKE_ARGS} install
+		Makefile ${MAKE_ARGS} ${INSTALL_TARGET}
 	@${MKDIR} ${SCRIPTS_DIR}
 	@${MKDIR} ${MOZ_PIS_DIR}
 	@${RM} -rf ${FAKEDIR}/lib/${FF}/extensions
@@ -230,7 +230,7 @@ pre-install:
 		&& ${FIND} -d * -type d | \
 		${SED} -e 's:^:@dirrm share/idl/${FF}/:' >> ${PLIST}
 		${ECHO_CMD} "@dirrm share/idl/${FF}" >> ${PLIST}
-		${ECHO_CMD} "@unexec rmdir %D/share/idl 2>/dev/null || true" >> ${PLIST}
+		${ECHO_CMD} "@unexec ${RMDIR} %D/share/idl 2>/dev/null || true" >> ${PLIST}
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/${FF}
