@@ -11,7 +11,7 @@ include/libgtkhtml-%%VERSION%%/gtkhtml/htmltypes.h
 lib/gtkhtml/libgnome-gtkhtml-editor-%%VERSION%%.so
 lib/libgtkhtml-%%VERSION%%.a
 lib/libgtkhtml-%%VERSION%%.so
-lib/libgtkhtml-%%VERSION%%.so.18
+lib/libgtkhtml-%%VERSION%%.so.15
 libdata/bonobo/servers/GNOME_GtkHTML_Editor-%%VERSION%%.server
 libdata/pkgconfig/libgtkhtml-%%VERSION%%.pc
 share/gnome/gtkhtml-%%VERSION%%/Editor.idl
@@ -63,8 +63,8 @@ share/gnome/gtkhtml-%%VERSION%%/icons/search-and-replace-16.png
 share/gnome/gtkhtml-%%VERSION%%/icons/search-and-replace-24.png
 share/gnome/gtkhtml-%%VERSION%%/icons/smiley-1.png
 share/gnome/gtkhtml-%%VERSION%%/icons/smiley-10.png
-share/gnome/gtkhtml-%%VERSION%%/icons/smiley-12.png
 share/gnome/gtkhtml-%%VERSION%%/icons/smiley-11.png
+share/gnome/gtkhtml-%%VERSION%%/icons/smiley-12.png
 share/gnome/gtkhtml-%%VERSION%%/icons/smiley-2.png
 share/gnome/gtkhtml-%%VERSION%%/icons/smiley-3.png
 share/gnome/gtkhtml-%%VERSION%%/icons/smiley-4.png
