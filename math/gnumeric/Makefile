@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.8 2005/08/08 07:21:59 marcus Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.9 2005/08/16 06:09:38 marcus Exp $
 #
 
 PORTNAME=	gnumeric
@@ -26,6 +26,7 @@ USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier libgnomeprintui \
 		libgsf_gnome pygtk2 desktopfileutils libgnomedb
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
+INSTALLS_SHLIB=	yes
 USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--without-guile --with-bonobo
