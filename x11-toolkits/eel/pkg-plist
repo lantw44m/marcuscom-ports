@@ -46,7 +46,7 @@ include/eel-2/eel/eel-xml-extensions.h
 include/eel-2/eel/eel.h
 lib/libeel-2.a
 lib/libeel-2.so
-lib/libeel-2.so.13
+lib/libeel-2.so.2
 libdata/pkgconfig/eel-2.0.pc
 share/locale/am/LC_MESSAGES/eel-2.0.mo
 share/locale/ang/LC_MESSAGES/eel-2.0.mo
