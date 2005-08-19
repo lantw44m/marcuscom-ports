@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile,v 1.16 2005/07/26 04:14:23 marcus Exp $
+#    $MCom: ports/www/mozilla/Makefile,v 1.17 2005/08/15 17:44:05 ahze Exp $
 #
 
 PORTNAME=	mozilla
@@ -117,14 +117,14 @@ IGNORE=	core dumps on ${ARCH} during post-build
 .endif
 
 .if exists(${LOCALBASE}/include/freetype/freetype.h)
-BROKEN=	You must upgrade your freetype port to 1.3.1_2 or higher before \
+BROKEN=	"You must upgrade your freetype port to 1.3.1_2 or higher before \
 	installing Mozilla.  If you have 1.3.1_2 installed, please remove \
-	${LOCALBASE}/include/freetype, then build Mozilla
+	${LOCALBASE}/include/freetype, then build Mozilla"
 .endif
 
 .if defined(WITH_CALENDAR) && (defined(WITHOUT_MAILNEWS) || \
 	defined(WITHOUT_COMPOSER))
-BROKEN=	Calendar requires Composer and Mailnews support.
+BROKEN=	"Calendar requires Composer and Mailnews support."
 .endif
 
 #.if defined(WITH_CAIRO_RENDER)
@@ -150,8 +150,8 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch2-nsSVGLibartGlyphMetricsFT.cpp
 LIB_DEPENDS+=	Xft.2:${PORTSDIR}/x11-fonts/libXft
 CONFIGURE_ARGS+=--enable-xft
 .if exists(${X11BASE}/lib/X11/fonts/mozilla/fonts.dir)
-BROKEN=		Mozilla${MOZ_SUFX} and Xft2 render the mozilla-fonts \
-		illegibly. Please remove the mozilla-fonts package.
+BROKEN=		"Mozilla${MOZ_SUFX} and Xft2 render the mozilla-fonts \
+		illegibly. Please remove the mozilla-fonts package."
 .endif
 .else
 CONFIGURE_ARGS+=--disable-xft
@@ -276,7 +276,7 @@ pre-install:
 	${RM} -rf ${FAKEDIR} ${PLIST}
 	${TOUCH} -f ${PLIST}
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		Makefile ${MAKE_ARGS} install
+		Makefile ${MAKE_ARGS} ${INSTALL_TARGET}
 	${MKDIR} ${MOZ_PIS_DIR}
 	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
 		${FAKEDIR}/bin/mozilla \
@@ -328,7 +328,7 @@ pre-install:
 		&& ${FIND} -d * -type d | \
 		${SED} -e 's:^:@dirrm share/idl/${MOZILLA}/:' >> ${PLIST}
 		${ECHO_CMD} "@dirrm share/idl/${MOZILLA}" >> ${PLIST}
-		${ECHO_CMD} "@unexec rmdir %D/share/idl 2>/dev/null || true" >> ${PLIST}
+		${ECHO_CMD} "@unexec ${RMDIR} %D/share/idl 2>/dev/null || true" >> ${PLIST}
 
 do-install:
 	${MKDIR} ${PREFIX}/lib/${MOZILLA}
