@@ -3,7 +3,7 @@
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libgnomecanvasmm26/Makefile,v 1.6 2005/06/28 05:40:05 adamw Exp $
+#   $MCom: ports/graphics/libgnomecanvasmm26/Makefile,v 1.7 2005/07/04 00:11:29 marcus Exp $
 #
 
 PORTNAME=	libgnomecanvasmm
@@ -38,7 +38,6 @@ post-patch:
 		${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e "s|\(-lglibmm\)|-L\$$(GMM_PROCDIR)/../.. \1|" \
 		${WRKSRC}/tools/extra_defs_gen/Makefile.in
-
 
 patch-autotools:
 	@(cd ${PATCH_WRKSRC}; \
