@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.322 2005/08/19 05:36:37 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.323 2005/08/19 05:44:08 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -361,7 +361,7 @@ libzvt_LIB_DEPENDS=	zvt-2.0.0:${PORTSDIR}/x11-toolkits/libzvt
 libzvt_DETECT=	${X11BASE}/libdata/pkgconfig/libzvt-2.0.pc
 libzvt_USE_GNOME_IMPL=	gtk20
 
-librsvg2_LIB_DEPENDS=	rsvg-2.11:${PORTSDIR}/graphics/librsvg2
+librsvg2_LIB_DEPENDS=	rsvg-2.2:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${X11BASE}/libdata/pkgconfig/librsvg-2.0.pc
 librsvg2_USE_GNOME_IMPL=libartlgpl2 libgsf gtk20
 
