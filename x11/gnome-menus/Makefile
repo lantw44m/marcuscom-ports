@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/x11/gnome-menus/Makefile,v 1.15 2005/07/26 13:59:39 marcus Exp $
+#	$MCom: ports/x11/gnome-menus/Makefile,v 1.16 2005/08/09 14:03:06 kwm Exp $
 #
 
 PORTNAME=	gnome-menus
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomevfs2
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomevfs2 ltverhack
 USE_AUTOTOOLS=	libtool:15
 USE_PYTHON=	yes
 INSTALLS_SHLIB=	yes
