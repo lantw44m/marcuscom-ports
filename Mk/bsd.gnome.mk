@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.320 2005/08/16 04:56:31 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.321 2005/08/16 18:31:30 adamw Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -344,7 +344,7 @@ libgtkhtml_LIB_DEPENDS=	gtkhtml-2.0:${PORTSDIR}/www/libgtkhtml
 libgtkhtml_DETECT=	${X11BASE}/libdata/pkgconfig/libgtkhtml-2.0.pc
 libgtkhtml_USE_GNOME_IMPL=libxslt gnomevfs2 gail
 
-gnomedesktop_LIB_DEPENDS=	gnome-desktop-2.4:${PORTSDIR}/x11/gnomedesktop
+gnomedesktop_LIB_DEPENDS=	gnome-desktop-2.2:${PORTSDIR}/x11/gnomedesktop
 gnomedesktop_DETECT=		${X11BASE}/libdata/pkgconfig/gnome-desktop-2.0.pc
 gnomedesktop_USE_GNOME_IMPL=	libgnomeui
 gnomedesktop_GNOME_DESKTOP_VERSION=2
