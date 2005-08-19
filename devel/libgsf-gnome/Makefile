@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgsf-gnome/Makefile,v 1.5 2005/06/28 05:40:02 adamw Exp $
+#   $MCom: ports/devel/libgsf-gnome/Makefile,v 1.6 2005/08/16 04:56:18 marcus Exp $
 #
 
 CATEGORIES=	devel gnome
@@ -28,7 +28,7 @@ do-build:
 		@cd ${WRKSRC}/gsf-gnome && ${MAKE}
 
 do-install:
-		cd ${WRKSRC}/gsf-gnome && ${MAKE} install
+		cd ${WRKSRC}/gsf-gnome && ${MAKE} ${INSTALL_TARGET}
 		${MKDIR} ${PREFIX}/libdata/pkgconfig
 		${INSTALL_DATA} ${WRKSRC}/libgsf-gnome-1.pc ${PREFIX}/libdata/pkgconfig
 
