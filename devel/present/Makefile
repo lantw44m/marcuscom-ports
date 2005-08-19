@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/present/Makefile,v 1.3 2005/06/28 05:40:03 adamw Exp $
+#   $MCom: ports/devel/present/Makefile,v 1.4 2005/07/01 18:00:51 marcus Exp $
 #
 
 PORTNAME=	present
@@ -19,7 +19,7 @@ LIB_DEPENDS=	goffice-1.0:${PORTSDIR}/devel/goffice
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool:15
-
+INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	LDFLAGS="${PTHREAD_LIBS}"
 USE_GNOME=	gnomehack intlhack
 
