@@ -3,12 +3,12 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla-devel/Makefile,v 1.5 2005/08/15 17:44:06 ahze Exp $
+#    $MCom: ports/www/mozilla-devel/Makefile,v 1.6 2005/08/19 02:31:13 mezz Exp $
 #
 
 PORTNAME?=	mozilla
 PORTVERSION=	1.8.b1
-PORTREVISION?=	3
+PORTREVISION?=	5
 PORTEPOCH?=	2
 CATEGORIES?=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
