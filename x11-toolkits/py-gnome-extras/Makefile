@@ -3,11 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.17 2005/07/21 16:02:49 mezz Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.18 2005/08/11 02:53:15 marcus Exp $
 #
 
 PORTNAME=	gnome
 PORTVERSION=	2.11.4
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -25,6 +26,7 @@ LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2 \
 		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
 		gksu1.2.0:${PORTSDIR}/sysutils/libgksu \
 		gksuui1.0.0:${PORTSDIR}/sysutils/libgksuui \
+		gnome-media-profiles.0:${PORTSDIR}/audio/gnomemedia2 \
 		gdl-1.0:${PORTSDIR}/x11-toolkits/gdl
 RUN_DEPENDS=	${X11BASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDIR}/www/${MOZILLA}
 

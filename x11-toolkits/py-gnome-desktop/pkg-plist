@@ -116,7 +116,7 @@ share/pygtk/2.0/defs/printui.defs
 share/pygtk/2.0/defs/trayicon.defs
 share/pygtk/2.0/defs/wnck.defs
 %%PORTDOCS%%@dirrm share/examples/py-gnome/nautilusburn
-%%PORTDCOS%%@dirrm share/examples/py-gnome/mediaprofiles
+%%PORTDOCS%%@dirrm share/examples/py-gnome/mediaprofiles
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtkspell
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtksourceview
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtkhtml2
