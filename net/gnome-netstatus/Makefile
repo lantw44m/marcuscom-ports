@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/gnomenetstatus/Makefile,v 1.35 2005/07/01 18:04:27 marcus Exp $
+#   $MCom: ports/net/gnomenetstatus/Makefile,v 1.36 2005/07/28 16:52:16 marcus Exp $
 #
 
 PORTNAME=	gnomenetstatus
-PORTVERSION=	2.11.90
+PORTVERSION=	2.11.92
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-netstatus/2.11
@@ -21,7 +21,8 @@ USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_BZIP2=	yes
 GNOME_DESKTOP_VERSION=2
-USE_GNOME=	gnomehack intlhack gnomeprefix libgnome gnomepanel libglade2
+USE_GNOME=	gnomehack intlhack gnomeprefix libgnome gnomepanel libglade2 \
+		gnomedocutils
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
