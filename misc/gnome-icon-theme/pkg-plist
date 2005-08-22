@@ -660,7 +660,6 @@ share/icons/gnome/scalable/filesystems/gnome-fs-directory.svg
 share/icons/gnome/scalable/filesystems/gnome-fs-home.svg
 share/icons/gnome/scalable/filesystems/gnome-fs-trash-empty.svg
 share/icons/gnome/scalable/filesystems/gnome-fs-trash-full.svg
-share/icons/hicolor/16x16/apps/blender.png
 share/icons/hicolor/16x16/apps/config-language.png
 share/icons/hicolor/16x16/apps/evolution.png
 share/icons/hicolor/16x16/apps/gnome-devel.png
@@ -677,6 +676,7 @@ share/icons/hicolor/16x16/apps/im-msn.png
 share/icons/hicolor/16x16/apps/im-nov.png
 share/icons/hicolor/16x16/apps/im-yahoo.png
 share/icons/hicolor/16x16/apps/im.png
+share/icons/hicolor/16x16/apps/image-viewer.png
 share/icons/hicolor/16x16/apps/panel-notification-area.png
 share/icons/hicolor/16x16/apps/panel-window-list.png
 share/icons/hicolor/16x16/apps/panel-window-menu.png
@@ -1562,7 +1562,6 @@ share/icons/hicolor/24x24/apps/advanced-directory.png
 share/icons/hicolor/24x24/apps/apacheconf.png
 share/icons/hicolor/24x24/apps/applets-screenshooter.png
 share/icons/hicolor/24x24/apps/beep-media-player.png
-share/icons/hicolor/24x24/apps/blender.png
 share/icons/hicolor/24x24/apps/boot.png
 share/icons/hicolor/24x24/apps/burner.png
 share/icons/hicolor/24x24/apps/character-picker.png
@@ -1627,6 +1626,7 @@ share/icons/hicolor/24x24/apps/gnome-status.png
 share/icons/hicolor/24x24/apps/gnome-terminal.png
 share/icons/hicolor/24x24/apps/gnome-unknown.png
 share/icons/hicolor/24x24/apps/gnome-window-manager.png
+share/icons/hicolor/24x24/apps/image-viewer.png
 share/icons/hicolor/24x24/apps/ooo_calc.png
 share/icons/hicolor/24x24/apps/ooo_draw.png
 share/icons/hicolor/24x24/apps/ooo_gulls.png
@@ -2347,7 +2347,6 @@ share/icons/hicolor/24x24/stock/text/stock_wrap-right.png
 share/icons/hicolor/32x32/apps/administration.png
 share/icons/hicolor/32x32/apps/apacheconf.png
 share/icons/hicolor/32x32/apps/applets-screenshooter.png
-share/icons/hicolor/32x32/apps/blender.png
 share/icons/hicolor/32x32/apps/config-date.png
 share/icons/hicolor/32x32/apps/config-language.png
 share/icons/hicolor/32x32/apps/config-users.png
@@ -2499,7 +2498,6 @@ share/icons/hicolor/48x48/apps/advanced-directory.png
 share/icons/hicolor/48x48/apps/apacheconf.png
 share/icons/hicolor/48x48/apps/applets-screenshooter.png
 share/icons/hicolor/48x48/apps/beast.png
-share/icons/hicolor/48x48/apps/blender.png
 share/icons/hicolor/48x48/apps/burner.png
 share/icons/hicolor/48x48/apps/character-picker.png
 share/icons/hicolor/48x48/apps/clock.png
@@ -2577,6 +2575,7 @@ share/icons/hicolor/48x48/apps/im-msn.png
 share/icons/hicolor/48x48/apps/im-nov.png
 share/icons/hicolor/48x48/apps/im-yahoo.png
 share/icons/hicolor/48x48/apps/im.png
+share/icons/hicolor/48x48/apps/image-viewer.png
 share/icons/hicolor/48x48/apps/keyboard.png
 share/icons/hicolor/48x48/apps/launcher-program.png
 share/icons/hicolor/48x48/apps/logviewer.png
