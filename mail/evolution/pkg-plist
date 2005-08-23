@@ -21,6 +21,9 @@ include/evolution-%%VERSION%%/a11y/e-text/gal-a11y-e-text-factory.h
 include/evolution-%%VERSION%%/a11y/e-text/gal-a11y-e-text.h
 include/evolution-%%VERSION%%/a11y/gal-a11y-factory.h
 include/evolution-%%VERSION%%/a11y/gal-a11y-util.h
+include/evolution-%%VERSION%%/addressbook/gui/widgets/eab-config.h
+include/evolution-%%VERSION%%/addressbook/gui/widgets/eab-menu.h
+include/evolution-%%VERSION%%/addressbook/gui/widgets/eab-popup.h
 include/evolution-%%VERSION%%/calendar/gui/e-cal-config.h
 include/evolution-%%VERSION%%/e-conduit/e-pilot-map.h
 include/evolution-%%VERSION%%/e-conduit/e-pilot-util.h
@@ -69,6 +72,7 @@ include/evolution-%%VERSION%%/e-util/e-util-marshal.h
 include/evolution-%%VERSION%%/e-util/e-util.h
 include/evolution-%%VERSION%%/e-util/e-xml-utils.h
 include/evolution-%%VERSION%%/e-util/md5-utils.h
+include/evolution-%%VERSION%%/mail/Evolution-Mail.h
 include/evolution-%%VERSION%%/mail/em-composer-utils.h
 include/evolution-%%VERSION%%/mail/em-config.h
 include/evolution-%%VERSION%%/mail/em-event.h
@@ -160,8 +164,11 @@ include/evolution-%%VERSION%%/misc/gal-combo-text.h
 include/evolution-%%VERSION%%/shell/Evolution.h
 include/evolution-%%VERSION%%/shell/e-shell-utils.h
 include/evolution-%%VERSION%%/shell/e-user-creatable-items-handler.h
+include/evolution-%%VERSION%%/shell/es-event.h
+include/evolution-%%VERSION%%/shell/es-menu.h
 include/evolution-%%VERSION%%/shell/evolution-component.h
 include/evolution-%%VERSION%%/shell/evolution-config-control.h
+include/evolution-%%VERSION%%/shell/evolution-listener.h
 include/evolution-%%VERSION%%/shell/evolution-shell-component-utils.h
 include/evolution-%%VERSION%%/table/e-cell-checkbox.h
 include/evolution-%%VERSION%%/table/e-cell-combo.h
@@ -551,7 +558,6 @@ share/gnome/idl/evolution-%%VERSION%%/Evolution-Component.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution-Composer.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution-ConfigControl.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution-Mail.idl
-share/gnome/idl/evolution-%%VERSION%%/Evolution-Offline.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution-Shell.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution.idl
 share/gnome/idl/evolution-%%VERSION%%/evolution-calendar.idl
@@ -614,6 +620,7 @@ share/locale/sr/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/sr@Latn/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/sv/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/te/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/th/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/tr/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/uk/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/vi/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -679,6 +686,9 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm include/evolution-%%VERSION%%/e-conduit
 @dirrm include/evolution-%%VERSION%%/calendar/gui
 @dirrm include/evolution-%%VERSION%%/calendar
+@dirrm include/evolution-%%VERSION%%/addressbook/gui/widgets
+@dirrm include/evolution-%%VERSION%%/addressbook/gui
+@dirrm include/evolution-%%VERSION%%/addressbook
 @dirrm include/evolution-%%VERSION%%/a11y/e-text
 @dirrm include/evolution-%%VERSION%%/a11y/e-table
 @dirrm include/evolution-%%VERSION%%/a11y
