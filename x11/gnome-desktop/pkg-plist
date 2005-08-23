@@ -190,12 +190,18 @@ share/locale/zh_TW/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 @unexec rmdir %D/share/locale/yo/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/yo 2> /dev/null || true
+@unexec rmdir %D/share/locale/ug/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/ug 2> /dev/null || true
 @unexec rmdir %D/share/locale/hy/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/hy 2> /dev/null || true
 @dirrm share/gnome/omf/lgpl
 @dirrm share/gnome/omf/gpl
 @dirrm share/gnome/omf/gnome-feedback
 @dirrm share/gnome/omf/fdl
+@dirrm share/gnome/help/lgpl/pa
+@dirrm share/gnome/help/gpl/pa
+@dirrm share/gnome/help/gpl/fi
+@dirrm share/gnome/help/fdl/es
 @dirrm share/gnome/help/gnome-feedback/C
 @dirrm share/gnome/help/gnome-feedback
 @dirrm share/gnome/gnome-about/headers
