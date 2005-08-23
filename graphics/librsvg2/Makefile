@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.54 2005/07/17 07:42:29 ahze Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.55 2005/08/19 06:04:02 mezz Exp $
 #
 
 PORTNAME=	librsvg2
@@ -60,6 +60,7 @@ RUN_DEPENDS+=	${X11BASE}/libdata/pkgconfig/firefox-plugin.pc:${PORTSDIR}/www/fir
 .endif
 
 HEADERS_SUFX=
+CONFIGURE_ENV+=	MOZILLA_CONFIG=no
 
 .if !defined(WITH_MOZILLA)
 HEADERS_SUFX=
