@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.18 2005/08/11 02:53:15 marcus Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.19 2005/08/21 20:32:41 marcus Exp $
 #
 
 PORTNAME=	gnome
@@ -98,10 +98,10 @@ post-install:
 
 pre-everything::
 	@${ECHO_MSG} ""
-	@${ECHO_MSG} " By default py-gnome-extras uses www/mozilla for html rendering, but you can"
+	@${ECHO_MSG} " By default py-gnome-extras uses www/firefox for html rendering, but you can"
 	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
 	@${ECHO_MSG}
-	@${ECHO_MSG} "  firefox       "
+	@${ECHO_MSG} "  mozilla       "
 	@${ECHO_MSG} "  mozilla-devel "
 	@${ECHO_MSG} ""
 
