@@ -1,5 +1,5 @@
---- gui/contract/editor/e-contact-editor.c.orig	Tue Aug 23 14:46:51 2005
-+++ gui/contract/editor/e-contact-editor.c	Tue Aug 23 14:47:29 2005
+--- addressbook/gui/contact-editor/e-contact-editor.c.orig	Tue Aug 23 14:46:51 2005
++++ addressbook/gui/contact-editor/e-contact-editor.c	Tue Aug 23 14:47:29 2005
 @@ -581,10 +581,12 @@ sensitize_ok (EContactEditor *ce)
  	gboolean   allow_save;
  	GtkWidget *entry_fullname;
