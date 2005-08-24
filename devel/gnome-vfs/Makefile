@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.103 2005/08/12 20:03:48 marcus Exp $
+#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.104 2005/08/24 13:03:58 kwm Exp $
 #
 
 PORTNAME=	gnomevfs2
@@ -82,8 +82,7 @@ post-patch:
 		${WRKSRC}/libgnomevfs/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
 		s|%%X11BASE%%|${X11BASE}|g' \
-		${WRKSRC}/libgnomevfs/xdgmime.c \
-		${WRKSRC}/libgnomevfs/gnome-vfs-mime-info.c
+		${WRKSRC}/libgnomevfs/xdgmime.c
 	@${SED} -e 's|%%X11BASE%%|${X11BASE}|g' \
 		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
 	@${SED} -e 's|%%X11BASE%%|${X11BASE}|g' \
