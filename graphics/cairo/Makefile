@@ -3,14 +3,13 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.23 2005/08/16 18:47:05 marcus Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.24 2005/08/19 01:47:09 ahze Exp $
 #
 
 PORTNAME=	cairo
-PORTVERSION=	0.9.2
-PORTREVISION=	3
+PORTVERSION=	1.0.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://cairographics.org/snapshots/
+MASTER_SITES=	http://cairographics.org/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Vector graphics library with cross-device output support
