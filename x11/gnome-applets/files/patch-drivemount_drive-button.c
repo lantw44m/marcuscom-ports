@@ -1,5 +1,5 @@
---- drivemount/drive-button.c.orig	Sun Jul  3 17:18:34 2005
-+++ drivemount/drive-button.c	Sun Jul  3 17:23:33 2005
+--- drivemount/drive-button.c.orig	Tue Aug 23 05:16:27 2005
++++ drivemount/drive-button.c	Tue Aug 23 20:37:43 2005
 @@ -24,6 +24,7 @@
  #  include <config.h>
  #endif
@@ -8,7 +8,7 @@
  #include "drive-button.h"
  #include <glib/gi18n.h>
  #include <gdk/gdkkeysyms.h>
-@@ -641,11 +642,13 @@ run_command (DriveButton *self, const ch
+@@ -710,11 +711,13 @@ run_command (DriveButton *self, const ch
  
  	GList *volumes;
  	GnomeVFSVolume *volume;
@@ -24,7 +24,7 @@
  	g_free (uri);
  
  	gnome_vfs_drive_get_display_name (self->drive);
-@@ -725,6 +728,11 @@ drive_button_ensure_popup (DriveButton *
+@@ -794,6 +797,11 @@ drive_button_ensure_popup (DriveButton *
      char *display_name, *tmp, *label;
      int action;
      GtkWidget *item;
@@ -36,18 +36,7 @@
  
      if (self->popup_menu) return;
  
-@@ -762,9 +770,7 @@ drive_button_ensure_popup (DriveButton *
- 	}
-     }
- 
--	GList *volumes;
--	GnomeVFSVolume *volume = NULL;
--	GnomeVFSDeviceType volume_type = device_type;
-+	volume_type = device_type;
- 
- 	volumes = gnome_vfs_drive_get_mounted_volumes (self->drive);
- 	if (volumes != NULL)
-@@ -801,8 +807,7 @@ drive_button_ensure_popup (DriveButton *
+@@ -869,8 +877,7 @@ drive_button_ensure_popup (DriveButton *
      g_free (display_name);
      display_name = tmp;
  
@@ -55,5 +44,5 @@
 -	const char *action_icon = GTK_STOCK_OPEN;
 +	callback = G_CALLBACK (open_drive);
  
- 	switch (volume_type) {
+ 	switch (device_type) {
  	case GNOME_VFS_DEVICE_TYPE_VIDEO_DVD:

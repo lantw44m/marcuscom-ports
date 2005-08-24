@@ -87,47 +87,71 @@ share/gnome/help/accessx-status/es/accessx-status.xml
 %%BATTERY%%share/gnome/help/battstat/C/legal.xml
 share/gnome/help/char-palette/C/char-palette.xml
 share/gnome/help/char-palette/C/legal.xml
+share/gnome/help/char-palette/es/char-palette.xml
 share/gnome/help/char-palette/nl/char-palette.xml
 share/gnome/help/command-line/C/command-line.xml
 share/gnome/help/command-line/C/legal.xml
+share/gnome/help/command-line/es/command-line.xml
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/cpufreq-applet.xml
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/legal.xml
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/es/cpufreq-applet.xml
 share/gnome/help/drivemount/C/drivemount.xml
 share/gnome/help/drivemount/C/legal.xml
+share/gnome/help/drivemount/es/drivemount.xml
 share/gnome/help/geyes/C/geyes.xml
 share/gnome/help/geyes/C/legal.xml
+share/gnome/help/geyes/es/geyes.xml
 share/gnome/help/gswitchit/C/gswitchit.xml
 share/gnome/help/gswitchit/C/legal.xml
+share/gnome/help/gswitchit/es/gswitchit.xml
 share/gnome/help/gtik2_applet2/C/gtik2_applet2.xml
 share/gnome/help/gtik2_applet2/C/legal.xml
+share/gnome/help/gtik2_applet2/es/gtik2_applet2.xml
 share/gnome/help/gweather/C/gweather.xml
 share/gnome/help/gweather/C/legal.xml
 share/gnome/help/gweather/es/gweather.xml
 share/gnome/help/mixer_applet2/C/legal.xml
 share/gnome/help/mixer_applet2/C/mixer_applet2.xml
+share/gnome/help/mixer_applet2/es/mixer_applet2.xml
 share/gnome/help/multiload/C/legal.xml
 share/gnome/help/multiload/C/multiload.xml
+share/gnome/help/multiload/es/multiload.xml
 share/gnome/help/stickynotes_applet/C/legal.xml
 share/gnome/help/stickynotes_applet/C/stickynotes_applet.xml
+share/gnome/help/stickynotes_applet/es/stickynotes_applet.xml
 share/gnome/help/trashapplet/C/legal.xml
 share/gnome/help/trashapplet/C/trashapplet.xml
+share/gnome/help/trashapplet/es/trashapplet.xml
+share/gnome/help/trashapplet/pa/trashapplet.xml
 share/gnome/omf/accessx-status/accessx-status-C.omf
 share/gnome/omf/accessx-status/accessx-status-es.omf
 %%BATTERY%%share/gnome/omf/battstat/battstat-C.omf
 share/gnome/omf/char-palette/char-palette-C.omf
+share/gnome/omf/char-palette/char-palette-es.omf
 share/gnome/omf/char-palette/char-palette-nl.omf
 share/gnome/omf/command-line/command-line-C.omf
+share/gnome/omf/command-line/command-line-es.omf
 %%CPUFREQ%%share/gnome/omf/cpufreq-applet/cpufreq-applet-C.omf
+%%CPUFREQ%%share/gnome/omf/cpufreq-applet/cpufreq-applet-es.omf
 share/gnome/omf/drivemount/drivemount-C.omf
+share/gnome/omf/drivemount/drivemount-es.omf
 share/gnome/omf/geyes/geyes-C.omf
+share/gnome/omf/geyes/geyes-es.omf
 share/gnome/omf/gswitchit/gswitchit-C.omf
+share/gnome/omf/gswitchit/gswitchit-es.omf
 share/gnome/omf/gtik2_applet2/gtik2_applet2-C.omf
+share/gnome/omf/gtik2_applet2/gtik2_applet2-es.omf
 share/gnome/omf/gweather/gweather-C.omf
 share/gnome/omf/gweather/gweather-es.omf
 share/gnome/omf/mixer_applet2/mixer_applet2-C.omf
+share/gnome/omf/mixer_applet2/mixer_applet2-es.omf
 share/gnome/omf/multiload/multiload-C.omf
+share/gnome/omf/multiload/multiload-es.omf
 share/gnome/omf/stickynotes_applet/stickynotes_applet-C.omf
+share/gnome/omf/stickynotes_applet/stickynotes_applet-es.omf
 share/gnome/omf/trashapplet/trashapplet-C.omf
+share/gnome/omf/trashapplet/trashapplet-es.omf
+share/gnome/omf/trashapplet/trashapplet-pa.omf
 share/gnome/pixmaps/accessx-status-applet/ax-applet.png
 share/gnome/pixmaps/accessx-status-applet/ax-bouncekeys.png
 share/gnome/pixmaps/accessx-status-applet/ax-key-base.png
@@ -366,30 +390,42 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/omf/char-palette
 %%BATTERY%%@dirrm share/gnome/omf/battstat
 @dirrm share/gnome/omf/accessx-status
+@dirrm share/gnome/help/trashapplet/pa
+@dirrm share/gnome/help/trashapplet/es
 @dirrm share/gnome/help/trashapplet/C
 @dirrm share/gnome/help/trashapplet
+@dirrm share/gnome/help/stickynotes_applet/es
 @dirrm share/gnome/help/stickynotes_applet/C
 @dirrm share/gnome/help/stickynotes_applet
+@dirrm share/gnome/help/multiload/es
 @dirrm share/gnome/help/multiload/C
 @dirrm share/gnome/help/multiload
+@dirrm share/gnome/help/mixer_applet2/es
 @dirrm share/gnome/help/mixer_applet2/C
 @dirrm share/gnome/help/mixer_applet2
 @dirrm share/gnome/help/gweather/es
 @dirrm share/gnome/help/gweather/C
 @dirrm share/gnome/help/gweather
+@dirrm share/gnome/help/gtik2_applet2/es
 @dirrm share/gnome/help/gtik2_applet2/C
 @dirrm share/gnome/help/gtik2_applet2
+@dirrm share/gnome/help/gswitchit/es
 @dirrm share/gnome/help/gswitchit/C
 @dirrm share/gnome/help/gswitchit
+@dirrm share/gnome/help/geyes/es
 @dirrm share/gnome/help/geyes/C
 @dirrm share/gnome/help/geyes
+@dirrm share/gnome/help/drivemount/es
 @dirrm share/gnome/help/drivemount/C
 @dirrm share/gnome/help/drivemount
+%%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/es
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/C
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet
+@dirrm share/gnome/help/command-line/es
 @dirrm share/gnome/help/command-line/C
 @dirrm share/gnome/help/command-line
 @dirrm share/gnome/help/char-palette/nl
+@dirrm share/gnome/help/char-palette/es
 @dirrm share/gnome/help/char-palette/C
 @dirrm share/gnome/help/char-palette
 %%BATTERY%%@dirrm share/gnome/help/battstat/C
