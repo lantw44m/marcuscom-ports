@@ -1,5 +1,14 @@
---- gdk/gdkscreen.c.orig	Thu Aug 25 12:09:18 2005
-+++ gdk/gdkscreen.c	Thu Aug 25 12:25:31 2005
+--- gdk/gdkscreen.c.orig	Tue Aug 23 23:29:05 2005
++++ gdk/gdkscreen.c	Thu Aug 25 13:18:01 2005
+@@ -29,7 +29,7 @@
+ #include "gdkalias.h"
+ 
+ static void gdk_screen_class_init  (GdkScreenClass *klass);
+-static void gdk_screen_init        (GdkScreen      *screen);
++static void gdk_screen_init_instance (GTypeInstance *instance, gpointer g_class);
+ static void gdk_screen_dispose     (GObject        *object);
+ static void gdk_screen_finalize    (GObject        *object);
+ 
 @@ -53,14 +53,14 @@ gdk_screen_get_type (void)
        static const GTypeInfo object_info =
  	{
