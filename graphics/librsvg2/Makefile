@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.57 2005/08/26 02:37:51 marcus Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.58 2005/08/26 04:03:54 marcus Exp $
 #
 
 PORTNAME=	librsvg2
@@ -52,7 +52,7 @@ OPTIONS=	MOZILLA_PLUGIN "Enable the RSVG browser plug-in" no
 .if defined(WITH_MOZILLA_PLUGIN)
 .if defined(WITH_MOZILLA) && ${WITH_MOZILLA}!="firefox"
 BUILD_DEPENDS+=	${X11BASE}/libdata/pkgconfig/mozilla-plugin${HEADERS_SUFX}.pc:${PORTSDIR}/www/mozilla${HEADERS_SUFX}
-RUN_DEPENDS+=	${X11BASE}/libdata/pkgconfig/mozilla-plugin${HEADERS_SUFX}.pc:${PORTSDIR}/www/mozilla${HEADERS_SUFX
+RUN_DEPENDS+=	${X11BASE}/libdata/pkgconfig/mozilla-plugin${HEADERS_SUFX}.pc:${PORTSDIR}/www/mozilla${HEADERS_SUFX}
 .else
 BUILD_DEPENDS+=	${X11BASE}/libdata/pkgconfig/firefox-plugin.pc:${PORTSDIR}/www/firefox
 RUN_DEPENDS+=	${X11BASE}/libdata/pkgconfig/firefox-plugin.pc:${PORTSDIR}/www/firefox
