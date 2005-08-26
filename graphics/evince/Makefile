@@ -3,15 +3,14 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.25 2005/08/17 17:09:05 mezz Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.26 2005/08/21 20:36:31 marcus Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	0.3.4
-PORTREVISION=	1
+PORTVERSION=	0.4.0
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.3
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.4
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 multi-format document viewer
