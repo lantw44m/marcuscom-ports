@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.58 2005/08/26 04:03:54 marcus Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.59 2005/08/26 05:59:43 mezz Exp $
 #
 
 PORTNAME=	librsvg2
@@ -59,18 +59,22 @@ RUN_DEPENDS+=	${X11BASE}/libdata/pkgconfig/firefox-plugin.pc:${PORTSDIR}/www/fir
 .endif
 
 HEADERS_SUFX=
+MOZILLA=	firefox
 CONFIGURE_ENV+=	MOZILLA_CONFIG=no
 
 .if !defined(WITH_MOZILLA)
 HEADERS_SUFX=
 .else
 .if ${WITH_MOZILLA}=="mozilla"
+MOZILLA=	mozilla
 HEADERS_SUFX=
 .else
 .if ${WITH_MOZILLA}=="mozilla-devel"
+MOZILLA=	mozilla
 HEADERS_SUFX=	-devel
 .else
 .if ${WITH_MOZILLA}=="firefox"
+MOZILLA=	firefox
 HEADERS_SUFX=
 .endif
 .endif
@@ -94,16 +98,12 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%PTHREAD_LIBS%%|${PTHREAD_LIBS}|' \
 		${WRKSRC}/librsvg-2.0.pc.in
 .if defined(WITH_MOZILLA_PLUGIN)
-.if defined(WITH_MOZILLA) && ${WITH_MOZILLA}=="firefox"
-	@${REINPLACE_CMD} -e 's|mozilla-|firefox-|g' ${WRKSRC}/configure
-.else
-	@${REINPLACE_CMD} -e 's|mozilla-plugin|mozilla-plugin${HEADERS_SUFX}|g' \
+	@${REINPLACE_CMD} -e 's|mozilla-plugin|${MOZILLA}-plugin${HEADERS_SUFX}|g' \
 		${WRKSRC}/configure
-.endif
 .endif
 
 pre-build:
-	@${REINPLACE_CMD} -E -e 's|O2|O|g' ${WRKSRC}/Makefile
+	@${REINPLACE_CMD} -E -e 's|-O2||g' ${WRKSRC}/Makefile
 
 .if defined(WITH_MOZILLA_PLUGIN)
 post-install:
