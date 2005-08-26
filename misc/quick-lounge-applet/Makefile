@@ -2,7 +2,8 @@
 # Date created:				01 March 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/quick-lounge-applet/Makefile,v 1.18 2005/04/05 00:59:56 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	quick-lounge-applet
@@ -20,7 +21,7 @@ USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/galeon/Makefile,v 1.1 2005/07/22 04:27:17 ahze Exp $
+#    $MCom: ports/www/galeon/Makefile,v 1.2 2005/07/22 04:28:04 ahze Exp $
 #
 
 PORTNAME=	galeon
@@ -49,7 +49,7 @@ USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui desktopfileutils \
 		gnomedesktop
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
 CONFIGURE_ARGS=	--enable-nautilus-view=no \

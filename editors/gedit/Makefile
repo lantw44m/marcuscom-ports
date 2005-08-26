@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.7 2005/08/08 15:05:09 kwm Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.8 2005/08/24 01:20:05 marcus Exp $
 #
 
 PORTNAME=	gedit
@@ -23,7 +23,7 @@ USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix gnomehack intlhack \
 		libgnomeprintui libgnomeui eel2 gtksourceview desktopfileutils
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade2/Makefile,v 1.12 2005/07/06 05:36:06 marcus Exp $
+#   $MCom: ports/devel/glade2/Makefile,v 1.13 2005/07/06 05:37:28 marcus Exp $
 #
 
 PORTNAME=	glade
@@ -23,7 +23,7 @@ RUN_DEPENDS=	${X11BASE}/lib/gtk-2.0/modules/libgail-gnome.so:${PORTSDIR}/x11-too
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix intlhack gnomehack libgnomedb libgnomeui
 USE_GMAKE=	yes
 #CONFIGURE_ARGS=	--enable-gnome-db

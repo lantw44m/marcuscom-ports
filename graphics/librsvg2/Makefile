@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.56 2005/08/23 16:54:19 marcus Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.57 2005/08/26 02:37:51 marcus Exp $
 #
 
 PORTNAME=	librsvg2
@@ -27,7 +27,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_REINPLACE=	yes
 USE_GNOME=	gnomehack gnomeprefix libartlgpl2 libgsf gtk20 ltverhack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomesystemtools/Makefile,v 1.26 2005/08/09 04:40:21 marcus Exp $
+#   $MCom: ports/sysutils/gnomesystemtools/Makefile,v 1.27 2005/08/24 01:27:32 marcus Exp $
 #
 
 PORTNAME=	gnomesystemtools
@@ -25,7 +25,7 @@ USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack nautilus2
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 INSTALLS_OMF=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

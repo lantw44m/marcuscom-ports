@@ -3,7 +3,7 @@
 # Whom:				Anders Andersson <anders@hack.org>
 #
 # $FreeBSD$
-#    $MCom: ports/cad/oregano/Makefile,v 1.1 2005/08/09 04:35:36 ahze Exp $
+#    $MCom: ports/cad/oregano/Makefile,v 1.2 2005/08/09 04:50:36 ahze Exp $
 #
 
 PORTNAME=	oregano
@@ -19,7 +19,7 @@ USE_X_PREFIX=	yes
 USE_GNOME=	gnomehack gnomeprefix gtksourceview intlhack libglade2 \
 		libgnomeprintui libgnomeui
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=	15
+USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 MAKE_ARGS=	ACLOCAL="${TRUE}" AUTOCONF="${TRUE}" AUTOHEADER="${TRUE}" \

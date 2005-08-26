@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtksourceview/Makefile,v 1.17 2005/08/08 09:38:36 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtksourceview/Makefile,v 1.18 2005/08/24 01:46:46 marcus Exp $
 #
 
 PORTNAME=	gtksourceview
@@ -19,7 +19,7 @@ COMMENT=	A text widget that adds syntax highlighting to the GtkTextView widget
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnome libgnomeprintui
 CONFIGURE_ARGS=	--enable-compile-warnings=no
