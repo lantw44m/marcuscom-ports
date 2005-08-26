@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.9 2005/08/09 04:35:55 marcus Exp $
+#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.10 2005/08/24 01:23:22 marcus Exp $
 #
 
 PORTNAME=	system-tools-backends
 PORTVERSION=	1.3.92
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.3
