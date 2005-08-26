@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.25 2005/08/24 21:58:25 ahze Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.26 2005/08/24 22:01:47 ahze Exp $
 #
 
 PORTNAME=	cairo
@@ -29,7 +29,7 @@ INSTALLS_SHLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${X11BASE}/include" \
 		LDFLAGS="${PTHREAD_LIBS}"
 
-OPTIONS+=	GLITZ "Enable Glitz OpenGL Support" On
+OPTIONS+=	GLITZ "Enable Glitz OpenGL Support" Off
 
 .include <bsd.port.pre.mk>
 
