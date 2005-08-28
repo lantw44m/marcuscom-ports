@@ -41,11 +41,11 @@ libdata/pkgconfig/epiphany-1.8.pc
 %%DOCSDIR%%/ch01.html
 %%DOCSDIR%%/ch02.html
 %%DOCSDIR%%/epiphany-EphyEmbedFactory.html
-%%DOCSDIR%%/epiphany-EphyExtensionsManager.html
 %%DOCSDIR%%/epiphany-EphyEmbedPersist.html
 %%DOCSDIR%%/epiphany-EphyEmbedSingle.html
-%%DOCSDIR%%/epiphany-EphyPermissionManager.html
+%%DOCSDIR%%/epiphany-EphyExtensionsManager.html
 %%DOCSDIR%%/epiphany-EphyGlade.html
+%%DOCSDIR%%/epiphany-EphyPermissionManager.html
 %%DOCSDIR%%/epiphany-ephy-cookie-manager.html
 %%DOCSDIR%%/epiphany-ephy-password-manager.html
 %%DOCSDIR%%/epiphany-ephy-session.html
