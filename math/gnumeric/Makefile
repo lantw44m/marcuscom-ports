@@ -3,11 +3,11 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.9 2005/08/16 06:09:38 marcus Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.10 2005/08/19 02:18:00 mezz Exp $
 #
 
 PORTNAME=	gnumeric
-PORTVERSION=	1.5.3
+PORTVERSION=	1.5.4
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -37,7 +37,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 GCONF_SCHEMAS=	gnumeric-dialogs.schemas gnumeric-general.schemas \
 		gnumeric-plugins.schemas
 
-MAN1=		gnumeric.1 ssconvert.1
+MAN1=		gnumeric.1 ssconvert.1 ssindex.1
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
@@ -50,14 +50,6 @@ PLIST_SUB+=	PERL=""
 .endif
 
 post-patch:
-	@cd ${WRKSRC} && ${REINPLACE_CMD} -e 's,malloc.h,stdlib.h,' \
-		src/tools/solver/lp_solve/commonlib.h \
-		src/tools/solver/lp_solve/fortify.c \
-		src/tools/solver/lp_solve/lp_Hash.c \
-		src/tools/solver/lp_solve/lp_etaPFI.c \
-		src/tools/solver/lp_solve/lp_lib.h \
-		src/tools/solver/lp_solve/lp_rlp.c \
-		src/tools/solver/lp_solve/lp_rlpt.c
 	@${FIND} ${WRKSRC}/plugins -name "plugin.xml.in" | ${XARGS} \
 		${REINPLACE_CMD} -e 's|\.la|.so|g'
 	@${FIND} ${WRKSRC}/src/cut-n-paste-code/goffice/graph/plugins -name \
