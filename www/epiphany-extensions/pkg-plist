@@ -1,4 +1,5 @@
 lib/epiphany/%%VERSION%%/extensions/actions.xml
+lib/epiphany/%%VERSION%%/extensions/auto-scroller.xml
 lib/epiphany/%%VERSION%%/extensions/bookmarks-tray.xml
 lib/epiphany/%%VERSION%%/extensions/certificates.xml
 lib/epiphany/%%VERSION%%/extensions/dashboard.xml
@@ -8,6 +9,7 @@ lib/epiphany/%%VERSION%%/extensions/gestures.xml
 lib/epiphany/%%VERSION%%/extensions/libactionsextension.a
 lib/epiphany/%%VERSION%%/extensions/libactionsextension.so
 lib/epiphany/%%VERSION%%/extensions/libactionsextension.so.0
+lib/epiphany/%%VERSION%%/extensions/libautoscrollerextension.so
 lib/epiphany/%%VERSION%%/extensions/libbookmarkstrayextension.so
 lib/epiphany/%%VERSION%%/extensions/libcertificatesextension.so
 lib/epiphany/%%VERSION%%/extensions/libdashboardextension.so
@@ -48,6 +50,7 @@ share/locale/en_GB/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/es/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/fi/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/fr/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
+share/locale/gl/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/hr/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/hu/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/it/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
