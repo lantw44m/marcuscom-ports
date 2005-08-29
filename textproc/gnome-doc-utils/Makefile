@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnomedocutils
-PORTVERSION=	0.3.2
-PORTREVISION=	1
+PORTVERSION=	0.3.3
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-doc-utils/0.3
@@ -37,7 +36,7 @@ MAN1=		xml2po.1
 DOCBOOK_VERSION=4.1.2
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|4\.2|${DOCBOOK_VERSION}|g' \
+	@${REINPLACE_CMD} -e 's|4\.4|${DOCBOOK_VERSION}|g' \
 		${WRKSRC}/doc/xslt/C/gnome-doc-xslt.xml \
 		${WRKSRC}/doc/gnome-doc-make/C/gnome-doc-make.xml
 
