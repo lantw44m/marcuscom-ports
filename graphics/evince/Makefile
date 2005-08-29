@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.26 2005/08/21 20:36:31 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.27 2005/08/26 06:26:47 marcus Exp $
 #
 
 PORTNAME=	evince
@@ -32,12 +32,22 @@ GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas
 
 .include <bsd.port.pre.mk>
 
-.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD) \
+		|| exists(${LOCALBASE}/lib/libdbus-glib-1.so)
 WITH_DBUS=	yes
 .endif
 
-.if exists(${LOCALBASE}/lib/libdbus-glib-1.so)
-WITH_DBUS=	yes
+.if defined(WITH_DVI) || defined(WITH_T1LIB)
+BUILD_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
+RUN_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
+
+CONFIGURE_ARGS+=	--enable-dvi
+GCONF_SCHEMAS+=	evince-thumbnailer-dvi.schemas
+. if defined(WITH_T1LIB)
+LIB_DEPENDS+=	t1.5:${PORTSDIR}/devel/t1lib
+
+CONFIGURE_ARGS+=	--enable-t1lib
+. endif
 .endif
 
 .if !defined(WITHOUT_NAUTILUS)
@@ -62,9 +72,20 @@ LIB_DEPENDS+=	dbus-glib-1.1:${PORTSDIR}/devel/dbus
 .endif
 
 pre-everything::
+.if !defined(WITH_DVI) && !defined(WITH_T1LIB)
+	@${ECHO_MSG}
+	@${ECHO_MSG} "If you want dvi viewer hit Ctrl-C now and"
+	@${ECHO_MSG} "use \"make WITH_DVI=yes\""
+. if !defined(WITH_T1LIB)
+	@${ECHO_MSG}
+	@${ECHO_MSG} "If you want t1lib for type1 fonts in the dvi viewer"
+	@${ECHO_MSG} "hit Ctrl-C now and"
+	@${ECHO_MSG} "use \"make WITH_T1LIB=yes\""
+. endif
+.endif
 .if !defined(WITHOUT_NAUTILUS)
 	@${ECHO_MSG}
-	@${ECHO_MSG} "If you don't want Nautilus plugin hit Ctrl-C now and
+	@${ECHO_MSG} "If you don't want Nautilus plugin hit Ctrl-C now and"
 	@${ECHO_MSG} "use \"make WITHOUT_NAUTILUS=yes\""
 	@${ECHO_MSG}
 .endif
