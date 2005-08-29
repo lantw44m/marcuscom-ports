@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml3/Makefile,v 1.58 2005/08/22 17:04:33 kwm Exp $
+#   $MCom: ports/www/gtkhtml3/Makefile,v 1.59 2005/08/22 18:35:11 kwm Exp $
 #
 
 PORTNAME=	gtkhtml3
 PORTVERSION=	3.7.7
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/3.7
@@ -17,7 +18,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Lightweight HTML rendering/printing/editing engine
 
-LIB_DEPENDS=	soup-2.2.9:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	soup-2.2.8:${PORTSDIR}/devel/libsoup
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes

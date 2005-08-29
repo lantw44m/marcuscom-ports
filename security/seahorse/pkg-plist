@@ -1,0 +1,108 @@
+bin/seahorse
+bin/seahorse-agent
+bin/seahorse-pgp-preferences
+%%GEDIT%%lib/gedit-2/plugins/libseahorse-pgp.so
+%%GEDIT%%lib/gedit-2/plugins/seahorse-pgp.gedit-plugin
+lib/libseahorse-internal.a
+lib/libseahorse-internal.so
+lib/libseahorse-internal.so.0
+%%NAUTILUS%%lib/nautilus/extensions-1.0/libnautilus-seahorse.so
+share/gnome/applications/seahorse-pgp-preferences.desktop
+share/gnome/applications/seahorse.desktop
+share/gnome/applications/seahorse-pgp-encrypted.desktop
+share/gnome/applications/seahorse-pgp-keys.desktop
+share/gnome/applications/seahorse-pgp-signature.desktop
+share/gnome/control-center-2.0/capplets/seahorse-pgp-preferences.desktop
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+share/gnome/help/seahorse/C/figures/export.png
+share/gnome/help/seahorse/C/figures/file-manager.png
+share/gnome/help/seahorse/C/figures/generate.png
+share/gnome/help/seahorse/C/figures/import.png
+share/gnome/help/seahorse/C/figures/key-manager.png
+share/gnome/help/seahorse/C/figures/key-properties.png
+share/gnome/help/seahorse/C/figures/passphrase.png
+share/gnome/help/seahorse/C/figures/preferences.png
+share/gnome/help/seahorse/C/figures/recipients.png
+share/gnome/help/seahorse/C/figures/signature.png
+share/gnome/help/seahorse/C/figures/text-editor.png
+share/gnome/help/seahorse/C/legal.xml
+share/gnome/help/seahorse/C/seahorse.xml
+share/gnome/mime-info/seahorse.keys
+share/gnome/mime-info/seahorse.mime
+share/gnome/omf/seahorse/seahorse-C.omf
+share/gnome/pixmaps/seahorse-key.png
+share/gnome/pixmaps/seahorse-secret.png
+share/gnome/pixmaps/seahorse.png
+share/gnome/seahorse/glade/seahorse-add-keyserver.glade
+share/gnome/seahorse/glade/seahorse-add-subkey.glade
+share/gnome/seahorse/glade/seahorse-add-uid.glade
+share/gnome/seahorse/glade/seahorse-agent-cache.glade
+share/gnome/seahorse/glade/seahorse-change-passphrase.glade
+share/gnome/seahorse/glade/seahorse-expires.glade
+share/gnome/seahorse/glade/seahorse-generate-adv.glade
+share/gnome/seahorse/glade/seahorse-generate-druid.glade
+share/gnome/seahorse/glade/seahorse-generate-select.glade
+share/gnome/seahorse/glade/seahorse-key-manager.glade
+share/gnome/seahorse/glade/seahorse-key-manager.ui
+share/gnome/seahorse/glade/seahorse-key-properties.glade
+share/gnome/seahorse/glade/seahorse-keyserver-results.glade
+share/gnome/seahorse/glade/seahorse-keyserver-results.ui
+share/gnome/seahorse/glade/seahorse-keyserver-search.glade
+share/gnome/seahorse/glade/seahorse-keyserver-sync.glade
+share/gnome/seahorse/glade/seahorse-multi-encrypt.glade
+share/gnome/seahorse/glade/seahorse-passphrase.glade
+share/gnome/seahorse/glade/seahorse-prefs.glade
+share/gnome/seahorse/glade/seahorse-preferences.glade
+share/gnome/seahorse/glade/seahorse-progress.glade
+share/gnome/seahorse/glade/seahorse-recipients.glade
+share/gnome/seahorse/glade/seahorse-revoke.glade
+share/gnome/seahorse/glade/seahorse-sign.glade
+share/gnome/seahorse/glade/seahorse-signatures.glade
+share/gnome/seahorse/glade/seahorse-signer.glade
+share/mime/packages/seahorse.xml
+share/locale/az/LC_MESSAGES/seahorse.mo
+share/locale/bg/LC_MESSAGES/seahorse.mo
+share/locale/ca/LC_MESSAGES/seahorse.mo
+share/locale/cs/LC_MESSAGES/seahorse.mo
+share/locale/da/LC_MESSAGES/seahorse.mo
+share/locale/de/LC_MESSAGES/seahorse.mo
+share/locale/en_CA/LC_MESSAGES/seahorse.mo
+share/locale/en_GB/LC_MESSAGES/seahorse.mo
+share/locale/es/LC_MESSAGES/seahorse.mo
+share/locale/eu/LC_MESSAGES/seahorse.mo
+share/locale/fi/LC_MESSAGES/seahorse.mo
+share/locale/fr/LC_MESSAGES/seahorse.mo
+share/locale/hr/LC_MESSAGES/seahorse.mo
+share/locale/hu/LC_MESSAGES/seahorse.mo
+share/locale/it/LC_MESSAGES/seahorse.mo
+share/locale/ja/LC_MESSAGES/seahorse.mo
+share/locale/ml/LC_MESSAGES/seahorse.mo
+share/locale/ms/LC_MESSAGES/seahorse.mo
+share/locale/nb/LC_MESSAGES/seahorse.mo
+share/locale/nl/LC_MESSAGES/seahorse.mo
+share/locale/no/LC_MESSAGES/seahorse.mo
+share/locale/pa/LC_MESSAGES/seahorse.mo
+share/locale/pl/LC_MESSAGES/seahorse.mo
+share/locale/pt/LC_MESSAGES/seahorse.mo
+share/locale/pt_BR/LC_MESSAGES/seahorse.mo
+share/locale/ru/LC_MESSAGES/seahorse.mo
+share/locale/rw/LC_MESSAGES/seahorse.mo
+share/locale/sk/LC_MESSAGES/seahorse.mo
+share/locale/sl/LC_MESSAGES/seahorse.mo
+share/locale/sq/LC_MESSAGES/seahorse.mo
+share/locale/sr/LC_MESSAGES/seahorse.mo
+share/locale/sr@Latn/LC_MESSAGES/seahorse.mo
+share/locale/sv/LC_MESSAGES/seahorse.mo
+share/locale/tr/LC_MESSAGES/seahorse.mo
+share/locale/uk/LC_MESSAGES/seahorse.mo
+share/locale/zh_CN/LC_MESSAGES/seahorse.mo
+share/locale/zh_TW/LC_MESSAGES/seahorse.mo
+@dirrm share/gnome/help/seahorse/C/figures
+@dirrm share/gnome/help/seahorse/C
+@dirrm share/gnome/help/seahorse
+@dirrm share/gnome/omf/seahorse
+@dirrm share/gnome/seahorse/glade
+@dirrm share/gnome/seahorse
+@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
