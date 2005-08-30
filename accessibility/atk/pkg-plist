@@ -53,6 +53,7 @@ share/locale/fa/LC_MESSAGES/atk10.mo
 share/locale/fi/LC_MESSAGES/atk10.mo
 share/locale/fr/LC_MESSAGES/atk10.mo
 share/locale/ga/LC_MESSAGES/atk10.mo
+share/locale/gl/LC_MESSAGES/atk10.mo
 share/locale/gu/LC_MESSAGES/atk10.mo
 share/locale/he/LC_MESSAGES/atk10.mo
 share/locale/hi/LC_MESSAGES/atk10.mo
@@ -95,6 +96,7 @@ share/locale/ta/LC_MESSAGES/atk10.mo
 share/locale/th/LC_MESSAGES/atk10.mo
 share/locale/tk/LC_MESSAGES/atk10.mo
 share/locale/tr/LC_MESSAGES/atk10.mo
+share/locale/ug/LC_MESSAGES/atk10.mo
 share/locale/uk/LC_MESSAGES/atk10.mo
 share/locale/vi/LC_MESSAGES/atk10.mo
 share/locale/wa/LC_MESSAGES/atk10.mo
@@ -105,12 +107,15 @@ share/locale/zh_TW/LC_MESSAGES/atk10.mo
 @exec mkdir -p %D/%%DOCSDIR%%
 @unexec rmdir %D/share/locale/as/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/as 2> /dev/null || true
+@unexec rmdir %D/share/locale/gl/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/gl 2> /dev/null || true
 @unexec rmdir %D/share/locale/li/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/li 2> /dev/null || true
 @unexec rmdir %D/share/locale/mr/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/mr 2> /dev/null || true
 @unexec rmdir %D/share/locale/tk/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/tk 2> /dev/null || true
-@dirrm %%DOCSDIR%%
+@unexec rmdir %D/share/locale/ug/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/ug 2> /dev/null || true
 @dirrm include/atk-1.0/atk
 @dirrm include/atk-1.0
