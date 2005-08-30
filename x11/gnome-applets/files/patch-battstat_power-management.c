@@ -1,6 +1,17 @@
---- battstat/power-management.c.orig	Mon Jul  4 09:41:04 2005
-+++ battstat/power-management.c	Sat Jul 16 21:17:05 2005
-@@ -173,16 +173,40 @@ apm_readinfo (BatteryStatus *status)
+--- battstat/power-management.c.orig	Thu Aug 25 23:45:47 2005
++++ battstat/power-management.c	Tue Aug 30 01:28:40 2005
+@@ -61,9 +61,7 @@
+ 
+ static const char *apm_readinfo (BatteryStatus *status);
+ static int pm_initialised;
+-#ifdef HAVE_HAL
+-static int using_hal;
+-#endif
++static int using_hal = FALSE;
+ 
+ /*
+  * What follows is a series of platform-specific apm_readinfo functions
+@@ -173,16 +171,40 @@ apm_readinfo (BatteryStatus *status)
  
  #elif __FreeBSD__
  
@@ -41,7 +52,7 @@
  static const char *
  apm_readinfo (BatteryStatus *status)
  {
-@@ -190,21 +214,27 @@ apm_readinfo (BatteryStatus *status)
+@@ -190,21 +212,27 @@ apm_readinfo (BatteryStatus *status)
  
    if (DEBUG) g_print("apm_readinfo() (FreeBSD)\n");
  
@@ -77,7 +88,7 @@
      fd = open(APMDEVICE, O_RDONLY);
      if (fd == -1) {
        return ERR_OPEN_APMDEV;
-@@ -217,6 +247,9 @@ apm_readinfo (BatteryStatus *status)
+@@ -217,6 +245,9 @@ apm_readinfo (BatteryStatus *status)
  
      if(apminfo.ai_status == 0)
        return ERR_APM_E;
@@ -87,7 +98,7 @@
    }
  
    status->present = TRUE;
-@@ -476,6 +509,12 @@ power_management_initialise( void )
+@@ -480,6 +511,12 @@ power_management_initialise( int no_hal 
    }
    else
      using_acpi = FALSE;
@@ -100,7 +111,7 @@
  #endif
    pm_initialised = 1;
  
-@@ -509,6 +548,9 @@ power_management_cleanup( void )
+@@ -513,6 +550,9 @@ power_management_cleanup( void )
    }
  #elif defined(__FreeBSD__)
    if (using_acpi) {

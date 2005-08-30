@@ -1,37 +1,3 @@
---- cpufreq/src/Makefile.in.orig	Sun Feb 13 01:00:35 2005
-+++ cpufreq/src/Makefile.in	Sun Feb 13 01:01:31 2005
-@@ -55,6 +55,7 @@
- 	cpufreq-prefs.$(OBJEXT) cpufreq-popup.$(OBJEXT) \
- 	cpufreq-monitor.$(OBJEXT) cpufreq-monitor-factory.$(OBJEXT) \
- 	cpufreq-monitor-procfs.$(OBJEXT) \
-+	cpufreq-monitor-sysctl.$(OBJEXT) \
- 	cpufreq-monitor-sysfs.$(OBJEXT) \
- 	cpufreq-monitor-cpuinfo.$(OBJEXT)
- cpufreq_applet_OBJECTS = $(am_cpufreq_applet_OBJECTS)
-@@ -68,6 +69,7 @@
- @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor-cpuinfo.Po \
- @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor-factory.Po \
- @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor-procfs.Po \
-+@AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor-sysctl.Po \
- @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor-sysfs.Po \
- @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor.Po \
- @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-popup.Po \
-@@ -336,6 +338,7 @@
- 					cpufreq-monitor-protected.h	\
- 	cpufreq-monitor-factory.c	cpufreq-monitor-factory.h	\
- 	cpufreq-monitor-procfs.c	cpufreq-monitor-procfs.h	\
-+	cpufreq-monitor-sysctl.c	cpufreq-monitor-sysctl.h	\
- 	cpufreq-monitor-sysfs.c	        cpufreq-monitor-sysfs.h	        \
- 	cpufreq-monitor-cpuinfo.c       cpufreq-monitor-cpuinfo.h
- 
-@@ -419,6 +422,7 @@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-cpuinfo.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-factory.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-procfs.Po@am__quote@
-+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-sysctl.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-sysfs.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor.Po@am__quote@
- @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-popup.Po@am__quote@
 --- cpufreq/src/cpufreq-monitor-sysctl.h.orig	Sun Feb 13 01:00:25 2005
 +++ cpufreq/src/cpufreq-monitor-sysctl.h	Sat Feb 12 20:25:21 2005
 @@ -0,0 +1,48 @@
@@ -526,3 +492,29 @@
  
          if (mcpu >= 0)
                  return mcpu;
+--- cpufreq/src/Makefile.in.orig	Tue Aug 30 01:14:03 2005
++++ cpufreq/src/Makefile.in	Tue Aug 30 01:14:03 2005
+@@ -58,6 +58,7 @@
+ 	cpufreq-prefs.$(OBJEXT) cpufreq-popup.$(OBJEXT) \
+ 	cpufreq-monitor.$(OBJEXT) cpufreq-monitor-factory.$(OBJEXT) \
+ 	cpufreq-monitor-procfs.$(OBJEXT) \
++	cpufreq-monitor-sysctl.$(OBJEXT) \
+ 	cpufreq-monitor-sysfs.$(OBJEXT) \
+ 	cpufreq-monitor-cpuinfo.$(OBJEXT)
+ cpufreq_applet_OBJECTS = $(am_cpufreq_applet_OBJECTS)
+@@ -353,6 +354,7 @@
+ 					cpufreq-monitor-protected.h	\
+ 	cpufreq-monitor-factory.c	cpufreq-monitor-factory.h	\
+ 	cpufreq-monitor-procfs.c	cpufreq-monitor-procfs.h	\
++	cpufreq-monitor-sysctl.c	cpufreq-monitor-sysctl.h	\
+ 	cpufreq-monitor-sysfs.c	        cpufreq-monitor-sysfs.h	        \
+ 	cpufreq-monitor-cpuinfo.c       cpufreq-monitor-cpuinfo.h
+ 
+@@ -436,6 +438,7 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-cpuinfo.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-factory.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-procfs.Po@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-sysctl.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-sysfs.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-popup.Po@am__quote@
