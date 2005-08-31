@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.27 2005/08/26 03:34:54 ahze Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.28 2005/08/26 06:52:23 marcus Exp $
 #
 
 PORTNAME=	cairo
 PORTVERSION=	1.0.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
@@ -33,7 +33,7 @@ OPTIONS+=	GLITZ "Enable Glitz OpenGL Support" Off
 
 .include <bsd.port.pre.mk>
 
-.if !defined(WITHOUT_GLITZ)
+.if defined(WITH_GLITZ)
 LIB_DEPENDS+=	glitz-glx.1:${PORTSDIR}/graphics/glitz
 CONFIGURE_ARGS+=	--enable-glitz
 PLIST_SUB+=	GLITZ=""
