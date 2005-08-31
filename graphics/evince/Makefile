@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.27 2005/08/26 06:26:47 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.28 2005/08/29 04:37:58 ahze Exp $
 #
 
 PORTNAME=	evince
@@ -19,6 +19,7 @@ LIB_DEPENDS=	poppler.0:${PORTSDIR}/graphics/poppler
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool:15
+USE_REINPLACE=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GHOSTSCRIPT=yes
@@ -102,6 +103,11 @@ pre-everything::
 	@${ECHO_MSG} "use \"make WITH_DBUS=yes\""
 	@${ECHO_MSG}
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-lt1lib|-lt1 -lm|' \
+		${WRKSRC}/configure \
+		${WRKSRC}/dvi/mdvi-lib/Makefile.in
 
 post-install:
 	@-update-desktop-database
