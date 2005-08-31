@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.72 2005/08/10 03:00:16 marcus Exp $
+#   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.73 2005/08/23 00:25:46 marcus Exp $
 #
 
 PORTNAME=	nautilus-cd-burner
 PORTVERSION=	2.11.7
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.11
@@ -15,8 +16,6 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CD burner view for Nautilus
-
-RUN_DEPENDS=	cdrecord:${PORTSDIR}/sysutils/cdrtools-cjk
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
@@ -31,21 +30,21 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	ncb.schemas
 
+OPTIONS=	DVD "Enable DVD support" on \
+		CJK "Use cdrtools-cjk instead of cdrtools" off
+
 .include <bsd.port.pre.mk>
 
-.if exists(${LOCALBASE}/bin/growisofs)
-WITH_DVD=	yes
+.if defined(WITH_CJK)
+RUN_DEPENDS+=	cdrecord:${PORTSDIR}/sysutils/cdrtools-cjk
+WITHOUT_DVD=	yes
+.else
+RUN_DEPENDS+=	cdrecord:${PORTSDIR}/sysutils/cdrtools
 .endif
 
-.if defined(WITH_DVD)
+.if !defined(WITHOUT_DVD)
 RUN_DEPENDS+=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools
 .endif
-
-pre-everything::
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "${PORTNAME} has the following configurable option(s):"
-	@${ECHO_MSG} "	WITH_DVD	Enable DVD burning support"
-	@${ECHO_MSG} ""
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
