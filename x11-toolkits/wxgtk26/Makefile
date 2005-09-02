@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	wx
-PORTVERSION=	2.6.0
-PORTREVISION?=	2
+PORTVERSION=	2.6.1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	wxwindows
@@ -66,7 +65,6 @@ INSTALLS_SHLIB=	yes
 .endif # *-common
 
 .if ${WXGTK_FLAVOR:M*-contrib*} != ""
-.if ${WXGTK_FLAVOR} != "gtk2-contrib-utils"
 BUILD_WRKSRC=	${WRKSRC}/contrib
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
@@ -86,7 +84,6 @@ pre-configure:
 		-e "s|@CPPFLAGS@||"
 
 .endif # !gtk2-contrib-common
-.endif # !gtk2-contrib-utils
 .endif # *-contrib*
 
 post-patch:
