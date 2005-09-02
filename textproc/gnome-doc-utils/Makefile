@@ -2,7 +2,8 @@
 # Date created:				11 November 2004
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/gnomedocutils/Makefile,v 1.3 2005/07/12 09:13:22 ahze Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnomedocutils
