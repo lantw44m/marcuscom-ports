@@ -3,13 +3,13 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/graphics/py-cairo/Makefile,v 1.12 2005/08/09 04:49:39 ahze Exp $
+#	$MCom: ports/graphics/py-cairo/Makefile,v 1.13 2005/08/10 22:45:15 ahze Exp $
 #
 
 PORTNAME=	cairo
-PORTVERSION=	0.9.0
+PORTVERSION=	1.0.0
 CATEGORIES=	graphics python
-MASTER_SITES=	http://cairographics.org/snapshots/
+MASTER_SITES=	http://cairographics.org/releases/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	py${PORTNAME}-${PORTVERSION}
 
