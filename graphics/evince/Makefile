@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.28 2005/08/29 04:37:58 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.29 2005/08/31 23:52:49 ahze Exp $
 #
 
 PORTNAME=	evince
@@ -30,6 +30,12 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
 GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas
+
+OPTIONS=	DVI		"Enable DVI viewer support"		off \
+		T1LIB		"Enable T1LIB for TYPE1 fonts to DVI"	off \
+		NAUTILUS	"Enable Nautilus plugin"		on \
+		DJVU		"Enable DJVU support"			off \
+		DBUS		"Enable D-BUS support"			off
 
 .include <bsd.port.pre.mk>
 
@@ -73,34 +79,11 @@ LIB_DEPENDS+=	dbus-glib-1.1:${PORTSDIR}/devel/dbus
 .endif
 
 pre-everything::
-.if !defined(WITH_DVI) && !defined(WITH_T1LIB)
-	@${ECHO_MSG}
-	@${ECHO_MSG} "If you want dvi viewer hit Ctrl-C now and"
-	@${ECHO_MSG} "use \"make WITH_DVI=yes\""
-. if !defined(WITH_T1LIB)
-	@${ECHO_MSG}
-	@${ECHO_MSG} "If you want t1lib for type1 fonts in the dvi viewer"
-	@${ECHO_MSG} "hit Ctrl-C now and"
-	@${ECHO_MSG} "use \"make WITH_T1LIB=yes\""
-. endif
-.endif
-.if !defined(WITHOUT_NAUTILUS)
-	@${ECHO_MSG}
-	@${ECHO_MSG} "If you don't want Nautilus plugin hit Ctrl-C now and"
-	@${ECHO_MSG} "use \"make WITHOUT_NAUTILUS=yes\""
-	@${ECHO_MSG}
-.endif
 .if !defined(WITH_DJVU)
-	@${ECHO_MSG} "If you want DjVu support included, hit Ctrl-C now and use"
-	@${ECHO_MSG} "\"make WITH_DJVU=yes\""
+	@${ECHO_MSG}
 	@${ECHO_MSG} "NOTE: GNOME/Gtk+ users may want to avoid QT dependency required"
 	@${ECHO_MSG} "by defaut djvulibre installation. They need to use
 	@${ECHO_MSG} "\"make WITHOUT_X11=yes\" when build that library then."
-	@${ECHO_MSG}
-.endif
-.if !defined(WITH_DBUS)
-	@${ECHO_MSG} "If you want D-BUS support included, hit Ctrl-C now and"
-	@${ECHO_MSG} "use \"make WITH_DBUS=yes\""
 	@${ECHO_MSG}
 .endif
 
