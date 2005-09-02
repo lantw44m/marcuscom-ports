@@ -88,6 +88,10 @@ share/gnome/control-center-2.0/pixmaps/double-click-off.png
 share/gnome/control-center-2.0/pixmaps/double-click-on.png
 %%ABOUTME%%share/gnome/control-center-2.0/pixmaps/gnome-about-me-bulb-off.png
 %%ABOUTME%%share/gnome/control-center-2.0/pixmaps/gnome-about-me-bulb-on.png
+share/gnome/control-center-2.0/pixmaps/acme-brightness.png
+share/gnome/control-center-2.0/pixmaps/acme-eject.png
+share/gnome/control-center-2.0/pixmaps/gnome-speakernotes-muted.png
+share/gnome/control-center-2.0/pixmaps/gnome-speakernotes.png
 share/gnome/control-center-2.0/pixmaps/keyboard-bell.png
 share/gnome/control-center-2.0/pixmaps/keyboard-cursor.png
 share/gnome/control-center-2.0/pixmaps/keyboard-repeat.png
@@ -136,10 +140,6 @@ share/gnome/omf/control-center/control-center-C.omf
 share/gnome/pixmaps/display-capplet.png
 share/gnome/vfolders/font-method.directory
 share/gnome/vfolders/theme-method.directory
-share/icons/gnome/48x48/apps/acme-brightness.png
-share/icons/gnome/48x48/apps/acme-eject.png
-share/icons/gnome/48x48/apps/gnome-speakernotes-muted.png
-share/icons/gnome/48x48/apps/gnome-speakernotes.png
 share/icons/hicolor/48x48/apps/gnome-control-center.png
 share/locale/af/LC_MESSAGES/control-center-2.0.mo
 share/locale/am/LC_MESSAGES/control-center-2.0.mo
