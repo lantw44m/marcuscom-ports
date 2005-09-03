@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool/Makefile,v 1.40 2005/08/22 15:54:29 kwm Exp $
+#   $MCom: ports/math/gcalctool/Makefile,v 1.41 2005/09/02 20:18:11 ahze Exp $
 #
 
 PORTNAME=	gcalctool
@@ -29,9 +29,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 MAN1=		gcalctool.1
 GCONF_SCHEMAS=	gcalctool.schemas
-
-post-patch:
-	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
-		's|malloc\.h|stdlib.h|g'
 
 .include <bsd.port.mk>
