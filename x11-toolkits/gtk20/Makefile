@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.70 2005/08/29 20:02:11 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.71 2005/09/02 21:09:15 mezz Exp $
 #
 
 PORTNAME=	gtk
@@ -80,7 +80,8 @@ STRIP=
 # is being use in CPUTYPE that enable SSE2 will causing Java with GTK2 and
 # Mono/gtk-sharp crash. Disable SSE2 to solve the crash and see ports/72014
 # for detail.
-.if ( ${ARCH} == "i386" || ${ARCH} == "amd64" ) && ${CC} != "icc"
+.if ${OSVERSION} >= 500000 && ( ${ARCH} == "i386" || ${ARCH} == "amd64" ) \
+	&& ${CC} != "icc"
 CFLAGS+=	-mno-sse2
 .endif
 
