@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.61 2005/08/27 04:13:22 marcus Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.62 2005/08/29 16:13:28 marcus Exp $
 #
 
 PORTNAME=	librsvg2
@@ -101,9 +101,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|mozilla-plugin|${MOZILLA}-plugin${HEADERS_SUFX}|g' \
 		${WRKSRC}/configure
 .endif
-
-pre-build:
-	@${REINPLACE_CMD} -E -e 's|-O2||g' ${WRKSRC}/Makefile
 
 .if defined(WITH_MOZILLA_PLUGIN)
 post-install:
