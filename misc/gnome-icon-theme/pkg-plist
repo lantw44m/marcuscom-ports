@@ -639,7 +639,6 @@ share/icons/gnome/72x72/filesystems/gnome-fs-regular.png
 share/icons/gnome/96x96/filesystems/gnome-fs-regular.icon
 share/icons/gnome/96x96/filesystems/gnome-fs-regular.png
 share/icons/gnome/index.theme
-share/icons/gnome/scalable/apps/evolution.svg
 share/icons/gnome/scalable/emblems/emblem-bin.icon
 share/icons/gnome/scalable/emblems/emblem-bin.svg
 share/icons/gnome/scalable/emblems/emblem-favorite.icon
@@ -2353,7 +2352,6 @@ share/icons/hicolor/32x32/apps/config-users.png
 share/icons/hicolor/32x32/apps/config-xfree.png
 share/icons/hicolor/32x32/apps/dia_gnome_icon.png
 share/icons/hicolor/32x32/apps/disks.png
-share/icons/hicolor/32x32/apps/evolution.png
 share/icons/hicolor/32x32/apps/file-manager.png
 share/icons/hicolor/32x32/apps/gdict.png
 share/icons/hicolor/32x32/apps/gdm.png
@@ -2701,6 +2699,9 @@ share/icons/hicolor/48x48/stock/net/stock_spam.png
 share/icons/hicolor/72x72/apps/gnome-globe.png
 share/icons/hicolor/96x96/apps/gnome-globe.png
 share/icons/hicolor/96x96/apps/gnome-starthere.png
+share/icons/hicolor/scalable/apps/evolution.svg
+@unexec /bin/rmdir %D/share/icons/hicolor/scalable/apps 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/icons/hicolor/scalable 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/hicolor/96x96 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/hicolor/72x72 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/hicolor/48x48/stock/generic 2>/dev/null || /usr/bin/true
