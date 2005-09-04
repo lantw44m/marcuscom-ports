@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.77 2005/07/13 19:54:07 ahze Exp $
+#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.78 2005/08/08 17:18:50 kwm Exp $
 #
 
 PORTNAME=	gnomemedia2
-PORTVERSION=	2.11.91
+PORTVERSION=	2.12.0
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome-media/2.11
+MASTER_SITE_SUBDIR=	sources/gnome-media/2.12
 DISTNAME=	gnome-media-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -44,11 +44,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%CDROM%%|acd0|' ${WRKSRC}/configure
 .else
 	@${REINPLACE_CMD} -e 's|%%CDROM%%|acd0c|' ${WRKSRC}/configure
-.endif
-.if ${OSVERSION} < 504000
-	@${REINPLACE_CMD} -e 's|lrint|rint|' \
-		${WRKSRC}/gnome-cd/gst-cdparanoia-cdrom.c \
-		${WRKSRC}/gst-mixer/src/volume.c
 .endif
 
 .include <bsd.port.post.mk>
