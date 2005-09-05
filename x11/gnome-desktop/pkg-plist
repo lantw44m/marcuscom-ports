@@ -199,6 +199,8 @@ share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 @unexec rmdir %D/share/locale/yo 2> /dev/null || true
 @unexec rmdir %D/share/locale/ug/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/ug 2> /dev/null || true
+@unexec rmdir %D/share/locale/ku/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/ku 2> /dev/null || true
 @unexec rmdir %D/share/locale/hy/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/hy 2> /dev/null || true
 @dirrm share/gnome/omf/lgpl
