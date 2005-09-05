@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.30 2005/09/02 00:45:13 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.31 2005/09/04 06:59:36 mezz Exp $
 #
 
 PORTNAME=	evince
@@ -33,7 +33,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas
 
 OPTIONS=	DVI		"Enable DVI viewer support"		off \
-		T1LIB		"Enable T1LIB for TYPE1 fonts to DVI"	off \
+		T1LIB		"Enable T1LIB for TYPE1 fonts to DVI (Enables DVI)"	off \
 		NAUTILUS	"Enable Nautilus plugin"		on \
 		DJVU		"Enable DJVU support"			off \
 		DBUS		"Enable D-BUS support"			off
