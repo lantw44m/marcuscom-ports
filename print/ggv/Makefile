@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/ggv/Makefile,v 1.3 2005/07/01 18:05:04 marcus Exp $
+#   $MCom: ports/print/ggv/Makefile,v 1.4 2005/07/27 04:07:47 ahze Exp $
 #
 
 PORTNAME=	ggv
-PORTVERSION=	2.11.1
+PORTVERSION=	2.12.0
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.11
+MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.12
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
