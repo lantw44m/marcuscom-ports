@@ -325,6 +325,7 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-default-mailer.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-default-source.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-bbdb.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-startup-wizard.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-exchange-operations.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-groupwise-features.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-gw-account-setup.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-itip-formatter.so
@@ -350,6 +351,12 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-default-mailer.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-default-source.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-bbdb.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-startup-wizard.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-exchange-ab-subscription.xml
+lib/evolution/%%VERSION%%/plugins/org-gnome-exchange-cal-subscription.xml
+lib/evolution/%%VERSION%%/plugins/org-gnome-exchange-operations.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-exchange-tasks-subscription.xml
+lib/evolution/%%VERSION%%/plugins/org-gnome-folder-permissions.xml
+lib/evolution/%%VERSION%%/plugins/org-gnome-folder-subscription.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-groupwise-features.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-gw-account-setup.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-itip-formatter.eplug
@@ -399,6 +406,7 @@ share/gnome/evolution/%%VERSION%%/errors/filter.error
 share/gnome/evolution/%%VERSION%%/errors/mail-composer.error
 share/gnome/evolution/%%VERSION%%/errors/mail.error
 share/gnome/evolution/%%VERSION%%/errors/org-gnome-default-mailer.error
+share/gnome/evolution/%%VERSION%%/errors/org-gnome-exchange-operations.error
 share/gnome/evolution/%%VERSION%%/errors/org-gnome-itip-formatter.error
 share/gnome/evolution/%%VERSION%%/errors/org-gnome-mailing-list-actions.error
 share/gnome/evolution/%%VERSION%%/errors/org-gnome-proxy-errors.xml
@@ -422,6 +430,7 @@ share/gnome/evolution/%%VERSION%%/glade/e-active-connection-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/e-attachment.glade
 share/gnome/evolution/%%VERSION%%/glade/e-contact-print.glade
 share/gnome/evolution/%%VERSION%%/glade/e-delegate-dialog.glade
+share/gnome/evolution/%%VERSION%%/glade/e-foreign-folder-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/e-itip-control.glade
 share/gnome/evolution/%%VERSION%%/glade/e-send-options.glade
 share/gnome/evolution/%%VERSION%%/glade/e-table-config-no-group.glade
@@ -431,6 +440,10 @@ share/gnome/evolution/%%VERSION%%/glade/e-timezone-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/eab-contact-commit-duplicate-detected.glade
 share/gnome/evolution/%%VERSION%%/glade/eab-contact-duplicate-detected.glade
 share/gnome/evolution/%%VERSION%%/glade/event-page.glade
+share/gnome/evolution/%%VERSION%%/glade/exchange-change-password.glade
+share/gnome/evolution/%%VERSION%%/glade/exchange-delegates.glade
+share/gnome/evolution/%%VERSION%%/glade/exchange-folder-tree.glade
+share/gnome/evolution/%%VERSION%%/glade/exchange-permissions-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/filter.glade
 share/gnome/evolution/%%VERSION%%/glade/fulladdr.glade
 share/gnome/evolution/%%VERSION%%/glade/fullname.glade
