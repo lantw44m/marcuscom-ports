@@ -107,7 +107,9 @@ share/locale/pa/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/pl/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/pt/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/pt_BR/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/ro/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/rw/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/sk/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/sq/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/sr/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/sr@Latn/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
