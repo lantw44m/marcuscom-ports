@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/graphics/p5-Cairo/Makefile,v 1.1 2005/08/19 02:08:07 ahze Exp $
 #
 
 PORTNAME=	Cairo
-PORTVERSION=	0.01
+PORTVERSION=	0.02
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	gtk2-perl
