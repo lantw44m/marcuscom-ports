@@ -28,6 +28,10 @@ lib/libatk-1.0.a
 lib/libatk-1.0.so
 lib/libatk-1.0.so.0
 libdata/pkgconfig/atk.pc
+%%DOCSDIR%%/home.png
+%%DOCSDIR%%/left.png
+%%DOCSDIR%%/right.png
+%%DOCSDIR%%/up.png
 share/locale/af/LC_MESSAGES/atk10.mo
 share/locale/am/LC_MESSAGES/atk10.mo
 share/locale/ar/LC_MESSAGES/atk10.mo
@@ -104,6 +108,7 @@ share/locale/xh/LC_MESSAGES/atk10.mo
 share/locale/yi/LC_MESSAGES/atk10.mo
 share/locale/zh_CN/LC_MESSAGES/atk10.mo
 share/locale/zh_TW/LC_MESSAGES/atk10.mo
+@dirrm %%DOCSDIR%%
 @exec mkdir -p %D/%%DOCSDIR%%
 @unexec rmdir %D/share/locale/as/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/as 2> /dev/null || true
