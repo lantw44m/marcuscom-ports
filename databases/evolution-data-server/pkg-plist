@@ -346,87 +346,6 @@ libdata/pkgconfig/libexchange-storage-%%EVO_VERSION%%.pc
 libexec/camel-index-control-%%EVO_VERSION%%
 libexec/camel-lock-helper-%%EVO_VERSION%%
 libexec/evolution-data-server-%%VERSION%%
-share/doc/camel/Addresses.html
-share/doc/camel/CamelAddress.html
-share/doc/camel/CamelCipherContext.html
-share/doc/camel/CamelDataWrapper.html
-share/doc/camel/CamelFolder.html
-share/doc/camel/CamelFolderSummary.html
-share/doc/camel/CamelGpgContext.html
-share/doc/camel/CamelInternetAddress.html
-share/doc/camel/CamelMedium.html
-share/doc/camel/CamelMimeFilter.html
-share/doc/camel/CamelMimeFilterBasic.html
-share/doc/camel/CamelMimeFilterBestenc.html
-share/doc/camel/CamelMimeFilterCRLF.html
-share/doc/camel/CamelMimeFilterCanon.html
-share/doc/camel/CamelMimeFilterCharset.html
-share/doc/camel/CamelMimeFilterEnriched.html
-share/doc/camel/CamelMimeFilterFrom.html
-share/doc/camel/CamelMimeFilterHTML.html
-share/doc/camel/CamelMimeFilterIndex.html
-share/doc/camel/CamelMimeFilterSave.html
-share/doc/camel/CamelMimeFilterToHTML.html
-share/doc/camel/CamelMimeFilterWindows.html
-share/doc/camel/CamelMimeFilterYenc.html
-share/doc/camel/CamelMimeMessage.html
-share/doc/camel/CamelMimeParser.html
-share/doc/camel/CamelMimePart.html
-share/doc/camel/CamelMultipart.html
-share/doc/camel/CamelMultipartEncrypted.html
-share/doc/camel/CamelMultipartSigned.html
-share/doc/camel/CamelObject.html
-share/doc/camel/CamelOfflineFolder.html
-share/doc/camel/CamelOfflineJournal.html
-share/doc/camel/CamelOfflineStore.html
-share/doc/camel/CamelSasl.html
-share/doc/camel/CamelSaslAnonymous.html
-share/doc/camel/CamelSaslCramMd5.html
-share/doc/camel/CamelSaslDigestMd5.html
-share/doc/camel/CamelSaslGssapi.html
-share/doc/camel/CamelSaslKerberos4.html
-share/doc/camel/CamelSaslLogin.html
-share/doc/camel/CamelSaslNTLM.html
-share/doc/camel/CamelSaslPlain.html
-share/doc/camel/CamelSeekableStream.html
-share/doc/camel/CamelSeekableSubstream.html
-share/doc/camel/CamelService.html
-share/doc/camel/CamelSession.html
-share/doc/camel/CamelStore.html
-share/doc/camel/CamelStoreSummary.html
-share/doc/camel/CamelStream.html
-share/doc/camel/CamelStreamBuffer.html
-share/doc/camel/CamelStreamFilter.html
-share/doc/camel/CamelStreamFs.html
-share/doc/camel/CamelStreamMem.html
-share/doc/camel/CamelStreamNull.html
-share/doc/camel/CamelTcpStream.html
-share/doc/camel/CamelTcpStreamRaw.html
-share/doc/camel/CamelTcpStreamSSL.html
-share/doc/camel/CamelTransport.html
-share/doc/camel/CamelVTrashFolder.html
-share/doc/camel/CamelVeeFolder.html
-share/doc/camel/ClassTree.html
-share/doc/camel/Crypto.html
-share/doc/camel/Filters.html
-share/doc/camel/Folders.html
-share/doc/camel/Fundamentals.html
-share/doc/camel/MIME.html
-share/doc/camel/Services.html
-share/doc/camel/Streams.html
-share/doc/camel/camel-camel-exception.html
-share/doc/camel/camel-camel-operation.html
-share/doc/camel/camel-camel-provider.html
-share/doc/camel/camel-camel-url.html
-share/doc/camel/camel.devhelp
-share/doc/camel/classes.html
-share/doc/camel/home.png
-share/doc/camel/index.html
-share/doc/camel/index.sgml
-share/doc/camel/left.png
-share/doc/camel/right.png
-share/doc/camel/style.css
-share/doc/camel/up.png
 share/doc/libebook/EBook.html
 share/doc/libebook/EBookListener.html
 share/doc/libebook/EBookView.html
@@ -1002,7 +921,6 @@ share/locale/zh_TW/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 @dirrm share/doc/libedata-cal
 @dirrm share/doc/libecal
 @dirrm share/doc/libebook
-@dirrm share/doc/camel
 @dirrm lib/evolution-data-server-%%EVO_VERSION%%/extensions
 @dirrm lib/evolution-data-server-%%EVO_VERSION%%/camel-providers
 @dirrm lib/evolution-data-server-%%EVO_VERSION%%
