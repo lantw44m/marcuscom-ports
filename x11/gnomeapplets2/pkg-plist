@@ -105,6 +105,7 @@ share/gnome/help/command-line/uk/command-line.xml
 share/gnome/help/drivemount/C/drivemount.xml
 share/gnome/help/drivemount/C/legal.xml
 share/gnome/help/drivemount/es/drivemount.xml
+share/gnome/help/drivemount/pa/drivemount.xml
 share/gnome/help/drivemount/uk/drivemount.xml
 share/gnome/help/geyes/C/geyes.xml
 share/gnome/help/geyes/C/legal.xml
@@ -160,6 +161,7 @@ share/gnome/omf/command-line/command-line-uk.omf
 %%CPUFREQ%%share/gnome/omf/cpufreq-applet/cpufreq-applet-uk.omf
 share/gnome/omf/drivemount/drivemount-C.omf
 share/gnome/omf/drivemount/drivemount-es.omf
+share/gnome/omf/drivemount/drivemount-pa.omf
 share/gnome/omf/drivemount/drivemount-uk.omf
 share/gnome/omf/geyes/geyes-C.omf
 share/gnome/omf/geyes/geyes-es.omf
@@ -360,6 +362,7 @@ share/locale/he/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hi/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hr/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hu/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/hy/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/id/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/is/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-applets-2.0.mo
@@ -405,6 +408,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @unexec /bin/rmdir %D/share/locale/te 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/locale/rw/LC_MESSAGES 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/locale/rw 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/locale/hy/LC_MESSAGES 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/locale/hy 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/hicolor/48x48/apps 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/hicolor/48x48 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/hicolor 2>/dev/null || /usr/bin/true
@@ -462,6 +467,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/geyes/C
 @dirrm share/gnome/help/geyes
 @dirrm share/gnome/help/drivemount/uk
+@dirrm share/gnome/help/drivemount/pa
 @dirrm share/gnome/help/drivemount/es
 @dirrm share/gnome/help/drivemount/C
 @dirrm share/gnome/help/drivemount
