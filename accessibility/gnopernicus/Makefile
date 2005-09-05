@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.59 2005/08/08 06:55:43 marcus Exp $
+#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.60 2005/08/29 12:13:12 kwm Exp $
 #
 
 PORTNAME=	gnopernicus
-PORTVERSION=	0.11.5
+PORTVERSION=	0.11.6
 CATEGORIES=	accessibility x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.11
@@ -30,7 +30,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAKE_ENV=	SED="${SED}"
 
 GCONF_SCHEMAS=	brlmonitor.schemas gnopernicus.schemas remote.schemas
-SHLIB_VERSION=	5
+SHLIB_VERSION=	6
 PLIST_SUB=	SHLIB_VERSION=${SHLIB_VERSION}
 
 post-patch:
