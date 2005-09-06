@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.31 2005/09/04 06:59:36 mezz Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.32 2005/09/05 06:31:17 ahze Exp $
 #
 
 PORTNAME=	evince
@@ -67,8 +67,14 @@ CONFIGURE_ARGS+=	--disable-nautilus
 PLIST_SUB+=		NAUTILUS="@comment "
 .endif
 
+.if exists(${X11BASE}/bin/djview)
+DJVU_DIR?=	# empty
+.else
+DJVU_DIR?=	-nox11
+.endif
+
 .if defined(WITH_DJVU)
-LIB_DEPENDS+=		djvulibre.14:${PORTSDIR}/graphics/djvulibre
+LIB_DEPENDS+=		djvulibre.14:${PORTSDIR}/graphics/djvulibre${DJVU_DIR}
 CONFIGURE_ARGS+=	--enable-djvu
 GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
 .else
@@ -77,15 +83,6 @@ CONFIGURE_ARGS+=	--disable-djvu
 
 .if defined(WITH_DBUS)
 LIB_DEPENDS+=	dbus-glib-1.1:${PORTSDIR}/devel/dbus
-.endif
-
-pre-everything::
-.if !defined(WITH_DJVU)
-	@${ECHO_MSG}
-	@${ECHO_MSG} "NOTE: GNOME/Gtk+ users may want to avoid QT dependency required"
-	@${ECHO_MSG} "by defaut djvulibre installation. They need to use
-	@${ECHO_MSG} "\"make WITHOUT_X11=yes\" when build that library then."
-	@${ECHO_MSG}
 .endif
 
 post-patch:
