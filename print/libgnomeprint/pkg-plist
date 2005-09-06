@@ -4,6 +4,7 @@ include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-font.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-glyphlist.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-pgl.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-config.h
+include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-filter.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-job.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-meta.h
 include/libgnomeprint-%%LIBVERSION%%/libgnomeprint/gnome-print-pango.h
@@ -38,6 +39,15 @@ lib/libgnomeprint-2-2.a
 lib/libgnomeprint-2-2.so
 lib/libgnomeprint-2-2.so.0
 %%CUPS:%%lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintcups.so
+lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-clip.so
+lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-draft.so
+lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-frgba.so
+lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-multipage.so
+lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-position.so
+lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-reorder.so
+lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-rotate.so
+lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-select.so
+lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-zoom.so
 lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintlpd.so
 lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-custom.so
 lib/libgnomeprint/%%VERSION%%/modules/transports/libgnomeprint-file.so
@@ -96,6 +106,7 @@ share/locale/fa/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/fi/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/fr/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/ga/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
+share/locale/gl/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/gu/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/he/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/hi/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
@@ -132,6 +143,7 @@ share/locale/sr/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/sr@Latn/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/sv/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/ta/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
+share/locale/te/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/th/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/tr/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 share/locale/uk/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
@@ -154,6 +166,7 @@ share/locale/zh_TW/LC_MESSAGES/libgnomeprint-%%LIBVERSION%%.mo
 @dirrm share/gnome/libgnomeprint
 @dirrm %%DOCSDIR%%
 @dirrm lib/libgnomeprint/%%VERSION%%/modules/transports
+@dirrm lib/libgnomeprint/%%VERSION%%/modules/filters
 @dirrm lib/libgnomeprint/%%VERSION%%/modules
 @dirrm lib/libgnomeprint/%%VERSION%%
 @dirrm lib/libgnomeprint
