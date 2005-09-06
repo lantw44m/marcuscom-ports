@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.107 2005/09/05 18:19:22 marcus Exp $
+#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.108 2005/09/05 19:12:21 marcus Exp $
 #
 
 PORTNAME=	gnomevfs2
@@ -87,7 +87,6 @@ post-patch:
 		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
 	@${SED} -e 's|%%X11BASE%%|${X11BASE}|g' \
 		< ${MASTERDIR}/pkg-deinstall.in > ${PKGDEINSTALL}
-	@${TOUCH} -f ${WRKSRC}/libgnomevfs/GNOME_VFS_Daemon.idl
 
 pre-configure:
 	@if [ -n "`${PKG_INFO} -xI '^bind[0-9]*-base-[0-9]' 2> /dev/null`" ]; then \
