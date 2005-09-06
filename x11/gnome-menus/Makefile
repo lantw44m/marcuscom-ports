@@ -3,15 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/x11/gnome-menus/Makefile,v 1.18 2005/08/22 14:12:45 kwm Exp $
+#	$MCom: ports/x11/gnome-menus/Makefile,v 1.19 2005/09/06 15:00:12 marcus Exp $
 #
 
 PORTNAME=	gnome-menus
-PORTVERSION=	2.11.92
-PORTREVISION=	1
+PORTVERSION=	2.12.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.11
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.12
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -21,7 +20,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomevfs2 ltverhack
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomevfs2 ltverhack pygtk2
 USE_AUTOTOOLS=	libtool:15
 USE_PYTHON=	yes
 INSTALLS_SHLIB=	yes
