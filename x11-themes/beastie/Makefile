@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-themes/beastie/Makefile,v 1.1 2005/09/06 05:47:42 ahze Exp $
+#    $MCom: ports/x11-themes/beastie/Makefile,v 1.2 2005/09/06 05:50:55 ahze Exp $
 #
 
 PORTNAME=	beastie
@@ -32,10 +32,11 @@ WITH_GTKENGINES=	yes
 .endif
 
 .if !defined(WITHOUT_GTKENGINES) || defined(WITH_GTKENGINES)
-RUN_DEPENDS+=	gtk-engines2>=2.6.4:${PORTSDIR}/x11-themes/gtk-engines2
+RUN_DEPENDS+=	gtk-engines2>=2.6.4:${PORTSDIR}/x11-themes/gtk-engines2 \
+		gnome-themes>=2.11.91:${PORTSDIR}/x11-themes/gnome-themes
 .else
-RUN_DEPENDS+=	clearlooks>=0.6.0:${PORTSDIR}/x11-themes/clearlooks
-
+RUN_DEPENDS+=	clearlooks>=0.6.0:${PORTSDIR}/x11-themes/clearlooks \
+		clearlooks-metacity>=0.6:${PORTSDIR}/x11-themes/clearlooks-metacity
 .endif
 
 pre-everything::
