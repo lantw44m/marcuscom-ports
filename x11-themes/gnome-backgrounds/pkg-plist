@@ -66,6 +66,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-backgrounds.mo
 @unexec rmdir %D/share/locale/rw 2> /dev/null || true
 @unexec rmdir %D/share/locale/ku/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/ku 2> /dev/null || true
+@unexec rmdir %D/share/locale/hy/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/hy/LC 2> /dev/null || true
 @dirrm share/gnome/pixmaps/backgrounds/gnome/translucent
 @dirrm share/gnome/pixmaps/backgrounds/gnome/tiles
 @dirrm share/gnome/pixmaps/backgrounds/gnome/branded
