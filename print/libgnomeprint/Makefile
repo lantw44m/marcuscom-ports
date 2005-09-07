@@ -3,7 +3,7 @@
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/libgnomeprint/Makefile,v 1.51 2005/09/06 17:49:57 marcus Exp $
+#   $MCom: ports/print/libgnomeprint/Makefile,v 1.52 2005/09/07 20:27:52 ahze Exp $
 #
 
 PORTNAME=	libgnomeprint
@@ -19,7 +19,6 @@ COMMENT=	Gnome print support library
 
 LIB_DEPENDS=	fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig \
 		popt.0:${PORTSDIR}/devel/popt
-
 
 USE_BISON=	yes
 USE_BZIP2=	yes
