@@ -46,6 +46,8 @@ share/locale/ru/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/rw/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/sk/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/sq/LC_MESSAGES/gnome-keyring-manager.mo
+share/locale/sr/LC_MESSAGES/gnome-keyring-manager.mo
+share/locale/sr@Latn/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/sv/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/th/LC_MESSAGES/gnome-keyring-manager.mo
 share/locale/tr/LC_MESSAGES/gnome-keyring-manager.mo

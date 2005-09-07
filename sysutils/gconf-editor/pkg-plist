@@ -9,7 +9,17 @@ share/gnome/help/gconf-editor/C/figures/entry-string.png
 share/gnome/help/gconf-editor/C/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/C/gconf-editor.xml
 share/gnome/help/gconf-editor/C/legal.xml
+share/gnome/help/gconf-editor/uk/figures/entry-blank.png
+share/gnome/help/gconf-editor/uk/figures/entry-bool.png
+share/gnome/help/gconf-editor/uk/figures/entry-list.png
+share/gnome/help/gconf-editor/uk/figures/entry-number.png
+share/gnome/help/gconf-editor/uk/figures/entry-schema.png
+share/gnome/help/gconf-editor/uk/figures/entry-string.png
+share/gnome/help/gconf-editor/uk/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/uk/gconf-editor.xml
+share/gnome/help/gconf-editor/uk/legal.xml
 share/gnome/omf/gconf-editor/gconf-editor-C.omf
+share/gnome/omf/gconf-editor/gconf-editor-uk.omf
 share/gnome/pixmaps/gconf-editor/entry-blank.png
 share/gnome/pixmaps/gconf-editor/entry-bool.png
 share/gnome/pixmaps/gconf-editor/entry-list.png
@@ -94,6 +104,8 @@ share/locale/zh_TW/LC_MESSAGES/gconf-editor.mo
 @unexec rmdir %D/share/locale/te 2> /dev/null || true
 @dirrm share/gnome/pixmaps/gconf-editor
 @dirrm share/gnome/omf/gconf-editor
+@dirrm share/gnome/help/gconf-editor/uk/figures
+@dirrm share/gnome/help/gconf-editor/uk
 @dirrm share/gnome/help/gconf-editor/C/figures
 @dirrm share/gnome/help/gconf-editor/C
 @dirrm share/gnome/help/gconf-editor
