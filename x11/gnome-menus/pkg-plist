@@ -1,4 +1,3 @@
-bin/gmenu-simple-editor
 bin/gnome-menu-spec-test
 etc/xdg/menus/applications.menu
 etc/xdg/menus/preferences.menu
@@ -7,27 +6,8 @@ include/gnome-menus/gmenu-tree.h
 lib/libgnome-menu.a
 lib/libgnome-menu.so
 lib/libgnome-menu.so.2
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/__init__.py
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/__init__.pyc
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/__init__.pyo
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/config.py
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/config.pyc
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/config.pyo
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/main.py
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/main.pyc
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/main.pyo
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/maindialog.py
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/maindialog.pyc
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/maindialog.pyo
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/menufilewriter.py
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/menufilewriter.pyc
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/menufilewriter.pyo
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/menutreemodel.py
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/menutreemodel.pyc
-%%PYTHON_SITELIBDIR%%/GMenuSimpleEditor/menutreemodel.pyo
 %%PYTHON_SITELIBDIR%%/gmenu.so
 libdata/pkgconfig/libgnome-menu.pc
-share/gnome/applications/gmenu-simple-editor.desktop
 share/gnome/desktop-directories/Accessibility.directory
 share/gnome/desktop-directories/Accessories.directory
 share/gnome/desktop-directories/Applications.directory
@@ -46,7 +26,6 @@ share/gnome/desktop-directories/Settings-Accessibility.directory
 share/gnome/desktop-directories/Settings.directory
 share/gnome/desktop-directories/System-Settings.directory
 share/gnome/desktop-directories/System-Tools.directory
-share/gnome/gnome-menus/glade/gmenu-simple-editor.glade
 share/locale/ar/LC_MESSAGES/gnome-menus.mo
 share/locale/bg/LC_MESSAGES/gnome-menus.mo
 share/locale/ca/LC_MESSAGES/gnome-menus.mo
@@ -109,10 +88,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-menus.mo
 @unexec rmdir %D/share/locale/mr 2> /dev/null || true
 @unexec rmdir %D/share/locale/hy/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/hy 2> /dev/null || true
-@dirrm share/gnome/gnome-menus/glade
-@dirrm share/gnome/gnome-menus
 @dirrm share/gnome/desktop-directories
-@dirrm %%PYTHON_SITELIBDIR%%/GMenuSimpleEditor
 @dirrm include/gnome-menus
 @dirrm etc/xdg/menus
 @dirrm etc/xdg
