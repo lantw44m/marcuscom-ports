@@ -3,11 +3,11 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.11 2005/08/28 20:18:30 marcus Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.12 2005/08/29 01:12:09 marcus Exp $
 #
 
 PORTNAME=	gnumeric
-PORTVERSION=	1.5.5
+PORTVERSION=	1.5.90
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -52,8 +52,6 @@ PLIST_SUB+=	PERL=""
 post-patch:
 	@${FIND} ${WRKSRC}/plugins -name "plugin.xml.in" | ${XARGS} \
 		${REINPLACE_CMD} -e 's|\.la|.so|g'
-	@${FIND} ${WRKSRC}/src/cut-n-paste-code/goffice/graph/plugins -name \
-		"plugin.xml.in" | ${XARGS} ${REINPLACE_CMD} -e 's|\.la|.so|g'
 	@${RM} -f ${WRKSRC}/GNOME_Gnumeric.server.in
 
 post-install:
