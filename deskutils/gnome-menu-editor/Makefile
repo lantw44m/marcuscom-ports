@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-menu-editor/Makefile,v 1.6 2005/07/01 17:57:13 marcus Exp $
+#   $MCom: ports/deskutils/gnome-menu-editor/Makefile,v 1.7 2005/08/29 03:35:47 ahze Exp $
 #
 
 PORTNAME=	gnome-menu-editor
 PORTVERSION=	0.5
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	http://manny.cluecoder.org/packages/gnome-menu-editor/
 
@@ -21,11 +22,16 @@ USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomemenus intlhack
 
 PLIST_FILES=	bin/gnome-menu-editor \
+		bin/gmenu-simple-editor \
 		share/gnome/applications/gnome-menu-editor.desktop
 
 post-patch:
 # Make .desktop file valid to desktop-file-validate
 	@${REINPLACE_CMD} -e 's|OnlyShowIn=GNOME|OnlyShowIn=GNOME;|' \
 		${WRKSRC}/data/gnome-menu-editor.desktop.in
+
+post-install:
+	${LN} -sf ${PREFIX}/bin/gnome-menu-editor \
+		${PREFIX}/bin/gmenu-simple-editor
 
 .include <bsd.port.mk>
