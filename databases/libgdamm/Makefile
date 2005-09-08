@@ -28,6 +28,8 @@ USE_INC_LIBTOOL_VER=	15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static
 
+BROKEN=	"Does not build with libgda-1.3.91"
+
 patch-autotools:
 	@(cd ${PATCH_WRKSRC}; \
 	for file in ${LIBTOOLFILES}; do \
