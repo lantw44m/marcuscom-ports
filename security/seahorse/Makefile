@@ -71,6 +71,10 @@ LIB_DEPENDS+=	soup-2.2.8:${PORTSDIR}/devel/libsoup
 CONFIGURE_ARGS+=--disable-hkp
 .endif
 
+post-patch:
+	@${REINPLACE_CMD} -e 's|gedit-2.10|gedit-2.12|g' \
+		${WRKSRC}/configure
+
 post-install:
 	-@update-desktop-database
 
