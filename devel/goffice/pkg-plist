@@ -67,7 +67,6 @@ include/libgoffice-1/goffice/graph/gog-plot-engine.h
 include/libgoffice-1/goffice/graph/gog-plot-impl.h
 include/libgoffice-1/goffice/graph/gog-plot.h
 include/libgoffice-1/goffice/graph/gog-reg-curve.h
-include/libgoffice-1/goffice/graph/gog-reg-eqn.h
 include/libgoffice-1/goffice/graph/gog-renderer-gnome-print.h
 include/libgoffice-1/goffice/graph/gog-renderer-impl.h
 include/libgoffice-1/goffice/graph/gog-renderer-pixbuf.h
@@ -96,6 +95,7 @@ include/libgoffice-1/goffice/gtk/go-format-sel.h
 include/libgoffice-1/goffice/gtk/go-graph-widget.h
 include/libgoffice-1/goffice/gtk/go-locale-sel.h
 include/libgoffice-1/goffice/gtk/go-optionmenu.h
+include/libgoffice-1/goffice/gtk/go-rotation-sel.h
 include/libgoffice-1/goffice/gtk/goffice-gtk.h
 include/libgoffice-1/goffice/ms-compat/go-ms-parser.h
 include/libgoffice-1/goffice/ms-compat/god-drawing-ms-client-handler.h
@@ -103,7 +103,6 @@ include/libgoffice-1/goffice/ms-compat/god-drawing-ms.h
 include/libgoffice-1/goffice/ms-compat/god-image-ms.h
 include/libgoffice-1/goffice/utils/datetime.h
 include/libgoffice-1/goffice/utils/format-impl.h
-include/libgoffice-1/goffice/utils/format.h
 include/libgoffice-1/goffice/utils/go-color.h
 include/libgoffice-1/goffice/utils/go-file.h
 include/libgoffice-1/goffice/utils/go-font.h
@@ -117,6 +116,8 @@ include/libgoffice-1/goffice/utils/go-line.h
 include/libgoffice-1/goffice/utils/go-marker.h
 include/libgoffice-1/goffice/utils/go-math.h
 include/libgoffice-1/goffice/utils/go-pattern.h
+include/libgoffice-1/goffice/utils/go-rangefunc.h
+include/libgoffice-1/goffice/utils/go-regression.h
 include/libgoffice-1/goffice/utils/go-units.h
 include/libgoffice-1/goffice/utils/goffice-utils.h
 include/libgoffice-1/goffice/utils/regutf8.h
@@ -155,6 +156,7 @@ lib/libgoffice-1.so.0
 libdata/pkgconfig/libgoffice-1.pc
 share/gnome/goffice/%%VERSION%%/glade/go-font-sel.glade
 share/gnome/goffice/%%VERSION%%/glade/go-format-sel.glade
+share/gnome/goffice/%%VERSION%%/glade/go-rotation-sel.glade
 share/gnome/goffice/%%VERSION%%/glade/gog-axis-prefs.glade
 share/gnome/goffice/%%VERSION%%/glade/gog-chart-prefs.glade
 share/gnome/goffice/%%VERSION%%/glade/gog-error-bar-prefs.glade
