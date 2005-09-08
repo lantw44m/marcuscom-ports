@@ -1,28 +1,17 @@
---- gsf-gnome/Makefile.in.orig	Tue Aug 16 00:45:45 2005
-+++ gsf-gnome/Makefile.in	Tue Aug 16 00:46:53 2005
-@@ -61,9 +61,7 @@
- libLTLIBRARIES_INSTALL = $(INSTALL)
- LTLIBRARIES = $(lib_LTLIBRARIES)
- am__DEPENDENCIES_1 =
--@WITH_LIBGSF_GNOME_TRUE@libgsf_gnome_1_la_DEPENDENCIES =  \
--@WITH_LIBGSF_GNOME_TRUE@	$(top_builddir)/gsf/libgsf-1.la \
--@WITH_LIBGSF_GNOME_TRUE@	$(am__DEPENDENCIES_1)
-+@WITH_LIBGSF_GNOME_TRUE@libgsf_gnome_1_la_DEPENDENCIES =
- am__libgsf_gnome_1_la_SOURCES_DIST = gsf-input-gnomevfs.c \
- 	gsf-output-gnomevfs.c gsf-input-bonobo.c gsf-output-bonobo.c \
- 	gsf-shared-bonobo-stream.c
-@@ -274,7 +272,7 @@
- target_alias = @target_alias@
- AM_CPPFLAGS = -I$(top_srcdir) $(LIBGSF_GNOME_CFLAGS)
+--- gsf-gnome/Makefile.in.orig	Thu Sep  8 13:40:17 2005
++++ gsf-gnome/Makefile.in	Thu Sep  8 13:42:02 2005
+@@ -221,7 +221,7 @@
+ 
  @WITH_LIBGSF_GNOME_TRUE@lib_LTLIBRARIES = libgsf-gnome-1.la
+ 
 -@WITH_LIBGSF_GNOME_TRUE@libgsf_gnome_1_la_LIBADD = $(top_builddir)/gsf/libgsf-1.la $(LIBGSF_GNOME_LIBS)
 +@WITH_LIBGSF_GNOME_TRUE@libgsf_gnome_1_la_LIBADD = $(LIBGSF_GNOME_LIBS)
- @WITH_LIBGSF_GNOME_TRUE@libgsf_gnome_1_la_LDFLAGS = -version-info $(VERSION_INFO)
+ @WITH_LIBGSF_GNOME_TRUE@libgsf_gnome_1_la_LDFLAGS = -version-info $(VERSION_INFO) $(am__append_1)
  @WITH_LIBGSF_GNOME_TRUE@libgsf_gnome_1_la_SOURCES = \
  @WITH_LIBGSF_GNOME_TRUE@	gsf-input-gnomevfs.c 	\
-@@ -283,13 +281,15 @@
- @WITH_LIBGSF_GNOME_TRUE@	gsf-output-bonobo.c	\
+@@ -231,13 +231,15 @@
  @WITH_LIBGSF_GNOME_TRUE@	gsf-shared-bonobo-stream.c
+ 
  
 -libgsf_gnome_1_includedir = $(includedir)/libgsf-1/gsf-gnome
 -libgsf_gnome_1_include_HEADERS = \
@@ -41,5 +30,16 @@
 +@WITH_LIBGSF_GNOME_TRUE@	gsf-output-bonobo.h	\
 +@WITH_LIBGSF_GNOME_TRUE@	gsf-shared-bonobo-stream.h
  
- all: all-am
+ subdir = gsf-gnome
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -246,9 +248,7 @@
+ CONFIG_CLEAN_FILES =
+ LTLIBRARIES = $(lib_LTLIBRARIES)
  
+-@WITH_LIBGSF_GNOME_TRUE@libgsf_gnome_1_la_DEPENDENCIES = \
+-@WITH_LIBGSF_GNOME_TRUE@	$(top_builddir)/gsf/libgsf-1.la
+-@WITH_LIBGSF_GNOME_FALSE@libgsf_gnome_1_la_DEPENDENCIES =
++@WITH_LIBGSF_GNOME_TRUE@libgsf_gnome_1_la_DEPENDENCIES =
+ am__libgsf_gnome_1_la_SOURCES_DIST = gsf-input-gnomevfs.c \
+ 	gsf-output-gnomevfs.c gsf-input-bonobo.c gsf-output-bonobo.c \
+ 	gsf-shared-bonobo-stream.c

@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgsf/Makefile,v 1.14 2005/07/23 19:00:55 marcus Exp $
+#   $MCom: ports/devel/libgsf/Makefile,v 1.15 2005/08/16 04:56:17 marcus Exp $
 #
 
 PORTNAME=	libgsf
-PORTVERSION=	1.12.2
+PORTVERSION=	1.12.3
 PORTREVISION?=	0
 CATEGORIES?=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -28,10 +28,14 @@ INSTALLS_SHLIB=	yes
 USE_GNOME?=	gnomehack glib20 libxml2 gconf2 ltverhack intlhack
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS?=--with-html-dir=${PREFIX}/share/doc \
-		--disable-gtk-doc --without-gnome --with-bz2
+		--disable-gtk-doc --without-gnome --with-bz2 \
+		--mandir=${PREFIX}/man
 CONFIGURE_ENV?=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-GCONF_SCHEMAS?=	gsf-office-thumbnailer.schemas
+.if !defined(GSF_SLAVE)
+GCONF_SCHEMAS=	gsf-office-thumbnailer.schemas
+MAN1=		gsf-office-thumbnailer.1
+.endif
 
 .include <bsd.port.mk>
