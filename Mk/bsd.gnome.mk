@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.327 2005/08/19 13:03:50 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.328 2005/08/19 21:19:40 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -54,7 +54,7 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
 _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver \
 		gail gal2 gconf2 glib20 gnomecontrolcenter2 gnomedesktop \
 		gnomedocutils gnomemenus gnomepanel gnomespeech gnomevfs2 \
-		gstreamerplugins gtk20 gtkhtml3 gtksourceview libartlgpl2 libbonobo \
+		gtk20 gtkhtml3 gtksourceview libartlgpl2 libbonobo \
 		libbonoboui libgailgnome libgda2 libglade2 libgnome libgnomecanvas \
 		libgnomedb libgnomeprint libgnomeprintui libgnomeui libgsf \
 		libgsf_gnome libgtkhtml libidl librsvg2 libwnck libxml2 libxslt \
@@ -424,11 +424,6 @@ pygnome2_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py
 pygnome2_BUILD_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_RUN_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_USE_GNOME_IMPL=libgnomeui pygtk2
-
-gstreamerplugins_LIB_DEPENDS=	gstplay-0.8.1:${PORTSDIR}/multimedia/gstreamer-plugins \
-								gstreamer-0.8:${PORTSDIR}/multimedia/gstreamer
-gstreamerplugins_DETECT=	${X11BASE}/libdata/pkgconfig/gstreamer-play-0.8.pc
-gstreamerplugins_USE_GNOME_IMPL=	gconf2
 
 intltool_DETECT=		${LOCALBASE}/bin/intltool-extract
 intltool_BUILD_DEPENDS=	${intltool_DETECT}:${PORTSDIR}/textproc/intltool
