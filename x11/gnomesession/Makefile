@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomesession/Makefile,v 1.63 2005/08/09 14:26:51 kwm Exp $
+#   $MCom: ports/x11/gnomesession/Makefile,v 1.64 2005/09/06 16:27:01 kwm Exp $
 #
 
 PORTNAME=	gnomesession
@@ -11,9 +11,9 @@ PORTVERSION=	2.12.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
-		http://people.FreeBSD.org/~pav/:local
+		http://people.FreeBSD.org/~adamw/images/gnome_splashes/2.12/:local
 MASTER_SITE_SUBDIR=	sources/gnome-session/2.12 \
-		    	pav/:local
+		    	adamw/:local
 DISTNAME=	gnome-session-${PORTVERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		${SPLASHES}:local
@@ -36,7 +36,7 @@ MAN1=		gnome-session.1 gnome-wm.1 session-properties.1 \
 MAN5=		default.session.5
 GCONF_SCHEMAS=	gnome-session.schemas
 
-SPLASHES=	freebsd-splashes-gnome-2.10.tar
+SPLASHES=	freebsd-splashes-gnome-2.12.tar
 
 post-extract:
 	cd ${WRKDIR} && ${TAR} xf ${DISTDIR}/${DIST_SUBDIR}/${SPLASHES}
@@ -44,10 +44,10 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/gnome-session/gnome-splash.png \
 		${PREFIX}/share/gnome/pixmaps/splash/original-gnome-splash.png
-	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.10/franz_klammer-2.png \
+	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/adamw-trophy-2.12.png \
 		${PREFIX}/share/gnome/pixmaps/splash/gnome-splash.png
-.for splash in adamw.png banana_flex.png franco_malatacca.jpg franz_klammer-1.png franz_klammer-3.png radek.png
-	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.10/${splash} \
+.for splash in adamw-piggy-2.12.png adamw-trophy-2.12.png
+	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/${splash} \
 		${PREFIX}/share/gnome/pixmaps/splash
 .endfor
 

@@ -6,14 +6,10 @@ bin/gnome-wm
 share/gnome/applications/session-properties.desktop
 share/gnome/default.session
 share/gnome/default.wm
-share/gnome/pixmaps/splash/adamw.png
-share/gnome/pixmaps/splash/banana_flex.png
-share/gnome/pixmaps/splash/franco_malatacca.jpg
-share/gnome/pixmaps/splash/franz_klammer-1.png
-share/gnome/pixmaps/splash/franz_klammer-3.png
+share/gnome/pixmaps/splash/adamw-piggy-2.12.png
+share/gnome/pixmaps/splash/adamw-trophy-2.12.png
 share/gnome/pixmaps/splash/gnome-splash.png
 share/gnome/pixmaps/splash/original-gnome-splash.png
-share/gnome/pixmaps/splash/radek.png
 share/locale/af/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-session-2.0.mo
