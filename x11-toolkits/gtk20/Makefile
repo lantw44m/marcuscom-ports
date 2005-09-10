@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.71 2005/09/02 21:09:15 mezz Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.72 2005/09/03 03:06:00 ahze Exp $
 #
 
 PORTNAME=	gtk
 PORTVERSION=	2.8.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.8,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
@@ -117,6 +117,8 @@ pre-build:
 	@${RM} -rf ${WRKSRC}/docs/gtk.info*
 
 post-install:
+	-@${FIND} ${PREFIX}/share/icons -type d -depth 1 -exec \
+		${PREFIX}/bin/gtk-update-icon-cache -q {} \; 2>/dev/null
 	@${MKDIR} ${PREFIX}/lib/gtk-2.0/modules
 	@${MKDIR} ${PREFIX}/lib/gtk-2.0/${GTK_VERSION}/engines
 
