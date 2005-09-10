@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomesystemtools/Makefile,v 1.28 2005/08/26 04:03:55 marcus Exp $
+#   $MCom: ports/sysutils/gnomesystemtools/Makefile,v 1.29 2005/09/04 18:57:45 marcus Exp $
 #
 
 PORTNAME=	gnomesystemtools
 PORTVERSION=	1.4.0
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-tools/1.4
@@ -27,6 +28,7 @@ GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack nautilus2
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_OMF=	yes
+CONFIGURE_ARGS=	--enable-services
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
@@ -34,12 +36,8 @@ GCONF_SCHEMAS=	gnome-system-tools.schemas
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} >= 500000
-CONFIGURE_ARGS+=	--enable-services
-PLIST_SUB+=		SERVICES=""
-.else
-CONFIGURE_ARGS+=	--disable-services
-PLIST_SUB+=		SERVICES="@comment "
+.if ${OSVERSION} < 500000
+IGNORE=	Uses symbols not present in 4.X
 .endif
 
 .include <bsd.port.post.mk>

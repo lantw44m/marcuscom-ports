@@ -1,5 +1,5 @@
 bin/network-admin
-%%SERVICES%%bin/services-admin
+bin/services-admin
 bin/shares-admin
 bin/time-admin
 bin/users-admin
@@ -64,7 +64,7 @@ share/gnome-system-tools/pixmaps/wavelan-16.png
 share/gnome-system-tools/pixmaps/wavelan-48.png
 share/gnome-system-tools/pixmaps/world_map-960.png
 share/gnome/applications/network.desktop
-%%SERVICES%%share/gnome/applications/services.desktop
+share/gnome/applications/services.desktop
 share/gnome/applications/shares.desktop
 share/gnome/applications/time.desktop
 share/gnome/applications/users.desktop
