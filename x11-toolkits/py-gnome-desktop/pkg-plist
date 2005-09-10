@@ -109,6 +109,9 @@ libdata/pkgconfig/gnome-python-extras-2.0.pc
 share/pygtk/2.0/defs/applet.defs
 share/pygtk/2.0/defs/art.defs
 share/pygtk/2.0/defs/gtkhtml2.defs
+share/pygtk/2.0/defs/gtkmozembed.defs
+share/pygtk/2.0/defs/gtksourceview.defs
+share/pygtk/2.0/defs/mediaprofiles.defs
 share/pygtk/2.0/defs/nautilus_burn.defs
 share/pygtk/2.0/defs/nb_drive_selection.defs
 share/pygtk/2.0/defs/print.defs
