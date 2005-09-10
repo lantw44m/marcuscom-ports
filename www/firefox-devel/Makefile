@@ -3,16 +3,16 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox-devel/Makefile,v 1.13 2005/08/19 02:23:56 mezz Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.14 2005/08/20 00:06:18 marcus Exp $
 #
 
 PORTNAME=	firefox
-DISTVERSION=	1.1a2
-PORTREVISION=	2
+DISTVERSION=	1.5b1
+PORTREVISION=	0
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	${PORTNAME}/releases/deerpark/alpha2/source/
+MASTER_SITE_SUBDIR=	${PORTNAME}/releases/${DISTVERSION}/source/
 DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -51,11 +51,11 @@ EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude */CVS/* \
 FIREFOX=	${PORTNAME}
 FF_SUFX=	-devel
 FF=		${FIREFOX}${FF_SUFX}
-FF_VER=		1.0+
+FF_VER=		1.4
 #FF_VER=	${PORTVERSION}
 
-FIREFOX_ICON=	${FF}.xpm
-FIREFOX_ICON_SRC=	${PREFIX}/lib/${FF}/chrome/icons/default/default.xpm
+FIREFOX_ICON=		${FF}.xpm
+FIREFOX_ICON_SRC=	${PREFIX}/lib/${FF}/icons/default.xpm
 
 PKGCONFIG_FILES=firefox-gtkmozembed firefox-js firefox-xpcom \
 		firefox-nspr firefox-nss firefox-plugin
@@ -269,7 +269,8 @@ post-install:
 .endif
 	${MKDIR} ${PREFIX}/share/applications ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKDIR}/${FF}.desktop ${PREFIX}/share/applications/
-	${INSTALL_DATA} ${WRKSRC}/other-licenses/branding/firefox/default.xpm ${FIREFOX_ICON_SRC}
+	${MKDIR} ${PREFIX}/lib/${FF}/chrome/icons/default
+	${LN} -sf ${FIREFOX_ICON_SRC} ${PREFIX}/lib/${FF}/chrome/icons/default/default.xpm
 	${LN} -sf ${FIREFOX_ICON_SRC} ${PREFIX}/share/pixmaps/${FIREFOX_ICON}
 	@-update-desktop-database
 
