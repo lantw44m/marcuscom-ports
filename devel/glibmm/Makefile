@@ -3,7 +3,7 @@
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glibmm/Makefile,v 1.18 2005/08/19 01:24:26 marcus Exp $
+#   $MCom: ports/devel/glibmm/Makefile,v 1.19 2005/09/07 17:56:24 marcus Exp $
 #
 
 PORTNAME=	glibmm
@@ -31,12 +31,6 @@ CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
 
-.include <bsd.port.pre.mk>
-
-.if ${ARCH} == "alpha"
-BROKEN=		"Does not build on alpha"
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS = /s/tests//' ${WRKSRC}/Makefile.in
 .if defined(NOPORTDOCS)
@@ -57,4 +51,4 @@ patch-autotools:
 		${RM} $$file.tmp; \
 	done);
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
