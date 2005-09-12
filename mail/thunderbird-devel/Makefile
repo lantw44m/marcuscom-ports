@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/thunderbird-devel/Makefile,v 1.7 2005/08/19 02:14:18 mezz Exp $
+#   $MCom: ports/mail/thunderbird-devel/Makefile,v 1.8 2005/09/12 21:01:45 marcus Exp $
 #
 
 PORTNAME=	thunderbird
@@ -46,7 +46,7 @@ LOCAL_SUBDIR=		lib/${PORTNAME}
 LOCAL_PREFIX=		${PREFIX}/${LOCAL_SUBDIR}
 ESD_LIB=		libesd.so.2
 
-THUNDERBIRD=		${PORTNAME}${PKGNAMESUFFIX}
+THUNDERBIRD=		${PORTNAME}
 THUNDERBIRD_VER=	1.4
 THUNDERBIRD_ICON_SRC=	${LOCAL_PREFIX}/lib/${THUNDERBIRD}-${THUNDERBIRD_VER}/icons/default.xpm
 THUNDERBIRD_ICON=	${PORTNAME}.xpm
