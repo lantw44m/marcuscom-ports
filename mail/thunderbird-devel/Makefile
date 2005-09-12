@@ -3,15 +3,16 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/thunderbird-devel/Makefile,v 1.6 2005/06/28 05:40:07 adamw Exp $
+#   $MCom: ports/mail/thunderbird-devel/Makefile,v 1.7 2005/08/19 02:14:18 mezz Exp $
 #
 
 PORTNAME=	thunderbird
-PORTVERSION=	1.1.a1
+DISTVERSION=	1.5b1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	thunderbird/releases/1.1a1/source
-DISTNAME=	${PORTNAME}-1.1a1-source
+MASTER_SITE_SUBDIR=	thunderbird/releases/${DISTVERSION}/source
+PKGNAMESUFFIX=	-devel
+DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Mozilla Thunderbird is standalone mail and news that stands above
@@ -45,11 +46,12 @@ LOCAL_SUBDIR=		lib/${PORTNAME}
 LOCAL_PREFIX=		${PREFIX}/${LOCAL_SUBDIR}
 ESD_LIB=		libesd.so.2
 
-THUNDERBIRD=		${PORTNAME}
-THUNDERBIRD_ICON_SRC=	${LOCAL_PREFIX}/lib/thunderbird-1.0+/icons/default.xpm
+THUNDERBIRD=		${PORTNAME}${PKGNAMESUFFIX}
+THUNDERBIRD_VER=	1.4
+THUNDERBIRD_ICON_SRC=	${LOCAL_PREFIX}/lib/${THUNDERBIRD}-${THUNDERBIRD_VER}/icons/default.xpm
 THUNDERBIRD_ICON=	${PORTNAME}.xpm
 MOZ_PIS_SCRIPTS=	S50cleanhome
-SCRIPTS_DIR=		${FAKEDIR}/${LOCAL_SUBDIR}/lib/${PORTNAME}-${PORTVERSION}
+SCRIPTS_DIR=		${FAKEDIR}/${LOCAL_SUBDIR}/lib/${PORTNAME}-${THUNDERBIRD_VER}
 MOZ_PIS_DIR=		${SCRIPTS_DIR}/init.d
 
 OPTIONS=	DEBUG "Build a debugging image" off \
@@ -130,11 +132,6 @@ post-patch:
 		${WRKSRC}/configure \
 		${WRKSRC}/intl/uconv/native/nsNativeUConvService.cpp \
 		${WRKSRC}/xpcom/io/nsNativeCharsetUtils.cpp
-	@${SED} -e 's|%%MOZDIR%%|${LOCAL_PREFIX}/lib/${PORTNAME}-1.0+|g ; \
-		s|%%X11BASE%%|${X11BASE}|g' \
-		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
-	@${SED} -e 's|%%MOZDIR%%|${LOCAL_PREFIX}/lib/${PORTNAME}-1.0+|g' \
-		< ${MASTERDIR}/pkg-deinstall.in > ${PKGDEINSTALL}
 	@${SED} -e 's|@THUNDERBIRD_ICON@|${THUNDERBIRD_ICON}|' \
 		< ${FILESDIR}/thunderbird.desktop.in > ${WRKDIR}/thunderbird.desktop
 .for ii in ${MOZ_PIS_SCRIPTS}
@@ -151,6 +148,11 @@ pre-configure:
 	fi
 
 pre-install:
+	@${SED} -e 's|%%MOZDIR%%|${LOCAL_PREFIX}/lib/${PORTNAME}-${THUNDERBIRD_VER}|g ; \
+		s|%%X11BASE%%|${X11BASE}|g' \
+		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
+	@${SED} -e 's|%%MOZDIR%%|${LOCAL_PREFIX}/lib/${PORTNAME}-${THUNDERBIRD_VER}|g' \
+		< ${MASTERDIR}/pkg-deinstall.in > ${PKGDEINSTALL}
 # Overview:  the program installs itself in FAKEDIR, then a list is made of the
 # files and directories in there.  This is the PLIST (packing list) for the
 # package, replacing the traditional pkg-plist file.
@@ -159,6 +161,7 @@ pre-install:
 		Makefile ${MAKE_ARGS} ${INSTALL_TARGET}
 	@${MKDIR} ${SCRIPTS_DIR}
 	@${MKDIR} ${MOZ_PIS_DIR}
+	${RM} -rf ${FAKEDIR}/lib/${THUNDERBIRD}/lib/${THUNDERBIRD}-${THUNDERBIRD_VER}/extensions
 .for ii in mac win
 .for jj in / .jar
 	@${RM} -rf ${FAKEDIR}/lib/${PORTNAME}/lib/${PORTNAME}-${PORTVERSION}/chrome/en-${ii}${jj}
@@ -204,9 +207,8 @@ post-install:
 		${LOCAL_PREFIX}/bin/thunderbird-config
 	${FIND} ${LOCAL_PREFIX}/lib/pkgconfig -type f | ${XARGS} \
 		${PERL} -pi -e 's|${FAKEDIR}|${PREFIX}|g'
-	${MKDIR} ${PREFIX}/share/applications
+	${MKDIR} ${PREFIX}/share/applications ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKDIR}/thunderbird.desktop ${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/other-licenses/branding/thunderbird/default.xpm ${THUNDERBIRD_ICON_SRC}
 	${LN} -sf ${THUNDERBIRD_ICON_SRC} ${PREFIX}/share/pixmaps/${THUNDERBIRD_ICON}
 
 .include <bsd.port.post.mk>
