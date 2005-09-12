@@ -10,4 +10,4 @@ ${PREFIX}/libdata/pkgconfig, ${LOCALBASE}/libdata/pkgconfig and
 ${X11BASE}/libdata/pkgconfig; it will also look in the list of directories
 specified by the PKG_CONFIG_PATH environment variable.
 
-WWW: http://www.freedesktop.org/wiki/Software_2fpkgconfig
+WWW: http://pkgconfig.freedesktop.org/wiki/
