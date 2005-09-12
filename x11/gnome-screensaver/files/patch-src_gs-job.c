@@ -1,5 +1,5 @@
 --- src/gs-job.c.orig	Wed Sep  7 09:23:59 2005
-+++ src/gs-job.c	Fri Sep  9 20:21:31 2005
++++ src/gs-job.c	Mon Sep 12 13:24:11 2005
 @@ -29,7 +29,8 @@
  #include <sys/wait.h>
  #include <errno.h>
@@ -10,7 +10,17 @@
  #include <sys/resource.h>
  #endif
  
-@@ -655,9 +656,10 @@ gs_job_set_widget  (GSJob     *job,
+@@ -375,6 +376,9 @@ load_themes (GSJob *job)
+                         char           *title;
+                         char          **argv;
+ 
++                        if (!g_str_has_suffix (file, ".xml"))
++                                continue;
++
+                         path = g_build_filename (dir, file, NULL);
+ 
+                         if (! parse_theme (path,
+@@ -655,9 +659,11 @@ gs_job_set_widget  (GSJob     *job,
  static const char *known_locations [] = {
          SAVERDIR,
          LIBEXECDIR "/xscreensaver",
@@ -18,7 +28,8 @@
 +        "%%X11BASE%%/lib/xscreensaver",
          "/usr/libexec/xscreensaver",
          "/usr/lib/xscreensaver",
-+	"%%X11BASE%%/bin/xscreensaver-hacks",
++        "%%X11BASE%%/bin/xscreensaver-hacks",
++        "%%X11BASE%%/bin",
          NULL
  };
  
