@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	abiword
-PORTVERSION=	2.3.5
+PORTVERSION=	2.3.6
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abisource.com/downloads/%SUBDIR%/${PORTVERSION}/source/
 MASTER_SITE_SUBDIR=	abiword
@@ -180,7 +180,7 @@ PLIST_SUB+=		NROFF:=""
 PLIST_SUB+=		NROFF:="@comment "
 .endif
 
-.if defined(WITH_OPENDOCUMENT) # Need to be tested
+.if defined(WITH_OPENDOCUMENT) || defined(PACKAGE_BUILDING)
 USE_GNOME+=		libgsf
 CONFIGURE_ARGS+=	--enable-OpenDocument
 PLIST_SUB+=		OPENDOCUMENT:=""
