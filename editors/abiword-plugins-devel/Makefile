@@ -2,7 +2,8 @@
 # Date created:				13 June 2004
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/abiword-plugins-devel/Makefile,v 1.19 2005/07/21 04:05:24 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	abiword
