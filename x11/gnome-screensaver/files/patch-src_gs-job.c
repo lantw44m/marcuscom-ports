@@ -10,16 +10,6 @@
  #include <sys/resource.h>
  #endif
  
-@@ -375,6 +376,9 @@ load_themes (GSJob *job)
-                         char           *title;
-                         char          **argv;
- 
-+                        if (!g_str_has_suffix (file, ".xml"))
-+                                continue;
-+
-                         path = g_build_filename (dir, file, NULL);
- 
-                         if (! parse_theme (path,
 @@ -655,9 +659,11 @@ gs_job_set_widget  (GSJob     *job,
  static const char *known_locations [] = {
          SAVERDIR,
