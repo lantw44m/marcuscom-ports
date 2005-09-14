@@ -3,12 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade2/Makefile,v 1.13 2005/07/06 05:37:28 marcus Exp $
+#   $MCom: ports/devel/glade2/Makefile,v 1.14 2005/08/26 04:03:54 marcus Exp $
 #
 
 PORTNAME=	glade
-PORTVERSION=	2.10.0
-PORTREVISION=	2
+PORTVERSION=	2.12.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -26,7 +25,7 @@ INSTALLS_OMF=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix intlhack gnomehack libgnomedb libgnomeui
 USE_GMAKE=	yes
-#CONFIGURE_ARGS=	--enable-gnome-db
+CONFIGURE_ARGS=	--enable-gnome-db
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

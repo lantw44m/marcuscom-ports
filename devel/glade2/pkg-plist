@@ -52,6 +52,7 @@ share/locale/mk/LC_MESSAGES/glade-2.0.mo
 share/locale/ml/LC_MESSAGES/glade-2.0.mo
 share/locale/ms/LC_MESSAGES/glade-2.0.mo
 share/locale/nb/LC_MESSAGES/glade-2.0.mo
+share/locale/ne/LC_MESSAGES/glade-2.0.mo
 share/locale/nl/LC_MESSAGES/glade-2.0.mo
 share/locale/nn/LC_MESSAGES/glade-2.0.mo
 share/locale/no/LC_MESSAGES/glade-2.0.mo
@@ -61,6 +62,7 @@ share/locale/pt/LC_MESSAGES/glade-2.0.mo
 share/locale/pt_BR/LC_MESSAGES/glade-2.0.mo
 share/locale/ro/LC_MESSAGES/glade-2.0.mo
 share/locale/ru/LC_MESSAGES/glade-2.0.mo
+share/locale/rw/LC_MESSAGES/glade-2.0.mo
 share/locale/sk/LC_MESSAGES/glade-2.0.mo
 share/locale/sq/LC_MESSAGES/glade-2.0.mo
 share/locale/sr/LC_MESSAGES/glade-2.0.mo
@@ -71,6 +73,7 @@ share/locale/uk/LC_MESSAGES/glade-2.0.mo
 share/locale/vi/LC_MESSAGES/glade-2.0.mo
 share/locale/yi/LC_MESSAGES/glade-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/glade-2.0.mo
+share/locale/zh_TW/LC_MESSAGES/glade-2.0.mo
 @dirrm share/gnome/pixmaps/glade-2
 @dirrm share/gnome/omf/glade-2
 @dirrm share/gnome/help/glade-2/C/figures
