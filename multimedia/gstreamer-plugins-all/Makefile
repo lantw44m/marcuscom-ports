@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer-plugins-all/Makefile,v 1.1 2005/08/17 19:07:30 ahze Exp $
 #
 
 PORTNAME=	gstreamer-plugins-all
@@ -27,6 +27,7 @@ OPTIONS=	# Hacky.. but it works the way it is set up...
 WITHOUT_FAAC=	yes	# Mp4 Dolby license , no package
 WITHOUT_LAME=	yes	# MP3 License , no package
 .endif
+WITHOUT_MPEG2ENC=yes	# Broken from updated mjpegtools
 .if ${OSVERSION} < 500000
 WITHOUT_LIBVISUAL=yes	# Broken on 4.x
 WITHOUT_POLYPAUDIO=yes	# Broken on 4.x
