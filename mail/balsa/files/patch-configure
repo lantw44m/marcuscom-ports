@@ -1,0 +1,52 @@
+--- configure.orig	Sat Mar 19 14:39:26 2005
++++ configure	Sat Mar 19 14:40:24 2005
+@@ -21821,7 +21821,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lldap -llber -lresolv $LIBS"
++LIBS="-lldap -llber $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -21885,7 +21885,7 @@
+ #define ENABLE_LDAP 1
+ _ACEOF
+ 
+-              LIBS="-lldap -llber -lresolv $LIBS"
++              LIBS="-lldap -llber $LIBS"
+ else
+   { { echo "$as_me:$LINENO: error: *** You enabled LDAP but ldap library is not found." >&5
+ echo "$as_me: error: *** You enabled LDAP but ldap library is not found." >&2;}
+@@ -22664,13 +22664,13 @@
+ else
+ 
+ 
+-echo "$as_me:$LINENO: checking for new_pspell_manager in -lpspell" >&5
+-echo $ECHO_N "checking for new_pspell_manager in -lpspell... $ECHO_C" >&6
+-if test "${ac_cv_lib_pspell_new_pspell_manager+set}" = set; then
++echo "$as_me:$LINENO: checking for new_aspell_speller in -lpspell" >&5
++echo $ECHO_N "checking for new_aspell_speller in -lpspell... $ECHO_C" >&6
++if test "${ac_cv_lib_pspell_new_aspell_speller+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpspell -lstdc++ -lpspell-modules $LIBS"
++LIBS="-lpspell -lstdc++ $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -22684,11 +22684,11 @@
+ #endif
+ /* We use char because int might match the return type of a gcc2
+    builtin and then its argument prototype would still apply.  */
+-char new_pspell_manager ();
++char new_aspell_speller ();
+ int
+ main ()
+ {
+-new_pspell_manager ();
++new_aspell_speller ();
+   ;
+   return 0;
+ }
