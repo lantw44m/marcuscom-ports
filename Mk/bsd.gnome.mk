@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.328 2005/08/19 21:19:40 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.329 2005/09/09 03:20:22 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -717,15 +717,17 @@ PLIST_SUB+=	GNOMEDESKTOP:="@comment " NOGNOMEDESKTOP:=""
 CONFIGURE_FAIL_MESSAGE= "Please run the gnomelogalyzer, available from \"http://www.freebsd.org/gnome/gnomelogalyzer.sh\", which will diagnose the problem and suggest a solution. If - and only if - the gnomelogalyzer cannot solve the problem, report the build failure to the FreeBSD GNOME team at ${MAINTAINER}, and attach (a) \"${CONFIGURE_WRKSRC}/${CONFIGURE_LOG}\", (b) the output of the failure of the make command, and (c) the gnomelogalyzer output. Also, it might be a good idea to provide an overview of all packages installed on your system (i.e. an \`ls ${PKG_DBDIR}\`)."
 .endif
 
+post-install: gnome-post-install
+
 .if defined(GCONF_SCHEMAS) || defined(INSTALLS_OMF)
 pre-su-install: gnome-pre-su-install
-post-install: gnome-post-install
 
 gnome-pre-su-install:
 .if defined(GCONF_SCHEMAS)
 	@${MKDIR} ${PREFIX}/etc/gconf/gconf.xml.defaults/
 .else
 	@${DO_NADA}
+.endif
 .endif
 
 gnome-post-install:
@@ -747,7 +749,22 @@ gnome-post-install:
 			>> ${TMPPLIST}; \
 	done
 .  endif
-.endif
+
+	@${RM} -f ${TMPPLIST}.icons1
+	@for i in `${GREP} "^share/icons/.*/" ${TMPPLIST} | ${CUT} -d / -f 1-3 | ${SORT} -u`; do \
+		${ECHO_CMD} "@unexec /bin/rm %D/$${i}/icon-theme.cache 2>/dev/null || /usr/bin/true" \
+			>> ${TMPPLIST}.icons1; \
+		${ECHO_CMD} "@exec %%X11BASE%%/bin/gtk-update-icon-cache -q %D/$${i} 2>/dev/null || /usr/bin/true" \
+			>> ${TMPPLIST}; \
+		${ECHO_CMD} "@unexec %%X11BASE%%/bin/gtk-update-icon-cache -q %D/$${i} 2>/dev/null || /usr/bin/true" \
+			>> ${TMPPLIST}; \
+		${X11BASE}/bin/gtk-update-icon-cache -q ${PREFIX}/$${i} 2>/dev/null || ${TRUE}; \
+	done
+	@if test -f ${TMPPLIST}.icons1; then \
+		${CAT} ${TMPPLIST}.icons1 ${TMPPLIST} > ${TMPPLIST}.icons2; \
+		${RM} -f ${TMPPLIST}.icons1; \
+		${MV} -f ${TMPPLIST}.icons2 ${TMPPLIST}; \
+	fi
 
 .endif
 # End of use part.
