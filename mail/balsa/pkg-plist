@@ -147,4 +147,3 @@ share/locale/zh_TW/LC_MESSAGES/balsa.mo
 @dirrm share/gnome/balsa/hicolor/16x16
 @dirrm share/gnome/balsa/hicolor
 @dirrm share/gnome/balsa
-@unexec rm -f %D/share/icons/hicolor/icon-theme.cache 2>/dev/null || true
