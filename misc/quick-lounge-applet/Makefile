@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/misc/quick-lounge-applet/Makefile,v 1.7 2005/08/26 04:03:55 marcus Exp $
 #
 
 PORTNAME=	quick-lounge-applet
-PORTVERSION=	2.10.1
+PORTVERSION=	2.12.0
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.10
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.12
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	marcus@FreeBSD.org
@@ -26,7 +26,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	quick-lounge.schemas
-
-BROKEN=	"Does not work with gnome-menus-2.11.x"
 
 .include <bsd.port.mk>
