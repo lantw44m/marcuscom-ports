@@ -8,8 +8,11 @@ share/gnome/default.session
 share/gnome/default.wm
 share/gnome/pixmaps/splash/adamw-piggy-2.12.png
 share/gnome/pixmaps/splash/adamw-trophy-2.12.png
+share/gnome/pixmaps/splash/andreas-slogan-2.12.png
+share/gnome/pixmaps/splash/andreas-splash-2.12.png
 share/gnome/pixmaps/splash/gnome-splash.png
 share/gnome/pixmaps/splash/original-gnome-splash.png
+share/gnome/pixmaps/splash/pascal-fork-2.12.png
 share/locale/af/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-session-2.0.mo

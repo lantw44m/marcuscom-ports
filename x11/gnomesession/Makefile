@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomesession/Makefile,v 1.64 2005/09/06 16:27:01 kwm Exp $
+#   $MCom: ports/x11/gnomesession/Makefile,v 1.65 2005/09/09 03:05:43 adamw Exp $
 #
 
 PORTNAME=	gnomesession
@@ -44,9 +44,9 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/gnome-session/gnome-splash.png \
 		${PREFIX}/share/gnome/pixmaps/splash/original-gnome-splash.png
-	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/adamw-trophy-2.12.png \
+	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/andreas-splash-2.12.png \
 		${PREFIX}/share/gnome/pixmaps/splash/gnome-splash.png
-.for splash in adamw-piggy-2.12.png adamw-trophy-2.12.png
+.for splash in adamw-piggy-2.12.png adamw-trophy-2.12.png andreas-slogan-2.12.png andreas-splash-2.12.png pascal-fork-2.12.png
 	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/${splash} \
 		${PREFIX}/share/gnome/pixmaps/splash
 .endfor
