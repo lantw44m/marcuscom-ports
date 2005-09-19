@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.73 2005/09/10 14:40:01 jylefort Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.74 2005/09/13 14:22:35 bland Exp $
 #
 
 PORTNAME=	gtk
@@ -118,7 +118,7 @@ pre-build:
 
 post-install:
 	-@${FIND} ${PREFIX}/share/icons -type d -depth 1 -exec \
-		${PREFIX}/bin/gtk-update-icon-cache -q {} \; 2>/dev/null
+		${PREFIX}/bin/gtk-update-icon-cache -q -f {} \; 2>/dev/null
 	@${MKDIR} ${PREFIX}/lib/gtk-2.0/modules
 	@${MKDIR} ${PREFIX}/lib/gtk-2.0/${GTK_VERSION}/engines
 
