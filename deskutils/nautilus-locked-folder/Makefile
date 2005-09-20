@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/deskutils/nautilus-locked-folder/Makefile,v 1.1 2005/09/19 07:23:15 ahze Exp $
 #
 
 PORTNAME=	nautilus-locked-folder
@@ -11,7 +11,7 @@ PORTVERSION=	1.0.0
 CATEGORIES=	deskutils security
 MASTER_SITES=	http://www.ids.org.au/~jam6/locked-folders/
 
-MAINTAINER=	ahze@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Nautilus plugin that allows you to encrypt the contents of a folder
 
 USE_LIBTOOL_VER=15
