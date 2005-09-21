@@ -3,7 +3,7 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.19 2005/08/24 13:12:37 kwm Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.20 2005/09/05 13:21:13 kwm Exp $
 #
 
 PORTNAME=	totem
@@ -50,7 +50,7 @@ USE_GSTREAMER+=	gnomevfs core gconf
 WITHOUT_DVDNAV=	yes
 PLIST_SUB=	GSTREAMER=""
 .else
-LIB_DEPENDS+=	xine.12:${PORTSDIR}/multimedia/libxine
+LIB_DEPENDS+=	xine.14:${PORTSDIR}/multimedia/libxine
 PLIST_SUB=	GSTREAMER="@comment "
 .endif
 
