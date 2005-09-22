@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.330 2005/09/17 19:47:05 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.331 2005/09/19 04:07:42 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -717,17 +717,16 @@ PLIST_SUB+=	GNOMEDESKTOP:="@comment " NOGNOMEDESKTOP:=""
 CONFIGURE_FAIL_MESSAGE= "Please run the gnomelogalyzer, available from \"http://www.freebsd.org/gnome/gnomelogalyzer.sh\", which will diagnose the problem and suggest a solution. If - and only if - the gnomelogalyzer cannot solve the problem, report the build failure to the FreeBSD GNOME team at ${MAINTAINER}, and attach (a) \"${CONFIGURE_WRKSRC}/${CONFIGURE_LOG}\", (b) the output of the failure of the make command, and (c) the gnomelogalyzer output. Also, it might be a good idea to provide an overview of all packages installed on your system (i.e. an \`ls ${PKG_DBDIR}\`)."
 .endif
 
-post-install: gnome-post-install
 
-.if defined(GCONF_SCHEMAS) || defined(INSTALLS_OMF)
+.if defined(GCONF_SCHEMAS) || defined(INSTALLS_OMF) || defined(INSTALLS_ICONS)
 pre-su-install: gnome-pre-su-install
+post-install: gnome-post-install
 
 gnome-pre-su-install:
 .if defined(GCONF_SCHEMAS)
 	@${MKDIR} ${PREFIX}/etc/gconf/gconf.xml.defaults/
 .else
 	@${DO_NADA}
-.endif
 .endif
 
 gnome-post-install:
@@ -750,6 +749,7 @@ gnome-post-install:
 	done
 .  endif
 
+.  if defined(INSTALLS_ICONS)
 	@${RM} -f ${TMPPLIST}.icons1
 	@for i in `${GREP} "^share/icons/.*/" ${TMPPLIST} | ${CUT} -d / -f 1-3 | ${SORT} -u`; do \
 		${ECHO_CMD} "@unexec /bin/rm %D/$${i}/icon-theme.cache 2>/dev/null || /usr/bin/true" \
@@ -765,6 +765,8 @@ gnome-post-install:
 		${RM} -f ${TMPPLIST}.icons1; \
 		${MV} -f ${TMPPLIST}.icons2 ${TMPPLIST}; \
 	fi
+.  endif
+.endif
 
 .endif
 # End of use part.
