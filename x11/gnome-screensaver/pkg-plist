@@ -1,14 +1,16 @@
 bin/gnome-screensaver
 bin/gnome-screensaver-command
 bin/gnome-screensaver-preferences
+etc/xdg/menus/gnome-screensavers.menu
 libexec/gnome-screensaver-dialog
 libexec/gnome-screensaver/popsquares
 libexec/gnome-screensaver/slideshow
 share/gnome/applications/gnome-screensaver-preferences.desktop
+share/gnome/desktop-directories/gnome-screensaver.directory
 share/gnome/gnome-screensaver/gnome-screensaver-preferences.glade
-share/gnome/gnome-screensaver/themes/cosmos-slideshow.xml
-share/gnome/gnome-screensaver/themes/personal-slideshow.xml
-share/gnome/gnome-screensaver/themes/popsquares.xml
+share/gnome/gnome-screensaver/themes/cosmos-slideshow.desktop
+share/gnome/gnome-screensaver/themes/personal-slideshow.desktop
+share/gnome/gnome-screensaver/themes/popsquares.desktop
 share/gnome/pixmaps/backgrounds/cosmos/cloud.jpg
 share/gnome/pixmaps/backgrounds/cosmos/comet.jpg
 share/gnome/pixmaps/backgrounds/cosmos/earth-horizon.jpg
@@ -25,6 +27,7 @@ share/locale/en_GB/LC_MESSAGES/gnome-screensaver.mo
 share/locale/es/LC_MESSAGES/gnome-screensaver.mo
 share/locale/fi/LC_MESSAGES/gnome-screensaver.mo
 share/locale/fr/LC_MESSAGES/gnome-screensaver.mo
+share/locale/it/LC_MESSAGES/gnome-screensaver.mo
 share/locale/ja/LC_MESSAGES/gnome-screensaver.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-screensaver.mo
 share/locale/sv/LC_MESSAGES/gnome-screensaver.mo
