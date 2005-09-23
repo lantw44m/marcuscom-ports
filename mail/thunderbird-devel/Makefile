@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/thunderbird-devel/Makefile,v 1.8 2005/09/12 21:01:45 marcus Exp $
+#   $MCom: ports/mail/thunderbird-devel/Makefile,v 1.9 2005/09/12 21:07:23 marcus Exp $
 #
 
 PORTNAME=	thunderbird
 DISTVERSION=	1.5b1
+PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	thunderbird/releases/${DISTVERSION}/source
@@ -44,7 +45,6 @@ NO_MTREE=		yes
 WRKSRC=			${WRKDIR}/mozilla
 LOCAL_SUBDIR=		lib/${PORTNAME}
 LOCAL_PREFIX=		${PREFIX}/${LOCAL_SUBDIR}
-ESD_LIB=		libesd.so.2
 
 THUNDERBIRD=		${PORTNAME}
 THUNDERBIRD_VER=	1.4
@@ -119,7 +119,7 @@ post-patch:
 		${WRKSRC}/security/coreconf/FreeBSD.mk \
 		${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
 		${WRKSRC}/js/src/Makefile.in
-	@${REINPLACE_CMD} -E -e 's|libesd\.so\.[0-9]+|${ESD_LIB}|g' \
+	@${REINPLACE_CMD} -E -e 's|libesd\.so\.[0-9]+|libesd.so|g' \
 		${WRKSRC}/widget/src/gtk2/nsSound.cpp
 	@${REINPLACE_CMD} -E -e 's|libcups\.so\.[0-9]+|libcups.no|g' \
 		${WRKSRC}/gfx/src/gtk/nsDeviceContextSpecG.cpp

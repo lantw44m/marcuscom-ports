@@ -3,12 +3,12 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox-devel/Makefile,v 1.18 2005/09/11 19:41:55 marcus Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.19 2005/09/12 21:05:12 marcus Exp $
 #
 
 PORTNAME=	firefox
 DISTVERSION=	1.5b1
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -29,7 +29,6 @@ CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 FAKEDIR=	${WRKDIR}/fake
 USE_REINPLACE=	yes
 HAS_CONFIGURE=	yes
-ESD_LIB=	libesd.so.2
 PLIST=		${WRKDIR}/plist
 PLUGINSDIR=	${PREFIX}/lib/browser_plugins
 USE_BZIP2=	yes
@@ -62,10 +61,8 @@ PKGCONFIG_FILES=firefox-gtkmozembed firefox-js firefox-xpcom \
 		firefox-nspr firefox-nss firefox-plugin
 
 JPI_LIST?=\
-	${LOCALBASE}/jdk1.4.2/jre/plugin/${ARCH}/ns610/libjavaplugin_oji.so \
-	${LOCALBASE}/jdk1.4.1/jre/plugin/${ARCH}/ns610/libjavaplugin_oji.so \
-	${LOCALBASE}/diablo-jdk1.3.1/jre/plugin/${ARCH}/ns600/libjavaplugin_oji.so \
-	${LOCALBASE}/jdk1.3.1/jre/plugin/${ARCH}/ns600/libjavaplugin_oji.so
+	${LOCALBASE}/jdk1.5.0/jre/plugin/${ARCH}/ns7/libjavaplugin_oji.so \
+	${LOCALBASE}/jdk1.4.2/jre/plugin/${ARCH}/ns610/libjavaplugin_oji.so
 
 SYSTEM_PREFS=		${FAKEDIR}/lib/${FF}/defaults/pref/firefox.js
 SCRIPTS_DIR=		${FAKEDIR}/lib/${FF}
@@ -161,7 +158,7 @@ post-patch:
 		${WRKSRC}/security/coreconf/FreeBSD.mk \
 		${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
 		${WRKSRC}/js/src/Makefile.in
-	@${REINPLACE_CMD} -e 's|libesd\.so\.\d+|${ESD_LIB}|g' \
+	@${REINPLACE_CMD} -E -e 's|libesd\.so\.[0-9]+|libesd.so|g' \
 		${WRKSRC}/widget/src/gtk2/nsSound.cpp
 	@${REINPLACE_CMD} -E -e 's|libcups\.so\.[0-9]+|libcups.so|g' \
 		${WRKSRC}/gfx/src/gtk/nsDeviceContextSpecG.cpp
