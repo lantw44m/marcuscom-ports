@@ -2,7 +2,8 @@
 # Date created:				02 December 1998
 # Whom:					Glenn Johnson <gljohns@bellsouth.net>
 #
-# $FreeBSD: ports/mail/balsa/Makefile,v 1.101 2005/09/23 00:42:39 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	balsa
