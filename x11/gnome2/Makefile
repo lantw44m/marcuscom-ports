@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.119 2005/08/26 03:21:23 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.120 2005/09/07 18:40:26 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -31,7 +31,6 @@ RUN_DEPENDS?=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2
 		nautilus:${PORTSDIR}/x11-fm/nautilus2 \
 		yelp:${PORTSDIR}/x11/yelp \
 		${X11BASE}/sbin/gdm:${PORTSDIR}/x11/gdm \
-		${X11BASE}/share/gnome/applications/gnome-screensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome \
 		${X11BASE}/share/gnome/help/user-guide/C/user-guide.xml:${PORTSDIR}/misc/gnomeuserdocs2 \
 		${X11BASE}/share/gnome/sounds/question.wav:${PORTSDIR}/audio/gnomeaudio2 \
 		${X11BASE}/libdata/pkgconfig/libgail-gnome.pc:${PORTSDIR}/x11-toolkits/libgail-gnome \
@@ -73,6 +72,10 @@ pre-configure:
 	@${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
 .endif
 
+.if !defined(GNOME_SLAVE) || ${.CURDIR:T}=="gnome2-lite"
+OPTIONS=	GNOME_SCREENSAVER "Use gnome-screensaver as screensaver app" off
+.endif
+
 do-install:	# empty
 
 .include <bsd.port.pre.mk>
@@ -80,6 +83,14 @@ do-install:	# empty
 .if !defined(GNOME_SLAVE)
 .if ${ARCH} == "i386" || ${OSVERSION} > 500035
 RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+.endif
+.endif
+
+.if ${.CURDIR}==${MASTERDIR} || ${.CURDIR:T}=="gnome2-lite"
+.if !defined(WITH_GNOME_SCREENSAVER)
+RUN_DEPENDS+=	${X11BASE}/share/gnome/applications/gnome-screensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome
+.else
+RUN_DEPENDS+=	gnome-screensaver:${PORTSDIR}/x11/gnome-screensaver
 .endif
 .endif
 
