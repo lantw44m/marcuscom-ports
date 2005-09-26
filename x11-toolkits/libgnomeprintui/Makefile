@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.51 2005/09/06 17:59:51 marcus Exp $
+#   $MCom: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.52 2005/09/26 21:14:04 marcus Exp $
 #
 
 PORTNAME=	libgnomeprintui
