@@ -99,6 +99,7 @@ include/gimp-2.0/libgimp/gimpuitypes.h
 include/gimp-2.0/libgimp/gimpundo_pdb.h
 include/gimp-2.0/libgimp/gimpunit_pdb.h
 include/gimp-2.0/libgimp/gimpvectors_pdb.h
+include/gimp-2.0/libgimp/gimpzoompreview.h
 include/gimp-2.0/libgimpbase/gimpbase.h
 include/gimp-2.0/libgimpbase/gimpbaseenums.h
 include/gimp-2.0/libgimpbase/gimpbasetypes.h
@@ -194,6 +195,7 @@ include/gimp-2.0/libgimpwidgets/gimpunitmenu.h
 include/gimp-2.0/libgimpwidgets/gimpwidgets.h
 include/gimp-2.0/libgimpwidgets/gimpwidgetsenums.h
 include/gimp-2.0/libgimpwidgets/gimpwidgetstypes.h
+include/gimp-2.0/libgimpwidgets/gimpzoommodel.h
 libexec/gimp/2.2/environ/default.env
 %%PYTHON:%%libexec/gimp/2.2/environ/pygimp.env
 libexec/gimp/2.2/interpreters/default.interp
@@ -221,6 +223,7 @@ libexec/gimp/2.2/plug-ins/animoptimize
 libexec/gimp/2.2/plug-ins/apply_lens
 libexec/gimp/2.2/plug-ins/autocrop
 libexec/gimp/2.2/plug-ins/autostretch_hsv
+%%PYTHON:%%libexec/gimp/2.2/plug-ins/benchmark-foreground-extract.py
 libexec/gimp/2.2/plug-ins/blinds
 libexec/gimp/2.2/plug-ins/blur
 libexec/gimp/2.2/plug-ins/bmp
@@ -277,6 +280,7 @@ libexec/gimp/2.2/plug-ins/gih
 libexec/gimp/2.2/plug-ins/gimpressionist
 libexec/gimp/2.2/plug-ins/glasstile
 libexec/gimp/2.2/plug-ins/glob
+%%PRINT%%libexec/gimp/2.2/plug-ins/gnomeprint
 libexec/gimp/2.2/plug-ins/gqbist
 libexec/gimp/2.2/plug-ins/gradmap
 libexec/gimp/2.2/plug-ins/grid
@@ -864,9 +868,9 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpwidgets/stock-portrait-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-print-resolution-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-print-resolution-24.png
-%%DOCSDIR%%/libgimpwidgets/stock-qmask-off-16.png
-%%DOCSDIR%%/libgimpwidgets/stock-qmask-on-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-question-64.png
+%%DOCSDIR%%/libgimpwidgets/stock-quick-mask-off-16.png
+%%DOCSDIR%%/libgimpwidgets/stock-quick-mask-on-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-reset-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-reshow-filter-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-resize-16.png
@@ -1300,7 +1304,7 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/menus/palette-editor-menu.xml
 %%DATADIR%%/menus/palettes-menu.xml
 %%DATADIR%%/menus/patterns-menu.xml
-%%DATADIR%%/menus/qmask-menu.xml
+%%DATADIR%%/menus/quick-mask-menu.xml
 %%DATADIR%%/menus/sample-point-editor-menu.xml
 %%DATADIR%%/menus/selection-editor-menu.xml
 %%DATADIR%%/menus/templates-menu.xml
@@ -1308,6 +1312,7 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/menus/tool-options-menu.xml
 %%DATADIR%%/menus/toolbox-menu.xml
 %%DATADIR%%/menus/tools-menu.xml
+%%DATADIR%%/menus/undo-editor-menu.xml
 %%DATADIR%%/menus/vectors-menu.xml
 share/%%GTK%%application-registry/gimp.applications
 share/%%GTK%%applications/gimp.desktop
@@ -1480,6 +1485,8 @@ share/%%GTK%%mime-info/gimp.keys
 %%DATADIR%%/scripts/neon-logo.scm
 %%DATADIR%%/scripts/news-text.scm
 %%DATADIR%%/scripts/old-photo.scm
+%%DATADIR%%/scripts/paste-as-brush.scm
+%%DATADIR%%/scripts/paste-as-pattern.scm
 %%DATADIR%%/scripts/perspective-shadow.scm
 %%DATADIR%%/scripts/predator.scm
 %%DATADIR%%/scripts/pupi-button.scm
@@ -1689,9 +1696,9 @@ share/%%GTK%%mime-info/gimp.keys
 %%DATADIR%%/themes/Default/images/stock-portrait-16.png
 %%DATADIR%%/themes/Default/images/stock-print-resolution-16.png
 %%DATADIR%%/themes/Default/images/stock-print-resolution-24.png
-%%DATADIR%%/themes/Default/images/stock-qmask-off-16.png
-%%DATADIR%%/themes/Default/images/stock-qmask-on-16.png
 %%DATADIR%%/themes/Default/images/stock-question-64.png
+%%DATADIR%%/themes/Default/images/stock-quick-mask-off-16.png
+%%DATADIR%%/themes/Default/images/stock-quick-mask-on-16.png
 %%DATADIR%%/themes/Default/images/stock-reset-16.png
 %%DATADIR%%/themes/Default/images/stock-reshow-filter-16.png
 %%DATADIR%%/themes/Default/images/stock-resize-16.png
@@ -1904,6 +1911,11 @@ share/locale/gl/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/gl/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/gl/LC_MESSAGES/gimp20-tips.mo
 share/locale/gl/LC_MESSAGES/gimp20.mo
+share/locale/gu/LC_MESSAGES/gimp20-libgimp.mo
+share/locale/gu/LC_MESSAGES/gimp20-script-fu.mo
+share/locale/gu/LC_MESSAGES/gimp20-std-plug-ins.mo
+share/locale/gu/LC_MESSAGES/gimp20-tips.mo
+share/locale/gu/LC_MESSAGES/gimp20.mo
 share/locale/he/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/he/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/he/LC_MESSAGES/gimp20-std-plug-ins.mo

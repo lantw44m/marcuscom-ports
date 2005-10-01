@@ -3,11 +3,11 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.7 2005/07/04 00:11:29 marcus Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.8 2005/08/17 15:46:10 kwm Exp $
 #
 
 PORTNAME=	gimp
-PORTVERSION=	2.3.3
+PORTVERSION=	2.3.4
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -32,7 +32,7 @@ LIB_DEPENDS=	wmf.2:${PORTSDIR}/graphics/libwmf \
 
 CONFLICTS=	gimp-1.* gimp-2.2.*
 
-SHLIBVER?=	303
+SHLIBVER?=	0
 
 USE_REINPLACE=	yes
 USE_BZIP2=	yes
@@ -40,9 +40,12 @@ USE_X_PREFIX=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_GNOME=	gnomehack intltool intlhack gtk20 libartlgpl2 librsvg2
+USE_GNOME=	gnomehack intltool intlhack gtk20 libartlgpl2 librsvg2 \
+		ltverhack
 WANT_GNOME=	yes
+USE_GCC=	3.4+
 INSTALLS_SHLIB=	yes
+INSTALLS_ICONS=	yes
 LIBTOOLFLAGS=	--disable-ltlibs --release-ignore
 PLIST_SUB=	SHLIBVER="${SHLIBVER}"
 CONFIGURE_ARGS=	--disable-perl \
@@ -78,7 +81,7 @@ CONFIGURE_ARGS+=	--enable-debug
 .if defined(WITH_PYTHON)
 USE_PYTHON=		yes
 # we need to manually include this, because USE_PYTHON is defined
-# after including bsd.port.pre.mk
+# # after including bsd.port.pre.mk
 .include "${PORTSDIR}/Mk/bsd.python.mk"
 USE_GNOME+=		pygtk2
 CONFIGURE_ARGS+=	--enable-python
@@ -89,10 +92,12 @@ PLIST_SUB+=		PYTHON:="@comment "
 .endif
 
 .if defined(WITHOUT_PRINT)
-CONFIGURE_ARGS+=	--disable-print
+CONFIGURE_ARGS+=	--disable-print \
+			--without-gnomeprint
 PLIST_SUB+=		PRINT="@comment "
 .else
 LIB_DEPENDS+=		gimpprint.2:${PORTSDIR}/print/gimp-print
+USE_GNOME+=		libgnomeprintui
 PLIST_SUB+=		PRINT=""
 .endif
 
