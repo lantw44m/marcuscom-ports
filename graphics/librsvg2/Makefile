@@ -3,11 +3,11 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.67 2005/09/25 21:12:54 mezz Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.68 2005/09/30 01:57:20 mezz Exp $
 #
 
 PORTNAME=	librsvg2
-PORTVERSION=	2.12.3
+PORTVERSION=	2.12.4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.12
@@ -80,7 +80,6 @@ CONFIGURE_ARGS+=--enable-mozilla-plugin=no
 
 PLIST_SUB+=	PLUGIN="@comment "
 .endif
-
 
 post-patch:
 .if defined(WITH_MOZILLA_PLUGIN)
