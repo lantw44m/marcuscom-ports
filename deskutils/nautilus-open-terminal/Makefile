@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/nautilus-open-terminal/Makefile,v 1.2 2005/07/07 22:03:57 marcus Exp $
+#    $MCom: ports/deskutils/nautilus-open-terminal/Makefile,v 1.3 2005/07/08 20:27:41 marcus Exp $
 #
 
 PORTNAME=	nautilus-open-terminal
-PORTVERSION=	0.4
+PORTVERSION=	0.5
 CATEGORIES=	deskutils
 MASTER_SITES=	http://manny.cluecoder.org/packages/nautilus-open-terminal/
 
