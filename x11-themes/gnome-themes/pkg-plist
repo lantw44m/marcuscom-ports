@@ -187,9 +187,9 @@ share/icons/HighContrastLargePrint/48x48/apps/gataxx.png
 share/icons/HighContrastLargePrint/48x48/apps/gcalctool.png
 share/icons/HighContrastLargePrint/48x48/apps/gconf-editor.png
 share/icons/HighContrastLargePrint/48x48/apps/gdict.png
-share/icons/HighContrastLargePrint/48x48/apps/gdm.png
 share/icons/HighContrastLargePrint/48x48/apps/gdm-setup.png
 share/icons/HighContrastLargePrint/48x48/apps/gdm-xnest.png
+share/icons/HighContrastLargePrint/48x48/apps/gdm.png
 share/icons/HighContrastLargePrint/48x48/apps/gedit-icon.png
 share/icons/HighContrastLargePrint/48x48/apps/gkb.png
 share/icons/HighContrastLargePrint/48x48/apps/glade-2.png
@@ -247,9 +247,9 @@ share/icons/HighContrastLargePrint/48x48/apps/gnome-remote-desktop.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-run.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-screensaver.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-screenshot.png
-share/icons/HighContrastLargePrint/48x48/apps/gnome-searchtool.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-searchtool-animation-rest.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-searchtool-animation.png
+share/icons/HighContrastLargePrint/48x48/apps/gnome-searchtool.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-server-config.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-session.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-settings-accessibility-keyboard.png
@@ -327,9 +327,9 @@ share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-jazdisk.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-keyboard.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-mouse-ball.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-mouse-optical.png
-share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-printer.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-printer-network.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-printer-new.png
+share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-printer.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-removable.png
 share/icons/HighContrastLargePrint/48x48/devices/gnome-dev-zipdisk.png
 share/icons/HighContrastLargePrint/48x48/emblems/emblem-important.png
@@ -566,9 +566,9 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/gataxx.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gcalctool.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gconf-editor.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gdict.png
-share/icons/HighContrastLargePrintInverse/48x48/apps/gdm.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gdm-setup.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gdm-xnest.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gdm.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gedit-icon.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gkb.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/glade-2.png
@@ -626,9 +626,9 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-remote-desktop.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-run.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-screensaver.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-screenshot.png
-share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-searchtool.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-searchtool-animation-rest.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-searchtool-animation.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-searchtool.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-server-config.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-session.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-settings-accessibility-keyboard.png
@@ -706,9 +706,9 @@ share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-jazdisk.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-keyboard.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-mouse-ball.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-mouse-optical.png
-share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-printer.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-printer-network.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-printer-new.png
+share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-printer.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-removable.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/gnome-dev-zipdisk.png
 share/icons/HighContrastLargePrintInverse/48x48/emblems/emblem-important.png
@@ -963,9 +963,9 @@ share/icons/LowContrastLargePrint/48x48/apps/gnome-multimedia.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-panel.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-run.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-screenshot.png
-share/icons/LowContrastLargePrint/48x48/apps/gnome-searchtool.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-searchtool-animation-rest.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-searchtool-animation.png
+share/icons/LowContrastLargePrint/48x48/apps/gnome-searchtool.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-session.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-settings-accessibility-keyboard.png
 share/icons/LowContrastLargePrint/48x48/apps/gnome-settings-accessibility-technologies.png
