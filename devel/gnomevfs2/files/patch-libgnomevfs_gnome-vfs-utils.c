@@ -8,12 +8,3 @@
  						  "pixmaps",
  						  relative_filename,
  						  NULL);
-@@ -1992,7 +2000,7 @@ _gnome_vfs_uri_resolve_all_symlinks_uri 
- 								       info->symlink_name);
- 			if (*p != 0) {
- 				gnome_vfs_uri_unref (uri);
--				uri = gnome_vfs_uri_append_path (resolved_uri, p);
-+				uri = gnome_vfs_uri_append_string (resolved_uri, p);
- 				gnome_vfs_uri_unref (resolved_uri);
- 			} else {
- 				gnome_vfs_uri_unref (uri);
