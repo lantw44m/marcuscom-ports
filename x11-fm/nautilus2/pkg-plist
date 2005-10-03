@@ -69,7 +69,6 @@ share/gnome/nautilus/ui/nautilus-list-view-ui.xml
 share/gnome/nautilus/ui/nautilus-navigation-window-ui.xml
 share/gnome/nautilus/ui/nautilus-shell-ui.xml
 share/gnome/nautilus/ui/nautilus-spatial-window-ui.xml
-share/gnome/pixmaps/nautilus/Search.png
 share/gnome/pixmaps/nautilus/audio.svg
 share/gnome/pixmaps/nautilus/backgrounds.png
 share/gnome/pixmaps/nautilus/chit_frame.png
@@ -77,13 +76,8 @@ share/gnome/pixmaps/nautilus/colors.png
 share/gnome/pixmaps/nautilus/emblems.png
 share/gnome/pixmaps/nautilus/erase.png
 share/gnome/pixmaps/nautilus/knob.png
-share/gnome/pixmaps/nautilus/nautilus-desktop.png
-share/gnome/pixmaps/nautilus/nautilus-file-management-properties.png
 share/gnome/pixmaps/nautilus/nautilus-launch-icon.png
-share/gnome/pixmaps/nautilus/nautilus-mini-logo.png
-share/gnome/pixmaps/nautilus/nautilus-server-connect.png
 share/gnome/pixmaps/nautilus/note-indicator.png
-share/gnome/pixmaps/nautilus/side_bar_image.png
 share/gnome/pixmaps/nautilus/text-selection-frame.png
 share/gnome/pixmaps/nautilus/thumbnail_frame.png
 share/locale/af/LC_MESSAGES/nautilus.mo
@@ -120,6 +114,7 @@ share/locale/is/LC_MESSAGES/nautilus.mo
 share/locale/it/LC_MESSAGES/nautilus.mo
 share/locale/ja/LC_MESSAGES/nautilus.mo
 share/locale/ko/LC_MESSAGES/nautilus.mo
+share/locale/ku/LC_MESSAGES/nautilus.mo
 share/locale/li/LC_MESSAGES/nautilus.mo
 share/locale/lt/LC_MESSAGES/nautilus.mo
 share/locale/lv/LC_MESSAGES/nautilus.mo
