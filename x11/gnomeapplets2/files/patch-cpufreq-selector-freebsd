@@ -336,9 +336,9 @@
          } else {
                  g_print ("No cpufreq support\n");
                  return 1;
---- cpufreq/src/cpufreq-selector/Makefile.in.orig	Tue Aug 30 01:16:37 2005
-+++ cpufreq/src/cpufreq-selector/Makefile.in	Tue Aug 30 01:16:37 2005
-@@ -56,7 +56,7 @@
+--- cpufreq/src/cpufreq-selector/Makefile.in.orig	Tue Oct  4 00:21:25 2005
++++ cpufreq/src/cpufreq-selector/Makefile.in	Tue Oct  4 00:27:54 2005
+@@ -55,7 +55,7 @@
  PROGRAMS = $(bin_PROGRAMS)
  am_cpufreq_selector_OBJECTS = cpufreq.$(OBJEXT) \
  	cpufreq-sysfs.$(OBJEXT) cpufreq-procfs.$(OBJEXT) \
@@ -347,7 +347,15 @@
  cpufreq_selector_OBJECTS = $(am_cpufreq_selector_OBJECTS)
  am__DEPENDENCIES_1 =
  cpufreq_selector_DEPENDENCIES = $(am__DEPENDENCIES_1)
-@@ -332,6 +332,7 @@
+@@ -64,6 +64,7 @@
+ am__depfiles_maybe = depfiles
+ @AMDEP_TRUE@DEP_FILES = ./$(DEPDIR)/cpufreq-procfs.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-sysfs.Po \
++@AMDEP_TRUE@	./$(DEPDIR)/cpufreq-sysctl.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/cpufreq.Po ./$(DEPDIR)/main.Po
+ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+@@ -332,6 +333,7 @@
  	cpufreq.c               cpufreq.h        \
  	cpufreq-sysfs.c         cpufreq-sysfs.h  \
  	cpufreq-procfs.c        cpufreq-procfs.h \
@@ -355,7 +363,7 @@
  	main.c
  
  cpufreq_selector_LDADD = $(CPUFREQ_SELECTOR_LIBS) -lpopt
-@@ -407,6 +408,7 @@
+@@ -407,6 +409,7 @@
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-procfs.Po@am__quote@

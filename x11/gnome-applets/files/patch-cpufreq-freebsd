@@ -492,9 +492,9 @@
  
          if (mcpu >= 0)
                  return mcpu;
---- cpufreq/src/Makefile.in.orig	Tue Aug 30 01:14:03 2005
-+++ cpufreq/src/Makefile.in	Tue Aug 30 01:14:03 2005
-@@ -58,6 +58,7 @@
+--- cpufreq/src/Makefile.in.orig	Tue Oct  4 00:11:26 2005
++++ cpufreq/src/Makefile.in	Tue Oct  4 00:20:37 2005
+@@ -57,6 +57,7 @@
  	cpufreq-prefs.$(OBJEXT) cpufreq-popup.$(OBJEXT) \
  	cpufreq-monitor.$(OBJEXT) cpufreq-monitor-factory.$(OBJEXT) \
  	cpufreq-monitor-procfs.$(OBJEXT) \
@@ -502,7 +502,15 @@
  	cpufreq-monitor-sysfs.$(OBJEXT) \
  	cpufreq-monitor-cpuinfo.$(OBJEXT)
  cpufreq_applet_OBJECTS = $(am_cpufreq_applet_OBJECTS)
-@@ -353,6 +354,7 @@
+@@ -71,6 +72,7 @@
+ @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor-factory.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor-procfs.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor-sysfs.Po \
++@AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor-sysctl.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-monitor.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-popup.Po \
+ @AMDEP_TRUE@	./$(DEPDIR)/cpufreq-prefs.Po
+@@ -358,6 +360,7 @@
  					cpufreq-monitor-protected.h	\
  	cpufreq-monitor-factory.c	cpufreq-monitor-factory.h	\
  	cpufreq-monitor-procfs.c	cpufreq-monitor-procfs.h	\
@@ -510,7 +518,7 @@
  	cpufreq-monitor-sysfs.c	        cpufreq-monitor-sysfs.h	        \
  	cpufreq-monitor-cpuinfo.c       cpufreq-monitor-cpuinfo.h
  
-@@ -436,6 +438,7 @@
+@@ -441,6 +444,7 @@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-cpuinfo.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-factory.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cpufreq-monitor-procfs.Po@am__quote@
