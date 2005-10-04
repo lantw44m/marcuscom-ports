@@ -3,11 +3,11 @@
 # Whom:                 Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/abiword-devel/Makefile,v 1.2 2005/09/04 05:11:25 mezz Exp $
+#   $MCom: ports/editors/abiword-devel/Makefile,v 1.3 2005/09/12 05:55:30 mezz Exp $
 #
 
 PORTNAME=	abiword
-PORTVERSION=	2.3.6
+PORTVERSION=	2.4.0
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abisource.com/downloads/%SUBDIR%/${PORTVERSION}/source/
 MASTER_SITE_SUBDIR=	abiword
@@ -24,6 +24,8 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
 		png.5:${PORTSDIR}/graphics/png \
 		wv-1.0.0:${PORTSDIR}/textproc/wv \
 		fribidi.0:${PORTSDIR}/converters/fribidi
+
+CONFLICTS=	abiword-[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -70,7 +72,7 @@ PLIST_SUB+=		DICT:=""
 USE_GNOME+=		libgnomeui
 CONFIGURE_ARGS+=	--enable-gnome
 PKGNAMESUFFIX=		-devel-gnome
-#GNOME_ENABLED=		yes
+GNOME_ENABLED=		yes
 .endif
 
 .if defined(WITH_GUCHARMAP) || exists(${X11BASE}/libdata/pkgconfig/gucharmap.pc)
@@ -97,25 +99,21 @@ post-patch:
 		 s|WV_INCLUDES = |#WV_INCLUDES = |g ; \
 		 s|[(]libdir[)]/@PACKAGE@|(datadir)/@PACKAGE@|g ; \
 		 s|[(]libdir[)]/bonobo/servers|(prefix)/libdata/bonobo/servers|g'
-	@${REINPLACE_CMD} -e 's|(bindir)/ttfadmin.sh|(bindir)/ttfadmin24.sh|g' \
-		${WRKSRC}/src/tools/scripts/unix/GNUmakefile.in
-	@${REINPLACE_CMD} -e 's|(bindir)/ttftool|(bindir)/ttftool24|g' \
-		${WRKSRC}/src/tools/ttftool/unix/GNUmakefile.in
-	@${REINPLACE_CMD} -e 's|OTHER_LIBS =|OTHER_LIBS = $$(shell pkg-config --libs pangoxft)|g' \
-		${WRKSRC}/src/wp/main/unix/GNUmakefile.in
 
 post-install:
-	@${MKDIR} ${PREFIX}/lib/AbiWord-${ABIVERSION}/plugins
+	@${MKDIR} ${X11BASE}/lib/AbiWord-${ABIVERSION}/plugins
 	@${MKDIR} ${X11BASE}/share/applications
 	@${INSTALL_DATA} ${WRKSRC}/abiword.desktop \
-		${X11BASE}/share/applications/abiword24.desktop
+		${X11BASE}/share/applications/abiword.desktop
 	@${MKDIR} ${X11BASE}/share/pixmaps
 	@${LN} -sf ${PREFIX}/share/AbiSuite-${ABIVERSION}/icons/abiword_48.png \
-		${X11BASE}/share/pixmaps/abiword24_48.png
-#	@${INSTALL_DATA} ${WRKDIR}/abiword-${PORTVERSION}/abidistfiles/GNOME_AbiWord_Control_${ABIVERSION:S/./_/}.server \
-#		${X11BASE}/libdata/bonobo/servers/
-#	@${INSTALL_DATA} ${WRKDIR}/abiword-${PORTVERSION}/abidistfiles/abi-nautilus-view-file.xml \
-#		${X11BASE}/share/gnome/gnome-2.0/ui/
+		${X11BASE}/share/pixmaps/abiword_48.png
+.if defined(GNOME_ENABLED)
+	@${INSTALL_DATA} ${WRKDIR}/abiword-${PORTVERSION}/abidistfiles/GNOME_AbiWord_Control_${ABIVERSION:S/./_/}.server \
+		${X11BASE}/libdata/bonobo/servers/
+	@${INSTALL_DATA} ${WRKDIR}/abiword-${PORTVERSION}/abidistfiles/abi-nautilus-view-file.xml \
+		${X11BASE}/share/gnome/gnome-2.0/ui/
+.endif
 	@-update-desktop-database
 
 .include <bsd.port.post.mk>
