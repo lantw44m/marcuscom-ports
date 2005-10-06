@@ -21,6 +21,7 @@ share/gnome/pixmaps/backgrounds/cosmos/jupiter.jpg
 share/gnome/pixmaps/backgrounds/cosmos/sombrero.jpg
 share/gnome/pixmaps/backgrounds/cosmos/whirlpool.jpg
 share/locale/bg/LC_MESSAGES/gnome-screensaver.mo
+share/locale/cs/LC_MESSAGES/gnome-screensaver.mo
 share/locale/de/LC_MESSAGES/gnome-screensaver.mo
 share/locale/en_CA/LC_MESSAGES/gnome-screensaver.mo
 share/locale/en_GB/LC_MESSAGES/gnome-screensaver.mo
@@ -29,6 +30,9 @@ share/locale/fi/LC_MESSAGES/gnome-screensaver.mo
 share/locale/fr/LC_MESSAGES/gnome-screensaver.mo
 share/locale/it/LC_MESSAGES/gnome-screensaver.mo
 share/locale/ja/LC_MESSAGES/gnome-screensaver.mo
+share/locale/lt/LC_MESSAGES/gnome-screensaver.mo
+share/locale/nb/LC_MESSAGES/gnome-screensaver.mo
+share/locale/no/LC_MESSAGES/gnome-screensaver.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-screensaver.mo
 share/locale/sv/LC_MESSAGES/gnome-screensaver.mo
 share/locale/uk/LC_MESSAGES/gnome-screensaver.mo
