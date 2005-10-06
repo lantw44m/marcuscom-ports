@@ -2775,10 +2775,14 @@ share/icons/hicolor/scalable/apps/volume-knob.svg
 @unexec /bin/rmdir %D/share/icons/gnome/36x36/emblems 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/36x36/devices 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/36x36 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/icons/gnome/32x32/stock/media 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/icons/gnome/32x32/stock 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/32x32/mimetypes 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/32x32/filesystems 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/32x32/devices 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/32x32 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/icons/gnome/24x24/stock/media 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/icons/gnome/24x24/stock 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/24x24/mimetypes 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/24x24/filesystems 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/24x24/emblems 2>/dev/null || /usr/bin/true
@@ -2789,6 +2793,9 @@ share/icons/hicolor/scalable/apps/volume-knob.svg
 @unexec /bin/rmdir %D/share/icons/gnome/192x192/emblems 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/192x192/devices 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/192x192 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/icons/gnome/16x16/stock/media 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/icons/gnome/16x16/stock/emoticons 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/icons/gnome/16x16/stock 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/16x16/mimetypes 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/16x16/filesystems 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/gnome/16x16/devices 2>/dev/null || /usr/bin/true
