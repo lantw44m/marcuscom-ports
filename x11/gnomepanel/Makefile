@@ -8,6 +8,7 @@
 
 PORTNAME=	gnomepanel
 PORTVERSION=	2.12.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/2.12
@@ -22,6 +23,7 @@ RUN_DEPENDS=	gnome-menu-editor:${PORTSDIR}/deskutils/gnome-menu-editor
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
+INSTALLS_ICONS=	yes
 USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
