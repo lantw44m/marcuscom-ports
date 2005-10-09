@@ -3,12 +3,11 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox-devel/Makefile,v 1.19 2005/09/12 21:05:12 marcus Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.20 2005/09/23 20:49:57 mezz Exp $
 #
 
 PORTNAME=	firefox
-DISTVERSION=	1.5b1
-PORTREVISION=	2
+DISTVERSION=	1.5b2
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -37,9 +36,11 @@ USE_GNOME=	gtk20 libidl desktopfileutils
 USE_ICONV=	yes
 USE_PERL5_BUILD=yes
 USE_X_PREFIX=	yes
+USE_GCC=	3.4+
 WRKSRC=		${WRKDIR}/mozilla
 PKGINSTALL=	${WRKDIR}/pkg-install
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
+KRB5_HOME?=	/usr
 
 EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude */CVS/* \
 			--exclude */macbuild/*\
@@ -51,7 +52,7 @@ EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude */CVS/* \
 FIREFOX=	${PORTNAME}
 FF_SUFX=	-devel
 FF=		${FIREFOX}${FF_SUFX}
-FF_VER=		1.4
+FF_VER=		1.4.1
 #FF_VER=	${PORTVERSION}
 
 FIREFOX_ICON=		${FF}.xpm
@@ -110,10 +111,6 @@ IGNORE=	core dumps on alpha during post-build
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-config_make-jars.pl
 .endif
 
-.if ${OSVERSION} < 500000
-USE_GCC=	3.4
-.endif
-
 pre-extract::
 	@${ECHO_MSG}
 	@${ECHO_MSG} "Extracting source (this takes a while) ..."
@@ -128,6 +125,7 @@ post-extract::
 		-e 's|@LOCALBASE@|${LOCALBASE}|'	\
 		-e 's|@FAKEDIR@|${FAKEDIR}|'		\
 		-e 's|@PERL@|${PERL5}|'			\
+		-e 's|@KRB5_HOME|${KRB5_HOME}|'		\
 		<${FILESDIR}/mozconfig.in >${WRKSRC}/.mozconfig
 	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' \
 		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${FF}.desktop
