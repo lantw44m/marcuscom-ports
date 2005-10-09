@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox-devel/Makefile,v 1.20 2005/09/23 20:49:57 mezz Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.21 2005/10/09 19:40:40 marcus Exp $
 #
 
 PORTNAME=	firefox
@@ -125,7 +125,7 @@ post-extract::
 		-e 's|@LOCALBASE@|${LOCALBASE}|'	\
 		-e 's|@FAKEDIR@|${FAKEDIR}|'		\
 		-e 's|@PERL@|${PERL5}|'			\
-		-e 's|@KRB5_HOME|${KRB5_HOME}|'		\
+		-e 's|@KRB5_HOME@|${KRB5_HOME}|'		\
 		<${FILESDIR}/mozconfig.in >${WRKSRC}/.mozconfig
 	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' \
 		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${FF}.desktop
