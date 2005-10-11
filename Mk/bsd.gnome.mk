@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.331 2005/09/19 04:07:42 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.332 2005/09/22 05:42:47 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -407,11 +407,11 @@ pkgconfig_DETECT=			${LOCALBASE}/bin/pkg-config
 pkgconfig_BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkgconfig
 pkgconfig_RUN_DEPENDS=		pkg-config:${PORTSDIR}/devel/pkgconfig
 
-libgsf_LIB_DEPENDS=			gsf-1.1:${PORTSDIR}/devel/libgsf
+libgsf_LIB_DEPENDS=			gsf-1.113:${PORTSDIR}/devel/libgsf
 libgsf_DETECT=			${X11BASE}/libdata/pkgconfig/libgsf-1.pc
 libgsf_USE_GNOME_IMPL=		glib20 libxml2
 
-libgsf_gnome_LIB_DEPENDS=	gsf-gnome-1.1:${PORTSDIR}/devel/libgsf-gnome
+libgsf_gnome_LIB_DEPENDS=	gsf-gnome-1.113:${PORTSDIR}/devel/libgsf-gnome
 libgsf_gnome_DETECT=		${X11BASE}/libdata/pkgconfig/libgsf-gnome-1.pc
 libgsf_gnome_USE_GNOME_IMPL=	libgsf gnomevfs2
 
