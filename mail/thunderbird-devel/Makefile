@@ -3,12 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/thunderbird-devel/Makefile,v 1.9 2005/09/12 21:07:23 marcus Exp $
+#   $MCom: ports/mail/thunderbird-devel/Makefile,v 1.10 2005/09/23 20:49:57 mezz Exp $
 #
 
 PORTNAME=	thunderbird
-DISTVERSION=	1.5b1
-PORTREVISION=	1
+DISTVERSION=	1.5b2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	thunderbird/releases/${DISTVERSION}/source
@@ -47,7 +46,7 @@ LOCAL_SUBDIR=		lib/${PORTNAME}
 LOCAL_PREFIX=		${PREFIX}/${LOCAL_SUBDIR}
 
 THUNDERBIRD=		${PORTNAME}
-THUNDERBIRD_VER=	1.4
+THUNDERBIRD_VER=	1.4.1
 THUNDERBIRD_ICON_SRC=	${LOCAL_PREFIX}/lib/${THUNDERBIRD}-${THUNDERBIRD_VER}/icons/default.xpm
 THUNDERBIRD_ICON=	${PORTNAME}.xpm
 MOZ_PIS_SCRIPTS=	S50cleanhome
