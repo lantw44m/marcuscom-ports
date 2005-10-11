@@ -3,11 +3,11 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.12 2005/08/29 01:12:09 marcus Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.13 2005/09/08 17:28:27 adamw Exp $
 #
 
 PORTNAME=	gnumeric
-PORTVERSION=	1.5.90
+PORTVERSION=	1.6.0
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The GNOME 2 spreadsheet
 
-LIB_DEPENDS=	goffice-1.0:${PORTSDIR}/devel/goffice
+LIB_DEPENDS=	goffice-1.1:${PORTSDIR}/devel/goffice
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes

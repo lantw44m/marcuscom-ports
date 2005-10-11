@@ -86,8 +86,8 @@ lib/gnumeric/%%VERSION%%/plugins/uihello/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/xbase.so
 lib/libspreadsheet.a
+lib/libspreadsheet-1.6.0.so
 lib/libspreadsheet.so
-lib/libspreadsheet.so.0
 libdata/bonobo/servers/GNOME_Gnumeric.server
 @exec update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/applications/gnumeric.desktop
