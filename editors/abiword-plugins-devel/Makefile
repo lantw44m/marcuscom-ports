@@ -3,11 +3,11 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/abiword-plugins-devel/Makefile,v 1.3 2005/09/12 05:59:06 mezz Exp $
+#   $MCom: ports/editors/abiword-plugins-devel/Makefile,v 1.4 2005/10/04 19:30:02 mezz Exp $
 #
 
 PORTNAME=	abiword
-PORTVERSION=	2.4.0
+PORTVERSION=	2.4.1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abisource.com/downloads/%SUBDIR%/${PORTVERSION}/source/
 MASTER_SITE_SUBDIR=	abiword
