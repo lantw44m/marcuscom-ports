@@ -24,7 +24,7 @@ include/libgoffice-1/goffice/cut-n-paste/foocanvas/foo-canvas-util.h
 include/libgoffice-1/goffice/cut-n-paste/foocanvas/foo-canvas-widget.h
 include/libgoffice-1/goffice/cut-n-paste/foocanvas/foo-canvas.h
 include/libgoffice-1/goffice/cut-n-paste/foocanvas/libfoocanvas.h
-include/libgoffice-1/goffice/cut-n-paste/pcre/pcreposix.h
+include/libgoffice-1/goffice/cut-n-paste/pcre/pcre.h
 include/libgoffice-1/goffice/data/go-data-impl.h
 include/libgoffice-1/goffice/data/go-data-simple.h
 include/libgoffice-1/goffice/data/go-data.h
@@ -150,9 +150,12 @@ lib/goffice/%%VERSION%%/plugins/plot_xy/xy.so
 lib/goffice/%%VERSION%%/plugins/reg_linear/linreg.so
 lib/goffice/%%VERSION%%/plugins/reg_linear/plugin.xml
 lib/goffice/%%VERSION%%/plugins/reg_linear/reg-types.xml
+lib/goffice/%%VERSION%%/plugins/reg_logfit/logfit.so
+lib/goffice/%%VERSION%%/plugins/reg_logfit/plugin.xml
+lib/goffice/%%VERSION%%/plugins/reg_logfit/reg-types.xml
 lib/libgoffice-1.a
 lib/libgoffice-1.so
-lib/libgoffice-1.so.0
+lib/libgoffice-1.so.1
 libdata/pkgconfig/libgoffice-1.pc
 share/gnome/goffice/%%VERSION%%/glade/go-font-sel.glade
 share/gnome/goffice/%%VERSION%%/glade/go-format-sel.glade
@@ -315,6 +318,7 @@ share/locale/zh_TW/LC_MESSAGES/goffice.mo
 @dirrm share/gnome/goffice/%%VERSION%%/glade
 @dirrm share/gnome/goffice/%%VERSION%%
 @dirrm share/gnome/goffice
+@dirrm lib/goffice/%%VERSION%%/plugins/reg_logfit
 @dirrm lib/goffice/%%VERSION%%/plugins/reg_linear
 @dirrm lib/goffice/%%VERSION%%/plugins/plot_xy
 @dirrm lib/goffice/%%VERSION%%/plugins/plot_surface
