@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/abiword-plugins-devel/Makefile,v 1.4 2005/10/04 19:30:02 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	abiword
@@ -11,14 +11,14 @@ PORTVERSION=	2.4.1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abisource.com/downloads/%SUBDIR%/${PORTVERSION}/source/
 MASTER_SITE_SUBDIR=	abiword
-PKGNAMESUFFIX=	-plugins-devel
+PKGNAMESUFFIX=	-plugins
 DIST_SUBDIR=	AbiWord
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Multi-plugins for AbiWord
 
-BUILD_DEPENDS=	AbiWord-${ABIVERSION}:${PORTSDIR}/editors/abiword-devel
-RUN_DEPENDS=	AbiWord-${ABIVERSION}:${PORTSDIR}/editors/abiword-devel
+BUILD_DEPENDS=	AbiWord-${ABIVERSION}:${PORTSDIR}/editors/abiword
+RUN_DEPENDS=	AbiWord-${ABIVERSION}:${PORTSDIR}/editors/abiword
 
 CONFLICTS=	abiword-plugins-[0-9]*
 
@@ -35,7 +35,7 @@ CONFIGURE_ARGS=	--disable-all
 MAKEFILE=	GNUmakefile
 
 WRKSRC=		${WRKDIR}/abiword-${PORTVERSION}/abiword-plugins
-MD5_FILE=	${.CURDIR}/../abiword-devel/distinfo
+MD5_FILE=	${.CURDIR}/../abiword/distinfo
 
 ABIVERSION=	2.4
 PLIST_SUB+=	ABIVERSION=${ABIVERSION}

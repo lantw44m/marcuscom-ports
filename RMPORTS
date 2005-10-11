@@ -1,3 +1,5 @@
 mail/ximian-connector|mail/evolution-exchange|%%DATE%%|POOF! Now it's called evolution-exchange!
 editors/gedit-plugins||%%DATE%%|This component is unmaintained, and has succumbed to code rot
 www/pyphany||%%DATE%%|Has been merged into epiphany
+editors/abiword-devel|editors/abiword|%%DATE%%|Has been merged into abiword
+editors/abiword-plugins-devel|editors/abiword-plugins|%%DATE%%|Has been merged into abiword-plugins

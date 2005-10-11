@@ -3,7 +3,7 @@
 # Whom:                 Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/abiword-devel/Makefile,v 1.4 2005/10/04 19:30:01 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	abiword
@@ -11,7 +11,6 @@ PORTVERSION=	2.4.1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abisource.com/downloads/%SUBDIR%/${PORTVERSION}/source/
 MASTER_SITE_SUBDIR=	abiword
-PKGNAMESUFFIX=	-devel
 DISTNAME=	abiword-${PORTVERSION}
 DIST_SUBDIR=	AbiWord
 
@@ -24,8 +23,6 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
 		png.5:${PORTSDIR}/graphics/png \
 		wv-1.0.0:${PORTSDIR}/textproc/wv \
 		fribidi.0:${PORTSDIR}/converters/fribidi
-
-CONFLICTS=	abiword-[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -71,7 +68,7 @@ PLIST_SUB+=		DICT:=""
 .if ${HAVE_GNOME:Mlibgnomeui}!=""
 USE_GNOME+=		libgnomeui
 CONFIGURE_ARGS+=	--enable-gnome
-PKGNAMESUFFIX=		-devel-gnome
+PKGNAMESUFFIX=		-gnome
 GNOME_ENABLED=		yes
 .endif
 
