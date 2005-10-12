@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.17 2005/09/23 23:16:22 marcus Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.18 2005/10/06 01:24:58 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	0.0.15
+PORTVERSION=	0.0.16
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.0
@@ -40,5 +40,6 @@ post-patch:
 post-install:
 	${CHOWN} root ${PREFIX}/libexec/gnome-screensaver-dialog
 	${CHMOD} +s ${PREFIX}/libexec/gnome-screensaver-dialog
+	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
