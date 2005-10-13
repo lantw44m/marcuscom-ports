@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda2/Makefile,v 1.29 2005/08/08 06:54:49 marcus Exp $
+#   $MCom: ports/databases/libgda2/Makefile,v 1.30 2005/08/10 19:22:13 marcus Exp $
 #
 
 PORTNAME=	libgda2
-PORTVERSION=	1.3.91
+PORTVERSION=	1.9.100
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:R}
@@ -17,15 +17,12 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provides uniform access to different kinds of data sources
 
-BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
-RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack glib20 libxslt
-INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_REINPLACE=	yes
@@ -37,6 +34,8 @@ MAN1=		gda-config-tool.1
 MAN5=		gda-config.5
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME:S/2$//}
+
+PLIST_SUB=	VERSION=${PORTVERSION:R}
 
 post-patch:
 	@${REINPLACE_CMD} -e "/^SUBDIRS =/s/testing//" \

@@ -3,75 +3,50 @@ bin/gda-report-test
 bin/gda-run
 etc/libgda/config
 etc/libgda/sales_test.db
-include/libgda-1.3/libgda-report/gda-report-document.h
-include/libgda-1.3/libgda-report/gda-report-item-detail.h
-include/libgda-1.3/libgda-report/gda-report-item-label.h
-include/libgda-1.3/libgda-report/gda-report-item-pagefooter.h
-include/libgda-1.3/libgda-report/gda-report-item-pageheader.h
-include/libgda-1.3/libgda-report/gda-report-item-repfield.h
-include/libgda-1.3/libgda-report/gda-report-item-report.h
-include/libgda-1.3/libgda-report/gda-report-item-reportfooter.h
-include/libgda-1.3/libgda-report/gda-report-item-reportheader.h
-include/libgda-1.3/libgda-report/gda-report-item-sqlquery.h
-include/libgda-1.3/libgda-report/gda-report-item.h
-include/libgda-1.3/libgda-report/gda-report-result.h
-include/libgda-1.3/libgda-report/gda-report-types.h
-include/libgda-1.3/libgda-report/gda-report-valid.h
-include/libgda-1.3/libgda-report/gda-report.h
-include/libgda-1.3/libgda/gda-blob.h
-include/libgda-1.3/libgda/gda-client.h
-include/libgda-1.3/libgda/gda-column-index.h
-include/libgda-1.3/libgda/gda-column.h
-include/libgda-1.3/libgda/gda-command.h
-include/libgda-1.3/libgda/gda-config.h
-include/libgda-1.3/libgda/gda-connection-event.h
-include/libgda-1.3/libgda/gda-connection.h
-include/libgda-1.3/libgda/gda-data-model-array.h
-include/libgda-1.3/libgda/gda-data-model-base.h
-include/libgda-1.3/libgda/gda-data-model-hash.h
-include/libgda-1.3/libgda/gda-data-model-index.h
-include/libgda-1.3/libgda/gda-data-model-list.h
-include/libgda-1.3/libgda/gda-data-model.h
-include/libgda-1.3/libgda/gda-enum-types.h
-include/libgda-1.3/libgda/gda-log.h
-include/libgda-1.3/libgda/gda-marshal.h
-include/libgda-1.3/libgda/gda-parameter.h
-include/libgda-1.3/libgda/gda-quark-list.h
-include/libgda-1.3/libgda/gda-row.h
-include/libgda-1.3/libgda/gda-select.h
-include/libgda-1.3/libgda/gda-server-provider.h
-include/libgda-1.3/libgda/gda-table.h
-include/libgda-1.3/libgda/gda-threader.h
-include/libgda-1.3/libgda/gda-transaction.h
-include/libgda-1.3/libgda/gda-util.h
-include/libgda-1.3/libgda/gda-value.h
-include/libgda-1.3/libgda/gda-xml-connection.h
-include/libgda-1.3/libgda/gda-xml-database.h
-include/libgda-1.3/libgda/gda-xml-document.h
-include/libgda-1.3/libgda/gda-xql-atom.h
-include/libgda-1.3/libgda/gda-xql-bin.h
-include/libgda-1.3/libgda/gda-xql-column.h
-include/libgda-1.3/libgda/gda-xql-const.h
-include/libgda-1.3/libgda/gda-xql-delete.h
-include/libgda-1.3/libgda/gda-xql-dml.h
-include/libgda-1.3/libgda/gda-xql-dual.h
-include/libgda-1.3/libgda/gda-xql-field.h
-include/libgda-1.3/libgda/gda-xql-func.h
-include/libgda-1.3/libgda/gda-xql-insert.h
-include/libgda-1.3/libgda/gda-xql-item.h
-include/libgda-1.3/libgda/gda-xql-join.h
-include/libgda-1.3/libgda/gda-xql-list.h
-include/libgda-1.3/libgda/gda-xql-query.h
-include/libgda-1.3/libgda/gda-xql-select.h
-include/libgda-1.3/libgda/gda-xql-stack.h
-include/libgda-1.3/libgda/gda-xql-target.h
-include/libgda-1.3/libgda/gda-xql-update.h
-include/libgda-1.3/libgda/gda-xql-utils.h
-include/libgda-1.3/libgda/gda-xql-value.h
-include/libgda-1.3/libgda/gda-xql-valueref.h
-include/libgda-1.3/libgda/global-decl.h
-include/libgda-1.3/libgda/libgda.h
-include/libgda-1.3/sql/sql_parser.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-document.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-item-detail.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-item-label.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-item-pagefooter.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-item-pageheader.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-item-repfield.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-item-report.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-item-reportfooter.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-item-reportheader.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-item-sqlquery.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-item.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-result.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-types.h
+include/libgda-%%VERSION%%/libgda-report/gda-report-valid.h
+include/libgda-%%VERSION%%/libgda-report/gda-report.h
+include/libgda-%%VERSION%%/libgda/gda-blob.h
+include/libgda-%%VERSION%%/libgda/gda-client.h
+include/libgda-%%VERSION%%/libgda/gda-column-index.h
+include/libgda-%%VERSION%%/libgda/gda-column.h
+include/libgda-%%VERSION%%/libgda/gda-command.h
+include/libgda-%%VERSION%%/libgda/gda-config.h
+include/libgda-%%VERSION%%/libgda/gda-connection-event.h
+include/libgda-%%VERSION%%/libgda/gda-connection.h
+include/libgda-%%VERSION%%/libgda/gda-data-model-array.h
+include/libgda-%%VERSION%%/libgda/gda-data-model-base.h
+include/libgda-%%VERSION%%/libgda/gda-data-model-hash.h
+include/libgda-%%VERSION%%/libgda/gda-data-model-index.h
+include/libgda-%%VERSION%%/libgda/gda-data-model-list.h
+include/libgda-%%VERSION%%/libgda/gda-data-model.h
+include/libgda-%%VERSION%%/libgda/gda-enum-types.h
+include/libgda-%%VERSION%%/libgda/gda-log.h
+include/libgda-%%VERSION%%/libgda/gda-marshal.h
+include/libgda-%%VERSION%%/libgda/gda-parameter.h
+include/libgda-%%VERSION%%/libgda/gda-quark-list.h
+include/libgda-%%VERSION%%/libgda/gda-row.h
+include/libgda-%%VERSION%%/libgda/gda-select.h
+include/libgda-%%VERSION%%/libgda/gda-server-provider.h
+include/libgda-%%VERSION%%/libgda/gda-threader.h
+include/libgda-%%VERSION%%/libgda/gda-transaction.h
+include/libgda-%%VERSION%%/libgda/gda-util.h
+include/libgda-%%VERSION%%/libgda/gda-value.h
+include/libgda-%%VERSION%%/libgda/global-decl.h
+include/libgda-%%VERSION%%/libgda/libgda.h
+include/libgda-%%VERSION%%/sql/sql_parser.h
 lib/libgda-3.a
 lib/libgda-3.so
 lib/libgda-3.so.3
@@ -81,16 +56,15 @@ lib/libgda-report-3.so.3
 lib/libgdasql.a
 lib/libgdasql.so
 lib/libgdasql.so.3
-%%FIREBIRD:%%lib/libgda-1.3/providers/libgda-firebird.so
-%%FREETDS:%%lib/libgda-1.3/providers/libgda-freetds.so
-%%LDAP:%%lib/libgda-1.3/providers/libgda-ldap.so
-%%MDB:%%lib/libgda-1.3/providers/libgda-mdb.so
-%%MYSQL:%%lib/libgda-1.3/providers/libgda-mysql.so
-%%ODBC:%%lib/libgda-1.3/providers/libgda-odbc.so
-%%POSTGRES:%%lib/libgda-1.3/providers/libgda-postgres.so
-%%SYBASE:%%lib/libgda-1.3/providers/libgda-sybase.so
-lib/libgda-1.3/providers/libgda-sqlite.so
-lib/libgda-1.3/providers/libgda-xml.so
+%%FIREBIRD:%%lib/libgda-%%VERSION%%/providers/libgda-firebird.so
+%%FREETDS:%%lib/libgda-%%VERSION%%/providers/libgda-freetds.so
+%%LDAP:%%lib/libgda-%%VERSION%%/providers/libgda-ldap.so
+%%MDB:%%lib/libgda-%%VERSION%%/providers/libgda-mdb.so
+%%MYSQL:%%lib/libgda-%%VERSION%%/providers/libgda-mysql.so
+%%ODBC:%%lib/libgda-%%VERSION%%/providers/libgda-odbc.so
+%%POSTGRES:%%lib/libgda-%%VERSION%%/providers/libgda-postgres.so
+%%SYBASE:%%lib/libgda-%%VERSION%%/providers/libgda-sybase.so
+lib/libgda-%%VERSION%%/providers/libgda-sqlite.so
 libdata/pkgconfig/libgda-2.0.pc
 %%DOCSDIR%%/GdaClient.html
 %%DOCSDIR%%/GdaColumn.html
@@ -99,9 +73,9 @@ libdata/pkgconfig/libgda-2.0.pc
 %%DOCSDIR%%/GdaDataModelArray.html
 %%DOCSDIR%%/GdaDataModelHash.html
 %%DOCSDIR%%/GdaDataModelList.html
+%%DOCSDIR%%/GdaRow.html
 %%DOCSDIR%%/GdaSelect.html
 %%DOCSDIR%%/GdaServerProvider.html
-%%DOCSDIR%%/GdaTable.html
 %%DOCSDIR%%/GdaTransaction.html
 %%DOCSDIR%%/architecture.html
 %%DOCSDIR%%/ch06.html
@@ -131,13 +105,13 @@ libdata/pkgconfig/libgda-2.0.pc
 %%DOCSDIR%%/installation-installing.html
 %%DOCSDIR%%/installation.html
 %%DOCSDIR%%/introduction.html
+%%DOCSDIR%%/ix01.html
 %%DOCSDIR%%/left.png
 %%DOCSDIR%%/libgda-BLOBs.html
 %%DOCSDIR%%/libgda-Commands.html
 %%DOCSDIR%%/libgda-GdaConnection.html
+%%DOCSDIR%%/libgda-GdaConnectionEvent.html
 %%DOCSDIR%%/libgda-GdaDataModelIndex.html
-%%DOCSDIR%%/libgda-GdaError.html
-%%DOCSDIR%%/libgda-GdaExport.html
 %%DOCSDIR%%/libgda-GdaParameter.html
 %%DOCSDIR%%/libgda-GdaReportDocument.html
 %%DOCSDIR%%/libgda-GdaReportItem.html
@@ -152,31 +126,7 @@ libdata/pkgconfig/libgda-2.0.pc
 %%DOCSDIR%%/libgda-GdaReportItemSqlQuery.html
 %%DOCSDIR%%/libgda-GdaReportResult.html
 %%DOCSDIR%%/libgda-GdaReportValid.html
-%%DOCSDIR%%/libgda-GdaRow.html
 %%DOCSDIR%%/libgda-GdaValue.html
-%%DOCSDIR%%/libgda-GdaXmlConnection.html
-%%DOCSDIR%%/libgda-GdaXmlDatabase.html
-%%DOCSDIR%%/libgda-GdaXmlDocument.html
-%%DOCSDIR%%/libgda-GdaXqlAtom.html
-%%DOCSDIR%%/libgda-GdaXqlBin.html
-%%DOCSDIR%%/libgda-GdaXqlColumn.html
-%%DOCSDIR%%/libgda-GdaXqlConst.html
-%%DOCSDIR%%/libgda-GdaXqlDelete.html
-%%DOCSDIR%%/libgda-GdaXqlDml.html
-%%DOCSDIR%%/libgda-GdaXqlDual.html
-%%DOCSDIR%%/libgda-GdaXqlField.html
-%%DOCSDIR%%/libgda-GdaXqlFunc.html
-%%DOCSDIR%%/libgda-GdaXqlInsert.html
-%%DOCSDIR%%/libgda-GdaXqlItem.html
-%%DOCSDIR%%/libgda-GdaXqlJoin.html
-%%DOCSDIR%%/libgda-GdaXqlList.html
-%%DOCSDIR%%/libgda-GdaXqlQuery.html
-%%DOCSDIR%%/libgda-GdaXqlSelect.html
-%%DOCSDIR%%/libgda-GdaXqlStack.html
-%%DOCSDIR%%/libgda-GdaXqlTarget.html
-%%DOCSDIR%%/libgda-GdaXqlUpdate.html
-%%DOCSDIR%%/libgda-GdaXqlValue.html
-%%DOCSDIR%%/libgda-GdaXqlValueRef.html
 %%DOCSDIR%%/libgda-Libgda-Initialization.html
 %%DOCSDIR%%/libgda-Logging.html
 %%DOCSDIR%%/libgda-Quark-lists.html
@@ -185,13 +135,10 @@ libdata/pkgconfig/libgda-2.0.pc
 %%DOCSDIR%%/libgda-gda-config.html
 %%DOCSDIR%%/libgda-gda-data-model-base.html
 %%DOCSDIR%%/libgda-gda-report-types.html
-%%DOCSDIR%%/libgda-gda-xql-utils.html
 %%DOCSDIR%%/libgda-provider-class.html
 %%DOCSDIR%%/libgda-provider-recordset.html
 %%DOCSDIR%%/libgda-providers.html
 %%DOCSDIR%%/libgda-reports.html
-%%DOCSDIR%%/libgda-server-provider-details.html
-%%DOCSDIR%%/libgda-xql.html
 %%DOCSDIR%%/libgda.devhelp
 %%DOCSDIR%%/main_example.html
 %%DOCSDIR%%/manage-gdavalue.html
@@ -213,7 +160,6 @@ share/gnome/libgda/xml/gda-report.dtd
 share/gnome/libgda/xml/gda-report-result.dtd
 share/gnome/libgda/xml/gda-xml-query.dtd
 share/gnome/libgda/xml/gda-xml-query.xsl
-share/gnome/omf/libgda/libgda-C.omf
 share/locale/az/LC_MESSAGES/libgda-3.mo
 share/locale/ca/LC_MESSAGES/libgda-3.mo
 share/locale/cs/LC_MESSAGES/libgda-3.mo
@@ -223,6 +169,7 @@ share/locale/el/LC_MESSAGES/libgda-3.mo
 share/locale/en_CA/LC_MESSAGES/libgda-3.mo
 share/locale/en_GB/LC_MESSAGES/libgda-3.mo
 share/locale/es/LC_MESSAGES/libgda-3.mo
+share/locale/eu/LC_MESSAGES/libgda-3.mo
 share/locale/fa/LC_MESSAGES/libgda-3.mo
 share/locale/fi/LC_MESSAGES/libgda-3.mo
 share/locale/fr/LC_MESSAGES/libgda-3.mo
@@ -236,6 +183,7 @@ share/locale/ko/LC_MESSAGES/libgda-3.mo
 share/locale/ml/LC_MESSAGES/libgda-3.mo
 share/locale/ms/LC_MESSAGES/libgda-3.mo
 share/locale/nb/LC_MESSAGES/libgda-3.mo
+share/locale/ne/LC_MESSAGES/libgda-3.mo
 share/locale/nl/LC_MESSAGES/libgda-3.mo
 share/locale/no/LC_MESSAGES/libgda-3.mo
 share/locale/pl/LC_MESSAGES/libgda-3.mo
@@ -256,13 +204,12 @@ share/locale/zh_CN/LC_MESSAGES/libgda-3.mo
 share/locale/zh_TW/LC_MESSAGES/libgda-3.mo
 @unexec rmdir %D/share/locale/rw/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/rw 2> /dev/null || true
-@dirrm share/gnome/omf/libgda
 @dirrm share/gnome/libgda/xml
 @dirrm share/gnome/libgda
-@dirrm lib/libgda-1.3/providers
-@dirrm lib/libgda-1.3
-@dirrm include/libgda-1.3/sql
-@dirrm include/libgda-1.3/libgda-report
-@dirrm include/libgda-1.3/libgda
-@dirrm include/libgda-1.3
+@dirrm lib/libgda-%%VERSION%%/providers
+@dirrm lib/libgda-%%VERSION%%
+@dirrm include/libgda-%%VERSION%%/sql
+@dirrm include/libgda-%%VERSION%%/libgda-report
+@dirrm include/libgda-%%VERSION%%/libgda
+@dirrm include/libgda-%%VERSION%%
 @dirrm etc/libgda
