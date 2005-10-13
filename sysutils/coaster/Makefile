@@ -1,0 +1,57 @@
+# New ports collection makefile for:	coaster
+# Date created:				11 Nov 2004
+# Whom:					Mezz <mezz7@FreeBSD.org>
+#
+# $FreeBSD: ports/sysutils/coaster/Makefile,v 1.4 2005/04/19 17:18:30 mezz Exp $
+#
+
+PORTNAME=	coaster
+PORTVERSION=	0.1.4.2
+PORTREVISION=	2
+CATEGORIES=	sysutils gnome
+#MASTER_SITES=	http://www.coaster-burn.org/files/coaster/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	mezz
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	A disc burning application for Gnome 2
+
+LIB_DEPENDS=	gconfmm-2.6:${PORTSDIR}/devel/gconfmm26 \
+		glademm-2.4:${PORTSDIR}/devel/libglademm24 \
+		gnomevfsmm-2.6:${PORTSDIR}/devel/gnome-vfsmm \
+		xml\\+\\+-2.6:${PORTSDIR}/textproc/libxml++26
+
+USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack desktopfileutils \
+		nautiluscdburner
+USE_GCC=	3.4
+USE_GMAKE=	yes
+USE_X_PREFIX=	yes
+INSTALLS_OMF=	yes
+USE_INC_LIBTOOL_VER=15
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+
+DOCS=		AUTHORS COPYING ChangeLog NEWS README TODO
+GCONF_SCHEMAS=	coaster.schemas
+
+BROKEN=	"Broken with new nautilus-cd-burner"
+
+patch-autotools:
+	@(cd ${PATCH_WRKSRC}; \
+	for file in ${LIBTOOLFILES}; do \
+		${CP} $$file $$file.tmp; \
+		${SED} -e "/^ltmain=/s^\$$ac_aux_dir/ltmain.sh^${LTMAIN}^g" \
+			$$file.tmp > $$file; \
+		${RM} $$file.tmp; \
+	done);
+
+post-install:
+	@-update-desktop-database
+.ifndef (NOPORTDOCS)
+	@${MKDIR} ${DOCSDIR}
+.for i in ${DOCS}
+	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
+.endfor
+.endif
+
+.include <bsd.port.mk>
