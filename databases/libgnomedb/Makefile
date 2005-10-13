@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgnomedb/Makefile,v 1.23 2005/08/07 21:26:40 marcus Exp $
+#   $MCom: ports/databases/libgnomedb/Makefile,v 1.24 2005/08/10 19:38:53 marcus Exp $
 #
 
 PORTNAME=	libgnomedb
-PORTVERSION=	1.3.91
+PORTVERSION=	1.9.100
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -28,5 +28,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	libgnomedb.schemas
+
+PLIST_SUB=	VERSION=${PORTVERSION:R}
 
 .include <bsd.port.mk>
