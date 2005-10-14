@@ -2,8 +2,8 @@
 # Date created:		2005-02-26
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-themes/clearlooks/Makefile,v 1.20 2005/06/30 12:22:32 ahze Exp $
-#      $MCom: ports/x11-themes/clearlooks/Makefile,v 1.2 2005/08/08 21:58:16 ahze Exp $
+# $FreeBSD$
+#      $MCom: ports/x11-themes/clearlooks/Makefile,v 1.3 2005/10/08 19:41:40 marcus Exp $
 #
 
 PORTNAME?=	clearlooks

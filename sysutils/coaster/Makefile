@@ -2,7 +2,8 @@
 # Date created:				11 Nov 2004
 # Whom:					Mezz <mezz7@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/coaster/Makefile,v 1.4 2005/04/19 17:18:30 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	coaster

@@ -2,7 +2,8 @@
 # Date created:         22 May 2003
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
-# $FreeBSD: ports/x11/libgnomemm26/Makefile,v 1.15 2005/03/12 11:33:37 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libgnomemm

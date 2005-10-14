@@ -2,7 +2,8 @@
 # Date created:				2nd June 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/www/libgtkhtml/Makefile,v 1.76 2005/03/12 10:53:10 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libgtkhtml

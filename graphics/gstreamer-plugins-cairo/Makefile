@@ -2,7 +2,8 @@
 # Date created:			Mar 8 2005
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/gstreamer-plugins-cairo/Makefile,v 1.2 2005/05/31 15:51:37 kwm Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 CATEGORIES=	graphics

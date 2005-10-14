@@ -2,7 +2,8 @@
 # Date created:         1 Oct 2003
 # Whom:                 Alexander Nedotsukov <bland@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgdamm/Makefile,v 1.11 2005/04/22 05:41:24 bland Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libgdamm

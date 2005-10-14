@@ -2,7 +2,8 @@
 # Date created:				5 July 2003
 # Whom:					lewiz <purple@lewiz.net>
 #
-# $FreeBSD: ports/accessibility/dasher/Makefile,v 1.22 2005/08/28 17:22:13 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	dasher

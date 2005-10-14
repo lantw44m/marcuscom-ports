@@ -1,5 +1,6 @@
 
-$FreeBSD: ports/x11-toolkits/wxgtk24/files/patch-include::wx::wxchar.h,v 1.3 2003/11/09 19:23:40 fjoe Exp $
+$FreeBSD$
+$MCom$
 
 --- include/wx/wxchar.h.orig	Sun Sep 15 21:19:48 2002
 +++ include/wx/wxchar.h	Sat Oct 26 18:06:12 2002

@@ -2,7 +2,8 @@
 # Date created:				30 April 2001
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/pkgconfig/Makefile,v 1.38 2005/05/16 08:59:34 pav Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	pkgconfig

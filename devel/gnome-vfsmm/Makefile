@@ -2,7 +2,8 @@
 # Date created:         22 May 2003
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
-# $FreeBSD: ports/devel/gnome-vfsmm/Makefile,v 1.19 2005/04/22 05:41:25 bland Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnome-vfsmm

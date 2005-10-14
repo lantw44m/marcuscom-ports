@@ -3,7 +3,8 @@
 # Date created:			Feb 26, 2001
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/libxml++26/Makefile,v 1.33 2005/03/12 11:32:14 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libxml++

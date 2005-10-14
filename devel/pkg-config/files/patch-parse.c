@@ -1,5 +1,6 @@
 
-$FreeBSD: ports/devel/pkgconfig/files/patch-parse.c,v 1.1 2001/08/01 17:46:50 sobomax Exp $
+$FreeBSD$
+$MCom$
 
 --- parse.c	2001/08/01 07:24:17	1.1
 +++ parse.c	2001/08/01 07:25:02

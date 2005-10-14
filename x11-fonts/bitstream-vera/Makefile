@@ -2,7 +2,8 @@
 # Date created:		February 18 2003
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-fonts/bitstream-vera/Makefile,v 1.11 2005/03/04 08:01:33 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	bitstream-vera

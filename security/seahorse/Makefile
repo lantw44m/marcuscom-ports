@@ -2,7 +2,8 @@
 # Date created:		08 March 2000
 # Whom:			Dave McKay <dave@mu.org>
 #
-# $FreeBSD: ports/security/seahorse/Makefile,v 1.42 2005/08/28 08:33:40 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	seahorse
