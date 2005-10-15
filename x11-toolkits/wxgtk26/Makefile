@@ -3,7 +3,6 @@
 # Whom:					fjoe@FreeBSD.ORG
 #
 # $FreeBSD$
-#   $MCom$
 #
 
 PORTNAME=	wx

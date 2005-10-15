@@ -3,7 +3,6 @@
 # Whom:					nectar@FreeBSD.ORG
 #
 # $FreeBSD$
-#   $MCom$
 #
 
 PORTNAME=	wx
