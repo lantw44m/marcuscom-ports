@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.36 2005/10/14 20:39:55 adamw Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.37 2005/10/17 14:39:32 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -36,7 +36,8 @@ CONFIGURE_ENV=	LIBS="-lm" \
 GCONF_SCHEMAS=	rhythmbox.schemas
 
 OPTIONS=	IPOD "Enable iPod support" off \
-		DAAP "Enable iTunes music sharing" off
+		DAAP "Enable iTunes music sharing" off \
+		FAAD "Enable FAAD decoder support" off
 
 .include <bsd.port.pre.mk>
 
@@ -60,18 +61,14 @@ USE_GSTREAMER+=		faad
 
 .if defined(WITH_DAAP)
 CONFIGURE_ARGS+=	--enable-daap
-LIB_DEPENDS+=		soup-2.2.8:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS+=		soup-2.2.8:${PORTSDIR}/devel/libsoup \
+			howl.0:${PORTSDIR}/net/howl
 .endif
 
 pre-everything::
 .if !defined(WITH_VORBIS)
 	@${ECHO_MSG}
 	@${ECHO_MSG} "Define WITH_VORBIS to enable Vorbis support"
-	@${ECHO_MSG}
-.endif
-.if !defined(WITH_FAAD)
-	@${ECHO_MSG}
-	@${ECHO_MSG} "Define WITH_FAAD to enable Faad support"
 	@${ECHO_MSG}
 .endif
 
