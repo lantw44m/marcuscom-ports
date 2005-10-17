@@ -1,0 +1,31 @@
+%%RUBY_SITEARCHLIBDIR%%/gnome2.so
+%%RUBY_SITELIBDIR%%/gnome2.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/gnome-app-helper.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/gnome-config.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/gnome-druid.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/gnome-program.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/gnome-sound.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/gnome-trigger.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/README
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/about.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/app-helper.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/bomb.xpm
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/color-picker.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/dateedit.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/entry.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/file-entry.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/font-picker.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/href.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/icon-entry.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/icon-list.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/pixmap-entry.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/test-gnome-app.rb
+%%PORTDOCS%%%%RUBY_MODEXAMPLESDIR%%/test-gnome/test-gnome.rb
+%%PORTDOCS%%@dirrm %%RUBY_MODEXAMPLESDIR%%/test-gnome
+%%PORTDOCS%%@dirrm %%RUBY_MODEXAMPLESDIR%%
+%%PORTDOCS%%%%RUBY_MODDOCDIR%%/AUTHORS
+%%PORTDOCS%%%%RUBY_MODDOCDIR%%/COPYING.LIB
+%%PORTDOCS%%%%RUBY_MODDOCDIR%%/ChangeLog
+%%PORTDOCS%%%%RUBY_MODDOCDIR%%/README
+%%PORTDOCS%%%%RUBY_MODDOCDIR%%/README.gnome2-all
+%%PORTDOCS%%@dirrm %%RUBY_MODDOCDIR%%

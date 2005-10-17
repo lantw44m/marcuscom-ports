@@ -1,0 +1,44 @@
+# New ports collection makefile for:	Ruby/GtkGLExt
+# Date created:				05 April 2004
+# Whom:					Mezz <mezz7@cox.net>
+#
+# $FreeBSD: ports/x11-toolkits/ruby-gtkglext/Makefile,v 1.8 2005/03/12 11:05:17 mezz Exp $
+#
+
+PORTNAME=	gtkglext
+PORTVERSION=	${RUBY_GNOME_PORTVERSION}
+CATEGORIES=	x11-toolkits ruby
+MASTER_SITES=	${RUBY_GNOME_MASTER_SITES}
+MASTER_SITE_SUBDIR=	${RUBY_GNOME_MASTER_SITE_SUBDIR}
+PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
+DISTNAME=	${RUBY_GNOME_DISTNAME}
+DIST_SUBDIR=	ruby
+
+MAINTAINER=	mezz@FreeBSD.org
+COMMENT=	Ruby binding for GtkGLExt
+
+LIB_DEPENDS=	gtkglext-x11-1.0.2:${PORTSDIR}/x11-toolkits/gtkglext
+RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/gtk2.so:${PORTSDIR}/x11-toolkits/ruby-gtk2 \
+		${RUBY_SITEARCHLIBDIR}/opengl.so:${PORTSDIR}/graphics/ruby-opengl
+
+USE_RUBY=	yes
+USE_RUBY_EXTCONF=	yes
+
+.include "${.CURDIR}/../../x11/ruby-gnome2/Makefile.common"
+
+WRKSRC=		${RUBY_GNOME_WRKSRC}/gtkglext
+INSTALL_TARGET=	site-install
+
+DOCS=		ChangeLog README
+
+post-install:
+.if !defined(NOPORTDOCS)
+	@${MKDIR} ${RUBY_MODEXAMPLESDIR}
+	@${INSTALL_DATA} ${WRKSRC}/sample/* ${RUBY_MODEXAMPLESDIR}/
+	@${MKDIR} ${RUBY_MODDOCDIR}
+.for f in ${DOCS}
+	@${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_MODDOCDIR}/
+.endfor
+.endif
+
+.include <bsd.port.mk>
