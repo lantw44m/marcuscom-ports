@@ -2,7 +2,8 @@
 # Date created:		9 February
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/x11-toolkits/ruby-pango/Makefile,v 1.12 2005/08/01 08:52:04 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	pango

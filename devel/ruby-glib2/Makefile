@@ -2,7 +2,8 @@
 # Date created:		24 November 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-glib2/Makefile,v 1.14 2005/03/12 11:05:15 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	glib2

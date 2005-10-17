@@ -2,7 +2,8 @@
 # Date created:				15 November 2004
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/ruby-gnomeprintui/Makefile,v 1.1 2004/11/15 19:48:46 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnomeprintui

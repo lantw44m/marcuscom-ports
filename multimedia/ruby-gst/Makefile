@@ -2,7 +2,8 @@
 # Date created:		26 June 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/multimedia/ruby-gst/Makefile,v 1.17 2005/03/12 11:05:16 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gst

@@ -2,7 +2,8 @@
 # Date created:		19 April 1999
 # Whom:			Yasuhiro Fukuma <yasuf@big.or.jp>
 #
-# $FreeBSD: ports/x11-toolkits/ruby-gtk2/Makefile,v 1.38 2005/08/01 08:52:04 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gtk2

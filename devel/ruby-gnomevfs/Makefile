@@ -2,7 +2,8 @@
 # Date created:		10 August 2003
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-gnomevfs/Makefile,v 1.10 2005/03/12 11:05:15 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnomevfs

@@ -2,7 +2,8 @@
 # Date created:				05 April 2004
 # Whom:					Mezz <mezz7@cox.net>
 #
-# $FreeBSD: ports/databases/ruby-libgda/Makefile,v 1.7 2005/03/12 11:05:15 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libgda

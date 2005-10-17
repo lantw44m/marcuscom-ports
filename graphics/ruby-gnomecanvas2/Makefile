@@ -2,7 +2,8 @@
 # Date created:		24 November 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/graphics/ruby-gnomecanvas2/Makefile,v 1.17 2005/07/25 22:24:58 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnomecanvas2

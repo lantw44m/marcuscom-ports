@@ -2,7 +2,8 @@
 # Date created:				15 November 2004
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/ruby-rsvg2/Makefile,v 1.2 2005/03/12 11:05:16 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	rsvg2

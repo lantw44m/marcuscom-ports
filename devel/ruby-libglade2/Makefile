@@ -2,7 +2,8 @@
 # Date created:		8 February 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-libglade2/Makefile,v 1.19 2004/11/15 06:18:33 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libglade2

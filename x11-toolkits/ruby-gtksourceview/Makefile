@@ -2,7 +2,8 @@
 # Date created:				15 August 2004
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/ruby-gtksourceview/Makefile,v 1.4 2005/03/12 11:05:17 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gtksourceview

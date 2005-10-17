@@ -2,7 +2,8 @@
 # Date created:		20 October 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/devel/ruby-gconf2/Makefile,v 1.14 2004/11/15 06:18:33 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gconf2

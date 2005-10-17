@@ -2,7 +2,8 @@
 # Date created:		28 February 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/graphics/ruby-gdk_pixbuf2/Makefile,v 1.25 2005/08/01 08:52:03 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gdk_pixbuf2

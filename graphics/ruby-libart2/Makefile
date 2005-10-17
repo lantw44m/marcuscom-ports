@@ -2,7 +2,8 @@
 # Date created:		1 September 2002
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/graphics/ruby-libart2/Makefile,v 1.9 2004/08/15 07:11:55 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	libart2

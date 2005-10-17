@@ -2,7 +2,8 @@
 # Date created:				05 April 2004
 # Whom:					Mezz <mezz7@cox.net>
 #
-# $FreeBSD: ports/www/ruby-gtkhtml2/Makefile,v 1.6 2005/03/12 11:05:16 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gtkhtml2

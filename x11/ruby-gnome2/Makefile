@@ -2,7 +2,8 @@
 # Date created:		28 February 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/x11/ruby-gnome2/Makefile,v 1.19 2005/08/01 08:52:04 mezz Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnome2
