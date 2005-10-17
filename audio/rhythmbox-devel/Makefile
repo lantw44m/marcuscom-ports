@@ -3,12 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.36 2005/10/14 20:39:55 adamw Exp $
 #
 
 PORTNAME=	rhythmbox
-PORTVERSION=	0.9.0
-PORTREVISION=	1
+PORTVERSION=	0.9.1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.9
@@ -19,7 +18,8 @@ COMMENT=	Audio player for the Gnome 2 desktop environment
 
 LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 		id3tag.2:${PORTSDIR}/audio/libid3tag \
-		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer
+		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
+		dbus-1.1:${PORTSDIR}/devel/dbus
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
@@ -35,7 +35,8 @@ CONFIGURE_ENV=	LIBS="-lm" \
 
 GCONF_SCHEMAS=	rhythmbox.schemas
 
-OPTIONS=	IPOD "Enable iPod support" off
+OPTIONS=	IPOD "Enable iPod support" off \
+		DAAP "Enable iTunes music sharing" off
 
 .include <bsd.port.pre.mk>
 
@@ -53,8 +54,13 @@ USE_GSTREAMER+=		vorbis
 CONFIGURE_ARGS+=	--disable-vorbis --disable-vorbistest
 .endif
 
-.if !defined(WITH_XINE) && defined(WITH_FAAD)
+.if defined(WITH_FAAD)
 USE_GSTREAMER+=		faad
+.endif
+
+.if defined(WITH_DAAP)
+CONFIGURE_ARGS+=	--enable-daap
+LIB_DEPENDS+=		soup-2.2.8:${PORTSDIR}/devel/libsoup
 .endif
 
 pre-everything::
