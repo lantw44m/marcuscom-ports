@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.33 2005/09/06 01:42:08 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.34 2005/10/17 23:43:33 ahze Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	0.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.4
@@ -35,8 +35,8 @@ GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas
 OPTIONS=	DVI		"Enable DVI viewer support"		off \
 		T1LIB		"Enable T1LIB for TYPE1 fonts to DVI (Enables DVI)"	off \
 		NAUTILUS	"Enable Nautilus plugin"		on  \
-		DBUS		"Enable D-BUS support"			off
-#		DJVU		"Enable DJVU support"			off
+		DBUS		"Enable D-BUS support"			off \
+		DJVU		"Enable DJVU support"			off
 
 .include <bsd.port.pre.mk>
 
@@ -73,14 +73,12 @@ DJVU_DIR?=	# empty
 DJVU_DIR?=	-nox11
 .endif
 
-.if 0   # djvulibre needs to be updated to djvulibre-3.5.15
 .if defined(WITH_DJVU)
-LIB_DEPENDS+=		djvulibre.14:${PORTSDIR}/graphics/djvulibre${DJVU_DIR}
+LIB_DEPENDS+=		djvulibre.15:${PORTSDIR}/graphics/djvulibre${DJVU_DIR}
 CONFIGURE_ARGS+=	--enable-djvu
 GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
 .else
 CONFIGURE_ARGS+=	--disable-djvu
-.endif
 .endif
 
 .if defined(WITH_DBUS)
