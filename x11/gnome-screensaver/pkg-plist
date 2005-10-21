@@ -38,6 +38,4 @@ share/locale/sv/LC_MESSAGES/gnome-screensaver.mo
 share/locale/uk/LC_MESSAGES/gnome-screensaver.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-screensaver.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-screensaver.mo
-@dirrm share/gnome/gnome-screensaver/themes
-@dirrm share/gnome/gnome-screensaver
 @dirrm libexec/gnome-screensaver

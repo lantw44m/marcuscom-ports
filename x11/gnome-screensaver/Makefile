@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.18 2005/10/06 01:24:58 marcus Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.19 2005/10/12 22:02:20 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -26,20 +26,37 @@ USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomemenus
 CONFIGURE_ARGS=	--disable-pam \
 		--with-gdm-config=${X11BASE}/etc/gdm/gdm.conf \
-		--with-xscreensaverdir=${X11BASE}/share/xscreensaver/config
+		--with-xscreensaverdir=${XSCREENSAVER_DIR} \
+		--with-xscreensaverhackdir=${X11BASE}/bin/xscreensaver-hacks
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	gnome-screensaver.schemas
 
+PLIST=	${WRKDIR}/pkg-plist
+
+XSCREENSAVER_DIR=	${X11BASE}/share/xscreensaver/config
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%X11BASE%%|${X11BASE}|g' \
-		${WRKSRC}/configure \
-		${WRKSRC}/src/gs-job.c
+		${WRKSRC}/configure
+
+pre-install:
+	@${CP} ${.CURDIR}/pkg-plist ${PLIST}
+	@cd ${XSCREENSAVER_DIR} && ${FIND} -s * -maxdepth 1 -type f -name "*.xml" | \
+		${SED} -e 's:^:share/gnome/gnome-screensaver/themes/xscreensaver/:' | \
+		${SED} -e 's:[.]xml$$:.desktop:' >> ${PLIST}
+	@${ECHO_CMD} @dirrm share/gnome/gnome-screensaver/themes/xscreensaver >> ${PLIST}
+	@${ECHO_CMD} @dirrm share/gnome/gnome-screensaver/themes >> ${PLIST}
+	@${ECHO_CMD} @dirrm share/gnome/gnome-screensaver >> ${PLIST}
 
 post-install:
 	${CHOWN} root ${PREFIX}/libexec/gnome-screensaver-dialog
 	${CHMOD} +s ${PREFIX}/libexec/gnome-screensaver-dialog
+	${MKDIR} ${PREFIX}/share/gnome/gnome-screensaver/themes/xscreensaver
+	cd ${PREFIX}/share/gnome/gnome-screensaver/themes/xscreensaver && \
+		${FIND} -s ${XSCREENSAVER_DIR} -maxdepth 1 -type f -name "*.xml" | \
+			${XARGS} ${WRKSRC}/data/migrate-xscreensaver-config.sh
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>

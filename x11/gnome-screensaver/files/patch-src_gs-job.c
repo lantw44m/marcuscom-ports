@@ -10,16 +10,3 @@
  #include <sys/resource.h>
  #endif
  
-@@ -655,9 +659,11 @@ gs_job_set_widget  (GSJob     *job,
- static const char *known_locations [] = {
-         SAVERDIR,
-         LIBEXECDIR "/xscreensaver",
--        "/usr/X11R6/lib/xscreensaver",
-+        "%%X11BASE%%/lib/xscreensaver",
-         "/usr/libexec/xscreensaver",
-         "/usr/lib/xscreensaver",
-+        "%%X11BASE%%/bin/xscreensaver-hacks",
-+        "%%X11BASE%%/bin",
-         NULL
- };
- 
