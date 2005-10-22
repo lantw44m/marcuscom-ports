@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins-all/Makefile,v 1.1 2005/08/17 19:07:30 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins-all/Makefile,v 1.2 2005/09/14 10:05:57 ahze Exp $
 #
 
 PORTNAME=	gstreamer-plugins-all
@@ -31,7 +31,6 @@ WITHOUT_MPEG2ENC=yes	# Broken from updated mjpegtools
 .if ${OSVERSION} < 500000
 WITHOUT_LIBVISUAL=yes	# Broken on 4.x
 WITHOUT_POLYPAUDIO=yes	# Broken on 4.x
-WITHOUT_SWFDEC=	yes	# Depeneds on liboil, does not build on 4.x
 .endif
 # Shout & Shout2 Conflict
 .if !defined(WITHOUT_SHOUT) && !defined(WITHOUT_SHOUT2)
