@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.37 2005/10/17 14:39:32 marcus Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.38 2005/10/17 18:19:37 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
 PORTVERSION=	0.9.1
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.9
@@ -60,9 +61,14 @@ USE_GSTREAMER+=		faad
 .endif
 
 .if defined(WITH_DAAP)
-CONFIGURE_ARGS+=	--enable-daap
+CONFIGURE_ARGS+=	--enable-daap  --with-mdns=howl
 LIB_DEPENDS+=		soup-2.2.8:${PORTSDIR}/devel/libsoup \
 			howl.0:${PORTSDIR}/net/howl
+.else
+.if exists(${LOCALBASE}/lib/libhowl.a)
+LIB_DEPENDS+=		howl.0:${PORTSDIR}/net/howl
+.endif
+CONFIGURE_ARGS+=	--disable-daap
 .endif
 
 pre-everything::

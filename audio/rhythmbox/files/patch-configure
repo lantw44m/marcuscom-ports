@@ -1,5 +1,5 @@
---- configure.orig	Mon Oct 17 10:21:14 2005
-+++ configure	Mon Oct 17 10:22:47 2005
+--- configure.orig	Sun Oct 23 10:47:35 2005
++++ configure	Sun Oct 23 11:03:22 2005
 @@ -21603,7 +21603,7 @@
  	enable_hal02=yes
  fi
@@ -45,3 +45,12 @@
      # Extract the first word of "gst-inspect-0.8", so it can be a program name with args.
  set dummy gst-inspect-0.8; ac_word=$2
  echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -24866,7 +24866,7 @@
+   exec_prefix=$exec_prefix_save
+ 
+ 
+-DBUS_SERVICES_DIR="$DATADIR/dbus-1/services"
++DBUS_SERVICES_DIR="$PREFIX/share/dbus-1/services"
+ 
+ 
+ cat >>confdefs.h <<_ACEOF
