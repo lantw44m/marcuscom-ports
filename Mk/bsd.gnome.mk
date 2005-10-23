@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.332 2005/09/22 05:42:47 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.333 2005/10/11 22:08:17 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -82,6 +82,8 @@ gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | ${XARGS} $
 				's|-lpthread|${PTHREAD_LIBS}|g ; \
 				 s|DATADIRNAME=lib|DATADIRNAME=share|g ; \
 				 s|{datadir}/locale|{prefix}/share/locale|g ; \
+				 s|DATADIR/dbus-1/services|prefix/share/dbus-1/services|g ; \
+				 s|datadir/dbus-1/services|prefix/share/dbus-1/services|g ; \
 				 s|{libdir}/locale|{prefix}/share/locale|g'
 
 lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" -type f | ${XARGS} ${REINPLACE_CMD} -e \
