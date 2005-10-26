@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-themes/beastie/Makefile,v 1.3 2005/09/06 06:01:04 ahze Exp $
+#    $MCom: ports/x11-themes/beastie/Makefile,v 1.5 2005/09/09 01:12:43 ahze Exp $
 #
 
 PORTNAME=	beastie
-PORTVERSION=	05.07.11
+PORTVERSION=	05.10.26
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	ahze
