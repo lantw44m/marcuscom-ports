@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla-devel/Makefile,v 1.8 2005/09/10 17:49:54 pav Exp $
+#    $MCom: ports/www/mozilla-devel/Makefile,v 1.9 2005/09/23 20:49:58 mezz Exp $
 #
 
 PORTNAME?=	mozilla
@@ -221,7 +221,8 @@ post-patch:
 	@${FIND} ${WRKSRC}/other-licenses/libical -name "*.c" | ${XARGS} \
 		${REINPLACE_CMD} 's|<malloc.h>|<stdlib.h>|g'
 	@${REINPLACE_CMD} -e 's|-lc_r|${PTHREAD_LIBS}|g ; \
-		s|-lpthread|${PTHREAD_LIBS}|g' \
+		s|-lpthread|${PTHREAD_LIBS}|g ; \
+		s|/usr/X11R6|${X11BASE}|g' \
 		${WRKSRC}/configure \
 		${WRKSRC}/nsprpub/configure
 	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
