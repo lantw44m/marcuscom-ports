@@ -3,11 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.3 2005/07/01 18:00:49 marcus Exp $
+#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.4 2005/08/19 01:38:17 mezz Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.0.0
+PORTVERSION=	2.0.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	anjuta
@@ -70,6 +70,8 @@ post-configure:
 		s|%%PREFIX%%|${PREFIX}|g' < ${FILESDIR}/anjuta \
 		> ${WRKDIR}/anjuta
 	@${REINPLACE_CMD} -e 's|subversion||g' ${WRKSRC}/plugins/Makefile
+	@${REINPLACE_CMD} -e 's|/bin/sh|${LOCALBASE}/bin/bash|g' \
+		${WRKSRC}/global-tags/create_global_tags.sh
 
 post-build:
 	@cd ${WRKSRC}/global-tags && ${SETENV} PKG_CONFIG_PATH="${PREFIX}/libdata/pkgconfig:${LOCALBASE}/libdata/pkgconfig:${X11BASE}/libdata/pkgconfig" bash create_global_tags.sh

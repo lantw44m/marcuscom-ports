@@ -81,6 +81,7 @@ lib/anjuta/libanjuta-build-basic-autotools.so.0
 lib/anjuta/libanjuta-class-gen.a
 lib/anjuta/libanjuta-class-gen.so
 lib/anjuta/libanjuta-class-gen.so.0
+lib/anjuta/libanjuta-cvs-plugin.a
 lib/anjuta/libanjuta-cvs-plugin.so
 lib/anjuta/libanjuta-cvs-plugin.so.0
 lib/anjuta/libanjuta-debug-manager.a
@@ -110,10 +111,13 @@ lib/anjuta/libanjuta-glade.so.0
 lib/anjuta/libanjuta-gtodo.a
 lib/anjuta/libanjuta-gtodo.so
 lib/anjuta/libanjuta-gtodo.so.0
+lib/anjuta/libanjuta-loader.a
 lib/anjuta/libanjuta-loader.so
 lib/anjuta/libanjuta-loader.so.0
+lib/anjuta/libanjuta-macro.a
 lib/anjuta/libanjuta-macro.so
 lib/anjuta/libanjuta-macro.so.0
+lib/anjuta/libanjuta-message-view.a
 lib/anjuta/libanjuta-message-view.so
 lib/anjuta/libanjuta-message-view.so.0
 lib/anjuta/libanjuta-patch.a
@@ -122,6 +126,7 @@ lib/anjuta/libanjuta-patch.so.0
 lib/anjuta/libanjuta-project-import.a
 lib/anjuta/libanjuta-project-import.so
 lib/anjuta/libanjuta-project-import.so.0
+lib/anjuta/libanjuta-project-manager.a
 lib/anjuta/libanjuta-project-manager.so
 lib/anjuta/libanjuta-project-manager.so.0
 lib/anjuta/libanjuta-project-wizard.a
@@ -132,6 +137,7 @@ lib/anjuta/libanjuta-sample.so
 lib/anjuta/libanjuta-sample.so.0
 %%SVN%%lib/anjuta/libanjuta-subversion.so
 %%SVN%%lib/anjuta/libanjuta-subversion.so.0
+lib/anjuta/libanjuta-symbol-browser.a
 lib/anjuta/libanjuta-symbol-browser.so
 lib/anjuta/libanjuta-symbol-browser.so.0
 lib/anjuta/libanjuta-terminal.a
@@ -156,15 +162,15 @@ lib/libanjuta.a
 lib/libanjuta.so
 lib/libanjuta.so.0
 libdata/pkgconfig/libanjuta-1.0.pc
-%%DOCSDIR%%/AUTHORS
-%%DOCSDIR%%/COPYING
-%%DOCSDIR%%/ChangeLog
-%%DOCSDIR%%/FUTURE
-%%DOCSDIR%%/INSTALL
-%%DOCSDIR%%/NEWS
-%%DOCSDIR%%/README
-%%DOCSDIR%%/ScintillaDoc.html
-%%DOCSDIR%%/TODO
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/FUTURE
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/ScintillaDoc.html
+%%PORTDOCS%%%%DOCSDIR%%/TODO
 share/doc/libanjuta/AnjutaLauncher.html
 share/doc/libanjuta/AnjutaPlugin.html
 share/doc/libanjuta/AnjutaPreferences.html
@@ -264,6 +270,7 @@ share/gnome/anjuta/glade/anjuta.glade
 share/gnome/anjuta/glade/applogo.png
 share/gnome/anjuta/glade/appwizard.png
 share/gnome/anjuta/glade/layout.glade
+share/gnome/anjuta/glade/patch-plugin.glade
 share/gnome/anjuta/glade/start-with-import.png
 share/gnome/anjuta/glade/start-with-open.png
 share/gnome/anjuta/glade/start-with-wizard.png
@@ -392,6 +399,10 @@ share/gnome/anjuta/properties/verilog.properties
 share/gnome/anjuta/properties/vhdl.properties
 share/gnome/anjuta/properties/yaml.properties
 share/gnome/anjuta/system.tags
+share/gnome/anjuta/tools/find-fixmes.pl
+share/gnome/anjuta/tools/prepare-changelog.pl
+share/gnome/anjuta/tools/tools-2.xml
+share/gnome/anjuta/tools/translation-status.pl
 share/gnome/anjuta/ui/anjuta-build-basic-autotools-plugin.ui
 share/gnome/anjuta/ui/anjuta-cvs.ui
 share/gnome/anjuta/ui/anjuta-debug-manager.ui
@@ -612,39 +623,39 @@ share/locale/tr/LC_MESSAGES/anjuta.mo
 share/locale/uk/LC_MESSAGES/anjuta.mo
 share/locale/zh_CN/LC_MESSAGES/anjuta.mo
 share/locale/zh_TW/LC_MESSAGES/anjuta.mo
-share/mime/application/x-anjuta.xml
 share/mime/packages/anjuta.xml
 @dirrm share/gnome/pixmaps/anjuta
 @dirrm share/gnome/anjuta/ui
+@dirrm share/gnome/anjuta/tools
 @unexec rm  %D/share/gnome/anjuta/tags/*.anjutatags.gz 2>&1 >/dev/null || true
 @dirrm share/gnome/anjuta/tags
 @dirrm share/gnome/anjuta/properties
-@dirrm share/gnome/anjuta/project/xlib-dock/src
-@dirrm share/gnome/anjuta/project/xlib-dock/po
-@dirrm share/gnome/anjuta/project/xlib-dock/
 @dirrm share/gnome/anjuta/project/xlib/src
 @dirrm share/gnome/anjuta/project/xlib/po
-@dirrm share/gnome/anjuta/project/xlib/
+@dirrm share/gnome/anjuta/project/xlib-dock/src
+@dirrm share/gnome/anjuta/project/xlib-dock/po
+@dirrm share/gnome/anjuta/project/xlib-dock
+@dirrm share/gnome/anjuta/project/xlib
 @dirrm share/gnome/anjuta/project/wxwin/src
 @dirrm share/gnome/anjuta/project/wxwin/po
-@dirrm share/gnome/anjuta/project/wxwin/
+@dirrm share/gnome/anjuta/project/wxwin
 @dirrm share/gnome/anjuta/project/terminal/src
 @dirrm share/gnome/anjuta/project/terminal/po
-@dirrm share/gnome/anjuta/project/terminal/
+@dirrm share/gnome/anjuta/project/terminal
 @dirrm share/gnome/anjuta/project/java/src
-@dirrm share/gnome/anjuta/project/java/
+@dirrm share/gnome/anjuta/project/java
 @dirrm share/gnome/anjuta/project/gtkmm/src
 @dirrm share/gnome/anjuta/project/gtkmm/po
-@dirrm share/gnome/anjuta/project/gtkmm/
+@dirrm share/gnome/anjuta/project/gtkmm
 @dirrm share/gnome/anjuta/project/gtk/src
 @dirrm share/gnome/anjuta/project/gtk/po
-@dirrm share/gnome/anjuta/project/gtk/
+@dirrm share/gnome/anjuta/project/gtk
 @dirrm share/gnome/anjuta/project/gnome/src
 @dirrm share/gnome/anjuta/project/gnome/po
-@dirrm share/gnome/anjuta/project/gnome/
+@dirrm share/gnome/anjuta/project/gnome
 @dirrm share/gnome/anjuta/project/anjuta-plugin/src
 @dirrm share/gnome/anjuta/project/anjuta-plugin/po
-@dirrm share/gnome/anjuta/project/anjuta-plugin/
+@dirrm share/gnome/anjuta/project/anjuta-plugin
 @dirrm share/gnome/anjuta/project
 @dirrm share/gnome/anjuta/profiles
 @dirrm share/gnome/anjuta/gtodo
@@ -652,9 +663,11 @@ share/mime/packages/anjuta.xml
 @dirrm share/gnome/anjuta/class-templates
 @dirrm share/gnome/anjuta/build
 @dirrm share/gnome/anjuta
-%%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrm share/doc/libanjuta
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrm lib/anjuta
 @dirrm include/libanjuta-1.0/libanjuta/interfaces
 @dirrm include/libanjuta-1.0/libanjuta
 @dirrm include/libanjuta-1.0
+@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
