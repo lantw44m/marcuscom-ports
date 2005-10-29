@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.78 2005/10/04 11:35:27 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.79 2005/10/29 22:31:17 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -78,15 +78,6 @@ CFLAGS+=	-mno-sse2
 .endif
 
 pre-everything::
-#.if !defined(WITH_DROPSHADOW)
-#	@${ECHO_MSG}
-#	@${ECHO_MSG} "If you want to compile with experimental menu dropshadow patch,"
-#	@${ECHO_MSG} "hit Ctrl-C right now and use make \"WITH_DROPSHADOW=yes\""
-#	@${ECHO_MSG} "NOTE: This option is not supported by the FreeBSD GNOME Team."
-#	@${ECHO_MSG} "If the patch does not work or causes the build to fail, just"
-#	@${ECHO_MSG} "stop using the patch; we will not further debug it."
-#	@${ECHO_MSG}
-#.endif
 .if !defined(WITH_DEBUG)
 	@${ECHO_MSG}
 	@${ECHO_MSG} "Enable or disable debugging with the following knob"
