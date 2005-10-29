@@ -319,7 +319,6 @@ java/eclipse-vep
 java/eclipse-vep-examples
 java/eclipse-viplugin
 java/eclipse-webtools
-databases/libgdamm
 devel/gconfmm
 devel/gconfmm26
 devel/gnome-vfsmm
@@ -1054,7 +1053,6 @@ deskutils/multisync
 deskutils/multisync-backup
 deskutils/multisync-syncml
 deskutils/xchm
-editors/conglomerate
 games/bygfoot
 games/crack-attack
 graphics/gthumb
@@ -1100,7 +1098,6 @@ audio/zinf
 biology/gperiodic
 cad/fandango
 cad/gerbv
-cad/oregano
 cad/pythoncad
 cad/transcalc
 chinese/BBMan
@@ -1372,7 +1369,6 @@ textproc/wv2
 x11/gromit
 games/macopix
 japanese/gaim
-accessibility/dasher
 multimedia/freevo
 irc/bitlbee
 deskutils/kompose
