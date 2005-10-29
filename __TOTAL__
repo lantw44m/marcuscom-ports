@@ -225,7 +225,6 @@ multimedia/istanbul
 sysutils/gnomebaker
 japanese/scim-uim
 finance/grisbi
-french/mozilla-flp
 games/libmaitretarot
 games/libmt_client
 games/maitretarot
@@ -233,11 +232,6 @@ games/mt_dolphin_ia
 games/mt_gtk_client
 lang/gambas
 sysutils/xvidcap
-www/adblock
-www/adblock-firefox
-www/bugmenot
-www/bugmenot-firefox
-www/horde-php5
 arabic/katoob
 graphics/fyre
 net-mgmt/etherape
