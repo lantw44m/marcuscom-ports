@@ -99,8 +99,6 @@ net/lanbrowsing
 sysutils/kdeadmin3
 sysutils/klaptopdaemon
 www/kdewebdev
-x11/kde-lite
-x11/kde3
 x11/kdebase3
 x11/kdelibs3-nocups
 x11/xscreensaver-kde
@@ -294,14 +292,10 @@ java/eclipse-vep-examples
 java/eclipse-viplugin
 java/eclipse-webtools
 devel/gconfmm
-devel/gconfmm26
-devel/gnome-vfsmm
 devel/guikachu
 devel/libbonobomm
 devel/libglademm
-devel/libglademm24
 graphics/libgnomecanvasmm
-graphics/libgnomecanvasmm26
 print/libgnomeprintmm
 x11/fast-user-switch-applet
 x11/libgnomemm
@@ -1181,7 +1175,6 @@ x11-clocks/gdesklets-praytime
 x11-clocks/xfce4-datetime-plugin
 x11-themes/qnxstyle
 x11-toolkits/erlgtk
-x11-toolkits/gtkglext
 x11-toolkits/gtkglextmm
 x11-toolkits/gtkscintilla
 x11-toolkits/guis
