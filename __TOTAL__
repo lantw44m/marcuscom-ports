@@ -677,7 +677,6 @@ devel/anjuta
 devel/dbus
 devel/desktop-file-utils
 devel/gamin
-devel/gnome2-hacker-tools
 devel/gnomebuild
 devel/gob2
 devel/gtkmozedit
@@ -700,7 +699,6 @@ graphics/gimp-help
 graphics/gpdf
 graphics/gtkcairo
 graphics/inkscape
-graphics/libgnomecanvas
 graphics/passepartout
 graphics/sodipodi
 irc/xchat2
