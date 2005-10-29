@@ -3,7 +3,7 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.20 2005/09/05 13:21:13 kwm Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.21 2005/09/21 17:55:12 marcus Exp $
 #
 
 PORTNAME=	totem
@@ -55,7 +55,7 @@ PLIST_SUB=	GSTREAMER="@comment "
 .endif
 
 .if defined(WITH_DVDNAV) && !defined(WITHOUT_DVDNAV)
-LIB_DEPENDS+=	dvdnav.3:${PORTSDIR}/multimedia/libdvdnav
+LIB_DEPENDS+=	dvdnav.4:${PORTSDIR}/multimedia/libdvdnav
 .endif
 
 .if defined(WITH_CDROM_DEVICE)
