@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/libgtk-java/Makefile,v 1.15 2005/10/27 03:22:58 marcus Exp $
 #
 
 PORTNAME=	libgtk-java
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_JAVA=	yes
 JAVA_VERSION=	1.2+
 JAVA_OS=	native

@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/libglade-java/Makefile,v 1.7 2005/10/27 03:24:32 marcus Exp $
 #
 
 PORTNAME=	libglade-java
@@ -25,7 +25,7 @@ USE_BZIP2=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_JAVA=	yes
 USE_GCC=	3.4+
 JAVA_VERSION=	1.2+

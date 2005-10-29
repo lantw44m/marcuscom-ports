@@ -3,6 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	glib-java
@@ -18,7 +19,7 @@ COMMENT=	Java wrapper GLib 2
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 INSTALLS_SHLIB=	yes
-USE_LIBTOOL_VER=15
+USE_AUTOTOOLS=	libtool:15
 USE_JAVA=	yes
 JAVA_VERSION=	1.2+
 JAVA_OS=	native
