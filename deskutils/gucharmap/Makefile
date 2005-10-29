@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.10 2005/09/16 19:39:23 bland Exp $
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.11 2005/10/14 20:39:56 adamw Exp $
 #
 
 PORTNAME=	gucharmap
@@ -42,7 +42,7 @@ WITH_GNOME=	yes
 
 .if ${HAVE_GNOME:Mlibgnomeui}!=""
 USE_GNOME+=	libgnomeui
-PKGNAMESUFFIX=	-gnome
+PKGNAMESUFFIX:=	-gnome
 .else
 CONFIGURE_ARGS=	--disable-gnome
 .endif

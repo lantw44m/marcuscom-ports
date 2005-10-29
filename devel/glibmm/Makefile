@@ -3,7 +3,7 @@
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glibmm/Makefile,v 1.20 2005/09/11 18:52:16 marcus Exp $
+#   $MCom: ports/devel/glibmm/Makefile,v 1.21 2005/10/20 06:44:38 marcus Exp $
 #
 
 PORTNAME=	glibmm
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ interfaces for glib2
 
-LIB_DEPENDS=    sigc-2.0.0:${PORTSDIR}/devel/libsigc++20
+LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_BZIP2=	yes

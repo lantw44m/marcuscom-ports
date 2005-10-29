@@ -3,7 +3,7 @@
 # Whom:                 Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/editors/abiword/Makefile,v 1.1 2005/10/11 19:28:54 mezz Exp $
 #
 
 PORTNAME=	abiword
@@ -68,7 +68,7 @@ PLIST_SUB+=		DICT:=""
 .if ${HAVE_GNOME:Mlibgnomeui}!=""
 USE_GNOME+=		libgnomeui
 CONFIGURE_ARGS+=	--enable-gnome
-PKGNAMESUFFIX=		-gnome
+PKGNAMESUFFIX:=		-gnome
 GNOME_ENABLED=		yes
 .endif
 

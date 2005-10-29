@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/editors/abiword-plugins/Makefile,v 1.15 2005/10/11 19:28:56 mezz Exp $
 #
 
 PORTNAME=	abiword
@@ -19,8 +19,6 @@ COMMENT=	Multi-plugins for AbiWord
 
 BUILD_DEPENDS=	AbiWord-${ABIVERSION}:${PORTSDIR}/editors/abiword
 RUN_DEPENDS=	AbiWord-${ABIVERSION}:${PORTSDIR}/editors/abiword
-
-CONFLICTS=	abiword-plugins-[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes

@@ -3,7 +3,7 @@
 # Whom:					lewiz <purple@lewiz.net>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/accessibility/dasher/Makefile,v 1.17 2005/10/14 20:39:55 adamw Exp $
 #
 
 PORTNAME=	dasher
@@ -56,6 +56,5 @@ patch-autotools:
 			$$file.tmp > $$file; \
 		${RM} $$file.tmp; \
 	done);
-
 
 .include <bsd.port.post.mk>

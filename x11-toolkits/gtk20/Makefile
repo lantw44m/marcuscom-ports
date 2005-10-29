@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.77 2005/10/04 02:16:14 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.78 2005/10/04 11:35:27 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -19,13 +19,6 @@ MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.8,} \
 MASTER_SITE_SUBDIR=	gtk/v${PORTVERSION:R}
 DISTNAME=	gtk+-${PORTVERSION}
 DIST_SUBDIR=	gnome2
-
-.if defined(WITH_DROPSHADOW)
-#PATCH_SITES=	${MASTER_SITE_SOURCEFORGE}
-#PATCH_SITE_SUBDIR=	xfce
-#PATCHFILES=	gtk+-2.4.0-menushadow.patch
-#PATCH_DIST_STRIP=	-p1
-.endif
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gimp Toolkit for X11 GUI (current stable version)

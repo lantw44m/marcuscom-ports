@@ -3,7 +3,7 @@
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/gconfmm26/Makefile,v 1.6 2005/10/14 20:39:56 adamw Exp $
 #
 
 PORTNAME=	gconfmm
@@ -39,7 +39,6 @@ post-patch:
 		${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e "s|\(-lglibmm\)|-L\$$(GMM_PROCDIR)/../.. \1|" \
 		${WRKSRC}/tools/extra_defs_gen/Makefile.in
-
 
 patch-autotools:
 	@(cd ${PATCH_WRKSRC}; \

@@ -3,7 +3,7 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity/Makefile,v 1.43 2005/09/06 04:24:36 marcus Exp $
+#   $MCom: ports/x11/zenity/Makefile,v 1.44 2005/10/04 04:12:27 marcus Exp $
 #
 
 PORTNAME=	zenity
@@ -11,7 +11,7 @@ PORTVERSION=	2.12.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.12
-DIST_SUBDIR=    gnome2
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	klammer@webonaut.com
 COMMENT=	Display GNOME dialogs from the command line
