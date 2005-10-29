@@ -3,7 +3,6 @@
 # Whom:				Anders Andersson <anders@hack.org>
 #
 # $FreeBSD$
-#    $MCom: ports/cad/oregano/Makefile,v 1.2 2005/08/09 04:50:36 ahze Exp $
 #
 
 PORTNAME=	oregano
