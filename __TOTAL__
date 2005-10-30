@@ -1116,17 +1116,7 @@ vietnamese/xvnkb
 devel/kscope
 sysutils/gdmap
 x11-toolkits/ocaml-lablgtk2
-astro/gdesklets-seti
-audio/gdesklets-cornerxmms
 deskutils/gdesklets
-deskutils/gdesklets-sensor-displayconstraints
-deskutils/gdesklets-sensor-psi_iconbutton
-deskutils/gdesklets-sensor-psi_theme
-deskutils/splashsetter
-mail/gdesklets-imapmail
-net/gdesklets-sensor-psi_network
-sysutils/gdesklets-multitail
-x11/gtstarter
 java/kaffe
 www/swfdec-plugin
 multimedia/xvid4conf
