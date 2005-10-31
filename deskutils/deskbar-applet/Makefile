@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.1 2005/07/13 12:25:49 ahze Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.2 2005/10/31 07:49:53 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
 PORTVERSION=	0.8.3
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	browserbookapp
@@ -37,5 +38,9 @@ PLIST_SUB+=	EVO=""
 CONFIGURE_ARGS+=--disable-evolution
 PLIST_SUB+=	EVO="@comment "
 .endif
+
+post-patch:
+	@${FIND} ${WRKSRC}/deskbar -name "*.py" | ${XARGS} ${REINPLACE_CMD} -e \
+		's|/usr/share/applications|${X11BASE}/share/gnome/applications|g'
 
 .include <bsd.port.post.mk>
