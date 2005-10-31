@@ -758,16 +758,6 @@ multimedia/xfce4-xmms-controller-plugin
 graphics/xsane
 net/ortp
 emulators/uae
-audio/yammi
-deskutils/ksmoothdock
-graphics/digikam
-graphics/digikam-doc
-graphics/digikamimageplugins
-graphics/digikamimageplugins-doc
-graphics/kipi-plugins
-graphics/libkexif
-graphics/libkipi
-graphics/pixieplus
 x11-wm/pager
 textproc/gmetadom
 x11-toolkits/gtkmathview
