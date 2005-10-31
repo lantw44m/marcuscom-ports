@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.113 2005/10/05 13:56:16 marcus Exp $
+#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.114 2005/10/22 06:16:43 marcus Exp $
 #
 
 PORTNAME=	gnomevfs2
 PORTVERSION=	2.12.1.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.12
@@ -42,22 +42,10 @@ GCONF_SCHEMAS=	desktop_default_applications.schemas \
 		system_http_proxy.schemas system_smb.schemas \
 		system_storage.schemas
 
+OPTIONS=	SAMBA "Enable SMB volume support" on \
+		MDNS "Enable Bonjour/Rendezvous support" on
+
 .include <bsd.port.pre.mk>
-
-.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
-.undef WITHOUT_SAMBA
-.undef WITHOUT_MDNS
-WITH_MDNS=		yes
-WITH_SAMBA=		yes
-.endif
-
-.if exists(${LOCALBASE}/lib/libsmbclient.so)
-WITH_SAMBA=		yes
-.endif
-
-.if exists(${LOCALBASE}/lib/libhowl.so)
-WITH_MDNS=		yes
-.endif
 
 .if exists(${LOCALBASE}/lib/libfam.so) || !defined(WITHOUT_FAM)
 USE_FAM=	yes
@@ -67,15 +55,18 @@ USE_FAM=	yes
 LIB_DEPENDS+=	krb5:${PORTSDIR}/security/heimdal
 .endif
 
-.if defined(WITH_SAMBA)
+.if !defined(WITHOUT_SAMBA)
 LIB_DEPENDS+=	smbclient.0:${PORTSDIR}/net/samba-libsmbclient
 PLIST_SUB+=	SAMBA=""
 .else
 PLIST_SUB+=	SAMBA="@comment "
+CONFIGURE_ARGS+=--disable-samba
 .endif
 
-.if defined(WITH_MDNS)
+.if !defined(WITHOUT_MDNS)
 LIB_DEPENDS+=	howl:${PORTSDIR}/net/howl
+.else
+CONFIGURE_ARGS+=--disable-howl
 .endif
 
 post-patch:
