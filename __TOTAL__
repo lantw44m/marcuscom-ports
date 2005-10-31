@@ -611,9 +611,6 @@ graphics/giram
 graphics/pho
 x11/decurs
 x11/gtk-themepreview
-x11-themes/gtk-aluminumalloy-cryogenic-theme
-x11-themes/gtk-aluminumalloy-smog-theme
-x11-themes/gtk-aluminumalloy-toxic-theme
 accessibility/at-spi
 accessibility/gail
 accessibility/gnomemag
