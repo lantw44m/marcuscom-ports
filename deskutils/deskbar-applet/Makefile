@@ -3,34 +3,39 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.1 2005/07/13 12:25:49 ahze Exp $
 #
 
 PORTNAME=	deskbar-applet
-PORTVERSION=	0.3
+PORTVERSION=	0.8.3
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	browserbookapp
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome panel applet similar to Google's (Windows only) Deskbar
 
-USE_GNOME=	gnomeprefix pygnomeextras
-USE_PYTHON=	yes
-USE_REINPLACE=	yes
 USE_X_PREFIX=	yes
-NO_BUILD=	yes
+USE_GNOME=	gnomeprefix gnomehack pygnomeextras
+USE_PYTHON=	yes
+USE_GMAKE=	yes
+USE_AUTOTOOLS=	libtool:15
+CONFIGURE_ARGS=	--disable-beagle
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|"/usr|"${PREFIX}|' \
-		${WRKSRC}/deskbar-applet.py \
-		${WRKSRC}/DeskbarApplet.server
+GCONF_SCHEMAS=	deskbar-applet.schemas
 
-do-install:
-	${MKDIR} ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/deskbar-applet/* ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/DeskbarApplet.server ${PREFIX}/libdata/bonobo/servers
-	${INSTALL_SCRIPT} ${WRKSRC}/deskbar-applet.py ${PREFIX}/libexec
+OPTIONS=	EVO "Enable evolution support" on
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if !defined(WITHOUT_EVO)
+USE_GNOME+=	evolutiondataserver
+PLIST_SUB+=	EVO=""
+.else
+CONFIGURE_ARGS+=--disable-evolution
+PLIST_SUB+=	EVO="@comment "
+.endif
+
+.include <bsd.port.post.mk>
