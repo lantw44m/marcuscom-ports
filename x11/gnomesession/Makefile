@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomesession/Makefile,v 1.65 2005/09/09 03:05:43 adamw Exp $
+#   $MCom: ports/x11/gnomesession/Makefile,v 1.66 2005/09/18 16:00:06 adamw Exp $
 #
 
 PORTNAME=	gnomesession
 PORTVERSION=	2.12.0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
@@ -36,7 +37,7 @@ MAN1=		gnome-session.1 gnome-wm.1 session-properties.1 \
 MAN5=		default.session.5
 GCONF_SCHEMAS=	gnome-session.schemas
 
-SPLASHES=	freebsd-splashes-gnome-2.12.tar
+SPLASHES=	freebsd-splashes-gnome-2.12.1.tar
 
 post-extract:
 	cd ${WRKDIR} && ${TAR} xf ${DISTDIR}/${DIST_SUBDIR}/${SPLASHES}
@@ -44,9 +45,9 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/gnome-session/gnome-splash.png \
 		${PREFIX}/share/gnome/pixmaps/splash/original-gnome-splash.png
-	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/andreas-splash-2.12.png \
+	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/domix-splash-2.12.png \
 		${PREFIX}/share/gnome/pixmaps/splash/gnome-splash.png
-.for splash in adamw-piggy-2.12.png adamw-trophy-2.12.png andreas-slogan-2.12.png andreas-splash-2.12.png pascal-fork-2.12.png
+.for splash in MaMBaNgGaoX-2.12.png adamw-piggy-2.12.png adamw-trophy-2.12.png andreas-slogan-2.12.png andreas-splash-2.12.png domix-splash-2.12.png domix-splash2-2.12.png mumija-2.12.png mumija2-2.12.png mumija3-2.12.png tremulant-2.12.png tremulant-blood-2.12.png tremulant-brushed-metal-2.12.png 
 	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/${splash} \
 		${PREFIX}/share/gnome/pixmaps/splash
 .endfor
