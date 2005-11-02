@@ -3,12 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.2 2005/10/31 07:49:53 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.3 2005/10/31 08:24:28 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
-PORTVERSION=	0.8.3
-PORTREVISION=	1
+PORTVERSION=	0.8.4
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	browserbookapp
@@ -21,6 +20,7 @@ USE_GNOME=	gnomeprefix gnomehack pygnomeextras
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
+USE_REINPLACE=	yes
 CONFIGURE_ARGS=	--disable-beagle
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
@@ -42,5 +42,8 @@ PLIST_SUB+=	EVO="@comment "
 post-patch:
 	@${FIND} ${WRKSRC}/deskbar -name "*.py" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|/usr/share/applications|${X11BASE}/share/gnome/applications|g'
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
+		s|%%X11BASE%%|${X11BASE}|g' \
+		${WRKSRC}/deskbar/handler_utils.py
 
 .include <bsd.port.post.mk>
