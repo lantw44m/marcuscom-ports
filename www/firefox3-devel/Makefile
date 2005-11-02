@@ -3,11 +3,11 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox-devel/Makefile,v 1.21 2005/10/09 19:40:40 marcus Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.22 2005/10/09 19:43:52 marcus Exp $
 #
 
 PORTNAME=	firefox
-DISTVERSION=	1.5b2
+DISTVERSION=	1.5rc1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -52,7 +52,7 @@ EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude */CVS/* \
 FIREFOX=	${PORTNAME}
 FF_SUFX=	-devel
 FF=		${FIREFOX}${FF_SUFX}
-FF_VER=		1.4.1
+FF_VER=		1.5
 #FF_VER=	${PORTVERSION}
 
 FIREFOX_ICON=		${FF}.xpm
