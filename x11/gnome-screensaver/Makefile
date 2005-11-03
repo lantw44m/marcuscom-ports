@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.21 2005/10/24 15:10:19 marcus Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.22 2005/10/24 18:41:49 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	0.0.17
+PORTVERSION=	0.0.18
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.0
