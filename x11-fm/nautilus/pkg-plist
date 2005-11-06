@@ -13,9 +13,6 @@ include/nautilus/libnautilus-extension/nautilus-property-page.h
 lib/libnautilus-extension.a
 lib/libnautilus-extension.so
 lib/libnautilus-extension.so.1
-lib/libnautilus-private.a
-lib/libnautilus-private.so
-lib/libnautilus-private.so.2
 libdata/bonobo/servers/Nautilus_shell.server
 libdata/pkgconfig/libnautilus-extension.pc
 share/gnome/applications/nautilus-computer.desktop
