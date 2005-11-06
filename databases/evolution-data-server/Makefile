@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.63 2005/10/03 23:58:49 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.64 2005/10/09 20:44:42 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	1.4.1.1
+PORTVERSION=	1.5.1
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.4
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -41,7 +41,7 @@ CONFIGURE_ARGS=	--enable-static \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
-PLIST_SUB=	VERSION="1.4" EVO_VERSION="1.2"
+PLIST_SUB=	VERSION="1.6" EVO_VERSION="1.2"
 
 .include <bsd.port.pre.mk>
 
