@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.84 2005/09/04 18:13:33 marcus Exp $
+#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.85 2005/10/03 15:29:07 ahze Exp $
 #
 
 PORTNAME=	gnomecontrolcenter2
-PORTVERSION=	2.12.1
+PORTVERSION=	2.13.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/control-center/2.12
+MASTER_SITE_SUBDIR=	sources/control-center/2.13
 DISTNAME=	control-center-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -27,7 +27,7 @@ GNOME_DESKTOP_VERSION=2
 USE_GSTREAMER=	yes
 WANT_GNOME=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack metacity nautilus2 \
-		gnomemenus desktopfileutils
+		gnomemenus desktopfileutils nautilus2
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
@@ -38,6 +38,7 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		apps_gnome_settings_daemon_keybindings.schemas \
 		apps_gnome_settings_daemon_screensaver.schemas \
 		desktop_gnome_font_rendering.schemas \
+		desktop_gnome_peripherals_keyboard.schemas \
 		desktop_gnome_peripherals_keyboard_xkb.schemas \
 		fontilus.schemas themus.schemas
 
