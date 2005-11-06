@@ -3,15 +3,14 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.72 2005/10/09 07:01:20 marcus Exp $
+#    $MCom$
 #
 
 PORTNAME=	librsvg2
-PORTVERSION=	2.12.7
-PORTREVISION=	1
+PORTVERSION=	2.13.0
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.12
+MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.13
 DISTNAME=	librsvg-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
@@ -37,7 +36,9 @@ CONFIGURE_ARGS=	--with-svgz \
 		--disable-gtk-doc \
 		--without-gimp \
 		--with-croco \
-		--disable-gnome-vfs
+		--disable-gnome-vfs \
+		--enable-gtk-theme \
+		--with-art
 
 CROCO_VERSION=	0.6
 GTK_VERSION=	2.4.0
@@ -46,10 +47,13 @@ PLIST_SUB=	GTK_VERSION=${GTK_VERSION}
 
 MAN1=		rsvg.1
 
-OPTIONS=	MOZILLA_PLUGIN "Enable the SVG browser plug-in" no
+#OPTIONS=	MOZILLA_PLUGIN "Enable the SVG browser plug-in" no
 
 .include <bsd.port.pre.mk>
 
+# disable mozilla stuff
+
+.if 0
 .if defined(WITH_MOZILLA_PLUGIN)
 WITH_MOZILLA?=	firefox
 
@@ -86,6 +90,7 @@ post-patch:
 .if defined(WITH_MOZILLA_PLUGIN)
 	@${REINPLACE_CMD} -e 's|mozilla-plugin|${MOZILLA}-plugin${HEADERS_SUFX}|g' \
 		${WRKSRC}/configure
+.endif
 .endif
 
 .include <bsd.port.post.mk>
