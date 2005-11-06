@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.333 2005/10/11 22:08:17 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.334 2005/10/23 16:37:47 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -453,7 +453,7 @@ desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-f
 desktopfileutils_DETECT=	${LOCALBASE}/bin/update-desktop-database
 desktopfileutils_USE_GNOME_IMPL=glib20
 
-nautiluscdburner_LIB_DEPENDS=nautilus-burn.2:${PORTSDIR}/sysutils/nautilus-cd-burner
+nautiluscdburner_LIB_DEPENDS=nautilus-burn.3:${PORTSDIR}/sysutils/nautilus-cd-burner
 nautiluscdburner_DETECT=	${X11BASE}/libdata/pkgconfig/libnautilus-burn.pc
 nautiluscdburner_USE_GNOME_IMPL=nautilus2
 
