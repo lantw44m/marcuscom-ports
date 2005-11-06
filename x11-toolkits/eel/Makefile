@@ -3,14 +3,14 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/eel/Makefile,v 1.20 2005/09/05 15:05:28 kwm Exp $
+#   $MCom: ports/x11-toolkits/eel/Makefile,v 1.21 2005/10/03 15:22:10 ahze Exp $
 #
 
 PORTNAME=	eel
-PORTVERSION=	2.12.1
+PORTVERSION=	2.13.1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.12
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
