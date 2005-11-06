@@ -1,0 +1,20 @@
+#!/bin/sh
+# $FreeBSD$
+#    $MCom$
+
+# PROVIDE: gdm
+# REQUIRE: DAEMON
+# KEYWORD: FreeBSD shutdown
+
+gdm_enable=${gdm_enable-"NO"}
+
+. %%RC_SUBR%%
+
+name=gdm
+rcvar=`set_rcvar`
+command="%%PREFIX%%/sbin/${name}"
+pidfile="/var/run/${name}.pid"
+procname="%%PREFIX%%/sbin/gdm-binary"
+
+load_rc_config ${name}
+run_rc_command "$1"
