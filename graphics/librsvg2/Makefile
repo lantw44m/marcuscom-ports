@@ -3,11 +3,11 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.74 2005/11/06 01:14:02 ahze Exp $
 #
 
 PORTNAME=	librsvg2
-PORTVERSION=	2.13.0
+PORTVERSION=	2.13.2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.13
@@ -29,7 +29,7 @@ USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_REINPLACE=	yes
-USE_GNOME=	gnomehack gnomeprefix libartlgpl2 libgsf gtk20 ltverhack
+USE_GNOME=	gnomehack gnomeprefix libgsf gtk20 ltverhack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-svgz \
@@ -37,8 +37,7 @@ CONFIGURE_ARGS=	--with-svgz \
 		--without-gimp \
 		--with-croco \
 		--disable-gnome-vfs \
-		--enable-gtk-theme \
-		--with-art
+		--enable-gtk-theme
 
 CROCO_VERSION=	0.6
 GTK_VERSION=	2.4.0
@@ -53,7 +52,6 @@ MAN1=		rsvg.1
 
 # disable mozilla stuff
 
-.if 0
 .if defined(WITH_MOZILLA_PLUGIN)
 WITH_MOZILLA?=	firefox
 
@@ -90,7 +88,6 @@ post-patch:
 .if defined(WITH_MOZILLA_PLUGIN)
 	@${REINPLACE_CMD} -e 's|mozilla-plugin|${MOZILLA}-plugin${HEADERS_SUFX}|g' \
 		${WRKSRC}/configure
-.endif
 .endif
 
 .include <bsd.port.post.mk>
