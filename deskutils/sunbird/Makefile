@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/sunbird/Makefile,v 1.7 2005/08/19 01:34:21 mezz Exp $
+#   $MCom: ports/deskutils/sunbird/Makefile,v 1.8 2005/08/19 01:52:37 mezz Exp $
 #
 
 PORTNAME=	sunbird
-PORTVERSION=	0.2.1.2
+PORTVERSION=	0.3a1
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	ahze
@@ -20,7 +20,7 @@ LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg \
 		Xft.2:${PORTSDIR}/x11-fonts/libXft
 BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 
-USE_GCC=	3.4
+USE_GCC=	3.4+
 ALL_TARGET=	default
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 FAKEDIR=	${WRKDIR}/fake
