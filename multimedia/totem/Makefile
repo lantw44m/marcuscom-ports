@@ -30,6 +30,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 	       	LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lXrandr"
 
 OPTIONS?=	DVDNAV "Enable DVD support" on \
+		DBUS "Enable DBUS support" on \
 		GSTREAMER "Use Gstreamer instead of Xine" off \
 		MOZILLA_PLUGIN "Totem mozilla plugin" off
 
@@ -40,8 +41,11 @@ CONFLICTS=	totem-gstreamer-[0-9]*
 
 .include <bsd.port.pre.mk>
 
-LIB_DEPENDS+=	musicbrainz:${PORTSDIR}/audio/libmusicbrainz \
-		dbus-1.1:${PORTSDIR}/devel/dbus
+LIB_DEPENDS+=	musicbrainz:${PORTSDIR}/audio/libmusicbrainz
+
+.if !defined(WITHOUT_DBUS) || exists(${LOCALBASE}/lib/libdbus-1.a)
+LIB_DEPENDS+=	dbus-1.1:${PORTSDIR}/devel/dbus
+.endif
 
 .if defined(WITH_MOZILLA_PLUGIN)
 PLIST_SUB+=	MOZILLA=""
