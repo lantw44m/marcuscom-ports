@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.73 2005/08/26 03:21:23 marcus Exp $
+#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.74 2005/11/07 20:51:15 ahze Exp $
 #
 
 PORTREVISION=	1
@@ -16,15 +16,15 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan2 \
 		xchat:${PORTSDIR}/irc/xchat2 \
 		gimp-2.2:${PORTSDIR}/graphics/gimp \
 		sodipodi:${PORTSDIR}/graphics/sodipodi \
-		gnomeicu:${PORTSDIR}/net/gnomeicu2 \
+		gnomeicu:${PORTSDIR}/net-im/gnomeicu2 \
 		gthumb:${PORTSDIR}/graphics/gthumb \
-		${X11BASE}/lib/gaim/docklet.so:${PORTSDIR}/net/gaim \
+		${X11BASE}/lib/gaim/docklet.so:${PORTSDIR}/net-im/gaim \
 		tsclient:${PORTSDIR}/net/tsclient \
 		galeon:${PORTSDIR}/www/galeon \
 		seahorse:${PORTSDIR}/security/seahorse \
 		${X11BASE}/share/gnome/themes/Gorilla/metacity-1/metacity-theme-1.xml:${PORTSDIR}/x11-themes/gnome-themes-extras \
 		bluefish:${PORTSDIR}/www/bluefish \
-		gossip:${PORTSDIR}/net/gossip \
+		gossip:${PORTSDIR}/net-im/gossip \
 		straw:${PORTSDIR}/net/straw \
 		liferea:${PORTSDIR}/net/liferea \
 		gnotime:${PORTSDIR}/deskutils/gnotime \
