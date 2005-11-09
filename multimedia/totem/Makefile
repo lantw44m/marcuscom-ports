@@ -26,6 +26,7 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 INSTALLS_OMF=	yes
+PKGMESSAGE=	${WRKDIR}/pkg-message
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 	       	LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lXrandr"
 
@@ -67,10 +68,10 @@ RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-c
 CONFIGURE_ARGS+=--enable-gstreamer
 USE_GSTREAMER+=	gnomevfs core gconf
 WITHOUT_DVDNAV=	yes
-PLIST_SUB=	GSTREAMER=""
+PLIST_SUB+=	GSTREAMER=""
 .else
 LIB_DEPENDS+=	xine.14:${PORTSDIR}/multimedia/libxine
-PLIST_SUB=	GSTREAMER="@comment "
+PLIST_SUB+=	GSTREAMER="@comment "
 .endif
 
 .if defined(WITH_DVDNAV) && !defined(WITHOUT_DVDNAV)
@@ -107,6 +108,11 @@ pre-everything::
 	@${ECHO_MSG} "===> For example, 'make WITH_DVD_DEVICE=\"/dev/somedevice\"'"
 
 post-patch:
+	@${CP} -f ${FILESDIR}/pkg-message.in ${PKGMESSAGE}
+.if defined(WITH_MOZILLA_PLUGIN)
+	@${ECHO} "" >> ${PKGMESSAGE}
+	@${CAT} ${FILESDIR}/pkg-message-mozilla.in >> ${PKGMESSAGE}
+.endif
 	@${REINPLACE_CMD} -e 's|/plugins||; \
 		s|@MOZILLA_PLUGINDIR@|${PREFIX}/lib/browser_plugins|' \
 		${WRKSRC}/src/Makefile.in
