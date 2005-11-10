@@ -1,0 +1,97 @@
+--- configure.orig	Thu Nov 10 16:09:41 2005
++++ configure	Thu Nov 10 16:12:35 2005
+@@ -23731,6 +23731,14 @@
+     DL_LIB=''
+     SOFTOKN3_LIB=''
+     ;;
++*freebsd*) os_win32=no
++    NO_UNDEFINED=''
++    SOCKET_LIBS=''
++    SOEXT='.so'
++    SA_JUNK_PLUGIN=sa-junk-plugin
++    DL_LIB=''
++    SOFTOKN3_LIB='-lsoftokn3'
++    ;;
+ *)  os_win32=no
+     NO_UNDEFINED=''
+     SOEXT='.so'
+@@ -26278,6 +26286,7 @@
+ 		#include <sys/socket.h>
+ 		#include <netinet/in.h>
+ 		#include <netdb.h>
++		#include <stdio.h>
+ 
+ 
+ int
+@@ -27978,7 +27987,7 @@
+ 	LDFLAGS_save="$LDFLAGS"
+ 
+ 	mitlibs="-lkrb5 -lk5crypto -lcom_err -lgssapi_krb5"
+-	heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi"
++	heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi -lcrypt"
+ 	echo "$as_me:$LINENO: checking for Kerberos 5" >&5
+ echo $ECHO_N "checking for Kerberos 5... $ECHO_C" >&6
+ if test "${ac_cv_lib_kerberos5+set}" = set; then
+@@ -32679,12 +32688,12 @@
+   if test "x$ac_cv_env_EVOLUTION_CALENDAR_CFLAGS_set" = "xset"; then
+ 	pkg_cv_EVOLUTION_CALENDAR_CFLAGS=$ac_cv_env_EVOLUTION_CALENDAR_CFLAGS_value
+ elif test -n "$PKG_CONFIG"; then
+-	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-\$GTKHTML_PACKAGE >= \$GTKHTML_REQUIRED libebook-\$EDS_PACKAGE >= \$EDS_REQUIRED libecal-\$EDS_PACKAGE >= \$EDS_REQUIRED libedataserverui-\$EDS_PACKAGE >= \$EDS_REQUIRED hal\" >/dev/null 2>&1") >&5
+-  ($PKG_CONFIG --exists "libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED hal" >/dev/null 2>&1) 2>&5
++	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-\$GTKHTML_PACKAGE >= \$GTKHTML_REQUIRED libebook-\$EDS_PACKAGE >= \$EDS_REQUIRED libecal-\$EDS_PACKAGE >= \$EDS_REQUIRED libedataserverui-\$EDS_PACKAGE >= \$EDS_REQUIRED \" >/dev/null 2>&1") >&5
++  ($PKG_CONFIG --exists "libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED " >/dev/null 2>&1) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-		pkg_cv_EVOLUTION_CALENDAR_CFLAGS=`$PKG_CONFIG --cflags "libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED hal" 2>/dev/null`
++		pkg_cv_EVOLUTION_CALENDAR_CFLAGS=`$PKG_CONFIG --cflags "libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED " 2>/dev/null`
+ 	else
+ 		pkg_failed=yes
+ 	fi
+@@ -32702,12 +32711,12 @@
+   if test "x$ac_cv_env_EVOLUTION_CALENDAR_LIBS_set" = "xset"; then
+ 	pkg_cv_EVOLUTION_CALENDAR_LIBS=$ac_cv_env_EVOLUTION_CALENDAR_LIBS_value
+ elif test -n "$PKG_CONFIG"; then
+-	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-\$GTKHTML_PACKAGE >= \$GTKHTML_REQUIRED libebook-\$EDS_PACKAGE >= \$EDS_REQUIRED libecal-\$EDS_PACKAGE >= \$EDS_REQUIRED libedataserverui-\$EDS_PACKAGE >= \$EDS_REQUIRED hal\" >/dev/null 2>&1") >&5
+-  ($PKG_CONFIG --exists "libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED hal" >/dev/null 2>&1) 2>&5
++	if { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists \"libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-\$GTKHTML_PACKAGE >= \$GTKHTML_REQUIRED libebook-\$EDS_PACKAGE >= \$EDS_REQUIRED libecal-\$EDS_PACKAGE >= \$EDS_REQUIRED libedataserverui-\$EDS_PACKAGE >= \$EDS_REQUIRED \" >/dev/null 2>&1") >&5
++  ($PKG_CONFIG --exists "libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED " >/dev/null 2>&1) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-		pkg_cv_EVOLUTION_CALENDAR_LIBS=`$PKG_CONFIG --libs "libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED hal" 2>/dev/null`
++		pkg_cv_EVOLUTION_CALENDAR_LIBS=`$PKG_CONFIG --libs "libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED " 2>/dev/null`
+ 	else
+ 		pkg_failed=yes
+ 	fi
+@@ -32719,18 +32728,18 @@
+ echo "${ECHO_T}$pkg_cv_EVOLUTION_CALENDAR_LIBS" >&6
+ 
+ if test $pkg_failed = yes; then
+-	EVOLUTION_CALENDAR_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED hal"`
++	EVOLUTION_CALENDAR_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED "`
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$EVOLUTION_CALENDAR_PKG_ERRORS" 1>&5
+ 
+-	{ { echo "$as_me:$LINENO: error: Package requirements (libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED hal) were not met.
++	{ { echo "$as_me:$LINENO: error: Package requirements (libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED) were not met.
+ Consider adjusting the PKG_CONFIG_PATH environment variable if you
+ installed software in a non-standard prefix.
+ 
+ Alternatively you may set the EVOLUTION_CALENDAR_CFLAGS and EVOLUTION_CALENDAR_LIBS environment variables
+ to avoid the need to call pkg-config.  See the pkg-config man page for
+ more details." >&5
+-echo "$as_me: error: Package requirements (libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED hal) were not met.
++echo "$as_me: error: Package requirements (libgnome-2.0 libgnomeui-2.0 libbonoboui-2.0 libglade-2.0 gnome-vfs-2.0 libgnomeprint-2.2 libgnomeprintui-2.2 gnome-vfs-module-2.0 libgtkhtml-$GTKHTML_PACKAGE >= $GTKHTML_REQUIRED libebook-$EDS_PACKAGE >= $EDS_REQUIRED libecal-$EDS_PACKAGE >= $EDS_REQUIRED libedataserverui-$EDS_PACKAGE >= $EDS_REQUIRED) were not met.
+ Consider adjusting the PKG_CONFIG_PATH environment variable if you
+ installed software in a non-standard prefix.
+ 
+@@ -33141,7 +33150,7 @@
+ idldir="$datadir/idl/evolution-$BASE_VERSION"
+ 
+ 
+-serverdir="$libdir/bonobo/servers"
++serverdir="$prefix/libdata/bonobo/servers"
+ 
+ 
+ evolutionuidir="$privdatadir/ui"
