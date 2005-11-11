@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.335 2005/11/06 02:55:14 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.336 2005/11/07 20:31:31 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -684,12 +684,6 @@ GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 . endfor
 .endif
 
-.if defined(_USE_GNOME)
-.if ${_USE_GNOME:Mgnomeprefix}!=""
-MTREE_FILE?=	${GNOME_MTREE}
-.endif
-.endif
-
 .if defined(GNOME_PRE_PATCH)
 USE_REINPLACE=	yes
 
@@ -720,11 +714,15 @@ CONFIGURE_FAIL_MESSAGE= "Please run the gnomelogalyzer, available from \"http://
 .endif
 
 
-.if defined(GCONF_SCHEMAS) || defined(INSTALLS_OMF) || defined(INSTALLS_ICONS)
+.if defined(GCONF_SCHEMAS) || defined(INSTALLS_OMF) || defined(INSTALLS_ICONS) \
+	|| ${_USE_GNOME:Mgnomeprefix}!=""
 pre-su-install: gnome-pre-su-install
 post-install: gnome-post-install
 
 gnome-pre-su-install:
+.if ${_USE_GNOME:Mgnomeprefix}!="" && !defined(NO_MTREE)
+	${MTREE_CMD} ${MTREE_ARGS:S/${MTREE_FILE}/${GNOME_MTREE}/} ${PREFIX}/
+.endif
 .if defined(GCONF_SCHEMAS)
 	@${MKDIR} ${PREFIX}/etc/gconf/gconf.xml.defaults/
 .else
