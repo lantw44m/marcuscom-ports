@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.54 2005/10/02 23:33:10 marcus Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.55 2005/11/06 03:58:32 ahze Exp $
 #
 
 PORTNAME=	epiphany
@@ -35,10 +35,15 @@ MOZ_BUILD=	firefox
 .if ${WITH_MOZILLA}=="mozilla"
 MOZILLA=	mozilla
 MOZ_BUILD=	mozilla
+#.else
+#.if ${WITH_MOZILLA}=="mozilla-devel"
+#MOZILLA=	mozilla-devel
+#HEADERS_SUFX=	-devel
 .else
-.if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
-MOZILLA=	mozilla-devel
-HEADERS_SUFX=	-devel
+.if ${WITH_MOZILLA}=="seamonkey"
+MOZILLA=	seamonkey
+HEADERS_SUFX=
+MOZ_BUILD=	seamonkey
 .else
 MOZILLA=	firefox
 HEADERS_SUFX=
@@ -88,7 +93,7 @@ pre-everything::
 	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
 	@${ECHO_MSG}
 	@${ECHO_MSG} "  mozilla       "
-	@${ECHO_MSG} "  mozilla-devel "
+	@${ECHO_MSG} "  seamonkey     "
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "Epiphany-extensions also supports the following tunable option(s):"
 	@${ECHO_MSG} "	WITH_OPENSP=yes		Enable support for OpenSP SGML validation"

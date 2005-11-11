@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.84 2005/10/02 23:28:19 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.85 2005/11/06 03:42:56 ahze Exp $
 #
 
 PORTNAME=	epiphany
@@ -34,10 +34,15 @@ MOZ_BUILD=	firefox
 .if ${WITH_MOZILLA}=="mozilla"
 MOZILLA=	mozilla
 MOZ_BUILD=	mozilla
+#.else
+#.if ${WITH_MOZILLA}=="mozilla-devel"
+#MOZILLA=	mozilla-devel
+#HEADERS_SUFX=	-devel
 .else
-.if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
-MOZILLA=	mozilla-devel
-HEADERS_SUFX=	-devel
+.if ${WITH_MOZILLA}=="seamonkey"
+MOZILLA=	seamonkey
+HEADERS_SUFX=
+MOZ_BUILD=	seamonkey
 .else
 MOZILLA=	firefox
 HEADERS_SUFX=
@@ -87,7 +92,7 @@ pre-everything::
 	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
 	@${ECHO_MSG}
 	@${ECHO_MSG} "  mozilla       "
-	@${ECHO_MSG} "  mozilla-devel "
+	@${ECHO_MSG} "  seamonkey     "
 	@${ECHO_MSG} ""
 
 post-patch:
