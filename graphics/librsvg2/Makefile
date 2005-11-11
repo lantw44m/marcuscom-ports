@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.74 2005/11/06 01:14:02 ahze Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.75 2005/11/06 01:27:53 ahze Exp $
 #
 
 PORTNAME=	librsvg2
@@ -46,7 +46,7 @@ PLIST_SUB=	GTK_VERSION=${GTK_VERSION}
 
 MAN1=		rsvg.1
 
-#OPTIONS=	MOZILLA_PLUGIN "Enable the SVG browser plug-in" no
+OPTIONS=	MOZILLA_PLUGIN "Enable the SVG browser plug-in" no
 
 .include <bsd.port.pre.mk>
 
@@ -61,11 +61,15 @@ HEADERS_SUFX=
 .elif ${WITH_MOZILLA}=="mozilla"
 MOZILLA=	mozilla
 HEADERS_SUFX=
-.elif ${WITH_MOZILLA}=="mozilla-devel"
-MOZILLA=	mozilla
-HEADERS_SUFX=	-devel
+#.elif ${WITH_MOZILLA}=="mozilla-devel"
+#MOZILLA=	mozilla
+#HEADERS_SUFX=	-devel
+.elif ${WITH_MOZILLA}=="seamonkey"
+MOZILLA=	seamonkey
+HEADERS_SUFX=
 .else
-BROKEN=		"Unknown Gecko source specified (${WITH_MOZILLA})"
+MOZILLA=	firefox
+HEADERS_SUFX=
 .endif
 
 BUILD_DEPENDS+=	${X11BASE}/libdata/pkgconfig/${MOZILLA}-plugin${HEADERS_SUFX}.pc:${PORTSDIR}/www/${MOZILLA}${HEADERS_SUFX}
