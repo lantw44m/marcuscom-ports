@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/seamonkey/Makefile,v 1.25 2005/11/11 04:11:02 ahze Exp $
+#    $MCom: ports/www/seamonkey/Makefile,v 1.26 2005/11/11 08:00:02 ahze Exp $
 #
 
 PORTNAME?=	seamonkey
@@ -26,6 +26,7 @@ LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg \
 		nss3:${PORTSDIR}/security/nss \
 		svg-cairo.1:${PORTSDIR}/graphics/libsvg-cairo
 
+PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 WRKSRC=		${WRKDIR}/mozilla
 MOZILLA?=	seamonkey
 MOZ_SUFX?=	# empty (for now)
@@ -201,6 +202,8 @@ CONFIGURE_ENV+=		WITH_OPTIMIZE=-O
 .endif
 
 post-patch:
+	  @${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${PORTNAME}|g' \
+		< ${MASTERDIR}/pkg-deinstall.in > ${PKGDEINSTALL}
 	@${REINPLACE_CMD} -e  's/%{idldir}/%idldir%/g ; \
 		s|"%FULL_NSPR_CFLAGS%"|`nspr-config --cflags`|g ; \
 		s|"%FULL_NSPR_LIBS%"|`nspr-config --libs`|g' \
