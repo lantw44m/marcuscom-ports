@@ -3,11 +3,12 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/firefox/Makefile,v 1.11 2005/11/11 00:15:47 ahze Exp $
 #
 
 PORTNAME=	firefox
 DISTVERSION=	1.5rc2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -20,6 +21,8 @@ COMMENT=	Web browser based on the browser portion of Mozilla
 
 LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg \
 		png.5:${PORTSDIR}/graphics/png \
+		nspr4:${PORTSDIR}/devel/nspr \
+		nss3:${PORTSDIR}/security/nss \
 		Xft.2:${PORTSDIR}/x11-fonts/libXft
 BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 RUN_DEPENDS=	Xvfb:${X_VFBSERVER_PORT}
@@ -48,6 +51,8 @@ EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude */CVS/* \
 			--exclude */package/* \
 			--exclude .cvsignore \
 			--exclude makefile.win \
+			--exclude mozilla/security/nss	\
+			--exclude */nsprpub/*	\
 			--exclude MANIFEST
 
 FIREFOX=	${PORTNAME}
@@ -60,7 +65,7 @@ FIREFOX_ICON=		${FF}.xpm
 FIREFOX_ICON_SRC=	${PREFIX}/lib/${FF}/icons/default.xpm
 
 PKGCONFIG_FILES=firefox-gtkmozembed firefox-js firefox-xpcom \
-		firefox-nspr firefox-nss firefox-plugin
+		firefox-plugin
 
 JPI_LIST?=\
 	${LOCALBASE}/jdk1.5.0/jre/plugin/${ARCH}/ns7/libjavaplugin_oji.so \
@@ -132,6 +137,10 @@ post-extract::
 		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${FF}.desktop
 
 post-patch:
+	@${REINPLACE_CMD} -e  's/%{idldir}/%idldir%/g ; \
+		s|"%FULL_NSPR_CFLAGS%"|`nspr-config --cflags`|g ; \
+		s|"%FULL_NSPR_LIBS%"|`nspr-config --libs`|g' \
+			${WRKSRC}/build/unix/mozilla-config.in
 	@${REINPLACE_CMD} -e 's|%%FIREFOX%%|${FF}|' \
 		${WRKSRC}/config/autoconf.mk.in
 	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${FF}|g ; \
@@ -150,10 +159,8 @@ post-patch:
 		${WRKSRC}/build/unix/run-mozilla.sh
 	@${REINPLACE_CMD} -e 's|-lc_r|${PTHREAD_LIBS}|g ; \
 		s|-lpthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/configure \
-		${WRKSRC}/nsprpub/configure
+		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/nsprpub/config/config.mk \
 		${WRKSRC}/security/coreconf/FreeBSD.mk \
 		${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
 		${WRKSRC}/js/src/Makefile.in
