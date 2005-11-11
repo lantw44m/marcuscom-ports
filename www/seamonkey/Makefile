@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/www/seamonkey/Makefile,v 1.25 2005/11/11 04:11:02 ahze Exp $
 #
 
 PORTNAME?=	seamonkey
@@ -22,6 +22,8 @@ BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg \
 		png.5:${PORTSDIR}/graphics/png \
 		Xft.2:${PORTSDIR}/x11-fonts/libXft \
+		nspr4:${PORTSDIR}/devel/nspr \
+		nss3:${PORTSDIR}/security/nss \
 		svg-cairo.1:${PORTSDIR}/graphics/libsvg-cairo
 
 WRKSRC=		${WRKDIR}/mozilla
@@ -33,6 +35,7 @@ EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude */CVS/* \
 			--exclude */macbuild/*\
 			--exclude */package/* \
 			--exclude .cvsignore \
+			--exclude */nsprpub/*	\
 			--exclude makefile.win \
 			--exclude MANIFEST
 USE_GNOME=	gtk20 libidl desktopfileutils
@@ -51,7 +54,7 @@ MOZ_PIS_DIR=	${SCRIPTS_DIR}/init.d
 MOZ_PIS_SCRIPTS=	S50cleanhome
 MAKE_ENV=	LD_LIBRARY_PATH=${WRKSRC}/dist/bin
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/cairo"
-CONFIGURE_ARGS=					\
+CONFIGURE_ARGS=	--with-system-nspr		\
 		--disable-auto-deps		\
 		--enable-chrome-format=jar	\
 		--disable-cpp-exceptions	\
@@ -92,13 +95,13 @@ CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 ESD_LIB=	libesd.so.2
 FREETYPE_LIB=	libfreetype.so.9
 PKGCONFIG_FILES=seamonkey-gtkmozembed seamonkey-js seamonkey-xpcom \
-		seamonkey-nspr seamonkey-nss seamonkey-plugin
+		seamonkey-plugin
 
 # JPI stuff.  List paths to Java Plug-ins here in the order to try.
 JPI_LIST?=\
+	${LOCALBASE}/jdk1.5.0/jre/plugin/${ARCH}/ns7/libjavaplugin_oji.so \
 	${LOCALBASE}/jdk1.4.2/jre/plugin/${ARCH}/ns610/libjavaplugin_oji.so \
 	${LOCALBASE}/jdk1.4.1/jre/plugin/${ARCH}/ns610/libjavaplugin_oji.so \
-	${LOCALBASE}/diablo-jdk1.3.1/jre/plugin/${ARCH}/ns600/libjavaplugin_oji.so \
 	${LOCALBASE}/jdk1.3.1/jre/plugin/${ARCH}/ns600/libjavaplugin_oji.so
 
 OPTIONS=MAILNEWS "Enable Mail and News modules" on \
@@ -127,8 +130,8 @@ IGNORE=		core dumps on ${ARCH} during post-build
 .endif
 
 .if exists(${X11BASE}/lib/X11/fonts/mozilla/fonts.dir)
-BROKEN=		Mozilla${MOZ_SUFX} and Xft2 render the mozilla-fonts \
-		illegibly. Please remove the mozilla-fonts package
+BROKEN="Mozilla${MOZ_SUFX} and Xft2 render the mozilla-fonts \
+	illegibly. Please remove the mozilla-fonts package"
 .endif
 
 #.if defined(WITH_CALENDAR) && (defined(WITHOUT_MAILNEWS) || \
@@ -198,6 +201,10 @@ CONFIGURE_ENV+=		WITH_OPTIMIZE=-O
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e  's/%{idldir}/%idldir%/g ; \
+		s|"%FULL_NSPR_CFLAGS%"|`nspr-config --cflags`|g ; \
+		s|"%FULL_NSPR_LIBS%"|`nspr-config --libs`|g' \
+			${WRKSRC}/build/unix/mozilla-config.in
 	@${REINPLACE_CMD} -e  's/%{idldir}/%idldir%/g' \
 		${WRKSRC}/build/unix/mozilla-config.in
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
@@ -207,10 +214,8 @@ post-patch:
 			${WRKSRC}/config/autoconf.mk.in
 	@${REINPLACE_CMD} -e 's|-lc_r|${PTHREAD_LIBS}|g ; \
 		s|-lpthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/configure \
-		${WRKSRC}/nsprpub/configure
+		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/nsprpub/configure \
 		${WRKSRC}/security/coreconf/FreeBSD.mk \
 		${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
 		${WRKSRC}/js/src/Makefile.in
@@ -247,7 +252,7 @@ pre-install:
 	${RM} -rf ${PLIST} ${FAKEDIR}
 	${TOUCH} -f ${PLIST}
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		Makefile ${MAKE_ARGS} install
+		Makefile ${MAKE_ARGS} ${INSTALL_TARGET}
 	${MKDIR} ${SCRIPTS_DIR} ${MOZ_PIS_DIR}
 	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
 		${FAKEDIR}/bin/seamonkey \
