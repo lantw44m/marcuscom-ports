@@ -1,6 +1,6 @@
 # .mozconfig.in -*-shell-script-*-
 # $FreeBSD$
-#   $MCom: ports/www/firefox/files/mozconfig.in,v 1.7 2005/11/11 00:15:48 ahze Exp $
+#   $MCom: ports/www/firefox/files/mozconfig.in,v 1.8 2005/11/11 00:57:52 ahze Exp $
 ######################################################################
 # standard opts from README
 ac_add_options --enable-application=browser
@@ -34,6 +34,7 @@ ac_add_options --with-system-zlib
 ac_add_options --with-system-png=@LOCALBASE@
 ac_add_options --with-gssapi=@KRB5_HOME@
 ac_add_options --with-system-nspr
+ac_add_options --enable-system-cairo
 ######################################################################
 # set compile/link features
 ac_add_options --with-pthreads
@@ -51,6 +52,7 @@ ac_add_options --enable-single-profile
 ac_add_options --disable-profilesharing
 ac_add_options --enable-image-decoders=png,gif,jpeg,bmp
 ac_add_options --enable-extensions="default"
+ac_add_options --enable-svg-renderer=cairo
 ######################################################################
 # conditional from port Makefile
 #if test -n "$WITH_REORDER"; then

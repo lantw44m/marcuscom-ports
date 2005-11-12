@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.11 2005/11/11 00:15:47 ahze Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.12 2005/11/11 00:57:51 ahze Exp $
 #
 
 PORTNAME=	firefox
@@ -53,6 +53,7 @@ EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude */CVS/* \
 			--exclude makefile.win \
 			--exclude mozilla/security/nss	\
 			--exclude */nsprpub/*	\
+			--exclude mozilla/gfx/cairo \
 			--exclude MANIFEST
 
 FIREFOX=	${PORTNAME}
