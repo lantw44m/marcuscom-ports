@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.55 2005/11/06 03:58:32 ahze Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.56 2005/11/11 08:21:10 ahze Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	1.9.1
+PORTVERSION=	1.9.2
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/1.9
@@ -62,7 +62,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_C
 CONFIGURE_ARGS=	--with-extensions="all" \
 		--with-mozilla=${MOZ_BUILD}
 
-PLIST_SUB=	VERSION="1.10" EPHY_VERSION="1.10"
+PLIST_SUB=	VERSION="1.9" EPHY_VERSION="1.10"
 
 .if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
 .undef WITHOUT_OPENSP
