@@ -1,10 +1,8 @@
 #-*- mode: Fundamental; tab-width: 4; -*-
 # ex:ts=4
 #
-# FreeBSD: $FreeBSD$
-#	NetBSD: $NetBSD: $
-#	
-# MarcusCOM: $MCom$
+# $FreeBSD$
+#    $MCom$
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -15,58 +13,70 @@
 Mozilla_Include_MAINTAINER=		gnome@FreeBSD.org
 Mozilla_Pre_Include=			bsd.mozilla.mk
 
-# Ports can use this as follows:
+# Ports can use the following:
 #
-# USE_MOZILLA=	yes
-# (use USE_MOZILLA_GTK1 for GTK1 ports)
+# WANT_MOZILLA=	yes
+#  include bsd.mozilla.mk
 #
-# The following variables are exported:
-# MOZILLA_SNAPSHOT_VER:	for use in --with-mozilla-snapshot="${MOZILLA_SNAPSHOT_VER}"
-# MOZILLA_INCLUDE_DIR:  for use in --with-mozilla-includes="${MOZILLA_INCLUDE_DIR}"
-# MOZILLA_LIB_DIR:      for use in --with-mozilla-libs="${MOZILLA_LIB_DIR}"
+# USE_MOZILLA= mozilla firefox mozilla-devel
+#  Lists gecko's the port supports. The first entry will
+#  be the default gecko to use unless WITH_MOZILLA is defined
+#  then bsd.mozilla.mk will test if the listed entries in 
+#  WITH_MOZILLA and match ones in USE_MOZILLA, if true then the
+#  first match found in WITH_MOZILLA will be used. bsd.mozilla.mk
+#  will set MOZILLA to the gecko it will be using. 
+#
+#  The use of USE_MOZILLA= yes will default to firefox unless
+#  WITH_MOZILLA is defined and this means your port supports
+#  every gecko listed in bsd.mozilla.mk
+#
+# .if ${MOZILLA}=="seamonkey"
+# CONFIGURE_ARGS+= --with-mozilla=${MOZILLA}
+# .endif
+#
+# End users can use the following:
+#
+# WITH_MOZILLA= mozilla firefox seamonkey
+#
 
-# These can be overridden as necessary within port Makefiles.
-MOZ_DEVEL_SNAPSHOT_VER?=		1.8a
-MOZ_STABLE_SNAPSHOT_VER?=		1.7
-MOZ_GTK1_STABLE_SNAPSHOT_VER?=	1.7
+_GECKO_ALL= 	firefox firefox-devel mozilla mozilla-devel seamonkey
 
-.if defined(USE_MOZILLA_GTK1)
+# defines
+.for gecko in ${_GECKO_ALL}
+${gecko}_PORTDIR?=	www
+${gecko}_DEPENDS?=	${PORTSDIR}/${gecko_PORTSDIR}/${gecko}
+${gecko}_PLIST?=	${X11BASE}/lib/${gecko}/libgtkembedmoz.so
+.endfor
 
-BUILD_DEPENDS+=			${X11BASE}/lib/mozilla-gtk1/components/libgtkembedmoz.so:${PORTSDIR}/www/mozilla-devel-gtk1
-RUN_DEPENDS+=			${X11BASE}/lib/mozilla-gtk1/components/libgtkembedmoz.so:${PORTSDIR}/www/mozilla-devel-gtk1
-MOZILLA_SNAPSHOT_VER=	${MOZ_GTK1_STABLE_SNAPSHOT_VER}
-MOZILLA_INCLUDE_DIR=	${X11BASE}/include/mozilla-gtk1
-MOZILLA_LIB_DIR=		${X11BASE}/lib/mozilla-gtk1
+# Figure out which mozilla to use
+# Weed out bad options in USE_MOZILLA
+.for badgecko in ${USE_MOZILLA}
+. if ${_GECKO_ALL:M${badgecko}}!=""
+GOOD_USE_MOZILLA+=	${badgecko}
+. endif
+.endfor
 
-.else	# if defined(USE_MOZILLA_GTK1)
+# Figure out which mozilla to use and weed out the bad ones
+.if defined(WITH_MOZILLA) && defined(GOOD_USE_MOZILLA)
+. for badgecko in ${WITH_MOZILLA}
+.  if ${GOOD_USE_MOZILLA:M${badgecko}}!=""
+GOOD_WITH_MOZILLA+=	${badgecko}
+.  endif
+. endfor
+. if defined(GOOD_WITH_MOZILLA)
+MOZILLA=	#### CHANGE ME
+. endif
+.endif
 
-.if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2" || \
-	exists(${X11BASE}/bin/mozilla-devel)
-BUILD_DEPENDS+=			${X11BASE}/lib/mozilla-devel/components/libwidget_gtk2.so:${PORTSDIR}/www/mozilla-devel
-RUN_DEPENDS+=			${X11BASE}/lib/mozilla-devel/components/libwidget_gtk2.so:${PORTSDIR}/www/mozilla-devel
-MOZILLA_SNAPSHOT_VER=	${MOZ_DEVEL_SNAPSHOT_VER}
-MOZILLA_INCLUDE_DIR=	${X11BASE}/include/mozilla-devel
-MOZILLA_LIB_DIR=		${X11BASE}/lib/mozilla-devel
+.if !defined(MOZILLA) && defined(GOOD_USE_MOZILLA)
+MOZILLA=	#### CHANGE ME
+.endif
 
-pre-patch: mozilla-pre-patch
-
-mozilla-pre-patch:
-	@${REINPLACE_CMD} -e "s|mozilla-gtkmozembed|mozilla-gtkmozembed-devel|g; \
-		s|mozilla-xpcom|mozilla-xpcom-devel|g; \
-		s|mozilla-nspr|mozilla-nspr-devel|g; \
-		s|mozilla-nss|mozilla-nss-devel|g; \
-		s|mozilla-plugin|mozilla-plugin-devel|g" ${WRKSRC}/configure
+.if defined(MOZILLA) && ${_GECKO_ALL:M${MOZILLA}}!=""
+BUILD_DEPENDS+=	${MOZILLA_${PLIST}}:${MOZILLA_${DEPENDS}
+RUN_DEPENDS+=	${MOZILLA_${PLIST}}:${MOZILLA_${DEPENDS}
 .else
-BUILD_DEPENDS+=			${X11BASE}/lib/mozilla/components/libwidget_gtk2.so:${PORTSDIR}/www/mozilla
-RUN_DEPENDS+=			${X11BASE}/lib/mozilla/components/libwidget_gtk2.so:${PORTSDIR}/www/mozilla
-MOZILLA_SNAPSHOT_VER=	${MOZ_STABLE_SNAPSHOT_VER}
-MOZILLA_INCLUDE_DIR=	${X11BASE}/include/mozilla
-MOZILLA_LIB_DIR=		${X11BASE}/lib/mozilla
+BROKEN="Bad use of USE_MOZILLA"
 .endif
 
-.endif	# if defined(USE_MOZILLA_GTK1)
-
-
-.endif
-
-# here there be tacos
+.endif # end all
