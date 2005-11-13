@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/eog/Makefile,v 1.12 2005/11/06 01:36:33 ahze Exp $
 #
 
 PORTNAME=	eog
-PORTVERSION=	2.13.1
+PORTVERSION=	2.13.2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.13
