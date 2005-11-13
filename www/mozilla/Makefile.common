@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.1 2005/11/13 19:07:58 ahze Exp $
 
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip
 LIB_DEPENDS+=	jpeg.9:${PORTSDIR}/graphics/jpeg \
@@ -26,7 +26,7 @@ PLIST?=		${WRKDIR}/plist
 KRB5_HOME?=	/usr
 
 GENERIC_MOZCONFIG?=	${.CURDIR}/../../www/mozilla/files/mozconfig-generic.in
-PORT_MOZCONFIG?=	${FILESDIR}/files/mozconfig.in
+PORT_MOZCONFIG?=	${FILESDIR}/mozconfig.in
 MOZCONFIG?=		${WRKSRC}/.mozconfig
 
 EXTRACT_AFTER_ARGS?=	| ${TAR} -xf - --exclude */CVS/*	\
