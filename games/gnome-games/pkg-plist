@@ -175,6 +175,7 @@ share/gnome/help/aisleriot/C/carpet.xml
 share/gnome/help/aisleriot/C/chessboard.xml
 share/gnome/help/aisleriot/C/clock.xml
 share/gnome/help/aisleriot/C/cover.xml
+share/gnome/help/aisleriot/C/cruel.xml
 share/gnome/help/aisleriot/C/definitions.xml
 share/gnome/help/aisleriot/C/diamond_mine.xml
 share/gnome/help/aisleriot/C/doublets.xml
@@ -256,6 +257,7 @@ share/gnome/help/aisleriot/fr/carpet.xml
 share/gnome/help/aisleriot/fr/chessboard.xml
 share/gnome/help/aisleriot/fr/clock.xml
 share/gnome/help/aisleriot/fr/cover.xml
+share/gnome/help/aisleriot/fr/cruel.xml
 share/gnome/help/aisleriot/fr/definitions.xml
 share/gnome/help/aisleriot/fr/diamond_mine.xml
 share/gnome/help/aisleriot/fr/doublets.xml
@@ -532,6 +534,7 @@ share/gnome/sol-games/carpet.scm
 share/gnome/sol-games/chessboard.scm
 share/gnome/sol-games/clock.scm
 share/gnome/sol-games/cover.scm
+share/gnome/sol-games/cruel.scm
 share/gnome/sol-games/diamond_mine.scm
 share/gnome/sol-games/doublets.scm
 share/gnome/sol-games/eagle_wing.scm
@@ -653,6 +656,7 @@ share/locale/is/LC_MESSAGES/gnome-games.mo
 share/locale/it/LC_MESSAGES/gnome-games.mo
 share/locale/ja/LC_MESSAGES/gnome-games.mo
 share/locale/ko/LC_MESSAGES/gnome-games.mo
+share/locale/ku/LC_MESSAGES/gnome-games.mo
 share/locale/lt/LC_MESSAGES/gnome-games.mo
 share/locale/lv/LC_MESSAGES/gnome-games.mo
 share/locale/mk/LC_MESSAGES/gnome-games.mo
