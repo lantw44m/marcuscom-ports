@@ -39,12 +39,17 @@ Mozilla_Pre_Include=			bsd.mozilla.mk
 # WITH_MOZILLA= mozilla firefox seamonkey
 #
 
-_GECKO_ALL= 	firefox firefox-devel mozilla mozilla-devel seamonkey
+_GECKO_ALL= 	firefox firefox-devel mozilla mozilla-devel nvu \
+		seamonkey sunbird thunderbird
 
-# defines
+_NEW_GCC_GECKO=	firefox firefox-devel mozilla-devel seamonkey sunbird
+
+sunbird_PORTSDIR=	deskutils
+thunderbird_PORTSDIR=	mail
+
 .for gecko in ${_GECKO_ALL}
-${gecko}_PORTDIR?=	www
-${gecko}_DEPENDS?=	${PORTSDIR}/${gecko_PORTSDIR}/${gecko}
+${gecko}_PORTSDIR?=	www
+${gecko}_DEPENDS?=	${PORTSDIR}/${${gecko}_PORTSDIR}/${gecko}
 ${gecko}_PLIST?=	${X11BASE}/lib/${gecko}/libgtkembedmoz.so
 .endfor
 
@@ -73,6 +78,9 @@ MOZILLA=	#### CHANGE ME
 .endif
 
 .if defined(MOZILLA) && ${_GECKO_ALL:M${MOZILLA}}!=""
+. if ${_NEW_GCC_GECKO:M${MOZILLA}!=""
+USE_GCC?=	3.4+
+. endif
 BUILD_DEPENDS+=	${MOZILLA_${PLIST}}:${MOZILLA_${DEPENDS}}
 RUN_DEPENDS+=	${MOZILLA_${PLIST}}:${MOZILLA_${DEPENDS}}
 .else
