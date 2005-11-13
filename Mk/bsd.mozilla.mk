@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.7 2005/11/12 07:55:19 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -73,10 +73,11 @@ MOZILLA=	#### CHANGE ME
 .endif
 
 .if defined(MOZILLA) && ${_GECKO_ALL:M${MOZILLA}}!=""
-BUILD_DEPENDS+=	${MOZILLA_${PLIST}}:${MOZILLA_${DEPENDS}
-RUN_DEPENDS+=	${MOZILLA_${PLIST}}:${MOZILLA_${DEPENDS}
+BUILD_DEPENDS+=	${MOZILLA_${PLIST}}:${MOZILLA_${DEPENDS}}
+RUN_DEPENDS+=	${MOZILLA_${PLIST}}:${MOZILLA_${DEPENDS}}
 .else
 BROKEN="Bad use of USE_MOZILLA"
 .endif
 
 .endif # end all
+# HERE THERE BE TACOS
