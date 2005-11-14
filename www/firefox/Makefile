@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.12 2005/11/11 00:57:51 ahze Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.13 2005/11/12 02:06:57 ahze Exp $
 #
 
 PORTNAME=	firefox
@@ -19,96 +19,37 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
-LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg \
-		png.5:${PORTSDIR}/graphics/png \
-		nspr4:${PORTSDIR}/devel/nspr \
-		nss3:${PORTSDIR}/security/nss \
-		Xft.2:${PORTSDIR}/x11-fonts/libXft
-BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
 RUN_DEPENDS=	Xvfb:${X_VFBSERVER_PORT}
 
+WANT_GNOME=	yes
 ALL_TARGET=	default
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 FAKEDIR=	${WRKDIR}/fake
 USE_REINPLACE=	yes
 HAS_CONFIGURE=	yes
-PLIST=		${WRKDIR}/plist
 PLUGINSDIR=	${PREFIX}/lib/browser_plugins
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gtk20 libidl desktopfileutils
-USE_ICONV=	yes
-USE_PERL5_BUILD=yes
 USE_X_PREFIX=	yes
 USE_GCC=	3.4+
-WRKSRC=		${WRKDIR}/mozilla
-PKGINSTALL=	${WRKDIR}/pkg-install
-PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
-KRB5_HOME?=	/usr
 
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude */CVS/* \
-			--exclude */macbuild/*\
-			--exclude */package/* \
-			--exclude .cvsignore \
-			--exclude makefile.win \
-			--exclude mozilla/security/nss	\
-			--exclude */nsprpub/*	\
-			--exclude mozilla/gfx/cairo \
-			--exclude MANIFEST
-
-FIREFOX=	${PORTNAME}
+FIREFOX=	${MOZILLA}
 FF_SUFX=	# -devel
 FF=		${FIREFOX}${FF_SUFX}
 FF_VER=		1.5
-#FF_VER=	${PORTVERSION}
 
 FIREFOX_ICON=		${FF}.xpm
 FIREFOX_ICON_SRC=	${PREFIX}/lib/${FF}/icons/default.xpm
-
-PKGCONFIG_FILES=firefox-gtkmozembed firefox-js firefox-xpcom \
-		firefox-plugin
-
-JPI_LIST?=\
-	${LOCALBASE}/jdk1.5.0/jre/plugin/${ARCH}/ns7/libjavaplugin_oji.so \
-	${LOCALBASE}/jdk1.4.2/jre/plugin/${ARCH}/ns610/libjavaplugin_oji.so
 
 SYSTEM_PREFS=		${FAKEDIR}/lib/${FF}/defaults/pref/firefox.js
 SCRIPTS_DIR=		${FAKEDIR}/lib/${FF}
 MOZ_PIS_SCRIPTS=	S50cleanhome
 MOZ_PIS_DIR=		${SCRIPTS_DIR}/init.d
-CPPFLAGS+=	-I${X11BASE}/include -I${LOCALBASE}/include
-CFLAGS+=	${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${X11BASE}/lib
-LIBS+=		${PTHREAD_LIBS}
 
-OPTIONS=	DEBUG "Build a debugging image" off \
-		LOGGING "Enable additional log messages" off \
-		OPTIMIZED_CFLAGS "Enable some additional optimizations" off \
-		SMB "Enable smb:// URI support using gnomevfs" off \
-		NEWTAB "Open external links in a new tab" on
+OPTIONS=	NEWTAB "Open external links in a new tab" on
 
 .include <bsd.port.pre.mk>
-
-.if defined(WITH_DEBUG)
-WITH_LOGGING=		yes
-CONFIGURE_ENV+=		WITH_DEBUG=yes
-.endif # defined(WITH_DEBUG)
-
-.if defined(WITH_OPTIMIZED_CFLAGS)
-CFLAGS:=		-O2 -fno-strict-aliasing ${CFLAGS:N-O*}
-.else
-CFLAGS:=		-O ${CFLAGS:N-O*:N-m*}
-CONFIGURE_ENV+=		WITH_OPTIMIZE=-O
-.endif # defined(WITH_OPTIMIZED_CFLAGS)
-
-.if defined(WITH_LOGGING)
-CONFIGURE_ENV+=	WITH_LOGGING=yes
-.endif # defined(WITH_LOGGING)
-
-.if defined(WITH_SMB)
-USE_GNOME+=	gnomevfs2
-CONFIGURE_ENV+=	WITH_SMB=yes
-.endif # defined(WITH_SMB)
+.include "${.CURDIR}/../mozilla/Makefile.common"
 
 .if ${ARCH} == "alpha" && ${OSVERSION} < 500035
 IGNORE=	core dumps on alpha during post-build
@@ -124,24 +65,10 @@ pre-extract::
 	@${ECHO_MSG}
 
 post-extract::
-	@${SED} -e 's|@CPPFLAGS@|${CPPFLAGS}|'		\
-		-e 's|@CFLAGS@|${CFLAGS}|'		\
-		-e 's|@LDFLAGS@|${LDFLAGS}|'		\
-		-e 's|@LIBS@|${LIBS}|'			\
-		-e 's|@X11BASE@|${X11BASE}|'		\
-		-e 's|@LOCALBASE@|${LOCALBASE}|'	\
-		-e 's|@FAKEDIR@|${FAKEDIR}|'		\
-		-e 's|@PERL@|${PERL5}|'			\
-		-e 's|@KRB5_HOME@|${KRB5_HOME}|'		\
-		<${FILESDIR}/mozconfig.in >${WRKSRC}/.mozconfig
 	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' \
 		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${FF}.desktop
 
 post-patch:
-	@${REINPLACE_CMD} -e  's/%{idldir}/%idldir%/g ; \
-		s|"%FULL_NSPR_CFLAGS%"|`nspr-config --cflags`|g ; \
-		s|"%FULL_NSPR_LIBS%"|`nspr-config --libs`|g' \
-			${WRKSRC}/build/unix/mozilla-config.in
 	@${REINPLACE_CMD} -e 's|%%FIREFOX%%|${FF}|' \
 		${WRKSRC}/config/autoconf.mk.in
 	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${FF}|g ; \
@@ -175,12 +102,6 @@ post-patch:
 		/dom.disable_window_open_feature.toolbar/s/false/true/' \
 		${WRKSRC}/${ii}/all.js
 .endfor
-
-pre-configure:
-	@if [ -n "`${PKG_INFO} -xI '^bind[0-9]*-base-[0-9]'`" ]; then \
-		${ECHO_CMD} "${PKGNAME}: bind installed with PORT_REPLACES_BASE_BIND causes build problems."; \
-		${FALSE}; \
-	fi
 
 pre-install:
 	@${RM} -rf ${FAKEDIR} ${PLIST}

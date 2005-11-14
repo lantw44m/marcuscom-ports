@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.2 2005/11/13 19:26:50 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.3 2005/11/14 00:58:39 ahze Exp $
 
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip
 LIB_DEPENDS+=	jpeg.9:${PORTSDIR}/graphics/jpeg \
@@ -24,8 +24,6 @@ USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 
 WRKSRC?=	${WRKDIR}/mozilla
-PKGINSTALL?=	${WRKDIR}/pkg-install
-PKGDEINSTALL?=	${WRKDIR}/pkg-deinstall
 FAKEDIR?=	${WRKDIR}/fake
 PLIST?=		${WRKDIR}/plist
 
@@ -36,6 +34,9 @@ FREETYPE_LIB?=	libfreetype.so.9
 GENERIC_MOZCONFIG?=	${.CURDIR}/../../www/mozilla/files/mozconfig-generic.in
 PORT_MOZCONFIG?=	${FILESDIR}/mozconfig.in
 MOZCONFIG?=		${WRKSRC}/.mozconfig
+
+PKGINSTALL?=	${WRKDIR}/pkg-install
+PKGDEINSTALL?=	${WRKDIR}/pkg-deinstall
 
 EXTRACT_AFTER_ARGS?=	| ${TAR} -xf - --exclude */CVS/*	\
 			--exclude */macbuild/*			\
@@ -58,6 +59,11 @@ JPI_LIST?=\
 
 PKGCONFIG_FILES?=	${MOZILLA}-gtkmozembed ${MOZILLA}-js \
 			${MOZILLA}-xpcom ${MOZILLA}-plugin
+
+CPPFLAGS+=		-I${X11BASE}/include -I${LOCALBASE}/include
+CFLAGS+=		${PTHREAD_CFLAGS}
+LDFLAGS+=		-L${X11BASE}/lib
+LIBS+=			${PTHREAD_LIBS}
 
 .if defined(WITH_SMB)
 USE_GNOME+=	gnomevfs2

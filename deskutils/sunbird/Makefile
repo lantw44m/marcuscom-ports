@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/sunbird/Makefile,v 1.8 2005/08/19 01:52:37 mezz Exp $
+#   $MCom: ports/deskutils/sunbird/Makefile,v 1.9 2005/11/08 05:14:54 ahze Exp $
 #
 
 PORTNAME=	sunbird
@@ -15,64 +15,23 @@ MASTER_SITE_SUBDIR=	ahze
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Redesign of the Mozilla Calendar with XUL interface
 
-LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg \
-		png.5:${PORTSDIR}/graphics/png \
-		Xft.2:${PORTSDIR}/x11-fonts/libXft
-BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
-
 USE_GCC=	3.4+
 ALL_TARGET=	default
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
-FAKEDIR=	${WRKDIR}/fake
-USE_REINPLACE=	yes
 HAS_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gtk20 libidl
-USE_ICONV=	yes
-USE_PERL5_BUILD=yes
+WANT_GNOME=	yes
 USE_X_PREFIX=	yes
-WRKSRC=		${WRKDIR}/mozilla
-PLIST=		${WRKDIR}/plist
-PKGINSTALL=	${WRKDIR}/pkg-install
-PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 SUNBIRD=	${PORTNAME}
 SUNBIRD_ICON_SRC=	${PREFIX}/lib/sunbird/icons/default.xpm
 SUNBIRD_ICON=		${PORTNAME}.xpm
-PKGCONFIG_FILES=sunbird-gtkmozembed sunbird-js sunbird-xpcom \
-		sunbird-nspr sunbird-nss sunbird-plugin
-
-OPTIONS=	DEBUG "Build with debugging" off \
-		OPTIMIZED_CFLAGS "Enable some additional optimizations" off
-
-EXTRACT_AFTER_ARGS=	| ${TAR} -xf - --exclude */CVS/* \
-			--exclude */macbuild/*\
-			--exclude */package/* \
-			--exclude .cvsignore \
-			--exclude makefile.win \
-			--exclude MANIFEST
 
 .include <bsd.port.pre.mk>
-
-CPPFLAGS+=		-I${X11BASE}/include -I${LOCALBASE}/include
-CFLAGS+=		${PTHREAD_CFLAGS}
-LDFLAGS+=		-L${X11BASE}/lib
-LIBS+=			${PTHREAD_LIBS}
+.include "${.CURDIR}/../../www/mozilla/Makefile.common"
 
 .if ${PERL_LEVEL} < 500600
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-config_make-jars.pl
-.endif
-
-.if defined(WITH_DEBUG)
-WITH_LOGGING=		yes
-CONFIGURE_ENV+=		WITH_DEBUG=yes
-.endif
-
-.if defined(WITH_OPTIMIZED_CFLAGS)
-CFLAGS+=		-O2
-CONFIGURE_ENV+=		WITH_OPTIMIZE=-O2
-.else
-CONFIGURE_ENV+=		WITH_OPTIMIZE=-O
 .endif
 
 pre-extract::
@@ -83,36 +42,14 @@ pre-extract::
 post-extract::
 	@${SED} -e 's|@SUNBIRD_ICON@|${SUNBIRD_ICON}|' \
 		${FILESDIR}/sunbird.desktop.in >${WRKDIR}/sunbird.desktop
-	@${SED} -e 's|@CPPFLAGS@|${CPPFLAGS}|'		\
-		-e 's|@CFLAGS@|${CFLAGS}|'		\
-		-e 's|@LDFLAGS@|${LDFLAGS}|'		\
-		-e 's|@LIBS@|${LIBS}|'			\
-		-e 's|@X11BASE@|${X11BASE}|'		\
-		-e 's|@LOCALBASE@|${LOCALBASE}|'	\
-		-e 's|@FAKEDIR@|${FAKEDIR}|'		\
-		-e 's|@PERL@|${PERL5}|'			\
-		<${FILESDIR}/mozconfig.in >${WRKSRC}/.mozconfig
 
 post-patch:
-	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${SUNBIRD}|g ; \
-		s|%%PREFIX%%|${PREFIX}|g ; \
-		s|%%X11BASE%%|${X11BASE}|g' \
-		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
-	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${SUNBIRD}|g' \
-		< ${MASTERDIR}/pkg-deinstall.in > ${PKGDEINSTALL}
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
 		${WRKSRC}/build/unix/run-mozilla.sh
-	@${REINPLACE_CMD} -e 's|-lc_r|${PTHREAD_LIBS}|g ; \
-		s|-lpthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/configure \
-		${WRKSRC}/nsprpub/configure
 	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/nsprpub/config/config.mk \
 		${WRKSRC}/security/coreconf/FreeBSD.mk \
 		${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
 		${WRKSRC}/js/src/Makefile.in
-	@${REINPLACE_CMD} -E -e 's|libcups\.so\.[0-9]+|libcups.no|g' \
-		${WRKSRC}/gfx/src/gtk/nsDeviceContextSpecG.cpp
 .for ii in modules/libpref/src/init extensions/sroaming/resources/content/prefs \
 		embedding/minimo
 	@${REINPLACE_CMD} -e '/accessibility.typeaheadfind.enablesound/s/true/false/ ; \

@@ -2,9 +2,6 @@
 # $FreeBSD$
 #   $MCom: ports/www/firefox/files/mozconfig.in,v 1.9 2005/11/12 02:06:57 ahze Exp $
 ######################################################################
-ac_add_options --enable-application=browser
+ac_add_options --enable-application=suite
 ac_add_options --enable-svg-renderer=cairo
 ac_add_options --enable-system-cairo
-# See the following URL for approval email for using official branding
-# http://people.freebsd.org/~ahze/firefox_thunderbird-approved.txt
-ac_add_options --enable-official-branding

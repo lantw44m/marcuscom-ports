@@ -1,0 +1,155 @@
+# New ports collection makefile for:	mozilla-thunderbird
+# Date created:			4 September 2003
+# Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD$
+#    $MCom$
+#
+
+PORTNAME=	thunderbird
+PORTVERSION=	1.0.7
+PORTREVISION=	1
+CATEGORIES=	mail
+MASTER_SITES=	${MASTER_SITE_MOZILLA}
+MASTER_SITE_SUBDIR=	${PORTNAME}/releases/${PORTVERSION}/source
+DISTNAME=	${PORTNAME}-${PORTVERSION}-source
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	Mozilla Thunderbird is standalone mail and news that stands above
+
+WANT_GNOME=	yes
+ALL_TARGET=	default
+CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
+HAS_CONFIGURE=	yes
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_X_PREFIX=	yes
+
+PORTNAME_ICON=	${PREFIX}/lib/${PORTNAME}/chrome/icons/default/default.xpm
+
+SYSTEM_PREFS=	${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION}/defaults/pref/${PORTNAME}.js
+SCRIPTS_DIR=	${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION}
+MOZ_PIS_SCRIPTS=S50cleanhome
+MOZ_PIS_DIR=	${SCRIPTS_DIR}/init.d
+
+CONFLICTS=	thunderbird-1.5*
+
+.include <bsd.port.pre.mk>
+.include "${.CURDIR}/../../www/mozilla/Makefile.common"
+
+.if ${ARCH} == "alpha" && ${OSVERSION} < 500035
+IGNORE=	core dumps at runtime
+.endif # ${ARCH} == "alpha" && ${OSVERSION} < 500035
+
+.if ${PERL_LEVEL} < 500600
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-config_make-jars.pl
+.endif # ${PERL_LEVEL} < 500600
+
+pre-extract::
+	@${ECHO_MSG}
+	@${ECHO_MSG} "Extracting source (this takes a while) ..."
+	@${ECHO_MSG}
+
+post-extract::
+	@${SED} -e 's|@PORTNAME_ICON@|${PORTNAME_ICON}|' \
+		<${FILESDIR}/${PORTNAME}.desktop.in >${WRKDIR}/${PORTNAME}.desktop
+
+post-patch:
+.for ii in ${MOZ_PIS_SCRIPTS}
+	@${SED} -e 's|%%MOZILLA%%|${PORTNAME}|g ; \
+		s|%%PREFIX%%|${PREFIX}|g ; \
+		s|%%X11BASE%%|${X11BASE}|g' \
+		< ${FILESDIR}/moz_pis_${ii} > ${WRKDIR}/moz_pis_${ii}
+.endfor
+	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
+		${WRKSRC}/build/unix/run-mozilla.sh
+	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
+		${WRKSRC}/security/coreconf/FreeBSD.mk \
+		${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
+		${WRKSRC}/js/src/Makefile.in
+	@${REINPLACE_CMD} -e 's|/usr/local/netscape|${LOCALBASE}|g' \
+		-e 's|/usr/local/lib/netscape|${LOCALBASE}/lib|g' \
+		${WRKSRC}/xpcom/*/SpecialSystemDirectory.cpp
+	@${FIND} ${WRKSRC} -name all.js | ${XARGS} ${REINPLACE_CMD} -e \
+		'/accessibility.typeaheadfind.enablesound/s/true/false/ ; \
+		/dom.disable_window_open_feature.toolbar/s/false/true/'
+	@${REINPLACE_CMD} -e 's|<iconv.h>|\"${LOCALBASE}/include/iconv.h\"|g' \
+		${WRKSRC}/configure \
+		${WRKSRC}/intl/uconv/native/nsNativeUConvService.cpp \
+		${WRKSRC}/xpcom/io/nsNativeCharsetUtils.cpp
+
+pre-install:
+	@${RM} -rf ${FAKEDIR} ${PLIST}
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
+		Makefile ${MAKE_ARGS} ${INSTALL_TARGET}
+	@${MKDIR} ${SCRIPTS_DIR}
+	@${MKDIR} ${MOZ_PIS_DIR}
+	${ECHO_CMD} 'share/applications/${PORTNAME}.desktop' >> ${PLIST}
+	${ECHO_CMD} "@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}" >> ${PLIST}
+	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g; \
+		s|${PORTNAME}-${PORTVERSION}|${PORTNAME}|' \
+		${FAKEDIR}/bin/${PORTNAME} \
+		${FAKEDIR}/bin/${PORTNAME}-config
+	${ECHO_CMD} bin/${PORTNAME} >> ${PLIST}
+	${ECHO_CMD} bin/${PORTNAME}-config >> ${PLIST}
+.for ii in ${MOZ_PIS_SCRIPTS}
+	${INSTALL_SCRIPT} ${WRKDIR}/moz_pis_${ii} ${MOZ_PIS_DIR}/${ii}
+.endfor
+	@${MKDIR} ${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION}/defaults
+	@${CP} -RL ${WRKSRC}/dist/bin/defaults/isp \
+		${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION}/defaults
+	cd ${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION} && ${FIND} -s * -type f -o -type l | \
+		${SED} -e 's|^|lib/${PORTNAME}/|' >> ${PLIST} \
+		&& ${FIND} -d * -type d | \
+		${SED} -e 's|^|@dirrm lib/${PORTNAME}/|' >> ${PLIST}
+	${ECHO_CMD} @dirrm lib/${PORTNAME} >> ${PLIST}
+	for pcfile in ${PKGCONFIG_FILES}; do \
+		${REINPLACE_CMD} -e 's|${PORTNAME}-${PORTVERSION}|${PORTNAME}|g; \
+			s|${FAKEDIR}|${PREFIX}|g ; \
+			s|${PORTNAME}-nspr = ${PORTVERSION}|nspr >= 4.6.0|g' \
+			${FAKEDIR}/lib/pkgconfig/$${pcfile}.pc ; \
+		${ECHO_CMD} libdata/pkgconfig/$${pcfile}.pc >> ${PLIST} ; \
+	done
+	cd ${FAKEDIR}/include/${PORTNAME}-${PORTVERSION} && ${FIND} -s * -type f -o -type l | \
+		${SED} -e 's|^|include/${PORTNAME}/|' >> ${PLIST} \
+		&& ${FIND} -d * -type d | \
+		${SED} -e 's|^|@dirrm include/${PORTNAME}/|' >> ${PLIST}
+	${ECHO_CMD} @dirrm include/${PORTNAME} >> ${PLIST}
+	cd ${FAKEDIR}/share/idl/${PORTNAME}-${PORTVERSION} \
+		&& ${FIND} -s * -type f -o -type l | \
+		${SED} -e 's:^:share/idl/${PORTNAME}/:' >> ${PLIST} \
+		&& ${FIND} -d * -type d | \
+		${SED} -e 's:^:@dirrm share/idl/${PORTNAME}/:' >> ${PLIST}
+		${ECHO_CMD} "@dirrm share/idl/${PORTNAME}" >> ${PLIST}
+		${ECHO_CMD} "@unexec ${RMDIR} %D/share/idl 2>/dev/null || true" >> ${PLIST}
+
+do-install:
+	${MKDIR} ${PREFIX}/lib/${PORTNAME}
+	${CHMOD} 755 ${PREFIX}/lib/${PORTNAME}
+	${INSTALL_SCRIPT} ${FAKEDIR}/bin/${PORTNAME} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${FAKEDIR}/bin/${PORTNAME}-config ${PREFIX}/bin
+	for pcfile in ${PKGCONFIG_FILES}; do \
+		${INSTALL_DATA} ${FAKEDIR}/lib/pkgconfig/$${pcfile}.pc \
+			${PREFIX}/libdata/pkgconfig/$${pcfile}.pc ; \
+	done
+	-${RM} -fr ${PREFIX}/include/${PORTNAME}
+	${MKDIR} ${PREFIX}/include/${PORTNAME}
+	${CHMOD} 755 ${PREFIX}/include/${PORTNAME}
+	cd ${FAKEDIR}/include/${PORTNAME}-${PORTVERSION} && ${FIND} . | \
+		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/include/${PORTNAME}
+	cd ${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION} && ${FIND} . | \
+		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${PORTNAME}
+	${MKDIR} ${PREFIX}/share/idl/${PORTNAME}
+	cd ${FAKEDIR}/share/idl/${PORTNAME}-${PORTVERSION} && ${FIND} . | \
+		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/idl/${PORTNAME}
+
+post-install:
+.if !defined(PACKAGE_BUILDING)
+	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+.endif
+	${MKDIR} ${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.desktop ${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/other-licenses/branding/${PORTNAME}/default.xpm \
+		${PREFIX}/lib/${PORTNAME}/chrome/icons/default/default.xpm
+
+.include <bsd.port.post.mk>
