@@ -111,6 +111,7 @@ share/locale/id/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/it/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/ja/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/ko/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
+share/locale/ku/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/lt/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/lv/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/mk/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
@@ -141,6 +142,8 @@ share/locale/vi/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/xh/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
+@unexec rmdir %D/share/locale/ku/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/ku 2> /dev/null || true
 @dirrm share/gnome/gtkhtml-%%VERSION%%/icons
 @dirrm share/gnome/gtkhtml-%%VERSION%%
 @dirrm lib/gtkhtml
