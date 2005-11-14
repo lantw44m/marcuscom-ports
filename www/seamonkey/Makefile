@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/seamonkey/Makefile,v 1.27 2005/11/11 09:03:26 ahze Exp $
+#    $MCom: ports/www/seamonkey/Makefile,v 1.28 2005/11/14 04:12:10 ahze Exp $
 #
 
 PORTNAME?=	seamonkey
@@ -44,7 +44,8 @@ OPTIONS=MAILNEWS "Enable Mail and News modules" on \
 	COMPOSER "Enable the HTML Composer module" on \
 	LDAP "Enable LDAP support for Mailnews" on \
 	CHATZILLA "Enable the Chatzilla IRC module" on \
-	JAVASCRIPT_DEBUGGER "Enable DTD and JavaScript debuggers" off
+	JAVASCRIPT_DEBUGGER "Enable DTD and JavaScript debuggers" off \
+	SMB "Enable smb:// URI support using gnomevfs" off
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../mozilla/Makefile.common"

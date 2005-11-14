@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.3 2005/11/14 00:58:39 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.4 2005/11/14 04:12:09 ahze Exp $
 
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip
 LIB_DEPENDS+=	jpeg.9:${PORTSDIR}/graphics/jpeg \
@@ -10,8 +10,7 @@ LIB_DEPENDS+=	jpeg.9:${PORTSDIR}/graphics/jpeg \
 
 OPTIONS+=	DEBUG "Build a debugging image" off \
 		LOGGING "Enable additional log messages" off \
-		OPTIMIZED_CFLAGS "Enable some additional optimizations" off \
-		SMB "Enable smb:// URI support using gnomevfs" off
+		OPTIMIZED_CFLAGS "Enable some additional optimizations" off
 
 MAINTAINER?=	gnome@FreeBSD.org
 

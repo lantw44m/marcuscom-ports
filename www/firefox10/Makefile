@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.13 2005/11/12 02:06:57 ahze Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.14 2005/11/14 04:12:08 ahze Exp $
 #
 
 PORTNAME=	firefox
@@ -46,7 +46,8 @@ SCRIPTS_DIR=		${FAKEDIR}/lib/${FF}
 MOZ_PIS_SCRIPTS=	S50cleanhome
 MOZ_PIS_DIR=		${SCRIPTS_DIR}/init.d
 
-OPTIONS=	NEWTAB "Open external links in a new tab" on
+OPTIONS=	NEWTAB "Open external links in a new tab" on \
+		SMB "Enable smb:// URI support using gnomevfs" off
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../mozilla/Makefile.common"

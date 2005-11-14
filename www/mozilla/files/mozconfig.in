@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/www/mozilla/files/mozconfig.in,v 1.1 2005/11/13 19:07:58 ahze Exp $
 export MOZ_INTERNAL_LIBART_LGPL=1
 mk_add_options MOZ_INTERNAL_LIBART_LGPL=1
 
@@ -11,7 +11,7 @@ else
 fi
 	ac_add_options --enable-mailnews
 else
-	ac_add_options --enable-mailnews
+	ac_add_options --disable-mailnews
 fi # end WITHOUT_MAILNEWS
 
 if test -z "$WITH_JAVASCRIPT_DEBUGGER" ; then

@@ -1,11 +1,9 @@
 # $FreeBSD$
-#   $MCom: ports/www/mozilla/files/mozconfig-generic.in,v 1.1 2005/11/13 19:07:58 ahze Exp $
+#   $MCom: ports/www/mozilla/files/mozconfig-generic.in,v 1.2 2005/11/14 00:58:39 ahze Exp $
 ######################################################################
 # standard opts from README
 ac_add_options --enable-crypto
 ac_add_options --disable-tests
-ac_add_options --disable-mailnews
-ac_add_options --disable-composer
 ac_add_options --enable-default-toolkit=gtk2
 ac_add_options --enable-xft
 ######################################################################
