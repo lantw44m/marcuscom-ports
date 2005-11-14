@@ -188,11 +188,6 @@ share/icons/gnome/16x16/mimetypes/gnome-mime-text-x-vcard.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-text-x-zsh.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-text-xml.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-text.png
-share/icons/gnome/16x16/mimetypes/gnome-mime-video-mpeg.png
-share/icons/gnome/16x16/mimetypes/gnome-mime-video-quicktime.png
-share/icons/gnome/16x16/mimetypes/gnome-mime-video-x-ms-asf.png
-share/icons/gnome/16x16/mimetypes/gnome-mime-video-x-ms-wmv.png
-share/icons/gnome/16x16/mimetypes/gnome-mime-video-x-msvideo.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-video.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-x-directory-nfs-server.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-x-directory-smb-server.png
@@ -662,11 +657,6 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-text-x-vcard.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-text-x-zsh.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-text-xml.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-text.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-video-mpeg.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-video-quicktime.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-video-x-ms-asf.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-video-x-ms-wmv.png
-share/icons/gnome/48x48/mimetypes/gnome-mime-video-x-msvideo.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-video.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-x-directory-nfs-server.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-x-directory-smb-server.png
