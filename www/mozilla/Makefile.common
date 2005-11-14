@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.1 2005/11/13 19:07:58 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.2 2005/11/13 19:26:50 ahze Exp $
 
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip
 LIB_DEPENDS+=	jpeg.9:${PORTSDIR}/graphics/jpeg \
@@ -7,6 +7,11 @@ LIB_DEPENDS+=	jpeg.9:${PORTSDIR}/graphics/jpeg \
 		nspr4:${PORTSDIR}/devel/nspr \
 		nss3:${PORTSDIR}/security/nss \
 		Xft.2:${PORTSDIR}/x11-fonts/libXft
+
+OPTIONS+=	DEBUG "Build a debugging image" off \
+		LOGGING "Enable additional log messages" off \
+		OPTIMIZED_CFLAGS "Enable some additional optimizations" off \
+		SMB "Enable smb:// URI support using gnomevfs" off
 
 MAINTAINER?=	gnome@FreeBSD.org
 
@@ -16,6 +21,7 @@ USE_GNOME+=	gtk20 libidl desktopfileutils
 USE_ICONV=	yes
 USE_PERL5_BUILD=yes
 USE_X_PREFIX=	yes
+USE_REINPLACE=	yes
 
 WRKSRC?=	${WRKDIR}/mozilla
 PKGINSTALL?=	${WRKDIR}/pkg-install
@@ -24,6 +30,8 @@ FAKEDIR?=	${WRKDIR}/fake
 PLIST?=		${WRKDIR}/plist
 
 KRB5_HOME?=	/usr
+ESD_LIB?=	libesd.so.2
+FREETYPE_LIB?=	libfreetype.so.9
 
 GENERIC_MOZCONFIG?=	${.CURDIR}/../../www/mozilla/files/mozconfig-generic.in
 PORT_MOZCONFIG?=	${FILESDIR}/mozconfig.in
@@ -36,7 +44,6 @@ EXTRACT_AFTER_ARGS?=	| ${TAR} -xf - --exclude */CVS/*	\
 			--exclude makefile.win			\
 			--exclude MANIFEST			\
 			--exclude */nsprpub/*			\
-			--exclude */zlib/			\
 			--exclude mozilla/modules/libimg/png	\
 			--exclude mozilla/jpeg			\
 			--exclude mozilla/dbm			\
@@ -118,6 +125,13 @@ pre-configure:
 		s|"%FULL_NSPR_CFLAGS%"|`nspr-config --cflags`|g ; \
 		s|"%FULL_NSPR_LIBS%"|`nspr-config --libs`|g' \
 			${WRKSRC}/build/unix/mozilla-config.in
+	@${REINPLACE_CMD} -e 's|-lc_r|${PTHREAD_LIBS}|g ; \
+		s|-lpthread|${PTHREAD_LIBS}|g' \
+			${WRKSRC}/configure
+	@${REINPLACE_CMD} -E -e 's|libesd\.so\.[0-9]+|libesd.so|g' \
+		${WRKSRC}/widget/src/gtk2/nsSound.cpp
+	@${REINPLACE_CMD} -E -e 's|libcups\.so\.[0-9]+|libcups.so|g' \
+		${WRKSRC}/gfx/src/gtk/nsDeviceContextSpecG.cpp
 	@if [ -n "`${PKG_INFO} -xI '^bind[0-9]*-base-[0-9]'`" ]; then \
 		${ECHO_CMD} "${PKGNAME}: bind installed with PORT_REPLACES_BASE_BIND causes build problems."; \
 		${FALSE}; \

@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/www/mozilla/Makefile,v 1.25 2005/11/13 19:07:58 ahze Exp $
 #
 
 PORTNAME=	mozilla
@@ -41,13 +41,10 @@ FREETYPE_LIB=	libfreetype.so.9
 OPTIONS=CALENDAR "Enable the Calendar module" off \
 	MAILNEWS "Enable Mail and News modules" on \
 	COMPOSER "Enable the HTML Composer module" on \
-	DEBUG "Enable debugging (i.e. gdb) support" off \
 	LDAP "Enable LDAP support for Mailnews" on \
 	CHATZILLA "Enable the Chatzilla IRC module" on \
 	XMLTERM "Enable the XMLTerm module" on \
-	JAVASCRIPT_DEBUGGER "Enable DTD and JavaScript debuggers" off \
-	OPTIMIZED_CFLAGS "Enable -O2 optimizations" off \
-	SMB "Enable smb:// URI support via gnomevfs" off
+	JAVASCRIPT_DEBUGGER "Enable DTD and JavaScript debuggers" off
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/Makefile.common"
