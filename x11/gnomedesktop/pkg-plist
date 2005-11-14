@@ -152,6 +152,7 @@ share/locale/ja/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/kn/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/ky/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/li/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -199,6 +200,8 @@ share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 @unexec rmdir %D/share/locale/yo 2> /dev/null || true
 @unexec rmdir %D/share/locale/ug/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/ug 2> /dev/null || true
+@unexec rmdir %D/share/locale/ky/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/ky 2> /dev/null || true
 @unexec rmdir %D/share/locale/ku/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/ku 2> /dev/null || true
 @unexec rmdir %D/share/locale/hy/LC_MESSAGES 2> /dev/null || true
