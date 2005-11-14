@@ -5,7 +5,7 @@
  if [ `uname -s` != "SunOS" -o -h "$MOZ_PROGRAM" ]
  then
 -	LD_LIBRARY_PATH=${MOZ_DIST_BIN}:${MOZ_DIST_BIN}/plugins:${MRE_HOME}${LD_LIBRARY_PATH+":$LD_LIBRARY_PATH"}
-+	LD_LIBRARY_PATH=${MOZ_DIST_BIN}:${MOZ_DIST_BIN}/plugins:%%PREFIX%%/lib/browser_plugins:${MRE_HOME}${LD_LIBRARY_PATH+":$LD_LIBRARY_PATH"}
++	LD_LIBRARY_PATH=${MOZ_DIST_BIN}:${MOZ_DIST_BIN}/plugins:%%PREFIX%%/lib/browser_plugins:%%PREFIX%%/lib/browser_linux_plugins:${MRE_HOME}${LD_LIBRARY_PATH+":$LD_LIBRARY_PATH"}
  fi 
  
  if [ -n "$LD_LIBRARYN32_PATH" ]
@@ -14,7 +14,7 @@
  export MOZILLA_FIVE_HOME LD_LIBRARY_PATH
  export SHLIB_PATH LIBPATH LIBRARY_PATH ADDON_PATH DYLD_LIBRARY_PATH
 +
-+MOZ_PLUGIN_PATH=%%PREFIX%%/lib/browser_plugins
++MOZ_PLUGIN_PATH=%%PREFIX%%/lib/browser_plugins:%%PREFIX%%/lib/browser_linux_plugins
 +export MOZ_PLUGIN_PATH
  
  if [ $moz_debug -eq 1 ]
