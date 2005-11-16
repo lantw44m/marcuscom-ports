@@ -1,14 +1,5 @@
 --- configure.orig	Thu Nov 10 17:41:52 2005
 +++ configure	Thu Nov 10 17:43:52 2005
-@@ -2072,7 +2072,7 @@
- 	;;
- esac
- 
--EVOLUTION_API_VERSION=2.4
-+EVOLUTION_API_VERSION=2.6
- EDS_API_VERSION=1.2
- 
- echo "$as_me:$LINENO: checking Evolution version" >&5
 @@ -24837,8 +24837,8 @@
  				# libldap might depend on OpenSSL... We need to pull
  				# in the dependency libs explicitly here since we're
