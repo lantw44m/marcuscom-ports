@@ -3,12 +3,12 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.14 2005/11/14 04:12:08 ahze Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.15 2005/11/14 20:03:15 ahze Exp $
 #
 
 PORTNAME=	firefox
 DISTVERSION=	1.5rc2
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -66,7 +66,8 @@ pre-extract::
 	@${ECHO_MSG}
 
 post-extract::
-	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' \
+	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}| ; \
+		s|@FF_SUFX@|${FF_SUFX}|' \
 		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${FF}.desktop
 
 post-patch:
