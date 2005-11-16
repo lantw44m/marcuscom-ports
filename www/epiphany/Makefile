@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.86 2005/11/11 08:21:10 ahze Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.87 2005/11/12 21:24:37 ahze Exp $
 #
 
 PORTNAME=	epiphany
@@ -107,6 +107,8 @@ post-patch:
 .endif
 	@${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
 		 's|-lpthread|${PTHREAD_LIBS}|g'
+	@${REINPLACE_CMD} -e 's|execinfo.h|#|g' \
+		${WRKSRC}/configure
 
 post-configure:
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g ; \
