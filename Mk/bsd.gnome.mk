@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.339 2005/11/11 23:25:36 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.340 2005/11/12 07:58:22 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -754,9 +754,9 @@ gnome-post-install:
 	@for i in `${GREP} "^share/icons/.*/" ${TMPPLIST} | ${CUT} -d / -f 1-3 | ${SORT} -u`; do \
 		${ECHO_CMD} "@unexec /bin/rm %D/$${i}/icon-theme.cache 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}.icons1; \
-		${ECHO_CMD} "@exec %%X11BASE%%/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
+		${ECHO_CMD} "@exec ${X11BASE}/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
-		${ECHO_CMD} "@unexec %%X11BASE%%/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
+		${ECHO_CMD} "@unexec ${X11BASE}/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
 		${X11BASE}/bin/gtk-update-icon-cache -q -f ${PREFIX}/$${i} 2>/dev/null || ${TRUE}; \
 	done
