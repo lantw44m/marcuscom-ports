@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.17 2005/11/17 07:00:00 marcus Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.18 2005/11/17 07:10:22 marcus Exp $
 #
 
 PORTNAME=	firefox
@@ -74,12 +74,6 @@ post-extract::
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%FIREFOX%%|${FF}|' \
 		${WRKSRC}/config/autoconf.mk.in
-	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${FF}|g ; \
-		s|%%PREFIX%%|${PREFIX}|g ; \
-		s|%%X11BASE%%|${X11BASE}|g' \
-		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
-	@${SED} -e 's|%%MOZDIR%%|${PREFIX}/lib/${FF}|g' \
-		< ${MASTERDIR}/pkg-deinstall.in > ${PKGDEINSTALL}
 .for ii in ${MOZ_PIS_SCRIPTS}
 	@${SED} -e 's|%%MOZILLA%%|${FF}|g ; \
 		s|%%PREFIX%%|${PREFIX}|g ; \
@@ -88,17 +82,10 @@ post-patch:
 .endfor
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
 		${WRKSRC}/build/unix/run-mozilla.sh
-	@${REINPLACE_CMD} -e 's|-lc_r|${PTHREAD_LIBS}|g ; \
-		s|-lpthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
 		${WRKSRC}/security/coreconf/FreeBSD.mk \
 		${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
 		${WRKSRC}/js/src/Makefile.in
-	@${REINPLACE_CMD} -E -e 's|libesd\.so\.[0-9]+|libesd.so|g' \
-		${WRKSRC}/widget/src/gtk2/nsSound.cpp
-	@${REINPLACE_CMD} -E -e 's|libcups\.so\.[0-9]+|libcups.so|g' \
-		${WRKSRC}/gfx/src/gtk/nsDeviceContextSpecG.cpp
 .for ii in modules/libpref/src/init extensions/sroaming/resources/content/prefs \
 	embedding/minimo
 	@${REINPLACE_CMD} -e '/accessibility.typeaheadfind.enablesound/s/true/false/ ; \
