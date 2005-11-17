@@ -3,12 +3,12 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.15 2005/11/14 20:03:15 ahze Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.16 2005/11/16 00:08:29 marcus Exp $
 #
 
 PORTNAME=	firefox
 DISTVERSION=	1.5rc2
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -32,6 +32,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 USE_GCC=	3.4+
+LDFLAGS+=	-Wl,-rpath,${PREFIX}/lib/${FF}
 
 FIREFOX=	${MOZILLA}
 FF_SUFX=	# -devel
@@ -104,6 +105,10 @@ post-patch:
 		/dom.disable_window_open_feature.toolbar/s/false/true/' \
 		${WRKSRC}/${ii}/all.js
 .endfor
+
+post-build:
+	@${REINPLACE_CMD} -e "s|\(Libs:.*\)\($$\)|\1 -Wl,-rpath,${PREFIX}/lib/${FF}\2|" \
+		${WRKSRC}/build/unix/*.pc
 
 pre-install:
 	@${RM} -rf ${FAKEDIR} ${PLIST}
