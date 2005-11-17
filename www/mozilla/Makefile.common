@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.4 2005/11/14 04:12:09 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.5 2005/11/14 20:03:15 ahze Exp $
 
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip
 LIB_DEPENDS+=	jpeg.9:${PORTSDIR}/graphics/jpeg \
@@ -16,6 +16,7 @@ MAINTAINER?=	gnome@FreeBSD.org
 
 MOZILLA?=	${PORTNAME}
 MOZILLA_VER?=	${PORTVERSION}
+MOZ_RPATH?=	${MOZILLA}
 USE_GNOME+=	gtk20 libidl desktopfileutils
 USE_ICONV=	yes
 USE_PERL5_BUILD=yes
@@ -61,7 +62,7 @@ PKGCONFIG_FILES?=	${MOZILLA}-gtkmozembed ${MOZILLA}-js \
 
 CPPFLAGS+=		-I${X11BASE}/include -I${LOCALBASE}/include
 CFLAGS+=		${PTHREAD_CFLAGS}
-LDFLAGS+=		-L${X11BASE}/lib
+LDFLAGS+=		-L${X11BASE}/lib -Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}
 LIBS+=			${PTHREAD_LIBS}
 
 .if defined(WITH_SMB)
@@ -112,7 +113,7 @@ MOZCONFIG_SED=	${SED} -e 's|@CPPFLAGS@|${CPPFLAGS}|'	\
 		-e 's|%%KRB5_HOME%%|${KRB5_HOME}|'	\
 		-e 's|%%MOZDIR%%|${PREFIX}/lib/${MOZILLA}|'
 
-pre-configure:	
+pre-configure:
 .if exists(${.CURDIR}/pkg-install.in)
 	@${MOZCONFIG_SED} < ${.CURDIR}/pkg-install.in > ${PKGINSTALL}
 .endif
@@ -141,3 +142,7 @@ pre-configure:
 		${ECHO_CMD} "${PKGNAME}: bind installed with PORT_REPLACES_BASE_BIND causes build problems."; \
 		${FALSE}; \
 	fi
+
+post-build:
+	@${REINPLACE_CMD} -e "s|\(Libs:.*\)\($$\)|\1 -Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}\2|" \
+		${WRKSRC}/build/unix/*.pc
