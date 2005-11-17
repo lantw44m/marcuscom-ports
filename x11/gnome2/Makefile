@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.122 2005/10/06 01:26:06 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.123 2005/11/10 23:13:03 marcus Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.13.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -59,7 +59,9 @@ RUN_DEPENDS?=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2
 		sound-juicer:${PORTSDIR}/audio/sound-juicer \
 		gnome-keyring-manager:${PORTSDIR}/security/gnomekeyringmanager \
 		${X11BASE}/libdata/pkgconfig/libgtkhtml-2.0.pc:${PORTSDIR}/www/libgtkhtml \
-		evince:${PORTSDIR}/graphics/evince
+		evince:${PORTSDIR}/graphics/evince \
+		${X11BASE}/libexec/fast-user-switch-applet:${PORTSDIR}/x11/fast-user-switch-applet \
+		atomix:${PORTSDIR}/games/atomix
 
 NO_BUILD=	yes
 
@@ -87,7 +89,7 @@ RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
 .endif
 
 .if ${.CURDIR}==${MASTERDIR} || ${.CURDIR:T}=="gnome2-lite"
-.if !defined(WITH_GNOME_SCREENSAVER)
+.if defined(WITH_XSCREENSAVER)
 RUN_DEPENDS+=	${X11BASE}/share/gnome/applications/gnome-screensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome
 .else
 RUN_DEPENDS+=	gnome-screensaver:${PORTSDIR}/x11/gnome-screensaver
