@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/seamonkey/Makefile,v 1.29 2005/11/14 20:03:16 ahze Exp $
+#    $MCom: ports/www/seamonkey/Makefile,v 1.30 2005/11/18 09:28:46 ahze Exp $
 #
 
 PORTNAME?=	seamonkey
@@ -18,7 +18,7 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}.source
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The open source, standards compliant web browser
 
-MOZILL_VER=	1.5a
+MOZ_VER=	1.5a
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
