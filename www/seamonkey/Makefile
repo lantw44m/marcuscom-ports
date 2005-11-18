@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/seamonkey/Makefile,v 1.28 2005/11/14 04:12:10 ahze Exp $
+#    $MCom: ports/www/seamonkey/Makefile,v 1.29 2005/11/14 20:03:16 ahze Exp $
 #
 
 PORTNAME?=	seamonkey
@@ -18,17 +18,11 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}.source
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The open source, standards compliant web browser
 
-LIB_DEPENDS=	svg-cairo.1:${PORTSDIR}/graphics/libsvg-cairo
-
-MOZILLA?=	seamonkey
-MOZ_SUFX?=	# empty (for now)
-MOZ_VER?=	1.5a
+MOZILL_VER=	1.5a
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 WANT_GNOME=	yes
-USE_REINPLACE=	yes
 HAS_CONFIGURE=	yes
 ALL_TARGET=	default
 SCRIPTS_DIR=	${FAKEDIR}/lib/${MOZILLA}
@@ -50,7 +44,6 @@ OPTIONS=MAILNEWS "Enable Mail and News modules" on \
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../mozilla/Makefile.common"
 
-LATEST_LINK=	${MOZILLA}
 .if exists(${LOCALBASE}/include/cairo/cairo-glitz.h)
 # Glitz support can only be enabled if cairo is built with glitz support
 CONFIGURE_ARGS+=--enable-glitz
@@ -125,8 +118,6 @@ post-patch:
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' \
 		< ${FILESDIR}/seamonkey.desktop.in > \
 		${WRKDIR}/seamonkey.desktop
-
-post-build:
 	${SED} -e "s|%%PREFIX%%|${PREFIX}|g" -e "s|%%MOZILLA%%|${MOZILLA}|g" \
 		${FILESDIR}/seamonkey.sh >${WRKSRC}/${MOZILLA}
 
