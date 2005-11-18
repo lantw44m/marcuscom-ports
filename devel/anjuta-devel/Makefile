@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.6 2005/10/27 19:19:14 mezz Exp $
+#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.7 2005/10/27 21:20:31 mezz Exp $
 #
 
 PORTNAME=	anjuta
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+=--with-subversion-dir=${LOCALBASE}/bin \
 		--with-svn-lib=${LOCALBASE}/lib \
 		--with-apr-config=${LOCALBASE}/bin/apr-1-config \
 		--with-apu-config=${LOCALBASE}/bin/apu-1-config
-PLIST_SUBS+=	SVN=""
+PLIST_SUB+=	SVN=""
 .else
 CONFIGURE_ARGS+=--without-subversion-dir \
  		--without-apr-config \
