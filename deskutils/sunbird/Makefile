@@ -3,14 +3,15 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/sunbird/Makefile,v 1.9 2005/11/08 05:14:54 ahze Exp $
+#   $MCom: ports/deskutils/sunbird/Makefile,v 1.10 2005/11/14 04:12:06 ahze Exp $
 #
 
 PORTNAME=	sunbird
 PORTVERSION=	0.3a1
 CATEGORIES=	deskutils
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	ahze
+MASTER_SITES=	${MASTER_SITE_MOZILLA}
+MASTER_SITE_SUBDIR=	sunbird/new-directory/releases/${DISTVERSION}/source
+DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Redesign of the Mozilla Calendar with XUL interface
