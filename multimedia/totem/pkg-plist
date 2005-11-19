@@ -11,6 +11,7 @@ lib/libtotem-plparser.so
 lib/libtotem-plparser.so.1
 lib/nautilus/extensions-1.0/libtotem-properties-page.a
 lib/nautilus/extensions-1.0/libtotem-properties-page.so
+lib/nautilus/extensions-1.0/libtotem-properties-page.so.0
 libdata/pkgconfig/totem-plparser.pc
 %%MOZILLA%%libexec/totem-mozilla-viewer
 share/gnome/applications/totem.desktop
