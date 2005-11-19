@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.12 2005/11/06 01:36:33 ahze Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.13 2005/11/13 21:27:58 marcus Exp $
 #
 
 PORTNAME=	eog
 PORTVERSION=	2.13.2
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.13
@@ -20,10 +21,11 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprintui \
-		librsvg2 desktopfileutils libgnomeui
+		librsvg2 desktopfileutils gnomedesktop
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_AUTOTOOLS=	libtool:15
+GNOME_DESKTOP_VERSION=2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
