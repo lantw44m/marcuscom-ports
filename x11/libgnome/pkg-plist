@@ -118,6 +118,8 @@ share/locale/xh/LC_MESSAGES/libgnome-2.0.mo
 share/locale/yi/LC_MESSAGES/libgnome-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/libgnome-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
+@unexec rmdir %D/share/locale/tt/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/tt 2> /dev/null || true
 @dirrm include/libgnome-2.0/libgnome
 @dirrm include/libgnome-2.0
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
