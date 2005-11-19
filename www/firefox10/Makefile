@@ -3,11 +3,12 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.19 2005/11/17 18:17:47 marcus Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.20 2005/11/18 03:37:32 ahze Exp $
 #
 
 PORTNAME=	firefox
 DISTVERSION=	1.5rc3
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -18,7 +19,8 @@ DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
-RUN_DEPENDS=	Xvfb:${X_VFBSERVER_PORT}
+RUN_DEPENDS=	Xvfb:${X_VFBSERVER_PORT} \
+		${X11BASE}/lib/X11/fonts/misc/8x13O.pcf.gz:${X_FONTS_MISC_PORT}
 
 WANT_GNOME=	yes
 ALL_TARGET=	default
