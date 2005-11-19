@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.58 2005/11/14 22:25:06 ahze Exp $
+#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.59 2005/11/19 03:19:32 marcus Exp $
 #
 
 PORTNAME=	gnome-icon-theme
 PORTVERSION=	2.13.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -25,7 +25,8 @@ USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_REINPLACE=	yes
-USE_GNOME=	gnomehack intlhack gnometarget
+USE_GNOME=	gnomehack intlhack gnometarget gtk20
+INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
