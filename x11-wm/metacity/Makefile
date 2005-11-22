@@ -3,11 +3,11 @@
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-wm/metacity/Makefile,v 1.61 2005/11/14 21:56:24 ahze Exp $
+#    $MCom: ports/x11-wm/metacity/Makefile,v 1.62 2005/11/19 18:05:56 marcus Exp $
 #
 
 PORTNAME=	metacity
-PORTVERSION=	2.13.2
+PORTVERSION=	2.13.3
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
