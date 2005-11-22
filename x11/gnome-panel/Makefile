@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomepanel/Makefile,v 1.111 2005/11/06 02:19:01 ahze Exp $
+#   $MCom: ports/x11/gnomepanel/Makefile,v 1.112 2005/11/16 01:55:05 marcus Exp $
 #
 
 PORTNAME=	gnomepanel
 PORTVERSION=	2.13.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/2.13
@@ -58,7 +59,7 @@ CONFIGURE_ARGS+=--disable-eds
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|evolution.desktop|evolution-2.4.desktop|g' \
+	@${REINPLACE_CMD} -e 's|evolution.desktop|evolution-2.6.desktop|g' \
 		${WRKSRC}/gnome-panel/panel-default-setup.entries.in
 .if ( ${OSVERSION} > 600000 && ${OSVERSION} < 600006 ) || \
 	( ${OSVERSION} < 503101 )
