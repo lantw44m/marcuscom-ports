@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/mail/thunderbird/Makefile,v 1.8 2005/11/14 04:12:06 ahze Exp $
 #
 
 PORTNAME=	thunderbird
@@ -28,9 +28,7 @@ USE_X_PREFIX=	yes
 PORTNAME_ICON=	${PREFIX}/lib/${PORTNAME}/chrome/icons/default/default.xpm
 
 SYSTEM_PREFS=	${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION}/defaults/pref/${PORTNAME}.js
-SCRIPTS_DIR=	${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION}
-MOZ_PIS_SCRIPTS=S50cleanhome
-MOZ_PIS_DIR=	${SCRIPTS_DIR}/init.d
+MOZ_PIS_SCRIPTS=moz_pis_S50cleanhome
 
 CONFLICTS=	thunderbird-1.5*
 
@@ -45,28 +43,11 @@ IGNORE=	core dumps at runtime
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-config_make-jars.pl
 .endif # ${PERL_LEVEL} < 500600
 
-pre-extract::
-	@${ECHO_MSG}
-	@${ECHO_MSG} "Extracting source (this takes a while) ..."
-	@${ECHO_MSG}
-
 post-extract::
 	@${SED} -e 's|@PORTNAME_ICON@|${PORTNAME_ICON}|' \
 		<${FILESDIR}/${PORTNAME}.desktop.in >${WRKDIR}/${PORTNAME}.desktop
 
 post-patch:
-.for ii in ${MOZ_PIS_SCRIPTS}
-	@${SED} -e 's|%%MOZILLA%%|${PORTNAME}|g ; \
-		s|%%PREFIX%%|${PREFIX}|g ; \
-		s|%%X11BASE%%|${X11BASE}|g' \
-		< ${FILESDIR}/moz_pis_${ii} > ${WRKDIR}/moz_pis_${ii}
-.endfor
-	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
-		${WRKSRC}/build/unix/run-mozilla.sh
-	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/security/coreconf/FreeBSD.mk \
-		${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
-		${WRKSRC}/js/src/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/local/netscape|${LOCALBASE}|g' \
 		-e 's|/usr/local/lib/netscape|${LOCALBASE}/lib|g' \
 		${WRKSRC}/xpcom/*/SpecialSystemDirectory.cpp
@@ -79,74 +60,11 @@ post-patch:
 		${WRKSRC}/xpcom/io/nsNativeCharsetUtils.cpp
 
 pre-install:
-	@${RM} -rf ${FAKEDIR} ${PLIST}
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		Makefile ${MAKE_ARGS} ${INSTALL_TARGET}
-	@${MKDIR} ${SCRIPTS_DIR}
-	@${MKDIR} ${MOZ_PIS_DIR}
 	${ECHO_CMD} 'share/applications/${PORTNAME}.desktop' >> ${PLIST}
 	${ECHO_CMD} "@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}" >> ${PLIST}
-	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g; \
-		s|${PORTNAME}-${PORTVERSION}|${PORTNAME}|' \
-		${FAKEDIR}/bin/${PORTNAME} \
-		${FAKEDIR}/bin/${PORTNAME}-config
-	${ECHO_CMD} bin/${PORTNAME} >> ${PLIST}
-	${ECHO_CMD} bin/${PORTNAME}-config >> ${PLIST}
-.for ii in ${MOZ_PIS_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKDIR}/moz_pis_${ii} ${MOZ_PIS_DIR}/${ii}
-.endfor
 	@${MKDIR} ${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION}/defaults
-	@${CP} -RL ${WRKSRC}/dist/bin/defaults/isp \
-		${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION}/defaults
-	cd ${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION} && ${FIND} -s * -type f -o -type l | \
-		${SED} -e 's|^|lib/${PORTNAME}/|' >> ${PLIST} \
-		&& ${FIND} -d * -type d | \
-		${SED} -e 's|^|@dirrm lib/${PORTNAME}/|' >> ${PLIST}
-	${ECHO_CMD} @dirrm lib/${PORTNAME} >> ${PLIST}
-	for pcfile in ${PKGCONFIG_FILES}; do \
-		${REINPLACE_CMD} -e 's|${PORTNAME}-${PORTVERSION}|${PORTNAME}|g; \
-			s|${FAKEDIR}|${PREFIX}|g ; \
-			s|${PORTNAME}-nspr = ${PORTVERSION}|nspr >= 4.6.0|g' \
-			${FAKEDIR}/lib/pkgconfig/$${pcfile}.pc ; \
-		${ECHO_CMD} libdata/pkgconfig/$${pcfile}.pc >> ${PLIST} ; \
-	done
-	cd ${FAKEDIR}/include/${PORTNAME}-${PORTVERSION} && ${FIND} -s * -type f -o -type l | \
-		${SED} -e 's|^|include/${PORTNAME}/|' >> ${PLIST} \
-		&& ${FIND} -d * -type d | \
-		${SED} -e 's|^|@dirrm include/${PORTNAME}/|' >> ${PLIST}
-	${ECHO_CMD} @dirrm include/${PORTNAME} >> ${PLIST}
-	cd ${FAKEDIR}/share/idl/${PORTNAME}-${PORTVERSION} \
-		&& ${FIND} -s * -type f -o -type l | \
-		${SED} -e 's:^:share/idl/${PORTNAME}/:' >> ${PLIST} \
-		&& ${FIND} -d * -type d | \
-		${SED} -e 's:^:@dirrm share/idl/${PORTNAME}/:' >> ${PLIST}
-		${ECHO_CMD} "@dirrm share/idl/${PORTNAME}" >> ${PLIST}
-		${ECHO_CMD} "@unexec ${RMDIR} %D/share/idl 2>/dev/null || true" >> ${PLIST}
-
-do-install:
-	${MKDIR} ${PREFIX}/lib/${PORTNAME}
-	${CHMOD} 755 ${PREFIX}/lib/${PORTNAME}
-	${INSTALL_SCRIPT} ${FAKEDIR}/bin/${PORTNAME} ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${FAKEDIR}/bin/${PORTNAME}-config ${PREFIX}/bin
-	for pcfile in ${PKGCONFIG_FILES}; do \
-		${INSTALL_DATA} ${FAKEDIR}/lib/pkgconfig/$${pcfile}.pc \
-			${PREFIX}/libdata/pkgconfig/$${pcfile}.pc ; \
-	done
-	-${RM} -fr ${PREFIX}/include/${PORTNAME}
-	${MKDIR} ${PREFIX}/include/${PORTNAME}
-	${CHMOD} 755 ${PREFIX}/include/${PORTNAME}
-	cd ${FAKEDIR}/include/${PORTNAME}-${PORTVERSION} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/include/${PORTNAME}
-	cd ${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${PORTNAME}
-	${MKDIR} ${PREFIX}/share/idl/${PORTNAME}
-	cd ${FAKEDIR}/share/idl/${PORTNAME}-${PORTVERSION} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/idl/${PORTNAME}
 
 post-install:
-.if !defined(PACKAGE_BUILDING)
-	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-.endif
 	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKDIR}/${PORTNAME}.desktop ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/other-licenses/branding/${PORTNAME}/default.xpm \

@@ -3,7 +3,7 @@
 # Whom:			Thierry Thomas <thierry@pompo.net>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/www/nvu/Makefile,v 1.1 2005/11/14 04:12:09 ahze Exp $
 #
 
 PORTNAME=	nvu
@@ -31,59 +31,8 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-config_make-jars.pl
 .endif
 
 post-patch:
-# Remove so we can actaully find programs that are not in /usr/bin
 	@${RM} -f ${WRKSRC}/config.status ${WRKSRC}/config.cache
-# Stupid workaround..
-.for f in toolkit/components/Makefile.in toolkit/components/gnome/Makefile.in
-	@${ECHO_CMD} "LDFLAGS += -L${LOCALBASE}/lib" >> ${WRKSRC}/${f}
-.endfor
-	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/security/coreconf/FreeBSD.mk \
-		${WRKSRC}/js/src/Makefile.in
-
-pre-install:
-	${RM} -rf ${PLIST} ${FAKEDIR}
-	${TOUCH} -f ${PLIST}
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		 ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET}
-	${ECHO_CMD} bin/nvu >> ${PLIST}
-	${ECHO_CMD} bin/nvu-config >> ${PLIST}
-	cd ${FAKEDIR}/lib/${NVU} && ${FIND} -s * -type f -o -type l | \
-		${SED} -e 's|^|lib/${NVU}/|' >> ${PLIST} \
-			&& ${FIND} -d * -type d | \
-			${SED} -e 's:^:@dirrm lib/${NVU}/:' >> ${PLIST}
-	${ECHO_CMD} @dirrm lib/${NVU} >> ${PLIST}
-.for p in ${PKG_CONFIGS}
-	${ECHO_CMD} ${p:S|^|libdata/pkgconfig/|} >> ${PLIST}
-.endfor
-	cd ${FAKEDIR}/include/${NVU} && ${FIND} -s * -type f -o -type l | \
-		${SED} -e 's|^|include/${NVU}/|' >> ${PLIST} \
-		&& ${FIND} -d * -type d | \
-		${SED} -e 's|^|@dirrm include/${NVU}/|' >> ${PLIST}
-	${ECHO_CMD} @dirrm include/${NVU} >> ${PLIST}
-
-do-install:
-	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|' \
-		${FAKEDIR}/bin/* \
-		${FAKEDIR}/lib/pkgconfig/*
-	${RM} -f ${FAKEDIR}/bin/*.bak ${FAKEDIR}/lib/pkgconfig/*.bak
-	${MKDIR} ${PREFIX}/lib/${NVU}
-	${CHMOD} 755 ${PREFIX}/lib/${NVU}
-	${INSTALL_SCRIPT} ${FAKEDIR}/bin/* ${PREFIX}/bin
-	if [ ! -d ${PREFIX}/libdata/pkgconfig ]; then \
-		${MKDIR} ${PREFIX}/libdata/pkgconfig ; \
-	fi
-.for i in ${PKG_CONFIGS}
-	${INSTALL_DATA} ${FAKEDIR}/lib/pkgconfig/${i} ${PREFIX}/libdata/pkgconfig/
-.endfor
-	cd ${FAKEDIR}/lib/${NVU} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${NVU}
-	cd ${FAKEDIR}/include/${NVU} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/include/${NVU}
-
-post-install:
-.if !defined(PACKAGE_BUILDING)
-	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-.endif
+	@${ECHO_CMD} "LDFLAGS += -L${LOCALBASE}/lib" >> ${WRKSRC}/toolkit/components/Makefile.in
+	@${ECHO_CMD} "LDFLAGS += -L${LOCALBASE}/lib" >> ${WRKSRC}/toolkit/components/gnome/Makefile.in
 
 .include <bsd.port.post.mk>

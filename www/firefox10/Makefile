@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.20 2005/11/18 03:37:32 ahze Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.21 2005/11/19 07:34:00 marcus Exp $
 #
 
 PORTNAME=	firefox
@@ -13,40 +13,26 @@ PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	${PORTNAME}/releases/${DISTVERSION}/source
-PKGNAMESUFFIX=	${FF_SUFX}
 DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Web browser based on the browser portion of Mozilla
 
-RUN_DEPENDS=	Xvfb:${X_VFBSERVER_PORT} \
-		${X11BASE}/lib/X11/fonts/misc/8x13O.pcf.gz:${X_FONTS_MISC_PORT}
-
+USE_X_PREFIX=	yes
 WANT_GNOME=	yes
 ALL_TARGET=	default
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
-FAKEDIR=	${WRKDIR}/fake
 USE_REINPLACE=	yes
 HAS_CONFIGURE=	yes
-PLUGINSDIR=	${PREFIX}/lib/browser_plugins
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_X_PREFIX=	yes
 USE_GCC=	3.4+
 
-FIREFOX=	${MOZILLA}
-FF_SUFX=	# -devel
-FF=		${FIREFOX}${FF_SUFX}
-FF_VER=		1.5
-MOZ_RPATH=	${FF}
+FIREFOX_ICON=		${MOZILLA}.xpm
+FIREFOX_ICON_SRC=	${PREFIX}/lib/${MOZILLA}/icons/default.xpm
 
-FIREFOX_ICON=		${FF}.xpm
-FIREFOX_ICON_SRC=	${PREFIX}/lib/${FF}/icons/default.xpm
-
-SYSTEM_PREFS=		${FAKEDIR}/lib/${FF}/defaults/pref/firefox.js
-SCRIPTS_DIR=		${FAKEDIR}/lib/${FF}
-MOZ_PIS_SCRIPTS=	S50cleanhome
-MOZ_PIS_DIR=		${SCRIPTS_DIR}/init.d
+SYSTEM_PREFS=		${FAKEDIR}/lib/${MOZILLA}/defaults/pref/firefox.js
+MOZ_PIS_SCRIPTS=	moz_pis_S50cleanhome
 
 OPTIONS=	NEWTAB "Open external links in a new tab" on \
 		SMB "Enable smb:// URI support using gnomevfs" off
@@ -62,31 +48,11 @@ IGNORE=	core dumps on alpha during post-build
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-config_make-jars.pl
 .endif
 
-pre-extract::
-	@${ECHO_MSG}
-	@${ECHO_MSG} "Extracting source (this takes a while) ..."
-	@${ECHO_MSG}
-
 post-extract::
-	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}| ; \
-		s|@FF_SUFX@|${FF_SUFX}|' \
-		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${FF}.desktop
+	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' \
+		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${MOZILLA}.desktop
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|%%FIREFOX%%|${FF}|' \
-		${WRKSRC}/config/autoconf.mk.in
-.for ii in ${MOZ_PIS_SCRIPTS}
-	@${SED} -e 's|%%MOZILLA%%|${FF}|g ; \
-		s|%%PREFIX%%|${PREFIX}|g ; \
-		s|%%X11BASE%%|${X11BASE}|g' \
-		< ${FILESDIR}/moz_pis_${ii} > ${WRKDIR}/moz_pis_${ii}
-.endfor
-	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
-		${WRKSRC}/build/unix/run-mozilla.sh
-	@${REINPLACE_CMD} -e 's|-pthread|${PTHREAD_LIBS}|g' \
-		${WRKSRC}/security/coreconf/FreeBSD.mk \
-		${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
-		${WRKSRC}/js/src/Makefile.in
 .for ii in modules/libpref/src/init extensions/sroaming/resources/content/prefs \
 	embedding/minimo
 	@${REINPLACE_CMD} -e '/accessibility.typeaheadfind.enablesound/s/true/false/ ; \
@@ -95,67 +61,23 @@ post-patch:
 .endfor
 
 pre-install:
-	@${RM} -rf ${FAKEDIR} ${PLIST}
-	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
-		Makefile ${MAKE_ARGS} ${INSTALL_TARGET}
-	@${MKDIR} ${SCRIPTS_DIR}
-	@${MKDIR} ${MOZ_PIS_DIR}
-	@${RM} -rf ${FAKEDIR}/lib/${FF}/extensions
-	${ECHO_CMD} 'share/applications/${FF}.desktop' >> ${PLIST}
+	${ECHO_CMD} 'share/applications/${MOZILLA}.desktop' >> ${PLIST}
 	${ECHO_CMD} 'share/pixmaps/${FIREFOX_ICON}' >> ${PLIST}
-	${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g; \
-		s|${FIREFOX}|${FF}|; \
-		s|-devel||; \
-		s|$${progbase}-bin|${FIREFOX}-bin|' \
-		${FAKEDIR}/bin/firefox \
-		${FAKEDIR}/bin/firefox-config
-	${ECHO_CMD} bin/${FF} >> ${PLIST}
-	${ECHO_CMD} bin/${FF}-config >> ${PLIST}
-.for ii in ${MOZ_PIS_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKDIR}/moz_pis_${ii} ${MOZ_PIS_DIR}/${ii}
-.endfor
 .if !defined(WITHOUT_NEWTAB)
 	${ECHO_CMD} >> ${SYSTEM_PREFS}
 	${ECHO_CMD} "// Open external links in new tab" >> ${SYSTEM_PREFS}
 	${ECHO_CMD} "pref(\"browser.link.open_external\", 3);" \
 		>> ${SYSTEM_PREFS}
 .endif # !defined(WITHOUT_NEWTAB)
-	cd ${FAKEDIR}/lib/${FF} && ${FIND} -s * -type f -o -type l | \
-		${SED} -e 's|^|lib/${FF}/|' >> ${PLIST} \
-		&& ${FIND} -d * -type d | \
-		${SED} -e 's|^|@dirrm lib/${FF}/|' >> ${PLIST}
-	${ECHO_CMD} @dirrm lib/${FF} >> ${PLIST}
-	for pcfile in ${PKGCONFIG_FILES}; do \
-		${REINPLACE_CMD} -e 's|${FF}|${FF}|g; \
-			s|${FAKEDIR}|${PREFIX}|' \
-			${FAKEDIR}/lib/pkgconfig/$${pcfile}.pc ; \
-		${ECHO_CMD} libdata/pkgconfig/$${pcfile}${FF_SUFX}.pc >> ${PLIST} ; \
-	done
-	cd ${FAKEDIR}/include/${FF} && ${FIND} -s * -type f -o -type l | \
-		${SED} -e 's|^|include/${FF}/|' >> ${PLIST} \
-		&& ${FIND} -d * -type d | \
-		${SED} -e 's|^|@dirrm include/${FF}/|' >> ${PLIST}
-	${ECHO_CMD} @dirrm include/${FF} >> ${PLIST}
-	${ECHO_CMD} lib/browser_plugins/.${FF}.keep >> ${PLIST}
-	${ECHO_CMD} "@unexec ${RMDIR} %D/lib/browser_plugins 2>/dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}" >> ${PLIST}
-	${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
-	${ECHO_CMD} "@unexec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
-	cd ${FAKEDIR}/share/idl/${FIREFOX}-${FF_VER} \
-		&& ${FIND} -s * -type f -o -type l | \
-		${SED} -e 's:^:share/idl/${FF}/:' >> ${PLIST} \
-		&& ${FIND} -d * -type d | \
-		${SED} -e 's:^:@dirrm share/idl/${FF}/:' >> ${PLIST}
-		${ECHO_CMD} "@dirrm share/idl/${FF}" >> ${PLIST}
-		${ECHO_CMD} "@unexec ${RMDIR} %D/share/idl 2>/dev/null || true" >> ${PLIST}
+	${ECHO_CMD} "lib/${MOZILLA}/chrome/icons/default/default.xpm" >> ${PLIST}
+	${ECHO_CMD} "@dirrm lib/${MOZILLA}/chrome/icons/default" >> ${PLIST}
+	${ECHO_CMD} "@dirrm lib/${MOZILLA}/chrome/icons" >> ${PLIST}
+# Dirty hack to make sure stuff gets removed right.
+	${SORT} -r ${PLIST} > ${PLIST}.tmp
+	${MV} -f ${PLIST}.tmp ${PLIST}
 
 do-install:
-	${MKDIR} ${PREFIX}/lib/${FF}
-	${CHMOD} 755 ${PREFIX}/lib/${FF}
-	${INSTALL_SCRIPT} ${FAKEDIR}/bin/firefox ${PREFIX}/bin/${FF}
-	${INSTALL_SCRIPT} ${FAKEDIR}/bin/firefox-config ${PREFIX}/bin/${FF}-config
-	${MKDIR} ${PREFIX}/lib/browser_plugins
-	${TOUCH} -f ${PREFIX}/lib/browser_plugins/.${FF}.keep
 	if [ ! -L ${PREFIX}/lib/browser_plugins/libjavaplugin_oji.so ]; then \
 		for jpi in ${JPI_LIST}; do \
 			if [ -f $${jpi} ]; then \
@@ -165,30 +87,12 @@ do-install:
 			fi; \
 		done; \
 	fi
-	for pcfile in ${PKGCONFIG_FILES}; do \
-		${INSTALL_DATA} ${FAKEDIR}/lib/pkgconfig/$${pcfile}.pc \
-			${PREFIX}/libdata/pkgconfig/$${pcfile}${FF_SUFX}.pc ; \
-	done
-	-${RM} -fr ${PREFIX}/include/${FF}
-	${MKDIR} ${PREFIX}/include/${FF}
-	${CHMOD} 755 ${PREFIX}/include/${FF}
-	cd ${FAKEDIR}/include/${FF} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/include/${FF}
-	cd ${FAKEDIR}/lib/${FF} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/lib/${FF}
-	${MKDIR} ${PREFIX}/share/idl/${FF}
-	cd ${FAKEDIR}/share/idl/${FIREFOX}-${FF_VER} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/idl/${FF}
 
 post-install:
-.if !defined(PACKAGE_BUILDING)
-	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-.endif
 	${MKDIR} ${PREFIX}/share/applications ${PREFIX}/share/pixmaps
-	${INSTALL_DATA} ${WRKDIR}/${FF}.desktop ${PREFIX}/share/applications/
-	${MKDIR} ${PREFIX}/lib/${FF}/chrome/icons/default
-	${LN} -sf ${FIREFOX_ICON_SRC} ${PREFIX}/lib/${FF}/chrome/icons/default/default.xpm
+	${INSTALL_DATA} ${WRKDIR}/${MOZILLA}.desktop ${PREFIX}/share/applications/
+	${MKDIR} ${PREFIX}/lib/${MOZILLA}/chrome/icons/default
+	${LN} -sf ${FIREFOX_ICON_SRC} ${PREFIX}/lib/${MOZILLA}/chrome/icons/default/default.xpm
 	${LN} -sf ${FIREFOX_ICON_SRC} ${PREFIX}/share/pixmaps/${FIREFOX_ICON}
-	@-update-desktop-database
 
 .include <bsd.port.post.mk>
