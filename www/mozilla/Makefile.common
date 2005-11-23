@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.11 2005/11/23 01:30:15 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.12 2005/11/23 02:09:31 ahze Exp $
 
 # Ports can use the following:
 #
@@ -22,11 +22,13 @@
 # MOZ_OPTIONS		Add more configure arguments to .mozconfig
 # MOZ_MK_OPTIONS	Add more make arguments to .mozconfig
 # MOZ_EXPORT		Add export variables to .mozconfig
+# MOZ_EXTENSIONS	Override "default" extensions
+# MOZ_GRAPHICS		Override "default" graphics decoders
+# MOZ_PROTOCOLS		Override "default" protocols
 #
-# if ${FILESDIR}/mozconfig.in exists and NOMOZCONFIG is not defined
-# contents of ${FILESDIR}/mozconfig.in will be filtered through MOZCONFIG_SED
-# and added the the end of .mozconfig
-#
+# PORT_MOZCONFIG	Defaults to ${FILESDIR}/mozconfig.in, but can
+#			be set to a generic mozconfig included with
+#			the port
 
 BUILD_DEPENDS+=	zip:${PORTSDIR}/archivers/zip
 LIB_DEPENDS+=	jpeg.9:${PORTSDIR}/graphics/jpeg \
@@ -105,9 +107,21 @@ MOZ_OPTIONS+=	--enable-crypto 	\
 # Configure options for install
 MOZ_OPTIONS+=	--x-includes=${X11BASE}/include \
 		--x-libraries=${X11BASE}/lib
-# Extensions
-# TODO: Add support for other extensions
+.if !defined(MOZ_EXTENSIONS)
 MOZ_OPTIONS+=	--enable-extensions=default
+.else
+MOZ_OPTIONS+=	--enable-extensions=${MOZ_EXTENSIONS}
+.endif
+.if !defined(MOZ_GRAPHICS)
+MOZ_OPTIONS+=	--enable-image-decoders=default
+.else
+MOZ_OPTIONS+=	--enable-image-decoders=${MOZ_GRAPHICS}
+.endif
+.if !defined(MOZ_PROTOCOLS)
+MOZ_OPTIONS+=	--enable-necko-protocols=default
+.else
+MOZ_OPTIONS+=	--enable-necko-protocols=${MOZ_PROTOCOLS}
+.endif
 # others 
 MOZ_OPTIONS+=	--with-system-jpeg=${LOCALBASE} \
 		--with-system-zlib=/usr		\
@@ -128,8 +142,7 @@ MOZ_OPTIONS+=	--with-system-jpeg=${LOCALBASE} \
 		--disable-pedantic		\
 		--disable-bidi			\
 		--disable-xterm-updates		\
-		--enable-xinerama		\
-		--enable-image-decoders=png,gif,jpeg,bmp
+		--enable-xinerama
 MOZ_MK_OPTIONS+=	XP_UNIX=1		\
 			PERL=${PERL}
 #MOZ_EXPORT+=	CPPFLAGS=${CPPFLAGS}		\

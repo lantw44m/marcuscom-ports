@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/seamonkey/Makefile,v 1.31 2005/11/18 09:29:37 ahze Exp $
+#    $MCom: ports/www/seamonkey/Makefile,v 1.32 2005/11/22 21:29:16 ahze Exp $
 #
 
 PORTNAME?=	seamonkey
@@ -28,9 +28,9 @@ MOZ_PIS_SCRIPTS=	moz_pis_S50cleanhome
 MAKE_ENV=	LD_LIBRARY_PATH=${WRKSRC}/dist/bin
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/cairo"
 
-MOZ_EXTENSIONS=	default
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 
+MOZ_EXTENSIONS=	default
 MOZ_OPTIONS+=	--enable-application=suite	\
 		--enable-svg-renderer=cairo	\
 		--enable-system-cairo
@@ -69,11 +69,8 @@ MOZ_OPTIONS+=	--disable-ldap --enable-mailnews
 MOZ_OPTIONS+=	--enable-ldap --enable-mailnews
 .endif
 .endif
-.if 0	# TODO: Extensions are broken
 .if !defined(WITHOUT_CHATZILLA)
 MOZ_EXTENSIONS:=	${MOZ_EXTENSIONS},irc
-.endif
-CONFIGURE_ARGS+=	--enable-extensions=${MOZ_EXTENSIONS}
 .endif
 .if defined(WITH_JAVASCRIPT_DEBUGGER)
 MOZ_OPTIONS+=		--enable-jsd \

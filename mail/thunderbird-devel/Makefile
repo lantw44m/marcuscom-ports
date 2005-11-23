@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/mail/thunderbird-devel/Makefile,v 1.13 2005/11/18 10:05:25 ahze Exp $
+#    $MCom: ports/mail/thunderbird-devel/Makefile,v 1.14 2005/11/22 21:29:14 ahze Exp $
 #
 
 PORTNAME=	thunderbird
@@ -24,6 +24,14 @@ HAS_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
+
+MOZ_EXTENSIONS=	wallet,spellcheck,xmlextras,webservices
+MOZ_PROTOCOLS=	http,file,jar,viewsource,res,data
+MOZ_GRAPHICS=	default,-xbm
+MOZ_OPTIONS=	--enable-single-profile --disable-profilesharing	\
+		--enable-application=mail -enable-official-branding
+MOZ_MK_OPTIONS=	MOZ_MOZ_THUNDERBIRD=1
+MOZ_EXPORT=	MOZ_THUNDERBIRD=1
 
 PORTNAME_ICON=	${PREFIX}/lib/${PORTNAME}/chrome/icons/default/default.xpm
 

@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile,v 1.27 2005/11/14 20:03:15 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile,v 1.28 2005/11/22 21:29:15 ahze Exp $
 #
 
 PORTNAME=	mozilla
@@ -31,9 +31,9 @@ HAS_CONFIGURE=	yes
 MAKE_ENV=	LD_LIBRARY_PATH=${WRKSRC}/dist/bin
 ALL_TARGET=	default
 
-MOZ_EXTENSIONS=	# Empty
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 
+MOZ_EXTENSIONS=	default
 MOZ_EXPORT+=	MOZ_INTERNAL_LIBART_LGPL=1
 MOZ_MK_OPTIONS+=MOZ_INTERNAL_LIBART_LGPL=1
 MOZ_OPTIONS+=	--enable-svg-renderer-libart --enable-svg \
@@ -78,14 +78,13 @@ MOZ_OPTIONS+=	--enable-ldap --enable-mailnews
 .endif
 .endif
 
-# TODO, fix option extensions!!
 .if !defined(WITHOUT_CHATZILLA)
-#MOZ_EXTENSIONS:=	${MOZ_EXTENSIONS},irc
+MOZ_EXTENSIONS:=	${MOZ_EXTENSIONS},irc
 .endif
+
 .if !defined(WITHOUT_XMLTERM) && defined(WITH_JAVASCRIPT_DEBUGGER)
-#MOZ_EXTENSIONS:=	${MOZ_EXTENSIONS},xmlterm
+MOZ_EXTENSIONS:=	${MOZ_EXTENSIONS},xmlterm
 .endif
-#CONFIGURE_ENV+=	MOZ_EXTENSIONS="${MOZ_EXTENSIONS}"
 
 .if defined(WITH_JAVASCRIPT_DEBUGGER)
 MOZ_OPTIONS+=	--enable-jsd \

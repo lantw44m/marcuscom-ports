@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.21 2005/11/19 07:34:00 marcus Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.22 2005/11/22 21:29:14 ahze Exp $
 #
 
 PORTNAME=	firefox
@@ -30,6 +30,11 @@ USE_GCC=	3.4+
 
 FIREFOX_ICON=		${MOZILLA}.xpm
 FIREFOX_ICON_SRC=	${PREFIX}/lib/${MOZILLA}/icons/default.xpm
+MOZ_OPTIONS=	--enable-application=browser \
+		--enable-svg-renderer=cairo \
+		--enable-system-cairo	\
+		--enable-official-branding \
+		--enable-canvas
 
 SYSTEM_PREFS=		${FAKEDIR}/lib/${MOZILLA}/defaults/pref/firefox.js
 MOZ_PIS_SCRIPTS=	moz_pis_S50cleanhome

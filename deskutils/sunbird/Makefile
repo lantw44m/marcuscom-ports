@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/sunbird/Makefile,v 1.11 2005/11/18 08:46:49 ahze Exp $
+#   $MCom: ports/deskutils/sunbird/Makefile,v 1.12 2005/11/22 21:29:13 ahze Exp $
 #
 
 PORTNAME=	sunbird
@@ -27,6 +27,12 @@ USE_X_PREFIX=	yes
 SUNBIRD=	${PORTNAME}
 SUNBIRD_ICON_SRC=	${PREFIX}/lib/sunbird/icons/default.xpm
 SUNBIRD_ICON=		${PORTNAME}.xpm
+
+MOZ_PROTOCOLS=	about,http,ftp,file,jar,res
+MOZ_OPTIONS=	--enable-application=calendar \
+		--enable-plaintext-editor-only \
+		--disable-plugins --disable-cookies
+MOZ_MK_OPTIONS=	MOZ_CO_PROJECT=calendar
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../www/mozilla/Makefile.common"

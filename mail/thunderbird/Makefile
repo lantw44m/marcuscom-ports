@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/mail/thunderbird/Makefile,v 1.8 2005/11/14 04:12:06 ahze Exp $
+#    $MCom: ports/mail/thunderbird/Makefile,v 1.9 2005/11/22 21:29:13 ahze Exp $
 #
 
 PORTNAME=	thunderbird
@@ -25,12 +25,19 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 
-PORTNAME_ICON=	${PREFIX}/lib/${PORTNAME}/chrome/icons/default/default.xpm
+MOZ_EXTENSIONS=	wallet,spellcheck,xmlextras,webservices
+MOZ_PROTOCOLS=	http,file,jar,viewsource,res,data
+MOZ_GRAPHICS=	default,-xbm
+MOZ_OPTIONS=	--enable-single-profile --disable-profilesharing \
+		--enable-official-branding
+MOZ_EXPORT=	MOZ_THUNDERBIRD=1
+MOZ_MK_OPTIONS=	MOZ_MOZ_THUNDERBIRD=1
 
+PORTNAME_ICON=	${PREFIX}/lib/${PORTNAME}/chrome/icons/default/default.xpm
 SYSTEM_PREFS=	${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION}/defaults/pref/${PORTNAME}.js
 MOZ_PIS_SCRIPTS=moz_pis_S50cleanhome
 
-CONFLICTS=	thunderbird-1.5*
+CONFLICTS=	thunerbird*-1.5*
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../www/mozilla/Makefile.common"
