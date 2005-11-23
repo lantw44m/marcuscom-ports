@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.8 2005/11/22 21:29:15 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.9 2005/11/23 00:43:14 ahze Exp $
 
 # Ports can use the following:
 #
@@ -91,7 +91,8 @@ JPI_LIST?=\
 PKGCONFIG_FILES?=	${MOZILLA}-gtkmozembed ${MOZILLA}-js \
 			${MOZILLA}-xpcom ${MOZILLA}-plugin
 
-CPPFLAGS+=		-I${X11BASE}/include -I${LOCALBASE}/include
+CPPFLAGS+=		-I${WRKSRC}/directory/c-sdk/ldap/include \
+			-I${X11BASE}/include -I${LOCALBASE}/include
 CFLAGS+=		${PTHREAD_CFLAGS}
 LDFLAGS+=		-L${X11BASE}/lib -Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}
 LIBS+=			${PTHREAD_LIBS}
