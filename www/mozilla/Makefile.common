@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.7 2005/11/17 18:18:08 marcus Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.8 2005/11/22 21:29:15 ahze Exp $
 
 # Ports can use the following:
 #
@@ -212,17 +212,17 @@ gecko-post-patch:
 .if exists(${GENERIC_MOZCONFIG})
 	@${MOZCONFIG_SED} < ${GENERIC_MOZCONFIG} >> ${MOZCONFIG}
 .endif
-.if exists(${PORT_MOZCONFIG})
-	@${MOZCONFIG_SED} < ${PORT_MOZCONFIG} >> ${MOZCONFIG}
-.endif
+	@if [ -e ${PORT_MOZCONFIG} ] ; then \
+		${MOZCONFIG_SED} < ${PORT_MOZCONFIG} >> ${MOZCONFIG} ; \
+	fi
 .for arg in ${MOZ_OPTIONS}
-	${ECHO_CMD} ac_add_options ${arg} >> ${MOZCONFIG}
+	@${ECHO_CMD} ac_add_options ${arg} >> ${MOZCONFIG}
 .endfor
 .for arg in ${MOZ_MK_OPTIONS}
-	${ECHO_CMD} mk_add_options ${arg} >> ${MOZCONFIG}
+	@${ECHO_CMD} mk_add_options ${arg} >> ${MOZCONFIG}
 .endfor
 .for var in ${MOZ_EXPORT}
-	${ECHO_CMD} "export ${var}" >> ${MOZCONFIG}
+	@${ECHO_CMD} "export ${var}" >> ${MOZCONFIG}
 .endfor
 .endif # .if !defined(NOMOZCONFIG)
 	@${REINPLACE_CMD} -e  's/%{idldir}/%idldir%/g ; \
