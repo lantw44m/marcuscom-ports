@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.9 2005/11/13 05:35:10 ahze Exp $
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.10 2005/11/13 06:30:01 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -69,20 +69,30 @@ GOOD_WITH_GECKO+=	${badgecko}
 .  endif
 . endfor
 . if defined(GOOD_WITH_GECKO)
-GECKO=	#### CHANGE ME
+.  for gecko in ${GOOD_WITH_GECKO}
+.   if !defined(GECKO_FALLTHROUGH)
+GECKO=	${gecko}
+GECKO_FALLTHROUGH=	true
+.   endif
+.  endfor
 . endif
 .endif
 
 .if !defined(GECKO) && defined(GOOD_USE_GECKO)
-GECKO=	#### CHANGE ME
+. for gecko in ${GOOD_USE_GECKO}
+.  if !defined(GECKO_FALLTRHOUGH)
+GECKO=	${gecko}
+GECKO_FALLTRHOUGH=	true
+.  endif
+. endfor
 .endif
 
 .if defined(GECKO) && ${_GECKO_ALL:M${GECKO}}!=""
 . if ${_NEW_GCC_GECKO:M${GECKO}!=""
 USE_GCC?=	3.4+
 . endif
-BUILD_DEPENDS+=	${GECKO_${PLIST}}:${GECKO_${DEPENDS}}
-RUN_DEPENDS+=	${GECKO_${PLIST}}:${GECKO_${DEPENDS}}
+BUILD_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
+RUN_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 .else
 BROKEN="Bad use of USE_GECKO"
 .endif
