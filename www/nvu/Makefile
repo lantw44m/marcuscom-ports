@@ -3,7 +3,7 @@
 # Whom:			Thierry Thomas <thierry@pompo.net>
 #
 # $FreeBSD$
-#    $MCom: ports/www/nvu/Makefile,v 1.1 2005/11/14 04:12:09 ahze Exp $
+#    $MCom: ports/www/nvu/Makefile,v 1.2 2005/11/22 21:29:16 ahze Exp $
 #
 
 PORTNAME=	nvu
@@ -22,6 +22,7 @@ USE_GMAKE=	yes
 NVU=		${PORTNAME}-${DISTVERSION}
 MAKEFILE=	client.mk
 ALL_TARGET=	build_all
+PORT_MOZCONFIG=	${WRKSRC}/composer/config/mozconfig.linux
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../mozilla/Makefile.common"
