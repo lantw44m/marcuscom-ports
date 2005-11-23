@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/mail/thunderbird/Makefile,v 1.9 2005/11/22 21:29:13 ahze Exp $
+#    $MCom: ports/mail/thunderbird/Makefile,v 1.10 2005/11/23 04:54:57 ahze Exp $
 #
 
 PORTNAME=	thunderbird
@@ -69,7 +69,6 @@ post-patch:
 pre-install:
 	${ECHO_CMD} 'share/applications/${PORTNAME}.desktop' >> ${PLIST}
 	${ECHO_CMD} "@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}" >> ${PLIST}
-	@${MKDIR} ${FAKEDIR}/lib/${PORTNAME}-${PORTVERSION}/defaults
 
 post-install:
 	${MKDIR} ${PREFIX}/share/applications
