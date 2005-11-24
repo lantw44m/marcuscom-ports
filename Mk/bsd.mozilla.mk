@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.15 2005/11/24 04:02:58 ahze Exp $
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.16 2005/11/24 06:28:30 marcus Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -73,7 +73,7 @@ GOOD_WITH_GECKO+=	${badgecko}
 .  for gecko in ${GOOD_WITH_GECKO}
 .   if !defined(GECKO_FALLTHROUGH)
 GECKO=	${gecko}
-GECKO_FALLTHROUGH=	true
+GECKO_FALLTHROUGH=	${TRUE}
 .   endif
 .  endfor
 . endif
@@ -83,7 +83,7 @@ GECKO_FALLTHROUGH=	true
 . for gecko in ${GOOD_USE_GECKO}
 .  if !defined(GECKO_FALLTRHOUGH)
 GECKO=	${gecko}
-GECKO_FALLTRHOUGH=	true
+GECKO_FALLTRHOUGH=	${TRUE}
 .  endif
 . endfor
 .endif
