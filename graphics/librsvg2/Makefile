@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.75 2005/11/06 01:27:53 ahze Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.76 2005/11/11 08:31:34 ahze Exp $
 #
 
 PORTNAME=	librsvg2
@@ -29,6 +29,7 @@ USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_REINPLACE=	yes
+WANT_GECKO=	yes
 USE_GNOME=	gnomehack gnomeprefix libgsf gtk20 ltverhack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
@@ -50,34 +51,8 @@ OPTIONS=	MOZILLA_PLUGIN "Enable the SVG browser plug-in" no
 
 .include <bsd.port.pre.mk>
 
-# disable mozilla stuff
-
 .if defined(WITH_MOZILLA_PLUGIN)
-WITH_MOZILLA?=	firefox
-
-.if ${WITH_MOZILLA}=="firefox"
-MOZILLA=	firefox
-HEADERS_SUFX=
-.elif ${WITH_MOZILLA}=="mozilla"
-MOZILLA=	mozilla
-HEADERS_SUFX=
-#.elif ${WITH_MOZILLA}=="mozilla-devel"
-#MOZILLA=	mozilla
-#HEADERS_SUFX=	-devel
-.elif ${WITH_MOZILLA}=="seamonkey"
-MOZILLA=	seamonkey
-HEADERS_SUFX=
-.else
-MOZILLA=	firefox
-HEADERS_SUFX=
-.endif
-
-BUILD_DEPENDS+=	${X11BASE}/libdata/pkgconfig/${MOZILLA}-plugin${HEADERS_SUFX}.pc:${PORTSDIR}/www/${MOZILLA}${HEADERS_SUFX}
-RUN_DEPENDS+=	${X11BASE}/libdata/pkgconfig/${MOZILLA}-plugin${HEADERS_SUFX}.pc:${PORTSDIR}/www/${MOZILLA}${HEADERS_SUFX}
-
-.if ${WITH_MOZILLA}=="mozilla-devel" && ${OSVERSION} < 500000
-USE_GCC=	3.4
-.endif
+USE_GECKO=	firefox mozilla seamonkey thunderbird
 CONFIGURE_ENV+=	MOZILLA_CONFIG=no
 CONFIGURE_ARGS+=--enable-mozilla-plugin=yes
 
@@ -90,7 +65,7 @@ PLIST_SUB+=	PLUGIN="@comment "
 
 post-patch:
 .if defined(WITH_MOZILLA_PLUGIN)
-	@${REINPLACE_CMD} -e 's|mozilla-plugin|${MOZILLA}-plugin${HEADERS_SUFX}|g' \
+	@${REINPLACE_CMD} -e 's|mozilla-plugin|${GECKO}-plugin|g' \
 		${WRKSRC}/configure
 .endif
 
