@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.13 2005/11/24 03:09:46 ahze Exp $
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.14 2005/11/24 04:01:20 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -100,7 +100,7 @@ USE_GCC?=	3.4+
 
 Mozilla_Post_Include=		bsd.mozilla.mk
 
-.if defined(GECKO)
+.if defined(GECKO) && ${_GECKO_ALL:M${GECKO}}!=""
 BUILD_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 RUN_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 .else
