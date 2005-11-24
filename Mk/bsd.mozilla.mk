@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.14 2005/11/24 04:01:20 ahze Exp $
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.15 2005/11/24 04:02:58 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -39,7 +39,7 @@ Mozilla_Pre_Include=			bsd.mozilla.mk
 # WITH_GECKO= mozilla firefox seamonkey
 #
 
-_GECKO_ALL= 	firefox firefox-devel mozilla mozilla-devel nvu \
+_GECKO_ALL=	firefox firefox-devel mozilla mozilla-devel nvu \
 		seamonkey sunbird thunderbird
 
 _NEW_GCC_GECKO=	firefox firefox-devel mozilla-devel seamonkey sunbird
@@ -89,7 +89,7 @@ GECKO_FALLTRHOUGH=	true
 .endif
 
 .if defined(GECKO) && ${_GECKO_ALL:M${GECKO}}!=""
-. if ${_NEW_GCC_GECKO:M${GECKO}!=""
+. if ${_NEW_GCC_GECKO:M${GECKO}}!=""
 USE_GCC?=	3.4+
 . endif
 .endif
