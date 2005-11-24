@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.10 2005/11/13 06:30:01 ahze Exp $
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.11 2005/11/23 23:35:50 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -96,6 +96,18 @@ RUN_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 .else
 BROKEN="Bad use of USE_GECKO"
 .endif
+
+pre-everything:: _gecko-pre-everything
+
+_gecko-pre-everything::
+	@${ECHO_CMD} ""
+	@${ECHO_CMD} " ${PORTNAME} is using ${GECKO} for gecko support but you can"
+	@${ECHO_CMD} " change by defining WITH_GECKO to the following values:"
+	@${ECHO_CMD} ""
+.for gecko in ${USE_GECKO}
+	@${ECHO_CMD} "   ${gecko} "
+.endfor
+	@${ECHO_CMD} ""
 
 .endif # end all
 # HERE THERE BE TACOS

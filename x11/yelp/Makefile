@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.65 2005/11/11 23:00:24 ahze Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.66 2005/11/23 23:39:52 ahze Exp $
 #
 
 PORTNAME=	yelp
@@ -45,14 +45,5 @@ CONFIGURE_ARGS+=--enable-man
 .if defined(WITH_INFO)
 CONFIGURE_ARGS+=--enable-info
 .endif
-
-pre-everything::
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} " By default yelp uses www/firefox for html rendering, but you can"
-	@${ECHO_MSG} " change this by defining WITH_GECKO to one of the following values:"
-	@${ECHO_MSG}
-	@${ECHO_MSG} "  mozilla "
-	@${ECHO_MSG} "  seamonkey "
-	@${ECHO_MSG} ""
 
 .include <bsd.port.post.mk>
