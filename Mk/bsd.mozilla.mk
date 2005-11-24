@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.11 2005/11/23 23:35:50 ahze Exp $
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.13 2005/11/24 03:09:46 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -53,12 +53,6 @@ ${gecko}_DEPENDS?=	${PORTSDIR}/${${gecko}_PORTSDIR}/${gecko}
 ${gecko}_PLIST?=	${X11BASE}/lib/${gecko}/libgtkembedmoz.so
 .endfor
 
-.endif # end Mozilla_Pre_Include
-
-.if defined(_POSTMKINCLUDED) && !defined(Mozilla_Post_Include)
-
-Mozilla_Post_Include=             bsd.mozilla.mk
-
 # Figure out which mozilla to use
 # Weed out bad options in USE_GECKO
 .for badgecko in ${USE_GECKO}
@@ -67,6 +61,7 @@ GOOD_USE_GECKO+=	${badgecko}
 . endif
 .endfor
 
+.undef GECKO_FALLTHROUGH
 # Figure out which mozilla to use and weed out the bad ones
 .if defined(WITH_GECKO) && defined(GOOD_USE_GECKO)
 . for badgecko in ${WITH_GECKO}
@@ -97,6 +92,15 @@ GECKO_FALLTRHOUGH=	true
 . if ${_NEW_GCC_GECKO:M${GECKO}!=""
 USE_GCC?=	3.4+
 . endif
+.endif
+
+.endif # end Mozilla_Pre_Include
+
+.if defined(_POSTMKINCLUDED) && !defined(Mozilla_Post_Include)
+
+Mozilla_Post_Include=		bsd.mozilla.mk
+
+.if defined(GECKO)
 BUILD_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 RUN_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 .else
