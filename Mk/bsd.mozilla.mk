@@ -53,6 +53,12 @@ ${gecko}_DEPENDS?=	${PORTSDIR}/${${gecko}_PORTSDIR}/${gecko}
 ${gecko}_PLIST?=	${X11BASE}/lib/${gecko}/libgtkembedmoz.so
 .endfor
 
+.endif # end Mozilla_Pre_Include
+
+.if defined(_POSTMKINCLUDED) && !defined(Mozilla_Post_Include)
+
+Mozilla_Post_Include=             bsd.mozilla.mk
+
 # Figure out which mozilla to use
 # Weed out bad options in USE_GECKO
 .for badgecko in ${USE_GECKO}
@@ -108,6 +114,5 @@ _gecko-pre-everything::
 	@${ECHO_CMD} "   ${gecko} "
 .endfor
 	@${ECHO_CMD} ""
-
-.endif # end all
+.endif # end it all
 # HERE THERE BE TACOS
