@@ -373,7 +373,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 # USE_FAM		- If set, this port uses the File Alteration Monitor.
 #
 # WANT_FAM_SYSTEM
-# 				- Legal values are: fam (default), gamin
+# 				- Legal values are: gamin (default),fam
 # 				  If set to an unknown value, the port is marked BROKEN.
 ##
 # USE_AUTOTOOLS	- If set, this port uses various GNU autotools
@@ -1381,8 +1381,6 @@ CD_MOUNTPTS?=	/cdrom ${CD_MOUNTPT}
 
 WANT_OPENLDAP_VER?=	22
 
-WANT_FAM_SYSTEM?=	fam
-
 # Owner and group of the WWW user
 WWWOWN?=	www
 WWWGRP?=	www
@@ -1499,14 +1497,28 @@ BROKEN=				"unknown OpenLDAP version: ${WANT_OPENLDAP_VER}"
 .endif
 
 .if defined(USE_FAM)
-.if ${WANT_FAM_SYSTEM} == fam
-LIB_DEPENDS+=	fam.0:${PORTSDIR}/devel/fam
-.elif ${WANT_FAM_SYSTEM} == gamin
-LIB_DEPENDS+=	fam.0:${PORTSDIR}/devel/gamin
+DEFAULT_FAM_SYSTEM=	gamin
+# Currently supported FAM systems
+FAM_SYSTEM_FAM=		fam.0:${PORTSDIR}/devel/fam
+FAM_SYSTEM_GAMIN=	fam.0:${PORTSDIR}/devel/gamin
+
+.if defined(WANT_FAM_SYSTEM)
+.if defined(WITH_FAM_SYSTEM) && ${WITH_FAM_SYSTEM}!=${WANT_FAM_SYSTEM}
+BROKEN=	"The port wants to use ${WANT_FAM_SYSTEM} as its FAM system and you wish to use ${WITH_FAM_SYSTEM}"
+.endif
+FAM_SYSTEM=	${WANT_FAM_SYSTEM}
+.elif defined(WITH_FAM_SYSTEM)
+FAM_SYSTEM=	${WITH_FAM_SYSTEM}
 .else
-BROKEN=			"unknown FAM system: ${WANT_FAM_SYSTEM}"
+FAM_SYSTEM=	${DEFAULT_FAM_SYSTEM}
+.endif # WANT_FAM_SYSTEM
+
+.if defined(FAM_SYSTEM_${FAM_SYSTEM:U})
+LIB_DEPENDS+=	${FAM_SYSTEM_${FAM_SYSTEM:U}}
+.else
+BROKEN=			"unknown FAM system: ${FAM_SYSTEM}"
 .endif
-.endif
+.endif # USE_FAM
 
 .if defined(USE_GETOPT_LONG)
 .if ${OSVERSION} < 500041
