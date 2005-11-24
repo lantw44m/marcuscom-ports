@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.17 2005/11/24 06:30:52 marcus Exp $
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.18 2005/11/24 06:31:09 marcus Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -114,7 +114,7 @@ _gecko-pre-everything::
 	@${ECHO_CMD} " ${PORTNAME} is using ${GECKO} for gecko support but you can"
 	@${ECHO_CMD} " change by defining WITH_GECKO to the following values:"
 	@${ECHO_CMD} ""
-.for gecko in ${USE_GECKO}
+.for gecko in ${GOOD_USE_GECKO}
 	@${ECHO_CMD} "   ${gecko} "
 .endfor
 	@${ECHO_CMD} ""
