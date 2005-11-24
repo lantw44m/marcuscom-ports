@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.12 2005/11/23 02:09:31 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.13 2005/11/23 04:54:58 ahze Exp $
 
 # Ports can use the following:
 #
@@ -308,6 +308,7 @@ gecko-create-plist:
 .for pcfile in ${PKGCONFIG_FILES}
 	${ECHO_CMD} "libdata/pkgconfig/${pcfile}.pc" >> ${PLIST}
 	@${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
+		-e 's|${MOZILLA}-nspr = ${PORTVERSION}|nspr|' \
 		${FAKEDIR}/libdata/pkgconfig/${pcfile}.pc
 .endfor
 	${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
