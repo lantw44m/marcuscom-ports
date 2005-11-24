@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.16 2005/11/24 06:28:30 marcus Exp $
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.17 2005/11/24 06:30:52 marcus Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -21,10 +21,10 @@ Mozilla_Pre_Include=			bsd.mozilla.mk
 # USE_GECKO= mozilla firefox mozilla-devel
 #  Lists gecko's the port supports. The first entry will
 #  be the default gecko to use unless WITH_GECKO is defined
-#  then bsd.mozilla.mk will test if the listed entries in 
+#  then bsd.mozilla.mk will test if the listed entries in
 #  WITH_GECKO and match ones in USE_GECKO, if true then the
 #  first match found in WITH_GECKO will be used. bsd.mozilla.mk
-#  will set MOZILLA to the gecko it will be using. 
+#  will set MOZILLA to the gecko it will be using.
 #
 #  The use of USE_GECKO= yes will default to firefox unless
 #  WITH_GECKO is defined and this means your port supports
