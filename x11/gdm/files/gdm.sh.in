@@ -1,10 +1,10 @@
 #!/bin/sh
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11/gdm/files/gdm.sh.in,v 1.1 2005/11/06 05:28:01 ahze Exp $
 
 # PROVIDE: gdm
 # REQUIRE: DAEMON
-# KEYWORD: FreeBSD shutdown
+# KEYWORD: FreeBSD
 
 gdm_enable=${gdm_enable-"NO"}
 
