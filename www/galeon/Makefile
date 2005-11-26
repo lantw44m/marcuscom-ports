@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/galeon/Makefile,v 1.3 2005/08/26 04:03:55 marcus Exp $
+#    $MCom: ports/www/galeon/Makefile,v 1.5 2005/11/24 03:39:05 ahze Exp $
 #
 
 PORTNAME=	galeon
@@ -36,6 +36,7 @@ MAN1=		galeon.1
 GCONF_SCHEMAS=	galeon.schemas
 
 .include <bsd.port.pre.mk>
+.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 
 .if ${OSVERSION} > 500000
 # Galeon does not build correctly in -CURRENT if -Werror is passed

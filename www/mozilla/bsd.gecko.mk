@@ -2,11 +2,11 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.19 2005/11/24 06:56:21 ahze Exp $
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.20 2005/11/26 00:06:25 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
-.if defined(_POSTMKINCLUDED) && !defined(Mozilla_Pre_Include)
+#.if defined(_POSTMKINCLUDED) && !defined(Mozilla_Pre_Include)
 
 # Please make sure all changes to this file are passed through the maintainer.
 # Do not commit them yourself (unless of course you're the Port's Wraith ;).
@@ -109,5 +109,5 @@ _gecko-pre-everything::
 	@${ECHO_CMD} "   ${gecko} "
 .endfor
 	@${ECHO_CMD} ""
-.endif # end it all
+#.endif # end it all
 # HERE THERE BE TACOS

@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.67 2005/11/24 00:00:39 ahze Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.68 2005/11/24 01:44:00 ahze Exp $
 #
 
 PORTNAME=	yelp
@@ -37,6 +37,7 @@ OPTIONS=	MAN "Enable man page support" off \
 		INFO "Enable GNU info support" off
 
 .include <bsd.port.pre.mk>
+.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 
 .if defined(WITH_MAN)
 CONFIGURE_ARGS+=--enable-man

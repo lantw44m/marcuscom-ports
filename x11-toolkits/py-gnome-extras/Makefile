@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.23 2005/11/12 02:38:27 ahze Exp $
+#    $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.24 2005/11/24 05:04:35 ahze Exp $
 #
 
 PORTNAME=	gnome
@@ -48,6 +48,7 @@ DOCSDIR=	${WRKSRC}/share/doc/py-gnome-extras
 .endif
 
 .include <bsd.port.pre.mk>
+.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 
 post-patch:
 	@${FIND} ${WRKSRC}/docs -name Makefile.in | ${XARGS} ${REINPLACE_CMD} \

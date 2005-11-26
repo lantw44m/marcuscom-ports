@@ -1355,10 +1355,6 @@ PERL=		${LOCALBASE}/bin/perl
 .include "${PORTSDIR}/Mk/bsd.gnome.mk"
 .endif
 
-.if defined(WANT_GECKO) || defined(USE_GECKO)
-.include "${PORTSDIR}/Mk/bsd.mozilla.mk"
-.endif
-
 .if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER)
 .include "${PORTSDIR}/Mk/bsd.gstreamer.mk"
 .endif
@@ -1757,10 +1753,6 @@ RUN_DEPENDS+=	${PERL5}:${PORTSDIR}/lang/${PERL_PORT}
 
 .if defined(WANT_GNOME) || defined(USE_GNOME) || defined(USE_GTK)
 .include "${PORTSDIR}/Mk/bsd.gnome.mk"
-.endif
-
-.if defined(WANT_GECKO) || defined(USE_GECKO)
-.include "${PORTSDIR}/Mk/bsd.mozilla.mk"
 .endif
 
 .if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER)

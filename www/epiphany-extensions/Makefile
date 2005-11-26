@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.57 2005/11/12 21:48:45 ahze Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.58 2005/11/24 03:00:51 ahze Exp $
 #
 
 PORTNAME=	epiphany
@@ -40,6 +40,7 @@ WITH_OPENSP=	yes
 .endif
 
 .include <bsd.port.pre.mk>
+.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 
 .if defined(WITH_OPENSP) || exists(${LOCALBASE}/lib/libosp.so)
 CONFIGURE_ARGS+=	--enable-opensp=yes

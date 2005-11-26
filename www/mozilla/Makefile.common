@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.13 2005/11/23 04:54:58 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.14 2005/11/24 01:43:42 ahze Exp $
 
 # Ports can use the following:
 #
@@ -355,4 +355,3 @@ gecko-post-install:
 	fi
 .endif
 	@-update-desktop-database
-
