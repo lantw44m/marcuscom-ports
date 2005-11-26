@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.20 2005/11/26 00:06:25 ahze Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.1 2005/11/26 05:11:24 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -59,6 +59,7 @@ GOOD_USE_GECKO+=	${badgecko}
 .endfor
 
 .undef GECKO_FALLTHROUGH
+.undef _FOUND_WITH_GECKO
 # Figure out which mozilla to use and weed out the bad ones
 .if defined(WITH_GECKO) && defined(GOOD_USE_GECKO)
 . for badgecko in ${WITH_GECKO}
@@ -71,6 +72,7 @@ GOOD_WITH_GECKO+=	${badgecko}
 .   if !defined(GECKO_FALLTHROUGH)
 GECKO=	${gecko}
 GECKO_FALLTHROUGH=	${TRUE}
+_FOUND_WITH_GECKO=	${TRUE}
 .   endif
 .  endfor
 . endif
@@ -102,8 +104,15 @@ pre-everything:: _gecko-pre-everything
 
 _gecko-pre-everything::
 	@${ECHO_CMD} ""
+.if !defined(_FOUND_WITH_GECKO) && defined(WITH_GECKO)
+	@${ECHO_CMD} " Warning: ${PORTNAME} does not support any gecko you"
+	@${ECHO_CMD} " listed in WITH_GECKO=${WITH_GECKO}. ${GECKO} will be used"
+	@${ECHO_CMD} " for gecko support, but you can change by using one of"
+	@${ECHO_CMD} " the following values:"
+.else
 	@${ECHO_CMD} " ${PORTNAME} is using ${GECKO} for gecko support but you can"
 	@${ECHO_CMD} " change by defining WITH_GECKO to the following values:"
+.endif
 	@${ECHO_CMD} ""
 .for gecko in ${GOOD_USE_GECKO}
 	@${ECHO_CMD} "   ${gecko} "
