@@ -3,11 +3,11 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.78 2005/11/26 04:56:55 ahze Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.79 2005/11/26 05:11:23 ahze Exp $
 #
 
 PORTNAME=	librsvg2
-PORTVERSION=	2.13.2
+PORTVERSION=	2.13.3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.13
