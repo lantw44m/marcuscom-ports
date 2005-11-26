@@ -2,11 +2,11 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.18 2005/11/24 06:31:09 marcus Exp $
+#    $MCom: ports/Mk/bsd.mozilla.mk,v 1.19 2005/11/24 06:56:21 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
-.if !defined(_POSTMKINCLUDED) && !defined(Mozilla_Pre_Include)
+.if defined(_POSTMKINCLUDED) && !defined(Mozilla_Pre_Include)
 
 # Please make sure all changes to this file are passed through the maintainer.
 # Do not commit them yourself (unless of course you're the Port's Wraith ;).
@@ -14,9 +14,6 @@ Mozilla_Include_MAINTAINER=		gnome@FreeBSD.org
 Mozilla_Pre_Include=			bsd.mozilla.mk
 
 # Ports can use the following:
-#
-# WANT_GECKO=	yes
-#  include bsd.mozilla.mk
 #
 # USE_GECKO= mozilla firefox mozilla-devel
 #  Lists gecko's the port supports. The first entry will
@@ -93,12 +90,6 @@ GECKO_FALLTRHOUGH=	${TRUE}
 USE_GCC?=	3.4+
 . endif
 .endif
-
-.endif # end Mozilla_Pre_Include
-
-.if defined(_POSTMKINCLUDED) && !defined(Mozilla_Post_Include)
-
-Mozilla_Post_Include=		bsd.mozilla.mk
 
 .if defined(GECKO) && ${_GECKO_ALL:M${GECKO}}!=""
 BUILD_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
