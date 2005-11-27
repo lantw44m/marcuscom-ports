@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.1 2005/11/26 05:11:24 ahze Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.2 2005/11/26 05:27:06 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -36,12 +36,17 @@ Mozilla_Pre_Include=			bsd.mozilla.mk
 # WITH_GECKO= mozilla firefox seamonkey
 #
 
-_GECKO_ALL=	firefox firefox-devel mozilla mozilla-devel nvu \
+_GECKO_ALL=	firefox firefox-devel mozilla nvu \
 		seamonkey sunbird thunderbird
 
-_NEW_GCC_GECKO=	firefox firefox-devel mozilla-devel seamonkey sunbird
+_NEW_GCC_GECKO=	firefox firefox-devel seamonkey sunbird
+
+# Generic defines
+BROWSER_LINUX_PLUGINS_DIR?=	${X11BASE}/lib/browser_linux_plugins
+BROWSER_PLUGINS_DIR?=		${X11BASE}/lib/browser_plugins
 
 sunbird_PORTSDIR=	deskutils
+
 thunderbird_PORTSDIR=	mail
 
 .for gecko in ${_GECKO_ALL}
