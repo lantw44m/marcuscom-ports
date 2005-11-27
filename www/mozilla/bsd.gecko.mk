@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.3 2005/11/27 00:37:21 ahze Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.4 2005/11/27 00:40:05 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -41,10 +41,6 @@ _GECKO_ALL=	firefox firefox-devel mozilla nvu \
 		seamonkey sunbird thunderbird
 
 _NEW_GCC_GECKO=	firefox firefox-devel seamonkey sunbird
-
-# Generic defines
-BROWSER_LINUX_PLUGINS_DIR?=	${X11BASE}/lib/browser_linux_plugins
-BROWSER_PLUGINS_DIR?=		${X11BASE}/lib/browser_plugins
 
 sunbird_PORTSDIR=	deskutils
 
@@ -98,6 +94,14 @@ GECKO_FALLTRHOUGH=	${TRUE}
 USE_GCC?=	3.4+
 . endif
 .endif
+
+# Generic defines
+BROWSER_LINUX_PLUGINS_DIR?=	${X11BASE}/lib/browser_linux_plugins
+BROWSER_PLUGINS_DIR?=		${X11BASE}/lib/browser_plugins
+
+GECKO_CONFIG?=			${X11BASE}/bin/${GECKO}-config
+XPIDL?=				${X11BASE}/lib/${GECKO}/xpidl
+XPIDL_INCL?=			`${GECKO_CONFIG} --idlflags`
 
 .if defined(GECKO) && ${_GECKO_ALL:M${GECKO}}!=""
 BUILD_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
