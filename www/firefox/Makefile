@@ -3,20 +3,20 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.25 2005/11/23 16:13:15 marcus Exp $
+#   $MCom$
 #
 
-PORTNAME?=	firefox
+PORTNAME=	firefox
 DISTVERSION=	1.5rc3
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	${PORTNAME}/releases/${DISTVERSION}/source
-DISTNAME=	firefox-${DISTVERSION}-source
+DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT?=	Web browser based on the browser portion of Mozilla
+COMMENT=	Web browser based on the browser portion of Mozilla
 
 USE_X_PREFIX=	yes
 WANT_GNOME=	yes
@@ -30,16 +30,16 @@ USE_GCC=	3.4+
 
 FIREFOX_ICON=		${MOZILLA}.xpm
 FIREFOX_ICON_SRC=	${PREFIX}/lib/${MOZILLA}/icons/default.xpm
-MOZ_OPTIONS?=	--enable-application=browser \
+MOZ_OPTIONS=	--enable-application=browser \
 		--enable-svg-renderer=cairo \
 		--enable-system-cairo	\
 		--enable-official-branding \
 		--enable-canvas
 
 SYSTEM_PREFS=		${FAKEDIR}/lib/${MOZILLA}/defaults/pref/firefox.js
-MOZ_PIS_SCRIPTS?=	moz_pis_S50cleanhome
+MOZ_PIS_SCRIPTS=	moz_pis_S50cleanhome
 
-OPTIONS?=	NEWTAB "Open external links in a new tab" on \
+OPTIONS=	NEWTAB "Open external links in a new tab" on \
 		SMB "Enable smb:// URI support using gnomevfs" off
 
 .include <bsd.port.pre.mk>
@@ -53,7 +53,6 @@ IGNORE=	core dumps on alpha during post-build
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-config_make-jars.pl
 .endif
 
-.if !defined(GECKO_SLAVEPORT)
 post-extract::
 	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' \
 		<${FILESDIR}/firefox.desktop.in >${WRKDIR}/${MOZILLA}.desktop
@@ -100,6 +99,5 @@ post-install:
 	${MKDIR} ${PREFIX}/lib/${MOZILLA}/chrome/icons/default
 	${LN} -sf ${FIREFOX_ICON_SRC} ${PREFIX}/lib/${MOZILLA}/chrome/icons/default/default.xpm
 	${LN} -sf ${FIREFOX_ICON_SRC} ${PREFIX}/share/pixmaps/${FIREFOX_ICON}
-.endif # if !defined(GECKO_SLAVEPORT)
 
 .include <bsd.port.post.mk>
