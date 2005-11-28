@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/seamonkey/Makefile,v 1.32 2005/11/22 21:29:16 ahze Exp $
+#    $MCom: ports/www/seamonkey/Makefile,v 1.33 2005/11/23 04:54:59 ahze Exp $
 #
 
 PORTNAME?=	seamonkey
@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	ahze
 #MASTER_SITES=	${MASTER_SITE_MOZILLA}
 #MASTER_SITE_SUBDIR=	seamonkey/releases/${DISTVERSION}
-DISTNAME=	${PORTNAME}-${DISTVERSION}.source
+DISTNAME=	seamonkey-${DISTVERSION}.source
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The open source, standards compliant web browser
@@ -24,19 +24,19 @@ WANT_GNOME=	yes
 HAS_CONFIGURE=	yes
 ALL_TARGET=	default
 USE_X_PREFIX=	yes
-MOZ_PIS_SCRIPTS=	moz_pis_S50cleanhome
+MOZ_PIS_SCRIPTS?=	moz_pis_S50cleanhome
 MAKE_ENV=	LD_LIBRARY_PATH=${WRKSRC}/dist/bin
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/cairo"
 
 CONFIGURE_ENV=	LOCALBASE=${LOCALBASE}
 
-MOZ_EXTENSIONS=	default
-MOZ_OPTIONS+=	--enable-application=suite	\
+MOZ_EXTENSIONS?=	default
+MOZ_OPTIONS?=	--enable-application=suite	\
 		--enable-svg-renderer=cairo	\
 		--enable-system-cairo
-MOZ_MK_OPTIONS+=	MOZ_CO_PROJECT=suite
+MOZ_MK_OPTIONS?=	MOZ_CO_PROJECT=suite
 
-OPTIONS=MAILNEWS "Enable Mail and News modules" on \
+OPTIONS?=MAILNEWS "Enable Mail and News modules" on \
 	COMPOSER "Enable the HTML Composer module" on \
 	LDAP "Enable LDAP support for Mailnews" on \
 	CHATZILLA "Enable the Chatzilla IRC module" on \
@@ -45,7 +45,7 @@ OPTIONS=MAILNEWS "Enable Mail and News modules" on \
 
 .include <bsd.port.pre.mk>
 
-.if exists(${LOCALBASE}/include/cairo/cairo-glitz.h)
+.if exists(${LOCALBASE}/include/cairo/cairo-glitz.h) && !defined(GECKO_SLAVEPORT)
 # Glitz support can only be enabled if cairo is built with glitz support
 MOZ_OPTIONS+=	--enable-glitz
 LIB_DEPENDS+=	glitz.1:${PORTSDIR}/graphics/glitz
@@ -59,6 +59,7 @@ IGNORE=		core dumps on ${ARCH} during post-build
 USE_GCC=	3.4+
 .endif
 
+.if !defined(GECKO_SLAVEPORT)
 .if defined(WITHOUT_MAILNEWS)
 MOZ_OPTIONS+=	--disable-ldap --disable-mailnews
 .else
@@ -127,6 +128,7 @@ do-install:
 	fi
 	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKDIR}/seamonkey.desktop ${PREFIX}/share/applications
+.endif # if defined(GECKO_SLAVEPORT)
 
 .include "${.CURDIR}/../mozilla/Makefile.common"
 .include <bsd.port.post.mk>
