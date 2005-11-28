@@ -17,12 +17,15 @@ share/gnome/yelp/important_docs.xml
 share/gnome/yelp/man.xml
 share/gnome/yelp/scrollkeeper.xml
 share/gnome/yelp/toc.xml
+share/gnome/yelp/ui/yelp-search-ui.xml
 share/gnome/yelp/ui/yelp-ui.xml
 share/gnome/yelp/ui/yelp.glade
 share/gnome/yelp/xslt/db-title.xsl
 share/gnome/yelp/xslt/db2html.xsl
 share/gnome/yelp/xslt/info2html.xsl
 share/gnome/yelp/xslt/man2html.xsl
+share/gnome/yelp/xslt/search-header.xsl
+share/gnome/yelp/xslt/search2html.xsl
 share/gnome/yelp/xslt/toc2html.xsl
 share/gnome/yelp/xslt/yelp-common.xsl
 share/gnome/yelp/yelp.js
@@ -65,6 +68,7 @@ share/locale/ka/LC_MESSAGES/yelp.mo
 share/locale/kn/LC_MESSAGES/yelp.mo
 share/locale/ko/LC_MESSAGES/yelp.mo
 share/locale/ku/LC_MESSAGES/yelp.mo
+share/locale/ky/LC_MESSAGES/yelp.mo
 share/locale/li/LC_MESSAGES/yelp.mo
 share/locale/lt/LC_MESSAGES/yelp.mo
 share/locale/lv/LC_MESSAGES/yelp.mo
