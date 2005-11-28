@@ -3,12 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/galeon/Makefile,v 1.5 2005/11/24 03:39:05 ahze Exp $
+#    $MCom: ports/www/galeon/Makefile,v 1.6 2005/11/26 05:11:24 ahze Exp $
 #
 
 PORTNAME=	galeon
-PORTVERSION=	1.3.21
-PORTREVISION=	1
+PORTVERSION=	2.0.0
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://osdn.dl.sourceforge.net/sourceforge/galeon/
@@ -17,7 +16,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME:S/2$//}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNOME 2 Web browser based on gecko (the Mozilla rendering engine)
 
-USE_GECKO=	mozilla
+USE_GECKO=	firefox mozilla seamonkey
 WRKSRC=		${WRKDIR}/${PORTNAME:S/2$//}-${PORTVERSION:S/a$//}
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
