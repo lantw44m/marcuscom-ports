@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.15 2005/11/26 05:11:24 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.16 2005/11/29 08:39:05 ahze Exp $
 
 # Ports can use the following:
 #
