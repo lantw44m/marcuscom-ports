@@ -2,9 +2,15 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.7 2005/11/28 18:07:33 ahze Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.8 2005/11/29 08:39:05 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
+
+# bsd.gecko.mk abstracts the selection of gecko-based backends. It allows users
+# and porters to support any available gecko backend without needing to build
+# many conditional tests. ${USE_GECKO} is the list of backends that your port
+# can handle, and ${GECKO} is set by bsd.gecko.mk to be the chosen backend.
+# Users set ${WITH_GECKO} to the list of gecko backends they want on their system.
 
 .if defined(USE_GECKO)
 #.if defined(_POSTMKINCLUDED) && !defined(Gecko_Pre_Include)
@@ -14,27 +20,39 @@
 Gecko_Include_MAINTAINER=		gnome@FreeBSD.org
 Gecko_Pre_Include=			bsd.gecko.mk
 
-# Ports can use the following:
+
+# Users should use the following syntax:
 #
-# USE_GECKO= mozilla firefox seamonkey ....
-#  List of gecko's the port supports. The first entry will
-#  be the default gecko to use unless WITH_GECKO is defined
-#  then bsd.gecko.mk will test if the listed entries in
-#  WITH_GECKO and match ones in USE_GECKO, the first match found
-#  will be the gecko used by the port. Also, GECKO will be returned
-#  with the gecko it will be using.
+# WITH_GECKO= mozilla firefox seamonkey
+#  Use mozilla whenever a port supports it, falling back on firefox and
+#  then seamonkey.
+# WITH_GECKO= firefox
+#  Sets your preferred backend. With this example, firefox will always
+#  be chosen, unless the port doesn't support a firefox backend. In that
+#  case, you get whatever the porter chose as the default. Better to use
+#  the first example.
+#
+#
+# Ports shoud use the following:
+#
+# USE_GECKO= mozilla firefox seamonkey
+#  The list of gecko backends that the port supports. Unless the user
+#  overrides it with WITH_GECKO, the first gecko listed in USE_GECKO
+#  will be the default. In the above example, www/mozilla will be used
+#  as a gecko backend unless WITH_GECKO=firefox or WITH_GECKO=seamonkey
+#  is defined by the user.
+#
+#  Your port should check the ${GECKO} variable to see which backend
+#  has been chosen.
 #
 #  Example: 
+#  USE_GECKO= mozilla firefox seamonkey
 #  post-patch:
 #  .if ${GECKO}=="seamonkey"
 #	@${REINPALCE_CMD} -e 's|mozilla-|seamonkey-|' \
 #		${WRKSRC}/configure
 #  .endif
-#
-# End users can use the following example:
-#
-# WITH_GECKO= mozilla firefox seamonkey
-#
+
 
 _GECKO_ALL=	firefox mozilla nvu seamonkey sunbird thunderbird
 
@@ -106,7 +124,7 @@ XPIDL_INCL?=			`${GECKO_CONFIG} --idlflags`
 BUILD_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 RUN_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 .else
-BROKEN="Bad use of USE_GECKO"
+BROKEN="Incorrect use of USE_GECKO"
 .endif
 
 pre-everything:: _gecko-pre-everything
@@ -115,12 +133,13 @@ _gecko-pre-everything::
 	@${ECHO_CMD} ""
 .if !defined(_FOUND_WITH_GECKO) && defined(WITH_GECKO)
 	@${ECHO_CMD} " Warning: ${PORTNAME} does not support any gecko you"
-	@${ECHO_CMD} " listed in WITH_GECKO=${WITH_GECKO}. ${GECKO} will be used"
-	@${ECHO_CMD} " for gecko support, but you can change by using one of"
+	@${ECHO_CMD} " listed in WITH_GECKO=${WITH_GECKO}."
+	@${ECHO_CMD} " \"${GECKO}\" will be used"
+	@${ECHO_CMD} " for gecko support, but you can change that by using one of"
 	@${ECHO_CMD} " the following values:"
 .else
-	@${ECHO_CMD} " ${PORTNAME} is using ${GECKO} for gecko support but you can"
-	@${ECHO_CMD} " change by defining WITH_GECKO to the following values:"
+	@${ECHO_CMD} " ${PORTNAME} is using ${GECKO} for gecko support, but you can"
+	@${ECHO_CMD} " change that by defining WITH_GECKO to the following values:"
 .endif
 	@${ECHO_CMD} ""
 .for gecko in ${GOOD_USE_GECKO}
