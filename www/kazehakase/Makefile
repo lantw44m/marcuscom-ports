@@ -3,15 +3,14 @@
 # Whom:			michael johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/www/kazehakase/Makefile,v 1.1 2005/11/26 05:50:51 ahze Exp $
 #
 
 PORTNAME=	kazehakase
-PORTVERSION=	0.3.2
-PORTREVISION=	1
+PORTVERSION=	0.3.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
-MASTER_SITE_SUBDIR=	${PORTNAME}/17175
+MASTER_SITE_SUBDIR=	${PORTNAME}/17700
 
 MAINTAINER=	ahze@FreeBSD.org
 COMMENT=	Kazehakase is a browser with gecko engine like Epiphany or Galeon
@@ -87,9 +86,5 @@ post-patch:
 .if defined(WITH_THUMBNAIL)
 	@${ECHO_MSG} "create_thumbnail=true" >> ${WRKSRC}/etc/kzrc
 .endif
-
-post-configure:
-	@${CP} -f ${FILESDIR}/mkinstalldirs ${WRKSRC}
-	@${CHMOD} +x ${WRKSRC}/mkinstalldirs
 
 .include <bsd.port.post.mk>
