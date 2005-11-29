@@ -3,7 +3,7 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports-stable/multimedia/vlc-devel/Makefile,v 1.2 2005/08/15 05:48:27 mezz Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.1 2005/11/28 06:47:09 ahze Exp $
 #
 # NOTES about VLC Knobs:
 # Below you will see a number of knobs, if it starts with WITHOUT_ it is
@@ -245,7 +245,7 @@ DISTNAME=	${PORTNAME}-snapshot-${DISTVERSION:S/0.8.5.//}
 MAINTAINER=	ahze@FreeBSD.org
 COMMENT=	Multimedia streaming server and player for various audio/video formats
 
-RUN_DEPEDNS=	${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera
+RUN_DEPENDS=	${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera
 LIB_DEPENDS=	avcodec.1:${PORTSDIR}/multimedia/ffmpeg
 
 CONFLICTS=	vlc-*-0.8.4*
@@ -271,7 +271,7 @@ PLIST=		${WRKDIR}/plist
 
 INSTALLS_SHLIB=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${WRKSRC}/include/vlc/ ${CPPFLAGS} -I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
+CONFIGURE_ENV=	CPPFLAGS="-I${WRKSRC}/include ${CPPFLAGS} -I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
 
 CONFIGURE_ARGS+=	--enable-ffmpeg \
