@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.14 2005/11/24 01:43:42 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.15 2005/11/26 05:11:24 ahze Exp $
 
 # Ports can use the following:
 #
@@ -313,7 +313,7 @@ gecko-create-plist:
 .endfor
 	${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@unexec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
-.if ${MOZILLA_PLIST_DIRS:Mshare/idl}!="" && exists(${FAKEDIR}/share/idl)
+.if ${MOZILLA_PLIST_DIRS:Mshare/idl}!=""
 	${ECHO_CMD} "@unexec ${RMDIR} %D/share/idl 2>/dev/null || ${TRUE}" >> ${PLIST}
 .endif
 .endif # !defined(NOGECKO_PLIST)

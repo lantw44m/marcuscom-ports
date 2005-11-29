@@ -2,37 +2,36 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.6 2005/11/28 07:45:15 ahze Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.7 2005/11/28 18:07:33 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
 .if defined(USE_GECKO)
-#.if defined(_POSTMKINCLUDED) && !defined(Mozilla_Pre_Include)
+#.if defined(_POSTMKINCLUDED) && !defined(Gecko_Pre_Include)
 
 # Please make sure all changes to this file are passed through the maintainer.
 # Do not commit them yourself (unless of course you're the Port's Wraith ;).
-Mozilla_Include_MAINTAINER=		gnome@FreeBSD.org
-Mozilla_Pre_Include=			bsd.mozilla.mk
+Gecko_Include_MAINTAINER=		gnome@FreeBSD.org
+Gecko_Pre_Include=			bsd.gecko.mk
 
 # Ports can use the following:
 #
-# USE_GECKO= mozilla firefox mozilla-devel
-#  Lists gecko's the port supports. The first entry will
+# USE_GECKO= mozilla firefox seamonkey ....
+#  List of gecko's the port supports. The first entry will
 #  be the default gecko to use unless WITH_GECKO is defined
-#  then bsd.mozilla.mk will test if the listed entries in
-#  WITH_GECKO and match ones in USE_GECKO, if true then the
-#  first match found in WITH_GECKO will be used. bsd.mozilla.mk
-#  will set MOZILLA to the gecko it will be using.
+#  then bsd.gecko.mk will test if the listed entries in
+#  WITH_GECKO and match ones in USE_GECKO, the first match found
+#  will be the gecko used by the port. Also, GECKO will be returned
+#  with the gecko it will be using.
 #
-#  The use of USE_GECKO= yes will default to firefox unless
-#  WITH_GECKO is defined and this means your port supports
-#  every gecko listed in bsd.mozilla.mk
+#  Example: 
+#  post-patch:
+#  .if ${GECKO}=="seamonkey"
+#	@${REINPALCE_CMD} -e 's|mozilla-|seamonkey-|' \
+#		${WRKSRC}/configure
+#  .endif
 #
-# .if ${GECKO}=="seamonkey"
-# CONFIGURE_ARGS+= --with-mozilla=${GECKO}
-# .endif
-#
-# End users can use the following:
+# End users can use the following example:
 #
 # WITH_GECKO= mozilla firefox seamonkey
 #
@@ -61,7 +60,7 @@ GOOD_USE_GECKO+=	${badgecko}
 
 .undef GECKO_FALLTHROUGH
 .undef _FOUND_WITH_GECKO
-# Figure out which mozilla to use and weed out the bad ones
+# Figure out which gecko to use and weed out the bad ones
 .if defined(WITH_GECKO) && defined(GOOD_USE_GECKO)
 . for badgecko in ${WITH_GECKO}
 .  if ${GOOD_USE_GECKO:M${badgecko}}!=""
@@ -88,6 +87,7 @@ GECKO_FALLTRHOUGH=	${TRUE}
 . endfor
 .endif
 
+# Use new gcc on new geckos
 .if defined(GECKO) && ${_GECKO_ALL:M${GECKO}}!=""
 . if ${_NEW_GCC_GECKO:M${GECKO}}!=""
 USE_GCC?=	3.4+
