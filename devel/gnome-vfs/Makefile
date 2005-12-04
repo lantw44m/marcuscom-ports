@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/gnomevfs2/Makefile,v 1.102 2005/11/05 04:53:17 marcus Exp $
-#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.118 2005/11/28 12:54:44 jylefort Exp $
+#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.119 2005/11/28 14:28:30 jylefort Exp $
 #
 
 PORTNAME=	gnomevfs2
 PORTVERSION=	2.13.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.13
@@ -29,7 +29,8 @@ USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-openssl \
-		--disable-gnutls
+		--disable-gnutls \
+		--disable-howl
 CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		BSD_PTHREAD_LIBS=${PTHREAD_LIBS}
@@ -64,9 +65,9 @@ CONFIGURE_ARGS+=--disable-samba
 .endif
 
 .if !defined(WITHOUT_MDNS)
-LIB_DEPENDS+=	howl:${PORTSDIR}/net/howl
+LIB_DEPENDS+=	avahi-client:${PORTSDIR}/net/avahi
 .else
-CONFIGURE_ARGS+=--disable-howl
+CONFIGURE_ARGS+=--disable-avahi
 .endif
 
 post-patch:
