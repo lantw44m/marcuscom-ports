@@ -1,9 +1,9 @@
 #!/bin/sh
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/files/gdm.sh.in,v 1.1 2005/11/06 05:28:01 ahze Exp $
+#    $MCom: ports/x11/gdm/files/gdm.sh.in,v 1.2 2005/11/25 18:35:32 marcus Exp $
 
 # PROVIDE: gdm
-# REQUIRE: DAEMON
+# REQUIRE: DAEMON LOGIN cleanvar
 # KEYWORD: FreeBSD
 
 gdm_enable=${gdm_enable-"NO"}
