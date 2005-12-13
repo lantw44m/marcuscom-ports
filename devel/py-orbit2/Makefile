@@ -5,7 +5,7 @@
 # $FreeBSD: ports/devel/py-orbit2/Makefile,v 1.26 2005/11/15 06:49:01 ade Exp $
 
 PORTNAME=	orbit
-PORTVERSION=	2.13.0
+PORTVERSION=	2.13.1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/pyorbit/2.13
