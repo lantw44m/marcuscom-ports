@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.90 2005/11/26 05:11:24 ahze Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.91 2005/11/27 23:15:55 marcus Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	1.9.2
-PORTREVISION=	1
+PORTVERSION=	1.9.3.1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.9
@@ -36,9 +35,11 @@ CONFIGURE_ARGS=	--with-mozilla=${GECKO} \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
-GCONF_SCHEMAS=	epiphany-lockdown.schemas epiphany.schemas
+GCONF_SCHEMAS=	epiphany-lockdown.schemas epiphany.schemas \
+		epiphany-fonts.schemas
 
-PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/\.[0-9]+$//}"
+#PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/\.[0-9]+$//}"
+PLIST_SUB+=	EPHY_VERSION="1.9"
 
 MAN1=		epiphany.1
 
@@ -60,6 +61,8 @@ post-patch:
 		${WRKSRC}/embed/mozilla/mozilla-embed-single.cpp
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/data/epiphany-fonts.schemas \
+		${PREFIX}/etc/gconf/schemas
 	@-update-desktop-database
 
 .include <bsd.port.post.mk>
