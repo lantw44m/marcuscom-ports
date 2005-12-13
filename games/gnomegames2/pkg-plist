@@ -202,6 +202,7 @@ share/gnome/help/aisleriot/C/isabel.xml
 share/gnome/help/aisleriot/C/jamestown.xml
 share/gnome/help/aisleriot/C/jumbo.xml
 share/gnome/help/aisleriot/C/kansas.xml
+share/gnome/help/aisleriot/C/kings_audience.xml
 share/gnome/help/aisleriot/C/king_albert.xml
 share/gnome/help/aisleriot/C/klondike.xml
 share/gnome/help/aisleriot/C/labyrinth.xml
@@ -273,6 +274,7 @@ share/gnome/help/aisleriot/fr/fortress.xml
 share/gnome/help/aisleriot/fr/fortunes.xml
 share/gnome/help/aisleriot/fr/fourteen.xml
 share/gnome/help/aisleriot/fr/freecell.xml
+share/gnome/help/aisleriot/fr/gaps.xml
 share/gnome/help/aisleriot/fr/gay_gordons.xml
 share/gnome/help/aisleriot/fr/glenwood.xml
 share/gnome/help/aisleriot/fr/golf.xml
@@ -283,6 +285,7 @@ share/gnome/help/aisleriot/fr/isabel.xml
 share/gnome/help/aisleriot/fr/jamestown.xml
 share/gnome/help/aisleriot/fr/jumbo.xml
 share/gnome/help/aisleriot/fr/kansas.xml
+share/gnome/help/aisleriot/fr/kings_audience.xml
 share/gnome/help/aisleriot/fr/king_albert.xml
 share/gnome/help/aisleriot/fr/klondike.xml
 share/gnome/help/aisleriot/fr/labyrinth.xml
@@ -559,6 +562,7 @@ share/gnome/sol-games/isabel.scm
 share/gnome/sol-games/jamestown.scm
 share/gnome/sol-games/jumbo.scm
 share/gnome/sol-games/kansas.scm
+share/gnome/sol-games/kings_audience.scm
 share/gnome/sol-games/king_albert.scm
 share/gnome/sol-games/klondike.scm
 share/gnome/sol-games/labyrinth.scm
@@ -682,6 +686,7 @@ share/locale/sr/LC_MESSAGES/gnome-games.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-games.mo
 share/locale/sv/LC_MESSAGES/gnome-games.mo
 share/locale/ta/LC_MESSAGES/gnome-games.mo
+share/locale/th/LC_MESSAGES/gnome-games.mo
 share/locale/tr/LC_MESSAGES/gnome-games.mo
 share/locale/uk/LC_MESSAGES/gnome-games.mo
 share/locale/vi/LC_MESSAGES/gnome-games.mo
