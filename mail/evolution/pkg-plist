@@ -32,7 +32,6 @@ include/evolution-%%VERSION%%/e-util/e-account.h
 include/evolution-%%VERSION%%/e-util/e-bconf-map.h
 include/evolution-%%VERSION%%/e-util/e-bit-array.h
 include/evolution-%%VERSION%%/e-util/e-categories-config.h
-include/evolution-%%VERSION%%/e-util/e-component-listener.h
 include/evolution-%%VERSION%%/e-util/e-config-listener.h
 include/evolution-%%VERSION%%/e-util/e-config.h
 include/evolution-%%VERSION%%/e-util/e-corba-utils.h
@@ -47,11 +46,7 @@ include/evolution-%%VERSION%%/e-util/e-gtk-utils.h
 include/evolution-%%VERSION%%/e-util/e-gui-utils.h
 include/evolution-%%VERSION%%/e-util/e-html-utils.h
 include/evolution-%%VERSION%%/e-util/e-icon-factory.h
-include/evolution-%%VERSION%%/e-util/e-iconv.h
 include/evolution-%%VERSION%%/e-util/e-import.h
-include/evolution-%%VERSION%%/e-util/e-iterator.h
-include/evolution-%%VERSION%%/e-util/e-list-iterator.h
-include/evolution-%%VERSION%%/e-util/e-list.h
 include/evolution-%%VERSION%%/e-util/e-menu.h
 include/evolution-%%VERSION%%/e-util/e-mktemp.h
 include/evolution-%%VERSION%%/e-util/e-plugin.h
@@ -66,12 +61,9 @@ include/evolution-%%VERSION%%/e-util/e-sorter.h
 include/evolution-%%VERSION%%/e-util/e-text-event-processor-emacs-like.h
 include/evolution-%%VERSION%%/e-util/e-text-event-processor-types.h
 include/evolution-%%VERSION%%/e-util/e-text-event-processor.h
-include/evolution-%%VERSION%%/e-util/e-time-utils.h
-include/evolution-%%VERSION%%/e-util/e-uid.h
 include/evolution-%%VERSION%%/e-util/e-util-marshal.h
 include/evolution-%%VERSION%%/e-util/e-util.h
 include/evolution-%%VERSION%%/e-util/e-xml-utils.h
-include/evolution-%%VERSION%%/e-util/md5-utils.h
 include/evolution-%%VERSION%%/mail/Evolution-Mail.h
 include/evolution-%%VERSION%%/mail/em-composer-utils.h
 include/evolution-%%VERSION%%/mail/em-config.h
@@ -496,6 +488,7 @@ share/gnome/evolution/%%VERSION%%/ui/evolution-memos.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-message-composer.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-signature-editor.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-subscribe.xml
+share/gnome/evolution/%%VERSION%%/ui/evolution-task-editor.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-tasks.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution.xml
 share/gnome/evolution/%%VERSION%%/vfoldertypes.xml
