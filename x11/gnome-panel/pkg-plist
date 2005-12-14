@@ -96,10 +96,6 @@ share/gnome/help/fish-applet-2/de/figures/fish_applet.png
 share/gnome/help/fish-applet-2/de/figures/fish_settings.png
 share/gnome/help/fish-applet-2/de/fish-applet-2.xml
 share/gnome/help/fish-applet-2/de/legal.xml
-share/gnome/help/fish-applet-2/fr/figures/fish_applet.png
-share/gnome/help/fish-applet-2/fr/figures/fish_settings.png
-share/gnome/help/fish-applet-2/fr/fish-applet-2.xml
-share/gnome/help/fish-applet-2/fr/legal.xml
 share/gnome/help/fish-applet-2/ja/figures/fish_applet.png
 share/gnome/help/fish-applet-2/ja/fish-applet-2.xml
 share/gnome/help/fish-applet-2/ja/legal.xml
@@ -125,6 +121,9 @@ share/gnome/help/fish/C/legal.xml
 share/gnome/help/fish/es/figures/fish_applet.png
 share/gnome/help/fish/es/fish.xml
 share/gnome/help/fish/es/legal.xml
+share/gnome/help/fish/fr/figures/fish_applet.png
+share/gnome/help/fish/fr/fish.xml
+share/gnome/help/fish/fr/legal.xml
 share/gnome/help/fish/it/figures/fish_applet.png
 share/gnome/help/fish/it/fish.xml
 share/gnome/help/fish/it/legal.xml
@@ -145,7 +144,6 @@ share/gnome/help/window-list/es/figures/window_list_group_applet.png
 share/gnome/help/window-list/es/legal.xml
 share/gnome/help/window-list/es/window-list.xml
 share/gnome/help/window-list/fr/figures/window_list_applet.png
-share/gnome/help/window-list/fr/figures/window_list_group.png
 share/gnome/help/window-list/fr/figures/window_list_group_applet.png
 share/gnome/help/window-list/fr/legal.xml
 share/gnome/help/window-list/fr/window-list.xml
@@ -191,10 +189,6 @@ share/gnome/help/workspace-switcher/de/workspace-switcher.xml
 share/gnome/help/workspace-switcher/es/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/es/legal.xml
 share/gnome/help/workspace-switcher/es/workspace-switcher.xml
-share/gnome/help/workspace-switcher/fr/figures/workspace_switcher_applet.png
-share/gnome/help/workspace-switcher/fr/figures/workspacelist_applet.png
-share/gnome/help/workspace-switcher/fr/legal.xml
-share/gnome/help/workspace-switcher/fr/workspace-switcher.xml
 share/gnome/help/workspace-switcher/it/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/it/legal.xml
 share/gnome/help/workspace-switcher/it/workspace-switcher.xml
@@ -227,8 +221,8 @@ share/gnome/idl/gnome-panel-2.0/GNOME_Panel.idl
 share/gnome/omf/clock/clock-C.omf
 share/gnome/omf/clock/clock-de.omf
 share/gnome/omf/clock/clock-es.omf
-share/gnome/omf/clock/clock-it.omf
 share/gnome/omf/clock/clock-fr.omf
+share/gnome/omf/clock/clock-it.omf
 share/gnome/omf/clock/clock-ja.omf
 share/gnome/omf/clock/clock-ko.omf
 share/gnome/omf/clock/clock-nl.omf
@@ -240,31 +234,28 @@ share/gnome/omf/clock/clock-zh_CN.omf
 share/gnome/omf/clock/clock-zh_TW.omf
 share/gnome/omf/fish/fish-C.omf
 share/gnome/omf/fish/fish-es.omf
+share/gnome/omf/fish/fish-fr.omf
 share/gnome/omf/fish/fish-it.omf
 share/gnome/omf/fish/fish-uk.omf
 share/gnome/omf/gnome-panel/clock-de.omf
-share/gnome/omf/gnome-panel/clock-fr.omf
 share/gnome/omf/gnome-panel/clock-ja.omf
 share/gnome/omf/gnome-panel/clock-ko.omf
 share/gnome/omf/gnome-panel/clock-sv.omf
 share/gnome/omf/gnome-panel/clock-zh_CN.omf
 share/gnome/omf/gnome-panel/clock-zh_TW.omf
 share/gnome/omf/gnome-panel/fish-applet-2-de.omf
-share/gnome/omf/gnome-panel/fish-applet-2-fr.omf
 share/gnome/omf/gnome-panel/fish-applet-2-ja.omf
 share/gnome/omf/gnome-panel/fish-applet-2-ko.omf
 share/gnome/omf/gnome-panel/fish-applet-2-sv.omf
 share/gnome/omf/gnome-panel/fish-applet-2-zh_CN.omf
 share/gnome/omf/gnome-panel/fish-applet-2-zh_TW.omf
 share/gnome/omf/gnome-panel/window-list-de.omf
-share/gnome/omf/gnome-panel/window-list-fr.omf
 share/gnome/omf/gnome-panel/window-list-ja.omf
 share/gnome/omf/gnome-panel/window-list-ko.omf
 share/gnome/omf/gnome-panel/window-list-sv.omf
 share/gnome/omf/gnome-panel/window-list-zh_CN.omf
 share/gnome/omf/gnome-panel/window-list-zh_TW.omf
 share/gnome/omf/gnome-panel/workspace-switcher-de.omf
-share/gnome/omf/gnome-panel/workspace-switcher-fr.omf
 share/gnome/omf/gnome-panel/workspace-switcher-ja.omf
 share/gnome/omf/gnome-panel/workspace-switcher-ko.omf
 share/gnome/omf/gnome-panel/workspace-switcher-sv.omf
@@ -272,6 +263,7 @@ share/gnome/omf/gnome-panel/workspace-switcher-zh_CN.omf
 share/gnome/omf/gnome-panel/workspace-switcher-zh_TW.omf
 share/gnome/omf/window-list/window-list-C.omf
 share/gnome/omf/window-list/window-list-es.omf
+share/gnome/omf/window-list/window-list-fr.omf
 share/gnome/omf/window-list/window-list-it.omf
 share/gnome/omf/window-list/window-list-uk.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-C.omf
@@ -418,8 +410,6 @@ share/locale/zu/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/help/workspace-switcher/ja
 @dirrm share/gnome/help/workspace-switcher/it/figures
 @dirrm share/gnome/help/workspace-switcher/it
-@dirrm share/gnome/help/workspace-switcher/fr/figures
-@dirrm share/gnome/help/workspace-switcher/fr
 @dirrm share/gnome/help/workspace-switcher/es/figures
 @dirrm share/gnome/help/workspace-switcher/es
 @dirrm share/gnome/help/workspace-switcher/de/figures
@@ -460,8 +450,6 @@ share/locale/zu/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/help/fish-applet-2/ko
 @dirrm share/gnome/help/fish-applet-2/ja/figures
 @dirrm share/gnome/help/fish-applet-2/ja
-@dirrm share/gnome/help/fish-applet-2/fr/figures
-@dirrm share/gnome/help/fish-applet-2/fr
 @dirrm share/gnome/help/fish-applet-2/de/figures
 @dirrm share/gnome/help/fish-applet-2/de
 @dirrm share/gnome/help/fish-applet-2
@@ -469,6 +457,8 @@ share/locale/zu/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/help/fish/uk
 @dirrm share/gnome/help/fish/it/figures
 @dirrm share/gnome/help/fish/it
+@dirrm share/gnome/help/fish/fr/figures
+@dirrm share/gnome/help/fish/fr
 @dirrm share/gnome/help/fish/es/figures
 @dirrm share/gnome/help/fish/es
 @dirrm share/gnome/help/fish/C/figures

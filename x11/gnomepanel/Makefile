@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomepanel/Makefile,v 1.112 2005/11/16 01:55:05 marcus Exp $
+#   $MCom: ports/x11/gnomepanel/Makefile,v 1.113 2005/11/22 07:52:11 marcus Exp $
 #
 
 PORTNAME=	gnomepanel
-PORTVERSION=	2.13.2
-PORTREVISION=	1
+PORTVERSION=	2.13.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/2.13
