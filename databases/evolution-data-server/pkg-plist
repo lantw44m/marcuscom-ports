@@ -111,6 +111,7 @@ include/evolution-data-server-%%VERSION%%/camel/camel-vtrash-folder.h
 include/evolution-data-server-%%VERSION%%/camel/camel.h
 include/evolution-data-server-%%VERSION%%/exchange/e-folder-exchange.h
 include/evolution-data-server-%%VERSION%%/exchange/e-folder.h
+include/evolution-data-server-%%VERSION%%/exchange/e-shell-marshal.h
 include/evolution-data-server-%%VERSION%%/exchange/e-storage.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-autoconfig.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-context.h
@@ -218,6 +219,7 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-uid.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-url.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-util.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-xml-hash-utils.h
+include/evolution-data-server-%%VERSION%%/libedataserver/e-xml-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserver/md5-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-book-auth-util.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-categories-dialog.h
@@ -323,13 +325,13 @@ lib/libedata-cal-%%EVO_VERSION%%.so
 lib/libedata-cal-%%EVO_VERSION%%.so.1
 lib/libedataserver-%%EVO_VERSION%%.a
 lib/libedataserver-%%EVO_VERSION%%.so
-lib/libedataserver-%%EVO_VERSION%%.so.4
+lib/libedataserver-%%EVO_VERSION%%.so.6
 lib/libedataserverui-%%EVO_VERSION%%.a
 lib/libedataserverui-%%EVO_VERSION%%.so
 lib/libedataserverui-%%EVO_VERSION%%.so.6
 lib/libegroupwise-%%EVO_VERSION%%.a
 lib/libegroupwise-%%EVO_VERSION%%.so
-lib/libegroupwise-%%EVO_VERSION%%.so.8
+lib/libegroupwise-%%EVO_VERSION%%.so.9
 lib/libexchange-storage-%%EVO_VERSION%%.a
 lib/libexchange-storage-%%EVO_VERSION%%.so
 lib/libexchange-storage-%%EVO_VERSION%%.so.0
@@ -428,6 +430,7 @@ share/doc/libedataserver/libedataserver-e-util.html
 share/doc/libedataserver/libedataserver-e-xml-hash-utils.html
 share/doc/libedataserver/libedataserver-md5-utils.html
 share/doc/libedataserver/libedataserver.devhelp
+share/doc/libedataserver/libedataserver.devhelp2
 share/doc/libedataserver/right.png
 share/doc/libedataserver/style.css
 share/doc/libedataserver/up.png
