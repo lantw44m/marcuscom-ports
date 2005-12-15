@@ -10,7 +10,7 @@ POST-INSTALL)
 	if [ ! -f ${PKG_PREFIX}/share/gnome/games/${i} ]; then
 	    touch -f ${PKG_PREFIX}/share/gnome/games/${i}
 	    chown games:games ${PKG_PREFIX}/share/gnome/games/${i}
-	    chmod 0664 ${PKG_PREFIX}/share/gnome/games/${i}
+	    chmod 0666 ${PKG_PREFIX}/share/gnome/games/${i}
 	fi
     done
     ;;

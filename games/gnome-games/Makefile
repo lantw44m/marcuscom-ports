@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnomegames2/Makefile,v 1.91 2005/11/13 21:19:20 marcus Exp $
+#   $MCom: ports/games/gnomegames2/Makefile,v 1.92 2005/12/13 07:11:23 marcus Exp $
 #
 
 PORTNAME=	gnomegames2
@@ -51,6 +51,9 @@ post-patch:
 		's|malloc\.h|stdlib.h|g'
 	@${REINPLACE_CMD} -e 's|bin/python|bin/env python|g' \
 		${WRKSRC}/libgames-support/games-server.py
+	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
+		's|664|666|g ; \
+		 s|2555|0555|g'
 
 post-install:
 	@-update-desktop-database
