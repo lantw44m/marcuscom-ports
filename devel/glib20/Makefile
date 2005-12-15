@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-experimental/devel/glib20/Makefile,v 1.9 2005/11/18 23:01:16 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.57 2005/12/15 00:18:44 marcus Exp $
 #
 
 PORTNAME=	glib
-PORTVERSION=	2.9.0
+PORTVERSION=	2.9.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/2.9,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.9/ \
@@ -49,5 +49,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
 		s|%%X11BASE%%|${X11BASE}|g' \
 		${WRKSRC}/glib/gutils.c
+	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' \
+		${WRKSRC}/glib/gslice.c
 
 .include <bsd.port.post.mk>
