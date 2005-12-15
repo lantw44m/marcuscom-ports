@@ -3,12 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/libbonobo/Makefile,v 1.35 2005/11/19 01:02:04 marcus Exp $
+#    $MCom: ports/devel/libbonobo/Makefile,v 1.36 2005/12/04 19:16:55 marcus Exp $
 #
 
 PORTNAME=	libbonobo
 PORTVERSION=	2.13.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
