@@ -1,0 +1,11 @@
+--- configure.orig	Wed Dec 14 19:02:10 2005
++++ configure	Wed Dec 14 19:04:36 2005
+@@ -24474,7 +24474,7 @@
+ 
+ 
+ case "$host_os" in
+-     solaris*)
++     solaris*|freebsd*)
+ 
+ echo "$as_me:$LINENO: checking for kstat_open in -lkstat" >&5
+ echo $ECHO_N "checking for kstat_open in -lkstat... $ECHO_C" >&6
