@@ -116,6 +116,8 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 @unexec rmdir %D/share/locale/nso 2> /dev/null || true
 @unexec rmdir %D/share/locale/mr/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/mr 2> /dev/null || true
+@unexec rmdir %D/share/locale/ky/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/ky 2> /dev/null || true
 @unexec rmdir %D/share/locale/ku/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/ku 2> /dev/null || true
 @dirrm share/gnome/yelp/xslt
