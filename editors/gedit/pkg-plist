@@ -41,10 +41,10 @@ lib/gedit-2/plugins/libsort.so
 lib/gedit-2/plugins/libspell.so
 lib/gedit-2/plugins/libtaglist.so
 lib/gedit-2/plugins/libtime.so
-lib/gedit-2/plugins/pythonconsole.gedit-plugin
-lib/gedit-2/plugins/pythonconsole.py
-lib/gedit-2/plugins/pythonconsole.pyc
-lib/gedit-2/plugins/pythonconsole.pyo
+%%PYTHON%%lib/gedit-2/plugins/pythonconsole.gedit-plugin
+%%PYTHON%%lib/gedit-2/plugins/pythonconsole.py
+%%PYTHON%%lib/gedit-2/plugins/pythonconsole.pyc
+%%PYTHON%%lib/gedit-2/plugins/pythonconsole.pyo
 lib/gedit-2/plugins/sample.gedit-plugin
 lib/gedit-2/plugins/sort.gedit-plugin
 lib/gedit-2/plugins/spell.gedit-plugin

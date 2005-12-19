@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/editors/gedit/Makefile,v 1.54 2005/11/05 04:53:20 marcus Exp $
-#   $MCom: ports/editors/gedit/Makefile,v 1.12 2005/10/03 15:49:09 ahze Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.14 2005/12/14 14:22:47 marcus Exp $
 #
 
 PORTNAME=	gedit
@@ -26,6 +26,7 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix gnomehack intlhack \
 		libgnomeprintui libgnomeui eel2 gtksourceview desktopfileutils
+WANT_GNOME=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 PLIST_SUB=	VERSION="2.10"
@@ -33,7 +34,20 @@ PLIST_SUB=	VERSION="2.10"
 MAN1=		gedit.1
 GCONF_SCHEMAS=	gedit.schemas
 
+.include <bsd.port.pre.mk>
+
+.if ${HAVE_GNOME:Mpygtk2}!=""
+USE_PYTHON=	yes
+.include "${PORTSDIR}/Mk/bsd.python.mk"
+USE_GNOME+=	pygtk2
+CONFIGURE_ARGS+=--enable-python
+PLIST_SUB+=	PYTHON=""
+.else
+CONFIGURE_ARGS+=--disable-python
+PLIST_SUB+=	PYTHON="@comment "
+.endif
+
 post-install:
 	@-update-desktop-database
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
