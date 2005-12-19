@@ -14,6 +14,7 @@ share/gnome/help/gnome-doc-xslt/C/db-title.xml
 share/gnome/help/gnome-doc-xslt/C/db-xref.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-admon.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-autotoc.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-bibliography.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-block.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-callout.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-classsynopsis.xml
@@ -37,6 +38,7 @@ share/gnome/help/gnome-doc-xslt/C/db2html.xml
 share/gnome/help/gnome-doc-xslt/C/db2omf.xml
 share/gnome/help/gnome-doc-xslt/C/gettext.xml
 share/gnome/help/gnome-doc-xslt/C/gnome-doc-xslt.xml
+share/gnome/help/gnome-doc-xslt/C/l10n-numbers.xml
 share/gnome/help/gnome-doc-xslt/C/legal.xml
 share/gnome/help/gnome-doc-xslt/C/translating.xml
 share/gnome/help/gnome-doc-xslt/C/xsldoc.xml
@@ -49,6 +51,7 @@ share/xml/gnome/xslt/docbook/common/db-title.xsl
 share/xml/gnome/xslt/docbook/common/db-xref.xsl
 share/xml/gnome/xslt/docbook/html/db2html-admon.xsl
 share/xml/gnome/xslt/docbook/html/db2html-autotoc.xsl
+share/xml/gnome/xslt/docbook/html/db2html-bibliography.xsl
 share/xml/gnome/xslt/docbook/html/db2html-block.xsl
 share/xml/gnome/xslt/docbook/html/db2html-callout.xsl
 share/xml/gnome/xslt/docbook/html/db2html-classsynopsis.xsl
@@ -74,6 +77,7 @@ share/xml/gnome/xslt/docbook/utils/chunks.xsl
 share/xml/gnome/xslt/docbook/utils/credits.xsl
 share/xml/gnome/xslt/docbook/utils/ids.xsl
 share/xml/gnome/xslt/gettext/gettext.xsl
+share/xml/gnome/xslt/gettext/l10n-numbers.xsl
 share/xml/gnome/xslt/gettext/l10n.xml
 share/xml/gnome/xslt/xsldoc/xsldoc.xsl
 share/xml2po/docbook.py
