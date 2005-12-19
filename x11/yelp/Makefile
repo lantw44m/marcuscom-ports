@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.71 2005/12/06 16:37:41 jylefort Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.72 2005/12/12 12:37:23 ahze Exp $
 #
 
 PORTNAME=	yelp
 PORTVERSION=	2.13.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
@@ -22,7 +23,8 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_REINPLACE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomedocutils
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomedocutils \
+		libgnomeprintui
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
