@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnome/Makefile,v 1.66 2005/12/14 17:52:08 ahze Exp $
+#   $MCom: ports/x11/libgnome/Makefile,v 1.67 2005/12/24 05:53:32 marcus Exp $
 #
 
 PORTNAME=	libgnome
@@ -29,8 +29,8 @@ USE_GNOME=	gnomeprefix gnomehack intlhack esound \
 USE_BISON=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
-		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include"
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 SUB_FILES=	pkg-deinstall
 
