@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.26 2005/11/29 16:07:33 marcus Exp $
+#    $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.28 2005/12/13 06:59:15 marcus Exp $
 #
 
 PORTNAME=	gnome
@@ -20,7 +20,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A set of Python bindings for GNOME 2
 
 LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2 \
-		gtop-2.0.2:${PORTSDIR}/devel/libgtop2 \
+		gtop-2.0.0:${PORTSDIR}/devel/libgtop2 \
 		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
 		gksu1.2.0:${PORTSDIR}/sysutils/libgksu \
 		gksuui1.0.1:${PORTSDIR}/sysutils/libgksuui \
