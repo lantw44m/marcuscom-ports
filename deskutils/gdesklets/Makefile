@@ -1,0 +1,51 @@
+# New ports collection makefile for:	gdesklets
+# Date created:				11 August 2003
+# Whom:					Mezz <mezz7@cox.net>
+#
+# $FreeBSD: ports/deskutils/gdesklets/Makefile,v 1.42 2005/11/15 06:48:26 ade Exp $
+#
+
+PORTNAME=	gdesklets
+PORTVERSION=	0.35.2
+PORTREVISION=	2
+CATEGORIES=	deskutils gnome
+MASTER_SITES=	http://www.gdesklets.org/releases/ \
+		http://www.pycage.de/download/${PORTNAME}/ \
+		${MASTER_SITE_GENTOO:S/%SUBDIR%/distfiles/}
+DISTNAME=	gDesklets-${PORTVERSION}
+
+MAINTAINER=	klammer@webonaut.com
+COMMENT=	A framework for Gnome 2.x for desktop applets
+
+LIB_DEPENDS=	gtop-2.0.0:${PORTSDIR}/devel/libgtop2
+
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_AUTOTOOLS=	libtool:15
+USE_PYTHON=	yes
+USE_X_PREFIX=	yes
+USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack librsvg2 pygnomeextras
+
+OPTIONS=	GDBM "install py-gdbm instead py-bsddb for config storage" off
+
+.include <bsd.port.pre.mk>
+
+.if defined(WITH_GDBM)
+RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/gdbm.so:${PORTSDIR}/databases/py-gdbm
+.else
+RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/_bsddb.so:${PORTSDIR}/databases/py-bsddb
+.endif
+
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
+		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
+
+GCONF_SCHEMAS=	gdesklets-display-thumbnail.schemas
+MAN1=		gdesklets.1
+
+post-install:
+	@${MKDIR} ${PREFIX}/share/gnome/gdesklets/Displays
+	@${MKDIR} ${PREFIX}/share/gnome/gdesklets/Sensors
+	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py ${PREFIX}/lib/gdesklets
+	@${CAT} ${PKGMESSAGE}
+
+.include <bsd.port.post.mk>
