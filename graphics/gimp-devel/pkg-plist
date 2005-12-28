@@ -18,6 +18,7 @@ include/gimp-2.0/libgimp/gimpbrushes_pdb.h
 include/gimp-2.0/libgimp/gimpbrushmenu.h
 include/gimp-2.0/libgimp/gimpbrushselect.h
 include/gimp-2.0/libgimp/gimpbrushselect_pdb.h
+include/gimp-2.0/libgimp/gimpbuffer_pdb.h
 include/gimp-2.0/libgimp/gimpchannel.h
 include/gimp-2.0/libgimp/gimpchannel_pdb.h
 include/gimp-2.0/libgimp/gimpcolor_pdb.h
@@ -48,6 +49,7 @@ include/gimp-2.0/libgimp/gimpgradients.h
 include/gimp-2.0/libgimp/gimpgradients_pdb.h
 include/gimp-2.0/libgimp/gimpgradientselect_pdb.h
 include/gimp-2.0/libgimp/gimpgradientselect.h
+include/gimp-2.0/libgimp/gimpgrid_pdb.h
 include/gimp-2.0/libgimp/gimpguides_pdb.h
 include/gimp-2.0/libgimp/gimphelp_pdb.h
 include/gimp-2.0/libgimp/gimpimage.h
@@ -452,6 +454,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimp/GimpImageComboBox.html
 %%DOCSDIR%%/libgimp/GimpProgressBar.html
 %%DOCSDIR%%/libgimp/GimpProcBrowserDialog.html
+%%DOCSDIR%%/libgimp/GimpZoomPreview.html
 %%DOCSDIR%%/libgimp/gimpdefinitions.html
 %%DOCSDIR%%/libgimp/home.png
 %%DOCSDIR%%/libgimp/index.html
@@ -464,6 +467,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimp/libgimp-gimpbrushes.html
 %%DOCSDIR%%/libgimp/libgimp-gimpbrushmenu.html
 %%DOCSDIR%%/libgimp/libgimp-gimpbrushselect.html
+%%DOCSDIR%%/libgimp/libgimp-gimpbuffer.html
 %%DOCSDIR%%/libgimp/libgimp-gimpchannel.html
 %%DOCSDIR%%/libgimp/libgimp-gimpcolor.html
 %%DOCSDIR%%/libgimp/libgimp-gimpcontext.html
@@ -484,6 +488,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimp/libgimp-gimpgradientmenu.html
 %%DOCSDIR%%/libgimp/libgimp-gimpgradients.html
 %%DOCSDIR%%/libgimp/libgimp-gimpgradientselect.html
+%%DOCSDIR%%/libgimp/libgimp-gimpgrid.html
 %%DOCSDIR%%/libgimp/libgimp-gimpguides.html
 %%DOCSDIR%%/libgimp/libgimp-gimphelp.html
 %%DOCSDIR%%/libgimp/libgimp-gimpimage.html
@@ -1287,6 +1292,7 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/images/wilber-icon.png
 %%DATADIR%%/images/wilber-tips.png
 %%DATADIR%%/images/wilber-wizard.png
+%%DATADIR%%/menus/brush-editor-menu.xml
 %%DATADIR%%/menus/brushes-menu.xml
 %%DATADIR%%/menus/buffers-menu.xml
 %%DATADIR%%/menus/channels-menu.xml
@@ -1352,6 +1358,7 @@ share/%%GTK%%mime-info/gimp.keys
 %%DATADIR%%/palettes/Reds.gpl
 %%DATADIR%%/palettes/Reds_And_Purples.gpl
 %%DATADIR%%/palettes/Royal.gpl
+%%DATADIR%%/palettes/Tango.gpl
 %%DATADIR%%/palettes/Topographic.gpl
 %%DATADIR%%/palettes/Visibone.gpl
 %%DATADIR%%/palettes/Visibone_2.gpl
