@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.79 2005/11/16 00:08:44 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.80 2005/12/14 23:39:46 marcus Exp $
 #
 
 PORTNAME=	evolution
@@ -95,7 +95,7 @@ PLIST_SUB+=	GSTREAMER="@comment "
 .endif
 
 .if defined(WITH_DBUS)
-LIB_DEPENDS+=	dbus-glib-1.1:${PORTSDIR}/devel/dbus
+LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus
 PLIST_SUB+=	DBUS=""
 .else
 PLIST_SUB+=	DBUS="@comment "

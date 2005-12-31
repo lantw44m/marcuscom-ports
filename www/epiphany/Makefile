@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.91 2005/11/27 23:15:55 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.92 2005/12/13 06:50:51 marcus Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	1.9.3.1
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.9
@@ -17,7 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An extremely lightweight and simple web browser for GNOME 2
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-LIB_DEPENDS=	dbus-1.1:${PORTSDIR}/devel/dbus
+LIB_DEPENDS=	dbus-1.2:${PORTSDIR}/devel/dbus
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 USE_BZIP2=	yes
