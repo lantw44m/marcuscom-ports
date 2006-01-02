@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.9 2005/11/29 20:30:06 adamw Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.11 2006/01/02 22:16:26 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -137,7 +137,7 @@ BROKEN="Unable to find a supported gecko, please check USE_GECKO"
 pre-everything:: _gecko-pre-everything _gecko-config
 
 _gecko-pre-everything::
-.if defined(BATCH)
+# remove me after testing .if defined(BATCH)
 	@${ECHO_CMD} ""
 .if !defined(_FOUND_WITH_GECKO) && defined(WITH_GECKO)
 	@${ECHO_CMD} " Warning: ${PORTNAME} does not support any gecko you"
@@ -154,7 +154,7 @@ _gecko-pre-everything::
 	@${ECHO_CMD} "   ${gecko} "
 .endfor
 	@${ECHO_CMD} ""
-.endif
+# remove me after testing .endif
 
 _gecko-config:
 .if defined(GECKO_CONFIG) ## !!!Remove me after testing!!!
