@@ -51,6 +51,7 @@ share/icons/gnome/16x16/mimetypes/gnome-mime-application-qif.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-rhythmbox-effect.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-rhythmbox-playlist.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-rtf.png
+share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-gnome-saved-search.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-smil.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-vnd.lotus-1-2-3.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-vnd.ms-excel.png
@@ -298,6 +299,7 @@ share/icons/gnome/24x24/filesystems/gnome-fs-trash-empty.png
 share/icons/gnome/24x24/filesystems/gnome-fs-trash-full.png
 share/icons/gnome/24x24/mimetypes/gnome-mime-image.png
 share/icons/gnome/24x24/mimetypes/gnome-mime-x-directory-nfs-server.png
+share/icons/gnome/24x24/mimetypes/gnome-mime-application-x-gnome-saved-search.png
 share/icons/gnome/24x24/stock/media/stock_3dsound.png
 share/icons/gnome/24x24/stock/media/stock_effects-sound.png
 share/icons/gnome/24x24/stock/media/stock_headphones.png
@@ -689,6 +691,7 @@ share/icons/gnome/scalable/filesystems/gnome-fs-directory.svg
 share/icons/gnome/scalable/filesystems/gnome-fs-home.svg
 share/icons/gnome/scalable/filesystems/gnome-fs-trash-empty.svg
 share/icons/gnome/scalable/filesystems/gnome-fs-trash-full.svg
+share/icons/gnome/scalable/mimetypes/gnome-mime-application-x-gnome-saved-search.svg
 share/icons/hicolor/16x16/apps/config-language.png
 share/icons/hicolor/16x16/apps/evolution.png
 share/icons/hicolor/16x16/apps/gnome-devel.png
