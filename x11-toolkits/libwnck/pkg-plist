@@ -38,6 +38,7 @@ libdata/pkgconfig/libwnck-1.0.pc
 %%DOCSDIR%%/libwnck-wnck-enum-types.html
 %%DOCSDIR%%/libwnck-xutils.html
 %%DOCSDIR%%/libwnck.devhelp
+%%DOCSDIR%%/libwnck.devhelp2
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
