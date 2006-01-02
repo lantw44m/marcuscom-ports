@@ -131,6 +131,7 @@ share/locale/he/LC_MESSAGES/file-roller.mo
 share/locale/hi/LC_MESSAGES/file-roller.mo
 share/locale/hr/LC_MESSAGES/file-roller.mo
 share/locale/hu/LC_MESSAGES/file-roller.mo
+share/locale/hy/LC_MESSAGES/file-roller.mo
 share/locale/id/LC_MESSAGES/file-roller.mo
 share/locale/is/LC_MESSAGES/file-roller.mo
 share/locale/it/LC_MESSAGES/file-roller.mo
@@ -172,7 +173,10 @@ share/locale/uk/LC_MESSAGES/file-roller.mo
 share/locale/vi/LC_MESSAGES/file-roller.mo
 share/locale/xh/LC_MESSAGES/file-roller.mo
 share/locale/zh_CN/LC_MESSAGES/file-roller.mo
+share/locale/zh_HK/LC_MESSAGES/file-roller.mo
 share/locale/zh_TW/LC_MESSAGES/file-roller.mo
+@unexec rmdir %D/share/locale/zh_HK/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/zh_HK 2> /dev/null || true
 @unexec rmdir %D/share/locale/xh/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/xh 2> /dev/null || true
 @unexec rmdir %D/share/locale/te/LC_MESSAGES 2> /dev/null || true
@@ -183,6 +187,8 @@ share/locale/zh_TW/LC_MESSAGES/file-roller.mo
 @unexec rmdir %D/share/locale/rw 2> /dev/null || true
 @unexec rmdir %D/share/locale/ku/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/ku 2> /dev/null || true
+@unexec rmdir %D/share/locale/hy/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/hy 2> /dev/null || true
 @dirrm share/gnome/omf/file-roller
 @dirrm share/gnome/help/file-roller/zh_TW/figures
 @dirrm share/gnome/help/file-roller/zh_TW
