@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/x11/gnomeapplets2/Makefile,v 1.85 2005/11/28 06:30:45 marcus Exp $
-#   $MCom: ports/x11/gnomeapplets2/Makefile,v 1.94 2005/10/08 19:41:40 marcus Exp $
+#   $MCom: ports/x11/gnomeapplets2/Makefile,v 1.96 2005/12/14 20:17:07 marcus Exp $
 #
 
 PORTNAME=	gnomeapplets2
 PORTVERSION=	2.13.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-applets/2.13
@@ -18,7 +19,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Applets components for the Gnome 2 Desktop Environment
 
 BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/gnome-system-tools.pc:${PORTSDIR}/sysutils/gnomesystemtools
-LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop2 \
+LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop2 \
 		xklavier.10:${PORTSDIR}/x11/libxklavier \
 		gucharmap.4:${PORTSDIR}/deskutils/gucharmap
 RUN_DEPENDS=	${X11BASE}/libdata/pkgconfig/system-tools-backends.pc:${PORTSDIR}/sysutils/gnomesystemtools

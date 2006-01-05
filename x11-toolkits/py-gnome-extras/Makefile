@@ -3,11 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.28 2005/12/13 06:59:15 marcus Exp $
+#    $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.29 2005/12/25 07:18:35 marcus Exp $
 #
 
 PORTNAME=	gnome
 PORTVERSION=	2.13.0
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -20,7 +21,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A set of Python bindings for GNOME 2
 
 LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell2 \
-		gtop-2.0.0:${PORTSDIR}/devel/libgtop2 \
+		gtop-2.0.7:${PORTSDIR}/devel/libgtop2 \
 		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
 		gksu1.2.0:${PORTSDIR}/sysutils/libgksu \
 		gksuui1.0.1:${PORTSDIR}/sysutils/libgksuui \
