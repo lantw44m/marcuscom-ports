@@ -5,9 +5,7 @@ lib/epiphany/%%VERSION%%/extensions/error-viewer.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/extensions-manager-ui.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/gestures.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/java-console.ephy-extension
-lib/epiphany/%%VERSION%%/extensions/libactionsextension.a
 lib/epiphany/%%VERSION%%/extensions/libactionsextension.so
-lib/epiphany/%%VERSION%%/extensions/libactionsextension.so.0
 lib/epiphany/%%VERSION%%/extensions/libautoscrollerextension.so
 lib/epiphany/%%VERSION%%/extensions/libcertificatesextension.so
 lib/epiphany/%%VERSION%%/extensions/liberrorviewerextension.so
@@ -20,9 +18,7 @@ lib/epiphany/%%VERSION%%/extensions/libselectstylesheetextension.so
 lib/epiphany/%%VERSION%%/extensions/libsidebarextension.so
 lib/epiphany/%%VERSION%%/extensions/libsmartbookmarksextension.so
 lib/epiphany/%%VERSION%%/extensions/libtabgroupsextension.so
-lib/epiphany/%%VERSION%%/extensions/libtabstatesextension.a
 lib/epiphany/%%VERSION%%/extensions/libtabstatesextension.so
-lib/epiphany/%%VERSION%%/extensions/libtabstatesextension.so.0
 lib/epiphany/%%VERSION%%/extensions/page-info.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/push-scroller.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/select-stylesheet.ephy-extension
@@ -30,7 +26,6 @@ lib/epiphany/%%VERSION%%/extensions/sidebar.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/smart-bookmarks.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/tab-groups.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/tab-states.ephy-extension
-lib/epiphany/%%VERSION%%/plugins/libdesktopfileplugin.so
 share/gnome/epiphany-extensions/ephy-gestures.xml
 share/gnome/epiphany-extensions/glade/action-properties.glade
 share/gnome/epiphany-extensions/glade/actions-editor.glade
