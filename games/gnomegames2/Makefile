@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnomegames2/Makefile,v 1.93 2005/12/15 04:19:03 marcus Exp $
+#   $MCom: ports/games/gnomegames2/Makefile,v 1.94 2005/12/15 04:19:24 marcus Exp $
 #
 
 PORTNAME=	gnomegames2
-PORTVERSION=	2.13.3
-PORTREVISION=	1
+PORTVERSION=	2.13.4
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-games/2.13
@@ -52,9 +51,9 @@ post-patch:
 		's|malloc\.h|stdlib.h|g'
 	@${REINPLACE_CMD} -e 's|bin/python|bin/env python|g' \
 		${WRKSRC}/libgames-support/games-server.py
-	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
-		's|664|666|g ; \
-		 s|2555|0555|g'
+#	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
+#		's|664|666|g ; \
+#		 s|2555|0555|g'
 
 post-install:
 	@-update-desktop-database

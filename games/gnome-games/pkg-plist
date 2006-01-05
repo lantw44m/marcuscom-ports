@@ -162,6 +162,7 @@ share/gnome/gnome-games/same-gnome/themes/2.10/planets.png
 share/gnome/gnome-games/same-gnome/themes/2.10/stones.png
 share/gnome/help/aisleriot/C/agnes.xml
 share/gnome/help/aisleriot/C/aisleriot.xml
+share/gnome/help/aisleriot/C/athena.xml
 share/gnome/help/aisleriot/C/auld_lang_syne.xml
 share/gnome/help/aisleriot/C/backbone.xml
 share/gnome/help/aisleriot/C/bakers_dozen.xml
@@ -219,6 +220,7 @@ share/gnome/help/aisleriot/C/plait.xml
 share/gnome/help/aisleriot/C/poker.xml
 share/gnome/help/aisleriot/C/quatorze.xml
 share/gnome/help/aisleriot/C/royal_east.xml
+share/gnome/help/aisleriot/C/saratoga.xml
 share/gnome/help/aisleriot/C/scorpion.xml
 share/gnome/help/aisleriot/C/scuffle.xml
 share/gnome/help/aisleriot/C/seahaven.xml
@@ -244,6 +246,7 @@ share/gnome/help/aisleriot/C/yield.xml
 share/gnome/help/aisleriot/C/yukon.xml
 share/gnome/help/aisleriot/C/zebra.xml
 share/gnome/help/aisleriot/fr/agnes.xml
+share/gnome/help/aisleriot/fr/athena.xml
 share/gnome/help/aisleriot/fr/aisleriot.xml
 share/gnome/help/aisleriot/fr/auld_lang_syne.xml
 share/gnome/help/aisleriot/fr/backbone.xml
@@ -302,6 +305,7 @@ share/gnome/help/aisleriot/fr/plait.xml
 share/gnome/help/aisleriot/fr/poker.xml
 share/gnome/help/aisleriot/fr/quatorze.xml
 share/gnome/help/aisleriot/fr/royal_east.xml
+share/gnome/help/aisleriot/fr/saratoga.xml
 share/gnome/help/aisleriot/fr/scorpion.xml
 share/gnome/help/aisleriot/fr/scuffle.xml
 share/gnome/help/aisleriot/fr/seahaven.xml
@@ -524,6 +528,7 @@ share/gnome/pixmaps/iagno/woodtrim.png
 share/gnome/pixmaps/mahjongg/postmodern.svg
 share/gnome/pixmaps/mahjongg/smooth.png
 share/gnome/sol-games/agnes.scm
+share/gnome/sol-games/athena.scm
 share/gnome/sol-games/auld_lang_syne.scm
 share/gnome/sol-games/backbone.scm
 share/gnome/sol-games/bakers_dozen.scm
@@ -578,6 +583,7 @@ share/gnome/sol-games/plait.scm
 share/gnome/sol-games/poker.scm
 share/gnome/sol-games/quatorze.scm
 share/gnome/sol-games/royal_east.scm
+share/gnome/sol-games/saratoga.scm
 share/gnome/sol-games/scorpion.scm
 share/gnome/sol-games/scuffle.scm
 share/gnome/sol-games/seahaven.scm
