@@ -154,6 +154,7 @@ include/evolution-%%VERSION%%/misc/e-url-entry.h
 include/evolution-%%VERSION%%/misc/gal-combo-box.h
 include/evolution-%%VERSION%%/misc/gal-combo-text.h
 include/evolution-%%VERSION%%/shell/Evolution.h
+include/evolution-%%VERSION%%/shell/e-component-view.h
 include/evolution-%%VERSION%%/shell/e-shell-utils.h
 include/evolution-%%VERSION%%/shell/e-user-creatable-items-handler.h
 include/evolution-%%VERSION%%/shell/es-event.h
@@ -329,6 +330,7 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-mark-calendar-offline.so
 %%DBUS%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-new-mail-notify.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-plugin-manager.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-print-message.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-publish-calendar.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-sa-junk-plugin.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-save-calendar.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-select-one-source.so
@@ -365,10 +367,13 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-plugin-manager.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-plugin-manager.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-print-message.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-print-message.xml
+lib/evolution/%%VERSION%%/plugins/org-gnome-publish-calendar.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-publish-calendar.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-sa-junk-plugin.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-save-calendar.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-select-one-source.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-subject-thread.eplug
+lib/evolution/%%VERSION%%/plugins/publish-calendar.glade
 libdata/bonobo/servers/GNOME_Evolution_Addressbook_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Calendar_%%VERSION%%.server
 libdata/bonobo/servers/GNOME_Evolution_Calendar_AlarmNotify_%%VERSION%%.server
@@ -464,7 +469,6 @@ share/gnome/evolution/%%VERSION%%/glade/schedule-page.glade
 share/gnome/evolution/%%VERSION%%/glade/smime-ui.glade
 share/gnome/evolution/%%VERSION%%/glade/task-details-page.glade
 share/gnome/evolution/%%VERSION%%/glade/task-page.glade
-share/gnome/evolution/%%VERSION%%/glade/url-editor-dialog.glade
 share/gnome/evolution/%%VERSION%%/help/quickref/C/quickref.pdf
 share/gnome/evolution/%%VERSION%%/images/about-box.png
 share/gnome/evolution/%%VERSION%%/images/bcg.png
@@ -479,7 +483,6 @@ share/gnome/evolution/%%VERSION%%/ui/evolution-calendar.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-composer-entries.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-editor.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-event-editor.xml
-share/gnome/evolution/%%VERSION%%/ui/evolution-executive-summary.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-mail-global.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-mail-list.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-mail-message.xml
