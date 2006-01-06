@@ -1,6 +1,5 @@
 bin/gnome-terminal
 libdata/bonobo/servers/gnome-terminal.server
-share/gnome/application-registry/gnome-terminal.applications
 share/gnome/applications/gnome-terminal.desktop
 share/gnome/gnome-terminal/glade/gnome-terminal.glade2
 share/gnome/help/gnome-terminal/C/figures/gnome-terminal-default.png
