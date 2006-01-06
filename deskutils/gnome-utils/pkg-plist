@@ -3,39 +3,72 @@ bin/gnome-panel-screenshot
 bin/gnome-screenshot
 bin/gnome-search-tool
 bin/gnome-system-log
-libdata/bonobo/servers/GNOME_GDictApplet.server
-libexec/gdict-applet
+include/gdict-1.0/gdict/gdict-client-context.h
+include/gdict-1.0/gdict/gdict-context.h
+include/gdict-1.0/gdict/gdict-defbox.h
+include/gdict-1.0/gdict/gdict-entry.h
+include/gdict-1.0/gdict/gdict-enum-types.h
+include/gdict-1.0/gdict/gdict-source-loader.h
+include/gdict-1.0/gdict/gdict-source.h
+include/gdict-1.0/gdict/gdict-utils.h
+include/gdict-1.0/gdict/gdict-version.h
+include/gdict-1.0/gdict/gdict.h
+lib/libgdict-1.0.a
+lib/libgdict-1.0.so
+lib/libgdict-1.0.so.1
+libdata/bonobo/servers/GNOME_DictionaryApplet.server
+libdata/pkgconfig/gdict-1.0.pc
+libexec/gnome-dictionary-applet
+share/doc/gdict/gdict-GdictClientContext.html
+share/doc/gdict/gdict-GdictContext.html
+share/doc/gdict/gdict-GdictDefbox.html
+share/doc/gdict/gdict-GdictEntry.html
+share/doc/gdict/gdict-GdictSource.html
+share/doc/gdict/gdict-GdictSourceLoader.html
+share/doc/gdict/gdict.devhelp
+share/doc/gdict/gdict.html
+share/doc/gdict/gdictui.html
+share/doc/gdict/home.png
+share/doc/gdict/index.html
+share/doc/gdict/index.sgml
+share/doc/gdict/introduction.html
+share/doc/gdict/left.png
+share/doc/gdict/right.png
+share/doc/gdict/sources-loader.html
+share/doc/gdict/sources.html
+share/doc/gdict/style.css
+share/doc/gdict/up.png
 share/gnome/applications/gnome-dictionary.desktop
 share/gnome/applications/gnome-search-tool.desktop
 share/gnome/applications/gnome-system-log.desktop
-share/gnome/gnome-2.0/ui/GNOME_GDictApplet.xml
+share/gnome/gdict-1.0/sources/default.desktop
+share/gnome/gnome-2.0/ui/GNOME_DictionaryApplet.xml
+share/gnome/gnome-dictionary/gnome-dictionary-preferences.glade
+share/gnome/gnome-dictionary/gnome-dictionary-ui.xml
 share/gnome/gnome-screenshot/glade/gnome-screenshot.glade
 share/gnome/gnome-system-log/gnome-system-log-actions.db
 share/gnome/gnome-system-log/gnome-system-log-descript.db
 share/gnome/gnome-system-log/gnome-system-log-regexp.db
-share/gnome/help/gnome-dictionary/C/figures/gdict_applet.png
-share/gnome/help/gnome-dictionary/C/figures/gdict_window.png
+share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-add-source.png
+share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-applet-window.png
+share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-applet.png
+share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-application.png
+share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-find.png
+share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-lookup.png
+share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-preferences-print.png
+share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-preferences-source.png
 share/gnome/help/gnome-dictionary/C/gnome-dictionary.xml
 share/gnome/help/gnome-dictionary/C/legal.xml
-share/gnome/help/gnome-dictionary/ja/figures/gdict_applet.png
-share/gnome/help/gnome-dictionary/ja/figures/gdict_window.png
-share/gnome/help/gnome-dictionary/ja/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/ja/legal.xml
-share/gnome/help/gnome-dictionary/uk/figures/gdict_applet.png
-share/gnome/help/gnome-dictionary/uk/figures/gdict_window.png
-share/gnome/help/gnome-dictionary/uk/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/uk/legal.xml
 share/gnome/help/gnome-search-tool/C/figures/gnome-search-tool_window.png
 share/gnome/help/gnome-search-tool/C/gnome-search-tool.xml
 share/gnome/help/gnome-search-tool/C/legal.xml
 share/gnome/help/gnome-system-log/C/figures/syslog_window.png
 share/gnome/help/gnome-system-log/C/gnome-system-log.xml
 share/gnome/help/gnome-system-log/C/legal.xml
+share/gnome/omf/gnome-dictionary/gnome-dictionary-C.omf
 share/gnome/omf/gnome-search-tool/gnome-search-tool-C.omf
 share/gnome/omf/gnome-system-log/gnome-system-log-C.omf
-share/gnome/omf/gnome-utils/gnome-dictionary-C.omf
-share/gnome/omf/gnome-utils/gnome-dictionary-ja.omf
-share/gnome/omf/gnome-utils/gnome-dictionary-uk.omf
+share/gnome/pixmaps/gnome-dictionary.png
 share/gnome/pixmaps/gsearchtool/thumbnail_frame.png
 share/locale/am/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-utils-2.0.mo
@@ -106,22 +139,22 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @unexec rmdir %D/share/locale/ku/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/ku 2> /dev/null || true
 @dirrm share/gnome/pixmaps/gsearchtool
-@dirrm share/gnome/omf/gnome-utils
 @dirrm share/gnome/omf/gnome-system-log
 @dirrm share/gnome/omf/gnome-search-tool
+@dirrm share/gnome/omf/gnome-dictionary
 @dirrm share/gnome/help/gnome-system-log/C/figures
 @dirrm share/gnome/help/gnome-system-log/C
 @dirrm share/gnome/help/gnome-system-log
 @dirrm share/gnome/help/gnome-search-tool/C/figures
 @dirrm share/gnome/help/gnome-search-tool/C
 @dirrm share/gnome/help/gnome-search-tool
-@dirrm share/gnome/help/gnome-dictionary/uk/figures
-@dirrm share/gnome/help/gnome-dictionary/uk
-@dirrm share/gnome/help/gnome-dictionary/ja/figures
-@dirrm share/gnome/help/gnome-dictionary/ja
 @dirrm share/gnome/help/gnome-dictionary/C/figures
 @dirrm share/gnome/help/gnome-dictionary/C
 @dirrm share/gnome/help/gnome-dictionary
 @dirrm share/gnome/gnome-system-log
 @dirrm share/gnome/gnome-screenshot/glade
 @dirrm share/gnome/gnome-screenshot
+@dirrm share/gnome/gnome-dictionary
+@dirrm share/doc/gdict
+@dirrm include/gdict-1.0/gdict
+@dirrm include/gdict-1.0
