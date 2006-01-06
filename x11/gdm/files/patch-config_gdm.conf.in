@@ -1,35 +1,26 @@
---- config/gdm.conf.in.orig	Thu Nov  3 20:07:52 2005
-+++ config/gdm.conf.in	Mon Dec  5 16:56:51 2005
-@@ -81,7 +81,7 @@
- # To try to kill all clients started at greeter time or in the Init script.
- # doesn't always work, only if those clients have a window of their own
- #KillInitClients=true
--LogDir=@EXPANDED_LOGDIR@
-+LogDir=/var/log
- # You should probably never change this value unless you have a weird setup
- PidFile=/var/run/gdm.pid
- # Note that a post login script is run before a PreSession script.
-@@ -136,11 +136,11 @@
+--- config/gdm.conf.in.orig	Tue Dec 20 21:22:36 2005
++++ config/gdm.conf.in	Thu Jan  5 16:54:11 2006
+@@ -154,11 +154,11 @@
  #FlexiReapDelayMinutes=5
- # the X nest command
+ # The X nest command.
  Xnest=@X_XNEST_PATH@/Xnest @X_XNEST_CONFIG_OPTIONS@
--# Automatic VT allocation.  Right now only works on Linux.  This way
+-# Automatic VT allocation.  Right now only works on Linux.  This way we force
 +# Automatic VT allocation.  This way
- # we force X to use specific vts.  turn VTAllocation to false if this
- # is causing problems.
+ # X to use specific vts.  turn VTAllocation to false if this is causing
+ # problems.
 -#FirstVT=7
 -#VTAllocation=true
 +FirstVT=9
 +VTAllocation=true
- # Should double login be treated with a warning (and possibility to change
- # vts on linux and freebsd systems for console logins)
+ # Should double login be treated with a warning (and possibility to change VT's
+ # on Linux and FreeBSD systems for console logins)
  #DoubleLoginWarning=true
-@@ -264,7 +264,7 @@
- # The specific gtkrc file we use.  It should be the full path to the gtkrc
- # that we need.  Unless you need a specific gtkrc that doesn't correspond to
- # a specific theme, then just use the GtkTheme key
+@@ -277,7 +277,7 @@
+ # The specific gtkrc file we use.  It should be the full path to the gtkrc that
+ # we need.  Unless you need a specific gtkrc that doesn't correspond to a
+ # specific theme, then just use the GtkTheme key.
 -#GtkRC=@EXPANDED_DATADIR@/themes/Default/gtk-2.0/gtkrc
 +#GtkRC=@EXPANDED_DATADIR@/../themes/Default/gtk-2.0/gtkrc
  
- # The GTK+ theme to use for the gui
+ # The GTK+ theme to use for the GUI.
  #GtkTheme=Default

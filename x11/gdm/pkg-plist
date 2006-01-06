@@ -14,6 +14,7 @@ etc/gdm/Xsession
 @unexec if cmp -s %D/etc/gdm/gdm.conf %D/etc/gdm/factory-gdm.conf; then rm -f %D/etc/gdm/gdm.conf; fi
 etc/gdm/factory-gdm.conf
 @exec [ -f %B/gdm.conf ] || cp %B/%f %B/gdm.conf
+etc/gdm/gdm.conf-custom
 etc/gdm/locale.alias
 @unexec if cmp -s %D/etc/gdm/modules/AccessDwellMouseEvents %D/etc/gdm/modules/factory-AccessDwellMouseEvents; then rm -f %D/etc/gdm/modules/AccessDwellMouseEvents; fi
 etc/gdm/modules/factory-AccessDwellMouseEvents
