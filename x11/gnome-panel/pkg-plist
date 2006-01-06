@@ -34,6 +34,7 @@ share/doc/panel-applet/left.png
 share/doc/panel-applet/multi-applets.html
 share/doc/panel-applet/panel-applet-Panel-Applet-GConf-Utilities.html
 share/doc/panel-applet/panel-applet.devhelp
+share/doc/panel-applet/panel-applet.devhelp2
 share/doc/panel-applet/panel-applet.html
 share/doc/panel-applet/panel-signals.html
 share/doc/panel-applet/right.png
@@ -189,6 +190,9 @@ share/gnome/help/workspace-switcher/de/workspace-switcher.xml
 share/gnome/help/workspace-switcher/es/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/es/legal.xml
 share/gnome/help/workspace-switcher/es/workspace-switcher.xml
+share/gnome/help/workspace-switcher/fr/figures/workspace_switcher_applet.png
+share/gnome/help/workspace-switcher/fr/legal.xml
+share/gnome/help/workspace-switcher/fr/workspace-switcher.xml
 share/gnome/help/workspace-switcher/it/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/it/legal.xml
 share/gnome/help/workspace-switcher/it/workspace-switcher.xml
@@ -237,12 +241,6 @@ share/gnome/omf/fish/fish-es.omf
 share/gnome/omf/fish/fish-fr.omf
 share/gnome/omf/fish/fish-it.omf
 share/gnome/omf/fish/fish-uk.omf
-share/gnome/omf/gnome-panel/clock-de.omf
-share/gnome/omf/gnome-panel/clock-ja.omf
-share/gnome/omf/gnome-panel/clock-ko.omf
-share/gnome/omf/gnome-panel/clock-sv.omf
-share/gnome/omf/gnome-panel/clock-zh_CN.omf
-share/gnome/omf/gnome-panel/clock-zh_TW.omf
 share/gnome/omf/gnome-panel/fish-applet-2-de.omf
 share/gnome/omf/gnome-panel/fish-applet-2-ja.omf
 share/gnome/omf/gnome-panel/fish-applet-2-ko.omf
@@ -268,6 +266,7 @@ share/gnome/omf/window-list/window-list-it.omf
 share/gnome/omf/window-list/window-list-uk.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-C.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-es.omf
+share/gnome/omf/workspace-switcher/workspace-switcher-fr.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-it.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-nl.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-uk.omf
@@ -410,6 +409,8 @@ share/locale/zu/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/help/workspace-switcher/ja
 @dirrm share/gnome/help/workspace-switcher/it/figures
 @dirrm share/gnome/help/workspace-switcher/it
+@dirrm share/gnome/help/workspace-switcher/fr/figures
+@dirrm share/gnome/help/workspace-switcher/fr
 @dirrm share/gnome/help/workspace-switcher/es/figures
 @dirrm share/gnome/help/workspace-switcher/es
 @dirrm share/gnome/help/workspace-switcher/de/figures
