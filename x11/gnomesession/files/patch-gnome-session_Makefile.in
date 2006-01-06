@@ -1,0 +1,11 @@
+--- gnome-session/Makefile.in.orig	Fri Jan  6 17:34:46 2006
++++ gnome-session/Makefile.in	Fri Jan  6 17:35:21 2006
+@@ -308,7 +308,7 @@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ NULL = 
+-defaultdir = $(datadir)/gnome
++defaultdir = $(datadir)
+ INCLUDES = \
+ 	$(GNOME_SESSION_CFLAGS)				\
+ 	$(STANDARD_PROPERTIES_CFLAGS)			\
