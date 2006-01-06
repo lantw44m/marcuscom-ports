@@ -310,7 +310,7 @@ lib/libcamel-%%EVO_VERSION%%.so
 lib/libcamel-%%EVO_VERSION%%.so.0
 lib/libcamel-provider-%%EVO_VERSION%%.a
 lib/libcamel-provider-%%EVO_VERSION%%.so
-lib/libcamel-provider-%%EVO_VERSION%%.so.6
+lib/libcamel-provider-%%EVO_VERSION%%.so.7
 lib/libebook-%%EVO_VERSION%%.a
 lib/libebook-%%EVO_VERSION%%.so
 lib/libebook-%%EVO_VERSION%%.so.5
@@ -334,7 +334,7 @@ lib/libegroupwise-%%EVO_VERSION%%.so
 lib/libegroupwise-%%EVO_VERSION%%.so.9
 lib/libexchange-storage-%%EVO_VERSION%%.a
 lib/libexchange-storage-%%EVO_VERSION%%.so
-lib/libexchange-storage-%%EVO_VERSION%%.so.0
+lib/libexchange-storage-%%EVO_VERSION%%.so.1
 libdata/bonobo/servers/GNOME_Evolution_DataServer_%%EVO_VERSION%%.server
 libdata/pkgconfig/camel-%%EVO_VERSION%%.pc
 libdata/pkgconfig/camel-provider-%%EVO_VERSION%%.pc
