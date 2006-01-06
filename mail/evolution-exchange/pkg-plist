@@ -3,6 +3,64 @@ lib/evolution-data-server-%%EDS_VERSION%%/camel-providers/libcamelexchange.so
 lib/evolution-data-server-%%EDS_VERSION%%/camel-providers/libcamelexchange.urls
 libdata/bonobo/servers/GNOME_Evolution_Exchange_Storage_%%VERSION%%.server
 libexec/evolution/%%EVO_VERSION%%/evolution-exchange-storage
+%%OLDDOCSDIR%%/E2kContext.html
+%%OLDDOCSDIR%%/E2kGlobalCatalog.html
+%%OLDDOCSDIR%%/E2kSecurityDescriptor.html
+%%OLDDOCSDIR%%/ch01.html
+%%OLDDOCSDIR%%/ch02.html
+%%OLDDOCSDIR%%/ch03.html
+%%OLDDOCSDIR%%/ch04.html
+%%OLDDOCSDIR%%/ch05.html
+%%OLDDOCSDIR%%/ch06.html
+%%OLDDOCSDIR%%/home.png
+%%OLDDOCSDIR%%/index.html
+%%OLDDOCSDIR%%/index.sgml
+%%OLDDOCSDIR%%/left.png
+%%OLDDOCSDIR%%/right.png
+%%OLDDOCSDIR%%/style.css
+%%OLDDOCSDIR%%/up.png
+%%OLDDOCSDIR%%/ximian-connector-E2kAutoconfig.html
+%%OLDDOCSDIR%%/ximian-connector-E2kContext-(private).html
+%%OLDDOCSDIR%%/ximian-connector-E2kOperation-(private).html
+%%OLDDOCSDIR%%/ximian-connector-E2kOperation.html
+%%OLDDOCSDIR%%/ximian-connector-E2kProperties.html
+%%OLDDOCSDIR%%/ximian-connector-E2kRestriction-(vaporware).html
+%%OLDDOCSDIR%%/ximian-connector-E2kResult-(private).html
+%%OLDDOCSDIR%%/ximian-connector-E2kSid.html
+%%OLDDOCSDIR%%/ximian-connector-E2kUserDialog.html
+%%OLDDOCSDIR%%/ximian-connector-MAPI.html
+%%OLDDOCSDIR%%/ximian-connector-autoconfig.html
+%%OLDDOCSDIR%%/ximian-connector-bug-private.html
+%%OLDDOCSDIR%%/ximian-connector-bug-xml.html
+%%OLDDOCSDIR%%/ximian-connector-calendar.html
+%%OLDDOCSDIR%%/ximian-connector-delegation.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-action.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-encoding-utils.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-freebusy.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-http-utils.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-kerberos.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-restriction.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-result.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-rule.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-uri.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-utils.html
+%%OLDDOCSDIR%%/ximian-connector-e2k-xml-utils.html
+%%OLDDOCSDIR%%/ximian-connector-favorites.html
+%%OLDDOCSDIR%%/ximian-connector-fba.html
+%%OLDDOCSDIR%%/ximian-connector-freebusy.html
+%%OLDDOCSDIR%%/ximian-connector-mail-threading.html
+%%OLDDOCSDIR%%/ximian-connector-mail.html
+%%OLDDOCSDIR%%/ximian-connector-ntlm.html
+%%OLDDOCSDIR%%/ximian-connector-oof.html
+%%OLDDOCSDIR%%/ximian-connector-other-users.html
+%%OLDDOCSDIR%%/ximian-connector-permissions.html
+%%OLDDOCSDIR%%/ximian-connector-test-utils.html
+%%OLDDOCSDIR%%/ximian-connector-xntlm-des.html
+%%OLDDOCSDIR%%/ximian-connector-xntlm-md4.html
+%%OLDDOCSDIR%%/ximian-connector-xntlm.html
+%%OLDDOCSDIR%%/ximian-connector.devhelp
+%%OLDDOCSDIR%%/ximian-connector.devhelp2
+%%OLDDOCSDIR%%/ximian-connnector-booking.html
 share/gnome/evolution-exchange/%%VERSION%%/glade/exchange-autoconfig-wizard.glade
 share/gnome/evolution-exchange/%%VERSION%%/glade/exchange-change-password.glade
 share/gnome/evolution-exchange/%%VERSION%%/glade/exchange-delegates.glade
@@ -19,7 +77,9 @@ share/locale/ar/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/bn/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/ca/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/cs/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/da/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/de/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/el/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/en_CA/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
@@ -39,6 +99,7 @@ share/locale/ja/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/ko/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/ku/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/lt/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/mk/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/ms/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/nb/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/ne/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
@@ -50,6 +111,7 @@ share/locale/pl/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/pt/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/pt_BR/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/ro/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/ru/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/rw/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/sk/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/sq/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
@@ -60,9 +122,13 @@ share/locale/ta/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/th/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/tr/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/uk/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/vi/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/xh/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/zh_HK/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+@unexec rmdir %D/share/locale/zh_HK/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/zh_HK 2> /dev/null || true
 @dirrm share/gnome/evolution-exchange/%%VERSION%%/ui
 @dirrm share/gnome/evolution-exchange/%%VERSION%%/images
 @dirrm share/gnome/evolution-exchange/%%VERSION%%/glade
