@@ -37,6 +37,7 @@ libdata/pkgconfig/gtksourceview-1.0.pc
 share/gnome/gtksourceview-1.0/language-specs/R.lang
 share/gnome/gtksourceview-1.0/language-specs/ada.lang
 share/gnome/gtksourceview-1.0/language-specs/c.lang
+share/gnome/gtksourceview-1.0/language-specs/changelog.lang
 share/gnome/gtksourceview-1.0/language-specs/cpp.lang
 share/gnome/gtksourceview-1.0/language-specs/csharp.lang
 share/gnome/gtksourceview-1.0/language-specs/css.lang
@@ -56,6 +57,7 @@ share/gnome/gtksourceview-1.0/language-specs/lua.lang
 share/gnome/gtksourceview-1.0/language-specs/makefile.lang
 share/gnome/gtksourceview-1.0/language-specs/msil.lang
 share/gnome/gtksourceview-1.0/language-specs/nemerle.lang
+share/gnome/gtksourceview-1.0/language-specs/octave.lang
 share/gnome/gtksourceview-1.0/language-specs/pascal.lang
 share/gnome/gtksourceview-1.0/language-specs/perl.lang
 share/gnome/gtksourceview-1.0/language-specs/php.lang
