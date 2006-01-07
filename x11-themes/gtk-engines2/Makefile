@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.13 2005/12/14 02:12:35 ahze Exp $
+#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.14 2006/01/02 23:23:47 ahze Exp $
 #
 
 PORTNAME=	gtk-engines2
@@ -25,19 +25,6 @@ USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack gtk20
 PLIST_SUB=	GTK_VERSION="2.4.0"
-
-.if defined(WITH_ANIMATION)
-CFLAGS+=	-DHAVE_ANIMATION=1
-.endif
-
-pre-everything::
-.if !defined(WITH_ANIMATION)
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} " You can enable experimental animated progressbars"
-	@${ECHO_MSG} " with the clearlooks engine by defining"
-	@${ECHO_MSG} " WITH_ANIMATION"
-	@${ECHO_MSG} ""
-.endif
 
 # Disable the gtk1 theme.
 post-patch:
