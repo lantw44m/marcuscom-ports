@@ -155,6 +155,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/gnome-screenshot/glade
 @dirrm share/gnome/gnome-screenshot
 @dirrm share/gnome/gnome-dictionary
+@dirrm share/gnome/gdict-1.0/sources
+@dirrm share/gnome/gdict-1.0
 @dirrm share/doc/gdict
 @dirrm include/gdict-1.0/gdict
 @dirrm include/gdict-1.0
