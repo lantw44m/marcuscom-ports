@@ -135,6 +135,7 @@ share/locale/vi/LC_MESSAGES/eog.mo
 share/locale/wa/LC_MESSAGES/eog.mo
 share/locale/xh/LC_MESSAGES/eog.mo
 share/locale/zh_CN/LC_MESSAGES/eog.mo
+share/locale/zh_HK/LC_MESSAGES/eog.mo
 share/locale/zh_TW/LC_MESSAGES/eog.mo
 share/locale/zu/LC_MESSAGES/eog.mo
 @unexec rmdir %D/share/locale/zu/LC_MESSAGES 2> /dev/null || true
