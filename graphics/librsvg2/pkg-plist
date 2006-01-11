@@ -1,4 +1,5 @@
 bin/rsvg
+bin/rsvg-convert
 bin/rsvg-view
 include/librsvg-2/librsvg/librsvg-enum-types.h
 include/librsvg-2/librsvg/librsvg-features.h
