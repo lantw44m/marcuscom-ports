@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.11 2006/01/02 22:16:26 ahze Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.12 2006/01/02 23:01:48 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -157,7 +157,7 @@ _gecko-pre-everything::
 # remove me after testing .endif
 
 _gecko-config:
-.if defined(GECKO_CONFIG) ## !!!Remove me after testing!!!
+.if defined(GECKO_OPTIONS) ## !!!Remove me after testing!!!
 .if !defined(BATCH) && !defined(_FOUND_WITH_GECKO)
 . if !defined(USE_GECKO)
 	@${ECHO_MSG} "===> No options to configure"
