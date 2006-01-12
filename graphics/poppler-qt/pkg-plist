@@ -1,0 +1,5 @@
+include/poppler/poppler-qt.h
+lib/libpoppler-qt.a
+lib/libpoppler-qt.so
+lib/libpoppler-qt.so.0
+libdata/pkgconfig/poppler-qt.pc
