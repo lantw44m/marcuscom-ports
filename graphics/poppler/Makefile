@@ -3,7 +3,7 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.17 2006/01/13 00:26:29 ahze Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.18 2006/01/13 03:13:04 ahze Exp $
 #
 
 PORTNAME=	poppler
@@ -16,7 +16,7 @@ COMMENT?=	A PDF rendering library
 
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 
-CONFLICTS=	*-xpdf-[0-9]* xpdf-[0-9]*
+CONFLICTS=	xpdf-[0-9]*
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 USE_AUTOTOOLS=	libtool:15
