@@ -3,12 +3,11 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.16 2006/01/12 21:04:48 ahze Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.17 2006/01/13 00:26:29 ahze Exp $
 #
 
 PORTNAME=	poppler
-PORTVERSION=	0.4.4
-PORTREVISION?=	1
+PORTVERSION=	0.5.0
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
 
@@ -17,12 +16,15 @@ COMMENT?=	A PDF rendering library
 
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 
+CONFLICTS=	*-xpdf-[0-9]* xpdf-[0-9]*
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack
 INSTALLS_SHLIB=	yes
-CONFIGURE_ARGS=	--enable-zlib
+CONFIGURE_ARGS=	--enable-zlib \
+		--enable-xpdf-headers \
+		--with-html-dir=${DOCSDIR}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/freetype2 -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
 
@@ -46,13 +48,16 @@ INSTALL_WRKSRC=	${WRKSRC}/qt
 .else
 CONFIGURE_ARGS+=--disable-poppler-glib --disable-poppler-qt \
 		--disable-poppler-qt4
+MAN1=	pdffonts.1 pdfimages.1 pdfinfo.1 \
+	pdftohtml.1  pdftops.1 pdftotext.1
 .endif
 
 post-patch:
 .if defined(SLAVEPORT) && ${SLAVEPORT}=="qt"
-	@${REINPLACE_CMD} -e 's|/usr/local/qt/include|${X11BASE}/include|; \
-		s|/usr/local/qt/lib|${X11BASE}/lib|' \
-		${WRKSRC}/configure
+#	@${REINPLACE_CMD} -e 's|/usr/local/qt/include|${X11BASE}/include|; \
+#		s|/usr/local/qt/lib|${X11BASE}/lib|' \
+#		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|$$QTDIR|${X11BASE}|' ${WRKSRC}/configure
 .endif
 
 post-install:

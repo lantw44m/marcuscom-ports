@@ -1,3 +1,9 @@
+bin/pdffonts
+bin/pdfimages
+bin/pdfinfo
+bin/pdftohtml
+bin/pdftops
+bin/pdftotext
 include/poppler/Annot.h
 include/poppler/Array.h
 include/poppler/BaseFile.h
@@ -38,6 +44,8 @@ include/poppler/PSOutputDev.h
 include/poppler/PSTokenizer.h
 include/poppler/Page.h
 include/poppler/Parser.h
+include/poppler/ProfileData.h
+include/poppler/SecurityHandler.h
 include/poppler/SplashOutputDev.h
 include/poppler/Stream-CCITT.h
 include/poppler/Stream.h
@@ -47,11 +55,14 @@ include/poppler/UnicodeMap.h
 include/poppler/UnicodeMapTables.h
 include/poppler/UnicodeTypeTable.h
 include/poppler/XRef.h
+include/poppler/XpdfPluginAPI.h
+include/poppler/goo/FixedPoint.h
 include/poppler/goo/GooHash.h
 include/poppler/goo/GooList.h
 include/poppler/goo/GooMutex.h
 include/poppler/goo/GooString.h
 include/poppler/goo/GooTimer.h
+include/poppler/goo/GooVector.h
 include/poppler/goo/gfile.h
 include/poppler/goo/gmem.h
 include/poppler/goo/gtypes.h
