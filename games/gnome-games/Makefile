@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnomegames2/Makefile,v 1.94 2005/12/15 04:19:24 marcus Exp $
+#   $MCom: ports/games/gnomegames2/Makefile,v 1.95 2006/01/05 21:04:03 marcus Exp $
 #
 
 PORTNAME=	gnomegames2
 PORTVERSION=	2.13.4
+PORTREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-games/2.13
@@ -42,8 +43,8 @@ CONFLICTS=	sol-1.0.*
 
 .include <bsd.port.pre.mk>
 
-.if exists(${LOCALBASE}/lib/libhowl.so) || defined(WITH_MDNS)
-LIB_DEPENDS+=	howl:${PORTSDIR}/net/howl
+.if exists(${LOCALBASE}/lib/libavahi-client.a) || defined(WITH_MDNS)
+LIB_DEPENDS+=	avahi-client:${PORTSDIR}/net/avahi
 .endif
 
 post-patch:
