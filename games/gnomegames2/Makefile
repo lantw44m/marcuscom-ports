@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnomegames2/Makefile,v 1.95 2006/01/05 21:04:03 marcus Exp $
+#   $MCom: ports/games/gnomegames2/Makefile,v 1.96 2006/01/15 08:03:05 ahze Exp $
 #
 
 PORTNAME=	gnomegames2
 PORTVERSION=	2.13.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-games/2.13
@@ -52,6 +52,8 @@ post-patch:
 		's|malloc\.h|stdlib.h|g'
 	@${REINPLACE_CMD} -e 's|bin/python|bin/env python|g' \
 		${WRKSRC}/libgames-support/games-server.py
+	@${REINPLACE_CMD} -e 's|howl|avahi-compat-howl|' \
+		${WRKSRC}/configure
 #	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 #		's|664|666|g ; \
 #		 s|2555|0555|g'
