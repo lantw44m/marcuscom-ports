@@ -115,6 +115,7 @@ share/locale/vi/LC_MESSAGES/libwnck.mo
 share/locale/wa/LC_MESSAGES/libwnck.mo
 share/locale/xh/LC_MESSAGES/libwnck.mo
 share/locale/zh_CN/LC_MESSAGES/libwnck.mo
+share/locale/zh_HK/LC_MESSAGES/libwnck.mo
 share/locale/zh_TW/LC_MESSAGES/libwnck.mo
 @unexec rmdir %D/share/locale/ky/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/ky 2> /dev/null || true

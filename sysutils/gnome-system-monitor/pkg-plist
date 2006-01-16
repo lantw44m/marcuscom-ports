@@ -79,6 +79,7 @@ share/locale/ug/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/uk/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/vi/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-system-monitor.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-system-monitor.mo
 @unexec rmdir %D/share/locale/ug/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/ug 2> /dev/null || true
