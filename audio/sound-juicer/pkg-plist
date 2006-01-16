@@ -76,8 +76,10 @@ share/locale/th/LC_MESSAGES/sound-juicer.mo
 share/locale/tr/LC_MESSAGES/sound-juicer.mo
 share/locale/ug/LC_MESSAGES/sound-juicer.mo
 share/locale/uk/LC_MESSAGES/sound-juicer.mo
+share/locale/vi/LC_MESSAGES/sound-juicer.mo
 share/locale/xh/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_CN/LC_MESSAGES/sound-juicer.mo
+share/locale/zh_HK/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_TW/LC_MESSAGES/sound-juicer.mo
 @dirrm share/gnome/sound-juicer
 @dirrm share/gnome/omf/sound-juicer
