@@ -364,6 +364,36 @@ share/gnome/help/gweather/es/figures/stock_weather-snow.png
 share/gnome/help/gweather/es/figures/stock_weather-storm.png
 share/gnome/help/gweather/es/figures/stock_weather-sunny.png
 share/gnome/help/gweather/es/gweather.xml
+share/gnome/help/gweather/fr/figures/gweather-details.png
+share/gnome/help/gweather/fr/figures/gweather-menu-prefs.png
+share/gnome/help/gweather/fr/figures/gweather-prefs-general.png
+share/gnome/help/gweather/fr/figures/gweather-prefs-locations.png
+share/gnome/help/gweather/fr/figures/gweather_applet.png
+share/gnome/help/gweather/fr/figures/stock_weather-cloudy.png
+share/gnome/help/gweather/fr/figures/stock_weather-few-clouds.png
+share/gnome/help/gweather/fr/figures/stock_weather-fog.png
+share/gnome/help/gweather/fr/figures/stock_weather-night-clear.png
+share/gnome/help/gweather/fr/figures/stock_weather-night-few-clouds.png
+share/gnome/help/gweather/fr/figures/stock_weather-showers.png
+share/gnome/help/gweather/fr/figures/stock_weather-snow.png
+share/gnome/help/gweather/fr/figures/stock_weather-storm.png
+share/gnome/help/gweather/fr/figures/stock_weather-sunny.png
+share/gnome/help/gweather/fr/gweather.xml
+share/gnome/help/gweather/nl/figures/gweather-details.png
+share/gnome/help/gweather/nl/figures/gweather-menu-prefs.png
+share/gnome/help/gweather/nl/figures/gweather-prefs-general.png
+share/gnome/help/gweather/nl/figures/gweather-prefs-locations.png
+share/gnome/help/gweather/nl/figures/gweather_applet.png
+share/gnome/help/gweather/nl/figures/stock_weather-cloudy.png
+share/gnome/help/gweather/nl/figures/stock_weather-few-clouds.png
+share/gnome/help/gweather/nl/figures/stock_weather-fog.png
+share/gnome/help/gweather/nl/figures/stock_weather-night-clear.png
+share/gnome/help/gweather/nl/figures/stock_weather-night-few-clouds.png
+share/gnome/help/gweather/nl/figures/stock_weather-showers.png
+share/gnome/help/gweather/nl/figures/stock_weather-snow.png
+share/gnome/help/gweather/nl/figures/stock_weather-storm.png
+share/gnome/help/gweather/nl/figures/stock_weather-sunny.png
+share/gnome/help/gweather/nl/gweather.xml
 share/gnome/help/gweather/uk/figures/gweather-details.png
 share/gnome/help/gweather/uk/figures/gweather-menu-prefs.png
 share/gnome/help/gweather/uk/figures/gweather-prefs-general.png
@@ -397,6 +427,10 @@ share/gnome/help/multiload/es/figures/multiload-preferences.png
 share/gnome/help/multiload/es/figures/system-monitor-applet_window.png
 share/gnome/help/multiload/es/figures/system_monitor.png
 share/gnome/help/multiload/es/multiload.xml
+share/gnome/help/multiload/fr/figures/multiload-preferences.png
+share/gnome/help/multiload/fr/figures/system-monitor-applet_window.png
+share/gnome/help/multiload/fr/figures/system_monitor.png
+share/gnome/help/multiload/fr/multiload.xml
 share/gnome/help/multiload/uk/figures/multiload-preferences.png
 share/gnome/help/multiload/uk/figures/system-monitor-applet_window.png
 share/gnome/help/multiload/uk/figures/system_monitor.png
@@ -414,6 +448,12 @@ share/gnome/help/stickynotes_applet/es/figures/stickynotes-note-prefs.png
 share/gnome/help/stickynotes_applet/es/figures/stickynotes-prefs.png
 share/gnome/help/stickynotes_applet/es/figures/stickynotes_applet.png
 share/gnome/help/stickynotes_applet/es/stickynotes_applet.xml
+share/gnome/help/stickynotes_applet/fr/figures/stickynote-right-menu-lock.png
+share/gnome/help/stickynotes_applet/fr/figures/stickynote-right-menu-new.png
+share/gnome/help/stickynotes_applet/fr/figures/stickynotes-note-prefs.png
+share/gnome/help/stickynotes_applet/fr/figures/stickynotes-prefs.png
+share/gnome/help/stickynotes_applet/fr/figures/stickynotes_applet.png
+share/gnome/help/stickynotes_applet/fr/stickynotes_applet.xml
 share/gnome/help/stickynotes_applet/uk/figures/stickynote-right-menu-lock.png
 share/gnome/help/stickynotes_applet/uk/figures/stickynote-right-menu-new.png
 share/gnome/help/stickynotes_applet/uk/figures/stickynotes-note-prefs.png
@@ -429,6 +469,8 @@ share/gnome/help/trashapplet/fr/figures/trash-applet.png
 share/gnome/help/trashapplet/fr/trashapplet.xml
 share/gnome/help/trashapplet/it/figures/trash-applet.png
 share/gnome/help/trashapplet/it/trashapplet.xml
+share/gnome/help/trashapplet/nl/figures/trash-applet.png
+share/gnome/help/trashapplet/nl/trashapplet.xml
 share/gnome/help/trashapplet/pa/figures/trash-applet.png
 share/gnome/help/trashapplet/pa/trashapplet.xml
 share/gnome/help/trashapplet/uk/figures/trash-applet.png
@@ -479,6 +521,8 @@ share/gnome/omf/gtik2_applet2/gtik2_applet2-fr.omf
 share/gnome/omf/gtik2_applet2/gtik2_applet2-uk.omf
 share/gnome/omf/gweather/gweather-C.omf
 share/gnome/omf/gweather/gweather-es.omf
+share/gnome/omf/gweather/gweather-fr.omf
+share/gnome/omf/gweather/gweather-nl.omf
 share/gnome/omf/gweather/gweather-uk.omf
 share/gnome/omf/mixer_applet2/mixer_applet2-C.omf
 share/gnome/omf/mixer_applet2/mixer_applet2-es.omf
@@ -486,14 +530,17 @@ share/gnome/omf/mixer_applet2/mixer_applet2-fr.omf
 share/gnome/omf/mixer_applet2/mixer_applet2-uk.omf
 share/gnome/omf/multiload/multiload-C.omf
 share/gnome/omf/multiload/multiload-es.omf
+share/gnome/omf/multiload/multiload-fr.omf
 share/gnome/omf/multiload/multiload-uk.omf
 share/gnome/omf/stickynotes_applet/stickynotes_applet-C.omf
 share/gnome/omf/stickynotes_applet/stickynotes_applet-es.omf
+share/gnome/omf/stickynotes_applet/stickynotes_applet-fr.omf
 share/gnome/omf/stickynotes_applet/stickynotes_applet-uk.omf
 share/gnome/omf/trashapplet/trashapplet-C.omf
 share/gnome/omf/trashapplet/trashapplet-es.omf
 share/gnome/omf/trashapplet/trashapplet-fr.omf
 share/gnome/omf/trashapplet/trashapplet-it.omf
+share/gnome/omf/trashapplet/trashapplet-nl.omf
 share/gnome/omf/trashapplet/trashapplet-pa.omf
 share/gnome/omf/trashapplet/trashapplet-uk.omf
 share/gnome/pixmaps/accessx-status-applet/ax-applet.png
@@ -674,6 +721,7 @@ share/locale/is/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/ky/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-applets-2.0.mo
@@ -707,13 +755,18 @@ share/locale/vi/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/wa/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/xh/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
+@unexec /bin/rmdir %D/share/locale/zh_HK/LC_MESSAGES 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/locale/zh_HK 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/locale/xh/LC_MESSAGES 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/locale/xh 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/locale/te/LC_MESSAGES 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/locale/te 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/locale/rw/LC_MESSAGES 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/locale/rw 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/locale/ky/LC_MESSAGES 2>/dev/null || /usr/bin/true
+@unexec /bin/rmdir %D/share/locale/ky 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/locale/hy/LC_MESSAGES 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/locale/hy 2>/dev/null || /usr/bin/true
 @unexec /bin/rmdir %D/share/icons/hicolor/48x48/apps 2>/dev/null || /usr/bin/true
@@ -741,6 +794,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/trashapplet/uk
 @dirrm share/gnome/help/trashapplet/pa/figures
 @dirrm share/gnome/help/trashapplet/pa
+@dirrm share/gnome/help/trashapplet/nl/figures
+@dirrm share/gnome/help/trashapplet/nl
 @dirrm share/gnome/help/trashapplet/fr/figures
 @dirrm share/gnome/help/trashapplet/fr
 @dirrm share/gnome/help/trashapplet/it/figures
@@ -752,6 +807,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/trashapplet
 @dirrm share/gnome/help/stickynotes_applet/uk/figures
 @dirrm share/gnome/help/stickynotes_applet/uk
+@dirrm share/gnome/help/stickynotes_applet/fr/figures
+@dirrm share/gnome/help/stickynotes_applet/fr
 @dirrm share/gnome/help/stickynotes_applet/es/figures
 @dirrm share/gnome/help/stickynotes_applet/es
 @dirrm share/gnome/help/stickynotes_applet/C/figures
@@ -759,6 +816,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/stickynotes_applet
 @dirrm share/gnome/help/multiload/uk/figures
 @dirrm share/gnome/help/multiload/uk
+@dirrm share/gnome/help/multiload/fr/figures
+@dirrm share/gnome/help/multiload/fr
 @dirrm share/gnome/help/multiload/es/figures
 @dirrm share/gnome/help/multiload/es
 @dirrm share/gnome/help/multiload/C/figures
@@ -775,6 +834,10 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/mixer_applet2
 @dirrm share/gnome/help/gweather/uk/figures
 @dirrm share/gnome/help/gweather/uk
+@dirrm share/gnome/help/gweather/nl/figures
+@dirrm share/gnome/help/gweather/nl
+@dirrm share/gnome/help/gweather/fr/figures
+@dirrm share/gnome/help/gweather/fr
 @dirrm share/gnome/help/gweather/es/figures
 @dirrm share/gnome/help/gweather/es
 @dirrm share/gnome/help/gweather/C/figures
