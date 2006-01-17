@@ -39,9 +39,12 @@ share/doc/gdict/sources.html
 share/doc/gdict/style.css
 share/doc/gdict/up.png
 share/gnome/applications/gnome-dictionary.desktop
+share/gnome/applications/gnome-screenshot.desktop
 share/gnome/applications/gnome-search-tool.desktop
 share/gnome/applications/gnome-system-log.desktop
 share/gnome/gdict-1.0/sources/default.desktop
+share/gnome/gdict-1.0/sources/french.desktop
+share/gnome/gdict-1.0/sources/spanish.desktop
 share/gnome/gnome-2.0/ui/GNOME_DictionaryApplet.xml
 share/gnome/gnome-dictionary/gnome-dictionary-preferences.glade
 share/gnome/gnome-dictionary/gnome-dictionary-ui.xml
