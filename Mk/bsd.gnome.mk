@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.345 2006/01/09 21:33:01 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.346 2006/01/16 18:30:49 adamw Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -74,6 +74,7 @@ gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | ${XARGS} $
 				 s|[(]datadir[)]/mime"|(prefix)/share/mime"|g ; \
 				 s|[(]datadir[)]/mime;|(prefix)/share/mime;|g ; \
 				 s|[(]datadir[)]/mime$$|(prefix)/share/mime|g ; \
+				 s|[(]datadir[)]/dbus-1|(prefix)/share/dbus-1|g ; \
 				 s|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g ; \
 				 s|[$$][(]localstatedir[)]/scrollkeeper|${SCROLLKEEPER_DIR}|g ; \
 				 s|[(]datadir[)]/icons/hicolor|(prefix)/share/icons/hicolor|g ; \
