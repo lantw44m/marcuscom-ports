@@ -2,11 +2,11 @@
 # Date created:		8 May 2004
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/fast-user-switch-applet/Makefile,v 1.12 2005/11/15 05:46:00 bland Exp $
-#
+# $FreeBSD$
+#    $MCom$
 
 PORTNAME=	fast-user-switch-applet
-PORTVERSION=	2.13.3
+PORTVERSION=	2.13.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
