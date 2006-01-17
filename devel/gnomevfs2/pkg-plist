@@ -211,6 +211,7 @@ share/locale/wa/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/xh/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/yi/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/zu/LC_MESSAGES/gnome-vfs-2.0.mo
 @dirrm share/doc/gnome-vfs-2.0
@@ -221,6 +222,8 @@ share/locale/zu/LC_MESSAGES/gnome-vfs-2.0.mo
 @dirrm include/gnome-vfs-2.0
 @unexec rmdir %D/share/locale/zu/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/zu 2> /dev/null || true
+@unexec rmdir %D/share/locale/zh_HK/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/zh_HK 2> /dev/null || true
 @unexec rmdir %D/share/locale/xh/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/xh 2> /dev/null || true
 @unexec rmdir %D/share/locale/rw/LC_MESSAGES 2> /dev/null || true
