@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.30 2006/01/05 21:50:15 marcus Exp $
+#    $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.31 2006/01/06 06:03:46 marcus Exp $
 #
 
 PORTNAME=	gnome
-PORTVERSION=	2.13.1
+PORTVERSION=	2.13.2
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -32,7 +32,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gnomehack libgnomeprintui libgtkhtml gnomepanel \
-		gtksourceview libwnck nautiluscdburner pygnome2
+		gtksourceview libwnck nautiluscdburner pygnome2 metacity
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--with-gtkmozembed=${GECKO}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
