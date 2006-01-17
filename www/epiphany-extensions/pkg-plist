@@ -1,4 +1,5 @@
 lib/epiphany/%%VERSION%%/extensions/actions.ephy-extension
+lib/epiphany/%%VERSION%%/extensions/auto-reload.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/auto-scroller.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/certificates.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/error-viewer.ephy-extension
@@ -6,6 +7,7 @@ lib/epiphany/%%VERSION%%/extensions/extensions-manager-ui.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/gestures.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/java-console.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/libactionsextension.so
+lib/epiphany/%%VERSION%%/extensions/libautoreloadextension.so
 lib/epiphany/%%VERSION%%/extensions/libautoscrollerextension.so
 lib/epiphany/%%VERSION%%/extensions/libcertificatesextension.so
 lib/epiphany/%%VERSION%%/extensions/liberrorviewerextension.so
