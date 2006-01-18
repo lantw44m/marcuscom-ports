@@ -200,6 +200,7 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-account.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-categories.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-component-listener.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-data-server-module.h
+include/evolution-data-server-%%VERSION%%/libedataserver/e-data-server-util.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-db3-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-dbhash.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-file-cache.h
@@ -217,7 +218,6 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-time-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-trie.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-uid.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-url.h
-include/evolution-data-server-%%VERSION%%/libedataserver/e-util.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-xml-hash-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-xml-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserver/md5-utils.h
@@ -227,6 +227,7 @@ include/evolution-data-server-%%VERSION%%/libedataserverui/e-contact-store.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-destination-store.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-dialog.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-entry.h
+include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-list.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-model.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-passwords.h
@@ -300,6 +301,7 @@ lib/evolution-data-server-%%EVO_VERSION%%/extensions/libebookbackendfile.so
 lib/evolution-data-server-%%EVO_VERSION%%/extensions/libebookbackendgroupwise.so
 lib/evolution-data-server-%%EVO_VERSION%%/extensions/libebookbackendldap.so
 lib/evolution-data-server-%%EVO_VERSION%%/extensions/libebookbackendvcf.so
+lib/evolution-data-server-%%EVO_VERSION%%/extensions/libecalbackendcaldav.so
 lib/evolution-data-server-%%EVO_VERSION%%/extensions/libecalbackendcontacts.so
 lib/evolution-data-server-%%EVO_VERSION%%/extensions/libecalbackendfile.so
 lib/evolution-data-server-%%EVO_VERSION%%/extensions/libecalbackendgroupwise.so
@@ -310,7 +312,7 @@ lib/libcamel-%%EVO_VERSION%%.so
 lib/libcamel-%%EVO_VERSION%%.so.0
 lib/libcamel-provider-%%EVO_VERSION%%.a
 lib/libcamel-provider-%%EVO_VERSION%%.so
-lib/libcamel-provider-%%EVO_VERSION%%.so.7
+lib/libcamel-provider-%%EVO_VERSION%%.so.8
 lib/libebook-%%EVO_VERSION%%.a
 lib/libebook-%%EVO_VERSION%%.so
 lib/libebook-%%EVO_VERSION%%.so.5
@@ -325,7 +327,7 @@ lib/libedata-cal-%%EVO_VERSION%%.so
 lib/libedata-cal-%%EVO_VERSION%%.so.1
 lib/libedataserver-%%EVO_VERSION%%.a
 lib/libedataserver-%%EVO_VERSION%%.so
-lib/libedataserver-%%EVO_VERSION%%.so.6
+lib/libedataserver-%%EVO_VERSION%%.so.7
 lib/libedataserverui-%%EVO_VERSION%%.a
 lib/libedataserverui-%%EVO_VERSION%%.so
 lib/libedataserverui-%%EVO_VERSION%%.so.6
@@ -367,6 +369,7 @@ share/doc/libebook/libebook-e-book-async.html
 share/doc/libebook/libebook-e-book-query.html
 share/doc/libebook/libebook-e-book-types.html
 share/doc/libebook/libebook.devhelp
+share/doc/libebook/libebook.devhelp2
 share/doc/libebook/right.png
 share/doc/libebook/style.css
 share/doc/libebook/up.png
@@ -385,6 +388,7 @@ share/doc/libecal/libecal-e-cal-time-util.html
 share/doc/libecal/libecal-e-cal-types.html
 share/doc/libecal/libecal-e-cal-util.html
 share/doc/libecal/libecal.devhelp
+share/doc/libecal/libecal.devhelp2
 share/doc/libecal/right.png
 share/doc/libecal/style.css
 share/doc/libecal/up.png
@@ -398,6 +402,7 @@ share/doc/libedata-cal/index.html
 share/doc/libedata-cal/index.sgml
 share/doc/libedata-cal/left.png
 share/doc/libedata-cal/libedata-cal.devhelp
+share/doc/libedata-cal/libedata-cal.devhelp2
 share/doc/libedata-cal/right.png
 share/doc/libedata-cal/style.css
 share/doc/libedata-cal/up.png
