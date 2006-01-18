@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.59 2006/01/06 12:23:24 ahze Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.60 2006/01/17 01:09:50 ahze Exp $
 #
 
 PORTNAME=	glib
@@ -49,7 +49,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
 		s|%%X11BASE%%|${X11BASE}|g' \
 		${WRKSRC}/glib/gutils.c
-	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' \
-		${WRKSRC}/glib/gslice.c
 
 .include <bsd.port.post.mk>
