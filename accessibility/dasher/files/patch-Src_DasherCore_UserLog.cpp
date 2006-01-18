@@ -21,7 +21,7 @@
 +    gettimeofday(&sTimeBuffer, NULL);
  
 -    szTimeLine = ctime(&(sTimeBuffer.time));
-+    szTimeLine = ctime(&(sTimeBuffer.tv_sec));
++    szTimeLine = ctime((const time_t *)&(sTimeBuffer.tv_sec));
  
      if ((szTimeLine != NULL) && (strlen(szTimeLine) > 18))
      {
