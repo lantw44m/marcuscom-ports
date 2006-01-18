@@ -59,6 +59,7 @@ share/gnome/control-center-2.0/interfaces/apply-font.glade
 share/gnome/control-center-2.0/interfaces/at-enable-dialog.glade
 share/gnome/control-center-2.0/interfaces/font-properties.glade
 %%ABOUTME%%share/gnome/control-center-2.0/interfaces/gnome-about-me.glade
+share/gnome/gnome-default-applications/gnome-default-applications.xml
 share/gnome/control-center-2.0/interfaces/gnome-accessibility-keyboard-properties.glade
 share/gnome/control-center-2.0/interfaces/gnome-background-properties.glade
 share/gnome/control-center-2.0/interfaces/gnome-default-applications-properties.glade
@@ -210,10 +211,13 @@ share/locale/vi/LC_MESSAGES/control-center-2.0.mo
 share/locale/wa/LC_MESSAGES/control-center-2.0.mo
 share/locale/xh/LC_MESSAGES/control-center-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/control-center-2.0.mo
+share/locale/zh_HK/LC_MESSAGES/control-center-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 share/locale/zu/LC_MESSAGES/control-center-2.0.mo
 @unexec rmdir %D/share/locale/zu/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/zu 2> /dev/null || true
+@unexec rmdir %D/share/locale/zh_HK/LC_MESSAGES 2> /dev/null || true
+@unexec rmdir %D/share/locale/zh_HK 2> /dev/null || true
 @unexec rmdir %D/share/locale/xh/LC_MESSAGES 2> /dev/null || true
 @unexec rmdir %D/share/locale/xh 2> /dev/null || true
 @unexec rmdir %D/share/locale/rw/LC_MESSAGES 2> /dev/null || true
@@ -225,6 +229,7 @@ share/locale/zu/LC_MESSAGES/control-center-2.0.mo
 @dirrm share/gnome/help/control-center
 @unexec /bin/rmdir %D/share/gnome/gnome-background-properties 2>/dev/null || /usr/bin/true
 @dirrm share/gnome/cursor-fonts
+@dirrm share/gnome/gnome-default-applications
 @dirrm share/gnome/control-center-2.0/xrdb
 @dirrm share/gnome/control-center-2.0/pixmaps
 @dirrm share/gnome/control-center-2.0/interfaces

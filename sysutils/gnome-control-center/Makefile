@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.88 2005/12/14 19:02:24 marcus Exp $
+#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.89 2006/01/05 13:08:16 ahze Exp $
 #
 
 PORTNAME=	gnomecontrolcenter2
-PORTVERSION=	2.13.4
+PORTVERSION=	2.13.5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/2.13
@@ -57,11 +57,12 @@ CONFIGURE_ARGS+=--disable-aboutme
 PLIST_SUB+=	ABOUTME="@comment "
 .endif
 
+post-extract:
+	@${MKDIR} ${WRKSRC}/m4
+
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[{]prefix[}]/share/pixmaps|{datadir}/pixmaps|g'
-	@${REINPLACE_CMD} -e 's|mozilla-thunderbird|thunderbird|g' \
-		${WRKSRC}/capplets/default-applications/gnome-default-applications-properties-structs.c
 	@${REINPLACE_CMD} -e 's|/bin/tar|/usr/bin/tar|g ; \
 		s|/bin/gzip|/usr/bin/gzip|g' \
 		${WRKSRC}/capplets/theme-switcher/gnome-theme-installer.c
