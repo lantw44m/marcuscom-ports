@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.90 2006/01/18 05:42:19 marcus Exp $
+#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.91 2006/01/18 15:21:41 ahze Exp $
 #
 
 PORTNAME=	gnomecontrolcenter2
@@ -56,9 +56,6 @@ PLIST_SUB+=	ABOUTME=""
 CONFIGURE_ARGS+=--disable-aboutme
 PLIST_SUB+=	ABOUTME="@comment "
 .endif
-
-post-extract:
-	@${MKDIR} ${WRKSRC}/m4
 
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
