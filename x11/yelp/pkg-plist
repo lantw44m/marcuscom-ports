@@ -14,6 +14,7 @@ share/gnome/yelp/icons/yelp-watermark-blockquote-201C.png
 share/gnome/yelp/icons/yelp-watermark-blockquote-201D.png
 share/gnome/yelp/icons/yelp-watermark-blockquote-201E.png
 share/gnome/yelp/important_docs.xml
+share/gnome/yelp/info.xml
 share/gnome/yelp/man.xml
 share/gnome/yelp/scrollkeeper.xml
 share/gnome/yelp/toc.xml
@@ -106,6 +107,7 @@ share/locale/vi/LC_MESSAGES/yelp.mo
 share/locale/wa/LC_MESSAGES/yelp.mo
 share/locale/xh/LC_MESSAGES/yelp.mo
 share/locale/zh_CN/LC_MESSAGES/yelp.mo
+share/locale/zh_HK/LC_MESSAGES/yelp.mo
 share/locale/zh_TW/LC_MESSAGES/yelp.mo
 share/locale/zu/LC_MESSAGES/yelp.mo
 @unexec rmdir %D/share/locale/zu/LC_MESSAGES 2> /dev/null || true
