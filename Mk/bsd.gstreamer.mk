@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.10 2006/01/20 02:55:48 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.11 2006/01/20 13:47:26 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -49,7 +49,9 @@ GSTREAMER80_PORT=	${GSTREAMER_PORT}80
 _GST_LIB_BASE=		${X11BASE}/lib/gstreamer-${GST_VERSION}
 _GST80_LIB_BASE=	${X11BASE}/lib/gstreamer-${GST80_VERSION}
 GST_VERSION=		0.10
+GST_MINOR_VERSION=	.0
 GST80_VERSION=		0.8
+GST80_MINOR_VERSION=	.10
 GST_SHLIB_VERSION=	1
 GST80_SHLIB_VERSION=	1
 #
@@ -77,23 +79,17 @@ _USE_GSTREAMER_ALL+=	${OTHER_GSTREAMER_PLUGINS}
 _USE_GSTREAMER80_ALL+=	${OTHER_GSTREAMER80_PLUGINS}
 
 core_DEPENDS=	multimedia/gstreamer-plugins-core
-core_PLIST=	.gstreamer-plugins-core
-core_GST_EXT=	.keep
 
 yes_DEPENDS=	multimedia/gstreamer-plugins
-yes_PLIST=	libgstac3parse
 
 cdio_DEPENDS=	sysutils/gstreamer-plugins-cdio
-cdio_PLIST=	libgstcddasrc
 
 gconf_DEPENDS=	devel/gstreamer-plugins-gconf
-gconf_PLIST=	libgstgconfelements
 
 # Audio Plugins Section
 a52dec_DEPENDS=	audio/gstreamer-plugins-a52dec
 
 artsd_DEPENDS=	audio/gstreamer-plugins-artsd
-artsd_PLIST=	libgstartsdsink
 
 audiofile_DEPENDS=	audio/gstreamer-plugins-audiofile
 
@@ -102,7 +98,6 @@ cdaudio_DEPENDS=	audio/gstreamer-plugins-cdaudio
 cdparanoia_DEPENDS=	audio/gstreamer-plugins-cdparanoia
 
 esound_DEPENDS=	audio/gstreamer-plugins-esound
-esound_PLIST=	libgstesd
 
 faac_DEPENDS=	audio/gstreamer-plugins-faac
 
@@ -127,22 +122,18 @@ mikmod_DEPENDS=	audio/gstreamer-plugins-mikmod
 musepack_DEPENDS=	audio/gstreamer-plugins-musepack
 
 musicbrainz_DEPENDS=	audio/gstreamer-plugins-musicbrainz
-musicbrainz_PLIST=	libgsttrm
 
 nas_DEPENDS=	audio/gstreamer-plugins-nas
-nas_PLIST=	libgstnassink
 
 ogg_DEPENDS=	audio/gstreamer-plugins-ogg
 
 polypaudio_DEPENDS=	audio/gstreamer-plugins-polypaudio
-polypaudio_PLIST=	libpolypaudio
 
 shout_DEPENDS=	audio/gstreamer-plugins-shout
 
 shout2_DEPENDS=	audio/gstreamer-plugins-shout2
 
 sidplay_DEPENDS=	audio/gstreamer-plugins-sidplay
-sidplay_PLIST=	libgstsid
 
 smoothwave_DEPENDS=	audio/gstreamer-plugins-smoothwave
 
@@ -158,32 +149,25 @@ wavpack_DEPENDS=	audio/gstreamer-plugins-wavpack
 gnomevfs_DEPENDS=	devel/gstreamer-plugins-gnomevfs
 
 sdl_DEPENDS=	devel/gstreamer-plugins-sdl
-sdl_PLIST=	libgstsdlvideosink
 
 # Graphics Plugins Section
 aalib_DEPENDS=	graphics/gstreamer-plugins-aalib
-aalib_PLIST=	libgstaasink
 
 cairo_DEPENDS=	graphics/gstreamer-plugins-cairo
 
 gdkpixbuf_DEPENDS=	graphics/gstreamer-plugins-gdkpixbuf
 
 hermes_DEPENDS=	graphics/gstreamer-plugins-hermes
-hermes_PLIST=	libgsthermescolorspace
 
 jpeg_DEPENDS=	graphics/gstreamer-plugins-jpeg
 
 jpeg-mmx_DEPENDS=	graphics/gstreamer-plugins-jpeg-mmx
-jpeg-mmx_PLIST=	libgstjpeg
 
 libcaca_DEPENDS=	graphics/gstreamer-plugins-libcaca
-libcaca_PLIST=	libgstcacasink
 
 libmng_DEPENDS=	graphics/gstreamer-plugins-libmng
-libmng_PLIST=	libgstmng
 
 libpng_DEPENDS=	graphics/gstreamer-plugins-libpng
-libpng_PLIST=	libgstpng
 
 libvisual_DEPENDS=	graphics/gstreamer-plugins-libvisual
 
@@ -193,18 +177,13 @@ swfdec_DEPENDS=	graphics/gstreamer-plugins-swfdec
 dirac_DEPENDS=	multimedia/gstreamer-plugins-dirac
 
 dts_DEPENDS=	multimedia/gstreamer-plugins-dts
-dts_PLIST=	libgstdtsdec
 
 ffmpeg_DEPENDS=	multimedia/gstreamer-ffmpeg
 ffmpeg_GST80_SUFX=	# empty
 
-libcaca_PLIST=	libgstcacasink
-
 dv_DEPENDS=	multimedia/gstreamer-plugins-dv
-dv_PLIST=	libgstdvdec
 
 dvd_DEPENDS=	multimedia/gstreamer-plugins-dvd
-dvd_PLIST=	libgstdvdnavsrc
 
 libfame_DEPENDS=	multimedia/gstreamer-plugins-libfame
 
@@ -217,39 +196,28 @@ mplex_DEPENDS=	multimedia/gstreamer-plugins-mplex
 theora_DEPENDS=	multimedia/gstreamer-plugins-theora
 
 x264_DEPENDS=	multimedia/gstreamer-plugins-x264
-x264_PLIST=	libx264
 
 xvid_DEPENDS=	multimedia/gstreamer-plugins-xvid
 
 # Net Plugins Section
 
 libmms_DEPENDS=	net/gstreamer-plugins-libmms
-libmms_PLIST=	libgstmms
 
 # X11-Toolkits Plugins Section
 pango_DEPENDS=	x11-toolkits/gstreamer-plugins-pango
-pango_PLIST=	libgsttextoverlay
 
 .if defined(_POSTMKINCLUDED) && !defined(Gstreamer_Post_Include)
 Gstreamer_Post_Include=	bsd.gstreamer.mk
 
-# defined ext_PLIST="" for each port that uses auto plist
-.for ext in ${USE_GSTREAMER} ${USE_GSTREAMER80}
-${ext}_PLIST?=
-${ext}_GST_EXT?=	.so
+.for ext in ${USE_GSTREAMER80}
 ${ext}_GST80_SUFX?=	80
 .endfor
 
 .if defined(USE_GSTREAMER80)
 .for ext in ${USE_GSTREAMER80}
 . if ${_USE_GSTREAMER80_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX})
-.  if ${${ext}_PLIST} != ""
-BUILD_DEPENDS+=	${_GST80_LIB_BASE}/${${ext}_PLIST}${${ext}_GST_EXT}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
-RUN_DEPENDS+=	${_GST80_LIB_BASE}/${${ext}_PLIST}${${ext}_GST_EXT}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
-.  else
-BUILD_DEPENDS+= ${_GST80_LIB_BASE}/libgst${ext}.so:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
-RUN_DEPENDS+=   ${_GST80_LIB_BASE}/libgst${ext}.so:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
-.  endif
+BUILD_DEPENDS+=	gstreamer-plugins-${ext}80>=${GST80_VERSION}${GST80_MINOR_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
+RUN_DEPENDS+=	gstreamer-plugins-${ext}80>=${GST80_VERSION}${GST80_MINOR_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
 . else
 BROKEN=	"Unknown gstreamer-plugin -- ${ext}"
 . endif
@@ -258,13 +226,8 @@ BROKEN=	"Unknown gstreamer-plugin -- ${ext}"
 .if defined(USE_GSTREAMER)
 .for ext in ${USE_GSTREAMER}
 . if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS})
-.  if ${${ext}_PLIST} != ""
-BUILD_DEPENDS+=	${_GST_LIB_BASE}/${${ext}_PLIST}${${ext}_GST_EXT}:${PORTSDIR}/${${ext}_DEPENDS}
-RUN_DEPENDS+=	${_GST_LIB_BASE}/${${ext}_PLIST}${${ext}_GST_EXT}:${PORTSDIR}/${${ext}_DEPENDS}
-.  else
-BUILD_DEPENDS+=	${_GST_LIB_BASE}/libgst${ext}.so:${PORTSDIR}/${${ext}_DEPENDS}
-RUN_DEPENDS+=	${_GST_LIB_BASE}/libgst${ext}.so:${PORTSDIR}/${${ext}_DEPENDS}
-.  endif
+BUILD_DEPENDS+=	gstreamer-plugins-${ext}>=${GST_VERSION}${GST_MINOR_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
+RUN_DEPENDS+=	gstreamer-plugins-${ext}>=${GST_VERSION}${GST_MINOR_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
 . else
 BROKEN=	"Unknown gstreamer-plugin -- ${ext}"
 . endif
