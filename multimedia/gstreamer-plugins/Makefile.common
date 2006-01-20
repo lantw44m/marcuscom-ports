@@ -278,8 +278,7 @@ DIST=	bad
 # ogg
 .if ${GST_PLUGIN}=="ogg"
 LIB_DEPENDS+=	ogg.5:${PORTSDIR}/audio/libogg
-GST_PLUGIN_DIR=	gst-libs/gst/riff \
-		ext/ogg
+EXTRA_LIBS+=	-lgstriff-${VERSION}
 DIST=	base
 .endif
 
@@ -316,13 +315,6 @@ LIB_DEPENDS+=	speex.3:${PORTSDIR}/audio/speex
 # theora
 .if ${GST_PLUGIN}=="theora"
 LIB_DEPENDS+=	theora.1:${PORTSDIR}/multimedia/libtheora
-GST_PLUGIN_DIR=	gst-libs/gst/tag \
-		ext/theora
-PLIST_FILES=	include/gstreamer-0.10/gst/tag/tag.h \
-		${GST_LIB_DIR}/libgsttheora.so \
-		lib/libgsttag-0.10.a \
-		lib/libgsttag-0.10.so \
-		lib/libgsttag-0.10.so.1
 DIST=	base
 .endif
 
@@ -330,6 +322,7 @@ DIST=	base
 .if ${GST_PLUGIN}=="vorbis"
 USE_GSTREAMER+=	ogg
 LIB_DEPENDS+=	vorbis.3:${PORTSDIR}/audio/libvorbis
+EXTRA_LIBS+=	-lgsttag-${VERSION} -lgstaudio-${VERSION}
 DIST=	base
 .endif
 
