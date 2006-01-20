@@ -57,7 +57,6 @@ USE_GNOME+=	gnomehack \
 USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 GST_PLUGIN?=	base
-MAN1=		gst-visualise-0.10.1
 
 CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
 		CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
@@ -73,7 +72,7 @@ WITHOUT_CPU_CFLAGS=	yes
 
 .if ${GST_PLUGIN} == "base"
 INSTALLS_SHLIB=	yes
-
+MAN1=		gst-visualise-0.10.1
 PLIST_SUB+=	VERSION="${VERSION}" \
 		SHLIB_VERSION="${SHLIB_VERSION}"
 .endif
