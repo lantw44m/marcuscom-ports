@@ -43,6 +43,7 @@ UGLY_GST_ALL_PLUGINS+= \
 		mpeg2dec \
 		sidplay
 
+.if 0 # SOME ONE MAKE THIS FREAKING WORK!!!!!
 .if ${BASE_GST_ALL_PLUGINS:M${GST_PLUGIN}}!=""
 EXTRACT_ONLY=${BASE_DISTFILE}
 WRKSRC=${WRKDIR}/${BASE_DISTNAME}
@@ -58,6 +59,7 @@ WRKSRC=${WRKDIR}/${UGLY_DISTNAME}
 .else
 EXTRACT_ONLY=${BASE_DISTFILE}
 WRKSRC=${WRKDIR}/${BASE_DISTNAME}
+.endif
 .endif
 
 GST_ALL_PLUGINS=	${BASE_GST_ALL_PLUGINS} ${BAD_GST_ALL_PLUGINS} \
@@ -121,9 +123,13 @@ GST_LIB_DIR=		lib/gstreamer-${VERSION}
 PLIST=		${NONEXISTENT}
 PLIST_FILES?=	${GST_LIB_DIR}/libgst${GST_PLUGIN}${GST_PLIST_SUFFIX}.so
 
+# hack around WRKSRC stuff near the top... fix me
+DIST?=	good
+
 # a52dec
 .if ${GST_PLUGIN}=="a52dec"
 LIB_DEPENDS+=	a52.0:${PORTSDIR}/audio/liba52
+DIST=	bad
 .endif
 
 # aalib
@@ -147,6 +153,7 @@ PLIST_FILES=	include/gstreamer-0.10/gst/cdda/gstcddabasesrc.h \
 		lib/libgstcdda-0.10.a \
 		lib/libgstcdda-0.10.so \
 		lib/libgstcdda-0.10.so.1
+DIST=	base
 .endif
 
 # dv
@@ -165,11 +172,13 @@ PLIST_FILES=	${GST_LIB_DIR}/libgstesd.so
 # faac
 .if ${GST_PLUGIN}=="faac"
 LIB_DEPENDS+=	faac.0:${PORTSDIR}/audio/faac
+DIST=	bad
 .endif
 
 # faad
 .if ${GST_PLUGIN}=="faad"
 LIB_DEPENDS+=	faad.0:${PORTSDIR}/audio/faad
+DIST=	bad
 .endif
 
 # flac
@@ -180,33 +189,29 @@ LIB_DEPENDS+=	FLAC.7:${PORTSDIR}/audio/flac
 # gconf
 .if ${GST_PLUGIN}=="gconf"
 USE_GNOME+=	gconf2
-GST_PLUGIN_DIR=	gst-libs/gst/gconf \
-		ext/gconf \
+GST_PLUGIN_DIR=	ext/gconf \
 		gconf
 GCONF_SCHEMAS=	gstreamer-0.10.schemas
-PLIST_FILES=	include/gstreamer-0.10/gst/gconf/gconf.h \
-		lib/gstreamer-0.10/libgstgconfelements.so \
-		lib/libgstgconf-0.10.a \
-		lib/libgstgconf-0.10.so \
-		lib/libgstgconf-0.10.so.1 \
-		libdata/pkgconfig/gstreamer-gconf-0.10.pc \
-		'@unexec rmdir %D/include/gstreamer-0.10/gst/gconf 2>/dev/null || true'
+PLIST_FILES=	lib/gstreamer-0.10/libgstgconfelements.so
 .endif
 
 # gnomevfs
 .if ${GST_PLUGIN}=="gnomevfs"
 USE_GNOME+=	gnomevfs2
 CONFIGURE_ARGS+=--enable-gnome_vfs
+DIST=	base
 .endif
 
 # gsm
 .if ${GST_PLUGIN}=="gsm"
 LIB_DEPENDS+=	gsm.1:${PORTSDIR}/audio/gsm
+DIST=	bad
 .endif
 
 # ivorbis
 .if ${GST_PLUGIN}=="ivorbis"
 LIB_DEPENDS+=	vorbisidec.1:${PORTSDIR}/audio/libtremor
+DIST=	bad
 .endif
 
 # jpeg
@@ -222,6 +227,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 # lame
 .if ${GST_PLUGIN}=="lame"
 LIB_DEPENDS+=	mp3lame.0:${PORTSDIR}/audio/lame
+DIST=	ugly
 .endif
 
 # libcaca
@@ -234,6 +240,7 @@ PLIST_FILES=	${GST_LIB_DIR}/libgstcacasink.so
 .if ${GST_PLUGIN}=="libmms"
 LIB_DEPENDS+=	mms.0:${PORTSDIR}/net/libmms
 PLIST_FILES=	${GST_LIB_DIR}/libgstmms.so
+DIST=	bad
 .endif
 
 # libpng and the snapshot plugin
@@ -248,27 +255,32 @@ PLIST_FILES=	${GST_LIB_DIR}/libgstpng.so \
 # libvisual
 .if ${GST_PLUGIN}=="libvisual"
 LIB_DEPENDS+=	visual.0:${PORTSDIR}/graphics/libvisual
+DIST=	base
 .endif
 
 # mad
 .if ${GST_PLUGIN}=="mad"
 LIB_DEPENDS+=	mad.2:${PORTSDIR}/audio/libmad \
 		id3tag.0:${PORTSDIR}/audio/libid3tag
+DIST=	ugly
 .endif
 
 # mpeg2dec
 .if ${GST_PLUGIN}=="mpeg2dec"
 LIB_DEPENDS+=	mpeg2.0:${PORTSDIR}/multimedia/libmpeg2
+DIST=	ugly
 .endif
 
 # musepack
 .if ${GST_PLUGIN}=="musepack"
 LIB_DEPENDS+=	mpcdec.3:${PORTSDIR}/audio/libmpcdec
+DIST=	bad
 .endif
 
 # ogg
 .if ${GST_PLUGIN}=="ogg"
 LIB_DEPENDS+=	ogg.5:${PORTSDIR}/audio/libogg
+DIST=	base
 .endif
 
 # pango
@@ -276,12 +288,14 @@ LIB_DEPENDS+=	ogg.5:${PORTSDIR}/audio/libogg
 USE_GNOME+=	pango
 PLIST_FILES=	${GST_LIB_DIR}/libgsttextoverlay.so \
 		${GST_LIB_DIR}/libgsttimeoverlay.so
+DIST=	base
 .endif
 
 # sdl
 .if ${GST_PLUGIN}=="sdl"
 USE_SDL+=	sdl
 GST_PLIST_SUFFIX=	videosink
+DIST=	bad
 .endif
 
 # shout2
@@ -293,6 +307,7 @@ LIB_DEPENDS+=	shout.5:${PORTSDIR}/audio/libshout2
 .if ${GST_PLUGIN}=="sidplay"
 LIB_DEPENDS+=	sidplay.1:${PORTSDIR}/audio/libsidplay
 PLIST_FILES=	${GST_LIB_DIR}/libgstsid.so
+DIST=	ugly
 .endif
 
 # speex
@@ -303,26 +318,40 @@ LIB_DEPENDS+=	speex.3:${PORTSDIR}/audio/speex
 # theora
 .if ${GST_PLUGIN}=="theora"
 LIB_DEPENDS+=	theora.1:${PORTSDIR}/multimedia/libtheora
+DIST=	base
 .endif
 
 # vorbis
 .if ${GST_PLUGIN}=="vorbis"
 USE_GSTREAMER+=	ogg
 LIB_DEPENDS+=	vorbis.3:${PORTSDIR}/audio/libvorbis
+DIST=	base
 .endif
 
 # wavpack
 .if ${GST_PLUGIN}=="wavpack"
 LIB_DEPENDS+=	wavpack.0:${PORTSDIR}/audio/wavpack
+DIST=	bad
+.endif
+
+.if ${DIST}=="base"
+EXTRACT_ONLY=${BASE_DISTFILE}
+WRKSRC=${WRKDIR}/${BASE_DISTNAME}
+.elif ${DIST}=="bad"
+EXTRACT_ONLY=${BAD_DISTFILE}
+WRKSRC=${WRKDIR}/${BAD_DISTNAME}
+.elif ${DIST}=="ugly"
+EXTRACT_ONLY=${UGLY_DISTFILE}
+WRKSRC=${WRKDIR}/${UGLY_DISTNAME}
+.else
+EXTRACT_ONLY=${GOOD_DISTFILE}
+WRKSRC=${WRKDIR}/${GOOD_DISTNAME}
 .endif
 
 BUILD_DEPENDS+=	gstreamer-plugins>=0.10.2:${PORTSDIR}/multimedia/gstreamer-plugins
 RUN_DEPENDS+= gstreamer-plugins>=0.10.2:${PORTSDIR}/multimedia/gstreamer-plugins
 
 do-build:
-.if ${GST_PLUGIN} == "gconf"
-	@cd ${WRKSRC}/pkgconfig && ../config.status &
-.endif
 .for dir in ${GST_PREBUILD_DIR} ${GST_PLUGIN_DIR} ${GST_POSTBUILD_DIR}
 	@cd ${WRKSRC}/${dir}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET}
@@ -333,9 +362,4 @@ do-install:
 	@cd ${WRKSRC}/${dir}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET}
 .endfor
-.if ${GST_PLUGIN} == "gconf"
-	@cd ${WRKSRC}/pkgconfig && ${GMAKE} gstreamer-gconf-0.10.pc
-	@${INSTALL_SCRIPT} ${WRKSRC}/pkgconfig/gstreamer-gconf-0.10.pc \
-		${PREFIX}/libdata/pkgconfig/gstreamer-gconf-0.10.pc
-.endif
 .endif
