@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins-core/Makefile,v 1.11 2006/01/20 17:46:02 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins-core/Makefile,v 1.12 2006/01/20 18:08:17 ahze Exp $
 
 PORTNAME=	gstreamer-plugins-core
 PORTVERSION=	0.10
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia audio
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -36,7 +36,7 @@ USE_GSTREAMER+=	libpng
 USE_GSTREAMER+=	pango
 
 # Multimedia plugins
-USE_GSTREAMER+=	theora
+USE_GSTREAMER+=	ffmpeg theora
 
 .if !defined(WITHOUT_DVD)
 # Audio plugins
