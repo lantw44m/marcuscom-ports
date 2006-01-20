@@ -124,3 +124,4 @@ share/locale/zh_TW/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 @dirrm include/gstreamer-%%VERSION%%/gst/base
 @dirrm include/gstreamer-%%VERSION%%/gst
 @dirrm include/gstreamer-%%VERSION%%
+@dirrm lib/gstreamer-%%VERSION%%
