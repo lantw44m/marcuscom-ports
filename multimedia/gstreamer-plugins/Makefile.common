@@ -103,7 +103,7 @@ CONFIGURE_ARGS+=--disable-spc
 PLIST_SUB+=	SPC="@comment "
 #.endif
 
-.if ${GST_PLUGIN}!="base"
+.if ${GST_PLUGIN}!="base" && !defined(NO_GSTREAMER_COMMON)
 GST_PLUGIN_SUFFIX?=	-${GST_PLUGIN}
 
 COMMENT=	Gstreamer ${GST_PLUGIN} plugin

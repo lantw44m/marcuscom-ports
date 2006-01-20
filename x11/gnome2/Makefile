@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.128 2006/01/06 17:41:58 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.129 2006/01/20 02:56:14 ahze Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.13.4
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -53,6 +53,8 @@ RUN_DEPENDS?=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2
 		ximian-connector-setup-2.6:${PORTSDIR}/mail/evolution-exchange \
 		${X11BASE}/lib/gstreamer-0.8/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins-core80 \
 		${X11BASE}/lib/gstreamer-0.8/libgstgconfelements.so:${PORTSDIR}/devel/gstreamer-plugins-gconf80 \
+		${X11BASE}/lib/gstreamer-0.10/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins \
+		${X11BASE}/lib/gstreamer-0.10/libgstgconfelements.so:${PORTSDIR}/devel/gstreamer-plugins-gconf \
 		totem:${PORTSDIR}/multimedia/totem-gstreamer \
 		gnome-control-center:${PORTSDIR}/sysutils/gnomecontrolcenter2 \
 		${X11BASE}/share/gnome/gnome-background-properties/gnome-branded.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
