@@ -1,0 +1,3 @@
+lib/gstreamer-%%VERSION%%/libgstqtdemux.so
+lib/gstreamer-%%VERSION%%/libgstspeed.so
+lib/gstreamer-%%VERSION%%/libgsttta.so
