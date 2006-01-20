@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.13 2006/01/20 17:51:01 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.14 2006/01/20 18:07:42 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -81,6 +81,9 @@ _USE_GSTREAMER80_ALL+=	${OTHER_GSTREAMER80_PLUGINS}
 core_DEPENDS=	multimedia/gstreamer-plugins-core
 
 yes_DEPENDS=	multimedia/gstreamer-plugins
+yes_NAME=	gstreamer-plugins
+yes_GST80_PREFIX=	# empty
+yes_GST_PREFIX=		# empty
 
 cdio_DEPENDS=	sysutils/gstreamer-plugins-cdio
 
@@ -215,17 +218,19 @@ Gstreamer_Post_Include=	bsd.gstreamer.mk
 ${ext}_GST80_SUFX?=	80
 ${ext}_GST80_PREFIX?=	gstreamer-plugins-
 ${ext}_VERSION?=	${GST80_VERSION}${GST80_MINOR_VERSION}
+${ext}_NAME?=		${ext}
 .endfor
 .for ext in ${USE_GSTREAMER}
 ${ext}_GST_PREFIX?=	gstreamer-plugins-
 ${ext}_VERSION?=	${GST_VERSION}${GST_MINOR_VERSION}
+${ext}_NAME?=		${ext}
 .endfor
 
 .if defined(USE_GSTREAMER80)
 .for ext in ${USE_GSTREAMER80}
 . if ${_USE_GSTREAMER80_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX})
-BUILD_DEPENDS+=	${${ext}_GST80_PREFIX}${ext}${${ext}_GST80_SUFX}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
-RUN_DEPENDS+=	${${ext}_GST80_PREFIX}${ext}${${ext}_GST80_SUFX}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
+BUILD_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
+RUN_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
 . else
 BROKEN=	"Unknown gstreamer-plugin -- ${ext}"
 . endif
@@ -234,8 +239,8 @@ BROKEN=	"Unknown gstreamer-plugin -- ${ext}"
 .if defined(USE_GSTREAMER)
 .for ext in ${USE_GSTREAMER}
 . if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS})
-BUILD_DEPENDS+=	${${ext}_GST_PREFIX}${ext}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
-RUN_DEPENDS+=	${${ext}_GST_PREFIX}${ext}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
+BUILD_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
+RUN_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
 . else
 BROKEN=	"Unknown gstreamer-plugin -- ${ext}"
 . endif
