@@ -126,6 +126,7 @@ post-patch:
 	 s|$$(top_builddir)/gst-libs/gst/tag/libgsttag-@GST_MAJORMINOR@.la||; \
 	 s|$$(top_builddir)/gst-libs/gst/audio/libgstaudio-@GST_MAJORMINOR@.la||; \
 	 s|$$(top_builddir)/gst-libs/gst/riff/libgstriff-@GST_MAJORMINOR@.la||; \
+	 s|$$(top_builddir)/gst-libs/gst/cdda/libgstcdda-@GST_MAJORMINOR@.la||; \
 	 s|%%VERSION%%|${VERSION}|'
 #.for f in ${GST_ALL_PLUGINS}
 #	@${REINPLACE_CMD} -e 's|ext/${f}/Makefile||g' \

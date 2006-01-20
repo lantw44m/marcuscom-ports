@@ -146,13 +146,7 @@ LIB_DEPENDS+=	cairo.2:${PORTSDIR}/graphics/cairo
 # cdparanoia
 .if ${GST_PLUGIN}=="cdparanoia"
 LIB_DEPENDS+=	cdda_interface.0:${PORTSDIR}/audio/cdparanoia
-GST_PLUGIN_DIR=	gst-libs/gst/cdda \
-		ext/cdparanoia
-PLIST_FILES=	include/gstreamer-0.10/gst/cdda/gstcddabasesrc.h \
-		${GST_LIB_DIR}/libgstcdparanoia.so \
-		lib/libgstcdda-0.10.a \
-		lib/libgstcdda-0.10.so \
-		lib/libgstcdda-0.10.so.1
+EXTRA_LIBS+=	-lgstcdda-${VERSION}
 DIST=	base
 .endif
 
