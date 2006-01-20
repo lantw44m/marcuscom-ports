@@ -7,7 +7,7 @@
 
 PORTNAME=	gstreamer
 PORTVERSION?=	0.10.2
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME:S/$/:base/} \
 		http://gstreamer.freedesktop.org/src/gst-plugins-base/:base \
@@ -57,6 +57,7 @@ USE_GNOME+=	gnomehack \
 USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 GST_PLUGIN?=	base
+MAN1=		gst-visualise-0.10.1
 
 CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
 		CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
