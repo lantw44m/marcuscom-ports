@@ -478,7 +478,7 @@ PLIST_FILES=	${GST_LIB_DIR}/libx264.so
 LIB_DEPENDS+=	xvidcore.4:${PORTSDIR}/multimedia/xvid
 .endif
 
-LIB_DEPENDS+=	gstplay-${VERSION}.${SHLIB_VERSION}:${PORTSDIR}/multimedia/gstreamer-plugins
+LIB_DEPENDS+=	gstplay-${VERSION}.${SHLIB_VERSION}:${PORTSDIR}/multimedia/gstreamer-plugins80
 
 PLIST_FILES+=	'@exec %D/bin/gst-register-${VERSION} --gst-registry=%D/share/gnome/cache/gstreamer-${VERSION}/registry.xml 2>/dev/null || true'
 PLIST_FILES+=	'@unexec %D/bin/gst-register-${VERSION} --gst-registry=%D/share/gnome/cache/gstreamer-${VERSION}/registry.xml 2>/dev/null || true'
