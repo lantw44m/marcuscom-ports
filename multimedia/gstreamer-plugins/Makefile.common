@@ -129,7 +129,7 @@ DIST?=	good
 # a52dec
 .if ${GST_PLUGIN}=="a52dec"
 LIB_DEPENDS+=	a52.0:${PORTSDIR}/audio/liba52
-DIST=	bad
+DIST=	ugly
 .endif
 
 # aalib
@@ -149,7 +149,7 @@ LIB_DEPENDS+=	cdda_interface.0:${PORTSDIR}/audio/cdparanoia
 GST_PLUGIN_DIR=	gst-libs/gst/cdda \
 		ext/cdparanoia
 PLIST_FILES=	include/gstreamer-0.10/gst/cdda/gstcddabasesrc.h \
-		lib/gstreamer-0.10/libgstcdparanoia.so \
+		${GST_LIB_DIR}/libgstcdparanoia.so \
 		lib/libgstcdda-0.10.a \
 		lib/libgstcdda-0.10.so \
 		lib/libgstcdda-0.10.so.1
@@ -192,7 +192,7 @@ USE_GNOME+=	gconf2
 GST_PLUGIN_DIR=	ext/gconf \
 		gconf
 GCONF_SCHEMAS=	gstreamer-0.10.schemas
-PLIST_FILES=	lib/gstreamer-0.10/libgstgconfelements.so
+PLIST_FILES=	${GST_LIB_DIR}/libgstgconfelements.so
 .endif
 
 # gnomevfs
@@ -246,10 +246,8 @@ DIST=	bad
 # libpng and the snapshot plugin
 .if ${GST_PLUGIN}=="libpng"
 LIB_DEPENDS+=	png.5:${PORTSDIR}/graphics/png
-GST_PLUGIN_DIR=	ext/libpng \
-		ext/snapshot
-PLIST_FILES=	${GST_LIB_DIR}/libgstpng.so \
-		${GST_LIB_DIR}/libgstsnapshot.so
+GST_PLUGIN_DIR=	ext/libpng
+PLIST_FILES=	${GST_LIB_DIR}/libgstpng.so
 .endif
 
 # libvisual
@@ -280,14 +278,14 @@ DIST=	bad
 # ogg
 .if ${GST_PLUGIN}=="ogg"
 LIB_DEPENDS+=	ogg.5:${PORTSDIR}/audio/libogg
+GST_PLUGIN_DIR=	gst-libs/gst/riff \
+		ext/ogg
 DIST=	base
 .endif
 
 # pango
 .if ${GST_PLUGIN}=="pango"
 USE_GNOME+=	pango
-PLIST_FILES=	${GST_LIB_DIR}/libgsttextoverlay.so \
-		${GST_LIB_DIR}/libgsttimeoverlay.so
 DIST=	base
 .endif
 
@@ -318,6 +316,13 @@ LIB_DEPENDS+=	speex.3:${PORTSDIR}/audio/speex
 # theora
 .if ${GST_PLUGIN}=="theora"
 LIB_DEPENDS+=	theora.1:${PORTSDIR}/multimedia/libtheora
+GST_PLUGIN_DIR=	gst-libs/gst/tag \
+		ext/theora
+PLIST_FILES=	include/gstreamer-0.10/gst/tag/tag.h \
+		${GST_LIB_DIR}/libgsttheora.so \
+		lib/libgsttag-0.10.a \
+		lib/libgsttag-0.10.so \
+		lib/libgsttag-0.10.so.1
 DIST=	base
 .endif
 
