@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer-plugins-all80/Makefile,v 1.1 2006/01/20 02:56:05 ahze Exp $
 #
 
-PORTNAME=	gstreamer-plugins-all
+PORTNAME=	gstreamer-plugins-all80
 PORTVERSION=	1.1.${GST80_VERSION}.${GST80_SHLIB_VERSION}
 CATEGORIES=	multimedia
 MASTER_SITES=	# empty
