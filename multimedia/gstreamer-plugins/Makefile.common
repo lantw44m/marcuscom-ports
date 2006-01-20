@@ -56,8 +56,8 @@ WRKSRC=${WRKDIR}/${GOOD_DISTNAME}
 EXTRACT_ONLY=${UGLY_DISTFILE}
 WRKSRC=${WRKDIR}/${UGLY_DISTNAME}
 .else
-EXTRACT_ONLY=${BASE_DISTFILE}
-WRKSRC=${WRKDIR}/${BASE_DISTNAME}
+#EXTRACT_ONLY=${BASE_DISTFILE}
+#WRKSRC=${WRKDIR}/${BASE_DISTNAME}
 .endif
 
 GST_ALL_PLUGINS=	${BASE_GST_ALL_PLUGINS} ${BAD_GST_ALL_PLUGINS} \
@@ -121,17 +121,15 @@ GST_LIB_DIR=		lib/gstreamer-${VERSION}
 PLIST=		${NONEXISTENT}
 PLIST_FILES?=	${GST_LIB_DIR}/libgst${GST_PLUGIN}${GST_PLIST_SUFFIX}.so
 
+# a52dec
+.if ${GST_PLUGIN}=="a52dec"
+LIB_DEPENDS+=	a52.0:${PORTSDIR}/audio/liba52
+.endif
+
 # aalib
 .if ${GST_PLUGIN}=="aalib"
 LIB_DEPENDS+=	aa.1:${PORTSDIR}/graphics/aalib
 PLIST_FILES=	${GST_LIB_DIR}/libgstaasink.so
-.endif
-
-# artsd
-.if ${GST_PLUGIN}=="artsd"
-LIB_DEPENDS+=	artsc.0:${PORTSDIR}/audio/arts
-GST_PLIST_SUFFIX=	sink
-CONFIGURE_ARGS+=--enable-artsc
 .endif
 
 # cairo
@@ -142,17 +140,18 @@ LIB_DEPENDS+=	cairo.2:${PORTSDIR}/graphics/cairo
 # cdparanoia
 .if ${GST_PLUGIN}=="cdparanoia"
 LIB_DEPENDS+=	cdda_interface.0:${PORTSDIR}/audio/cdparanoia
+GST_PLUGIN_DIR=	gst-libs/gst/cdda \
+		ext/cdparanoia
+PLIST_FILES=	include/gstreamer-0.10/gst/cdda/gstcddabasesrc.h \
+		lib/gstreamer-0.10/libgstcdparanoia.so \
+		lib/libgstcdda-0.10.a \
+		lib/libgstcdda-0.10.so \
+		lib/libgstcdda-0.10.so.1
 .endif
 
-# dirac
-.if ${GST_PLUGIN}=="dirac"
-LIB_DEPENDS+=	dirac_encoder.0:${PORTSDIR}/multimedia/dirac
-.endif
-
-# dts
-.if ${GST_PLUGIN}=="dts"
-BUILD_DEPENDS+=	${LOCALBASE}/lib/libdts_pic.a:${PORTSDIR}/multimedia/libdts
-RUN_DEPENDS+=	${LOCALBASE}/lib/libdts_pic.a:${PORTSDIR}/multimedia/libdts
+# dv
+.if ${GST_PLUGIN}=="dv"
+LIB_DEPENDS+=	dv.4:${PORTSDIR}/multimedia/libdv
 GST_PLIST_SUFFIX=	dec
 .endif
 
@@ -184,21 +183,14 @@ USE_GNOME+=	gconf2
 GST_PLUGIN_DIR=	gst-libs/gst/gconf \
 		ext/gconf \
 		gconf
-GCONF_SCHEMAS=	gstreamer-0.8.schemas
-
-PLIST_FILES=	include/gstreamer-0.8/gst/gconf/gconf.h \
-		lib/gstreamer-0.8/libgstgconfelements.so \
-		lib/libgstgconf-0.8.a \
-		lib/libgstgconf-0.8.so \
-		lib/libgstgconf-0.8.so.1 \
-		libdata/pkgconfig/gstreamer-gconf-0.8.pc \
-		'@unexec rmdir %D/include/gstreamer-0.8/gst/gconf 2>/dev/null || true'
-.endif
-
-# gdkpixbuf
-.if ${GST_PLUGIN}=="gdkpixbuf"
-USE_GNOME+=	gtk20
-GST_PLUGIN_DIR=	ext/gdk_pixbuf
+GCONF_SCHEMAS=	gstreamer-0.10.schemas
+PLIST_FILES=	include/gstreamer-0.10/gst/gconf/gconf.h \
+		lib/gstreamer-0.10/libgstgconfelements.so \
+		lib/libgstgconf-0.10.a \
+		lib/libgstgconf-0.10.so \
+		lib/libgstgconf-0.10.so.1 \
+		libdata/pkgconfig/gstreamer-gconf-0.10.pc \
+		'@unexec rmdir %D/include/gstreamer-0.10/gst/gconf 2>/dev/null || true'
 .endif
 
 # gnomevfs
@@ -212,51 +204,14 @@ CONFIGURE_ARGS+=--enable-gnome_vfs
 LIB_DEPENDS+=	gsm.1:${PORTSDIR}/audio/gsm
 .endif
 
-# jack
-.if ${GST_PLUGIN}=="jack"
-LIB_DEPENDS+=	jack.0:${PORTSDIR}/audio/jack
-.endif
-
-# libcdaudio
-.if ${GST_PLUGIN}=="cdaudio"
-LIB_DEPENDS+=	cdaudio.1:${PORTSDIR}/audio/libcdaudio
-.endif
-
-# libcdio
-.if ${GST_PLUGIN}=="cdio"
-LIB_DEPENDS+=	cdio.6:${PORTSDIR}/sysutils/libcdio
-PLIST_FILES=	${GST_LIB_DIR}/libgstcddasrc.so
-.endif
-
-# libvisual
-.if ${GST_PLUGIN}=="libvisual"
-LIB_DEPENDS+=	visual.0:${PORTSDIR}/graphics/libvisual
-.endif
-
-# musepack
-.if ${GST_PLUGIN}=="musepack"
-LIB_DEPENDS+=	mpcdec.3:${PORTSDIR}/audio/libmpcdec
-.endif
-
-# hermes
-.if ${GST_PLUGIN}=="hermes"
-LIB_DEPENDS+=	Hermes.1:${PORTSDIR}/graphics/Hermes
-PLIST_FILES=	${GST_LIB_DIR}/libgsthermescolorspace.so
+# ivorbis
+.if ${GST_PLUGIN}=="ivorbis"
+LIB_DEPENDS+=	vorbisidec.1:${PORTSDIR}/audio/libtremor
 .endif
 
 # jpeg
 .if ${GST_PLUGIN}=="jpeg"
 LIB_DEPENDS+=	jpeg.9:${PORTSDIR}/graphics/jpeg
-CONFLICTS+=	gstreamer-plugins-jpeg-mmx-*
-.endif
-
-# jpeg-mmx
-.if ${GST_PLUGIN}=="jpeg-mmx"
-LIB_DEPENDS+=	jpeg-mmx.62:${PORTSDIR}/graphics/jpeg-mmx
-CONFLICTS+=	gstreamer-plugins-jpeg-*.*
-
-GST_PLUGIN_DIR= ext/jpeg
-PLIST_FILES=	${GST_LIB_DIR}/libgstjpeg.so
 .endif
 
 # ladspa
@@ -269,95 +224,30 @@ BUILD_DEPENDS+=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 LIB_DEPENDS+=	mp3lame.0:${PORTSDIR}/audio/lame
 .endif
 
-# a52dec
-.if ${GST_PLUGIN}=="a52dec"
-LIB_DEPENDS+=	a52.0:${PORTSDIR}/audio/liba52
-.endif
-
-# audiofile
-.if ${GST_PLUGIN}=="audiofile"
-LIB_DEPENDS+=	audiofile.0:${PORTSDIR}/audio/libaudiofile
-.endif
-
 # libcaca
 .if ${GST_PLUGIN}=="libcaca"
 BUILD_DEPENDS+=	${LOCALBASE}/lib/libcaca.a:${PORTSDIR}/graphics/libcaca
 PLIST_FILES=	${GST_LIB_DIR}/libgstcacasink.so
 .endif
 
-# dv
-.if ${GST_PLUGIN}=="dv"
-LIB_DEPENDS+=	dv.4:${PORTSDIR}/multimedia/libdv
-GST_PLIST_SUFFIX=	dec
-.endif
-
-# dvd (dvdnav dvdread)
-.if ${GST_PLUGIN}=="dvd"
-EXTRA_LIBS+=	-ldvdnav
-LIB_DEPENDS+=	dvdnav.4:${PORTSDIR}/multimedia/libdvdnav
-GST_PLUGIN_DIR=	ext/dvdnav \
-		ext/dvdread
-PLIST_FILES=	${GST_LIB_DIR}/libgstdvdnavsrc.so \
-		${GST_LIB_DIR}/libgstdvdreadsrc.so
-.endif
-
-# libfame
-.if ${GST_PLUGIN}=="libfame"
-LIB_DEPENDS+=	fame-0.9.1:${PORTSDIR}/multimedia/libfame
-.endif
-
 # libmms
 .if ${GST_PLUGIN}=="libmms"
-LIB_DEPENDS+=   mms.0:${PORTSDIR}/net/libmms
+LIB_DEPENDS+=	mms.0:${PORTSDIR}/net/libmms
 PLIST_FILES=	${GST_LIB_DIR}/libgstmms.so
 .endif
 
-# libmng
-.if ${GST_PLUGIN}=="libmng"
-LIB_DEPENDS+=	mng.1:${PORTSDIR}/graphics/libmng
-PLIST_FILES=    ${GST_LIB_DIR}/libgstmng.so
+# libpng and the snapshot plugin
+.if ${GST_PLUGIN}=="libpng"
+LIB_DEPENDS+=	png.5:${PORTSDIR}/graphics/png
+GST_PLUGIN_DIR=	ext/libpng \
+		ext/snapshot
+PLIST_FILES=	${GST_LIB_DIR}/libgstpng.so \
+		${GST_LIB_DIR}/libgstsnapshot.so
 .endif
 
-# mikmod
-.if ${GST_PLUGIN}=="mikmod"
-LIB_DEPENDS+=	mikmod.2:${PORTSDIR}/audio/libmikmod
-.endif
-
-# mpeg2dec
-.if ${GST_PLUGIN}=="mpeg2dec"
-LIB_DEPENDS+=	mpeg2.0:${PORTSDIR}/multimedia/libmpeg2
-.endif
-
-# mplex
-.if ${GST_PLUGIN}=="mplex"
-LIB_DEPENDS+=	lavjpeg-1.8.0:${PORTSDIR}/multimedia/mjpegtools
-.endif
-
-# musicbrainz
-.if ${GST_PLUGIN}=="musicbrainz"
-LIB_DEPENDS+=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
-PLIST_FILES=	lib/gstreamer-${VERSION}/libgsttrm.so
-.endif
-
-# shout2
-.if ${GST_PLUGIN}=="shout2"
-LIB_DEPENDS+=	shout.5:${PORTSDIR}/audio/libshout2
-.endif
-
-# sidplay
-.if ${GST_PLUGIN}=="sidplay"
-LIB_DEPENDS+=	sidplay.1:${PORTSDIR}/audio/libsidplay
-PLIST_FILES=	${GST_LIB_DIR}/libgstsid.so
-.endif
-
-# sndfile
-.if ${GST_PLUGIN}=="sndfile"
-LIB_DEPENDS+=	sndfile.1:${PORTSDIR}/audio/libsndfile
-.endif
-
-# theora
-.if ${GST_PLUGIN}=="theora"
-LIB_DEPENDS+=	theora.1:${PORTSDIR}/multimedia/libtheora
+# libvisual
+.if ${GST_PLUGIN}=="libvisual"
+LIB_DEPENDS+=	visual.0:${PORTSDIR}/graphics/libvisual
 .endif
 
 # mad
@@ -366,20 +256,14 @@ LIB_DEPENDS+=	mad.2:${PORTSDIR}/audio/libmad \
 		id3tag.0:${PORTSDIR}/audio/libid3tag
 .endif
 
-# mpeg2enc
-.if ${GST_PLUGIN}=="mpeg2enc"
-USE_GSTREAMER+=	mplex
-LIB_DEPENDS+=	lavjpeg-1.8.0:${PORTSDIR}/multimedia/mjpegtools
-
-# XXX - make sure CONFIGURE works with mpeg2enc even with "ccache
-# c++" ... weird but necessary
-CONFIGURE_ENV+=	HAVE_CXX=yes
+# mpeg2dec
+.if ${GST_PLUGIN}=="mpeg2dec"
+LIB_DEPENDS+=	mpeg2.0:${PORTSDIR}/multimedia/libmpeg2
 .endif
 
-# nas
-.if ${GST_PLUGIN}=="nas"
-LIB_DEPENDS+=	audio.2:${PORTSDIR}/audio/nas
-GST_PLIST_SUFFIX=	sink
+# musepack
+.if ${GST_PLUGIN}=="musepack"
+LIB_DEPENDS+=	mpcdec.3:${PORTSDIR}/audio/libmpcdec
 .endif
 
 # ogg
@@ -394,31 +278,21 @@ PLIST_FILES=	${GST_LIB_DIR}/libgsttextoverlay.so \
 		${GST_LIB_DIR}/libgsttimeoverlay.so
 .endif
 
-# libpng and the snapshot plugin
-.if ${GST_PLUGIN}=="libpng"
-LIB_DEPENDS+=	png.5:${PORTSDIR}/graphics/png
-GST_PLUGIN_DIR= ext/libpng \
-                ext/snapshot
-PLIST_FILES=	${GST_LIB_DIR}/libgstpng.so \
-		${GST_LIB_DIR}/libgstsnapshot.so
-.endif
-
-# polypaudio
-.if ${GST_PLUGIN}=="polypaudio"
-LIB_DEPENDS+=	polyp-0.7.0:${PORTSDIR}/audio/polypaudio
-PLIST_FILES=	${GST_LIB_DIR}/libpolypaudio.so
-GST_PLUGIN_DIR=	ext/polyp
-.endif
-
 # sdl
 .if ${GST_PLUGIN}=="sdl"
 USE_SDL+=	sdl
 GST_PLIST_SUFFIX=	videosink
 .endif
 
-# smoothwave
-.if ${GST_PLUGIN}=="smoothwave"
-USE_GNOME+=	gtk20
+# shout2
+.if ${GST_PLUGIN}=="shout2"
+LIB_DEPENDS+=	shout.5:${PORTSDIR}/audio/libshout2
+.endif
+
+# sidplay
+.if ${GST_PLUGIN}=="sidplay"
+LIB_DEPENDS+=	sidplay.1:${PORTSDIR}/audio/libsidplay
+PLIST_FILES=	${GST_LIB_DIR}/libgstsid.so
 .endif
 
 # speex
@@ -426,9 +300,9 @@ USE_GNOME+=	gtk20
 LIB_DEPENDS+=	speex.3:${PORTSDIR}/audio/speex
 .endif
 
-# swfdec
-.if ${GST_PLUGIN}=="swfdec"
-LIB_DEPENDS+=	swfdec-0.3.0:${PORTSDIR}/graphics/swfdec
+# theora
+.if ${GST_PLUGIN}=="theora"
+LIB_DEPENDS+=	theora.1:${PORTSDIR}/multimedia/libtheora
 .endif
 
 # vorbis
@@ -437,25 +311,9 @@ USE_GSTREAMER+=	ogg
 LIB_DEPENDS+=	vorbis.3:${PORTSDIR}/audio/libvorbis
 .endif
 
-# ivorbis
-.if ${GST_PLUGIN}=="ivorbis"
-LIB_DEPENDS+=	vorbisidec.1:${PORTSDIR}/audio/libtremor
-.endif
-
 # wavpack
 .if ${GST_PLUGIN}=="wavpack"
 LIB_DEPENDS+=	wavpack.0:${PORTSDIR}/audio/wavpack
-.endif
-
-# x264
-.if ${GST_PLUGIN}=="x264"
-LIB_DEPENDS+=	x264.1:${PORTSDIR}/multimedia/x264
-PLIST_FILES=	${GST_LIB_DIR}/libx264.so
-.endif
-
-# xvid
-.if ${GST_PLUGIN}=="xvid"
-LIB_DEPENDS+=	xvidcore.4:${PORTSDIR}/multimedia/xvid
 .endif
 
 BUILD_DEPENDS+=	gstreamer-plugins>=0.10.2:${PORTSDIR}/multimedia/gstreamer-plugins
