@@ -28,7 +28,8 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT?=	GStreamer written collection of plugins handling several media types
 
 LIB_DEPENDS+=	gstreamer-0.10.2:${PORTSDIR}/multimedia/gstreamer \
-		popt.0:${PORTSDIR}/devel/popt
+		popt.0:${PORTSDIR}/devel/popt \
+		oil-0.3.1:${PORTSDIR}/devel/liboil
 
 BASE_PORTVERSION=	${PORTVERSION}
 BASE_DISTNAME=		gst-plugins-base-${BASE_PORTVERSION}
