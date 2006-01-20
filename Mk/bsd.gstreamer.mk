@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.11 2006/01/20 13:47:26 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.12 2006/01/20 16:20:05 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -58,7 +58,7 @@ GST80_SHLIB_VERSION=	1
 # These are the current supported gstreamer-plugins modules
 #
 _USE_GSTREAMER_ALL=	a52dec aalib cairo cdparanoia \
-			dv esd faac faad flac gconf gnomevfs \
+			dv esound faac faad flac gconf gnomevfs \
 			gsm ivorbis jpeg ladspa lame libcaca \
 			libmms libpng libvisual mad mpeg2dec \
 			musepack ogg pango sdl shout2 sidplay \
