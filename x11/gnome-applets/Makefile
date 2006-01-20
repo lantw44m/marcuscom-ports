@@ -2,8 +2,8 @@
 # Date created:				26th May 2000
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnomeapplets2/Makefile,v 1.85 2005/11/28 06:30:45 marcus Exp $
-#   $MCom: ports/x11/gnomeapplets2/Makefile,v 1.97 2006/01/05 21:50:15 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/gnomeapplets2/Makefile,v 1.98 2006/01/16 23:44:59 marcus Exp $
 #
 
 PORTNAME=	gnomeapplets2
@@ -32,7 +32,7 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
 		gail gnomedocutils
-USE_GSTREAMER=	yes
+USE_GSTREAMER80=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \

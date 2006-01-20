@@ -60,7 +60,7 @@ CONFIGURE_ARGS+=--disable-mozilla
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 CONFIGURE_ARGS+=--enable-gstreamer
-USE_GSTREAMER+=	gnomevfs core gconf
+USE_GSTREAMER80+=	gnomevfs core gconf
 WITHOUT_DVDNAV=	yes
 PLIST_SUB+=	GSTREAMER=""
 .else

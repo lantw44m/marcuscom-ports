@@ -1,0 +1,18 @@
+# New ports collection makefile for:	gstreamer-plugins-pango
+# Date created:			3 Oct 2004
+# Whom:				Michael Johnson <ahze@FreeBSD.org>
+#
+# $FreeBSD$
+#    $MCom$
+#
+
+CATEGORIES=	x11-toolkits
+PORTREVISION=	1
+
+COMMENT=	Gstreamer pango textoverlay plugin
+
+GST_PLUGIN=	pango
+
+MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins80
+
+.include "${MASTERDIR}/Makefile"

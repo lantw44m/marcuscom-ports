@@ -1,0 +1,18 @@
+# New ports collection makefile for:	gstreamer-plugins-cdparanoia
+# Date created:			3 Oct 2004
+# Whom:				Michael Johnson <ahze@FreeBSD.org>
+#
+# $FreeBSD$
+#    $MCom$
+#
+
+CATEGORIES=	audio
+PORTREVISION=	2
+
+COMMENT=	Gstreamer CDDA extraction (aka audio ripping) plugin
+
+GST_PLUGIN=	cdparanoia
+
+MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins80
+
+.include "${MASTERDIR}/Makefile"

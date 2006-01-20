@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.79 2005/09/04 21:49:55 marcus Exp $
+#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.81 2006/01/17 01:03:47 ahze Exp $
 #
 
 PORTNAME=	gnomemedia2
@@ -27,7 +27,7 @@ USE_REINPLACE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
 		gail nautiluscdburner
-USE_GSTREAMER=	esound cdparanoia gconf
+USE_GSTREAMER80=	esound cdparanoia gconf
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

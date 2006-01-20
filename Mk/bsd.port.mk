@@ -1355,7 +1355,7 @@ PERL=		${LOCALBASE}/bin/perl
 .include "${PORTSDIR}/Mk/bsd.gnome.mk"
 .endif
 
-.if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER)
+.if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER) || defined(USE_GSTREAMER80)
 .include "${PORTSDIR}/Mk/bsd.gstreamer.mk"
 .endif
 
@@ -1755,7 +1755,7 @@ RUN_DEPENDS+=	${PERL5}:${PORTSDIR}/lang/${PERL_PORT}
 .include "${PORTSDIR}/Mk/bsd.gnome.mk"
 .endif
 
-.if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER)
+.if defined(WANT_GSTREAMER) || defined(USE_GSTREAMER) || defined(USE_GSTREAMER80)
 .include "${PORTSDIR}/Mk/bsd.gstreamer.mk"
 .endif
 

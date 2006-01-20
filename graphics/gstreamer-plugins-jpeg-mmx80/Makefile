@@ -1,0 +1,18 @@
+# New ports collection makefile for:	gstreamer-plugins-jpeg-mmx
+# Date created:			1 Nov 2004
+# Whom:				Michael Johnson <ahze@FreeBSD.org>
+#
+# $FreeBSD$
+#    $MCom$
+#
+
+CATEGORIES=	graphics
+PORTREVISION=	1
+
+COMMENT=	Gstreamer jpeg encoder/decoder plugin with mmx optimalizations
+
+GST_PLUGIN=	jpeg-mmx
+
+MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins80
+
+.include "${MASTERDIR}/Makefile"
