@@ -1,6 +1,6 @@
 bin/avahi-browse
 bin/avahi-browse-domains
-bin/avahi-discover-standalone
+%%GTK%%bin/avahi-discover-standalone
 bin/avahi-publish
 bin/avahi-publish-address
 bin/avahi-publish-service
