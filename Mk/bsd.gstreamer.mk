@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.15 2006/01/20 18:46:33 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.16 2006/01/20 22:58:18 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -57,12 +57,12 @@ GST80_SHLIB_VERSION=	1
 #
 # These are the current supported gstreamer-plugins modules
 #
-_USE_GSTREAMER_ALL=	a52dec aalib cairo cdparanoia \
+_USE_GSTREAMER_ALL=	a52dec aalib bad cairo cdparanoia \
 			dv esound faac faad ffmpeg flac gconf gnomevfs \
 			good gsm ivorbis jpeg ladspa lame libcaca \
 			libmms libpng libvisual mad mpeg2dec \
 			musepack ogg pango sdl shout2 sidplay \
-			speex theora vorbis wavpack
+			speex theora ugly vorbis wavpack
 _USE_GSTREAMER80_ALL=	a52dec aalib artsd audiofile cairo cdaudio cdio cdparanoia \
 			dirac dts dv dvd esound faac faad ffmpeg flac \
 			gconf gdkpixbuf gnomevfs gsm hermes ivorbis jack jpeg \
@@ -177,6 +177,8 @@ libvisual_DEPENDS=	graphics/gstreamer-plugins-libvisual
 swfdec_DEPENDS=	graphics/gstreamer-plugins-swfdec
 
 # Multimedia Plugins Section
+bad_DEPENDS=	multimedia/gstreamer-plugins-bad
+
 dirac_DEPENDS=	multimedia/gstreamer-plugins-dirac
 
 dts_DEPENDS=	multimedia/gstreamer-plugins-dts
@@ -201,6 +203,8 @@ mpeg2enc_DEPENDS=	multimedia/gstreamer-plugins-mpeg2enc
 mplex_DEPENDS=	multimedia/gstreamer-plugins-mplex
 
 theora_DEPENDS=	multimedia/gstreamer-plugins-theora
+
+ugly_DEPENDS=	multimedia/gstreamer-plugins-ugly
 
 x264_DEPENDS=	multimedia/gstreamer-plugins-x264
 
