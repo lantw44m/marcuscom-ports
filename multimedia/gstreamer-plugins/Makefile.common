@@ -153,7 +153,6 @@ DIST=	base
 # dv
 .if ${GST_PLUGIN}=="dv"
 LIB_DEPENDS+=	dv.4:${PORTSDIR}/multimedia/libdv
-GST_PLIST_SUFFIX=	dec
 .endif
 
 # esound
