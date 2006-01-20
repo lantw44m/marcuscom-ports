@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.8.7
-PORTREVISION=	1
+PORTVERSION=	0.10.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-ffmpeg/
 PKGNAMESUFFIX=	-ffmpeg
@@ -44,10 +43,5 @@ post-patch:
 	@${REINPLACE_CMD} -e \
 		's|make|${GMAKE}|' \
 		${WRKSRC}/gst-libs/ext/Makefile.in
-
-post-install:
-# register plugins
-	-@${X11BASE}/bin/gst-register-${GST_VERSION} \
-		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST_VERSION}/registry.xml 2>/dev/null
 
 .include <bsd.port.post.mk>
