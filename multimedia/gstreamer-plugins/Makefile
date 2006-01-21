@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.63 2006/01/21 07:57:26 marcus Exp $
 #
 
 PORTNAME=	gstreamer
@@ -63,6 +63,9 @@ CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
 		CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 		CPPFLAGS="${CPPFLAGS} -I${X11BASE}/include -I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="${LDFLAGS} -L${X11BASE}/lib -L${LOCALBASE}/lib ${EXTRA_LIBS} ${PTHREAD_LIBS}"
+
+DEFAULT_AUDIOSINK?=	osssrc
+DEFAULT_AUDIOSRC?=	osssrc
 
 .include <bsd.port.pre.mk>
 .include "${MASTERDIR}/Makefile.common"
@@ -131,7 +134,9 @@ post-patch:
 	  s|$$(top_builddir)/gst-libs/gst/audio/libgstaudio-@GST_MAJORMINOR@.la||; \
 	  s|$$(top_builddir)/gst-libs/gst/riff/libgstriff-@GST_MAJORMINOR@.la||; \
 	  s|$$(top_builddir)/gst-libs/gst/cdda/libgstcdda-@GST_MAJORMINOR@.la||'
-
+	@${REINPLACE_CMD} -e 's|DEFAULT_AUDIOSINK="alsasink"|DEFAULT_AUDIOSINK="${DEFAULT_AUDIOSINK}"|; \
+		s|DEFAULT_AUDIOSRC="alsasrc"|DEFAULT_AUDIOSRC="${DEFAULT_AUDIOSRC}"|' \
+		${WRKSRC}/configure
 #.for f in ${GST_ALL_PLUGINS}
 #	@${REINPLACE_CMD} -e 's|ext/${f}/Makefile||g' \
 #		${WRKSRC}/configure
