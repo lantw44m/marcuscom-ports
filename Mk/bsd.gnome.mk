@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.349 2006/01/21 03:30:14 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.350 2006/01/21 03:31:17 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -241,12 +241,12 @@ gtkhtml_LIB_DEPENDS=	gtkhtml-1.1.3:${PORTSDIR}/www/gtkhtml
 gtkhtml_DETECT=		${X11BASE}/etc/gtkhtmlConf.sh
 gtkhtml_USE_GNOME_IMPL=	glibwww gal libghttp libcapplet
 
-pygtk_DETECT=			${PYTHON_SITELIBDIR}/gtk-1.2/gtk.py
+pygtk_DETECT=			${LOCALBASE}/bin/pygtk-codegen-1.2
 pygtk_BUILD_DEPENDS=	${pygtk_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk
 pygtk_RUN_DEPENDS=		${pygtk_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk
 pygtk_USE_GNOME_IMPL=	gnomelibs gdkpixbuf libglade
 
-pygnome_DETECT=			${PYTHON_SITELIBDIR}/gtk-1.2/gnome/__init__.py
+pygnome_DETECT=			${LOCALBASE}/share/pygtk/1.2/defs/applet.defs
 pygnome_BUILD_DEPENDS=	${pygnome_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome
 pygnome_RUN_DEPENDS=	${pygnome_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome
 pygnome_USE_GNOME_IMPL=	gtkhtml pygtk
@@ -418,12 +418,12 @@ libgsf_gnome_LIB_DEPENDS=	gsf-gnome-1.113:${PORTSDIR}/devel/libgsf-gnome
 libgsf_gnome_DETECT=		${X11BASE}/libdata/pkgconfig/libgsf-gnome-1.pc
 libgsf_gnome_USE_GNOME_IMPL=	libgsf gnomevfs2
 
-pygtk2_DETECT=			${PYTHON_SITELIBDIR}/gtk-2.0/gtk/__init__.py
+pygtk2_DETECT=			${LOCALBASE}/libdata/pkgconfig/pygtk-2.0.pc
 pygtk2_BUILD_DEPENDS=	${pygtk2_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk2
 pygtk2_RUN_DEPENDS=		${pygtk2_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk2
 pygtk2_USE_GNOME_IMPL=	libglade2
 
-pygnome2_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/gnome/__init__.py
+pygnome2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-2.0.pc
 pygnome2_BUILD_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_RUN_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
 pygnome2_USE_GNOME_IMPL=libgnomeui pygtk2
@@ -462,7 +462,7 @@ gnomemenus_LIB_DEPENDS=		gnome-menu.2:${PORTSDIR}/x11/gnome-menus
 gnomemenus_DETECT=			${X11BASE}/libdata/pkgconfig/libgnome-menu.pc
 gnomemenus_USE_GNOME_IMPL=	gnomevfs2
 
-pygnomeextras_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/egg/__init__.py
+pygnomeextras_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-extras-2.0.pc
 pygnomeextras_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
 pygnomeextras_RUN_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
 pygnomeextras_USE_GNOME_IMPL=pygnome2 libgtkhtml
@@ -472,7 +472,7 @@ gnomedocutils_BUILD_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnomedo
 gnomedocutils_RUN_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnomedocutils
 gnomedocutils_USE_GNOME_IMPL=libxslt
 
-pygnomedesktop_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/gnome/applet.py
+pygnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-desktop-2.0.pc
 pygnomedesktop_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
 pygnomedesktop_RUN_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
 pygnomedesktop_USE_GNOME_IMPL=pygnome2 libgnomeprintui gtksourceview gnomepanel libwnck nautiluscdburner metacity
