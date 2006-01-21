@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.63 2006/01/21 07:57:26 marcus Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.64 2006/01/21 21:03:13 ahze Exp $
 #
 
 PORTNAME=	gstreamer
@@ -64,7 +64,7 @@ CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
 		CPPFLAGS="${CPPFLAGS} -I${X11BASE}/include -I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="${LDFLAGS} -L${X11BASE}/lib -L${LOCALBASE}/lib ${EXTRA_LIBS} ${PTHREAD_LIBS}"
 
-DEFAULT_AUDIOSINK?=	osssrc
+DEFAULT_AUDIOSINK?=	osssink
 DEFAULT_AUDIOSRC?=	osssrc
 
 .include <bsd.port.pre.mk>
