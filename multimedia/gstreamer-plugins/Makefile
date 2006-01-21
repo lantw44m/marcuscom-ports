@@ -3,11 +3,12 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gstreamer
 PORTVERSION?=	0.10.2
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME:S/$/:base/} \
 		http://gstreamer.freedesktop.org/src/gst-plugins-base/:base \
@@ -123,11 +124,14 @@ post-patch:
 	${XARGS} -n 10 ${REINPLACE_CMD} -e \
 	's|malloc\.h|stdlib.h|; \
 	 s|stdint\.h|inttypes.h|; \
-	 s|$$(top_builddir)/gst-libs/gst/tag/libgsttag-@GST_MAJORMINOR@.la||; \
-	 s|$$(top_builddir)/gst-libs/gst/audio/libgstaudio-@GST_MAJORMINOR@.la||; \
-	 s|$$(top_builddir)/gst-libs/gst/riff/libgstriff-@GST_MAJORMINOR@.la||; \
-	 s|$$(top_builddir)/gst-libs/gst/cdda/libgstcdda-@GST_MAJORMINOR@.la||; \
 	 s|%%VERSION%%|${VERSION}|'
+	 @${FIND} ${WRKSRC}/ext -name Makefile.in | \
+	 ${XARGS} -n 10 ${REINPLACE_CMD} -e \
+	 's|$$(top_builddir)/gst-libs/gst/tag/libgsttag-@GST_MAJORMINOR@.la||; \
+	  s|$$(top_builddir)/gst-libs/gst/audio/libgstaudio-@GST_MAJORMINOR@.la||; \
+	  s|$$(top_builddir)/gst-libs/gst/riff/libgstriff-@GST_MAJORMINOR@.la||; \
+	  s|$$(top_builddir)/gst-libs/gst/cdda/libgstcdda-@GST_MAJORMINOR@.la||'
+
 #.for f in ${GST_ALL_PLUGINS}
 #	@${REINPLACE_CMD} -e 's|ext/${f}/Makefile||g' \
 #		${WRKSRC}/configure
