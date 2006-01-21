@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.347 2006/01/17 05:45:27 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.348 2006/01/18 03:22:40 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -59,7 +59,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver \
 		libgnomedb libgnomeprint libgnomeprintui libgnomeui libgsf \
 		libgsf_gnome libgtkhtml libidl librsvg2 libwnck libxml2 libxslt \
 		libzvt linc metacity nautilus2 nautiluscdburner orbit2 pango pygnome2 \
-		pygnomeextras pygtk2 vte
+		pygnomeextras pygtk2 vte pygnomedesktop
 
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
@@ -465,12 +465,17 @@ gnomemenus_USE_GNOME_IMPL=	gnomevfs2
 pygnomeextras_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/egg/__init__.py
 pygnomeextras_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
 pygnomeextras_RUN_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
-pygnomeextras_USE_GNOME_IMPL=pygnome2 libgnomeprintui libgtkhtml gnomepanel gtksourceview libwnck nautiluscdburner
+pygnomeextras_USE_GNOME_IMPL=pygnome2 libgtkhtml
 
 gnomedocutils_DETECT=	${X11BASE}/libdata/pkgconfig/gnome-doc-utils.pc
 gnomedocutils_BUILD_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnomedocutils
 gnomedocutils_RUN_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnomedocutils
 gnomedocutils_USE_GNOME_IMPL=libxslt
+
+pygnomedesktop_DETECT=		${PYTHON_SITELIBDIR}/gtk-2.0/egg/__init__.py
+pygnomedesktop_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
+pygnomedesktop_RUN_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
+pygnomedesktop_USE_GNOME_IMPL=pygnome2 libgnomeprintui gtksourceview gnomepanel libwnck nautiluscdburner metacity
 
 ########
 #### NOTE: DO NOT COMMIT THIS NEXT PART TO THE MAIN FREEBSD REPO
