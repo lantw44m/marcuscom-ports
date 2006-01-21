@@ -1,0 +1,39 @@
+--- gst/gstregistry.c.orig	Sat Jan 21 15:10:24 2006
++++ gst/gstregistry.c	Sat Jan 21 15:13:07 2006
+@@ -838,6 +838,8 @@ _gst_registry_remove_cache_plugins (GstR
+   GList *g_next;
+   GstPlugin *plugin;
+ 
++  GST_OBJECT_LOCK (registry);
++
+   GST_DEBUG_OBJECT (registry, "removing cached plugins");
+   g = registry->plugins;
+   while (g) {
+@@ -851,6 +853,8 @@ _gst_registry_remove_cache_plugins (GstR
+     }
+     g = g_next;
+   }
++
++  GST_OBJECT_UNLOCK (registry);
+ }
+ 
+ 
+--- tools/gst-inspect.c.orig	Sat Jan 21 15:14:01 2006
++++ tools/gst-inspect.c	Sat Jan 21 15:14:19 2006
+@@ -1093,8 +1093,6 @@ print_element_info (GstElementFactory * 
+   print_signal_info (element);
+   print_children_info (element);
+ 
+-  gst_object_unref (factory);
+-
+   if (_name[0] != '\0')
+     g_free (_name);
+ 
+@@ -1147,6 +1145,7 @@ main (int argc, char *argv[])
+     /* if there's a factory, print out the info */
+     if (factory) {
+       retval = print_element_info (factory, print_all);
++      gst_object_unref (factory);
+     } else {
+       retval = print_element_features (arg);
+     }
