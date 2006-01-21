@@ -32,6 +32,26 @@ include/gedit-%%VERSION%%/gedit/recent-files/egg-recent-view-uimanager.h
 include/gedit-%%VERSION%%/gedit/recent-files/egg-recent-view.h
 lib/gedit-2/plugins/changecase.gedit-plugin
 lib/gedit-2/plugins/docinfo.gedit-plugin
+%%PYTHON%%lib/gedit-2/plugins/externaltools.gedit-plugin
+%%PYTHON%%lib/gedit-2/plugins/externaltools/ElementTree.py
+%%PYTHON%%lib/gedit-2/plugins/externaltools/ElementTree.pyc
+%%PYTHON%%lib/gedit-2/plugins/externaltools/ElementTree.pyo
+%%PYTHON%%lib/gedit-2/plugins/externaltools/__init__.py
+%%PYTHON%%lib/gedit-2/plugins/externaltools/__init__.pyc
+%%PYTHON%%lib/gedit-2/plugins/externaltools/__init__.pyo
+%%PYTHON%%lib/gedit-2/plugins/externaltools/capture.py
+%%PYTHON%%lib/gedit-2/plugins/externaltools/capture.pyc
+%%PYTHON%%lib/gedit-2/plugins/externaltools/capture.pyo
+%%PYTHON%%lib/gedit-2/plugins/externaltools/functions.py
+%%PYTHON%%lib/gedit-2/plugins/externaltools/functions.pyc
+%%PYTHON%%lib/gedit-2/plugins/externaltools/functions.pyo
+%%PYTHON%%lib/gedit-2/plugins/externaltools/manager.py
+%%PYTHON%%lib/gedit-2/plugins/externaltools/manager.pyc
+%%PYTHON%%lib/gedit-2/plugins/externaltools/manager.pyo
+%%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.py
+%%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.pyc
+%%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.pyo
+%%PYTHON%%lib/gedit-2/plugins/externaltools/tools.glade
 lib/gedit-2/plugins/indent.gedit-plugin
 lib/gedit-2/plugins/libchangecase.so
 lib/gedit-2/plugins/libdocinfo.so
@@ -51,6 +71,29 @@ lib/gedit-2/plugins/libtime.so
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole.pyo
 lib/gedit-2/plugins/sample.gedit-plugin
 lib/gedit-2/plugins/sort.gedit-plugin
+%%PYTHON%%lib/gedit-2/plugins/snippets.gedit-plugin
+%%PYTHON%%lib/gedit-2/plugins/snippets/Snippet.py
+%%PYTHON%%lib/gedit-2/plugins/snippets/Snippet.pyc
+%%PYTHON%%lib/gedit-2/plugins/snippets/Snippet.pyo
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetComplete.py
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetComplete.pyc
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetComplete.pyo
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetPlaceholders.py
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetPlaceholders.pyc
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetPlaceholders.pyo
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetPluginInstance.py
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetPluginInstance.pyc
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetPluginInstance.pyo
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsDialog.py
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsDialog.pyc
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsDialog.pyo
+%%PYTHON%%lib/gedit-2/plugins/snippets/__init__.py
+%%PYTHON%%lib/gedit-2/plugins/snippets/__init__.pyc
+%%PYTHON%%lib/gedit-2/plugins/snippets/__init__.pyo
+%%PYTHON%%lib/gedit-2/plugins/snippets/functions.py
+%%PYTHON%%lib/gedit-2/plugins/snippets/functions.pyc
+%%PYTHON%%lib/gedit-2/plugins/snippets/functions.pyo
+%%PYTHON%%lib/gedit-2/plugins/snippets/snippets.glade
 lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
@@ -67,6 +110,8 @@ share/gnome/gedit-2/glade/languages-dialog.glade2
 share/gnome/gedit-2/glade/sort.glade2
 share/gnome/gedit-2/glade/spell-checker.glade2
 share/gnome/gedit-2/glade/time.glade2
+%%PYTHON%%share/gnome/gedit-2/plugins/externaltools/stock-tools.xml
+%%PYTHON%%share/gnome/gedit-2/plugins/snippets/gedit-snippets.xml
 share/gnome/gedit-2/taglist/HTML.tags
 share/gnome/gedit-2/taglist/Latex.tags
 share/gnome/gedit-2/taglist/XSLT.tags
@@ -275,8 +320,13 @@ share/locale/zh_TW/LC_MESSAGES/gedit.mo
 @dirrm share/gnome/help/gedit
 @dirrm share/gnome/gedit-2/ui
 @dirrm share/gnome/gedit-2/taglist
+%%PYTHON%%@dirrm share/gnome/gedit-2/plugins/snippets
+%%PYTHON%%@dirrm share/gnome/gedit-2/plugins/externaltools
+%%PYTHON%%@dirrm share/gnome/gedit-2/plugins
 @dirrm share/gnome/gedit-2/glade
 @dirrm share/gnome/gedit-2
+%%PYTHON%%@dirrm lib/gedit-2/plugins/snippets
+%%PYTHON%%@dirrm lib/gedit-2/plugins/externaltools
 @dirrm lib/gedit-2/plugins
 @dirrm lib/gedit-2
 @dirrm include/gedit-%%VERSION%%/gedit/recent-files
