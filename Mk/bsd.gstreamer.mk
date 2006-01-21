@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.16 2006/01/20 22:58:18 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.17 2006/01/20 23:17:23 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -184,8 +184,10 @@ dirac_DEPENDS=	multimedia/gstreamer-plugins-dirac
 dts_DEPENDS=	multimedia/gstreamer-plugins-dts
 
 ffmpeg_DEPENDS=	multimedia/gstreamer-ffmpeg
-ffmpeg_GST80_SUFX=	# empty
+ffmpeg_GST80_SUFX=	80
 ffmpeg_GST80_PREFIX=	gstreamer-
+ffmpeg_GST_PREFIX=	gstreamer-
+ffmpeg_GST_SUFX=	# empty
 ffmpeg_VERSION=		0.8.7
 
 dv_DEPENDS=	multimedia/gstreamer-plugins-dv
