@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.350 2006/01/21 03:31:17 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.351 2006/01/21 03:38:39 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -473,8 +473,8 @@ gnomedocutils_RUN_DEPENDS=${gnomedocutils_DETECT}:${PORTSDIR}/textproc/gnomedocu
 gnomedocutils_USE_GNOME_IMPL=libxslt
 
 pygnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-desktop-2.0.pc
-pygnomedesktop_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
-pygnomedesktop_RUN_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
+pygnomedesktop_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-desktop
+pygnomedesktop_RUN_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-desktop
 pygnomedesktop_USE_GNOME_IMPL=pygnome2 libgnomeprintui gtksourceview gnomepanel libwnck nautiluscdburner metacity
 
 ########
