@@ -377,59 +377,59 @@ share/gnome/pixmaps/gnome-cd/disc.png
 share/gnome/pixmaps/gnome-cd/media-eject.png
 share/gnome/pixmaps/gnome-cd/once.png
 share/gnome/pixmaps/gnome-cd/repeat.png
-share/gnome/pixmaps/gnome-cd/themes/None/None.theme
-share/gnome/pixmaps/gnome-cd/themes/None/a-eject-menu.png
-share/gnome/pixmaps/gnome-cd/themes/None/a-first-menu.png
-share/gnome/pixmaps/gnome-cd/themes/None/a-last-menu.png
-share/gnome/pixmaps/gnome-cd/themes/None/a-play-menu.png
-share/gnome/pixmaps/gnome-cd/themes/None/a-stop-menu.png
-share/gnome/pixmaps/gnome-cd/themes/None/bottom-left.png
-share/gnome/pixmaps/gnome-cd/themes/None/bottom-right.png
-share/gnome/pixmaps/gnome-cd/themes/None/bottom.png
-share/gnome/pixmaps/gnome-cd/themes/None/media-eject.png
-share/gnome/pixmaps/gnome-cd/themes/None/media-fwd.png
-share/gnome/pixmaps/gnome-cd/themes/None/media-next.png
-share/gnome/pixmaps/gnome-cd/themes/None/media-pause.png
-share/gnome/pixmaps/gnome-cd/themes/None/media-play.png
-share/gnome/pixmaps/gnome-cd/themes/None/media-prev.png
-share/gnome/pixmaps/gnome-cd/themes/None/media-rew.png
-share/gnome/pixmaps/gnome-cd/themes/None/media-stop.png
-share/gnome/pixmaps/gnome-cd/themes/None/middle-left.png
-share/gnome/pixmaps/gnome-cd/themes/None/middle-right.png
-share/gnome/pixmaps/gnome-cd/themes/None/middle.png
-share/gnome/pixmaps/gnome-cd/themes/None/top-left.png
-share/gnome/pixmaps/gnome-cd/themes/None/top-right.png
-share/gnome/pixmaps/gnome-cd/themes/None/top.png
-share/gnome/pixmaps/gnome-cd/themes/lcd/bottom-left.png
-share/gnome/pixmaps/gnome-cd/themes/lcd/bottom-right.png
-share/gnome/pixmaps/gnome-cd/themes/lcd/bottom.png
-share/gnome/pixmaps/gnome-cd/themes/lcd/lcd.theme
-share/gnome/pixmaps/gnome-cd/themes/lcd/middle-left.png
-share/gnome/pixmaps/gnome-cd/themes/lcd/middle-right.png
-share/gnome/pixmaps/gnome-cd/themes/lcd/middle.png
-share/gnome/pixmaps/gnome-cd/themes/lcd/top-left.png
-share/gnome/pixmaps/gnome-cd/themes/lcd/top-right.png
-share/gnome/pixmaps/gnome-cd/themes/lcd/top.png
-share/gnome/pixmaps/gnome-cd/themes/media/bottom-left.png
-share/gnome/pixmaps/gnome-cd/themes/media/bottom-right.png
-share/gnome/pixmaps/gnome-cd/themes/media/bottom.png
-share/gnome/pixmaps/gnome-cd/themes/media/media.theme
-share/gnome/pixmaps/gnome-cd/themes/media/middle-left.png
-share/gnome/pixmaps/gnome-cd/themes/media/middle-right.png
-share/gnome/pixmaps/gnome-cd/themes/media/middle.png
-share/gnome/pixmaps/gnome-cd/themes/media/top-left.png
-share/gnome/pixmaps/gnome-cd/themes/media/top-right.png
-share/gnome/pixmaps/gnome-cd/themes/media/top.png
-share/gnome/pixmaps/gnome-cd/themes/red-lcd/bottom-left.png
-share/gnome/pixmaps/gnome-cd/themes/red-lcd/bottom-right.png
-share/gnome/pixmaps/gnome-cd/themes/red-lcd/bottom.png
-share/gnome/pixmaps/gnome-cd/themes/red-lcd/middle-left.png
-share/gnome/pixmaps/gnome-cd/themes/red-lcd/middle-right.png
-share/gnome/pixmaps/gnome-cd/themes/red-lcd/middle.png
-share/gnome/pixmaps/gnome-cd/themes/red-lcd/red-lcd.theme
-share/gnome/pixmaps/gnome-cd/themes/red-lcd/top-left.png
-share/gnome/pixmaps/gnome-cd/themes/red-lcd/top-right.png
-share/gnome/pixmaps/gnome-cd/themes/red-lcd/top.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/None.theme
+share/gnome/pixmaps/gnome-cd/themes/None-theme/a-eject-menu.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/a-first-menu.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/a-last-menu.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/a-play-menu.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/a-stop-menu.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/bottom-left.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/bottom-right.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/bottom.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/media-eject.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/media-fwd.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/media-next.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/media-pause.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/media-play.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/media-prev.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/media-rew.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/media-stop.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/middle-left.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/middle-right.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/middle.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/top-left.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/top-right.png
+share/gnome/pixmaps/gnome-cd/themes/None-theme/top.png
+share/gnome/pixmaps/gnome-cd/themes/lcd-theme/bottom-left.png
+share/gnome/pixmaps/gnome-cd/themes/lcd-theme/bottom-right.png
+share/gnome/pixmaps/gnome-cd/themes/lcd-theme/bottom.png
+share/gnome/pixmaps/gnome-cd/themes/lcd-theme/lcd.theme
+share/gnome/pixmaps/gnome-cd/themes/lcd-theme/middle-left.png
+share/gnome/pixmaps/gnome-cd/themes/lcd-theme/middle-right.png
+share/gnome/pixmaps/gnome-cd/themes/lcd-theme/middle.png
+share/gnome/pixmaps/gnome-cd/themes/lcd-theme/top-left.png
+share/gnome/pixmaps/gnome-cd/themes/lcd-theme/top-right.png
+share/gnome/pixmaps/gnome-cd/themes/lcd-theme/top.png
+share/gnome/pixmaps/gnome-cd/themes/media-theme/bottom-left.png
+share/gnome/pixmaps/gnome-cd/themes/media-theme/bottom-right.png
+share/gnome/pixmaps/gnome-cd/themes/media-theme/bottom.png
+share/gnome/pixmaps/gnome-cd/themes/media-theme/media.theme
+share/gnome/pixmaps/gnome-cd/themes/media-theme/middle-left.png
+share/gnome/pixmaps/gnome-cd/themes/media-theme/middle-right.png
+share/gnome/pixmaps/gnome-cd/themes/media-theme/middle.png
+share/gnome/pixmaps/gnome-cd/themes/media-theme/top-left.png
+share/gnome/pixmaps/gnome-cd/themes/media-theme/top-right.png
+share/gnome/pixmaps/gnome-cd/themes/media-theme/top.png
+share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme/bottom-left.png
+share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme/bottom-right.png
+share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme/bottom.png
+share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme/middle-left.png
+share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme/middle-right.png
+share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme/middle.png
+share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme/red-lcd.theme
+share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme/top-left.png
+share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme/top-right.png
+share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme/top.png
 share/gnome/pixmaps/gnome-cd/track.png
 share/gnome/pixmaps/gnome-grecord.png
 share/gnome/pixmaps/gnome-mixer.png
@@ -504,10 +504,10 @@ share/locale/xh/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
-@dirrm share/gnome/pixmaps/gnome-cd/themes/red-lcd
-@dirrm share/gnome/pixmaps/gnome-cd/themes/media
-@dirrm share/gnome/pixmaps/gnome-cd/themes/lcd
-@dirrm share/gnome/pixmaps/gnome-cd/themes/None
+@dirrm share/gnome/pixmaps/gnome-cd/themes/None-theme
+@dirrm share/gnome/pixmaps/gnome-cd/themes/lcd-theme
+@dirrm share/gnome/pixmaps/gnome-cd/themes/media-theme
+@dirrm share/gnome/pixmaps/gnome-cd/themes/red-lcd-theme
 @dirrm share/gnome/pixmaps/gnome-cd/themes
 @dirrm share/gnome/pixmaps/gnome-cd
 @dirrm share/gnome/omf/gnome-media
