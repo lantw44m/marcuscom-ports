@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.33 2006/01/21 02:52:40 marcus Exp $
 #
 
 PORTNAME=	gnome
@@ -20,7 +20,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A set of Python bindings used by modules in the GNOME Desktop
 
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop2 \
-		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
+		totem-plparser.2:${PORTSDIR}/multimedia/totem-gstreamer \
 		gnome-media-profiles.0:${PORTSDIR}/audio/gnomemedia2
 
 USE_BZIP2=	yes
