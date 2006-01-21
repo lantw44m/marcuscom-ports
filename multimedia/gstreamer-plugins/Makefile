@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.64 2006/01/21 21:03:13 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.65 2006/01/21 22:29:52 ahze Exp $
 #
 
 PORTNAME=	gstreamer
@@ -46,7 +46,7 @@ UGLY_DISTNAME=		gst-plugins-ugly-${UGLY_PORTVERSION}
 UGLY_DISTFILE=		${UGLY_DISTNAME}${EXTRACT_SUFX}
 
 SHLIB_VERSION=	1
-VERSION=	0.10
+VERSION=	${GST_VERSION}
 WANT_GSTREAMER=	yes
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes

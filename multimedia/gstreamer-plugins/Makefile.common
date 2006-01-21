@@ -1,3 +1,5 @@
+# $FreeBSD$
+#    $MCom$
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -184,7 +186,7 @@ LIB_DEPENDS+=	FLAC.7:${PORTSDIR}/audio/flac
 USE_GNOME+=	gconf2
 GST_PLUGIN_DIR=	ext/gconf \
 		gconf
-GCONF_SCHEMAS=	gstreamer-0.10.schemas
+GCONF_SCHEMAS=	gstreamer-${GST_VERSION}.schemas
 PLIST_FILES=	${GST_LIB_DIR}/libgstgconfelements.so
 .endif
 
@@ -339,8 +341,8 @@ EXTRACT_ONLY=${GOOD_DISTFILE}
 WRKSRC=${WRKDIR}/${GOOD_DISTNAME}
 .endif
 
-BUILD_DEPENDS+=	gstreamer-plugins>=0.10.2:${PORTSDIR}/multimedia/gstreamer-plugins
-RUN_DEPENDS+= gstreamer-plugins>=0.10.2:${PORTSDIR}/multimedia/gstreamer-plugins
+BUILD_DEPENDS+=	gstreamer-plugins>=${GST_VERSION}${GST_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer-plugins
+RUN_DEPENDS+= gstreamer-plugins>=${GST_VERSION}${GST_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer-plugins
 
 do-build:
 .for dir in ${GST_PREBUILD_DIR} ${GST_PLUGIN_DIR} ${GST_POSTBUILD_DIR}
