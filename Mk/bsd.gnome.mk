@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.352 2006/01/21 03:40:22 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.353 2006/01/21 08:50:56 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -691,7 +691,6 @@ GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
 .endif
 
 .if defined(GNOME_PRE_PATCH)
-USE_REINPLACE=	yes
 
 pre-patch: gnome-pre-patch
 
