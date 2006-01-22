@@ -3,10 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.68 2005/12/12 21:53:01 ahze Exp $
+#    $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.69 2006/01/17 02:43:35 marcus Exp $
 
 PORTNAME=	libgnomeui
 PORTVERSION=	2.13.2
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
