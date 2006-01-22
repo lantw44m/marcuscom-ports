@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.93 2006/01/20 02:56:13 ahze Exp $
+#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.94 2006/01/22 16:06:25 ahze Exp $
 #
 
 PORTNAME=	gnomecontrolcenter2
@@ -25,7 +25,7 @@ USE_X_PREFIX=	yes
 USE_REINPLACE=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
-USE_GSTREAMER=	yes
+USE_GSTREAMER=	good
 WANT_GNOME=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack metacity nautilus2 \
 		gnomemenus desktopfileutils nautilus2
