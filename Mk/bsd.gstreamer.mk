@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.17 2006/01/20 23:17:23 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.18 2006/01/21 21:43:33 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -188,7 +188,8 @@ ffmpeg_GST80_SUFX=	80
 ffmpeg_GST80_PREFIX=	gstreamer-
 ffmpeg_GST_PREFIX=	gstreamer-
 ffmpeg_GST_SUFX=	# empty
-ffmpeg_VERSION=		0.8.7
+ffmpeg_GST80_VERSION=	0.8.7
+ffmpeg_GST_VERSION=	0.10.0
 
 dv_DEPENDS=	multimedia/gstreamer-plugins-dv
 
@@ -237,8 +238,8 @@ ${ext}_NAME?=		${ext}
 .if defined(USE_GSTREAMER80)
 .for ext in ${USE_GSTREAMER80}
 . if ${_USE_GSTREAMER80_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX})
-BUILD_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
-RUN_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
+BUILD_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_GST80_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
+RUN_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_GST80VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
 . else
 BROKEN=	"Unknown gstreamer-plugin -- ${ext}"
 . endif
@@ -247,8 +248,8 @@ BROKEN=	"Unknown gstreamer-plugin -- ${ext}"
 .if defined(USE_GSTREAMER)
 .for ext in ${USE_GSTREAMER}
 . if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS})
-BUILD_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
-RUN_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
+BUILD_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_GST_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
+RUN_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_GST_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
 . else
 BROKEN=	"Unknown gstreamer-plugin -- ${ext}"
 . endif
