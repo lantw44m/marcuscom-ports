@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.18 2006/01/21 21:43:33 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.19 2006/01/22 20:01:03 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -226,12 +226,12 @@ Gstreamer_Post_Include=	bsd.gstreamer.mk
 .for ext in ${USE_GSTREAMER80}
 ${ext}_GST80_SUFX?=	80
 ${ext}_GST80_PREFIX?=	gstreamer-plugins-
-${ext}_VERSION?=	${GST80_VERSION}${GST80_MINOR_VERSION}
+${ext}_GST80_VERSION?=	${GST80_VERSION}${GST80_MINOR_VERSION}
 ${ext}_NAME?=		${ext}
 .endfor
 .for ext in ${USE_GSTREAMER}
 ${ext}_GST_PREFIX?=	gstreamer-plugins-
-${ext}_VERSION?=	${GST_VERSION}${GST_MINOR_VERSION}
+${ext}_GST_VERSION?=	${GST_VERSION}${GST_MINOR_VERSION}
 ${ext}_NAME?=		${ext}
 .endfor
 
