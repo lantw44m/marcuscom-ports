@@ -909,12 +909,12 @@ share/locale/wa/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/xh/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
-@unexec rmdir %D/share/locale/xh/LC_MESSAGES 2> /dev/null || true
-@unexec rmdir %D/share/locale/xh 2> /dev/null || true
-@unexec rmdir %D/share/locale/rw/LC_MESSAGES 2> /dev/null || true
-@unexec rmdir %D/share/locale/rw 2> /dev/null || true
-@unexec rmdir %D/share/locale/ku/LC_MESSAGES 2> /dev/null || true
-@unexec rmdir %D/share/locale/ku 2> /dev/null || true
+@dirrmtry share/locale/xh/LC_MESSAGES
+@dirrmtry share/locale/xh
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/ku/LC_MESSAGES
+@dirrmtry share/locale/ku
 @dirrm share/gnome/pixmaps/evolution-data-server-%%VERSION%%
 @dirrm share/gnome/idl/evolution-data-server-%%EVO_VERSION%%
 @dirrm share/gnome/evolution-data-server-%%VERSION%%/zoneinfo/Pacific
