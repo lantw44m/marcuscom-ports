@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.19 2006/01/22 20:01:03 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.20 2006/01/22 20:05:25 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -239,7 +239,7 @@ ${ext}_NAME?=		${ext}
 .for ext in ${USE_GSTREAMER80}
 . if ${_USE_GSTREAMER80_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX})
 BUILD_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_GST80_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
-RUN_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_GST80VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
+RUN_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_GST80_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
 . else
 BROKEN=	"Unknown gstreamer-plugin -- ${ext}"
 . endif
