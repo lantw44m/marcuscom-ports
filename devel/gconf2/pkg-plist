@@ -124,4 +124,4 @@ share/sgml/gconf/gconf-1.0.dtd
 @dirrm include/gconf/2/gconf
 @dirrm include/gconf/2
 @dirrm etc/gconf/2
-@unexec /bin/rmdir %D/share/sgml 2>/dev/null || /usr/bin/true
+@dirrmtry share/sgml
