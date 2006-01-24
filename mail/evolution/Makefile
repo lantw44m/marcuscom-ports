@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.82 2006/01/06 08:26:45 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.83 2006/01/18 04:53:48 marcus Exp $
 #
 
 PORTNAME=	evolution
@@ -88,7 +88,7 @@ RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 .endif
 
 .if defined(WITH_GSTREAMER)
-LIB_DEPENDS+=	gstreamer-0.8.5:${PORTSDIR}/multimedia/gstreamer
+LIB_DEPENDS+=	gstreamer-0.8.5:${PORTSDIR}/multimedia/gstreamer80
 PLIST_SUB+=	GSTREAMER=""
 .else
 PLIST_SUB+=	GSTREAMER="@comment "
