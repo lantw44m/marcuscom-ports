@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.355 2006/01/24 01:34:00 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.356 2006/01/24 02:12:09 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -96,7 +96,8 @@ gnomehier_RUN_DEPENDS=	${gnomehier_DETECT}:${PORTSDIR}/misc/gnomehier
 
 GNOME_HTML_DIR?=	${PREFIX}/share/doc
 GCONF_CONFIG_OPTIONS?=	merged
-GCONF_CONFIG_SOURCE?=xml:${GCONF_CONFIG_OPTIONS}:${PREFIX}/etc/gconf/gconf.xml.defaults
+GCONF_CONFIG_DIRECTORY?=etc/gconf/gconf.xml.defaults
+GCONF_CONFIG_SOURCE?=xml:${GCONF_CONFIG_OPTIONS}:${PREFIX}/${GCONF_CONFIG_DIRECTORY}
 gnomeprefix_CONFIGURE_ENV=GTKDOC="false"
 gnomeprefix_CONFIGURE_ARGS=--localstatedir=${PREFIX}/share/gnome \
 			   --datadir=${PREFIX}/share/gnome \
@@ -737,10 +738,10 @@ gnome-pre-su-install:
 gnome-post-install:
 .  if defined(GCONF_SCHEMAS)
 	@for i in ${GCONF_SCHEMAS}; do \
-		${ECHO_CMD} "@unexec env GCONF_CONFIG_SOURCE=xml:${GCONF_CONFIG_OPTIONS}:%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/$${i} > /dev/null || /usr/bin/true" \
+		${ECHO_CMD} "@unexec env GCONF_CONFIG_SOURCE=xml:${GCONF_CONFIG_OPTIONS}:%D/${GCONF_CONFIG_DIRECTORY} gconftool-2 --makefile-uninstall-rule %D/etc/gconf/schemas/$${i} > /dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
 		${ECHO_CMD} "etc/gconf/schemas/$${i}" >> ${TMPPLIST}; \
-		${ECHO_CMD} "@exec env GCONF_CONFIG_SOURCE=xml:${GCONF_CONFIG_OPTIONS}:%D/etc/gconf/gconf.xml.defaults gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/$${i} > /dev/null || /usr/bin/true" \
+		${ECHO_CMD} "@exec env GCONF_CONFIG_SOURCE=xml:${GCONF_CONFIG_OPTIONS}:%D/${GCONF_CONFIG_DIRECTORY} gconftool-2 --makefile-install-rule %D/etc/gconf/schemas/$${i} > /dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
 	done
 .  endif
