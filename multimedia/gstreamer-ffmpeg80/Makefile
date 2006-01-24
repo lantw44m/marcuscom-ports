@@ -47,6 +47,6 @@ post-patch:
 post-install:
 # register plugins
 	-@${X11BASE}/bin/gst-register-${GST80_VERSION} \
-		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST_VERSION}/registry.xml 2>/dev/null
+		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST80_VERSION}/registry.xml 2>/dev/null
 
 .include <bsd.port.post.mk>
