@@ -22,4 +22,4 @@ audio/gstreamer-plugins-smoothwave|audio/gstreamer-plugins-smoothwave80|%%DATE%%
 audio/gstreamer-plugins-sndfile|audio/gstreamer-plugins-sndfile80|%%DATE%%|Not part of gstreamer 0.10 yet
 graphics/gstreamer-plugins-swfdec|graphics/gstreamer-plugins-swfdec80|%%DATE%%|Not part of gstreamer 0.10 yet
 multimedia/gstreamer-plugins-x264|multimedia/gstreamer-plugins-x26480|%%DATE%%|Not part of gstreamer 0.10 yet
-gstreamer-plugins-xvid|gstreamer-plugins-xvid80|%%DATE%%|Not part of gstreamer 0.10 yet
+multimedia/gstreamer-plugins-xvid|multimedia/gstreamer-plugins-xvid80|%%DATE%%|Not part of gstreamer 0.10 yet
