@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.353 2006/01/21 08:50:56 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.354 2006/01/22 20:39:36 pav Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -95,7 +95,7 @@ gnomehier_DETECT=	${GNOME_MTREE}
 gnomehier_RUN_DEPENDS=	${gnomehier_DETECT}:${PORTSDIR}/misc/gnomehier
 
 GNOME_HTML_DIR?=	${PREFIX}/share/doc
-GCONF_CONFIG_OPTIONS?=
+GCONF_CONFIG_OPTIONS?=	merged
 GCONF_CONFIG_SOURCE?=xml:${GCONF_CONFIG_OPTIONS}:${PREFIX}/etc/gconf/gconf.xml.defaults
 gnomeprefix_CONFIGURE_ENV=GTKDOC="false"
 gnomeprefix_CONFIGURE_ARGS=--localstatedir=${PREFIX}/share/gnome \
