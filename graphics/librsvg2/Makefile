@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.81 2006/01/11 09:25:45 marcus Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.82 2006/01/12 04:56:49 ahze Exp $
 #
 
 PORTNAME=	librsvg2
@@ -51,7 +51,7 @@ OPTIONS=	MOZILLA_PLUGIN "Enable the SVG browser plug-in" no
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_MOZILLA_PLUGIN)
-USE_GECKO=	firefox mozilla seamonkey thunderbird
+USE_GECKO=	firefox mozilla seamonkey
 .include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 CONFIGURE_ENV+=	MOZILLA_CONFIG=no
 CONFIGURE_ARGS+=--enable-mozilla-plugin=yes
