@@ -3,11 +3,11 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer-plugins-dv80/Makefile,v 1.1 2006/01/20 02:56:06 ahze Exp $
 #
 
 CATEGORIES=	multimedia
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	Gstreamer dv plugin
 

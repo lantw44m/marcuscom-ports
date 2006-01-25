@@ -304,6 +304,7 @@ PLIST_FILES=	${GST_LIB_DIR}/libgstcacasink.so
 .if ${GST_PLUGIN}=="dv"
 LIB_DEPENDS+=	dv.4:${PORTSDIR}/multimedia/libdv
 GST_PLIST_SUFFIX=	dec
+EXTRA_LIBS=	-ldv
 .endif
 
 # dvd (dvdnav dvdread)
