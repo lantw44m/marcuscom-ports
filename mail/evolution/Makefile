@@ -3,11 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.83 2006/01/18 04:53:48 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.84 2006/01/24 21:21:33 marcus Exp $
 #
 
 PORTNAME=	evolution
 PORTVERSION=	2.5.5
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -55,16 +56,11 @@ OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 .include <bsd.port.pre.mk>
 
 .if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
-WITH_GSTREAMER=	yes
 WITH_DBUS=	yes
 .endif
 
 .if exists(${LOCALBASE}/lib/libdbus-glib-1.so)
 WITH_DBUS=	yes
-.endif
-
-.if exists(${X11BASE}/lib/libgstreamer-0.8.so)
-WITH_GSTREAMER=	yes
 .endif
 
 .if defined(WITH_PILOT)
@@ -85,13 +81,6 @@ CONFIGURE_ARGS+=--with-openldap=no
 
 .if defined(WITH_SPAMASSASSIN)
 RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
-.endif
-
-.if defined(WITH_GSTREAMER)
-LIB_DEPENDS+=	gstreamer-0.8.5:${PORTSDIR}/multimedia/gstreamer80
-PLIST_SUB+=	GSTREAMER=""
-.else
-PLIST_SUB+=	GSTREAMER="@comment "
 .endif
 
 .if defined(WITH_DBUS)
