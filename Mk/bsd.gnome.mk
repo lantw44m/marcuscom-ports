@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.356 2006/01/24 02:12:09 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.357 2006/01/24 06:58:19 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -107,7 +107,7 @@ gnomeprefix_CONFIGURE_ARGS=--localstatedir=${PREFIX}/share/gnome \
 			   --with-gconf-source=${GCONF_CONFIG_SOURCE}
 gnomeprefix_USE_GNOME_IMPL=gnomehier
 
-gnometarget_CONFIGURE_TARGET=--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
+gnometarget_CONFIGURE_TARGET=--build=${ARCH}-portbld-freebsd${OSREL}
 
 ESD_CONFIG?=		${LOCALBASE}/bin/esd-config
 esound_LIB_DEPENDS=	esd.2:${PORTSDIR}/audio/esound
