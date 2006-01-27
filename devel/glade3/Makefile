@@ -3,22 +3,20 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.3 2005/06/28 05:40:00 adamw Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.4 2005/07/01 18:00:49 marcus Exp $
 #
 
 PORTNAME=	glade3
-PORTVERSION=	0.0.0.${SNAPDATE}
+PORTVERSION=	2.91.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_LOCAL:S|%SUBDIR%|kwm|} \
-		http://people.freebsd.org/~kwm/distfiles/
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/glade-3/2.91
+DISTNAME=	glade-3-${PORTVERSION}
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	A user interface builder for GTK+/GNOME
 
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
-
-SNAPDATE=	20050617
-WRKSRC=		${WRKDIR}/${PORTNAME}
 
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
