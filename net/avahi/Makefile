@@ -3,10 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.3 2006/01/20 20:00:31 ahze Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.4 2006/01/27 00:25:39 ahze Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.5
+PORTREVISION=	1
 CATEGORIES=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 
@@ -35,7 +36,9 @@ CONFIGURE_ARGS=	--with-distro=freebsd \
 		--enable-compat-howl \
 		--enable-compat-libdns_sd
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
+		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
 CONFLICTS=	howl-[0-9]* mDNSResponder-[0-9]*
 USE_RC_SUBR=	yes
