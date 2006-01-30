@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnomeutils2/Makefile,v 1.77 2006/01/18 23:12:47 marcus Exp $
+#   $MCom: ports/deskutils/gnomeutils2/Makefile,v 1.78 2006/01/30 18:17:48 ahze Exp $
 #
 
 PORTNAME=	gnomeutils2
@@ -33,12 +33,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAN1=		gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1
 GCONF_SCHEMAS=	gnome-dictionary.schemas gnome-screenshot.schemas \
 		gnome-search-tool.schemas logview.schemas
-
-post-extract:
-	@${FIND} ${WRKSRC} -name "*.[ch]" | ${XARGS} ${REINPLACE_CMD} -e \
-		's|$$||g'
-
-post-patch:
-	@${FIND} ${WRKSRC} -type f | ${XARGS} ${TOUCH} -f
 
 .include <bsd.port.mk>
