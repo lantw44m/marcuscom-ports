@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.82 2006/01/20 02:55:48 ahze Exp $
+#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.83 2006/01/21 08:06:36 marcus Exp $
 #
 
 PORTNAME=	gnomemedia2
-PORTVERSION=	2.13.7
+PORTVERSION=	2.13.90
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-media/2.13
@@ -23,7 +23,6 @@ USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
-USE_REINPLACE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
 		gail nautiluscdburner
@@ -41,9 +40,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|[$$][(]CDROM_HOST[)]|freebsd|g' \
 		${WRKSRC}/gnome-cd/Makefile.in
 .if ${OSVERSION} > 501107
-	@${REINPLACE_CMD} -e 's|%%CDROM%%|acd0|' ${WRKSRC}/configure
-.else
-	@${REINPLACE_CMD} -e 's|%%CDROM%%|acd0c|' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|acd0c|acd0|' ${WRKSRC}/configure
 .endif
 
 .include <bsd.port.post.mk>
