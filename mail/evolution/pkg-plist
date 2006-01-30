@@ -360,7 +360,6 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-gw-account-setup.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-itip-formatter.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mail-account-disable.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mail-to-task.eplug
-lib/evolution/%%VERSION%%/plugins/org-gnome-mail-to-task.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-mailing-list-actions.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mailing-list-actions.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-mark-all-read.eplug
@@ -491,6 +490,7 @@ share/gnome/evolution/%%VERSION%%/ui/evolution-mail-global.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-mail-list.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-mail-message.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-mail-messagedisplay.xml
+share/gnome/evolution/%%VERSION%%/ui/evolution-memo-editor.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-memos.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-message-composer.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-signature-editor.xml
@@ -651,7 +651,10 @@ share/locale/vi/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/wa/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/xh/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/zh_HK/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrm share/gnome/omf/evolution

@@ -3,12 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/mail/evolution/Makefile,v 1.86 2006/01/25 01:30:40 marcus Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.5.5
-PORTREVISION=	1
+PORTVERSION=	2.5.90
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -118,8 +117,6 @@ post-patch:
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}| ; \
 		s|%%EVO_VERSION%%|${EVO_VERSION}|' \
 		${FILESDIR}/evolibs.sh > ${WRKDIR}/evolibs.sh
-	@${CP} ${FILESDIR}/org-gnome-evolution-mail-attachments-import-ics.eplug.xml \
-		${WRKSRC}/plugins/import-ics-attachments
 
 post-install:
 	@${LN} -sf ${PREFIX}/bin/evolution-${EVO_VERSION} \
