@@ -62,15 +62,31 @@ share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-preferences-print.p
 share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-preferences-source.png
 share/gnome/help/gnome-dictionary/C/gnome-dictionary.xml
 share/gnome/help/gnome-dictionary/C/legal.xml
+share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-add-source.png
+share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-applet-window.png
+share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-applet.png
+share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-application.png
+share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-find.png
+share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-lookup.png
+share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-preferences-print.png
+share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-preferences-source.png
+share/gnome/help/gnome-dictionary/es/gnome-dictionary.xml
 share/gnome/help/gnome-search-tool/C/figures/gnome-search-tool_window.png
 share/gnome/help/gnome-search-tool/C/gnome-search-tool.xml
 share/gnome/help/gnome-search-tool/C/legal.xml
+share/gnome/help/gnome-search-tool/es/figures/gnome-search-tool_window.png
+share/gnome/help/gnome-search-tool/es/gnome-search-tool.xml
 share/gnome/help/gnome-system-log/C/figures/syslog_window.png
 share/gnome/help/gnome-system-log/C/gnome-system-log.xml
 share/gnome/help/gnome-system-log/C/legal.xml
+share/gnome/help/gnome-system-log/es/figures/syslog_window.png
+share/gnome/help/gnome-system-log/es/gnome-system-log.xml
 share/gnome/omf/gnome-dictionary/gnome-dictionary-C.omf
+share/gnome/omf/gnome-dictionary/gnome-dictionary-es.omf
 share/gnome/omf/gnome-search-tool/gnome-search-tool-C.omf
+share/gnome/omf/gnome-search-tool/gnome-search-tool-es.omf
 share/gnome/omf/gnome-system-log/gnome-system-log-C.omf
+share/gnome/omf/gnome-system-log/gnome-system-log-es.omf
 share/gnome/pixmaps/gnome-dictionary.png
 share/gnome/pixmaps/gsearchtool/thumbnail_frame.png
 share/locale/am/LC_MESSAGES/gnome-utils-2.0.mo
@@ -145,12 +161,18 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/omf/gnome-system-log
 @dirrm share/gnome/omf/gnome-search-tool
 @dirrm share/gnome/omf/gnome-dictionary
+@dirrm share/gnome/help/gnome-system-log/es/figures
+@dirrm share/gnome/help/gnome-system-log/es
 @dirrm share/gnome/help/gnome-system-log/C/figures
 @dirrm share/gnome/help/gnome-system-log/C
 @dirrm share/gnome/help/gnome-system-log
+@dirrm share/gnome/help/gnome-search-tool/es/figures
+@dirrm share/gnome/help/gnome-search-tool/es
 @dirrm share/gnome/help/gnome-search-tool/C/figures
 @dirrm share/gnome/help/gnome-search-tool/C
 @dirrm share/gnome/help/gnome-search-tool
+@dirrm share/gnome/help/gnome-dictionary/es/figures
+@dirrm share/gnome/help/gnome-dictionary/es
 @dirrm share/gnome/help/gnome-dictionary/C/figures
 @dirrm share/gnome/help/gnome-dictionary/C
 @dirrm share/gnome/help/gnome-dictionary
