@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	totem
-PORTVERSION=	1.3.1
+PORTVERSION=	1.3.90
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -59,8 +59,8 @@ CONFIGURE_ARGS+=--disable-mozilla
 .if defined(WITH_GSTREAMER)
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-CONFIGURE_ARGS+=--enable-gstreamer
-USE_GSTREAMER80+=	gnomevfs core gconf
+CONFIGURE_ARGS+=--enable-gstreamer=0.10
+USE_GSTREAMER+=	gnomevfs core gconf
 WITHOUT_DVDNAV=	yes
 PLIST_SUB+=	GSTREAMER=""
 .else
