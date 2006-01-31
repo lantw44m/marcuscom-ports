@@ -3,11 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/Makefile,v 1.10 2006/01/17 02:14:29 ahze Exp $
+#    $MCom: ports/x11/gdm/Makefile,v 1.11 2006/01/20 21:41:25 marcus Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	2.13.0.6
+PORTVERSION=	2.13.0.7
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=		sources/${PORTNAME:S/2$//}/2.13
@@ -21,18 +21,18 @@ USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_RC_SUBR=	gdm.sh
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnomehier libgnomeui librsvg2 gnomedocutils
+USE_GNOME=	gnomehack intlhack gnomehier libgnomeui librsvg2 gnomedocutils \
+		gnomeprefix
 USE_AUTOTOOLS=	libtool:15
 USE_REINPLACE=	yes
-CONFIGURE_ARGS=	--localstatedir=/var --datadir=${PREFIX}/share/gnome \
-		--with-html-dir=${GNOME_HTML_DIR} \
-		--disable-gtk-doc \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
 
 GDMDIR?=	${PREFIX}/etc/gdm
 PKGMESSAGE=	${WRKDIR}/pkg-message
+
+GNOME_LOCALSTATEDIR=	/var
 
 MAN1=		gdm.1
 

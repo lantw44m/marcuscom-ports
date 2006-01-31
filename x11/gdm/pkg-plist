@@ -52,25 +52,18 @@ share/gnome/gdm/themes/circles/options.png
 share/gnome/gdm/themes/circles/screenshot.png
 share/gnome/gdm/themes/happygnome-list/GdmGreeterTheme.desktop
 share/gnome/gdm/themes/happygnome-list/background.svg
-share/gnome/gdm/themes/happygnome-list/disconnect.png
 share/gnome/gdm/themes/happygnome-list/gnome-logo.png
 share/gnome/gdm/themes/happygnome-list/happygnome.xml
 share/gnome/gdm/themes/happygnome-list/options.png
 share/gnome/gdm/themes/happygnome-list/screenshot.png
-share/gnome/gdm/themes/happygnome-list/session.png
-share/gnome/gdm/themes/happygnome-list/system.png
 share/gnome/gdm/themes/happygnome/GdmGreeterTheme.desktop
 share/gnome/gdm/themes/happygnome/background.svg
-share/gnome/gdm/themes/happygnome/disconnect.png
 share/gnome/gdm/themes/happygnome/gnome-logo.png
 share/gnome/gdm/themes/happygnome/happygnome.xml
 share/gnome/gdm/themes/happygnome/options.png
 share/gnome/gdm/themes/happygnome/screenshot.png
-share/gnome/gdm/themes/happygnome/session.png
-share/gnome/gdm/themes/happygnome/system.png
-share/gnome/gnome/help/gdm/C/gdm.xml
-share/gnome/gnome/help/gdm/C/legal.xml
-share/gnome/gnome/help/gdm/es/gdm.xml
+share/gnome/help/gdm/C/gdm.xml
+share/gnome/help/gdm/C/legal.xml
 share/gnome/help/gdm/de/figures/gdm_window.png
 share/gnome/help/gdm/de/gdm.xml
 share/gnome/help/gdm/de/legal.xml
@@ -256,12 +249,8 @@ share/locale/zu/LC_MESSAGES/gdm.mo
 @dirrm share/gnome/help/gdm/es
 @dirrm share/gnome/help/gdm/de/figures
 @dirrm share/gnome/help/gdm/de
+@dirrm share/gnome/help/gdm/C
 @dirrm share/gnome/help/gdm
-@dirrm share/gnome/gnome/help/gdm/es
-@dirrm share/gnome/gnome/help/gdm/C
-@dirrm share/gnome/gnome/help/gdm
-@dirrm share/gnome/gnome/help
-@dirrm share/gnome/gnome
 @dirrm share/gnome/gdm/themes/happygnome-list
 @dirrm share/gnome/gdm/themes/happygnome
 @dirrm share/gnome/gdm/themes/circles
