@@ -4,7 +4,6 @@ lib/nautilus/extensions-1.0/libnautilus-fileroller.so
 %%PORTDOCS%%%%DOCSDIR%%/NEWS
 %%PORTDOCS%%%%DOCSDIR%%/README
 %%PORTDOCS%%%%DOCSDIR%%/TODO
-share/gnome/application-registry/file-roller.applications
 share/gnome/applications/file-roller.desktop
 share/gnome/file-roller/glade/file-roller-extract.glade
 share/gnome/file-roller/glade/file-roller.glade
@@ -87,8 +86,6 @@ share/gnome/help/file-roller/zh_TW/figures/file-roller_main_window.png
 share/gnome/help/file-roller/zh_TW/figures/file-roller_rightarrow.png
 share/gnome/help/file-roller/zh_TW/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/zh_TW/file-roller.xml
-share/gnome/mime-info/file-roller.keys
-share/gnome/mime-info/file-roller.mime
 share/gnome/omf/file-roller/file-roller-C.omf
 share/gnome/omf/file-roller/file-roller-de.omf
 share/gnome/omf/file-roller/file-roller-es.omf
