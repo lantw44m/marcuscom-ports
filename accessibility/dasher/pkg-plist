@@ -167,12 +167,14 @@ share/gnome/dasher/training_hiragana83_JP.txt
 share/gnome/dasher/training_hungarian_HU.txt
 share/gnome/dasher/training_italian_IT.txt
 share/gnome/dasher/training_mongolian_MN.txt
+share/gnome/dasher/training_persian_IR.txt
 share/gnome/dasher/training_polish_PL.txt
 share/gnome/dasher/training_portuguese_BR.txt
 share/gnome/dasher/training_russian_RU.txt
 share/gnome/dasher/training_spanish_ES.txt
 share/gnome/dasher/training_swahili_KE.txt
 share/gnome/dasher/training_swedish_SE.txt
+share/gnome/dasher/training_turkish_TR.txt
 share/gnome/dasher/training_welsh_GB.txt
 share/gnome/help/dasher/C/dasher.xml
 share/gnome/help/dasher/C/figures/figure2.png
@@ -192,9 +194,9 @@ share/gnome/help/dasher/eu/figures/prefs3.png
 share/gnome/help/dasher/eu/figures/prefs4.png
 share/gnome/help/dasher/eu/figures/prefs5.png
 share/gnome/help/dasher/eu/version.xml
-share/gnome/icons/dasher.png
 share/gnome/omf/dasher/dasher-C.omf
 share/gnome/omf/dasher/dasher-eu.omf
+share/icons/hicolor/48x48/apps/dasher.png
 share/locale/ar/LC_MESSAGES/dasher.mo
 share/locale/az/LC_MESSAGES/dasher.mo
 share/locale/be/LC_MESSAGES/dasher.mo

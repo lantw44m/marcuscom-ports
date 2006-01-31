@@ -3,11 +3,11 @@
 # Whom:					lewiz <purple@lewiz.net>
 #
 # $FreeBSD: ports/accessibility/dasher/Makefile,v 1.27 2005/11/19 06:02:16 ade Exp $
-#   $MCom: ports/accessibility/dasher/Makefile,v 1.18 2005/10/29 22:31:15 marcus Exp $
+#   $MCom: ports/accessibility/dasher/Makefile,v 1.20 2006/01/17 06:56:28 marcus Exp $
 #
 
 PORTNAME=	dasher
-PORTVERSION=	3.99.1
+PORTVERSION=	3.99.2
 PORTEPOCH=	1
 CATEGORIES=	accessibility editors x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -28,7 +28,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier libgnomeui atspi \
 WANT_GNOME=	yes
 USE_AUTOTOOLS=	libtool:15:inc
 INSTALLS_OMF=	yes
-USE_REINPLACE=	yes
+INSTALLS_ICONS=	yes
 USE_GCC=	3.4+
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
@@ -39,8 +39,9 @@ MAN1=		dasher.1
 
 .if ${HAVE_GNOME:Mgnomespeech}!=""
 USE_GNOME+=	gnomespeech
+CONFIGURE_ARGS+=--enable-speech
 .else
-CONFIGURE_ARGS+=--without-speech
+CONFIGURE_ARGS+=--disable-speech
 .endif
 
 post-patch:
