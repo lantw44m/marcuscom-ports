@@ -2,12 +2,12 @@
 # Date created:				14 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/gedit/Makefile,v 1.54 2005/11/05 04:53:20 marcus Exp $
-#   $MCom: ports/editors/gedit/Makefile,v 1.18 2006/01/10 19:45:26 adamw Exp $
+# $FreeBSD$
+#   $MCom: ports/editors/gedit/Makefile,v 1.19 2006/01/21 06:50:14 marcus Exp $
 #
 
 PORTNAME=	gedit
-PORTVERSION=	2.13.4
+PORTVERSION=	2.13.90
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
