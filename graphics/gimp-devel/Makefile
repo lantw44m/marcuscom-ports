@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.9 2005/10/01 07:55:05 marcus Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.10 2005/12/28 22:52:57 adamw Exp $
 #
 
 PORTNAME=	gimp
@@ -34,7 +34,6 @@ CONFLICTS=	gimp-1.* gimp-2.2.*
 
 SHLIBVER?=	0
 
-USE_REINPLACE=	yes
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_XPM=	yes

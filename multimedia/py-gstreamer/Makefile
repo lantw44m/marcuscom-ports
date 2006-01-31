@@ -29,7 +29,6 @@ USE_GNOME=	pygtk2 \
 		pkgconfig
 USE_GSTREAMER80=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_REINPLACE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${X11BASE}/include" \
 		LDFLAGS="-L${X11BASE}"
 

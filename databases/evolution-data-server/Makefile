@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.70 2006/01/18 03:22:19 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.71 2006/01/30 18:55:26 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -27,7 +27,6 @@ USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget libgnomeui \
 		ltverhack
 USE_OPENLDAP=	yes
-USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static \

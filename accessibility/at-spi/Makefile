@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi/Makefile,v 1.31 2006/01/30 22:37:38 ahze Exp $
+#   $MCom: ports/accessibility/at-spi/Makefile,v 1.32 2006/01/31 19:56:01 marcus Exp $
 #
 
 PORTNAME=	at-spi
@@ -23,7 +23,6 @@ USE_GNOME=	gnomeprefix gnomehack gnomehier intltool gail libbonobo \
 USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_REINPLACE=	yes
 CONFIGURE_ARGS=	--enable-static
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

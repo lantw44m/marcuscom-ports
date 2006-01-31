@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/gnomevfs2/Makefile,v 1.102 2005/11/05 04:53:17 marcus Exp $
-#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.123 2006/01/16 07:17:43 marcus Exp $
+#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.124 2006/01/17 04:04:38 marcus Exp $
 #
 
 PORTNAME=	gnomevfs2
@@ -24,7 +24,6 @@ USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomemimedata gconf2 \
 		libbonobo ltverhack
-USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_OPENSSL=	yes
 INSTALLS_SHLIB=	yes

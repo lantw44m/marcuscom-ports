@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.95 2006/01/22 16:11:38 ahze Exp $
+#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.96 2006/01/31 05:49:41 marcus Exp $
 #
 
 PORTNAME=	gnomecontrolcenter2
@@ -21,7 +21,6 @@ LIB_DEPENDS=	xklavier.10:${PORTSDIR}/x11/libxklavier
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_REINPLACE=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GSTREAMER=	good

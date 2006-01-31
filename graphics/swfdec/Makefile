@@ -18,7 +18,6 @@ COMMENT=	Flash Rendering Library
 LIB_DEPENDS=	mad.2:${PORTSDIR}/audio/libmad \
 		oil-0.3.1:${PORTSDIR}/devel/liboil
 
-USE_REINPLACE=	yes
 USE_X_PREFIX=	yes
 USE_SDL=	sdl
 USE_GNOME=	gnomehack gtk20 libartlgpl2

@@ -18,7 +18,6 @@ COMMENT?=	A Xine-based video player for the Gnome 2 Desktop
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
-USE_REINPLACE=	yes
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomedesktop desktopfileutils \

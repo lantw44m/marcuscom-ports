@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/deskutils/deskbar-applet/Makefile,v 1.8 2006/01/17 06:11:44 marcus Exp $
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.4 2005/11/02 01:42:00 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.6 2006/01/31 19:48:08 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
@@ -22,7 +22,6 @@ USE_GNOME=	gnomeprefix gnomehack pygnomedesktop intlhack
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_REINPLACE=	yes
 CONFIGURE_ARGS=	--disable-beagle
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnometerminal/Makefile,v 1.57 2006/01/22 00:51:16 marcus Exp $
+#   $MCom: ports/x11/gnometerminal/Makefile,v 1.58 2006/01/31 06:50:10 marcus Exp $
 #
 
 PORTNAME=	gnometerminal
@@ -20,7 +20,6 @@ COMMENT=	Terminal component for the GNOME 2 Desktop
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
-USE_REINPLACE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui vte
 USE_AUTOTOOLS=	libtool:15

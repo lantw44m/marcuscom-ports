@@ -27,7 +27,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
 		GST_INSPECT="${X11BASE}/bin/gst-inspect-0.8"
 GCONF_SCHEMAS=	jamboree.schemas
-USE_REINPLACE=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^\(@GCONF_SCHEMAS_INSTALL_TRUE@\)        |\1	|' \

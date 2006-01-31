@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.17 2006/01/17 00:56:51 ahze Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.18 2006/01/30 04:08:23 ahze Exp $
 #
 
 PORTNAME=	eog
@@ -18,7 +18,6 @@ COMMENT=	The Eye Of Gnome image viewer
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprintui \
 		librsvg2 desktopfileutils gnomedesktop
 USE_X_PREFIX=	yes

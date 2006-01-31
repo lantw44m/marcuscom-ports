@@ -24,7 +24,6 @@ USE_PYTHON=		2.4+
 USE_BZIP2=		yes
 USE_X_PREFIX=		yes
 USE_GSTREAMER80=		shout2 theora ogg
-USE_REINPLACE=		yes
 
 .include <bsd.port.pre.mk>
 

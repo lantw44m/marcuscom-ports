@@ -3,7 +3,7 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/sound-juicer/Makefile,v 1.36 2006/01/20 17:54:34 ahze Exp $
+#   $MCom: ports/audio/sound-juicer/Makefile,v 1.37 2006/01/30 21:55:08 marcus Exp $
 #
 
 PORTNAME=	sound-juicer
@@ -24,7 +24,6 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-USE_REINPLACE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui nautiluscdburner \
 		gnomedocutils
 USE_GSTREAMER=	cdparanoia vorbis flac gconf

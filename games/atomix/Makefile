@@ -3,7 +3,7 @@
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
 # $FreeBSD: ports/games/atomix/Makefile,v 1.26 2005/11/17 22:47:55 marcus Exp $
-#   $MCom: ports/games/atomix/Makefile,v 1.2 2005/12/14 14:08:49 marcus Exp $
+#   $MCom: ports/games/atomix/Makefile,v 1.3 2006/01/06 17:30:06 marcus Exp $
 #
 
 PORTNAME=	atomix
@@ -19,7 +19,6 @@ COMMENT=	A yet another little mind game
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.16 2006/01/19 01:35:38 ahze Exp $
+#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.17 2006/01/31 11:44:20 ahze Exp $
 #
 
 PORTNAME=	gtk-engines2
@@ -21,7 +21,6 @@ CONFLICTS=	gtk-smooth-engine-[0-9]* clearlooks-[0-9]*
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack gtk20
 PLIST_SUB=	GTK_VERSION="2.4.0"

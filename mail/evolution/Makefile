@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.86 2006/01/25 01:30:40 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.87 2006/01/30 20:52:21 marcus Exp $
 #
 
 PORTNAME=	evolution
@@ -25,7 +25,6 @@ USE_BISON=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver \
 		gtkhtml3 desktopfileutils
-USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_OMF=	yes
 CONFIGURE_ARGS=	--enable-nss=yes \

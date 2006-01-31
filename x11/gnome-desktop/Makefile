@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomedesktop/Makefile,v 1.79 2006/01/02 23:43:57 ahze Exp $
+#   $MCom: ports/x11/gnomedesktop/Makefile,v 1.80 2006/01/27 19:05:50 ahze Exp $
 #
 
 PORTNAME=	gnomedesktop
@@ -20,7 +20,6 @@ COMMENT=	Additional UI API for GNOME 2
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_XPM=	yes
-USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomedocutils \
 		ltverhack
 GNOME_DESKTOP_VERSION=2

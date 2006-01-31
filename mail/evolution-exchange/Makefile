@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.46 2006/01/18 16:34:17 marcus Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.47 2006/01/30 21:10:39 marcus Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -26,7 +26,6 @@ USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
 USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnometarget
-USE_REINPLACE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-openldap=${LOCALBASE} \

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.65 2006/01/09 21:08:02 marcus Exp $
+#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.66 2006/01/31 05:18:23 marcus Exp $
 #
 
 PORTNAME=	gnopernicus
@@ -22,7 +22,6 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
-USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui atspi gnomespeech
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

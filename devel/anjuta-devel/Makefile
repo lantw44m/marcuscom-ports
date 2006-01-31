@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.7 2005/10/27 21:20:31 mezz Exp $
+#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.8 2005/11/18 02:06:48 ahze Exp $
 #
 
 PORTNAME=	anjuta
@@ -34,7 +34,6 @@ CONFLICTS=	anjuta-1.2.*
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeprintui libgnomeui vte
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.37 2006/01/12 21:05:14 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.38 2006/01/20 00:15:29 ahze Exp $
 #
 
 PORTNAME=	evince
@@ -19,7 +19,6 @@ LIB_DEPENDS=	poppler-glib.0:${PORTSDIR}/graphics/poppler-gtk
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_REINPLACE=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GHOSTSCRIPT=yes

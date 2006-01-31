@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile,v 1.31 2005/11/24 01:43:42 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile,v 1.33 2006/01/02 22:16:25 ahze Exp $
 #
 
 PORTNAME=	mozilla
@@ -26,7 +26,6 @@ USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 WANT_GNOME=	yes
-USE_REINPLACE=	yes
 HAS_CONFIGURE=	yes
 MAKE_ENV=	LD_LIBRARY_PATH=${WRKSRC}/dist/bin
 ALL_TARGET=	default

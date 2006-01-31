@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD: ports/x11-toolkits/pango/Makefile,v 1.72 2005/11/30 21:11:18 ahze Exp $
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.47 2006/01/18 16:40:08 marcus Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.48 2006/01/31 19:32:54 marcus Exp $
 #
 
 PORTNAME=	pango
@@ -26,7 +26,6 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack glib20 ltverhack

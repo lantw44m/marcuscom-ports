@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.82 2006/01/17 04:17:59 marcus Exp $
+#   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.83 2006/01/31 00:27:41 ahze Exp $
 #
 
 PORTNAME=	nautilus-cd-burner
@@ -18,7 +18,6 @@ COMMENT=	CD burner view for Nautilus
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_REINPLACE=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack nautilus2

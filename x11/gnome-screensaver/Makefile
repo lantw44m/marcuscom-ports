@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.25 2006/01/17 02:37:38 ahze Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.26 2006/01/31 00:35:21 ahze Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -21,7 +21,6 @@ RUN_DEPENDS=	xscreensaver-gl-helper:${PORTSDIR}/x11/xscreensaver-gnome-hacks
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomemenus
 CONFIGURE_ARGS=	--disable-pam \

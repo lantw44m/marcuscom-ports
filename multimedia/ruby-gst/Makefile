@@ -3,7 +3,7 @@
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/ruby-gst/Makefile,v 1.2 2005/10/17 07:05:41 mezz Exp $
+#   $MCom: ports/multimedia/ruby-gst/Makefile,v 1.4 2006/01/20 02:56:12 ahze Exp $
 #
 
 PORTNAME=	gst
@@ -22,7 +22,6 @@ RUN_DEPENDS=	${RUBY_SITEARCHLIBDIR}/glib2.so:${PORTSDIR}/devel/ruby-glib2
 
 USE_RUBY=	yes
 USE_GSTREAMER80=	core
-USE_REINPLACE=	yes
 USE_RUBY_EXTCONF=	yes
 
 .include "${.CURDIR}/../../x11/ruby-gnome2/Makefile.common"

@@ -3,7 +3,7 @@
 # Whom:				Chia-liang Kao <clkao@CirX.ORG>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/ORBit2/Makefile,v 1.42 2005/11/08 18:34:39 ahze Exp $
+#    $MCom: ports/devel/ORBit2/Makefile,v 1.43 2005/11/23 22:52:12 pav Exp $
 #
 
 PORTNAME=	ORBit2
@@ -20,7 +20,6 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack libidl ltverhack

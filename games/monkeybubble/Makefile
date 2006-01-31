@@ -16,7 +16,6 @@ MAINTAINER=	adamw@FreeBSD.org
 COMMENT=	GTK2 Puzzle Bobble clone with monkeys
 
 USE_X_PREFIX=	yes
-USE_REINPLACE=	yes
 HAS_MONKEYS=	yes
 
 USE_AUTOTOOLS=	libtool:15

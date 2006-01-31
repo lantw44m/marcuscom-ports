@@ -22,7 +22,6 @@ RUN_DEPENDS=	gnonlin-config:${PORTSDIR}/multimedia/gnonlin \
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_REINPLACE=	yes
 USE_GNOME=	gnometarget pygtk2 pkgconfig pygnome2
 USE_GSTREAMER80=	yes
 USE_AUTOTOOLS=	libtool:15

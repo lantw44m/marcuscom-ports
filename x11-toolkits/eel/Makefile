@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/eel/Makefile,v 1.25 2006/01/16 17:58:00 ahze Exp $
+#   $MCom: ports/x11-toolkits/eel/Makefile,v 1.26 2006/01/31 12:23:09 ahze Exp $
 #
 
 PORTNAME=	eel
@@ -22,7 +22,6 @@ USE_X_PREFIX=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack gail gnomedesktop gnomemenus ltverhack
 USE_AUTOTOOLS=	libtool:15
-USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-shared --enable-static
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer-plugins80/Makefile,v 1.55 2006/01/20 02:56:08 ahze Exp $
 #
 
 PORTNAME=	gstreamer
@@ -34,7 +34,6 @@ USE_GNOME+=	gnomehack \
 		gnomeprefix \
 		gnometarget \
 		pkgconfig
-USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 GST_PLUGIN?=	base
 

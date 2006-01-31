@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/libgtop2/Makefile,v 1.96 2005/11/29 23:49:42 marcus Exp $
-#   $MCom: ports/devel/libgtop2/Makefile,v 1.55 2006/01/20 21:31:07 marcus Exp $
+#   $MCom: ports/devel/libgtop2/Makefile,v 1.56 2006/01/23 19:22:43 marcus Exp $
 #
 
 PORTNAME=	libgtop2
@@ -24,7 +24,6 @@ USE_PERL5=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20 ltverhack
-USE_REINPLACE=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

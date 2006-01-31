@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.75 2006/01/19 01:37:35 ahze Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.76 2006/01/31 12:19:02 ahze Exp $
 #
 
 PORTNAME=	yelp
@@ -21,7 +21,6 @@ USE_GECKO=	firefox mozilla seamonkey
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_REINPLACE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomedocutils \
 		libgnomeprintui
 USE_AUTOTOOLS=	libtool:15

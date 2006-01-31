@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.77 2005/11/16 16:14:58 kwm Exp $
+#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.78 2006/01/30 21:03:34 marcus Exp $
 #
 
 PORTNAME=	gnome-themes
@@ -23,7 +23,6 @@ CONFLICTS=	clearlooks-metacity-0.*
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_REINPLACE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes

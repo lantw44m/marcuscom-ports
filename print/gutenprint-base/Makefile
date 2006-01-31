@@ -3,7 +3,7 @@
 # Whom: dgilbert@velocet.ca
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/print/gutenprint/Makefile,v 1.1 2006/01/25 23:03:16 ahze Exp $
 
 PORTNAME=	gutenprint
 DISTVERSION=	5.0.0-rc2
@@ -19,7 +19,6 @@ CONFLICTS=	gimp-print-[0-9]*
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GETOPT_LONG=	yes
-USE_REINPLACE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnometarget
 USE_AUTOTOOLS=	libtool:15

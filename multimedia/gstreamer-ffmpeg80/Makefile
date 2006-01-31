@@ -18,7 +18,6 @@ COMMENT=	GStreamer plug-in for manipulating MPEG video streams
 
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
-USE_REINPLACE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget
 USE_GSTREAMER80=	yes

@@ -3,7 +3,7 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11/fast-user-switch-applet/Makefile,v 1.2 2006/01/17 00:53:55 ahze Exp $
 
 PORTNAME=	fast-user-switch-applet
 PORTVERSION=	2.13.5
@@ -21,7 +21,6 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gtk20 gnomepanel
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--with-gdm-config=${X11BASE}/etc/gdm/gdm.conf
-USE_REINPLACE=	yes
 
 GCONF_SCHEMAS=	fast-user-switch-applet.schemas
 INSTALLS_OMF=	yes
