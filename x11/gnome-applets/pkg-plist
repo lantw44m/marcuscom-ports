@@ -721,6 +721,7 @@ share/locale/is/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/ku/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ky/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-applets-2.0.mo
@@ -757,22 +758,24 @@ share/locale/xh/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
-@unexec /bin/rmdir %D/share/locale/zh_HK/LC_MESSAGES 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/zh_HK 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/xh/LC_MESSAGES 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/xh 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/te/LC_MESSAGES 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/te 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/rw/LC_MESSAGES 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/rw 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/ky/LC_MESSAGES 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/ky 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/hy/LC_MESSAGES 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/locale/hy 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/icons/hicolor/48x48/apps 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/icons/hicolor/48x48 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/icons/hicolor 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/share/icons 2>/dev/null || /usr/bin/true
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/xh/LC_MESSAGES
+@dirrmtry share/locale/xh
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/ku/LC_MESSAGES
+@dirrmtry share/locale/ku
+@dirrmtry share/locale/ky/LC_MESSAGES
+@dirrmtry share/locale/ky
+@dirrmtry share/locale/hy/LC_MESSAGES
+@dirrmtry share/locale/hy
+@dirrmtry share/icons/hicolor/48x48/apps
+@dirrmtry share/icons/hicolor/48x48
+@dirrmtry share/icons/hicolor
+@dirrmtry share/icons
 @dirrm share/gnome/pixmaps/stickynotes
 %%CPUFREQ%%@dirrm share/gnome/pixmaps/cpufreq-applet
 @dirrm share/gnome/pixmaps/accessx-status-applet
