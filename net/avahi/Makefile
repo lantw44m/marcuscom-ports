@@ -3,18 +3,18 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.5 2006/01/29 18:45:07 marcus Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.6 2006/01/30 18:11:12 marcus Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Service discovery on a local network
 
-LIB_DEPENDS=	expat.5:${PORTSDIR}/textproc/expat2 \
+LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2 \
 		daemon.2:${PORTSDIR}/devel/libdaemon \
 		dbus-1.2:${PORTSDIR}/devel/dbus \
 		gdbm.3:${PORTSDIR}/databases/gdbm
