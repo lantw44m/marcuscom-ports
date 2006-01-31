@@ -93,6 +93,7 @@ share/gnome/idl/at-spi-1.0/Accessibility_Registry.idl
 share/gnome/idl/at-spi-1.0/Accessibility_Relation.idl
 share/gnome/idl/at-spi-1.0/Accessibility_Role.idl
 share/gnome/idl/at-spi-1.0/Accessibility_Selection.idl
+share/gnome/idl/at-spi-1.0/Accessibility_Selector.idl
 share/gnome/idl/at-spi-1.0/Accessibility_State.idl
 share/gnome/idl/at-spi-1.0/Accessibility_StreamableContent.idl
 share/gnome/idl/at-spi-1.0/Accessibility_Table.idl
