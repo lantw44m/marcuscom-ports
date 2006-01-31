@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.357 2006/01/24 06:58:19 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.358 2006/01/27 21:43:54 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -98,8 +98,9 @@ GNOME_HTML_DIR?=	${PREFIX}/share/doc
 GCONF_CONFIG_OPTIONS?=	merged
 GCONF_CONFIG_DIRECTORY?=etc/gconf/gconf.xml.defaults
 GCONF_CONFIG_SOURCE?=xml:${GCONF_CONFIG_OPTIONS}:${PREFIX}/${GCONF_CONFIG_DIRECTORY}
+GNOME_LOCALSTATEDIR?=	${PREFIX}/share/gnome
 gnomeprefix_CONFIGURE_ENV=GTKDOC="false"
-gnomeprefix_CONFIGURE_ARGS=--localstatedir=${PREFIX}/share/gnome \
+gnomeprefix_CONFIGURE_ARGS=--localstatedir=${GNOME_LOCALSTATEDIR} \
 			   --datadir=${PREFIX}/share/gnome \
 			   --with-html-dir=${GNOME_HTML_DIR} \
 			   --with-help-dir=${PREFIX}/share/gnome/help \
