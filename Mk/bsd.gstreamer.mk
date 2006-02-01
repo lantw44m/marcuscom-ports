@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.20 2006/01/22 20:05:25 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.21 2006/01/23 23:25:22 marcus Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -18,7 +18,10 @@ Gstreamer_Pre_Include=		bsd.gstreamer.mk
 
 # Ports can use the following:
 #
-# USE_GSTREAMER=	dvd lame flac
+#  For Gstreamer 0.10:
+# USE_GSTREAMER=	lame faac ffmpeg
+#  For Gstreamer 0.8:
+# USE_GSTREAMER80=	dvd lame flac
 #
 # If you want to use USE_GSTREAMER after <bsd.port.pre.mk>
 # you must follow one of the examples listed below
