@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.44 2006/01/20 02:55:57 ahze Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.45 2006/01/24 21:17:56 ahze Exp $
 #
 
 PORTNAME=	rhythmbox
-PORTVERSION=	0.9.2
-PORTREVISION=	3
+PORTVERSION=	0.9.3
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.9
@@ -27,7 +27,7 @@ USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui nautiluscdburner
-USE_GSTREAMER80=	flac mad gnomevfs gconf jpeg
+USE_GSTREAMER=	flac mad gnomevfs gconf jpeg
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--enable-nautilus-menu
 CONFIGURE_ENV=	LIBS="-lm" \
@@ -38,7 +38,8 @@ GCONF_SCHEMAS=	rhythmbox.schemas
 
 OPTIONS=	IPOD "Enable iPod support" off \
 		DAAP "Enable iTunes music sharing" off \
-		FAAD "Enable FAAD decoder support" off
+		FAAD "Enable FAAD decoder support" off \
+		NOTIFY "Enable libnotify support" on
 
 .include <bsd.port.pre.mk>
 
@@ -55,13 +56,13 @@ WITH_VORBIS=	yes
 .endif
 
 .ifdef (WITH_VORBIS)
-USE_GSTREAMER80+=		vorbis
+USE_GSTREAMER+=		vorbis
 .else
 CONFIGURE_ARGS+=	--disable-vorbis --disable-vorbistest
 .endif
 
 .if defined(WITH_FAAD)
-USE_GSTREAMER80+=		faad
+USE_GSTREAMER+=		faad
 .endif
 
 .if defined(WITH_DAAP)
@@ -73,6 +74,12 @@ LIB_DEPENDS+=		soup-2.2.8:${PORTSDIR}/devel/libsoup \
 LIB_DEPENDS+=		avahi-client:${PORTSDIR}/net/avahi
 .endif
 CONFIGURE_ARGS+=	--disable-daap
+.endif
+
+.if !defined(WITHOUT_NOTIFY)
+LIB_DEPENDS+=		notify.1:${PORTSDIR}/devel/libnotify
+.else
+CONFIGURE_ARGS+=	--disable-libnotify
 .endif
 
 pre-everything::
