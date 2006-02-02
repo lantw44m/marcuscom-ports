@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.38 2006/01/20 00:15:29 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.39 2006/01/31 20:36:49 marcus Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	0.5.0
+PORTREVISION=	1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.5
@@ -33,7 +34,7 @@ GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas
 OPTIONS=	DVI		"Enable DVI viewer support"		off \
 		T1LIB		"Enable T1LIB for TYPE1 fonts to DVI (Enables DVI)"	off \
 		NAUTILUS	"Enable Nautilus plugin"		on  \
-		DBUS		"Enable D-BUS support"			off \
+		DBUS		"Enable D-BUS support"			on \
 		DJVU		"Enable DJVU support"			off
 
 .include <bsd.port.pre.mk>
@@ -79,7 +80,7 @@ GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
 CONFIGURE_ARGS+=	--disable-djvu
 .endif
 
-.if defined(WITH_DBUS)
+.if defined(WITH_DBUS) || !defined(WITHOUT_DBUS)
 LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus
 .endif
 
