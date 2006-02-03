@@ -2,8 +2,8 @@
 # Date created:				30 November 2004
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome-menus/Makefile,v 1.5 2005/11/05 04:53:32 marcus Exp $
-#	$MCom: ports/x11/gnome-menus/Makefile,v 1.21 2005/09/08 18:04:51 marcus Exp $
+# $FreeBSD$
+#	$MCom: ports/x11/gnome-menus/Makefile,v 1.23 2006/02/03 05:42:22 marcus Exp $
 #
 
 PORTNAME=	gnome-menus
@@ -18,7 +18,6 @@ COMMENT=	Implementation of the FreeDesktop Desktop Menu Spec
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_REINPLACE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomevfs2 ltverhack
 USE_AUTOTOOLS=	libtool:15
