@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Fri Feb  3 00:37:12 2006
++++ Makefile.in	Fri Feb  3 00:37:35 2006
+@@ -243,7 +243,7 @@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ NULL = 
+-@HAVE_PYTHON_TRUE@PYTHON_SUBDIRS = python simple-editor
++@HAVE_PYTHON_TRUE@PYTHON_SUBDIRS = python
+ ALL_SUBDIRS = \
+ 	po 			\
+ 	libmenu			\
