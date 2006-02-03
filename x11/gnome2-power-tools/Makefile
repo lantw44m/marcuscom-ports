@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.66 2006/01/15 23:06:16 ahze Exp $
+#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.67 2006/01/15 23:09:42 ahze Exp $
 #
 
 PORTREVISION=	0
@@ -23,13 +23,11 @@ RUN_DEPENDS=	${X11BASE}/lib/epiphany/1.9/extensions/libgesturesextension.so:${PO
 		gnomesu:${PORTSDIR}/security/libgnomesu \
 		bpm:${PORTSDIR}/sysutils/bpm \
 		gnome-file-share-properties:${PORTSDIR}/www/gnome-user-share \
-		gnome-menu-editor:${PORTSDIR}/deskutils/gnome-menu-editor \
 		serpentine:${PORTSDIR}/sysutils/serpentine \
 		devilspie:${PORTSDIR}/x11-wm/devilspie \
 		${X11BASE}/lib/nautilus/extensions-1.0/libnautilus-open-terminal.so:${PORTSDIR}/deskutils/nautilus-open-terminal \
 		gtweakui-menus:${PORTSDIR}/deskutils/gtweakui \
 		gnome-art:${PORTSDIR}/x11-themes/gnome-art \
-		${X11BASE}/libdata/bonobo/servers/Deskbar_Applet.server:${PORTSDIR}/deskutils/deskbar-applet \
 		brightside:${PORTSDIR}/x11/brightside \
 		evolution-gconf-filter-exchange:${PORTSDIR}/devel/evolution-gconf-tools \
 		${X11BASE}/libexec/quick-lounge-applet:${PORTSDIR}/misc/quick-lounge-applet \
