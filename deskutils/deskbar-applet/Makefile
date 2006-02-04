@@ -2,8 +2,8 @@
 # Date created:		2005-07-13
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/deskbar-applet/Makefile,v 1.8 2006/01/17 06:11:44 marcus Exp $
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.7 2006/01/31 20:36:47 marcus Exp $
+# $FreeBSD$
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.8 2006/02/04 19:40:04 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
