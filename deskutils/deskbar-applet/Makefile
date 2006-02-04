@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.8 2006/02/04 19:40:04 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.9 2006/02/04 19:41:22 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
@@ -45,7 +45,8 @@ PLIST_SUB+=	EVO="@comment "
 .endif
 
 .if !defined(DISPLAY)
-BUILD_DEPENDS+=	Xvfb:${X_VFBSERVER_PORT}
+BUILD_DEPENDS+=	Xvfb:${X_VFBSERVER_PORT} \
+		${X11BASE}/lib/X11/fonts/misc/8x13O.pcf.gz:${X_FONTS_MISC_PORT}
 .if !defined(PACKAGE_BUILDING)
 CONFIGURE_ENV+=	DISPLAY="localhost:1001"
 .endif
