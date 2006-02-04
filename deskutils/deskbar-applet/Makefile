@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/deskutils/deskbar-applet/Makefile,v 1.8 2006/01/17 06:11:44 marcus Exp $
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.6 2006/01/31 19:48:08 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.7 2006/01/31 20:36:47 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
-PORTVERSION=	2.13.90
+PORTVERSION=	2.13.90.1
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
@@ -33,7 +33,7 @@ OPTIONS=	EVO "Enable evolution support" on
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500000
-BROKEN=	"Does not build on 4.X"
+BROKEN=	Does not build on 4.X
 .endif
 
 .if !defined(WITHOUT_EVO)
@@ -44,11 +44,34 @@ CONFIGURE_ARGS+=--disable-evolution
 PLIST_SUB+=	EVO="@comment "
 .endif
 
+.if !defined(DISPLAY)
+BUILD_DEPENDS+=	Xvfb:${X_VFBSERVER_PORT}
+.if !defined(PACKAGE_BUILDING)
+CONFIGURE_ENV+=	DISPLAY="localhost:1001"
+.endif
+.endif
+
 post-patch:
 	@${FIND} ${WRKSRC}/deskbar -name "*.py" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|/usr/share/applications|${X11BASE}/share/gnome/applications|g'
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
 		s|%%X11BASE%%|${X11BASE}|g' \
 		${WRKSRC}/deskbar/Utils.py
+
+.if !defined(DISPLAY)
+pre-configure:
+.if exists(${WRKDIR}/.Xvfb.pid)
+	@-${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill
+	@${RM} -f ${WRKDIR}/.Xvfb.pid
+.endif
+	${X11BASE}/bin/Xvfb :1001 -screen 0 800x600x24 > /dev/null 2>&1 & ${ECHO} $$! > ${WRKDIR}/.Xvfb.pid
+	@sleep 5
+
+post-configure:
+.if exists(${WRKDIR}/.Xvfb.pid)
+	@-${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill
+	@${RM} -f ${WRKDIR}/.Xvfb.pid
+.endif
+.endif
 
 .include <bsd.port.post.mk>

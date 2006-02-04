@@ -47,6 +47,9 @@ lib/deskbar-applet/handlers/volumes.pyo
 lib/deskbar-applet/handlers/web_address.py
 lib/deskbar-applet/handlers/web_address.pyc
 lib/deskbar-applet/handlers/web_address.pyo
+lib/deskbar-applet/handlers/yahoo.py
+lib/deskbar-applet/handlers/yahoo.pyc
+lib/deskbar-applet/handlers/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/BrowserMatch.py
 %%PYTHON_SITELIBDIR%%/deskbar/BrowserMatch.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/BrowserMatch.pyo
@@ -168,6 +171,7 @@ share/gnome/deskbar-applet/art/deskbar-applet.svg
 share/gnome/deskbar-applet/art/folder-bookmark.png
 share/gnome/deskbar-applet/art/generic.png
 share/gnome/deskbar-applet/art/google.png
+share/gnome/deskbar-applet/art/yahoo.png
 share/gnome/deskbar-applet/prefs-dialog.glade
 share/gnome/deskbar-applet/smart-bookmarks.glade
 share/gnome/pixmaps/deskbar-applet.svg
