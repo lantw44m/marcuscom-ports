@@ -3,10 +3,11 @@
 # Whom:			Phillip Neumann <pneumann@gmail.com>
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	icon-naming-utils
-PORTVERSION=	0.6.5
+PORTVERSION=	0.6.7
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://tango-project.org/releases/
 
