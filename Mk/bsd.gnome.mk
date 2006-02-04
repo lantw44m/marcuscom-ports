@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.358 2006/01/27 21:43:54 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.359 2006/01/31 18:23:55 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -618,7 +618,7 @@ BROKEN+=the GNOME ${GNOME_DESKTOP_VERSION} desktop
 .         endif
 .      endif
 .  if ${_USE_GNOME_ALL:M${component}}==""
-BROKEN=	"Unknown component ${component}"
+BROKEN=	Unknown component ${component}
 .  endif
 _USE_GNOME+=	${${component}_USE_GNOME_IMPL} ${component}
 . endfor
@@ -644,7 +644,7 @@ ltverhack_PRE_PATCH=	${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
 						done;
 .else
 .if ${USE_GNOME:Mltverhack}!=""
-BROKEN= "${PORTNAME} uses the ltverhack GNOME component but does not use libtool"
+BROKEN=	${PORTNAME} uses the ltverhack GNOME component but does not use libtool
 .endif
 .endif
 
