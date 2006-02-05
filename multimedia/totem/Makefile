@@ -17,6 +17,7 @@ MAINTAINER?=	hendrik@scholz.net
 COMMENT?=	A Xine-based video player for the Gnome 2 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+LIB_DEPENDS=	musicbrainz:${PORTSDIR}/audio/libmusicbrainz
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 USE_BZIP2=	yes
@@ -39,11 +40,9 @@ OPTIONS?=	DVDNAV "Enable DVD support" on \
 MAN1=	totem.1 totem-video-thumbnailer.1
 GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
 		totem.schemas
-CONFLICTS=	totem-gstreamer-[0-9]*
+CONFLICTS?=	totem-gstreamer-[0-9]*
 
 .include <bsd.port.pre.mk>
-
-LIB_DEPENDS+=	musicbrainz:${PORTSDIR}/audio/libmusicbrainz
 
 .if defined(WITH_MOZILLA_PLUGIN)
 USE_GECKO=	firefox mozilla seamonkey
