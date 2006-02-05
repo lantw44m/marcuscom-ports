@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.45 2006/01/24 21:17:56 ahze Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.46 2006/02/02 09:13:38 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
-PORTVERSION=	0.9.3
+PORTVERSION=	0.9.3.1
 PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -44,7 +44,7 @@ OPTIONS=	IPOD "Enable iPod support" off \
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500000
-BROKEN=	"Does not build on 4.X"
+BROKEN=	Does not build on 4.X
 .endif
 
 .ifdef (WITH_IPOD)
