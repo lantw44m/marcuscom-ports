@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD: ports/security/seahorse/Makefile,v 1.47 2005/11/15 06:51:04 ade Exp $
-#   $MCom: ports/security/seahorse/Makefile,v 1.10 2005/12/29 18:47:25 adamw Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.11 2006/01/03 19:28:52 adamw Exp $
 #
 
 PORTNAME=	seahorse
@@ -34,8 +34,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	seahorse.schemas
 
-OPTIONS=	GEDIT "Enable the gedit plug-in" on \
-		NAUTILUS "Enable the Nautilus component" on \
+OPTIONS=	NAUTILUS "Enable the Nautilus component" on \
 		LDAP "Enable LDAP support" on \
 		HKP "Enable HKP keyserver interface" on
 
