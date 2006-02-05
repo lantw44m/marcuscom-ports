@@ -24,6 +24,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomedesktop desktopfileutils \
 		nautiluscdburner
+GNOME_DESKTOP_VERSION=2
 WANT_GSTREAMER=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
