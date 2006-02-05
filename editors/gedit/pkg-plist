@@ -98,7 +98,6 @@ lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
 libdata/pkgconfig/gedit-%%VERSION%%.pc
-share/gnome/application-registry/gedit.applications
 share/gnome/applications/gedit.desktop
 share/gnome/gedit-2/glade/docinfo.glade2
 share/gnome/gedit-2/glade/gedit-encodings-dialog.glade
@@ -203,7 +202,6 @@ share/gnome/help/gedit/zh_TW/figures/gedit_recent_files_menu_icon.png
 share/gnome/help/gedit/zh_TW/figures/gedit_window.png
 share/gnome/help/gedit/zh_TW/gedit.xml
 share/gnome/help/gedit/zh_TW/legal.xml
-share/gnome/mime-info/gedit.keys
 share/gnome/omf/gedit/gedit-C.omf
 share/gnome/omf/gedit/gedit-de.omf
 share/gnome/omf/gedit/gedit-es.omf
