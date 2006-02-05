@@ -3,7 +3,7 @@
 # Whom:					lewiz <purple@lewiz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/dasher/Makefile,v 1.21 2006/01/31 06:20:47 marcus Exp $
+#   $MCom: ports/accessibility/dasher/Makefile,v 1.22 2006/01/31 16:18:48 ahze Exp $
 #
 
 PORTNAME=	dasher
@@ -40,8 +40,6 @@ MAN1=		dasher.1
 .if ${HAVE_GNOME:Mgnomespeech}!=""
 USE_GNOME+=	gnomespeech
 CONFIGURE_ARGS+=--enable-speech
-.else
-CONFIGURE_ARGS+=--disable-speech
 .endif
 
 post-patch:
