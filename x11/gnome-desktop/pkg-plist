@@ -220,10 +220,13 @@ share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 @dirrm share/gnome/omf/gnome-feedback
 @dirrm share/gnome/omf/fdl
 @dirrm share/gnome/help/lgpl/pa
+@dirrm share/gnome/help/lgpl/fr
 @dirrm share/gnome/help/lgpl/es
 @dirrm share/gnome/help/gpl/pa
 @dirrm share/gnome/help/gpl/fi
+@dirrm share/gnome/help/gpl/fr
 @dirrm share/gnome/help/gpl/es
+@dirrm share/gnome/help/fdl/fr
 @dirrm share/gnome/help/fdl/es
 @dirrm share/gnome/help/gnome-feedback/es
 @dirrm share/gnome/help/gnome-feedback/C
