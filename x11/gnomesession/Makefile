@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomesession/Makefile,v 1.70 2006/01/16 19:30:16 ahze Exp $
+#   $MCom: ports/x11/gnomesession/Makefile,v 1.71 2006/01/27 19:10:32 ahze Exp $
 #
 
 PORTNAME=	gnomesession
 PORTVERSION=	2.13.90
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
@@ -25,7 +26,8 @@ COMMENT=	Session component for the GNOME 2 desktop
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop
+GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
