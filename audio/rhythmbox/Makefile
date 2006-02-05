@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.46 2006/02/02 09:13:38 marcus Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.47 2006/02/05 00:45:12 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -29,7 +29,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui nautiluscdburner
 USE_GSTREAMER=	flac mad gnomevfs gconf jpeg
 USE_AUTOTOOLS=	libtool:15
-CONFIGURE_ARGS=	--enable-nautilus-menu
+CONFIGURE_ARGS=	--enable-nautilus-menu --with-playback=gstreamer-0-10
 CONFIGURE_ENV=	LIBS="-lm" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
 		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
