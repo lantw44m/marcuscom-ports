@@ -215,6 +215,10 @@ share/icons/gnome/16x16/actions/window_new.png
 share/icons/gnome/16x16/actions/zoom-in.png
 share/icons/gnome/16x16/actions/zoom-original.png
 share/icons/gnome/16x16/actions/zoom-out.png
+share/icons/gnome/16x16/animations/gnome-spinner-rest.png
+share/icons/gnome/16x16/animations/gnome-spinner.png
+share/icons/gnome/16x16/animations/process-idle.png
+share/icons/gnome/16x16/animations/process-working.png
 share/icons/gnome/16x16/apps/accessories-text-editor.png
 share/icons/gnome/16x16/apps/arts.png
 share/icons/gnome/16x16/apps/config-language.png
@@ -427,9 +431,11 @@ share/icons/gnome/16x16/mimetypes/x-office-document.png
 share/icons/gnome/16x16/mimetypes/x-office-presentation.png
 share/icons/gnome/16x16/mimetypes/x-office-spreadsheet.png
 share/icons/gnome/16x16/mimetypes/zip.png
+share/icons/gnome/16x16/places/application-x-gnome-saved-search.png
 share/icons/gnome/16x16/places/desktop.png
 share/icons/gnome/16x16/places/emptytrash.png
 share/icons/gnome/16x16/places/folder-remote.png
+share/icons/gnome/16x16/places/folder-saved-search.png
 share/icons/gnome/16x16/places/folder.png
 share/icons/gnome/16x16/places/folder_home.png
 share/icons/gnome/16x16/places/gnome-fs-desktop.png
@@ -1625,6 +1631,10 @@ share/icons/gnome/24x24/actions/window_new.png
 share/icons/gnome/24x24/actions/zoom-in.png
 share/icons/gnome/24x24/actions/zoom-original.png
 share/icons/gnome/24x24/actions/zoom-out.png
+share/icons/gnome/24x24/animations/gnome-spinner-rest.png
+share/icons/gnome/24x24/animations/gnome-spinner.png
+share/icons/gnome/24x24/animations/process-idle.png
+share/icons/gnome/24x24/animations/process-working.png
 share/icons/gnome/24x24/apps/accessibility-directory.png
 share/icons/gnome/24x24/apps/administration.png
 share/icons/gnome/24x24/apps/advanced-directory.png
@@ -2735,6 +2745,10 @@ share/icons/gnome/48x48/actions/stock_not-spam.png
 share/icons/gnome/48x48/actions/stock_print-preview.png
 share/icons/gnome/48x48/actions/stock_print.png
 share/icons/gnome/48x48/actions/stock_spam.png
+share/icons/gnome/48x48/animations/gnome-spinner-rest.png
+share/icons/gnome/48x48/animations/gnome-spinner.png
+share/icons/gnome/48x48/animations/process-idle.png
+share/icons/gnome/48x48/animations/process-working.png
 share/icons/gnome/48x48/apps/accessibility-directory.png
 share/icons/gnome/48x48/apps/administration.png
 share/icons/gnome/48x48/apps/advanced-directory.png
@@ -3025,29 +3039,21 @@ share/icons/gnome/48x48/filesystems/gnome-fs-bookmark-missing.png
 share/icons/gnome/48x48/filesystems/gnome-fs-bookmark.png
 share/icons/gnome/48x48/places/desktop.png
 share/icons/gnome/48x48/places/emptytrash.png
-share/icons/gnome/48x48/places/folder-remote.png
 share/icons/gnome/48x48/places/folder.icon
 share/icons/gnome/48x48/places/folder.png
 share/icons/gnome/48x48/places/folder_home.png
 share/icons/gnome/48x48/places/gnome-fs-desktop.png
 share/icons/gnome/48x48/places/gnome-fs-directory.png
-share/icons/gnome/48x48/places/gnome-fs-ftp.png
 share/icons/gnome/48x48/places/gnome-fs-home.png
 share/icons/gnome/48x48/places/gnome-fs-network.png
-share/icons/gnome/48x48/places/gnome-fs-nfs.png
 share/icons/gnome/48x48/places/gnome-fs-server.png
-share/icons/gnome/48x48/places/gnome-fs-share.png
-share/icons/gnome/48x48/places/gnome-fs-smb.png
-share/icons/gnome/48x48/places/gnome-fs-ssh.png
 share/icons/gnome/48x48/places/gnome-fs-trash-empty.png
 share/icons/gnome/48x48/places/gnome-mime-x-directory-smb-server.png
-share/icons/gnome/48x48/places/gnome-mime-x-directory-smb-share.png
 share/icons/gnome/48x48/places/gnome-mime-x-directory-smb-workgroup.png
 share/icons/gnome/48x48/places/gnome-stock-trash.png
 share/icons/gnome/48x48/places/gtk-network.png
 share/icons/gnome/48x48/places/network-server.png
 share/icons/gnome/48x48/places/network-workgroup.png
-share/icons/gnome/48x48/places/network.png
 share/icons/gnome/48x48/places/network_local.png
 share/icons/gnome/48x48/places/redhat-network-server.png
 share/icons/gnome/48x48/places/server.png
@@ -3346,11 +3352,18 @@ share/icons/gnome/scalable/mimetypes/zip.svg
 share/icons/gnome/scalable/places/application-x-gnome-saved-search.svg
 share/icons/gnome/scalable/places/emptytrash.svg
 share/icons/gnome/scalable/places/folder.svg
+share/icons/gnome/scalable/places/folder-remote.svg
 share/icons/gnome/scalable/places/folder-saved-search.svg
 share/icons/gnome/scalable/places/folder_home.svg
 share/icons/gnome/scalable/places/gnome-fs-directory.svg
+share/icons/gnome/scalable/places/gnome-fs-ftp.svg
 share/icons/gnome/scalable/places/gnome-fs-home.svg
+share/icons/gnome/scalable/places/gnome-fs-nfs.svg
+share/icons/gnome/scalable/places/gnome-fs-share.svg
+share/icons/gnome/scalable/places/gnome-fs-smb.svg
+share/icons/gnome/scalable/places/gnome-fs-ssh.svg
 share/icons/gnome/scalable/places/gnome-fs-trash-empty.svg
+share/icons/gnome/scalable/places/gnome-mime-x-directory-smb-share.svg
 share/icons/gnome/scalable/places/gnome-stock-trash.svg
 share/icons/gnome/scalable/places/stock_folder.svg
 share/icons/gnome/scalable/places/trashcan_empty.svg
@@ -3364,6 +3377,7 @@ share/icons/gnome/scalable/status/gnome-fs-directory-accept.svg
 share/icons/gnome/scalable/status/gnome-fs-directory-visiting.svg
 share/icons/gnome/scalable/status/gnome-fs-trash-full.svg
 share/icons/gnome/scalable/status/gnome-stock-trash-full.svg
+share/icons/gnome/scalable/places/network.svg
 share/icons/gnome/scalable/status/stock_trash_full.svg
 share/icons/gnome/scalable/status/trashcan_full.svg
 share/icons/gnome/scalable/status/user-trash-full.svg
@@ -3392,6 +3406,7 @@ share/icons/gnome/scalable/stock/generic/stock_person.svg
 @dirrmtry share/icons/gnome/48x48/devices
 @dirrmtry share/icons/gnome/48x48/categories
 @dirrmtry share/icons/gnome/48x48/apps
+@dirrmtry share/icons/gnome/48x48/animationas
 @dirrmtry share/icons/gnome/48x48/actions
 @dirrmtry share/icons/gnome/48x48
 @dirrmtry share/icons/gnome/24x24/stock/text
@@ -3417,6 +3432,7 @@ share/icons/gnome/scalable/stock/generic/stock_person.svg
 @dirrmtry share/icons/gnome/24x24/devices
 @dirrmtry share/icons/gnome/24x24/categories
 @dirrmtry share/icons/gnome/24x24/apps
+@dirrmtry share/icons/gnome/24x24/animations
 @dirrmtry share/icons/gnome/24x24/actions
 @dirrmtry share/icons/gnome/24x24
 @dirrmtry share/icons/gnome/16x16/stock/text
@@ -3442,6 +3458,7 @@ share/icons/gnome/scalable/stock/generic/stock_person.svg
 @dirrmtry share/icons/gnome/16x16/devices
 @dirrmtry share/icons/gnome/16x16/categories
 @dirrmtry share/icons/gnome/16x16/apps
+@dirrmtry share/icons/gnome/16x16/animations
 @dirrmtry share/icons/gnome/16x16/actions
 @dirrmtry share/icons/gnome/16x16
 @dirrmtry share/icons/gnome
