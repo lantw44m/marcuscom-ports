@@ -3,12 +3,13 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.68 2006/02/09 13:47:55 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.69 2006/02/09 21:18:50 ahze Exp $
 #
 
 PORTNAME=	gstreamer
 PORTVERSION?=	0.10.3
-PORTREVISION?=	0
+## SET BACK TO PORTREVISION?= when we reset PORTREVISION in all the gst plugin ports
+PORTREVISION=	3
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME:S|$|sources/gst-plugins-base/0.10/:base|} \
 		http://gstreamer.freedesktop.org/src/gst-plugins-base/:base \
@@ -57,7 +58,7 @@ WANT_GSTREAMER=	yes
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME+=	gnomehack gnomeprefix gnometarget pkgconfig
+USE_GNOME+=	gnomehack gnomeprefix gnometarget pkgconfig ltverhack
 USE_AUTOTOOLS=	libtool:15
 GST_PLUGIN?=	base
 
@@ -72,7 +73,7 @@ DEFAULT_AUDIOSRC?=	osssrc
 .include "${MASTERDIR}/Makefile.common"
 
 .if !defined(WITH_CPUFLAGS)
-WITHOUT_CPU_CFLAGS=	yes
+#WITHOUT_CPU_CFLAGS=	yes
 .endif
 
 .if ${GST_PLUGIN} == "base"
@@ -117,12 +118,6 @@ pre-everything::
 	@${ECHO_MSG} ""
 .endif
 
-post-extract:
-# for cdrom/vcd support
-# taken from mplayer distfile
-# MD5 (MPlayer-1.0pre4.tar.bz2) = 83ebac0f05b192516a41fca2350ca01a
-#	@${CP} ${FILESDIR}/bsdi_dvd.h ${WRKSRC}/sys/vcd/
-
 post-patch:
 	@${FIND} ${WRKSRC} -type f | \
 	${XARGS} -n 10 ${REINPLACE_CMD} -e \
@@ -138,9 +133,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|DEFAULT_AUDIOSINK="alsasink"|DEFAULT_AUDIOSINK="${DEFAULT_AUDIOSINK}"|; \
 		s|DEFAULT_AUDIOSRC="alsasrc"|DEFAULT_AUDIOSRC="${DEFAULT_AUDIOSRC}"|' \
 		${WRKSRC}/configure
-#.for f in ${GST_ALL_PLUGINS}
-#	@${REINPLACE_CMD} -e 's|ext/${f}/Makefile||g' \
-#		${WRKSRC}/configure
-#.endfor
 
 .include <bsd.port.post.mk>
