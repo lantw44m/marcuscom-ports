@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.32 2006/01/21 23:55:31 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.33 2006/02/05 20:58:56 marcus Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -9,7 +9,8 @@ BASE_GST_ALL_PLUGINS= \
 		ogg \
 		pango \
 		theora \
-		vorbis
+		vorbis \
+		gnome_vfs
 # bad
 BAD_GST_ALL_PLUGINS+= \
 		directfb \

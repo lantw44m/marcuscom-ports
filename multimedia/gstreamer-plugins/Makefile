@@ -3,12 +3,12 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.66 2006/01/21 23:55:31 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.67 2006/01/31 20:36:51 marcus Exp $
 #
 
 PORTNAME=	gstreamer
-PORTVERSION?=	0.10.2
-PORTREVISION?=	4
+PORTVERSION?=	0.10.3
+PORTREVISION?=	0
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME:S/$/:base/} \
 		http://gstreamer.freedesktop.org/src/gst-plugins-base/:base \
@@ -28,7 +28,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT?=	GStreamer written collection of plugins handling several media types
 
-LIB_DEPENDS+=	gstreamer-0.10.2:${PORTSDIR}/multimedia/gstreamer \
+LIB_DEPENDS+=	gstreamer-0.10.0:${PORTSDIR}/multimedia/gstreamer \
 		popt.0:${PORTSDIR}/devel/popt \
 		oil-0.3.1:${PORTSDIR}/devel/liboil
 
@@ -38,7 +38,7 @@ BASE_DISTFILE=		${BASE_DISTNAME}${EXTRACT_SUFX}
 BAD_PORTVERSION=	0.10.0
 BAD_DISTNAME=		gst-plugins-bad-${BAD_PORTVERSION}
 BAD_DISTFILE=		${BAD_DISTNAME}${EXTRACT_SUFX}
-GOOD_PORTVERSION=	0.10.1
+GOOD_PORTVERSION=	0.10.2
 GOOD_DISTNAME=		gst-plugins-good-${GOOD_PORTVERSION}
 GOOD_DISTFILE=		${GOOD_DISTNAME}${EXTRACT_SUFX}
 UGLY_PORTVERSION=	0.10.1
@@ -51,15 +51,11 @@ WANT_GSTREAMER=	yes
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME+=	gnomehack \
-		gnomeprefix \
-		gnometarget \
-		pkgconfig
+USE_GNOME+=	gnomehack gnomeprefix gnometarget pkgconfig
 USE_AUTOTOOLS=	libtool:15
 GST_PLUGIN?=	base
 
-CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
-		CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
+CONFIGURE_ENV=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include" \
 		CPPFLAGS="${CPPFLAGS} -I${X11BASE}/include -I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="${LDFLAGS} -L${X11BASE}/lib -L${LOCALBASE}/lib ${EXTRA_LIBS} ${PTHREAD_LIBS}"
 
