@@ -3,21 +3,27 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.67 2006/01/31 20:36:51 marcus Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.68 2006/02/09 13:47:55 ahze Exp $
 #
 
 PORTNAME=	gstreamer
 PORTVERSION?=	0.10.3
 PORTREVISION?=	0
 CATEGORIES?=	multimedia audio
-MASTER_SITES=	${MASTER_SITE_GNOME:S/$/:base/} \
+MASTER_SITES=	${MASTER_SITE_GNOME:S|$|sources/gst-plugins-base/0.10/:base|} \
 		http://gstreamer.freedesktop.org/src/gst-plugins-base/:base \
+		${MASTER_SITE_LOCAL:S|$|ahze/:base|} \
+		${MASTER_SITE_LOCAL:S|$|ahze/:good|} \
+		${MASTER_SITE_LOCAL:S|$|ahze/:bad|} \
+		${MASTER_SITE_LOCAL:S|$|ahze/:ugly|} \
 		http://gstreamer.freedesktop.org/src/gst-plugins-bad/:bad \
-		${MASTER_SITE_GNOME:S/$/:good/} \
+		${MASTER_SITE_GNOME:S|$|sources/gst-plugins-good/0.10/:good|} \
 		http://gstreamer.freedesktop.org/src/gst-plugins-good/:good \
-		http://gstreamer.freedesktop.org/src/gst-plugins-ugly/:ugly
-MASTER_SITE_SUBDIR=	sources/gst-plugins-base/0.10/:base \
-			sources/gst-plugins-good/0.10/:good
+		http://gstreamer.freedesktop.org/src/gst-plugins-ugly/:ugly \
+		http://people.freebsd.org/~ahze/distfiles/:good \
+		http://people.freebsd.org/~ahze/distfiles/:bad \
+		http://people.freebsd.org/~ahze/distfiles/:ugly \
+		http://people.freebsd.org/~ahze/distfiles/:base
 PKGNAMESUFFIX=	-plugins${GST_PLUGIN_SUFFIX}
 DISTFILES=	${BASE_DISTFILE}:base \
 		${BAD_DISTFILE}:bad \
