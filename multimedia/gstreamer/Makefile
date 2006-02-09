@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.10.2
-PORTREVISION=	2
+PORTVERSION=	0.10.3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://gstreamer.freedesktop.org/src/gstreamer/
@@ -24,10 +23,7 @@ USE_BISON=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 WANT_GNOME=	yes
-USE_GNOME=	gnomehack \
-		gnomeprefix \
-		glib20 \
-		libxml2
+USE_GNOME=	gnomehack gnomeprefix glib20 libxml2 ltverhack
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--disable-tests \
 		--disable-examples \
