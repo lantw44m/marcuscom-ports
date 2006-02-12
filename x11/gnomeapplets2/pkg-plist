@@ -36,11 +36,9 @@ libexec/charpick_applet2
 %%CPUFREQ%%libexec/cpufreq-applet
 libexec/drivemount_applet2
 libexec/geyes_applet2
-libexec/gnome-applets/mc-install-default-macros
 libexec/gnome-keyboard-applet
 libexec/gtik2_applet2
 libexec/gweather-applet-2
-libexec/mini_commander_applet
 libexec/mixer_applet2
 libexec/modem_applet
 libexec/multiload-applet-2
@@ -56,7 +54,6 @@ share/gnome/gnome-2.0/ui/GNOME_GSwitchItApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GWeatherApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GeyesApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GtikApplet.xml
-share/gnome/gnome-2.0/ui/GNOME_MiniCommanderApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_MixerApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_ModemLights.xml
 share/gnome/gnome-2.0/ui/GNOME_MultiloadApplet.xml
@@ -81,7 +78,6 @@ share/gnome/gnome-applets/geyes/Horrid/horrid_pupil.png
 %%CPUFREQ%%share/gnome/gnome-applets/glade/cpufreq-preferences.glade
 share/gnome/gnome-applets/glade/gswitchit-plugins.glade
 share/gnome/gnome-applets/glade/gswitchit.glade
-share/gnome/gnome-applets/glade/mini-commander.glade
 share/gnome/gnome-applets/glade/modemlights.glade
 share/gnome/gnome-applets/glade/stickynotes.glade
 share/gnome/gnome-applets/glade/trashapplet.glade
@@ -209,27 +205,6 @@ share/gnome/help/char-palette/uk/figures/charpalette_applet.png
 share/gnome/help/char-palette/uk/figures/charpalette_chargroup.png
 share/gnome/help/char-palette/uk/figures/charpick-preferences.png
 share/gnome/help/char-palette/uk/figures/charpick_characters.png
-share/gnome/help/command-line/C/command-line.xml
-share/gnome/help/command-line/C/figures/command-line.png
-share/gnome/help/command-line/C/figures/prefs-macros.png
-share/gnome/help/command-line/C/figures/prefs.png
-share/gnome/help/command-line/C/legal.xml
-share/gnome/help/command-line/es/command-line.xml
-share/gnome/help/command-line/es/figures/command-line.png
-share/gnome/help/command-line/es/figures/prefs-macros.png
-share/gnome/help/command-line/es/figures/prefs.png
-share/gnome/help/command-line/fr/command-line.xml
-share/gnome/help/command-line/fr/figures/command-line.png
-share/gnome/help/command-line/fr/figures/prefs-macros.png
-share/gnome/help/command-line/fr/figures/prefs.png
-share/gnome/help/command-line/pt_BR/command-line.xml
-share/gnome/help/command-line/pt_BR/figures/command-line.png
-share/gnome/help/command-line/pt_BR/figures/prefs-macros.png
-share/gnome/help/command-line/pt_BR/figures/prefs.png
-share/gnome/help/command-line/uk/command-line.xml
-share/gnome/help/command-line/uk/figures/command-line.png
-share/gnome/help/command-line/uk/figures/prefs-macros.png
-share/gnome/help/command-line/uk/figures/prefs.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/cpufreq-applet.xml
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-100.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-25.png
@@ -491,11 +466,6 @@ share/gnome/omf/char-palette/char-palette-it.omf
 share/gnome/omf/char-palette/char-palette-nl.omf
 share/gnome/omf/char-palette/char-palette-pt_BR.omf
 share/gnome/omf/char-palette/char-palette-uk.omf
-share/gnome/omf/command-line/command-line-C.omf
-share/gnome/omf/command-line/command-line-es.omf
-share/gnome/omf/command-line/command-line-fr.omf
-share/gnome/omf/command-line/command-line-pt_BR.omf
-share/gnome/omf/command-line/command-line-uk.omf
 %%CPUFREQ%%share/gnome/omf/cpufreq-applet/cpufreq-applet-C.omf
 %%CPUFREQ%%share/gnome/omf/cpufreq-applet/cpufreq-applet-es.omf
 %%CPUFREQ%%share/gnome/omf/cpufreq-applet/cpufreq-applet-nl.omf
@@ -682,7 +652,6 @@ share/icons/hicolor/48x48/apps/ax-applet.png
 share/icons/hicolor/48x48/apps/charpick.png
 share/icons/hicolor/48x48/apps/gnome-cpu.png
 share/icons/hicolor/48x48/apps/gnome-eyes.png
-share/icons/hicolor/48x48/apps/gnome-mini-commander.png
 share/icons/hicolor/48x48/apps/gnome-modem.png
 share/icons/hicolor/48x48/apps/gnome-money.png
 share/icons/hicolor/48x48/apps/gswitchit-applet.png
@@ -789,7 +758,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/omf/geyes
 @dirrm share/gnome/omf/drivemount
 %%CPUFREQ%%@dirrm share/gnome/omf/cpufreq-applet
-@dirrm share/gnome/omf/command-line
 @dirrm share/gnome/omf/char-palette
 %%BATTERY%%@dirrm share/gnome/omf/battstat
 @dirrm share/gnome/omf/accessx-status
@@ -893,17 +861,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/C/figures
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/C
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet
-@dirrm share/gnome/help/command-line/uk/figures
-@dirrm share/gnome/help/command-line/uk
-@dirrm share/gnome/help/command-line/pt_BR/figures
-@dirrm share/gnome/help/command-line/pt_BR
-@dirrm share/gnome/help/command-line/fr/figures
-@dirrm share/gnome/help/command-line/fr
-@dirrm share/gnome/help/command-line/es/figures
-@dirrm share/gnome/help/command-line/es
-@dirrm share/gnome/help/command-line/C/figures
-@dirrm share/gnome/help/command-line/C
-@dirrm share/gnome/help/command-line
 @dirrm share/gnome/help/char-palette/uk/figures
 @dirrm share/gnome/help/char-palette/uk
 @dirrm share/gnome/help/char-palette/pt_BR/figures
@@ -948,6 +905,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/gnome-applets/geyes/Bizarre
 @dirrm share/gnome/gnome-applets/geyes
 @dirrm share/gnome/gnome-applets
-@dirrm libexec/gnome-applets
 @dirrm include/libgswitchit
 @dirrm include/libgweather

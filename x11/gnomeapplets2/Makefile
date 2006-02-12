@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomeapplets2/Makefile,v 1.100 2006/01/31 20:32:20 marcus Exp $
+#   $MCom: ports/x11/gnomeapplets2/Makefile,v 1.101 2006/01/31 20:36:55 marcus Exp $
 #
 
 PORTNAME=	gnomeapplets2
-PORTVERSION=	2.13.3
+PORTVERSION=	2.13.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-applets/2.13
@@ -39,13 +39,17 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas \
 		gswitchit.schemas gtik.schemas gweather.schemas \
-		mini-commander-global.schemas mini-commander.schemas \
 		mixer.schemas multiload.schemas \
 		stickynotes.schemas
 
 FREEBSD_SYS?=	/usr/src/sys
 
 .include <bsd.port.pre.mk>
+
+.if exists(${LOCALBASE}/libdata/pkgconfig/libnotify.pc) || \
+	defined(WITH_LIBNOTIFY)
+LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
+.endif
 
 .if ${ARCH} != "i386" && ${ARCH} != "amd64"
 CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -fPIC"
