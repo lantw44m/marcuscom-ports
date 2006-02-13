@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.76 2006/01/31 12:19:02 ahze Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.77 2006/01/31 20:36:56 marcus Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	2.13.4
+PORTVERSION=	2.13.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
