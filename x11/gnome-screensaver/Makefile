@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.26 2006/01/31 00:35:21 ahze Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.27 2006/01/31 20:36:54 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	2.13.90
+PORTVERSION=	2.13.91
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
@@ -39,7 +39,7 @@ XSCREENSAVER_DIR=	${X11BASE}/share/xscreensaver/config
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500000
-BROKEN=	"Does not build on 4.X"
+BROKEN=	Does not build on 4.X
 .endif
 
 post-patch:
