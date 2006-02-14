@@ -3,7 +3,7 @@
 # Date created:			Nov 13, 2001
 # Whom:				ijliao
 #
-# $FreeBSD: ports/sysutils/slmon/Makefile,v 1.19 2005/11/05 05:21:49 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	slmon

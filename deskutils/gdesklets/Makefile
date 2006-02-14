@@ -2,7 +2,7 @@
 # Date created:				11 August 2003
 # Whom:					Mezz <mezz7@cox.net>
 #
-# $FreeBSD: ports/deskutils/gdesklets/Makefile,v 1.42 2005/11/15 06:48:26 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gdesklets

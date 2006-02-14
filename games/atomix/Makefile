@@ -2,8 +2,8 @@
 # Date created:        30 January 2000
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
-# $FreeBSD: ports/games/atomix/Makefile,v 1.26 2005/11/17 22:47:55 marcus Exp $
-#   $MCom: ports/games/atomix/Makefile,v 1.3 2006/01/06 17:30:06 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/games/atomix/Makefile,v 1.4 2006/01/31 20:36:48 marcus Exp $
 #
 
 PORTNAME=	atomix

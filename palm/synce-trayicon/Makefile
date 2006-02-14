@@ -2,7 +2,7 @@
 # Date created:                28 August 2003
 # Whom:                        Sam Lawrance <boris@brooknet.com.au>
 #
-# $FreeBSD: ports/palm/synce-trayicon/Makefile,v 1.9 2005/11/05 05:21:16 marcus Exp $
+# $FreeBSD$
 
 PORTNAME=	synce-trayicon
 PORTVERSION=	0.9.0
