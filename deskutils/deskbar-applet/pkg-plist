@@ -117,6 +117,10 @@ lib/deskbar-applet/handlers/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/keybinder/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/keybinder/__init__.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/keybinder/_keybinder.so
+%%PYTHON_SITELIBDIR%%/deskbar/osutils/__init__.py
+%%PYTHON_SITELIBDIR%%/deskbar/osutils/__init__.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/osutils/__init__.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/osutils/_osutils.so
 %%PYTHON_SITELIBDIR%%/deskbar/ui/About.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/About.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/About.pyo
@@ -159,6 +163,12 @@ lib/deskbar-applet/handlers/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/__init__.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/ui/entriac/CuemiacEntryUI.py
+%%PYTHON_SITELIBDIR%%/deskbar/ui/entriac/CuemiacEntryUI.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/ui/entriac/CuemiacEntryUI.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/ui/entriac/__init__.py
+%%PYTHON_SITELIBDIR%%/deskbar/ui/entriac/__init__.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/ui/entriac/__init__.pyo
 libdata/bonobo/servers/Deskbar_Applet.server
 libdata/pkgconfig/deskbar-applet.pc
 share/gnome/deskbar-applet/Deskbar_Applet.xml
@@ -172,12 +182,14 @@ share/gnome/deskbar-applet/art/folder-bookmark.png
 share/gnome/deskbar-applet/art/generic.png
 share/gnome/deskbar-applet/art/google.png
 share/gnome/deskbar-applet/art/yahoo.png
+share/gnome/deskbar-applet/mozilla-search.glade
 share/gnome/deskbar-applet/prefs-dialog.glade
 share/gnome/deskbar-applet/smart-bookmarks.glade
 share/gnome/pixmaps/deskbar-applet.svg
 share/locale/bg/LC_MESSAGES/deskbar-applet.mo
 share/locale/ca/LC_MESSAGES/deskbar-applet.mo
 share/locale/de/LC_MESSAGES/deskbar-applet.mo
+share/locale/el/LC_MESSAGES/deskbar-applet.mo
 share/locale/en_CA/LC_MESSAGES/deskbar-applet.mo
 share/locale/en_GB/LC_MESSAGES/deskbar-applet.mo
 share/locale/es/LC_MESSAGES/deskbar-applet.mo
@@ -205,9 +217,11 @@ share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
 @dirrm share/gnome/deskbar-applet/art
 @dirrm share/gnome/deskbar-applet
+@dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/entriac
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/completion
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui
+@dirrm %%PYTHON_SITELIBDIR%%/deskbar/osutils
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/keybinder
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/iconentry
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/gnomedesktop
