@@ -360,6 +360,7 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-gw-account-setup.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-itip-formatter.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mail-account-disable.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mail-to-task.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-mail-to-task.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-mailing-list-actions.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mailing-list-actions.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-mark-all-read.eplug
