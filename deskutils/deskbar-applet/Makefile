@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.10 2006/02/04 19:42:36 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.11 2006/02/14 17:17:03 ahze Exp $
 #
 
 PORTNAME=	deskbar-applet
@@ -61,18 +61,18 @@ post-patch:
 
 .if !defined(DISPLAY)
 pre-configure:
-.if exists(${WRKDIR}/.Xvfb.pid)
-	@-${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill
-	@${RM} -f ${WRKDIR}/.Xvfb.pid
-.endif
+	@if [ -f ${WRKDIR}/.Xvfb.pid ]; then \
+		${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill || ${TRUE} ; \
+		${RM} -f ${WRKDIR}/.Xvfb.pid ; \
+	fi
 	${X11BASE}/bin/Xvfb :1001 -screen 0 800x600x24 > /dev/null 2>&1 & ${ECHO} $$! > ${WRKDIR}/.Xvfb.pid
 	@sleep 5
 
 post-configure:
-.if exists(${WRKDIR}/.Xvfb.pid)
-	@-${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill
-	@${RM} -f ${WRKDIR}/.Xvfb.pid
-.endif
+	@if [ -f ${WRKDIR}/.Xvfb.pid ]; then \
+		${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill || ${TRUE} ; \
+		${RM} -f ${WRKDIR}/.Xvfb.pid ; \
+	fi
 .endif
 
 .include <bsd.port.post.mk>
