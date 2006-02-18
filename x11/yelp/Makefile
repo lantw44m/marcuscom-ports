@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.77 2006/01/31 20:36:56 marcus Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.78 2006/02/13 00:13:33 marcus Exp $
 #
 
 PORTNAME=	yelp
 PORTVERSION=	2.13.5
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
@@ -32,18 +33,7 @@ MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
 GCONF_SCHEMAS=	yelp.schemas
 
-OPTIONS=	MAN "Enable man page support" off \
-		INFO "Enable GNU info support" off
-
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
-
-.if defined(WITH_MAN)
-CONFIGURE_ARGS+=--enable-man
-.endif
-
-.if defined(WITH_INFO)
-CONFIGURE_ARGS+=--enable-info
-.endif
 
 .include <bsd.port.post.mk>
