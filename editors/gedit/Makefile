@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.21 2006/02/14 03:40:09 marcus Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.22 2006/02/14 03:40:31 marcus Exp $
 #
 
 PORTNAME=	gedit
@@ -34,7 +34,7 @@ PLIST_SUB=	VERSION="2.14"
 MAN1=		gedit.1
 GCONF_SCHEMAS=	gedit.schemas
 
-.if defined(PACAKGE_BUILDING)
+.if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
 WITH_GNOME=	yes
 .endif
