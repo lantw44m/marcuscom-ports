@@ -1,6 +1,5 @@
 bin/evolution
 bin/evolution-%%VERSION%%
-etc/rc.d/000.evolibs.sh
 include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-cell-popup.h
 include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-cell-registry.h
 include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-cell-text.h

@@ -3,11 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.88 2006/01/31 20:36:50 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.89 2006/02/14 18:02:16 marcus Exp $
 #
 
 PORTNAME=	evolution
 PORTVERSION=	2.5.91
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.5
@@ -22,11 +23,14 @@ RUN_DEPENDS=	${X11BASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSD
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver \
 		gtkhtml3 desktopfileutils
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_OMF=	yes
+INSTALLS_SHLIB=	yes
+LDCONFIG_DIRS=	%%PREFIX%%/lib/evolution/%%VERSION%%
 CONFIGURE_ARGS=	--enable-nss=yes \
 		--with-nss-includes=${LOCALBASE}/include/nss/nss \
 		--with-nss-libs=${LOCALBASE}/lib \
@@ -52,6 +56,9 @@ OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 		SPAMASSASSIN "Enable SpamAssassin spam filtering" off
 
 .include <bsd.port.pre.mk>
+
+USE_LDCONFIG=	${PREFIX}/lib/evolution/${EVO_VERSION}
+.include "${PORTSDIR}/misc/ldconfig_compat/bsd.ldconfig.mk"
 
 .if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
 WITH_GSTREAMER=	yes
@@ -112,16 +119,9 @@ CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
 .endif
 .endif
 
-post-patch:
-	@${SED} -e 's|%%PREFIX%%|${PREFIX}| ; \
-		s|%%EVO_VERSION%%|${EVO_VERSION}|' \
-		${FILESDIR}/evolibs.sh > ${WRKDIR}/evolibs.sh
-
-post-install:
+post-install: install-ldconfig-file
 	@${LN} -sf ${PREFIX}/bin/evolution-${EVO_VERSION} \
 		${PREFIX}/bin/evolution
-	@${INSTALL_SCRIPT} -m 555 ${WRKDIR}/evolibs.sh \
-		${PREFIX}/etc/rc.d/000.evolibs.sh
 	-@update-desktop-database
 
 .include <bsd.port.post.mk>
