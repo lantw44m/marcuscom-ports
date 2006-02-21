@@ -107,6 +107,12 @@ share/gnome/help/user-guide/C/gosstartsession.xml
 share/gnome/help/user-guide/C/gostools.xml
 share/gnome/help/user-guide/C/legal.xml
 share/gnome/help/user-guide/C/user-guide.xml
+share/gnome/omf/gnome-access-guide/gnome-access-guide-C.omf
+share/gnome/omf/system-admin-guide/system-admin-guide-C.omf
+share/gnome/omf/user-guide/user-guide-C.omf
+@dirrm share/gnome/omf/user-guide
+@dirrm share/gnome/omf/system-admin-guide
+@dirrm share/gnome/omf/gnome-access-guide
 @dirrm share/gnome/help/user-guide/C/figures
 @dirrm share/gnome/help/user-guide/C
 @dirrm share/gnome/help/user-guide
