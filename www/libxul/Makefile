@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#
+#    $MCom$
 
 PORTNAME=	xulrunner
 PORTVERSION=	1.8.0.1
