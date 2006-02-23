@@ -3,7 +3,7 @@
 # Whom:					lewiz <purple@lewiz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/dasher/Makefile,v 1.24 2006/02/12 21:01:17 marcus Exp $
+#   $MCom: ports/accessibility/dasher/Makefile,v 1.25 2006/02/17 23:41:12 marcus Exp $
 #
 
 PORTNAME=	dasher
@@ -27,7 +27,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier libgnomeui atspi \
 		libwnck
 WANT_GNOME=	yes
-USE_AUTOTOOLS=	libtool:15:inc
+GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GCC=	3.4+
@@ -47,14 +47,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||g' ${WRKSRC}/configure
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|-O2||g'
-
-patch-autotools::
-	@(cd ${PATCH_WRKSRC}; \
-	for file in ${LIBTOOLFILES}; do \
-		${CP} $$file $$file.tmp; \
-		${SED} -e "/^ltmain=/s^\$$ac_aux_dir/ltmain.sh^${LTMAIN}^g" \
-			$$file.tmp > $$file; \
-		${RM} $$file.tmp; \
-	done);
 
 .include <bsd.port.post.mk>

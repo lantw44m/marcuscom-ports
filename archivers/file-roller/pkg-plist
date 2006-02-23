@@ -1,4 +1,6 @@
 bin/file-roller
+lib/nautilus/extensions-1.0/libnautilus-fileroller.a
+lib/nautilus/extensions-1.0/libnautilus-fileroller.la
 lib/nautilus/extensions-1.0/libnautilus-fileroller.so
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/NEWS
