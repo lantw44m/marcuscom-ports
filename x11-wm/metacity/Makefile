@@ -3,7 +3,7 @@
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-wm/metacity/Makefile,v 1.70 2006/02/14 00:32:48 ahze Exp $
+#    $MCom: ports/x11-wm/metacity/Makefile,v 1.71 2006/02/19 22:00:11 marcus Exp $
 #
 
 PORTNAME=	metacity
@@ -22,8 +22,9 @@ LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 CONFLICTS=	expocity-[0-9]*
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
+USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gconf2
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-render
