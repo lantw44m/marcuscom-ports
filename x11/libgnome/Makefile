@@ -3,11 +3,12 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnome/Makefile,v 1.70 2006/01/17 00:05:13 marcus Exp $
+#   $MCom: ports/x11/libgnome/Makefile,v 1.71 2006/01/31 20:36:55 marcus Exp $
 #
 
 PORTNAME=	libgnome
 PORTVERSION=	2.13.7
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
@@ -19,6 +20,7 @@ COMMENT=	Libraries for GNOME, a GNU desktop environment
 BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
+USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_XPM=	yes

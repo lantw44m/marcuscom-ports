@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomepanel/Makefile,v 1.119 2006/01/31 20:36:55 marcus Exp $
+#   $MCom: ports/x11/gnomepanel/Makefile,v 1.120 2006/02/14 00:51:18 ahze Exp $
 #
 
 PORTNAME=	gnomepanel
 PORTVERSION=	2.13.91
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/2.13
@@ -19,6 +20,7 @@ COMMENT=	Panel component for the GNOME 2 Desktop
 
 RUN_DEPENDS=	gnome-menu-editor:${PORTSDIR}/deskutils/gnome-menu-editor
 
+USE_GETTEXT=	yes
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
