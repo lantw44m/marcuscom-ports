@@ -236,9 +236,9 @@ share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 @dirrm share/gnome/epiphany/art
 @dirrm share/gnome/epiphany
 @dirrm %%DOCSDIR%%
-@unexec rmdir %D/lib/epiphany/%%EPHY_VERSION%%/plugins 2>/dev/null || true
-@unexec rmdir %D/lib/epiphany/%%EPHY_VERSION%% 2>/dev/null || true
-@unexec rmdir %D/lib/epiphany 2>/dev/null || true
+@dirrmtry lib/epiphany/%%EPHY_VERSION%%/plugins
+@dirrmtry lib/epiphany/%%EPHY_VERSION%%
+@dirrmtry lib/epiphany
 @dirrm include/epiphany/%%EPHY_VERSION%%/epiphany
 @dirrm include/epiphany/%%EPHY_VERSION%%
 @dirrm include/epiphany

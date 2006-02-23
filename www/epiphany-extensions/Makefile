@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.63 2006/01/31 18:59:19 marcus Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.64 2006/02/14 07:20:15 marcus Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	1.9.7
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/1.9
@@ -21,11 +22,12 @@ COMMENT=	A set of add-ons for the Epiphany web browser
 BUILD_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 
+USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GECKO=	firefox mozilla seamonkey
 USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
