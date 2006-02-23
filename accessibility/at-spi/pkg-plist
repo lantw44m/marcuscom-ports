@@ -167,6 +167,8 @@ share/locale/zh_HK/LC_MESSAGES/at-spi.mo
 share/locale/zh_TW/LC_MESSAGES/at-spi.mo
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
 @dirrm share/gnome/idl/at-spi-1.0
 @dirrm share/doc/at-spi-cspi
 @dirrm lib/orbit-2.0
