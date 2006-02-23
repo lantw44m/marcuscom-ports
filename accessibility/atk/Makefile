@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/atk/Makefile,v 1.59 2006/01/18 01:05:29 ahze Exp $
+#   $MCom: ports/accessibility/atk/Makefile,v 1.60 2006/02/23 17:20:22 marcus Exp $
 #
 
 PORTNAME=	atk
@@ -19,7 +19,7 @@ COMMENT=	A GNOME accessibility toolkit (ATK)
 
 USE_BZIP2=	yes
 INSTALLS_SHLIB=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack glib20 ltverhack
 CONFIGURE_ARGS=	--enable-static \
 		--disable-gtk-doc \
