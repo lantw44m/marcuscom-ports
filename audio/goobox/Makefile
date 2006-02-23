@@ -3,7 +3,7 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/goobox/Makefile,v 1.10 2006/01/20 02:55:49 ahze Exp $
 
 PORTNAME=	goobox
 PORTVERSION=	0.9.93
@@ -24,7 +24,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui libglade2 libbonobo \
 		gnomedocutils
 USE_GSTREAMER80=	cdparanoia gconf
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
