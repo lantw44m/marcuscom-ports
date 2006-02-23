@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/www/xulrunner/Makefile,v 1.4 2006/02/23 14:59:22 ahze Exp $
 
 PORTNAME=	xulrunner
 PORTVERSION=	1.8.0.1
+PORTREVISION=	1
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	xulrunner/releases/${PORTVERSION}/source/
@@ -25,7 +26,7 @@ USE_GCC=	3.4+
 
 PORT_MOZCONFIG=	${WRKSRC}/xulrunner/config/mozconfig
 MOZ_OPTIONS=	--disable-javaxpcom
-
+MOZ_EXTENSIONS=	default,cookie,permissions
 OPTIONS=	# Empty, used for generic gecko OPTIONS
 
 .include <bsd.port.pre.mk>
