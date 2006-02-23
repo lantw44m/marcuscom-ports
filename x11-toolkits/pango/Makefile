@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.51 2006/02/11 20:51:38 ahze Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.52 2006/02/21 13:22:03 ahze Exp $
 #
 
 PORTNAME=	pango
@@ -27,7 +27,7 @@ USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 INSTALLS_SHLIB=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack glib20 ltverhack
 CONFIGURE_ARGS=	--with-qt=no \
 		--with-html-dir=${PREFIX}/share/doc \
