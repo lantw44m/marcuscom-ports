@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.78 2006/02/13 00:13:33 marcus Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.79 2006/02/18 18:52:23 marcus Exp $
 #
 
 PORTNAME=	yelp
@@ -17,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A help browser for the GNOME 2 desktop
 
-USE_GECKO=	firefox mozilla seamonkey
+USE_GECKO=	firefox mozilla seamonkey xulrunner
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
