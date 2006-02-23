@@ -3,11 +3,11 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/gstreamer-plugins-faad80/Makefile,v 1.1 2006/01/20 02:55:51 ahze Exp $
 #
 
 CATEGORIES=	audio
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	Gstreamer MPEG-2 and MPEG-4 ACC decoder plugin
 

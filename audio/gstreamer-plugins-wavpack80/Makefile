@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/gstreamer-plugins-wavpack80/Makefile,v 1.1 2006/01/20 02:55:55 ahze Exp $
 #
 
 CATEGORIES=	audio
-PORTREVISION=	1
+PORTREVISION=	2
 
 GST_PLUGIN=	wavpack
 

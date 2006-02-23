@@ -6,6 +6,7 @@
 
 PORTNAME=	marlin
 PORTVERSION=	0.9
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -22,7 +23,7 @@ USE_GNOME=	gnomeprefix gnomehack gnometarget intlhack libgnomeui nautiluscdburne
 USE_GSTREAMER80=	flac gconf mad vorbis
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lcam"
 
