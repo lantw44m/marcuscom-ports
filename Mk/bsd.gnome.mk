@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.360 2006/02/04 21:11:43 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.361 2006/02/04 21:20:24 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -120,14 +120,14 @@ libghttp_LIB_DEPENDS=	ghttp.1:${PORTSDIR}/www/libghttp
 libghttp_DETECT=	${LOCALBASE}/etc/ghttpConf.sh
 
 GLIB_CONFIG?=		${LOCALBASE}/bin/glib12-config
-glib12_LIB_DEPENDS=	glib12.3:${PORTSDIR}/devel/glib12
+glib12_LIB_DEPENDS=	glib-12.3:${PORTSDIR}/devel/glib12
 glib12_CONFIGURE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_MAKE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_DETECT=		${GLIB_CONFIG}
 glib12_USE_GNOME_IMPL=	pkgconfig
 
 GTK_CONFIG?=		${X11BASE}/bin/gtk12-config
-gtk12_LIB_DEPENDS=	gtk12.2:${PORTSDIR}/x11-toolkits/gtk12
+gtk12_LIB_DEPENDS=	gtk-12.2:${PORTSDIR}/x11-toolkits/gtk12
 gtk12_CONFIGURE_ENV=	GTK_CONFIG="${GTK_CONFIG}"
 gtk12_MAKE_ENV=		GTK_CONFIG="${GTK_CONFIG}"
 gtk12_DETECT=		${GTK_CONFIG}
@@ -626,14 +626,7 @@ _USE_GNOME+=	${${component}_USE_GNOME_IMPL} ${component}
 # Then handle the ltverhack component (it has to be done here, because
 # we rely on some bsd.autotools.mk variables, and bsd.autotools.mk is
 # included in the post-makefile section).
-.if defined(AUTOTOOL_libtool_inc)
-ltverhack_PRE_PATCH=	${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
-						for file in ${LIBTOOLFILES}; do \
-							${REINPLACE_CMD} -e \
-								'/^ltmain=/!s|$$ac_aux_dir/ltmain\.sh|${LIBTOOLFLAGS} ${WRKDIR}/gnome-ltmain.sh|g' \
-								${PATCH_WRKSRC}/$$file; \
-						done;
-.elif defined(AUTOTOOL_libtool)
+.if defined(AUTOTOOL_libtool)
 ltverhack_PRE_PATCH=	${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
 						${CP} -pf ${LIBTOOL} ${WRKDIR}/gnome-libtool && \
 						for file in ${LIBTOOLFILES}; do \
