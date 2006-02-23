@@ -3,7 +3,7 @@
 # Whom:					marc@informatik.uni-bremen.de
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.31 2006/01/17 06:00:04 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -29,7 +29,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnometarget libglade2
 USE_PYTHON=	yes
 USE_GETTEXT=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-lintl"
 LDFLAGS+=	-L${LOCALBASE}/lib
