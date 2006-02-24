@@ -91,6 +91,7 @@ include/poppler/splash/SplashTypes.h
 include/poppler/splash/SplashXPath.h
 include/poppler/splash/SplashXPathScanner.h
 lib/libpoppler.a
+lib/libpoppler.la
 lib/libpoppler.so
 lib/libpoppler.so.0
 libdata/pkgconfig/poppler-cairo.pc

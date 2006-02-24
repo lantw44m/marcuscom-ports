@@ -4,6 +4,7 @@ include/poppler/glib/poppler-enums.h
 include/poppler/glib/poppler-page.h
 include/poppler/glib/poppler.h
 lib/libpoppler-glib.a
+lib/libpoppler-glib.la
 lib/libpoppler-glib.so
 lib/libpoppler-glib.so.0
 libdata/pkgconfig/poppler-glib.pc

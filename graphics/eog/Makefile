@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.20 2006/02/15 04:57:34 marcus Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.21 2006/02/21 04:52:34 marcus Exp $
 #
 
 PORTNAME=	eog
@@ -23,7 +23,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprintui \
 		librsvg2 desktopfileutils gnomedesktop
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 GNOME_DESKTOP_VERSION=2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"

@@ -3,12 +3,12 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
-#   $MCom: ports/graphics/gstreamer-plugins-cairo/Makefile,v 1.2 2005/10/14 20:39:57 adamw Exp $
+#    $MCom: ports/graphics/gstreamer-plugins-cairo80/Makefile,v 1.1 2006/01/20 02:56:00 ahze Exp $
+#   $MCom: ports/graphics/gstreamer-plugins-cairo80/Makefile,v 1.1 2006/01/20 02:56:00 ahze Exp $
 #
 
 CATEGORIES=	graphics
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	Gstreamer vector graphics plugin
 

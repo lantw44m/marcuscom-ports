@@ -3,11 +3,11 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/graphics/gstreamer-plugins-hermes80/Makefile,v 1.1 2006/01/20 02:56:01 ahze Exp $
 #
 
 CATEGORIES=	graphics
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	Gstreamer hermes colorspace plugin
 

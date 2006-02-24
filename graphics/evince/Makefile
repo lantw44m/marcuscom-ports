@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.39 2006/01/31 20:36:49 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.40 2006/02/02 23:45:10 ahze Exp $
 #
 
 PORTNAME=	evince
@@ -19,7 +19,7 @@ COMMENT=	GNOME 2 multi-format document viewer
 LIB_DEPENDS=	poppler-glib.0:${PORTSDIR}/graphics/poppler-gtk
 
 USE_BZIP2=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GHOSTSCRIPT=yes
