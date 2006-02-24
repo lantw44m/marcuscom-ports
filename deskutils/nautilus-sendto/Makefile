@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.1 2005/12/28 17:18:37 ahze Exp $
 
 PORTNAME=	nautilus-sendto
 PORTVERSION=	0.5
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/nautilus-sendto/0.5
@@ -21,7 +22,7 @@ RUN_DEPENDS=	gaim:${PORTSDIR}/net-im/gaim \
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	intlhack gnomeprefix gnometarget nautilus2 gnomehack
 
