@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.65 2006/01/24 01:41:31 marcus Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.66 2006/02/24 18:13:39 marcus Exp $
 #
 
 PORTNAME=	gconf2
@@ -23,7 +23,7 @@ USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomehier gnomehack orbit2 gtk20 libxml2 linc ltverhack
 INSTALLS_SHLIB=	yes
-GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 #		--enable-gconf-source=${PREFIX}/etc/gconf/schemas \

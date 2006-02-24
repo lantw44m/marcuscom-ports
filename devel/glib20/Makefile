@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.67 2006/02/14 16:52:00 marcus Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.68 2006/02/24 18:15:19 marcus Exp $
 #
 
 PORTNAME=	glib
@@ -26,7 +26,7 @@ LATEST_LINK=	glib20
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 USE_GNOME=	gnomehack gnometarget pkgconfig ltverhack
 USE_GMAKE=	yes
