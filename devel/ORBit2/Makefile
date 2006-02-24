@@ -3,11 +3,12 @@
 # Whom:				Chia-liang Kao <clkao@CirX.ORG>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/ORBit2/Makefile,v 1.44 2006/01/31 20:36:47 marcus Exp $
+#    $MCom: ports/devel/ORBit2/Makefile,v 1.45 2006/02/06 12:41:57 ahze Exp $
 #
 
 PORTNAME=	ORBit2
 PORTVERSION=	2.13.3
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -21,7 +22,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 INSTALLS_SHLIB=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack libidl ltverhack
 CONFIGURE_ARGS=	--disable-indent \
 		--with-html-dir=${PREFIX}/share/doc \
