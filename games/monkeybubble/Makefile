@@ -24,6 +24,8 @@ USE_GSTREAMER80=	ogg gconf
 USE_GNOME=	gnomehack gnomeprefix librsvg2 libgnomeui \
 		intlhack
 
+GCONF_SCHEMAS=	monkey-bubble.schemas
+
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 
