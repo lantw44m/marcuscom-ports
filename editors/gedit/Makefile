@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.22 2006/02/14 03:40:31 marcus Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.23 2006/02/19 05:20:32 marcus Exp $
 #
 
 PORTNAME=	gedit
 PORTVERSION=	2.13.91
+PORTREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
@@ -23,7 +24,7 @@ USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
 USE_GMAKE=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack \
 		libgnomeprintui libgnomeui eel2 gtksourceview desktopfileutils
 WANT_GNOME=	yes

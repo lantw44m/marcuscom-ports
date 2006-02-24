@@ -18,7 +18,7 @@ COMMENT=	GTK2 Puzzle Bobble clone with monkeys
 USE_X_PREFIX=	yes
 HAS_MONKEYS=	yes
 
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GSTREAMER80=	ogg gconf
 USE_GNOME=	gnomehack gnomeprefix librsvg2 libgnomeui \

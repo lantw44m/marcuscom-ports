@@ -6,7 +6,7 @@
 #
 
 CATEGORIES=	devel
-PORTREVISION=	2
+PORTREVISION=	3
 
 COMMENT=	Gstreamer gconf plugin
 
