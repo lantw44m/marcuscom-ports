@@ -15,6 +15,7 @@ include/gconf/2/gconf/gconf.h
 lib/GConf/2/libgconfbackend-oldxml.so
 lib/GConf/2/libgconfbackend-xml.so
 lib/libgconf-2.a
+lib/libgconf-2.la
 lib/libgconf-2.so
 lib/libgconf-2.so.4
 libdata/pkgconfig/gconf-2.0.pc

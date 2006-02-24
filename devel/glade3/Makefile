@@ -3,11 +3,12 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.4 2005/07/01 18:00:49 marcus Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.5 2006/01/27 00:03:34 ahze Exp $
 #
 
 PORTNAME=	glade3
 PORTVERSION=	2.91.0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/glade-3/2.91
@@ -22,7 +23,7 @@ USE_X_PREFIX=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget gtk20 libxml2 gnomeprefix gnomehack
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
 INSTALLS_SHLIB=	yes

@@ -3,11 +3,12 @@
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glibmm/Makefile,v 1.24 2006/02/06 06:01:16 marcus Exp $
+#   $MCom: ports/devel/glibmm/Makefile,v 1.25 2006/02/14 19:25:40 adamw Exp $
 #
 
 PORTNAME=	glibmm
 PORTVERSION=	2.9.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -25,7 +26,7 @@ USE_GCC=	3.4
 USE_GNOME=	gnomehack gnometarget glib20
 USE_REINPLACE=	yes
 USE_PERL5=	yes
-USE_AUTOTOOLS=	libtool:15:inc
+GNU_CONFIGURE=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-static
 
@@ -41,14 +42,5 @@ post-patch:
 post-configure:
 	@${TOUCH} ${WRKSRC}/docs/reference/html/index.html
 .endif
-
-patch-autotools::
-	@(cd ${PATCH_WRKSRC}; \
-	for file in ${LIBTOOLFILES}; do \
-		${CP} $$file $$file.tmp; \
-		${SED} -e "/^ltmain=/s^\$$ac_aux_dir/ltmain.sh^${LTMAIN}^g" \
-			$$file.tmp > $$file; \
-		${RM} $$file.tmp; \
-	done);
 
 .include <bsd.port.mk>

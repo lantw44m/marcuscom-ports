@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.66 2006/02/11 17:23:03 ahze Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.67 2006/02/14 16:52:00 marcus Exp $
 #
 
 PORTNAME=	glib
 PORTVERSION=	2.9.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/2.9,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.9/ \
@@ -26,7 +26,7 @@ LATEST_LINK=	glib20
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 INSTALLS_SHLIB=	yes
 USE_GNOME=	gnomehack gnometarget pkgconfig ltverhack
 USE_GMAKE=	yes

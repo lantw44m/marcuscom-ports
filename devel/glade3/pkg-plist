@@ -30,8 +30,10 @@ include/libgladeui-1.0/libgladeui/glade-widget-class.h
 include/libgladeui-1.0/libgladeui/glade-widget.h
 include/libgladeui-1.0/libgladeui/glade-xml-utils.h
 include/libgladeui-1.0/libgladeui/glade.h
+lib/glade-3/modules/libgladegtk.la
 lib/glade-3/modules/libgladegtk.so
 lib/libgladeui-1.a
+lib/libgladeui-1.la
 lib/libgladeui-1.so
 lib/libgladeui-1.so.0
 libdata/pkgconfig/libgladeui-1.0.pc

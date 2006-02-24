@@ -3,11 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.126 2006/02/13 19:07:46 marcus Exp $
+#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.127 2006/02/14 19:25:40 adamw Exp $
 #
 
 PORTNAME=	gnomevfs2
 PORTVERSION=	2.13.91
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/2.13
@@ -24,7 +25,7 @@ USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomemimedata gconf2 \
 		libbonobo ltverhack
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-openssl \
