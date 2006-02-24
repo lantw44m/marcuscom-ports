@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnomeutils2/Makefile,v 1.79 2006/01/30 18:21:45 ahze Exp $
+#   $MCom: ports/deskutils/gnomeutils2/Makefile,v 1.80 2006/02/12 21:29:53 marcus Exp $
 #
 
 PORTNAME=	gnomeutils2
 PORTVERSION=	2.13.92
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -26,7 +27,7 @@ GNOME_DESKTOP_VERSION=2
 INSTALLS_SHLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
 		libgnomeprintui gnomedesktop ltverhack
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
