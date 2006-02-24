@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.48 2006/01/31 20:36:50 marcus Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.49 2006/02/14 18:15:03 marcus Exp $
 #
 
 PORTNAME=	evolution-exchange
 PORTVERSION=	2.5.91
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/2.5
@@ -22,7 +23,7 @@ RUN_DEPENDS=	evolution-${EVO_VERSION}:${PORTSDIR}/mail/evolution
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnometarget
