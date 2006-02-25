@@ -33,6 +33,7 @@ include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-statusbar.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-tab.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-type-builtins.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-window.h
+lib/epiphany/%%EPHY_VERSION%%/plugins/libdesktopfileplugin.la
 lib/epiphany/%%EPHY_VERSION%%/plugins/libdesktopfileplugin.so
 libdata/pkgconfig/epiphany-1.10.pc
 share/aclocal/epiphany.m4

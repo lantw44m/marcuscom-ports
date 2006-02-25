@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/sysutils/gstreamer-plugins-cdio80/Makefile,v 1.1 2006/01/20 02:56:13 ahze Exp $
 #
 
 CATEGORIES=	sysutils
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	Gstreamer compact disc input and control library
 

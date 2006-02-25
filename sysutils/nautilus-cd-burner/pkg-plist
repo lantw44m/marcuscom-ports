@@ -4,10 +4,13 @@ include/libnautilus-burn/nautilus-burn-drive-selection.h
 include/libnautilus-burn/nautilus-burn-drive.h
 include/libnautilus-burn/nautilus-burn-features.h
 include/libnautilus-burn/nautilus-burn-recorder.h
+lib/gnome-vfs-2.0/modules/libmapping.la
 lib/gnome-vfs-2.0/modules/libmapping.so
 lib/libnautilus-burn.a
+lib/libnautilus-burn.la
 lib/libnautilus-burn.so
 lib/libnautilus-burn.so.3
+lib/nautilus/extensions-1.0/libnautilus-burn-extension.la
 lib/nautilus/extensions-1.0/libnautilus-burn-extension.so
 libdata/pkgconfig/libnautilus-burn.pc
 libexec/mapping-daemon
