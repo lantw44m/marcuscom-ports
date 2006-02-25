@@ -3,11 +3,12 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus2/Makefile,v 1.96 2006/01/31 20:36:56 marcus Exp $
+#   $MCom: ports/x11-fm/nautilus2/Makefile,v 1.97 2006/02/13 12:50:57 ahze Exp $
 #
 
 PORTNAME=	nautilus2
 PORTVERSION=	2.13.91
+PORTREVISION=	1
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.13
@@ -26,7 +27,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop eel2 \
 		librsvg2 desktopfileutils
 GNOME_DESKTOP_VERSION=2
 INSTALLS_SHLIB=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="${PTHREAD_LIBS} -L${LOCALBASE}/lib -L${X11BASE}/lib -liconv" \
 		LIBPNG="-L${LOCALBASE}/lib -lpng -lz"

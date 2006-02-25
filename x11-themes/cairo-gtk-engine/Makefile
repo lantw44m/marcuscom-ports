@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-themes/cairo-gtk-engine/Makefile,v 1.1 2005/07/04 06:33:15 ahze Exp $
 
 PORTNAME=	cairo-gtk-engine
 PORTVERSION=	0.0.0
+PORTREVISION=	1
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://people.freebsd.org/~ahze/distfiles/
@@ -17,7 +18,7 @@ COMMENT=	Cairo-gtk theme engine and themes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_BZIP2=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gtk20
 USE_X_PREFIX=	yes
 
