@@ -1,13 +1,5 @@
 --- configure.orig	Sun Jan 29 13:06:22 2006
 +++ configure	Sun Jan 29 13:06:48 2006
-@@ -32826,7 +32826,6 @@
- 
-                 #define _XOPEN_SOURCE 600
-                 #include <stdlib.h>
--                #include <malloc.h>
- 		static void test_memalign (size_t boundary, size_t size) {
- 		    void *mem = 0;
- 		    if (posix_memalign (&mem, boundary, size) != 0 || !mem)
 @@ -34462,6 +34461,8 @@
           ;;
      esac
