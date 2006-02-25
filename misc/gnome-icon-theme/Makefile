@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.68 2006/02/14 18:28:37 marcus Exp $
+#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.69 2006/02/25 22:23:54 marcus Exp $
 #
 
 PORTNAME=	gnome-icon-theme
