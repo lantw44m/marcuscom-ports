@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.16 2006/02/14 01:48:04 ahze Exp $
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.17 2006/02/24 05:51:17 marcus Exp $
 #
 
 PORTNAME=	gucharmap
-PORTVERSION=	1.5.2
-PORTREVISION=	1
+PORTVERSION=	1.5.3
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
