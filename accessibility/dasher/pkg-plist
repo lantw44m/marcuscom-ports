@@ -197,6 +197,7 @@ share/gnome/help/dasher/eu/version.xml
 share/gnome/omf/dasher/dasher-C.omf
 share/gnome/omf/dasher/dasher-eu.omf
 share/icons/hicolor/48x48/apps/dasher.png
+share/icons/hicolor/scalable/apps/dasher.svg
 share/locale/ar/LC_MESSAGES/dasher.mo
 share/locale/az/LC_MESSAGES/dasher.mo
 share/locale/be/LC_MESSAGES/dasher.mo
