@@ -3,11 +3,12 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer80/Makefile,v 1.36 2006/01/20 02:56:09 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer80/Makefile,v 1.37 2006/02/09 23:47:56 ahze Exp $
 #
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.8.12
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://gstreamer.freedesktop.org/src/gstreamer/
@@ -29,7 +30,7 @@ USE_GNOME=	gnomehack \
 		gnomeprefix \
 		glib20 \
 		libxml2
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-tests \
 		--disable-examples \
 		--disable-docs-build \

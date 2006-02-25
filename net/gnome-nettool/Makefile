@@ -3,7 +3,7 @@
 # Whom:				Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/gnomenettool/Makefile,v 1.13 2006/01/18 05:46:04 marcus Exp $
+#   $MCom: ports/net/gnomenettool/Makefile,v 1.14 2006/01/30 17:54:56 ahze Exp $
 #
 
 PORTNAME=	gnomenettool
@@ -22,7 +22,7 @@ USE_X_PREFIX=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libglade2 gconf2
 USE_GMAKE=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CFLAGS+=	-DHAVE_SOCKADDR_SA_LEN

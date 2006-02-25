@@ -7,7 +7,7 @@
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.8.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-ffmpeg/
 PKGNAMESUFFIX=	-ffmpeg80
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget
 USE_GSTREAMER80=	yes
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \
 		CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include" \
 		CFLAGS="${CFLAGS} -fno-force-addr" \

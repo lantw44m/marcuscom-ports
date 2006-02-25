@@ -3,10 +3,11 @@
 # Whom: dgilbert@velocet.ca
 #
 # $FreeBSD$
-#    $MCom: ports/print/gutenprint/Makefile,v 1.1 2006/01/25 23:03:16 ahze Exp $
+#    $MCom: ports/print/gutenprint/Makefile,v 1.2 2006/01/31 20:36:52 marcus Exp $
 
 PORTNAME=	gutenprint
 DISTVERSION=	5.0.0-rc2
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	gimp-print
@@ -21,7 +22,7 @@ USE_GETTEXT=	yes
 USE_GETOPT_LONG=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnometarget
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
 CONFIGURE_ARGS=	--with-gimp=no --with-gimp2=no
 INSTALLS_SHLIB=	yes

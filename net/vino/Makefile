@@ -3,7 +3,7 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino/Makefile,v 1.21 2005/10/08 19:41:39 marcus Exp $
+#   $MCom: ports/net/vino/Makefile,v 1.23 2006/01/15 21:35:09 ahze Exp $
 #
 
 PORTNAME=	vino
@@ -22,7 +22,7 @@ USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomepanel
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-session-support
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \

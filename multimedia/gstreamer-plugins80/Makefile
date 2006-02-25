@@ -3,12 +3,12 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins80/Makefile,v 1.56 2006/01/31 20:36:51 marcus Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins80/Makefile,v 1.57 2006/02/09 23:59:30 ahze Exp $
 #
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.8.12
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://gstreamer.freedesktop.org/src/gst-plugins/
@@ -34,7 +34,7 @@ USE_GNOME+=	gnomehack \
 		gnomeprefix \
 		gnometarget \
 		pkgconfig
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 GST_PLUGIN?=	base
 
 CONFIGURE_ENV=	PKG_CONFIG=${PKG_CONFIG} \

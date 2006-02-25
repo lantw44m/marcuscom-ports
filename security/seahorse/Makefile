@@ -3,12 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.12 2006/02/05 21:08:52 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.13 2006/02/14 19:25:41 adamw Exp $
 #
 
 PORTNAME=	seahorse
 PORTVERSION=	0.8
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/0.8
@@ -25,7 +25,7 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui
-USE_AUTOTOOLS=	libtool:15
+GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--disable-gpg-check

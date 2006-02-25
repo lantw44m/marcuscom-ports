@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net/gstreamer-plugins-libmms80/Makefile,v 1.1 2006/01/20 02:56:12 ahze Exp $
 #
 
 CATEGORIES=	net
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	Gstreamer mms:// and mmsh:// plugin
 

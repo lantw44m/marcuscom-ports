@@ -3,13 +3,13 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.69 2006/02/09 21:18:50 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.70 2006/02/09 21:36:09 ahze Exp $
 #
 
 PORTNAME=	gstreamer
 PORTVERSION?=	0.10.3
 ## SET BACK TO PORTREVISION?= when we reset PORTREVISION in all the gst plugin ports
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME:S|$|sources/gst-plugins-base/0.10/:base|} \
 		http://gstreamer.freedesktop.org/src/gst-plugins-base/:base \

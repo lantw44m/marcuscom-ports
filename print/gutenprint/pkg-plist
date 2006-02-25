@@ -31,9 +31,11 @@ include/gutenprint/xml.h
 %%GTK%%include/gutenprintui2/gutenprintui.h
 %%GTK%%include/gutenprintui2/typebuiltins.h
 lib/libgutenprint.a
+lib/libgutenprint.la
 lib/libgutenprint.so
 lib/libgutenprint.so.2
 %%GTK%%lib/libgutenprintui2.a
+%%GTK%%lib/libgutenprintui2.la
 %%GTK%%lib/libgutenprintui2.so
 %%GTK%%lib/libgutenprintui2.so.1
 libdata/pkgconfig/gutenprint.pc
