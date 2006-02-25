@@ -3,12 +3,12 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.19 2006/01/13 03:17:43 ahze Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.20 2006/02/24 18:50:35 marcus Exp $
 #
 
 PORTNAME=	poppler
 PORTVERSION=	0.5.0
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
 
@@ -21,7 +21,7 @@ CONFLICTS=	xpdf-[0-9]*
 USE_GMAKE=	yes
 USE_X_PREFIX=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack gnometarget
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-zlib \
 		--enable-xpdf-headers \
