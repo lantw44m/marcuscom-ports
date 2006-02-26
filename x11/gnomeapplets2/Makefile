@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomeapplets2/Makefile,v 1.103 2006/02/20 06:06:41 marcus Exp $
+#   $MCom: ports/x11/gnomeapplets2/Makefile,v 1.104 2006/02/23 21:58:22 ahze Exp $
 #
 
 PORTNAME=	gnomeapplets2
-PORTVERSION=	2.13.4
-PORTREVISION=	1
+PORTVERSION=	2.13.90
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-applets/2.13
@@ -36,8 +35,8 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gstreamer=0.10
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
+		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		FREEBSD_SYS=${FREEBSD_SYS}
 
 GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas \
