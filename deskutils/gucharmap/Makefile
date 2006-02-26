@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.17 2006/02/24 05:51:17 marcus Exp $
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.18 2006/02/25 21:13:47 marcus Exp $
 #
 
 PORTNAME=	gucharmap
 PORTVERSION=	1.5.3
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.5
@@ -28,6 +29,7 @@ WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
+INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 	       	LDFLAGS="-L${LOCALBASE}/lib"
 
