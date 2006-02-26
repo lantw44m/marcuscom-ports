@@ -6,7 +6,6 @@ include/libnautilus-burn/nautilus-burn-features.h
 include/libnautilus-burn/nautilus-burn-recorder.h
 lib/gnome-vfs-2.0/modules/libmapping.la
 lib/gnome-vfs-2.0/modules/libmapping.so
-lib/libnautilus-burn.a
 lib/libnautilus-burn.la
 lib/libnautilus-burn.so
 lib/libnautilus-burn.so.3
