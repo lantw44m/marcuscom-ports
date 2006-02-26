@@ -27,7 +27,7 @@ lib/gnopernicus-1.0/libke.so.%%SHLIB_VERSION%%
 lib/gnopernicus-1.0/libmag.la
 lib/gnopernicus-1.0/libmag.so
 lib/gnopernicus-1.0/libmag.so.%%SHLIB_VERSION%%
-lib/gnopernicus-1.0/libsrcon.la
+lib/gnopernicus-1.0/libsrconf.la
 lib/gnopernicus-1.0/libsrconf.so
 lib/gnopernicus-1.0/libsrconf.so.%%SHLIB_VERSION%%
 lib/gnopernicus-1.0/libsrlow.la
