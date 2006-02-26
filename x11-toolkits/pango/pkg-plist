@@ -68,7 +68,7 @@ lib/pango/%%VERSION%%/modules/pango-hebrew-fc.la
 lib/pango/%%VERSION%%/modules/pango-hebrew-fc.so
 lib/pango/%%VERSION%%/modules/pango-indic-fc.a
 lib/pango/%%VERSION%%/modules/pango-indic-fc.la
-lib/pango/%%VERSION%%/modules/pango-indic-fc.a
+lib/pango/%%VERSION%%/modules/pango-indic-fc.so
 lib/pango/%%VERSION%%/modules/pango-khmer-fc.a
 lib/pango/%%VERSION%%/modules/pango-khmer-fc.la
 lib/pango/%%VERSION%%/modules/pango-khmer-fc.so
