@@ -15,7 +15,7 @@ MAINTAINER=	pav@FreeBSD.org
 COMMENT=	Sample editor for GNOME 2 using Gstreamer backend
 
 LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
-		uuid.1:${PORTSDIR}/sysutils/e2fsprogs
+		uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
