@@ -47,6 +47,8 @@ lib/gstreamer-%%VERSION%%/libgstaudiorate.so
 lib/gstreamer-%%VERSION%%/libgstaudioresample.a
 lib/gstreamer-%%VERSION%%/libgstaudioresample.la
 lib/gstreamer-%%VERSION%%/libgstaudioresample.so
+lib/gstreamer-%%VERSION%%/libgstaudiotestsrc.a
+lib/gstreamer-%%VERSION%%/libgstaudiotestsrc.la
 lib/gstreamer-%%VERSION%%/libgstaudiotestsrc.so
 lib/gstreamer-%%VERSION%%/libgstdecodebin.a
 lib/gstreamer-%%VERSION%%/libgstdecodebin.la
