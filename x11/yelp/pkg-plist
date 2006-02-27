@@ -25,7 +25,6 @@ share/gnome/yelp/xslt/db-title.xsl
 share/gnome/yelp/xslt/db2html.xsl
 share/gnome/yelp/xslt/info2html.xsl
 share/gnome/yelp/xslt/man2html.xsl
-share/gnome/yelp/xslt/search-header.xsl
 share/gnome/yelp/xslt/search2html.xsl
 share/gnome/yelp/xslt/toc2html.xsl
 share/gnome/yelp/xslt/yelp-common.xsl
