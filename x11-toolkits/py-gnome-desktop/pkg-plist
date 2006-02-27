@@ -10,6 +10,7 @@
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/_print.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/ui.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/ui.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gtksourceview.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtksourceview.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtop.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtop.so
