@@ -25,6 +25,7 @@ share/gnome/help/fdl/fr/fdl.xml
 share/gnome/help/gnome-feedback/C/gnome-feedback.xml
 share/gnome/help/gnome-feedback/es/gnome-feedback.xml
 share/gnome/help/gnome-feedback/fr/gnome-feedback.xml
+share/gnome/help/gnome-feedback/it/gnome-feedback.xml
 share/gnome/help/gpl/C/gpl.xml
 share/gnome/help/gpl/es/gpl.xml
 share/gnome/help/gpl/fi/gpl.xml
@@ -40,6 +41,7 @@ share/gnome/omf/fdl/fdl-fr.omf
 share/gnome/omf/gnome-feedback/gnome-feedback-C.omf
 share/gnome/omf/gnome-feedback/gnome-feedback-es.omf
 share/gnome/omf/gnome-feedback/gnome-feedback-fr.omf
+share/gnome/omf/gnome-feedback/gnome-feedback-it.omf
 share/gnome/omf/gpl/gpl-C.omf
 share/gnome/omf/gpl/gpl-es.omf
 share/gnome/omf/gpl/gpl-fi.omf
@@ -217,7 +219,6 @@ share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 @dirrmtry share/locale/hy
 @dirrm share/gnome/omf/lgpl
 @dirrm share/gnome/omf/gpl
-@dirrm share/gnome/help/gnome-feedback/fr
 @dirrm share/gnome/omf/gnome-feedback
 @dirrm share/gnome/omf/fdl
 @dirrm share/gnome/help/lgpl/pa
@@ -229,6 +230,8 @@ share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 @dirrm share/gnome/help/gpl/es
 @dirrm share/gnome/help/fdl/fr
 @dirrm share/gnome/help/fdl/es
+@dirrm share/gnome/help/gnome-feedback/it
+@dirrm share/gnome/help/gnome-feedback/fr
 @dirrm share/gnome/help/gnome-feedback/es
 @dirrm share/gnome/help/gnome-feedback/C
 @dirrm share/gnome/help/gnome-feedback
