@@ -153,10 +153,13 @@ share/locale/wa/LC_MESSAGES/nautilus.mo
 share/locale/xh/LC_MESSAGES/nautilus.mo
 share/locale/yi/LC_MESSAGES/nautilus.mo
 share/locale/zh_CN/LC_MESSAGES/nautilus.mo
+share/locale/zh_HK/LC_MESSAGES/nautilus.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus.mo
 share/locale/zu/LC_MESSAGES/nautilus.mo
 share/mime/application/x-gnome-saved-search.xml
 share/mime/packages/nautilus.xml
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/rw/LC_MESSAGES
