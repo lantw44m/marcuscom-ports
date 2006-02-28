@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.88 2006/02/23 17:48:55 marcus Exp $
+#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.89 2006/02/27 15:20:41 marcus Exp $
 #
 
 PORTNAME=	gnomemedia2
-PORTVERSION=	2.13.92
-PORTREVISION=	2
+PORTVERSION=	2.13.93
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-media/2.13
