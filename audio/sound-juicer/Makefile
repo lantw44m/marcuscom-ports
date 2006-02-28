@@ -3,11 +3,11 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/sound-juicer/Makefile,v 1.39 2006/02/12 20:21:30 marcus Exp $
+#   $MCom: ports/audio/sound-juicer/Makefile,v 1.40 2006/02/23 19:08:59 marcus Exp $
 #
 
 PORTNAME=	sound-juicer
-PORTVERSION=	2.13.5
+PORTVERSION=	2.13.6
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
@@ -29,6 +29,7 @@ USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui nautiluscdburner \
 USE_GSTREAMER=	cdparanoia vorbis flac gconf
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-ignore-missing-cd
+INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
@@ -36,5 +37,7 @@ GCONF_SCHEMAS=	sound-juicer.schemas
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|^\(SUBDIRS = .*\)tests\(.*\)|\1\2|' ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e 's|--parents|-p|g' \
+		${WRKSRC}/data/Makefile.in
 
 .include <bsd.port.mk>
