@@ -3,7 +3,7 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/fast-user-switch-applet/Makefile,v 1.5 2006/02/23 21:58:21 ahze Exp $
+#    $MCom: ports/x11/fast-user-switch-applet/Makefile,v 1.6 2006/02/28 05:46:04 marcus Exp $
 
 PORTNAME=	fast-user-switch-applet
 PORTVERSION=	2.13.92
@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	bland@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Fast user switching applet for GNOME
 
 USE_BZIP2=	yes
