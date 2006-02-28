@@ -10,19 +10,22 @@ share/gnome/evince/evince-toolbar.xml
 share/gnome/evince/evince-ui.xml
 share/gnome/evince/hand-open.png
 share/gnome/help/evince/C/evince.xml
-share/gnome/help/evince/C/figures/evince_start_window.pngevince_start_window.png
+share/gnome/help/evince/C/figures/evince_start_window.png
 share/gnome/help/evince/C/legal.xml
+share/gnome/help/evince/bg/evince.xml
+share/gnome/help/evince/bg/figures/evince_start_window.png
 share/gnome/help/evince/el/evince.xml
-share/gnome/help/evince/el/figures/evince_start_window.pngevince_start_window.png
+share/gnome/help/evince/el/figures/evince_start_window.png
 share/gnome/help/evince/es/evince.xml
-share/gnome/help/evince/es/figures/evince_start_window.pngevince_start_window.png
+share/gnome/help/evince/es/figures/evince_start_window.png
 share/gnome/help/evince/nl/evince.xml
-share/gnome/help/evince/nl/figures/evince_start_window.pngevince_start_window.png
+share/gnome/help/evince/nl/figures/evince_start_window.png
 share/gnome/help/evince/sr/evince.xml
-share/gnome/help/evince/sr/figures/evince_start_window.pngevince_start_window.png
+share/gnome/help/evince/sr/figures/evince_start_window.png
 share/gnome/help/evince/uk/evince.xml
-share/gnome/help/evince/uk/figures/evince_start_window.pngevince_start_window.png
+share/gnome/help/evince/uk/figures/evince_start_window.png
 share/gnome/omf/evince/evince-C.omf
+share/gnome/omf/evince/evince-bg.omf
 share/gnome/omf/evince/evince-el.omf
 share/gnome/omf/evince/evince-es.omf
 share/gnome/omf/evince/evince-nl.omf
@@ -82,22 +85,18 @@ share/locale/zh_CN/LC_MESSAGES/evince.mo
 share/locale/zh_HK/LC_MESSAGES/evince.mo
 share/locale/zh_TW/LC_MESSAGES/evince.mo
 @dirrm share/gnome/omf/evince
-@dirrm share/gnome/help/evince/uk/figures/evince_start_window.png
 @dirrm share/gnome/help/evince/uk/figures
 @dirrm share/gnome/help/evince/uk
-@dirrm share/gnome/help/evince/sr/figures/evince_start_window.png
 @dirrm share/gnome/help/evince/sr/figures
 @dirrm share/gnome/help/evince/sr
-@dirrm share/gnome/help/evince/nl/figures/evince_start_window.png
 @dirrm share/gnome/help/evince/nl/figures
 @dirrm share/gnome/help/evince/nl
-@dirrm share/gnome/help/evince/es/figures/evince_start_window.png
 @dirrm share/gnome/help/evince/es/figures
 @dirrm share/gnome/help/evince/es
-@dirrm share/gnome/help/evince/el/figures/evince_start_window.png
 @dirrm share/gnome/help/evince/el/figures
 @dirrm share/gnome/help/evince/el
-@dirrm share/gnome/help/evince/C/figures/evince_start_window.png
+@dirrm share/gnome/help/evince/bg/figures
+@dirrm share/gnome/help/evince/bg
 @dirrm share/gnome/help/evince/C/figures
 @dirrm share/gnome/help/evince/C
 @dirrm share/gnome/help/evince

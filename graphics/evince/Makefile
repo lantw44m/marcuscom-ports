@@ -3,12 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.41 2006/02/24 18:50:32 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.42 2006/02/26 15:41:08 marcus Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	0.5.0
-PORTREVISION=	2
+PORTVERSION=	0.5.1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.5
@@ -80,12 +79,13 @@ GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
 CONFIGURE_ARGS+=	--disable-djvu
 .endif
 
-.if defined(WITH_DBUS) || !defined(WITHOUT_DBUS)
+.if !defined(WITHOUT_DBUS)
 LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lt1lib|-lt1 -lm|' \
+	@${REINPLACE_CMD} -e 's|-lt1lib|-lt1 -lm| ; \
+		s|execinfo.h|#|g' \
 		${WRKSRC}/configure \
 		${WRKSRC}/dvi/mdvi-lib/Makefile.in
 
