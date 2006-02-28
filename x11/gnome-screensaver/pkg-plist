@@ -2,6 +2,7 @@ bin/gnome-screensaver
 bin/gnome-screensaver-command
 bin/gnome-screensaver-preferences
 etc/xdg/menus/gnome-screensavers.menu
+libdata/pkgconfig/gnome-screensaver.pc
 libexec/gnome-screensaver-dialog
 libexec/gnome-screensaver/floaters
 libexec/gnome-screensaver/popsquares
@@ -37,6 +38,7 @@ share/locale/gu/LC_MESSAGES/gnome-screensaver.mo
 share/locale/hu/LC_MESSAGES/gnome-screensaver.mo
 share/locale/it/LC_MESSAGES/gnome-screensaver.mo
 share/locale/ja/LC_MESSAGES/gnome-screensaver.mo
+share/locale/ko/LC_MESSAGES/gnome-screensaver.mo
 share/locale/lt/LC_MESSAGES/gnome-screensaver.mo
 share/locale/nb/LC_MESSAGES/gnome-screensaver.mo
 share/locale/nl/LC_MESSAGES/gnome-screensaver.mo
