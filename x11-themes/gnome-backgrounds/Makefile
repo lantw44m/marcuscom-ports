@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-themes/gnome-backgrounds/Makefile,v 1.13 2006/02/03 05:21:33 marcus Exp $
+#    $MCom: ports/x11-themes/gnome-backgrounds/Makefile,v 1.14 2006/02/14 19:17:57 ahze Exp $
 #
 
 PORTNAME=	gnome-backgrounds
-PORTVERSION=	2.13.91
+PORTVERSION=	2.13.92
 CATEGORIES=	x11-themes graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
