@@ -3,10 +3,10 @@
 # Whom:                 Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem-gstreamer/Makefile,v 1.11 2006/02/14 19:25:41 adamw Exp $
+#   $MCom: ports/multimedia/totem-gstreamer/Makefile,v 1.12 2006/02/25 00:09:19 marcus Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	0
 PKGNAMESUFFIX=	-gstreamer
 
 MAINTAINER=	gnome@FreeBSD.org
