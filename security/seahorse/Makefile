@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.13 2006/02/14 19:25:41 adamw Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.14 2006/02/25 00:14:54 marcus Exp $
 #
 
 PORTNAME=	seahorse
@@ -22,6 +22,7 @@ RUN_DEPENDS=	${BUILD_DEPENDS}
 LIB_DEPENDS=	gpgme.15:${PORTSDIR}/security/gpgme
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui

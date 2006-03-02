@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libgnomecanvas/Makefile,v 1.51 2006/02/24 18:50:34 marcus Exp $
+#   $MCom: ports/graphics/libgnomecanvas/Makefile,v 1.52 2006/02/24 20:43:28 marcus Exp $
 #
 
 PORTNAME=	libgnomecanvas
@@ -19,6 +19,7 @@ COMMENT=	A graphics library for GNOME
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15

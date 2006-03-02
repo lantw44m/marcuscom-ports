@@ -3,7 +3,7 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino/Makefile,v 1.23 2006/01/15 21:35:09 ahze Exp $
+#   $MCom: ports/net/vino/Makefile,v 1.24 2006/02/25 00:12:31 marcus Exp $
 #
 
 PORTNAME=	vino
@@ -18,6 +18,7 @@ COMMENT=	VNC server that allows for remote access to your GNOME desktop
 LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomepanel
 USE_GMAKE=	yes

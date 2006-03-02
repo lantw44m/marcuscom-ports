@@ -18,9 +18,9 @@ BUILD_DEPENDS=	${X11BASE}/lib/gnome-vfs-2.0/modules/libsyncevfs.so:${PORTSDIR}/p
 RUN_DEPENDS=	${X11BASE}/lib/gnome-vfs-2.0/modules/libsyncevfs.so:${PORTSDIR}/palm/synce-gnomevfs
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop2
 
-USE_GNOME=	libgnomeui gnometarget
-
 USE_GMAKE=	yes
+USE_GNOME=	libgnomeui gnometarget
+USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_X_PREFIX=	yes
 CONFIGURE_ARGS+=	--with-libsynce=${LOCALBASE} \

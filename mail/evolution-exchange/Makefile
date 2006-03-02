@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.51 2006/02/27 15:21:18 marcus Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.52 2006/02/28 02:18:27 marcus Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -20,8 +20,8 @@ BUILD_DEPENDS=	evolution-${EVO_VERSION}:${PORTSDIR}/mail/evolution
 RUN_DEPENDS=	evolution-${EVO_VERSION}:${PORTSDIR}/mail/evolution
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
-
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_OPENLDAP=	yes
