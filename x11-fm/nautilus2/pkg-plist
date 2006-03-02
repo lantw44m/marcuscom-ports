@@ -172,8 +172,8 @@ share/mime/packages/nautilus.xml
 @dirrm include/nautilus/libnautilus-extension
 @dirrm include/nautilus
 @exec /bin/mkdir -p %D/lib/nautilus/extensions-1.0
-@unexec /bin/rmdir %D/lib/nautilus/extensions-1.0 2>/dev/null || /usr/bin/true
-@unexec /bin/rmdir %D/lib/nautilus 2>/dev/null || /usr/bin/true
+@dirrmtry lib/nautilus/extensions-1.0
+@dirrmtry lib/nautilus
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime

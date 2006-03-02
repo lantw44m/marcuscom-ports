@@ -83,4 +83,4 @@ share/locale/zh_TW/LC_MESSAGES/gnome-backgrounds.mo
 @dirrm share/gnome/pixmaps/backgrounds/gnome/branded
 @dirrm share/gnome/pixmaps/backgrounds/gnome
 @dirrm share/gnome/pixmaps/backgrounds
-@unexec /bin/rmdir %D/share/gnome/gnome-background-properties 2>/dev/null || /usr/bin/true
+@dirrmtry share/gnome/gnome-background-properties

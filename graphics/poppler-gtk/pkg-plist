@@ -22,6 +22,6 @@ libdata/pkgconfig/poppler-glib.pc
 %%DOCSDIR%%/poppler/right.png
 %%DOCSDIR%%/poppler/style.css
 %%DOCSDIR%%/poppler/up.png
-@unexec rmdir %D/%%DOCSDIR%%/poppler 2>/dev/null || true
-@unexec rmdir %D/%%DOCSDIR%% 2>/dev/null || tru
+@dirrmtry %%DOCSDIR%%/poppler
+@dirrmtry %%DOCSDIR%%
 @dirrm include/poppler/glib
