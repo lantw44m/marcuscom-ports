@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile,v 1.33 2006/01/02 22:16:25 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile,v 1.34 2006/01/31 20:36:54 marcus Exp $
 #
 
 PORTNAME=	mozilla
@@ -71,7 +71,7 @@ IGNORE=	core dumps on ${ARCH} during post-build
 
 .if defined(WITH_CALENDAR) && (defined(WITHOUT_MAILNEWS) || \
 	defined(WITHOUT_COMPOSER))
-BROKEN=	"Calendar requires Composer and Mailnews support."
+BROKEN=	Calendar requires Composer and Mailnews support.
 .endif
 .if defined(WITHOUT_MAILNEWS)
 MOZ_OPTIONS+=	--disable-ldap --disable-mailnews

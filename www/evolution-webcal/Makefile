@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@rainbow-runner.nl>
 #
 # $FreeBSD$
-#   $MCom: ports/www/evolution-webcal/Makefile,v 1.31 2006/02/13 19:23:02 marcus Exp $
+#   $MCom: ports/www/evolution-webcal/Makefile,v 1.32 2006/03/02 18:22:45 mezz Exp $
 #
 
 PORTNAME=	webcal
@@ -20,6 +20,7 @@ COMMENT=	Webcal(endar) handler for gnome
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 USE_PERL=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver libgnomeui
 GNU_CONFIGURE=	yes
