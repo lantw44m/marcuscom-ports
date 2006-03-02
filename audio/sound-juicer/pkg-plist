@@ -89,6 +89,8 @@ share/locale/xh/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_CN/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_HK/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_TW/LC_MESSAGES/sound-juicer.mo
+@dirrmtry share/icons/hicolor/24x24/apps
+@dirrmtry share/icons/hicolor/24x24
 @dirrm share/gnome/sound-juicer
 @dirrm share/gnome/omf/sound-juicer
 @dirrm share/gnome/help/sound-juicer/uk/figures
