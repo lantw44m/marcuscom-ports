@@ -1,5 +1,5 @@
---- ephy-main.c.orig	Wed Mar  1 16:34:13 2006
-+++ ephy-main.c	Wed Mar  1 16:34:15 2006
+--- src/ephy-main.c.orig	Wed Mar  1 16:34:13 2006
++++ src/ephy-main.c	Wed Mar  1 16:34:15 2006
 @@ -569,14 +569,13 @@ main (int argc,
  
  		for (i = 0; arguments[i] != NULL; ++i)
