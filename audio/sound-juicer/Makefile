@@ -3,7 +3,7 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/sound-juicer/Makefile,v 1.40 2006/02/23 19:08:59 marcus Exp $
+#   $MCom: ports/audio/sound-juicer/Makefile,v 1.41 2006/02/28 21:03:51 marcus Exp $
 #
 
 PORTNAME=	sound-juicer
@@ -21,6 +21,7 @@ LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 		cdio.6:${PORTSDIR}/sysutils/libcdio
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes

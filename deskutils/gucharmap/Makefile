@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.18 2006/02/25 21:13:47 marcus Exp $
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.19 2006/02/26 15:43:57 marcus Exp $
 #
 
 PORTNAME=	gucharmap
@@ -22,6 +22,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gtk20 gnomedocutils

@@ -3,7 +3,7 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/goobox/Makefile,v 1.10 2006/01/20 02:55:49 ahze Exp $
+#    $MCom: ports/audio/goobox/Makefile,v 1.11 2006/02/23 17:49:45 marcus Exp $
 
 PORTNAME=	goobox
 PORTVERSION=	0.9.93
@@ -21,6 +21,7 @@ RUN_DEPENDS=	cddb-slave2-properties:${PORTSDIR}/audio/gnomemedia2
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui libglade2 libbonobo \
 		gnomedocutils
 USE_GSTREAMER80=	cdparanoia gconf

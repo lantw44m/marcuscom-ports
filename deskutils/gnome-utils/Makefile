@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnomeutils2/Makefile,v 1.82 2006/02/24 20:43:27 marcus Exp $
+#   $MCom: ports/deskutils/gnomeutils2/Makefile,v 1.83 2006/02/25 21:09:09 marcus Exp $
 #
 
 PORTNAME=	gnomeutils2
@@ -19,6 +19,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 support utilities
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes

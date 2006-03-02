@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.76 2006/02/24 20:43:27 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.77 2006/02/28 01:05:26 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -23,6 +23,7 @@ LIB_DEPENDS=	soup-2.2.8:${PORTSDIR}/devel/libsoup \
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget libgnomeui \
 		ltverhack

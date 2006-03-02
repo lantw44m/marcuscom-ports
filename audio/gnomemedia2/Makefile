@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.89 2006/02/27 15:20:41 marcus Exp $
+#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.90 2006/02/28 04:49:51 marcus Exp $
 #
 
 PORTNAME=	gnomemedia2
@@ -18,6 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Multimedia applications for the GNOME 2 desktop
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes

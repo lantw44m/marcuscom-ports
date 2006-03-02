@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.14 2006/02/28 20:57:07 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.15 2006/03/01 21:42:27 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
@@ -18,6 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome panel applet similar to Google's (Windows only) Deskbar
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack pygnomedesktop intlhack
 USE_PYTHON=	yes
