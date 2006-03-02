@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomesystemtools/Makefile,v 1.34 2006/01/31 20:48:28 marcus Exp $
+#   $MCom: ports/sysutils/gnomesystemtools/Makefile,v 1.35 2006/02/26 15:53:45 marcus Exp $
 #
 
 PORTNAME=	gnomesystemtools
@@ -23,6 +23,7 @@ RUN_DEPENDS=	${X11BASE}/share/setup-tool-backends/scripts/xml.pl:${PORTSDIR}/sys
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack nautilus2
@@ -37,7 +38,7 @@ GCONF_SCHEMAS=	gnome-system-tools.schemas
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500000
-IGNORE=	Uses symbols not present in 4.X
+IGNORE=	uses symbols not present in 4.X
 .endif
 
 .include <bsd.port.post.mk>
