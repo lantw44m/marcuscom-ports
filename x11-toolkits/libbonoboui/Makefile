@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/libbonoboui/Makefile,v 1.37 2006/01/17 00:22:04 marcus Exp $
+#    $MCom: ports/x11-toolkits/libbonoboui/Makefile,v 1.38 2006/02/23 19:16:18 ahze Exp $
 #
 
 PORTNAME=	libbonoboui
@@ -18,6 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GUI frontend to the libbonobo component of GNOME 2
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes

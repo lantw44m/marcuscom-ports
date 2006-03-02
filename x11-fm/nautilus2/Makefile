@@ -3,7 +3,7 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus2/Makefile,v 1.98 2006/02/25 00:32:05 marcus Exp $
+#   $MCom: ports/x11-fm/nautilus2/Makefile,v 1.99 2006/02/28 03:48:42 marcus Exp $
 #
 
 PORTNAME=	nautilus2
@@ -21,6 +21,7 @@ LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop eel2 \
 		librsvg2 desktopfileutils

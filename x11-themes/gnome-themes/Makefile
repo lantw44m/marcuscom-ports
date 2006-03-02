@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.79 2006/01/31 20:36:56 marcus Exp $
+#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.80 2006/02/27 17:05:36 marcus Exp $
 #
 
 PORTNAME=	gnome-themes
@@ -22,6 +22,7 @@ RUN_DEPENDS=	${X11BASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-theme
 CONFLICTS=	clearlooks-metacity-0.*
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_ICONS=	yes

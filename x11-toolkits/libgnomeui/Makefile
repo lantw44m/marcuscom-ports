@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.72 2006/02/25 00:40:47 marcus Exp $
+#    $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.73 2006/03/01 04:38:07 marcus Exp $
 
 PORTNAME=	libgnomeui
 PORTVERSION=	2.13.90
@@ -20,6 +20,7 @@ LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/gnomekeyring \
 RUN_DEPENDS=	${X11BASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
