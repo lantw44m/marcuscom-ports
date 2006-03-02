@@ -34,13 +34,14 @@ USE_GNOME=	gnomehack \
 PLIST_SUB=	\
 	VERSION="${PORTVERSION}"
 INSTALLS_SHLIB=	yes
+INSTALLS_OMF=	yes
 
 MAN1=		gst-editor.1 gst-inspect-gui.1 gst-launch-gui.1
 
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500000
-BROKEN=		"Does not compile on FreeBSD 4.x"
+BROKEN=		Does not compile on FreeBSD 4.x
 .endif
 
 .include <bsd.port.post.mk>
