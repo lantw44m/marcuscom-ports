@@ -3,27 +3,27 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.7 2006/01/31 12:25:11 ahze Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.8 2006/02/25 00:12:30 marcus Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.5
-PORTREVISION=	4
-CATEGORIES=	net dns
+PORTREVISION?=	4
+CATEGORIES?=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 
-MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Service discovery on a local network
+MAINTAINER?=	gnome@FreeBSD.org
+COMMENT?=	Service discovery on a local network
 
-LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2 \
+LIB_DEPENDS?=	expat.6:${PORTSDIR}/textproc/expat2 \
 		daemon.2:${PORTSDIR}/devel/libdaemon \
 		dbus-1.2:${PORTSDIR}/devel/dbus \
 		gdbm.3:${PORTSDIR}/databases/gdbm
 
-USE_GNOME=	gnomehack ltverhack glib20
+USE_GNOME?=	gnomehack ltverhack glib20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
-CONFIGURE_ARGS=	--with-distro=freebsd \
+CONFIGURE_ARGS?=--with-distro=freebsd \
 		--with-dbus-system-address=unix:path=/var/run/dbus \
 		--disable-qt3 \
 		--disable-qt4 \
@@ -41,7 +41,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
 CONFLICTS=	howl-[0-9]* mDNSResponder-[0-9]*
-USE_RC_SUBR=	yes
 
 MAN1=	avahi-browse-domains.1 avahi-browse.1 avahi-publish-address.1 \
 	avahi-publish-service.1 avahi-publish.1 avahi-resolve-address.1 \
@@ -51,8 +50,13 @@ MAN8=	avahi-daemon.8 avahi-dnsconfd.8 avahi-dnsconfd.action.8
 
 OPTIONS=	GTK2 "Build a GTK+ 2 browser utility" off
 
+.if !defined(AVAHI_SLAVE)
+USE_RC_SUBR=	yes
+.endif
+
 .include <bsd.port.pre.mk>
 
+.if !defined(AVAHI_SLAVE)
 .if ${OSVERSION} < 500000
 IGNORE=	does not work on FreeBSD 4.X
 .endif
@@ -68,6 +72,8 @@ PLIST_SUB+=	GTK="@comment "
 post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+.endif
+
 .endif
 
 .include <bsd.port.post.mk>
