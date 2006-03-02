@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.66 2006/02/24 18:13:39 marcus Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.67 2006/02/24 20:43:27 marcus Exp $
 #
 
 PORTNAME=	gconf2
@@ -20,6 +20,7 @@ COMMENT=	A configuration database system for GNOME
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GNOME=	gnomehier gnomehack orbit2 gtk20 libxml2 linc ltverhack
 INSTALLS_SHLIB=	yes

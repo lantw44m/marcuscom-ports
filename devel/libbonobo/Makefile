@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/libbonobo/Makefile,v 1.38 2006/01/18 16:50:50 marcus Exp $
+#    $MCom: ports/devel/libbonobo/Makefile,v 1.39 2006/02/24 18:26:03 marcus Exp $
 #
 
 PORTNAME=	libbonobo
@@ -20,6 +20,7 @@ COMMENT=	A component and compound document system for GNOME2
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	yes
+USE_GETTEXT=	yes
 INSTALLS_SHLIB=	yes
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes

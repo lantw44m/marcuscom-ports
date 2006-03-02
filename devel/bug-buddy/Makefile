@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/bugbuddy/Makefile,v 1.23 2006/02/24 18:12:33 marcus Exp $
+#   $MCom: ports/devel/bugbuddy/Makefile,v 1.24 2006/02/28 06:14:27 marcus Exp $
 #
 
 PORTNAME=	bugbuddy
@@ -18,6 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A bug reporting tool for GNOME 2
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes

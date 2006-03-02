@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.9 2006/01/31 20:36:47 marcus Exp $
+#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.10 2006/02/24 18:12:02 marcus Exp $
 #
 
 PORTNAME=	anjuta
@@ -33,6 +33,7 @@ CONFLICTS=	anjuta-1.2.*
 
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeprintui libgnomeui vte
 GNU_CONFIGURE=	yes

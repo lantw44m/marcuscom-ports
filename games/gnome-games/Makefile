@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnomegames2/Makefile,v 1.102 2006/02/24 18:38:17 marcus Exp $
+#   $MCom: ports/games/gnomegames2/Makefile,v 1.103 2006/02/25 20:05:40 marcus Exp $
 #
 
 PORTNAME=	gnomegames2
@@ -21,6 +21,7 @@ LIB_DEPENDS=	guile.15:${PORTSDIR}/lang/guile
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
+USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes

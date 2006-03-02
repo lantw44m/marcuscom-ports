@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.24 2006/02/24 18:36:48 marcus Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.25 2006/02/27 01:20:52 marcus Exp $
 #
 
 PORTNAME=	gedit
@@ -19,6 +19,7 @@ COMMENT=	A small but powerful text editor for Gnome 2 Desktop Environment
 LIB_DEPENDS=	pspell.16:${PORTSDIR}/textproc/aspell
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
