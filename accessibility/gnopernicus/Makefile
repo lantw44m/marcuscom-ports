@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.68 2006/02/13 19:39:34 marcus Exp $
+#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.69 2006/02/23 17:26:46 marcus Exp $
 #
 
 PORTNAME=	gnopernicus
@@ -20,6 +20,7 @@ COMMENT=	Collection of accessibility apps for GNOME 2
 LIB_DEPENDS=	gnome-mag.2:${PORTSDIR}/accessibility/gnomemag
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes

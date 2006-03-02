@@ -3,7 +3,7 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/fileroller/Makefile,v 1.86 2006/02/23 17:30:45 marcus Exp $
+#   $MCom: ports/archivers/fileroller/Makefile,v 1.87 2006/02/28 04:57:17 marcus Exp $
 #
 
 PORTNAME=	fileroller
@@ -24,6 +24,7 @@ COMMENT=	An archive manager for zip files, tar, etc
 RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
