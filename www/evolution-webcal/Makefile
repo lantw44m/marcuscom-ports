@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@rainbow-runner.nl>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/evolution-webcal/Makefile,v 1.31 2006/02/13 19:23:02 marcus Exp $
 #
 
 PORTNAME=	webcal
@@ -22,7 +22,6 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PERL=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver libgnomeui
-USE_REINPLACE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

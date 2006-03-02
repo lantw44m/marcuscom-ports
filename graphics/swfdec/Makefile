@@ -23,7 +23,6 @@ USE_SDL=	sdl
 USE_GNOME=	gnomehack gtk20 libartlgpl2
 USE_GSTREAMER80=	gconf
 USE_GETOPT_LONG=	yes
-USE_REINPLACE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

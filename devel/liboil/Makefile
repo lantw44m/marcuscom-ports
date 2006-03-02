@@ -14,7 +14,6 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Library of optimized inner loops
 
 USE_GNOME=	glib20
-USE_REINPLACE=	yes
 GNU_CONFIGURE=	yes
 USE_GCC=	3.4
 INSTALLS_SHLIB=	yes
