@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/Makefile,v 1.16 2006/02/28 04:43:14 marcus Exp $
+#    $MCom: ports/x11/gdm/Makefile,v 1.17 2006/03/02 06:38:49 marcus Exp $
 #
 
 PORTNAME=	gdm
@@ -17,6 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 version of xdm display manager
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
 USE_RC_SUBR=	gdm.sh
