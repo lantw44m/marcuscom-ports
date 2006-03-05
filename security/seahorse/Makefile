@@ -3,12 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.14 2006/02/25 00:14:54 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.15 2006/03/02 20:56:22 mezz Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	0.8
-PORTREVISION=	4
+PORTVERSION=	0.8.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/0.8
@@ -37,22 +36,22 @@ GCONF_SCHEMAS=	seahorse.schemas
 
 OPTIONS=	NAUTILUS "Enable the Nautilus component" on \
 		LDAP "Enable LDAP support" on \
+		GEDIT "Enable GEdit plug-in support" on \
 		HKP "Enable HKP keyserver interface" on
 
 .include <bsd.port.pre.mk>
 
-# Uncomment when seahorse is updated past 0.8.
-#.if defined(WITH_GEDIT)
-#BUILD_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
-#RUN_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
-#PLIST_SUB+=	GEDIT=""
-#GCONF_SCHEMAS+=	seahorse-gedit.schemas
-#.else
+.if !defined(WITHOUT_GEDIT)
+BUILD_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
+RUN_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
+PLIST_SUB+=	GEDIT=""
+GCONF_SCHEMAS+=	seahorse-gedit.schemas
+.else
 PLIST_SUB+=	GEDIT="@comment "
 CONFIGURE_ARGS+=--disable-gedit
-#.endif
+.endif
 
-.if defined(WITH_NAUTILUS)
+.if !defined(WITHOUT_NAUTILUS)
 USE_GNOME+=	nautilus2
 PLIST_SUB+=	NAUTILUS=""
 .else
