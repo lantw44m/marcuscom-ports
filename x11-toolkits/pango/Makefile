@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.55 2006/02/25 00:40:48 marcus Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.56 2006/02/27 01:09:25 marcus Exp $
 #
 
 PORTNAME=	pango
@@ -17,8 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An open-source framework for the layout and rendering of i18n text
 
 BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
-LIB_DEPENDS=	Xft.2:${PORTSDIR}/x11-fonts/libXft \
-		cairo.2:${PORTSDIR}/graphics/cairo
+LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
 		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT}
 
@@ -38,16 +37,25 @@ PKGINSTALL=	${WRKDIR}/pkg-install
 # stuff, with Bad Results[tm]
 #
 GLIB2_CFLAGS=	`pkg-config glib-2.0 --cflags`
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
-			${GLIB2_CFLAGS} -I${LOCALBASE}/include \
-			-I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 PLIST_SUB=	VERSION="1.5.0"
 
 FONTSCALE=	${X11BASE}/lib/X11/fonts/TTF/luximb.ttf
 FONTENCOD=	${X11BASE}/lib/X11/fonts/encodings/encodings.dir
 
 MAN1=		pango-querymodules.1
+
+.if defined(WITHOUT_X11)
+CONFIGURE_ARGS+=	--with-x=no
+CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
+				${GLIB2_CFLAGS} -I${LOCALBASE}/include" \
+			LDFLAGS="-L${LOCALBASE}/lib"
+.else
+LIB_DEPENDS+=		Xft.2:${PORTSDIR}/x11-fonts/libXft
+CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
+				${GLIB2_CFLAGS} -I${LOCALBASE}/include \
+				-I${X11BASE}/include" \
+			LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+.endif
 
 post-install:
 	@${SED} -e 's|%%X11BASE%%|${X11BASE}|' < ${FILESDIR}/pkg-install.in \
