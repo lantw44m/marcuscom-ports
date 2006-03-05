@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/Makefile,v 1.17 2006/03/02 06:38:49 marcus Exp $
+#    $MCom: ports/x11/gdm/Makefile,v 1.18 2006/03/02 21:16:03 mezz Exp $
 #
 
 PORTNAME=	gdm
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
-USE_RC_SUBR=	gdm.sh
+USE_RC_SUBR=	gdm
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomehier libgnomeui librsvg2 gnomedocutils \
 		gnomeprefix
