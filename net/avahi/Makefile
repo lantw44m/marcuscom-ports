@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.8 2006/02/25 00:12:30 marcus Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.9 2006/03/02 22:44:33 marcus Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.5
@@ -40,6 +40,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
+.if !defined(AVAHI_SLAVE)
 CONFLICTS=	howl-[0-9]* mDNSResponder-[0-9]*
 
 MAN1=	avahi-browse-domains.1 avahi-browse.1 avahi-publish-address.1 \
@@ -49,6 +50,7 @@ MAN5=	avahi-daemon.conf.5 avahi.service.5
 MAN8=	avahi-daemon.8 avahi-dnsconfd.8 avahi-dnsconfd.action.8
 
 OPTIONS=	GTK2 "Build a GTK+ 2 browser utility" off
+.endif
 
 .if !defined(AVAHI_SLAVE)
 USE_RC_SUBR=	yes
