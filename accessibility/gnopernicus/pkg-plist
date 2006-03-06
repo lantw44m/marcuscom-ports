@@ -79,6 +79,9 @@ share/gnome/help/gnopernicus/C/gnopernicus.xml
 share/gnome/help/gnopernicus/C/legal.xml
 share/gnome/help/gnopernicus/es/gnopernicus.xml
 share/gnome/help/gnopernicus/es/legal.xml
+share/gnome/help/gnopernicus/pt_BR/figures/gnopernicus.png
+share/gnome/help/gnopernicus/pt_BR/gnopernicus.xml
+share/gnome/help/gnopernicus/pt_BR/legal.xml
 share/gnome/omf/gnopernicus/brlmonitor-C.omf
 share/gnome/omf/gnopernicus/brlmonitor-es.omf
 share/gnome/omf/gnopernicus/gnopernicus-C.omf
@@ -140,6 +143,8 @@ share/locale/vi/LC_MESSAGES/gnopernicus.mo
 share/locale/zh_CN/LC_MESSAGES/gnopernicus.mo
 share/locale/zh_TW/LC_MESSAGES/gnopernicus.mo
 @dirrm share/gnome/omf/gnopernicus
+@dirrm share/gnome/help/gnopernicus/pt_BR/figures
+@dirrm share/gnome/help/gnopernicus/pt_BR
 @dirrm share/gnome/help/gnopernicus/es
 @dirrm share/gnome/help/gnopernicus/C
 @dirrm share/gnome/help/gnopernicus
