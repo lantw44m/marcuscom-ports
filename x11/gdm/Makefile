@@ -3,11 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/Makefile,v 1.18 2006/03/02 21:16:03 mezz Exp $
+#    $MCom: ports/x11/gdm/Makefile,v 1.19 2006/03/05 21:58:02 marcus Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.13.0.10
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=		sources/${PORTNAME:S/2$//}/2.13
@@ -36,7 +37,7 @@ GNOME_LOCALSTATEDIR=	/var
 
 MAN1=		gdm.1
 
-OPTIONS=	IPV6 "Enable IPv6 support (This disables IPv4 support)" off
+OPTIONS=	IPV6 "Enable IPv6 support" on
 
 .include <bsd.port.pre.mk>
 
@@ -52,7 +53,7 @@ PLIST_SUB+=	PAM_MISC=""
 PLIST_SUB+=	PAM_MISC="@comment "
 .endif
 
-.if defined(WITH_IPV6)
+.if !defined(WITHOUT_IPV6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
