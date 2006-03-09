@@ -3,12 +3,12 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.20 2006/02/24 18:50:35 marcus Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.21 2006/02/25 09:58:48 marcus Exp $
 #
 
 PORTNAME=	poppler
-PORTVERSION=	0.5.0
-PORTREVISION?=	2
+PORTVERSION=	0.5.1
+PORTREVISION?=	0
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
 
@@ -32,7 +32,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/freetype2
 .include <bsd.port.pre.mk>
 
 .if defined(SLAVEPORT)
-LIB_DEPENDS+=	poppler.0:${PORTSDIR}/graphics/poppler
+LIB_DEPENDS+=	poppler.1:${PORTSDIR}/graphics/poppler
 .if ${SLAVEPORT}=="gtk"
 CONFIGURE_ARGS+=--enable-poppler-glib
 USE_GNOME+=	gtk20
@@ -50,7 +50,7 @@ INSTALL_WRKSRC=	${WRKSRC}/qt
 CONFIGURE_ARGS+=--disable-poppler-glib --disable-poppler-qt \
 		--disable-poppler-qt4
 MAN1=	pdffonts.1 pdfimages.1 pdfinfo.1 \
-	pdftohtml.1  pdftops.1 pdftotext.1
+	pdftohtml.1  pdftops.1 pdftotext.1 pdftoppm.1
 .endif
 
 post-patch:

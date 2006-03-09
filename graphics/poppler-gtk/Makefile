@@ -3,9 +3,9 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/poppler-gtk/Makefile,v 1.1 2006/01/12 21:04:49 ahze Exp $
+#    $MCom: ports/graphics/poppler-gtk/Makefile,v 1.2 2006/02/24 18:50:35 marcus Exp $
 
-PORTREVISION=	1
+PORTREVISION=	0
 PKGNAMESUFFIX=	-gtk
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -14,5 +14,9 @@ COMMENT=	Gtk bindings to poppler
 MASTERDIR=	${.CURDIR}/../../graphics/poppler
 SLAVEPORT=	gtk
 PLIST=	${.CURDIR}/pkg-plist
+
+pre-build:
+	cd ${WRKSRC}/poppler && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
+		Makefile ${MAKE_ARGS} libpoppler-cairo.la
 
 .include "${MASTERDIR}/Makefile"

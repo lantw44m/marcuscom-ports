@@ -2,6 +2,7 @@ bin/pdffonts
 bin/pdfimages
 bin/pdfinfo
 bin/pdftohtml
+bin/pdftoppm
 bin/pdftops
 bin/pdftotext
 include/poppler/Annot.h
@@ -10,8 +11,6 @@ include/poppler/BaseFile.h
 include/poppler/BuiltinFont.h
 include/poppler/BuiltinFontTables.h
 include/poppler/CMap.h
-include/poppler/CairoFontEngine.h
-include/poppler/CairoOutputDev.h
 include/poppler/Catalog.h
 include/poppler/CharCodeToUnicode.h
 include/poppler/CharTypes.h
@@ -51,6 +50,7 @@ include/poppler/Stream-CCITT.h
 include/poppler/Stream.h
 include/poppler/TextOutputDev.h
 include/poppler/UTF8.h
+include/poppler/UGooString.h
 include/poppler/UnicodeMap.h
 include/poppler/UnicodeMapTables.h
 include/poppler/UnicodeTypeTable.h
@@ -93,7 +93,7 @@ include/poppler/splash/SplashXPathScanner.h
 lib/libpoppler.a
 lib/libpoppler.la
 lib/libpoppler.so
-lib/libpoppler.so.0
+lib/libpoppler.so.1
 libdata/pkgconfig/poppler-cairo.pc
 libdata/pkgconfig/poppler-splash.pc
 libdata/pkgconfig/poppler.pc
