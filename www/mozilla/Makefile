@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile,v 1.34 2006/01/31 20:36:54 marcus Exp $
+#    $MCom$
 #
 
 PORTNAME=	mozilla
@@ -37,6 +37,8 @@ MOZ_EXPORT+=	MOZ_INTERNAL_LIBART_LGPL=1
 MOZ_MK_OPTIONS+=MOZ_INTERNAL_LIBART_LGPL=1
 MOZ_OPTIONS+=	--enable-svg-renderer-libart --enable-svg \
 		--disable-plaintext-editor-only
+
+NOT_FOR_ARCHS=	ia64
 
 OPTIONS=CALENDAR "Enable the Calendar module" off \
 	MAILNEWS "Enable Mail and News modules" on \

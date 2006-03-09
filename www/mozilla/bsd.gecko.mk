@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.14 2006/01/29 20:11:48 ahze Exp $
+#    $MCom$
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -64,7 +64,7 @@ Gecko_Pre_Include=			bsd.gecko.mk
 #  .endif
 
 .if ${OSVERSION} >= 500000
-_GECKO_ALL=	firefox seamonkey sunbird thunderbird xulrunner
+_GECKO_ALL=	firefox nvu seamonkey sunbird thunderbird xulrunner
 .endif
 _GECKO_ALL+=	mozilla
 
@@ -77,10 +77,6 @@ ${gecko}_PORTSDIR?=	www
 ${gecko}_DEPENDS?=	${PORTSDIR}/${${gecko}_PORTSDIR}/${gecko}
 ${gecko}_PLIST?=	${X11BASE}/lib/${gecko}/libgtkembedmoz.so
 .endfor
-
-# Defines
-GECKO_OPTIONSFILE?=	${PORT_DBDIR}/${UNIQUENAME}/gecko.options
-_GECKO_OPTIONSFILE!=	${ECHO_CMD} "${GECKO_OPTIONSFILE}"
 
 # Figure out which mozilla to use
 # Weed out bad options in USE_GECKO
@@ -134,10 +130,9 @@ RUN_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 BROKEN="Unable to find a supported gecko, please check USE_GECKO"
 .endif
 
-pre-everything:: _gecko-pre-everything _gecko-config
+pre-everything:: _gecko-pre-everything
 
 _gecko-pre-everything::
-# remove me after testing .if defined(BATCH)
 	@${ECHO_CMD} ""
 .if !defined(_FOUND_WITH_GECKO) && defined(WITH_GECKO)
 	@${ECHO_CMD} " Warning: ${PORTNAME} does not support any gecko you"
@@ -154,32 +149,6 @@ _gecko-pre-everything::
 	@${ECHO_CMD} "   ${gecko} "
 .endfor
 	@${ECHO_CMD} ""
-# remove me after testing .endif
-
-_gecko-config:
-.if defined(GECKO_OPTIONS) ## !!!Remove me after testing!!!
-.if !defined(BATCH) && !defined(_FOUND_WITH_GECKO)
-. if !defined(USE_GECKO)
-	@${ECHO_MSG} "===> No options to configure"
-. else
-.  if ${GECKO_OPTIONSFILE} != ${_GECKO_OPTIONSFILE}
-	@${ECHO_MSG} "===> Using wrong configuration file ${_GECKO_OPTIONSFILE}"
-	@exit 1
-.  endif
-.  if !defined(INSTALL_AS_USER)
-	@${ECHO_MSG} "===>  Switching to root credentials to create `${DIRNAME} ${_GECKO_OPTIONSFILE}`"
-	@(${SU_CMD} "${SH} -c \"${MKDIR} `${DIRNAME} ${_GECKO_OPTIONSFILE}` 2> /dev/null\"") || \
-		(${ECHO_MSG} "===> Cannot create `${DIRNAME} ${_GECKO_OPTIONSFILE}`, check permissions"; exit 1)
-	@${ECHO_MSG} "===>  Returning to user credentials"
-.  else
-	@(${MKDIR} `${DIRNAME} ${_GECKO_OPTIONSFILE}` 2> /dev/null) || \
-		(${ECHO_MSG} "===> Cannot create `${DIRNAME} ${_GECKO_OPTIONSFILE}`, check permissions"; exit 1)
-.  endif
-
-	${SH} -c "${DIALOG} --radiolist \"Gecko selection for ${PKGNAME:C/-([^-]+)$/ \1/}\" 21 70 15 ${GECKO} Default on ${GOOD_USE_GECKO:S/${GECKO}//:S/$/ CHANGEME off/}" 2> /tmp/gecko.tacos
-. endif
-.endif
-.endif ## !!!Remove me after testing!!!
 
 #.endif # end it all
 .endif
