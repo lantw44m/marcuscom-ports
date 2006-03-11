@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/gnomedocutils/Makefile,v 1.29 2006/02/27 16:55:21 marcus Exp $
+#   $MCom: ports/textproc/gnomedocutils/Makefile,v 1.30 2006/03/11 18:21:51 marcus Exp $
 #
 
 PORTNAME=	gnomedocutils
@@ -24,6 +24,7 @@ PREFIX?=	${X11BASE}
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 USE_GNOME=	gnomehier gnometarget gnomehack libxslt
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
