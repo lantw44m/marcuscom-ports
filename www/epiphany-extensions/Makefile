@@ -3,15 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.65 2006/02/23 22:08:08 ahze Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.66 2006/02/25 00:25:57 marcus Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	1.9.7
-PORTREVISION=	2
+PORTVERSION=	2.14.0.1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/1.9
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/2.14
 PKGNAMESUFFIX=	-extensions
 DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
 DIST_SUBDIR=	gnome2
@@ -34,7 +33,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_C
 CONFIGURE_ARGS=	--with-extensions="all" \
 		--with-mozilla=${GECKO}
 
-PLIST_SUB=	VERSION="1.9" EPHY_VERSION="1.10"
+PLIST_SUB=	VERSION="2.14" EPHY_VERSION="2.14"
 
 .if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
 .undef WITHOUT_OPENSP
@@ -48,6 +47,14 @@ WITH_OPENSP=	yes
 CONFIGURE_ARGS+=	--enable-opensp=yes
 .else
 CONFIGURE_ARGS+=	--disable-opensp
+.endif
+
+.if exists(${LOCALBASE}/share/pygtk/2.0/defs/epiphany.defs)
+USE_PYTHON=	yes
+.include "${PORTSDIR}/Mk/bsd.python.mk"
+PLIST_SUB+=	PYTHON=""
+.else
+PLIST_SUB+=	PYTHON="@comment "
 .endif
 
 pre-everything::

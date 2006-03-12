@@ -2,8 +2,15 @@ lib/epiphany/%%VERSION%%/extensions/actions.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/auto-reload.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/auto-scroller.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/certificates.ephy-extension
+%%PYTHON%%lib/epiphany/%%VERSION%%/extensions/console.py
+%%PYTHON%%lib/epiphany/%%VERSION%%/extensions/console.pyc
+%%PYTHON%%lib/epiphany/%%VERSION%%/extensions/console.pyo
 lib/epiphany/%%VERSION%%/extensions/error-viewer.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/extensions-manager-ui.ephy-extension
+%%PYTHON%%lib/epiphany/%%VERSION%%/extensions/favicon.ephy-extension
+%%PYTHON%%lib/epiphany/%%VERSION%%/extensions/favicon.py
+%%PYTHON%%lib/epiphany/%%VERSION%%/extensions/favicon.pyc
+%%PYTHON%%lib/epiphany/%%VERSION%%/extensions/favicon.pyo
 lib/epiphany/%%VERSION%%/extensions/gestures.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/java-console.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/libactionsextension.la
@@ -38,6 +45,7 @@ lib/epiphany/%%VERSION%%/extensions/libtabstatesextension.la
 lib/epiphany/%%VERSION%%/extensions/libtabstatesextension.so
 lib/epiphany/%%VERSION%%/extensions/page-info.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/push-scroller.ephy-extension
+%%PYTHON%%lib/epiphany/%%VERSION%%/extensions/python-console.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/select-stylesheet.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/sidebar.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/smart-bookmarks.ephy-extension
