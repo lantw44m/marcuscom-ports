@@ -3,13 +3,13 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
+#   $MCom$
 
 PORTNAME=	orbit
-PORTVERSION=	2.13.1
-PORTREVISION=	1
+PORTVERSION=	2.14.0
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/pyorbit/2.13
+MASTER_SITE_SUBDIR=	sources/pyorbit/2.14
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyorbit-${PORTVERSION}
 DIST_SUBDIR=	gnome2
