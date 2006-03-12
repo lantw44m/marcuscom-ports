@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.103 2006/03/06 22:01:55 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.104 2006/03/12 19:48:35 marcus Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	2.14.0
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.14
@@ -23,24 +24,30 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
+USE_PYTHON=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GECKO=	firefox mozilla seamonkey
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop desktopfileutils \
-		libgnomeprintui
+		libgnomeprintui pygtk2
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-CONFIGURE_ARGS=	--with-mozilla=${GECKO} \
-		--disable-python
+CONFIGURE_ARGS=	--with-mozilla=${GECKO}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
 GCONF_SCHEMAS=	epiphany-lockdown.schemas epiphany.schemas \
 		epiphany-fonts.schemas
 
-PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/\.[0-9]+$//}"
+PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/\.[0-9]+$//}" \
+		EPHY_PREFIX="${PREFIX}"
 
 MAN1=		epiphany.1
+
+.if defined(PACKAGE_BUILDING)
+.undef WITHOUT_GNOME
+WITH_GNOME=	yes
+.endif
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
@@ -51,6 +58,17 @@ NO_WERROR=	yes
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
 .endif
 
+.if ${HAVE_GNOME:Mpygtk2}!=""
+USE_PYTHON=	yes
+.include "${PORTSDIR}/Mk/bsd.python.mk"
+USE_GNOME+=	pygtk2
+CONFIGURE_ARGS+=--enable-python
+PLIST_SUB+=	PYTHON=""
+.else
+CONFIGURE_ARGS+=--disable-python
+PLIST_SUB+=	PYTHON="@comment "
+.endif
+
 post-patch:
 	@${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
 		 's|-lpthread|${PTHREAD_LIBS}|g'
@@ -58,6 +76,8 @@ post-patch:
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/lib/mozilla/plugins"|/lib/browser_plugins" ":" MOZILLA_PREFIX "/lib/browser_linux_plugins"|' \
 		${WRKSRC}/embed/mozilla/mozilla-embed-single.cpp
+	@${REINPLACE_CMD} -e 's|[$$](datadir)/pygtk/2.0/defs|${LOCALBASE}/share/pygtk/2.0/defs|' \
+		${WRKSRC}/src/Makefile.in
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/epiphany-fonts.schemas \

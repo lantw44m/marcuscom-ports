@@ -255,3 +255,6 @@ share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 @dirrm include/epiphany/%%EPHY_VERSION%%
 @dirrm include/epiphany
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+%%PYTHON%%@cwd %%LOCALBASE%%
+%%PYTHON%%share/pygtk/2.0/defs/epiphany.defs
+%%PYTHON%%@cwd %%EPHY_PREFIX%%
