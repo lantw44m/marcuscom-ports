@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.37 2006/02/27 15:19:59 marcus Exp $
+#    $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.38 2006/03/12 23:31:31 marcus Exp $
 #
 
 PORTNAME=	gnome
@@ -45,8 +45,6 @@ DOCSDIR=	${WRKSRC}/share/doc/py-gnome-desktop
 post-patch:
 	@${FIND} ${WRKSRC}/docs -name Makefile.in | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|^HTML_DIR =.*|HTML_DIR = ${DOCSDIR}|g'
-	@${REINPLACE_CMD} -e 's|-DHAVE_GNOMEPRINT28||g' \
-		${WRKSRC}/configure
 
 .if !defined(NOPORTDOCS)
 post-install:
