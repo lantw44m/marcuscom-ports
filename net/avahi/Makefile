@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.9 2006/03/02 22:44:33 marcus Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.10 2006/03/05 19:41:25 ahze Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.5
@@ -50,10 +50,6 @@ MAN5=	avahi-daemon.conf.5 avahi.service.5
 MAN8=	avahi-daemon.8 avahi-dnsconfd.8 avahi-dnsconfd.action.8
 
 OPTIONS=	GTK2 "Build a GTK+ 2 browser utility" off
-.endif
-
-.if !defined(AVAHI_SLAVE)
-USE_RC_SUBR=	yes
 .endif
 
 .include <bsd.port.pre.mk>
