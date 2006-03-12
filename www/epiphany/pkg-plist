@@ -35,7 +35,7 @@ include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-type-builtins.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-window.h
 lib/epiphany/%%EPHY_VERSION%%/plugins/libdesktopfileplugin.la
 lib/epiphany/%%EPHY_VERSION%%/plugins/libdesktopfileplugin.so
-libdata/pkgconfig/epiphany-1.10.pc
+libdata/pkgconfig/epiphany-%%EPHY_VERSION%%.pc
 share/aclocal/epiphany.m4
 share/dbus-1/services/org.gnome.Epiphany.service
 %%DOCSDIR%%/EphyCommandManager.html
