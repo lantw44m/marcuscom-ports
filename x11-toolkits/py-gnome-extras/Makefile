@@ -3,12 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.34 2006/02/23 19:16:19 ahze Exp $
+#    $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.35 2006/02/25 00:40:48 marcus Exp $
 #
 
 PORTNAME=	gnome
-PORTVERSION=	2.13.3
-PORTREVISION=	1
+PORTVERSION=	2.14.0
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -49,8 +48,6 @@ DOCSDIR=	${WRKSRC}/share/doc/py-gnome-extras
 post-patch:
 	@${FIND} ${WRKSRC}/docs -name Makefile.in | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|^HTML_DIR =.*|HTML_DIR = ${DOCSDIR}|g'
-	@${REINPLACE_CMD} -e 's|-DHAVE_GNOMEPRINT28||g' \
-		${WRKSRC}/configure
 
 .if !defined(NOPORTDOCS)
 post-install:
