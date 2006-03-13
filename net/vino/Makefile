@@ -3,14 +3,14 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino/Makefile,v 1.24 2006/02/25 00:12:31 marcus Exp $
+#   $MCom: ports/net/vino/Makefile,v 1.25 2006/03/02 20:53:10 mezz Exp $
 #
 
 PORTNAME=	vino
 PORTVERSION=	2.13.5
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.13
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC server that allows for remote access to your GNOME desktop

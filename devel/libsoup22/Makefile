@@ -2,15 +2,15 @@
 # Date created:				12 March 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libsoup/Makefile,v 1.38 2006/02/23 10:36:00 ade Exp $
-#   $MCom: ports/devel/libsoup/Makefile,v 1.30 2005/08/29 03:22:33 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/devel/libsoup/Makefile,v 1.32 2006/03/04 20:29:39 marcus Exp $
 #
 
 PORTNAME=	libsoup
 PORTVERSION=	2.2.91
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.2
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
