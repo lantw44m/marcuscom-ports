@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.70 2006/03/02 20:08:31 mezz Exp $
+#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.71 2006/03/06 19:11:56 marcus Exp $
 #
 
 PORTNAME=	gnopernicus
 PORTVERSION=	1.0.3
 CATEGORIES=	accessibility x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.0
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
