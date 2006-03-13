@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.10 2006/03/05 19:41:25 ahze Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.11 2006/03/12 22:33:15 marcus Exp $
 
 PORTNAME=	avahi
-PORTVERSION=	0.6.5
-PORTREVISION?=	4
+PORTVERSION=	0.6.9
+PORTREVISION?=	0
 CATEGORIES?=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 
@@ -46,7 +46,7 @@ CONFLICTS=	howl-[0-9]* mDNSResponder-[0-9]*
 MAN1=	avahi-browse-domains.1 avahi-browse.1 avahi-publish-address.1 \
 	avahi-publish-service.1 avahi-publish.1 avahi-resolve-address.1 \
 	avahi-resolve-host-name.1 avahi-resolve.1
-MAN5=	avahi-daemon.conf.5 avahi.service.5
+MAN5=	avahi-daemon.conf.5 avahi.service.5 avahi.hosts.5
 MAN8=	avahi-daemon.8 avahi-dnsconfd.8 avahi-dnsconfd.action.8
 
 OPTIONS=	GTK2 "Build a GTK+ 2 browser utility" off
