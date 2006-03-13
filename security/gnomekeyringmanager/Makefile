@@ -3,14 +3,14 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnomekeyringmanager/Makefile,v 1.16 2006/03/12 22:47:39 marcus Exp $
+#   $MCom: ports/security/gnomekeyringmanager/Makefile,v 1.17 2006/03/13 06:59:12 mezz Exp $
 #
 
 PORTNAME=	gnomekeyringmanager
 PORTVERSION=	2.14.0
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome-keyring-manager/${PORTVERSION:R}
+MASTER_SITE_SUBDIR=	sources/gnome-keyring-manager/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
 DISTNAME=	gnome-keyring-manager-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 

@@ -3,7 +3,7 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/fileroller/Makefile,v 1.88 2006/03/02 20:10:28 mezz Exp $
+#   $MCom: ports/archivers/fileroller/Makefile,v 1.89 2006/03/13 06:07:44 mezz Exp $
 #
 
 PORTNAME=	fileroller
@@ -11,7 +11,7 @@ PORTVERSION=	2.13.92
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/file-roller/${PORTVERSION:R}
+MASTER_SITE_SUBDIR=	sources/file-roller/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
 DISTNAME=	file-roller-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 

@@ -3,14 +3,14 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/goobox/Makefile,v 1.11 2006/02/23 17:49:45 marcus Exp $
+#    $MCom: ports/audio/goobox/Makefile,v 1.12 2006/03/02 20:17:12 mezz Exp $
 
 PORTNAME=	goobox
 PORTVERSION=	0.9.93
 PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org

@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/x11/gnome-menus/Makefile,v 1.25 2006/02/23 21:58:22 ahze Exp $
+#	$MCom: ports/x11/gnome-menus/Makefile,v 1.26 2006/03/13 07:23:14 mezz Exp $
 #
 
 PORTNAME=	gnome-menus
 PORTVERSION=	2.13.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org

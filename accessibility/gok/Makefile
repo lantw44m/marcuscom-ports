@@ -3,14 +3,14 @@
 # Whom:				Adam Weinberger <adamw@freebsd.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/gok/Makefile,v 1.60 2006/03/02 20:08:31 mezz Exp $
+#    $MCom: ports/accessibility/gok/Makefile,v 1.61 2006/03/13 06:06:02 mezz Exp $
 
 PORTNAME=	gok
 PORTVERSION=	1.0.6
 PORTEPOCH=	1
 CATEGORIES=	accessibility sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org

@@ -3,13 +3,13 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/fast-user-switch-applet/Makefile,v 1.7 2006/02/28 09:03:33 bland Exp $
+#    $MCom: ports/x11/fast-user-switch-applet/Makefile,v 1.8 2006/03/13 07:23:13 mezz Exp $
 
 PORTNAME=	fast-user-switch-applet
 PORTVERSION=	2.13.92
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
