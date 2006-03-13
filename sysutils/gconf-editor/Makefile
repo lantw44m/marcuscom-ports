@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gconf-editor/Makefile,v 1.45 2006/03/02 21:02:59 mezz Exp $
+#   $MCom: ports/sysutils/gconf-editor/Makefile,v 1.46 2006/03/12 22:36:45 mezz Exp $
 #
 
 PORTNAME=	gconf-editor
@@ -11,7 +11,7 @@ PORTVERSION=	2.14.0
 PORTEPOCH=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.14
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
