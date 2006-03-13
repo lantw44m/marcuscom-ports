@@ -27,6 +27,7 @@ share/doc/gdict/gdict-GdictEntry.html
 share/doc/gdict/gdict-GdictSource.html
 share/doc/gdict/gdict-GdictSourceLoader.html
 share/doc/gdict/gdict.devhelp
+share/doc/gdict/gdict.devhelp2
 share/doc/gdict/gdict.html
 share/doc/gdict/gdictui.html
 share/doc/gdict/home.png
@@ -158,7 +159,10 @@ share/locale/vi/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/wa/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/xh/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-utils-2.0.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrm share/gnome/pixmaps/gsearchtool

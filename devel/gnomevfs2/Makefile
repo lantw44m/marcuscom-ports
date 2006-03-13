@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.133 2006/03/13 06:33:53 mezz Exp $
+#   $MCom: ports/devel/gnomevfs2/Makefile,v 1.134 2006/03/13 19:31:39 mezz Exp $
 #
 
 PORTNAME=	gnomevfs2
-PORTVERSION=	2.13.92
+PORTVERSION=	2.14.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
@@ -40,8 +40,7 @@ PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 
 GCONF_SCHEMAS=	desktop_default_applications.schemas \
 		desktop_gnome_url_handlers.schemas system_dns_sd.schemas \
-		system_http_proxy.schemas system_smb.schemas \
-		system_storage.schemas
+		system_http_proxy.schemas system_smb.schemas
 
 OPTIONS=	SAMBA "Enable SMB volume support" on \
 		MDNS "Enable Bonjour/Rendezvous support" on
