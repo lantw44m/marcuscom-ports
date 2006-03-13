@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnomeuserdocs2/Makefile,v 1.20 2006/03/13 06:57:06 mezz Exp $
+#   $MCom: ports/misc/gnomeuserdocs2/Makefile,v 1.21 2006/03/13 19:31:42 mezz Exp $
 #
 
 PORTNAME=	gnomeuserdocs2
-PORTVERSION=	2.13.1.1
+PORTVERSION=	2.14.0
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-user-docs/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
