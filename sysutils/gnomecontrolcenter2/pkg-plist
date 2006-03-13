@@ -145,9 +145,11 @@ share/gnome/help/control-center/C/config-screensaver.xml
 share/gnome/help/control-center/C/config-sound.xml
 share/gnome/help/control-center/C/config-themes.xml
 share/gnome/help/control-center/C/control-center.xml
+share/gnome/help/control-center/es/control-center.xml
 share/gnome/idl/ConfigArchiver.idl
 share/gnome/idl/GNOME_SettingsDaemon.idl
 share/gnome/omf/control-center/control-center-C.omf
+share/gnome/omf/control-center/control-center-es.omf
 share/gnome/pixmaps/display-capplet.png
 share/gnome/vfolders/font-method.directory
 share/gnome/vfolders/theme-method.directory
@@ -235,6 +237,7 @@ share/locale/zu/LC_MESSAGES/control-center-2.0.mo
 @dirrmtry share/locale/nso/LC_MESSAGES
 @dirrmtry share/locale/nso
 @dirrm share/gnome/omf/control-center
+@dirrm share/gnome/help/control-center/es
 @dirrm share/gnome/help/control-center/C
 @dirrm share/gnome/help/control-center
 @dirrmtry share/gnome/gnome-background-properties
