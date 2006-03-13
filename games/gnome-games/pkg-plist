@@ -367,8 +367,14 @@ share/gnome/help/gnobots2/it/gnobots2.xml
 share/gnome/help/gnobots2/it/legal.xml
 share/gnome/help/gnometris/C/gnometris.xml
 share/gnome/help/gnometris/C/legal.xml
+share/gnome/help/gnomine/C/figures/easy-hints-1.png
+share/gnome/help/gnomine/C/figures/easy-hints-2.png
+share/gnome/help/gnomine/C/figures/easy-hints-3.png
 share/gnome/help/gnomine/C/figures/faces.png
 share/gnome/help/gnomine/C/figures/flags.png
+share/gnome/help/gnomine/C/figures/hard-hints-1.png
+share/gnome/help/gnomine/C/figures/hard-hints-2.png
+share/gnome/help/gnomine/C/figures/hard-hints-3.png
 share/gnome/help/gnomine/C/figures/highscores.png
 share/gnome/help/gnomine/C/figures/imnotsureflagscheckbox.png
 share/gnome/help/gnomine/C/figures/main-window.png
