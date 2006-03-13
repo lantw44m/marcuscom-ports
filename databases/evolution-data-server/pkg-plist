@@ -417,6 +417,7 @@ share/doc/libebook/libebook-e-book-async.html
 share/doc/libebook/libebook-e-book-query.html
 share/doc/libebook/libebook-e-book-types.html
 share/doc/libebook/libebook.devhelp
+share/doc/libebook/libebook.devhelp2
 share/doc/libebook/right.png
 share/doc/libebook/style.css
 share/doc/libebook/up.png
@@ -435,6 +436,7 @@ share/doc/libecal/libecal-e-cal-time-util.html
 share/doc/libecal/libecal-e-cal-types.html
 share/doc/libecal/libecal-e-cal-util.html
 share/doc/libecal/libecal.devhelp
+share/doc/libecal/libecal.devhelp2
 share/doc/libecal/right.png
 share/doc/libecal/style.css
 share/doc/libecal/up.png
@@ -447,7 +449,13 @@ share/doc/libedata-cal/home.png
 share/doc/libedata-cal/index.html
 share/doc/libedata-cal/index.sgml
 share/doc/libedata-cal/left.png
+share/doc/libedata-cal/libedata-cal-ECalBackendCache.html
+share/doc/libedata-cal/libedata-cal-ECalBackendFactory.html
+share/doc/libedata-cal/libedata-cal-ECalBackendSync.html
+share/doc/libedata-cal/libedata-cal-EDataCalFactory.html
+share/doc/libedata-cal/libedata-cal-e-cal-backend-util.html
 share/doc/libedata-cal/libedata-cal.devhelp
+share/doc/libedata-cal/libedata-cal.devhelp2
 share/doc/libedata-cal/right.png
 share/doc/libedata-cal/style.css
 share/doc/libedata-cal/up.png
@@ -458,6 +466,7 @@ share/doc/libedataserver/index.sgml
 share/doc/libedataserver/left.png
 share/doc/libedataserver/libedataserver-EAccount.html
 share/doc/libedataserver/libedataserver-EAccountList.html
+share/doc/libedataserver/libedataserver-EComponentListener.html
 share/doc/libedataserver/libedataserver-EFileCache.html
 share/doc/libedataserver/libedataserver-EIterator.html
 share/doc/libedataserver/libedataserver-EList.html
@@ -467,6 +476,7 @@ share/doc/libedataserver/libedataserver-ESource.html
 share/doc/libedataserver/libedataserver-ESourceGroup.html
 share/doc/libedataserver/libedataserver-ESourceList.html
 share/doc/libedataserver/libedataserver-e-categories.html
+share/doc/libedataserver/libedataserver-e-data-server-module.html
 share/doc/libedataserver/libedataserver-e-db3-utils.html
 share/doc/libedataserver/libedataserver-e-dbhash.html
 share/doc/libedataserver/libedataserver-e-iconv.html
@@ -480,6 +490,7 @@ share/doc/libedataserver/libedataserver-e-util.html
 share/doc/libedataserver/libedataserver-e-xml-hash-utils.html
 share/doc/libedataserver/libedataserver-md5-utils.html
 share/doc/libedataserver/libedataserver.devhelp
+share/doc/libedataserver/libedataserver.devhelp2
 share/doc/libedataserver/right.png
 share/doc/libedataserver/style.css
 share/doc/libedataserver/up.png
