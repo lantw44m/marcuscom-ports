@@ -228,6 +228,7 @@ share/locale/hu/LC_MESSAGES/dasher.mo
 share/locale/id/LC_MESSAGES/dasher.mo
 share/locale/it/LC_MESSAGES/dasher.mo
 share/locale/ja/LC_MESSAGES/dasher.mo
+share/locale/ka/LC_MESSAGES/dasher.mo
 share/locale/ko/LC_MESSAGES/dasher.mo
 share/locale/ky/LC_MESSAGES/dasher.mo
 share/locale/lt/LC_MESSAGES/dasher.mo
@@ -254,9 +255,9 @@ share/locale/ta/LC_MESSAGES/dasher.mo
 share/locale/th/LC_MESSAGES/dasher.mo
 share/locale/tk/LC_MESSAGES/dasher.mo
 share/locale/tr/LC_MESSAGES/dasher.mo
-share/locale/vi/LC_MESSAGES/dasher.mo
 share/locale/ug/LC_MESSAGES/dasher.mo
 share/locale/uk/LC_MESSAGES/dasher.mo
+share/locale/vi/LC_MESSAGES/dasher.mo
 share/locale/zh_CN/LC_MESSAGES/dasher.mo
 share/locale/zh_HK/LC_MESSAGES/dasher.mo
 share/locale/zh_TW/LC_MESSAGES/dasher.mo
