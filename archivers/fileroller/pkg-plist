@@ -115,6 +115,7 @@ share/locale/az/LC_MESSAGES/file-roller.mo
 share/locale/be/LC_MESSAGES/file-roller.mo
 share/locale/bg/LC_MESSAGES/file-roller.mo
 share/locale/bn/LC_MESSAGES/file-roller.mo
+share/locale/br/LC_MESSAGES/file-roller.mo
 share/locale/bs/LC_MESSAGES/file-roller.mo
 share/locale/ca/LC_MESSAGES/file-roller.mo
 share/locale/cs/LC_MESSAGES/file-roller.mo
@@ -142,6 +143,7 @@ share/locale/id/LC_MESSAGES/file-roller.mo
 share/locale/is/LC_MESSAGES/file-roller.mo
 share/locale/it/LC_MESSAGES/file-roller.mo
 share/locale/ja/LC_MESSAGES/file-roller.mo
+share/locale/ka/LC_MESSAGES/file-roller.mo
 share/locale/kn/LC_MESSAGES/file-roller.mo
 share/locale/ko/LC_MESSAGES/file-roller.mo
 share/locale/ku/LC_MESSAGES/file-roller.mo
@@ -195,6 +197,8 @@ share/locale/zh_TW/LC_MESSAGES/file-roller.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
+@dirrmtry share/locale/br/LC_MESSAGES
+@dirrmtry share/locale/br
 @dirrm share/gnome/omf/file-roller
 @dirrm share/gnome/help/file-roller/zh_TW/figures
 @dirrm share/gnome/help/file-roller/zh_TW
