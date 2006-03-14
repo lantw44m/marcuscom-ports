@@ -129,6 +129,7 @@ share/locale/bg/LC_MESSAGES/gnome-system-tools.mo
 share/locale/bn/LC_MESSAGES/gnome-system-tools.mo
 share/locale/ca/LC_MESSAGES/gnome-system-tools.mo
 share/locale/cs/LC_MESSAGES/gnome-system-tools.mo
+share/locale/cy/LC_MESSAGES/gnome-system-tools.mo
 share/locale/da/LC_MESSAGES/gnome-system-tools.mo
 share/locale/de/LC_MESSAGES/gnome-system-tools.mo
 share/locale/el/LC_MESSAGES/gnome-system-tools.mo
@@ -182,7 +183,10 @@ share/locale/vi/LC_MESSAGES/gnome-system-tools.mo
 share/locale/wa/LC_MESSAGES/gnome-system-tools.mo
 share/locale/xh/LC_MESSAGES/gnome-system-tools.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-system-tools.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-system-tools.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-system-tools.mo
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrm share/gnome/omf/users-admin
