@@ -758,7 +758,6 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/gnome/evolution
 @dirrm libexec/evolution/%%VERSION%%
 @dirrm libexec/evolution
-@dirrmtry libdata/ldconfig
 @dirrm lib/evolution/%%VERSION%%/plugins
 %%PILOT:%%@dirrm lib/evolution/%%VERSION%%/conduits
 @dirrm lib/evolution/%%VERSION%%/components
