@@ -3,11 +3,11 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.73 2006/02/26 15:47:45 marcus Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.74 2006/03/11 05:45:18 ahze Exp $
 #
 
 PORTNAME=	gstreamer
-PORTVERSION?=	0.10.4
+PORTVERSION?=	0.10.5
 ## SET BACK TO PORTREVISION?= when we reset PORTREVISION in all the gst plugin ports
 PORTREVISION=	0
 CATEGORIES?=	multimedia audio
@@ -53,6 +53,7 @@ UGLY_DISTNAME=		gst-plugins-ugly-${UGLY_PORTVERSION}
 UGLY_DISTFILE=		${UGLY_DISTNAME}${EXTRACT_SUFX}
 
 SHLIB_VERSION=	1
+USE_GETTEXT=	yes
 VERSION=	${GST_VERSION}
 WANT_GSTREAMER=	yes
 USE_X_PREFIX=	yes
