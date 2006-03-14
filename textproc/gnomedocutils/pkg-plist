@@ -149,6 +149,10 @@ share/xml2po/gs.pyc
 @dirrm share/xml
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
 @dirrm share/gnome/omf/gnome-doc-xslt
 @dirrm share/gnome/omf/gnome-doc-make
 @dirrm share/gnome/help/gnome-doc-xslt/C
