@@ -78,4 +78,3 @@ share/locale/zh_TW/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 @dirrm share/gnome/evolution-exchange/%%VERSION%%/glade
 @dirrm share/gnome/evolution-exchange/%%VERSION%%
 @dirrm share/gnome/evolution-exchange
-@dirrm %%OLDDOCSDIR%%
