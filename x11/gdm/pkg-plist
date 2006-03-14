@@ -11,8 +11,9 @@ etc/gdm/PostSession/Default
 etc/gdm/PreSession/Default
 etc/gdm/XKeepsCrashing
 etc/gdm/Xsession
-@exec [ -f %B/gdm.conf ] || cp %B/%f %B/gdm.conf
-etc/gdm/custom.conf
+@unexec if cmp -s %D/etc/gdm/custom.conf %D/etc/gdm/custom.conf.default; then rm -f %D/etc/gdm/custom.conf; fi
+etc/gdm/custom.conf.default
+@exec [ -f %B/custom.conf ] || cp %B/%f %B/custom.conf
 etc/gdm/locale.alias
 @unexec if cmp -s %D/etc/gdm/modules/AccessDwellMouseEvents %D/etc/gdm/modules/factory-AccessDwellMouseEvents; then rm -f %D/etc/gdm/modules/AccessDwellMouseEvents; fi
 etc/gdm/modules/factory-AccessDwellMouseEvents
@@ -89,6 +90,8 @@ share/gnome/help/gdm/ko/legal.xml
 share/gnome/help/gdm/sv/figures/gdm_window.png
 share/gnome/help/gdm/sv/gdm.xml
 share/gnome/help/gdm/sv/legal.xml
+share/gnome/help/gdm/uk/gdm.xml
+share/gnome/help/gdm/uk/legal.xml
 share/gnome/help/gdm/zh_CN/figures/gdm_window.png
 share/gnome/help/gdm/zh_CN/gdm.xml
 share/gnome/help/gdm/zh_CN/legal.xml
@@ -106,6 +109,7 @@ share/gnome/omf/gdm/gdm-it.omf
 share/gnome/omf/gdm/gdm-ja.omf
 share/gnome/omf/gdm/gdm-ko.omf
 share/gnome/omf/gdm/gdm-sv.omf
+share/gnome/omf/gdm/gdm-uk.omf
 share/gnome/omf/gdm/gdm-zh_CN.omf
 share/gnome/omf/gdm/gdm-zh_HK.omf
 share/gnome/omf/gdm/gdm-zh_TW.omf
@@ -239,6 +243,7 @@ share/locale/zu/LC_MESSAGES/gdm.mo
 @dirrm share/gnome/help/gdm/zh_HK
 @dirrm share/gnome/help/gdm/zh_CN/figures
 @dirrm share/gnome/help/gdm/zh_CN
+@dirrm share/gnome/help/gdm/uk
 @dirrm share/gnome/help/gdm/sv/figures
 @dirrm share/gnome/help/gdm/sv
 @dirrm share/gnome/help/gdm/ko/figures

@@ -3,12 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/Makefile,v 1.21 2006/03/13 07:23:13 mezz Exp $
+#    $MCom: ports/x11/gdm/Makefile,v 1.22 2006/03/13 19:31:46 mezz Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	2.13.0.10
-PORTREVISION=	1
+PORTVERSION=	2.14.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
@@ -71,6 +70,8 @@ post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
+	${INSTALL_DATA} ${WRKSRC}/config/gdm.conf-custom \
+		${PREFIX}/etc/gdm/custom.conf.default
 	@${MKDIR} ${PREFIX}/etc/gdm/Sessions
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
