@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.107 2006/03/13 07:09:46 mezz Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.108 2006/03/13 19:31:45 mezz Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	2.14.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
@@ -28,7 +28,7 @@ USE_PYTHON=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GECKO=	firefox mozilla seamonkey
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop desktopfileutils \
-		libgnomeprintui pygtk2
+		libgnomeprintui
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
@@ -59,10 +59,10 @@ NO_WERROR=	yes
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
 .endif
 
-.if ${HAVE_GNOME:Mpygtk2}!=""
+.if ${HAVE_GNOME:Mpygnome2}!=""
 USE_PYTHON=	yes
 .include "${PORTSDIR}/Mk/bsd.python.mk"
-USE_GNOME+=	pygtk2
+USE_GNOME+=	pygnome2
 CONFIGURE_ARGS+=--enable-python
 PLIST_SUB+=	PYTHON=""
 .else
