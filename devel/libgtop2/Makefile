@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgtop2/Makefile,v 1.65 2006/03/13 19:31:40 mezz Exp $
+#   $MCom: ports/devel/libgtop2/Makefile,v 1.66 2006/03/13 20:50:55 marcus Exp $
 #
 
 PORTNAME=	libgtop2
 PORTVERSION=	2.14.0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
@@ -20,7 +21,7 @@ COMMENT=	GNOME 2 top library
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 USE_BZIP2=	yes
-USE_PERL5=	yes
+USE_PERL5_BUILD=yes
 USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
