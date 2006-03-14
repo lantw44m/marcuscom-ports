@@ -424,12 +424,16 @@ libexec/evolution/%%VERSION%%/evolution-addressbook-clean
 libexec/evolution/%%VERSION%%/evolution-addressbook-export
 libexec/evolution/%%VERSION%%/evolution-alarm-notify
 libexec/evolution/%%VERSION%%/killev
-share/gnome/applications/evolution-%%VERSION%%.desktop
+share/gnome/applications/evolution.desktop
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/evolution/%%VERSION%%/addresstypes.xml
 share/gnome/evolution/%%VERSION%%/default/C/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/default/de/mail/local/Inbox
+share/gnome/evolution/%%VERSION%%/default/fi/mail/local/Inbox
+share/gnome/evolution/%%VERSION%%/default/fr/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/default/ja/mail/local/Inbox
+share/gnome/evolution/%%VERSION%%/default/lt/mail/local/Inbox
+share/gnome/evolution/%%VERSION%%/default/mk/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/default/nl/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/default/pt/mail/local/Inbox
 share/gnome/evolution/%%VERSION%%/default/zh_CN/mail/local/Inbox
@@ -515,6 +519,7 @@ share/gnome/evolution/%%VERSION%%/images/evolution-contacts-mini.png
 share/gnome/evolution/%%VERSION%%/images/monkey-16.png
 share/gnome/evolution/%%VERSION%%/images/offline.png
 share/gnome/evolution/%%VERSION%%/images/online.png
+share/gnome/evolution/%%VERSION%%/images/query-free-busy.png
 share/gnome/evolution/%%VERSION%%/images/world_map-960.png
 share/gnome/evolution/%%VERSION%%/searchtypes.xml
 share/gnome/evolution/%%VERSION%%/ui/evolution-addressbook.xml
@@ -565,6 +570,7 @@ share/gnome/evolution/%%VERSION%%/weather/category_weather_tstorm_16.png
 %%PILOT:%%share/gnome/gnome-pilot/conduits/e-calendar-%%VERSION%%.conduit
 %%PILOT:%%share/gnome/gnome-pilot/conduits/e-todo-%%VERSION%%.conduit
 share/gnome/help/evolution-%%VERSION%%/C/evolution-%%VERSION%%.xml
+share/gnome/help/evolution-%%VERSION%%/C/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution-%%VERSION%%/C/figures/calendar.png
 share/gnome/help/evolution-%%VERSION%%/C/figures/config-cal.png
 share/gnome/help/evolution-%%VERSION%%/C/figures/config-mail.png
@@ -619,8 +625,8 @@ share/gnome/idl/evolution-%%VERSION%%/Evolution-Mail.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution-Shell.idl
 share/gnome/idl/evolution-%%VERSION%%/Evolution.idl
 share/gnome/idl/evolution-%%VERSION%%/evolution-calendar.idl
-share/gnome/mime-info/evolution-%%VERSION%%.keys
-share/gnome/mime-info/evolution-%%VERSION%%.mime
+share/gnome/mime-info/evolution.keys
+share/gnome/mime-info/evolution.mime
 share/gnome/omf/evolution/evolution-%%VERSION%%-C.omf
 share/gnome/pixmaps/evolution-%%VERSION%%.png
 share/locale/am/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -649,6 +655,7 @@ share/locale/ga/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/gl/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/gu/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/he/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/hi/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/hr/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/hu/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/id/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -680,6 +687,7 @@ share/locale/sq/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/sr/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/sr@Latn/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/sv/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/ta/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/te/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/th/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/tr/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -724,9 +732,21 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/gnome/evolution/%%VERSION%%/default/nl/mail/local
 @dirrm share/gnome/evolution/%%VERSION%%/default/nl/mail
 @dirrm share/gnome/evolution/%%VERSION%%/default/nl
+@dirrm share/gnome/evolution/%%VERSION%%/default/mk/mail/local
+@dirrm share/gnome/evolution/%%VERSION%%/default/mk/mail
+@dirrm share/gnome/evolution/%%VERSION%%/default/mk
+@dirrm share/gnome/evolution/%%VERSION%%/default/lt/mail/local
+@dirrm share/gnome/evolution/%%VERSION%%/default/lt/mail
+@dirrm share/gnome/evolution/%%VERSION%%/default/lt
 @dirrm share/gnome/evolution/%%VERSION%%/default/ja/mail/local
 @dirrm share/gnome/evolution/%%VERSION%%/default/ja/mail
 @dirrm share/gnome/evolution/%%VERSION%%/default/ja
+@dirrm share/gnome/evolution/%%VERSION%%/default/fr/mail/local
+@dirrm share/gnome/evolution/%%VERSION%%/default/fr/mail
+@dirrm share/gnome/evolution/%%VERSION%%/default/fr
+@dirrm share/gnome/evolution/%%VERSION%%/default/fi/mail/local
+@dirrm share/gnome/evolution/%%VERSION%%/default/fi/mail
+@dirrm share/gnome/evolution/%%VERSION%%/default/fi
 @dirrm share/gnome/evolution/%%VERSION%%/default/de/mail/local
 @dirrm share/gnome/evolution/%%VERSION%%/default/de/mail
 @dirrm share/gnome/evolution/%%VERSION%%/default/de
