@@ -70,6 +70,7 @@ share/aclocal/ORBit2.m4
 %%DOCSDIR%%/ORBit2-orbit2-allocators.html
 %%DOCSDIR%%/ORBit2-orbit2-small.html
 %%DOCSDIR%%/ORBit2.devhelp
+%%DOCSDIR%%/ORBit2.devhelp2
 %%DOCSDIR%%/general.html
 %%DOCSDIR%%/home.png
 %%DOCSDIR%%/index.html
