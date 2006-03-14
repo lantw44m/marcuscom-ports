@@ -3,13 +3,13 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/misc/gnomehier/Makefile,v 1.9 2005/12/08 04:58:07 ahze Exp $
+#    $MCom: ports/misc/gnomehier/Makefile,v 1.10 2005/12/23 17:20:39 marcus Exp $
 #
 # !!DON'T BUMP PORTREVISION ON MTREE CHANGES ANYMORE!!
 
 PORTNAME=	gnomehier
 PORTVERSION=	2.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc gnome
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -20,10 +20,11 @@ COMMENT=	A utility port that creates the GNOME directory tree
 NO_BUILD=	yes
 PLIST?=		${WRKDIR}/pkg-plist
 PKGINSTALL=	${WRKDIR}/pkg-install
-PREFIX?=	${X11BASE}
 
 GNOME_MTREE=	BSD.gnome-x11.dist
 GNOME_MTREE_ARGS=${MTREE_ARGS:S|${MTREE_FILE}|${PREFIX}/etc/mtree/${GNOME_MTREE}|}
+
+USE_X_PREFIX=	yes
 
 do-fetch:
 	@${DO_NADA}
