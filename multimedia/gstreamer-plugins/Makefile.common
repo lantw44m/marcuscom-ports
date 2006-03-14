@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.35 2006/02/10 20:57:15 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.36 2006/02/25 00:09:17 marcus Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -44,25 +44,6 @@ UGLY_GST_ALL_PLUGINS+= \
 		mad \
 		mpeg2dec \
 		sidplay
-
-.if 0 # SOME ONE MAKE THIS FREAKING WORK!!!!!
-.if ${BASE_GST_ALL_PLUGINS:M${GST_PLUGIN}}!=""
-EXTRACT_ONLY=${BASE_DISTFILE}
-WRKSRC=${WRKDIR}/${BASE_DISTNAME}
-.elif ${BAD_GST_ALL_PLUGINS:M${GST_PLUGIN}}!=""
-EXTRACT_ONLY=${BAD_DISTFILE}
-WRKSRC=${WRKDIR}/${BAD_DISTNAME}
-.elif ${GOOD_GST_ALL_PLUGINS:M${GST_PLUGIN}}!=""
-EXTRACT_ONLY=${GOOD_DISTFILE}
-WRKSRC=${WRKDIR}/${GOOD_DISTNAME}
-.elif ${UGLY_GST_ALL_PLUGINS:M${GST_PLUGIN}}!=""
-EXTRACT_ONLY=${UGLY_DISTFILE}
-WRKSRC=${WRKDIR}/${UGLY_DISTNAME}
-.else
-EXTRACT_ONLY=${BASE_DISTFILE}
-WRKSRC=${WRKDIR}/${BASE_DISTNAME}
-.endif
-.endif
 
 CONFIG_GST_PLUGINS=	gnome_vfs
 GST_ALL_PLUGINS=	${BASE_GST_ALL_PLUGINS} ${BAD_GST_ALL_PLUGINS} \
