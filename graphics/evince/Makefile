@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.47 2006/03/16 16:47:01 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.48 2006/03/16 17:11:00 ahze Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	0.5.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.5
@@ -37,7 +37,7 @@ OPTIONS=	DVI		"Enable DVI viewer support"		off \
 		NAUTILUS	"Enable Nautilus plugin"		on  \
 		DBUS		"Enable D-BUS support"			on \
 		DJVU		"Enable DJVU support"			off \
-		COMICS		"Enable comic book archives support"	on
+		COMICS		"Enable comic book archives support"	off
 
 .include <bsd.port.pre.mk>
 
@@ -86,9 +86,12 @@ CONFIGURE_ARGS+=	--disable-djvu
 LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus
 .endif
 
-.if !defined(WITHOUT_COMICS)
+.if defined(WITH_COMICS)
 CONFIGURE_ARGS+=	--enable-comics
 GCONF_SCHEMAS+=	evince-thumbnailer-comics.schemas
+
+RUN_DEPENDS=	unrar:${PORTSDIR}/archivers/unrar \
+		unzip:${PORTSDIR}/archivers/unzip
 .endif
 
 post-patch:
