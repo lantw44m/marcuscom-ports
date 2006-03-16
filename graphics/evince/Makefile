@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.46 2006/03/13 23:55:12 mezz Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.47 2006/03/16 16:47:01 ahze Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	0.5.2
+PORTREVISION=	1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.5
@@ -87,6 +88,7 @@ LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus
 
 .if !defined(WITHOUT_COMICS)
 CONFIGURE_ARGS+=	--enable-comics
+GCONF_SCHEMAS+=	evince-thumbnailer-comics.schemas
 .endif
 
 post-patch:
