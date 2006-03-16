@@ -124,6 +124,7 @@ share/gnome/blackjack/Vegas_Strip.rules
 @unexec [ -s %D/share/gnome/games/same-gnome.Large.scores ] || rm -f %D/share/gnome/games/same-gnome.Large.scores
 @unexec [ -s %D/share/gnome/games/same-gnome.Medium.scores ] || rm -f %D/share/gnome/games/same-gnome.Medium.scores
 @unexec [ -s %D/share/gnome/games/same-gnome.Small.scores ] || rm -f %D/share/gnome/games/same-gnome.Small.scores
+@unexec [ -L %D/share/gnome/games/same-gnome.scores ] || rm -f %D/share/gnome/games/same-gnome.scores
 share/gnome/gnect/white_ob.cn4
 share/gnome/gnibbles/level001.gnl
 share/gnome/gnibbles/level002.gnl
