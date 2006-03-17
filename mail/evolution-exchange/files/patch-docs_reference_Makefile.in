@@ -1,0 +1,10 @@
+--- docs/reference/Makefile.in.orig	Fri Mar 17 14:29:38 2006
++++ docs/reference/Makefile.in	Fri Mar 17 14:30:02 2006
+@@ -575,7 +575,6 @@
+ 	cd $(srcdir) && rm -rf xml html $(DOC_MODULE)-decl-list.txt $(DOC_MODULE)-decl.txt
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(DESTDIR)$(TARGET_DIR)
+ 	(installfiles=`echo $(srcdir)/html/*`; \
+ 	if test "$$installfiles" = '$(srcdir)/html/*'; \
+ 	then echo '-- Nothing to install' ; \

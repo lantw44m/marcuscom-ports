@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.55 2006/03/13 19:31:42 mezz Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.56 2006/03/14 00:49:14 marcus Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -33,8 +33,7 @@ CONFIGURE_ARGS=	--with-openldap=${LOCALBASE} \
 		--disable-compile-warnings
 
 EVO_VERSION=	2.6
-PLIST_SUB=	VERSION="2.6" EVO_VERSION=${EVO_VERSION} EDS_VERSION="1.2" \
-		OLDDOCSDIR="share/doc/ximian-connector"
+PLIST_SUB=	VERSION="2.6" EVO_VERSION=${EVO_VERSION} EDS_VERSION="1.2"
 
 .include <bsd.port.pre.mk>
 
