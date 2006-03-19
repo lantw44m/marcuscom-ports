@@ -377,7 +377,7 @@ LIB_DEPENDS+=	lavjpeg-1.8.0:${PORTSDIR}/multimedia/mjpegtools
 # musicbrainz
 .if ${GST_PLUGIN}=="musicbrainz"
 LIB_DEPENDS+=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
-PLIST_FILES=	lib/gstreamer-${VERSION}/libgsttrm.so
+PLIST_FILES=	lib/gstreamer-${VERSION}/libgsttrm.so \
 		lib/gstreamer-${VERSION}/libgsttrm.a \
 		lib/gstreamer-${VERSION}/libgsttrm.la
 .endif
