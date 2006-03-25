@@ -1,7 +1,7 @@
 #-*- mode: makefile; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.port.mk,v 1.525 2006/02/11 02:34:48 kris Exp $
+# $FreeBSD: ports/Mk/bsd.port.mk,v 1.529 2006/02/23 15:37:20 ade Exp $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -3774,7 +3774,7 @@ _BUILD_SEQ=		build-message pre-build pre-build-script do-build \
 				post-build post-build-script
 _INSTALL_DEP=	build
 _INSTALL_SEQ=	install-message check-conflicts \
-			    run-depends lib-depends apply-slist pre-install \
+				run-depends lib-depends apply-slist pre-install \
 				pre-install-script generate-plist check-already-installed
 _INSTALL_SUSEQ= check-umask install-mtree pre-su-install \
 				pre-su-install-script do-install install-desktop-entries \
