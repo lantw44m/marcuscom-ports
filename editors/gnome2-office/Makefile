@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gnome2-office/Makefile,v 1.38 2005/06/28 05:40:03 adamw Exp $
+#   $MCom: ports/editors/gnome2-office/Makefile,v 1.39 2005/08/11 02:55:29 marcus Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	editors gnome
 PKGNAMESUFFIX=	-office
 
@@ -16,8 +16,8 @@ RUN_DEPENDS=	gnumeric:${PORTSDIR}/math/gnumeric \
 		planner:${PORTSDIR}/deskutils/planner \
 		dia:${PORTSDIR}/graphics/dia \
 		glabels:${PORTSDIR}/deskutils/glabels \
-		abiword:${PORTSDIR}/editors/abiword \
-		mergeant:${PORTSDIR}/databases/mergeant
+		abiword:${PORTSDIR}/editors/abiword
+#		mergeant:${PORTSDIR}/databases/mergeant
 
 MASTERDIR=	${.CURDIR}/../../x11/gnome2
 GNOME_SLAVE=	yes
