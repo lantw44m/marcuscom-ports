@@ -74,6 +74,7 @@ BUILD_DEPENDS+=		${NONEXISTENT}:${PORTSDIR}/mail/evolution:patch \
 RUN_DEPENDS+=		${X11BASE}/libdata/pkgconfig/evolution-plugin-2.6.pc:${PORTSDIR}/mail/evolution
 EVOLUTION_WRKSRC!=	cd ${PORTSDIR}/mail/evolution && ${MAKE} -V WRKSRC
 CONFIGURE_ARGS+=	--with-evolution-source-dir="${EVOLUTION_WRKSRC}"
+LDFLAGS+=		-Wl,-export-dynamic
 PLIST_SUB+=		EVOLUTION="" LITERAL_PREFIX="${PREFIX}"
 .endif
 .if defined(WITHOUT_SYLPHEED)
