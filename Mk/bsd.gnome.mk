@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.364 2006/03/26 23:30:14 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.365 2006/03/28 01:22:44 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -368,7 +368,7 @@ libzvt_USE_GNOME_IMPL=	gtk20
 
 librsvg2_LIB_DEPENDS=	rsvg-2.2:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${X11BASE}/libdata/pkgconfig/librsvg-2.0.pc
-librsvg2_USE_GNOME_IMPL=libartlgpl2 libgsf gtk20
+librsvg2_USE_GNOME_IMPL=libgsf gtk20
 
 eel2_LIB_DEPENDS=	eel-2.2:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${X11BASE}/libdata/pkgconfig/eel-2.0.pc
@@ -376,17 +376,17 @@ eel2_USE_GNOME_IMPL=	gnomemenus gnomedesktop gail
 
 gnomepanel_LIB_DEPENDS=	panel-applet-2.0:${PORTSDIR}/x11/gnomepanel
 gnomepanel_DETECT=	${X11BASE}/libdata/pkgconfig/libpanelapplet-2.0.pc
-gnomepanel_USE_GNOME_IMPL=gnomedesktop libwnck
+gnomepanel_USE_GNOME_IMPL=gnomedesktop libwnck gnomemenus gnomedocutils
 gnomepanel_GNOME_DESKTOP_VERSION=2
 
 nautilus2_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus2
 nautilus2_DETECT=	${X11BASE}/libdata/pkgconfig/libnautilus-extension.pc
-nautilus2_USE_GNOME_IMPL=librsvg2 eel2 gnomedesktop
+nautilus2_USE_GNOME_IMPL=librsvg2 eel2 gnomedesktop desktopfileutils
 nautilus2_GNOME_DESKTOP_VERSION=2
 
 metacity_LIB_DEPENDS=	metacity-private.0:${PORTSDIR}/x11-wm/metacity
 metacity_DETECT=	${X11BASE}/libdata/pkgconfig/libmetacity-private.pc
-metacity_USE_GNOME_IMPL=gconf2 glade2
+metacity_USE_GNOME_IMPL=gconf2
 
 gal2_LIB_DEPENDS=	gal-2.4.0:${PORTSDIR}/x11-toolkits/gal2
 gal2_DETECT=		${X11BASE}/libdata/pkgconfig/gal-2.4.pc
@@ -394,7 +394,7 @@ gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
 
 gnomecontrolcenter2_LIB_DEPENDS=gnome-window-settings.1:${PORTSDIR}/sysutils/gnomecontrolcenter2
 gnomecontrolcenter2_DETECT=${X11BASE}/libdata/pkgconfig/gnome-window-settings-2.0.pc
-gnomecontrolcenter2_USE_GNOME_IMPL=gnomedesktop metacity nautilus2
+gnomecontrolcenter2_USE_GNOME_IMPL=desktopfileutils gnomedesktop gnomemenus metacity nautilus2 desktopfileutils
 
 libgda2_LIB_DEPENDS=	gda-2.3:${PORTSDIR}/databases/libgda2
 libgda2_DETECT=			${X11BASE}/libdata/pkgconfig/libgda.pc
@@ -418,7 +418,7 @@ pkgconfig_RUN_DEPENDS=		pkg-config:${PORTSDIR}/devel/pkgconfig
 
 libgsf_LIB_DEPENDS=			gsf-1.114:${PORTSDIR}/devel/libgsf
 libgsf_DETECT=			${X11BASE}/libdata/pkgconfig/libgsf-1.pc
-libgsf_USE_GNOME_IMPL=		glib20 libxml2
+libgsf_USE_GNOME_IMPL=		gconf2 glib20 libxml2
 
 libgsf_gnome_LIB_DEPENDS=	gsf-gnome-1.114:${PORTSDIR}/devel/libgsf-gnome
 libgsf_gnome_DETECT=		${X11BASE}/libdata/pkgconfig/libgsf-gnome-1.pc
@@ -454,7 +454,7 @@ gnomespeech_USE_GNOME_IMPL=libbonobo
 
 evolutiondataserver_LIB_DEPENDS=edataserver-1.2.7:${PORTSDIR}/databases/evolution-data-server
 evolutiondataserver_DETECT=		${X11BASE}/libdata/pkgconfig/evolution-data-server-1.2.pc
-evolutiondataserver_USE_GNOME_IMPL=libgnome
+evolutiondataserver_USE_GNOME_IMPL=libgnomeui
 
 desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 desktopfileutils_DETECT=	${LOCALBASE}/bin/update-desktop-database
