@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi/Makefile,v 1.40 2006/03/13 06:06:01 mezz Exp $
+#   $MCom: ports/accessibility/at-spi/Makefile,v 1.41 2006/03/13 19:31:35 mezz Exp $
 #
 
 PORTNAME=	at-spi
-PORTVERSION=	1.7.6
+PORTVERSION=	1.7.7
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
@@ -27,6 +27,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
 
 post-extract:
 	@${RM} -f ${WRKSRC}/registryd/Accessibility_Registry.server
