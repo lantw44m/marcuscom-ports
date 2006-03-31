@@ -119,7 +119,10 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%PORTDOCS%%share/examples/py-gtk/glade/test2.glade
 %%PORTDOCS%%share/examples/py-gtk/gobject/properties.py
 %%PORTDOCS%%share/examples/py-gtk/gobject/signal.py
+%%PORTDOCS%%share/examples/py-gtk/gtk/bin.py
 %%PORTDOCS%%share/examples/py-gtk/gtk/filechooser.py
+%%PORTDOCS%%share/examples/py-gtk/gtk/scrollable.py
+%%PORTDOCS%%share/examples/py-gtk/gtk/sizegroup.py
 %%PORTDOCS%%share/examples/py-gtk/gtk/uimanager.py
 %%PORTDOCS%%share/examples/py-gtk/gtk/widget.py
 %%PORTDOCS%%share/examples/py-gtk/ide/README
