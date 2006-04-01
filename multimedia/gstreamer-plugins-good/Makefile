@@ -3,7 +3,7 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins-good/Makefile,v 1.1 2006/01/20 22:58:18 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins-good/Makefile,v 1.2 2006/02/26 19:26:21 marcus Exp $
 #
 
 PORTREVISION=	1
@@ -26,6 +26,8 @@ GOOD_GST_DIRS=	gst sys
 PLIST_SUB=	VERSION="${GST_VERSION}"
 NO_GSTREAMER_COMMON=	yes
 PLIST=	${.CURDIR}/pkg-plist
+FILESDIR=${.CURDIR}/files
+PATCHDIR=${.CURDIR}/files
 
 do-build:
 .for dir in ${GOOD_GST_DIRS}
