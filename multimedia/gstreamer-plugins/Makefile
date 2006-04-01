@@ -3,13 +3,13 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.74 2006/03/11 05:45:18 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.75 2006/03/14 19:05:05 ahze Exp $
 #
 
 PORTNAME=	gstreamer
 PORTVERSION?=	0.10.5
 ## SET BACK TO PORTREVISION?= when we reset PORTREVISION in all the gst plugin ports
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	${MASTER_SITE_GNOME:S|$|sources/gst-plugins-base/0.10/:base|} \
 		http://gstreamer.freedesktop.org/src/gst-plugins-base/:base \
@@ -127,10 +127,14 @@ post-patch:
 	 s|%%VERSION%%|${VERSION}|'
 	 @${FIND} ${WRKSRC}/ext -name Makefile.in | \
 	 ${XARGS} -n 10 ${REINPLACE_CMD} -e \
-	 's|$$(top_builddir)/gst-libs/gst/tag/libgsttag-@GST_MAJORMINOR@.la||; \
-	  s|$$(top_builddir)/gst-libs/gst/audio/libgstaudio-@GST_MAJORMINOR@.la||; \
-	  s|$$(top_builddir)/gst-libs/gst/riff/libgstriff-@GST_MAJORMINOR@.la||; \
-	  s|$$(top_builddir)/gst-libs/gst/cdda/libgstcdda-@GST_MAJORMINOR@.la||'
+	 '/la_DEPENDENCIES =/s|$$(top_builddir)/gst-libs/gst/tag/libgsttag-@GST_MAJORMINOR@.la||; \
+	  s|$$(top_builddir)/gst-libs/gst/tag/libgsttag-@GST_MAJORMINOR@.la|-L${X11BASE}/lib -lgsttag-@GST_MAJORMINOR@|; \
+	  /la_DEPENDENCIES =/s|$$(top_builddir)/gst-libs/gst/audio/libgstaudio-@GST_MAJORMINOR@.la||; \
+	  s|$$(top_builddir)/gst-libs/gst/audio/libgstaudio-@GST_MAJORMINOR@.la|-L${X11BASE}/lib -lgstaudio-@GST_MAJORMINOR@|; \
+	  /la_DEPENDENCIES =/s|$$(top_builddir)/gst-libs/gst/riff/libgstriff-@GST_MAJORMINOR@.la||; \
+	  s|$$(top_builddir)/gst-libs/gst/riff/libgstriff-@GST_MAJORMINOR@.la|-L${X11BASE}/lib -lgstriff-@GST_MAJORMINOR@|; \
+	  /la_DEPENDENCIES =/s|$$(top_builddir)/gst-libs/gst/cdda/libgstcdda-@GST_MAJORMINOR@.la||; \
+	  s|$$(top_builddir)/gst-libs/gst/cdda/libgstcdda-@GST_MAJORMINOR@.la|-L${X11BASE}/lib -lgstcdda-@GST_MAJORMINOR@|'
 	@${REINPLACE_CMD} -e 's|DEFAULT_AUDIOSINK="alsasink"|DEFAULT_AUDIOSINK="${DEFAULT_AUDIOSINK}"|; \
 		s|DEFAULT_AUDIOSRC="alsasrc"|DEFAULT_AUDIOSRC="${DEFAULT_AUDIOSRC}"|' \
 		${WRKSRC}/configure
