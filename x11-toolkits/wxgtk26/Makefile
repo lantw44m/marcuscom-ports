@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	wx
-PORTVERSION=	2.6.2
-PORTREVISION=	1
+PORTVERSION=	2.6.3
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	wxwindows
@@ -29,9 +28,8 @@ USE_GL=		yes
 USE_GMAKE=	yes
 USE_ICONV=	yes
 USE_GNOME=	gtk20
-USE_REINPLACE=	yes
-GNU_CONFIGURE=	yes
 USE_GSTREAMER80=yes
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-libpng=sys\
 		--with-libjpeg=sys\
 		--with-libtiff=sys\
@@ -53,7 +51,6 @@ PLIST=		${.CURDIR}/pkg-plist
 WXGTK_FLAVOR?=	gtk2
 
 .if ${WXGTK_FLAVOR} == "gtk2"
-PORTREVISION=	3
 CONFLICTS=	wxgtk2-contrib-devel-2.5.2*
 .endif
 
@@ -99,7 +96,7 @@ post-patch:
 
 .if ${WXGTK_FLAVOR:M*-unicode*} != ""
 .if ${OSVERSION} < 500000
-IGNORE=		Systems prior to FreeBSD 5.0 currently out of support
+IGNORE=	systems prior to FreeBSD 5.0 currently out of support
 .else
 CONFIGURE_ARGS+=--enable-unicode
 .endif
