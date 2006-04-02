@@ -1,22 +1,20 @@
---- sys/oss/gstosshelper.c.orig	Sat Apr  1 18:22:31 2006
-+++ sys/oss/gstosshelper.c	Sat Apr  1 18:22:38 2006
-@@ -232,6 +291,11 @@ gst_oss_helper_rate_probe_check (GstOssP
+--- sys/oss/gstosshelper.c.orig	Sun Apr  2 03:23:53 2006
++++ sys/oss/gstosshelper.c	Sun Apr  2 03:25:44 2006
+@@ -343,13 +344,17 @@ gst_oss_helper_rate_check_rate (GstOssPr
+   int format;
+   int n_channels;
+   int ret;
++  int rst;
  
-   probe->rates = g_array_new (FALSE, FALSE, sizeof (int));
+   rate = irate;
+   format = probe->format;
+   n_channels = probe->n_channels;
++  rst = 4000; /* XXX Lowest supported rate for FreeBSD. */
  
-+  probe->min = 8000;
-+  probe->max = 100000;
-+  result = FALSE;
-+  goto out;
-+
-   probe->min = gst_oss_helper_rate_check_rate (probe, 1000);
-   n_checks++;
-   probe->max = gst_oss_helper_rate_check_rate (probe, 100000);
-@@ -312,6 +376,7 @@ gst_oss_helper_rate_probe_check (GstOssP
- 
-     g_free (range);
-   }
-+out:
- 
-   while ((range = g_queue_pop_head (ranges))) {
-     g_free (range);
+   GST_LOG ("checking format %d, channels %d, rate %d",
+       format, n_channels, rate);
++  /* Reset rate to lowest supported rate. */
++  ioctl (probe->fd, SNDCTL_DSP_SPEED, &rst);
+   ret = ioctl (probe->fd, SNDCTL_DSP_SETFMT, &format);
+   if (ret < 0)
+     return -1;
