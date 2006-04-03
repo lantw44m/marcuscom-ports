@@ -3,11 +3,12 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/goobox/Makefile,v 1.12 2006/03/02 20:17:12 mezz Exp $
+#    $MCom: ports/audio/goobox/Makefile,v 1.13 2006/03/13 19:31:36 mezz Exp $
+#
 
 PORTNAME=	goobox
 PORTVERSION=	0.9.93
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
@@ -19,9 +20,9 @@ COMMENT=	CD player and ripper for GNOME Desktop environment
 RUN_DEPENDS=	cddb-slave2-properties:${PORTSDIR}/audio/gnomemedia2
 
 USE_X_PREFIX=	yes
+USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui libglade2 libbonobo \
 		gnomedocutils
 USE_GSTREAMER80=	cdparanoia gconf
@@ -32,4 +33,19 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 
 GCONF_SCHEMAS=	goobox.schemas
 
-.include <bsd.port.mk>
+OPTIONS=	NOTIFY "Enable libnotify support" on
+
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 500000
+BROKEN=	does not build on 4.X
+.endif
+
+.if !defined(WITHOUT_NOTIFY)
+LIB_DEPENDS+=		notify.1:${PORTSDIR}/devel/libnotify
+CONFIGURE_ARGS+=	--enable-notification
+.else
+CONFIGURE_ARGS+=	--disable-notification
+.endif
+
+.include <bsd.port.post.mk>
