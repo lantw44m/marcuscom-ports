@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.136 2006/03/16 21:44:59 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.137 2006/04/06 23:06:26 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -76,7 +76,7 @@ pre-configure:
 .endif
 
 .if !defined(GNOME_SLAVE) || ${.CURDIR:T}=="gnome2-lite"
-OPTIONS=	GNOME_SCREENSAVER "Use gnome-screensaver as screensaver app" off
+OPTIONS=	XSCREENSAVER "Use xscreensaver as screen saver app" off
 .endif
 
 do-install:	# empty
