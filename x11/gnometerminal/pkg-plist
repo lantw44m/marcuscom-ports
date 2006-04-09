@@ -87,11 +87,13 @@ share/locale/be/LC_MESSAGES/gnome-terminal.mo
 share/locale/bg/LC_MESSAGES/gnome-terminal.mo
 share/locale/bn/LC_MESSAGES/gnome-terminal.mo
 share/locale/bs/LC_MESSAGES/gnome-terminal.mo
+share/locale/br/LC_MESSAGES/gnome-terminal.mo
 share/locale/ca/LC_MESSAGES/gnome-terminal.mo
 share/locale/cs/LC_MESSAGES/gnome-terminal.mo
 share/locale/cy/LC_MESSAGES/gnome-terminal.mo
 share/locale/da/LC_MESSAGES/gnome-terminal.mo
 share/locale/de/LC_MESSAGES/gnome-terminal.mo
+share/locale/dz/LC_MESSAGES/gnome-terminal.mo
 share/locale/el/LC_MESSAGES/gnome-terminal.mo
 share/locale/en_CA/LC_MESSAGES/gnome-terminal.mo
 share/locale/en_GB/LC_MESSAGES/gnome-terminal.mo
@@ -149,6 +151,10 @@ share/locale/zh_CN/LC_MESSAGES/gnome-terminal.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-terminal.mo
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/br/LC_MESSAGES
+@dirrmtry share/locale/br
 @dirrm share/gnome/omf/gnome-terminal
 @dirrm share/gnome/help/gnome-terminal/zh_TW/figures
 @dirrm share/gnome/help/gnome-terminal/zh_TW
