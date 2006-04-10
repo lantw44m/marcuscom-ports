@@ -296,11 +296,13 @@ share/locale/be/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/br/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/cy/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/de/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/dz/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/el/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/en_CA/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gnome-panel-2.0.mo
@@ -322,6 +324,7 @@ share/locale/hy/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/id/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/ka/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ky/LC_MESSAGES/gnome-panel-2.0.mo
@@ -386,8 +389,12 @@ share/locale/zu/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrmtry share/locale/mi
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
+@dirrmtry share/locale/ka/LC_MESSAGES
+@dirrmtry share/locale/ka
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
+@dirrmtry share/locale/br/LC_MESSAGES
+@dirrmtry share/locale/br
 @dirrm share/gnome/panel/pixmaps
 @dirrm share/gnome/panel/glade
 @dirrm share/gnome/omf/workspace-switcher
