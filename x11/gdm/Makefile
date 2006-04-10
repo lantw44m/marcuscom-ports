@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/Makefile,v 1.23 2006/03/14 01:16:33 marcus Exp $
+#    $MCom: ports/x11/gdm/Makefile,v 1.24 2006/03/29 20:58:03 marcus Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.14.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
@@ -21,6 +21,7 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 INSTALLS_OMF=	yes
+INSTALLS_ICONS=	yes
 USE_RC_SUBR=	gdm
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomehier libgnomeui librsvg2 gnomedocutils \

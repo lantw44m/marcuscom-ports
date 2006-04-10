@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.105 2006/03/13 21:13:39 marcus Exp $
+#   $MCom: ports/sysutils/gnomecontrolcenter2/Makefile,v 1.106 2006/04/10 18:06:41 mezz Exp $
 #
 
 PORTNAME=	gnomecontrolcenter2
 PORTVERSION=	2.14.1
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
@@ -30,6 +31,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack metacity nautilus2 \
 		gnomemenus desktopfileutils nautilus2
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
+INSTALLS_ICONS=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS= --enable-gstreamer=0.10 \
 		--disable-hal
