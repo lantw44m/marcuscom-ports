@@ -44,6 +44,7 @@ share/locale/cs/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/cy/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/da/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/de/LC_MESSAGES/gnome-system-monitor.mo
+share/locale/dz/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/el/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/en_CA/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/en_GB/LC_MESSAGES/gnome-system-monitor.mo
@@ -63,6 +64,7 @@ share/locale/hu/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/id/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/it/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ja/LC_MESSAGES/gnome-system-monitor.mo
+share/locale/ka/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ko/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/li/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/lt/LC_MESSAGES/gnome-system-monitor.mo
@@ -99,6 +101,8 @@ share/locale/zh_HK/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-system-monitor.mo
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrm share/gnome/omf/gnome-system-monitor
 @dirrm share/gnome/help/gnome-system-monitor/bg/figures
 @dirrm share/gnome/help/gnome-system-monitor/bg
