@@ -183,6 +183,7 @@ share/gnome/deskbar-applet/art/deskbar-applet-panel-v.png
 share/gnome/deskbar-applet/art/deskbar-applet-panel-v.svg
 share/gnome/deskbar-applet/art/deskbar-applet-small.png
 share/gnome/deskbar-applet/art/deskbar-applet.svg
+share/gnome/deskbar-applet/art/epiphany-history.png
 share/gnome/deskbar-applet/art/folder-bookmark.png
 share/gnome/deskbar-applet/art/generic.png
 share/gnome/deskbar-applet/art/google.png
@@ -194,16 +195,20 @@ share/gnome/pixmaps/deskbar-applet.svg
 share/locale/bg/LC_MESSAGES/deskbar-applet.mo
 share/locale/ca/LC_MESSAGES/deskbar-applet.mo
 share/locale/cs/LC_MESSAGES/deskbar-applet.mo
+share/locale/cy/LC_MESSAGES/deskbar-applet.mo
 share/locale/da/LC_MESSAGES/deskbar-applet.mo
 share/locale/de/LC_MESSAGES/deskbar-applet.mo
+share/locale/dz/LC_MESSAGES/deskbar-applet.mo
 share/locale/el/LC_MESSAGES/deskbar-applet.mo
 share/locale/en_CA/LC_MESSAGES/deskbar-applet.mo
 share/locale/en_GB/LC_MESSAGES/deskbar-applet.mo
 share/locale/es/LC_MESSAGES/deskbar-applet.mo
+share/locale/et/LC_MESSAGES/deskbar-applet.mo
 share/locale/fi/LC_MESSAGES/deskbar-applet.mo
 share/locale/fr/LC_MESSAGES/deskbar-applet.mo
 share/locale/gl/LC_MESSAGES/deskbar-applet.mo
 share/locale/gu/LC_MESSAGES/deskbar-applet.mo
+share/locale/he/LC_MESSAGES/deskbar-applet.mo
 share/locale/hi/LC_MESSAGES/deskbar-applet.mo
 share/locale/hu/LC_MESSAGES/deskbar-applet.mo
 share/locale/it/LC_MESSAGES/deskbar-applet.mo
@@ -231,6 +236,8 @@ share/locale/vi/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_CN/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrm share/gnome/deskbar-applet/art
 @dirrm share/gnome/deskbar-applet
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/entriac
