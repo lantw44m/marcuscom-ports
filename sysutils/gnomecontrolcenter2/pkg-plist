@@ -69,7 +69,6 @@ share/gnome/control-center-2.0/interfaces/apply-font.glade
 share/gnome/control-center-2.0/interfaces/at-enable-dialog.glade
 share/gnome/control-center-2.0/interfaces/font-properties.glade
 %%ABOUTME%%share/gnome/control-center-2.0/interfaces/gnome-about-me.glade
-share/gnome/gnome-default-applications/gnome-default-applications.xml
 share/gnome/control-center-2.0/interfaces/gnome-accessibility-keyboard-properties.glade
 share/gnome/control-center-2.0/interfaces/gnome-background-properties.glade
 share/gnome/control-center-2.0/interfaces/gnome-default-applications-properties.glade
@@ -88,6 +87,8 @@ share/gnome/control-center-2.0/pixmaps/accessibility-keyboard-mousekey.png
 share/gnome/control-center-2.0/pixmaps/accessibility-keyboard-slowkey.png
 share/gnome/control-center-2.0/pixmaps/accessibility-keyboard-stickykey.png
 share/gnome/control-center-2.0/pixmaps/accessibility-keyboard-togglekey.png
+share/gnome/control-center-2.0/pixmaps/acme-brightness.png
+share/gnome/control-center-2.0/pixmaps/acme-eject.png
 share/gnome/control-center-2.0/pixmaps/at-startup.png
 share/gnome/control-center-2.0/pixmaps/at-support.png
 share/gnome/control-center-2.0/pixmaps/bar-disabled.png
@@ -99,8 +100,6 @@ share/gnome/control-center-2.0/pixmaps/double-click-off.png
 share/gnome/control-center-2.0/pixmaps/double-click-on.png
 %%ABOUTME%%share/gnome/control-center-2.0/pixmaps/gnome-about-me-bulb-off.png
 %%ABOUTME%%share/gnome/control-center-2.0/pixmaps/gnome-about-me-bulb-on.png
-share/gnome/control-center-2.0/pixmaps/acme-brightness.png
-share/gnome/control-center-2.0/pixmaps/acme-eject.png
 share/gnome/control-center-2.0/pixmaps/gnome-speakernotes-muted.png
 share/gnome/control-center-2.0/pixmaps/gnome-speakernotes.png
 share/gnome/control-center-2.0/pixmaps/keyboard-bell.png
@@ -130,6 +129,9 @@ share/gnome/control-center-2.0/xrdb/Xaw.ad
 share/gnome/cursor-fonts/cursor-large-white.pcf
 share/gnome/cursor-fonts/cursor-large.pcf
 share/gnome/cursor-fonts/cursor-white.pcf
+share/gnome/desktop-directories/font-method.directory
+share/gnome/desktop-directories/theme-method.directory
+share/gnome/gnome-default-applications/gnome-default-applications.xml
 share/gnome/help/control-center/C/config-accessibility-keyboard.xml
 share/gnome/help/control-center/C/config-background.xml
 share/gnome/help/control-center/C/config-behavior.xml
@@ -151,8 +153,6 @@ share/gnome/idl/GNOME_SettingsDaemon.idl
 share/gnome/omf/control-center/control-center-C.omf
 share/gnome/omf/control-center/control-center-es.omf
 share/gnome/pixmaps/display-capplet.png
-share/gnome/vfolders/font-method.directory
-share/gnome/vfolders/theme-method.directory
 share/icons/hicolor/48x48/apps/gnome-control-center.png
 share/locale/af/LC_MESSAGES/control-center-2.0.mo
 share/locale/am/LC_MESSAGES/control-center-2.0.mo
@@ -161,12 +161,14 @@ share/locale/az/LC_MESSAGES/control-center-2.0.mo
 share/locale/be/LC_MESSAGES/control-center-2.0.mo
 share/locale/bg/LC_MESSAGES/control-center-2.0.mo
 share/locale/bn/LC_MESSAGES/control-center-2.0.mo
+share/locale/br/LC_MESSAGES/control-center-2.0.mo
 share/locale/bs/LC_MESSAGES/control-center-2.0.mo
 share/locale/ca/LC_MESSAGES/control-center-2.0.mo
 share/locale/cs/LC_MESSAGES/control-center-2.0.mo
 share/locale/cy/LC_MESSAGES/control-center-2.0.mo
 share/locale/da/LC_MESSAGES/control-center-2.0.mo
 share/locale/de/LC_MESSAGES/control-center-2.0.mo
+share/locale/dz/LC_MESSAGES/control-center-2.0.mo
 share/locale/el/LC_MESSAGES/control-center-2.0.mo
 share/locale/en_CA/LC_MESSAGES/control-center-2.0.mo
 share/locale/en_GB/LC_MESSAGES/control-center-2.0.mo
@@ -187,6 +189,7 @@ share/locale/id/LC_MESSAGES/control-center-2.0.mo
 share/locale/is/LC_MESSAGES/control-center-2.0.mo
 share/locale/it/LC_MESSAGES/control-center-2.0.mo
 share/locale/ja/LC_MESSAGES/control-center-2.0.mo
+share/locale/ka/LC_MESSAGES/control-center-2.0.mo
 share/locale/ko/LC_MESSAGES/control-center-2.0.mo
 share/locale/ku/LC_MESSAGES/control-center-2.0.mo
 share/locale/lt/LC_MESSAGES/control-center-2.0.mo
@@ -236,13 +239,18 @@ share/locale/zu/LC_MESSAGES/control-center-2.0.mo
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/nso/LC_MESSAGES
 @dirrmtry share/locale/nso
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/br/LC_MESSAGES
+@dirrmtry share/locale/br
 @dirrm share/gnome/omf/control-center
 @dirrm share/gnome/help/control-center/es
 @dirrm share/gnome/help/control-center/C
 @dirrm share/gnome/help/control-center
-@dirrmtry share/gnome/gnome-background-properties
-@dirrm share/gnome/cursor-fonts
 @dirrm share/gnome/gnome-default-applications
+@dirrm share/gnome/gnome-background-properties
+@dirrm share/gnome/desktop-directories
+@dirrm share/gnome/cursor-fonts
 @dirrm share/gnome/control-center-2.0/xrdb
 @dirrm share/gnome/control-center-2.0/pixmaps
 @dirrm share/gnome/control-center-2.0/interfaces
