@@ -651,6 +651,7 @@ share/locale/cs/LC_MESSAGES/gnome-games.mo
 share/locale/cy/LC_MESSAGES/gnome-games.mo
 share/locale/da/LC_MESSAGES/gnome-games.mo
 share/locale/de/LC_MESSAGES/gnome-games.mo
+share/locale/dz/LC_MESSAGES/gnome-games.mo
 share/locale/el/LC_MESSAGES/gnome-games.mo
 share/locale/en_CA/LC_MESSAGES/gnome-games.mo
 share/locale/en_GB/LC_MESSAGES/gnome-games.mo
@@ -671,6 +672,7 @@ share/locale/id/LC_MESSAGES/gnome-games.mo
 share/locale/is/LC_MESSAGES/gnome-games.mo
 share/locale/it/LC_MESSAGES/gnome-games.mo
 share/locale/ja/LC_MESSAGES/gnome-games.mo
+share/locale/ka/LC_MESSAGES/gnome-games.mo
 share/locale/ko/LC_MESSAGES/gnome-games.mo
 share/locale/ku/LC_MESSAGES/gnome-games.mo
 share/locale/lt/LC_MESSAGES/gnome-games.mo
@@ -710,6 +712,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrm share/gnome/sounds/iagno
 @dirrm share/gnome/sounds/gnometris
 @dirrm share/gnome/sounds/gnobots2
