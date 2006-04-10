@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.366 2006/03/28 01:32:48 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.367 2006/04/10 21:40:04 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -38,6 +38,11 @@ Gnome_Pre_Include=			bsd.gnome.mk
 # INSTALLS_OMF		- If set, bsd.gnome.mk will automatically scan pkg-plist
 #					  file and add apropriate @exec/@unexec directives for
 #					  each .omf file found to track OMF registration database.
+#
+# INSTALLS_ICONS	- If your port installs Freedesktop-style icons to
+#					  ${LOCALBASE}/share/icons or ${X11BASE}/share/icons, then
+#					  you should use this macro. If the icons are not cached,
+#					  they will not be displayed.
 #
 
 # non-version specific components
@@ -640,9 +645,9 @@ ltverhack_PRE_PATCH=	${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
 								${PATCH_WRKSRC}/$$file; \
 						done;
 .else
-.if ${USE_GNOME:Mltverhack}!=""
+.  if ${USE_GNOME:Mltverhack}!=""
 BROKEN=	${PORTNAME} uses the ltverhack GNOME component but does not use libtool
-.endif
+.  endif
 .endif
 
 ltverhack_PATCH_DEPENDS=${LIBTOOL_DEPENDS}
@@ -699,18 +704,18 @@ gnome-pre-patch:
 
 .if defined(WANT_GNOME)
 USE_GNOME?=
-.if ${_USE_GNOME_SAVED}==${USE_GNOME}
+.  if ${_USE_GNOME_SAVED}==${USE_GNOME}
 PLIST_SUB+=	GNOME:="@comment " NOGNOME:=""
-.else
+.  else
 PLIST_SUB+=	GNOME:="" NOGNOME:="@comment "
-.if defined(GNOME_DESKTOP_VERSION)
-.if ${_USE_GNOME_DESKTOP}=="yes"
+.    if defined(GNOME_DESKTOP_VERSION)
+.      if ${_USE_GNOME_DESKTOP}=="yes"
 PLIST_SUB+=	GNOMEDESKTOP:="" NOGNOMEDESKTOP:="@comment "
-.else
+.      else
 PLIST_SUB+=	GNOMEDESKTOP:="@comment " NOGNOMEDESKTOP:=""
-.endif
-.endif
-.endif
+.      endif
+.    endif
+.  endif
 .endif
 
 .if ${MAINTAINER}=="gnome@FreeBSD.org"
