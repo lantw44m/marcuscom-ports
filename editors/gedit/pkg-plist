@@ -78,7 +78,6 @@ lib/gedit-2/plugins/libtime.so
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole.pyc
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole.pyo
 lib/gedit-2/plugins/sample.gedit-plugin
-lib/gedit-2/plugins/sort.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/snippets.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/snippets/ElementTree.py
 %%PYTHON%%lib/gedit-2/plugins/snippets/ElementTree.pyc
@@ -92,9 +91,6 @@ lib/gedit-2/plugins/sort.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/snippets/SnippetController.py
 %%PYTHON%%lib/gedit-2/plugins/snippets/SnippetController.pyc
 %%PYTHON%%lib/gedit-2/plugins/snippets/SnippetController.pyo
-%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsLibrary.py
-%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsLibrary.pyc
-%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsLibrary.pyo
 %%PYTHON%%lib/gedit-2/plugins/snippets/SnippetPlaceholders.py
 %%PYTHON%%lib/gedit-2/plugins/snippets/SnippetPlaceholders.pyc
 %%PYTHON%%lib/gedit-2/plugins/snippets/SnippetPlaceholders.pyo
@@ -104,6 +100,9 @@ lib/gedit-2/plugins/sort.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsDialog.py
 %%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsDialog.pyc
 %%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsDialog.pyo
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsLibrary.py
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsLibrary.pyc
+%%PYTHON%%lib/gedit-2/plugins/snippets/SnippetsLibrary.pyo
 %%PYTHON%%lib/gedit-2/plugins/snippets/__init__.py
 %%PYTHON%%lib/gedit-2/plugins/snippets/__init__.pyc
 %%PYTHON%%lib/gedit-2/plugins/snippets/__init__.pyo
@@ -111,6 +110,7 @@ lib/gedit-2/plugins/sort.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/snippets/functions.pyc
 %%PYTHON%%lib/gedit-2/plugins/snippets/functions.pyo
 %%PYTHON%%lib/gedit-2/plugins/snippets/snippets.glade
+lib/gedit-2/plugins/sort.gedit-plugin
 lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
@@ -267,12 +267,14 @@ share/locale/az/LC_MESSAGES/gedit.mo
 share/locale/be/LC_MESSAGES/gedit.mo
 share/locale/bg/LC_MESSAGES/gedit.mo
 share/locale/bn/LC_MESSAGES/gedit.mo
+share/locale/br/LC_MESSAGES/gedit.mo
 share/locale/bs/LC_MESSAGES/gedit.mo
 share/locale/ca/LC_MESSAGES/gedit.mo
 share/locale/cs/LC_MESSAGES/gedit.mo
 share/locale/cy/LC_MESSAGES/gedit.mo
 share/locale/da/LC_MESSAGES/gedit.mo
 share/locale/de/LC_MESSAGES/gedit.mo
+share/locale/dz/LC_MESSAGES/gedit.mo
 share/locale/el/LC_MESSAGES/gedit.mo
 share/locale/en_CA/LC_MESSAGES/gedit.mo
 share/locale/en_GB/LC_MESSAGES/gedit.mo
@@ -293,6 +295,7 @@ share/locale/id/LC_MESSAGES/gedit.mo
 share/locale/is/LC_MESSAGES/gedit.mo
 share/locale/it/LC_MESSAGES/gedit.mo
 share/locale/ja/LC_MESSAGES/gedit.mo
+share/locale/ka/LC_MESSAGES/gedit.mo
 share/locale/kn/LC_MESSAGES/gedit.mo
 share/locale/ko/LC_MESSAGES/gedit.mo
 share/locale/lt/LC_MESSAGES/gedit.mo
@@ -330,6 +333,10 @@ share/locale/vi/LC_MESSAGES/gedit.mo
 share/locale/wa/LC_MESSAGES/gedit.mo
 share/locale/zh_CN/LC_MESSAGES/gedit.mo
 share/locale/zh_TW/LC_MESSAGES/gedit.mo
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/br/LC_MESSAGES
+@dirrmtry share/locale/br
 @dirrm share/gnome/omf/gedit
 @dirrm share/gnome/help/gedit/zh_TW/figures
 @dirrm share/gnome/help/gedit/zh_TW
