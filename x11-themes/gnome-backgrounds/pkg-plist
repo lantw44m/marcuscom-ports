@@ -12,6 +12,7 @@ share/gnome/pixmaps/backgrounds/gnome/tiles/pattern-stars.svg
 share/gnome/pixmaps/backgrounds/gnome/translucent/ellipsis.svg
 share/gnome/pixmaps/backgrounds/gnome/translucent/tentacles.svg
 share/locale/ar/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/be/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/bg/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/bn/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ca/LC_MESSAGES/gnome-backgrounds.mo
@@ -19,6 +20,7 @@ share/locale/cs/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/cy/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/da/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/de/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/dz/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/el/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/en_CA/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/en_GB/LC_MESSAGES/gnome-backgrounds.mo
@@ -30,12 +32,14 @@ share/locale/fi/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/fr/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/gl/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/gu/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/he/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/hi/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/hu/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/hy/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/id/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/it/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ja/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/ka/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ko/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ku/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ky/LC_MESSAGES/gnome-backgrounds.mo
@@ -45,6 +49,7 @@ share/locale/nb/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ne/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/nl/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/no/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/or/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/pa/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/pl/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/pt/LC_MESSAGES/gnome-backgrounds.mo
@@ -77,6 +82,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-backgrounds.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrm share/gnome/pixmaps/backgrounds/gnome/translucent
 @dirrm share/gnome/pixmaps/backgrounds/gnome/tiles
 @dirrm share/gnome/pixmaps/backgrounds/gnome/nature
