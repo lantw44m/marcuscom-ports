@@ -3,7 +3,7 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/fileroller/Makefile,v 1.91 2006/03/13 21:16:16 mezz Exp $
+#   $MCom: ports/archivers/fileroller/Makefile,v 1.92 2006/04/11 01:01:32 ahze Exp $
 #
 
 PORTNAME=	fileroller
@@ -26,6 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
+INSTALLS_ICONS=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils nautilus2 \
