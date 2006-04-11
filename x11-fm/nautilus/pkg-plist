@@ -29,7 +29,6 @@ share/gnome/nautilus/glade/nautilus-bookmarks-window.glade
 share/gnome/nautilus/glade/nautilus-file-management-properties.glade
 share/gnome/nautilus/nautilus-extras.placeholder
 share/gnome/nautilus/nautilus-suggested.placeholder
-share/gnome/nautilus/patterns/.striated.png
 share/gnome/nautilus/patterns/blue_gray_rough.png
 share/gnome/nautilus/patterns/blue_ridge.png
 share/gnome/nautilus/patterns/blue_type.png
@@ -112,6 +111,7 @@ share/locale/id/LC_MESSAGES/nautilus.mo
 share/locale/is/LC_MESSAGES/nautilus.mo
 share/locale/it/LC_MESSAGES/nautilus.mo
 share/locale/ja/LC_MESSAGES/nautilus.mo
+share/locale/ka/LC_MESSAGES/nautilus.mo
 share/locale/km/LC_MESSAGES/nautilus.mo
 share/locale/ko/LC_MESSAGES/nautilus.mo
 share/locale/ku/LC_MESSAGES/nautilus.mo
