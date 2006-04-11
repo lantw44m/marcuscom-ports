@@ -38,31 +38,6 @@ lib/epiphany/%%EPHY_VERSION%%/plugins/libdesktopfileplugin.so
 libdata/pkgconfig/epiphany-%%EPHY_VERSION%%.pc
 share/aclocal/epiphany.m4
 share/dbus-1/services/org.gnome.Epiphany.service
-%%DOCSDIR%%/EphyCommandManager.html
-%%DOCSDIR%%/EphyEmbed.html
-%%DOCSDIR%%/EphyNodeDb.html
-%%DOCSDIR%%/EphyTab.html
-%%DOCSDIR%%/EphyWindow.html
-%%DOCSDIR%%/ch01.html
-%%DOCSDIR%%/ch02.html
-%%DOCSDIR%%/epiphany-EphyEmbedFactory.html
-%%DOCSDIR%%/epiphany-EphyEmbedPersist.html
-%%DOCSDIR%%/epiphany-EphyEmbedSingle.html
-%%DOCSDIR%%/epiphany-EphyExtensionsManager.html
-%%DOCSDIR%%/epiphany-EphyGlade.html
-%%DOCSDIR%%/epiphany-EphyPermissionManager.html
-%%DOCSDIR%%/epiphany-ephy-cookie-manager.html
-%%DOCSDIR%%/epiphany-ephy-password-manager.html
-%%DOCSDIR%%/epiphany-ephy-session.html
-%%DOCSDIR%%/epiphany-ephy-shell.html
-%%DOCSDIR%%/epiphany.devhelp
-%%DOCSDIR%%/home.png
-%%DOCSDIR%%/index.html
-%%DOCSDIR%%/index.sgml
-%%DOCSDIR%%/left.png
-%%DOCSDIR%%/right.png
-%%DOCSDIR%%/style.css
-%%DOCSDIR%%/up.png
 share/gnome/applications/bme.desktop
 share/gnome/applications/epiphany.desktop
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
@@ -152,12 +127,14 @@ share/locale/az/LC_MESSAGES/epiphany.mo
 share/locale/be/LC_MESSAGES/epiphany.mo
 share/locale/bg/LC_MESSAGES/epiphany.mo
 share/locale/bn/LC_MESSAGES/epiphany.mo
+share/locale/br/LC_MESSAGES/epiphany.mo
 share/locale/bs/LC_MESSAGES/epiphany.mo
 share/locale/ca/LC_MESSAGES/epiphany.mo
 share/locale/cs/LC_MESSAGES/epiphany.mo
 share/locale/cy/LC_MESSAGES/epiphany.mo
 share/locale/da/LC_MESSAGES/epiphany.mo
 share/locale/de/LC_MESSAGES/epiphany.mo
+share/locale/dz/LC_MESSAGES/epiphany.mo
 share/locale/el/LC_MESSAGES/epiphany.mo
 share/locale/en_CA/LC_MESSAGES/epiphany.mo
 share/locale/en_GB/LC_MESSAGES/epiphany.mo
@@ -219,8 +196,8 @@ share/locale/zh_HK/LC_MESSAGES/epiphany.mo
 share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/ka/LC_MESSAGES
-@dirrmtry share/locale/ka
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrm share/gnome/omf/epiphany
 @dirrm share/gnome/help/epiphany/uk/figures
 @dirrm share/gnome/help/epiphany/uk
