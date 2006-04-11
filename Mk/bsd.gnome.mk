@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.367 2006/04/10 21:40:04 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.368 2006/04/10 21:51:49 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -761,7 +761,7 @@ gnome-post-install:
 .  if defined(INSTALLS_ICONS)
 	@${RM} -f ${TMPPLIST}.icons1
 	@for i in `${GREP} "^share/icons/.*/" ${TMPPLIST} | ${CUT} -d / -f 1-3 | ${SORT} -u`; do \
-		${ECHO_CMD} "@dirrmtry $${i}/icon-theme.cache" \
+		${ECHO_CMD} "@unexec /bin/rm %D/$${i}/icon-theme.cache 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}.icons1; \
 		${ECHO_CMD} "@exec ${X11BASE}/bin/gtk-update-icon-cache -q -f %D/$${i} 2>/dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
