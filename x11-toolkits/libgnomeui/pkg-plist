@@ -120,7 +120,6 @@ libexec/gnome_segv2
 %%DOCSDIR%%/libgnomeui-gnometypebuiltins.html
 %%DOCSDIR%%/libgnomeui-objects.html
 %%DOCSDIR%%/libgnomeui.devhelp
-%%DOCSDIR%%/libgnomeui.devhelp2
 %%DOCSDIR%%/miscellaneous.html
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/stock_attach.png
@@ -176,6 +175,7 @@ share/locale/cs/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/cy/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/da/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/de/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/dz/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/el/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/en_CA/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/en_GB/LC_MESSAGES/libgnomeui-2.0.mo
@@ -253,6 +253,8 @@ share/locale/zu/LC_MESSAGES/libgnomeui-2.0.mo
 @dirrmtry share/locale/te
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrm %%DOCSDIR%%
 @dirrm lib/gtk-2.0/%%GTK_VERSION%%/filesystems
 @dirrm include/libgnomeui-2.0/libgnomeui
