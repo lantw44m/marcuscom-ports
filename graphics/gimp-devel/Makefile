@@ -3,12 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.13 2006/02/24 20:43:28 marcus Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.14 2006/03/02 20:43:05 mezz Exp $
 #
 
 PORTNAME=	gimp
 PORTVERSION=	2.3.5
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -24,7 +24,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNU Image Manipulation Program development version
 
 LIB_DEPENDS=	wmf.2:${PORTSDIR}/graphics/libwmf \
-		poppler.0:${PORTSDIR}/graphics/poppler \
+		poppler-glib.1:${PORTSDIR}/graphics/poppler-gtk \
 		aa.1:${PORTSDIR}/graphics/aalib \
 		mng.1:${PORTSDIR}/graphics/libmng \
 		png.5:${PORTSDIR}/graphics/png \
