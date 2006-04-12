@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.109 2006/03/14 13:32:40 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.110 2006/04/11 00:56:27 marcus Exp $
 #
 
 PORTNAME=	epiphany
@@ -50,7 +50,7 @@ WITH_GNOME=	yes
 .endif
 
 .include <bsd.port.pre.mk>
-.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
+.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 
 NO_WERROR=	yes
 # allow build with more warnings enabled
