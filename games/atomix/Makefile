@@ -3,11 +3,11 @@
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/atomix/Makefile,v 1.6 2006/03/02 20:36:47 mezz Exp $
+#   $MCom: ports/games/atomix/Makefile,v 1.7 2006/03/13 19:31:41 mezz Exp $
 #
 
 PORTNAME=	atomix
-PORTVERSION=	2.13.4
+PORTVERSION=	2.14.0
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
@@ -27,5 +27,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 post-patch:
 	@${REINPLACE_CMD} -e 's/games\.games/games:games/' ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e '/^$$/d' ${WRKSRC}/po/POTFILES.in
 
 .include <bsd.port.mk>
