@@ -1,7 +1,0 @@
---- po/POTFILES.in.orig	Wed Apr 12 17:54:03 2006
-+++ po/POTFILES.in	Wed Apr 12 17:54:09 2006
-@@ -27,4 +27,3 @@ schemas/desktop_gnome_peripherals_mouse.
- schemas/desktop_gnome_sound.schemas.in
- schemas/desktop_gnome_thumbnailers.schemas.in
- schemas/desktop_gnome_typing_break.schemas.in
--

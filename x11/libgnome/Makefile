@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnome/Makefile,v 1.75 2006/03/13 19:31:47 mezz Exp $
+#   $MCom: ports/x11/libgnome/Makefile,v 1.76 2006/04/12 21:58:41 marcus Exp $
 #
 
 PORTNAME=	libgnome
@@ -53,6 +53,7 @@ GCONF_SCHEMAS=	desktop_gnome_accessibility_keyboard.schemas \
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/libgnome/libgnome-2.0.pc.in
+	@${REINPLACE_CMD} -e '/^$$/d' ${WRKSRC}/po/POTFILES.in
 .if defined(NOPORTDOCS)
 	@${REINPLACE_CMD} -e 's|gnome-data po doc|gnome-data po|g' \
 		${WRKSRC}/Makefile.in
