@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/poppler-qt/Makefile,v 1.4 2006/02/24 18:50:35 marcus Exp $
+#    $MCom: ports/graphics/poppler-qt/Makefile,v 1.5 2006/03/09 01:49:50 marcus Exp $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-qt
@@ -15,5 +15,4 @@ MASTERDIR=	${.CURDIR}/../../graphics/poppler
 SLAVEPORT=	qt
 PLIST=	${.CURDIR}/pkg-plist
 
-BROKEN=Configure script is busted
 .include "${MASTERDIR}/Makefile"

@@ -3,7 +3,7 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.21 2006/02/25 09:58:48 marcus Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.22 2006/03/09 01:49:49 marcus Exp $
 #
 
 PORTNAME=	poppler
@@ -55,9 +55,9 @@ MAN1=	pdffonts.1 pdfimages.1 pdfinfo.1 \
 
 post-patch:
 .if defined(SLAVEPORT) && ${SLAVEPORT}=="qt"
-#	@${REINPLACE_CMD} -e 's|/usr/local/qt/include|${X11BASE}/include|; \
-#		s|/usr/local/qt/lib|${X11BASE}/lib|' \
-#		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|/usr/local/qt/include|${X11BASE}/include|; \
+		s|/usr/local/qt/lib|${X11BASE}/lib|' \
+		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|$$QTDIR|${X11BASE}|' ${WRKSRC}/configure
 .endif
 
