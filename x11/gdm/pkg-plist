@@ -57,13 +57,13 @@ share/gnome/gdm/themes/circles/options.png
 share/gnome/gdm/themes/circles/screenshot.png
 share/gnome/gdm/themes/happygnome-list/GdmGreeterTheme.desktop
 share/gnome/gdm/themes/happygnome-list/background.svg
-share/gnome/gdm/themes/happygnome-list/gnome-logo.png
+share/gnome/gdm/themes/happygnome-list/gnome-logo.svg
 share/gnome/gdm/themes/happygnome-list/happygnome.xml
 share/gnome/gdm/themes/happygnome-list/options.png
 share/gnome/gdm/themes/happygnome-list/screenshot.png
 share/gnome/gdm/themes/happygnome/GdmGreeterTheme.desktop
 share/gnome/gdm/themes/happygnome/background.svg
-share/gnome/gdm/themes/happygnome/gnome-logo.png
+share/gnome/gdm/themes/happygnome/gnome-logo.svg
 share/gnome/gdm/themes/happygnome/happygnome.xml
 share/gnome/gdm/themes/happygnome/options.png
 share/gnome/gdm/themes/happygnome/screenshot.png
@@ -161,6 +161,7 @@ share/locale/cs/LC_MESSAGES/gdm.mo
 share/locale/cy/LC_MESSAGES/gdm.mo
 share/locale/da/LC_MESSAGES/gdm.mo
 share/locale/de/LC_MESSAGES/gdm.mo
+share/locale/dz/LC_MESSAGES/gdm.mo
 share/locale/el/LC_MESSAGES/gdm.mo
 share/locale/en_CA/LC_MESSAGES/gdm.mo
 share/locale/en_GB/LC_MESSAGES/gdm.mo
@@ -181,6 +182,7 @@ share/locale/id/LC_MESSAGES/gdm.mo
 share/locale/is/LC_MESSAGES/gdm.mo
 share/locale/it/LC_MESSAGES/gdm.mo
 share/locale/ja/LC_MESSAGES/gdm.mo
+share/locale/ka/LC_MESSAGES/gdm.mo
 share/locale/ko/LC_MESSAGES/gdm.mo
 share/locale/ku/LC_MESSAGES/gdm.mo
 share/locale/lt/LC_MESSAGES/gdm.mo
@@ -235,6 +237,8 @@ share/locale/zu/LC_MESSAGES/gdm.mo
 @dirrmtry share/locale/mi
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrm share/gnome/xsessions
 @dirrm share/gnome/omf/gdm
 @dirrm share/gnome/help/gdm/zh_TW/figures

@@ -9,21 +9,6 @@
  $ac_includes_default
  #include <$ac_header>
  _ACEOF
-@@ -32119,12 +32121,12 @@ GDM_OLD_CONF="$sysconfdir/gdm/gdm.conf"
- 
- 
- cat >>confdefs.h <<_ACEOF
--#define GDM_CUSTOM_CONF "$GDM_CUSTOM_CONF"
-+#define GDM_CUSTOM_CONF "`eval echo $GDM_CUSTOM_CONF`"
- _ACEOF
- 
- 
- cat >>confdefs.h <<_ACEOF
--#define GDM_OLD_CONF "$GDM_OLD_CONF"
-+#define GDM_OLD_CONF "`eval echo $GDM_OLD_CONF`"
- _ACEOF
- 
- 
 @@ -32415,6 +32417,13 @@ case "$host" in
          XSESSION_SHELL=/bin/ksh
          SOUND_PROGRAM=/usr/bin/audioplay

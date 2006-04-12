@@ -1,6 +1,6 @@
---- config/gdm.conf.in.orig	Tue Dec 20 21:22:36 2005
-+++ config/gdm.conf.in	Thu Jan  5 16:54:11 2006
-@@ -154,11 +154,11 @@
+--- config/gdm.conf.in.orig	Fri Apr  7 15:47:20 2006
++++ config/gdm.conf.in	Wed Apr 12 01:53:30 2006
+@@ -156,11 +156,11 @@ StandardXServer=@X_SERVER@
  #FlexiReapDelayMinutes=5
  # The X nest command.
  Xnest=@X_XNEST_PATH@/Xnest @X_XNEST_CONFIG_OPTIONS@
@@ -15,12 +15,12 @@
  # Should double login be treated with a warning (and possibility to change VT's
  # on Linux and FreeBSD systems for console logins)
  #DoubleLoginWarning=true
-@@ -277,7 +277,7 @@
+@@ -283,7 +283,7 @@ Enable=false
  # The specific gtkrc file we use.  It should be the full path to the gtkrc that
  # we need.  Unless you need a specific gtkrc that doesn't correspond to a
  # specific theme, then just use the GtkTheme key.
--#GtkRC=@EXPANDED_DATADIR@/themes/Default/gtk-2.0/gtkrc
-+#GtkRC=@EXPANDED_DATADIR@/../themes/Default/gtk-2.0/gtkrc
+-#GtkRC=@datadir@/themes/Default/gtk-2.0/gtkrc
++#GtkRC=@datadir@/../themes/Default/gtk-2.0/gtkrc
  
  # The GTK+ theme to use for the GUI.
  #GtkTheme=Default
