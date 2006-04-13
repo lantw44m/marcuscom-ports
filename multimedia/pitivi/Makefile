@@ -24,7 +24,6 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget pygtk2 pkgconfig pygnome2
 USE_GSTREAMER80=	yes
-USE_AUTOTOOLS=	libtool:15
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docs-build

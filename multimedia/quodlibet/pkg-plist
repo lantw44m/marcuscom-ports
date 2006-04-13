@@ -94,8 +94,8 @@ share/quodlibet/qltk/prefs.py
 share/quodlibet/qltk/properties.py
 share/quodlibet/qltk/queue.py
 share/quodlibet/qltk/quodlibet.py
-share/quodlibet/qltk/renamefiles.py
 share/quodlibet/qltk/remote.py
+share/quodlibet/qltk/renamefiles.py
 share/quodlibet/qltk/sliderbutton.py
 share/quodlibet/qltk/songlist.py
 share/quodlibet/qltk/tagsfrompath.py
