@@ -3,14 +3,14 @@
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libgnomeuimm26/Makefile,v 1.5 2005/10/14 20:39:59 adamw Exp $
+#   $MCom: ports/x11-toolkits/libgnomeuimm26/Makefile,v 1.7 2006/03/16 20:21:56 marcus Exp $
 #
 
 PORTNAME=	libgnomeuimm
 PORTVERSION=	2.14.0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	bland@FreeBSD.org

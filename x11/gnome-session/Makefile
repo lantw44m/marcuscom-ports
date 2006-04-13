@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnomesession/Makefile,v 1.79 2006/04/02 21:02:18 marcus Exp $
+#   $MCom: ports/x11/gnomesession/Makefile,v 1.80 2006/04/10 13:10:49 ahze Exp $
 #
 
 PORTNAME=	gnomesession
@@ -12,7 +12,7 @@ CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
 		http://people.FreeBSD.org/~adamw/images/gnome_splashes/2.12/:local
-MASTER_SITE_SUBDIR=	sources/gnome-session/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/} \
+MASTER_SITE_SUBDIR=	sources/gnome-session/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/} \
 		    	adamw/:local
 DISTNAME=	gnome-session-${PORTVERSION}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \

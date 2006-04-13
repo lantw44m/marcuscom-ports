@@ -3,13 +3,13 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-orbit2/Makefile,v 1.9 2006/03/13 06:33:54 mezz Exp $
+#   $MCom: ports/devel/py-orbit2/Makefile,v 1.10 2006/03/13 19:31:40 mezz Exp $
 
 PORTNAME=	orbit
 PORTVERSION=	2.14.0
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/pyorbit/${PORTVERSION:C/^([0-9]+)\.([0-9]+).*/\1.\2/}
+MASTER_SITE_SUBDIR=	sources/pyorbit/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	pyorbit-${PORTVERSION}
 DIST_SUBDIR=	gnome2
