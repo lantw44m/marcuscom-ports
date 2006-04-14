@@ -3,11 +3,11 @@
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glibmm/Makefile,v 1.29 2006/03/13 19:31:39 mezz Exp $
+#   $MCom: ports/devel/glibmm/Makefile,v 1.30 2006/04/13 07:52:32 bland Exp $
 #
 
 PORTNAME=	glibmm
-PORTVERSION=	2.10.0
+PORTVERSION=	2.10.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
