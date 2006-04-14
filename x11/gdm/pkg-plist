@@ -240,6 +240,7 @@ share/locale/zu/LC_MESSAGES/gdm.mo
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrm share/gnome/xsessions
+@dirrm share/gnome/pixmaps/faces
 @dirrm share/gnome/omf/gdm
 @dirrm share/gnome/help/gdm/zh_TW/figures
 @dirrm share/gnome/help/gdm/zh_TW
@@ -270,7 +271,6 @@ share/locale/zu/LC_MESSAGES/gdm.mo
 @dirrm share/gnome/gdm/themes
 @dirrm share/gnome/gdm/BuiltInSessions
 @dirrm share/gnome/gdm
-@dirrm share/gnome/pixmaps/faces
 @dirrm etc/pam.d
 @dirrm etc/gdm/modules
 @dirrm etc/gdm/Sessions
