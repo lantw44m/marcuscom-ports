@@ -7,12 +7,12 @@
 #
 
 PORTNAME=	swfdec
-PORTVERSION=	0.3.5
-PORTREVISION=	2
+PORTVERSION=	0.3.6
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.schleef.org/swfdec/download/
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	rainer.alves@gmail.com
 COMMENT=	Flash Rendering Library
 
 LIB_DEPENDS=	mad.2:${PORTSDIR}/audio/libmad \
@@ -44,7 +44,7 @@ PLIST_SUB+=	GIMP="@comment "
 
 pre-everything::
 	@${ECHO} ""
-	@${ECHO} "Definde WITH_GIMP to build swf gimp plugin"
+	@${ECHO} "Define WITH_GIMP in order to build the SWF Gimp plugin"
 	@${ECHO} ""
 
 post-patch:
