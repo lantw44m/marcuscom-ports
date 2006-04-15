@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@rainbow-runner.nl>
 #
 # $FreeBSD$
-#   $MCom: ports/www/evolution-webcal/Makefile,v 1.35 2006/03/13 19:31:45 mezz Exp $
+#   $MCom: ports/www/evolution-webcal/Makefile,v 1.36 2006/04/13 07:52:39 bland Exp $
 #
 
 PORTNAME=	webcal
@@ -14,7 +14,7 @@ MASTER_SITE_SUBDIR=	sources/${PKGNAMEPREFIX}${PORTNAME}/${PORTVERSION:C/^([0-9]+
 PKGNAMEPREFIX=	evolution-
 DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Webcal(endar) handler for gnome
 
 USE_X_PREFIX=	yes

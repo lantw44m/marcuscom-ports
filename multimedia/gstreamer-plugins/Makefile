@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.76 2006/04/01 21:36:24 marcus Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.77 2006/04/02 04:18:36 marcus Exp $
 #
 
 PORTNAME=	gstreamer
@@ -32,7 +32,7 @@ DISTFILES=	${BASE_DISTFILE}:base \
 		${UGLY_DISTFILE}:ugly
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	GStreamer written collection of plugins handling several media types
 
 LIB_DEPENDS+=	gstreamer-0.10.0:${PORTSDIR}/multimedia/gstreamer \

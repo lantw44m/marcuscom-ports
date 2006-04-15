@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer80/Makefile,v 1.37 2006/02/09 23:47:56 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer80/Makefile,v 1.38 2006/02/25 00:09:18 marcus Exp $
 #
 
 PORTNAME=	gstreamer
@@ -16,7 +16,7 @@ MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${GST_VERSION}
 PKGNAMESUFFIX=	80
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	kwm@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Development framework for creating media applications
 
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
