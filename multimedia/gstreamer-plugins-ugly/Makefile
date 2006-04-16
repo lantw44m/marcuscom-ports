@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins-ugly/Makefile,v 1.1 2006/01/20 23:15:01 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins-ugly/Makefile,v 1.2 2006/02/26 19:27:21 marcus Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 
 COMMENT=	Ugly gstreamer-plugins
