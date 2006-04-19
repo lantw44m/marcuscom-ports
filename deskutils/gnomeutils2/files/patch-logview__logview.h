@@ -1,5 +1,5 @@
---- logview.h.orig	Wed Apr 19 12:39:07 2006
-+++ logview.h	Wed Apr 19 12:40:08 2006
+--- logview/logview.h.orig	Wed Apr 19 12:39:07 2006
++++ logview/logview.h	Wed Apr 19 12:40:08 2006
 @@ -73,6 +73,7 @@
  void logview_set_window_title (LogviewWindow *window);
  void logview_set_font (LogviewWindow *window, const gchar *fontname);
