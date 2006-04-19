@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnomeutils2/Makefile,v 1.90 2006/04/19 02:25:09 marcus Exp $
+#   $MCom: ports/deskutils/gnomeutils2/Makefile,v 1.91 2006/04/19 03:49:18 bland Exp $
 #
 
 PORTNAME=	gnomeutils2
 PORTVERSION=	2.14.0
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
