@@ -59,7 +59,7 @@ lib/gstreamer-%%VERSION%%/libgstaudio.so
 lib/gstreamer-%%VERSION%%/libgstaudioconvert.a
 lib/gstreamer-%%VERSION%%/libgstaudioconvert.la
 lib/gstreamer-%%VERSION%%/libgstaudioconvert.so
-lib/gstreamer-%%VERSION%%/libgstaudiofilter.
+lib/gstreamer-%%VERSION%%/libgstaudiofilter.a
 lib/gstreamer-%%VERSION%%/libgstaudiofilter.la
 lib/gstreamer-%%VERSION%%/libgstaudiofilter.so
 lib/gstreamer-%%VERSION%%/libgstaudiorate.a
