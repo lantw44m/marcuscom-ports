@@ -332,7 +332,7 @@ GST_PLUGIN_DIR=	ext/dvdnav \
 		ext/dvdread
 PLIST_FILES=	${GST_LIB_DIR}/libgstdvdnavsrc.so \
 		${GST_LIB_DIR}/libgstdvdnavsrc.a \
-		${GST_LIB_DIR}/libgstdvdnavsrc.ls \
+		${GST_LIB_DIR}/libgstdvdnavsrc.la \
 		${GST_LIB_DIR}/libgstdvdreadsrc.a \
 		${GST_LIB_DIR}/libgstdvdreadsrc.la \
 		${GST_LIB_DIR}/libgstdvdreadsrc.so
