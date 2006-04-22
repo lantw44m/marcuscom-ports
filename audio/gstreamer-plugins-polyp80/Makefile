@@ -3,15 +3,15 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/gstreamer-plugins-polypaudio80/Makefile,v 1.1 2006/01/20 02:55:53 ahze Exp $
+#    $MCom: ports/audio/gstreamer-plugins-polyp80/Makefile,v 1.2 2006/02/23 18:05:33 marcus Exp $
 #
 
 CATEGORIES=	audio
-PORTREVISION=	2
+PORTREVISION=	3
 
 COMMENT=	Gstreamer polypaudio sound server plugin
 
-GST_PLUGIN=	polypaudio
+GST_PLUGIN=	polyp
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins80
 
