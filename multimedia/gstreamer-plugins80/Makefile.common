@@ -465,8 +465,8 @@ PLIST_FILES=	${GST_LIB_DIR}/libgstpng.so \
 .if ${GST_PLUGIN}=="polyp"
 LIB_DEPENDS+=	polyp-0.7.0:${PORTSDIR}/audio/polypaudio
 PLIST_FILES=	${GST_LIB_DIR}/libpolypaudio.so \
-		${GST_LIB_DIR}/libgstpng.a \
-		${GST_LIB_DIR}/libgstpng.la
+		${GST_LIB_DIR}/libpolypaudio.a \
+		${GST_LIB_DIR}/libpolypaudio.la
 GST_PLUGIN_DIR=	ext/polyp
 .endif
 
