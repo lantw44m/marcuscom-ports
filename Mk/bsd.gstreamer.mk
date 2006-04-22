@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.21 2006/01/23 23:25:22 marcus Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.22 2006/02/01 23:26:53 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -72,7 +72,7 @@ _USE_GSTREAMER80_ALL=	a52dec aalib artsd audiofile cairo cdaudio cdio cdparanoia
 			jpeg-mmx ladspa lame libcaca libfame libmms libmng \
 			libpng libvisual mad mikmod mpeg2dec mpeg2enc mplex \
 			musepack musicbrainz nas sdl shout shout2 sidplay \
-			smoothwave sndfile speex theora ogg pango polypaudio \
+			smoothwave sndfile speex theora ogg pango polyp \
 			swfdec vorbis wavpack x264 xvid
 # other plugins
 OTHER_GSTREAMER_PLUGINS+=	core yes
@@ -133,7 +133,7 @@ nas_DEPENDS=	audio/gstreamer-plugins-nas
 
 ogg_DEPENDS=	audio/gstreamer-plugins-ogg
 
-polypaudio_DEPENDS=	audio/gstreamer-plugins-polypaudio
+polyp_DEPENDS=	audio/gstreamer-plugins-polyp
 
 shout_DEPENDS=	audio/gstreamer-plugins-shout
 
