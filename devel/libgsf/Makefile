@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgsf/Makefile,v 1.20 2006/03/13 19:31:39 mezz Exp $
+#   $MCom: ports/devel/libgsf/Makefile,v 1.21 2006/04/13 07:52:33 bland Exp $
 #
 
 PORTNAME=	libgsf
@@ -24,6 +24,7 @@ LIB_DEPENDS+=	bz2.1:${PORTSDIR}/archivers/bzip2
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 INSTALLS_SHLIB=	yes
 USE_GNOME?=	gnomehack glib20 libxml2 gconf2 ltverhack intlhack
 USE_AUTOTOOLS=	libtool:15
