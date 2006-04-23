@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.139 2006/04/12 22:11:34 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.140 2006/04/17 11:54:47 ahze Exp $
 #
 
 PORTNAME=	gnome2
@@ -86,7 +86,7 @@ do-install:	# empty
 .if ${ARCH} == "i386" || ${OSVERSION} > 500035
 RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
 .endif
-.if ${ARCH}!="sparc64"
+.if ${ARCH}!="sparc64" || ${OSVERSION} >= 700003
 RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga
 .endif
 .endif
