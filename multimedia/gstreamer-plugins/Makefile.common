@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.38 2006/04/01 21:36:24 marcus Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.39 2006/04/23 21:32:10 marcus Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -149,7 +149,7 @@ LIB_DEPENDS+=	dv.4:${PORTSDIR}/multimedia/libdv
 USE_GNOME+=	esound
 GST_PLUGIN_DIR=	ext/esd
 CONFIGURE_ENV+=	ESD_CFLAGS="`pkg-config --cflags esound`" \
-		ESD_LIBS="`pkgconfig --libs esound`"
+		ESD_LIBS="`pkg-config --libs esound`"
 PLIST_FILES=	${GST_LIB_DIR}/libgstesd.so \
 		${GST_LIB_DIR}/libgstesd.a \
 		${GST_LIB_DIR}/libgstesd.la
