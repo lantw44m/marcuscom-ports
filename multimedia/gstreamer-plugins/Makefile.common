@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.37 2006/03/14 19:09:14 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.38 2006/04/01 21:36:24 marcus Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -265,7 +265,7 @@ DIST=	ugly
 
 # musepack
 .if ${GST_PLUGIN}=="musepack"
-LIB_DEPENDS+=	mpcdec.3:${PORTSDIR}/audio/libmpcdec
+LIB_DEPENDS+=	mpcdec.4:${PORTSDIR}/audio/libmpcdec
 DIST=	bad
 .endif
 
