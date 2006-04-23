@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gail/Makefile,v 1.42 2006/03/13 23:42:59 mezz Exp $
+#   $MCom: ports/accessibility/gail/Makefile,v 1.43 2006/04/13 07:52:29 bland Exp $
 #
 
 PORTNAME=	gail
@@ -17,11 +17,11 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An implementation of the ATK interfaces for GTK+ widgets
 
 USE_BZIP2=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 INSTALLS_SHLIB=	yes
 GNU_CONFIGURE=	yes
-USE_REINPLACE=	yes
 USE_GNOME=	gnomehack libgnomecanvas lthack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
