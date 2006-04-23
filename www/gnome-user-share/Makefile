@@ -20,6 +20,7 @@ LIB_DEPENDS=	avahi-client:${PORTSDIR}/net/avahi
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_APACHE=	2.0+
 USE_GNOME=	gnomeprefix gnomehack intlhack libglade2 gconf2
