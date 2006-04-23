@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer80/Makefile,v 1.38 2006/02/25 00:09:18 marcus Exp $
+#    $MCom: ports/multimedia/gstreamer80/Makefile,v 1.39 2006/04/15 06:53:54 marcus Exp $
 #
 
 PORTNAME=	gstreamer
@@ -26,6 +26,7 @@ USE_BISON=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 WANT_GNOME=	yes
+USE_GETTEXT=	yes
 USE_GNOME=	gnomehack \
 		gnomeprefix \
 		glib20 \
