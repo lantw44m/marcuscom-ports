@@ -1,5 +1,5 @@
 --- src/info.c.orig	Mon Apr  3 15:41:33 2006
-+++ src/info.c	Sun Apr 23 20:48:36 2006
++++ src/info.c	Sun Apr 23 21:57:39 2006
 @@ -20,6 +20,10 @@
  #include <gtk/gtk.h>
  #include <glib/gi18n.h>
@@ -181,12 +181,13 @@
  
  	return TRUE;
  }
-@@ -405,8 +499,19 @@ info_get_nic_information (const gchar *n
+@@ -405,8 +499,20 @@ info_get_nic_information (const gchar *n
  	InfoIpAddr *ip;
  	gint flags;
  	mii_data_result data;
 +#ifdef __FreeBSD__
-+	gint hwmib[6], hwlen;
++	gint hwmib[6];
++	size_t hwlen;
 +	gchar *hwbuf;
 +	guchar *hwptr;
 +	struct if_msghdr *hwifm;
@@ -202,7 +203,7 @@
  
  	for (ifr6 = ifa0; ifr6; ifr6 = ifr6->ifa_next) {
  		if (strcmp (ifr6->ifa_name, nic) != 0) {
-@@ -452,7 +557,9 @@ info_get_nic_information (const gchar *n
+@@ -452,7 +558,9 @@ info_get_nic_information (const gchar *n
  			ifc.ifc_req = (struct ifreq *) buf;
  			ioctl (sockfd, SIOCGIFCONF, &ifc);
  
@@ -212,7 +213,7 @@
  
  			for (ptr = buf; ptr < buf + ifc.ifc_len;) {
  				ifr = (struct ifreq *) ptr;
-@@ -483,6 +590,45 @@ info_get_nic_information (const gchar *n
+@@ -483,6 +591,45 @@ info_get_nic_information (const gchar *n
  				   (int) ((guchar *) &ifrcopy.ifr_hwaddr.sa_data)[3],
  				   (int) ((guchar *) &ifrcopy.ifr_hwaddr.sa_data)[4],
  				   (int) ((guchar *) &ifrcopy.ifr_hwaddr.sa_data)[5]);
@@ -258,7 +259,7 @@
  #else
  			g_sprintf (dst, NOT_AVAILABLE);
  #endif /* SIOCGIFHWADDR */
-@@ -595,6 +741,8 @@ info_get_nic_information (const gchar *n
+@@ -595,6 +742,8 @@ info_get_nic_information (const gchar *n
  	}
  
  	freeifaddrs (ifa0);
