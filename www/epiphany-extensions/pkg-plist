@@ -1,4 +1,5 @@
 lib/epiphany/%%VERSION%%/extensions/actions.ephy-extension
+%%ADBLOCK%%lib/epiphany/%%VERSION%%/extensions/adblock.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/auto-reload.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/auto-scroller.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/certificates.ephy-extension
@@ -15,6 +16,8 @@ lib/epiphany/%%VERSION%%/extensions/gestures.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/java-console.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/libactionsextension.la
 lib/epiphany/%%VERSION%%/extensions/libactionsextension.so
+%%ADBLOCK%%lib/epiphany/%%VERSION%%/extensions/libadblockextension.la
+%%ADBLOCK%%lib/epiphany/%%VERSION%%/extensions/libadblockextension.so
 lib/epiphany/%%VERSION%%/extensions/libautoreloadextension.la
 lib/epiphany/%%VERSION%%/extensions/libautoreloadextension.so
 lib/epiphany/%%VERSION%%/extensions/libautoscrollerextension.la
@@ -51,6 +54,8 @@ lib/epiphany/%%VERSION%%/extensions/sidebar.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/smart-bookmarks.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/tab-groups.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/tab-states.ephy-extension
+%%ADBLOCK%%share/gnome/epiphany-extensions/adblock-patterns
+%%ADBLOCK%%share/gnome/epiphany-extensions/adblock-statusbar-icon.svg
 share/gnome/epiphany-extensions/ephy-gestures.xml
 share/gnome/epiphany-extensions/glade/action-properties.glade
 share/gnome/epiphany-extensions/glade/actions-editor.glade
