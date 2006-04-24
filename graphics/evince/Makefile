@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.48 2006/03/16 17:11:00 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.49 2006/03/16 18:03:21 ahze Exp $
 #
 
 PORTNAME=	evince
@@ -36,8 +36,8 @@ OPTIONS=	DVI		"Enable DVI viewer support"		off \
 		T1LIB		"Enable T1LIB for TYPE1 fonts to DVI (Enables DVI)"	off \
 		NAUTILUS	"Enable Nautilus plugin"		on  \
 		DBUS		"Enable D-BUS support"			on \
-		DJVU		"Enable DJVU support"			off \
 		COMICS		"Enable comic book archives support"	off
+#		DJVU		"Enable DJVU support"			off
 
 .include <bsd.port.pre.mk>
 
@@ -74,13 +74,14 @@ DJVU_DIR?=	# empty
 DJVU_DIR?=	-nox11
 .endif
 
-.if defined(WITH_DJVU)
-LIB_DEPENDS+=		djvulibre.16:${PORTSDIR}/graphics/djvulibre${DJVU_DIR}
-CONFIGURE_ARGS+=	--enable-djvu
-GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
-.else
+# DJVU is broken, need older version of djvu
+#.if defined(WITH_DJVU)
+#LIB_DEPENDS+=		djvulibre.17:${PORTSDIR}/graphics/djvulibre${DJVU_DIR}
+#CONFIGURE_ARGS+=	--enable-djvu
+#GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
+#.else
 CONFIGURE_ARGS+=	--disable-djvu
-.endif
+#.endif
 
 .if !defined(WITHOUT_DBUS)
 LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus
