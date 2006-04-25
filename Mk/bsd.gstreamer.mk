@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.22 2006/02/01 23:26:53 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.23 2006/04/22 18:06:38 marcus Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -62,7 +62,7 @@ GST80_SHLIB_VERSION=	1
 #
 _USE_GSTREAMER_ALL=	a52dec aalib bad cairo cdparanoia \
 			dv esound faac faad ffmpeg flac gconf gnomevfs \
-			good gsm ivorbis jpeg ladspa lame libcaca \
+			gnonlin good gsm ivorbis jpeg ladspa lame libcaca \
 			libmms libpng libvisual mad mpeg2dec \
 			musepack ogg pango sdl shout2 sidplay \
 			speex theora ugly vorbis wavpack
@@ -199,6 +199,8 @@ dv_DEPENDS=	multimedia/gstreamer-plugins-dv
 dvd_DEPENDS=	multimedia/gstreamer-plugins-dvd
 
 good_DEPENDS=	multimedia/gstreamer-plugins-good
+
+gnonlin_DEPENDS=	multimedia/gstreamer-plugins-gnonlin
 
 libfame_DEPENDS=	multimedia/gstreamer-plugins-libfame
 
