@@ -14,8 +14,8 @@ MASTER_SITES=	http://www.sacredchao.net/~piman/software/
 MAINTAINER=	changbom.yoon@gmail.com
 COMMENT=	A GTK+-based audio player written in Python
 
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer80
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer80
 
 USE_PYTHON=	2.3+
 USE_GNOME=	pygtk2

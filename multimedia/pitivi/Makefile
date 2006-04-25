@@ -7,7 +7,7 @@
 
 PORTNAME=	pitivi
 PORTVERSION=	0.1.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -16,9 +16,9 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gstreamer based non-linear audio/video editor
 
 BUILD_DEPENDS=	gnonlin-config:${PORTSDIR}/multimedia/gnonlin \
-		${PYTHON_SITELIBDIR}/gst/_gst.so:${PORTSDIR}/multimedia/py-gstreamer
+		${PYTHON_SITELIBDIR}/gst/_gst.so:${PORTSDIR}/multimedia/py-gstreamer80
 RUN_DEPENDS=	gnonlin-config:${PORTSDIR}/multimedia/gnonlin \
-		${PYTHON_SITELIBDIR}/gst/_gst.so:${PORTSDIR}/multimedia/py-gstreamer
+		${PYTHON_SITELIBDIR}/gst/_gst.so:${PORTSDIR}/multimedia/py-gstreamer80
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
