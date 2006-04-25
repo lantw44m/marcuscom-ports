@@ -13,6 +13,7 @@ MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-python/ \
 		${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	kwm
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	80
 DISTNAME=	gst-python-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
