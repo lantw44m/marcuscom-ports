@@ -6,7 +6,7 @@
 
 PORTNAME=		istanbul
 PORTVERSION=		0.1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=		multimedia
 MASTER_SITES=		http://live.hujjat.org/
 
@@ -14,8 +14,8 @@ MAINTAINER=		dominique.goncalves@gmail.com
 COMMENT=		Istanbul is a desktop session recorder for the Free Desktop
 
 RUN_DEPENDS=		icecast:${PORTSDIR}/audio/icecast2 \
-			${PYTHON_SITELIBDIR}/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer
-BUILD_DEPENDS=		${PYTHON_SITELIBDIR}/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer
+			${PYTHON_SITELIBDIR}/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer80
+BUILD_DEPENDS=		${PYTHON_SITELIBDIR}/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer80
 
 USE_GNOME=		pygtk2
 USE_GMAKE=		yes
