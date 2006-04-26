@@ -3,11 +3,10 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#
+#    $MCom$
 
 PORTNAME=	pitivi
-PORTVERSION=	0.1.10
-PORTREVISION=	2
+PORTVERSION=	0.10.0
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -15,15 +14,13 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Gstreamer based non-linear audio/video editor
 
-BUILD_DEPENDS=	gnonlin-config:${PORTSDIR}/multimedia/gnonlin \
-		${PYTHON_SITELIBDIR}/gst/_gst.so:${PORTSDIR}/multimedia/py-gstreamer80
-RUN_DEPENDS=	gnonlin-config:${PORTSDIR}/multimedia/gnonlin \
-		${PYTHON_SITELIBDIR}/gst/_gst.so:${PORTSDIR}/multimedia/py-gstreamer80
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gst-0.10/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gst-0.10/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget pygtk2 pkgconfig pygnome2
-USE_GSTREAMER80=	yes
+USE_GSTREAMER=	gnonlin
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docs-build
