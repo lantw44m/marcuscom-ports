@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	vte
-PORTVERSION=	0.12.0
+PORTVERSION=	0.12.1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,13 +17,13 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Terminal widget with improved accessibility and I18N support
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_BISON=	yes
 INSTALLS_SHLIB=	yes
-GNU_CONFIGURE=	yes
-USE_GNOME=	gnomeprefix gnomehack gtk20
+USE_AUTOTOOLS=	libtool:15
+USE_GETTEXT=	yes
+USE_GNOME=	gnomeprefix gnomehack gtk20 ltverhack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
 		BSD_PTHREAD_LIBS="${PTHREAD_LIBS}"

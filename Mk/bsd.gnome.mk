@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.368 2006/04/10 21:51:49 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.369 2006/04/11 11:12:42 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -363,7 +363,7 @@ libwnck_LIB_DEPENDS=	wnck-1.18:${PORTSDIR}/x11-toolkits/libwnck
 libwnck_DETECT=		${X11BASE}/libdata/pkgconfig/libwnck-1.0.pc
 libwnck_USE_GNOME_IMPL=	gtk20
 
-vte_LIB_DEPENDS=	vte.8:${PORTSDIR}/x11-toolkits/vte
+vte_LIB_DEPENDS=	vte.4:${PORTSDIR}/x11-toolkits/vte
 vte_DETECT=		${X11BASE}/libdata/pkgconfig/vte.pc
 vte_USE_GNOME_IMPL=	gtk20
 
