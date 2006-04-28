@@ -4,8 +4,6 @@ bin/gst-inspect
 bin/gst-inspect-%%VERSION%%
 bin/gst-launch
 bin/gst-launch-%%VERSION%%
-bin/gst-md5sum
-bin/gst-md5sum-%%VERSION%%
 bin/gst-typefind
 bin/gst-typefind-%%VERSION%%
 bin/gst-xmlinspect

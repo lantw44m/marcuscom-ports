@@ -3,11 +3,10 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.43 2006/04/18 13:13:10 bland Exp $
+#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.44 2006/04/23 22:56:29 mezz Exp $
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.10.4
-PORTREVISION=	1
+PORTVERSION=	0.10.5
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://gstreamer.freedesktop.org/src/gstreamer/
@@ -38,7 +37,7 @@ INSTALLS_SHLIB=	yes
 GST_VERSION=	0.10
 
 MAN1=	gst-feedback-${GST_VERSION}.1 gst-inspect-${GST_VERSION}.1 \
-	gst-launch-${GST_VERSION}.1 gst-md5sum-${GST_VERSION}.1 \
+	gst-launch-${GST_VERSION}.1 \
 	gst-typefind-${GST_VERSION}.1 gst-xmlinspect-${GST_VERSION}.1 \
 	gst-xmllaunch-${GST_VERSION}.1
 
