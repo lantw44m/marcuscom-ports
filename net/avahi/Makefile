@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.13 2006/04/20 18:12:14 marcus Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.14 2006/04/24 00:21:37 marcus Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.9
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES?=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 
@@ -24,7 +24,7 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS?=--with-distro=freebsd \
-		--with-dbus-system-address=unix:path=/var/run/dbus.pipe \
+		--with-dbus-system-address=unix:path=/var/run/dbus/dbus.pipe \
 		--disable-qt3 \
 		--disable-qt4 \
 		--disable-python \
