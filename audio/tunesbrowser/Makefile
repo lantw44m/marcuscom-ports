@@ -3,13 +3,13 @@
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/tunesbrowser/Makefile,v 1.6 2006/01/20 02:55:58 ahze Exp $
 
 PORTNAME=	tunesbrowser
 PORTVERSION=	0.3.0
 PORTREVISION=	2
 CATEGORIES=	audio
-MASTER_SITES=	http://craz.net/programs/itunes/files/
+MASTER_SITES=	http://crazney.net/programs/itunes/files/
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Simple iTunes-like music player
