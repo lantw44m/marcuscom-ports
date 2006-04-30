@@ -1,0 +1,22 @@
+--- configure.orig	Sun Apr 30 03:16:57 2006
++++ configure	Sun Apr 30 03:17:49 2006
+@@ -2036,7 +2036,7 @@ _ACEOF
+ 	;;
+ esac
+ 
+-EVOLUTION_API_VERSION=2.6
++EVOLUTION_API_VERSION=2.8
+ EDS_API_VERSION=1.2
+ EDS_BASE_VERSION=1.6
+ 
+@@ -24293,8 +24293,8 @@ if test $ac_cv_lib_lber_ber_get_tag = ye
+ 				# libldap might depend on OpenSSL... We need to pull
+ 				# in the dependency libs explicitly here since we're
+ 				# not using libtool for the configure test.
+-				if test -f $with_openldap/lib/libldap.la; then
+-					LDAP_LIBS="`. $with_openldap/lib/libldap.la; echo $dependency_libs` $LDAP_LIBS"
++				if test -f $with_openldap/lib/libldap.so; then
++					LDAP_LIBS="`. $with_openldap/lib/libldap.so; echo $dependency_libs` $LDAP_LIBS"
+ 				fi
+ 			else
+ 				LDAP_LIBS="-llber $LDAP_LIBS"
