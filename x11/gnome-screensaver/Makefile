@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.39 2006/04/30 18:51:04 ahze Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.40 2006/04/30 19:01:23 ahze Exp $
 #
 
 PORTNAME=	gnome-screensaver
 PORTVERSION=	2.15.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -31,13 +31,12 @@ CONFIGURE_ARGS=	--disable-pam \
 		--with-xscreensaverhackdir=${X11BASE}/bin/xscreensaver-hacks
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-
 GCONF_SCHEMAS=	gnome-screensaver.schemas
 
 PLIST=	${WRKDIR}/pkg-plist
 
 XSCREENSAVER_DIR=	${X11BASE}/share/xscreensaver/config
-
+SCREENSAVER_DIR=	share/gnome/applications/screensavers
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500000
@@ -47,11 +46,9 @@ BROKEN=	Does not build on 4.X
 pre-install:
 	@${CP} ${.CURDIR}/pkg-plist ${PLIST}
 	@cd ${XSCREENSAVER_DIR} && ${FIND} -s * -maxdepth 1 -type f -name "*.xml" | \
-		${SED} -e 's:^:share/gnome/gnome-screensaver/themes/xscreensaver/:' | \
+		${SED} -e 's:^:${SCREENSAVER_DIR}/:' | \
 		${SED} -e 's:[.]xml$$:.desktop:' >> ${PLIST}
-	@${ECHO_CMD} @dirrm share/gnome/gnome-screensaver/themes/xscreensaver >> ${PLIST}
-	@${ECHO_CMD} @dirrm share/gnome/gnome-screensaver/themes >> ${PLIST}
-	@${ECHO_CMD} @dirrm share/gnome/gnome-screensaver >> ${PLIST}
+	@${ECHO_CMD} @dirrm ${SCREENSAVER_DIR} >> ${PLIST}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%X11BASE%%|${X11BASE}|g' \
@@ -61,7 +58,7 @@ post-install:
 	${CHOWN} root ${PREFIX}/libexec/gnome-screensaver-dialog
 	${CHMOD} +s ${PREFIX}/libexec/gnome-screensaver-dialog
 	${MKDIR} ${PREFIX}/share/gnome/gnome-screensaver/themes/xscreensaver
-	cd ${PREFIX}/share/gnome/gnome-screensaver/themes/xscreensaver && \
+	cd ${PREFIX}/${SCREENSAVER_DIR} && \
 		${FIND} -s ${XSCREENSAVER_DIR} -maxdepth 1 -type f -name "*.xml" | \
 			${XARGS} ${WRKSRC}/data/migrate-xscreensaver-config.sh
 
