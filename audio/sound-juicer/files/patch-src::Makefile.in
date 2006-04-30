@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	Mon Apr  3 23:40:45 2006
++++ src/Makefile.in	Mon Apr  3 23:40:45 2006
+@@ -77,7 +77,7 @@ am_sound_juicer_OBJECTS = dummy.$(OBJEXT
+ 	gconf-bridge.$(OBJEXT) bacon-volume.$(OBJEXT) $(am__objects_2) \
+ 	$(am__objects_3) $(am__objects_4)
+ sound_juicer_OBJECTS = $(am_sound_juicer_OBJECTS)
+-sound_juicer_LDADD = $(LDADD)
++sound_juicer_LDADD = $(LDADD) -lcam
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I.
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
