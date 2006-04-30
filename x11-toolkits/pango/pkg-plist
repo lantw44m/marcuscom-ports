@@ -107,7 +107,7 @@ libdata/pkgconfig/pangoxft.pc
 %%DOCSDIR%%/pango-FreeType-Fonts-and-Rendering.html
 %%DOCSDIR%%/pango-Glyph-Storage.html
 %%DOCSDIR%%/pango-Layout-Objects.html
-%%DOCSDIR%%/pango/pango-Miscellaneous-Utilities.html
+%%DOCSDIR%%/pango-Miscellaneous-Utilities.html
 %%DOCSDIR%%/pango-Modules.html
 %%DOCSDIR%%/pango-OpenType-Font-Handling.html
 %%DOCSDIR%%/pango-Scripts.html
