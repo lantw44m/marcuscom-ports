@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+# $FreeBSD$
+#
+# PROVIDE: polkitd
+# REQUIRE: DAEMON
+#
+# Add the following line to /etc/rc.conf to enable the PolicyKit daemon:
+#
+# polkitd_enable="YES"
+#
+
+polkitd_enable=${polkitd_enable-"NO"}
+
+. %%RC_SUBR%%
+
+name=polkitd
+rcvar=`set_rcvar`
+
+command="%%PREFIX%%/sbin/polkitd"
+pidfile="/var/run/${name}/${name}.pid"
+
+stop_postcmd=stop_postcmd
+
+stop_postcmd()
+{
+    	rm -f $pidfile
+}
+
+load_rc_config ${name}
+run_rc_command "$1"

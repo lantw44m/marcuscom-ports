@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/sysutils/policykit/Makefile,v 1.2 2006/05/01 05:34:11 marcus Exp $
 #
 
 PORTNAME=	policykit
 PORTVERSION=	0.1
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 DISTNAME=	PolicyKit-${PORTVERSION}
@@ -27,6 +28,8 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
+
+USE_RC_SUBR=	polkitd
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
