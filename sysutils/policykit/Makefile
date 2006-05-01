@@ -1,9 +1,9 @@
 # New ports collection makefile for:   PolicyKit
-# Date Created:			22 June 2004
+# Date Created:			01 May 2006
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/policykit/Makefile,v 1.2 2006/05/01 05:34:11 marcus Exp $
+#   $MCom: ports/sysutils/policykit/Makefile,v 1.3 2006/05/01 07:28:42 marcus Exp $
 #
 
 PORTNAME=	policykit
