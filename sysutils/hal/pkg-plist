@@ -1,0 +1,179 @@
+bin/hal-device
+bin/hal-device-manager
+bin/hal-find-by-capability
+bin/hal-find-by-property
+bin/hal-get-property
+bin/hal-set-property
+bin/lshal
+etc/dbus-1/system.d/hal.conf
+etc/udev/rules.d/90-hal.rules
+include/hal/libhal-storage.h
+include/hal/libhal.h
+lib/libhal-storage.a
+lib/libhal-storage.la
+lib/libhal-storage.so
+lib/libhal-storage.so.1
+lib/libhal.a
+lib/libhal.la
+lib/libhal.so
+lib/libhal.so.1
+lib/libhald_freebsd_probe.a
+lib/libhald_freebsd_probe.la
+lib/libhald_freebsd_probe.so
+lib/libhald_freebsd_probe.so.0
+libdata/pkgconfig/hal-storage.pc
+libdata/pkgconfig/hal.pc
+libexec/hal-storage-mount
+libexec/hal-system-power-pmu
+libexec/hald-addon-storage
+libexec/hald-probe-hiddev
+libexec/hald-probe-scsi
+libexec/hald-probe-smbios
+libexec/hald-probe-storage
+libexec/hald-probe-volume
+libexec/hald-runner
+sbin/hald
+%%PORTDOCS%%%%DOCSDIR%%/README.freebsd
+%%DOCSDIR%%/conf/match-USB-camera.fdi
+%%DOCSDIR%%/conf/match-USB-mp3-player.fdi
+%%DOCSDIR%%/conf/match-cardreader.fdi
+%%DOCSDIR%%/conf/storage-non-fixed.fdi
+%%DOCSDIR%%/conf/storage-policy-examples.fdi
+%%DOCSDIR%%/conf/storage-skip-all.fdi
+%%DATADIR%%/device-manager/Const.py
+%%DATADIR%%/device-manager/Const.pyc
+%%DATADIR%%/device-manager/Const.pyo
+%%DATADIR%%/device-manager/Device.py
+%%DATADIR%%/device-manager/Device.pyc
+%%DATADIR%%/device-manager/Device.pyo
+%%DATADIR%%/device-manager/DeviceManager.py
+%%DATADIR%%/device-manager/DeviceManager.pyc
+%%DATADIR%%/device-manager/DeviceManager.pyo
+%%DATADIR%%/device-manager/GtkAttributesFacade.py
+%%DATADIR%%/device-manager/GtkAttributesFacade.pyc
+%%DATADIR%%/device-manager/GtkAttributesFacade.pyo
+%%DATADIR%%/device-manager/LibGladeApplication.py
+%%DATADIR%%/device-manager/LibGladeApplication.pyc
+%%DATADIR%%/device-manager/LibGladeApplication.pyo
+%%DATADIR%%/device-manager/Representation.py
+%%DATADIR%%/device-manager/Representation.pyc
+%%DATADIR%%/device-manager/Representation.pyo
+%%DATADIR%%/device-manager/fdo-logo.png
+%%DATADIR%%/device-manager/hal-abstract.png
+%%DATADIR%%/device-manager/hal-audio.png
+%%DATADIR%%/device-manager/hal-bus-pci.png
+%%DATADIR%%/device-manager/hal-bus-usb.png
+%%DATADIR%%/device-manager/hal-camera.png
+%%DATADIR%%/device-manager/hal-cat-cardbus.png
+%%DATADIR%%/device-manager/hal-cat-keyboard.png
+%%DATADIR%%/device-manager/hal-cat-mouse.png
+%%DATADIR%%/device-manager/hal-cdrom.png
+%%DATADIR%%/device-manager/hal-computer.png
+%%DATADIR%%/device-manager/hal-device-manager.glade
+%%DATADIR%%/device-manager/hal-flash.png
+%%DATADIR%%/device-manager/hal-floppy.png
+%%DATADIR%%/device-manager/hal-harddisk.png
+%%DATADIR%%/device-manager/hal-network.png
+%%DATADIR%%/device-manager/hal-serial-port.png
+%%DATADIR%%/device-manager/hal-unknown.png
+%%DATADIR%%/device-manager/hal-video.png
+%%DATADIR%%/fdi/fdi.dtd
+%%DATADIR%%/fdi/fdi.rng
+%%DATADIR%%/fdi/information/10freedesktop/10-camera-ptp.fdi
+%%DATADIR%%/fdi/information/10freedesktop/10-cd-dvd-burner.fdi
+%%DATADIR%%/fdi/information/10freedesktop/10-usb-card-readers.fdi
+%%DATADIR%%/fdi/information/10freedesktop/10-usb-music-players.fdi
+%%DATADIR%%/fdi/information/10freedesktop/10-usb-pda.fdi
+%%DATADIR%%/fdi/information/10freedesktop/10-usb-zip-drives.fdi
+%%DATADIR%%/fdi/information/10freedesktop/10-wireless-mice.fdi
+%%DATADIR%%/fdi/policy/10osvendor/10-keyboard-policy.fdi
+%%DATADIR%%/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
+%%DATADIR%%/fdi/policy/10osvendor/10-power-mgmt-policy.fdi
+%%DATADIR%%/fdi/policy/10osvendor/10-toshiba-buttons.fdi
+%%DATADIR%%/fdi/policy/10osvendor/15-storage-luks.fdi
+%%DATADIR%%/fdi/policy/10osvendor/20-storage-methods.fdi
+%%DATADIR%%/fdi/preprobe/10osvendor/10-ide-drives.fdi
+%%DATADIR%%/scripts/hal-luks-remove
+%%DATADIR%%/scripts/hal-luks-setup
+%%DATADIR%%/scripts/hal-luks-teardown
+%%DATADIR%%/scripts/hal-system-lcd-get-brightness
+%%DATADIR%%/scripts/hal-system-lcd-set-brightness
+%%DATADIR%%/scripts/hal-system-power-hibernate
+%%DATADIR%%/scripts/hal-system-power-reboot
+%%DATADIR%%/scripts/hal-system-power-set-power-save
+%%DATADIR%%/scripts/hal-system-power-shutdown
+%%DATADIR%%/scripts/hal-system-power-suspend
+%%DATADIR%%/scripts/hal-system-storage-cleanup-mountpoint
+%%DATADIR%%/scripts/hal-system-storage-cleanup-mountpoints
+%%DATADIR%%/scripts/hal-system-storage-eject
+%%DATADIR%%/scripts/hal-system-storage-unmount
+share/locale/cs/LC_MESSAGES/hal.mo
+share/locale/da/LC_MESSAGES/hal.mo
+share/locale/de/LC_MESSAGES/hal.mo
+share/locale/el/LC_MESSAGES/hal.mo
+share/locale/es/LC_MESSAGES/hal.mo
+share/locale/eu/LC_MESSAGES/hal.mo
+share/locale/fi/LC_MESSAGES/hal.mo
+share/locale/fr/LC_MESSAGES/hal.mo
+share/locale/hu/LC_MESSAGES/hal.mo
+share/locale/it/LC_MESSAGES/hal.mo
+share/locale/ja/LC_MESSAGES/hal.mo
+share/locale/km/LC_MESSAGES/hal.mo
+share/locale/ko/LC_MESSAGES/hal.mo
+share/locale/lt/LC_MESSAGES/hal.mo
+share/locale/nb/LC_MESSAGES/hal.mo
+share/locale/nl/LC_MESSAGES/hal.mo
+share/locale/pa/LC_MESSAGES/hal.mo
+share/locale/pl/LC_MESSAGES/hal.mo
+share/locale/pt/LC_MESSAGES/hal.mo
+share/locale/pt_BR/LC_MESSAGES/hal.mo
+share/locale/ru/LC_MESSAGES/hal.mo
+share/locale/sl_SI/LC_MESSAGES/hal.mo
+share/locale/uk/LC_MESSAGES/hal.mo
+share/locale/zh_CN/LC_MESSAGES/hal.mo
+share/locale/zh_TW/LC_MESSAGES/hal.mo
+@dirrmtry share/locale/zh_TW/LC_MESSAGES
+@dirrmtry share/locale/zh_TW
+@dirrmtry share/locale/zh_CN/LC_MESSAGES
+@dirrmtry share/locale/zh_CN
+@dirrmtry share/locale/uk/LC_MESSAGES
+@dirrmtry share/locale/uk
+@dirrmtry share/locale/sl_SI/LC_MESSAGES
+@dirrmtry share/locale/sl_SI
+@dirrmtry share/locale/pt/LC_MESSAGES
+@dirrmtry share/locale/pt
+@dirrmtry share/locale/pl/LC_MESSAGES
+@dirrmtry share/locale/pl
+@dirrmtry share/locale/ko/LC_MESSAGES
+@dirrmtry share/locale/ko
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
+@dirrmtry share/locale/fi/LC_MESSAGES
+@dirrmtry share/locale/fi
+@dirrmtry share/locale/el/LC_MESSAGES
+@dirrmtry share/locale/el
+@dirrmtry share/locale/cs/LC_MESSAGES
+@dirrmtry share/locale/cs
+@dirrm %%DATADIR%%/scripts
+@dirrm %%DATADIR%%/fdi/preprobe/20thirdparty
+@dirrm %%DATADIR%%/fdi/preprobe/10osvendor
+@dirrm %%DATADIR%%/fdi/preprobe
+@dirrm %%DATADIR%%/fdi/policy/20thirdparty
+@dirrm %%DATADIR%%/fdi/policy/10osvendor
+@dirrm %%DATADIR%%/fdi/policy
+@dirrm %%DATADIR%%/fdi/information/20thirdparty
+@dirrm %%DATADIR%%/fdi/information/10freedesktop
+@dirrm %%DATADIR%%/fdi/information
+@dirrm %%DATADIR%%/fdi
+@dirrm %%DATADIR%%/device-manager
+@dirrm %%DATADIR%%
+@dirrm %%DOCSDIR%%/conf
+@dirrm %%DOCSDIR%%
+@dirrm include/hal
+@dirrm etc/udev/rules.d
+@dirrm etc/udev
+@dirrm etc/hal/fdi/preprobe
+@dirrm etc/hal/fdi/policy
+@dirrm etc/hal/fdi/information
+@dirrm etc/hal/fdi
+@dirrm etc/hal
