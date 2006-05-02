@@ -3,7 +3,7 @@
 # $FreeBSD$
 #
 # PROVIDE: polkitd
-# REQUIRE: DAEMON
+# REQUIRE: DAEMON dbus
 #
 # Add the following line to /etc/rc.conf to enable the PolicyKit daemon:
 #

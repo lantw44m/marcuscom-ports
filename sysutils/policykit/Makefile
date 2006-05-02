@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/policykit/Makefile,v 1.5 2006/05/01 07:49:05 marcus Exp $
+#   $MCom: ports/sysutils/policykit/Makefile,v 1.6 2006/05/01 23:57:56 jylefort Exp $
 #
 
 PORTNAME=	policykit
 PORTVERSION=	0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 DISTNAME=	PolicyKit-${PORTVERSION}
