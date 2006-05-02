@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.1 2006/05/02 05:52:50 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.2 2006/05/02 14:54:43 ahze Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -15,13 +16,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Hardware Abstraction Layer for simplifying device access
 
 LIB_DEPENDS=	polkit.0:${PORTSDIR}/sysutils/policykit
-RUN_DEPENDS=	${LOCALBASE}/share/pci.ids:${PORTSDIR}/sysutils/pciutils
+RUN_DEPENDS=	${LOCALBASE}/share/pci.ids:${PORTSDIR}/sysutils/pciutils \
+		isoinfo:${PORTSDIR}/sysutils/cdrtools
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnometarget intlhack pygnome2
-GNU_CONFIGURE=	yes
+USE_GNOME=	gnomehack gnometarget intlhack pygnome2 ltverhack
+USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 USE_PYTHON=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \

@@ -6,7 +6,6 @@ bin/hal-get-property
 bin/hal-set-property
 bin/lshal
 etc/dbus-1/system.d/hal.conf
-etc/udev/rules.d/90-hal.rules
 include/hal/libhal-storage.h
 include/hal/libhal.h
 lib/libhal-storage.a
@@ -170,8 +169,6 @@ share/locale/zh_TW/LC_MESSAGES/hal.mo
 @dirrm %%DOCSDIR%%/conf
 @dirrm %%DOCSDIR%%
 @dirrm include/hal
-@dirrm etc/udev/rules.d
-@dirrm etc/udev
 @dirrm etc/hal/fdi/preprobe
 @dirrm etc/hal/fdi/policy
 @dirrm etc/hal/fdi/information
