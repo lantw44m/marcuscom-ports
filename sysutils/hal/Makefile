@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/sysutils/hal/Makefile,v 1.1 2006/05/02 05:52:50 marcus Exp $
 #
 
 PORTNAME=	hal
@@ -15,8 +15,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Hardware Abstraction Layer for simplifying device access
 
 LIB_DEPENDS=	polkit.0:${PORTSDIR}/sysutils/policykit
-RUN_DEPENDS=	${LOCALBASE}/share/pci.ids:${PORTSDIR}/sysutils/pciutils \
-		dmidecode:${PORTSDIR}/sysutils/dmidecode
+RUN_DEPENDS=	${LOCALBASE}/share/pci.ids:${PORTSDIR}/sysutils/pciutils
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
@@ -41,6 +40,12 @@ SNAPVERSION=	20060502
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${HALVERSION}
 PLIST_SUB=	VERSION=${HALVERSION}
 
+.include <bsd.port.pre.mk>
+
+.if ${ARCH}=="i386" || ${ARCH}=="amd64" || ${ARCH}=="ia64"
+RUN_DEPENDS+=	dmidecode:${PORTSDIR}/sysutils/dmidecode
+.endif
+
 post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
@@ -50,4 +55,4 @@ post-install:
 		${DOCSDIR}/README.freebsd
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
