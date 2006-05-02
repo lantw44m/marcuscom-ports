@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.2 2006/05/02 14:54:43 ahze Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.3 2006/05/02 18:34:40 jylefort Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -17,7 +17,8 @@ COMMENT=	Hardware Abstraction Layer for simplifying device access
 
 LIB_DEPENDS=	polkit.0:${PORTSDIR}/sysutils/policykit
 RUN_DEPENDS=	${LOCALBASE}/share/pci.ids:${PORTSDIR}/sysutils/pciutils \
-		isoinfo:${PORTSDIR}/sysutils/cdrtools
+		isoinfo:${PORTSDIR}/sysutils/cdrtools \
+		${PYTHON_SITELIBDIR}/dbus.pth:${PORTSDIR}/devel/py-dbus
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
