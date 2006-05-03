@@ -1,0 +1,11 @@
+--- configure.orig	Wed May  3 01:48:21 2006
++++ configure	Wed May  3 01:48:33 2006
+@@ -19480,7 +19480,7 @@ echo "${ECHO_T}no" >&6
+ fi
+ 
+ 
+-CPPFLAGS="$CPPFLAGS -Wall -Werror"
++CPPFLAGS="$CPPFLAGS -Wall"
+ 
+ CPPFLAGS="$CPPFLAGS -g"
+ CPPFLAGS="$CPPFLAGS -fexceptions"
