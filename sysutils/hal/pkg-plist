@@ -174,3 +174,9 @@ share/locale/zh_TW/LC_MESSAGES/hal.mo
 @dirrm etc/hal/fdi/information
 @dirrm etc/hal/fdi
 @dirrm etc/hal
+@cwd /var/run
+@unexec rm -f %D/hald/hald.pid
+@dirrm hald
+@cwd /tmp
+@unexec rm -rf %D/hald-local
+@unexec rm -rf %D/hald-runner

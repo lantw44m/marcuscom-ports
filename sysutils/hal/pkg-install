@@ -33,6 +33,8 @@ POST-INSTALL)
 	fi
 
 	/usr/bin/install -d -o ${USER} -g ${GROUP} /var/run/hald
+	/usr/bin/install -d -o ${USER} -g ${GROUP} /tmp/hald-local
+	/usr/bin/install -d -o ${USER} -g ${GROUP} /tmp/hald-runner
 	exit 0
 	;;
 esac
