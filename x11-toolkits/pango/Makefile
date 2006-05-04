@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.62 2006/04/30 04:02:32 ahze Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.63 2006/04/30 18:30:28 ahze Exp $
 #
 
 PORTNAME=	pango
@@ -24,7 +24,7 @@ RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+PREFIX?=	${X11BASE}
 USE_GMAKE=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
@@ -50,12 +50,15 @@ CONFIGURE_ARGS+=	--with-x=no
 CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 				${GLIB2_CFLAGS} -I${LOCALBASE}/include" \
 			LDFLAGS="-L${LOCALBASE}/lib"
+PLIST_SUB+=		X11="@comment "
 .else
+USE_XLIB+=		yes
 LIB_DEPENDS+=		Xft.2:${PORTSDIR}/x11-fonts/libXft
 CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 				${GLIB2_CFLAGS} -I${LOCALBASE}/include \
 				-I${X11BASE}/include" \
 			LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+PLIST_SUB+=		X11=""
 .endif
 
 post-install:
