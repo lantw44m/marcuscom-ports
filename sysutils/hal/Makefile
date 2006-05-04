@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.5 2006/05/03 05:24:32 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.6 2006/05/03 05:59:59 marcus Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -42,6 +42,15 @@ SNAPVERSION=	20060503
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${HALVERSION}
 PLIST_SUB=	VERSION=${HALVERSION}
+
+DESKTOP_ENTRIES="Device Manager" \
+		"Examine your devices" \
+		"${DATADIR}/device-manager/hal-bus-pci.png" \
+		"hal-device-manager" \
+		"Application;System;" \
+		true
+
+# FIXME preserve hal.conf changes (same for PolicyKit.conf in policykit)
 
 .include <bsd.port.pre.mk>
 
