@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.32 2006/04/30 03:25:22 ahze Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.33 2006/05/04 01:52:42 ahze Exp $
 #
 
 PORTNAME=	cairo
@@ -57,5 +57,7 @@ post-patch:
 .endif
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|' \
 		${WRKSRC}/test/Makefile.in
+	@${REINPLACE_CMD} -e 's|src test doc|src doc|' \
+		${WRKSRC}/Makefile.in
 
 .include <bsd.port.post.mk>
