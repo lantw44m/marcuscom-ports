@@ -5,7 +5,7 @@ bin/hal-find-by-property
 bin/hal-get-property
 bin/hal-set-property
 bin/lshal
-etc/dbus-1/system.d/hal.conf
+@unexec if cmp -s %D/%%DATADIR%%/hal.conf.dist %D/etc/dbus-1/system.d/hal.conf; then rm -f %D/etc/dbus-1/system.d/hal.conf; fi
 include/hal/libhal-storage.h
 include/hal/libhal.h
 lib/libhal-storage.a
@@ -92,6 +92,8 @@ sbin/hald
 %%DATADIR%%/fdi/policy/10osvendor/15-storage-luks.fdi
 %%DATADIR%%/fdi/policy/10osvendor/20-storage-methods.fdi
 %%DATADIR%%/fdi/preprobe/10osvendor/10-ide-drives.fdi
+%%DATADIR%%/hal.conf.dist
+@exec [ -f %D/etc/dbus-1/system.d/hal.conf ] || (mkdir -p %D/etc/dbus-1/system.d && cp %B/%f %D/etc/dbus-1/system.d/hal.conf)
 %%DATADIR%%/scripts/hal-luks-remove
 %%DATADIR%%/scripts/hal-luks-setup
 %%DATADIR%%/scripts/hal-luks-teardown
@@ -180,3 +182,4 @@ share/locale/zh_TW/LC_MESSAGES/hal.mo
 @cwd /tmp
 @unexec rm -rf %D/hald-local
 @unexec rm -rf %D/hald-runner
+@cwd %%PREFIX%%

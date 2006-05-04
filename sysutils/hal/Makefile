@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.6 2006/05/03 05:59:59 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.7 2006/05/04 19:26:25 jylefort Exp $
 #
 
 PORTNAME=	hal
@@ -50,8 +50,6 @@ DESKTOP_ENTRIES="Device Manager" \
 		"Application;System;" \
 		true
 
-# FIXME preserve hal.conf changes (same for PolicyKit.conf in policykit)
-
 .include <bsd.port.pre.mk>
 
 .if ${ARCH}=="i386" || ${ARCH}=="amd64" || ${ARCH}=="ia64"
@@ -66,5 +64,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/hald/freebsd/README \
 		${DOCSDIR}/README.freebsd
 .endif
+	${INSTALL_DATA} ${WRKSRC}/hal.conf ${DATADIR}/hal.conf.dist
+	if [ ! -f ${PREFIX}/etc/dbus-1/system.d/hal.conf ]; then \
+		${MKDIR} ${PREFIX}/etc/dbus-1/system.d ; \
+		${INSTALL_DATA} ${WRKSRC}/hal.conf \
+			${PREFIX}/etc/dbus-1/system.d ; \
+	fi
 
 .include <bsd.port.post.mk>
