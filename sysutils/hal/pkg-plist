@@ -180,6 +180,6 @@ share/locale/zh_TW/LC_MESSAGES/hal.mo
 @unexec rm -f %D/hald/hald.pid
 @dirrm hald
 @cwd /tmp
-@unexec rm -rf %D/hald-local
-@unexec rm -rf %D/hald-runner
+@unexec rm -rf %D/hald-local 2>/dev/null || true
+@unexec rm -rf %D/hald-runner 2>/dev/null || true
 @cwd %%PREFIX%%
