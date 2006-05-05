@@ -3,12 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.7 2006/05/04 19:26:25 jylefort Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.8 2006/05/04 20:25:33 marcus Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
-PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -30,6 +29,7 @@ USE_PYTHON=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-hwdata=${LOCALBASE}/share \
 		--with-backend=freebsd \
+		--with-socket-dir=/var/run/hald \
 		--with-pid-file=/var/run/hald/hald.pid
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
@@ -38,7 +38,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 USE_RC_SUBR=	hald
 
 HALVERSION=	0.5.8
-SNAPVERSION=	20060503
+SNAPVERSION=	20060505
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${HALVERSION}
 PLIST_SUB=	VERSION=${HALVERSION}

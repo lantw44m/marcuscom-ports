@@ -21,22 +21,12 @@ rcvar=`set_rcvar`
 command="%%PREFIX%%/sbin/hald"
 pidfile="/var/run/${name}/${name}.pid"
 
-start_precmd=start_precmd
 stop_postcmd=stop_postcmd
-
-start_precmd()
-{
-    mkdir -p /tmp/hald-local
-    mkdir -p /tmp/hald-runner
-}
 
 stop_postcmd()
 {
     rm -f $pidfile
-    rm -rf /tmp/hald-local
-    rm -rf /tmp/hald-runner
 }
-
 
 load_rc_config ${name}
 run_rc_command "$1"
