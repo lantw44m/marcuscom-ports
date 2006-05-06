@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-experimental/x11-themes/gtk-engines2/Makefile,v 1.2 2006/02/25 00:44:58 marcus Exp $
+#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.20 2006/04/30 03:25:23 ahze Exp $
 #
 
 PORTNAME=	gtk-engines2
 PORTVERSION=	2.7.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.7
@@ -24,7 +24,6 @@ USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gtk20
-PLIST_SUB=	GTK_VERSION="2.4.0"
 
 # Disable the gtk1 theme.
 post-patch:

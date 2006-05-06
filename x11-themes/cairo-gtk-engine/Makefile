@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-themes/cairo-gtk-engine/Makefile,v 1.1 2005/07/04 06:33:15 ahze Exp $
+#    $MCom: ports/x11-themes/cairo-gtk-engine/Makefile,v 1.2 2006/02/25 00:33:27 marcus Exp $
 
 PORTNAME=	cairo-gtk-engine
 PORTVERSION=	0.0.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://people.freebsd.org/~ahze/distfiles/

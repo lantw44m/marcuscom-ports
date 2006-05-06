@@ -1,5 +1,5 @@
-lib/gtk-2.0/2.4.0/engines/libcaligula.la
-lib/gtk-2.0/2.4.0/engines/libcaligula.so
+lib/gtk-2.0/%%GTK2_VERSION%%/engines/libcaligula.la
+lib/gtk-2.0/%%GTK2_VERSION%%/engines/libcaligula.so
 share/themes/Caligula-grassy/gtk-2.0/gtkrc
 share/themes/Caligula-sketchy/gtk-2.0/gtkrc
 share/themes/Caligula-swirly/gtk-2.0/gtkrc
