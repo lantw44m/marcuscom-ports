@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/databases/evolution-data-server/Makefile,v 1.23 2006/04/30 00:46:45 marcus Exp $
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.83 2006/04/13 07:52:30 bland Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.85 2006/04/30 05:47:49 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	1.7.1
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -18,7 +19,7 @@ COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
 LIB_DEPENDS=	soup-2.2.8:${PORTSDIR}/devel/libsoup \
 		nss3.1:${PORTSDIR}/security/nss \
-		tasn1.2:${PORTSDIR}/security/libtasn1
+		tasn1.3:${PORTSDIR}/security/libtasn1
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
