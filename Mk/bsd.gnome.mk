@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.371 2006/05/06 08:31:08 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.372 2006/05/06 08:51:14 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -274,7 +274,6 @@ gtk20_LIB_DEPENDS=	gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20
 gtk20_DETECT=		${X11BASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
 gtk20_USE_GNOME_IMPL=	intltool atk pango
 GTK2_VERSION=		2.10.0
-PLIST_SUB+=			GTK2_VERSION="${GTK2_VERSION}"
 
 linc_LIB_DEPENDS=	linc.1:${PORTSDIR}/net/linc
 linc_DETECT=		${LOCALBASE}/libdata/pkgconfig/linc.pc
@@ -633,6 +632,10 @@ BROKEN=	Unknown component ${component}
 .  endif
 _USE_GNOME+=	${${component}_USE_GNOME_IMPL} ${component}
 . endfor
+
+# Setup the GTK+ API version for pixbuf loaders, input method modules,
+# and theme engines.
+PLIST_SUB+=			GTK2_VERSION="${GTK2_VERSION}"
 
 # Then handle the ltverhack component (it has to be done here, because
 # we rely on some bsd.autotools.mk variables, and bsd.autotools.mk is
