@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.370 2006/04/27 01:40:22 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.371 2006/05/06 08:31:08 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -273,6 +273,8 @@ pango_USE_GNOME_IMPL=	glib20
 gtk20_LIB_DEPENDS=	gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20
 gtk20_DETECT=		${X11BASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
 gtk20_USE_GNOME_IMPL=	intltool atk pango
+GTK2_VERSION=		2.10.0
+PLIST_SUB+=			GTK2_VERSION="${GTK2_VERSION}"
 
 linc_LIB_DEPENDS=	linc.1:${PORTSDIR}/net/linc
 linc_DETECT=		${LOCALBASE}/libdata/pkgconfig/linc.pc
