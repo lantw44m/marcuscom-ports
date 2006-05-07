@@ -3,23 +3,22 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.4 2006/05/04 15:12:38 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.5 2006/05/06 06:06:47 ahze Exp $
 #
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
 
 PORTNAME=	vlc
-DISTVERSION=	0.8.5.20060423-test4
+DISTVERSION=	0.8.6.20060507
 PORTREVISION=	0
 CATEGORIES=	multimedia audio ipv6 net www
-MASTER_SITES=	http://download.videolan.org/pub/videolan/testing/vlc-0.8.5-test4/
-#		http://nightlies.videolan.org/build/source/
+MASTER_SITES=	http://nightlies.videolan.org/build/source/
 #		http://download.videolan.org/pub/videolan/vlc/${PORTVERSION}/ \
 #		http://ftp.snt.utwente.nl/pub/software/videolan/vlc/${PORTVERSION}/ \
 #		ftp://ftp.crans.org/pub/videolan/vlc/${PORTVERSION}/ \
 #		ftp://videolan.cs.pu.edu.tw/Windows/VideoLAN/vlc/${PORTVERSION}/ \
 PKGNAMESUFFIX=	-devel
-DISTNAME=	${PORTNAME}-${DISTVERSION:S/.20060423//}
+DISTNAME=	${PORTNAME}-snapshot-${DISTVERSION:S/0.8.6.//}
 
 MAINTAINER=	ahze@FreeBSD.org
 COMMENT=	Multimedia streaming server and player for various audio/video formats
@@ -28,11 +27,11 @@ RUN_DEPENDS=	${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fo
 
 CONFLICTS=	vlc-[0-9]*
 
-#WRKSRC=		${WRKDIR}/${PORTNAME}-0.8.5-test1
+WRKSRC=		${WRKDIR}/${PORTNAME}-0.8.6-svn
 
 WITH_VLC_DEFAULT_FONT?=	${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf
 
-USE_BZIP2=	yes
+#USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_GETOPT_LONG=yes
 USE_GETTEXT=	yes
@@ -391,7 +390,7 @@ CONFIGURE_AGRS+=	--enable-shout
 .endif
 
 .if (defined(WITH_THEORA) || exists(${LOCALBASE}/lib/libtheora.a)) && !defined(WITHOUT_THEORA)
-LIB_DEPENDS+=	theora.1:${PORTSDIR}/multimedia/libtheora
+LIB_DEPENDS+=	theora.2:${PORTSDIR}/multimedia/libtheora
 CONFIGURE_ARGS+=--enable-theora
 .else
 CONFIGURE_ARGS+=--disable-theora
