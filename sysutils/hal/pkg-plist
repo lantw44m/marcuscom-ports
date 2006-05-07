@@ -176,7 +176,7 @@ share/locale/zh_TW/LC_MESSAGES/hal.mo
 @dirrm etc/hal/fdi/information
 @dirrm etc/hal/fdi
 @dirrm etc/hal
-@cwd /var/run
-@unexec rm -f %D/hald/hald.pid
-@dirrm hald
-@cwd %%PREFIX%%
+@unexec rm -f /var/run/hald/hald.pid 2>/dev/null || true
+@unexec rm -rf /var/run/hald/hald-local 2>/dev/null || true
+@unexec rm -rf /var/run/hald/hald-runner 2>/dev/null || true
+@unexec rmdir /var/run/hald 2>/dev/null || true
