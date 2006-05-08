@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.82 2006/05/06 08:50:37 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -81,7 +81,7 @@ PLIST_SUB+=	CUPS:="@comment "
 # for detail.
 .if ${OSVERSION} >= 500000 && ( ${ARCH} == "i386" || ${ARCH} == "amd64" ) \
 	&& ${CC} != "icc"
-CFLAGS+=	-mno-sse2
+#CFLAGS+=	-mno-sse2
 .endif
 
 pre-everything::
