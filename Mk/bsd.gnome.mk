@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.372 2006/05/06 08:51:14 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.373 2006/05/06 09:07:30 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -47,7 +47,7 @@ Gnome_Pre_Include=			bsd.gnome.mk
 
 # non-version specific components
 _USE_GNOME_ALL= esound intlhack intltool lthack ltverhack gnomehack \
-		gnomehier gnomemimedata gnomeprefix gnometarget pkgconfig
+		referencehack gnomehier gnomemimedata gnomeprefix gnometarget pkgconfig
 
 # GNOME 1 components
 _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
@@ -91,6 +91,9 @@ gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | ${XARGS} $
 				 s|DATADIR/dbus-1/services|prefix/share/dbus-1/services|g ; \
 				 s|datadir/dbus-1/services|prefix/share/dbus-1/services|g ; \
 				 s|{libdir}/locale|{prefix}/share/locale|g'
+
+referencehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in" -type f | ${XARGS} ${REINPLACE_CMD} -e \
+				"s|test \"\$$\$$installfiles\" = '\$$(srcdir)/html/\*'|:|"
 
 lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
