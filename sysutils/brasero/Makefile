@@ -1,9 +1,9 @@
 # New ports collection makefile for:	bonfire
 # Date created:		2006-05-12
-# Whom:			Michael Johnson <ahze@blueherron.ahze.net>
+# Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/sysutils/bonfire/Makefile,v 1.2 2006/05/12 22:49:31 ahze Exp $
 
 PORTNAME=	bonfire
 PORTVERSION=	0.3.0
