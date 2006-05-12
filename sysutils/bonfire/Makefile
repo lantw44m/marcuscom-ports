@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@blueherron.ahze.net>
 #
 # $FreeBSD$
-#
+#    $MCom$
 
 PORTNAME=	bonfire
 PORTVERSION=	0.3.0
