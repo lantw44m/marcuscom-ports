@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/glib20/Makefile,v 1.121 2006/04/30 00:46:47 marcus Exp $
-#   $MCom: ports/devel/glib20/Makefile,v 1.75 2006/04/13 07:57:40 bland Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.77 2006/05/04 05:40:27 marcus Exp $
 #
 
 PORTNAME=	glib
@@ -24,6 +24,9 @@ COMMENT=	Some useful routines of C programming (current stable version)
 LATEST_LINK=	glib20
 
 USE_BZIP2=	yes
+
+.if !defined(REFERENCE_PORT)
+
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
@@ -50,3 +53,5 @@ post-patch:
 		${WRKSRC}/glib/gutils.c
 
 .include <bsd.port.post.mk>
+
+.endif

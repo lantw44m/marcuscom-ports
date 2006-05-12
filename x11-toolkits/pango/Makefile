@@ -3,12 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.63 2006/04/30 18:30:28 ahze Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.64 2006/05/04 18:25:40 ahze Exp $
 #
 
 PORTNAME=	pango
 PORTVERSION=	1.13.0
-PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/1.13,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.10/
@@ -17,18 +16,23 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An open-source framework for the layout and rendering of i18n text
 
+USE_BZIP2=	yes
+PREFIX?=	${X11BASE}
+
+.if !defined(REFERENCE_PORT)
+
+PORTREVISION=	2
+
 BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
 		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT}
 
-USE_BZIP2=	yes
 USE_GETTEXT=	yes
-PREFIX?=	${X11BASE}
 USE_GMAKE=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_GNOME=	gnomehack glib20 ltverhack
+USE_GNOME=	gnomehack glib20 ltverhack referencehack
 CONFIGURE_ARGS=	--with-qt=no \
 		--with-html-dir=${PREFIX}/share/doc \
 		--enable-static
@@ -69,3 +73,5 @@ post-install:
 .endif
 
 .include <bsd.port.mk>
+
+.endif

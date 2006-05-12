@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.36 2006/05/04 19:17:28 ahze Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.37 2006/05/06 07:36:08 marcus Exp $
 #
 
 PORTNAME=	cairo
@@ -14,6 +14,10 @@ MASTER_SITES=	http://cairographics.org/snapshots/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Vector graphics library with cross-device output support
 
+.if !defined(REFERENCE_PORT)
+
+PORTREVISION=	1
+
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 		png.5:${PORTSDIR}/graphics/png \
 		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig
@@ -21,7 +25,7 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR} \
 		--enable-pdf \
 		--enable-ps
-USE_GNOME=	gnometarget gnomehack ltverhack libxml2
+USE_GNOME=	gnometarget gnomehack ltverhack libxml2 referencehack
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 
@@ -62,3 +66,5 @@ post-patch:
 		${WRKSRC}/Makefile.in
 
 .include <bsd.port.post.mk>
+
+.endif
