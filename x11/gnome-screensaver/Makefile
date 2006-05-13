@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.40 2006/04/30 19:01:23 ahze Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.41 2006/04/30 19:27:00 ahze Exp $
 #
 
 PORTNAME=	gnome-screensaver
 PORTVERSION=	2.15.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -25,8 +25,7 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomemenus
-CONFIGURE_ARGS=	--disable-pam \
-		--with-gdm-config=${X11BASE}/etc/gdm/custom.conf \
+CONFIGURE_ARGS=	--with-gdm-config=${X11BASE}/etc/gdm/custom.conf \
 		--with-xscreensaverdir=${XSCREENSAVER_DIR} \
 		--with-xscreensaverhackdir=${X11BASE}/bin/xscreensaver-hacks
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
@@ -37,10 +36,17 @@ PLIST=	${WRKDIR}/pkg-plist
 
 XSCREENSAVER_DIR=	${X11BASE}/share/xscreensaver/config
 SCREENSAVER_DIR=	share/gnome/applications/screensavers
+
+OPTIONS=	PAM "Pluggable Authentication Module support" off
+
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500000
 BROKEN=	Does not build on 4.X
+.endif
+
+.if !defined(WITH_PAM)
+CONFIGURE_ARGS+=	--disable-pam
 .endif
 
 pre-install:
