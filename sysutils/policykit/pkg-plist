@@ -1,6 +1,7 @@
 bin/polkit-grant-privilege
 bin/polkit-is-privileged
 bin/polkit-list-privileges
+bin/polkit-revoke-privilege
 etc/PolicyKit/privilege.d/desktop-console.privilege
 etc/dbus-1/system.d/PolicyKit.conf
 etc/pam.d/policy-kit
@@ -14,6 +15,5 @@ sbin/polkitd
 @dirrm include/libpolkit
 @dirrm etc/PolicyKit/privilege.d
 @dirrm etc/PolicyKit
-@cwd /var/run
-@unexec rm -f %D/polkitd/polkitd.pid
-@dirrm polkitd
+@unexec rm -f /var/run/polkitd/polkitd.pid 2>/dev/null || true
+@unexec rmdir /var/run/polkitd 2>/dev/null || true
