@@ -4,8 +4,8 @@
  sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
--SUBDIRS = linux device-manager
-+SUBDIRS = device-manager
+-SUBDIRS = freebsd linux device-manager
++SUBDIRS = freebsd device-manager
  INCLUDES = \
  	-DPACKAGE_LIBEXEC_DIR=\""$(libexecdir)"\" \
  	-DPACKAGE_SYSCONF_DIR=\""$(sysconfdir)"\" \

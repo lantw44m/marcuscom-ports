@@ -3,12 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.10 2006/05/07 05:44:35 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.11 2006/05/14 20:55:51 marcus Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
-PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -39,7 +38,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 USE_RC_SUBR=	hald
 
 HALVERSION=	0.5.8
-SNAPVERSION=	20060505
+SNAPVERSION=	20060514
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${HALVERSION}
 PLIST_SUB=	VERSION=${HALVERSION}
@@ -56,6 +55,11 @@ DESKTOP_ENTRIES="Device Manager" \
 .if ${ARCH}=="i386" || ${ARCH}=="amd64" || ${ARCH}=="ia64"
 RUN_DEPENDS+=	dmidecode:${PORTSDIR}/sysutils/dmidecode
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e '/^scriptdir = /s|libdir|libexecdir|' \
+		${WRKSRC}/tools/Makefile.in \
+		${WRKSRC}/tools/freebsd/Makefile.in
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
