@@ -13,6 +13,7 @@ share/gnome/help/gnome-power-manager/C/figures/gpm-low.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-prefs-ac.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-prefs-battery.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-prefs-options.png
+share/gnome/help/gnome-power-manager/C/figures/gpm-suspend-problem.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-unplugged.png
 share/gnome/help/gnome-power-manager/C/figures/gs-prefs.png
 share/gnome/help/gnome-power-manager/C/gnome-power-manager.xml
@@ -20,6 +21,7 @@ share/gnome/help/gnome-power-manager/C/legal.xml
 share/gnome/omf/gnome-power-manager/gnome-power-manager-C.omf
 share/icons/hicolor/16x16/apps/gpm-ac-adapter.png
 share/icons/hicolor/16x16/apps/gpm-brightness.png
+share/icons/hicolor/16x16/apps/gpm-hibernate.png
 share/icons/hicolor/16x16/apps/gpm-keyboard-000.png
 share/icons/hicolor/16x16/apps/gpm-keyboard-030.png
 share/icons/hicolor/16x16/apps/gpm-keyboard-060.png
@@ -42,8 +44,7 @@ share/icons/hicolor/16x16/apps/gpm-primary-100-charging.png
 share/icons/hicolor/16x16/apps/gpm-primary-100.png
 share/icons/hicolor/16x16/apps/gpm-primary-charged.png
 share/icons/hicolor/16x16/apps/gpm-primary-missing.png
-share/icons/hicolor/16x16/apps/gpm-suspend-to-disk.png
-share/icons/hicolor/16x16/apps/gpm-suspend-to-ram.png
+share/icons/hicolor/16x16/apps/gpm-suspend.png
 share/icons/hicolor/16x16/apps/gpm-ups-000-charging.png
 share/icons/hicolor/16x16/apps/gpm-ups-000.png
 share/icons/hicolor/16x16/apps/gpm-ups-020-charging.png
@@ -60,6 +61,7 @@ share/icons/hicolor/16x16/apps/gpm-ups-charged.png
 share/icons/hicolor/16x16/apps/gpm-ups-missing.png
 share/icons/hicolor/24x24/apps/gpm-ac-adapter.png
 share/icons/hicolor/24x24/apps/gpm-brightness.png
+share/icons/hicolor/24x24/apps/gpm-hibernate.png
 share/icons/hicolor/24x24/apps/gpm-keyboard-000.png
 share/icons/hicolor/24x24/apps/gpm-keyboard-030.png
 share/icons/hicolor/24x24/apps/gpm-keyboard-060.png
@@ -82,8 +84,7 @@ share/icons/hicolor/24x24/apps/gpm-primary-100-charging.png
 share/icons/hicolor/24x24/apps/gpm-primary-100.png
 share/icons/hicolor/24x24/apps/gpm-primary-charged.png
 share/icons/hicolor/24x24/apps/gpm-primary-missing.png
-share/icons/hicolor/24x24/apps/gpm-suspend-to-disk.png
-share/icons/hicolor/24x24/apps/gpm-suspend-to-ram.png
+share/icons/hicolor/24x24/apps/gpm-suspend.png
 share/icons/hicolor/24x24/apps/gpm-ups-000-charging.png
 share/icons/hicolor/24x24/apps/gpm-ups-000.png
 share/icons/hicolor/24x24/apps/gpm-ups-020-charging.png
@@ -98,8 +99,10 @@ share/icons/hicolor/24x24/apps/gpm-ups-100-charging.png
 share/icons/hicolor/24x24/apps/gpm-ups-100.png
 share/icons/hicolor/24x24/apps/gpm-ups-charged.png
 share/icons/hicolor/24x24/apps/gpm-ups-missing.png
+share/icons/hicolor/icon-theme.cache
 share/icons/hicolor/scalable/apps/gpm-ac-adapter.svg
 share/icons/hicolor/scalable/apps/gpm-brightness.svg
+share/icons/hicolor/scalable/apps/gpm-hibernate.svg
 share/icons/hicolor/scalable/apps/gpm-keyboard-000.svg
 share/icons/hicolor/scalable/apps/gpm-keyboard-030.svg
 share/icons/hicolor/scalable/apps/gpm-keyboard-060.svg
@@ -122,8 +125,7 @@ share/icons/hicolor/scalable/apps/gpm-primary-100-charging.svg
 share/icons/hicolor/scalable/apps/gpm-primary-100.svg
 share/icons/hicolor/scalable/apps/gpm-primary-charged.svg
 share/icons/hicolor/scalable/apps/gpm-primary-missing.svg
-share/icons/hicolor/scalable/apps/gpm-suspend-to-disk.svg
-share/icons/hicolor/scalable/apps/gpm-suspend-to-ram.svg
+share/icons/hicolor/scalable/apps/gpm-suspend.svg
 share/icons/hicolor/scalable/apps/gpm-ups-000-charging.svg
 share/icons/hicolor/scalable/apps/gpm-ups-000.svg
 share/icons/hicolor/scalable/apps/gpm-ups-020-charging.svg
@@ -178,3 +180,4 @@ share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
 @dirrm share/gnome/help/gnome-power-manager
 @dirrm share/gnome/gnome-power-manager
 @dirrmtry share/gnome/autostart
+
