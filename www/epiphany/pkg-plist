@@ -246,6 +246,10 @@ share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 @dirrm share/gnome/epiphany/chrome
 @dirrm share/gnome/epiphany/art
 @dirrm share/gnome/epiphany
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrm %%DOCSDIR%%
 @dirrmtry lib/epiphany/%%EPHY_VERSION%%/plugins
 @dirrmtry lib/epiphany/%%EPHY_VERSION%%
