@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.87 2006/04/30 05:04:16 ahze Exp $
+#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.88 2006/05/06 08:54:01 marcus Exp $
 #
 
 PORTNAME=	gnome-themes
-PORTVERSION=	2.15.1
+PORTVERSION=	2.15.2
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -16,7 +16,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A collection of themes and icons for GNOME2
 
-BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-themes/gtk-engines2
+BUILD_DEPENDS=	${X11BASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-themes/gtk-engines2 \
+		icon-naming-utils>=0.6.7:${PORTSDIR}/x11-themes/icon-naming-utils
 RUN_DEPENDS=	${X11BASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-themes/gtk-engines2
 
 CONFLICTS=	clearlooks-metacity-0.*
