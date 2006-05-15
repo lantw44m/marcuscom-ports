@@ -3,7 +3,7 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.7 2006/05/10 23:33:45 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.8 2006/05/15 02:46:26 ahze Exp $
 #
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
@@ -212,7 +212,7 @@ CONFIGURE_ARGS+=--disable-corba
 .endif
 
 .if !defined(WITHOUT_DBUS)
-LIB_DEPENDS+=	dbus:${PORTSDIR}/sysutils/dbus
+LIB_DEPENDS+=	dbus:${PORTSDIR}/devel/dbus
 CONFIGURE_ARGS+=	--enable-dbus
 .else
 CONFIGURE_ARGS+=	--disable-dbus
