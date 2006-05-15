@@ -3539,7 +3539,6 @@ share/icons/gnome/48x48/stock/net/stock_post-message.png
 share/icons/gnome/48x48/stock/net/stock_proxy.png
 share/icons/gnome/48x48/stock/net/stock_sent-mail.png
 share/icons/gnome/48x48/stock/net/stock_spam.png
-share/icons/gnome/icon-theme.cache
 share/icons/gnome/index.theme
 share/icons/gnome/scalable/actions/document-print-preview.svg
 share/icons/gnome/scalable/actions/document-print.svg
@@ -3562,6 +3561,9 @@ share/icons/gnome/scalable/actions/gtk-print-preview.svg
 share/icons/gnome/scalable/actions/gtk-print.svg
 share/icons/gnome/scalable/actions/gtk-save-as.svg
 share/icons/gnome/scalable/actions/gtk-save.svg
+share/icons/gnome/scalable/actions/gtk-zoom-100.svg
+share/icons/gnome/scalable/actions/gtk-zoom-in.svg
+share/icons/gnome/scalable/actions/gtk-zoom-out.svg
 share/icons/gnome/scalable/actions/stock_delete.svg
 share/icons/gnome/scalable/actions/stock_print-preview.svg
 share/icons/gnome/scalable/actions/stock_print.svg
@@ -3569,6 +3571,12 @@ share/icons/gnome/scalable/actions/stock_save-as.svg
 share/icons/gnome/scalable/actions/stock_save.svg
 share/icons/gnome/scalable/actions/stock_search-and-replace.svg
 share/icons/gnome/scalable/actions/stock_search.svg
+share/icons/gnome/scalable/actions/stock_zoom-1.svg
+share/icons/gnome/scalable/actions/stock_zoom-in.svg
+share/icons/gnome/scalable/actions/stock_zoom-out.svg
+share/icons/gnome/scalable/actions/zoom-in.svg
+share/icons/gnome/scalable/actions/zoom-original.svg
+share/icons/gnome/scalable/actions/zoom-out.svg
 share/icons/gnome/scalable/apps/accessories-dictionary.svg
 share/icons/gnome/scalable/apps/arts.svg
 share/icons/gnome/scalable/apps/evolution.svg
