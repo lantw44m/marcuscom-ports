@@ -2,12 +2,12 @@
 # Date Created:			28 July 1998
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/glib20/Makefile,v 1.121 2006/04/30 00:46:47 marcus Exp $
-#   $MCom: ports/devel/glib20/Makefile,v 1.77 2006/05/04 05:40:27 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/devel/glib20/Makefile,v 1.78 2006/05/12 18:05:38 marcus Exp $
 #
 
 PORTNAME=	glib
-PORTVERSION=	2.11.0
+PORTVERSION=	2.11.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/2.11,} \
 		ftp://ftp.gtk.org/pub/gtk/v${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
