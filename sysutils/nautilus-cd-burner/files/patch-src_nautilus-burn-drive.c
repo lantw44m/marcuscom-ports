@@ -1,5 +1,5 @@
---- nautilus-burn-drive.c.orig	Tue Aug 23 11:55:56 2005
-+++ nautilus-burn-drive.c	Sat Sep 10 20:32:26 2005
+--- src/nautilus-burn-drive.c.orig	Tue Aug 23 11:55:56 2005
++++ src/nautilus-burn-drive.c	Sat Sep 10 20:32:26 2005
 @@ -471,7 +471,6 @@ get_disc_type (const char *dev_path)
  	struct cd_toc_entry              entry;
  	int                              i;
