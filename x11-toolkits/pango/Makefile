@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.64 2006/05/04 18:25:40 ahze Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.65 2006/05/12 18:15:14 marcus Exp $
 #
 
 PORTNAME=	pango
-PORTVERSION=	1.13.0
+PORTVERSION=	1.13.1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/${PORTNAME}/1.13,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.10/
@@ -20,8 +20,6 @@ USE_BZIP2=	yes
 PREFIX?=	${X11BASE}
 
 .if !defined(REFERENCE_PORT)
-
-PORTREVISION=	2
 
 BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
