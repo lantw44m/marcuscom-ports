@@ -3,12 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.41 2006/04/30 19:27:00 ahze Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.42 2006/05/13 23:41:08 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	2.15.1
-PORTREVISION=	4
+PORTVERSION=	2.15.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -37,6 +36,8 @@ PLIST=	${WRKDIR}/pkg-plist
 XSCREENSAVER_DIR=	${X11BASE}/share/xscreensaver/config
 SCREENSAVER_DIR=	share/gnome/applications/screensavers
 
+XSCREENSAVER_EXCLUDE=	"(popsquares.xml)"
+
 OPTIONS=	PAM "Pluggable Authentication Module support" off
 
 .include <bsd.port.pre.mk>
@@ -52,6 +53,7 @@ CONFIGURE_ARGS+=	--disable-pam
 pre-install:
 	@${CP} ${.CURDIR}/pkg-plist ${PLIST}
 	@cd ${XSCREENSAVER_DIR} && ${FIND} -s * -maxdepth 1 -type f -name "*.xml" | \
+		${GREP} -Ev ${XSCREENSAVER_EXCLUDE} | \
 		${SED} -e 's:^:${SCREENSAVER_DIR}/:' | \
 		${SED} -e 's:[.]xml$$:.desktop:' >> ${PLIST}
 	@${ECHO_CMD} @dirrm ${SCREENSAVER_DIR} >> ${PLIST}
@@ -66,6 +68,7 @@ post-install:
 	${MKDIR} ${PREFIX}/share/gnome/gnome-screensaver/themes/xscreensaver
 	cd ${PREFIX}/${SCREENSAVER_DIR} && \
 		${FIND} -s ${XSCREENSAVER_DIR} -maxdepth 1 -type f -name "*.xml" | \
+			${GREP} -Ev ${XSCREENSAVER_EXCLUDE} | \
 			${XARGS} ${WRKSRC}/data/migrate-xscreensaver-config.sh
 
 .include <bsd.port.post.mk>
