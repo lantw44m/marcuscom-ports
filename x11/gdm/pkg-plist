@@ -187,6 +187,7 @@ share/locale/ko/LC_MESSAGES/gdm.mo
 share/locale/ku/LC_MESSAGES/gdm.mo
 share/locale/lt/LC_MESSAGES/gdm.mo
 share/locale/lv/LC_MESSAGES/gdm.mo
+share/locale/mg/LC_MESSAGES/gdm.mo
 share/locale/mi/LC_MESSAGES/gdm.mo
 share/locale/mk/LC_MESSAGES/gdm.mo
 share/locale/ml/LC_MESSAGES/gdm.mo
@@ -234,6 +235,8 @@ share/locale/zu/LC_MESSAGES/gdm.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mi/LC_MESSAGES
 @dirrmtry share/locale/mi
+@dirrmtry share/locale/mg/LC_MESSAGES
+@dirrmtry share/locale/mg
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
