@@ -34,11 +34,13 @@ share/gnome/help/gpl/fi/gpl.xml
 share/gnome/help/gpl/fr/gpl.xml
 share/gnome/help/gpl/pa/gpl.xml
 share/gnome/help/gpl/uk/gpl.xml
+share/gnome/help/gpl/zh_CN/gpl.xml
 share/gnome/help/lgpl/C/lgpl.xml
 share/gnome/help/lgpl/es/lgpl.xml
 share/gnome/help/lgpl/fr/lgpl.xml
 share/gnome/help/lgpl/pa/lgpl.xml
 share/gnome/help/lgpl/uk/lgpl.xml
+share/gnome/help/lgpl/zh_CN/lgpl.xml
 share/gnome/omf/fdl/fdl-C.omf
 share/gnome/omf/fdl/fdl-es.omf
 share/gnome/omf/fdl/fdl-fr.omf
@@ -54,11 +56,13 @@ share/gnome/omf/gpl/gpl-fi.omf
 share/gnome/omf/gpl/gpl-fr.omf
 share/gnome/omf/gpl/gpl-pa.omf
 share/gnome/omf/gpl/gpl-uk.omf
+share/gnome/omf/gpl/gpl-zh_CN.omf
 share/gnome/omf/lgpl/lgpl-C.omf
 share/gnome/omf/lgpl/lgpl-es.omf
 share/gnome/omf/lgpl/lgpl-fr.omf
 share/gnome/omf/lgpl/lgpl-pa.omf
 share/gnome/omf/lgpl/lgpl-uk.omf
+share/gnome/omf/lgpl/lgpl-zh_CN.omf
 share/gnome/pixmaps/apple-green.png
 share/gnome/pixmaps/apple-red.png
 share/gnome/pixmaps/gnome-aorta.png
@@ -189,6 +193,7 @@ share/locale/ne/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/nso/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/or/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/pt/LC_MESSAGES/gnome-desktop-2.0.mo
