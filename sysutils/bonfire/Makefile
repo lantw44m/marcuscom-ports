@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/bonfire/Makefile,v 1.3 2006/05/12 22:50:37 ahze Exp $
+#    $MCom: ports/sysutils/bonfire/Makefile,v 1.4 2006/05/13 01:24:39 ahze Exp $
 
 PORTNAME=	bonfire
-PORTVERSION=	0.3.0
-PORTREVISION=	1
+PORTVERSION=	0.3.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://perso.wanadoo.fr/bonfire/
 
@@ -16,7 +15,7 @@ COMMENT=	CD/DVD mastering tool for the GNOME desktop
 
 LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
 		notify.1:${PORTSDIR}/devel/libnotify \
-		totem-plparser.2:${PORTSDIR}/multimedia/totem-gstreamer \
+		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
 		gdl-1.0:${PORTSDIR}/x11-toolkits/gdl
 
 USE_BZIP2=	yes
