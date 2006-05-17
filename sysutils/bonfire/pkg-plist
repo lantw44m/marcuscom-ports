@@ -26,4 +26,7 @@ share/gnome/bonfire/icon-final-256x256.png
 share/gnome/bonfire/icon-final-48x48.png
 share/gnome/bonfire/logo.png
 share/gnome/pixmaps/bonfire.png
+share/gnome/locale/es/LC_MESSAGES/bonfire.mo
+share/gnome/locale/fr/LC_MESSAGES/bonfire.mo
+share/gnome/locale/ja/LC_MESSAGES/bonfire.mo
 @dirrm share/gnome/bonfire

@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/bonfire/Makefile,v 1.4 2006/05/13 01:24:39 ahze Exp $
+#    $MCom: ports/sysutils/bonfire/Makefile,v 1.5 2006/05/17 18:04:28 ahze Exp $
 
 PORTNAME=	bonfire
 PORTVERSION=	0.3.1
@@ -18,6 +18,7 @@ LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
 		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
 		gdl-1.0:${PORTSDIR}/x11-toolkits/gdl
 
+USE_GETTEXT=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
@@ -25,6 +26,8 @@ USE_X_PREFIX=	yes
 USE_GNOME=	gnomeprefix nautiluscdburner
 USE_GSTREAMER=	gconf core
 CONFIGURE_ARGS=	--disable-inotify
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(datadir)|${PREFIX}/share/gnome|' \
