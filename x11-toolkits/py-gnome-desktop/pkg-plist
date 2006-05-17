@@ -3,6 +3,11 @@
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/applet.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeapplet.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeapplet.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomedesktop/__init__.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomedesktop/__init__.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomedesktop/__init__.pyo
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomedesktop/_gnomedesktop.la
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomedesktop/_gnomedesktop.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/__init__.py
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/__init__.pyc
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint/__init__.pyo
@@ -88,6 +93,7 @@ share/examples/py-gnome/nautilusburn/blank_disc.py
 share/examples/py-gnome/nautilusburn/drive_selection.py
 share/examples/py-gnome/nautilusburn/write_iso.py
 share/examples/py-gnome/rsvg/rsvg-cairo.py
+share/pygtk/2.0/defs/_gnomedesktop.defs
 share/pygtk/2.0/defs/applet.defs
 share/pygtk/2.0/defs/art.defs
 share/pygtk/2.0/defs/gtksourceview.defs
