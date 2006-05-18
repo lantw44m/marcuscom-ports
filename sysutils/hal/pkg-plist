@@ -5,7 +5,6 @@ bin/hal-find-by-property
 bin/hal-get-property
 bin/hal-set-property
 bin/lshal
-@unexec if cmp -s %D/%%DATADIR%%/hal.conf.dist %D/etc/dbus-1/system.d/hal.conf; then rm -f %D/etc/dbus-1/system.d/hal.conf; fi
 include/hal/libhal-storage.h
 include/hal/libhal.h
 lib/libhal-storage.a
@@ -99,6 +98,7 @@ sbin/hald
 %%DATADIR%%/device-manager/hal-serial-port.png
 %%DATADIR%%/device-manager/hal-unknown.png
 %%DATADIR%%/device-manager/hal-video.png
+%%DATADIR%%/dist/hal.conf
 %%DATADIR%%/fdi/fdi.dtd
 %%DATADIR%%/fdi/fdi.rng
 %%DATADIR%%/fdi/information/10freedesktop/10-camera-ptp.fdi
@@ -115,8 +115,6 @@ sbin/hald
 %%DATADIR%%/fdi/policy/10osvendor/15-storage-luks.fdi
 %%DATADIR%%/fdi/policy/10osvendor/20-storage-methods.fdi
 %%DATADIR%%/fdi/preprobe/10osvendor/10-ide-drives.fdi
-%%DATADIR%%/hal.conf.dist
-@exec [ -f %D/etc/dbus-1/system.d/hal.conf ] || (mkdir -p %D/etc/dbus-1/system.d && cp %B/%f %D/etc/dbus-1/system.d/hal.conf)
 share/locale/cs/LC_MESSAGES/hal.mo
 share/locale/da/LC_MESSAGES/hal.mo
 share/locale/de/LC_MESSAGES/hal.mo
@@ -174,6 +172,7 @@ share/locale/zh_TW/LC_MESSAGES/hal.mo
 @dirrm %%DATADIR%%/fdi/information/10freedesktop
 @dirrm %%DATADIR%%/fdi/information
 @dirrm %%DATADIR%%/fdi
+@dirrm %%DATADIR%%/dist
 @dirrm %%DATADIR%%/device-manager
 @dirrm %%DATADIR%%
 @dirrm %%DOCSDIR%%/conf

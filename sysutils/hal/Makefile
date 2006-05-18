@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.11 2006/05/14 20:55:51 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.12 2006/05/14 21:29:01 marcus Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -43,6 +44,23 @@ SNAPVERSION=	20060514
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${HALVERSION}
 PLIST_SUB=	VERSION=${HALVERSION}
 
+PRIV_FILES=	hal-power-hibernate \
+		hal-power-poweroff \
+		hal-power-reboot \
+		hal-power-suspend \
+		hal-storage-fixed-mount-change-uid \
+		hal-storage-fixed-mount \
+		hal-storage-removable-mount-change-uid \
+		hal-storage-removable-mount
+PRIV_FILES:=	${PRIV_FILES:S|$|.privilege|}
+
+RC_FILES=	hal.conf:${PREFIX}/etc/dbus-1/system.d \
+		${PRIV_FILES:S|$|:${PREFIX}/etc/PolicyKit/privilege.d|}
+PLIST_FILES=	${PRIV_FILES:S|^|%%DATADIR%%/dist/|}
+
+SUB_FILES=	pkg-install pkg-deinstall
+SUB_LIST=	RC_FILES="${RC_FILES}"
+
 DESKTOP_ENTRIES="Device Manager" \
 		"Examine your devices" \
 		"${DATADIR}/device-manager/hal-bus-pci.png" \
@@ -60,20 +78,18 @@ post-patch:
 	@${REINPLACE_CMD} -e '/^scriptdir = /s|libdir|libexecdir|' \
 		${WRKSRC}/tools/Makefile.in \
 		${WRKSRC}/tools/freebsd/Makefile.in
+	@${REINPLACE_CMD} -e '/^SUBDIRS/ s|txt||' \
+		${WRKSRC}/policy/Makefile.in
 
 post-install:
-.if !defined(PACKAGE_BUILDING)
-	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-.endif
+	${MKDIR} ${DATADIR}/dist
+	${INSTALL_DATA} ${WRKSRC}/hal.conf ${WRKSRC}/policy/txt/*.privilege \
+		${DATADIR}/dist
+	@${SETENV} PKG_PREFIX=${PREFIX} PACKAGE_BUILDING=${PACKAGE_BUILDING} \
+		${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .if !defined(NOPORTDOCS)
 	${INSTALL_DATA} ${WRKSRC}/hald/freebsd/README \
 		${DOCSDIR}/README.freebsd
 .endif
-	${INSTALL_DATA} ${WRKSRC}/hal.conf ${DATADIR}/hal.conf.dist
-	if [ ! -f ${PREFIX}/etc/dbus-1/system.d/hal.conf ]; then \
-		${MKDIR} ${PREFIX}/etc/dbus-1/system.d ; \
-		${INSTALL_DATA} ${WRKSRC}/hal.conf \
-			${PREFIX}/etc/dbus-1/system.d ; \
-	fi
 
 .include <bsd.port.post.mk>
