@@ -1,5 +1,4 @@
 bin/hal-device
-bin/hal-device-manager
 bin/hal-find-by-capability
 bin/hal-find-by-property
 bin/hal-get-property
@@ -61,43 +60,6 @@ sbin/hald
 %%DOCSDIR%%/conf/storage-non-fixed.fdi
 %%DOCSDIR%%/conf/storage-policy-examples.fdi
 %%DOCSDIR%%/conf/storage-skip-all.fdi
-%%DATADIR%%/device-manager/Const.py
-%%DATADIR%%/device-manager/Const.pyc
-%%DATADIR%%/device-manager/Const.pyo
-%%DATADIR%%/device-manager/Device.py
-%%DATADIR%%/device-manager/Device.pyc
-%%DATADIR%%/device-manager/Device.pyo
-%%DATADIR%%/device-manager/DeviceManager.py
-%%DATADIR%%/device-manager/DeviceManager.pyc
-%%DATADIR%%/device-manager/DeviceManager.pyo
-%%DATADIR%%/device-manager/GtkAttributesFacade.py
-%%DATADIR%%/device-manager/GtkAttributesFacade.pyc
-%%DATADIR%%/device-manager/GtkAttributesFacade.pyo
-%%DATADIR%%/device-manager/LibGladeApplication.py
-%%DATADIR%%/device-manager/LibGladeApplication.pyc
-%%DATADIR%%/device-manager/LibGladeApplication.pyo
-%%DATADIR%%/device-manager/Representation.py
-%%DATADIR%%/device-manager/Representation.pyc
-%%DATADIR%%/device-manager/Representation.pyo
-%%DATADIR%%/device-manager/fdo-logo.png
-%%DATADIR%%/device-manager/hal-abstract.png
-%%DATADIR%%/device-manager/hal-audio.png
-%%DATADIR%%/device-manager/hal-bus-pci.png
-%%DATADIR%%/device-manager/hal-bus-usb.png
-%%DATADIR%%/device-manager/hal-camera.png
-%%DATADIR%%/device-manager/hal-cat-cardbus.png
-%%DATADIR%%/device-manager/hal-cat-keyboard.png
-%%DATADIR%%/device-manager/hal-cat-mouse.png
-%%DATADIR%%/device-manager/hal-cdrom.png
-%%DATADIR%%/device-manager/hal-computer.png
-%%DATADIR%%/device-manager/hal-device-manager.glade
-%%DATADIR%%/device-manager/hal-flash.png
-%%DATADIR%%/device-manager/hal-floppy.png
-%%DATADIR%%/device-manager/hal-harddisk.png
-%%DATADIR%%/device-manager/hal-network.png
-%%DATADIR%%/device-manager/hal-serial-port.png
-%%DATADIR%%/device-manager/hal-unknown.png
-%%DATADIR%%/device-manager/hal-video.png
 %%DATADIR%%/dist/hal.conf
 %%DATADIR%%/fdi/fdi.dtd
 %%DATADIR%%/fdi/fdi.rng
@@ -173,7 +135,6 @@ share/locale/zh_TW/LC_MESSAGES/hal.mo
 @dirrm %%DATADIR%%/fdi/information
 @dirrm %%DATADIR%%/fdi
 @dirrm %%DATADIR%%/dist
-@dirrm %%DATADIR%%/device-manager
 @dirrm %%DATADIR%%
 @dirrm %%DOCSDIR%%/conf
 @dirrm %%DOCSDIR%%

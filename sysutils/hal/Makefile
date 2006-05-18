@@ -3,27 +3,28 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.12 2006/05/14 21:29:01 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.13 2006/05/18 15:18:22 jylefort Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
-PORTREVISION=	1
-CATEGORIES=	sysutils gnome
+PORTREVISION?=	2
+CATEGORIES?=	sysutils
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Hardware Abstraction Layer for simplifying device access
+COMMENT?=	Hardware Abstraction Layer for simplifying device access
 
+.if !defined(SLAVE_PORT)
 LIB_DEPENDS=	polkit.0:${PORTSDIR}/sysutils/policykit
 RUN_DEPENDS=	${LOCALBASE}/share/pci.ids:${PORTSDIR}/sysutils/pciutils \
-		isoinfo:${PORTSDIR}/sysutils/cdrtools \
-		${PYTHON_SITELIBDIR}/dbus.pth:${PORTSDIR}/devel/py-dbus
+		isoinfo:${PORTSDIR}/sysutils/cdrtools
+.endif
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnometarget intlhack pygnome2 ltverhack
+USE_GNOME=	gnomehack gnometarget intlhack ltverhack
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 USE_PYTHON=	yes
@@ -36,11 +37,11 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
 
-USE_RC_SUBR=	hald
-
 HALVERSION=	0.5.8
 SNAPVERSION=	20060514
 
+.if !defined(SLAVE_PORT)
+USE_RC_SUBR=	hald
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${HALVERSION}
 PLIST_SUB=	VERSION=${HALVERSION}
 
@@ -60,21 +61,33 @@ PLIST_FILES=	${PRIV_FILES:S|^|%%DATADIR%%/dist/|}
 
 SUB_FILES=	pkg-install pkg-deinstall
 SUB_LIST=	RC_FILES="${RC_FILES}"
+.else # Slave port stuff
+BUILD_DEPENDS+=	${PORTNAME}>=${PKGNAME:S/${PORTNAME}${PKGNAMESUFFIX}-//}:${PORTSDIR}/sysutils/hal
+RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus.pth:${PORTSDIR}/devel/py-dbus \
+		${PORTNAME}>=${PKGNAME:S/${PORTNAME}${PKGNAMESUFFIX}-//}:${PORTSDIR}/sysutils/hal
 
+USE_GNOME+=	pygnome2
 DESKTOP_ENTRIES="Device Manager" \
 		"Examine your devices" \
 		"${DATADIR}/device-manager/hal-bus-pci.png" \
 		"hal-device-manager" \
 		"Application;System;" \
 		true
+BUILD_WRKSRC=	${WRKSRC}/tools/device-manager
+INSTALL_WRKSRC=	${BUILD_WRKSRC}
+.endif
 
 .include <bsd.port.pre.mk>
 
-.if ${ARCH}=="i386" || ${ARCH}=="amd64" || ${ARCH}=="ia64"
+.if !defined(SLAVE_PORT) && (${ARCH}=="i386" || ${ARCH}=="amd64" || ${ARCH}=="ia64")
 RUN_DEPENDS+=	dmidecode:${PORTSDIR}/sysutils/dmidecode
 .endif
 
 post-patch:
+.if !defined(SLAVE_PORT)
+	@${REINPLACE_CMD} -e 's|device-manager||' \
+		${WRKSRC}/tools/Makefile.in
+.endif
 	@${REINPLACE_CMD} -e '/^scriptdir = /s|libdir|libexecdir|' \
 		${WRKSRC}/tools/Makefile.in \
 		${WRKSRC}/tools/freebsd/Makefile.in
@@ -82,6 +95,7 @@ post-patch:
 		${WRKSRC}/policy/Makefile.in
 
 post-install:
+.if !defined(SLAVE_PORT)
 	${MKDIR} ${DATADIR}/dist
 	${INSTALL_DATA} ${WRKSRC}/hal.conf ${WRKSRC}/policy/txt/*.privilege \
 		${DATADIR}/dist
@@ -90,6 +104,7 @@ post-install:
 .if !defined(NOPORTDOCS)
 	${INSTALL_DATA} ${WRKSRC}/hald/freebsd/README \
 		${DOCSDIR}/README.freebsd
+.endif
 .endif
 
 .include <bsd.port.post.mk>
