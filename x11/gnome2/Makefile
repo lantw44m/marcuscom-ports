@@ -2,13 +2,13 @@
 # Date created:		21 May 2002
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome2/Makefile,v 1.105 2006/04/30 00:47:03 marcus Exp $
-#   $MCom: ports/x11/gnome2/Makefile,v 1.142 2006/04/23 20:10:22 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/gnome2/Makefile,v 1.144 2006/04/30 07:33:01 marcus Exp $
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.14.1
-PORTREVISION?=	1
+PORTVERSION=	2.15.2
+PORTREVISION?=	0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
