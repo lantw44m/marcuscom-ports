@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.13 2006/05/18 15:18:22 jylefort Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.14 2006/05/18 20:19:04 ahze Exp $
 #
 
 PORTNAME=	hal
@@ -15,7 +15,7 @@ MASTER_SITES=	http://www.marcuscom.com/downloads/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	Hardware Abstraction Layer for simplifying device access
 
-.if !defined(SLAVE_PORT)
+.if !defined(SLAVEPORT)
 LIB_DEPENDS=	polkit.0:${PORTSDIR}/sysutils/policykit
 RUN_DEPENDS=	${LOCALBASE}/share/pci.ids:${PORTSDIR}/sysutils/pciutils \
 		isoinfo:${PORTSDIR}/sysutils/cdrtools
@@ -40,7 +40,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 HALVERSION=	0.5.8
 SNAPVERSION=	20060514
 
-.if !defined(SLAVE_PORT)
+.if !defined(SLAVEPORT)
 USE_RC_SUBR=	hald
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${HALVERSION}
 PLIST_SUB=	VERSION=${HALVERSION}
@@ -79,12 +79,12 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 
 .include <bsd.port.pre.mk>
 
-.if !defined(SLAVE_PORT) && (${ARCH}=="i386" || ${ARCH}=="amd64" || ${ARCH}=="ia64")
+.if !defined(SLAVEPORT) && (${ARCH}=="i386" || ${ARCH}=="amd64" || ${ARCH}=="ia64")
 RUN_DEPENDS+=	dmidecode:${PORTSDIR}/sysutils/dmidecode
 .endif
 
 post-patch:
-.if !defined(SLAVE_PORT)
+.if !defined(SLAVEPORT)
 	@${REINPLACE_CMD} -e 's|device-manager||' \
 		${WRKSRC}/tools/Makefile.in
 .endif
@@ -95,7 +95,7 @@ post-patch:
 		${WRKSRC}/policy/Makefile.in
 
 post-install:
-.if !defined(SLAVE_PORT)
+.if !defined(SLAVEPORT)
 	${MKDIR} ${DATADIR}/dist
 	${INSTALL_DATA} ${WRKSRC}/hal.conf ${WRKSRC}/policy/txt/*.privilege \
 		${DATADIR}/dist

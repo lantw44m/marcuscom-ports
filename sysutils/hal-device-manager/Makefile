@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/sysutils/hal-device-manager/Makefile,v 1.1 2006/05/18 20:19:04 ahze Exp $
 
 PORTREVISION=	0
 CATEGORIES=	sysutils gnome
@@ -12,7 +12,7 @@ PKGNAMESUFFIX=	-device-manager
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	HAL device manager
 
-SLAVE_PORT=	yes
+SLAVEPORT=	yes
 
 MASTERDIR=	${.CURDIR}/../../sysutils/hal
 PLIST=	${.CURDIR}/pkg-plist
