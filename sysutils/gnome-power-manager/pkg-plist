@@ -99,7 +99,6 @@ share/icons/hicolor/24x24/apps/gpm-ups-100-charging.png
 share/icons/hicolor/24x24/apps/gpm-ups-100.png
 share/icons/hicolor/24x24/apps/gpm-ups-charged.png
 share/icons/hicolor/24x24/apps/gpm-ups-missing.png
-share/icons/hicolor/icon-theme.cache
 share/icons/hicolor/scalable/apps/gpm-ac-adapter.svg
 share/icons/hicolor/scalable/apps/gpm-brightness.svg
 share/icons/hicolor/scalable/apps/gpm-hibernate.svg
@@ -180,4 +179,3 @@ share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
 @dirrm share/gnome/help/gnome-power-manager
 @dirrm share/gnome/gnome-power-manager
 @dirrmtry share/gnome/autostart
-
