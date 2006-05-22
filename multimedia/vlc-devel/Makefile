@@ -3,7 +3,7 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD: ports/multimedia/vlc-devel/Makefile,v 1.146 2006/05/22 01:12:07 ahze Exp $
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.9 2006/05/15 02:56:23 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.10 2006/05/22 01:50:17 ahze Exp $
 #
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
@@ -77,7 +77,7 @@ CPPFLAGS+=	-I${X11BASE}/include/wx-2.6/
 BROKEN=Does not compile with perl ${PERL_VERSION}
 .endif
 
-.if exists(${LOCALBASE}/lib/libavutil-CVS.so) || !exists(${LOCALBASE}/lib/libavformat.a)
+.if exists(${LOCALBASE}/libdata/pkgconfig/libavcodec.pc) || !exists(${LOCALBASE}/lib/libavformat.a)
 LIB_DEPENDS+=	avcodec.1:${PORTSDIR}/multimedia/ffmpeg-devel
 .else
 LIB_DEPENDS+=	avcodec.1:${PORTSDIR}/multimedia/ffmpeg
@@ -166,6 +166,13 @@ CONFIGURE_ARGS+=--enable-wxwidgets
 CONFIGURE_ENV+=	WX_CONFIG="${X11BASE}/bin/${WX_CONFIG}"
 .else
 CONFIGURE_ARGS+=--disable-wxwidgets
+.endif
+
+.if !defined(WITHOUT_HAL)
+LIB_DEPENDS+=	hal.1:${PORTSDIR}/sysutils/hal
+CONFIGURE_ARGS+=--enable-hal
+.else
+CONFIGURE_ARGS+=--disable-hal
 .endif
 
 .if (defined(WITH_ARTS) || exists(${LOCALBASE}/lib/libartsc.so)) && !defined(WITHOUT_ARTS)
