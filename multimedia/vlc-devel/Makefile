@@ -2,14 +2,14 @@
 # Date created:		3rd August 2001
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
-# $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.8 2006/05/15 02:46:26 ahze Exp $
+# $FreeBSD: ports/multimedia/vlc-devel/Makefile,v 1.146 2006/05/22 01:12:07 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.9 2006/05/15 02:56:23 ahze Exp $
 #
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
 
 PORTNAME=	vlc
-DISTVERSION=	0.8.6.20060514
+DISTVERSION=	0.8.6.20060521
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://nightlies.videolan.org/build/source/
 #		http://download.videolan.org/pub/videolan/vlc/${PORTVERSION}/ \
@@ -56,7 +56,8 @@ CONFIGURE_ARGS+=	--enable-ffmpeg \
 			--disable-gnome \
 			--disable-gtk \
 			--without-libintl-prefix \
-			--without-dv-raw1394
+			--without-dv-raw1394 \
+			--disable-dv
 
 MAN1=		vlc.1 \
 		vlc-config.1
@@ -319,20 +320,6 @@ BUILD_DEPENDS+=	${LOCALBASE}/lib/libdts.a:${PORTSDIR}/multimedia/libdts
 CONFIGURE_ARGS+=--enable-dts
 .else
 CONFIGURE_ARGS+=--disable-dts
-.endif
-
-.if (defined(WITH_DV) || exists(${LOCALBASE}/lib/libdv.a)) && !defined(WITHOUT_DV)
-LIB_DEPENDS+=	dv.4:${PORTSDIR}/multimedia/libdv
-CONFIGURE_ARGS+=--enable-dv
-.else
-CONFIGURE_ARGS+=--disable-dv
-.endif
-
-.if !defined(WITHOUT_HAL)
-LIB_DEPENDS+=	hal.1:${PORTSDIR}/sysutils/hal
-CONFIGURE_ARGS+=	--enable-hal
-.else
-CONFIGURE_ARGS+=	--disable-hal
 .endif
 
 .if defined(WITHOUT_HTTPD)
