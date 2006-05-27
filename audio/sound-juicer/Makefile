@@ -3,12 +3,12 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/sound-juicer/Makefile,v 1.52 2006/05/17 18:13:52 ahze Exp $
+#   $MCom: ports/audio/sound-juicer/Makefile,v 1.53 2006/05/25 01:26:36 ahze Exp $
 #
 
 PORTNAME=	sound-juicer
 PORTVERSION=	2.15.2.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -28,7 +28,7 @@ USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui nautiluscdburner \
 		gnomedocutils
-USE_GSTREAMER=	cdparanoia vorbis flac gconf
+USE_GSTREAMER=	cdparanoia vorbis flac gconf good
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-ignore-missing-cd
 INSTALLS_ICONS=	yes
