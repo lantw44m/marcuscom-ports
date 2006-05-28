@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.147 2006/05/28 02:26:11 mezz Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.148 2006/05/28 02:44:18 mezz Exp $
 #
 
 PORTNAME=	gnome2
@@ -19,7 +19,7 @@ COMMENT?=	The "meta-port" for the GNOME 2 integrated X11 desktop
 
 RUN_DEPENDS?=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2 \
 		gnome-cd:${PORTSDIR}/audio/gnome-media \
-	 	gnome-dictionary:${PORTSDIR}/deskutils/gnomeutils2 \
+	 	gnome-dictionary:${PORTSDIR}/deskutils/gnome-utils \
 		eog:${PORTSDIR}/graphics/eog \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
 		gnect:${PORTSDIR}/games/gnomegames2 \
