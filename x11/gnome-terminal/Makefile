@@ -3,15 +3,15 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-terminal/Makefile,v 1.72 2006/05/18 19:31:11 marcus Exp $
+#   $MCom: ports/x11/gnome-terminal/Makefile,v 1.73 2006/05/28 20:33:19 mezz Exp $
 #
 
 PORTNAME=	gnome-terminal
 PORTVERSION=	2.15.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/gnome-terminal/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui vte
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui vte gnomedocutils
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
