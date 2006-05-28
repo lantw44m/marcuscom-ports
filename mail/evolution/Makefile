@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD: ports/mail/evolution/Makefile,v 1.123 2006/04/30 00:46:56 marcus Exp $
-#   $MCom: ports/mail/evolution/Makefile,v 1.100 2006/04/30 06:52:20 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.101 2006/05/17 05:22:00 marcus Exp $
 #
 
 PORTNAME=	evolution
@@ -73,7 +73,7 @@ WITH_GSTREAMER=	yes
 .endif
 
 .if defined(WITH_PILOT)
-LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnomepilot2
+LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnome-pilot
 CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE} \
 			--enable-pilot-conduits=yes
 PLIST_SUB+=	PILOT:=""
