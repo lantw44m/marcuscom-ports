@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.149 2006/05/28 03:15:16 mezz Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.150 2006/05/28 03:27:48 mezz Exp $
 #
 
 PORTNAME=	gnome2
@@ -22,7 +22,7 @@ RUN_DEPENDS?=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnomeapplets2
 	 	gnome-dictionary:${PORTSDIR}/deskutils/gnome-utils \
 		eog:${PORTSDIR}/graphics/eog \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
-		gnect:${PORTSDIR}/games/gnomegames2 \
+		gnect:${PORTSDIR}/games/gnome-games \
 		gedit:${PORTSDIR}/editors/gedit \
 		gnome-terminal:${PORTSDIR}/x11/gnometerminal \
 		gnome-session:${PORTSDIR}/x11/gnomesession \
