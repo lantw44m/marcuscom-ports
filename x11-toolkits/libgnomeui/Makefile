@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.81 2006/05/06 09:08:44 marcus Exp $
+#    $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.82 2006/05/12 18:13:19 marcus Exp $
 
 PORTNAME=	libgnomeui
 PORTVERSION=	2.15.1
@@ -22,7 +22,7 @@ PREFIX?=	${X11BASE}
 
 PORTREVISION=	1
 
-LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/gnomekeyring \
+LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/gnome-keyring \
 		startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 RUN_DEPENDS=	${X11BASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
