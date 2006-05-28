@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.375 2006/05/17 15:44:02 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.376 2006/05/28 00:59:53 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -226,7 +226,7 @@ libgda_DETECT=		${GDA_CONFIG}
 libgda_USE_GNOME_IMPL=	gconf bonobo
 
 GNOMEDB_CONFIG?=	${X11BASE}/bin/gnomedb-config
-gnomedb_LIB_DEPENDS=	gnomedb.0:${PORTSDIR}/databases/gnomedb
+gnomedb_LIB_DEPENDS=	gnomedb.0:${PORTSDIR}/databases/gnome-db
 gnomedb_CONFIGURE_ENV=	GNOMEDB_CONFIG="${GNOMEDB_CONFIG}"
 gnomedb_MAKE_ENV=	GNOMEDB_CONFIG="${GNOMEDB_CONFIG}"
 gnomedb_DETECT=		${GNOMEDB_CONFIG}
