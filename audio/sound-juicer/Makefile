@@ -3,7 +3,7 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/sound-juicer/Makefile,v 1.53 2006/05/25 01:26:36 ahze Exp $
+#   $MCom: ports/audio/sound-juicer/Makefile,v 1.54 2006/05/27 00:18:53 ahze Exp $
 #
 
 PORTNAME=	sound-juicer
@@ -18,7 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Clean, mean and lean CD ripper for GNOME2
 
 LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
-		gnome-media-profiles.0:${PORTSDIR}/audio/gnomemedia2 \
+		gnome-media-profiles.0:${PORTSDIR}/audio/gnome-media \
 		cdio.7:${PORTSDIR}/sysutils/libcdio
 
 USE_BZIP2=	yes

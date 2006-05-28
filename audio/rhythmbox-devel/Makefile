@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.54 2006/04/25 17:52:32 marcus Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.56 2006/05/17 15:42:02 ahze Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -23,7 +23,7 @@ LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 		dbus-1.2:${PORTSDIR}/devel/dbus \
 		sexy.1:${PORTSDIR}/x11-toolkits/libsexy \
 		soup-2.2.8:${PORTSDIR}/devel/libsoup \
-		gnome-media-profiles.0:${PORTSDIR}/audio/gnomemedia2
+		gnome-media-profiles.0:${PORTSDIR}/audio/gnome-media
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
