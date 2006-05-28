@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.16 2006/05/18 22:15:41 ahze Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.17 2006/05/18 23:17:22 ahze Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
-PORTREVISION?=	2
+PORTREVISION?=	0
 CATEGORIES?=	sysutils
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -38,7 +38,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		GTKDOC="false"
 
 HALVERSION=	0.5.8
-SNAPVERSION=	20060514
+SNAPVERSION=	20060528
 
 .if !defined(HAL_SLAVE)
 USE_RC_SUBR=	hald
@@ -90,6 +90,8 @@ post-patch:
 	@${REINPLACE_CMD} -e '/^scriptdir = /s|libdir|libexecdir|' \
 		${WRKSRC}/tools/Makefile.in \
 		${WRKSRC}/tools/freebsd/Makefile.in
+	@${REINPLACE_CMD} -e 's|[(]libdir[)]/hal/scripts|(libexecdir)/hal/scripts|' \
+		${WRKSRC}/hald/Makefile.in
 	@${REINPLACE_CMD} -e '/^SUBDIRS/ s|txt||' \
 		${WRKSRC}/policy/Makefile.in
 

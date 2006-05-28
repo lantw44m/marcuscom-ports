@@ -41,6 +41,7 @@ for pair in %%RC_FILES%%; do
 	destdir=`echo $pair | cut -f 2 -d :`
 
 	if [ ! -f $destdir/$file ]; then
+	    	mkdir -p $destdir
 		cp -p %%DATADIR%%/dist/$file $destdir/$file
 	fi
 done
