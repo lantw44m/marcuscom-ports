@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD: ports/mail/evolution/Makefile,v 1.123 2006/04/30 00:46:56 marcus Exp $
-#   $MCom: ports/mail/evolution/Makefile,v 1.101 2006/05/17 05:22:00 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.102 2006/05/28 13:26:28 pav Exp $
 #
 
 PORTNAME=	evolution
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An integrated mail, calendar and address book distributed suite
 
 LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss
-RUN_DEPENDS=	${X11BASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnomespell
+RUN_DEPENDS=	${X11BASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnome-spell
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
