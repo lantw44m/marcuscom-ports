@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/x11-toolkits/py-gnome2/Makefile,v 1.2 2006/03/14 13:28:11 marcus Exp $
+#   $MCom: ports/x11-toolkits/py-gnome2/Makefile,v 1.26 2006/04/30 04:51:11 ahze Exp $
 #
 
 PORTNAME=	gnome
@@ -18,8 +18,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A set of Python bindings for GNOME 2
 
-BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/ORBit.so:${PORTSDIR}/devel/py-orbit2
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/ORBit.so:${PORTSDIR}/devel/py-orbit2
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/ORBit.so:${PORTSDIR}/devel/py-orbit
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/ORBit.so:${PORTSDIR}/devel/py-orbit
 
 LATEST_LINK=	py-gnome2
 USE_BZIP2=	yes
