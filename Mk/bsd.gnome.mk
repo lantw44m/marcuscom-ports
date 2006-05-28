@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.374 2006/05/12 18:00:24 jylefort Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.375 2006/05/17 15:44:02 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -457,7 +457,7 @@ gtkhtml3_LIB_DEPENDS=	gtkhtml-3.8.15:${PORTSDIR}/www/gtkhtml3
 gtkhtml3_DETECT=		${X11BASE}/libdata/pkgconfig/libgtkhtml-3.8.pc
 gtkhtml3_USE_GNOME_IMPL=gail libgnomeui libgnomeprintui
 
-gnomespeech_LIB_DEPENDS=gnomespeech.7:${PORTSDIR}/accessibility/gnomespeech
+gnomespeech_LIB_DEPENDS=gnomespeech.7:${PORTSDIR}/accessibility/gnome-speech
 gnomespeech_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-speech-1.0.pc
 gnomespeech_USE_GNOME_IMPL=libbonobo
 
