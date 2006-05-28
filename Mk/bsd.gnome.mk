@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.378 2006/05/28 05:28:22 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.379 2006/05/28 12:47:12 pav Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -210,7 +210,7 @@ libcapplet_LIB_DEPENDS=	capplet.5:${PORTSDIR}/x11/libcapplet
 libcapplet_DETECT=	${X11BASE}/etc/cappletConf.sh
 libcapplet_USE_GNOME_IMPL=gnomelibs
 
-gnomeprint_LIB_DEPENDS=	gnomeprint.16:${PORTSDIR}/print/gnomeprint
+gnomeprint_LIB_DEPENDS=	gnomeprint.16:${PORTSDIR}/print/gnome-print
 gnomeprint_DETECT=	${X11BASE}/etc/printConf.sh
 gnomeprint_USE_GNOME_IMPL=gnomelibs gnomecanvas
 
