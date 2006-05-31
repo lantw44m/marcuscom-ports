@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.84 2006/05/12 18:10:19 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.85 2006/05/17 05:44:15 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -28,6 +28,8 @@ LATEST_LINK=	gtk20
 PREFIX?=	${X11BASE}
 
 .if !defined(REFERENCE_PORT)
+
+PORTREVISION=	1
 
 LIB_DEPENDS=	png.5:${PORTSDIR}/graphics/png \
 		tiff.4:${PORTSDIR}/graphics/tiff \
