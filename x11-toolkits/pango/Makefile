@@ -3,11 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.66 2006/05/16 18:39:02 ahze Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.67 2006/05/30 08:22:38 pav Exp $
 #
 
 PORTNAME=	pango
 PORTVERSION=	1.13.1
+PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/pango/1.13,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.10/
@@ -17,7 +18,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An open-source framework for the layout and rendering of i18n text
 
 USE_BZIP2=	yes
-PREFIX?=	${X11BASE}
 
 .if !defined(REFERENCE_PORT)
 
@@ -28,6 +28,7 @@ RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
+PREFIX?=	${X11BASE}
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack glib20 ltverhack referencehack

@@ -3,11 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.85 2006/05/17 05:44:15 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.86 2006/05/31 04:30:40 marcus Exp $
 #
 
 PORTNAME=	gtk
 PORTVERSION=	2.9.1
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.9,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
@@ -25,11 +26,8 @@ COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
 
 USE_BZIP2=	yes
 LATEST_LINK=	gtk20
-PREFIX?=	${X11BASE}
 
 .if !defined(REFERENCE_PORT)
-
-PORTREVISION=	1
 
 LIB_DEPENDS=	png.5:${PORTSDIR}/graphics/png \
 		tiff.4:${PORTSDIR}/graphics/tiff \
@@ -37,13 +35,14 @@ LIB_DEPENDS=	png.5:${PORTSDIR}/graphics/png \
 RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
 		${X11BASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
-USE_XLIB=	yes
 USE_XPM=	yes
 USE_REINPLACE=	yes
 USE_PERL5=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=  libtool:15
 USE_GNOME=	gnomehack atk pango ltverhack
+USE_GETTEXT=	yes
+USE_X_PREFIX=	yes
 CONFIGURE_ARGS=	--enable-static --with-xinput=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include -I${X11BASE}/include" \

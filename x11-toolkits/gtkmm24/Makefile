@@ -3,11 +3,12 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.10 2006/05/13 04:42:45 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.11 2006/05/22 21:16:51 marcus Exp $
 #
 
 PORTNAME=	gtkmm
 PORTVERSION=	2.9.3
+PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -17,7 +18,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for Gtk+, Pango, Atk
 
 USE_BZIP2=	yes
-PREFIX?=	${X11BASE}
 LATEST_LINK=	gtkmm24
 
 .if !defined(REFERENCE_PORT)
@@ -26,9 +26,9 @@ LIB_DEPENDS=	glibmm-2.4.1:${PORTSDIR}/devel/glibmm \
 		cairomm-1.0.0:${PORTSDIR}/graphics/cairomm
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
-USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GCC=	3.4
+USE_X_PREFIX=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_SHLIB=	yes
 USE_GNOME=	gnomehack gtk20
