@@ -1,0 +1,6 @@
+bin/gnome-eject
+bin/gnome-mount
+bin/gnome-mount-properties
+bin/gnome-umount
+share/gnome/gnome-mount/gnome-mount-properties.glade
+@dirrm share/gnome/gnome-mount
