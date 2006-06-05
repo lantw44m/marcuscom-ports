@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.92 2006/05/16 18:30:32 ahze Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.93 2006/06/05 21:14:25 ahze Exp $
 #
 
 PORTNAME=	yelp
@@ -36,7 +36,9 @@ GCONF_SCHEMAS=	yelp.schemas
 .include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 
 post-patch:
+.if defined(GECKO) && ${GECKO}=="firefox-devel"
 	@${REINPLACE_CMD} -e 's|firefox|${GECKO}|' \
 		${WRKSRC}/configure
+.endif
 
 .include <bsd.port.post.mk>
