@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.91 2006/05/02 23:14:26 marcus Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.92 2006/05/16 18:30:32 ahze Exp $
 #
 
 PORTNAME=	yelp
@@ -16,8 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A help browser for the GNOME 2 desktop
 
-USE_GECKO=	firefox seamonkey xulrunner # mozilla
-
+USE_GECKO=	firefox seamonkey xulrunner firefox-devel
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
@@ -35,5 +34,9 @@ GCONF_SCHEMAS=	yelp.schemas
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|firefox|${GECKO}|' \
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
