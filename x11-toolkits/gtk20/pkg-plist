@@ -166,6 +166,7 @@ include/gtk-2.0/gtk/gtkplug.h
 include/gtk-2.0/gtk/gtkpreview.h
 include/gtk-2.0/gtk/gtkprintcontext.h
 include/gtk-2.0/gtk/gtkprintoperation.h
+include/gtk-2.0/gtk/gtkprintoperationpreview.h
 include/gtk-2.0/gtk/gtkprintsettings.h
 include/gtk-2.0/gtk/gtkprivate.h
 include/gtk-2.0/gtk/gtkprogress.h

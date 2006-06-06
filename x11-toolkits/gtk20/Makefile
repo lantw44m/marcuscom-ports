@@ -3,14 +3,14 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.86 2006/05/31 04:30:40 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.87 2006/06/01 00:49:28 mezz Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.9.1
-PORTREVISION?=	1
+PORTVERSION=	2.9.2
+PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
-MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/2.9,} \
+MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.8/ \
 		ftp://ftp.gimp.org/pub/%SUBDIR%/ \
 		ftp://ftp.cs.umn.edu/pub/gimp/%SUBDIR%/ \
@@ -36,10 +36,9 @@ RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
 		${X11BASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
 USE_XPM=	yes
-USE_REINPLACE=	yes
 USE_PERL5=	yes
 INSTALLS_SHLIB=	yes
-USE_AUTOTOOLS=  libtool:15
+USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack atk pango ltverhack
 USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
