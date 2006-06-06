@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.29 2006/04/13 07:52:35 bland Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.31 2006/05/22 15:25:25 ahze Exp $
 #
 
 PORTNAME=	eog
@@ -31,10 +31,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 GCONF_SCHEMAS=	eog.schemas
 
 .include <bsd.port.pre.mk>
-
-.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
-WITH_EXIF=	yes
-.endif
 
 .if !defined(WITHOUT_EXIF) || (exists(${LOCALBASE}/lib/libexif.so.12) || \
 	defined(WITH_EXIF))
