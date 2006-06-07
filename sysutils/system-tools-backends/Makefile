@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.12 2005/09/04 18:51:49 marcus Exp $
+#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.14 2006/06/07 02:27:28 ahze Exp $
 #
 
 PORTNAME=	system-tools-backends
@@ -31,16 +31,11 @@ USE_GNOME=	gnomehack gnometarget intlhack
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-#CONFIGURE_ARGS=	--with-net_dbus=${SITE_PERL}
 
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} <= 500800
 RUN_DEPENDS+=	${SITE_PERL}/File/Temp.pm:${PORTSDIR}/devel/p5-File-Temp
 .endif
-
-#post-patch:
-#	@${REINPLACE_CMD} -e 's|$$netdbusdir|${SITE_PERL}/${PERL_ARCH}/Net/|' \
-#		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
