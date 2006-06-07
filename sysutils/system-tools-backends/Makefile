@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.14 2006/06/07 02:27:28 ahze Exp $
+#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.15 2006/06/07 02:40:08 ahze Exp $
 #
 
 PORTNAME=	system-tools-backends
@@ -18,10 +18,6 @@ COMMENT=	Backend system admin scripts for gnome-system-tools
 
 BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/Net/DBus.pm:${PORTSDIR}/devel/p5-Net-DBus
 RUN_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/Net/DBus.pm:${PORTSDIR}/devel/p5-Net-DBus
-
-# !!!! REMOVE ME WHEN p5-Net-DBus is FIXED !!!!!
-RUN_DEPENDS+=	${SITE_PERL}/XML/Grove.pm:${PORTSDIR}/textproc/p5-XML-Grove \
-		${SITE_PERL}/${PERL_ARCH}/Time/HiRes.pm:${PORTSDIR}/devel/p5-Time-HiRes
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
