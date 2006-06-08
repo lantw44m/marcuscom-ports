@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.45 2006/06/08 12:53:05 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.46 2006/06/08 20:48:41 ahze Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -418,9 +418,6 @@ DISTFILES+=	${GOOD_DISTFILE}:good
 .endif
 
 .if !defined(NO_GSTREAMER_COMMON)
-BUILD_DEPENDS+=	gstreamer-plugins>=${GST_VERSION}${GST_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer-plugins
-RUN_DEPENDS+= gstreamer-plugins>=${GST_VERSION}${GST_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer-plugins
-
 .if !target(do-build)
 do-build:
 .for dir in ${GST_PREBUILD_DIR} ${GST_PLUGIN_DIR} ${GST_POSTBUILD_DIR}

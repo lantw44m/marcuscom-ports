@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.80 2006/04/28 12:00:14 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.84 2006/06/08 01:14:30 ahze Exp $
 #
 
 PORTNAME=	gstreamer
@@ -78,6 +78,8 @@ INSTALLS_SHLIB=	yes
 MAN1=		gst-visualise-0.10.1
 PLIST_SUB+=	VERSION="${VERSION}" \
 		SHLIB_VERSION="${SHLIB_VERSION}"
+.else
+USE_GSTREAMER=	yes
 .endif
 
 .include "${MASTERDIR}/Makefile.common"
