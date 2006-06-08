@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.40 2006/04/23 21:40:21 marcus Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.44 2006/06/08 01:14:30 ahze Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -420,6 +420,7 @@ DISTFILES+=	${GOOD_DISTFILE}:good
 BUILD_DEPENDS+=	gstreamer-plugins>=${GST_VERSION}${GST_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer-plugins
 RUN_DEPENDS+= gstreamer-plugins>=${GST_VERSION}${GST_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer-plugins
 
+.if !defined(NO_GSTREAMER_COMMON)
 .if !target(do-build)
 do-build:
 .for dir in ${GST_PREBUILD_DIR} ${GST_PLUGIN_DIR} ${GST_POSTBUILD_DIR}
@@ -434,4 +435,5 @@ do-install:
 	@cd ${WRKSRC}/${dir}; ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET}
 .endfor
+.endif
 .endif
