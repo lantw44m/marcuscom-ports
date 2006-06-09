@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.159 2006/05/28 20:33:19 mezz Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.160 2006/05/29 05:34:30 mezz Exp $
 #
 
 PORTNAME=	gnome2
@@ -67,11 +67,6 @@ NO_BUILD=	yes
 
 .if !defined(GNOME_SLAVE)
 USE_PYTHON=	yes
-.endif
-
-.if !defined(BATCH) && !defined(PACKAGE_BUILDING) && !defined(GNOME_SLAVE)
-pre-configure:
-	@${SH} ${PKGINSTALL} ${PKGNAME} PRE-INSTALL
 .endif
 
 .if !defined(GNOME_SLAVE) || ${.CURDIR:T}=="gnome2-lite"
