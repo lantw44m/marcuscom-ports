@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.141 2006/05/31 04:30:40 marcus Exp $
+#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.142 2006/06/01 00:49:27 mezz Exp $
 #
 
 PORTNAME=	gnome-vfs
 PORTVERSION=	2.15.1
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,6 +17,9 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME Virtual File System
+
+BUILD_DEPENDS=	gnome-mount:${PORTSDIR}/sysutils/gnome-mount
+RUN_DEPENDS=	gnome-mount:${PORTSDIR}/sysutils/gnome-mount
 
 USE_BZIP2=	yes
 
@@ -34,7 +37,8 @@ USE_OPENSSL=	yes
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--enable-openssl \
 		--disable-gnutls \
-		--disable-howl
+		--disable-howl \
+		--enable-hal
 CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${LOCALBASE}/include" \
 		BSD_PTHREAD_LIBS=${PTHREAD_LIBS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
