@@ -47,8 +47,8 @@ include/gimp-2.0/libgimp/gimpgradient_pdb.h
 include/gimp-2.0/libgimp/gimpgradientmenu.h
 include/gimp-2.0/libgimp/gimpgradients.h
 include/gimp-2.0/libgimp/gimpgradients_pdb.h
-include/gimp-2.0/libgimp/gimpgradientselect_pdb.h
 include/gimp-2.0/libgimp/gimpgradientselect.h
+include/gimp-2.0/libgimp/gimpgradientselect_pdb.h
 include/gimp-2.0/libgimp/gimpgrid_pdb.h
 include/gimp-2.0/libgimp/gimpguides_pdb.h
 include/gimp-2.0/libgimp/gimphelp_pdb.h
@@ -106,10 +106,12 @@ include/gimp-2.0/libgimpbase/gimpbase.h
 include/gimp-2.0/libgimpbase/gimpbaseenums.h
 include/gimp-2.0/libgimpbase/gimpbasetypes.h
 include/gimp-2.0/libgimpbase/gimpchecks.h
+include/gimp-2.0/libgimpbase/gimpcpuaccel.h
 include/gimp-2.0/libgimpbase/gimpdatafiles.h
 include/gimp-2.0/libgimpbase/gimpenv.h
 include/gimp-2.0/libgimpbase/gimplimits.h
 include/gimp-2.0/libgimpbase/gimpmemsize.h
+include/gimp-2.0/libgimpbase/gimpparam.h
 include/gimp-2.0/libgimpbase/gimpparasite.h
 include/gimp-2.0/libgimpbase/gimpparasiteio.h
 include/gimp-2.0/libgimpbase/gimpsignal.h
@@ -198,7 +200,48 @@ include/gimp-2.0/libgimpwidgets/gimpwidgets.h
 include/gimp-2.0/libgimpwidgets/gimpwidgetsenums.h
 include/gimp-2.0/libgimpwidgets/gimpwidgetstypes.h
 include/gimp-2.0/libgimpwidgets/gimpzoommodel.h
+lib/libgimp-2.0.a
+lib/libgimp-2.0.la
+lib/libgimp-2.0.so
+lib/libgimp-2.0.so.0
+lib/libgimpbase-2.0.a
+lib/libgimpbase-2.0.la
+lib/libgimpbase-2.0.so
+lib/libgimpbase-2.0.so.0
+lib/libgimpcolor-2.0.a
+lib/libgimpcolor-2.0.la
+lib/libgimpcolor-2.0.so
+lib/libgimpcolor-2.0.so.0
+lib/libgimpconfig-2.0.a
+lib/libgimpconfig-2.0.la
+lib/libgimpconfig-2.0.so
+lib/libgimpconfig-2.0.so.0
+lib/libgimpmath-2.0.a
+lib/libgimpmath-2.0.la
+lib/libgimpmath-2.0.so
+lib/libgimpmath-2.0.so.0
+lib/libgimpmodule-2.0.a
+lib/libgimpmodule-2.0.la
+lib/libgimpmodule-2.0.so
+lib/libgimpmodule-2.0.so.0
+lib/libgimpthumb-2.0.a
+lib/libgimpthumb-2.0.la
+lib/libgimpthumb-2.0.so
+lib/libgimpthumb-2.0.so.0
+lib/libgimpui-2.0.a
+lib/libgimpui-2.0.la
+lib/libgimpui-2.0.so
+lib/libgimpui-2.0.so.0
+lib/libgimpwidgets-2.0.a
+lib/libgimpwidgets-2.0.la
+lib/libgimpwidgets-2.0.so
+lib/libgimpwidgets-2.0.so.0
+libdata/pkgconfig/gimp-2.0.pc
+libdata/pkgconfig/gimpthumb-2.0.pc
+libdata/pkgconfig/gimpui-2.0.pc
 libexec/gimp/2.2/environ/default.env
+@comment this is a simlink to gimp-2.3.1, so put it here because it gives me trouble with MAN1.
+man/man1/gimp-console-2.3.1
 %%PYTHON:%%libexec/gimp/2.2/environ/pygimp.env
 libexec/gimp/2.2/interpreters/default.interp
 %%PYTHON:%%libexec/gimp/2.2/interpreters/pygimp.interp
@@ -349,7 +392,6 @@ libexec/gimp/2.2/plug-ins/pnm
 libexec/gimp/2.2/plug-ins/polar
 libexec/gimp/2.2/plug-ins/poppler
 libexec/gimp/2.2/plug-ins/postscript
-%%PRINT%%libexec/gimp/2.2/plug-ins/print
 libexec/gimp/2.2/plug-ins/procedure-browser
 libexec/gimp/2.2/plug-ins/psd
 libexec/gimp/2.2/plug-ins/psd_save
@@ -358,6 +400,7 @@ libexec/gimp/2.2/plug-ins/psp
 libexec/gimp/2.2/plug-ins/randomize
 libexec/gimp/2.2/plug-ins/raw
 libexec/gimp/2.2/plug-ins/rcm
+libexec/gimp/2.2/plug-ins/redeye
 libexec/gimp/2.2/plug-ins/retinex
 libexec/gimp/2.2/plug-ins/ripple
 libexec/gimp/2.2/plug-ins/rotate
@@ -432,64 +475,23 @@ libexec/gimp/2.2/plug-ins/zealouscrop
 %%PYTHON:%%libexec/gimp/2.2/python/gimpui.py
 %%PYTHON:%%libexec/gimp/2.2/python/gimpui.pyc
 %%PYTHON:%%libexec/gimp/2.2/python/gimpui.pyo
-lib/libgimp-2.0.a
-lib/libgimp-2.0.la
-lib/libgimp-2.0.so
-lib/libgimp-2.0.so.%%SHLIBVER%%
-lib/libgimpbase-2.0.a
-lib/libgimpbase-2.0.la
-lib/libgimpbase-2.0.so
-lib/libgimpbase-2.0.so.%%SHLIBVER%%
-lib/libgimpcolor-2.0.a
-lib/libgimpcolor-2.0.la
-lib/libgimpcolor-2.0.so
-lib/libgimpcolor-2.0.so.%%SHLIBVER%%
-lib/libgimpconfig-2.0.a
-lib/libgimpconfig-2.0.la
-lib/libgimpconfig-2.0.so
-lib/libgimpconfig-2.0.so.%%SHLIBVER%%
-lib/libgimpmath-2.0.a
-lib/libgimpmath-2.0.la
-lib/libgimpmath-2.0.so
-lib/libgimpmath-2.0.so.%%SHLIBVER%%
-lib/libgimpmodule-2.0.a
-lib/libgimpmodule-2.0.la
-lib/libgimpmodule-2.0.so
-lib/libgimpmodule-2.0.so.%%SHLIBVER%%
-lib/libgimpthumb-2.0.a
-lib/libgimpthumb-2.0.la
-lib/libgimpthumb-2.0.so
-lib/libgimpthumb-2.0.so.%%SHLIBVER%%
-lib/libgimpui-2.0.a
-lib/libgimpui-2.0.la
-lib/libgimpui-2.0.so
-lib/libgimpui-2.0.so.%%SHLIBVER%%
-lib/libgimpwidgets-2.0.a
-lib/libgimpwidgets-2.0.la
-lib/libgimpwidgets-2.0.so
-lib/libgimpwidgets-2.0.so.%%SHLIBVER%%
-libdata/pkgconfig/gimp-2.0.pc
-libdata/pkgconfig/gimpthumb-2.0.pc
-libdata/pkgconfig/gimpui-2.0.pc
-@comment this is a simlink to gimp-2.3.1, so put it here because it gives me trouble with MAN1.
-man/man1/gimp-console-2.3.1
 share/aclocal/gimp-2.0.m4
-%%DOCSDIR%%/libgimp/ix01.html
-%%DOCSDIR%%/libgimp/ix02.html
-%%DOCSDIR%%/libgimp/ix03.html
-%%DOCSDIR%%/libgimp/ix04.html
 %%DOCSDIR%%/libgimp/GimpAspectPreview.html
 %%DOCSDIR%%/libgimp/GimpDrawableComboBox.html
 %%DOCSDIR%%/libgimp/GimpDrawablePreview.html
 %%DOCSDIR%%/libgimp/GimpFontSelectButton.html
 %%DOCSDIR%%/libgimp/GimpImageComboBox.html
-%%DOCSDIR%%/libgimp/GimpProgressBar.html
 %%DOCSDIR%%/libgimp/GimpProcBrowserDialog.html
+%%DOCSDIR%%/libgimp/GimpProgressBar.html
 %%DOCSDIR%%/libgimp/GimpZoomPreview.html
 %%DOCSDIR%%/libgimp/gimpdefinitions.html
 %%DOCSDIR%%/libgimp/home.png
 %%DOCSDIR%%/libgimp/index.html
 %%DOCSDIR%%/libgimp/index.sgml
+%%DOCSDIR%%/libgimp/ix01.html
+%%DOCSDIR%%/libgimp/ix02.html
+%%DOCSDIR%%/libgimp/ix03.html
+%%DOCSDIR%%/libgimp/ix04.html
 %%DOCSDIR%%/libgimp/left.png
 %%DOCSDIR%%/libgimp/libgimp-data.html
 %%DOCSDIR%%/libgimp/libgimp-general.html
@@ -540,8 +542,8 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimp/libgimp-gimppixelrgn.html
 %%DOCSDIR%%/libgimp/libgimp-gimpplugin.html
 %%DOCSDIR%%/libgimp/libgimp-gimpproceduraldb.html
-%%DOCSDIR%%/libgimp/libgimp-gimpprogress.html
 %%DOCSDIR%%/libgimp/libgimp-gimpprocview.html
+%%DOCSDIR%%/libgimp/libgimp-gimpprogress.html
 %%DOCSDIR%%/libgimp/libgimp-gimpregioniterator.html
 %%DOCSDIR%%/libgimp/libgimp-gimpselection.html
 %%DOCSDIR%%/libgimp/libgimp-gimptexttool.html
@@ -553,6 +555,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimp/libgimp-image.html
 %%DOCSDIR%%/libgimp/libgimp-selectors.html
 %%DOCSDIR%%/libgimp/libgimp.devhelp
+%%DOCSDIR%%/libgimp/libgimp.devhelp2
 %%DOCSDIR%%/libgimp/libgimp.html
 %%DOCSDIR%%/libgimp/libgimpui-hierarchy.html
 %%DOCSDIR%%/libgimp/libgimpui.html
@@ -570,19 +573,20 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpbaseenums.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpbasetypes.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpchecks.html
+%%DOCSDIR%%/libgimpbase/libgimpbase-gimpcpuaccel.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpdatafiles.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpenv.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimplimits.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpmemsize.html
+%%DOCSDIR%%/libgimpbase/libgimpbase-gimpparam.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpparasite.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpparasiteio.html
-%%DOCSDIR%%/libgimpbase/libgimpbase-gimpprotocol.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpsignal.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpunit.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimputils.html
 %%DOCSDIR%%/libgimpbase/libgimpbase-gimpversion.html
-%%DOCSDIR%%/libgimpbase/libgimpbase-gimpwire.html
 %%DOCSDIR%%/libgimpbase/libgimpbase.devhelp
+%%DOCSDIR%%/libgimpbase/libgimpbase.devhelp2
 %%DOCSDIR%%/libgimpbase/libgimpbase.html
 %%DOCSDIR%%/libgimpbase/right.png
 %%DOCSDIR%%/libgimpbase/style.css
@@ -602,6 +606,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpcolor/libgimpcolor-GimpHSV.html
 %%DOCSDIR%%/libgimpcolor/libgimpcolor-GimpRGB.html
 %%DOCSDIR%%/libgimpcolor/libgimpcolor.devhelp
+%%DOCSDIR%%/libgimpcolor/libgimpcolor.devhelp2
 %%DOCSDIR%%/libgimpcolor/libgimpcolor.html
 %%DOCSDIR%%/libgimpcolor/right.png
 %%DOCSDIR%%/libgimpcolor/style.css
@@ -625,6 +630,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpconfig/libgimpconfig-gimpconfig-utils.html
 %%DOCSDIR%%/libgimpconfig/libgimpconfig-hierarchy.html
 %%DOCSDIR%%/libgimpconfig/libgimpconfig.devhelp
+%%DOCSDIR%%/libgimpconfig/libgimpconfig.devhelp2
 %%DOCSDIR%%/libgimpconfig/libgimpconfig.html
 %%DOCSDIR%%/libgimpconfig/right.png
 %%DOCSDIR%%/libgimpconfig/style.css
@@ -657,6 +663,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpmodule/ix04.html
 %%DOCSDIR%%/libgimpmodule/left.png
 %%DOCSDIR%%/libgimpmodule/libgimpmodule.devhelp
+%%DOCSDIR%%/libgimpmodule/libgimpmodule.devhelp2
 %%DOCSDIR%%/libgimpmodule/libgimpmodule.html
 %%DOCSDIR%%/libgimpmodule/right.png
 %%DOCSDIR%%/libgimpmodule/style.css
@@ -674,12 +681,13 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpthumb/libgimpthumb-gimpthumb-error.html
 %%DOCSDIR%%/libgimpthumb/libgimpthumb-gimpthumb-utils.html
 %%DOCSDIR%%/libgimpthumb/libgimpthumb.devhelp
+%%DOCSDIR%%/libgimpthumb/libgimpthumb.devhelp2
 %%DOCSDIR%%/libgimpthumb/libgimpthumb.html
 %%DOCSDIR%%/libgimpthumb/right.png
 %%DOCSDIR%%/libgimpthumb/style.css
 %%DOCSDIR%%/libgimpthumb/up.png
-%%DOCSDIR%%/libgimpwidgets/GimpButton.html
 %%DOCSDIR%%/libgimpwidgets/GimpBrowser.html
+%%DOCSDIR%%/libgimpwidgets/GimpButton.html
 %%DOCSDIR%%/libgimpwidgets/GimpCellRendererColor.html
 %%DOCSDIR%%/libgimpwidgets/GimpCellRendererToggle.html
 %%DOCSDIR%%/libgimpwidgets/GimpChainButton.html
@@ -711,8 +719,8 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpwidgets/GimpPixmap.html
 %%DOCSDIR%%/libgimpwidgets/GimpPreview.html
 %%DOCSDIR%%/libgimpwidgets/GimpPreviewArea.html
-%%DOCSDIR%%/libgimpwidgets/GimpSizeEntry.html
 %%DOCSDIR%%/libgimpwidgets/GimpScrolledPreview.html
+%%DOCSDIR%%/libgimpwidgets/GimpSizeEntry.html
 %%DOCSDIR%%/libgimpwidgets/GimpUnitMenu.html
 %%DOCSDIR%%/libgimpwidgets/gimp-browser.png
 %%DOCSDIR%%/libgimpwidgets/gimp-button.png
@@ -760,6 +768,7 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpwidgets/libgimpwidgets-utils.html
 %%DOCSDIR%%/libgimpwidgets/libgimpwidgets-widgets.html
 %%DOCSDIR%%/libgimpwidgets/libgimpwidgets.devhelp
+%%DOCSDIR%%/libgimpwidgets/libgimpwidgets.devhelp2
 %%DOCSDIR%%/libgimpwidgets/right.png
 %%DOCSDIR%%/libgimpwidgets/stock-anchor-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-cap-butt-16.png
@@ -946,6 +955,8 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpwidgets/stock-toilet-paper-24.png
 %%DOCSDIR%%/libgimpwidgets/stock-tool-airbrush-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-tool-airbrush-22.png
+%%DOCSDIR%%/libgimpwidgets/stock-tool-align-16.png
+%%DOCSDIR%%/libgimpwidgets/stock-tool-align-22.png
 %%DOCSDIR%%/libgimpwidgets/stock-tool-blend-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-tool-blend-22.png
 %%DOCSDIR%%/libgimpwidgets/stock-tool-blur-16.png
@@ -1039,8 +1050,6 @@ share/aclocal/gimp-2.0.m4
 %%DOCSDIR%%/libgimpwidgets/stock-web-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-web-24.png
 %%DOCSDIR%%/libgimpwidgets/stock-wilber-16.png
-%%DOCSDIR%%/libgimpwidgets/stock-wilber-32.png
-%%DOCSDIR%%/libgimpwidgets/stock-wilber-48.png
 %%DOCSDIR%%/libgimpwidgets/stock-wilber-64.png
 %%DOCSDIR%%/libgimpwidgets/stock-wilber-eek-64.png
 %%DOCSDIR%%/libgimpwidgets/stock-zoom-follow-window-12.png
@@ -1094,7 +1103,6 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/brushes/thegimp.gbr
 %%DATADIR%%/brushes/vine.gih
 %%DATADIR%%/brushes/xcf.gbr
-@exec mkdir -p %D/%%DATADIR%%/fonts
 %%DATADIR%%/fractalexplorer/Asteroid_Field
 %%DATADIR%%/fractalexplorer/Bar_Code_Label
 %%DATADIR%%/fractalexplorer/Beauty_of_Nature
@@ -1317,8 +1325,8 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/gradients/Wood_2.ggr
 %%DATADIR%%/gradients/Yellow_Contrast.ggr
 %%DATADIR%%/gradients/Yellow_Orange.ggr
-%%DATADIR%%/images/gimp-splash.png
 %%DATADIR%%/images/gimp-logo.png
+%%DATADIR%%/images/gimp-splash.png
 %%DATADIR%%/images/wilber-devel-icon.png
 %%DATADIR%%/images/wilber-icon.png
 %%DATADIR%%/images/wilber-tips.png
@@ -1351,11 +1359,6 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/menus/tools-menu.xml
 %%DATADIR%%/menus/undo-editor-menu.xml
 %%DATADIR%%/menus/vectors-menu.xml
-share/%%GTK%%application-registry/gimp.applications
-share/%%GTK%%applications/gimp.desktop
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-share/%%GTK%%icons/hicolor/48x48/apps/gimp.png
-share/%%GTK%%mime-info/gimp.keys
 %%DATADIR%%/palettes/Bears.gpl
 %%DATADIR%%/palettes/Bgold.gpl
 %%DATADIR%%/palettes/Blues.gpl
@@ -1529,6 +1532,7 @@ share/%%GTK%%mime-info/gimp.keys
 %%DATADIR%%/scripts/predator.scm
 %%DATADIR%%/scripts/pupi-button.scm
 %%DATADIR%%/scripts/rendermap.scm
+%%DATADIR%%/scripts/reverse-layers.scm
 %%DATADIR%%/scripts/ripply-anim.scm
 %%DATADIR%%/scripts/round-corners.scm
 %%DATADIR%%/scripts/script-fu-util.scm
@@ -1776,6 +1780,8 @@ share/%%GTK%%mime-info/gimp.keys
 %%DATADIR%%/themes/Default/images/stock-toilet-paper-24.png
 %%DATADIR%%/themes/Default/images/stock-tool-airbrush-16.png
 %%DATADIR%%/themes/Default/images/stock-tool-airbrush-22.png
+%%DATADIR%%/themes/Default/images/stock-tool-align-16.png
+%%DATADIR%%/themes/Default/images/stock-tool-align-22.png
 %%DATADIR%%/themes/Default/images/stock-tool-blend-16.png
 %%DATADIR%%/themes/Default/images/stock-tool-blend-22.png
 %%DATADIR%%/themes/Default/images/stock-tool-blur-16.png
@@ -1874,6 +1880,17 @@ share/%%GTK%%mime-info/gimp.keys
 %%DATADIR%%/themes/Default/images/stock-zoom-follow-window-12.png
 %%DATADIR%%/themes/Small/gtkrc
 %%DATADIR%%/tips/gimp-tips.xml
+share/gnome/application-registry/gimp.applications
+share/gnome/applications/gimp.desktop
+share/gnome/applications/mimeinfo.cache
+share/gnome/icons/hicolor/16x16/apps/gimp.png
+share/gnome/icons/hicolor/22x22/apps/gimp.png
+share/gnome/icons/hicolor/24x24/apps/gimp.png
+share/gnome/icons/hicolor/32x32/apps/gimp.png
+share/gnome/icons/hicolor/48x48/apps/gimp.png
+share/gnome/icons/hicolor/64x64/apps/gimp.png
+share/gnome/icons/hicolor/scalable/apps/gimp.svg
+share/gnome/mime-info/gimp.keys
 share/locale/bg/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/bg/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/bg/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -2019,11 +2036,6 @@ share/locale/nl/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/nl/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/nl/LC_MESSAGES/gimp20-tips.mo
 share/locale/nl/LC_MESSAGES/gimp20.mo
-share/locale/no/LC_MESSAGES/gimp20-libgimp.mo
-share/locale/no/LC_MESSAGES/gimp20-script-fu.mo
-share/locale/no/LC_MESSAGES/gimp20-std-plug-ins.mo
-share/locale/no/LC_MESSAGES/gimp20-tips.mo
-share/locale/no/LC_MESSAGES/gimp20.mo
 share/locale/pa/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/pa/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/pa/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -2084,6 +2096,11 @@ share/locale/tr/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/tr/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/tr/LC_MESSAGES/gimp20-tips.mo
 share/locale/tr/LC_MESSAGES/gimp20.mo
+share/locale/tt/LC_MESSAGES/gimp20-libgimp.mo
+share/locale/tt/LC_MESSAGES/gimp20-script-fu.mo
+share/locale/tt/LC_MESSAGES/gimp20-std-plug-ins.mo
+share/locale/tt/LC_MESSAGES/gimp20-tips.mo
+share/locale/tt/LC_MESSAGES/gimp20.mo
 share/locale/uk/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/uk/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/uk/LC_MESSAGES/gimp20-std-plug-ins.mo
@@ -2147,8 +2164,8 @@ share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 @dirrm %%DOCSDIR%%/libgimp
 @dirrm %%DOCSDIR%%
 @dirrm libexec/gimp/2.2/plug-ins
-%%PYTHON:%%@dirrm libexec/gimp/2.2/python
 @dirrm libexec/gimp/2.2/modules
+%%PYTHON:%%@dirrm libexec/gimp/2.2/python
 @dirrm libexec/gimp/2.2/interpreters
 @dirrm libexec/gimp/2.2/environ
 @dirrm libexec/gimp/2.2
@@ -2164,4 +2181,5 @@ share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 @dirrm include/gimp-2.0
 @dirrm etc/gimp/2.2
 @dirrm etc/gimp
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

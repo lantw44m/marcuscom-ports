@@ -3,12 +3,11 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.14 2006/03/02 20:43:05 mezz Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.15 2006/04/11 20:23:06 ahze Exp $
 #
 
 PORTNAME=	gimp
-PORTVERSION=	2.3.5
-PORTREVISION=	2
+PORTVERSION=	2.3.9
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -52,7 +51,8 @@ PLIST_SUB=	SHLIBVER="${SHLIBVER}"
 CONFIGURE_ARGS=	--disable-perl \
 		--with-html-dir=${DOCSDIR} \
 		--disable-gtk-doc \
-		--enable-static
+		--enable-static \
+		--with-gimpprint
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
@@ -63,7 +63,7 @@ MAN5=	gimprc-2.3.5
 
 OPTIONS=	DEBUG "debugging" off \
 		PYTHON "Python-Fu support" off \
-		PRINT "GIMP printing" on \
+		GNOMEPRINT "GNOME printing plugin" on \
 		HTML_HELP_BROWSER "GIMP help browser" on \
 		MP "multiple processor support" off
 
@@ -92,12 +92,10 @@ CONFIGURE_ARGS+=	--disable-python
 PLIST_SUB+=		PYTHON:="@comment "
 .endif
 
-.if defined(WITHOUT_PRINT)
-CONFIGURE_ARGS+=	--disable-print \
-			--without-gnomeprint
+.if defined(WITHOUT_GNOMEPRINT)
+CONFIGURE_ARGS+=	--without-gnomeprint
 PLIST_SUB+=		PRINT="@comment "
 .else
-LIB_DEPENDS+=		gimpprint.2:${PORTSDIR}/print/gimp-print
 USE_GNOME+=		libgnomeprintui
 PLIST_SUB+=		PRINT=""
 .endif
@@ -123,7 +121,14 @@ USE_GNOME+=		libgtkhtml
 PLIST_SUB+=		HELPBROWSER:=""
 .else
 PLIST_SUB+=		HELPBROWSER:="@comment "
+.endif
+
 post-patch:
+	@${REINPLACE_CMD} -e 's|"libpng"|"libpng12"|' \
+		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|@mandir@|${PREFIX}/man|' \
+		${WRKSRC}/docs/Makefile.in
+.if defined(WITH_HTML_HELP_BROWSER)
 	@${REINPLACE_CMD} -e 's|\(have_gtkhtml2=\)yes|\1no|' ${WRKSRC}/configure
 .endif
 
