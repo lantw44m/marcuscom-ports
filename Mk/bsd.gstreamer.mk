@@ -7,11 +7,11 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD: ports/Mk/bsd.gstreamer.mk,v 1.18 2006/05/16 01:43:00 ahze Exp $
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.27 2006/05/17 14:36:12 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.28 2006/05/23 20:33:52 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
-Gstreamer_Include_MAINTAINER=	gnome@FreeBSD.org
+Gstreamer_Include_MAINTAINER=	multimedia@FreeBSD.org
 Gstreamer_Pre_Include=		bsd.gstreamer.mk
 
 .endif
