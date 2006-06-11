@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/editors/gedit-plugins/Makefile,v 1.13 2006/06/11 19:11:10 marcus Exp $
 #
 
 PORTNAME=	gedit-plugins
 PORTVERSION=	2.15.3
+PORTREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -22,14 +23,32 @@ RUN_DEPENDS=	gedit:${PORTSDIR}/editors/gedit \
 		gucharmap:${PORTSDIR}/deskutils/gucharmap
 
 USE_BZIP2=	yes
-USE_PYTHON=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack pygnomedesktop
+USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack
+WANT_GNOME=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	gedit-show-tabbar-plugin.schemas
 
-.include <bsd.port.mk>
+.if defined(PACKAGE_BUILDING)
+.undef WITHOUT_GNOME
+WITH_GNOME=	yes
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if ${HAVE_GNOME:Mpygnomedesktop}!="" && ${ARCH}!="sparc64"
+USE_PYTHON=	yes
+.include "${PORTSDIR}/Mk/bsd.python.mk"
+USE_GNOME+=	pygnomedesktop
+CONFIGURE_ARGS+=--enable-python
+PLIST_SUB+=	PYTHON=""
+.else
+CONFIGURE_ARGS+=--disable-python
+PLIST_SUB+=	PYTHON="@comment "
+.endif
+
+.include <bsd.port.post.mk>
