@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.16 2006/06/09 21:36:08 ahze Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.17 2006/06/11 05:20:38 ahze Exp $
 #
 
 PORTNAME=	gimp
@@ -17,9 +17,10 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
 		ftp://ftp.insync.net/pub/mirrors/ftp.gimp.org/%SUBDIR%/ \
 		http://www.mirrorservice.org/sites/ftp.gimp.org/pub/%SUBDIR%/ \
 		${MASTER_SITE_RINGSERVER:S,%SUBDIR%,graphics/%SUBDIR%,} \
-		${MASTER_SITE_LOCAL}:gut
+		${MASTER_SITE_LOCAL:S|$|ahze/|:S|$|:gut|}
 MASTER_SITE_SUBDIR=	gimp/v${PORTVERSION:R} \
-			ahze:gut
+		ahze:gut
+
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${EXTRA_DISTFILES}
 
 MAINTAINER=	gnome@FreeBSD.org
