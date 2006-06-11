@@ -1,6 +1,15 @@
---- Src/DasherCore/UserLog.cpp.orig	Wed May 31 00:15:35 2006
-+++ Src/DasherCore/UserLog.cpp	Wed May 31 00:16:03 2006
-@@ -881,7 +881,7 @@ bool CUserLog::UpdateMouseLocation()
+--- Src/DasherCore/UserLog.cpp.orig	Fri Apr 21 17:41:02 2006
++++ Src/DasherCore/UserLog.cpp	Sun Jun 11 10:43:33 2006
+@@ -668,7 +668,7 @@
+     szTimeLine = ctime(&(sTimeBuffer.time));
+ #else
+     gettimeofday(&sTimeBuffer, &sTimezoneBuffer);
+-    szTimeLine = ctime(&(sTimeBuffer.tv_sec));
++    szTimeLine = ctime((const time_t *)&(sTimeBuffer.tv_sec));
+ #endif
+ 
+     if ((szTimeLine != NULL) && (strlen(szTimeLine) > 18))
+@@ -881,7 +881,7 @@
    double dTime = (sTimeBuffer.time * 1000.0) + sTimeBuffer.millitm;
  #else
    gettimeofday(&sTimeBuffer, &sTimezoneBuffer);

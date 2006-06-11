@@ -1,6 +1,15 @@
---- Src/DasherCore/FileLogger.cpp.orig	Wed May 31 00:12:32 2006
-+++ Src/DasherCore/FileLogger.cpp	Wed May 31 00:12:43 2006
-@@ -538,7 +538,7 @@ std::string CFileLogger::GetTimeDateStam
+--- Src/DasherCore/FileLogger.cpp.orig	Fri Apr 21 17:41:01 2006
++++ Src/DasherCore/FileLogger.cpp	Sun Jun 11 07:33:19 2006
+@@ -511,7 +511,7 @@
+     szTimeLine = ctime(&(sTimeBuffer.time));
+ #else
+     gettimeofday(&sTimeBuffer, &sTimezoneBuffer);
+-    szTimeLine = ctime(&(sTimeBuffer.tv_sec));
++    szTimeLine = ctime((const time_t *)&(sTimeBuffer.tv_sec));
+ #endif
+  
+     // Format is:
+@@ -538,7 +538,7 @@
  #ifdef _WIN32
          sprintf(strMs, "%d", sTimeBuffer.millitm);
  #else
