@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.15 2006/04/11 20:23:06 ahze Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.16 2006/06/09 21:36:08 ahze Exp $
 #
 
 PORTNAME=	gimp
@@ -16,8 +16,11 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
 		ftp://ftp.fh-heilbronn.de/mirrors/ftp.gimp.org/%SUBDIR%/ \
 		ftp://ftp.insync.net/pub/mirrors/ftp.gimp.org/%SUBDIR%/ \
 		http://www.mirrorservice.org/sites/ftp.gimp.org/pub/%SUBDIR%/ \
-		${MASTER_SITE_RINGSERVER:S,%SUBDIR%,graphics/%SUBDIR%,}
-MASTER_SITE_SUBDIR=	gimp/v${PORTVERSION:R}
+		${MASTER_SITE_RINGSERVER:S,%SUBDIR%,graphics/%SUBDIR%,} \
+		${MASTER_SITE_LOCAL}:gut
+MASTER_SITE_SUBDIR=	gimp/v${PORTVERSION:R} \
+			ahze:gut
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${EXTRA_DISTFILES}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNU Image Manipulation Program development version
@@ -63,8 +66,8 @@ MAN5=	gimprc-2.3.5
 
 OPTIONS=	DEBUG "debugging" off \
 		PYTHON "Python-Fu support" off \
+		PRINT "Gutenprint plugin" on \
 		GNOMEPRINT "GNOME printing plugin" on \
-		HTML_HELP_BROWSER "GIMP help browser" on \
 		MP "multiple processor support" off
 
 .include <bsd.port.pre.mk>
@@ -92,12 +95,26 @@ CONFIGURE_ARGS+=	--disable-python
 PLIST_SUB+=		PYTHON:="@comment "
 .endif
 
-.if defined(WITHOUT_GNOMEPRINT)
-CONFIGURE_ARGS+=	--without-gnomeprint
-PLIST_SUB+=		PRINT="@comment "
+.if !defined(WITHOUT_PRINT)
+LIB_DEPENDS+=	gutenprintui2.1:${PORTSDIR}/print/gutenprint
+EXTRA_DISTFILES+=	gimp2-gutenprint-2${EXTRACT_SUFX}:gut
+GUT_WRKSRC=	${WRKDIR}/gimp2-gutenprint
+PKGCONFIG?=		${LOCALBASE}/bin/pkg-config
+GUTENPRINT_CFLAGS=	`${PKGCONFIG} --cflags gutenprintui2`
+GUTENPRINT_LIBS=	`${PKGCONFIG} --libs gutenprintui2`
+GUT_MAKE_ENV=	GUTENPRINT_CFLAGS="${GUTENPRINT_CFLAGS}" \
+		GUTENPRINT_LIBS="${GUTENPRINT_LIBS}"
+PLIST_SUB+=	GPRINT=""
 .else
+PLIST_SUB+=	GPRINT="@comment "
+.endif
+
+.if !defined(WITHOUT_GNOMEPRINT)
 USE_GNOME+=		libgnomeprintui
 PLIST_SUB+=		PRINT=""
+.else
+CONFIGURE_ARGS+=	--without-gnomeprint
+PLIST_SUB+=		PRINT="@comment "
 .endif
 
 .if defined(WITH_MP)
@@ -116,11 +133,11 @@ PLIST_SUB+=		GTK=""
 CONFIGURE_ENV+=		GIMP_THREAD_LIBS=${PTHREAD_LIBS}
 .endif
 
-.if defined(WITH_HTML_HELP_BROWSER)
-USE_GNOME+=		libgtkhtml
-PLIST_SUB+=		HELPBROWSER:=""
-.else
-PLIST_SUB+=		HELPBROWSER:="@comment "
+post-extract:
+.if !defined(WITHOUT_PRINT)
+	${RM} -rf ${WRKSRC}/plug-ins/print
+	${MKDIR} ${WRKSRC}/plug-ins/print
+	${CP} -f ${GUT_WRKSRC}/* ${WRKSRC}/plug-ins/print
 .endif
 
 post-patch:
@@ -128,12 +145,17 @@ post-patch:
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|@mandir@|${PREFIX}/man|' \
 		${WRKSRC}/docs/Makefile.in
-.if defined(WITH_HTML_HELP_BROWSER)
-	@${REINPLACE_CMD} -e 's|\(have_gtkhtml2=\)yes|\1no|' ${WRKSRC}/configure
+
+post-build:
+.if !defined(WITHOUT_PRINT)
+	@(cd ${WRKSRC}/plug-ins/print; ${SETENV} ${GUT_MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${ALL_TARGET})
 .endif
 
-.if defined(GNOME_ENABLED)
 post-install:
+.if !defined(WITHOUT_PRINT)
+	@(cd ${WRKSRC}/plug-ins/print; ${SETENV} ${GUT_MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET})
+.endif
+.if defined(GNOME_ENABLED)
 	@-update-desktop-database
 .endif
 

@@ -352,7 +352,6 @@ libexec/gimp/2.2/plug-ins/gtm
 libexec/gimp/2.2/plug-ins/guillotine
 libexec/gimp/2.2/plug-ins/header
 libexec/gimp/2.2/plug-ins/help
-%%HELPBROWSER:%%libexec/gimp/2.2/plug-ins/helpbrowser
 libexec/gimp/2.2/plug-ins/hot
 libexec/gimp/2.2/plug-ins/ifscompose
 libexec/gimp/2.2/plug-ins/illusion
@@ -392,6 +391,7 @@ libexec/gimp/2.2/plug-ins/pnm
 libexec/gimp/2.2/plug-ins/polar
 libexec/gimp/2.2/plug-ins/poppler
 libexec/gimp/2.2/plug-ins/postscript
+%%GPRINT%%libexec/gimp/2.2/plug-ins/print
 libexec/gimp/2.2/plug-ins/procedure-browser
 libexec/gimp/2.2/plug-ins/psd
 libexec/gimp/2.2/plug-ins/psd_save
@@ -1882,7 +1882,6 @@ share/aclocal/gimp-2.0.m4
 %%DATADIR%%/tips/gimp-tips.xml
 share/gnome/application-registry/gimp.applications
 share/gnome/applications/gimp.desktop
-share/gnome/applications/mimeinfo.cache
 share/gnome/icons/hicolor/16x16/apps/gimp.png
 share/gnome/icons/hicolor/22x22/apps/gimp.png
 share/gnome/icons/hicolor/24x24/apps/gimp.png
