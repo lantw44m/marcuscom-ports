@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.115 2006/06/06 17:16:42 ahze Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.116 2006/06/07 01:14:21 ahze Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.15.2
+PORTVERSION=	2.15.3
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -50,7 +50,8 @@ WITH_GNOME=	yes
 .endif
 
 .include <bsd.port.pre.mk>
-.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
+.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
+#.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 
 NO_WERROR=	yes
 # allow build with more warnings enabled
