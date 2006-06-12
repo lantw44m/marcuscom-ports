@@ -1,6 +1,5 @@
 bin/gnome-help
 bin/yelp
-libdata/bonobo/servers/GNOME_Yelp.server
 share/gnome/applications/yelp.desktop
 share/gnome/yelp/default.css
 share/gnome/yelp/icons/yelp-icon-caution.png

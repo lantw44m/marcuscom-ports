@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.94 2006/06/05 21:24:13 ahze Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.95 2006/06/06 17:03:52 ahze Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	2.15.2
+PORTVERSION=	2.15.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -15,6 +15,8 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A help browser for the GNOME 2 desktop
+
+LIB_DEPENDS=	dbus-glib-1.1:${PORTSDIR}/devel/dbus
 
 USE_GECKO=	firefox seamonkey xulrunner firefox-devel<->firefox
 USE_GETTEXT=	yes
@@ -33,5 +35,5 @@ MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 GCONF_SCHEMAS=	yelp.schemas
 
 .include <bsd.port.pre.mk>
-.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
+.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 .include <bsd.port.post.mk>
