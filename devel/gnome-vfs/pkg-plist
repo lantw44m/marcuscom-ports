@@ -11,6 +11,8 @@ etc/gnome-vfs-2.0/modules/default-modules.conf
 %%SAMBA%%etc/gnome-vfs-2.0/modules/smb-module.conf
 etc/gnome-vfs-2.0/modules/ssl-modules.conf
 include/gnome-vfs-2.0/include/gnome-vfs-file-size.h
+include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-ace.h
+include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-acl.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-address.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-application-registry.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-async-ops.h

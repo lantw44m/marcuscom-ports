@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.142 2006/06/01 00:49:27 mezz Exp $
+#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.143 2006/06/09 04:30:35 marcus Exp $
 #
 
 PORTNAME=	gnome-vfs
-PORTVERSION=	2.15.1
-PORTREVISION?=	2
+PORTVERSION=	2.15.2
+PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -83,6 +83,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
 		s|%%X11BASE%%|${X11BASE}|g' \
 		${WRKSRC}/libgnomevfs/xdgmime.c
+	@${REINPLACE_CMD} -e 's|-lacl||g' \
+		${WRKSRC}/configure
 	@${SED} -e 's|%%X11BASE%%|${X11BASE}|g' \
 		< ${MASTERDIR}/pkg-install.in > ${PKGINSTALL}
 	@${SED} -e 's|%%X11BASE%%|${X11BASE}|g' \
