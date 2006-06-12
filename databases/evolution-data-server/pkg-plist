@@ -92,6 +92,7 @@ include/evolution-data-server-%%VERSION%%/camel/camel-stream-fs.h
 include/evolution-data-server-%%VERSION%%/camel/camel-stream-mem.h
 include/evolution-data-server-%%VERSION%%/camel/camel-stream-null.h
 include/evolution-data-server-%%VERSION%%/camel/camel-stream-process.h
+include/evolution-data-server-%%VERSION%%/camel/camel-stream-vfs.h
 include/evolution-data-server-%%VERSION%%/camel/camel-stream.h
 include/evolution-data-server-%%VERSION%%/camel/camel-string-utils.h
 include/evolution-data-server-%%VERSION%%/camel/camel-tcp-stream-raw.h
@@ -174,6 +175,7 @@ include/evolution-data-server-%%VERSION%%/libecal/e-cal-view-listener.h
 include/evolution-data-server-%%VERSION%%/libecal/e-cal-view.h
 include/evolution-data-server-%%VERSION%%/libecal/e-cal.h
 include/evolution-data-server-%%VERSION%%/libedata-book/Evolution-DataServer-Addressbook.h
+include/evolution-data-server-%%VERSION%%/libedata-book/e-book-backend-db-cache.h
 include/evolution-data-server-%%VERSION%%/libedata-book/e-book-backend-cache.h
 include/evolution-data-server-%%VERSION%%/libedata-book/e-book-backend-factory.h
 include/evolution-data-server-%%VERSION%%/libedata-book/e-book-backend-sexp.h
