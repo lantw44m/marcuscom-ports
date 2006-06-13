@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.98 2006/04/30 06:13:43 ahze Exp $
+#   $MCom$
 #
 
 PORTNAME=	nautilus-cd-burner
-PORTVERSION=	2.15.2
+PORTVERSION=	2.15.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -21,8 +21,8 @@ USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
-USE_GNOME=	gnomeprefix gnomehack intlhack nautilus2
-GNU_CONFIGURE=	yes
+USE_GNOME=	gnomeprefix gnomehack intlhack nautilus2 ltverhack
+USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 CONFIGURE_ARGS=	--disable-hal
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
