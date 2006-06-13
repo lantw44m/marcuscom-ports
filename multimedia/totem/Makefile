@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	totem
-PORTVERSION=	1.5.1
+PORTVERSION=	1.5.2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -27,6 +27,7 @@ USE_GNOME=	gnomeprefix intlhack gnomehack gnomedesktop desktopfileutils \
 		nautiluscdburner ltverhack
 GNOME_DESKTOP_VERSION=2
 WANT_GSTREAMER=	yes
+INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
@@ -48,7 +49,7 @@ CONFLICTS?=	totem-gstreamer-[0-9]*
 
 .if defined(WITH_MOZILLA_PLUGIN)
 USE_GECKO=	firefox mozilla seamonkey xulrunner<->firefox firefox-devel<->firefox
-.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
+.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 PLIST_SUB+=	MOZILLA=""
 CONFIGURE_ARGS+=--with-mozilla=${GECKO}
 .else
@@ -58,7 +59,7 @@ CONFIGURE_ARGS+=--disable-mozilla
 
 .if defined(WITH_GSTREAMER)
 CONFIGURE_ARGS+=--enable-gstreamer=yes
-USE_GSTREAMER+=	gnomevfs core gconf hal
+USE_GSTREAMER+=	gnomevfs core gconf hal good
 WITHOUT_DVDNAV=	yes
 PLIST_SUB+=	GSTREAMER=""
 .else
