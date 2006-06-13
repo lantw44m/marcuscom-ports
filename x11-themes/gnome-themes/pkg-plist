@@ -93,7 +93,6 @@ share/icons/Crux/72x72/filesystems/gnome-fs-regular.png
 share/icons/Crux/96x96/emblems/emblem-nowrite.png
 share/icons/Crux/96x96/filesystems/gnome-fs-directory.png
 share/icons/Crux/96x96/filesystems/gnome-fs-regular.png
-share/icons/Crux/icon-theme.cache
 share/icons/Crux/index.theme
 share/icons/Flat-Blue/12x12/emblems/emblem-symbolic-link.png
 share/icons/Flat-Blue/12x12/filesystems/gnome-fs-directory-accept.png
@@ -145,7 +144,6 @@ share/icons/Flat-Blue/72x72/filesystems/gnome-fs-web.png
 share/icons/Flat-Blue/96x96/filesystems/gnome-fs-directory-accept.png
 share/icons/Flat-Blue/96x96/filesystems/gnome-fs-directory.png
 share/icons/Flat-Blue/96x96/filesystems/gnome-fs-regular.png
-share/icons/Flat-Blue/icon-theme.cache
 share/icons/Flat-Blue/index.theme
 share/icons/Flat-Blue/scalable/emblems/emblem-OK.svg
 share/icons/Flat-Blue/scalable/emblems/emblem-certified.svg
@@ -1175,7 +1173,6 @@ share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-video.png
 share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-x-font-afm.png
 share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-x-font.png
 share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-package.png
-share/icons/HighContrastLargePrint/icon-theme.cache
 share/icons/HighContrastLargePrint/index.theme
 share/icons/HighContrastLargePrintInverse/48x48/apps/JUSimageIcon.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/accessibility-directory.png
@@ -1555,7 +1552,6 @@ share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-video.png
 share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-x-font-afm.png
 share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-x-font.png
 share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-package.png
-share/icons/HighContrastLargePrintInverse/icon-theme.cache
 share/icons/HighContrastLargePrintInverse/index.theme
 share/icons/LargePrint/index.theme
 share/icons/LowContrast/index.theme
@@ -1788,7 +1784,6 @@ share/icons/LowContrastLargePrint/48x48/mimetypes/gnome-mime-video-x-ms-wmv.png
 share/icons/LowContrastLargePrint/48x48/mimetypes/gnome-mime-video-x-msvideo.png
 share/icons/LowContrastLargePrint/48x48/mimetypes/gnome-mime-x-font-afm.png
 share/icons/LowContrastLargePrint/48x48/mimetypes/gnome-package.png
-share/icons/LowContrastLargePrint/icon-theme.cache
 share/icons/LowContrastLargePrint/index.theme
 share/icons/Sandy/12x12/filesystems/gnome-fs-directory-accept.png
 share/icons/Sandy/12x12/filesystems/gnome-fs-directory.png
@@ -1802,7 +1797,6 @@ share/icons/Sandy/72x72/filesystems/gnome-fs-directory-accept.png
 share/icons/Sandy/72x72/filesystems/gnome-fs-directory.png
 share/icons/Sandy/96x96/filesystems/gnome-fs-directory-accept.png
 share/icons/Sandy/96x96/filesystems/gnome-fs-directory.png
-share/icons/Sandy/icon-theme.cache
 share/icons/Sandy/index.theme
 share/icons/Smokey-Blue/48x48/emblems/emblem-nowrite.png
 share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-directory.png
@@ -1813,7 +1807,6 @@ share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full-accept.png
 share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full.png
 share/icons/Smokey-Blue/72x72/filesystems/gnome-fs-directory.png
 share/icons/Smokey-Blue/96x96/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Blue/icon-theme.cache
 share/icons/Smokey-Blue/index.theme
 share/icons/Smokey-Red/48x48/emblems/emblem-nowrite.png
 share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty-accept.png
@@ -1825,7 +1818,6 @@ share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.png
 share/icons/Smokey-Red/64x64/filesystems/gnome-fs-nfs.png
 share/icons/Smokey-Red/72x72/filesystems/gnome-fs-directory.png
 share/icons/Smokey-Red/96x96/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Red/icon-theme.cache
 share/icons/Smokey-Red/index.theme
 share/locale/am/LC_MESSAGES/gnome-themes.mo
 share/locale/ar/LC_MESSAGES/gnome-themes.mo
@@ -2530,13 +2522,12 @@ share/themes/Smokey-Blue/gtk-2.0/lines_background_blue.png
 share/themes/Smokey-Blue/gtk-2.0/option1.png
 share/themes/Smokey-Blue/gtk-2.0/option2.png
 share/themes/Smokey-Blue/index.theme
-share/themes/Traditional/index.theme
-@dirrm share/themes/Traditional
 @dirrm share/themes/Smokey-Blue/gtk-2.0
 @dirrm share/themes/Smokey-Blue
 @dirrm share/themes/Simple/gtk-2.0
 @dirrm share/themes/Simple
 @dirrm share/themes/Ocean-Dream
+@dirrm share/themes/Mist
 @dirrm share/themes/LowContrastLargePrint/pixmaps
 @dirrm share/themes/LowContrastLargePrint/gtk-2.0
 @dirrm share/themes/LowContrastLargePrint
@@ -2560,6 +2551,8 @@ share/themes/Traditional/index.theme
 @dirrm share/themes/Grand-Canyon
 @dirrm share/themes/Glider/gtk-2.0
 @dirrm share/themes/Glider
+@dirrm share/themes/Crux
+@dirrm share/themes/Clearlooks
 @dirrm share/icons/Smokey-Red/96x96/filesystems
 @dirrm share/icons/Smokey-Red/96x96
 @dirrm share/icons/Smokey-Red/72x72/filesystems
