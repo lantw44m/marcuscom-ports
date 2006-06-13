@@ -1,25 +1,5 @@
 bin/evolution
 bin/evolution-%%VERSION%%
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-cell-popup.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-cell-registry.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-cell-text.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-cell-toggle.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-cell-tree.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-cell-vbox.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-cell.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-table-click-to-add-factory.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-table-click-to-add.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-table-column-header.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-table-factory.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-table-item-factory.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-table-item.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-table.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-tree-factory.h
-include/evolution-%%VERSION%%/a11y/e-table/gal-a11y-e-tree.h
-include/evolution-%%VERSION%%/a11y/e-text/gal-a11y-e-text-factory.h
-include/evolution-%%VERSION%%/a11y/e-text/gal-a11y-e-text.h
-include/evolution-%%VERSION%%/a11y/gal-a11y-factory.h
-include/evolution-%%VERSION%%/a11y/gal-a11y-util.h
 include/evolution-%%VERSION%%/addressbook/gui/widgets/eab-config.h
 include/evolution-%%VERSION%%/addressbook/gui/widgets/eab-menu.h
 include/evolution-%%VERSION%%/addressbook/gui/widgets/eab-popup.h
@@ -164,6 +144,7 @@ include/evolution-%%VERSION%%/table/e-cell-checkbox.h
 include/evolution-%%VERSION%%/table/e-cell-combo.h
 include/evolution-%%VERSION%%/table/e-cell-date.h
 include/evolution-%%VERSION%%/table/e-cell-float.h
+include/evolution-%%VERSION%%/table/e-cell-hbox.h
 include/evolution-%%VERSION%%/table/e-cell-number.h
 include/evolution-%%VERSION%%/table/e-cell-pixbuf.h
 include/evolution-%%VERSION%%/table/e-cell-popup.h
@@ -516,9 +497,11 @@ share/gnome/evolution/%%VERSION%%/help/quickref/C/quickref.pdf
 share/gnome/evolution/%%VERSION%%/images/about-box.png
 share/gnome/evolution/%%VERSION%%/images/bcg.png
 share/gnome/evolution/%%VERSION%%/images/evolution-contacts-mini.png
+share/gnome/evolution/%%VERSION%%/images/minus.png
 share/gnome/evolution/%%VERSION%%/images/monkey-16.png
 share/gnome/evolution/%%VERSION%%/images/offline.png
 share/gnome/evolution/%%VERSION%%/images/online.png
+share/gnome/evolution/%%VERSION%%/images/plus.png
 share/gnome/evolution/%%VERSION%%/images/query-free-busy.png
 share/gnome/evolution/%%VERSION%%/images/world_map-960.png
 share/gnome/evolution/%%VERSION%%/searchtypes.xml
@@ -552,6 +535,8 @@ share/gnome/evolution/%%VERSION%%/views/mail/By_Sender.galview
 share/gnome/evolution/%%VERSION%%/views/mail/By_Status.galview
 share/gnome/evolution/%%VERSION%%/views/mail/By_Subject.galview
 share/gnome/evolution/%%VERSION%%/views/mail/Messages.galview
+share/gnome/evolution/%%VERSION%%/views/mail/Wide_View_Normal.galview
+share/gnome/evolution/%%VERSION%%/views/mail/Wide_View_Sent.galview
 share/gnome/evolution/%%VERSION%%/views/mail/galview.xml
 share/gnome/evolution/%%VERSION%%/views/memos/Memos.galview
 share/gnome/evolution/%%VERSION%%/views/memos/galview.xml
@@ -779,8 +764,5 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm include/evolution-%%VERSION%%/addressbook/gui/widgets
 @dirrm include/evolution-%%VERSION%%/addressbook/gui
 @dirrm include/evolution-%%VERSION%%/addressbook
-@dirrm include/evolution-%%VERSION%%/a11y/e-text
-@dirrm include/evolution-%%VERSION%%/a11y/e-table
-@dirrm include/evolution-%%VERSION%%/a11y
 @dirrm include/evolution-%%VERSION%%
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
