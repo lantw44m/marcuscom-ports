@@ -1,5 +1,5 @@
---- gs-debug.c.orig	Tue Jun 13 15:18:14 2006
-+++ gs-debug.c	Tue Jun 13 15:21:32 2006
+--- src/gs-debug.c.orig	Tue Jun 13 15:18:14 2006
++++ src/gs-debug.c	Tue Jun 13 15:21:32 2006
 @@ -132,9 +132,13 @@ _gs_profile_log (const char *func,
          char   *str;
          char   *formatted;
