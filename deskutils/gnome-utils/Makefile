@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.97 2006/05/28 04:12:26 mezz Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.98 2006/05/28 22:13:36 marcus Exp $
 #
 
 PORTNAME=	gnome-utils
-PORTVERSION=	2.15.0
-PORTREVISION=	2
+PORTVERSION=	2.15.4
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -27,14 +26,16 @@ INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 INSTALLS_SHLIB=	yes
+INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
 		libgnomeprintui gnomedesktop ltverhack
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-MAN1=		gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1
+MAN1=		gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1 \
+		baobab.1
 GCONF_SCHEMAS=	gnome-dictionary.schemas gnome-screenshot.schemas \
-		gnome-search-tool.schemas logview.schemas
+		gnome-search-tool.schemas logview.schemas baobab.schemas
 
 .include <bsd.port.mk>
