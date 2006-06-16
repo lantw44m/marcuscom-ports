@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.113 2006/06/13 05:09:33 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.114 2006/06/13 19:15:18 marcus Exp $
 #
 
 PORTNAME=	gnome-applets
@@ -48,8 +48,6 @@ GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas \
 OPTIONS=	MINI_COMMANDER "Enable mini-commander applet" off
 
 FREEBSD_SYS?=	/usr/src/sys
-
-BROKEN=		Needs new libgswitchit
 
 .include <bsd.port.pre.mk>
 
