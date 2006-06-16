@@ -21,9 +21,25 @@ rcvar=`set_rcvar`
 command="%%PREFIX%%/sbin/hald"
 pidfile="/var/run/${name}/${name}.pid"
 
-stop_postcmd=stop_postcmd
+stop_postcmd="hald_postcmd"
+start_precmd="hald_precmd"
 
-stop_postcmd()
+hald_precmd()
+{
+    if ! checkyesno dbus_enable
+    then
+	force_depend dbus || return 1
+    fi
+
+    if ! checkyesno polkitd_enable
+    then
+	force_depend polkitd || return 1
+    fi
+
+    mkdir -p $(dirname $pidfile)
+}
+
+hald_postcmd()
 {
     rm -f $pidfile
 }
