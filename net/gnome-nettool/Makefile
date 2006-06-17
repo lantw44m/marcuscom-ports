@@ -3,7 +3,7 @@
 # Whom:				Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD: ports/net/gnomenettool/Makefile,v 1.18 2006/04/30 00:47:18 marcus Exp $
-#   $MCom: ports/net/gnome-nettool/Makefile,v 1.25 2006/05/12 20:03:59 marcus Exp $
+#   $MCom: ports/net/gnome-nettool/Makefile,v 1.26 2006/05/28 15:13:40 pav Exp $
 #
 
 PORTNAME=	gnome-nettool
@@ -20,7 +20,7 @@ COMMENT=	A GNOME utility that provides network information statistics
 
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix libglade2 gconf2
+USE_GNOME=	gnomehack intlhack gnomeprefix libglade2 gconf2 gnomedocutils
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
