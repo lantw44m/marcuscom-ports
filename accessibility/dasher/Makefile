@@ -3,7 +3,7 @@
 # Whom:					lewiz <purple@lewiz.net>
 #
 # $FreeBSD: ports/accessibility/dasher/Makefile,v 1.30 2006/04/30 00:47:13 marcus Exp $
-#   $MCom: ports/accessibility/dasher/Makefile,v 1.36 2006/05/17 04:10:34 marcus Exp $
+#   $MCom: ports/accessibility/dasher/Makefile,v 1.37 2006/06/10 05:13:23 marcus Exp $
 #
 
 PORTNAME=	dasher
@@ -25,7 +25,7 @@ USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier libgnomeui atspi \
-		libwnck
+		libwnck gnomedocutils
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
