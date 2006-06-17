@@ -2553,6 +2553,10 @@ share/themes/Smokey-Blue/index.theme
 @dirrm share/themes/Glider
 @dirrm share/themes/Crux
 @dirrm share/themes/Clearlooks
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
+@dirrmtry share/locale/ky/LC_MESSAGES
+@dirrmtry share/locale/ky
 @dirrm share/icons/Smokey-Red/96x96/filesystems
 @dirrm share/icons/Smokey-Red/96x96
 @dirrm share/icons/Smokey-Red/72x72/filesystems
