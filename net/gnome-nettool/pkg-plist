@@ -77,6 +77,7 @@ share/locale/zh_CN/LC_MESSAGES/gnome-nettool.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-nettool.mo
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrm share/gnome/omf/gnome-nettool
 @dirrm share/gnome/help/gnome-nettool/C
 @dirrm share/gnome/help/gnome-nettool
 @dirrm share/gnome/gnome-nettool/pixmaps
