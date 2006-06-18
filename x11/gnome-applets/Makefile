@@ -7,7 +7,8 @@
 #
 
 PORTNAME=	gnome-applets
-PORTVERSION=	2.15.1
+PORTVERSION=	2.14.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -81,7 +82,5 @@ PLIST_SUB+=	COMMANDER="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' \
 		${WRKSRC}/libgweather/weather-met.c
-	@${REINPLACE_CMD} -e 's|system-tools-backends|system-tools-backends-2.0|g' \
-		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
