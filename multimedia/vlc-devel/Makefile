@@ -2,14 +2,15 @@
 # Date created:		3rd August 2001
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/vlc-devel/Makefile,v 1.146 2006/05/22 01:12:07 ahze Exp $
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.11 2006/05/22 14:10:53 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.12 2006/06/09 18:13:48 ahze Exp $
 #
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
 
 PORTNAME=	vlc
-DISTVERSION=	0.8.6.20060521
+DISTVERSION=	0.8.6.20060621
+PORTREVISION=	1
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://nightlies.videolan.org/build/source/
 #		http://download.videolan.org/pub/videolan/vlc/${PORTVERSION}/ \
@@ -191,7 +192,7 @@ CONFIGUE_ARGS+=		--disable-bonjour
 
 .if !defined(WITHOUT_CDROM)
 LIB_DEPENDS+=	vcdinfo.2:${PORTSDIR}/multimedia/vcdimager \
-		cdio.6:${PORTSDIR}/sysutils/libcdio
+		cdio.7:${PORTSDIR}/sysutils/libcdio
 CONFIGURE_ARGS+=--enable-vcd \
 		--disable-libcdio \
 		--disable-libcddb \

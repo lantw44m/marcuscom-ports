@@ -4,8 +4,8 @@
 # enabled by default, if it starts with WITH_ it is disabled by default
 # and will be autodetected to enable
 #
-# $FreeBSD: ports/multimedia/vlc-devel/Makefile.inc,v 1.4 2006/05/22 01:12:07 ahze Exp $
-#    $MCom: ports/multimedia/vlc-devel/Makefile.inc,v 1.2 2006/05/15 02:46:26 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/multimedia/vlc-devel/Makefile.inc,v 1.3 2006/05/22 01:50:17 ahze Exp $
 #
 # If you define for example WITH_FAAD and WITHOUT_FAAD
 # the WITHOUT_ will always over ride the WITH_.
@@ -232,7 +232,7 @@
 
 pre-everything::
 	@${ECHO_MSG} ""
-	@${ECHO_MSG} "Take a careful look at the beginning of the Makefile in order"
+	@${ECHO_MSG} "Take a careful look at the beginning of the Makefile.inc in order"
 	@${ECHO_MSG} "to learn how to tune VLC to your personal preferences!"
 	@${ECHO_MSG} ""
 .if !defined(BATCH) || !defined(PACKAGE_BUILDING)
