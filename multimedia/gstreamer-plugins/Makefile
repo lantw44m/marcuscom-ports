@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD: ports/multimedia/gstreamer-plugins/Makefile,v 1.102 2006/06/09 20:24:02 ahze Exp $
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.86 2006/06/09 18:13:48 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.88 2006/06/22 05:20:50 ahze Exp $
 #
 
 PORTNAME=	gstreamer
@@ -67,7 +67,7 @@ IGNORE=	many plugins don't build or even work on 4.x
 .endif
 
 .if ${GST_PLUGIN} == "base"
-DIST=	base
+base_DIST=	base
 NO_GSTREAMER_COMMON=	yes
 INSTALLS_SHLIB=	yes
 MAN1=		gst-visualise-0.10.1
@@ -78,6 +78,31 @@ USE_GSTREAMER=	yes
 .endif
 
 .include "${MASTERDIR}/Makefile.common"
+
+.if ${DIST}=="base"
+EXTRACT_ONLY=${BASE_DISTFILE}
+WRKSRC=${WRKDIR}/${BASE_DISTNAME}
+PORTVERSION=	${BASE_PORTVERSION}
+DISTFILES+=	${BASE_DISTFILE}:base
+.elif ${DIST}=="bad"
+EXTRACT_ONLY=${BAD_DISTFILE}
+WRKSRC=${WRKDIR}/${BAD_DISTNAME}
+PORTVERSION=	${BAD_PORTVERSION}
+DISTFILES+=	${BAD_DISTFILE}:bad
+.elif ${DIST}=="ugly"
+EXTRACT_ONLY=${UGLY_DISTFILE}
+WRKSRC=${WRKDIR}/${UGLY_DISTNAME}
+PORTVERSION=	${UGLY_PORTVERSION}
+DISTFILES+=	${UGLY_DISTFILE}:ugly
+.elif ${DIST}=="makesum"
+DISTFILES+=	${BASE_DISTFILE}:base ${BAD_DISTFILE}:bad \
+		${UGLY_DISTFILE}:ugly ${GOOD_DISTFILE}:good
+.else
+EXTRACT_ONLY=${GOOD_DISTFILE}
+WRKSRC=${WRKDIR}/${GOOD_DISTNAME}
+PORTVERSION=	${GOOD_PORTVERSION}
+DISTFILES+=	${GOOD_DISTFILE}:good
+.endif
 
 # cdrom default device
 .ifdef(WITH_CDROM_DEVICE)
