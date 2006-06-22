@@ -328,12 +328,12 @@ lib/gtk-2.0/%%GTK_VERSION%%/loaders/libpixbufloader-xpm.so
 %%CUPS:%%lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-cups.a
 %%CUPS:%%lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-cups.la
 %%CUPS:%%lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-cups.so
+lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-file.a
+lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-file.la
+lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-file.so
 lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-lpr.a
 lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-lpr.la
 lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-lpr.so
-lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-pdf.a
-lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-pdf.la
-lib/gtk-2.0/%%GTK_VERSION%%/printbackends/libprintbackend-pdf.so
 lib/libgdk-x11-2.0.a
 lib/libgdk-x11-2.0.la
 lib/libgdk-x11-2.0.so
