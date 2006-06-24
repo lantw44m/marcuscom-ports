@@ -1,5 +1,5 @@
 # $FreeBSD: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.34 2006/06/09 20:24:02 ahze Exp $
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.52 2006/06/24 16:35:42 marcus Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.53 2006/06/24 17:42:51 marcus Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -327,9 +327,13 @@ PLIST_FILES=	${gst_${GST_PLUGIN}_PLIST_FILES}
 EXTRA_LIBS+=	${gst_${GST_PLUGIN}_EXTRA_LIBS}
 USE_GNOME+=	${gst_${GST_PLUGIN}_USE_GNOME}
 CONFIGURE_ENV+=	${gst_${GST_PLUGIN}_CONFIGURE_ENV}
+.if ${gst_${GST_PLUGIN}_GCONF_SCHEMAS}!=""
 GCONF_SCHEMAS=	${gst_${GST_PLUGIN}_GCONF_SCHEMAS}
+.endif
 CONFIGURE_ARGS+=${gst_${GST_PLUGIN}_CONFIGURE_ARGS}
+.if ${gst_${GST_PLUGIN}_USE_SDL}!=""
 USE_SDL=	${gst_${GST_PLUGIN}_USE_SDL}
+.endif
 USE_GSTREAMER+=	${gst_${GST_PLUGIN}_USE_GSTREAMER}
 GST_PREBUILD_DIR=${gst_${GST_PLUGIN}_GST_PREBUILD_DIR}
 GST_PLUGIN_DIR=	${gst_${GST_PLUGIN}_GST_PLUGIN_DIR}
