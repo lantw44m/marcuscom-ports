@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.116 2006/06/17 04:17:57 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.118 2006/06/18 03:38:38 marcus Exp $
 #
 
 PORTNAME=	gnome-applets
-PORTVERSION=	2.14.2
-PORTREVISION=	1
+PORTVERSION=	2.15.1.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -33,6 +32,7 @@ INSTALLS_ICONS=	yes
 INSTALLS_SHLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
 		gail gnomedocutils
+WANT_GNOME=	yes
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gstreamer=0.10
@@ -41,13 +41,18 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		FREEBSD_SYS=${FREEBSD_SYS}
 
 GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas \
-		gswitchit.schemas gtik.schemas gweather.schemas \
+		gswitchit.schemas gweather.schemas \
 		mixer.schemas multiload.schemas \
 		stickynotes.schemas
 
 OPTIONS=	MINI_COMMANDER "Enable mini-commander applet" off
 
 FREEBSD_SYS?=	/usr/src/sys
+
+.if defined(PACKAGE_BUILDING)
+.undef WITHOUT_GNOME
+WITH_GNOME=	yes
+.endif
 
 .include <bsd.port.pre.mk>
 
@@ -79,8 +84,19 @@ PLIST_SUB+=	COMMANDER=""
 PLIST_SUB+=	COMMANDER="@comment "
 .endif
 
+.if exists(${pygnome2_DETECT}) || ( ${HAVE_GNOME:Mpygnome2}!="" && ${ARCH}!="sparc64" )
+USE_PYTHON=	yes
+.include "${PORTSDIR}/Mk/bsd.python.mk"
+USE_GNOME+=	pygnome2
+PLIST_SUB+=	PYTHON=""
+.else
+PLIST_SUB+=	PYTHON="@comment "
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' \
 		${WRKSRC}/libgweather/weather-met.c
+	@${REINPLACE_CMD} -e 's|system-tools-backends|system-tools-backends-2.0|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>

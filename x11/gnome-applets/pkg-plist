@@ -1,5 +1,6 @@
 %%CPUFREQ%%bin/cpufreq-selector
 bin/gswitchit-plugins-capplet
+%%PYTHON%%bin/invest-chart
 %%BATTERY%%etc/sound/events/battstat_applet.soundlist
 include/libgswitchit/gswitchit_config.h
 include/libgswitchit/gswitchit_plugin.h
@@ -10,6 +11,30 @@ lib/libgweather.a
 lib/libgweather.la
 lib/libgweather.so
 lib/libgweather.so.0
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/__init__.py
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/__init__.pyc
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/__init__.pyo
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/about.py
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/about.pyc
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/about.pyo
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/applet.py
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/applet.pyc
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/applet.pyo
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/chart.py
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/chart.pyc
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/chart.pyo
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/defs.py
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/defs.pyc
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/defs.pyo
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/preferences.py
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/preferences.pyc
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/preferences.pyo
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/quotes.py
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/quotes.pyc
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/quotes.pyo
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/widgets.py
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/widgets.pyc
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/widgets.pyo
 libdata/bonobo/servers/GNOME_AccessxStatusApplet.server
 %%BATTERY%%libdata/bonobo/servers/GNOME_BattstatApplet.server
 libdata/bonobo/servers/GNOME_CDPlayerApplet.server
@@ -29,6 +54,7 @@ libdata/bonobo/servers/GNOME_NullApplet_Factory.server
 libdata/bonobo/servers/GNOME_Panel_TrashApplet.server
 libdata/bonobo/servers/GNOME_Panel_WirelessApplet.server
 libdata/bonobo/servers/GNOME_StickyNotesApplet.server
+%%PYTHON%%libdata/bonobo/servers/Invest_Applet.server
 libdata/pkgconfig/gswitchit.pc
 libdata/pkgconfig/gweather.pc
 libexec/accessx-status-applet
@@ -39,8 +65,8 @@ libexec/drivemount_applet2
 libexec/geyes_applet2
 %%COMMANDER%%libexec/gnome-applets/mc-install-default-macros
 libexec/gnome-keyboard-applet
-libexec/gtik2_applet2
 libexec/gweather-applet-2
+%%PYTHON%%libexec/invest-applet
 %%COMMANDER%%libexec/mini_commander_applet
 libexec/mixer_applet2
 libexec/modem_applet
@@ -48,6 +74,7 @@ libexec/multiload-applet-2
 libexec/null_applet
 libexec/stickynotes_applet
 libexec/trashapplet
+%%PYTHON%%share/gnome/applications/invest-chart.desktop
 share/gnome/gnome-2.0/ui/GNOME_AccessxApplet.xml
 %%BATTERY%%share/gnome/gnome-2.0/ui/GNOME_BattstatApplet.xml
 %%CPUFREQ%%share/gnome/gnome-2.0/ui/GNOME_CPUFreqApplet.xml
@@ -56,13 +83,16 @@ share/gnome/gnome-2.0/ui/GNOME_DriveMountApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GSwitchItApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GWeatherApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_GeyesApplet.xml
-share/gnome/gnome-2.0/ui/GNOME_GtikApplet.xml
 %%COMMANDER%%share/gnome/gnome-2.0/ui/GNOME_MiniCommanderApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_MixerApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_ModemLights.xml
 share/gnome/gnome-2.0/ui/GNOME_MultiloadApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_Panel_TrashApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_StickyNotesApplet.xml
+%%PYTHON%%share/gnome/gnome-2.0/ui/Invest_Applet.xml
+%%PYTHON%%share/gnome/gnome-applets/art/invest-16.png
+%%PYTHON%%share/gnome/gnome-applets/art/invest-button.png
+%%PYTHON%%share/gnome/gnome-applets/art/invest.svg
 share/gnome/gnome-applets/geyes/Bizarre/Bizarre-eye.png
 share/gnome/gnome-applets/geyes/Bizarre/Bizarre-pupil.png
 share/gnome/gnome-applets/geyes/Bizarre/config
@@ -80,10 +110,12 @@ share/gnome/gnome-applets/geyes/Horrid/horrid_eye.png
 share/gnome/gnome-applets/geyes/Horrid/horrid_pupil.png
 %%BATTERY%%share/gnome/gnome-applets/glade/battstat_applet.glade
 %%CPUFREQ%%share/gnome/gnome-applets/glade/cpufreq-preferences.glade
+%%PYTHON%%share/gnome/gnome-applets/glade/financialchart.glade
 share/gnome/gnome-applets/glade/gswitchit-plugins.glade
 share/gnome/gnome-applets/glade/gswitchit.glade
 %%COMMANDER%%share/gnome/gnome-applets/glade/mini-commander.glade
 share/gnome/gnome-applets/glade/modemlights.glade
+%%PYTHON%%share/gnome/gnome-applets/glade/prefs-dialog.glade
 share/gnome/gnome-applets/glade/stickynotes.glade
 share/gnome/gnome-applets/glade/trashapplet.glade
 share/gnome/gnome-applets/gweather/Locations.xml
@@ -295,6 +327,16 @@ share/gnome/help/char-palette/uk/figures/charpick_characters.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/uk/figures/cpufreq-applet-selector-both.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/uk/figures/cpufreq-applet-selector.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/uk/figures/cpufreq-applet.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/zh_CN/cpufreq-applet.xml
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-100.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-25.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-50.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-75.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-applet-preferences-smp.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-applet-preferences.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-applet-selector-both.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-applet-selector.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/zh_CN/figures/cpufreq-applet.png
 share/gnome/help/drivemount/C/drivemount.xml
 share/gnome/help/drivemount/C/figures/drivemount-applet_eject.png
 share/gnome/help/drivemount/C/figures/drivemount-applet_example.png
@@ -332,6 +374,12 @@ share/gnome/help/drivemount/uk/figures/drivemount-applet_example.png
 share/gnome/help/drivemount/uk/figures/drivemount-applet_mount.png
 share/gnome/help/drivemount/uk/figures/drivemount-applet_open.png
 share/gnome/help/drivemount/uk/figures/drivemount-applet_status.png
+share/gnome/help/drivemount/zh_CN/drivemount.xml
+share/gnome/help/drivemount/zh_CN/figures/drivemount-applet_eject.png
+share/gnome/help/drivemount/zh_CN/figures/drivemount-applet_example.png
+share/gnome/help/drivemount/zh_CN/figures/drivemount-applet_mount.png
+share/gnome/help/drivemount/zh_CN/figures/drivemount-applet_open.png
+share/gnome/help/drivemount/zh_CN/figures/drivemount-applet_status.png
 share/gnome/help/geyes/C/figures/geyes_applet.png
 share/gnome/help/geyes/C/geyes.xml
 share/gnome/help/geyes/C/legal.xml
@@ -352,15 +400,6 @@ share/gnome/help/gswitchit/C/legal.xml
 share/gnome/help/gswitchit/es/gswitchit.xml
 share/gnome/help/gswitchit/fr/gswitchit.xml
 share/gnome/help/gswitchit/uk/gswitchit.xml
-share/gnome/help/gtik2_applet2/C/figures/gtik_applet.png
-share/gnome/help/gtik2_applet2/C/gtik2_applet2.xml
-share/gnome/help/gtik2_applet2/C/legal.xml
-share/gnome/help/gtik2_applet2/es/figures/gtik_applet.png
-share/gnome/help/gtik2_applet2/es/gtik2_applet2.xml
-share/gnome/help/gtik2_applet2/fr/figures/gtik_applet.png
-share/gnome/help/gtik2_applet2/fr/gtik2_applet2.xml
-share/gnome/help/gtik2_applet2/uk/figures/gtik_applet.png
-share/gnome/help/gtik2_applet2/uk/gtik2_applet2.xml
 share/gnome/help/gweather/C/figures/gweather-details.png
 share/gnome/help/gweather/C/figures/gweather-menu-prefs.png
 share/gnome/help/gweather/C/figures/gweather-prefs-general.png
@@ -535,12 +574,14 @@ share/gnome/omf/char-palette/char-palette-uk.omf
 %%CPUFREQ%%share/gnome/omf/cpufreq-applet/cpufreq-applet-es.omf
 %%CPUFREQ%%share/gnome/omf/cpufreq-applet/cpufreq-applet-nl.omf
 %%CPUFREQ%%share/gnome/omf/cpufreq-applet/cpufreq-applet-uk.omf
+%%CPUFREQ%%share/gnome/omf/cpufreq-applet/cpufreq-applet-zh_CN.omf
 share/gnome/omf/drivemount/drivemount-C.omf
 share/gnome/omf/drivemount/drivemount-es.omf
 share/gnome/omf/drivemount/drivemount-fr.omf
 share/gnome/omf/drivemount/drivemount-it.omf
 share/gnome/omf/drivemount/drivemount-pa.omf
 share/gnome/omf/drivemount/drivemount-uk.omf
+share/gnome/omf/drivemount/drivemount-zh_CN.omf
 share/gnome/omf/geyes/geyes-C.omf
 share/gnome/omf/geyes/geyes-bg.omf
 share/gnome/omf/geyes/geyes-es.omf
@@ -552,10 +593,6 @@ share/gnome/omf/gswitchit/gswitchit-C.omf
 share/gnome/omf/gswitchit/gswitchit-es.omf
 share/gnome/omf/gswitchit/gswitchit-fr.omf
 share/gnome/omf/gswitchit/gswitchit-uk.omf
-share/gnome/omf/gtik2_applet2/gtik2_applet2-C.omf
-share/gnome/omf/gtik2_applet2/gtik2_applet2-es.omf
-share/gnome/omf/gtik2_applet2/gtik2_applet2-fr.omf
-share/gnome/omf/gtik2_applet2/gtik2_applet2-uk.omf
 share/gnome/omf/gweather/gweather-C.omf
 share/gnome/omf/gweather/gweather-es.omf
 share/gnome/omf/gweather/gweather-fr.omf
@@ -624,6 +661,7 @@ share/gnome/pixmaps/accessx-status-applet/sticky-super-none.png
 %%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-75.png
 %%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-applet.png
 %%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-na.png
+%%PYTHON%%share/gnome/pixmaps/invest-big.png
 share/gnome/pixmaps/stickynotes/close.png
 share/gnome/pixmaps/stickynotes/locked.png
 share/gnome/pixmaps/stickynotes/resize_se.png
@@ -723,7 +761,6 @@ share/icons/hicolor/48x48/apps/gnome-cpu.png
 share/icons/hicolor/48x48/apps/gnome-eyes.png
 %%COMMANDER%%share/icons/hicolor/48x48/apps/gnome-mini-commander.png
 share/icons/hicolor/48x48/apps/gnome-modem.png
-share/icons/hicolor/48x48/apps/gnome-money.png
 share/icons/hicolor/48x48/apps/gswitchit-applet.png
 share/icons/hicolor/48x48/apps/gswitchit-properties-capplet.png
 share/locale/am/LC_MESSAGES/gnome-applets-2.0.mo
@@ -732,7 +769,6 @@ share/locale/az/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-applets-2.0.mo
-share/locale/br/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-applets-2.0.mo
@@ -756,7 +792,6 @@ share/locale/he/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hi/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hr/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hu/LC_MESSAGES/gnome-applets-2.0.mo
-share/locale/hy/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/id/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/is/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-applets-2.0.mo
@@ -764,18 +799,15 @@ share/locale/ja/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ka/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-applets-2.0.mo
-share/locale/ky/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-applets-2.0.mo
-share/locale/ml/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/mn/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ms/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/nb/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ne/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-applets-2.0.mo
-share/locale/no/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/pt/LC_MESSAGES/gnome-applets-2.0.mo
@@ -808,16 +840,10 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrmtry share/locale/te
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
-@dirrmtry share/locale/ky/LC_MESSAGES
-@dirrmtry share/locale/ky
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
-@dirrmtry share/locale/hy/LC_MESSAGES
-@dirrmtry share/locale/hy
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
-@dirrmtry share/locale/br/LC_MESSAGES
-@dirrmtry share/locale/br
 @dirrmtry share/icons/hicolor/48x48/apps
 @dirrmtry share/icons/hicolor/48x48
 @dirrmtry share/icons/hicolor
@@ -831,7 +857,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/omf/mixer_applet2
 %%COMMANDER%%@dirrm share/gnome/omf/command-line
 @dirrm share/gnome/omf/gweather
-@dirrm share/gnome/omf/gtik2_applet2
 @dirrm share/gnome/omf/gswitchit
 @dirrm share/gnome/omf/geyes
 @dirrm share/gnome/omf/drivemount
@@ -896,15 +921,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/gweather/C/figures
 @dirrm share/gnome/help/gweather/C
 @dirrm share/gnome/help/gweather
-@dirrm share/gnome/help/gtik2_applet2/uk/figures
-@dirrm share/gnome/help/gtik2_applet2/uk
-@dirrm share/gnome/help/gtik2_applet2/fr/figures
-@dirrm share/gnome/help/gtik2_applet2/fr
-@dirrm share/gnome/help/gtik2_applet2/es/figures
-@dirrm share/gnome/help/gtik2_applet2/es
-@dirrm share/gnome/help/gtik2_applet2/C/figures
-@dirrm share/gnome/help/gtik2_applet2/C
-@dirrm share/gnome/help/gtik2_applet2
 @dirrm share/gnome/help/gswitchit/uk
 @dirrm share/gnome/help/gswitchit/fr
 @dirrm share/gnome/help/gswitchit/es
@@ -925,6 +941,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/geyes/C/figures
 @dirrm share/gnome/help/geyes/C
 @dirrm share/gnome/help/geyes
+@dirrm share/gnome/help/drivemount/zh_CN/figures
+@dirrm share/gnome/help/drivemount/zh_CN
 @dirrm share/gnome/help/drivemount/uk/figures
 @dirrm share/gnome/help/drivemount/uk
 @dirrm share/gnome/help/drivemount/pa/figures
@@ -938,6 +956,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/drivemount/C/figures
 @dirrm share/gnome/help/drivemount/C
 @dirrm share/gnome/help/drivemount
+%%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/zh_CN/figures
+%%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/zh_CN
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/uk/figures
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/uk
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/nl/figures
@@ -1007,6 +1027,9 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/gnome-applets/geyes/Bloodshot
 @dirrm share/gnome/gnome-applets/geyes/Bizarre
 @dirrm share/gnome/gnome-applets/geyes
+@dirrm share/gnome/gnome-applets/art
 @dirrm share/gnome/gnome-applets
+%%PYTHON%%@dirrm %%PYTHON_SITELIBDIR%%/invest
+%%PYTHON%%@dirrmtry %%PYTHON_SITELIBDIR%%
 @dirrm include/libgweather
 @dirrm include/libgswitchit
