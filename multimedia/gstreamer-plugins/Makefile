@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD: ports/multimedia/gstreamer-plugins/Makefile,v 1.102 2006/06/09 20:24:02 ahze Exp $
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.88 2006/06/22 05:20:50 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.89 2006/06/22 20:24:57 ahze Exp $
 #
 
 PORTNAME=	gstreamer
@@ -67,7 +67,7 @@ IGNORE=	many plugins don't build or even work on 4.x
 .endif
 
 .if ${GST_PLUGIN} == "base"
-base_DIST=	base
+gst_base_DIST=	base
 NO_GSTREAMER_COMMON=	yes
 INSTALLS_SHLIB=	yes
 MAN1=		gst-visualise-0.10.1
