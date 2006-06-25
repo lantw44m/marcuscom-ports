@@ -1,5 +1,5 @@
 # $FreeBSD: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.34 2006/06/09 20:24:02 ahze Exp $
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.54 2006/06/24 20:27:14 marcus Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.55 2006/06/25 17:45:40 marcus Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -300,7 +300,7 @@ gst_wavpack_DIST=	bad
 .endif # NO_GSTREAMER_COMMON
 
 gst_${GST_PLUGIN}_DIST?=	good
-DIST?=	${gst_${GST_PLUGIN}_DIST}
+DIST=	${gst_${GST_PLUGIN}_DIST}
 
 .if !defined(NO_GSTREAMER_COMMON)
 gst_${GST_PLUGIN}_BUILD_DEPENDS?=
