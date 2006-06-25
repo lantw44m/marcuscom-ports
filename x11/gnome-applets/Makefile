@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.120 2006/06/25 06:03:42 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.121 2006/06/25 07:45:30 marcus Exp $
 #
 
 PORTNAME=	gnome-applets
@@ -94,34 +94,10 @@ PLIST_SUB+=	PYTHON=""
 PLIST_SUB+=	PYTHON="@comment "
 .endif
 
-.if defined(USE_PYTHON) && !defined(DISPLAY)
-BUILD_DEPENDS+=	Xvfb:${X_VFBSERVER_PORT} \
-		${X11BASE}/lib/X11/fonts/misc/8x13O.pcf.gz:${X_FONTS_MISC_PORT}
-.if !defined(PACKAGE_BUILDING)
-CONFIGURE_ENV+=	DISPLAY="localhost:1001"
-.endif
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' \
 		${WRKSRC}/libgweather/weather-met.c
 	@${REINPLACE_CMD} -e 's|system-tools-backends|system-tools-backends-2.0|g' \
 		${WRKSRC}/configure
-
-.if defined(USE_PYTHON) && !defined(DISPLAY)
-pre-configure:
-	@if [ -f ${WRKDIR}/.Xvfb.pid ]; then \
-		${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill || ${TRUE} ; \
-		${RM} -f ${WRKDIR}/.Xvfb.pid ; \
-	fi
-	${X11BASE}/bin/Xvfb :1001 -screen 0 800x600x24 > /dev/null 2>&1 & ${ECHO} $$! > ${WRKDIR}/.Xvfb.pid
-	@sleep 5
-
-post-configure:
-	@if [ -f ${WRKDIR}/.Xvfb.pid ]; then \
-		${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill || ${TRUE} ; \
-		${RM} -f ${WRKDIR}/.Xvfb.pid ; \
-	fi
-.endif
 
 .include <bsd.port.post.mk>
