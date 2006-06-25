@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.118 2006/06/18 03:38:38 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.119 2006/06/24 06:52:46 marcus Exp $
 #
 
 PORTNAME=	gnome-applets
 PORTVERSION=	2.15.1.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -84,10 +85,10 @@ PLIST_SUB+=	COMMANDER=""
 PLIST_SUB+=	COMMANDER="@comment "
 .endif
 
-.if exists(${pygnome2_DETECT}) || ( ${HAVE_GNOME:Mpygnome2}!="" && ${ARCH}!="sparc64" )
+.if exists(${pygnomedesktop_DETECT}) || ( ${HAVE_GNOME:Mpygnomedesktop}!="" && ${ARCH}!="sparc64" )
 USE_PYTHON=	yes
 .include "${PORTSDIR}/Mk/bsd.python.mk"
-USE_GNOME+=	pygnome2
+USE_GNOME+=	pygnomedesktop
 PLIST_SUB+=	PYTHON=""
 .else
 PLIST_SUB+=	PYTHON="@comment "
