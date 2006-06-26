@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.17 2006/06/11 05:20:38 ahze Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.18 2006/06/11 05:29:49 ahze Exp $
 #
 
 PORTNAME=	gimp
@@ -44,8 +44,7 @@ USE_X_PREFIX=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_GNOME=	gnomehack intltool intlhack gtk20 libartlgpl2 librsvg2 \
-		ltverhack
+USE_GNOME=	gnomehack intltool intlhack gtk20 libartlgpl2 ltverhack
 WANT_GNOME=	yes
 USE_GCC=	3.4+
 INSTALLS_SHLIB=	yes
@@ -67,6 +66,7 @@ MAN5=	gimprc-2.3.5
 
 OPTIONS=	DEBUG "debugging" off \
 		PYTHON "Python-Fu support" off \
+		RSVG "SVG format support" on \
 		PRINT "Gutenprint plugin" on \
 		GNOMEPRINT "GNOME printing plugin" on \
 		MP "multiple processor support" off
@@ -94,6 +94,14 @@ PLIST_SUB+=		PYTHON:=""
 .else
 CONFIGURE_ARGS+=	--disable-python
 PLIST_SUB+=		PYTHON:="@comment "
+.endif
+
+.if defined(WITHOUT_RSVG)
+CONFIGURE_ARGS+=	--without-librsvg
+PLIST_SUB+=		SVG="@comment "
+.else
+USE_GNOME+=		librsvg2
+PLIST_SUB+=		SVG=""
 .endif
 
 .if !defined(WITHOUT_PRINT)
