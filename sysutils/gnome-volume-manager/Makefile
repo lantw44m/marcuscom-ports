@@ -3,12 +3,12 @@
 # Whom:				Jean-Yves Lefort <jylefort@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-volume-manager/Makefile,v 1.2 2006/05/02 21:42:01 jylefort Exp $
+#   $MCom: ports/sysutils/gnome-volume-manager/Makefile,v 1.3 2006/06/08 01:48:53 ahze Exp $
 #
 
 PORTNAME=	gnome-volume-manager
 PORTVERSION=	1.5.15
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Automatically mount removable media, and more
 
 LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
-		notify.1:${PORTSDIR}/devel/libnotify
+		notify.2:${PORTSDIR}/devel/libnotify
 
 USE_X_PREFIX=	yes
 USE_BZIP2=	yes
