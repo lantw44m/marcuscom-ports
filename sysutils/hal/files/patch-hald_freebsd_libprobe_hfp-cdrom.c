@@ -1,5 +1,5 @@
 --- hald/freebsd/libprobe/hfp-cdrom.c	7 May 2006 00:27:55 -0000	1.4
-+++ hald/freebsd/libprobe/hfp-cdrom.c	2 Jul 2006 04:20:47 -0000	1.5
++++ hald/freebsd/libprobe/hfp-cdrom.c	2 Jul 2006 05:08:24 -0000	1.6
 @@ -112,6 +112,7 @@
  
    if (cdrom->fd >= 0)		/* ATAPI transport */
@@ -8,7 +8,7 @@
        struct ata_ioc_request req;
  
        memset(&req, 0, sizeof(req));
-@@ -140,6 +141,36 @@
+@@ -140,6 +141,38 @@
  	    *err = hfp_strdup_printf("ATAPI error %i", req.error);
  	  return FALSE;
  	}
@@ -18,6 +18,8 @@
 +      memset(&iocmd, 0, sizeof(iocmd));
 +      iocmd.u.request.flags = ATA_CMD_ATAPI;
 +      iocmd.u.request.timeout = timeout;
++      iocmd.cmd = ATAREQUEST;
++      iocmd.device = -1;
 +      memcpy(iocmd.u.request.u.atapi.ccb, ccb, 16);
 +
 +      if (data)
