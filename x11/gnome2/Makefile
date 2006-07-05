@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.162 2006/06/16 18:23:22 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.163 2006/06/25 20:53:43 marcus Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.15.3
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -81,11 +81,11 @@ do-install:	# empty
 .if ${ARCH} == "i386" || ${OSVERSION} > 500035
 RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
 .endif
-#.if ${.CURDIR:T}!="gnome2-lite"
-#.if ${ARCH}!="sparc64" || ${OSVERSION} >= 700003
-#RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga
-#.endif
-#.endif
+.if ${.CURDIR:T}!="gnome2-lite"
+.if ${ARCH}!="sparc64" || ${OSVERSION} >= 700003
+RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga
+.endif
+.endif
 .endif
 
 .if ${.CURDIR}==${MASTERDIR} || ${.CURDIR:T}=="gnome2-lite"
