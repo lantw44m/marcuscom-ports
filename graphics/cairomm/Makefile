@@ -3,14 +3,13 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/cairomm/Makefile,v 1.1 2006/06/27 17:11:24 marcus Exp $
 #
 
 PORTNAME=	cairomm
-PORTVERSION=	0.6.0
-PORTREVISION=	1
+PORTVERSION=	1.1.10
 CATEGORIES=	graphics
-MASTER_SITES=	http://cairographics.org/releases/
+MASTER_SITES=	http://cairographics.org/snapshots/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ interface to cairo
@@ -23,12 +22,13 @@ INSTALLS_SHLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnometarget
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
+		AUTOMAKE="${TRUE}" AUTOCONF="${TRUE}" DOXYGEN="${TRUE}"
 
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500000
-BROKEN="Does not build"
+BROKEN=	Does not build
 .endif
 
 .if defined(NOPORTDOCS)
