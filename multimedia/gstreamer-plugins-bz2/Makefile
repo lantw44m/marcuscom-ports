@@ -1,9 +1,9 @@
 # New ports collection makefile for:	gstreamer-plugins-bz2
-# Date created:			7 July 2006
+# Date created:			6 July 2006
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer-plugins-bz2/Makefile,v 1.1 2006/07/06 19:04:00 ahze Exp $
 
 PORTREVISION=	0
 CATEGORIES=	multimedia

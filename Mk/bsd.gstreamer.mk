@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD: ports/Mk/bsd.gstreamer.mk,v 1.18 2006/05/16 01:43:00 ahze Exp $
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.29 2006/06/11 23:54:03 marcus Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.30 2006/07/06 19:04:00 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -64,7 +64,7 @@ _USE_GSTREAMER_ALL=	a52dec aalib bad bz2 cairo cdparanoia dts \
 			dv dvd esound faac faad ffmpeg flac gconf gnomevfs \
 			gnonlin good gsm hal ivorbis jpeg ladspa lame libcaca \
 			libmms libpng libvisual mad mpeg2dec \
-			musepack ogg pango python sdl shout2 sidplay \
+			musepack neon ogg pango python sdl shout2 sidplay \
 			speex theora ugly vorbis wavpack xvid
 _USE_GSTREAMER80_ALL=	a52dec aalib artsd audiofile cairo cdaudio cdio cdparanoia \
 			dirac dts dv dvd esound faac faad ffmpeg flac \
@@ -132,6 +132,8 @@ musepack_DEPENDS=	audio/gstreamer-plugins-musepack
 musicbrainz_DEPENDS=	audio/gstreamer-plugins-musicbrainz
 
 nas_DEPENDS=	audio/gstreamer-plugins-nas
+
+neon_DEPENDS=	www/gstreamer-plugins-neon
 
 ogg_DEPENDS=	audio/gstreamer-plugins-ogg
 
