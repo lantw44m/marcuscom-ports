@@ -193,6 +193,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/printcontext.h
 include/gtkmm-%%API_VERSION%%/gtkmm/printer.h
 include/gtkmm-%%API_VERSION%%/gtkmm/printjob.h
 include/gtkmm-%%API_VERSION%%/gtkmm/printoperation.h
+include/gtkmm-%%API_VERSION%%/gtkmm/printoperationpreview.h
 include/gtkmm-%%API_VERSION%%/gtkmm/printsettings.h
 include/gtkmm-%%API_VERSION%%/gtkmm/printunixdialog.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/aboutdialog_p.h
@@ -285,6 +286,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/printcontext_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/printer_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/printjob_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/printoperation_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/printoperationpreview_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/printsettings_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/printunixdialog_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/progressbar_p.h
@@ -429,6 +431,7 @@ include/pangomm-1.4/pangomm.h
 include/pangomm-1.4/pangomm/attributes.h
 include/pangomm-1.4/pangomm/attriter.h
 include/pangomm-1.4/pangomm/attrlist.h
+include/pangomm-1.4/pangomm/cairofontmap.h
 include/pangomm-1.4/pangomm/color.h
 include/pangomm-1.4/pangomm/context.h
 include/pangomm-1.4/pangomm/coverage.h
@@ -451,6 +454,7 @@ include/pangomm-1.4/pangomm/layoutrun.h
 include/pangomm-1.4/pangomm/private/attributes_p.h
 include/pangomm-1.4/pangomm/private/attriter_p.h
 include/pangomm-1.4/pangomm/private/attrlist_p.h
+include/pangomm-1.4/pangomm/private/cairofontmap_p.h
 include/pangomm-1.4/pangomm/private/color_p.h
 include/pangomm-1.4/pangomm/private/context_p.h
 include/pangomm-1.4/pangomm/private/coverage_p.h
