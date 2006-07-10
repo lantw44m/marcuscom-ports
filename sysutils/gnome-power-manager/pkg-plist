@@ -1,3 +1,4 @@
+bin/gnome-power-inhibit-test
 bin/gnome-power-manager
 bin/gnome-power-preferences
 etc/dbus-1/system.d/gnome-power-manager.conf
@@ -6,10 +7,15 @@ share/gnome/applications/gnome-power-preferences.desktop
 share/gnome/autostart/gnome-power-manager.desktop
 share/gnome/gnome-power-manager/gpm-feedback-widget.glade
 share/gnome/gnome-power-manager/gpm-info.glade
+share/gnome/gnome-power-manager/gpm-inhibit-test.glade
 share/gnome/gnome-power-manager/gpm-prefs.glade
 share/gnome/help/gnome-power-manager/C/figures/gpm-charged.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-critical.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-info-devices.png
+share/gnome/help/gnome-power-manager/C/figures/gpm-info-event-log.png
+share/gnome/help/gnome-power-manager/C/figures/gpm-info-percentage.png
+share/gnome/help/gnome-power-manager/C/figures/gpm-info-rate.png
+share/gnome/help/gnome-power-manager/C/figures/gpm-info-time.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-low.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-prefs-ac.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-prefs-battery.png
@@ -19,7 +25,23 @@ share/gnome/help/gnome-power-manager/C/figures/gpm-unplugged.png
 share/gnome/help/gnome-power-manager/C/figures/gs-prefs.png
 share/gnome/help/gnome-power-manager/C/gnome-power-manager.xml
 share/gnome/help/gnome-power-manager/C/legal.xml
+share/gnome/help/gnome-power-manager/ru/figures/gpm-charged.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-critical.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-info-devices.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-info-event-log.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-info-percentage.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-info-rate.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-info-time.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-low.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-prefs-ac.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-prefs-battery.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-prefs-options.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-suspend-problem.png
+share/gnome/help/gnome-power-manager/ru/figures/gpm-unplugged.png
+share/gnome/help/gnome-power-manager/ru/figures/gs-prefs.png
+share/gnome/help/gnome-power-manager/ru/gnome-power-manager.xml
 share/gnome/omf/gnome-power-manager/gnome-power-manager-C.omf
+share/gnome/omf/gnome-power-manager/gnome-power-manager-ru.omf
 share/icons/hicolor/16x16/apps/gpm-ac-adapter.png
 share/icons/hicolor/16x16/apps/gpm-brightness.png
 share/icons/hicolor/16x16/apps/gpm-hibernate.png
@@ -141,17 +163,22 @@ share/icons/hicolor/scalable/apps/gpm-ups-100.svg
 share/icons/hicolor/scalable/apps/gpm-ups-charged.svg
 share/icons/hicolor/scalable/apps/gpm-ups-missing.svg
 share/locale/bg/LC_MESSAGES/gnome-power-manager.mo
+share/locale/bn/LC_MESSAGES/gnome-power-manager.mo
+share/locale/bn_IN/LC_MESSAGES/gnome-power-manager.mo
 share/locale/ca/LC_MESSAGES/gnome-power-manager.mo
 share/locale/cs/LC_MESSAGES/gnome-power-manager.mo
 share/locale/de/LC_MESSAGES/gnome-power-manager.mo
+share/locale/dz/LC_MESSAGES/gnome-power-manager.mo
 share/locale/el/LC_MESSAGES/gnome-power-manager.mo
 share/locale/en_CA/LC_MESSAGES/gnome-power-manager.mo
 share/locale/en_GB/LC_MESSAGES/gnome-power-manager.mo
 share/locale/es/LC_MESSAGES/gnome-power-manager.mo
+share/locale/et/LC_MESSAGES/gnome-power-manager.mo
 share/locale/fi/LC_MESSAGES/gnome-power-manager.mo
 share/locale/fr/LC_MESSAGES/gnome-power-manager.mo
 share/locale/gl/LC_MESSAGES/gnome-power-manager.mo
 share/locale/gu/LC_MESSAGES/gnome-power-manager.mo
+share/locale/hi/LC_MESSAGES/gnome-power-manager.mo
 share/locale/hu/LC_MESSAGES/gnome-power-manager.mo
 share/locale/it/LC_MESSAGES/gnome-power-manager.mo
 share/locale/ja/LC_MESSAGES/gnome-power-manager.mo
@@ -169,6 +196,7 @@ share/locale/sk/LC_MESSAGES/gnome-power-manager.mo
 share/locale/sr/LC_MESSAGES/gnome-power-manager.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-power-manager.mo
 share/locale/sv/LC_MESSAGES/gnome-power-manager.mo
+share/locale/ta/LC_MESSAGES/gnome-power-manager.mo
 share/locale/th/LC_MESSAGES/gnome-power-manager.mo
 share/locale/uk/LC_MESSAGES/gnome-power-manager.mo
 share/locale/vi/LC_MESSAGES/gnome-power-manager.mo
@@ -176,6 +204,8 @@ share/locale/zh_CN/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
 @dirrm share/gnome/omf/gnome-power-manager
+@dirrm share/gnome/help/gnome-power-manager/ru/figures
+@dirrm share/gnome/help/gnome-power-manager/ru
 @dirrm share/gnome/help/gnome-power-manager/C/figures
 @dirrm share/gnome/help/gnome-power-manager/C
 @dirrm share/gnome/help/gnome-power-manager
