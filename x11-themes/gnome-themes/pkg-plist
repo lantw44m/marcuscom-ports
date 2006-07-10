@@ -1,79 +1,6 @@
 share/gnome/themes/Clearlooks/metacity-1/metacity-theme-1.xml
 share/gnome/themes/Glider/metacity-1/metacity-theme-1.xml
 share/gnome/themes/Mist/metacity-1/metacity-theme-1.xml
-share/gnome/themes/Sandwish/metacity-1/active-border-top-left-border.png
-share/gnome/themes/Sandwish/metacity-1/active-border-top-right-border.png
-share/gnome/themes/Sandwish/metacity-1/active-bottom-left-border.png
-share/gnome/themes/Sandwish/metacity-1/active-bottom-left-corner.png
-share/gnome/themes/Sandwish/metacity-1/active-bottom-mid-left-border.png
-share/gnome/themes/Sandwish/metacity-1/active-bottom-mid-right-border.png
-share/gnome/themes/Sandwish/metacity-1/active-bottom-right-border.png
-share/gnome/themes/Sandwish/metacity-1/active-bottom-right-corner.png
-share/gnome/themes/Sandwish/metacity-1/active-button-prelight.png
-share/gnome/themes/Sandwish/metacity-1/active-button-pressed.png
-share/gnome/themes/Sandwish/metacity-1/active-button.png
-share/gnome/themes/Sandwish/metacity-1/active-close-button.png
-share/gnome/themes/Sandwish/metacity-1/active-left-border.png
-share/gnome/themes/Sandwish/metacity-1/active-left-top-border-shaded.png
-share/gnome/themes/Sandwish/metacity-1/active-left-top-border.png
-share/gnome/themes/Sandwish/metacity-1/active-maximize-button.png
-share/gnome/themes/Sandwish/metacity-1/active-menu-button-prelight.png
-share/gnome/themes/Sandwish/metacity-1/active-menu-button-pressed.png
-share/gnome/themes/Sandwish/metacity-1/active-menu-button.png
-share/gnome/themes/Sandwish/metacity-1/active-minimize-button.png
-share/gnome/themes/Sandwish/metacity-1/active-right-border.png
-share/gnome/themes/Sandwish/metacity-1/active-right-top-border-shaded.png
-share/gnome/themes/Sandwish/metacity-1/active-right-top-border.png
-share/gnome/themes/Sandwish/metacity-1/active-top-center-left.png
-share/gnome/themes/Sandwish/metacity-1/active-top-center-mid-left.png
-share/gnome/themes/Sandwish/metacity-1/active-top-center-mid-right.png
-share/gnome/themes/Sandwish/metacity-1/active-top-center-right.png
-share/gnome/themes/Sandwish/metacity-1/active-top-left-border.png
-share/gnome/themes/Sandwish/metacity-1/active-top-left-corner.png
-share/gnome/themes/Sandwish/metacity-1/active-top-mid-left-border.png
-share/gnome/themes/Sandwish/metacity-1/active-top-mid-right-border.png
-share/gnome/themes/Sandwish/metacity-1/active-top-right-border.png
-share/gnome/themes/Sandwish/metacity-1/active-top-right-corner.png
-share/gnome/themes/Sandwish/metacity-1/inactive-border-top-left-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-border-top-right-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-bottom-left-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-bottom-left-corner.png
-share/gnome/themes/Sandwish/metacity-1/inactive-bottom-mid-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-bottom-right-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-bottom-right-corner.png
-share/gnome/themes/Sandwish/metacity-1/inactive-button-prelight.png
-share/gnome/themes/Sandwish/metacity-1/inactive-button-pressed.png
-share/gnome/themes/Sandwish/metacity-1/inactive-button.png
-share/gnome/themes/Sandwish/metacity-1/inactive-close-button.png
-share/gnome/themes/Sandwish/metacity-1/inactive-left-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-left-top-border-shaded.png
-share/gnome/themes/Sandwish/metacity-1/inactive-left-top-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-maximize-button.png
-share/gnome/themes/Sandwish/metacity-1/inactive-menu-button-prelight.png
-share/gnome/themes/Sandwish/metacity-1/inactive-menu-button-pressed.png
-share/gnome/themes/Sandwish/metacity-1/inactive-menu-button.png
-share/gnome/themes/Sandwish/metacity-1/inactive-minimize-button.png
-share/gnome/themes/Sandwish/metacity-1/inactive-right-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-right-top-border-shaded.png
-share/gnome/themes/Sandwish/metacity-1/inactive-right-top-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-top-center-left.png
-share/gnome/themes/Sandwish/metacity-1/inactive-top-center-mid.png
-share/gnome/themes/Sandwish/metacity-1/inactive-top-center-right.png
-share/gnome/themes/Sandwish/metacity-1/inactive-top-left-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-top-left-corner.png
-share/gnome/themes/Sandwish/metacity-1/inactive-top-mid-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-top-right-border.png
-share/gnome/themes/Sandwish/metacity-1/inactive-top-right-corner.png
-share/gnome/themes/Sandwish/metacity-1/metacity-theme-1.xml
-share/gnome/themes/Smokey/metacity-1/button-base.png
-share/gnome/themes/Smokey/metacity-1/button-pressed-shine.png
-share/gnome/themes/Smokey/metacity-1/button-pressed.png
-share/gnome/themes/Smokey/metacity-1/button-shine.png
-share/gnome/themes/Smokey/metacity-1/close.png
-share/gnome/themes/Smokey/metacity-1/maximize.png
-share/gnome/themes/Smokey/metacity-1/metacity-theme-1.xml
-share/gnome/themes/Smokey/metacity-1/minimize.png
-share/gnome/themes/Smokey/metacity-1/stripes.png
 share/icons/Crux/12x12/filesystems/gnome-fs-directory.png
 share/icons/Crux/12x12/filesystems/gnome-fs-regular.png
 share/icons/Crux/192x192/filesystems/gnome-fs-directory.png
@@ -160,6 +87,7 @@ share/icons/Flat-Blue/scalable/emblems/emblem-ohno.svg
 share/icons/Flat-Blue/scalable/emblems/emblem-personal.svg
 share/icons/Flat-Blue/scalable/emblems/emblem-special.svg
 share/icons/Flat-Blue/scalable/emblems/emblem-urgent.svg
+share/icons/HighContrast-SVG/index.theme
 share/icons/HighContrast-SVG/scalable/actions/add.svg
 share/icons/HighContrast-SVG/scalable/actions/address-book-new.svg
 share/icons/HighContrast-SVG/scalable/actions/application-exit.svg
@@ -680,10 +608,13 @@ share/icons/HighContrast-SVG/scalable/mimetypes/empty.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/exec.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/font-x-generic.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-fs-executable.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-fs-regular.icon
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-fs-regular.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-ogg.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.lotus-1-2-3.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.ms-excel.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.oasis.opendocument.spreadsheet.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.stardivision.calc.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.sun.xml.calc.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-applix-spreadsheet.svg
@@ -698,25 +629,46 @@ share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-gnumeri
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-killustrator.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-kspread.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-ms-dos-executable.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-perl.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-php.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-python-bytecode.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-shellscript.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-shockwave-flash.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-xhtml+xml.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-audio.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-image.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-text-html.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-text-vnd.wap.wml.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-text-x-csh.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-text-x-python.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-text-x-sh.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-text-x-zsh.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-text.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-video.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-x-font-afm.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gtk-file.icon
+share/icons/HighContrast-SVG/scalable/mimetypes/gtk-file.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/html.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/image-x-generic.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/image.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/mime_ascii.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/misc.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/package_editors.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/shellscript.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/sound.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/spreadsheet.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/stock_script.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/text-html.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/text-x-generic.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/text-x-preview.icon
+share/icons/HighContrast-SVG/scalable/mimetypes/text-x-preview.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/text-x-script.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/txt.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/txt2.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/unknown.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/video-x-generic.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/video.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/www.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/x-office-spreadsheet.svg
 share/icons/HighContrast-SVG/scalable/places/desktop.svg
 share/icons/HighContrast-SVG/scalable/places/distributor-logo.svg
@@ -1785,46 +1737,13 @@ share/icons/LowContrastLargePrint/48x48/mimetypes/gnome-mime-video-x-msvideo.png
 share/icons/LowContrastLargePrint/48x48/mimetypes/gnome-mime-x-font-afm.png
 share/icons/LowContrastLargePrint/48x48/mimetypes/gnome-package.png
 share/icons/LowContrastLargePrint/index.theme
-share/icons/Sandy/12x12/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/12x12/filesystems/gnome-fs-directory.png
-share/icons/Sandy/24x24/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/24x24/filesystems/gnome-fs-directory.png
-share/icons/Sandy/36x36/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/36x36/filesystems/gnome-fs-directory.png
-share/icons/Sandy/48x48/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/48x48/filesystems/gnome-fs-directory.png
-share/icons/Sandy/72x72/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/72x72/filesystems/gnome-fs-directory.png
-share/icons/Sandy/96x96/filesystems/gnome-fs-directory-accept.png
-share/icons/Sandy/96x96/filesystems/gnome-fs-directory.png
-share/icons/Sandy/index.theme
-share/icons/Smokey-Blue/48x48/emblems/emblem-nowrite.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-nfs.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty-accept.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-empty.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full-accept.png
-share/icons/Smokey-Blue/64x64/filesystems/gnome-fs-trash-full.png
-share/icons/Smokey-Blue/72x72/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Blue/96x96/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Blue/index.theme
-share/icons/Smokey-Red/48x48/emblems/emblem-nowrite.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty-accept.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-empty.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full-accept.png
-share/icons/Smokey-Red/48x48/filesystems/gnome-fs-trash-full.png
-share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.icon
-share/icons/Smokey-Red/64x64/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Red/64x64/filesystems/gnome-fs-nfs.png
-share/icons/Smokey-Red/72x72/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Red/96x96/filesystems/gnome-fs-directory.png
-share/icons/Smokey-Red/index.theme
 share/locale/am/LC_MESSAGES/gnome-themes.mo
 share/locale/ar/LC_MESSAGES/gnome-themes.mo
 share/locale/az/LC_MESSAGES/gnome-themes.mo
 share/locale/be/LC_MESSAGES/gnome-themes.mo
 share/locale/bg/LC_MESSAGES/gnome-themes.mo
 share/locale/bn/LC_MESSAGES/gnome-themes.mo
+share/locale/bn_IN/LC_MESSAGES/gnome-themes.mo
 share/locale/bs/LC_MESSAGES/gnome-themes.mo
 share/locale/ca/LC_MESSAGES/gnome-themes.mo
 share/locale/cs/LC_MESSAGES/gnome-themes.mo
@@ -1890,49 +1809,12 @@ share/locale/vi/LC_MESSAGES/gnome-themes.mo
 share/locale/wa/LC_MESSAGES/gnome-themes.mo
 share/locale/xh/LC_MESSAGES/gnome-themes.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-themes.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-themes.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-themes.mo
 share/themes/Clearlooks/index.theme
 share/themes/Crux/index.theme
 share/themes/Glider/gtk-2.0/gtkrc
 share/themes/Glider/index.theme
-share/themes/Grand-Canyon/gtk-2.0/3d_all_flat.png
-share/themes/Grand-Canyon/gtk-2.0/3d_all_normal.png
-share/themes/Grand-Canyon/gtk-2.0/3d_all_prelight.png
-share/themes/Grand-Canyon/gtk-2.0/3d_bottom_flat.png
-share/themes/Grand-Canyon/gtk-2.0/3d_bottom_normal.png
-share/themes/Grand-Canyon/gtk-2.0/3d_bottom_prelight.png
-share/themes/Grand-Canyon/gtk-2.0/3d_top_flat.png
-share/themes/Grand-Canyon/gtk-2.0/3d_top_normal.png
-share/themes/Grand-Canyon/gtk-2.0/3d_top_prelight.png
-share/themes/Grand-Canyon/gtk-2.0/arrow_down.png
-share/themes/Grand-Canyon/gtk-2.0/arrow_left.png
-share/themes/Grand-Canyon/gtk-2.0/arrow_null.png
-share/themes/Grand-Canyon/gtk-2.0/arrow_right.png
-share/themes/Grand-Canyon/gtk-2.0/arrow_sub.png
-share/themes/Grand-Canyon/gtk-2.0/arrow_up.png
-share/themes/Grand-Canyon/gtk-2.0/blank.png
-share/themes/Grand-Canyon/gtk-2.0/button_default.png
-share/themes/Grand-Canyon/gtk-2.0/check2.png
-share/themes/Grand-Canyon/gtk-2.0/entry1.png
-share/themes/Grand-Canyon/gtk-2.0/gtkrc
-share/themes/Grand-Canyon/gtk-2.0/gtkrc.pants
-share/themes/Grand-Canyon/gtk-2.0/hline.png
-share/themes/Grand-Canyon/gtk-2.0/htrough.png
-share/themes/Grand-Canyon/gtk-2.0/in.png
-share/themes/Grand-Canyon/gtk-2.0/menu_shadow.png
-share/themes/Grand-Canyon/gtk-2.0/minus.png
-share/themes/Grand-Canyon/gtk-2.0/mradio1.png
-share/themes/Grand-Canyon/gtk-2.0/mradio2.png
-share/themes/Grand-Canyon/gtk-2.0/notebook_bottom_flat.png
-share/themes/Grand-Canyon/gtk-2.0/notebook_left_flat.png
-share/themes/Grand-Canyon/gtk-2.0/notebook_right_flat.png
-share/themes/Grand-Canyon/gtk-2.0/notebook_top_flat.png
-share/themes/Grand-Canyon/gtk-2.0/option_menu.png
-share/themes/Grand-Canyon/gtk-2.0/plus.png
-share/themes/Grand-Canyon/gtk-2.0/radio2.png
-share/themes/Grand-Canyon/gtk-2.0/vtrough.png
-share/themes/Grand-Canyon/index.theme
-share/themes/HighContrast-SVG/index.theme
 share/themes/HighContrast/gtk-2.0/gtkrc
 share/themes/HighContrast/index.theme
 share/themes/HighContrastInverse/gtk-2.0/gtkrc
@@ -2496,37 +2378,6 @@ share/themes/LowContrastLargePrint/pixmaps/volume-min.png
 share/themes/LowContrastLargePrint/pixmaps/volume-mute.png
 share/themes/LowContrastLargePrint/pixmaps/volume-zero.png
 share/themes/Mist/index.theme
-share/themes/Ocean-Dream/index.theme
-share/themes/Simple/gtk-2.0/gtkrc
-share/themes/Simple/index.theme
-share/themes/Smokey-Blue/gtk-2.0/bubble-blue-prelight.png
-share/themes/Smokey-Blue/gtk-2.0/bubble-blue-pressed.png
-share/themes/Smokey-Blue/gtk-2.0/bubble-blue-sb.png
-share/themes/Smokey-Blue/gtk-2.0/bubble-blue.png
-share/themes/Smokey-Blue/gtk-2.0/bubble-grey.png
-share/themes/Smokey-Blue/gtk-2.0/check1.png
-share/themes/Smokey-Blue/gtk-2.0/check2.png
-share/themes/Smokey-Blue/gtk-2.0/gtkrc
-share/themes/Smokey-Blue/gtk-2.0/halfbubble-bottom-blue.png
-share/themes/Smokey-Blue/gtk-2.0/halfbubble-bottom-grey.png
-share/themes/Smokey-Blue/gtk-2.0/halfbubble-left-blue.png
-share/themes/Smokey-Blue/gtk-2.0/halfbubble-left-grey.png
-share/themes/Smokey-Blue/gtk-2.0/halfbubble-right-blue.png
-share/themes/Smokey-Blue/gtk-2.0/halfbubble-right-grey.png
-share/themes/Smokey-Blue/gtk-2.0/halfbubble-top-blue.png
-share/themes/Smokey-Blue/gtk-2.0/halfbubble-top-blue1.png
-share/themes/Smokey-Blue/gtk-2.0/halfbubble-top-grey.png
-share/themes/Smokey-Blue/gtk-2.0/halfbubble-top-grey1.png
-share/themes/Smokey-Blue/gtk-2.0/lines_background.png
-share/themes/Smokey-Blue/gtk-2.0/lines_background_blue.png
-share/themes/Smokey-Blue/gtk-2.0/option1.png
-share/themes/Smokey-Blue/gtk-2.0/option2.png
-share/themes/Smokey-Blue/index.theme
-@dirrm share/themes/Smokey-Blue/gtk-2.0
-@dirrm share/themes/Smokey-Blue
-@dirrm share/themes/Simple/gtk-2.0
-@dirrm share/themes/Simple
-@dirrm share/themes/Ocean-Dream
 @dirrm share/themes/Mist
 @dirrm share/themes/LowContrastLargePrint/pixmaps
 @dirrm share/themes/LowContrastLargePrint/gtk-2.0
@@ -2545,10 +2396,7 @@ share/themes/Smokey-Blue/index.theme
 @dirrm share/themes/HighContrastInverse/gtk-2.0
 @dirrm share/themes/HighContrastInverse
 @dirrm share/themes/HighContrast/gtk-2.0
-@dirrm share/themes/HighContrast-SVG
 @dirrm share/themes/HighContrast
-@dirrm share/themes/Grand-Canyon/gtk-2.0
-@dirrm share/themes/Grand-Canyon
 @dirrm share/themes/Glider/gtk-2.0
 @dirrm share/themes/Glider
 @dirrm share/themes/Crux
@@ -2557,38 +2405,8 @@ share/themes/Smokey-Blue/index.theme
 @dirrmtry share/locale/ug
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
-@dirrm share/icons/Smokey-Red/96x96/filesystems
-@dirrm share/icons/Smokey-Red/96x96
-@dirrm share/icons/Smokey-Red/72x72/filesystems
-@dirrm share/icons/Smokey-Red/72x72
-@dirrm share/icons/Smokey-Red/64x64/filesystems
-@dirrm share/icons/Smokey-Red/64x64
-@dirrm share/icons/Smokey-Red/48x48/filesystems
-@dirrm share/icons/Smokey-Red/48x48/emblems
-@dirrm share/icons/Smokey-Red/48x48
-@dirrm share/icons/Smokey-Red
-@dirrm share/icons/Smokey-Blue/96x96/filesystems
-@dirrm share/icons/Smokey-Blue/96x96
-@dirrm share/icons/Smokey-Blue/72x72/filesystems
-@dirrm share/icons/Smokey-Blue/72x72
-@dirrm share/icons/Smokey-Blue/64x64/filesystems
-@dirrm share/icons/Smokey-Blue/64x64
-@dirrm share/icons/Smokey-Blue/48x48/emblems
-@dirrm share/icons/Smokey-Blue/48x48
-@dirrm share/icons/Smokey-Blue
-@dirrm share/icons/Sandy/96x96/filesystems
-@dirrm share/icons/Sandy/96x96
-@dirrm share/icons/Sandy/72x72/filesystems
-@dirrm share/icons/Sandy/72x72
-@dirrm share/icons/Sandy/48x48/filesystems
-@dirrm share/icons/Sandy/48x48
-@dirrm share/icons/Sandy/36x36/filesystems
-@dirrm share/icons/Sandy/36x36
-@dirrm share/icons/Sandy/24x24/filesystems
-@dirrm share/icons/Sandy/24x24
-@dirrm share/icons/Sandy/12x12/filesystems
-@dirrm share/icons/Sandy/12x12
-@dirrm share/icons/Sandy
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/icons/LowContrastLargePrint/48x48/mimetypes
 @dirrm share/icons/LowContrastLargePrint/48x48/filesystems
 @dirrm share/icons/LowContrastLargePrint/48x48/emblems
@@ -2669,14 +2487,10 @@ share/themes/Smokey-Blue/index.theme
 @dirrm share/icons/Crux/12x12/filesystems
 @dirrm share/icons/Crux/12x12
 @dirrm share/icons/Crux
-@dirrm share/gnome/themes/Smokey/metacity-1
-@dirrm share/gnome/themes/Smokey
-@dirrm share/gnome/themes/Sandwish/metacity-1
-@dirrm share/gnome/themes/Sandwish
+@dirrmtry share/icons
 @dirrm share/gnome/themes/Mist/metacity-1
 @dirrm share/gnome/themes/Mist
 @dirrm share/gnome/themes/Glider/metacity-1
 @dirrm share/gnome/themes/Glider
 @dirrm share/gnome/themes/Clearlooks/metacity-1
 @dirrm share/gnome/themes/Clearlooks
-@dirrmtry share/icons
