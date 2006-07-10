@@ -91,6 +91,8 @@ share/locale/ar/LC_MESSAGES/gcalctool.mo
 share/locale/az/LC_MESSAGES/gcalctool.mo
 share/locale/be/LC_MESSAGES/gcalctool.mo
 share/locale/bg/LC_MESSAGES/gcalctool.mo
+share/locale/bn/LC_MESSAGES/gcalctool.mo
+share/locale/bn_IN/LC_MESSAGES/gcalctool.mo
 share/locale/bs/LC_MESSAGES/gcalctool.mo
 share/locale/ca/LC_MESSAGES/gcalctool.mo
 share/locale/cs/LC_MESSAGES/gcalctool.mo
@@ -159,6 +161,8 @@ share/locale/zh_TW/LC_MESSAGES/gcalctool.mo
 @dirrmtry share/locale/en_US
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/omf/gcalctool
 @dirrm share/gnome/help/gcalctool/zh_TW/figures
 @dirrm share/gnome/help/gcalctool/zh_TW
