@@ -155,6 +155,7 @@ share/locale/az/LC_MESSAGES/gdm.mo
 share/locale/be/LC_MESSAGES/gdm.mo
 share/locale/bg/LC_MESSAGES/gdm.mo
 share/locale/bn/LC_MESSAGES/gdm.mo
+share/locale/bn_IN/LC_MESSAGES/gdm.mo
 share/locale/bs/LC_MESSAGES/gdm.mo
 share/locale/ca/LC_MESSAGES/gdm.mo
 share/locale/cs/LC_MESSAGES/gdm.mo
@@ -241,6 +242,8 @@ share/locale/zu/LC_MESSAGES/gdm.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/xsessions
 @dirrm share/gnome/pixmaps/faces
 @dirrm share/gnome/omf/gdm
