@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD: ports/Mk/bsd.gstreamer.mk,v 1.18 2006/05/16 01:43:00 ahze Exp $
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.31 2006/07/06 19:32:34 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.32 2006/07/06 19:48:44 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -250,33 +250,24 @@ ${ext}_GST80_SUFX?=	80
 ${ext}_GST80_PREFIX?=	gstreamer-plugins-
 ${ext}_GST80_VERSION?=	${GST80_VERSION}${GST80_MINOR_VERSION}
 ${ext}_NAME?=		${ext}
+. if ${_USE_GSTREAMER80_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX})
+BUILD_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_GST80_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
+RUN_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_GST80_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
+. else
+IGNORE=	cannot install: unknown gstreamer-plugin -- ${ext}
+. endif
 .endfor
 .for ext in ${USE_GSTREAMER}
 ${ext}_GST_PREFIX?=	gstreamer-plugins-
 ${ext}_GST_VERSION?=	${GST_VERSION}${GST_MINOR_VERSION}
 ${ext}_NAME?=		${ext}
-.endfor
-
-.if defined(USE_GSTREAMER80)
-.for ext in ${USE_GSTREAMER80}
-. if ${_USE_GSTREAMER80_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX})
-BUILD_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_GST80_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
-RUN_DEPENDS+=	${${ext}_GST80_PREFIX}${${ext}_NAME}${${ext}_GST80_SUFX}>=${${ext}_GST80_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}${${ext}_GST80_SUFX}
-. else
-BROKEN=	Unknown gstreamer-plugin -- ${ext}
-. endif
-.endfor
-.endif
-.if defined(USE_GSTREAMER)
-.for ext in ${USE_GSTREAMER}
 . if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS})
 BUILD_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_GST_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
 RUN_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_GST_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
 . else
-BROKEN=	Unknown gstreamer-plugin -- ${ext}
+IGNORE=	cannot install: unknown gstreamer-plugin -- ${ext}
 . endif
 .endfor
-.endif
 
 # The End
 .endif
