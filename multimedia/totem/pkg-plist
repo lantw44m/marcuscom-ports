@@ -112,6 +112,7 @@ share/locale/az/LC_MESSAGES/totem.mo
 share/locale/be/LC_MESSAGES/totem.mo
 share/locale/bg/LC_MESSAGES/totem.mo
 share/locale/bn/LC_MESSAGES/totem.mo
+share/locale/bn_IN/LC_MESSAGES/totem.mo
 share/locale/br/LC_MESSAGES/totem.mo
 share/locale/ca/LC_MESSAGES/totem.mo
 share/locale/cs/LC_MESSAGES/totem.mo
@@ -163,6 +164,7 @@ share/locale/sq/LC_MESSAGES/totem.mo
 share/locale/sr/LC_MESSAGES/totem.mo
 share/locale/sr@Latn/LC_MESSAGES/totem.mo
 share/locale/sv/LC_MESSAGES/totem.mo
+share/locale/ta/LC_MESSAGES/totem.mo
 share/locale/te/LC_MESSAGES/totem.mo
 share/locale/th/LC_MESSAGES/totem.mo
 share/locale/tr/LC_MESSAGES/totem.mo
@@ -178,6 +180,8 @@ share/locale/zh_TW/LC_MESSAGES/totem.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/totem
 @dirrm share/gnome/omf/totem
 @dirrm share/gnome/help/totem/uk/figures
