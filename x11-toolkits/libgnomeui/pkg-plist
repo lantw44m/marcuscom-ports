@@ -69,6 +69,7 @@ share/locale/az/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/be/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/bg/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/bn/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/bn_IN/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/br/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/bs/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ca/LC_MESSAGES/libgnomeui-2.0.mo
@@ -115,6 +116,7 @@ share/locale/ne/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/nl/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/nn/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/nso/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/or/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/pa/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/pl/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/pt/LC_MESSAGES/libgnomeui-2.0.mo
@@ -152,6 +154,8 @@ share/locale/zu/LC_MESSAGES/libgnomeui-2.0.mo
 @dirrmtry share/locale/te
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm lib/gtk-2.0/%%GTK2_VERSION%%/filesystems
 @dirrm include/libgnomeui-2.0/libgnomeui
 @dirrm include/libgnomeui-2.0
