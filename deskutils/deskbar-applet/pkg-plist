@@ -8,9 +8,6 @@ lib/deskbar-applet/handlers/beagle-static.pyo
 lib/deskbar-applet/handlers/desklicious.py
 lib/deskbar-applet/handlers/desklicious.pyc
 lib/deskbar-applet/handlers/desklicious.pyo
-lib/deskbar-applet/handlers/email_address.py
-lib/deskbar-applet/handlers/email_address.pyc
-lib/deskbar-applet/handlers/email_address.pyo
 lib/deskbar-applet/handlers/epiphany.py
 lib/deskbar-applet/handlers/epiphany.pyc
 lib/deskbar-applet/handlers/epiphany.pyo
@@ -26,12 +23,12 @@ lib/deskbar-applet/handlers/galago.pyo
 lib/deskbar-applet/handlers/galeon.py
 lib/deskbar-applet/handlers/galeon.pyc
 lib/deskbar-applet/handlers/galeon.pyo
+lib/deskbar-applet/handlers/gdmactions.py
+lib/deskbar-applet/handlers/gdmactions.pyc
+lib/deskbar-applet/handlers/gdmactions.pyo
 lib/deskbar-applet/handlers/google-live.py
 lib/deskbar-applet/handlers/google-live.pyc
 lib/deskbar-applet/handlers/google-live.pyo
-lib/deskbar-applet/handlers/gtkbookmarks.py
-lib/deskbar-applet/handlers/gtkbookmarks.pyc
-lib/deskbar-applet/handlers/gtkbookmarks.pyo
 lib/deskbar-applet/handlers/history.py
 lib/deskbar-applet/handlers/history.pyc
 lib/deskbar-applet/handlers/history.pyo
@@ -41,15 +38,9 @@ lib/deskbar-applet/handlers/iswitch-window.pyo
 lib/deskbar-applet/handlers/mozilla.py
 lib/deskbar-applet/handlers/mozilla.pyc
 lib/deskbar-applet/handlers/mozilla.pyo
-lib/deskbar-applet/handlers/pathprograms.py
-lib/deskbar-applet/handlers/pathprograms.pyc
-lib/deskbar-applet/handlers/pathprograms.pyo
 lib/deskbar-applet/handlers/programs.py
 lib/deskbar-applet/handlers/programs.pyc
 lib/deskbar-applet/handlers/programs.pyo
-lib/deskbar-applet/handlers/volumes.py
-lib/deskbar-applet/handlers/volumes.pyc
-lib/deskbar-applet/handlers/volumes.pyo
 lib/deskbar-applet/handlers/web_address.py
 lib/deskbar-applet/handlers/web_address.pyc
 lib/deskbar-applet/handlers/web_address.pyo
@@ -168,6 +159,9 @@ lib/deskbar-applet/new-stuff-manager
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacEntry.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacEntry.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacEntry.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacHeader.py
+%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacHeader.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacHeader.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacHistory.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacHistory.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacHistory.pyo
@@ -204,6 +198,15 @@ lib/deskbar-applet/new-stuff-manager
 %%PYTHON_SITELIBDIR%%/deskbar/ui/entriac/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/entriac/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/entriac/__init__.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/ui/window/CuemiacWindowUI.py
+%%PYTHON_SITELIBDIR%%/deskbar/ui/window/CuemiacWindowUI.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/ui/window/CuemiacWindowUI.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/ui/window/__init__.py
+%%PYTHON_SITELIBDIR%%/deskbar/ui/window/__init__.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/ui/window/__init__.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/updater/ErrorDialog.py
+%%PYTHON_SITELIBDIR%%/deskbar/updater/ErrorDialog.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/updater/ErrorDialog.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/updater/NewStuffUpdater.py
 %%PYTHON_SITELIBDIR%%/deskbar/updater/NewStuffUpdater.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/updater/NewStuffUpdater.pyo
@@ -216,6 +219,7 @@ lib/deskbar-applet/new-stuff-manager
 libdata/bonobo/servers/Deskbar_Applet.server
 libdata/pkgconfig/deskbar-applet.pc
 share/dbus-1/services/org.gnome.NewStuffManager.service
+share/gnome/applications/deskbar-applet.desktop
 share/gnome/deskbar-applet/Deskbar_Applet.xml
 share/gnome/deskbar-applet/art/delicious.png
 share/gnome/deskbar-applet/art/deskbar-applet-panel-h.png
@@ -227,6 +231,8 @@ share/gnome/deskbar-applet/art/epiphany-history.png
 share/gnome/deskbar-applet/art/folder-bookmark.png
 share/gnome/deskbar-applet/art/generic.png
 share/gnome/deskbar-applet/art/google.png
+share/gnome/deskbar-applet/art/gpm-suspend-to-disk.png
+share/gnome/deskbar-applet/art/gpm-suspend-to-ram.png
 share/gnome/deskbar-applet/art/yahoo.png
 share/gnome/deskbar-applet/mozilla-search.glade
 share/gnome/deskbar-applet/prefs-dialog.glade
@@ -236,6 +242,7 @@ share/icons/hicolor/48x48/apps/deskbar-applet.png
 share/icons/hicolor/scalable/apps/deskbar-applet.svg
 share/locale/bg/LC_MESSAGES/deskbar-applet.mo
 share/locale/bn/LC_MESSAGES/deskbar-applet.mo
+share/locale/bn_IN/LC_MESSAGES/deskbar-applet.mo
 share/locale/ca/LC_MESSAGES/deskbar-applet.mo
 share/locale/cs/LC_MESSAGES/deskbar-applet.mo
 share/locale/cy/LC_MESSAGES/deskbar-applet.mo
@@ -251,6 +258,7 @@ share/locale/fi/LC_MESSAGES/deskbar-applet.mo
 share/locale/fr/LC_MESSAGES/deskbar-applet.mo
 share/locale/gl/LC_MESSAGES/deskbar-applet.mo
 share/locale/gu/LC_MESSAGES/deskbar-applet.mo
+share/locale/he/LC_MESSAGES/deskbar-applet.mo
 share/locale/hi/LC_MESSAGES/deskbar-applet.mo
 share/locale/hu/LC_MESSAGES/deskbar-applet.mo
 share/locale/id/LC_MESSAGES/deskbar-applet.mo
@@ -260,6 +268,8 @@ share/locale/ka/LC_MESSAGES/deskbar-applet.mo
 share/locale/ko/LC_MESSAGES/deskbar-applet.mo
 share/locale/ku/LC_MESSAGES/deskbar-applet.mo
 share/locale/lt/LC_MESSAGES/deskbar-applet.mo
+share/locale/lv/LC_MESSAGES/deskbar-applet.mo
+share/locale/mg/LC_MESSAGES/deskbar-applet.mo
 share/locale/mk/LC_MESSAGES/deskbar-applet.mo
 share/locale/nb/LC_MESSAGES/deskbar-applet.mo
 share/locale/ne/LC_MESSAGES/deskbar-applet.mo
@@ -274,6 +284,7 @@ share/locale/sq/LC_MESSAGES/deskbar-applet.mo
 share/locale/sr/LC_MESSAGES/deskbar-applet.mo
 share/locale/sr@Latn/LC_MESSAGES/deskbar-applet.mo
 share/locale/sv/LC_MESSAGES/deskbar-applet.mo
+share/locale/ta/LC_MESSAGES/deskbar-applet.mo
 share/locale/th/LC_MESSAGES/deskbar-applet.mo
 share/locale/uk/LC_MESSAGES/deskbar-applet.mo
 share/locale/vi/LC_MESSAGES/deskbar-applet.mo
@@ -282,10 +293,13 @@ share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/deskbar-applet/specs
 @dirrm share/gnome/deskbar-applet/art
 @dirrm share/gnome/deskbar-applet
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/updater
+@dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/window
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/entriac
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui
