@@ -36,6 +36,7 @@ share/locale/az/LC_MESSAGES/yelp.mo
 share/locale/be/LC_MESSAGES/yelp.mo
 share/locale/bg/LC_MESSAGES/yelp.mo
 share/locale/bn/LC_MESSAGES/yelp.mo
+share/locale/bn_IN/LC_MESSAGES/yelp.mo
 share/locale/br/LC_MESSAGES/yelp.mo
 share/locale/bs/LC_MESSAGES/yelp.mo
 share/locale/ca/LC_MESSAGES/yelp.mo
@@ -125,6 +126,8 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/br/LC_MESSAGES
 @dirrmtry share/locale/br
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/yelp/xslt
 @dirrm share/gnome/yelp/ui
 @dirrm share/gnome/yelp/icons
