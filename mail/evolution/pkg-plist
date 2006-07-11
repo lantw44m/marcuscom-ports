@@ -110,6 +110,7 @@ include/evolution-%%VERSION%%/misc/e-dropdown-button.h
 include/evolution-%%VERSION%%/misc/e-expander.h
 include/evolution-%%VERSION%%/misc/e-gui-utils.h
 include/evolution-%%VERSION%%/misc/e-hsv-utils.h
+include/evolution-%%VERSION%%/misc/e-icon-entry.h
 include/evolution-%%VERSION%%/misc/e-image-chooser.h
 include/evolution-%%VERSION%%/misc/e-info-label.h
 include/evolution-%%VERSION%%/misc/e-map.h
@@ -466,6 +467,7 @@ share/gnome/evolution/%%VERSION%%/glade/event-page.glade
 share/gnome/evolution/%%VERSION%%/glade/exchange-change-password.glade
 share/gnome/evolution/%%VERSION%%/glade/exchange-delegates.glade
 share/gnome/evolution/%%VERSION%%/glade/exchange-folder-tree.glade
+share/gnome/evolution/%%VERSION%%/glade/exchange-oof.glade
 share/gnome/evolution/%%VERSION%%/glade/exchange-passwd-expiry.glade
 share/gnome/evolution/%%VERSION%%/glade/exchange-permissions-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/filter.glade
@@ -620,6 +622,7 @@ share/locale/az/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/be/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/bn/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/bn_IN/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/bs/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ca/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/cs/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -690,6 +693,8 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/omf/evolution
 @dirrm share/gnome/idl/evolution-%%VERSION%%
 @dirrm share/gnome/help/evolution-%%VERSION%%/C/figures
