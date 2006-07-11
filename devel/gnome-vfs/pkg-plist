@@ -106,7 +106,7 @@ lib/libgnomevfs-2.so.0
 libdata/pkgconfig/gnome-vfs-2.0.pc
 libdata/pkgconfig/gnome-vfs-module-2.0.pc
 libexec/gnome-vfs-daemon
-share/dbus-1/services/gnome-vfs-daemon.service
+share/dbus-1/services/org.gnome.GnomeVFS.Daemon.service
 share/locale/af/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-vfs-2.0.mo
