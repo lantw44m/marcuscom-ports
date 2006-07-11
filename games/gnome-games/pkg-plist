@@ -125,7 +125,7 @@ share/gnome/blackjack/Vegas_Strip.rules
 @unexec [ -s %D/share/gnome/games/same-gnome.Medium.scores ] || rm -f %D/share/gnome/games/same-gnome.Medium.scores
 @unexec [ -s %D/share/gnome/games/same-gnome.Small.scores ] || rm -f %D/share/gnome/games/same-gnome.Small.scores
 @unexec [ -L %D/share/gnome/games/same-gnome.scores ] || rm -f %D/share/gnome/games/same-gnome.scores
-share/gnome/gnect/white_ob.cn4
+share/gnome/gnect/white_ob.cn4.gz
 share/gnome/gnibbles/level001.gnl
 share/gnome/gnibbles/level002.gnl
 share/gnome/gnibbles/level003.gnl
@@ -506,6 +506,7 @@ share/gnome/pixmaps/gnomine/face-worried.png
 share/gnome/pixmaps/gnomine/flag-question.svg
 share/gnome/pixmaps/gnomine/flag.svg
 share/gnome/pixmaps/gnomine/mine.svg
+share/gnome/pixmaps/gnomine/warning.svg
 share/gnome/pixmaps/gnotski.svg
 share/gnome/pixmaps/gtali/gnome-dice-1.svg
 share/gnome/pixmaps/gtali/gnome-dice-2.svg
@@ -649,6 +650,7 @@ share/locale/az/LC_MESSAGES/gnome-games.mo
 share/locale/be/LC_MESSAGES/gnome-games.mo
 share/locale/bg/LC_MESSAGES/gnome-games.mo
 share/locale/bn/LC_MESSAGES/gnome-games.mo
+share/locale/bn_IN/LC_MESSAGES/gnome-games.mo
 share/locale/ca/LC_MESSAGES/gnome-games.mo
 share/locale/cs/LC_MESSAGES/gnome-games.mo
 share/locale/cy/LC_MESSAGES/gnome-games.mo
@@ -719,6 +721,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/sounds/iagno
 @dirrm share/gnome/sounds/gnometris
 @dirrm share/gnome/sounds/gnobots2
