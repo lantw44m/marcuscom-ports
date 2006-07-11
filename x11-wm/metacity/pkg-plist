@@ -111,6 +111,7 @@ share/locale/az/LC_MESSAGES/metacity.mo
 share/locale/be/LC_MESSAGES/metacity.mo
 share/locale/bg/LC_MESSAGES/metacity.mo
 share/locale/bn/LC_MESSAGES/metacity.mo
+share/locale/bn_IN/LC_MESSAGES/metacity.mo
 share/locale/bs/LC_MESSAGES/metacity.mo
 share/locale/ca/LC_MESSAGES/metacity.mo
 share/locale/cs/LC_MESSAGES/metacity.mo
@@ -142,6 +143,7 @@ share/locale/ko/LC_MESSAGES/metacity.mo
 share/locale/ku/LC_MESSAGES/metacity.mo
 share/locale/lt/LC_MESSAGES/metacity.mo
 share/locale/lv/LC_MESSAGES/metacity.mo
+share/locale/mg/LC_MESSAGES/metacity.mo
 share/locale/mk/LC_MESSAGES/metacity.mo
 share/locale/ml/LC_MESSAGES/metacity.mo
 share/locale/mn/LC_MESSAGES/metacity.mo
@@ -175,8 +177,12 @@ share/locale/xh/LC_MESSAGES/metacity.mo
 share/locale/zh_CN/LC_MESSAGES/metacity.mo
 share/locale/zh_HK/LC_MESSAGES/metacity.mo
 share/locale/zh_TW/LC_MESSAGES/metacity.mo
+@dirrmtry share/locale/mg/LC_MESSAGES
+@dirrmtry share/locale/mg
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/themes/Simple/metacity-1
 @dirrm share/gnome/themes/Simple
 @dirrm share/gnome/themes/Metabox/metacity-1
