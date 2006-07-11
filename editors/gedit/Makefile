@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.36 2006/05/28 15:37:18 ahze Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.37 2006/06/13 06:33:09 marcus Exp $
 #
 
 PORTNAME=	gedit
-PORTVERSION=	2.15.3
+PORTVERSION=	2.15.4
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -52,6 +52,16 @@ PLIST_SUB+=	PYTHON=""
 CONFIGURE_ARGS+=--disable-python
 PLIST_SUB+=	PYTHON="@comment "
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|make|${GMAKE}|g' \
+	    	${WRKSRC}/bindings/python/Makefile.in
+
+pre-build:
+	${MKDIR} ${WRKSRC}/bindings/python/.deps
+.for ff in gedit_la-gedit.Plo gedit_la-geditcommands.Plo gedit_la-geditutils.Plo
+	${TOUCH} ${WRKSRC}/bindings/python/.deps/${ff}
+.endfor
 
 post-install:
 	@-update-desktop-database
