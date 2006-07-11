@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/devel/gnome-vfs-monikers/Makefile,v 1.1 2006/07/11 14:54:55 ahze Exp $
 
 PORTNAME=	gnome-vfs-monikers
 PORTVERSION=	2.15.3
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/..$//}
@@ -15,6 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gnome-vfs monikers module
 
 USE_GNOME=	gnomevfs2
+USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
