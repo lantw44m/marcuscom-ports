@@ -28,6 +28,7 @@ include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-find-directory.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-handle.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-init.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-job-limit.h
+include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-deprecated.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-handlers.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-info-cache.h
@@ -50,7 +51,6 @@ include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-cancellable-ops.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-inet-connection.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-method.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-mime-info.h
-include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-mime.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-module-callback-module-api.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-module-shared.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-module.h
@@ -60,9 +60,6 @@ include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-socket-buffer.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-socket.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-ssl.h
 include/gnome-vfs-module-2.0/libgnomevfs/gnome-vfs-transform.h
-lib/bonobo/monikers/libmoniker_gnome_vfs_std.a
-lib/bonobo/monikers/libmoniker_gnome_vfs_std.la
-lib/bonobo/monikers/libmoniker_gnome_vfs_std.so
 lib/gnome-vfs-2.0/modules/libbzip2.a
 lib/gnome-vfs-2.0/modules/libbzip2.la
 lib/gnome-vfs-2.0/modules/libbzip2.so
@@ -106,11 +103,10 @@ lib/libgnomevfs-2.a
 lib/libgnomevfs-2.la
 lib/libgnomevfs-2.so
 lib/libgnomevfs-2.so.0
-libdata/bonobo/servers/GNOME_VFS_Daemon.server
-libdata/bonobo/servers/GNOME_VFS_Moniker_std.server
 libdata/pkgconfig/gnome-vfs-2.0.pc
 libdata/pkgconfig/gnome-vfs-module-2.0.pc
 libexec/gnome-vfs-daemon
+share/dbus-1/services/gnome-vfs-daemon.service
 share/locale/af/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-vfs-2.0.mo
@@ -118,6 +114,7 @@ share/locale/az/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-vfs-2.0.mo
+share/locale/bn_IN/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-vfs-2.0.mo
@@ -200,3 +197,5 @@ share/locale/zu/LC_MESSAGES/gnome-vfs-2.0.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
