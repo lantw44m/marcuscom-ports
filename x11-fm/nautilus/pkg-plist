@@ -85,6 +85,7 @@ share/locale/az/LC_MESSAGES/nautilus.mo
 share/locale/be/LC_MESSAGES/nautilus.mo
 share/locale/bg/LC_MESSAGES/nautilus.mo
 share/locale/bn/LC_MESSAGES/nautilus.mo
+share/locale/bn_IN/LC_MESSAGES/nautilus.mo
 share/locale/bs/LC_MESSAGES/nautilus.mo
 share/locale/br/LC_MESSAGES/nautilus.mo
 share/locale/ca/LC_MESSAGES/nautilus.mo
@@ -168,6 +169,8 @@ share/mime/packages/nautilus.xml
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/km/LC_MESSAGES
 @dirrmtry share/locale/km
+@dirrmtry share/locale/bn_IN/LC_MESSAGES  
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/pixmaps/nautilus
 @dirrm share/gnome/nautilus/ui
 @dirrm share/gnome/nautilus/patterns
