@@ -29,12 +29,17 @@ share/gnome/nautilus-cd-burner/cdspin6.png
 share/gnome/nautilus-cd-burner/cdspin7.png
 share/gnome/nautilus-cd-burner/cdspin8.png
 share/gnome/nautilus-cd-burner/nautilus-cd-burner.glade
+share/icons/hicolor/16x16/apps/nautilus-cd-burner.png
+share/icons/hicolor/22x22/apps/nautilus-cd-burner.png
+share/icons/hicolor/24x24/apps/nautilus-cd-burner.png
+share/icons/hicolor/scalable/apps/nautilus-cd-burner.svg
 share/locale/am/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/ar/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/az/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/be/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/bg/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/bn/LC_MESSAGES/nautilus-cd-burner.mo
+share/locale/bn_IN/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/bs/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/ca/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/cs/LC_MESSAGES/nautilus-cd-burner.mo
@@ -106,5 +111,7 @@ share/locale/zh_TW/LC_MESSAGES/nautilus-cd-burner.mo
 @dirrmtry share/locale/te
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/nautilus-cd-burner
 @dirrm include/libnautilus-burn
