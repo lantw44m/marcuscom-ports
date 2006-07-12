@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD: ports/Mk/bsd.gstreamer.mk,v 1.18 2006/05/16 01:43:00 ahze Exp $
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.33 2006/07/10 22:35:57 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.34 2006/07/10 22:39:42 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -52,7 +52,7 @@ GSTREAMER80_PORT=	${GSTREAMER_PORT}80
 _GST_LIB_BASE=		${X11BASE}/lib/gstreamer-${GST_VERSION}
 _GST80_LIB_BASE=	${X11BASE}/lib/gstreamer-${GST80_VERSION}
 GST_VERSION=		0.10
-GST_MINOR_VERSION=	.3
+GST_MINOR_VERSION=	.0
 GST80_VERSION=		0.8
 GST80_MINOR_VERSION=	.10
 GST_SHLIB_VERSION=	1
@@ -259,7 +259,7 @@ IGNORE=	cannot install: unknown gstreamer-plugin -- ${ext}
 .endfor
 .for ext in ${USE_GSTREAMER}
 ${ext}_GST_PREFIX?=	gstreamer-plugins-
-${ext}_GST_VERSION?=	${GST_VERSION}${GST_MINOR_VERSION},1
+${ext}_GST_VERSION?=	${GST_VERSION}${GST_MINOR_VERSION}
 ${ext}_NAME?=		${ext}
 . if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS})
 BUILD_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_GST_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
