@@ -1,5 +1,5 @@
---- configure.orig	Tue Jul 11 01:57:24 2006
-+++ configure	Tue Jul 11 01:58:12 2006
+--- configure.orig	Wed Jul 12 16:09:33 2006
++++ configure	Wed Jul 12 17:44:40 2006
 @@ -19021,7 +19021,7 @@ else
  fi
  
@@ -9,3 +9,39 @@
  LIBS="$LIBS $PYTHON_EMBED_LIBS"
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
+@@ -20557,7 +20557,7 @@ if test -n "$PKG_CONFIG"; then
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_GNOMEVFS_CFLAGS=`$PKG_CONFIG --cflags "gnome-vfs-2.0 >= 2.9.3 			    pyorbit-2 >= 2.0.1" 2>/dev/null`
++  pkg_cv_GNOMEVFS_CFLAGS=`$PKG_CONFIG --cflags "gnome-vfs-2.0 >= 2.9.3 			    pyorbit-2 >= 2.0.1 bonobo-activation-2.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -20575,7 +20575,7 @@ if test -n "$PKG_CONFIG"; then
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_GNOMEVFS_LIBS=`$PKG_CONFIG --libs "gnome-vfs-2.0 >= 2.9.3 			    pyorbit-2 >= 2.0.1" 2>/dev/null`
++  pkg_cv_GNOMEVFS_LIBS=`$PKG_CONFIG --libs "gnome-vfs-2.0 >= 2.9.3 			    pyorbit-2 >= 2.0.1 bonobo-activation-2.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -20643,7 +20643,7 @@ if test -n "$PKG_CONFIG"; then
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_GNOME_VFS_MODULE_CFLAGS=`$PKG_CONFIG --cflags "gnome-vfs-module-2.0 >= 2.9.3" 2>/dev/null`
++  pkg_cv_GNOME_VFS_MODULE_CFLAGS=`$PKG_CONFIG --cflags "gnome-vfs-module-2.0 >= 2.9.3 bonobo-activation-2.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
+@@ -20661,7 +20661,7 @@ if test -n "$PKG_CONFIG"; then
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+-  pkg_cv_GNOME_VFS_MODULE_LIBS=`$PKG_CONFIG --libs "gnome-vfs-module-2.0 >= 2.9.3" 2>/dev/null`
++  pkg_cv_GNOME_VFS_MODULE_LIBS=`$PKG_CONFIG --libs "gnome-vfs-module-2.0 >= 2.9.3 bonobo-activation-2.0" 2>/dev/null`
+ else
+   pkg_failed=yes
+ fi
