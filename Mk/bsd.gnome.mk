@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.390 2006/06/14 02:52:43 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.391 2006/07/05 18:07:35 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -315,7 +315,7 @@ gnomevfs2_LIB_DEPENDS=	gnomevfs-2.0:${PORTSDIR}/devel/gnome-vfs
 gnomevfs2_DETECT=	${X11BASE}/libdata/pkgconfig/gnome-vfs-2.0.pc
 gnomevfs2_USE_GNOME_IMPL=gconf2 libbonobo gnomemimedata
 
-gail_LIB_DEPENDS=	gailutil.17:${PORTSDIR}/accessibility/gail
+gail_LIB_DEPENDS=	gailutil.18:${PORTSDIR}/accessibility/gail
 gail_DETECT=		${X11BASE}/libdata/pkgconfig/gail.pc
 gail_USE_GNOME_IMPL=	libgnomecanvas
 
