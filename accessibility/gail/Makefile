@@ -3,12 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gail/Makefile,v 1.44 2006/04/23 22:21:28 mezz Exp $
+#   $MCom: ports/accessibility/gail/Makefile,v 1.46 2006/07/13 03:08:03 marcus Exp $
 #
 
 PORTNAME=	gail
 PORTVERSION=	1.9.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -25,8 +25,8 @@ USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_GMAKE=	yes
 INSTALLS_SHLIB=	yes
-GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack libgnomecanvas lthack referencehack
+USE_AUTOTOOLS=	libtool:15
+USE_GNOME=	gnomehack ltverhack libgnomecanvas lthack referencehack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-gtk-doc \
