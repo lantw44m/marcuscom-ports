@@ -46,6 +46,7 @@ lib/window-manager-settings/libmetacity.so
 libdata/pkgconfig/gnome-settings-daemon.pc
 libdata/pkgconfig/gnome-window-settings-2.0.pc
 libexec/gnome-settings-daemon
+share/dbus-1/services/org.gnome.SettingsDaemon.service
 share/gnome/applications/accessibility-keyboard.desktop
 share/gnome/applications/at-properties.desktop
 share/gnome/applications/background.desktop
@@ -128,7 +129,6 @@ share/gnome/control-center-2.0/xrdb/Xaw.ad
 share/gnome/cursor-fonts/cursor-large-white.pcf
 share/gnome/cursor-fonts/cursor-large.pcf
 share/gnome/cursor-fonts/cursor-white.pcf
-share/gnome/dbus-1/services/org.gnome.SettingsDaemon.service
 share/gnome/desktop-directories/font-method.directory
 share/gnome/desktop-directories/theme-method.directory
 share/gnome/gnome-default-applications/gnome-default-applications.xml
