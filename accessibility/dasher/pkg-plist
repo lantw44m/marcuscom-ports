@@ -149,6 +149,7 @@ share/gnome/dasher/controllabels.dtd
 share/gnome/dasher/controllabels.xml
 share/gnome/dasher/dasher.glade
 share/gnome/dasher/dashermaemo.glade
+share/gnome/dasher/dashermaemofullscreen.glade
 share/gnome/dasher/training_albanian_SQ.txt
 share/gnome/dasher/training_basque_EU.txt
 share/gnome/dasher/training_bengali_BD.txt
@@ -201,6 +202,7 @@ share/locale/az/LC_MESSAGES/dasher.mo
 share/locale/be/LC_MESSAGES/dasher.mo
 share/locale/bg/LC_MESSAGES/dasher.mo
 share/locale/bn/LC_MESSAGES/dasher.mo
+share/locale/bn_IN/LC_MESSAGES/dasher.mo
 share/locale/bs/LC_MESSAGES/dasher.mo
 share/locale/ca/LC_MESSAGES/dasher.mo
 share/locale/cs/LC_MESSAGES/dasher.mo
@@ -231,6 +233,8 @@ share/locale/ko/LC_MESSAGES/dasher.mo
 share/locale/ku/LC_MESSAGES/dasher.mo
 share/locale/ky/LC_MESSAGES/dasher.mo
 share/locale/lt/LC_MESSAGES/dasher.mo
+share/locale/lv/LC_MESSAGES/dasher.mo
+share/locale/mg/LC_MESSAGES/dasher.mo
 share/locale/mk/LC_MESSAGES/dasher.mo
 share/locale/mn/LC_MESSAGES/dasher.mo
 share/locale/ms/LC_MESSAGES/dasher.mo
@@ -264,12 +268,16 @@ share/locale/zh_TW/LC_MESSAGES/dasher.mo
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/mg/LC_MESSAGES
+@dirrmtry share/locale/mg
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/br/LC_MESSAGES
 @dirrmtry share/locale/br
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/omf/dasher
 @dirrm share/gnome/help/dasher/C/figures
 @dirrm share/gnome/help/dasher/C
