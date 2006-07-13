@@ -1,0 +1,20 @@
+include/pygtk-2.0/pygobject.h
+%%PYTHON_SITELIBDIR%%/gtk-2.0/dsextras.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/dsextras.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/dsextras.pyo
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gobject/__init__.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gobject/__init__.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gobject/__init__.pyo
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gobject/_gobject.la
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gobject/_gobject.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gobject/option.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gobject/option.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gobject/option.pyo
+%%PYTHON_SITELIBDIR%%/pygtk.pth
+%%PYTHON_SITELIBDIR%%/pygtk.py
+%%PYTHON_SITELIBDIR%%/pygtk.pyc
+%%PYTHON_SITELIBDIR%%/pygtk.pyo
+libdata/pkgconfig/pygobject-2.0.pc
+@dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/gobject
+@dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0
+@dirrm include/pygtk-2.0
