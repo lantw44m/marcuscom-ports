@@ -95,9 +95,15 @@ lib/pygtk/2.0/pygtk-demo.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/__init__.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/_gtk.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/_gtk.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/_lazyutils.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/_lazyutils.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/_lazyutils.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/compat.py
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/compat.pyc
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/compat.pyo
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/deprecation.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/deprecation.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/deprecation.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/glade.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/glade.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/keysyms.py
