@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.45 2006/04/28 11:44:33 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.47 2006/07/14 19:13:39 ahze Exp $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.9
@@ -17,7 +17,7 @@ COMMENT=	Development framework for creating media applications
 
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
-USE_XLIB=	yes
+USE_X_PREFIX=	yes
 USE_BISON=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
