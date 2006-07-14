@@ -3,12 +3,12 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD: ports/multimedia/gstreamer-plugins/Makefile,v 1.102 2006/06/09 20:24:02 ahze Exp $
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.90 2006/06/24 19:36:41 marcus Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.91 2006/06/24 22:09:51 marcus Exp $
 #
 
 PORTNAME=	gstreamer
 PORTVERSION?=	${BASE_PORTVERSION}
-PORTREVISION?=	1
+PORTREVISION?=	0
 PORTEPOCH=	1
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-plugins-base/:base \
@@ -28,7 +28,7 @@ LIB_DEPENDS+=	gstreamer-0.10.0:${PORTSDIR}/multimedia/gstreamer \
 		popt.0:${PORTSDIR}/devel/popt \
 		oil-0.3.1:${PORTSDIR}/devel/liboil
 
-BASE_PORTVERSION=	0.10.8
+BASE_PORTVERSION=	0.10.9
 BASE_DISTNAME=		gst-plugins-base-${BASE_PORTVERSION}
 BASE_DISTFILE=		${BASE_DISTNAME}${EXTRACT_SUFX}
 BAD_PORTVERSION=	0.10.3
@@ -46,7 +46,7 @@ SHLIB_VERSION=	1
 USE_GETTEXT=	yes
 VERSION=	${GST_VERSION}
 WANT_GSTREAMER=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME+=	gnomehack gnometarget pkgconfig ltverhack
@@ -134,10 +134,10 @@ post-patch:
 	 s|%%VERSION%%|${VERSION}|'
 	 @${FIND} ${WRKSRC}/ext -name Makefile.in | \
 	 ${XARGS} -n 10 ${REINPLACE_CMD} -e \
-	 's|$$(top_builddir)/gst-libs/gst/tag/libgsttag-@GST_MAJORMINOR@.la|${X11BASE}/lib/libgsttag-@GST_MAJORMINOR@.la|; \
-	  s|$$(top_builddir)/gst-libs/gst/audio/libgstaudio-@GST_MAJORMINOR@.la|${X11BASE}/lib/libgstaudio-@GST_MAJORMINOR@.la|; \
-	  s|$$(top_builddir)/gst-libs/gst/riff/libgstriff-@GST_MAJORMINOR@.la|${X11BASE}/lib/libgstriff-@GST_MAJORMINOR@.la|; \
-	  s|$$(top_builddir)/gst-libs/gst/cdda/libgstcdda-@GST_MAJORMINOR@.la|${X11BASE}/lib/libgstcdda-@GST_MAJORMINOR@.la|'
+	 's|$$(top_builddir)/gst-libs/gst/tag/libgsttag-@GST_MAJORMINOR@.la|${LOCALBASE}/lib/libgsttag-@GST_MAJORMINOR@.la|; \
+	  s|$$(top_builddir)/gst-libs/gst/audio/libgstaudio-@GST_MAJORMINOR@.la|${LOCALBASE}/lib/libgstaudio-@GST_MAJORMINOR@.la|; \
+	  s|$$(top_builddir)/gst-libs/gst/riff/libgstriff-@GST_MAJORMINOR@.la|${LOCALBASE}/lib/libgstriff-@GST_MAJORMINOR@.la|; \
+	  s|$$(top_builddir)/gst-libs/gst/cdda/libgstcdda-@GST_MAJORMINOR@.la|${LOCALBASE}/lib/libgstcdda-@GST_MAJORMINOR@.la|'
 	@${REINPLACE_CMD} -e 's|DEFAULT_AUDIOSINK="alsasink"|DEFAULT_AUDIOSINK="${DEFAULT_AUDIOSINK}"|; \
 		s|DEFAULT_AUDIOSRC="alsasrc"|DEFAULT_AUDIOSRC="${DEFAULT_AUDIOSRC}"|' \
 		${WRKSRC}/configure
