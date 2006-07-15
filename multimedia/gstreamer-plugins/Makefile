@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD: ports/multimedia/gstreamer-plugins/Makefile,v 1.102 2006/06/09 20:24:02 ahze Exp $
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.92 2006/07/14 19:24:09 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.93 2006/07/14 20:00:17 ahze Exp $
 #
 
 PORTNAME=	gstreamer
@@ -127,6 +127,12 @@ DEFAULT_DVD_DEVICE=/dev/acd0
 .endif
 
 post-patch:
+	@${FIND} ${WRKSRC}/ext -name Makefile.in | \
+	${XARGS} -n 10 ${REINPLACE_CMD} -e \
+	's|$$(top_builddir)/gst-libs/gst/tag/libgsttag-$$(GST_MAJORMINOR).la|${X11BASE}/lib/libgsttag-@GST_MAJORMINOR@.la|; \
+	s|$$(top_builddir)/gst-libs/gst/audio/libgstaudio-$$(GST_MAJORMINOR).la|${X11BASE}/lib/libgstaudio-@GST_MAJORMINOR@.la|; \
+	s|$$(top_builddir)/gst-libs/gst/riff/libgstriff-$$(GST_MAJORMINOR).la|${X11BASE}/lib/libgstriff-@GST_MAJORMINOR@.la|; \
+	s|$$(top_builddir)/gst-libs/gst/cdda/libgstcdda-$$(GST_MAJORMINOR).la|${X11BASE}/lib/libgstcdda-@GST_MAJORMINOR@.la|'
 	@${FIND} ${WRKSRC} -type f | \
 	${XARGS} -n 10 ${REINPLACE_CMD} -e \
 	's|malloc\.h|stdlib.h|; \
