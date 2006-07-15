@@ -4194,6 +4194,8 @@ share/icons/gnome/scalable/status/xfce-trash_full.svg
 share/icons/gnome/scalable/stock/generic/stock_person.svg
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrmtry share/icons/gnome/scalable/stock/generic
 @dirrmtry share/icons/gnome/scalable/stock
 @dirrmtry share/icons/gnome/scalable/status
