@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.78 2006/05/28 20:53:54 marcus Exp $
+#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.79 2006/06/01 17:10:36 marcus Exp $
 #
 
 PORTNAME=	gnopernicus
@@ -26,7 +26,7 @@ INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui atspi gnomespeech
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include `pkg-config --cflags gtk+-2.0`" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 MAKE_ENV=	SED="${SED}"
 
