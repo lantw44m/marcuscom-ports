@@ -372,7 +372,10 @@ share/icons/HighContrast-SVG/scalable/actions/view-sort-ascending.svg
 share/icons/HighContrast-SVG/scalable/actions/view-sort-descending.svg
 share/icons/HighContrast-SVG/scalable/actions/window-close.svg
 share/icons/HighContrast-SVG/scalable/actions/window-new.svg
+share/icons/HighContrast-SVG/scalable/actions/window_fullscreen.svg
 share/icons/HighContrast-SVG/scalable/actions/window_new.svg
+share/icons/HighContrast-SVG/scalable/actions/xfce-system-exit.svg
+share/icons/HighContrast-SVG/scalable/actions/xfce-system-lock.svg
 share/icons/HighContrast-SVG/scalable/actions/zoom-best-fit.svg
 share/icons/HighContrast-SVG/scalable/actions/zoom-in.svg
 share/icons/HighContrast-SVG/scalable/actions/zoom-original.svg
@@ -397,6 +400,7 @@ share/icons/HighContrast-SVG/scalable/apps/gnome-help.svg
 share/icons/HighContrast-SVG/scalable/apps/gnome-mixer.svg
 share/icons/HighContrast-SVG/scalable/apps/gnome-monitor.svg
 share/icons/HighContrast-SVG/scalable/apps/gnome-session.svg
+share/icons/HighContrast-SVG/scalable/apps/gnome-settings-accessibility-technologies.svg
 share/icons/HighContrast-SVG/scalable/apps/gnome-settings-background.svg
 share/icons/HighContrast-SVG/scalable/apps/gnome-settings-font.svg
 share/icons/HighContrast-SVG/scalable/apps/gnome-settings-theme.svg
@@ -457,6 +461,13 @@ share/icons/HighContrast-SVG/scalable/apps/utilities-terminal.svg
 share/icons/HighContrast-SVG/scalable/apps/volume-knob.svg
 share/icons/HighContrast-SVG/scalable/apps/wallpaper.svg
 share/icons/HighContrast-SVG/scalable/apps/web-browser.svg
+share/icons/HighContrast-SVG/scalable/apps/xfce-filemanager.svg
+share/icons/HighContrast-SVG/scalable/apps/xfce-mail.svg
+share/icons/HighContrast-SVG/scalable/apps/xfce-terminal.svg
+share/icons/HighContrast-SVG/scalable/apps/xfce4-backdrop.svg
+share/icons/HighContrast-SVG/scalable/apps/xfce4-mixer.svg
+share/icons/HighContrast-SVG/scalable/apps/xfce4-session.svg
+share/icons/HighContrast-SVG/scalable/apps/xfwm4.svg
 share/icons/HighContrast-SVG/scalable/apps/xscreensaver.svg
 share/icons/HighContrast-SVG/scalable/apps/zen-icon.svg
 share/icons/HighContrast-SVG/scalable/categories/applications-accessories.svg
@@ -510,6 +521,14 @@ share/icons/HighContrast-SVG/scalable/categories/redhat-system_settings.svg
 share/icons/HighContrast-SVG/scalable/categories/redhat-system_tools.svg
 share/icons/HighContrast-SVG/scalable/categories/stock_internet.svg
 share/icons/HighContrast-SVG/scalable/categories/system-help.svg
+share/icons/HighContrast-SVG/scalable/categories/xfce-games.svg
+share/icons/HighContrast-SVG/scalable/categories/xfce-graphics.svg
+share/icons/HighContrast-SVG/scalable/categories/xfce-internet.svg
+share/icons/HighContrast-SVG/scalable/categories/xfce-multimedia.svg
+share/icons/HighContrast-SVG/scalable/categories/xfce-office.svg
+share/icons/HighContrast-SVG/scalable/categories/xfce-system-settings.svg
+share/icons/HighContrast-SVG/scalable/categories/xfce-utils.svg
+share/icons/HighContrast-SVG/scalable/categories/xfce4-settings.svg
 share/icons/HighContrast-SVG/scalable/devices/3floppy_unmount.svg
 share/icons/HighContrast-SVG/scalable/devices/audio-card.svg
 share/icons/HighContrast-SVG/scalable/devices/audio-input-microphone.svg
@@ -589,6 +608,10 @@ share/icons/HighContrast-SVG/scalable/devices/system-floppy.svg
 share/icons/HighContrast-SVG/scalable/devices/system.svg
 share/icons/HighContrast-SVG/scalable/devices/usbpendrive_unmount.svg
 share/icons/HighContrast-SVG/scalable/devices/video-display.svg
+share/icons/HighContrast-SVG/scalable/devices/xfce-printer.svg
+share/icons/HighContrast-SVG/scalable/devices/xfce4-display.svg
+share/icons/HighContrast-SVG/scalable/devices/xfce4-keyboard.svg
+share/icons/HighContrast-SVG/scalable/devices/xfce4-mouse.svg
 share/icons/HighContrast-SVG/scalable/devices/yast_HD.svg
 share/icons/HighContrast-SVG/scalable/devices/yast_idetude.svg
 share/icons/HighContrast-SVG/scalable/devices/yast_joystick.svg
@@ -607,6 +630,10 @@ share/icons/HighContrast-SVG/scalable/mimetypes/binary.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/empty.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/exec.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/font-x-generic.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/font.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/font_bitmap.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/font_truetype.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/font_type1.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-fs-executable.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-fs-regular.icon
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-fs-regular.svg
@@ -615,6 +642,9 @@ share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.lotus
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.ms-excel.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.oasis.opendocument.spreadsheet.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.rn-realmedia-secure.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.rn-realmedia-vbr.svg
+share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.rn-realmedia.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.stardivision.calc.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-vnd.sun.xml.calc.svg
 share/icons/HighContrast-SVG/scalable/mimetypes/gnome-mime-application-x-applix-spreadsheet.svg
@@ -707,6 +737,8 @@ share/icons/HighContrast-SVG/scalable/places/trashcan_empty.svg
 share/icons/HighContrast-SVG/scalable/places/user-desktop.svg
 share/icons/HighContrast-SVG/scalable/places/user-home.svg
 share/icons/HighContrast-SVG/scalable/places/user-trash.svg
+share/icons/HighContrast-SVG/scalable/places/xfce-trash_empty.svg
+share/icons/HighContrast-SVG/scalable/status/connect_no.svg
 share/icons/HighContrast-SVG/scalable/status/dialog-error.svg
 share/icons/HighContrast-SVG/scalable/status/dialog-information.svg
 share/icons/HighContrast-SVG/scalable/status/dialog-question.svg
@@ -745,6 +777,7 @@ share/icons/HighContrast-SVG/scalable/status/stock_open.svg
 share/icons/HighContrast-SVG/scalable/status/stock_trash_full.svg
 share/icons/HighContrast-SVG/scalable/status/trashcan_full.svg
 share/icons/HighContrast-SVG/scalable/status/user-trash-full.svg
+share/icons/HighContrast-SVG/scalable/status/xfce-trash_full.svg
 share/icons/HighContrast/index.theme
 share/icons/HighContrastInverse/index.theme
 share/icons/HighContrastLargePrint/48x48/apps/JUSimageIcon.png
