@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.92 2006/07/10 20:16:48 ahze Exp $
+#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.93 2006/07/15 16:09:17 ahze Exp $
 #
 
 PORTNAME=	gnome-themes
@@ -32,9 +32,5 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack metacity libgnomeui
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 	       	LDFLAGS="-L${LOCALBASE}/lib"
-
-post-patch:
-	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
-		's|noinst_PROGRAMS = |noinst_PROGRAMS = #|g'
 
 .include <bsd.port.mk>
