@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.164 2006/07/05 18:08:05 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.165 2006/07/14 22:23:31 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -50,7 +50,7 @@ RUN_DEPENDS?=	${X11BASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-applets
 		network-admin:${PORTSDIR}/sysutils/gnome-system-tools \
 		gnome-nettool:${PORTSDIR}/net/gnome-nettool \
 		vino-session:${PORTSDIR}/net/vino \
-		ximian-connector-setup-2.8:${PORTSDIR}/mail/evolution-exchange \
+		exchange-connector-setup-2.8:${PORTSDIR}/mail/evolution-exchange \
 		${X11BASE}/lib/gstreamer-0.10/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins-core \
 		${X11BASE}/lib/gstreamer-0.10/libgstgconfelements.so:${PORTSDIR}/devel/gstreamer-plugins-gconf \
 		totem:${PORTSDIR}/multimedia/totem-gstreamer \
