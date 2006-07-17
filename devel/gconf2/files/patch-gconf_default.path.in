@@ -1,0 +1,12 @@
+--- gconf/default.path.in.orig	Mon Jul 17 13:14:41 2006
++++ gconf/default.path.in	Mon Jul 17 13:15:19 2006
+@@ -28,5 +28,8 @@
+ # Finally, look at the systemwide defaults
+ xml:readonly:@EXPANDED_SYSGCONFDIR@/gconf.xml.defaults
+ 
+-
++xml:readonly:%%X11BASE%%/etc/gconf/gconf.xml.mandatory
++include %%X11BASE%%/etc/gconf/2/local-mandatory.path
++include %%X11BASE%%/etc/gconf/2/local-defaults.path
++xml:readonly:%%X11BASE%%/etc/gconf/gconf.xml.defaults
+ 
