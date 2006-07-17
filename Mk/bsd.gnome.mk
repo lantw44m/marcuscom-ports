@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.391 2006/07/05 18:07:35 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.392 2006/07/13 03:08:24 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -116,6 +116,7 @@ gnomeprefix_CONFIGURE_ARGS=--localstatedir=${GNOME_LOCALSTATEDIR} \
 			   --disable-gtk-doc \
 			   --with-gconf-source=${GCONF_CONFIG_SOURCE}
 gnomeprefix_USE_GNOME_IMPL=gnomehier
+gnomeprefix_PREFIX=${LOCALBASE}
 
 gnometarget_CONFIGURE_TARGET=--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
 
@@ -685,6 +686,16 @@ BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
 .if !defined(NODEPENDS)
 LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
 RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
+.endif
+
+.if defined(${component}_PREFIX)
+.if ${.MAKEFLAGS:MPREFIX=*}==""
+PREFIX=	${${component}_PREFIX}
+.endif
+.if defined(USE_X_PREFIX)
+.undef USE_X_PREFIX
+USE_XLIB=	yes
+.endif
 .endif
 
 CONFIGURE_ARGS+=${${component}_CONFIGURE_ARGS}
