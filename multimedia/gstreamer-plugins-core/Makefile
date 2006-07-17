@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins-core/Makefile,v 1.14 2006/01/21 21:22:18 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins-core/Makefile,v 1.16 2006/07/17 00:00:01 ahze Exp $
 
 PORTNAME=	gstreamer-plugins-core
 PORTVERSION=	0.10
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	multimedia audio
 MASTER_SITES=	# empty
 DISTFILES=	# empty
