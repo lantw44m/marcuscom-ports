@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.392 2006/07/13 03:08:24 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.393 2006/07/17 19:24:57 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -99,7 +99,7 @@ referencehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in" -type f | ${XARGS
 lthack_PRE_PATCH=	${FIND} ${WRKSRC} -name "configure" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 				'/^LIBTOOL_DEPS="$$ac_aux_dir\/ltmain.sh"$$/s|$$|; $$ac_aux_dir/ltconfig $$LIBTOOL_DEPS;|'
 
-GNOME_MTREE_FILE?=		${X11BASE}/etc/mtree/BSD.gnome-x11.dist
+GNOME_MTREE_FILE?=		${LOCALBASE}/etc/mtree/BSD.gnome.dist
 gnomehier_DETECT=	${GNOME_MTREE_FILE}
 gnomehier_RUN_DEPENDS=	${gnomehier_DETECT}:${PORTSDIR}/misc/gnomehier
 
