@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD: ports/Mk/bsd.gstreamer.mk,v 1.18 2006/05/16 01:43:00 ahze Exp $
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.34 2006/07/10 22:39:42 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.35 2006/07/12 10:25:15 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -49,8 +49,8 @@ Gstreamer_Pre_Include=		bsd.gstreamer.mk
 
 GSTREAMER_PORT=		${PORTSDIR}/multimedia/gstreamer-plugins
 GSTREAMER80_PORT=	${GSTREAMER_PORT}80
-_GST_LIB_BASE=		${X11BASE}/lib/gstreamer-${GST_VERSION}
-_GST80_LIB_BASE=	${X11BASE}/lib/gstreamer-${GST80_VERSION}
+_GST_LIB_BASE=		${LOCALBASE}/lib/gstreamer-${GST_VERSION}
+_GST80_LIB_BASE=	${LOCALBASE}/lib/gstreamer-${GST80_VERSION}
 GST_VERSION=		0.10
 GST_MINOR_VERSION=	.0
 GST80_VERSION=		0.8

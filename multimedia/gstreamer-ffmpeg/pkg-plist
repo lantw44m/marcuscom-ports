@@ -1,0 +1,2 @@
+lib/gstreamer-%%VERSION%%/libgstffmpeg.la
+lib/gstreamer-%%VERSION%%/libgstffmpeg.so
