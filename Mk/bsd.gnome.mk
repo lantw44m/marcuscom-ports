@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.396 2006/07/18 03:34:14 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.397 2006/07/18 12:33:24 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -136,7 +136,7 @@ glib12_MAKE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_DETECT=		${GLIB_CONFIG}
 glib12_USE_GNOME_IMPL=	pkgconfig
 
-GTK_CONFIG?=		${X11BASE}/bin/gtk12-config
+GTK_CONFIG?=		${LOCALBASE}/bin/gtk12-config
 gtk12_LIB_DEPENDS=	gtk-12.2:${PORTSDIR}/x11-toolkits/gtk12
 gtk12_CONFIGURE_ENV=	GTK_CONFIG="${GTK_CONFIG}"
 gtk12_MAKE_ENV=		GTK_CONFIG="${GTK_CONFIG}"
