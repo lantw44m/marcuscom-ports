@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.86 2006/05/28 20:21:32 mezz Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.87 2006/07/13 01:08:32 marcus Exp $
 #
 
 PORTNAME=	gnome-session
@@ -22,9 +22,9 @@ EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Session component for the GNOME 2 desktop
 
-BUILD_DEPENDS=	${X11BASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
+BUILD_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
 LIB_DEPENDS=	dbus-1.2:${PORTSDIR}/devel/dbus
-RUN_DEPENDS=	${X11BASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
+RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
