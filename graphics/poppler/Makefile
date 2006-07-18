@@ -3,12 +3,12 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.23 2006/04/12 17:10:20 ahze Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.25 2006/07/18 13:19:47 ahze Exp $
 #
 
 PORTNAME=	poppler
 PORTVERSION=	0.5.3
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
 
@@ -18,7 +18,6 @@ COMMENT?=	A PDF rendering library
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 
 USE_GMAKE=	yes
-USE_X_PREFIX=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gnometarget
 INSTALLS_SHLIB=	yes
