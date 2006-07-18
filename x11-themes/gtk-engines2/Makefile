@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.21 2006/05/06 08:52:09 marcus Exp $
+#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.22 2006/07/10 23:40:25 ahze Exp $
 #
 
 PORTNAME=	gtk-engines2
 PORTVERSION=	2.7.5
+PORTREVISION=	1
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/2.7
@@ -20,7 +21,6 @@ COMMENT=	Theme engine for the gtk+-2.0 toolkit
 CONFLICTS=	gtk-smooth-engine-[0-9]* clearlooks-[0-9]*
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gtk20
 
