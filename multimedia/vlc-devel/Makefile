@@ -3,7 +3,7 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.12 2006/06/09 18:13:48 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.13 2006/06/21 22:50:36 ahze Exp $
 #
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
@@ -32,7 +32,6 @@ WRKSRC=		${WRKDIR}/${PORTNAME}-0.8.6-svn
 WITH_VLC_DEFAULT_FONT?=	${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf
 
 #USE_BZIP2=	yes
-USE_X_PREFIX=	yes
 USE_GETOPT_LONG=yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
