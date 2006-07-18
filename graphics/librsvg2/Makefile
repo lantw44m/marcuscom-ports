@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.101 2006/05/11 11:35:42 ahze Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.102 2006/07/15 14:34:17 ahze Exp $
 #
 
 PORTNAME=	librsvg2
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 		popt.0:${PORTSDIR}/devel/popt \
 		croco-${CROCO_VERSION}.3:${PORTSDIR}/textproc/libcroco
-RUN_DEPENDS=	${X11BASE}/lib/gtk-2.0/${GTK2_VERSION}/engines/libmist.so:${PORTSDIR}/x11-themes/gtk-engines2
+RUN_DEPENDS=	gtk-engines2>=2.7.5_1:${PORTSDIR}/x11-themes/gtk-engines2
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
