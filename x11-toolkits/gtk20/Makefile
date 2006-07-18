@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.90 2006/06/22 21:02:31 ahze Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.91 2006/07/03 15:24:01 ahze Exp $
 #
 
 PORTNAME=	gtk
 PORTVERSION=	2.10.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
 		ftp://ftp.gtk.org/pub/gtk/v2.10/ \
@@ -33,7 +33,7 @@ LIB_DEPENDS=	png.5:${PORTSDIR}/graphics/png \
 		tiff.4:${PORTSDIR}/graphics/tiff \
 		jpeg.9:${PORTSDIR}/graphics/jpeg
 RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
-		${X11BASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
+		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
 USE_XPM=	yes
 USE_PERL5=	yes
@@ -41,7 +41,7 @@ INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack atk pango ltverhack
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 CONFIGURE_ARGS=	--enable-static --with-xinput=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include -I${X11BASE}/include" \
@@ -120,7 +120,7 @@ pre-build:
 	@${RM} -rf ${WRKSRC}/docs/gtk.info*
 
 post-install:
-	-@${FIND} ${X11BASE}/share/icons -type d -depth 1 -exec \
+	-@${FIND} ${LOCALBASE}/share/icons -type d -depth 1 -exec \
 		${PREFIX}/bin/gtk-update-icon-cache -q -f {} \; 2>/dev/null
 	@${MKDIR} ${PREFIX}/lib/gtk-2.0/modules
 	@${MKDIR} ${PREFIX}/lib/gtk-2.0/${GTK_VERSION}/engines
