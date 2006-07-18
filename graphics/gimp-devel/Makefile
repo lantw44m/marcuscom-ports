@@ -3,11 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.18 2006/06/11 05:29:49 ahze Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.19 2006/06/26 10:43:22 pav Exp $
 #
 
 PORTNAME=	gimp
 PORTVERSION=	2.3.9
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -40,7 +41,6 @@ SHLIBVER?=	0
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
