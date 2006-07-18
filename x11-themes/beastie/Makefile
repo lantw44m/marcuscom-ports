@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-themes/beastie/Makefile,v 1.8 2006/05/03 22:56:31 ahze Exp $
+#    $MCom: ports/x11-themes/beastie/Makefile,v 1.9 2006/05/03 22:58:28 ahze Exp $
 #
 
 PORTNAME=	beastie
 PORTVERSION=	06.05.03
+PORTREVISION=	1
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://people.freebsd.org/~ahze/distfiles/
@@ -21,7 +22,6 @@ RUN_DEPENDS+=	gtk-engines2>=2.7.4_1:${PORTSDIR}/x11-themes/gtk-engines2 \
 		gnome-themes>=2.11.91:${PORTSDIR}/x11-themes/gnome-themes
 
 WRKSRC=		${WRKDIR}/Beastie
-USE_X_PREFIX=	yes
 NO_BUILD=	yes
 
 THEME_FILES=	README index.theme gtk-2.0/gtkrc
