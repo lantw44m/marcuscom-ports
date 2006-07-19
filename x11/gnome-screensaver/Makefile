@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.47 2006/06/24 20:19:27 marcus Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.48 2006/07/11 15:41:07 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -24,16 +24,16 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomemenus
-CONFIGURE_ARGS=	--with-gdm-config=${X11BASE}/etc/gdm/custom.conf \
+CONFIGURE_ARGS=	--with-gdm-config=${LOCALBASE}/etc/gdm/custom.conf \
 		--with-xscreensaverdir=${XSCREENSAVER_DIR} \
-		--with-xscreensaverhackdir=${X11BASE}/bin/xscreensaver-hacks
+		--with-xscreensaverhackdir=${LOCALBASE}/bin/xscreensaver-hacks
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 GCONF_SCHEMAS=	gnome-screensaver.schemas
 
 PLIST=	${WRKDIR}/pkg-plist
 
-XSCREENSAVER_DIR=	${X11BASE}/share/xscreensaver/config
+XSCREENSAVER_DIR=	${LOCALBASE}/share/xscreensaver/config
 SCREENSAVER_DIR=	share/gnome/applications/screensavers
 
 XSCREENSAVER_EXCLUDE=	"(popsquares.xml)"
