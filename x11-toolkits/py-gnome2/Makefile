@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome2/Makefile,v 1.30 2006/07/12 21:51:43 marcus Exp $
+#   $MCom: ports/x11-toolkits/py-gnome2/Makefile,v 1.31 2006/07/13 03:20:45 marcus Exp $
 #
 
 PORTNAME=	gnome
 PORTVERSION=	2.15.4
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python/${PORTVERSION:C/..$//}
@@ -37,10 +38,6 @@ EG_DST_DIR=	${PREFIX}/share/examples/py-gnome
 CONFLICTS=	py*-gnome-1*
 
 .include <bsd.port.pre.mk>
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|%%X11BASE%%|${X11BASE}|' \
-		${WRKSRC}/gnomevfs/Makefile.in
 
 .if !defined(NOPORTDOCS)
 post-install:
