@@ -3,10 +3,11 @@
 # Whom:			Koop Mast <kwm@rainbow-runner.nl>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer-ffmpeg/Makefile,v 1.13 2006/07/17 00:00:01 ahze Exp $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.1
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-ffmpeg/
 PKGNAMESUFFIX=	-ffmpeg
