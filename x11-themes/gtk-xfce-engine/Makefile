@@ -1,0 +1,22 @@
+# New ports collection makefile for:	gtk-xfce-engine
+# Date Created:				10 October 2002
+# Whom:				 	olgeni@FreeBSD.org
+#
+# $FreeBSD$
+#
+
+PORTNAME=	gtk-xfce-engine
+PORTVERSION=	2.2.8
+PORTREVISION=	2
+CATEGORIES=	x11-themes xfce
+MASTER_SITES=	http://www.us.xfce.org/archive/xfce-4.2.3.2/src/ \
+		http://www.ca-us.xfce.org/archive/xfce-4.2.3.2/src/ \
+		http://www.p0llux.be/xfce/xfce-4.2.3.2/src/
+
+MAINTAINER=	oliver@FreeBSD.org
+COMMENT=	An XFCE engine for GTK 2.0
+
+USE_GNOME=	gnomehack gtk20
+GNU_CONFIGURE=	yes
+
+.include <bsd.port.mk>
