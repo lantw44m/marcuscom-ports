@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreBSD.org>
 #
 # $FreeBSD: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.45 2006/05/15 22:23:03 mezz Exp $
-#   $MCom: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.53 2005/09/26 21:14:32 marcus Exp $
+#   $MCom: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.55 2006/07/21 17:42:25 marcus Exp $
 #
 
 PORTNAME=	libgnomeprintui
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/mi
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeprint libgnomecanvas \

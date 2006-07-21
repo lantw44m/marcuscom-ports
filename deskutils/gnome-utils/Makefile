@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.99 2006/06/14 02:40:57 marcus Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.100 2006/06/24 06:54:35 marcus Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -22,7 +22,7 @@ LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2

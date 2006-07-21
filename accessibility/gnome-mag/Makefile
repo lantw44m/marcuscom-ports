@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/accessibility/gnomemag/Makefile,v 1.1 2006/03/13 23:49:23 mezz Exp $
+#   $MCom: ports/accessibility/gnome-mag/Makefile,v 1.18 2006/07/13 03:55:45 marcus Exp $
 #
 
 PORTNAME=	gnome-mag
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME screen magnifier
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GNOME=	gnomehack gnomeprefix atspi libbonobo intlhack ltverhack
 USE_GMAKE=	yes
 USE_GETTEXT=	yes

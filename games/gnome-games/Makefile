@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.113 2006/06/12 17:58:44 marcus Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.114 2006/07/11 01:01:53 ahze Exp $
 #
 
 PORTNAME=	gnome-games
@@ -23,7 +23,7 @@ USE_PYTHON=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui \
 		librsvg2 desktopfileutils

@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.148 2006/07/11 19:35:46 ahze Exp $
+#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.149 2006/07/19 05:13:46 ahze Exp $
 #
 
 PORTNAME=	gnome-vfs
@@ -28,7 +28,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomemimedata gconf2 \
 		libbonobo ltverhack referencehack
 USE_AUTOTOOLS=	libtool:15

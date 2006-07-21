@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.79 2006/06/01 17:10:36 marcus Exp $
+#   $MCom: ports/accessibility/gnopernicus/Makefile,v 1.80 2006/07/15 14:46:52 ahze Exp $
 #
 
 PORTNAME=	gnopernicus
@@ -20,7 +20,7 @@ LIB_DEPENDS=	gnome-mag.2:${PORTSDIR}/accessibility/gnome-mag
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes

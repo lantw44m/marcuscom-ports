@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/pessulus/Makefile,v 1.5 2006/04/30 06:09:06 ahze Exp $
+#   $MCom: ports/sysutils/pessulus/Makefile,v 1.6 2006/07/11 01:41:13 ahze Exp $
 #
 
 PORTNAME=	pessulus
@@ -21,7 +21,7 @@ USE_GNOME=	gnomehack gnomeprefix intlhack pygnome2
 WANT_GNOME=	yes
 USE_PYTHON=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

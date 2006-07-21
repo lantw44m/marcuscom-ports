@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins/Makefile,v 1.14 2006/06/11 19:59:46 marcus Exp $
+#   $MCom: ports/editors/gedit-plugins/Makefile,v 1.15 2006/07/11 06:32:13 marcus Exp $
 #
 
 PORTNAME=	gedit-plugins
@@ -22,7 +22,7 @@ RUN_DEPENDS=	gedit:${PORTSDIR}/editors/gedit \
 		gucharmap:${PORTSDIR}/deskutils/gucharmap
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack

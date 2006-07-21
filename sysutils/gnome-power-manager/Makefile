@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.4 2006/06/11 21:17:42 marcus Exp $
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.5 2006/07/10 01:53:16 marcus Exp $
 #
 
 PORTNAME=	gnome-power-manager
@@ -21,7 +21,7 @@ LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.87 2006/07/13 01:08:32 marcus Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.88 2006/07/18 19:24:40 ahze Exp $
 #
 
 PORTNAME=	gnome-session
@@ -28,7 +28,7 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gno
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop
 GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes

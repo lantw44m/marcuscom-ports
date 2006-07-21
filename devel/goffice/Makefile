@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-experimental/devel/goffice/Makefile,v 1.1 2006/05/05 17:34:14 ahze Exp $
+#   $MCom: ports/devel/goffice/Makefile,v 1.11 2006/05/08 22:57:51 ahze Exp $
 #
 
 PORTNAME=	goffice
@@ -17,7 +17,7 @@ COMMENT=	GLib/GTK+ set of document centric objects and utilities
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprint libglade2 \
 		libgsf_gnome ltverhack
 USE_GETTEXT=	yes

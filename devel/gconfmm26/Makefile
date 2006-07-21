@@ -3,7 +3,7 @@
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconfmm26/Makefile,v 1.10 2006/04/13 07:52:32 bland Exp $
+#   $MCom: ports/devel/gconfmm26/Makefile,v 1.12 2006/07/21 17:40:05 marcus Exp $
 #
 
 PORTNAME=	gconfmm
@@ -24,7 +24,7 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4 \
 LATEST_LINK=	gconfmm26
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GCC=	3.4
 USE_GNOME=	gnomehack gconf2

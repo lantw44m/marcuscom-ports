@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.50 2006/04/24 00:54:32 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.52 2006/07/11 00:28:01 ahze Exp $
 #
 
 PORTNAME=	evince
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GHOSTSCRIPT=yes
 INSTALLS_OMF=	yes

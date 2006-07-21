@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.53 2006/06/13 00:30:11 ahze Exp $
+#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.54 2006/07/11 12:09:06 ahze Exp $
 #
 
 PORTNAME=	vte
@@ -23,7 +23,7 @@ USE_BZIP2=	yes
 
 USE_GMAKE=	yes
 USE_BISON=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 INSTALLS_SHLIB=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GETTEXT=	yes

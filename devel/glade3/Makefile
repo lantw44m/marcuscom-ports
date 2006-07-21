@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.10 2006/04/13 07:52:32 bland Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.11 2006/04/15 06:53:52 marcus Exp $
 #
 
 PORTNAME=	glade3
@@ -19,7 +19,7 @@ COMMENT=	A user interface builder for GTK+/GNOME
 
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget gtk20 libxml2 gnomeprefix gnomehack

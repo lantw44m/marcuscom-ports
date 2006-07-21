@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.10 2006/02/24 18:12:02 marcus Exp $
+#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.11 2006/03/02 20:31:33 mezz Exp $
 #
 
 PORTNAME=	anjuta
@@ -31,7 +31,7 @@ RUN_DEPENDS=	${LOCALBASE}/gnu-autotools/bin/autoconf:${PORTSDIR}/devel/gnu-autoc
 
 CONFLICTS=	anjuta-1.2.*
 
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes

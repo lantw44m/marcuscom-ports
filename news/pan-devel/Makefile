@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/news/pan-devel/Makefile,v 1.1 2006/06/20 20:59:19 ahze Exp $
 
 PORTNAME=	pan
 PORTVERSION=	0.100
@@ -18,7 +18,7 @@ LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre-utf8 \
 		gmime-2.0.4:${PORTSDIR}/mail/gmime2
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnometarget libxml2 gtk20
 USE_GETTEXT=	yes

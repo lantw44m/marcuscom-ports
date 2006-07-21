@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml3/Makefile,v 1.81 2006/06/12 19:17:54 marcus Exp $
+#   $MCom: ports/www/gtkhtml3/Makefile,v 1.82 2006/07/10 19:58:25 ahze Exp $
 #
 
 PORTNAME=	gtkhtml3
@@ -21,7 +21,7 @@ LIB_DEPENDS=	soup-2.2.8:${PORTSDIR}/devel/libsoup
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gail libgnomeui \
 		libgnomeprintui ltverhack

@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/sysutils/gnome-system-tools/Makefile,v 1.42 2006/06/07 02:49:05 ahze Exp $
 
 PORTNAME=	gnome-system-tools
 PORTVERSION=	2.15.0
@@ -21,7 +21,7 @@ LIB_DEPENDS=	oobs-1.0:${PORTSDIR}/devel/liboobs
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack nautilus2
 USE_AUTOTOOLS=	libtool:15

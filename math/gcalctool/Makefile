@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool/Makefile,v 1.49 2006/06/10 05:04:35 marcus Exp $
+#   $MCom: ports/math/gcalctool/Makefile,v 1.50 2006/07/10 05:06:41 marcus Exp $
 #
 
 PORTNAME=	gcalctool
@@ -20,7 +20,7 @@ COMMENT=	A GNOME 2 calculator tool based on the old calctool for OpenWindows
 USE_BZIP2=	yes
 USE_BISON=	yes
 INSTALLS_OMF=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_REINPLACE=	yes

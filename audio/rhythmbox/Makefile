@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.62 2006/06/19 05:49:03 marcus Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.63 2006/06/29 05:21:11 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -26,7 +26,7 @@ LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 		gnome-media-profiles.0:${PORTSDIR}/audio/gnome-media
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/bug-buddy/Makefile,v 1.31 2006/06/13 11:34:10 ahze Exp $
+#   $MCom: ports/devel/bug-buddy/Makefile,v 1.32 2006/06/17 17:04:54 marcus Exp $
 #
 
 PORTNAME=	bug-buddy
@@ -22,7 +22,7 @@ LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes

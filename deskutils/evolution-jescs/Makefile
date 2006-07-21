@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/evolution-jescs/Makefile,v 1.9 2006/04/13 07:52:31 bland Exp $
+#   $MCom: ports/deskutils/evolution-jescs/Makefile,v 1.11 2006/07/14 22:22:05 marcus Exp $
 #
 
 PORTNAME=	jescs
@@ -20,7 +20,7 @@ COMMENT=	Sun Java Enterprise System Calendar Server provider for Evolution
 BUILD_DEPENDS=	evolution-${EVO_VERSION}:${PORTSDIR}/mail/evolution
 RUN_DEPENDS=	evolution-${EVO_VERSION}:${PORTSDIR}/mail/evolution
 
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes

@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/eel/Makefile,v 1.38 2006/06/12 18:43:55 marcus Exp $
+#   $MCom: ports/x11-toolkits/eel/Makefile,v 1.39 2006/07/11 12:31:56 ahze Exp $
 #
 
 PORTNAME=	eel
@@ -19,7 +19,7 @@ COMMENT=	Generally useful classes and extensions to GNOME
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack gail gnomedesktop gnomemenus ltverhack
 USE_AUTOTOOLS=	libtool:15

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.117 2006/06/11 00:12:10 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.118 2006/07/11 00:07:28 ahze Exp $
 #
 
 PORTNAME=	epiphany
@@ -23,7 +23,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_PYTHON=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GECKO=	firefox mozilla seamonkey firefox-devel<->firefox

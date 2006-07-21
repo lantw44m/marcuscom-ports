@@ -15,7 +15,7 @@ MASTER_SITE_SUBDIR=	liferea
 MAINTAINER=	pav@FreeBSD.org
 COMMENT=	Simple RSS/RDF feed reader
 
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GECKO=	mozilla firefox
 USE_GNOME=	gnomeprefix gnomehack libgtkhtml
 USE_GMAKE=	yes

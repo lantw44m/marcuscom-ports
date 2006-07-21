@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.69 2006/06/30 01:17:35 marcus Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.70 2006/07/10 01:56:45 marcus Exp $
 #
 
 PORTNAME=	gnome-system-monitor
@@ -21,7 +21,7 @@ LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui libwnck

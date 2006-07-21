@@ -3,7 +3,7 @@
 # Whom:				Adam Weinberger <adamw@freebsd.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/gok/Makefile,v 1.65 2006/04/27 22:59:43 marcus Exp $
+#    $MCom: ports/accessibility/gok/Makefile,v 1.69 2006/07/13 03:32:29 marcus Exp $
 
 PORTNAME=	gok
 PORTVERSION=	1.1.1
@@ -18,7 +18,7 @@ COMMENT=	GNOME On-Screen Keyboard (GOK)
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui atspi libwnck \
 		gnomespeech

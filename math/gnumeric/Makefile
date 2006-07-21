@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.14 2005/10/11 22:44:47 marcus Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.16 2006/05/08 22:58:46 ahze Exp $
 #
 
 PORTNAME=	gnumeric
@@ -21,7 +21,7 @@ LIB_DEPENDS=	goffice-0.3:${PORTSDIR}/devel/goffice \
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier libgnomeprintui \

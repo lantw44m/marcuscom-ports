@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/Makefile,v 1.36 2006/06/13 01:48:08 marcus Exp $
+#    $MCom: ports/x11/gdm/Makefile,v 1.37 2006/07/10 22:54:13 ahze Exp $
 #
 
 PORTNAME=	gdm
@@ -21,7 +21,7 @@ RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_RC_SUBR=	gdm

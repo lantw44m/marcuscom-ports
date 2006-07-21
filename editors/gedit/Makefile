@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.37 2006/06/13 06:33:09 marcus Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.38 2006/07/11 05:55:18 marcus Exp $
 #
 
 PORTNAME=	gedit
@@ -20,7 +20,7 @@ LIB_DEPENDS=	pspell.16:${PORTSDIR}/textproc/aspell
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 INSTALLS_OMF=	yes
 INSTALLS_SHLIB=	yes
 USE_GMAKE=	yes

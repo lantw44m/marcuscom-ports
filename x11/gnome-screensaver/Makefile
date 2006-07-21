@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.48 2006/07/11 15:41:07 marcus Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.49 2006/07/19 02:36:23 ahze Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -19,7 +19,7 @@ LIB_DEPENDS=	dbus-1.2:${PORTSDIR}/devel/dbus
 RUN_DEPENDS=	xscreensaver-gl-helper:${PORTSDIR}/x11/xscreensaver-gnome-hacks
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes

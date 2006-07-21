@@ -3,7 +3,7 @@
 # Whom:					lewiz <purple@lewiz.net>
 #
 # $FreeBSD: ports/accessibility/dasher/Makefile,v 1.30 2006/04/30 00:47:13 marcus Exp $
-#   $MCom: ports/accessibility/dasher/Makefile,v 1.38 2006/06/17 17:16:41 marcus Exp $
+#   $MCom: ports/accessibility/dasher/Makefile,v 1.39 2006/07/13 03:39:39 marcus Exp $
 #
 
 PORTNAME=	dasher
@@ -22,7 +22,7 @@ RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomehier libgnomeui atspi \
 		libwnck gnomedocutils

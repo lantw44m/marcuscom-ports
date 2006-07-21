@@ -3,7 +3,7 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity/Makefile,v 1.61 2006/04/30 15:01:54 ahze Exp $
+#   $MCom: ports/x11/zenity/Makefile,v 1.62 2006/05/17 05:25:38 marcus Exp $
 #
 
 PORTNAME=	zenity
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomecanvas gconf2 gnomedocutils
 USE_BZIP2=	yes

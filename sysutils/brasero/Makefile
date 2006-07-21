@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/bonfire/Makefile,v 1.6 2006/05/17 22:09:38 ahze Exp $
+#    $MCom: ports/sysutils/bonfire/Makefile,v 1.7 2006/06/29 05:21:12 marcus Exp $
 
 PORTNAME=	bonfire
 PORTVERSION=	0.3.1
@@ -23,7 +23,7 @@ USE_GETTEXT=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GNOME=	gnomeprefix nautiluscdburner
 USE_GSTREAMER=	gconf core
 CONFIGURE_ARGS=	--disable-inotify

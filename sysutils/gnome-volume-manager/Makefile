@@ -3,7 +3,7 @@
 # Whom:				Jean-Yves Lefort <jylefort@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-volume-manager/Makefile,v 1.4 2006/06/29 05:21:12 marcus Exp $
+#   $MCom: ports/sysutils/gnome-volume-manager/Makefile,v 1.5 2006/07/15 17:55:01 marcus Exp $
 #
 
 PORTNAME=	gnome-volume-manager
@@ -19,7 +19,7 @@ COMMENT=	Automatically mount removable media, and more
 LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
 		notify.2:${PORTSDIR}/devel/libnotify
 
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack nautilus2
 USE_GMAKE=	yes
