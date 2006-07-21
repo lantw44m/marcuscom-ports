@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins-gnonlin/Makefile,v 1.4 2006/07/17 00:00:02 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins-gnonlin/Makefile,v 1.5 2006/07/17 01:39:57 ahze Exp $
 
 PORTNAME=	gstreamer-plugins-gnonlin
-PORTVERSION=	0.10.4
-PORTREVISION=	1
+PORTVERSION=	0.10.5
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gnonlin/
 DISTNAME=	gnonlin-${PORTVERSION}
