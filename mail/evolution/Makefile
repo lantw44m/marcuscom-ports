@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD: ports/mail/evolution/Makefile,v 1.123 2006/04/30 00:46:56 marcus Exp $
-#   $MCom: ports/mail/evolution/Makefile,v 1.109 2006/07/18 19:22:20 ahze Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.110 2006/07/21 20:46:57 mezz Exp $
 #
 
 PORTNAME=	evolution
@@ -69,7 +69,7 @@ WITH_DBUS=	yes
 WITH_DBUS=	yes
 .endif
 
-.if exists(${X11BASE}/lib/libgstreamer-0.8.so)
+.if exists(${LOCALBASE}/lib/libgstreamer-0.8.so)
 WITH_GSTREAMER=	yes
 .endif
 
