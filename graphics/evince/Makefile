@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.52 2006/07/11 00:28:01 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.53 2006/07/21 20:46:56 mezz Exp $
 #
 
 PORTNAME=	evince
@@ -75,12 +75,12 @@ PLIST_SUB+=		NAUTILUS="@comment "
 CONFIGURE_ARGS+=	--disable-impress
 #.endif
 
-.if exists(${X11BASE}/bin/djview)
-DJVU_DIR?=	# empty
-.else
-DJVU_DIR?=	-nox11
-.endif
-
+#.if exists(${X11BASE}/bin/djview)
+#DJVU_DIR?=	# empty
+#.else
+#DJVU_DIR?=	-nox11
+#.endif
+#
 #.if defined(WITH_DJVU)
 #LIB_DEPENDS+=		djvulibre.17:${PORTSDIR}/graphics/djvulibre${DJVU_DIR}
 #CONFIGURE_ARGS+=	--enable-djvu
