@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/pulseaudio/Makefile,v 1.3 2006/07/22 16:58:15 ahze Exp $
 
 PORTNAME=	pulseaudio
 PORTVERSION=	0.9.3
@@ -34,12 +34,14 @@ CONFIGURE_ARGS+=	--disable-lirc # untested
 
 .include <bsd.port.pre.mk>
 
-.if exists(${LOCALBASE}/lib/libavahi-core.a) || defined(PACKAGE_BUILDING) \
-	|| defined(WITH_AVAHI)
+.if (exists(${LOCALBASE}/lib/libavahi-core.a) || defined(PACKAGE_BUILDING) \
+	|| defined(WITH_AVAHI)) && !defined(WITHOUT_AVAHI)
 LIB_DEPENDS+=	avahi-core.4:${PORTSDIR}/net/avahi
 CONFIGURE_ARGS+=	--enable-avahi
+PLIST_SUB+=	AVAHI=""
 .else
 CONFIGURE_ARGS+=	--disable-avahi
+PLIST_SUB+=	AVAHI="@comment "
 .endif
 
 post-patch:

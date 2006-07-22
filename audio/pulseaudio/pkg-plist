@@ -1,5 +1,5 @@
 bin/esdcompat
-bin/pabrowse
+%%AVAHI%%bin/pabrowse
 bin/pacat
 bin/pacmd
 bin/pactl
@@ -14,7 +14,7 @@ etc/pulse/client.conf-dist
 etc/pulse/daemon.conf-dist
 @unexec if cmp -s %D/etc/pulse/default.pa %D/etc/pulse/default.pa-dist; then rm -f %D/etc/pulse/default.pa; fi
 etc/pulse/default.pa-dist
-include/pulse/browser.h
+%%AVAHI%%include/pulse/browser.h
 include/pulse/cdecl.h
 include/pulse/channelmap.h
 include/pulse/context.h
@@ -42,7 +42,7 @@ include/pulse/xmalloc.h
 include/pulsecore/authkey-prop.h
 include/pulsecore/authkey.h
 include/pulsecore/autoload.h
-include/pulsecore/avahi-wrap.h
+%%AVAHI%%include/pulsecore/avahi-wrap.h
 include/pulsecore/cli-command.h
 include/pulsecore/cli-text.h
 include/pulsecore/cli.h
@@ -106,10 +106,10 @@ include/pulsecore/tagstruct.h
 include/pulsecore/tokenizer.h
 include/pulsecore/x11prop.h
 include/pulsecore/x11wrap.h
-lib/libpulse-browse.a
-lib/libpulse-browse.la
-lib/libpulse-browse.so
-lib/libpulse-browse.so.1
+%%AVAHI%%lib/libpulse-browse.a
+%%AVAHI%%lib/libpulse-browse.la
+%%AVAHI%%lib/libpulse-browse.so
+%%AVAHI%%lib/libpulse-browse.so.1
 lib/libpulse-mainloop-glib.a
 lib/libpulse-mainloop-glib.la
 lib/libpulse-mainloop-glib.so
@@ -131,8 +131,8 @@ lib/pulse-0.9/modules/libauthkey-prop.la
 lib/pulse-0.9/modules/libauthkey-prop.so
 lib/pulse-0.9/modules/libauthkey.la
 lib/pulse-0.9/modules/libauthkey.so
-lib/pulse-0.9/modules/libavahi-wrap.la
-lib/pulse-0.9/modules/libavahi-wrap.so
+%%AVAHI%%lib/pulse-0.9/modules/libavahi-wrap.la
+%%AVAHI%%lib/pulse-0.9/modules/libavahi-wrap.so
 lib/pulse-0.9/modules/libcli.la
 lib/pulse-0.9/modules/libcli.so
 lib/pulse-0.9/modules/libiochannel.la
@@ -241,9 +241,9 @@ lib/pulse-0.9/modules/module-x11-bell.la
 lib/pulse-0.9/modules/module-x11-bell.so
 lib/pulse-0.9/modules/module-x11-publish.la
 lib/pulse-0.9/modules/module-x11-publish.so
-lib/pulse-0.9/modules/module-zeroconf-publish.la
-lib/pulse-0.9/modules/module-zeroconf-publish.so
-libdata/pkgconfig/libpulse-browse.pc
+%%AVAHI%%lib/pulse-0.9/modules/module-zeroconf-publish.la
+%%AVAHI%%lib/pulse-0.9/modules/module-zeroconf-publish.so
+%%AVAHI%%libdata/pkgconfig/libpulse-browse.pc
 libdata/pkgconfig/libpulse-mainloop-glib.pc
 libdata/pkgconfig/libpulse-simple.pc
 libdata/pkgconfig/libpulse.pc
