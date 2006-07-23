@@ -7,7 +7,7 @@
 
 PORTNAME=	liferea
 PORTVERSION=	1.0.16
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	liferea
@@ -75,7 +75,7 @@ post-patch:
 		-e 's,\(gecko_provider=\).*$$,\1${GECKO},' \
 		-e 's,{print $$1},{print $$2},g' \
 		${WRKSRC}/configure
-	${REINPLACE_CMD} -e 's|gtk_moz_embed_set_comp_path(NULL)|gtk_moz_embed_set_comp_path("${X11BASE}/lib/${GECKO}")|' \
+	${REINPLACE_CMD} -e 's|gtk_moz_embed_set_comp_path(NULL)|gtk_moz_embed_set_comp_path("${LOCALBASE}/lib/${GECKO}")|' \
 		${WRKSRC}/src/mozilla/mozilla.c
 .endif
 .ifdef WITH_XPI
