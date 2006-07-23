@@ -109,6 +109,7 @@ share/locale/az/LC_MESSAGES/glib20.mo
 share/locale/be/LC_MESSAGES/glib20.mo
 share/locale/bg/LC_MESSAGES/glib20.mo
 share/locale/bn/LC_MESSAGES/glib20.mo
+share/locale/bn_IN/LC_MESSAGES/glib20.mo
 share/locale/bs/LC_MESSAGES/glib20.mo
 share/locale/ca/LC_MESSAGES/glib20.mo
 share/locale/cs/LC_MESSAGES/glib20.mo
@@ -178,6 +179,8 @@ share/locale/yi/LC_MESSAGES/glib20.mo
 share/locale/zh_CN/LC_MESSAGES/glib20.mo
 share/locale/zh_HK/LC_MESSAGES/glib20.mo
 share/locale/zh_TW/LC_MESSAGES/glib20.mo
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/ne/LC_MESSAGES
