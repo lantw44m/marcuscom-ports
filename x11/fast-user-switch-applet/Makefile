@@ -3,10 +3,11 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/fast-user-switch-applet/Makefile,v 1.14 2006/04/30 14:49:58 ahze Exp $
+#    $MCom$
 
 PORTNAME=	fast-user-switch-applet
 PORTVERSION=	2.15.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -20,8 +21,8 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gtk20 gnomepanel
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-gdm-config=${X11BASE}/etc/gdm/custom.conf \
-		--with-gdm-setup=${X11BASE}/sbin/gdmsetup
+CONFIGURE_ARGS=	--with-gdm-config=${LOCALBASE}/etc/gdm/custom.conf \
+		--with-gdm-setup=${LOCALBASE}/sbin/gdmsetup
 
 GCONF_SCHEMAS=	fast-user-switch-applet.schemas
 INSTALLS_OMF=	yes
