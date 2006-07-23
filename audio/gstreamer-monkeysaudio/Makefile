@@ -32,7 +32,7 @@ post-install:
 		${DOCSDIR}/GStreamer-monkeysaudio-permit
 .endif
 # register plugins
-	-@${X11BASE}/bin/gst-register-${GST_VERSION} \
+	-@${LOCALBASE}/bin/gst-register-${GST_VERSION} \
 		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST_VERSION}/registry.xml 2>/dev/null
 
 .include <bsd.port.mk>
