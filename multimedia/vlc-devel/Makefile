@@ -3,14 +3,13 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.13 2006/06/21 22:50:36 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.14 2006/07/18 20:50:21 ahze Exp $
 #
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
 
 PORTNAME=	vlc
-DISTVERSION=	0.8.6.20060621
-PORTREVISION=	1
+DISTVERSION=	0.8.6.20060719
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://nightlies.videolan.org/build/source/
 #		http://download.videolan.org/pub/videolan/vlc/${PORTVERSION}/ \
@@ -451,7 +450,7 @@ RUN_DEPENDS+=	transcode:${PORTSDIR}/multimedia/transcode
 .endif
 
 .if !defined(WITHOUT_HTTPD) && (defined(WITH_SSL) || exists(${LOCALBASE}/lib/libgnutls.a))
-LIB_DEPENDS+=	gnutls.15:${PORTSDIR}/security/gnutls
+LIB_DEPENDS+=	gnutls.13:${PORTSDIR}/security/gnutls
 CONFIGURE_ARGS+=--enable-gnutls
 .else
 CONFIGURE_ARGS+=--disable-gnutls
