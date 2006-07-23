@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.150 2006/07/21 20:46:55 mezz Exp $
+#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.151 2006/07/22 20:45:37 mezz Exp $
 #
 
 PORTNAME=	gnome-vfs
 PORTVERSION=	2.15.3
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-vfs/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -100,7 +100,7 @@ pre-configure:
 post-install:
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 	@${MV} -f ${PREFIX}/share/dbus-1/services/gnome-vfs-daemon.service \
-		${PREFIX}/share/dbus-1/services/org.gnome.GnomeVFS.Daemon
+		${PREFIX}/share/dbus-1/services/org.gnome.GnomeVFS.Daemon.service
 
 .include <bsd.port.post.mk>
 
