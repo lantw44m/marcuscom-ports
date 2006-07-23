@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@rainbow-runner.nl>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer-ffmpeg80/Makefile,v 1.8 2006/07/20 13:48:13 ahze Exp $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.8.7
@@ -44,7 +44,7 @@ post-patch:
 
 post-install:
 # register plugins
-	-@${X11BASE}/bin/gst-register-${GST80_VERSION} \
+	-@${LOCALBASE}/bin/gst-register-${GST80_VERSION} \
 		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST80_VERSION}/registry.xml 2>/dev/null
 
 .include <bsd.port.post.mk>

@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer-pitfdll/Makefile,v 1.6 2006/07/17 05:18:12 ahze Exp $
 
 PORTNAME=	gstreamer-pitfdll
 PORTVERSION=	0.8.2
@@ -35,7 +35,7 @@ post-patch:
 
 post-install:
 # register plugins
-	-@${X11BASE}/bin/gst-register-${GST_VERSION} \
+	-@${LOCALBASE}/bin/gst-register-${GST_VERSION} \
 		--gst-registry=${PREFIX}/share/gnome/cache/gstreamer-${GST_VERSION}/registry.xml 2>/dev/null
 
 .include <bsd.port.mk>

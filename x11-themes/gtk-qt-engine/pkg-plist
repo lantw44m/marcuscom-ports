@@ -9,7 +9,6 @@ lib/kde3/kcm_kcmgtk.la
 lib/kde3/kcm_kcmgtk.so
 share/applnk/Settings/LookNFeel/kcmgtk.desktop
 share/applications/kde/kcmgtk-xdg.desktop
-@cwd %%X11BASE%%
 @dirrm share/themes/Qt/gtk-2.0
 @dirrm share/themes/Qt
 @dirrm share/gtk-qt-engine
