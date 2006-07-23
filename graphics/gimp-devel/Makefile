@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.19 2006/06/26 10:43:22 pav Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.20 2006/07/18 11:49:56 ahze Exp $
 #
 
 PORTNAME=	gimp
@@ -132,7 +132,7 @@ CONFIGURE_ARGS+=	--enable-mp
 
 .if ${HAVE_GNOME:Mgnomepanel}!=""
 USE_GNOME+=		gnomepanel desktopfileutils
-CONFIGURE_ARGS+=	--with-desktop-dir=${X11BASE}/share/gnome
+CONFIGURE_ARGS+=	--with-desktop-dir=${LOCALBASE}/share/gnome
 CONFIGURE_ENV+=		GIMP_THREAD_LIBS=${PTHREAD_LIBS}
 PKGNAMESUFFIX:=		-gnome
 PLIST_SUB+=		GTK="gnome/"
