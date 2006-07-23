@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.49 2006/07/19 02:36:23 ahze Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.50 2006/07/21 20:47:02 mezz Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -57,10 +57,6 @@ pre-install:
 		${SED} -e 's:^:${SCREENSAVER_DIR}/:' | \
 		${SED} -e 's:[.]xml$$:.desktop:' >> ${PLIST}
 	@${ECHO_CMD} @dirrm ${SCREENSAVER_DIR} >> ${PLIST}
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|%%X11BASE%%|${X11BASE}|g' \
-		${WRKSRC}/configure
 
 post-install:
 	${CHOWN} root ${PREFIX}/libexec/gnome-screensaver-dialog
