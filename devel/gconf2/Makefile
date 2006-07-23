@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.72 2006/04/13 07:52:32 bland Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.74 2006/07/17 17:20:27 ahze Exp $
 #
 
 PORTNAME=	gconf2
 PORTVERSION=	2.14.0
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/GConf/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -53,10 +53,6 @@ pre-everything::
 	@${ECHO_MSG} "WITH_LDAP"
 	@${ECHO_MSG}
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|%%X11BASE%%|${X11BASE}|' \
-		${WRKSRC}/gconf/default.path.in
 
 .include <bsd.port.post.mk>
 
