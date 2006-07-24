@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	icon-naming-utils
-PORTVERSION=	0.7.3
+PORTVERSION=	0.7.4
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://tango.freedesktop.org/releases/
 
