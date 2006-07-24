@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/misc/gnome2-reference/Makefile,v 1.1 2006/07/24 17:13:15 ahze Exp $
 
 PORTNAME=	gnome2-reference
 PORTVERSION=	1.0
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	misc gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -36,7 +36,21 @@ REF_LIST=	accessibility/at-spi-reference \
 		print/libgnomeprint-reference \
 		textproc/gtkspell-reference \
 		textproc/libxml2-reference \
-		textproc/libxslt-reference
+		textproc/libxslt-reference \
+		x11/gnome-desktop-reference \
+		x11/gnome-panel-reference \
+		x11/libgnome-reference \
+		x11-fonts/fontconfig-reference \
+		x11-toolkits/gal2-reference \
+		x11-toolkits/gtk20-reference \
+		x11-toolkits/gtkmm20-reference \
+		x11-toolkits/gtkmm24-reference \
+		x11-toolkits/gtksourceview-reference \
+		x11-toolkits/libbonoboui-reference \
+		x11-toolkits/libgnomeui-reference \
+		x11-toolkits/libwnck-reference \
+		x11-toolkits/pango-reference \
+		x11-toolkits/vte-reference
 
 OPTIONS=	# empty
 NO_BUILD=	yes
