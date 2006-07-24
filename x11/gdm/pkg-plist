@@ -87,9 +87,6 @@ share/gnome/help/gdm/ja/legal.xml
 share/gnome/help/gdm/ko/figures/gdm_window.png
 share/gnome/help/gdm/ko/gdm.xml
 share/gnome/help/gdm/ko/legal.xml
-share/gnome/help/gdm/sv/figures/gdm_window.png
-share/gnome/help/gdm/sv/gdm.xml
-share/gnome/help/gdm/sv/legal.xml
 share/gnome/help/gdm/uk/gdm.xml
 share/gnome/help/gdm/uk/legal.xml
 share/gnome/help/gdm/zh_CN/figures/gdm_window.png
@@ -108,7 +105,6 @@ share/gnome/omf/gdm/gdm-fr.omf
 share/gnome/omf/gdm/gdm-it.omf
 share/gnome/omf/gdm/gdm-ja.omf
 share/gnome/omf/gdm/gdm-ko.omf
-share/gnome/omf/gdm/gdm-sv.omf
 share/gnome/omf/gdm/gdm-uk.omf
 share/gnome/omf/gdm/gdm-zh_CN.omf
 share/gnome/omf/gdm/gdm-zh_HK.omf
@@ -254,8 +250,6 @@ share/locale/zu/LC_MESSAGES/gdm.mo
 @dirrm share/gnome/help/gdm/zh_CN/figures
 @dirrm share/gnome/help/gdm/zh_CN
 @dirrm share/gnome/help/gdm/uk
-@dirrm share/gnome/help/gdm/sv/figures
-@dirrm share/gnome/help/gdm/sv
 @dirrm share/gnome/help/gdm/ko/figures
 @dirrm share/gnome/help/gdm/ko
 @dirrm share/gnome/help/gdm/ja/figures
