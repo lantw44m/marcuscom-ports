@@ -240,6 +240,7 @@ share/gnome/deskbar-applet/smart-bookmarks.glade
 share/gnome/deskbar-applet/specs/deskbarapplet.py
 share/icons/hicolor/48x48/apps/deskbar-applet.png
 share/icons/hicolor/scalable/apps/deskbar-applet.svg
+share/locale/be/LC_MESSAGES/deskbar-applet.mo
 share/locale/bg/LC_MESSAGES/deskbar-applet.mo
 share/locale/bn/LC_MESSAGES/deskbar-applet.mo
 share/locale/bn_IN/LC_MESSAGES/deskbar-applet.mo
@@ -271,6 +272,7 @@ share/locale/lt/LC_MESSAGES/deskbar-applet.mo
 share/locale/lv/LC_MESSAGES/deskbar-applet.mo
 share/locale/mg/LC_MESSAGES/deskbar-applet.mo
 share/locale/mk/LC_MESSAGES/deskbar-applet.mo
+share/locale/ml/LC_MESSAGES/deskbar-applet.mo
 share/locale/nb/LC_MESSAGES/deskbar-applet.mo
 share/locale/ne/LC_MESSAGES/deskbar-applet.mo
 share/locale/nl/LC_MESSAGES/deskbar-applet.mo
