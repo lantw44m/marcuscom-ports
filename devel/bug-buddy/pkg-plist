@@ -1,6 +1,7 @@
 bin/bug-buddy
 share/gnome/applications/bug-buddy.desktop
 share/gnome/bug-buddy/bug-buddy.glade
+share/gnome/bug-buddy/bug-buddy.menu
 share/gnome/bug-buddy/bug-buddy.png
 share/gnome/bug-buddy/bugzilla/gnome.bugzilla
 share/gnome/bug-buddy/bugzilla/gnome/config
@@ -18,25 +19,29 @@ share/gnome/help/bug-buddy/C/legal.xml
 share/gnome/help/bug-buddy/es/bug-buddy.xml
 share/gnome/help/bug-buddy/pa/bug-buddy.xml
 share/gnome/help/bug-buddy/sr/bug-buddy.xml
+share/gnome/help/bug-buddy/sv/bug-buddy.xml
 share/gnome/help/bug-buddy/uk/bug-buddy.xml
 share/gnome/omf/bug-buddy/bug-buddy-C.omf
 share/gnome/omf/bug-buddy/bug-buddy-es.omf
 share/gnome/omf/bug-buddy/bug-buddy-pa.omf
 share/gnome/omf/bug-buddy/bug-buddy-sr.omf
+share/gnome/omf/bug-buddy/bug-buddy-sv.omf
 share/gnome/omf/bug-buddy/bug-buddy-uk.omf
-share/gnome/pixmaps/bug-buddy.png
+share/icons/hicolor/48x48/apps/bug-buddy.png
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
 share/locale/az/LC_MESSAGES/bug-buddy.mo
 share/locale/be/LC_MESSAGES/bug-buddy.mo
 share/locale/bg/LC_MESSAGES/bug-buddy.mo
 share/locale/bn/LC_MESSAGES/bug-buddy.mo
+share/locale/bn_IN/LC_MESSAGES/bug-buddy.mo
 share/locale/bs/LC_MESSAGES/bug-buddy.mo
 share/locale/ca/LC_MESSAGES/bug-buddy.mo
 share/locale/cs/LC_MESSAGES/bug-buddy.mo
 share/locale/cy/LC_MESSAGES/bug-buddy.mo
 share/locale/da/LC_MESSAGES/bug-buddy.mo
 share/locale/de/LC_MESSAGES/bug-buddy.mo
+share/locale/dz/LC_MESSAGES/bug-buddy.mo
 share/locale/el/LC_MESSAGES/bug-buddy.mo
 share/locale/en_CA/LC_MESSAGES/bug-buddy.mo
 share/locale/en_GB/LC_MESSAGES/bug-buddy.mo
@@ -61,6 +66,7 @@ share/locale/ko/LC_MESSAGES/bug-buddy.mo
 share/locale/ky/LC_MESSAGES/bug-buddy.mo
 share/locale/lt/LC_MESSAGES/bug-buddy.mo
 share/locale/lv/LC_MESSAGES/bug-buddy.mo
+share/locale/mg/LC_MESSAGES/bug-buddy.mo
 share/locale/mk/LC_MESSAGES/bug-buddy.mo
 share/locale/ml/LC_MESSAGES/bug-buddy.mo
 share/locale/mn/LC_MESSAGES/bug-buddy.mo
@@ -106,8 +112,11 @@ share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/omf/bug-buddy
 @dirrm share/gnome/help/bug-buddy/uk
+@dirrm share/gnome/help/bug-buddy/sv
 @dirrm share/gnome/help/bug-buddy/sr
 @dirrm share/gnome/help/bug-buddy/pa
 @dirrm share/gnome/help/bug-buddy/es
