@@ -1,4 +1,5 @@
 include/gnome-python-2.0/pygnomevfs.h
+include/gnome-python-2.0/pygnomevfsbonobo.h
 lib/gnome-vfs-2.0/modules/libpythonmethod.la
 lib/gnome-vfs-2.0/modules/libpythonmethod.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/bonobo/__init__.py
@@ -27,8 +28,13 @@ lib/gnome-vfs-2.0/modules/libpythonmethod.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/vfs.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomecanvas.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomecanvas.so
-%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomevfs.la
-%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomevfs.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomevfs/__init__.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomevfs/__init__.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomevfs/__init__.pyo
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomevfs/_gnomevfs.la
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomevfs/_gnomevfs.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomevfs/gnomevfsbonobo.la
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gnomevfs/gnomevfsbonobo.so
 libdata/pkgconfig/gnome-python-2.0.pc
 %%PORTDOCS%%share/examples/py-gnome/bonobo/bonobo-application.py
 %%PORTDOCS%%share/examples/py-gnome/bonobo/bonoboui/Bonobo_Sample_Hello.xml
@@ -36,6 +42,7 @@ libdata/pkgconfig/gnome-python-2.0.pc
 %%PORTDOCS%%share/examples/py-gnome/bonobo/echo/README
 %%PORTDOCS%%share/examples/py-gnome/bonobo/echo/echo-client.py
 %%PORTDOCS%%share/examples/py-gnome/bonobo/unknown.py
+%%PORTDOCS%%share/examples/py-gnome/bug-buddy-integration.py
 %%PORTDOCS%%share/examples/py-gnome/canvas/canvas-curve.py
 %%PORTDOCS%%share/examples/py-gnome/canvas/canvas-example.py
 %%PORTDOCS%%share/examples/py-gnome/gconf/basic-gconf-app.py
