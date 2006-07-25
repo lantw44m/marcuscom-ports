@@ -1,0 +1,14 @@
+
+$FreeBSD: ports/x11/gnome-libs/files/patch-devel-docs::gnomeui::Makefile.in,v 1.1 2002/05/01 20:23:03 sobomax Exp $
+
+--- devel-docs/gnomeui/Makefile.in	2002/05/01 01:47:18	1.1
++++ devel-docs/gnomeui/Makefile.in	2002/05/01 01:50:55
+@@ -161,7 +161,7 @@
+ CFLAGS = `gnome-config --cflags gnomeui`
+ LDFLAGS = `gnome-config --libs gnomeui`
+ 
+-HTML_DIR = $(datadir)/html
++HTML_DIR = $(prefix)/share/doc/gnomelibs
+ 
+ TARGET_DIR = $(HTML_DIR)/$(DOC_MODULE)
+ 
