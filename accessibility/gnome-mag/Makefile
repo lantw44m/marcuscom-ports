@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gnome-mag/Makefile,v 1.18 2006/07/13 03:55:45 marcus Exp $
+#   $MCom: ports/accessibility/gnome-mag/Makefile,v 1.19 2006/07/21 20:46:52 mezz Exp $
 #
 
 PORTNAME=	gnome-mag
-PORTVERSION=	0.13.0
+PORTVERSION=	0.13.1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
