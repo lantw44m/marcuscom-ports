@@ -431,6 +431,7 @@ share/gnome/evolution/%%VERSION%%/errors/mail.error
 share/gnome/evolution/%%VERSION%%/errors/org-gnome-default-mailer.error
 share/gnome/evolution/%%VERSION%%/errors/org-gnome-exchange-operations.error
 share/gnome/evolution/%%VERSION%%/errors/org-gnome-itip-formatter.error
+share/gnome/evolution/%%VERSION%%/errors/org-gnome-mail-retract-errors.xml
 share/gnome/evolution/%%VERSION%%/errors/org-gnome-mailing-list-actions.error
 share/gnome/evolution/%%VERSION%%/errors/org-gnome-proxy-errors.xml
 share/gnome/evolution/%%VERSION%%/errors/org-gnome-proxy-login-errors.xml
@@ -496,6 +497,7 @@ share/gnome/evolution/%%VERSION%%/glade/smime-ui.glade
 share/gnome/evolution/%%VERSION%%/glade/task-details-page.glade
 share/gnome/evolution/%%VERSION%%/glade/task-page.glade
 share/gnome/evolution/%%VERSION%%/help/quickref/C/quickref.pdf
+share/gnome/evolution/%%VERSION%%/help/quickref/de/quickref.pdf
 share/gnome/evolution/%%VERSION%%/images/about-box.png
 share/gnome/evolution/%%VERSION%%/images/bcg.png
 share/gnome/evolution/%%VERSION%%/images/evolution-contacts-mini.png
@@ -709,6 +711,7 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/gnome/evolution/%%VERSION%%/views
 @dirrm share/gnome/evolution/%%VERSION%%/ui
 @dirrm share/gnome/evolution/%%VERSION%%/images
+@dirrm share/gnome/evolution/%%VERSION%%/help/quickref/de
 @dirrm share/gnome/evolution/%%VERSION%%/help/quickref/C
 @dirrm share/gnome/evolution/%%VERSION%%/help/quickref
 @dirrm share/gnome/evolution/%%VERSION%%/help
