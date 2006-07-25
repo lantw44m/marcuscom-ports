@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#
+#    $MCom$
 
 PORTNAME=	ontv
 PORTVERSION=	2.2.0
