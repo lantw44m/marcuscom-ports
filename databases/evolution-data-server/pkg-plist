@@ -135,6 +135,7 @@ include/evolution-data-server-%%VERSION%%/exchange/e2k-validate.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-xml-utils.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-account.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-constants.h
+include/evolution-data-server-%%VERSION%%/exchange/exchange-esource.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-folder-size.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-hierarchy-foreign.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-hierarchy-somedav.h
@@ -358,7 +359,7 @@ lib/libcamel-provider-%%EVO_VERSION%%.so.8
 lib/libebook-%%EVO_VERSION%%.a
 lib/libebook-%%EVO_VERSION%%.la
 lib/libebook-%%EVO_VERSION%%.so
-lib/libebook-%%EVO_VERSION%%.so.5
+lib/libebook-%%EVO_VERSION%%.so.9
 lib/libecal-%%EVO_VERSION%%.a
 lib/libecal-%%EVO_VERSION%%.la
 lib/libecal-%%EVO_VERSION%%.so
@@ -370,7 +371,7 @@ lib/libedata-book-%%EVO_VERSION%%.so.2
 lib/libedata-cal-%%EVO_VERSION%%.a
 lib/libedata-cal-%%EVO_VERSION%%.la
 lib/libedata-cal-%%EVO_VERSION%%.so
-lib/libedata-cal-%%EVO_VERSION%%.so.1
+lib/libedata-cal-%%EVO_VERSION%%.so.5
 lib/libedataserver-%%EVO_VERSION%%.a
 lib/libedataserver-%%EVO_VERSION%%.la
 lib/libedataserver-%%EVO_VERSION%%.so
@@ -378,15 +379,15 @@ lib/libedataserver-%%EVO_VERSION%%.so.7
 lib/libedataserverui-%%EVO_VERSION%%.a
 lib/libedataserverui-%%EVO_VERSION%%.la
 lib/libedataserverui-%%EVO_VERSION%%.so
-lib/libedataserverui-%%EVO_VERSION%%.so.6
+lib/libedataserverui-%%EVO_VERSION%%.so.8
 lib/libegroupwise-%%EVO_VERSION%%.a
 lib/libegroupwise-%%EVO_VERSION%%.la
 lib/libegroupwise-%%EVO_VERSION%%.so
-lib/libegroupwise-%%EVO_VERSION%%.so.9
+lib/libegroupwise-%%EVO_VERSION%%.so.12
 lib/libexchange-storage-%%EVO_VERSION%%.a
 lib/libexchange-storage-%%EVO_VERSION%%.la
 lib/libexchange-storage-%%EVO_VERSION%%.so
-lib/libexchange-storage-%%EVO_VERSION%%.so.1
+lib/libexchange-storage-%%EVO_VERSION%%.so.2
 libdata/bonobo/servers/GNOME_Evolution_DataServer_%%EVO_VERSION%%.server
 libdata/pkgconfig/camel-%%EVO_VERSION%%.pc
 libdata/pkgconfig/camel-provider-%%EVO_VERSION%%.pc
