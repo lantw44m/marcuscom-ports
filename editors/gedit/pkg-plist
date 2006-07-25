@@ -52,11 +52,14 @@ lib/gedit-2/plugins/docinfo.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.pyc
 %%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.pyo
 %%PYTHON%%lib/gedit-2/plugins/externaltools/tools.glade
+lib/gedit-2/plugins/filebrowser.gedit-plugin
 lib/gedit-2/plugins/indent.gedit-plugin
 lib/gedit-2/plugins/libchangecase.la
 lib/gedit-2/plugins/libchangecase.so
 lib/gedit-2/plugins/libdocinfo.la
 lib/gedit-2/plugins/libdocinfo.so
+lib/gedit-2/plugins/libfilebrowser.la
+lib/gedit-2/plugins/libfilebrowser.so
 lib/gedit-2/plugins/libindent.la
 lib/gedit-2/plugins/libindent.so
 lib/gedit-2/plugins/libsample.la
@@ -118,40 +121,6 @@ lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
 libdata/pkgconfig/gedit-%%VERSION%%.pc
-%%DOCSDIR%%/GeditApp.html
-%%DOCSDIR%%/GeditDocument.html
-%%DOCSDIR%%/GeditEncodingsOptionMenu.html
-%%DOCSDIR%%/GeditFileChooserDialog.html
-%%DOCSDIR%%/GeditMessageArea.html
-%%DOCSDIR%%/GeditNotebook.html
-%%DOCSDIR%%/GeditPanel.html
-%%DOCSDIR%%/GeditPlugin.html
-%%DOCSDIR%%/GeditPrintJob.html
-%%DOCSDIR%%/GeditPrintJobPreview.html
-%%DOCSDIR%%/GeditProgressMessageArea.html
-%%DOCSDIR%%/GeditStatusbar.html
-%%DOCSDIR%%/GeditTab.html
-%%DOCSDIR%%/GeditView.html
-%%DOCSDIR%%/GeditWindow.html
-%%DOCSDIR%%/ch01.html
-%%DOCSDIR%%/gedit-gedit-convert.html
-%%DOCSDIR%%/gedit-gedit-debug.html
-%%DOCSDIR%%/gedit-gedit-encodings.html
-%%DOCSDIR%%/gedit-gedit-help.html
-%%DOCSDIR%%/gedit-gedit-metadata-manager.html
-%%DOCSDIR%%/gedit-gedit-prefs-manager-app.html
-%%DOCSDIR%%/gedit-gedit-prefs-manager.html
-%%DOCSDIR%%/gedit-gedit-recent.html
-%%DOCSDIR%%/gedit-gedit-utils.html
-%%DOCSDIR%%/gedit.devhelp
-%%DOCSDIR%%/gedit.devhelp2
-%%DOCSDIR%%/home.png
-%%DOCSDIR%%/index.html
-%%DOCSDIR%%/index.sgml
-%%DOCSDIR%%/left.png
-%%DOCSDIR%%/right.png
-%%DOCSDIR%%/style.css
-%%DOCSDIR%%/up.png
 share/gnome/applications/gedit.desktop
 share/gnome/gedit-2/glade/docinfo.glade2
 share/gnome/gedit-2/glade/gedit-encodings-dialog.glade
@@ -166,6 +135,7 @@ share/gnome/gedit-2/glade/time.glade2
 share/gnome/gedit-2/icons/gedit-plugin.png
 share/gnome/gedit-2/logo/gedit-logo.png
 %%PYTHON%%share/gnome/gedit-2/plugins/externaltools/stock-tools.xml
+share/gnome/gedit-2/plugins/filebrowser/gedit-file-browser-widget-ui.xml
 %%PYTHON%%share/gnome/gedit-2/plugins/snippets/c++.xml
 %%PYTHON%%share/gnome/gedit-2/plugins/snippets/c.xml
 %%PYTHON%%share/gnome/gedit-2/plugins/snippets/css.xml
@@ -254,6 +224,10 @@ share/gnome/help/gedit/ko/legal.xml
 share/gnome/help/gedit/ro/figures/gedit_window.png
 share/gnome/help/gedit/ro/gedit.xml
 share/gnome/help/gedit/ro/legal.xml
+share/gnome/help/gedit/sv/figures/gedit_format_bold.png
+share/gnome/help/gedit/sv/figures/gedit_format_italic.png
+share/gnome/help/gedit/sv/figures/gedit_format_strikethrough.png
+share/gnome/help/gedit/sv/figures/gedit_format_underline.png
 share/gnome/help/gedit/sv/figures/gedit_recent_files_menu_icon.png
 share/gnome/help/gedit/sv/figures/gedit_window.png
 share/gnome/help/gedit/sv/gedit.xml
@@ -416,11 +390,11 @@ share/locale/zh_TW/LC_MESSAGES/gedit.mo
 @dirrm share/gnome/gedit-2/logo
 @dirrm share/gnome/gedit-2/icons
 %%PYTHON%%@dirrm share/gnome/gedit-2/plugins/snippets
+@dirrm share/gnome/gedit-2/plugins/filebrowser
 %%PYTHON%%@dirrm share/gnome/gedit-2/plugins/externaltools
-%%PYTHON%%@dirrm share/gnome/gedit-2/plugins
+@dirrm share/gnome/gedit-2/plugins
 @dirrm share/gnome/gedit-2/glade
 @dirrm share/gnome/gedit-2
-@dirrm %%DOCSDIR%%
 %%PYTHON%%@dirrm lib/gedit-2/plugins/pythonconsole
 %%PYTHON%%@dirrm lib/gedit-2/plugins/snippets
 %%PYTHON%%@dirrm lib/gedit-2/plugins/externaltools
