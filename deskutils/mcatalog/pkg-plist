@@ -1,0 +1,70 @@
+bin/mcatalog
+lib/mcatalog/mcatalog.exe
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+share/gnome/application-registry/mcatalog.applications
+share/gnome/applications/mcatalog.desktop
+share/gnome/mcatalog/pixmaps/bigstar.png
+share/gnome/mcatalog/pixmaps/borrowed.png
+share/gnome/mcatalog/pixmaps/default/background.jpg
+share/gnome/mcatalog/pixmaps/default/shelf.png
+share/gnome/mcatalog/pixmaps/grass/background.jpg
+share/gnome/mcatalog/pixmaps/grass/shelf.png
+share/gnome/mcatalog/pixmaps/leather/background.jpg
+share/gnome/mcatalog/pixmaps/leather/shelf.png
+share/gnome/mcatalog/pixmaps/littlestar.png
+share/gnome/mcatalog/pixmaps/logo.png
+share/gnome/mcatalog/pixmaps/mcatalog.png
+share/gnome/mcatalog/pixmaps/metal/background.jpg
+share/gnome/mcatalog/pixmaps/metal/shelf.png
+share/gnome/mcatalog/pixmaps/shelfbg.png
+share/gnome/mcatalog/pixmaps/shelfbgnp.png
+share/gnome/mcatalog/pixmaps/wood/background.jpg
+share/gnome/mcatalog/pixmaps/wood/shelf.png
+share/gnome/mcatalog/templates/albums_printable.html
+share/gnome/mcatalog/templates/albums_printable.png
+share/gnome/mcatalog/templates/albums_printable.rc
+share/gnome/mcatalog/templates/albums_simple.html
+share/gnome/mcatalog/templates/albums_simple.png
+share/gnome/mcatalog/templates/albums_simple.rc
+share/gnome/mcatalog/templates/books_printable.html
+share/gnome/mcatalog/templates/books_printable.png
+share/gnome/mcatalog/templates/books_printable.rc
+share/gnome/mcatalog/templates/books_simple.html
+share/gnome/mcatalog/templates/books_simple.png
+share/gnome/mcatalog/templates/books_simple.rc
+share/gnome/mcatalog/templates/films_printable.html
+share/gnome/mcatalog/templates/films_printable.png
+share/gnome/mcatalog/templates/films_printable.rc
+share/gnome/mcatalog/templates/films_simple.html
+share/gnome/mcatalog/templates/films_simple.png
+share/gnome/mcatalog/templates/films_simple.rc
+share/locale/cs/LC_MESSAGES/mcatalog.mo
+share/locale/de/LC_MESSAGES/mcatalog.mo
+share/locale/en_CA/LC_MESSAGES/mcatalog.mo
+share/locale/en_GB/LC_MESSAGES/mcatalog.mo
+share/locale/es/LC_MESSAGES/mcatalog.mo
+share/locale/fr/LC_MESSAGES/mcatalog.mo
+share/locale/hu/LC_MESSAGES/mcatalog.mo
+share/locale/it/LC_MESSAGES/mcatalog.mo
+share/locale/nl/LC_MESSAGES/mcatalog.mo
+share/locale/pt_BR/LC_MESSAGES/mcatalog.mo
+share/locale/rw/LC_MESSAGES/mcatalog.mo
+share/locale/sv/LC_MESSAGES/mcatalog.mo
+share/locale/zh_CN/LC_MESSAGES/mcatalog.mo
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrm share/gnome/mcatalog/templates
+@dirrm share/gnome/mcatalog/pixmaps/wood
+@dirrm share/gnome/mcatalog/pixmaps/metal
+@dirrm share/gnome/mcatalog/pixmaps/leather
+@dirrm share/gnome/mcatalog/pixmaps/grass
+@dirrm share/gnome/mcatalog/pixmaps/default
+@dirrm share/gnome/mcatalog/pixmaps
+@dirrm share/gnome/mcatalog
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm lib/mcatalog
