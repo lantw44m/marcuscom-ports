@@ -3,23 +3,35 @@
 # Whom:					FreeBSD GNOME Team
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/deskutils/alacarte/Makefile,v 1.1 2006/07/18 12:18:06 ahze Exp $
 
 PORTNAME=	alacarte
-PORTVERSION=	0.8
-PORTREVISION=	2
-CATEGORIES=	deskutils
-MASTER_SITES=	http://dev.realistanew.com/${PORTNAME}/releases/${PORTVERSION}/
+PORTVERSION=	0.9.90
+CATEGORIES=	deskutils gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An editor for the freedesktop.org menu specification
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg
 
-USE_GNOME=	pygtk2 pygnome2
+USE_BZIP2=	yes
+USE_GNOME=	gnomehack gnomeprefix pygtk2 pygnome2 intlhack
+USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_PYTHON=	yes
-USE_PYDISTUTILS=	yes
-PYDISTUTILS_INSTALLARGS=	-c -O1 --prefix=${PREFIX} --install-lib=${PYTHON_SITELIBDIR}
+INSTALLS_ICONS=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		GMSGFMT="${LOCALBASE}/bin/msgfmt"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
+	    ${WRKSRC}/Alacarte/DialogHandler.py
+	@${REINPLACE_CMD} -e 's|gmsgfmt|msgfmt|g' \
+	    	${WRKSRC}/configure
 
 .include <bsd.port.mk>
