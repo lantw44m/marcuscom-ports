@@ -158,6 +158,8 @@ share/xml2po/ubuntu.pyc
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/ne/LC_MESSAGES
+@dirrmtry share/locale/ne
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/dz/LC_MESSAGES
