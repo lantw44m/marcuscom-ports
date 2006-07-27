@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.128 2006/07/26 21:36:26 ahze Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.129 2006/07/26 22:33:29 marcus Exp $
 #
 
 PORTNAME=	gnome-applets
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${POR
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		xklavier.11:${PORTSDIR}/x11/libxklavier \
 		gucharmap.5:${PORTSDIR}/deskutils/gucharmap
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/gnome-system-tools
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends.pc:${PORTSDIR}/sysutils/gnome-system-tools
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
@@ -97,7 +97,5 @@ PLIST_SUB+=	PYTHON="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' \
 		${WRKSRC}/libgweather/weather-met.c
-	@${REINPLACE_CMD} -e 's|system-tools-backends|system-tools-backends-2.0|g' \
-		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
