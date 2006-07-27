@@ -327,3 +327,5 @@ share/gnome/omf/user-guide/user-guide-it.omf
 @dirrm share/gnome/help/gnome-access-guide/C/figures
 @dirrm share/gnome/help/gnome-access-guide/C
 @dirrm share/gnome/help/gnome-access-guide
+@dirrmtry share/locale/ne/LC_MESSAGES
+@dirrmtry share/locale/ne
