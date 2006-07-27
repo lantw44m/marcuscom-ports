@@ -101,3 +101,5 @@ share/setup-tool-backends/scripts/xml.pl
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/ne/LC_MESSAGES
+@dirrmtry share/locale/ne
