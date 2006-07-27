@@ -82,6 +82,7 @@ share/pygtk/2.0/defs/ui.defs
 %%PORTDOCS%%@dirrm share/examples/py-gnome/bonobo/bonoboui
 %%PORTDOCS%%@dirrm share/examples/py-gnome/bonobo
 %%PORTDOCS%%@dirrm share/examples/py-gnome
+@dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomevfs
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/bonobo
 @dirrm include/gnome-python-2.0
