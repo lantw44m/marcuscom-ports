@@ -109,4 +109,3 @@ share/sgml/gconf/gconf-1.0.dtd
 @dirrm include/gconf/2/gconf
 @dirrm include/gconf/2
 @dirrm etc/gconf/2
-@dirrmtry share/sgml
