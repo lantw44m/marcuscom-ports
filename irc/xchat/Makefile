@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/irc/xchat/Makefile,v 1.1 2006/07/18 13:25:39 ahze Exp $
 
 PORTNAME=	xchat
-PORTVERSION=	2.6.4
-PORTREVISION=	2
+PORTVERSION=	2.6.6
+PORTREVISION=	1
 CATEGORIES=	irc gnome ipv6
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://xchat.org/files/source/2.6/
