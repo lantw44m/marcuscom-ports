@@ -1,0 +1,76 @@
+--- network.pl.in.orig	Mon Jan  2 10:50:54 2006
++++ network.pl.in	Fri Jan  6 01:11:58 2006
+@@ -94,7 +94,7 @@
+   my ($fd, $line, $iface);
+   my (@ifaces, $command);
+ 
+-  $command = &gst_file_get_cmd_path ("iwconfig");
++  $command = &gst_file_get_cmd_path ("ifconfig");
+   open $fd, "$command |";
+   return @ifaces if $fd eq undef;
+ 
+@@ -535,6 +535,7 @@
+        "vlos-1.2"     => "debian-2.2",
+        "freebsd-5"    => "debian-2.2",
+        "freebsd-6"    => "debian-2.2",
++       "freebsd-7"    => "debian-2.2",
+        );
+ 
+   return $cmd_map{$dist_map{$gst_dist}};
+@@ -804,7 +805,7 @@
+       $types_cache{$dev} = "modem";
+     }
+   }
+-  elsif ($dev =~ /^(eth|dc|ed|bfe|em|fxp|bge|de|xl|ixgb|txp|vx|lge|nge|pcn|re|rl|sf|sis|sk|ste|ti|tl|tx|vge|vr|wb|cs|ex|ep|fe|ie|lnc|sn|xe|le|an|awi|wi|ndis|wlaue|axe|cue|kue|rue|fwe|nve)[0-9]/)
++  elsif ($dev =~ /(eth|dc|ed|bfe|em|fxp|bge|de|xl|ixgb|txp|vx|lge|nge|pcn|re|rl|sf|sis|sk|ste|ti|tl|tx|vge|vr|wb|cs|ex|ep|fe|ie|lnc|sn|xe|le|an|awi|wi|ndis|wl|aue|axe|cue|kue|rue|fwe|nve|hme|ath|iwi|ipw|ral|ural|my)[0-9]/)
+   {
+     $types_cache{$dev} = "ethernet";
+   }
+@@ -1838,6 +1839,7 @@
+           "gentoo"       => \&gst_network_deb22_get_file,
+           "freebsd-5"    => \&gst_network_deb22_get_file,
+           "freebsd-6"    => \&gst_network_deb22_get_file,
++          "freebsd-7"    => \&gst_network_deb22_get_file,
+ 	 );
+ 
+   $proc = $dist_map{$gst_dist};
+@@ -3959,6 +3961,7 @@
+           "vlos-1.2"     => "",
+           "freebsd-5"    => "",
+           "freebsd-6"    => "",
++          "freebsd-7"    => "",
+          );
+ 
+   $dev = $dist_map {$gst_dist};
+@@ -4124,6 +4127,7 @@
+           "vlos-1.2"     => "gentoo",
+           "freebsd-5"    => "freebsd-5",
+           "freebsd-6"    => "freebsd-5",
++          "freebsd-7"    => "freebsd-5",
+          );
+ 
+   my %dist_tables =
+@@ -4545,6 +4549,7 @@
+           "vlos-1.2"     => "gentoo",
+           "freebsd-5"    => "freebsd-5",
+           "freebsd-6"    => "freebsd-5",
++          "freebsd-7"    => "freebsd-5",
+          );
+   
+   my %dist_tables =
+@@ -5383,6 +5388,7 @@
+           "vlos-1.2"     => "gentoo",
+           "freebsd-5"    => "freebsd-5",
+           "freebsd-6"    => "freebsd-5",
++          "freebsd-7"    => "freebsd-5",
+          );
+ 
+   my %dist_tables =
+@@ -5789,6 +5795,7 @@
+           "vlos-1.2"     => "gentoo",
+           "freebsd-5"    => "freebsd-5",
+           "freebsd-6"    => "freebsd-5",
++          "freebsd-7"    => "freebsd-5",
+          );
+ 
+   my %dist_tables =
