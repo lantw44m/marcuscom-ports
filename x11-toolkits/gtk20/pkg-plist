@@ -606,6 +606,8 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/uz@Latn/LC_MESSAGES
 @dirrmtry share/locale/uz@Latn
+@dirrmtry share/locale/uz/LC_MESSAGES
+@dirrmtry share/locale/uz
 @dirrmtry share/locale/ur/LC_MESSAGES
 @dirrmtry share/locale/ur
 @dirrmtry share/locale/tt/LC_MESSAGES
@@ -628,8 +630,6 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrmtry share/locale/ia
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
-@dirrmtry share/locale/br/LC_MESSAGES
-@dirrmtry share/locale/br
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/az_IR/LC_MESSAGES
