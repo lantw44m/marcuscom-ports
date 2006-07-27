@@ -1,0 +1,16 @@
+--- configure.orig	Thu Jul 27 11:24:11 2006
++++ configure	Thu Jul 27 11:24:19 2006
+@@ -23854,13 +23854,6 @@ fi
+ 
+ 
+ 
+-if $enable_gtk_doc; then
+-  ENABLE_GTK_DOC_TRUE=
+-  ENABLE_GTK_DOC_FALSE='#'
+-else
+-  ENABLE_GTK_DOC_TRUE='#'
+-  ENABLE_GTK_DOC_FALSE=
+-fi
+ 
+ 
+ 
