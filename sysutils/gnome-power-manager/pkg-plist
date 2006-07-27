@@ -207,6 +207,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/icons/hicolor/24x24/apps
+@dirrmtry share/icons/hicolor/24x24
 @dirrm share/gnome/omf/gnome-power-manager
 @dirrm share/gnome/help/gnome-power-manager/ru/figures
 @dirrm share/gnome/help/gnome-power-manager/ru
