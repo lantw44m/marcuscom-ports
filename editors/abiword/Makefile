@@ -3,7 +3,7 @@
 # Whom:                 Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/abiword/Makefile,v 1.2 2005/10/29 22:31:16 marcus Exp $
+#   $MCom: ports/editors/abiword/Makefile,v 1.4 2006/07/18 12:44:27 ahze Exp $
 #
 
 PORTNAME=	abiword
@@ -74,7 +74,7 @@ GNOME_ENABLED=		yes
 .endif
 
 .if defined(WITH_GUCHARMAP) || exists(${LOCALBASE}/libdata/pkgconfig/gucharmap.pc)
-LIB_DEPENDS+=		gucharmap.4:${PORTSDIR}/deskutils/gucharmap
+LIB_DEPENDS+=		gucharmap.5:${PORTSDIR}/deskutils/gucharmap
 .else
 CONFIGURE_ARGS+=	--enable-cmap=no
 .endif
