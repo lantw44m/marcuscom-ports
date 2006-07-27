@@ -1,5 +1,7 @@
 lib/gtk-2.0/%%GTK2_VERSION%%/engines/libclearlooks.la
 lib/gtk-2.0/%%GTK2_VERSION%%/engines/libclearlooks.so
+lib/gtk-2.0/%%GTK2_VERSION%%/engines/libcrux-engine.la
+lib/gtk-2.0/%%GTK2_VERSION%%/engines/libcrux-engine.so
 lib/gtk-2.0/%%GTK2_VERSION%%/engines/libglide.la
 lib/gtk-2.0/%%GTK2_VERSION%%/engines/libglide.so
 lib/gtk-2.0/%%GTK2_VERSION%%/engines/libhcengine.la
@@ -16,6 +18,7 @@ lib/gtk-2.0/%%GTK2_VERSION%%/engines/libthinice.la
 lib/gtk-2.0/%%GTK2_VERSION%%/engines/libthinice.so
 libdata/pkgconfig/gtk-engines-2.pc
 share/themes/Clearlooks/gtk-2.0/gtkrc
+share/themes/Crux/gtk-2.0/gtkrc
 share/themes/Industrial/gtk-2.0/gtkrc
 share/themes/Mist/gtk-2.0/gtkrc
 share/themes/Redmond/gtk-2.0/gtkrc
@@ -24,9 +27,11 @@ share/themes/ThinIce/gtk-2.0/gtkrc
 @dirrm share/themes/Redmond/gtk-2.0
 @dirrm share/themes/Mist/gtk-2.0
 @dirrm share/themes/Industrial/gtk-2.0
+@dirrm share/themes/Crux/gtk-2.0
 @dirrm share/themes/Clearlooks/gtk-2.0
 @unexec /bin/rmdir %D/share/themes/ThinIce 2>/dev/null || true
 @unexec /bin/rmdir %D/share/themes/Redmond 2>/dev/null || true
 @unexec /bin/rmdir %D/share/themes/Mist 2>/dev/null || true
 @unexec /bin/rmdir %D/share/themes/Industrial 2>/dev/null || true
+@unexec /bin/rmdir %D/share/themes/Crux 2>/dev/null || true
 @unexec /bin/rmdir %D/share/themes/Clearlooks 2>/dev/null || true
