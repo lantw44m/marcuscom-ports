@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.6 2006/07/21 20:46:59 mezz Exp $
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.7 2006/07/24 04:58:56 marcus Exp $
 #
 
 PORTNAME=	gnome-power-manager
@@ -25,9 +25,9 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
+USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui libwnck \
 		gnomedocutils
-GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
