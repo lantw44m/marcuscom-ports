@@ -73,7 +73,13 @@ share/locale/wa/LC_MESSAGES/gnome-mime-data.mo
 share/locale/yi/LC_MESSAGES/gnome-mime-data.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-mime-data.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-mime-data.mo
-@dirrmtry share/locale/sr@ije/LC_MESSAGES
-@dirrmtry share/locale/sr@ije
 @dirrmtry share/locale/yi/LC_MESSAGES
 @dirrmtry share/locale/yi
+@dirrmtry share/locale/tk/LC_MESSAGES
+@dirrmtry share/locale/tk
+@dirrmtry share/locale/sr@ije/LC_MESSAGES
+@dirrmtry share/locale/sr@ije
+@dirrmtry share/locale/ne/LC_MESSAGES
+@dirrmtry share/locale/ne
+@dirrmtry share/locale/li/LC_MESSAGES
+@dirrmtry share/locale/li

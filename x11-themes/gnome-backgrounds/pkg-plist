@@ -76,6 +76,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-backgrounds.mo
 @dirrmtry share/locale/te
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/ne/LC_MESSAGES
+@dirrmtry share/locale/ne
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/ky/LC_MESSAGES
