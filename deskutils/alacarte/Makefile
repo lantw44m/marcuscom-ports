@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/alacarte/Makefile,v 1.3 2006/07/27 13:45:11 marcus Exp $
+#    $MCom: ports/deskutils/alacarte/Makefile,v 1.4 2006/07/28 20:55:55 mezz Exp $
 
 PORTNAME=	alacarte
 PORTVERSION=	0.9.90
@@ -29,7 +29,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
-	    ${WRKSRC}/Alacarte/DialogHandler.py
+	    ${WRKSRC}/Alacarte/DialogHandler.py \
+	    ${WRKSRC}/Alacarte/util.py
 	@${REINPLACE_CMD} -e 's|gmsgfmt|msgfmt|g' \
 	    	${WRKSRC}/configure
 
