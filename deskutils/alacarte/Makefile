@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/alacarte/Makefile,v 1.2 2006/07/27 01:10:04 marcus Exp $
+#    $MCom: ports/deskutils/alacarte/Makefile,v 1.3 2006/07/27 13:45:11 marcus Exp $
 
 PORTNAME=	alacarte
 PORTVERSION=	0.9.90
@@ -15,8 +15,6 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An editor for the freedesktop.org menu specification
-
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix pygnomedesktop intlhack
