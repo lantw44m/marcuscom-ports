@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.131 2006/07/27 05:54:02 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.132 2006/07/27 20:59:12 marcus Exp $
 #
 
 PORTNAME=	gnome-applets
@@ -87,10 +87,12 @@ PLIST_SUB+=	COMMANDER=""
 PLIST_SUB+=	COMMANDER="@comment "
 .endif
 
-.if exists(${pygnomedesktop_DETECT}) || ( ${HAVE_GNOME:Mpygnomedesktop}!="" && ${ARCH}!="sparc64" )
+.if ( exists(${pygnomedesktop_DETECT}) && exists(${pygnomeextras_DETECT}) ) || \
+	( ( ${HAVE_GNOME:Mpygnomedesktop}!="" && \
+	${HAVE_GNOME:Mpygnomeextras}!="" ) && ${ARCH}!="sparc64" )
 USE_PYTHON=	yes
 .include "${PORTSDIR}/Mk/bsd.python.mk"
-USE_GNOME+=	pygnomedesktop
+USE_GNOME+=	pygnomedesktop pygnomeextras
 PLIST_SUB+=	PYTHON=""
 .else
 PLIST_SUB+=	PYTHON="@comment "
