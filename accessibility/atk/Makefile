@@ -3,12 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD: ports/accessibility/atk/Makefile,v 1.47 2006/05/31 22:18:41 mezz Exp $
-#   $MCom$
+#   $MCom: ports/accessibility/atk/Makefile,v 1.70 2006/07/10 20:53:29 ahze Exp $
 #
 
 PORTNAME=	atk
 PORTVERSION=	1.12.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	accessibility devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
