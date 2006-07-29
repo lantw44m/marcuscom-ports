@@ -1,5 +1,5 @@
---- alacarte/MainWindow.py.orig	Sat Jul 29 13:45:31 2006
-+++ alacarte/MainWindow.py	Sat Jul 29 13:45:57 2006
+--- Alacarte/MainWindow.py.orig	Sat Jul 29 13:45:31 2006
++++ Alacarte/MainWindow.py	Sat Jul 29 13:45:57 2006
 @@ -67,8 +67,8 @@ class MainWindow:
  
  	def run(self):
