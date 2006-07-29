@@ -87,6 +87,7 @@ share/locale/az/LC_MESSAGES/zenity.mo
 share/locale/be/LC_MESSAGES/zenity.mo
 share/locale/bg/LC_MESSAGES/zenity.mo
 share/locale/bn/LC_MESSAGES/zenity.mo
+share/locale/bn_IN/LC_MESSAGES/zenity.mo
 share/locale/bs/LC_MESSAGES/zenity.mo
 share/locale/ca/LC_MESSAGES/zenity.mo
 share/locale/cs/LC_MESSAGES/zenity.mo
@@ -117,6 +118,7 @@ share/locale/kn/LC_MESSAGES/zenity.mo
 share/locale/ko/LC_MESSAGES/zenity.mo
 share/locale/ku/LC_MESSAGES/zenity.mo
 share/locale/lt/LC_MESSAGES/zenity.mo
+share/locale/lv/LC_MESSAGES/zenity.mo
 share/locale/mi/LC_MESSAGES/zenity.mo
 share/locale/mk/LC_MESSAGES/zenity.mo
 share/locale/ml/LC_MESSAGES/zenity.mo
@@ -154,6 +156,8 @@ share/locale/zh_TW/LC_MESSAGES/zenity.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/zenity/clothes
 @dirrm share/gnome/zenity
 @dirrm share/gnome/omf/zenity
