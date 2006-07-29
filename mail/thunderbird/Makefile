@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/mail/thunderbird-devel/Makefile,v 1.16 2005/11/27 18:53:59 marcus Exp $
+#    $MCom: ports/mail/thunderbird/Makefile,v 1.15 2006/07/18 13:31:13 ahze Exp $
 #
 
 PORTNAME=	thunderbird
-DISTVERSION=	1.5.0.4
+DISTVERSION=	1.5.0.5
 PORTREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
