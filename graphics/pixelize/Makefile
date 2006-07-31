@@ -1,0 +1,33 @@
+# ex:ts=8
+# Ports collection makefile for:	pixelize
+# Date created:			Oct 20, 2002
+# Whom:				ijliao
+#
+# $FreeBSD$
+#
+
+PORTNAME=	pixelize
+PORTVERSION=	0.9.2
+PORTREVISION=	3
+CATEGORIES=	graphics
+MASTER_SITES=	${MASTER_SITE_SUNSITE} \
+		ftp://lashwhip.com/pub/ \
+		http://lashwhip.com/pixelize/
+MASTER_SITE_SUBDIR=	apps/graphics/misc
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	Use many scaled down images to try to duplicate another image
+
+USE_GNOME=	gtk12 imlib
+IMLIB_CONFIG=	${LOCALBASE}/bin/imlib-config
+
+post-patch:
+	@${REINPLACE_CMD} -e "s|^CC|#CC|" -e "s|CFLAGS = -g|CFLAGS+= |" \
+		-e "s|gtk-config|${GTK_CONFIG}|g" \
+		-e "s|imlib-config|${IMLIB_CONFIG}|g" ${WRKSRC}/Makefile
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/make_db ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/pixelize ${PREFIX}/bin
+
+.include <bsd.port.mk>
