@@ -1,0 +1,69 @@
+bin/any2djvu
+bin/bzz
+bin/c44
+bin/cjb2
+bin/cpaldjvu
+bin/csepdjvu
+bin/ddjvu
+%%X11%%bin/djview
+bin/djvm
+bin/djvmcvt
+bin/djvudigital
+bin/djvudump
+bin/djvuextract
+bin/djvumake
+bin/djvups
+bin/djvused
+bin/djvuserve
+bin/djvutoxml
+bin/djvutxt
+bin/djvuxmlparser
+include/libdjvu/ddjvuapi.h
+include/libdjvu/miniexp.h
+%%X11%%lib/djvulibre/plugins/nsdejavu.so
+lib/libdjvulibre.la
+lib/libdjvulibre.so
+lib/libdjvulibre.so.17
+libdata/pkgconfig/ddjvuapi.pc
+share/djvu/languages.xml
+%%X11%%share/djvu/osi/de/djview.qm
+share/djvu/osi/de/libdjvu++.xml
+share/djvu/osi/de/messages.xml
+%%X11%%share/djvu/osi/de/qt.qm
+share/djvu/osi/en/djvutools-reference.xml
+share/djvu/osi/en/libdjvu++.xml
+share/djvu/osi/en/messages.xml
+share/djvu/osi/en/unixgui-shared.xml
+share/djvu/osi/en/unixgui-viewer.xml
+%%X11%%share/djvu/osi/fr/djview.qm
+share/djvu/osi/fr/libdjvu++.xml
+share/djvu/osi/fr/messages.xml
+%%X11%%share/djvu/osi/fr/qt.qm
+%%X11%%share/djvu/osi/ja/djview.qm
+share/djvu/osi/ja/libdjvu++.xml
+share/djvu/osi/ja/messages.xml
+%%X11%%share/djvu/osi/ja/qt.qm
+share/djvu/osi/zh/libdjvu++.xml
+share/djvu/osi/zh/messages.xml
+share/djvu/pubtext/DjVuMessages.dtd
+share/djvu/pubtext/DjVuOCR.dtd
+share/djvu/pubtext/DjVuXML-s.dtd
+%%X11%%@exec mkdir -p %%LOCALBASE%%/lib/browser_plugins
+%%X11%%@exec ln -sf %D/lib/djvulibre/plugins/nsdejavu.so %%LOCALBASE%%/lib/browser_plugins/nsdejavu.so
+%%X11%%@unexec rm -f %%LOCALBASE%%/lib/browser_plugins/nsdejavu.so
+@dirrm share/djvu/pubtext
+@dirrm share/djvu/osi/zh
+@dirrm share/djvu/osi/ja
+@dirrm share/djvu/osi/fr
+@dirrm share/djvu/osi/en
+@dirrm share/djvu/osi/de
+@dirrm share/djvu/osi
+@dirrm share/djvu
+%%X11%%@dirrm lib/djvulibre/plugins
+%%X11%%@dirrm lib/djvulibre
+@dirrm include/libdjvu
+@dirrmtry man/fr/man1
+@dirrmtry man/fr
+@dirrmtry man/de/man1
+@dirrmtry man/de
+@unexec rmdir %%LOCALBASE%%/lib/browser_plugins 2>/dev/null || true
