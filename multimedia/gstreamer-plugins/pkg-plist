@@ -86,6 +86,9 @@ lib/gstreamer-%%VERSION%%/libgstximagesink.so
 lib/gstreamer-%%VERSION%%/libgstxvimagesink.a
 lib/gstreamer-%%VERSION%%/libgstxvimagesink.la
 lib/gstreamer-%%VERSION%%/libgstxvimagesink.so
+lib/gstreamer-%%VERSION%%/libgstvideo4linux.a
+lib/gstreamer-%%VERSION%%/libgstvideo4linux.la
+lib/gstreamer-%%VERSION%%/libgstvideo4linux.so
 lib/libgstaudio-%%VERSION%%.a
 lib/libgstaudio-%%VERSION%%.la
 lib/libgstaudio-%%VERSION%%.so
