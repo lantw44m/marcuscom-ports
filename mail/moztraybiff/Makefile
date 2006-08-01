@@ -28,7 +28,7 @@ BROKEN=		${PORTNAME} needs the Thunderbird port in order to build
 TBVER!=		cd ../thunderbird && ${MAKE} -V PORTVERSION
 .endif
 
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	libgnome
 MAKE_ARGS+=	MOZILLA_PLATFORM=tbird TBVER=${TBVER} MOZ_TRUNK=0
