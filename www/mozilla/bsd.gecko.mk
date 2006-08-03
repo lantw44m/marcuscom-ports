@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.17 2006/03/10 12:42:50 ahze Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.19 2006/07/18 15:03:40 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -165,7 +165,7 @@ post-patch: gecko-post-patch
 
 gecko-post-patch:
 .if defined(${GECKO}_HACK)
-	${FIND} ${WRKSRC} -name "Makefile.in" -o -name "configure" | \
+	${FIND} ${WRKSRC} -name "Makefile.in" -type f -o -name "configure" -type f | \
 		${XARGS} ${REINPLACE_CMD} -e ${${GECKO}_HACK}
 .endif
 
