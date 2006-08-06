@@ -82,6 +82,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/orca_prefs.py
 %%PYTHON_SITELIBDIR%%/orca/orca_prefs.pyc
 %%PYTHON_SITELIBDIR%%/orca/orca_prefs.pyo
+%%PYTHON_SITELIBDIR%%/orca/orca_state.py
+%%PYTHON_SITELIBDIR%%/orca/orca_state.pyc
+%%PYTHON_SITELIBDIR%%/orca/orca_state.pyo
 %%PYTHON_SITELIBDIR%%/orca/outloud.py
 %%PYTHON_SITELIBDIR%%/orca/outloud.pyc
 %%PYTHON_SITELIBDIR%%/orca/outloud.pyo
@@ -154,7 +157,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/util.py
 %%PYTHON_SITELIBDIR%%/orca/util.pyc
 %%PYTHON_SITELIBDIR%%/orca/util.pyo
+share/gnome/applications/orca.desktop
 share/gnome/orca/glade/orca-setup.glade
+share/icons/hicolor/48x48/apps/orca.png
 share/locale/bg/LC_MESSAGES/orca.mo
 share/locale/bn/LC_MESSAGES/orca.mo
 share/locale/bn_IN/LC_MESSAGES/orca.mo
@@ -186,6 +191,5 @@ share/locale/zh_CN/LC_MESSAGES/orca.mo
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrm share/gnome/orca/glade
-@dirrm share/gnome/orca
 @dirrm %%PYTHON_SITELIBDIR%%/orca/scripts
 @dirrm %%PYTHON_SITELIBDIR%%/orca
