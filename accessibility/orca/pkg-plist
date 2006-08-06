@@ -191,5 +191,6 @@ share/locale/zh_CN/LC_MESSAGES/orca.mo
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrm share/gnome/orca/glade
+@dirrm share/gnome/orca
 @dirrm %%PYTHON_SITELIBDIR%%/orca/scripts
 @dirrm %%PYTHON_SITELIBDIR%%/orca
