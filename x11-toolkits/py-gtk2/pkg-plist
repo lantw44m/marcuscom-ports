@@ -109,8 +109,8 @@ lib/pygtk/2.0/pygtk-demo.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/keysyms.py
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/keysyms.pyc
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/keysyms.pyo
-%%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/unixprint.la
-%%PYTHON_SITELIBDIR%%/gtk-2.0/gtk/unixprint.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gtkunixprint.la
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gtkunixprint.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/pango.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/pango.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/pangocairo.la
