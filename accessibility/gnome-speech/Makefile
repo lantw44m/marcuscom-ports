@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gnome-speech/Makefile,v 1.18 2006/07/10 01:58:38 marcus Exp $
+#   $MCom: ports/accessibility/gnome-speech/Makefile,v 1.19 2006/07/24 05:00:27 marcus Exp $
 #
 
 PORTNAME=	gnome-speech
-PORTVERSION=	0.4.2
+PORTVERSION=	0.4.3
 CATEGORIES=	accessibility audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
