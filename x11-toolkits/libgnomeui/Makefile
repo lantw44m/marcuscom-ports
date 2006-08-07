@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.87 2006/07/21 20:47:04 mezz Exp $
+#    $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.88 2006/07/24 18:57:49 ahze Exp $
 
 PORTNAME=	libgnomeui
-PORTVERSION=	2.15.90
+PORTVERSION=	2.15.91
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -30,7 +30,7 @@ USE_XPM=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gnomehier libbonoboui ltverhack \
 		referencehack
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_BISON=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
