@@ -3,11 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/Makefile,v 1.39 2006/07/24 23:20:06 ahze Exp $
+#    $MCom: ports/x11/gdm/Makefile,v 1.40 2006/07/31 23:24:10 marcus Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	2.15.8
+PORTVERSION=	2.15.9
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
