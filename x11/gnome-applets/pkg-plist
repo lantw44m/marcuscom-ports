@@ -907,12 +907,15 @@ share/locale/ku/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/ml/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/mn/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ms/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/mr/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/nb/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ne/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/nl/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/or/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/pt/LC_MESSAGES/gnome-applets-2.0.mo
@@ -945,6 +948,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrmtry share/locale/te
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
