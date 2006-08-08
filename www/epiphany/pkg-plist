@@ -88,6 +88,7 @@ share/gnome/epiphany/epiphany-ui.xml
 share/gnome/epiphany/epiphany.xhtml
 share/gnome/epiphany/glade/certificate-dialogs.glade
 share/gnome/epiphany/glade/epiphany.glade
+share/gnome/epiphany/glade/form-signing-dialog.glade
 share/gnome/epiphany/glade/prefs-dialog.glade
 share/gnome/epiphany/glade/print.glade
 share/gnome/epiphany/mime-types-permissions.xml
@@ -137,6 +138,11 @@ share/gnome/help/epiphany/ru/figures/ephy-addressbar-smartbookmark-screenshot.pn
 share/gnome/help/epiphany/ru/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/ru/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/ru/figures/ephy-screenshot.png
+share/gnome/help/epiphany/sv/epiphany.xml
+share/gnome/help/epiphany/sv/figures/ephy-addressbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/sv/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/sv/figures/ephy-history-window-screenshot.png
+share/gnome/help/epiphany/sv/figures/ephy-screenshot.png
 share/gnome/help/epiphany/uk/epiphany.xml
 share/gnome/help/epiphany/uk/figures/ephy-addressbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/uk/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
@@ -230,6 +236,8 @@ share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 @dirrm share/gnome/omf/epiphany
 @dirrm share/gnome/help/epiphany/uk/figures
 @dirrm share/gnome/help/epiphany/uk
+@dirrm share/gnome/help/epiphany/sv/figures
+@dirrm share/gnome/help/epiphany/sv
 @dirrm share/gnome/help/epiphany/ru/figures
 @dirrm share/gnome/help/epiphany/ru
 @dirrm share/gnome/help/epiphany/nl/figures
