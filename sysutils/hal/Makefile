@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.18 2006/05/28 16:13:47 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.19 2006/06/16 05:05:53 marcus Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
-PORTREVISION?=	1
+PORTREVISION?=	3
 CATEGORIES?=	sysutils
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -17,7 +17,7 @@ COMMENT?=	Hardware Abstraction Layer for simplifying device access
 
 .if !defined(HAL_SLAVE)
 LIB_DEPENDS=	polkit.0:${PORTSDIR}/sysutils/policykit
-RUN_DEPENDS=	${LOCALBASE}/share/pci.ids:${PORTSDIR}/sysutils/pciutils \
+RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:${PORTSDIR}/misc/pciids \
 		isoinfo:${PORTSDIR}/sysutils/cdrtools
 .endif
 
@@ -29,7 +29,7 @@ USE_AUTOTOOLS=	libtool:15
 INSTALLS_SHLIB=	yes
 USE_PYTHON=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
-		--with-hwdata=${LOCALBASE}/share \
+		--with-hwdata=${LOCALBASE}/share/pciids \
 		--with-backend=freebsd \
 		--with-socket-dir=/var/run/hald \
 		--with-pid-file=/var/run/hald/hald.pid
