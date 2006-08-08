@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.169 2006/07/27 00:47:40 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.170 2006/07/27 00:49:16 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -29,7 +29,6 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		bug-buddy:${PORTSDIR}/devel/bug-buddy \
 		gnome-system-monitor:${PORTSDIR}/sysutils/gnome-system-monitor \
 		nautilus:${PORTSDIR}/x11-fm/nautilus \
-		yelp:${PORTSDIR}/x11/yelp \
 		${LOCALBASE}/sbin/gdm:${PORTSDIR}/x11/gdm \
 		${LOCALBASE}/share/gnome/help/user-guide/C/user-guide.xml:${PORTSDIR}/misc/gnome-user-docs \
 		${LOCALBASE}/share/gnome/sounds/question.wav:${PORTSDIR}/audio/gnome-audio \
@@ -83,6 +82,9 @@ do-install:	# empty
 .if !defined(GNOME_SLAVE)
 .if ${ARCH} == "i386" || ${OSVERSION} > 500035
 RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+.endif
+.if (${ARCH}!="sparc64" || ${OSVERSION} >= 601101) && ${ARCH}!="ia64"
+RUN_DEPENDS+=	yelp:${PORTSDIR}/x11/yelp
 .endif
 .if ${.CURDIR:T}!="gnome2-lite"
 .if ${ARCH}!="sparc64" || ${OSVERSION} >= 700003
