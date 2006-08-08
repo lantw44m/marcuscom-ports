@@ -65,6 +65,7 @@ share/locale/pt/LC_MESSAGES/gnome-screensaver.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-screensaver.mo
 share/locale/ru/LC_MESSAGES/gnome-screensaver.mo
 share/locale/sk/LC_MESSAGES/gnome-screensaver.mo
+share/locale/sl/LC_MESSAGES/gnome-screensaver.mo
 share/locale/sq/LC_MESSAGES/gnome-screensaver.mo
 share/locale/sr/LC_MESSAGES/gnome-screensaver.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-screensaver.mo
@@ -76,6 +77,8 @@ share/locale/vi/LC_MESSAGES/gnome-screensaver.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-screensaver.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-screensaver.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-screensaver.mo
+@dirrmtry share/locale/sl/LC_MESSAGES
+@dirrmtry share/locale/sl
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/dz/LC_MESSAGES
