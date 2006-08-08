@@ -61,6 +61,7 @@ libexec/evolution/%%EVO_VERSION%%/evolution-exchange-storage
 %%OLDDOCSDIR%%/ximian-connector-xntlm-md4.html
 %%OLDDOCSDIR%%/ximian-connector-xntlm.html
 %%OLDDOCSDIR%%/ximian-connector.devhelp
+%%OLDDOCSDIR%%/ximian-connector.devhelp2
 %%OLDDOCSDIR%%/ximian-connnector-booking.html
 share/gnome/evolution-exchange/%%VERSION%%/glade/exchange-autoconfig-wizard.glade
 share/gnome/evolution-exchange/%%VERSION%%/glade/exchange-change-password.glade
