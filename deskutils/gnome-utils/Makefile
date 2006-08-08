@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.101 2006/07/21 20:46:54 mezz Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.102 2006/07/25 03:55:27 marcus Exp $
 #
 
 PORTNAME=	gnome-utils
-PORTVERSION=	2.15.90
+PORTVERSION=	2.15.91
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -25,7 +25,7 @@ USE_XLIB=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
 		libgnomeprintui gnomedesktop ltverhack
@@ -37,5 +37,9 @@ MAN1=		gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1 \
 		baobab.1
 GCONF_SCHEMAS=	gnome-dictionary.schemas gnome-screenshot.schemas \
 		gnome-search-tool.schemas logview.schemas baobab.schemas
+
+post-patch:
+	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} -n 10 \
+		${REINPLACE_CMD} -e 's|@mandir@|${PREFIX}/man|'
 
 .include <bsd.port.mk>
