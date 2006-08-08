@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.97 2006/07/27 17:38:56 marcus Exp $
+#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.98 2006/08/08 05:34:16 marcus Exp $
 #
 
 PORTNAME=	gnome-themes
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A collection of themes and icons for GNOME2
 
 BUILD_DEPENDS=	gtk-engines2>=2.7.5_1:${PORTSDIR}/x11-themes/gtk-engines2 \
-		icon-naming-utils>=0.6.7:${PORTSDIR}/x11-themes/icon-naming-utils
+		icon-naming-utils>=0.8.0:${PORTSDIR}/x11-themes/icon-naming-utils
 RUN_DEPENDS=	gtk-engines2>=2.7.5_1:${PORTSDIR}/x11-themes/gtk-engines2
 
 CONFLICTS=	clearlooks-metacity-0.*
