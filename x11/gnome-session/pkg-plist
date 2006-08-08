@@ -64,6 +64,7 @@ share/locale/ko/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/mg/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/mi/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ml/LC_MESSAGES/gnome-session-2.0.mo
@@ -103,6 +104,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/zu/LC_MESSAGES/gnome-session-2.0.mo
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/mg/LC_MESSAGES
+@dirrmtry share/locale/mg
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/hy/LC_MESSAGES

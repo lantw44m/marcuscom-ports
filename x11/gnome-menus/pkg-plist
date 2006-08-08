@@ -83,6 +83,7 @@ share/locale/ro/LC_MESSAGES/gnome-menus.mo
 share/locale/ru/LC_MESSAGES/gnome-menus.mo
 share/locale/rw/LC_MESSAGES/gnome-menus.mo
 share/locale/sk/LC_MESSAGES/gnome-menus.mo
+share/locale/sl/LC_MESSAGES/gnome-menus.mo
 share/locale/sq/LC_MESSAGES/gnome-menus.mo
 share/locale/sr/LC_MESSAGES/gnome-menus.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-menus.mo
@@ -104,6 +105,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-menus.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/sl/LC_MESSAGES
+@dirrmtry share/locale/sl
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/mr/LC_MESSAGES
