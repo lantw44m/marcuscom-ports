@@ -95,7 +95,7 @@ share/locale/zh_TW/LC_MESSAGES/libwnck.mo
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
-@dirrmtry share/locale/bn_IN/LC_MESSAGES 
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrm include/libwnck-1.0/libwnck
 @dirrm include/libwnck-1.0
