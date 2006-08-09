@@ -21,11 +21,11 @@ share/icons/Crux/96x96/emblems/emblem-nowrite.png
 share/icons/Crux/96x96/filesystems/gnome-fs-directory.png
 share/icons/Crux/96x96/filesystems/gnome-fs-regular.png
 share/icons/Crux/index.theme
-share/icons/HighContrast-SVG/index.theme
 share/icons/HighContrast-SVG/48x48/animations/gnome-spinner-rest.png
 share/icons/HighContrast-SVG/48x48/animations/gnome-spinner.png
 share/icons/HighContrast-SVG/48x48/animations/process-idle.png
 share/icons/HighContrast-SVG/48x48/animations/process-working.png
+share/icons/HighContrast-SVG/index.theme
 share/icons/HighContrast-SVG/scalable/actions/add.svg
 share/icons/HighContrast-SVG/scalable/actions/address-book-new.svg
 share/icons/HighContrast-SVG/scalable/actions/application-exit.svg
@@ -425,9 +425,9 @@ share/icons/HighContrast-SVG/scalable/apps/xscreensaver.svg
 share/icons/HighContrast-SVG/scalable/apps/zen-icon.svg
 share/icons/HighContrast-SVG/scalable/categories/applications-accessories.svg
 share/icons/HighContrast-SVG/scalable/categories/applications-development.svg
+share/icons/HighContrast-SVG/scalable/categories/applications-engineering.svg
 share/icons/HighContrast-SVG/scalable/categories/applications-games.svg
 share/icons/HighContrast-SVG/scalable/categories/applications-graphics.svg
-share/icons/HighContrast-SVG/scalable/categories/applications-engineering.svg
 share/icons/HighContrast-SVG/scalable/categories/applications-internet.svg
 share/icons/HighContrast-SVG/scalable/categories/applications-multimedia.svg
 share/icons/HighContrast-SVG/scalable/categories/applications-office.svg
@@ -1758,13 +1758,31 @@ share/icons/Mist/32x32/places/folder.png
 share/icons/Mist/32x32/places/gnome-fs-directory.png
 share/icons/Mist/32x32/places/stock_folder.png
 share/icons/Mist/index.theme
-share/icons/Mist/scalable/places/document-open.svg
-share/icons/Mist/scalable/places/folder-drag-accept.svg
+share/icons/Mist/scalable/actions/document-open.svg
+share/icons/Mist/scalable/actions/fileopen.svg
+share/icons/Mist/scalable/actions/gtk-open.svg
+share/icons/Mist/scalable/places/application-x-gnome-saved-search.svg
 share/icons/Mist/scalable/places/folder-new.svg
-share/icons/Mist/scalable/places/folder-open.svg
+share/icons/Mist/scalable/places/folder-remote.svg
+share/icons/Mist/scalable/places/folder-saved-search.svg
 share/icons/Mist/scalable/places/folder.svg
+share/icons/Mist/scalable/places/folder_home.svg
 share/icons/Mist/scalable/places/gnome-fs-directory.svg
+share/icons/Mist/scalable/places/gnome-fs-ftp.svg
+share/icons/Mist/scalable/places/gnome-fs-home.svg
+share/icons/Mist/scalable/places/gnome-fs-nfs.svg
+share/icons/Mist/scalable/places/gnome-fs-share.svg
+share/icons/Mist/scalable/places/gnome-fs-smb.svg
+share/icons/Mist/scalable/places/gnome-fs-ssh.svg
+share/icons/Mist/scalable/places/gnome-mime-x-directory-smb-share.svg
+share/icons/Mist/scalable/places/network.svg
 share/icons/Mist/scalable/places/stock_folder.svg
+share/icons/Mist/scalable/places/user-home.svg
+share/icons/Mist/scalable/status/folder-drag-accept.svg
+share/icons/Mist/scalable/status/folder-open.svg
+share/icons/Mist/scalable/status/folder_open.svg
+share/icons/Mist/scalable/status/gnome-fs-directory-accept.svg
+share/icons/Mist/scalable/status/stock_open.svg
 share/locale/am/LC_MESSAGES/gnome-themes.mo
 share/locale/ar/LC_MESSAGES/gnome-themes.mo
 share/locale/az/LC_MESSAGES/gnome-themes.mo
@@ -2438,7 +2456,9 @@ share/themes/Mist/index.theme
 @dirrmtry share/locale/ky
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrm share/icons/Mist/scalable/status
 @dirrm share/icons/Mist/scalable/places
+@dirrm share/icons/Mist/scalable/actions
 @dirrm share/icons/Mist/scalable
 @dirrm share/icons/Mist/32x32/places
 @dirrm share/icons/Mist/32x32
