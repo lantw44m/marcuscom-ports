@@ -3,13 +3,14 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.14 2006/07/18 20:50:21 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.15 2006/07/23 04:58:06 ahze Exp $
 #
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
 
 PORTNAME=	vlc
 DISTVERSION=	0.8.6.20060719
+PORTREVISION=	1
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://nightlies.videolan.org/build/source/
 #		http://download.videolan.org/pub/videolan/vlc/${PORTVERSION}/ \
@@ -297,7 +298,7 @@ CONFIGURE_ARGS+=--disable-dirac
 
 .if !defined(WITHOUT_X264)
 CONFIGURE_ARGS+=--enable-x264
-LIB_DEPENDS+=	x264.47:${PORTSDIR}/multimedia/x264
+LIB_DEPENDS+=	x264.49:${PORTSDIR}/multimedia/x264
 .else
 CONFIGURE_ARGS+=--disable-x264
 .endif
