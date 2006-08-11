@@ -9,6 +9,7 @@ lib/tomboy/Tomboy.exe
 lib/tomboy/Tomboy.exe.config
 lib/tomboy/libtomboy.la
 lib/tomboy/libtomboy.so
+libdata/bonobo/servers/GNOME_TomboyApplet.server
 libdata/pkgconfig/tomboy-plugins.pc
 share/dbus-1/services/com.beatniksoftware.Tomboy.service
 share/gnome/applications/DefaultPlugins.desktop

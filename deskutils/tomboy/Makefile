@@ -3,12 +3,12 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.5 2006-08-11 17:45:22 marcus Exp $
+#   $Id: Makefile,v 1.6 2006-08-11 22:02:16 marcus Exp $
 #
 
 PORTNAME=	tomboy
 PORTVERSION=	0.3.9
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -52,7 +52,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|(libdir)/dbus-1.0|(prefix)/share/dbus-1|g' \
 		${WRKSRC}/data/Makefile.in
 	@${REINPLACE_CMD} -e 's|`$$PKG_CONFIG --variable=libdir libpanelapplet-2.0`|"$$libdir"|g; \
-	s|PANELAPPLET_SERVER_DIR="$$libdir|PANELAPPLET_SERVER_DIR="$$prefix/libdata|g' \
+	s|PANELAPPLET_SERVER_DIR="$$libdir|PANELAPPLET_SERVER_DIR="$$prefix/libdata|g; \
+	s|PANELAPPLET_SERVER_DIR="$$PANELAPPLET_LIBDIR|PANELAPPLET_SERVER_DIR="$$prefix/libdata|g' \
 		${WRKSRC}/configure
 
 post-install:
