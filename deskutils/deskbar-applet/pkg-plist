@@ -47,7 +47,6 @@ lib/deskbar-applet/handlers/web_address.pyo
 lib/deskbar-applet/handlers/yahoo.py
 lib/deskbar-applet/handlers/yahoo.pyc
 lib/deskbar-applet/handlers/yahoo.pyo
-lib/deskbar-applet/new-stuff-manager
 %%PYTHON_SITELIBDIR%%/deskbar/BrowserMatch.py
 %%PYTHON_SITELIBDIR%%/deskbar/BrowserMatch.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/BrowserMatch.pyo
@@ -204,21 +203,8 @@ lib/deskbar-applet/new-stuff-manager
 %%PYTHON_SITELIBDIR%%/deskbar/ui/window/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/window/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/window/__init__.pyo
-%%PYTHON_SITELIBDIR%%/deskbar/updater/ErrorDialog.py
-%%PYTHON_SITELIBDIR%%/deskbar/updater/ErrorDialog.pyc
-%%PYTHON_SITELIBDIR%%/deskbar/updater/ErrorDialog.pyo
-%%PYTHON_SITELIBDIR%%/deskbar/updater/NewStuffUpdater.py
-%%PYTHON_SITELIBDIR%%/deskbar/updater/NewStuffUpdater.pyc
-%%PYTHON_SITELIBDIR%%/deskbar/updater/NewStuffUpdater.pyo
-%%PYTHON_SITELIBDIR%%/deskbar/updater/ProgressbarDialog.py
-%%PYTHON_SITELIBDIR%%/deskbar/updater/ProgressbarDialog.pyc
-%%PYTHON_SITELIBDIR%%/deskbar/updater/ProgressbarDialog.pyo
-%%PYTHON_SITELIBDIR%%/deskbar/updater/__init__.py
-%%PYTHON_SITELIBDIR%%/deskbar/updater/__init__.pyc
-%%PYTHON_SITELIBDIR%%/deskbar/updater/__init__.pyo
 libdata/bonobo/servers/Deskbar_Applet.server
 libdata/pkgconfig/deskbar-applet.pc
-share/dbus-1/services/org.gnome.NewStuffManager.service
 share/gnome/applications/deskbar-applet.desktop
 share/gnome/deskbar-applet/Deskbar_Applet.xml
 share/gnome/deskbar-applet/art/delicious.png
@@ -237,7 +223,6 @@ share/gnome/deskbar-applet/art/yahoo.png
 share/gnome/deskbar-applet/mozilla-search.glade
 share/gnome/deskbar-applet/prefs-dialog.glade
 share/gnome/deskbar-applet/smart-bookmarks.glade
-share/gnome/deskbar-applet/specs/deskbarapplet.py
 share/icons/hicolor/48x48/apps/deskbar-applet.png
 share/icons/hicolor/scalable/apps/deskbar-applet.svg
 share/locale/be/LC_MESSAGES/deskbar-applet.mo
@@ -297,10 +282,8 @@ share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrm share/gnome/deskbar-applet/specs
 @dirrm share/gnome/deskbar-applet/art
 @dirrm share/gnome/deskbar-applet
-@dirrm %%PYTHON_SITELIBDIR%%/deskbar/updater
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/window
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/entriac
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac
