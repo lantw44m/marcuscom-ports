@@ -114,7 +114,5 @@ share/locale/zh_TW/LC_MESSAGES/nautilus-cd-burner.mo
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrmtry share/icons/hicolor/24x24/apps
-@dirrmtry share/icons/hicolor/24x24
 @dirrm share/gnome/nautilus-cd-burner
 @dirrm include/libnautilus-burn
