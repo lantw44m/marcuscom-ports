@@ -3,28 +3,30 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.2 2006-08-11 05:34:11 marcus Exp $
+#   $Id: Makefile,v 1.3 2006-08-11 07:56:37 marcus Exp $
 #
 
 PORTNAME=	tomboy
-PORTVERSION=	0.3.5
-PORTREVISION=	6
+PORTVERSION=	0.3.9
 CATEGORIES=	deskutils gnome
-MASTER_SITES=	http://www.beatniksoftware.com/tomboy/releases/
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Personal note taking system for the GNOME desktop
 
-LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
-BUILD_DEPENDS=	gapi-fixup:${PORTSDIR}/x11-toolkits/gtk-sharp10 \
-		${LOCALBASE}/lib/mono/dbus-sharp/dbus-sharp.dll:${PORTSDIR}/devel/dbus-sharp
-RUN_DEPENDS=	gapi-fixup:${PORTSDIR}/x11-toolkits/gtk-sharp10 \
-		${LOCALBASE}/lib/mono/dbus-sharp/dbus-sharp.dll:${PORTSDIR}/devel/dbus-sharp
+LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell \
+    		dbus-glib-1.2:${PORTSDIR}/devel/dbus
+BUILD_DEPENDS=	gapi-fixup:${PORTSDIR}/x11-toolkits/gtk-sharp10
+RUN_DEPENDS=	gapi-fixup:${PORTSDIR}/x11-toolkits/gtk-sharp10
 
+USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnometarget intltool gnomeprefix gnomepanel
 USE_X_PREFIX=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+INSTALLS_ICONS=	yes
 
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
