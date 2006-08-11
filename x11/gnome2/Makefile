@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.173 2006/08/11 07:22:53 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.174 2006/08/11 10:39:57 ahze Exp $
 #
 
 PORTNAME=	gnome2
@@ -88,7 +88,7 @@ RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
 RUN_DEPENDS+=	yelp:${PORTSDIR}/x11/yelp
 .endif
 .if ${.CURDIR:T}!="gnome2-lite"
-.if ${ARCH}!="sparc64" || ${OSVERSION} >= 700003
+.if ( ${ARCH}!="sparc64" || ${OSVERSION} >= 700003 ) && ${OSVERSION} >= 600000
 RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga
 .endif
 .endif
