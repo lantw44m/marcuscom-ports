@@ -3,7 +3,7 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.1 2006-07-26 02:15:48 mezz Exp $
+#   $Id: Makefile,v 1.2 2006-08-11 05:34:11 marcus Exp $
 #
 
 PORTNAME=	tomboy
@@ -38,8 +38,8 @@ GCONF_SCHEMAS=	tomboy.schemas
 # configure.  Enable if either evo or gmime# is installed.
 .if defined (WITH_EVOLUTION) || exists (${LOCALBASE}/bin/evolution) || exists (${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll)
 CONFIGURE_ARGS+= --enable-evolution=yes
-BUILD_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp
-RUN_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp
+BUILD_DEPENDS+=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp
+RUN_DEPENDS+=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp
 PLIST_SUB+=	EVO:=""
 .else
 PLIST_SUB+=	EVO:="@comment "
