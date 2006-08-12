@@ -3,7 +3,7 @@
 # Whom:                marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/misc/hicolor-icon-theme/Makefile,v 1.2 2006/08/11 01:19:10 ahze Exp $
+#   $MCom: ports/misc/hicolor-icon-theme/Makefile,v 1.3 2006/08/11 08:27:19 marcus Exp $
 #
 
 PORTNAME=	hicolor-icon-theme
@@ -43,17 +43,16 @@ pre-install:
 .endfor
 .for dir in ${ICON_SIZES}
 . for ctxt in ${ICON_CONTEXTS}
-	${ECHO_CMD} "@dirrmtry ${ICON_DIR}/${dir}/${ctxt}" >> ${PLIST}
 	if [ "${ctxt}" = "stock" ] ; then \
 	 for sub in ${STOCK_SUBS} ; do \
 	${ECHO_CMD} "@dirrmtry ${ICON_DIR}/${dir}/${ctxt}/$${sub}" >> ${PLIST} ; \
 	 done \
 	fi
+	${ECHO_CMD} "@dirrmtry ${ICON_DIR}/${dir}/${ctxt}" >> ${PLIST}
 . endfor
-	@${ECHO_CMD} "@dirrmtry ${ICON_DIR}/${dir}/stock" >> ${PLIST}
-	@${ECHO_CMD} "@dirrmtry ${ICON_DIR}/${dir}" >> ${PLIST}
+	${ECHO_CMD} "@dirrmtry ${ICON_DIR}/${dir}" >> ${PLIST}
 .endfor
-	@${ECHO_CMD} "@dirrmtry ${ICON_DIR}" >> ${PLIST}
-	@${ECHO_CMD} "@dirrmtry share/icons" >> ${PLIST}
+	${ECHO_CMD} "@dirrmtry ${ICON_DIR}" >> ${PLIST}
+	${ECHO_CMD} "@dirrmtry share/icons" >> ${PLIST}
 
 .include <bsd.port.post.mk>
