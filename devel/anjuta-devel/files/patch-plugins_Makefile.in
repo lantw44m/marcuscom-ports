@@ -1,0 +1,10 @@
+--- plugins/Makefile.in.orig	Sun Aug 13 10:59:38 2006
++++ plugins/Makefile.in	Sun Aug 13 10:59:58 2006
+@@ -350,7 +350,6 @@
+ 	patch \
+ 	subversion \
+ 	project-import \
+-	glade \
+ 	tools \
+ 	class-inheritance \
+ 	document-manager \

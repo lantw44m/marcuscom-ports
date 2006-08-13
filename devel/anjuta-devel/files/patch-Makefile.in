@@ -1,14 +1,14 @@
---- Makefile.in.orig	Thu Oct 27 12:45:32 2005
-+++ Makefile.in	Thu Oct 27 12:46:43 2005
-@@ -454,14 +454,14 @@
- 	  rm -f "$(DESTDIR)$(anjuta_glade_filedir)/$$f"; \
- 	done
+--- Makefile.in.orig	Sun Aug 13 09:58:49 2006
++++ Makefile.in	Sun Aug 13 09:59:32 2006
+@@ -467,14 +467,14 @@
+ 	-rm -f libtool
+ uninstall-info-am:
  install-anjutadocDATA: $(anjutadoc_DATA)
 -	@$(NORMAL_INSTALL)
 -	test -z "$(anjutadocdir)" || $(mkdir_p) "$(DESTDIR)$(anjutadocdir)"
 -	@list='$(anjutadoc_DATA)'; for p in $$list; do \
 -	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
--	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  f=$(am__strip_dir) \
 -	  echo " $(anjutadocDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(anjutadocdir)/$$f'"; \
 -	  $(anjutadocDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(anjutadocdir)/$$f"; \
 -	done
@@ -16,7 +16,7 @@
 +#	test -z "$(anjutadocdir)" || $(mkdir_p) "$(DESTDIR)$(anjutadocdir)"
 +#	@list='$(anjutadoc_DATA)'; for p in $$list; do \
 +#	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
-+#	  f="`echo $$p | sed -e 's|^.*/||'`"; \
++#	  f=$(am__strip_dir) \
 +#	  echo " $(anjutadocDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(anjutadocdir)/$$f'"; \
 +#	  $(anjutadocDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(anjutadocdir)/$$f"; \
 +#	done

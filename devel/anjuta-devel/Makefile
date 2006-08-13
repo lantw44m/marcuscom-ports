@@ -3,12 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.11 2006/03/02 20:31:33 mezz Exp $
+#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.12 2006/07/21 20:46:54 mezz Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.0.1
-PORTREVISION=	2
+PORTVERSION=	2.0.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	anjuta
@@ -18,16 +17,15 @@ COMMENT=	Integrated Development Environment for C and C++
 
 BUILD_DEPENDS=	autogen:${PORTSDIR}/devel/autogen \
 		bash:${PORTSDIR}/shells/bash2 \
-		dotneato-config:${PORTSDIR}/graphics/graphviz
+		neato:${PORTSDIR}/graphics/graphviz
 LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
-		gbf-1.0:${PORTSDIR}/devel/gnomebuild \
-		gladeui-1.0:${PORTSDIR}/devel/glade3 \
+		gbf-1.0:${PORTSDIR}/devel/gnome-build \
+		gladeui-1.2:${PORTSDIR}/devel/glade3 \
 		devhelp-1.0:${PORTSDIR}/devel/devhelp
 RUN_DEPENDS=	${LOCALBASE}/gnu-autotools/bin/autoconf:${PORTSDIR}/devel/gnu-autoconf \
 		${LOCALBASE}/gnu-autotools/bin/automake:${PORTSDIR}/devel/gnu-automake \
-		${LOCALBASE}/gnu-autotools/bin/libtool:${PORTSDIR}/devel/gnu-libtool \
 		autogen:${PORTSDIR}/devel/autogen \
-		dotneato-config:${PORTSDIR}/graphics/graphviz
+		neato:${PORTSDIR}/graphics/graphviz
 
 CONFLICTS=	anjuta-1.2.*
 
@@ -74,8 +72,8 @@ post-configure:
 	@${REINPLACE_CMD} -e 's|/bin/sh|${LOCALBASE}/bin/bash|g' \
 		${WRKSRC}/global-tags/create_global_tags.sh
 
-post-build:
-	@cd ${WRKSRC}/global-tags && ${SETENV} PKG_CONFIG_PATH="${PREFIX}/libdata/pkgconfig:${LOCALBASE}/libdata/pkgconfig:${X11BASE}/libdata/pkgconfig" bash create_global_tags.sh
+#post-build:
+#	@cd ${WRKSRC}/global-tags && ${SETENV} PKG_CONFIG_PATH="${PREFIX}/libdata/pkgconfig:${LOCALBASE}/libdata/pkgconfig:${X11BASE}/libdata/pkgconfig" bash create_global_tags.sh
 
 post-install:
 .if !defined(NOPORTDOCS)
