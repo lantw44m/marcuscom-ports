@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgsf/Makefile,v 1.22 2006/04/23 22:42:46 mezz Exp $
+#   $MCom: ports/devel/libgsf/Makefile,v 1.24 2006/07/18 12:33:24 ahze Exp $
 #
 
 PORTNAME=	libgsf
@@ -26,7 +26,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 INSTALLS_SHLIB=	yes
-USE_GNOME?=	gnomehack glib20 libxml2 gconf2 ltverhack intlhack
+USE_GNOME?=	gnomehack gnomeprefix glib20 libxml2 gconf2 ltverhack intlhack
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS?=--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc --without-gnome --with-bz2 \
