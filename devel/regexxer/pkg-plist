@@ -1,0 +1,18 @@
+bin/regexxer
+share/gnome/applications/regexxer.desktop
+share/gnome/pixmaps/regexxer.png
+share/gnome/regexxer/aboutdialog.glade
+share/gnome/regexxer/mainwindow.glade
+share/gnome/regexxer/prefdialog.glade
+share/locale/cs/LC_MESSAGES/regexxer.mo
+share/locale/de/LC_MESSAGES/regexxer.mo
+share/locale/en/LC_MESSAGES/regexxer.mo
+share/locale/en_CA/LC_MESSAGES/regexxer.mo
+share/locale/en_GB/LC_MESSAGES/regexxer.mo
+share/locale/it/LC_MESSAGES/regexxer.mo
+share/locale/ja/LC_MESSAGES/regexxer.mo
+share/locale/nl/LC_MESSAGES/regexxer.mo
+share/locale/pt/LC_MESSAGES/regexxer.mo
+share/locale/pt_BR/LC_MESSAGES/regexxer.mo
+share/locale/sv/LC_MESSAGES/regexxer.mo
+@dirrm share/gnome/regexxer
