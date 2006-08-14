@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	totem
-PORTVERSION=	1.5.90
+PORTVERSION=	1.5.91
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -51,10 +51,19 @@ CONFLICTS?=	totem-gstreamer-[0-9]*
 USE_GECKO=	firefox mozilla seamonkey xulrunner<->firefox firefox-devel<->firefox
 .include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 PLIST_SUB+=	MOZILLA=""
-CONFIGURE_ARGS+=--with-mozilla=${GECKO}
+CONFIGURE_ARGS+=--with-mozilla=${GECKO} \
+		--enable-gmp-plugin \
+		--enable-complex-plugin \
+		--enable-narrowspace-plugin
 .else
 PLIST_SUB+=	MOZILLA="@comment "
-CONFIGURE_ARGS+=--disable-mozilla
+CONFIGURE_ARGS+=--without-mozilla \
+		--disable-browser-plugins \
+		--disable-mozilla \
+		--disable-basic-plugin \
+		--disable-gmp-plugin \
+		--disable-complex-plugin \
+		--disable-narrowspace-plugin
 .endif
 
 .if defined(WITH_GSTREAMER)
@@ -73,9 +82,10 @@ LIB_DEPENDS+=	dvdnav.4:${PORTSDIR}/multimedia/libdvdnav
 
 post-patch:
 	@${CP} -f ${FILESDIR}/pkg-message.in ${PKGMESSAGE}
-	@${REINPLACE_CMD} -e 's|/plugins||; \
-		s|@MOZILLA_PLUGINDIR@|${PREFIX}/lib/browser_plugins|' \
-		${WRKSRC}/src/Makefile.in
+	@${REINPLACE_CMD} -e ' s|@MOZILLA_PLUGINDIR@|${PREFIX}/lib/browser_plugins|; \
+		s|mozilla/plugins|browser_plugins|' \
+		${WRKSRC}/browser-plugin/Makefile.in \
+		${WRKSRC}/browser-plugin/idl/Makefile.in
 
 post-install:
 	@-update-desktop-database
