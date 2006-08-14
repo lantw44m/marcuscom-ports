@@ -3,6 +3,7 @@ share/gnome/applications/gconf-editor.desktop
 share/gnome/help/gconf-editor/C/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/C/gconf-editor.xml
 share/gnome/help/gconf-editor/C/legal.xml
+share/gnome/omf/gconf-editor/gconf-editor-C.omf
 share/gnome/pixmaps/gconf-editor/entry-blank.png
 share/gnome/pixmaps/gconf-editor/entry-bool.png
 share/gnome/pixmaps/gconf-editor/entry-list.png
@@ -100,6 +101,7 @@ share/locale/zh_TW/LC_MESSAGES/gconf-editor.mo
 @dirrmtry share/locale/br/LC_MESSAGES
 @dirrmtry share/locale/br
 @dirrm share/gnome/pixmaps/gconf-editor
+@dirrm share/gnome/omf/gconf-editor
 @dirrm share/gnome/help/gconf-editor/C/figures
 @dirrm share/gnome/help/gconf-editor/C
 @dirrm share/gnome/help/gconf-editor
