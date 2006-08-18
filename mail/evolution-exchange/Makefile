@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.65 2006/07/25 22:07:50 marcus Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.66 2006/08/08 04:30:03 marcus Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -13,7 +13,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
-MAINTAINER=	kiesel@schlund.de
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Evolution plugin to connect to Microsoft Exchange servers
 
 BUILD_DEPENDS=	evolution-${EVO_VERSION}:${PORTSDIR}/mail/evolution
