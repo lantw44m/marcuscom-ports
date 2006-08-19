@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/news/pan-devel/Makefile,v 1.4 2006/08/10 17:55:02 mezz Exp $
+#    $MCom: ports/news/pan-devel/Makefile,v 1.5 2006/08/15 05:07:20 mezz Exp $
 
 PORTNAME=	pan
-PORTVERSION=	0.108
+PORTVERSION=	0.109
 CATEGORIES=	news gnome
 MASTER_SITES=	http://pan.rebelbase.com/download/releases/${PORTVERSION}/source/
 DIST_SUBDIR=	gnome2
@@ -17,10 +17,10 @@ COMMENT=	Threaded GTK+2 newsreader based on Agent for Windows
 LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre-utf8 \
 		gmime-2.0.4:${PORTSDIR}/mail/gmime2
 
-USE_BZIP2=	yes
 USE_XLIB=	yes
+USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnometarget libxml2 gtk20 intlhack
+USE_GNOME=	gnomehack gnometarget gtk20 intlhack
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
@@ -36,13 +36,5 @@ CONFIGURE_ARGS+=	--without-gtkspell
 LIB_DEPENDS+=		gtkspell.0:${PORTSDIR}/textproc/gtkspell
 CONFIGURE_ARGS+=	--with-gtkspell
 .endif
-
-#.if ${HAVE_GNOME:Mlibgnome}!=""
-#USE_GNOME+=		libgnome
-#CONFIGURE_ARGS+=	--with-gnome
-#PKGNAMESUFFIX:=		-gnome
-#.else
-#CONFIGURE_ARGS+=	--without-gnome
-#.endif
 
 .include <bsd.port.post.mk>
