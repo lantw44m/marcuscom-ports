@@ -5,15 +5,14 @@
 # $FreeBSD$
 
 PORTNAME=	PenguinTV
-PORTVERSION=	1.93
+PORTVERSION=	2.0.1
 PORTREVISION=	1
 CATEGORIES=	net audio multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	penguintv
-PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	edwin@mavetju.org
-COMMENT=	Graphical RSS feed reader with incorperated playback functions - development version
+COMMENT=	Graphical RSS feed reader with incorperated playback functions
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/pysqlite2/_sqlite.so:${PORTSDIR}/databases/py-pysqlite21 \
 		${PYTHON_SITELIBDIR}/pycurl.so:${PORTSDIR}/ftp/py-curl \
@@ -31,7 +30,7 @@ USE_PYTHON=	yes
 
 GCONF_SCHEMAS=	penguintv.schema
 
-CONFLICTS=	PenguinTV-1.*
+CONFLICTS=	PenguinTV-devel-[0-9]*
 
 .include <bsd.port.pre.mk>
 
@@ -43,6 +42,10 @@ PLIST_SUB+=	WITH_MOZILLA=""
 EXTRA_PATCHES+=	${FILESDIR}/patchmozilla-setup.py
 PLIST_SUB+=	WITH_MOZILLA="@comment "
 .endif
+
+pre-fetch:
+	@${ECHO_MSG} If you are upgrading from 1.x, please export your subscriptions for save-keeping!
+	@sleep 5
 
 do-build:
 	cd ${WRKSRC} && ${PYTHON_CMD} setup.py build

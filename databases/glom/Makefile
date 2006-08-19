@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/databases/glom/Makefile,v 1.6 2006/07/25 18:16:27 mezz Exp $
 #
 
 PORTNAME=	glom
 PORTVERSION=	0.8.30
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.8
@@ -25,6 +25,7 @@ USE_BZIP2=	yes
 USE_XLIB=	yes
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
+USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix pygnomeextras
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
@@ -37,7 +38,7 @@ BROKEN=	needs an update to 1.0
 .include <bsd.port.pre.mk>
 
 .if (${OSVERSION} < 500000)
-BROKEN=		"Doesn't play well with 4.X."
+BROKEN=		does n't play well with 4.X.
 .endif
 
 .include <bsd.port.post.mk>

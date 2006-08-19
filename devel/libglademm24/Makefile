@@ -3,11 +3,11 @@
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/libglademm24/Makefile,v 1.7 2006/07/25 06:47:27 mezz Exp $
 #
 
 PORTNAME=	libglademm
-PORTVERSION=	2.6.2
+PORTVERSION=	2.6.3
 PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}

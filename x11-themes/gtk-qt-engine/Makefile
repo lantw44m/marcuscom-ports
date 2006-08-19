@@ -7,7 +7,7 @@
 
 PORTNAME=	gtk-qt-engine
 PORTVERSION=	0.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://people.freedesktop.org/~davidsansome/ \
 		http://freebsd.ricin.com/ports/distfiles/
@@ -15,8 +15,7 @@ MASTER_SITES=	http://people.freedesktop.org/~davidsansome/ \
 MAINTAINER=	danny@ricin.com
 COMMENT=	GTK-QT Theme Engine allows GTK2 apps to use QT (KDE) themes
 
-LIB_DEPENDS=	kdecore:${PORTSDIR}/x11/kdelibs3 \
-		bonoboui-2:${PORTSDIR}/x11-toolkits/libbonoboui
+LIB_DEPENDS=	kdecore:${PORTSDIR}/x11/kdelibs3
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -31,6 +30,12 @@ PLIST_SUB+=	LOCALBASE=${LOCALBASE}
 CONFIGURE_ARGS+=--x-libraries=${X11BASE}/lib --x-includes=${X11BASE}/include
 
 OPTIONS=	BONOBOUI "With libbonoboui (recommended)" on
+
+.include <bsd.port.pre.mk>
+
+.if !defined(WITHOUT_BONOBOUI)
+LIB_DEPENDS+=	bonoboui-2:${PORTSDIR}/x11-toolkits/libbonoboui
+.endif
 
 pre-configure:
 	@${REINPLACE_CMD} -e "s|/share/themes/|${LOCALBASE}/share/themes/|" \
@@ -47,4 +52,4 @@ post-install:
 	@${RM} /tmp/menu/kcmgtk.menu
 	@if [ "`ls /tmp/menu`" = "" ]; then ${RMDIR} /tmp/menu; fi
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
