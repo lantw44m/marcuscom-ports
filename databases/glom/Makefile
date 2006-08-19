@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/glom/Makefile,v 1.6 2006/07/25 18:16:27 mezz Exp $
+#   $MCom: ports/databases/glom/Makefile,v 1.7 2006/08/19 19:06:15 mezz Exp $
 #
 
 PORTNAME=	glom
@@ -38,7 +38,7 @@ BROKEN=	needs an update to 1.0
 .include <bsd.port.pre.mk>
 
 .if (${OSVERSION} < 500000)
-BROKEN=		does n't play well with 4.X.
+BROKEN=		doesn't play well with 4.X.
 .endif
 
 .include <bsd.port.post.mk>
