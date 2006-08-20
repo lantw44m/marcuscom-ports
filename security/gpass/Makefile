@@ -37,4 +37,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|{packageprefix}/share|{datadir}|g' \
 		${WRKSRC}/configure
 
+post-install:
+	@-update-desktop-database
+
 .include <bsd.port.post.mk>
