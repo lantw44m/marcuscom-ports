@@ -3,14 +3,14 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.15 2006/07/23 04:58:06 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.16 2006/08/09 15:43:58 ahze Exp $
 #
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
 
 PORTNAME=	vlc
 DISTVERSION=	0.8.6.20060719
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://nightlies.videolan.org/build/source/
 #		http://download.videolan.org/pub/videolan/vlc/${PORTVERSION}/ \
@@ -44,7 +44,7 @@ USE_PERL5_BUILD=yes
 FAKEDIR=	${WRKDIR}/fake
 PLIST=		${WRKDIR}/plist
 
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${WRKSRC}/include ${CPPFLAGS} -I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
@@ -74,7 +74,7 @@ CPPFLAGS+=	-I${X11BASE}/include/wx-2.6/
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} < 500800
-BROKEN=Does not compile with perl ${PERL_VERSION}
+BROKEN=	Does not compile with perl ${PERL_VERSION}
 .endif
 
 .if exists(${LOCALBASE}/libdata/pkgconfig/libavcodec.pc) || !exists(${LOCALBASE}/lib/libavformat.a)
@@ -386,7 +386,7 @@ CONFIGURE_ARGS+=	--enable-real \
 
 .if (defined(WITH_SHOUT) || exists(${LOCALBASE}/lib/libshout.a)) && !defined(WITHOUT_SHOUT)
 LIB_DEPENDS+=	shout.5:${PORTSDIR}/audio/libshout2
-CONFIGURE_AGRS+=	--enable-shout
+CONFIGURE_ARGS+=	--enable-shout
 .endif
 
 .if (defined(WITH_THEORA) || exists(${LOCALBASE}/lib/libtheora.a)) && !defined(WITHOUT_THEORA)
@@ -433,7 +433,7 @@ CONFIGURE_ARGS+=--disable-galaktos
 .endif
 
 .if !defined(WITHOUT_SAMBA)
-LIB_DEPEND+=	smbclient.0:${PORTSDIR}/net/samba-libsmbclient
+LIB_DEPENDS+=	smbclient.0:${PORTSDIR}/net/samba-libsmbclient
 CONFIGURE_ARGS+=--enable-smb
 .else
 CONFIGURE_ARGS+=--disable-smb
@@ -479,7 +479,7 @@ CONFIGURE_ARGS+=--disable-sout
 USE_GNOME+=	librsvg2
 CONFIGURE_ARGS+=--enable-svg
 .else
-CONFIGURE_AGRS+=--disable-svg
+CONFIGURE_ARGS+=--disable-svg
 .endif
 
 .if (defined(WITH_SVGALIB) || exists(${LOCALBASE}/lib/lib/vga.a)) && !defined(WITHOUT_SVGALIB)
@@ -517,7 +517,7 @@ CONFIGURE_ARGS+=--disable-xosd
 .endif
 
 .if defined(DEBUG)
-CONFIGURE_AGRS+=--enable-debug
+CONFIGURE_ARGS+=--enable-debug
 .else
 CONFIGURE_ARGS+=--enable-release
 .endif

@@ -1,3 +1,4 @@
+
 # NOTES about VLC Knobs:
 # Below you will see a number of knobs, if it starts with WITHOUT_ it is
 # enabled by default, if it starts with WITH_ it is disabled by default

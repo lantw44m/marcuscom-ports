@@ -3,14 +3,14 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc/Makefile,v 1.1 2006/07/18 20:53:46 ahze Exp $
+#    $MCom$
 #
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
 
 PORTNAME=	vlc
 DISTVERSION=	0.8.5
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://download.videolan.org/pub/videolan/vlc/${PORTVERSION}/ \
 		http://ftp.snt.utwente.nl/pub/software/videolan/vlc/${PORTVERSION}/ \
@@ -39,7 +39,7 @@ USE_PERL5_BUILD=yes
 FAKEDIR=	${WRKDIR}/fake
 PLIST=		${WRKDIR}/plist
 
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${WRKSRC}/include ${CPPFLAGS} -I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
@@ -68,11 +68,11 @@ CPPFLAGS+=	-I${X11BASE}/include/wx-2.6/
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500035
-BROKEN= does not build on FreeBSD 4.x
+BROKEN=	Does not build on FreeBSD 4.x
 .endif
 
 .if ${PERL_LEVEL} < 500800
-BROKEN=	does not compile with perl ${PERL_VERSION}
+BROKEN=	Does not compile with perl ${PERL_VERSION}
 .endif
 
 .if exists(${LOCALBASE}/libdata/pkgconfig/libavcodec.pc) || !exists(${LOCALBASE}/lib/libavformat.a)
@@ -272,13 +272,13 @@ CONFIGURE_ARGS+=--enable-aa
 CONFIGURE_ARGS+=--disable-aa
 .endif
 
-.if (defined(WITH_DIRAC) || exists(${LOCALBASE}/lib/libdirac_decoder.a)) && !defined(WITHOUT_DIRAC)
-LIB_DEPENDS+=	dirac_encoder.0:${PORTSDIR}/multimedia/dirac
-CONFIGURE_ARGS+=--enable-dirac
-CPPFLAGS+=	-I${LOCALBASE}/include/dirac
-.else
+#.if (defined(WITH_DIRAC) || exists(${LOCALBASE}/lib/libdirac_decoder.a)) && !defined(WITHOUT_DIRAC)
+#LIB_DEPENDS+=	dirac_encoder.0:${PORTSDIR}/multimedia/dirac
+#CONFIGURE_ARGS+=--enable-dirac
+#CPPFLAGS+=	-I${LOCALBASE}/include/dirac
+#.else
 CONFIGURE_ARGS+=--disable-dirac
-.endif
+#.endif
 
 .if !defined(WITHOUT_X264)
 CONFIGURE_ARGS+=--enable-x264
@@ -377,7 +377,7 @@ CONFIGURE_ARGS+=	--enable-real \
 
 .if (defined(WITH_SHOUT) || exists(${LOCALBASE}/lib/libshout.a)) && !defined(WITHOUT_SHOUT)
 LIB_DEPENDS+=	shout.5:${PORTSDIR}/audio/libshout2
-CONFIGURE_AGRS+=	--enable-shout
+CONFIGURE_ARGS+=	--enable-shout
 .endif
 
 .if (defined(WITH_THEORA) || exists(${LOCALBASE}/lib/libtheora.a)) && !defined(WITHOUT_THEORA)
@@ -424,7 +424,7 @@ CONFIGURE_ARGS+=--disable-galaktos
 .endif
 
 .if !defined(WITHOUT_SAMBA)
-LIB_DEPEND+=	smbclient.0:${PORTSDIR}/net/samba-libsmbclient
+LIB_DEPENDS+=	smbclient.0:${PORTSDIR}/net/samba-libsmbclient
 CONFIGURE_ARGS+=--enable-smb
 .else
 CONFIGURE_ARGS+=--disable-smb
@@ -470,7 +470,7 @@ CONFIGURE_ARGS+=--disable-sout
 USE_GNOME+=	librsvg2
 CONFIGURE_ARGS+=--enable-svg
 .else
-CONFIGURE_AGRS+=--disable-svg
+CONFIGURE_ARGS+=--disable-svg
 .endif
 
 .if (defined(WITH_SVGALIB) || exists(${LOCALBASE}/lib/lib/vga.a)) && !defined(WITHOUT_SVGALIB)
@@ -508,7 +508,7 @@ CONFIGURE_ARGS+=--disable-xosd
 .endif
 
 .if defined(DEBUG)
-CONFIGURE_AGRS+=--enable-debug
+CONFIGURE_ARGS+=--enable-debug
 .else
 CONFIGURE_ARGS+=--enable-release
 .endif
