@@ -80,11 +80,13 @@ share/locale/lt/LC_MESSAGES/sound-juicer.mo
 share/locale/lv/LC_MESSAGES/sound-juicer.mo
 share/locale/mk/LC_MESSAGES/sound-juicer.mo
 share/locale/ml/LC_MESSAGES/sound-juicer.mo
+share/locale/mn/LC_MESSAGES/sound-juicer.mo
 share/locale/ms/LC_MESSAGES/sound-juicer.mo
 share/locale/nb/LC_MESSAGES/sound-juicer.mo
 share/locale/ne/LC_MESSAGES/sound-juicer.mo
 share/locale/nl/LC_MESSAGES/sound-juicer.mo
 share/locale/nn/LC_MESSAGES/sound-juicer.mo
+share/locale/or/LC_MESSAGES/sound-juicer.mo
 share/locale/pa/LC_MESSAGES/sound-juicer.mo
 share/locale/pl/LC_MESSAGES/sound-juicer.mo
 share/locale/pt/LC_MESSAGES/sound-juicer.mo
@@ -93,6 +95,7 @@ share/locale/ro/LC_MESSAGES/sound-juicer.mo
 share/locale/ru/LC_MESSAGES/sound-juicer.mo
 share/locale/rw/LC_MESSAGES/sound-juicer.mo
 share/locale/sk/LC_MESSAGES/sound-juicer.mo
+share/locale/sl/LC_MESSAGES/sound-juicer.mo
 share/locale/sq/LC_MESSAGES/sound-juicer.mo
 share/locale/sr/LC_MESSAGES/sound-juicer.mo
 share/locale/sr@Latn/LC_MESSAGES/sound-juicer.mo
@@ -107,10 +110,54 @@ share/locale/xh/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_CN/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_HK/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_TW/LC_MESSAGES/sound-juicer.mo
-@dirrmtry share/locale/br/LC_MESSAGES
-@dirrmtry share/locale/br
 @dirrmtry share/icons/hicolor/24x24/apps
 @dirrmtry share/icons/hicolor/24x24
+@dirrmtry share/locale/zh_TW/LC_MESSAGES
+@dirrmtry share/locale/zh_TW
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/zh_CN/LC_MESSAGES
+@dirrmtry share/locale/zh_CN
+@dirrmtry share/locale/xh/LC_MESSAGES
+@dirrmtry share/locale/xh
+@dirrmtry share/locale/uk/LC_MESSAGES
+@dirrmtry share/locale/uk
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
+@dirrmtry share/locale/sr/LC_MESSAGES
+@dirrmtry share/locale/sr
+@dirrmtry share/locale/sl/LC_MESSAGES
+@dirrmtry share/locale/sl
+@dirrmtry share/locale/sk/LC_MESSAGES
+@dirrmtry share/locale/sk
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/ro/LC_MESSAGES
+@dirrmtry share/locale/ro
+@dirrmtry share/locale/pt/LC_MESSAGES
+@dirrmtry share/locale/pt
+@dirrmtry share/locale/pl/LC_MESSAGES
+@dirrmtry share/locale/pl
+@dirrmtry share/locale/nn/LC_MESSAGES
+@dirrmtry share/locale/nn
+@dirrmtry share/locale/ne/LC_MESSAGES
+@dirrmtry share/locale/ne
+@dirrmtry share/locale/ko/LC_MESSAGES
+@dirrmtry share/locale/ko
+@dirrmtry share/locale/gl/LC_MESSAGES
+@dirrmtry share/locale/gl
+@dirrmtry share/locale/fi/LC_MESSAGES
+@dirrmtry share/locale/fi
+@dirrmtry share/locale/el/LC_MESSAGES
+@dirrmtry share/locale/el
+@dirrmtry share/locale/cs/LC_MESSAGES
+@dirrmtry share/locale/cs
+@dirrmtry share/locale/ca/LC_MESSAGES
+@dirrmtry share/locale/ca
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be/LC_MESSAGES
+@dirrmtry share/locale/be
 @dirrm share/gnome/sound-juicer
 @dirrm share/gnome/omf/sound-juicer
 @dirrm share/gnome/help/sound-juicer/uk/figures
