@@ -43,9 +43,45 @@ lib/glade3/modules/libgladegtk.la
 lib/glade3/modules/libgladegtk.so
 lib/libgladeui-1.la
 lib/libgladeui-1.so
-lib/libgladeui-1.so.2
+lib/libgladeui-1.so.3
 libdata/pkgconfig/glade-3.pc
 libdata/pkgconfig/libgladeui-1.0.pc
+share/doc/gladeui/GladeApp.html
+share/doc/gladeui/GladeClipboard.html
+share/doc/gladeui/GladeClipboardView.html
+share/doc/gladeui/GladeEditor.html
+share/doc/gladeui/GladeEditorProperty.html
+share/doc/gladeui/GladeFixed.html
+share/doc/gladeui/GladePalette.html
+share/doc/gladeui/GladePlaceholder.html
+share/doc/gladeui/GladeProject.html
+share/doc/gladeui/GladeProjectView.html
+share/doc/gladeui/GladeProperty.html
+share/doc/gladeui/GladeWidget.html
+share/doc/gladeui/catalog.html
+share/doc/gladeui/catalogintro.html
+share/doc/gladeui/children.html
+share/doc/gladeui/core.html
+share/doc/gladeui/dockables.html
+share/doc/gladeui/gladeui-GladeCommand.html
+share/doc/gladeui/gladeui-GladePropertyClass.html
+share/doc/gladeui/gladeui-GladeWidgetClass.html
+share/doc/gladeui/gladeui-glade-base-editor.html
+share/doc/gladeui/gladeui-glade-parameter.html
+share/doc/gladeui/gladeui-glade-signal-editor.html
+share/doc/gladeui/gladeui-glade-utils.html
+share/doc/gladeui/gladeui.devhelp
+share/doc/gladeui/home.png
+share/doc/gladeui/index.html
+share/doc/gladeui/index.sgml
+share/doc/gladeui/ix01.html
+share/doc/gladeui/left.png
+share/doc/gladeui/misc.html
+share/doc/gladeui/properties.html
+share/doc/gladeui/right.png
+share/doc/gladeui/style.css
+share/doc/gladeui/up.png
+share/doc/gladeui/widgetclasses.html
 share/gnome/applications/glade-3.desktop
 share/gnome/glade3/catalogs/bonobo.xml
 share/gnome/glade3/catalogs/bonobo.xml.in
@@ -53,8 +89,8 @@ share/gnome/glade3/catalogs/canvas.xml
 share/gnome/glade3/catalogs/canvas.xml.in
 share/gnome/glade3/catalogs/gnome.xml
 share/gnome/glade3/catalogs/gnome.xml.in
-share/gnome/glade3/catalogs/gtk+.xml.in
 share/gnome/glade3/catalogs/gtk+.xml
+share/gnome/glade3/catalogs/gtk+.xml.in
 share/gnome/glade3/pixmaps/16x16/aboutdialog.png
 share/gnome/glade3/pixmaps/16x16/accellabel.png
 share/gnome/glade3/pixmaps/16x16/alignment.png
@@ -269,6 +305,7 @@ share/gnome/glade3/pixmaps/devhelp.png
 share/gnome/glade3/pixmaps/plus.png
 share/gnome/glade3/pixmaps/selector.png
 share/icons/hicolor/48x48/apps/glade-3.png
+share/icons/hicolor/icon-theme.cache
 share/locale/az/LC_MESSAGES/glade3.mo
 share/locale/da/LC_MESSAGES/glade3.mo
 share/locale/en_CA/LC_MESSAGES/glade3.mo
@@ -289,12 +326,27 @@ share/locale/tr/LC_MESSAGES/glade3.mo
 share/locale/uk/LC_MESSAGES/glade3.mo
 share/locale/vi/LC_MESSAGES/glade3.mo
 share/locale/zh_CN/LC_MESSAGES/glade3.mo
+@dirrmtry share/locale/zh_CN/LC_MESSAGES
+@dirrmtry share/locale/zh_CN
+@dirrmtry share/locale/uk/LC_MESSAGES
+@dirrmtry share/locale/uk
+@dirrmtry share/locale/sk/LC_MESSAGES
+@dirrmtry share/locale/sk
+@dirrmtry share/locale/pt/LC_MESSAGES
+@dirrmtry share/locale/pt
+@dirrmtry share/locale/pl/LC_MESSAGES
+@dirrmtry share/locale/pl
+@dirrmtry share/locale/nn/LC_MESSAGES
+@dirrmtry share/locale/nn
 @dirrm share/gnome/glade3/pixmaps/22x22
 @dirrm share/gnome/glade3/pixmaps/16x16
 @dirrm share/gnome/glade3/pixmaps
 @dirrm share/gnome/glade3/catalogs
 @dirrm share/gnome/glade3
+@dirrm share/doc/gladeui
 @dirrm lib/glade3/modules
 @dirrm lib/glade3
 @dirrm include/libgladeui-1.0/libgladeui
 @dirrm include/libgladeui-1.0
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
