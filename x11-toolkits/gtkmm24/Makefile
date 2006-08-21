@@ -3,11 +3,11 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.17 2006/08/08 03:01:57 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.18 2006/08/21 05:15:15 ahze Exp $
 #
 
 PORTNAME=	gtkmm
-PORTVERSION=	2.9.10
+PORTVERSION=	2.10.0
 PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -29,7 +29,7 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 USE_GMAKE=	yes
 USE_GCC=	3.4
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack gtk20
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
