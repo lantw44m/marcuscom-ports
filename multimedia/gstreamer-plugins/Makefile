@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.96 2006/07/17 01:39:56 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.97 2006/08/01 22:38:06 ahze Exp $
 #
 
 PORTNAME=	gstreamer
@@ -35,10 +35,10 @@ BASE_DISTFILE=		${BASE_DISTNAME}${EXTRACT_SUFX}
 BAD_PORTVERSION=	0.10.3
 BAD_DISTNAME=		gst-plugins-bad-${BAD_PORTVERSION}
 BAD_DISTFILE=		${BAD_DISTNAME}${EXTRACT_SUFX}
-GOOD_PORTVERSION=	0.10.3
+GOOD_PORTVERSION=	0.10.4
 GOOD_DISTNAME=		gst-plugins-good-${GOOD_PORTVERSION}
 GOOD_DISTFILE=		${GOOD_DISTNAME}${EXTRACT_SUFX}
-UGLY_PORTVERSION=	0.10.3
+UGLY_PORTVERSION=	0.10.4
 UGLY_DISTNAME=		gst-plugins-ugly-${UGLY_PORTVERSION}
 UGLY_DISTFILE=		${UGLY_DISTNAME}${EXTRACT_SUFX}
 DIST?=		good
@@ -69,7 +69,7 @@ IGNORE=	many plugins don't build or even work on 4.x
 .if ${GST_PLUGIN} == "base"
 gst_base_DIST=	base
 NO_GSTREAMER_COMMON=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 MAN1=		gst-visualise-0.10.1
 PLIST_SUB+=	VERSION="${VERSION}" \
 		SHLIB_VERSION="${SHLIB_VERSION}"
