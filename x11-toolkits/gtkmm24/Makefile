@@ -3,12 +3,12 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.16 2006/07/24 22:24:26 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.17 2006/08/08 03:01:57 marcus Exp $
 #
 
 PORTNAME=	gtkmm
 PORTVERSION=	2.9.10
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -23,7 +23,7 @@ LATEST_LINK=	gtkmm24
 .if !defined(REFERENCE_PORT)
 
 LIB_DEPENDS=	glibmm-2.4.1:${PORTSDIR}/devel/glibmm \
-		cairomm-1.0.0:${PORTSDIR}/graphics/cairomm
+		cairomm-1.0.1:${PORTSDIR}/graphics/cairomm
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_GMAKE=	yes
