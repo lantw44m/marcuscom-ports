@@ -1,32 +1,31 @@
-# New ports collection makefile for:    gconfmm
+# New ports collection makefile for:    libgnomecanvasmm
 # Date created:         22 May 2003
 # Whom:                 Alexander Nedotsukov <bland@mail.ru>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconfmm26/Makefile,v 1.13 2006/07/21 20:46:55 mezz Exp $
+#   $MCom: ports/graphics/libgnomecanvasmm26/Makefile,v 1.12 2006/04/13 07:52:35 bland Exp $
 #
 
-PORTNAME=	gconfmm
+PORTNAME=	libgnomecanvasmm
 PORTVERSION=	2.16.0
-CATEGORIES=	devel gnome
+CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	bland@FreeBSD.org
-COMMENT=	C++ wrapper for gconf2 API library
+COMMENT=	C++ wrapper for libgnomecanvas library
 
-LIB_DEPENDS=	glibmm-2.4.1:${PORTSDIR}/devel/glibmm
-BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4 \
-		${LOCALBASE}/lib/libgtkmm-2.4.so.1:${PORTSDIR}/x11-toolkits/gtkmm24
+LIB_DEPENDS=	gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
+BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
-LATEST_LINK=	gconfmm26
+LATEST_LINK=	libgnomecanvasmm26
 
 USE_BZIP2=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GCC=	3.4
-USE_GNOME=	gnomehack gconf2
+USE_GNOME=	gnomehack libgnomecanvas
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static
