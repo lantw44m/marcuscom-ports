@@ -641,7 +641,12 @@ share/icons/hicolor/48x48/apps/gnome-robots.png
 share/icons/hicolor/48x48/apps/gnome-same-gnome.png
 share/icons/hicolor/48x48/apps/gnome-tali.png
 share/icons/hicolor/48x48/apps/gnome-tetravex.png
+share/icons/hicolor/scalable/apps/gnome-ataxx.svg
+share/icons/hicolor/scalable/apps/gnome-gnomine.svg
+share/icons/hicolor/scalable/apps/gnome-iagno.svg
+share/icons/hicolor/scalable/apps/gnome-nibbles.svg
 share/icons/hicolor/scalable/apps/gnome-robots.svg
+share/icons/hicolor/scalable/apps/gnome-tali.svg
 share/locale/am/LC_MESSAGES/gnome-games.mo
 share/locale/ar/LC_MESSAGES/gnome-games.mo
 share/locale/az/LC_MESSAGES/gnome-games.mo
@@ -688,6 +693,7 @@ share/locale/nb/LC_MESSAGES/gnome-games.mo
 share/locale/ne/LC_MESSAGES/gnome-games.mo
 share/locale/nl/LC_MESSAGES/gnome-games.mo
 share/locale/nn/LC_MESSAGES/gnome-games.mo
+share/locale/or/LC_MESSAGES/gnome-games.mo
 share/locale/pa/LC_MESSAGES/gnome-games.mo
 share/locale/pl/LC_MESSAGES/gnome-games.mo
 share/locale/pt/LC_MESSAGES/gnome-games.mo
