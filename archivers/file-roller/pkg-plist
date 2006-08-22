@@ -58,6 +58,12 @@ share/gnome/help/file-roller/ko/figures/file-roller_main_window.png
 share/gnome/help/file-roller/ko/figures/file-roller_rightarrow.png
 share/gnome/help/file-roller/ko/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/ko/file-roller.xml
+share/gnome/help/file-roller/nl/figures/file-roller_home.png
+share/gnome/help/file-roller/nl/figures/file-roller_leftarrow.png
+share/gnome/help/file-roller/nl/figures/file-roller_main_window.png
+share/gnome/help/file-roller/nl/figures/file-roller_rightarrow.png
+share/gnome/help/file-roller/nl/figures/file-roller_uparrow.png
+share/gnome/help/file-roller/nl/file-roller.xml
 share/gnome/help/file-roller/ru/figures/file-roller_home.png
 share/gnome/help/file-roller/ru/figures/file-roller_leftarrow.png
 share/gnome/help/file-roller/ru/figures/file-roller_main_window.png
@@ -102,6 +108,7 @@ share/gnome/omf/file-roller/file-roller-fr.omf
 share/gnome/omf/file-roller/file-roller-it.omf
 share/gnome/omf/file-roller/file-roller-ja.omf
 share/gnome/omf/file-roller/file-roller-ko.omf
+share/gnome/omf/file-roller/file-roller-nl.omf
 share/gnome/omf/file-roller/file-roller-ru.omf
 share/gnome/omf/file-roller/file-roller-sv.omf
 share/gnome/omf/file-roller/file-roller-uk.omf
@@ -218,6 +225,8 @@ share/locale/zh_TW/LC_MESSAGES/file-roller.mo
 @dirrm share/gnome/help/file-roller/sv
 @dirrm share/gnome/help/file-roller/ru/figures
 @dirrm share/gnome/help/file-roller/ru
+@dirrm share/gnome/help/file-roller/nl/figures
+@dirrm share/gnome/help/file-roller/nl
 @dirrm share/gnome/help/file-roller/ko/figures
 @dirrm share/gnome/help/file-roller/ko
 @dirrm share/gnome/help/file-roller/ja/figures
