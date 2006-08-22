@@ -3,12 +3,12 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.18 2006/08/21 05:15:15 ahze Exp $
+#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.19 2006/08/21 14:59:02 ahze Exp $
 #
 
 PORTNAME=	gtkmm
-PORTVERSION=	2.10.0
-PORTREVISION?=	1
+PORTVERSION=	2.10.1
+PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -44,6 +44,8 @@ PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/tests//' \
 		${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e 's|demo[$$][(]EXEEXT[)]|gtkmm-demo$$(EXEEXT)|g' \
+	    	${WRKSRC}/demos/gtk-demo/Makefile.in
 
 .include <bsd.port.mk>
 
