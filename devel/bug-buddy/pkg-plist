@@ -17,12 +17,14 @@ share/gnome/bug-buddy/ximian.png
 share/gnome/help/bug-buddy/C/bug-buddy.xml
 share/gnome/help/bug-buddy/C/legal.xml
 share/gnome/help/bug-buddy/es/bug-buddy.xml
+share/gnome/help/bug-buddy/fr/bug-buddy.xml
 share/gnome/help/bug-buddy/pa/bug-buddy.xml
 share/gnome/help/bug-buddy/sr/bug-buddy.xml
 share/gnome/help/bug-buddy/sv/bug-buddy.xml
 share/gnome/help/bug-buddy/uk/bug-buddy.xml
 share/gnome/omf/bug-buddy/bug-buddy-C.omf
 share/gnome/omf/bug-buddy/bug-buddy-es.omf
+share/gnome/omf/bug-buddy/bug-buddy-fr.omf
 share/gnome/omf/bug-buddy/bug-buddy-pa.omf
 share/gnome/omf/bug-buddy/bug-buddy-sr.omf
 share/gnome/omf/bug-buddy/bug-buddy-sv.omf
@@ -62,6 +64,8 @@ share/locale/id/LC_MESSAGES/bug-buddy.mo
 share/locale/is/LC_MESSAGES/bug-buddy.mo
 share/locale/it/LC_MESSAGES/bug-buddy.mo
 share/locale/ja/LC_MESSAGES/bug-buddy.mo
+share/locale/ka/LC_MESSAGES/bug-buddy.mo
+share/locale/ku/LC_MESSAGES/bug-buddy.mo
 share/locale/ko/LC_MESSAGES/bug-buddy.mo
 share/locale/ky/LC_MESSAGES/bug-buddy.mo
 share/locale/lt/LC_MESSAGES/bug-buddy.mo
@@ -119,6 +123,7 @@ share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
 @dirrm share/gnome/help/bug-buddy/sv
 @dirrm share/gnome/help/bug-buddy/sr
 @dirrm share/gnome/help/bug-buddy/pa
+@dirrm share/gnome/help/bug-buddy/fr
 @dirrm share/gnome/help/bug-buddy/es
 @dirrm share/gnome/help/bug-buddy/C
 @dirrm share/gnome/help/bug-buddy
