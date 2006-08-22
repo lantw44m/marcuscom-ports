@@ -1,8 +1,15 @@
 lib/gedit-2/plugins/charmap.gedit-plugin
+%%PYTHON%%lib/gedit-2/plugins/codecomment.gedit-plugin
+%%PYTHON%%lib/gedit-2/plugins/codecomment.py
+%%PYTHON%%lib/gedit-2/plugins/codecomment.pyc
+%%PYTHON%%lib/gedit-2/plugins/codecomment.pyo
 %%PYTHON%%lib/gedit-2/plugins/colorpicker.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/colorpicker.py
 %%PYTHON%%lib/gedit-2/plugins/colorpicker.pyc
 %%PYTHON%%lib/gedit-2/plugins/colorpicker.pyo
+%%PYTHON%%lib/gedit-2/plugins/gpdefs.py
+%%PYTHON%%lib/gedit-2/plugins/gpdefs.pyc
+%%PYTHON%%lib/gedit-2/plugins/gpdefs.pyo
 %%PYTHON%%lib/gedit-2/plugins/joinlines.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/joinlines.py
 %%PYTHON%%lib/gedit-2/plugins/joinlines.pyc
