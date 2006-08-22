@@ -137,7 +137,6 @@ libdata/pkgconfig/gedit-%%VERSION%%.pc
 %%DOCSDIR%%/gedit-gedit-metadata-manager.html
 %%DOCSDIR%%/gedit-gedit-prefs-manager-app.html
 %%DOCSDIR%%/gedit-gedit-prefs-manager.html
-%%DOCSDIR%%/gedit-gedit-recent.html
 %%DOCSDIR%%/gedit-gedit-utils.html
 %%DOCSDIR%%/gedit.devhelp
 %%DOCSDIR%%/gedit.devhelp2
