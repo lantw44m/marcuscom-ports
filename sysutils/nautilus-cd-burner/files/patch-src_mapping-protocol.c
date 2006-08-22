@@ -1,11 +1,11 @@
---- src/mapping-protocol.c.orig	Tue May 17 17:14:35 2005
-+++ src/mapping-protocol.c	Tue May 17 17:15:24 2005
-@@ -24,6 +24,8 @@
-  *          William Jon McCann <mccann@jhu.edu>
-  */
+--- src/mapping-protocol.c.orig	Sun Aug 20 08:47:20 2006
++++ src/mapping-protocol.c	Tue Aug 22 01:28:24 2006
+@@ -26,6 +26,8 @@
+ 
+ #include "config.h"
  
 +#include <sys/types.h>
 +#include <sys/time.h>
+ #include <stdio.h>
  #include <unistd.h>
  #include <string.h>
- #include <fcntl.h>
