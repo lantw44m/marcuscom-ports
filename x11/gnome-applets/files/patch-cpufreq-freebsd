@@ -63,49 +63,6 @@
                  NULL
          };
          static const gchar *const documenters[] = {
---- cpufreq/src/cpufreq-utils.c.orig	Sat Jun 17 14:02:11 2006
-+++ cpufreq/src/cpufreq-utils.c	Sat Jun 17 14:02:12 2006
-@@ -21,11 +21,32 @@
- 
- #include <gtk/gtkmessagedialog.h>
- #include <sys/types.h>
-+#ifdef __FreeBSD__
-+#include <sys/sysctl.h>
-+#endif /* __FreeBSD__ */
- #include <sys/stat.h>
- #include <unistd.h>
- 
- #include "cpufreq-utils.h"
- 
-+#ifdef __FreeBSD__
-+guint
-+cpufreq_utils_get_n_cpus (void)
-+{
-+	size_t len;
-+	static guint n_cpus = 0;
-+
-+	if (n_cpus > 0)
-+		return n_cpus;
-+
-+	len = sizeof (n_cpus);
-+	if (sysctlbyname ("hw.ncpu", &n_cpus, &len, NULL, 0) == -1) {
-+		return 1;
-+	}
-+
-+	return n_cpus;
-+}
-+#else
- guint
- cpufreq_utils_get_n_cpus (void)
- {
-@@ -68,6 +89,7 @@ cpufreq_utils_get_n_cpus (void)
- 	
- 	return 1;
- }
-+#endif /* __FreeBSD__ */
- 
- void
- cpufreq_utils_display_error (const gchar *message,
 --- cpufreq/src/Makefile.in.orig	Sat Jun 17 13:42:50 2006
 +++ cpufreq/src/Makefile.in	Sat Jun 17 14:03:45 2006
 @@ -62,7 +62,8 @@ am__cpufreq_applet_SOURCES_DIST = cpufre
@@ -425,3 +382,48 @@
  	   
  	   return monitor;
  }
+--- cpufreq/src/cpufreq-utils.c.orig	Sat Aug 12 21:26:50 2006
++++ cpufreq/src/cpufreq-utils.c	Tue Aug 22 11:07:32 2006
+@@ -22,6 +22,9 @@
+ #include <glib.h>
+ #include <gtk/gtkmessagedialog.h>
+ #include <sys/types.h>
++#ifdef __FreeBSD__
++#include <sys/sysctl.h>
++#endif
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <unistd.h>
+@@ -30,6 +33,24 @@
+ 
+ #include "cpufreq-utils.h"
+ 
++#ifdef __FreeBSD__
++guint
++cpufreq_utils_get_n_cpus (void)
++{
++	size_t len;
++	static guint n_cpus = 0;
++
++	if (n_cpus > 0)
++		return n_cpus;
++
++	len = sizeof (n_cpus);
++	if (sysctlbyname ("hw.ncpu", &n_cpus, &len, NULL, 0) == -1) {
++		return 1;
++	}
++
++	return n_cpus;
++}
++#else
+ guint
+ cpufreq_utils_get_n_cpus (void)
+ {
+@@ -72,6 +93,7 @@ cpufreq_utils_get_n_cpus (void)
+ 	
+ 	return 1;
+ }
++#endif /* __FreeBSD__ */
+ 
+ void
+ cpufreq_utils_display_error (const gchar *message,

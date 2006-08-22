@@ -95,9 +95,6 @@ share/gnome/gnome-2.0/ui/GNOME_MultiloadApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_Panel_TrashApplet.xml
 share/gnome/gnome-2.0/ui/GNOME_StickyNotesApplet.xml
 %%PYTHON%%share/gnome/gnome-2.0/ui/Invest_Applet.xml
-%%PYTHON%%share/gnome/gnome-applets/art/invest-16.png
-%%PYTHON%%share/gnome/gnome-applets/art/invest-button.png
-%%PYTHON%%share/gnome/gnome-applets/art/invest.svg
 share/gnome/gnome-applets/geyes/Bizarre/Bizarre-eye.png
 share/gnome/gnome-applets/geyes/Bizarre/Bizarre-pupil.png
 share/gnome/gnome-applets/geyes/Bizarre/config
@@ -125,6 +122,9 @@ share/gnome/gnome-applets/glade/stickynotes.glade
 share/gnome/gnome-applets/glade/trashapplet.glade
 share/gnome/gnome-applets/gweather/Locations.xml
 share/gnome/gnome-applets/gweather/locations.dtd
+%%PYTHON%%share/gnome/gnome-applets/invest-applet/invest-16.png
+%%PYTHON%%share/gnome/gnome-applets/invest-applet/invest-button.png
+%%PYTHON%%share/gnome/gnome-applets/invest-applet/invest.svg
 share/gnome/help/accessx-status/C/accessx-status.xml
 share/gnome/help/accessx-status/C/figures/accessx-status-applet.png
 share/gnome/help/accessx-status/C/figures/accessx-status-disabled.png
@@ -186,6 +186,18 @@ share/gnome/help/accessx-status/it/figures/accessx_sticky-keys.png
 share/gnome/help/accessx-status/it/figures/accessx_sticky-meta-key.png
 share/gnome/help/accessx-status/it/figures/accessx_sticky-shift-key.png
 share/gnome/help/accessx-status/it/figures/accessx_sticky-windows-key.png
+share/gnome/help/accessx-status/nl/accessx-status.xml
+share/gnome/help/accessx-status/nl/figures/accessx-status-applet.png
+share/gnome/help/accessx-status/nl/figures/accessx-status-disabled.png
+share/gnome/help/accessx-status/nl/figures/accessx_bounce-keys.png
+share/gnome/help/accessx-status/nl/figures/accessx_mouse-keys.png
+share/gnome/help/accessx-status/nl/figures/accessx_slow-keys.png
+share/gnome/help/accessx-status/nl/figures/accessx_sticky-altGr-key.png
+share/gnome/help/accessx-status/nl/figures/accessx_sticky-ctrl-key.png
+share/gnome/help/accessx-status/nl/figures/accessx_sticky-keys.png
+share/gnome/help/accessx-status/nl/figures/accessx_sticky-meta-key.png
+share/gnome/help/accessx-status/nl/figures/accessx_sticky-shift-key.png
+share/gnome/help/accessx-status/nl/figures/accessx_sticky-windows-key.png
 share/gnome/help/accessx-status/sv/accessx-status.xml
 share/gnome/help/accessx-status/sv/figures/accessx-status-applet.png
 share/gnome/help/accessx-status/sv/figures/accessx-status-disabled.png
@@ -641,6 +653,7 @@ share/gnome/omf/accessx-status/accessx-status-bg.omf
 share/gnome/omf/accessx-status/accessx-status-es.omf
 share/gnome/omf/accessx-status/accessx-status-fr.omf
 share/gnome/omf/accessx-status/accessx-status-it.omf
+share/gnome/omf/accessx-status/accessx-status-nl.omf
 share/gnome/omf/accessx-status/accessx-status-sv.omf
 share/gnome/omf/accessx-status/accessx-status-uk.omf
 %%BATTERY%%share/gnome/omf/battstat/battstat-C.omf
@@ -763,15 +776,12 @@ share/gnome/pixmaps/accessx-status-applet/sticky-super-none.png
 %%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-25.png
 %%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-50.png
 %%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-75.png
-%%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-applet.png
 %%CPUFREQ%%share/gnome/pixmaps/cpufreq-applet/cpufreq-na.png
 %%PYTHON%%share/gnome/pixmaps/invest-big.png
 share/gnome/pixmaps/stickynotes/close.png
 share/gnome/pixmaps/stickynotes/locked.png
 share/gnome/pixmaps/stickynotes/resize_se.png
 share/gnome/pixmaps/stickynotes/resize_sw.png
-share/gnome/pixmaps/stickynotes/stickynotes.png
-share/gnome/pixmaps/stickynotes/stickynotes_prelight.png
 share/gnome/pixmaps/stickynotes/unlocked.png
 share/gnome/xmodmap/base.xml
 share/gnome/xmodmap/xmodmap.am
@@ -859,14 +869,31 @@ share/gnome/xmodmap/xmodmap.us.old
 share/gnome/xmodmap/xmodmap.us101A_x86
 share/gnome/xmodmap/xmodmap.us_intl
 share/gnome/xmodmap/xmodmap.yu
+share/icons/hicolor/16x16/apps/gnome-cpu-frequency-applet.png
+share/icons/hicolor/16x16/apps/gnome-eyes-applet.png
+share/icons/hicolor/16x16/apps/gnome-modem-monitor-applet.png
+share/icons/hicolor/16x16/apps/gnome-sticky-notes-applet.png
+share/icons/hicolor/22x22/apps/gnome-cpu-frequency-applet.png
+share/icons/hicolor/22x22/apps/gnome-eyes-applet.png
+share/icons/hicolor/22x22/apps/gnome-modem-monitor-applet.png
+share/icons/hicolor/22x22/apps/gnome-sticky-notes-applet.png
+share/icons/hicolor/24x24/apps/gnome-cpu-frequency-applet.png
+share/icons/hicolor/24x24/apps/gnome-eyes-applet.png
+share/icons/hicolor/24x24/apps/gnome-modem-monitor-applet.png
+share/icons/hicolor/24x24/apps/gnome-sticky-notes-applet.png
+share/icons/hicolor/32x32/apps/gnome-cpu-frequency-applet.png
+share/icons/hicolor/32x32/apps/gnome-eyes-applet.png
+share/icons/hicolor/32x32/apps/gnome-modem-monitor-applet.png
+share/icons/hicolor/32x32/apps/gnome-sticky-notes-applet.png
 share/icons/hicolor/48x48/apps/ax-applet.png
 share/icons/hicolor/48x48/apps/charpick.png
-share/icons/hicolor/48x48/apps/gnome-cpu.png
-share/icons/hicolor/48x48/apps/gnome-eyes.png
 %%COMMANDER%%share/icons/hicolor/48x48/apps/gnome-mini-commander.png
-share/icons/hicolor/48x48/apps/gnome-modem.png
 share/icons/hicolor/48x48/apps/gswitchit-applet.png
 share/icons/hicolor/48x48/apps/gswitchit-properties-capplet.png
+share/icons/hicolor/svgxsvg/apps/gnome-cpu-frequency-applet
+share/icons/hicolor/svgxsvg/apps/gnome-eyes-applet
+share/icons/hicolor/svgxsvg/apps/gnome-modem-monitor-applet
+share/icons/hicolor/svgxsvg/apps/gnome-sticky-notes-applet
 share/locale/am/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-applets-2.0.mo
@@ -885,6 +912,23 @@ share/locale/el/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/en_CA/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/es/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_AR/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_CL/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_CO/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_CR/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_DO/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_EC/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_ES/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_GT/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_HN/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_MX/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_NI/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_PA/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_PE/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_PR/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_SV/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_UY/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/es_VE/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/et/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/eu/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/fa/LC_MESSAGES/gnome-applets-2.0.mo
@@ -897,6 +941,7 @@ share/locale/he/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hi/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hr/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/hu/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/hy/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/id/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/is/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-applets-2.0.mo
@@ -904,8 +949,10 @@ share/locale/ja/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ka/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/ky/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/mg/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ml/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/mn/LC_MESSAGES/gnome-applets-2.0.mo
@@ -950,12 +997,50 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/ky/LC_MESSAGES
+@dirrmtry share/locale/ky
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/es_VE/LC_MESSAGES
+@dirrmtry share/locale/es_VE
+@dirrmtry share/locale/es_UY/LC_MESSAGES
+@dirrmtry share/locale/es_UY
+@dirrmtry share/locale/es_SV/LC_MESSAGES
+@dirrmtry share/locale/es_SV
+@dirrmtry share/locale/es_PR/LC_MESSAGES
+@dirrmtry share/locale/es_PR
+@dirrmtry share/locale/es_PE/LC_MESSAGES
+@dirrmtry share/locale/es_PE
+@dirrmtry share/locale/es_PA/LC_MESSAGES
+@dirrmtry share/locale/es_PA
+@dirrmtry share/locale/es_NI/LC_MESSAGES
+@dirrmtry share/locale/es_NI
+@dirrmtry share/locale/es_MX/LC_MESSAGES
+@dirrmtry share/locale/es_MX
+@dirrmtry share/locale/es_HN/LC_MESSAGES
+@dirrmtry share/locale/es_HN
+@dirrmtry share/locale/es_GT/LC_MESSAGES
+@dirrmtry share/locale/es_GT
+@dirrmtry share/locale/es_ES/LC_MESSAGES
+@dirrmtry share/locale/es_ES
+@dirrmtry share/locale/es_EC/LC_MESSAGES
+@dirrmtry share/locale/es_EC
+@dirrmtry share/locale/es_DO/LC_MESSAGES
+@dirrmtry share/locale/es_DO
+@dirrmtry share/locale/es_CR/LC_MESSAGES
+@dirrmtry share/locale/es_CR
+@dirrmtry share/locale/es_CO/LC_MESSAGES
+@dirrmtry share/locale/es_CO
+@dirrmtry share/locale/es_CL/LC_MESSAGES
+@dirrmtry share/locale/es_CL
+@dirrmtry share/locale/es_AR/LC_MESSAGES
+@dirrmtry share/locale/es_AR
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/icons/hicolor/svgxsvg/apps
+@dirrmtry share/icons/hicolor/svgxsvg
 @dirrmtry share/icons/hicolor/48x48/apps
 @dirrmtry share/icons/hicolor/48x48
 @dirrmtry share/icons/hicolor
@@ -1147,6 +1232,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/accessx-status/uk
 @dirrm share/gnome/help/accessx-status/sv/figures
 @dirrm share/gnome/help/accessx-status/sv
+@dirrm share/gnome/help/accessx-status/nl/figures
+@dirrm share/gnome/help/accessx-status/nl
 @dirrm share/gnome/help/accessx-status/it/figures
 @dirrm share/gnome/help/accessx-status/it
 @dirrm share/gnome/help/accessx-status/fr/figures
@@ -1158,6 +1245,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/accessx-status/C/figures
 @dirrm share/gnome/help/accessx-status/C
 @dirrm share/gnome/help/accessx-status
+@dirrm share/gnome/gnome-applets/invest-applet
 @dirrm share/gnome/gnome-applets/gweather
 @dirrm share/gnome/gnome-applets/glade
 @dirrm share/gnome/gnome-applets/geyes/Horrid
@@ -1166,7 +1254,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/gnome-applets/geyes/Bloodshot
 @dirrm share/gnome/gnome-applets/geyes/Bizarre
 @dirrm share/gnome/gnome-applets/geyes
-@dirrm share/gnome/gnome-applets/art
 @dirrm share/gnome/gnome-applets
 %%PYTHON%%@dirrm %%PYTHON_SITELIBDIR%%/invest
 @dirrm include/libgweather
