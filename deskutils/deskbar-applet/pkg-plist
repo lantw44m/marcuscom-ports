@@ -205,14 +205,12 @@ lib/deskbar-applet/handlers/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/ui/window/__init__.pyo
 libdata/bonobo/servers/Deskbar_Applet.server
 libdata/pkgconfig/deskbar-applet.pc
-share/gnome/applications/deskbar-applet.desktop
 share/gnome/deskbar-applet/Deskbar_Applet.xml
 share/gnome/deskbar-applet/art/delicious.png
 share/gnome/deskbar-applet/art/deskbar-applet-panel-h.png
 share/gnome/deskbar-applet/art/deskbar-applet-panel-h.svg
 share/gnome/deskbar-applet/art/deskbar-applet-panel-v.png
 share/gnome/deskbar-applet/art/deskbar-applet-panel-v.svg
-share/gnome/deskbar-applet/art/deskbar-applet-small.png
 share/gnome/deskbar-applet/art/epiphany-history.png
 share/gnome/deskbar-applet/art/folder-bookmark.png
 share/gnome/deskbar-applet/art/generic.png
@@ -223,6 +221,9 @@ share/gnome/deskbar-applet/art/yahoo.png
 share/gnome/deskbar-applet/mozilla-search.glade
 share/gnome/deskbar-applet/prefs-dialog.glade
 share/gnome/deskbar-applet/smart-bookmarks.glade
+share/icons/hicolor/16x16/apps/deskbar-applet.png
+share/icons/hicolor/22x22/apps/deskbar-applet.png
+share/icons/hicolor/32x32/apps/deskbar-applet.png
 share/icons/hicolor/48x48/apps/deskbar-applet.png
 share/icons/hicolor/scalable/apps/deskbar-applet.svg
 share/locale/be/LC_MESSAGES/deskbar-applet.mo
@@ -258,6 +259,8 @@ share/locale/lv/LC_MESSAGES/deskbar-applet.mo
 share/locale/mg/LC_MESSAGES/deskbar-applet.mo
 share/locale/mk/LC_MESSAGES/deskbar-applet.mo
 share/locale/ml/LC_MESSAGES/deskbar-applet.mo
+share/locale/mn/LC_MESSAGES/deskbar-applet.mo
+share/locale/mr/LC_MESSAGES/deskbar-applet.mo
 share/locale/nb/LC_MESSAGES/deskbar-applet.mo
 share/locale/ne/LC_MESSAGES/deskbar-applet.mo
 share/locale/nl/LC_MESSAGES/deskbar-applet.mo
@@ -278,6 +281,8 @@ share/locale/vi/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_CN/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
