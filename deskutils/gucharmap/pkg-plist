@@ -72,7 +72,6 @@ share/gnome/omf/gucharmap/gucharmap-sv.omf
 share/gnome/omf/gucharmap/gucharmap-zh_CN.omf
 share/gnome/omf/gucharmap/gucharmap-zh_TW.omf
 share/icons/hicolor/48x48/apps/gucharmap.png
-share/icons/hicolor/icon-theme.cache
 share/locale/am/LC_MESSAGES/gucharmap.mo
 share/locale/ar/LC_MESSAGES/gucharmap.mo
 share/locale/az/LC_MESSAGES/gucharmap.mo
