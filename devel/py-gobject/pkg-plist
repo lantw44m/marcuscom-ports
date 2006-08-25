@@ -15,7 +15,7 @@ include/pygtk-2.0/pygobject.h
 %%PYTHON_SITELIBDIR%%/pygtk.pyc
 %%PYTHON_SITELIBDIR%%/pygtk.pyo
 libdata/pkgconfig/pygobject-2.0.pc
-share/gtk-doc/html/pygobject/style.css
+share/doc/pygobject/style.css
 share/pygobject/xsl/common.xsl
 share/pygobject/xsl/devhelp.xsl
 share/pygobject/xsl/fixxref.py
@@ -25,5 +25,7 @@ share/pygobject/xsl/pdf.xsl
 share/pygobject/xsl/ref-html-style.xsl
 @dirrm share/pygobject/xsl
 @dirrm share/pygobject
-@dirrm share/gtk-doc/html/pygobject
+@dirrm share/doc/pygobject
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/gobject
+@dirrmtry %%PYTHON_SITELIBDIR%%/gtk-2.0
+@dirrmtry include/pygtk-2.0
