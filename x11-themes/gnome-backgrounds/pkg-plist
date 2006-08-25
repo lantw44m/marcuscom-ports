@@ -95,6 +95,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-backgrounds.mo
 @dirrmtry share/locale/hy
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/pixmaps/backgrounds/gnome/translucent
 @dirrm share/gnome/pixmaps/backgrounds/gnome/tiles
 @dirrm share/gnome/pixmaps/backgrounds/gnome/nature
