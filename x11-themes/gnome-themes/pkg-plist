@@ -93,6 +93,7 @@ share/icons/HighContrast-SVG/scalable/actions/format-text-underline.svg
 share/icons/HighContrast-SVG/scalable/actions/forward.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-lockscreen.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-logout.svg
+share/icons/HighContrast-SVG/scalable/actions/gnome-run.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-searchtool.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-stock-mail-fwd.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-stock-mail-new.svg
@@ -282,6 +283,7 @@ share/icons/HighContrast-SVG/scalable/actions/stock_refresh.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_right.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_save-as.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_save.svg
+share/icons/HighContrast-SVG/scalable/actions/stock_select-all.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_search-and-replace.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_search.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_spam.svg
