@@ -4739,6 +4739,7 @@ share/icons/gnome/scalable/stock/generic/stock_person.svg
 @dirrmtry share/icons/gnome/48x48
 @dirrmtry share/icons/gnome/32x32/status
 @dirrmtry share/icons/gnome/32x32/places
+@dirrmtry share/icons/gnome/32x32/mimetypes
 @dirrmtry share/icons/gnome/32x32/emblems
 @dirrmtry share/icons/gnome/32x32/devices
 @dirrmtry share/icons/gnome/32x32/categories
