@@ -200,7 +200,7 @@ share/gnome/omf/gnome-system-log/gnome-system-log-uk.omf
 share/gnome/pixmaps/gsearchtool/thumbnail_frame.png
 share/icons/hicolor/48x48/apps/baobab.png
 share/icons/hicolor/48x48/apps/gnome-dictionary.png
-share/icons/hicolor/scalable/gnome-dictionary.svg
+share/icons/hicolor/scalable/apps/gnome-dictionary.svg
 share/locale/am/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-utils-2.0.mo
