@@ -836,10 +836,12 @@ share/locale/zh_TW/LC_MESSAGES/gok.mo
 @dirrm share/gnome/gok/pt
 @dirrm share/gnome/gok/pl
 @dirrm share/gnome/gok/pa
+@dirrm share/gnome/gok/or
 @dirrm share/gnome/gok/nl
 @dirrm share/gnome/gok/ne
 @dirrm share/gnome/gok/nb
 @dirrm share/gnome/gok/ms
+@dirrm share/gnome/gok/mr
 @dirrm share/gnome/gok/mn
 @dirrm share/gnome/gok/ml
 @dirrm share/gnome/gok/mk
