@@ -3,11 +3,11 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/comix/Makefile,v 1.1 2006/08/20 00:41:35 mezz Exp $
 #
 
 PORTNAME=	comix
-PORTVERSION=	3.4
+PORTVERSION=	3.5.1
 PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
