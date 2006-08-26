@@ -1015,14 +1015,10 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrmtry share/locale/es_PA
 @dirrmtry share/locale/es_NI/LC_MESSAGES
 @dirrmtry share/locale/es_NI
-@dirrmtry share/locale/es_MX/LC_MESSAGES
-@dirrmtry share/locale/es_MX
 @dirrmtry share/locale/es_HN/LC_MESSAGES
 @dirrmtry share/locale/es_HN
 @dirrmtry share/locale/es_GT/LC_MESSAGES
 @dirrmtry share/locale/es_GT
-@dirrmtry share/locale/es_ES/LC_MESSAGES
-@dirrmtry share/locale/es_ES
 @dirrmtry share/locale/es_EC/LC_MESSAGES
 @dirrmtry share/locale/es_EC
 @dirrmtry share/locale/es_DO/LC_MESSAGES
