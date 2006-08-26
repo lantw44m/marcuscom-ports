@@ -15,6 +15,8 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	A GNOME 2 desktop weblog aggregator written in Python
 
+BROKEN=	Does not work with the newer GTK/GNOME python bindings
+
 USE_GMAKE=	yes
 USE_XLIB=	yes
 USE_GNOME=	gnomehier libglade2 pygnome2 pygnomeextras
