@@ -224,6 +224,7 @@ share/locale/zh_TW/LC_MESSAGES/totem.mo
 @dirrm share/gnome/help/totem/C/figures
 @dirrm share/gnome/help/totem/C
 @dirrm share/gnome/help/totem
+@dirrmtry lib/browser_plugins
 @dirrm include/totem/1/plparser
 @dirrm include/totem/1
 @dirrm include/totem
