@@ -119,6 +119,7 @@ share/locale/ro/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/ru/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/rw/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/sk/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/sl/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/sq/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/sr/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/sr@Latn/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
@@ -134,6 +135,8 @@ share/locale/zh_HK/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/sl/LC_MESSAGES
+@dirrmtry share/locale/sl
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
