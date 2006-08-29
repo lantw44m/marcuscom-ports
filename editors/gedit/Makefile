@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.43 2006/08/22 04:33:58 marcus Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.44 2006/08/27 18:05:29 marcus Exp $
 #
 
 PORTNAME=	gedit
@@ -43,7 +43,7 @@ WITH_GNOME=	yes
 
 .include <bsd.port.pre.mk>
 
-.if ${HAVE_GNOME:Mpygnomedesktop}!="" && ${ARCH}!="sparc64"
+.if ${HAVE_GNOME:Mpygnomedesktop}!=""
 USE_PYTHON=	yes
 .include "${PORTSDIR}/Mk/bsd.python.mk"
 USE_GNOME+=	pygnomedesktop
