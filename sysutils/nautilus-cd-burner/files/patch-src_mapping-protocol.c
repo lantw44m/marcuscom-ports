@@ -1,5 +1,5 @@
 --- src/mapping-protocol.c.orig	Sun Aug 20 08:47:20 2006
-+++ src/mapping-protocol.c	Tue Aug 29 16:39:11 2006
++++ src/mapping-protocol.c	Tue Aug 29 22:06:18 2006
 @@ -26,6 +26,8 @@
  
  #include "config.h"
@@ -9,15 +9,16 @@
  #include <stdio.h>
  #include <unistd.h>
  #include <string.h>
-@@ -86,6 +88,7 @@ static gboolean handle_write            
- #ifdef DEBUG_ENABLE
+@@ -36,6 +38,8 @@
  
- static FILE *debug_out = NULL;
+ G_LOCK_DEFINE_STATIC (channel_lock);
+ 
 +static gboolean at_eof = FALSE;
++
+ #define MINIMUM_MESSAGE_SIZE 16
  
- static void
- debug_init (void)
-@@ -1189,6 +1192,9 @@ mapping_protocol_channel_fill_read_buffe
+ struct MappingProtocolChannel {
+@@ -1189,6 +1193,9 @@ mapping_protocol_channel_fill_read_buffe
  
  	status = g_io_channel_read_chars (channel->iochannel, data, count, &length, NULL);
  
@@ -27,7 +28,7 @@
  	if (status != G_IO_STATUS_NORMAL) {
  		return;
  	}
-@@ -1340,7 +1346,7 @@ handle_read (GIOChannel             *sou
+@@ -1340,7 +1347,7 @@ handle_read (GIOChannel             *sou
  		mapping_protocol_channel_do_iteration (channel);
  	}
  
