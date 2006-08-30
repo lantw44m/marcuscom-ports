@@ -48,9 +48,6 @@ SERVER_PATCHES=	${PORTSDIR}/x11-servers/xorg-server/files/patch-Xserver-Imakefil
 		${PORTSDIR}/x11-servers/xorg-server/files/patch-Xserver-Xext-xvmc.c \
 		${PORTSDIR}/x11-servers/xorg-server/files/patch-Xserver-os-xprintf.c \
 		${PORTSDIR}/x11-servers/xorg-server/files/patch-font-bitmap-pcfread.c \
-		${PORTSDIR}/x11-servers/xorg-server/files/patch-font-FreeType-ftfuncs.c \
-		${PORTSDIR}/x11-servers/xorg-server/files/patch-font-FreeType-ftfuncs.h \
-		${PORTSDIR}/x11-servers/xorg-server/files/patch-font-FreeType-ftsystem.c \
 		${PORTSDIR}/x11-servers/xorg-server/files/patch-mitri.c \
 		${PORTSDIR}/x11-servers/xorg-server/files/patch-servermd.h \
 		${PORTSDIR}/x11-servers/xorg-server/files/patch-xf86sym.c
