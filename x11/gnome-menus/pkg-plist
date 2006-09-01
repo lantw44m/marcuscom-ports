@@ -1,5 +1,5 @@
 bin/gnome-menu-spec-test
-etc/xdg/menus/applications.menu
+etc/xdg/menus/gnome.applications.menu
 etc/xdg/menus/preferences.menu
 etc/xdg/menus/settings.menu
 include/gnome-menus/gmenu-tree.h
@@ -129,7 +129,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-menus.mo
 @dirrmtry share/locale/bn_IN
 @dirrm share/gnome/desktop-directories
 @dirrm include/gnome-menus
-@dirrm etc/xdg/menus
-@dirrm etc/xdg
+@dirrmtry etc/xdg/menus
+@dirrmtry etc/xdg
 @dirrmtry %%PYTHON_SITELIBDIR%%
 @dirrmtry %%PYTHON_LIBDIR%%
