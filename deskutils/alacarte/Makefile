@@ -3,11 +3,11 @@
 # Whom:					FreeBSD GNOME Team
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/alacarte/Makefile,v 1.5 2006/07/28 21:17:42 marcus Exp $
+#    $MCom: ports/deskutils/alacarte/Makefile,v 1.6 2006/07/29 17:47:44 marcus Exp $
 
 PORTNAME=	alacarte
 PORTVERSION=	0.9.90
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -28,6 +28,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		GMSGFMT="${LOCALBASE}/bin/msgfmt"
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|' \
+		${WRKSRC}/Alacarte/MenuEditor.py
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
 	    ${WRKSRC}/Alacarte/DialogHandler.py \
 	    ${WRKSRC}/Alacarte/util.py
