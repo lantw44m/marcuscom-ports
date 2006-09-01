@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-menus/Makefile,v 1.35 2006/08/08 01:28:34 ahze Exp $
+#   $MCom: ports/x11/gnome-menus/Makefile,v 1.36 2006/09/01 15:20:29 ahze Exp $
 #
 
 PORTNAME=	gnome-menus
@@ -37,7 +37,7 @@ USE_FAM=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu||' \
 		${WRKSRC}/layout/Makefile.in
-	@${REINPLACE_CMD} -e 's|applications.menu|gnome.applications.menu|' \
+	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|' \
 		${WRKSRC}/util/test-menu-spec.c
 	@${REINPLACE_CMD} -e 's|/usr/share/gnome|${LOCALBASE}/share/gnome|g' \
 		${WRKSRC}/layout/applications.menu \
@@ -50,7 +50,9 @@ post-patch:
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/gnome/desktop-directories
-	@${INSTALL_DATA} ${WRKSRC}/layout/applications.menu ${PREFIX}/etc/xdg/menus/gnome.applications.menu
-	@${INSTALL_DATA} ${WRKSRC}/KDE.directory ${PREFIX}/share/gnome/desktop-directories
+	@${INSTALL_DATA} ${WRKSRC}/layout/applications.menu \
+		${PREFIX}/etc/xdg/menus/gnome-applications.menu
+	@${INSTALL_DATA} ${WRKSRC}/KDE.directory \
+		${PREFIX}/share/gnome/desktop-directories
 
 .include <bsd.port.post.mk>

@@ -1,5 +1,5 @@
 bin/gnome-menu-spec-test
-etc/xdg/menus/gnome.applications.menu
+etc/xdg/menus/gnome-applications.menu
 etc/xdg/menus/preferences.menu
 etc/xdg/menus/settings.menu
 include/gnome-menus/gmenu-tree.h

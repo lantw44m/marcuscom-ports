@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.133 2006/08/22 05:25:49 marcus Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.134 2006/09/01 15:21:20 ahze Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -63,7 +63,7 @@ CONFIGURE_ARGS+=--disable-eds
 post-patch:
 	@${FIND} ${WRKSRC} -type f | \
 		${XARGS} -n 10 ${REINPLACE_CMD} -e \
-		's|"applications.menu"|"gnome.applications.menu"|'
+		's|"applications.menu"|"gnome-applications.menu"|'
 .if ( ${OSVERSION} > 600000 && ${OSVERSION} < 600006 ) || \
 	( ${OSVERSION} < 503101 )
 .for po in da.po it.po zh_CN.po zh_TW.po
