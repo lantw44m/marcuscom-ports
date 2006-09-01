@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/deskutils/gnome-menu-editor/Makefile,v 1.10 2006/07/22 20:03:51 mezz Exp $
 #
 
 PORTNAME=	gnome-menu-editor
 PORTVERSION=	0.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 MASTER_SITES=	http://manny.cluecoder.org/packages/gnome-menu-editor/
 
@@ -24,6 +24,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|' \
+		${WRKSRC}/src/gme-util.c
 # Make .desktop file valid to desktop-file-validate
 	@${REINPLACE_CMD} -e 's|OnlyShowIn=GNOME|OnlyShowIn=GNOME;|' \
 		${WRKSRC}/data/gnome-menu-editor.desktop.in
