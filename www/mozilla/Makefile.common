@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.22 2006/07/18 15:03:40 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.23 2006/07/27 17:56:34 marcus Exp $
 
 # This file contains some reusable components for mozilla ports. It's of
 # use primarily to apps from the mozilla project itself (such as Firefox,
@@ -181,10 +181,10 @@ MOZ_MK_OPTIONS+=	XP_UNIX=1		\
 #		PERL=$$PERL5
 
 .if defined(WITH_OPTIMIZED_CFLAGS)
-CFLAGS:=	-O2 -fno-strict-aliasing ${CFLAGS:N-O*}
+CFLAGS:=	${CFLAGS} -O2 -fno-strict-aliasing ${EXTRA_CFLAGS}
 WITH_OPTIMIZE?=	-O2
 .else
-CFLAGS:=	${CFLAGS:N-O*:N-m*} -O
+CFLAGS:=	${CFLAGS} -O ${EXTRA_CFLAGS}
 WITH_OPTIMIZE?=	-O
 .endif
 
