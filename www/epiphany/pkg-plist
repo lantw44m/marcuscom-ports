@@ -123,6 +123,11 @@ share/gnome/help/epiphany/fi/figures/ephy-addressbar-smartbookmark-screenshot.pn
 share/gnome/help/epiphany/fi/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/fi/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/fi/figures/ephy-screenshot.png
+share/gnome/help/epiphany/fr/epiphany.xml
+share/gnome/help/epiphany/fr/figures/ephy-addressbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/fr/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/fr/figures/ephy-history-window-screenshot.png
+share/gnome/help/epiphany/fr/figures/ephy-screenshot.png
 share/gnome/help/epiphany/ja/epiphany.xml
 share/gnome/help/epiphany/ja/figures/ephy-addressbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/ja/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
@@ -154,6 +159,7 @@ share/gnome/omf/epiphany/epiphany-el.omf
 share/gnome/omf/epiphany/epiphany-es.omf
 share/gnome/omf/epiphany/epiphany-eu.omf
 share/gnome/omf/epiphany/epiphany-fi.omf
+share/gnome/omf/epiphany/epiphany-fr.omf
 share/gnome/omf/epiphany/epiphany-ja.omf
 share/gnome/omf/epiphany/epiphany-nl.omf
 share/gnome/omf/epiphany/epiphany-ru.omf
@@ -247,6 +253,8 @@ share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 @dirrm share/gnome/help/epiphany/nl
 @dirrm share/gnome/help/epiphany/ja/figures
 @dirrm share/gnome/help/epiphany/ja
+@dirrm share/gnome/help/epiphany/fr/figures
+@dirrm share/gnome/help/epiphany/fr
 @dirrm share/gnome/help/epiphany/fi/figures
 @dirrm share/gnome/help/epiphany/fi
 @dirrm share/gnome/help/epiphany/eu/figures
