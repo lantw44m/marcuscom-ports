@@ -119,11 +119,15 @@ share/locale/sr/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/sr@Latn/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/sv/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/th/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
+share/locale/tr/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/uk/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/vi/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/wa/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
+share/locale/zh_HK/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrm share/gnome/omf/epiphany-extensions
