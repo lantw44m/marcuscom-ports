@@ -148,8 +148,6 @@ share/gnome/dasher/colour.xml
 share/gnome/dasher/controllabels.dtd
 share/gnome/dasher/controllabels.xml
 share/gnome/dasher/dasher.glade
-share/gnome/dasher/dashermaemo.glade
-share/gnome/dasher/dashermaemofullscreen.glade
 share/gnome/dasher/training_albanian_SQ.txt
 share/gnome/dasher/training_basque_EU.txt
 share/gnome/dasher/training_bengali_BD.txt
