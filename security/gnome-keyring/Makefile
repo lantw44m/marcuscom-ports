@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	0.5.2
+PORTVERSION=	0.6.0
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -21,7 +21,7 @@ USE_GNOME=	gnomehack gtk20
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-html-dir=${GNOME_HTML_DIR}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
