@@ -14,21 +14,6 @@ share/gnome/bug-buddy/bugzilla/ximian/products
 share/gnome/bug-buddy/gdb-cmd
 share/gnome/bug-buddy/gnome.png
 share/gnome/bug-buddy/ximian.png
-share/gnome/help/bug-buddy/C/bug-buddy.xml
-share/gnome/help/bug-buddy/C/legal.xml
-share/gnome/help/bug-buddy/es/bug-buddy.xml
-share/gnome/help/bug-buddy/fr/bug-buddy.xml
-share/gnome/help/bug-buddy/pa/bug-buddy.xml
-share/gnome/help/bug-buddy/sr/bug-buddy.xml
-share/gnome/help/bug-buddy/sv/bug-buddy.xml
-share/gnome/help/bug-buddy/uk/bug-buddy.xml
-share/gnome/omf/bug-buddy/bug-buddy-C.omf
-share/gnome/omf/bug-buddy/bug-buddy-es.omf
-share/gnome/omf/bug-buddy/bug-buddy-fr.omf
-share/gnome/omf/bug-buddy/bug-buddy-pa.omf
-share/gnome/omf/bug-buddy/bug-buddy-sr.omf
-share/gnome/omf/bug-buddy/bug-buddy-sv.omf
-share/gnome/omf/bug-buddy/bug-buddy-uk.omf
 share/icons/hicolor/48x48/apps/bug-buddy.png
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
@@ -65,8 +50,8 @@ share/locale/is/LC_MESSAGES/bug-buddy.mo
 share/locale/it/LC_MESSAGES/bug-buddy.mo
 share/locale/ja/LC_MESSAGES/bug-buddy.mo
 share/locale/ka/LC_MESSAGES/bug-buddy.mo
-share/locale/ku/LC_MESSAGES/bug-buddy.mo
 share/locale/ko/LC_MESSAGES/bug-buddy.mo
+share/locale/ku/LC_MESSAGES/bug-buddy.mo
 share/locale/ky/LC_MESSAGES/bug-buddy.mo
 share/locale/lt/LC_MESSAGES/bug-buddy.mo
 share/locale/lv/LC_MESSAGES/bug-buddy.mo
@@ -80,7 +65,6 @@ share/locale/nb/LC_MESSAGES/bug-buddy.mo
 share/locale/ne/LC_MESSAGES/bug-buddy.mo
 share/locale/nl/LC_MESSAGES/bug-buddy.mo
 share/locale/nn/LC_MESSAGES/bug-buddy.mo
-share/locale/no/LC_MESSAGES/bug-buddy.mo
 share/locale/or/LC_MESSAGES/bug-buddy.mo
 share/locale/pa/LC_MESSAGES/bug-buddy.mo
 share/locale/pl/LC_MESSAGES/bug-buddy.mo
@@ -118,15 +102,6 @@ share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
 @dirrmtry share/locale/ky
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrm share/gnome/omf/bug-buddy
-@dirrm share/gnome/help/bug-buddy/uk
-@dirrm share/gnome/help/bug-buddy/sv
-@dirrm share/gnome/help/bug-buddy/sr
-@dirrm share/gnome/help/bug-buddy/pa
-@dirrm share/gnome/help/bug-buddy/fr
-@dirrm share/gnome/help/bug-buddy/es
-@dirrm share/gnome/help/bug-buddy/C
-@dirrm share/gnome/help/bug-buddy
 @dirrm share/gnome/bug-buddy/bugzilla/ximian
 @dirrm share/gnome/bug-buddy/bugzilla/gnome
 @dirrm share/gnome/bug-buddy/bugzilla
