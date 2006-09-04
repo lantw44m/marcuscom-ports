@@ -30,7 +30,6 @@ share/gnome/help/gcalctool/fr/figures/gcalctool_financial_window.png
 share/gnome/help/gcalctool/fr/figures/gcalctool_menu_symbol.png
 share/gnome/help/gcalctool/fr/figures/gcalctool_scientific_window.png
 share/gnome/help/gcalctool/fr/gcalctool.xml
-share/gnome/help/gcalctool/fr/legal.xml
 share/gnome/help/gcalctool/it/figures/gcalctool_basic_window.png
 share/gnome/help/gcalctool/it/figures/gcalctool_financial_window.png
 share/gnome/help/gcalctool/it/figures/gcalctool_menu_symbol.png
@@ -119,6 +118,7 @@ share/locale/id/LC_MESSAGES/gcalctool.mo
 share/locale/it/LC_MESSAGES/gcalctool.mo
 share/locale/ja/LC_MESSAGES/gcalctool.mo
 share/locale/ko/LC_MESSAGES/gcalctool.mo
+share/locale/ku/LC_MESSAGES/gcalctool.mo
 share/locale/lt/LC_MESSAGES/gcalctool.mo
 share/locale/lv/LC_MESSAGES/gcalctool.mo
 share/locale/mk/LC_MESSAGES/gcalctool.mo
@@ -156,6 +156,8 @@ share/locale/zh_HK/LC_MESSAGES/gcalctool.mo
 share/locale/zh_TW/LC_MESSAGES/gcalctool.mo
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ku/LC_MESSAGES
+@dirrmtry share/locale/ku
 @dirrmtry share/locale/en_US/LC_MESSAGES
 @dirrmtry share/locale/en_US
 @dirrmtry share/locale/dz/LC_MESSAGES
