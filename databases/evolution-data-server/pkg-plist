@@ -294,10 +294,6 @@ lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.a
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.la
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.so
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.urls
-lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.a
-lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.la
-lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.so
-lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.urls
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamellocal.a
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamellocal.la
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamellocal.so
@@ -950,6 +946,7 @@ share/locale/nb/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/ne/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/nl/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/nn/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
+share/locale/or/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/pa/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/pl/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/pt/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
@@ -963,6 +960,7 @@ share/locale/sq/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/sr/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/sr@Latn/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/sv/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
+share/locale/ta/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/th/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/tr/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/uk/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
