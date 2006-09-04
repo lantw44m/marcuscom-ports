@@ -5,7 +5,7 @@
 # and will be autodetected to enable
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile.inc,v 1.3 2006/05/22 01:50:17 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile.inc,v 1.4 2006/06/21 22:50:36 ahze Exp $
 #
 # If you define for example WITH_FAAD and WITHOUT_FAAD
 # the WITHOUT_ will always over ride the WITH_.
@@ -61,9 +61,15 @@
 #   ** NOT DEFINED if PACKAGE_BUILDING is defined **
 #
 # WITHOUT_A52=yes
-#  liba52 audio Support
+#  liba52 audio support
 #
-# WITH_REALAUDIO
+# WITHOUT_MODDEMUX
+#  ModPlug mod-like music support
+#
+# WITHOUT_MPCDEMUX
+#  Musepack audio compression support
+#
+# WITHOUT_REALAUDIO
 #  Real audio(R) support
 #
 # WITH_SHOUT
