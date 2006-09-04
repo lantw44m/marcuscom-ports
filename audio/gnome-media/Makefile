@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnomemedia2/Makefile,v 1.95 2006/04/13 07:52:30 bland Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.97 2006/07/20 20:58:19 ahze Exp $
 #
 
 PORTNAME=	gnome-media
-PORTVERSION=	2.14.2
-PORTREVISION=	1
+PORTVERSION=	2.16.0
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-media/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -22,11 +21,12 @@ USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
 		gail nautiluscdburner
 USE_GSTREAMER=	esound gconf good
+CONFIGURE_ARGS=	--enable-ipv6
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
