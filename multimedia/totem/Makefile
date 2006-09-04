@@ -79,12 +79,31 @@ PLIST_SUB+=	GSTREAMER="@comment "
 LIB_DEPENDS+=	dvdnav.4:${PORTSDIR}/multimedia/libdvdnav
 .endif
 
+.if defined(WITH_DVD_DEVICE)
+DEFAULT_DVD_DEVICE=${WITH_DVD_DEVICE}
+.else
+.if ${OSVERSION} < 500000
+DEFAULT_DVD_DEVICE=/dev/acd0c
+.else
+DEFAULT_DVD_DEVICE=/dev/acd0
+.endif
+.endif
+
+pre-everything::
+	@${ECHO_MSG} "===> The default DVD device is ${DEFAULT_DVD_DEVICE}"
+	@${ECHO_MSG} "===> Define WITH_DVD_DEVICE if you want to change the default"
+	@${ECHO_MSG} "===> For example, 'make WITH_DVD_DEVICE=\"/dev/somedevice\"'"
+
 post-patch:
 	@${CP} -f ${FILESDIR}/pkg-message.in ${PKGMESSAGE}
 	@${REINPLACE_CMD} -e ' s|@MOZILLA_PLUGINDIR@|${PREFIX}/lib/browser_plugins|; \
 		s|mozilla/plugins|browser_plugins|' \
 		${WRKSRC}/browser-plugin/Makefile.in \
 		${WRKSRC}/browser-plugin/idl/Makefile.in
+.if defined(WITH_GSTREAMER)
+	@${REINPLACE_CMD} -e 's|/dev/dvd|${DEFAULT_DVD_DEVICE}|' \
+		${WRKSRC}/src/backend/bacon-video-widget-gst-0.10.c
+.endif
 
 post-install:
 	@-update-desktop-database
