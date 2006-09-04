@@ -30,6 +30,7 @@ share/gnome/desktop-directories/Settings.directory
 share/gnome/desktop-directories/System-Settings.directory
 share/gnome/desktop-directories/System-Tools.directory
 share/locale/ar/LC_MESSAGES/gnome-menus.mo
+share/locale/be/LC_MESSAGES/gnome-menus.mo
 share/locale/bg/LC_MESSAGES/gnome-menus.mo
 share/locale/bn/LC_MESSAGES/gnome-menus.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-menus.mo
@@ -68,6 +69,7 @@ share/locale/lv/LC_MESSAGES/gnome-menus.mo
 share/locale/mg/LC_MESSAGES/gnome-menus.mo
 share/locale/mk/LC_MESSAGES/gnome-menus.mo
 share/locale/ml/LC_MESSAGES/gnome-menus.mo
+share/locale/mn/LC_MESSAGES/gnome-menus.mo
 share/locale/mr/LC_MESSAGES/gnome-menus.mo
 share/locale/ms/LC_MESSAGES/gnome-menus.mo
 share/locale/nb/LC_MESSAGES/gnome-menus.mo
