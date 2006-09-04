@@ -18,6 +18,8 @@ share/gnome/help/evince/el/evince.xml
 share/gnome/help/evince/el/figures/evince_start_window.png
 share/gnome/help/evince/es/evince.xml
 share/gnome/help/evince/es/figures/evince_start_window.png
+share/gnome/help/evince/fr/evince.xml
+share/gnome/help/evince/fr/figures/evince_start_window.png
 share/gnome/help/evince/it/evince.xml
 share/gnome/help/evince/it/figures/evince_start_window.png
 share/gnome/help/evince/nl/evince.xml
@@ -32,6 +34,7 @@ share/gnome/omf/evince/evince-C.omf
 share/gnome/omf/evince/evince-bg.omf
 share/gnome/omf/evince/evince-el.omf
 share/gnome/omf/evince/evince-es.omf
+share/gnome/omf/evince/evince-fr.omf
 share/gnome/omf/evince/evince-it.omf
 share/gnome/omf/evince/evince-nl.omf
 share/gnome/omf/evince/evince-ru.omf
@@ -41,66 +44,69 @@ share/icons/hicolor/16x16/apps/evince-16.png
 share/icons/hicolor/22x22/apps/evince-22.png
 share/icons/hicolor/48x48/apps/evince.png
 share/icons/hicolor/scalable/apps/evince.svg
-share/locale/be/LC_MESSAGES/Evince.mo
-share/locale/bg/LC_MESSAGES/Evince.mo
-share/locale/bn/LC_MESSAGES/Evince.mo
-share/locale/bn_IN/LC_MESSAGES/Evince.mo
-share/locale/br/LC_MESSAGES/Evince.mo
-share/locale/ca/LC_MESSAGES/Evince.mo
-share/locale/cs/LC_MESSAGES/Evince.mo
-share/locale/cy/LC_MESSAGES/Evince.mo
-share/locale/da/LC_MESSAGES/Evince.mo
-share/locale/de/LC_MESSAGES/Evince.mo
-share/locale/dz/LC_MESSAGES/Evince.mo
-share/locale/el/LC_MESSAGES/Evince.mo
-share/locale/en_CA/LC_MESSAGES/Evince.mo
-share/locale/en_GB/LC_MESSAGES/Evince.mo
-share/locale/es/LC_MESSAGES/Evince.mo
-share/locale/et/LC_MESSAGES/Evince.mo
-share/locale/eu/LC_MESSAGES/Evince.mo
-share/locale/fa/LC_MESSAGES/Evince.mo
-share/locale/fi/LC_MESSAGES/Evince.mo
-share/locale/fr/LC_MESSAGES/Evince.mo
-share/locale/gl/LC_MESSAGES/Evince.mo
-share/locale/gu/LC_MESSAGES/Evince.mo
-share/locale/he/LC_MESSAGES/Evince.mo
-share/locale/hi/LC_MESSAGES/Evince.mo
-share/locale/hu/LC_MESSAGES/Evince.mo
-share/locale/id/LC_MESSAGES/Evince.mo
-share/locale/it/LC_MESSAGES/Evince.mo
-share/locale/ja/LC_MESSAGES/Evince.mo
-share/locale/ka/LC_MESSAGES/Evince.mo
-share/locale/ko/LC_MESSAGES/Evince.mo
-share/locale/ku/LC_MESSAGES/Evince.mo
-share/locale/lt/LC_MESSAGES/Evince.mo
-share/locale/lv/LC_MESSAGES/Evince.mo
-share/locale/mk/LC_MESSAGES/Evince.mo
-share/locale/nb/LC_MESSAGES/Evince.mo
-share/locale/ne/LC_MESSAGES/Evince.mo
-share/locale/nl/LC_MESSAGES/Evince.mo
-share/locale/nn/LC_MESSAGES/Evince.mo
-share/locale/pa/LC_MESSAGES/Evince.mo
-share/locale/pl/LC_MESSAGES/Evince.mo
-share/locale/pt/LC_MESSAGES/Evince.mo
-share/locale/pt_BR/LC_MESSAGES/Evince.mo
-share/locale/ro/LC_MESSAGES/Evince.mo
-share/locale/ru/LC_MESSAGES/Evince.mo
-share/locale/rw/LC_MESSAGES/Evince.mo
-share/locale/sl/LC_MESSAGES/Evince.mo
-share/locale/sk/LC_MESSAGES/Evince.mo
-share/locale/sq/LC_MESSAGES/Evince.mo
-share/locale/sr/LC_MESSAGES/Evince.mo
-share/locale/sr@Latn/LC_MESSAGES/Evince.mo
-share/locale/sv/LC_MESSAGES/Evince.mo
-share/locale/th/LC_MESSAGES/Evince.mo
-share/locale/ta/LC_MESSAGES/Evince.mo
-share/locale/tr/LC_MESSAGES/Evince.mo
-share/locale/uk/LC_MESSAGES/Evince.mo
-share/locale/vi/LC_MESSAGES/Evince.mo
-share/locale/wa/LC_MESSAGES/Evince.mo
-share/locale/zh_CN/LC_MESSAGES/Evince.mo
-share/locale/zh_HK/LC_MESSAGES/Evince.mo
-share/locale/zh_TW/LC_MESSAGES/Evince.mo
+share/locale/be/LC_MESSAGES/evince.mo
+share/locale/bg/LC_MESSAGES/evince.mo
+share/locale/bn/LC_MESSAGES/evince.mo
+share/locale/bn_IN/LC_MESSAGES/evince.mo
+share/locale/br/LC_MESSAGES/evince.mo
+share/locale/ca/LC_MESSAGES/evince.mo
+share/locale/cs/LC_MESSAGES/evince.mo
+share/locale/cy/LC_MESSAGES/evince.mo
+share/locale/da/LC_MESSAGES/evince.mo
+share/locale/de/LC_MESSAGES/evince.mo
+share/locale/dz/LC_MESSAGES/evince.mo
+share/locale/el/LC_MESSAGES/evince.mo
+share/locale/en_CA/LC_MESSAGES/evince.mo
+share/locale/en_GB/LC_MESSAGES/evince.mo
+share/locale/es/LC_MESSAGES/evince.mo
+share/locale/et/LC_MESSAGES/evince.mo
+share/locale/eu/LC_MESSAGES/evince.mo
+share/locale/fa/LC_MESSAGES/evince.mo
+share/locale/fi/LC_MESSAGES/evince.mo
+share/locale/fr/LC_MESSAGES/evince.mo
+share/locale/gl/LC_MESSAGES/evince.mo
+share/locale/gu/LC_MESSAGES/evince.mo
+share/locale/he/LC_MESSAGES/evince.mo
+share/locale/hi/LC_MESSAGES/evince.mo
+share/locale/hu/LC_MESSAGES/evince.mo
+share/locale/id/LC_MESSAGES/evince.mo
+share/locale/it/LC_MESSAGES/evince.mo
+share/locale/ja/LC_MESSAGES/evince.mo
+share/locale/ka/LC_MESSAGES/evince.mo
+share/locale/ko/LC_MESSAGES/evince.mo
+share/locale/ku/LC_MESSAGES/evince.mo
+share/locale/lt/LC_MESSAGES/evince.mo
+share/locale/lv/LC_MESSAGES/evince.mo
+share/locale/ml/LC_MESSAGES/evince.mo
+share/locale/mk/LC_MESSAGES/evince.mo
+share/locale/mr/LC_MESSAGES/evince.mo
+share/locale/nb/LC_MESSAGES/evince.mo
+share/locale/ne/LC_MESSAGES/evince.mo
+share/locale/nl/LC_MESSAGES/evince.mo
+share/locale/nn/LC_MESSAGES/evince.mo
+share/locale/or/LC_MESSAGES/evince.mo
+share/locale/pa/LC_MESSAGES/evince.mo
+share/locale/pl/LC_MESSAGES/evince.mo
+share/locale/pt/LC_MESSAGES/evince.mo
+share/locale/pt_BR/LC_MESSAGES/evince.mo
+share/locale/ro/LC_MESSAGES/evince.mo
+share/locale/ru/LC_MESSAGES/evince.mo
+share/locale/rw/LC_MESSAGES/evince.mo
+share/locale/sl/LC_MESSAGES/evince.mo
+share/locale/sk/LC_MESSAGES/evince.mo
+share/locale/sq/LC_MESSAGES/evince.mo
+share/locale/sr/LC_MESSAGES/evince.mo
+share/locale/sr@Latn/LC_MESSAGES/evince.mo
+share/locale/sv/LC_MESSAGES/evince.mo
+share/locale/th/LC_MESSAGES/evince.mo
+share/locale/ta/LC_MESSAGES/evince.mo
+share/locale/tr/LC_MESSAGES/evince.mo
+share/locale/uk/LC_MESSAGES/evince.mo
+share/locale/vi/LC_MESSAGES/evince.mo
+share/locale/wa/LC_MESSAGES/evince.mo
+share/locale/zh_CN/LC_MESSAGES/evince.mo
+share/locale/zh_HK/LC_MESSAGES/evince.mo
+share/locale/zh_TW/LC_MESSAGES/evince.mo
 @dirrmtry share/locale/sl/LC_MESSAGES
 @dirrmtry share/locale/sl
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
@@ -116,6 +122,8 @@ share/locale/zh_TW/LC_MESSAGES/Evince.mo
 @dirrm share/gnome/help/evince/nl
 @dirrm share/gnome/help/evince/it/figures
 @dirrm share/gnome/help/evince/it
+@dirrm share/gnome/help/evince/fr/figures
+@dirrm share/gnome/help/evince/fr
 @dirrm share/gnome/help/evince/es/figures
 @dirrm share/gnome/help/evince/es
 @dirrm share/gnome/help/evince/el/figures
