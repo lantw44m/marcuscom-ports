@@ -118,6 +118,7 @@ share/locale/cs/LC_MESSAGES/metacity.mo
 share/locale/cy/LC_MESSAGES/metacity.mo
 share/locale/da/LC_MESSAGES/metacity.mo
 share/locale/de/LC_MESSAGES/metacity.mo
+share/locale/dz/LC_MESSAGES/metacity.mo
 share/locale/el/LC_MESSAGES/metacity.mo
 share/locale/en_CA/LC_MESSAGES/metacity.mo
 share/locale/en_GB/LC_MESSAGES/metacity.mo
@@ -148,6 +149,7 @@ share/locale/mg/LC_MESSAGES/metacity.mo
 share/locale/mk/LC_MESSAGES/metacity.mo
 share/locale/ml/LC_MESSAGES/metacity.mo
 share/locale/mn/LC_MESSAGES/metacity.mo
+share/locale/mr/LC_MESSAGES/metacity.mo
 share/locale/ms/LC_MESSAGES/metacity.mo
 share/locale/nb/LC_MESSAGES/metacity.mo
 share/locale/ne/LC_MESSAGES/metacity.mo
@@ -178,6 +180,8 @@ share/locale/xh/LC_MESSAGES/metacity.mo
 share/locale/zh_CN/LC_MESSAGES/metacity.mo
 share/locale/zh_HK/LC_MESSAGES/metacity.mo
 share/locale/zh_TW/LC_MESSAGES/metacity.mo
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/dz/LC_MESSAGES
