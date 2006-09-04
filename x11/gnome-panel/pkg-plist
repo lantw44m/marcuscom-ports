@@ -281,6 +281,16 @@ share/icons/hicolor/22x22/apps/gnome-panel-window-list.png
 share/icons/hicolor/22x22/apps/gnome-panel-window-menu.png
 share/icons/hicolor/22x22/apps/gnome-panel-workspace-switcher.png
 share/icons/hicolor/22x22/apps/gnome-panel.png
+share/icons/hicolor/24x24/apps/gnome-panel-clock.png
+share/icons/hicolor/24x24/apps/gnome-panel-drawer.png
+share/icons/hicolor/24x24/apps/gnome-panel-fish.png
+share/icons/hicolor/24x24/apps/gnome-panel-force-quit.png
+share/icons/hicolor/24x24/apps/gnome-panel-notification-area.png
+share/icons/hicolor/24x24/apps/gnome-panel-separator.png
+share/icons/hicolor/24x24/apps/gnome-panel-window-list.png
+share/icons/hicolor/24x24/apps/gnome-panel-window-menu.png
+share/icons/hicolor/24x24/apps/gnome-panel-workspace-switcher.png
+share/icons/hicolor/24x24/apps/gnome-panel.png
 share/icons/hicolor/32x32/apps/gnome-panel-clock.png
 share/icons/hicolor/32x32/apps/gnome-panel-drawer.png
 share/icons/hicolor/32x32/apps/gnome-panel-fish.png

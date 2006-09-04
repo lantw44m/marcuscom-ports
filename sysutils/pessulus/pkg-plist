@@ -78,13 +78,17 @@ share/locale/lt/LC_MESSAGES/pessulus.mo
 share/locale/lv/LC_MESSAGES/pessulus.mo
 share/locale/mk/LC_MESSAGES/pessulus.mo
 share/locale/ml/LC_MESSAGES/pessulus.mo
+share/locale/mn/LC_MESSAGES/pessulus.mo
 share/locale/mr/LC_MESSAGES/pessulus.mo
 share/locale/nb/LC_MESSAGES/pessulus.mo
 share/locale/ne/LC_MESSAGES/pessulus.mo
 share/locale/nl/LC_MESSAGES/pessulus.mo
+share/locale/or/LC_MESSAGES/pessulus.mo
 share/locale/pa/LC_MESSAGES/pessulus.mo
+share/locale/pl/LC_MESSAGES/pessulus.mo
 share/locale/pt/LC_MESSAGES/pessulus.mo
 share/locale/pt_BR/LC_MESSAGES/pessulus.mo
+share/locale/ru/LC_MESSAGES/pessulus.mo
 share/locale/sk/LC_MESSAGES/pessulus.mo
 share/locale/sl/LC_MESSAGES/pessulus.mo
 share/locale/sq/LC_MESSAGES/pessulus.mo
@@ -93,6 +97,7 @@ share/locale/sr@Latn/LC_MESSAGES/pessulus.mo
 share/locale/sv/LC_MESSAGES/pessulus.mo
 share/locale/ta/LC_MESSAGES/pessulus.mo
 share/locale/th/LC_MESSAGES/pessulus.mo
+share/locale/tr/LC_MESSAGES/pessulus.mo
 share/locale/uk/LC_MESSAGES/pessulus.mo
 share/locale/vi/LC_MESSAGES/pessulus.mo
 share/locale/zh_CN/LC_MESSAGES/pessulus.mo
