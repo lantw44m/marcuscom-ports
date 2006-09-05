@@ -397,6 +397,7 @@ share/gtk-2.0/demo/printing.c
 share/gtk-2.0/demo/rotated_text.c
 share/gtk-2.0/demo/sizegroup.c
 share/gtk-2.0/demo/stock_browser.c
+share/gtk-2.0/demo/textscroll.c
 share/gtk-2.0/demo/textview.c
 share/gtk-2.0/demo/tree_store.c
 share/gtk-2.0/demo/ui_manager.c
@@ -404,6 +405,8 @@ share/locale/af/LC_MESSAGES/gtk20-properties.mo
 share/locale/af/LC_MESSAGES/gtk20.mo
 share/locale/am/LC_MESSAGES/gtk20-properties.mo
 share/locale/am/LC_MESSAGES/gtk20.mo
+share/locale/ang/LC_MESSAGES/gtk20-properties.mo
+share/locale/ang/LC_MESSAGES/gtk20.mo
 share/locale/ar/LC_MESSAGES/gtk20-properties.mo
 share/locale/ar/LC_MESSAGES/gtk20.mo
 share/locale/az/LC_MESSAGES/gtk20-properties.mo
@@ -432,6 +435,8 @@ share/locale/da/LC_MESSAGES/gtk20-properties.mo
 share/locale/da/LC_MESSAGES/gtk20.mo
 share/locale/de/LC_MESSAGES/gtk20-properties.mo
 share/locale/de/LC_MESSAGES/gtk20.mo
+share/locale/dz/LC_MESSAGES/gtk20-properties.mo
+share/locale/dz/LC_MESSAGES/gtk20.mo
 share/locale/el/LC_MESSAGES/gtk20-properties.mo
 share/locale/el/LC_MESSAGES/gtk20.mo
 share/locale/en_CA/LC_MESSAGES/gtk20-properties.mo
@@ -630,10 +635,14 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrmtry share/locale/ia
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/az_IR/LC_MESSAGES
 @dirrmtry share/locale/az_IR
+@dirrmtry share/locale/ang/LC_MESSAGES
+@dirrmtry share/locale/ang
 @dirrmtry lib/gtk-2.0/modules
 @dirrmtry lib/gtk-2.0/%%GTK_VERSION%%/printbackends
 @dirrmtry lib/gtk-2.0/%%GTK_VERSION%%/loaders
