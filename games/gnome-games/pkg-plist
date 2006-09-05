@@ -688,6 +688,7 @@ share/locale/lv/LC_MESSAGES/gnome-games.mo
 share/locale/mk/LC_MESSAGES/gnome-games.mo
 share/locale/ml/LC_MESSAGES/gnome-games.mo
 share/locale/mn/LC_MESSAGES/gnome-games.mo
+share/locale/mr/LC_MESSAGES/gnome-games.mo
 share/locale/ms/LC_MESSAGES/gnome-games.mo
 share/locale/nb/LC_MESSAGES/gnome-games.mo
 share/locale/ne/LC_MESSAGES/gnome-games.mo
@@ -723,6 +724,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
