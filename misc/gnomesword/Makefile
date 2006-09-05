@@ -20,6 +20,8 @@ LIB_DEPENDS=	sword.4:${PORTSDIR}/misc/sword
 RUN_DEPENDS=	${LOCALBASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnome-spell
 
 BROKEN=		Configure fails
+DEPRECATED=	${BROKEN}
+EXPIRATION_DATE=2006-12-01
 
 USE_XLIB=	yes
 INSTALLS_OMF=	yes

@@ -21,19 +21,6 @@ RUN_DEPENDS=		${LOCALBASE}/lib/${MOZILLA}/components/libwidget_gtk2.so:${PORTSDI
 MOZILLA=		mozilla
 HEADERS_SUFX=
 
-.if !defined(WITH_MOZILLA)
-MOZILLA=		mozilla
-HEADERS_SUFX=
-.else
-.if ${WITH_MOZILLA}=="mozilla-devel" || ${WITH_MOZILLA}=="mozilla-devel-gtk2"
-MOZILLA=		mozilla-devel
-HEADERS_SUFX=		-devel
-.else
-MOZILLA=		mozilla
-HEADERS_SUFX=
-.endif
-.endif
-
 USE_XLIB=		yes
 USE_GNOME=		gnomeprefix libgnomeui libgnomeprint
 GNU_CONFIGURE=	yes
@@ -42,14 +29,8 @@ CONFIGURE_ARGS=		--with-plugin-install-dir="${PREFIX}/lib/browser_plugins" \
 			--with-mozilla-include-dir="${LOCALBASE}/include/mozilla${HEADERS_SUFX}"
 
 BROKEN=	"Does not build with new Mozilla"
-
-pre-everything::
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} " By default mozilla-bonobo uses www/mozilla for html rendering, but you can"
-	@${ECHO_MSG} " change this by defining WITH_MOZILLA to one of the following values:"
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "  mozilla-devel "
-	@${ECHO_MSG} ""
+DEPRECATED=	${BROKEN}
+EXPIRATION_DATE=2006-12-01
 
 post-patch:
 	@${REINPLACE_CMD} -e \

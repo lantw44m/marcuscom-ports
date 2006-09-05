@@ -25,6 +25,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mozilla-plugin${HEADERS_SUFX}.pc:${P
 .endif
 
 BROKEN=		Does not compile
+DEPRECATED=	${BROKEN}
+EXPIRATION_DATE=2006-12-01
 
 USE_SDL=	sdl
 USE_GNOME=	gnomehack gtk20 libartlgpl2

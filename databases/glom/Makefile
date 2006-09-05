@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/glom/Makefile,v 1.7 2006/08/19 19:06:15 mezz Exp $
+#   $MCom: ports/databases/glom/Makefile,v 1.8 2006/08/19 21:08:41 mezz Exp $
 #
 
 PORTNAME=	glom
@@ -34,6 +34,8 @@ CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 INSTALLS_OMF=	yes
 
 BROKEN=	needs an update to 1.0
+DEPRECATED=	${BROKEN}
+EXPIRATION_DATE=2006-12-01
 
 .include <bsd.port.pre.mk>
 

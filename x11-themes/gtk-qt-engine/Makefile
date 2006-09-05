@@ -7,7 +7,7 @@
 
 PORTNAME=	gtk-qt-engine
 PORTVERSION=	0.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://people.freedesktop.org/~davidsansome/ \
 		http://freebsd.ricin.com/ports/distfiles/
@@ -51,5 +51,6 @@ post-configure:
 post-install:
 	@${RM} /tmp/menu/kcmgtk.menu
 	@if [ "`ls /tmp/menu`" = "" ]; then ${RMDIR} /tmp/menu; fi
+	@${RM} ${PREFIX}/share/applnk/Settings/LookNFeel/kcmgtk.desktop
 
 .include <bsd.port.post.mk>
