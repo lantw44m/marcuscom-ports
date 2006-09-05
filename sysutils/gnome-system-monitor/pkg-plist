@@ -75,6 +75,7 @@ share/locale/mg/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/mk/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ml/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/mn/LC_MESSAGES/gnome-system-monitor.mo
+share/locale/mr/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ms/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/nb/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ne/LC_MESSAGES/gnome-system-monitor.mo
@@ -105,6 +106,8 @@ share/locale/zh_HK/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-system-monitor.mo
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/dz/LC_MESSAGES
