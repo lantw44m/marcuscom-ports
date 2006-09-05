@@ -1,18 +1,29 @@
---- src/gnome-mount.c.orig	Sun Jun  4 13:20:44 2006
-+++ src/gnome-mount.c	Sun Jun  4 13:27:18 2006
-@@ -338,6 +338,7 @@ main (int argc, char *argv[])
+--- src/gnome-mount.c.orig	Mon Sep  4 21:41:09 2006
++++ src/gnome-mount.c	Mon Sep  4 21:45:53 2006
+@@ -42,7 +42,7 @@
+ #include <libhal.h>
+ #include <libhal-storage.h>
  
- 			fsoptions = NULL;
+-#include <mntent.h>
++#include "mntent.h"
  
+ static DBusConnection *dbus_connection;
+ static LibHalContext *hal_ctx;
+@@ -477,7 +477,7 @@
+ 
+ 		mount_point = NULL;
+ 		device_file = get_dev_file (volume, drive);
+-
 +#ifdef __linux__
- 			snprintf (uidbuf, sizeof(uidbuf) - 1, "uid=%d", getuid());
- 
- 			/* TODO: read defaults from gconf */
-@@ -349,6 +350,7 @@ main (int argc, char *argv[])
- 			} else if (strcmp (fstype, "udf") == 0) {
- 				fsoptions = g_list_append (fsoptions, uidbuf);
+ 		if (device_file != NULL) {
+ 			FILE *f;
+ 			struct mntent mnt;
+@@ -497,7 +497,7 @@
+ 				endmntent (f);
  			}
+ 		}
+-
 +#endif
- 
- 			/* TODO: read per-volume settings from gconf and adjust fsoptions */
- 
+ 		g_print (_("Mounted %s at \"%s\"\n"), device_file, mount_point);
+ 		g_free (mount_point);
+ 	}
