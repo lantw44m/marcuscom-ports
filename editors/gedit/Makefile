@@ -3,18 +3,18 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.44 2006/08/27 18:05:29 marcus Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.45 2006/08/29 02:50:51 ahze Exp $
 #
 
 PORTNAME=	gedit
-PORTVERSION=	2.15.9
+PORTVERSION=	2.16.0
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A small but powerful text editor for Gnome 2 Desktop Environment
+COMMENT=	A small but powerful text editor for GNOME 2 Desktop Environment
 
 LIB_DEPENDS=	pspell.16:${PORTSDIR}/textproc/aspell
 
@@ -31,10 +31,10 @@ WANT_GNOME=	yes
 CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-PLIST_SUB=	VERSION="2.14"
+PLIST_SUB=	VERSION="2.16"
 
 MAN1=		gedit.1
-GCONF_SCHEMAS=	gedit.schemas filebrowser.schemas
+GCONF_SCHEMAS=	gedit.schemas gedit-file-browser.schemas
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
