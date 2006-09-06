@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.94 2006/08/21 18:28:10 ahze Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.95 2006/09/04 17:58:07 ahze Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -45,6 +45,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_C
 
 PLIST_SUB=	VERSION="1.8" EVO_VERSION="1.2"
 
+OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
+
 .include <bsd.port.pre.mk>
 
 .if ( ( ${OSVERSION} < 504101 ) || ( ${OSVERSION} >= 600000 && ${OSVERSION} < 600012 ) )
@@ -61,6 +63,10 @@ CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} --with-krb5-includes=${HEIMDAL_HOME
 .else
 CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
 .endif
+.endif
+
+.if defined(WITH_IMAP4)
+CONFIGURE_ARGS+=	--enable-imap4=yes
 .endif
 
 post-patch:
