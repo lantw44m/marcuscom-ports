@@ -3,19 +3,18 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/bonfire/Makefile,v 1.7 2006/06/29 05:21:12 marcus Exp $
+#    $MCom$
 
-PORTNAME=	bonfire
-PORTVERSION=	0.3.1
-PORTREVISION=	1
+PORTNAME=	brasero
+PORTVERSION=	0.4.90
 CATEGORIES=	sysutils
-MASTER_SITES=	http://perso.wanadoo.fr/bonfire/
+MASTER_SITES=	SOURCEFORGE
+MASTER_SITE_SUBDIR=	bonfire
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CD/DVD mastering tool for the GNOME desktop
 
-LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
-		notify.2:${PORTSDIR}/devel/libnotify \
+LIB_DEPENDS=	notify.2:${PORTSDIR}/devel/libnotify \
 		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
 		gdl-1.0:${PORTSDIR}/x11-toolkits/gdl
 
@@ -24,14 +23,14 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_XLIB=	yes
-USE_GNOME=	gnomeprefix nautiluscdburner
+USE_GNOME=	gnomehier nautiluscdburner
 USE_GSTREAMER=	gconf core
+INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-inotify
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|$$(datadir)|${PREFIX}/share/gnome|' \
-		${WRKSRC}/src/Makefile.in
+MAN1=		brasero.1
+GCONF_SCHEMAS=	brasero.schemas
 
 .include <bsd.port.mk>
