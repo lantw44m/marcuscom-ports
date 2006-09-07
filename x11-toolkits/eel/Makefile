@@ -3,11 +3,12 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/eel/Makefile,v 1.44 2006/08/22 00:27:15 ahze Exp $
+#   $MCom: ports/x11-toolkits/eel/Makefile,v 1.45 2006/09/04 14:31:14 ahze Exp $
 #
 
 PORTNAME=	eel
 PORTVERSION=	2.16.0
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -29,7 +30,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|; \
+		s|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/eel/eel-open-with-dialog.c
 
 .include <bsd.port.mk>
