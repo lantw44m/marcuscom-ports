@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/bug-buddy/Makefile,v 1.35 2006/08/22 05:35:48 marcus Exp $
+#   $MCom: ports/devel/bug-buddy/Makefile,v 1.36 2006/09/04 22:42:53 ahze Exp $
 #
 
 PORTNAME=	bug-buddy
 PORTVERSION=	2.16.0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/bug-buddy/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -32,6 +33,10 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	bug-buddy.schemas
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|' \
+		${WRKSRC}/src/bugzilla.c
 
 post-install:
 	@-update-desktop-database
