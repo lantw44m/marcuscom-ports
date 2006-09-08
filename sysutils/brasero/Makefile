@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.9 2006/09/07 20:49:15 ahze Exp $
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.10 2006/09/08 00:21:04 ahze Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	0.4.90
@@ -15,8 +15,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CD/DVD mastering tool for the GNOME desktop
 
 LIB_DEPENDS=	notify.2:${PORTSDIR}/devel/libnotify \
-		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
-		gdl-1.0:${PORTSDIR}/x11-toolkits/gdl
+		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
