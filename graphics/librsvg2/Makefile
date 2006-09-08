@@ -3,11 +3,12 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.105 2006/07/27 15:27:16 marcus Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.106 2006/09/01 01:26:35 marcus Exp $
 #
 
 PORTNAME=	librsvg2
 PORTVERSION=	2.16.0
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -36,7 +37,8 @@ CONFIGURE_ARGS=	--with-svgz \
 		--without-gimp \
 		--with-croco \
 		--disable-gnome-vfs \
-		--enable-gtk-theme
+		--enable-gtk-theme \
+		--disable-gnome-print
 
 CROCO_VERSION=	0.6
 
