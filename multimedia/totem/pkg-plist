@@ -16,6 +16,10 @@ include/totem/1/plparser/totem-pl-parser.h
 %%MOZILLA%%lib/browser_plugins/libtotem-gmp-plugin.la
 %%MOZILLA%%lib/browser_plugins/libtotem-gmp-plugin.so
 %%MOZILLA%%lib/browser_plugins/libtotem-gmp-plugin.xpt
+%%MOZILLA%%lib/browser_plugins/libtotem-mully-plugin.a
+%%MOZILLA%%lib/browser_plugins/libtotem-mully-plugin.la
+%%MOZILLA%%lib/browser_plugins/libtotem-mully-plugin.so
+%%MOZILLA%%lib/browser_plugins/libtotem-mully-plugin.xpt
 %%MOZILLA%%lib/browser_plugins/libtotem-narrowspace-plugin.a
 %%MOZILLA%%lib/browser_plugins/libtotem-narrowspace-plugin.la
 %%MOZILLA%%lib/browser_plugins/libtotem-narrowspace-plugin.so
@@ -99,6 +103,7 @@ share/gnome/pixmaps/vanity.png
 %%MOZILLA%%share/gnome/totem/doc/totemIComplexPlayer.html
 %%MOZILLA%%share/gnome/totem/doc/totemIGMPControls.html
 %%MOZILLA%%share/gnome/totem/doc/totemIGMPPlayer.html
+%%MOZILLA%%share/gnome/totem/doc/totemIMullYPlayer.html
 %%MOZILLA%%share/gnome/totem/doc/totemINarrowSpacePlayer.html
 share/gnome/totem/filmholes-big-left.png
 share/gnome/totem/filmholes-big-right.png
