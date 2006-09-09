@@ -1,4 +1,8 @@
-lib/gedit-2/plugins/charmap.gedit-plugin
+%%PYTHON%%lib/gedit-2/plugins/bracketcompletion.gedit-plugin
+%%PYTHON%%lib/gedit-2/plugins/bracketcompletion.py
+%%PYTHON%%lib/gedit-2/plugins/bracketcompletion.pyc
+%%PYTHON%%lib/gedit-2/plugins/bracketcompletion.pyo
+%%PYTHON%%lib/gedit-2/plugins/charmap.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/codecomment.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/codecomment.py
 %%PYTHON%%lib/gedit-2/plugins/codecomment.pyc

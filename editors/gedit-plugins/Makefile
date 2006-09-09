@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins/Makefile,v 1.16 2006/07/21 20:46:56 mezz Exp $
+#   $MCom: ports/editors/gedit-plugins/Makefile,v 1.17 2006/08/22 04:39:24 marcus Exp $
 #
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	2.15.5
+PORTVERSION=	2.16.0
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -21,9 +21,11 @@ BUILD_DEPENDS=	gedit:${PORTSDIR}/editors/gedit \
 RUN_DEPENDS=	gedit:${PORTSDIR}/editors/gedit \
 		gucharmap:${PORTSDIR}/deskutils/gucharmap
 
+USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack
 WANT_GNOME=	yes
