@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins80/Makefile,v 1.60 2006/04/23 22:55:30 mezz Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins80/Makefile,v 1.62 2006/07/17 05:15:45 ahze Exp $
 #
 
 PORTNAME=	gstreamer
@@ -53,7 +53,7 @@ WITHOUT_CPU_CFLAGS=	yes
 
 .if ${GST_PLUGIN} == "base"
 
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 
 PLIST_SUB+=	VERSION="${VERSION}" \
 		SHLIB_VERSION="${SHLIB_VERSION}"

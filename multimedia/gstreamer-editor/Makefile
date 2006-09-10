@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer-editor/Makefile,v 1.6 2006/07/17 05:20:28 ahze Exp $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.8.0
@@ -31,7 +31,7 @@ USE_GNOME=	gnomehack \
 		libgnomeui
 PLIST_SUB=	\
 	VERSION="${PORTVERSION}"
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 INSTALLS_OMF=	yes
 
 MAN1=		gst-editor.1 gst-inspect-gui.1 gst-launch-gui.1

@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.49 2006/07/17 00:00:00 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.50 2006/07/17 01:39:56 ahze Exp $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.9
@@ -34,7 +34,7 @@ CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib" \
 		ac_cv_func_register_printf_function="no"
 PLIST_SUB=	VERSION="${GST_VERSION}"
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GST_VERSION=	0.10
 
 MAN1=	gst-feedback-${GST_VERSION}.1 gst-inspect-${GST_VERSION}.1 \
