@@ -3,7 +3,7 @@
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
 # $FreeBSD$
-#   $MCom: ports/finance/gnucash/Makefile,v 1.3 2006/07/26 02:30:09 mezz Exp $
+#   $MCom: ports/finance/gnucash/Makefile,v 1.4 2006/08/19 19:06:17 mezz Exp $
 #
 
 PORTNAME=	gnucash
@@ -14,7 +14,7 @@ MASTER_SITES=	http://www.gnucash.org/pub/gnucash/sources/stable/ \
 		${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	gnucash
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	ahze@FreeBSD.org
 COMMENT=	Quicken-like money and finance manager
 
 LIB_DEPENDS=	guile.15:${PORTSDIR}/lang/guile \
