@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#
+#    $MCom$
 
 PORTNAME=	nautilus-actions
-PORTVERSION=	1.2
+PORTVERSION=	1.4
 CATEGORIES=	deskutils
 MASTER_SITES=	ftp://ftp2.grumz.net/grumz/
 
