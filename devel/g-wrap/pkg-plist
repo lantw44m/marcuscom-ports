@@ -46,13 +46,13 @@ share/guile/site/g-wrap/util.scm
 share/guile/site/g-wrap/ws/standard.scm
 share/guile/site/srfi/srfi-34.scm
 share/guile/site/srfi/srfi-35.scm
-@dirrm share/guile/site/srfi
-@dirrm share/guile/site/g-wrap/ws
-@dirrm share/guile/site/g-wrap/gw
-@dirrm share/guile/site/g-wrap/guile/ws
-@dirrm share/guile/site/g-wrap/guile
-@dirrm share/guile/site/g-wrap
-@dirrm share/guile/site
-@dirrm share/guile
+@dirrmtry share/guile/site/srfi
+@dirrmtry share/guile/site/g-wrap/ws
+@dirrmtry share/guile/site/g-wrap/gw
+@dirrmtry share/guile/site/g-wrap/guile/ws
+@dirrmtry share/guile/site/g-wrap/guile
+@dirrmtry share/guile/site/g-wrap
+@dirrmtry share/guile/site
+@dirrmtry share/guile
 @dirrmtry lib/elf
 @dirrm include/g-wrap

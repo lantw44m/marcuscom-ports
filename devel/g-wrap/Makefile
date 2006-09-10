@@ -4,10 +4,11 @@
 # Whom:			Matthew Condell (mcondell@alum.mit.edu)
 #
 # $FreeBSD$
-#    $MCom: ports-experimental/devel/g-wrap/Makefile,v 1.2 2006/09/10 20:35:15 ahze Exp $
+#    $MCom: ports/devel/g-wrap/Makefile,v 1.1 2006/09/10 20:47:09 ahze Exp $
 
 PORTNAME=	g-wrap
 PORTVERSION=	1.9.6
+PORTREVISION=	1
 CATEGORIES=	devel scheme
 MASTER_SITES=	SAVANNAH
 
@@ -26,6 +27,8 @@ USE_GNOME=	glib20 gnomehack
 USE_LDCONFIG=	${PREFIX}/lib/elf
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|Libs: |Libs: -L${PREFIX}/lib/elf |' \
+		${WRKSRC}/guile/g-wrap-2.0-guile.pc.in
 	@${REINPLACE_CMD} -e 's|"glib"|"glib-2.0"|' \
 		${WRKSRC}/configure
 
