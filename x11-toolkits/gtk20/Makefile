@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.95 2006/08/18 15:51:30 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.96 2006/09/05 08:07:10 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -37,7 +37,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
 
 USE_XPM=	yes
 USE_PERL5=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack atk pango ltverhack
 USE_GETTEXT=	yes

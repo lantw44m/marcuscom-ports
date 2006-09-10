@@ -3,7 +3,7 @@
 # Whom:					Rene Hexel <rh@netbsd.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.1 2006/07/18 14:37:39 ahze Exp $
 
 PORTNAME=	scrollkeeper
 PORTVERSION=	0.3.14
@@ -32,7 +32,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_BISON=	yes
 USE_GNOME=	gnomehack gnomehier gnometarget libxslt intlhack
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--localstatedir=/var --datadir=${PREFIX}/share/gnome \
 		--with-omfdirs=${PREFIX}/share/gnome/omf \
 		--with-xml-catalog=${LOCALBASE}/share/xml/catalog.ports

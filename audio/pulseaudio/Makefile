@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/pulseaudio/Makefile,v 1.3 2006/07/22 16:58:15 ahze Exp $
+#    $MCom: ports/audio/pulseaudio/Makefile,v 1.4 2006/07/22 17:51:58 ahze Exp $
 
 PORTNAME=	pulseaudio
 PORTVERSION=	0.9.3
@@ -21,7 +21,7 @@ CONFLICTS=	polypaudio-[1-9]*
 USE_GNOME=	gnometarget gnomehack glib20
 WANT_GNOME=	yes
 USE_XLIB=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libltdl:15
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes

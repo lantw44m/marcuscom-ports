@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/libgail-gnome/Makefile,v 1.15 2006/07/23 02:54:01 mezz Exp $
 #
 
 PORTNAME=	libgail-gnome
@@ -20,7 +20,7 @@ COMMENT=	An implementation of the ATK interfaces for GNOME widgets
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_XLIB=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack gnomepanel atspi

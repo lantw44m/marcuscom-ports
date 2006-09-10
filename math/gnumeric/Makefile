@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.16 2006/05/08 22:58:46 ahze Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.17 2006/07/21 20:46:57 mezz Exp $
 #
 
 PORTNAME=	gnumeric
@@ -28,7 +28,7 @@ USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier libgnomeprintui \
 		libgsf_gnome pygtk2 desktopfileutils libgnomeui
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-guile --with-bonobo
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \

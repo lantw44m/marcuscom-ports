@@ -3,7 +3,7 @@
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/librep/Makefile,v 1.1 2006/07/18 13:29:11 ahze Exp $
+#    $MCom: ports/lang/librep/Makefile,v 1.1 2006/07/18 19:21:34 ahze Exp $
 
 PORTNAME=	librep
 PORTVERSION=	0.16.2
@@ -21,7 +21,7 @@ PLIST_SUB=	GNUHOST=${ARCH}-pc-freebsd${OSREL:C/\..*//} VERSION=${PORTVERSION}
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lintl ${PTHREAD_LIBS}"

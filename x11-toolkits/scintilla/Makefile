@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-toolkits/scintilla/Makefile,v 1.1 2006/07/18 16:55:13 ahze Exp $
 
 PORTNAME=	scintilla
 PORTVERSION=	1.70
@@ -24,7 +24,7 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_ICONV=	yes
 MAKEFILE=	makefile
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 
 .if defined(WITH_GTK2)
 USE_GNOME=	gtk20

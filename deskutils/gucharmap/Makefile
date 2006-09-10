@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.27 2006/07/25 02:49:36 ahze Exp $
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.28 2006/09/05 06:15:10 marcus Exp $
 #
 
 PORTNAME=	gucharmap
@@ -28,7 +28,7 @@ USE_GNOME=	gnomeprefix intlhack gnomehack gtk20 gnomedocutils
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 	       	LDFLAGS="-L${LOCALBASE}/lib"

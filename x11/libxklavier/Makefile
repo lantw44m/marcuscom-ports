@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libxklavier/Makefile,v 1.26 2006/07/23 23:28:32 mezz Exp $
+#   $MCom: ports/x11/libxklavier/Makefile,v 1.27 2006/07/27 04:08:28 marcus Exp $
 #
 
 PORTNAME=	libxklavier
@@ -20,7 +20,7 @@ COMMENT=	An utility library to make XKB stuff easier
 USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget gnomehack libxml2 glib20
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 USE_GETOPT_LONG=yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -I${X11BASE}/include

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/textproc/gtkspell/Makefile,v 1.1 2006/07/25 16:34:12 mezz Exp $
 #
 
 PORTNAME=	gtkspell
@@ -26,7 +26,7 @@ USE_GNOME=	gnomeprefix gnomehack gtk20
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
 USE_XLIB=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

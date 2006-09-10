@@ -3,7 +3,7 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.25 2006/07/18 13:19:47 ahze Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.26 2006/07/18 19:54:44 ahze Exp $
 #
 
 PORTNAME=	poppler
@@ -20,7 +20,7 @@ LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gnometarget
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-zlib \
 		--enable-xpdf-headers \
 		--with-html-dir=${DOCSDIR}

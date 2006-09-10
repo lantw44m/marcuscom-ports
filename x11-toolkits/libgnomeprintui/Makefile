@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreBSD.org>
 #
 # $FreeBSD: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.45 2006/05/15 22:23:03 mezz Exp $
-#   $MCom: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.55 2006/07/21 17:42:25 marcus Exp $
+#   $MCom: ports/x11-toolkits/libgnomeprintui/Makefile,v 1.56 2006/07/21 20:47:04 mezz Exp $
 #
 
 PORTNAME=	libgnomeprintui
@@ -27,7 +27,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeprint libgnomecanvas \
 		intlhack ltverhack
 USE_GETTEXT=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 USE_AUTOTOOLS=  libtool:15
 USE_BISON=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

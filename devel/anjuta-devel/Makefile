@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.12 2006/07/21 20:46:54 mezz Exp $
+#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.13 2006/08/13 15:36:28 adamw Exp $
 #
 
 PORTNAME=	anjuta
@@ -37,7 +37,7 @@ USE_GNOME=	gnomeprefix gnomehack libgnomeprintui libgnomeui vte
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 
 OPTIONS=	SVN "Build subversion plugins" off
 

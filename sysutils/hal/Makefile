@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.19 2006/06/16 05:05:53 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.20 2006/08/08 02:00:07 ahze Exp $
 #
 
 PORTNAME=	hal
@@ -26,7 +26,7 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnometarget intlhack ltverhack
 USE_AUTOTOOLS=	libtool:15
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-hwdata=${LOCALBASE}/share/pciids \

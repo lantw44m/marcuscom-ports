@@ -3,7 +3,7 @@
 # Whom:			Marc Recht <marc@informatik.uni-bremen.de>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-toolkits/gtkglarea2/Makefile,v 1.1 2006/07/18 16:40:19 ahze Exp $
 
 PORTNAME=	gtkglarea
 PORTVERSION=	1.99.0
@@ -22,7 +22,7 @@ USE_GNOME=	gnomehack gtk20
 USE_BZIP2=	yes
 USE_GL=		yes
 USE_AUTOTOOLS=	libtool:15
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-lib-GL
 
 .include <bsd.port.mk>

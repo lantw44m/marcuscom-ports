@@ -3,7 +3,7 @@
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/glibmm/Makefile,v 1.22 2006/06/07 06:08:04 marcus Exp $
-#   $MCom: ports/devel/glibmm/Makefile,v 1.34 2006/07/24 21:55:09 marcus Exp $
+#   $MCom: ports/devel/glibmm/Makefile,v 1.35 2006/08/17 20:29:43 marcus Exp $
 #
 
 PORTNAME=	glibmm
@@ -29,7 +29,7 @@ USE_GCC=	3.4
 USE_GNOME=	gnomehack gnometarget glib20
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static
 
 PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"

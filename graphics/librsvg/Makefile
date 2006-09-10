@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/graphics/librsvg/Makefile,v 1.1 2006/07/18 13:12:50 ahze Exp $
 
 PORTNAME=	librsvg
 PORTVERSION=	1.0.3
@@ -22,7 +22,7 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 USE_GMAKE=	yes
 USE_XLIB=	yes
 USE_GNOME=	gnomelibs gdkpixbuf
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"

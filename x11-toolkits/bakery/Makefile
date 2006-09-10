@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/bakery/Makefile,v 1.7 2006/07/25 18:03:34 mezz Exp $
 #
 
 PORTNAME=	bakery
@@ -28,7 +28,7 @@ USE_GCC=	3.4
 USE_GETTEXT=	yes
 USE_XLIB=	yes
 USE_AUTOTOOLS=	libtool:15
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

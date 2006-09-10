@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.102 2006/08/22 05:01:03 marcus Exp $
+#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.103 2006/09/04 20:21:23 marcus Exp $
 #
 
 PORTNAME=	gnome-desktop
@@ -30,7 +30,7 @@ USE_GMAKE=	yes
 USE_BISON=	yes
 USE_XLIB=	yes
 INSTALLS_OMF=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--with-gnome-distributor="FreeBSD GNOME Project" \
 		--with-kde-datadir=${LOCALBASE}/share

@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/bonobo/Makefile,v 1.1 2006/07/25 17:07:32 mezz Exp $
 #
 
 PORTNAME=	bonobo
@@ -24,7 +24,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix oaf gnomehier gnomeprint
 USE_GETTEXT=	yes
 GNOME_HTML_DIR=	${PREFIX}/share/doc/bonobo
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"

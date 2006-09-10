@@ -3,7 +3,7 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/textproc/aiksaurus/Makefile,v 1.1 2006/07/18 14:33:26 ahze Exp $
 
 PORTNAME=	aiksaurus
 PORTVERSION=	1.2.1
@@ -17,7 +17,7 @@ COMMENT?=	A set of libraries and applications which provide a thesaurus
 
 USE_GMAKE=	yes
 USE_GNOME?=	gnomehack gnometarget
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS?=--without-gtk
 

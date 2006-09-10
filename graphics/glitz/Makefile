@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/glitz/Makefile,v 1.6 2006/04/30 03:25:23 ahze Exp $
+#   $MCom: ports/graphics/glitz/Makefile,v 1.7 2006/05/22 01:41:25 ahze Exp $
 #
 
 PORTNAME=	glitz
@@ -17,7 +17,7 @@ COMMENT=	OpenGL image compositing library
 USE_GL=		yes
 USE_GNOME=	pkgconfig gnometarget gnomehack
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 
 CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS}" \
 		LDFLAGS="${PTHREAD_LIBS}"

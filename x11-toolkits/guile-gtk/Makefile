@@ -3,7 +3,7 @@
 # Whom:                Matt Braithwaite <mab@red-bean.com>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-toolkits/guile-gtk/Makefile,v 1.1 2006/07/18 16:48:14 ahze Exp $
 
 PORTNAME=	guile-gtk
 PORTVERSION=	0.41
@@ -21,7 +21,7 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget gdkpixbuf libglade
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-gtkgl=no
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"

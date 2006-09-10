@@ -3,7 +3,7 @@
 # Whom:			Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/graphics/gdk-pixbuf/Makefile,v 1.1 2006/07/18 12:58:56 ahze Exp $
 
 PORTNAME?=	gdk-pixbuf
 PORTVERSION=	0.22.0
@@ -24,7 +24,7 @@ LIB_DEPENDS+=	png.5:${PORTSDIR}/graphics/png \
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME+=	gnomehack gtk12
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc

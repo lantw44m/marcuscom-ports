@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/policykit/Makefile,v 1.8 2006/05/14 20:55:52 marcus Exp $
+#   $MCom: ports/sysutils/policykit/Makefile,v 1.9 2006/06/16 05:19:02 marcus Exp $
 #
 
 PORTNAME=	policykit
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnometarget
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-pid-file=/var/run/polkitd/polkitd.pid \
 		--with-pam-include=system

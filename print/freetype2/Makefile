@@ -23,7 +23,7 @@ COMMENT=	A free and portable TrueType font rendering engine
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 MAKE_ENV=	TOP=""
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnometarget pkgconfig
 LIBTOOLFILES=	builds/unix/configure

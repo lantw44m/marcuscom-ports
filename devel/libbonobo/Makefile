@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/libbonobo/Makefile,v 1.50 2006/08/14 20:58:43 marcus Exp $
+#    $MCom: ports/devel/libbonobo/Makefile,v 1.51 2006/09/04 18:21:04 marcus Exp $
 #
 
 PORTNAME=	libbonobo
@@ -26,7 +26,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 USE_GMAKE=	yes
 USE_BISON=	yes
 USE_GETTEXT=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_PERL5=	yes
 USE_GNOME=	gnomehack intlhack libxml2 orbit2 referencehack

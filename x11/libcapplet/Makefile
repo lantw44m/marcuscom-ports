@@ -3,7 +3,7 @@
 # Whom:					Maxim Soboleb <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11/libcapplet/Makefile,v 1.1 2006/07/18 15:53:17 ahze Exp $
 
 PORTNAME=	libcapplet
 PORTVERSION=	1.4.0.5
@@ -17,7 +17,7 @@ COMMENT=	A library for writing custom applets for GNOME Control Center
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomelibs
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 USE_GETOPT_LONG=yes
 MAKE_ENV=	X11BASE="${X11BASE}" LOCALBASE="${LOCALBASE}" LDFLAGS="${LDFLAGS}"
 

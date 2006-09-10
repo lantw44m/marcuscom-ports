@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.20 2006/07/18 11:49:56 ahze Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.21 2006/07/23 18:22:02 marcus Exp $
 #
 
 PORTNAME=	gimp
@@ -47,7 +47,7 @@ USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack intltool intlhack gtk20 libartlgpl2 ltverhack
 WANT_GNOME=	yes
 USE_GCC=	3.4+
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 LIBTOOLFLAGS=	--disable-ltlibs --release-ignore
 PLIST_SUB=	SHLIBVER="${SHLIBVER}"

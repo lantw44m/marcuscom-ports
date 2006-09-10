@@ -3,7 +3,7 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-toolkits/gtkmm20/Makefile,v 1.10 2006/07/18 16:43:39 ahze Exp $
 
 PORTNAME=	gtkmm
 PORTVERSION=	2.2.12
@@ -28,7 +28,7 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack lthack gtk20
 CONFIGURE_ARGS=	--enable-static=yes \
 		--with-sigc-prefix=${LOCALBASE}

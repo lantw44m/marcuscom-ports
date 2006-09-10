@@ -3,7 +3,7 @@
 # Whom:                Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-toolkits/gtkmm12/Makefile,v 1.1 2006/07/18 16:42:02 ahze Exp $
 
 PORTNAME=	gtkmm
 PORTVERSION=	1.2.8
@@ -23,7 +23,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gtk12
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static=yes \
 		--without-gnome \
 		--with-sigc-prefix=${LOCALBASE}

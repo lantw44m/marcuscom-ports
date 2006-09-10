@@ -20,7 +20,7 @@ LIB_DEPENDS=	wwwzip.1:${PORTSDIR}/www/libwww
 USE_GMAKE=	yes
 USE_GNOME=	gnomelibs
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
 
