@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.137 2006/09/04 20:30:14 marcus Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.138 2006/09/10 00:51:15 mezz Exp $
 #
 
 PORTNAME=	gnome-panel
 PORTVERSION=	2.16.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -59,6 +59,8 @@ CONFIGURE_ARGS+=--disable-eds
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|evolution.desktop|evolution-2.8.desktop|g' \
+		${WRKSRC}/gnome-panel/panel-default-setup.entries
 	@${FIND} ${WRKSRC} -type f | \
 		${XARGS} -n 10 ${REINPLACE_CMD} -e \
 		's|"applications.menu"|"gnome-applications.menu"|'
