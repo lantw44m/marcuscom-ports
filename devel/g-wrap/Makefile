@@ -4,11 +4,11 @@
 # Whom:			Matthew Condell (mcondell@alum.mit.edu)
 #
 # $FreeBSD$
-#    $MCom: ports/devel/g-wrap/Makefile,v 1.2 2006/09/10 21:24:28 ahze Exp $
+#    $MCom: ports/devel/g-wrap/Makefile,v 1.3 2006/09/12 15:30:30 ahze Exp $
 
 PORTNAME=	g-wrap
 PORTVERSION=	1.9.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel scheme
 MASTER_SITES=	SAVANNAH
 
@@ -21,15 +21,22 @@ RUN_DEPENDS=	slib-guile>0:${PORTSDIR}/lang/slib-guile
 
 INFO=		g-wrap
 
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20 gnomehack
-USE_LDCONFIG=	${PREFIX}/lib/elf
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|Libs: |Libs: -L${PREFIX}/lib/elf |' \
-		${WRKSRC}/guile/g-wrap-2.0-guile.pc.in
 	@${REINPLACE_CMD} -e 's|"glib"|"glib-2.0"|' \
 		${WRKSRC}/configure
+
+pre-install:
+	@${REINPLACE_CMD} -e 's|libffi||' ${WRKSRC}/${MAKEFILE}
+
+post-install:
+	${MKDIR} ${PREFIX}/include/g-wrap/ffi
+.for f in ffi.h ffitarget.h
+	${INSTALL_DATA} ${WRKSRC}/libffi/include/${f} ${PREFIX}/include/g-wrap/ffi
+.endfor
 
 .include <bsd.port.mk>

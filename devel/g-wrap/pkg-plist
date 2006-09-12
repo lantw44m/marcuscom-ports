@@ -1,16 +1,12 @@
 bin/g-wrap-config
-include/ffi.h
-include/ffitarget.h
 include/g-wrap-wct.h
 include/g-wrap/core-runtime.h
 include/g-wrap/ffi-support.h
+include/g-wrap/ffi/ffi.h
+include/g-wrap/ffi/ffitarget.h
 include/g-wrap/guile-compatibility.h
 include/g-wrap/guile-runtime.h
 include/g-wrap/guile-wct.h
-lib/elf/libffi.a
-lib/elf/libffi.la
-lib/elf/libffi.so
-lib/elf/libffi.so.4
 lib/libgw-guile-gw-glib.a
 lib/libgw-guile-gw-glib.la
 lib/libgw-guile-gw-glib.so
@@ -54,5 +50,5 @@ share/guile/site/srfi/srfi-35.scm
 @dirrmtry share/guile/site/g-wrap
 @dirrmtry share/guile/site
 @dirrmtry share/guile
-@dirrmtry lib/elf
+@dirrm include/g-wrap/ffi
 @dirrm include/g-wrap
