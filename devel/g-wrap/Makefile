@@ -4,7 +4,7 @@
 # Whom:			Matthew Condell (mcondell@alum.mit.edu)
 #
 # $FreeBSD$
-#    $MCom: ports/devel/g-wrap/Makefile,v 1.1 2006/09/10 20:47:09 ahze Exp $
+#    $MCom: ports/devel/g-wrap/Makefile,v 1.2 2006/09/10 21:24:28 ahze Exp $
 
 PORTNAME=	g-wrap
 PORTVERSION=	1.9.6
@@ -15,9 +15,9 @@ MASTER_SITES=	SAVANNAH
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A tool for exporting C libraries into Scheme interpreters
 
-BUILD_DEPENDS=	${LOCALBASE}/share/guile/slibcat:${PORTSDIR}/lang/slib-guile
+BUILD_DEPENDS=	slib-guile>0:${PORTSDIR}/lang/slib-guile
 LIB_DEPENDS=	guile.15:${PORTSDIR}/lang/guile
-RUN_DEPENDS=	${LOCALBASE}/share/guile/slibcat:${PORTSDIR}/lang/slib-guile
+RUN_DEPENDS=	slib-guile>0:${PORTSDIR}/lang/slib-guile
 
 INFO=		g-wrap
 
