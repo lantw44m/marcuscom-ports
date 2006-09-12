@@ -12,4 +12,4 @@
 -Libs: -L${libdir} -lgwrap-guile-runtime -lgwrap-core-runtime @GUILE_LDFLAGS@ @LIBFFI_LIBS_INSTALLED@
 -Cflags: @STD_CFLAGS@ -I${includedir} @GUILE_CFLAGS@ @LIBFFI_CFLAGS_INSTALLED@
 +Libs: -L/usr/local/lib/elf -L${libdir} -lgwrap-guile-runtime -lgwrap-core-runtime @GUILE_LDFLAGS@
-+Cflags: @STD_CFLAGS@ -I${includedir} -I${ffincludedir} @GUILE_CFLAGS@ @LIBFFI_CFLAGS_INSTALLED@
++Cflags: @STD_CFLAGS@ -I${includedir} -I${ffiincludedir} @GUILE_CFLAGS@ @LIBFFI_CFLAGS_INSTALLED@
