@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.97 2006/08/01 22:38:06 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.98 2006/08/21 16:12:28 ahze Exp $
 #
 
 PORTNAME=	gstreamer
@@ -84,16 +84,19 @@ EXTRACT_ONLY=${BASE_DISTFILE}
 WRKSRC=${WRKDIR}/${BASE_DISTNAME}
 PORTVERSION=	${BASE_PORTVERSION}
 DISTFILES+=	${BASE_DISTFILE}:base
+PATCHDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins/files
 .elif ${DIST}=="bad"
 EXTRACT_ONLY=${BAD_DISTFILE}
 WRKSRC=${WRKDIR}/${BAD_DISTNAME}
 PORTVERSION=	${BAD_PORTVERSION}
 DISTFILES+=	${BAD_DISTFILE}:bad
+PATCHDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins-bad/files
 .elif ${DIST}=="ugly"
 EXTRACT_ONLY=${UGLY_DISTFILE}
 WRKSRC=${WRKDIR}/${UGLY_DISTNAME}
 PORTVERSION=	${UGLY_PORTVERSION}
 DISTFILES+=	${UGLY_DISTFILE}:ugly
+PATCHDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins-ugly/files
 .elif ${DIST}=="makesum"
 DISTFILES+=	${BASE_DISTFILE}:base ${BAD_DISTFILE}:bad \
 		${UGLY_DISTFILE}:ugly ${GOOD_DISTFILE}:good
