@@ -294,6 +294,10 @@ lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.a
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.la
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.so
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.urls
+%%IMAP4%%lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.a
+%%IMAP4%%lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.la
+%%IMAP4%%lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.so
+%%IMAP4%%lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.urls
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamellocal.a
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamellocal.la
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamellocal.so

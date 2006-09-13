@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.96 2006/09/06 19:14:23 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.97 2006/09/12 18:40:04 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	1.8.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -68,6 +68,9 @@ CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
 
 .if defined(WITH_IMAP4) || defined(PACKAGE_BUILDING)
 CONFIGURE_ARGS+=	--enable-imap4=yes
+PLIST_SUB+=		IMAP4=""
+.else
+PLIST_SUB+=		IMAP4="@comment "
 .endif
 
 post-patch:
