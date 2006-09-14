@@ -56,6 +56,9 @@ lib/gstreamer-%%VERSION%%/libgstdecodebin.so
 lib/gstreamer-%%VERSION%%/libgstffmpegcolorspace.a
 lib/gstreamer-%%VERSION%%/libgstffmpegcolorspace.la
 lib/gstreamer-%%VERSION%%/libgstffmpegcolorspace.so
+lib/gstreamer-%%VERSION%%/libgstgdp.a
+lib/gstreamer-%%VERSION%%/libgstgdp.la
+lib/gstreamer-%%VERSION%%/libgstgdp.so
 lib/gstreamer-%%VERSION%%/libgstplaybin.a
 lib/gstreamer-%%VERSION%%/libgstplaybin.la
 lib/gstreamer-%%VERSION%%/libgstplaybin.so
