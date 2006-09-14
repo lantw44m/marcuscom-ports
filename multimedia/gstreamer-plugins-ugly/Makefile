@@ -3,7 +3,7 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins-ugly/Makefile,v 1.5 2006/06/08 01:14:31 ahze Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins-ugly/Makefile,v 1.7 2006/06/25 20:43:14 marcus Exp $
 #
 
 PORTREVISION=	2
@@ -20,7 +20,7 @@ BUILD_DEPENDS+=	gstreamer-plugins>=${GST_VERSION}${GST_MINOR_VERSION}:${PORTSDIR
 RUN_DEPENDS+=	gstreamer-plugins>=${GST_VERSION}${GST_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer-plugins
 
 gst_ugly_DIST=	ugly
-UGLY_GST_DIRS=	gst
+UGLY_GST_DIRS=	gst po gst-libs
 PLIST_SUB=	VERSION="${GST_VERSION}"
 NO_GSTREAMER_COMMON=	yes
 PLIST=	${.CURDIR}/pkg-plist
