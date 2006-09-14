@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.20 2006/08/03 00:35:07 ahze Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.21 2006/09/03 20:23:47 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -136,7 +136,7 @@ XPIDL_INCL?=			`${GECKO_CONFIG} --idlflags`
 BUILD_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 RUN_DEPENDS+=	${${GECKO}_PLIST}:${${GECKO}_DEPENDS}
 .else
-BROKEN=Unable to find a supported gecko, please check USE_GECKO
+IGNORE=	Unable to find a supported gecko, please check USE_GECKO
 .endif
 
 pre-everything:: _gecko-pre-everything
