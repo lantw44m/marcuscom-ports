@@ -3,10 +3,10 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.33 2006/07/27 17:56:33 marcus Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.34 2006/08/02 14:12:09 ahze Exp $
 
 PORTNAME=	firefox
-DISTVERSION=	1.5.0.6
+DISTVERSION=	1.5.0.7
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www
