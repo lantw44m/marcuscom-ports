@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/evolution-jescs/Makefile,v 1.11 2006/07/14 22:22:05 marcus Exp $
+#   $MCom: ports/deskutils/evolution-jescs/Makefile,v 1.12 2006/07/21 20:46:54 mezz Exp $
 #
 
 PORTNAME=	jescs
-PORTVERSION=	2.7.0
+PORTVERSION=	2.8.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PKGNAMEPREFIX}${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
