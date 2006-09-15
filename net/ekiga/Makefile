@@ -7,7 +7,7 @@
 
 PORTNAME=	ekiga
 PORTVERSION=	2.0.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.0
@@ -53,6 +53,8 @@ PLIST_SUB+=	DBUS:="@comment "
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|@prefix@/@DATADIRNAME@|${PREFIX}/share/gnome|' \
+		${WRKSRC}/*schemas*
 	@${REINPLACE_CMD} -e 's|{datadir}/dbus-1|(prefix)/share/dbus-1|g' \
 		${WRKSRC}/Makefile.in
 
