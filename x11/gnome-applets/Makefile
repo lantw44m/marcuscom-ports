@@ -3,18 +3,19 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.138 2006/09/05 07:49:19 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.139 2006/09/10 00:51:14 mezz Exp $
 #
 
 PORTNAME=	gnome-applets
 PORTVERSION=	2.16.0.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Applets components for the Gnome 2 Desktop Environment
+COMMENT=	Applets components for the GNOME 2 Desktop Environment
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends.pc:${PORTSDIR}/sysutils/gnome-system-tools \
     		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
@@ -101,5 +102,9 @@ PLIST_SUB+=	PYTHON="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' \
 		${WRKSRC}/libgweather/weather-met.c
+.if !defined(USE_PYTHON)
+	@${REINPLACE_CMD} -e 's|HAVE_PYGTK="yes"|HAVE_PYGTK="no"|' \
+		${WRKSRC}/configure
+.endif
 
 .include <bsd.port.post.mk>
