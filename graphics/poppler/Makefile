@@ -3,19 +3,17 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.26 2006/07/18 19:54:44 ahze Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.27 2006/09/10 00:51:11 mezz Exp $
 #
 
 PORTNAME=	poppler
 PORTVERSION=	0.5.3
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	A PDF rendering library
-
-LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
@@ -60,6 +58,8 @@ CONFIGURE_ARGS+=--disable-poppler-glib --disable-poppler-qt \
 		--disable-poppler-qt4 --disable-utils
 .if defined(WITHOUT_CAIRO)
 CONFIGURE_ARGS+=	--disable-cairo-output
+.else
+LIB_DEPENDS+=		cairo.2:${PORTSDIR}/graphics/cairo
 .endif
 .endif
 
