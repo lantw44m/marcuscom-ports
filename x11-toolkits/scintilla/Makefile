@@ -3,10 +3,10 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/scintilla/Makefile,v 1.1 2006/07/18 16:55:13 ahze Exp $
+#    $MCom: ports/x11-toolkits/scintilla/Makefile,v 1.2 2006/09/10 00:51:18 mezz Exp $
 
 PORTNAME=	scintilla
-PORTVERSION=	1.70
+PORTVERSION=	1.71
 PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
@@ -28,7 +28,7 @@ USE_LDCONFIG=	yes
 
 .if defined(WITH_GTK2)
 USE_GNOME=	gtk20
-PKGNAMESUFFIX=	-gtk2
+PKGNAMESUFFIX:=	-gtk2
 .else
 USE_GNOME=	gtk12
 MAKE_ARGS+=	GTK1=yes
