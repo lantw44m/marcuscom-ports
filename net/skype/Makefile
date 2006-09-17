@@ -41,6 +41,7 @@ do-build:
 	${BRANDELF} -t Linux ${WRKSRC}/skype
 
 do-install:
+	@${MKDIR} ${PREFIX}/share/applications
 	${INSTALL} ${WRKSRC}/skype ${PREFIX}/bin/skype_bin
 #	${INSTALL} ${WRKSRC}/skype-callto-handler ${PREFIX}/bin/
 	${ECHO_CMD} -e "#!/bin/sh\n\nSKYPE_RESOURCES_PATH='${DATADIR}' skype_bin \"\$$@\" 2>&1 | grep -v 'SOUND_MIXER_WRITE_IGAIN failed'" >${PREFIX}/bin/skype
