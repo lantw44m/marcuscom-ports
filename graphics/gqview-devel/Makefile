@@ -17,7 +17,6 @@ COMMENT=	Another gtk2-based graphic file viewer
 
 LIB_DEPENDS=	png.5:${PORTSDIR}/graphics/png
 
-USE_X_PREFIX=	yes
 USE_GNOME=	gnomehier gtk20
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
