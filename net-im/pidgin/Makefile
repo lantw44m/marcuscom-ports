@@ -3,7 +3,7 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net-im/gaim-devel/Makefile,v 1.1 2006/09/17 05:05:19 marcus Exp $
 #
 
 PORTNAME=	gaim
@@ -101,6 +101,7 @@ PLIST_SUB+=		DBUS="@comment not installed: "
 USE_PERL5=		yes
 CONFIGURE_ARGS+=	--with-perl-lib=site
 PLIST_SUB+=		PERL:=""
+MAN3PREFIX=		${PREFIX}/lib/perl5/${PERL_VERSION}
 MAN3+=			Gaim.3
 .else
 CONFIGURE_ARGS+=	--disable-perl
