@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.21 2006/09/03 20:23:47 ahze Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.22 2006/09/14 13:58:56 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -67,12 +67,11 @@ Gecko_Pre_Include=			bsd.gecko.mk
 #		${WRKSRC}/configure
 #  .endif
 
-.if ${OSVERSION} >= 500000
-.if (${ARCH}!="sparc64" || ${OSVERSION} >= 601101) && ${ARCH}!="ia64"
-_GECKO_ALL=	firefox nvu seamonkey sunbird thunderbird xulrunner firefox-devel flock
+.if (${ARCH}!="sparc64" || ${OSVERSION} >= 601101) && ${ARCH}!="ia64" && ${OSVERSION} >= 500000
+_GECKO_ALL=	firefox seamonkey xulrunner firefox-devel flock sunbird thunderbird nvu
+.else
+_GECKO_ALL=	mozilla
 .endif
-.endif
-_GECKO_ALL+=	mozilla
 
 sunbird_PORTSDIR=	deskutils
 
@@ -89,15 +88,19 @@ ${gecko}_PLIST?=	${LOCALBASE}/lib/${gecko}/libgtkembedmoz.so
 .for badgecko in ${USE_GECKO}
 . if ${_GECKO_ALL:M${badgecko:C/^([^<->]+).*/\1/}}!=""
 GOOD_USE_GECKO+=	${badgecko:C/^([^<->]+).*/\1/}
+.  if exists(${${badgecko}_PLIST})
+INSTALLED_GECKOS+=	${badgecko:C/^([^<->]+).*/\1/}
+.  endif
 . endif
 . if ${_GECKO_ALL:M${badgecko:C/^[^<->]+<->([^<->]+).*/\1/}}!="${badgecko:C/^([^<->]+).*/\1/}"
 ${badgecko:C/^([^<->]+).*/\1/}_HACK=	s:${badgecko:C/^[^<->]+<->([^<->]+).*/\1/}:${badgecko:C/^([^<->]+).*/\1/}:g
 . endif
 .endfor
 
-.undef GECKO_FALLTHROUGH
 .undef _FOUND_WITH_GECKO
-# Figure out which gecko to use and weed out the bad ones
+# 3 levels of craziness to figure out which gecko to use
+
+# Level 1, find GECKO via [WITH|USE]_GECKO 
 .if defined(WITH_GECKO) && defined(GOOD_USE_GECKO)
 . for badgecko in ${WITH_GECKO}
 .  if ${GOOD_USE_GECKO:M${badgecko}}!=""
@@ -106,20 +109,28 @@ GOOD_WITH_GECKO+=	${badgecko}
 . endfor
 . if defined(GOOD_WITH_GECKO)
 .  for gecko in ${GOOD_WITH_GECKO}
-.   if !defined(GECKO_FALLTHROUGH)
+.   if !defined(GECKO)
 GECKO=	${gecko}
-GECKO_FALLTHROUGH=	${TRUE}
 _FOUND_WITH_GECKO=	${TRUE}
 .   endif
 .  endfor
 . endif
 .endif
 
+# Level 2, Use installed gecko
+.if !defined(GECKO) && defined(INSTALLED_GECKOS)
+. for gecko in ${INSTALLED_GECKOS}
+.  if !defined(GECKO)
+GECKO=	${gecko}
+.  endif
+. endfor
+.endif
+
+# Level 3, Fall back to the first listing in ${USE_GECKO}
 .if !defined(GECKO) && defined(GOOD_USE_GECKO)
 . for gecko in ${GOOD_USE_GECKO}
-.  if !defined(GECKO_FALLTRHOUGH)
+.  if !defined(GECKO)
 GECKO=	${gecko}
-GECKO_FALLTRHOUGH=	${TRUE}
 .  endif
 . endfor
 .endif
