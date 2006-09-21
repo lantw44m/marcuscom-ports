@@ -1,0 +1,11 @@
+%%PYTHON_SITELIBDIR%%/goocanvasmodule.la
+%%PYTHON_SITELIBDIR%%/goocanvasmodule.so
+share/gtk-doc/html/pygoocanvas/class-canvas-model-simple.html
+share/gtk-doc/html/pygoocanvas/class-canvas-model.html
+share/gtk-doc/html/pygoocanvas/class-canvas-view.html
+share/gtk-doc/html/pygoocanvas/class-hierarchy.html
+share/gtk-doc/html/pygoocanvas/index.html
+share/gtk-doc/html/pygoocanvas/index.sgml
+share/gtk-doc/html/pygoocanvas/pygoocanvas-core-classes.html
+share/gtk-doc/html/pygoocanvas/pygoocanvas.devhelp
+@dirrmtry share/gtk-doc/html/pygoocanvas
