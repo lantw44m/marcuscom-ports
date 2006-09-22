@@ -1,56 +1,28 @@
 # Date created:			  Sun Oct 26, 2003
 # Whom:				  Thierry Thomas (<thierry@pompo.net>)
 #
-# $FreeBSD$
-#    $MCom$
+# $FreeBSD: ports/www/mozex/Makefile.xpi,v 1.6 2006/09/06 06:45:01 thierry Exp $
+#
+
+USE_GECKO=	seamonkey mozilla
+.include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
 
 EXTRACT_SUFX=   .xpi
-
-BUILD_DEPENDS+=	${MOZDIR}/regxpcom:${PORTSDIR}/www/${MOZPORT}
-RUN_DEPENDS+=	${MOZDIR}:${PORTSDIR}/www/${MOZPORT}
 
 NO_BUILD=	yes
 USE_ZIP=	yes
 
-PKGINSTALL=	${PORTSDIR}/www/mozex/pkg-install.xpi
+PKGINSTALL=	${WRKDIR}/pkg-install
 PKGDEINSTALL=	${PKGINSTALL}
 
-.if !defined(WITH_FIREFOX)
-# "Regular" mozillas
-. if exists(${LOCALBASE}/lib)
-MOZDIR!=	${FIND} ${LOCALBASE}/lib -name mozilla-bin -exec dirname {} \; | ${HEAD} -n 1
-. else
-MOZDIR=
-. endif
-. if empty(MOZDIR)
-MOZPORT=	mozilla
-MOZDIR=		${LOCALBASE}/lib/${MOZPORT}
-. else
-MOZPORT!=	${BASENAME} ${MOZDIR}
-. endif
-MOZLDIR=	lib/${MOZPORT}
-.else
-# Firefox
-DEPRECATED=	"must be converted to include www/xpi-adblock/Makefile.xpi"
-PKGNAMESUFFIX=	-firefox
-. if exists(${LOCALBASE}/lib)
-MOZDIR!=	${FIND} ${LOCALBASE}/lib -name firefox-bin -exec dirname {} \; | ${HEAD} -n 1
-. else
-MOZDIR=
-. endif
-. if empty(MOZDIR)
-MOZVER=		firefox
-. else
-MOZVER!=	${BASENAME} ${MOZDIR}
-. endif
-MOZPORT=	firefox
-MOZLDIR=	lib/firefox
-.endif
-.if empty(MOZDIR)
+MOZLDIR=	lib/${GECKO}
 MOZDIR=		${LOCALBASE}/${MOZLDIR}
-.endif
-
 PLIST_SUB=	MOZDIR=${MOZLDIR}
+
+pre-configure:
+	${SED} -e 's|%%GECKO%%|${GECKO}|g'	\
+		< ${.CURDIR}/../../www/mozex/pkg-install.xpi	\
+		> ${PKGINSTALL}
 
 pre-install:
 .if ${PREFIX} != ${LOCALBASE}

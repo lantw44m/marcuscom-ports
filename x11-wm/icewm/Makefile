@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	icewm
-PORTVERSION=	1.2.27
+PORTVERSION=	1.2.28
 PORTREVISION=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
@@ -83,9 +83,13 @@ CONFIGURE_ARGS+=	--disable-x86-asm
 
 .if defined(WITH_BEASTIE)
 STARTUP_PIXMAP=		bsd-daemon.xpm
+THEMES_START_XPM_SFX=	-suppressed
 .else
 STARTUP_PIXMAP=		icewm-logo.xpm
+THEMES_START_XPM_SFX=
 .endif
+
+PLIST_SUB+=	THEMES_START_XPM_SFX=${THEMES_START_XPM_SFX}
 
 .if defined(WITHOUT_NLS)
 CONFIGURE_ARGS+=	--disable-nls --disable-i18n
@@ -96,8 +100,13 @@ PLIST_SUB+=	NLS=""
 .endif
 
 post-extract:
-	@cd ${WRKSRC}/lib/taskbar && ${MV} icewm.xpm icewm-logo.xpm
+	@cd ${WRKSRC}/lib/taskbar && ${MV} start.xpm icewm-logo.xpm
 	@${CP} -f ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
+.if defined(WITH_BEASTIE)
+	@for icon in ${WRKSRC}/lib/themes/*/taskbar/start.xpm ; do \
+		${MV} "$${icon}" "$${icon%.xpm}${THEMES_START_XPM_SFX}.xpm" ; \
+	done
+.endif
 
 post-patch:
 .for file in configure
@@ -111,7 +120,7 @@ post-patch:
 .endfor
 
 post-install:
-	@${LN} -sf ${STARTUP_PIXMAP} ${DATADIR}/taskbar/icewm.xpm
+	@${LN} -sf ${STARTUP_PIXMAP} ${DATADIR}/taskbar/start.xpm
 .if !defined(NOPORTDOCS)
 	@${MKDIR} ${DOCSDIR}
 .for file in CHANGES INSTALL README TODO

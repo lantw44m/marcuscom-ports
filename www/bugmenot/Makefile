@@ -5,19 +5,25 @@
 # $FreeBSD$
 #
 
-PORTNAME?=	bugmenot
+PORTNAME=	bugmenot
 PORTVERSION=	0.8
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://extensions.roachfiend.com/
 DISTNAME=	${PORTNAME}
-DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}_${PORTREVISION}
+DIST_SUBDIR=	${PORTNAME}-${PORTVERSION}_1
 
 MAINTAINER=	thierry@FreeBSD.org
-COMMENT?=	Mozilla extension to bypass compulsory web registration
+COMMENT=	${GECKO} extension to bypass compulsory web registration
+
+PLIST_FILES=	%%MOZDIR%%/chrome/bugmenot.jar
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/www/mozex/Makefile.xpi"
+
+.if ${GECKO} == mozilla
+PLIST_FILES+=	%%MOZDIR%%/chrome/overlayinfo/browser/content/overlays.rdf
+.endif
 
 do-install:
 	@${INSTALL_DATA} ${WRKDIR}/chrome/bugmenot.jar ${MOZDIR}/chrome

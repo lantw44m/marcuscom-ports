@@ -5,22 +5,20 @@
 # $FreeBSD$
 #
 
-PORTNAME=	mozilla-flp
-PORTVERSION=	1.7.13
+PORTNAME=	${GECKO}-flp
+PORTVERSION=	${MOZVERSION}
 PORTREVISION=	1
+PORTEPOCH=	1
 CATEGORIES=	french www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}	\
-		http://frenchmozilla.sourceforge.net/FTP/${PORTVERSION}/
+		http://frenchmozilla.sourceforge.net/FTP/${PORTVERSION}${DISTURL}/
 MASTER_SITE_SUBDIR=	frenchmozilla
-DISTNAME=	mozilla-${PORTVERSION}.fr-FR.langpack
+DISTNAME=	${GECKO}-${PORTVERSION}.fr-FR.langpack
 
 MAINTAINER=	thierry@FreeBSD.org
-COMMENT=	Mozilla French Language Pack (FLP)
+COMMENT=	${GECKO} French Language Pack (FLP)
 
 WRKSRC=		${WRKDIR}/bin
-
-.include <bsd.port.pre.mk>
-.include "${PORTSDIR}/www/mozex/Makefile.xpi"
 
 REPS=		defaults/profile/FR/chrome defaults/messenger/FR defaults/isp/FR
 FICHIERS=	chrome/FR.jar chrome/fr-FR.jar chrome/fr-unix.jar			\
@@ -34,6 +32,18 @@ FICHIERS=	chrome/FR.jar chrome/fr-FR.jar chrome/fr-unix.jar			\
 		searchplugins/jeeves.gif searchplugins/jeeves.src searchplugins/dmoz.gif\
 		searchplugins/dmoz.src searchplugins/google.gif searchplugins/google.src\
 		searchplugins/googlefr.gif searchplugins/googlefr.src
+
+.include <bsd.port.pre.mk>
+.include "${PORTSDIR}/www/mozex/Makefile.xpi"
+
+.if ${GECKO} == seamonkey
+MOZVERSION=	1.0.4
+DISTURL=	/SeaMonkey
+MD5_FILE=	${MASTERDIR}/distinfo.seamonkey
+.else
+MOZVERSION=	1.7.13
+DISTURL=	# No subdir
+.endif
 
 do-install:
 .for rep in ${REPS}

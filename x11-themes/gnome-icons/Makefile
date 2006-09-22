@@ -10,7 +10,7 @@
 # x11-themes/gnome-icons/bsd.gnome-icons.mk for it.
 
 PORTNAME=	gnome-icons
-PORTVERSION=	20040229
+PORTVERSION=	20060914
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -22,13 +22,16 @@ COMMENT=	Meta-port for Gnome iconsets
 RUN_DEPENDS=	${LOCALBASE}/share/icons/AquaFusion/index.theme:${PORTSDIR}/x11-themes/gnome-icons-aqua-fusion \
 		${LOCALBASE}/share/icons/CoolGorilla-ICONS/index.theme:${PORTSDIR}/x11-themes/gnome-icons-cool-gorilla \
 		${LOCALBASE}/share/icons/CfG-Crystal-SVG-1.2.0/index.theme:${PORTSDIR}/x11-themes/gnome-icons-crystal \
+		${LOCALBASE}/share/icons/Edge-Icons-0.6/index.theme:${PORTSDIR}/x11-themes/gnome-icons-edge \
 		${LOCALBASE}/share/icons/Gentoo-test/index.theme:${PORTSDIR}/x11-themes/gnome-icons-gentoo-test \
 		${LOCALBASE}/share/icons/Iris/index.theme:${PORTSDIR}/x11-themes/gnome-icons-iris \
+		${LOCALBASE}/share/icons/Lila/index.theme:${PORTSDIR}/x11-themes/gnome-icons-lila \
 		${LOCALBASE}/share/icons/Noia/index.theme:${PORTSDIR}/x11-themes/gnome-icons-noia-full \
 		${LOCALBASE}/share/icons/NoiaWarm/index.theme:${PORTSDIR}/x11-themes/gnome-icons-noia-warm \
 		${LOCALBASE}/share/icons/gnome-rh8/index.theme:${PORTSDIR}/x11-themes/gnome-icons-refined \
 		${LOCALBASE}/share/icons/Slick/index.theme:${PORTSDIR}/x11-themes/gnome-icons-slick \
 		${LOCALBASE}/share/icons/Snow-Apple/index.theme:${PORTSDIR}/x11-themes/gnome-icons-snow-apple \
+		${LOCALBASE}/share/icons/SnowIsh-1.0_PNG/index.theme:${PORTSDIR}/x11-themes/gnome-icons-snowish \
 		${LOCALBASE}/share/icons/stylish/index.theme:${PORTSDIR}/x11-themes/gnome-icons-stylish \
 		${LOCALBASE}/share/icons/ximian-south/index.theme:${PORTSDIR}/x11-themes/gnome-icons-ximian-south \
 		${LOCALBASE}/share/icons/Lila/index.theme:${PORTSDIR}/x11-themes/gnome-icons-lila

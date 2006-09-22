@@ -6,8 +6,8 @@
 #
 
 PORTNAME=	gnugadu2
-PORTVERSION=	2.2.8
-PORTREVISION=	3
+PORTVERSION=	2.2.9
+PORTREVISION=	1
 CATEGORIES=	polish net-im
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	ggadu
@@ -16,21 +16,21 @@ DISTNAME=	gg2-${PORTVERSION}
 MAINTAINER=	smyru@heron.pl
 COMMENT=	GTK2 based Gadu-Gadu client for X11
 
-LIB_DEPENDS=	gadu.3:${PORTSDIR}/polish/ekg \
+LIB_DEPENDS=	gadu.3:${PORTSDIR}/polish/libgadu \
 		audiofile.0:${PORTSDIR}/audio/libaudiofile
 
 USE_BZIP2=	yes
 USE_X_PREFIX=	yes
 USE_PERL5=	yes
+USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gtk20
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
 WANT_GNOME=	yes
 CONFLICTS=	qhacc-[0-9]*
 
-CONFIGURE_ARGS=	\
-		--disable-esdtest \
+CONFIGURE_ARGS=	--disable-esdtest \
 		--with-external-libgadu \
 		--with-static=no \
 		--with-aaway \
@@ -41,35 +41,36 @@ CONFIGURE_ARGS=	\
 		--with-oss \
 		--with-sms \
 		--with-update \
-		--without-dbus \
 		--without-gnutls \
 		--without-perl \
 		--without-remote
 
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		CPPFLAGS="-I${X11BASE}/include"
 
-OPTIONS=	TLEN	"Enable Tlen.pl network plugin"	off \
+OPTIONS=	TLEN	"Enable Tlen.pl network plugin"		off \
 		JABBER	"Enable Jabber loudmouth plugin"	off \
-		DOCKLET	"Enable fd.o docklet plugin"	on \
+		DBUS	"Enable D-Bus plugin"			off \
+		DOCKLET	"Enable fd.o docklet plugin"		on \
 		DOCKAPP	"Enable WindowMaker dockapp plugin"	off \
 		GTKSPELL	"Enable GTKSpell checker"	off \
 		XOSD	"Enable On-Screen-Display messages"	off \
-		ARTS	"Build with aRts sound server"	off \
+		ARTS	"Build with aRts sound server"		off \
 		ESOUND	"Build with esound sound server"	off
 
 .include <bsd.port.pre.mk>
 
-.if (${HAVE_GNOME:Mesound}!="")
+.if (${HAVE_GNOME:Mesound}!="") && !defined(WITHOUT_ESOUND)
 WITH_ESOUND=	yes
 .endif
 
 # does not work with newer dbus versions
-#.if exists(${LOCALBASE}/lib/libdbus-1.so)
-#WITH_DBUS=	yes
-#.endif
+.if exists(${LOCALBASE}/lib/libdbus-1.so) && !defined(WITHOUT_DBUS)
+WITH_DBUS=	yes
+.endif
 
-.if exists(${LOCALBASE}/lib/libgtkspell.so)
+.if exists(${LOCALBASE}/lib/libgtkspell.so) && !defined(WITHOUT_GTKSPELL)
 WITH_GTKSPELL=	yes
 .endif
 
@@ -114,15 +115,15 @@ CONFIGURE_ARGS+=	--with-gtkspell
 CONFIGURE_ARGS+=	--without-gtkspell
 .endif
 
-#.if defined(WITH_DBUS)
-#LIB_DEPENDS+=	dbus-1.2:${PORTSDIR}/devel/dbus
-#CONFIGURE_ARGS+=	--with-dbus \
-#			--with-dbus-dir=${LOCALBASE}/share/dbus-1/services
-#PLIST_SUB+=	DBUS:=""
-#.else
-#CONFIGURE_ARGS+=	--without-dbus
-#PLIST_SUB+=	DBUS:="@comment "
-#.endif
+.if defined(WITH_DBUS)
+LIB_DEPENDS+=	dbus-1.2:${PORTSDIR}/devel/dbus
+CONFIGURE_ARGS+=	--with-dbus \
+			--with-dbus-dir=${PREFIX}/share/dbus-1/services
+PLIST_SUB+=	DBUS:=""
+.else
+CONFIGURE_ARGS+=	--without-dbus
+PLIST_SUB+=	DBUS:="@comment "
+.endif
 
 .if defined(WITH_ESOUND)
 PKGNAMESUFFIX=	-esound
@@ -179,4 +180,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/gg2.desktop ${LOCALBASE}/share/applnk/Internet
 .endif
 
+# vim: set ts=8 sw=8:
 .include <bsd.port.post.mk>
