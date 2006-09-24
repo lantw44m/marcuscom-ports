@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	alexandria
-PORTVERSION=	0.5.0
+PORTVERSION=	0.6.1
 PORTREVISION=	3
 CATEGORIES=	deskutils ruby
 MASTER_SITES=	${MASTER_SITE_RUBYFORGE}
@@ -25,6 +25,7 @@ RUN_DEPENDS=	${RUBY_SITELIBDIR}/amazon.rb:${PORTSDIR}/www/ruby-amazon \
 		${RUBY_SITEARCHLIBDIR}/gconf2.so:${PORTSDIR}/devel/ruby-gconf2
 
 USE_GNOME=	gnomehier
+INSTALLS_OMF=	yes
 USE_GETTEXT=	yes
 USE_RUBY=	yes
 USE_RUBY_SETUP=	yes
@@ -34,6 +35,7 @@ DOCS=		NEWS README TODO
 GCONF_SCHEMAS=	alexandria.schemas
 
 RUBY_REQUIRE=	Ruby > 180
+CONFIGURE_ARGS=	"--prefix=${PREFIX}"
 
 .include <bsd.port.pre.mk>
 

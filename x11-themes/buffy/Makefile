@@ -3,11 +3,12 @@
 # Whom:				 	Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-themes/buffy/Makefile,v 1.1 2006/07/19 19:56:11 ahze Exp $
+#
 
 PORTNAME=	buffy
 PORTVERSION=	0.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_THEMES}
 MASTER_SITE_SUBDIR=	buffy02
