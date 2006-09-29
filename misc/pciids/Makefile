@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/misc/pciids/Makefile,v 1.3 2006/09/09 14:40:41 ahze Exp $
+#    $MCom: ports/misc/pciids/Makefile,v 1.4 2006/09/16 21:29:31 ahze Exp $
 
 PORTNAME=	pciids
-PORTVERSION=	20060916
+PORTVERSION=	20060929
 CATEGORIES=	misc
 MASTER_SITES=	http://www.ahze.net/~ahze/distfiles/ \
 		${MASTER_SITE_LOCAL}
