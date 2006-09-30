@@ -483,6 +483,8 @@ share/locale/zh_CN/LC_MESSAGES/gaim.mo
 share/locale/zh_TW/LC_MESSAGES/gaim.mo
 @dirrmtry share/locale/my_MM/LC_MESSAGES
 @dirrmtry share/locale/my_MM
+@dirrmtry share/locale/en_AU/LC_MESSAGES
+@dirrmtry share/locale/en_AU
 @dirrm share/gnome/sounds/gaim
 @dirrm share/gnome/pixmaps/gaim/status/default
 @dirrm share/gnome/pixmaps/gaim/status
