@@ -5,7 +5,7 @@
 # and will be autodetected to enable
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/vlc/Makefile.inc,v 1.2 2006/08/20 05:49:24 mezz Exp $
 #
 # If you define for example WITH_FAAD and WITHOUT_FAAD
 # the WITHOUT_ will always over ride the WITH_.
@@ -294,6 +294,7 @@ pre-install:
 .endif
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		${MAKEFILE} ${MAKE_ARGS} ${INSTALL_TARGET} prefix=${FAKEDIR}
+	${RM} -f ${FAKEDIR}/share/locale/locale.alias
 	cd ${FAKEDIR}/bin && ${FIND} -s * | \
 		${SED} -e 's|^|bin/|' >> ${PLIST}
 	cd ${FAKEDIR}/include && ${FIND} -s * -type f -o -type l | \
@@ -310,6 +311,7 @@ pre-install:
 		&& ${FIND} -d * -type d | \
 		${SED} -e 's|^|@dirrm share/${dir}/|' >> ${PLIST}
 .endfor
+		${ECHO_CMD} "@dirrmtry share/pixmaps" >> ${PLIST}
 .if !defined(NOPORTDOCS)
 	cd ${FAKEDIR}/share/doc && ${FIND} -s * -type f -o -type l | \
 		${SED} -e 's|^|share/doc/|' >> ${PLIST} \
