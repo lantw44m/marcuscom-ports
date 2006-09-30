@@ -7,7 +7,7 @@
 
 PORTNAME=	gtk
 PORTVERSION=	12.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.openi18n.org/download/im-sdk/src/
 PKGNAMEPREFIX=	iiimf-
@@ -21,8 +21,7 @@ LIB_DEPENDS=	iiimp.1:${PORTSDIR}/textproc/iiimf-protocol-lib \
 
 ONLY_FOR_ARCHS=	i386
 
-USE_X_PREFIX=	yes
-
+USE_XLIB=	yes
 USE_BZIP2=	yes
 USE_ICONV=	yes
 USE_GETTEXT=	yes
