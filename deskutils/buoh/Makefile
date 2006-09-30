@@ -7,7 +7,7 @@
 
 PORTNAME=	buoh
 PORTVERSION=	0.8.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	deskutils www gnome
 MASTER_SITES=	http://buoh.steve-o.org/downloads/
 
@@ -56,6 +56,7 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}
 .endfor
 .endif
+	@${MKDIR} ${LOCALBASE}/share/pixmaps
 	@${LN} -sf ${DATADIR}/pixmaps/buoh64x64.png \
 		${LOCALBASE}/share/pixmaps/buoh64x64.png
 
