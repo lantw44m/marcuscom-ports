@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/sunbird/Makefile,v 1.15 2006/07/18 12:24:16 ahze Exp $
+#   $MCom: ports/deskutils/sunbird/Makefile,v 1.16 2006/09/30 05:09:42 ahze Exp $
 #
 
 PORTNAME=	sunbird
@@ -65,7 +65,7 @@ pre-install:
 	${ECHO_CMD} 'share/applications/sunbird.desktop' >> ${PLIST}
 	${ECHO_CMD} 'share/pixmaps/${SUNBIRD_ICON}' >> ${PLIST}
 	${ECHO_CMD} '@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}' >> ${PLIST}
-	${ECHO_CMD} '@unexec ${RMDIR} %D/share/pixmaps 2>/dev/null || ${TRUE}' >> ${PLIST}
+
 do-install:
 	${MKDIR} ${PREFIX}/share/applications ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKDIR}/sunbird.desktop ${PREFIX}/share/applications
