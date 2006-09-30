@@ -3,11 +3,12 @@
 # Whom:					arved
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-toolkits/qtpixmap/Makefile,v 1.1 2006/07/19 19:25:36 ahze Exp $
+#
 
 PORTNAME=	qtpixmap
 PORTVERSION=	0.28
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://www.cpdrummond.freeuk.com/
 DISTNAME=	QtPixmap-${PORTVERSION}

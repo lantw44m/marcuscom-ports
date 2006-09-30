@@ -1,7 +1,7 @@
 bin/im-ja-conf
 bin/im-ja-xim-server
-lib/gtk-2.0/2.4.0/immodules/im-ja.la
-lib/gtk-2.0/2.4.0/immodules/im-ja.so
+lib/gtk-2.0/%%GTK2_VERSION%%/immodules/im-ja.la
+lib/gtk-2.0/%%GTK2_VERSION%%/immodules/im-ja.so
 %%GNOMEPANEL%%libdata/bonobo/servers/GNOME_ImJaApplet.server
 %%GNOMEPANEL%%libexec/im-ja/im-ja-applet
 libexec/im-ja/im-ja-helper
