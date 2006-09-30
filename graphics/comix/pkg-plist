@@ -57,6 +57,7 @@ share/pixmaps/comix/silk-zoom.png
 @dirrm share/pixmaps/comix
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrmtry share/applications
+@dirrmtry share/pixmaps
 %%THUMBNAILS:%%@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 %%THUMBNAILS:%%@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
