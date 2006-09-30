@@ -89,6 +89,8 @@ share/locale/sv/LC_MESSAGES/gdeskcal.mo
 share/locale/tr/LC_MESSAGES/gdeskcal.mo
 share/locale/uk/LC_MESSAGES/gdeskcal.mo
 share/locale/zh_CN/LC_MESSAGES/gdeskcal.mo
+@dirrmtry share/locale/de_AT/LC_MESSAGES
+@dirrmtry share/locale/de_AT
 @dirrm share/gnome/gdeskcal/skins/miderat
 @dirrm share/gnome/gdeskcal/skins/default
 @dirrm share/gnome/gdeskcal/skins/big_and_simple
