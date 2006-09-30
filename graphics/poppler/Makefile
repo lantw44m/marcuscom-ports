@@ -3,17 +3,19 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.28 2006/09/17 21:50:04 marcus Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.29 2006/09/30 04:47:07 ahze Exp $
 #
 
 PORTNAME=	poppler
 PORTVERSION=	0.5.4
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	A PDF rendering library
+
+RUN_DEPENDS=	poppler-data>0:${PORTSDIR}/graphics/poppler-data
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
