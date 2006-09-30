@@ -1,0 +1,6 @@
+share/scim/tables/Hangul.bin
+share/scim/tables/HangulRomaja.bin
+share/scim/tables/Hanja.bin
+share/scim/icons/Hangul.png
+share/scim/icons/Hanja.png
+@dirrmtry share/scim/tables
