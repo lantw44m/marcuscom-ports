@@ -7,7 +7,7 @@
 
 PORTNAME=	alexandria
 PORTVERSION=	0.6.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils ruby
 MASTER_SITES=	${MASTER_SITE_RUBYFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -42,6 +42,9 @@ CONFIGURE_ARGS=	"--prefix=${PREFIX}"
 .if !defined(RUBY_PROVIDED)
 IGNORE=		only works with Ruby 1.8.0 or later
 .endif
+
+post-extract:
+	@${MV} ${WRKSRC}/data/omf ${WRKSRC}/data/gnome/
 
 post-install:
 	@${MKDIR} ${LOCALBASE}/etc/gconf/schemas
