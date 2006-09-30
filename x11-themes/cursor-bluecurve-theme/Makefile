@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	cursor-bluecurve-theme
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	The Bluecurve X cursor themes
 
@@ -14,6 +14,8 @@ COMMENT=	The Bluecurve X cursor themes
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gdk-pixbuf-2.0.pc:${PORTSDIR}/x11-toolkits/gtk20
 
 MASTERDIR=	${.CURDIR}/../bluecurve-themes
+
+PREFIX=		${X11BASE}
 
 THEMES=		Bluecurve Bluecurve-inverse
 
