@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net-p2p/gtorrentviewer/Makefile,v 1.1 2006/09/29 23:46:06 ahze Exp $
 
 PORTNAME=	gtorrentviewer
 PORTVERSION=	0.2b
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	net-p2p
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -18,7 +18,7 @@ COMMENT=	GTK+2 viewer and editor for BitTorrent meta files
 
 LIB_DEPENDS=	curl.3:${PORTSDIR}/ftp/curl
 
-USE_GNOME=	gtk20 gnomeprefix intlhack
+USE_GNOME=	gtk20 gnomehier intlhack
 USE_XLIB=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
