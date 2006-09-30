@@ -1,0 +1,61 @@
+# New ports collection makefile for:	gxine
+# Date created:	Sa 19 Apr 2003 01:34:06 CEST
+# Whom: 	Grigori Goronzy <greg@chown.ath.cx>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	gxine
+PORTVERSION=	0.5.7
+PORTREVISION=	1
+CATEGORIES=	multimedia
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
+MASTER_SITE_SUBDIR=	xine
+
+MAINTAINER=	makc@issp.ac.ru
+COMMENT=	An alternative GUI for the Xine media player
+
+LIB_DEPENDS=	xine.15:${PORTSDIR}/multimedia/libxine
+
+USE_BZIP2=	yes
+USE_AUTOTOOLS=	libtool:15
+USE_GNOME=	gtk20 gnomehier
+USE_GMAKE=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib -I${X11BASE}/lib"
+CONFIGURE_ARGS=	--mandir=${PREFIX}/man
+INSTALLS_ICONS=	yes
+
+MANLANG=	"" de
+MAN1=		gxine.1 gxine_client.1
+MANCOMPRESSED=	no
+
+OPTIONS=	MOZILLA_PLUGIN "Install Mozilla plugin" on
+
+.include <bsd.port.pre.mk>
+.if defined(WITHOUT_NLS)
+CONFIGURE_ARGS+=--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.else
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.endif
+
+.if defined(WITHOUT_MOZILLA_PLUGIN)
+LIB_DEPENDS+=	js.1:${PORTSDIR}/lang/spidermonkey
+CONFIGURE_ARGS+=--without-browser-plugin
+PLIST_SUB+=	MOZILLA_PLUGIN="@comment "
+.else
+USE_GECKO=	firefox mozilla seamonkey xulrunner firefox-devel
+.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
+CONFIGURE_ARGS+=--disable-libjs
+PLIST_SUB+=	MOZILLA_PLUGIN=""
+.endif
+
+post-install:
+.if !defined(WITHOUT_MOZILLA_PLUGIN)
+	@${MKDIR} ${PREFIX}/lib/browser_plugins
+	@${LN} -sf ${PREFIX}/lib/gxine/gxineplugin.so ${PREFIX}/lib/browser_plugins
+.endif
+
+.include <bsd.port.post.mk>
