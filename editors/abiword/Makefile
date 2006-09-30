@@ -3,12 +3,12 @@
 # Whom:                 Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/abiword/Makefile,v 1.4 2006/07/18 12:44:27 ahze Exp $
+#   $MCom: ports/editors/abiword/Makefile,v 1.5 2006/07/27 13:47:14 marcus Exp $
 #
 
 PORTNAME=	abiword
 PORTVERSION=	2.4.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abisource.com/downloads/%SUBDIR%/${PORTVERSION}/source/
 MASTER_SITE_SUBDIR=	abiword
