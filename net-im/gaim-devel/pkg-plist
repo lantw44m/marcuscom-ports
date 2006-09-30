@@ -523,6 +523,8 @@ share/locale/zh_TW/LC_MESSAGES/gaim.mo
 @dirrmtry share/locale/my_MM
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/en_AU/LC_MESSAGES
+@dirrmtry share/locale/en_AU
 @dirrmtry share/locale/ca_ES@valencian/LC_MESSAGES
 @dirrmtry share/locale/ca_ES@valencian
 @dirrm share/gnome/sounds/gaim
