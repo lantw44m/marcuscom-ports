@@ -3,7 +3,8 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/news/pan-devel/Makefile,v 1.9 2006/09/26 22:27:53 mezz Exp $
+#   $MCom$
+#
 
 PORTNAME=	pan
 PORTVERSION=	0.115
