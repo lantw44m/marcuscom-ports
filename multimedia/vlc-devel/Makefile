@@ -3,13 +3,13 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.17 2006/08/20 05:49:25 mezz Exp $
-#
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.18 2006/09/04 15:10:51 ahze Exp $
+#      $Id: Makefile,v 1.19 2006-10-01 16:04:21 ahze Exp $
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
 
 PORTNAME=	vlc
-DISTVERSION=	0.8.6.20060901
+DISTVERSION=	0.9.0.20060926
 PORTREVISION=	0
 CATEGORIES=	multimedia audio ipv6 net www
 MASTER_SITES=	http://nightlies.videolan.org/build/source/
@@ -18,7 +18,7 @@ MASTER_SITES=	http://nightlies.videolan.org/build/source/
 #		ftp://ftp.crans.org/pub/videolan/vlc/${PORTVERSION}/ \
 #		ftp://videolan.cs.pu.edu.tw/Windows/VideoLAN/vlc/${PORTVERSION}/ \
 PKGNAMESUFFIX=	-devel
-DISTNAME=	${PORTNAME}-snapshot-${DISTVERSION:S/0.8.6.//}
+DISTNAME=	${PORTNAME}-snapshot-${DISTVERSION:S/0.9.0.//}
 
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Multimedia streaming server and player for various audio/video formats
@@ -28,7 +28,7 @@ RUN_DEPENDS=	${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fo
 
 CONFLICTS=	vlc-[0-9]*
 
-WRKSRC=		${WRKDIR}/${PORTNAME}-0.8.6-svn
+WRKSRC=		${WRKDIR}/${PORTNAME}-0.9.0-svn
 
 WITH_VLC_DEFAULT_FONT?=	${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf
 
@@ -298,7 +298,7 @@ CONFIGURE_ARGS+=--disable-dirac
 
 .if !defined(WITHOUT_X264)
 CONFIGURE_ARGS+=--enable-x264
-LIB_DEPENDS+=	x264.49:${PORTSDIR}/multimedia/x264
+LIB_DEPENDS+=	x264.50:${PORTSDIR}/multimedia/x264
 .else
 CONFIGURE_ARGS+=--disable-x264
 .endif

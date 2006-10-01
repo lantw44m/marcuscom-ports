@@ -6,7 +6,7 @@
 #
 # $FreeBSD$
 #    $MCom: ports/multimedia/vlc-devel/Makefile.inc,v 1.5 2006/09/04 15:10:51 ahze Exp $
-#
+#      $Id: Makefile.inc,v 1.7 2006-10-01 16:04:21 ahze Exp $
 # If you define for example WITH_FAAD and WITHOUT_FAAD
 # the WITHOUT_ will always over ride the WITH_.
 #
