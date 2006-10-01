@@ -7,7 +7,7 @@
 
 PORTNAME=	icons-tango
 PORTVERSION=	0.7.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://tango-project.org/releases/ \
 		${MASTER_SITE_GENTOO}
