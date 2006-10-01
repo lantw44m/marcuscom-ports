@@ -1,5 +1,6 @@
 bin/gnome-im-properties
 bin/gnome-im-settings-daemon
+libdata/bonobo/servers/GNOME_IMSwitcherApplet.server
 libexec/gnome-im-switcher-applet
 share/gnome/control-center-2.0/capplets/gnome-im-properties.desktop
 share/gnome/control-center-2.0/interfaces/gnome-im-properties.glade2
