@@ -3,8 +3,8 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.19 2006/10/01 16:04:21 ahze Exp $
-#      $Id: Makefile,v 1.20 2006-10-01 16:46:05 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.20 2006/10/01 16:46:05 ahze Exp $
+#      $Id: Makefile,v 1.21 2006-10-01 18:16:43 ahze Exp $
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
 
@@ -42,13 +42,13 @@ WANT_SDL=	yes
 USE_ICONV=	yes
 USE_PERL5_BUILD=yes
 
-FAKEDIR=	${WRKDIR}/fake
+FAKEDIR=	${WRKDIR}/fake/${PREFIX}
 PLIST=		${WRKDIR}/plist
 
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${WRKSRC}/include ${CPPFLAGS} -I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
-		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
+CONFIGURE_ENV=	CPPFLAGS="-I${FAKEDIR}/include -I${WRKSRC}/include ${CPPFLAGS} -I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
+		LDFLAGS="${LDFLAGS} -L${FAKEDIR}/lib -L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
 
 CONFIGURE_ARGS+=	--enable-ffmpeg \
 			--with-ffmpeg=${LOCALBASE} \
