@@ -1,16 +1,15 @@
-# New ports collection makefile for:	bmpx-devel
-# Date created:				2006-08-12
+# New ports collection makefile for:	bmpx
+# Date created:				2005-11-20
 # Whom:					Roman Bogorodskiy <novel@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/bmpx-devel/Makefile,v 1.2 2006/09/10 12:35:14 novel Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	bmpx
-PORTVERSION=	0.21.0
+PORTVERSION=	0.20.3
 PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://files.beep-media-player.org/releases/${PORTVERSION:C/\.[0-9]*$//}/
-PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Media player geared towards usability, technical efficiency and looks
@@ -21,11 +20,10 @@ LIB_DEPENDS=	tag.5:${PORTSDIR}/audio/taglib \
 		neon.25:${PORTSDIR}/www/neon \
 		glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
 		gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24 \
-		cairomm-1.0.1:${PORTSDIR}/graphics/cairomm \
 		boost_date_time.3:${PORTSDIR}/devel/boost \
 		dbus-1.2:${PORTSDIR}/devel/dbus
 
-CONFLICTS=	bmpx-[0-9]*
+CONFLICTS=	bmpx-devel-[0-9]*
 
 USE_AUTOTOOLS=	autoconf:259
 USE_BISON=	yes
@@ -35,13 +33,12 @@ USE_GCC=	3.4+
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 libglade2 desktopfileutils
 INSTALLS_ICONS=	yes
-LIBTOOLFILES=	configure libhrel/configure \
-		libchroma/configure libskinned/configure
-USE_GSTREAMER=	good mad ogg
+USE_GSTREAMER=	good mad ogg vorbis
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-pkgconfig-dir=${PREFIX}/libdata/pkgconfig \
-			--with-dbus-services-dir="${PREFIX}/share/dbus-1/services"
+			--with-dbus-services-dir="${PREFIX}/share/dbus-1/services" \
+			--with-libintl-prefix="${LOCALBASE}"
 CONFIGURE_TARGET=	--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
 CONFIGURE_ENV=	CFLAGS="${CFLAGS} -I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib ${PTHREAD_LIBS}"
@@ -69,20 +66,5 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/not
 .else
 CONFIGURE_ARGS+=	--disable-libnotify
 .endif
-
-.if defined(WITH_SOULSEEK)
-CONFIGURE_ARGS+=	--enable-moodriver
-LIB_DEPENDS+=	moodriver.0:${PORTSDIR}/net-p2p/moodriver
-RUN_DEPENDS+=	mooseekd:${PORTSDIR}/net-p2p/mooseekd
-.endif
-
-pre-everything::
-	@${ECHO_MSG}
-	@${ECHO_MSG} "Note: it is a development version of bmpx. It is fully"
-	@${ECHO_MSG} "workable, though it may be not as stable as a version"
-	@${ECHO_MSG} "provided by multimedia/bmpx port. And it requires you to"
-	@${ECHO_MSG} "to delete the existing library. So if you want stability"
-	@${ECHO_MSG} "please use multimedia/bmpx port instead."
-	@${ECHO_MSG}
 
 .include <bsd.port.mk>
