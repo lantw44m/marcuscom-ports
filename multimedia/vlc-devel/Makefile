@@ -3,8 +3,8 @@
 # Whom:			Brian Somers <brian@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.18 2006/09/04 15:10:51 ahze Exp $
-#      $Id: Makefile,v 1.19 2006-10-01 16:04:21 ahze Exp $
+#    $MCom: ports/multimedia/vlc-devel/Makefile,v 1.19 2006/10/01 16:04:21 ahze Exp $
+#      $Id: Makefile,v 1.20 2006-10-01 16:46:05 ahze Exp $
 # *** PLEASE READ Makefile.inc for more information on knobs ***
 #
 
@@ -192,7 +192,7 @@ CONFIGUE_ARGS+=		--disable-bonjour
 
 .if !defined(WITHOUT_CDROM)
 LIB_DEPENDS+=	vcdinfo.2:${PORTSDIR}/multimedia/vcdimager \
-		cdio.7:${PORTSDIR}/sysutils/libcdio \
+		cdio.7:${PORTSDIR}/sysutils/libcdio
 CONFIGURE_ARGS+=--enable-vcd \
 		--enable-libcddb \
 		--disable-cddax
