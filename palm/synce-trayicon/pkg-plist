@@ -1,0 +1,9 @@
+bin/synce-trayicon
+share/locale/ru/LC_MESSAGES/synce-trayicon.mo
+share/locale/sv/LC_MESSAGES/synce-trayicon.mo
+share/pixmaps/synce/synce-color-small.png
+share/pixmaps/synce/synce-gray-small.png
+share/synce/synce_trayicon_properties.glade
+@dirrm share/pixmaps/synce
+@dirrmtry share/pixmaps
+@dirrmtry share/synce
