@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/news/pan-devel/Makefile,v 1.8 2006/09/21 19:13:27 mezz Exp $
+#    $MCom: ports/news/pan-devel/Makefile,v 1.9 2006/09/26 22:27:53 mezz Exp $
 
 PORTNAME=	pan
-PORTVERSION=	0.114
+PORTVERSION=	0.115
 CATEGORIES=	news gnome
 MASTER_SITES=	http://pan.rebelbase.com/download/releases/${PORTVERSION}/source/
 DIST_SUBDIR=	gnome2
