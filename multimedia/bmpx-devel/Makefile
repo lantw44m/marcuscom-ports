@@ -7,6 +7,7 @@
 
 PORTNAME=	bmpx
 PORTVERSION=	0.21.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://files.beep-media-player.org/releases/${PORTVERSION:C/\.[0-9]*$//}/
 PKGNAMESUFFIX=	-devel
@@ -37,7 +38,6 @@ INSTALLS_ICONS=	yes
 LIBTOOLFILES=	configure libhrel/configure \
 		libchroma/configure libskinned/configure
 USE_GSTREAMER=	good mad ogg
-USE_X_PREFIX=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-pkgconfig-dir=${PREFIX}/libdata/pkgconfig \
