@@ -1,6 +1,8 @@
 bin/nautilus-actions-config
 bin/nautilus-actions-convert
 bin/nautilus-actions-new-config
+lib/nautilus/extensions-1.0/libnautilus-actions.la
+lib/nautilus/extensions-1.0/libnautilus-actions.so
 share/applications/nact.desktop
 share/icons/hicolor/16x16/apps/nautilus-actions.png
 share/icons/hicolor/22x22/apps/nautilus-actions.png

@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.3 2006/09/10 16:17:10 ahze Exp $
 
 PORTNAME=	nautilus-actions
 PORTVERSION=	1.4
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	ftp://ftp2.grumz.net/grumz/
 
