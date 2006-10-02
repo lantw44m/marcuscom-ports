@@ -155,6 +155,83 @@ share/icons/Crux/22x22/status/folder_open.png
 share/icons/Crux/22x22/status/gnome-fs-directory-accept.png
 share/icons/Crux/22x22/status/gnome-fs-directory-visiting.png
 share/icons/Crux/22x22/status/stock_open.png
+share/icons/Crux/24x24/actions/back.png
+share/icons/Crux/24x24/actions/bottom.png
+share/icons/Crux/24x24/actions/document-open.png
+share/icons/Crux/24x24/actions/down.png
+share/icons/Crux/24x24/actions/fileopen.png
+share/icons/Crux/24x24/actions/finish.png
+share/icons/Crux/24x24/actions/forward.png
+share/icons/Crux/24x24/actions/go-bottom.png
+share/icons/Crux/24x24/actions/go-down.png
+share/icons/Crux/24x24/actions/go-first.png
+share/icons/Crux/24x24/actions/go-home.png
+share/icons/Crux/24x24/actions/go-last.png
+share/icons/Crux/24x24/actions/go-next.png
+share/icons/Crux/24x24/actions/go-previous.png
+share/icons/Crux/24x24/actions/go-top.png
+share/icons/Crux/24x24/actions/go-up.png
+share/icons/Crux/24x24/actions/gohome.png
+share/icons/Crux/24x24/actions/gtk-go-back-ltr.png
+share/icons/Crux/24x24/actions/gtk-go-back-rtl.png
+share/icons/Crux/24x24/actions/gtk-go-down.png
+share/icons/Crux/24x24/actions/gtk-go-forward-ltr.png
+share/icons/Crux/24x24/actions/gtk-go-forward-rtl.png
+share/icons/Crux/24x24/actions/gtk-go-up.png
+share/icons/Crux/24x24/actions/gtk-goto-bottom.png
+share/icons/Crux/24x24/actions/gtk-goto-first-ltr.png
+share/icons/Crux/24x24/actions/gtk-goto-first-rtl.png
+share/icons/Crux/24x24/actions/gtk-goto-last-ltr.png
+share/icons/Crux/24x24/actions/gtk-goto-last-rtl.png
+share/icons/Crux/24x24/actions/gtk-goto-top.png
+share/icons/Crux/24x24/actions/gtk-home.png
+share/icons/Crux/24x24/actions/gtk-open.png
+share/icons/Crux/24x24/actions/gtk-refresh.png
+share/icons/Crux/24x24/actions/kfm_home.png
+share/icons/Crux/24x24/actions/next.png
+share/icons/Crux/24x24/actions/previous.png
+share/icons/Crux/24x24/actions/redhat-home.png
+share/icons/Crux/24x24/actions/reload.png
+share/icons/Crux/24x24/actions/reload3.png
+share/icons/Crux/24x24/actions/reload_all_tabs.png
+share/icons/Crux/24x24/actions/reload_page.png
+share/icons/Crux/24x24/actions/start.png
+share/icons/Crux/24x24/actions/stock_bottom.png
+share/icons/Crux/24x24/actions/stock_down.png
+share/icons/Crux/24x24/actions/stock_first.png
+share/icons/Crux/24x24/actions/stock_home.png
+share/icons/Crux/24x24/actions/stock_last.png
+share/icons/Crux/24x24/actions/stock_left.png
+share/icons/Crux/24x24/actions/stock_refresh.png
+share/icons/Crux/24x24/actions/stock_right.png
+share/icons/Crux/24x24/actions/stock_top.png
+share/icons/Crux/24x24/actions/stock_up.png
+share/icons/Crux/24x24/actions/top.png
+share/icons/Crux/24x24/actions/up.png
+share/icons/Crux/24x24/actions/view-refresh.png
+share/icons/Crux/24x24/places/application-x-gnome-saved-search.png
+share/icons/Crux/24x24/places/folder-remote.png
+share/icons/Crux/24x24/places/folder-saved-search.png
+share/icons/Crux/24x24/places/folder.png
+share/icons/Crux/24x24/places/folder_home.png
+share/icons/Crux/24x24/places/gnome-fs-directory.png
+share/icons/Crux/24x24/places/gnome-fs-ftp.png
+share/icons/Crux/24x24/places/gnome-fs-home.png
+share/icons/Crux/24x24/places/gnome-fs-nfs.png
+share/icons/Crux/24x24/places/gnome-fs-share.png
+share/icons/Crux/24x24/places/gnome-fs-smb.png
+share/icons/Crux/24x24/places/gnome-fs-ssh.png
+share/icons/Crux/24x24/places/gnome-mime-x-directory-smb-share.png
+share/icons/Crux/24x24/places/network.png
+share/icons/Crux/24x24/places/stock_folder.png
+share/icons/Crux/24x24/places/user-home.png
+share/icons/Crux/24x24/status/folder-drag-accept.png
+share/icons/Crux/24x24/status/folder-open.png
+share/icons/Crux/24x24/status/folder-visiting.png
+share/icons/Crux/24x24/status/folder_open.png
+share/icons/Crux/24x24/status/gnome-fs-directory-accept.png
+share/icons/Crux/24x24/status/gnome-fs-directory-visiting.png
+share/icons/Crux/24x24/status/stock_open.png
 share/icons/Crux/32x32/actions/document-open.png
 share/icons/Crux/32x32/actions/fileopen.png
 share/icons/Crux/32x32/actions/gtk-open.png
@@ -553,7 +630,7 @@ share/icons/HighContrast-SVG/scalable/actions/text_bold.svg
 share/icons/HighContrast-SVG/scalable/actions/text_italic.svg
 share/icons/HighContrast-SVG/scalable/actions/text_strike.svg
 share/icons/HighContrast-SVG/scalable/actions/text_under.svg
-share/icons/HighContrast-SVG/scalable/actions/tool-check-spelling.svg
+share/icons/HighContrast-SVG/scalable/actions/tools-check-spelling.svg
 share/icons/HighContrast-SVG/scalable/actions/top.svg
 share/icons/HighContrast-SVG/scalable/actions/undo.svg
 share/icons/HighContrast-SVG/scalable/actions/up.svg
@@ -2021,6 +2098,31 @@ share/icons/Mist/22x22/status/folder-open.svg
 share/icons/Mist/22x22/status/folder_open.svg
 share/icons/Mist/22x22/status/gnome-fs-directory-accept.svg
 share/icons/Mist/22x22/status/stock_open.svg
+share/icons/Mist/24x24/actions/document-open.png
+share/icons/Mist/24x24/actions/fileopen.png
+share/icons/Mist/24x24/actions/gtk-open.png
+share/icons/Mist/24x24/places/application-x-gnome-saved-search.png
+share/icons/Mist/24x24/places/folder-new.png
+share/icons/Mist/24x24/places/folder-remote.png
+share/icons/Mist/24x24/places/folder-saved-search.png
+share/icons/Mist/24x24/places/folder.png
+share/icons/Mist/24x24/places/folder_home.png
+share/icons/Mist/24x24/places/gnome-fs-directory.png
+share/icons/Mist/24x24/places/gnome-fs-ftp.png
+share/icons/Mist/24x24/places/gnome-fs-home.png
+share/icons/Mist/24x24/places/gnome-fs-nfs.png
+share/icons/Mist/24x24/places/gnome-fs-share.png
+share/icons/Mist/24x24/places/gnome-fs-smb.png
+share/icons/Mist/24x24/places/gnome-fs-ssh.png
+share/icons/Mist/24x24/places/gnome-mime-x-directory-smb-share.png
+share/icons/Mist/24x24/places/network.png
+share/icons/Mist/24x24/places/stock_folder.png
+share/icons/Mist/24x24/places/user-home.png
+share/icons/Mist/24x24/status/folder-drag-accept.png
+share/icons/Mist/24x24/status/folder-open.png
+share/icons/Mist/24x24/status/folder_open.png
+share/icons/Mist/24x24/status/gnome-fs-directory-accept.png
+share/icons/Mist/24x24/status/stock_open.png
 share/icons/Mist/32x32/actions/document-open.svg
 share/icons/Mist/32x32/actions/fileopen.svg
 share/icons/Mist/32x32/actions/gtk-open.svg
@@ -2131,6 +2233,7 @@ share/locale/pt_BR/LC_MESSAGES/gnome-themes.mo
 share/locale/ro/LC_MESSAGES/gnome-themes.mo
 share/locale/ru/LC_MESSAGES/gnome-themes.mo
 share/locale/rw/LC_MESSAGES/gnome-themes.mo
+share/locale/si/LC_MESSAGES/gnome-themes.mo
 share/locale/sk/LC_MESSAGES/gnome-themes.mo
 share/locale/sl/LC_MESSAGES/gnome-themes.mo
 share/locale/sq/LC_MESSAGES/gnome-themes.mo
@@ -2760,6 +2863,8 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrmtry share/locale/sl
 @dirrmtry share/locale/sk/LC_MESSAGES
 @dirrmtry share/locale/sk
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/ro/LC_MESSAGES
@@ -2808,6 +2913,10 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrm share/icons/Mist/32x32/places
 @dirrm share/icons/Mist/32x32/actions
 @dirrm share/icons/Mist/32x32
+@dirrm share/icons/Mist/24x24/status
+@dirrm share/icons/Mist/24x24/places
+@dirrm share/icons/Mist/24x24/actions
+@dirrm share/icons/Mist/24x24
 @dirrm share/icons/Mist/22x22/status
 @dirrm share/icons/Mist/22x22/places
 @dirrm share/icons/Mist/22x22/actions
@@ -2861,6 +2970,10 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrm share/icons/Crux/32x32/places
 @dirrm share/icons/Crux/32x32/actions
 @dirrm share/icons/Crux/32x32
+@dirrm share/icons/Crux/24x24/status
+@dirrm share/icons/Crux/24x24/places
+@dirrm share/icons/Crux/24x24/actions
+@dirrm share/icons/Crux/24x24
 @dirrm share/icons/Crux/22x22/status
 @dirrm share/icons/Crux/22x22/places
 @dirrm share/icons/Crux/22x22/actions
