@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.97 2006/09/10 00:51:16 mezz Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.98 2006/09/23 17:30:09 ahze Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.10.4
+PORTVERSION=	2.10.5
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
@@ -35,6 +35,7 @@ LIB_DEPENDS=	png.5:${PORTSDIR}/graphics/png \
 RUN_DEPENDS=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
 		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
+USE_GMAKE=	yes
 USE_XPM=	yes
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
@@ -115,6 +116,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|@CFLAGS@|& ${PTHREAD_CFLAGS}|; \
 		s|@LDFLAGS@|& ${PTHREAD_LIBS}|' \
 		${WRKSRC}/demos/gtk-demo/Makefile.in
+	@${REINPLACE_CMD} -e 's|@LN_S@|${LN} -sf|' ${WRKSRC}/gtk/Makefile.in
 
 pre-build:
 	@${RM} -rf ${WRKSRC}/docs/gtk.info*
