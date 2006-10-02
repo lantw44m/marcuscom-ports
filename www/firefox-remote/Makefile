@@ -17,7 +17,6 @@ MAINTAINER=	klammer@webonaut.com
 COMMENT=	Wrapper scripts for firefox web browser
 
 USE_BZIP2=	yes
-USE_X_PREFIX=	yes
 
 UTF8_HACK=	no
 FIREFOX_REMOTE=	${PORTNAME}${PKGNAMESUFFIX}
