@@ -3,7 +3,7 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/librsvg2/Makefile,v 1.107 2006/09/08 17:22:44 mezz Exp $
+#    $MCom: ports/graphics/librsvg2/Makefile,v 1.108 2006/09/10 00:51:11 mezz Exp $
 #
 
 PORTNAME=	librsvg2
@@ -20,7 +20,6 @@ COMMENT=	Library for parsing and rendering SVG vector-graphic files
 
 BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
-		popt.0:${PORTSDIR}/devel/popt \
 		croco-${CROCO_VERSION}.3:${PORTSDIR}/textproc/libcroco
 RUN_DEPENDS=	gtk-engines2>=2.7.5_1:${PORTSDIR}/x11-themes/gtk-engines2
 

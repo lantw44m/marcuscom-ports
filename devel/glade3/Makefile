@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.15 2006/09/10 00:51:08 mezz Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.16 2006/09/29 21:36:09 ahze Exp $
 #
 
 PORTNAME=	glade3
@@ -15,8 +15,6 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A user interface builder for GTK+/GNOME
-
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 INSTALLS_ICONS=	yes
 USE_XLIB=	yes

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.28 2006/09/05 06:15:10 marcus Exp $
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.29 2006/09/10 00:51:07 mezz Exp $
 #
 
 PORTNAME=	gucharmap
@@ -17,7 +17,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A Unicode/ISO10646 character map and font viewer
 
 BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
 USE_BZIP2=	yes

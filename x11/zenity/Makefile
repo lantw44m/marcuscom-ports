@@ -3,7 +3,7 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity/Makefile,v 1.66 2006/08/21 16:48:16 ahze Exp $
+#   $MCom: ports/x11/zenity/Makefile,v 1.67 2006/09/04 15:38:37 ahze Exp $
 #
 
 PORTNAME=	zenity
@@ -17,7 +17,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Display GNOME dialogs from the command line
 
 BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
 USE_XLIB=	yes
