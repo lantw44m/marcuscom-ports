@@ -1,0 +1,27 @@
+# New ports collection makefile for:	xfce4-appfinder
+# Date created:				12 October 2004
+# Whom:					Oliver Lehmann <oliver@FreeBSD.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	xfce4-appfinder
+PORTVERSION=	4.2.3
+PORTREVISION=	1
+CATEGORIES=	misc xfce
+MASTER_SITES=	http://www.us.xfce.org/archive/xfce-${PORTVERSION}/src/ \
+		http://www.ca-us.xfce.org/archive/xfce-${PORTVERSION}/src/ \
+		http://public.fh-wolfenbuettel.de/~luedickj/xfce4/xfce-${PORTVERSION}/src/ \
+		http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-${PORTVERSION}/src/
+DIST_SUBDIR=	xfce4
+
+MAINTAINER=	oliver@FreeBSD.org
+COMMENT=	Find application in the system supporting Desktop entry format
+
+LIB_DEPENDS=	xfce4util.1:${PORTSDIR}/x11/libxfce4util \
+		xfcegui4.3:${PORTSDIR}/x11-toolkits/libxfce4gui
+
+GNU_CONFIGURE=	yes
+CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
+
+.include <bsd.port.mk>

@@ -1,0 +1,25 @@
+bin/xfce4-appfinder
+share/applications/xfce4-appfinder.desktop
+share/pixmaps/xfce4-appfinder.png
+share/xfce4/doc/C/images/appfinder-handle-popup.png
+share/xfce4/doc/C/images/appfinder-item-popup.png
+share/xfce4/doc/C/images/default_appfinder.png
+share/xfce4/doc/C/xfce4-appfinder.html
+share/xfce4/doc/fr/images/appfinder-handle-popup.png
+share/xfce4/doc/fr/images/appfinder-item-popup.png
+share/xfce4/doc/fr/images/default_appfinder.png
+share/xfce4/doc/fr/xfce4-appfinder.html
+share/xfce4/doc/he/images/appfinder-handle-popup.png
+share/xfce4/doc/he/images/appfinder-item-popup.png
+share/xfce4/doc/he/images/default_appfinder.png
+share/xfce4/doc/he/xfce4-appfinder.html
+@dirrmtry share/applications
+@dirrmtry share/xfce4/doc/C/images
+@dirrmtry share/xfce4/doc/C
+@dirrmtry share/xfce4/doc/fr/images
+@dirrmtry share/xfce4/doc/fr
+@dirrmtry share/xfce4/doc/he/images
+@dirrmtry share/xfce4/doc/he
+@dirrmtry share/xfce4/doc
+@dirrmtry share/xfce4
+

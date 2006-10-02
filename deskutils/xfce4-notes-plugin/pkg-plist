@@ -1,0 +1,8 @@
+lib/xfce4/panel-plugins/libnotes.a
+lib/xfce4/panel-plugins/libnotes.la
+lib/xfce4/panel-plugins/libnotes.so
+share/xfce4/notes/note.png
+@dirrmtry lib/xfce4/panel-plugins
+@dirrmtry lib/xfce4
+@dirrmtry share/xfce4/notes
+@dirrmtry share/xfce4
