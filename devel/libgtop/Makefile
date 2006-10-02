@@ -3,11 +3,10 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgtop/Makefile,v 1.3 2006/07/28 06:51:19 marcus Exp $
+#   $MCom: ports/devel/libgtop/Makefile,v 1.4 2006/09/10 00:51:09 mezz Exp $
 
 PORTNAME=	libgtop
-PORTVERSION=	2.14.2
-PORTREVISION=	1
+PORTVERSION=	2.14.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -25,6 +24,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20 ltverhack intlhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
+CONFIGURE_ARGS=	--infodir=${PREFIX}/info
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
