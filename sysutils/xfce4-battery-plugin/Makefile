@@ -1,0 +1,31 @@
+# New ports collection makefile for:	xfce-battery-plugin
+# Date created:		31 June 2003
+# Whom:			Thorsten Greiner <thorsten.greiner@web.de>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	xfce4-battery-plugin
+PORTVERSION=	0.2.0
+PORTREVISION=	9
+CATEGORIES=	sysutils xfce
+MASTER_SITES=	http://download.berlios.de/xfce-goodies/
+DIST_SUBDIR=	xfce4
+
+MAINTAINER=	thorsten.greiner@web.de
+COMMENT=	Battery monitor panel plugin for XFce4
+
+BUILD_DEPENDS=	xfce4-panel:${PORTSDIR}/x11-wm/xfce4-panel
+LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2 \
+		xfce4util.1:${PORTSDIR}/x11/libxfce4util \
+		xfcegui4.3:${PORTSDIR}/x11-toolkits/libxfce4gui
+RUN_DEPENDS=	xfce4-panel:${PORTSDIR}/x11-wm/xfce4-panel
+
+ONLY_FOR_ARCHS=	i386
+
+USE_GNOME=	gtk20
+GNU_CONFIGURE=	yes
+INSTALLS_SHLIB=	yes
+CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
+
+.include <bsd.port.mk>

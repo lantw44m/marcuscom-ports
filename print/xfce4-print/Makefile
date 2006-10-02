@@ -1,0 +1,76 @@
+# New ports collection makefile for:	xfprint
+# Date created:		7 June 2003
+# Whom:			James Earl <jdearl@telus.net>
+#
+# $FreeBSD: ports/print/xfce4-print/Makefile,v 1.39 2006/05/13 01:03:16 edwin Exp $
+#
+
+PORTNAME=	xfce4-print
+PORTVERSION=	4.2.3
+PORTREVISION=	2
+CATEGORIES=	print xfce
+MASTER_SITES=	http://www.us.xfce.org/archive/xfce-${PORTVERSION}/src/ \
+		http://www.ca-us.xfce.org/archive/xfce-${PORTVERSION}/src/ \
+		http://public.fh-wolfenbuettel.de/~luedickj/xfce4/xfce-${PORTVERSION}/src/ \
+		http://hannelore.f1.fhtw-berlin.de/mirrors/xfce4/xfce-${PORTVERSION}/src/
+DISTNAME=	xfprint-${PORTVERSION}
+DIST_SUBDIR=	xfce4
+
+MAINTAINER=	oliver@FreeBSD.org
+COMMENT=	XFce 4 graphical frontend for printing
+
+BUILD_DEPENDS=	xfce-mcs-manager:${PORTSDIR}/sysutils/xfce4-mcs-manager
+LIB_DEPENDS=	xfce4util.1:${PORTSDIR}/x11/libxfce4util \
+		xfcegui4.3:${PORTSDIR}/x11-toolkits/libxfce4gui \
+		xfce4mcs-client.2:${PORTSDIR}/x11/libxfce4mcs
+RUN_DEPENDS=	xfce-mcs-manager:${PORTSDIR}/sysutils/xfce4-mcs-manager
+
+USE_GETTEXT=	yes
+USE_GNOME=	gtk20
+GNU_CONFIGURE=	yes
+INSTALLS_SHLIB=	yes
+CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}
+CONFIGURE_ENV=	CFLAGS=-I${LOCALBASE}/include \
+		CPPFLAGS=-I${LOCALBASE}/include \
+		LIBS=-L${LOCALBASE}/lib
+OPTIONS=	LPR	"Use lpr as printing system"	on\
+		CUPS	"Use cups as printing system"	off
+
+.include <bsd.port.pre.mk>
+
+.if defined(WITH_CUPS)
+CONFIGURE_ARGS+=--enable-cups
+LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-base
+PLIST_SUB+=	CUPS=""
+.else
+CONFIGURE_ARGS+=--disable-cups
+PLIST_SUB+=	CUPS="@comment "
+.endif
+
+.if defined(WITHOUT_LPR)
+CONFIGURE_ARGS+=--disable-bsdlpr
+PLIST_SUB+=	LPR="@comment "
+.else
+CONFIGURE_ARGS+=--enable-bsdlpr --with-printcap=/etc/printcap
+PLIST_SUB+=	LPR=""
+.endif
+
+.if defined(WITHOUT_LPR) && !defined(WITH_CUPS)
+IGNORE=		You have to define WITH_CUPS or undefine WITHOUT_LPR in order to install this port.
+.endif
+
+.if defined(WITH_LETTER)
+CONFIGURE_ARGS+=--enable-letter
+BUILD_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps-letter
+RUN_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps-letter
+.else
+CONFIGURE_ARGS+=--disable-letter
+BUILD_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps-a4
+RUN_DEPENDS+=	a2ps:${PORTSDIR}/print/a2ps-a4
+.endif
+
+post-patch:
+	${REINPLACE_CMD} -e 's/@LDFLAGS@/& -Wl,-E/' ${WRKSRC}/xfprint/Makefile.in \
+		 ${WRKSRC}/xfprint-manager/Makefile.in
+
+.include <bsd.port.post.mk>
