@@ -93,3 +93,11 @@ share/locale/zh_CN/LC_MESSAGES/ontv.mo
 @dirrm share/gnome/ontv
 @dirrm %%PYTHON_SITELIBDIR%%/ontv/keybinder
 @dirrm %%PYTHON_SITELIBDIR%%/ontv
+@dirrmtry share/locale/zh_CN/LC_MESSAGES
+@dirrmtry share/locale/zh_CN
+@dirrmtry share/locale/uk/LC_MESSAGES
+@dirrmtry share/locale/uk
+@dirrmtry share/locale/pl/LC_MESSAGES
+@dirrmtry share/locale/pl
+@dirrmtry share/locale/fi/LC_MESSAGES
+@dirrmtry share/locale/fi

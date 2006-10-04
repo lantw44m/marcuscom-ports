@@ -113,6 +113,8 @@ share/locale/yi/LC_MESSAGES/atk10.mo
 share/locale/zh_CN/LC_MESSAGES/atk10.mo
 share/locale/zh_HK/LC_MESSAGES/atk10.mo
 share/locale/zh_TW/LC_MESSAGES/atk10.mo
+@dirrm include/atk-1.0/atk
+@dirrm include/atk-1.0
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -179,5 +181,3 @@ share/locale/zh_TW/LC_MESSAGES/atk10.mo
 @dirrmtry share/locale/be
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm include/atk-1.0/atk
-@dirrm include/atk-1.0

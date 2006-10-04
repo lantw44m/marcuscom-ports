@@ -77,6 +77,8 @@ share/locale/vi/LC_MESSAGES/alacarte.mo
 share/locale/zh_CN/LC_MESSAGES/alacarte.mo
 share/locale/zh_HK/LC_MESSAGES/alacarte.mo
 share/locale/zh_TW/LC_MESSAGES/alacarte.mo
+@dirrm share/gnome/alacarte
+@dirrm %%PYTHON_SITELIBDIR%%/Alacarte
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -119,5 +121,3 @@ share/locale/zh_TW/LC_MESSAGES/alacarte.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm share/gnome/alacarte
-@dirrm %%PYTHON_SITELIBDIR%%/Alacarte

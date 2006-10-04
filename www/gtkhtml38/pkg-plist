@@ -153,6 +153,11 @@ share/locale/xh/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/zh_HK/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
+@dirrm share/gnome/gtkhtml-%%VERSION%%/icons
+@dirrm share/gnome/gtkhtml-%%VERSION%%
+@dirrm lib/gtkhtml
+@dirrm include/libgtkhtml-%%VERSION%%/gtkhtml
+@dirrm include/libgtkhtml-%%VERSION%%
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -205,8 +210,3 @@ share/locale/zh_TW/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be/LC_MESSAGES
 @dirrmtry share/locale/be
-@dirrm share/gnome/gtkhtml-%%VERSION%%/icons
-@dirrm share/gnome/gtkhtml-%%VERSION%%
-@dirrm lib/gtkhtml
-@dirrm include/libgtkhtml-%%VERSION%%/gtkhtml
-@dirrm include/libgtkhtml-%%VERSION%%

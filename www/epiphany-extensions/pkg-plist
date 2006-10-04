@@ -126,6 +126,17 @@ share/locale/wa/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/zh_HK/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
+@dirrm share/gnome/omf/epiphany-extensions
+@dirrm share/gnome/help/epiphany-extensions/C/figures
+@dirrm share/gnome/help/epiphany-extensions/C
+@dirrm share/gnome/help/epiphany-extensions
+@dirrm share/gnome/epiphany-extensions/xml
+@dirrm share/gnome/epiphany-extensions/glade
+@dirrm share/gnome/epiphany-extensions
+@dirrmtry lib/epiphany/%%VERSION%%/extensions
+@dirrmtry lib/epiphany/%%VERSION%%/plugins
+@dirrmtry lib/epiphany/%%VERSION%%
+@dirrmtry lib/epiphany
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -158,14 +169,3 @@ share/locale/zh_TW/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 @dirrmtry share/locale/cs
 @dirrmtry share/locale/ca/LC_MESSAGES
 @dirrmtry share/locale/ca
-@dirrm share/gnome/omf/epiphany-extensions
-@dirrm share/gnome/help/epiphany-extensions/C/figures
-@dirrm share/gnome/help/epiphany-extensions/C
-@dirrm share/gnome/help/epiphany-extensions
-@dirrm share/gnome/epiphany-extensions/xml
-@dirrm share/gnome/epiphany-extensions/glade
-@dirrm share/gnome/epiphany-extensions
-@dirrmtry lib/epiphany/%%VERSION%%/extensions
-@dirrmtry lib/epiphany/%%VERSION%%/plugins
-@dirrmtry lib/epiphany/%%VERSION%%
-@dirrmtry lib/epiphany

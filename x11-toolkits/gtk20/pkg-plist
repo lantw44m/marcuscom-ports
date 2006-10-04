@@ -603,6 +603,13 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @exec /bin/mkdir -p %D/lib/gtk-2.0/%%GTK_VERSION%%/engines
 @dirrmtry share/themes/Default
 @dirrmtry share/themes
+@dirrmtry lib/gtk-2.0/modules
+@dirrmtry lib/gtk-2.0/%%GTK_VERSION%%/printbackends
+@dirrmtry lib/gtk-2.0/%%GTK_VERSION%%/loaders
+@dirrmtry lib/gtk-2.0/%%GTK_VERSION%%/immodules
+@dirrmtry lib/gtk-2.0/%%GTK_VERSION%%/engines
+@dirrmtry lib/gtk-2.0/%%GTK_VERSION%%
+@dirrmtry lib/gtk-2.0
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -683,10 +690,3 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrmtry share/locale/az_IR
 @dirrmtry share/locale/ang/LC_MESSAGES
 @dirrmtry share/locale/ang
-@dirrmtry lib/gtk-2.0/modules
-@dirrmtry lib/gtk-2.0/%%GTK_VERSION%%/printbackends
-@dirrmtry lib/gtk-2.0/%%GTK_VERSION%%/loaders
-@dirrmtry lib/gtk-2.0/%%GTK_VERSION%%/immodules
-@dirrmtry lib/gtk-2.0/%%GTK_VERSION%%/engines
-@dirrmtry lib/gtk-2.0/%%GTK_VERSION%%
-@dirrmtry lib/gtk-2.0

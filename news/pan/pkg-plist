@@ -45,6 +45,7 @@ share/locale/zh_CN/LC_MESSAGES/pan.mo
 share/locale/zh_TW/LC_MESSAGES/pan.mo
 share/pixmaps/pan.png
 @dirrmtry share/pixmaps
+@dirrmtry share/applications
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_CN/LC_MESSAGES
@@ -77,4 +78,3 @@ share/pixmaps/pan.png
 @dirrmtry share/locale/cs
 @dirrmtry share/locale/ca/LC_MESSAGES
 @dirrmtry share/locale/ca
-@dirrmtry share/applications

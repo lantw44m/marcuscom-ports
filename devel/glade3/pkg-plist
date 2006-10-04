@@ -291,6 +291,17 @@ share/locale/tr/LC_MESSAGES/glade3.mo
 share/locale/uk/LC_MESSAGES/glade3.mo
 share/locale/vi/LC_MESSAGES/glade3.mo
 share/locale/zh_CN/LC_MESSAGES/glade3.mo
+@dirrm share/gnome/glade3/pixmaps/22x22
+@dirrm share/gnome/glade3/pixmaps/16x16
+@dirrm share/gnome/glade3/pixmaps
+@dirrm share/gnome/glade3/catalogs
+@dirrm share/gnome/glade3
+@dirrm lib/glade3/modules
+@dirrm lib/glade3
+@dirrm include/libgladeui-1.0/libgladeui
+@dirrm include/libgladeui-1.0
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_CN/LC_MESSAGES
 @dirrmtry share/locale/zh_CN
 @dirrmtry share/locale/uk/LC_MESSAGES
@@ -305,14 +316,3 @@ share/locale/zh_CN/LC_MESSAGES/glade3.mo
 @dirrmtry share/locale/nn
 @dirrmtry share/locale/ko/LC_MESSAGES
 @dirrmtry share/locale/ko
-@dirrm share/gnome/glade3/pixmaps/22x22
-@dirrm share/gnome/glade3/pixmaps/16x16
-@dirrm share/gnome/glade3/pixmaps
-@dirrm share/gnome/glade3/catalogs
-@dirrm share/gnome/glade3
-@dirrm lib/glade3/modules
-@dirrm lib/glade3
-@dirrm include/libgladeui-1.0/libgladeui
-@dirrm include/libgladeui-1.0
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

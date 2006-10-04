@@ -194,6 +194,43 @@ share/locale/xh/LC_MESSAGES/file-roller.mo
 share/locale/zh_CN/LC_MESSAGES/file-roller.mo
 share/locale/zh_HK/LC_MESSAGES/file-roller.mo
 share/locale/zh_TW/LC_MESSAGES/file-roller.mo
+@dirrm share/gnome/omf/file-roller
+@dirrm share/gnome/help/file-roller/zh_TW/figures
+@dirrm share/gnome/help/file-roller/zh_TW
+@dirrm share/gnome/help/file-roller/zh_HK/figures
+@dirrm share/gnome/help/file-roller/zh_HK
+@dirrm share/gnome/help/file-roller/zh_CN/figures
+@dirrm share/gnome/help/file-roller/zh_CN
+@dirrm share/gnome/help/file-roller/uk/figures
+@dirrm share/gnome/help/file-roller/uk
+@dirrm share/gnome/help/file-roller/sv/figures
+@dirrm share/gnome/help/file-roller/sv
+@dirrm share/gnome/help/file-roller/ru/figures
+@dirrm share/gnome/help/file-roller/ru
+@dirrm share/gnome/help/file-roller/nl/figures
+@dirrm share/gnome/help/file-roller/nl
+@dirrm share/gnome/help/file-roller/ko/figures
+@dirrm share/gnome/help/file-roller/ko
+@dirrm share/gnome/help/file-roller/ja/figures
+@dirrm share/gnome/help/file-roller/ja
+@dirrm share/gnome/help/file-roller/it/figures
+@dirrm share/gnome/help/file-roller/it
+@dirrm share/gnome/help/file-roller/fr/figures
+@dirrm share/gnome/help/file-roller/fr
+@dirrm share/gnome/help/file-roller/es/figures
+@dirrm share/gnome/help/file-roller/es
+@dirrm share/gnome/help/file-roller/de/figures
+@dirrm share/gnome/help/file-roller/de
+@dirrm share/gnome/help/file-roller/bg/figures
+@dirrm share/gnome/help/file-roller/bg
+@dirrm share/gnome/help/file-roller/C/figures
+@dirrm share/gnome/help/file-roller/C
+@dirrm share/gnome/help/file-roller
+@dirrm share/gnome/file-roller/glade
+@dirrm share/gnome/file-roller
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -254,40 +291,3 @@ share/locale/zh_TW/LC_MESSAGES/file-roller.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be/LC_MESSAGES
 @dirrmtry share/locale/be
-@dirrm share/gnome/omf/file-roller
-@dirrm share/gnome/help/file-roller/zh_TW/figures
-@dirrm share/gnome/help/file-roller/zh_TW
-@dirrm share/gnome/help/file-roller/zh_HK/figures
-@dirrm share/gnome/help/file-roller/zh_HK
-@dirrm share/gnome/help/file-roller/zh_CN/figures
-@dirrm share/gnome/help/file-roller/zh_CN
-@dirrm share/gnome/help/file-roller/uk/figures
-@dirrm share/gnome/help/file-roller/uk
-@dirrm share/gnome/help/file-roller/sv/figures
-@dirrm share/gnome/help/file-roller/sv
-@dirrm share/gnome/help/file-roller/ru/figures
-@dirrm share/gnome/help/file-roller/ru
-@dirrm share/gnome/help/file-roller/nl/figures
-@dirrm share/gnome/help/file-roller/nl
-@dirrm share/gnome/help/file-roller/ko/figures
-@dirrm share/gnome/help/file-roller/ko
-@dirrm share/gnome/help/file-roller/ja/figures
-@dirrm share/gnome/help/file-roller/ja
-@dirrm share/gnome/help/file-roller/it/figures
-@dirrm share/gnome/help/file-roller/it
-@dirrm share/gnome/help/file-roller/fr/figures
-@dirrm share/gnome/help/file-roller/fr
-@dirrm share/gnome/help/file-roller/es/figures
-@dirrm share/gnome/help/file-roller/es
-@dirrm share/gnome/help/file-roller/de/figures
-@dirrm share/gnome/help/file-roller/de
-@dirrm share/gnome/help/file-roller/bg/figures
-@dirrm share/gnome/help/file-roller/bg
-@dirrm share/gnome/help/file-roller/C/figures
-@dirrm share/gnome/help/file-roller/C
-@dirrm share/gnome/help/file-roller
-@dirrm share/gnome/file-roller/glade
-@dirrm share/gnome/file-roller
-%%PORTDOCS%%@dirrm %%DOCSDIR%%
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
