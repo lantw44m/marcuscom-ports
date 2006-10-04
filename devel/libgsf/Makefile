@@ -3,12 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgsf/Makefile,v 1.25 2006/08/14 04:14:13 mezz Exp $
+#   $MCom: ports/devel/libgsf/Makefile,v 1.26 2006/09/10 00:51:09 mezz Exp $
 #
 
 PORTNAME=	libgsf
-PORTVERSION=	1.14.1
-PORTREVISION?=	1
+PORTVERSION=	1.14.2
+PORTREVISION?=	0
 CATEGORIES?=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -31,7 +31,8 @@ USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS?=--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc --without-gnome --with-bz2 \
 		--mandir=${PREFIX}/man \
-		--with-gconf-source=${GCONF_CONFIG_SOURCE}
+		--with-gconf-source=${GCONF_CONFIG_SOURCE} \
+		--without-python
 CONFIGURE_ENV?=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
