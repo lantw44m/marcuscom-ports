@@ -3,11 +3,11 @@
 # Whom:					Maxim Soboleb <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/libcapplet/Makefile,v 1.1 2006/07/18 15:53:17 ahze Exp $
+#    $MCom: ports/x11/libcapplet/Makefile,v 1.2 2006/09/10 00:51:15 mezz Exp $
 
 PORTNAME=	libcapplet
 PORTVERSION=	1.4.0.5
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://people.freebsd.org/~sobomax/
 DIST_SUBDIR=	gnome
@@ -19,7 +19,7 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomelibs
 USE_LDCONFIG=	yes
 USE_GETOPT_LONG=yes
-MAKE_ENV=	X11BASE="${X11BASE}" LOCALBASE="${LOCALBASE}" LDFLAGS="${LDFLAGS}"
+MAKE_ENV=	X11BASE="${LOCALBASE}" LOCALBASE="${LOCALBASE}" LDFLAGS="${LDFLAGS}"
 
 .include <bsd.port.pre.mk>
 
