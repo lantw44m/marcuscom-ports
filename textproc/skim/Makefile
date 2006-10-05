@@ -1,0 +1,67 @@
+# New ports collection makefile for:    skim
+# Date created:		21 July 2004
+# Whom:			Jie Gao	<gaoj@cpsc.ucalgary.ca>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	skim
+PORTVERSION=	1.4.4
+PORTREVISION=	1
+CATEGORIES=	textproc kde
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
+MASTER_SITE_SUBDIR=	scim
+
+MAINTAINER=	gaoj@cpsc.ucalgary.ca
+COMMENT=	An input method platform based on SCIM library and KDE/QT
+
+LIB_DEPENDS=	scim-1.0.9:${PORTSDIR}/textproc/scim
+
+USE_KDELIBS_VER=3
+USE_PYTHON=	yes
+USE_PYDISTUTILS=yes
+USE_BZIP2=	yes
+USE_ICONV=	yes
+USE_GMAKE=	yes
+USE_AUTOTOOLS=	libtool:15
+
+CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
+		PTHREAD_LIBS="${PTHREAD_LIBS}" \
+		PREFIX="${PREFIX}" \
+		QTDIR="${QT_PREFIX}" KDEDIR="${KDE_PREFIX}"
+
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 500035
+BUILD_DEPENDS+=	${LOCALBASE}/lib/libstlport_gcc.so:${PORTSDIR}/devel/stlport
+RUN_DEPENDS+=	${LOCALBASE}/lib/libstlport_gcc.so:${PORTSDIR}/devel/stlport
+CONFIGURE_ENV+=	CXXFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/stlport ${CFLAGS}" \
+		LDFLAGS="-L${LOCALBASE}/lib -lstlport_gcc -lintl ${PTHREAD_LIBS}"
+.else
+CONFIGURE_ENV+=	CXXFLAGS="-I${LOCALBASE}/include -D__STDC_ISO_10646__ ${CFLAGS}" \
+		LDFLAGS="-L${LOCALBASE}/lib -lintl"
+.endif
+
+post-patch:
+	${REINPLACE_CMD} s,bash,sh,g ${WRKSRC}/src/scim-panel-kde.in
+
+do-configure:
+	@cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ./configure
+
+post-configure:
+	${REINPLACE_CMD} \
+		-e s,/usr/local/lib/pkgconfig,${PREFIX}/libdata/pkgconfig,g \
+		-e s,/usr/lib/pkgconfig,${PREFIX}/libdata/pkgconfig,g \
+		-e s,lib/pkgconfig,libdata/pkgconfig,g \
+		${WRKSRC}/cache/pkg.cache.py
+do-build:
+	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./scons
+
+do-install:
+	@cd ${WRKSRC} && ./scons install
+
+post-install:
+	@${CAT} ${PKGMESSAGE}
+	@${ECHO} To display this message again, type pkg_info -D ${PKGNAME}
+
+.include <bsd.port.post.mk>
