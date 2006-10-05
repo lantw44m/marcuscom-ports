@@ -4,11 +4,12 @@
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/editors/poedit/Makefile,v 1.1 2006/09/30 06:30:07 ahze Exp $
+#
 
 PORTNAME=	poedit
 PORTVERSION=	1.3.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}

@@ -84,6 +84,8 @@ share/locale/zh_TW/LC_MESSAGES/poedit.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/fur/LC_MESSAGES
 @dirrmtry share/locale/fur
+@dirrmtry share/locale/fa_IR/LC_MESSAGES
+@dirrmtry share/locale/fa_IR
 @dirrmtry share/locale/es_PR/LC_MESSAGES
 @dirrmtry share/locale/es_PR
 @dirrmtry share/locale/ar/LC_MESSAGES
@@ -168,3 +170,4 @@ share/locale/zh_TW/LC_MESSAGES/poedit.mo
 @dirrm %%DATADIR%%/help/common
 @dirrm %%DATADIR%%/help
 @dirrm %%DATADIR%%
+@dirrmtry share/pixmaps
