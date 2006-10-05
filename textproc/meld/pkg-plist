@@ -92,3 +92,11 @@ share/pixmaps/meld.png
 @dirrmtry share/applications
 @dirrmtry share/application-registry
 @dirrm %%DOCSDIR%%
+@dirrmtry share/locale/sr/LC_MESSAGES
+@dirrmtry share/locale/sr
+@dirrmtry share/locale/pt/LC_MESSAGES
+@dirrmtry share/locale/pt
+@dirrmtry share/locale/ko/LC_MESSAGES
+@dirrmtry share/locale/ko
+@dirrmtry share/locale/cs/LC_MESSAGES
+@dirrmtry share/locale/cs

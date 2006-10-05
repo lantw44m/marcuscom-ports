@@ -251,7 +251,7 @@ share/applications/bmp-play-2.0.desktop
 @dirrm %%DATADIR%%/ui
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
-%%NLS%%@dirrmtry share/locale/th_TH/LC_MESSAGES
-%%NLS%%@dirrmtry share/locale/th_TH
+%%NLS%%
+%%NLS%%
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

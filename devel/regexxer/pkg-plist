@@ -16,3 +16,7 @@ share/locale/pt/LC_MESSAGES/regexxer.mo
 share/locale/pt_BR/LC_MESSAGES/regexxer.mo
 share/locale/sv/LC_MESSAGES/regexxer.mo
 @dirrm share/gnome/regexxer
+@dirrmtry share/locale/pt/LC_MESSAGES
+@dirrmtry share/locale/pt
+@dirrmtry share/locale/cs/LC_MESSAGES
+@dirrmtry share/locale/cs

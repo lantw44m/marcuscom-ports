@@ -34,6 +34,12 @@ share/locale/ta/LC_MESSAGES/iiimf-im-switcher.mo
 share/locale/zh_CN/LC_MESSAGES/iiimf-im-switcher.mo
 share/locale/zh_HK/LC_MESSAGES/iiimf-im-switcher.mo
 share/locale/zh_TW/LC_MESSAGES/iiimf-im-switcher.mo
+@dirrm share/gnome/omf/iiimf-im-switcher
+@dirrm share/gnome/iiimf-im-switcher/glade
+@dirrm share/gnome/iiimf-im-switcher
+@dirrm share/gnome/help/imswitcher/C
+@dirrm share/gnome/help/imswitcher
+@dirrmtry share/gnome/control-center-2.0/interfaces
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -46,9 +52,3 @@ share/locale/zh_TW/LC_MESSAGES/iiimf-im-switcher.mo
 @dirrmtry share/locale/ko
 @dirrmtry share/locale/cs/LC_MESSAGES
 @dirrmtry share/locale/cs
-@dirrm share/gnome/omf/iiimf-im-switcher
-@dirrm share/gnome/iiimf-im-switcher/glade
-@dirrm share/gnome/iiimf-im-switcher
-@dirrm share/gnome/help/imswitcher/C
-@dirrm share/gnome/help/imswitcher
-@dirrmtry share/gnome/control-center-2.0/interfaces
