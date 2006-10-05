@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.24 2006/09/03 01:52:30 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.25 2006/09/30 06:27:37 ahze Exp $
 
 # This file contains some reusable components for mozilla ports. It's of
 # use primarily to apps from the mozilla project itself (such as Firefox,
@@ -361,7 +361,6 @@ gecko-create-plist:
 		-e 's|${MOZILLA}-nspr = ${PORTVERSION}|nspr|' \
 		${FAKEDIR}/libdata/pkgconfig/${pcfile}.pc
 .endfor
-	${ECHO_CMD} "@dirrmtry share/pixmaps" >> ${PLIST}
 	${ECHO_CMD} "@exec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@unexec ${LOCALBASE}/bin/update-desktop-database > /dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} "@unexec ${RMDIR} %D/share/idl 2>/dev/null || ${TRUE}" >> ${PLIST}

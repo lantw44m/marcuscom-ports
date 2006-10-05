@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/sunbird/Makefile,v 1.16 2006/09/30 05:09:42 ahze Exp $
+#   $MCom: ports/deskutils/sunbird/Makefile,v 1.17 2006/09/30 06:26:32 ahze Exp $
 #
 
 PORTNAME=	sunbird
 PORTVERSION=	0.3a1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	sunbird/new-directory/releases/${DISTVERSION}/source
@@ -64,6 +64,7 @@ post-patch:
 pre-install:
 	${ECHO_CMD} 'share/applications/sunbird.desktop' >> ${PLIST}
 	${ECHO_CMD} 'share/pixmaps/${SUNBIRD_ICON}' >> ${PLIST}
+	${ECHO_CMD} "@dirrmtry share/pixmaps" >> ${PLIST}
 	${ECHO_CMD} '@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}' >> ${PLIST}
 
 do-install:

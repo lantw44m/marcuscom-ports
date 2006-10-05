@@ -3,11 +3,12 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox-devel/Makefile,v 1.26 2006/03/29 18:31:20 ahze Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.28 2006/07/18 14:48:15 ahze Exp $
+#
 
 PORTNAME=	firefox
 DISTVERSION=	2.0a3
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
@@ -82,6 +83,7 @@ pre-install:
 	${ECHO_CMD} 'share/applications/${MOZILLA}.desktop' >> ${PLIST}
 	${ECHO_CMD} "@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} 'share/pixmaps/${FIREFOX_ICON}' >> ${PLIST}
+	${ECHO_CMD} "@dirrmtry share/pixmaps" >> ${PLIST}
 .if !defined(WITHOUT_NEWTAB)
 	${ECHO_CMD} >> ${SYSTEM_PREFS}
 	${ECHO_CMD} "// Open external links in new tab" >> ${SYSTEM_PREFS}
