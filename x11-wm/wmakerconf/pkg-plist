@@ -60,3 +60,4 @@ share/locale/tr/LC_MESSAGES/wmakerconf.mo
 %%DATADIR%%/wmakerconf.xpm
 %%DATADIR%%/workspace.xpm
 @dirrm %%DATADIR%%
+@dirrmtry share/applications

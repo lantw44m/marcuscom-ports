@@ -3,11 +3,12 @@
 # Whom:					Dominik Rothert <dr@domix.de>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-wm/wmakerconf/Makefile,v 1.1 2006/09/30 02:56:37 ahze Exp $
+#
 
 PORTNAME=	wmakerconf
 PORTVERSION=	2.11
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-wm
 MASTER_SITES=	http://www.starplot.org/wmakerconf/
 
