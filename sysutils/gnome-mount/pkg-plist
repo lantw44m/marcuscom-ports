@@ -1,9 +1,9 @@
 bin/gnome-eject
 bin/gnome-mount
 bin/gnome-umount
-nautilus/extensions-1.0/libgnome-mount.a
-nautilus/extensions-1.0/libgnome-mount.la
-nautilus/extensions-1.0/libgnome-mount.so
+lib/nautilus/extensions-1.0/libgnome-mount.a
+lib/nautilus/extensions-1.0/libgnome-mount.la
+lib/nautilus/extensions-1.0/libgnome-mount.so
 libdata/pkgconfig/gnome-mount.pc
 share/gnome/gnome-mount/gnome-mount-properties.glade
 share/locale/it/LC_MESSAGES/gnome-mount.mo
