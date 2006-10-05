@@ -3,11 +3,12 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.16 2006/09/29 21:36:09 ahze Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.17 2006/10/02 04:52:51 bland Exp $
 #
 
 PORTNAME=	glade3
 PORTVERSION=	3.0.2
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -27,4 +28,14 @@ CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
 USE_LDCONFIG=	yes
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${HAVE_GNOME:Mlibgnomeui}!=""
+USE_GNOME+=	libgnomeui
+CONFIGURE_ARGS+=--enable-gnome
+PKGNAMESUFFIX:=	-gnome
+.else
+CONFIGURE_ARGS+=--disable-gnome
+.endif
+
+.include <bsd.port.post.mk>
