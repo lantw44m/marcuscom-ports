@@ -49,7 +49,7 @@ pre-patch:
 		s/QT_IM_DIR=\/usr/QT_IM_DIR=$$prefix/; \
 		s/mandir=$$datadir/mandir=$$prefix/; \
 		s/\/usr\/share/$$prefix\/share/; \
-		109,110 s/control-center-2\.0/gnome\/control-center-2\.0/; \
+		s|control-center-2.0|gnome/control-center-2.0|g ; \
 		s/gcc/$$CC/; s/gcin-$$GCIN_VERSION/gcin/' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's/qsort/mergesort/' ${WRKSRC}/gcin2tab.c
 	@${REINPLACE_CMD} -e 's/modify-XIM //; 8,10 d' ${WRKSRC}/scripts/Makefile
