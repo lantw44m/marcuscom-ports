@@ -23,7 +23,7 @@ USE_GMAKE=	yes
 MAKEFILE=	GNUmakefile
 USE_XLIB=	yes
 
-SAWFISH_VERSION=	`${X11BASE}/bin/sawfish --version 2>&1 | \
+SAWFISH_VERSION=	`${LOCALBASE}/bin/sawfish --version 2>&1 | \
 			${SED} 's/^.*version[ ]*\([0-9.]*\).*/\1/'`
 
 PLIST_SUB+=	SAWFISH_VERSION="${SAWFISH_VERSION}"
