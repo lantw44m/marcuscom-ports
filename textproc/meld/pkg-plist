@@ -88,6 +88,7 @@ share/pixmaps/meld.png
 @dirrm share/meld/glade2/pixmaps
 @dirrm share/meld/glade2
 @dirrm share/meld
-@dirrm share/applications
-@dirrm share/application-registry
+@dirrmtry share/pixmaps
+@dirrmtry share/applications
+@dirrmtry share/application-registry
 @dirrm %%DOCSDIR%%
