@@ -3,11 +3,12 @@
 # Whom:			Koop Mast <kwm@rainbow-runner.nl>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/py-gstreamer/Makefile,v 1.11 2006/07/21 01:57:04 ahze Exp $
+#    $MCom: ports/multimedia/py-gstreamer/Makefile,v 1.12 2006/07/21 16:39:32 ahze Exp $
+#
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia python gnome
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-python/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,9 +23,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml2
 USE_PYTHON=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	pygtk2 \
-		gnomehack \
-		pkgconfig
+USE_GNOME=	pygtk2 gnomehack pkgconfig
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${X11BASE}/include" \
@@ -32,5 +31,13 @@ CONFIGURE_ENV=	CPPFLAGS="-I${X11BASE}/include" \
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|DLFCN|dl|g' ${WRKSRC}/gst/__init__.py
+
+post-build:
+	@cd ${WRKSRC} && ${PYTHON_CMD} -OOOO -c 'import pygst' && \
+		${PYTHON_CMD} -c 'import pygst'
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/pygst.pyo ${PYTHON_SITELIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/pygst.pyc ${PYTHON_SITELIBDIR}
 
 .include <bsd.port.mk>
