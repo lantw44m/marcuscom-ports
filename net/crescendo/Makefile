@@ -3,11 +3,12 @@
 # Whom:                 dirk.meyer@dinoex.sub.org
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net/crescendo/Makefile,v 1.1 2006/10/04 15:53:23 ahze Exp $
+#
 
 PORTNAME=	crescendo
 PORTVERSION=	1.1.7
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	net gnome
 # Master Site broken
 #MASTER_SITES=	http://crescendo.lyrical.net/files/
@@ -28,7 +29,7 @@ CFLAGS+=	-g
 PLIST_SUB=	DOCDIR=share/doc/${PORTNAME}
 MODIFY=		Makefile.in data/Makefile.in
 
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GNOME=	gnomelibs
 
 post-patch:
