@@ -29,4 +29,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 PLIST_SUB=	VERSION="1.0"
 
+pre-build:
+	@${CP} ${FILESDIR}/dbus-bus-introspect.xml ${WRKSRC}/tools
+
 .include <bsd.port.mk>
