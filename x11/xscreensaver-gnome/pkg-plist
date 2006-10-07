@@ -211,7 +211,6 @@ bin/xscreensaver-hacks/xsublim
 bin/xscreensaver-hacks/xteevee
 bin/xscreensaver-hacks/zoom
 bin/xscreensaver-text
-lib/X11/app-defaults/XScreenSaver
 share/gnome/applications/gnome-screensaver-properties.desktop
 share/gnome/pixmaps/xscreensaver.xpm
 share/gnome/xscreensaver/glade/screensaver-cmndln.png
@@ -471,3 +470,5 @@ share/xscreensaver/config/zoom.xml
 @dirrmtry share/locale/fi
 @dirrmtry share/locale/ca/LC_MESSAGES
 @dirrmtry share/locale/ca
+@cwd %%X11BASE%%
+lib/X11/app-defaults/XScreenSaver
