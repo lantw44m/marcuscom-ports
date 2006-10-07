@@ -3,12 +3,11 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.7 2006-10-07 17:10:04 marcus Exp $
+#   $Id: Makefile,v 1.8 2006-10-07 20:14:43 marcus Exp $
 #
 
 PORTNAME=	tomboy
-PORTVERSION=	0.3.9
-PORTREVISION=	4
+PORTVERSION=	0.4.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
