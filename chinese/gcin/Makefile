@@ -6,17 +6,16 @@
 #
 
 PORTNAME=	gcin
-PORTVERSION=	1.2.6
-PORTREVISION=	3
+PORTVERSION=	1.2.7
+PORTREVISION=	1
 CATEGORIES=	chinese textproc gnome
 MASTER_SITES=	http://www.csie.nctu.edu.tw/~cp76/gcin/download/:main
 DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}:main
 EXTRACT_ONLY=	gcin-${PORTVERSION}.tar.bz2
 
-MAINTAINER=	chinsan.tw@gmail.com
+MAINTAINER=	chinsan@FreeBSD.org
 COMMENT=	A traditional chinese input utility in X
 
-USE_XLIB=	YES
 USE_BZIP2=	YES
 GNU_CONFIGURE=	YES
 USE_GNOME=	gtk20
@@ -49,7 +48,7 @@ pre-patch:
 		s/QT_IM_DIR=\/usr/QT_IM_DIR=$$prefix/; \
 		s/mandir=$$datadir/mandir=$$prefix/; \
 		s/\/usr\/share/$$prefix\/share/; \
-		s|control-center-2.0|gnome/control-center-2.0|g ; \
+		109,110 s/control-center-2\.0/gnome\/control-center-2\.0/; \
 		s/gcc/$$CC/; s/gcin-$$GCIN_VERSION/gcin/' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's/qsort/mergesort/' ${WRKSRC}/gcin2tab.c
 	@${REINPLACE_CMD} -e 's/modify-XIM //; 8,10 d' ${WRKSRC}/scripts/Makefile
