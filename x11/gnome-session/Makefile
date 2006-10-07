@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.94 2006/10/03 11:42:10 ahze Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.95 2006/10/07 17:10:08 marcus Exp $
 #
 
 PORTNAME=	gnome-session
@@ -24,7 +24,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Session component for the GNOME 2 desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
-LIB_DEPENDS=	dbus-1.2:${PORTSDIR}/devel/dbus-glib \
+LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
 
