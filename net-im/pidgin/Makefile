@@ -3,12 +3,12 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/gaim-devel/Makefile,v 1.2 2006/09/20 16:22:00 marcus Exp $
+#   $MCom: ports/net-im/gaim-devel/Makefile,v 1.3 2006/09/30 16:04:04 marcus Exp $
 #
 
 PORTNAME=	gaim
 PORTVERSION=	2.0.0.b3.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES?=	net-im
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}

@@ -7,7 +7,7 @@
 
 PORTNAME=	bmpx
 PORTVERSION=	0.21.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://files.beep-media-player.org/releases/${PORTVERSION:C/\.[0-9]*$//}/
 PKGNAMESUFFIX=	-devel
@@ -23,7 +23,7 @@ LIB_DEPENDS=	tag.5:${PORTSDIR}/audio/taglib \
 		gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24 \
 		cairomm-1.0.1:${PORTSDIR}/graphics/cairomm \
 		boost_date_time.3:${PORTSDIR}/devel/boost \
-		dbus-1.2:${PORTSDIR}/devel/dbus
+		dbus-1.3:${PORTSDIR}/devel/dbus
 
 CONFLICTS=	bmpx-[0-9]*
 

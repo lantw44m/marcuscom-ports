@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.63 2006/06/29 05:21:11 marcus Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.64 2006/07/21 20:46:53 mezz Exp $
 #
 
 PORTNAME=	rhythmbox
 PORTVERSION=	0.9.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.9
@@ -20,7 +20,7 @@ COMMENT=	Audio player for the Gnome 2 desktop environment
 LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 		id3tag.0:${PORTSDIR}/audio/libid3tag \
 		totem-plparser.1:${PORTSDIR}/multimedia/totem-gstreamer \
-		dbus-1.2:${PORTSDIR}/devel/dbus \
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		sexy.2:${PORTSDIR}/x11-toolkits/libsexy \
 		soup-2.2.8:${PORTSDIR}/devel/libsoup \
 		gnome-media-profiles.0:${PORTSDIR}/audio/gnome-media

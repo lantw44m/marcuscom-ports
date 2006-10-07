@@ -7,7 +7,7 @@
 
 PORTNAME=	gnugadu2
 PORTVERSION=	2.2.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	polish net-im
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	ggadu
@@ -116,7 +116,7 @@ CONFIGURE_ARGS+=	--without-gtkspell
 .endif
 
 .if defined(WITH_DBUS)
-LIB_DEPENDS+=	dbus-1.2:${PORTSDIR}/devel/dbus
+LIB_DEPENDS+=	dbus-1.3:${PORTSDIR}/devel/dbus
 CONFIGURE_ARGS+=	--with-dbus \
 			--with-dbus-dir=${PREFIX}/share/dbus-1/services
 PLIST_SUB+=	DBUS:=""

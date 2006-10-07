@@ -3,11 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.117 2006/09/26 22:27:10 mezz Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.118 2006/10/03 01:57:47 ahze Exp $
 #
 
 PORTNAME=	evolution
 PORTVERSION=	2.8.1
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -100,7 +101,7 @@ PLIST_SUB+=	GSTREAMER="@comment "
 .endif
 
 .if defined(WITH_DBUS)
-LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus
+LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 PLIST_SUB+=	DBUS=""
 .else
 PLIST_SUB+=	DBUS="@comment "

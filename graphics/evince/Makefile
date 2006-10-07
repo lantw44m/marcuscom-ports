@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.55 2006/08/08 00:52:43 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.56 2006/09/04 23:09:38 ahze Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 
@@ -90,7 +91,7 @@ CONFIGURE_ARGS+=	--disable-djvu
 #.endif
 
 .if !defined(WITHOUT_DBUS)
-LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus
+LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 .endif
 
 .if defined(WITH_COMICS)

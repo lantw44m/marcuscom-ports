@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/policykit/Makefile,v 1.9 2006/06/16 05:19:02 marcus Exp $
+#   $MCom: ports/sysutils/policykit/Makefile,v 1.10 2006/09/10 00:51:13 mezz Exp $
 #
 
 PORTNAME=	policykit
 PORTVERSION=	0.1.20060514
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 DISTNAME=	PolicyKit-${PORTVERSION}
@@ -16,7 +16,7 @@ DISTNAME=	PolicyKit-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Framework for controlling access to system-wide components
 
-LIB_DEPENDS=	dbus-1.2:${PORTSDIR}/devel/dbus
+LIB_DEPENDS=	dbus-1.2:${PORTSDIR}/devel/dbus-glib
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnometarget

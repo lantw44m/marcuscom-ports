@@ -3,7 +3,7 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.2 2006-10-03 20:26:06 ahze Exp $
+#   $Id: Makefile,v 1.3 2006-10-07 17:10:05 marcus Exp $
 #
 
 PORTVERSION=	0.62
@@ -14,7 +14,7 @@ PKGNAMESUFFIX=	-sharp
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Mono interface to the D-BUS messaging system
 
-LIB_DEPENDS=	dbus-1.2:${PORTSDIR}/devel/dbus
+LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus
 BUILD_DEPENDS=	monodoc:${PORTSDIR}/devel/mono-tools
 RUN_DEPENDS=	monodoc:${PORTSDIR}/devel/mono-tools
 
@@ -34,6 +34,7 @@ CONFIGURE_ARGS=	--enable-mono \
 		--disable-gcj \
 		--disable-gtk \
 		--disable-qt \
+		--with-test-socket-dir=${WRKDIR} \
 		--with-system-pid-file=/var/run/dbus.pid \
 		--with-system-socket=/var/run/dbus \
 		--with-session-socket-dir=/var/tmp \

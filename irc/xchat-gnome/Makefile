@@ -7,7 +7,7 @@
 
 PORTNAME=	xchat
 PORTVERSION=	0.13
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	irc gnome ipv6
 MASTER_SITES=	http://releases.navi.cx/xchat-gnome/
 PKGNAMESUFFIX=	-gnome
@@ -33,7 +33,7 @@ INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 
 .if !defined(WITHOUT_DBUS)
-LIB_DEPENDS+=	dbus-1.2:${PORTSDIR}/devel/dbus
+LIB_DEPENDS+=	dbus-1.3:${PORTSDIR}/devel/dbus
 CONFIGURE_ARGS+=	--enable-dbus
 USE_GNOME+=	gconf2
 GCONF_SCHEMAS+=	xchat_gnome_url_handler.schemas

@@ -1,0 +1,32 @@
+# New ports collection makefile for:   D-BUS
+# Date Created:			22 June 2004
+# Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD: ports/devel/dbus/Makefile,v 1.52 2006/06/14 05:03:44 marcus Exp $
+#
+
+PORTNAME=	dbus
+PORTVERSION=	0.71
+CATEGORIES=	devel gnome
+MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-glib/
+PKGNAMESUFFIX=	-glib
+DISTNAME=	${PORTNAME}${PKGNAMESUFFIX}-${PORTVERSION}
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	GLib bindings for the D-BUS messaging system
+
+LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus
+
+USE_GNOME=	gnomehack glib20
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+CONFIGURE_ARGS=	--with-test-socket-dir=${WRKDIR} \
+		--disable-doxygen-docs \
+		--disable-xml-docs
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+
+PLIST_SUB=	VERSION="1.0"
+
+.include <bsd.port.mk>

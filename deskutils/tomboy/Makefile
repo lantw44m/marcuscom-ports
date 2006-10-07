@@ -3,12 +3,12 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.6 2006-08-11 22:02:16 marcus Exp $
+#   $Id: Makefile,v 1.7 2006-10-07 17:10:04 marcus Exp $
 #
 
 PORTNAME=	tomboy
 PORTVERSION=	0.3.9
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -18,7 +18,7 @@ MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Personal note taking system for the GNOME desktop
 
 LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell \
-    		dbus-glib-1.2:${PORTSDIR}/devel/dbus
+    		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 BUILD_DEPENDS=	gapi2-fixup:${PORTSDIR}/x11-toolkits/gtk-sharp20
 RUN_DEPENDS=	gapi2-fixup:${PORTSDIR}/x11-toolkits/gtk-sharp20
 

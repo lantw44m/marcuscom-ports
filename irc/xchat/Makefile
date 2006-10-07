@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/irc/xchat/Makefile,v 1.1 2006/07/18 13:25:39 ahze Exp $
+#    $MCom: ports/irc/xchat/Makefile,v 1.2 2006/07/27 15:34:50 marcus Exp $
 
 PORTNAME=	xchat
 PORTVERSION=	2.6.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	irc gnome ipv6
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://xchat.org/files/source/2.6/
@@ -59,7 +59,7 @@ PLIST_SUB+=	TCL="@comment "
 .endif
 
 .if !defined(WITHOUT_DBUS)
-LIB_DEPENDS+=	dbus-1.2:${PORTSDIR}/devel/dbus
+LIB_DEPENDS+=	dbus-1.3:${PORTSDIR}/devel/dbus
 CONFIGURE_ARGS+=--enable-dbus
 USE_GNOME+=	gconf2
 GCONF_SCHEMAS=	apps_xchat_url_handler.schemas
