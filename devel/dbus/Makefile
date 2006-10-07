@@ -7,6 +7,7 @@
 
 PORTNAME=	dbus
 PORTVERSION=	0.93
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://dbus.freedesktop.org/releases/
 
@@ -15,7 +16,7 @@ COMMENT=	A message bus system for inter-application communication
 
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
-USE_GNOME=	gnomehack libxml2
+USE_GNOME=	gnomehack gnometarget libxml2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_SHLIB=	yes
