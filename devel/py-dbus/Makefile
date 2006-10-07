@@ -1,5 +1,5 @@
-# New ports collection makefile for:   D-BUS
-# Date Created:			22 June 2004
+# New ports collection makefile for:   py-dbus
+# Date Created:			25 July 2004
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/dbus/Makefile,v 1.52 2006/06/14 05:03:44 marcus Exp $
