@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Sun Oct 30 18:00:53 2005
++++ Makefile.in	Tue Nov  1 17:17:43 2005
+@@ -302,7 +302,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = Expense SyncTime KeyRing docs dialer po m4 empty icons
++SUBDIRS = Expense SyncTime KeyRing dialer po m4 empty
+ 
+ # install the manual docs
+ colordir = $(prefix)/share/$(PACKAGE)
