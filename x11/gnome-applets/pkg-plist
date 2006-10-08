@@ -3,9 +3,9 @@ bin/gswitchit-plugins-capplet
 %%PYTHON%%bin/invest-chart
 %%BATTERY%%etc/sound/events/battstat_applet.soundlist
 include/libgswitchit/gnome-kbd-indicator.h
+include/libgswitchit/gswitchit-config-private.h
 include/libgswitchit/gswitchit-config.h
 include/libgswitchit/gswitchit-plugin.h
-include/libgswitchit/gswitchit-plugins-app.h
 include/libgswitchit/keyboard-config-registry-client.h
 include/libgswitchit/keyboard-config-registry.h
 include/libgweather/gweather-gconf.h
@@ -110,6 +110,9 @@ share/gnome/gnome-applets/geyes/Default/config
 share/gnome/gnome-applets/geyes/Horrid/config
 share/gnome/gnome-applets/geyes/Horrid/horrid_eye.png
 share/gnome/gnome-applets/geyes/Horrid/horrid_pupil.png
+share/gnome/gnome-applets/geyes/Tango/config
+share/gnome/gnome-applets/geyes/Tango/tango-eye.png
+share/gnome/gnome-applets/geyes/Tango/tango-pupil.png
 %%BATTERY%%share/gnome/gnome-applets/glade/battstat_applet.glade
 %%CPUFREQ%%share/gnome/gnome-applets/glade/cpufreq-preferences.glade
 %%PYTHON%%share/gnome/gnome-applets/glade/financialchart.glade
@@ -1196,6 +1199,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/gnome-applets/invest-applet
 @dirrm share/gnome/gnome-applets/gweather
 @dirrm share/gnome/gnome-applets/glade
+@dirrm share/gnome/gnome-applets/geyes/Tango
 @dirrm share/gnome/gnome-applets/geyes/Horrid
 @dirrm share/gnome/gnome-applets/geyes/Default-tiny
 @dirrm share/gnome/gnome-applets/geyes/Default
