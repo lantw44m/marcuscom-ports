@@ -1,5 +1,5 @@
---- configure.orig	Sat Oct  7 20:13:09 2006
-+++ configure	Sat Oct  7 20:13:18 2006
+--- configure.orig	Sun Oct  8 02:01:26 2006
++++ configure	Sun Oct  8 02:03:43 2006
 @@ -25187,7 +25187,7 @@ DBUS_CLIENT_LIBS=
  
  
@@ -9,3 +9,12 @@
  
  
  
+@@ -26602,7 +26602,7 @@ cat >>confdefs.h <<\_ACEOF
+ #define DBUS_BUILD_X11 1
+ _ACEOF
+ 
+-   DBUS_X_LIBS="$X_LIBS $X_PRE_LIBS -lX11 $X_EXTRA_LIBS"
++   DBUS_X_LIBS="$X_LIBS $X_PRE_LIBS -lX11 $X_EXTRA_LIBS $PTHREAD_LIBS"
+    DBUS_X_CFLAGS="$X_CFLAGS"
+ else
+    DBUS_X_LIBS=
