@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.23 2006/09/17 19:54:19 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.24 2006/10/07 17:10:07 marcus Exp $
 #
 
 PORTNAME=	hal
@@ -94,6 +94,8 @@ post-patch:
 		${WRKSRC}/hald/Makefile.in
 	@${REINPLACE_CMD} -e '/^SUBDIRS/ s|txt||' \
 		${WRKSRC}/policy/Makefile.in
+	@${REINPLACE_CMD} -e 's|user="0"|group="operator"|g' \
+		${WRKSRC}/hal.conf.in
 
 post-install:
 .if !defined(HAL_SLAVE)
