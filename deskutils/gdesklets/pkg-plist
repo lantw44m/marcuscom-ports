@@ -676,3 +676,4 @@ share/mime/packages/gdesklets.xml
 @dirrmtry share/locale/cs
 @dirrmtry share/locale/ca/LC_MESSAGES
 @dirrmtry share/locale/ca
+@dirrmtry share/icons/gnome/48x48/mimetypes
