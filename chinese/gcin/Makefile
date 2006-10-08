@@ -18,7 +18,7 @@ COMMENT=	A traditional chinese input utility in X
 
 USE_BZIP2=	YES
 GNU_CONFIGURE=	YES
-USE_GNOME=	gtk20
+USE_GNOME=	gtk20 gnomecontrolcenter2
 USE_GMAKE=	YES
 USE_GCC=	3.4+
 INSTALLS_ICONS=	YES
