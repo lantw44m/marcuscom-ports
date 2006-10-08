@@ -4021,6 +4021,7 @@ share/locale/tr/LC_MESSAGES/wesnoth.mo
 @dirrmtry man/hu
 @dirrmtry man/de/man6
 @dirrmtry man/de
+%%GNOME:%%@cwd %%LOCALBASE%%
 %%GNOME:%%share/gnome/applications/wesnoth.desktop
 %%GNOME:%%share/gnome/pixmaps/wesnoth-icon.png
 %%KDE:%%@cwd %%LOCALBASE%%
