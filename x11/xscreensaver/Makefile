@@ -7,7 +7,7 @@
 
 PORTNAME=	xscreensaver
 PORTVERSION=	5.01
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES?=	x11
 MASTER_SITES=	http://www.jwz.org/xscreensaver/ \
 		http://dougbarton.us/Downloads/
@@ -108,7 +108,7 @@ post-patch:
 		${WRKSRC}/configure.Patched > ${WRKSRC}/configure
 
 post-install:
-	@(if test -x ${X11BASE}/bin/xscreensaver-hacks/webcollage-helper; then \
+	@(if test -x ${LOCALBASE}/bin/xscreensaver-hacks/webcollage-helper; then \
 		${ECHO} "bin/xscreensaver-hacks/webcollage-helper" | \
 			${CAT} - ${TMPPLIST} > ${TMPPLIST}.cat && \
 			${MV} ${TMPPLIST}.cat ${TMPPLIST}; fi)
