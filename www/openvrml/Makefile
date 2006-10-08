@@ -7,7 +7,7 @@
 
 PORTNAME=	openvrml
 PORTVERSION=	0.15.10
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -24,7 +24,6 @@ LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/mozilla-js.pc:${PORTSDIR}/www/mozilla
 
 USE_GL=		yes
-USE_X_PREFIX=	yes
 USE_GNOME=	gnomehack gtk20
 USE_SDL=	sdl
 USE_GCC=	3.4
