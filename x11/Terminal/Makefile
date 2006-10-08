@@ -3,11 +3,12 @@
 # Whom:			Matt Lancereau <ports@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11/Terminal/Makefile,v 1.1 2006/10/02 20:55:56 ahze Exp $
+#
 
 PORTNAME=	Terminal
 PORTVERSION=	0.2.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://download.berlios.de/xfce-goodies/
 
