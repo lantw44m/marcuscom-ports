@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.71 2006/07/19 06:09:37 ahze Exp $
+#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.72 2006/07/27 00:48:29 marcus Exp $
 #
 
 PORTREVISION=	0
@@ -34,7 +34,6 @@ RUN_DEPENDS=	${LOCALBASE}/lib/epiphany/2.14/extensions/libgesturesextension.so:$
 		eiciel:${PORTSDIR}/sysutils/eiciel \
 		gtk-send-pr:${PORTSDIR}/sysutils/gtk-send-pr \
 		thefish:${PORTSDIR}/sysutils/thefish \
-		bpm:${PORTSDIR}/sysutils/bpm \
 		pbrowser:${PORTSDIR}/sysutils/portbrowser
 
 MASTERDIR=	${.CURDIR}/../gnome2
