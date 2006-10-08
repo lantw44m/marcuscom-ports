@@ -58,4 +58,3 @@ share/pixmaps/terminal.xpm
 @dirrmtry share/applications
 @dirrm share/Terminal/apps
 @dirrm share/Terminal
-@dirrmtry share/pixmaps
