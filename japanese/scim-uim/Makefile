@@ -21,7 +21,7 @@ LIB_DEPENDS=	uim:${PORTSDIR}/textproc/uim
 RUN_DEPENDS=	${BUILD_DEPENDS}
 
 USE_GNOME=	lthack
-USE_X_PREFIX=	yes
+USE_X_LIB=	yes
 USE_ICONV=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
