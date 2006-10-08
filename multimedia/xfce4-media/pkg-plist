@@ -55,3 +55,11 @@ share/xfmedia/doc/xfce.css
 @dirrm lib/xfmedia/plugins
 @dirrm lib/xfmedia
 @dirrmtry share/applications
+@dirrmtry share/locale/zh_CN/LC_MESSAGES
+@dirrmtry share/locale/zh_CN
+@dirrmtry share/locale/sk/LC_MESSAGES
+@dirrmtry share/locale/sk
+@dirrmtry share/locale/pl/LC_MESSAGES
+@dirrmtry share/locale/pl
+@dirrmtry share/locale/fi/LC_MESSAGES
+@dirrmtry share/locale/fi
