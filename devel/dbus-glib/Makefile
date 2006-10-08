@@ -25,7 +25,7 @@ CONFIGURE_ARGS=	--with-test-socket-dir=${WRKDIR} \
 		--disable-doxygen-docs \
 		--disable-xml-docs
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
 PLIST_SUB=	VERSION="1.0"
 
