@@ -16,6 +16,7 @@ COMMENT=	A message bus system for inter-application communication
 
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
+USE_XLIB=	yes
 USE_GNOME=	gnomehack gnometarget libxml2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
