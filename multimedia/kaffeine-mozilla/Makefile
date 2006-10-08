@@ -3,11 +3,12 @@
 # Whom:					arved
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/kaffeine-mozilla/Makefile,v 1.1 2006/07/21 19:38:13 ahze Exp $
+#    $MCom: ports/multimedia/kaffeine-mozilla/Makefile,v 1.2 2006/10/05 19:48:00 ahze Exp $
+#
 
 PORTNAME=	kaffeine-mozilla
 PORTVERSION=	0.2
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	kaffeine
