@@ -32,12 +32,14 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
+.if !defined(DBUS_SLAVE)
 USE_RC_SUBR=	dbus
 
 PLIST_SUB=	VERSION="1.0"
 
 MAN1=		dbus-cleanup-sockets.1 dbus-daemon.1 dbus-launch.1 \
 		dbus-monitor.1 dbus-send.1
+.endif
 
 .include <bsd.port.pre.mk>
 
@@ -46,6 +48,7 @@ post-patch:
 		${WRKSRC}/bus/session.conf.in \
 		${WRKSRC}/bus/system.conf.in
 
+.if !defined(DBUS_SLAVE)
 pre-su-install:
 	@for i in 15 9 ; do \
 		if [ -f /var/run/dbus/dbus.pid ]; then \
@@ -63,5 +66,7 @@ post-install:
 .endif
 	${MKDIR} ${X11BASE}/etc/dbus-1/system.d
 	${MKDIR} ${X11BASE}/share/dbus-1/services
+
+.endif
 
 .include <bsd.port.post.mk>

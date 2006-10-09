@@ -3,11 +3,11 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.3 2006-10-07 17:10:05 marcus Exp $
+#   $Id: Makefile,v 1.4 2006-10-09 02:31:46 marcus Exp $
 #
 
 PORTVERSION=	0.62
-PORTREVISION=	15
+PORTREVISION=	16
 CATEGORIES=	devel gnome
 PKGNAMESUFFIX=	-sharp
 
