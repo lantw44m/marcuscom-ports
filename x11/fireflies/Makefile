@@ -7,14 +7,14 @@
 
 PORTNAME=	fireflies
 PORTVERSION=	2.07
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://somewhere.fscked.org/fireflies/
 
 MAINTAINER=	umeno@rr.iij4u.or.jp
 COMMENT=	Fireflies is a extention of xscreensaver
 
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GL=		yes
