@@ -3,19 +3,18 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.64 2006/07/21 20:46:53 mezz Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.65 2006/10/07 17:10:03 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
-PORTVERSION=	0.9.5
-PORTREVISION=	3
+PORTVERSION=	0.9.6
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.9
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	marcus@FreeBSD.org
-COMMENT=	Audio player for the Gnome 2 desktop environment
+COMMENT=	Audio player for the GNOME 2 desktop environment
 
 LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 		id3tag.0:${PORTSDIR}/audio/libid3tag \
@@ -42,20 +41,16 @@ CONFIGURE_ENV=	LIBS="-lm" \
 
 GCONF_SCHEMAS=	rhythmbox.schemas
 
-OPTIONS=	IPOD "Enable iPod support" off \
-		DAAP "Enable iTunes music sharing" off \
+OPTIONS=	DAAP "Enable iTunes music sharing" off \
 		FAAD "Enable FAAD decoder support" off \
 		NOTIFY "Enable libnotify support" on \
-		VORBIS "Enable Ogg/Vorbis support" on
+		VORBIS "Enable Ogg/Vorbis support" on \
+		GDA "Enable GDA database storage" off
 
 .include <bsd.port.pre.mk>
 
 .if ${OSVERSION} < 500000
 BROKEN=	Does not build on 4.X
-.endif
-
-.ifdef (WITH_IPOD)
-CONFIGURE_ARGS+=	--enable-ipod
 .endif
 
 .if !defined(WITHOUT_VORBIS)
@@ -66,6 +61,13 @@ CONFIGURE_ARGS+=	--disable-vorbis --disable-vorbistest
 
 .if defined(WITH_FAAD)
 USE_GSTREAMER+=		faad
+.endif
+
+.if defined(WITH_GDA)
+USE_GNOME+=	libgda2
+CONFIGURE_ARGS+=--with-database=libgda
+.else
+CONFIGURE_ARGS+=--with-database=tree
 .endif
 
 .if defined(WITH_DAAP)
