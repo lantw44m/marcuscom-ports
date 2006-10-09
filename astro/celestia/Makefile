@@ -89,6 +89,7 @@ pre-patch:
 	@${REINPLACE_CMD} -e 's|COPYING||g' ${WRKSRC}/Makefile.in
 
 post-install:
+	${MKDIR} ${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${WRKSRC}/src/celestia/gtk/data/celestia.png \
 		${PREFIX}/share/pixmaps
 .if !defined(NOPORTDOCS)
