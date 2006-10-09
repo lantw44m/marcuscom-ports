@@ -322,3 +322,9 @@ share/pixmaps/celestia.png
 @dirrm share/celestia
 @dirrmtry share/locale/pt_br/LC_MESSAGES
 @dirrmtry share/locale/pt_br
+@dirrmtry share/locale/pt/LC_MESSAGES
+@dirrmtry share/locale/pt
+@dirrmtry share/locale/gl/LC_MESSAGES
+@dirrmtry share/locale/gl
+@dirrmtry share/locale/el/LC_MESSAGES
+@dirrmtry share/locale/el
