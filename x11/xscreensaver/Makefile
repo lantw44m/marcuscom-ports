@@ -7,7 +7,7 @@
 
 PORTNAME=	xscreensaver
 PORTVERSION=	5.01
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES?=	x11
 MASTER_SITES=	http://www.jwz.org/xscreensaver/ \
 		http://dougbarton.us/Downloads/
