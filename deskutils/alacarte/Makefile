@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/alacarte/Makefile,v 1.8 2006/09/04 18:47:35 marcus Exp $
+#    $MCom: ports/deskutils/alacarte/Makefile,v 1.9 2006/10/03 20:14:43 mezz Exp $
 
 PORTNAME=	alacarte
 PORTVERSION=	0.10.1
@@ -32,7 +32,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
 	    ${WRKSRC}/Alacarte/DialogHandler.py \
 	    ${WRKSRC}/Alacarte/util.py
-	@${REINPLACE_CMD} -e 's|gmsgfmt|msgfmt|g' \
+	@${REINPLACE_CMD} -e 's|gmsgfmt|msgfmt|g ; \
+	    	s|python2.4|${PYTHON_VERSION}|g' \
 	    	${WRKSRC}/configure
 
 .include <bsd.port.mk>
