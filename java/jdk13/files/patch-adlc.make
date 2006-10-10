@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-adlc.make,v 1.1 2004/11/27 05:48:46 glewis Exp $
+$FreeBSD$
 
 --- ../../hotspot1.3.1/build/linux/makefiles/adlc.make	14 Jan 2002 12:49:49 -0000	1.2
 +++ ../../hotspot1.3.1/build/linux/makefiles/adlc.make	22 Nov 2004 17:19:42 -0000

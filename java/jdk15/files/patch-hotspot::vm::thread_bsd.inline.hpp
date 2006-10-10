@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-hotspot::vm::thread_bsd.inline.hpp,v 1.1 2006/06/16 21:29:53 glewis Exp $
+$FreeBSD$
 
 --- ../../hotspot/src/os/bsd/vm/thread_bsd.inline.hpp.orig	Thu Jun 15 17:58:02 2006
 +++ ../../hotspot/src/os/bsd/vm/thread_bsd.inline.hpp	Thu Jun 15 17:59:19 2006

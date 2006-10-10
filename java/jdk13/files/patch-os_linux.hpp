@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-os_linux.hpp,v 1.1 2004/11/28 05:29:25 glewis Exp $
+$FreeBSD$
 
 --- ../../hotspot1.3.1/src/os/linux/vm/os_linux.hpp	5 Jun 2002 05:27:47 -0000	1.4
 +++ ../../hotspot1.3.1/src/os/linux/vm/os_linux.hpp	22 Nov 2004 17:19:42 -0000

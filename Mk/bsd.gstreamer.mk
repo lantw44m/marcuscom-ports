@@ -6,8 +6,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # Date:		4 Oct 2004
 #
-# $FreeBSD: ports/Mk/bsd.gstreamer.mk,v 1.18 2006/05/16 01:43:00 ahze Exp $
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.36 2006/07/17 00:00:00 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.37 2006/07/22 19:25:49 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 

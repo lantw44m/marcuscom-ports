@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-mutex.hpp,v 1.1 2004/11/27 05:44:12 glewis Exp $
+$FreeBSD$
 
 --- ../../hotspot1.3.1/src/share/vm/runtime/mutex.hpp	17 Aug 2001 22:56:19 -0000	1.1.1.2
 +++ ../../hotspot1.3.1/src/share/vm/runtime/mutex.hpp	22 Nov 2004 17:19:42 -0000

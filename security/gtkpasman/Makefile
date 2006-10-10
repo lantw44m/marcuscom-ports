@@ -2,7 +2,7 @@
 # Date created:				25 Aug 2004
 # Whom:					Philippe Rocques
 #
-# $FreeBSD: ports/security/gtkpasman/Makefile,v 1.7 2006/08/19 03:31:48 rafan Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtkpasman

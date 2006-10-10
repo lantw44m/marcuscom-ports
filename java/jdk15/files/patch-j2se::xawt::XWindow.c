@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-j2se::xawt::XWindow.c,v 1.1 2006/04/25 20:10:19 glewis Exp $
+$FreeBSD$
 
 --- ../../j2se/src/solaris/native/sun/xawt/XWindow.c	8 Nov 2004 22:27:40 -0000	1.1.1.1
 +++ ../../j2se/src/solaris/native/sun/xawt/XWindow.c	19 Apr 2006 22:21:51 -0000

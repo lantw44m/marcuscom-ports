@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-j2se::font::t1.c,v 1.1 2006/08/01 18:38:25 glewis Exp $
+$FreeBSD$
 
 --- ../../j2se/src/share/native/sun/font/t2k/t1.c.orig	Tue Oct 19 15:00:39 2004
 +++ ../../j2se/src/share/native/sun/font/t2k/t1.c	Tue Jul 18 21:42:18 2006

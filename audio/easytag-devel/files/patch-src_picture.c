@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/easytag-devel/files/patch-src_picture.c,v 1.1 2005/12/23 20:51:29 vs Exp $
+$FreeBSD$
 
 --- src/picture.c.orig
 +++ src/picture.c

@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-iomgr.c,v 1.1 2003/05/06 06:11:02 glewis Exp $
+$FreeBSD$
 
 --- ../src/solaris/hpi/green_threads/src/iomgr.c	Thu Mar 13 13:55:24 2003
 +++ ../src/solaris/hpi/green_threads/src/iomgr.c	Thu Mar 13 13:55:53 2003

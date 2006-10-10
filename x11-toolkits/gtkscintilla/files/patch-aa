@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11-toolkits/gtkscintilla/files/patch-aa,v 1.7 2004/02/10 13:55:42 arved Exp $
+$FreeBSD$
 
 --- Makefile.orig	Fri Feb  8 10:15:02 2002
 +++ Makefile	Mon Feb 11 15:03:03 2002

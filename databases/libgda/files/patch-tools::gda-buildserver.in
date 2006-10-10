@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/libgda/files/patch-tools::gda-buildserver.in,v 1.1 2001/08/06 10:56:39 sobomax Exp $
+$FreeBSD$
 
 --- tools/gda-buildserver.in	2001/08/06 08:16:41	1.1
 +++ tools/gda-buildserver.in	2001/08/06 08:16:54

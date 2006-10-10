@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/java/jdk15/files/pkg-deinstall.in,v 1.1 2005/11/23 10:12:33 glewis Exp $
+# $FreeBSD$
 
 # Set up a standard path
 PATH=/usr/bin:/bin

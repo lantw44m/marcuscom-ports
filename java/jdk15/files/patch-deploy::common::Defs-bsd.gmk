@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-deploy::common::Defs-bsd.gmk,v 1.4 2006/04/07 03:27:34 glewis Exp $
+$FreeBSD$
 
 --- ../../deploy/make/plugin/common/Defs-bsd.gmk.orig	Tue Mar 28 22:20:28 2006
 +++ ../../deploy/make/plugin/common/Defs-bsd.gmk	Tue Mar 28 22:20:45 2006

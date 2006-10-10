@@ -3,10 +3,12 @@
 # Whom:			Andreas Fehlner <fehlner@gmx.de>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/science/gramps/Makefile,v 1.1 2006/09/30 15:18:02 ahze Exp $
+#
 
 PORTNAME=	gramps
 PORTVERSION=	2.0.11
+PORTREVISION=	1
 CATEGORIES=	science gnome python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	gramps
@@ -17,7 +19,7 @@ COMMENT=	A GTK/GNOME-based genealogy program written in Python
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_bsddb.so:${PORTSDIR}/databases/py-bsddb \
 		${PYTHON_LIBDIR}/site-packages/_xmlplus/__init__.py:${PORTSDIR}/textproc/py-xml
 
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_PYTHON=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes

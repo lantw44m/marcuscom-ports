@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/gnome-libs/files/patch-bg,v 1.14 2002/04/06 17:31:17 sobomax Exp $
+$FreeBSD$
 
 --- zvt/Makefile.in.orig	Sat Apr  6 19:22:07 2002
 +++ zvt/Makefile.in	Sat Apr  6 19:23:02 2002

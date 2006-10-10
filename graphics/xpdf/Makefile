@@ -2,7 +2,7 @@
 # Date created:         02 Feb 1996
 # Whom:                 chuckr@glue.umd.edu
 #
-# $FreeBSD: ports/graphics/xpdf/Makefile,v 1.74 2006/05/02 02:21:49 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	xpdf

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/libgda/files/patch-aa,v 1.5 2001/11/21 11:23:50 sobomax Exp $
+$FreeBSD$
 
 --- Makefile.in.orig	Wed Nov 21 10:29:52 2001
 +++ Makefile.in	Wed Nov 21 10:30:19 2001

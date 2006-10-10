@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/oaf/files/patch-configure,v 1.1 2001/09/25 15:27:04 sobomax Exp $
+$FreeBSD$
 
 --- configure	2001/09/25 15:22:02	1.1
 +++ configure	2001/09/25 15:22:25

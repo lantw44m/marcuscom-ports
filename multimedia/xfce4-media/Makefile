@@ -2,12 +2,12 @@
 # Date created:		23 October 2004
 # Whom:			Matt Lancereau <ports@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/xfce4-media/Makefile,v 1.14 2006/08/16 12:32:26 itetcu Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	xfce4-media
 PORTVERSION=	0.9.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia xfce
 MASTER_SITES=	http://spuriousinterrupt.org/files/xfmedia/
 DISTNAME=	xfmedia-${PORTVERSION}

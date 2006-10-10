@@ -2,7 +2,7 @@
 # Date created:         17 Oct 2002
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
-# $FreeBSD: ports/multimedia/totem/Makefile,v 1.68 2006/04/29 23:03:00 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	totem

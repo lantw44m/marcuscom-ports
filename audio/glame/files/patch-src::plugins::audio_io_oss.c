@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/audio/glame/files/patch-src::plugins::audio_io_oss.c,v 1.1 2003/07/01 12:34:21 sobomax Exp $
+$FreeBSD$
 
 --- src/plugins/audio_io_oss.c	2003/07/01 12:26:28	1.1
 +++ src/plugins/audio_io_oss.c	2003/07/01 12:26:41

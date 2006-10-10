@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/gnome-libs/files/patch-aa,v 1.19 2002/04/29 17:05:43 sobomax Exp $
+$FreeBSD$
 
 --- configure.orig	Mon Apr 29 12:07:59 2002
 +++ configure	Mon Apr 29 12:08:54 2002

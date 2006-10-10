@@ -2,7 +2,7 @@
 # Date created:		20 May 2004
 # Whom:			Jie Gao	<gaoj@cpsc.ucalgary.ca>
 #
-# $FreeBSD: ports/textproc/scim/Makefile,v 1.19 2006/05/13 04:24:49 edwin Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	scim

@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-control::common::Defs-bsd.gmk,v 1.2 2005/01/20 08:41:13 phantom Exp $
+$FreeBSD$
 
 --- ../../control/make/common/Defs-bsd.gmk.orig	Thu Jan 13 02:01:40 2005
 +++ ../../control/make/common/Defs-bsd.gmk	Thu Jan 13 02:01:54 2005

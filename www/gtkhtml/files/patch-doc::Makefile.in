@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/gtkhtml/files/patch-doc::Makefile.in,v 1.1 2002/05/01 20:23:01 sobomax Exp $
+$FreeBSD$
 
 --- doc/Makefile.in	2002/05/01 09:15:00	1.1
 +++ doc/Makefile.in	2002/05/01 09:16:10

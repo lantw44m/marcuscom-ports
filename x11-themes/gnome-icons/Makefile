@@ -11,6 +11,7 @@
 
 PORTNAME=	gnome-icons
 PORTVERSION=	20060914
+PORTREVISION=	1
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty

@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-gcc31.make,v 1.1 2004/11/27 05:48:23 glewis Exp $
+$FreeBSD$
 
 --- ../../hotspot1.3.1/build/linux/makefiles/gcc31.make	14 Jul 2002 00:07:59 -0000	1.1
 +++ ../../hotspot1.3.1/build/linux/makefiles/gcc31.make	22 Nov 2004 17:19:42 -0000

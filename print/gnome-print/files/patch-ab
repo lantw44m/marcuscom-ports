@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/print/gnome-print/files/patch-ab,v 1.4 2001/10/09 07:31:12 sobomax Exp $
+$FreeBSD$
 
 --- Makefile.in.orig	Fri Oct  5 11:37:00 2001
 +++ Makefile.in	Fri Oct  5 11:40:45 2001

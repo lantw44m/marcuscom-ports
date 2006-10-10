@@ -2,7 +2,7 @@
 # Date created:		13 Oct 2001
 # Whom:			Shen Chuan-Hsing <statue@freebsd.sinica.edu.tw>
 #
-# $FreeBSD: ports/chinese/xttmgr/Makefile,v 1.5 2005/07/25 21:58:10 linimon Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	xttmgr

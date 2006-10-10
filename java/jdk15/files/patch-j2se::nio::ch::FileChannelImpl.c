@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-j2se::nio::ch::FileChannelImpl.c,v 1.1 2006/07/18 23:20:26 glewis Exp $
+$FreeBSD$
 
 --- ../../j2se/src/solaris/native/sun/nio/ch/FileChannelImpl.c.orig	Fri Jul  7 10:47:18 2006
 +++ ../../j2se/src/solaris/native/sun/nio/ch/FileChannelImpl.c	Fri Jul  7 14:48:06 2006

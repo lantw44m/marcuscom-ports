@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-deploy::jvm_exec::java_vm.c,v 1.1 2006/07/18 23:23:02 glewis Exp $
+$FreeBSD$
 
 --- ../../deploy/src/plugin/solaris/jvm_exec/java_vm.c.orig	Thu Jul  6 17:10:12 2006
 +++ ../../deploy/src/plugin/solaris/jvm_exec/java_vm.c	Thu Jul  6 17:10:12 2006

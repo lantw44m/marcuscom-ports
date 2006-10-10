@@ -15,7 +15,7 @@ DIST_SUBDIR=	xfce4
 MAINTAINER=	demon@FreeBSD.org
 COMMENT=	Additional artwork for the XFce4 desktop environment
 
-RUN_DEPENDS=	${LOCALBASE}/bin/xfdesktop:${PORTSDIR}/x11-wm/xfce4-desktop
+RUN_DEPENDS=	xfdesktop:${PORTSDIR}/x11-wm/xfce4-desktop
 
 GNU_CONFIGURE=	yes
 CONFIGURE_TARGET=	--build=${ARCH}-portbld-freebsd${OSREL}

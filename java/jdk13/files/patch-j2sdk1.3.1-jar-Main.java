@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-j2sdk1.3.1-jar-Main.java,v 1.2 2005/04/28 20:08:01 glewis Exp $
+$FreeBSD$
 
 --- ../src/share/classes/sun/tools/jar/Main.java	11 Jul 2001 21:39:05 -0000	1.1.1.1
 +++ ../src/share/classes/sun/tools/jar/Main.java	27 Apr 2005 05:07:30 -0000

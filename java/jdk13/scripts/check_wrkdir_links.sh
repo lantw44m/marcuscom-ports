@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: ports/java/jdk13/scripts/check_wrkdir_links.sh,v 1.1 2003/08/22 17:07:08 glewis Exp $
+# $FreeBSD$
 
 WRKDIRPREFIX=$1
 LINUXBASE=$2

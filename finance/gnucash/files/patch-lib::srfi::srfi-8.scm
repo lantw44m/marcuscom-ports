@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/finance/gnucash/files/patch-lib::srfi::srfi-8.scm,v 1.2 2002/08/18 07:40:20 sobomax Exp $
+$FreeBSD$
 
 --- lib/srfi/srfi-8.scm.orig	Tue Jun 25 23:53:35 2002
 +++ lib/srfi/srfi-8.scm	Sat Aug 17 22:34:33 2002

@@ -3,7 +3,7 @@
 # Date created:			Mar 4, 2005
 # Whom:				ijliao
 #
-# $FreeBSD: ports/ftp/pureadmin/Makefile,v 1.8 2006/05/07 11:09:21 edwin Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	pureadmin

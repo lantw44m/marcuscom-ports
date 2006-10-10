@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-nsCOMPtr.h,v 1.1 2004/08/31 19:52:25 glewis Exp $
+$FreeBSD$
 
 --- ../ext/plugin/oji-plugin/include/solaris/navig5/nsCOMPtr.h	11 Jul 2001 21:45:15 -0000	1.1.1.1
 +++ ../ext/plugin/oji-plugin/include/solaris/navig5/nsCOMPtr.h	30 Aug 2004 06:21:43 -0000

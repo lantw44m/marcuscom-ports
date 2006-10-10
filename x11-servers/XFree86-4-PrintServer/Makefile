@@ -2,7 +2,7 @@
 # Date created:		10 Oct 1999
 # Whom:			taguchi@tohoku.iij.ad.jp
 #
-# $FreeBSD: ports/x11-servers/XFree86-4-PrintServer/Makefile,v 1.32 2006/08/26 04:09:21 lesi Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	PrintServer

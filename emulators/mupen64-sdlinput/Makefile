@@ -2,7 +2,7 @@
 # Date created:		12.Aug 2004
 # Whom:			dirk.meyer@dinoex.sub.org
 #
-# $FreeBSD: ports/emulators/mupen64-sdlinput/Makefile,v 1.3 2006/09/20 11:20:46 stas Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	mupen64

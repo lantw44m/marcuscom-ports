@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/math/guppi/files/patch-configure,v 1.4 2002/03/14 14:24:24 sobomax Exp $
+$FreeBSD$
 
 --- configure.orig	Thu Mar 14 15:27:59 2002
 +++ configure	Thu Mar 14 15:30:18 2002

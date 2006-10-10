@@ -2,7 +2,7 @@
 # Date created:				2002-10-15
 # Whom:					trevor
 #
-# $FreeBSD: ports/devel/maketool/Makefile,v 1.13 2006/08/16 15:23:40 shaun Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	maketool

@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-deploy::jcomponent::CPluginVM_OP.cpp,v 1.1 2006/07/18 23:23:02 glewis Exp $
+$FreeBSD$
 
 --- ../../deploy/src/plugin/share/jcomponent/CPluginVM_OP.cpp.orig	Tue Oct 19 15:04:42 2004
 +++ ../../deploy/src/plugin/share/jcomponent/CPluginVM_OP.cpp	Thu Jul  6 17:09:36 2006

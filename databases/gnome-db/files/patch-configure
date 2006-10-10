@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/gnome-db/files/patch-configure,v 1.9 2004/06/27 17:32:30 marcus Exp $
+$FreeBSD$
 
 --- configure.orig	Mon Apr 15 15:30:28 2002
 +++ configure	Wed May  1 11:51:50 2002

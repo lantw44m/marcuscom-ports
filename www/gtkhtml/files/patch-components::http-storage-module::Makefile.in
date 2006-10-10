@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/www/gtkhtml/files/patch-components::http-storage-module::Makefile.in,v 1.1 2002/01/25 11:06:45 sobomax Exp $
+$FreeBSD$
 
 --- components/http-storage-module/Makefile.in	2002/01/22 14:05:48	1.1
 +++ components/http-storage-module/Makefile.in	2002/01/22 14:06:05

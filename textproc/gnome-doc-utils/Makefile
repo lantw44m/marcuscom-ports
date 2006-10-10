@@ -2,7 +2,7 @@
 # Date created:				11 November 2004
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/gnome-doc-utils/Makefile,v 1.10 2006/05/28 15:41:17 pav Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-doc-utils

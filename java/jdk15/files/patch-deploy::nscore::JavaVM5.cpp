@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-deploy::nscore::JavaVM5.cpp,v 1.1 2006/07/18 23:23:02 glewis Exp $
+$FreeBSD$
 
 --- ../../deploy/src/plugin/solaris/nscore/JavaVM5.cpp.orig	Thu Jun 15 18:08:03 2006
 +++ ../../deploy/src/plugin/solaris/nscore/JavaVM5.cpp	Thu Jul  6 17:10:37 2006

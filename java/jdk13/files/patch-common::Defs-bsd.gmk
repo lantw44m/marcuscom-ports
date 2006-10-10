@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-common::Defs-bsd.gmk,v 1.7 2004/08/10 20:28:44 glewis Exp $
+$FreeBSD$
 
 --- common/Defs-bsd.gmk.orig	Thu Dec 18 22:33:22 2003
 +++ common/Defs-bsd.gmk	Thu Dec 18 22:36:46 2003

@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-shared.hpp,v 1.1 2004/12/07 20:23:40 glewis Exp $
+$FreeBSD$
 
 --- ../../hotspot1.3.1/src/share/vm/interpreter/shared.hpp	11 Jul 2001 21:33:22 -0000	1.1.1.1
 +++ ../../hotspot1.3.1/src/share/vm/interpreter/shared.hpp	22 Nov 2004 17:19:42 -0000

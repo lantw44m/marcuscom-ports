@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/libgnomedb/files/patch-libgnomedb_gnome-db-sql-console.c,v 1.1 2005/11/10 16:03:00 vs Exp $
+$FreeBSD$
 
 --- libgnomedb/gnome-db-sql-console.c.orig
 +++ libgnomedb/gnome-db-sql-console.c

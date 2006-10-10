@@ -1,7 +1,7 @@
 # Date created:			  Sun Oct 26, 2003
 # Whom:				  Thierry Thomas (<thierry@pompo.net>)
 #
-# $FreeBSD: ports/www/mozex/Makefile.xpi,v 1.6 2006/09/06 06:45:01 thierry Exp $
+# $FreeBSD$
 #
 
 USE_GECKO=	seamonkey mozilla

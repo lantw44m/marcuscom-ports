@@ -1,4 +1,4 @@
-$FreeBSD: ports/astro/celestia/files/patch-src_celestia_glutmain.cpp,v 1.3 2004/03/17 23:08:20 trevor Exp $
+$FreeBSD$
 
 --- src/celestia/glutmain.cpp.orig	Sat Nov  2 23:20:19 2002
 +++ src/celestia/glutmain.cpp	Tue Mar 16 12:47:46 2004

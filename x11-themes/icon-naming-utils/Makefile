@@ -2,7 +2,7 @@
 # Date created:		2005-11-05
 # Whom:			Phillip Neumann <pneumann@gmail.com>
 #
-# $FreeBSD: ports/x11-themes/icon-naming-utils/Makefile,v 1.6 2006/04/30 21:07:39 pav Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	icon-naming-utils

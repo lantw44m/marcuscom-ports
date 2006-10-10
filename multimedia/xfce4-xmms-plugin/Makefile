@@ -2,11 +2,12 @@
 # Date created:				2004/05/10
 # Whom:					Zahemszky, Gábor <Gabor@Zahemszky.HU>
 #
-# $FreeBSD: ports/multimedia/xfce4-xmms-plugin/Makefile,v 1.9 2006/03/16 10:33:33 pav Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	xfce4-xmms-plugin
 PORTVERSION=	0.3.1
+PORTREVISION=	1
 CATEGORIES=	multimedia audio xfce
 MASTER_SITES=	http://download.berlios.de/xfce-goodies/ \
 		http://download2.berlios.de/xfce-goodies/

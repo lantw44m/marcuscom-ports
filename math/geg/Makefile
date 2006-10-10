@@ -2,7 +2,7 @@
 # Date created:					8 Aug 1998
 # Whom:						rom
 #
-# $FreeBSD: ports/math/geg/Makefile,v 1.28 2006/03/07 08:26:49 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	geg

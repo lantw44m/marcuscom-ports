@@ -3,10 +3,12 @@
 # Whom:                 Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/irc/xchat-mircryption/Makefile,v 1.1 2006/10/04 22:27:49 ahze Exp $
+#
 
 PORTNAME=	mircryption
 DISTVERSION=	1.1.27
+PORTREVISION=	1
 CATEGORIES=	irc security
 MASTER_SITES=	http://mircryption.sourceforge.net/Downloads/
 PKGNAMEPREFIX=	xchat-

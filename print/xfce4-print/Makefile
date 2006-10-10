@@ -2,7 +2,7 @@
 # Date created:		7 June 2003
 # Whom:			James Earl <jdearl@telus.net>
 #
-# $FreeBSD: ports/print/xfce4-print/Makefile,v 1.39 2006/05/13 01:03:16 edwin Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	xfce4-print

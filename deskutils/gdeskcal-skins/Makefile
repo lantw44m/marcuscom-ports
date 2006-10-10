@@ -30,7 +30,7 @@ DISTFILES=	gnometheme.tar.gz \
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Skins for gdeskcal
 
-RUN_DEPENDS=	${LOCALBASE}/bin/gdeskcal:${PORTSDIR}/deskutils/gdeskcal
+RUN_DEPENDS=	gdeskcal:${PORTSDIR}/deskutils/gdeskcal
 
 USE_PYTHON=	yes
 USE_XLIB=	yes

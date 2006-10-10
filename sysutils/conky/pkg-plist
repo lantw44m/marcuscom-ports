@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/sysutils/conky/pkg-plist,v 1.1 2005/08/31 07:45:52 novel Exp $
+@comment $FreeBSD$
 bin/conky
 %%EXAMPLESDIR%%/conkyrc.sample
 @dirrm %%EXAMPLESDIR%%

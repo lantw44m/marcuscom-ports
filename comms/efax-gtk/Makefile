@@ -2,11 +2,12 @@
 # Whom:                                Jean-Baptiste Quenot <jb.quenot@caraldi.com>
 # Date Created:                        2004-02-29 10:33:43
 #
-# $FreeBSD: ports/comms/efax-gtk/Makefile,v 1.25 2006/09/12 05:06:21 rafan Exp $
+# $FreeBSD$
 #
 
 PORTNAME=		efax-gtk
 PORTVERSION=		3.0.11
+PORTREVISION=		1
 CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -17,7 +18,7 @@ COMMENT=		GUI front end for the efax fax program
 
 LIB_DEPENDS=		sigc-1.2.5:${PORTSDIR}/devel/libsigc++12
 RUN_DEPENDS=		ggv:${PORTSDIR}/print/ggv \
-			${LOCALBASE}/bin/gs:${PORTSDIR}/print/ghostscript-gnu
+			gs:${PORTSDIR}/print/ghostscript-gnu
 
 USE_GNOME=		gtk20
 USE_X_PREFIX=		yes

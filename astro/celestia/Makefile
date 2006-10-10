@@ -2,11 +2,12 @@
 # Date created:				2002-05-17
 # Whom:					trevor
 #
-# $FreeBSD: ports/astro/celestia/Makefile,v 1.32 2006/09/15 08:17:05 linimon Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	celestia
 PORTVERSION=	1.4.1
+PORTREVISION=	1
 CATEGORIES=	astro
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	celestia

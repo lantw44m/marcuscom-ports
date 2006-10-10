@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-scavenge.hpp,v 1.1 2004/11/27 05:44:12 glewis Exp $
+$FreeBSD$
 
 --- ../../hotspot1.3.1/src/share/vm/memory/scavenge.hpp	11 Jul 2001 21:33:24 -0000	1.1.1.1
 +++ ../../hotspot1.3.1/src/share/vm/memory/scavenge.hpp	22 Nov 2004 17:19:42 -0000

@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/graphics/vertex/files/patch-vmahelp.c,v 1.2 2003/10/24 20:08:06 krion Exp $
+$FreeBSD$
 
 --- vertex/vmahelp.c	2001/10/05 17:31:12	1.1
 +++ vertex/vmahelp.c	2001/10/05 17:33:21

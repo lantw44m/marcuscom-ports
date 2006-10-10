@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-os_bsd.hpp,v 1.1 2004/11/28 05:29:25 glewis Exp $
+$FreeBSD$
 
 --- ../../hotspot1.3.1/src/os/bsd/vm/os_bsd.hpp	16 Jan 2002 18:46:39 -0000	1.2
 +++ ../../hotspot1.3.1/src/os/bsd/vm/os_bsd.hpp	22 Nov 2004 17:19:42 -0000

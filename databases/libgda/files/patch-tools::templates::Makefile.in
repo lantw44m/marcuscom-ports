@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/libgda/files/patch-tools::templates::Makefile.in,v 1.1 2001/08/06 10:56:39 sobomax Exp $
+$FreeBSD$
 
 --- tools/templates/Makefile.in	2001/08/06 08:15:18	1.1
 +++ tools/templates/Makefile.in	2001/08/06 08:15:53

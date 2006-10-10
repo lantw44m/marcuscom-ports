@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-vm.make,v 1.3 2004/11/27 05:48:46 glewis Exp $
+$FreeBSD$
 
 --- ../../hotspot1.3.1/build/linux/makefiles/vm.make	23 Jul 2004 18:17:54 -0000	1.7
 +++ ../../hotspot1.3.1/build/linux/makefiles/vm.make	22 Nov 2004 17:19:42 -0000

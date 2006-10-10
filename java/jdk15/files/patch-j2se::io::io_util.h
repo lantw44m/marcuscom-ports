@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-j2se::io::io_util.h,v 1.1 2006/09/09 02:10:02 glewis Exp $
+$FreeBSD$
 
 --- ../../j2se/src/share/native/java/io/io_util.h	8 Nov 2004 22:27:35 -0000	1.1.1.1
 +++ ../../j2se/src/share/native/java/io/io_util.h	7 Sep 2006 19:40:19 -0000

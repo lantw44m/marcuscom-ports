@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-monitor_md.c,v 1.1 2004/11/28 05:29:25 glewis Exp $
+$FreeBSD$
 
 --- ../src/solaris/hpi/native_threads/src/monitor_md.c	11 Jul 2001 21:42:33 -0000	1.1.1.1
 +++ ../src/solaris/hpi/native_threads/src/monitor_md.c	22 Nov 2004 17:19:50 -0000

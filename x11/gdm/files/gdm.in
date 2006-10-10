@@ -1,6 +1,6 @@
 #!/bin/sh
-# $FreeBSD: ports/x11/gdm/files/gdm.in,v 1.1 2006/04/30 00:47:09 marcus Exp $
-#    $MCom: ports/x11/gdm/files/gdm.in,v 1.5 2006/03/06 19:02:27 marcus Exp $
+# $FreeBSD$
+#    $MCom: ports/x11/gdm/files/gdm.in,v 1.7 2006/05/04 05:49:20 marcus Exp $
 
 # PROVIDE: gdm
 # REQUIRE: LOGIN cleanvar moused

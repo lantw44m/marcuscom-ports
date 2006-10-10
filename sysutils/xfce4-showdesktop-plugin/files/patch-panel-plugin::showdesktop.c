@@ -1,4 +1,4 @@
-$FreeBSD: ports/sysutils/xfce4-showdesktop-plugin/files/patch-panel-plugin::showdesktop.c,v 1.1 2004/01/10 17:36:28 petef Exp $
+$FreeBSD$
 
 --- panel-plugin/showdesktop.c.orig	Wed Nov  5 12:06:04 2003
 +++ panel-plugin/showdesktop.c	Sat Jan 10 11:21:40 2004

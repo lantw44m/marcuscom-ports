@@ -2,12 +2,12 @@
 # Date created:				2004 05 July
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/finance/mybudget/Makefile,v 1.3 2005/03/12 10:53:45 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	myBudget
 PORTVERSION=	0.60
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	finance gnome
 MASTER_SITES=	http://www.abisource.com/~msevior/
 

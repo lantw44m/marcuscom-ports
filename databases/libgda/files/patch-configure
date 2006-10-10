@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/libgda/files/patch-configure,v 1.5 2002/05/01 20:23:00 sobomax Exp $
+$FreeBSD$
 
 --- configure	2002/05/01 08:18:05	1.1
 +++ configure	2002/05/01 08:19:03

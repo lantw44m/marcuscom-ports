@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-InetAddressImpl.c,v 1.4 2006/07/19 22:34:45 glewis Exp $
+$FreeBSD$
 
 --- ../src/solaris/native/java/net/InetAddressImpl.c.orig	Wed Jul 19 01:28:19 2006
 +++ ../src/solaris/native/java/net/InetAddressImpl.c	Wed Jul 19 10:59:54 2006
@@ -94,4 +94,4 @@ $FreeBSD: ports/java/jdk13/files/patch-InetAddressImpl.c,v 1.4 2006/07/19 22:34:
 +    defined(__NetBSD__) || defined(__OpenBSD__)
  
  #if defined(LIBC_SCCS) && !defined(lint)
- static const char rcsid[] = "$Id: patch-InetAddressImpl.c,v 1.1 2006-08-01 03:56:56 mezz Exp $";
+ static const char rcsid[] = "$Id: patch-InetAddressImpl.c,v 1.2 2006-10-10 20:22:13 mezz Exp $";

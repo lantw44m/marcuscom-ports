@@ -2,7 +2,7 @@
 # Date created:		7 May 2004
 # Whom:			anholt@FreeBSD.org
 #
-# $FreeBSD: ports/x11-servers/xorg-server/Makefile,v 1.39 2006/08/25 21:52:48 lesi Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	xorg-server

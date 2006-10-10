@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/databases/libgnomedb/files/patch-libgnomedb_gnome-db-find-dialog.c,v 1.3 2005/11/10 16:03:00 vs Exp $
+$FreeBSD$
 
 --- libgnomedb/gnome-db-find-dialog.c.orig
 +++ libgnomedb/gnome-db-find-dialog.c

@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-javai_md.c,v 1.1 2004/01/19 19:28:40 glewis Exp $
+$FreeBSD$
 
 --- ../src/solaris/javavm/runtime/javai_md.c	24 Jul 2003 07:06:56 -0000	1.7
 +++ ../src/solaris/javavm/runtime/javai_md.c	15 Jan 2004 07:37:23 -0000

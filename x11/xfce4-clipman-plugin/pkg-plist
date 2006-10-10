@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/x11/xfce4-clipman-plugin/pkg-plist,v 1.4 2006/02/23 10:39:59 ade Exp $
+@comment $FreeBSD$
 lib/xfce4/panel-plugins/libclipman.a
 lib/xfce4/panel-plugins/libclipman.la
 lib/xfce4/panel-plugins/libclipman.so

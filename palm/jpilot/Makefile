@@ -2,7 +2,7 @@
 # Date created:        23 August 1999
 # Whom:                Alex Varju <varju@webct.com>
 #
-# $FreeBSD: ports/palm/jpilot/Makefile,v 1.57 2006/09/29 20:59:59 pav Exp $
+# $FreeBSD$
 #
 # "?=" and "+=" are for including this Makefile from japanese/jpilot
 

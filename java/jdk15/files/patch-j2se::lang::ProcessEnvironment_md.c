@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-j2se::lang::ProcessEnvironment_md.c,v 1.1 2006/06/16 21:28:08 glewis Exp $
+$FreeBSD$
 
 --- ../../j2se/src/solaris/native/java/lang/ProcessEnvironment_md.c.orig	Tue Oct 19 15:02:09 2004
 +++ ../../j2se/src/solaris/native/java/lang/ProcessEnvironment_md.c	Thu Jun 15 17:58:34 2006

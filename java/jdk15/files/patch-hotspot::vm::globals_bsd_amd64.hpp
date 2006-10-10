@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-hotspot::vm::globals_bsd_amd64.hpp,v 1.1 2006/06/16 21:26:38 glewis Exp $
+$FreeBSD$
 
 --- ../../hotspot/src/os_cpu/bsd_amd64/vm/globals_bsd_amd64.hpp.orig	Thu Jun 15 17:58:02 2006
 +++ ../../hotspot/src/os_cpu/bsd_amd64/vm/globals_bsd_amd64.hpp	Thu Jun 15 17:59:02 2006

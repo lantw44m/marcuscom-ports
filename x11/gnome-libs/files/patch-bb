@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/x11/gnome-libs/files/patch-bb,v 1.5 2002/01/15 16:12:51 sobomax Exp $
+$FreeBSD$
 
 --- gtk-xmhtml/Makefile.in.orig	Mon Jan 14 12:02:33 2002
 +++ gtk-xmhtml/Makefile.in	Mon Jan 14 12:03:13 2002

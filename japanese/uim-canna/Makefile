@@ -2,7 +2,7 @@
 # Date created:        31 August 2003
 # Whom:                MANTANI Nobutaka <nobutaka@FreeBSD.org>
 #
-# $FreeBSD: ports/japanese/uim-canna/Makefile,v 1.7 2006/09/03 14:09:22 nobutaka Exp $
+# $FreeBSD$
 #
 
 CATEGORIES=	japanese

@@ -2,7 +2,7 @@
 # Date created:        30 July 2006
 # Whom:                Jona Joachim <walkingshadow@grummel.net>
 #
-# $FreeBSD: ports/devel/sge/Makefile,v 1.3 2006/09/20 11:20:41 stas Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	sge

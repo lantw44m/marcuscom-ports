@@ -1,4 +1,4 @@
 #! /bin/sh
-# $FreeBSD: ports/www/openvrml/files/lookat.sh.in,v 1.1 2005/07/26 13:39:59 thierry Exp $
+# $FreeBSD$
 
 LD_LIBRARY_PATH=%%LOCALBASE%%/lib/mozilla %%PREFIX%%/bin/lookat $1

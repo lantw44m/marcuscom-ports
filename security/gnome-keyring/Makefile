@@ -2,7 +2,7 @@
 # Date Created:			08 December 2003
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/security/gnome-keyring/Makefile,v 1.22 2006/05/28 15:22:11 pav Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-keyring

@@ -2,7 +2,7 @@
 # Date created:		1999-09-01
 # Whom:			Christian Weisgerber <naddy@unix-ag.uni-kl.de>
 #
-# $FreeBSD: ports/editors/elvis/Makefile,v 1.12 2006/05/07 10:55:31 edwin Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	elvis

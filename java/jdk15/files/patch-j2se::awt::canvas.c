@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk15/files/patch-j2se::awt::canvas.c,v 1.1 2006/04/25 20:10:19 glewis Exp $
+$FreeBSD$
 
 --- ../../j2se/src/solaris/native/sun/awt/canvas.c	10 Jan 2005 15:09:40 -0000	1.2
 +++ ../../j2se/src/solaris/native/sun/awt/canvas.c	19 Apr 2006 22:21:51 -0000

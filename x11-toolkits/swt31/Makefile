@@ -2,7 +2,7 @@
 # Date created:				2005-12-15
 # Whom:					past@ebs.gr
 #
-# $FreeBSD: ports/x11-toolkits/swt31/Makefile,v 1.4 2006/05/13 05:00:38 edwin Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	swt

@@ -2,12 +2,12 @@
 # Date created:				2005-09-12
 # Whom:					Thomas Gellekum <tg@FreeBSD.org>
 #
-# $FreeBSD: ports/games/gnomesudoku/Makefile,v 1.8 2006/07/26 20:15:28 tg Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnomesudoku
 PORTVERSION=	0.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	gnome-sudoku

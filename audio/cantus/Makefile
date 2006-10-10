@@ -2,7 +2,7 @@
 # Date created:				22 May 2003
 # Whom:					old@old.com.ua
 #
-# $FreeBSD: ports/audio/cantus/Makefile,v 1.6 2006/03/07 08:25:43 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	cantus

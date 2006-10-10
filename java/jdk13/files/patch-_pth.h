@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-_pth.h,v 1.1 2004/11/28 05:29:25 glewis Exp $
+$FreeBSD$
 
 --- ../ext/plugin/oji-plugin/include/solaris/navig4/nspr/md/_pth.h	11 Jul 2001 21:45:07 -0000	1.1.1.1
 +++ ../ext/plugin/oji-plugin/include/solaris/navig4/nspr/md/_pth.h	22 Nov 2004 17:19:42 -0000

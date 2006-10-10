@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/bonobo/files/patch-po::Makefile.in.in,v 1.1 2001/08/21 14:09:52 sobomax Exp $
+$FreeBSD$
 
 --- po/Makefile.in.in.orig	Tue Jul  3 19:44:24 2001
 +++ po/Makefile.in.in	Tue Jul  3 19:51:42 2001

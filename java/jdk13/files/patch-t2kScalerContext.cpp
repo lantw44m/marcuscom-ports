@@ -1,4 +1,4 @@
-$FreeBSD: ports/java/jdk13/files/patch-t2kScalerContext.cpp,v 1.1 2004/08/10 20:30:30 glewis Exp $
+$FreeBSD$
 
 --- ../src/share/native/sun/awt/font/fontmanager/fontobjects/t2kScalerContext.cpp	12 Jul 2001 21:54:30 -0000	1.2
 +++ ../src/share/native/sun/awt/font/fontmanager/fontobjects/t2kScalerContext.cpp	10 Aug 2004 14:29:24 -0000
