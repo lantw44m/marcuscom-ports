@@ -16,11 +16,10 @@ COMMENT=	A message bus system for inter-application communication
 
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
-USE_XLIB=	yes
 USE_GNOME=	gnomehack gnometarget libxml2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 CONFIGURE_ARGS=--localstatedir=/var \
 	        --with-test-socket-dir=${WRKDIR} \
 		--with-system-pid-file=/var/run/dbus/dbus.pid \
@@ -39,6 +38,10 @@ PLIST_SUB=	VERSION="1.0"
 
 MAN1=		dbus-cleanup-sockets.1 dbus-daemon.1 dbus-launch.1 \
 		dbus-monitor.1 dbus-send.1
+.endif
+
+.if !defined(WITHOUT_X11)
+USE_XLIB=	yes
 .endif
 
 .include <bsd.port.pre.mk>
