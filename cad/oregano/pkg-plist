@@ -64,12 +64,6 @@ share/locale/ro/LC_MESSAGES/oregano.mo
 share/locale/ru/LC_MESSAGES/oregano.mo
 share/locale/sv/LC_MESSAGES/oregano.mo
 share/mime/packages/oregano.xml
-@dirrmtry share/locale/ro/LC_MESSAGES
-@dirrmtry share/locale/ro
-@dirrmtry share/locale/pl/LC_MESSAGES
-@dirrmtry share/locale/pl
-@dirrmtry share/locale/ca/LC_MESSAGES
-@dirrmtry share/locale/ca
 @dirrm share/gnome/oregano/models
 @dirrm share/gnome/oregano/libraries
 @dirrm share/gnome/oregano/examples
@@ -82,3 +76,7 @@ share/mime/packages/oregano.xml
 @dirrm share/gnome/help/oregano
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@dirrmtry share/locale/ro/LC_MESSAGES
+@dirrmtry share/locale/ro
+@dirrmtry share/locale/ca/LC_MESSAGES
+@dirrmtry share/locale/ca
