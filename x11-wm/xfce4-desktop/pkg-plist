@@ -145,6 +145,7 @@ share/xfce4/doc/he/images/xfdesktop-menu-tab.png
 share/xfce4/doc/he/images/xfdesktop-list.png
 share/xfce4/doc/he/xfdesktop.html
 @dirrm etc/xdg/xfce4/desktop
+@dirrmtry share/pixmaps
 @dirrmtry share/applications
 @dirrmtry etc/xdg/xfce4
 @dirrmtry etc/xdg
