@@ -1,0 +1,20 @@
+--- gst/gstpad.override.orig	Tue Oct 10 18:58:35 2006
++++ gst/gstpad.override	Tue Oct 10 18:58:59 2006
+@@ -443,17 +443,6 @@ _wrap_gst_pad_link_filtered(PyGObject *s
+ }
+ 
+ %%
+-override gst_pad_get_negotiated_caps
+-static PyObject *
+-_wrap_gst_pad_get_negotiated_caps(PyGObject *self)
+-{
+-	const GstCaps *ret;
+-
+-	ret = gst_pad_get_negotiated_caps(GST_PAD(self->obj));
+-	/* pyg_boxed_new handles NULL checking */
+-	return pyg_boxed_new(GST_TYPE_CAPS, ret, TRUE, TRUE);
+-}
+-%%
+ override gst_pad_get_negotiated_caps noargs
+ static PyObject *
+ _wrap_gst_pad_get_negotiated_caps(PyGObject *self)
