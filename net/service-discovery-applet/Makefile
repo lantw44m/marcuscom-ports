@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net/service-discovery-applet/Makefile,v 1.1 2006/07/27 17:32:12 mezz Exp $
 #
 
 PORTNAME=	service-discovery-applet
-PORTVERSION=	0.4.1
-PORTREVISION=	2
+PORTVERSION=	0.4.3
+PORTREVISION=	1
 CATEGORIES=	net dns gnome
 MASTER_SITES=	http://0pointer.de/~sebest/
 
@@ -32,7 +32,7 @@ GCONF_SCHEMAS=	service-discovery-applet.schemas
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PREFIX%%|${PREFIX}|g' \
-		${WRKSRC}/plugins/gconfterminal.py
+	    	${WRKSRC}/plugins/gconfterminal.py.in
 
 post-install:
 	@${LOCALBASE}/bin/gtk-update-icon-cache -f -q --ignore-theme-index \
