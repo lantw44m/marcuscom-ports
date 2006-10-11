@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/xulrunner/Makefile,v 1.9 2006/10/09 18:00:44 ahze Exp $
+#    $MCom: ports/www/xulrunner/Makefile,v 1.10 2006/10/11 22:09:25 ahze Exp $
 
 PORTNAME=	xulrunner
 PORTVERSION=	1.8.0.4
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES?=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	xulrunner/releases/${PORTVERSION}/source/
