@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/service-discovery-applet/Makefile,v 1.1 2006/07/27 17:32:12 mezz Exp $
+#   $MCom: ports/net/service-discovery-applet/Makefile,v 1.2 2006/10/11 05:46:29 marcus Exp $
 #
 
 PORTNAME=	service-discovery-applet
@@ -15,8 +15,8 @@ MASTER_SITES=	http://0pointer.de/~sebest/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNOME applet that shows available network services using mDNS
 
-BUILD_DEPENDS=	${LOCALBASE}/lib/${PYTHON_VERSION}/site-packages/avahi/__init__.py:${PORTSDIR}/net/py-avahi
-RUN_DEPENDS=	${LOCALBASE}/lib/${PYTHON_VERSION}/site-packages/avahi/__init__.py:${PORTSDIR}/net/py-avahi
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/avahi/__init__.py:${PORTSDIR}/net/py-avahi
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/avahi/__init__.py:${PORTSDIR}/net/py-avahi
 
 USE_XLIB=	yes
 USE_GETTEXT=	yes
