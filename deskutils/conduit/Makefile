@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/deskutils/conduit/Makefile,v 1.1 2006/10/11 01:24:19 ahze Exp $
 
 PORTNAME=	conduit
 PORTVERSION=	0.2.0
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	http://files.conduit-project.org/releases/
 
@@ -15,7 +16,7 @@ COMMENT=	Synchronization application for GNOME
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/goocanvasmodule.so:${PORTSDIR}/deskutils/conduit \
 		${PYTHON_SITELIBDIR}/elementtree/__init__.py:${PORTSDIR}/devel/py-elementtree \
-		${LOCALBASE}/lib/${PYTHON_VERSION}/site-packages/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3 \
+		${PYTHON_SITELIBDIR}/pysqlite2/__init__.py:${PORTSDIR}/databases/py-pysqlite23 \
 		xmlproc_parse:${PORTSDIR}/textproc/py-xml
 
 NO_WRKSUBDIR=	yes
