@@ -2,7 +2,7 @@
 # Date created:			Sep 27, 2005
 # Whom:				Thierry Thomas <thierry@pompo.net>
 #
-# $FreeBSD: ports/science/v_sim/Makefile,v 1.6 2006/09/11 20:09:12 thierry Exp $
+# $FreeBSD$
 
 PORTNAME=	v_sim
 PORTVERSION=	3.2.1

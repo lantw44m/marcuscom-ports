@@ -2,7 +2,7 @@
 # Date created:				26 Oct 2003
 # Whom:					clsung@dragon2.net
 #
-# $FreeBSD: ports/devel/p5-Glib2/Makefile,v 1.23 2006/10/09 01:26:44 clsung Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	Glib2
