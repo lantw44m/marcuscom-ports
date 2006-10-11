@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net/avahi/Makefile,v 1.17 2006/10/07 19:44:08 marcus Exp $
 
 PORTNAME=	avahi
-PORTVERSION=	0.6.13
-PORTREVISION?=	4
+PORTVERSION=	0.6.14
+PORTREVISION?=	0
 CATEGORIES?=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 
@@ -34,6 +34,7 @@ CONFIGURE_ARGS?=--with-distro=freebsd \
 		--disable-doxygen-dot \
 		--localstatedir=/var \
 		--enable-compat-howl \
+		--disable-autoipd \
 		--mandir=${PREFIX}/man
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
