@@ -54,6 +54,7 @@ RUN_DEPENDS+=	${LOCALBASE}/lib/xfce4/panel-plugins/libmixer.so:${PORTSDIR}/audio
 
 LATEST_LINK=	xfce4
 NO_BUILD=	yes
+USE_GNOME=	gtk20
 
 do-install:	# empty
 
