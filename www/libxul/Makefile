@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/xulrunner/Makefile,v 1.8 2006/07/18 15:11:14 ahze Exp $
+#    $MCom: ports/www/xulrunner/Makefile,v 1.9 2006/10/09 18:00:44 ahze Exp $
 
 PORTNAME=	xulrunner
 PORTVERSION=	1.8.0.4
@@ -24,7 +24,8 @@ USE_GMAKE=	yes
 USE_GCC=	3.4+
 
 PORT_MOZCONFIG=	${WRKSRC}/xulrunner/config/mozconfig
-MOZ_OPTIONS?=	--disable-javaxpcom --enable-canvas
+MOZ_OPTIONS?=	--disable-javaxpcom --enable-canvas \
+		--enable-system-cairo
 MOZ_EXTENSIONS=	default,cookie,permissions
 OPTIONS=	# Empty, used for generic gecko OPTIONS
 
