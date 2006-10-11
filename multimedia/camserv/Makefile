@@ -22,7 +22,7 @@ LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg \
 		freetype.9:${PORTSDIR}/print/freetype2
 
 USE_XLIB=	yes
-USE_AUTOTOOLS=	autoconf:259 libtool:15
+USE_AUTOTOOLS=	autoconf:259 libtool:15 libltdl:15
 
 CONFIGURE_TARGET=--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include \
