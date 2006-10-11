@@ -51,6 +51,7 @@ share/xfmedia/doc/xfce.css
 @dirrm share/xfmedia/doc
 @dirrm share/xfmedia
 @dirrm etc/xdg/xfmedia
+@dirrmtry etc/xdg
 @dirrm include/xfmedia
 @dirrm lib/xfmedia/plugins
 @dirrm lib/xfmedia
