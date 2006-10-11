@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/conduit/Makefile,v 1.1 2006/10/11 01:24:19 ahze Exp $
+#    $MCom: ports/deskutils/conduit/Makefile,v 1.2 2006/10/11 02:07:09 ahze Exp $
 
 PORTNAME=	conduit
 PORTVERSION=	0.2.0
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/goocanvasmodule.so:${PORTSDIR}/deskutils/condu
 		xmlproc_parse:${PORTSDIR}/textproc/py-xml
 
 NO_WRKSUBDIR=	yes
-USE_PYTHON=	2.5+
+USE_PYTHON=	2.4+
 MAKE_ENV=	DESTDIR=""
 USE_GNOME=	pygnome2
 DESKTOP_ENTRIES=	"Conduit" "${COMMENT}" "conduit-icon.png" \
