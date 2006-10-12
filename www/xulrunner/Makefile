@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/xulrunner/Makefile,v 1.10 2006/10/11 22:09:25 ahze Exp $
+#    $MCom: ports/www/xulrunner/Makefile,v 1.11 2006/10/11 22:27:13 ahze Exp $
 
 PORTNAME=	xulrunner
 PORTVERSION=	1.8.0.4
@@ -28,6 +28,7 @@ MOZ_OPTIONS?=	--disable-javaxpcom --enable-canvas \
 		--enable-system-cairo
 MOZ_EXTENSIONS=	default,cookie,permissions
 OPTIONS=	# Empty, used for generic gecko OPTIONS
+USE_GECKO_OPTIONS=	java debug logging optimized_cflags
 
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/www/mozilla/Makefile.common"
