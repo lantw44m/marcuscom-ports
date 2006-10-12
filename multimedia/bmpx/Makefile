@@ -7,7 +7,7 @@
 
 PORTNAME=	bmpx
 PORTVERSION=	0.32.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://files.beep-media-player.org/releases/0.30/
 
@@ -15,7 +15,7 @@ MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Media player geared towards usability, technical efficiency and looks
 
 LIB_DEPENDS=	tag.5:${PORTSDIR}/audio/taglib \
-		cairomm-1.0.0:${PORTSDIR}/graphics/cairomm \
+		cairomm-1.0.1:${PORTSDIR}/graphics/cairomm \
 		musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 		neon.25:${PORTSDIR}/www/neon \
 		glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
