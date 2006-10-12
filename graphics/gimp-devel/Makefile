@@ -3,12 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.21 2006/07/23 18:22:02 marcus Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.22 2006/09/10 00:51:10 mezz Exp $
 #
 
 PORTNAME=	gimp
 PORTVERSION=	2.3.9
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -135,10 +135,10 @@ USE_GNOME+=		gnomepanel desktopfileutils
 CONFIGURE_ARGS+=	--with-desktop-dir=${LOCALBASE}/share/gnome
 CONFIGURE_ENV+=		GIMP_THREAD_LIBS=${PTHREAD_LIBS}
 PKGNAMESUFFIX:=		-gnome
-PLIST_SUB+=		GTK="gnome/"
+PLIST_SUB+=		GTK="gnome/" GNOMEPANEL:=""
 GNOME_ENABLED=		yes
 .else
-PLIST_SUB+=		GTK=""
+PLIST_SUB+=		GTK="" GNOMEPANEL:="@comment "
 CONFIGURE_ENV+=		GIMP_THREAD_LIBS=${PTHREAD_LIBS}
 .endif
 
