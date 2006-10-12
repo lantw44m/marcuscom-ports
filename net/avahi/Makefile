@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.17 2006/10/07 19:44:08 marcus Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.18 2006/10/11 05:40:17 marcus Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.14
@@ -23,6 +23,7 @@ USE_GNOME?=	gnomehack ltverhack glib20
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
+USE_GETOPT_LONG=yes
 CONFIGURE_ARGS?=--with-distro=freebsd \
 		--with-dbus-system-address=unix:path=/var/run/dbus/dbus.pipe \
 		--disable-qt3 \
@@ -57,10 +58,6 @@ OPTIONS=	GTK2 "Build a GTK+ 2 browser utility" off \
 .include <bsd.port.pre.mk>
 
 .if !defined(AVAHI_SLAVE)
-.if ${OSVERSION} < 500000
-IGNORE=	does not work on FreeBSD 4.X
-.endif
-
 .if defined(WITH_LIBDNS)
 CONFIGURE_ARGS+=--enable-compat-libdns_sd
 PLIST_SUB+=	LIBDNS=""
