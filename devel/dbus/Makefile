@@ -38,10 +38,10 @@ PLIST_SUB=	VERSION="1.0"
 
 MAN1=		dbus-cleanup-sockets.1 dbus-daemon.1 dbus-launch.1 \
 		dbus-monitor.1 dbus-send.1
-.endif
 
 .if !defined(WITHOUT_X11)
 USE_XLIB=	yes
+.endif
 .endif
 
 .include <bsd.port.pre.mk>
@@ -52,17 +52,6 @@ post-patch:
 		${WRKSRC}/bus/system.conf.in
 
 .if !defined(DBUS_SLAVE)
-pre-su-install:
-	@for i in 15 9 ; do \
-		if [ -f /var/run/dbus/dbus.pid ]; then \
-			kill -$${i} $$(${CAT} /var/run/dbus/dbus.pid) 2>/dev/null || ${TRUE} ; \
-			sleep 3 ; \
-		fi ; \
-	done
-	@if [ -f /var/run/dbus/dbus.pid ]; then \
-		${RM} -f /var/run/dbus/dbus.pid ; \
-	fi
-
 post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
