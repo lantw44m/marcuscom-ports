@@ -19,7 +19,7 @@ RUN_DEPENDS=	gtk-demo:${PORTSDIR}/x11-toolkits/gtk20 \
 		xcompmgr:${PORTSDIR}/x11-wm/xcompmgr
 
 USE_GMAKE=	yes
-USE_GNOME=	gconf2
+USE_GNOME=	gconf2 gnomehier
 GCONF_SCHEMAS=	kiba.schemas
 
 post-patch:
