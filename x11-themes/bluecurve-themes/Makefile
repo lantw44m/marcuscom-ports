@@ -6,7 +6,7 @@
 #
 
 PORTNAME?=	bluecurve-themes
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES=	x11-themes
 
 MAINTAINER=	jylefort@FreeBSD.org
@@ -24,7 +24,7 @@ RUN_DEPENDS=	${X11BASE}/lib/X11/icons/Bluecurve/cursors/X_cursor:${PORTSDIR}/x11
 		${LOCALBASE}/share/themes/Bluecurve/index.theme:${PORTSDIR}/x11-themes/gnome-bluecurve-theme \
 		${LINUXBASE}/usr/share/themes/Bluecurve/gtk-2.0/gtkrc:${PORTSDIR}/x11-themes/linux-gtk-bluecurve-theme \
 		${X11BASE}/lib/plugins/styles/bluecurve.so:${PORTSDIR}/x11-themes/qt-bluecurve-theme \
-		${LOCALBASE}/share/xmms/Skins/Bluecurve-xmms.zip:${PORTSDIR}/x11-themes/xmms-bluecurve-theme
+		${X11BASE}/share/xmms/Skins/Bluecurve-xmms.zip:${PORTSDIR}/x11-themes/xmms-bluecurve-theme
 
 NO_BUILD=	yes
 
