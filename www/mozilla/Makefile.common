@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.27 2006/10/09 04:30:01 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.28 2006/10/12 09:32:06 ahze Exp $
 
 # This file contains some reusable components for mozilla ports. It's of
 # use primarily to apps from the mozilla project itself (such as Firefox,
@@ -215,7 +215,6 @@ JAVA_VERSION+=	1.4+
 JAVA_OS+=	native
 CONFIGURE_ENV+=	JAVA_HOME="${JAVA_HOME}"
 MOZ_OPTIONS+=	--enable-javaxpcom
-CFLAGS+=	-DJNIIMPORT
 .endif
 
 .if defined(WITH_LOGGING)
@@ -318,6 +317,11 @@ gecko-moz-pis-patch:
 .for moz in ${MOZ_PIS_SCRIPTS}
 	@${MOZCONFIG_SED} < ${FILESDIR}/${moz} > ${WRKDIR}/${moz}
 .endfor
+
+post-configure: gecko-post-configure
+
+gecko-post-configure:
+	@${ECHO_CMD} "#define JNIIMPORT" >> ${WRKSRC}/mozilla-config.h
 
 post-build: gecko-post-build
 
