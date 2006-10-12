@@ -26,6 +26,10 @@ lib/rhythmbox/plugins/generic-player/generic-player.rb-plugin
 lib/rhythmbox/plugins/generic-player/libgeneric-player.a
 lib/rhythmbox/plugins/generic-player/libgeneric-player.la
 lib/rhythmbox/plugins/generic-player/libgeneric-player.so
+%%IPOD%%lib/rhythmbox/plugins/ipod/ipod.rb-plugin
+%%IPOD%%lib/rhythmbox/plugins/ipod/libipod.a
+%%IPOD%%lib/rhythmbox/plugins/ipod/libipod.la
+%%IPOD%%lib/rhythmbox/plugins/ipod/libipod.so
 lib/rhythmbox/plugins/libaudiocd.a
 lib/rhythmbox/plugins/libaudiocd.la
 lib/rhythmbox/plugins/libaudiocd.so
@@ -325,6 +329,7 @@ share/locale/zh_TW/LC_MESSAGES/rhythmbox.mo
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/rb
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/python-console
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/lyrics
+%%IPOD%%@dirrm lib/rhythmbox/plugins/ipod
 @dirrm lib/rhythmbox/plugins/generic-player
 @dirrm lib/rhythmbox/plugins/cd-recorder
 @dirrm lib/rhythmbox/plugins/audioscrobbler

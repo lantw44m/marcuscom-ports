@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.65 2006/10/07 17:10:03 marcus Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.66 2006/10/09 15:18:48 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
 PORTVERSION=	0.9.6
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.9
@@ -42,6 +43,7 @@ CONFIGURE_ENV=	LIBS="-lm" \
 GCONF_SCHEMAS=	rhythmbox.schemas
 
 OPTIONS=	DAAP "Enable iTunes music sharing" off \
+		IPOD "Enable iPod support" on \
 		FAAD "Enable FAAD decoder support" off \
 		NOTIFY "Enable libnotify support" on \
 		VORBIS "Enable Ogg/Vorbis support" on \
@@ -95,6 +97,15 @@ PLIST_SUB+=	PYTHON=""
 .else
 CONFIGURE_ARGS+=--disable-python
 PLIST_SUB+=	PYTHON="@comment "
+.endif
+
+.if !defined(WITHOUT_IPOD)
+LIB_DEPENDS+=	gpod.400:${PORTSDIR}/audio/libgpod
+CONFIGURE_ARGS+=--with-ipod
+PLIST_SUB+=	IPOD=""
+.else
+CONFIGURE_ARGS+=--without-ipod
+PLIST_SUB+=	IPOD="@comment "
 .endif
 
 .include <bsd.port.post.mk>
