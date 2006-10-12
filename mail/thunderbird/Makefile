@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/mail/thunderbird/Makefile,v 1.16 2006/07/29 03:59:14 ahze Exp $
+#    $MCom: ports/mail/thunderbird/Makefile,v 1.17 2006/09/14 13:49:54 ahze Exp $
 #
 
 PORTNAME=	thunderbird
@@ -30,7 +30,7 @@ MOZ_EXTENSIONS=	wallet,spellcheck,xmlextras,webservices
 MOZ_PROTOCOLS=	http,file,jar,viewsource,res,data
 MOZ_GRAPHICS=	default,-xbm
 MOZ_OPTIONS=	--enable-single-profile --disable-profilesharing	\
-		--enable-application=mail -enable-official-branding
+		--enable-application=mail --enable-official-branding
 MOZ_MK_OPTIONS=	MOZ_MOZ_THUNDERBIRD=1
 MOZ_EXPORT=	MOZ_THUNDERBIRD=1
 
