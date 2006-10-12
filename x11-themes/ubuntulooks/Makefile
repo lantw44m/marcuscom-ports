@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	ubuntulooks
-PORTVERSION=	0.9.11
-PORTREVISION=	1
+PORTVERSION=	0.9.12
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntulooks/
 DISTNAME=	${PORTNAME}_${PORTVERSION}.orig
