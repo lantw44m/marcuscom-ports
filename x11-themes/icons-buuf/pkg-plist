@@ -1045,7 +1045,6 @@ share/icons/Buuf/Emotes/We can all get high if we want now, get a fat piece of t
 share/icons/Buuf/Emotes/You have dishonoured your clan..png
 share/icons/Buuf/Emotes/  ...and that's where babies come from..png
 share/icons/Buuf/index.theme
-@unexec rm %D/share/icons/Buuf/icon-theme.cache || true
 @dirrm share/icons/Buuf/Emotes
 @dirrm share/icons/Buuf/128x128/stock
 @dirrm share/icons/Buuf/128x128/status
