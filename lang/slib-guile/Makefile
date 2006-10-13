@@ -3,11 +3,11 @@
 # Whom:                        Kimura Fuyuki <fuyuki@nigredo.org>
 #
 # $FreeBSD$
-#    $MCom: ports/lang/slib-guile/Makefile,v 1.1 2006/09/12 15:25:17 ahze Exp $
+#    $MCom: ports/lang/slib-guile/Makefile,v 1.2 2006/10/13 00:28:50 marcus Exp $
 
 PORTNAME=	slib
 PORTVERSION=	3a3 # Keep this in sync with lang/slib
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	lang scheme
 MASTER_SITES=	# empty
 PKGNAMESUFFIX=	-guile
