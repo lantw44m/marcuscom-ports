@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.24 2006/10/07 17:10:07 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.25 2006/10/08 02:27:53 mezz Exp $
 #
 
 PORTNAME=	hal
@@ -63,7 +63,7 @@ SUB_FILES=	pkg-install pkg-deinstall
 SUB_LIST=	RC_FILES="${RC_FILES}"
 .else # Slave port stuff
 LIB_DEPENDS+=	hal.1:${PORTSDIR}/sysutils/hal
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus.pth:${PORTSDIR}/devel/py-dbus
+RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
 
 USE_GNOME+=	pygnome2
 DESKTOP_ENTRIES="Device Manager" \
