@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.28 2006/10/12 09:32:06 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.29 2006/10/12 12:17:26 ahze Exp $
 
 # This file contains some reusable components for mozilla ports. It's of
 # use primarily to apps from the mozilla project itself (such as Firefox,
@@ -104,7 +104,6 @@ EXTRACT_AFTER_ARGS?=	| ${TAR} -xf - --exclude */CVS/*	\
 			--exclude mozilla/modules/libimg/png	\
 			--exclude mozilla/jpeg			\
 			--exclude mozilla/dbm			\
-			--exclude mozilla/js/src/fdlibm		\
 			--exclude mozilla/security/nss		\
 			--exclude mozilla/gc/boehm		\
 			--exclude mozilla/gfx/cairo
@@ -303,7 +302,7 @@ gecko-post-patch:
 	@${REINPLACE_CMD} -E -e 's|libesd\.so\.[0-9]+|libesd.so|g' \
 		${WRKSRC}/widget/src/gtk2/nsSound.cpp
 	@${REINPLACE_CMD} -E -e 's|libcups\.so\.[0-9]+|libcups.so|g' \
-		${WRKSRC}/gfx/src/gtk/nsDeviceContextSpecG.cpp
+		${WRKSRC}/*/*/*/nsDeviceContextSpecG.cpp
 	@${REINPLACE_CMD} -e 's|/usr/local/netscape|${LOCALBASE}|g ; \
 		s|/usr/local/lib/netscape|${LOCALBASE}/lib|g' \
 		${WRKSRC}/xpcom/*/SpecialSystemDirectory.cpp
