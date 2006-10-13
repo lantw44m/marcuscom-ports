@@ -3,6 +3,9 @@ lib/mono/gac/muine-dbus/1.0.0.0__e6bf890338fa2913/muine-dbus.dll
 lib/mono/gac/muine-plugin/1.0.0.0__e6bf890338fa2913/muine-plugin.dll
 lib/mono/muine/muine-dbus.dll
 lib/mono/muine/muine-plugin.dll
+lib/monodoc/sources/muine-docs.source
+lib/monodoc/sources/muine-docs.tree
+lib/monodoc/sources/muine-docs.zip
 lib/muine/libmuine.a
 lib/muine/libmuine.la
 lib/muine/libmuine.so
@@ -61,7 +64,3 @@ share/locale/zh_CN/LC_MESSAGES/muine.mo
 @dirrm lib/mono/gac/muine-plugin
 @dirrm lib/mono/gac/muine-dbus/1.0.0.0__e6bf890338fa2913
 @dirrm lib/mono/gac/muine-dbus
-@cwd %%X11BASE%%
-lib/monodoc/sources/muine-docs.source
-lib/monodoc/sources/muine-docs.tree
-lib/monodoc/sources/muine-docs.zip

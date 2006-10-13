@@ -3,12 +3,12 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.4 2006-10-08 16:59:03 mezz Exp $
+#   $Id: Makefile,v 1.5 2006-10-13 18:32:00 marcus Exp $
 #
 
 PORTNAME=	muine
 PORTVERSION=	0.8.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio gnome
 MASTER_SITES=	http://muine-player.org/releases/
 
@@ -27,7 +27,7 @@ RUN_DEPENDS=	gapi2-fixup:${PORTSDIR}/x11-toolkits/gtk-sharp20 \
 
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intltool libgnomeui
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
