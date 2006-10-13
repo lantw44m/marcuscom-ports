@@ -3,12 +3,12 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.14 2006/09/10 00:51:07 mezz Exp $
+#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.15 2006/10/12 03:54:18 mezz Exp $
 #
 
 PORTNAME=	anjuta
 PORTVERSION=	2.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	anjuta
@@ -34,7 +34,8 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
-USE_GNOME=	gnomeprefix gnomehack libgnomeprintui libgnomeui vte
+USE_GNOME=	gnomeprefix gnomehack libgnomeprintui libgnomeui vte \
+		gtksourceview
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
