@@ -15,7 +15,7 @@ MAINTAINER=	pneumann@gmail.com
 COMMENT=	Murrine GTK+ 2.x cairo based engine
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-themes/gtk-engines2
-RUN_DEPENDS=	${BUILD_DEPENDS}
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gtk-engines-2.pc:${PORTSDIR}/x11-themes/gtk-engines2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-animation
