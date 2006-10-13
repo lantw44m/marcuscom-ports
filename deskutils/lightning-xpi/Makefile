@@ -3,14 +3,15 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom$
+#	$MCom: ports/deskutils/lightning-xpi/Makefile,v 1.1 2006/10/13 09:31:41 ahze Exp $
 
 PORTNAME=	lightning
 PORTVERSION=	0.3
+PORTREVISION=	1
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	ahze
-PKGNAMEPREFIX=	thunderbird-
+PKGNAMESUFFIX=	-xpi
 DISTNAME=	${PORTNAME}-${PORTVERSION}-tb-FreeBSD-${ARCH}
 EXTRACT_SUFX=	.xpi
 
@@ -19,12 +20,12 @@ COMMENT=	An integrated calendar for Thunderbird
 
 RUN_DEPENDS=	thunderbird:${PORTSDIR}/mail/thunderbird
 
-ONLY_FOR_ARCHS=	i386
+ONLY_FOR_ARCHS=	i386 sparc64
 NO_BUILD=	yes
 USE_ZIP=	yes
 EXTRACT_AFTER_ARGS=	 -d ${WRKSRC}
 PLIST?=		${WRKDIR}/plist
-LIGHTNING_DIR=	lib/thunderbird/extensions/{3550f703-e582-4d05-9a08-453d09bdfdc6}
+LIGHTNING_DIR=	lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}
 
 pre-install:
 	${RM} -f ${PLIST}
@@ -35,8 +36,9 @@ pre-install:
 	${ECHO} "@dirrm ${LIGHTNING_DIR}" >> ${PLIST}
 
 do-install:
-	cd ${WRKSRC} && ${FIND} . | \
-		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/${LIGHTNING_DIR}
+	${MKDIR} ${PREFIX}/${LIGHTNING_DIR}
+	${CHMOD} 0755 ${PREFIX}/${LIGHTNING_DIR}
+	@(cd ${WRKSRC} && ${PAX} -U ${LIBOWN} -G ${LIBGRP} -vrw . ${PREFIX}/${LIGHTNING_DIR})
 
 .if defined(MAKESUM)
 .undef DISTNAME
