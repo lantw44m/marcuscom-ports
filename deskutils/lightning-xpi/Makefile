@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/deskutils/lightning-xpi/Makefile,v 1.1 2006/10/13 09:31:41 ahze Exp $
+#	$MCom: ports/deskutils/lightning-xpi/Makefile,v 1.2 2006/10/13 12:09:34 ahze Exp $
 
 PORTNAME=	lightning
 PORTVERSION=	0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	ahze
