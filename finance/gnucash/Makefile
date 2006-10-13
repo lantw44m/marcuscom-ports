@@ -3,7 +3,7 @@
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
 # $FreeBSD$
-#   $MCom: ports/finance/gnucash/Makefile,v 1.5 2006/09/10 19:08:39 ahze Exp $
+#   $MCom: ports/finance/gnucash/Makefile,v 1.6 2006/10/10 20:22:08 mezz Exp $
 #
 
 PORTNAME=	gnucash
@@ -21,7 +21,7 @@ LIB_DEPENDS=	guile.15:${PORTSDIR}/lang/guile \
 		guppi.16:${PORTSDIR}/math/guppi \
 		popt.0:${PORTSDIR}/devel/popt \
 		ofx.3:${PORTSDIR}/finance/libofx \
-		gw-standard.0:${PORTSDIR}/devel/g-wrap
+		gw-guile-standard.0:${PORTSDIR}/devel/g-wrap
 RUN_DEPENDS=	${LOCALBASE}/share/guile/slibcat:${PORTSDIR}/lang/slib-guile \
 		${SITE_PERL}/HTML/Base.pm:${PORTSDIR}/www/p5-HTML \
 		${SITE_PERL}/LWP.pm:${PORTSDIR}/www/p5-libwww \
