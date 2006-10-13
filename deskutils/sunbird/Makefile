@@ -3,16 +3,15 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/sunbird/Makefile,v 1.17 2006/09/30 06:26:32 ahze Exp $
+#   $MCom: ports/deskutils/sunbird/Makefile,v 1.18 2006/10/05 21:37:17 mezz Exp $
 #
 
 PORTNAME=	sunbird
-PORTVERSION=	0.3a1
-PORTREVISION=	4
+PORTVERSION=	0.3
 CATEGORIES=	deskutils
-MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	sunbird/new-directory/releases/${DISTVERSION}/source
-DISTNAME=	${PORTNAME}-${DISTVERSION}-source
+MASTER_SITES=	${MASTER_SITE_MOZILLA_EXTENDED}
+MASTER_SITE_SUBDIR=	calendar/sunbird/releases/${DISTVERSION}/source
+DISTNAME=	${PORTNAME}-${DISTVERSION}.source
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Redesign of the Mozilla Calendar with XUL interface
@@ -27,11 +26,13 @@ WANT_GNOME=	yes
 SUNBIRD=	${PORTNAME}
 SUNBIRD_ICON_SRC=	${PREFIX}/lib/sunbird/icons/default.xpm
 SUNBIRD_ICON=		${PORTNAME}.xpm
-
-MOZ_PROTOCOLS=	about,http,ftp,file,jar,res
+LIBS=		-Wl,-Bsymbolic -lc
+PKGCONFIG_FILES?=	${MOZILLA}-js \
+			${MOZILLA}-xpcom ${MOZILLA}-plugin
 MOZ_OPTIONS=	--enable-application=calendar \
-		--enable-plaintext-editor-only \
-		--disable-plugins --disable-cookies
+		--enable-system-cairo \
+		--with-system-nss \
+		--enable-canvas
 MOZ_MK_OPTIONS=	MOZ_CO_PROJECT=calendar
 
 .include <bsd.port.pre.mk>
@@ -49,17 +50,11 @@ IGNORE=	 does not build
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-config_make-jars.pl
 .endif
 
-post-extract::
+post-patch:
 	@${SED} -e 's|@SUNBIRD_ICON@|${SUNBIRD_ICON}|' \
 		${FILESDIR}/sunbird.desktop.in >${WRKDIR}/sunbird.desktop
-
-post-patch:
-.for ii in modules/libpref/src/init extensions/sroaming/resources/content/prefs \
-		embedding/minimo
-	@${REINPLACE_CMD} -e '/accessibility.typeaheadfind.enablesound/s/true/false/ ; \
-		/dom.disable_window_open_feature.toolbar/s/false/true/' \
-		${WRKSRC}/${ii}/all.js
-.endfor
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+		${WRKSRC}/security/manager/ssl/src/Makefile.in
 
 pre-install:
 	${ECHO_CMD} 'share/applications/sunbird.desktop' >> ${PLIST}
