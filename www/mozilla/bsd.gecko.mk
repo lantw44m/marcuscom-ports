@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.22 2006/09/14 13:58:56 ahze Exp $
+#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.25 2006/10/01 02:41:33 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -69,12 +69,10 @@ Gecko_Pre_Include=			bsd.gecko.mk
 
 .if ${OSVERSION} >= 500000
 .if (${ARCH}!="sparc64" || ${OSVERSION} >= 601101) && ${ARCH}!="ia64"
-_GECKO_ALL=	firefox nvu seamonkey sunbird thunderbird xulrunner firefox-devel flock
+_GECKO_ALL=	firefox nvu seamonkey thunderbird xulrunner firefox-devel flock
 .endif
 .endif
 _GECKO_ALL+=	mozilla
-
-sunbird_PORTSDIR=	deskutils
 
 thunderbird_PORTSDIR=	mail
 
