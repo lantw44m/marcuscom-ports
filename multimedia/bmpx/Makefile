@@ -7,7 +7,7 @@
 
 PORTNAME=	bmpx
 PORTVERSION=	0.32.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://files.beep-media-player.org/releases/0.30/
 
@@ -21,7 +21,7 @@ LIB_DEPENDS=	tag.5:${PORTSDIR}/audio/taglib \
 		glademm-2.4.1:${PORTSDIR}/devel/libglademm24 \
 		gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24 \
 		boost_date_time.3:${PORTSDIR}/devel/boost \
-		dbus-1.3:${PORTSDIR}/devel/dbus
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 CONFLICTS=	bmpx-devel-[0-9]*
 
