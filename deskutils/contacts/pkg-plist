@@ -1,6 +1,0 @@
-bin/contacts
-share/applications/contacts.desktop
-%%DATADIR%%/contacts.glade
-share/pixmaps/oh-contacts.png
-@dirrmtry share/applications
-@dirrm share/contacts

@@ -1,4 +1,0 @@
-lib/browser_plugins/kaffeineplugin.so
-lib/browser_plugins/kaffeineplugin.la
-lib/browser_plugins/kaffeineplugin.a
-@dirrmtry lib/browser_plugins
