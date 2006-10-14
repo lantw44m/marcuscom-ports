@@ -32,7 +32,7 @@ do-install:
 	@${INSTALL_DATA} ${WRKSRC}/kiba.schemas ${LOCALBASE}/etc/gconf/schemas
 	@${MKDIR} ${PREFIX}/share/${PORTNAME}
 	@${INSTALL_SCRIPT} ${WRKSRC}/populate-dock.sh ${PREFIX}/share/${PORTNAME}
-	@${PREFIX}/share/${PORTNAME}/populate-dock.sh
+	@${SETENV} GCONF_CONFIG_SOURCE=${GCONF_CONFIG_SOURCE} gconftool-2 --makefile-install-rule ${PREFIX}/etc/gconf/schemas/kiba.schemas
 
 post-install:
 	@${ECHO_MSG}
