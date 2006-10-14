@@ -3,10 +3,10 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-lite/Makefile,v 1.48 2006/07/27 00:48:29 marcus Exp $
+#   $MCom: ports/x11/gnome2-lite/Makefile,v 1.49 2006/08/14 18:00:37 marcus Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 PKGNAMESUFFIX=	-lite
 
@@ -32,6 +32,7 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-applet
 		${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \
 		gnome-control-center:${PORTSDIR}/sysutils/gnome-control-center \
+    		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
 		totem:${PORTSDIR}/multimedia/totem-gstreamer
 
 MASTERDIR=	${.CURDIR}/../gnome2

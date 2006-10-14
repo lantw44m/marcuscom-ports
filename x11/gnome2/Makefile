@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.180 2006/10/14 06:14:53 ahze Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.181 2006/10/14 06:18:11 ahze Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.16.1
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -65,6 +65,7 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		gnome-volume-manager:${PORTSDIR}/sysutils/gnome-volume-manager \
 		orca:${PORTSDIR}/accessibility/orca \
 		epiphany:${PORTSDIR}/www/epiphany \
+		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
 		ekiga:${PORTSDIR}/net/ekiga
 
 NO_BUILD=	yes
