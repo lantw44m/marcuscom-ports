@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/deskutils/lightning-xpi/Makefile,v 1.2 2006/10/13 12:09:34 ahze Exp $
+#	$MCom: ports/deskutils/lightning-xpi/Makefile,v 1.3 2006/10/13 21:06:25 ahze Exp $
 
 PORTNAME=	lightning
 PORTVERSION=	0.3
@@ -27,6 +27,12 @@ EXTRACT_AFTER_ARGS=	 -d ${WRKSRC}
 PLIST?=		${WRKDIR}/plist
 LIGHTNING_DIR=	lib/thunderbird/extensions/{e2fda1a4-762b-4020-b5ad-a41df1933103}
 
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 600000
+IGNORE=	precompiled binaries for 6.x
+.endif
+
 pre-install:
 	${RM} -f ${PLIST}
 	cd ${WRKSRC} && ${FIND} -s * -type f -o -type l | \
@@ -47,4 +53,4 @@ DISTFILES+=	${PORTNAME}-${PORTVERSION}-tb-FreeBSD-${arch}${EXTRACT_SUFX}
 .endfor
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
