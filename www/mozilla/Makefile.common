@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.29 2006/10/12 12:17:26 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.30 2006/10/13 01:32:05 ahze Exp $
 
 # This file contains some reusable components for mozilla ports. It's of
 # use primarily to apps from the mozilla project itself (such as Firefox,
@@ -328,12 +328,14 @@ gecko-post-build:
 	@${REINPLACE_CMD} -e "s|\(Libs:.*\)\($$\)|\1 -Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}\2|" \
 		${WRKSRC}/build/unix/*.pc
 
-pre-install: gecko-pre-install gecko-moz-pis-pre-install gecko-create-plist
+pre-install: gecko-moz-pis-pre-install gecko-pre-install port-pre-install gecko-create-plist
+
+.if !target(port-pre-install)
+port-pre-install:
+		@${DO_NADA}
+.endif
 
 gecko-pre-install:
-	@${DO_NADA}	# Empty for now
-
-gecko-create-plist:
 .if !defined(NOGECKO_PLIST)
 	@${RM} -rf ${FAKEDIR} ${PLIST}
 	@${TOUCH} -f ${PLIST}
@@ -355,6 +357,10 @@ gecko-create-plist:
 		${FAKEDIR}/bin/${MOZILLA}	\
 		${FAKEDIR}/bin/${MOZILLA}-config
 	${RM} -f ${FAKEDIR}/bin/*.bak
+.endif
+
+gecko-create-plist:
+.if !defined(NOGECKO_PLIST)
 # Create the plist
 .for f in ${GECKO_PLIST_PRE_FILES}
 	${ECHO_CMD} ${f} >> ${PLIST}
