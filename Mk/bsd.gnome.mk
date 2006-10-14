@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.400 2006/07/24 00:57:33 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.401 2006/08/05 05:25:55 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -658,7 +658,7 @@ ltverhack_PRE_PATCH=	${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
 						done;
 .else
 .  if ${USE_GNOME:Mltverhack}!=""
-BROKEN=	cannot install: ${PORTNAME} uses the ltverhack GNOME component but does not use libtool
+IGNORE=	cannot install: ${PORTNAME} uses the ltverhack GNOME component but does not use libtool
 .  endif
 .endif
 
@@ -757,7 +757,7 @@ gnome-pre-su-install:
 	@${MTREE_CMD} ${MTREE_ARGS:S/${MTREE_FILE}/${GNOME_MTREE_FILE}/} ${TARGETDIR}/ >/dev/null
 .endif
 .if defined(GCONF_SCHEMAS)
-	@${MKDIR} ${DESTDIR}${PREFIX}/etc/gconf/gconf.xml.defaults/
+	@${MKDIR} ${TARGETDIR}${PREFIX}/etc/gconf/gconf.xml.defaults/
 .else
 	@${DO_NADA}
 .endif
