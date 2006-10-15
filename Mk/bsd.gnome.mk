@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.401 2006/08/05 05:25:55 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.402 2006/10/14 10:01:36 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -757,7 +757,7 @@ gnome-pre-su-install:
 	@${MTREE_CMD} ${MTREE_ARGS:S/${MTREE_FILE}/${GNOME_MTREE_FILE}/} ${TARGETDIR}/ >/dev/null
 .endif
 .if defined(GCONF_SCHEMAS)
-	@${MKDIR} ${TARGETDIR}${PREFIX}/etc/gconf/gconf.xml.defaults/
+	@${MKDIR} ${TARGETDIR}/etc/gconf/gconf.xml.defaults/
 .else
 	@${DO_NADA}
 .endif
