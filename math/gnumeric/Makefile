@@ -3,11 +3,11 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports-experimental/math/gnumeric/Makefile,v 1.1 2006/09/10 21:06:40 ahze Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.20 2006/10/14 10:42:09 ahze Exp $
 #
 
 PORTNAME=	gnumeric
-PORTVERSION=	1.7.0
+PORTVERSION=	1.7.2
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -30,7 +30,8 @@ USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--without-guile --with-bonobo
+CONFIGURE_ARGS=	--without-guile --with-bonobo \
+		--mandir=${PREFIX}/man
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib -liconv ${PTHREAD_LIBS}" \
 		python_prog=${PYTHON_VERSION}
@@ -38,7 +39,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 GCONF_SCHEMAS=	gnumeric-dialogs.schemas gnumeric-general.schemas \
 		gnumeric-plugins.schemas
 
-MAN1=		gnumeric.1 ssconvert.1 ssindex.1
+MAN1=		gnumeric.1 ssconvert.1
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 

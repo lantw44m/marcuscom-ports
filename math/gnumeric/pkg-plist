@@ -27,6 +27,7 @@ include/libspreadsheet-1-7/func-builtin.h
 include/libspreadsheet-1-7/func.h
 include/libspreadsheet-1-7/gnm-datetime.h
 include/libspreadsheet-1-7/gnm-format.h
+include/libspreadsheet-1-7/gnm-graph-window.h
 include/libspreadsheet-1-7/gnm-plugin.h
 include/libspreadsheet-1-7/gnm-so-filled.h
 include/libspreadsheet-1-7/gnm-so-line.h
@@ -249,6 +250,7 @@ libdata/pkgconfig/libspreadsheet-1.7.pc
 @exec update-desktop-database > /dev/null || /usr/bin/true
 share/gnome/applications/gnumeric.desktop
 share/gnome/gnumeric/%%VERSION%%/GNOME_Gnumeric-gtk.xml
+share/gnome/gnumeric/%%VERSION%%/Gnumeric-embed.xml
 share/gnome/gnumeric/%%VERSION%%/autoformat-templates/3D/.category
 share/gnome/gnumeric/%%VERSION%%/autoformat-templates/3D/autoformat.3D.button.xml
 share/gnome/gnumeric/%%VERSION%%/autoformat-templates/3D/autoformat.3D.list.xml
