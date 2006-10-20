@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD: ports/mail/evolution-exchange/Makefile,v 1.22 2006/10/14 08:35:18 marcus Exp $
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.70 2006/10/03 02:06:00 ahze Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.72 2006/10/20 16:00:44 marcus Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -54,5 +54,10 @@ CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
 .if ${ARCH} == "amd64"
 CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -fPIC"
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|EVOLUTION_API_VERSION=2.8|EVOLUTION_API_VERSION=2.10| ; \
+	    	s|EDS_BASE_VERSION=1.8|EDS_BASE_VERSION=1.10|' \
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
