@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.184 2006/10/19 06:40:07 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.185 2006/10/20 20:27:51 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -65,8 +65,7 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		gnome-volume-manager:${PORTSDIR}/sysutils/gnome-volume-manager \
 		orca:${PORTSDIR}/accessibility/orca \
 		epiphany:${PORTSDIR}/www/epiphany \
-		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
-		ekiga:${PORTSDIR}/net/ekiga
+		gnome-mount:${PORTSDIR}/sysutils/gnome-mount
 
 NO_BUILD=	yes
 
@@ -88,6 +87,11 @@ RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
 .endif
 .if (${ARCH}!="sparc64" || ${OSVERSION} >= 601101) && ${ARCH}!="ia64"
 RUN_DEPENDS+=	yelp:${PORTSDIR}/x11/yelp
+.endif
+.if ${.CURDIR:T}!="gnome2-lite"
+.if ${OSVERSION}>=600000
+RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga
+.endif
 .endif
 .endif
 
