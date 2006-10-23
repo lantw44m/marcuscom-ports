@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	totem
-PORTVERSION=	2.17.0
+PORTVERSION=	2.17.1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -39,7 +39,7 @@ OPTIONS?=	DVDNAV "Enable DVD support" on \
 		GSTREAMER "Use Gstreamer instead of Xine" off \
 		MOZILLA_PLUGIN "Totem mozilla plugin" off
 
-MAN1=	totem.1 totem-video-thumbnailer.1
+MAN1=		totem.1 totem-video-thumbnailer.1
 GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
 		totem.schemas
 CONFLICTS?=	totem-gstreamer-[0-9]*
@@ -100,6 +100,8 @@ post-patch:
 		s|mozilla/plugins|browser_plugins|' \
 		${WRKSRC}/browser-plugin/Makefile.in \
 		${WRKSRC}/browser-plugin/idl/Makefile.in
+	@${REINPLACE_CMD} -e 's|dbus >= 0.61|dbus-1 >= 0.61|g' \
+	    	${WRKSRC}/configure
 .if defined(WITH_GSTREAMER)
 	@${REINPLACE_CMD} -e 's|/dev/dvd|${DEFAULT_DVD_DEVICE}|' \
 		${WRKSRC}/src/backend/bacon-video-widget-gst-0.10.c
