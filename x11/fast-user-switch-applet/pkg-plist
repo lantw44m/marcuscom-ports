@@ -17,6 +17,13 @@ share/gnome/help/fast-user-switch-applet/es/figures/fast_user_switch_applet-pref
 share/gnome/help/fast-user-switch-applet/es/figures/fast_user_switch_applet-text.png
 share/gnome/help/fast-user-switch-applet/es/figures/fast_user_switch_applet-username.png
 share/gnome/help/fast-user-switch-applet/es/figures/fast_user_switch_applet.png
+share/gnome/help/fast-user-switch-applet/fr/fast-user-switch-applet.xml
+share/gnome/help/fast-user-switch-applet/fr/figures/fast_user_switch_applet-context.png
+share/gnome/help/fast-user-switch-applet/fr/figures/fast_user_switch_applet-icon.png
+share/gnome/help/fast-user-switch-applet/fr/figures/fast_user_switch_applet-prefs.png
+share/gnome/help/fast-user-switch-applet/fr/figures/fast_user_switch_applet-text.png
+share/gnome/help/fast-user-switch-applet/fr/figures/fast_user_switch_applet-username.png
+share/gnome/help/fast-user-switch-applet/fr/figures/fast_user_switch_applet.png
 share/gnome/help/fast-user-switch-applet/pa/fast-user-switch-applet.xml
 share/gnome/help/fast-user-switch-applet/pa/figures/fast_user_switch_applet-context.png
 share/gnome/help/fast-user-switch-applet/pa/figures/fast_user_switch_applet-icon.png
@@ -40,6 +47,7 @@ share/gnome/help/fast-user-switch-applet/sv/figures/fast_user_switch_applet-user
 share/gnome/help/fast-user-switch-applet/sv/figures/fast_user_switch_applet.png
 share/gnome/omf/fast-user-switch-applet/fast-user-switch-applet-C.omf
 share/gnome/omf/fast-user-switch-applet/fast-user-switch-applet-es.omf
+share/gnome/omf/fast-user-switch-applet/fast-user-switch-applet-fr.omf
 share/gnome/omf/fast-user-switch-applet/fast-user-switch-applet-pa.omf
 share/gnome/omf/fast-user-switch-applet/fast-user-switch-applet-sr.omf
 share/gnome/omf/fast-user-switch-applet/fast-user-switch-applet-sv.omf
@@ -149,6 +157,8 @@ share/locale/zh_TW/LC_MESSAGES/fast-user-switch-applet.mo
 @dirrm share/gnome/help/fast-user-switch-applet/sr
 @dirrm share/gnome/help/fast-user-switch-applet/pa/figures
 @dirrm share/gnome/help/fast-user-switch-applet/pa
+@dirrm share/gnome/help/fast-user-switch-applet/fr/figures
+@dirrm share/gnome/help/fast-user-switch-applet/fr
 @dirrm share/gnome/help/fast-user-switch-applet/es/figures
 @dirrm share/gnome/help/fast-user-switch-applet/es
 @dirrm share/gnome/help/fast-user-switch-applet/C/figures
