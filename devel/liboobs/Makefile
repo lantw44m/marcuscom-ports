@@ -1,0 +1,25 @@
+# New ports collection makefile for:	liboobs
+# Date created:		2006-06-06
+# Whom:			Michael Johnson <ahze@FreeBSD.org>
+#
+# $FreeBSD$
+#    $MCom: ports-experimental/devel/liboobs/Makefile,v 1.1 2006/07/27 00:35:23 marcus Exp $
+
+PORTNAME=	liboobs
+PORTVERSION=	0.1.0
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	Wrapping library to the System Tools Backends
+
+BUILD_DEPENDS=	${LOCALBASE}/etc/dbus-1/system.d/system-tools-backends.conf:${PORTSDIR}/sysutils/system-tools-backends
+RUN_DEPENDS=	${LOCALBASE}/etc/dbus-1/system.d/system-tools-backends.conf:${PORTSDIR}/sysutils/system-tools-backends
+
+USE_BZIP2=	yes
+GNU_CONFIGURE=	yes
+USE_GNOME=	gnomehack
+INSTALLS_SHLIB=	yes
+
+.include <bsd.port.mk>
