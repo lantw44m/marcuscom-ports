@@ -14,6 +14,7 @@ include/liboobs-1.0/oobs/oobs-nfsconfig.h
 include/liboobs-1.0/oobs/oobs-ntpconfig.h
 include/liboobs-1.0/oobs/oobs-ntpserver.h
 include/liboobs-1.0/oobs/oobs-object.h
+include/liboobs-1.0/oobs/oobs-result.h
 include/liboobs-1.0/oobs/oobs-service.h
 include/liboobs-1.0/oobs/oobs-servicesconfig.h
 include/liboobs-1.0/oobs/oobs-session.h
@@ -29,7 +30,7 @@ include/liboobs-1.0/oobs/oobs.h
 lib/liboobs-1.a
 lib/liboobs-1.la
 lib/liboobs-1.so
-lib/liboobs-1.so.0
+lib/liboobs-1.so.2
 libdata/pkgconfig/liboobs-1.pc
 @dirrm include/liboobs-1.0/oobs
 @dirrm include/liboobs-1.0
