@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.403 2006/10/15 03:43:19 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.404 2006/10/18 07:44:58 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -740,6 +740,12 @@ PLIST_SUB+=	GNOMEDESKTOP:="@comment " NOGNOMEDESKTOP:=""
 .      endif
 .    endif
 .  endif
+.endif
+
+.if defined(USE_GNOME_SUBR)
+GNOME_SUBR=		${LOCALBASE}/etc/gnome.subr
+RUN_DEPENDS+=	${GNOME_SUBR}:${PORTSDIR}/sysutils/gnome_subr
+SUB_LIST+=		GNOME_SUBR=${GNOME_SUBR}
 .endif
 
 .if ${MAINTAINER}=="gnome@FreeBSD.org"
