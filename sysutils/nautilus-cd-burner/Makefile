@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.114 2006/10/03 13:26:18 ahze Exp $
+#   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.116 2006/10/19 01:09:41 marcus Exp $
 #
 
 PORTNAME=	nautilus-cd-burner
 PORTVERSION=	2.17.1
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
