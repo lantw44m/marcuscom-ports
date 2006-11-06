@@ -32,5 +32,43 @@ lib/liboobs-1.la
 lib/liboobs-1.so
 lib/liboobs-1.so.2
 libdata/pkgconfig/liboobs-1.pc
+%%DATADIR%%/ch01.html
+%%DATADIR%%/home.png
+%%DATADIR%%/index.html
+%%DATADIR%%/index.sgml
+%%DATADIR%%/left.png
+%%DATADIR%%/liboobs-OobsGroup.html
+%%DATADIR%%/liboobs-OobsGroupsConfig.html
+%%DATADIR%%/liboobs-OobsHostsConfig.html
+%%DATADIR%%/liboobs-OobsIface.html
+%%DATADIR%%/liboobs-OobsIfaceEthernet.html
+%%DATADIR%%/liboobs-OobsIfaceIRLan.html
+%%DATADIR%%/liboobs-OobsIfaceISDN.html
+%%DATADIR%%/liboobs-OobsIfaceModem.html
+%%DATADIR%%/liboobs-OobsIfacePlip.html
+%%DATADIR%%/liboobs-OobsIfaceWireless.html
+%%DATADIR%%/liboobs-OobsIfacesConfig.html
+%%DATADIR%%/liboobs-OobsList.html
+%%DATADIR%%/liboobs-OobsNFSConfig.html
+%%DATADIR%%/liboobs-OobsNTPConfig.html
+%%DATADIR%%/liboobs-OobsNTPServer.html
+%%DATADIR%%/liboobs-OobsObject.html
+%%DATADIR%%/liboobs-OobsSMBConfig.html
+%%DATADIR%%/liboobs-OobsService.html
+%%DATADIR%%/liboobs-OobsServicesConfig.html
+%%DATADIR%%/liboobs-OobsSession.html
+%%DATADIR%%/liboobs-OobsShare.html
+%%DATADIR%%/liboobs-OobsShareNFS.html
+%%DATADIR%%/liboobs-OobsShareSMB.html
+%%DATADIR%%/liboobs-OobsStaticHost.html
+%%DATADIR%%/liboobs-OobsTimeConfig.html
+%%DATADIR%%/liboobs-OobsUser.html
+%%DATADIR%%/liboobs-OobsUsersConfig.html
+%%DATADIR%%/liboobs.devhelp
+%%DATADIR%%/liboobs.devhelp2
+%%DATADIR%%/right.png
+%%DATADIR%%/style.css
+%%DATADIR%%/up.png
+@dirrm %%DATADIR%%
 @dirrm include/liboobs-1.0/oobs
 @dirrm include/liboobs-1.0

@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/liboobs/Makefile,v 1.5 2006/10/30 00:17:23 ahze Exp $
+#    $MCom: ports/devel/liboobs/Makefile,v 1.6 2006/10/31 22:34:27 pav Exp $
 
 PORTNAME=	liboobs
-PORTVERSION=	0.6.0
+PORTVERSION=	2.17.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -21,5 +21,6 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack
 USE_LDCONFIG=	yes
+CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share
 
 .include <bsd.port.mk>
