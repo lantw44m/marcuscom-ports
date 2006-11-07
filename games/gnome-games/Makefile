@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.120 2006/10/03 01:23:20 ahze Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.122 2006/10/19 01:43:22 marcus Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	2.17.1
+PORTVERSION=	2.17.2
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -26,7 +26,7 @@ INSTALLS_ICONS=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui \
-		librsvg2 desktopfileutils
+		librsvg2 desktopfileutils pygnome2
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
@@ -38,7 +38,7 @@ GCONF_SCHEMAS=	aisleriot.schemas blackjack.schemas \
 		iagno.schemas libgnomegames.schemas mahjongg.schemas \
 		same-gnome.schemas
 
-CONFLICTS=	sol-1.0.*
+CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnuchess-[0-9]*
 
 .include <bsd.port.pre.mk>
 
