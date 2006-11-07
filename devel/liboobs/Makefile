@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/liboobs/Makefile,v 1.6 2006/10/31 22:34:27 pav Exp $
+#    $MCom: ports/devel/liboobs/Makefile,v 1.7 2006/11/06 22:03:25 ahze Exp $
 
 PORTNAME=	liboobs
 PORTVERSION=	2.17.2
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${LOCALBASE}/etc/dbus-1/system.d/system-tools-backends.conf:${PORTS
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack gnometarget
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share
 
