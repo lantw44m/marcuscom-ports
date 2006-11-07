@@ -109,6 +109,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/presentation_manager.py
 %%PYTHON_SITELIBDIR%%/orca/presentation_manager.pyc
 %%PYTHON_SITELIBDIR%%/orca/presentation_manager.pyo
+%%PYTHON_SITELIBDIR%%/orca/pronunciation_dict.py
+%%PYTHON_SITELIBDIR%%/orca/pronunciation_dict.pyc
+%%PYTHON_SITELIBDIR%%/orca/pronunciation_dict.pyo
 %%PYTHON_SITELIBDIR%%/orca/punctuation_settings.py
 %%PYTHON_SITELIBDIR%%/orca/punctuation_settings.pyc
 %%PYTHON_SITELIBDIR%%/orca/punctuation_settings.pyo
@@ -148,6 +151,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome_segv2.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome_segv2.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome_segv2.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-terminal.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-terminal.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-terminal.pyo
@@ -163,6 +169,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/users-admin.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/users-admin.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/users-admin.pyo
 %%PYTHON_SITELIBDIR%%/orca/settings.py
 %%PYTHON_SITELIBDIR%%/orca/settings.pyc
 %%PYTHON_SITELIBDIR%%/orca/settings.pyo
