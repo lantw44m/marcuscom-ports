@@ -3,11 +3,11 @@
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-wm/metacity/Makefile,v 1.92 2006/10/03 13:39:50 ahze Exp $
+#    $MCom: ports/x11-wm/metacity/Makefile,v 1.94 2006/10/19 01:16:25 marcus Exp $
 #
 
 PORTNAME=	metacity
-PORTVERSION=	2.17.1
+PORTVERSION=	2.17.2
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -26,7 +26,8 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gconf2
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--enable-render
+CONFIGURE_ARGS=	--enable-render \
+		--mandir=${PREFIX}/man
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
