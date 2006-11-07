@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports-stable/www/mozilla/Makefile.common,v 1.1 2006/10/18 17:29:07 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.33 2006/11/07 01:32:44 ahze Exp $
 
 # This file contains some reusable components for mozilla ports. It's of
 # use primarily to apps from the mozilla project itself (such as Firefox,
@@ -69,6 +69,7 @@ USE_GNOME+=	gtk20 libidl desktopfileutils
 USE_ICONV=	yes
 USE_PERL5_BUILD=yes
 USE_XLIB=	yes
+GECKO_PTHREAD_LIBS!=${CC} -dumpspecs | ${GREP} pthread | ${SED} -e 's|^.*%{\!pg: %{pthread:|| ; s|}.*$$||' || ${TRUE}
 
 MOZILLA_SUFX?=	none
 WRKSRC?=	${WRKDIR}/mozilla
