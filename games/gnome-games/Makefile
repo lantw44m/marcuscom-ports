@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.122 2006/10/19 01:43:22 marcus Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.123 2006/11/07 23:12:48 marcus Exp $
 #
 
 PORTNAME=	gnome-games
 PORTVERSION=	2.17.2
+PORTREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -45,6 +46,15 @@ CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnuchess-[0-9]*
 .if exists(${LOCALBASE}/lib/libavahi-client.a) || defined(WITH_MDNS)
 LIB_DEPENDS+=	avahi-client:${PORTSDIR}/net/avahi
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|share|share/gnome|g ; \
+	    	s|/usr/local|${PREFIX}|g' \
+	    	${WRKSRC}/gnome-sudoku/src/lib/defaults.py \
+		${WRKSRC}/glchess/src/lib/defaults.py
+	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share/gnome|' \
+		${WRKSRC}/gnome-sudoku/src/gnome-sudoku \
+		${WRKSRC}/glchess/src/glchess
 
 post-install:
 	@-update-desktop-database
