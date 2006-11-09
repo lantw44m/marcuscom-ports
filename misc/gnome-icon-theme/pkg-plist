@@ -4,6 +4,9 @@ share/icons/gnome/16x16/actions/application-exit.png
 share/icons/gnome/16x16/actions/appointment-new.png
 share/icons/gnome/16x16/actions/appointment.png
 share/icons/gnome/16x16/actions/back.png
+share/icons/gnome/16x16/actions/bookmark-new.png
+share/icons/gnome/16x16/actions/bookmark_add.png
+share/icons/gnome/16x16/actions/bookmarks_list_add.png
 share/icons/gnome/16x16/actions/bottom.png
 share/icons/gnome/16x16/actions/centrejust.png
 share/icons/gnome/16x16/actions/contact-new.png
@@ -177,6 +180,7 @@ share/icons/gnome/16x16/actions/reload_page.png
 share/icons/gnome/16x16/actions/remove.png
 share/icons/gnome/16x16/actions/rightjust.png
 share/icons/gnome/16x16/actions/start.png
+share/icons/gnome/16x16/actions/stock_add-bookmark.png
 share/icons/gnome/16x16/actions/stock_bottom.png
 share/icons/gnome/16x16/actions/stock_close.png
 share/icons/gnome/16x16/actions/stock_copy.png
@@ -185,6 +189,7 @@ share/icons/gnome/16x16/actions/stock_delete.png
 share/icons/gnome/16x16/actions/stock_down.png
 share/icons/gnome/16x16/actions/stock_first.png
 share/icons/gnome/16x16/actions/stock_fullscreen.png
+share/icons/gnome/16x16/actions/stock_help-add-bookmark.png
 share/icons/gnome/16x16/actions/stock_home.png
 share/icons/gnome/16x16/actions/stock_last.png
 share/icons/gnome/16x16/actions/stock_leave-fullscreen.png
@@ -494,18 +499,22 @@ share/icons/gnome/16x16/emblems/stock_mail-priority-high.png
 share/icons/gnome/16x16/filesystems/gnome-fs-bookmark-missing.png
 share/icons/gnome/16x16/filesystems/gnome-fs-bookmark.png
 share/icons/gnome/16x16/mimetypes/application-certificate.png
+share/icons/gnome/16x16/mimetypes/application-x-executable.png
 share/icons/gnome/16x16/mimetypes/ascii.png
 share/icons/gnome/16x16/mimetypes/audio-x-generic.png
+share/icons/gnome/16x16/mimetypes/binary.png
 share/icons/gnome/16x16/mimetypes/contents2.png
 share/icons/gnome/16x16/mimetypes/deb.png
 share/icons/gnome/16x16/mimetypes/document.png
 share/icons/gnome/16x16/mimetypes/empty.png
+share/icons/gnome/16x16/mimetypes/exec.png
 share/icons/gnome/16x16/mimetypes/folder_tar.png
 share/icons/gnome/16x16/mimetypes/font-x-generic.png
 share/icons/gnome/16x16/mimetypes/font.png
 share/icons/gnome/16x16/mimetypes/font_bitmap.png
 share/icons/gnome/16x16/mimetypes/font_truetype.png
 share/icons/gnome/16x16/mimetypes/font_type1.png
+share/icons/gnome/16x16/mimetypes/gnome-fs-executable.png
 share/icons/gnome/16x16/mimetypes/gnome-fs-regular.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-magicpoint.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-msword.png
@@ -547,6 +556,7 @@ share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-cpio-compressed.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-cpio.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-deb.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-dvi.png
+share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-executable.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-font-afm.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-font-bdf.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-font-linux-psf.png
@@ -563,6 +573,7 @@ share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-kspread.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-kword.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-lha.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-lhz.png
+share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-ms-dos-executable.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-perl.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-php.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-x-python-bytecode.png
@@ -2061,6 +2072,7 @@ share/icons/gnome/22x22/mimetypes/font_bitmap.png
 share/icons/gnome/22x22/mimetypes/font_truetype.png
 share/icons/gnome/22x22/mimetypes/font_type1.png
 share/icons/gnome/22x22/mimetypes/gnome-fs-executable.png
+share/icons/gnome/22x22/mimetypes/gnome-fs-regular.png
 share/icons/gnome/22x22/mimetypes/gnome-mime-application-magicpoint.png
 share/icons/gnome/22x22/mimetypes/gnome-mime-application-msword.png
 share/icons/gnome/22x22/mimetypes/gnome-mime-application-ogg.png
@@ -2147,6 +2159,7 @@ share/icons/gnome/22x22/mimetypes/gnome-mime-text.png
 share/icons/gnome/22x22/mimetypes/gnome-mime-video.png
 share/icons/gnome/22x22/mimetypes/gnome-mime-x-font-afm.png
 share/icons/gnome/22x22/mimetypes/gnome-package.png
+share/icons/gnome/22x22/mimetypes/gtk-file.png
 share/icons/gnome/22x22/mimetypes/html.png
 share/icons/gnome/22x22/mimetypes/image-x-generic.png
 share/icons/gnome/22x22/mimetypes/image.png
@@ -2171,6 +2184,7 @@ share/icons/gnome/22x22/mimetypes/template_source.png
 share/icons/gnome/22x22/mimetypes/text-html.png
 share/icons/gnome/22x22/mimetypes/text-x-generic-template.png
 share/icons/gnome/22x22/mimetypes/text-x-generic.png
+share/icons/gnome/22x22/mimetypes/text-x-preview.png
 share/icons/gnome/22x22/mimetypes/text-x-script.png
 share/icons/gnome/22x22/mimetypes/tgz.png
 share/icons/gnome/22x22/mimetypes/txt.png
@@ -2234,6 +2248,10 @@ share/icons/gnome/22x22/places/user-trash.png
 share/icons/gnome/22x22/places/xfce-trash_empty.png
 share/icons/gnome/22x22/status/appointment-missed.png
 share/icons/gnome/22x22/status/appointment-soon.png
+share/icons/gnome/22x22/status/audio-volume-high.png
+share/icons/gnome/22x22/status/audio-volume-low.png
+share/icons/gnome/22x22/status/audio-volume-medium.png
+share/icons/gnome/22x22/status/audio-volume-muted.png
 share/icons/gnome/22x22/status/connect_creating.png
 share/icons/gnome/22x22/status/connect_established.png
 share/icons/gnome/22x22/status/connect_no.png
@@ -2289,6 +2307,12 @@ share/icons/gnome/22x22/status/stock_open.png
 share/icons/gnome/22x22/status/stock_repeat.png
 share/icons/gnome/22x22/status/stock_shuffle.png
 share/icons/gnome/22x22/status/stock_trash_full.png
+share/icons/gnome/22x22/status/stock_volume-0.png
+share/icons/gnome/22x22/status/stock_volume-max.png
+share/icons/gnome/22x22/status/stock_volume-med.png
+share/icons/gnome/22x22/status/stock_volume-min.png
+share/icons/gnome/22x22/status/stock_volume-mute.png
+share/icons/gnome/22x22/status/stock_volume.png
 share/icons/gnome/22x22/status/stock_weather-cloudy.png
 share/icons/gnome/22x22/status/stock_weather-few-clouds.png
 share/icons/gnome/22x22/status/stock_weather-night-clear.png
@@ -2351,6 +2375,8 @@ share/icons/gnome/24x24/actions/filesave.png
 share/icons/gnome/24x24/actions/filesaveas.png
 share/icons/gnome/24x24/actions/find.png
 share/icons/gnome/24x24/actions/finish.png
+share/icons/gnome/24x24/actions/folder-new.png
+share/icons/gnome/24x24/actions/folder_new.png
 share/icons/gnome/24x24/actions/format-indent-less.png
 share/icons/gnome/24x24/actions/format-indent-more.png
 share/icons/gnome/24x24/actions/format-justify-center.png
@@ -2519,6 +2545,7 @@ share/icons/gnome/24x24/actions/stock_media-rew.png
 share/icons/gnome/24x24/actions/stock_media-stop.png
 share/icons/gnome/24x24/actions/stock_new-appointment.png
 share/icons/gnome/24x24/actions/stock_new-bcard.png
+share/icons/gnome/24x24/actions/stock_new-dir.png
 share/icons/gnome/24x24/actions/stock_new-tab.png
 share/icons/gnome/24x24/actions/stock_new-text.png
 share/icons/gnome/24x24/actions/stock_new-window.png
@@ -2648,6 +2675,7 @@ share/icons/gnome/24x24/apps/im-yahoo.png
 share/icons/gnome/24x24/apps/image-viewer.png
 share/icons/gnome/24x24/apps/kcalc.png
 share/icons/gnome/24x24/apps/kcmsound.png
+share/icons/gnome/24x24/apps/kcmkwm.png
 share/icons/gnome/24x24/apps/kedit.png
 share/icons/gnome/24x24/apps/key_bindings.png
 share/icons/gnome/24x24/apps/kfm.png
@@ -2656,6 +2684,7 @@ share/icons/gnome/24x24/apps/konsole.png
 share/icons/gnome/24x24/apps/krfb.png
 share/icons/gnome/24x24/apps/kscreensaver.png
 share/icons/gnome/24x24/apps/ksysguard.png
+share/icons/gnome/24x24/apps/kwin.png
 share/icons/gnome/24x24/apps/logviewer.png
 share/icons/gnome/24x24/apps/multimedia-volume-control.png
 share/icons/gnome/24x24/apps/multimedia.png
@@ -2675,6 +2704,7 @@ share/icons/gnome/24x24/apps/preferences-desktop-font.png
 share/icons/gnome/24x24/apps/preferences-desktop-keyboard-shortcuts.png
 share/icons/gnome/24x24/apps/preferences-desktop-remote-desktop.png
 share/icons/gnome/24x24/apps/preferences-desktop-screensaver.png
+share/icons/gnome/24x24/apps/preferences-system-windows.png
 share/icons/gnome/24x24/apps/preferences-desktop-theme.png
 share/icons/gnome/24x24/apps/preferences-desktop-wallpaper.png
 share/icons/gnome/24x24/apps/redhat-filemanager.png
@@ -2696,6 +2726,7 @@ share/icons/gnome/24x24/apps/xfce-filemanager.png
 share/icons/gnome/24x24/apps/xfce-terminal.png
 share/icons/gnome/24x24/apps/xfce4-backdrop.png
 share/icons/gnome/24x24/apps/xfce4-mixer.png
+share/icons/gnome/24x24/apps/xfwm4.png
 share/icons/gnome/24x24/apps/xscreensaver.png
 share/icons/gnome/24x24/categories/applications-accessories.png
 share/icons/gnome/24x24/categories/applications-development.png
@@ -3947,6 +3978,7 @@ share/icons/gnome/32x32/devices/battery.png
 share/icons/gnome/32x32/devices/cdrom_unmount.png
 share/icons/gnome/32x32/devices/cdwriter_unmount.png
 share/icons/gnome/32x32/devices/chardevice.png
+share/icons/gnome/32x32/devices/computer.png
 share/icons/gnome/32x32/devices/display.png
 share/icons/gnome/32x32/devices/drive-cdrom.png
 share/icons/gnome/32x32/devices/drive-harddisk.png
@@ -3956,6 +3988,7 @@ share/icons/gnome/32x32/devices/dvd_unmount.png
 share/icons/gnome/32x32/devices/gnome-dev-battery.png
 share/icons/gnome/32x32/devices/gnome-dev-cdrom-audio.png
 share/icons/gnome/32x32/devices/gnome-dev-cdrom.png
+share/icons/gnome/32x32/devices/gnome-dev-computer.png
 share/icons/gnome/32x32/devices/gnome-dev-disc-cdr.png
 share/icons/gnome/32x32/devices/gnome-dev-disc-cdrw.png
 share/icons/gnome/32x32/devices/gnome-dev-disc-dvdr-plus.png
@@ -3980,6 +4013,7 @@ share/icons/gnome/32x32/devices/gnome-dev-printer.png
 share/icons/gnome/32x32/devices/gnome-dev-removable-1394.png
 share/icons/gnome/32x32/devices/gnome-dev-removable-usb.png
 share/icons/gnome/32x32/devices/gnome-dev-removable.png
+share/icons/gnome/32x32/devices/gnome-fs-client.png
 share/icons/gnome/32x32/devices/gnome-modem.png
 share/icons/gnome/32x32/devices/gnome-stock-mic.png
 share/icons/gnome/32x32/devices/gtk-cdrom.png
@@ -4008,6 +4042,7 @@ share/icons/gnome/32x32/devices/printmgr.png
 share/icons/gnome/32x32/devices/stock_mic.png
 share/icons/gnome/32x32/devices/stock_printers.png
 share/icons/gnome/32x32/devices/system-floppy.png
+share/icons/gnome/32x32/devices/system.png
 share/icons/gnome/32x32/devices/usbpendrive_unmount.png
 share/icons/gnome/32x32/devices/video-display.png
 share/icons/gnome/32x32/devices/xfce-printer.png
