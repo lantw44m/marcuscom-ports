@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.24 2006/11/04 19:33:54 marcus Exp $
+#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.25 2006/11/07 07:10:27 marcus Exp $
 #
 
 PORTNAME=	system-tools-backends
 PORTVERSION=	1.9.91
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -24,6 +25,8 @@ USE_GMAKE=	yes
 USE_PERL5=	yes
 USE_GNOME=	gnomehack gnometarget intlhack
 GNU_CONFIGURE=	yes
+USE_RC_SUBR=	system-tools-backends
+USE_GNOME_SUBR=	yes
 CONFIGURE_ARGS=	--with-stb-group=wheel
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
