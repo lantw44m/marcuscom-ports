@@ -934,6 +934,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/pixmaps/gtali
 @dirrm share/gnome/pixmaps/gnomine
 @dirrm share/gnome/pixmaps/gnometris
+@dirrm share/gnome/pixmaps/gnome-sudoku
 @dirrm share/gnome/pixmaps/gnome-games-common/icons
 @dirrm share/gnome/pixmaps/gnome-games-common/cards
 @dirrm share/gnome/pixmaps/gnome-games-common
@@ -941,6 +942,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/pixmaps/gnibbles
 @dirrm share/gnome/pixmaps/gnect
 @dirrm share/gnome/pixmaps/glines
+@dirrm share/gnome/pixmaps/glchess
 @dirrm share/gnome/pixmaps/cards/slots
 @dirrm share/gnome/pixmaps/cards
 @dirrm share/gnome/pixmaps/blackjack
