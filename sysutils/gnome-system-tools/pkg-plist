@@ -217,6 +217,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-system-tools.mo
 @dirrmtry share/locale/ku
 @dirrm share/gnome/omf/users-admin
 @dirrm share/gnome/omf/time-admin
+@dirrm share/gnome/omf/shares-admin
 @dirrm share/gnome/omf/services-admin
 @dirrm share/gnome/omf/network-admin
 @dirrm share/gnome/omf/gnome-system-tools
