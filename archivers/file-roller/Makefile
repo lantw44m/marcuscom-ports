@@ -3,11 +3,12 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller/Makefile,v 1.106 2006/10/16 23:24:04 ahze Exp $
+#   $MCom: ports/archivers/file-roller/Makefile,v 1.107 2006/11/07 23:57:19 marcus Exp $
 #
 
 PORTNAME=	file-roller
 PORTVERSION=	2.17.2
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -26,6 +27,7 @@ USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
+INSTALLS_ICONS=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils nautilus2 \

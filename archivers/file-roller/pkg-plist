@@ -2,6 +2,8 @@ bin/file-roller
 lib/nautilus/extensions-1.0/libnautilus-fileroller.a
 lib/nautilus/extensions-1.0/libnautilus-fileroller.la
 lib/nautilus/extensions-1.0/libnautilus-fileroller.so
+libexec/file-roller/isoinfo.sh
+libexec/file-roller/move-here.sh
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/NEWS
 %%PORTDOCS%%%%DOCSDIR%%/README
@@ -114,6 +116,14 @@ share/gnome/omf/file-roller/file-roller-uk.omf
 share/gnome/omf/file-roller/file-roller-zh_CN.omf
 share/gnome/omf/file-roller/file-roller-zh_HK.omf
 share/gnome/omf/file-roller/file-roller-zh_TW.omf
+share/icons/hicolor/16x16/actions/add-files-to-archive.png
+share/icons/hicolor/16x16/actions/add-folder-to-archive.png
+share/icons/hicolor/16x16/actions/extract-archive.png
+share/icons/hicolor/24x24/actions/add-files-to-archive.png
+share/icons/hicolor/24x24/actions/add-folder-to-archive.png
+share/icons/hicolor/24x24/actions/extract-archive.png
+share/icons/hicolor/24x24/actions/preview-file.png
+share/icons/hicolor/48x48/actions/file-roller.png
 share/locale/am/LC_MESSAGES/file-roller.mo
 share/locale/ar/LC_MESSAGES/file-roller.mo
 share/locale/az/LC_MESSAGES/file-roller.mo
@@ -227,6 +237,7 @@ share/locale/zh_TW/LC_MESSAGES/file-roller.mo
 @dirrm share/gnome/file-roller/glade
 @dirrm share/gnome/file-roller
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm libexec/file-roller
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
