@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/libgnomekbd/Makefile,v 1.1 2006/11/08 02:24:28 ahze Exp $
+#    $MCom: ports/x11/libgnomekbd/Makefile,v 1.2 2006/11/11 09:07:06 marcus Exp $
 
 PORTNAME=	libgnomekbd
 PORTVERSION=	2.17.2
@@ -18,7 +18,7 @@ LIB_DEPENDS=	xklavier.11:${PORTSDIR}/x11/libxklavier \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 USE_BZIP2=	yes
-USE_GNOME=	libgnomeui gnometarget gnomeprefix
+USE_GNOME=	libgnomeui gnometarget gnomeprefix gnomehack
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
@@ -27,9 +27,5 @@ USE_GMAKE=	yes
 GCONF_SCHEMAS=	desktop_gnome_peripherals_keyboard_xkb.schemas
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
-		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
