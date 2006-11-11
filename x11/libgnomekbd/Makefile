@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11/libgnomekbd/Makefile,v 1.1 2006/11/08 02:24:28 ahze Exp $
 
 PORTNAME=	libgnomekbd
 PORTVERSION=	2.17.2
@@ -29,7 +29,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
 post-patch:
-	@${MKDIR} ${WRKSRC}/m4
 	@${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.in
 
