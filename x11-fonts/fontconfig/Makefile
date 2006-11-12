@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/x11-fonts/fontconfig/Makefile,v 1.59 2006/10/16 20:42:01 mezz Exp $
-#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.8 2006/11/04 20:13:11 marcus Exp $
+#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.9 2006/11/12 20:06:52 marcus Exp $
 #
 
 PORTNAME=	fontconfig
@@ -18,8 +18,6 @@ COMMENT=	An XML-based font configuration API for X Windows
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
-		${LOCALBASE}/share/sgml/docbook/4.1/catalog:${PORTSDIR}/textproc/docbook-410
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 		expat.6:${PORTSDIR}/textproc/expat2
 
@@ -45,6 +43,10 @@ PORTDOCS=	fontconfig-user.html fontconfig-user.pdf fontconfig-user.txt
 
 .include <bsd.port.pre.mk>
 
+.if exists(${LOCALBASE}/bin/docbook2man)
+USE_DOCBOOK2MAN=	yes
+.endif
+
 .if ${X_WINDOW_SYSTEM:L} == xfree86-3
 MTREE_FILE=	/etc/mtree/BSD.x11.dist
 .else
@@ -57,6 +59,11 @@ post-install:
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/doc/|} ${DOCSDIR}
 .endif
 	${INSTALL_MAN} ${MAN5:S|^|${WRKSRC}/doc/|} ${PREFIX}/man/man5
+.if !defined(USE_DOCBOOK2MAN)
+.for manpage in ${MAN1}
+	${INSTALL_MAN} ${FILESDIR}/${manpage} ${PREFIX}/man/man1
+.endfor
+.endif
 	if [ ! -f ${PREFIX}/etc/fonts/fonts.conf ]; then \
 		${INSTALL_DATA} ${WRKSRC}/fonts.conf ${PREFIX}/etc/fonts/fonts.conf; \
 		${INSTALL_DATA} ${WRKSRC}/fonts.conf ${PREFIX}/etc/fonts/fonts.conf.default; \
