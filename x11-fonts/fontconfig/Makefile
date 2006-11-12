@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/x11-fonts/fontconfig/Makefile,v 1.59 2006/10/16 20:42:01 mezz Exp $
-#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.6 2006/09/10 00:51:16 mezz Exp $
+#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.8 2006/11/04 20:13:11 marcus Exp $
 #
 
 PORTNAME=	fontconfig
 PORTVERSION=	2.4.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 PORTEPOCH?=	1
 CATEGORIES=	x11-fonts
 MASTER_SITES=	http://fontconfig.org/release/
@@ -18,6 +18,8 @@ COMMENT=	An XML-based font configuration API for X Windows
 
 .if !defined(REFERENCE_PORT)
 
+BUILD_DEPENDS=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
+		${LOCALBASE}/share/sgml/docbook/4.1/catalog:${PORTSDIR}/textproc/docbook-410
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 		expat.6:${PORTSDIR}/textproc/expat2
 
@@ -32,11 +34,12 @@ CONFIGURE_ARGS=	--with-confdir=${PREFIX}/etc/fonts \
 		--with-default-fonts=${X11BASE}/lib/X11/fonts \
 		--with-cache-dir=/var/db/fontconfig \
 		--without-add-fonts \
+		--mandir=${PREFIX}/man \
 		--disable-docs
-CONFIGURE_ENV=	HASDOCBOOK=no
 MAKE_ENV=	LC_ALL=C
 PKGINSTALL=	${WRKDIR}/pkg-install
 
+MAN1=		fc-cache.1 fc-cat.1 fc-list.1 fc-match.1
 MAN5=		fonts-conf.5
 PORTDOCS=	fontconfig-user.html fontconfig-user.pdf fontconfig-user.txt
 
