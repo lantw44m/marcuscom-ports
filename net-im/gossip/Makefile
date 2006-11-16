@@ -3,10 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net-im/gossip/Makefile,v 1.3 2006/10/16 23:04:03 ahze Exp $
 
 PORTNAME=	gossip
 PORTVERSION=	0.18
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -44,7 +45,7 @@ BROKEN=	does not build on 4.X
 .endif
 
 .if !defined(WITHOUT_NOTIFY)
-LIB_DEPENDS+=		notify.2:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS+=		notify.1:${PORTSDIR}/devel/libnotify
 .else
 CONFIGURE_ARGS+=	--enable-libnotify=no
 .endif
