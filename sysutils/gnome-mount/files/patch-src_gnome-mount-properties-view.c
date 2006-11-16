@@ -1,6 +1,6 @@
---- src/gnome-mount-properties-view.c.orig	Mon Nov 13 21:14:43 2006
-+++ src/gnome-mount-properties-view.c	Mon Nov 13 21:36:10 2006
-@@ -59,6 +59,33 @@ struct _GnomeMountPropertiesViewClass {
+--- src/gnome-mount-properties-view.c.orig	Mon Aug 14 00:17:22 2006
++++ src/gnome-mount-properties-view.c	Thu Nov 16 02:10:17 2006
+@@ -59,6 +59,35 @@ struct _GnomeMountPropertiesViewClass {
  	GtkVBoxClass base_class;
  };
  
@@ -26,7 +26,9 @@
 +	{ MNT_SOFTDEP,		"soft-updates" },
 +	{ MNT_MULTILABEL,	"multilabel" },
 +	{ MNT_ACLS,		"acls" },
++#ifdef MNT_GJOURNAL
 +	{ MNT_GJOURNAL,		"gjournal" },
++#endif
 +	{ 0, NULL }
 +};
 +#endif
@@ -34,7 +36,7 @@
  G_DEFINE_TYPE (GnomeMountPropertiesView, gm_properties_view, GTK_TYPE_VBOX)
  
  static void
-@@ -445,13 +472,29 @@ static gboolean
+@@ -445,13 +474,29 @@ static gboolean
  mtab_next (gpointer handle, char **device_file, char **mount_options, char **mount_fstype)
  {
  #ifdef __FreeBSD__
