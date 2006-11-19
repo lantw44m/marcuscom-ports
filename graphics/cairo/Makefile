@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.45 2006/08/19 16:29:11 marcus Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.47 2006/11/17 21:28:18 ahze Exp $
 #
 
 PORTNAME=	cairo
 PORTVERSION=	1.3.2
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	graphics
 #MASTER_SITES=	http://cairographics.org/releases/
 MASTER_SITES=	http://cairographics.org/snapshots/
@@ -61,6 +61,8 @@ post-patch:
 .endif
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|' \
 		${WRKSRC}/test/Makefile.in
+	@${REINPLACE_CMD} -e 's|-lcairo|-lcairo ${PTHREAD_LIBS}|' \
+		${WRKSRC}/src/*.pc.in
 	@${REINPLACE_CMD} -e 's|src test doc|src doc|; \
 		s|@CAIRO_HAS_PNG_FUNCTIONS_TRUE@am__append_1 = test||' \
 		${WRKSRC}/Makefile.in
