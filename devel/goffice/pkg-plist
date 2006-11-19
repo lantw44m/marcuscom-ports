@@ -27,6 +27,7 @@ include/libgoffice-0.3/goffice/cut-n-paste/foocanvas/foo-canvas-util.h
 include/libgoffice-0.3/goffice/cut-n-paste/foocanvas/foo-canvas-widget.h
 include/libgoffice-0.3/goffice/cut-n-paste/foocanvas/foo-canvas.h
 include/libgoffice-0.3/goffice/cut-n-paste/foocanvas/libfoocanvas.h
+@exec mkdir -p %D/include/libgoffice-0.3/goffice/cut-n-paste/pcre
 include/libgoffice-0.3/goffice/data/go-data-impl.h
 include/libgoffice-0.3/goffice/data/go-data-simple.h
 include/libgoffice-0.3/goffice/data/go-data.h
@@ -508,6 +509,7 @@ share/locale/zh_TW/LC_MESSAGES/goffice-%%VERSION%%.mo
 @dirrm include/libgoffice-0.3/goffice/graph
 @dirrm include/libgoffice-0.3/goffice/drawing
 @dirrm include/libgoffice-0.3/goffice/data
+@dirrm include/libgoffice-0.3/goffice/cut-n-paste/pcre
 @dirrm include/libgoffice-0.3/goffice/cut-n-paste/foocanvas
 @dirrm include/libgoffice-0.3/goffice/cut-n-paste
 @dirrm include/libgoffice-0.3/goffice/component
