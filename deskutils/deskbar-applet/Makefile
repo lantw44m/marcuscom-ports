@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.42 2006/09/07 19:05:16 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.44 2006/11/08 00:35:08 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
@@ -14,7 +14,7 @@ MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Gnome panel applet similar to Google's (Windows only) Deskbar
+COMMENT=	Omnipresent versatile search interface
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
