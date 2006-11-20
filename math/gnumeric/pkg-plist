@@ -243,6 +243,9 @@ lib/gnumeric/%%VERSION%%/plugins/uihello/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/xbase.la
 lib/gnumeric/%%VERSION%%/plugins/xbase/xbase.so
+lib/goffice/0.3.3/plugins/gnumeric/gnumeric.la
+lib/goffice/0.3.3/plugins/gnumeric/gnumeric.so
+lib/goffice/0.3.3/plugins/gnumeric/plugin.xml
 lib/libspreadsheet-%%VERSION%%.so
 lib/libspreadsheet.la
 lib/libspreadsheet.so
@@ -773,6 +776,8 @@ share/gnome/pixmaps/gnumeric/win32-gnumeric.ico
 share/gnome/pixmaps/win32-gnumeric.ico
 share/locale/am/LC_MESSAGES/gnumeric-functions.mo
 share/locale/am/LC_MESSAGES/gnumeric.mo
+share/locale/ar/LC_MESSAGES/gnumeric-functions.mo
+share/locale/ar/LC_MESSAGES/gnumeric.mo
 share/locale/az/LC_MESSAGES/gnumeric-functions.mo
 share/locale/az/LC_MESSAGES/gnumeric.mo
 share/locale/bg/LC_MESSAGES/gnumeric-functions.mo
@@ -925,5 +930,6 @@ share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
 @dirrm lib/gnumeric/%%VERSION%%/plugins
 @dirrm lib/gnumeric/%%VERSION%%
 @dirrm lib/gnumeric
+@dirrm lib/goffice/0.3.3/plugins/gnumeric
 @dirrm include/libspreadsheet-1-7
 @unexec update-desktop-database > /dev/null || /usr/bin/true

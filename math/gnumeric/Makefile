@@ -3,11 +3,11 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.20 2006/10/14 10:42:09 ahze Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.21 2006/10/19 04:59:23 marcus Exp $
 #
 
 PORTNAME=	gnumeric
-PORTVERSION=	1.7.2
+PORTVERSION=	1.7.3
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
