@@ -81,6 +81,7 @@ include/libspreadsheet-1-7/sheet-control-gui-priv.h
 include/libspreadsheet-1-7/sheet-control-gui.h
 include/libspreadsheet-1-7/sheet-control-priv.h
 include/libspreadsheet-1-7/sheet-control.h
+include/libspreadsheet-1-7/sheet-filter-combo.h
 include/libspreadsheet-1-7/sheet-filter.h
 include/libspreadsheet-1-7/sheet-merge.h
 include/libspreadsheet-1-7/sheet-object-cell-comment.h
