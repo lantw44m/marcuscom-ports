@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.76 2006/10/02 23:31:11 ahze Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.78 2006/11/09 21:10:22 marcus Exp $
 #
 
 PORTNAME=	gnome-system-monitor
 PORTVERSION=	2.17.2.1
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-monitor/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
