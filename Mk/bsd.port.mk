@@ -5441,7 +5441,7 @@ generate-plist:
 .if defined(USE_GETTEXT) && ${USE_GETTEXT} == "find-dirs"
 . for a in 1-4 1-3
 	for i in `${GREP} "^share/locale/.*/LC_MESSAGES/.*\.mo" ${TMPPLIST} | ${CUT} -d / -f ${a} | ${SORT} -r`; do \
-		if [ "$${i}" != "`${MKDIR} ${WRKDIR}/emptydir && ${MTREE_CMD} -f ${MTREE_FILE} -L -p ${WRKDIR}/emptydir|${GREP} "share/locale/.*/LC_MESSAGES" | ${SED} -e 's|./||; s| missing||' | ${GREP} -o "/$${i}/"`" ]; then \
+		if [ "/$${i}/" != "`${MKDIR} ${WRKDIR}/emptydir && ${MTREE_CMD} -f ${MTREE_FILE} -L -p ${WRKDIR}/emptydir|${GREP} "share/locale/.*/LC_MESSAGES" | ${SED} -e 's|./||; s| missing||' | ${GREP} -o "/$${i}/"`" ]; then \
 			${ECHO_CMD} "@unexec rmdir %D/$${i} 2>/dev/null || true" >> ${TMPPLIST} ; \
 		fi \
 	done
