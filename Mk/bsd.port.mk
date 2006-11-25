@@ -5443,7 +5443,7 @@ generate-plist:
 		| ${SED} -e 's|./||; s| missing||' >> ${WRKDIR}/.locale.mtree
 . for a in 1-4 1-3
 	for i in `${GREP} "^share/locale/.*/LC_MESSAGES/.*\.mo" ${TMPPLIST} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} | ${CUT} -d / -f ${a} | ${SORT} -r`; do \
-		if [ "/$${i}/" != "`${GREP} -o "/$${i}/" ${WRKDIR}/.locale.mtree`" ]; then \
+		if [ "$${i}//" != "`${GREP} -o "$${i}//" ${WRKDIR}/.locale.mtree`" ]; then \
 			${ECHO_CMD} "@unexec rmdir %D/$${i} 2>/dev/null || true" >> ${TMPPLIST} ; \
 		fi \
 	done
