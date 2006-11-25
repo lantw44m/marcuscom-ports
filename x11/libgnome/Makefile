@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnome/Makefile,v 1.90 2006/11/25 21:40:11 ahze Exp $
+#   $MCom: ports/x11/libgnome/Makefile,v 1.91 2006/11/25 22:06:36 ahze Exp $
 #
 
 PORTNAME=	libgnome
@@ -24,7 +24,7 @@ USE_BZIP2=	yes
 BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
 
-USE_GETTEXT=	auto-rmdir
+USE_GETTEXT=	rmdir
 USE_XPM=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack esound \

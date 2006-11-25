@@ -1780,7 +1780,7 @@ LIB_DEPENDS+=	iconv.3:${PORTSDIR}/converters/libiconv
 .endif
 
 .if defined(USE_GETTEXT)
-.	if ${USE_GETTEXT:L} == "yes" || ${USE_GETTEXT:L} == "auto-rmdir"
+.	if ${USE_GETTEXT:L} == "yes" || ${USE_GETTEXT:L} == "rmdir"
 LIB_DEPENDS+=	intl:${PORTSDIR}/devel/gettext
 .	else
 LIB_DEPENDS+=	intl.${USE_GETTEXT}:${PORTSDIR}/devel/gettext
@@ -5436,7 +5436,7 @@ generate-plist:
 .for dir in ${PLIST_DIRS}
 	@${ECHO_CMD} ${dir} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} | ${SED} -e 's,^,@dirrm ,' >> ${TMPPLIST}
 .endfor
-.if defined(USE_GETTEXT) && ${USE_GETTEXT} == "auto-rmdir"
+.if defined(USE_GETTEXT) && ${USE_GETTEXT} == "rmdir"
 	@${MKDIR} ${WRKDIR}/emptydir
 	@${MTREE_CMD} -f ${MTREE_FILE} -L -p ${WRKDIR}/emptydir | ${GREP} "share/locale/.*/LC_MESSAGES" \
 		| ${SED} -e 's|./||; s| missing||' > ${WRKDIR}/.locale.mtree
