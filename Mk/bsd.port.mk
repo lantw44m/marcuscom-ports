@@ -1,7 +1,7 @@
 #-*- mode: makefile; tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: ports/Mk/bsd.port.mk,v 1.544 2006/09/30 19:25:45 linimon Exp $
+# $FreeBSD$
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -1780,9 +1780,7 @@ LIB_DEPENDS+=	iconv.3:${PORTSDIR}/converters/libiconv
 .endif
 
 .if defined(USE_GETTEXT)
-.	if ${USE_GETTEXT:L} == "find-dirs"
-LIB_DEPENDS+=	intl:${PORTSDIR}/devel/gettext
-.	elif ${USE_GETTEXT:L} == "yes"
+.	if ${USE_GETTEXT:L} == "yes" || ${USE_GETTEXT:L} == "auto-plist"
 LIB_DEPENDS+=	intl:${PORTSDIR}/devel/gettext
 .	else
 LIB_DEPENDS+=	intl.${USE_GETTEXT}:${PORTSDIR}/devel/gettext
@@ -5438,10 +5436,14 @@ generate-plist:
 .for dir in ${PLIST_DIRS}
 	@${ECHO_CMD} ${dir} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} | ${SED} -e 's,^,@dirrm ,' >> ${TMPPLIST}
 .endfor
-.if defined(USE_GETTEXT) && ${USE_GETTEXT} == "find-dirs"
+.if defined(USE_GETTEXT) && ${USE_GETTEXT} == "auto-plist"
+	@${MKDIR} ${WRKDIR}/emptydir
+	@> ${WKRDIR}/.locale.mtree
+	@${MTREE_CMD} -f ${MTREE_FILE} -L -p ${WRKDIR}/emptydir | ${GREP} "share/locale/.*/LC_MESSAGES" \
+		| ${SED} -e 's|./||; s| missing||' >> ${WRKDIR}/.locale.mtree
 . for a in 1-4 1-3
-	for i in `${GREP} "^share/locale/.*/LC_MESSAGES/.*\.mo" ${TMPPLIST} | ${CUT} -d / -f ${a} | ${SORT} -r`; do \
-		if [ "/$${i}/" != "`${MKDIR} ${WRKDIR}/emptydir && ${MTREE_CMD} -f ${MTREE_FILE} -L -p ${WRKDIR}/emptydir|${GREP} "share/locale/.*/LC_MESSAGES" | ${SED} -e 's|./||; s| missing||' | ${GREP} -o "/$${i}/"`" ]; then \
+	for i in `${GREP} "^share/locale/.*/LC_MESSAGES/.*\.mo" ${TMPPLIST} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} | ${CUT} -d / -f ${a} | ${SORT} -r`; do \
+		if [ "/$${i}/" != "`${GREP} -o "/$${i}/" ${WRKDIR}/.locale.mtree`" ]; then \
 			${ECHO_CMD} "@unexec rmdir %D/$${i} 2>/dev/null || true" >> ${TMPPLIST} ; \
 		fi \
 	done
