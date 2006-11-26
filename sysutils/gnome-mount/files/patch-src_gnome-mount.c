@@ -1,5 +1,5 @@
 --- src/gnome-mount.c.orig	Sun Sep 17 01:17:54 2006
-+++ src/gnome-mount.c	Mon Nov 13 21:40:26 2006
++++ src/gnome-mount.c	Sun Nov 26 16:28:25 2006
 @@ -51,9 +51,14 @@
  #include <libhal.h>
  #include <libhal-storage.h>
@@ -70,3 +70,31 @@
  
  out:
  	return (mount_point);
+@@ -1322,7 +1337,11 @@ volume_mount (const char *udi, LibHalVol
+ 	if (volume == NULL && (mount_options->len == 0)) {
+ 		/* volume from a non-pollable drive, just set uid.. */
+ 		
++#ifndef __FreeBSD__
+ 		snprintf (uidbuf, sizeof (uidbuf) - 1, "uid=%u", getuid ());
++#else
++		snprintf (uidbuf, sizeof (uidbuf) - 1, "-u=%u", getuid ());
++#endif
+ 		g_ptr_array_add (mount_options, uidbuf);
+ 		
+ 	} else if (((fstype_override != NULL) || (fstype != NULL)) && (mount_options->len == 0)) {
+@@ -1349,9 +1368,15 @@ volume_mount (const char *udi, LibHalVol
+ 				g_debug ("read default option '%s' from gconf strlist key %s", option, key);
+ 
+ 				/* special workaround to replace "uid=" with "uid=<actual uid of caller>" */
++#ifndef __FreeBSD__
+ 				if (strcmp (option, "uid=") == 0) {
+ 					g_free (option);
+ 					option = g_strdup_printf ("uid=%u", getuid ());
++#else
++				if (strcmp (option, "-u=") == 0) {
++					g_free (option);
++					option = g_strdup_printf ("-u=%u", getuid ());
++#endif
+ 				}
+ 				g_ptr_array_add (mount_options, option);
+ 

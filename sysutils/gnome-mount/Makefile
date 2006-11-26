@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-mount/Makefile,v 1.6 2006/11/14 02:46:51 marcus Exp $
+#   $MCom: ports/sysutils/gnome-mount/Makefile,v 1.7 2006/11/19 21:36:27 marcus Exp $
 #
 
 PORTNAME=	gnome-mount
 PORTVERSION=	0.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://people.freedesktop.org/~david/dist/
 
