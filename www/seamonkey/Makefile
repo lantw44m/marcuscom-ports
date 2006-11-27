@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/seamonkey/Makefile,v 1.40 2006/09/15 16:11:00 ahze Exp $
+#    $MCom: ports/www/seamonkey/Makefile,v 1.42 2006/11/17 17:46:40 ahze Exp $
 #
 
 PORTNAME=	seamonkey
@@ -96,7 +96,7 @@ MOZ_OPTIONS+=	--disable-composer
 .endif
 
 post-patch:
-	${REINPLACE_CMD} -e 's|%%PTHREAD_LIBS%%|${GECKO_PTHREAD_LIBS}|' \
+	${REINPLACE_CMD} -e 's|%%PTHREAD_LIBS%%|${PTHREAD_LIBS:C/-pthread/${GECKO_PTHREAD_LIBS}/}|' \
 		${WRKSRC}/storage/build/Makefile.in
 	@${REINPLACE_CMD} -e '/accessibility.typeaheadfind.enablesound/s/true/false/' \
 		${WRKSRC}/modules/libpref/src/init/all.js
