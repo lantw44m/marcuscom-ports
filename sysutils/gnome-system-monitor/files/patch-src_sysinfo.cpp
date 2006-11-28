@@ -1,5 +1,5 @@
---- sysinfo.cpp.orig	Fri Nov 24 02:41:14 2006
-+++ sysinfo.cpp	Fri Nov 24 02:54:59 2006
+--- src/sysinfo.cpp.orig	Fri Nov 24 02:41:14 2006
++++ src/sysinfo.cpp	Fri Nov 24 02:54:59 2006
 @@ -11,6 +11,9 @@
  #include <unistd.h>
  #include <netdb.h>
