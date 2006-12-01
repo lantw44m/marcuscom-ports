@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.25 2006/11/07 07:10:27 marcus Exp $
+#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.26 2006/11/09 18:55:27 marcus Exp $
 #
 
 PORTNAME=	system-tools-backends
-PORTVERSION=	1.9.91
-PORTREVISION=	1
+PORTVERSION=	2.1.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -18,12 +17,13 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Backend system admin scripts for gnome-system-tools
 
 BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/Net/DBus.pm:${PORTSDIR}/devel/p5-Net-DBus
+LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/Net/DBus.pm:${PORTSDIR}/devel/p5-Net-DBus
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PERL5=	yes
-USE_GNOME=	gnomehack gnometarget intlhack
+USE_GNOME=	gnomehack intlhack glib20
 GNU_CONFIGURE=	yes
 USE_RC_SUBR=	system-tools-backends
 USE_GNOME_SUBR=	yes
