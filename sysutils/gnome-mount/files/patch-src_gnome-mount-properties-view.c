@@ -1,6 +1,14 @@
 --- src/gnome-mount-properties-view.c.orig	Mon Aug 14 00:17:22 2006
-+++ src/gnome-mount-properties-view.c	Thu Nov 16 02:10:17 2006
-@@ -59,6 +59,35 @@ struct _GnomeMountPropertiesViewClass {
++++ src/gnome-mount-properties-view.c	Sun Dec  3 02:38:08 2006
+@@ -34,6 +34,7 @@
+ #include <sys/time.h>
+ #include <string.h>
+ #include <gconf/gconf-client.h>
++#include <libgnomevfs/gnome-vfs-utils.h>
+ 
+ #ifdef __FreeBSD__
+ #include <fstab.h>
+@@ -59,6 +60,35 @@ struct _GnomeMountPropertiesViewClass {
  	GtkVBoxClass base_class;
  };
  
@@ -36,7 +44,7 @@
  G_DEFINE_TYPE (GnomeMountPropertiesView, gm_properties_view, GTK_TYPE_VBOX)
  
  static void
-@@ -445,13 +474,29 @@ static gboolean
+@@ -445,13 +475,29 @@ static gboolean
  mtab_next (gpointer handle, char **device_file, char **mount_options, char **mount_fstype)
  {
  #ifdef __FreeBSD__
