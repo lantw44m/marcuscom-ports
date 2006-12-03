@@ -43,6 +43,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/eventsynthesizer.py
 %%PYTHON_SITELIBDIR%%/orca/eventsynthesizer.pyc
 %%PYTHON_SITELIBDIR%%/orca/eventsynthesizer.pyo
+%%PYTHON_SITELIBDIR%%/orca/find.py
+%%PYTHON_SITELIBDIR%%/orca/find.pyc
+%%PYTHON_SITELIBDIR%%/orca/find.pyo
 %%PYTHON_SITELIBDIR%%/orca/flat_review.py
 %%PYTHON_SITELIBDIR%%/orca/flat_review.pyc
 %%PYTHON_SITELIBDIR%%/orca/flat_review.pyo
@@ -79,6 +82,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/orca_glade.py
 %%PYTHON_SITELIBDIR%%/orca/orca_glade.pyc
 %%PYTHON_SITELIBDIR%%/orca/orca_glade.pyo
+%%PYTHON_SITELIBDIR%%/orca/orca_gui_find.py
+%%PYTHON_SITELIBDIR%%/orca/orca_gui_find.pyc
+%%PYTHON_SITELIBDIR%%/orca/orca_gui_find.pyo
 %%PYTHON_SITELIBDIR%%/orca/orca_gui_main.py
 %%PYTHON_SITELIBDIR%%/orca/orca_gui_main.pyc
 %%PYTHON_SITELIBDIR%%/orca/orca_gui_main.pyo
@@ -187,7 +193,11 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/util.py
 %%PYTHON_SITELIBDIR%%/orca/util.pyc
 %%PYTHON_SITELIBDIR%%/orca/util.pyo
+%%PYTHON_SITELIBDIR%%/orca/where_am_I.py
+%%PYTHON_SITELIBDIR%%/orca/where_am_I.pyc
+%%PYTHON_SITELIBDIR%%/orca/where_am_I.pyo
 share/gnome/applications/orca.desktop
+share/gnome/orca/glade/orca-find.glade
 share/gnome/orca/glade/orca-mainwin.glade
 share/gnome/orca/glade/orca-quit.glade
 share/gnome/orca/glade/orca-setup.glade
@@ -211,6 +221,7 @@ share/locale/fr/LC_MESSAGES/orca.mo
 share/locale/gl/LC_MESSAGES/orca.mo
 share/locale/gu/LC_MESSAGES/orca.mo
 share/locale/hi/LC_MESSAGES/orca.mo
+share/locale/hu/LC_MESSAGES/orca.mo
 share/locale/it/LC_MESSAGES/orca.mo
 share/locale/ja/LC_MESSAGES/orca.mo
 share/locale/ko/LC_MESSAGES/orca.mo
