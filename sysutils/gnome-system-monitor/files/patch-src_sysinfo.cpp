@@ -1,6 +1,11 @@
---- src/sysinfo.cpp.orig	Fri Nov 24 02:41:14 2006
-+++ src/sysinfo.cpp	Fri Nov 24 02:54:59 2006
-@@ -11,6 +11,9 @@
+--- src/sysinfo.cpp.orig	Mon Nov 20 15:41:52 2006
++++ src/sysinfo.cpp	Mon Dec  4 13:39:52 2006
+@@ -8,9 +8,14 @@
+ #include <glibtop/mem.h>
+ #include <glibtop/sysinfo.h>
+ 
++#include <sys/types.h>
++#include <sys/wait.h>
  #include <unistd.h>
  #include <netdb.h>
  #include <sys/socket.h>
@@ -10,44 +15,46 @@
  
  #include <string>
  #include <vector>
-@@ -140,16 +143,39 @@ namespace {
+@@ -191,6 +196,29 @@ namespace {
      }
    };
  
-+  class FreeBSDSysInfo
-+    : public SysInfo
++#ifdef __FreeBSD__
++  class UnameSysInfo
++      : public SysInfo
 +  {
-+  public:
-+    FreeBSDSysInfo()
-+      : SysInfo("FreeBSD")
-+    {
-+      this->load_freebsd_info();
-+    }
++      public:
++	  UnameSysInfo()
++	  {
++	      this->load_uname_info();
++	  }
 +
-+  private:
-+    void load_freebsd_info()
-+    {
-+	struct utsname name;
++      private:
 +
-+	uname(&name);
++	  void load_uname_info()
++	  {
++	      struct utsname name;
 +
-+	this->distro_version = name.release;
-+    }
++	      uname(&name);
++
++	      this->distro_name = name.sysname;
++	      this->distro_release = name.release;
++	  }
 +  };
++#endif
  
    SysInfo* get_sysinfo()
    {
-     if (g_file_test("/etc/debian_version", G_FILE_TEST_EXISTS))
-       return new DebianSysInfo;
-     else
+@@ -198,8 +226,11 @@ namespace {
+       g_free(p);
+       return new LSBSysInfo;
+     }
+-
 +#ifdef __FreeBSD__
-+      return new FreeBSDSysInfo;
++    return new UnameSysInfo;
 +#else
-       return new SysInfo(_("Unknown distro"));
+     return new SysInfo(_("Unknown distribution"));
 +#endif
    }
  }
--
  
- GtkWidget *
- procman_create_sysinfo_view(void)
