@@ -106,6 +106,7 @@ include/libspreadsheet-1-7/style-conditions.h
 include/libspreadsheet-1-7/style-font.h
 include/libspreadsheet-1-7/style.h
 include/libspreadsheet-1-7/symbol.h
+include/libspreadsheet-1-7/validation-combo.h
 include/libspreadsheet-1-7/validation.h
 include/libspreadsheet-1-7/value.h
 include/libspreadsheet-1-7/wbc-gtk.h
@@ -244,9 +245,9 @@ lib/gnumeric/%%VERSION%%/plugins/uihello/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/xbase.la
 lib/gnumeric/%%VERSION%%/plugins/xbase/xbase.so
-lib/goffice/0.3.3/plugins/gnumeric/gnumeric.la
-lib/goffice/0.3.3/plugins/gnumeric/gnumeric.so
-lib/goffice/0.3.3/plugins/gnumeric/plugin.xml
+lib/goffice/0.3.4/plugins/gnumeric/gnumeric.la
+lib/goffice/0.3.4/plugins/gnumeric/gnumeric.so
+lib/goffice/0.3.4/plugins/gnumeric/plugin.xml
 lib/libspreadsheet-%%VERSION%%.so
 lib/libspreadsheet.la
 lib/libspreadsheet.so
@@ -931,6 +932,6 @@ share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
 @dirrm lib/gnumeric/%%VERSION%%/plugins
 @dirrm lib/gnumeric/%%VERSION%%
 @dirrm lib/gnumeric
-@dirrm lib/goffice/0.3.3/plugins/gnumeric
+@dirrm lib/goffice/0.3.4/plugins/gnumeric
 @dirrm include/libspreadsheet-1-7
 @unexec update-desktop-database > /dev/null || /usr/bin/true
