@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.120 2006/10/03 00:02:39 ahze Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.122 2006/10/16 22:22:15 ahze Exp $
 #
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	2.17.1
+PORTVERSION=	2.17.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -40,7 +40,6 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		apps_gnome_settings_daemon_keybindings.schemas \
 		apps_gnome_settings_daemon_screensaver.schemas \
 		desktop_gnome_font_rendering.schemas \
-		desktop_gnome_peripherals_keyboard_xkb.schemas \
 		fontilus.schemas themus.schemas
 
 .if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
