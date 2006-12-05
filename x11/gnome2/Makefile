@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.189 2006/11/14 21:06:27 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.190 2006/12/05 02:33:13 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -43,7 +43,7 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		${LOCALBASE}/libexec/gnome-netstatus-applet:${PORTSDIR}/net/gnome-netstatus \
 		dasher:${PORTSDIR}/accessibility/dasher \
-		evolution:${PORTSDIR}/mail/evolution \
+		evolution-2.10:${PORTSDIR}/mail/evolution \
 		${LOCALBASE}/libexec/evolution-webcal:${PORTSDIR}/www/evolution-webcal \
 		network-admin:${PORTSDIR}/sysutils/gnome-system-tools \
 		gnome-nettool:${PORTSDIR}/net/gnome-nettool \
