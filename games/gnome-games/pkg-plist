@@ -42,6 +42,9 @@ etc/sound/events/iagno.soundlist
 %%PYTHON_SITELIBDIR%%/glchess/chess/san.py
 %%PYTHON_SITELIBDIR%%/glchess/chess/san.pyc
 %%PYTHON_SITELIBDIR%%/glchess/chess/san.pyo
+%%PYTHON_SITELIBDIR%%/glchess/config.py
+%%PYTHON_SITELIBDIR%%/glchess/config.pyc
+%%PYTHON_SITELIBDIR%%/glchess/config.pyo
 %%PYTHON_SITELIBDIR%%/glchess/defaults.py
 %%PYTHON_SITELIBDIR%%/glchess/defaults.pyc
 %%PYTHON_SITELIBDIR%%/glchess/defaults.pyo
@@ -654,7 +657,6 @@ share/gnome/pixmaps/gnibbles/bonus4.svg
 share/gnome/pixmaps/gnibbles/bonus5.svg
 share/gnome/pixmaps/gnibbles/diamond.svg
 share/gnome/pixmaps/gnibbles/gnibbles-logo.svg
-share/gnome/pixmaps/gnibbles/gnibbles.png
 share/gnome/pixmaps/gnibbles/life.svg
 share/gnome/pixmaps/gnibbles/questionmark.svg
 share/gnome/pixmaps/gnibbles/snake-blue.svg
