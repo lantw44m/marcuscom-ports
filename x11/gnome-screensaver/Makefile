@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.61 2006/11/08 02:30:46 ahze Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.62 2006/12/05 08:23:46 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -16,7 +16,6 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME screen saver and locker
 
-LIB_DEPENDS=	gnomekbdui.1:${PORTSDIR}/x11/libgnomekbd
 RUN_DEPENDS=	xscreensaver-gl-helper:${PORTSDIR}/x11/xscreensaver-gnome-hacks
 
 USE_BZIP2=	yes
@@ -24,7 +23,8 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomemenus
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomemenus \
+		libgnomekbd
 CONFIGURE_ARGS=	--with-gdm-config=${LOCALBASE}/etc/gdm/custom.conf \
 		--with-xscreensaverdir=${XSCREENSAVER_DIR} \
 		--with-xscreensaverhackdir=${LOCALBASE}/bin/xscreensaver-hacks
