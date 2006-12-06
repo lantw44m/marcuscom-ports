@@ -14,6 +14,7 @@ share/icons/gnome/16x16/actions/document-new.png
 share/icons/gnome/16x16/actions/document-open.png
 share/icons/gnome/16x16/actions/document-print-preview.png
 share/icons/gnome/16x16/actions/document-print.png
+share/icons/gnome/16x16/actions/document-properties.png
 share/icons/gnome/16x16/actions/document-save-as.png
 share/icons/gnome/16x16/actions/document-save.png
 share/icons/gnome/16x16/actions/down.png
@@ -116,6 +117,7 @@ share/icons/gnome/16x16/actions/gtk-open.png
 share/icons/gnome/16x16/actions/gtk-paste.png
 share/icons/gnome/16x16/actions/gtk-print-preview.png
 share/icons/gnome/16x16/actions/gtk-print.png
+share/icons/gnome/16x16/actions/gtk-properties.png
 share/icons/gnome/16x16/actions/gtk-quit.png
 share/icons/gnome/16x16/actions/gtk-redo-ltr.png
 share/icons/gnome/16x16/actions/gtk-refresh.png
@@ -131,6 +133,7 @@ share/icons/gnome/16x16/actions/gtk-zoom-100.png
 share/icons/gnome/16x16/actions/gtk-zoom-fit.png
 share/icons/gnome/16x16/actions/gtk-zoom-in.png
 share/icons/gnome/16x16/actions/gtk-zoom-out.png
+share/icons/gnome/16x16/actions/help-faq.png
 share/icons/gnome/16x16/actions/kfm_home.png
 share/icons/gnome/16x16/actions/leftjust.png
 share/icons/gnome/16x16/actions/list-add.png
@@ -187,6 +190,7 @@ share/icons/gnome/16x16/actions/stock_copy.png
 share/icons/gnome/16x16/actions/stock_cut.png
 share/icons/gnome/16x16/actions/stock_delete.png
 share/icons/gnome/16x16/actions/stock_down.png
+share/icons/gnome/16x16/actions/stock_file-properites.png
 share/icons/gnome/16x16/actions/stock_first.png
 share/icons/gnome/16x16/actions/stock_fullscreen.png
 share/icons/gnome/16x16/actions/stock_help-add-bookmark.png
@@ -217,6 +221,7 @@ share/icons/gnome/16x16/actions/stock_not-spam.png
 share/icons/gnome/16x16/actions/stock_paste.png
 share/icons/gnome/16x16/actions/stock_print-preview.png
 share/icons/gnome/16x16/actions/stock_print.png
+share/icons/gnome/16x16/actions/stock_properties.png
 share/icons/gnome/16x16/actions/stock_redo.png
 share/icons/gnome/16x16/actions/stock_refresh.png
 share/icons/gnome/16x16/actions/stock_right.png
@@ -284,6 +289,7 @@ share/icons/gnome/16x16/apps/background.png
 share/icons/gnome/16x16/apps/boot.png
 share/icons/gnome/16x16/apps/calc.png
 share/icons/gnome/16x16/apps/config-language.png
+share/icons/gnome/16x16/apps/config-users.png
 share/icons/gnome/16x16/apps/evolution.png
 share/icons/gnome/16x16/apps/file-manager.png
 share/icons/gnome/16x16/apps/fonts.png
@@ -324,6 +330,7 @@ share/icons/gnome/16x16/apps/konsole.png
 share/icons/gnome/16x16/apps/krfb.png
 share/icons/gnome/16x16/apps/kscreensaver.png
 share/icons/gnome/16x16/apps/ksysguard.png
+share/icons/gnome/16x16/apps/kuser.png
 share/icons/gnome/16x16/apps/kwin.png
 share/icons/gnome/16x16/apps/locale.png
 share/icons/gnome/16x16/apps/logviewer.png
@@ -333,6 +340,7 @@ share/icons/gnome/16x16/apps/openterm.png
 share/icons/gnome/16x16/apps/preferences-desktop-accessibility.png
 share/icons/gnome/16x16/apps/preferences-desktop-font.png
 share/icons/gnome/16x16/apps/preferences-desktop-keyboard-shortcuts.png
+share/icons/gnome/16x16/apps/preferences-desktop-keyboard.png
 share/icons/gnome/16x16/apps/preferences-desktop-locale.png
 share/icons/gnome/16x16/apps/preferences-desktop-remote-desktop.png
 share/icons/gnome/16x16/apps/preferences-desktop-screensaver.png
@@ -344,7 +352,9 @@ share/icons/gnome/16x16/apps/screensaver.png
 share/icons/gnome/16x16/apps/stock_help.png
 share/icons/gnome/16x16/apps/style.png
 share/icons/gnome/16x16/apps/susehelpcenter.png
+share/icons/gnome/16x16/apps/system-config-users.png
 share/icons/gnome/16x16/apps/system-file-manager.png
+share/icons/gnome/16x16/apps/system-users.png
 share/icons/gnome/16x16/apps/terminal.png
 share/icons/gnome/16x16/apps/text-editor.png
 share/icons/gnome/16x16/apps/utilities-system-monitor.png
@@ -1579,6 +1589,7 @@ share/icons/gnome/22x22/actions/document-new.png
 share/icons/gnome/22x22/actions/document-open.png
 share/icons/gnome/22x22/actions/document-print-preview.png
 share/icons/gnome/22x22/actions/document-print.png
+share/icons/gnome/22x22/actions/document-properties.png
 share/icons/gnome/22x22/actions/document-save-as.png
 share/icons/gnome/22x22/actions/document-save.png
 share/icons/gnome/22x22/actions/down.png
@@ -1681,6 +1692,7 @@ share/icons/gnome/22x22/actions/gtk-open.png
 share/icons/gnome/22x22/actions/gtk-paste.png
 share/icons/gnome/22x22/actions/gtk-print-preview.png
 share/icons/gnome/22x22/actions/gtk-print.png
+share/icons/gnome/22x22/actions/gtk-properties.png
 share/icons/gnome/22x22/actions/gtk-quit.png
 share/icons/gnome/22x22/actions/gtk-redo-ltr.png
 share/icons/gnome/22x22/actions/gtk-refresh.png
@@ -1696,6 +1708,7 @@ share/icons/gnome/22x22/actions/gtk-zoom-100.png
 share/icons/gnome/22x22/actions/gtk-zoom-fit.png
 share/icons/gnome/22x22/actions/gtk-zoom-in.png
 share/icons/gnome/22x22/actions/gtk-zoom-out.png
+share/icons/gnome/22x22/actions/help-faq.png
 share/icons/gnome/22x22/actions/kfm_home.png
 share/icons/gnome/22x22/actions/leftjust.png
 share/icons/gnome/22x22/actions/list-add.png
@@ -1752,6 +1765,7 @@ share/icons/gnome/22x22/actions/stock_copy.png
 share/icons/gnome/22x22/actions/stock_cut.png
 share/icons/gnome/22x22/actions/stock_delete.png
 share/icons/gnome/22x22/actions/stock_down.png
+share/icons/gnome/22x22/actions/stock_file-properites.png
 share/icons/gnome/22x22/actions/stock_first.png
 share/icons/gnome/22x22/actions/stock_fullscreen.png
 share/icons/gnome/22x22/actions/stock_help-add-bookmark.png
@@ -1782,6 +1796,7 @@ share/icons/gnome/22x22/actions/stock_not-spam.png
 share/icons/gnome/22x22/actions/stock_paste.png
 share/icons/gnome/22x22/actions/stock_print-preview.png
 share/icons/gnome/22x22/actions/stock_print.png
+share/icons/gnome/22x22/actions/stock_properties.png
 share/icons/gnome/22x22/actions/stock_redo.png
 share/icons/gnome/22x22/actions/stock_refresh.png
 share/icons/gnome/22x22/actions/stock_right.png
@@ -1848,6 +1863,7 @@ share/icons/gnome/22x22/apps/arts.png
 share/icons/gnome/22x22/apps/background.png
 share/icons/gnome/22x22/apps/boot.png
 share/icons/gnome/22x22/apps/calc.png
+share/icons/gnome/22x22/apps/config-users.png
 share/icons/gnome/22x22/apps/evolution.png
 share/icons/gnome/22x22/apps/file-manager.png
 share/icons/gnome/22x22/apps/fonts.png
@@ -1885,6 +1901,7 @@ share/icons/gnome/22x22/apps/konsole.png
 share/icons/gnome/22x22/apps/krfb.png
 share/icons/gnome/22x22/apps/kscreensaver.png
 share/icons/gnome/22x22/apps/ksysguard.png
+share/icons/gnome/22x22/apps/kuser.png
 share/icons/gnome/22x22/apps/kwin.png
 share/icons/gnome/22x22/apps/logviewer.png
 share/icons/gnome/22x22/apps/multimedia-volume-control.png
@@ -1893,6 +1910,7 @@ share/icons/gnome/22x22/apps/openterm.png
 share/icons/gnome/22x22/apps/preferences-desktop-accessibility.png
 share/icons/gnome/22x22/apps/preferences-desktop-font.png
 share/icons/gnome/22x22/apps/preferences-desktop-keyboard-shortcuts.png
+share/icons/gnome/22x22/apps/preferences-desktop-keyboard.png
 share/icons/gnome/22x22/apps/preferences-desktop-remote-desktop.png
 share/icons/gnome/22x22/apps/preferences-desktop-screensaver.png
 share/icons/gnome/22x22/apps/preferences-desktop-theme.png
@@ -1903,7 +1921,9 @@ share/icons/gnome/22x22/apps/screensaver.png
 share/icons/gnome/22x22/apps/stock_help.png
 share/icons/gnome/22x22/apps/susehelpcenter.png
 share/icons/gnome/22x22/apps/style.png
+share/icons/gnome/22x22/apps/system-config-users.png
 share/icons/gnome/22x22/apps/system-file-manager.png
+share/icons/gnome/22x22/apps/system-users.png
 share/icons/gnome/22x22/apps/terminal.png
 share/icons/gnome/22x22/apps/text-editor.png
 share/icons/gnome/22x22/apps/utilities-system-monitor.png
@@ -2350,6 +2370,7 @@ share/icons/gnome/24x24/actions/document-new.png
 share/icons/gnome/24x24/actions/document-open.png
 share/icons/gnome/24x24/actions/document-print-preview.png
 share/icons/gnome/24x24/actions/document-print.png
+share/icons/gnome/24x24/actions/document-properties.png
 share/icons/gnome/24x24/actions/document-save-as.png
 share/icons/gnome/24x24/actions/document-save.png
 share/icons/gnome/24x24/actions/down.png
@@ -2452,6 +2473,7 @@ share/icons/gnome/24x24/actions/gtk-open.png
 share/icons/gnome/24x24/actions/gtk-paste.png
 share/icons/gnome/24x24/actions/gtk-print-preview.png
 share/icons/gnome/24x24/actions/gtk-print.png
+share/icons/gnome/24x24/actions/gtk-properties.png
 share/icons/gnome/24x24/actions/gtk-quit.png
 share/icons/gnome/24x24/actions/gtk-redo-ltr.png
 share/icons/gnome/24x24/actions/gtk-refresh.png
@@ -2467,6 +2489,7 @@ share/icons/gnome/24x24/actions/gtk-zoom-100.png
 share/icons/gnome/24x24/actions/gtk-zoom-fit.png
 share/icons/gnome/24x24/actions/gtk-zoom-in.png
 share/icons/gnome/24x24/actions/gtk-zoom-out.png
+share/icons/gnome/24x24/actions/help-faq.png
 share/icons/gnome/24x24/actions/kfm_home.png
 share/icons/gnome/24x24/actions/leftjust.png
 share/icons/gnome/24x24/actions/list-add.png
@@ -2523,6 +2546,7 @@ share/icons/gnome/24x24/actions/stock_copy.png
 share/icons/gnome/24x24/actions/stock_cut.png
 share/icons/gnome/24x24/actions/stock_delete.png
 share/icons/gnome/24x24/actions/stock_down.png
+share/icons/gnome/24x24/actions/stock_file-properites.png
 share/icons/gnome/24x24/actions/stock_first.png
 share/icons/gnome/24x24/actions/stock_fullscreen.png
 share/icons/gnome/24x24/actions/stock_help-add-bookmark.png
@@ -2553,6 +2577,7 @@ share/icons/gnome/24x24/actions/stock_not-spam.png
 share/icons/gnome/24x24/actions/stock_paste.png
 share/icons/gnome/24x24/actions/stock_print-preview.png
 share/icons/gnome/24x24/actions/stock_print.png
+share/icons/gnome/24x24/actions/stock_properties.png
 share/icons/gnome/24x24/actions/stock_redo.png
 share/icons/gnome/24x24/actions/stock_refresh.png
 share/icons/gnome/24x24/actions/stock_right.png
@@ -2634,7 +2659,6 @@ share/icons/gnome/24x24/apps/file-manager.png
 share/icons/gnome/24x24/apps/fonts.png
 share/icons/gnome/24x24/apps/gdm.png
 share/icons/gnome/24x24/apps/gnome-amusements.png
-share/icons/gnome/24x24/apps/gnome-applications.png
 share/icons/gnome/24x24/apps/gnome-audio.png
 share/icons/gnome/24x24/apps/gnome-calculator.png
 share/icons/gnome/24x24/apps/gnome-cpu.png
@@ -2684,6 +2708,7 @@ share/icons/gnome/24x24/apps/konsole.png
 share/icons/gnome/24x24/apps/krfb.png
 share/icons/gnome/24x24/apps/kscreensaver.png
 share/icons/gnome/24x24/apps/ksysguard.png
+share/icons/gnome/24x24/apps/kuser.png
 share/icons/gnome/24x24/apps/kwin.png
 share/icons/gnome/24x24/apps/logviewer.png
 share/icons/gnome/24x24/apps/multimedia-volume-control.png
@@ -2702,6 +2727,7 @@ share/icons/gnome/24x24/apps/postscript-viewer.png
 share/icons/gnome/24x24/apps/preferences-desktop-accessibility.png
 share/icons/gnome/24x24/apps/preferences-desktop-font.png
 share/icons/gnome/24x24/apps/preferences-desktop-keyboard-shortcuts.png
+share/icons/gnome/24x24/apps/preferences-desktop-keyboard.png
 share/icons/gnome/24x24/apps/preferences-desktop-remote-desktop.png
 share/icons/gnome/24x24/apps/preferences-desktop-screensaver.png
 share/icons/gnome/24x24/apps/preferences-system-windows.png
@@ -2714,7 +2740,9 @@ share/icons/gnome/24x24/apps/stock-ticker.png
 share/icons/gnome/24x24/apps/stock_help.png
 share/icons/gnome/24x24/apps/style.png
 share/icons/gnome/24x24/apps/susehelpcenter.png
+share/icons/gnome/24x24/apps/system-config-users.png
 share/icons/gnome/24x24/apps/system-file-manager.png
+share/icons/gnome/24x24/apps/system-users.png
 share/icons/gnome/24x24/apps/terminal.png
 share/icons/gnome/24x24/apps/text-editor.png
 share/icons/gnome/24x24/apps/utilities-system-monitor.png
@@ -3781,6 +3809,7 @@ share/icons/gnome/32x32/actions/bottom.png
 share/icons/gnome/32x32/actions/contact-new.png
 share/icons/gnome/32x32/actions/document-new.png
 share/icons/gnome/32x32/actions/document-open.png
+share/icons/gnome/32x32/actions/document-properties.png
 share/icons/gnome/32x32/actions/document-save-as.png
 share/icons/gnome/32x32/actions/document-save.png
 share/icons/gnome/32x32/actions/down.png
@@ -3825,6 +3854,7 @@ share/icons/gnome/32x32/actions/gtk-home.png
 share/icons/gnome/32x32/actions/gtk-leave-fullscreen.png
 share/icons/gnome/32x32/actions/gtk-new.png
 share/icons/gnome/32x32/actions/gtk-open.png
+share/icons/gnome/32x32/actions/gtk-properties.png
 share/icons/gnome/32x32/actions/gtk-remove.png
 share/icons/gnome/32x32/actions/gtk-save-as.png
 share/icons/gnome/32x32/actions/gtk-save.png
@@ -3832,6 +3862,7 @@ share/icons/gnome/32x32/actions/gtk-zoom-100.png
 share/icons/gnome/32x32/actions/gtk-zoom-fit.png
 share/icons/gnome/32x32/actions/gtk-zoom-in.png
 share/icons/gnome/32x32/actions/gtk-zoom-out.png
+share/icons/gnome/32x32/actions/help-faq.png
 share/icons/gnome/32x32/actions/kfm_home.png
 share/icons/gnome/32x32/actions/list-add.png
 share/icons/gnome/32x32/actions/list-remove.png
@@ -3844,6 +3875,7 @@ share/icons/gnome/32x32/actions/start.png
 share/icons/gnome/32x32/actions/stock_bottom.png
 share/icons/gnome/32x32/actions/stock_cut.png
 share/icons/gnome/32x32/actions/stock_down.png
+share/icons/gnome/32x32/actions/stock_file-properites.png
 share/icons/gnome/32x32/actions/stock_first.png
 share/icons/gnome/32x32/actions/stock_fullscreen.png
 share/icons/gnome/32x32/actions/stock_home.png
@@ -3854,6 +3886,7 @@ share/icons/gnome/32x32/actions/stock_new-bcard.png
 share/icons/gnome/32x32/actions/stock_new-dir.png
 share/icons/gnome/32x32/actions/stock_new-text.png
 share/icons/gnome/32x32/actions/stock_new-window.png
+share/icons/gnome/32x32/actions/stock_properties.png
 share/icons/gnome/32x32/actions/stock_right.png
 share/icons/gnome/32x32/actions/stock_save-as.png
 share/icons/gnome/32x32/actions/stock_save.png
@@ -3886,6 +3919,7 @@ share/icons/gnome/32x32/apps/accessories-calculator.png
 share/icons/gnome/32x32/apps/accessories-text-editor.png
 share/icons/gnome/32x32/apps/background.png
 share/icons/gnome/32x32/apps/calc.png
+share/icons/gnome/32x32/apps/config-users.png
 share/icons/gnome/32x32/apps/evolution.png
 share/icons/gnome/32x32/apps/file-manager.png
 share/icons/gnome/32x32/apps/fonts.png
@@ -3912,11 +3946,13 @@ share/icons/gnome/32x32/apps/konsole.png
 share/icons/gnome/32x32/apps/krfb.png
 share/icons/gnome/32x32/apps/kscreensaver.png
 share/icons/gnome/32x32/apps/ksysguard.png
+share/icons/gnome/32x32/apps/kuser.png
 share/icons/gnome/32x32/apps/kwin.png
 share/icons/gnome/32x32/apps/logviewer.png
 share/icons/gnome/32x32/apps/openterm.png
 share/icons/gnome/32x32/apps/preferences-desktop-font.png
 share/icons/gnome/32x32/apps/preferences-desktop-keyboard-shortcuts.png
+share/icons/gnome/32x32/apps/preferences-desktop-keyboard.png
 share/icons/gnome/32x32/apps/preferences-desktop-remote-desktop.png
 share/icons/gnome/32x32/apps/preferences-desktop-screensaver.png
 share/icons/gnome/32x32/apps/preferences-desktop-theme.png
@@ -3927,7 +3963,9 @@ share/icons/gnome/32x32/apps/screensaver.png
 share/icons/gnome/32x32/apps/stock_help.png
 share/icons/gnome/32x32/apps/susehelpcenter.png
 share/icons/gnome/32x32/apps/style.png
+share/icons/gnome/32x32/apps/system-config-users.png
 share/icons/gnome/32x32/apps/system-file-manager.png
+share/icons/gnome/32x32/apps/system-users.png
 share/icons/gnome/32x32/apps/terminal.png
 share/icons/gnome/32x32/apps/text-editor.png
 share/icons/gnome/32x32/apps/utilities-system-monitor.png
@@ -4341,11 +4379,9 @@ share/icons/gnome/48x48/apps/applets-screenshooter.png
 share/icons/gnome/48x48/apps/character-picker.png
 share/icons/gnome/48x48/apps/config-date.png
 share/icons/gnome/48x48/apps/config-language.png
-share/icons/gnome/48x48/apps/config-users.png
 share/icons/gnome/48x48/apps/config-xfree.png
 share/icons/gnome/48x48/apps/disks.png
 share/icons/gnome/48x48/apps/eyes.png
-share/icons/gnome/48x48/apps/fonts.png
 share/icons/gnome/48x48/apps/gdm.png
 share/icons/gnome/48x48/apps/gnome-amusements.png
 share/icons/gnome/48x48/apps/gnome-audio.png
@@ -4364,14 +4400,10 @@ share/icons/gnome/48x48/apps/gnome-session.png
 share/icons/gnome/48x48/apps/gnome-settings-accessibility-keyboard.png
 share/icons/gnome/48x48/apps/gnome-settings-accessibility-technologies.png
 share/icons/gnome/48x48/apps/gnome-settings-default-applications.png
-share/icons/gnome/48x48/apps/gnome-settings-font.png
-share/icons/gnome/48x48/apps/gnome-settings-keybindings.png
 share/icons/gnome/48x48/apps/gnome-settings-sound.png
-share/icons/gnome/48x48/apps/gnome-settings-theme.png
 share/icons/gnome/48x48/apps/gnome-settings-ui-behavior.png
 share/icons/gnome/48x48/apps/gnome-system-config.png
 share/icons/gnome/48x48/apps/gnome-unknown.png
-share/icons/gnome/48x48/apps/gnome-window-manager.png
 share/icons/gnome/48x48/apps/hint.png
 share/icons/gnome/48x48/apps/hwbrowser.png
 share/icons/gnome/48x48/apps/im.png
@@ -4382,11 +4414,8 @@ share/icons/gnome/48x48/apps/palm-pilot-sync.png
 share/icons/gnome/48x48/apps/palm-pilot.png
 share/icons/gnome/48x48/apps/postscript-viewer.png
 share/icons/gnome/48x48/apps/preferences-desktop-accessibility.png
-share/icons/gnome/48x48/apps/preferences-desktop-font.png
-share/icons/gnome/48x48/apps/preferences-desktop-theme.png
 share/icons/gnome/48x48/apps/serviceconf.png
 share/icons/gnome/48x48/apps/stock-ticker.png
-share/icons/gnome/48x48/apps/style.png
 share/icons/gnome/48x48/apps/user-info.png
 share/icons/gnome/48x48/apps/visor.png
 share/icons/gnome/48x48/categories/applications-other.png
@@ -4550,6 +4579,7 @@ share/icons/gnome/scalable/actions/document-new.svg
 share/icons/gnome/scalable/actions/document-open.svg
 share/icons/gnome/scalable/actions/document-print-preview.svg
 share/icons/gnome/scalable/actions/document-print.svg
+share/icons/gnome/scalable/actions/document-properties.svg
 share/icons/gnome/scalable/actions/document-save-as.svg
 share/icons/gnome/scalable/actions/document-save.svg
 share/icons/gnome/scalable/actions/down.svg
@@ -4607,6 +4637,7 @@ share/icons/gnome/scalable/actions/gtk-new.svg
 share/icons/gnome/scalable/actions/gtk-open.svg
 share/icons/gnome/scalable/actions/gtk-print-preview.svg
 share/icons/gnome/scalable/actions/gtk-print.svg
+share/icons/gnome/scalable/actions/gtk-properties.svg
 share/icons/gnome/scalable/actions/gtk-remove.svg
 share/icons/gnome/scalable/actions/gtk-save-as.svg
 share/icons/gnome/scalable/actions/gtk-save.svg
@@ -4614,6 +4645,7 @@ share/icons/gnome/scalable/actions/gtk-zoom-100.svg
 share/icons/gnome/scalable/actions/gtk-zoom-fit.svg
 share/icons/gnome/scalable/actions/gtk-zoom-in.svg
 share/icons/gnome/scalable/actions/gtk-zoom-out.svg
+share/icons/gnome/scalable/actions/help-faq.svg
 share/icons/gnome/scalable/actions/kfm_home.svg
 share/icons/gnome/scalable/actions/list-add.svg
 share/icons/gnome/scalable/actions/list-remove.svg
@@ -4631,6 +4663,7 @@ share/icons/gnome/scalable/actions/stock_bottom.svg
 share/icons/gnome/scalable/actions/stock_cut.svg
 share/icons/gnome/scalable/actions/stock_delete.svg
 share/icons/gnome/scalable/actions/stock_down.svg
+share/icons/gnome/scalable/actions/stock_file-properites.svg
 share/icons/gnome/scalable/actions/stock_first.svg
 share/icons/gnome/scalable/actions/stock_fullscreen.svg
 share/icons/gnome/scalable/actions/stock_home.svg
@@ -4643,6 +4676,7 @@ share/icons/gnome/scalable/actions/stock_new-text.svg
 share/icons/gnome/scalable/actions/stock_new-window.svg
 share/icons/gnome/scalable/actions/stock_print-preview.svg
 share/icons/gnome/scalable/actions/stock_print.svg
+share/icons/gnome/scalable/actions/stock_properties.svg
 share/icons/gnome/scalable/actions/stock_right.svg
 share/icons/gnome/scalable/actions/stock_save-as.svg
 share/icons/gnome/scalable/actions/stock_save.svg
@@ -4675,6 +4709,7 @@ share/icons/gnome/scalable/apps/accessories-text-editor.svg
 share/icons/gnome/scalable/apps/arts.svg
 share/icons/gnome/scalable/apps/background.svg
 share/icons/gnome/scalable/apps/calc.svg
+share/icons/gnome/scalable/apps/config-users.svg
 share/icons/gnome/scalable/apps/evolution.svg
 share/icons/gnome/scalable/apps/file-manager.svg
 share/icons/gnome/scalable/apps/fonts.svg
@@ -4710,6 +4745,7 @@ share/icons/gnome/scalable/apps/konsole.svg
 share/icons/gnome/scalable/apps/krfb.svg
 share/icons/gnome/scalable/apps/kscreensaver.svg
 share/icons/gnome/scalable/apps/ksysguard.svg
+share/icons/gnome/scalable/apps/kuser.svg
 share/icons/gnome/scalable/apps/kwin.svg
 share/icons/gnome/scalable/apps/logviewer.svg
 share/icons/gnome/scalable/apps/multimedia-volume-control.svg
@@ -4717,6 +4753,7 @@ share/icons/gnome/scalable/apps/multimedia.svg
 share/icons/gnome/scalable/apps/openterm.svg
 share/icons/gnome/scalable/apps/preferences-desktop-font.svg
 share/icons/gnome/scalable/apps/preferences-desktop-keyboard-shortcuts.svg
+share/icons/gnome/scalable/apps/preferences-desktop-keyboard.svg
 share/icons/gnome/scalable/apps/preferences-desktop-remote-desktop.svg
 share/icons/gnome/scalable/apps/preferences-desktop-screensaver.svg
 share/icons/gnome/scalable/apps/preferences-desktop-theme.svg
@@ -4727,7 +4764,9 @@ share/icons/gnome/scalable/apps/screensaver.svg
 share/icons/gnome/scalable/apps/stock_help.svg
 share/icons/gnome/scalable/apps/style.svg
 share/icons/gnome/scalable/apps/susehelpcenter.svg
+share/icons/gnome/scalable/apps/system-config-users.svg
 share/icons/gnome/scalable/apps/system-file-manager.svg
+share/icons/gnome/scalable/apps/system-users.svg
 share/icons/gnome/scalable/apps/terminal.svg
 share/icons/gnome/scalable/apps/text-editor.svg
 share/icons/gnome/scalable/apps/utilities-system-monitor.svg
