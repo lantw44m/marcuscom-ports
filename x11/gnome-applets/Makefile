@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.144 2006/11/24 07:14:20 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.145 2006/12/06 12:47:37 ahze Exp $
 #
 
 PORTNAME=	gnome-applets
@@ -17,11 +17,13 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Applets components for the GNOME 2 Desktop Environment
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/system-tools-backends
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/system-tools-backends \
+		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		xklavier.11:${PORTSDIR}/x11/libxklavier \
 		gucharmap.5:${PORTSDIR}/deskutils/gucharmap
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/system-tools-backends
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/system-tools-backends \
+		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
