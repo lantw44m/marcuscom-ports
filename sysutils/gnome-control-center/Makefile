@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.122 2006/10/16 22:22:15 ahze Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.123 2006/12/05 08:11:10 marcus Exp $
 #
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	2.17.3
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -27,7 +28,7 @@ GNOME_DESKTOP_VERSION=2
 USE_GSTREAMER=	good
 WANT_GNOME=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack metacity nautilus2 \
-		gnomemenus desktopfileutils nautilus2
+		gnomemenus desktopfileutils nautilus2 libgnomekbd
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
