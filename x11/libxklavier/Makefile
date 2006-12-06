@@ -3,13 +3,13 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libxklavier/Makefile,v 1.28 2006/09/10 00:51:15 mezz Exp $
+#   $MCom: ports/x11/libxklavier/Makefile,v 1.30 2006/11/04 20:21:37 marcus Exp $
 #
 
 PORTNAME=	libxklavier
 PORTVERSION=	3.1
 PORTEPOCH=	1
-CATEGORIES=	x11
+CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	gswitchit
 

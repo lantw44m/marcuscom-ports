@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-toolkits/libgtksourceviewmm/Makefile,v 1.1 2006/11/11 17:56:30 ahze Exp $
 
 PORTNAME=	libgtksourceviewmm
 PORTVERSION=	0.2.0
-CATEGORIES=	x11-toolkits
+CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
