@@ -3,19 +3,20 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-mount/Makefile,v 1.8 2006/11/26 21:34:49 marcus Exp $
+#   $MCom: ports/sysutils/gnome-mount/Makefile,v 1.9 2006/12/03 07:41:31 marcus Exp $
 #
 
 PORTNAME=	gnome-mount
 PORTVERSION=	0.5
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://people.freedesktop.org/~david/dist/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A font-end to mount, umount, and eject using HAL
 
-LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal
+LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
+		notify.1:${PORTSDIR}/devel/libnotify
 
 USE_XLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack nautilus2
