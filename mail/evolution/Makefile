@@ -3,11 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.122 2006/11/07 14:58:42 ahze Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.123 2006/12/05 02:32:20 marcus Exp $
 #
 
 PORTNAME=	evolution
 PORTVERSION=	2.9.3
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -25,7 +26,7 @@ USE_BISON=	yes
 USE_GETTEXT=	yes
 USE_XLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver \
-		gtkhtml3 desktopfileutils
+		gtkhtml3 desktopfileutils gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
