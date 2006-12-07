@@ -3,11 +3,12 @@
 # Whom:                marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/misc/hicolor-icon-theme/Makefile,v 1.4 2006/08/12 13:55:16 ahze Exp $
+#   $MCom: ports/misc/hicolor-icon-theme/Makefile,v 1.6 2006/12/06 02:08:43 marcus Exp $
 #
 
 PORTNAME=	hicolor-icon-theme
 PORTVERSION=	0.10
+PORTREVISION=	1
 CATEGORIES=	misc gnome
 MASTER_SITES=	http://icon-theme.freedesktop.org/releases/
 
@@ -27,7 +28,7 @@ PLIST=	${WRKDIR}/pkg-plist
 ICON_SIZES=	16x16 22x22 24x24 32x32 36x36 48x48 64x64 72x72 96x96 \
 		128x128 192x192 scalable
 ICON_CONTEXTS=	actions animations apps categories devices emblems emotes \
-		filesystems intl mimetypes places stock
+		filesystems intl mimetypes places status stock
 STOCK_SUBS=	chart code data form image io media navigation net object table text
 
 SUB_LIST=	ICON_SIZES="${ICON_SIZES}" ICON_CONTEXTS="${ICON_CONTEXTS}" \
