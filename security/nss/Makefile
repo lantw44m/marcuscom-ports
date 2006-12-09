@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/security/nss/Makefile,v 1.1 2006/12/09 15:17:54 ahze Exp $
 
 PORTNAME=	nss
 PORTVERSION=	${_MAJOR}.${_MINOR}.${_PATCH}
