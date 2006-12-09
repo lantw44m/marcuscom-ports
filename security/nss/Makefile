@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/security/nss/Makefile,v 1.2 2006/12/09 15:18:35 ahze Exp $
+#    $MCom: ports/security/nss/Makefile,v 1.3 2006/12/09 15:43:12 ahze Exp $
 
 PORTNAME=	nss
 PORTVERSION=	${_MAJOR}.${_MINOR}.${_PATCH}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	security/nss/releases/NSS_${PORTVERSION:S/./_/g}_RTM/src
@@ -67,6 +67,8 @@ post-patch:
 		s|@libdir@|${PREFIX}/lib/nss|; \
 		s|@prefix@|${PREFIX}|' \
 		${FILESDIR}/nss-config.in >${WRKDIR}/nss-config
+	@${SED} -e 's|@PREFIX@|${PREFIX}|; s|@PORTVERSION@|${PORTVERSION}|' \
+		${FILESDIR}/nss.pc.in >${WRKDIR}/nss.pc
 .for i in MAJOR MINOR PATCH
 	@${SED} -i.${i} -e 's|@${i}@|${_${i}}|' ${WRKDIR}/nss-config
 .endfor
@@ -80,5 +82,6 @@ do-install:
 	${INSTALL_PROGRAM} ${DIST}/FreeBSD${OSREL:C/.$/*/}_OPT.OBJ/bin/* \
 		${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/nss-config ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDIR}/nss.pc ${PREFIX}/libdata/pkgconfig
 
 .include <bsd.port.post.mk>
