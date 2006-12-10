@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/sysutils/tracker/Makefile,v 1.1 2006/12/10 02:48:44 ahze Exp $
 
 PORTNAME=	tracker
 PORTVERSION=	0.5.2
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.gnome.org/~jamiemcc/tracker/
 
@@ -35,6 +36,7 @@ MAN1=	tracker-extract.1 tracker-files.1 tracker-meta-folder.1 \
 	tracker-query.1 tracker-search.1 tracker-stats.1 trackerd.1
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|libpng|libpng12|' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/Makefile.in
 
