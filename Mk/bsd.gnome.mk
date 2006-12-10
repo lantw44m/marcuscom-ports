@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.406 2006/12/04 22:52:19 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.407 2006/12/06 06:03:24 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -471,6 +471,7 @@ evolutiondataserver_LIB_DEPENDS=edataserver-1.2.9:${PORTSDIR}/databases/evolutio
 evolutiondataserver_DETECT=		${LOCALBASE}/libdata/pkgconfig/evolution-data-server-1.2.pc
 evolutiondataserver_USE_GNOME_IMPL=libgnomeui
 
+desktopfileutils_BUILD_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 desktopfileutils_DETECT=	${LOCALBASE}/bin/update-desktop-database
 desktopfileutils_USE_GNOME_IMPL=glib20
