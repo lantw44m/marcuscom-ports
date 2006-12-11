@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/x11-fonts/fontconfig/Makefile,v 1.59 2006/10/16 20:42:01 mezz Exp $
-#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.9 2006/11/12 20:06:52 marcus Exp $
+#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.10 2006/11/12 22:26:20 marcus Exp $
 #
 
 PORTNAME=	fontconfig
-PORTVERSION=	2.4.1
-PORTREVISION?=	1
+PORTVERSION=	2.4.2
+PORTREVISION?=	0
 PORTEPOCH?=	1
 CATEGORIES=	x11-fonts
 MASTER_SITES=	http://fontconfig.org/release/
