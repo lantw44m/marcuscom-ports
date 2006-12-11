@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.125 2006/11/11 10:16:34 marcus Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.126 2006/12/06 02:44:34 marcus Exp $
 #
 
 PORTNAME=	gnome-games
 PORTVERSION=	2.17.3
+PORTREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -53,7 +54,9 @@ post-patch:
 		${WRKSRC}/glchess/src/lib/defaults.py
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share/gnome|' \
 		${WRKSRC}/gnome-sudoku/src/gnome-sudoku \
-		${WRKSRC}/glchess/src/glchess
+		${WRKSRC}/glchess/src/glchess \
+		${WRKSRC}/gnome-sudoku/src/lib/dialog_swallower.py \
+		${WRKSRC}/gnome-sudoku/src/lib/game_selector.py
 
 post-install:
 	@-update-desktop-database
