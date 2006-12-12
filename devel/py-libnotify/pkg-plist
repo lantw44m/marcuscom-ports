@@ -1,7 +1,0 @@
-%%PYTHON_SITELIBDIR%%/gtk-2.0/pynotify/__init__.py
-%%PYTHON_SITELIBDIR%%/gtk-2.0/pynotify/__init__.pyc
-%%PYTHON_SITELIBDIR%%/gtk-2.0/pynotify/__init__.pyo
-%%PYTHON_SITELIBDIR%%/gtk-2.0/pynotify/_pynotify.so
-%%PYTHON_SITELIBDIR%%/gtk-2.0/pynotify/_pynotify.la
-libdata/pkgconfig/notify-python.pc
-share/pygtk/2.0/defs/pynotify.defs
