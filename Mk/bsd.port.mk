@@ -1780,11 +1780,7 @@ LIB_DEPENDS+=	iconv.3:${PORTSDIR}/converters/libiconv
 .endif
 
 .if defined(USE_GETTEXT)
-.	if ${USE_GETTEXT:L} == "yes" || ${USE_GETTEXT:L} == "rmdir"
 LIB_DEPENDS+=	intl:${PORTSDIR}/devel/gettext
-.	else
-LIB_DEPENDS+=	intl.${USE_GETTEXT}:${PORTSDIR}/devel/gettext
-.	endif
 .endif
 
 
@@ -5441,9 +5437,10 @@ generate-plist:
 	@${MTREE_CMD} -f ${MTREE_FILE} -L -p ${WRKDIR}/emptydir | ${GREP} "share/locale/.*/LC_MESSAGES" \
 		| ${SED} -e 's|./||; s| missing||' > ${WRKDIR}/.locale.mtree
 . for po in ${USE_GETTEXT}
-	@for i in `${GREP} "^share/locale/.*/LC_MESSAGES/$${po}.mo" ${TMPPLIST} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} | ${CUT} -d / -f 1-3 | ${SORT} -r`; do \
+	@for i in `${GREP} "^share/locale/.*/LC_MESSAGES/${po}.mo" ${TMPPLIST} | ${SED} ${PLIST_SUB:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/} | ${CUT} -d / -f 1-4 | ${SORT} -r`; do \
 		if [ "$${i}//" != "`${GREP} -o "$${i}//" ${WRKDIR}/.locale.mtree`" ]; then \
 			${ECHO_CMD} "@unexec rmdir %D/$${i} 2>/dev/null || true" >> ${TMPPLIST} ; \
+			${ECHO_CMD} $${i} | ${CUT} -d / -f 1-3 | ${SED} -e 's|^|@unexec rmdir %D/|; s~$$~ 2>/dev/null || true~' >> ${TMPPLIST} ; \
 		fi \
 	done
 . endfor
