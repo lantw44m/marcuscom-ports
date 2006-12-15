@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.126 2006/12/06 02:44:34 marcus Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.127 2006/12/11 02:12:01 marcus Exp $
 #
 
 PORTNAME=	gnome-games
 PORTVERSION=	2.17.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -50,8 +50,8 @@ LIB_DEPENDS+=	avahi-client:${PORTSDIR}/net/avahi
 post-patch:
 	@${REINPLACE_CMD} -e 's|share|share/gnome|g ; \
 	    	s|/usr/local|${PREFIX}|g' \
-	    	${WRKSRC}/gnome-sudoku/src/lib/defaults.py \
-		${WRKSRC}/glchess/src/lib/defaults.py
+	    	${WRKSRC}/gnome-sudoku/src/lib/defaults.py.in \
+		${WRKSRC}/glchess/src/lib/defaults.py.in
 	@${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}/share/gnome|' \
 		${WRKSRC}/gnome-sudoku/src/gnome-sudoku \
 		${WRKSRC}/glchess/src/glchess \
