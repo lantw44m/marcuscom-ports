@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.123 2006/12/05 02:32:20 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.124 2006/12/07 17:04:17 marcus Exp $
 #
 
 PORTNAME=	evolution
@@ -32,8 +32,6 @@ INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 LDCONFIG_DIRS=	%%PREFIX%%/lib/evolution/%%VERSION%%
 CONFIGURE_ARGS=	--enable-nss=yes \
-		--with-nss-includes=${LOCALBASE}/include/nss/nss \
-		--with-nss-libs=${LOCALBASE}/lib \
 		--with-nspr-includes=${LOCALBASE}/include/nspr \
 		--with-nspr-libs=${LOCALBASE}/lib \
 		--enable-mono=no \
