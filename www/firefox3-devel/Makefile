@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/www/firefox/Makefile,v 1.21 2006/10/25 01:20:12 ahze Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.32 2006/12/09 16:33:11 ahze Exp $
 
 PORTNAME=	firefox
 DISTVERSION=	3.0.a1
@@ -52,7 +52,7 @@ OPTIONS=	NEWTAB "Open external links in a new tab" on \
 
 .include <bsd.port.pre.mk>
 
-GECKO_PTHREAD_LIBS!=${CC} -dumpspecs | ${GREP} pthread | ${SED} -e 's|^.*%{\!pg: %{pthread:|| ; s|}.*$$||' || ${TRUE}
+GECKO_PTHREAD_LIBS!=${CC} -dumpspecs | ${GREP} -m 1 pthread | ${SED} -e 's|^.*%{\!pg: %{pthread:|| ; s|}.*$$||' || ${TRUE}
 
 .if ${OSVERSION} < 500000
 BROKEN=	does not build
