@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/security/nss/Makefile,v 1.4 2006/12/09 16:59:42 ahze Exp $
+#    $MCom: ports/security/nss/Makefile,v 1.5 2006/12/17 18:42:25 ahze Exp $
 
 PORTNAME=	nss
 PORTVERSION=	${_MAJOR}.${_MINOR}.${_PATCH}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	security/nss/releases/NSS_${PORTVERSION:S/./_/g}_RTM/src
@@ -15,12 +15,12 @@ MASTER_SITE_SUBDIR=	security/nss/releases/NSS_${PORTVERSION:S/./_/g}_RTM/src
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Libraries to support development of security-enabled applications
 
+BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
+LIB_DEPENDS=	nspr4.1:${PORTSDIR}/devel/nspr
+
 _MAJOR=	3
 _MINOR=	11
 _PATCH=	4
-
-BUILD_DEPENDS=	zip:${PORTSDIR}/archivers/zip
-LIB_DEPENDS=	nspr4.1:${PORTSDIR}/devel/nspr
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/mozilla/security/nss
 
@@ -45,6 +45,11 @@ EXTRACT_AFTER_ARGS=| ${TAR} -xf -	\
 	${EXTERNALS:C,^,--exclude ${DISTNAME}/mozilla/,}
 
 BINS=${DIST}/${OPSYS}${OSREL}_OPT.OBJ
+
+INSTALL_BINS=	certcgi certutil checkcert cmsutil crlutil derdump makepqg \
+		mangle modutil ocspclnt oidcalc p7content p7env p7sign \
+		p7verify pk12util rsaperf shlibsign signtool signver \
+		ssltap strsclnt symkeyutil vfychain vfyserv
 
 test:
 	cd ${WRKSRC}/tests;	\
@@ -77,10 +82,16 @@ do-install:
 	${MKDIR} ${PREFIX}/include/nss ${PREFIX}/lib/nss
 	${TAR} -C ${DIST}/public --dereference -cf - . | \
 		${TAR} -C ${PREFIX}/include/nss -xf -
-	${INSTALL_DATA} ${DIST}/FreeBSD${OSREL:C/.$/*/}_OPT.OBJ/lib/* \
+	${INSTALL_DATA} ${DIST}/FreeBSD${OSREL:C/.$/*/}_OPT.OBJ/lib/*.so.1 \
 		${PREFIX}/lib/nss
-	${INSTALL_PROGRAM} ${DIST}/FreeBSD${OSREL:C/.$/*/}_OPT.OBJ/bin/* \
+	${INSTALL_DATA} ${DIST}/FreeBSD${OSREL:C/.$/*/}_OPT.OBJ/lib/libcrmf.a \
+	    	${PREFIX}/lib/nss
+.for bin in ${INSTALL_BINS}
+	${INSTALL_PROGRAM} ${DIST}/FreeBSD${OSREL:C/.$/*/}_OPT.OBJ/bin/${bin} \
 		${PREFIX}/bin
+.endfor
+	cd ${DIST}/FreeBSD${OSREL:C/.$/*/}_OPT.OBJ/lib && \
+	    	${TAR} -cf - *.so | ${TAR} --unlink -C ${PREFIX}/lib/nss -xf -
 	${INSTALL_SCRIPT} ${WRKDIR}/nss-config ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/nss.pc ${PREFIX}/libdata/pkgconfig
 
