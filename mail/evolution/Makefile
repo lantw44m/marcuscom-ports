@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.125 2006/12/16 22:15:52 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.126 2006/12/16 22:37:02 marcus Exp $
 #
 
 PORTNAME=	evolution
 PORTVERSION=	2.9.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -32,8 +32,6 @@ INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 LDCONFIG_DIRS=	%%PREFIX%%/lib/evolution/%%VERSION%%
 CONFIGURE_ARGS=	--enable-nss=yes \
-		--with-nspr-includes=${LOCALBASE}/include/nspr \
-		--with-nspr-libs=${LOCALBASE}/lib \
 		--enable-mono=no \
 		--with-sub-version=" FreeBSD GNOME Team Port"
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
