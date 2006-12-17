@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.104 2006/12/04 23:27:54 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.105 2006/12/10 01:16:56 ahze Exp $
 #
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	1.9.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -35,8 +35,6 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--enable-nss=yes \
 		--with-openldap=yes \
-		--with-nspr-includes=${LOCALBASE}/include/nspr \
-		--with-nspr-libs=${LOCALBASE}/lib \
 		--with-krb5=/usr \
 		--with-libdb=${LOCALBASE}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}" \
