@@ -239,6 +239,7 @@ share/locale/pt/LC_MESSAGES/orca.mo
 share/locale/pt_BR/LC_MESSAGES/orca.mo
 share/locale/ru/LC_MESSAGES/orca.mo
 share/locale/rw/LC_MESSAGES/orca.mo
+share/locale/sl/LC_MESSAGES/orca.mo
 share/locale/sr/LC_MESSAGES/orca.mo
 share/locale/sr@Latn/LC_MESSAGES/orca.mo
 share/locale/sv/LC_MESSAGES/orca.mo
@@ -264,6 +265,8 @@ share/locale/zh_TW/LC_MESSAGES/orca.mo
 @dirrmtry share/locale/uk
 @dirrmtry share/locale/sr/LC_MESSAGES
 @dirrmtry share/locale/sr
+@dirrmtry share/locale/sl/LC_MESSAGES
+@dirrmtry share/locale/sl
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/pt/LC_MESSAGES
