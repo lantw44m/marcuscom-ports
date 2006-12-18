@@ -49,7 +49,6 @@ lib/glade3/modules/libgladegtk.so
 lib/libgladeui-1.la
 lib/libgladeui-1.so
 lib/libgladeui-1.so.4
-libdata/pkgconfig/glade-3.pc
 libdata/pkgconfig/libgladeui-1.0.pc
 share/doc/gladeui/GladeApp.html
 share/doc/gladeui/GladeClipboard.html
@@ -311,12 +310,14 @@ share/gnome/glade3/pixmaps/devhelp.png
 share/gnome/glade3/pixmaps/plus.png
 share/gnome/glade3/pixmaps/selector.png
 share/icons/hicolor/48x48/apps/glade-3.png
+share/locale/ar/LC_MESSAGES/glade3.mo
 share/locale/az/LC_MESSAGES/glade3.mo
 share/locale/da/LC_MESSAGES/glade3.mo
 share/locale/en_CA/LC_MESSAGES/glade3.mo
 share/locale/en_GB/LC_MESSAGES/glade3.mo
 share/locale/es/LC_MESSAGES/glade3.mo
 share/locale/fr/LC_MESSAGES/glade3.mo
+share/locale/gl/LC_MESSAGES/glade3.mo
 share/locale/ja/LC_MESSAGES/glade3.mo
 share/locale/ko/LC_MESSAGES/glade3.mo
 share/locale/ms/LC_MESSAGES/glade3.mo
@@ -366,3 +367,5 @@ share/locale/zh_TW/LC_MESSAGES/glade3.mo
 @dirrmtry share/locale/nn
 @dirrmtry share/locale/ko/LC_MESSAGES
 @dirrmtry share/locale/ko
+@dirrmtry share/locale/gl/LC_MESSAGES
+@dirrmtry share/locale/gl
