@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.16 2006/11/12 22:03:43 marcus Exp $
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.17 2006/11/16 14:42:10 ahze Exp $
 #
 
 PORTNAME=	gnome-power-manager
-PORTVERSION=	2.16.2
-PORTREVISION=	3
+PORTVERSION=	2.17.4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -32,10 +31,8 @@ USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui libwnck \
 		gnomedocutils
 CONFIGURE_ARGS=	--disable-icon-framing \
-		--docdir=${PREFIX}/share/doc/${PORTNAME} \
 		--with-doc-dir=${PREFIX}/share/doc \
-		--disable-docbook-docs \
-		--mandir=${PREFIX}/man
+		--disable-docbook-docs
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
@@ -44,7 +41,8 @@ GCONF_SCHEMAS=	gnome-power-manager.schemas
 MAN1=		gnome-power-manager.1 gnome-power-preferences.1
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lresolv||' \
+	@${REINPLACE_CMD} -e 's|-lresolv|| ; \
+	    	s|-Werror||g' \
 	    	${WRKSRC}/configure
 
 .include <bsd.port.mk>
