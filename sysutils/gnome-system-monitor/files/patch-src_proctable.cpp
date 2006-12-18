@@ -1,5 +1,5 @@
---- src/proctable.c.orig	Wed Aug 30 14:11:01 2006
-+++ src/proctable.c	Tue Oct 24 13:39:29 2006
+--- src/proctable.cpp.orig	Wed Aug 30 14:11:01 2006
++++ src/proctable.cpp	Tue Oct 24 13:39:29 2006
 @@ -923,6 +923,12 @@ static void cb_exclude(ProcInfo* info, G
  }
  

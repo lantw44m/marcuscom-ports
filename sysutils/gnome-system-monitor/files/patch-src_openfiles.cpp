@@ -1,5 +1,5 @@
---- src/openfiles.c.orig	Mon Apr 11 03:50:49 2005
-+++ src/openfiles.c	Mon Apr 11 03:52:13 2005
+--- src/openfiles.cpp.orig	Mon Apr 11 03:50:49 2005
++++ src/openfiles.cpp	Mon Apr 11 03:52:13 2005
 @@ -8,6 +8,7 @@
  #include <netdb.h>
  #include <sys/types.h>
