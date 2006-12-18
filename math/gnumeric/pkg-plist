@@ -1,6 +1,7 @@
 bin/gnumeric
 bin/gnumeric-%%VERSION%%
 bin/ssconvert
+bin/ssindex
 include/libspreadsheet-1-7/application.h
 include/libspreadsheet-1-7/auto-format.h
 include/libspreadsheet-1-7/cell-draw.h
@@ -245,9 +246,9 @@ lib/gnumeric/%%VERSION%%/plugins/uihello/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/xbase.la
 lib/gnumeric/%%VERSION%%/plugins/xbase/xbase.so
-lib/goffice/0.3.4/plugins/gnumeric/gnumeric.la
-lib/goffice/0.3.4/plugins/gnumeric/gnumeric.so
-lib/goffice/0.3.4/plugins/gnumeric/plugin.xml
+lib/goffice/0.3.5/plugins/gnumeric/gnumeric.la
+lib/goffice/0.3.5/plugins/gnumeric/gnumeric.so
+lib/goffice/0.3.5/plugins/gnumeric/plugin.xml
 lib/libspreadsheet-%%VERSION%%.so
 lib/libspreadsheet.la
 lib/libspreadsheet.so
@@ -932,6 +933,6 @@ share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
 @dirrm lib/gnumeric/%%VERSION%%/plugins
 @dirrm lib/gnumeric/%%VERSION%%
 @dirrm lib/gnumeric
-@dirrm lib/goffice/0.3.4/plugins/gnumeric
+@dirrm lib/goffice/0.3.5/plugins/gnumeric
 @dirrm include/libspreadsheet-1-7
 @unexec update-desktop-database > /dev/null || /usr/bin/true
