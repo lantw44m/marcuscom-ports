@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/bug-buddy/Makefile,v 1.38 2006/09/20 06:35:57 marcus Exp $
+#   $MCom: ports/devel/bug-buddy/Makefile,v 1.40 2006/12/04 00:34:13 marcus Exp $
 #
 
 PORTNAME=	bug-buddy
-PORTVERSION=	2.17.2
+PORTVERSION=	2.17.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/bug-buddy/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -20,7 +20,7 @@ LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		soup-2.2.8:${PORTSDIR}/devel/libsoup
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USE_GETTEXT=	${PORTNAME}
 USE_XLIB=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
