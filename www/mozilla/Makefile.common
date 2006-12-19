@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.37 2006/12/09 16:33:11 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.38 2006/12/09 17:29:59 ahze Exp $
 
 # This file contains some reusable components for mozilla ports. It's of
 # use primarily to apps from the mozilla project itself (such as Firefox,
@@ -336,7 +336,7 @@ gecko-pre-install:
 .if defined(MOZILLA_SUFX) && ${MOZILLA_SUFX}!="none"
 	${MV} ${FAKEDIR}/bin/${MOZILLA:S/${MOZILLA_SUFX}//} ${FAKEDIR}/bin/${MOZILLA}
 	${MV} ${FAKEDIR}/bin/${MOZILLA:S/${MOZILLA_SUFX}//}-config ${FAKEDIR}/bin/${MOZILLA}-config
-.for pc in ${PKGCONFIG_FILES:S|${MOZILLA_SUFX}||}
+.for pc in ${MOZ_PKGCONFIG_FILES:S|${MOZILLA_SUFX}||}
 	${SED} -e 's|Requires: ${MOZILLA:S/${MOZILLA_SUFX}//}|Requires: ${MOZILLA}|' \
 	${FAKEDIR}/lib/pkgconfig/${pc}.pc > ${FAKEDIR}/lib/pkgconfig/${pc:S/${MOZILLA:S,${MOZILLA_SUFX},,}/${MOZILLA}/}.pc
 .endfor
@@ -371,7 +371,7 @@ gecko-create-plist:
 		${FIND} -d * -type d | \
 		${SED} -e 's|^|@dirrm ${dir}/|' >> ${PLIST}
 .endfor
-.for pcfile in ${PKGCONFIG_FILES}
+.for pcfile in ${MOZ_PKGCONFIG_FILES}
 	${ECHO_CMD} "libdata/pkgconfig/${pcfile}.pc" >> ${PLIST}
 	@${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
 		-e 's|${MOZILLA}-nspr = ${PORTVERSION}|nspr|' \
@@ -394,7 +394,7 @@ gecko-do-install:
 	cd ${FAKEDIR}/${dir} && ${FIND} . | \
 		${CPIO} -pdm -L -R ${LIBOWN}:${LIBGRP} ${PREFIX}/${dir}
 .endfor
-.for pcfile in ${PKGCONFIG_FILES}
+.for pcfile in ${MOZ_PKGCONFIG_FILES}
 	${INSTALL_DATA} ${FAKEDIR}/libdata/pkgconfig/${pcfile}.pc \
 		${PREFIX}/libdata/pkgconfig/${pcfile}.pc
 .endfor
