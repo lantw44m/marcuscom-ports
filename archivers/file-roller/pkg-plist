@@ -10,6 +10,13 @@ libexec/file-roller/move-here.sh
 %%PORTDOCS%%%%DOCSDIR%%/TODO
 share/gnome/applications/file-roller.desktop
 share/gnome/file-roller/glade/file-roller.glade
+share/gnome/file-roller/icons/hicolor/16x16/actions/add-files-to-archive.png
+share/gnome/file-roller/icons/hicolor/16x16/actions/add-folder-to-archive.png
+share/gnome/file-roller/icons/hicolor/16x16/actions/extract-archive.png
+share/gnome/file-roller/icons/hicolor/24x24/actions/add-files-to-archive.png
+share/gnome/file-roller/icons/hicolor/24x24/actions/add-folder-to-archive.png
+share/gnome/file-roller/icons/hicolor/24x24/actions/extract-archive.png
+share/gnome/file-roller/icons/hicolor/24x24/actions/preview-file.png
 share/gnome/help/file-roller/C/figures/file-roller_home.png
 share/gnome/help/file-roller/C/figures/file-roller_leftarrow.png
 share/gnome/help/file-roller/C/figures/file-roller_main_window.png
@@ -116,14 +123,10 @@ share/gnome/omf/file-roller/file-roller-uk.omf
 share/gnome/omf/file-roller/file-roller-zh_CN.omf
 share/gnome/omf/file-roller/file-roller-zh_HK.omf
 share/gnome/omf/file-roller/file-roller-zh_TW.omf
-share/icons/hicolor/16x16/actions/add-files-to-archive.png
-share/icons/hicolor/16x16/actions/add-folder-to-archive.png
-share/icons/hicolor/16x16/actions/extract-archive.png
-share/icons/hicolor/24x24/actions/add-files-to-archive.png
-share/icons/hicolor/24x24/actions/add-folder-to-archive.png
-share/icons/hicolor/24x24/actions/extract-archive.png
-share/icons/hicolor/24x24/actions/preview-file.png
-share/icons/hicolor/48x48/actions/file-roller.png
+share/icons/hicolor/16x16/apps/file-roller.png
+share/icons/hicolor/22x22/apps/file-roller.png
+share/icons/hicolor/32x32/apps/file-roller.png
+share/icons/hicolor/scalable/apps/file-roller.svg
 share/locale/am/LC_MESSAGES/file-roller.mo
 share/locale/ar/LC_MESSAGES/file-roller.mo
 share/locale/az/LC_MESSAGES/file-roller.mo
@@ -234,69 +237,15 @@ share/locale/zh_TW/LC_MESSAGES/file-roller.mo
 @dirrm share/gnome/help/file-roller/C/figures
 @dirrm share/gnome/help/file-roller/C
 @dirrm share/gnome/help/file-roller
+@dirrm share/gnome/file-roller/icons/hicolor/24x24/actions
+@dirrm share/gnome/file-roller/icons/hicolor/24x24
+@dirrm share/gnome/file-roller/icons/hicolor/16x16/actions
+@dirrm share/gnome/file-roller/icons/hicolor/16x16
+@dirrm share/gnome/file-roller/icons/hicolor
+@dirrm share/gnome/file-roller/icons
 @dirrm share/gnome/file-roller/glade
 @dirrm share/gnome/file-roller
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrm libexec/file-roller
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@dirrmtry share/locale/zh_TW/LC_MESSAGES
-@dirrmtry share/locale/zh_TW
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/zh_CN/LC_MESSAGES
-@dirrmtry share/locale/zh_CN
-@dirrmtry share/locale/xh/LC_MESSAGES
-@dirrmtry share/locale/xh
-@dirrmtry share/locale/uk/LC_MESSAGES
-@dirrmtry share/locale/uk
-@dirrmtry share/locale/tk/LC_MESSAGES
-@dirrmtry share/locale/tk
-@dirrmtry share/locale/te/LC_MESSAGES
-@dirrmtry share/locale/te
-@dirrmtry share/locale/sr@ije/LC_MESSAGES
-@dirrmtry share/locale/sr@ije
-@dirrmtry share/locale/sr/LC_MESSAGES
-@dirrmtry share/locale/sr
-@dirrmtry share/locale/sl/LC_MESSAGES
-@dirrmtry share/locale/sl
-@dirrmtry share/locale/sk/LC_MESSAGES
-@dirrmtry share/locale/sk
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
-@dirrmtry share/locale/ro/LC_MESSAGES
-@dirrmtry share/locale/ro
-@dirrmtry share/locale/pt/LC_MESSAGES
-@dirrmtry share/locale/pt
-@dirrmtry share/locale/pl/LC_MESSAGES
-@dirrmtry share/locale/pl
-@dirrmtry share/locale/nn/LC_MESSAGES
-@dirrmtry share/locale/nn
-@dirrmtry share/locale/ne/LC_MESSAGES
-@dirrmtry share/locale/ne
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
-@dirrmtry share/locale/mg/LC_MESSAGES
-@dirrmtry share/locale/mg
-@dirrmtry share/locale/ku/LC_MESSAGES
-@dirrmtry share/locale/ku
-@dirrmtry share/locale/ko/LC_MESSAGES
-@dirrmtry share/locale/ko
-@dirrmtry share/locale/hy/LC_MESSAGES
-@dirrmtry share/locale/hy
-@dirrmtry share/locale/gl/LC_MESSAGES
-@dirrmtry share/locale/gl
-@dirrmtry share/locale/fi/LC_MESSAGES
-@dirrmtry share/locale/fi
-@dirrmtry share/locale/el/LC_MESSAGES
-@dirrmtry share/locale/el
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
-@dirrmtry share/locale/cs/LC_MESSAGES
-@dirrmtry share/locale/cs
-@dirrmtry share/locale/ca/LC_MESSAGES
-@dirrmtry share/locale/ca
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
-@dirrmtry share/locale/be/LC_MESSAGES
-@dirrmtry share/locale/be

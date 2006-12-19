@@ -3,11 +3,11 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller/Makefile,v 1.109 2006/11/19 01:10:32 marcus Exp $
+#   $MCom: ports/archivers/file-roller/Makefile,v 1.110 2006/12/05 03:21:05 ahze Exp $
 #
 
 PORTNAME=	file-roller
-PORTVERSION=	2.17.3
+PORTVERSION=	2.17.4
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -24,7 +24,7 @@ RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USE_GETTEXT=	${PORTNAME}
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_XLIB=	yes
