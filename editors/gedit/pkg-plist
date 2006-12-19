@@ -188,6 +188,7 @@ share/gnome/gedit-2/plugins/filebrowser/gedit-file-browser-widget-ui.xml
 share/gnome/gedit-2/taglist/HTML.tags
 share/gnome/gedit-2/taglist/Latex.tags
 share/gnome/gedit-2/taglist/XSLT.tags
+share/gnome/gedit-2/taglist/XUL.tags
 share/gnome/gedit-2/ui/gedit-ui.xml
 share/gnome/help/gedit/C/figures/gedit_format_bold.png
 share/gnome/help/gedit/C/figures/gedit_format_italic.png
