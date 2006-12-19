@@ -1,5 +1,6 @@
 share/gnome/themes/Clearlooks/metacity-1/metacity-theme-1.xml
 share/gnome/themes/Glider/metacity-1/metacity-theme-1.xml
+share/gnome/themes/Glossy/metacity-1/metacity-theme-1.xml
 share/gnome/themes/Mist/metacity-1/metacity-theme-1.xml
 share/icons/Crux/16x16/actions/back.png
 share/icons/Crux/16x16/actions/bottom.png
@@ -347,6 +348,7 @@ share/icons/HighContrast-SVG/scalable/actions/application-exit.svg
 share/icons/HighContrast-SVG/scalable/actions/appointment-new.svg
 share/icons/HighContrast-SVG/scalable/actions/appointment.svg
 share/icons/HighContrast-SVG/scalable/actions/back.svg
+share/icons/HighContrast-SVG/scalable/actions/bookmark-view.svg
 share/icons/HighContrast-SVG/scalable/actions/bottom.svg
 share/icons/HighContrast-SVG/scalable/actions/button_cancel.svg
 share/icons/HighContrast-SVG/scalable/actions/cancel.svg
@@ -498,6 +500,7 @@ share/icons/HighContrast-SVG/scalable/actions/gtk-zoom-out.svg
 share/icons/HighContrast-SVG/scalable/actions/help-about.svg
 share/icons/HighContrast-SVG/scalable/actions/help-contents.svg
 share/icons/HighContrast-SVG/scalable/actions/help-faq.svg
+share/icons/HighContrast-SVG/scalable/actions/history-view.svg
 share/icons/HighContrast-SVG/scalable/actions/insert-image.svg
 share/icons/HighContrast-SVG/scalable/actions/insert-link.svg
 share/icons/HighContrast-SVG/scalable/actions/insert-object.svg
@@ -2335,6 +2338,7 @@ share/themes/Clearlooks/index.theme
 share/themes/Crux/index.theme
 share/themes/Glider/gtk-2.0/gtkrc
 share/themes/Glider/index.theme
+share/themes/Glossy/gtk-2.0/gtkrc
 share/themes/HighContrast/gtk-2.0/gtkrc
 share/themes/HighContrast/index.theme
 share/themes/HighContrastInverse/gtk-2.0/gtkrc
