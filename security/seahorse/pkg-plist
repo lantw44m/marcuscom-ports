@@ -1,4 +1,5 @@
 bin/seahorse
+bin/seahorse-agent
 bin/seahorse-daemon
 bin/seahorse-preferences
 bin/seahorse-tool
@@ -48,6 +49,7 @@ share/gnome/help/seahorse/C/figures/key-properties.png
 share/gnome/help/seahorse/C/figures/passphrase.png
 share/gnome/help/seahorse/C/figures/preferences.png
 share/gnome/help/seahorse/C/figures/recipients.png
+share/gnome/help/seahorse/C/figures/seahorse-window.png
 share/gnome/help/seahorse/C/figures/signature.png
 share/gnome/help/seahorse/C/figures/text-editor.png
 share/gnome/help/seahorse/C/legal.xml
@@ -61,6 +63,7 @@ share/gnome/help/seahorse/it/figures/key-properties.png
 share/gnome/help/seahorse/it/figures/passphrase.png
 share/gnome/help/seahorse/it/figures/preferences.png
 share/gnome/help/seahorse/it/figures/recipients.png
+share/gnome/help/seahorse/it/figures/seahorse-window.png
 share/gnome/help/seahorse/it/figures/signature.png
 share/gnome/help/seahorse/it/figures/text-editor.png
 share/gnome/help/seahorse/it/seahorse.xml
@@ -73,6 +76,7 @@ share/gnome/help/seahorse/sv/figures/key-properties.png
 share/gnome/help/seahorse/sv/figures/passphrase.png
 share/gnome/help/seahorse/sv/figures/preferences.png
 share/gnome/help/seahorse/sv/figures/recipients.png
+share/gnome/help/seahorse/sv/figures/seahorse-window.png
 share/gnome/help/seahorse/sv/figures/signature.png
 share/gnome/help/seahorse/sv/figures/text-editor.png
 share/gnome/help/seahorse/sv/seahorse.xml

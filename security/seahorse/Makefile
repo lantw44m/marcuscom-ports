@@ -3,11 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.20 2006/12/04 05:43:57 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.21 2006/12/06 00:54:45 ahze Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	0.9.8
+PORTVERSION=	0.9.9
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -31,13 +31,12 @@ USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-CONFIGURE_ARGS=	--with-gecko=${GECKO} \
-		--mandir=${PREFIX}/man
+CONFIGURE_ARGS=	--with-gecko=${GECKO}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	seahorse.schemas
-MAN1=		seahorse-daemon.1 seahorse-tool.1
+MAN1=		seahorse-agent.1 seahorse-daemon.1 seahorse-tool.1
 
 OPTIONS=	NAUTILUS "Enable the Nautilus component" on \
 		LDAP "Enable LDAP support" on \
