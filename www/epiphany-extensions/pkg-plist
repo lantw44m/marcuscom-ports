@@ -63,6 +63,7 @@ lib/epiphany/%%VERSION%%/extensions/tab-states.ephy-extension
 share/gnome/epiphany-extensions/ephy-gestures.xml
 share/gnome/epiphany-extensions/glade/action-properties.glade
 share/gnome/epiphany-extensions/glade/actions-editor.glade
+%%ADBLOCK%%share/gnome/epiphany-extensions/glade/adblock.glade
 share/gnome/epiphany-extensions/glade/error-viewer.glade
 share/gnome/epiphany-extensions/glade/extensions-manager-ui.glade
 share/gnome/epiphany-extensions/glade/page-info.glade

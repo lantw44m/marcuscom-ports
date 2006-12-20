@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.82 2006/11/25 23:52:23 marcus Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.83 2006/12/02 02:47:27 marcus Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.17.0
+PORTVERSION=	2.17.4
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -32,6 +32,8 @@ USE_GMAKE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--with-mozilla=${GECKO}
+
+GCONF_SCHEMAS=	smart-bookmarks.schemas
 
 EPHY_EXTENSIONS=all
 EPHY_VERSION=	2.17
