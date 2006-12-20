@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.38 2006/12/09 17:29:59 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.39 2006/12/19 11:30:14 ahze Exp $
 
 # This file contains some reusable components for mozilla ports. It's of
 # use primarily to apps from the mozilla project itself (such as Firefox,
@@ -114,7 +114,7 @@ MOZ_PKGCONFIG_FILES?=	${MOZILLA}-gtkmozembed ${MOZILLA}-js \
 
 CPPFLAGS+=		-I${X11BASE}/include
 CFLAGS+=		${PTHREAD_CFLAGS}
-LDFLAGS+=		-L${X11BASE}/lib -Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}
+LDFLAGS+=		-L${X11BASE}/lib -L${LOCALBASE}/lib/nss -Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}
 LIBS+=			${PTHREAD_LIBS} -L${LOCALBASE}/lib -liconv
 
 _USE_GECKO_OPTIONS_ALL=	java debug logging optimized_cflags
