@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/mail/thunderbird/Makefile,v 1.20 2006/12/13 14:25:23 ahze Exp $
+#    $MCom: ports/mail/thunderbird/Makefile,v 1.21 2006/12/20 23:46:13 ahze Exp $
 #
 
 PORTNAME=	thunderbird
@@ -42,6 +42,8 @@ MOZ_PIS_SCRIPTS=moz_pis_S50cleanhome
 OPTIONS=
 
 .include <bsd.port.pre.mk>
+
+GECKO_PTHREAD_LIBS!=${CC} -dumpspecs | ${GREP} pthread | ${SED} -e 's|^.*%{\!pg: %{pthread:|| ; s|}.*$$||' || ${TRUE}
 
 .if (${ARCH}=="sparc64" && ${OSVERSION} < 601101)
 IGNORE=	core dumps on ${ARCH}, kern.osreldate>=601101 needed
