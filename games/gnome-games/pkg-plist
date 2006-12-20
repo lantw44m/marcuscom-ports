@@ -4,12 +4,12 @@ bin/glines
 bin/gnect
 bin/gnibbles
 bin/gnobots2
+bin/gnome-gnuchess
 bin/gnome-sudoku
 bin/gnometris
 bin/gnomine
 bin/gnotravex
 bin/gnotski
-bin/gnuchess
 bin/gtali
 bin/iagno
 bin/mahjongg
@@ -209,7 +209,6 @@ share/gnome/ggz/gnome-games/ggz_gtk_lag3.svg
 share/gnome/ggz/gnome-games/ggz_gtk_lag4.svg
 share/gnome/ggz/gnome-games/ggz_gtk_lag5.svg
 share/gnome/ggz/gnome-games/ggz_gtk_registered.svg
-share/gnome/glchess/about.glade
 share/gnome/glchess/ai.glade
 share/gnome/glchess/ai.xml
 share/gnome/glchess/chess_view.glade
@@ -294,6 +293,8 @@ share/gnome/glchess/save_game.glade
 @unexec [ -s %D/share/gnome/games/gnotski.7.scores ] || rm -f %D/share/gnome/games/gnotski.7.scores
 @unexec [ -s %D/share/gnome/games/gnotski.8.scores ] || rm -f %D/share/gnome/games/gnotski.8.scores
 @unexec [ -s %D/share/gnome/games/gnotski.9.scores ] || rm -f %D/share/gnome/games/gnotski.9.scores
+@unexec [ -s %D/share/gnome/games/gtali.Colors.scores ] || rm -f %D/share/gnome/games/gtali.Colors.scores
+@unexec [ -s %D/share/gnome/games/gtali.Regular.scores ] || rm -f %D/share/gnome/games/gtali.Regular.scores
 @unexec [ -s %D/share/gnome/games/gtali.scores ] || rm -f %D/share/gnome/games/gtali.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.bridges.scores ] || rm -f %D/share/gnome/games/mahjongg.bridges.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.cloud.scores ] || rm -f %D/share/gnome/games/mahjongg.cloud.scores
@@ -709,6 +710,13 @@ share/gnome/pixmaps/gtali/gnome-dice-4.svg
 share/gnome/pixmaps/gtali/gnome-dice-5.svg
 share/gnome/pixmaps/gtali/gnome-dice-6.svg
 share/gnome/pixmaps/gtali/gnome-dice-none.svg
+share/gnome/pixmaps/gtali/kismet-none.svg
+share/gnome/pixmaps/gtali/kismet1.svg
+share/gnome/pixmaps/gtali/kismet2.svg
+share/gnome/pixmaps/gtali/kismet3.svg
+share/gnome/pixmaps/gtali/kismet4.svg
+share/gnome/pixmaps/gtali/kismet5.svg
+share/gnome/pixmaps/gtali/kismet6.svg
 share/gnome/pixmaps/iagno/classic.png
 share/gnome/pixmaps/iagno/woodtrim.png
 share/gnome/pixmaps/mahjongg/postmodern.svg

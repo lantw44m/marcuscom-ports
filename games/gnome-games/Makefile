@@ -3,19 +3,18 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.127 2006/12/11 02:12:01 marcus Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.128 2006/12/15 21:33:34 marcus Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	2.17.3
-PORTREVISION=	2
+PORTVERSION=	2.17.4.1
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	The game applications package for the Gnome 2 Desktop Environment
+COMMENT=	The game applications package for the GNOME 2 Desktop Environment
 
 LIB_DEPENDS=	guile.15:${PORTSDIR}/lang/guile
 
