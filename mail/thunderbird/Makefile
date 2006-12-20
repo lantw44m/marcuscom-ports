@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/mail/thunderbird/Makefile,v 1.18 2006/10/12 09:06:46 ahze Exp $
+#    $MCom: ports/mail/thunderbird/Makefile,v 1.20 2006/12/13 14:25:23 ahze Exp $
 #
 
 PORTNAME=	thunderbird
@@ -42,11 +42,6 @@ MOZ_PIS_SCRIPTS=moz_pis_S50cleanhome
 OPTIONS=
 
 .include <bsd.port.pre.mk>
-.include "${PORTSDIR}/www/mozilla/Makefile.common"
-
-.if ( ${ARCH} == "alpha" && ${OSVERSION} < 500035 )
-IGNORE=	core dumps at runtime
-.endif # ( ${ARCH} == "alpha" && ${OSVERSION} < 500035 )
 
 .if (${ARCH}=="sparc64" && ${OSVERSION} < 601101)
 IGNORE=	core dumps on ${ARCH}, kern.osreldate>=601101 needed
@@ -73,22 +68,14 @@ post-patch:
 		${WRKSRC}/intl/uconv/native/nsNativeUConvService.cpp \
 		${WRKSRC}/xpcom/io/nsNativeCharsetUtils.cpp
 
-pre-install:
+port-pre-install:
 	${MKDIR} ${FAKEDIR}/lib/${PORTNAME}/defaults
 	${CP} -RL ${WRKSRC}/dist/bin/defaults/isp \
 		${FAKEDIR}/lib/${PORTNAME}/defaults
-	@cd ${FAKEDIR}/lib/${PORTNAME}/defaults/isp && \
-		${FIND} -s * -type f -o -type l | \
-		${SED} -e 's|^|lib/${PORTNAME}/defaults/isp/|' >> ${PLIST} && \
-		${FIND} -d * -type d | \
-		${SED} -e 's|^|@dirrm lib/${PORTNAME}/defaults/isp/|' \
-		>> ${PLIST}
-	@${ECHO_CMD} "@unexec ${RMDIR} %D/lib/${PORTNAME}/defaults/isp 2>/dev/null || ${TRUE}" >> ${PLIST}
-	@${ECHO_CMD} "@unexec ${RMDIR} %D/lib/${PORTNAME}/defaults 2>/dev/null || ${TRUE}" >> ${PLIST}
-	@${ECHO_CMD} "@unexec ${RMDIR} %D/lib/${PORTNAME}/ 2>/dev/null || ${TRUE}" >> ${PLIST}
+
+pre-install:
 	@${ECHO_CMD} 'share/applications/${PORTNAME}.desktop' >> ${PLIST}
-	@${ECHO_CMD} "@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}" >> ${PLIST}
-	@${ECHO_CMD} '${PORTNAME_ICON:S|${PREFIX}/||}' >> ${PLIST}
+	@${ECHO_CMD} '@dirrmtry share/applications' >> ${PLIST}
 
 post-install:
 	${MKDIR} ${PREFIX}/share/applications
@@ -96,4 +83,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/other-licenses/branding/${PORTNAME}/default.xpm \
 		${PORTNAME_ICON}
 
+.include "${PORTSDIR}/www/mozilla/Makefile.common"
 .include <bsd.port.post.mk>
