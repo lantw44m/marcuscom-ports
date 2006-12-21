@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/mail/thunderbird/Makefile,v 1.21 2006/12/20 23:46:13 ahze Exp $
+#    $MCom: ports/mail/thunderbird/Makefile,v 1.22 2006/12/20 23:51:48 ahze Exp $
 #
 
 PORTNAME=	thunderbird
 DISTVERSION=	2.0b1
-CATEGORIES=	mail
+CATEGORIES=	mail ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA_EXTENDED}
 MASTER_SITE_SUBDIR=	thunderbird/releases/${DISTVERSION}/source
 DISTNAME=	${PORTNAME}-${DISTVERSION}-source
