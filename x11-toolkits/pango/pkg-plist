@@ -8,6 +8,7 @@ include/pango-1.0/pango/pango-context.h
 include/pango-1.0/pango/pango-coverage.h
 include/pango-1.0/pango/pango-engine.h
 include/pango-1.0/pango/pango-enum-types.h
+include/pango-1.0/pango/pango-features.h
 include/pango-1.0/pango/pango-font.h
 include/pango-1.0/pango/pango-fontmap.h
 include/pango-1.0/pango/pango-fontset.h
