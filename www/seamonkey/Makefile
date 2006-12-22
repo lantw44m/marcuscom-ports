@@ -3,13 +3,13 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports/www/seamonkey/Makefile,v 1.43 2006/11/27 17:10:29 marcus Exp $
+#    $MCom: ports/www/seamonkey/Makefile,v 1.44 2006/12/15 22:20:32 ahze Exp $
 #
 
 PORTNAME=	seamonkey
 DISTVERSION=	1.1b
 PORTREVISION=	1
-CATEGORIES?=	www
+CATEGORIES?=	www ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA_EXTENDED}
 MASTER_SITE_SUBDIR=	seamonkey/releases/${DISTVERSION}
 DISTNAME=	${PORTNAME}-${DISTVERSION}.source
