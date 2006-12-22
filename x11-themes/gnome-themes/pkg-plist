@@ -2924,6 +2924,8 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrm share/themes/HighContrastInverse
 @dirrm share/themes/HighContrast/gtk-2.0
 @dirrm share/themes/HighContrast
+@dirrm share/themes/Glossy/gtk-2.0
+@dirrm share/themes/Glossy
 @dirrm share/themes/Glider/gtk-2.0
 @dirrm share/themes/Glider
 @dirrm share/themes/Crux
@@ -3078,6 +3080,8 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrmtry share/icons
 @dirrm share/gnome/themes/Mist/metacity-1
 @dirrm share/gnome/themes/Mist
+@dirrm share/gnome/themes/Glossy/metacity-1
+@dirrm share/gnome/themes/Glossy
 @dirrm share/gnome/themes/Glider/metacity-1
 @dirrm share/gnome/themes/Glider
 @dirrm share/gnome/themes/Clearlooks/metacity-1
