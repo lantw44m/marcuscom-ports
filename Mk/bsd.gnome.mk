@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.407 2006/12/06 06:03:24 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.408 2006/12/10 19:36:24 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -67,8 +67,9 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver \
 		orbit2 pango pygnome2 pygnomeextras pygtk2 vte pygnomedesktop \
 		libgnomekbd
 
+GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
-gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
+gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "${GNOME_MAKEFILEIN}*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 				's|[(]GNOME_datadir[)]/gnome/|(datadir)/|g ; \
 				 s|[(]GNOME_datadir[)]/locale|(prefix)/share/locale|g ; \
 				 s|[(]datadir[)]/locale|(prefix)/share/locale|g ; \
