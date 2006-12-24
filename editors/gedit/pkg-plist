@@ -116,10 +116,10 @@ lib/gedit-2/plugins/spell.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole/console.pyo
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
-share/gnome/gedit-2/plugins/tools/build
-share/gnome/gedit-2/plugins/tools/open-terminal-here
-share/gnome/gedit-2/plugins/tools/remove-trailing-spaces
-share/gnome/gedit-2/plugins/tools/run-command
+%%PYTHON%%share/gnome/gedit-2/plugins/tools/build
+%%PYTHON%%share/gnome/gedit-2/plugins/tools/open-terminal-here
+%%PYTHON%%share/gnome/gedit-2/plugins/tools/remove-trailing-spaces
+%%PYTHON%%share/gnome/gedit-2/plugins/tools/run-command
 libdata/pkgconfig/gedit-%%VERSION%%.pc
 %%DOCSDIR%%/GeditApp.html
 %%DOCSDIR%%/GeditDocument.html
@@ -428,7 +428,7 @@ share/locale/zh_TW/LC_MESSAGES/gedit.mo
 @dirrm share/gnome/gedit-2/taglist
 @dirrm share/gnome/gedit-2/logo
 @dirrm share/gnome/gedit-2/icons
-@dirrm share/gnome/gedit-2/plugins/tools
+%%PYTHON%%@dirrm share/gnome/gedit-2/plugins/tools
 %%PYTHON%%@dirrm share/gnome/gedit-2/plugins/snippets
 @dirrm share/gnome/gedit-2/plugins/filebrowser
 @dirrm share/gnome/gedit-2/plugins
