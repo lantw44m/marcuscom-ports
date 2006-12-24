@@ -3,7 +3,7 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.117 2006/10/02 22:48:27 ahze Exp $
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.119 2006/12/18 14:06:37 ahze Exp $
 #
 
 PORTNAME=	nautilus
@@ -36,14 +36,14 @@ CONFIGURE_ARGS=	--with-freetype2-lib-place=${LOCALBASE}/lib \
 		--enable-static
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
-OPTIONS=	TRACKER "Enable Tracker Plugin" On
+OPTIONS=	TRACKER "Enable Tracker Search (sysutils/tracker)" On
 
 GCONF_SCHEMAS=	apps_nautilus_preferences.schemas
 
 .include <bsd.port.pre.mk>
 
 .if !defined(WITHOUT_TRACKER)
-LIB_DEPENDS+=	tracker.0:${PORTSDIR}/sysutils/tracker
+LIB_DEPENDS+=	trackerclient.0:${PORTSDIR}/sysutils/tracker
 .else
 CONFIGURE_ARGS+=--disable-tracker
 .endif
