@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/graphics/py-gimp/Makefile,v 1.1 2007/01/01 20:37:37 ahze Exp $
 
 PORTREVISION=	0
 PORTEPOCH=	0
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	# empty
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GIMP python plugin

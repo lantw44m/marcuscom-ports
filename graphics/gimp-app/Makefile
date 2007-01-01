@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD: ports/graphics/gimp-devel/Makefile,v 1.161 2006/11/04 22:31:00 mezz Exp $
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.4 2007/01/01 20:37:36 ahze Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.5 2007/01/01 21:26:51 ahze Exp $
 #
 
 PORTNAME=	gimp
@@ -18,7 +18,7 @@ MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
 		http://www.mirrorservice.org/sites/ftp.gimp.org/pub/%SUBDIR%/ \
 		${MASTER_SITE_RINGSERVER:S,%SUBDIR%,graphics/%SUBDIR%,}
 MASTER_SITE_SUBDIR=	gimp/v${PORTVERSION:R}
-PKGNAMESUFFIX=	-app
+PKGNAMESUFFIX?=	-app
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNU Image Manipulation Program development version
