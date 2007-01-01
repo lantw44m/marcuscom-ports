@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD: ports/graphics/gimp-devel/Makefile,v 1.161 2006/11/04 22:31:00 mezz Exp $
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.24 2006/10/13 23:42:43 marcus Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.4 2007/01/01 20:37:36 ahze Exp $
 #
 
 PORTNAME=	gimp
@@ -100,7 +100,7 @@ CONFIGURE_ARGS+=	--disable-mp
 
 .if ${HAVE_GNOME:Mgnomehier}!="" || defined(WITH_GNOME)
 USE_GNOME+=		desktopfileutils gnomehier
-PLIST_SUB+=		GNOME:=""
+PLIST_SUB+=		GNOME=""
 .else
 PLIST_SUB+=		GNOME="@comment "
 .endif
