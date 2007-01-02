@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/libgtop/Makefile,v 1.71 2006/12/03 19:52:29 marcus Exp $
-#   $MCom: ports/devel/libgtop/Makefile,v 1.7 2006/12/24 06:09:32 marcus Exp $
+#   $MCom: ports/devel/libgtop/Makefile,v 1.8 2007/01/01 21:53:26 marcus Exp $
 
 PORTNAME=	libgtop
 PORTVERSION=	2.14.5.${SNAPVERSION}
@@ -32,7 +32,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 INFO=		libgtop2
 
-SNAPVERSION=	20070101
+SNAPVERSION=	20070102
 
 .include <bsd.port.pre.mk>
 
