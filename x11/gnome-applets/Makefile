@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.145 2006/12/06 12:47:37 ahze Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.146 2006/12/06 12:49:54 ahze Exp $
 #
 
 PORTNAME=	gnome-applets
-PORTVERSION=	2.16.2
-PORTREVISION=	1
+PORTVERSION=	2.17.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -34,7 +33,7 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
-		gail gnomedocutils
+		gail gnomedocutils libgnomekbd
 WANT_GNOME=	yes
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes

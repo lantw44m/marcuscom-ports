@@ -1,13 +1,6 @@
 %%CPUFREQ%%bin/cpufreq-selector
-bin/gswitchit-plugins-capplet
 %%PYTHON%%bin/invest-chart
 %%BATTERY%%etc/sound/events/battstat_applet.soundlist
-include/libgswitchit/gnome-kbd-indicator.h
-include/libgswitchit/gswitchit-config.h
-include/libgswitchit/gswitchit-plugin.h
-include/libgswitchit/gswitchit-plugins-app.h
-include/libgswitchit/keyboard-config-registry-client.h
-include/libgswitchit/keyboard-config-registry.h
 include/libgweather/gweather-gconf.h
 include/libgweather/gweather-prefs.h
 include/libgweather/weather.h
@@ -59,7 +52,6 @@ libdata/bonobo/servers/GNOME_Panel_TrashApplet.server
 libdata/bonobo/servers/GNOME_Panel_WirelessApplet.server
 libdata/bonobo/servers/GNOME_StickyNotesApplet.server
 %%PYTHON%%libdata/bonobo/servers/Invest_Applet.server
-libdata/pkgconfig/gswitchit.pc
 libdata/pkgconfig/gweather.pc
 libexec/accessx-status-applet
 %%BATTERY%%libexec/battstat-applet-2
@@ -78,7 +70,6 @@ libexec/multiload-applet-2
 libexec/null_applet
 libexec/stickynotes_applet
 libexec/trashapplet
-share/gnome/applications/gswitchit-plugins.desktop
 %%PYTHON%%share/gnome/applications/invest-chart.desktop
 share/gnome/gnome-2.0/ui/GNOME_AccessxApplet.xml
 %%BATTERY%%share/gnome/gnome-2.0/ui/GNOME_BattstatApplet.xml
@@ -116,7 +107,6 @@ share/gnome/gnome-applets/geyes/Tango/tango-pupil.png
 %%BATTERY%%share/gnome/gnome-applets/glade/battstat_applet.glade
 %%CPUFREQ%%share/gnome/gnome-applets/glade/cpufreq-preferences.glade
 %%PYTHON%%share/gnome/gnome-applets/glade/financialchart.glade
-share/gnome/gnome-applets/glade/gswitchit-plugins.glade
 share/gnome/gnome-applets/glade/gswitchit.glade
 %%COMMANDER%%share/gnome/gnome-applets/glade/mini-commander.glade
 share/gnome/gnome-applets/glade/modemlights.glade
@@ -1209,7 +1199,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/gnome-applets
 %%PYTHON%%@dirrm %%PYTHON_SITELIBDIR%%/invest
 @dirrm include/libgweather
-@dirrm include/libgswitchit
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
