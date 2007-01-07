@@ -3,11 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD: ports/graphics/gimp-devel/Makefile,v 1.161 2006/11/04 22:31:00 mezz Exp $
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.5 2007/01/01 21:26:51 ahze Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.6 2007/01/01 22:40:46 ahze Exp $
 #
 
 PORTNAME=	gimp
 PORTVERSION=	2.3.13
+PORTREVISION=	1
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -30,7 +31,8 @@ LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
 		mng.1:${PORTSDIR}/graphics/libmng \
 		png.5:${PORTSDIR}/graphics/png \
 		jpeg.9:${PORTSDIR}/graphics/jpeg \
-		tiff.4:${PORTSDIR}/graphics/tiff
+		tiff.4:${PORTSDIR}/graphics/tiff \
+		lcms.1:${PORTSDIR}/graphics/lcms
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
@@ -48,7 +50,7 @@ CONFIGURE_ARGS?=--disable-perl \
 		--disable-gtk-doc \
 		--without-print \
 		--disable-python \
-		--with-desktop-dir=${LOCALBASE}/share
+		--with-desktop-dir=${PREFIX}/share
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
 		GIMP_THREAD_LIBS=${PTHREAD_LIBS}
