@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.44 2006/11/08 00:35:08 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.45 2006/11/20 16:25:54 ahze Exp $
 #
 
 PORTNAME=	deskbar-applet
-PORTVERSION=	2.17.2
+PORTVERSION=	2.17.5
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -15,6 +15,9 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Omnipresent versatile search interface
+
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/elementtree/__init__.py:${PORTSDIR}/devel/py-elementtree
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/elementtree/__init__.py:${PORTSDIR}/devel/py-elementtree
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
@@ -24,6 +27,7 @@ USE_PYTHON=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
+INSTALLS_OMF=	yes
 CONFIGURE_ARGS=	--disable-beagle
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
