@@ -216,7 +216,6 @@ share/gnome/glchess/error_dialog.glade
 share/gnome/glchess/glchess.glade
 share/gnome/glchess/glchess.svg
 share/gnome/glchess/load_game.glade
-share/gnome/glchess/network_game.glade
 share/gnome/glchess/new_game.glade
 share/gnome/glchess/save_game.glade
 @unexec [ -s %D/share/gnome/games/glines.scores ] || rm -f %D/share/gnome/games/glines.scores
@@ -608,6 +607,7 @@ share/gnome/help/same-gnome/C/figures/play.png
 share/gnome/help/same-gnome/C/figures/start-up.png
 share/gnome/help/same-gnome/C/legal.xml
 share/gnome/help/same-gnome/C/same-gnome.xml
+share/gnome/omf/glchess/glchess-C.omf
 share/gnome/omf/gnome-games/aisleriot-C.omf
 share/gnome/omf/gnome-games/aisleriot-fr.omf
 share/gnome/omf/gnome-games/blackjack-C.omf
@@ -702,6 +702,7 @@ share/gnome/pixmaps/gnomine/flag-question.svg
 share/gnome/pixmaps/gnomine/flag.svg
 share/gnome/pixmaps/gnomine/mine.svg
 share/gnome/pixmaps/gnomine/warning.svg
+share/gnome/pixmaps/gnotravex/baize.png
 share/gnome/pixmaps/gnotski.svg
 share/gnome/pixmaps/gtali/gnome-dice-1.svg
 share/gnome/pixmaps/gtali/gnome-dice-2.svg
@@ -786,8 +787,6 @@ share/gnome/sol-games/seahaven.scm
 share/gnome/sol-games/sir_tommy.scm
 share/gnome/sol-games/sol.scm
 share/gnome/sol-games/spider.scm
-share/gnome/sol-games/spider_one_suit.scm
-share/gnome/sol-games/spider_two_suit.scm
 share/gnome/sol-games/spiderette.scm
 share/gnome/sol-games/straight_up.scm
 share/gnome/sol-games/streets_and_alleys.scm

@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.128 2006/12/15 21:33:34 marcus Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.129 2006/12/20 05:16:10 marcus Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	2.17.4.1
+PORTVERSION=	2.17.5
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -31,7 +31,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-GCONF_SCHEMAS=	aisleriot.schemas blackjack.schemas \
+GCONF_SCHEMAS=	aisleriot.schemas blackjack.schemas glchess.schemas \
 		glines.schemas gnect.schemas gnibbles.schemas \
 		gnobots2.schemas gnometris.schemas gnomine.schemas \
 		gnotravex.schemas gnotski.schemas gtali.schemas \
