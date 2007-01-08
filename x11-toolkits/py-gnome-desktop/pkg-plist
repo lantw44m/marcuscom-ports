@@ -1,3 +1,6 @@
+%%PYTHON_SITELIBDIR%%/gtk-2.0/bugbuddy.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/bugbuddy.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/bugbuddy.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/applet.py
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/applet.pyc
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gnome/applet.pyo
