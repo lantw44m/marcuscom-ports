@@ -26,9 +26,9 @@ libdata/pkgconfig/gnome-mag-1.0.pc
 %%DOCSDIR%%/reference/html/damage-client_8c.html
 %%DOCSDIR%%/reference/html/damage-client_8h-source.html
 %%DOCSDIR%%/reference/html/damage-client_8h.html
-%%DOCSDIR%%/reference/html/dir_c4b80d727510b73b2318616b2d300dfd.html
-%%DOCSDIR%%/reference/html/dir_d943cf6d3f8691d1362aa6ae86a5695a.html
 %%DOCSDIR%%/reference/html/dirs.html
+%%DOCSDIR%%/reference/html/dir_6ce4c1e52bbf80cf21bdbb5fdcbdf42a.html
+%%DOCSDIR%%/reference/html/dir_fd094d5d62adc5007452724a181ad0b2.html
 %%DOCSDIR%%/reference/html/doxygen.css
 %%DOCSDIR%%/reference/html/doxygen.png
 %%DOCSDIR%%/reference/html/files.html
