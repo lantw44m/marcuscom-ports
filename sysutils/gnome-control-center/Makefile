@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.124 2006/12/06 06:03:54 marcus Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.125 2006/12/07 17:06:44 marcus Exp $
 #
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	2.17.3
-PORTREVISION=	2
+PORTVERSION=	2.17.5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/control-center/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
