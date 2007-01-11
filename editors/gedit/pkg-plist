@@ -171,6 +171,7 @@ share/gnome/gedit-2/plugins/filebrowser/gedit-file-browser-widget-ui.xml
 %%PYTHON%%share/gnome/gedit-2/plugins/snippets/c++.xml
 %%PYTHON%%share/gnome/gedit-2/plugins/snippets/c.xml
 %%PYTHON%%share/gnome/gedit-2/plugins/snippets/css.xml
+%%PYTHON%%share/gnome/gedit-2/plugins/snippets/docbook.xml
 %%PYTHON%%share/gnome/gedit-2/plugins/snippets/global.xml
 %%PYTHON%%share/gnome/gedit-2/plugins/snippets/haskell.xml
 %%PYTHON%%share/gnome/gedit-2/plugins/snippets/html.xml
