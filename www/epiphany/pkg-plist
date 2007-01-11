@@ -89,10 +89,12 @@ share/gnome/epiphany/glade/print.glade
 share/gnome/epiphany/icons/hicolor/16x16/actions/bookmark-view.png
 share/gnome/epiphany/icons/hicolor/16x16/actions/download.png
 share/gnome/epiphany/icons/hicolor/16x16/actions/history-view.png
+share/gnome/epiphany/icons/hicolor/16x16/actions/location-entry.png
 share/gnome/epiphany/icons/hicolor/16x16/status/popup-hidden.png
 share/gnome/epiphany/icons/hicolor/22x22/actions/bookmark-view.png
 share/gnome/epiphany/icons/hicolor/22x22/actions/download.png
 share/gnome/epiphany/icons/hicolor/22x22/actions/history-view.png
+share/gnome/epiphany/icons/hicolor/22x22/actions/location-entry.png
 share/gnome/epiphany/icons/hicolor/22x22/status/popup-hidden.png
 share/gnome/epiphany/icons/hicolor/24x24/actions/bookmark-view.png
 share/gnome/epiphany/icons/hicolor/24x24/actions/download.png
@@ -102,10 +104,12 @@ share/gnome/epiphany/icons/hicolor/24x24/status/popup-hidden.png
 share/gnome/epiphany/icons/hicolor/32x32/actions/bookmark-view.png
 share/gnome/epiphany/icons/hicolor/32x32/actions/download.png
 share/gnome/epiphany/icons/hicolor/32x32/actions/history-view.png
+share/gnome/epiphany/icons/hicolor/32x32/actions/location-entry.png
 share/gnome/epiphany/icons/hicolor/32x32/status/popup-hidden.png
 share/gnome/epiphany/icons/hicolor/scalable/actions/bookmark-view.svg
 share/gnome/epiphany/icons/hicolor/scalable/actions/download.svg
 share/gnome/epiphany/icons/hicolor/scalable/actions/history-view.svg
+share/gnome/epiphany/icons/hicolor/scalable/actions/location-entry.svg
 share/gnome/epiphany/icons/hicolor/scalable/status/popup-hidden.svg
 share/gnome/epiphany/mime-types-permissions.xml
 share/gnome/help/epiphany/C/epiphany.xml
