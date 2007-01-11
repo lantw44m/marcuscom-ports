@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.58 2006/10/10 02:27:26 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.60 2006/12/18 23:17:25 marcus Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	0.7.0
+PORTVERSION=	0.7.1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -103,10 +103,8 @@ RUN_DEPENDS+=	unrar:${PORTSDIR}/archivers/unrar \
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lt1lib|-lt1 -lm| ; \
-		s|execinfo.h|#|g' \
-		${WRKSRC}/configure \
-		${WRKSRC}/dvi/mdvi-lib/Makefile.in
+	@${REINPLACE_CMD} -e 's|execinfo.h|#|g' \
+		${WRKSRC}/configure
 
 post-install:
 	@-update-desktop-database

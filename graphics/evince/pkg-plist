@@ -15,6 +15,8 @@ share/gnome/help/evince/C/figures/evince_start_window.png
 share/gnome/help/evince/C/legal.xml
 share/gnome/help/evince/bg/evince.xml
 share/gnome/help/evince/bg/figures/evince_start_window.png
+share/gnome/help/evince/ca/evince.xml
+share/gnome/help/evince/ca/figures/evince_start_window.png
 share/gnome/help/evince/el/evince.xml
 share/gnome/help/evince/el/figures/evince_start_window.png
 share/gnome/help/evince/es/evince.xml
@@ -37,6 +39,7 @@ share/gnome/help/evince/uk/evince.xml
 share/gnome/help/evince/uk/figures/evince_start_window.png
 share/gnome/omf/evince/evince-C.omf
 share/gnome/omf/evince/evince-bg.omf
+share/gnome/omf/evince/evince-ca.omf
 share/gnome/omf/evince/evince-el.omf
 share/gnome/omf/evince/evince-es.omf
 share/gnome/omf/evince/evince-fi.omf
@@ -52,6 +55,7 @@ share/icons/hicolor/22x22/apps/evince.png
 share/icons/hicolor/24x24/apps/evince.png
 share/icons/hicolor/48x48/apps/evince.png
 share/icons/hicolor/scalable/apps/evince.svg
+share/locale/ar/LC_MESSAGES/evince.mo
 share/locale/be/LC_MESSAGES/evince.mo
 share/locale/bg/LC_MESSAGES/evince.mo
 share/locale/bn/LC_MESSAGES/evince.mo
@@ -137,6 +141,8 @@ share/locale/zh_TW/LC_MESSAGES/evince.mo
 @dirrm share/gnome/help/evince/es
 @dirrm share/gnome/help/evince/el/figures
 @dirrm share/gnome/help/evince/el
+@dirrm share/gnome/help/evince/ca/figures
+@dirrm share/gnome/help/evince/ca
 @dirrm share/gnome/help/evince/bg/figures
 @dirrm share/gnome/help/evince/bg
 @dirrm share/gnome/help/evince/C/figures
