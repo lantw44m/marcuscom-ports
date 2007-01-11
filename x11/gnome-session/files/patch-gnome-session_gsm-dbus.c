@@ -1,5 +1,5 @@
---- gnome-session/gsm-dbus.c.orig	Thu Jan 11 12:59:48 2007
-+++ gnome-session/gsm-dbus.c	Thu Jan 11 13:00:47 2007
+--- gnome-session/gsm-dbus.c.orig	Mon Jan  8 17:32:28 2007
++++ gnome-session/gsm-dbus.c	Thu Jan 11 13:17:41 2007
 @@ -281,6 +281,7 @@ start_parent (int address_fd, int pid_fd
    int exitstat;
    unsigned long tmp_num;
@@ -8,7 +8,7 @@
  
    g_assert (child > 0);
  
-@@ -326,17 +327,18 @@ start_parent (int address_fd, int pid_fd
+@@ -326,14 +327,17 @@ start_parent (int address_fd, int pid_fd
    /*
     * Fetch dbus-daemon pid.
     */
@@ -31,8 +31,5 @@
 +          return;
 +        }
      }
--
--  bytes = read_line (pid_fd, pid_str, sizeof (pid_str));
  
    close (address_fd);
-   close (pid_fd);
