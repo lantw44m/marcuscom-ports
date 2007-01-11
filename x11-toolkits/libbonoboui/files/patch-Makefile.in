@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Thu Jan 11 01:10:15 2007
++++ Makefile.in	Thu Jan 11 01:10:30 2007
+@@ -257,7 +257,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = bonobo glade samples tests tools po doc
++SUBDIRS = bonobo glade samples tools po doc
+ libincludedir = $(includedir)/libbonoboui-2.0
+ libinclude_HEADERS = \
+ 	bonobo.h	\
