@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.129 2006/12/20 05:16:10 marcus Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.130 2007/01/08 18:02:48 marcus Exp $
 #
 
 PORTNAME=	gnome-games
@@ -38,7 +38,7 @@ GCONF_SCHEMAS=	aisleriot.schemas blackjack.schemas glchess.schemas \
 		iagno.schemas libgnomegames.schemas mahjongg.schemas \
 		same-gnome.schemas
 
-CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnuchess-[0-9]*
+CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]*
 
 .include <bsd.port.pre.mk>
 
