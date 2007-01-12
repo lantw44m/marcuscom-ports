@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.192 2006/12/06 22:24:02 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.193 2006/12/21 19:54:02 marcus Exp $
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.17.4
+PORTVERSION=	2.17.5
 PORTREVISION?=	0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
@@ -82,14 +82,14 @@ do-install:	# empty
 .include <bsd.port.pre.mk>
 
 .if !defined(GNOME_SLAVE)
-.if ${ARCH} == "i386"
-RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
-.endif
 .if (${ARCH}!="sparc64" || ${OSVERSION} >= 601101) && ${ARCH}!="ia64"
 RUN_DEPENDS+=	yelp:${PORTSDIR}/x11/yelp \
 		epiphany:${PORTSDIR}/www/epiphany
 .endif
 .if ${.CURDIR:T}!="gnome2-lite"
+.if ${ARCH} == "i386"
+RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
+.endif
 .if ${OSVERSION}>=600000
 RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga
 .endif
