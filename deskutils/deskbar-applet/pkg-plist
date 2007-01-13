@@ -304,6 +304,10 @@ share/locale/vi/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_CN/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
+@dirrm share/gnome/omf/deskbar
+@dirrm share/gnome/help/deskbar/C/figures
+@dirrm share/gnome/help/deskbar/C
+@dirrm share/gnome/help/deskbar
 @dirrm share/gnome/deskbar-applet/art
 @dirrm share/gnome/deskbar-applet
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/updater
