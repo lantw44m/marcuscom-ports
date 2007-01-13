@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-lite/Makefile,v 1.50 2006/10/14 06:34:16 marcus Exp $
+#   $MCom: ports/x11/gnome2-lite/Makefile,v 1.52 2006/10/19 06:40:08 marcus Exp $
 #
 
 PORTREVISION=	0
@@ -21,7 +21,6 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-applet
 		gnome-session:${PORTSDIR}/x11/gnome-session \
 		gnome-system-monitor:${PORTSDIR}/sysutils/gnome-system-monitor \
 		nautilus:${PORTSDIR}/x11-fm/nautilus \
-		yelp:${PORTSDIR}/x11/yelp \
 		${LOCALBASE}/share/gnome/help/user-guide/C/user-guide.xml:${PORTSDIR}/misc/gnome-user-docs \
 		${LOCALBASE}/share/gnome/sounds/question.wav:${PORTSDIR}/audio/gnome-audio \
 		file-roller:${PORTSDIR}/archivers/file-roller \
