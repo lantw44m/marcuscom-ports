@@ -260,6 +260,8 @@ share/locale/zh_CN/LC_MESSAGES/control-center-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/control-center-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/control-center-2.0.mo
 share/locale/zu/LC_MESSAGES/control-center-2.0.mo
+share/mime/application/x-gnome-theme-package.xml
+share/mime/packages/gnome-theme-package.xml
 @dirrm share/gnome/omf/control-center
 @dirrm share/gnome/help/control-center/zh_CN
 @dirrm share/gnome/help/control-center/ru/
@@ -281,6 +283,8 @@ share/locale/zu/LC_MESSAGES/control-center-2.0.mo
 @dirrm include/gnome-window-settings-2.0
 @dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
 @dirrm include/gnome-settings-daemon-2.0
+@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zu/LC_MESSAGES
