@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.39 2006/12/19 11:30:14 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.40 2006/12/20 18:55:12 ahze Exp $
 
 # This file contains some reusable components for mozilla ports. It's of
 # use primarily to apps from the mozilla project itself (such as Firefox,
@@ -97,7 +97,6 @@ PKGDEINSTALL_INC?=	${MASTER_MOZDIR}/pkg-deinstall.in
 EXTRACT_AFTER_ARGS?=	| ${TAR} -xf - --exclude */CVS/*	\
 			--exclude */macbuild/*			\
 			--exclude */package/*			\
-			--exclude */nsprpub/*			\
 			--exclude mozilla/modules/libimg/png	\
 			--exclude mozilla/jpeg			\
 			--exclude mozilla/dbm			\
