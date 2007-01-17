@@ -208,7 +208,6 @@ share/locale/xh/LC_MESSAGES/totem.mo
 share/locale/zh_CN/LC_MESSAGES/totem.mo
 share/locale/zh_HK/LC_MESSAGES/totem.mo
 share/locale/zh_TW/LC_MESSAGES/totem.mo
-@dirrm share/gnome/totem/doc
 @dirrm share/gnome/totem
 @dirrm share/gnome/omf/totem
 @dirrm share/gnome/help/totem/uk/figures
