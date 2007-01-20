@@ -2,18 +2,18 @@
 # Date created:			26 Mar 1999
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/libgaim/Makefile,v 1.7 2006/11/28 19:22:45 marcus Exp $
+# $FreeBSD$
 #   $MCom: ports-stable/net-im/libgaim/Makefile,v 1.4 2006/10/29 18:55:28 marcus Exp $
 #
 
 PORTNAME=	gaim
-PORTVERSION=	2.0.0.b5
+PORTVERSION=	2.0.0.b6
 PORTREVISION?=	1
 CATEGORIES?=	net-im
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
 PKGNAMEPREFIX?=	lib
-DISTNAME=	${PORTNAME}-2.0.0beta5
+DISTNAME=	${PORTNAME}-2.0.0beta6
 
 MAINTAINER?=	marcus@FreeBSD.org
 COMMENT?=	Backend library for the Gaim multi-protocol messaging client
@@ -91,7 +91,7 @@ PLIST_SUB+=		EVO="@comment not installed: "
 .endif
 
 .if defined(WITH_GTKUI) && !defined(WITHOUT_GSTREAMER)
-USE_GSTREAMER+= core good
+USE_GSTREAMER+=	core good
 .else
 CONFIGURE_ARGS+=--disable-gstreamer
 .endif
@@ -174,7 +174,7 @@ LIB_DEPENDS+=		ao.3:${PORTSDIR}/audio/libao \
 CONFIGURE_ARGS+=	--disable-audio
 .endif
 
-.if defined(WITH_DBUS)
+.if !defined(WITHOUT_DBUS)
 LIB_DEPENDS+=		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 .if !defined(GAIM_SLAVE)
 RUN_DEPENDS+=		${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
