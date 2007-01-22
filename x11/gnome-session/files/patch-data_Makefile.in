@@ -1,0 +1,22 @@
+--- data/Makefile.in.orig	Sun Jan 21 20:56:33 2007
++++ data/Makefile.in	Sun Jan 21 20:56:42 2007
+@@ -253,8 +253,8 @@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ SUBDIRS = icons
+-defaultdir = $(datadir)/gnome
+-default_DATA = default.session.in
++defaultdir = $(datadir)
++default_DATA = default.session
+ settingsdir = $(datadir)/applications
+ @SESSION_TRUE@settings_in_files = session-properties.desktop.in
+ @SESSION_TRUE@settings_DATA = $(settings_in_files:.desktop.in=.desktop)
+@@ -270,7 +270,7 @@
+ 	session-properties.desktop.in
+ 
+ CLEANFILES = default.session gnome-session.schemas session-properties.desktop
+-all: all-recursive
++all: all-recursive default.session
+ 
+ .SUFFIXES:
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am  $(am__configure_deps)

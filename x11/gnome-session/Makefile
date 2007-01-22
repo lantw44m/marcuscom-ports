@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.100 2007/01/10 01:32:14 ahze Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.101 2007/01/11 18:02:03 marcus Exp $
 #
 
 PORTNAME=	gnome-session
-PORTVERSION=	2.17.5
-PORTREVISION=	1
+PORTVERSION=	2.17.90
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
@@ -28,6 +27,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
 
+INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_XLIB=	yes
@@ -50,7 +50,7 @@ post-extract:
 	cd ${WRKDIR} && ${TAR} xf ${DISTDIR}/${DIST_SUBDIR}/${SPLASHES}
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/gnome-session/gnome-splash.png \
+	${INSTALL_DATA} ${WRKSRC}/data/gnome-splash.png \
 		${PREFIX}/share/gnome/pixmaps/splash/original-gnome-splash.png
 #	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/domix-splash-2.12.png \
 #		${PREFIX}/share/gnome/pixmaps/splash/gnome-splash.png
