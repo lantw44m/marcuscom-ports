@@ -136,6 +136,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/StarOffice.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/StarOffice.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/StarOffice.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/Thunderbird.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/Thunderbird.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/Thunderbird.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/__init__.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/__init__.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/__init__.pyo
