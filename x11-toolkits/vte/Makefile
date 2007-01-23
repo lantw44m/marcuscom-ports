@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/x11-toolkits/vte/Makefile,v 1.60 2006/10/29 03:22:28 marcus Exp $
-#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.63 2006/12/06 02:49:29 marcus Exp $
+#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.64 2007/01/10 21:36:54 ahze Exp $
 #
 
 PORTNAME=	vte
-PORTVERSION=	0.15.1
+PORTVERSION=	0.15.2
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -31,7 +31,8 @@ USE_GNOME=	gnomeprefix gnomehack gtk20 ltverhack referencehack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
 		BSD_PTHREAD_LIBS="${PTHREAD_LIBS}"
-CONFIGURE_ARGS=	--disable-python
+CONFIGURE_ARGS=	--disable-python \
+		--disable-freetypetest
 
 OPTIONS=	GLX	"Enable support for DRI/GLX rendering" off
 
