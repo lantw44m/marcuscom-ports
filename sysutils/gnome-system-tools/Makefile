@@ -3,10 +3,10 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/gnome-system-tools/Makefile,v 1.53 2007/01/10 07:56:40 marcus Exp $
+#    $MCom: ports/sysutils/gnome-system-tools/Makefile,v 1.54 2007/01/11 00:20:11 marcus Exp $
 
 PORTNAME=	gnome-system-tools
-PORTVERSION=	2.17.5
+PORTVERSION=	2.17.90
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-tools/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -20,7 +20,9 @@ LIB_DEPENDS=	oobs-1.3:${PORTSDIR}/devel/liboobs
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
+USE_LDCONFIG=	yes
 USE_XLIB=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack nautilus2
