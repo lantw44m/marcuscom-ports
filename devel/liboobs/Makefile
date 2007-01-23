@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/liboobs/Makefile,v 1.12 2007/01/10 07:46:53 marcus Exp $
+#    $MCom: ports/devel/liboobs/Makefile,v 1.13 2007/01/11 00:14:58 marcus Exp $
 
 PORTNAME=	liboobs
-PORTVERSION=	2.17.5.1
+PORTVERSION=	2.17.90
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
