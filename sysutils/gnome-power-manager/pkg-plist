@@ -253,6 +253,7 @@ share/icons/hicolor/scalable/apps/gpm-ups-100-charging.svg
 share/icons/hicolor/scalable/apps/gpm-ups-100.svg
 share/icons/hicolor/scalable/apps/gpm-ups-charged.svg
 share/icons/hicolor/scalable/apps/gpm-ups-missing.svg
+share/locale/ar/LC_MESSAGES/gnome-power-manager.mo
 share/locale/bg/LC_MESSAGES/gnome-power-manager.mo
 share/locale/bn/LC_MESSAGES/gnome-power-manager.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-power-manager.mo
