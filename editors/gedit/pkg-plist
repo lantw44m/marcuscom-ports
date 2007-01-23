@@ -68,10 +68,9 @@ lib/gedit-2/plugins/libtaglist.la
 lib/gedit-2/plugins/libtaglist.so
 lib/gedit-2/plugins/libtime.la
 lib/gedit-2/plugins/libtime.so
-%%PYTHON%%lib/gedit-2/plugins/modelines.gedit-plugin
-%%PYTHON%%lib/gedit-2/plugins/modelines.py
-%%PYTHON%%lib/gedit-2/plugins/modelines.pyc
-%%PYTHON%%lib/gedit-2/plugins/modelines.pyo
+lib/gedit-2/plugins/modelines.gedit-plugin
+lib/gedit-2/plugins/libmodelines.la
+lib/gedit-2/plugins/libmodelines.so
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole.gedit-plugin
 lib/gedit-2/plugins/sample.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/snippets.gedit-plugin
