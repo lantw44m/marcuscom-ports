@@ -324,6 +324,8 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-groupwise-features.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-groupwise-features.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-gw-account-setup.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-gw-account-setup.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-imap-features.la
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-imap-features.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-itip-formatter.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-itip-formatter.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-mail-to-task.la
@@ -373,6 +375,7 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-folder-permissions.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-folder-subscription.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-groupwise-features.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-gw-account-setup.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-imap-features.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-itip-formatter.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mail-account-disable.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mail-to-task.eplug
@@ -472,6 +475,7 @@ share/gnome/evolution/%%VERSION%%/glade/exchange-folder-tree.glade
 share/gnome/evolution/%%VERSION%%/glade/exchange-oof.glade
 share/gnome/evolution/%%VERSION%%/glade/exchange-passwd-expiry.glade
 share/gnome/evolution/%%VERSION%%/glade/exchange-permissions-dialog.glade
+share/gnome/evolution/%%VERSION%%/glade/exchange-send-options.glade
 share/gnome/evolution/%%VERSION%%/glade/filter.glade
 share/gnome/evolution/%%VERSION%%/glade/fulladdr.glade
 share/gnome/evolution/%%VERSION%%/glade/fullname.glade
@@ -481,6 +485,7 @@ share/gnome/evolution/%%VERSION%%/glade/gal-view-instance-save-as-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/gal-view-new-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/goto-dialog.glade
 share/gnome/evolution/%%VERSION%%/glade/im.glade
+share/gnome/evolution/%%VERSION%%/glade/imap-headers.glade
 share/gnome/evolution/%%VERSION%%/glade/import.glade
 share/gnome/evolution/%%VERSION%%/glade/junk-settings.glade
 share/gnome/evolution/%%VERSION%%/glade/ldap-config.glade
