@@ -2339,6 +2339,7 @@ share/themes/Crux/index.theme
 share/themes/Glider/gtk-2.0/gtkrc
 share/themes/Glider/index.theme
 share/themes/Glossy/gtk-2.0/gtkrc
+share/themes/Glossy/index.theme
 share/themes/HighContrast/gtk-2.0/gtkrc
 share/themes/HighContrast/index.theme
 share/themes/HighContrastInverse/gtk-2.0/gtkrc
