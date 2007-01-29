@@ -182,6 +182,8 @@ share/gnome/omf/control-center/control-center-ru.omf
 share/gnome/omf/control-center/control-center-sv.omf
 share/gnome/omf/control-center/control-center-zh_CN.omf
 share/gnome/pixmaps/display-capplet.png
+share/icons/hicolor/48x48/apps/typing-monitor.png
+share/icons/hicolor/scalable/apps/typing-monitor.svg
 share/locale/af/LC_MESSAGES/control-center-2.0.mo
 share/locale/am/LC_MESSAGES/control-center-2.0.mo
 share/locale/ar/LC_MESSAGES/control-center-2.0.mo
