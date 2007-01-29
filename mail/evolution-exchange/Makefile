@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.77 2006/12/19 03:14:07 marcus Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.78 2007/01/10 07:44:26 marcus Exp $
 #
 
 PORTNAME=	evolution-exchange
-PORTVERSION=	2.9.5
+PORTVERSION=	2.9.6
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -24,13 +24,15 @@ USE_GETTEXT=	yes
 USE_XLIB=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
+USE_BDB=	41
 USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnometarget
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-openldap=${LOCALBASE} \
 		--with-static-ldap=no \
-		--disable-compile-warnings
+		--disable-compile-warnings \
+		--with-libdb=${LOCALBASE}
 
 EVO_VERSION=	2.10
 VERSION=	2.10
@@ -59,7 +61,8 @@ CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -fPIC"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|EVOLUTION_API_VERSION=2.8|EVOLUTION_API_VERSION=2.10| ; \
-	    	s|EDS_BASE_VERSION=1.8|EDS_BASE_VERSION=1.10|' \
+	    	s|EDS_BASE_VERSION=1.8|EDS_BASE_VERSION=1.10| ; \
+		s|-ldb|-l${BDB_LIB_NAME}|g' \
 		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
