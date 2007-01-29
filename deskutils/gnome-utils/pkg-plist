@@ -24,11 +24,11 @@ lib/libgdict-1.0.so.5
 libdata/bonobo/servers/GNOME_DictionaryApplet.server
 libdata/pkgconfig/gdict-1.0.pc
 libexec/gnome-dictionary-applet
-share/doc/gdict/gdict-GdictClientContext.html
-share/doc/gdict/gdict-GdictDefbox.html
-share/doc/gdict/gdict-GdictEntry.html
-share/doc/gdict/gdict-GdictSource.html
-share/doc/gdict/gdict-GdictSourceLoader.html
+share/doc/gdict/GdictClientContext.html
+share/doc/gdict/GdictDefbox.html
+share/doc/gdict/GdictEntry.html
+share/doc/gdict/GdictSource.html
+share/doc/gdict/GdictSourceLoader.html
 share/doc/gdict/gdict-gdict-context.html
 share/doc/gdict/gdict.devhelp
 share/doc/gdict/gdict.devhelp2
