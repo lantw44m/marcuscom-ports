@@ -1,16 +1,16 @@
---- src/sysinfo.cpp.orig	Thu Dec 14 17:51:28 2006
-+++ src/sysinfo.cpp	Sun Dec 17 21:17:34 2006
-@@ -12,6 +12,9 @@
- #include <netdb.h>
+--- src/sysinfo.cpp.orig	Mon Jan 22 12:01:12 2007
++++ src/sysinfo.cpp	Sun Jan 28 21:10:13 2007
+@@ -13,6 +13,9 @@
  #include <sys/socket.h>
  #include <sys/wait.h>
+ #include <math.h>
 +#ifdef __FreeBSD__
 +#include <sys/utsname.h>
 +#endif
  
  #include <string>
  #include <vector>
-@@ -190,6 +193,29 @@ namespace {
+@@ -195,6 +198,29 @@ namespace {
      }
    };
  
@@ -40,7 +40,7 @@
  
    SysInfo* get_sysinfo()
    {
-@@ -197,8 +223,11 @@ namespace {
+@@ -202,8 +228,11 @@ namespace {
        g_free(p);
        return new LSBSysInfo;
      }
