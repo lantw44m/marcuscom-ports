@@ -1,17 +1,15 @@
---- data/Makefile.in.orig	Sun Jan 21 20:56:33 2007
-+++ data/Makefile.in	Sun Jan 21 20:56:42 2007
-@@ -253,8 +253,8 @@
+--- data/Makefile.in.orig	Sun Jan 28 20:39:50 2007
++++ data/Makefile.in	Sun Jan 28 20:41:03 2007
+@@ -253,7 +253,7 @@ sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  SUBDIRS = icons
 -defaultdir = $(datadir)/gnome
--default_DATA = default.session.in
 +defaultdir = $(datadir)
-+default_DATA = default.session
+ default_in_files = default.session.in
+ default_DATA = $(default_in_files:.session.in=.session)
  settingsdir = $(datadir)/applications
- @SESSION_TRUE@settings_in_files = session-properties.desktop.in
- @SESSION_TRUE@settings_DATA = $(settings_in_files:.desktop.in=.desktop)
-@@ -270,7 +270,7 @@
+@@ -271,7 +271,7 @@ EXTRA_DIST = \
  	session-properties.desktop.in
  
  CLEANFILES = default.session gnome-session.schemas session-properties.desktop
