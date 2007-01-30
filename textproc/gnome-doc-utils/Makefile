@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.40 2007/01/29 03:47:09 marcus Exp $
 #
 
 PORTNAME=	gnome-doc-utils
@@ -16,7 +16,8 @@ DISTNAME=	gnome-doc-utils-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME doc utils
 
-BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
+BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper \
+    		gawk:${PORTSDIR}/lang/gawk
 RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper \
 		${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml2 \
 		${LOCALBASE}/share/xml/docbook/4.3/catalog.xml:${PORTSDIR}/textproc/docbook-xml-430 \
