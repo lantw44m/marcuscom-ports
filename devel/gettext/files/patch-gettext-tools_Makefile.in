@@ -1,0 +1,7 @@
+--- gettext-tools/Makefile.in.orig	Mon Nov 27 09:34:56 2006
++++ gettext-tools/Makefile.in	Sun Dec  3 17:50:43 2006
+@@ -486,3 +486,3 @@
+ ACLOCAL_AMFLAGS = -I m4 -I ../gettext-runtime/m4 -I ../autoconf-lib-link/m4 -I ../m4 -I gnulib-m4 -I libgettextpo/gnulib-m4
+-SUBDIRS = doc intl gnulib-lib libgrep libuniname src libgettextpo po projects misc man m4 tests examples
++SUBDIRS = doc intl gnulib-lib libgrep libuniname src libgettextpo po projects misc man m4
+ 
