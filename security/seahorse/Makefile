@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.23 2006/12/22 02:55:23 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.24 2007/01/05 02:06:32 marcus Exp $
 #
 
 PORTNAME=	seahorse
@@ -114,6 +114,10 @@ LIB_DEPENDS+=	avahi-client:${PORTSDIR}/net/avahi
 .else
 CONFIGURE_ARGS+=--disable-sharing
 .endif
+
+post-patch:
+	@${FIND} ${WRKSRC}/help -name seahorse.xml | ${XARGS} ${REINPLACE_CMD} -e \
+		's|<publisher>|<publisher role="maintainer">|g'
 
 post-install:
 	-@update-desktop-database
