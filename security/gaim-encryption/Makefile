@@ -2,12 +2,12 @@
 # Date created:		2004-05-01
 # Whom:		 	ports@c0decafe.net
 #
-# $FreeBSD: ports/security/gaim-encryption/Makefile,v 1.38 2006/10/14 08:54:41 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	encryption
 PORTVERSION=	2.38
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}

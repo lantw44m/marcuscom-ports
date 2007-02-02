@@ -2,11 +2,11 @@
 # Date created:			18 Sep 2003
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
-# $FreeBSD: ports/mail/mail-notification/Makefile,v 1.41 2006/10/15 19:22:34 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	mail-notification
-DISTVERSION=	4.0-rc1
+DISTVERSION=	4.0
 PORTREVISION=	1
 CATEGORIES=	mail ipv6
 MASTER_SITES=	${MASTER_SITE_SAVANNAH}
