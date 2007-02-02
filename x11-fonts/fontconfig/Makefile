@@ -2,8 +2,8 @@
 # Date created:		06 October 2002
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-fonts/fontconfig/Makefile,v 1.59 2006/10/16 20:42:01 mezz Exp $
-#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.10 2006/11/12 22:26:20 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.11 2006/12/11 06:08:19 marcus Exp $
 #
 
 PORTNAME=	fontconfig
@@ -37,6 +37,8 @@ CONFIGURE_ARGS=	--with-confdir=${PREFIX}/etc/fonts \
 MAKE_ENV=	LC_ALL=C
 PKGINSTALL=	${WRKDIR}/pkg-install
 
+MTREE_FILE=	/etc/mtree/BSD.x11-4.dist
+
 MAN1=		fc-cache.1 fc-cat.1 fc-list.1 fc-match.1
 MAN5=		fonts-conf.5
 PORTDOCS=	fontconfig-user.html fontconfig-user.pdf fontconfig-user.txt
@@ -45,12 +47,6 @@ PORTDOCS=	fontconfig-user.html fontconfig-user.pdf fontconfig-user.txt
 
 .if exists(${LOCALBASE}/bin/docbook2man)
 USE_DOCBOOK2MAN=	yes
-.endif
-
-.if ${X_WINDOW_SYSTEM:L} == xfree86-3
-MTREE_FILE=	/etc/mtree/BSD.x11.dist
-.else
-MTREE_FILE=	/etc/mtree/BSD.x11-4.dist
 .endif
 
 post-install:
