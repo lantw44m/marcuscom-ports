@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.24 2006/12/18 22:42:39 marcus Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.25 2006/12/19 13:45:41 ahze Exp $
 #
 
 PORTNAME=	glade3
@@ -23,10 +23,12 @@ USE_GMAKE=	yes
 USE_GNOME=	gnometarget gtk20 libxml2 gnomeprefix gnomehack
 WANT_GNOME=	yes
 USE_GETTEXT=	yes
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
-USE_LDCONFIG=	yes
+
+DOCSDIR=	share/doc/gladeui
 
 .include <bsd.port.pre.mk>
 
