@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/orca/Makefile,v 1.10 2007/01/08 07:47:42 marcus Exp $
+#   $MCom: ports/accessibility/orca/Makefile,v 1.11 2007/01/22 01:43:27 ahze Exp $
 #
 
 PORTNAME=	orca
@@ -28,7 +28,6 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui atspi gnomespeech pygnome2
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
