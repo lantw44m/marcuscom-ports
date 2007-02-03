@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/bug-buddy/Makefile,v 1.40 2006/12/04 00:34:13 marcus Exp $
+#   $MCom: ports/devel/bug-buddy/Makefile,v 1.41 2006/12/18 02:26:25 ahze Exp $
 #
 
 PORTNAME=	bug-buddy
@@ -20,7 +20,7 @@ LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		soup-2.2.8:${PORTSDIR}/devel/libsoup
 
 USE_BZIP2=	yes
-USE_GETTEXT=	${PORTNAME}
+USE_GETTEXT=	yes
 USE_XLIB=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes

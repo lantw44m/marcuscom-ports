@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-menus/Makefile,v 1.45 2006/12/14 02:54:05 ahze Exp $
+#   $MCom: ports/x11/gnome-menus/Makefile,v 1.46 2007/01/11 06:10:57 marcus Exp $
 #
 
 PORTNAME=	gnome-menus
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Implementation of the FreeDesktop Desktop Menu Spec
 
-USE_GETTEXT=	.*
+USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes

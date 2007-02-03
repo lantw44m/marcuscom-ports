@@ -43,10 +43,6 @@ share/locale/sv/LC_MESSAGES/brasero.mo
 share/mime/packages/brasero.xml
 @dirrm share/mime/packages
 @dirrm share/mime
-@dirrmtry share/locale/pl/LC_MESSAGES
-@dirrmtry share/locale/pl
-@dirrmtry share/locale/ca/LC_MESSAGES
-@dirrmtry share/locale/ca
 @dirrm share/icons/hicolor/scalable/apps
 @dirrm share/icons/hicolor/scalable
 @dirrm share/icons/hicolor/24x24/apps
@@ -61,3 +57,7 @@ share/mime/packages/brasero.xml
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@dirrmtry share/locale/pl/LC_MESSAGES
+@dirrmtry share/locale/pl
+@dirrmtry share/locale/ca/LC_MESSAGES
+@dirrmtry share/locale/ca
