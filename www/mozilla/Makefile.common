@@ -4,7 +4,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/Makefile.common,v 1.42 2007/01/14 08:25:35 marcus Exp $
+#    $MCom: ports/www/mozilla/Makefile.common,v 1.43 2007/02/04 01:41:08 marcus Exp $
 
 # This file contains some reusable components for mozilla ports. It's of
 # use primarily to apps from the mozilla project itself (such as Firefox,
@@ -285,9 +285,11 @@ gecko-post-patch:
 		s|echo aout|echo elf|g' \
 		${WRKSRC}/security/coreconf/FreeBSD.mk \
 		${WRKSRC}/js/src/Makefile.in
-	@${REINPLACE_CMD} -e 's|echo aout|echo elf|g' \
-		${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
-		${WRKSRC}/directory/c-sdk/configure
+	@if [ -d ${WRKSRC}/directory/c-sdk ]; then \
+		${REINPLACE_CMD} -e 's|echo aout|echo elf|g' \
+			${WRKSRC}/directory/c-sdk/config/FreeBSD.mk \
+			${WRKSRC}/directory/c-sdk/configure ; \
+	fi
 	@${REINPLACE_CMD} -e 's|-lc_r|${PTHREAD_LIBS}|g ; \
 		s|-lpthread|${PTHREAD_LIBS}|g ; \
 		s|echo aout|echo elf|g ; \
