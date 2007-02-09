@@ -84,9 +84,14 @@ share/gnome/help/totem/pa/figures/totem_start_window.png
 share/gnome/help/totem/pa/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/pa/figures/totem_volume_mute_button.png
 share/gnome/help/totem/pa/totem.xml
-share/gnome/help/totem/ru/figures/totem_screenshot.png
+share/gnome/help/totem/ru/figures/totem_next_button.png
+share/gnome/help/totem/ru/figures/totem_pause_button.png
+share/gnome/help/totem/ru/figures/totem_play_button.png
+share/gnome/help/totem/ru/figures/totem_previous_button.png
+share/gnome/help/totem/ru/figures/totem_show_playlist_button.png
 share/gnome/help/totem/ru/figures/totem_start_window.png
-share/gnome/help/totem/ru/legal.xml
+share/gnome/help/totem/ru/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/ru/figures/totem_volume_mute_button.png
 share/gnome/help/totem/ru/totem.xml
 share/gnome/help/totem/sv/figures/totem_next_button.png
 share/gnome/help/totem/sv/figures/totem_pause_button.png
