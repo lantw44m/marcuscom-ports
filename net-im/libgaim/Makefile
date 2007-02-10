@@ -3,12 +3,12 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/libgaim/Makefile,v 1.6 2007/02/02 18:05:42 mezz Exp $
+#   $MCom: ports/net-im/libgaim/Makefile,v 1.7 2007/02/04 00:29:25 marcus Exp $
 #
 
 PORTNAME=	gaim
 PORTVERSION=	2.0.0.b6
-PORTREVISION?=	5
+PORTREVISION?=	6
 CATEGORIES?=	net-im
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -138,7 +138,7 @@ PLIST_SUB+=		SILC="@comment not installed: "
 .endif
 
 .if !defined(WITHOUT_BONJOUR)
-LIB_DEPENDS+=	avahi-core.4:${PORTSDIR}/net/avahi
+LIB_DEPENDS+=	avahi-core.5:${PORTSDIR}/net/avahi
 PLIST_SUB+=	BONJOUR=""
 PRPL_MODULES:=	${PRPL_MODULES},bonjour
 .else
