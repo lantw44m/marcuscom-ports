@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.49 2007/01/29 03:38:59 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.50 2007/02/11 21:05:18 mezz Exp $
 #
 
 PORTNAME=	deskbar-applet
@@ -36,10 +36,6 @@ GCONF_SCHEMAS=	deskbar-applet.schemas
 OPTIONS=	EVO "Enable evolution support" on
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 500000
-BROKEN=	Does not build on 4.X
-.endif
 
 .if !defined(WITHOUT_EVO)
 USE_GNOME+=	evolutiondataserver
