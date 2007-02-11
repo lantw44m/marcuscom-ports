@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.48 2007/01/13 16:38:32 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.49 2007/01/29 03:38:59 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
-PORTVERSION=	2.17.90
+PORTVERSION=	2.17.91
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -28,7 +28,6 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
-CONFIGURE_ARGS=	--disable-beagle
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
