@@ -1,5 +1,5 @@
---- gnome-cd/gst-cdrom.c.orig	Tue Dec 19 20:44:39 2006
-+++ gnome-cd/gst-cdrom.c	Wed Dec 20 00:48:26 2006
+--- gnome-cd/gst-cdrom.c.orig	Mon Jan 22 09:01:38 2007
++++ gnome-cd/gst-cdrom.c	Mon Feb 12 15:59:18 2007
 @@ -44,13 +44,17 @@
  #endif
  
@@ -19,10 +19,10 @@
  # define GST_CDROM_IOCTL_EJECT_REQUEST         CDROMEJECT
  #endif
  
-@@ -187,7 +191,7 @@ gst_cdrom_is_cdrom_device (GnomeCDRom * 
- 
-     fd = open (device, O_RDONLY | O_NONBLOCK);
-     if (fd >= 0) {
+@@ -190,7 +194,7 @@ gst_cdrom_is_cdrom_device (GnomeCDRom * 
+ #ifdef __sun
+       res = TRUE;
+ #else
 -      if (ioctl (fd, GST_CDROM_IOCTL_CDCAPABILITY_REQUEST, 0) >= 0) {
 +      if (ioctl (fd, GST_CDROM_IOCTL_CDCAPABILITY_REQUEST, GST_CDROM_IOCTL_CDCAPABILITY_REQUEST_ADDR) >= 0) {
          res = TRUE;
