@@ -1,16 +1,21 @@
---- src/sysinfo.cpp.orig	Mon Jan 22 12:01:12 2007
-+++ src/sysinfo.cpp	Sun Jan 28 21:10:13 2007
-@@ -13,6 +13,9 @@
- #include <sys/socket.h>
+--- src/sysinfo.cpp.orig	Sat Feb 10 09:00:25 2007
++++ src/sysinfo.cpp	Mon Feb 12 11:37:25 2007
+@@ -14,11 +14,13 @@
  #include <sys/wait.h>
  #include <math.h>
+ #include <errno.h>
+-
+ #include <string>
+ #include <vector>
+ #include <fstream>
+ #include <sstream>
 +#ifdef __FreeBSD__
 +#include <sys/utsname.h>
 +#endif
  
- #include <string>
- #include <vector>
-@@ -195,6 +198,29 @@ namespace {
+ #include "sysinfo.h"
+ #include "util.h"
+@@ -240,6 +242,29 @@
      }
    };
  
@@ -40,16 +45,17 @@
  
    SysInfo* get_sysinfo()
    {
-@@ -202,8 +228,11 @@ namespace {
+@@ -247,9 +272,12 @@
        g_free(p);
        return new LSBSysInfo;
      }
--
 +#ifdef __FreeBSD__
-+    return new UnameSysInfo;
++      return new UnameSysInfo;
 +#else
-     return new SysInfo(_("Unknown distribution"));
+     else if (g_file_test("/etc/release", G_FILE_TEST_EXISTS))
+       return new SolarisSysInfo;
+-
 +#endif
+     return new SysInfo(_("Unknown distribution"));
    }
  }
- 
