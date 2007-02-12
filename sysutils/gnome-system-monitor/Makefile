@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.86 2007/02/12 16:43:06 ahze Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.87 2007/02/12 17:49:11 mezz Exp $
 #
 
 PORTNAME=	gnome-system-monitor
@@ -28,7 +28,7 @@ USE_GETTEXT=	yes
 USE_XLIB=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack libwnck gnomevfs2
+USE_GNOME=	gnomeprefix intlhack gnomehack libwnck gnomevfs2 gnomedocutils
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lutil"
