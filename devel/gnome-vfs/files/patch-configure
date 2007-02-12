@@ -1,5 +1,5 @@
---- configure.orig	Sat Jan 27 23:34:10 2007
-+++ configure	Sat Jan 27 23:35:12 2007
+--- configure.orig	Mon Feb 12 14:15:37 2007
++++ configure	Mon Feb 12 14:15:37 2007
 @@ -5708,7 +5708,7 @@ fi
  
  
@@ -34,7 +34,7 @@
   have_ngettext=yes
  else
    echo "$as_me:$LINENO: checking for ngettext in -lintl" >&5
-@@ -33363,7 +33367,7 @@ if test "${openssl_libs+set}" = set; the
+@@ -33364,7 +33368,7 @@ if test "${openssl_libs+set}" = set; the
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
  
@@ -43,7 +43,7 @@
  		cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -33661,7 +33665,7 @@ if test "${openssl_libs+set}" = set; the
+@@ -33662,7 +33666,7 @@ if test "${openssl_libs+set}" = set; the
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
  
@@ -51,24 +51,4 @@
 +		LDFLAGS="$LDFLAGS -L$with_openssl_libs -lssl -lcrypto"
  		cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
- _ACEOF
-@@ -39248,6 +39252,9 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
-+#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
- #include <sys/statfs.h>
- #include <sys/fstyp.h>
- _ACEOF
-@@ -39289,6 +39296,9 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
-+#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
-+#endif
- #include <sys/statfs.h>
- #include <sys/vmount.h>
  _ACEOF
