@@ -9,6 +9,7 @@ libexec/file-roller/move-here.sh
 %%PORTDOCS%%%%DOCSDIR%%/README
 %%PORTDOCS%%%%DOCSDIR%%/TODO
 share/gnome/applications/file-roller.desktop
+share/gnome/file-roller/glade/ask-password.glade
 share/gnome/file-roller/glade/file-roller.glade
 share/gnome/file-roller/icons/hicolor/16x16/actions/add-files-to-archive.png
 share/gnome/file-roller/icons/hicolor/16x16/actions/add-folder-to-archive.png

@@ -312,7 +312,6 @@ share/icons/gnome/16x16/apps/gnome-logout.png
 share/icons/gnome/16x16/apps/gnome-mixer.png
 share/icons/gnome/16x16/apps/gnome-monitor.png
 share/icons/gnome/16x16/apps/gnome-remote-desktop.png
-share/icons/gnome/16x16/apps/gnome-session.png
 share/icons/gnome/16x16/apps/gnome-settings-accessibility-technologies.png
 share/icons/gnome/16x16/apps/gnome-settings-background.png
 share/icons/gnome/16x16/apps/gnome-settings-font.png
@@ -390,6 +389,7 @@ share/icons/gnome/16x16/categories/applications-multimedia.png
 share/icons/gnome/16x16/categories/applications-office.png
 share/icons/gnome/16x16/categories/applications-other.png
 share/icons/gnome/16x16/categories/applications-science.png
+share/icons/gnome/16x16/categories/applications-system.png
 share/icons/gnome/16x16/categories/gnome-applications.png
 share/icons/gnome/16x16/categories/gnome-control-center.png
 share/icons/gnome/16x16/categories/gnome-devel.png
@@ -398,6 +398,7 @@ share/icons/gnome/16x16/categories/gnome-graphics.png
 share/icons/gnome/16x16/categories/gnome-joystick.png
 share/icons/gnome/16x16/categories/gnome-multimedia.png
 share/icons/gnome/16x16/categories/gnome-settings.png
+share/icons/gnome/16x16/categories/gnome-system.png
 share/icons/gnome/16x16/categories/gnome-util.png
 share/icons/gnome/16x16/categories/gtk-preferences.png
 share/icons/gnome/16x16/categories/kcontrol.png
@@ -408,6 +409,7 @@ share/icons/gnome/16x16/categories/package_multimedia.png
 share/icons/gnome/16x16/categories/package_network.png
 share/icons/gnome/16x16/categories/package_office.png
 share/icons/gnome/16x16/categories/package_settings.png
+share/icons/gnome/16x16/categories/package_system.png
 share/icons/gnome/16x16/categories/package_utilities.png
 share/icons/gnome/16x16/categories/preferences-desktop.png
 share/icons/gnome/16x16/categories/preferences-system.png
@@ -420,6 +422,7 @@ share/icons/gnome/16x16/categories/redhat-preferences.png
 share/icons/gnome/16x16/categories/redhat-programming.png
 share/icons/gnome/16x16/categories/redhat-sound_video.png
 share/icons/gnome/16x16/categories/redhat-system_settings.png
+share/icons/gnome/16x16/categories/redhat-system_tools.png
 share/icons/gnome/16x16/categories/stock_internet.png
 share/icons/gnome/16x16/categories/xfce-games.png
 share/icons/gnome/16x16/categories/xfce-graphics.png
@@ -514,6 +517,7 @@ share/icons/gnome/16x16/devices/yast_HD.png
 share/icons/gnome/16x16/devices/yast_idetude.png
 share/icons/gnome/16x16/devices/yast_mouse.png
 share/icons/gnome/16x16/devices/yast_printer.png
+share/icons/gnome/16x16/emblems/emblem-default.png
 share/icons/gnome/16x16/emblems/emblem-favorite.png
 share/icons/gnome/16x16/emblems/emblem-important.png
 share/icons/gnome/16x16/emblems/emblem-new.png
@@ -1900,7 +1904,6 @@ share/icons/gnome/22x22/apps/gnome-help.png
 share/icons/gnome/22x22/apps/gnome-mixer.png
 share/icons/gnome/22x22/apps/gnome-monitor.png
 share/icons/gnome/22x22/apps/gnome-remote-desktop.png
-share/icons/gnome/22x22/apps/gnome-session.png
 share/icons/gnome/22x22/apps/gnome-settings-accessibility-technologies.png
 share/icons/gnome/22x22/apps/gnome-settings-background.png
 share/icons/gnome/22x22/apps/gnome-settings-font.png
@@ -1974,6 +1977,7 @@ share/icons/gnome/22x22/categories/applications-multimedia.png
 share/icons/gnome/22x22/categories/applications-office.png
 share/icons/gnome/22x22/categories/applications-other.png
 share/icons/gnome/22x22/categories/applications-science.png
+share/icons/gnome/22x22/categories/applications-system.png
 share/icons/gnome/22x22/categories/gnome-applications.png
 share/icons/gnome/22x22/categories/gnome-control-center.png
 share/icons/gnome/22x22/categories/gnome-devel.png
@@ -1982,6 +1986,7 @@ share/icons/gnome/22x22/categories/gnome-graphics.png
 share/icons/gnome/22x22/categories/gnome-joystick.png
 share/icons/gnome/22x22/categories/gnome-multimedia.png
 share/icons/gnome/22x22/categories/gnome-settings.png
+share/icons/gnome/22x22/categories/gnome-system.png
 share/icons/gnome/22x22/categories/gnome-util.png
 share/icons/gnome/22x22/categories/gtk-preferences.png
 share/icons/gnome/22x22/categories/kcontrol.png
@@ -1992,6 +1997,7 @@ share/icons/gnome/22x22/categories/package_multimedia.png
 share/icons/gnome/22x22/categories/package_network.png
 share/icons/gnome/22x22/categories/package_office.png
 share/icons/gnome/22x22/categories/package_settings.png
+share/icons/gnome/22x22/categories/package_system.png
 share/icons/gnome/22x22/categories/package_utilities.png
 share/icons/gnome/22x22/categories/preferences-desktop.png
 share/icons/gnome/22x22/categories/preferences-system.png
@@ -2004,6 +2010,7 @@ share/icons/gnome/22x22/categories/redhat-preferences.png
 share/icons/gnome/22x22/categories/redhat-programming.png
 share/icons/gnome/22x22/categories/redhat-sound_video.png
 share/icons/gnome/22x22/categories/redhat-system_settings.png
+share/icons/gnome/22x22/categories/redhat-system_tools.png
 share/icons/gnome/22x22/categories/stock_internet.png
 share/icons/gnome/22x22/categories/xfce-games.png
 share/icons/gnome/22x22/categories/xfce-graphics.png
@@ -2098,6 +2105,7 @@ share/icons/gnome/22x22/devices/yast_HD.png
 share/icons/gnome/22x22/devices/yast_idetude.png
 share/icons/gnome/22x22/devices/yast_mouse.png
 share/icons/gnome/22x22/devices/yast_printer.png
+share/icons/gnome/22x22/emblems/emblem-default.png
 share/icons/gnome/22x22/emblems/emblem-favorite.png
 share/icons/gnome/22x22/emblems/emblem-important.png
 share/icons/gnome/22x22/emblems/emblem-new.png
@@ -2718,7 +2726,6 @@ share/icons/gnome/24x24/apps/gnome-monitor.png
 share/icons/gnome/24x24/apps/gnome-networktool.png
 share/icons/gnome/24x24/apps/gnome-remote-desktop.png
 share/icons/gnome/24x24/apps/gnome-searchtool.png
-share/icons/gnome/24x24/apps/gnome-session.png
 share/icons/gnome/24x24/apps/gnome-settings-accessibility-technologies.png
 share/icons/gnome/24x24/apps/gnome-settings-background.png
 share/icons/gnome/24x24/apps/gnome-settings-font.png
@@ -2809,6 +2816,7 @@ share/icons/gnome/24x24/categories/applications-multimedia.png
 share/icons/gnome/24x24/categories/applications-office.png
 share/icons/gnome/24x24/categories/applications-other.png
 share/icons/gnome/24x24/categories/applications-science.png
+share/icons/gnome/24x24/categories/applications-system.png
 share/icons/gnome/24x24/categories/gnome-applications.png
 share/icons/gnome/24x24/categories/gnome-control-center.png
 share/icons/gnome/24x24/categories/gnome-devel.png
@@ -2817,6 +2825,7 @@ share/icons/gnome/24x24/categories/gnome-graphics.png
 share/icons/gnome/24x24/categories/gnome-joystick.png
 share/icons/gnome/24x24/categories/gnome-multimedia.png
 share/icons/gnome/24x24/categories/gnome-settings.png
+share/icons/gnome/24x24/categories/gnome-system.png
 share/icons/gnome/24x24/categories/gnome-util.png
 share/icons/gnome/24x24/categories/gtk-preferences.png
 share/icons/gnome/24x24/categories/kcontrol.png
@@ -2827,6 +2836,7 @@ share/icons/gnome/24x24/categories/package_multimedia.png
 share/icons/gnome/24x24/categories/package_network.png
 share/icons/gnome/24x24/categories/package_office.png
 share/icons/gnome/24x24/categories/package_settings.png
+share/icons/gnome/24x24/categories/package_system.png
 share/icons/gnome/24x24/categories/package_utilities.png
 share/icons/gnome/24x24/categories/preferences-desktop.png
 share/icons/gnome/24x24/categories/preferences-system.png
@@ -2839,6 +2849,7 @@ share/icons/gnome/24x24/categories/redhat-preferences.png
 share/icons/gnome/24x24/categories/redhat-programming.png
 share/icons/gnome/24x24/categories/redhat-sound_video.png
 share/icons/gnome/24x24/categories/redhat-system_settings.png
+share/icons/gnome/24x24/categories/redhat-system_tools.png
 share/icons/gnome/24x24/categories/stock_internet.png
 share/icons/gnome/24x24/categories/xfce-games.png
 share/icons/gnome/24x24/categories/xfce-graphics.png
@@ -2933,6 +2944,7 @@ share/icons/gnome/24x24/devices/yast_HD.png
 share/icons/gnome/24x24/devices/yast_idetude.png
 share/icons/gnome/24x24/devices/yast_mouse.png
 share/icons/gnome/24x24/devices/yast_printer.png
+share/icons/gnome/24x24/emblems/emblem-default.png
 share/icons/gnome/24x24/emblems/emblem-favorite.png
 share/icons/gnome/24x24/emblems/emblem-important.png
 share/icons/gnome/24x24/emblems/emblem-new.png
@@ -3818,7 +3830,6 @@ share/icons/gnome/24x24/stock/text/stock_page-number.png
 share/icons/gnome/24x24/stock/text/stock_page-total-number.png
 share/icons/gnome/24x24/stock/text/stock_paragraph-spacing-decrease.png
 share/icons/gnome/24x24/stock/text/stock_paragraph-spacing-increase.png
-share/icons/gnome/24x24/stock/text/stock_select-all.png
 share/icons/gnome/24x24/stock/text/stock_spellcheck.png
 share/icons/gnome/24x24/stock/text/stock_styles-new-style-from-selection.png
 share/icons/gnome/24x24/stock/text/stock_styles-update-style.png
@@ -3936,7 +3947,9 @@ share/icons/gnome/32x32/actions/leftjust.png
 share/icons/gnome/32x32/actions/list-add.png
 share/icons/gnome/32x32/actions/list-remove.png
 share/icons/gnome/32x32/actions/lock.png
+share/icons/gnome/32x32/actions/media-eject.png
 share/icons/gnome/32x32/actions/next.png
+share/icons/gnome/32x32/actions/player_eject.png
 share/icons/gnome/32x32/actions/previous.png
 share/icons/gnome/32x32/actions/process-stop.png
 share/icons/gnome/32x32/actions/redhat-home.png
@@ -4072,12 +4085,14 @@ share/icons/gnome/32x32/categories/applications-multimedia.png
 share/icons/gnome/32x32/categories/applications-office.png
 share/icons/gnome/32x32/categories/applications-other.png
 share/icons/gnome/32x32/categories/applications-science.png
+share/icons/gnome/32x32/categories/applications-system.png
 share/icons/gnome/32x32/categories/gnome-applications.png
 share/icons/gnome/32x32/categories/gnome-devel.png
 share/icons/gnome/32x32/categories/gnome-globe.png
 share/icons/gnome/32x32/categories/gnome-graphics.png
 share/icons/gnome/32x32/categories/gnome-joystick.png
 share/icons/gnome/32x32/categories/gnome-multimedia.png
+share/icons/gnome/32x32/categories/gnome-system.png
 share/icons/gnome/32x32/categories/gnome-util.png
 share/icons/gnome/32x32/categories/package_development.png
 share/icons/gnome/32x32/categories/package_games.png
@@ -4086,6 +4101,7 @@ share/icons/gnome/32x32/categories/package_multimedia.png
 share/icons/gnome/32x32/categories/package_network.png
 share/icons/gnome/32x32/categories/package_office.png
 share/icons/gnome/32x32/categories/package_settings.png
+share/icons/gnome/32x32/categories/package_system.png
 share/icons/gnome/32x32/categories/package_utilities.png
 share/icons/gnome/32x32/categories/preferences-system.png
 share/icons/gnome/32x32/categories/redhat-accessories.png
@@ -4096,6 +4112,7 @@ share/icons/gnome/32x32/categories/redhat-office.png
 share/icons/gnome/32x32/categories/redhat-programming.png
 share/icons/gnome/32x32/categories/redhat-sound_video.png
 share/icons/gnome/32x32/categories/redhat-system_settings.png
+share/icons/gnome/32x32/categories/redhat-system_tools.png
 share/icons/gnome/32x32/categories/stock_internet.png
 share/icons/gnome/32x32/categories/xfce-games.png
 share/icons/gnome/32x32/categories/xfce-graphics.png
@@ -4185,6 +4202,7 @@ share/icons/gnome/32x32/devices/yast_HD.png
 share/icons/gnome/32x32/devices/yast_idetude.png
 share/icons/gnome/32x32/devices/yast_mouse.png
 share/icons/gnome/32x32/devices/yast_printer.png
+share/icons/gnome/32x32/emblems/emblem-default.png
 share/icons/gnome/32x32/emblems/emblem-favorite.png
 share/icons/gnome/32x32/emblems/emblem-important.png
 share/icons/gnome/32x32/emblems/emblem-new.png
@@ -4450,6 +4468,7 @@ share/icons/gnome/32x32/status/weather-showers.png
 share/icons/gnome/32x32/status/weather-snow.png
 share/icons/gnome/32x32/status/weather-storm.png
 share/icons/gnome/32x32/status/xfce-trash_full.png
+share/icons/gnome/32x32/stock/generic/stock_person.png
 share/icons/gnome/48x48/actions/appointment-new.png
 share/icons/gnome/48x48/actions/appointment.png
 share/icons/gnome/48x48/actions/gnome-stock-mail-new.png
@@ -4494,7 +4513,6 @@ share/icons/gnome/48x48/apps/gnome-searchtool-animation-rest.png
 share/icons/gnome/48x48/apps/gnome-searchtool-animation.png
 share/icons/gnome/48x48/apps/gnome-searchtool.png
 share/icons/gnome/48x48/apps/gnome-server-config.png
-share/icons/gnome/48x48/apps/gnome-session.png
 share/icons/gnome/48x48/apps/gnome-settings-accessibility-keyboard.png
 share/icons/gnome/48x48/apps/gnome-settings-accessibility-technologies.png
 share/icons/gnome/48x48/apps/gnome-settings-default-applications.png
@@ -4516,10 +4534,6 @@ share/icons/gnome/48x48/apps/serviceconf.png
 share/icons/gnome/48x48/apps/stock-ticker.png
 share/icons/gnome/48x48/apps/user-info.png
 share/icons/gnome/48x48/apps/visor.png
-share/icons/gnome/48x48/categories/applications-system.png
-share/icons/gnome/48x48/categories/gnome-system.png
-share/icons/gnome/48x48/categories/package_system.png
-share/icons/gnome/48x48/categories/redhat-system_tools.png
 share/icons/gnome/48x48/devices/gnome-dev-jazdisk.png
 share/icons/gnome/48x48/devices/gnome-dev-zipdisk.png
 share/icons/gnome/48x48/devices/media-jaz.png
@@ -4665,6 +4679,7 @@ share/icons/gnome/48x48/stock/net/stock_post-message.png
 share/icons/gnome/48x48/stock/net/stock_proxy.png
 share/icons/gnome/48x48/stock/net/stock_sent-mail.png
 share/icons/gnome/48x48/stock/net/stock_spam.png
+share/icons/gnome/8x8/emblems/emblem-default.png
 share/icons/gnome/8x8/emblems/emblem-new.png
 share/icons/gnome/8x8/emblems/emblem-symbolic-link.png
 share/icons/gnome/index.theme
@@ -4772,11 +4787,13 @@ share/icons/gnome/scalable/actions/leftjust.svg
 share/icons/gnome/scalable/actions/list-add.svg
 share/icons/gnome/scalable/actions/list-remove.svg
 share/icons/gnome/scalable/actions/lock.svg
+share/icons/gnome/scalable/actions/media-eject.svg
 share/icons/gnome/scalable/actions/next.svg
 share/icons/gnome/scalable/actions/object-flip-horizontal.svg
 share/icons/gnome/scalable/actions/object-flip-vertical.svg
 share/icons/gnome/scalable/actions/object-rotate-left.svg
 share/icons/gnome/scalable/actions/object-rotate-right.svg
+share/icons/gnome/scalable/actions/player_eject.svg
 share/icons/gnome/scalable/actions/previous.svg
 share/icons/gnome/scalable/actions/process-stop.svg
 share/icons/gnome/scalable/actions/redhat-home.svg
@@ -4929,12 +4946,14 @@ share/icons/gnome/scalable/categories/applications-multimedia.svg
 share/icons/gnome/scalable/categories/applications-office.svg
 share/icons/gnome/scalable/categories/applications-other.svg
 share/icons/gnome/scalable/categories/applications-science.svg
+share/icons/gnome/scalable/categories/applications-system.svg
 share/icons/gnome/scalable/categories/gnome-applications.svg
 share/icons/gnome/scalable/categories/gnome-devel.svg
 share/icons/gnome/scalable/categories/gnome-globe.svg
 share/icons/gnome/scalable/categories/gnome-graphics.svg
 share/icons/gnome/scalable/categories/gnome-joystick.svg
 share/icons/gnome/scalable/categories/gnome-multimedia.svg
+share/icons/gnome/scalable/categories/gnome-system.svg
 share/icons/gnome/scalable/categories/gnome-util.svg
 share/icons/gnome/scalable/categories/package_development.svg
 share/icons/gnome/scalable/categories/package_games.svg
@@ -4943,6 +4962,7 @@ share/icons/gnome/scalable/categories/package_multimedia.svg
 share/icons/gnome/scalable/categories/package_network.svg
 share/icons/gnome/scalable/categories/package_office.svg
 share/icons/gnome/scalable/categories/package_settings.svg
+share/icons/gnome/scalable/categories/package_system.svg
 share/icons/gnome/scalable/categories/package_utilities.svg
 share/icons/gnome/scalable/categories/preferences-system.svg
 share/icons/gnome/scalable/categories/redhat-accessories.svg
@@ -4953,6 +4973,7 @@ share/icons/gnome/scalable/categories/redhat-office.svg
 share/icons/gnome/scalable/categories/redhat-programming.svg
 share/icons/gnome/scalable/categories/redhat-sound_video.svg
 share/icons/gnome/scalable/categories/redhat-system_settings.svg
+share/icons/gnome/scalable/categories/redhat-system_tools.svg
 share/icons/gnome/scalable/categories/stock_internet.svg
 share/icons/gnome/scalable/categories/xfce-games.svg
 share/icons/gnome/scalable/categories/xfce-graphics.svg
@@ -5048,6 +5069,7 @@ share/icons/gnome/scalable/emblems/emblem-cvs-conflict.icon
 share/icons/gnome/scalable/emblems/emblem-cvs-conflict.svg
 share/icons/gnome/scalable/emblems/emblem-cvs-removed.icon
 share/icons/gnome/scalable/emblems/emblem-cvs-removed.svg
+share/icons/gnome/scalable/emblems/emblem-default.svg
 share/icons/gnome/scalable/emblems/emblem-favorite.icon
 share/icons/gnome/scalable/emblems/emblem-favorite.svg
 share/icons/gnome/scalable/emblems/emblem-generic.icon
@@ -5442,11 +5464,12 @@ share/icons/gnome/scalable/stock/generic/stock_person.svg
 @dirrmtry share/icons/gnome/48x48/filesystems
 @dirrmtry share/icons/gnome/48x48/emblems
 @dirrmtry share/icons/gnome/48x48/devices
-@dirrmtry share/icons/gnome/48x48/categories
 @dirrmtry share/icons/gnome/48x48/apps
 @dirrmtry share/icons/gnome/48x48/animations
 @dirrmtry share/icons/gnome/48x48/actions
 @dirrmtry share/icons/gnome/48x48
+@dirrmtry share/icons/gnome/32x32/stock/generic
+@dirrmtry share/icons/gnome/32x32/stock
 @dirrmtry share/icons/gnome/32x32/status
 @dirrmtry share/icons/gnome/32x32/places
 @dirrmtry share/icons/gnome/32x32/mimetypes
