@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.409 2006/12/23 00:44:25 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.410 2007/02/04 22:44:13 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -462,7 +462,7 @@ intlhack_USE_GNOME_IMPL=intltool
 
 gtkhtml3_LIB_DEPENDS=	gtkhtml-3.8.15:${PORTSDIR}/www/gtkhtml3
 gtkhtml3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgtkhtml-3.8.pc
-gtkhtml3_USE_GNOME_IMPL=gail libgnomeui libgnomeprintui
+gtkhtml3_USE_GNOME_IMPL=gail libgnomeui
 
 gnomespeech_LIB_DEPENDS=gnomespeech.7:${PORTSDIR}/accessibility/gnome-speech
 gnomespeech_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-speech-1.0.pc
