@@ -9,6 +9,9 @@ share/gnome/help/eog/C/legal.xml
 share/gnome/help/eog/de/eog.xml
 share/gnome/help/eog/de/figures/eog_save_as_window.png
 share/gnome/help/eog/de/figures/eog_start_window.png
+share/gnome/help/eog/en_GB/eog.xml
+share/gnome/help/eog/en_GB/figures/eog_save_as_window.png
+share/gnome/help/eog/en_GB/figures/eog_start_window.png
 share/gnome/help/eog/es/eog.xml
 share/gnome/help/eog/es/figures/eog_save_as_window.png
 share/gnome/help/eog/es/figures/eog_start_window.png
@@ -27,6 +30,12 @@ share/gnome/help/eog/ja/legal.xml
 share/gnome/help/eog/ko/eog.xml
 share/gnome/help/eog/ko/figures/eog_start_window.png
 share/gnome/help/eog/ko/legal.xml
+share/gnome/help/eog/pa/eog.xml
+share/gnome/help/eog/pa/figures/eog_save_as_window.png
+share/gnome/help/eog/pa/figures/eog_start_window.png
+share/gnome/help/eog/ru/eog.xml
+share/gnome/help/eog/ru/figures/eog_save_as_window.png
+share/gnome/help/eog/ru/figures/eog_start_window.png
 share/gnome/help/eog/sv/eog.xml
 share/gnome/help/eog/sv/figures/eog_save_as_window.png
 share/gnome/help/eog/sv/figures/eog_start_window.png
@@ -41,12 +50,15 @@ share/gnome/help/eog/zh_TW/figures/eog_start_window.png
 share/gnome/help/eog/zh_TW/legal.xml
 share/gnome/omf/eog/eog-C.omf
 share/gnome/omf/eog/eog-de.omf
+share/gnome/omf/eog/eog-en_GB.omf
 share/gnome/omf/eog/eog-es.omf
 share/gnome/omf/eog/eog-eu.omf
 share/gnome/omf/eog/eog-fr.omf
 share/gnome/omf/eog/eog-it.omf
 share/gnome/omf/eog/eog-ja.omf
 share/gnome/omf/eog/eog-ko.omf
+share/gnome/omf/eog/eog-pa.omf
+share/gnome/omf/eog/eog-ru.omf
 share/gnome/omf/eog/eog-sv.omf
 share/gnome/omf/eog/eog-uk.omf
 share/gnome/omf/eog/eog-zh_CN.omf
@@ -144,6 +156,10 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @dirrm share/gnome/help/eog/uk
 @dirrm share/gnome/help/eog/sv/figures
 @dirrm share/gnome/help/eog/sv
+@dirrm share/gnome/help/eog/ru/figures
+@dirrm share/gnome/help/eog/ru
+@dirrm share/gnome/help/eog/pa/figures
+@dirrm share/gnome/help/eog/pa
 @dirrm share/gnome/help/eog/ko/figures
 @dirrm share/gnome/help/eog/ko
 @dirrm share/gnome/help/eog/ja/figures
@@ -156,6 +172,8 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @dirrm share/gnome/help/eog/eu
 @dirrm share/gnome/help/eog/es/figures
 @dirrm share/gnome/help/eog/es
+@dirrm share/gnome/help/eog/en_GB/figures
+@dirrm share/gnome/help/eog/en_GB
 @dirrm share/gnome/help/eog/de/figures
 @dirrm share/gnome/help/eog/de
 @dirrm share/gnome/help/eog/C/figures
@@ -163,8 +181,8 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @dirrm share/gnome/help/eog
 @dirrm share/gnome/eog/glade
 @dirrm share/gnome/eog
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || true
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
