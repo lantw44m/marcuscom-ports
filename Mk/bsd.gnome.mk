@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.410 2007/02/04 22:44:13 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.411 2007/02/13 06:10:45 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -410,7 +410,7 @@ gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
 
 gnomecontrolcenter2_LIB_DEPENDS=gnome-window-settings.1:${PORTSDIR}/sysutils/gnome-control-center
 gnomecontrolcenter2_DETECT=${LOCALBASE}/libdata/pkgconfig/gnome-window-settings-2.0.pc
-gnomecontrolcenter2_USE_GNOME_IMPL=desktopfileutils gnomedesktop gnomemenus metacity nautilus2 desktopfileutils
+gnomecontrolcenter2_USE_GNOME_IMPL=metacity nautilus2 gnomemenus desktopfileutils libgnomekbd gnomepanel
 
 libgda2_LIB_DEPENDS=	gda-2.3:${PORTSDIR}/databases/libgda2
 libgda2_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgda.pc
@@ -479,7 +479,7 @@ desktopfileutils_USE_GNOME_IMPL=glib20
 
 nautiluscdburner_LIB_DEPENDS=nautilus-burn.4:${PORTSDIR}/sysutils/nautilus-cd-burner
 nautiluscdburner_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-burn.pc
-nautiluscdburner_USE_GNOME_IMPL=nautilus2
+nautiluscdburner_USE_GNOME_IMPL=nautilus2 desktopfileutils
 
 gnomemenus_LIB_DEPENDS=		gnome-menu.2:${PORTSDIR}/x11/gnome-menus
 gnomemenus_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
