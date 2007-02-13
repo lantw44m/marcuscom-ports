@@ -19,8 +19,8 @@ lib/nautilus/extensions-1.0/libnautilus-burn-extension.la
 lib/nautilus/extensions-1.0/libnautilus-burn-extension.so
 libdata/pkgconfig/libnautilus-burn.pc
 libexec/mapping-daemon
-share/gnome/applications/nautilus-cd-burner.desktop
 share/gnome/applications/nautilus-cd-burner-open-iso.desktop
+share/gnome/applications/nautilus-cd-burner.desktop
 share/gnome/nautilus-cd-burner/cdspin1.png
 share/gnome/nautilus-cd-burner/cdspin2.png
 share/gnome/nautilus-cd-burner/cdspin3.png
