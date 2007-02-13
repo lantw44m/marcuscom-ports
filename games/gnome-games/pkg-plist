@@ -535,6 +535,9 @@ share/gnome/help/gnect/C/figures/mainwindow.png
 share/gnome/help/gnect/C/figures/tileset.png
 share/gnome/help/gnect/C/gnect.xml
 share/gnome/help/gnect/C/legal.xml
+share/gnome/help/gnect/sv/figures/mainwindow.png
+share/gnome/help/gnect/sv/figures/tileset.png
+share/gnome/help/gnect/sv/gnect.xml
 share/gnome/help/gnibbles/C/figures/game.png
 share/gnome/help/gnibbles/C/figures/intro.png
 share/gnome/help/gnibbles/C/figures/playing.png
@@ -606,11 +609,12 @@ share/gnome/help/same-gnome/C/figures/start-up.png
 share/gnome/help/same-gnome/C/legal.xml
 share/gnome/help/same-gnome/C/same-gnome.xml
 share/gnome/omf/glchess/glchess-C.omf
+share/gnome/omf/glines/glines-C.omf
+share/gnome/omf/gnect/gnect-C.omf
+share/gnome/omf/gnect/gnect-sv.omf
 share/gnome/omf/gnome-games/aisleriot-C.omf
 share/gnome/omf/gnome-games/aisleriot-fr.omf
 share/gnome/omf/gnome-games/blackjack-C.omf
-share/gnome/omf/gnome-games/glines-C.omf
-share/gnome/omf/gnome-games/gnect-C.omf
 share/gnome/omf/gnome-games/gnibbles-C.omf
 share/gnome/omf/gnome-games/gnobots2-C.omf
 share/gnome/omf/gnome-games/gnobots2-da.omf
@@ -624,7 +628,7 @@ share/gnome/omf/gnome-games/gtali-C.omf
 share/gnome/omf/gnome-games/gtali-da.omf
 share/gnome/omf/gnome-games/iagno-C.omf
 share/gnome/omf/gnome-games/mahjongg-C.omf
-share/gnome/omf/gnome-games/same-gnome-C.omf
+share/gnome/omf/same-gnome/same-gnome-C.omf
 share/gnome/pixmaps/blackjack/baize.png
 share/gnome/pixmaps/blackjack/blackjack-splash.png
 share/gnome/pixmaps/blackjack/chip-1.svg
@@ -954,7 +958,10 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/pixmaps/cards/slots
 @dirrm share/gnome/pixmaps/cards
 @dirrm share/gnome/pixmaps/blackjack
+@dirrm share/gnome/omf/same-gnome
 @dirrm share/gnome/omf/gnome-games
+@dirrm share/gnome/omf/gnect
+@dirrm share/gnome/omf/glines
 @dirrm share/gnome/omf/glchess
 @dirrm share/gnome/help/same-gnome/C/figures
 @dirrm share/gnome/help/same-gnome/C
@@ -992,6 +999,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/gnibbles/C/figures
 @dirrm share/gnome/help/gnibbles/C
 @dirrm share/gnome/help/gnibbles
+@dirrm share/gnome/help/gnect/sv/figures
+@dirrm share/gnome/help/gnect/sv
 @dirrm share/gnome/help/gnect/C/figures
 @dirrm share/gnome/help/gnect/C
 @dirrm share/gnome/help/gnect
