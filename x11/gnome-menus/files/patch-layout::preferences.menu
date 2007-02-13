@@ -1,5 +1,5 @@
---- layout/preferences.menu.orig	Tue Jan  9 12:51:48 2007
-+++ layout/preferences.menu	Thu Jan 11 01:03:56 2007
+--- layout/preferences.menu.orig	Tue Feb 13 04:18:01 2007
++++ layout/preferences.menu	Tue Feb 13 16:54:35 2007
 @@ -9,12 +9,15 @@
    <DefaultAppDirs/>
    <DefaultDirectoryDirs/>
@@ -19,8 +19,8 @@
        <Category>Settings</Category>
        <Not>
          <Or>
-@@ -88,6 +91,12 @@
-     <Directory>System.directory</Directory>
+@@ -36,10 +39,19 @@
+     <Directory>Settings-Accessibility.directory</Directory>
      <Include>
        <And>
 +        <Not>
@@ -30,12 +30,10 @@
 +	  </Or>
 +	</Not>
          <Category>Settings</Category>
-         <Or>
-           <Category>SystemSettings</Category>
-@@ -106,5 +115,8 @@
+         <Category>Accessibility</Category>
        </And>
      </Include>
-   </Menu> <!-- End System -->
+   </Menu>
 +
 +  <!-- Read in overrides and child menus from preferences-merged/ -->
 +  <DefaultMergeDirs/>
