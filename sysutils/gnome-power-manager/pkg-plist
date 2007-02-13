@@ -1,6 +1,7 @@
 bin/gnome-brightness-applet
 bin/gnome-inhibit-applet
 bin/gnome-power-bugreport.sh
+bin/gnome-power-cmd.sh
 bin/gnome-power-manager
 bin/gnome-power-preferences
 bin/gnome-power-statistics
@@ -82,7 +83,9 @@ share/gnome/omf/gnome-power-manager/gnome-power-manager-hu.omf
 share/gnome/omf/gnome-power-manager/gnome-power-manager-ru.omf
 share/gnome/omf/gnome-power-manager/gnome-power-manager-sv.omf
 share/icons/hicolor/16x16/apps/gpm-ac-adapter.png
+share/icons/hicolor/16x16/apps/gpm-brightness-kbd-disabled.png
 share/icons/hicolor/16x16/apps/gpm-brightness-kbd.png
+share/icons/hicolor/16x16/apps/gpm-brightness-lcd-disabled.png
 share/icons/hicolor/16x16/apps/gpm-brightness-lcd.png
 share/icons/hicolor/16x16/apps/gpm-hibernate.png
 share/icons/hicolor/16x16/apps/gpm-inhibit.png
@@ -125,7 +128,9 @@ share/icons/hicolor/16x16/apps/gpm-ups-100.png
 share/icons/hicolor/16x16/apps/gpm-ups-charged.png
 share/icons/hicolor/16x16/apps/gpm-ups-missing.png
 share/icons/hicolor/22x22/apps/gpm-ac-adapter.png
+share/icons/hicolor/22x22/apps/gpm-brightness-kbd-disabled.png
 share/icons/hicolor/22x22/apps/gpm-brightness-kbd.png
+share/icons/hicolor/22x22/apps/gpm-brightness-lcd-disabled.png
 share/icons/hicolor/22x22/apps/gpm-brightness-lcd.png
 share/icons/hicolor/22x22/apps/gpm-hibernate.png
 share/icons/hicolor/22x22/apps/gpm-inhibit.png
@@ -168,7 +173,9 @@ share/icons/hicolor/22x22/apps/gpm-ups-100.png
 share/icons/hicolor/22x22/apps/gpm-ups-charged.png
 share/icons/hicolor/22x22/apps/gpm-ups-missing.png
 share/icons/hicolor/24x24/apps/gpm-ac-adapter.png
+share/icons/hicolor/24x24/apps/gpm-brightness-kbd-disabled.png
 share/icons/hicolor/24x24/apps/gpm-brightness-kbd.png
+share/icons/hicolor/24x24/apps/gpm-brightness-lcd-disabled.png
 share/icons/hicolor/24x24/apps/gpm-brightness-lcd.png
 share/icons/hicolor/24x24/apps/gpm-hibernate.png
 share/icons/hicolor/24x24/apps/gpm-inhibit.png
@@ -211,7 +218,9 @@ share/icons/hicolor/24x24/apps/gpm-ups-100.png
 share/icons/hicolor/24x24/apps/gpm-ups-charged.png
 share/icons/hicolor/24x24/apps/gpm-ups-missing.png
 share/icons/hicolor/scalable/apps/gpm-ac-adapter.svg
+share/icons/hicolor/scalable/apps/gpm-brightness-kbd-disabled.svg
 share/icons/hicolor/scalable/apps/gpm-brightness-kbd.svg
+share/icons/hicolor/scalable/apps/gpm-brightness-lcd-disabled.svg
 share/icons/hicolor/scalable/apps/gpm-brightness-lcd.svg
 share/icons/hicolor/scalable/apps/gpm-hibernate.svg
 share/icons/hicolor/scalable/apps/gpm-inhibit.svg

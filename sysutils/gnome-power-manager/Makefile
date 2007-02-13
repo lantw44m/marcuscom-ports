@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.19 2006/12/22 18:50:52 marcus Exp $
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.20 2007/01/23 14:26:13 ahze Exp $
 #
 
 PORTNAME=	gnome-power-manager
-PORTVERSION=	2.17.90
+PORTVERSION=	2.17.91
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -41,8 +41,7 @@ GCONF_SCHEMAS=	gnome-power-manager.schemas
 MAN1=		gnome-power-manager.1 gnome-power-preferences.1
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lresolv|| ; \
-	    	s|-Werror||g' \
-	    	${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|-lresolv|| ; s|-Werror||g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
