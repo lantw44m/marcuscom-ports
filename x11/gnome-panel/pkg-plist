@@ -145,6 +145,10 @@ share/gnome/help/window-list/ko/figures/window_list_group.png
 share/gnome/help/window-list/ko/figures/window_list_group_applet.png
 share/gnome/help/window-list/ko/legal.xml
 share/gnome/help/window-list/ko/window-list.xml
+share/gnome/help/window-list/pa/figures/window_list_applet.png
+share/gnome/help/window-list/pa/figures/window_list_group_applet.png
+share/gnome/help/window-list/pa/legal.xml
+share/gnome/help/window-list/pa/window-list.xml
 share/gnome/help/window-list/ru/figures/window_list_applet.png
 share/gnome/help/window-list/ru/figures/window_list_group_applet.png
 share/gnome/help/window-list/ru/legal.xml
@@ -192,6 +196,9 @@ share/gnome/help/workspace-switcher/ko/workspace-switcher.xml
 share/gnome/help/workspace-switcher/nl/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/nl/legal.xml
 share/gnome/help/workspace-switcher/nl/workspace-switcher.xml
+share/gnome/help/workspace-switcher/pa/figures/workspace_switcher_applet.png
+share/gnome/help/workspace-switcher/pa/legal.xml
+share/gnome/help/workspace-switcher/pa/workspace-switcher.xml
 share/gnome/help/workspace-switcher/ru/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/ru/legal.xml
 share/gnome/help/workspace-switcher/ru/workspace-switcher.xml
@@ -249,6 +256,7 @@ share/gnome/omf/window-list/window-list-C.omf
 share/gnome/omf/window-list/window-list-es.omf
 share/gnome/omf/window-list/window-list-fr.omf
 share/gnome/omf/window-list/window-list-it.omf
+share/gnome/omf/window-list/window-list-pa.omf
 share/gnome/omf/window-list/window-list-ru.omf
 share/gnome/omf/window-list/window-list-sv.omf
 share/gnome/omf/window-list/window-list-uk.omf
@@ -258,6 +266,7 @@ share/gnome/omf/workspace-switcher/workspace-switcher-es.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-fr.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-it.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-nl.omf
+share/gnome/omf/workspace-switcher/workspace-switcher-pa.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-ru.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-sv.omf
 share/gnome/omf/workspace-switcher/workspace-switcher-uk.omf
@@ -431,6 +440,8 @@ share/locale/zu/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/help/workspace-switcher/sv
 @dirrm share/gnome/help/workspace-switcher/ru/figures
 @dirrm share/gnome/help/workspace-switcher/ru
+@dirrm share/gnome/help/workspace-switcher/pa/figures
+@dirrm share/gnome/help/workspace-switcher/pa
 @dirrm share/gnome/help/workspace-switcher/nl/figures
 @dirrm share/gnome/help/workspace-switcher/nl
 @dirrm share/gnome/help/workspace-switcher/ko/figures
@@ -458,6 +469,8 @@ share/locale/zu/LC_MESSAGES/gnome-panel-2.0.mo
 @dirrm share/gnome/help/window-list/sv
 @dirrm share/gnome/help/window-list/ru/figures
 @dirrm share/gnome/help/window-list/ru
+@dirrm share/gnome/help/window-list/pa/figures
+@dirrm share/gnome/help/window-list/pa
 @dirrm share/gnome/help/window-list/ko/figures
 @dirrm share/gnome/help/window-list/ko
 @dirrm share/gnome/help/window-list/ja/figures
