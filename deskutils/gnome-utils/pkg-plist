@@ -24,11 +24,11 @@ lib/libgdict-1.0.so.5
 libdata/bonobo/servers/GNOME_DictionaryApplet.server
 libdata/pkgconfig/gdict-1.0.pc
 libexec/gnome-dictionary-applet
-share/doc/gdict/GdictClientContext.html
-share/doc/gdict/GdictDefbox.html
-share/doc/gdict/GdictEntry.html
-share/doc/gdict/GdictSource.html
-share/doc/gdict/GdictSourceLoader.html
+share/doc/gdict/gdict-GdictClientContext.html
+share/doc/gdict/gdict-GdictDefbox.html
+share/doc/gdict/gdict-GdictEntry.html
+share/doc/gdict/gdict-GdictSource.html
+share/doc/gdict/gdict-GdictSourceLoader.html
 share/doc/gdict/gdict-gdict-context.html
 share/doc/gdict/gdict.devhelp
 share/doc/gdict/gdict.devhelp2
@@ -68,6 +68,12 @@ share/gnome/help/baobab/C/figures/baobab_remote.png
 share/gnome/help/baobab/C/figures/baobab_treemaps.png
 share/gnome/help/baobab/C/figures/baobab_window.png
 share/gnome/help/baobab/C/legal.xml
+share/gnome/help/baobab/en_GB/baobab.xml
+share/gnome/help/baobab/en_GB/figures/baobab_fullscan.png
+share/gnome/help/baobab/en_GB/figures/baobab_prefs.png
+share/gnome/help/baobab/en_GB/figures/baobab_remote.png
+share/gnome/help/baobab/en_GB/figures/baobab_treemaps.png
+share/gnome/help/baobab/en_GB/figures/baobab_window.png
 share/gnome/help/baobab/es/baobab.xml
 share/gnome/help/baobab/es/figures/baobab_fullscan.png
 share/gnome/help/baobab/es/figures/baobab_prefs.png
@@ -175,6 +181,7 @@ share/gnome/help/gnome-system-log/sv/gnome-system-log.xml
 share/gnome/help/gnome-system-log/uk/figures/syslog_window.png
 share/gnome/help/gnome-system-log/uk/gnome-system-log.xml
 share/gnome/omf/baobab/baobab-C.omf
+share/gnome/omf/baobab/baobab-en_GB.omf
 share/gnome/omf/baobab/baobab-es.omf
 share/gnome/omf/baobab/baobab-fr.omf
 share/gnome/omf/baobab/baobab-sv.omf
@@ -322,6 +329,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/baobab/fr
 @dirrm share/gnome/help/baobab/es/figures
 @dirrm share/gnome/help/baobab/es
+@dirrm share/gnome/help/baobab/en_GB/figures
+@dirrm share/gnome/help/baobab/en_GB
 @dirrm share/gnome/help/baobab/C/figures
 @dirrm share/gnome/help/baobab/C
 @dirrm share/gnome/help/baobab
