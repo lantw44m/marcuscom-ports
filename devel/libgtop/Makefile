@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/libgtop/Makefile,v 1.13 2007/02/13 06:04:50 mezz Exp $
 #
 
 PORTNAME=	libgtop
-PORTVERSION=	2.14.6.${SNAPVERSION}
+PORTVERSION=	2.14.7.${SNAPVERSION}
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 #MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -33,7 +33,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 INFO=		libgtop2
 
-SNAPVERSION=	20070128
+SNAPVERSION=	20070213
 
 .include <bsd.port.pre.mk>
 
