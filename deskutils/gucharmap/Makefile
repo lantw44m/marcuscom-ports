@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/deskutils/gucharmap/Makefile,v 1.30 2006/10/14 08:35:10 marcus Exp $
-#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.30 2006/10/02 04:52:51 bland Exp $
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.32 2007/02/01 01:22:36 marcus Exp $
 #
 
 PORTNAME=	gucharmap
-PORTVERSION=	1.8.0
-PORTREVISION=	1
+PORTVERSION=	1.9.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -47,9 +46,5 @@ PKGNAMESUFFIX:=	-gnome
 .else
 CONFIGURE_ARGS=	--disable-gnome
 .endif
-
-post-patch:
-	@${FIND} ${WRKSRC}/help -name gucharmap.xml | ${XARGS} ${REINPLACE_CMD} -e \
-	    	's|<publisher>|<publisher role="maintainer">|g'
 
 .include <bsd.port.post.mk>
