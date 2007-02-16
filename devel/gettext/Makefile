@@ -3,7 +3,7 @@
 # Whom:                Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD: ports/devel/gettext/Makefile,v 1.74 2006/02/23 10:35:39 ade Exp $
-#  $MCom$
+#  $MCom: ports/devel/gettext/Makefile,v 1.6 2007/02/01 10:05:40 pav Exp $
 #
 
 PORTNAME=	gettext
@@ -48,15 +48,8 @@ INFO=		autosprintf gettext
 	to "make".  Please unset it and restart the build.
 .endif
 
-.include <bsd.port.pre.mk>
-
 .if defined (NOPORTDOCS)
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-nodocs
-.endif
-
-.if ${OSVERSION} < 500000
-CONFIGURE_ARGS+=	--with-libexpat-prefix=${LOCALBASE}/lib
-LIB_DEPENDS+=	expat.6:${PORTSDIR}/textproc/expat2
 .endif
 
 pre-extract:
@@ -68,8 +61,10 @@ pre-extract:
 	@sleep 5
 .endif
 
-.if defined (NOPORTDOCS)
 post-patch:
+	@${FIND} ${WRKSRC} -name configure -print | ${XARGS} \
+	    ${REINPLACE_CMD} -e 's|mkdir gmkdir|mkdir|'
+.if defined (NOPORTDOCS)
 .for dir in runtime tools
 	@${REINPLACE_CMD} -e 's|^SUBDIRS = doc|SUBDIRS =|' \
 		${WRKSRC}/gettext-${dir}/Makefile.in
@@ -92,4 +87,4 @@ post-install:
 	@${MKDIR} ${X11BASE}/share/locale
 	@cd ${WRKSRC}/gettext-tools/doc && make install-info-am
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
