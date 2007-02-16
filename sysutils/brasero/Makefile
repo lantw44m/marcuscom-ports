@@ -2,8 +2,8 @@
 # Date created:		2006-05-12
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/brasero/Makefile,v 1.2 2006/11/14 12:54:40 jylefort Exp $
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.11 2006/09/08 00:44:18 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.13 2006/11/16 22:39:30 ahze Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	0.5.1

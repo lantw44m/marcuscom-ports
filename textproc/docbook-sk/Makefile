@@ -2,7 +2,7 @@
 # Date created:		16 January 2003
 # Whom:			marcus@FreeBSD.org
 #
-# $FreeBSD: ports/textproc/docbook-sk/Makefile,v 1.27 2005/02/14 08:43:48 pav Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	docbook-sk

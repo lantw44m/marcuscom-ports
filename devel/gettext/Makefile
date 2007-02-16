@@ -2,8 +2,8 @@
 # Date created:        16 March 1998
 # Whom:                Yukihiro Nakai <Nakai@technologist.com>
 #
-# $FreeBSD: ports/devel/gettext/Makefile,v 1.74 2006/02/23 10:35:39 ade Exp $
-#  $MCom: ports/devel/gettext/Makefile,v 1.6 2007/02/01 10:05:40 pav Exp $
+# $FreeBSD$
+#  $MCom: ports/devel/gettext/Makefile,v 1.7 2007/02/16 04:18:54 mezz Exp $
 #
 
 PORTNAME=	gettext

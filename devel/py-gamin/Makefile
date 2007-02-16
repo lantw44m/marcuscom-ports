@@ -2,7 +2,7 @@
 # Date Created:			24 March 2005
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/py-gamin/Makefile,v 1.7 2006/02/23 10:36:13 ade Exp $
+# $FreeBSD$
 #
 
 PORTREVISION=	0

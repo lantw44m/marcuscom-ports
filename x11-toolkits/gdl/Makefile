@@ -2,8 +2,8 @@
 # Date created:				24 July 2001
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gdl/Makefile,v 1.23 2006/10/14 08:52:21 marcus Exp $
-#   $MCom: ports/x11-toolkits/gdl/Makefile,v 1.6 2007/01/19 12:34:32 ahze Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-toolkits/gdl/Makefile,v 1.7 2007/02/11 21:07:58 mezz Exp $
 #
 
 PORTNAME=	gdl

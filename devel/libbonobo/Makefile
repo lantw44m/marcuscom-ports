@@ -2,8 +2,8 @@
 # Date Created:			14 February 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libbonobo/Makefile,v 1.53 2006/10/26 08:10:12 jylefort Exp $
-#    $MCom: ports/devel/libbonobo/Makefile,v 1.54 2007/01/23 13:31:54 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/devel/libbonobo/Makefile,v 1.55 2007/02/12 21:23:46 marcus Exp $
 #
 
 PORTNAME=	libbonobo

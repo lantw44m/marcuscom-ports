@@ -2,8 +2,8 @@
 # Date Created: 2002 01 02
 # Whom: dgilbert@velocet.ca
 #
-# $FreeBSD: ports/print/gutenprint/Makefile,v 1.29 2006/12/24 20:37:52 mezz Exp $
-#    $MCom: ports/print/gutenprint/Makefile,v 1.3 2006/02/25 00:13:44 marcus Exp $
+# $FreeBSD$
+#    $MCom: ports/print/gutenprint/Makefile,v 1.5 2007/01/01 20:30:47 ahze Exp $
 #
 
 PORTNAME=	gutenprint

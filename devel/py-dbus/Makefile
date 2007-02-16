@@ -2,8 +2,8 @@
 # Date Created:			25 July 2004
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/py-dbus/Makefile,v 1.20 2006/10/14 08:35:15 marcus Exp $
-#    $MCom$
+# $FreeBSD$
+#    $MCom: ports/devel/py-dbus/Makefile,v 1.5 2007/02/04 22:11:10 ahze Exp $
 
 PORTNAME=	dbus
 PORTVERSION=	0.80.1

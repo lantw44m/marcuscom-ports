@@ -2,8 +2,8 @@
 # Date created:				16 August 2004
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/games/gnome-games-extra-data/Makefile,v 1.7 2006/10/14 08:35:33 marcus Exp $
-#   $MCom: ports/games/gnome-games-extra-data/Makefile,v 1.10 2006/07/22 20:55:44 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/games/gnome-games-extra-data/Makefile,v 1.12 2007/01/23 14:31:33 ahze Exp $
 #
 
 PORTNAME=	gnome-games-extra-data

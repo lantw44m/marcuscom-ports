@@ -2,8 +2,8 @@
 # Date created:				02 Mar 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/gucharmap/Makefile,v 1.30 2006/10/14 08:35:10 marcus Exp $
-#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.32 2007/02/01 01:22:36 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.33 2007/02/15 19:45:04 marcus Exp $
 #
 
 PORTNAME=	gucharmap

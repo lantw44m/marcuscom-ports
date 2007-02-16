@@ -2,8 +2,8 @@
 # Date created:				6 April 2001
 # Whom:					Rene Hexel <rh@netbsd.org>
 #
-# $FreeBSD: ports/textproc/scrollkeeper/Makefile,v 1.52 2006/10/14 08:35:42 marcus Exp $
-#    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.4 2006/11/11 07:09:51 marcus Exp $
+# $FreeBSD$
+#    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.5 2006/11/14 07:12:08 marcus Exp $
 
 PORTNAME=	scrollkeeper
 PORTVERSION=	0.3.14
