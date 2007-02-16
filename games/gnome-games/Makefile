@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.134 2007/01/28 04:30:16 marcus Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.135 2007/02/13 20:56:43 marcus Exp $
 #
 
 PORTNAME=	gnome-games
@@ -26,7 +26,7 @@ INSTALLS_ICONS=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui \
-		librsvg2 desktopfileutils pygnome2 gnomedocutils
+		librsvg2 desktopfileutils pygnomedesktop gnomedocutils
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
