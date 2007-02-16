@@ -2,16 +2,17 @@
 # Date created:				05 October 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/vte/Makefile,v 1.60 2006/10/29 03:22:28 marcus Exp $
-#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.65 2007/01/23 14:49:41 ahze Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.66 2007/02/13 21:30:59 marcus Exp $
 #
 
 PORTNAME=	vte
-PORTVERSION=	0.15.3
+PORTVERSION=	0.15.3.0.1691
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	http://people.freebsd.org/~mezz/distfiles/
+#MASTER_SITES=	${MASTER_SITE_GNOME}
+#MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
