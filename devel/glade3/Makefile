@@ -3,11 +3,11 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.25 2006/12/19 13:45:41 ahze Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.26 2007/02/02 18:57:01 mezz Exp $
 #
 
 PORTNAME=	glade3
-PORTVERSION=	3.1.4
+PORTVERSION=	3.1.5
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -20,21 +20,17 @@ INSTALLS_ICONS=	yes
 USE_XLIB=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnometarget gtk20 libxml2 gnomeprefix gnomehack
+USE_GNOME=	gnometarget gtk20 libxml2 gnomeprefix gnomehack \
+		gnome-doc-utils desktopfileutils
 WANT_GNOME=	yes
 USE_GETTEXT=	yes
+INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS} -I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
 
-DOCSDIR=	share/doc/gladeui
-
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 500000
-IGNORE=	does not build on 4.X
-.endif
 
 .if ${HAVE_GNOME:Mlibgnomeui}!=""
 USE_GNOME+=	libgnomeui
@@ -56,5 +52,6 @@ PLIST_SUB+=	PYTHON:="@comment "
 
 post-install:
 	${MKDIR} ${PREFIX}/lib/glade3/bindings
+	@-update-desktop-database
 
 .include <bsd.port.post.mk>
