@@ -263,6 +263,10 @@ share/locale/zh_TW/LC_MESSAGES/seahorse.mo
 @dirrm share/gnome/omf/seahorse
 @dirrm share/gnome/seahorse/glade
 @dirrm share/gnome/seahorse
+@dirrm lib/seahorse
+%%EPHY%%@dirrmtry lib/epiphany/%%EPHY_VERSION%%/extensions
+%%EPHY%%@dirrmtry lib/epiphany/%%EPHY_VERSION%%
+%%EPHY%%@dirrmtry lib/epiphany
 @dirrm include/libcryptui
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
