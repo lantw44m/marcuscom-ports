@@ -1,0 +1,19 @@
+--- python/Makefile.in.orig	Sun Feb 18 12:27:08 2007
++++ python/Makefile.in	Sun Feb 18 12:29:18 2007
+@@ -57,7 +57,6 @@
+ LTLIBRARIES = $(pythonsiteexec_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+ @BUILD_PYTHON_MODULES_TRUE@vtemodule_la_DEPENDENCIES =  \
+-@BUILD_PYTHON_MODULES_TRUE@	$(top_builddir)/src/libvte.la \
+ @BUILD_PYTHON_MODULES_TRUE@	$(am__DEPENDENCIES_1) \
+ @BUILD_PYTHON_MODULES_TRUE@	$(am__DEPENDENCIES_1) \
+ @BUILD_PYTHON_MODULES_TRUE@	$(am__DEPENDENCIES_1) \
+@@ -297,7 +296,7 @@
+ @BUILD_PYTHON_MODULES_TRUE@CLEANFILES = vte.c
+ @BUILD_PYTHON_MODULES_TRUE@vtemodule_la_CFLAGS = $(VTE_CFLAGS) $(X_CFLAGS) $(PYTHON_INCLUDES) $(PYGTK_CFLAGS)
+ @BUILD_PYTHON_MODULES_TRUE@vtemodule_la_SOURCES = vtemodule.c
+-@BUILD_PYTHON_MODULES_TRUE@vtemodule_la_LIBADD = $(top_builddir)/src/libvte.la $(LIBS) $(PYGTK_LIBS) $(VTE_LIBS) $(X_LIBS)
++@BUILD_PYTHON_MODULES_TRUE@vtemodule_la_LIBADD = -lvte $(LIBS) $(PYGTK_LIBS) $(VTE_LIBS) $(X_LIBS)
+ @BUILD_PYTHON_MODULES_TRUE@vtemodule_la_LDFLAGS = -module -avoid-version -export-symbols-regex initvte
+ @BUILD_PYTHON_MODULES_TRUE@nodist_vtemodule_la_SOURCES = vte.c
+ all: all-am
