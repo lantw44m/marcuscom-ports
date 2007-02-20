@@ -112,7 +112,6 @@ include/libgoffice-0.3/goffice/ms-compat/god-drawing-ms-client-handler.h
 include/libgoffice-0.3/goffice/ms-compat/god-drawing-ms.h
 include/libgoffice-0.3/goffice/ms-compat/god-image-ms.h
 include/libgoffice-0.3/goffice/utils/datetime.h
-include/libgoffice-0.3/goffice/utils/format-impl.h
 include/libgoffice-0.3/goffice/utils/go-color.h
 include/libgoffice-0.3/goffice/utils/go-file.h
 include/libgoffice-0.3/goffice/utils/go-font.h
@@ -123,6 +122,7 @@ include/libgoffice-0.3/goffice/utils/go-gradient.h
 include/libgoffice-0.3/goffice/utils/go-image.h
 include/libgoffice-0.3/goffice/utils/go-libxml-extras.h
 include/libgoffice-0.3/goffice/utils/go-line.h
+include/libgoffice-0.3/goffice/utils/go-locale.h
 include/libgoffice-0.3/goffice/utils/go-marker.h
 include/libgoffice-0.3/goffice/utils/go-math.h
 include/libgoffice-0.3/goffice/utils/go-pattern.h
@@ -193,101 +193,6 @@ lib/libgoffice-0.la
 lib/libgoffice-0.so
 lib/libgoffice-0.so.3
 libdata/pkgconfig/libgoffice-0.3.pc
-%%DOCSDIR%%/GOData.html
-%%DOCSDIR%%/GODataMatrix.html
-%%DOCSDIR%%/GODataScalar.html
-%%DOCSDIR%%/GODataVector.html
-%%DOCSDIR%%/GogAxis.html
-%%DOCSDIR%%/GogAxisLine.html
-%%DOCSDIR%%/GogChart.html
-%%DOCSDIR%%/GogDataAllocator.html
-%%DOCSDIR%%/GogDataset.html
-%%DOCSDIR%%/GogErrorBar.html
-%%DOCSDIR%%/GogGraph.html
-%%DOCSDIR%%/GogGrid.html
-%%DOCSDIR%%/GogGridLine.html
-%%DOCSDIR%%/GogLabel.html
-%%DOCSDIR%%/GogLegend.html
-%%DOCSDIR%%/GogObject.html
-%%DOCSDIR%%/GogOutlinedObject.html
-%%DOCSDIR%%/GogPersist.html
-%%DOCSDIR%%/GogPlot.html
-%%DOCSDIR%%/GogRegCurve.html
-%%DOCSDIR%%/GogRegEqn.html
-%%DOCSDIR%%/GogRenderer.html
-%%DOCSDIR%%/GogSeries.html
-%%DOCSDIR%%/GogSeriesLines.html
-%%DOCSDIR%%/GogStyle.html
-%%DOCSDIR%%/GogStyledObject.html
-%%DOCSDIR%%/GogView.html
-%%DOCSDIR%%/ch01.html
-%%DOCSDIR%%/ch02.html
-%%DOCSDIR%%/ch03.html
-%%DOCSDIR%%/ch04.html
-%%DOCSDIR%%/ch05.html
-%%DOCSDIR%%/ch06.html
-%%DOCSDIR%%/ch07.html
-%%DOCSDIR%%/ch08.html
-%%DOCSDIR%%/ch09.html
-%%DOCSDIR%%/ch10.html
-%%DOCSDIR%%/ch11.html
-%%DOCSDIR%%/goffice-GOComboBox.html
-%%DOCSDIR%%/goffice-GOComboColor.html
-%%DOCSDIR%%/goffice-GOComponent.html
-%%DOCSDIR%%/goffice-GODoc.html
-%%DOCSDIR%%/goffice-GODocControl.html
-%%DOCSDIR%%/goffice-GOPluginLoader.html
-%%DOCSDIR%%/goffice-GOPluginService.html
-%%DOCSDIR%%/goffice-GOService.html
-%%DOCSDIR%%/goffice-GoApp.html
-%%DOCSDIR%%/goffice-GoCharmapSel.html
-%%DOCSDIR%%/goffice-GoCmdContext.html
-%%DOCSDIR%%/goffice-GoColor.html
-%%DOCSDIR%%/goffice-GoComboPixmaps.html
-%%DOCSDIR%%/goffice-GoComboText.html
-%%DOCSDIR%%/goffice-GoComponentFactory.html
-%%DOCSDIR%%/goffice-GoFontSel.html
-%%DOCSDIR%%/goffice-GoFormat.html
-%%DOCSDIR%%/goffice-GoFormatSel.html
-%%DOCSDIR%%/goffice-GoGeometry.html
-%%DOCSDIR%%/goffice-GoGlibExtras.html
-%%DOCSDIR%%/goffice-GoGradient.html
-%%DOCSDIR%%/goffice-GoLibxmlExtras.html
-%%DOCSDIR%%/goffice-GoLine.html
-%%DOCSDIR%%/goffice-GoLocaleSel.html
-%%DOCSDIR%%/goffice-GoMarker.html
-%%DOCSDIR%%/goffice-GoObject.html
-%%DOCSDIR%%/goffice-GoOptionMenu.html
-%%DOCSDIR%%/goffice-GoPattern.html
-%%DOCSDIR%%/goffice-GoPluginLoaderModule.html
-%%DOCSDIR%%/goffice-GoRotationSel.html
-%%DOCSDIR%%/goffice-GoSearchReplace.html
-%%DOCSDIR%%/goffice-GogAxisMap.html
-%%DOCSDIR%%/goffice-GogChartMap.html
-%%DOCSDIR%%/goffice-GogControlFooCanvas.html
-%%DOCSDIR%%/goffice-GogEditor.html
-%%DOCSDIR%%/goffice-GogGuru.html
-%%DOCSDIR%%/goffice-GogPlotEngine.html
-%%DOCSDIR%%/goffice-GogTheme.html
-%%DOCSDIR%%/goffice-GogTool.html
-%%DOCSDIR%%/goffice-Math.html
-%%DOCSDIR%%/goffice-Ranges.html
-%%DOCSDIR%%/goffice-RegUTF8.html
-%%DOCSDIR%%/goffice-Regressions.html
-%%DOCSDIR%%/goffice-Units.html
-%%DOCSDIR%%/goffice-go-plugin.html
-%%DOCSDIR%%/goffice.devhelp
-%%DOCSDIR%%/goffice.devhelp2
-%%DOCSDIR%%/home.png
-%%DOCSDIR%%/index.html
-%%DOCSDIR%%/index.sgml
-%%DOCSDIR%%/left.png
-%%DOCSDIR%%/pt01.html
-%%DOCSDIR%%/pt02.html
-%%DOCSDIR%%/pt03.html
-%%DOCSDIR%%/right.png
-%%DOCSDIR%%/style.css
-%%DOCSDIR%%/up.png
 share/gnome/goffice/%%VERSION%%/glade/go-font-sel.glade
 share/gnome/goffice/%%VERSION%%/glade/go-format-sel.glade
 share/gnome/goffice/%%VERSION%%/glade/go-image-save-dialog-extra.glade
@@ -326,6 +231,7 @@ share/gnome/pixmaps/goffice/%%VERSION%%/chart_bar_2_3.png
 share/gnome/pixmaps/goffice/%%VERSION%%/chart_boxplot_1_1.png
 share/gnome/pixmaps/goffice/%%VERSION%%/chart_boxplot_1_2.png
 share/gnome/pixmaps/goffice/%%VERSION%%/chart_bubble_1_1.png
+share/gnome/pixmaps/goffice/%%VERSION%%/chart_colored_1_1.png
 share/gnome/pixmaps/goffice/%%VERSION%%/chart_column_1_1.png
 share/gnome/pixmaps/goffice/%%VERSION%%/chart_column_1_2.png
 share/gnome/pixmaps/goffice/%%VERSION%%/chart_column_1_3.png
@@ -397,6 +303,7 @@ share/gnome/pixmaps/goffice/%%VERSION%%/chart_stock_1_1.png
 share/gnome/pixmaps/goffice/%%VERSION%%/chart_stock_1_2.png
 share/gnome/pixmaps/goffice/%%VERSION%%/chart_stock_2_1.png
 share/gnome/pixmaps/goffice/%%VERSION%%/chart_stock_2_2.png
+share/gnome/pixmaps/goffice/%%VERSION%%/color.xpm
 share/gnome/pixmaps/goffice/%%VERSION%%/column.xpm
 share/gnome/pixmaps/goffice/%%VERSION%%/doughnut.xpm
 share/gnome/pixmaps/goffice/%%VERSION%%/dropbar.xpm
@@ -490,7 +397,6 @@ share/locale/zh_TW/LC_MESSAGES/goffice-%%VERSION%%.mo
 @dirrm share/gnome/goffice/%%VERSION%%/glade
 @dirrm share/gnome/goffice/%%VERSION%%
 @dirrm share/gnome/goffice
-@dirrm %%DOCSDIR%%
 @dirrm lib/goffice/%%VERSION%%/plugins/smoothing
 @dirrm lib/goffice/%%VERSION%%/plugins/reg_logfit
 @dirrm lib/goffice/%%VERSION%%/plugins/reg_linear
@@ -509,6 +415,7 @@ share/locale/zh_TW/LC_MESSAGES/goffice-%%VERSION%%.mo
 @dirrm include/libgoffice-0.3/goffice/graph
 @dirrm include/libgoffice-0.3/goffice/drawing
 @dirrm include/libgoffice-0.3/goffice/data
+@dirrm include/libgoffice-0.3/goffice/cut-n-paste/pcre
 @dirrm include/libgoffice-0.3/goffice/cut-n-paste/foocanvas
 @dirrm include/libgoffice-0.3/goffice/cut-n-paste
 @dirrm include/libgoffice-0.3/goffice/component
