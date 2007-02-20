@@ -3,7 +3,7 @@
 # Whom:					Rene Hexel <rh@netbsd.org>
 #
 # $FreeBSD$
-#    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.5 2006/11/14 07:12:08 marcus Exp $
+#    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.6 2007/02/16 18:14:26 mezz Exp $
 
 PORTNAME=	scrollkeeper
 PORTVERSION=	0.3.14
@@ -31,7 +31,7 @@ DOCBOOK_VERSION=4.2
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	libtool:15
 USE_BISON=	yes
 USE_GNOME=	gnomehack gnomehier gnometarget libxslt intlhack
 USE_LDCONFIG=	yes
