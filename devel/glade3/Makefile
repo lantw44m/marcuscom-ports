@@ -3,11 +3,12 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.26 2007/02/02 18:57:01 mezz Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.27 2007/02/17 20:40:10 mezz Exp $
 #
 
 PORTNAME=	glade3
 PORTVERSION=	3.1.5
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -21,7 +22,7 @@ USE_XLIB=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget gtk20 libxml2 gnomeprefix gnomehack \
-		gnome-doc-utils desktopfileutils
+		gnomedocutils desktopfileutils
 WANT_GNOME=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
