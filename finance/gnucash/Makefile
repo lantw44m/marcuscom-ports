@@ -3,11 +3,11 @@
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
 # $FreeBSD$
-#   $MCom: ports/finance/gnucash/Makefile,v 1.7 2006/10/13 10:26:39 ahze Exp $
+#   $MCom: ports/finance/gnucash/Makefile,v 1.9 2006/12/24 20:17:58 ahze Exp $
 #
 
 PORTNAME=	gnucash
-PORTVERSION=	2.0.3
+PORTVERSION=	2.0.4
 CATEGORIES=	finance gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.gnucash.org/pub/gnucash/sources/stable/
@@ -19,12 +19,12 @@ COMMENT=	Quicken-like money and finance manager
 LIB_DEPENDS=	guile.15:${PORTSDIR}/lang/guile \
 		popt.0:${PORTSDIR}/devel/popt \
 		ofx.3:${PORTSDIR}/finance/libofx \
-		gw-gnc.0:${PORTSDIR}/devel/g-wrap
+		gwrap-core-runtime.0:${PORTSDIR}/devel/g-wrap
 RUN_DEPENDS=	${LOCALBASE}/share/guile/1.6/slibcat:${PORTSDIR}/lang/slib-guile \
-		${SITE_PERL}/HTML/Base.pm:${PORTSDIR}/www/p5-HTML \
 		${SITE_PERL}/LWP.pm:${PORTSDIR}/www/p5-libwww \
 		${SITE_PERL}/Date/Manip.pm:${PORTSDIR}/devel/p5-Date-Manip \
 		${SITE_PERL}/Finance/Quote.pm:${PORTSDIR}/finance/p5-Finance-Quote \
+		${SITE_PERL}/HTML/TableExtract.pm:${PORTSDIR}/www/p5-HTML-TableExtract \
 		${SITE_PERL}/Finance/QuoteHist.pm:${PORTSDIR}/finance/p5-Finance-QuoteHist \
 		${LOCALBASE}/share/gnome/omf/gnucash-docs/gnucash-guide-C.omf:${PORTSDIR}/finance/gnucash-docs
 
