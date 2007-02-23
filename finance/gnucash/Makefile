@@ -3,7 +3,7 @@
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
 # $FreeBSD$
-#   $MCom: ports/finance/gnucash/Makefile,v 1.10 2007/02/20 13:01:00 ahze Exp $
+#   $MCom: ports/finance/gnucash/Makefile,v 1.11 2007/02/21 11:11:15 ahze Exp $
 #
 
 PORTNAME=	gnucash
@@ -36,7 +36,7 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_XPM=	yes
 USE_PERL5=	yes
-USE_GNOME=	gnomeprefix gtkhtml3 libgsf_gnome libglade2
+USE_GNOME=	gnomeprefix gtkhtml3 libgsf_gnome libglade2 \
 		libgnomeprint libgnomeprintui
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
