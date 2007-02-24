@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/gnome-system-tools/Makefile,v 1.55 2007/01/23 13:49:38 ahze Exp $
+#    $MCom: ports/sysutils/gnome-system-tools/Makefile,v 1.56 2007/02/13 05:51:03 marcus Exp $
 
 PORTNAME=	gnome-system-tools
 PORTVERSION=	2.17.91
@@ -34,14 +34,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	gnome-system-tools.schemas
 
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 500000
-IGNORE=	uses symbols not present in 4.X
-.endif
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${prefix}/$${DATADIRNAME}|$${datadir}|g' \
 	    	${WRKSRC}/configure
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libxklavier/Makefile,v 1.30 2006/11/04 20:21:37 marcus Exp $
+#   $MCom: ports/x11/libxklavier/Makefile,v 1.31 2006/12/06 00:54:45 ahze Exp $
 #
 
 PORTNAME=	libxklavier
@@ -33,10 +33,4 @@ CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" \
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 500000
-IGNORE=	does not build on 4.X
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

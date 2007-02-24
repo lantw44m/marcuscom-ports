@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.7 2007/01/07 00:05:37 ahze Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.8 2007/02/16 18:14:25 mezz Exp $
 #
 
 PORTNAME=	gimp
@@ -77,10 +77,6 @@ CONFLICTS=	gimp-1.*
 
 MAN1+=	gimp-2.3.1 gimp-remote-2.3.1 gimptool-2.0.1
 MAN5+=	gimprc-2.3.5
-
-.if ${OSVERSION} < 500000
-IGNORE=	does not build on 4.X
-.endif
 
 .if defined(WITHOUT_RSVG)
 CONFIGURE_ARGS+=	--without-librsvg

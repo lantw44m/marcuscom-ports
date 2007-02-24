@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.67 2007/02/13 07:19:21 mezz Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.68 2007/02/21 04:20:35 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -43,10 +43,6 @@ XSCREENSAVER_EXCLUDE=	"(popsquares.xml)"
 OPTIONS=	PAM "Pluggable Authentication Module support" off
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 500000
-BROKEN=	Does not build on 4.X
-.endif
 
 .if !defined(WITH_PAM)
 CONFIGURE_ARGS+=	--disable-pam
