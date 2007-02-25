@@ -246,9 +246,9 @@ lib/gnumeric/%%VERSION%%/plugins/uihello/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/plugin.xml
 lib/gnumeric/%%VERSION%%/plugins/xbase/xbase.la
 lib/gnumeric/%%VERSION%%/plugins/xbase/xbase.so
-lib/goffice/0.3.5/plugins/gnumeric/gnumeric.la
-lib/goffice/0.3.5/plugins/gnumeric/gnumeric.so
-lib/goffice/0.3.5/plugins/gnumeric/plugin.xml
+lib/goffice/0.3.6/plugins/gnumeric/gnumeric.la
+lib/goffice/0.3.6/plugins/gnumeric/gnumeric.so
+lib/goffice/0.3.6/plugins/gnumeric/plugin.xml
 lib/libspreadsheet-%%VERSION%%.so
 lib/libspreadsheet.la
 lib/libspreadsheet.so
@@ -303,6 +303,7 @@ share/gnome/gnumeric/%%VERSION%%/glade/consolidate.glade
 share/gnome/gnumeric/%%VERSION%%/glade/correlation.glade
 share/gnome/gnumeric/%%VERSION%%/glade/covariance.glade
 share/gnome/gnumeric/%%VERSION%%/glade/dao.glade
+share/gnome/gnumeric/%%VERSION%%/glade/data-table.glade
 share/gnome/gnumeric/%%VERSION%%/glade/define-name.glade
 share/gnome/gnumeric/%%VERSION%%/glade/delete-cells.glade
 share/gnome/gnumeric/%%VERSION%%/glade/descriptive-stats.glade
@@ -344,6 +345,7 @@ share/gnome/gnumeric/%%VERSION%%/glade/shuffle.glade
 share/gnome/gnumeric/%%VERSION%%/glade/simulation.glade
 share/gnome/gnumeric/%%VERSION%%/glade/so-checkbox.glade
 share/gnome/gnumeric/%%VERSION%%/glade/so-frame.glade
+share/gnome/gnumeric/%%VERSION%%/glade/so-list.glade
 share/gnome/gnumeric/%%VERSION%%/glade/so-scrollbar.glade
 share/gnome/gnumeric/%%VERSION%%/glade/solver.glade
 share/gnome/gnumeric/%%VERSION%%/glade/tabulate.glade
@@ -933,7 +935,7 @@ share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
 @dirrm lib/gnumeric/%%VERSION%%/plugins
 @dirrm lib/gnumeric/%%VERSION%%
 @dirrm lib/gnumeric
-@dirrm lib/goffice/0.3.5/plugins/gnumeric
+@dirrm lib/goffice/0.3.6/plugins/gnumeric
 @dirrm include/libspreadsheet-1-7
 @unexec update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
