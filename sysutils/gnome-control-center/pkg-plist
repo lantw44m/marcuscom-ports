@@ -106,7 +106,7 @@ share/gnome/control-center/glade/gnome-window-properties.glade
 share/gnome/control-center/glade/modmap-dialog.glade
 share/gnome/control-center/glade/sound-properties.glade
 share/gnome/control-center/glade/theme-properties.glade
-share/gnome/control-center/gnome-default-applications/gnome-default-applications.xml
+share/gnome/control-center/gnome-default-applications.xml
 share/gnome/control-center/icons/display-capplet.png
 share/gnome/control-center/pixmaps/accessibility-keyboard-bouncekey.png
 share/gnome/control-center/pixmaps/accessibility-keyboard-mousekey.png
@@ -170,6 +170,7 @@ share/gnome/help/control-center/C/config-screensaver.xml
 share/gnome/help/control-center/C/config-sound.xml
 share/gnome/help/control-center/C/config-themes.xml
 share/gnome/help/control-center/C/control-center.xml
+share/gnome/help/control-center/en_GB/control-center.xml
 share/gnome/help/control-center/es/control-center.xml
 share/gnome/help/control-center/fr/control-center.xml
 share/gnome/help/control-center/pa/control-center.xml
@@ -177,6 +178,7 @@ share/gnome/help/control-center/ru/control-center.xml
 share/gnome/help/control-center/sv/control-center.xml
 share/gnome/help/control-center/zh_CN/control-center.xml
 share/gnome/omf/control-center/control-center-C.omf
+share/gnome/omf/control-center/control-center-en_GB.omf
 share/gnome/omf/control-center/control-center-es.omf
 share/gnome/omf/control-center/control-center-fr.omf
 share/gnome/omf/control-center/control-center-pa.omf
@@ -331,20 +333,21 @@ share/mime/packages/gnome-theme-package.xml
 @dirrm share/gnome/help/control-center/pa
 @dirrm share/gnome/help/control-center/fr
 @dirrm share/gnome/help/control-center/es
+@dirrm share/gnome/help/control-center/en_GB
 @dirrm share/gnome/help/control-center/C
 @dirrm share/gnome/help/control-center
 @dirrmtry share/gnome/gnome-background-properties
+@dirrm share/gnome/desktop-directories
 @dirrm share/gnome/cursor-fonts
 @dirrm share/gnome/control-center/xrdb
 @dirrm share/gnome/control-center/pixmaps
 @dirrmtry share/gnome/control-center/icons
-@dirrm share/gnome/control-center/gnome-default-applications
 @dirrm share/gnome/control-center/glade
 @dirrm lib/window-manager-settings
+@dirrm include/slab
 @dirrm include/gnome-window-settings-2.0
 @dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
 @dirrm include/gnome-settings-daemon-2.0
-@dirrm include/slab
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
