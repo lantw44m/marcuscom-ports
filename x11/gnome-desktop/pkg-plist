@@ -20,7 +20,6 @@ share/gnome/gnome-about/headers/header-bg-mountains01.png
 share/gnome/gnome-about/headers/header-bg-snow01.png
 share/gnome/gnome-about/headers/header-bg-sunset01.png
 share/gnome/help/fdl/C/fdl.xml
-share/gnome/help/fdl/en_GB/fdl.xml
 share/gnome/help/fdl/es/fdl.xml
 share/gnome/help/fdl/fr/fdl.xml
 share/gnome/help/fdl/sv/fdl.xml
@@ -42,7 +41,6 @@ share/gnome/help/lgpl/sv/lgpl.xml
 share/gnome/help/lgpl/uk/lgpl.xml
 share/gnome/help/lgpl/zh_CN/lgpl.xml
 share/gnome/omf/fdl/fdl-C.omf
-share/gnome/omf/fdl/fdl-en_GB.omf
 share/gnome/omf/fdl/fdl-es.omf
 share/gnome/omf/fdl/fdl-fr.omf
 share/gnome/omf/fdl/fdl-sv.omf
@@ -321,7 +319,6 @@ share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 @dirrm share/gnome/help/fdl/sv
 @dirrm share/gnome/help/fdl/fr
 @dirrm share/gnome/help/fdl/es
-@dirrm share/gnome/help/fdl/en_GB
 @dirrm share/gnome/gnome-about/headers
 @dirrm include/gnome-desktop-2.0/libgnomeui
 @dirrm include/gnome-desktop-2.0/libgnome
