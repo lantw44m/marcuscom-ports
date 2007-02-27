@@ -3,11 +3,11 @@
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/libgnomeprint/Makefile,v 1.61 2007/01/23 13:53:06 ahze Exp $
+#   $MCom: ports/print/libgnomeprint/Makefile,v 1.62 2007/02/12 22:19:40 marcus Exp $
 #
 
 PORTNAME=	libgnomeprint
-PORTVERSION=	2.17.91
+PORTVERSION=	2.17.92
 PORTREVISION?=	0
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}

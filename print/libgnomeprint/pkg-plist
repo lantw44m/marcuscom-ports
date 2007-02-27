@@ -39,9 +39,6 @@ lib/libgnomeprint-2-2.a
 lib/libgnomeprint-2-2.la
 lib/libgnomeprint-2-2.so
 lib/libgnomeprint-2-2.so.0
-%%CUPS:%%lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintcups.a
-%%CUPS:%%lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintcups.la
-%%CUPS:%%lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintcups.so
 lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-clip.a
 lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-clip.la
 lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-clip.so
@@ -72,6 +69,9 @@ lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-select.so
 lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-zoom.a
 lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-zoom.la
 lib/libgnomeprint/%%VERSION%%/modules/filters/libgnomeprint-zoom.so
+%%CUPS:%%lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintcups.a
+%%CUPS:%%lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintcups.la
+%%CUPS:%%lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintcups.so
 lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintlpd.a
 lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintlpd.la
 lib/libgnomeprint/%%VERSION%%/modules/libgnomeprintlpd.so
