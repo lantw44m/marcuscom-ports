@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.411 2007/02/13 06:10:45 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.412 2007/02/13 22:41:09 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -460,7 +460,7 @@ intlhack_PRE_PATCH=		${FIND} ${WRKSRC} -name "intltool-merge.in" | ${XARGS} ${RE
 				 s|unpack *[(]'"'"'U\*'"'"'|unpack ('"'"'C*'"'"'|'
 intlhack_USE_GNOME_IMPL=intltool
 
-gtkhtml3_LIB_DEPENDS=	gtkhtml-3.8.15:${PORTSDIR}/www/gtkhtml3
+gtkhtml3_LIB_DEPENDS=	gtkhtml-3.8.19:${PORTSDIR}/www/gtkhtml3
 gtkhtml3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgtkhtml-3.8.pc
 gtkhtml3_USE_GNOME_IMPL=gail libgnomeui
 
