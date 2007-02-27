@@ -3,12 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.68 2007/02/21 04:20:35 marcus Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.69 2007/02/24 21:00:46 mezz Exp $
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	2.17.7
-PORTREVISION=	1
+PORTVERSION=	2.17.8
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -59,6 +58,7 @@ pre-install:
 post-install:
 	${CHOWN} root ${PREFIX}/libexec/gnome-screensaver-dialog
 	${CHMOD} +s ${PREFIX}/libexec/gnome-screensaver-dialog
+	${MKDIR} ${PREFIX}/${SCREENSAVER_DIR}
 	cd ${PREFIX}/${SCREENSAVER_DIR} && \
 		${FIND} -s ${XSCREENSAVER_DIR} -maxdepth 1 -type f -name "*.xml" | \
 			${GREP} -Ev ${XSCREENSAVER_EXCLUDE} | \
