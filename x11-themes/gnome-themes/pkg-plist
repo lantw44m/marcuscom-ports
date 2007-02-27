@@ -2623,7 +2623,7 @@ share/themes/HighContrastLargePrintInverse/pixmaps/volume-min.png
 share/themes/HighContrastLargePrintInverse/pixmaps/volume-mute.png
 share/themes/HighContrastLargePrintInverse/pixmaps/volume-zero.png
 share/themes/LargePrint/gtk-2.0/gtkrc
-share/themes/LargePrint/index.theme
+share/themes/LargePrint/index.theme.disabled
 share/themes/LargePrint/pixmaps/double-click-maybe.png
 share/themes/LargePrint/pixmaps/double-click-off.png
 share/themes/LargePrint/pixmaps/double-click-on.png
@@ -2762,7 +2762,7 @@ share/themes/LargePrint/pixmaps/volume-min.png
 share/themes/LargePrint/pixmaps/volume-mute.png
 share/themes/LargePrint/pixmaps/volume-zero.png
 share/themes/LowContrast/gtk-2.0/gtkrc
-share/themes/LowContrast/index.theme.disabled
+share/themes/LowContrast/index.theme
 share/themes/LowContrastLargePrint/gtk-2.0/gtkrc
 share/themes/LowContrastLargePrint/index.theme.disabled
 share/themes/LowContrastLargePrint/pixmaps/double-click-maybe.png
