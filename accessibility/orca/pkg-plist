@@ -160,9 +160,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-keyring-ask.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-keyring-ask.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-keyring-ask.pyo
-%%PYTHON_SITELIBDIR%%/orca/scripts/gnome_segv2.py
-%%PYTHON_SITELIBDIR%%/orca/scripts/gnome_segv2.pyc
-%%PYTHON_SITELIBDIR%%/orca/scripts/gnome_segv2.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-power-manager.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-power-manager.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-power-manager.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.pyo
@@ -172,6 +172,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-window-properties.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-window-properties.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-window-properties.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome_segv2.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome_segv2.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome_segv2.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/liferea.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/liferea.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/liferea.pyo
@@ -245,6 +248,7 @@ share/locale/ne/LC_MESSAGES/orca.mo
 share/locale/nl/LC_MESSAGES/orca.mo
 share/locale/or/LC_MESSAGES/orca.mo
 share/locale/pa/LC_MESSAGES/orca.mo
+share/locale/pl/LC_MESSAGES/orca.mo
 share/locale/pt/LC_MESSAGES/orca.mo
 share/locale/pt_BR/LC_MESSAGES/orca.mo
 share/locale/ru/LC_MESSAGES/orca.mo
@@ -281,6 +285,8 @@ share/locale/zh_TW/LC_MESSAGES/orca.mo
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/pt/LC_MESSAGES
 @dirrmtry share/locale/pt
+@dirrmtry share/locale/pl/LC_MESSAGES
+@dirrmtry share/locale/pl
 @dirrmtry share/locale/ne/LC_MESSAGES
 @dirrmtry share/locale/ne
 @dirrmtry share/locale/mr/LC_MESSAGES
