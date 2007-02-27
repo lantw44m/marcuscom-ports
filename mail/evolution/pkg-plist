@@ -506,11 +506,8 @@ share/gnome/evolution/%%VERSION%%/help/quickref/C/quickref.pdf
 share/gnome/evolution/%%VERSION%%/help/quickref/de/quickref.pdf
 share/gnome/evolution/%%VERSION%%/help/quickref/es/quickref.pdf
 share/gnome/evolution/%%VERSION%%/help/quickref/sv/quickref.pdf
-share/gnome/evolution/%%VERSION%%/images/about-box.png
-share/gnome/evolution/%%VERSION%%/images/bcg.png
 share/gnome/evolution/%%VERSION%%/images/evolution-contacts-mini.png
 share/gnome/evolution/%%VERSION%%/images/minus.png
-share/gnome/evolution/%%VERSION%%/images/monkey-16.png
 share/gnome/evolution/%%VERSION%%/images/offline.png
 share/gnome/evolution/%%VERSION%%/images/online.png
 share/gnome/evolution/%%VERSION%%/images/plus.png
@@ -726,7 +723,11 @@ share/gnome/mime-info/evolution.mime
 share/gnome/omf/evolution/evolution-C.omf
 share/gnome/omf/evolution/evolution-es.omf
 share/gnome/omf/evolution/evolution-sv.omf
-share/gnome/pixmaps/evolution-%%VERSION%%.png
+share/icons/hicolor/16x16/apps/evolution.png
+share/icons/hicolor/22x22/apps/evolution.png
+share/icons/hicolor/24x24/apps/evolution.png
+share/icons/hicolor/32x32/apps/evolution.png
+share/icons/hicolor/scalable/apps/evolution.svg
 share/locale/am/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ar/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-%%VERSION%%.mo
