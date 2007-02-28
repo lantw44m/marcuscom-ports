@@ -198,27 +198,6 @@ share/gnome/blackjack/Ameristar.rules
 share/gnome/blackjack/Atlantic_City.rules
 share/gnome/blackjack/Vegas_Downtown.rules
 share/gnome/blackjack/Vegas_Strip.rules
-share/gnome/ggz/gnome-games/about_bg.png
-share/gnome/ggz/gnome-games/ggz_gtk_admin.svg
-share/gnome/ggz/gnome-games/ggz_gtk_bot.svg
-share/gnome/ggz/gnome-games/ggz_gtk_guest.svg
-share/gnome/ggz/gnome-games/ggz_gtk_lag0.svg
-share/gnome/ggz/gnome-games/ggz_gtk_lag1.svg
-share/gnome/ggz/gnome-games/ggz_gtk_lag2.svg
-share/gnome/ggz/gnome-games/ggz_gtk_lag3.svg
-share/gnome/ggz/gnome-games/ggz_gtk_lag4.svg
-share/gnome/ggz/gnome-games/ggz_gtk_lag5.svg
-share/gnome/ggz/gnome-games/ggz_gtk_registered.svg
-share/gnome/glchess/ai.glade
-share/gnome/glchess/ai.xml
-share/gnome/glchess/chess_view.glade
-share/gnome/glchess/error_dialog.glade
-share/gnome/glchess/glchess.glade
-share/gnome/glchess/glchess.svg
-share/gnome/glchess/load_game.glade
-share/gnome/glchess/new_game.glade
-share/gnome/glchess/save_game.glade
-@unexec [ -s %D/share/gnome/games/glines.scores ] || rm -f %D/share/gnome/games/glines.scores
 @unexec [ -s %D/share/gnome/games/glines.Large.scores ] || rm -f %D/share/gnome/games/glines.Large.scores
 @unexec [ -s %D/share/gnome/games/glines.Medium.scores ] || rm -f %D/share/gnome/games/glines.Medium.scores
 @unexec [ -s %D/share/gnome/games/glines.Small.scores ] || rm -f %D/share/gnome/games/glines.Small.scores
@@ -294,7 +273,6 @@ share/gnome/glchess/save_game.glade
 @unexec [ -s %D/share/gnome/games/gnotski.9.scores ] || rm -f %D/share/gnome/games/gnotski.9.scores
 @unexec [ -s %D/share/gnome/games/gtali.Colors.scores ] || rm -f %D/share/gnome/games/gtali.Colors.scores
 @unexec [ -s %D/share/gnome/games/gtali.Regular.scores ] || rm -f %D/share/gnome/games/gtali.Regular.scores
-@unexec [ -s %D/share/gnome/games/gtali.scores ] || rm -f %D/share/gnome/games/gtali.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.bridges.scores ] || rm -f %D/share/gnome/games/mahjongg.bridges.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.cloud.scores ] || rm -f %D/share/gnome/games/mahjongg.cloud.scores
 @unexec [ -s %D/share/gnome/games/mahjongg.confounding.scores ] || rm -f %D/share/gnome/games/mahjongg.confounding.scores
@@ -308,6 +286,26 @@ share/gnome/glchess/save_game.glade
 @unexec [ -s %D/share/gnome/games/same-gnome.Medium.scores ] || rm -f %D/share/gnome/games/same-gnome.Medium.scores
 @unexec [ -s %D/share/gnome/games/same-gnome.Small.scores ] || rm -f %D/share/gnome/games/same-gnome.Small.scores
 @unexec [ -L %D/share/gnome/games/same-gnome.scores ] || rm -f %D/share/gnome/games/same-gnome.scores
+share/gnome/ggz/gnome-games/about_bg.png
+share/gnome/ggz/gnome-games/ggz_gtk_admin.svg
+share/gnome/ggz/gnome-games/ggz_gtk_bot.svg
+share/gnome/ggz/gnome-games/ggz_gtk_guest.svg
+share/gnome/ggz/gnome-games/ggz_gtk_lag0.svg
+share/gnome/ggz/gnome-games/ggz_gtk_lag1.svg
+share/gnome/ggz/gnome-games/ggz_gtk_lag2.svg
+share/gnome/ggz/gnome-games/ggz_gtk_lag3.svg
+share/gnome/ggz/gnome-games/ggz_gtk_lag4.svg
+share/gnome/ggz/gnome-games/ggz_gtk_lag5.svg
+share/gnome/ggz/gnome-games/ggz_gtk_registered.svg
+share/gnome/glchess/ai.glade
+share/gnome/glchess/ai.xml
+share/gnome/glchess/chess_view.glade
+share/gnome/glchess/error_dialog.glade
+share/gnome/glchess/glchess.glade
+share/gnome/glchess/glchess.svg
+share/gnome/glchess/load_game.glade
+share/gnome/glchess/new_game.glade
+share/gnome/glchess/save_game.glade
 share/gnome/gnect/white_ob.cn4.gz
 share/gnome/gnibbles/level001.gnl
 share/gnome/gnibbles/level002.gnl
@@ -394,8 +392,8 @@ share/gnome/help/aisleriot/C/isabel.xml
 share/gnome/help/aisleriot/C/jamestown.xml
 share/gnome/help/aisleriot/C/jumbo.xml
 share/gnome/help/aisleriot/C/kansas.xml
-share/gnome/help/aisleriot/C/kings_audience.xml
 share/gnome/help/aisleriot/C/king_albert.xml
+share/gnome/help/aisleriot/C/kings_audience.xml
 share/gnome/help/aisleriot/C/klondike.xml
 share/gnome/help/aisleriot/C/labyrinth.xml
 share/gnome/help/aisleriot/C/lady_jane.xml
@@ -435,8 +433,8 @@ share/gnome/help/aisleriot/C/yield.xml
 share/gnome/help/aisleriot/C/yukon.xml
 share/gnome/help/aisleriot/C/zebra.xml
 share/gnome/help/aisleriot/fr/agnes.xml
-share/gnome/help/aisleriot/fr/athena.xml
 share/gnome/help/aisleriot/fr/aisleriot.xml
+share/gnome/help/aisleriot/fr/athena.xml
 share/gnome/help/aisleriot/fr/auld_lang_syne.xml
 share/gnome/help/aisleriot/fr/aunt_mary.xml
 share/gnome/help/aisleriot/fr/backbone.xml
@@ -478,8 +476,8 @@ share/gnome/help/aisleriot/fr/isabel.xml
 share/gnome/help/aisleriot/fr/jamestown.xml
 share/gnome/help/aisleriot/fr/jumbo.xml
 share/gnome/help/aisleriot/fr/kansas.xml
-share/gnome/help/aisleriot/fr/kings_audience.xml
 share/gnome/help/aisleriot/fr/king_albert.xml
+share/gnome/help/aisleriot/fr/kings_audience.xml
 share/gnome/help/aisleriot/fr/klondike.xml
 share/gnome/help/aisleriot/fr/labyrinth.xml
 share/gnome/help/aisleriot/fr/lady_jane.xml
@@ -531,6 +529,10 @@ share/gnome/help/glines/C/figures/glines-startgame.png
 share/gnome/help/glines/C/figures/preferences.png
 share/gnome/help/glines/C/glines.xml
 share/gnome/help/glines/C/legal.xml
+share/gnome/help/glines/sv/figures/glines-gameover.png
+share/gnome/help/glines/sv/figures/glines-startgame.png
+share/gnome/help/glines/sv/figures/preferences.png
+share/gnome/help/glines/sv/glines.xml
 share/gnome/help/gnect/C/figures/mainwindow.png
 share/gnome/help/gnect/C/figures/tileset.png
 share/gnome/help/gnect/C/gnect.xml
@@ -608,8 +610,12 @@ share/gnome/help/same-gnome/C/figures/play.png
 share/gnome/help/same-gnome/C/figures/start-up.png
 share/gnome/help/same-gnome/C/legal.xml
 share/gnome/help/same-gnome/C/same-gnome.xml
+share/gnome/help/same-gnome/sv/figures/play.png
+share/gnome/help/same-gnome/sv/figures/start-up.png
+share/gnome/help/same-gnome/sv/same-gnome.xml
 share/gnome/omf/glchess/glchess-C.omf
 share/gnome/omf/glines/glines-C.omf
+share/gnome/omf/glines/glines-sv.omf
 share/gnome/omf/gnect/gnect-C.omf
 share/gnome/omf/gnect/gnect-sv.omf
 share/gnome/omf/gnome-games/aisleriot-C.omf
@@ -629,6 +635,7 @@ share/gnome/omf/gnome-games/gtali-da.omf
 share/gnome/omf/gnome-games/iagno-C.omf
 share/gnome/omf/gnome-games/mahjongg-C.omf
 share/gnome/omf/same-gnome/same-gnome-C.omf
+share/gnome/omf/same-gnome/same-gnome-sv.omf
 share/gnome/pixmaps/blackjack/baize.png
 share/gnome/pixmaps/blackjack/blackjack-splash.png
 share/gnome/pixmaps/blackjack/chip-1.svg
@@ -726,9 +733,9 @@ share/gnome/pixmaps/mahjongg/postmodern.svg
 share/gnome/pixmaps/mahjongg/smooth.png
 share/gnome/pixmaps/sudoku.png
 share/gnome/sol-games/agnes.scm
-share/gnome/sol-games/aunt_mary.scm
 share/gnome/sol-games/athena.scm
 share/gnome/sol-games/auld_lang_syne.scm
+share/gnome/sol-games/aunt_mary.scm
 share/gnome/sol-games/backbone.scm
 share/gnome/sol-games/bakers_dozen.scm
 share/gnome/sol-games/bakers_game.scm
@@ -766,8 +773,8 @@ share/gnome/sol-games/isabel.scm
 share/gnome/sol-games/jamestown.scm
 share/gnome/sol-games/jumbo.scm
 share/gnome/sol-games/kansas.scm
-share/gnome/sol-games/kings_audience.scm
 share/gnome/sol-games/king_albert.scm
+share/gnome/sol-games/kings_audience.scm
 share/gnome/sol-games/klondike.scm
 share/gnome/sol-games/labyrinth.scm
 share/gnome/sol-games/lady_jane.scm
@@ -943,13 +950,13 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/pixmaps/mahjongg
 @dirrm share/gnome/pixmaps/iagno
 @dirrm share/gnome/pixmaps/gtali
+@dirrm share/gnome/pixmaps/gnotravex
 @dirrm share/gnome/pixmaps/gnomine
 @dirrm share/gnome/pixmaps/gnometris
 @dirrm share/gnome/pixmaps/gnome-sudoku
 @dirrm share/gnome/pixmaps/gnome-games-common/icons
 @dirrm share/gnome/pixmaps/gnome-games-common/cards
 @dirrm share/gnome/pixmaps/gnome-games-common
-@dirrm share/gnome/pixmaps/gnotravex
 @dirrm share/gnome/pixmaps/gnobots2
 @dirrm share/gnome/pixmaps/gnibbles
 @dirrm share/gnome/pixmaps/gnect
@@ -963,6 +970,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/omf/gnect
 @dirrm share/gnome/omf/glines
 @dirrm share/gnome/omf/glchess
+@dirrm share/gnome/help/same-gnome/sv/figures
+@dirrm share/gnome/help/same-gnome/sv
 @dirrm share/gnome/help/same-gnome/C/figures
 @dirrm share/gnome/help/same-gnome/C
 @dirrm share/gnome/help/same-gnome
@@ -1004,6 +1013,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/gnect/C/figures
 @dirrm share/gnome/help/gnect/C
 @dirrm share/gnome/help/gnect
+@dirrm share/gnome/help/glines/sv/figures
+@dirrm share/gnome/help/glines/sv
 @dirrm share/gnome/help/glines/C/figures
 @dirrm share/gnome/help/glines/C
 @dirrm share/gnome/help/glines
@@ -1031,8 +1042,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/ggz/gnome-games
 @dirrm share/gnome/ggz
 @dirrm share/gnome/blackjack
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku/gtk_goodies
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/ui
@@ -1043,6 +1052,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/gtkui
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/chess
 @dirrm %%PYTHON_SITELIBDIR%%/glchess
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
