@@ -3,10 +3,10 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/py-dbus/Makefile,v 1.5 2007/02/04 22:11:10 ahze Exp $
+#    $MCom: ports/devel/py-dbus/Makefile,v 1.6 2007/02/16 18:14:24 mezz Exp $
 
 PORTNAME=	dbus
-PORTVERSION=	0.80.1
+PORTVERSION=	0.80.2
 CATEGORIES=	devel gnome python
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
