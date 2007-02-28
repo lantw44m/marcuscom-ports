@@ -43,6 +43,9 @@ share/gnome/help/gnome-system-monitor/sv/figures/sortMenu2.png
 share/gnome/help/gnome-system-monitor/sv/figures/systemMonitor.png
 share/gnome/help/gnome-system-monitor/sv/figures/viewMenu.png
 share/gnome/help/gnome-system-monitor/sv/gnome-system-monitor.xml
+share/gnome/omf/gnome-system-monitor/gnome-system-monitor-C.omf
+share/gnome/omf/gnome-system-monitor/gnome-system-monitor-bg.omf
+share/gnome/omf/gnome-system-monitor/gnome-system-monitor-sv.omf
 share/gnome/pixmaps/gnome-system-monitor/side.png
 share/locale/am/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ar/LC_MESSAGES/gnome-system-monitor.mo
@@ -171,6 +174,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-system-monitor.mo
 @dirrmtry share/locale/be/LC_MESSAGES
 @dirrmtry share/locale/be
 @dirrm share/gnome/pixmaps/gnome-system-monitor
+@dirrm share/gnome/omf/gnome-system-monitor
 @dirrm share/gnome/help/gnome-system-monitor/sv/figures
 @dirrm share/gnome/help/gnome-system-monitor/sv
 @dirrm share/gnome/help/gnome-system-monitor/bg/figures
