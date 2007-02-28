@@ -50,15 +50,19 @@ share/gnome/help/shares-admin/sv/figures/shares-tool.png
 share/gnome/help/shares-admin/sv/shares-admin.xml
 share/gnome/help/time-admin/C/figures/time-map.png
 share/gnome/help/time-admin/C/figures/time-servers.png
+share/gnome/help/time-admin/C/figures/time-tool-automatic.png
+share/gnome/help/time-admin/C/figures/time-tool-manual.png
 share/gnome/help/time-admin/C/legal.xml
 share/gnome/help/time-admin/C/time-admin.xml
 share/gnome/help/time-admin/es/figures/time-map.png
 share/gnome/help/time-admin/es/figures/time-servers.png
-share/gnome/help/time-admin/es/figures/time-tool.png
+share/gnome/help/time-admin/es/figures/time-tool-automatic.png
+share/gnome/help/time-admin/es/figures/time-tool-manual.png
 share/gnome/help/time-admin/es/time-admin.xml
 share/gnome/help/time-admin/fr/figures/time-map.png
 share/gnome/help/time-admin/fr/figures/time-servers.png
-share/gnome/help/time-admin/fr/figures/time-tool.png
+share/gnome/help/time-admin/fr/figures/time-tool-automatic.png
+share/gnome/help/time-admin/fr/figures/time-tool-manual.png
 share/gnome/help/time-admin/fr/time-admin.xml
 share/gnome/help/time-admin/nl/figures/time-map.png
 share/gnome/help/time-admin/nl/figures/time-servers.png
@@ -67,10 +71,13 @@ share/gnome/help/time-admin/nl/legal.xml
 share/gnome/help/time-admin/nl/time-admin.xml
 share/gnome/help/time-admin/ru/figures/time-map.png
 share/gnome/help/time-admin/ru/figures/time-servers.png
+share/gnome/help/time-admin/ru/figures/time-tool-automatic.png
+share/gnome/help/time-admin/ru/figures/time-tool-manual.png
 share/gnome/help/time-admin/ru/time-admin.xml
 share/gnome/help/time-admin/sv/figures/time-map.png
 share/gnome/help/time-admin/sv/figures/time-servers.png
-share/gnome/help/time-admin/sv/figures/time-tool.png
+share/gnome/help/time-admin/sv/figures/time-tool-automatic.png
+share/gnome/help/time-admin/sv/figures/time-tool-manual.png
 share/gnome/help/time-admin/sv/time-admin.xml
 share/gnome/help/users-admin/C/figures/users-tool.png
 share/gnome/help/users-admin/C/legal.xml
@@ -176,8 +183,6 @@ share/locale/xh/LC_MESSAGES/gnome-system-tools.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-system-tools.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-system-tools.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-system-tools.mo
-@dirrm share/nls/en_US.US-ASCII
-@dirrm share/nls/POSIX
 @dirrm share/locale/zh_TW/LC_MESSAGES
 @dirrm share/locale/zh_TW
 @dirrm share/locale/zh_HK/LC_MESSAGES
