@@ -1,5 +1,5 @@
---- src/sysinfo.cpp.orig	Sat Feb 10 09:00:25 2007
-+++ src/sysinfo.cpp	Mon Feb 12 11:37:25 2007
+--- src/sysinfo.cpp.orig	Tue Feb 27 01:52:44 2007
++++ src/sysinfo.cpp	Wed Feb 28 00:17:06 2007
 @@ -14,11 +14,13 @@
  #include <sys/wait.h>
  #include <math.h>
@@ -15,7 +15,7 @@
  
  #include "sysinfo.h"
  #include "util.h"
-@@ -240,6 +242,29 @@
+@@ -243,6 +245,30 @@ namespace {
      }
    };
  
@@ -39,13 +39,14 @@
 +
 +	      this->distro_name = name.sysname;
 +	      this->distro_release = name.release;
++	      this->distro_codename = name.machine;
 +	  }
 +  };
 +#endif
  
    SysInfo* get_sysinfo()
    {
-@@ -247,9 +272,12 @@
+@@ -250,9 +276,12 @@ namespace {
        g_free(p);
        return new LSBSysInfo;
      }
