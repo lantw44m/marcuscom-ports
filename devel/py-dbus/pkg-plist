@@ -1,5 +1,17 @@
 include/dbus-1.0/dbus/dbus-python.h
 libdata/pkgconfig/dbus-python.pc
+%%PORTDOCS%%%%DOCSDIR%%/API_CHANGES.txt
+%%PORTDOCS%%%%DOCSDIR%%/HACKING.txt
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%PORTDOCS%%%%DOCSDIR%%/tutorial.txt
+%%PORTDOCS%%%%EXAMPLESDIR%%/example-async-client.py
+%%PORTDOCS%%%%EXAMPLESDIR%%/example-client.py
+%%PORTDOCS%%%%EXAMPLESDIR%%/example-service.py
+%%PORTDOCS%%%%EXAMPLESDIR%%/example-signal-emitter.py
+%%PORTDOCS%%%%EXAMPLESDIR%%/example-signal-recipient.py
+%%PORTDOCS%%%%EXAMPLESDIR%%/list-system-services.py
 %%PYTHON_SITELIBDIR%%/_dbus_bindings.la
 %%PYTHON_SITELIBDIR%%/_dbus_bindings.so
 %%PYTHON_SITELIBDIR%%/_dbus_glib_bindings.la
@@ -49,12 +61,7 @@ libdata/pkgconfig/dbus-python.pc
 %%PYTHON_SITELIBDIR%%/dbus_bindings.py
 %%PYTHON_SITELIBDIR%%/dbus_bindings.pyc
 %%PYTHON_SITELIBDIR%%/dbus_bindings.pyo
-share/doc/dbus-python/API_CHANGES.txt
-share/doc/dbus-python/HACKING.txt
-share/doc/dbus-python/NEWS
-share/doc/dbus-python/README
-share/doc/dbus-python/TODO
-share/doc/dbus-python/tutorial.txt
-@dirrm share/doc/dbus-python
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+%%PORTDOCS%%@dirrm %%EXAMPLESDIR%%
 @dirrm %%PYTHON_SITELIBDIR%%/dbus/mainloop
 @dirrm %%PYTHON_SITELIBDIR%%/dbus
