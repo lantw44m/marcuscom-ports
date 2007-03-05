@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/devel/xdg-user-dirs-gtk/Makefile,v 1.1 2007/03/05 15:36:05 ahze Exp $
 
 PORTNAME=	xdg-user-dirs-gtk
 PORTVERSION=	0.1
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
 post-install:
-	@${MKDIR} ${PREFIX}/lib/locale
-	@${TOUCH} ${PREFIX}/lib/locale/.${PORTNAME}.keep
+	@${MKDIR} -f ${PREFIX}/lib/locale
+	@${TOUCH} -f ${PREFIX}/lib/locale/.${PORTNAME}.keep
 
 .include <bsd.port.mk>
