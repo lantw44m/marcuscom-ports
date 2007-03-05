@@ -1,0 +1,5 @@
+bin/xdg-user-dirs-gtk-update
+etc/xdg/autostart/user-dirs-update-gtk.desktop
+lib/locale/.xdg-user-dirs-gtk.keep
+@dirrm lib/locale
+@dirrmtry etc/xdg/autostart
