@@ -3,22 +3,20 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/xdg-user-dirs-gtk/Makefile,v 1.1 2007/03/05 15:36:05 ahze Exp $
+#    $MCom: ports/devel/xdg-user-dirs-gtk/Makefile,v 1.2 2007/03/05 15:38:17 ahze Exp $
 
 PORTNAME=	xdg-user-dirs-gtk
-PORTVERSION=	0.1
+PORTVERSION=	0.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Companion to xdg-user-dirs that integrates into GTK/GNOME apps
 
+USE_BZIP2=	yes
 USE_GNOME=	gtk20
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-
-post-install:
-	@${MKDIR} -f ${PREFIX}/lib/locale
-	@${TOUCH} -f ${PREFIX}/lib/locale/.${PORTNAME}.keep
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>
