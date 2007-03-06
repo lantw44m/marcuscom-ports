@@ -3,15 +3,15 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.54 2007/02/15 11:05:14 ahze Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.55 2007/03/05 22:10:46 ahze Exp $
 #
 
 PORTNAME=	cairo
-PORTVERSION=	1.3.16
+PORTVERSION=	1.4.0
 PORTREVISION?=	0
 CATEGORIES=	graphics
-#MASTER_SITES=	http://cairographics.org/releases/
-MASTER_SITES=	http://cairographics.org/snapshots/
+MASTER_SITES=	http://cairographics.org/releases/
+#MASTER_SITES=	http://cairographics.org/snapshots/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Vector graphics library with cross-device output support
@@ -54,11 +54,6 @@ PLIST_SUB+=	X11=""
 .endif
 
 post-patch:
-.if ${OSVERSION} < 500000
-	@${REINPLACE_CMD} -e 's|stdint.h|inttypes.h|' \
-		${WRKSRC}/src/*.* \
-		${WRKSRC}/pixman/src/*.*
-.endif
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|' \
 		${WRKSRC}/test/Makefile.in
 	@${REINPLACE_CMD} -e 's|-lcairo|-lcairo ${PTHREAD_LIBS}|' \
