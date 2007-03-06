@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/accessibility/java-access-bridge/Makefile,v 1.1 2006/11/05 04:50:11 ahze Exp $
 
 PORTNAME=	java-access-bridge
-PORTVERSION=	1.6.0
+PORTVERSION=	1.18.0
 CATEGORIES=	accessibility java gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -22,8 +22,8 @@ JAVA_OS=	native
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--without-gcj-compile --with-jardir=${JAVAJARDIR}
 
-PLIST_FILES=	share/java/classes/JNav.jar \
-		share/java/classes/accessibility.properties \
+PLIST_FILES=	share/jar/JNav.jar \
+		share/jar/accessibility.properties \
 		share/java/classes/gnome-java-bridge.jar
 
 
