@@ -2,5 +2,3 @@
 %%PYTHON_SITELIBDIR%%/_gamin.la
 %%PYTHON_SITELIBDIR%%/_gamin.so
 %%PYTHON_SITELIBDIR%%/gamin.py
-@dirrm %%PYTHON_SITELIBDIR%%
-@dirrm %%PYTHON_LIBDIR%%
