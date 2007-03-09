@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.84 2006/12/20 04:53:02 marcus Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.85 2007/03/02 04:50:53 marcus Exp $
 #
 
 PORTNAME=	epiphany
@@ -24,7 +24,7 @@ RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_XLIB=	yes
-USE_GECKO=	firefox mozilla seamonkey firefox-devel<->firefox
+USE_GECKO=	firefox mozilla seamonkey firefox15<->firefox
 USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes

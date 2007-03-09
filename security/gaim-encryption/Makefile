@@ -6,8 +6,8 @@
 #
 
 PORTNAME=	encryption
-PORTVERSION=	2.38
-PORTREVISION=	6
+PORTVERSION=	2.39
+PORTREVISION=	1
 CATEGORIES=	security net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PKGNAMEPREFIX}${PORTNAME}
@@ -46,5 +46,8 @@ pre-everything::
 	@${ECHO_MSG} "WARNING: make sure net-im/gaim is built with NSS support (it is, by default)"
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} ""
+
+post-extract:
+	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
 
 .include <bsd.port.mk>

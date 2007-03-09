@@ -3,7 +3,7 @@
 # Whom:				Jean-Yves Lefort <jylefort@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-volume-manager/Makefile,v 1.11 2006/12/20 21:41:11 marcus Exp $
+#   $MCom: ports/sysutils/gnome-volume-manager/Makefile,v 1.12 2006/12/31 20:36:00 marcus Exp $
 #
 
 PORTNAME=	gnome-volume-manager
@@ -23,6 +23,7 @@ USE_XLIB=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack nautilus2
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-multiuser

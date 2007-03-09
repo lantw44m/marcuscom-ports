@@ -3,7 +3,7 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/libgaim/Makefile,v 1.7 2007/02/04 00:29:25 marcus Exp $
+#   $MCom: ports/net-im/libgaim/Makefile,v 1.8 2007/02/10 23:43:20 marcus Exp $
 #
 
 PORTNAME=	gaim
@@ -73,6 +73,10 @@ CONFIGURE_ARGS+=--disable-doxygen
 
 .if ${OSVERSION} < 500000
 IGNORE=	does not build on 4.X
+.endif
+
+.if ${OSVERSION} > 700032
+CFLAGS+=	-D_XOPEN_SOURCE_EXTENDED
 .endif
 
 .if !defined(GAIM_SLAVE)
