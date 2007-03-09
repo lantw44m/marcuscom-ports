@@ -27,7 +27,6 @@ share/applications/brasero.desktop
 %%DATADIR%%/logo.png
 share/icons/hicolor/16x16/apps/brasero.png
 share/icons/hicolor/24x24/apps/brasero.png
-share/icons/hicolor/icon-theme.cache
 share/icons/hicolor/scalable/apps/brasero.svg
 share/locale/ca/LC_MESSAGES/brasero.mo
 share/locale/de/LC_MESSAGES/brasero.mo
@@ -41,16 +40,6 @@ share/locale/pl/LC_MESSAGES/brasero.mo
 share/locale/pt_BR/LC_MESSAGES/brasero.mo
 share/locale/sv/LC_MESSAGES/brasero.mo
 share/mime/packages/brasero.xml
-@dirrm share/mime/packages
-@dirrm share/mime
-@dirrm share/icons/hicolor/scalable/apps
-@dirrm share/icons/hicolor/scalable
-@dirrm share/icons/hicolor/24x24/apps
-@dirrm share/icons/hicolor/24x24
-@dirrm share/icons/hicolor/16x16/apps
-@dirrm share/icons/hicolor/16x16
-@dirrm share/icons/hicolor
-@dirrm share/icons
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
