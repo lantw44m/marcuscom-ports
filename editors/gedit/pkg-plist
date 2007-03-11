@@ -23,6 +23,7 @@ include/gedit-%%VERSION%%/gedit/gedit-tab.h
 include/gedit-%%VERSION%%/gedit/gedit-utils.h
 include/gedit-%%VERSION%%/gedit/gedit-view.h
 include/gedit-%%VERSION%%/gedit/gedit-window.h
+lib/gedit-2/gedit-bugreport.sh
 lib/gedit-2/plugins/changecase.gedit-plugin
 lib/gedit-2/plugins/docinfo.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/externaltools.gedit-plugin
