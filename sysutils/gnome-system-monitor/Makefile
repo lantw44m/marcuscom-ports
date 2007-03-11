@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.92 2007/03/01 05:25:43 marcus Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.93 2007/03/09 21:41:45 mezz Exp $
 #
 
 PORTNAME=	gnome-system-monitor
@@ -19,7 +19,7 @@ COMMENT=	GNOME 2 system monitor program
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
-    		pcre.0:${PORTSDIR}/devel/pcre-utf8
+    		pcre.0:${PORTSDIR}/devel/pcre
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
 USE_BZIP2=	yes

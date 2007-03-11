@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.85 2007/03/02 04:50:53 marcus Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.86 2007/03/09 22:15:17 mezz Exp $
 #
 
 PORTNAME=	epiphany
@@ -54,7 +54,7 @@ CONFIGURE_ARGS+=	--disable-opensp
 
 .if !defined(WITHOUT_ADBLOCK)
 EPHY_EXTENSIONS:=	${EPHY_EXTENSIONS},adblock
-LIB_DEPENDS+=		pcre.0:${PORTSDIR}/devel/pcre-utf8
+LIB_DEPENDS+=		pcre.0:${PORTSDIR}/devel/pcre
 PLIST_SUB+=		ADBLOCK=""
 .else
 PLIST_SUB+=		ADBLOCK="@comment "

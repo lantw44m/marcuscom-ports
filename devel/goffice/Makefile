@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/goffice/Makefile,v 1.21 2007/02/20 13:37:22 ahze Exp $
+#   $MCom: ports/devel/goffice/Makefile,v 1.22 2007/03/05 14:43:46 ahze Exp $
 #
 
 PORTNAME=	goffice
@@ -15,7 +15,7 @@ MASTER_SITE_SUBDIR=	 sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GLib/GTK+ set of document centric objects and utilities
 
-LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre-utf8
+LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
