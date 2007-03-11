@@ -3,11 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.27 2007/02/17 21:43:42 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.28 2007/02/24 19:46:05 marcus Exp $
 #
 
 PORTNAME=	seahorse
 PORTVERSION=	0.9.92
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -89,7 +90,7 @@ CONFIGURE_ARGS+=--disable-libnotify
 .if !defined(WITHOUT_EPIPHANY)
 BUILD_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
 RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-PLIST_SUB+=	EPHY="" EPHY_VERSION="2.17"
+PLIST_SUB+=	EPHY="" EPHY_VERSION="2.18"
 .else
 CONFIGURE_ARGS+=--disable-epiphany
 PLIST_SUB+=	EPHY="@comment "
