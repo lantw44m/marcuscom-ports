@@ -129,6 +129,15 @@ share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-lookup.png
 share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-preferences-print.png
 share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-preferences-source.png
 share/gnome/help/gnome-dictionary/fr/gnome-dictionary.xml
+share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-add-source.png
+share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-applet-window.png
+share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-applet.png
+share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-application.png
+share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-find.png
+share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-lookup.png
+share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-preferences-print.png
+share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-preferences-source.png
+share/gnome/help/gnome-dictionary/it/gnome-dictionary.xml
 share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-add-source.png
 share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-applet-window.png
 share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-applet.png
@@ -176,6 +185,10 @@ share/gnome/help/gnome-system-log/es/figures/syslog_window.png
 share/gnome/help/gnome-system-log/es/gnome-system-log.xml
 share/gnome/help/gnome-system-log/fr/figures/syslog_window.png
 share/gnome/help/gnome-system-log/fr/gnome-system-log.xml
+share/gnome/help/gnome-system-log/it/figures/syslog_window.png
+share/gnome/help/gnome-system-log/it/gnome-system-log.xml
+share/gnome/help/gnome-system-log/ru/figures/syslog_window.png
+share/gnome/help/gnome-system-log/ru/gnome-system-log.xml
 share/gnome/help/gnome-system-log/sv/figures/syslog_window.png
 share/gnome/help/gnome-system-log/sv/gnome-system-log.xml
 share/gnome/help/gnome-system-log/uk/figures/syslog_window.png
@@ -189,6 +202,7 @@ share/gnome/omf/gnome-dictionary/gnome-dictionary-C.omf
 share/gnome/omf/gnome-dictionary/gnome-dictionary-el.omf
 share/gnome/omf/gnome-dictionary/gnome-dictionary-es.omf
 share/gnome/omf/gnome-dictionary/gnome-dictionary-fr.omf
+share/gnome/omf/gnome-dictionary/gnome-dictionary-it.omf
 share/gnome/omf/gnome-dictionary/gnome-dictionary-ru.omf
 share/gnome/omf/gnome-dictionary/gnome-dictionary-sv.omf
 share/gnome/omf/gnome-dictionary/gnome-dictionary-uk.omf
@@ -201,6 +215,8 @@ share/gnome/omf/gnome-search-tool/gnome-search-tool-uk.omf
 share/gnome/omf/gnome-system-log/gnome-system-log-C.omf
 share/gnome/omf/gnome-system-log/gnome-system-log-es.omf
 share/gnome/omf/gnome-system-log/gnome-system-log-fr.omf
+share/gnome/omf/gnome-system-log/gnome-system-log-it.omf
+share/gnome/omf/gnome-system-log/gnome-system-log-ru.omf
 share/gnome/omf/gnome-system-log/gnome-system-log-sv.omf
 share/gnome/omf/gnome-system-log/gnome-system-log-uk.omf
 share/gnome/pixmaps/gsearchtool/thumbnail_frame.png
@@ -288,6 +304,10 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/gnome-system-log/uk
 @dirrm share/gnome/help/gnome-system-log/sv/figures
 @dirrm share/gnome/help/gnome-system-log/sv
+@dirrm share/gnome/help/gnome-system-log/ru/figures
+@dirrm share/gnome/help/gnome-system-log/ru
+@dirrm share/gnome/help/gnome-system-log/it/figures
+@dirrm share/gnome/help/gnome-system-log/it
 @dirrm share/gnome/help/gnome-system-log/fr/figures
 @dirrm share/gnome/help/gnome-system-log/fr
 @dirrm share/gnome/help/gnome-system-log/es/figures
@@ -314,6 +334,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/gnome-dictionary/sv
 @dirrm share/gnome/help/gnome-dictionary/ru/figures
 @dirrm share/gnome/help/gnome-dictionary/ru
+@dirrm share/gnome/help/gnome-dictionary/it/figures
+@dirrm share/gnome/help/gnome-dictionary/it
 @dirrm share/gnome/help/gnome-dictionary/fr/figures
 @dirrm share/gnome/help/gnome-dictionary/fr
 @dirrm share/gnome/help/gnome-dictionary/es/figures
