@@ -332,9 +332,9 @@ share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 @dirrm share/gnome/epiphany/art
 @dirrm share/gnome/epiphany
 @dirrm %%DOCSDIR%%
-@dirrm lib/epiphany/%%EPHY_VERSION%%/plugins
-@dirrm lib/epiphany/%%EPHY_VERSION%%
-@dirrm lib/epiphany
+@dirrmtry lib/epiphany/%%EPHY_VERSION%%/plugins
+@dirrmtry lib/epiphany/%%EPHY_VERSION%%
+@dirrmtry lib/epiphany
 @dirrm include/epiphany/%%EPHY_VERSION%%/epiphany
 @dirrm include/epiphany/%%EPHY_VERSION%%
 @dirrm include/epiphany
