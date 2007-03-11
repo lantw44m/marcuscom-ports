@@ -22,9 +22,9 @@ libdata/pkgconfig/gnome-mag-1.0.pc
 %%DOCSDIR%%/reference/html/GNOME__Magnifier_8idl-source.html
 %%DOCSDIR%%/reference/html/GNOME__Magnifier_8idl.html
 %%DOCSDIR%%/reference/html/annotated.html
-%%DOCSDIR%%/reference/html/dir_6ce4c1e52bbf80cf21bdbb5fdcbdf42a.html
-%%DOCSDIR%%/reference/html/dir_fd094d5d62adc5007452724a181ad0b2.html
 %%DOCSDIR%%/reference/html/dirs.html
+%%DOCSDIR%%/reference/html/dir_6873ac4aad386abfe4dc85b1c4c7162f.html
+%%DOCSDIR%%/reference/html/dir_ed2a549a3a7169145b90da06827de1bb.html
 %%DOCSDIR%%/reference/html/doxygen.css
 %%DOCSDIR%%/reference/html/doxygen.png
 %%DOCSDIR%%/reference/html/files.html
