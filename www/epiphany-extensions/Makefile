@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.86 2007/03/09 22:15:17 mezz Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.87 2007/03/11 20:02:57 mezz Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.17.92
+PORTVERSION=	2.18.0
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -36,9 +36,9 @@ CONFIGURE_ARGS=	--with-mozilla=${GECKO}
 GCONF_SCHEMAS=	smart-bookmarks.schemas
 
 EPHY_EXTENSIONS=all
-EPHY_VERSION=	2.17
+EPHY_VERSION=	2.18
 
-PLIST_SUB=	VERSION="2.17" EPHY_VERSION=${EPHY_VERSION}
+PLIST_SUB=	VERSION="2.18" EPHY_VERSION=${EPHY_VERSION}
 
 OPTIONS=	OPENSP "Enable OpenSP SGML support" off \
 		ADBLOCK "Enable the adblock extension" on
