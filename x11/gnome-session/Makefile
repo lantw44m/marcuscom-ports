@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.104 2007/02/13 06:19:31 mezz Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.105 2007/02/27 18:58:05 mezz Exp $
 #
 
 PORTNAME=	gnome-session
-PORTVERSION=	2.17.92
+PORTVERSION=	2.18.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		${MASTER_SITE_LOCAL:S/$/:local/} \
