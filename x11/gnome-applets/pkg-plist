@@ -470,6 +470,12 @@ share/gnome/help/drivemount/pa/figures/drivemount-applet_example.png
 share/gnome/help/drivemount/pa/figures/drivemount-applet_mount.png
 share/gnome/help/drivemount/pa/figures/drivemount-applet_open.png
 share/gnome/help/drivemount/pa/figures/drivemount-applet_status.png
+share/gnome/help/drivemount/ru/drivemount.xml
+share/gnome/help/drivemount/ru/figures/drivemount-applet_eject.png
+share/gnome/help/drivemount/ru/figures/drivemount-applet_example.png
+share/gnome/help/drivemount/ru/figures/drivemount-applet_mount.png
+share/gnome/help/drivemount/ru/figures/drivemount-applet_open.png
+share/gnome/help/drivemount/ru/figures/drivemount-applet_status.png
 share/gnome/help/drivemount/sv/drivemount.xml
 share/gnome/help/drivemount/sv/figures/drivemount-applet_eject.png
 share/gnome/help/drivemount/sv/figures/drivemount-applet_example.png
@@ -676,6 +682,10 @@ share/gnome/help/multiload/pa/figures/multiload-preferences.png
 share/gnome/help/multiload/pa/figures/system-monitor-applet_window.png
 share/gnome/help/multiload/pa/figures/system_monitor.png
 share/gnome/help/multiload/pa/multiload.xml
+share/gnome/help/multiload/ru/figures/multiload-preferences.png
+share/gnome/help/multiload/ru/figures/system-monitor-applet_window.png
+share/gnome/help/multiload/ru/figures/system_monitor.png
+share/gnome/help/multiload/ru/multiload.xml
 share/gnome/help/multiload/sv/figures/multiload-preferences.png
 share/gnome/help/multiload/sv/figures/system-monitor-applet_window.png
 share/gnome/help/multiload/sv/figures/system_monitor.png
@@ -795,6 +805,7 @@ share/gnome/omf/drivemount/drivemount-es.omf
 share/gnome/omf/drivemount/drivemount-fr.omf
 share/gnome/omf/drivemount/drivemount-it.omf
 share/gnome/omf/drivemount/drivemount-pa.omf
+share/gnome/omf/drivemount/drivemount-ru.omf
 share/gnome/omf/drivemount/drivemount-sv.omf
 share/gnome/omf/drivemount/drivemount-uk.omf
 share/gnome/omf/drivemount/drivemount-zh_CN.omf
@@ -836,6 +847,7 @@ share/gnome/omf/multiload/multiload-en_GB.omf
 share/gnome/omf/multiload/multiload-es.omf
 share/gnome/omf/multiload/multiload-fr.omf
 share/gnome/omf/multiload/multiload-pa.omf
+share/gnome/omf/multiload/multiload-ru.omf
 share/gnome/omf/multiload/multiload-sv.omf
 share/gnome/omf/multiload/multiload-uk.omf
 share/gnome/omf/stickynotes_applet/stickynotes_applet-C.omf
@@ -1168,6 +1180,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/multiload/uk
 @dirrm share/gnome/help/multiload/sv/figures
 @dirrm share/gnome/help/multiload/sv
+@dirrm share/gnome/help/multiload/ru/figures
+@dirrm share/gnome/help/multiload/ru
 @dirrm share/gnome/help/multiload/pa/figures
 @dirrm share/gnome/help/multiload/pa
 @dirrm share/gnome/help/multiload/fr/figures
@@ -1248,6 +1262,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-applets-2.0.mo
 @dirrm share/gnome/help/drivemount/uk
 @dirrm share/gnome/help/drivemount/sv/figures
 @dirrm share/gnome/help/drivemount/sv
+@dirrm share/gnome/help/drivemount/ru/figures
+@dirrm share/gnome/help/drivemount/ru
 @dirrm share/gnome/help/drivemount/pa/figures
 @dirrm share/gnome/help/drivemount/pa
 @dirrm share/gnome/help/drivemount/it/figures
