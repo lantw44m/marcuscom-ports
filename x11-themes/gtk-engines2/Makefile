@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.35 2007/02/27 18:43:44 mezz Exp $
+#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.36 2007/03/09 22:02:36 mezz Exp $
 #
 
 PORTNAME=	gtk-engines2
-PORTVERSION=	2.9.4
+PORTVERSION=	2.10.0
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -19,10 +19,12 @@ COMMENT=	Theme engine for the gtk+-2.0 toolkit
 
 CONFLICTS=	gtk-smooth-engine-[0-9]* clearlooks-[0-9]*
 
+USE_GMAKE=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gtk20
 USE_LDCONFIG=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
 
 .if defined(WITH_ANIMATION)
 CONFIGURE_ARGS+=	--enable-animation
