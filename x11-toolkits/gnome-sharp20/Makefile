@@ -3,12 +3,12 @@
 # Whom:                 		Tom McLaughlin <tmclaugh@FreeBSD.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.1 2007-02-17 18:04:41 marcus Exp $
+#   $Id: Makefile,v 1.2 2007-03-13 05:44:30 marcus Exp $
 #
 
 PORTNAME=	gnome-sharp
 PORTVERSION=	2.16.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/2.16
@@ -28,6 +28,8 @@ USE_GNOME=	gnomehack gnomepanel gtkhtml3 gtksharp20 librsvg2 vte \
 post-patch:
 	@${FIND} ${WRKSRC} -name '*.pl' | ${XARGS} ${REINPLACE_CMD} -e \
 		's|^#!/usr/bin/perl|#!${PERL}|'
+	@${REINPLACE_CMD} -e 's|libgtkhtml-3.8|libgtkhtml-3.14|g' \
+	    	${WRKSRC}/configure
 
 .include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
