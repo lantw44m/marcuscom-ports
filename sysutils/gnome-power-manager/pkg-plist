@@ -44,6 +44,17 @@ share/gnome/help/gnome-power-manager/es/figures/gpm-suspend-problem.png
 share/gnome/help/gnome-power-manager/es/figures/gpm-unplugged.png
 share/gnome/help/gnome-power-manager/es/figures/gs-prefs.png
 share/gnome/help/gnome-power-manager/es/gnome-power-manager.xml
+share/gnome/help/gnome-power-manager/fr/figures/gpm-cell-capacity.png
+share/gnome/help/gnome-power-manager/fr/figures/gpm-charged.png
+share/gnome/help/gnome-power-manager/fr/figures/gpm-critical.png
+share/gnome/help/gnome-power-manager/fr/figures/gpm-low.png
+share/gnome/help/gnome-power-manager/fr/figures/gpm-mouse-left.png
+share/gnome/help/gnome-power-manager/fr/figures/gpm-mouse-right.png
+share/gnome/help/gnome-power-manager/fr/figures/gpm-stats-graph.png
+share/gnome/help/gnome-power-manager/fr/figures/gpm-suspend-problem.png
+share/gnome/help/gnome-power-manager/fr/figures/gpm-unplugged.png
+share/gnome/help/gnome-power-manager/fr/figures/gs-prefs.png
+share/gnome/help/gnome-power-manager/fr/gnome-power-manager.xml
 share/gnome/help/gnome-power-manager/hu/figures/gpm-cell-capacity.png
 share/gnome/help/gnome-power-manager/hu/figures/gpm-charged.png
 share/gnome/help/gnome-power-manager/hu/figures/gpm-critical.png
@@ -90,6 +101,7 @@ share/gnome/help/gnome-power-manager/sv/figures/gs-prefs.png
 share/gnome/help/gnome-power-manager/sv/gnome-power-manager.xml
 share/gnome/omf/gnome-power-manager/gnome-power-manager-C.omf
 share/gnome/omf/gnome-power-manager/gnome-power-manager-es.omf
+share/gnome/omf/gnome-power-manager/gnome-power-manager-fr.omf
 share/gnome/omf/gnome-power-manager/gnome-power-manager-hu.omf
 share/gnome/omf/gnome-power-manager/gnome-power-manager-pa.omf
 share/gnome/omf/gnome-power-manager/gnome-power-manager-ru.omf
@@ -335,6 +347,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
 @dirrm share/gnome/help/gnome-power-manager/pa
 @dirrm share/gnome/help/gnome-power-manager/hu/figures
 @dirrm share/gnome/help/gnome-power-manager/hu
+@dirrm share/gnome/help/gnome-power-manager/fr/figures
+@dirrm share/gnome/help/gnome-power-manager/fr
 @dirrm share/gnome/help/gnome-power-manager/es/figures
 @dirrm share/gnome/help/gnome-power-manager/es
 @dirrm share/gnome/help/gnome-power-manager/C/figures
