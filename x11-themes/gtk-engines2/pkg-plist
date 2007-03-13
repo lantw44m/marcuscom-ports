@@ -47,3 +47,4 @@ share/themes/ThinIce/gtk-2.0/gtkrc
 @dirrmtry share/themes/Crux
 @dirrm share/themes/Clearlooks/gtk-2.0
 @dirrmtry share/themes/Clearlooks
+@dirrm share/gtk-engines
