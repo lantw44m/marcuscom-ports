@@ -3,11 +3,11 @@
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/libgnomeprint/Makefile,v 1.62 2007/02/12 22:19:40 marcus Exp $
+#   $MCom: ports/print/libgnomeprint/Makefile,v 1.63 2007/02/27 18:32:27 mezz Exp $
 #
 
 PORTNAME=	libgnomeprint
-PORTVERSION=	2.17.92
+PORTVERSION=	2.18.0
 PORTREVISION?=	0
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -31,7 +31,7 @@ USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier glib20 pango libxml2 \
 USE_GETTEXT=	yes
 USE_XLIB=	yes
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=  libtool:15
+USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
