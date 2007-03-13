@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@rainbow-runner.nl>
 #
 # $FreeBSD$
-#   $MCom: ports/www/evolution-webcal/Makefile,v 1.44 2007/02/13 21:13:55 marcus Exp $
+#   $MCom: ports/www/evolution-webcal/Makefile,v 1.45 2007/02/28 00:24:20 mezz Exp $
 #
 
 PORTNAME=	webcal
-PORTVERSION=	2.9.92
+PORTVERSION=	2.10.0
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PKGNAMEPREFIX}${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
