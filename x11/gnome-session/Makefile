@@ -3,17 +3,16 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.105 2007/02/27 18:58:05 mezz Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.106 2007/03/12 23:19:30 marcus Exp $
 #
 
 PORTNAME=	gnome-session
 PORTVERSION=	2.18.0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
-		${MASTER_SITE_LOCAL:S/$/:local/} \
-		http://people.FreeBSD.org/~adamw/images/gnome_splashes/2.12/:local
-MASTER_SITE_SUBDIR=	sources/gnome-session/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/} \
-		    	adamw/:local
+		http://www.marcuscom.com/downloads/:local
+MASTER_SITE_SUBDIR=	sources/gnome-session/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		${SPLASHES}:local
 DIST_SUBDIR=	gnome2
@@ -44,7 +43,7 @@ MAN1=		gnome-session.1 gnome-wm.1 session-properties.1 \
 MAN5=		default.session.5
 GCONF_SCHEMAS=	gnome-session.schemas
 
-SPLASHES=	freebsd-splashes-gnome-2.12.1.tar
+SPLASHES=	freebsd-splashes-gnome-2.18.tar
 
 post-extract:
 	cd ${WRKDIR} && ${TAR} xf ${DISTDIR}/${DIST_SUBDIR}/${SPLASHES}
