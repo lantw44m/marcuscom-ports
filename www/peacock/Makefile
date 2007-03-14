@@ -2,7 +2,7 @@
 # Date created:				21st April 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/www/peacock/Makefile,v 1.27 2006/02/23 10:39:43 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	peacock

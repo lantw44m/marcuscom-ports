@@ -2,7 +2,7 @@
 # Date created:		13 Aug 01
 # Whom:			alanp@unixpower.org
 #
-# $FreeBSD: ports/deskutils/logjam/Makefile,v 1.25 2006/12/13 12:41:22 roam Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	logjam

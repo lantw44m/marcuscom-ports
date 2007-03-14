@@ -2,8 +2,8 @@
 # Date created:		1 March 2003
 # Whom:			Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
-# $FreeBSD: ports/deskutils/gnotime/Makefile,v 1.20 2007/02/10 06:04:58 kris Exp $
-#   $MCom$
+# $FreeBSD$
+#   $MCom: ports/deskutils/gnotime/Makefile,v 1.17 2007/03/13 05:53:49 marcus Exp $
 #
 
 PORTNAME=	gnotime

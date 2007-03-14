@@ -2,7 +2,7 @@
 # Date created:		2 August 2006
 # Whom:			Andrew Pantyukhin <infofarmer@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libYGP/Makefile,v 1.2 2006/09/01 08:41:30 sat Exp $
+# $FreeBSD$
 #
 
 PORTNAME?=	libYGP
