@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.106 2007/03/12 23:19:30 marcus Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.107 2007/03/14 17:42:06 marcus Exp $
 #
 
 PORTNAME=	gnome-session
@@ -53,8 +53,8 @@ post-install:
 		${PREFIX}/share/gnome/pixmaps/splash/original-gnome-splash.png
 #	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/domix-splash-2.12.png \
 #		${PREFIX}/share/gnome/pixmaps/splash/gnome-splash.png
-.for splash in MaMBaNgGaoX-2.12.png adamw-piggy-2.12.png adamw-trophy-2.12.png andreas-slogan-2.12.png andreas-splash-2.12.png domix-splash-2.12.png domix-splash2-2.12.png mumija-2.12.png mumija2-2.12.png mumija3-2.12.png tremulant-2.12.png tremulant-blood-2.12.png tremulant-brushed-metal-2.12.png
-	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.12/${splash} \
+.for splash in MaMBaNgGaoX-2.12.png adamw-piggy-2.12.png adamw-trophy-2.12.png andreas-slogan-2.12.png andreas-splash-2.12.png domix-splash-2.12.png domix-splash2-2.12.png mumija-2.12.png mumija2-2.12.png mumija3-2.12.png tremulant-2.12.png tremulant-blood-2.12.png tremulant-brushed-metal-2.12.png franz-splash_218.png
+	${INSTALL_DATA} ${WRKDIR}/freebsd-splashes-gnome-2.18/${splash} \
 		${PREFIX}/share/gnome/pixmaps/splash
 .endfor
 
