@@ -3,12 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.28 2007/02/24 19:46:05 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.29 2007/03/11 20:39:44 mezz Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	0.9.92
-PORTREVISION=	1
+PORTVERSION=	1.0
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -44,10 +43,12 @@ OPTIONS=	NAUTILUS "Enable the Nautilus component" on \
 		HKP "Enable HKP keyserver interface" on \
 		GEDIT "Enable GEdit plug-in support" on \
 		NOTIFY "Enable libnotify support" on \
-		EPIPHANY "Enable Epiphany plug-in support" on \
 		APPLET "Enable clipboard encryption applet" on \
 		KEYRING "Enable GNOME Keyring support" on \
 		MDNS "Enable mDNS key sharing" on
+#		EPIPHANY "Enable Epiphany plug-in support" on
+## BROKEN
+WITHOUT_EPIPHANY=	yes
 
 .include <bsd.port.pre.mk>
 
