@@ -3,7 +3,7 @@
 # Whom:			eivind/dima/jseger
 #
 # $FreeBSD$
-#    $MCom: ports-stable/www/mozilla/Makefile,v 1.15 2006/10/18 17:29:07 ahze Exp $
+#    $MCom: ports/www/mozilla/Makefile,v 1.42 2006/12/09 15:32:06 ahze Exp $
 
 PORTNAME=	mozilla
 PORTVERSION=	1.7.13
@@ -19,6 +19,10 @@ DISTFILES=	${PORTNAME}-${PORTVERSION}-source${EXTRACT_SUFX} \
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The open source, standards compliant web browser
+
+DEPRECATED=	The mozilla team has shifted the development branch of mozilla to \
+		seamonkey, this port is outdated and has many vulnerabilities. \
+		Please consider using www/seamonkey or www/firefox instead.
 
 MAKE_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/dist/bin
 USE_GMAKE=	yes
