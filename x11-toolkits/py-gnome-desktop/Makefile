@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.56 2007/03/04 22:46:49 ahze Exp $
+#    $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.57 2007/03/12 19:26:26 mezz Exp $
 #
 
 PORTNAME=	gnome
 PORTVERSION=	2.18.0
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-desktop/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -55,6 +56,7 @@ post-install:
 	${MKDIR} ${EG_DST_DIR}
 	${TAR} -C ${EG_SRC_DIR} -cf - . | ${TAR} -C ${EG_DST_DIR} -xf -
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${EG_DST_DIR}
+	${CHMOD} -R go-w ${EG_DST_DIR}
 .endif
 
 .include <bsd.port.post.mk>
