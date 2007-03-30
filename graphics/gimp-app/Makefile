@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/gimp-app/Makefile,v 1.10 2007/03/30 18:18:12 ahze Exp $
+#    $MCom: ports/graphics/gimp-app/Makefile,v 1.11 2007/03/30 18:20:44 ahze Exp $
 
 PORTNAME=	gimp
 PORTVERSION=	2.2.13
@@ -30,7 +30,7 @@ LIB_DEPENDS=	wmf.2:${PORTSDIR}/graphics/libwmf \
 		jpeg.9:${PORTSDIR}/graphics/jpeg \
 		tiff.4:${PORTSDIR}/graphics/tiff
 
-CONFLICTS=	gimp-1.* gimpshop-[0-9]*
+CONFLICTS=	gimp-1.* gimpshop-[0-9]* gimp-app-devel-[0-9]*
 
 SHLIBVER?=	200
 

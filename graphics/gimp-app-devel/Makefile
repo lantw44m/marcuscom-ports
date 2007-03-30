@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app-devel/Makefile,v 1.9 2007/02/24 21:00:45 mezz Exp $
+#   $MCom: ports/graphics/gimp-app-devel/Makefile,v 1.10 2007/03/30 17:05:26 ahze Exp $
 #
 
 PORTNAME=	gimp
@@ -73,7 +73,7 @@ LIB_DEPENDS+=	gimp-2.0.0:${PORTSDIR}/graphics/gimp-app
 
 .else
 
-CONFLICTS=	gimp-1.*
+CONFLICTS=	gimp-1.* gimp-app-[0-9]*
 
 MAN1+=	gimp-2.3.1 gimp-remote-2.3.1 gimptool-2.0.1
 MAN5+=	gimprc-2.3.5
