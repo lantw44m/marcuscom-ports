@@ -3,7 +3,7 @@
 # Whom: dgilbert@velocet.ca
 #
 # $FreeBSD$
-#    $MCom: ports/print/gutenprint/Makefile,v 1.6 2007/02/16 18:14:25 mezz Exp $
+#    $MCom: ports/print/gutenprint-base/Makefile,v 1.7 2007/03/30 16:42:46 ahze Exp $
 #
 
 PORTNAME?=	gutenprint
