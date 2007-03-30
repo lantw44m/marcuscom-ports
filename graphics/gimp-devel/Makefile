@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.26 2007/02/15 01:11:24 ahze Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.27 2007/02/16 18:14:25 mezz Exp $
 #
 
 PORTNAME=	gimp
@@ -18,7 +18,7 @@ EXTRACT_ONLY?=	# empty
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The "meta-port" for The Gimp
 
-RUN_DEPENDS=	gimp-2.3:${PORTSDIR}/graphics/gimp-app
+RUN_DEPENDS=	gimp-2.3:${PORTSDIR}/graphics/gimp-app-devel
 
 OPTIONS=	PYTHON "Python-fu support" Off \
 		PRINT "Gutenprint (gimp-print) plugin" On \
