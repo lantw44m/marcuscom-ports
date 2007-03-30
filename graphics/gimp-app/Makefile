@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/gimp/Makefile,v 1.2 2006/08/25 18:14:57 pav Exp $
+#    $MCom: ports/graphics/gimp-app/Makefile,v 1.10 2007/03/30 18:18:12 ahze Exp $
 
 PORTNAME=	gimp
 PORTVERSION=	2.2.13
@@ -47,7 +47,8 @@ CONFIGURE_ARGS=	--disable-perl \
 		--with-html-dir=${DOCSDIR} \
 		--disable-gtk-doc \
 		--enable-static \
-		--mandir=${PREFIX}/man
+		--mandir=${PREFIX}/man \
+		--disable-print
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 
@@ -87,14 +88,6 @@ PLIST_SUB+=		SVG="@comment "
 .else
 USE_GNOME+=		librsvg2
 PLIST_SUB+=		SVG=""
-.endif
-
-.if defined(WITHOUT_PRINT)
-CONFIGURE_ARGS+=	--disable-print
-PLIST_SUB+=		PRINT="@comment "
-.else
-LIB_DEPENDS+=		gimpprint.2:${PORTSDIR}/print/gimp-print
-PLIST_SUB+=		PRINT=""
 .endif
 
 .if defined(WITH_MP)
