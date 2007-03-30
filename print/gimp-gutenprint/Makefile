@@ -3,20 +3,19 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/print/gimp-gutenprint/Makefile,v 1.1 2007/01/01 20:30:48 ahze Exp $
 
 PORTREVISION=	0
 PORTEPOCH=	0
 PKGNAMEPREFIX=	gimp-
+PKGNAMESUFFIX=	# empty
 
 MAINTAINER=	ahze@FreeBSD.org
 COMMENT=	Gimp print plug-in
 
-MASTERDIR=	${.CURDIR}/../../print/gutenprint
+MASTERDIR=	${.CURDIR}/../../print/gutenprint-base
 
-BUILD_WRKSRC=	${WRKSRC}/src/gimp2
-INSTALL_WRKSRC=	${WRKSRC}/src/gimp2
-
+GUT_SLAVE=	gimp
 PLIST=	# empty
 PLIST_FILES=	libexec/gimp/2.2/plug-ins/print
 

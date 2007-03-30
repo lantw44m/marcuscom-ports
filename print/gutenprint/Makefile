@@ -3,82 +3,47 @@
 # Whom: dgilbert@velocet.ca
 #
 # $FreeBSD$
-#    $MCom: ports/print/gutenprint/Makefile,v 1.5 2007/01/01 20:30:47 ahze Exp $
+#    $MCom: ports/print/gutenprint/Makefile,v 1.6 2007/02/16 18:14:25 mezz Exp $
 #
 
 PORTNAME=	gutenprint
-PORTVERSION=	5.0.0
+PORTVERSION?=	5.1.0
+PORTREVISION?=	0
 CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
-MASTER_SITE_SUBDIR=	gimp-print
+MASTER_SITES=	# empty
+DISTFILES=	# empty
+EXTRACT_ONLY=	# empty
 
 MAINTAINER=	ahze@FreeBSD.org
-COMMENT=	GutenPrint Printer Driver
+COMMENT=	The "meta-port" for GutenPrint
 
-CONFLICTS=	gimp-print-[0-9]*
+RUN_DEPENDS=	gutenprint-base>0:${PORTSDIR}/print/gutenprint-base
 
-USE_BZIP2=	yes
-USE_GETTEXT=	yes
-USE_GETOPT_LONG=	yes
-USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnometarget gtk20
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
-CONFIGURE_ARGS?=--with-gimp=no --with-gimp2=no \
-		--without-foomatic
-USE_LDCONFIG=	yes
+OPTIONS=	CUPS "GutenPrint (gimp-print) Cups Drivers" Off \
+		GIMP "GutenPrint Plugin for the GIMP (gimp-print)" Off \
+		IJS "IJS GhostScript Drivers" On \
+		FOOMATIC "Foomatic data files" Off
 
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+NO_BUILD=	yes
 
 .include <bsd.port.pre.mk>
 
-.if ${SLAVE_PORT}=="yes"
-PKG_CONFIG?=	${LOCALBASE}/bin/pkg-config
-GUTENPRINTUI2_LIBS=`${PKG_CONFIG} --libs gutenprintui2`
-LIB_DEPENDS+=	gimp-2.0.0:${PORTSDIR}/graphics/gimp-app \
-		gutenprint.2:${PORTSDIR}/print/gutenprint
-CONFIGURE_ARGS+=--with-gimp2=yes
-.else
-MAN1=	escputil.1 ijsgutenprint.1
-
-.if defined(WITH_CUPS) && !defined(WITHOUT_CUPS)
-LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-base
-RUN_DEPENDS+=	espgs:${PORTSDIR}/print/cups-pstoraster
-CONFIGURE_ARGS+=	--with-cups=${PREFIX}
-PLIST_SUB+=	CUPS=""
-MAN8=	cups-calibrate.8 cups-genppd.8 cups-genppdconfig.8 \
-	cups-genppdupdate.8
-.else
-PLIST_SUB+=	CUPS="@comment "
-CONFIGURE_ARGS+=	--without-cups
+.if defined(WITH_CUPS)
+RUN_DEPENDS+=	gutenprint-cups>0:${PORTSDIR}/print/gutenprint-cups
 .endif
 
-.if defined(WITHOUT_IJS)
-PLIST_SUB+=	IJS="@comment "
-.else
-LIB_DEPENDS+=	ijs.1:${PORTSDIR}/print/libijs
-CONFIGURE_ARGS+=	--with-ijs=yes
-PLIST_SUB+=	IJS=""
+.if defined(WITH_GIMP)
+RUN_DEPENDS+=	gimp-gutenprint>0:${PORTSDIR}/print/gimp-gutenprint
 .endif
 
-.if defined(NOPORTDOCS)
-CONFIGURE_ARGS+=	--with-user-guide=no
+.if !defined(WITHOUT_IJS)
+RUN_DEPENDS+=	gutenprint-ijs>0:${PORTSDIR}/print/gutenprint-ijs
 .endif
 
-pre-everything::
-	@${ECHO_MSG}
-	@${ECHO_MSG} "You may use the following build options:"
-	@${ECHO_MSG}
-	@${ECHO_MSG} "	WITH_CUPS=yes		build with CUPS driver"
-	@${ECHO_MSG} "	WITHOUT_IJS=yes 	build without IJS-based Ghostscript driver"
-	@${ECHO_MSG}
+.if defined(WITH_FOOMATIC)
+RUN_DEPENDS+=	gutenprint-foomatic>0:${PORTSDIR}/print/gutenprint-foomatic
 .endif
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|%%GUTENPRINTUI2_LIBS%%|${GUTENPRINTUI2_LIBS}|' \
-		${WRKSRC}/src/gimp2/Makefile.in
-	@${REINPLACE_CMD} -e 's|$$libdir/gimp/1.2/plug-ins||g' \
-		${WRKSRC}/configure
+do-install:	# empty
 
 .include <bsd.port.post.mk>
