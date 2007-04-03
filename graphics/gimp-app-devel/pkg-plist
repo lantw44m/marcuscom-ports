@@ -200,10 +200,12 @@ include/gimp-2.0/libgimpwidgets/gimppreview.h
 include/gimp-2.0/libgimpwidgets/gimppreviewarea.h
 include/gimp-2.0/libgimpwidgets/gimppropwidgets.h
 include/gimp-2.0/libgimpwidgets/gimpquerybox.h
+include/gimp-2.0/libgimpwidgets/gimpratioentry.h
 include/gimp-2.0/libgimpwidgets/gimpresolutionentry.h
 include/gimp-2.0/libgimpwidgets/gimpscrolledpreview.h
 include/gimp-2.0/libgimpwidgets/gimpsizeentry.h
 include/gimp-2.0/libgimpwidgets/gimpstock.h
+include/gimp-2.0/libgimpwidgets/gimpstringcombobox.h
 include/gimp-2.0/libgimpwidgets/gimpunitmenu.h
 include/gimp-2.0/libgimpwidgets/gimpwidgets.h
 include/gimp-2.0/libgimpwidgets/gimpwidgetsenums.h
@@ -409,6 +411,7 @@ libexec/gimp/2.2/plug-ins/rotate
 libexec/gimp/2.2/plug-ins/sample_colorize
 libexec/gimp/2.2/plug-ins/scatter_hsv
 libexec/gimp/2.2/plug-ins/screenshot
+libexec/gimp/2.2/plug-ins/script-fu
 libexec/gimp/2.2/plug-ins/sel2path
 libexec/gimp/2.2/plug-ins/sel_gauss
 libexec/gimp/2.2/plug-ins/semiflatten
@@ -464,7 +467,6 @@ share/applications/gimp.desktop
 %%DOCSDIR%%/libgimp/GimpProgressBar.html
 %%DOCSDIR%%/libgimp/GimpSelectButton.html
 %%DOCSDIR%%/libgimp/GimpZoomPreview.html
-%%DOCSDIR%%/libgimp/gimpdefinitions.html
 %%DOCSDIR%%/libgimp/home.png
 %%DOCSDIR%%/libgimp/index.html
 %%DOCSDIR%%/libgimp/index.sgml
@@ -702,8 +704,10 @@ share/applications/gimp.desktop
 %%DOCSDIR%%/libgimpwidgets/GimpPixmap.html
 %%DOCSDIR%%/libgimpwidgets/GimpPreview.html
 %%DOCSDIR%%/libgimpwidgets/GimpPreviewArea.html
+%%DOCSDIR%%/libgimpwidgets/GimpRatioEntry.html
 %%DOCSDIR%%/libgimpwidgets/GimpScrolledPreview.html
 %%DOCSDIR%%/libgimpwidgets/GimpSizeEntry.html
+%%DOCSDIR%%/libgimpwidgets/GimpStringComboBox.html
 %%DOCSDIR%%/libgimpwidgets/GimpUnitMenu.html
 %%DOCSDIR%%/libgimpwidgets/gimp-browser.png
 %%DOCSDIR%%/libgimpwidgets/gimp-button.png
@@ -726,6 +730,8 @@ share/applications/gimp.desktop
 %%DOCSDIR%%/libgimpwidgets/gimp-path-editor.png
 %%DOCSDIR%%/libgimpwidgets/gimp-pick-button.png
 %%DOCSDIR%%/libgimpwidgets/gimp-preview-area.png
+%%DOCSDIR%%/libgimpwidgets/gimp-ratio-entry.png
+%%DOCSDIR%%/libgimpwidgets/gimp-string-combo-box.png
 %%DOCSDIR%%/libgimpwidgets/gimp-unit-menu.png
 %%DOCSDIR%%/libgimpwidgets/home.png
 %%DOCSDIR%%/libgimpwidgets/index.html
@@ -921,8 +927,8 @@ share/applications/gimp.desktop
 %%DOCSDIR%%/libgimpwidgets/stock-print-resolution-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-print-resolution-24.png
 %%DOCSDIR%%/libgimpwidgets/stock-question-64.png
-%%DOCSDIR%%/libgimpwidgets/stock-quick-mask-off-16.png
-%%DOCSDIR%%/libgimpwidgets/stock-quick-mask-on-16.png
+%%DOCSDIR%%/libgimpwidgets/stock-quick-mask-off-12.png
+%%DOCSDIR%%/libgimpwidgets/stock-quick-mask-on-12.png
 %%DOCSDIR%%/libgimpwidgets/stock-reset-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-reshow-filter-16.png
 %%DOCSDIR%%/libgimpwidgets/stock-resize-16.png
@@ -1466,6 +1472,116 @@ share/applications/gimp.desktop
 %%DATADIR%%/patterns/wood3.pat
 %%DATADIR%%/patterns/wood4.pat
 %%DATADIR%%/patterns/wood5.pat
+%%DATADIR%%/scripts/3d-outline.scm
+%%DATADIR%%/scripts/3dTruchet.scm
+%%DATADIR%%/scripts/add-bevel.scm
+%%DATADIR%%/scripts/addborder.scm
+%%DATADIR%%/scripts/alien-glow-arrow.scm
+%%DATADIR%%/scripts/alien-glow-bar.scm
+%%DATADIR%%/scripts/alien-glow-bullet.scm
+%%DATADIR%%/scripts/alien-glow-button.scm
+%%DATADIR%%/scripts/alien-glow-logo.scm
+%%DATADIR%%/scripts/alien-neon-logo.scm
+%%DATADIR%%/scripts/basic1-logo.scm
+%%DATADIR%%/scripts/basic2-logo.scm
+%%DATADIR%%/scripts/beveled-button.scm
+%%DATADIR%%/scripts/beveled-pattern-arrow.scm
+%%DATADIR%%/scripts/beveled-pattern-bullet.scm
+%%DATADIR%%/scripts/beveled-pattern-button.scm
+%%DATADIR%%/scripts/beveled-pattern-heading.scm
+%%DATADIR%%/scripts/beveled-pattern-hrule.scm
+%%DATADIR%%/scripts/blend-anim.scm
+%%DATADIR%%/scripts/blended-logo.scm
+%%DATADIR%%/scripts/bovinated-logo.scm
+%%DATADIR%%/scripts/burn-in-anim.scm
+%%DATADIR%%/scripts/camo.scm
+%%DATADIR%%/scripts/carve-it.scm
+%%DATADIR%%/scripts/carved-logo.scm
+%%DATADIR%%/scripts/chalk.scm
+%%DATADIR%%/scripts/chip-away.scm
+%%DATADIR%%/scripts/chrome-it.scm
+%%DATADIR%%/scripts/chrome-logo.scm
+%%DATADIR%%/scripts/circuit.scm
+%%DATADIR%%/scripts/clothify.scm
+%%DATADIR%%/scripts/coffee.scm
+%%DATADIR%%/scripts/comic-logo.scm
+%%DATADIR%%/scripts/contactsheet.scm
+%%DATADIR%%/scripts/coolmetal-logo.scm
+%%DATADIR%%/scripts/copy-visible.scm
+%%DATADIR%%/scripts/crystal-logo.scm
+%%DATADIR%%/scripts/difference-clouds.scm
+%%DATADIR%%/scripts/distress-selection.scm
+%%DATADIR%%/scripts/drop-shadow.scm
+%%DATADIR%%/scripts/erase-rows.scm
+%%DATADIR%%/scripts/fade-outline.scm
+%%DATADIR%%/scripts/flatland.scm
+%%DATADIR%%/scripts/font-map.scm
+%%DATADIR%%/scripts/frosty-logo.scm
+%%DATADIR%%/scripts/fuzzyborder.scm
+%%DATADIR%%/scripts/gimp-headers.scm
+%%DATADIR%%/scripts/gimp-labels.scm
+%%DATADIR%%/scripts/glossy.scm
+%%DATADIR%%/scripts/glowing-logo.scm
+%%DATADIR%%/scripts/gradient-bevel-logo.scm
+%%DATADIR%%/scripts/gradient-example.scm
+%%DATADIR%%/scripts/grid-system.scm
+%%DATADIR%%/scripts/guides-from-selection.scm
+%%DATADIR%%/scripts/guides-new-percent.scm
+%%DATADIR%%/scripts/guides-new.scm
+%%DATADIR%%/scripts/guides-remove-all.scm
+%%DATADIR%%/scripts/hsv-graph.scm
+%%DATADIR%%/scripts/i26-gunya2.scm
+%%DATADIR%%/scripts/images/beavis.jpg
+%%DATADIR%%/scripts/images/texture.jpg
+%%DATADIR%%/scripts/images/texture1.jpg
+%%DATADIR%%/scripts/images/texture2.jpg
+%%DATADIR%%/scripts/images/texture3.jpg
+%%DATADIR%%/scripts/land.scm
+%%DATADIR%%/scripts/lava.scm
+%%DATADIR%%/scripts/line-nova.scm
+%%DATADIR%%/scripts/mkbrush.scm
+%%DATADIR%%/scripts/neon-logo.scm
+%%DATADIR%%/scripts/news-text.scm
+%%DATADIR%%/scripts/old-photo.scm
+%%DATADIR%%/scripts/paste-as-brush.scm
+%%DATADIR%%/scripts/paste-as-pattern.scm
+%%DATADIR%%/scripts/perspective-shadow.scm
+%%DATADIR%%/scripts/predator.scm
+%%DATADIR%%/scripts/pupi-button.scm
+%%DATADIR%%/scripts/rendermap.scm
+%%DATADIR%%/scripts/reverse-layers.scm
+%%DATADIR%%/scripts/ripply-anim.scm
+%%DATADIR%%/scripts/round-corners.scm
+%%DATADIR%%/scripts/script-fu-compat.init
+%%DATADIR%%/scripts/script-fu-set-cmap.scm
+%%DATADIR%%/scripts/script-fu-util.scm
+%%DATADIR%%/scripts/script-fu.init
+%%DATADIR%%/scripts/select-to-brush.scm
+%%DATADIR%%/scripts/select-to-image.scm
+%%DATADIR%%/scripts/select-to-pattern.scm
+%%DATADIR%%/scripts/selection-round.scm
+%%DATADIR%%/scripts/slide.scm
+%%DATADIR%%/scripts/sota-chrome-logo.scm
+%%DATADIR%%/scripts/speed-text.scm
+%%DATADIR%%/scripts/sphere.scm
+%%DATADIR%%/scripts/spinning-globe.scm
+%%DATADIR%%/scripts/spyrogimp.scm
+%%DATADIR%%/scripts/starburst-logo.scm
+%%DATADIR%%/scripts/starscape-logo.scm
+%%DATADIR%%/scripts/swirltile.scm
+%%DATADIR%%/scripts/swirly-pattern.scm
+%%DATADIR%%/scripts/t-o-p-logo.scm
+%%DATADIR%%/scripts/text-circle.scm
+%%DATADIR%%/scripts/textured-logo.scm
+%%DATADIR%%/scripts/tileblur.scm
+%%DATADIR%%/scripts/title-header.scm
+%%DATADIR%%/scripts/truchet.scm
+%%DATADIR%%/scripts/unsharp-mask.scm
+%%DATADIR%%/scripts/waves-anim.scm
+%%DATADIR%%/scripts/weave.scm
+%%DATADIR%%/scripts/web-browser.scm
+%%DATADIR%%/scripts/xach-effect.scm
+
 %%DATADIR%%/themes/Default/gtkrc
 %%DATADIR%%/themes/Default/images/preferences/color-management-22.png
 %%DATADIR%%/themes/Default/images/preferences/color-management.png
@@ -1600,6 +1716,12 @@ share/locale/en_GB/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/en_GB/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/en_GB/LC_MESSAGES/gimp20-tips.mo
 share/locale/en_GB/LC_MESSAGES/gimp20.mo
+share/locale/eo/LC_MESSAGES/gimp20-libgimp.mo
+share/locale/eo/LC_MESSAGES/gimp20-python.mo
+share/locale/eo/LC_MESSAGES/gimp20-script-fu.mo
+share/locale/eo/LC_MESSAGES/gimp20-std-plug-ins.mo
+share/locale/eo/LC_MESSAGES/gimp20-tips.mo
+share/locale/eo/LC_MESSAGES/gimp20.mo
 share/locale/es/LC_MESSAGES/gimp20-libgimp.mo
 share/locale/es/LC_MESSAGES/gimp20-python.mo
 share/locale/es/LC_MESSAGES/gimp20-script-fu.mo
@@ -1846,6 +1968,8 @@ share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 @dirrm %%DATADIR%%/themes/Default/images
 @dirrm %%DATADIR%%/themes/Default
 @dirrm %%DATADIR%%/themes
+@dirrm %%DATADIR%%/scripts/images
+@dirrm %%DATADIR%%/scripts
 @dirrm %%DATADIR%%/patterns
 @dirrm %%DATADIR%%/palettes
 @dirrm %%DATADIR%%/menus
@@ -1922,6 +2046,8 @@ share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 @dirrmtry share/locale/gl
 @dirrmtry share/locale/fi/LC_MESSAGES
 @dirrmtry share/locale/fi
+@dirrmtry share/locale/eo/LC_MESSAGES
+@dirrmtry share/locale/eo
 @dirrmtry share/locale/el/LC_MESSAGES
 @dirrmtry share/locale/el
 @dirrmtry share/locale/dz/LC_MESSAGES
