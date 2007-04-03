@@ -3,12 +3,12 @@
 # Whom: dgilbert@velocet.ca
 #
 # $FreeBSD$
-#    $MCom: ports/print/gutenprint/Makefile,v 1.6 2007/02/16 18:14:25 mezz Exp $
+#    $MCom: ports/print/gutenprint/Makefile,v 1.7 2007/03/30 16:42:46 ahze Exp $
 #
 
 PORTNAME=	gutenprint
-PORTVERSION?=	5.1.0
-PORTREVISION?=	0
+PORTVERSION=	5.1
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -43,6 +43,12 @@ RUN_DEPENDS+=	gutenprint-ijs>0:${PORTSDIR}/print/gutenprint-ijs
 .if defined(WITH_FOOMATIC)
 RUN_DEPENDS+=	gutenprint-foomatic>0:${PORTSDIR}/print/gutenprint-foomatic
 .endif
+
+pre-everything::
+	@if [ -n "`${PKG_INFO} -xI '^gutenprint-[0-9].[0-9].[0-9]*' 2>/dev/null`" ]; then \
+		${ECHO_CMD} "${PKGNAME}: Old version of gutenprint detected! Please see ${PORTSDIR}/UPDATING for information on upgrading ${PKGNAME}" ; \
+		${FALSE}; \
+	fi
 
 do-install:	# empty
 

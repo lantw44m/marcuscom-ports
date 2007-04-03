@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.28 2007/03/30 17:05:55 ahze Exp $
+#   $MCom: ports/graphics/gimp-devel/Makefile,v 1.29 2007/04/03 01:10:02 ahze Exp $
 #
 
 PORTNAME=	gimp
@@ -27,6 +27,12 @@ OPTIONS=	PYTHON "Python-fu support" Off \
 NO_BUILD=	yes
 
 .include <bsd.port.pre.mk>
+
+pre-everything::
+	@if [ -n "`${PKG_INFO} -xI '^gimp-devel-[0-9].[0-9].[0-9]*' 2>/dev/null`" ]; then \
+		${ECHO_CMD} "${PKGNAME}: Old version of gimp detected! Please see ${PORTSDIR}/UPDATING for information on upgrading ${PKGNAME}" ; \
+		${FALSE}; \
+	fi
 
 #.if defined(WITH_HELP)
 #RUN_DEPENDS+=	gimp-help>0:${PORTSDIR}/graphics/gimp-help
