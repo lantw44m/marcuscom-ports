@@ -1,0 +1,26 @@
+--- metacity/metacity.defs.orig	Sat Apr  7 08:31:52 2007
++++ metacity/metacity.defs	Sat Apr  7 08:33:40 2007
+@@ -131,16 +131,16 @@
+   )
+ )
+ 
+-(define-enum ActionDoubleClickTitlebar
++(define-enum ActionTitlebar
+   (in-module "Meta")
+-  (c-name "MetaActionDoubleClickTitlebar")
++  (c-name "MetaActionTitlebar")
+ ;   (gtype-id "META_TYPE_ACTION_TITLEBAR")
+   (values
+-    '("toggle-shade" "META_ACTION_DOUBLE_CLICK_TITLEBAR_TOGGLE_SHADE")
+-    '("toggle-maximize" "META_ACTION_DOUBLE_CLICK_TITLEBAR_TOGGLE_MAXIMIZE")
+-    '("minimize" "META_ACTION_DOUBLE_CLICK_TITLEBAR_MINIMIZE")
+-    '("none" "META_ACTION_DOUBLE_CLICK_TITLEBAR_NONE")
+-    '("last" "META_ACTION_DOUBLE_CLICK_TITLEBAR_LAST")
++    '("toggle-shade" "META_ACTION_TITLEBAR_TOGGLE_SHADE")
++    '("toggle-maximize" "META_ACTION_TITLEBAR_TOGGLE_MAXIMIZE")
++    '("minimize" "META_ACTION_TITLEBAR_MINIMIZE")
++    '("none" "META_ACTION_TITLEBAR_NONE")
++    '("last" "META_ACTION_TITLEBAR_LAST")
+   )
+ )
+ 
