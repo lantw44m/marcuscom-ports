@@ -15,6 +15,8 @@ lib/libmetacity-private.so
 lib/libmetacity-private.so.0
 libdata/pkgconfig/libmetacity-private.pc
 libexec/metacity-dialog
+share/gnome/control-center/keybindings/50-metacity-desktop-key.xml
+share/gnome/control-center/keybindings/50-metacity-key.xml
 share/gnome/metacity/icons/metacity-window-demo.png
 share/gnome/themes/AgingGorilla/metacity-1/active-button.png
 share/gnome/themes/AgingGorilla/metacity-1/active-close-button.png
