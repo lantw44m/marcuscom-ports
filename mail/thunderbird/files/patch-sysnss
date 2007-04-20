@@ -149,8 +149,8 @@
  
  echo-requires-recursive::
 --- security/manager/ssl/src/Makefile.in.orig	Mon Aug 14 19:22:52 2006
-+++ security/manager/ssl/src/Makefile.in	Thu Aug 31 15:17:20 2006
-@@ -124,19 +124,19 @@
++++ security/manager/ssl/src/Makefile.in	Wed Apr 18 20:16:36 2007
+@@ -124,19 +124,20 @@
  		  pipboot \
  		  $(NULL)
  
@@ -168,6 +168,7 @@
  		$(MOZ_COMPONENT_LIBS) \
  		$(MOZ_JS_LIBS) \
  		$(NSS_LIBS) \
++		-L%%LOCALBASE%%/lib/nss \
 +		$(LOCAL_INCLUDES) \
  		$(NULL)
  

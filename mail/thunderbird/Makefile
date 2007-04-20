@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/mail/thunderbird/Makefile,v 1.23 2006/12/21 08:23:30 mezz Exp $
+#    $MCom: ports/mail/thunderbird/Makefile,v 1.24 2007/01/28 04:51:34 ahze Exp $
 #
 
 PORTNAME=	thunderbird
-DISTVERSION=	2.0b2
+DISTVERSION=	2.0.0.0
 CATEGORIES=	mail ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA_EXTENDED}
 MASTER_SITE_SUBDIR=	thunderbird/releases/${DISTVERSION}/source
@@ -71,6 +71,9 @@ post-patch:
 		${WRKSRC}/xpcom/io/nsNativeCharsetUtils.cpp
 
 port-pre-install:
+	${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|' \
+	${FAKEDIR}/bin/thunderbird-config ${FAKEDIR}/bin/thunderbird
+	${RM} -f ${FAKEDIR}/bin/*.bak
 	${MKDIR} ${FAKEDIR}/lib/${PORTNAME}/defaults
 	${CP} -RL ${WRKSRC}/dist/bin/isp \
 		${FAKEDIR}/lib/${PORTNAME}/defaults
