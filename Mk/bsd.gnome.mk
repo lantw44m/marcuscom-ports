@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.413 2007/02/27 04:39:18 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.414 2007/03/13 01:24:54 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -70,29 +70,13 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gail \
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "${GNOME_MAKEFILEIN}*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
-				's|[(]GNOME_datadir[)]/gnome/|(datadir)/|g ; \
-				 s|[(]GNOME_datadir[)]/locale|(prefix)/share/locale|g ; \
-				 s|[(]datadir[)]/locale|(prefix)/share/locale|g ; \
-				 s|[(]libdir[)]/locale|(prefix)/share/locale|g ; \
-				 s|[(]gnomedatadir[)]/gnome|(gnomedatadir)|g ; \
-				 s|[(]datadir[)]/aclocal|(prefix)/share/aclocal|g ; \
-				 s|[(]datadir[)]/gnome/|(datadir)/|g ; \
-				 s|[(]datadir[)]/mime/|(prefix)/share/mime/|g ; \
-				 s|[(]datadir[)]/mime"|(prefix)/share/mime"|g ; \
-				 s|[(]datadir[)]/mime;|(prefix)/share/mime;|g ; \
-				 s|[(]datadir[)]/mime$$|(prefix)/share/mime|g ; \
-				 s|[(]datadir[)]/dbus-1|(prefix)/share/dbus-1|g ; \
+				's|[(]libdir[)]/locale|(prefix)/share/locale|g ; \
 				 s|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g ; \
 				 s|[$$][(]localstatedir[)]/scrollkeeper|${SCROLLKEEPER_DIR}|g ; \
-				 s|[(]datadir[)]/icons/hicolor|(prefix)/share/icons/hicolor|g ; \
-				 s|{datadir}/icons/hicolor|{prefix}/share/icons/hicolor|g ; \
 				 s|[(]libdir[)]/bonobo/servers|(prefix)/libdata/bonobo/servers|g' ; \
 			${FIND} ${WRKSRC} -name "configure" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 				's|-lpthread|${PTHREAD_LIBS}|g ; \
 				 s|DATADIRNAME=lib|DATADIRNAME=share|g ; \
-				 s|{datadir}/locale|{prefix}/share/locale|g ; \
-				 s|DATADIR/dbus-1/services|prefix/share/dbus-1/services|g ; \
-				 s|datadir/dbus-1/services|prefix/share/dbus-1/services|g ; \
 				 s|{libdir}/locale|{prefix}/share/locale|g'
 
 referencehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "Makefile.in" -type f | ${XARGS} ${REINPLACE_CMD} -e \
@@ -109,12 +93,10 @@ GNOME_HTML_DIR?=	${PREFIX}/share/doc
 GCONF_CONFIG_OPTIONS?=	merged
 GCONF_CONFIG_DIRECTORY?=etc/gconf/gconf.xml.defaults
 GCONF_CONFIG_SOURCE?=xml:${GCONF_CONFIG_OPTIONS}:${TARGETDIR}/${GCONF_CONFIG_DIRECTORY}
-GNOME_LOCALSTATEDIR?=	${PREFIX}/share/gnome
+GNOME_LOCALSTATEDIR?=	${PREFIX}/share
 gnomeprefix_CONFIGURE_ENV=GTKDOC="false"
 gnomeprefix_CONFIGURE_ARGS=--localstatedir=${DESTDIR}${GNOME_LOCALSTATEDIR} \
-			   --datadir=${TARGETDIR}/share/gnome \
 			   --with-html-dir=${DESTDIR}${GNOME_HTML_DIR} \
-			   --with-help-dir=${TARGETDIR}/share/gnome/help \
 			   --disable-gtk-doc \
 			   --with-gconf-source=${GCONF_CONFIG_SOURCE} \
 			   --mandir=${PREFIX}/man
