@@ -90,7 +90,7 @@ share/locale/zh_CN/LC_MESSAGES/scrollkeeper.mo
 share/locale/zh_TW/LC_MESSAGES/scrollkeeper.mo
 @dirrm share/xml/scrollkeeper/dtds
 @dirrm share/xml/scrollkeeper
-@dirrm share/xml
+@dirrmtry share/xml
 @dirrm share/scrollkeeper/stylesheets
 @dirrm share/scrollkeeper/doc/writing_scrollkeeper_omf_files/C
 @dirrm share/scrollkeeper/doc/writing_scrollkeeper_omf_files
