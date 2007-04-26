@@ -1,0 +1,11 @@
+--- data/Makefile.in.orig	Sun Jan 28 20:39:50 2007
++++ data/Makefile.in	Sun Jan 28 20:41:03 2007
+@@ -271,7 +271,7 @@ EXTRA_DIST = \
+ 	session-properties.desktop.in
+ 
+ CLEANFILES = default.session gnome-session.schemas session-properties.desktop
+-all: all-recursive
++all: all-recursive default.session
+ 
+ .SUFFIXES:
+ $(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ $(srcdir)/Makefile.am  $(am__configure_deps)
