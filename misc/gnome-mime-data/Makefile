@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/misc/gnome-mime-data/Makefile,v 1.12 2007/04/26 13:40:41 ahze Exp $
 
 PORTNAME=	gnome-mime-data
 PORTVERSION=	2.18.0
@@ -20,7 +20,7 @@ COMMENT=	A MIME and Application database for GNOME
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnometarget pkgconfig
+USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lintl"
