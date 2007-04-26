@@ -58,30 +58,30 @@ libdata/pkgconfig/cspi-1.0.pc
 libdata/pkgconfig/libloginhelper-1.0.pc
 libdata/pkgconfig/libspi-1.0.pc
 libexec/at-spi-registryd
-share/gnome/idl/at-spi-1.0/Accessibility.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Accessible.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Action.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Application.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Collection.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Component.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Desktop.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Document.idl
-share/gnome/idl/at-spi-1.0/Accessibility_EditableText.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Event.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Hyperlink.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Hypertext.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Image.idl
-share/gnome/idl/at-spi-1.0/Accessibility_LoginHelper.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Registry.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Relation.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Role.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Selection.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Selector.idl
-share/gnome/idl/at-spi-1.0/Accessibility_State.idl
-share/gnome/idl/at-spi-1.0/Accessibility_StreamableContent.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Table.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Text.idl
-share/gnome/idl/at-spi-1.0/Accessibility_Value.idl
+share/idl/at-spi-1.0/Accessibility.idl
+share/idl/at-spi-1.0/Accessibility_Accessible.idl
+share/idl/at-spi-1.0/Accessibility_Action.idl
+share/idl/at-spi-1.0/Accessibility_Application.idl
+share/idl/at-spi-1.0/Accessibility_Collection.idl
+share/idl/at-spi-1.0/Accessibility_Component.idl
+share/idl/at-spi-1.0/Accessibility_Desktop.idl
+share/idl/at-spi-1.0/Accessibility_Document.idl
+share/idl/at-spi-1.0/Accessibility_EditableText.idl
+share/idl/at-spi-1.0/Accessibility_Event.idl
+share/idl/at-spi-1.0/Accessibility_Hyperlink.idl
+share/idl/at-spi-1.0/Accessibility_Hypertext.idl
+share/idl/at-spi-1.0/Accessibility_Image.idl
+share/idl/at-spi-1.0/Accessibility_LoginHelper.idl
+share/idl/at-spi-1.0/Accessibility_Registry.idl
+share/idl/at-spi-1.0/Accessibility_Relation.idl
+share/idl/at-spi-1.0/Accessibility_Role.idl
+share/idl/at-spi-1.0/Accessibility_Selection.idl
+share/idl/at-spi-1.0/Accessibility_Selector.idl
+share/idl/at-spi-1.0/Accessibility_State.idl
+share/idl/at-spi-1.0/Accessibility_StreamableContent.idl
+share/idl/at-spi-1.0/Accessibility_Table.idl
+share/idl/at-spi-1.0/Accessibility_Text.idl
+share/idl/at-spi-1.0/Accessibility_Value.idl
 share/locale/ar/LC_MESSAGES/at-spi.mo
 share/locale/az/LC_MESSAGES/at-spi.mo
 share/locale/be/LC_MESSAGES/at-spi.mo
@@ -148,7 +148,7 @@ share/locale/xh/LC_MESSAGES/at-spi.mo
 share/locale/zh_CN/LC_MESSAGES/at-spi.mo
 share/locale/zh_HK/LC_MESSAGES/at-spi.mo
 share/locale/zh_TW/LC_MESSAGES/at-spi.mo
-@dirrm share/gnome/idl/at-spi-1.0
+@dirrm share/idl/at-spi-1.0
 @dirrm include/at-spi-1.0/login-helper
 @dirrm include/at-spi-1.0/libspi
 @dirrm include/at-spi-1.0/cspi
