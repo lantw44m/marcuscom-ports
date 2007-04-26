@@ -77,6 +77,7 @@ share/gnome/help/gpl
 share/gnome/help/gpl/C
 share/gnome/help/lgpl
 share/gnome/help/lgpl/C
+share/gnome/panel
 share/icons
 share/idl
 share/images
@@ -85,7 +86,6 @@ share/mc/templates
 share/mime-info
 share/oaf
 share/omf
-share/panel
 share/pixmaps
 share/pixmaps/document-icons
 share/pixmaps/splash
