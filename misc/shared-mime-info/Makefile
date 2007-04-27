@@ -3,11 +3,11 @@
 # Whom:                olgeni@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/misc/shared-mime-info/Makefile,v 1.3 2007/04/26 19:02:24 marcus Exp $
+#   $MCom: ports/misc/shared-mime-info/Makefile,v 1.4 2007/04/26 19:10:20 marcus Exp $
 
 PORTNAME=	shared-mime-info
 PORTVERSION=	0.21
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	misc gnome
 MASTER_SITES=	http://people.freedesktop.org/~hadess/
 
