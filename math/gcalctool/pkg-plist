@@ -1,6 +1,6 @@
 bin/gcalctool
 bin/gnome-calculator
-share/gnome/applications/gcalctool.desktop
+share/applications/gcalctool.desktop
 share/gnome/help/gcalctool/C/figures/gcalctool_basic_window.png
 share/gnome/help/gcalctool/C/figures/gcalctool_financial_window.png
 share/gnome/help/gcalctool/C/figures/gcalctool_menu_symbol.png
@@ -70,18 +70,18 @@ share/gnome/help/gcalctool/zh_TW/figures/gcalctool_menu_symbol.png
 share/gnome/help/gcalctool/zh_TW/figures/gcalctool_scientific_window.png
 share/gnome/help/gcalctool/zh_TW/gcalctool.xml
 share/gnome/help/gcalctool/zh_TW/legal.xml
-share/gnome/omf/gcalctool/gcalctool-C.omf
-share/gnome/omf/gcalctool/gcalctool-bg.omf
-share/gnome/omf/gcalctool/gcalctool-de.omf
-share/gnome/omf/gcalctool/gcalctool-es.omf
-share/gnome/omf/gcalctool/gcalctool-fr.omf
-share/gnome/omf/gcalctool/gcalctool-it.omf
-share/gnome/omf/gcalctool/gcalctool-ja.omf
-share/gnome/omf/gcalctool/gcalctool-ko.omf
-share/gnome/omf/gcalctool/gcalctool-sv.omf
-share/gnome/omf/gcalctool/gcalctool-zh_CN.omf
-share/gnome/omf/gcalctool/gcalctool-zh_HK.omf
-share/gnome/omf/gcalctool/gcalctool-zh_TW.omf
+share/omf/gcalctool/gcalctool-C.omf
+share/omf/gcalctool/gcalctool-bg.omf
+share/omf/gcalctool/gcalctool-de.omf
+share/omf/gcalctool/gcalctool-es.omf
+share/omf/gcalctool/gcalctool-fr.omf
+share/omf/gcalctool/gcalctool-it.omf
+share/omf/gcalctool/gcalctool-ja.omf
+share/omf/gcalctool/gcalctool-ko.omf
+share/omf/gcalctool/gcalctool-sv.omf
+share/omf/gcalctool/gcalctool-zh_CN.omf
+share/omf/gcalctool/gcalctool-zh_HK.omf
+share/omf/gcalctool/gcalctool-zh_TW.omf
 share/locale/am/LC_MESSAGES/gcalctool.mo
 share/locale/ar/LC_MESSAGES/gcalctool.mo
 share/locale/az/LC_MESSAGES/gcalctool.mo
@@ -155,7 +155,7 @@ share/locale/xh/LC_MESSAGES/gcalctool.mo
 share/locale/zh_CN/LC_MESSAGES/gcalctool.mo
 share/locale/zh_HK/LC_MESSAGES/gcalctool.mo
 share/locale/zh_TW/LC_MESSAGES/gcalctool.mo
-@dirrm share/gnome/omf/gcalctool
+@dirrm share/omf/gcalctool
 @dirrm share/gnome/help/gcalctool/zh_TW/figures
 @dirrm share/gnome/help/gcalctool/zh_TW
 @dirrm share/gnome/help/gcalctool/zh_HK/figures
