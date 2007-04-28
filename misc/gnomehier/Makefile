@@ -3,13 +3,13 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/misc/gnomehier/Makefile,v 1.18 2007/04/27 18:11:41 ahze Exp $
+#    $MCom: ports/misc/gnomehier/Makefile,v 1.19 2007/04/28 22:40:22 marcus Exp $
 #
 # !!DON'T BUMP PORTREVISION ON MTREE CHANGES ANYMORE!!
 
 PORTNAME=	gnomehier
 PORTVERSION=	2.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc gnome
 MASTER_SITES=	# none
 DISTFILES=	# none

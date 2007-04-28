@@ -70,6 +70,7 @@ share/gnome
 share/gnome-2.0
 share/gnome-2.0/ui
 share/gnome-about
+share/gnome/autostart
 share/gnome/help
 share/gnome/help/fdl
 share/gnome/help/fdl/C
@@ -78,6 +79,7 @@ share/gnome/help/gpl/C
 share/gnome/help/lgpl
 share/gnome/help/lgpl/C
 share/gnome/panel
+share/gnome/wm-properties
 share/icons
 share/idl
 share/images
@@ -95,5 +97,4 @@ share/sounds
 share/themes
 share/ui
 share/vfolders
-share/wm-properties
 share/xmodmap
