@@ -73,7 +73,6 @@ share/locale/xh/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-volume-manager.mo
-@dirrmtry share/gnome/autostart
 @dirrm share/gnome-volume-manager/icons
 @dirrm share/gnome-volume-manager
 @dirrmtry share/locale/zh_TW/LC_MESSAGES

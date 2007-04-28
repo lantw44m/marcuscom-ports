@@ -356,7 +356,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
 @dirrm share/gnome/help/gnome-power-manager/C
 @dirrm share/gnome/help/gnome-power-manager
 @dirrm share/gnome-power-manager
-@dirrmtry share/gnome/autostart
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
