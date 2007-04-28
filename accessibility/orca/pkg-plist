@@ -211,11 +211,11 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.py
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.pyc
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.pyo
-share/gnome/applications/orca.desktop
-share/gnome/orca/glade/orca-find.glade
-share/gnome/orca/glade/orca-mainwin.glade
-share/gnome/orca/glade/orca-quit.glade
-share/gnome/orca/glade/orca-setup.glade
+share/applications/orca.desktop
+share/orca/glade/orca-find.glade
+share/orca/glade/orca-mainwin.glade
+share/orca/glade/orca-quit.glade
+share/orca/glade/orca-setup.glade
 share/icons/hicolor/48x48/apps/orca.png
 share/locale/ar/LC_MESSAGES/orca.mo
 share/locale/bg/LC_MESSAGES/orca.mo
@@ -269,8 +269,8 @@ share/locale/vi/LC_MESSAGES/orca.mo
 share/locale/zh_CN/LC_MESSAGES/orca.mo
 share/locale/zh_HK/LC_MESSAGES/orca.mo
 share/locale/zh_TW/LC_MESSAGES/orca.mo
-@dirrm share/gnome/orca/glade
-@dirrm share/gnome/orca
+@dirrm share/orca/glade
+@dirrm share/orca
 @dirrm %%PYTHON_SITELIBDIR%%/orca/scripts
 @dirrm %%PYTHON_SITELIBDIR%%/orca
 @dirrmtry share/locale/zh_TW/LC_MESSAGES

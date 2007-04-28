@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/orca/Makefile,v 1.15 2007/03/13 00:05:30 marcus Exp $
+#   $MCom: ports/accessibility/orca/Makefile,v 1.17 2007/04/15 02:32:33 marcus Exp $
 #
 
 PORTNAME=	orca
 PORTVERSION=	2.19.0
+PORTREVISION=	1
 CATEGORIES=	accessibility x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
