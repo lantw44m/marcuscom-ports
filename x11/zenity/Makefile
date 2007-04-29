@@ -3,7 +3,7 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity/Makefile,v 1.77 2007/03/11 19:58:27 mezz Exp $
+#   $MCom: ports/x11/zenity/Makefile,v 1.79 2007/04/26 15:44:07 ahze Exp $
 #
 
 PORTNAME=	zenity
@@ -34,9 +34,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 MAN1=		zenity.1
 
 CONFLICTS=	gtkada-1.2.*
-
-pre-configure:
-	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
-		's|@DATADIRNAME@|share|'
 
 .include <bsd.port.mk>
