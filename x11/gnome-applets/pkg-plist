@@ -1139,10 +1139,6 @@ share/xmodmap/xmodmap.yu
 @dirrm share/omf/char-palette
 %%BATTERY%%@dirrm share/omf/battstat
 @dirrm share/omf/accessx-status
-@dirrmtry share/icons/hicolor/svgxsvg/apps
-@dirrmtry share/icons/hicolor/svgxsvg
-@dirrmtry share/icons/hicolor
-@dirrmtry share/icons
 @dirrm share/gnome/help/trashapplet/uk/figures
 @dirrm share/gnome/help/trashapplet/uk
 @dirrm share/gnome/help/trashapplet/sv/figures
