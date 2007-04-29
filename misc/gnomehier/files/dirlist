@@ -84,8 +84,10 @@ share/mc/templates
 share/mime-info
 share/oaf
 share/omf
+share/pixmaps
 share/pixmaps/document-icons
 share/pixmaps/splash
+share/sgml/docbook
 share/sgml/docbook/gnome-customization-0.1
 share/sounds
 share/ui
