@@ -127,9 +127,9 @@ share/control-center/xrdb/General.ad
 share/control-center/xrdb/Motif.ad
 share/control-center/xrdb/Tk.ad
 share/control-center/xrdb/Xaw.ad
-share/cursor-fonts/gnome/cursor-large-white.pcf
-share/cursor-fonts/gnome/cursor-large.pcf
-share/cursor-fonts/gnome/cursor-white.pcf
+share/gnome/cursor-fonts/cursor-large-white.pcf
+share/gnome/cursor-fonts/cursor-large.pcf
+share/gnome/cursor-fonts/cursor-white.pcf
 share/desktop-directories/font-method.directory
 share/desktop-directories/gnomecc.directory
 share/desktop-directories/theme-method.directory
