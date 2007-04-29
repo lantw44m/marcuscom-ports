@@ -52,8 +52,4 @@ CONFIGURE_ARGS+=--disable-dbus
 PLIST_SUB+=	DBUS:="@comment "
 .endif
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|{datadir}/dbus-1|(prefix)/share/dbus-1|g' \
-		${WRKSRC}/Makefile.in
-
 .include <bsd.port.post.mk>
