@@ -112,7 +112,6 @@ share/pixmaps/splash/original-gnome-splash.png
 share/pixmaps/splash/tremulant-2.12.png
 share/pixmaps/splash/tremulant-blood-2.12.png
 share/pixmaps/splash/tremulant-brushed-metal-2.12.png
-@dirrm share/pixmaps/splash
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
