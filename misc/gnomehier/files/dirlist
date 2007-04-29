@@ -37,7 +37,6 @@ share/applets/Multimedia
 share/applets/Network
 share/applets/Utility
 share/application-registry
-share/applications
 share/apps
 share/apps/Applications
 share/apps/Audio
@@ -64,7 +63,6 @@ share/control-center/Session
 share/control-center/capplets
 share/control-center/keybindings
 share/doc/libgda
-share/fonts
 share/games
 share/gnome
 share/gnome-2.0
@@ -80,21 +78,16 @@ share/gnome/help/lgpl
 share/gnome/help/lgpl/C
 share/gnome/panel
 share/gnome/wm-properties
-share/icons
-share/idl
 share/images
 share/mc
 share/mc/templates
 share/mime-info
 share/oaf
 share/omf
-share/pixmaps
 share/pixmaps/document-icons
 share/pixmaps/splash
-share/sgml/docbook
 share/sgml/docbook/gnome-customization-0.1
 share/sounds
-share/themes
 share/ui
 share/vfolders
 share/xmodmap
