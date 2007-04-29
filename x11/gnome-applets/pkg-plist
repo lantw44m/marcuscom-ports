@@ -1123,6 +1123,10 @@ share/xmodmap/xmodmap.us.old
 share/xmodmap/xmodmap.us101A_x86
 share/xmodmap/xmodmap.us_intl
 share/xmodmap/xmodmap.yu
+@dirrmtry share/icons/hicolor/svgxsvg/apps
+@dirrmtry share/icons/hicolor/svgxsvg
+@dirrmtry share/icons/hicolor
+@dirrmtry share/icons
 @dirrm share/pixmaps/stickynotes
 %%CPUFREQ%%@dirrm share/pixmaps/cpufreq-applet
 @dirrm share/pixmaps/accessx-status-applet
