@@ -21,15 +21,6 @@
        *)
           { echo "$as_me:$LINENO: WARNING: ${host} is not supported by cpufreq applet, not building" >&5
  echo "$as_me: WARNING: ${host} is not supported by cpufreq applet, not building" >&2;}
-@@ -28752,7 +28754,7 @@
- ACLOCAL_AMFLAGS="\${ACLOCAL_FLAGS}"
- 
- 
--iconsdir="${datadir}/icons"
-+iconsdir="${prefix}/share/icons"
- 
- pixmapsdir="${datadir}/pixmaps"
- 
 @@ -28764,8 +28766,7 @@
  
    test "x$prefix" = xNONE && prefix="$ac_default_prefix"
