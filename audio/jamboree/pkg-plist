@@ -1,0 +1,52 @@
+bin/jamboree
+share/applications/jamboree.desktop
+share/jamboree/jamboree-next.png
+share/jamboree/jamboree-note.png
+share/jamboree/jamboree-pause.png
+share/jamboree/jamboree-play.png
+share/jamboree/jamboree-playlist-library.png
+share/jamboree/jamboree-playlist-regular.png
+share/jamboree/jamboree-playlist-smart.png
+share/jamboree/jamboree-prev.png
+share/jamboree/jamboree-random.png
+share/jamboree/jamboree-small-blank.png
+share/jamboree/jamboree-small-pause.png
+share/jamboree/jamboree-stop.png
+share/jamboree/jamboree-volume-max.png
+share/jamboree/jamboree-volume-medium.png
+share/jamboree/jamboree-volume-min.png
+share/jamboree/jamboree-volume-zero.png
+share/jamboree/jamboree.glade
+share/jamboree/smart-playlist-dialog.glade
+share/jamboree/song-properties.glade
+share/pixmaps/jamboree.png
+share/locale/az/LC_MESSAGES/jamboree.mo
+share/locale/ca/LC_MESSAGES/jamboree.mo
+share/locale/cs/LC_MESSAGES/jamboree.mo
+share/locale/de/LC_MESSAGES/jamboree.mo
+share/locale/en_CA/LC_MESSAGES/jamboree.mo
+share/locale/en_GB/LC_MESSAGES/jamboree.mo
+share/locale/es/LC_MESSAGES/jamboree.mo
+share/locale/fi/LC_MESSAGES/jamboree.mo
+share/locale/fr/LC_MESSAGES/jamboree.mo
+share/locale/hr/LC_MESSAGES/jamboree.mo
+share/locale/nl/LC_MESSAGES/jamboree.mo
+share/locale/no/LC_MESSAGES/jamboree.mo
+share/locale/pt/LC_MESSAGES/jamboree.mo
+share/locale/pt_BR/LC_MESSAGES/jamboree.mo
+share/locale/sr/LC_MESSAGES/jamboree.mo
+share/locale/sr@Latn/LC_MESSAGES/jamboree.mo
+share/locale/sv/LC_MESSAGES/jamboree.mo
+@dirrm share/jamboree
+@dirrmtry share/locale/sr/LC_MESSAGES
+@dirrmtry share/locale/sr
+@dirrmtry share/locale/pt/LC_MESSAGES
+@dirrmtry share/locale/pt
+@dirrmtry share/locale/no/LC_MESSAGES
+@dirrmtry share/locale/no
+@dirrmtry share/locale/fi/LC_MESSAGES
+@dirrmtry share/locale/fi
+@dirrmtry share/locale/cs/LC_MESSAGES
+@dirrmtry share/locale/cs
+@dirrmtry share/locale/ca/LC_MESSAGES
+@dirrmtry share/locale/ca
