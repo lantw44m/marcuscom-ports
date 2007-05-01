@@ -1,6 +1,6 @@
 bin/conglomerate
 etc/gconf/schemas/conglomerate.schemas
-share/gnome/application-registry/conglomerate.applications
+share/application-registry/conglomerate.applications
 share/applications/conglomerate.desktop
 %%DATADIR%%/css/docbook.css
 %%DATADIR%%/dispspecs/cnxml.xds
@@ -251,9 +251,9 @@ share/locale/sr@Latn/LC_MESSAGES/conglomerate.mo
 share/locale/sv/LC_MESSAGES/conglomerate.mo
 share/locale/uk/LC_MESSAGES/conglomerate.mo
 share/locale/zh_CN/LC_MESSAGES/conglomerate.mo
-share/gnome/mime-info/conglomerate.keys
-share/gnome/mime-info/conglomerate.mime
-share/gnome/omf/conglomerate/conglomerate-C.omf
+share/mime-info/conglomerate.keys
+share/mime-info/conglomerate.mime
+share/omf/conglomerate/conglomerate-C.omf
 share/pixmaps/conglomerate-icon-16.png
 share/pixmaps/conglomerate/cong-address-16.png
 share/pixmaps/conglomerate/cong-answer-16.png

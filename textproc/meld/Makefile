@@ -3,11 +3,11 @@
 # Whom:					Pav Lucistnik <pav@oook.cz>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/textproc/meld/Makefile,v 1.4 2007/05/01 12:30:35 ahze Exp $
 
 PORTNAME=	meld
 PORTVERSION=	1.1.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
@@ -32,14 +32,10 @@ post-patch:
 	@${REINPLACE_CMD} 's|%%PREFIX%%|${PREFIX}|g' \
 		${WRKSRC}/INSTALL
 
-	@${REINPLACE_CMD} 's|$$(sharedir)/application-registry|$$(sharedir)/gnome/application-registry|g' \
-		${WRKSRC}/${MAKEFILE}
-
 	@${FIND} ${WRKSRC}/help -type f -name ${MAKEFILE} -exec \
 		${REINPLACE_CMD} \
-		's|$$(prefix)/var/lib/scrollkeeper|/var/db/scrollkeeper|g ; \
-		s|$$(sharedir)/omf/meld|$$(sharedir)/gnome/omf/meld|g' \
-		"{}" \;
+		's|$$(prefix)/var/lib/scrollkeeper|/var/db/scrollkeeper|g' \
+				"{}" \;
 
 .include <bsd.port.pre.mk>
 .if defined (WITH_PYGNOMEDESKTOP)
