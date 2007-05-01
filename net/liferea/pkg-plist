@@ -72,6 +72,7 @@ share/liferea/dtd/html.ent
 share/liferea/media/xspf_license.txt
 share/liferea/media/xspf_player_slim.swf
 share/liferea/opml/feedlist.opml
+share/liferea/opml/feedlist_ca.opml
 share/liferea/opml/feedlist_de.opml
 share/liferea/opml/feedlist_es.opml
 share/liferea/opml/feedlist_fr.opml
