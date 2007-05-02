@@ -24,8 +24,4 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/-1$//}
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|share/gnome/apps|share/apps|' \
-		${WRKSRC}/configure
-
 .include <bsd.port.mk>
