@@ -28,7 +28,7 @@ lib/glame/resample.so
 lib/glame/tutorial.a
 lib/glame/tutorial.la
 lib/glame/tutorial.so
-share/apps/Multimedia/glame.desktop
+share/gnome/apps/Multimedia/glame.desktop
 share/glame/default-accels
 share/glame/pixmaps/bandpass.png
 share/glame/pixmaps/const.png
