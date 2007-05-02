@@ -1,5 +1,5 @@
 bin/gspeakers
-share/apps/Utilities/gspeakers.desktop
+share/gnome/apps/Utilities/gspeakers.desktop
 share/gspeakers/pixmaps/append_enclosure_24.png
 share/gspeakers/pixmaps/append_plot_enclosure_24.png
 share/gspeakers/pixmaps/delete_crossover_16.png

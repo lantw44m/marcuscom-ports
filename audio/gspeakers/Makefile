@@ -3,11 +3,11 @@
 # Whom:					Vincent Tantardini <vinc@freebsd-fr.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/gspeakers/Makefile,v 1.3 2007/05/02 15:29:58 ahze Exp $
 
 PORTNAME=	gspeakers
 PORTVERSION=	0.11
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -38,8 +38,6 @@ post-extract:
 	@${FIND} ${WRKSRC} -type l -delete
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/gnome/apps/|/apps/|g' \
-		${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's|$$(datadir)/pixmaps|$$(pkgdatadir)/pixmaps|g' \
 		${WRKSRC}/pixmaps/Makefile.in
 	@${REINPLACE_CMD} -e 's|-Wall -O0|@CXXFLAGS@|g' \
