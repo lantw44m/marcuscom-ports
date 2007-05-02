@@ -7,7 +7,7 @@
 
 PORTNAME=	gnowavcut
 PORTVERSION=	0.0.8
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	audio gnome
 MASTER_SITES=	http://gnowavcut.good-day.net/src/
 
@@ -17,8 +17,5 @@ COMMENT=	A GNOME/GTK+ based RIFF PCM Wave file splitter
 USE_XLIB=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack gnomeprefix gnomelibs
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|gnome/apps|apps|' ${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>
