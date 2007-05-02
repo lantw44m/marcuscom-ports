@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.70 2007/03/07 17:00:36 adamw Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.72 2007/05/01 11:23:48 ahze Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -52,10 +52,6 @@ OPTIONS=	DAAP "Enable iTunes music sharing" off \
 		LIRC "Enable Infrared syncing support" off
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 500000
-BROKEN=	Does not build on 4.X
-.endif
 
 .if !defined(WITHOUT_VORBIS)
 USE_GSTREAMER+=		vorbis
