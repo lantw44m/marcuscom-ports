@@ -1,0 +1,108 @@
+bin/gftp
+%%NOX11:%%bin/gftp-gtk
+bin/gftp-text
+%%NOX11:%%%%MYGNOME%%share/applications/gftp.desktop
+%%NOX11:%%%%DATADIR%%/COPYING
+%%NOX11:%%%%DATADIR%%/bookmarks
+%%NOX11:%%%%DATADIR%%/connect.xpm
+%%NOX11:%%%%DATADIR%%/deb.xpm
+%%NOX11:%%%%DATADIR%%/diff.xpm
+%%NOX11:%%%%DATADIR%%/dir.xpm
+%%NOX11:%%%%DATADIR%%/doc.xpm
+%%NOX11:%%%%DATADIR%%/dotdot.xpm
+%%NOX11:%%%%DATADIR%%/down.xpm
+%%NOX11:%%%%DATADIR%%/exe.xpm
+%%NOX11:%%%%DATADIR%%/gftp-logo.xpm
+%%NOX11:%%%%DATADIR%%/gftp-mini-logo.xpm
+%%NOX11:%%%%DATADIR%%/gftp.xpm
+%%NOX11:%%%%DATADIR%%/gftprc
+%%NOX11:%%%%DATADIR%%/img.xpm
+%%NOX11:%%%%DATADIR%%/left.xpm
+%%NOX11:%%%%DATADIR%%/linkdir.xpm
+%%NOX11:%%%%DATADIR%%/linkfile.xpm
+%%NOX11:%%%%DATADIR%%/man.xpm
+%%NOX11:%%%%DATADIR%%/open_dir.xpm
+%%NOX11:%%%%DATADIR%%/right.xpm
+%%NOX11:%%%%DATADIR%%/rpm.xpm
+%%NOX11:%%%%DATADIR%%/sound.xpm
+%%NOX11:%%%%DATADIR%%/stop.xpm
+%%NOX11:%%%%DATADIR%%/tar.xpm
+%%NOX11:%%%%DATADIR%%/txt.xpm
+%%NOX11:%%%%DATADIR%%/up.xpm
+%%NOX11:%%%%DATADIR%%/world.xpm
+%%NLS%%share/locale/am/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/ar/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/az/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/be/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/bg/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/bn/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/ca/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/cs/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/da/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/de/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/el/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/en_CA/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/en_GB/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/es/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/fi/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/fr/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/ga/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/hr/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/hu/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/it/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/ja/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/ko/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/mk/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/ml/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/ms/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/nl/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/no/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/pa/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/pl/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/pt/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/pt_BR/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/ro/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/ru/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/sk/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/sq/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/sr/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/sr@Latn/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/sv/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/ta/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/th/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/tr/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/uk/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/zh_CN/LC_MESSAGES/gftp.mo
+%%NLS%%share/locale/zh_TW/LC_MESSAGES/gftp.mo
+%%NOX11:%%%%MYGNOME%%share/pixmaps/gftp.png
+%%NLS%%@dirrmtry share/locale/zh_TW/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/zh_TW
+%%NLS%%@dirrmtry share/locale/zh_CN/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/zh_CN
+%%NLS%%@dirrmtry share/locale/uk/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/uk
+%%NLS%%@dirrmtry share/locale/sr/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/sr
+%%NLS%%@dirrmtry share/locale/sk/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/sk
+%%NLS%%@dirrmtry share/locale/ro/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/ro
+%%NLS%%@dirrmtry share/locale/pt/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/pt
+%%NLS%%@dirrmtry share/locale/pl/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/pl
+%%NLS%%@dirrmtry share/locale/no/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/no
+%%NLS%%@dirrmtry share/locale/ko/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/ko
+%%NLS%%@dirrmtry share/locale/fi/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/fi
+%%NLS%%@dirrmtry share/locale/el/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/el
+%%NLS%%@dirrmtry share/locale/cs/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/cs
+%%NLS%%@dirrmtry share/locale/ca/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/ca
+%%NLS%%@dirrmtry share/locale/be/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/be
+%%NOX11:%%@dirrm %%DATADIR%%
