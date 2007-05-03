@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.71 2007/03/12 21:25:30 marcus Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.73 2007/04/28 17:45:20 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--disable-pam
 .endif
 
 pre-install:
-	@${CP} ${.CURDIR}/pkg-plist ${PLIST}
+	@${CAT} ${.CURDIR}/pkg-plist > ${PLIST}
 	@cd ${XSCREENSAVER_DIR} && ${FIND} -s * -maxdepth 1 -type f -name "*.xml" | \
 		${GREP} -Ev ${XSCREENSAVER_EXCLUDE} | \
 		${SED} -e 's:^:${SCREENSAVER_DIR}/:' | \
