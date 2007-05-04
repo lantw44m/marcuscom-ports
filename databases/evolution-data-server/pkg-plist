@@ -112,7 +112,6 @@ include/evolution-data-server-%%VERSION%%/camel/camel-vtrash-folder.h
 include/evolution-data-server-%%VERSION%%/camel/camel.h
 include/evolution-data-server-%%VERSION%%/exchange/e-folder-exchange.h
 include/evolution-data-server-%%VERSION%%/exchange/e-folder.h
-include/evolution-data-server-%%VERSION%%/exchange/e-shell-marshal.h
 include/evolution-data-server-%%VERSION%%/exchange/e-storage.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-autoconfig.h
 include/evolution-data-server-%%VERSION%%/exchange/e2k-context.h
@@ -162,7 +161,6 @@ include/evolution-data-server-%%VERSION%%/libebook/e-book-view.h
 include/evolution-data-server-%%VERSION%%/libebook/e-book.h
 include/evolution-data-server-%%VERSION%%/libebook/e-contact.h
 include/evolution-data-server-%%VERSION%%/libebook/e-destination.h
-include/evolution-data-server-%%VERSION%%/libebook/e-name-western-tables.h
 include/evolution-data-server-%%VERSION%%/libebook/e-name-western.h
 include/evolution-data-server-%%VERSION%%/libebook/e-vcard.h
 include/evolution-data-server-%%VERSION%%/libecal/Evolution-DataServer-Calendar.h
@@ -207,6 +205,7 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-data-server-util.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-db3-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-dbhash.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-file-cache.h
+include/evolution-data-server-%%VERSION%%/libedataserver/e-flag.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-iconv.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-iterator.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-list-iterator.h
@@ -505,6 +504,7 @@ share/doc/libedataserver/ESourceGroup.html
 share/doc/libedataserver/ESourceList.html
 share/doc/libedataserver/ix01.html
 share/doc/libedataserver/libedataserver-ESExp.html
+share/doc/libedataserver/libedataserver-EFlag.html
 share/doc/libedataserver/libedataserver-e-categories.html
 share/doc/libedataserver/libedataserver-e-data-server-module.html
 share/doc/libedataserver/libedataserver-e-db3-utils.html
