@@ -1,0 +1,46 @@
+# New ports collection makefile for:    crescendo
+# Date created:         27.Apr 2000
+# Whom:                 dirk.meyer@dinoex.sub.org
+#
+# $FreeBSD$
+#
+
+PORTNAME=	crescendo
+PORTVERSION=	1.1.7
+PORTREVISION=	6
+CATEGORIES=	net gnome
+# Master Site broken
+#MASTER_SITES=	http://crescendo.lyrical.net/files/
+MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITE_SUBDIR=	dinoex
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A gnome frontend for tinyfuge
+
+RUN_DEPENDS=	tf:${PORTSDIR}/net/tinyfugue
+
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--enable-compile-warnings=yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="-L${LOCALBASE}/lib"
+CFLAGS+=	-g
+PLIST_SUB=	DOCDIR=share/doc/${PORTNAME}
+
+USE_XLIB=	yes
+USE_GNOME=	gnomelibs
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
+		${WRKSRC}/configure
+
+post-install:
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR}
+.for i in AUTHORS ChangeLog HACKING INSTALL NEWS \
+		README README.BINARY TODO
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}/
+.endfor
+.endif
+
+.include <bsd.port.mk>
