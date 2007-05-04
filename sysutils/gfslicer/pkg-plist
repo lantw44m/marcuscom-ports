@@ -1,0 +1,7 @@
+bin/gfslicer
+share/pixmaps/gfslicer/deslice.xpm
+share/pixmaps/gfslicer/pref.xpm
+share/pixmaps/gfslicer/slice.xpm
+share/pixmaps/gfslicer/tar.xpm
+share/pixmaps/gfslicer/untar.xpm
+@dirrm share/pixmaps/gfslicer
