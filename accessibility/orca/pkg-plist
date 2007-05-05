@@ -160,6 +160,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-mud.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-mud.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-mud.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-panel.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-panel.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-panel.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-power-manager.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-power-manager.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-power-manager.pyo
