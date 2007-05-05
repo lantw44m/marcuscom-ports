@@ -3,12 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.134 2007/03/13 05:41:38 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.136 2007/04/28 07:42:59 marcus Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.10.1
-PORTREVISION=	1
+PORTVERSION=	2.11.1.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -44,9 +43,9 @@ GCONF_SCHEMAS=	apps_evolution_addressbook-${EVO_VERSION}.schemas \
 		apps_evolution_shell-${EVO_VERSION}.schemas \
 		evolution-mail-${EVO_VERSION}.schemas
 
-EVO_VERSION=	2.10
+EVO_VERSION=	2.12
 PLIST_SUB=	VERSION=${EVO_VERSION} \
-		PORTVERSION=2.10
+		PORTVERSION=2.12
 
 OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 		LDAP "Enable LDAP support" on \
@@ -107,6 +106,8 @@ CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
 post-patch:
 	@${REINPLACE_CMD} -e '/^plugins_standard_always/s/audio-inline//' \
 	    	${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|stdlib.n|stdlib.h|' \
+	    	${WRKSRC}/iconv-detect.c
 
 post-install: install-ldconfig-file
 	${MKDIR} ${PREFIX}/include/evolution-${EVO_VERSION}/composer
