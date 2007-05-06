@@ -1,7 +1,8 @@
 bin/eog
 share/applications/eog.desktop
-share/eog/eog-gtk-ui.xml
-share/eog/glade/eog.glade
+share/eog/eog-toolbar.xml
+share/eog/eog-ui.xml
+share/eog/eog.glade
 share/gnome/help/eog/C/eog.xml
 share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
@@ -28,8 +29,8 @@ share/gnome/help/eog/ja/eog.xml
 share/gnome/help/eog/ja/figures/eog_start_window.png
 share/gnome/help/eog/ja/legal.xml
 share/gnome/help/eog/ko/eog.xml
+share/gnome/help/eog/ko/figures/eog_save_as_window.png
 share/gnome/help/eog/ko/figures/eog_start_window.png
-share/gnome/help/eog/ko/legal.xml
 share/gnome/help/eog/pa/eog.xml
 share/gnome/help/eog/pa/figures/eog_save_as_window.png
 share/gnome/help/eog/pa/figures/eog_start_window.png
@@ -67,7 +68,6 @@ share/omf/eog/eog-sv.omf
 share/omf/eog/eog-uk.omf
 share/omf/eog/eog-zh_CN.omf
 share/omf/eog/eog-zh_TW.omf
-share/pixmaps/gnome-eog.png
 share/icons/hicolor/16x16/apps/eog.png
 share/icons/hicolor/22x22/apps/eog.png
 share/icons/hicolor/24x24/apps/eog.png
@@ -124,6 +124,7 @@ share/locale/ne/LC_MESSAGES/eog.mo
 share/locale/nl/LC_MESSAGES/eog.mo
 share/locale/nn/LC_MESSAGES/eog.mo
 share/locale/nso/LC_MESSAGES/eog.mo
+share/locale/oc/LC_MESSAGES/eog.mo
 share/locale/or/LC_MESSAGES/eog.mo
 share/locale/pa/LC_MESSAGES/eog.mo
 share/locale/pl/LC_MESSAGES/eog.mo
@@ -185,7 +186,6 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @dirrm share/gnome/help/eog/C/figures
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
-@dirrm share/eog/glade
 @dirrm share/eog
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
@@ -219,6 +219,8 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @dirrmtry share/locale/pt
 @dirrmtry share/locale/pl/LC_MESSAGES
 @dirrmtry share/locale/pl
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/nso/LC_MESSAGES
 @dirrmtry share/locale/nso
 @dirrmtry share/locale/nn/LC_MESSAGES
