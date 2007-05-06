@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Sun May  6 14:54:32 2007
++++ Makefile.in	Sun May  6 14:54:32 2007
+@@ -273,7 +273,7 @@ anjuta_data_DATA = \
+ anjuta_mimedir = $(prefix)/share/mime-info
+ anjuta_mime_DATA = anjuta.mime
+ anjuta_mimelnkdir = $(prefix)/share/mimelnk/application
+-anjuta_mimelnk_DATA = x-anjuta-project.desktop
++anjuta_mimelnk_DATA =
+ EXTRA_DIST = $(anjuta_data_DATA) $(anjuta_mime_DATA) $(anjuta_mimelnk_DATA)
+ all: all-recursive
+ 
