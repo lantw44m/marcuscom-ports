@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.203 2007/04/28 19:18:18 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.204 2007/05/06 05:16:28 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -43,12 +43,12 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		${X11BASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		${LOCALBASE}/libexec/gnome-netstatus-applet:${PORTSDIR}/net/gnome-netstatus \
 		dasher:${PORTSDIR}/accessibility/dasher \
-		evolution-2.10:${PORTSDIR}/mail/evolution \
+		evolution-2.12:${PORTSDIR}/mail/evolution \
 		${LOCALBASE}/libexec/evolution-webcal:${PORTSDIR}/www/evolution-webcal \
 		network-admin:${PORTSDIR}/sysutils/gnome-system-tools \
 		gnome-nettool:${PORTSDIR}/net/gnome-nettool \
 		vino-session:${PORTSDIR}/net/vino \
-		exchange-connector-setup-2.10:${PORTSDIR}/mail/evolution-exchange \
+		exchange-connector-setup-2.12:${PORTSDIR}/mail/evolution-exchange \
 		${LOCALBASE}/lib/gstreamer-0.10/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins-core \
 		${LOCALBASE}/lib/gstreamer-0.10/libgstgconfelements.so:${PORTSDIR}/devel/gstreamer-plugins-gconf \
 		totem:${PORTSDIR}/multimedia/totem \
