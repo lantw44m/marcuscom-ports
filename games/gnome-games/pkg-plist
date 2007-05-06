@@ -24,6 +24,9 @@ etc/sound/events/iagno.soundlist
 %%PYTHON_SITELIBDIR%%/glchess/ai.py
 %%PYTHON_SITELIBDIR%%/glchess/ai.pyc
 %%PYTHON_SITELIBDIR%%/glchess/ai.pyo
+%%PYTHON_SITELIBDIR%%/glchess/chess/bitboard.py
+%%PYTHON_SITELIBDIR%%/glchess/chess/bitboard.pyc
+%%PYTHON_SITELIBDIR%%/glchess/chess/bitboard.pyo
 %%PYTHON_SITELIBDIR%%/glchess/cecp.py
 %%PYTHON_SITELIBDIR%%/glchess/cecp.pyc
 %%PYTHON_SITELIBDIR%%/glchess/cecp.pyo
@@ -33,6 +36,21 @@ etc/sound/events/iagno.soundlist
 %%PYTHON_SITELIBDIR%%/glchess/chess/board.py
 %%PYTHON_SITELIBDIR%%/glchess/chess/board.pyc
 %%PYTHON_SITELIBDIR%%/glchess/chess/board.pyo
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/__init__.py
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/__init__.pyc
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/__init__.pyo
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/client.py
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/client.pyc
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/client.pyo
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/server.py
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/server.pyc
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/server.pyo
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/style12.py
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/style12.pyc
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/style12.pyo
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/telnet.py
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/telnet.pyc
+%%PYTHON_SITELIBDIR%%/glchess/chess/fics/telnet.pyo
 %%PYTHON_SITELIBDIR%%/glchess/chess/lan.py
 %%PYTHON_SITELIBDIR%%/glchess/chess/lan.pyc
 %%PYTHON_SITELIBDIR%%/glchess/chess/lan.pyo
@@ -57,6 +75,9 @@ etc/sound/events/iagno.soundlist
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/__init__.py
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/__init__.pyc
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/__init__.pyo
+%%PYTHON_SITELIBDIR%%/glchess/gtkui/chessview.py
+%%PYTHON_SITELIBDIR%%/glchess/gtkui/chessview.pyc
+%%PYTHON_SITELIBDIR%%/glchess/gtkui/chessview.pyo
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/dialogs.py
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/dialogs.pyc
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/dialogs.pyo
@@ -300,10 +321,10 @@ share/ggz/gnome-games/ggz_gtk_registered.svg
 share/glchess/ai.glade
 share/glchess/ai.xml
 share/glchess/chess_view.glade
-share/glchess/error_dialog.glade
 share/glchess/glchess.glade
 share/glchess/glchess.svg
 share/glchess/load_game.glade
+share/glchess/network_game.glade
 share/glchess/new_game.glade
 share/glchess/save_game.glade
 share/gnect/white_ob.cn4.gz
@@ -533,6 +554,10 @@ share/gnome/help/glines/en_GB/figures/glines-gameover.png
 share/gnome/help/glines/en_GB/figures/glines-startgame.png
 share/gnome/help/glines/en_GB/figures/preferences.png
 share/gnome/help/glines/en_GB/glines.xml
+share/gnome/help/glines/es/figures/glines-gameover.png
+share/gnome/help/glines/es/figures/glines-startgame.png
+share/gnome/help/glines/es/figures/preferences.png
+share/gnome/help/glines/es/glines.xml
 share/gnome/help/glines/fr/figures/glines-gameover.png
 share/gnome/help/glines/fr/figures/glines-startgame.png
 share/gnome/help/glines/fr/figures/preferences.png
@@ -552,6 +577,9 @@ share/gnome/help/gnect/C/legal.xml
 share/gnome/help/gnect/en_GB/figures/mainwindow.png
 share/gnome/help/gnect/en_GB/figures/tileset.png
 share/gnome/help/gnect/en_GB/gnect.xml
+share/gnome/help/gnect/es/figures/mainwindow.png
+share/gnome/help/gnect/es/figures/tileset.png
+share/gnome/help/gnect/es/gnect.xml
 share/gnome/help/gnect/fr/figures/mainwindow.png
 share/gnome/help/gnect/fr/figures/tileset.png
 share/gnome/help/gnect/fr/gnect.xml
@@ -631,9 +659,9 @@ share/gnome/help/same-gnome/C/same-gnome.xml
 share/gnome/help/same-gnome/en_GB/figures/play.png
 share/gnome/help/same-gnome/en_GB/figures/start-up.png
 share/gnome/help/same-gnome/en_GB/same-gnome.xml
-share/gnome/help/same-gnome/fr/figures/play.png
-share/gnome/help/same-gnome/fr/figures/start-up.png
-share/gnome/help/same-gnome/fr/same-gnome.xml
+share/gnome/help/same-gnome/es/figures/play.png
+share/gnome/help/same-gnome/es/figures/start-up.png
+share/gnome/help/same-gnome/es/same-gnome.xml
 share/gnome/help/same-gnome/ru/figures/play.png
 share/gnome/help/same-gnome/ru/figures/start-up.png
 share/gnome/help/same-gnome/ru/same-gnome.xml
@@ -643,11 +671,13 @@ share/gnome/help/same-gnome/sv/same-gnome.xml
 share/omf/glchess/glchess-C.omf
 share/omf/glines/glines-C.omf
 share/omf/glines/glines-en_GB.omf
+share/omf/glines/glines-es.omf
 share/omf/glines/glines-fr.omf
 share/omf/glines/glines-ru.omf
 share/omf/glines/glines-sv.omf
 share/omf/gnect/gnect-C.omf
 share/omf/gnect/gnect-en_GB.omf
+share/omf/gnect/gnect-es.omf
 share/omf/gnect/gnect-fr.omf
 share/omf/gnect/gnect-sv.omf
 share/omf/gnome-games/aisleriot-C.omf
@@ -668,7 +698,7 @@ share/omf/gnome-games/iagno-C.omf
 share/omf/gnome-games/mahjongg-C.omf
 share/omf/same-gnome/same-gnome-C.omf
 share/omf/same-gnome/same-gnome-en_GB.omf
-share/omf/same-gnome/same-gnome-fr.omf
+share/omf/same-gnome/same-gnome-es.omf
 share/omf/same-gnome/same-gnome-ru.omf
 share/omf/same-gnome/same-gnome-sv.omf
 share/pixmaps/blackjack/baize.png
@@ -1009,8 +1039,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/same-gnome/sv
 @dirrm share/gnome/help/same-gnome/ru/figures
 @dirrm share/gnome/help/same-gnome/ru
-@dirrm share/gnome/help/same-gnome/fr/figures
-@dirrm share/gnome/help/same-gnome/fr
+@dirrm share/gnome/help/same-gnome/es/figures
+@dirrm share/gnome/help/same-gnome/es
 @dirrm share/gnome/help/same-gnome/en_GB/figures
 @dirrm share/gnome/help/same-gnome/en_GB
 @dirrm share/gnome/help/same-gnome/C/figures
@@ -1053,6 +1083,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/gnect/sv
 @dirrm share/gnome/help/gnect/fr/figures
 @dirrm share/gnome/help/gnect/fr
+@dirrm share/gnome/help/gnect/es/figures
+@dirrm share/gnome/help/gnect/es
 @dirrm share/gnome/help/gnect/en_GB/figures
 @dirrm share/gnome/help/gnect/en_GB
 @dirrm share/gnome/help/gnect/C/figures
@@ -1064,6 +1096,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm share/gnome/help/glines/ru
 @dirrm share/gnome/help/glines/fr/figures
 @dirrm share/gnome/help/glines/fr
+@dirrm share/gnome/help/glines/es/figures
+@dirrm share/gnome/help/glines/es
 @dirrm share/gnome/help/glines/en_GB/figures
 @dirrm share/gnome/help/glines/en_GB
 @dirrm share/gnome/help/glines/C/figures
@@ -1101,6 +1135,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/scene
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/network
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/gtkui
+@dirrm %%PYTHON_SITELIBDIR%%/glchess/chess/fics
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/chess
 @dirrm %%PYTHON_SITELIBDIR%%/glchess
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
