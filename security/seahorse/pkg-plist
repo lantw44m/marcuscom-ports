@@ -30,12 +30,11 @@ lib/seahorse/xloadimage
 %%APPLET%%libdata/bonobo/servers/GNOME_SeahorseApplet.server
 libdata/pkgconfig/cryptui-0.0.pc
 share/dbus-1/services/org.gnome.seahorse.service
-share/applications/seahorse-pgp-preferences.desktop
 share/applications/seahorse.desktop
 share/applications/seahorse-pgp-encrypted.desktop
 share/applications/seahorse-pgp-keys.desktop
+share/applications/seahorse-pgp-preferences.desktop
 share/applications/seahorse-pgp-signature.desktop
-share/control-center-2.0/capplets/seahorse-pgp-preferences.desktop
 %%APPLET%%share/gnome-2.0/ui/GNOME_SeahorseApplet.xml
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 %%APPLET%%share/gnome/help/seahorse-applet/C/legal.xml
@@ -137,10 +136,12 @@ share/pixmaps/seahorse/22x22/seahorse-applet-unknown.png
 share/pixmaps/seahorse/22x22/seahorse-key-personal.png
 share/pixmaps/seahorse/22x22/seahorse-key-ssh.png
 share/pixmaps/seahorse/22x22/seahorse-key.png
+share/pixmaps/seahorse/22x22/seahorse-person.png
 share/pixmaps/seahorse/22x22/seahorse-preferences.png
 share/pixmaps/seahorse/22x22/seahorse-share-keys.png
 share/pixmaps/seahorse/22x22/seahorse-sign-bad.png
 share/pixmaps/seahorse/22x22/seahorse-sign-ok.png
+share/pixmaps/seahorse/22x22/seahorse-sign.png
 share/pixmaps/seahorse/22x22/seahorse.png
 share/pixmaps/seahorse/48x48/seahorse-applet-encrypted.png
 share/pixmaps/seahorse/48x48/seahorse-applet-key.png
