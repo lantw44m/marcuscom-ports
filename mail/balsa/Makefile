@@ -3,11 +3,12 @@
 # Whom:					Glenn Johnson <gljohns@bellsouth.net>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/balsa/Makefile,v 1.10 2007/03/14 17:45:39 marcus Exp $
+#   $MCom: ports/mail/balsa/Makefile,v 1.12 2007/05/04 21:01:04 marcus Exp $
 #
 
 PORTNAME=	balsa
 PORTVERSION=	2.3.15
+PORTREVISION=	2
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://www.theochem.kth.se/~pawsa/balsa/
 DISTNAME=	balsa-${PORTVERSION}
@@ -47,6 +48,7 @@ MAN1=		balsa.1
 OPTIONS=	LDAP "Enable LDAP support" on \
 		GTKSPELL "Spell checking support" on \
 		GTKSV "Enable GtkSourceview support" on \
+		NOTIFY "Enable libnotify support" on \
 		GPG "Enable GnuPG support" off
 
 .include <bsd.port.pre.mk>
@@ -69,6 +71,13 @@ CONFIGURE_ARGS+=--with-gtkspell
 .if !defined(WITHOUT_GTKSV)
 USE_GNOME+=	gtksourceview
 CONFIGURE_ARGS+=--with-gtksourceview
+.endif
+
+.if !defined(WITHOUT_NOTIFY)
+LIB_DEPENDS+=	notify.1:${PORTSDIR}/devel/libnotify
+CONFIGURE_ARGS+=--with-libnotify=yes
+.else
+CONFIGURE_ARGS+=--with-libnotify=no
 .endif
 
 .if ${PREFIX}==${LOCALBASE}
