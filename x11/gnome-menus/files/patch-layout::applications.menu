@@ -150,7 +150,7 @@
          <Category>System</Category>
          <Not><Category>Settings</Category></Not>
        </And>
-@@ -143,11 +199,204 @@
+@@ -143,10 +199,203 @@
      <OnlyUnallocated/>
      <Include>
        <And>
@@ -160,7 +160,6 @@
 +            <Category>KDE</Category>
 +          </Or>
 +        </Not>
-         <Category>Application</Category>
          <Not><Category>Core</Category></Not>
          <Not><Category>Settings</Category></Not>
        </And>
