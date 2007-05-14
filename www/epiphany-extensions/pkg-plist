@@ -118,6 +118,7 @@ share/locale/ca/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/cs/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/da/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/de/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
+share/locale/dz/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/el/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/en_CA/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/en_GB/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
@@ -194,6 +195,8 @@ share/locale/zh_TW/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 @dirrmtry share/locale/fi
 @dirrmtry share/locale/el/LC_MESSAGES
 @dirrmtry share/locale/el
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrmtry share/locale/cs/LC_MESSAGES
 @dirrmtry share/locale/cs
 @dirrmtry share/locale/ca/LC_MESSAGES
