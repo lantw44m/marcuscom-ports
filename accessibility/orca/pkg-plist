@@ -11,6 +11,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/acss.py
 %%PYTHON_SITELIBDIR%%/orca/acss.pyc
 %%PYTHON_SITELIBDIR%%/orca/acss.pyo
+%%PYTHON_SITELIBDIR%%/orca/app_gui_prefs.py
+%%PYTHON_SITELIBDIR%%/orca/app_gui_prefs.pyc
+%%PYTHON_SITELIBDIR%%/orca/app_gui_prefs.pyo
 %%PYTHON_SITELIBDIR%%/orca/atspi.py
 %%PYTHON_SITELIBDIR%%/orca/atspi.pyc
 %%PYTHON_SITELIBDIR%%/orca/atspi.pyo
