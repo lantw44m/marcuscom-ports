@@ -6,7 +6,7 @@
  
 -# Automatic VT allocation.  Right now only works on Linux.  This way we force
 +# Automatic VT allocation.  This way we force
- # X to use specific vts.  turn VTAllocation to false if this is causing
+ # X to use specific vts.  Turn VTAllocation to false if this is causing
  # problems.
 -#FirstVT=7
 -#VTAllocation=true

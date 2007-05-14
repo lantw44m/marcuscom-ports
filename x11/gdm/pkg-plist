@@ -84,7 +84,6 @@ share/gnome/help/gdm/it/legal.xml
 share/gnome/help/gdm/ja/figures/gdm_window.png
 share/gnome/help/gdm/ja/gdm.xml
 share/gnome/help/gdm/ja/legal.xml
-share/gnome/help/gdm/ko/figures/gdm_window.png
 share/gnome/help/gdm/ko/gdm.xml
 share/gnome/help/gdm/ko/legal.xml
 share/gnome/help/gdm/uk/gdm.xml
@@ -198,6 +197,7 @@ share/locale/ne/LC_MESSAGES/gdm.mo
 share/locale/nl/LC_MESSAGES/gdm.mo
 share/locale/nn/LC_MESSAGES/gdm.mo
 share/locale/nso/LC_MESSAGES/gdm.mo
+share/locale/oc/LC_MESSAGES/gdm.mo
 share/locale/or/LC_MESSAGES/gdm.mo
 share/locale/pa/LC_MESSAGES/gdm.mo
 share/locale/pl/LC_MESSAGES/gdm.mo
@@ -233,7 +233,6 @@ share/locale/zu/LC_MESSAGES/gdm.mo
 @dirrm share/gnome/help/gdm/zh_CN/figures
 @dirrm share/gnome/help/gdm/zh_CN
 @dirrm share/gnome/help/gdm/uk
-@dirrm share/gnome/help/gdm/ko/figures
 @dirrm share/gnome/help/gdm/ko
 @dirrm share/gnome/help/gdm/ja/figures
 @dirrm share/gnome/help/gdm/ja
@@ -294,6 +293,8 @@ share/locale/zu/LC_MESSAGES/gdm.mo
 @dirrmtry share/locale/pt
 @dirrmtry share/locale/pl/LC_MESSAGES
 @dirrmtry share/locale/pl
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/nso/LC_MESSAGES
 @dirrmtry share/locale/nso
 @dirrmtry share/locale/nn/LC_MESSAGES
