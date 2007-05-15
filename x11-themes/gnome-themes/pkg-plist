@@ -2151,9 +2151,11 @@ share/icons/Mist/16x16/places/network.png
 share/icons/Mist/16x16/places/stock_folder.png
 share/icons/Mist/16x16/places/user-home.png
 share/icons/Mist/16x16/status/folder-drag-accept.svg
+share/icons/Mist/16x16/status/folder-visiting.png
 share/icons/Mist/16x16/status/folder-open.svg
 share/icons/Mist/16x16/status/folder_open.svg
 share/icons/Mist/16x16/status/gnome-fs-directory-accept.svg
+share/icons/Mist/16x16/status/gnome-fs-directory-visiting.png
 share/icons/Mist/16x16/status/stock_open.svg
 share/icons/Mist/22x22/actions/document-open.png
 share/icons/Mist/22x22/actions/fileopen.png
@@ -2176,9 +2178,11 @@ share/icons/Mist/22x22/places/network.png
 share/icons/Mist/22x22/places/stock_folder.png
 share/icons/Mist/22x22/places/user-home.svg
 share/icons/Mist/22x22/status/folder-drag-accept.png
+share/icons/Mist/22x22/status/folder-visiting.png
 share/icons/Mist/22x22/status/folder-open.png
 share/icons/Mist/22x22/status/folder_open.png
 share/icons/Mist/22x22/status/gnome-fs-directory-accept.png
+share/icons/Mist/22x22/status/gnome-fs-directory-visiting.png
 share/icons/Mist/22x22/status/stock_open.png
 share/icons/Mist/24x24/actions/document-open.png
 share/icons/Mist/24x24/actions/fileopen.png
@@ -2201,9 +2205,11 @@ share/icons/Mist/24x24/places/network.png
 share/icons/Mist/24x24/places/stock_folder.png
 share/icons/Mist/24x24/places/user-home.png
 share/icons/Mist/24x24/status/folder-drag-accept.png
+share/icons/Mist/24x24/status/folder-visiting.png
 share/icons/Mist/24x24/status/folder-open.png
 share/icons/Mist/24x24/status/folder_open.png
 share/icons/Mist/24x24/status/gnome-fs-directory-accept.png
+share/icons/Mist/24x24/status/gnome-fs-directory-visiting.png
 share/icons/Mist/24x24/status/stock_open.png
 share/icons/Mist/32x32/actions/document-open.svg
 share/icons/Mist/32x32/actions/fileopen.svg
@@ -2226,9 +2232,11 @@ share/icons/Mist/32x32/places/network.svg
 share/icons/Mist/32x32/places/stock_folder.svg
 share/icons/Mist/32x32/places/user-home.svg
 share/icons/Mist/32x32/status/folder-drag-accept.svg
+share/icons/Mist/32x32/status/folder-visiting.png
 share/icons/Mist/32x32/status/folder-open.svg
 share/icons/Mist/32x32/status/folder_open.svg
 share/icons/Mist/32x32/status/gnome-fs-directory-accept.svg
+share/icons/Mist/32x32/status/gnome-fs-directory-visiting.png
 share/icons/Mist/32x32/status/stock_open.svg
 share/icons/Mist/index.theme
 share/icons/Mist/scalable/actions/document-open.svg
@@ -2252,9 +2260,11 @@ share/icons/Mist/scalable/places/network.svg
 share/icons/Mist/scalable/places/stock_folder.svg
 share/icons/Mist/scalable/places/user-home.svg
 share/icons/Mist/scalable/status/folder-drag-accept.svg
+share/icons/Mist/scalable/status/folder-visiting.svg
 share/icons/Mist/scalable/status/folder-open.svg
 share/icons/Mist/scalable/status/folder_open.svg
 share/icons/Mist/scalable/status/gnome-fs-directory-accept.svg
+share/icons/Mist/scalable/status/gnome-fs-directory-visiting.svg
 share/icons/Mist/scalable/status/stock_open.svg
 share/locale/am/LC_MESSAGES/gnome-themes.mo
 share/locale/ar/LC_MESSAGES/gnome-themes.mo
@@ -2339,6 +2349,8 @@ share/themes/Glider/gtk-2.0/gtkrc
 share/themes/Glider/index.theme
 share/themes/Glossy/gtk-2.0/gtkrc
 share/themes/Glossy/index.theme
+share/themes/Gummy/gtk-2.0/gtkrc
+share/themes/Gummy/metacity-1/metacity-theme-1.xml
 share/themes/HighContrast/gtk-2.0/gtkrc
 share/themes/HighContrast/index.theme
 share/themes/HighContrastInverse/gtk-2.0/gtkrc
@@ -2621,6 +2633,8 @@ share/themes/HighContrastLargePrintInverse/pixmaps/volume-medium.png
 share/themes/HighContrastLargePrintInverse/pixmaps/volume-min.png
 share/themes/HighContrastLargePrintInverse/pixmaps/volume-mute.png
 share/themes/HighContrastLargePrintInverse/pixmaps/volume-zero.png
+share/themes/Inverted/gtk-2.0/gtkrc
+share/themes/Inverted/metacity-1/metacity-theme-1.xml
 share/themes/LargePrint/gtk-2.0/gtkrc
 share/themes/LargePrint/index.theme.disabled
 share/themes/LargePrint/pixmaps/double-click-maybe.png
@@ -2915,6 +2929,9 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrm share/themes/LargePrint/pixmaps
 @dirrm share/themes/LargePrint/gtk-2.0
 @dirrm share/themes/LargePrint
+@dirrm share/themes/Inverted/metacity-1
+@dirrm share/themes/Inverted/gtk-2.0
+@dirrm share/themes/Inverted
 @dirrm share/themes/HighContrastLargePrintInverse/pixmaps
 @dirrm share/themes/HighContrastLargePrintInverse/gtk-2.0
 @dirrm share/themes/HighContrastLargePrintInverse
@@ -2925,6 +2942,9 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrm share/themes/HighContrastInverse
 @dirrm share/themes/HighContrast/gtk-2.0
 @dirrm share/themes/HighContrast
+@dirrm share/themes/Gummy/metacity-1
+@dirrm share/themes/Gummy/gtk-2.0
+@dirrm share/themes/Gummy
 @dirrm share/themes/Glossy/metacity-1
 @dirrm share/themes/Glossy/gtk-2.0
 @dirrm share/themes/Glossy
