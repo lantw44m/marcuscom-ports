@@ -1,0 +1,11 @@
+--- docs/reference/camel/Makefile.in.orig	Tue May 15 01:56:47 2007
++++ docs/reference/camel/Makefile.in	Tue May 15 01:57:51 2007
+@@ -152,7 +152,7 @@ GTK_DOC_USE_LIBTOOL_TRUE = @GTK_DOC_USE_
+ HAVE_JW = @HAVE_JW@
+ HAVE_JW_FALSE = @HAVE_JW_FALSE@
+ HAVE_JW_TRUE = @HAVE_JW_TRUE@
+-HTML_DIR = $(datadir)/gtk-doc/html
++HTML_DIR = $(prefix)/share/doc
+ ICONV_CFLAGS = @ICONV_CFLAGS@
+ ICONV_LIBS = @ICONV_LIBS@
+ IDL_INCLUDES = @IDL_INCLUDES@
