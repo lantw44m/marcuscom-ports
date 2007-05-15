@@ -1,6 +1,6 @@
---- configure.orig	Fri May  4 23:52:09 2007
-+++ configure	Fri May  4 23:53:24 2007
-@@ -23418,6 +23418,15 @@ case "$host" in
+--- configure.orig	Tue May 15 12:53:11 2007
++++ configure	Tue May 15 13:03:33 2007
+@@ -24959,6 +24959,15 @@ case "$host" in
      SOFTOKN3_LIB=''
      HAL_REQUIREMENT=''
      ;;
@@ -16,7 +16,7 @@
  *)  os_win32=no
      NO_UNDEFINED=''
      SOEXT='.so'
-@@ -24916,6 +24925,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -26433,6 +26442,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  		#include <sys/socket.h>
  		#include <netinet/in.h>
  		#include <netdb.h>
@@ -24,16 +24,16 @@
  
  		#define BUFSIZE (sizeof(struct hostent)+10)
  
-@@ -28749,7 +28759,7 @@ if test "x${with_krb5}" != "xno"; then
+@@ -30865,7 +30875,7 @@ if test "x${with_krb5}" != "xno"; then
  	LDFLAGS_save="$LDFLAGS"
  
  	mitlibs="-lkrb5 -lk5crypto -lcom_err -lgssapi_krb5"
 -	heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi"
 +	heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi -lcrypt"
- 	echo "$as_me:$LINENO: checking for Kerberos 5" >&5
- echo $ECHO_N "checking for Kerberos 5... $ECHO_C" >&6
+ 	{ echo "$as_me:$LINENO: checking for Kerberos 5" >&5
+ echo $ECHO_N "checking for Kerberos 5... $ECHO_C" >&6; }
  if test "${ac_cv_lib_kerberos5+set}" = set; then
-@@ -34737,7 +34747,7 @@ componentdir="$privlibdir/components"
+@@ -37245,7 +37255,7 @@ componentdir="$privlibdir/components"
  idldir='${datadir}'/idl/evolution-$BASE_VERSION
  
  
