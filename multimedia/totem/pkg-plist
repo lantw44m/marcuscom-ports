@@ -8,7 +8,7 @@ include/totem/1/plparser/totem-pl-parser.h
 lib/libtotem-plparser.a
 lib/libtotem-plparser.la
 lib/libtotem-plparser.so
-lib/libtotem-plparser.so.1
+lib/libtotem-plparser.so.7
 lib/nautilus/extensions-1.0/libtotem-properties-page.a
 lib/nautilus/extensions-1.0/libtotem-properties-page.la
 lib/nautilus/extensions-1.0/libtotem-properties-page.so
@@ -109,23 +109,20 @@ share/omf/totem/totem-pt_BR.omf
 share/omf/totem/totem-ru.omf
 share/omf/totem/totem-sv.omf
 share/omf/totem/totem-uk.omf
-share/pixmaps/vanity.png
 share/totem/filmholes-big-left.png
 share/totem/filmholes-big-right.png
 share/totem/filmholes.png
 share/totem/mozilla-viewer.glade
 share/totem/playlist-ui.xml
 share/totem/playlist.glade
+share/totem/plugins.glade
 share/totem/properties.glade
-share/totem/screenshot.glade
 share/totem/skip_to.glade
 share/totem/stock-tool-brightness-contrast-22.png
 share/totem/totem-ui.xml
 share/totem/totem.glade
 share/totem/totem_logo.png
 share/totem/uri.glade
-share/totem/vanity.glade
-share/totem/vanity.png
 share/icons/hicolor/16x16/apps/totem.png
 share/icons/hicolor/22x22/apps/totem.png
 share/icons/hicolor/24x24/apps/totem.png
@@ -180,6 +177,7 @@ share/locale/nb/LC_MESSAGES/totem.mo
 share/locale/ne/LC_MESSAGES/totem.mo
 share/locale/nl/LC_MESSAGES/totem.mo
 share/locale/nn/LC_MESSAGES/totem.mo
+share/locale/oc/LC_MESSAGES/totem.mo
 share/locale/or/LC_MESSAGES/totem.mo
 share/locale/pa/LC_MESSAGES/totem.mo
 share/locale/pl/LC_MESSAGES/totem.mo
@@ -263,6 +261,8 @@ share/locale/zh_TW/LC_MESSAGES/totem.mo
 @dirrmtry share/locale/pt
 @dirrmtry share/locale/pl/LC_MESSAGES
 @dirrmtry share/locale/pl
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/nn/LC_MESSAGES
 @dirrmtry share/locale/nn
 @dirrmtry share/locale/ne/LC_MESSAGES
