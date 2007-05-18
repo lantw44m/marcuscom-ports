@@ -3,11 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.33 2007/04/28 18:35:48 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.34 2007/05/12 16:12:49 marcus Exp $
 #
 
 PORTNAME=	seahorse
 PORTVERSION=	2.19.2
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -45,8 +46,8 @@ OPTIONS=	NAUTILUS "Enable the Nautilus component" on \
 		NOTIFY "Enable libnotify support" on \
 		APPLET "Enable clipboard encryption applet" on \
 		KEYRING "Enable GNOME Keyring support" on \
-		MDNS "Enable mDNS key sharing" on \
-		EPIPHANY "Enable Epiphany plug-in support" on
+		MDNS "Enable mDNS key sharing" on
+#		EPIPHANY "Enable Epiphany plug-in support" on
 
 .include <bsd.port.pre.mk>
 
@@ -86,14 +87,14 @@ LIB_DEPENDS+=	notify.1:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=--disable-libnotify
 .endif
 
-.if !defined(WITHOUT_EPIPHANY)
-BUILD_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-PLIST_SUB+=	EPHY="" EPHY_VERSION="2.18"
-.else
+#.if !defined(WITHOUT_EPIPHANY)
+#BUILD_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+#RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+#PLIST_SUB+=	EPHY="" EPHY_VERSION="2.18"
+#.else
 CONFIGURE_ARGS+=--disable-epiphany
 PLIST_SUB+=	EPHY="@comment "
-.endif
+#.endif
 
 .if !defined(WITHOUT_APPLET)
 USE_GNOME+=	gnomepanel
