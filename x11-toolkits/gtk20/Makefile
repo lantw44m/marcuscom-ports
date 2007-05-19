@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.104 2007/05/03 02:31:33 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.105 2007/05/19 21:36:32 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -45,8 +45,8 @@ USE_GETTEXT=	yes
 USE_XLIB=	yes
 CONFIGURE_ARGS=	--enable-static --with-xinput=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
-			  -I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+			  -I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 GTK_VERSION=	2.10.0
 PLIST_SUB=	GTK_VERSION="${GTK_VERSION}"
 
@@ -73,8 +73,7 @@ post-patch:
 		${XARGS} ${REINPLACE_CMD} -e 's|-lgmodule|@GMODULE_LIBS@|g'
 	@${REINPLACE_CMD} -e 's|[{]libdir[}]/locale|{datadir}/locale|g' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
-		s|%%X11BASE%%|${X11BASE}|g' \
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/gtk/xdgmime/xdgmime.c
 # GnomeVFS needs pthread; gtk-demo may use GnomeVFS (via GtkFileChooser)
 	@${REINPLACE_CMD} -e 's|@CFLAGS@|& ${PTHREAD_CFLAGS}|; \
