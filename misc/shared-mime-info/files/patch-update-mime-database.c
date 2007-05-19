@@ -15,7 +15,7 @@
  	env = getenv("XDG_DATA_DIRS");
  	if (!env)
 -		env = "/usr/local/share/:/usr/share/";
-+		env = "/usr/local/share/:%%X11BASE%%/share/";
++		env = "/usr/local/share/";
  	dirs = g_strsplit(env, ":", 0);
  	g_return_if_fail(dirs != NULL);
  	for (n = 0; dirs[n]; n++)

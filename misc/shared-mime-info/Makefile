@@ -3,7 +3,7 @@
 # Whom:                olgeni@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/misc/shared-mime-info/Makefile,v 1.4 2007/04/26 19:10:20 marcus Exp $
+#   $MCom: ports/misc/shared-mime-info/Makefile,v 1.5 2007/04/27 20:58:29 marcus Exp $
 
 PORTNAME=	shared-mime-info
 PORTVERSION=	0.21
@@ -28,7 +28,6 @@ MAN1=		update-mime-database.1
 PKGINSTALL=	${WRKDIR}/pkg-install
 
 MIMEDIRS=	${LOCALBASE}/share/mime \
-		${X11BASE}/share/mime \
 		${PREFIX}/share/mime
 MIMESUBDIRS=	application audio image inode message model multipart \
 		packages text video
@@ -36,14 +35,8 @@ MIMESUBDIRS=	application audio image inode message model multipart \
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%MIMEDIRS%%|${MIMEDIRS}|g' \
 		${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
-		s|%%X11BASE%%|${X11BASE}|g' \
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/update-mime-database.c
-
-pre-su-install:
-.for subdir in ${MIMESUBDIRS}
-	${MKDIR} ${X11BASE}/share/mime/${subdir}
-.endfor
 
 post-install:
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}| ; \
