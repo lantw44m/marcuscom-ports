@@ -3,10 +3,10 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/x11/gnome2-lite/Makefile,v 1.43 2007/03/19 05:13:54 marcus Exp $
-#   $MCom: ports/x11/gnome2-lite/Makefile,v 1.54 2007/03/02 15:38:59 ahze Exp $
+#   $MCom: ports/x11/gnome2-lite/Makefile,v 1.56 2007/04/28 19:18:53 marcus Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 PKGNAMESUFFIX=	-lite
 

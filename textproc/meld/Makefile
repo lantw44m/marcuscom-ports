@@ -3,11 +3,11 @@
 # Whom:					Pav Lucistnik <pav@oook.cz>
 #
 # $FreeBSD$
-#    $MCom: ports/textproc/meld/Makefile,v 1.4 2007/05/01 12:30:35 ahze Exp $
+#    $MCom: ports/textproc/meld/Makefile,v 1.5 2007/05/01 13:12:43 ahze Exp $
 
 PORTNAME=	meld
 PORTVERSION=	1.1.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1

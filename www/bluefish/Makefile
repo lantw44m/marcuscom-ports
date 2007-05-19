@@ -3,12 +3,12 @@
 # Whom:				Koop Mast <einekoai@chello.nl>
 #
 # $FreeBSD$
-#   $MCom: ports/www/bluefish/Makefile,v 1.1 2006/09/30 03:21:27 ahze Exp $
+#   $MCom: ports/www/bluefish/Makefile,v 1.3 2007/04/30 17:08:53 ahze Exp $
 #
 
 PORTNAME=	bluefish
 PORTVERSION=	1.0.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}

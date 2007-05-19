@@ -3,11 +3,11 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/jamboree/Makefile,v 1.12 2007/04/30 18:11:19 ahze Exp $
 
 PORTNAME=	jamboree
 PORTVERSION=	0.5
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION}

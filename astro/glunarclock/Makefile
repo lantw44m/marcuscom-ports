@@ -3,11 +3,11 @@
 # Whom:			Vincent Tantardini <vinc@freebsd-fr.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/astro/glunarclock/Makefile,v 1.4 2007/05/02 12:02:09 ahze Exp $
 
 PORTNAME=	glunarclock
 PORTVERSION=	0.32.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	astro gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}

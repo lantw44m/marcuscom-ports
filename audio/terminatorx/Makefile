@@ -3,11 +3,11 @@
 # Whom:				Tilman Linneweh <arved@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/terminatorx/Makefile,v 1.3 2007/05/02 17:51:13 ahze Exp $
 
 PORTNAME=	terminatorx
 PORTVERSION=	3.82
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://terminatorx.org/dist/
 DISTNAME=	terminatorX-${PORTVERSION}

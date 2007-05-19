@@ -3,11 +3,11 @@
 # Whom:			Koop Mast <kwm@rainbow-runner.nl>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/gstreamer-monkeysaudio/Makefile,v 1.8 2007/05/02 15:47:11 ahze Exp $
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.8.0
-PORTREVISION=	12
+PORTREVISION=	13
 CATEGORIES=	audio
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst${PKGNAMESUFFIX}/
 PKGNAMESUFFIX=	-monkeysaudio

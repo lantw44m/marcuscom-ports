@@ -3,12 +3,12 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/libpurple/Makefile,v 1.14 2007/05/03 18:31:43 marcus Exp $
+#   $MCom: ports/net-im/libpurple/Makefile,v 1.15 2007/05/03 19:12:56 marcus Exp $
 #
 
 PORTNAME?=	libpurple
 PORTVERSION=	2.0.0.b7
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES?=	net-im
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	pidgin

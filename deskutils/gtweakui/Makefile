@@ -3,11 +3,11 @@
 # Whom:				Sergey Akifyev <asa@gascom.ru>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/deskutils/gtweakui/Makefile,v 1.1 2007/05/01 17:23:44 ahze Exp $
 
 PORTNAME=	gTweakUI
 PORTVERSION=	0.4.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	gtweakui

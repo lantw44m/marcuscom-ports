@@ -3,11 +3,11 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/musicbox-tag-editor/Makefile,v 1.3 2007/05/02 16:11:23 ahze Exp $
 
 PORTNAME=		musicbox-tag-editor
 PORTVERSION=		0.2.3
-PORTREVISION=		5
+PORTREVISION=		6
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	musicbox

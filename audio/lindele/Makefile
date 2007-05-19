@@ -3,11 +3,11 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/lindele/Makefile,v 1.9 2007/05/02 15:55:34 ahze Exp $
 
 PORTNAME=		lindele
 PORTVERSION=		0.1.1
-PORTREVISION=		6
+PORTREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		http://download.gna.org/${PORTNAME}/
 

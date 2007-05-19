@@ -3,11 +3,11 @@
 # Whom:					Vincent Tantardini <vinc@freebsd-fr.org>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/gspeakers/Makefile,v 1.3 2007/05/02 15:29:58 ahze Exp $
+#    $MCom: ports/audio/gspeakers/Makefile,v 1.4 2007/05/02 17:47:55 ahze Exp $
 
 PORTNAME=	gspeakers
 PORTVERSION=	0.11
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}

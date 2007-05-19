@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/x11/gnome2-fifth-toe/Makefile,v 1.78 2007/04/11 19:26:20 marcus Exp $
-#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.83 2007/04/03 01:14:24 ahze Exp $
+#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.85 2007/05/01 17:55:49 marcus Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 PKGNAMESUFFIX=	-fifth-toe
 

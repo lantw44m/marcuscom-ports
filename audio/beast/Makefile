@@ -3,11 +3,11 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/beast/Makefile,v 1.3 2007/05/02 12:13:54 ahze Exp $
 
 PORTNAME=	beast
 PORTVERSION=	0.6.6
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	ftp://beast.gtk.org/pub/beast/v0.6/ \
 		http://beast.gtk.org/beast-ftp/v0.6/

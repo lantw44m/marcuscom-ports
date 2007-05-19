@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda/Makefile,v 1.2 2006/09/10 00:51:06 mezz Exp $
+#   $MCom: ports/databases/libgda/Makefile,v 1.4 2007/05/02 21:24:37 mezz Exp $
 #
 
 PORTNAME=	libgda
 PORTVERSION=	0.2.96
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.2

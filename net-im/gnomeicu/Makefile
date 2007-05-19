@@ -3,11 +3,11 @@
 # Whom:					nectar@FreeBSD.org
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net-im/gnomeicu/Makefile,v 1.1 2007/04/30 17:50:24 ahze Exp $
 
 PORTNAME=	gnomeicu
 PORTVERSION=	0.99.12
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-im gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	gnomeicu

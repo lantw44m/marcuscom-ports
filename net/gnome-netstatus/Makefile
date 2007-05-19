@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/gnome-netstatus/Makefile,v 1.41 2006/07/23 01:10:49 mezz Exp $
+#   $MCom: ports/net/gnome-netstatus/Makefile,v 1.45 2007/04/28 17:32:37 marcus Exp $
 #
 
 PORTNAME=	gnome-netstatus
 PORTVERSION=	2.12.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}

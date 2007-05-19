@@ -3,11 +3,11 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/gnomoradio/Makefile,v 1.3 2007/05/02 14:20:48 ahze Exp $
 
 PORTNAME=		gnomoradio
 PORTVERSION=		0.15.1
-PORTREVISION=		6
+PORTREVISION=		7
 CATEGORIES=		audio net
 MASTER_SITES=		${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	${PORTNAME}

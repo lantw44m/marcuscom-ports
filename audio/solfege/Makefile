@@ -4,11 +4,11 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/audio/solfege/Makefile,v 1.1 2007/05/02 16:13:24 ahze Exp $
 
 PORTNAME=	solfege
 PORTVERSION=	3.7.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}

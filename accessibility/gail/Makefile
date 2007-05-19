@@ -3,12 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gail/Makefile,v 1.57 2007/03/12 13:34:38 ahze Exp $
+#   $MCom: ports/accessibility/gail/Makefile,v 1.59 2007/04/23 23:04:11 ahze Exp $
 #
 
 PORTNAME=	gail
 PORTVERSION=	1.19.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}

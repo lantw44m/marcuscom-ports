@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.7 2007/03/12 11:50:11 ahze Exp $
+#    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.9 2007/04/30 18:22:39 ahze Exp $
 
 PORTNAME=	nautilus-sendto
 PORTVERSION=	0.10
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 

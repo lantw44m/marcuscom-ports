@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/bonobo/Makefile,v 1.2 2006/09/10 00:51:07 mezz Exp $
+#   $MCom: ports/devel/bonobo/Makefile,v 1.4 2007/05/02 20:47:57 mezz Exp $
 #
 
 PORTNAME=	bonobo
 PORTVERSION=	1.0.22
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.0

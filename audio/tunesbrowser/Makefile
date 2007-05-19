@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/tunesbrowser/Makefile,v 1.7 2006/04/29 10:51:51 pav Exp $
+#    $MCom: ports/audio/tunesbrowser/Makefile,v 1.9 2007/05/02 17:55:46 ahze Exp $
 
 PORTNAME=	tunesbrowser
 PORTVERSION=	0.3.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://crazney.net/programs/itunes/files/
 

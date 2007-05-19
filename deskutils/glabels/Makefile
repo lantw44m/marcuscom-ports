@@ -3,12 +3,12 @@
 # Whom:			Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/deskutils/glabels/Makefile,v 1.6 2007/05/02 19:27:41 marcus Exp $
 #
 
 PORTNAME=	glabels
 PORTVERSION=	2.0.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	deskutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}

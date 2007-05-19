@@ -3,12 +3,12 @@
 # Whom:					Maxim Soboleb <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/libcapplet/Makefile,v 1.4 2006/10/07 19:06:46 ahze Exp $
+#    $MCom: ports/x11/libcapplet/Makefile,v 1.6 2007/05/03 02:42:51 mezz Exp $
 #
 
 PORTNAME=	libcapplet
 PORTVERSION=	1.4.0.5
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://people.freebsd.org/~sobomax/
 DIST_SUBDIR=	gnome

@@ -3,12 +3,12 @@
 # Whom:                saper@system.pl
 #
 # $FreeBSD: ports/graphics/dia/Makefile,v 1.63 2007/03/29 16:57:40 marcus Exp $
-#   $MCom$
+#   $MCom: ports/graphics/dia/Makefile,v 1.12 2007/05/02 19:26:39 marcus Exp $
 #
 
 PORTNAME=	dia
 DISTVERSION=	0.96.1
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
