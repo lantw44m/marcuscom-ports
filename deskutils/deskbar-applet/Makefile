@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.56 2007/04/28 05:39:15 marcus Exp $
+#    $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.57 2007/05/19 21:36:01 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
 PORTVERSION=	2.18.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -57,7 +57,7 @@ CONFIGURE_ENV+=	DISPLAY="localhost:1001"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
-		s|%%X11BASE%%|${X11BASE}|g ; s|%%LOCALBASE%%|${LOCALBASE}|g' \
+		s|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/deskbar/handlers/mozilla.py \
 		${WRKSRC}/deskbar/Utils.py
 
