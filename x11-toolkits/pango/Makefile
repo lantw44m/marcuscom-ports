@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.96 2007/05/16 03:37:34 marcus Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.97 2007/05/19 21:36:34 marcus Exp $
 #
 
 PORTNAME=	pango
@@ -34,7 +34,6 @@ USE_GNOME=	gnomehack glib20 ltverhack referencehack
 CONFIGURE_ARGS=	--with-qt=no \
 		--with-html-dir=${PREFIX}/share/doc \
 		--enable-static
-PKGINSTALL=	${WRKDIR}/pkg-install
 # Hmm.. tough one.  Found this one when I had graphics/hdf installed
 # (which installs glist.h) which is picked up before the glib-2.0
 # stuff, with Bad Results[tm]
@@ -61,13 +60,6 @@ CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 				-I${X11BASE}/include" \
 			LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
 PLIST_SUB+=		X11=""
-.endif
-
-post-install:
-	@${SED} -e 's|%%X11BASE%%|${X11BASE}|' < ${FILESDIR}/pkg-install.in \
-		> ${PKGINSTALL}
-.if !defined(PACKAGE_BUILDING)
-	@${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
 
 .include <bsd.port.mk>
