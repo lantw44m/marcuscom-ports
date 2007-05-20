@@ -3,12 +3,12 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/desktop-file-utils/Makefile,v 1.5 2007/04/28 07:59:02 marcus Exp $
 #
 
 PORTNAME=		desktop-file-utils
 PORTVERSION=		0.12
-PORTREVISION=		1
+PORTREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://freedesktop.org/software/${PORTNAME}/releases/
 
@@ -27,8 +27,7 @@ CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include" \
 PKGINSTALL=		${WRKDIR}/pkg-install
 PKGDEINSTALL=		${WRKDIR}/pkg-deinstall
 
-PORT_MIMEDIRS=		${LOCALBASE}/share/applications \
-			${X11BASE}/share/applications
+PORT_MIMEDIRS=		${LOCALBASE}/share/applications
 
 MIMEDIRS=		${PORT_MIMEDIRS}
 
