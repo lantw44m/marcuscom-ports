@@ -22,13 +22,3 @@ share/pixmaps/EasyTAG.xpm
 @dirrmtry share/apps
 @dirrmtry share/gnome
 @dirrm %%DATADIR%%
-@dirrmtry share/locale/cs/LC_MESSAGES
-@dirrmtry share/locale/cs
-@dirrmtry share/locale/el/LC_MESSAGES
-@dirrmtry share/locale/el
-@dirrmtry share/locale/pl/LC_MESSAGES
-@dirrmtry share/locale/pl
-@dirrmtry share/locale/ro/LC_MESSAGES
-@dirrmtry share/locale/ro
-@dirrmtry share/locale/uk/LC_MESSAGES
-@dirrmtry share/locale/uk
