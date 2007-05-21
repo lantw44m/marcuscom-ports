@@ -66,10 +66,6 @@ share/locale/pt_BR/LC_MESSAGES/bombermaze.mo
 share/locale/ru/LC_MESSAGES/bombermaze.mo
 share/locale/uk/LC_MESSAGES/bombermaze.mo
 share/pixmaps/bombermaze.png
-@dirrmtry share/locale/uk/LC_MESSAGES
-@dirrmtry share/locale/uk
-@dirrmtry share/locale/no/LC_MESSAGES
-@dirrmtry share/locale/no
 @dirrm share/gnome/help/bombermaze/C
 @dirrm share/gnome/help/bombermaze
 @dirrm %%DATADIR%%/themes/space
