@@ -89,7 +89,3 @@ share/pixmaps/gnome-commander/smb-network.xpm
 @dirrm share/pixmaps/gnome-commander/file-type-icons
 @dirrm share/pixmaps/gnome-commander/device-icons
 @dirrm share/pixmaps/gnome-commander
-@dirrmtry share/locale/sk/LC_MESSAGES
-@dirrmtry share/locale/sk
-@dirrmtry share/locale/pl/LC_MESSAGES
-@dirrmtry share/locale/pl
