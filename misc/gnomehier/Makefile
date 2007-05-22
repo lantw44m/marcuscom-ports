@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/misc/gnomehier/Makefile,v 1.26 2007/05/06 04:04:16 marcus Exp $
+#    $MCom: ports/misc/gnomehier/Makefile,v 1.27 2007/05/22 04:27:26 marcus Exp $
 #
 # !!DON'T BUMP PORTREVISION ON MTREE CHANGES ANYMORE!!
 
@@ -23,8 +23,6 @@ PKGINSTALL=	${WRKDIR}/pkg-install
 
 GNOME_MTREE=	BSD.gnome.dist
 GNOME_MTREE_ARGS=${MTREE_ARGS:S|${MTREE_FILE}|${PREFIX}/etc/mtree/${GNOME_MTREE}|}
-
-USE_XLIB=	yes
 
 do-fetch:
 	@${DO_NADA}
