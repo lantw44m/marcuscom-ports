@@ -88,5 +88,3 @@ share/locale/zu/LC_MESSAGES/gnome-mime-data.mo
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/nso/LC_MESSAGES
 @dirrmtry share/locale/nso
-@dirrmtry share/locale/li/LC_MESSAGES
-@dirrmtry share/locale/li

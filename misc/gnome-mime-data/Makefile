@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/misc/gnome-mime-data/Makefile,v 1.12 2007/04/26 13:40:41 ahze Exp $
+#    $MCom: ports/misc/gnome-mime-data/Makefile,v 1.13 2007/04/26 13:42:43 ahze Exp $
 
 PORTNAME=	gnome-mime-data
 PORTVERSION=	2.18.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
