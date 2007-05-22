@@ -125,8 +125,6 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
-@dirrmtry share/locale/tg/LC_MESSAGES
-@dirrmtry share/locale/tg
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/nso/LC_MESSAGES
