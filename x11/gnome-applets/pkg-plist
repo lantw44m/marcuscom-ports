@@ -1369,7 +1369,7 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/accessx-status/C/figures
 @dirrm share/gnome/help/accessx-status/C
 @dirrm share/gnome/help/accessx-status
-@dirrm %%DATADIR%%/invest-applet
+%%PYTHON%%@dirrm %%DATADIR%%/invest-applet
 @dirrm %%DATADIR%%/gweather
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%/geyes/Tango
