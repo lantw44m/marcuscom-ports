@@ -5,6 +5,7 @@ bin/gtk-query-immodules-2.0
 bin/gtk-update-icon-cache
 etc/gtk-2.0/gdk-pixbuf.loaders
 etc/gtk-2.0/gtk.immodules
+etc/gtk-2.0/im-multipress.conf
 include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h
 include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlibrgb.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
@@ -177,6 +178,7 @@ include/gtk-2.0/gtk/gtkradiomenuitem.h
 include/gtk-2.0/gtk/gtkradiotoolbutton.h
 include/gtk-2.0/gtk/gtkrange.h
 include/gtk-2.0/gtk/gtkrc.h
+include/gtk-2.0/gtk/gtkrecentaction.h
 include/gtk-2.0/gtk/gtkrecentchooser.h
 include/gtk-2.0/gtk/gtkrecentchooserdialog.h
 include/gtk-2.0/gtk/gtkrecentchoosermenu.h
@@ -185,6 +187,7 @@ include/gtk-2.0/gtk/gtkrecentfilter.h
 include/gtk-2.0/gtk/gtkrecentmanager.h
 include/gtk-2.0/gtk/gtkruler.h
 include/gtk-2.0/gtk/gtkscale.h
+include/gtk-2.0/gtk/gtkscalebutton.h
 include/gtk-2.0/gtk/gtkscrollbar.h
 include/gtk-2.0/gtk/gtkscrolledwindow.h
 include/gtk-2.0/gtk/gtkselection.h
@@ -220,6 +223,7 @@ include/gtk-2.0/gtk/gtktoggletoolbutton.h
 include/gtk-2.0/gtk/gtktoolbar.h
 include/gtk-2.0/gtk/gtktoolbutton.h
 include/gtk-2.0/gtk/gtktoolitem.h
+include/gtk-2.0/gtk/gtktooltip.h
 include/gtk-2.0/gtk/gtktooltips.h
 include/gtk-2.0/gtk/gtktree.h
 include/gtk-2.0/gtk/gtktreednd.h
@@ -239,6 +243,7 @@ include/gtk-2.0/gtk/gtkvbbox.h
 include/gtk-2.0/gtk/gtkvbox.h
 include/gtk-2.0/gtk/gtkversion.h
 include/gtk-2.0/gtk/gtkviewport.h
+include/gtk-2.0/gtk/gtkvolumebutton.h
 include/gtk-2.0/gtk/gtkvpaned.h
 include/gtk-2.0/gtk/gtkvruler.h
 include/gtk-2.0/gtk/gtkvscale.h
@@ -268,6 +273,9 @@ lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-inuktitut.so
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-ipa.a
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-ipa.la
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-ipa.so
+lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-multipress.a
+lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-multipress.la
+lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-multipress.so
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-thai.a
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-thai.la
 lib/gtk-2.0/%%GTK_VERSION%%/immodules/im-thai.so
@@ -409,8 +417,6 @@ share/locale/ang/LC_MESSAGES/gtk20-properties.mo
 share/locale/ang/LC_MESSAGES/gtk20.mo
 share/locale/ar/LC_MESSAGES/gtk20-properties.mo
 share/locale/ar/LC_MESSAGES/gtk20.mo
-share/locale/as/LC_MESSAGES/gtk20-properties.mo
-share/locale/as/LC_MESSAGES/gtk20.mo
 share/locale/az/LC_MESSAGES/gtk20-properties.mo
 share/locale/az/LC_MESSAGES/gtk20.mo
 share/locale/az_IR/LC_MESSAGES/gtk20-properties.mo
@@ -537,8 +543,6 @@ share/locale/ru/LC_MESSAGES/gtk20-properties.mo
 share/locale/ru/LC_MESSAGES/gtk20.mo
 share/locale/rw/LC_MESSAGES/gtk20-properties.mo
 share/locale/rw/LC_MESSAGES/gtk20.mo
-share/locale/si/LC_MESSAGES/gtk20-properties.mo
-share/locale/si/LC_MESSAGES/gtk20.mo
 share/locale/sk/LC_MESSAGES/gtk20-properties.mo
 share/locale/sk/LC_MESSAGES/gtk20.mo
 share/locale/sl/LC_MESSAGES/gtk20-properties.mo
@@ -636,8 +640,6 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrmtry share/locale/sr@ije
 @dirrmtry share/locale/sk/LC_MESSAGES
 @dirrmtry share/locale/sk
-@dirrmtry share/locale/si/LC_MESSAGES
-@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/nso/LC_MESSAGES
@@ -660,7 +662,5 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/az_IR/LC_MESSAGES
 @dirrmtry share/locale/az_IR
-@dirrmtry share/locale/as/LC_MESSAGES
-@dirrmtry share/locale/as
 @dirrmtry share/locale/ang/LC_MESSAGES
 @dirrmtry share/locale/ang
