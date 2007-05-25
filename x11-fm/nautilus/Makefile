@@ -3,12 +3,12 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.130 2007/05/15 01:06:38 marcus Exp $
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.131 2007/05/19 21:36:31 marcus Exp $
 #
 
 PORTNAME=	nautilus
 PORTVERSION=	2.19.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	File manager for the GNOME desktop
 
-LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif
+LIB_DEPENDS=	exif.13:${PORTSDIR}/graphics/libexif
 
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
