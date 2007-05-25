@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/totem/Makefile,v 1.80 2007/05/15 05:26:13 marcus Exp $
+#    $MCom: ports/multimedia/totem/Makefile,v 1.81 2007/05/19 21:36:15 marcus Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	2.19.2
-PORTREVISION?=	1
+PORTVERSION=	2.19.3
+PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -25,7 +25,7 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_XLIB=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomedesktop desktopfileutils \
-		nautiluscdburner ltverhack
+		nautiluscdburner ltverhack gnomecontrolcenter2
 GNOME_DESKTOP_VERSION=2
 WANT_GSTREAMER=	yes
 INSTALLS_ICONS=	yes
@@ -34,15 +34,37 @@ USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
 INSTALLS_OMF=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-	       	LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lXrandr"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+	       	LIBS="-L${LOCALBASE}/lib -lXrandr"
+CONFIGURE_ARGS=	--with-plugins=${TOTEM_PLUGINS}
 
 MAN1=		totem.1 totem-video-thumbnailer.1
 GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
 		totem.schemas
 CONFLICTS?=	totem-gstreamer-[0-9]* totem-xine-[0-9]*
 
+OPTIONS=	LIRC "Enable lirc support" off \
+		GALAGO "Enable Galago support" off
+
+TOTEM_PLUGINS=	"screensaver ontop gromit media-player-keys properties sidebar-test skipto"
+
 .include <bsd.port.pre.mk>
+
+.if defined(WITH_LIRC)
+LIB_DEPENDS+=	lirc_client.1:${PORTSDIR}/comms/lirc
+PLIST_SUB+=	LIRC=""
+TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
+.else
+PLIST_SUB+=	LIRC="@comment "
+.endif
+
+.if defined(WITH_GALAGO)
+LIB_DEPENDS+=	galago.3:${PORTSIDR}/devel/libgalago
+PLIST_SUB+=	GALAGO=""
+TOTEM_PLUGINS:=	${TOTEM_PLUGINS} galago
+.else
+PLIST_SUB+=	GALAGO="@comment "
+.endif
 
 .if defined(WITH_MOZILLA_PLUGIN) && ${SLAVE_PORT:L}=="yes"
 USE_GECKO=	firefox mozilla seamonkey xulrunner<->firefox firefox-devel<->firefox

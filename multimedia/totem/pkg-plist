@@ -12,6 +12,39 @@ lib/libtotem-plparser.so.7
 lib/nautilus/extensions-1.0/libtotem-properties-page.a
 lib/nautilus/extensions-1.0/libtotem-properties-page.la
 lib/nautilus/extensions-1.0/libtotem-properties-page.so
+%%GALAGO%%lib/totem/plugins/galago/galago.totem-plugin
+%%GALAGO%%lib/totem/plugins/galago/libtgp.a
+%%GALAGO%%lib/totem/plugins/galago/libtgp.la
+%%GALAGO%%lib/totem/plugins/galago/libtgp.so
+lib/totem/plugins/gromit/gromit.totem-plugin
+lib/totem/plugins/gromit/libgromit.a
+lib/totem/plugins/gromit/libgromit.la
+lib/totem/plugins/gromit/libgromit.so
+%%LIRC%%lib/totem/plugins/lirc/lirc.totem-plugin
+%%LIRC%%lib/totem/plugins/lirc/liblirc.a
+%%LIRC%%lib/totem/plugins/lirc/liblirc.la
+%%LIRC%%lib/totem/plugins/lirc/liblirc.so
+lib/totem/plugins/media-player-keys/libmedia_player_keys.a
+lib/totem/plugins/media-player-keys/libmedia_player_keys.la
+lib/totem/plugins/media-player-keys/libmedia_player_keys.so
+lib/totem/plugins/media-player-keys/media-player-keys.totem-plugin
+lib/totem/plugins/ontop/libontop.a
+lib/totem/plugins/ontop/libontop.la
+lib/totem/plugins/ontop/libontop.so
+lib/totem/plugins/ontop/ontop.totem-plugin
+lib/totem/plugins/properties/libmovie-properties.a
+lib/totem/plugins/properties/libmovie-properties.la
+lib/totem/plugins/properties/libmovie-properties.so
+lib/totem/plugins/properties/movie-properties.totem-plugin
+lib/totem/plugins/screensaver/libscreensaver.a
+lib/totem/plugins/screensaver/libscreensaver.la
+lib/totem/plugins/screensaver/libscreensaver.so
+lib/totem/plugins/screensaver/screensaver.totem-plugin
+lib/totem/plugins/skipto/libskipto.a
+lib/totem/plugins/skipto/libskipto.la
+lib/totem/plugins/skipto/libskipto.so
+lib/totem/plugins/skipto/skip_to.glade
+lib/totem/plugins/skipto/skipto.totem-plugin
 libdata/pkgconfig/totem-plparser.pc
 share/applications/totem.desktop
 share/gnome/help/totem/C/figures/totem_next_button.png
@@ -36,6 +69,15 @@ share/gnome/help/totem/de/figures/totem_start_window.png
 share/gnome/help/totem/de/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/de/figures/totem_volume_mute_button.png
 share/gnome/help/totem/de/totem.xml
+share/gnome/help/totem/en_GB/figures/totem_next_button.png
+share/gnome/help/totem/en_GB/figures/totem_pause_button.png
+share/gnome/help/totem/en_GB/figures/totem_play_button.png
+share/gnome/help/totem/en_GB/figures/totem_previous_button.png
+share/gnome/help/totem/en_GB/figures/totem_show_playlist_button.png
+share/gnome/help/totem/en_GB/figures/totem_start_window.png
+share/gnome/help/totem/en_GB/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/en_GB/figures/totem_volume_mute_button.png
+share/gnome/help/totem/en_GB/totem.xml
 share/gnome/help/totem/es/figures/totem_next_button.png
 share/gnome/help/totem/es/figures/totem_pause_button.png
 share/gnome/help/totem/es/figures/totem_play_button.png
@@ -102,6 +144,7 @@ share/gnome/help/totem/uk/totem.xml
 share/omf/totem/totem-C.omf
 share/omf/totem/totem-bg.omf
 share/omf/totem/totem-de.omf
+share/omf/totem/totem-en_GB.omf
 share/omf/totem/totem-es.omf
 share/omf/totem/totem-fr.omf
 share/omf/totem/totem-pa.omf
@@ -117,7 +160,6 @@ share/totem/playlist-ui.xml
 share/totem/playlist.glade
 share/totem/plugins.glade
 share/totem/properties.glade
-share/totem/skip_to.glade
 share/totem/stock-tool-brightness-contrast-22.png
 share/totem/totem-ui.xml
 share/totem/totem.glade
@@ -218,6 +260,8 @@ share/locale/zh_TW/LC_MESSAGES/totem.mo
 @dirrm share/gnome/help/totem/pa
 @dirrm share/gnome/help/totem/fr/figures
 @dirrm share/gnome/help/totem/fr
+@dirrm share/gnome/help/totem/en_GB/figures
+@dirrm share/gnome/help/totem/en_GB
 @dirrm share/gnome/help/totem/es/figures
 @dirrm share/gnome/help/totem/es
 @dirrm share/gnome/help/totem/de/figures
@@ -227,6 +271,16 @@ share/locale/zh_TW/LC_MESSAGES/totem.mo
 @dirrm share/gnome/help/totem/C/figures
 @dirrm share/gnome/help/totem/C
 @dirrm share/gnome/help/totem
+%%GALAGO%%@dirrm lib/totem/plugins/galago
+@dirrm lib/totem/plugins/gromit
+%%LIRC%%@dirrm lib/totem/plugins/lirc
+@dirrm lib/totem/plugins/media-player-keys
+@dirrm lib/totem/plugins/ontop
+@dirrm lib/totem/plugins/properties
+@dirrm lib/totem/plugins/screensaver
+@dirrm lib/totem/plugins/skipto
+@dirrm lib/totem/plugins
+@dirrm lib/totem
 @dirrmtry lib/browser_plugins
 @dirrm include/totem/1/plparser
 @dirrm include/totem/1
