@@ -97,7 +97,6 @@ share/pixmaps/pidgin/arrow-down.xpm
 share/pixmaps/pidgin/arrow-left.xpm
 share/pixmaps/pidgin/arrow-right.xpm
 share/pixmaps/pidgin/arrow-up.xpm
-share/pixmaps/pidgin/buttons/about_menu.png
 share/pixmaps/pidgin/buttons/edit.png
 share/pixmaps/pidgin/buttons/music.png
 share/pixmaps/pidgin/buttons/pause.png
@@ -123,6 +122,7 @@ share/pixmaps/pidgin/emblems/16/founder.png
 share/pixmaps/pidgin/emblems/16/free-for-chat.png
 share/pixmaps/pidgin/emblems/16/game.png
 share/pixmaps/pidgin/emblems/16/half-operator.png
+share/pixmaps/pidgin/emblems/16/hiptop.png
 share/pixmaps/pidgin/emblems/16/male.png
 share/pixmaps/pidgin/emblems/16/mobile.png
 share/pixmaps/pidgin/emblems/16/not-authorized.png
@@ -199,6 +199,7 @@ share/pixmaps/pidgin/emotes/default/girl.png
 share/pixmaps/pidgin/emotes/default/glasses-cool.png
 share/pixmaps/pidgin/emotes/default/glasses-nerdy.png
 share/pixmaps/pidgin/emotes/default/go-away.png
+share/pixmaps/pidgin/emotes/default/goat.png
 share/pixmaps/pidgin/emotes/default/good.png
 share/pixmaps/pidgin/emotes/default/hammer.png
 share/pixmaps/pidgin/emotes/default/handcuffs.png
@@ -268,6 +269,7 @@ share/pixmaps/pidgin/emotes/default/sick.png
 share/pixmaps/pidgin/emotes/default/sigarette.png
 share/pixmaps/pidgin/emotes/default/silly.png
 share/pixmaps/pidgin/emotes/default/skeleton.png
+share/pixmaps/pidgin/emotes/default/skywalker.png
 share/pixmaps/pidgin/emotes/default/sleepy.png
 share/pixmaps/pidgin/emotes/default/smile-big.png
 share/pixmaps/pidgin/emotes/default/smile.png
@@ -400,12 +402,14 @@ share/pixmaps/pidgin/toolbar/16/insert-image.png
 share/pixmaps/pidgin/toolbar/16/insert-link.png
 share/pixmaps/pidgin/toolbar/16/message-new.png
 share/pixmaps/pidgin/toolbar/16/plugins.png
+share/pixmaps/pidgin/toolbar/16/send-file.png
 share/pixmaps/pidgin/toolbar/16/unblock.png
 share/pixmaps/pidgin/toolbar/22/select-avatar.png
 share/pixmaps/pidgin/tray/16/tray-away.png
 share/pixmaps/pidgin/tray/16/tray-busy.png
 share/pixmaps/pidgin/tray/16/tray-connecting.png
 share/pixmaps/pidgin/tray/16/tray-extended-away.png
+share/pixmaps/pidgin/tray/16/tray-invisible.png
 share/pixmaps/pidgin/tray/16/tray-message.png
 share/pixmaps/pidgin/tray/16/tray-offline.png
 share/pixmaps/pidgin/tray/16/tray-online.png
@@ -413,6 +417,7 @@ share/pixmaps/pidgin/tray/22/tray-away.png
 share/pixmaps/pidgin/tray/22/tray-busy.png
 share/pixmaps/pidgin/tray/22/tray-connecting.png
 share/pixmaps/pidgin/tray/22/tray-extended-away.png
+share/pixmaps/pidgin/tray/22/tray-invisible.png
 share/pixmaps/pidgin/tray/22/tray-message.png
 share/pixmaps/pidgin/tray/22/tray-offline.png
 share/pixmaps/pidgin/tray/22/tray-online.png
