@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.56 2007/05/19 21:36:11 marcus Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.57 2007/05/25 20:57:05 mezz Exp $
 #
 
 PORTNAME=	eog
 PORTVERSION=	2.19.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -36,7 +36,7 @@ GCONF_SCHEMAS=	eog.schemas
 
 .if !defined(WITHOUT_EXIF) || (exists(${LOCALBASE}/lib/libexif.so.12) || \
 	defined(WITH_EXIF))
-LIB_DEPENDS+=	exif.13:${PORTSDIR}/graphics/libexif
+LIB_DEPENDS+=	exif.12:${PORTSDIR}/graphics/libexif
 .endif
 
 post-install:
