@@ -3,16 +3,16 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/libpurple/Makefile,v 1.16 2007/05/19 21:36:19 marcus Exp $
+#   $MCom: ports/net-im/libpurple/Makefile,v 1.17 2007/05/25 00:24:49 marcus Exp $
 #
 
 PORTNAME?=	libpurple
-PORTVERSION=	2.0.0
+PORTVERSION=	2.0.1
 PORTREVISION?=	1
 CATEGORIES?=	net-im
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	pidgin
-DISTNAME=	pidgin-2.0.0
+DISTNAME=	pidgin-${PORTVERSION}
 
 MAINTAINER?=	marcus@FreeBSD.org
 COMMENT?=	Backend library for the Pidgin multi-protocol messaging client
