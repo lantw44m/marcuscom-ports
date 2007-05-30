@@ -9,7 +9,7 @@ PORTNAME=	eiciel
 PORTVERSION=	0.9.4
 PORTREVISION=	3
 CATEGORIES=	sysutils security
-#MASTER_SITES=	http://rofi.pinchito.com/eiciel/download/
+MASTER_SITES=	http://rofi.pinchito.com/eiciel/download/
 
 MAINTAINER=	miwi@FreeBSD.org
 COMMENT=	A GNOME-based ACL editor, with integration into Nautilus
