@@ -31,7 +31,5 @@ MAN1=	halifax.1 ghfaxviewer.1
 pre-patch:
 	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
 		s|DATADIRNAME=lib|DATADIRNAME=share|g' ${WRKSRC}/configure
-	@${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
-		' s|\$$(datadir)/locale|$$(prefix)/share/locale|g'
 
 .include <bsd.port.mk>
