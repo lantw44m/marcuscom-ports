@@ -3,11 +3,12 @@
 # Whom:                 dirk.meyer@dinoex.sub.org
 #
 # $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	crescendo
 PORTVERSION=	1.1.7
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	net gnome
 # Master Site broken
 #MASTER_SITES=	http://crescendo.lyrical.net/files/
@@ -33,6 +34,8 @@ USE_GNOME=	gnomelibs
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
 		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|txtOutput|txtNotepadOutput|g' \
+		${WRKSRC}/src/notepad.c
 
 post-install:
 .if !defined(NOPORTDOCS)

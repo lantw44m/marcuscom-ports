@@ -1,6 +1,5 @@
 bin/straw
 share/applications/straw.desktop
-share/pixmaps/straw.png
 share/straw/Application.py
 share/straw/Application.pyc
 share/straw/Application.pyo
@@ -127,26 +126,23 @@ share/straw/httplib_async.pyc
 share/straw/httplib_async.pyo
 share/straw/image-broken.png
 share/straw/image-waiting.png
-share/straw/offline.png
-share/straw/online.png
 share/straw/straw.css
 share/straw/straw.glade
 share/straw/straw.png
 share/straw/strawdbus.py
 share/straw/strawdbus.pyc
 share/straw/strawdbus.pyo
-share/straw/strawtypes.py
-share/straw/strawtypes.pyc
-share/straw/strawtypes.pyo
 share/straw/subscribe.py
 share/straw/subscribe.pyc
 share/straw/subscribe.pyo
 share/straw/utils.py
 share/straw/utils.pyc
 share/straw/utils.pyo
+share/locale/ar/LC_MESSAGES/straw.mo
 share/locale/bg/LC_MESSAGES/straw.mo
 share/locale/cs/LC_MESSAGES/straw.mo
 share/locale/de/LC_MESSAGES/straw.mo
+share/locale/dz/LC_MESSAGES/straw.mo
 share/locale/en_CA/LC_MESSAGES/straw.mo
 share/locale/en_GB/LC_MESSAGES/straw.mo
 share/locale/es/LC_MESSAGES/straw.mo
@@ -156,9 +152,9 @@ share/locale/fr/LC_MESSAGES/straw.mo
 share/locale/it/LC_MESSAGES/straw.mo
 share/locale/ja/LC_MESSAGES/straw.mo
 share/locale/lt/LC_MESSAGES/straw.mo
+share/locale/nb/LC_MESSAGES/straw.mo
 share/locale/ne/LC_MESSAGES/straw.mo
 share/locale/nl/LC_MESSAGES/straw.mo
-share/locale/no/LC_MESSAGES/straw.mo
 share/locale/pa/LC_MESSAGES/straw.mo
 share/locale/pt/LC_MESSAGES/straw.mo
 share/locale/pt_BR/LC_MESSAGES/straw.mo
@@ -170,4 +166,5 @@ share/locale/sv/LC_MESSAGES/straw.mo
 share/locale/uk/LC_MESSAGES/straw.mo
 share/locale/vi/LC_MESSAGES/straw.mo
 share/locale/zh_CN/LC_MESSAGES/straw.mo
+share/pixmaps/straw.png
 @dirrm share/straw

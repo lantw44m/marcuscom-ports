@@ -6,8 +6,8 @@
 #
 
 PORTNAME=	straw
-PORTVERSION=	0.26
-PORTREVISION=	2
+PORTVERSION=	0.27
+PORTREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION}
@@ -20,6 +20,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_bsddb.so:${PORTSDIR}/databases/py-bsddb \
 		${PYTHON_SITELIBDIR}/dbus/_dbus.py:${PORTSDIR}/devel/py-dbus
 
 USE_GMAKE=	yes
+USE_BZIP2=	yes
 USE_XLIB=	yes
 USE_GNOME=	gnomehier libglade2 pygnome2 pygnomeextras
 USE_PYTHON=	2.4+
@@ -35,7 +36,6 @@ GCONF_SCHEMAS=	straw.schemas
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%PYTHON_SITELIBDIR%%|${PYTHON_SITELIBDIR}|g' \
 		${WRKSRC}/src/straw
-	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|' ${WRKSRC}/setup.cfg
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
