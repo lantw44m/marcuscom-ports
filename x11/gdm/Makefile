@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/Makefile,v 1.63 2007/05/19 21:36:27 marcus Exp $
+#    $MCom: ports/x11/gdm/Makefile,v 1.64 2007/05/30 03:21:45 mezz Exp $
 #
 
 PORTNAME=	gdm
@@ -49,12 +49,6 @@ OPTIONS=	IPV6 "Enable IPv6 support" on \
 		LOG_LIMIT "Limit ~/.xsession-errors size" on
 
 .include <bsd.port.pre.mk>
-
-.if ${X_WINDOW_SYSTEM:L} != "xorg"
-PLIST_SUB+=	X11=""
-.else
-PLIST_SUB+=	X11="@comment "
-.endif
 
 .if exists(/usr/include/security/pam_misc.h)
 PLIST_SUB+=	PAM_MISC=""
