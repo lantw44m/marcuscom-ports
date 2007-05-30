@@ -26,7 +26,7 @@ MAN1=		erwin.1
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|gtkhtml-3.6|gtkhtml-3.8|g" \
-	    	${WRKSRC}/configure
+		${WRKSRC}/configure
 
 post-install:
 .if !defined(NOPORTDOCS)

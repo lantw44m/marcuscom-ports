@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml38/Makefile,v 1.102 2007/05/05 04:41:30 marcus Exp $
+#   $MCom: ports/www/gtkhtml38/Makefile,v 1.103 2007/05/19 21:36:26 marcus Exp $
 #
 
 PORTNAME=	gtkhtml3
@@ -21,6 +21,7 @@ COMMENT=	Lightweight HTML rendering/printing/editing engine
 LIB_DEPENDS=	soup-2.2.8:${PORTSDIR}/devel/libsoup
 
 NO_LATEST_LINK=	yes
+DEPRECATED=	Older API; newer applications should use www/gtkhtml3
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
