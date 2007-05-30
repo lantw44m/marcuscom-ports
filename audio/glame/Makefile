@@ -21,6 +21,7 @@ LIB_DEPENDS=	mp3lame.0:${PORTSDIR}/audio/lame \
 		vorbis.3:${PORTSDIR}/audio/libvorbis \
 		guile.15:${PORTSDIR}/lang/guile
 
+USE_XORG=	xbitmaps
 USE_XLIB=	yes
 USE_GNOME=	gnomehack gnomeprefix gnometarget libgnomeui
 USE_GCC=	3.4
@@ -30,6 +31,7 @@ USE_AUTOTOOLS=	libltdl:15 libtool:15
 USE_GMAKE=	yes
 CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}" \
 		MAKEINFO="makeinfo --no-split"
+
 INFO=		glame glame-dev
 
 CPPFLAGS=	-I${LOCALBASE}/include
