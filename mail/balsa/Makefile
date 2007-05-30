@@ -3,12 +3,12 @@
 # Whom:					Glenn Johnson <gljohns@bellsouth.net>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/balsa/Makefile,v 1.13 2007/05/12 15:57:42 marcus Exp $
+#   $MCom: ports/mail/balsa/Makefile,v 1.14 2007/05/19 21:36:13 marcus Exp $
 #
 
 PORTNAME=	balsa
 PORTVERSION=	2.3.15
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://www.theochem.kth.se/~pawsa/balsa/
 DISTNAME=	balsa-${PORTVERSION}
@@ -54,7 +54,7 @@ OPTIONS=	LDAP "Enable LDAP support" on \
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_GPG)
-LIB_DEPENDS+=		gpgme.15:${PORTSDIR}/security/gpgme
+LIB_DEPENDS+=		gpgme.17:${PORTSDIR}/security/gpgme
 CONFIGURE_ARGS+=	--with-gpgme=${LOCALBASE}/bin/gpgme-config
 .endif
 
