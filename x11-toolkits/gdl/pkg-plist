@@ -12,6 +12,7 @@ include/libgdl-1.0/gdl/gdl-dock.h
 include/libgdl-1.0/gdl/gdl-icons.h
 include/libgdl-1.0/gdl/gdl-stock-icons.h
 include/libgdl-1.0/gdl/gdl-stock.h
+include/libgdl-1.0/gdl/gdl-switcher.h
 include/libgdl-1.0/gdl/gdl-tools.h
 include/libgdl-1.0/gdl/gdl.h
 include/libgdl-1.0/gdl/libgdltypebuiltins.h
@@ -62,6 +63,8 @@ share/locale/vi/LC_MESSAGES/gdl-1.mo
 share/locale/zh_CN/LC_MESSAGES/gdl-1.mo
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
 @dirrm share/gdl/glade
 @dirrm share/gdl
 @dirrm include/libgdl-1.0/gdl
