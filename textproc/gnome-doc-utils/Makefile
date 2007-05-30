@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.44 2007/03/13 00:37:32 mezz Exp $
+#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.46 2007/04/26 15:25:06 ahze Exp $
 #
 
 PORTNAME=	gnome-doc-utils
 PORTVERSION=	0.10.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
