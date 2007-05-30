@@ -3,7 +3,7 @@
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glibmm/Makefile,v 1.39 2006/12/30 18:56:48 marcus Exp $
+#   $MCom: ports/devel/glibmm/Makefile,v 1.41 2007/05/06 04:32:51 marcus Exp $
 #
 
 PORTNAME=	glibmm
@@ -26,7 +26,7 @@ LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_GMAKE=	yes
-USE_GCC=	3.4
+USE_GCC=	3.4+
 USE_GNOME=	gnomehack gnometarget glib20
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes

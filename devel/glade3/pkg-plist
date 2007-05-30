@@ -329,12 +329,20 @@ share/gnome/help/glade/bg/legal.xml
 share/gnome/help/glade/en_GB/figures/main-window.png
 share/gnome/help/glade/en_GB/glade.xml
 share/gnome/help/glade/en_GB/legal.xml
+share/gnome/help/glade/es/figures/main-window.png
+share/gnome/help/glade/es/glade.xml
+share/gnome/help/glade/es/legal.xml
+share/gnome/help/glade/fr/figures/main-window.png
+share/gnome/help/glade/fr/glade.xml
+share/gnome/help/glade/fr/legal.xml
 share/gnome/help/glade/sv/figures/main-window.png
 share/gnome/help/glade/sv/glade.xml
 share/gnome/help/glade/sv/legal.xml
 share/omf/glade/glade-C.omf
 share/omf/glade/glade-bg.omf
 share/omf/glade/glade-en_GB.omf
+share/omf/glade/glade-es.omf
+share/omf/glade/glade-fr.omf
 share/omf/glade/glade-sv.omf
 share/icons/hicolor/16x16/apps/glade-3.png
 share/icons/hicolor/22x22/apps/glade-3.png
@@ -348,6 +356,7 @@ share/locale/bg/LC_MESSAGES/glade3.mo
 share/locale/ca/LC_MESSAGES/glade3.mo
 share/locale/da/LC_MESSAGES/glade3.mo
 share/locale/de/LC_MESSAGES/glade3.mo
+share/locale/dz/LC_MESSAGES/glade3.mo
 share/locale/el/LC_MESSAGES/glade3.mo
 share/locale/en_CA/LC_MESSAGES/glade3.mo
 share/locale/en_GB/LC_MESSAGES/glade3.mo
@@ -370,6 +379,7 @@ share/locale/pt/LC_MESSAGES/glade3.mo
 share/locale/pt_BR/LC_MESSAGES/glade3.mo
 share/locale/ru/LC_MESSAGES/glade3.mo
 share/locale/sk/LC_MESSAGES/glade3.mo
+share/locale/sq/LC_MESSAGES/glade3.mo
 share/locale/sv/LC_MESSAGES/glade3.mo
 share/locale/ta/LC_MESSAGES/glade3.mo
 share/locale/th/LC_MESSAGES/glade3.mo
@@ -382,6 +392,10 @@ share/locale/zh_TW/LC_MESSAGES/glade3.mo
 @dirrm share/omf/glade
 @dirrm share/gnome/help/glade/sv/figures
 @dirrm share/gnome/help/glade/sv
+@dirrm share/gnome/help/glade/fr/figures
+@dirrm share/gnome/help/glade/fr
+@dirrm share/gnome/help/glade/es/figures
+@dirrm share/gnome/help/glade/es
 @dirrm share/gnome/help/glade/en_GB/figures
 @dirrm share/gnome/help/glade/en_GB
 @dirrm share/gnome/help/glade/bg/figures
@@ -404,3 +418,5 @@ share/locale/zh_TW/LC_MESSAGES/glade3.mo
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
