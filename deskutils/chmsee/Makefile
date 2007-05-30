@@ -7,7 +7,7 @@
 
 PORTNAME=	chmsee
 PORTVERSION=	0.9.6
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	http://chmsee.gro.clinux.org/
 
@@ -15,7 +15,7 @@ MAINTAINER=	liu_yinghong@yahoo.com.cn
 COMMENT=	A viewer for Microsoft Help "CHM" files
 
 LIB_DEPENDS=	chm.0:${PORTSDIR}/misc/chmlib \
-    		libgtkhtml-3.8.15:${PORTSDIR}/www/gtkhtml38
+    		gtkhtml-3.8.15:${PORTSDIR}/www/gtkhtml38
 
 USE_GETTEXT=	yes
 USE_GNOME=	gtk20 libglade2 gnomeprefix gnomehack libgnome
