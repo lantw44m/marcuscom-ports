@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.91 2007/05/14 04:58:38 marcus Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.92 2007/05/19 21:36:25 marcus Exp $
 #
 
 PORTNAME=	epiphany
@@ -30,7 +30,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--with-mozilla=${GECKO}
 

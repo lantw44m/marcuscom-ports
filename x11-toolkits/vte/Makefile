@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.75 2007/04/29 21:51:54 marcus Exp $
+#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.76 2007/05/19 21:36:34 marcus Exp $
 #
 
 PORTNAME=	vte
@@ -28,8 +28,8 @@ USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GETTEXT=	yes
 USE_GNOME?=	gnomeprefix gnomehack gtk20 ltverhack referencehack
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib" \
 		BSD_PTHREAD_LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS?=--disable-python \
 		--disable-freetypetest

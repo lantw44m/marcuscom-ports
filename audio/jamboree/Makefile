@@ -3,7 +3,7 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/jamboree/Makefile,v 1.12 2007/04/30 18:11:19 ahze Exp $
+#    $MCom: ports/audio/jamboree/Makefile,v 1.13 2007/05/19 21:35:57 marcus Exp $
 
 PORTNAME=	jamboree
 PORTVERSION=	0.5
@@ -23,8 +23,8 @@ USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui libglade2
 USE_GSTREAMER80=	vorbis mad gconf
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib" \
 		GST_INSPECT="${LOCALBASE}/bin/gst-inspect-0.8"
 GCONF_SCHEMAS=	jamboree.schemas
 

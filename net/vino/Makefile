@@ -3,7 +3,7 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino/Makefile,v 1.39 2007/04/28 18:58:27 marcus Exp $
+#   $MCom: ports/net/vino/Makefile,v 1.40 2007/05/19 21:36:18 marcus Exp $
 #
 
 PORTNAME=	vino
@@ -27,7 +27,7 @@ GNOME_DESKTOP_VERSION=2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-session-support
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	vino-server.schemas

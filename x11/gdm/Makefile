@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/Makefile,v 1.62 2007/05/14 05:22:06 marcus Exp $
+#    $MCom: ports/x11/gdm/Makefile,v 1.63 2007/05/19 21:36:27 marcus Exp $
 #
 
 PORTNAME=	gdm
@@ -34,7 +34,7 @@ USE_GNOME=	gnomehack intlhack gnomehier libgnomeui librsvg2 gnomedocutils \
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--mandir=${PREFIX}/man \
 		--with-console-kit=no
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
 

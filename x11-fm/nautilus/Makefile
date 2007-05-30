@@ -3,7 +3,7 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.132 2007/05/25 20:57:05 mezz Exp $
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.133 2007/05/27 17:07:25 mezz Exp $
 #
 
 PORTNAME=	nautilus
@@ -29,8 +29,8 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop eel2 \
 GNOME_DESKTOP_VERSION=2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LIBS="${PTHREAD_LIBS} -L${LOCALBASE}/lib -L${X11BASE}/lib -liconv" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="${PTHREAD_LIBS} -L${LOCALBASE}/lib -liconv" \
 		LIBPNG="-L${LOCALBASE}/lib -lpng -lz"
 CONFIGURE_ARGS=	--with-freetype2-lib-place=${LOCALBASE}/lib \
 		--with-freetype2-include-place=${LOCALBASE}/include/freetype2 \

@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi/Makefile,v 1.59 2007/04/26 14:48:54 ahze Exp $
+#   $MCom: ports/accessibility/at-spi/Makefile,v 1.60 2007/05/19 21:35:52 marcus Exp $
 #
 
 PORTNAME=	at-spi
@@ -29,8 +29,8 @@ USE_XLIB=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-extract:
 	@${RM} -f ${WRKSRC}/registryd/Accessibility_Registry.server

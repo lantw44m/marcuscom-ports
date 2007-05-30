@@ -28,8 +28,8 @@ USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomehack gnometarget gnomevfs gnomelibs gdkpixbuf
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lintl"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="-L${LOCALBASE}/lib -lintl"
 
 pre-everything::
 .if !defined(WITH_FAM)

@@ -3,7 +3,7 @@
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
 # $FreeBSD$
-#   $MCom: ports/finance/gnucash/Makefile,v 1.17 2007/05/19 21:36:09 marcus Exp $
+#   $MCom: ports/finance/gnucash/Makefile,v 1.18 2007/05/25 00:54:34 marcus Exp $
 #
 
 PORTNAME=	gnucash
@@ -46,8 +46,8 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=--with-glib-config=${GLIB_CONFIG} \
 		--enable-ofx \
 		--disable-error-on-warning
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib -lintl"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LIBS="-L${LOCALBASE}/lib -lintl"
 
 MAN1=		gnc-prices.1 gnucash.1
 INFO=		gnucash-design

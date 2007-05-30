@@ -3,7 +3,7 @@
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/sodipodi/Makefile,v 1.1 2007/04/30 18:27:51 ahze Exp $
+#    $MCom: ports/graphics/sodipodi/Makefile,v 1.2 2007/05/19 21:36:12 marcus Exp $
 
 PORTNAME=	sodipodi
 PORTVERSION=	0.34
@@ -24,8 +24,8 @@ USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--without-gnome-print \
 		--with-popt
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/freetype2 -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/freetype2" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		sodipodi.1
 

@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/libgnomekbd/Makefile,v 1.7 2007/04/26 17:35:23 ahze Exp $
+#    $MCom: ports/x11/libgnomekbd/Makefile,v 1.8 2007/05/19 21:36:30 marcus Exp $
 #
 
 PORTNAME=	libgnomekbd
@@ -26,8 +26,8 @@ INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	desktop_gnome_peripherals_keyboard_xkb.schemas
 

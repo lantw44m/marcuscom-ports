@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.144 2007/05/14 04:42:44 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.145 2007/05/19 21:36:25 marcus Exp $
 #
 
 PORTNAME=	epiphany
@@ -34,7 +34,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 CONFIGURE_ARGS=	--with-mozilla=${GECKO} --mandir=${PREFIX}/man
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
 GCONF_SCHEMAS=	epiphany-lockdown.schemas epiphany.schemas \

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.136 2007/05/06 04:04:45 marcus Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.137 2007/05/19 21:36:22 marcus Exp $
 #
 
 PORTNAME=	gnome-control-center
@@ -33,8 +33,8 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-gstreamer=0.10
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		apps_gnome_settings_daemon_keybindings.schemas \

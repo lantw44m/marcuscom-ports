@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.75 2007/05/19 21:35:59 marcus Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.76 2007/05/29 02:52:31 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -38,8 +38,8 @@ CONFIGURE_ARGS=	--enable-nautilus-menu --with-playback=gstreamer-0-10
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	LIBS="-lm" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
-		CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include"
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		CPPFLAGS="-I${LOCALBASE}/include"
 
 GCONF_SCHEMAS=	rhythmbox.schemas
 

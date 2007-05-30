@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gnome-mag/Makefile,v 1.29 2007/04/28 17:28:01 marcus Exp $
+#   $MCom: ports/accessibility/gnome-mag/Makefile,v 1.30 2007/05/19 21:35:53 marcus Exp $
 #
 
 PORTNAME=	gnome-mag
@@ -24,8 +24,8 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 DOCSDIR=	${PREFIX}/share/doc/gnome-mag-${PORTVERSION}
 

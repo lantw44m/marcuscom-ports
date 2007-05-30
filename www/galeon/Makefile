@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/galeon/Makefile,v 1.11 2007/04/30 17:24:57 ahze Exp $
+#    $MCom: ports/www/galeon/Makefile,v 1.12 2007/05/19 21:36:25 marcus Exp $
 #
 
 PORTNAME=	galeon
@@ -29,7 +29,7 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 CONFIGURE_ARGS=	--enable-nautilus-view=no \
 		--with-mozilla=${GECKO}
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
 MAN1=		galeon.1
@@ -55,7 +55,7 @@ post-patch:
 		's|malloc\.h|stdlib.h|g'
 	@${REINPLACE_CMD} -e 's|@prefix@/@DATADIRNAME@|@datadir@|g' \
 		${WRKSRC}/ui/galeon-bookmarks-editor-ui.xml.in
-	@${REINPLACE_CMD} -e 's|/usr/lib/mozilla/plugins|${LOCALBASE}/lib/browser_plugins:${X11BASE}/lib/browser_plugins:${LOCALBASE}/lib/browser_linux_plugins:${X11BASE}/lib/browser_linux_plugins|' \
+	@${REINPLACE_CMD} -e 's|/usr/lib/mozilla/plugins|${LOCALBASE}/lib/browser_plugins:${LOCALBASE}/lib/browser_linux_plugins|' \
 		${WRKSRC}/mozilla/mozilla-embed-shell.cpp
 
 .include <bsd.port.post.mk>

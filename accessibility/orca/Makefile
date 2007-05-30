@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/orca/Makefile,v 1.20 2007/05/14 04:33:48 marcus Exp $
+#   $MCom: ports/accessibility/orca/Makefile,v 1.21 2007/05/19 21:35:53 marcus Exp $
 #
 
 PORTNAME=	orca
@@ -36,8 +36,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAN1=		orca.1
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
-	    	s|/usr/X11R6|${X11BASE}|g' \
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/src/orca/orca.in
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    	${WRKSRC}/src/orca/orca_i18n.py

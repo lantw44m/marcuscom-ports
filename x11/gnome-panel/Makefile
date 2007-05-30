@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.150 2007/05/15 22:07:03 marcus Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.151 2007/05/19 21:36:28 marcus Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -34,7 +34,7 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--with-kde-datadir=${LOCALBASE}/share \
 		--with-kde-docdir=${LOCALBASE}/share/doc
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		gnome-panel.1

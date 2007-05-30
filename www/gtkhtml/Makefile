@@ -40,7 +40,6 @@ LIB_DEPENDS+=	soup.6:${PORTSDIR}/devel/soup
 post-configure:
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g ; \
 		s|%%LOCALBASE%%|${LOCALBASE}|g ; \
-		s|%%X11BASE%%|${X11BASE}|g ; \
 		s|%%VERSION%%|${VERSION}|g' ${FILESDIR}/gtkhtmlConf.sh \
 			> ${WRKSRC}/gtkhtmlConf.sh
 

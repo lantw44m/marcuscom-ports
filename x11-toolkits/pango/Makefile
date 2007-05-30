@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.98 2007/05/20 21:57:27 marcus Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.99 2007/05/29 04:05:20 marcus Exp $
 #
 
 PORTNAME=	pango
@@ -41,8 +41,8 @@ CONFIGURE_ARGS=	--with-qt=no \
 GLIB2_CFLAGS=	`pkg-config glib-2.0 --cflags`
 PLIST_SUB=	VERSION="1.6.0"
 
-FONTSCALE=	${X11BASE}/lib/X11/fonts/TTF/luximb.ttf
-FONTENCOD=	${X11BASE}/lib/X11/fonts/encodings/encodings.dir
+FONTSCALE=	${LOCALBASE}/lib/X11/fonts/TTF/luximb.ttf
+FONTENCOD=	${LOCALBASE}/lib/X11/fonts/encodings/encodings.dir
 
 MAN1=		pango-querymodules.1
 
@@ -56,9 +56,8 @@ PLIST_SUB+=		X11="@comment "
 USE_XLIB+=		yes
 LIB_DEPENDS+=		Xft.2:${PORTSDIR}/x11-fonts/libXft
 CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
-				${GLIB2_CFLAGS} -I${LOCALBASE}/include \
-				-I${X11BASE}/include" \
-			LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+				${GLIB2_CFLAGS} -I${LOCALBASE}/include" \
+			LDFLAGS="-L${LOCALBASE}/lib"
 PLIST_SUB+=		X11=""
 .endif
 

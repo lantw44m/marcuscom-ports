@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.414 2007/03/13 01:24:54 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.415 2007/04/26 00:37:33 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -40,9 +40,9 @@ Gnome_Pre_Include=			bsd.gnome.mk
 #					  each .omf file found to track OMF registration database.
 #
 # INSTALLS_ICONS	- If your port installs Freedesktop-style icons to
-#					  ${LOCALBASE}/share/icons or ${X11BASE}/share/icons, then
-#					  you should use this macro. If the icons are not cached,
-#					  they will not be displayed.
+#					  ${LOCALBASE}/share/icons, then you should use this
+#					  macro. If the icons are not cached, they will not be
+#					  displayed.
 #
 
 # non-version specific components

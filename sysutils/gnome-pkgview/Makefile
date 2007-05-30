@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/gnome-pkgview/Makefile,v 1.4 2007/05/01 16:47:34 ahze Exp $
+#    $MCom: ports/sysutils/gnome-pkgview/Makefile,v 1.5 2007/05/19 21:36:23 marcus Exp $
 
 PORTNAME=	gnome-pkgview
 PORTVERSION=	1.0.6
@@ -26,7 +26,6 @@ GCONF_SCHEMAS=	gnome-pkgview.schemas
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-		-e 's|%%X11BASE%%|${X11BASE}|g' \
-			${WRKSRC}/src/config-path.c
+		${WRKSRC}/src/config-path.c
 
 .include <bsd.port.mk>

@@ -3,7 +3,7 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/libpurple/Makefile,v 1.17 2007/05/25 00:24:49 marcus Exp $
+#   $MCom: ports/net-im/libpurple/Makefile,v 1.18 2007/05/28 18:56:33 marcus Exp $
 #
 
 PORTNAME?=	libpurple
@@ -26,8 +26,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS?=--disable-gtkui \
 		--disable-consoleui \
 		--with-dynamic_prpls=${PRPL_MODULES}
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
-		LIBS="-L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
+		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		PTHREAD_LIB="${PTHREAD_LIBS}"
 
 .if !defined(PIDGIN_SLAVE)

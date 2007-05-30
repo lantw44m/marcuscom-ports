@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.68 2007/05/18 05:22:01 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.69 2007/05/19 21:36:11 marcus Exp $
 #
 
 PORTNAME=	evince
@@ -29,8 +29,8 @@ USE_GHOSTSCRIPT=yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui libgnomeprintui \
 		desktopfileutils gnomedocutils
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas \
 		evince-thumbnailer-ps.schemas
@@ -80,7 +80,7 @@ PLIST_SUB+=		NAUTILUS="@comment "
 CONFIGURE_ARGS+=	--disable-impress
 #.endif
 
-#.if exists(${X11BASE}/bin/djview)
+#.if exists(${LOCALBASE}/bin/djview)
 #DJVU_DIR?=	# empty
 #.else
 #DJVU_DIR?=	-nox11
