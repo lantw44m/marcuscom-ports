@@ -3,7 +3,7 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/libpurple/Makefile,v 1.18 2007/05/28 18:56:33 marcus Exp $
+#   $MCom: ports/net-im/libpurple/Makefile,v 1.19 2007/05/30 03:21:43 mezz Exp $
 #
 
 PORTNAME?=	libpurple
@@ -16,8 +16,6 @@ DISTNAME=	pidgin-${PORTVERSION}
 
 MAINTAINER?=	marcus@FreeBSD.org
 COMMENT?=	Backend library for the Pidgin multi-protocol messaging client
-
-CONFLICTS?=	ja-gaim-[0-9]* gaim-1*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
