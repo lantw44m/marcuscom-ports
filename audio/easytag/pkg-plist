@@ -17,7 +17,6 @@ share/locale/ru/LC_MESSAGES/easytag.mo
 share/locale/sv/LC_MESSAGES/easytag.mo
 share/locale/uk/LC_MESSAGES/easytag.mo
 share/pixmaps/EasyTAG.xpm
-@dirrmtry share/pixmaps
 @dirrmtry share/apps/Multimedia
 @dirrmtry share/apps
 @dirrmtry share/gnome
