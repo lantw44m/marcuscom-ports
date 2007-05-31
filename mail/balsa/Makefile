@@ -3,12 +3,12 @@
 # Whom:					Glenn Johnson <gljohns@bellsouth.net>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/balsa/Makefile,v 1.14 2007/05/19 21:36:13 marcus Exp $
+#   $MCom: ports/mail/balsa/Makefile,v 1.15 2007/05/30 17:56:32 mezz Exp $
 #
 
 PORTNAME=	balsa
-PORTVERSION=	2.3.15
-PORTREVISION=	4
+PORTVERSION=	2.3.16
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://www.theochem.kth.se/~pawsa/balsa/
 DISTNAME=	balsa-${PORTVERSION}
