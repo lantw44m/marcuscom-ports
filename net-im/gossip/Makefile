@@ -3,10 +3,10 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/gossip/Makefile,v 1.7 2007/05/19 21:36:18 marcus Exp $
+#    $MCom: ports/net-im/gossip/Makefile,v 1.8 2007/05/29 20:28:17 marcus Exp $
 
 PORTNAME=	gossip
-PORTVERSION=	0.25
+PORTVERSION=	0.26
 PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
