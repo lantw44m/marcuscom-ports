@@ -140,8 +140,6 @@ share/locale/zh_TW/LC_MESSAGES/eel-2.0.mo
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
-@dirrmtry share/locale/li/LC_MESSAGES
-@dirrmtry share/locale/li
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
 @dirrmtry share/locale/ku/LC_MESSAGES

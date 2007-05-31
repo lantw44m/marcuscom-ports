@@ -108,8 +108,6 @@ share/locale/zh_TW/LC_MESSAGES/libwnck.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mi/LC_MESSAGES
 @dirrmtry share/locale/mi
-@dirrmtry share/locale/li/LC_MESSAGES
-@dirrmtry share/locale/li
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
 @dirrmtry share/locale/ku/LC_MESSAGES

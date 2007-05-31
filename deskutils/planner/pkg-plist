@@ -255,10 +255,6 @@ share/locale/zh_CN/LC_MESSAGES/planner.mo
 share/locale/zh_TW/LC_MESSAGES/planner.mo
 share/mime/application/x-planner.xml
 share/mime/packages/planner.xml
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
 @dirrm share/planner/ui
 @dirrm share/planner/stylesheets
 @dirrm share/planner/sql
@@ -284,3 +280,7 @@ share/mime/packages/planner.xml
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz

@@ -119,18 +119,6 @@ share/locale/vi/LC_MESSAGES/fast-user-switch-applet.mo
 share/locale/zh_CN/LC_MESSAGES/fast-user-switch-applet.mo
 share/locale/zh_HK/LC_MESSAGES/fast-user-switch-applet.mo
 share/locale/zh_TW/LC_MESSAGES/fast-user-switch-applet.mo
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
-@dirrmtry share/locale/mg/LC_MESSAGES
-@dirrmtry share/locale/mg
-@dirrmtry share/locale/ku/LC_MESSAGES
-@dirrmtry share/locale/ku
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
 @dirrm share/omf/fast-user-switch-applet
 @dirrm share/gnome/help/fast-user-switch-applet/sv/figures
 @dirrm share/gnome/help/fast-user-switch-applet/sv
@@ -148,3 +136,15 @@ share/locale/zh_TW/LC_MESSAGES/fast-user-switch-applet.mo
 @dirrm share/gnome/help/fast-user-switch-applet/C
 @dirrm share/gnome/help/fast-user-switch-applet
 @dirrm share/fast-user-switch-applet
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/mg/LC_MESSAGES
+@dirrmtry share/locale/mg
+@dirrmtry share/locale/ku/LC_MESSAGES
+@dirrmtry share/locale/ku
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN

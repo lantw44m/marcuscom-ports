@@ -328,7 +328,6 @@ share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
 @dirrm lib/deskbar-applet
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/ne
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES

@@ -245,10 +245,6 @@ share/locale/vi/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/xh/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/gal-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/gal-%%VERSION%%.mo
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
-@dirrmtry share/locale/xh/LC_MESSAGES
-@dirrmtry share/locale/xh
 @dirrm share/gal-%%VERSION%%/%%PORTVERSION%%/pixmaps/categories
 @dirrm share/gal-%%VERSION%%/%%PORTVERSION%%/pixmaps
 @dirrm share/gal-%%VERSION%%/%%PORTVERSION%%/glade
@@ -265,3 +261,7 @@ share/locale/zh_TW/LC_MESSAGES/gal-%%VERSION%%.mo
 @dirrm include/gal-%%VERSION%%/gal/a11y
 @dirrm include/gal-%%VERSION%%/gal
 @dirrm include/gal-%%VERSION%%
+@dirrmtry share/locale/xh/LC_MESSAGES
+@dirrmtry share/locale/xh
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw

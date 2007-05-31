@@ -497,8 +497,6 @@ share/omf/workspace-switcher/workspace-switcher-uk.omf
 @dirrmtry share/locale/mi
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
-@dirrmtry share/locale/li/LC_MESSAGES
-@dirrmtry share/locale/li
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
 @dirrmtry share/locale/ku/LC_MESSAGES

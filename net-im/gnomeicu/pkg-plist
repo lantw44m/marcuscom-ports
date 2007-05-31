@@ -301,3 +301,7 @@ share/locale/zh_TW/LC_MESSAGES/gnomeicu.mo
 @dirrm share/gnomeicu/emoticons/AIM
 @dirrm share/gnomeicu/emoticons
 @dirrm share/gnomeicu
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw

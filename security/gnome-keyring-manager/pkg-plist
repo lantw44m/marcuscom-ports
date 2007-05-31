@@ -84,6 +84,15 @@ share/omf/gnome-keyring-manager/gnome-keyring-manager-fr.omf
 share/omf/gnome-keyring-manager/gnome-keyring-manager-sv.omf
 share/omf/gnome-keyring-manager/gnome-keyring-manager-uk.omf
 @dirrm share/omf/gnome-keyring-manager
+@dirrm share/gnome/help/gnome-keyring-manager/uk
+@dirrm share/gnome/help/gnome-keyring-manager/sv
+@dirrm share/gnome/help/gnome-keyring-manager/fr
+@dirrm share/gnome/help/gnome-keyring-manager/es
+@dirrm share/gnome/help/gnome-keyring-manager/en_GB
+@dirrm share/gnome/help/gnome-keyring-manager/da
+@dirrm share/gnome/help/gnome-keyring-manager/C
+@dirrm share/gnome/help/gnome-keyring-manager
+@dirrm %%DATADIR%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
@@ -96,12 +105,3 @@ share/omf/gnome-keyring-manager/gnome-keyring-manager-uk.omf
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrm share/gnome/help/gnome-keyring-manager/uk
-@dirrm share/gnome/help/gnome-keyring-manager/sv
-@dirrm share/gnome/help/gnome-keyring-manager/fr
-@dirrm share/gnome/help/gnome-keyring-manager/es
-@dirrm share/gnome/help/gnome-keyring-manager/en_GB
-@dirrm share/gnome/help/gnome-keyring-manager/da
-@dirrm share/gnome/help/gnome-keyring-manager/C
-@dirrm share/gnome/help/gnome-keyring-manager
-@dirrm %%DATADIR%%

@@ -550,3 +550,5 @@ share/mime/video/x-theora+ogg.xml
 @dirrmtry share/mime/application
 @unexec [ -f %D/share/mime/mime.cache ] && rm -f %D/share/mime/mime.cache || true
 @dirrmtry share/mime
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw

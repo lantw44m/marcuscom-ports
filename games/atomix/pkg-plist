@@ -123,9 +123,9 @@ share/locale/wa/LC_MESSAGES/atomix.mo
 share/locale/zh_CN/LC_MESSAGES/atomix.mo
 share/locale/zh_HK/LC_MESSAGES/atomix.mo
 share/locale/zh_TW/LC_MESSAGES/atomix.mo
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
 @dirrm share/atomix/themes/default
 @dirrm share/atomix/themes
 @dirrm share/atomix/level
 @dirrm share/atomix
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK

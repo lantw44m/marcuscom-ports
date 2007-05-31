@@ -121,8 +121,6 @@ share/locale/zh_TW/LC_MESSAGES/libgnomeprintui-2.2.mo
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
-@dirrmtry share/locale/li/LC_MESSAGES
-@dirrmtry share/locale/li
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES

@@ -456,8 +456,6 @@ share/locale/uk/LC_MESSAGES/goffice-%%VERSION%%.mo
 share/locale/vi/LC_MESSAGES/goffice-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/goffice-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/goffice-%%VERSION%%.mo
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
 @dirrm share/pixmaps/goffice/%%VERSION%%
 @dirrm share/pixmaps/goffice
 @dirrm share/goffice/%%VERSION%%/patterns
@@ -489,3 +487,5 @@ share/locale/zh_TW/LC_MESSAGES/goffice-%%VERSION%%.mo
 @dirrm include/libgoffice-0.4/goffice/app
 @dirrm include/libgoffice-0.4/goffice
 @dirrm include/libgoffice-0.4
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr

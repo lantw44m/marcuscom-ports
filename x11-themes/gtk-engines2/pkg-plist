@@ -71,3 +71,5 @@ share/themes/ThinIce/gtk-2.0/gtkrc
 @dirrm share/gtk-engines
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz

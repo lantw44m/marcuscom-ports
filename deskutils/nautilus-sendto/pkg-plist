@@ -55,11 +55,11 @@ share/locale/uk/LC_MESSAGES/nautilus-sendto.mo
 share/locale/vi/LC_MESSAGES/nautilus-sendto.mo
 share/locale/zh_CN/LC_MESSAGES/nautilus-sendto.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus-sendto.mo
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
 @dirrm share/nautilus-sendto/glade
 @dirrm share/nautilus-sendto
 @dirrm lib/nautilus-sendto/plugins
 @dirrm lib/nautilus-sendto
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz

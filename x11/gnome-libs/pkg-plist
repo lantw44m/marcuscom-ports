@@ -561,3 +561,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-libs.mo
 @dirrm include/gnome-1.0/libgnome
 @dirrm include/gnome-1.0/libart_lgpl
 @dirrm include/gnome-1.0/gtk-xmhtml
+@dirrmtry share/locale/sp/LC_MESSAGES
+@dirrmtry share/locale/sp

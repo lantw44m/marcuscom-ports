@@ -123,8 +123,6 @@ share/locale/zh_TW/LC_MESSAGES/gconf-editor.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
-@dirrmtry share/locale/li/LC_MESSAGES
-@dirrmtry share/locale/li
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES

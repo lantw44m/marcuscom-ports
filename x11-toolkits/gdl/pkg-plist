@@ -61,11 +61,11 @@ share/locale/sr@Latn/LC_MESSAGES/gdl-1.mo
 share/locale/sv/LC_MESSAGES/gdl-1.mo
 share/locale/vi/LC_MESSAGES/gdl-1.mo
 share/locale/zh_CN/LC_MESSAGES/gdl-1.mo
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
 @dirrm share/gdl/glade
 @dirrm share/gdl
 @dirrm include/libgdl-1.0/gdl
 @dirrm include/libgdl-1.0
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz

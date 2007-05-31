@@ -638,8 +638,6 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@ije/LC_MESSAGES
 @dirrmtry share/locale/sr@ije
-@dirrmtry share/locale/sk/LC_MESSAGES
-@dirrmtry share/locale/sk
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/nso/LC_MESSAGES

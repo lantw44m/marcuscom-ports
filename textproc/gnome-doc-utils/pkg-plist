@@ -167,6 +167,11 @@ share/xml2po/xhtml.pyc
 @dirrm share/xml/gnome
 @dirrm share/omf/gnome-doc-xslt
 @dirrm share/omf/gnome-doc-make
+@dirrm share/gnome/help/gnome-doc-xslt/C
+@dirrm share/gnome/help/gnome-doc-xslt
+@dirrm share/gnome/help/gnome-doc-make/C
+@dirrm share/gnome/help/gnome-doc-make
+@dirrm %%DATADIR%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
@@ -181,8 +186,3 @@ share/xml2po/xhtml.pyc
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrm share/gnome/help/gnome-doc-xslt/C
-@dirrm share/gnome/help/gnome-doc-xslt
-@dirrm share/gnome/help/gnome-doc-make/C
-@dirrm share/gnome/help/gnome-doc-make
-@dirrm %%DATADIR%%

@@ -69,15 +69,15 @@ share/locale/zh_TW/LC_MESSAGES/gnome-pim.mo
 share/mime-info/gnome-pim.keys
 share/pixmaps/gnome-calendar-conduit.png
 share/pixmaps/gnome-gnomecard.png
-@dirrmtry share/locale/kw/LC_MESSAGES
-@dirrmtry share/locale/kw
-@dirrmtry share/locale/gv/LC_MESSAGES
-@dirrmtry share/locale/gv
-@dirrmtry share/locale/gd/LC_MESSAGES
-@dirrmtry share/locale/gd
 @dirrm share/gnome/help/gnomecard/eu
 @dirrm share/gnome/help/gnomecard/C
 @dirrm share/gnome/help/gnomecard
 @dirrm share/gnome/help/gnomecal/C/images
 @dirrm share/gnome/help/gnomecal/C
 @dirrm share/gnome/help/gnomecal
+@dirrmtry share/locale/kw/LC_MESSAGES
+@dirrmtry share/locale/kw
+@dirrmtry share/locale/gv/LC_MESSAGES
+@dirrmtry share/locale/gv
+@dirrmtry share/locale/gd/LC_MESSAGES
+@dirrmtry share/locale/gd
