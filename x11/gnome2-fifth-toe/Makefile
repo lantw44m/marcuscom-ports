@@ -2,11 +2,11 @@
 # Date created:				20 September 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome2-fifth-toe/Makefile,v 1.78 2007/04/11 19:26:20 marcus Exp $
-#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.86 2007/05/19 21:36:29 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.87 2007/05/26 18:25:13 marcus Exp $
 #
 
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11 gnome
 PKGNAMESUFFIX=	-fifth-toe
 
@@ -27,10 +27,8 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan \
 		liferea:${PORTSDIR}/net/liferea \
 		gnotime:${PORTSDIR}/deskutils/gnotime \
 		rhythmbox:${PORTSDIR}/audio/rhythmbox \
-		jamboree:${PORTSDIR}/audio/jamboree \
 		${LOCALBASE}/share/pixmaps/glines/classic.png:${PORTSDIR}/games/gnome-games-extra-data \
 		nautilus-sendto:${PORTSDIR}/deskutils/nautilus-sendto \
-		goobox:${PORTSDIR}/audio/goobox \
 		inkscape:${PORTSDIR}/graphics/inkscape \
 		atomix:${PORTSDIR}/games/atomix \
 		straw:${PORTSDIR}/net/straw
