@@ -3,12 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/atk/Makefile,v 1.81 2007/04/28 22:32:10 marcus Exp $
+#   $MCom: ports/accessibility/atk/Makefile,v 1.82 2007/05/20 22:22:09 marcus Exp $
 #
 
 PORTNAME=	atk
-PORTVERSION=	1.19.1
-PORTREVISION?=	2
+PORTVERSION=	1.19.3
+PORTREVISION?=	0
 CATEGORIES=	accessibility devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -24,7 +24,7 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_GNOME=	gnomehack glib20 gnomedocutils ltverhack referencehack
+USE_GNOME=	gnomehack glib20 ltverhack referencehack
 CONFIGURE_ARGS=	--enable-static \
 		--disable-gtk-doc \
 		--with-html-dir=${PREFIX}/share/doc
