@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.416 2007/05/30 03:21:40 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.417 2007/06/05 12:39:24 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -303,7 +303,7 @@ gnomevfs2_LIB_DEPENDS=	gnomevfs-2.0:${PORTSDIR}/devel/gnome-vfs
 gnomevfs2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-vfs-2.0.pc
 gnomevfs2_USE_GNOME_IMPL=gconf2 libbonobo gnomemimedata
 
-gail_LIB_DEPENDS=	gailutil.21:${PORTSDIR}/accessibility/gail
+gail_LIB_DEPENDS=	gailutil.18:${PORTSDIR}/accessibility/gail
 gail_DETECT=		${LOCALBASE}/libdata/pkgconfig/gail.pc
 gail_USE_GNOME_IMPL=	libgnomecanvas
 
@@ -352,7 +352,7 @@ gnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-2.0.pc
 gnomedesktop_USE_GNOME_IMPL=	libgnomeui gnomedocutils
 gnomedesktop_GNOME_DESKTOP_VERSION=2
 
-libwnck_LIB_DEPENDS=	wnck-1.18:${PORTSDIR}/x11-toolkits/libwnck
+libwnck_LIB_DEPENDS=	wnck-1.21:${PORTSDIR}/x11-toolkits/libwnck
 libwnck_DETECT=		${LOCALBASE}/libdata/pkgconfig/libwnck-1.0.pc
 libwnck_USE_GNOME_IMPL=	gtk20
 
