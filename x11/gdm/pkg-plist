@@ -38,108 +38,61 @@ sbin/gdm-restart
 sbin/gdm-safe-restart
 sbin/gdm-stop
 sbin/gdmsetup
-share/applications/gdmflexiserver-xnest.desktop
-share/applications/gdmflexiserver.desktop
-share/applications/gdmphotosetup.desktop
-share/applications/gdmsetup.desktop
-share/gdm/BuiltInSessions/default.desktop
-share/gdm/defaults.conf
-share/gdm/factory-defaults.conf
-share/gdm/gdmchooser.glade
-share/gdm/gdmphotosetup.glade
-share/gdm/gdmsetup.glade
-share/gdm/themes/circles/GdmGreeterTheme.desktop
-share/gdm/themes/circles/background.svg
-share/gdm/themes/circles/circles.xml
-share/gdm/themes/circles/flower.png
-share/gdm/themes/circles/help.png
-share/gdm/themes/circles/options.png
-share/gdm/themes/circles/screenshot.png
-share/gdm/themes/happygnome-list/GdmGreeterTheme.desktop
-share/gdm/themes/happygnome-list/background.svg
-share/gdm/themes/happygnome-list/gnome-logo.svg
-share/gdm/themes/happygnome-list/happygnome.xml
-share/gdm/themes/happygnome-list/options.png
-share/gdm/themes/happygnome-list/screenshot.png
-share/gdm/themes/happygnome/GdmGreeterTheme.desktop
-share/gdm/themes/happygnome/background.svg
-share/gdm/themes/happygnome/gnome-logo.svg
-share/gdm/themes/happygnome/happygnome.xml
-share/gdm/themes/happygnome/options.png
-share/gdm/themes/happygnome/screenshot.png
+%%DATADIR%%/BuiltInSessions/default.desktop
+%%DATADIR%%/applications/gdmflexiserver-xnest.desktop
+%%DATADIR%%/applications/gdmflexiserver.desktop
+%%DATADIR%%/applications/gdmphotosetup.desktop
+%%DATADIR%%/applications/gdmsetup.desktop
+%%DATADIR%%/defaults.conf
+%%DATADIR%%/factory-defaults.conf
+%%DATADIR%%/gdmchooser.glade
+%%DATADIR%%/gdmphotosetup.glade
+%%DATADIR%%/gdmsetup.glade
+%%DATADIR%%/themes/circles/GdmGreeterTheme.desktop
+%%DATADIR%%/themes/circles/background.svg
+%%DATADIR%%/themes/circles/circles.xml
+%%DATADIR%%/themes/circles/flower.png
+%%DATADIR%%/themes/circles/help.png
+%%DATADIR%%/themes/circles/options.png
+%%DATADIR%%/themes/circles/screenshot.png
+%%DATADIR%%/themes/happygnome-list/GdmGreeterTheme.desktop
+%%DATADIR%%/themes/happygnome-list/background.svg
+%%DATADIR%%/themes/happygnome-list/gnome-logo.svg
+%%DATADIR%%/themes/happygnome-list/happygnome.xml
+%%DATADIR%%/themes/happygnome-list/options.png
+%%DATADIR%%/themes/happygnome-list/screenshot.png
+%%DATADIR%%/themes/happygnome/GdmGreeterTheme.desktop
+%%DATADIR%%/themes/happygnome/background.svg
+%%DATADIR%%/themes/happygnome/gnome-logo.svg
+%%DATADIR%%/themes/happygnome/happygnome.xml
+%%DATADIR%%/themes/happygnome/options.png
+%%DATADIR%%/themes/happygnome/screenshot.png
 share/gnome/help/gdm/C/gdm.xml
 share/gnome/help/gdm/C/legal.xml
-share/gnome/help/gdm/de/figures/gdm_window.png
 share/gnome/help/gdm/de/gdm.xml
 share/gnome/help/gdm/de/legal.xml
-share/gnome/help/gdm/es/figures/gdm_window.png
+share/gnome/help/gdm/en_GB/gdm.xml
+share/gnome/help/gdm/en_GB/legal.xml
 share/gnome/help/gdm/es/gdm.xml
 share/gnome/help/gdm/es/legal.xml
-share/gnome/help/gdm/fr/figures/gdm_window.png
 share/gnome/help/gdm/fr/gdm.xml
 share/gnome/help/gdm/fr/legal.xml
-share/gnome/help/gdm/it/figures/gdm_window.png
 share/gnome/help/gdm/it/gdm.xml
 share/gnome/help/gdm/it/legal.xml
-share/gnome/help/gdm/ja/figures/gdm_window.png
 share/gnome/help/gdm/ja/gdm.xml
 share/gnome/help/gdm/ja/legal.xml
 share/gnome/help/gdm/ko/gdm.xml
 share/gnome/help/gdm/ko/legal.xml
+share/gnome/help/gdm/sv/gdm.xml
+share/gnome/help/gdm/sv/legal.xml
 share/gnome/help/gdm/uk/gdm.xml
 share/gnome/help/gdm/uk/legal.xml
-share/gnome/help/gdm/zh_CN/figures/gdm_window.png
 share/gnome/help/gdm/zh_CN/gdm.xml
 share/gnome/help/gdm/zh_CN/legal.xml
-share/gnome/help/gdm/zh_HK/figures/gdm_window.png
 share/gnome/help/gdm/zh_HK/gdm.xml
 share/gnome/help/gdm/zh_HK/legal.xml
-share/gnome/help/gdm/zh_TW/figures/gdm_window.png
 share/gnome/help/gdm/zh_TW/gdm.xml
 share/gnome/help/gdm/zh_TW/legal.xml
-share/omf/gdm/gdm-C.omf
-share/omf/gdm/gdm-de.omf
-share/omf/gdm/gdm-es.omf
-share/omf/gdm/gdm-fr.omf
-share/omf/gdm/gdm-it.omf
-share/omf/gdm/gdm-ja.omf
-share/omf/gdm/gdm-ko.omf
-share/omf/gdm/gdm-uk.omf
-share/omf/gdm/gdm-zh_CN.omf
-share/omf/gdm/gdm-zh_HK.omf
-share/omf/gdm/gdm-zh_TW.omf
-share/pixmaps/faces/astronaut.jpg
-share/pixmaps/faces/baseball.png
-share/pixmaps/faces/butterfly.png
-share/pixmaps/faces/cat-eye.jpg
-share/pixmaps/faces/chess.jpg
-share/pixmaps/faces/coffee.jpg
-share/pixmaps/faces/dice.jpg
-share/pixmaps/faces/energy-arc.jpg
-share/pixmaps/faces/fish.jpg
-share/pixmaps/faces/flake.jpg
-share/pixmaps/faces/flower.jpg
-share/pixmaps/faces/grapes.jpg
-share/pixmaps/faces/guitar.jpg
-share/pixmaps/faces/launch.jpg
-share/pixmaps/faces/leaf.jpg
-share/pixmaps/faces/lightning.jpg
-share/pixmaps/faces/penguin.jpg
-share/pixmaps/faces/puppy.jpg
-share/pixmaps/faces/sky.jpg
-share/pixmaps/faces/soccerball.png
-share/pixmaps/faces/sunflower.jpg
-share/pixmaps/faces/sunset.jpg
-share/pixmaps/faces/tennis-ball.png
-share/pixmaps/faces/yellow-rose.jpg
-share/pixmaps/gdm-foot-logo.png
-share/pixmaps/gdm-setup.png
-share/pixmaps/gdm-xnest.png
-share/pixmaps/gdm.png
-share/pixmaps/login-photo.png
-share/pixmaps/nobody.png
-share/pixmaps/nohost.png
-share/xsessions/gnome.desktop
 share/icons/hicolor/16x16/apps/gdm-xnest.png
 share/icons/hicolor/32x32/apps/gdm-setup.png
 share/icons/hicolor/32x32/apps/gdm-xnest.png
@@ -223,35 +176,75 @@ share/locale/zh_CN/LC_MESSAGES/gdm.mo
 share/locale/zh_HK/LC_MESSAGES/gdm.mo
 share/locale/zh_TW/LC_MESSAGES/gdm.mo
 share/locale/zu/LC_MESSAGES/gdm.mo
+share/omf/gdm/gdm-C.omf
+share/omf/gdm/gdm-de.omf
+share/omf/gdm/gdm-en_GB.omf
+share/omf/gdm/gdm-es.omf
+share/omf/gdm/gdm-fr.omf
+share/omf/gdm/gdm-it.omf
+share/omf/gdm/gdm-ja.omf
+share/omf/gdm/gdm-ko.omf
+share/omf/gdm/gdm-sv.omf
+share/omf/gdm/gdm-uk.omf
+share/omf/gdm/gdm-zh_CN.omf
+share/omf/gdm/gdm-zh_HK.omf
+share/omf/gdm/gdm-zh_TW.omf
+share/pixmaps/faces/astronaut.jpg
+share/pixmaps/faces/baseball.png
+share/pixmaps/faces/butterfly.png
+share/pixmaps/faces/cat-eye.jpg
+share/pixmaps/faces/chess.jpg
+share/pixmaps/faces/coffee.jpg
+share/pixmaps/faces/dice.jpg
+share/pixmaps/faces/energy-arc.jpg
+share/pixmaps/faces/fish.jpg
+share/pixmaps/faces/flake.jpg
+share/pixmaps/faces/flower.jpg
+share/pixmaps/faces/grapes.jpg
+share/pixmaps/faces/guitar.jpg
+share/pixmaps/faces/launch.jpg
+share/pixmaps/faces/leaf.jpg
+share/pixmaps/faces/lightning.jpg
+share/pixmaps/faces/penguin.jpg
+share/pixmaps/faces/puppy.jpg
+share/pixmaps/faces/sky.jpg
+share/pixmaps/faces/soccerball.png
+share/pixmaps/faces/sunflower.jpg
+share/pixmaps/faces/sunset.jpg
+share/pixmaps/faces/tennis-ball.png
+share/pixmaps/faces/yellow-rose.jpg
+share/pixmaps/gdm-foot-logo.png
+share/pixmaps/gdm-setup.png
+share/pixmaps/gdm-xnest.png
+share/pixmaps/gdm.png
+share/pixmaps/login-photo.png
+share/pixmaps/nobody.png
+share/pixmaps/nohost.png
+share/xsessions/gnome.desktop
 @dirrm share/xsessions
 @dirrm share/pixmaps/faces
 @dirrm share/omf/gdm
-@dirrm share/gnome/help/gdm/zh_TW/figures
 @dirrm share/gnome/help/gdm/zh_TW
-@dirrm share/gnome/help/gdm/zh_HK/figures
 @dirrm share/gnome/help/gdm/zh_HK
-@dirrm share/gnome/help/gdm/zh_CN/figures
 @dirrm share/gnome/help/gdm/zh_CN
 @dirrm share/gnome/help/gdm/uk
+@dirrm share/gnome/help/gdm/sv
 @dirrm share/gnome/help/gdm/ko
-@dirrm share/gnome/help/gdm/ja/figures
 @dirrm share/gnome/help/gdm/ja
-@dirrm share/gnome/help/gdm/it/figures
 @dirrm share/gnome/help/gdm/it
-@dirrm share/gnome/help/gdm/fr/figures
 @dirrm share/gnome/help/gdm/fr
-@dirrm share/gnome/help/gdm/es/figures
 @dirrm share/gnome/help/gdm/es
-@dirrm share/gnome/help/gdm/de/figures
+@dirrm share/gnome/help/gdm/en_GB
 @dirrm share/gnome/help/gdm/de
 @dirrm share/gnome/help/gdm/C
 @dirrm share/gnome/help/gdm
-@dirrm share/gdm/themes/happygnome-list
-@dirrm share/gdm/themes/happygnome
-@dirrm share/gdm/themes/circles
-@dirrm share/gdm/themes
-@dirrm share/gdm/BuiltInSessions
-@dirrm share/gdm
+@dirrm %%DATADIR%%/themes/happygnome-list
+@dirrm %%DATADIR%%/themes/happygnome
+@dirrm %%DATADIR%%/themes/circles
+@dirrm %%DATADIR%%/themes
+@dirrm %%DATADIR%%/applications
+@dirrm %%DATADIR%%/BuiltInSessions
+@dirrm %%DATADIR%%
 @dirrm etc/gdm/modules
 @dirrm etc/gdm/Sessions
 @dirrm etc/gdm/PreSession
