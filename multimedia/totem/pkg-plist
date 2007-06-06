@@ -60,6 +60,15 @@ share/gnome/help/totem/C/totem.xml
 share/gnome/help/totem/bg/figures/totem_start_window.png
 share/gnome/help/totem/bg/legal.xml
 share/gnome/help/totem/bg/totem.xml
+share/gnome/help/totem/ca/figures/totem_next_button.png
+share/gnome/help/totem/ca/figures/totem_pause_button.png
+share/gnome/help/totem/ca/figures/totem_play_button.png
+share/gnome/help/totem/ca/figures/totem_previous_button.png
+share/gnome/help/totem/ca/figures/totem_show_playlist_button.png
+share/gnome/help/totem/ca/figures/totem_start_window.png
+share/gnome/help/totem/ca/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/ca/figures/totem_volume_mute_button.png
+share/gnome/help/totem/ca/totem.xml
 share/gnome/help/totem/de/figures/totem_next_button.png
 share/gnome/help/totem/de/figures/totem_pause_button.png
 share/gnome/help/totem/de/figures/totem_play_button.png
@@ -141,30 +150,6 @@ share/gnome/help/totem/uk/figures/totem_start_window.png
 share/gnome/help/totem/uk/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/uk/figures/totem_volume_mute_button.png
 share/gnome/help/totem/uk/totem.xml
-share/omf/totem/totem-C.omf
-share/omf/totem/totem-bg.omf
-share/omf/totem/totem-de.omf
-share/omf/totem/totem-en_GB.omf
-share/omf/totem/totem-es.omf
-share/omf/totem/totem-fr.omf
-share/omf/totem/totem-pa.omf
-share/omf/totem/totem-pt_BR.omf
-share/omf/totem/totem-ru.omf
-share/omf/totem/totem-sv.omf
-share/omf/totem/totem-uk.omf
-share/totem/filmholes-big-left.png
-share/totem/filmholes-big-right.png
-share/totem/filmholes.png
-share/totem/mozilla-viewer.glade
-share/totem/playlist-ui.xml
-share/totem/playlist.glade
-share/totem/plugins.glade
-share/totem/properties.glade
-share/totem/stock-tool-brightness-contrast-22.png
-share/totem/totem-ui.xml
-share/totem/totem.glade
-share/totem/totem_logo.png
-share/totem/uri.glade
 share/icons/hicolor/16x16/apps/totem.png
 share/icons/hicolor/22x22/apps/totem.png
 share/icons/hicolor/24x24/apps/totem.png
@@ -205,11 +190,11 @@ share/locale/id/LC_MESSAGES/totem.mo
 share/locale/is/LC_MESSAGES/totem.mo
 share/locale/it/LC_MESSAGES/totem.mo
 share/locale/ja/LC_MESSAGES/totem.mo
+share/locale/ka/LC_MESSAGES/totem.mo
 share/locale/ko/LC_MESSAGES/totem.mo
 share/locale/ku/LC_MESSAGES/totem.mo
 share/locale/lt/LC_MESSAGES/totem.mo
 share/locale/lv/LC_MESSAGES/totem.mo
-share/locale/ka/LC_MESSAGES/totem.mo
 share/locale/mg/LC_MESSAGES/totem.mo
 share/locale/mk/LC_MESSAGES/totem.mo
 share/locale/ml/LC_MESSAGES/totem.mo
@@ -246,7 +231,32 @@ share/locale/xh/LC_MESSAGES/totem.mo
 share/locale/zh_CN/LC_MESSAGES/totem.mo
 share/locale/zh_HK/LC_MESSAGES/totem.mo
 share/locale/zh_TW/LC_MESSAGES/totem.mo
-@dirrm share/totem
+share/omf/totem/totem-C.omf
+share/omf/totem/totem-bg.omf
+share/omf/totem/totem-ca.omf
+share/omf/totem/totem-de.omf
+share/omf/totem/totem-en_GB.omf
+share/omf/totem/totem-es.omf
+share/omf/totem/totem-fr.omf
+share/omf/totem/totem-pa.omf
+share/omf/totem/totem-pt_BR.omf
+share/omf/totem/totem-ru.omf
+share/omf/totem/totem-sv.omf
+share/omf/totem/totem-uk.omf
+%%DATADIR%%/filmholes-big-left.png
+%%DATADIR%%/filmholes-big-right.png
+%%DATADIR%%/filmholes.png
+%%DATADIR%%/mozilla-viewer.glade
+%%DATADIR%%/playlist-ui.xml
+%%DATADIR%%/playlist.glade
+%%DATADIR%%/plugins.glade
+%%DATADIR%%/properties.glade
+%%DATADIR%%/stock-tool-brightness-contrast-22.png
+%%DATADIR%%/totem-ui.xml
+%%DATADIR%%/totem.glade
+%%DATADIR%%/totem_logo.png
+%%DATADIR%%/uri.glade
+@dirrm %%DATADIR%%
 @dirrm share/omf/totem
 @dirrm share/gnome/help/totem/uk/figures
 @dirrm share/gnome/help/totem/uk
@@ -260,25 +270,27 @@ share/locale/zh_TW/LC_MESSAGES/totem.mo
 @dirrm share/gnome/help/totem/pa
 @dirrm share/gnome/help/totem/fr/figures
 @dirrm share/gnome/help/totem/fr
-@dirrm share/gnome/help/totem/en_GB/figures
-@dirrm share/gnome/help/totem/en_GB
 @dirrm share/gnome/help/totem/es/figures
 @dirrm share/gnome/help/totem/es
+@dirrm share/gnome/help/totem/en_GB/figures
+@dirrm share/gnome/help/totem/en_GB
 @dirrm share/gnome/help/totem/de/figures
 @dirrm share/gnome/help/totem/de
+@dirrm share/gnome/help/totem/ca/figures
+@dirrm share/gnome/help/totem/ca
 @dirrm share/gnome/help/totem/bg/figures
 @dirrm share/gnome/help/totem/bg
 @dirrm share/gnome/help/totem/C/figures
 @dirrm share/gnome/help/totem/C
 @dirrm share/gnome/help/totem
-%%GALAGO%%@dirrm lib/totem/plugins/galago
-@dirrm lib/totem/plugins/gromit
-%%LIRC%%@dirrm lib/totem/plugins/lirc
-@dirrm lib/totem/plugins/media-player-keys
-@dirrm lib/totem/plugins/ontop
-@dirrm lib/totem/plugins/properties
-@dirrm lib/totem/plugins/screensaver
 @dirrm lib/totem/plugins/skipto
+@dirrm lib/totem/plugins/screensaver
+@dirrm lib/totem/plugins/properties
+@dirrm lib/totem/plugins/ontop
+@dirrm lib/totem/plugins/media-player-keys
+%%LIRC%%@dirrm lib/totem/plugins/lirc
+@dirrm lib/totem/plugins/gromit
+%%GALAGO%%@dirrm lib/totem/plugins/galago
 @dirrm lib/totem/plugins
 @dirrm lib/totem
 @dirrmtry lib/browser_plugins
