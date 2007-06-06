@@ -3,12 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi/Makefile,v 1.60 2007/05/19 21:35:52 marcus Exp $
+#   $MCom: ports/accessibility/at-spi/Makefile,v 1.61 2007/05/30 03:21:40 mezz Exp $
 #
 
 PORTNAME=	at-spi
-PORTVERSION=	1.19.1
-PORTREVISION?=	2
+PORTVERSION=	1.19.3
+PORTREVISION?=	0
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -26,6 +26,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomehier intltool gail libbonobo \
 		intlhack
 USE_XLIB=	yes
+USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static
