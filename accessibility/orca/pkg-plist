@@ -196,9 +196,6 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.pyo
-%%PYTHON_SITELIBDIR%%/orca/scripts/users-admin.py
-%%PYTHON_SITELIBDIR%%/orca/scripts/users-admin.pyc
-%%PYTHON_SITELIBDIR%%/orca/scripts/users-admin.pyo
 %%PYTHON_SITELIBDIR%%/orca/settings.py
 %%PYTHON_SITELIBDIR%%/orca/settings.pyc
 %%PYTHON_SITELIBDIR%%/orca/settings.pyo
@@ -218,10 +215,6 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.pyc
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.pyo
 share/applications/orca.desktop
-share/orca/glade/orca-find.glade
-share/orca/glade/orca-mainwin.glade
-share/orca/glade/orca-quit.glade
-share/orca/glade/orca-setup.glade
 share/icons/hicolor/48x48/apps/orca.png
 share/locale/ar/LC_MESSAGES/orca.mo
 share/locale/bg/LC_MESSAGES/orca.mo
@@ -256,6 +249,7 @@ share/locale/mr/LC_MESSAGES/orca.mo
 share/locale/nb/LC_MESSAGES/orca.mo
 share/locale/ne/LC_MESSAGES/orca.mo
 share/locale/nl/LC_MESSAGES/orca.mo
+share/locale/oc/LC_MESSAGES/orca.mo
 share/locale/or/LC_MESSAGES/orca.mo
 share/locale/pa/LC_MESSAGES/orca.mo
 share/locale/pl/LC_MESSAGES/orca.mo
@@ -275,14 +269,20 @@ share/locale/vi/LC_MESSAGES/orca.mo
 share/locale/zh_CN/LC_MESSAGES/orca.mo
 share/locale/zh_HK/LC_MESSAGES/orca.mo
 share/locale/zh_TW/LC_MESSAGES/orca.mo
-@dirrm share/orca/glade
-@dirrm share/orca
+%%DATADIR%%/glade/orca-find.glade
+%%DATADIR%%/glade/orca-mainwin.glade
+%%DATADIR%%/glade/orca-quit.glade
+%%DATADIR%%/glade/orca-setup.glade
+@dirrm %%DATADIR%%/glade
+@dirrm %%DATADIR%%
 @dirrm %%PYTHON_SITELIBDIR%%/orca/scripts
 @dirrm %%PYTHON_SITELIBDIR%%/orca
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/dz/LC_MESSAGES
