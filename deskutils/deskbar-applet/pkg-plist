@@ -217,26 +217,25 @@ lib/deskbar-applet/handlers/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/updater/__init__.pyo
 libdata/bonobo/servers/Deskbar_Applet.server
 libdata/pkgconfig/deskbar-applet.pc
-share/deskbar-applet/Deskbar_Applet.xml
-share/deskbar-applet/art/delicious.png
-share/deskbar-applet/art/deskbar-applet-panel-h.png
-share/deskbar-applet/art/deskbar-applet-panel-h.svg
-share/deskbar-applet/art/deskbar-applet-panel-v.png
-share/deskbar-applet/art/deskbar-applet-panel-v.svg
-share/deskbar-applet/art/epiphany-history.png
-share/deskbar-applet/art/folder-bookmark.png
-share/deskbar-applet/art/generic.png
-share/deskbar-applet/art/google.png
-share/deskbar-applet/art/gpm-suspend-to-disk.png
-share/deskbar-applet/art/gpm-suspend-to-ram.png
-share/deskbar-applet/art/yahoo.png
-share/deskbar-applet/mozilla-search.glade
-share/deskbar-applet/prefs-dialog.glade
-share/deskbar-applet/smart-bookmarks.glade
+%%DATADIR%%/Deskbar_Applet.xml
+%%DATADIR%%/art/delicious.png
+%%DATADIR%%/art/deskbar-applet-panel-h.png
+%%DATADIR%%/art/deskbar-applet-panel-h.svg
+%%DATADIR%%/art/deskbar-applet-panel-v.png
+%%DATADIR%%/art/deskbar-applet-panel-v.svg
+%%DATADIR%%/art/epiphany-history.png
+%%DATADIR%%/art/folder-bookmark.png
+%%DATADIR%%/art/generic.png
+%%DATADIR%%/art/google.png
+%%DATADIR%%/art/gpm-suspend-to-disk.png
+%%DATADIR%%/art/gpm-suspend-to-ram.png
+%%DATADIR%%/art/yahoo.png
+%%DATADIR%%/mozilla-search.glade
+%%DATADIR%%/prefs-dialog.glade
+%%DATADIR%%/smart-bookmarks.glade
 share/gnome/help/deskbar/C/deskbar.xml
 share/gnome/help/deskbar/C/figures/deskbar-applet.png
 share/gnome/help/deskbar/C/legal.xml
-share/omf/deskbar/deskbar-C.omf
 share/icons/hicolor/16x16/apps/deskbar-applet.png
 share/icons/hicolor/22x22/apps/deskbar-applet.png
 share/icons/hicolor/32x32/apps/deskbar-applet.png
@@ -283,6 +282,7 @@ share/locale/mr/LC_MESSAGES/deskbar-applet.mo
 share/locale/nb/LC_MESSAGES/deskbar-applet.mo
 share/locale/ne/LC_MESSAGES/deskbar-applet.mo
 share/locale/nl/LC_MESSAGES/deskbar-applet.mo
+share/locale/oc/LC_MESSAGES/deskbar-applet.mo
 share/locale/or/LC_MESSAGES/deskbar-applet.mo
 share/locale/pa/LC_MESSAGES/deskbar-applet.mo
 share/locale/pl/LC_MESSAGES/deskbar-applet.mo
@@ -304,12 +304,13 @@ share/locale/vi/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_CN/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
+share/omf/deskbar/deskbar-C.omf
 @dirrm share/omf/deskbar
 @dirrm share/gnome/help/deskbar/C/figures
 @dirrm share/gnome/help/deskbar/C
 @dirrm share/gnome/help/deskbar
-@dirrm share/deskbar-applet/art
-@dirrm share/deskbar-applet
+@dirrm %%DATADIR%%/art
+@dirrm %%DATADIR%%
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/updater
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/window
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui/entriac
@@ -322,12 +323,12 @@ share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/gdmclient
 %%EVO%%@dirrm %%PYTHON_SITELIBDIR%%/deskbar/evolution
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar
-@dirrmtry %%PYTHON_SITELIBDIR%%
-@dirrmtry %%PYTHON_LIBDIR%%
 @dirrm lib/deskbar-applet/handlers
 @dirrm lib/deskbar-applet
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
