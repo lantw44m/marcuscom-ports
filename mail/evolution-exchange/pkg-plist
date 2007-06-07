@@ -63,18 +63,18 @@ libexec/evolution/%%EVO_VERSION%%/evolution-exchange-storage
 %%OLDDOCSDIR%%/ximian-connector.devhelp
 %%OLDDOCSDIR%%/ximian-connector.devhelp2
 %%OLDDOCSDIR%%/ximian-connnector-booking.html
-share/evolution-exchange/%%VERSION%%/glade/exchange-autoconfig-wizard.glade
-share/evolution-exchange/%%VERSION%%/glade/exchange-change-password.glade
-share/evolution-exchange/%%VERSION%%/glade/exchange-delegates.glade
-share/evolution-exchange/%%VERSION%%/glade/exchange-folder-tree.glade
-share/evolution-exchange/%%VERSION%%/glade/exchange-oof.glade
-share/evolution-exchange/%%VERSION%%/glade/exchange-passwd-expiry.glade
-share/evolution-exchange/%%VERSION%%/glade/exchange-permissions-dialog.glade
-share/evolution-exchange/%%VERSION%%/images/connector-mini.png
-share/evolution-exchange/%%VERSION%%/images/connector.png
-share/evolution-exchange/%%VERSION%%/images/exchange-delegates-48.png
-share/evolution-exchange/%%VERSION%%/images/exchange-oof-48.png
-share/evolution-exchange/%%VERSION%%/ui/ximian-connector.xml
+%%DATADIR%%/%%VERSION%%/glade/exchange-autoconfig-wizard.glade
+%%DATADIR%%/%%VERSION%%/glade/exchange-change-password.glade
+%%DATADIR%%/%%VERSION%%/glade/exchange-delegates.glade
+%%DATADIR%%/%%VERSION%%/glade/exchange-folder-tree.glade
+%%DATADIR%%/%%VERSION%%/glade/exchange-oof.glade
+%%DATADIR%%/%%VERSION%%/glade/exchange-passwd-expiry.glade
+%%DATADIR%%/%%VERSION%%/glade/exchange-permissions-dialog.glade
+%%DATADIR%%/%%VERSION%%/images/connector-mini.png
+%%DATADIR%%/%%VERSION%%/images/connector.png
+%%DATADIR%%/%%VERSION%%/images/exchange-delegates-48.png
+%%DATADIR%%/%%VERSION%%/images/exchange-oof-48.png
+%%DATADIR%%/%%VERSION%%/ui/ximian-connector.xml
 share/locale/ar/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
@@ -138,11 +138,11 @@ share/locale/xh/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/zh_HK/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
-@dirrm share/evolution-exchange/%%VERSION%%/ui
-@dirrm share/evolution-exchange/%%VERSION%%/images
-@dirrm share/evolution-exchange/%%VERSION%%/glade
-@dirrm share/evolution-exchange/%%VERSION%%
-@dirrm share/evolution-exchange
+@dirrm %%DATADIR%%/%%VERSION%%/ui
+@dirrm %%DATADIR%%/%%VERSION%%/images
+@dirrm %%DATADIR%%/%%VERSION%%/glade
+@dirrm %%DATADIR%%/%%VERSION%%
+@dirrm %%DATADIR%%
 @dirrm %%OLDDOCSDIR%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
