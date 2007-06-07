@@ -3,6 +3,10 @@ share/gnome-games/same-gnome/themes/2.10/glass.png
 share/gnome-games/same-gnome/themes/2.10/marbles.png
 share/gnome-games/same-gnome/themes/2.10/matrix.png
 share/gnome-games/same-gnome/themes/2.10/rotate.svg
+share/gnome-games-common/cards/bellot.svg
+share/gnome-games-common/cards/dondorf.svg
+share/gnome-games-common/cards/ornamental.svg
+share/gnome-games-common/cards/paris.svg
 share/pixmaps/glines/classic.png
 share/pixmaps/glines/dots.png
 share/pixmaps/glines/gumball.png
@@ -10,10 +14,6 @@ share/pixmaps/glines/pulse.png
 share/pixmaps/gnobots2/cows.png
 share/pixmaps/gnobots2/eggs.png
 share/pixmaps/gnobots2/mice.png
-share/pixmaps/gnome-games-common/cards/bellot.svg
-share/pixmaps/gnome-games-common/cards/dondorf.svg
-share/pixmaps/gnome-games-common/cards/ornamental.svg
-share/pixmaps/gnome-games-common/cards/paris.svg
 share/pixmaps/gnometris/5blocks-tig.png
 share/pixmaps/gnometris/5blocks-tim.png
 share/pixmaps/gnometris/5blocks.png
