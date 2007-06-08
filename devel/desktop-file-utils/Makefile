@@ -3,12 +3,11 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/desktop-file-utils/Makefile,v 1.5 2007/04/28 07:59:02 marcus Exp $
+#   $MCom: ports/devel/desktop-file-utils/Makefile,v 1.6 2007/05/20 22:09:13 marcus Exp $
 #
 
 PORTNAME=		desktop-file-utils
-PORTVERSION=		0.12
-PORTREVISION=		2
+PORTVERSION=		0.13
 CATEGORIES=		devel
 MASTER_SITES=		http://freedesktop.org/software/${PORTNAME}/releases/
 
