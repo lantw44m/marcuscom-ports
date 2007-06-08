@@ -21,9 +21,9 @@ include/eog/eog/eog-transform.h
 include/eog/eog/eog-window.h
 libdata/pkgconfig/eog.pc
 share/applications/eog.desktop
-share/eog/eog-toolbar.xml
-share/eog/eog-ui.xml
-share/eog/eog.glade
+%%DATADIR%%/eog-toolbar.xml
+%%DATADIR%%/eog-ui.xml
+%%DATADIR%%/eog.glade
 share/gnome/help/eog/C/eog.xml
 share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
@@ -73,22 +73,6 @@ share/gnome/help/eog/zh_CN/legal.xml
 share/gnome/help/eog/zh_TW/eog.xml
 share/gnome/help/eog/zh_TW/figures/eog_start_window.png
 share/gnome/help/eog/zh_TW/legal.xml
-share/omf/eog/eog-C.omf
-share/omf/eog/eog-de.omf
-share/omf/eog/eog-en_GB.omf
-share/omf/eog/eog-es.omf
-share/omf/eog/eog-eu.omf
-share/omf/eog/eog-fr.omf
-share/omf/eog/eog-it.omf
-share/omf/eog/eog-ja.omf
-share/omf/eog/eog-ko.omf
-share/omf/eog/eog-pa.omf
-share/omf/eog/eog-pt_BR.omf
-share/omf/eog/eog-ru.omf
-share/omf/eog/eog-sv.omf
-share/omf/eog/eog-uk.omf
-share/omf/eog/eog-zh_CN.omf
-share/omf/eog/eog-zh_TW.omf
 share/icons/hicolor/16x16/actions/eog-plugin.png
 share/icons/hicolor/16x16/apps/eog.png
 share/icons/hicolor/22x22/actions/eog-plugin.png
@@ -177,6 +161,22 @@ share/locale/zh_CN/LC_MESSAGES/eog.mo
 share/locale/zh_HK/LC_MESSAGES/eog.mo
 share/locale/zh_TW/LC_MESSAGES/eog.mo
 share/locale/zu/LC_MESSAGES/eog.mo
+share/omf/eog/eog-C.omf
+share/omf/eog/eog-de.omf
+share/omf/eog/eog-en_GB.omf
+share/omf/eog/eog-es.omf
+share/omf/eog/eog-eu.omf
+share/omf/eog/eog-fr.omf
+share/omf/eog/eog-it.omf
+share/omf/eog/eog-ja.omf
+share/omf/eog/eog-ko.omf
+share/omf/eog/eog-pa.omf
+share/omf/eog/eog-pt_BR.omf
+share/omf/eog/eog-ru.omf
+share/omf/eog/eog-sv.omf
+share/omf/eog/eog-uk.omf
+share/omf/eog/eog-zh_CN.omf
+share/omf/eog/eog-zh_TW.omf
 @dirrm share/omf/eog
 @dirrm share/gnome/help/eog/zh_TW/figures
 @dirrm share/gnome/help/eog/zh_TW
@@ -211,7 +211,7 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @dirrm share/gnome/help/eog/C/figures
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
-@dirrm share/eog
+@dirrm %%DATADIR%%
 @dirrm include/eog/eog
 @dirrm include/eog
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
