@@ -102,8 +102,8 @@ share/desktop-directories/theme-method.directory
 %%DATADIR%%/pixmaps/double-click-maybe.png
 %%DATADIR%%/pixmaps/double-click-off.png
 %%DATADIR%%/pixmaps/double-click-on.png
-%%ABOUTME%%s%%DATADIR%%/pixmaps/gnome-about-me-lock-open.png
-%%ABOUTME%%s%%DATADIR%%/pixmaps/gnome-about-me-lock.png
+%%ABOUTME%%%%DATADIR%%/pixmaps/gnome-about-me-lock-open.png
+%%ABOUTME%%%%DATADIR%%/pixmaps/gnome-about-me-lock.png
 %%DATADIR%%/pixmaps/keyboard-bell.png
 %%DATADIR%%/pixmaps/keyboard-cursor.png
 %%DATADIR%%/pixmaps/keyboard-repeat.png
