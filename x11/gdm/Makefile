@@ -3,11 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.66 2007/06/04 17:09:11 mezz Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.67 2007/06/06 17:42:19 mezz Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.19.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -75,6 +76,9 @@ post-patch:
 .endif
 	@${REINPLACE_CMD} -e 's|root:root|root:wheel|g' \
 		${WRKSRC}/config/Makefile.in
+	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
+		${WRKSRC}/configure ${WRKSRC}/po/*.po ${WRKSRC}/gui/*.glade \
+		${WRKSRC}/daemon/*.c ${WRKSRC}/docs/*/*.*
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
