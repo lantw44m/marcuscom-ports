@@ -69,6 +69,8 @@ include/gtk-2.0/gtk/gtkbbox.h
 include/gtk-2.0/gtk/gtkbin.h
 include/gtk-2.0/gtk/gtkbindings.h
 include/gtk-2.0/gtk/gtkbox.h
+include/gtk-2.0/gtk/gtkbuildable.h
+include/gtk-2.0/gtk/gtkbuilder.h
 include/gtk-2.0/gtk/gtkbutton.h
 include/gtk-2.0/gtk/gtkcalendar.h
 include/gtk-2.0/gtk/gtkcelleditable.h
@@ -371,11 +373,13 @@ share/gtk-2.0/demo/apple-red.png
 share/gtk-2.0/demo/appwindow.c
 share/gtk-2.0/demo/assistant.c
 share/gtk-2.0/demo/background.jpg
+share/gtk-2.0/demo/builder.c
 share/gtk-2.0/demo/button_box.c
 share/gtk-2.0/demo/changedisplay.c
 share/gtk-2.0/demo/clipboard.c
 share/gtk-2.0/demo/colorsel.c
 share/gtk-2.0/demo/combobox.c
+share/gtk-2.0/demo/demo.ui
 share/gtk-2.0/demo/dialog.c
 share/gtk-2.0/demo/drawingarea.c
 share/gtk-2.0/demo/editable_cells.c
