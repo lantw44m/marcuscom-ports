@@ -3,12 +3,12 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/libpurple/Makefile,v 1.19 2007/05/30 03:21:43 mezz Exp $
+#   $MCom: ports/net-im/libpurple/Makefile,v 1.20 2007/05/30 18:35:53 mezz Exp $
 #
 
 PORTNAME?=	libpurple
-PORTVERSION=	2.0.1
-PORTREVISION?=	1
+PORTVERSION=	2.0.2
+PORTREVISION?=	2
 CATEGORIES?=	net-im
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	pidgin
@@ -49,8 +49,8 @@ MAN1=		pidgin.1 finch.1
 PRPL_MODULES=	gg,irc,jabber,msn,novell,oscar,qq,simple,yahoo,zephyr
 
 OPTIONS=	SILC "Secure Internet Live Conferencing support" off \
-		GNUTLS "GNUTLS encryption support" off \
-		NSS "Mozilla NSS encryption support" on \
+		GNUTLS "GNUTLS encryption support" on \
+		NSS "Mozilla NSS encryption support" off \
 		SASL "Cyrus SASL support (for jabberd)" off \
 		DBUS "Enable DBUS bindings" on \
 		PERL "Perl scripting" off \
@@ -101,14 +101,14 @@ CONFIGURE_ARGS+=--disable-cap
 PLIST_SUB+=	CAP="@comment not installed: "
 .endif
 
-.if defined(WITH_GNUTLS)
+.if !defined(WITHOUT_GNUTLS)
 LIB_DEPENDS+=		gnutls:${PORTSDIR}/security/gnutls
 CONFIGURE_ARGS+=	--enable-gnutls=yes
 .else
 CONFIGURE_ARGS+=	--enable-gnutls=no
 .endif
 
-.if !defined(WITHOUT_NSS)
+.if defined(WITH_NSS)
 LIB_DEPENDS+=		nss3:${PORTSDIR}/security/nss
 CONFIGURE_ARGS+=	--enable-nss=yes \
 			--with-nspr-includes=${LOCALBASE}/include/nspr \
