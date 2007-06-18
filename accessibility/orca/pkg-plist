@@ -172,6 +172,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-system-monitor.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-system-monitor.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-system-monitor.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-terminal.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-terminal.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-terminal.pyo
