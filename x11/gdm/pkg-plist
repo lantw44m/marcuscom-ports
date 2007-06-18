@@ -69,30 +69,12 @@ sbin/gdmsetup
 %%DATADIR%%/themes/happygnome/screenshot.png
 share/gnome/help/gdm/C/gdm.xml
 share/gnome/help/gdm/C/legal.xml
-share/gnome/help/gdm/de/gdm.xml
-share/gnome/help/gdm/de/legal.xml
 share/gnome/help/gdm/en_GB/gdm.xml
-share/gnome/help/gdm/en_GB/legal.xml
 share/gnome/help/gdm/es/gdm.xml
-share/gnome/help/gdm/es/legal.xml
 share/gnome/help/gdm/fr/gdm.xml
-share/gnome/help/gdm/fr/legal.xml
-share/gnome/help/gdm/it/gdm.xml
-share/gnome/help/gdm/it/legal.xml
-share/gnome/help/gdm/ja/gdm.xml
-share/gnome/help/gdm/ja/legal.xml
 share/gnome/help/gdm/ko/gdm.xml
-share/gnome/help/gdm/ko/legal.xml
 share/gnome/help/gdm/sv/gdm.xml
-share/gnome/help/gdm/sv/legal.xml
 share/gnome/help/gdm/uk/gdm.xml
-share/gnome/help/gdm/uk/legal.xml
-share/gnome/help/gdm/zh_CN/gdm.xml
-share/gnome/help/gdm/zh_CN/legal.xml
-share/gnome/help/gdm/zh_HK/gdm.xml
-share/gnome/help/gdm/zh_HK/legal.xml
-share/gnome/help/gdm/zh_TW/gdm.xml
-share/gnome/help/gdm/zh_TW/legal.xml
 share/icons/hicolor/16x16/apps/gdm-xnest.png
 share/icons/hicolor/32x32/apps/gdm-setup.png
 share/icons/hicolor/32x32/apps/gdm-xnest.png
@@ -177,18 +159,12 @@ share/locale/zh_HK/LC_MESSAGES/gdm.mo
 share/locale/zh_TW/LC_MESSAGES/gdm.mo
 share/locale/zu/LC_MESSAGES/gdm.mo
 share/omf/gdm/gdm-C.omf
-share/omf/gdm/gdm-de.omf
 share/omf/gdm/gdm-en_GB.omf
 share/omf/gdm/gdm-es.omf
 share/omf/gdm/gdm-fr.omf
-share/omf/gdm/gdm-it.omf
-share/omf/gdm/gdm-ja.omf
 share/omf/gdm/gdm-ko.omf
 share/omf/gdm/gdm-sv.omf
 share/omf/gdm/gdm-uk.omf
-share/omf/gdm/gdm-zh_CN.omf
-share/omf/gdm/gdm-zh_HK.omf
-share/omf/gdm/gdm-zh_TW.omf
 share/pixmaps/faces/astronaut.jpg
 share/pixmaps/faces/baseball.png
 share/pixmaps/faces/butterfly.png
@@ -224,18 +200,12 @@ share/xsessions/gnome.desktop
 @dirrm share/xsessions
 @dirrm share/pixmaps/faces
 @dirrm share/omf/gdm
-@dirrm share/gnome/help/gdm/zh_TW
-@dirrm share/gnome/help/gdm/zh_HK
-@dirrm share/gnome/help/gdm/zh_CN
 @dirrm share/gnome/help/gdm/uk
 @dirrm share/gnome/help/gdm/sv
 @dirrm share/gnome/help/gdm/ko
-@dirrm share/gnome/help/gdm/ja
-@dirrm share/gnome/help/gdm/it
 @dirrm share/gnome/help/gdm/fr
 @dirrm share/gnome/help/gdm/es
 @dirrm share/gnome/help/gdm/en_GB
-@dirrm share/gnome/help/gdm/de
 @dirrm share/gnome/help/gdm/C
 @dirrm share/gnome/help/gdm
 @dirrm %%DATADIR%%/themes/happygnome-list
