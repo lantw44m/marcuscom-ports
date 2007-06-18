@@ -28,33 +28,6 @@
  }
  
  typedef struct
-@@ -261,7 +261,7 @@ gtk_builder_get_parameters (GtkBuilder  
-       if (!pspec)
-         {
-           g_warning ("Unknown property: %s.%s\n",
--                     g_typename (object_type), prop->name);
-+                     g_type_name (object_type), prop->name);
-           continue;
-         }
- 
-@@ -303,7 +303,7 @@ gtk_builder_get_parameters (GtkBuilder  
-       else if (!gtk_builder_value_from_string (pspec, prop->data, &parameter.value))
-         {
-           g_warning ("failed to set property %s.%s to %s",
--                     g_typename (object_type), prop->name, prop->data);
-+                     g_type_name (object_type), prop->name, prop->data);
-           continue;
-         }
- 
-@@ -537,7 +537,7 @@ apply_delayed_properties (const gchar *w
-       pspec = g_object_class_find_property (G_OBJECT_CLASS (oclass),
-                                             property->name);
-       if (!pspec)
--        g_warning ("Unknown property: %s.%s\n", g_typename (object_type),
-+        g_warning ("Unknown property: %s.%s\n", g_type_name (object_type),
-                    property->name);
-       else
-         {
 @@ -1238,23 +1238,23 @@ _gtk_builder_flags_from_string (GType ty
  /**
   * gtk_builder_get_type_from_name:
