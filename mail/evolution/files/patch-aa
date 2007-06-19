@@ -1,5 +1,5 @@
---- configure.orig	Tue May 15 12:53:11 2007
-+++ configure	Tue May 15 13:03:33 2007
+--- configure.orig	Tue Jun 19 00:18:59 2007
++++ configure	Tue Jun 19 00:25:55 2007
 @@ -24959,6 +24959,15 @@ case "$host" in
      SOFTOKN3_LIB=''
      HAL_REQUIREMENT=''
@@ -24,16 +24,16 @@
  
  		#define BUFSIZE (sizeof(struct hostent)+10)
  
-@@ -30865,7 +30875,7 @@ if test "x${with_krb5}" != "xno"; then
+@@ -30930,7 +30940,7 @@ if test "x${with_krb5}" != "xno"; then
  	LDFLAGS_save="$LDFLAGS"
  
  	mitlibs="-lkrb5 -lk5crypto -lcom_err -lgssapi_krb5"
 -	heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi"
 +	heimlibs="-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi -lcrypt"
+ 	sunlibs="-lkrb5 -lgss"
  	{ echo "$as_me:$LINENO: checking for Kerberos 5" >&5
  echo $ECHO_N "checking for Kerberos 5... $ECHO_C" >&6; }
- if test "${ac_cv_lib_kerberos5+set}" = set; then
-@@ -37245,7 +37255,7 @@ componentdir="$privlibdir/components"
+@@ -37393,7 +37403,7 @@ componentdir="$privlibdir/components"
  idldir='${datadir}'/idl/evolution-$BASE_VERSION
  
  

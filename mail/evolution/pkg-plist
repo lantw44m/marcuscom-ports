@@ -101,7 +101,6 @@ include/evolution-%%VERSION%%/misc/e-cell-date-edit.h
 include/evolution-%%VERSION%%/misc/e-cell-percent.h
 include/evolution-%%VERSION%%/misc/e-cell-renderer-combo.h
 include/evolution-%%VERSION%%/misc/e-charset-picker.h
-include/evolution-%%VERSION%%/misc/e-clipped-label.h
 include/evolution-%%VERSION%%/misc/e-colors.h
 include/evolution-%%VERSION%%/misc/e-combo-button.h
 include/evolution-%%VERSION%%/misc/e-combo-cell-editable.h
@@ -430,6 +429,7 @@ share/evolution/%%VERSION%%/default/lt/mail/local/Inbox
 share/evolution/%%VERSION%%/default/mk/mail/local/Inbox
 share/evolution/%%VERSION%%/default/nl/mail/local/Inbox
 share/evolution/%%VERSION%%/default/pt/mail/local/Inbox
+share/evolution/%%VERSION%%/default/sv/mail/local/Inbox
 share/evolution/%%VERSION%%/default/zh_CN/mail/local/Inbox
 share/evolution/%%VERSION%%/ecps/medbook.ecps
 share/evolution/%%VERSION%%/ecps/phonelist.ecps
@@ -513,6 +513,8 @@ share/evolution/%%VERSION%%/glade/task-page.glade
 share/evolution/%%VERSION%%/help/quickref/C/quickref.pdf
 share/evolution/%%VERSION%%/help/quickref/de/quickref.pdf
 share/evolution/%%VERSION%%/help/quickref/es/quickref.pdf
+share/evolution/%%VERSION%%/help/quickref/pt/quickref.pdf
+share/evolution/%%VERSION%%/help/quickref/sq/quickref.pdf
 share/evolution/%%VERSION%%/help/quickref/sv/quickref.pdf
 share/evolution/%%VERSION%%/images/evolution-contacts-mini.png
 share/evolution/%%VERSION%%/images/minus.png
@@ -1271,6 +1273,8 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/evolution/%%VERSION%%/ui
 @dirrm share/evolution/%%VERSION%%/images
 @dirrm share/evolution/%%VERSION%%/help/quickref/sv
+@dirrm share/evolution/%%VERSION%%/help/quickref/sq
+@dirrm share/evolution/%%VERSION%%/help/quickref/pt
 @dirrm share/evolution/%%VERSION%%/help/quickref/es
 @dirrm share/evolution/%%VERSION%%/help/quickref/de
 @dirrm share/evolution/%%VERSION%%/help/quickref/C
@@ -1283,6 +1287,9 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrm share/evolution/%%VERSION%%/default/zh_CN/mail/local
 @dirrm share/evolution/%%VERSION%%/default/zh_CN/mail
 @dirrm share/evolution/%%VERSION%%/default/zh_CN
+@dirrm share/evolution/%%VERSION%%/default/sv/mail/local
+@dirrm share/evolution/%%VERSION%%/default/sv/mail
+@dirrm share/evolution/%%VERSION%%/default/sv
 @dirrm share/evolution/%%VERSION%%/default/pt/mail/local
 @dirrm share/evolution/%%VERSION%%/default/pt/mail
 @dirrm share/evolution/%%VERSION%%/default/pt
