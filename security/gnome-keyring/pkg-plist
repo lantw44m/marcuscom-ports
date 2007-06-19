@@ -1,11 +1,14 @@
 bin/gnome-keyring-daemon
+include/gnome-keyring-1/gnome-keyring-memory.h
 include/gnome-keyring-1/gnome-keyring.h
+lib/libgnome-keyring.a
 lib/libgnome-keyring.la
 lib/libgnome-keyring.so
 lib/libgnome-keyring.so.0
 libdata/pkgconfig/gnome-keyring-1.pc
 libexec/gnome-keyring-ask
 %%DOCSDIR%%/ch01.html
+%%DOCSDIR%%/gnome-keyring-gnome-keyring-memory.html
 %%DOCSDIR%%/gnome-keyring-gnome-keyring.html
 %%DOCSDIR%%/gnome-keyring.devhelp
 %%DOCSDIR%%/gnome-keyring.devhelp2
@@ -61,6 +64,7 @@ share/locale/ms/LC_MESSAGES/gnome-keyring.mo
 share/locale/nb/LC_MESSAGES/gnome-keyring.mo
 share/locale/ne/LC_MESSAGES/gnome-keyring.mo
 share/locale/nl/LC_MESSAGES/gnome-keyring.mo
+share/locale/oc/LC_MESSAGES/gnome-keyring.mo
 share/locale/or/LC_MESSAGES/gnome-keyring.mo
 share/locale/pa/LC_MESSAGES/gnome-keyring.mo
 share/locale/pl/LC_MESSAGES/gnome-keyring.mo
@@ -92,6 +96,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
