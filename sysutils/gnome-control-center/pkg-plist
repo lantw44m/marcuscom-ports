@@ -60,6 +60,7 @@ share/applications/gnome-font-viewer.desktop
 share/applications/gnome-network-preferences.desktop
 share/applications/gnome-settings-mouse.desktop
 share/applications/gnome-settings-sound.desktop
+share/applications/gnome-theme-installer.desktop
 share/applications/gnomecc.desktop
 share/applications/keybinding.desktop
 share/applications/keyboard.desktop
