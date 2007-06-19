@@ -296,6 +296,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/radiomenuitem_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/radiotoolbutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/range_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/rc_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/recentaction_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/recentchooser_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/recentchooserdialog_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/recentchoosermenu_p.h
@@ -305,6 +306,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/recentinfo_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/recentmanager_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/ruler_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/scale_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/scalebutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/scrollbar_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/scrolledwindow_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/selectiondata_p.h
@@ -352,6 +354,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/treeview_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/treeviewcolumn_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/uimanager_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/viewport_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/volumebutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/widget_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/window_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/progressbar.h
@@ -362,6 +365,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/radiomenuitem.h
 include/gtkmm-%%API_VERSION%%/gtkmm/radiotoolbutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/range.h
 include/gtkmm-%%API_VERSION%%/gtkmm/rc.h
+include/gtkmm-%%API_VERSION%%/gtkmm/recentaction.h
 include/gtkmm-%%API_VERSION%%/gtkmm/recentchooser.h
 include/gtkmm-%%API_VERSION%%/gtkmm/recentchooserdialog.h
 include/gtkmm-%%API_VERSION%%/gtkmm/recentchoosermenu.h
@@ -371,6 +375,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/recentinfo.h
 include/gtkmm-%%API_VERSION%%/gtkmm/recentmanager.h
 include/gtkmm-%%API_VERSION%%/gtkmm/ruler.h
 include/gtkmm-%%API_VERSION%%/gtkmm/scale.h
+include/gtkmm-%%API_VERSION%%/gtkmm/scalebutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/scrollbar.h
 include/gtkmm-%%API_VERSION%%/gtkmm/scrolledwindow.h
 include/gtkmm-%%API_VERSION%%/gtkmm/selectiondata.h
@@ -424,6 +429,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/treeview_private.h
 include/gtkmm-%%API_VERSION%%/gtkmm/treeviewcolumn.h
 include/gtkmm-%%API_VERSION%%/gtkmm/uimanager.h
 include/gtkmm-%%API_VERSION%%/gtkmm/viewport.h
+include/gtkmm-%%API_VERSION%%/gtkmm/volumebutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/widget.h
 include/gtkmm-%%API_VERSION%%/gtkmm/window.h
 include/gtkmm-%%API_VERSION%%/gtkmm/wrap_init.h
