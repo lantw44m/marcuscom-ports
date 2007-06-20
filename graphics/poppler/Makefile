@@ -3,7 +3,7 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.30 2006/09/30 04:55:20 ahze Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.32 2007/06/20 13:33:13 ahze Exp $
 #
 
 PORTNAME=	poppler
@@ -23,7 +23,8 @@ USE_GNOME=	gnomehack gnometarget
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-zlib \
 		--enable-xpdf-headers \
-		--with-html-dir=${DOCSDIR}
+		--with-html-dir=${DOCSDIR} \
+		--mandir=${PREFIX}/man
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/freetype2 -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib ${PTHREAD_LIBS}"
 
