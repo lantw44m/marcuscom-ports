@@ -18,12 +18,12 @@ lib/gtk-2.0/%%GTK2_VERSION%%/engines/libthinice.la
 lib/gtk-2.0/%%GTK2_VERSION%%/engines/libthinice.so
 libdata/pkgconfig/gtk-engines-2.pc
 share/gtk-engines/clearlooks.xml
-share/gtk-engines/crux.xml
+share/gtk-engines/crux-engine.xml
 share/gtk-engines/glide.xml
-share/gtk-engines/hc.xml
+share/gtk-engines/hcengine.xml
 share/gtk-engines/industrial.xml
 share/gtk-engines/mist.xml
-share/gtk-engines/redmond.xml
+share/gtk-engines/redmond95.xml
 share/gtk-engines/smooth.xml
 share/gtk-engines/thinice.xml
 share/locale/ar/LC_MESSAGES/gtk-engines.mo
@@ -49,6 +49,7 @@ share/locale/or/LC_MESSAGES/gtk-engines.mo
 share/locale/pa/LC_MESSAGES/gtk-engines.mo
 share/locale/pt/LC_MESSAGES/gtk-engines.mo
 share/locale/pt_BR/LC_MESSAGES/gtk-engines.mo
+share/locale/sq/LC_MESSAGES/gtk-engines.mo
 share/locale/sv/LC_MESSAGES/gtk-engines.mo
 share/locale/uk/LC_MESSAGES/gtk-engines.mo
 share/themes/Clearlooks/gtk-2.0/gtkrc
