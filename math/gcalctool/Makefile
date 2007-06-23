@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool/Makefile,v 1.71 2007/06/05 13:48:59 ahze Exp $
+#   $MCom: ports/math/gcalctool/Makefile,v 1.72 2007/06/19 03:07:55 marcus Exp $
 #
 
 PORTNAME=	gcalctool
 PORTVERSION=	5.19.4
+PORTREVISION=	1
 PORTEPOCH=	2
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -24,7 +25,7 @@ USE_GETTEXT=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomedocutils
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gnomedocutils
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
