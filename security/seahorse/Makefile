@@ -3,12 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.35 2007/05/18 15:57:47 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.36 2007/05/19 21:36:21 marcus Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	2.19.2
-PORTREVISION=	2
+PORTVERSION=	2.19.4
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -115,6 +114,10 @@ LIB_DEPENDS+=	avahi-client:${PORTSDIR}/net/avahi
 .else
 CONFIGURE_ARGS+=--disable-sharing
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|" == "|" = "|g' \
+		${WRKSRC}/configure
 
 post-install:
 	-@update-desktop-database
