@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.419 2007/06/05 20:39:26 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.420 2007/06/07 03:17:14 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -59,13 +59,13 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
 _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gail \
 		gal2 gconf2 glib20 gnomecontrolcenter2 gnomedesktop gnomedocutils \
 		gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk20 \
-		gtkhtml3 gtksharp10 gtksharp20 gtksourceview libartlgpl2 libbonobo \
-		libbonoboui libgailgnome libgda2 libgda3 libglade2 libgnome \
-		libgnomecanvas libgnomedb libgnomeprint libgnomeprintui \
-		libgnomeui libgsf libgsf_gnome libgtkhtml libidl librsvg2 libwnck \
-		libxml2 libxslt libzvt linc metacity nautilus2 nautiluscdburner \
-		orbit2 pango pygnome2 pygnomeextras pygtk2 vte pygnomedesktop \
-		libgnomekbd
+		gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 \
+		libartlgpl2 libbonobo libbonoboui libgailgnome libgda2 libgda3 \
+		libglade2 libgnome libgnomecanvas libgnomedb libgnomekbd libgnomeprint \
+		libgnomeprintui libgnomeui libgsf libgsf_gnome libgtkhtml libidl \
+		librsvg2 libwnck libxml2 libxslt libzvt linc metacity nautilus2 \
+		nautiluscdburner orbit2 pango pygnome2 pygnomedesktop pygnomeextras \
+		pygtk2 vte
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
@@ -410,6 +410,10 @@ libgnomedb_USE_GNOME_IMPL=libgnomeui libgda3
 gtksourceview_LIB_DEPENDS=	gtksourceview-1.0.0:${PORTSDIR}/x11-toolkits/gtksourceview
 gtksourceview_DETECT=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-1.0.pc
 gtksourceview_USE_GNOME_IMPL=libgnome libgnomeprintui
+
+gtksourceview2_LIB_DEPENDS=	gtksourceview-2.0.0:${PORTSDIR}/x11-toolkits/gtksourceview2
+gtksourceview2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-2.0.pc
+gtksourceview2_USE_GNOME_IMPL=gtk20 libxml2
 
 pkgconfig_DETECT=			${LOCALBASE}/bin/pkg-config
 pkgconfig_BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkg-config
