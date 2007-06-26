@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.420 2007/06/07 03:17:14 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.421 2007/06/25 20:59:00 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -65,7 +65,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gail \
 		libgnomeprintui libgnomeui libgsf libgsf_gnome libgtkhtml libidl \
 		librsvg2 libwnck libxml2 libxslt libzvt linc metacity nautilus2 \
 		nautiluscdburner orbit2 pango pygnome2 pygnomedesktop pygnomeextras \
-		pygtk2 vte
+		pygtk2 pygtksourceview vte
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/scrollkeeper
@@ -505,6 +505,11 @@ gnomesharp20_USE_GNOME_IMPL=	gnomepanel gtkhtml3 gtksharp20 librsvg2 vte
 libgnomekbd_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
 libgnomekbd_LIB_DEPENDS=	gnomekbd.1:${PORTSDIR}/x11/libgnomekbd
 libgnomekbd_USE_GNOME_IMPL=	libgnomeui
+
+pygtksourceview_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygtksourceview-2.0.pc
+pygtksourceview_BUILD_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkits/py-gtksourceview
+pygtksourceview_RUN_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkits/py-gtksourceview
+pygtksourceview_USE_GNOME_IMPL=	gtksourceview2 pygtk2
 
 ########
 #### NOTE: DO NOT COMMIT THIS NEXT PART TO THE MAIN FREEBSD REPO
