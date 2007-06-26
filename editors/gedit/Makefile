@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.60 2007/04/28 17:23:08 marcus Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.61 2007/05/19 21:36:07 marcus Exp $
 #
 
 PORTNAME=	gedit
-PORTVERSION=	2.18.1
-PORTREVISION=	2
+PORTVERSION=	2.19.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -29,7 +28,7 @@ USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack \
-		libgnomeprintui libgnomeui eel2 gtksourceview desktopfileutils
+		libgnomeprintui libgnomeui eel2 gtksourceview2 desktopfileutils
 WANT_GNOME=	yes
 CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
@@ -46,10 +45,10 @@ WITH_GNOME=	yes
 
 .include <bsd.port.pre.mk>
 
-.if ${HAVE_GNOME:Mpygnomedesktop}!=""
+.if ${HAVE_GNOME:Mpygtksourceview}!=""
 USE_PYTHON=	yes
 .include "${PORTSDIR}/Mk/bsd.python.mk"
-USE_GNOME+=	pygnomedesktop
+USE_GNOME+=	pygtksourceview
 CONFIGURE_ARGS+=--enable-python
 PLIST_SUB+=	PYTHON=""
 .else

@@ -15,8 +15,6 @@ include/gedit-%%VERSION%%/gedit/gedit-panel.h
 include/gedit-%%VERSION%%/gedit/gedit-plugin.h
 include/gedit-%%VERSION%%/gedit/gedit-prefs-manager-app.h
 include/gedit-%%VERSION%%/gedit/gedit-prefs-manager.h
-include/gedit-%%VERSION%%/gedit/gedit-print-job-preview.h
-include/gedit-%%VERSION%%/gedit/gedit-print.h
 include/gedit-%%VERSION%%/gedit/gedit-progress-message-area.h
 include/gedit-%%VERSION%%/gedit/gedit-statusbar.h
 include/gedit-%%VERSION%%/gedit/gedit-tab.h
@@ -117,6 +115,7 @@ lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
 libdata/pkgconfig/gedit-%%VERSION%%.pc
+share/applications/gedit.desktop
 %%DOCSDIR%%/GeditApp.html
 %%DOCSDIR%%/GeditDocument.html
 %%DOCSDIR%%/GeditEncodingsOptionMenu.html
@@ -150,7 +149,6 @@ libdata/pkgconfig/gedit-%%VERSION%%.pc
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
-share/applications/gedit.desktop
 share/gedit-2/glade/docinfo.glade2
 share/gedit-2/glade/gedit-encodings-dialog.glade
 share/gedit-2/glade/gedit-open-location-dialog.glade
@@ -306,22 +304,6 @@ share/gnome/help/gedit/zh_TW/figures/gedit_recent_files_menu_icon.png
 share/gnome/help/gedit/zh_TW/figures/gedit_window.png
 share/gnome/help/gedit/zh_TW/gedit.xml
 share/gnome/help/gedit/zh_TW/legal.xml
-share/omf/gedit/gedit-C.omf
-share/omf/gedit/gedit-bg.omf
-share/omf/gedit/gedit-de.omf
-share/omf/gedit/gedit-es.omf
-share/omf/gedit/gedit-eu.omf
-share/omf/gedit/gedit-fr.omf
-share/omf/gedit/gedit-it.omf
-share/omf/gedit/gedit-ja.omf
-share/omf/gedit/gedit-ko.omf
-share/omf/gedit/gedit-ro.omf
-share/omf/gedit/gedit-ru.omf
-share/omf/gedit/gedit-sv.omf
-share/omf/gedit/gedit-uk.omf
-share/omf/gedit/gedit-zh_CN.omf
-share/omf/gedit/gedit-zh_HK.omf
-share/omf/gedit/gedit-zh_TW.omf
 share/locale/af/LC_MESSAGES/gedit.mo
 share/locale/am/LC_MESSAGES/gedit.mo
 share/locale/ar/LC_MESSAGES/gedit.mo
@@ -376,6 +358,7 @@ share/locale/nb/LC_MESSAGES/gedit.mo
 share/locale/ne/LC_MESSAGES/gedit.mo
 share/locale/nl/LC_MESSAGES/gedit.mo
 share/locale/nn/LC_MESSAGES/gedit.mo
+share/locale/oc/LC_MESSAGES/gedit.mo
 share/locale/or/LC_MESSAGES/gedit.mo
 share/locale/pa/LC_MESSAGES/gedit.mo
 share/locale/pl/LC_MESSAGES/gedit.mo
@@ -384,6 +367,7 @@ share/locale/pt_BR/LC_MESSAGES/gedit.mo
 share/locale/ro/LC_MESSAGES/gedit.mo
 share/locale/ru/LC_MESSAGES/gedit.mo
 share/locale/rw/LC_MESSAGES/gedit.mo
+share/locale/si/LC_MESSAGES/gedit.mo
 share/locale/sk/LC_MESSAGES/gedit.mo
 share/locale/sl/LC_MESSAGES/gedit.mo
 share/locale/sq/LC_MESSAGES/gedit.mo
@@ -402,6 +386,22 @@ share/locale/xh/LC_MESSAGES/gedit.mo
 share/locale/zh_CN/LC_MESSAGES/gedit.mo
 share/locale/zh_HK/LC_MESSAGES/gedit.mo
 share/locale/zh_TW/LC_MESSAGES/gedit.mo
+share/omf/gedit/gedit-C.omf
+share/omf/gedit/gedit-bg.omf
+share/omf/gedit/gedit-de.omf
+share/omf/gedit/gedit-es.omf
+share/omf/gedit/gedit-eu.omf
+share/omf/gedit/gedit-fr.omf
+share/omf/gedit/gedit-it.omf
+share/omf/gedit/gedit-ja.omf
+share/omf/gedit/gedit-ko.omf
+share/omf/gedit/gedit-ro.omf
+share/omf/gedit/gedit-ru.omf
+share/omf/gedit/gedit-sv.omf
+share/omf/gedit/gedit-uk.omf
+share/omf/gedit/gedit-zh_CN.omf
+share/omf/gedit/gedit-zh_HK.omf
+share/omf/gedit/gedit-zh_TW.omf
 @dirrm share/omf/gedit
 @dirrm share/gnome/help/gedit/zh_TW/figures
 @dirrm share/gnome/help/gedit/zh_TW
@@ -450,8 +450,8 @@ share/locale/zh_TW/LC_MESSAGES/gedit.mo
 %%PYTHON%%@dirrm lib/gedit-2/plugins/snippets
 %%PYTHON%%@dirrm lib/gedit-2/plugins/pythonconsole
 %%PYTHON%%@dirrm lib/gedit-2/plugins/externaltools
-@dirrm lib/gedit-2/plugins
-@dirrm lib/gedit-2
+@dirrmtry lib/gedit-2/plugins
+@dirrmtry lib/gedit-2
 @dirrm include/gedit-%%VERSION%%/gedit
 @dirrm include/gedit-%%VERSION%%
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
@@ -462,8 +462,12 @@ share/locale/zh_TW/LC_MESSAGES/gedit.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mi/LC_MESSAGES
