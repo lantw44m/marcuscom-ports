@@ -1,5 +1,5 @@
---- sysdeps/freebsd/procopenfiles.c.orig	2007-05-13 06:02:49.000000000 -0400
-+++ sysdeps/freebsd/procopenfiles.c	2007-06-26 18:04:13.000000000 -0400
+--- sysdeps/freebsd/procopenfiles.c.orig	2007-04-26 18:27:37.000000000 -0400
++++ sysdeps/freebsd/procopenfiles.c	2007-06-27 15:00:31.000000000 -0400
 @@ -1,5 +1,6 @@
  /* Copyright (C) 1998-99 Martin Baulig
     Copyright (C) 2004 Nicolás Lichtmaier
@@ -20,7 +20,7 @@
  
  static const unsigned long _glibtop_sysdeps_proc_open_files =
  (1L << GLIBTOP_PROC_OPEN_FILES_NUMBER)|
-@@ -42,10 +46,133 @@ _glibtop_init_proc_open_files_s (glibtop
+@@ -42,10 +46,139 @@ _glibtop_init_proc_open_files_s (glibtop
  	server->sysdeps.proc_open_files = _glibtop_sysdeps_proc_open_files;
  }
  
@@ -79,6 +79,11 @@
 +		} else if (!strcmp(ftype, "VREG") ||
 +			   !strcmp(ftype, "GDIR") ||
 +			   !strcmp(ftype, "GREG") ||
++			   !strcmp(ftype, "VCHR") ||
++			   !strcmp(ftype, "VBLK") ||
++			   !strcmp(ftype, "DIR")  ||
++			   !strcmp(ftype, "LINK") ||
++			   !strcmp(ftype, "REG")  ||
 +			   !strcmp(ftype, "VDIR")) {
 +			entry.type = GLIBTOP_FILE_TYPE_FILE;
 +			g_strlcpy(entry.info.file.name, fname,
@@ -116,7 +121,8 @@
 +			entry.info.sock.dest_port = atoi(remote_host[1]);
 +
 +			g_strfreev(remote_host);
-+		}
++		} else
++			continue;
 +
 +		entry.fd = fd;
 +
