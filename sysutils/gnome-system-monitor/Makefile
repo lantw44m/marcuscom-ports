@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.101 2007/06/10 18:42:17 marcus Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.102 2007/06/27 18:34:47 marcus Exp $
 #
 
 PORTNAME=	gnome-system-monitor
@@ -26,7 +26,6 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_XLIB=	yes
-USE_GCC=	4.0+
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack libwnck gnomevfs2 gnomedocutils
