@@ -1,46 +1,36 @@
 bin/gtranslator
 bin/pozilla.sh
 share/applications/gtranslator.desktop
-share/gtranslator/colorschemes/arek.xml
-share/gtranslator/colorschemes/boom-boom.xml
-share/gtranslator/colorschemes/clean.xml
-share/gtranslator/colorschemes/curlymonster.xml
-share/gtranslator/colorschemes/default.xml
-share/gtranslator/colorschemes/extremely-kabalak.xml
-share/gtranslator/colorschemes/kabalak.xml
-share/gtranslator/colorschemes/kbabel.xml
-share/gtranslator/colorschemes/menesis.xml
-share/gtranslator/colorschemes/mmc.xml
-share/gtranslator/colorschemes/nizuu.xml
-share/gtranslator/colorschemes/pdmc.xml
-share/gtranslator/colorschemes/sepia.xml
-share/gtranslator/colorschemes/spiffE.xml
-share/gtranslator/colorschemes/thinice.xml
-share/gtranslator/colorschemes/toyfactory.xml
-share/gtranslator/colorschemes/tuey.xml
-share/gtranslator/colorschemes/vim.xml
-share/gtranslator/colorschemes/waliays.xml
-share/gtranslator/colorschemes/yef.xml
-share/gtranslator/colorschemes/zuper.xml
-share/gtranslator/dtd/umtf.dtd
-share/gtranslator/scripts/build-gtranslator-learn-buffer.sh
-share/gtranslator/scripts/cleanup-gtranslator-settings.sh
-share/gtranslator/scripts/my-update.sh
 share/gnome/help/gtranslator/C/figures/mainwindow.png
 share/gnome/help/gtranslator/C/figures/prefs.png
 share/gnome/help/gtranslator/C/figures/toolbar.png
 share/gnome/help/gtranslator/C/gtranslator.xml
 share/gnome/help/gtranslator/C/legal.xml
-share/gnome/mime-info/gtranslator.keys
-share/gnome/mime-info/gtranslator.mime
-share/gnome/omf/gtranslator/gtranslator-C.omf
-share/pixmaps/gnome-application-x-gmo.png
-share/pixmaps/gnome-application-x-po.png
-share/pixmaps/gtranslator.png
-share/pixmaps/gtranslator/fuzzy.png
-share/pixmaps/gtranslator/fuzzy_small.png
-share/pixmaps/gtranslator/untranslated.png
-share/pixmaps/gtranslator/untranslated_small.png
+%%DATADIR%%/colorschemes/arek.xml
+%%DATADIR%%/colorschemes/boom-boom.xml
+%%DATADIR%%/colorschemes/clean.xml
+%%DATADIR%%/colorschemes/curlymonster.xml
+%%DATADIR%%/colorschemes/default.xml
+%%DATADIR%%/colorschemes/extremely-kabalak.xml
+%%DATADIR%%/colorschemes/kabalak.xml
+%%DATADIR%%/colorschemes/kbabel.xml
+%%DATADIR%%/colorschemes/menesis.xml
+%%DATADIR%%/colorschemes/mmc.xml
+%%DATADIR%%/colorschemes/nizuu.xml
+%%DATADIR%%/colorschemes/pdmc.xml
+%%DATADIR%%/colorschemes/sepia.xml
+%%DATADIR%%/colorschemes/spiffE.xml
+%%DATADIR%%/colorschemes/thinice.xml
+%%DATADIR%%/colorschemes/toyfactory.xml
+%%DATADIR%%/colorschemes/tuey.xml
+%%DATADIR%%/colorschemes/vim.xml
+%%DATADIR%%/colorschemes/waliays.xml
+%%DATADIR%%/colorschemes/yef.xml
+%%DATADIR%%/colorschemes/zuper.xml
+%%DATADIR%%/dtd/umtf.dtd
+%%DATADIR%%/scripts/build-gtranslator-learn-buffer.sh
+%%DATADIR%%/scripts/cleanup-gtranslator-settings.sh
+%%DATADIR%%/scripts/my-update.sh
 share/locale/am/LC_MESSAGES/gtranslator.mo
 share/locale/az/LC_MESSAGES/gtranslator.mo
 share/locale/be/LC_MESSAGES/gtranslator.mo
@@ -92,12 +82,22 @@ share/locale/vi/LC_MESSAGES/gtranslator.mo
 share/locale/wa/LC_MESSAGES/gtranslator.mo
 share/locale/zh_CN/LC_MESSAGES/gtranslator.mo
 share/locale/zh_TW/LC_MESSAGES/gtranslator.mo
+share/mime-info/gtranslator.keys
+share/mime-info/gtranslator.mime
+share/omf/gtranslator/gtranslator-C.omf
+share/pixmaps/gnome-application-x-gmo.png
+share/pixmaps/gnome-application-x-po.png
+share/pixmaps/gtranslator.png
+share/pixmaps/gtranslator/fuzzy.png
+share/pixmaps/gtranslator/fuzzy_small.png
+share/pixmaps/gtranslator/untranslated.png
+share/pixmaps/gtranslator/untranslated_small.png
 @dirrm share/pixmaps/gtranslator
-@dirrm share/gnome/omf/gtranslator
+@dirrm share/omf/gtranslator
+@dirrm %%DATADIR%%/scripts
+@dirrm %%DATADIR%%/dtd
+@dirrm %%DATADIR%%/colorschemes
+@dirrm %%DATADIR%%
 @dirrm share/gnome/help/gtranslator/C/figures
 @dirrm share/gnome/help/gtranslator/C
 @dirrm share/gnome/help/gtranslator
-@dirrm share/gtranslator/scripts
-@dirrm share/gtranslator/dtd
-@dirrm share/gtranslator/colorschemes
-@dirrm share/gtranslator

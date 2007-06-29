@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gtranslator/Makefile,v 1.9 2007/05/01 12:47:22 ahze Exp $
+#   $MCom$
+#
 
 PORTNAME=	gtranslator
 PORTVERSION=	1.1.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -34,9 +35,5 @@ MAN1=		gtranslator.1 pozilla.sh.1
 
 post-patch:
 		@${REINPLACE_CMD} -e "s|-Werror||" ${WRKSRC}/src/Makefile.in
-		@${REINPLACE_CMD} -e 's|$$(datadir)/omf|$$(datadir)/gnome/omf|' \
-			${WRKSRC}/help/C/Makefile.in ${WRKSRC}/omf.make
-		@${REINPLACE_CMD} -e 's|$$(datadir)/mime-info|$$(datadir)/gnome/mime-info|' \
-			${WRKSRC}/data/mime/Makefile.in
 
 .include <bsd.port.mk>
