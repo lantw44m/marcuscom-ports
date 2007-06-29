@@ -3,12 +3,12 @@
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
 # $FreeBSD$
-#   $MCom: ports/finance/gnucash/Makefile,v 1.19 2007/05/30 03:21:42 mezz Exp $
+#   $MCom: ports/finance/gnucash/Makefile,v 1.20 2007/05/30 17:15:56 mezz Exp $
 #
 
 PORTNAME=	gnucash
 PORTVERSION=	2.0.5
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	finance gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.gnucash.org/pub/gnucash/sources/stable/
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	guile>=1.6.8_2:${PORTSDIR}/lang/guile
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
 		ofx.3:${PORTSDIR}/finance/libofx \
 		gwrap-core-runtime.0:${PORTSDIR}/devel/g-wrap \
-    		gtkhtml-3.8.15:${PORTSDIR}/www/gtkhtml38
+		gtkhtml-3.8.15:${PORTSDIR}/www/gtkhtml38
 RUN_DEPENDS=	guile>=1.6.8_2:${PORTSDIR}/lang/guile \
 		${LOCALBASE}/share/guile/1.6/slibcat:${PORTSDIR}/lang/slib-guile \
 		${SITE_PERL}/LWP.pm:${PORTSDIR}/www/p5-libwww \
@@ -72,7 +72,7 @@ GCONF_SCHEMAS=	apps_gnucash_dialog_business_common.schemas \
 # WITH_OPENHBCI is old synonym for aqbanking option
 .if defined(WITH_AQBANKING) || defined(WITH_OPENHBCI)
 LIB_DEPENDS+=	aqbanking.5:${PORTSDIR}/finance/aqbanking \
-		ktoblzcheck.4:${PORTSDIR}/finance/ktoblzcheck
+		ktoblzcheck.5:${PORTSDIR}/finance/ktoblzcheck
 CONFIGURE_ARGS+=--enable-hbci
 PLIST_SUB=	AQBANKING=""
 .else
