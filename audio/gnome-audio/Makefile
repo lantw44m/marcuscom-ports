@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-audio/Makefile,v 1.3 2006/07/22 19:49:20 mezz Exp $
+#   $MCom: ports/audio/gnome-audio/Makefile,v 1.5 2007/04/26 17:57:34 ahze Exp $
 #
 
 PORTNAME=	gnome-audio
 PORTVERSION=	2.0.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-audio/2.0
