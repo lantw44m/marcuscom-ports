@@ -1,6 +1,6 @@
---- sysdeps/freebsd/procwd.c.orig	2007-06-26 00:49:06.000000000 -0400
-+++ sysdeps/freebsd/procwd.c	2007-06-27 13:57:10.000000000 -0400
-@@ -0,0 +1,122 @@
+--- sysdeps/freebsd/procwd.c.orig	2007-06-30 12:37:18.000000000 -0400
++++ sysdeps/freebsd/procwd.c	2007-06-30 12:42:35.000000000 -0400
+@@ -0,0 +1,121 @@
 +/* Copyright (C) 2007 Joe Marcus Clarke
 +   This file is part of LibGTop 2.
 +
@@ -58,12 +58,7 @@
 +	len = g_strv_length(lines);
 +
 +	for (i = 0; i < len && lines[i]; i++) {
-+
 +		if (strlen(lines[i]) < 2)
-+			continue;
-+
-+		if (!g_str_has_prefix(lines[i], "f") &&
-+		    !g_str_has_prefix(lines[i], "n"))
 +			continue;
 +
 +		if (!strcmp(lines[i], "fcwd")) {
@@ -75,6 +70,9 @@
 +			nextrtd = TRUE;
 +			continue;
 +		}
++
++		if (!g_str_has_prefix(lines[i], "n"))
++			continue;
 +
 +		if (nextwd) {
 +			g_ptr_array_add(dirs, g_strdup(lines[i] + 1));
@@ -112,6 +110,7 @@
 +		GPtrArray *dirs;
 +
 +		dirs = parse_output(output, buf);
++		g_free(output);
 +
 +		buf->number = dirs->len;
 +		buf->flags |= (1 << GLIBTOP_PROC_WD_NUMBER);
