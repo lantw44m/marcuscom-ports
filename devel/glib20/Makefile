@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.99 2007/06/20 15:03:06 ahze Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.100 2007/06/29 18:17:52 marcus Exp $
 #
 
 PORTNAME=	glib
@@ -28,7 +28,7 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS+=	pcre.0:${PORTSDIR}/devel/prcre
+LIB_DEPENDS+=	pcre.0:${PORTSDIR}/devel/pcre
 
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool:15
