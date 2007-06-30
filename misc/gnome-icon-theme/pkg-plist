@@ -5813,6 +5813,8 @@ share/icons/gnome/scalable/stock/generic/stock_person.svg
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/mr/LC_MESSAGES
@@ -5891,6 +5893,7 @@ share/icons/gnome/scalable/stock/generic/stock_person.svg
 @dirrmtry share/icons/gnome/22x22/status
 @dirrmtry share/icons/gnome/22x22/places
 @dirrmtry share/icons/gnome/22x22/mimetypes
+@dirrmtry share/icons/gnome/22x22/emotes
 @dirrmtry share/icons/gnome/22x22/emblems
 @dirrmtry share/icons/gnome/22x22/devices
 @dirrmtry share/icons/gnome/22x22/categories
@@ -5909,6 +5912,7 @@ share/icons/gnome/scalable/stock/generic/stock_person.svg
 @dirrmtry share/icons/gnome/16x16/stock/generic
 @dirrmtry share/icons/gnome/16x16/stock/form
 @dirrmtry share/icons/gnome/16x16/stock/emoticons
+@dirrmtry share/icons/gnome/16x16/stock/emotes
 @dirrmtry share/icons/gnome/16x16/stock/document
 @dirrmtry share/icons/gnome/16x16/stock/data
 @dirrmtry share/icons/gnome/16x16/stock/code
