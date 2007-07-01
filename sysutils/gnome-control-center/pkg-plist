@@ -88,6 +88,8 @@ share/desktop-directories/theme-method.directory
 %%DATADIR%%/icons/display-capplet.png
 %%DATADIR%%/keybindings/00-multimedia-key.xml
 %%DATADIR%%/keybindings/01-desktop-key.xml
+%%DATADIR%%/mime/application/x-gnome-theme-package.xml
+%%DATADIR%%/mime/package/gnome-theme-package.xml
 %%DATADIR%%/pixmaps/accessibility-keyboard-bouncekey.png
 %%DATADIR%%/pixmaps/accessibility-keyboard-mousekey.png
 %%DATADIR%%/pixmaps/accessibility-keyboard-slowkey.png
@@ -268,6 +270,8 @@ share/pixmaps/display-capplet.png
 @dirrm include/gnome-window-settings-2.0
 @dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
 @dirrm include/gnome-settings-daemon-2.0
+@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zu/LC_MESSAGES
