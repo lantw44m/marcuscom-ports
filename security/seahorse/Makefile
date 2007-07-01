@@ -3,11 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.36 2007/05/19 21:36:21 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.37 2007/06/25 04:51:20 mezz Exp $
 #
 
 PORTNAME=	seahorse
 PORTVERSION=	2.19.4
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -41,24 +42,24 @@ MAN1=		seahorse-agent.1 seahorse-daemon.1 seahorse-tool.1
 OPTIONS=	NAUTILUS "Enable the Nautilus component" on \
 		LDAP "Enable LDAP support" on \
 		HKP "Enable HKP keyserver interface" on \
-		GEDIT "Enable GEdit plug-in support" on \
+		EPIPHANY "Enable Epiphany plug-in support" on \
 		NOTIFY "Enable libnotify support" on \
 		APPLET "Enable clipboard encryption applet" on \
 		KEYRING "Enable GNOME Keyring support" on \
 		MDNS "Enable mDNS key sharing" on
-#		EPIPHANY "Enable Epiphany plug-in support" on
+#		GEDIT "Enable GEdit plug-in support" on
 
 .include <bsd.port.pre.mk>
 
-.if !defined(WITHOUT_GEDIT)
-BUILD_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
-RUN_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
-PLIST_SUB+=	GEDIT=""
-GCONF_SCHEMAS+=	seahorse-gedit.schemas
-.else
+#.if !defined(WITHOUT_GEDIT)
+#BUILD_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
+#RUN_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
+#PLIST_SUB+=	GEDIT=""
+#GCONF_SCHEMAS+=	seahorse-gedit.schemas
+#.else
 PLIST_SUB+=	GEDIT="@comment "
 CONFIGURE_ARGS+=--disable-gedit
-.endif
+#.endif
 
 .if !defined(WITHOUT_NAUTILUS)
 USE_GNOME+=	nautilus2
@@ -86,14 +87,14 @@ LIB_DEPENDS+=	notify.1:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=--disable-libnotify
 .endif
 
-#.if !defined(WITHOUT_EPIPHANY)
-#BUILD_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-#RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-#PLIST_SUB+=	EPHY="" EPHY_VERSION="2.18"
-#.else
+.if !defined(WITHOUT_EPIPHANY)
+BUILD_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+PLIST_SUB+=	EPHY="" EPHY_VERSION="2.18"
+.else
 CONFIGURE_ARGS+=--disable-epiphany
 PLIST_SUB+=	EPHY="@comment "
-#.endif
+.endif
 
 .if !defined(WITHOUT_APPLET)
 USE_GNOME+=	gnomepanel
