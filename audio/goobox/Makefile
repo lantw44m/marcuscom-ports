@@ -3,7 +3,7 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/goobox/Makefile,v 1.17 2006/07/25 06:20:43 mezz Exp $
+#    $MCom: ports/audio/goobox/Makefile,v 1.23 2007/06/20 19:20:43 ahze Exp $
 #
 
 PORTNAME=	goobox
@@ -28,7 +28,7 @@ USE_GSTREAMER=	cdparanoia gconf core
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	goobox.schemas

@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/pkgconfig/Makefile,v 1.6 2005/10/14 20:39:57 adamw Exp $
+#   $MCom: ports/devel/pkg-config/Makefile,v 1.8 2007/06/28 14:28:37 ahze Exp $
 #
 
 PORTNAME=	pkg-config
@@ -28,10 +28,6 @@ PC_PATH:=${PC_PATH}:${PREFIX}/lib/pkgconfig
 .if ${LOCALBASE} != ${PREFIX}
 PC_PATH:=	${PC_PATH}:${LOCALBASE}/libdata/pkgconfig
 PC_PATH:=	${PC_PATH}:${LOCALBASE}/lib/pkgconfig
-.endif
-.if ${X11BASE} != ${PREFIX}
-PC_PATH:=	${PC_PATH}:${X11BASE}/libdata/pkgconfig
-PC_PATH:=	${PC_PATH}:${X11BASE}/lib/pkgconfig
 .endif
 
 CONFIGURE_ARGS=	--disable-threads \
