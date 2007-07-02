@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.38 2007/07/01 18:10:30 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.39 2007/07/01 22:05:19 marcus Exp $
 #
 
 PORTNAME=	seahorse
@@ -117,8 +117,9 @@ CONFIGURE_ARGS+=--disable-sharing
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|" == "|" = "|g' \
-		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|" == "|" = "|g ; \
+		s|enable_gedit=yes|enable_gedit=no|g' \
+			${WRKSRC}/configure
 
 post-install:
 	-@update-desktop-database
