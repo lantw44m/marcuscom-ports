@@ -110,6 +110,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/assistant.h
 include/gtkmm-%%API_VERSION%%/gtkmm/base.h
 include/gtkmm-%%API_VERSION%%/gtkmm/bin.h
 include/gtkmm-%%API_VERSION%%/gtkmm/box.h
+include/gtkmm-%%API_VERSION%%/gtkmm/builder.h
 include/gtkmm-%%API_VERSION%%/gtkmm/button.h
 include/gtkmm-%%API_VERSION%%/gtkmm/buttonbox.h
 include/gtkmm-%%API_VERSION%%/gtkmm/calendar.h
@@ -208,6 +209,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/aspectframe_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/assistant_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/bin_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/box_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/builder_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/button_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/buttonbox_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/calendar_p.h
@@ -339,6 +341,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/toolbar_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/toolbutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/toolitem_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/tooltips_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/tooltip_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/treedragdest_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/treedragsource_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/treeiter_p.h
@@ -411,6 +414,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/toggletoolbutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/toolbar.h
 include/gtkmm-%%API_VERSION%%/gtkmm/toolbutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/toolitem.h
+include/gtkmm-%%API_VERSION%%/gtkmm/tooltip.h
 include/gtkmm-%%API_VERSION%%/gtkmm/tooltips.h
 include/gtkmm-%%API_VERSION%%/gtkmm/treedragdest.h
 include/gtkmm-%%API_VERSION%%/gtkmm/treedragsource.h
