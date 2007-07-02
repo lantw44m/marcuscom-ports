@@ -1,0 +1,11 @@
+--- Makefile.in.orig	Sun Dec 24 11:46:58 2006
++++ Makefile.in	Sun Dec 24 11:46:58 2006
+@@ -789,7 +789,7 @@
+ 
+ info-am:
+ 
+-install-data-am: install-ApplicationsDATA install-MenuDATA \
++install-data-am: install-ApplicationsDATA \
+ 	install-data-local install-iconDATA
+ 
+ install-exec-am:
