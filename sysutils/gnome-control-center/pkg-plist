@@ -238,7 +238,7 @@ share/locale/zh_HK/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/zu/LC_MESSAGES/gnome-control-center-2.0.mo
 share/mime/application/x-gnome-theme-package.xml
-share/mime/package/gnome-theme-package.xml
+share/mime/packages/gnome-theme-package.xml
 share/omf/control-center/control-center-C.omf
 share/omf/control-center/control-center-en_GB.omf
 share/omf/control-center/control-center-es.omf
