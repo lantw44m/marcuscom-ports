@@ -1,5 +1,6 @@
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
+bin/gtk-builder-convert
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
 bin/gtk-update-icon-cache
