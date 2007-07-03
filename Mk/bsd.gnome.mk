@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.422 2007/06/26 04:23:10 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.423 2007/06/29 03:49:59 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -100,7 +100,7 @@ gnomeprefix_CONFIGURE_ARGS=--localstatedir=${DESTDIR}${GNOME_LOCALSTATEDIR} \
 			   --with-html-dir=${DESTDIR}${GNOME_HTML_DIR} \
 			   --disable-gtk-doc \
 			   --with-gconf-source=${GCONF_CONFIG_SOURCE} \
-			   --mandir=${PREFIX}/man
+			   --mandir=${MANPREFIX}/man
 gnomeprefix_USE_GNOME_IMPL=gnomehier
 .if !defined(WITHOUT_HACK)
 gnomeprefix_PREFIX=${LOCALBASE}
