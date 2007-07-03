@@ -7,6 +7,7 @@
 
 PORTNAME=	libiconv
 PORTVERSION=	1.11
+PORTREVISION=	1
 CATEGORIES=	converters devel
 MASTER_SITES=	${MASTER_SITE_GNU}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -23,6 +24,7 @@ CONFIGURE_ARGS=	--enable-static \
 		--mandir=${PREFIX}/man \
 		--docdir=${DOCSDIR}
 USE_LDCONFIG=	yes
+CONFIGURE_ENV=	gl_cv_cc_visibility="no"
 
 MAN1=		iconv.1
 MAN3=		iconv.3 iconv_open.3 iconv_close.3 iconvctl.3
