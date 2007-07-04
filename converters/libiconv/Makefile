@@ -21,7 +21,7 @@ USE_GNOME=	gnometarget
 LIBTOOLFILES=	configure libcharset/configure
 CONFIGURE_ARGS=	--enable-static \
 		--without-libintl-prefix \
-		--mandir=${PREFIX}/man \
+		--mandir=${MANPREFIX}/man \
 		--docdir=${DOCSDIR}
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	gl_cv_cc_visibility="no"
