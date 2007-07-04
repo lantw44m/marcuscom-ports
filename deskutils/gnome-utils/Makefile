@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.117 2007/04/26 18:10:36 ahze Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.118 2007/05/19 21:36:03 marcus Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -41,6 +41,6 @@ GCONF_SCHEMAS=	gnome-dictionary.schemas gnome-screenshot.schemas \
 
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} -n 10 \
-		${REINPLACE_CMD} -e 's|@mandir@|${PREFIX}/man|'
+		${REINPLACE_CMD} -e 's|@mandir@|${MANPREFIX}/man|'
 
 .include <bsd.port.mk>

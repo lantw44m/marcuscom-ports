@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.117 2007/06/05 11:30:28 ahze Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.118 2007/06/18 12:49:46 ahze Exp $
 #
 
 PORTNAME=	gnome-session
@@ -33,7 +33,6 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop
 GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

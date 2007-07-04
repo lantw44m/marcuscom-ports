@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.32 2007/05/30 17:59:38 mezz Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.33 2007/06/28 03:43:56 marcus Exp $
 #
 
 PORTNAME=	gnumeric
@@ -31,8 +31,7 @@ USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--without-guile --with-bonobo \
-		--mandir=${PREFIX}/man
+CONFIGURE_ARGS=	--without-guile --with-bonobo
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib -liconv ${PTHREAD_LIBS}" \
 		python_prog=${PYTHON_VERSION}

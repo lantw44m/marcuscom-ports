@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.102 2007/06/20 17:23:09 ahze Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.103 2007/07/02 20:50:58 marcus Exp $
 #
 
 PORTNAME=	pango
@@ -34,7 +34,7 @@ USE_GNOME=	gnomehack glib20 ltverhack referencehack
 CONFIGURE_ARGS=	--with-qt=no \
 		--with-html-dir=${PREFIX}/share/doc \
 		--enable-static \
-		--mandir=${PREFIX}/man
+		--mandir=${MANPREFIX}/man
 # Hmm.. tough one.  Found this one when I had graphics/hdf installed
 # (which installs glist.h) which is picked up before the glib-2.0
 # stuff, with Bad Results[tm]

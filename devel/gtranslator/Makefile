@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/gtranslator/Makefile,v 1.11 2007/06/29 23:05:25 mezz Exp $
 #
 
 PORTNAME=	gtranslator
@@ -28,8 +28,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -lgnuregex"
 CONFIGURE_ARGS=	--disable-debug \
-		--enable-compile-warnings=no \
-		--mandir=${PREFIX}/man
+		--enable-compile-warnings=no
 
 MAN1=		gtranslator.1 pozilla.sh.1
 

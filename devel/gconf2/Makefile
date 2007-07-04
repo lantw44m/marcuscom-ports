@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.81 2007/03/06 17:05:38 marcus Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.83 2007/06/23 17:15:07 mezz Exp $
 #
 
 PORTNAME=	gconf2
@@ -31,7 +31,7 @@ USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc \
-		--mandir=${PREFIX}/man
+		--mandir=${MANPREFIX}/man
 #		--enable-gconf-source=${PREFIX}/etc/gconf/schemas \
 
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
