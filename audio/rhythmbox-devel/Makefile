@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.78 2007/06/07 14:05:45 ahze Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.79 2007/06/10 18:49:50 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
 PORTVERSION=	0.10.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.10
@@ -94,6 +94,7 @@ PLIST_SUB+=		DAAP="@comment "
 
 .if !defined(WITHOUT_NOTIFY)
 LIB_DEPENDS+=		notify.1:${PORTSDIR}/devel/libnotify
+RUN_DEPENDS+=		${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/notification-daemon
 .else
 CONFIGURE_ARGS+=	--disable-libnotify
 .endif
