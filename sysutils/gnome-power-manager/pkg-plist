@@ -7,19 +7,21 @@ bin/gnome-power-preferences
 bin/gnome-power-statistics
 libdata/bonobo/servers/GNOME_BrightnessApplet.server
 libdata/bonobo/servers/GNOME_InhibitApplet.server
-share/dbus-1/services/gnome-power-manager.service
 share/applications/gnome-power-preferences.desktop
 share/applications/gnome-power-statistics.desktop
-share/gnome/autostart/gnome-power-manager.desktop
+share/dbus-1/services/gnome-power-manager.service
 share/gnome-2.0/ui/GNOME_BrightnessApplet.xml
 share/gnome-2.0/ui/GNOME_InhibitApplet.xml
-share/gnome-power-manager/gpm-critical-power.wav
-share/gnome-power-manager/gpm-feedback-widget.glade
-share/gnome-power-manager/gpm-graph.glade
-share/gnome-power-manager/gpm-inhibit-test.glade
-share/gnome-power-manager/gpm-prefs.glade
-share/gnome-power-manager/gpm-suspend-failure.wav
-share/gnome-power-manager/gpm-unplugged.wav
+%%DATADIR%%/gpm-critical-power.wav
+%%DATADIR%%/gpm-feedback-widget.glade
+%%DATADIR%%/gpm-graph.glade
+%%DATADIR%%/gpm-inhibit-test.glade
+%%DATADIR%%/gpm-lid-down.wav
+%%DATADIR%%/gpm-lid-up.wav
+%%DATADIR%%/gpm-prefs.glade
+%%DATADIR%%/gpm-suspend-failure.wav
+%%DATADIR%%/gpm-unplugged.wav
+share/gnome/autostart/gnome-power-manager.desktop
 share/gnome/help/gnome-power-manager/C/figures/gpm-cell-capacity.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-charged.png
 share/gnome/help/gnome-power-manager/C/figures/gpm-critical.png
@@ -98,17 +100,12 @@ share/gnome/help/gnome-power-manager/sv/figures/gpm-suspend-problem.png
 share/gnome/help/gnome-power-manager/sv/figures/gpm-unplugged.png
 share/gnome/help/gnome-power-manager/sv/figures/gs-prefs.png
 share/gnome/help/gnome-power-manager/sv/gnome-power-manager.xml
-share/omf/gnome-power-manager/gnome-power-manager-C.omf
-share/omf/gnome-power-manager/gnome-power-manager-es.omf
-share/omf/gnome-power-manager/gnome-power-manager-fr.omf
-share/omf/gnome-power-manager/gnome-power-manager-hu.omf
-share/omf/gnome-power-manager/gnome-power-manager-pa.omf
-share/omf/gnome-power-manager/gnome-power-manager-ru.omf
-share/omf/gnome-power-manager/gnome-power-manager-sv.omf
 share/icons/hicolor/16x16/apps/gpm-ac-adapter.png
 share/icons/hicolor/16x16/apps/gpm-brightness-kbd-disabled.png
+share/icons/hicolor/16x16/apps/gpm-brightness-kbd-invalid.png
 share/icons/hicolor/16x16/apps/gpm-brightness-kbd.png
 share/icons/hicolor/16x16/apps/gpm-brightness-lcd-disabled.png
+share/icons/hicolor/16x16/apps/gpm-brightness-lcd-invalid.png
 share/icons/hicolor/16x16/apps/gpm-brightness-lcd.png
 share/icons/hicolor/16x16/apps/gpm-hibernate.png
 share/icons/hicolor/16x16/apps/gpm-inhibit.png
@@ -152,8 +149,10 @@ share/icons/hicolor/16x16/apps/gpm-ups-charged.png
 share/icons/hicolor/16x16/apps/gpm-ups-missing.png
 share/icons/hicolor/22x22/apps/gpm-ac-adapter.png
 share/icons/hicolor/22x22/apps/gpm-brightness-kbd-disabled.png
+share/icons/hicolor/22x22/apps/gpm-brightness-kbd-invalid.png
 share/icons/hicolor/22x22/apps/gpm-brightness-kbd.png
 share/icons/hicolor/22x22/apps/gpm-brightness-lcd-disabled.png
+share/icons/hicolor/22x22/apps/gpm-brightness-lcd-invalid.png
 share/icons/hicolor/22x22/apps/gpm-brightness-lcd.png
 share/icons/hicolor/22x22/apps/gpm-hibernate.png
 share/icons/hicolor/22x22/apps/gpm-inhibit.png
@@ -197,8 +196,10 @@ share/icons/hicolor/22x22/apps/gpm-ups-charged.png
 share/icons/hicolor/22x22/apps/gpm-ups-missing.png
 share/icons/hicolor/24x24/apps/gpm-ac-adapter.png
 share/icons/hicolor/24x24/apps/gpm-brightness-kbd-disabled.png
+share/icons/hicolor/24x24/apps/gpm-brightness-kbd-invalid.png
 share/icons/hicolor/24x24/apps/gpm-brightness-kbd.png
 share/icons/hicolor/24x24/apps/gpm-brightness-lcd-disabled.png
+share/icons/hicolor/24x24/apps/gpm-brightness-lcd-invalid.png
 share/icons/hicolor/24x24/apps/gpm-brightness-lcd.png
 share/icons/hicolor/24x24/apps/gpm-hibernate.png
 share/icons/hicolor/24x24/apps/gpm-inhibit.png
@@ -242,8 +243,10 @@ share/icons/hicolor/24x24/apps/gpm-ups-charged.png
 share/icons/hicolor/24x24/apps/gpm-ups-missing.png
 share/icons/hicolor/48x48/apps/gpm-ac-adapter.png
 share/icons/hicolor/48x48/apps/gpm-brightness-kbd-disabled.png
+share/icons/hicolor/48x48/apps/gpm-brightness-kbd-invalid.png
 share/icons/hicolor/48x48/apps/gpm-brightness-kbd.png
 share/icons/hicolor/48x48/apps/gpm-brightness-lcd-disabled.png
+share/icons/hicolor/48x48/apps/gpm-brightness-lcd-invalid.png
 share/icons/hicolor/48x48/apps/gpm-brightness-lcd.png
 share/icons/hicolor/48x48/apps/gpm-hibernate.png
 share/icons/hicolor/48x48/apps/gpm-inhibit.png
@@ -287,8 +290,10 @@ share/icons/hicolor/48x48/apps/gpm-ups-charged.png
 share/icons/hicolor/48x48/apps/gpm-ups-missing.png
 share/icons/hicolor/scalable/apps/gpm-ac-adapter.svg
 share/icons/hicolor/scalable/apps/gpm-brightness-kbd-disabled.svg
+share/icons/hicolor/scalable/apps/gpm-brightness-kbd-invalid.svg
 share/icons/hicolor/scalable/apps/gpm-brightness-kbd.svg
 share/icons/hicolor/scalable/apps/gpm-brightness-lcd-disabled.svg
+share/icons/hicolor/scalable/apps/gpm-brightness-lcd-invalid.svg
 share/icons/hicolor/scalable/apps/gpm-brightness-lcd.svg
 share/icons/hicolor/scalable/apps/gpm-hibernate.svg
 share/icons/hicolor/scalable/apps/gpm-inhibit.svg
@@ -385,6 +390,13 @@ share/locale/vi/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
+share/omf/gnome-power-manager/gnome-power-manager-C.omf
+share/omf/gnome-power-manager/gnome-power-manager-es.omf
+share/omf/gnome-power-manager/gnome-power-manager-fr.omf
+share/omf/gnome-power-manager/gnome-power-manager-hu.omf
+share/omf/gnome-power-manager/gnome-power-manager-pa.omf
+share/omf/gnome-power-manager/gnome-power-manager-ru.omf
+share/omf/gnome-power-manager/gnome-power-manager-sv.omf
 @dirrm share/omf/gnome-power-manager
 @dirrm share/gnome/help/gnome-power-manager/sv/figures
 @dirrm share/gnome/help/gnome-power-manager/sv
@@ -392,8 +404,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
 @dirrm share/gnome/help/gnome-power-manager/ru
 @dirrm share/gnome/help/gnome-power-manager/pa/figures
 @dirrm share/gnome/help/gnome-power-manager/pa
-@dirrm share/gnome/help/gnome-power-manager/oc/figures
-@dirrm share/gnome/help/gnome-power-manager/oc
 @dirrm share/gnome/help/gnome-power-manager/hu/figures
 @dirrm share/gnome/help/gnome-power-manager/hu
 @dirrm share/gnome/help/gnome-power-manager/fr/figures
@@ -403,9 +413,11 @@ share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
 @dirrm share/gnome/help/gnome-power-manager/C/figures
 @dirrm share/gnome/help/gnome-power-manager/C
 @dirrm share/gnome/help/gnome-power-manager
-@dirrm share/gnome-power-manager
+@dirrm %%DATADIR%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/ku/LC_MESSAGES
