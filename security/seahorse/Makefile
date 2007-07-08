@@ -3,12 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.39 2007/07/01 22:05:19 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.40 2007/07/02 03:35:47 mezz Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	2.19.4
-PORTREVISION=	2
+PORTVERSION=	2.19.5
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,8 +16,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A front end for GnuPG
 
-BUILD_DEPENDS=	gpgv:${PORTSDIR}/security/gnupg1
-RUN_DEPENDS=	gpgv:${PORTSDIR}/security/gnupg1
+BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
+RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 LIB_DEPENDS=	gpgme.17:${PORTSDIR}/security/gpgme \
     		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 

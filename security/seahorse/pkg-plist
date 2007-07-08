@@ -38,6 +38,7 @@ share/dbus-1/services/org.gnome.seahorse.service
 %%APPLET%%share/gnome-2.0/ui/GNOME_SeahorseApplet.xml
 %%APPLET%%share/gnome/help/seahorse-applet/C/legal.xml
 %%APPLET%%share/gnome/help/seahorse-applet/C/seahorse-applet.xml
+%%APPLET%%share/gnome/help/seahorse-applet/sv/seahorse-applet.xml
 share/gnome/help/seahorse/C/figures/export.png
 share/gnome/help/seahorse/C/figures/file-manager.png
 share/gnome/help/seahorse/C/figures/generate.png
@@ -171,6 +172,7 @@ share/locale/sq/LC_MESSAGES/seahorse.mo
 share/locale/sr/LC_MESSAGES/seahorse.mo
 share/locale/sr@Latn/LC_MESSAGES/seahorse.mo
 share/locale/sv/LC_MESSAGES/seahorse.mo
+share/locale/ta/LC_MESSAGES/seahorse.mo
 share/locale/th/LC_MESSAGES/seahorse.mo
 share/locale/tr/LC_MESSAGES/seahorse.mo
 share/locale/uk/LC_MESSAGES/seahorse.mo
@@ -180,6 +182,7 @@ share/locale/zh_HK/LC_MESSAGES/seahorse.mo
 share/locale/zh_TW/LC_MESSAGES/seahorse.mo
 share/mime/packages/seahorse.xml
 %%APPLET%%share/omf/seahorse-applet/seahorse-applet-C.omf
+%%APPLET%%share/omf/seahorse-applet/seahorse-applet-sv.omf
 share/omf/seahorse/seahorse-C.omf
 share/omf/seahorse/seahorse-en_GB.omf
 share/omf/seahorse/seahorse-es.omf
@@ -286,6 +289,7 @@ share/pixmaps/seahorse/scalable/seahorse.svg
 @dirrm share/gnome/help/seahorse/en_GB
 @dirrm share/gnome/help/seahorse/C/figures
 @dirrm share/gnome/help/seahorse/C
+%%APPLET%%@dirrm share/gnome/help/seahorse-applet/sv
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/C
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet
 @dirrm share/gnome/help/seahorse
