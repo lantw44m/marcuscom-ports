@@ -33,6 +33,21 @@ share/gnome-2.0/ui/GNOME_ShowDesktopApplet.xml
 share/gnome-2.0/ui/GNOME_WindowListApplet.xml
 share/gnome-2.0/ui/GNOME_WindowMenuApplet.xml
 share/gnome-2.0/ui/GNOME_WorkspaceSwitcherApplet.xml
+%%DATADIR%%/glade/fish.glade
+%%DATADIR%%/glade/panel-properties-dialog.glade
+%%DATADIR%%/glade/panel-run-dialog.glade
+%%DATADIR%%/glade/panel-test-applets.glade
+%%DATADIR%%/glade/timezone.glade
+%%DATADIR%%/glade/window-list.glade
+%%DATADIR%%/glade/workspace-switcher.glade
+%%DATADIR%%/pixmaps/fishanim.png
+%%DATADIR%%/pixmaps/footguy.png
+%%DATADIR%%/pixmaps/gnome-gegl2-2.png
+%%DATADIR%%/pixmaps/gnome-gegl2.png
+%%DATADIR%%/pixmaps/monkey.png
+%%DATADIR%%/pixmaps/oldwanda.png
+%%DATADIR%%/pixmaps/wanda.png
+%%DATADIR%%/pixmaps/world_map-960.png
 share/gnome-panelrc
 share/gnome/help/clock/C/clock.xml
 share/gnome/help/clock/C/figures/clock_applet.png
@@ -156,6 +171,7 @@ share/gnome/help/workspace-switcher/pa/workspace-switcher.xml
 share/gnome/help/workspace-switcher/ru/workspace-switcher.xml
 share/gnome/help/workspace-switcher/sv/workspace-switcher.xml
 share/gnome/help/workspace-switcher/uk/workspace-switcher.xml
+share/gnome/help/workspace-switcher/vi/workspace-switcher.xml
 share/gnome/help/workspace-switcher/zh_CN/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/zh_CN/figures/workspacelist_applet.png
 share/gnome/help/workspace-switcher/zh_CN/legal.xml
@@ -164,19 +180,6 @@ share/gnome/help/workspace-switcher/zh_TW/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/zh_TW/figures/workspacelist_applet.png
 share/gnome/help/workspace-switcher/zh_TW/legal.xml
 share/gnome/help/workspace-switcher/zh_TW/workspace-switcher.xml
-share/gnome-panel/glade/fish.glade
-share/gnome-panel/glade/panel-properties-dialog.glade
-share/gnome-panel/glade/panel-run-dialog.glade
-share/gnome-panel/glade/panel-test-applets.glade
-share/gnome-panel/glade/window-list.glade
-share/gnome-panel/glade/workspace-switcher.glade
-share/gnome-panel/pixmaps/fishanim.png
-share/gnome-panel/pixmaps/footguy.png
-share/gnome-panel/pixmaps/gnome-gegl2-2.png
-share/gnome-panel/pixmaps/gnome-gegl2.png
-share/gnome-panel/pixmaps/monkey.png
-share/gnome-panel/pixmaps/oldwanda.png
-share/gnome-panel/pixmaps/wanda.png
 share/icons/hicolor/16x16/apps/gnome-panel-clock.png
 share/icons/hicolor/16x16/apps/gnome-panel-drawer.png
 share/icons/hicolor/16x16/apps/gnome-panel-fish.png
@@ -299,6 +302,7 @@ share/locale/pt_BR/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ro/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ru/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/rw/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/si/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-panel-2.0.mo
@@ -372,6 +376,7 @@ share/omf/workspace-switcher/workspace-switcher-pa.omf
 share/omf/workspace-switcher/workspace-switcher-ru.omf
 share/omf/workspace-switcher/workspace-switcher-sv.omf
 share/omf/workspace-switcher/workspace-switcher-uk.omf
+share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/omf/workspace-switcher
 @dirrm share/omf/window-list
 @dirrm share/omf/gnome-panel
@@ -382,6 +387,7 @@ share/omf/workspace-switcher/workspace-switcher-uk.omf
 @dirrm share/gnome/help/workspace-switcher/zh_TW
 @dirrm share/gnome/help/workspace-switcher/zh_CN/figures
 @dirrm share/gnome/help/workspace-switcher/zh_CN
+@dirrm share/gnome/help/workspace-switcher/vi
 @dirrm share/gnome/help/workspace-switcher/uk
 @dirrm share/gnome/help/workspace-switcher/sv
 @dirrm share/gnome/help/workspace-switcher/ru
@@ -469,9 +475,9 @@ share/omf/workspace-switcher/workspace-switcher-uk.omf
 @dirrm share/gnome/help/clock/C/figures
 @dirrm share/gnome/help/clock/C
 @dirrm share/gnome/help/clock
-@dirrm share/gnome-panel/pixmaps
-@dirrm share/gnome-panel/glade
-@dirrm share/gnome-panel
+@dirrm %%DATADIR%%/pixmaps
+@dirrm %%DATADIR%%/glade
+@dirrm %%DATADIR%%
 @dirrm include/panel-2.0
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
@@ -485,6 +491,8 @@ share/omf/workspace-switcher/workspace-switcher-uk.omf
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@ije/LC_MESSAGES
 @dirrmtry share/locale/sr@ije
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
