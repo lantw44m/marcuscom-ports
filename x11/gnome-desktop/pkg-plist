@@ -8,6 +8,7 @@ lib/libgnome-desktop-2.so
 lib/libgnome-desktop-2.so.2
 libdata/pkgconfig/gnome-desktop-2.0.pc
 share/applications/gnome-about.desktop
+share/gnome-about/contributors.list
 share/gnome-about/gnome-64.png
 share/gnome-about/gnome-version.xml
 share/gnome-about/headers/header-bg-ancient01a.png
@@ -26,6 +27,7 @@ share/gnome/help/fdl/fr/fdl.xml
 share/gnome/help/fdl/ko/fdl.xml
 share/gnome/help/fdl/sv/fdl.xml
 share/gnome/help/fdl/uk/fdl.xml
+share/gnome/help/fdl/vi/fdl.xml
 share/gnome/help/gpl/C/gpl.xml
 share/gnome/help/gpl/ar/gpl.xml
 share/gnome/help/gpl/ca/gpl.xml
@@ -46,6 +48,7 @@ share/gnome/help/lgpl/ko/lgpl.xml
 share/gnome/help/lgpl/pa/lgpl.xml
 share/gnome/help/lgpl/sv/lgpl.xml
 share/gnome/help/lgpl/uk/lgpl.xml
+share/gnome/help/lgpl/vi/lgpl.xml
 share/gnome/help/lgpl/zh_CN/lgpl.xml
 share/locale/af/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -115,6 +118,7 @@ share/locale/pt_BR/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ro/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ru/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/rw/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/si/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -129,6 +133,7 @@ share/locale/tr/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ug/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/uk/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ur/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/uz/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/vi/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/wa/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/xh/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -145,6 +150,7 @@ share/omf/fdl/fdl-fr.omf
 share/omf/fdl/fdl-ko.omf
 share/omf/fdl/fdl-sv.omf
 share/omf/fdl/fdl-uk.omf
+share/omf/fdl/fdl-vi.omf
 share/omf/gpl/gpl-C.omf
 share/omf/gpl/gpl-ar.omf
 share/omf/gpl/gpl-ca.omf
@@ -165,6 +171,7 @@ share/omf/lgpl/lgpl-ko.omf
 share/omf/lgpl/lgpl-pa.omf
 share/omf/lgpl/lgpl-sv.omf
 share/omf/lgpl/lgpl-uk.omf
+share/omf/lgpl/lgpl-vi.omf
 share/omf/lgpl/lgpl-zh_CN.omf
 share/pixmaps/apple-green.png
 share/pixmaps/apple-red.png
@@ -242,6 +249,7 @@ share/pixmaps/vnterm.xpm
 @dirrm share/omf/gpl
 @dirrm share/omf/fdl
 @dirrm share/gnome/help/lgpl/zh_CN
+@dirrm share/gnome/help/lgpl/vi
 @dirrm share/gnome/help/lgpl/uk
 @dirrm share/gnome/help/lgpl/sv
 @dirrm share/gnome/help/lgpl/pa
@@ -260,6 +268,7 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/gpl/es
 @dirrm share/gnome/help/gpl/ca
 @dirrm share/gnome/help/gpl/ar
+@dirrm share/gnome/help/fdl/vi
 @dirrm share/gnome/help/fdl/uk
 @dirrm share/gnome/help/fdl/sv
 @dirrm share/gnome/help/fdl/ko
@@ -286,6 +295,8 @@ share/pixmaps/vnterm.xpm
 @dirrmtry share/locale/ug
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
