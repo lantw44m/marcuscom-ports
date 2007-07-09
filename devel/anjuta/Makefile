@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.3 2007/07/08 18:57:54 marcus Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.4 2007/07/08 19:49:57 marcus Exp $
 #
 
 PORTNAME=	anjuta
@@ -72,6 +72,8 @@ post-configure:
 	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash| ; \
 	    	s|/usr/local|${PREFIX}|' \
 	    	${WRKSRC}/global-tags/create_global_tags.sh
+	@${REINPLACE_CMD} -e 's|PKG_PATH|PKG_CONFIG_PATH|g' \
+	    	${WRKSRC}/configure
 
 post-install:
 .if !defined(NOPORTDOCS)
