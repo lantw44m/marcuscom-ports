@@ -17,6 +17,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/atspi.py
 %%PYTHON_SITELIBDIR%%/orca/atspi.pyc
 %%PYTHON_SITELIBDIR%%/orca/atspi.pyo
+%%PYTHON_SITELIBDIR%%/orca/bookmarks.py
+%%PYTHON_SITELIBDIR%%/orca/bookmarks.pyc
+%%PYTHON_SITELIBDIR%%/orca/bookmarks.pyo
 %%PYTHON_SITELIBDIR%%/orca/braille.py
 %%PYTHON_SITELIBDIR%%/orca/braille.pyc
 %%PYTHON_SITELIBDIR%%/orca/braille.pyo
@@ -166,9 +169,6 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-panel.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-panel.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-panel.pyo
-%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-power-manager.py
-%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-power-manager.pyc
-%%PYTHON_SITELIBDIR%%/orca/scripts/gnome-power-manager.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/gnome-search-tool.pyo
@@ -193,6 +193,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/nautilus.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/nautilus.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/nautilus.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/notification-daemon.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/notification-daemon.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/notification-daemon.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/planner.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/planner.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/planner.pyo

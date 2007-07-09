@@ -1085,6 +1085,8 @@ share/icons/HighContrast-SVG/scalable/status/nm-no-connection.svg
 share/icons/HighContrast-SVG/scalable/status/security-high.svg
 share/icons/HighContrast-SVG/scalable/status/security-low.svg
 share/icons/HighContrast-SVG/scalable/status/security-medium.svg
+share/icons/HighContrast-SVG/scalable/status/software-update-available.svg
+share/icons/HighContrast-SVG/scalable/status/software-update-urgent.svg
 share/icons/HighContrast-SVG/scalable/status/stock_dialog-error.svg
 share/icons/HighContrast-SVG/scalable/status/stock_dialog-info.svg
 share/icons/HighContrast-SVG/scalable/status/stock_dialog-question.svg
@@ -2404,7 +2406,6 @@ share/themes/HighContrastLargePrint/pixmaps/stock_commandline-history.xpm
 share/themes/HighContrastLargePrint/pixmaps/stock_connect.png
 share/themes/HighContrastLargePrint/pixmaps/stock_convert.png
 share/themes/HighContrastLargePrint/pixmaps/stock_copy.png
-share/themes/HighContrastLargePrint/pixmaps/stock_corner-panel.png
 share/themes/HighContrastLargePrint/pixmaps/stock_cut.png
 share/themes/HighContrastLargePrint/pixmaps/stock_delete.png
 share/themes/HighContrastLargePrint/pixmaps/stock_dialog_error.png
@@ -2415,14 +2416,12 @@ share/themes/HighContrastLargePrint/pixmaps/stock_disconnect.png
 share/themes/HighContrastLargePrint/pixmaps/stock_dnd.png
 share/themes/HighContrastLargePrint/pixmaps/stock_dnd_multiple.png
 share/themes/HighContrastLargePrint/pixmaps/stock_drawer.png
-share/themes/HighContrastLargePrint/pixmaps/stock_edge-panel.png
 share/themes/HighContrastLargePrint/pixmaps/stock_edit.png
 share/themes/HighContrastLargePrint/pixmaps/stock_empty.png
 share/themes/HighContrastLargePrint/pixmaps/stock_execute.png
 share/themes/HighContrastLargePrint/pixmaps/stock_export.png
 share/themes/HighContrastLargePrint/pixmaps/stock_find-and-replace.png
 share/themes/HighContrastLargePrint/pixmaps/stock_find.png
-share/themes/HighContrastLargePrint/pixmaps/stock_floating-panel.png
 share/themes/HighContrastLargePrint/pixmaps/stock_floppy.png
 share/themes/HighContrastLargePrint/pixmaps/stock_gnome-logo.png
 share/themes/HighContrastLargePrint/pixmaps/stock_gnome-util.png
@@ -2454,7 +2453,6 @@ share/themes/HighContrastLargePrint/pixmaps/stock_launcher-program.png
 share/themes/HighContrastLargePrint/pixmaps/stock_line-in.png
 share/themes/HighContrastLargePrint/pixmaps/stock_lockscreen.png
 share/themes/HighContrastLargePrint/pixmaps/stock_logout.png
-share/themes/HighContrastLargePrint/pixmaps/stock_menu-panel.png
 share/themes/HighContrastLargePrint/pixmaps/stock_mic.png
 share/themes/HighContrastLargePrint/pixmaps/stock_missing-image.png
 share/themes/HighContrastLargePrint/pixmaps/stock_multimedia.png
@@ -2462,10 +2460,6 @@ share/themes/HighContrastLargePrint/pixmaps/stock_new.png
 share/themes/HighContrastLargePrint/pixmaps/stock_no.png
 share/themes/HighContrastLargePrint/pixmaps/stock_ok.png
 share/themes/HighContrastLargePrint/pixmaps/stock_open.png
-share/themes/HighContrastLargePrint/pixmaps/stock_panel_hide_down.png
-share/themes/HighContrastLargePrint/pixmaps/stock_panel_hide_left.png
-share/themes/HighContrastLargePrint/pixmaps/stock_panel_hide_right.png
-share/themes/HighContrastLargePrint/pixmaps/stock_panel_hide_up.png
 share/themes/HighContrastLargePrint/pixmaps/stock_paste.png
 share/themes/HighContrastLargePrint/pixmaps/stock_preferences.png
 share/themes/HighContrastLargePrint/pixmaps/stock_print-preview.png
@@ -2483,7 +2477,6 @@ share/themes/HighContrastLargePrint/pixmaps/stock_screenshot.png
 share/themes/HighContrastLargePrint/pixmaps/stock_searchtool.png
 share/themes/HighContrastLargePrint/pixmaps/stock_select-color.png
 share/themes/HighContrastLargePrint/pixmaps/stock_select-font.png
-share/themes/HighContrastLargePrint/pixmaps/stock_sliding-panel.png
 share/themes/HighContrastLargePrint/pixmaps/stock_sort-ascending.png
 share/themes/HighContrastLargePrint/pixmaps/stock_sort-descending.png
 share/themes/HighContrastLargePrint/pixmaps/stock_spell-check.png
@@ -2543,7 +2536,6 @@ share/themes/HighContrastLargePrintInverse/pixmaps/stock_commandline-history.xpm
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_connect.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_convert.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_copy.png
-share/themes/HighContrastLargePrintInverse/pixmaps/stock_corner-panel.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_cut.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_delete.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_dialog_error.png
@@ -2554,14 +2546,12 @@ share/themes/HighContrastLargePrintInverse/pixmaps/stock_disconnect.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_dnd.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_dnd_multiple.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_drawer.png
-share/themes/HighContrastLargePrintInverse/pixmaps/stock_edge-panel.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_edit.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_empty.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_execute.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_export.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_find-and-replace.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_find.png
-share/themes/HighContrastLargePrintInverse/pixmaps/stock_floating-panel.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_floppy.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_gnome-logo.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_gnome-util.png
@@ -2593,7 +2583,6 @@ share/themes/HighContrastLargePrintInverse/pixmaps/stock_launcher-program.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_line-in.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_lockscreen.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_logout.png
-share/themes/HighContrastLargePrintInverse/pixmaps/stock_menu-panel.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_mic.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_missing-image.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_multimedia.png
@@ -2601,10 +2590,6 @@ share/themes/HighContrastLargePrintInverse/pixmaps/stock_new.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_no.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_ok.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_open.png
-share/themes/HighContrastLargePrintInverse/pixmaps/stock_panel_hide_down.png
-share/themes/HighContrastLargePrintInverse/pixmaps/stock_panel_hide_left.png
-share/themes/HighContrastLargePrintInverse/pixmaps/stock_panel_hide_right.png
-share/themes/HighContrastLargePrintInverse/pixmaps/stock_panel_hide_up.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_paste.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_preferences.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_print-preview.png
@@ -2622,7 +2607,6 @@ share/themes/HighContrastLargePrintInverse/pixmaps/stock_screenshot.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_searchtool.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_select-color.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_select-font.png
-share/themes/HighContrastLargePrintInverse/pixmaps/stock_sliding-panel.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_sort-ascending.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_sort-descending.png
 share/themes/HighContrastLargePrintInverse/pixmaps/stock_spell-check.png
@@ -2684,7 +2668,6 @@ share/themes/LargePrint/pixmaps/stock_commandline-history.xpm
 share/themes/LargePrint/pixmaps/stock_connect.png
 share/themes/LargePrint/pixmaps/stock_convert.png
 share/themes/LargePrint/pixmaps/stock_copy.png
-share/themes/LargePrint/pixmaps/stock_corner-panel.png
 share/themes/LargePrint/pixmaps/stock_cut.png
 share/themes/LargePrint/pixmaps/stock_delete.png
 share/themes/LargePrint/pixmaps/stock_dialog_error.png
@@ -2695,14 +2678,12 @@ share/themes/LargePrint/pixmaps/stock_disconnect.png
 share/themes/LargePrint/pixmaps/stock_dnd.png
 share/themes/LargePrint/pixmaps/stock_dnd_multiple.png
 share/themes/LargePrint/pixmaps/stock_drawer.png
-share/themes/LargePrint/pixmaps/stock_edge-panel.png
 share/themes/LargePrint/pixmaps/stock_edit.png
 share/themes/LargePrint/pixmaps/stock_empty.png
 share/themes/LargePrint/pixmaps/stock_execute.png
 share/themes/LargePrint/pixmaps/stock_export.png
 share/themes/LargePrint/pixmaps/stock_find-and-replace.png
 share/themes/LargePrint/pixmaps/stock_find.png
-share/themes/LargePrint/pixmaps/stock_floating-panel.png
 share/themes/LargePrint/pixmaps/stock_floppy.png
 share/themes/LargePrint/pixmaps/stock_gnome-logo.png
 share/themes/LargePrint/pixmaps/stock_gnome-util.png
@@ -2734,7 +2715,6 @@ share/themes/LargePrint/pixmaps/stock_launcher-program.png
 share/themes/LargePrint/pixmaps/stock_line-in.png
 share/themes/LargePrint/pixmaps/stock_lockscreen.png
 share/themes/LargePrint/pixmaps/stock_logout.png
-share/themes/LargePrint/pixmaps/stock_menu-panel.png
 share/themes/LargePrint/pixmaps/stock_mic.png
 share/themes/LargePrint/pixmaps/stock_missing-image.png
 share/themes/LargePrint/pixmaps/stock_multimedia.png
@@ -2742,10 +2722,6 @@ share/themes/LargePrint/pixmaps/stock_new.png
 share/themes/LargePrint/pixmaps/stock_no.png
 share/themes/LargePrint/pixmaps/stock_ok.png
 share/themes/LargePrint/pixmaps/stock_open.png
-share/themes/LargePrint/pixmaps/stock_panel_hide_down.png
-share/themes/LargePrint/pixmaps/stock_panel_hide_left.png
-share/themes/LargePrint/pixmaps/stock_panel_hide_right.png
-share/themes/LargePrint/pixmaps/stock_panel_hide_up.png
 share/themes/LargePrint/pixmaps/stock_paste.png
 share/themes/LargePrint/pixmaps/stock_preferences.png
 share/themes/LargePrint/pixmaps/stock_print-preview.png
@@ -2763,7 +2739,6 @@ share/themes/LargePrint/pixmaps/stock_screenshot.png
 share/themes/LargePrint/pixmaps/stock_searchtool.png
 share/themes/LargePrint/pixmaps/stock_select-color.png
 share/themes/LargePrint/pixmaps/stock_select-font.png
-share/themes/LargePrint/pixmaps/stock_sliding-panel.png
 share/themes/LargePrint/pixmaps/stock_sort-ascending.png
 share/themes/LargePrint/pixmaps/stock_sort-descending.png
 share/themes/LargePrint/pixmaps/stock_spell-check.png
@@ -2825,7 +2800,6 @@ share/themes/LowContrastLargePrint/pixmaps/stock_commandline-history.xpm
 share/themes/LowContrastLargePrint/pixmaps/stock_connect.png
 share/themes/LowContrastLargePrint/pixmaps/stock_convert.png
 share/themes/LowContrastLargePrint/pixmaps/stock_copy.png
-share/themes/LowContrastLargePrint/pixmaps/stock_corner-panel.png
 share/themes/LowContrastLargePrint/pixmaps/stock_cut.png
 share/themes/LowContrastLargePrint/pixmaps/stock_delete.png
 share/themes/LowContrastLargePrint/pixmaps/stock_dialog_error.png
@@ -2836,14 +2810,12 @@ share/themes/LowContrastLargePrint/pixmaps/stock_disconnect.png
 share/themes/LowContrastLargePrint/pixmaps/stock_dnd.png
 share/themes/LowContrastLargePrint/pixmaps/stock_dnd_multiple.png
 share/themes/LowContrastLargePrint/pixmaps/stock_drawer.png
-share/themes/LowContrastLargePrint/pixmaps/stock_edge-panel.png
 share/themes/LowContrastLargePrint/pixmaps/stock_edit.png
 share/themes/LowContrastLargePrint/pixmaps/stock_empty.png
 share/themes/LowContrastLargePrint/pixmaps/stock_execute.png
 share/themes/LowContrastLargePrint/pixmaps/stock_export.png
 share/themes/LowContrastLargePrint/pixmaps/stock_find-and-replace.png
 share/themes/LowContrastLargePrint/pixmaps/stock_find.png
-share/themes/LowContrastLargePrint/pixmaps/stock_floating-panel.png
 share/themes/LowContrastLargePrint/pixmaps/stock_floppy.png
 share/themes/LowContrastLargePrint/pixmaps/stock_gnome-logo.png
 share/themes/LowContrastLargePrint/pixmaps/stock_gnome-util.png
@@ -2875,7 +2847,6 @@ share/themes/LowContrastLargePrint/pixmaps/stock_launcher-program.png
 share/themes/LowContrastLargePrint/pixmaps/stock_line-in.png
 share/themes/LowContrastLargePrint/pixmaps/stock_lockscreen.png
 share/themes/LowContrastLargePrint/pixmaps/stock_logout.png
-share/themes/LowContrastLargePrint/pixmaps/stock_menu-panel.png
 share/themes/LowContrastLargePrint/pixmaps/stock_mic.png
 share/themes/LowContrastLargePrint/pixmaps/stock_missing-image.png
 share/themes/LowContrastLargePrint/pixmaps/stock_multimedia.png
@@ -2883,10 +2854,6 @@ share/themes/LowContrastLargePrint/pixmaps/stock_new.png
 share/themes/LowContrastLargePrint/pixmaps/stock_no.png
 share/themes/LowContrastLargePrint/pixmaps/stock_ok.png
 share/themes/LowContrastLargePrint/pixmaps/stock_open.png
-share/themes/LowContrastLargePrint/pixmaps/stock_panel_hide_down.png
-share/themes/LowContrastLargePrint/pixmaps/stock_panel_hide_left.png
-share/themes/LowContrastLargePrint/pixmaps/stock_panel_hide_right.png
-share/themes/LowContrastLargePrint/pixmaps/stock_panel_hide_up.png
 share/themes/LowContrastLargePrint/pixmaps/stock_paste.png
 share/themes/LowContrastLargePrint/pixmaps/stock_preferences.png
 share/themes/LowContrastLargePrint/pixmaps/stock_print-preview.png
@@ -2904,7 +2871,6 @@ share/themes/LowContrastLargePrint/pixmaps/stock_screenshot.png
 share/themes/LowContrastLargePrint/pixmaps/stock_searchtool.png
 share/themes/LowContrastLargePrint/pixmaps/stock_select-color.png
 share/themes/LowContrastLargePrint/pixmaps/stock_select-font.png
-share/themes/LowContrastLargePrint/pixmaps/stock_sliding-panel.png
 share/themes/LowContrastLargePrint/pixmaps/stock_sort-ascending.png
 share/themes/LowContrastLargePrint/pixmaps/stock_sort-descending.png
 share/themes/LowContrastLargePrint/pixmaps/stock_spell-check.png
