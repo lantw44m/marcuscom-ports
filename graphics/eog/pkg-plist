@@ -1,24 +1,24 @@
 bin/eog
-include/eog/eog/eog-application.h
-include/eog/eog/eog-debug.h
-include/eog/eog/eog-dialog.h
-include/eog/eog/eog-error-message-area.h
-include/eog/eog/eog-file-chooser.h
-include/eog/eog/eog-image-save-info.h
-include/eog/eog/eog-image.h
-include/eog/eog/eog-job-queue.h
-include/eog/eog/eog-jobs.h
-include/eog/eog/eog-list-store.h
-include/eog/eog/eog-message-area.h
-include/eog/eog/eog-plugin.h
-include/eog/eog/eog-properties-dialog.h
-include/eog/eog/eog-scroll-view.h
-include/eog/eog/eog-statusbar.h
-include/eog/eog/eog-thumb-nav.h
-include/eog/eog/eog-thumb-view.h
-include/eog/eog/eog-thumbnail.h
-include/eog/eog/eog-transform.h
-include/eog/eog/eog-window.h
+include/eog-2.20/eog/eog-application.h
+include/eog-2.20/eog/eog-debug.h
+include/eog-2.20/eog/eog-dialog.h
+include/eog-2.20/eog/eog-error-message-area.h
+include/eog-2.20/eog/eog-file-chooser.h
+include/eog-2.20/eog/eog-image-save-info.h
+include/eog-2.20/eog/eog-image.h
+include/eog-2.20/eog/eog-job-queue.h
+include/eog-2.20/eog/eog-jobs.h
+include/eog-2.20/eog/eog-list-store.h
+include/eog-2.20/eog/eog-message-area.h
+include/eog-2.20/eog/eog-plugin.h
+include/eog-2.20/eog/eog-properties-dialog.h
+include/eog-2.20/eog/eog-scroll-view.h
+include/eog-2.20/eog/eog-statusbar.h
+include/eog-2.20/eog/eog-thumb-nav.h
+include/eog-2.20/eog/eog-thumb-view.h
+include/eog-2.20/eog/eog-thumbnail.h
+include/eog-2.20/eog/eog-transform.h
+include/eog-2.20/eog/eog-window.h
 libdata/pkgconfig/eog.pc
 share/applications/eog.desktop
 %%DATADIR%%/eog-toolbar.xml
@@ -73,11 +73,15 @@ share/gnome/help/eog/zh_CN/legal.xml
 share/gnome/help/eog/zh_TW/eog.xml
 share/gnome/help/eog/zh_TW/figures/eog_start_window.png
 share/gnome/help/eog/zh_TW/legal.xml
+share/icons/hicolor/16x16/actions/eog-image-collection.png
 share/icons/hicolor/16x16/actions/eog-plugin.png
 share/icons/hicolor/16x16/apps/eog.png
+share/icons/hicolor/22x22/actions/eog-image-collection.png
 share/icons/hicolor/22x22/actions/eog-plugin.png
 share/icons/hicolor/22x22/apps/eog.png
+share/icons/hicolor/24x24/actions/eog-image-collection.png
 share/icons/hicolor/24x24/apps/eog.png
+share/icons/hicolor/32x32/actions/eog-image-collection.png
 share/icons/hicolor/32x32/actions/eog-plugin.png
 share/icons/hicolor/32x32/apps/eog.png
 share/icons/hicolor/48x48/actions/eog-plugin.png
@@ -142,6 +146,7 @@ share/locale/pt_BR/LC_MESSAGES/eog.mo
 share/locale/ro/LC_MESSAGES/eog.mo
 share/locale/ru/LC_MESSAGES/eog.mo
 share/locale/rw/LC_MESSAGES/eog.mo
+share/locale/si/LC_MESSAGES/eog.mo
 share/locale/sk/LC_MESSAGES/eog.mo
 share/locale/sl/LC_MESSAGES/eog.mo
 share/locale/sq/LC_MESSAGES/eog.mo
@@ -149,6 +154,7 @@ share/locale/sr/LC_MESSAGES/eog.mo
 share/locale/sr@Latn/LC_MESSAGES/eog.mo
 share/locale/sv/LC_MESSAGES/eog.mo
 share/locale/ta/LC_MESSAGES/eog.mo
+share/locale/te/LC_MESSAGES/eog.mo
 share/locale/th/LC_MESSAGES/eog.mo
 share/locale/tk/LC_MESSAGES/eog.mo
 share/locale/tr/LC_MESSAGES/eog.mo
@@ -177,7 +183,35 @@ share/omf/eog/eog-sv.omf
 share/omf/eog/eog-uk.omf
 share/omf/eog/eog-zh_CN.omf
 share/omf/eog/eog-zh_TW.omf
+share/pixmaps/eog/thumbnail-frame.png
+@dirrm share/pixmaps/eog
 @dirrm share/omf/eog
+@dirrmtry share/locale/zu/LC_MESSAGES
+@dirrmtry share/locale/zu
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/xh/LC_MESSAGES
+@dirrmtry share/locale/xh
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/nso/LC_MESSAGES
+@dirrmtry share/locale/nso
+@dirrmtry share/locale/mg/LC_MESSAGES
+@dirrmtry share/locale/mg
+@dirrmtry share/locale/ku/LC_MESSAGES
+@dirrmtry share/locale/ku
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/help/eog/zh_TW/figures
 @dirrm share/gnome/help/eog/zh_TW
 @dirrm share/gnome/help/eog/zh_CN/figures
@@ -212,29 +246,7 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
 @dirrm %%DATADIR%%
-@dirrm include/eog/eog
-@dirrm include/eog
+@dirrm include/eog-2.20/eog
+@dirrm include/eog-2.20
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@dirrmtry share/locale/zu/LC_MESSAGES
-@dirrmtry share/locale/zu
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/xh/LC_MESSAGES
-@dirrmtry share/locale/xh
-@dirrmtry share/locale/ug/LC_MESSAGES
-@dirrmtry share/locale/ug
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/nso/LC_MESSAGES
-@dirrmtry share/locale/nso
-@dirrmtry share/locale/mg/LC_MESSAGES
-@dirrmtry share/locale/mg
-@dirrmtry share/locale/ku/LC_MESSAGES
-@dirrmtry share/locale/ku
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
