@@ -3,7 +3,7 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino/Makefile,v 1.42 2007/07/01 16:18:38 mezz Exp $
+#   $MCom: ports/net/vino/Makefile,v 1.43 2007/07/10 03:33:14 ahze Exp $
 #
 
 PORTNAME=	vino
@@ -30,5 +30,12 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	vino-server.schemas
+
+.if !defined(WITHOUT_NOTIFY)
+LIB_DEPENDS+=	notify.1:${PORTSDIR}/devel/libnotify
+CONFIGURE_ARGS+=--enable-libnotify=yes
+.else
+CONFIGURE_ARGS+=--enable-libnotify=no
+.endif
 
 .include <bsd.port.mk>

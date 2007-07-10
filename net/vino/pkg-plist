@@ -4,7 +4,6 @@ libdata/bonobo/servers/GNOME_RemoteDesktop.server
 libexec/vino-server
 share/applications/vino-preferences.desktop
 share/icons/hicolor/48x48/apps/gnome-remote-desktop.png
-share/icons/hicolor/icon-theme.cache
 share/locale/ar/LC_MESSAGES/vino.mo
 share/locale/az/LC_MESSAGES/vino.mo
 share/locale/bg/LC_MESSAGES/vino.mo
@@ -82,8 +81,12 @@ share/locale/zh_TW/LC_MESSAGES/vino.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
