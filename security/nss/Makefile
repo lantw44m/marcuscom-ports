@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/security/nss/Makefile,v 1.6 2006/12/17 21:46:42 marcus Exp $
+#    $MCom: ports/security/nss/Makefile,v 1.8 2007/07/05 16:50:41 ahze Exp $
 
 PORTNAME=	nss
 DISTVERSION=	${_MAJOR}.${_MINOR}.${_PATCH}-1
@@ -12,6 +12,7 @@ MASTER_SITES=	LOCAL
 MASTER_SITE_SUBDIR=	ahze
 #MASTER_SITES=	${MASTER_SITE_MOZILLA}
 #MASTER_SITE_SUBDIR=	security/nss/releases/NSS_${PORTVERSION:S/./_/g}_RTM/src
+DISTNAME=	${PORTNAME}-3.11.5-1
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Libraries to support development of security-enabled applications
@@ -21,7 +22,7 @@ LIB_DEPENDS=	nspr4.1:${PORTSDIR}/devel/nspr
 
 _MAJOR=	3
 _MINOR=	11
-_PATCH=	5
+_PATCH=	7
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/mozilla/security/nss
 
