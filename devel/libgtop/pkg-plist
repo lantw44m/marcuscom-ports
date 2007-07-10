@@ -1,6 +1,7 @@
 bin/libgtop_daemon2
 bin/libgtop_server2
 include/libgtop-2.0/glibtop.h
+include/libgtop-2.0/glibtop_private.h
 include/libgtop-2.0/glibtop/close.h
 include/libgtop-2.0/glibtop/command.h
 include/libgtop-2.0/glibtop/cpu.h
