@@ -3,15 +3,16 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/devel/nspr/Makefile,v 1.1 2007/07/05 13:49:54 ahze Exp $
 
 PORTNAME=	nspr
-DISTVERSION=	4.6.6-1
+DISTVERSION=	4.6.7-1
 CATEGORIES=	devel
 MASTER_SITES=	LOCAL
 MASTER_SITE_SUBDIR=	ahze
 #MASTER_SITES=	${MASTER_SITE_MOZILLA}
 #MASTER_SITE_SUBDIR=	nspr/releases/v${PORTVERSION}/src
+DISTNAME=	${PORTNAME}-4.6.6-1
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A platform-neutral API for system level and libc like functions
