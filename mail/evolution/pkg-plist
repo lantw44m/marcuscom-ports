@@ -295,10 +295,13 @@ lib/evolution/%%VERSION%%/libfilter.so.0
 lib/evolution/%%VERSION%%/libmenus.la
 lib/evolution/%%VERSION%%/libmenus.so
 lib/evolution/%%VERSION%%/libmenus.so.0
+lib/evolution/%%VERSION%%/plugins/attachment-reminder.glade
 lib/evolution/%%VERSION%%/plugins/libmail-account-disable.la
 lib/evolution/%%VERSION%%/plugins/libmail-account-disable.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-addressbook-file.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-addressbook-file.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-attachment-reminder.la
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-attachment-reminder.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-file.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-file.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-http.la
@@ -367,6 +370,7 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-compose-send-options.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-copy-tool.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-default-mailer.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-default-source.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-attachment-reminder.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-bbdb.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-caldav.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-hula-account-setup.eplug
@@ -440,6 +444,7 @@ share/evolution/%%VERSION%%/errors/e-system.error
 share/evolution/%%VERSION%%/errors/filter.error
 share/evolution/%%VERSION%%/errors/mail-composer.error
 share/evolution/%%VERSION%%/errors/mail.error
+share/evolution/%%VERSION%%/errors/org-gnome-attachment-reminder.errors.xml
 share/evolution/%%VERSION%%/errors/org-gnome-default-mailer.error
 share/evolution/%%VERSION%%/errors/org-gnome-exchange-operations.error
 share/evolution/%%VERSION%%/errors/org-gnome-itip-formatter.error
@@ -1231,6 +1236,7 @@ share/locale/pt_BR/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ro/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ru/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/rw/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/si/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/sk/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/sl/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/sq/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -1352,6 +1358,8 @@ share/locale/zh_TW/LC_MESSAGES/evolution-%%VERSION%%.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
