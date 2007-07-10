@@ -3,12 +3,11 @@
 # Whom:				Adam Weinberger <adamw@freebsd.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/gok/Makefile,v 1.76 2007/05/30 03:21:41 mezz Exp $
+#    $MCom: ports/accessibility/gok/Makefile,v 1.77 2007/05/30 16:52:57 mezz Exp $
 #
 
 PORTNAME=	gok
-PORTVERSION=	1.2.5
-PORTREVISION=	1
+PORTVERSION=	1.3.1
 PORTEPOCH=	1
 CATEGORIES=	accessibility sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
