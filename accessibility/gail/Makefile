@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gail/Makefile,v 1.61 2007/06/05 21:48:13 mezz Exp $
+#   $MCom: ports/accessibility/gail/Makefile,v 1.62 2007/07/10 16:24:43 ahze Exp $
 #
 
 PORTNAME=	gail
@@ -26,7 +26,7 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_GNOME=	gnomehack ltverhack libgnomecanvas lthack referencehack
+USE_GNOME=	gnomehack ltverhack gtk20 lthack referencehack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-gtk-doc \
