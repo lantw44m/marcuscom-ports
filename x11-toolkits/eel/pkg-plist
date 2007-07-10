@@ -109,6 +109,7 @@ share/locale/pt_BR/LC_MESSAGES/eel-2.0.mo
 share/locale/ro/LC_MESSAGES/eel-2.0.mo
 share/locale/ru/LC_MESSAGES/eel-2.0.mo
 share/locale/rw/LC_MESSAGES/eel-2.0.mo
+share/locale/si/LC_MESSAGES/eel-2.0.mo
 share/locale/sk/LC_MESSAGES/eel-2.0.mo
 share/locale/sl/LC_MESSAGES/eel-2.0.mo
 share/locale/sq/LC_MESSAGES/eel-2.0.mo
@@ -134,6 +135,8 @@ share/locale/zh_TW/LC_MESSAGES/eel-2.0.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
