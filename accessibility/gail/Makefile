@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/gail/Makefile,v 1.62 2007/07/10 16:24:43 ahze Exp $
+#   $MCom: ports/accessibility/gail/Makefile,v 1.63 2007/07/10 17:17:57 ahze Exp $
 #
 
 PORTNAME=	gail
