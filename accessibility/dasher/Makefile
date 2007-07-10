@@ -3,12 +3,11 @@
 # Whom:					lewiz <purple@lewiz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/dasher/Makefile,v 1.53 2007/05/15 21:36:19 marcus Exp $
+#   $MCom: ports/accessibility/dasher/Makefile,v 1.54 2007/05/19 21:35:52 marcus Exp $
 #
 
 PORTNAME=	dasher
-PORTVERSION=	4.5.0
-PORTREVISION=	1
+PORTVERSION=	4.5.2
 PORTEPOCH=	1
 CATEGORIES=	accessibility editors x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -40,10 +39,11 @@ MAN1=		dasher.1
 
 .include <bsd.port.pre.mk>
 
-.if ${HAVE_GNOME:Mgnomespeech}!=""
-USE_GNOME+=	gnomespeech
-CONFIGURE_ARGS+=--enable-speech
-.endif
+#.if ${HAVE_GNOME:Mgnomespeech}!=""
+#USE_GNOME+=	gnomespeech
+#CONFIGURE_ARGS+=--enable-speech
+#.endif
+CONFIGURE_ARGS+=	--disable-speech
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||g' ${WRKSRC}/configure
