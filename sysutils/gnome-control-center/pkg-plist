@@ -85,7 +85,6 @@ share/desktop-directories/theme-method.directory
 %%DATADIR%%/glade/modmap-dialog.glade
 %%DATADIR%%/glade/sound-properties.glade
 %%DATADIR%%/gnome-default-applications.xml
-%%DATADIR%%/icons/display-capplet.png
 %%DATADIR%%/keybindings/00-multimedia-key.xml
 %%DATADIR%%/keybindings/01-desktop-key.xml
 %%DATADIR%%/pixmaps/accessibility-keyboard-bouncekey.png
@@ -105,6 +104,8 @@ share/desktop-directories/theme-method.directory
 %%DATADIR%%/pixmaps/double-click-on.png
 %%ABOUTME%%%%DATADIR%%/pixmaps/gnome-about-me-lock-open.png
 %%ABOUTME%%%%DATADIR%%/pixmaps/gnome-about-me-lock.png
+%%DATADIR%%/pixmaps/gtk-theme-thumbnailing.png
+%%DATADIR%%/pixmaps/icon-theme-thumbnailing.png
 %%DATADIR%%/pixmaps/keyboard-bell.png
 %%DATADIR%%/pixmaps/keyboard-cursor.png
 %%DATADIR%%/pixmaps/keyboard-repeat.png
@@ -123,6 +124,7 @@ share/desktop-directories/theme-method.directory
 %%DATADIR%%/pixmaps/subpixel-vrgb.png
 %%DATADIR%%/pixmaps/theme-thumbnailing.png
 %%DATADIR%%/pixmaps/visual-bell.png
+%%DATADIR%%/pixmaps/window-theme-thumbnailing.png
 %%DATADIR%%/xrdb/Editres.ad
 %%DATADIR%%/xrdb/Emacs.ad
 %%DATADIR%%/xrdb/General.ad
@@ -152,11 +154,28 @@ share/gnome/help/control-center/en_GB/control-center.xml
 share/gnome/help/control-center/es/control-center.xml
 share/gnome/help/control-center/fr/control-center.xml
 share/gnome/help/control-center/pa/control-center.xml
+share/gnome/help/control-center/pt_BR/control-center.xml
 share/gnome/help/control-center/ru/control-center.xml
 share/gnome/help/control-center/sv/control-center.xml
 share/gnome/help/control-center/uk/control-center.xml
+share/gnome/help/control-center/vi/control-center.xml
 share/gnome/help/control-center/zh_CN/control-center.xml
+share/icons/hicolor/16x16/apps/gnome-display-properties.png
+share/icons/hicolor/16x16/apps/gnome-network-preferences.png
+share/icons/hicolor/16x16/apps/gnome-sound-properties.png
+share/icons/hicolor/22x22/apps/gnome-display-properties.png
+share/icons/hicolor/22x22/apps/gnome-network-preferences.png
+share/icons/hicolor/22x22/apps/gnome-sound-properties.png
+share/icons/hicolor/24x24/apps/gnome-display-properties.png
+share/icons/hicolor/24x24/apps/gnome-network-preferences.png
+share/icons/hicolor/24x24/apps/gnome-sound-properties.png
+share/icons/hicolor/32x32/apps/gnome-display-properties.png
+share/icons/hicolor/32x32/apps/gnome-network-preferences.png
+share/icons/hicolor/32x32/apps/gnome-sound-properties.png
 share/icons/hicolor/48x48/apps/typing-monitor.png
+share/icons/hicolor/scalable/apps/gnome-display-properties.svg
+share/icons/hicolor/scalable/apps/gnome-network-preferences.svg
+share/icons/hicolor/scalable/apps/gnome-sound-properties.svg
 share/icons/hicolor/scalable/apps/typing-monitor.svg
 share/locale/af/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-control-center-2.0.mo
@@ -244,36 +263,13 @@ share/omf/control-center/control-center-en_GB.omf
 share/omf/control-center/control-center-es.omf
 share/omf/control-center/control-center-fr.omf
 share/omf/control-center/control-center-pa.omf
+share/omf/control-center/control-center-pt_BR.omf
 share/omf/control-center/control-center-ru.omf
 share/omf/control-center/control-center-sv.omf
 share/omf/control-center/control-center-uk.omf
+share/omf/control-center/control-center-vi.omf
 share/omf/control-center/control-center-zh_CN.omf
-share/pixmaps/display-capplet.png
 @dirrm share/omf/control-center
-@dirrm share/gnome/help/control-center/zh_CN
-@dirrm share/gnome/help/control-center/uk
-@dirrm share/gnome/help/control-center/sv
-@dirrm share/gnome/help/control-center/ru
-@dirrm share/gnome/help/control-center/pa
-@dirrm share/gnome/help/control-center/fr
-@dirrm share/gnome/help/control-center/es
-@dirrm share/gnome/help/control-center/en_GB
-@dirrm share/gnome/help/control-center/C
-@dirrm share/gnome/help/control-center
-@dirrm share/gnome/cursor-fonts
-@dirrm %%DATADIR%%/xrdb
-@dirrm %%DATADIR%%/pixmaps
-@dirrmtry %%DATADIR%%/icons
-@dirrm %%DATADIR%%/glade
-@dirrm share/desktop-directories
-@dirrm lib/window-manager-settings
-@dirrm include/gnome-window-settings-2.0
-@dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
-@dirrm include/gnome-settings-daemon-2.0
-@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
-@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -298,3 +294,28 @@ share/pixmaps/display-capplet.png
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrm share/gnome/help/control-center/zh_CN
+@dirrm share/gnome/help/control-center/vi
+@dirrm share/gnome/help/control-center/uk
+@dirrm share/gnome/help/control-center/sv
+@dirrm share/gnome/help/control-center/ru
+@dirrm share/gnome/help/control-center/pt_BR
+@dirrm share/gnome/help/control-center/pa
+@dirrm share/gnome/help/control-center/fr
+@dirrm share/gnome/help/control-center/es
+@dirrm share/gnome/help/control-center/en_GB
+@dirrm share/gnome/help/control-center/C
+@dirrm share/gnome/help/control-center
+@dirrm share/gnome/cursor-fonts
+@dirrm %%DATADIR%%/xrdb
+@dirrm %%DATADIR%%/pixmaps
+@dirrm %%DATADIR%%/glade
+@dirrm share/desktop-directories
+@dirrm lib/window-manager-settings
+@dirrm include/gnome-window-settings-2.0
+@dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
+@dirrm include/gnome-settings-daemon-2.0
+@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
