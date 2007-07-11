@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.94 2007/07/02 20:15:03 mezz Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.95 2007/07/10 20:18:08 mezz Exp $
 #
 
 PORTNAME=	epiphany-extensions
 PORTVERSION=	2.19.5
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -33,7 +34,7 @@ CONFIGURE_ARGS=	--with-mozilla=${GECKO}
 
 GCONF_SCHEMAS=	smart-bookmarks.schemas
 
-EPHY_EXTENSIONS=all
+EPHY_EXTENSIONS=all,rss
 EPHY_VERSION=	2.19
 
 PLIST_SUB=	VERSION="2.19" EPHY_VERSION=${EPHY_VERSION}

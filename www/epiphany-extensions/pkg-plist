@@ -40,6 +40,8 @@ lib/epiphany/%%VERSION%%/extensions/libpageinfoextension.la
 lib/epiphany/%%VERSION%%/extensions/libpageinfoextension.so
 lib/epiphany/%%VERSION%%/extensions/libpushscrollerextension.la
 lib/epiphany/%%VERSION%%/extensions/libpushscrollerextension.so
+lib/epiphany/%%VERSION%%/extensions/librssextension.la
+lib/epiphany/%%VERSION%%/extensions/librssextension.so
 lib/epiphany/%%VERSION%%/extensions/libselectstylesheetextension.la
 lib/epiphany/%%VERSION%%/extensions/libselectstylesheetextension.so
 lib/epiphany/%%VERSION%%/extensions/libsidebarextension.la
@@ -53,6 +55,7 @@ lib/epiphany/%%VERSION%%/extensions/libtabstatesextension.so
 lib/epiphany/%%VERSION%%/extensions/page-info.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/push-scroller.ephy-extension
 %%PYTHON%%lib/epiphany/%%VERSION%%/extensions/python-console.ephy-extension
+lib/epiphany/%%VERSION%%/extensions/rss.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/select-stylesheet.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/sidebar.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/smart-bookmarks.ephy-extension
@@ -67,8 +70,14 @@ lib/epiphany/%%VERSION%%/extensions/tab-states.ephy-extension
 %%DATADIR%%/glade/error-viewer.glade
 %%DATADIR%%/glade/extensions-manager-ui.glade
 %%DATADIR%%/glade/page-info.glade
+%%DATADIR%%/glade/rss-ui.glade
 %%DATADIR%%/xml/epiphany-sidebar-ui.xml
 %%DATADIR%%/xml/page-info-context-ui.xml
+share/epiphany/icons/hicolor/16x16/status/feed-presence.png
+share/epiphany/icons/hicolor/22x22/status/feed-presence.png
+share/epiphany/icons/hicolor/24x24/status/feed-presence.png
+share/epiphany/icons/hicolor/32x32/status/feed-presence.png
+share/epiphany/icons/hicolor/scalable/status/feed-presence.svg
 share/gnome/help/epiphany-extensions/C/epiphany-extensions.xml
 share/gnome/help/epiphany-extensions/C/figures/epi-ext-action-create.png
 share/gnome/help/epiphany-extensions/C/figures/epi-ext-adblocker.png
