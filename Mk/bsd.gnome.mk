@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.423 2007/06/29 03:49:59 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.424 2007/07/03 17:44:07 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -306,11 +306,11 @@ gnomevfs2_USE_GNOME_IMPL=gconf2 libbonobo gnomemimedata
 
 gail_LIB_DEPENDS=	gailutil.18:${PORTSDIR}/accessibility/gail
 gail_DETECT=		${LOCALBASE}/libdata/pkgconfig/gail.pc
-gail_USE_GNOME_IMPL=	libgnomecanvas
+gail_USE_GNOME_IMPL=	gtk20
 
 libgnomecanvas_LIB_DEPENDS=	gnomecanvas-2.0:${PORTSDIR}/graphics/libgnomecanvas
 libgnomecanvas_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomecanvas-2.0.pc
-libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2
+libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2 gail
 
 libartlgpl2_LIB_DEPENDS=	art_lgpl_2.5:${PORTSDIR}/graphics/libart_lgpl
 libartlgpl2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libart-2.0.pc
