@@ -3,7 +3,7 @@
 # Whom:					lewiz <purple@lewiz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/dasher/Makefile,v 1.54 2007/05/19 21:35:52 marcus Exp $
+#   $MCom: ports/accessibility/dasher/Makefile,v 1.55 2007/07/10 03:57:48 marcus Exp $
 #
 
 PORTNAME=	dasher
@@ -49,5 +49,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-O2||g' ${WRKSRC}/configure
 	@${FIND} ${WRKSRC} -name "Makefile.in" | ${XARGS} ${REINPLACE_CMD} -e \
 		's|-O2||g'
+.if ${OSVERSION} >= 700042
+	@${REINPLACE_CMD} -e 's|__gnu_cxx::lldiv|lldiv|' \
+	    	${WRKSRC}/Src/DasherCore/DasherViewSquare.cpp
+.endif
 
 .include <bsd.port.post.mk>
