@@ -48,6 +48,14 @@ sbin/gdmsetup
 %%DATADIR%%/gdmchooser.glade
 %%DATADIR%%/gdmphotosetup.glade
 %%DATADIR%%/gdmsetup.glade
+%%DATADIR%%/icons/hicolor/24x24/actions/system-log-out.png
+%%DATADIR%%/icons/hicolor/24x24/actions/system-restart.png
+%%DATADIR%%/icons/hicolor/24x24/actions/system-shut-down.png
+%%DATADIR%%/icons/hicolor/24x24/actions/system-suspend.png
+%%DATADIR%%/icons/hicolor/24x24/apps/preferences-desktop-locale.png
+%%DATADIR%%/icons/hicolor/24x24/apps/preferences-desktop-remote-desktop.png
+%%DATADIR%%/icons/hicolor/24x24/places/user-desktop.png
+%%DATADIR%%/icons/hicolor/icon-theme.cache
 %%DATADIR%%/themes/circles/GdmGreeterTheme.desktop
 %%DATADIR%%/themes/circles/background.svg
 %%DATADIR%%/themes/circles/circles.xml
@@ -78,6 +86,10 @@ share/gnome/help/gdm/uk/gdm.xml
 share/icons/hicolor/16x16/apps/gdm-xnest.png
 share/icons/hicolor/32x32/apps/gdm-setup.png
 share/icons/hicolor/32x32/apps/gdm-xnest.png
+share/icons/hicolor/48x48/apps/gdm-login-photo.png
+share/icons/hicolor/48x48/apps/gdm-setup.png
+share/icons/hicolor/48x48/apps/gdm-xnest.png
+share/icons/hicolor/48x48/apps/gdm.png
 share/locale/af/LC_MESSAGES/gdm.mo
 share/locale/am/LC_MESSAGES/gdm.mo
 share/locale/ar/LC_MESSAGES/gdm.mo
@@ -141,6 +153,7 @@ share/locale/pt_BR/LC_MESSAGES/gdm.mo
 share/locale/ro/LC_MESSAGES/gdm.mo
 share/locale/ru/LC_MESSAGES/gdm.mo
 share/locale/rw/LC_MESSAGES/gdm.mo
+share/locale/si/LC_MESSAGES/gdm.mo
 share/locale/sk/LC_MESSAGES/gdm.mo
 share/locale/sl/LC_MESSAGES/gdm.mo
 share/locale/sq/LC_MESSAGES/gdm.mo
@@ -190,10 +203,6 @@ share/pixmaps/faces/sunset.jpg
 share/pixmaps/faces/tennis-ball.png
 share/pixmaps/faces/yellow-rose.jpg
 share/pixmaps/gdm-foot-logo.png
-share/pixmaps/gdm-setup.png
-share/pixmaps/gdm-xnest.png
-share/pixmaps/gdm.png
-share/pixmaps/login-photo.png
 share/pixmaps/nobody.png
 share/pixmaps/nohost.png
 share/xsessions/gnome.desktop
@@ -212,6 +221,12 @@ share/xsessions/gnome.desktop
 @dirrm %%DATADIR%%/themes/happygnome
 @dirrm %%DATADIR%%/themes/circles
 @dirrm %%DATADIR%%/themes
+@dirrm %%DATADIR%%/icons/hicolor/24x24/places
+@dirrm %%DATADIR%%/icons/hicolor/24x24/apps
+@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/applications
 @dirrm %%DATADIR%%/BuiltInSessions
 @dirrm %%DATADIR%%
@@ -235,6 +250,8 @@ share/xsessions/gnome.desktop
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
