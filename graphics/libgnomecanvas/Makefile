@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libgnomecanvas/Makefile,v 1.60 2006/09/10 00:51:11 mezz Exp $
+#   $MCom: ports/graphics/libgnomecanvas/Makefile,v 1.62 2007/07/10 16:36:34 ahze Exp $
 
 PORTNAME=	libgnomecanvas
 PORTVERSION=	2.19.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -30,6 +30,10 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|gail-1.0|gail|g' \
+		${WRKSRC}/libgnomecanvas/libgnomecanvas-2.0.pc.in
 
 .include <bsd.port.mk>
 
