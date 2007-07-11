@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libgnomecanvas/Makefile,v 1.64 2007/07/11 13:14:24 ahze Exp $
+#   $MCom: ports/graphics/libgnomecanvas/Makefile,v 1.65 2007/07/11 13:37:04 mezz Exp $
+#
 
 PORTNAME=	libgnomecanvas
 PORTVERSION=	2.19.1
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -25,7 +26,7 @@ USE_GETTEXT=	yes
 USE_XLIB=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_GNOME=	gnomehack libglade2 libartlgpl2 ltverhack referencehack
+USE_GNOME=	gnomehack libglade2 libartlgpl2 ltverhack referencehack gail
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
