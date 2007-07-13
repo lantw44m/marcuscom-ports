@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.158 2007/07/06 20:59:21 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.159 2007/07/09 22:23:31 marcus Exp $
 #
 
 PORTNAME=	gnome-applets
 PORTVERSION=	2.18.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -99,8 +99,6 @@ PLIST_SUB+=	PYTHON="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' \
 		${WRKSRC}/libgweather/weather-met.c
-	@${REINPLACE_CMD} -e 's|system-tools-backends|system-tools-backends-2.0|g' \
-	    	${WRKSRC}/configure
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 	    	's|" == "|" = "|g'
 .if !defined(USE_PYTHON)
