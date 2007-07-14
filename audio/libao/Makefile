@@ -2,7 +2,7 @@
 # Date created:				18 October 2000
 # Whom:					t.vanklaveren@student.utwente.nl
 #
-# $FreeBSD: ports/audio/libao/Makefile,v 1.39 2007/07/14 20:06:15 naddy Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libao
