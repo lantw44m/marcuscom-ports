@@ -3,8 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/goffice/Makefile,v 1.27 2007/05/30 17:42:15 mezz Exp $
+#   $MCom: ports/devel/goffice/Makefile,v 1.28 2007/07/11 19:17:51 mezz Exp $
 #
+# !!! When updating goffice, don't forget to update math/gnumeric and
+#     science/gchempaint pkg-plists too! !!!
 
 PORTNAME=	goffice
 PORTVERSION=	0.4.1
