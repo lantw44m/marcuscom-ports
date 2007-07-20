@@ -7,7 +7,7 @@
 
 PORTNAME=	liferea
 PORTVERSION=	1.2.20
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	liferea
@@ -20,11 +20,11 @@ USE_GECKO=	mozilla firefox
 USE_GNOME=	gnomeprefix gnomehack libgtkhtml
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--mandir=${PREFIX}/man
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		liferea.1
+MANLANG=	"" pl
 GCONF_SCHEMAS=	liferea.schemas
 INSTALLS_ICONS=	yes
 
