@@ -340,8 +340,8 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/toggletoolbutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/toolbar_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/toolbutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/toolitem_p.h
-include/gtkmm-%%API_VERSION%%/gtkmm/private/tooltips_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/tooltip_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/tooltips_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/treedragdest_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/treedragsource_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/treeiter_p.h
