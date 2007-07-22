@@ -799,6 +799,7 @@ share/mime/packages/anjuta.xml
 @dirrm share/gnome/help/anjuta-manual
 @dirrm share/gnome/help/anjuta-faqs/C
 @dirrm share/gnome/help/anjuta-faqs
+@dirrmtry share/icons/gnome/48x48/mimetypes
 @dirrm share/anjuta/ui
 @dirrm share/anjuta/tools
 @dirrm share/anjuta/scripts
