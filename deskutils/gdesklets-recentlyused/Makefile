@@ -30,12 +30,12 @@ do-build:
 	@${FIND} ${WRKSRC} -name '*.orig' -delete
 
 do-install:
-	@${MKDIR} ${DATADIR}/gdesklets/Displays/${NAME}
-	@${MKDIR} ${DATADIR}/gdesklets/Sensors/${NAME}
-	@${INSTALL_DATA} ${WRKSRC}/*.display ${DATADIR}/gdesklets/Displays/${NAME}/
-	@${INSTALL_DATA} ${WRKSRC}/${NAME}/*.py ${DATADIR}/gdesklets/Sensors/${NAME}/
-	@${INSTALL_DATA} ${WRKSRC}/${NAME}/AUTHORS ${DATADIR}/gdesklets/Sensors/${NAME}/
-	@${CP} ${WRKSRC}/${NAME}/.recently-used ${DATADIR}/gdesklets/Sensors/${NAME}/
+	@${MKDIR} ${DATADIR}/Displays/${NAME}
+	@${MKDIR} ${DATADIR}/Sensors/${NAME}
+	@${INSTALL_DATA} ${WRKSRC}/*.display ${DATADIR}/Displays/${NAME}/
+	@${INSTALL_DATA} ${WRKSRC}/${NAME}/*.py ${DATADIR}/Sensors/${NAME}/
+	@${INSTALL_DATA} ${WRKSRC}/${NAME}/AUTHORS ${DATADIR}/Sensors/${NAME}/
+	@${CP} ${WRKSRC}/${NAME}/.recently-used ${DATADIR}/Sensors/${NAME}/
 
 post-install:
 	@${CAT} ${PKGMESSAGE}

@@ -1,0 +1,7 @@
+bin/gruler
+share/applications/gruler.desktop
+share/gruler/glade/gruler-icon.png
+share/gruler/glade/gruler.glade
+share/pixmaps/gruler-icon.png
+@dirrm share/gruler/glade
+@dirrm share/gruler
