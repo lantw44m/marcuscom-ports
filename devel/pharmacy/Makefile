@@ -1,0 +1,31 @@
+# New ports collection makefile for:	pharmacy
+# Date created:				02 October 1999
+# Whom:					Chris D. Faulhaber <jedgar@fxp.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	pharmacy
+PORTVERSION=	0.2.1a
+PORTREVISION=	4
+CATEGORIES=	devel gnome
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
+MASTER_SITE_SUBDIR= ${PORTNAME}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	GNOME frontend for CVS
+
+USE_X_PREFIX=	yes
+USE_GMAKE=	yes
+USE_GNOME=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	CPPCFLAGS="-I${LOCALBASE}/include" \
+		LIBS="-L${LOCALBASE}/lib"
+
+pre-patch:
+	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|g ; \
+		s|\(DATADIRNAME=\)lib|\1share|g ; \
+		s|USE_INCLUDED_LIBINTL=yes|#&|g ; \
+		s|\$$(top_builddir)/intl/libintl.a|-lintl|g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>
