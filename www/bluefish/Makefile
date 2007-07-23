@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <einekoai@chello.nl>
 #
 # $FreeBSD$
-#   $MCom: ports/www/bluefish/Makefile,v 1.3 2007/04/30 17:08:53 ahze Exp $
+#   $MCom: ports/www/bluefish/Makefile,v 1.4 2007/05/19 21:36:25 marcus Exp $
 #
 
 PORTNAME=	bluefish
@@ -37,8 +37,7 @@ CONFIGURE_ARGS=	--with-freedesktop_org-menu=${PREFIX}/share/applications \
 		--with-freedesktop_org-mime=${PREFIX}/share/mime \
 		--without-gnome2_4-mime \
 		--without-gnome2_4-appreg \
-		--with-icon-path=${PREFIX}/share/pixmaps \
-		--mandir=${MANPREFIX}/man
+		--with-icon-path=${PREFIX}/share/pixmaps
 
 # Turns debugging output on
 .if defined(WITH_DEBUG)

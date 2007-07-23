@@ -3,7 +3,7 @@
 # Whom:                olgeni@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/misc/shared-mime-info/Makefile,v 1.8 2007/05/30 04:26:58 mezz Exp $
+#   $MCom: ports/misc/shared-mime-info/Makefile,v 1.9 2007/07/04 15:52:38 mezz Exp $
 #
 
 PORTNAME=	shared-mime-info
@@ -20,7 +20,6 @@ GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	glib20 libxml2 intltool gnomehack intlhack
-CONFIGURE_ARGS=	--mandir=${MANPREFIX}/man
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

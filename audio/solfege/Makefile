@@ -4,7 +4,7 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#   $MCom: ports/audio/solfege/Makefile,v 1.3 2007/05/30 17:08:11 mezz Exp $
+#   $MCom: ports/audio/solfege/Makefile,v 1.4 2007/06/29 22:55:02 mezz Exp $
 #
 
 PORTNAME=	solfege
@@ -27,8 +27,7 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_XML2PO=""
-CONFIGURE_ARGS=	--mandir=${MANPREFIX}/man \
-		--disable-oss-sound \
+CONFIGURE_ARGS=	--disable-oss-sound \
 		--enable-docbook-stylesheet=${STYLESHEET}
 MAKE_ARGS=	skipmanual=yes
 
