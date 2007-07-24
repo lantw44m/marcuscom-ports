@@ -1,0 +1,32 @@
+bin/pureadmin
+share/applications/pureadmin.desktop
+share/pixmaps/pureadmin.png
+share/pureadmin/dialogs.glade
+share/pureadmin/docs/index.txt
+share/pureadmin/docs/introduction.txt
+share/pureadmin/docs/main_window.txt
+share/pureadmin/docs/preferences.txt
+share/pureadmin/docs/user_manager.txt
+share/pureadmin/down.png
+share/pureadmin/logo.png
+share/pureadmin/mainwindow.glade
+share/pureadmin/prefwin.glade
+share/pureadmin/pureadmin-16x16.png
+share/pureadmin/pureadmin-24x24.png
+share/pureadmin/pureadmin-32x32.png
+share/pureadmin/pureadmin-48x48.png
+share/pureadmin/up.png
+share/pureadmin/user.png
+share/pureadmin/user_identity.png
+share/pureadmin/userconfig.png
+share/pureadmin/usericon.png
+share/pureadmin/usermanager.glade
+share/icons/hicolor/16x16/apps/pureadmin.png
+share/icons/hicolor/24x24/apps/pureadmin.png
+share/icons/hicolor/32x32/apps/pureadmin.png
+share/icons/hicolor/48x48/apps/pureadmin.png
+share/locale/fr/LC_MESSAGES/pureadmin.mo
+share/locale/it/LC_MESSAGES/pureadmin.mo
+share/locale/sv/LC_MESSAGES/pureadmin.mo
+@dirrm share/pureadmin/docs
+@dirrm share/pureadmin
