@@ -28,12 +28,12 @@ include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-find-directory.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-handle.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-init.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-job-limit.h
-include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-deprecated.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-handlers.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-info-cache.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-monitor.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime-utils.h
+include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-mime.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-module-callback.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-monitor.h
 include/gnome-vfs-2.0/libgnomevfs/gnome-vfs-ops.h
