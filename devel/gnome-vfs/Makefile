@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.173 2007/05/20 06:19:03 marcus Exp $
+#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.174 2007/07/27 16:31:22 mezz Exp $
 #
 
 PORTNAME=	gnome-vfs
@@ -96,6 +96,10 @@ pre-configure:
 		${ECHO_CMD} "${PKGNAME}: bind installed with PORT_REPLACES_BASE_BIND causes build problems."; \
 		${FALSE}; \
 	fi
+.if defined(WITHOUT_KERBEROS)
+	@${ECHO_CMD} "${PKGNAME}: KERBEROS is required."
+	@${FALSE}
+.endif
 
 post-install:
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
