@@ -221,7 +221,12 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.pyc
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.pyo
 share/applications/orca.desktop
+share/icons/hicolor/16x16/apps/orca.png
+share/icons/hicolor/22x22/apps/orca.png
+share/icons/hicolor/24x24/apps/orca.png
+share/icons/hicolor/32x32/apps/orca.png
 share/icons/hicolor/48x48/apps/orca.png
+share/icons/hicolor/scalable/apps/orca.svg
 share/locale/ar/LC_MESSAGES/orca.mo
 share/locale/bg/LC_MESSAGES/orca.mo
 share/locale/bn/LC_MESSAGES/orca.mo
