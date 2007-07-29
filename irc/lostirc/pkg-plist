@@ -1,0 +1,11 @@
+bin/lostirc
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/INSTALL
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+share/applications/lostirc.desktop
+share/pixmaps/lostirc.png
+share/locale/da/LC_MESSAGES/lostirc.mo
+share/locale/fr/LC_MESSAGES/lostirc.mo
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
