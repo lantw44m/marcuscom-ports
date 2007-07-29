@@ -1,0 +1,21 @@
+--- Makefile.in.orig	Sat Dec 31 08:25:57 2005
++++ Makefile.in	Fri Jan  6 20:18:02 2006
+@@ -251,7 +251,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = m4m art doc help omf-install packaging pixmaps po src test
++SUBDIRS = m4m art doc $(GNOME_SUBDIRS) packaging pixmaps po src test
+ ACLOCAL_AMFLAGS = -I m4m
+ 
+ ########################################################################
+@@ -705,8 +705,7 @@
+ 
+ info-am:
+ 
+-install-data-am: install-desktopDATA install-gtkamdocDATA \
+-	install-iconDATA
++install-data-am:
+ 
+ install-exec-am:
+ 
