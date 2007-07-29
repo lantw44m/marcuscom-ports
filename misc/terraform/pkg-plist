@@ -1,0 +1,98 @@
+bin/terraform
+%%PORTDOCS%%%%DOCSDIR%%/FAQ.sgml
+%%PORTDOCS%%%%DOCSDIR%%/README.sgml
+%%PORTDOCS%%%%DOCSDIR%%/UsersGuide.sgml
+%%PORTDOCS%%%%DOCSDIR%%/i18n.txt
+share/gnome/apps/Graphics/Terraform.desktop
+share/gnome/help/terraform/C/faq.html
+share/gnome/help/terraform/C/hacking.html
+share/gnome/help/terraform/C/index.html
+share/gnome/help/terraform/C/mainwindow.png
+share/gnome/help/terraform/C/povray.png
+share/gnome/help/terraform/C/templates.html
+share/gnome/help/terraform/C/terrainwindow.png
+share/gnome/help/terraform/C/topic.dat
+share/gnome/help/terraform/C/tutorial.html
+share/gnome/help/terraform/C/wire.png
+share/gnome/help/terraform/fr/faq.html
+share/gnome/help/terraform/fr/hacking.html
+share/gnome/help/terraform/fr/index.html
+share/gnome/help/terraform/fr/templates.html
+share/gnome/help/terraform/fr/topic.dat
+share/gnome/help/terraform/fr/tutorial.html
+share/pixmaps/terraform.png
+share/pixmaps/terraform/add.xpm
+share/pixmaps/terraform/arrow.xpm
+share/pixmaps/terraform/circle.xpm
+share/pixmaps/terraform/crop.xpm
+share/pixmaps/terraform/die.xpm
+share/pixmaps/terraform/gnome-question.png
+share/pixmaps/terraform/rectangle.xpm
+share/pixmaps/terraform/replace.xpm
+share/pixmaps/terraform/seed.xpm
+share/pixmaps/terraform/subtract.xpm
+share/pixmaps/terraform/terraform_logo.xpm
+share/pixmaps/terraform/zoom.xpm
+share/terraform/image_maps/moon_moon.png
+share/terraform/image_maps/sky_test_320x180.tga
+share/terraform/include/atmospheres/earth_fog.inc
+share/terraform/include/atmospheres/earth_haze_fast.inc
+share/terraform/include/atmospheres/earth_haze_slow.inc
+share/terraform/include/atmospheres/fog_ground.inc
+share/terraform/include/atmospheres/rainbow.inc
+share/terraform/include/defaults.inc
+share/terraform/include/earth_textures/earth_canyon_landscape.inc
+share/terraform/include/earth_textures/earth_desert_landscape.inc
+share/terraform/include/earth_textures/earth_green_landscape.inc
+share/terraform/include/earth_textures/earth_mountain_landscape.inc
+share/terraform/include/generic_land.inc
+share/terraform/include/generic_river.inc
+share/terraform/include/river_texture.inc
+share/terraform/include/skies/earth_regular_sky.inc
+share/terraform/include/skies/earth_static_sky.inc
+share/terraform/include/skies/include/clouds_01.inc
+share/terraform/include/skies/include/clouds_02.inc
+share/terraform/include/skies/include/clouds_03.inc
+share/terraform/include/skies/include/clouds_04.inc
+share/terraform/include/skies/include/clouds_05.inc
+share/terraform/include/skies/include/clouds_06.inc
+share/terraform/include/skies/include/clouds_07.inc
+share/terraform/include/skies/include/lights_standard.inc
+share/terraform/include/skies/include/lights_toymodel.inc
+share/terraform/include/skies/include/skycolor_earth.inc
+share/terraform/include/skies/include/stars_01.inc
+share/terraform/include/skies/include/stars_02.inc
+share/terraform/include/skies/include/stars_03.inc
+share/terraform/include/skies/include/stars_04.inc
+share/terraform/include/skies/include/stars_05.inc
+share/terraform/include/skies/include/stars_06.inc
+share/terraform/include/skies/mapped_sky.inc
+share/terraform/include/water/earth_water.inc
+share/terraform/objects/fern.gif
+share/terraform/objects/fern.inc
+share/terraform/objects/monolith.inc
+share/terraform/objects/tree_1.inc
+share/terraform/objects/tree_2.inc
+share/terraform/objects/tree_3.inc
+share/terraform/objects/tree_4.gif
+share/terraform/objects/tree_4.inc
+share/terraform/objects/tree_5.gif
+share/terraform/objects/tree_5.inc
+share/terraform/objects/tree_6.gif
+share/terraform/objects/tree_6.inc
+share/locale/fr/LC_MESSAGES/terraform.mo
+share/locale/nl/LC_MESSAGES/terraform.mo
+@dirrm share/terraform/objects
+@dirrm share/terraform/include/water
+@dirrm share/terraform/include/skies/include
+@dirrm share/terraform/include/skies
+@dirrm share/terraform/include/earth_textures
+@dirrm share/terraform/include/atmospheres
+@dirrm share/terraform/include
+@dirrm share/terraform/image_maps
+@dirrm share/terraform
+@dirrm share/pixmaps/terraform
+@dirrm share/gnome/help/terraform/fr
+@dirrm share/gnome/help/terraform/C
+@dirrm share/gnome/help/terraform
+%%PORTDOCS%%@dirrm %%DOCSDIR%%

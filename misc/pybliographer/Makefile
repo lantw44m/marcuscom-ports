@@ -1,0 +1,48 @@
+# New ports collection makefile for:	pybliographer
+# Date created:		7 December 2000
+# Whom:	      		Johann Visagie <johann@egenetics.com>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	pybliographer
+PORTVERSION=	1.0.11
+PORTREVISION=	5
+CATEGORIES=	misc python gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/pybliographer/1.0
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	GUI and command-line tools for editing and searching bibliographic databases
+
+BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-1.2/_gnomemodule.so:${PORTSDIR}/x11-toolkits/py-gnome \
+		recode:${PORTSDIR}/converters/recode
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/gtk-1.2/_gnomemodule.so:${PORTSDIR}/x11-toolkits/py-gnome \
+		recode:${PORTSDIR}/converters/recode
+
+USE_GNOME=	glib12 gnomehack gnomeprefix
+USE_PYTHON=	yes
+USE_X_PREFIX=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		Python="${PYTHON_CMD}"
+CONFIGURE_ARGS=	--with-recode-prefix="${LOCALBASE}"
+
+.include <bsd.port.pre.mk>
+
+pre-patch:
+	@${REINPLACE_CMD} -e 's|glib-config|${GLIB_CONFIG}|g ; \
+		s|$${CONFIG_SHELL-/bin/sh} $$ac_aux_dir|$$ac_aux_dir|' \
+		${WRKSRC}/configure
+.if ${PYTHON_REL} >= 230
+	@${REINPLACE_CMD} 's|@DEFS@||g' ${WRKSRC}/compiled/Makefile.pre.in
+.endif
+
+post-install:
+	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
+		${PREFIX}/share/${PORTNAME}
+	@${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
+		${PREFIX}/share/${PORTNAME}
+
+.include <bsd.port.post.mk>
