@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/xmps/files/patch-libxmps::Makefile.in,v 1.2 2001/04/02 09:12:43 sobomax Exp $
+$FreeBSD$
 
 --- libxmps/Makefile.in.orig	Sun Feb  4 23:01:50 2001
 +++ libxmps/Makefile.in	Sun Feb  4 23:02:33 2001

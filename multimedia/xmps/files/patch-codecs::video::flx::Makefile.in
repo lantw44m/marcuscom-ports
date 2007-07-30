@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/xmps/files/patch-codecs::video::flx::Makefile.in,v 1.1 2001/02/04 22:01:32 sobomax Exp $
+$FreeBSD$
 
 --- codecs/video/flx/Makefile.in.orig	Sat Jan 20 01:53:42 2001
 +++ codecs/video/flx/Makefile.in	Sun Feb  4 22:55:34 2001

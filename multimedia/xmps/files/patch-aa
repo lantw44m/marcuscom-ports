@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/xmps/files/patch-aa,v 1.4 2001/02/04 22:01:32 sobomax Exp $
+$FreeBSD$
 
 --- configure.orig	Sun Feb  4 21:49:31 2001
 +++ configure	Sun Feb  4 21:52:15 2001
@@ -38,7 +38,7 @@ $FreeBSD: ports/multimedia/xmps/files/patch-aa,v 1.4 2001/02/04 22:01:32 sobomax
    
  
 -CFLAGS="$CFLAGS `gtk-config --cflags` -Wall -Werror"
-+CFLAGS="$CFLAGS `$GTK_CONFIG --cflags` -Wall -Werror"
++CFLAGS="$CFLAGS `$GTK_CONFIG --cflags` -Wall"
  
  
  VIDEO_ADDON_PLUGIN_DIR=addons/video

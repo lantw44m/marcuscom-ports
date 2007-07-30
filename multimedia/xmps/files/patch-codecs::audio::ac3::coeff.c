@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/multimedia/xmps/files/patch-codecs::audio::ac3::coeff.c,v 1.1 2001/02/04 22:01:32 sobomax Exp $
+$FreeBSD$
 
 --- codecs/audio/ac3/coeff.c	2001/02/04 21:17:23	1.1
 +++ codecs/audio/ac3/coeff.c	2001/02/04 21:17:55
