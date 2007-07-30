@@ -7,7 +7,7 @@
 
 PORTNAME=	wesnoth
 PORTVERSION=	1.2.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.wesnoth.org/files/
@@ -111,5 +111,9 @@ pre-everything::
 .if !defined(WITH_TOOLS)
 	@${ECHO_MSG} "WITH_TOOLS=yes to enable compilation of tools for translators and artists."
 .endif
+
+post-configure:
+	@${REINPLACE_CMD} -e 's|[$$][{]datarootdir[}]/icons|${LOCALBASE}/share/pixmaps|' \
+			${WRKSRC}/icons/Makefile
 
 .include <bsd.port.post.mk>
