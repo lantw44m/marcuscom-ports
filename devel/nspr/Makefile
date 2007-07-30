@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/nspr/Makefile,v 1.1 2007/07/05 13:49:54 ahze Exp $
+#    $MCom: ports/devel/nspr/Makefile,v 1.2 2007/07/10 14:52:05 ahze Exp $
 
 PORTNAME=	nspr
 DISTVERSION=	4.6.7-1
@@ -71,7 +71,7 @@ libtests:
 
 test: libtests prtests
 
-#.if defined(PARALLEL_PACKAGE_BUILD)
+#.if defined(PACKAGE_BUILDING)
 #post-build: test
 #.else
 post-build:

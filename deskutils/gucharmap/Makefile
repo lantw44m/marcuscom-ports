@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.37 2007/04/28 18:11:37 marcus Exp $
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.38 2007/05/19 21:36:03 marcus Exp $
 #
 
 PORTNAME=	gucharmap
@@ -33,7 +33,7 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 	       	LDFLAGS="-L${LOCALBASE}/lib"
 
-.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
 .undef WITHOUT_ALL
 WITH_GNOME=	yes

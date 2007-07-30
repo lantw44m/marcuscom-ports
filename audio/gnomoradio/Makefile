@@ -3,7 +3,7 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/gnomoradio/Makefile,v 1.3 2007/05/02 14:20:48 ahze Exp $
+#
 
 PORTNAME=		gnomoradio
 PORTVERSION=		0.15.1
@@ -26,14 +26,20 @@ USE_XLIB=		yes
 USE_GCC=		3.4+
 USE_GNOME=		gnomehack gnomeprefix
 USE_AUTOTOOLS=		libtool:15
-USE_LDCONFIG=	yes
+USE_LDCONFIG=		yes
 LIBTOOLFLAGS=		--tag=CXX
 CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include" \
 			LDFLAGS="-L${LOCALBASE}/lib"
+
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} >= 700042
+BROKEN=		Broken with gcc 4.2
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|CCLD = $$(CC)|CCLD = $$(CXX)|; \
 		s|-lpthread|${PTHREAD_LIBS}|' \
 		${WRKSRC}/roboradio/mp3/Makefile.in
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

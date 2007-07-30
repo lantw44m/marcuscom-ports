@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.118 2007/05/19 21:36:03 marcus Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.119 2007/07/04 15:52:37 mezz Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -38,9 +38,5 @@ MAN1=		gnome-dictionary.1 gnome-search-tool.1 gnome-system-log.1 \
 		baobab.1
 GCONF_SCHEMAS=	gnome-dictionary.schemas gnome-screenshot.schemas \
 		gnome-search-tool.schemas logview.schemas baobab.schemas
-
-post-patch:
-	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} -n 10 \
-		${REINPLACE_CMD} -e 's|@mandir@|${MANPREFIX}/man|'
 
 .include <bsd.port.mk>

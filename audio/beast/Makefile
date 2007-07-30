@@ -3,7 +3,7 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/beast/Makefile,v 1.3 2007/05/02 12:13:54 ahze Exp $
+#
 
 PORTNAME=	beast
 PORTVERSION=	0.6.6
@@ -33,6 +33,12 @@ CONFIGURE_ARGS=	--disable-debug \
 MAN1=		beast.1 bsesh.1 sfidl.1
 MAN3=		beast-gxk.3 bse-procs.3 bse-structs.3 bse.3 sfi.3
 
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} >= 700042
+BROKEN=		Does not compile with GCC 4.2
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -Ee 's|$${libdir}/ladspa|${LOCALBASE}/lib/ladspa|; \
 		/FLAGS=/ s/(-g|-ggdb3|-pipe|-O2|-ftracer|-finline-functions|-fno-keep-static-consts)//; \
@@ -42,4 +48,4 @@ post-patch:
 		${WRKSRC}/bse/Makefile.in \
 		${WRKSRC}/bse/zintern/Makefile.in
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
