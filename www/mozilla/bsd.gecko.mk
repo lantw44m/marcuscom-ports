@@ -2,7 +2,7 @@
 # ex:ts=4
 #
 # $FreeBSD$
-#    $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.30 2006/12/09 15:32:06 ahze Exp $
+#   $MCom: ports/www/mozilla/bsd.gecko.mk,v 1.32 2007/07/05 17:01:49 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 

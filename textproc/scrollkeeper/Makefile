@@ -3,11 +3,11 @@
 # Whom:					Rene Hexel <rh@netbsd.org>
 #
 # $FreeBSD$
-#    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.7 2007/02/20 20:26:47 marcus Exp $
+#    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.9 2007/04/26 15:01:41 ahze Exp $
 
 PORTNAME=	scrollkeeper
 PORTVERSION=	0.3.14
-PORTREVISION=	8
+PORTREVISION=	9
 PORTEPOCH=	1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}

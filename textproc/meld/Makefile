@@ -3,42 +3,37 @@
 # Whom:					Pav Lucistnik <pav@oook.cz>
 #
 # $FreeBSD$
-#    $MCom: ports/textproc/meld/Makefile,v 1.5 2007/05/01 13:12:43 ahze Exp $
+#
 
 PORTNAME=	meld
-PORTVERSION=	1.1.4
-PORTREVISION=	4
+PORTVERSION=	1.1.5.1
 CATEGORIES=	textproc devel python
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/1.1
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R:R}
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GNOME 2 visual diff and merge tool
 
-USE_BZIP2=	yes
-USE_GNOME=	pygnome2
-INSTALLS_OMF=	yes
-USE_PYTHON=	yes
-NO_BUILD=	yes
-USE_GMAKE=	yes
-USE_GETTEXT=	yes
-INSTALLS_ICONS=	yes
-
-MAKEFILE=	GNUmakefile
-
 OPTIONS=	PYGNOMEDESKTOP "Code syntax hilighting (many dependencies)" off
 
-post-patch:
-	@${REINPLACE_CMD} 's|%%PREFIX%%|${PREFIX}|g' \
-		${WRKSRC}/INSTALL
+USE_BZIP2=	yes
+USE_GNOME=	pygnome2
+USE_PYTHON=	yes
+USE_GETTEXT=	yes
+USE_GMAKE=	yes
+MAKEFILE=	GNUmakefile
+MAKE_ARGS=	prefix=${PREFIX}
+INSTALLS_ICONS=	yes
+INSTALLS_OMF=	yes
 
-	@${FIND} ${WRKSRC}/help -type f -name ${MAKEFILE} -exec \
-		${REINPLACE_CMD} \
-		's|$$(prefix)/var/lib/scrollkeeper|/var/db/scrollkeeper|g' \
-				"{}" \;
+post-patch:
+	@${FIND} ${WRKSRC} -name "${MAKEFILE}" | ${XARGS} ${REINPLACE_CMD} -e \
+		's|$$(localstatedir)/lib/scrollkeeper|/var/db/scrollkeeper|g'
 
 .include <bsd.port.pre.mk>
-.if defined (WITH_PYGNOMEDESKTOP)
+
+.if defined(WITH_PYGNOMEDESKTOP)
 USE_GNOME+=	pygnomedesktop
 .endif
+
 .include <bsd.port.post.mk>

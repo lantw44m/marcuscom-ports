@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.154 2007/06/18 12:38:17 ahze Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.155 2007/07/08 23:34:00 mezz Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -46,7 +46,7 @@ GCONF_SCHEMAS=	clock.schemas fish.schemas \
 
 OPTIONS=	EVOLUTION "use the Evolution calendar if installed" on
 
-.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
 WITH_GNOME=	yes
 .endif
