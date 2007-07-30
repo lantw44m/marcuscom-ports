@@ -7,7 +7,8 @@
 
 PORTNAME=	libvorbis
 PORTVERSION=	1.2.0
-PORTEPOCH=	4
+PORTREVISION=	1
+PORTEPOCH=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/vorbis/ \
 		http://freebsd.unixfreunde.de/sources/
