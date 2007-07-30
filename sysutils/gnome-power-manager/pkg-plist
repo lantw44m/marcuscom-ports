@@ -34,6 +34,17 @@ share/gnome/help/gnome-power-manager/C/figures/gpm-unplugged.png
 share/gnome/help/gnome-power-manager/C/figures/gs-prefs.png
 share/gnome/help/gnome-power-manager/C/gnome-power-manager.xml
 share/gnome/help/gnome-power-manager/C/legal.xml
+share/gnome/help/gnome-power-manager/ca/figures/gpm-cell-capacity.png
+share/gnome/help/gnome-power-manager/ca/figures/gpm-charged.png
+share/gnome/help/gnome-power-manager/ca/figures/gpm-critical.png
+share/gnome/help/gnome-power-manager/ca/figures/gpm-low.png
+share/gnome/help/gnome-power-manager/ca/figures/gpm-mouse-left.png
+share/gnome/help/gnome-power-manager/ca/figures/gpm-mouse-right.png
+share/gnome/help/gnome-power-manager/ca/figures/gpm-stats-graph.png
+share/gnome/help/gnome-power-manager/ca/figures/gpm-suspend-problem.png
+share/gnome/help/gnome-power-manager/ca/figures/gpm-unplugged.png
+share/gnome/help/gnome-power-manager/ca/figures/gs-prefs.png
+share/gnome/help/gnome-power-manager/ca/gnome-power-manager.xml
 share/gnome/help/gnome-power-manager/es/figures/gpm-cell-capacity.png
 share/gnome/help/gnome-power-manager/es/figures/gpm-charged.png
 share/gnome/help/gnome-power-manager/es/figures/gpm-critical.png
@@ -67,6 +78,17 @@ share/gnome/help/gnome-power-manager/hu/figures/gpm-suspend-problem.png
 share/gnome/help/gnome-power-manager/hu/figures/gpm-unplugged.png
 share/gnome/help/gnome-power-manager/hu/figures/gs-prefs.png
 share/gnome/help/gnome-power-manager/hu/gnome-power-manager.xml
+share/gnome/help/gnome-power-manager/it/figures/gpm-cell-capacity.png
+share/gnome/help/gnome-power-manager/it/figures/gpm-charged.png
+share/gnome/help/gnome-power-manager/it/figures/gpm-critical.png
+share/gnome/help/gnome-power-manager/it/figures/gpm-low.png
+share/gnome/help/gnome-power-manager/it/figures/gpm-mouse-left.png
+share/gnome/help/gnome-power-manager/it/figures/gpm-mouse-right.png
+share/gnome/help/gnome-power-manager/it/figures/gpm-stats-graph.png
+share/gnome/help/gnome-power-manager/it/figures/gpm-suspend-problem.png
+share/gnome/help/gnome-power-manager/it/figures/gpm-unplugged.png
+share/gnome/help/gnome-power-manager/it/figures/gs-prefs.png
+share/gnome/help/gnome-power-manager/it/gnome-power-manager.xml
 share/gnome/help/gnome-power-manager/pa/figures/gpm-cell-capacity.png
 share/gnome/help/gnome-power-manager/pa/figures/gpm-charged.png
 share/gnome/help/gnome-power-manager/pa/figures/gpm-critical.png
@@ -108,6 +130,7 @@ share/icons/hicolor/16x16/apps/gpm-brightness-lcd-disabled.png
 share/icons/hicolor/16x16/apps/gpm-brightness-lcd-invalid.png
 share/icons/hicolor/16x16/apps/gpm-brightness-lcd.png
 share/icons/hicolor/16x16/apps/gpm-hibernate.png
+share/icons/hicolor/16x16/apps/gpm-inhibit-invalid.png
 share/icons/hicolor/16x16/apps/gpm-inhibit.png
 share/icons/hicolor/16x16/apps/gpm-keyboard-000.png
 share/icons/hicolor/16x16/apps/gpm-keyboard-030.png
@@ -117,6 +140,10 @@ share/icons/hicolor/16x16/apps/gpm-mouse-000.png
 share/icons/hicolor/16x16/apps/gpm-mouse-030.png
 share/icons/hicolor/16x16/apps/gpm-mouse-060.png
 share/icons/hicolor/16x16/apps/gpm-mouse-100.png
+share/icons/hicolor/16x16/apps/gpm-phone-000.png
+share/icons/hicolor/16x16/apps/gpm-phone-030.png
+share/icons/hicolor/16x16/apps/gpm-phone-060.png
+share/icons/hicolor/16x16/apps/gpm-phone-100.png
 share/icons/hicolor/16x16/apps/gpm-primary-000-charging.png
 share/icons/hicolor/16x16/apps/gpm-primary-000.png
 share/icons/hicolor/16x16/apps/gpm-primary-020-charging.png
@@ -155,6 +182,7 @@ share/icons/hicolor/22x22/apps/gpm-brightness-lcd-disabled.png
 share/icons/hicolor/22x22/apps/gpm-brightness-lcd-invalid.png
 share/icons/hicolor/22x22/apps/gpm-brightness-lcd.png
 share/icons/hicolor/22x22/apps/gpm-hibernate.png
+share/icons/hicolor/22x22/apps/gpm-inhibit-invalid.png
 share/icons/hicolor/22x22/apps/gpm-inhibit.png
 share/icons/hicolor/22x22/apps/gpm-keyboard-000.png
 share/icons/hicolor/22x22/apps/gpm-keyboard-030.png
@@ -164,6 +192,10 @@ share/icons/hicolor/22x22/apps/gpm-mouse-000.png
 share/icons/hicolor/22x22/apps/gpm-mouse-030.png
 share/icons/hicolor/22x22/apps/gpm-mouse-060.png
 share/icons/hicolor/22x22/apps/gpm-mouse-100.png
+share/icons/hicolor/22x22/apps/gpm-phone-000.png
+share/icons/hicolor/22x22/apps/gpm-phone-030.png
+share/icons/hicolor/22x22/apps/gpm-phone-060.png
+share/icons/hicolor/22x22/apps/gpm-phone-100.png
 share/icons/hicolor/22x22/apps/gpm-primary-000-charging.png
 share/icons/hicolor/22x22/apps/gpm-primary-000.png
 share/icons/hicolor/22x22/apps/gpm-primary-020-charging.png
@@ -202,6 +234,7 @@ share/icons/hicolor/24x24/apps/gpm-brightness-lcd-disabled.png
 share/icons/hicolor/24x24/apps/gpm-brightness-lcd-invalid.png
 share/icons/hicolor/24x24/apps/gpm-brightness-lcd.png
 share/icons/hicolor/24x24/apps/gpm-hibernate.png
+share/icons/hicolor/24x24/apps/gpm-inhibit-invalid.png
 share/icons/hicolor/24x24/apps/gpm-inhibit.png
 share/icons/hicolor/24x24/apps/gpm-keyboard-000.png
 share/icons/hicolor/24x24/apps/gpm-keyboard-030.png
@@ -211,6 +244,10 @@ share/icons/hicolor/24x24/apps/gpm-mouse-000.png
 share/icons/hicolor/24x24/apps/gpm-mouse-030.png
 share/icons/hicolor/24x24/apps/gpm-mouse-060.png
 share/icons/hicolor/24x24/apps/gpm-mouse-100.png
+share/icons/hicolor/24x24/apps/gpm-phone-000.png
+share/icons/hicolor/24x24/apps/gpm-phone-030.png
+share/icons/hicolor/24x24/apps/gpm-phone-060.png
+share/icons/hicolor/24x24/apps/gpm-phone-100.png
 share/icons/hicolor/24x24/apps/gpm-primary-000-charging.png
 share/icons/hicolor/24x24/apps/gpm-primary-000.png
 share/icons/hicolor/24x24/apps/gpm-primary-020-charging.png
@@ -249,6 +286,7 @@ share/icons/hicolor/48x48/apps/gpm-brightness-lcd-disabled.png
 share/icons/hicolor/48x48/apps/gpm-brightness-lcd-invalid.png
 share/icons/hicolor/48x48/apps/gpm-brightness-lcd.png
 share/icons/hicolor/48x48/apps/gpm-hibernate.png
+share/icons/hicolor/48x48/apps/gpm-inhibit-invalid.png
 share/icons/hicolor/48x48/apps/gpm-inhibit.png
 share/icons/hicolor/48x48/apps/gpm-keyboard-000.png
 share/icons/hicolor/48x48/apps/gpm-keyboard-030.png
@@ -258,6 +296,10 @@ share/icons/hicolor/48x48/apps/gpm-mouse-000.png
 share/icons/hicolor/48x48/apps/gpm-mouse-030.png
 share/icons/hicolor/48x48/apps/gpm-mouse-060.png
 share/icons/hicolor/48x48/apps/gpm-mouse-100.png
+share/icons/hicolor/48x48/apps/gpm-phone-000.png
+share/icons/hicolor/48x48/apps/gpm-phone-030.png
+share/icons/hicolor/48x48/apps/gpm-phone-060.png
+share/icons/hicolor/48x48/apps/gpm-phone-100.png
 share/icons/hicolor/48x48/apps/gpm-primary-000-charging.png
 share/icons/hicolor/48x48/apps/gpm-primary-000.png
 share/icons/hicolor/48x48/apps/gpm-primary-020-charging.png
@@ -296,6 +338,7 @@ share/icons/hicolor/scalable/apps/gpm-brightness-lcd-disabled.svg
 share/icons/hicolor/scalable/apps/gpm-brightness-lcd-invalid.svg
 share/icons/hicolor/scalable/apps/gpm-brightness-lcd.svg
 share/icons/hicolor/scalable/apps/gpm-hibernate.svg
+share/icons/hicolor/scalable/apps/gpm-inhibit-invalid.svg
 share/icons/hicolor/scalable/apps/gpm-inhibit.svg
 share/icons/hicolor/scalable/apps/gpm-keyboard-000.svg
 share/icons/hicolor/scalable/apps/gpm-keyboard-030.svg
@@ -305,6 +348,10 @@ share/icons/hicolor/scalable/apps/gpm-mouse-000.svg
 share/icons/hicolor/scalable/apps/gpm-mouse-030.svg
 share/icons/hicolor/scalable/apps/gpm-mouse-060.svg
 share/icons/hicolor/scalable/apps/gpm-mouse-100.svg
+share/icons/hicolor/scalable/apps/gpm-phone-000.svg
+share/icons/hicolor/scalable/apps/gpm-phone-030.svg
+share/icons/hicolor/scalable/apps/gpm-phone-060.svg
+share/icons/hicolor/scalable/apps/gpm-phone-100.svg
 share/icons/hicolor/scalable/apps/gpm-primary-000-charging.svg
 share/icons/hicolor/scalable/apps/gpm-primary-000.svg
 share/icons/hicolor/scalable/apps/gpm-primary-020-charging.svg
@@ -391,9 +438,11 @@ share/locale/zh_CN/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
 share/omf/gnome-power-manager/gnome-power-manager-C.omf
+share/omf/gnome-power-manager/gnome-power-manager-ca.omf
 share/omf/gnome-power-manager/gnome-power-manager-es.omf
 share/omf/gnome-power-manager/gnome-power-manager-fr.omf
 share/omf/gnome-power-manager/gnome-power-manager-hu.omf
+share/omf/gnome-power-manager/gnome-power-manager-it.omf
 share/omf/gnome-power-manager/gnome-power-manager-pa.omf
 share/omf/gnome-power-manager/gnome-power-manager-ru.omf
 share/omf/gnome-power-manager/gnome-power-manager-sv.omf
@@ -404,12 +453,16 @@ share/omf/gnome-power-manager/gnome-power-manager-sv.omf
 @dirrm share/gnome/help/gnome-power-manager/ru
 @dirrm share/gnome/help/gnome-power-manager/pa/figures
 @dirrm share/gnome/help/gnome-power-manager/pa
+@dirrm share/gnome/help/gnome-power-manager/it/figures
+@dirrm share/gnome/help/gnome-power-manager/it
 @dirrm share/gnome/help/gnome-power-manager/hu/figures
 @dirrm share/gnome/help/gnome-power-manager/hu
 @dirrm share/gnome/help/gnome-power-manager/fr/figures
 @dirrm share/gnome/help/gnome-power-manager/fr
 @dirrm share/gnome/help/gnome-power-manager/es/figures
 @dirrm share/gnome/help/gnome-power-manager/es
+@dirrm share/gnome/help/gnome-power-manager/ca/figures
+@dirrm share/gnome/help/gnome-power-manager/ca
 @dirrm share/gnome/help/gnome-power-manager/C/figures
 @dirrm share/gnome/help/gnome-power-manager/C
 @dirrm share/gnome/help/gnome-power-manager
