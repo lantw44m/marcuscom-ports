@@ -3,12 +3,12 @@
 # Whom:                Glenn Johnson <glennpj@charter.net>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/finance/gnucash-docs/Makefile,v 1.3 2006/12/24 19:09:22 ahze Exp $
 #
 
 PORTNAME=	gnucash-docs
-PORTVERSION=	2.0.1
-PORTREVISION=	2
+PORTVERSION=	2.2.0
+PORTREVISION=	1
 CATEGORIES=	finance gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.gnucash.org/pub/gnucash/sources/stable/ \

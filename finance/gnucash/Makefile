@@ -3,12 +3,12 @@
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
 # $FreeBSD$
-#   $MCom: ports/finance/gnucash/Makefile,v 1.20 2007/05/30 17:15:56 mezz Exp $
+#   $MCom: ports/finance/gnucash/Makefile,v 1.14 2007/03/13 05:58:37 marcus Exp $
 #
 
 PORTNAME=	gnucash
-PORTVERSION=	2.0.5
-PORTREVISION=	7
+PORTVERSION=	2.2.0
+PORTREVISION=	1
 CATEGORIES=	finance gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.gnucash.org/pub/gnucash/sources/stable/
@@ -21,7 +21,8 @@ BUILD_DEPENDS=	guile>=1.6.8_2:${PORTSDIR}/lang/guile
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
 		ofx.3:${PORTSDIR}/finance/libofx \
 		gwrap-core-runtime.0:${PORTSDIR}/devel/g-wrap \
-		gtkhtml-3.8.15:${PORTSDIR}/www/gtkhtml38
+		gtkhtml-3.8.15:${PORTSDIR}/www/gtkhtml38 \
+		goffice-0.4:${PORTSDIR}/devel/goffice
 RUN_DEPENDS=	guile>=1.6.8_2:${PORTSDIR}/lang/guile \
 		${LOCALBASE}/share/guile/1.6/slibcat:${PORTSDIR}/lang/slib-guile \
 		${SITE_PERL}/LWP.pm:${PORTSDIR}/www/p5-libwww \
@@ -29,7 +30,7 @@ RUN_DEPENDS=	guile>=1.6.8_2:${PORTSDIR}/lang/guile \
 		${SITE_PERL}/Finance/Quote.pm:${PORTSDIR}/finance/p5-Finance-Quote \
 		${SITE_PERL}/HTML/TableExtract.pm:${PORTSDIR}/www/p5-HTML-TableExtract \
 		${SITE_PERL}/Finance/QuoteHist.pm:${PORTSDIR}/finance/p5-Finance-QuoteHist \
-		${LOCALBASE}/share/gnome/omf/gnucash-docs/gnucash-guide-C.omf:${PORTSDIR}/finance/gnucash-docs
+		${LOCALBASE}/share/omf/gnucash-docs/gnucash-guide-C.omf:${PORTSDIR}/finance/gnucash-docs
 
 OPTIONS=	AQBANKING	"AqBanking support (HBCI/OpenHBCI)"	off
 
@@ -39,8 +40,8 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_XPM=	yes
 USE_PERL5=	yes
-USE_GNOME=	gnomeprefix libgsf_gnome libglade2 libgnomeprint \
-		libgnomeprintui
+USE_GNOME=	gnomeprefix libgsf_gnome libglade2 \
+		libgnomeprint libgnomeprintui
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=--with-glib-config=${GLIB_CONFIG} \
