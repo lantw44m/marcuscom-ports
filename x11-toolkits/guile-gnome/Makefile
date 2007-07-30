@@ -3,7 +3,7 @@
 # Whom:                			Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11-toolkits/guile-gnome/Makefile,v 1.1 2007/05/23 16:00:12 ahze Exp $
 
 PORTNAME=	guile-gnome
 PORTVERSION=	0.20
@@ -26,6 +26,9 @@ CONFIGURE_ARGS=	--with-bonobo --with-gtkhtml --without-gal \
 		--with-libglade --with-gdkpixbuf --with-ghttp
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/ltconfig
 
 pre-build:
 	@${TOUCH} -f ${WRKSRC}/guile-gnome/gtkhtml/*.c
