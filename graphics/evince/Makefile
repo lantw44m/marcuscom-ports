@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.72 2007/07/09 00:27:02 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.73 2007/07/10 13:37:23 ahze Exp $
 #
 
 PORTNAME=	evince
@@ -46,8 +46,7 @@ OPTIONS=	DVI		"Enable DVI viewer support"		off \
 
 .include <bsd.port.pre.mk>
 
-.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD) \
-		|| exists(${LOCALBASE}/lib/libdbus-glib-1.so)
+.if defined(PACKAGE_BUILDING) || exists(${LOCALBASE}/lib/libdbus-glib-1.so)
 WITH_DBUS=	yes
 .endif
 

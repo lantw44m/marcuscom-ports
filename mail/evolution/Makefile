@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.142 2007/06/19 05:46:57 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.143 2007/07/10 17:23:18 marcus Exp $
 #
 
 PORTNAME=	evolution
@@ -58,7 +58,7 @@ OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 USE_LDCONFIG=	${PREFIX}/lib/evolution/${EVO_VERSION}
 .include "${PORTSDIR}/misc/ldconfig_compat/bsd.ldconfig.mk"
 
-.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.if defined(PACKAGE_BUILDING)
 WITH_DBUS=	yes
 .endif
 
