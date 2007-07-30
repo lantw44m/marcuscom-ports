@@ -3,12 +3,12 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.8 2007-05-19 21:35:58 marcus Exp $
+#   $Id: Makefile,v 1.9 2007-07-30 06:04:51 mezz Exp $
 #
 
 PORTNAME=	muine
 PORTVERSION=	0.8.7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	audio gnome
 MASTER_SITES=	http://muine-player.org/releases/
 
@@ -18,7 +18,7 @@ COMMENT=	Mono based Gnome audio player
 LIB_DEPENDS=	FLAC.7:${PORTSDIR}/audio/flac \
 		id3tag.0:${PORTSDIR}/audio/libid3tag \
 		gdbm:${PORTSDIR}/databases/gdbm \
-		vorbis.3:${PORTSDIR}/audio/libvorbis \
+		vorbis.4:${PORTSDIR}/audio/libvorbis \
 		musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz
 RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus
 

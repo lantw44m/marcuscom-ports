@@ -3,11 +3,11 @@
 # Whom:				Tilman Linneweh <arved@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/terminatorx/Makefile,v 1.3 2007/05/02 17:51:13 ahze Exp $
+#    $MCom: ports/audio/terminatorx/Makefile,v 1.4 2007/05/19 21:36:00 marcus Exp $
 
 PORTNAME=	terminatorx
 PORTVERSION=	3.82
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	audio
 MASTER_SITES=	http://terminatorx.org/dist/
 DISTNAME=	terminatorX-${PORTVERSION}
@@ -57,7 +57,7 @@ CONFIGURE_ARGS+=	--disable-sox
 
 .if !defined(WITHOUT_VORBIS)
 BUILD_DEPENDS+=	oggenc:${PORTSDIR}/audio/vorbis-tools
-LIB_DEPENDS+=	vorbis.3:${PORTSDIR}/audio/libvorbis
+LIB_DEPENDS+=	vorbis.4:${PORTSDIR}/audio/libvorbis
 .else
 CONFIGURE_ARGS+=	--disable-vorbis
 .endif

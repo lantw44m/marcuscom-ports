@@ -6,10 +6,11 @@
 #
 
 PORTNAME=	libvorbis
-PORTVERSION=	1.1.2
+PORTVERSION=	1.2.0
 PORTEPOCH=	4
 CATEGORIES=	audio
-MASTER_SITES=	http://downloads.xiph.org/releases/vorbis/
+MASTER_SITES=	http://downloads.xiph.org/releases/vorbis/ \
+		http://freebsd.unixfreunde.de/sources/
 
 MAINTAINER=	naddy@FreeBSD.org
 COMMENT=	Audio compression codec library
@@ -20,7 +21,7 @@ USE_AUTOTOOLS=	libtool:15
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack
 CONFIGURE_ARGS=	--with-ogg=${LOCALBASE}
-INSTALLS_SHLIB=	yes
+USE_LDCONFIG=	yes
 
 .if defined(NOPORTDOCS)
 MAKE_ENV=	DOC=""
