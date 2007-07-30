@@ -40,10 +40,10 @@ MAN1=		ekiga.1
 pre-configure:
 	${REINPLACE_CMD} -e "s,PWLIB_REC_VERSION=.*,PWLIB_REC_VERSION=`ptlib-config \
 			--version`," \
-	    -e "s,OPAL_REC_VERSION=.*,OPAL_REC_VERSION=`${AWK} \
-	    		'/define OPAL_VERSION/ \
-	    		{printf $$NF}' ${LOCALBASE}/include/opal/opal/buildopts.h`," \
-	    ${WRKSRC}/configure
+		-e "s,OPAL_REC_VERSION=.*,OPAL_REC_VERSION=`${AWK} \
+			'/define OPAL_VERSION/ \
+			{printf $$NF}' ${LOCALBASE}/include/opal/opal/buildopts.h`," \
+		${WRKSRC}/configure
 
 .include <bsd.port.pre.mk>
 

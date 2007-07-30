@@ -3,7 +3,8 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/gossip/Makefile,v 1.8 2007/05/29 20:28:17 marcus Exp $
+#   $MCom: ports/net-im/gossip/Makefile,v 1.9 2007/05/31 05:03:39 marcus Exp $
+#
 
 PORTNAME=	gossip
 PORTVERSION=	0.26
@@ -48,7 +49,7 @@ CONFIGURE_ARGS+=	--enable-libnotify=no
 .endif
 
 .if defined(WITH_TELEPATHY)
-LIB_DEPENDS+=		telepathy.3:${PORTSDIR}/net-im/libtelepathy
+LIB_DEPENDS+=		telepathy.5:${PORTSDIR}/net-im/libtelepathy
 CONFIGURE_ARGS+=	--enable-telepathy=yes
 .else
 CONFIGURE_ARGS+=	--enable-telepathy=no

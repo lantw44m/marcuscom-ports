@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.145 2007/07/02 07:59:38 marcus Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.146 2007/07/10 13:16:03 ahze Exp $
 #
 
 PORTNAME=	gnome-control-center
@@ -42,7 +42,7 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		desktop_gnome_font_rendering.schemas \
 		fontilus.schemas themus.schemas
 
-.if defined(PACKAGE_BUILDING) || defined(PARALLEL_PACKAGE_BUILD)
+.if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
 WITH_GNOME=	yes
 .endif
@@ -57,11 +57,6 @@ PLIST_SUB+=	ABOUTME=""
 CONFIGURE_ARGS+=--disable-aboutme
 PLIST_SUB+=	ABOUTME="@comment "
 .endif
-
-#post-patch:
-#	@${REINPLACE_CMD} -e 's|/bin/tar|/usr/bin/tar|g ; \
-#		s|/bin/gzip|/usr/bin/gzip|g' \
-#		${WRKSRC}/capplets/theme-switcher/gnome-theme-installer.c
 
 post-install:
 	@-update-desktop-database
