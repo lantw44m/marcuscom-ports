@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/libbonobo/Makefile,v 1.55 2007/05/19 20:03:04 flz Exp $
-#    $MCom: ports/devel/libbonobo/Makefile,v 1.61 2007/07/04 15:52:37 mezz Exp $
+#    $MCom: ports/devel/libbonobo/Makefile,v 1.62 2007/07/23 16:29:57 mezz Exp $
 #
 
 PORTNAME=	libbonobo
-PORTVERSION=	2.19.4
+PORTVERSION=	2.19.6
 PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
