@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.119 2007/06/18 11:54:59 ahze Exp $
+#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.120 2007/07/08 23:16:50 mezz Exp $
 #
 
 PORTNAME=	gnome-desktop
-PORTVERSION=	2.19.5
+PORTVERSION=	2.19.6
 PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
