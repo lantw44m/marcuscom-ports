@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.160 2007/07/13 23:06:16 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.161 2007/07/14 00:47:52 marcus Exp $
 #
 
 PORTNAME=	gnome-applets
-PORTVERSION=	2.18.0
-PORTREVISION=	8
+PORTVERSION=	2.19.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -45,8 +44,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		OS_SYS="/usr/include"
 
 GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas \
-		gswitchit.schemas gweather.schemas \
-		mixer.schemas multiload.schemas \
+		gweather.schemas mixer.schemas multiload.schemas \
 		stickynotes.schemas
 
 OPTIONS=	MINI_COMMANDER "Enable mini-commander applet" off
