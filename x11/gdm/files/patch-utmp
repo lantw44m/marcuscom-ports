@@ -1,0 +1,1853 @@
+--- configure.orig	2007-07-31 16:03:38.000000000 -0400
++++ configure	2007-07-31 16:05:11.000000000 -0400
+@@ -10344,7 +10344,7 @@ if test -z "$aix_libpath"; then aix_libp
+  	'')
+  	  whole_archive_flag_spec='-z allextract$convenience -z defaultextract' ;;
+  	*)
+- 	  whole_archive_flag_spec='${wl}-z ${wl}allextract`for conv in $convenience\"\"; do test -n \"$conv\" && new_convenience=\"$new_convenience $conv\"; done; $echo \"$new_convenience\"` ${wl}-z ${wl}defaultextract' ;;
++ 	  whole_archive_flag_spec='${wl}-z ${wl}allextract`for conv in $convenience\"\"; do test -n \"$conv\" && new_convenience=\"$new_convenience,$conv\"; done; $echo \"$new_convenience\"` ${wl}-z ${wl}defaultextract' ;;
+  	esac ;;
+       esac
+       link_all_deplibs=yes
+@@ -13626,7 +13626,7 @@ if test -z "$aix_libpath"; then aix_libp
+ 	    # cannot just pass the convience library names through
+ 	    # without $wl.
+ 	    # Supported since Solaris 2.6 (maybe 2.5.1?)
+-	    whole_archive_flag_spec_CXX='${wl}-z ${wl}allextract`for conv in $convenience\"\"; do test -n \"$conv\" && new_convenience=\"$new_convenience $conv\"; done; $echo \"$new_convenience\"` ${wl}-z ${wl}defaultextract'
++	    whole_archive_flag_spec_CXX='${wl}-z ${wl}allextract`for conv in $convenience\"\"; do test -n \"$conv\" && new_convenience=\"$new_convenience,$conv\"; done; $echo \"$new_convenience\"` ${wl}-z ${wl}defaultextract'
+ 	    ;;
+ 	esac
+ 	link_all_deplibs_CXX=yes
+@@ -16846,7 +16846,7 @@ if test -z "$aix_libpath"; then aix_libp
+  	'')
+  	  whole_archive_flag_spec_F77='-z allextract$convenience -z defaultextract' ;;
+  	*)
+- 	  whole_archive_flag_spec_F77='${wl}-z ${wl}allextract`for conv in $convenience\"\"; do test -n \"$conv\" && new_convenience=\"$new_convenience $conv\"; done; $echo \"$new_convenience\"` ${wl}-z ${wl}defaultextract' ;;
++ 	  whole_archive_flag_spec_F77='${wl}-z ${wl}allextract`for conv in $convenience\"\"; do test -n \"$conv\" && new_convenience=\"$new_convenience,$conv\"; done; $echo \"$new_convenience\"` ${wl}-z ${wl}defaultextract' ;;
+  	esac ;;
+       esac
+       link_all_deplibs_F77=yes
+@@ -19436,7 +19436,7 @@ if test -z "$aix_libpath"; then aix_libp
+  	'')
+  	  whole_archive_flag_spec_GCJ='-z allextract$convenience -z defaultextract' ;;
+  	*)
+- 	  whole_archive_flag_spec_GCJ='${wl}-z ${wl}allextract`for conv in $convenience\"\"; do test -n \"$conv\" && new_convenience=\"$new_convenience $conv\"; done; $echo \"$new_convenience\"` ${wl}-z ${wl}defaultextract' ;;
++ 	  whole_archive_flag_spec_GCJ='${wl}-z ${wl}allextract`for conv in $convenience\"\"; do test -n \"$conv\" && new_convenience=\"$new_convenience,$conv\"; done; $echo \"$new_convenience\"` ${wl}-z ${wl}defaultextract' ;;
+  	esac ;;
+       esac
+       link_all_deplibs_GCJ=yes
+@@ -23286,7 +23286,7 @@ Alternatively, you may set the environme
+ and COMMON_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -23296,7 +23296,7 @@ Alternatively, you may set the environme
+ and COMMON_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -23400,7 +23400,7 @@ Alternatively, you may set the environme
+ and DAEMON_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -23410,7 +23410,7 @@ Alternatively, you may set the environme
+ and DAEMON_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -23514,7 +23514,7 @@ Alternatively, you may set the environme
+ and GUI_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -23524,7 +23524,7 @@ Alternatively, you may set the environme
+ and GUI_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -23628,7 +23628,7 @@ Alternatively, you may set the environme
+ and GUIGLADE_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -23638,7 +23638,7 @@ Alternatively, you may set the environme
+ and GUIGLADE_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -23742,7 +23742,7 @@ Alternatively, you may set the environme
+ and GUING_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -23752,7 +23752,7 @@ Alternatively, you may set the environme
+ and GUING_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -23856,7 +23856,7 @@ Alternatively, you may set the environme
+ and GREETER_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -23866,7 +23866,7 @@ Alternatively, you may set the environme
+ and GREETER_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -23970,7 +23970,7 @@ Alternatively, you may set the environme
+ and UTILS_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -23980,7 +23980,7 @@ Alternatively, you may set the environme
+ and UTILS_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -24084,7 +24084,7 @@ Alternatively, you may set the environme
+ and GLIB_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -24094,7 +24094,7 @@ Alternatively, you may set the environme
+ and GLIB_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -24198,7 +24198,7 @@ Alternatively, you may set the environme
+ and GOBJECT_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -24208,7 +24208,7 @@ Alternatively, you may set the environme
+ and GOBJECT_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -24312,7 +24312,7 @@ Alternatively, you may set the environme
+ and PANGO_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -24322,7 +24322,7 @@ Alternatively, you may set the environme
+ and PANGO_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -24426,7 +24426,7 @@ Alternatively, you may set the environme
+ and PANGOFT_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -24436,7 +24436,7 @@ Alternatively, you may set the environme
+ and PANGOFT_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -24540,7 +24540,7 @@ Alternatively, you may set the environme
+ and GDK_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -24550,7 +24550,7 @@ Alternatively, you may set the environme
+ and GDK_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -24654,7 +24654,7 @@ Alternatively, you may set the environme
+ and GDKPIXBUF_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -24664,7 +24664,7 @@ Alternatively, you may set the environme
+ and GDKPIXBUF_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+@@ -25876,8 +25876,8 @@ msgstr ""
+ "Content-Transfer-Encoding: 8bit\n"
+ 
+ _ACEOF
+-if { (echo "$as_me:$LINENO: msgfmt -c -o /dev/null conftest.foo") >&5
+-  (msgfmt -c -o /dev/null conftest.foo) 2>&5
++if { (echo "$as_me:$LINENO: \$MSGFMT -c -o /dev/null conftest.foo") >&5
++  ($MSGFMT -c -o /dev/null conftest.foo) 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); }; then
+@@ -29467,6 +29467,1277 @@ fi
+ done
+ 
+ 
++#
++# Check for utmp stuff
++#
++
++
++
++for ac_header in utmp.h utmpx.h libutil.h sys/param.h
++do
++as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
++if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
++  { echo "$as_me:$LINENO: checking for $ac_header" >&5
++echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6; }
++if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++fi
++ac_res=`eval echo '${'$as_ac_Header'}'`
++	       { echo "$as_me:$LINENO: result: $ac_res" >&5
++echo "${ECHO_T}$ac_res" >&6; }
++else
++  # Is the header compilable?
++{ echo "$as_me:$LINENO: checking $ac_header usability" >&5
++echo $ECHO_N "checking $ac_header usability... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++$ac_includes_default
++#include <$ac_header>
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  ac_header_compiler=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	ac_header_compiler=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++{ echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
++echo "${ECHO_T}$ac_header_compiler" >&6; }
++
++# Is the header present?
++{ echo "$as_me:$LINENO: checking $ac_header presence" >&5
++echo $ECHO_N "checking $ac_header presence... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#include <$ac_header>
++_ACEOF
++if { (ac_try="$ac_cpp conftest.$ac_ext"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_cpp conftest.$ac_ext") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } >/dev/null && {
++	 test -z "$ac_c_preproc_warn_flag$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       }; then
++  ac_header_preproc=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++  ac_header_preproc=no
++fi
++
++rm -f conftest.err conftest.$ac_ext
++{ echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
++echo "${ECHO_T}$ac_header_preproc" >&6; }
++
++# So?  What about this header?
++case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
++  yes:no: )
++    { echo "$as_me:$LINENO: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&5
++echo "$as_me: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the compiler's result" >&5
++echo "$as_me: WARNING: $ac_header: proceeding with the compiler's result" >&2;}
++    ac_header_preproc=yes
++    ;;
++  no:yes:* )
++    { echo "$as_me:$LINENO: WARNING: $ac_header: present but cannot be compiled" >&5
++echo "$as_me: WARNING: $ac_header: present but cannot be compiled" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header:     check for missing prerequisite headers?" >&5
++echo "$as_me: WARNING: $ac_header:     check for missing prerequisite headers?" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: see the Autoconf documentation" >&5
++echo "$as_me: WARNING: $ac_header: see the Autoconf documentation" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header:     section \"Present But Cannot Be Compiled\"" >&5
++echo "$as_me: WARNING: $ac_header:     section \"Present But Cannot Be Compiled\"" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the preprocessor's result" >&5
++echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: in the future, the compiler will take precedence" >&5
++echo "$as_me: WARNING: $ac_header: in the future, the compiler will take precedence" >&2;}
++
++    ;;
++esac
++{ echo "$as_me:$LINENO: checking for $ac_header" >&5
++echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6; }
++if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  eval "$as_ac_Header=\$ac_header_preproc"
++fi
++ac_res=`eval echo '${'$as_ac_Header'}'`
++	       { echo "$as_me:$LINENO: result: $ac_res" >&5
++echo "${ECHO_T}$ac_res" >&6; }
++
++fi
++if test `eval echo '${'$as_ac_Header'}'` = yes; then
++  cat >>confdefs.h <<_ACEOF
++#define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
++_ACEOF
++
++fi
++
++done
++
++{ echo "$as_me:$LINENO: checking for getutmpx updwtmpx" >&5
++echo $ECHO_N "checking for getutmpx updwtmpx... $ECHO_C" >&6; }
++if test "${ac_cv_func_getutmpx_updwtmpx+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++/* Define getutmpx updwtmpx to an innocuous variant, in case <limits.h> declares getutmpx updwtmpx.
++   For example, HP-UX 11i <limits.h> declares gettimeofday.  */
++#define getutmpx updwtmpx innocuous_getutmpx updwtmpx
++
++/* System header to define __stub macros and hopefully few prototypes,
++    which can conflict with char getutmpx updwtmpx (); below.
++    Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
++    <limits.h> exists even on freestanding compilers.  */
++
++#ifdef __STDC__
++# include <limits.h>
++#else
++# include <assert.h>
++#endif
++
++#undef getutmpx updwtmpx
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char getutmpx updwtmpx ();
++/* The GNU C library defines this for functions which it implements
++    to always fail with ENOSYS.  Some functions are actually named
++    something starting with __ and the normal name is an alias.  */
++#if defined __stub_getutmpx updwtmpx || defined __stub___getutmpx updwtmpx
++choke me
++#endif
++
++int
++main ()
++{
++return getutmpx updwtmpx ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (ac_try="$ac_link"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_link") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest$ac_exeext &&
++       $as_test_x conftest$ac_exeext; then
++  ac_cv_func_getutmpx_updwtmpx=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	ac_cv_func_getutmpx_updwtmpx=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
++      conftest$ac_exeext conftest.$ac_ext
++fi
++{ echo "$as_me:$LINENO: result: $ac_cv_func_getutmpx_updwtmpx" >&5
++echo "${ECHO_T}$ac_cv_func_getutmpx_updwtmpx" >&6; }
++
++
++{ echo "$as_me:$LINENO: checking for login in -lutil" >&5
++echo $ECHO_N "checking for login in -lutil... $ECHO_C" >&6; }
++if test "${ac_cv_lib_util_login+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lutil  $LIBS"
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char login ();
++int
++main ()
++{
++return login ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (ac_try="$ac_link"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_link") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest$ac_exeext &&
++       $as_test_x conftest$ac_exeext; then
++  ac_cv_lib_util_login=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	ac_cv_lib_util_login=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
++      conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_util_login" >&5
++echo "${ECHO_T}$ac_cv_lib_util_login" >&6; }
++if test $ac_cv_lib_util_login = yes; then
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_LIBUTIL 1
++_ACEOF
++
++  LIBS="-lutil $LIBS"
++
++fi
++
++
++{ echo "$as_me:$LINENO: checking for logout in -lutil" >&5
++echo $ECHO_N "checking for logout in -lutil... $ECHO_C" >&6; }
++if test "${ac_cv_lib_util_logout+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lutil  $LIBS"
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char logout ();
++int
++main ()
++{
++return logout ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (ac_try="$ac_link"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_link") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest$ac_exeext &&
++       $as_test_x conftest$ac_exeext; then
++  ac_cv_lib_util_logout=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	ac_cv_lib_util_logout=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
++      conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ echo "$as_me:$LINENO: result: $ac_cv_lib_util_logout" >&5
++echo "${ECHO_T}$ac_cv_lib_util_logout" >&6; }
++if test $ac_cv_lib_util_logout = yes; then
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_LIBUTIL 1
++_ACEOF
++
++  LIBS="-lutil $LIBS"
++
++fi
++
++
++
++
++
++
++for ac_header in sys/time.h utmp.h utmpx.h
++do
++as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
++if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
++  { echo "$as_me:$LINENO: checking for $ac_header" >&5
++echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6; }
++if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++fi
++ac_res=`eval echo '${'$as_ac_Header'}'`
++	       { echo "$as_me:$LINENO: result: $ac_res" >&5
++echo "${ECHO_T}$ac_res" >&6; }
++else
++  # Is the header compilable?
++{ echo "$as_me:$LINENO: checking $ac_header usability" >&5
++echo $ECHO_N "checking $ac_header usability... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++$ac_includes_default
++#include <$ac_header>
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  ac_header_compiler=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	ac_header_compiler=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++{ echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
++echo "${ECHO_T}$ac_header_compiler" >&6; }
++
++# Is the header present?
++{ echo "$as_me:$LINENO: checking $ac_header presence" >&5
++echo $ECHO_N "checking $ac_header presence... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#include <$ac_header>
++_ACEOF
++if { (ac_try="$ac_cpp conftest.$ac_ext"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_cpp conftest.$ac_ext") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } >/dev/null && {
++	 test -z "$ac_c_preproc_warn_flag$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       }; then
++  ac_header_preproc=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++  ac_header_preproc=no
++fi
++
++rm -f conftest.err conftest.$ac_ext
++{ echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
++echo "${ECHO_T}$ac_header_preproc" >&6; }
++
++# So?  What about this header?
++case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
++  yes:no: )
++    { echo "$as_me:$LINENO: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&5
++echo "$as_me: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the compiler's result" >&5
++echo "$as_me: WARNING: $ac_header: proceeding with the compiler's result" >&2;}
++    ac_header_preproc=yes
++    ;;
++  no:yes:* )
++    { echo "$as_me:$LINENO: WARNING: $ac_header: present but cannot be compiled" >&5
++echo "$as_me: WARNING: $ac_header: present but cannot be compiled" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header:     check for missing prerequisite headers?" >&5
++echo "$as_me: WARNING: $ac_header:     check for missing prerequisite headers?" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: see the Autoconf documentation" >&5
++echo "$as_me: WARNING: $ac_header: see the Autoconf documentation" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header:     section \"Present But Cannot Be Compiled\"" >&5
++echo "$as_me: WARNING: $ac_header:     section \"Present But Cannot Be Compiled\"" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the preprocessor's result" >&5
++echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: $ac_header: in the future, the compiler will take precedence" >&5
++echo "$as_me: WARNING: $ac_header: in the future, the compiler will take precedence" >&2;}
++
++    ;;
++esac
++{ echo "$as_me:$LINENO: checking for $ac_header" >&5
++echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6; }
++if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  eval "$as_ac_Header=\$ac_header_preproc"
++fi
++ac_res=`eval echo '${'$as_ac_Header'}'`
++	       { echo "$as_me:$LINENO: result: $ac_res" >&5
++echo "${ECHO_T}$ac_res" >&6; }
++
++fi
++if test `eval echo '${'$as_ac_Header'}'` = yes; then
++  cat >>confdefs.h <<_ACEOF
++#define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
++_ACEOF
++
++fi
++
++done
++
++{ echo "$as_me:$LINENO: checking whether time.h and sys/time.h may both be included" >&5
++echo $ECHO_N "checking whether time.h and sys/time.h may both be included... $ECHO_C" >&6; }
++if test "${ac_cv_header_time+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#include <sys/types.h>
++#include <sys/time.h>
++#include <time.h>
++
++int
++main ()
++{
++if ((struct tm *) 0)
++return 0;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  ac_cv_header_time=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	ac_cv_header_time=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++fi
++{ echo "$as_me:$LINENO: result: $ac_cv_header_time" >&5
++echo "${ECHO_T}$ac_cv_header_time" >&6; }
++if test $ac_cv_header_time = yes; then
++
++cat >>confdefs.h <<\_ACEOF
++#define TIME_WITH_SYS_TIME 1
++_ACEOF
++
++fi
++
++
++if test "$ac_cv_header_utmpx_h" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define UTMP struct utmpx
++_ACEOF
++
++else
++
++cat >>confdefs.h <<\_ACEOF
++#define UTMP struct utmp
++_ACEOF
++
++fi
++
++{ echo "$as_me:$LINENO: checking for ut_host field in the utmp structure" >&5
++echo $ECHO_N "checking for ut_host field in the utmp structure... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#ifdef TIME_WITH_SYS_TIME
++#include <sys/time.h>
++#include <time.h>
++#else
++#ifdef HAVE_SYS_TIME_H
++#include <sys/time.h>
++#else
++#include <time.h>
++#endif
++#endif
++#ifdef HAVE_UTMP_H
++#include <utmp.h>
++#endif
++#ifdef HAVE_UTMPX_H
++#include <utmpx.h>
++#endif
++int
++main ()
++{
++UTMP ut; char *p; p=ut.ut_host;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  result=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	result=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++if test "$result" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_UT_UT_HOST 1
++_ACEOF
++
++fi
++{ echo "$as_me:$LINENO: result: $result" >&5
++echo "${ECHO_T}$result" >&6; }
++
++{ echo "$as_me:$LINENO: checking for ut_pid field in the utmp structure" >&5
++echo $ECHO_N "checking for ut_pid field in the utmp structure... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#ifdef TIME_WITH_SYS_TIME
++#include <sys/time.h>
++#include <time.h>
++#else
++#ifdef HAVE_SYS_TIME_H
++#include <sys/time.h>
++#else
++#include <time.h>
++#endif
++#endif
++#ifdef HAVE_UTMP_H
++#include <utmp.h>
++#endif
++#ifdef HAVE_UTMPX_H
++#include <utmpx.h>
++#endif
++int
++main ()
++{
++UTMP ut; int i; i=ut.ut_pid;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  result=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	result=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++if test "$result" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_UT_UT_PID 1
++_ACEOF
++
++fi
++{ echo "$as_me:$LINENO: result: $result" >&5
++echo "${ECHO_T}$result" >&6; }
++
++{ echo "$as_me:$LINENO: checking for ut_id field in the utmp structure" >&5
++echo $ECHO_N "checking for ut_id field in the utmp structure... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#ifdef TIME_WITH_SYS_TIME
++#include <sys/time.h>
++#include <time.h>
++#else
++#ifdef HAVE_SYS_TIME_H
++#include <sys/time.h>
++#else
++#include <time.h>
++#endif
++#endif
++#ifdef HAVE_UTMP_H
++#include <utmp.h>
++#endif
++#ifdef HAVE_UTMPX_H
++#include <utmpx.h>
++#endif
++int
++main ()
++{
++UTMP ut; char *p; p=ut.ut_id;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  result=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	result=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++if test "$result" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_UT_UT_ID 1
++_ACEOF
++
++fi
++{ echo "$as_me:$LINENO: result: $result" >&5
++echo "${ECHO_T}$result" >&6; }
++
++{ echo "$as_me:$LINENO: checking for ut_name field in the utmp structure" >&5
++echo $ECHO_N "checking for ut_name field in the utmp structure... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#ifdef TIME_WITH_SYS_TIME
++#include <sys/time.h>
++#include <time.h>
++#else
++#ifdef HAVE_SYS_TIME_H
++#include <sys/time.h>
++#else
++#include <time.h>
++#endif
++#endif
++#ifdef HAVE_UTMP_H
++#include <utmp.h>
++#endif
++#ifdef HAVE_UTMPX_H
++#include <utmpx.h>
++#endif
++int
++main ()
++{
++UTMP ut; char *p; p=ut.ut_name;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  result=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	result=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++if test "$result" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_UT_UT_NAME 1
++_ACEOF
++
++fi
++{ echo "$as_me:$LINENO: result: $result" >&5
++echo "${ECHO_T}$result" >&6; }
++
++{ echo "$as_me:$LINENO: checking for ut_type field in the utmp structure" >&5
++echo $ECHO_N "checking for ut_type field in the utmp structure... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#ifdef TIME_WITH_SYS_TIME
++#include <sys/time.h>
++#include <time.h>
++#else
++#ifdef HAVE_SYS_TIME_H
++#include <sys/time.h>
++#else
++#include <time.h>
++#endif
++#endif
++#ifdef HAVE_UTMP_H
++#include <utmp.h>
++#endif
++#ifdef HAVE_UTMPX_H
++#include <utmpx.h>
++#endif
++int
++main ()
++{
++UTMP ut; int i; i=(int) ut.ut_type;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  result=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	result=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++if test "$result" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_UT_UT_TYPE 1
++_ACEOF
++
++fi
++{ echo "$as_me:$LINENO: result: $result" >&5
++echo "${ECHO_T}$result" >&6; }
++
++{ echo "$as_me:$LINENO: checking for ut_exit.e_termination field in the utmp structure" >&5
++echo $ECHO_N "checking for ut_exit.e_termination field in the utmp structure... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#ifdef TIME_WITH_SYS_TIME
++#include <sys/time.h>
++#include <time.h>
++#else
++#ifdef HAVE_SYS_TIME_H
++#include <sys/time.h>
++#else
++#include <time.h>
++#endif
++#endif
++#ifdef HAVE_UTMP_H
++#include <utmp.h>
++#endif
++#ifdef HAVE_UTMPX_H
++#include <utmpx.h>
++#endif
++int
++main ()
++{
++UTMP ut; ut.ut_exit.e_termination=0;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  result=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	result=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++if test "$result" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_UT_UT_EXIT_E_TERMINATION 1
++_ACEOF
++
++fi
++{ echo "$as_me:$LINENO: result: $result" >&5
++echo "${ECHO_T}$result" >&6; }
++
++{ echo "$as_me:$LINENO: checking for ut_user field in the utmp structure" >&5
++echo $ECHO_N "checking for ut_user field in the utmp structure... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#ifdef TIME_WITH_SYS_TIME
++#include <sys/time.h>
++#include <time.h>
++#else
++#ifdef HAVE_SYS_TIME_H
++#include <sys/time.h>
++#else
++#include <time.h>
++#endif
++#endif
++#ifdef HAVE_UTMP_H
++#include <utmp.h>
++#endif
++#ifdef HAVE_UTMPX_H
++#include <utmpx.h>
++#endif
++int
++main ()
++{
++UTMP ut; char *p; p=ut.ut_user;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  result=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	result=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++if test "$result" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_UT_UT_USER 1
++_ACEOF
++
++fi
++{ echo "$as_me:$LINENO: result: $result" >&5
++echo "${ECHO_T}$result" >&6; }
++
++{ echo "$as_me:$LINENO: checking for ut_time field in the utmp structure" >&5
++echo $ECHO_N "checking for ut_time field in the utmp structure... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#ifdef TIME_WITH_SYS_TIME
++#include <sys/time.h>
++#include <time.h>
++#else
++#ifdef HAVE_SYS_TIME_H
++#include <sys/time.h>
++#else
++#include <time.h>
++#endif
++#endif
++#ifdef HAVE_UTMP_H
++#include <utmp.h>
++#endif
++#ifdef HAVE_UTMPX_H
++#include <utmpx.h>
++#endif
++int
++main ()
++{
++UTMP ut; ut.ut_time=0;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  result=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	result=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++if test "$result" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_UT_UT_TIME 1
++_ACEOF
++
++fi
++{ echo "$as_me:$LINENO: result: $result" >&5
++echo "${ECHO_T}$result" >&6; }
++
++{ echo "$as_me:$LINENO: checking for ut_tv field in the utmp structure" >&5
++echo $ECHO_N "checking for ut_tv field in the utmp structure... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#ifdef TIME_WITH_SYS_TIME
++#include <sys/time.h>
++#include <time.h>
++#else
++#ifdef HAVE_SYS_TIME_H
++#include <sys/time.h>
++#else
++#include <time.h>
++#endif
++#endif
++#ifdef HAVE_UTMP_H
++#include <utmp.h>
++#endif
++#ifdef HAVE_UTMPX_H
++#include <utmpx.h>
++#endif
++int
++main ()
++{
++UTMP ut; ut.ut_tv.tv_sec=0; ut.ut_tv.tv_usec=0;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  result=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	result=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++if test "$result" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_UT_UT_TV 1
++_ACEOF
++
++fi
++{ echo "$as_me:$LINENO: result: $result" >&5
++echo "${ECHO_T}$result" >&6; }
++
++{ echo "$as_me:$LINENO: checking for ut_syslen field in the utmp structure" >&5
++echo $ECHO_N "checking for ut_syslen field in the utmp structure... $ECHO_C" >&6; }
++cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#ifdef TIME_WITH_SYS_TIME
++#include <sys/time.h>
++#include <time.h>
++#else
++#ifdef HAVE_SYS_TIME_H
++#include <sys/time.h>
++#else
++#include <time.h>
++#endif
++#endif
++#ifdef HAVE_UTMP_H
++#include <utmp.h>
++#endif
++#ifdef HAVE_UTMPX_H
++#include <utmpx.h>
++#endif
++int
++main ()
++{
++UTMP ut; ut.ut_syslen=0;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  result=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	result=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++if test "$result" = "yes"; then
++
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_UT_UT_SYSLEN 1
++_ACEOF
++
++fi
++{ echo "$as_me:$LINENO: result: $result" >&5
++echo "${ECHO_T}$result" >&6; }
++
++
++
+ 
+ #
+ # Xdmcp checking
+@@ -31609,7 +32880,7 @@ Alternatively, you may set the environme
+ and DBUS_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: The pkg-config script could not be found or is too old.  Make sure it
+ is in your PATH or set the PKG_CONFIG environment variable to the full
+@@ -31619,7 +32890,7 @@ Alternatively, you may set the environme
+ and DBUS_LIBS to avoid the need to call pkg-config.
+ See the pkg-config man page for more details.
+ 
+-To get pkg-config, see <http://www.freedesktop.org/software/pkgconfig>.
++To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+ See \`config.log' for more details." >&2;}
+    { (exit 1); exit 1; }; }
+ else
+--- config.h.in.orig	2007-07-30 14:52:41.000000000 -0400
++++ config.h.in	2007-07-31 16:11:50.000000000 -0400
+@@ -137,6 +137,14 @@
+ /* Define to 1 if you have the `pam' library (-lpam). */
+ #undef HAVE_LIBPAM
+ 
++/* Define to 1 if you have the `util' library (-lutil). */
++#undef HAVE_LIBUTIL
++
++/* Define to 1 if you have the <libutil.h> header file. */
++#undef HAVE_LIBUTIL_H
++
++#undef HAVE_SYS_PARAM_H
++
+ /* Define to 1 if you have the <locale.h> header file. */
+ #undef HAVE_LOCALE_H
+ 
+@@ -188,6 +196,9 @@
+ /* Define to 1 if you have the <sys/stat.h> header file. */
+ #undef HAVE_SYS_STAT_H
+ 
++/* Define to 1 if you have the <sys/time.h> header file. */
++#undef HAVE_SYS_TIME_H
++
+ /* Define to 1 if you have the <sys/tsol/label_macro.h> header file. */
+ #undef HAVE_SYS_TSOL_LABEL_MACRO_H
+ 
+@@ -209,6 +220,42 @@
+ /* Define to 1 if you have the <usersec.h> header file. */
+ #undef HAVE_USERSEC_H
+ 
++/* Define to 1 if you have the <utmpx.h> header file. */
++#undef HAVE_UTMPX_H
++
++/* Define to 1 if you have the <utmp.h> header file. */
++#undef HAVE_UTMP_H
++
++/* Define if your utmp struct contains a ut_exit.e_termination field. */
++#undef HAVE_UT_UT_EXIT_E_TERMINATION
++
++/* Define if your utmp struct contains a ut_host field. */
++#undef HAVE_UT_UT_HOST
++
++/* Define if your utmp struct contains a ut_id field. */
++#undef HAVE_UT_UT_ID
++
++/* Define if your utmp struct contains a ut_name field. */
++#undef HAVE_UT_UT_NAME
++
++/* Define if your utmp struct contains a ut_pid field. */
++#undef HAVE_UT_UT_PID
++
++/* Define if your utmp struct contains a ut_syslen field. */
++#undef HAVE_UT_UT_SYSLEN
++
++/* Define if your utmp struct contains a ut_time field. */
++#undef HAVE_UT_UT_TIME
++
++/* Define if your utmp struct contains a ut_tv field. */
++#undef HAVE_UT_UT_TV
++
++/* Define if your utmp struct contains a ut_type field. */
++#undef HAVE_UT_UT_TYPE
++
++/* Define if your utmp struct contains a ut_user field. */
++#undef HAVE_UT_UT_USER
++
+ /* Define to 1 if you have the `_NSGetEnviron' function. */
+ #undef HAVE__NSGETENVIRON
+ 
+@@ -236,6 +283,12 @@
+ /* Define to 1 if you have the ANSI C header files. */
+ #undef STDC_HEADERS
+ 
++/* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
++#undef TIME_WITH_SYS_TIME
++
++/* Define to the name of a structure which holds utmp data. */
++#undef UTMP
++
+ /* Version number of package */
+ #undef VERSION
+ 
+--- daemon/slave.c.orig	2007-07-30 14:51:14.000000000 -0400
++++ daemon/slave.c	2007-07-31 16:13:59.000000000 -0400
+@@ -35,6 +35,9 @@
+ #include <login_cap.h>
+ #endif
+ #include <fcntl.h>
++#if defined(HAVE_SYS_PARAM_H)
++#include <sys/param.h>
++#endif
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <sys/wait.h>
+@@ -45,7 +48,15 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <string.h>
++#if defined(HAVE_UTMPX_H)
+ #include <utmpx.h>
++#endif
++#if defined(HAVE_UTMP_H)
++#include <utmp.h>
++#endif
++#if defined(HAVE_LIBUTIL_H)
++#include <libutil.h>
++#endif
+ 
+ #if !defined (MAXPATHLEN) && defined (PATH_MAX)
+ #define MAXPATHLEN PATH_MAX
+@@ -3348,7 +3359,7 @@ find_prog (const char *name)
+ 	int i;
+ 	char *try[] = {
+ 		"/usr/bin/X11/",
+-		"/usr/X11R6/bin/",
++		"/usr/local/bin/",
+ 		"/opt/X11R6/bin/",
+ 		"/usr/bin/",
+ 		"/usr/openwin/bin/",
+@@ -4208,8 +4219,12 @@ gdm_slave_write_utmp_wtmp_record (GdmDis
+ 			const gchar *username,
+ 			GPid  pid)
+ {
++#if defined(HAVE_UTMPX_H)
+ 	struct utmpx record = { 0 };
+ 	struct utmpx *u = NULL;
++#else
++	struct utmp record = { 0 };
++#endif
+ 	GTimeVal now = { 0 };
+ 	gchar *device_name = NULL;
+ 	gchar *host;
+@@ -4231,21 +4246,39 @@ gdm_slave_write_utmp_wtmp_record (GdmDis
+ 		 * username entry to accidently get logged.
+ 		 */
+ 		if (username != NULL) {
++#if defined(HAVE_UT_UT_USER)
+ 			strncpy (record.ut_user,
+ 				 username, 
+ 				 sizeof (record.ut_user));
++#elif defined(HAVE_UT_UT_NAME)
++			strncpy (record.ut_name,
++				 username,
++				 sizeof (record.ut_name));
++#endif
+ 		} else {
+ 			g_assert (record_type == GDM_SESSION_RECORD_TYPE_FAILED_ATTEMPT);
++#if defined(HAVE_UT_UT_USER)
+ 			strncpy (record.ut_user,
+ 				 "(unknown)",
+ 				 sizeof (record.ut_user));
++#elif defined(HAVE_UT_UT_NAME)
++			strncpy (record.ut_name,
++				 "(unknown)",
++				 sizeof (record.ut_name));
++#endif
+ 		}
+ 
+ 		gdm_debug ("utmp-wtmp: Using username %.*s",
++#if defined(HAVE_UT_UT_USER)
+ 			   sizeof (record.ut_user),
+ 			   record.ut_user);
++#elif defined(HAVE_UT_UT_NAME)
++			   sizeof (record.ut_name),
++			   record.ut_name);
++#endif
+ 	}
+ 
++#if defined(HAVE_UT_UT_TYPE)
+ 	if (record_type == GDM_SESSION_RECORD_TYPE_LOGOUT) {
+ 		record.ut_type = DEAD_PROCESS;
+ 		gdm_debug ("utmp-wtmp: Using type DEAD_PROCESS"); 
+@@ -4253,18 +4286,27 @@ gdm_slave_write_utmp_wtmp_record (GdmDis
+ 		record.ut_type = USER_PROCESS;
+ 		gdm_debug ("utmp-wtmp: Using type USER_PROCESS"); 
+ 	}
++#endif
+ 
++#if defined(HAVE_UT_UT_PID)
+ 	record.ut_pid = pid;
+ 	gdm_debug ("utmp-wtmp: Using pid %d", (gint)record.ut_pid);
++#endif
+ 
++#if defined(HAVE_UT_UT_TV)
+ 	g_get_current_time (&now);
+ 	record.ut_tv.tv_sec = now.tv_sec;
+ 	gdm_debug ("utmp-wtmp: Using time %ld", (glong) record.ut_tv.tv_sec);
++#elif defined(HAVE_UT_UT_TIME)
++	time (&record.ut_time);
++#endif
+ 
++#if defined(HAVE_UT_UT_ID)
+ 	strncpy (record.ut_id, d->name, sizeof (record.ut_id));
+ 	gdm_debug ("utmp-wtmp: Using id %.*s",
+ 	       sizeof (record.ut_id),
+ 	       record.ut_id);
++#endif
+ 
+ 	if (device_name != NULL) {
+ 		g_assert (g_str_has_prefix (device_name, "/dev/"));
+@@ -4278,6 +4320,7 @@ gdm_slave_write_utmp_wtmp_record (GdmDis
+ 	       sizeof (record.ut_line),
+ 	       record.ut_line);
+ 
++#if defined(HAVE_UT_UT_HOST)
+ 	host = NULL;
+ 	if (! d->attached && g_str_has_prefix (d->name, ":")) {
+ 		host = g_strdup_printf ("%s%s",
+@@ -4299,13 +4342,23 @@ gdm_slave_write_utmp_wtmp_record (GdmDis
+ 		record.ut_syslen = MIN (strlen (host), sizeof (record.ut_host));
+ #endif
+ 	} 
++#endif
+ 
+ 	switch (record_type)
+ 	{
+ 	case GDM_SESSION_RECORD_TYPE_LOGIN:
+ 		gdm_debug ("Login utmp/wtmp record");
++#if defined(HAVE_UPDWTMPX)
+ 		updwtmpx (GDM_NEW_RECORDS_FILE, &record);
++#elif defined(HAVE_LOGWTMP) && defined(HAVE_UT_UT_HOST) && !defined(HAVE_LOGIN)
++#if defined(HAVE_UT_UT_USER)
++		logwtmp (record.ut_line, record.ut_user, record.ut_host);
++#elif defined(HAVE_UT_UT_NAME)
++		logwtmp (record.ut_line, record.ut_name, record.ut_host);
++#endif
++#endif
+ 
++#if defined(HAVE_GETUTXENT)
+ 		/* Update if entry already exists */
+ 		while ((u = getutxent ()) != NULL) {
+ 			if (u->ut_type == USER_PROCESS &&
+@@ -4326,14 +4379,22 @@ gdm_slave_write_utmp_wtmp_record (GdmDis
+ 			gdm_debug ("Adding new utmp record");
+ 			pututxline (&record);
+ 		}
++#elif defined(HAVE_LOGIN)
++		login (&record);
++#endif
+ 
+ 		break;
+ 
+ 	case GDM_SESSION_RECORD_TYPE_LOGOUT: 
+ 		gdm_debug ("Logout utmp/wtmp record");
+ 
++#if defined(HAVE_UPDWTMPX)
+ 		updwtmpx (GDM_NEW_RECORDS_FILE, &record);
++#elif defined(HAVE_LOGWTMP)
++		logwtmp (record.ut_line, "", "");
++#endif
+ 
++#if defined(HAVE_GETUTXENT)
+ 		setutxent ();
+ 
+ 		while ((u = getutxent ()) != NULL &&
+@@ -4357,12 +4418,17 @@ gdm_slave_write_utmp_wtmp_record (GdmDis
+ 		}
+ 
+ 		endutxent ();
++#elif defined(HAVE_LOGOUT)
++		logout (record.ut_line);
++#endif
+ 		break;
+ 
+ 	case GDM_SESSION_RECORD_TYPE_FAILED_ATTEMPT:
++#if defined(HAVE_UPDWTMPX)
+ 		gdm_debug ("Writing failed session attempt record to " 
+ 			   GDM_BAD_RECORDS_FILE);
+ 		updwtmpx (GDM_BAD_RECORDS_FILE, &record);
++#endif
+ 		break;
+ 	}
+ }

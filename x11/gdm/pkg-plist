@@ -48,14 +48,6 @@ sbin/gdmsetup
 %%DATADIR%%/gdmchooser.glade
 %%DATADIR%%/gdmphotosetup.glade
 %%DATADIR%%/gdmsetup.glade
-%%DATADIR%%/icons/hicolor/24x24/actions/system-log-out.png
-%%DATADIR%%/icons/hicolor/24x24/actions/system-restart.png
-%%DATADIR%%/icons/hicolor/24x24/actions/system-shut-down.png
-%%DATADIR%%/icons/hicolor/24x24/actions/system-suspend.png
-%%DATADIR%%/icons/hicolor/24x24/apps/preferences-desktop-locale.png
-%%DATADIR%%/icons/hicolor/24x24/apps/preferences-desktop-remote-desktop.png
-%%DATADIR%%/icons/hicolor/24x24/places/user-desktop.png
-%%DATADIR%%/icons/hicolor/icon-theme.cache
 %%DATADIR%%/themes/circles/GdmGreeterTheme.desktop
 %%DATADIR%%/themes/circles/background.svg
 %%DATADIR%%/themes/circles/circles.xml
@@ -221,12 +213,6 @@ share/xsessions/gnome.desktop
 @dirrm %%DATADIR%%/themes/happygnome
 @dirrm %%DATADIR%%/themes/circles
 @dirrm %%DATADIR%%/themes
-@dirrm %%DATADIR%%/icons/hicolor/24x24/places
-@dirrm %%DATADIR%%/icons/hicolor/24x24/apps
-@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
-@dirrm %%DATADIR%%/icons/hicolor/24x24
-@dirrm %%DATADIR%%/icons/hicolor
-@dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/applications
 @dirrm %%DATADIR%%/BuiltInSessions
 @dirrm %%DATADIR%%

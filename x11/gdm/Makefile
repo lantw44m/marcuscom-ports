@@ -3,11 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.70 2007/07/04 15:52:38 mezz Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.71 2007/07/11 17:37:36 marcus Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	2.19.4
+PORTVERSION=	2.19.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -85,8 +85,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/config/gdm.conf-custom \
 		${PREFIX}/etc/gdm/custom.conf.default
 	@${MKDIR} ${PREFIX}/etc/gdm/Sessions
-	@${LOCALBASE}/bin/gtk-update-icon-cache -f -q --ignore-theme-index \
-	    ${PREFIX}/share/gdm/icons/hicolor
+#	@${LOCALBASE}/bin/gtk-update-icon-cache -f -q --ignore-theme-index \
+#	    ${PREFIX}/share/gdm/icons/hicolor
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
 	@${CAT} ${PKGMESSAGE}
