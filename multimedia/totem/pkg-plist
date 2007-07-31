@@ -43,7 +43,7 @@ lib/totem/plugins/screensaver/screensaver.totem-plugin
 lib/totem/plugins/skipto/libskipto.a
 lib/totem/plugins/skipto/libskipto.la
 lib/totem/plugins/skipto/libskipto.so
-lib/totem/plugins/skipto/skip_to.glade
+lib/totem/plugins/skipto/skipto.ui
 lib/totem/plugins/skipto/skipto.totem-plugin
 libdata/pkgconfig/totem-plparser.pc
 share/applications/totem.desktop
@@ -246,16 +246,16 @@ share/omf/totem/totem-uk.omf
 %%DATADIR%%/filmholes-big-left.png
 %%DATADIR%%/filmholes-big-right.png
 %%DATADIR%%/filmholes.png
-%%DATADIR%%/mozilla-viewer.glade
+%%DATADIR%%/fullscreen.ui
+%%DATADIR%%/mozilla-viewer.ui
 %%DATADIR%%/playlist-ui.xml
-%%DATADIR%%/playlist.glade
-%%DATADIR%%/plugins.glade
-%%DATADIR%%/properties.glade
-%%DATADIR%%/stock-tool-brightness-contrast-22.png
+%%DATADIR%%/playlist.ui
+%%DATADIR%%/plugins.ui
+%%DATADIR%%/properties.ui
 %%DATADIR%%/totem-ui.xml
-%%DATADIR%%/totem.glade
+%%DATADIR%%/totem.ui
 %%DATADIR%%/totem_logo.png
-%%DATADIR%%/uri.glade
+%%DATADIR%%/uri.ui
 @dirrm %%DATADIR%%
 @dirrm share/omf/totem
 @dirrm share/gnome/help/totem/uk/figures
