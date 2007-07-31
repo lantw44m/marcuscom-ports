@@ -60,7 +60,6 @@ lib/libgnomeui-2.la
 lib/libgnomeui-2.so
 lib/libgnomeui-2.so.0
 libdata/pkgconfig/libgnomeui-2.0.pc
-libexec/gnome_segv2
 share/pixmaps/gnome-about-logo.png
 share/locale/af/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/am/LC_MESSAGES/libgnomeui-2.0.mo
@@ -96,6 +95,7 @@ share/locale/he/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/hi/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/hr/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/hu/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/hy/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/id/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/is/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/it/LC_MESSAGES/libgnomeui-2.0.mo
@@ -128,6 +128,7 @@ share/locale/pt_BR/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ro/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ru/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/rw/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/si/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/sk/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/sl/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/sq/LC_MESSAGES/libgnomeui-2.0.mo
@@ -167,6 +168,8 @@ share/locale/zu/LC_MESSAGES/libgnomeui-2.0.mo
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@ije/LC_MESSAGES
 @dirrmtry share/locale/sr@ije
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
@@ -181,6 +184,8 @@ share/locale/zu/LC_MESSAGES/libgnomeui-2.0.mo
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/hy/LC_MESSAGES
+@dirrmtry share/locale/hy
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
