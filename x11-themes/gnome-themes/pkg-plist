@@ -2353,6 +2353,8 @@ share/locale/zh_HK/LC_MESSAGES/gnome-themes.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-themes.mo
 share/themes/Clearlooks/index.theme
 share/themes/Clearlooks/metacity-1/metacity-theme-1.xml
+share/themes/ClearlooksClassic/gtk-2.0/gtkrc
+share/themes/ClearlooksClassic/metacity-1/metacity-theme-1.xml
 share/themes/Crux/index.theme
 share/themes/Glider/gtk-2.0/gtkrc
 share/themes/Glider/index.theme
@@ -2360,8 +2362,6 @@ share/themes/Glider/metacity-1/metacity-theme-1.xml
 share/themes/Glossy/gtk-2.0/gtkrc
 share/themes/Glossy/index.theme
 share/themes/Glossy/metacity-1/metacity-theme-1.xml
-share/themes/Gummy/gtk-2.0/gtkrc
-share/themes/Gummy/metacity-1/metacity-theme-1.xml
 share/themes/HighContrast/gtk-2.0/gtkrc
 share/themes/HighContrast/index.theme
 share/themes/HighContrastInverse/gtk-2.0/gtkrc
@@ -2918,9 +2918,6 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrm share/themes/HighContrastInverse
 @dirrm share/themes/HighContrast/gtk-2.0
 @dirrm share/themes/HighContrast
-@dirrm share/themes/Gummy/metacity-1
-@dirrm share/themes/Gummy/gtk-2.0
-@dirrm share/themes/Gummy
 @dirrm share/themes/Glossy/metacity-1
 @dirrm share/themes/Glossy/gtk-2.0
 @dirrm share/themes/Glossy
@@ -2928,6 +2925,9 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrm share/themes/Glider/gtk-2.0
 @dirrm share/themes/Glider
 @dirrm share/themes/Crux
+@dirrm share/themes/ClearlooksClassic/metacity-1
+@dirrm share/themes/ClearlooksClassic/gtk-2.0
+@dirrm share/themes/ClearlooksClassic
 @dirrm share/themes/Clearlooks/metacity-1
 @dirrm share/themes/Clearlooks
 @dirrmtry share/themes
