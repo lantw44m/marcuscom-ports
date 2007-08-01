@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome2/Makefile,v 1.41 2007/03/12 19:06:44 mezz Exp $
+#   $MCom: ports/x11-toolkits/py-gnome2/Makefile,v 1.43 2007/07/07 19:56:31 marcus Exp $
 #
 
 PORTNAME=	gnome
-PORTVERSION=	2.19.1
+PORTVERSION=	2.19.2
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
