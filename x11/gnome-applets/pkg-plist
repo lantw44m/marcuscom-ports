@@ -433,7 +433,7 @@ share/gnome/help/char-palette/uk/figures/charpick_characters.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/nl/figures/cpufreq-applet-selector-both.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/nl/figures/cpufreq-applet-selector.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/nl/figures/cpufreq-applet.png
-share/gnome/help/cpufreq-applet/ru/cpufreq-applet.xml
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/ru/cpufreq-applet.xml
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/ru/figures/cpufreq-100.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/ru/figures/cpufreq-25.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/ru/figures/cpufreq-50.png
@@ -1173,10 +1173,6 @@ share/xmodmap/xmodmap.us.old
 share/xmodmap/xmodmap.us101A_x86
 share/xmodmap/xmodmap.us_intl
 share/xmodmap/xmodmap.yu
-@dirrmtry share/icons/hicolor/svgxsvg/apps
-@dirrmtry share/icons/hicolor/svgxsvg
-@dirrmtry share/icons/hicolor
-@dirrmtry share/icons
 @dirrm share/pixmaps/stickynotes
 %%CPUFREQ%%@dirrm share/pixmaps/cpufreq-applet
 @dirrm share/pixmaps/accessx-status-applet
@@ -1424,10 +1420,10 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/accessx-status/es
 @dirrm share/gnome/help/accessx-status/en_GB/figures
 @dirrm share/gnome/help/accessx-status/en_GB
-@dirrm share/gnome/help/accessx-status/bg/figures
-@dirrm share/gnome/help/accessx-status/bg
 @dirrm share/gnome/help/accessx-status/ca/figures
 @dirrm share/gnome/help/accessx-status/ca
+@dirrm share/gnome/help/accessx-status/bg/figures
+@dirrm share/gnome/help/accessx-status/bg
 @dirrm share/gnome/help/accessx-status/C/figures
 @dirrm share/gnome/help/accessx-status/C
 @dirrm share/gnome/help/accessx-status
