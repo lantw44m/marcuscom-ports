@@ -85,9 +85,15 @@ lib/gedit-2/plugins/sample.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/snippets/ElementTree.py
 %%PYTHON%%lib/gedit-2/plugins/snippets/ElementTree.pyc
 %%PYTHON%%lib/gedit-2/plugins/snippets/ElementTree.pyo
+%%PYTHON%%lib/gedit-2/plugins/snippets/Exporter.py
+%%PYTHON%%lib/gedit-2/plugins/snippets/Exporter.pyc
+%%PYTHON%%lib/gedit-2/plugins/snippets/Exporter.pyo
 %%PYTHON%%lib/gedit-2/plugins/snippets/Helper.py
 %%PYTHON%%lib/gedit-2/plugins/snippets/Helper.pyc
 %%PYTHON%%lib/gedit-2/plugins/snippets/Helper.pyo
+%%PYTHON%%lib/gedit-2/plugins/snippets/Importer.py
+%%PYTHON%%lib/gedit-2/plugins/snippets/Importer.pyc
+%%PYTHON%%lib/gedit-2/plugins/snippets/Importer.pyo
 %%PYTHON%%lib/gedit-2/plugins/snippets/Library.py
 %%PYTHON%%lib/gedit-2/plugins/snippets/Library.pyc
 %%PYTHON%%lib/gedit-2/plugins/snippets/Library.pyo
@@ -161,6 +167,7 @@ share/gedit-2/glade/gedit-open-location-dialog.glade
 share/gedit-2/glade/gedit-page-setup-dialog.glade
 share/gedit-2/glade/gedit-preferences-dialog.glade
 share/gedit-2/glade/gedit-search-dialog.glade
+share/gedit-2/glade/gedit-style-scheme-dialog.glade
 share/gedit-2/glade/languages-dialog.glade2
 share/gedit-2/glade/sort.glade2
 share/gedit-2/glade/spell-checker.glade2
@@ -178,12 +185,14 @@ share/gedit-2/plugins/filebrowser/gedit-file-browser-widget-ui.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/idl.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/java.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/javascript.xml
+%%PYTHON%%share/gedit-2/plugins/snippets/lang/snippets.lang
 %%PYTHON%%share/gedit-2/plugins/snippets/latex.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/perl.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/php.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/python.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/ruby.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/sh.xml
+%%PYTHON%%share/gedit-2/plugins/snippets/snippets.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/tcl.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/xml.xml
 %%PYTHON%%share/gedit-2/plugins/tools/build
@@ -239,6 +248,14 @@ share/gnome/help/gedit/fr/figures/gedit_recent_files_menu_icon.png
 share/gnome/help/gedit/fr/figures/gedit_window.png
 share/gnome/help/gedit/fr/gedit.xml
 share/gnome/help/gedit/fr/legal.xml
+share/gnome/help/gedit/hu/figures/gedit_format_bold.png
+share/gnome/help/gedit/hu/figures/gedit_format_italic.png
+share/gnome/help/gedit/hu/figures/gedit_format_strikethrough.png
+share/gnome/help/gedit/hu/figures/gedit_format_underline.png
+share/gnome/help/gedit/hu/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/hu/figures/gedit_window.png
+share/gnome/help/gedit/hu/gedit.xml
+share/gnome/help/gedit/hu/legal.xml
 share/gnome/help/gedit/it/figures/gedit_format_bold.png
 share/gnome/help/gedit/it/figures/gedit_format_italic.png
 share/gnome/help/gedit/it/figures/gedit_format_strikethrough.png
@@ -402,6 +419,7 @@ share/omf/gedit/gedit-de.omf
 share/omf/gedit/gedit-es.omf
 share/omf/gedit/gedit-eu.omf
 share/omf/gedit/gedit-fr.omf
+share/omf/gedit/gedit-hu.omf
 share/omf/gedit/gedit-it.omf
 share/omf/gedit/gedit-ja.omf
 share/omf/gedit/gedit-ko.omf
@@ -433,6 +451,8 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm share/gnome/help/gedit/ja
 @dirrm share/gnome/help/gedit/it/figures
 @dirrm share/gnome/help/gedit/it
+@dirrm share/gnome/help/gedit/hu/figures
+@dirrm share/gnome/help/gedit/hu
 @dirrm share/gnome/help/gedit/fr/figures
 @dirrm share/gnome/help/gedit/fr
 @dirrm share/gnome/help/gedit/eu/figures
@@ -449,6 +469,7 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm share/gedit-2/ui
 @dirrm share/gedit-2/taglist
 %%PYTHON%%@dirrm share/gedit-2/plugins/tools
+%%PYTHON%%@dirrm share/gedit-2/plugins/snippets/lang
 %%PYTHON%%@dirrm share/gedit-2/plugins/snippets
 @dirrm share/gedit-2/plugins/filebrowser
 @dirrm share/gedit-2/plugins
