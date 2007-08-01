@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.19 2006/10/12 16:44:41 marcus Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.21 2007/07/31 18:24:10 ahze Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.20
@@ -16,7 +16,8 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The "meta-port" for the Avahi service discovery suite
 
-RUN_DEPENDS=	avahi-resolve:${PORTSDIR}/net/avahi-app
+RUN_DEPENDS=	avahi-resolve:${PORTSDIR}/net/avahi-app \
+		avahi-app>=0.6.20_2:${PORTSDIR}/net/avahi-app
 
 OPTIONS=	AUTOIPD "IPv4LL network address configuration daemon" off \
 		GTK "Gtk+ tools and bindings" off \
