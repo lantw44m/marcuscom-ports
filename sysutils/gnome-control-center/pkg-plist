@@ -49,13 +49,10 @@ libdata/pkgconfig/gnome-window-settings-2.0.pc
 libexec/gnome-settings-daemon
 share/applications/accessibility-keyboard.desktop
 share/applications/at-properties.desktop
-share/applications/default-applications-accessibility.desktop
 share/applications/default-applications.desktop
 share/applications/display-properties.desktop
 %%ABOUTME%%share/applications/gnome-about-me.desktop
 share/applications/gnome-appearance-properties.desktop
-share/applications/gnome-at-mobility.desktop
-share/applications/gnome-at-visual.desktop
 share/applications/gnome-font-viewer.desktop
 share/applications/gnome-network-preferences.desktop
 share/applications/gnome-settings-mouse.desktop
