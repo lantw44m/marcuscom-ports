@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.22 2007/08/01 01:28:27 ahze Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.23 2007/08/01 01:29:23 ahze Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.20
@@ -26,6 +26,8 @@ OPTIONS=	AUTOIPD "IPv4LL network address configuration daemon" off \
 		QT3 "Qt 3 bindings" off \
 		QT4 "Qt 4 bindings" off \
 		PYTHON "Python bindings and tools" off
+
+NO_BUILD=	yes 
 
 .include <bsd.port.pre.mk>
 
@@ -56,5 +58,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/avahi-qt4.pc:${PORTSDIR}/net/avahi-
 .if defined(WITH_PYTHON)
 RUN_DEPENDS+=	avahi-bookmarks:${PORTSDIR}/net/py-avahi
 .endif
+
+do-install:
 
 .include <bsd.port.post.mk>
