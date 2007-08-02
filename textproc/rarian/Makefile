@@ -1,0 +1,54 @@
+# New ports collection makefile for:	rarian
+# Date created:				02 August 2007
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD$
+#   $MCom$
+#
+
+PORTNAME=	rarian
+PORTVERSION=	0.5.6
+CATEGORIES=	textproc gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	An OMF help system based on the Freedesktop specification
+
+BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/xhtml/chunk.xsl:${PORTSDIR}/textproc/docbook-xsl \
+    		${LOCALBASE}/share/xml/docbook/${DOCBOOK_VERSION}/catalog.xml:${PORTSDIR}/textproc/docbook-xml \
+		${LOCALBASE}/share/xml/docbook/4.1.2/docbookx.dtd:${PORTSDIR}/textproc/docbook-sk
+RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
+    		${LOCALBASE}/bin/getopt:${PORTSDIR}/misc/getopt \
+		${LOCALBASE}/share/xsl/docbook/xhtml/chunk.xsl:${PORTSDIR}/textproc/docbook-xsl \
+		${LOCALBASE}/share/xml/docbook/${DOCBOOK_VERSION}/catalog.xml:${PORTSDIR}/textproc/docbook-xml \
+		${LOCALBASE}/share/xml/docbook/4.1.2/docbookx.dtd:${PORTSDIR}/textproc/docbook-sk
+
+CONFLICTS=	scrollkeeper-[0-9]*
+
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gnomehier gnometarget gnomehack libxslt
+USE_PYTHON=	yes
+GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+CONFIGURE_ARGS=	--with-convert-dir=${LOCALBASE}/share/omf \
+		--datadir=${PREFIX}/share \
+		--localstatedir=/var
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|[[][[]|[|g ; \
+	    	s|]]|]|g ; \
+		s|/lib/rarian|/db/rarian|' \
+		${WRKSRC}/util/Makefile.in
+	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash|g ; \
+	    	s|@localstatedir@/lib/rarian|@localstatedir@/db/rarian|g ; \
+		s|getopt|${LOCALBASE}/bin/getopt|' \
+	    	${WRKSRC}/util/rarian-sk-config.in \
+		${WRKSRC}/util/rarian-sk-extract.in \
+		${WRKSRC}/util/rarian-sk-rebuild.in \
+		${WRKSRC}/util/rarian-sk-update.in
+
+.include <bsd.port.mk>
