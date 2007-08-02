@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/textproc/rarian/Makefile,v 1.1 2007/08/02 05:50:16 marcus Exp $
 #
 
 PORTNAME=	rarian
 PORTVERSION=	0.5.6
+PORTREVISION=	1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -23,6 +24,8 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		${LOCALBASE}/share/xsl/docbook/xhtml/chunk.xsl:${PORTSDIR}/textproc/docbook-xsl \
 		${LOCALBASE}/share/xml/docbook/${DOCBOOK_VERSION}/catalog.xml:${PORTSDIR}/textproc/docbook-xml \
 		${LOCALBASE}/share/xml/docbook/4.1.2/docbookx.dtd:${PORTSDIR}/textproc/docbook-sk
+
+DOCBOOK_VERSION=4.2
 
 CONFLICTS=	scrollkeeper-[0-9]*
 
@@ -50,5 +53,9 @@ post-patch:
 		${WRKSRC}/util/rarian-sk-extract.in \
 		${WRKSRC}/util/rarian-sk-rebuild.in \
 		${WRKSRC}/util/rarian-sk-update.in
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
+	    	${WRKSRC}/librarian/rarian-main.c \
+		${WRKSRC}/librarian/rarian-man.c \
+		${WRKSRC}/librarian/rarian-info.c
 
 .include <bsd.port.mk>
