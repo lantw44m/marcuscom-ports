@@ -1,0 +1,31 @@
+--- gnome-breakpad/Makefile.in.orig	2007-08-02 02:20:43.000000000 -0400
++++ gnome-breakpad/Makefile.in	2007-08-02 02:27:50.000000000 -0400
+@@ -58,10 +58,7 @@ am__DEPENDENCIES_1 =
+ libgnomebreakpad_la_DEPENDENCIES =  \
+ 	$(top_builddir)/google-breakpad/src/libbreakpad.la \
+ 	$(am__DEPENDENCIES_1)
+-am__objects_1 = gnome-breakpad.lo exception_handler.lo linux_thread.lo \
+-	minidump_file_writer.lo minidump_generator.lo \
+-	string_conversion.lo convert_UTF.lo guid_creator.lo file_id.lo \
+-	md5.lo
++am__objects_1 = gnome-breakpad.lo exception_handler.lo
+ am_libgnomebreakpad_la_OBJECTS = $(am__objects_1)
+ libgnomebreakpad_la_OBJECTS = $(am_libgnomebreakpad_la_OBJECTS)
+ DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
+@@ -268,15 +265,7 @@ INCLUDES = -I. -I$(top_srcdir)/google-br
+ 
+ #cc_sources = exception_handler.cc linux_thread.cc  minidump_file_writer.cc  minidump_generator.cc gnome-breakpad.cc string_conversion.cc convert_UTF.c
+ cc_sources = gnome-breakpad.cc \
+-	$(top_srcdir)/google-breakpad/src/client/linux/handler/exception_handler.cc \
+-	$(top_srcdir)/google-breakpad/src/client/linux/handler/linux_thread.cc \
+-	$(top_srcdir)/google-breakpad/src/client/minidump_file_writer.cc  \
+-	$(top_srcdir)/google-breakpad/src/client/linux/handler/minidump_generator.cc \
+-	$(top_srcdir)/google-breakpad/src/common/string_conversion.cc \
+-	$(top_srcdir)/google-breakpad/src/common/convert_UTF.c \
+-	$(top_srcdir)/google-breakpad/src/common/linux/guid_creator.cc \
+-	$(top_srcdir)/google-breakpad/src/common/linux/file_id.cc \
+-	$(top_srcdir)/google-breakpad/src/common/linux/md5.c
++	     $(top_srcdir)/google-breakpad/src/client/linux/handler/exception_handler.cc \
+ 
+ module_LTLIBRARIES = libgnomebreakpad.la
+ moduledir = $(libdir)/gtk-2.0/modules

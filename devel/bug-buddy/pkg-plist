@@ -1,4 +1,14 @@
 bin/bug-buddy
+bin/minidump_dump
+bin/minidump_stackwalk
+lib/gtk-2.0/modules/libgnomebreakpad.a
+lib/gtk-2.0/modules/libgnomebreakpad.la
+lib/gtk-2.0/modules/libgnomebreakpad.so
+lib/gtk-2.0/modules/libgnomebreakpad.so.0
+lib/libbreakpad.a
+lib/libbreakpad.la
+lib/libbreakpad.so
+lib/libbreakpad.so.0
 share/applications/bug-buddy.desktop
 share/bug-buddy/bug-buddy.glade
 share/bug-buddy/bug-buddy.menu
@@ -12,6 +22,12 @@ share/bug-buddy/bugzilla/ximian/config
 share/bug-buddy/bugzilla/ximian/mostfreq
 share/bug-buddy/bugzilla/ximian/products
 share/bug-buddy/gdb-cmd
+share/doc/breakpad-0.1/AUTHORS
+share/doc/breakpad-0.1/COPYING
+share/doc/breakpad-0.1/ChangeLog
+share/doc/breakpad-0.1/INSTALL
+share/doc/breakpad-0.1/NEWS
+share/doc/breakpad-0.1/README
 share/icons/hicolor/48x48/apps/bug-buddy.png
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
@@ -63,6 +79,7 @@ share/locale/nb/LC_MESSAGES/bug-buddy.mo
 share/locale/ne/LC_MESSAGES/bug-buddy.mo
 share/locale/nl/LC_MESSAGES/bug-buddy.mo
 share/locale/nn/LC_MESSAGES/bug-buddy.mo
+share/locale/oc/LC_MESSAGES/bug-buddy.mo
 share/locale/or/LC_MESSAGES/bug-buddy.mo
 share/locale/pa/LC_MESSAGES/bug-buddy.mo
 share/locale/pl/LC_MESSAGES/bug-buddy.mo
@@ -88,6 +105,7 @@ share/locale/xh/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_CN/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_HK/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
+@dirrm share/doc/breakpad-0.1
 @dirrm share/bug-buddy/bugzilla/ximian
 @dirrm share/bug-buddy/bugzilla/gnome
 @dirrm share/bug-buddy/bugzilla
@@ -100,6 +118,8 @@ share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
 @dirrmtry share/locale/ug
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
