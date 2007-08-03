@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.102 2007/06/30 16:23:25 marcus Exp $
+#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.103 2007/07/01 00:36:18 marcus Exp $
 #
 
 PORTNAME=	gnome-icon-theme
-PORTVERSION=	2.19.1
-PORTREVISION=	2
+PORTVERSION=	2.19.6
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -18,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A collection of icons for the GNOME 2 desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme \
-		icon-naming-utils>=0.8.0:${PORTSDIR}/x11-themes/icon-naming-utils
+		icon-naming-utils>=0.8.1:${PORTSDIR}/x11-themes/icon-naming-utils
 RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
 USE_BZIP2=	yes
