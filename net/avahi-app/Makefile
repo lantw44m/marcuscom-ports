@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net/avahi-app/Makefile,v 1.1 2007/07/31 18:24:11 ahze Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.20
@@ -55,6 +55,11 @@ MLINKS=	avahi-browse.1 avahi-browse-domains.1 \
 
 .include <bsd.port.pre.mk>
 
+.if ${AVAHI_SLAVE}=="gtk"
+CONFIGURE_ARGS+=--enable-gtk
+.else
+CONFIGURE_ARGS+=--disable-gtk
+.endif
 .if ${AVAHI_SLAVE}=="qt3"
 CONFIGURE_ARGS+=--enable-qt3
 .else
