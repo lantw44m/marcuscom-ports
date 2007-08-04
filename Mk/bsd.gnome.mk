@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.426 2007/07/23 16:29:56 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.427 2007/08/04 03:51:27 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -93,11 +93,11 @@ gnomehier_RUN_DEPENDS=	${gnomehier_DETECT}:${PORTSDIR}/misc/gnomehier
 GNOME_HTML_DIR?=	${PREFIX}/share/doc
 GCONF_CONFIG_OPTIONS?=	merged
 GCONF_CONFIG_DIRECTORY?=etc/gconf/gconf.xml.defaults
-GCONF_CONFIG_SOURCE?=xml:${GCONF_CONFIG_OPTIONS}:${TARGETDIR}/${GCONF_CONFIG_DIRECTORY}
+GCONF_CONFIG_SOURCE?=xml:${GCONF_CONFIG_OPTIONS}:${PREFIX}/${GCONF_CONFIG_DIRECTORY}
 GNOME_LOCALSTATEDIR?=	${PREFIX}/share
 gnomeprefix_CONFIGURE_ENV=GTKDOC="false"
-gnomeprefix_CONFIGURE_ARGS=--localstatedir=${DESTDIR}${GNOME_LOCALSTATEDIR} \
-			   --with-html-dir=${DESTDIR}${GNOME_HTML_DIR} \
+gnomeprefix_CONFIGURE_ARGS=--localstatedir=${PREFIX}${GNOME_LOCALSTATEDIR} \
+			   --with-html-dir=${PREFIX}${GNOME_HTML_DIR} \
 			   --disable-gtk-doc \
 			   --with-gconf-source=${GCONF_CONFIG_SOURCE}
 gnomeprefix_USE_GNOME_IMPL=gnomehier
@@ -775,10 +775,10 @@ post-install: gnome-post-install
 
 gnome-pre-su-install:
 .if defined(_USE_GNOME) && ${_USE_GNOME:Mgnomeprefix}!="" && !defined(NO_MTREE)
-	@${MTREE_CMD} ${MTREE_ARGS:S/${MTREE_FILE}/${GNOME_MTREE_FILE}/} ${TARGETDIR}/ >/dev/null
+	@${MTREE_CMD} ${MTREE_ARGS:S/${MTREE_FILE}/${GNOME_MTREE_FILE}/} ${PREFIX}/ >/dev/null
 .endif
 .if defined(GCONF_SCHEMAS)
-	@${MKDIR} ${TARGETDIR}/etc/gconf/gconf.xml.defaults/
+	@${MKDIR} ${PREFIX}/etc/gconf/gconf.xml.defaults/
 .else
 	@${DO_NADA}
 .endif

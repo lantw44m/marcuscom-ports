@@ -3,7 +3,7 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.9 2007-07-30 06:04:51 mezz Exp $
+#   $Id: Makefile,v 1.10 2007-08-04 22:07:12 marcus Exp $
 #
 
 PORTNAME=	muine
@@ -29,7 +29,7 @@ INSTALLS_ICONS=	yes
 
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
-		GACUTIL_FLAGS="/package muine /gacdir $(DESTDIR)$(libdir) /root $(DESTDIR)$(libdir)"
+		GACUTIL_FLAGS="/package muine /gacdir $(libdir) /root $(libdir)"
 
 GCONF_SCHEMAS=	muine.schemas
 
