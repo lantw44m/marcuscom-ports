@@ -3,7 +3,7 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/pidgin/Makefile,v 1.13 2007/05/28 18:56:33 marcus Exp $
+#   $MCom: ports/net-im/pidgin/Makefile,v 1.14 2007/06/17 04:37:20 marcus Exp $
 #
 
 PORTNAME=	pidgin
@@ -13,7 +13,7 @@ MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Pidgin multi-protocol messaging client (GTK+ UI)
 
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
-    		purple.0:${PORTSDIR}/net-im/libpurple
+    		purple.1:${PORTSDIR}/net-im/libpurple
 
 MASTERDIR=	${.CURDIR}/../libpurple
 BUILD_WRKSRC=	${WRKSRC}/pidgin

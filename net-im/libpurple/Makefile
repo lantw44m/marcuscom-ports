@@ -3,12 +3,12 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/libpurple/Makefile,v 1.21 2007/06/17 04:37:19 marcus Exp $
+#   $MCom: ports/net-im/libpurple/Makefile,v 1.22 2007/07/01 16:18:38 mezz Exp $
 #
 
 PORTNAME?=	libpurple
-PORTVERSION=	2.0.2
-PORTREVISION?=	3
+PORTVERSION=	2.1.0
+PORTREVISION?=	1
 CATEGORIES?=	net-im
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	pidgin
@@ -182,7 +182,7 @@ USE_PERL5=		yes
 CONFIGURE_ARGS+=	--with-perl-lib=site
 PLIST_SUB+=		PERL:=""
 .if !defined(PIDGIN_SLAVE)
-MAN3PREFIX=		${TARGETDIR}/lib/perl5/${PERL_VERSION}
+MAN3PREFIX=		${PREFIX}/lib/perl5/${PERL_VERSION}
 MAN3+=			Purple.3
 .endif
 .else
