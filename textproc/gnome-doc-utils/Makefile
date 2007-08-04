@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.50 2007/08/04 03:51:31 marcus Exp $
+#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.51 2007/08/04 16:34:24 mezz Exp $
 #
 
 PORTNAME=	gnome-doc-utils
@@ -27,7 +27,7 @@ RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehier gnometarget gnomehack libxslt intltool
+USE_GNOME=	gnomehier gnometarget gnomehack libxslt intlhack
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
