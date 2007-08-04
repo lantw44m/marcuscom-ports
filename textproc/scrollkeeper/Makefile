@@ -3,7 +3,7 @@
 # Whom:					Rene Hexel <rh@netbsd.org>
 #
 # $FreeBSD$
-#    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.9 2007/04/26 15:01:41 ahze Exp $
+#    $MCom: ports/textproc/scrollkeeper/Makefile,v 1.10 2007/07/30 20:41:08 mezz Exp $
 
 PORTNAME=	scrollkeeper
 PORTVERSION=	0.3.14
@@ -27,6 +27,8 @@ RUN_DEPENDS=	intltool-extract:${PORTSDIR}/textproc/intltool \
     		${LOCALBASE}/share/xml/docbook/4.1.2/docbookx.dtd:${PORTSDIR}/textproc/docbook-sk
 
 DOCBOOK_VERSION=4.2
+
+CONFLICTS=	rarian-[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes

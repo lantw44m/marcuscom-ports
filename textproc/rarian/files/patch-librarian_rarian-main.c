@@ -5,7 +5,7 @@
  
      if (!path || !strcmp (path, "")) {
 -        path = "/usr/local/share/:/usr/share/";
-+        path = "/usr/local/share/:/usr/local/share/gnome/";
++        path = "/usr/local/share/";
      }
      cur_path = path;
      do {

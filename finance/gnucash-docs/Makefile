@@ -3,12 +3,12 @@
 # Whom:                Glenn Johnson <glennpj@charter.net>
 #
 # $FreeBSD$
-#   $MCom: ports/finance/gnucash-docs/Makefile,v 1.3 2006/12/24 19:09:22 ahze Exp $
+#   $MCom: ports/finance/gnucash-docs/Makefile,v 1.6 2007/07/30 20:05:52 mezz Exp $
 #
 
 PORTNAME=	gnucash-docs
 PORTVERSION=	2.2.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	finance gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.gnucash.org/pub/gnucash/sources/stable/ \
@@ -19,9 +19,8 @@ MASTER_SITE_SUBDIR=	gnucash
 MAINTAINER=	ahze@FreeBSD.org
 COMMENT=	Documentation for gnucash
 
-BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
-RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper \
-		yelp:${PORTSDIR}/x11/yelp
+LIB_DEPENDS=	rarian.0:${PORTSDIR}/textproc/rarian
+RUN_DEPENDS=	yelp:${PORTSDIR}/x11/yelp
 
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes

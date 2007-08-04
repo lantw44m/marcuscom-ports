@@ -15,7 +15,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}
 MAINTAINER=		jylefort@FreeBSD.org
 COMMENT=		A GTK+ stream directory browser
 
-BUILD_DEPENDS=		scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
+BUILD_DEPENDS=		rarian-sk-config:${PORTSDIR}/textproc/rarian
 LIB_DEPENDS=		curl:${PORTSDIR}/ftp/curl
 RUN_DEPENDS=		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 

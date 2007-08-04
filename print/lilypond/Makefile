@@ -1,0 +1,109 @@
+# New ports collection makefile for:	lilypond-devel
+# Date created:				2001-02-10
+# Whom:					patrick
+# based on print/lilypond originally by trevor
+#
+# $FreeBSD$
+# $Id: Makefile,v 1.1 2007-08-04 03:51:30 marcus Exp $
+#
+
+PORTNAME=	lilypond
+PORTVERSION=	2.2.2
+PORTREVISION=	2
+CATEGORIES=	print audio
+MASTER_SITES=	http://download.linuxaudio.org/lilypond/sources/v${PORTVERSION:R}/:src \
+		http://distfiles.master.finkmirrors.net/:rpm
+DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}:src \
+		${PORTNAME}-${PORTVERSION}-1.i386.rpm:rpm
+EXTRACT_ONLY=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	The GNU music typesetter
+
+BUILD_DEPENDS=	latex:${PORTSDIR}/print/teTeX \
+		rarian-sk-config:${PORTSDIR}/textproc/rarian
+LIB_DEPENDS=	guile.15:${PORTSDIR}/lang/guile
+RUN_DEPENDS=	latex:${PORTSDIR}/print/teTeX
+
+MAN1=		abc2ly.1 etf2ly.1 midi2ly.1 mup2ly.1 lilypond.1 musedata2ly.1 \
+		convert-ly.1 lilypond-bin.1 lilypond-book.1
+INFO=		lilypond lilypond-internals \
+		music-glossary
+
+#INSTALLS_SHLIB not needed for phyton library midi.so
+
+GNU_CONFIGURE=	yes
+USE_GETTEXT=	yes
+USE_BISON=	yes
+USE_GMAKE=	YES
+USE_PYTHON=	YES
+MAKEFILE=	GNUmakefile
+PKGINSTALL=	${WRKDIR}/pkg-install
+
+CONFIGURE_ARGS+=	--with-kpathsea-include=${LOCALBASE}/include \
+			--with-kpathsea-lib=${LOCALBASE}/lib 
+CONFIGURE_ENV+=		"CPPFLAGS=${CPPFLAGS}"
+
+.if defined(WITH_SELFBUILT_FONTS)
+BUILD_DEPENDS+=	mftrace:${PORTSDIR}/print/mftrace
+.else
+BUILD_DEPENDS+=	rpm2cpio:${PORTSDIR}/archivers/rpm
+.endif
+
+# inform kpathsea.h of getopt-prototype version
+CFLAGS+=	-D__GNU_LIBRARY__
+CPPFLAGS+=	-I${WRKSRC}/lily/out
+CFLAGS+=	${CPPFLAGS}
+
+.include <bsd.port.pre.mk>
+ALL_TARGET=	all
+
+SCRIPTS_ENV+=	PORTVERSION=${PORTVERSION}
+
+.if defined(NOPORTDOCS)
+PLIST_SUB+=	CONDITIONAL="@comment "
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch:GNUmakefile.in
+.else
+PLIST_SUB+=	CONDITIONAL=""
+.endif
+PLIST_SUB+=	PORTVERSION=${PORTVERSION}
+
+.if ${OSVERSION} >= 700042
+BROKEN=		Does not compile with GCC 4.2
+.endif
+
+pre-configure:
+	${SED} -e "s=%%LOCALBASE%%=${LOCALBASE}=g;s=%%DATADIRVERSION%%=${DATADIR}/${PORTVERSION}=g" \
+		< ${FILESDIR}/pkg-install.in \
+		| ${SED} -e "s=${PREFIX}=\$${PKG_PREFIX}=g" \
+	> ${PKGINSTALL}
+
+.if !defined(WITH_SELFBUILT_FONTS)
+post-configure:
+	cd ${WRKSRC} && ${GMAKE} -C mf get-pfa DISTDIR=${DISTDIR}
+.endif
+
+post-install:
+.if !defined(NOPORTDOCS)
+	${MKDIR} ${DOCSDIR} ${EXAMPLESDIR}/scripts
+	cd ${WRKSRC}/input ; \
+	${TAR} -chf - --exclude=out --exclude=CVS --exclude=GNUmakefile . | \
+		${TAR} -xf - -C ${EXAMPLESDIR};
+
+.for ii in login profile
+	${INSTALL_SCRIPT} ${WRKSRC}/buildscripts/out/lilypond-${ii} \
+		${EXAMPLESDIR}/scripts
+.endfor
+
+	cd ${WRKSRC}/Documentation/topdocs/out && ${TAR} -chf - \
+		--exclude=dummy.dep --exclude=CVS --exclude=GNUmakefile . \
+		| ${TAR} -xf - -C ${DOCSDIR}
+
+.endif
+	${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+
+	@${ECHO_CMD} "* Look in ${EXAMPLESDIR}/scripts"
+	@${ECHO_CMD} "* for needed additions to your .profile"
+	@${ECHO_CMD} "* (at least the TEXMF environment variable is required)."
+
+.include <bsd.port.post.mk>

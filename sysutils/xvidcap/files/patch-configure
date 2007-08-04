@@ -1,0 +1,29 @@
+--- configure.orig	Mon Oct 30 09:11:11 2006
++++ configure	Tue Oct 31 19:26:30 2006
+@@ -9078,7 +9078,7 @@
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lXmu  $LIBS"
++LIBS="-L$x_libraries -lXmu  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -9140,7 +9140,7 @@
+ #define HAVE_LIBXMU 1
+ _ACEOF
+ 
+-  LIBS="-lXmu $LIBS"
++  LIBS="-L$x_libraries -lXmu $LIBS"
+ 
+ else
+   unset ac_cv_lib_Xmu_XmuClientWindow; echo "Couldn't find libXmu in LD_LIBRARY_PATH, checking X11 paths"; echo "$as_me:$LINENO: checking for XmuClientWindow in -lXmu" >&5
+@@ -9513,7 +9513,7 @@
+ # if cache empty (not tested or failed) and want static avcodec (then it failed) ...
+ if ( `test \( \( x${ac_cv_lib_avutil_av_rescale+set} = x \) -a \( x$static_avutil = xyes \) \)` ) ; then
+ 	# build embedded ffmpeg
+-	echo "${MAKE-make}-ing prerequisite ffmpeg libraries" && ( cd ./ffmpeg/ && ./configure --cc=${CC} --enable-gpl ${ac_my_ffmpeg_cfg_lame_switch} --enable-pthreads --enable-swscaler --disable-ffserver --disable-ffplay && ln -s libavcodec/avcodec.h && ln -s libavformat/avformat.h && ln -s libavformat/avio.h && ln -s libavformat/rt*.h ./ && ln -s libavutil/common.h ./ && ln -s libavutil/avutil.h ./ && ln -s libavutil/mathematics.h ./ && ln -s libavutil/int*.h ./ && ln -s libavutil/rational.h ./ && ln -s libswscale/swscale.h ./ && ln -s libswscale/rgb2rgb.h . && ${MAKE-make} )
++	echo "${MAKE-make}-ing prerequisite ffmpeg libraries" && ( cd ./ffmpeg/ && ./configure --cc=${CC} --extra-libs=-lm --disable-opts --enable-gpl ${ac_my_ffmpeg_cfg_lame_switch} --enable-pthreads --enable-swscaler --disable-ffserver --disable-ffplay && ln -s libavcodec/avcodec.h && ln -s libavformat/avformat.h && ln -s libavformat/avio.h && ln -s libavformat/rt*.h ./ && ln -s libavutil/common.h ./ && ln -s libavutil/avutil.h ./ && ln -s libavutil/mathematics.h ./ && ln -s libavutil/int*.h ./ && ln -s libavutil/rational.h ./ && ln -s libswscale/swscale.h ./ && ln -s libswscale/rgb2rgb.h . && ${MAKE-make} )
+ 	#echo "${MAKE-make}-ing prerequisite ffmpeg libraries" && ( cd ./ffmpeg/ && ./configure --cc=${CC} ${ac_my_ffmpeg_cfg_lame_switch} --enable-pthreads --disable-ffserver --disable-ffplay && ln -s libavcodec/avcodec.h && ln -s libavformat/avformat.h && ln -s libavformat/avio.h && ln -s libavformat/rt*.h ./ && ln -s libavutil/common.h ./ && ln -s libavutil/avutil.h ./ && ln -s libavutil/mathematics.h ./ && ln -s libavutil/int*.h ./ && ln -s libavutil/rational.h ./ && ${MAKE-make} )
+ 	# try to link it statically, or reset cache, set static_avcodec=no
+ 	top_srcdir=`pwd`

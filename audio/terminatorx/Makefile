@@ -3,7 +3,7 @@
 # Whom:				Tilman Linneweh <arved@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/terminatorx/Makefile,v 1.4 2007/05/19 21:36:00 marcus Exp $
+#    $MCom: ports/audio/terminatorx/Makefile,v 1.5 2007/07/30 06:04:51 mezz Exp $
 
 PORTNAME=	terminatorx
 PORTVERSION=	3.82
@@ -16,7 +16,7 @@ MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Realtime audio synthesizer that allows you to "scratch" on audio data
 
 BUILD_DEPENDS=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa \
-		scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
+		rarian-sk-config:${PORTSDIR}/textproc/rarian
 LIB_DEPENDS=	audiofile.0:${PORTSDIR}/audio/libaudiofile \
 		lrdf.2:${PORTSDIR}/textproc/liblrdf \
 		jack.0:${PORTSDIR}/audio/jack

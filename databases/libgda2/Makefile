@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda2/Makefile,v 1.37 2007/04/30 18:15:09 ahze Exp $
+#   $MCom: ports/databases/libgda2/Makefile,v 1.38 2007/05/19 21:36:01 marcus Exp $
 #
 
 PORTNAME=	libgda2
 PORTVERSION=	1.2.4
-PORTREVISION?=	2
+PORTREVISION?=	3
 PORTEPOCH?=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -23,9 +23,8 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
-RUN_DEPENDS=	scrollkeeper-config:${PORTSDIR}/textproc/scrollkeeper
+LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
+    		rarian.0:${PORTSDIR}/textproc/rarian
 
 CONFLICTS=	libgda-0*
 
