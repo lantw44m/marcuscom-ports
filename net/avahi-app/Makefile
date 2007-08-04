@@ -3,7 +3,8 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi-app/Makefile,v 1.1 2007/07/31 18:24:11 ahze Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.2 2007/08/04 15:51:17 mezz Exp $
+#
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.20
@@ -21,7 +22,7 @@ LIB_DEPENDS?=	expat.6:${PORTSDIR}/textproc/expat2 \
 		gdbm.3:${PORTSDIR}/databases/gdbm
 
 USE_GNOME?=	gnomehack ltverhack glib20
-USE_GNOME_SUBR=yes
+USE_GNOME_SUBR=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
@@ -55,10 +56,25 @@ MLINKS=	avahi-browse.1 avahi-browse-domains.1 \
 
 .include <bsd.port.pre.mk>
 
+.if ${AVAHI_SLAVE}=="autoipd"
+CONFIGURE_ARGS+=--enable-autoipd
+.else
+CONFIGURE_ARGS+=--disable-autoipd
+.endif
 .if ${AVAHI_SLAVE}=="gtk"
 CONFIGURE_ARGS+=--enable-gtk
 .else
 CONFIGURE_ARGS+=--disable-gtk
+.endif
+.if ${AVAHI_SLAVE}=="libdns"
+CONFIGURE_ARGS+=--enable-compat-libdns_sd
+.else
+CONFIGURE_ARGS+=--disable-compat-libdns_sd
+.endif
+.if ${AVAHI_SLAVE}=="python"
+CONFIGURE_ARGS+=--enable-python
+.else
+CONFIGURE_ARGS+=--disable-python
 .endif
 .if ${AVAHI_SLAVE}=="qt3"
 CONFIGURE_ARGS+=--enable-qt3
@@ -70,25 +86,10 @@ CONFIGURE_ARGS+=--enable-qt4
 .else
 CONFIGURE_ARGS+=--disable-qt4
 .endif
-.if ${AVAHI_SLAVE}=="python"
-CONFIGURE_ARGS+=--enable-python
-.else
-CONFIGURE_ARGS+=--disable-python
-.endif
 .if ${AVAHI_SLAVE}=="sharp"
 CONFIGURE_ARGS+=--enable-mono
 .else
 CONFIGURE_ARGS+=--disable-mono
-.endif
-.if ${AVAHI_SLAVE}=="autoipd"
-CONFIGURE_ARGS+=--enable-autoipd
-.else
-CONFIGURE_ARGS+=--disable-autoipd
-.endif
-.if ${AVAHI_SLAVE}=="libdns"
-CONFIGURE_ARGS+=--enable-compat-libdns_sd
-.else
-CONFIGURE_ARGS+=--disable-compat-libdns_sd
 .endif
 
 post-patch: avahi-post-patch
