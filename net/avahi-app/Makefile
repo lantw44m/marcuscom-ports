@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-app/Makefile,v 1.2 2007/08/04 15:51:17 mezz Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.3 2007/08/04 18:23:03 mezz Exp $
 #
 
 PORTNAME=	avahi
@@ -95,6 +95,9 @@ CONFIGURE_ARGS+=--disable-mono
 post-patch: avahi-post-patch
 
 avahi-post-patch:
+	@${REINPLACE_CMD} -e 's|/etc|${PREFIX}/etc|' \
+		${WRKSRC}/man/*.*
+	@${RM} -f ${WRKSRC}/man/*.bak
 	@${REINPLACE_CMD} -e 's|-ldl||g ; s|netdev|network|g' \
 		${WRKSRC}/configure \
 		${WRKSRC}/avahi-client/Makefile.in \
