@@ -1,0 +1,11 @@
+--- capplets/default-applications/gnome-at-commandline.in.in.orig	2007-08-05 20:05:28.000000000 -0400
++++ capplets/default-applications/gnome-at-commandline.in.in	2007-08-05 20:05:52.000000000 -0400
+@@ -51,7 +51,7 @@ run_at() {
+ 	
+ 	if [ ! -z "$AUTOSTART" ]; then
+ 		# assuming ran from /usr/share/gnome/autostart
+-		if [ "$STARTUP" == "true" ]; then
++		if [ "$STARTUP" = "true" ]; then
+ 			# gconf indicated requested autostart
+ 			($CMDLINE &)
+ 		fi
