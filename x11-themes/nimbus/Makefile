@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-themes/nimbus/Makefile,v 1.2 2007/05/19 21:36:32 marcus Exp $
+#    $MCom: ports/x11-themes/nimbus/Makefile,v 1.3 2007/07/04 12:25:49 ahze Exp $
 
 PORTNAME=	nimbus
-PORTVERSION=	0.0.7
+PORTVERSION=	0.0.8
 PORTREVISION=	1
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://dlc.sun.com/osol/jds/downloads/extras/
