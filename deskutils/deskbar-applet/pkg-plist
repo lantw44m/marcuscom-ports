@@ -1,4 +1,4 @@
-lib/deskbar-applet/gsoc_deskbar
+lib/deskbar-applet/deskbar-applet
 lib/deskbar-applet/handlers/beagle-live.py
 lib/deskbar-applet/handlers/beagle-live.pyc
 lib/deskbar-applet/handlers/beagle-live.pyo
@@ -114,6 +114,30 @@ lib/deskbar-applet/handlers/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/__init__.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/CopyToClipboardAction.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/CopyToClipboardAction.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/CopyToClipboardAction.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenDesktopFileAction.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenDesktopFileAction.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenDesktopFileAction.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenFileAction.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenFileAction.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenFileAction.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenWithApplicationAction.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenWithApplicationAction.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenWithApplicationAction.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenWithNautilusAction.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenWithNautilusAction.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenWithNautilusAction.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/SendEmailToAction.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/SendEmailToAction.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/SendEmailToAction.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/ShowUrlAction.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/ShowUrlAction.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/ShowUrlAction.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/__init__.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/__init__.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/__init__.pyo
 %%EVO%%%%PYTHON_SITELIBDIR%%/deskbar/handlers/evolution/__init__.py
 %%EVO%%%%PYTHON_SITELIBDIR%%/deskbar/handlers/evolution/__init__.pyc
 %%EVO%%%%PYTHON_SITELIBDIR%%/deskbar/handlers/evolution/__init__.pyo
@@ -124,6 +148,9 @@ lib/deskbar-applet/handlers/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/gdmclient/__init__.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/gdmclient/_gdmclient.la
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/gdmclient/_gdmclient.so
+%%PYTHON_SITELIBDIR%%/deskbar/interfaces/Action.py
+%%PYTHON_SITELIBDIR%%/deskbar/interfaces/Action.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/interfaces/Action.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/interfaces/Controller.py
 %%PYTHON_SITELIBDIR%%/deskbar/interfaces/Controller.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/interfaces/Controller.pyo
@@ -162,6 +189,9 @@ lib/deskbar-applet/handlers/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/ui/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/__init__.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacActionsTreeView.py
+%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacActionsTreeView.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacActionsTreeView.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacEntry.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacEntry.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacEntry.pyo
@@ -230,6 +260,21 @@ libdata/pkgconfig/deskbar-applet.pc
 share/gnome/help/deskbar/C/deskbar.xml
 share/gnome/help/deskbar/C/figures/deskbar-applet.png
 share/gnome/help/deskbar/C/legal.xml
+share/gnome/help/deskbar/en_GB/deskbar.xml
+share/gnome/help/deskbar/en_GB/figures/deskbar-applet.png
+share/gnome/help/deskbar/en_GB/legal.xml
+share/gnome/help/deskbar/es/deskbar.xml
+share/gnome/help/deskbar/es/figures/deskbar-applet.png
+share/gnome/help/deskbar/es/legal.xml
+share/gnome/help/deskbar/fr/deskbar.xml
+share/gnome/help/deskbar/fr/figures/deskbar-applet.png
+share/gnome/help/deskbar/fr/legal.xml
+share/gnome/help/deskbar/sv/deskbar.xml
+share/gnome/help/deskbar/sv/figures/deskbar-applet.png
+share/gnome/help/deskbar/sv/legal.xml
+share/gnome/help/deskbar/uk/deskbar.xml
+share/gnome/help/deskbar/uk/figures/deskbar-applet.png
+share/gnome/help/deskbar/uk/legal.xml
 share/icons/hicolor/16x16/apps/deskbar-applet.png
 share/icons/hicolor/22x22/apps/deskbar-applet.png
 share/icons/hicolor/32x32/apps/deskbar-applet.png
@@ -284,6 +329,7 @@ share/locale/pt/LC_MESSAGES/deskbar-applet.mo
 share/locale/pt_BR/LC_MESSAGES/deskbar-applet.mo
 share/locale/ro/LC_MESSAGES/deskbar-applet.mo
 share/locale/ru/LC_MESSAGES/deskbar-applet.mo
+share/locale/si/LC_MESSAGES/deskbar-applet.mo
 share/locale/sk/LC_MESSAGES/deskbar-applet.mo
 share/locale/sl/LC_MESSAGES/deskbar-applet.mo
 share/locale/sq/LC_MESSAGES/deskbar-applet.mo
@@ -299,7 +345,22 @@ share/locale/zh_CN/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
 share/omf/deskbar/deskbar-C.omf
+share/omf/deskbar/deskbar-en_GB.omf
+share/omf/deskbar/deskbar-es.omf
+share/omf/deskbar/deskbar-fr.omf
+share/omf/deskbar/deskbar-sv.omf
+share/omf/deskbar/deskbar-uk.omf
 @dirrm share/omf/deskbar
+@dirrm share/gnome/help/deskbar/uk/figures
+@dirrm share/gnome/help/deskbar/uk
+@dirrm share/gnome/help/deskbar/sv/figures
+@dirrm share/gnome/help/deskbar/sv
+@dirrm share/gnome/help/deskbar/fr/figures
+@dirrm share/gnome/help/deskbar/fr
+@dirrm share/gnome/help/deskbar/es/figures
+@dirrm share/gnome/help/deskbar/es
+@dirrm share/gnome/help/deskbar/en_GB/figures
+@dirrm share/gnome/help/deskbar/en_GB
 @dirrm share/gnome/help/deskbar/C/figures
 @dirrm share/gnome/help/deskbar/C
 @dirrm share/gnome/help/deskbar
@@ -313,6 +374,7 @@ share/omf/deskbar/deskbar-C.omf
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/interfaces
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/handlers/gdmclient
 %%EVO%%@dirrm %%PYTHON_SITELIBDIR%%/deskbar/handlers/evolution
+@dirrm %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/handlers
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/updater
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/keybinder
@@ -323,6 +385,8 @@ share/omf/deskbar/deskbar-C.omf
 @dirrm lib/deskbar-applet
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES

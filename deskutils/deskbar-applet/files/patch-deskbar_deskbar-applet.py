@@ -1,5 +1,5 @@
---- deskbar/gsoc_deskbar.py.orig	Tue Jul 10 15:28:29 2007
-+++ deskbar/gsoc_deskbar.py	Tue Jul 10 15:29:43 2007
+--- deskbar/deskbar-applet.py.orig	Tue Jul 10 15:28:29 2007
++++ deskbar/deskbar-applet.py	Tue Jul 10 15:29:43 2007
 @@ -43,10 +43,10 @@
      gettext.bind_textdomain_codeset('deskbar-applet','UTF-8')
  gettext.textdomain('deskbar-applet')
