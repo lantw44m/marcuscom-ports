@@ -3,11 +3,11 @@
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/metacity/Makefile,v 1.112 2007/06/19 03:03:18 marcus Exp $
+#   $MCom: ports/x11-wm/metacity/Makefile,v 1.113 2007/07/26 21:56:47 mezz Exp $
 #
 
 PORTNAME=	metacity
-PORTVERSION=	2.19.34
+PORTVERSION=	2.19.55
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -35,9 +35,5 @@ GCONF_SCHEMAS=	metacity.schemas
 
 MAN1=		metacity-theme-viewer.1 metacity-window-demo.1 \
 		metacity.1
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|control-center/keybindings|gnome-control-center/keybindings|g' \
-	    	${WRKSRC}/src/Makefile.in
 
 .include <bsd.port.mk>
