@@ -717,6 +717,7 @@ share/gnome/help/gnome-sudoku/sv/figures/hints.png
 share/gnome/help/gnome-sudoku/sv/gnome-sudoku.xml
 share/gnome/help/gnometris/C/gnometris.xml
 share/gnome/help/gnometris/C/legal.xml
+share/gnome/help/gnometris/el/gnometris.xml
 share/gnome/help/gnometris/es/gnometris.xml
 share/gnome/help/gnometris/fr/gnometris.xml
 share/gnome/help/gnometris/sv/gnometris.xml
@@ -781,6 +782,9 @@ share/gnome/help/gnotravex/C/figures/gnotravex_game.png
 share/gnome/help/gnotravex/C/figures/gnotravex_mainwindow.png
 share/gnome/help/gnotravex/C/gnotravex.xml
 share/gnome/help/gnotravex/C/legal.xml
+share/gnome/help/gnotravex/el/figures/gnotravex_game.png
+share/gnome/help/gnotravex/el/figures/gnotravex_mainwindow.png
+share/gnome/help/gnotravex/el/gnotravex.xml
 share/gnome/help/gnotravex/es/figures/gnotravex_game.png
 share/gnome/help/gnotravex/es/figures/gnotravex_mainwindow.png
 share/gnome/help/gnotravex/es/gnotravex.xml
@@ -1030,6 +1034,7 @@ share/locale/pt_BR/LC_MESSAGES/gnome-games.mo
 share/locale/ro/LC_MESSAGES/gnome-games.mo
 share/locale/ru/LC_MESSAGES/gnome-games.mo
 share/locale/rw/LC_MESSAGES/gnome-games.mo
+share/locale/si/LC_MESSAGES/gnome-games.mo
 share/locale/sk/LC_MESSAGES/gnome-games.mo
 share/locale/sl/LC_MESSAGES/gnome-games.mo
 share/locale/sq/LC_MESSAGES/gnome-games.mo
@@ -1037,6 +1042,7 @@ share/locale/sr/LC_MESSAGES/gnome-games.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-games.mo
 share/locale/sv/LC_MESSAGES/gnome-games.mo
 share/locale/ta/LC_MESSAGES/gnome-games.mo
+share/locale/te/LC_MESSAGES/gnome-games.mo
 share/locale/th/LC_MESSAGES/gnome-games.mo
 share/locale/tr/LC_MESSAGES/gnome-games.mo
 share/locale/uk/LC_MESSAGES/gnome-games.mo
@@ -1081,6 +1087,7 @@ share/omf/gnome-sudoku/gnome-sudoku-C.omf
 share/omf/gnome-sudoku/gnome-sudoku-es.omf
 share/omf/gnome-sudoku/gnome-sudoku-sv.omf
 share/omf/gnometris/gnometris-C.omf
+share/omf/gnometris/gnometris-el.omf
 share/omf/gnometris/gnometris-es.omf
 share/omf/gnometris/gnometris-fr.omf
 share/omf/gnometris/gnometris-sv.omf
@@ -1089,6 +1096,7 @@ share/omf/gnomine/gnomine-es.omf
 share/omf/gnomine/gnomine-fr.omf
 share/omf/gnomine/gnomine-sv.omf
 share/omf/gnotravex/gnotravex-C.omf
+share/omf/gnotravex/gnotravex-el.omf
 share/omf/gnotravex/gnotravex-es.omf
 share/omf/gnotravex/gnotravex-fr.omf
 share/omf/gnotravex/gnotravex-sv.omf
@@ -1162,6 +1170,7 @@ share/pixmaps/gnobots2/yahoo.png
 share/pixmaps/gnome-sudoku/footprints.png
 share/pixmaps/gnometris/7blocks-gw.png
 share/pixmaps/gnometris/7blocks-tig.png
+share/pixmaps/gnometris/gnometris.svg
 share/pixmaps/gnomine/bang.svg
 share/pixmaps/gnomine/face-cool.png
 share/pixmaps/gnomine/face-sad.png
@@ -1268,6 +1277,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnotravex/fr
 @dirrm share/gnome/help/gnotravex/es/figures
 @dirrm share/gnome/help/gnotravex/es
+@dirrm share/gnome/help/gnotravex/el/figures
+@dirrm share/gnome/help/gnotravex/el
 @dirrm share/gnome/help/gnotravex/C/figures
 @dirrm share/gnome/help/gnotravex/C
 @dirrm share/gnome/help/gnotravex
@@ -1283,6 +1294,7 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnometris/sv
 @dirrm share/gnome/help/gnometris/fr
 @dirrm share/gnome/help/gnometris/es
+@dirrm share/gnome/help/gnometris/el
 @dirrm share/gnome/help/gnometris/C
 @dirrm share/gnome/help/gnometris
 @dirrm share/gnome/help/gnome-sudoku/sv/figures
@@ -1396,6 +1408,10 @@ share/pixmaps/mahjongg/smooth.png
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
