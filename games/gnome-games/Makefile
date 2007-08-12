@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.151 2007/07/29 23:36:51 marcus Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.152 2007/08/11 18:17:30 marcus Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	2.19.90
+PORTVERSION=	2.19.90b
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
