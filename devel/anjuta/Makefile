@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.9 2007/07/30 19:55:00 mezz Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.10 2007/08/12 04:39:21 marcus Exp $
 #
 
 PORTNAME=	anjuta
@@ -66,9 +66,6 @@ PLIST_SUB+=	SVN="@comment "
 .endif
 
 post-configure:
-	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g ; \
-		s|%%PREFIX%%|${PREFIX}|g' < ${FILESDIR}/anjuta \
-		> ${WRKDIR}/anjuta
 	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash| ; \
 	    	s|/usr/local|${PREFIX}|' \
 	    	${WRKSRC}/global-tags/create_global_tags.sh
