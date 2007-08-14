@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/rarian/Makefile,v 1.2 2007/08/02 20:48:23 marcus Exp $
+#   $MCom: ports/textproc/rarian/Makefile,v 1.3 2007/08/04 03:51:31 marcus Exp $
 #
 
 PORTNAME=	rarian
-PORTVERSION=	0.5.6
-PORTREVISION=	2
+PORTVERSION=	0.5.8
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -42,12 +41,9 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|[[][[]|[|g ; \
-	    	s|]]|]|g ; \
-		s|/lib/rarian|/db/rarian|' \
+	@${REINPLACE_CMD} -e 's|/lib/rarian|/db/rarian|' \
 		${WRKSRC}/util/Makefile.in
-	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash|g ; \
-	    	s|@localstatedir@/lib/rarian|@localstatedir@/db/rarian|g ; \
+	@${REINPLACE_CMD} -e 's|@localstatedir@/lib/rarian|@localstatedir@/db/rarian|g ; \
 		s|getopt|${LOCALBASE}/bin/getopt|' \
 	    	${WRKSRC}/util/rarian-sk-config.in \
 		${WRKSRC}/util/rarian-sk-extract.in \
