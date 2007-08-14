@@ -75,6 +75,7 @@ share/locale/zh_HK/LC_MESSAGES/vino.mo
 share/locale/zh_TW/LC_MESSAGES/vino.mo
 %%DATADIR%%/vino-preferences.glade
 %%DATADIR%%/vino-prompt.glade
+@dirrm %%DATADIR%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -93,4 +94,3 @@ share/locale/zh_TW/LC_MESSAGES/vino.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrm %%DATADIR%%
