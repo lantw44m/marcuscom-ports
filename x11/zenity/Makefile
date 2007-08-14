@@ -3,7 +3,7 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity/Makefile,v 1.84 2007/08/04 03:51:32 marcus Exp $
+#   $MCom: ports/x11/zenity/Makefile,v 1.85 2007/08/14 20:58:59 marcus Exp $
 #
 
 PORTNAME=	zenity
