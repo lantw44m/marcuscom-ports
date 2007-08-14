@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.10 2007/05/19 21:36:03 marcus Exp $
+#    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.11 2007/05/29 20:23:33 marcus Exp $
 
 PORTNAME=	nautilus-sendto
-PORTVERSION=	0.10
-PORTREVISION=	3
+PORTVERSION=	0.11
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 
@@ -30,12 +29,12 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 .include <bsd.port.pre.mk>
 
-.if exists(${LOCALBASE}/bin/gaim)
-BUILD_DEPENDS+=	gaim:${PORTSDIR}/net-im/gaim
-RUN_DEPENDS+=	gaim:${PORTSDIR}/net-im/gaim
-PLIST_SUB+=	GAIM=""
+.if exists(${LOCALBASE}/bin/pidgin)
+BUILD_DEPENDS+=	pidgin:${PORTSDIR}/net-im/pidgin
+RUN_DEPENDS+=	pidgin:${PORTSDIR}/net-im/pidgin
+PLIST_SUB+=	PIDGIN=""
 .else
-PLIST_SUB+=	GAIM="@comment "
+PLIST_SUB+=	PIDGIN="@comment "
 .endif
 
 .include <bsd.port.post.mk>
