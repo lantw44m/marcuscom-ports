@@ -87,23 +87,23 @@ share/dbus-1/services/org.gnome.Epiphany.service
 %%DATADIR%%/glade/prefs-dialog.glade
 %%DATADIR%%/glade/print.glade
 %%DATADIR%%/icons/hicolor/16x16/actions/bookmark-view.png
-%%DATADIR%%/icons/hicolor/16x16/actions/bookmark-web.png
 %%DATADIR%%/icons/hicolor/16x16/actions/history-view.png
 %%DATADIR%%/icons/hicolor/16x16/actions/location-entry.png
+%%DATADIR%%/icons/hicolor/16x16/places/bookmark-web.png
 %%DATADIR%%/icons/hicolor/16x16/status/lock-broken.png
 %%DATADIR%%/icons/hicolor/16x16/status/lock-insecure.png
 %%DATADIR%%/icons/hicolor/16x16/status/lock-secure-checked.png
 %%DATADIR%%/icons/hicolor/16x16/status/lock-secure.png
 %%DATADIR%%/icons/hicolor/16x16/status/popup-hidden.png
 %%DATADIR%%/icons/hicolor/22x22/actions/bookmark-view.png
-%%DATADIR%%/icons/hicolor/22x22/actions/bookmark-web.png
 %%DATADIR%%/icons/hicolor/22x22/actions/history-view.png
 %%DATADIR%%/icons/hicolor/22x22/actions/location-entry.png
+%%DATADIR%%/icons/hicolor/22x22/places/bookmark-web.png
 %%DATADIR%%/icons/hicolor/22x22/status/popup-hidden.png
 %%DATADIR%%/icons/hicolor/24x24/actions/bookmark-view.png
-%%DATADIR%%/icons/hicolor/24x24/actions/bookmark-web.png
 %%DATADIR%%/icons/hicolor/24x24/actions/history-view.png
 %%DATADIR%%/icons/hicolor/24x24/actions/location-entry.png
+%%DATADIR%%/icons/hicolor/24x24/places/bookmark-web.png
 %%DATADIR%%/icons/hicolor/24x24/status/lock-broken.png
 %%DATADIR%%/icons/hicolor/24x24/status/lock-insecure.png
 %%DATADIR%%/icons/hicolor/24x24/status/lock-secure-checked.png
@@ -112,6 +112,7 @@ share/dbus-1/services/org.gnome.Epiphany.service
 %%DATADIR%%/icons/hicolor/32x32/actions/bookmark-view.png
 %%DATADIR%%/icons/hicolor/32x32/actions/history-view.png
 %%DATADIR%%/icons/hicolor/32x32/actions/location-entry.png
+%%DATADIR%%/icons/hicolor/32x32/actions/location-entry.svg
 %%DATADIR%%/icons/hicolor/32x32/status/popup-hidden.png
 %%DATADIR%%/icons/hicolor/48x48/status/lock-broken.png
 %%DATADIR%%/icons/hicolor/48x48/status/lock-insecure.png
@@ -198,6 +199,9 @@ share/gnome/help/epiphany/uk/figures/ephy-addressbar-smartbookmark-screenshot.pn
 share/gnome/help/epiphany/uk/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/uk/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/uk/figures/ephy-screenshot.png
+share/icons/HighContrastLargePrint/48x48/apps/gnome-web-browser.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-web-browser.png
+share/icons/LowContrastLargePrint/48x48/apps/gnome-web-browser.png
 share/icons/hicolor/16x16/apps/gnome-web-browser.png
 share/icons/hicolor/22x22/apps/gnome-web-browser.png
 share/icons/hicolor/24x24/apps/gnome-web-browser.png
@@ -264,6 +268,7 @@ share/locale/pt_BR/LC_MESSAGES/epiphany.mo
 share/locale/ro/LC_MESSAGES/epiphany.mo
 share/locale/ru/LC_MESSAGES/epiphany.mo
 share/locale/rw/LC_MESSAGES/epiphany.mo
+share/locale/si/LC_MESSAGES/epiphany.mo
 share/locale/sk/LC_MESSAGES/epiphany.mo
 share/locale/sl/LC_MESSAGES/epiphany.mo
 share/locale/sq/LC_MESSAGES/epiphany.mo
@@ -302,6 +307,8 @@ share/pygtk/2.0/defs/epiphany.defs
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
@@ -358,12 +365,15 @@ share/pygtk/2.0/defs/epiphany.defs
 @dirrm %%DATADIR%%/icons/hicolor/32x32/actions
 @dirrm %%DATADIR%%/icons/hicolor/32x32
 @dirrm %%DATADIR%%/icons/hicolor/24x24/status
+@dirrm %%DATADIR%%/icons/hicolor/24x24/places
 @dirrm %%DATADIR%%/icons/hicolor/24x24/actions
 @dirrm %%DATADIR%%/icons/hicolor/24x24
 @dirrm %%DATADIR%%/icons/hicolor/22x22/status
+@dirrm %%DATADIR%%/icons/hicolor/22x22/places
 @dirrm %%DATADIR%%/icons/hicolor/22x22/actions
 @dirrm %%DATADIR%%/icons/hicolor/22x22
 @dirrm %%DATADIR%%/icons/hicolor/16x16/status
+@dirrm %%DATADIR%%/icons/hicolor/16x16/places
 @dirrm %%DATADIR%%/icons/hicolor/16x16/actions
 @dirrm %%DATADIR%%/icons/hicolor/16x16
 @dirrm %%DATADIR%%/icons/hicolor
