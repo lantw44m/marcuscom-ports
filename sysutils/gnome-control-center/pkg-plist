@@ -147,9 +147,11 @@ share/gnome/help/control-center/C/config-screensaver.xml
 share/gnome/help/control-center/C/config-sound.xml
 share/gnome/help/control-center/C/config-themes.xml
 share/gnome/help/control-center/C/control-center.xml
+share/gnome/help/control-center/ca/control-center.xml
 share/gnome/help/control-center/en_GB/control-center.xml
 share/gnome/help/control-center/es/control-center.xml
 share/gnome/help/control-center/fr/control-center.xml
+share/gnome/help/control-center/ja/control-center.xml
 share/gnome/help/control-center/pa/control-center.xml
 share/gnome/help/control-center/pt_BR/control-center.xml
 share/gnome/help/control-center/ru/control-center.xml
@@ -235,6 +237,7 @@ share/locale/pt_BR/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ro/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ru/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/rw/LC_MESSAGES/gnome-control-center-2.0.mo
+share/locale/si/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/sk/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-control-center-2.0.mo
@@ -256,9 +259,11 @@ share/locale/zu/LC_MESSAGES/gnome-control-center-2.0.mo
 share/mime/application/x-gnome-theme-package.xml
 share/mime/packages/gnome-theme-package.xml
 share/omf/control-center/control-center-C.omf
+share/omf/control-center/control-center-ca.omf
 share/omf/control-center/control-center-en_GB.omf
 share/omf/control-center/control-center-es.omf
 share/omf/control-center/control-center-fr.omf
+share/omf/control-center/control-center-ja.omf
 share/omf/control-center/control-center-pa.omf
 share/omf/control-center/control-center-pt_BR.omf
 share/omf/control-center/control-center-ru.omf
@@ -275,6 +280,8 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
@@ -298,9 +305,11 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrm share/gnome/help/control-center/ru
 @dirrm share/gnome/help/control-center/pt_BR
 @dirrm share/gnome/help/control-center/pa
+@dirrm share/gnome/help/control-center/ja
 @dirrm share/gnome/help/control-center/fr
 @dirrm share/gnome/help/control-center/es
 @dirrm share/gnome/help/control-center/en_GB
+@dirrm share/gnome/help/control-center/ca
 @dirrm share/gnome/help/control-center/C
 @dirrm share/gnome/help/control-center
 @dirrm share/gnome/cursor-fonts
