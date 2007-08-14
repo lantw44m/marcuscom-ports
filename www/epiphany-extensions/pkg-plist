@@ -73,11 +73,6 @@ lib/epiphany/%%VERSION%%/extensions/tab-states.ephy-extension
 %%DATADIR%%/glade/rss-ui.glade
 %%DATADIR%%/xml/epiphany-sidebar-ui.xml
 %%DATADIR%%/xml/page-info-context-ui.xml
-share/epiphany/icons/hicolor/16x16/status/feed-presence.png
-share/epiphany/icons/hicolor/22x22/status/feed-presence.png
-share/epiphany/icons/hicolor/24x24/status/feed-presence.png
-share/epiphany/icons/hicolor/32x32/status/feed-presence.png
-share/epiphany/icons/hicolor/scalable/status/feed-presence.svg
 share/gnome/help/epiphany-extensions/C/epiphany-extensions.xml
 share/gnome/help/epiphany-extensions/C/figures/epi-ext-action-create.png
 share/gnome/help/epiphany-extensions/C/figures/epi-ext-adblocker.png
