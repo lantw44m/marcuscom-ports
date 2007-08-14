@@ -13,6 +13,7 @@ include/eog-2.20/eog/eog-message-area.h
 include/eog-2.20/eog/eog-plugin.h
 include/eog-2.20/eog/eog-properties-dialog.h
 include/eog-2.20/eog/eog-scroll-view.h
+include/eog-2.20/eog/eog-sidebar.h
 include/eog-2.20/eog/eog-statusbar.h
 include/eog-2.20/eog/eog-thumb-nav.h
 include/eog-2.20/eog/eog-thumb-view.h
@@ -24,6 +25,15 @@ share/applications/eog.desktop
 %%DATADIR%%/eog-toolbar.xml
 %%DATADIR%%/eog-ui.xml
 %%DATADIR%%/eog.glade
+%%DATADIR%%/icons/hicolor/16x16/actions/eog-image-collection.png
+%%DATADIR%%/icons/hicolor/16x16/actions/eog-plugin.png
+%%DATADIR%%/icons/hicolor/22x22/actions/eog-image-collection.png
+%%DATADIR%%/icons/hicolor/22x22/actions/eog-plugin.png
+%%DATADIR%%/icons/hicolor/24x24/actions/eog-image-collection.png
+%%DATADIR%%/icons/hicolor/32x32/actions/eog-image-collection.png
+%%DATADIR%%/icons/hicolor/32x32/actions/eog-plugin.png
+%%DATADIR%%/icons/hicolor/48x48/actions/eog-plugin.png
+%%DATADIR%%/icons/hicolor/scalable/actions/eog-plugin.svg
 share/gnome/help/eog/C/eog.xml
 share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
@@ -73,18 +83,10 @@ share/gnome/help/eog/zh_CN/legal.xml
 share/gnome/help/eog/zh_TW/eog.xml
 share/gnome/help/eog/zh_TW/figures/eog_start_window.png
 share/gnome/help/eog/zh_TW/legal.xml
-share/icons/hicolor/16x16/actions/eog-image-collection.png
-share/icons/hicolor/16x16/actions/eog-plugin.png
 share/icons/hicolor/16x16/apps/eog.png
-share/icons/hicolor/22x22/actions/eog-image-collection.png
-share/icons/hicolor/22x22/actions/eog-plugin.png
 share/icons/hicolor/22x22/apps/eog.png
-share/icons/hicolor/24x24/actions/eog-image-collection.png
 share/icons/hicolor/24x24/apps/eog.png
-share/icons/hicolor/32x32/actions/eog-image-collection.png
-share/icons/hicolor/32x32/actions/eog-plugin.png
 share/icons/hicolor/32x32/apps/eog.png
-share/icons/hicolor/48x48/actions/eog-plugin.png
 share/icons/hicolor/scalable/apps/eog.svg
 share/locale/af/LC_MESSAGES/eog.mo
 share/locale/am/LC_MESSAGES/eog.mo
@@ -245,6 +247,20 @@ share/pixmaps/eog/thumbnail-frame.png
 @dirrm share/gnome/help/eog/C/figures
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
+@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
+@dirrm %%DATADIR%%/icons/hicolor/scalable
+@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
+@dirrm %%DATADIR%%/icons/hicolor/48x48
+@dirrm %%DATADIR%%/icons/hicolor/32x32/actions
+@dirrm %%DATADIR%%/icons/hicolor/32x32
+@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor/22x22/actions
+@dirrm %%DATADIR%%/icons/hicolor/22x22
+@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
+@dirrm %%DATADIR%%/icons/hicolor/16x16
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
 @dirrm include/eog-2.20/eog
 @dirrm include/eog-2.20
