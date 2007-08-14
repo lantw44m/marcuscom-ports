@@ -1,49 +1,49 @@
 lib/deskbar-applet/deskbar-applet
-lib/deskbar-applet/handlers/beagle-live.py
-lib/deskbar-applet/handlers/beagle-live.pyc
-lib/deskbar-applet/handlers/beagle-live.pyo
-lib/deskbar-applet/handlers/beagle-static.py
-lib/deskbar-applet/handlers/beagle-static.pyc
-lib/deskbar-applet/handlers/beagle-static.pyo
-lib/deskbar-applet/handlers/desklicious.py
-lib/deskbar-applet/handlers/desklicious.pyc
-lib/deskbar-applet/handlers/desklicious.pyo
-lib/deskbar-applet/handlers/epiphany.py
-lib/deskbar-applet/handlers/epiphany.pyc
-lib/deskbar-applet/handlers/epiphany.pyo
-%%EVO%%lib/deskbar-applet/handlers/evolution.py
-%%EVO%%lib/deskbar-applet/handlers/evolution.pyc
-%%EVO%%lib/deskbar-applet/handlers/evolution.pyo
-lib/deskbar-applet/handlers/files.py
-lib/deskbar-applet/handlers/files.pyc
-lib/deskbar-applet/handlers/files.pyo
-lib/deskbar-applet/handlers/galeon.py
-lib/deskbar-applet/handlers/galeon.pyc
-lib/deskbar-applet/handlers/galeon.pyo
-lib/deskbar-applet/handlers/gdmactions.py
-lib/deskbar-applet/handlers/gdmactions.pyc
-lib/deskbar-applet/handlers/gdmactions.pyo
-lib/deskbar-applet/handlers/history.py
-lib/deskbar-applet/handlers/history.pyc
-lib/deskbar-applet/handlers/history.pyo
-lib/deskbar-applet/handlers/iswitch-window.py
-lib/deskbar-applet/handlers/iswitch-window.pyc
-lib/deskbar-applet/handlers/iswitch-window.pyo
-lib/deskbar-applet/handlers/mozilla.py
-lib/deskbar-applet/handlers/mozilla.pyc
-lib/deskbar-applet/handlers/mozilla.pyo
-lib/deskbar-applet/handlers/programs.py
-lib/deskbar-applet/handlers/programs.pyc
-lib/deskbar-applet/handlers/programs.pyo
-lib/deskbar-applet/handlers/recent.py
-lib/deskbar-applet/handlers/recent.pyc
-lib/deskbar-applet/handlers/recent.pyo
-lib/deskbar-applet/handlers/web_address.py
-lib/deskbar-applet/handlers/web_address.pyc
-lib/deskbar-applet/handlers/web_address.pyo
-lib/deskbar-applet/handlers/yahoo.py
-lib/deskbar-applet/handlers/yahoo.pyc
-lib/deskbar-applet/handlers/yahoo.pyo
+lib/deskbar-applet/modules/beagle-live.py
+lib/deskbar-applet/modules/beagle-live.pyc
+lib/deskbar-applet/modules/beagle-live.pyo
+lib/deskbar-applet/modules/beagle-static.py
+lib/deskbar-applet/modules/beagle-static.pyc
+lib/deskbar-applet/modules/beagle-static.pyo
+lib/deskbar-applet/modules/desklicious.py
+lib/deskbar-applet/modules/desklicious.pyc
+lib/deskbar-applet/modules/desklicious.pyo
+lib/deskbar-applet/modules/epiphany.py
+lib/deskbar-applet/modules/epiphany.pyc
+lib/deskbar-applet/modules/epiphany.pyo
+%%EVO%%lib/deskbar-applet/modules/evolution.py
+%%EVO%%lib/deskbar-applet/modules/evolution.pyc
+%%EVO%%lib/deskbar-applet/modules/evolution.pyo
+lib/deskbar-applet/modules/files.py
+lib/deskbar-applet/modules/files.pyc
+lib/deskbar-applet/modules/files.pyo
+lib/deskbar-applet/modules/galeon.py
+lib/deskbar-applet/modules/galeon.pyc
+lib/deskbar-applet/modules/galeon.pyo
+lib/deskbar-applet/modules/gdmactions.py
+lib/deskbar-applet/modules/gdmactions.pyc
+lib/deskbar-applet/modules/gdmactions.pyo
+lib/deskbar-applet/modules/history.py
+lib/deskbar-applet/modules/history.pyc
+lib/deskbar-applet/modules/history.pyo
+lib/deskbar-applet/modules/iswitch-window.py
+lib/deskbar-applet/modules/iswitch-window.pyc
+lib/deskbar-applet/modules/iswitch-window.pyo
+lib/deskbar-applet/modules/mozilla.py
+lib/deskbar-applet/modules/mozilla.pyc
+lib/deskbar-applet/modules/mozilla.pyo
+lib/deskbar-applet/modules/programs.py
+lib/deskbar-applet/modules/programs.pyc
+lib/deskbar-applet/modules/programs.pyo
+lib/deskbar-applet/modules/recent.py
+lib/deskbar-applet/modules/recent.pyc
+lib/deskbar-applet/modules/recent.pyo
+lib/deskbar-applet/modules/web_address.py
+lib/deskbar-applet/modules/web_address.pyc
+lib/deskbar-applet/modules/web_address.pyo
+lib/deskbar-applet/modules/yahoo.py
+lib/deskbar-applet/modules/yahoo.pyc
+lib/deskbar-applet/modules/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/__init__.pyo
@@ -132,6 +132,9 @@ lib/deskbar-applet/handlers/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/SendEmailToAction.py
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/SendEmailToAction.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/SendEmailToAction.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/SendFileViaEmailAction.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/SendFileViaEmailAction.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/SendFileViaEmailAction.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/ShowUrlAction.py
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/ShowUrlAction.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/ShowUrlAction.pyo
@@ -210,9 +213,6 @@ lib/deskbar-applet/handlers/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacTreeView.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacTreeView.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacTreeView.pyo
-%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/Sidebar.py
-%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/Sidebar.pyc
-%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/Sidebar.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/__init__.pyo
@@ -381,7 +381,7 @@ share/omf/deskbar/deskbar-uk.omf
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar
-@dirrm lib/deskbar-applet/handlers
+@dirrm lib/deskbar-applet/modules
 @dirrm lib/deskbar-applet
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
