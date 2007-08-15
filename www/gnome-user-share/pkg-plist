@@ -38,8 +38,6 @@ share/locale/sv/LC_MESSAGES/gnome-user-share.mo
 share/locale/uk/LC_MESSAGES/gnome-user-share.mo
 share/locale/vi/LC_MESSAGES/gnome-user-share.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-user-share.mo
-@dirrm share/locale/dz/LC_MESSAGES
-@dirrm share/locale/dz
 @dirrm share/gnome-user-share
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw

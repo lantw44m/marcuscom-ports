@@ -6082,18 +6082,6 @@ share/locale/vi/LC_MESSAGES/gcompris.mo
 share/locale/wa/LC_MESSAGES/gcompris.mo
 share/locale/zh_CN/LC_MESSAGES/gcompris.mo
 share/locale/zh_TW/LC_MESSAGES/gcompris.mo
-@dirrm share/locale/so/LC_MESSAGES
-@dirrm share/locale/so
-@dirrm share/locale/rw/LC_MESSAGES
-@dirrm share/locale/rw
-@dirrm share/locale/oc/LC_MESSAGES
-@dirrm share/locale/oc
-@dirrm share/locale/mr/LC_MESSAGES
-@dirrm share/locale/mr
-@dirrm share/locale/dz/LC_MESSAGES
-@dirrm share/locale/dz
-@dirrm share/locale/ar_TN/LC_MESSAGES
-@dirrm share/locale/ar_TN
 @dirrm share/gnome/help/gcompris/fr
 @dirrm share/gnome/help/gcompris/eu
 @dirrm share/gnome/help/gcompris
