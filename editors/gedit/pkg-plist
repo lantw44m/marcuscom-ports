@@ -167,7 +167,6 @@ share/gedit-2/glade/gedit-open-location-dialog.glade
 share/gedit-2/glade/gedit-page-setup-dialog.glade
 share/gedit-2/glade/gedit-preferences-dialog.glade
 share/gedit-2/glade/gedit-search-dialog.glade
-share/gedit-2/glade/gedit-style-scheme-dialog.glade
 share/gedit-2/glade/languages-dialog.glade2
 share/gedit-2/glade/sort.glade2
 share/gedit-2/glade/spell-checker.glade2
