@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/security/nss/Makefile,v 1.8 2007/07/05 16:50:41 ahze Exp $
+#    $MCom: ports/security/nss/Makefile,v 1.9 2007/07/10 14:55:03 ahze Exp $
 
 PORTNAME=	nss
 DISTVERSION=	${_MAJOR}.${_MINOR}.${_PATCH}-1
@@ -68,7 +68,7 @@ test:
 
 post-patch:
 	@${REINPLACE_CMD} -e "s|-pthread|${PTHREAD_LIBS}|g ; \
-		s|/usr/X11R6|${X11BASE}|g" \
+		s|/usr/X11R6|${LOCALBASE}|g" \
 		${WRKSRC:H:H}/security/coreconf/FreeBSD.mk
 	@${SED} -e 's|@exec_prefix@|${PREFIX}|; \
 		s|@includedir@|${PREFIX}/include/nss|; \

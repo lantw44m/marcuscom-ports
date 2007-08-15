@@ -3,7 +3,7 @@
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-wm/sawfish/Makefile,v 1.3 2007/08/07 04:43:15 mezz Exp $
 #
 
 PORTNAME=	sawfish
@@ -37,7 +37,7 @@ CONFIGURE_ARGS=	--with-readline \
 		--enable-capplet \
 		--disable-themer \
 		--with-esd
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_TARGET=	${ARCH}-pc-freebsd${OSREL:C/\..*//}
 

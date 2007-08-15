@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11/xscreensaver-gnome/Makefile,v 1.4 2007/08/07 03:52:33 mezz Exp $
 #
 
 PORTNAME?=	xscreensaver-gnome
@@ -97,7 +97,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|||' \
 		${WRKSRC}/hacks/glx/klein.c
 	@${REINPLACE_CMD} -E -e 's|^[[:space:]]*GL_LIBS="${PTHREAD_LIBS}"|#|g ; \
-		s|/usr/X11R6|${X11BASE}|g' \
+		s|/usr/X11R6|${LOCALBASE}|g' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD}  -e 's|<util.h>|<libutil.h>|' \
 		${WRKSRC}/hacks/phosphor.c ${WRKSRC}/hacks/apple2-main.c
