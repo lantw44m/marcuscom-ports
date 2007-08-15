@@ -65,7 +65,11 @@ share/locale/xh/LC_MESSAGES/gnome-pilot-conduits.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-pilot-conduits.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-pilot-conduits.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-pilot-conduits.mo
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
 @dirrm share/gnome-pilot/conduits
 @dirrm lib/gnome-pilot/conduits
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/xh/LC_MESSAGES
+@dirrmtry share/locale/xh
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw

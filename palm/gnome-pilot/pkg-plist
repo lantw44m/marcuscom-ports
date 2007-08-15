@@ -107,8 +107,6 @@ share/locale/xh/LC_MESSAGES/gnome-pilot.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-pilot.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-pilot.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-pilot.mo
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
 @dirrm share/omf/gnome-pilot
 @dirrm share/gnome/help/gnome-pilot/C
 @dirrm share/gnome/help/gnome-pilot
@@ -119,3 +117,9 @@ share/locale/zh_TW/LC_MESSAGES/gnome-pilot.mo
 @dirrmtry share/gnome-pilot
 @dirrmtry lib/gnome-pilot/conduits
 @dirrmtry lib/gnome-pilot
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/xh/LC_MESSAGES
+@dirrmtry share/locale/xh
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw

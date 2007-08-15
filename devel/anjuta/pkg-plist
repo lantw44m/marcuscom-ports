@@ -785,12 +785,6 @@ share/locale/zh_CN/LC_MESSAGES/anjuta.mo
 share/locale/zh_TW/LC_MESSAGES/anjuta.mo
 share/mime/application/x-anjuta.xml
 share/mime/packages/anjuta.xml
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
 @dirrm share/pixmaps/anjuta
 @dirrm share/omf/anjuta-manual
 @dirrm share/gnome/help/anjuta-manual/C/figures
@@ -860,3 +854,9 @@ share/mime/packages/anjuta.xml
 @dirrm include/libanjuta-1.0
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz

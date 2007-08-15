@@ -114,6 +114,11 @@ share/locale/xh/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/zh_HK/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
+@dirrm share/gtkhtml-%%VERSION%%/icons
+@dirrm share/gtkhtml-%%VERSION%%
+@dirrmtry lib/gtkhtml
+@dirrm include/libgtkhtml-%%VERSION%%/gtkhtml
+@dirrm include/libgtkhtml-%%VERSION%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -134,8 +139,3 @@ share/locale/zh_TW/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrm share/gtkhtml-%%VERSION%%/icons
-@dirrm share/gtkhtml-%%VERSION%%
-@dirrmtry lib/gtkhtml
-@dirrm include/libgtkhtml-%%VERSION%%/gtkhtml
-@dirrm include/libgtkhtml-%%VERSION%%

@@ -54,12 +54,6 @@ share/omf/goobox/goobox-ca.omf
 share/omf/goobox/goobox-es.omf
 share/omf/goobox/goobox-sv.omf
 @dirrm share/omf/goobox
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%
 @dirrm share/gnome/help/goobox/sv
@@ -67,3 +61,9 @@ share/omf/goobox/goobox-sv.omf
 @dirrm share/gnome/help/goobox/ca
 @dirrm share/gnome/help/goobox/C
 @dirrm share/gnome/help/goobox
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz

@@ -112,6 +112,14 @@ share/locale/vi/LC_MESSAGES/gnome-mag.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-mag.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-mag.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-mag.mo
+@dirrm share/idl/gnome-mag-1.0
+@dirrm %%DATADIR%%/1_32
+@dirrm %%DATADIR%%
+@dirrm %%DOCSDIR%%/reference/html
+@dirrm %%DOCSDIR%%/reference
+@dirrm %%DOCSDIR%%
+@dirrm include/gnome-mag-1.0/magnifier
+@dirrm include/gnome-mag-1.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
@@ -142,11 +150,3 @@ share/locale/zh_TW/LC_MESSAGES/gnome-mag.mo
 @dirrmtry share/locale/as
 @dirrmtry share/locale/ang/LC_MESSAGES
 @dirrmtry share/locale/ang
-@dirrm share/idl/gnome-mag-1.0
-@dirrm %%DATADIR%%/1_32
-@dirrm %%DATADIR%%
-@dirrm %%DOCSDIR%%/reference/html
-@dirrm %%DOCSDIR%%/reference
-@dirrm %%DOCSDIR%%
-@dirrm include/gnome-mag-1.0/magnifier
-@dirrm include/gnome-mag-1.0

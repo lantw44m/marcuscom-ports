@@ -328,8 +328,6 @@ share/locale/uk/LC_MESSAGES/goffice.mo
 share/locale/vi/LC_MESSAGES/goffice.mo
 share/locale/zh_CN/LC_MESSAGES/goffice.mo
 share/locale/zh_TW/LC_MESSAGES/goffice.mo
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
 @dirrm share/pixmaps/goffice
 @dirrm share/goffice/%%VERSION%%/patterns
 @dirrm share/goffice/%%VERSION%%/glade
@@ -358,3 +356,5 @@ share/locale/zh_TW/LC_MESSAGES/goffice.mo
 @dirrm include/libgoffice-1/goffice/app
 @dirrm include/libgoffice-1/goffice
 @dirrm include/libgoffice-1
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr

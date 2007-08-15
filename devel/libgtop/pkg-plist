@@ -171,6 +171,7 @@ share/locale/zh_HK/LC_MESSAGES/libgtop-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libgtop-2.0.mo
 @dirrm include/libgtop-2.0/glibtop
 @dirrm include/libgtop-2.0
+@dirrm %%DOCSDIR%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -193,4 +194,3 @@ share/locale/zh_TW/LC_MESSAGES/libgtop-2.0.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrm %%DOCSDIR%%

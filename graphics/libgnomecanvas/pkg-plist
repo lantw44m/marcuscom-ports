@@ -99,6 +99,8 @@ share/locale/yi/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomecanvas-2.0.mo
+@dirrm include/libgnomecanvas-2.0/libgnomecanvas
+@dirrm include/libgnomecanvas-2.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/yi/LC_MESSAGES
@@ -123,5 +125,3 @@ share/locale/zh_TW/LC_MESSAGES/libgnomecanvas-2.0.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/ang/LC_MESSAGES
 @dirrmtry share/locale/ang
-@dirrm include/libgnomecanvas-2.0/libgnomecanvas
-@dirrm include/libgnomecanvas-2.0

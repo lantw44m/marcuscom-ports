@@ -78,3 +78,5 @@ share/locale/zh_CN/LC_MESSAGES/gbf-1.mo
 @dirrm include/gnome-build-1.0
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
