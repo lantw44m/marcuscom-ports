@@ -141,6 +141,7 @@ share/solfege/help/C/chord.html
 share/solfege/help/C/compareintervals-module.html
 share/solfege/help/C/dictation-module.html
 share/solfege/help/C/dictation.html
+share/solfege/help/C/ear-training-test-printout-editor.html
 share/solfege/help/C/elembuilder-module.html
 share/solfege/help/C/elembuilder.html
 share/solfege/help/C/extending-solfege.html
@@ -191,8 +192,8 @@ share/solfege/help/C/ly/theory-intervals-seconds.png
 share/solfege/help/C/ly/theory-intervals-sevenths.png
 share/solfege/help/C/ly/theory-intervals-sixths.png
 share/solfege/help/C/ly/theory-intervals-thirds.png
+share/solfege/help/C/melodicinterval-module.html
 share/solfege/help/C/melodicinterval.html
-share/solfege/help/C/melodicintervals-module.html
 share/solfege/help/C/midi-instrument-names.html
 share/solfege/help/C/music-theory.html
 share/solfege/help/C/nameinterval-module.html
@@ -223,6 +224,7 @@ share/solfege/help/fr/chord.html
 share/solfege/help/fr/compareintervals-module.html
 share/solfege/help/fr/dictation-module.html
 share/solfege/help/fr/dictation.html
+share/solfege/help/fr/ear-training-test-printout-editor.html
 share/solfege/help/fr/elembuilder-module.html
 share/solfege/help/fr/elembuilder.html
 share/solfege/help/fr/extending-solfege.html
@@ -257,8 +259,8 @@ share/solfege/help/fr/idtone.html
 share/solfege/help/fr/index.html
 share/solfege/help/fr/inverting-intervals.html
 share/solfege/help/fr/lesson-files.html
+share/solfege/help/fr/melodicinterval-module.html
 share/solfege/help/fr/melodicinterval.html
-share/solfege/help/fr/melodicintervals-module.html
 share/solfege/help/fr/midi-instrument-names.html
 share/solfege/help/fr/music-theory.html
 share/solfege/help/fr/nameinterval-module.html
@@ -289,6 +291,7 @@ share/solfege/help/no/chord.html
 share/solfege/help/no/compareintervals-module.html
 share/solfege/help/no/dictation-module.html
 share/solfege/help/no/dictation.html
+share/solfege/help/no/ear-training-test-printout-editor.html
 share/solfege/help/no/elembuilder-module.html
 share/solfege/help/no/elembuilder.html
 share/solfege/help/no/extending-solfege.html
@@ -323,8 +326,8 @@ share/solfege/help/no/idtone.html
 share/solfege/help/no/index.html
 share/solfege/help/no/inverting-intervals.html
 share/solfege/help/no/lesson-files.html
+share/solfege/help/no/melodicinterval-module.html
 share/solfege/help/no/melodicinterval.html
-share/solfege/help/no/melodicintervals-module.html
 share/solfege/help/no/midi-instrument-names.html
 share/solfege/help/no/music-theory.html
 share/solfege/help/no/nameinterval-module.html
@@ -355,6 +358,7 @@ share/solfege/help/pt_BR/chord.html
 share/solfege/help/pt_BR/compareintervals-module.html
 share/solfege/help/pt_BR/dictation-module.html
 share/solfege/help/pt_BR/dictation.html
+share/solfege/help/pt_BR/ear-training-test-printout-editor.html
 share/solfege/help/pt_BR/elembuilder-module.html
 share/solfege/help/pt_BR/elembuilder.html
 share/solfege/help/pt_BR/extending-solfege.html
@@ -388,8 +392,8 @@ share/solfege/help/pt_BR/idtone.html
 share/solfege/help/pt_BR/index.html
 share/solfege/help/pt_BR/inverting-intervals.html
 share/solfege/help/pt_BR/lesson-files.html
+share/solfege/help/pt_BR/melodicinterval-module.html
 share/solfege/help/pt_BR/melodicinterval.html
-share/solfege/help/pt_BR/melodicintervals-module.html
 share/solfege/help/pt_BR/midi-instrument-names.html
 share/solfege/help/pt_BR/music-theory.html
 share/solfege/help/pt_BR/nameinterval-module.html
@@ -420,6 +424,7 @@ share/solfege/help/tr/chord.html
 share/solfege/help/tr/compareintervals-module.html
 share/solfege/help/tr/dictation-module.html
 share/solfege/help/tr/dictation.html
+share/solfege/help/tr/ear-training-test-printout-editor.html
 share/solfege/help/tr/elembuilder-module.html
 share/solfege/help/tr/elembuilder.html
 share/solfege/help/tr/extending-solfege.html
@@ -454,8 +459,8 @@ share/solfege/help/tr/idtone.html
 share/solfege/help/tr/index.html
 share/solfege/help/tr/inverting-intervals.html
 share/solfege/help/tr/lesson-files.html
+share/solfege/help/tr/melodicinterval-module.html
 share/solfege/help/tr/melodicinterval.html
-share/solfege/help/tr/melodicintervals-module.html
 share/solfege/help/tr/midi-instrument-names.html
 share/solfege/help/tr/music-theory.html
 share/solfege/help/tr/nameinterval-module.html
@@ -805,6 +810,7 @@ share/solfege/mpd/requests.py
 share/solfege/mpd/track.py
 share/solfege/solfege.gtkrc
 share/solfege/soundcard/__init__.py
+share/solfege/soundcard/exporter.py
 share/solfege/soundcard/fakesynth.py
 share/solfege/soundcard/midifilesynth.py
 share/solfege/soundcard/oss_common.py
@@ -814,6 +820,7 @@ share/solfege/soundcard/solfege_c_midi.py
 share/solfege/soundcard/soundcardexceptions.py
 share/solfege/soundcard/synth_common.py
 share/solfege/soundcard/winsynth.py
+share/solfege/src/ElementTree.py
 share/solfege/src/__init__.py
 share/solfege/src/abstract.py
 share/solfege/src/app.py
@@ -830,7 +837,7 @@ share/solfege/src/docviewer.py
 share/solfege/src/elembuilder.py
 share/solfege/src/example.py
 share/solfege/src/exceptiondialog.py
-share/solfege/src/gethomedir.py
+share/solfege/src/filesystem.py
 share/solfege/src/gpath.py
 share/solfege/src/gu.py
 share/solfege/src/harmonicinterval.py
@@ -856,6 +863,7 @@ share/solfege/src/nameinterval.py
 share/solfege/src/notenamespinbutton.py
 share/solfege/src/osutils.py
 share/solfege/src/pmwiki.py
+share/solfege/src/practisesheetdlg.py
 share/solfege/src/reportbug.py
 share/solfege/src/reportlib.py
 share/solfege/src/rhythm.py
@@ -869,6 +877,7 @@ share/solfege/src/specialwidgets.py
 share/solfege/src/statistics.py
 share/solfege/src/statisticsviewer.py
 share/solfege/src/stock.py
+share/solfege/src/testlib.py
 share/solfege/src/tracebackwindow.py
 share/solfege/src/trainingsetdlg.py
 share/solfege/src/tree.py
@@ -876,6 +885,7 @@ share/solfege/src/tuner.py
 share/solfege/src/twelvetone.py
 share/solfege/src/utils.py
 share/solfege/src/uuid.py
+share/solfege/src/winreg.py
 share/solfege/src/xrandom.py
 share/solfege/themes/svg/chord-voicing.svg
 share/solfege/themes/svg/chord.svg

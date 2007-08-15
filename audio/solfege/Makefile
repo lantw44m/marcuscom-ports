@@ -4,15 +4,14 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#   $MCom: ports/audio/solfege/Makefile,v 1.4 2007/06/29 22:55:02 mezz Exp $
+#   $MCom: ports/audio/solfege/Makefile,v 1.5 2007/07/23 16:29:56 mezz Exp $
 #
 
 PORTNAME=	solfege
-PORTVERSION=	3.8.1
+PORTVERSION=	3.9.0
 PORTREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
-MASTER_SITE_SUBDIR=	${PORTNAME}
+MASTER_SITES=	SF
 PKGNAMESUFFIX=	-nosound
 
 MAINTAINER=	ports@FreeBSD.org
@@ -54,6 +53,10 @@ post-patch:
 	@${RM} ${WRKSRC}/lesson-files/bin/csound-play-harmonic-interval.sh.orig
 	@${GREP} -lR "/usr/bin/python" ${WRKSRC} | ${XARGS} \
 		${REINPLACE_CMD} -e 's|/usr/bin/python|${SETENV} python|g'
+.for file in lessonfile_editor.py.in run-solfege.py.in
+	@${REINPLACE_CMD} -e 's|share", "solfege|share", "gnome", "solfege|g' \
+		${WRKSRC}/${file}
+.endfor
 	@${REINPLACE_CMD} -e 's|type=sequencer-device|type=fake-synth|g ; \
 		 s|/usr/bin|${LOCALBASE}/bin|g' ${WRKSRC}/default.config
 	@${REINPLACE_CMD} -e 's|(datadir)/locale|(prefix)/share/locale|g' \

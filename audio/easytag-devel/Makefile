@@ -6,8 +6,8 @@
 #
 
 PORTNAME=	easytag
-PORTVERSION=	2.1
-PORTREVISION=	2
+PORTVERSION=	2.1.2
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -37,6 +37,12 @@ LIB_DEPENDS+=		wavpack.1:${PORTSDIR}/audio/wavpack
 CONFIGURE_ARGS+=	--enable-wavpack
 .else
 CONFIGURE_ARGS+=	--disable-wavpack
+.endif
+
+.if defined(WITHOUT_ID3V23)
+CONFIGURE_ARGS+=	--disable-id3v23
+.else
+LIB_DEPENDS+=		id3tag.0:${PORTSDIR}/audio/libid3tag
 .endif
 
 .include <bsd.port.mk>

@@ -382,6 +382,7 @@ share/kino/lumas/matrix_snake_toplefthorizontal.png
 share/kino/lumas/none.png
 share/kino/lumas/symmetric_clock.png
 share/pixmaps/kino.png
+share/locale/ca/LC_MESSAGES/kino.mo
 share/locale/cs/LC_MESSAGES/kino.mo
 share/locale/da/LC_MESSAGES/kino.mo
 share/locale/de/LC_MESSAGES/kino.mo
