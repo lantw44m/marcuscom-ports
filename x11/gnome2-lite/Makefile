@@ -2,8 +2,8 @@
 # Date created:		30 November 2003
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome2-lite/Makefile,v 1.43 2007/03/19 05:13:54 marcus Exp $
-#   $MCom: ports/x11/gnome2-lite/Makefile,v 1.58 2007/05/30 03:21:47 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/gnome2-lite/Makefile,v 1.59 2007/06/09 06:31:33 marcus Exp $
 #
 
 PORTREVISION=	0

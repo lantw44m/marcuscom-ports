@@ -2,7 +2,7 @@
 # Date created:				29 May 2003
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/devhelp/Makefile,v 1.24 2007/07/08 08:17:18 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	devhelp

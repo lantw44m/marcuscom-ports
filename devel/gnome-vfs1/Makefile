@@ -2,7 +2,7 @@
 # Date created:				28th June 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/gnome-vfs1/Makefile,v 1.54 2007/02/04 22:39:10 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-vfs
