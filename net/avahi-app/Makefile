@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-app/Makefile,v 1.3 2007/08/04 18:23:03 mezz Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.4 2007/08/06 14:15:29 ahze Exp $
 #
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.20
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES?=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 PKGNAMESUFFIX?=	-app
@@ -53,6 +53,8 @@ MLINKS=	avahi-browse.1 avahi-browse-domains.1 \
 	avahi-resolve.1 avahi-resolve-address.1 \
 	avahi-resolve.1 avahi-resolve-host-name.1
 .endif
+
+USE_RC_SUBR=yes
 
 .include <bsd.port.pre.mk>
 
