@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/avahi/Makefile,v 1.23 2007/08/01 01:29:23 ahze Exp $
+#    $MCom: ports/net/avahi/Makefile,v 1.24 2007/08/01 12:17:04 ahze Exp $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.20
@@ -27,7 +27,7 @@ OPTIONS=	AUTOIPD "IPv4LL network address configuration daemon" off \
 		QT4 "Qt 4 bindings" off \
 		PYTHON "Python bindings and tools" off
 
-NO_BUILD=	yes 
+NO_BUILD=	yes
 
 .include <bsd.port.pre.mk>
 
