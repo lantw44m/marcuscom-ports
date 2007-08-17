@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.214 2007/07/12 06:16:56 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.215 2007/08/04 03:53:35 marcus Exp $
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.19.6
+PORTVERSION=	2.19.90
 PORTREVISION?=	0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
@@ -88,7 +88,7 @@ RUN_DEPENDS+=	yelp:${PORTSDIR}/x11/yelp \
 		epiphany:${PORTSDIR}/www/epiphany
 .endif
 .if ${.CURDIR:T}!="gnome2-lite"
-.if ${ARCH} == "i386" && ${OSVERSION} < 700042
+.if ${ARCH} == "i386"
 RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
 .endif
 .if ${OSVERSION}>=600000
