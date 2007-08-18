@@ -49,6 +49,7 @@ share/gnome/help/gnome-doc-xslt/C/db2html-division.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-ebnf.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-footnote.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-funcsynopsis.xml
+share/gnome/help/gnome-doc-xslt/C/db2html-index.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-info.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-inline.xml
 share/gnome/help/gnome-doc-xslt/C/db2html-l10n.xml
@@ -150,6 +151,7 @@ share/xml/gnome/xslt/docbook/html/db2html-division.xsl
 share/xml/gnome/xslt/docbook/html/db2html-ebnf.xsl
 share/xml/gnome/xslt/docbook/html/db2html-footnote.xsl
 share/xml/gnome/xslt/docbook/html/db2html-funcsynopsis.xsl
+share/xml/gnome/xslt/docbook/html/db2html-index.xsl
 share/xml/gnome/xslt/docbook/html/db2html-info.xsl
 share/xml/gnome/xslt/docbook/html/db2html-inline.xsl
 share/xml/gnome/xslt/docbook/html/db2html-l10n.xsl
