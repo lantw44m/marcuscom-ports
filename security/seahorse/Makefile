@@ -3,18 +3,19 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.41 2007/07/08 18:25:39 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.42 2007/08/12 20:51:25 marcus Exp $
 #
 
 PORTNAME=	seahorse
 PORTVERSION=	2.19.90
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A front end for GnuPG
+COMMENT=	GNOME application for managing encryption keys (PGP, SSH)
 
 BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
@@ -24,7 +25,7 @@ LIB_DEPENDS=	gpgme.17:${PORTSDIR}/security/gpgme \
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_X_PREFIX=	yes
+USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GECKO=	firefox xulrunner firefox-devel<->firefox
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui
@@ -70,6 +71,9 @@ CONFIGURE_ARGS+=--disable-nautilus
 
 .if !defined(WITHOUT_LDAP)
 USE_OPENLDAP=	yes
+.if ${WANT_OPENLDAP_VER} >= 23
+CFLAGS+=	-DLDAP_DEPRECATED
+.endif
 .else
 CONFIGURE_ARGS+=--disable-ldap
 .endif
