@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/rarian/Makefile,v 1.3 2007/08/04 03:51:31 marcus Exp $
+#   $MCom: ports/textproc/rarian/Makefile,v 1.4 2007/08/14 17:42:13 marcus Exp $
 #
 
 PORTNAME=	rarian
@@ -18,6 +18,7 @@ COMMENT=	An OMF help system based on the Freedesktop specification
 BUILD_DEPENDS=	${LOCALBASE}/share/xsl/docbook/xhtml/chunk.xsl:${PORTSDIR}/textproc/docbook-xsl \
     		${LOCALBASE}/share/xml/docbook/${DOCBOOK_VERSION}/catalog.xml:${PORTSDIR}/textproc/docbook-xml \
 		${LOCALBASE}/share/xml/docbook/4.1.2/docbookx.dtd:${PORTSDIR}/textproc/docbook-sk
+		bash:${PORTSDIR}/shells/bash
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
     		${LOCALBASE}/bin/getopt:${PORTSDIR}/misc/getopt \
 		${LOCALBASE}/share/xsl/docbook/xhtml/chunk.xsl:${PORTSDIR}/textproc/docbook-xsl \
