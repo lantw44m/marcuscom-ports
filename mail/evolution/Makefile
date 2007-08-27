@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.145 2007/08/02 04:50:01 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.146 2007/08/15 19:26:57 marcus Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.11.90
+PORTVERSION=	2.11.91
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -115,8 +115,5 @@ post-install: install-ldconfig-file
 	${MKDIR} ${PREFIX}/include/evolution-${EVO_VERSION}/composer
 	${INSTALL_DATA} ${WRKSRC}/composer/e-msg*.h ${PREFIX}/include/evolution-${EVO_VERSION}/composer
 	${INSTALL_DATA} ${WRKSRC}/composer/Editor.h ${PREFIX}/include/evolution-${EVO_VERSION}/composer
-#	@${LN} -s ${PREFIX}/bin/evolution-${EVO_VERSION} \
-#		${PREFIX}/bin/evolution
-	-@update-desktop-database
 
 .include <bsd.port.post.mk>
