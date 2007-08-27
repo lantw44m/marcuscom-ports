@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgtop/Makefile,v 1.21 2007/07/23 16:29:57 mezz Exp $
+#   $MCom: ports/devel/libgtop/Makefile,v 1.22 2007/08/27 04:03:48 marcus Exp $
 #
 
 PORTNAME=	libgtop
-PORTVERSION=	2.19.91
+PORTVERSION=	2.19.92
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
