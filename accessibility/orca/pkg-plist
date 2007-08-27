@@ -268,6 +268,7 @@ share/locale/pt/LC_MESSAGES/orca.mo
 share/locale/pt_BR/LC_MESSAGES/orca.mo
 share/locale/ru/LC_MESSAGES/orca.mo
 share/locale/rw/LC_MESSAGES/orca.mo
+share/locale/si/LC_MESSAGES/orca.mo
 share/locale/sl/LC_MESSAGES/orca.mo
 share/locale/sr/LC_MESSAGES/orca.mo
 share/locale/sr@Latn/LC_MESSAGES/orca.mo
@@ -290,6 +291,8 @@ share/locale/zh_TW/LC_MESSAGES/orca.mo
 @dirrm %%PYTHON_SITELIBDIR%%/orca
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
