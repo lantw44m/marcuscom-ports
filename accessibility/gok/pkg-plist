@@ -636,6 +636,16 @@ share/gnome/help/gok/C/legal.xml
 %%DATADIR%%/rw/quit.kbd
 %%DATADIR%%/rw/text-operations.kbd
 %%DATADIR%%/rw/valuator.kbd
+%%DATADIR%%/si/gok-controls.kbd
+%%DATADIR%%/si/hide.kbd
+%%DATADIR%%/si/launcher.kbd
+%%DATADIR%%/si/main.kbd
+%%DATADIR%%/si/mouse.kbd
+%%DATADIR%%/si/move-resize.kbd
+%%DATADIR%%/si/numberpad.kbd
+%%DATADIR%%/si/quit.kbd
+%%DATADIR%%/si/text-operations.kbd
+%%DATADIR%%/si/valuator.kbd
 %%DATADIR%%/singlekey-automatic-scanning.xam
 %%DATADIR%%/singlekey-inverse-scanning.xam
 %%DATADIR%%/sk/gok-controls.kbd
@@ -709,6 +719,16 @@ share/gnome/help/gok/C/legal.xml
 %%DATADIR%%/ta/quit.kbd
 %%DATADIR%%/ta/text-operations.kbd
 %%DATADIR%%/ta/valuator.kbd
+%%DATADIR%%/te/gok-controls.kbd
+%%DATADIR%%/te/hide.kbd
+%%DATADIR%%/te/launcher.kbd
+%%DATADIR%%/te/main.kbd
+%%DATADIR%%/te/mouse.kbd
+%%DATADIR%%/te/move-resize.kbd
+%%DATADIR%%/te/numberpad.kbd
+%%DATADIR%%/te/quit.kbd
+%%DATADIR%%/te/text-operations.kbd
+%%DATADIR%%/te/valuator.kbd
 %%DATADIR%%/text-operations.kbd
 %%DATADIR%%/tr/gok-controls.kbd
 %%DATADIR%%/tr/hide.kbd
@@ -832,6 +852,7 @@ share/locale/pt_BR/LC_MESSAGES/gok.mo
 share/locale/ro/LC_MESSAGES/gok.mo
 share/locale/ru/LC_MESSAGES/gok.mo
 share/locale/rw/LC_MESSAGES/gok.mo
+share/locale/si/LC_MESSAGES/gok.mo
 share/locale/sk/LC_MESSAGES/gok.mo
 share/locale/sl/LC_MESSAGES/gok.mo
 share/locale/sq/LC_MESSAGES/gok.mo
@@ -839,6 +860,7 @@ share/locale/sr/LC_MESSAGES/gok.mo
 share/locale/sr@Latn/LC_MESSAGES/gok.mo
 share/locale/sv/LC_MESSAGES/gok.mo
 share/locale/ta/LC_MESSAGES/gok.mo
+share/locale/te/LC_MESSAGES/gok.mo
 share/locale/tr/LC_MESSAGES/gok.mo
 share/locale/uk/LC_MESSAGES/gok.mo
 share/locale/vi/LC_MESSAGES/gok.mo
@@ -854,6 +876,7 @@ share/pixmaps/gok.png
 @dirrm %%DATADIR%%/vi
 @dirrm %%DATADIR%%/uk
 @dirrm %%DATADIR%%/tr
+@dirrm %%DATADIR%%/te
 @dirrm %%DATADIR%%/ta
 @dirrm %%DATADIR%%/sv
 @dirrm %%DATADIR%%/sr@Latn
@@ -861,6 +884,7 @@ share/pixmaps/gok.png
 @dirrm %%DATADIR%%/sq
 @dirrm %%DATADIR%%/sl
 @dirrm %%DATADIR%%/sk
+@dirrm %%DATADIR%%/si
 @dirrm %%DATADIR%%/rw
 @dirrm %%DATADIR%%/ru
 @dirrm %%DATADIR%%/ro
@@ -922,6 +946,10 @@ share/pixmaps/gok.png
 @dirrm %%DOCSDIR%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
