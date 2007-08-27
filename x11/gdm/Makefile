@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.73 2007/08/15 20:30:07 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.74 2007/08/18 16:08:20 marcus Exp $
 #
 
 PORTNAME=	gdm
@@ -33,7 +33,6 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomehier libgnomeui librsvg2 gnomedocutils \
 		gnomeprefix
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-console-kit=no
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
@@ -46,7 +45,8 @@ GNOME_LOCALSTATEDIR=	/var
 MAN1=		gdm.1
 
 OPTIONS=	IPV6 "Enable IPv6 support" on \
-		LOG_LIMIT "Limit ~/.xsession-errors size" on
+		LOG_LIMIT "Limit ~/.xsession-errors size" on \
+		CONSOLEKIT "Enable ConsoleKit support" off
 
 .include <bsd.port.pre.mk>
 
@@ -64,6 +64,13 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 .if defined(WITHOUT_LOG_LIMIT)
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-daemon_slave.c
+.endif
+
+.if defined(WITH_CONSOLEKIT)
+CONFIGURE_ARGS+=--with-console-kit=yes
+LIB_DEPENDS+=	ck-connector.0:${PORTSDIR}/sysutils/consolekit
+.else
+CONFIGURE_ARGS+=--with-console-kit=no
 .endif
 
 post-patch:
@@ -88,8 +95,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/config/gdm.conf-custom \
 		${PREFIX}/etc/gdm/custom.conf.default
 	@${MKDIR} ${PREFIX}/etc/gdm/Sessions
-#	@${LOCALBASE}/bin/gtk-update-icon-cache -f -q --ignore-theme-index \
-#	    ${PREFIX}/share/gdm/icons/hicolor
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
 	@${CAT} ${PKGMESSAGE}
