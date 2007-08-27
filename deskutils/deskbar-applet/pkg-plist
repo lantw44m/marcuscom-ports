@@ -17,9 +17,6 @@ lib/deskbar-applet/modules/epiphany.pyo
 lib/deskbar-applet/modules/files.py
 lib/deskbar-applet/modules/files.pyc
 lib/deskbar-applet/modules/files.pyo
-lib/deskbar-applet/modules/galeon.py
-lib/deskbar-applet/modules/galeon.pyc
-lib/deskbar-applet/modules/galeon.pyo
 lib/deskbar-applet/modules/gdmactions.py
 lib/deskbar-applet/modules/gdmactions.pyc
 lib/deskbar-applet/modules/gdmactions.pyo
@@ -114,9 +111,15 @@ lib/deskbar-applet/modules/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/__init__.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/ActionsFactory.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/ActionsFactory.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/ActionsFactory.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/CopyToClipboardAction.py
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/CopyToClipboardAction.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/CopyToClipboardAction.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/GoToLocationAction.py
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/GoToLocationAction.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/GoToLocationAction.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenDesktopFileAction.py
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenDesktopFileAction.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions/OpenDesktopFileAction.pyo
@@ -248,11 +251,10 @@ libdata/pkgconfig/deskbar-applet.pc
 %%DATADIR%%/art/deskbar-applet-panel-v.png
 %%DATADIR%%/art/deskbar-applet-panel-v.svg
 %%DATADIR%%/art/epiphany-history.png
-%%DATADIR%%/art/folder-bookmark.png
 %%DATADIR%%/art/generic.png
-%%DATADIR%%/art/google.png
 %%DATADIR%%/art/gpm-suspend-to-disk.png
 %%DATADIR%%/art/gpm-suspend-to-ram.png
+%%DATADIR%%/art/web-search.png
 %%DATADIR%%/art/yahoo.png
 %%DATADIR%%/mozilla-search.glade
 %%DATADIR%%/prefs-dialog.glade
@@ -269,6 +271,9 @@ share/gnome/help/deskbar/es/legal.xml
 share/gnome/help/deskbar/fr/deskbar.xml
 share/gnome/help/deskbar/fr/figures/deskbar-applet.png
 share/gnome/help/deskbar/fr/legal.xml
+share/gnome/help/deskbar/oc/deskbar.xml
+share/gnome/help/deskbar/oc/figures/deskbar-applet.png
+share/gnome/help/deskbar/oc/legal.xml
 share/gnome/help/deskbar/sv/deskbar.xml
 share/gnome/help/deskbar/sv/figures/deskbar-applet.png
 share/gnome/help/deskbar/sv/legal.xml
@@ -348,6 +353,7 @@ share/omf/deskbar/deskbar-C.omf
 share/omf/deskbar/deskbar-en_GB.omf
 share/omf/deskbar/deskbar-es.omf
 share/omf/deskbar/deskbar-fr.omf
+share/omf/deskbar/deskbar-oc.omf
 share/omf/deskbar/deskbar-sv.omf
 share/omf/deskbar/deskbar-uk.omf
 @dirrm share/omf/deskbar
@@ -355,6 +361,8 @@ share/omf/deskbar/deskbar-uk.omf
 @dirrm share/gnome/help/deskbar/uk
 @dirrm share/gnome/help/deskbar/sv/figures
 @dirrm share/gnome/help/deskbar/sv
+@dirrm share/gnome/help/deskbar/oc/figures
+@dirrm share/gnome/help/deskbar/oc
 @dirrm share/gnome/help/deskbar/fr/figures
 @dirrm share/gnome/help/deskbar/fr
 @dirrm share/gnome/help/deskbar/es/figures
