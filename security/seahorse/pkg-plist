@@ -38,6 +38,7 @@ share/dbus-1/services/org.gnome.seahorse.service
 %%APPLET%%share/gnome-2.0/ui/GNOME_SeahorseApplet.xml
 %%APPLET%%share/gnome/help/seahorse-applet/C/legal.xml
 %%APPLET%%share/gnome/help/seahorse-applet/C/seahorse-applet.xml
+%%APPLET%%share/gnome/help/seahorse-applet/es/seahorse-applet.xml
 %%APPLET%%share/gnome/help/seahorse-applet/sv/seahorse-applet.xml
 share/gnome/help/seahorse/C/figures/export.png
 share/gnome/help/seahorse/C/figures/file-manager.png
@@ -105,6 +106,19 @@ share/gnome/help/seahorse/it/figures/seahorse-window.png
 share/gnome/help/seahorse/it/figures/signature.png
 share/gnome/help/seahorse/it/figures/text-editor.png
 share/gnome/help/seahorse/it/seahorse.xml
+share/gnome/help/seahorse/oc/figures/export.png
+share/gnome/help/seahorse/oc/figures/file-manager.png
+share/gnome/help/seahorse/oc/figures/generate.png
+share/gnome/help/seahorse/oc/figures/import.png
+share/gnome/help/seahorse/oc/figures/key-manager.png
+share/gnome/help/seahorse/oc/figures/key-properties.png
+share/gnome/help/seahorse/oc/figures/passphrase.png
+share/gnome/help/seahorse/oc/figures/preferences.png
+share/gnome/help/seahorse/oc/figures/recipients.png
+share/gnome/help/seahorse/oc/figures/seahorse-window.png
+share/gnome/help/seahorse/oc/figures/signature.png
+share/gnome/help/seahorse/oc/figures/text-editor.png
+share/gnome/help/seahorse/oc/seahorse.xml
 share/gnome/help/seahorse/sv/figures/export.png
 share/gnome/help/seahorse/sv/figures/file-manager.png
 share/gnome/help/seahorse/sv/figures/generate.png
@@ -184,12 +198,14 @@ share/locale/zh_HK/LC_MESSAGES/seahorse.mo
 share/locale/zh_TW/LC_MESSAGES/seahorse.mo
 share/mime/packages/seahorse.xml
 %%APPLET%%share/omf/seahorse-applet/seahorse-applet-C.omf
+%%APPLET%%share/omf/seahorse-applet/seahorse-applet-es.omf
 %%APPLET%%share/omf/seahorse-applet/seahorse-applet-sv.omf
 share/omf/seahorse/seahorse-C.omf
 share/omf/seahorse/seahorse-en_GB.omf
 share/omf/seahorse/seahorse-es.omf
 share/omf/seahorse/seahorse-fr.omf
 share/omf/seahorse/seahorse-it.omf
+share/omf/seahorse/seahorse-oc.omf
 share/omf/seahorse/seahorse-sv.omf
 share/pixmaps/seahorse-applet.svg
 share/pixmaps/seahorse-preferences.png
@@ -281,6 +297,8 @@ share/pixmaps/seahorse/scalable/seahorse.svg
 @dirrm share/omf/seahorse
 @dirrm share/gnome/help/seahorse/sv/figures
 @dirrm share/gnome/help/seahorse/sv
+@dirrm share/gnome/help/seahorse/oc/figures
+@dirrm share/gnome/help/seahorse/oc
 @dirrm share/gnome/help/seahorse/it/figures
 @dirrm share/gnome/help/seahorse/it
 @dirrm share/gnome/help/seahorse/fr/figures
@@ -292,6 +310,7 @@ share/pixmaps/seahorse/scalable/seahorse.svg
 @dirrm share/gnome/help/seahorse/C/figures
 @dirrm share/gnome/help/seahorse/C
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/sv
+%%APPLET%%@dirrm share/gnome/help/seahorse-applet/es
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/C
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet
 @dirrm share/gnome/help/seahorse
