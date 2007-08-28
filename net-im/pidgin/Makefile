@@ -3,11 +3,11 @@
 # Whom:				Jim Mock <jim@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/pidgin/Makefile,v 1.14 2007/06/17 04:37:20 marcus Exp $
+#   $MCom: ports/net-im/pidgin/Makefile,v 1.15 2007/08/04 21:52:26 marcus Exp $
 #
 
 PORTNAME=	pidgin
-PORTREVISION=	1
+PORTREVISION=	2
 
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Pidgin multi-protocol messaging client (GTK+ UI)

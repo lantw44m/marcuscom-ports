@@ -143,7 +143,7 @@ share/pixmaps/pidgin/emotes/default/alien.png
 share/pixmaps/pidgin/emotes/default/angel.png
 share/pixmaps/pidgin/emotes/default/angry.png
 share/pixmaps/pidgin/emotes/default/arrogant.png
-share/gnome/pixmaps/pidgin/emotes/default/at-wits-end.png
+share/pixmaps/pidgin/emotes/default/at-wits-end.png
 share/pixmaps/pidgin/emotes/default/bad.png
 share/pixmaps/pidgin/emotes/default/bashful.png
 share/pixmaps/pidgin/emotes/default/beat-up.png
@@ -196,7 +196,7 @@ share/pixmaps/pidgin/emotes/default/eat.png
 share/pixmaps/pidgin/emotes/default/embarrassed.png
 share/pixmaps/pidgin/emotes/default/excruciating.png
 share/pixmaps/pidgin/emotes/default/eyeroll.png
-share/gnome/pixmaps/pidgin/emotes/default/female-fighter.png
+share/pixmaps/pidgin/emotes/default/female-fighter.png
 share/pixmaps/pidgin/emotes/default/film.png
 share/pixmaps/pidgin/emotes/default/fingers-crossed.png
 share/pixmaps/pidgin/emotes/default/flag.png
@@ -252,7 +252,7 @@ share/pixmaps/pidgin/emotes/default/music.png
 share/pixmaps/pidgin/emotes/default/musical-note.png
 share/pixmaps/pidgin/emotes/default/nailbiting.png
 share/pixmaps/pidgin/emotes/default/neutral.png
-share/gnome/pixmaps/pidgin/emotes/default/on-the-phone.png
+share/pixmaps/pidgin/emotes/default/on-the-phone.png
 share/pixmaps/pidgin/emotes/default/party.png
 share/pixmaps/pidgin/emotes/default/peace.png
 share/pixmaps/pidgin/emotes/default/phone.png
@@ -311,7 +311,7 @@ share/pixmaps/pidgin/emotes/default/terror.png
 share/pixmaps/pidgin/emotes/default/theme
 share/pixmaps/pidgin/emotes/default/thinking.png
 share/pixmaps/pidgin/emotes/default/thunder.png
-share/gnome/pixmaps/pidgin/emotes/default/time-out.png
+share/pixmaps/pidgin/emotes/default/time-out.png
 share/pixmaps/pidgin/emotes/default/tongue.png
 share/pixmaps/pidgin/emotes/default/tremble.png
 share/pixmaps/pidgin/emotes/default/turtle.png
@@ -439,7 +439,7 @@ share/pixmaps/pidgin/toolbar/16/font-size-down.png
 share/pixmaps/pidgin/toolbar/16/font-size-up.png
 share/pixmaps/pidgin/toolbar/16/insert-image.png
 share/pixmaps/pidgin/toolbar/16/insert-link.png
-share/gnome/pixmaps/pidgin/toolbar/16/insert.png
+share/pixmaps/pidgin/toolbar/16/insert.png
 share/pixmaps/pidgin/toolbar/16/message-new.png
 share/pixmaps/pidgin/toolbar/16/plugins.png
 share/pixmaps/pidgin/toolbar/16/send-file.png
