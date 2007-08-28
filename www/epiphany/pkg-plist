@@ -40,32 +40,6 @@ share/aclocal/epiphany.m4
 share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/dbus-1/services/org.gnome.Epiphany.service
-%%DOCSDIR%%/EphyCommandManager.html
-%%DOCSDIR%%/EphyEmbed.html
-%%DOCSDIR%%/EphyNodeDb.html
-%%DOCSDIR%%/EphyTab.html
-%%DOCSDIR%%/EphyWindow.html
-%%DOCSDIR%%/ch01.html
-%%DOCSDIR%%/ch02.html
-%%DOCSDIR%%/epiphany-EphyEmbedFactory.html
-%%DOCSDIR%%/epiphany-EphyEmbedPersist.html
-%%DOCSDIR%%/epiphany-EphyEmbedSingle.html
-%%DOCSDIR%%/epiphany-EphyExtensionsManager.html
-%%DOCSDIR%%/epiphany-EphyGlade.html
-%%DOCSDIR%%/epiphany-EphyPermissionManager.html
-%%DOCSDIR%%/epiphany-ephy-cookie-manager.html
-%%DOCSDIR%%/epiphany-ephy-password-manager.html
-%%DOCSDIR%%/epiphany-ephy-session.html
-%%DOCSDIR%%/epiphany-ephy-shell.html
-%%DOCSDIR%%/epiphany.devhelp
-%%DOCSDIR%%/epiphany.devhelp2
-%%DOCSDIR%%/home.png
-%%DOCSDIR%%/index.html
-%%DOCSDIR%%/index.sgml
-%%DOCSDIR%%/left.png
-%%DOCSDIR%%/right.png
-%%DOCSDIR%%/style.css
-%%DOCSDIR%%/up.png
 %%DATADIR%%/about.ini
 %%DATADIR%%/chrome/branding/brand.dtd
 %%DATADIR%%/chrome/branding/brand.properties
@@ -184,6 +158,11 @@ share/gnome/help/epiphany/nl/figures/ephy-addressbar-smartbookmark-screenshot.pn
 share/gnome/help/epiphany/nl/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/nl/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/nl/figures/ephy-screenshot.png
+share/gnome/help/epiphany/oc/epiphany.xml
+share/gnome/help/epiphany/oc/figures/ephy-addressbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/oc/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/oc/figures/ephy-history-window-screenshot.png
+share/gnome/help/epiphany/oc/figures/ephy-screenshot.png
 share/gnome/help/epiphany/ru/epiphany.xml
 share/gnome/help/epiphany/ru/figures/ephy-addressbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/ru/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
@@ -298,6 +277,7 @@ share/omf/epiphany/epiphany-fr.omf
 share/omf/epiphany/epiphany-it.omf
 share/omf/epiphany/epiphany-ja.omf
 share/omf/epiphany/epiphany-nl.omf
+share/omf/epiphany/epiphany-oc.omf
 share/omf/epiphany/epiphany-ru.omf
 share/omf/epiphany/epiphany-sv.omf
 share/omf/epiphany/epiphany-uk.omf
@@ -309,6 +289,8 @@ share/pygtk/2.0/defs/epiphany.defs
 @dirrm share/gnome/help/epiphany/sv
 @dirrm share/gnome/help/epiphany/ru/figures
 @dirrm share/gnome/help/epiphany/ru
+@dirrm share/gnome/help/epiphany/oc/figures
+@dirrm share/gnome/help/epiphany/oc
 @dirrm share/gnome/help/epiphany/nl/figures
 @dirrm share/gnome/help/epiphany/nl
 @dirrm share/gnome/help/epiphany/ja/figures
