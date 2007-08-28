@@ -58,7 +58,7 @@ sbin/gdmsetup
 %%DATADIR%%/themes/happygnome-list/GdmGreeterTheme.desktop
 %%DATADIR%%/themes/happygnome-list/background.svg
 %%DATADIR%%/themes/happygnome-list/gnome-logo.svg
-%%DATADIR%%/themes/happygnome-list/happygnome.xml
+%%DATADIR%%/themes/happygnome-list/happygnome-list.xml
 %%DATADIR%%/themes/happygnome-list/options.png
 %%DATADIR%%/themes/happygnome-list/screenshot.png
 %%DATADIR%%/themes/happygnome/GdmGreeterTheme.desktop
@@ -73,6 +73,7 @@ share/gnome/help/gdm/en_GB/gdm.xml
 share/gnome/help/gdm/es/gdm.xml
 share/gnome/help/gdm/fr/gdm.xml
 share/gnome/help/gdm/ko/gdm.xml
+share/gnome/help/gdm/oc/gdm.xml
 share/gnome/help/gdm/sv/gdm.xml
 share/gnome/help/gdm/uk/gdm.xml
 share/icons/hicolor/16x16/apps/gdm-xnest.png
@@ -169,6 +170,7 @@ share/omf/gdm/gdm-en_GB.omf
 share/omf/gdm/gdm-es.omf
 share/omf/gdm/gdm-fr.omf
 share/omf/gdm/gdm-ko.omf
+share/omf/gdm/gdm-oc.omf
 share/omf/gdm/gdm-sv.omf
 share/omf/gdm/gdm-uk.omf
 share/pixmaps/faces/astronaut.jpg
@@ -204,6 +206,7 @@ share/xsessions/gnome.desktop
 @dirrm share/omf/gdm
 @dirrm share/gnome/help/gdm/uk
 @dirrm share/gnome/help/gdm/sv
+@dirrm share/gnome/help/gdm/oc
 @dirrm share/gnome/help/gdm/ko
 @dirrm share/gnome/help/gdm/fr
 @dirrm share/gnome/help/gdm/es
