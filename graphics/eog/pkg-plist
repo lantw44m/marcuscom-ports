@@ -32,8 +32,9 @@ share/applications/eog.desktop
 %%DATADIR%%/icons/hicolor/24x24/actions/eog-image-collection.png
 %%DATADIR%%/icons/hicolor/32x32/actions/eog-image-collection.png
 %%DATADIR%%/icons/hicolor/32x32/actions/eog-plugin.png
-%%DATADIR%%/icons/hicolor/48x48/actions/eog-plugin.png
+%%DATADIR%%/icons/hicolor/scalable/actions/eog-image-collection.svg
 %%DATADIR%%/icons/hicolor/scalable/actions/eog-plugin.svg
+%%DATADIR%%/pixmaps/thumbnail-frame.png
 share/gnome/help/eog/C/eog.xml
 share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
@@ -62,6 +63,9 @@ share/gnome/help/eog/ja/legal.xml
 share/gnome/help/eog/ko/eog.xml
 share/gnome/help/eog/ko/figures/eog_save_as_window.png
 share/gnome/help/eog/ko/figures/eog_start_window.png
+share/gnome/help/eog/oc/eog.xml
+share/gnome/help/eog/oc/figures/eog_save_as_window.png
+share/gnome/help/eog/oc/figures/eog_start_window.png
 share/gnome/help/eog/pa/eog.xml
 share/gnome/help/eog/pa/figures/eog_save_as_window.png
 share/gnome/help/eog/pa/figures/eog_start_window.png
@@ -178,6 +182,7 @@ share/omf/eog/eog-fr.omf
 share/omf/eog/eog-it.omf
 share/omf/eog/eog-ja.omf
 share/omf/eog/eog-ko.omf
+share/omf/eog/eog-oc.omf
 share/omf/eog/eog-pa.omf
 share/omf/eog/eog-pt_BR.omf
 share/omf/eog/eog-ru.omf
@@ -185,8 +190,6 @@ share/omf/eog/eog-sv.omf
 share/omf/eog/eog-uk.omf
 share/omf/eog/eog-zh_CN.omf
 share/omf/eog/eog-zh_TW.omf
-share/pixmaps/eog/thumbnail-frame.png
-@dirrm share/pixmaps/eog
 @dirrm share/omf/eog
 @dirrm share/gnome/help/eog/zh_TW/figures
 @dirrm share/gnome/help/eog/zh_TW
@@ -202,6 +205,8 @@ share/pixmaps/eog/thumbnail-frame.png
 @dirrm share/gnome/help/eog/pt_BR
 @dirrm share/gnome/help/eog/pa/figures
 @dirrm share/gnome/help/eog/pa
+@dirrm share/gnome/help/eog/oc/figures
+@dirrm share/gnome/help/eog/oc
 @dirrm share/gnome/help/eog/ko/figures
 @dirrm share/gnome/help/eog/ko
 @dirrm share/gnome/help/eog/ja/figures
@@ -221,10 +226,9 @@ share/pixmaps/eog/thumbnail-frame.png
 @dirrm share/gnome/help/eog/C/figures
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
+@dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%/icons/hicolor/scalable/actions
 @dirrm %%DATADIR%%/icons/hicolor/scalable
-@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
-@dirrm %%DATADIR%%/icons/hicolor/48x48
 @dirrm %%DATADIR%%/icons/hicolor/32x32/actions
 @dirrm %%DATADIR%%/icons/hicolor/32x32
 @dirrm %%DATADIR%%/icons/hicolor/24x24/actions
