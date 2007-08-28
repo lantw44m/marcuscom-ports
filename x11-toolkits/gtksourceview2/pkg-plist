@@ -4,8 +4,8 @@ include/gtksourceview-2.0/gtksourceview/gtksourcelanguage.h
 include/gtksourceview-2.0/gtksourceview/gtksourcelanguagemanager.h
 include/gtksourceview-2.0/gtksourceview/gtksourcemarker.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestyle.h
-include/gtksourceview-2.0/gtksourceview/gtksourcestylemanager.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestylescheme.h
+include/gtksourceview-2.0/gtksourceview/gtksourcestyleschememanager.h
 include/gtksourceview-2.0/gtksourceview/gtksourceview-typebuiltins.h
 include/gtksourceview-2.0/gtksourceview/gtksourceview.h
 lib/libgtksourceview-2.0.a
@@ -32,6 +32,7 @@ share/gtksourceview-2.0/language-specs/diff.lang
 share/gtksourceview-2.0/language-specs/docbook.lang
 share/gtksourceview-2.0/language-specs/dpatch.lang
 share/gtksourceview-2.0/language-specs/dtd.lang
+share/gtksourceview-2.0/language-specs/erlang.lang
 share/gtksourceview-2.0/language-specs/fortran.lang
 share/gtksourceview-2.0/language-specs/gap.lang
 share/gtksourceview-2.0/language-specs/gtk-doc.lang
@@ -79,6 +80,7 @@ share/gtksourceview-2.0/language-specs/xml.lang
 share/gtksourceview-2.0/language-specs/yacc.lang
 share/gtksourceview-2.0/styles/classic.xml
 share/gtksourceview-2.0/styles/kate.xml
+share/gtksourceview-2.0/styles/oblivion.xml
 share/gtksourceview-2.0/styles/styles.rng
 share/gtksourceview-2.0/styles/tango.xml
 share/locale/ar/LC_MESSAGES/gtksourceview-2.0.mo
