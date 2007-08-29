@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.105 2007/07/31 05:01:09 marcus Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.106 2007/08/27 04:25:39 marcus Exp $
 #
 
 PORTNAME=	gnome-system-monitor
-PORTVERSION=	2.19.91
+PORTVERSION=	2.19.91.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-system-monitor/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -35,9 +35,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lutil"
 
 GCONF_SCHEMAS=	gnome-system-monitor.schemas
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|@INTLTOOL_ICONV@|${LOCALBASE}/bin/iconv|' \
-	    	${WRKSRC}/intltool-merge.in
 
 .include <bsd.port.mk>
