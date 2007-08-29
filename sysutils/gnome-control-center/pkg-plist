@@ -152,6 +152,7 @@ share/gnome/help/control-center/en_GB/control-center.xml
 share/gnome/help/control-center/es/control-center.xml
 share/gnome/help/control-center/fr/control-center.xml
 share/gnome/help/control-center/ja/control-center.xml
+share/gnome/help/control-center/oc/control-center.xml
 share/gnome/help/control-center/pa/control-center.xml
 share/gnome/help/control-center/pt_BR/control-center.xml
 share/gnome/help/control-center/ru/control-center.xml
@@ -264,6 +265,7 @@ share/omf/control-center/control-center-en_GB.omf
 share/omf/control-center/control-center-es.omf
 share/omf/control-center/control-center-fr.omf
 share/omf/control-center/control-center-ja.omf
+share/omf/control-center/control-center-oc.omf
 share/omf/control-center/control-center-pa.omf
 share/omf/control-center/control-center-pt_BR.omf
 share/omf/control-center/control-center-ru.omf
@@ -279,6 +281,7 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrm share/gnome/help/control-center/ru
 @dirrm share/gnome/help/control-center/pt_BR
 @dirrm share/gnome/help/control-center/pa
+@dirrm share/gnome/help/control-center/oc
 @dirrm share/gnome/help/control-center/ja
 @dirrm share/gnome/help/control-center/fr
 @dirrm share/gnome/help/control-center/es
