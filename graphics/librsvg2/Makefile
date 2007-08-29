@@ -3,11 +3,11 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/librsvg2/Makefile,v 1.115 2007/07/27 15:53:09 mezz Exp $
+#   $MCom: ports/graphics/librsvg2/Makefile,v 1.116 2007/08/21 06:04:58 marcus Exp $
 #
 
 PORTNAME=	librsvg2
-PORTVERSION=	2.18.1
+PORTVERSION=	2.18.2
 PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -32,7 +32,6 @@ USE_GNOME=	gnomehack gnomeprefix libgsf gtk20 ltverhack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-svgz \
-		--disable-gtk-doc \
 		--without-gimp \
 		--with-croco \
 		--disable-gnome-vfs \
