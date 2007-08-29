@@ -7,11 +7,11 @@
 
 PORTNAME=	pharmacy
 PORTVERSION=	0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	SF
 
-MAINTAINER=	thomas@goodking.ca
+MAINTAINER=	tabthorpe@FreeBSD.org
 COMMENT=	GNOME frontend for CVS
 
 USE_X_PREFIX=	yes

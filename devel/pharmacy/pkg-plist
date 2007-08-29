@@ -1,5 +1,5 @@
 bin/pharmacy
-share/apps/Development/pharmacy.desktop
+share/gnome/apps/Development/pharmacy.desktop
 share/gnome/help/pharmacy/C/apx1.html
 share/gnome/help/pharmacy/C/checkout.html
 share/gnome/help/pharmacy/C/console.html
