@@ -3,11 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.146 2007/08/15 19:26:57 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.147 2007/08/27 21:09:25 mezz Exp $
 #
 
 PORTNAME=	evolution
 PORTVERSION=	2.11.91
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -42,7 +43,7 @@ GCONF_SCHEMAS=	apps-evolution-mail-notification.schemas \
 		apps_evolution_addressbook.schemas \
 		apps_evolution_calendar.schemas \
 		apps_evolution_shell.schemas \
-		apps-evolution-attachment-reminder-2.12.schemas \
+		apps-evolution-attachment-reminder.schemas \
 		evolution-mail.schemas
 
 EVO_VERSION=	2.12
