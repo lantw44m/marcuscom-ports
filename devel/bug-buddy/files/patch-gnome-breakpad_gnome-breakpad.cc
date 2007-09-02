@@ -1,5 +1,5 @@
---- gnome-breakpad/gnome-breakpad.cc.orig	2007-09-02 18:02:43.000000000 -0400
-+++ gnome-breakpad/gnome-breakpad.cc	2007-09-02 18:10:08.000000000 -0400
+--- gnome-breakpad/gnome-breakpad.cc.orig	2007-08-16 13:55:38.000000000 -0400
++++ gnome-breakpad/gnome-breakpad.cc	2007-09-02 19:21:10.000000000 -0400
 @@ -6,8 +6,14 @@
  #include <cassert>
  #include <cstring>
@@ -15,7 +15,24 @@
  
  #include <sys/types.h>
  #include <sys/stat.h>
-@@ -269,9 +275,17 @@ check_if_gdb (void *callback_context)
+@@ -114,6 +120,7 @@ find_in_debug_path (const char *filename
+ }
+ 	
+ 
++#if !defined(__FreeBSD__) || __FreeBSD_version > 700024
+ static gboolean
+ elf_has_debug_symbols (const char *filename)
+ {
+@@ -166,7 +173,7 @@ elf_has_debug_symbols (const char *filen
+        elf_end (elf);
+        return false;
+ }
+-
++#endif
+ 
+ 
+ 
+@@ -269,9 +276,17 @@ check_if_gdb (void *callback_context)
  		_exit(0);
  	}
  	
