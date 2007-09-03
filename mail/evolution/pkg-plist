@@ -435,6 +435,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/default/lt/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/mk/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/nl/mail/local/Inbox
+%%DATADIR%%/%%VERSION%%/default/pl/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/pt/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/sv/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/zh_CN/mail/local/Inbox
@@ -1746,6 +1747,9 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/default/pt/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/pt/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/pt
+@dirrm %%DATADIR%%/%%VERSION%%/default/pl/mail/local
+@dirrm %%DATADIR%%/%%VERSION%%/default/pl/mail
+@dirrm %%DATADIR%%/%%VERSION%%/default/pl
 @dirrm %%DATADIR%%/%%VERSION%%/default/nl/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/nl/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/nl
