@@ -25,6 +25,7 @@ share/applications/eog.desktop
 %%DATADIR%%/eog-toolbar.xml
 %%DATADIR%%/eog-ui.xml
 %%DATADIR%%/eog.glade
+%%DATADIR%%/gtkrc
 %%DATADIR%%/icons/hicolor/16x16/actions/eog-image-collection.png
 %%DATADIR%%/icons/hicolor/16x16/actions/eog-plugin.png
 %%DATADIR%%/icons/hicolor/22x22/actions/eog-image-collection.png

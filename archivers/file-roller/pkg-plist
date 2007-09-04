@@ -3,25 +3,25 @@ lib/nautilus/extensions-1.0/libnautilus-fileroller.a
 lib/nautilus/extensions-1.0/libnautilus-fileroller.la
 lib/nautilus/extensions-1.0/libnautilus-fileroller.so
 libexec/file-roller/isoinfo.sh
+share/applications/file-roller.desktop
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/NEWS
 %%PORTDOCS%%%%DOCSDIR%%/README
 %%PORTDOCS%%%%DOCSDIR%%/TODO
-share/applications/file-roller.desktop
-share/file-roller/glade/add-options.glade
-share/file-roller/glade/batch-add-files.glade
-share/file-roller/glade/batch-password.glade
-share/file-roller/glade/delete.glade
-share/file-roller/glade/open-with.glade
-share/file-roller/glade/password.glade
-share/file-roller/glade/properties.glade
-share/file-roller/icons/hicolor/16x16/actions/add-files-to-archive.png
-share/file-roller/icons/hicolor/16x16/actions/add-folder-to-archive.png
-share/file-roller/icons/hicolor/16x16/actions/extract-archive.png
-share/file-roller/icons/hicolor/24x24/actions/add-files-to-archive.png
-share/file-roller/icons/hicolor/24x24/actions/add-folder-to-archive.png
-share/file-roller/icons/hicolor/24x24/actions/extract-archive.png
-share/file-roller/icons/hicolor/24x24/actions/preview-file.png
+%%DATADIR%%/glade/add-options.glade
+%%DATADIR%%/glade/batch-add-files.glade
+%%DATADIR%%/glade/batch-password.glade
+%%DATADIR%%/glade/delete.glade
+%%DATADIR%%/glade/open-with.glade
+%%DATADIR%%/glade/password.glade
+%%DATADIR%%/glade/properties.glade
+%%DATADIR%%/icons/hicolor/16x16/actions/add-files-to-archive.png
+%%DATADIR%%/icons/hicolor/16x16/actions/add-folder-to-archive.png
+%%DATADIR%%/icons/hicolor/16x16/actions/extract-archive.png
+%%DATADIR%%/icons/hicolor/24x24/actions/add-files-to-archive.png
+%%DATADIR%%/icons/hicolor/24x24/actions/add-folder-to-archive.png
+%%DATADIR%%/icons/hicolor/24x24/actions/extract-archive.png
+%%DATADIR%%/icons/hicolor/24x24/actions/preview-file.png
 share/gnome/help/file-roller/C/figures/file-roller_home.png
 share/gnome/help/file-roller/C/figures/file-roller_leftarrow.png
 share/gnome/help/file-roller/C/figures/file-roller_main_window.png
@@ -89,17 +89,6 @@ share/gnome/help/file-roller/uk/figures/file-roller_main_window.png
 share/gnome/help/file-roller/uk/figures/file-roller_rightarrow.png
 share/gnome/help/file-roller/uk/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/uk/file-roller.xml
-share/omf/file-roller/file-roller-C.omf
-share/omf/file-roller/file-roller-bg.omf
-share/omf/file-roller/file-roller-de.omf
-share/omf/file-roller/file-roller-es.omf
-share/omf/file-roller/file-roller-fr.omf
-share/omf/file-roller/file-roller-it.omf
-share/omf/file-roller/file-roller-nl.omf
-share/omf/file-roller/file-roller-oc.omf
-share/omf/file-roller/file-roller-ru.omf
-share/omf/file-roller/file-roller-sv.omf
-share/omf/file-roller/file-roller-uk.omf
 share/icons/hicolor/16x16/apps/file-roller.png
 share/icons/hicolor/22x22/apps/file-roller.png
 share/icons/hicolor/32x32/apps/file-roller.png
@@ -185,6 +174,17 @@ share/locale/xh/LC_MESSAGES/file-roller.mo
 share/locale/zh_CN/LC_MESSAGES/file-roller.mo
 share/locale/zh_HK/LC_MESSAGES/file-roller.mo
 share/locale/zh_TW/LC_MESSAGES/file-roller.mo
+share/omf/file-roller/file-roller-C.omf
+share/omf/file-roller/file-roller-bg.omf
+share/omf/file-roller/file-roller-de.omf
+share/omf/file-roller/file-roller-es.omf
+share/omf/file-roller/file-roller-fr.omf
+share/omf/file-roller/file-roller-it.omf
+share/omf/file-roller/file-roller-nl.omf
+share/omf/file-roller/file-roller-oc.omf
+share/omf/file-roller/file-roller-ru.omf
+share/omf/file-roller/file-roller-sv.omf
+share/omf/file-roller/file-roller-uk.omf
 @dirrm share/omf/file-roller
 @dirrm share/gnome/help/file-roller/uk/figures
 @dirrm share/gnome/help/file-roller/uk
@@ -209,14 +209,14 @@ share/locale/zh_TW/LC_MESSAGES/file-roller.mo
 @dirrm share/gnome/help/file-roller/C/figures
 @dirrm share/gnome/help/file-roller/C
 @dirrm share/gnome/help/file-roller
-@dirrm share/file-roller/icons/hicolor/24x24/actions
-@dirrm share/file-roller/icons/hicolor/24x24
-@dirrm share/file-roller/icons/hicolor/16x16/actions
-@dirrm share/file-roller/icons/hicolor/16x16
-@dirrm share/file-roller/icons/hicolor
-@dirrm share/file-roller/icons
-@dirrm share/file-roller/glade
-@dirrm share/file-roller
+@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
+@dirrm %%DATADIR%%/icons/hicolor/16x16
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
+@dirrm %%DATADIR%%/glade
+@dirrm %%DATADIR%%
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrm libexec/file-roller
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

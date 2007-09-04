@@ -3,11 +3,11 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller/Makefile,v 1.125 2007/08/14 20:31:21 marcus Exp $
+#   $MCom: ports/archivers/file-roller/Makefile,v 1.126 2007/08/28 00:23:52 marcus Exp $
 #
 
 PORTNAME=	file-roller
-PORTVERSION=	2.19.91
+PORTVERSION=	2.19.92
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}

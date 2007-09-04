@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.62 2007/08/14 22:16:42 mezz Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.63 2007/08/28 00:42:27 marcus Exp $
 #
 
 PORTNAME=	eog
-PORTVERSION=	2.19.91
+PORTVERSION=	2.19.92
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -36,6 +36,13 @@ GCONF_SCHEMAS=	eog.schemas
 .if !defined(WITHOUT_EXIF) || (exists(${LOCALBASE}/lib/libexif.so.12) || \
 	defined(WITH_EXIF))
 LIB_DEPENDS+=	exif.12:${PORTSDIR}/graphics/libexif
+.endif
+
+.if ${HAVE_GNOME:Mpygnome2}!=""
+USE_GNOME+=	pygnome2
+CONFIGURE_ARGS+=--enable-python
+.else
+CONFIGURE_ARGS+=--disable-python
 .endif
 
 post-install:
