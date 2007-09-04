@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/misc/gnome2-reference/Makefile,v 1.4 2007/09/04 03:35:39 ahze Exp $
 
 PORTNAME=	gnome2-reference
 PORTVERSION=	2.20
@@ -82,5 +82,4 @@ create-ref-list:
 	(cd ${PORTSDIR}/${port} && echo "${port}:`${MAKE} -V PORTNAME` \\" >> ${REF_LIST_INC})
 .endfor
 
-.include "${REF_LIST_INC}"
 .include <bsd.port.post.mk>
