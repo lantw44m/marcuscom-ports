@@ -605,6 +605,9 @@ share/gnome/help/blackjack/C/legal.xml
 share/gnome/help/blackjack/es/blackjack.xml
 share/gnome/help/blackjack/es/figures/blackjack_start_window.png
 share/gnome/help/blackjack/es/figures/blackjack_win_window.png
+share/gnome/help/blackjack/fr/blackjack.xml
+share/gnome/help/blackjack/fr/figures/blackjack_start_window.png
+share/gnome/help/blackjack/fr/figures/blackjack_win_window.png
 share/gnome/help/blackjack/oc/blackjack.xml
 share/gnome/help/blackjack/oc/figures/blackjack_start_window.png
 share/gnome/help/blackjack/oc/figures/blackjack_win_window.png
@@ -715,6 +718,8 @@ share/gnome/help/gnobots2/da/gnobots2.xml
 share/gnome/help/gnobots2/da/legal.xml
 share/gnome/help/gnobots2/es/figures/gnobots2-main.png
 share/gnome/help/gnobots2/es/gnobots2.xml
+share/gnome/help/gnobots2/fr/figures/gnobots2-main.png
+share/gnome/help/gnobots2/fr/gnobots2.xml
 share/gnome/help/gnobots2/it/gnobots2.xml
 share/gnome/help/gnobots2/it/legal.xml
 share/gnome/help/gnobots2/oc/figures/gnobots2-main.png
@@ -874,6 +879,9 @@ share/gnome/help/gtali/da/legal.xml
 share/gnome/help/gtali/es/figures/mainwindow.png
 share/gnome/help/gtali/es/figures/preferences.png
 share/gnome/help/gtali/es/gtali.xml
+share/gnome/help/gtali/fr/figures/mainwindow.png
+share/gnome/help/gtali/fr/figures/preferences.png
+share/gnome/help/gtali/fr/gtali.xml
 share/gnome/help/gtali/oc/figures/mainwindow.png
 share/gnome/help/gtali/oc/figures/preferences.png
 share/gnome/help/gtali/oc/gtali.xml
@@ -898,6 +906,14 @@ share/gnome/help/iagno/es/figures/START.png
 share/gnome/help/iagno/es/figures/connect.png
 share/gnome/help/iagno/es/figures/tables.png
 share/gnome/help/iagno/es/iagno.xml
+share/gnome/help/iagno/fr/figures/ANIMATION.png
+share/gnome/help/iagno/fr/figures/BLOCK.png
+share/gnome/help/iagno/fr/figures/FIRST.png
+share/gnome/help/iagno/fr/figures/PLAYER.png
+share/gnome/help/iagno/fr/figures/START.png
+share/gnome/help/iagno/fr/figures/connect.png
+share/gnome/help/iagno/fr/figures/tables.png
+share/gnome/help/iagno/fr/iagno.xml
 share/gnome/help/iagno/oc/figures/ANIMATION.png
 share/gnome/help/iagno/oc/figures/BLOCK.png
 share/gnome/help/iagno/oc/figures/FIRST.png
@@ -925,6 +941,11 @@ share/gnome/help/mahjongg/es/figures/no-move.png
 share/gnome/help/mahjongg/es/figures/preferences.png
 share/gnome/help/mahjongg/es/figures/toolbar.png
 share/gnome/help/mahjongg/es/mahjongg.xml
+share/gnome/help/mahjongg/fr/figures/mahjongg.png
+share/gnome/help/mahjongg/fr/figures/no-move.png
+share/gnome/help/mahjongg/fr/figures/preferences.png
+share/gnome/help/mahjongg/fr/figures/toolbar.png
+share/gnome/help/mahjongg/fr/mahjongg.xml
 share/gnome/help/mahjongg/oc/figures/mahjongg.png
 share/gnome/help/mahjongg/oc/figures/no-move.png
 share/gnome/help/mahjongg/oc/figures/preferences.png
@@ -1139,6 +1160,7 @@ share/omf/aisleriot/aisleriot-oc.omf
 share/omf/aisleriot/aisleriot-sv.omf
 share/omf/blackjack/blackjack-C.omf
 share/omf/blackjack/blackjack-es.omf
+share/omf/blackjack/blackjack-fr.omf
 share/omf/blackjack/blackjack-oc.omf
 share/omf/blackjack/blackjack-sv.omf
 share/omf/glchess/glchess-C.omf
@@ -1165,6 +1187,7 @@ share/omf/gnibbles/gnibbles-oc.omf
 share/omf/gnibbles/gnibbles-sv.omf
 share/omf/gnobots2/gnobots2-C.omf
 share/omf/gnobots2/gnobots2-es.omf
+share/omf/gnobots2/gnobots2-fr.omf
 share/omf/gnobots2/gnobots2-oc.omf
 share/omf/gnobots2/gnobots2-sv.omf
 share/omf/gnome-games/gnobots2-da.omf
@@ -1199,14 +1222,17 @@ share/omf/gnotski/gnotski-oc.omf
 share/omf/gnotski/gnotski-sv.omf
 share/omf/gtali/gtali-C.omf
 share/omf/gtali/gtali-es.omf
+share/omf/gtali/gtali-fr.omf
 share/omf/gtali/gtali-oc.omf
 share/omf/gtali/gtali-sv.omf
 share/omf/iagno/iagno-C.omf
 share/omf/iagno/iagno-es.omf
+share/omf/iagno/iagno-fr.omf
 share/omf/iagno/iagno-oc.omf
 share/omf/iagno/iagno-sv.omf
 share/omf/mahjongg/mahjongg-C.omf
 share/omf/mahjongg/mahjongg-es.omf
+share/omf/mahjongg/mahjongg-fr.omf
 share/omf/mahjongg/mahjongg-oc.omf
 share/omf/mahjongg/mahjongg-sv.omf
 share/omf/same-gnome/same-gnome-C.omf
@@ -1346,6 +1372,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/mahjongg/sv
 @dirrm share/gnome/help/mahjongg/oc/figures
 @dirrm share/gnome/help/mahjongg/oc
+@dirrm share/gnome/help/mahjongg/fr/figures
+@dirrm share/gnome/help/mahjongg/fr
 @dirrm share/gnome/help/mahjongg/es/figures
 @dirrm share/gnome/help/mahjongg/es
 @dirrm share/gnome/help/mahjongg/C/figures
@@ -1355,6 +1383,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/iagno/sv
 @dirrm share/gnome/help/iagno/oc/figures
 @dirrm share/gnome/help/iagno/oc
+@dirrm share/gnome/help/iagno/fr/figures
+@dirrm share/gnome/help/iagno/fr
 @dirrm share/gnome/help/iagno/es/figures
 @dirrm share/gnome/help/iagno/es
 @dirrm share/gnome/help/iagno/C/figures
@@ -1364,6 +1394,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gtali/sv
 @dirrm share/gnome/help/gtali/oc/figures
 @dirrm share/gnome/help/gtali/oc
+@dirrm share/gnome/help/gtali/fr/figures
+@dirrm share/gnome/help/gtali/fr
 @dirrm share/gnome/help/gtali/es/figures
 @dirrm share/gnome/help/gtali/es
 @dirrm share/gnome/help/gtali/da
@@ -1428,6 +1460,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnobots2/oc/figures
 @dirrm share/gnome/help/gnobots2/oc
 @dirrm share/gnome/help/gnobots2/it
+@dirrm share/gnome/help/gnobots2/fr/figures
+@dirrm share/gnome/help/gnobots2/fr
 @dirrm share/gnome/help/gnobots2/es/figures
 @dirrm share/gnome/help/gnobots2/es
 @dirrm share/gnome/help/gnobots2/da
@@ -1481,6 +1515,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/blackjack/sv
 @dirrm share/gnome/help/blackjack/oc/figures
 @dirrm share/gnome/help/blackjack/oc
+@dirrm share/gnome/help/blackjack/fr/figures
+@dirrm share/gnome/help/blackjack/fr
 @dirrm share/gnome/help/blackjack/es/figures
 @dirrm share/gnome/help/blackjack/es
 @dirrm share/gnome/help/blackjack/C/figures
