@@ -3,19 +3,20 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/nspr/Makefile,v 1.2 2007/07/10 14:52:05 ahze Exp $
+#    $MCom: ports/devel/nspr/Makefile,v 1.3 2007/07/30 19:55:01 mezz Exp $
 
 PORTNAME=	nspr
-DISTVERSION=	4.6.7-1
+DISTVERSION=	4.6.7-2
 CATEGORIES=	devel
 MASTER_SITES=	LOCAL
 MASTER_SITE_SUBDIR=	ahze
 #MASTER_SITES=	${MASTER_SITE_MOZILLA}
 #MASTER_SITE_SUBDIR=	nspr/releases/v${PORTVERSION}/src
-DISTNAME=	${PORTNAME}-4.6.6-1
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A platform-neutral API for system level and libc like functions
+
+USE_BZIP2=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/mozilla/nsprpub/build
 
