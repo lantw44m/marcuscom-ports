@@ -303,6 +303,7 @@ libdata/pkgconfig/libgoffice-0.4.pc
 %%DATADIR%%/%%VERSION%%/glade/gog-plot-prefs.glade
 %%DATADIR%%/%%VERSION%%/glade/gog-reg-curve-prefs.glade
 %%DATADIR%%/%%VERSION%%/glade/gog-reg-eqn-prefs.glade
+%%DATADIR%%/%%VERSION%%/glade/gog-series-prefs.glade
 %%DATADIR%%/%%VERSION%%/glade/gog-style-prefs.glade
 %%DATADIR%%/%%VERSION%%/patterns/svg-patterns.xml
 share/locale/am/LC_MESSAGES/goffice-%%VERSION%%.mo
@@ -334,6 +335,7 @@ share/locale/ms/LC_MESSAGES/goffice-%%VERSION%%.mo
 share/locale/nb/LC_MESSAGES/goffice-%%VERSION%%.mo
 share/locale/nl/LC_MESSAGES/goffice-%%VERSION%%.mo
 share/locale/nn/LC_MESSAGES/goffice-%%VERSION%%.mo
+share/locale/oc/LC_MESSAGES/goffice-%%VERSION%%.mo
 share/locale/pl/LC_MESSAGES/goffice-%%VERSION%%.mo
 share/locale/pt/LC_MESSAGES/goffice-%%VERSION%%.mo
 share/locale/pt_BR/LC_MESSAGES/goffice-%%VERSION%%.mo
@@ -487,5 +489,7 @@ share/pixmaps/goffice/%%VERSION%%/surface.xpm
 @dirrm include/libgoffice-0.4/goffice/app
 @dirrm include/libgoffice-0.4/goffice
 @dirrm include/libgoffice-0.4
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
