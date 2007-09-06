@@ -3,12 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/sysutils/tracker/Makefile,v 1.5 2007/08/25 20:39:54 mezz Exp $
 #
 
 PORTNAME=	tracker
-PORTVERSION=	0.6.1
-PORTREVISION=	1
+PORTVERSION=	0.6.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.gnome.org/~jamiemcc/tracker/
 
@@ -19,7 +18,9 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		poppler-glib.1:${PORTSDIR}/graphics/poppler-gtk \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		wv-1.2.3:${PORTSDIR}/textproc/wv \
-		gmime-2.0.4:${PORTSDIR}/mail/gmime2
+		gmime-2.0.4:${PORTSDIR}/mail/gmime2 \
+		sqlite3.8:${PORTSDIR}/databases/sqlite3
+#RUN_DEPENDS=	${LOCALBASE}/lib/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet
 
 USE_BZIP2=	yes
 USE_FAM=	yes
@@ -39,12 +40,12 @@ CONFIGURE_ARGS=	--enable-video-extractor=gstreamer \
 		--enable-deskbar-applet \
 		--with-deskbar-applet-handler-dir=${LOCALBASE}/lib/deskbar-applet/handlers
 
-MAN1=		tracker-extract.1 tracker-files.1 tracker-meta-folder.1 \
-		tracker-query.1 tracker-search.1 tracker-stats.1 trackerd.1 \
-		tracker-preferences.1 tracker-search-tool.1 tracker-status.1 \
-		tracker-tag.1 tracker-thumbnailer.1
-MAN5=		tracker.cfg.5
-MAN7=		tracker-services.7
+MAN1=	tracker-extract.1 tracker-files.1 tracker-meta-folder.1 \
+	tracker-preferences.1 tracker-query.1 tracker-search.1 \
+	tracker-search-tool.1 tracker-stats.1 tracker-status.1 \
+	tracker-tag.1 tracker-thumbnailer.1 trackerd.1
+MAN5=	tracker.cfg.5
+MAN7=	tracker-services.7
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|libpng|libpng12|' ${WRKSRC}/configure
