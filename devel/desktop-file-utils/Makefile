@@ -3,34 +3,32 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/desktop-file-utils/Makefile,v 1.6 2007/05/20 22:09:13 marcus Exp $
+#   $MCom: ports/devel/desktop-file-utils/Makefile,v 1.7 2007/06/08 03:32:59 mezz Exp $
 #
 
-PORTNAME=		desktop-file-utils
-PORTVERSION=		0.13
-CATEGORIES=		devel
-MASTER_SITES=		http://freedesktop.org/software/${PORTNAME}/releases/
+PORTNAME=	desktop-file-utils
+PORTVERSION=	0.14
+CATEGORIES=	devel
+MASTER_SITES=	http://freedesktop.org/software/${PORTNAME}/releases/
 
-MAINTAINER=		gnome@FreeBSD.org
-COMMENT=		A couple of command line utilities for working with desktop entries
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	A couple of command line utilities for working with desktop entries
 
-LIB_DEPENDS=		popt:${PORTSDIR}/devel/popt
+USE_GNOME=	glib20
+WANT_GNOME=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--without-lispdir
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib" EMACS="no"
 
-USE_GNOME=		glib20
-WANT_GNOME=		yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS=		--without-lispdir
-CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include" \
-			LDFLAGS="-L${LOCALBASE}/lib" EMACS="no"
+PKGINSTALL=	${WRKDIR}/pkg-install
+PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
 
-PKGINSTALL=		${WRKDIR}/pkg-install
-PKGDEINSTALL=		${WRKDIR}/pkg-deinstall
+PORT_MIMEDIRS=	${LOCALBASE}/share/applications
 
-PORT_MIMEDIRS=		${LOCALBASE}/share/applications
+MIMEDIRS=	${PORT_MIMEDIRS}
 
-MIMEDIRS=		${PORT_MIMEDIRS}
-
-RMDIRS=			${PORT_MIMEDIRS}
+RMDIRS=		${PORT_MIMEDIRS}
 
 post-patch:
 	@${SED} -e 's|%%MIMEDIRS%%|${MIMEDIRS}| ;\
