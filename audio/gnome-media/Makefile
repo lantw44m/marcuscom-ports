@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.107 2007/04/26 17:24:34 ahze Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.108 2007/05/19 21:35:56 marcus Exp $
 #
 
 PORTNAME=	gnome-media
-PORTVERSION=	2.18.0
-PORTREVISION=	2
+PORTVERSION=	2.19.92
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-media/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -19,7 +18,7 @@ COMMENT=	Multimedia applications for the GNOME 2 desktop
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-INSTALLS_OMF=	yes
+INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
@@ -40,8 +39,7 @@ GCONF_SCHEMAS=	CDDB-Slave2.schemas gnome-audio-profiles.schemas \
 post-patch:
 	@${REINPLACE_CMD} -e 's|[$$][(]CDROM_HOST[)]|freebsd|g' \
 		${WRKSRC}/gnome-cd/Makefile.in
-.if ${OSVERSION} > 501107
-	@${REINPLACE_CMD} -e 's|acd0c|acd0|' ${WRKSRC}/configure
-.endif
+	@${REINPLACE_CMD} -e 's|acd0c|acd0|g ; s|== "xyes|= "xyes|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
