@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.108 2007/05/19 21:35:56 marcus Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.109 2007/09/07 15:32:51 mezz Exp $
 #
 
 PORTNAME=	gnome-media
@@ -34,12 +34,10 @@ GCONF_SCHEMAS=	CDDB-Slave2.schemas gnome-audio-profiles.schemas \
 		gnome-cd.schemas gnome-sound-recorder.schemas \
 		gnome-volume-control.schemas
 
-.include <bsd.port.pre.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|[$$][(]CDROM_HOST[)]|freebsd|g' \
 		${WRKSRC}/gnome-cd/Makefile.in
 	@${REINPLACE_CMD} -e 's|acd0c|acd0|g ; s|== "xyes|= "xyes|g' \
 		${WRKSRC}/configure
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
