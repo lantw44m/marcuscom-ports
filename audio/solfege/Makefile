@@ -4,7 +4,7 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#   $MCom: ports/audio/solfege/Makefile,v 1.5 2007/07/23 16:29:56 mezz Exp $
+#   $MCom: ports/audio/solfege/Makefile,v 1.6 2007/08/15 06:04:48 mezz Exp $
 #
 
 PORTNAME=	solfege
@@ -29,6 +29,7 @@ CONFIGURE_ENV=	ac_cv_path_XML2PO=""
 CONFIGURE_ARGS=	--disable-oss-sound \
 		--enable-docbook-stylesheet=${STYLESHEET}
 MAKE_ARGS=	skipmanual=yes
+USE_DISPLAY=	yes
 
 MAN1=		lessonfile_editor.1 solfege.1
 
@@ -38,15 +39,6 @@ STYLESHEET=	${LOCALBASE}/share/xsl/docbook/xhtml/chunk.xsl
 
 .if ${HAVE_GNOME:Mpygnomeextras}!=""
 USE_GNOME+=	pygnomeextras
-.endif
-
-.if defined(PACKAGE_BUILDING)
-BUILD_DEPENDS+=	Xvfb:${X_VFBSERVER_PORT} \
-		${X11BASE}/lib/X11/fonts/misc/8x13O.pcf.gz:${X_FONTS_MISC_PORT}
-.else
-.if !defined(DISPLAY) || ${DISPLAY} == ""
-IGNORE=		requires an active X session (and DISPLAY variable).  Please compile this while running X
-.endif
 .endif
 
 post-patch:
