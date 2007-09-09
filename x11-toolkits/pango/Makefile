@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.107 2007/08/21 05:55:41 marcus Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.108 2007/08/28 19:40:44 mezz Exp $
 #
 
 PORTNAME=	pango
@@ -53,8 +53,7 @@ CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			LDFLAGS="-L${LOCALBASE}/lib"
 PLIST_SUB+=		X11="@comment "
 .else
-USE_XLIB+=		yes
-LIB_DEPENDS+=		Xft.2:${PORTSDIR}/x11-fonts/libXft
+USE_XORG+=		xft xrender
 CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 				${GLIB2_CFLAGS} -I${LOCALBASE}/include" \
 			LDFLAGS="-L${LOCALBASE}/lib"
