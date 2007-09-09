@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox-devel/Makefile,v 1.36 2007/02/24 21:00:46 mezz Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.38 2007/07/05 16:52:19 ahze Exp $
 
 PORTNAME=	firefox
 DISTVERSION=	3.0.a6
@@ -57,10 +57,6 @@ MOZ_OPTIONS+=	--disable-svg
 # Needs MOZ_TOOLKIT=cairo-gtk2
 #MOZ_OPTIONS+=	--enable-svg --enable-svg-renderer=cairo
 #.endif
-
-.if ${PERL_LEVEL} < 500600
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-config_make-jars.pl
-.endif
 
 post-extract::
 	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' -e 's|@MOZILLA@|${MOZILLA}|' \

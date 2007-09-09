@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gnumeric/Makefile,v 1.35 2007/07/16 20:04:09 mezz Exp $
+#   $MCom: ports/math/gnumeric/Makefile,v 1.36 2007/07/29 19:40:59 marcus Exp $
 #
 
 PORTNAME=	gnumeric
@@ -46,12 +46,6 @@ PLIST_SUB=	VERSION=${PORTVERSION}
 OPTIONS=	GNOMEDB "Enable libgnomedb support" off
 
 .include <bsd.port.pre.mk>
-
-.if ${PERL_LEVEL} < 500600
-PLIST_SUB+=	PERL="@comment "
-.else
-PLIST_SUB+=	PERL=""
-.endif
 
 .if defined(WITH_GNOMEDB)
 USE_GNOME+=		libgnomedb
