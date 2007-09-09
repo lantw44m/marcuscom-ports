@@ -4,7 +4,7 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/syndigator/Makefile,v 1.3 2007/08/07 03:39:17 mezz Exp $
 #
 
 PORTNAME=	syndigator
@@ -27,7 +27,7 @@ RUN_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/Text/Iconv.pm:${PORTSDIR}/converters/p5-T
 		${SITE_PERL}/${PERL_ARCH}/Gtk2.pm:${PORTSDIR}/x11-toolkits/p5-Gtk2 \
 		${SITE_PERL}/${PERL_ARCH}/Gtk2/Html2.pm:${PORTSDIR}/x11-toolkits/p5-Gtk2-Html2
 
-USE_X_LIB=	yes
+USE_XLIB=	yes
 USE_GNOME=	gnomehier
 USE_PERL5=	yes
 NO_BUILD=	yes
