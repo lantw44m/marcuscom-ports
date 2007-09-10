@@ -7,7 +7,7 @@
 
 PORTNAME=	preps
 PORTVERSION=	2.0.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://fresh.t-systems-sfr.com/unix/src/misc/
 PKGNAMESUFFIX=	-gui
