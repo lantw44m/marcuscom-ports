@@ -326,4 +326,3 @@ share/themes/Gray/index.theme
 @dirrm share/themes/Gray-Flat
 @dirrm share/themes/Gray
 @dirrmtry share/themes
-@dirrmtry share/gnome

@@ -128,4 +128,3 @@ share/themes/Envy/index.theme
 @dirrm share/themes/Envy/metacity-1
 @dirrm share/themes/Envy
 @dirrmtry share/themes
-@dirrmtry share/gnome
