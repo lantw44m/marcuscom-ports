@@ -1,0 +1,105 @@
+# New ports collection makefile for:	linphone
+# Date created:				30 December 2002
+# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	linphone
+PORTVERSION=	1.7.1
+PORTREVISION=	2
+PORTEPOCH=	1
+CATEGORIES?=	net
+MASTER_SITES=	${MASTER_SITE_SAVANNAH:S/$/:linphone/} \
+		${MASTER_SITE_GNU:S/$/:libosip2/}
+MASTER_SITE_SUBDIR=	${PORTNAME}/stable/sources/:linphone \
+			osip/:libosip2
+DISTFILES=	${PORTNAME}-${PORTVERSION}${EXTRACT_SUFX}:linphone \
+		libosip2-2.2.2${EXTRACT_SUFX}:libosip2
+
+MAINTAINER=	ports@FreeBSD.org
+COMMENT=	A web phone that supports SIP protocol
+
+LIB_DEPENDS=	jack.0:${PORTSDIR}/audio/jack \
+		samplerate.1:${PORTSDIR}/audio/libsamplerate \
+		portaudio.0:${PORTSDIR}/audio/portaudio \
+		speex.1:${PORTSDIR}/audio/speex \
+		osip2.3:${PORTSDIR}/net/libosip2 \
+		ortp.5:${PORTSDIR}/net/ortp
+
+USE_GNOME=	glib20 gnomehack gnometarget intlhack pkgconfig
+USE_GMAKE=	yes
+USE_AUTOTOOLS=	libtool:15
+LIBTOOLFILES=	configure mediastreamer2/configure
+CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
+CONFIGURE_ARGS=	--disable-ipv6 --disable-manual --disable-ewarning \
+		--disable-strict --disable-video --enable-external-ortp \
+		--with-osip=${LOCALBASE}
+MAKE_ENV=	SUBDIRS="${SUBDIRS}"
+USE_LDCONFIG=	yes
+
+CFLAGS+=	-DPACKAGE_LOCALE_DIR='\"${PREFIX}/share/locale\"' \
+		-DPACKAGE_DATA_DIR='\"${PREFIX}/share\"' \
+		-DPACKAGE_SOUND_DIR='\"${DATADIR}/sounds\"' \
+		-DHAVE_STRUCT_TIMEVAL
+CPPFLAGS=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 600000
+LIB_DEPENDS+=	readline.[5-9]:${PORTSDIR}/devel/readline
+.endif
+
+.if defined(WITHOUT_NLS)
+CONFIGURE_ARGS+=	--disable-nls
+PLIST_SUB+=	NLS="@comment "
+.else
+USE_GETTEXT=	yes
+PLIST_SUB+=	NLS=""
+.endif
+
+.if defined(LINPHONE_GUI)
+LIB_DEPENDS+=	linphone.8:${PORTSDIR}/net/linphone-base
+DESCR=		${PKGDIR}/pkg-descr.gui
+PLIST=		${PKGDIR}/pkg-plist.gui
+USE_GNOME+=	gnomepanel gnomeprefix
+MAN1=		linphone.1
+SUBDIRS=	pixmaps gtk
+.else
+PKGNAMESUFFIX=	-base
+CONFIGURE_ARGS+=	--enable-gtk_ui=no
+MAN1=		linphonec.1 sipomatic.1
+SUBDIRS=	po gsmlib mediastreamer2 media_api exosip coreapi console
+.endif
+
+post-extract:
+	@${CP} -f ${FILESDIR}/GNOME_LinphoneApplet.xml ${WRKSRC}/gtk
+	@${LN} -sf ${WRKDIR}/libosip2-2.2.2/src/osip2/osip_negotiation.c \
+		${WRKSRC}/exosip
+	@${LN} -sf ${WRKDIR}/libosip2-2.2.2/include/osip2 \
+		${WRKSRC}/exosip
+
+post-patch:
+	@${REINPLACE_CMD} -e '/^SUBDIRS =/s| =| ?=|g' ${WRKSRC}/Makefile.in
+	@${REINPLACE_CMD} -e '/^imgdir =/s|(datadir)|(pkgdatadir)|g' \
+		${WRKSRC}/mediastreamer2/src/Makefile.in
+
+post-install:
+.if defined(LINPHONE_GUI)
+	${INSTALL_MAN} ${WRKSRC}/share/C/linphone.1 ${MANPREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/share/linphone.desktop \
+		${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/share/linphone_applet.desktop \
+		${PREFIX}/share/applications
+.else
+	${INSTALL_MAN} ${WRKSRC}/share/C/linphonec.1 ${MANPREFIX}/man/man1
+	${INSTALL_MAN} ${WRKSRC}/share/C/sipomatic.1 ${MANPREFIX}/man/man1
+	${INSTALL_DATA} ${WRKSRC}/share/linphone.pc ${PREFIX}/libdata/pkgconfig
+	@${MKDIR} ${DATADIR}/sounds
+	${INSTALL_DATA} ${WRKSRC}/share/*.wav ${DATADIR}/sounds
+	@${MKDIR} ${DATADIR}/sounds/rings
+	${INSTALL_DATA} ${WRKSRC}/share/rings/*.wav ${DATADIR}/sounds/rings
+.endif
+
+.include <bsd.port.post.mk>
