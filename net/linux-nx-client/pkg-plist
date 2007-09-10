@@ -78,8 +78,6 @@ share/pixmaps/nx-desktop.png
 share/pixmaps/nx.png
 share/pixmaps/nxclient-admin.png
 share/pixmaps/nxclient-wizard.png
-@dirrmtry share/pixmaps
-@dirrmtry share/gnome
 share/icons/crystalsvg/48x48/nx-desktop.png
 share/icons/crystalsvg/32x32/nx.png
 share/icons/crystalsvg/32x32/nxclient-admin.png
