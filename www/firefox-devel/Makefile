@@ -6,13 +6,13 @@
 #   $MCom: ports/www/firefox-devel/Makefile,v 1.38 2007/07/05 16:52:19 ahze Exp $
 
 PORTNAME=	firefox
-DISTVERSION=	3.0.a6
+DISTVERSION=	3.0.a7
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
-MASTER_SITE_SUBDIR=	${PORTNAME}/releases/granparadiso/alpha6/source/
+MASTER_SITE_SUBDIR=	${PORTNAME}/releases/granparadiso/alpha7/source/
 #MASTER_SITE_SUBDIR=	${PORTNAME}/releases/${DISTVERSION}/source
-DISTNAME=	granparadiso-alpha6-source
+DISTNAME=	granparadiso-alpha7-source
 #DISTNAME=	${PORTNAME}-${DISTVERSION}-source
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -21,7 +21,8 @@ COMMENT=	Web browser based on the browser portion of Mozilla
 MOZILLA_NAME=	Firefox-${MOZILLA_SUFX}
 MOZILLA_SUFX=	-devel
 MOZILLA=	${PORTNAME}${MOZILLA_SUFX}
-MOZ_OPTIONS=	--program-transform-name='s/firefox/${MOZILLA}/'
+MOZ_OPTIONS=	--program-transform-name='s/firefox/${MOZILLA}/' \
+		--enable-svg --enable-svg-renderer=cairo
 MOZ_TOOLKIT=	cairo-gtk2
 
 WANT_GNOME=	yes
@@ -52,12 +53,6 @@ OPTIONS=	NEWTAB "Open external links in a new tab" on \
 
 GECKO_PTHREAD_LIBS!=${CC} -dumpspecs | ${GREP} -m 1 pthread | ${SED} -e 's|^.*%{\!pg: %{pthread:|| ; s|}.*$$||' || ${TRUE}
 
-MOZ_OPTIONS+=	--disable-svg
-#.if ${OSVERSION} >= 600000
-# Needs MOZ_TOOLKIT=cairo-gtk2
-#MOZ_OPTIONS+=	--enable-svg --enable-svg-renderer=cairo
-#.endif
-
 post-extract::
 	@${SED} -e 's|@FIREFOX_ICON@|${FIREFOX_ICON}|' -e 's|@MOZILLA@|${MOZILLA}|' \
 		-e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|' \
@@ -75,6 +70,7 @@ post-patch:
 .endfor
 
 port-pre-install:
+	${SED} -e 's|1.9a7|0|' ${WRKSRC}/dist/bin/application.ini ${FAKEDIR}/lib
 	${ECHO_CMD} 'share/applications/${MOZILLA}.desktop' >> ${PLIST}
 	${ECHO_CMD} "@unexec ${RMDIR} %D/share/applications 2>/dev/null || ${TRUE}" >> ${PLIST}
 	${ECHO_CMD} 'share/pixmaps/${FIREFOX_ICON}' >> ${PLIST}
