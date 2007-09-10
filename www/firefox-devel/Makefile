@@ -3,7 +3,7 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox-devel/Makefile,v 1.38 2007/07/05 16:52:19 ahze Exp $
+#   $MCom: ports/www/firefox-devel/Makefile,v 1.40 2007/09/10 16:26:49 ahze Exp $
 
 PORTNAME=	firefox
 DISTVERSION=	3.0.a7
@@ -32,7 +32,6 @@ EXTRA_CFLAGS=	-O2
 HAS_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GCC=	3.4+
 NO_MOZPKGINSTALL=yes
 
 FIREFOX_ICON=		${MOZILLA}.xpm
