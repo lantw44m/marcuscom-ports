@@ -3,10 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/security/nss/Makefile,v 1.10 2007/08/15 18:29:15 mezz Exp $
+#    $MCom: ports/security/nss/Makefile,v 1.11 2007/09/05 12:40:41 ahze Exp $
 
 PORTNAME=	nss
 DISTVERSION=	${_MAJOR}.${_MINOR}.${_PATCH}-2
+PORTREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	LOCAL
 MASTER_SITE_SUBDIR=	ahze
@@ -98,5 +99,7 @@ do-install:
 	    	${TAR} -cf - *.so | ${TAR} --unlink -C ${PREFIX}/lib/nss -xf -
 	${INSTALL_SCRIPT} ${WRKDIR}/nss-config ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/nss.pc ${PREFIX}/libdata/pkgconfig
+#### Causes problems with older geckos, and it's not needed *yet*
+	${RM} -f ${PREFIX}/lib/nss/libsqlite3.so.1 ${PREFIX}/lib/nss/libsqlite3.so
 
 .include <bsd.port.post.mk>
