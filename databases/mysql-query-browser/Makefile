@@ -31,7 +31,7 @@ CONFIGURE_ENV+=	CC="${CC}" CXX="${CXX}" CFLAGS="${CFLAGS} ${PTHREAD_CFLAGS}" \
 GTKHTML_VER=	${gtkhtml3_DETECT:R}
 CONFIGURE_ARGS_GUI+=	--prefix=${X11BASE} \
 			--datadir=${DATADIR} \
-			--localstatedir=${PREFIX}/share/gnome
+			--localstatedir=${PREFIX}/share
 CONFIGURE_ARGS_MAIN+=	${CONFIGURE_ARGS_GUI} \
 			--with-gtkhtml=${GTKHTML_VER:C/^.*\///g}
 USE_ICONV=	yes

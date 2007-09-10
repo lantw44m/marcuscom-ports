@@ -3,11 +3,12 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#    $MCom: ports/audio/musicbox-tag-editor/Makefile,v 1.3 2007/05/02 16:11:23 ahze Exp $
+#   $MCom: ports/audio/musicbox-tag-editor/Makefile,v 1.4 2007/05/19 21:35:58 marcus Exp $
+#
 
 PORTNAME=		musicbox-tag-editor
 PORTVERSION=		0.2.3
-PORTREVISION=		6
+PORTREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	musicbox
@@ -27,7 +28,9 @@ CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include" \
 CONFIGURE_ARGS=		--program-suffix=-tag-editor
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/share/pixmaps|${PREFIX}/share/gnome/pixmaps|' ${WRKSRC}/data/musicbox.glade
-	@${REINPLACE_CMD} -e 's|Exec=musicbox|Exec=musicbox-tag-editor|' ${WRKSRC}/data/musicbox.desktop
+	@${REINPLACE_CMD} -e 's|/usr/share/pixmaps|${PREFIX}/share/pixmaps|' \
+		${WRKSRC}/data/musicbox.glade
+	@${REINPLACE_CMD} -e 's|Exec=musicbox|Exec=musicbox-tag-editor|' \
+		${WRKSRC}/data/musicbox.desktop
 
 .include <bsd.port.mk>

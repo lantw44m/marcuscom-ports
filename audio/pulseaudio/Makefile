@@ -1,0 +1,93 @@
+# New ports collection makefile for:	polypaudio
+# Date created:		29 October 2004
+# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD$
+#   $MCom$
+#
+
+PORTNAME=	pulseaudio
+PORTVERSION=	0.9.6
+PORTREVISION=	4
+CATEGORIES=	audio
+MASTER_SITES=	http://0pointer.de/lennart/projects/${PORTNAME}/
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	Sound server for UNIX
+
+LIB_DEPENDS=	samplerate.1:${PORTSDIR}/audio/libsamplerate \
+		oil-0.3.1:${PORTSDIR}/devel/liboil
+
+CONFLICTS=	polypaudio-[1-9]*
+
+USE_GNOME=	gnometarget gnomehack glib20 ltverhack
+USE_XLIB=	yes
+USE_LDCONFIG=	yes
+USE_AUTOTOOLS=	libtool:15 libltdl:15
+USE_GMAKE=	yes
+USE_GETOPT_LONG=yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
+		PTHREAD_LIBS="${PTHREAD_LIBS}" \
+		LIBS="-lm"
+
+CONFIGURE_ARGS=	--localstatedir=/var \
+		--disable-lirc # untested
+
+OPTIONS=	JACK "JACK audio support" Off \
+		AVAHI "Enable Avahi mDNS support" On \
+		HAL "Enable HAL support" On \
+		GCONF "Enable GConf support" On
+
+PULSE_VERSION=	${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+PLIST_SUB=	PULSE_VERSION=${PULSE_VERSION}
+
+.include <bsd.port.pre.mk>
+
+.if defined(WITH_JACK)
+LIB_DEPENDS+=	jack.0:${PORTSDIR}/audio/jack
+PLIST_SUB+=	JACK=""
+.else
+PLIST_SUB+=	JACK="@comment "
+CONFIGURE_ARGS+=--disable-jack
+.endif
+
+.if !defined(WITHOUT_AVAHI)
+LIB_DEPENDS+=	avahi-core.5:${PORTSDIR}/net/avahi
+PLIST_SUB+=	AVAHI=""
+.else
+CONFIGURE_ARGS+=--disable-avahi
+PLIST_SUB+=	AVAHI="@comment "
+.endif
+
+.if !defined(WITHOUT_HAL)
+LIB_DEPENDS+=	hal.1:${PORTSDIR}/sysutils/hal
+PLIST_SUB+=	HAL=""
+.else
+CONFIGURE_ARGS+=--disable-hal
+PLIST_SUB+=	HAL="@comment "
+.endif
+
+.if !defined(WITHOUT_GCONF)
+USE_GNOME+=	gconf2
+PLIST_SUB+=	GCONF=""
+.else
+CONFIGURE_ARGS+=--disable-gconf
+PLIST_SUB+=	GCONF="@comment "
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+		${WRKSRC}/src/daemon/default.pa.in
+
+post-install:
+.for ii in default.pa daemon.conf client.conf
+	${INSTALL_DATA} ${WRKSRC}/src/${ii} \
+		${PREFIX}/etc/pulse/${ii}-dist
+.endfor
+.if !defined(PACKAGE_BUILDING)
+	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+.endif
+
+.include <bsd.port.post.mk>
