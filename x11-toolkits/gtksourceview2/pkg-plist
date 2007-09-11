@@ -2,7 +2,6 @@ include/gtksourceview-2.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-2.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-2.0/gtksourceview/gtksourcelanguage.h
 include/gtksourceview-2.0/gtksourceview/gtksourcelanguagemanager.h
-include/gtksourceview-2.0/gtksourceview/gtksourcemarker.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestyle.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestylescheme.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestyleschememanager.h
@@ -73,6 +72,7 @@ share/gtksourceview-2.0/language-specs/sql.lang
 share/gtksourceview-2.0/language-specs/styles.rng
 share/gtksourceview-2.0/language-specs/tcl.lang
 share/gtksourceview-2.0/language-specs/texinfo.lang
+share/gtksourceview-2.0/language-specs/vala.lang
 share/gtksourceview-2.0/language-specs/vbnet.lang
 share/gtksourceview-2.0/language-specs/verilog.lang
 share/gtksourceview-2.0/language-specs/vhdl.lang
@@ -136,6 +136,7 @@ share/locale/pt_BR/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/ro/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/ru/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/rw/LC_MESSAGES/gtksourceview-2.0.mo
+share/locale/si/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/sk/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/sl/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/sq/LC_MESSAGES/gtksourceview-2.0.mo
@@ -160,6 +161,8 @@ share/locale/zh_TW/LC_MESSAGES/gtksourceview-2.0.mo
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
