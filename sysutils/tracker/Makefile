@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/tracker/Makefile,v 1.5 2007/08/25 20:39:54 mezz Exp $
+#   $MCom: ports/sysutils/tracker/Makefile,v 1.6 2007/09/06 20:33:07 ahze Exp $
 #
 
 PORTNAME=	tracker
 PORTVERSION=	0.6.2
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.gnome.org/~jamiemcc/tracker/
 
@@ -15,7 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Object database, tag/metadata database, search tool and indexer
 
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		poppler-glib.1:${PORTSDIR}/graphics/poppler-gtk \
+		poppler-glib.2:${PORTSDIR}/graphics/poppler-gtk \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		wv-1.2.3:${PORTSDIR}/textproc/wv \
 		gmime-2.0.4:${PORTSDIR}/mail/gmime2 \
