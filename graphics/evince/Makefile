@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.77 2007/09/04 06:18:15 mezz Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.78 2007/09/11 04:03:33 marcus Exp $
 #
 
 PORTNAME=	evince
@@ -86,7 +86,7 @@ DJVU_DIR?=	-nox11
 .endif
 
 .if defined(WITH_DJVU)
-LIB_DEPENDS+=		djvulibre.18:${PORTSDIR}/graphics/djvulibre${DJVU_DIR}
+LIB_DEPENDS+=		djvulibre.19:${PORTSDIR}/graphics/djvulibre${DJVU_DIR}
 CONFIGURE_ARGS+=	--enable-djvu
 GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
 .else
