@@ -93,5 +93,7 @@ share/pixmaps/splash
 share/sgml/docbook
 share/sgml/docbook/gnome-customization-0.1
 share/sounds
+share/vala
+share/vala/vapi
 share/vfolders
 share/xmodmap
