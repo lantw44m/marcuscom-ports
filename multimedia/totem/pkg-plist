@@ -243,6 +243,8 @@ share/omf/totem/totem-pt_BR.omf
 share/omf/totem/totem-ru.omf
 share/omf/totem/totem-sv.omf
 share/omf/totem/totem-uk.omf
+share/vala/vapi/totem.deps
+share/vala/vapi/totem.vala
 %%DATADIR%%/filmholes-big-left.png
 %%DATADIR%%/filmholes-big-right.png
 %%DATADIR%%/filmholes.png
