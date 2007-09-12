@@ -226,8 +226,6 @@ libdata/pkgconfig/vala-1.0.pc
 %%DATADIR%%/vapi/vte.deps
 %%DATADIR%%/vapi/vte.vala
 %%DATADIR%%/vapi/zlib.vala
-@dirrm %%DATADIR%%/vapi
-@dirrm %%DATADIR%%
 @dirrm include/vala-1.0/vala
 @dirrm include/vala-1.0/gobject
 @dirrm include/vala-1.0/gee
