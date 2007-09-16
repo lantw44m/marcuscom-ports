@@ -78,6 +78,7 @@ share/locale/pt_BR/LC_MESSAGES/metacity.mo
 share/locale/ro/LC_MESSAGES/metacity.mo
 share/locale/ru/LC_MESSAGES/metacity.mo
 share/locale/rw/LC_MESSAGES/metacity.mo
+share/locale/si/LC_MESSAGES/metacity.mo
 share/locale/sk/LC_MESSAGES/metacity.mo
 share/locale/sl/LC_MESSAGES/metacity.mo
 share/locale/sq/LC_MESSAGES/metacity.mo
@@ -220,6 +221,8 @@ share/themes/Simple/metacity-1/minimize.png
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
