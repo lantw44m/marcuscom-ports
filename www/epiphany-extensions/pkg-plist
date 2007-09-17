@@ -1,5 +1,5 @@
 lib/epiphany/%%VERSION%%/extensions/actions.ephy-extension
-%%ADBLOCK%%lib/epiphany/%%VERSION%%/extensions/adblock.ephy-extension
+lib/epiphany/%%VERSION%%/extensions/adblock.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/auto-reload.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/auto-scroller.ephy-extension
 %%PYTHON%%lib/epiphany/%%VERSION%%/extensions/cc-license-viewer.ephy-extension
@@ -20,8 +20,8 @@ lib/epiphany/%%VERSION%%/extensions/gestures.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/java-console.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/libactionsextension.la
 lib/epiphany/%%VERSION%%/extensions/libactionsextension.so
-%%ADBLOCK%%lib/epiphany/%%VERSION%%/extensions/libadblockextension.la
-%%ADBLOCK%%lib/epiphany/%%VERSION%%/extensions/libadblockextension.so
+lib/epiphany/%%VERSION%%/extensions/libadblockextension.la
+lib/epiphany/%%VERSION%%/extensions/libadblockextension.so
 lib/epiphany/%%VERSION%%/extensions/libautoreloadextension.la
 lib/epiphany/%%VERSION%%/extensions/libautoreloadextension.so
 lib/epiphany/%%VERSION%%/extensions/libautoscrollerextension.la
@@ -61,12 +61,12 @@ lib/epiphany/%%VERSION%%/extensions/sidebar.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/smart-bookmarks.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/tab-groups.ephy-extension
 lib/epiphany/%%VERSION%%/extensions/tab-states.ephy-extension
-%%ADBLOCK%%%%DATADIR%%/adblock-patterns
-%%ADBLOCK%%%%DATADIR%%/adblock-statusbar-icon.svg
+%%DATADIR%%/adblock-patterns
+%%DATADIR%%/adblock-statusbar-icon.svg
 %%DATADIR%%/ephy-gestures.xml
 %%DATADIR%%/glade/action-properties.glade
 %%DATADIR%%/glade/actions-editor.glade
-%%ADBLOCK%%%%DATADIR%%/glade/adblock.glade
+%%DATADIR%%/glade/adblock.glade
 %%DATADIR%%/glade/error-viewer.glade
 %%DATADIR%%/glade/extensions-manager-ui.glade
 %%DATADIR%%/glade/page-info.glade
@@ -137,6 +137,7 @@ share/locale/lt/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/nb/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/ne/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/nl/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
+share/locale/oc/LC_MESSAGES/epiphany-extensions-2.20.mo
 share/locale/pa/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/pl/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/pt/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
@@ -175,5 +176,7 @@ share/omf/epiphany-extensions/epiphany-extensions-sv.omf
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
