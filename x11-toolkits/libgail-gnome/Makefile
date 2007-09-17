@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libgail-gnome/Makefile,v 1.18 2007/03/12 13:52:14 ahze Exp $
+#   $MCom: ports/x11-toolkits/libgail-gnome/Makefile,v 1.20 2007/07/10 14:16:30 ahze Exp $
 #
 
 PORTNAME=	libgail-gnome
-PORTVERSION=	1.19.5
+PORTVERSION=	1.20.0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
