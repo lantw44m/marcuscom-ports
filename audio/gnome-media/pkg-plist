@@ -74,6 +74,19 @@ share/gnome/help/gnome-cd/es/figures/previous_button.png
 share/gnome/help/gnome-cd/es/figures/rewind_button.png
 share/gnome/help/gnome-cd/es/figures/stop_button.png
 share/gnome/help/gnome-cd/es/gnome-cd.xml
+share/gnome/help/gnome-cd/fr/figures/cdplayer_trackeditor_button.png
+share/gnome/help/gnome-cd/fr/figures/cdplayer_trackeditor_window.png
+share/gnome/help/gnome-cd/fr/figures/cdplayer_window.png
+share/gnome/help/gnome-cd/fr/figures/eject_button.png
+share/gnome/help/gnome-cd/fr/figures/forward_button.png
+share/gnome/help/gnome-cd/fr/figures/next_button.png
+share/gnome/help/gnome-cd/fr/figures/pause_button.png
+share/gnome/help/gnome-cd/fr/figures/play_button.png
+share/gnome/help/gnome-cd/fr/figures/preferences_button.png
+share/gnome/help/gnome-cd/fr/figures/previous_button.png
+share/gnome/help/gnome-cd/fr/figures/rewind_button.png
+share/gnome/help/gnome-cd/fr/figures/stop_button.png
+share/gnome/help/gnome-cd/fr/gnome-cd.xml
 share/gnome/help/gnome-cd/sv/figures/cdplayer_trackeditor_button.png
 share/gnome/help/gnome-cd/sv/figures/cdplayer_trackeditor_window.png
 share/gnome/help/gnome-cd/sv/figures/cdplayer_window.png
@@ -98,6 +111,8 @@ share/gnome/help/gnome-sound-recorder/oc/figures/grecord_window.png
 share/gnome/help/gnome-sound-recorder/oc/gnome-sound-recorder.xml
 share/gnome/help/gnome-sound-recorder/sv/figures/grecord_window.png
 share/gnome/help/gnome-sound-recorder/sv/gnome-sound-recorder.xml
+share/gnome/help/gnome-sound-recorder/uk/figures/grecord_window.png
+share/gnome/help/gnome-sound-recorder/uk/gnome-sound-recorder.xml
 share/gnome/help/gnome-volume-control/C/figures/gnome-volume-control_window.png
 share/gnome/help/gnome-volume-control/C/gnome-volume-control.xml
 share/gnome/help/gnome-volume-control/C/legal.xml
@@ -279,6 +294,8 @@ share/pixmaps/gnome-cd/track.png
 @dirrm share/gnome/help/gnome-volume-control/C/figures
 @dirrm share/gnome/help/gnome-volume-control/C
 @dirrm share/gnome/help/gnome-volume-control
+@dirrm share/gnome/help/gnome-sound-recorder/uk/figures
+@dirrm share/gnome/help/gnome-sound-recorder/uk
 @dirrm share/gnome/help/gnome-sound-recorder/sv/figures
 @dirrm share/gnome/help/gnome-sound-recorder/sv
 @dirrm share/gnome/help/gnome-sound-recorder/oc/figures
@@ -292,6 +309,8 @@ share/pixmaps/gnome-cd/track.png
 @dirrm share/gnome/help/gnome-sound-recorder
 @dirrm share/gnome/help/gnome-cd/sv/figures
 @dirrm share/gnome/help/gnome-cd/sv
+@dirrm share/gnome/help/gnome-cd/fr/figures
+@dirrm share/gnome/help/gnome-cd/fr
 @dirrm share/gnome/help/gnome-cd/es/figures
 @dirrm share/gnome/help/gnome-cd/es
 @dirrm share/gnome/help/gnome-cd/C/figures
