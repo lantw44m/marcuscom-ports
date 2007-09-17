@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.67 2007/08/28 19:59:28 mezz Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.68 2007/09/11 22:05:51 mezz Exp $
 #
 
 PORTNAME=	gedit
-PORTVERSION=	2.19.92
+PORTVERSION=	2.20.0
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -32,7 +32,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack \
 WANT_GNOME=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-PLIST_SUB=	VERSION="2.16"
+PLIST_SUB=	VERSION="2.20"
 
 MAN1=		gedit.1
 GCONF_SCHEMAS=	gedit.schemas gedit-file-browser.schemas
