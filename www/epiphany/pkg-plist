@@ -113,6 +113,11 @@ share/gnome/help/epiphany/ca/figures/ephy-addressbar-smartbookmark-screenshot.pn
 share/gnome/help/epiphany/ca/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/ca/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/ca/figures/ephy-screenshot.png
+share/gnome/help/epiphany/de/epiphany.xml
+share/gnome/help/epiphany/de/figures/ephy-addressbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/de/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
+share/gnome/help/epiphany/de/figures/ephy-history-window-screenshot.png
+share/gnome/help/epiphany/de/figures/ephy-screenshot.png
 share/gnome/help/epiphany/el/epiphany.xml
 share/gnome/help/epiphany/el/figures/ephy-addressbar-smartbookmark-screenshot.png
 share/gnome/help/epiphany/el/figures/ephy-bookmarkbar-smartbookmark-screenshot.png
@@ -268,6 +273,7 @@ share/locale/zh_TW/LC_MESSAGES/epiphany.mo
 share/omf/epiphany/epiphany-C.omf
 share/omf/epiphany/epiphany-bg.omf
 share/omf/epiphany/epiphany-ca.omf
+share/omf/epiphany/epiphany-de.omf
 share/omf/epiphany/epiphany-el.omf
 share/omf/epiphany/epiphany-en_GB.omf
 share/omf/epiphany/epiphany-es.omf
@@ -309,6 +315,8 @@ share/pygtk/2.0/defs/epiphany.defs
 @dirrm share/gnome/help/epiphany/en_GB
 @dirrm share/gnome/help/epiphany/el/figures
 @dirrm share/gnome/help/epiphany/el
+@dirrm share/gnome/help/epiphany/de/figures
+@dirrm share/gnome/help/epiphany/de
 @dirrm share/gnome/help/epiphany/ca/figures
 @dirrm share/gnome/help/epiphany/ca
 @dirrm share/gnome/help/epiphany/bg/figures
