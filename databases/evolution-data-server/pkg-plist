@@ -643,6 +643,7 @@ share/idl/evolution-data-server-%%EVO_VERSION%%/Evolution-DataServer-Calendar.id
 share/idl/evolution-data-server-%%EVO_VERSION%%/Evolution-DataServer.idl
 share/locale/am/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/ar/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
+share/locale/as/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/be/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
@@ -778,3 +779,5 @@ share/pixmaps/evolution-data-server/category_time-and-expenses_16.png
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
