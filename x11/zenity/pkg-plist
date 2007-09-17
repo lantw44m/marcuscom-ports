@@ -61,6 +61,18 @@ share/gnome/help/zenity/fr/figures/zenity-question-screenshot.png
 share/gnome/help/zenity/fr/figures/zenity-text-screenshot.png
 share/gnome/help/zenity/fr/figures/zenity-warning-screenshot.png
 share/gnome/help/zenity/fr/zenity.xml
+share/gnome/help/zenity/oc/figures/zenity-calendar-screenshot.png
+share/gnome/help/zenity/oc/figures/zenity-entry-screenshot.png
+share/gnome/help/zenity/oc/figures/zenity-error-screenshot.png
+share/gnome/help/zenity/oc/figures/zenity-fileselection-screenshot.png
+share/gnome/help/zenity/oc/figures/zenity-information-screenshot.png
+share/gnome/help/zenity/oc/figures/zenity-list-screenshot.png
+share/gnome/help/zenity/oc/figures/zenity-notification-screenshot.png
+share/gnome/help/zenity/oc/figures/zenity-progress-screenshot.png
+share/gnome/help/zenity/oc/figures/zenity-question-screenshot.png
+share/gnome/help/zenity/oc/figures/zenity-text-screenshot.png
+share/gnome/help/zenity/oc/figures/zenity-warning-screenshot.png
+share/gnome/help/zenity/oc/zenity.xml
 share/gnome/help/zenity/ru/figures/zenity-calendar-screenshot.png
 share/gnome/help/zenity/ru/figures/zenity-entry-screenshot.png
 share/gnome/help/zenity/ru/figures/zenity-error-screenshot.png
@@ -97,29 +109,6 @@ share/gnome/help/zenity/uk/figures/zenity-question-screenshot.png
 share/gnome/help/zenity/uk/figures/zenity-text-screenshot.png
 share/gnome/help/zenity/uk/figures/zenity-warning-screenshot.png
 share/gnome/help/zenity/uk/zenity.xml
-share/omf/zenity/zenity-C.omf
-share/omf/zenity/zenity-bg.omf
-share/omf/zenity/zenity-en_GB.omf
-share/omf/zenity/zenity-es.omf
-share/omf/zenity/zenity-fr.omf
-share/omf/zenity/zenity-ru.omf
-share/omf/zenity/zenity-sv.omf
-share/omf/zenity/zenity-uk.omf
-share/zenity/clothes/gnome-tshirt.png
-share/zenity/clothes/hawaii-shirt.png
-share/zenity/clothes/monk.png
-share/zenity/clothes/sunglasses.png
-share/zenity/clothes/surfboard.png
-share/zenity/zenity-calendar.png
-share/zenity/zenity-entry.png
-share/zenity/zenity-file.png
-share/zenity/zenity-list.png
-share/zenity/zenity-notification.png
-share/zenity/zenity-progress.png
-share/zenity/zenity-scale.png
-share/zenity/zenity-text.png
-share/zenity/zenity.glade
-share/zenity/zenity.png
 share/locale/am/LC_MESSAGES/zenity.mo
 share/locale/ar/LC_MESSAGES/zenity.mo
 share/locale/az/LC_MESSAGES/zenity.mo
@@ -195,26 +184,33 @@ share/locale/xh/LC_MESSAGES/zenity.mo
 share/locale/zh_CN/LC_MESSAGES/zenity.mo
 share/locale/zh_HK/LC_MESSAGES/zenity.mo
 share/locale/zh_TW/LC_MESSAGES/zenity.mo
-@dirrm share/zenity/clothes
-@dirrm share/zenity
+share/omf/zenity/zenity-C.omf
+share/omf/zenity/zenity-bg.omf
+share/omf/zenity/zenity-en_GB.omf
+share/omf/zenity/zenity-es.omf
+share/omf/zenity/zenity-fr.omf
+share/omf/zenity/zenity-oc.omf
+share/omf/zenity/zenity-ru.omf
+share/omf/zenity/zenity-sv.omf
+share/omf/zenity/zenity-uk.omf
+%%DATADIR%%/clothes/gnome-tshirt.png
+%%DATADIR%%/clothes/hawaii-shirt.png
+%%DATADIR%%/clothes/monk.png
+%%DATADIR%%/clothes/sunglasses.png
+%%DATADIR%%/clothes/surfboard.png
+%%DATADIR%%/zenity-calendar.png
+%%DATADIR%%/zenity-entry.png
+%%DATADIR%%/zenity-file.png
+%%DATADIR%%/zenity-list.png
+%%DATADIR%%/zenity-notification.png
+%%DATADIR%%/zenity-progress.png
+%%DATADIR%%/zenity-scale.png
+%%DATADIR%%/zenity-text.png
+%%DATADIR%%/zenity.glade
+%%DATADIR%%/zenity.png
+@dirrm %%DATADIR%%/clothes
+@dirrm %%DATADIR%%
 @dirrm share/omf/zenity
-@dirrm share/gnome/help/zenity/uk/figures
-@dirrm share/gnome/help/zenity/uk
-@dirrm share/gnome/help/zenity/sv/figures
-@dirrm share/gnome/help/zenity/sv
-@dirrm share/gnome/help/zenity/ru/figures
-@dirrm share/gnome/help/zenity/ru
-@dirrm share/gnome/help/zenity/fr/figures
-@dirrm share/gnome/help/zenity/fr
-@dirrm share/gnome/help/zenity/es/figures
-@dirrm share/gnome/help/zenity/es
-@dirrm share/gnome/help/zenity/en_GB/figures
-@dirrm share/gnome/help/zenity/en_GB
-@dirrm share/gnome/help/zenity/bg/figures
-@dirrm share/gnome/help/zenity/bg
-@dirrm share/gnome/help/zenity/C/figures
-@dirrm share/gnome/help/zenity/C
-@dirrm share/gnome/help/zenity
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -235,3 +231,22 @@ share/locale/zh_TW/LC_MESSAGES/zenity.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrm share/gnome/help/zenity/uk/figures
+@dirrm share/gnome/help/zenity/uk
+@dirrm share/gnome/help/zenity/sv/figures
+@dirrm share/gnome/help/zenity/sv
+@dirrm share/gnome/help/zenity/ru/figures
+@dirrm share/gnome/help/zenity/ru
+@dirrm share/gnome/help/zenity/oc/figures
+@dirrm share/gnome/help/zenity/oc
+@dirrm share/gnome/help/zenity/fr/figures
+@dirrm share/gnome/help/zenity/fr
+@dirrm share/gnome/help/zenity/es/figures
+@dirrm share/gnome/help/zenity/es
+@dirrm share/gnome/help/zenity/en_GB/figures
+@dirrm share/gnome/help/zenity/en_GB
+@dirrm share/gnome/help/zenity/bg/figures
+@dirrm share/gnome/help/zenity/bg
+@dirrm share/gnome/help/zenity/C/figures
+@dirrm share/gnome/help/zenity/C
+@dirrm share/gnome/help/zenity
