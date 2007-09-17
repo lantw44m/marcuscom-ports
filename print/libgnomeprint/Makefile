@@ -3,12 +3,12 @@
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/print/libgnomeprint/Makefile,v 1.69 2007/08/08 16:32:37 mezz Exp $
 #
 
 PORTNAME=	libgnomeprint
-PORTVERSION=	2.18.1
-PORTREVISION?=	1
+PORTVERSION=	2.18.2
+PORTREVISION?=	0
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
