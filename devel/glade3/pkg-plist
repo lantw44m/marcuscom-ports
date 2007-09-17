@@ -315,6 +315,7 @@ share/icons/hicolor/scalable/apps/glade-3.svg
 share/locale/ar/LC_MESSAGES/glade3.mo
 share/locale/az/LC_MESSAGES/glade3.mo
 share/locale/bg/LC_MESSAGES/glade3.mo
+share/locale/bn/LC_MESSAGES/glade3.mo
 share/locale/bn_IN/LC_MESSAGES/glade3.mo
 share/locale/ca/LC_MESSAGES/glade3.mo
 share/locale/da/LC_MESSAGES/glade3.mo
@@ -344,6 +345,7 @@ share/locale/pl/LC_MESSAGES/glade3.mo
 share/locale/pt/LC_MESSAGES/glade3.mo
 share/locale/pt_BR/LC_MESSAGES/glade3.mo
 share/locale/ru/LC_MESSAGES/glade3.mo
+share/locale/si/LC_MESSAGES/glade3.mo
 share/locale/sk/LC_MESSAGES/glade3.mo
 share/locale/sl/LC_MESSAGES/glade3.mo
 share/locale/sq/LC_MESSAGES/glade3.mo
@@ -399,7 +401,9 @@ share/omf/glade/glade-sv.omf
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
-@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si@
+dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
