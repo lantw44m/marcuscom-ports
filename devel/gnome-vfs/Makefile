@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.175 2007/07/28 19:03:24 marcus Exp $
+#   $MCom: ports/devel/gnome-vfs/Makefile,v 1.176 2007/08/27 17:07:10 marcus Exp $
 #
 
 PORTNAME=	gnome-vfs
-PORTVERSION=	2.19.91
+PORTVERSION=	2.20.0
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
