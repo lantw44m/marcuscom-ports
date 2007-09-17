@@ -410,7 +410,6 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-sa-junk-plugin.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-save-calendar.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-select-one-source.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-subject-thread.eplug
-lib/evolution/%%VERSION%%/plugins/publish-calendar.glade
 libdata/bonobo/servers/GNOME_Evolution_Addressbook.server
 libdata/bonobo/servers/GNOME_Evolution_Calendar.server
 libdata/bonobo/servers/GNOME_Evolution_Calendar_AlarmNotify.server
@@ -515,6 +514,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/glade/proxy-add-dialog.glade
 %%DATADIR%%/%%VERSION%%/glade/proxy-listing.glade
 %%DATADIR%%/%%VERSION%%/glade/proxy-login-dialog.glade
+%%DATADIR%%/%%VERSION%%/glade/publish-calendar.glade
 %%DATADIR%%/%%VERSION%%/glade/recurrence-page.glade
 %%DATADIR%%/%%VERSION%%/glade/schedule-page.glade
 %%DATADIR%%/%%VERSION%%/glade/smime-ui.glade
@@ -523,6 +523,9 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/help/quickref/C/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/de/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/es/quickref.pdf
+%%DATADIR%%/%%VERSION%%/help/quickref/fr/quickref.pdf
+%%DATADIR%%/%%VERSION%%/help/quickref/it/quickref.pdf
+%%DATADIR%%/%%VERSION%%/help/quickref/pl/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/pt/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/sq/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/sv/quickref.pdf
@@ -1729,6 +1732,9 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/sv
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/sq
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/pt
+@dirrm %%DATADIR%%/%%VERSION%%/help/quickref/pl
+@dirrm %%DATADIR%%/%%VERSION%%/help/quickref/it
+@dirrm %%DATADIR%%/%%VERSION%%/help/quickref/fr
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/es
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/de
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/C
