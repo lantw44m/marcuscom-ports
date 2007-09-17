@@ -39,7 +39,10 @@ share/dbus-1/services/org.gnome.seahorse.service
 %%APPLET%%share/gnome/help/seahorse-applet/C/legal.xml
 %%APPLET%%share/gnome/help/seahorse-applet/C/seahorse-applet.xml
 %%APPLET%%share/gnome/help/seahorse-applet/es/seahorse-applet.xml
+%%APPLET%%share/gnome/help/seahorse-applet/fr/seahorse-applet.xml
+%%APPLET%%share/gnome/help/seahorse-applet/it/seahorse-applet.xml
 %%APPLET%%share/gnome/help/seahorse-applet/sv/seahorse-applet.xml
+%%APPLET%%share/gnome/help/seahorse-applet/vi/seahorse-applet.xml
 share/gnome/help/seahorse/C/figures/export.png
 share/gnome/help/seahorse/C/figures/file-manager.png
 share/gnome/help/seahorse/C/figures/generate.png
@@ -132,6 +135,19 @@ share/gnome/help/seahorse/sv/figures/seahorse-window.png
 share/gnome/help/seahorse/sv/figures/signature.png
 share/gnome/help/seahorse/sv/figures/text-editor.png
 share/gnome/help/seahorse/sv/seahorse.xml
+share/gnome/help/seahorse/vi/figures/export.png
+share/gnome/help/seahorse/vi/figures/file-manager.png
+share/gnome/help/seahorse/vi/figures/generate.png
+share/gnome/help/seahorse/vi/figures/import.png
+share/gnome/help/seahorse/vi/figures/key-manager.png
+share/gnome/help/seahorse/vi/figures/key-properties.png
+share/gnome/help/seahorse/vi/figures/passphrase.png
+share/gnome/help/seahorse/vi/figures/preferences.png
+share/gnome/help/seahorse/vi/figures/recipients.png
+share/gnome/help/seahorse/vi/figures/seahorse-window.png
+share/gnome/help/seahorse/vi/figures/signature.png
+share/gnome/help/seahorse/vi/figures/text-editor.png
+share/gnome/help/seahorse/vi/seahorse.xml
 share/icons/hicolor/22x22/apps/seahorse-preferences.svg
 share/icons/hicolor/22x22/apps/seahorse.svg
 share/icons/hicolor/48x48/apps/seahorse-applet.png
@@ -143,6 +159,7 @@ share/icons/hicolor/scalable/apps/seahorse.svg
 share/locale/ar/LC_MESSAGES/seahorse.mo
 share/locale/az/LC_MESSAGES/seahorse.mo
 share/locale/bg/LC_MESSAGES/seahorse.mo
+share/locale/bn/LC_MESSAGES/seahorse.mo
 share/locale/bn_IN/LC_MESSAGES/seahorse.mo
 share/locale/ca/LC_MESSAGES/seahorse.mo
 share/locale/cs/LC_MESSAGES/seahorse.mo
@@ -189,6 +206,7 @@ share/locale/sr/LC_MESSAGES/seahorse.mo
 share/locale/sr@Latn/LC_MESSAGES/seahorse.mo
 share/locale/sv/LC_MESSAGES/seahorse.mo
 share/locale/ta/LC_MESSAGES/seahorse.mo
+share/locale/te/LC_MESSAGES/seahorse.mo
 share/locale/th/LC_MESSAGES/seahorse.mo
 share/locale/tr/LC_MESSAGES/seahorse.mo
 share/locale/uk/LC_MESSAGES/seahorse.mo
@@ -295,6 +313,8 @@ share/pixmaps/seahorse/scalable/seahorse.svg
 @dirrm share/pixmaps/seahorse
 %%APPLET%%@dirrm share/omf/seahorse-applet
 @dirrm share/omf/seahorse
+@dirrm share/gnome/help/seahorse/vi/figures
+@dirrm share/gnome/help/seahorse/vi
 @dirrm share/gnome/help/seahorse/sv/figures
 @dirrm share/gnome/help/seahorse/sv
 @dirrm share/gnome/help/seahorse/oc/figures
@@ -309,7 +329,10 @@ share/pixmaps/seahorse/scalable/seahorse.svg
 @dirrm share/gnome/help/seahorse/en_GB
 @dirrm share/gnome/help/seahorse/C/figures
 @dirrm share/gnome/help/seahorse/C
+%%APPLET%%@dirrm share/gnome/help/seahorse-applet/vi
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/sv
+%%APPLET%%@dirrm share/gnome/help/seahorse-applet/it
+%%APPLET%%@dirrm share/gnome/help/seahorse-applet/fe
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/es
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/C
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet
@@ -325,6 +348,8 @@ share/pixmaps/seahorse/scalable/seahorse.svg
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
