@@ -94,6 +94,7 @@ share/locale/pt_BR/LC_MESSAGES/atk10.mo
 share/locale/ro/LC_MESSAGES/atk10.mo
 share/locale/ru/LC_MESSAGES/atk10.mo
 share/locale/rw/LC_MESSAGES/atk10.mo
+share/locale/si/LC_MESSAGES/atk10.mo
 share/locale/sk/LC_MESSAGES/atk10.mo
 share/locale/sl/LC_MESSAGES/atk10.mo
 share/locale/sq/LC_MESSAGES/atk10.mo
@@ -132,6 +133,8 @@ share/locale/zh_TW/LC_MESSAGES/atk10.mo
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@ije/LC_MESSAGES
 @dirrmtry share/locale/sr@ije
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
