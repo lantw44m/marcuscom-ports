@@ -619,6 +619,7 @@ share/gnome/help/glchess/C/legal.xml
 share/gnome/help/glchess/es/glchess.xml
 share/gnome/help/glchess/fr/glchess.xml
 share/gnome/help/glchess/oc/glchess.xml
+share/gnome/help/glchess/pt_BR/glchess.xml
 share/gnome/help/glchess/sv/glchess.xml
 share/gnome/help/glines/C/figures/glines-gameover.png
 share/gnome/help/glines/C/figures/glines-startgame.png
@@ -697,6 +698,13 @@ share/gnome/help/gnibbles/es/figures/playing.png
 share/gnome/help/gnibbles/es/figures/tables.png
 share/gnome/help/gnibbles/es/figures/worm_op.png
 share/gnome/help/gnibbles/es/gnibbles.xml
+share/gnome/help/gnibbles/fr/figures/connect.png
+share/gnome/help/gnibbles/fr/figures/game.png
+share/gnome/help/gnibbles/fr/figures/intro.png
+share/gnome/help/gnibbles/fr/figures/playing.png
+share/gnome/help/gnibbles/fr/figures/tables.png
+share/gnome/help/gnibbles/fr/figures/worm_op.png
+share/gnome/help/gnibbles/fr/gnibbles.xml
 share/gnome/help/gnibbles/oc/figures/connect.png
 share/gnome/help/gnibbles/oc/figures/game.png
 share/gnome/help/gnibbles/oc/figures/intro.png
@@ -716,6 +724,8 @@ share/gnome/help/gnobots2/C/gnobots2.xml
 share/gnome/help/gnobots2/C/legal.xml
 share/gnome/help/gnobots2/da/gnobots2.xml
 share/gnome/help/gnobots2/da/legal.xml
+share/gnome/help/gnobots2/de/figures/gnobots2-main.png
+share/gnome/help/gnobots2/de/gnobots2.xml
 share/gnome/help/gnobots2/es/figures/gnobots2-main.png
 share/gnome/help/gnobots2/es/gnobots2.xml
 share/gnome/help/gnobots2/fr/figures/gnobots2-main.png
@@ -779,6 +789,20 @@ share/gnome/help/gnomine/C/figures/preferences.png
 share/gnome/help/gnomine/C/figures/statusbar.png
 share/gnome/help/gnomine/C/gnomine.xml
 share/gnome/help/gnomine/C/legal.xml
+share/gnome/help/gnomine/de/figures/easy-hints-1.png
+share/gnome/help/gnomine/de/figures/easy-hints-2.png
+share/gnome/help/gnomine/de/figures/easy-hints-3.png
+share/gnome/help/gnomine/de/figures/faces.png
+share/gnome/help/gnomine/de/figures/flags.png
+share/gnome/help/gnomine/de/figures/hard-hints-1.png
+share/gnome/help/gnomine/de/figures/hard-hints-2.png
+share/gnome/help/gnomine/de/figures/hard-hints-3.png
+share/gnome/help/gnomine/de/figures/highscores.png
+share/gnome/help/gnomine/de/figures/imnotsureflagscheckbox.png
+share/gnome/help/gnomine/de/figures/main-window.png
+share/gnome/help/gnomine/de/figures/preferences.png
+share/gnome/help/gnomine/de/figures/statusbar.png
+share/gnome/help/gnomine/de/gnomine.xml
 share/gnome/help/gnomine/es/figures/easy-hints-1.png
 share/gnome/help/gnomine/es/figures/easy-hints-2.png
 share/gnome/help/gnomine/es/figures/easy-hints-3.png
@@ -1079,6 +1103,7 @@ share/icons/hicolor/scalable/apps/gnome-samegnome.svg
 share/icons/hicolor/scalable/apps/gnome-sudoku.svg
 share/icons/hicolor/scalable/apps/gnome-tali.svg
 share/icons/hicolor/scalable/apps/gnome-tetravex.svg
+share/locale/af/LC_MESSAGES/gnome-games.mo
 share/locale/am/LC_MESSAGES/gnome-games.mo
 share/locale/ar/LC_MESSAGES/gnome-games.mo
 share/locale/az/LC_MESSAGES/gnome-games.mo
@@ -1167,6 +1192,7 @@ share/omf/glchess/glchess-C.omf
 share/omf/glchess/glchess-es.omf
 share/omf/glchess/glchess-fr.omf
 share/omf/glchess/glchess-oc.omf
+share/omf/glchess/glchess-pt_BR.omf
 share/omf/glchess/glchess-sv.omf
 share/omf/glines/glines-C.omf
 share/omf/glines/glines-en_GB.omf
@@ -1183,9 +1209,11 @@ share/omf/gnect/gnect-oc.omf
 share/omf/gnect/gnect-sv.omf
 share/omf/gnibbles/gnibbles-C.omf
 share/omf/gnibbles/gnibbles-es.omf
+share/omf/gnibbles/gnibbles-fr.omf
 share/omf/gnibbles/gnibbles-oc.omf
 share/omf/gnibbles/gnibbles-sv.omf
 share/omf/gnobots2/gnobots2-C.omf
+share/omf/gnobots2/gnobots2-de.omf
 share/omf/gnobots2/gnobots2-es.omf
 share/omf/gnobots2/gnobots2-fr.omf
 share/omf/gnobots2/gnobots2-oc.omf
@@ -1205,6 +1233,7 @@ share/omf/gnometris/gnometris-fr.omf
 share/omf/gnometris/gnometris-oc.omf
 share/omf/gnometris/gnometris-sv.omf
 share/omf/gnomine/gnomine-C.omf
+share/omf/gnomine/gnomine-de.omf
 share/omf/gnomine/gnomine-es.omf
 share/omf/gnomine/gnomine-fr.omf
 share/omf/gnomine/gnomine-oc.omf
@@ -1434,6 +1463,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnomine/fr
 @dirrm share/gnome/help/gnomine/es/figures
 @dirrm share/gnome/help/gnomine/es
+@dirrm share/gnome/help/gnomine/de/figures
+@dirrm share/gnome/help/gnomine/de
 @dirrm share/gnome/help/gnomine/C/figures
 @dirrm share/gnome/help/gnomine/C
 @dirrm share/gnome/help/gnomine
@@ -1464,6 +1495,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnobots2/fr
 @dirrm share/gnome/help/gnobots2/es/figures
 @dirrm share/gnome/help/gnobots2/es
+@dirrm share/gnome/help/gnobots2/de/figures
+@dirrm share/gnome/help/gnobots2/de
 @dirrm share/gnome/help/gnobots2/da
 @dirrm share/gnome/help/gnobots2/C/figures
 @dirrm share/gnome/help/gnobots2/C
@@ -1472,6 +1505,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnibbles/sv
 @dirrm share/gnome/help/gnibbles/oc/figures
 @dirrm share/gnome/help/gnibbles/oc
+@dirrm share/gnome/help/gnibbles/fr/figures
+@dirrm share/gnome/help/gnibbles/fr
 @dirrm share/gnome/help/gnibbles/es/figures
 @dirrm share/gnome/help/gnibbles/es
 @dirrm share/gnome/help/gnibbles/C/figures
@@ -1506,6 +1541,7 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/glines/C
 @dirrm share/gnome/help/glines
 @dirrm share/gnome/help/glchess/sv
+@dirrm share/gnome/help/glchess/pt_BR
 @dirrm share/gnome/help/glchess/oc
 @dirrm share/gnome/help/glchess/fr
 @dirrm share/gnome/help/glchess/es
