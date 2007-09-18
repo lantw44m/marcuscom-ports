@@ -14,9 +14,11 @@ share/gnome/help/gnome-nettool/C/legal.xml
 share/gnome/help/gnome-nettool/ca/gnome-nettool.xml
 share/gnome/help/gnome-nettool/es/gnome-nettool.xml
 share/gnome/help/gnome-nettool/fr/gnome-nettool.xml
+share/gnome/help/gnome-nettool/oc/gnome-nettool.xml
 share/gnome/help/gnome-nettool/pa/gnome-nettool.xml
 share/gnome/help/gnome-nettool/sv/gnome-nettool.xml
 share/gnome/help/gnome-nettool/uk/gnome-nettool.xml
+share/gnome/help/gnome-nettool/vi/gnome-nettool.xml
 share/icons/hicolor/16x16/apps/gnome-nettool.png
 share/icons/hicolor/22x22/apps/gnome-nettool.png
 share/icons/hicolor/32x32/apps/gnome-nettool.png
@@ -74,6 +76,7 @@ share/locale/pt_BR/LC_MESSAGES/gnome-nettool.mo
 share/locale/ro/LC_MESSAGES/gnome-nettool.mo
 share/locale/ru/LC_MESSAGES/gnome-nettool.mo
 share/locale/rw/LC_MESSAGES/gnome-nettool.mo
+share/locale/si/LC_MESSAGES/gnome-nettool.mo
 share/locale/sk/LC_MESSAGES/gnome-nettool.mo
 share/locale/sl/LC_MESSAGES/gnome-nettool.mo
 share/locale/sq/LC_MESSAGES/gnome-nettool.mo
@@ -95,14 +98,18 @@ share/omf/gnome-nettool/gnome-nettool-C.omf
 share/omf/gnome-nettool/gnome-nettool-ca.omf
 share/omf/gnome-nettool/gnome-nettool-es.omf
 share/omf/gnome-nettool/gnome-nettool-fr.omf
+share/omf/gnome-nettool/gnome-nettool-oc.omf
 share/omf/gnome-nettool/gnome-nettool-pa.omf
 share/omf/gnome-nettool/gnome-nettool-sv.omf
 share/omf/gnome-nettool/gnome-nettool-uk.omf
+share/omf/gnome-nettool/gnome-nettool-vi.omf
 share/pixmaps/gnome-nettool.png
 @dirrm share/omf/gnome-nettool
+@dirrm share/gnome/help/gnome-nettool/vi
 @dirrm share/gnome/help/gnome-nettool/uk
 @dirrm share/gnome/help/gnome-nettool/sv
 @dirrm share/gnome/help/gnome-nettool/pa
+@dirrm share/gnome/help/gnome-nettool/oc
 @dirrm share/gnome/help/gnome-nettool/fr
 @dirrm share/gnome/help/gnome-nettool/es
 @dirrm share/gnome/help/gnome-nettool/ca
