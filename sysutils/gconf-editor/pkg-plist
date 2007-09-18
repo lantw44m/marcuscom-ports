@@ -36,6 +36,7 @@ share/pixmaps/gconf-editor/folder-open.png
 share/icons/hicolor/48x48/apps/gconf-editor.png
 share/locale/am/LC_MESSAGES/gconf-editor.mo
 share/locale/ar/LC_MESSAGES/gconf-editor.mo
+share/locale/as/LC_MESSAGES/gconf-editor.mo
 share/locale/az/LC_MESSAGES/gconf-editor.mo
 share/locale/be/LC_MESSAGES/gconf-editor.mo
 share/locale/be@latin/LC_MESSAGES/gconf-editor.mo
@@ -157,3 +158,5 @@ share/locale/zh_TW/LC_MESSAGES/gconf-editor.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
