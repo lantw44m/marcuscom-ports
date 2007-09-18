@@ -3,7 +3,7 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/fast-user-switch-applet/Makefile,v 1.26 2007/08/08 19:21:35 marcus Exp $
+#    $MCom: ports/x11/fast-user-switch-applet/Makefile,v 1.27 2007/09/18 15:00:41 ahze Exp $
 
 PORTNAME=	fast-user-switch-applet
 PORTVERSION=	2.20.0
