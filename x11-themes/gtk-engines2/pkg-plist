@@ -84,10 +84,6 @@ share/themes/ThinIce/gtk-2.0/gtkrc
 @dirrm share/themes/Clearlooks/gtk-2.0
 @dirrmtry share/themes/Clearlooks
 @dirrm share/gtk-engines
-@dirrmtry share/locale/zh_CN/LC_MESSAGES
-@dirrmtry share/locale/zh_CN
-@dirrmtry share/locale/sr/LC_MESSAGES
-@dirrmtry share/locale/sr
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES

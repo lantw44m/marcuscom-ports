@@ -107,6 +107,9 @@ share/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
 share/pixmaps/backgrounds/gnome/background-default.jpg
 @dirrm share/pixmaps/backgrounds/gnome
 @dirrm share/pixmaps/backgrounds
+@dirrmtry share/gnome-background-properties
+@dirrm include/libgnome-2.0/libgnome
+@dirrm include/libgnome-2.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/yi/LC_MESSAGES
@@ -131,6 +134,3 @@ share/pixmaps/backgrounds/gnome/background-default.jpg
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry share/gnome-background-properties
-@dirrm include/libgnome-2.0/libgnome
-@dirrm include/libgnome-2.0

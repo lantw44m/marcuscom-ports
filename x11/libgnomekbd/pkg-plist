@@ -60,6 +60,9 @@ share/locale/th/LC_MESSAGES/libgnomekbd.mo
 share/locale/uk/LC_MESSAGES/libgnomekbd.mo
 share/locale/vi/LC_MESSAGES/libgnomekbd.mo
 share/locale/zh_CN/LC_MESSAGES/libgnomekbd.mo
+@dirrm %%DATADIR%%/glade
+@dirrm %%DATADIR%%
+@dirrm include/libgnomekbd
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES
@@ -70,6 +73,3 @@ share/locale/zh_CN/LC_MESSAGES/libgnomekbd.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
-@dirrm %%DATADIR%%/glade
-@dirrm %%DATADIR%%
-@dirrm include/libgnomekbd
