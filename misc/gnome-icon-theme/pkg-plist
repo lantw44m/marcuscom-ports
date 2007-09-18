@@ -344,7 +344,6 @@ share/icons/gnome/16x16/apps/fonts.png
 share/icons/gnome/16x16/apps/gnome-calculator.png
 share/icons/gnome/16x16/apps/gnome-character-map.png
 share/icons/gnome/16x16/apps/gnome-help.png
-share/icons/gnome/16x16/apps/gnome-logout.png
 share/icons/gnome/16x16/apps/gnome-mixer.png
 share/icons/gnome/16x16/apps/gnome-monitor.png
 share/icons/gnome/16x16/apps/gnome-remote-desktop.png
@@ -2978,7 +2977,6 @@ share/icons/gnome/24x24/apps/gnome-eyes.png
 share/icons/gnome/24x24/apps/gnome-favorites.png
 share/icons/gnome/24x24/apps/gnome-finance.png
 share/icons/gnome/24x24/apps/gnome-help.png
-share/icons/gnome/24x24/apps/gnome-logout.png
 share/icons/gnome/24x24/apps/gnome-mini-commander.png
 share/icons/gnome/24x24/apps/gnome-mixer.png
 share/icons/gnome/24x24/apps/gnome-monitor.png
@@ -5137,7 +5135,6 @@ share/icons/gnome/48x48/apps/gnome-desktop-config.png
 share/icons/gnome/48x48/apps/gnome-favorites.png
 share/icons/gnome/48x48/apps/gnome-finance.png
 share/icons/gnome/48x48/apps/gnome-grecord.png
-share/icons/gnome/48x48/apps/gnome-logout.png
 share/icons/gnome/48x48/apps/gnome-networktool.png
 share/icons/gnome/48x48/apps/gnome-pdf.png
 share/icons/gnome/48x48/apps/gnome-searchtool-animation-rest.png
