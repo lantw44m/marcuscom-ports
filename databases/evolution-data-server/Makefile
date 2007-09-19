@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.125 2007/09/03 17:45:59 mezz Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.126 2007/09/17 17:53:01 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -34,7 +34,6 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--enable-nss=yes \
 		--with-openldap=yes \
-		--with-krb5=/usr \
 		--with-libdb=${LOCALBASE}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
@@ -49,16 +48,12 @@ OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-libedataserver_e-msgport.c
 .endif
 
-.if ${OSVERSION} >= 500000 && !defined(NO_KERBEROS) && \
-	exists(/usr/lib/libkrb5.so)
-CONFIGURE_ARGS+=	--with-krb5=/usr
-.else
+.if defined(HEIMDAL_HOME) || defined(WITH_HEIMDAL)
+HEIMDAL_HOME?=	${LOCALBASE}
 LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal
-.if defined(HEIMDAL_HOME)
 CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} --with-krb5-includes=${HEIMDAL_HOME}/include
-.else
-CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
-.endif
+.elif !defined(NO_KERBEROS)
+CONFIGURE_ARGS+=        --with-krb5=/usr
 .endif
 
 .if defined(WITH_IMAP4) || defined(PACKAGE_BUILDING)
