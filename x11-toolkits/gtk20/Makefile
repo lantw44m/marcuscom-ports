@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.117 2007/09/14 16:18:04 mezz Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.118 2007/09/14 19:26:39 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -40,11 +40,12 @@ USE_PERL5=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack atk pango ltverhack
-USE_XORG=       dmx fontenc fontutil ice libfs oldx sm x11 xau xaw xaw6 xaw7 xaw8 xbitmaps \
-                xcomposite xcursor xdamage xdmcp xevie xext xfixes xfont xfontcache xft xi \
-                xinerama xkbfile xkbui xmu xmuu xp xpm xprintapputil xprintutil \
-                xrandr xrender xres xscrnsaver xt xtrans xtrap xtst xv xvmc xxf86dga xxf86misc \
-								                xxf86vm
+USE_GETTEXT=	yes
+USE_XORG=	dmx fontenc fontutil ice libfs oldx sm x11 xau xaw xaw6 xaw7 \
+		xaw8 xbitmaps xcomposite xcursor xdamage xdmcp xevie xext \
+		xfixes xfont xfontcache xft xi xinerama xkbfile xkbui xmu xmuu \
+		xp xpm xprintapputil xprintutil xrandr xrender xres xscrnsaver \
+		xt xtrans xtrap xtst xv xvmc xxf86dga xxf86misc xxf86vm
 CONFIGURE_ARGS=	--enable-static --with-xinput=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include" \
