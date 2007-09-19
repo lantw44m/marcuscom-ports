@@ -217,7 +217,10 @@ share/locale/zh_TW/LC_MESSAGES/seahorse.mo
 share/mime/packages/seahorse.xml
 %%APPLET%%share/omf/seahorse-applet/seahorse-applet-C.omf
 %%APPLET%%share/omf/seahorse-applet/seahorse-applet-es.omf
+%%APPLET%%share/omf/seahorse-applet/seahorse-applet-fr.omf
+%%APPLET%%share/omf/seahorse-applet/seahorse-applet-it.omf
 %%APPLET%%share/omf/seahorse-applet/seahorse-applet-sv.omf
+%%APPLET%%share/omf/seahorse-applet/seahorse-applet-vi.omf
 share/omf/seahorse/seahorse-C.omf
 share/omf/seahorse/seahorse-en_GB.omf
 share/omf/seahorse/seahorse-es.omf
@@ -225,6 +228,7 @@ share/omf/seahorse/seahorse-fr.omf
 share/omf/seahorse/seahorse-it.omf
 share/omf/seahorse/seahorse-oc.omf
 share/omf/seahorse/seahorse-sv.omf
+share/omf/seahorse/seahorse-vi.omf
 share/pixmaps/seahorse-applet.svg
 share/pixmaps/seahorse-preferences.png
 share/pixmaps/seahorse.png
@@ -332,7 +336,7 @@ share/pixmaps/seahorse/scalable/seahorse.svg
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/vi
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/sv
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/it
-%%APPLET%%@dirrm share/gnome/help/seahorse-applet/fe
+%%APPLET%%@dirrm share/gnome/help/seahorse-applet/fr
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/es
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet/C
 %%APPLET%%@dirrm share/gnome/help/seahorse-applet
