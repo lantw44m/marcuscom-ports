@@ -294,7 +294,7 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrm %%DATADIR%%/xrdb
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%/glade
-@dirrm share/desktop-directories
+@dirrmtry share/desktop-directories
 @dirrm lib/window-manager-settings
 @dirrm include/gnome-window-settings-2.0
 @dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon

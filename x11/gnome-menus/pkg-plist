@@ -114,7 +114,7 @@ share/locale/xh/LC_MESSAGES/gnome-menus.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-menus.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-menus.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-menus.mo
-@dirrm share/desktop-directories
+@dirrmtry share/desktop-directories
 @dirrm include/gnome-menus
 @dirrmtry etc/xdg/menus
 @dirrmtry etc/xdg
