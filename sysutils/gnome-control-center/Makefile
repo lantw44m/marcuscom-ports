@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.153 2007/09/17 16:16:24 ahze Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.154 2007/09/20 16:17:11 marcus Exp $
 #
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	2.20.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -58,6 +58,10 @@ PLIST_SUB+=	ABOUTME=""
 CONFIGURE_ARGS+=--disable-aboutme
 PLIST_SUB+=	ABOUTME="@comment "
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+	    	${WRKSRC}/capplets/common/gnome-theme-info.c
 
 post-install:
 	@-update-desktop-database
