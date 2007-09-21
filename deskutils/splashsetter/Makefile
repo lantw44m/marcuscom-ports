@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	splashsetter
-PORTVERSION=	0.6.5.2
-PORTREVISION=	2
+PORTVERSION=	0.6.5.3
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	http://webonaut.com/distfiles/${PORTNAME}/
 
@@ -20,7 +19,7 @@ USE_PYTHON=	yes
 USE_GNOME=	pygnome2 gnomeprefix
 
 do-build:
-	@${REINPLACE_CMD} -e 's|/usr/X11R6|${PREFIX}|g' \
+	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' \
 		${WRKSRC}/*.py
 	@${FIND} ${WRKSRC} -name '*.bak' -delete
 	@${FIND} ${WRKSRC} -name '*.orig' -delete
