@@ -9,6 +9,7 @@ lib/libgnome-desktop-2.so.2
 libdata/pkgconfig/gnome-desktop-2.0.pc
 share/applications/gnome-about.desktop
 share/gnome-about/contributors.list
+share/gnome-about/foundation-members.list
 share/gnome-about/gnome-64.png
 share/gnome-about/gnome-version.xml
 share/gnome-about/headers/header-bg-ancient01a.png
