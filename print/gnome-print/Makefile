@@ -3,7 +3,7 @@
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/gnome-print/Makefile,v 1.4 2007/05/02 23:06:20 mezz Exp $
+#   $MCom: ports/print/gnome-print/Makefile,v 1.5 2007/05/19 21:36:20 marcus Exp $
 #
 
 PORTNAME=	gnome-print
@@ -36,14 +36,6 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-
-pre-everything::
-.if !defined(WITH_GHOSTSCRIPT_AFPL) || ${WITH_GHOSTSCRIPT_AFPL} != yes
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "      Define WITH_GHOSTSCRIPT_AFPL=yes to use"
-	@${ECHO_MSG} "      AFPL Postscript interpreter instead of GNU one"
-	@${ECHO_MSG} ""
-.endif
 
 post-install:
 	@${TOUCH} ${PREFIX}/etc/gnome/fonts/gnome-print-x11.fontmap
