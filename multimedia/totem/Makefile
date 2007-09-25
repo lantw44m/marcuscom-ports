@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.86 2007/09/12 15:20:00 ahze Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.87 2007/09/17 11:45:08 ahze Exp $
 #
 
 PORTNAME=	totem
 PORTVERSION=	2.20.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -36,7 +36,7 @@ INSTALLS_OMF=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 	       	LIBS="-L${LOCALBASE}/lib -lXrandr"
-CONFIGURE_ARGS=	--with-plugins=${TOTEM_PLUGINS}
+CONFIGURE_ARGS=	--with-plugins="${TOTEM_PLUGINS}"
 
 MAN1=		totem.1 totem-video-thumbnailer.1
 GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
@@ -46,7 +46,7 @@ CONFLICTS?=	totem-gstreamer-[0-9]* totem-xine-[0-9]*
 OPTIONS=	LIRC "Enable lirc support" off \
 		GALAGO "Enable Galago support" off
 
-TOTEM_PLUGINS=	"screensaver ontop gromit media-player-keys properties sidebar-test skipto"
+TOTEM_PLUGINS=	screensaver ontop gromit media-player-keys properties sidebar-test skipto
 
 .include <bsd.port.pre.mk>
 
@@ -59,7 +59,7 @@ PLIST_SUB+=	LIRC="@comment "
 .endif
 
 .if defined(WITH_GALAGO)
-LIB_DEPENDS+=	galago.3:${PORTSIDR}/devel/libgalago
+LIB_DEPENDS+=	galago.3:${PORTSDIR}/devel/libgalago
 PLIST_SUB+=	GALAGO=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} galago
 .else
