@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/editors/gedit-plugins/Makefile,v 1.23 2007/09/21 01:43:53 mezz Exp $
 #
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	2.19.90
+PORTVERSION=	2.20.0
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -41,10 +41,10 @@ WITH_GNOME=	yes
 
 .include <bsd.port.pre.mk>
 
-.if ${HAVE_GNOME:Mpygnomedesktop}!="" && ${ARCH}!="sparc64"
+.if ${HAVE_GNOME:Mpygtksourceview}!="" && ${ARCH}!="sparc64"
 USE_PYTHON=	yes
 .include "${PORTSDIR}/Mk/bsd.python.mk"
-USE_GNOME+=	pygnomedesktop
+USE_GNOME+=	pygtksourceview
 BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/gtk-2.0/vtemodule.so:${PORTSDIR}/x11-toolkits/py-vte
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/gtk-2.0/vtemodule.so:${PORTSDIR}/x11-toolkits/py-vte
 CONFIGURE_ARGS+=--enable-python
