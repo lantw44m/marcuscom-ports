@@ -1,9 +1,0 @@
-lib/gaim/gxr.la
-lib/gaim/gxr.so
-share/pixmaps/gaim/gxr/next.png
-share/pixmaps/gaim/gxr/pause.png
-share/pixmaps/gaim/gxr/play.png
-share/pixmaps/gaim/gxr/previous.png
-share/pixmaps/gaim/gxr/stop.png
-share/pixmaps/gaim/gxr/xmms.png
-@dirrm share/pixmaps/gaim/gxr
