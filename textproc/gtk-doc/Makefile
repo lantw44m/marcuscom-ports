@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gtk-doc
-PORTVERSION=	1.8
-PORTREVISION=	2
+PORTVERSION=	1.9
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -40,10 +39,6 @@ CONFIGURE_ARGS=	--with-xml-catalog=${LOCALBASE}/share/xml/catalog.ports
 PLIST_SUB=	XMLCATMGR=${XMLCATMGR} \
 		CATALOG_PORTS_SGML=${CATALOG_PORTS_SGML} \
 		CATALOG_DIR=${CATALOG_DIR}
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|[(]datadir[)]/pkgconfig|(prefix)/libdata/pkgconfig|' \
-		${WRKSRC}/Makefile.in
 
 post-install:
 	@${XMLCATMGR} -sc ${CATALOG_PORTS_SGML} add CATALOG ${CATALOG_DIR}/gtk-doc.cat
