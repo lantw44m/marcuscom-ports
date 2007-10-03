@@ -3,11 +3,12 @@
 # Whom:					Frerich Raabe <frerich.raabe@gmx.de>
 #
 # $FreeBSD$
-#    $MCom$
+#   $MCom: ports/devel/distcc/Makefile,v 1.1 2007/05/19 17:43:14 ahze Exp $
+#
 
 PORTNAME=	distcc
 PORTVERSION=	2.18.3
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	devel ipv6
 MASTER_SITES=	http://distcc.samba.org/ftp/distcc/
 PATCH_SITES=	http://0pointer.de/public/
@@ -39,7 +40,7 @@ OPTIONS=	AVAHI   "Enable Avahi Zeroconf/mDNS/Bonjour support" Off \
 PATCHFILES+=	distcc-avahi.patch
 LIB_DEPENDS+=	avahi-glib.1:${PORTSDIR}/net/avahi
 PATCH_DIST_STRIP=	-p1
-USE_AUTOTOOLS+=	autoconf:259
+USE_AUTOTOOLS+=	autoconf:261
 CFLAGS+=	-DHAVE_AVAHI
 .endif
 
