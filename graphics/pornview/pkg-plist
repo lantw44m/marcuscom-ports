@@ -1,5 +1,5 @@
 bin/pornview
-share/apps/Graphics/pornview.desktop
+share/gnome/apps/Graphics/pornview.desktop
 share/pixmaps/pornview.png
 %%WITH_NLS%%share/locale/fr/LC_MESSAGES/pornview.mo
 %%WITH_NLS%%share/locale/pl/LC_MESSAGES/pornview.mo
