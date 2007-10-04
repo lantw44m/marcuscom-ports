@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes-extras/Makefile,v 1.16 2007/08/01 16:51:06 mezz Exp $
+#   $MCom: ports/x11-themes/gnome-themes-extras/Makefile,v 1.17 2007/09/17 23:07:27 ahze Exp $
 #
 
 PORTNAME=	gnome-themes-extras
@@ -15,7 +15,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	More themes for the GNOME 2 desktop environment
 
-BUILD_DEPENDS=	gtk-engines2>=2.11.0:${PORTSDIR}/x11-themes/gtk-engines2
+BUILD_DEPENDS=	gtk-engines2>=2.11.0:${PORTSDIR}/x11-themes/gtk-engines2 \
+		icon-naming-utils>=0.8.1:${PORTSDIR}/x11-themes/icon-naming-utils
 RUN_DEPENDS=	gtk-engines2>=2.11.0:${PORTSDIR}/x11-themes/gtk-engines2
 
 USE_BZIP2=	yes
