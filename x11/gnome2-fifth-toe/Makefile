@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.89 2007/06/09 06:31:34 marcus Exp $
+#   $MCom: ports/x11/gnome2-fifth-toe/Makefile,v 1.90 2007/09/18 15:41:24 ahze Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 PKGNAMESUFFIX=	-fifth-toe
 
@@ -21,7 +21,7 @@ RUN_DEPENDS=	pan:${PORTSDIR}/news/pan \
 		pidgin:${PORTSDIR}/net-im/pidgin \
 		tsclient:${PORTSDIR}/net/tsclient \
 		galeon:${PORTSDIR}/www/galeon \
-		${LOCALBASE}/share/themes/Gorilla/metacity-1/metacity-theme-1.xml:${PORTSDIR}/x11-themes/gnome-themes-extras \
+		${LOCALBASE}/share/icons/Foxtrot/index.theme:${PORTSDIR}/x11-themes/gnome-themes-extras \
 		bluefish:${PORTSDIR}/www/bluefish \
 		gossip:${PORTSDIR}/net-im/gossip \
 		liferea:${PORTSDIR}/net/liferea \
