@@ -320,7 +320,6 @@ share/themes/Gray/index.theme
 @dirrm share/themes/Gray-Flat/gtk-2.0
 @dirrm share/themes/Gray-Flat
 @dirrm share/themes/Gray
-@dirrmtry share/themes
 @dirrm share/themes/Gray/metacity-1
 @dirrm share/themes/Gray-Flat/metacity-1
 @dirrm share/themes/Gray-Flat

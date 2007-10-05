@@ -218,4 +218,5 @@ share/themes/Industrial/index.theme
 @dirrm share/themes/Industrial/metacity-1
 @dirrm share/themes/Industrial
 @dirrmtry share/themes/Industrial
+@dirrmtry share/themes
 %%XMMS%%@dirrm share/xmms/Skins/Industrial

@@ -252,3 +252,4 @@
 %%METACITY%%share/themes/AluminumAlloy-Cryogenic/metacity-1/button-close-focus.png
 %%METACITY%%@dirrm share/themes/AluminumAlloy-Cryogenic/metacity-1
 %%METACITY%%@dirrm share/themes/AluminumAlloy-Cryogenic
+@dirrmtry share/themes

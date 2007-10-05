@@ -7,3 +7,4 @@ share/themes/Indubstrial/index.theme
 @dirrm share/themes/Indubstrial
 @dirrm share/themes/Indubstrial/metacity-1
 @dirrm share/themes/Indubstrial
+@dirrmtry share/themes

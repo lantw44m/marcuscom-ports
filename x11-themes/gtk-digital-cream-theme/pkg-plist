@@ -263,3 +263,4 @@
 %%METACITY%%@dirrm share/themes/Digital-Cream/metacity-1
 %%METACITY%%share/themes/Digital-Cream/index.theme
 %%METACITY%%@dirrm share/themes/Digital-Cream
+@dirrmtry share/themes

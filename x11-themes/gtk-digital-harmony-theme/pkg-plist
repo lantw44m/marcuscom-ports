@@ -214,3 +214,4 @@
 %%METACITY%%@dirrm share/themes/Digital-Harmony/metacity-1
 %%METACITY%%share/themes/Digital-Harmony/index.theme
 %%METACITY%%@dirrm share/themes/Digital-Harmony
+@dirrmtry share/themes

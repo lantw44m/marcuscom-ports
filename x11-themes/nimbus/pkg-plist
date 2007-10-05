@@ -2863,4 +2863,5 @@ share/themes/nimbus/index.theme
 @dirrm share/icons/nimbus
 @dirrm share/themes/nimbus/metacity-1
 @dirrm share/themes/nimbus
+@dirrmtry share/themes
 @dirrmtry lib/locale

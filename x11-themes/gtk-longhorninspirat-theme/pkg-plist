@@ -219,3 +219,4 @@
 %%METACITY%%@dirrm share/themes/Longhorn Inspirat/metacity-1
 %%METACITY%%share/themes/Longhorn Inspirat/index.theme
 %%METACITY%%@dirrm share/themes/Longhorn Inspirat
+@dirrmtry share/themes

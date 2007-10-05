@@ -253,3 +253,4 @@
 %%METACITY%%share/themes/AluminumAlloy-Volcanic/metacity-1/button-close-focus.png
 %%METACITY%%@dirrm share/themes/AluminumAlloy-Volcanic/metacity-1
 %%METACITY%%@dirrm share/themes/AluminumAlloy-Volcanic
+@dirrmtry share/themes

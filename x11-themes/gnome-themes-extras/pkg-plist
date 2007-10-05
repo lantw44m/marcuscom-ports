@@ -5233,6 +5233,7 @@ share/themes/Darklooks/gtk-2.0/gtkrc
 share/themes/Darklooks/index.theme
 @dirrm share/themes/Darklooks/gtk-2.0
 @dirrm share/themes/Darklooks
+@dirrmtry share/themes
 @dirrm share/icons/Neu/scalable/status
 @dirrm share/icons/Neu/scalable/places
 @dirrm share/icons/Neu/scalable/mimetypes

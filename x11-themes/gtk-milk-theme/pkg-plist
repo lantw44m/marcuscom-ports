@@ -259,3 +259,4 @@
 %%METACITY%%@dirrm share/themes/Milk/metacity-1
 %%METACITY%%share/themes/Milk/index.theme
 %%METACITY%%@dirrm share/themes/Milk
+@dirrmtry share/themes

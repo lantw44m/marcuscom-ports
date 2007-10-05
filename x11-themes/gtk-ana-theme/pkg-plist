@@ -138,3 +138,4 @@
 %%METACITY%%share/themes/%%THEME_NAME%%/metacity-1/metacity-theme-1.xml
 %%METACITY%%@dirrm share/themes/%%THEME_NAME%%/metacity-1
 %%METACITY%%@dirrm share/themes/%%THEME_NAME%%
+@dirrmtry share/themes

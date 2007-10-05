@@ -83,6 +83,7 @@ share/themes/ThinIce/gtk-2.0/gtkrc
 @dirrmtry share/themes/Crux
 @dirrm share/themes/Clearlooks/gtk-2.0
 @dirrmtry share/themes/Clearlooks
+@dirrmtry share/themes
 @dirrm share/gtk-engines
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
