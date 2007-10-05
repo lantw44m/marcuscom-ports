@@ -2,16 +2,19 @@
 # Date created:		28 February 2001
 # Whom:			Akinori MUSHA aka knu <knu@idaemons.org>
 #
-# $FreeBSD: ports/x11/ruby-gnome2/Makefile,v 1.23 2007/05/19 20:27:16 flz Exp $
-#   $MCom: ports/x11/ruby-gnome2/Makefile,v 1.2 2005/10/17 07:05:42 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/ruby-gnome2/Makefile,v 1.4 2007/10/05 04:36:34 mezz Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	${RUBY_GNOME_PORTVERSION}
 PORTREVISION=	1
 CATEGORIES=	x11 ruby
-MASTER_SITES=	${RUBY_GNOME_MASTER_SITES}
-MASTER_SITE_SUBDIR=	${RUBY_GNOME_MASTER_SITE_SUBDIR}
+#MASTER_SITES=	${RUBY_GNOME_MASTER_SITES}
+#MASTER_SITE_SUBDIR=	${RUBY_GNOME_MASTER_SITE_SUBDIR}
+MASTER_SITES=	${MASTER_SITE_LOCAL} \
+		http://people.freebsd.org/~mezz/distfiles/
+MASTER_SITE_SUBDIR=mezz
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
 DISTNAME=	${RUBY_GNOME_DISTNAME}
 DIST_SUBDIR=	ruby
