@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/tracker/Makefile,v 1.6 2007/09/06 20:33:07 ahze Exp $
+#   $MCom: ports/sysutils/tracker/Makefile,v 1.7 2007/09/11 04:03:33 marcus Exp $
 #
 
 PORTNAME=	tracker
 PORTVERSION=	0.6.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.gnome.org/~jamiemcc/tracker/
 
