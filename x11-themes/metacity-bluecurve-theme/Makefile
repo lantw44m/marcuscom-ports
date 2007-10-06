@@ -7,8 +7,6 @@
 
 PORTNAME=	metacity-bluecurve-theme
 
-PORTREVISION=	1
-
 COMMENT=	The Bluecurve Metacity themes
 
 MASTERDIR=	${.CURDIR}/../bluecurve-themes
