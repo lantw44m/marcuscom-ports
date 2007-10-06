@@ -1,21 +1,19 @@
 bin/bug-buddy
-lib/gtk-2.0/modules/libgnomebreakpad.a
 lib/gtk-2.0/modules/libgnomebreakpad.la
 lib/gtk-2.0/modules/libgnomebreakpad.so
-lib/gtk-2.0/modules/libgnomebreakpad.so.0
 share/applications/bug-buddy.desktop
-share/bug-buddy/bug-buddy.gtkbuilder
-share/bug-buddy/bug-buddy.menu
-share/bug-buddy/bug-buddy.png
-share/bug-buddy/bugzilla/gnome.bugzilla
-share/bug-buddy/bugzilla/gnome/config
-share/bug-buddy/bugzilla/gnome/mostfreq
-share/bug-buddy/bugzilla/gnome/products
-share/bug-buddy/bugzilla/ximian.bugzilla
-share/bug-buddy/bugzilla/ximian/config
-share/bug-buddy/bugzilla/ximian/mostfreq
-share/bug-buddy/bugzilla/ximian/products
-share/bug-buddy/gdb-cmd
+%%DATADIR%%/bug-buddy.gtkbuilder
+%%DATADIR%%/bug-buddy.menu
+%%DATADIR%%/bug-buddy.png
+%%DATADIR%%/bugzilla/gnome.bugzilla
+%%DATADIR%%/bugzilla/gnome/config
+%%DATADIR%%/bugzilla/gnome/mostfreq
+%%DATADIR%%/bugzilla/gnome/products
+%%DATADIR%%/bugzilla/ximian.bugzilla
+%%DATADIR%%/bugzilla/ximian/config
+%%DATADIR%%/bugzilla/ximian/mostfreq
+%%DATADIR%%/bugzilla/ximian/products
+%%DATADIR%%/gdb-cmd
 share/icons/hicolor/48x48/apps/bug-buddy.png
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
@@ -98,10 +96,10 @@ share/locale/xh/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_CN/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_HK/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
-@dirrm share/bug-buddy/bugzilla/ximian
-@dirrm share/bug-buddy/bugzilla/gnome
-@dirrm share/bug-buddy/bugzilla
-@dirrm share/bug-buddy
+@dirrm %%DATADIR%%/bugzilla/ximian
+@dirrm %%DATADIR%%/bugzilla/gnome
+@dirrm %%DATADIR%%/bugzilla
+@dirrm %%DATADIR%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
