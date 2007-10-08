@@ -31,6 +31,7 @@ CONFIGURE_ARGS=	--disable-tcl
 GCONF_SCHEMAS=	apps_xchat.schemas notification.schemas urlscraper.schemas
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
+WANT_PERL=	yes
 
 MAN1=		xchat-gnome.1
 
@@ -79,10 +80,6 @@ PLIST_SUB+=	TCL="@comment "
 .endif
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 500000
-BROKEN=	does not build on 4.X
-.endif
 
 .if defined(WITHOUT_PERL)
 CONFIGURE_ARGS+=--disable-perl

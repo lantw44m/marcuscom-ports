@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/galeon/Makefile,v 1.12 2007/05/19 21:36:25 marcus Exp $
+#    $MCom: ports/www/galeon/Makefile,v 1.13 2007/05/30 03:21:44 mezz Exp $
 #
 
 PORTNAME=	galeon
@@ -38,11 +38,10 @@ GCONF_SCHEMAS=	galeon.schemas
 .include <bsd.port.pre.mk>
 .include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 
-.if ${OSVERSION} > 500000
 # Galeon does not build correctly in -CURRENT if -Werror is passed
 # to the compiler.
 NO_WERROR=	yes
-.endif
+
 # allow build with more warnings enabled
 .if defined(NO_WERROR)
 CONFIGURE_ARGS+=	--disable-werror

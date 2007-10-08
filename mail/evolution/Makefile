@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.149 2007/09/03 21:36:31 mezz Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.150 2007/09/17 18:24:31 marcus Exp $
 #
 
 PORTNAME=	evolution
@@ -93,8 +93,7 @@ PLIST_SUB+=	DBUS=""
 PLIST_SUB+=	DBUS="@comment "
 .endif
 
-.if ${OSVERSION} >= 500000 && !defined(NO_KERBEROS) && \
-	exists(/usr/lib/libkrb5.so)
+.if !defined(NO_KERBEROS) && exists(/usr/lib/libkrb5.so)
 CONFIGURE_ARGS+=	--with-krb5=/usr
 .else
 LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal

@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.96 2007/09/03 22:48:52 marcus Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.97 2007/09/17 18:42:14 marcus Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -43,8 +43,7 @@ GCONF_SCHEMAS=	apps_exchange_addressbook-${VERSION}.schemas
 
 .include <bsd.port.pre.mk>
 
-.if ${OSVERSION} >= 500000 && !defined(NO_KERBEROS) && \
-	exists(/usr/lib/libkrb5.so)
+.if !defined(NO_KERBEROS) && exists(/usr/lib/libkrb5.so)
 CONFIGURE_ARGS+=	--with-krb5=/usr
 .else
 LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal

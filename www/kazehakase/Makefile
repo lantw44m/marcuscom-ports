@@ -3,7 +3,7 @@
 # Whom:			michael johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#   $MCom: ports/www/kazehakase/Makefile,v 1.6 2007/08/07 03:31:38 mezz Exp $
+#   $MCom: ports/www/kazehakase/Makefile,v 1.7 2007/08/15 06:04:51 mezz Exp $
 #
 
 PORTNAME=	kazehakase
@@ -38,10 +38,6 @@ RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/uconv.so:${PORTSDIR}/japanese/ruby-uconv
 
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/../../www/mozilla/bsd.gecko.mk"
-
-.if ${OSVERSION} < 500000
-IGNORE=Does not build
-.endif
 
 # !!! gtk-webcore higly experimental right now and not very stable !!!
 # See https://mail.gna.org/public/kazehakase-devel/2004-10/msg00001.html
