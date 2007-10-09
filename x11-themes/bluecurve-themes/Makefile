@@ -41,7 +41,7 @@ do-install:	# empty
 .else					# master port
 
 PORTVERSION=	5.0.11
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_FEDORA_LINUX:S|$|:fedora|} ${MASTER_SITE_LOCAL:S|$|:local|}
 MASTER_SITE_SUBDIR=	development/source/SRPMS/:fedora jylefort/:local
@@ -80,8 +80,6 @@ bc-generate-plist:
 		${FIND} * -type d ! -empty | ${SORT} -r \
 			| ${SED} -e "s|^|@dirrm $$dst_rel/|" >> ${PLIST}; \
 	done
-	@${ECHO_CMD} "@dirrmtry share/themes" >> ${PLIST}
-
 
 do-install:
 	for h in ${BC_HIERS}; do \

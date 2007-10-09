@@ -16,7 +16,7 @@ USE_GNOME=	gnomehier
 
 .for t in Bluecurve Bluecurve-classic
 BC_HIERS+=	${WRKSRC}/art/metacity/${t}:${PREFIX}/share/themes/${t}/metacity-1
-PLIST_DIRS+=	share/themes/${t}/metacity-1 share/themes/${t}
+PLIST_DIRS+=	share/themes/${t}/metacity-1 share/themes/${t} share/themes
 .endfor
 
 .include "${MASTERDIR}/Makefile"
