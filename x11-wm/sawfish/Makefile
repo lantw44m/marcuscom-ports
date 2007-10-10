@@ -3,12 +3,12 @@
 # Whom:                Yukihiro Nakai <nakai@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/sawfish/Makefile,v 1.3 2007/08/07 04:43:15 mezz Exp $
+#   $MCom: ports/x11-wm/sawfish/Makefile,v 1.4 2007/08/15 18:29:16 mezz Exp $
 #
 
 PORTNAME=	sawfish
 PORTVERSION=	1.3
-PORTREVISION=	15
+PORTREVISION=	16
 PORTEPOCH=	2
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
