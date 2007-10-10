@@ -6028,3 +6028,4 @@ share/locale/zh_CN/LC_MESSAGES/wesnoth.mo
 @dirrmtry share/locale/nb_NO
 @dirrmtry share/locale/tl/LC_MESSAGES
 @dirrmtry share/locale/tl
+@dirrmtry share/applications

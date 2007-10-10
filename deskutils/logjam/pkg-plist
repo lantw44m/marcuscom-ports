@@ -17,3 +17,4 @@ share/locale/ja/LC_MESSAGES/logjam.mo
 @dirrmtry share/locale/ru_RU
 @dirrmtry share/locale/uk_UA/LC_MESSAGES
 @dirrmtry share/locale/uk_UA
+@dirrmtry share/applications

@@ -14,3 +14,4 @@ share/locale/pl/LC_MESSAGES/katoob.mo
 share/locale/sv/LC_MESSAGES/katoob.mo
 @dirrm share/katoob/emulator
 @dirrm share/katoob
+@dirrmtry share/applications

@@ -19,3 +19,4 @@ share/giftui/icons/opennap-up.png
 share/pixmaps/giftui.png
 @dirrm share/giftui/icons
 @dirrm share/giftui
+@dirrmtry share/applications

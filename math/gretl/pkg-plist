@@ -507,3 +507,4 @@ share/locale/tr/LC_MESSAGES/gretl.mo
 @dirrm include/gretl
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/applications

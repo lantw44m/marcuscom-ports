@@ -307,3 +307,4 @@ share/mime/packages/beast.xml
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/applications

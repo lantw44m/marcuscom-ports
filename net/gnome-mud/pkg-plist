@@ -45,3 +45,4 @@ share/locale/zh_CN/LC_MESSAGES/gnome-mud.mo
 @dirrm share/gnome-mud
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/applications

@@ -20,3 +20,4 @@ share/locale/pt_BR/LC_MESSAGES/cowbell.mo
 share/locale/sv/LC_MESSAGES/cowbell.mo
 share/locale/tr/LC_MESSAGES/cowbell.mo
 @dirrm lib/cowbell
+@dirrmtry share/applications

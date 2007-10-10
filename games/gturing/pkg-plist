@@ -67,3 +67,4 @@ share/locale/zh_TW/LC_MESSAGES/gturing-2.0.mo
 @dirrm share/gnome/help/gturing
 @dirrm %%EXAMPLESDIR%%
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrmtry share/applications

@@ -48,3 +48,4 @@ share/locale/vi/LC_MESSAGES/gnome-pkgview.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-pkgview.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-pkgview.mo
 @dirrm share/pixmaps/gnome-pkgview
+@dirrmtry share/applications

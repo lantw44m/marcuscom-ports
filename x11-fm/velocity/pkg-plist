@@ -43,3 +43,4 @@ share/velocity/templates/word-document
 @dirrm share/velocity/plugins
 @dirrm share/velocity
 @dirrm share/pixmaps/velocity
+@dirrmtry share/applications

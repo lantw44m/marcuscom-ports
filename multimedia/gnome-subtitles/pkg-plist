@@ -21,3 +21,4 @@ share/locale/dz/LC_MESSAGES/gnome-subtitles.mo
 @dirrmtry share/gnome/help/gnome-subtitles/ca
 @dirrmtry share/gnome/help/gnome-subtitles
 @dirrmtry locale
+@dirrmtry share/applications

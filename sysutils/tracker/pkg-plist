@@ -149,3 +149,4 @@ share/locale/sv/LC_MESSAGES/tracker.mo
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/applications

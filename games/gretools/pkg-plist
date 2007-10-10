@@ -21,3 +21,4 @@ share/pixmaps/gretools.png
 @dirrm %%PYTHON_SITELIBDIR%%/gretools
 @dirrmtry %%PYTHON_SITELIBDIR%%
 @dirrmtry %%PYTHON_LIBDIR%%
+@dirrmtry share/applications

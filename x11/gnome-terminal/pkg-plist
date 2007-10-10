@@ -217,3 +217,4 @@ share/pixmaps/gnome-terminal.png
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/applications

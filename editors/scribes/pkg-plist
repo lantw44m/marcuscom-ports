@@ -921,3 +921,4 @@ share/icons/hicolor/48x48/apps/scribes.png
 @dirrm share/gnome/help/scribes/C
 @dirrm share/gnome/help/scribes
 @dirrm %%PYTHON_SITELIBDIR%%/SCRIBES
+@dirrmtry share/applications

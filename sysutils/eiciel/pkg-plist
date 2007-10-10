@@ -49,3 +49,4 @@ share/eiciel/img/usuari.png
 @dirrm share/eiciel/doc/C
 @dirrm share/eiciel/doc
 @dirrm share/eiciel
+@dirrmtry share/applications

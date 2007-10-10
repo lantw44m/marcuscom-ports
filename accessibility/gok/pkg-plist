@@ -976,3 +976,4 @@ share/pixmaps/gok.png
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/ang/LC_MESSAGES
 @dirrmtry share/locale/ang
+@dirrmtry share/applications

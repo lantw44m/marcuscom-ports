@@ -154,3 +154,4 @@ share/locale/zh_TW/LC_MESSAGES/meld.mo
 @dirrm %%DOCSDIR%%
 @dirrm lib/meld/vc
 @dirrm lib/meld
+@dirrmtry share/applications

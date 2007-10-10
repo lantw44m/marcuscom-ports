@@ -202,3 +202,4 @@ share/locale/zh_TW/LC_MESSAGES/gthumb.mo
 @dirrm share/gthumb
 @dirrm lib/gthumb/modules
 @dirrm lib/gthumb
+@dirrmtry share/applications

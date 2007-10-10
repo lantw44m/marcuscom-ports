@@ -57,3 +57,4 @@ share/mime/packages/glom.xml
 @dirrmtry share/locale/rw
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@dirrmtry share/applications

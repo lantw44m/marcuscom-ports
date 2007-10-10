@@ -5,3 +5,4 @@ share/gruler/glade/gruler.glade
 share/pixmaps/gruler-icon.png
 @dirrm share/gruler/glade
 @dirrm share/gruler
+@dirrmtry share/applications

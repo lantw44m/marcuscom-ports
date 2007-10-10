@@ -143,3 +143,4 @@ share/mimelnk/application/x-gchempaint.desktop
 @dirrm lib/gchempaint
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@dirrmtry share/applications

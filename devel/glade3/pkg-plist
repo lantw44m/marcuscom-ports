@@ -407,3 +407,4 @@ share/omf/glade/glade-sv.omf
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/applications

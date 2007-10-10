@@ -548,3 +548,4 @@ share/icons/hicolor/48x48/proofgeneral.png
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/ProofGeneral
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/PG-adapting
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrmtry share/applications

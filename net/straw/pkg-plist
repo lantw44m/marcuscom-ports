@@ -168,3 +168,4 @@ share/locale/vi/LC_MESSAGES/straw.mo
 share/locale/zh_CN/LC_MESSAGES/straw.mo
 share/pixmaps/straw.png
 @dirrm share/straw
+@dirrmtry share/applications

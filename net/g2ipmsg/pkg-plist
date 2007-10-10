@@ -12,3 +12,4 @@ share/locale/ja/LC_MESSAGES/g2ipmsg.mo
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrm share/sounds/g2ipmsg
 @dirrm share/pixmaps/g2ipmsg
+@dirrmtry share/applications

@@ -29,3 +29,4 @@ share/pixmaps/liteamp/vol_mute.png
 share/pixmaps/liteamp/vol_up.png
 share/applications/liteamp.desktop
 @dirrm share/pixmaps/liteamp
+@dirrmtry share/applications

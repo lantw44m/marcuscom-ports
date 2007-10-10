@@ -192,3 +192,4 @@ share/locale/zh_TW/LC_MESSAGES/tomboy.mo
 @dirrm share/gnome/help/tomboy
 @dirrm lib/tomboy/Plugins
 @dirrm lib/tomboy
+@dirrmtry share/applications

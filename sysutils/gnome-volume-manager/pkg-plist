@@ -91,3 +91,4 @@ share/locale/zh_TW/LC_MESSAGES/gnome-volume-manager.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/ang/LC_MESSAGES
 @dirrmtry share/locale/ang
+@dirrmtry share/applications

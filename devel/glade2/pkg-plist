@@ -89,3 +89,4 @@ share/locale/zh_TW/LC_MESSAGES/glade-2.0.mo
 @dirrmtry share/locale/yi
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/applications

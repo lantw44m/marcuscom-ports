@@ -223,3 +223,4 @@ share/locale/zh_CN/LC_MESSAGES/sodipodi.mo
 @dirrm lib/sodipodi/extensions
 @dirrm lib/sodipodi
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@dirrmtry share/applications

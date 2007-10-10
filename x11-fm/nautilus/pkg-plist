@@ -225,3 +225,4 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/applications

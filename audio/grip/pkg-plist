@@ -67,3 +67,4 @@ share/locale/zh_TW/LC_MESSAGES/grip-2.2.mo
 @dirrm share/gnome/help/grip
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/applications

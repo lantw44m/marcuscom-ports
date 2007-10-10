@@ -100,3 +100,4 @@ share/locale/zh_TW/LC_MESSAGES/alacarte.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/applications

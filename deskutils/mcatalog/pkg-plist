@@ -68,3 +68,4 @@ share/locale/zh_CN/LC_MESSAGES/mcatalog.mo
 @dirrm share/mcatalog
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrm lib/mcatalog
+@dirrmtry share/applications

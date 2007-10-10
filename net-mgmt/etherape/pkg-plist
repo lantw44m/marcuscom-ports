@@ -32,3 +32,4 @@ share/locale/tr/LC_MESSAGES/etherape.mo
 @dirrm share/etherape/doc
 @dirrm share/etherape
 @dirrm etc/etherape
+@dirrmtry share/applications

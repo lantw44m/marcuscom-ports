@@ -165,3 +165,4 @@ share/locale/zh_TW/LC_MESSAGES/genius.mo
 @dirrm include/genius
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/applications

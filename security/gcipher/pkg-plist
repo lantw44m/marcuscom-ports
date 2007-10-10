@@ -63,3 +63,4 @@ share/gcipher/plugins/ciphergui/PluginCipherGUIList.py
 @dirrm share/gcipher/plugins/ciphergui
 @dirrm share/gcipher/plugins
 @dirrm share/gcipher
+@dirrmtry share/applications

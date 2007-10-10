@@ -129,3 +129,4 @@ share/locale/zh_TW/LC_MESSAGES/xchat-gnome.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/jbo/LC_MESSAGES
 @dirrmtry share/locale/jbo
+@dirrmtry share/applications

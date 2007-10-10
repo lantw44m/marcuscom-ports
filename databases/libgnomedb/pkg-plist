@@ -197,3 +197,4 @@ share/locale/zh_TW/LC_MESSAGES/libgnomedb-3.mo
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/applications

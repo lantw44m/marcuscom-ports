@@ -126,3 +126,4 @@ share/omf/gnome-keyring-manager/gnome-keyring-manager-vi.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/applications

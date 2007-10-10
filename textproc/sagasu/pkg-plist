@@ -24,3 +24,4 @@ share/locale/sr/LC_MESSAGES/sagasu.mo
 @dirrm share/gnome/help/sagasu/C
 @dirrm share/gnome/help/sagasu
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrmtry share/applications

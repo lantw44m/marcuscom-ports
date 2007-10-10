@@ -680,3 +680,4 @@ share/locale/zh_TW/LC_MESSAGES/sawfish.mo
 @dirrm libexec/sawfish/%%VERSION%%
 @dirrm libexec/sawfish
 @dirrm libexec/rep/%%GNUHOST%%/sawfish
+@dirrmtry share/applications

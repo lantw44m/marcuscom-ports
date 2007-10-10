@@ -158,3 +158,4 @@ share/locale/zu/LC_MESSAGES/libbonoboui-2.0.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/applications

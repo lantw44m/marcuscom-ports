@@ -48,3 +48,4 @@ share/mime/packages/gnoemoe.xml
 @dirrm share/gnoemoe
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@dirrmtry share/applications

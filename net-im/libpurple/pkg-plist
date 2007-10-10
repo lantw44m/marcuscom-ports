@@ -242,3 +242,4 @@ share/locale/zh_TW/LC_MESSAGES/pidgin.mo
 %%PERL:%%@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Purple
 @dirrm lib/purple-2
 @dirrm include/libpurple
+@dirrmtry share/applications

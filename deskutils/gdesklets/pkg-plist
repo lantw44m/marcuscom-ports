@@ -659,3 +659,4 @@ share/mime/packages/gdesklets.xml
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/icons/gnome/48x48/mimetypes
+@dirrmtry share/applications

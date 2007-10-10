@@ -1939,3 +1939,4 @@ share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 %%GNOMEPANEL:%%@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/yi/LC_MESSAGES
 @dirrmtry share/locale/yi
+@dirrmtry share/applications

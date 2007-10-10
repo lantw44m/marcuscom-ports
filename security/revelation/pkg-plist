@@ -99,3 +99,4 @@ share/mime/packages/revelation.xml
 share/mime/application/x-revelation.xml
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@dirrmtry share/applications

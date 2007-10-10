@@ -154,3 +154,4 @@ share/locale/zh_TW/LC_MESSAGES/ggv.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/applications

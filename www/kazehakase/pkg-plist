@@ -74,3 +74,4 @@ share/locale/ru/LC_MESSAGES/kazehakase.mo
 @dirrm lib/kazehakase
 @dirrm etc/kazehakase/mozilla
 @dirrm etc/kazehakase
+@dirrmtry share/applications

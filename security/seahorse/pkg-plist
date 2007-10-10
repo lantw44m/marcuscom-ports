@@ -362,3 +362,4 @@ share/pixmaps/seahorse/scalable/seahorse.svg
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/applications

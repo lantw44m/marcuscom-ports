@@ -113,3 +113,4 @@ share/locale/zh_TW/LC_MESSAGES/devhelp.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/applications

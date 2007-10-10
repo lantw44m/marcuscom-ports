@@ -68,3 +68,4 @@ share/locale/vi/LC_MESSAGES/muine.mo
 share/locale/zh_CN/LC_MESSAGES/muine.mo
 @dirrmtry lib/muine/plugins
 @dirrmtry lib/muine
+@dirrmtry share/applications

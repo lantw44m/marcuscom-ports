@@ -30,3 +30,4 @@ share/locale/it/LC_MESSAGES/pureadmin.mo
 share/locale/sv/LC_MESSAGES/pureadmin.mo
 @dirrm share/pureadmin/docs
 @dirrm share/pureadmin
+@dirrmtry share/applications

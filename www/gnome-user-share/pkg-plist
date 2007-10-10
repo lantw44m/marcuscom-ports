@@ -43,3 +43,4 @@ share/locale/zh_TW/LC_MESSAGES/gnome-user-share.mo
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/applications

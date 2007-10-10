@@ -77,3 +77,4 @@ share/mime/packages/oregano.xml
 @dirrm share/gnome/help/oregano
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@dirrmtry share/applications

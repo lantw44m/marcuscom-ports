@@ -150,3 +150,4 @@ share/locale/tr/LC_MESSAGES/liferea.mo
 @dirrmtry man/pl/man1
 @dirrmtry man/pl
 @dirrm lib/liferea
+@dirrmtry share/applications

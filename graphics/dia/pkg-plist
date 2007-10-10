@@ -1811,3 +1811,4 @@ share/locale/zh_TW/LC_MESSAGES/dia.mo
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/applications

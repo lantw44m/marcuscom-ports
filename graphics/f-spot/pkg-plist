@@ -117,3 +117,4 @@ share/locale/zh_TW/LC_MESSAGES/f-spot.mo
 @dirrmtry share/gnome-screensaver
 @dirrmtry libexec/gnome-screensaver
 @dirrm lib/f-spot
+@dirrmtry share/applications

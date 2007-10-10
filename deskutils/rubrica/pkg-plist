@@ -154,4 +154,4 @@ share/locale/uk/LC_MESSAGES/rubrica2.mo
 @dirrmtry lib/libral
 @dirrmtry include/libral-1.0/libral
 @dirrmtry include/libral-1.0
-
+@dirrmtry share/applications

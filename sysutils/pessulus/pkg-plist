@@ -133,3 +133,4 @@ share/locale/zh_TW/LC_MESSAGES/pessulus.mo
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/applications

@@ -6342,3 +6342,4 @@ share/locale/zh_TW/LC_MESSAGES/gcompris.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/ar_TN/LC_MESSAGES
 @dirrmtry share/locale/ar_TN
+@dirrmtry share/applications

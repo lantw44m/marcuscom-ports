@@ -185,3 +185,4 @@ share/locale/zh_TW/LC_MESSAGES/gnome-commander.mo
 @dirrm share/gnome/help/gnome-commander
 @dirrm lib/gnome-commander/plugins
 @dirrm lib/gnome-commander
+@dirrmtry share/applications

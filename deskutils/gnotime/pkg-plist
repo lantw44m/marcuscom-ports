@@ -127,3 +127,4 @@ share/locale/zh_TW/LC_MESSAGES/gnotime-2.0.mo
 @dirrm share/gnotime/ghtml
 @dirrm share/gnotime
 @dirrm include/gnotime
+@dirrmtry share/applications

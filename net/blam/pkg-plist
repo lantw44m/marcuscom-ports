@@ -89,3 +89,4 @@ share/locale/zh_TW/LC_MESSAGES/blam.mo
 @dirrm share/blam/themes
 @dirrm share/blam
 @dirrm lib/blam
+@dirrmtry share/applications

@@ -136,3 +136,4 @@ share/locale/zh_TW/LC_MESSAGES/gossip.mo
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/applications

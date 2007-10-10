@@ -234,3 +234,4 @@ share/locale/zh_TW/LC_MESSAGES/galeon-2.0.mo
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/applications

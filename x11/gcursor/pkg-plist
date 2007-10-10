@@ -11,3 +11,4 @@ share/locale/es/LC_MESSAGES/gcursor.mo
 share/locale/sv/LC_MESSAGES/gcursor.mo
 @dirrm share/gcursor
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrmtry share/applications

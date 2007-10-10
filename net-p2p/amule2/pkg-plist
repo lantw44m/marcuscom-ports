@@ -240,3 +240,4 @@ lib/xchat/plugins/xas.pl
 %%PL_AMULEDAEMON%%bin/amulegui
 %%PL_AMULEDAEMON%%bin/amuled
 bin/amule
+@dirrmtry share/applications

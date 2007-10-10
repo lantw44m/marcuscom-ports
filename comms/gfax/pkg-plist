@@ -7,3 +7,4 @@ share/libgnomeprint/2.18.0/printers/GFAX.xml
 share/pixmaps/gfax.png
 share/pixmaps/send.png
 @dirrm lib/gfax
+@dirrmtry share/applications

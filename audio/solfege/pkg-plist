@@ -938,3 +938,4 @@ share/locale/tr/LC_MESSAGES/solfege.mo
 @dirrm share/solfege/feta
 @dirrm share/solfege/example-lesson-files
 @dirrm share/solfege
+@dirrmtry share/applications

@@ -1951,3 +1951,4 @@ share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 @dirrmtry share/locale/yi
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/applications
