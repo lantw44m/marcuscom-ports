@@ -7,7 +7,7 @@
 
 PORTNAME=	gnotepad+
 PORTVERSION=	1.3.3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	editors www gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	gnotepad
@@ -25,7 +25,7 @@ USE_GETTEXT=	yes
 USE_X_PREFIX=	yes
 USE_XPM=	yes
 WANT_GNOME=	yes
-USE_GNOME=	gtk12
+USE_GNOME=	gnomeprefix gtk12
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
@@ -44,7 +44,7 @@ post-extract:
 .endif
 
 .if ${HAVE_GNOME:Mgnomelibs}!=""
-USE_GNOME=	gnomeprefix gnomelibs
+USE_GNOME+=	gnomelibs
 PKGNAMESUFFIX=	-gnome
 .else
 CONFIGURE_ARGS+=--disable-gnome

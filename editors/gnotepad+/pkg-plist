@@ -1,6 +1,6 @@
 bin/gnp
-share/gnome/apps/Applications/gnotepad+.desktop
-share/gnome/apps/Applications/gnotepad+.spec
+%%GNOME:%%share/gnome/apps/Applications/gnotepad+.desktop
+%%GNOME:%%share/gnome/apps/Applications/gnotepad+.spec
 share/gnome/help/gnotepad+/C/closedialog.png
 share/gnome/help/gnotepad+/C/doclist.png
 share/gnome/help/gnotepad+/C/doctabs.png
