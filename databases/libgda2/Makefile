@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda2/Makefile,v 1.38 2007/05/19 21:36:01 marcus Exp $
+#   $MCom: ports/databases/libgda2/Makefile,v 1.39 2007/08/04 03:51:28 marcus Exp $
 #
 
 PORTNAME=	libgda2
@@ -29,7 +29,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
 CONFLICTS=	libgda-0*
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack glib20 libxslt referencehack
+USE_GNOME=	gnomeprefix gnomehack glib20 libxslt referencehack intlhack
 USE_GETTEXT=	yes
 USE_XLIB=	yes
 INSTALLS_OMF=	yes
