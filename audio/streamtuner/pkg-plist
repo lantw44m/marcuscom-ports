@@ -24,6 +24,7 @@ include/streamtuner/streamtuner.h
 %%SHOUTCAST%%lib/streamtuner/plugins/shoutcast.so
 %%XIPH%%lib/streamtuner/plugins/xiph.so
 libdata/pkgconfig/streamtuner.pc
+share/applications/streamtuner.desktop
 share/doc/streamtuner/api-reference.html
 share/doc/streamtuner/ch01s02.html
 share/doc/streamtuner/home.png
@@ -53,11 +54,15 @@ share/doc/streamtuner/streamtuner-st-util-api.html
 share/doc/streamtuner/streamtuner-st-version-api.html
 share/doc/streamtuner/streamtuner.devhelp
 share/doc/streamtuner/up.png
-share/applications/streamtuner.desktop
 share/gnome/help/streamtuner/C/documentation-license.xml
 share/gnome/help/streamtuner/C/figures/main-window.png
 share/gnome/help/streamtuner/C/software-license.xml
 share/gnome/help/streamtuner/C/streamtuner.xml
+share/locale/de/LC_MESSAGES/streamtuner.mo
+share/locale/fr/LC_MESSAGES/streamtuner.mo
+share/locale/hu/LC_MESSAGES/streamtuner.mo
+share/locale/ja/LC_MESSAGES/streamtuner.mo
+share/locale/pt/LC_MESSAGES/streamtuner.mo
 share/omf/streamtuner/streamtuner-C.omf
 share/pixmaps/streamtuner.png
 share/streamtuner/ui/applications.png
@@ -88,22 +93,17 @@ share/streamtuner/ui/tune-in.png
 %%PYTHON%%share/streamtuner/python/scripts/basic.ch.py
 %%PYTHON%%share/streamtuner/python/scripts/google-stations.py
 %%PYTHON%%share/streamtuner/python/scripts/punkcast.com.py
-share/locale/de/LC_MESSAGES/streamtuner.mo
-share/locale/fr/LC_MESSAGES/streamtuner.mo
-share/locale/hu/LC_MESSAGES/streamtuner.mo
-share/locale/ja/LC_MESSAGES/streamtuner.mo
-share/locale/pt/LC_MESSAGES/streamtuner.mo
-@dirrm include/streamtuner
-@dirrm lib/streamtuner/plugins
-@dirrm lib/streamtuner
-@dirrm share/doc/streamtuner
+@dirrm share/streamtuner/ui
+%%PYTHON%%@dirrm share/streamtuner/python/scripts
+%%PYTHON%%@dirrm share/streamtuner/python/icons
+%%PYTHON%%@dirrm share/streamtuner/python
+@dirrm share/streamtuner
+@dirrm share/omf/streamtuner
 @dirrm share/gnome/help/streamtuner/C/figures
 @dirrm share/gnome/help/streamtuner/C
 @dirrm share/gnome/help/streamtuner
-@dirrm share/omf/streamtuner
-@dirrm share/streamtuner/ui
-%%PYTHON%%@dirrm share/streamtuner/python/icons
-%%PYTHON%%@dirrm share/streamtuner/python/scripts
-%%PYTHON%%@dirrm share/streamtuner/python
-@dirrm share/streamtuner
+@dirrm share/doc/streamtuner
+@dirrm lib/streamtuner/plugins
+@dirrm lib/streamtuner
+@dirrm include/streamtuner
 @dirrmtry share/applications

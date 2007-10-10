@@ -7,7 +7,7 @@
 
 PORTNAME=		streamtuner
 PORTVERSION=		0.99.99
-PORTREVISION=		8
+PORTREVISION=		9
 CATEGORIES=		audio www
 MASTER_SITES=		${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -86,5 +86,7 @@ USE_GNOME+=		pygtk2
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|[(]datadir[)]/help|(datadir)/gnome/help|g' \
+		${WRKSRC}/help/C/Makefile.in
 
 .include <bsd.port.post.mk>
