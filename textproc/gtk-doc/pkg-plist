@@ -33,10 +33,7 @@ share/sgml/gtk-doc/gtk-doc.cat
 @exec %%XMLCATMGR%% -sc %%CATALOG_PORTS_SGML%% add CATALOG %%CATALOG_DIR%%/gtk-doc.cat
 @dirrm share/sgml/gtk-doc
 @dirrm share/omf/gtk-doc
-@dirrmtry share/omf
 @dirrm %%DATADIR%%/data
 @dirrm %%DATADIR%%
 @dirrm share/gnome/help/gtk-doc-manual/C
 @dirrm share/gnome/help/gtk-doc-manual
-@dirrmtry share/gnome/help
-@dirrmtry share/gnome
