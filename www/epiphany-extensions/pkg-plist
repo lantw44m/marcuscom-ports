@@ -73,6 +73,11 @@ lib/epiphany/%%VERSION%%/extensions/tab-states.ephy-extension
 %%DATADIR%%/glade/rss-ui.glade
 %%DATADIR%%/xml/epiphany-sidebar-ui.xml
 %%DATADIR%%/xml/page-info-context-ui.xml
+share/epiphany/icons/hicolor/16x16/status/feed-presence.png
+share/epiphany/icons/hicolor/22x22/status/feed-presence.png
+share/epiphany/icons/hicolor/24x24/status/feed-presence.png
+share/epiphany/icons/hicolor/32x32/status/feed-presence.png
+share/epiphany/icons/hicolor/scalable/status/feed-presence.svg
 share/gnome/help/epiphany-extensions/C/epiphany-extensions.xml
 share/gnome/help/epiphany-extensions/C/figures/epi-ext-action-create.png
 share/gnome/help/epiphany-extensions/C/figures/epi-ext-adblocker.png
@@ -137,7 +142,7 @@ share/locale/lt/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/nb/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/ne/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/nl/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
-share/locale/oc/LC_MESSAGES/epiphany-extensions-2.20.mo
+share/locale/oc/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/pa/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/pl/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
 share/locale/pt/LC_MESSAGES/epiphany-extensions-%%EPHY_VERSION%%.mo
@@ -165,6 +170,18 @@ share/omf/epiphany-extensions/epiphany-extensions-sv.omf
 @dirrm share/gnome/help/epiphany-extensions/C/figures
 @dirrm share/gnome/help/epiphany-extensions/C
 @dirrm share/gnome/help/epiphany-extensions
+@dirrmtry share/epiphany/icons/hicolor/scalable/status
+@dirrmtry share/epiphany/icons/hicolor/scalable
+@dirrmtry share/epiphany/icons/hicolor/32x32/status
+@dirrmtry share/epiphany/icons/hicolor/32x32
+@dirrmtry share/epiphany/icons/hicolor/24x24/status
+@dirrmtry share/epiphany/icons/hicolor/24x24
+@dirrmtry share/epiphany/icons/hicolor/22x22/status
+@dirrmtry share/epiphany/icons/hicolor/22x22
+@dirrmtry share/epiphany/icons/hicolor/16x16/status
+@dirrmtry share/epiphany/icons/hicolor/16x16
+@dirrmtry share/epiphany/icons/hicolor
+@dirrmtry share/epiphany/icons
 @dirrm %%DATADIR%%/xml
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%
