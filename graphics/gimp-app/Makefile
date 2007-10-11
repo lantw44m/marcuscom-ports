@@ -3,12 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.14 2007/07/29 21:51:25 mezz Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.15 2007/09/19 01:55:23 mezz Exp $
 #
 
 PORTNAME=	gimp-app
 PORTVERSION=	2.2.17
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -40,7 +40,7 @@ USE_BZIP2=	yes
 USE_XPM=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack intltool intlhack gtk20 libartlgpl2
+USE_GNOME=	gnomehack intltool intlhack gtk20 libartlgpl2 desktopfileutils
 WANT_GNOME=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
@@ -50,7 +50,8 @@ CONFIGURE_ARGS=	--disable-perl \
 		--docdir=${PREFIX}/share/doc/gimp \
 		--disable-gtk-doc \
 		--enable-static \
-		--disable-print
+		--disable-print \
+		--with-desktop-dir=${LOCALBASE}/share
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
@@ -95,8 +96,7 @@ CONFIGURE_ARGS+=	--enable-mp
 .endif
 
 .if ${HAVE_GNOME:Mgnomepanel}!=""
-USE_GNOME+=		gnomepanel desktopfileutils
-CONFIGURE_ARGS+=	--with-desktop-dir=${LOCALBASE}/share
+USE_GNOME+=		gnomepanel
 CONFIGURE_ENV+=		GIMP_THREAD_LIBS=${PTHREAD_LIBS}
 PLIST_SUB+=		GNOMEPANEL:=""
 GNOME_ENABLED=		yes
