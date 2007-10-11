@@ -7,7 +7,7 @@
 
 PORTNAME=	liferea
 PORTVERSION=	1.4.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	liferea
@@ -18,7 +18,7 @@ COMMENT=	Simple RSS/RDF feed reader
 LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3
 
 USE_GECKO=	mozilla firefox
-USE_GNOME=	gnomeprefix gnomehack libgtkhtml
+USE_GNOME=	gnomeprefix gnomehack libgtkhtml libglade2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
