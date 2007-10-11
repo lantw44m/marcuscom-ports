@@ -18,7 +18,7 @@ MAINTAINER=	netchild@FreeBSD.org
 COMMENT=	Clean and white GTK engine
 
 LIB_DEPENDS=	rsvg-2:${PORTSDIR}/graphics/librsvg2
-RUN_DEPENDS=	${LOCALBASE}/share/themes/Gorilla/index.theme:${PORTSDIR}/x11-themes/gnome-themes-extras
+RUN_DEPENDS=	${LOCALBASE}/share/icons/Foxtrot/index.theme:${PORTSDIR}/x11-themes/gnome-themes-extras
 
 TYPE?=		gtk
 THEME_NAME=	Ana
