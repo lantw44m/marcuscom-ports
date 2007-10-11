@@ -3,12 +3,12 @@
 # Whom:                saper@system.pl
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/dia/Makefile,v 1.14 2007/05/30 04:58:50 mezz Exp $
+#   $MCom: ports/graphics/dia/Makefile,v 1.15 2007/08/15 17:52:06 mezz Exp $
 #
 
 PORTNAME=	dia
 DISTVERSION=	0.96.1
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -56,6 +56,8 @@ GNOME_ENABLED=		yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/lib/intl.c
+	@${REINPLACE_CMD} -e 's|[(]pkgdatadir[)]/help|(datadir)/gnome/help/dia|g' \
+		${WRKSRC}/doc/Makefile.in
 .ifndef (GNOME_ENABLED)
 	@${FIND} ${WRKSRC} -name Makefile.in | \
 		${XARGS} ${REINPLACE_CMD} -e \
