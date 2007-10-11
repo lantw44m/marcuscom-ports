@@ -7,7 +7,7 @@
 
 PORTNAME=	preps
 PORTVERSION=	2.0.4
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	http://fresh.t-systems-sfr.com/unix/src/misc/
 PKGNAMESUFFIX=	-gui
@@ -32,5 +32,9 @@ CONFIGURE_ARGS+=	--with-pgsqldir=${LOCALBASE} \
 			--with-plpgsqldir=${LOCALBASE} \
 			--with-libprepsdir=${LOCALBASE} \
 			--localstatedir=/var
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|@PACKAGE@/gnome/help|gnome/help|g' \
+		${WRKSRC}/help/C/Makefile.in
 
 .include <bsd.port.mk>
