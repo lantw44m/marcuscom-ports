@@ -221,8 +221,8 @@ share/locale/zh_TW/LC_MESSAGES/pidgin.mo
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
-@dirrmtry share/locale/sr@latin/LC_MESSAGES
-@dirrmtry share/locale/ps
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/ps/LC_MESSAGES
 @dirrmtry share/locale/ps
 @dirrmtry share/locale/my_MM/LC_MESSAGES
 @dirrmtry share/locale/my_MM
@@ -236,7 +236,8 @@ share/locale/zh_TW/LC_MESSAGES/pidgin.mo
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
-@dirrm share/pidgin/ca-certs
+@dirrm share/purple/ca-certs
+@dirrm share/purple
 @dirrm share/pidgin/
 @dirrm share/sounds/purple
 %%PERL:%%@dirrm %%SITE_PERL%%/%%PERL_ARCH%%/auto/Purple
