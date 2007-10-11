@@ -29,6 +29,8 @@ GCONF_SCHEMAS=	quark.schemas strange-quark.schemas
 post-patch:
 	@${REINPLACE_CMD} -e \
 		's|CFLAGS="-g |CFLAGS="$$CFLAGS |g' ${WRKSRC}/configure
+	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
+		's|-D.*_DISABLE_DEPRECATED||g'
 
 post-install:
 .if !defined(NOPORTDOCS)
