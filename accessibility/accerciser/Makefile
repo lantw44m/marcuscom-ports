@@ -3,7 +3,8 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/accerciser/Makefile,v 1.1 2007/09/17 12:44:26 ahze Exp $
+#   $MCom: ports/accessibility/accerciser/Makefile,v 1.2 2007/09/17 12:57:54 ahze Exp $
+#
 
 PORTNAME=	accerciser
 PORTVERSION=	1.0.0
@@ -20,7 +21,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
 USE_PYTHON=	yes
-MAN1=	accerciser.1
+MAN1=		accerciser.1
 INSTALLS_OMF=	yes
 USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
