@@ -3,7 +3,7 @@
 # Whom:					Glenn Johnson <gljohns@bellsouth.net>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/balsa/Makefile,v 1.17 2007/07/08 20:26:57 marcus Exp $
+#   $MCom: ports/mail/balsa/Makefile,v 1.18 2007/08/16 01:39:10 marcus Exp $
 #
 
 PORTNAME=	balsa
@@ -93,5 +93,7 @@ post-patch:
 	@${REINPLACE_CMD} -E \
 		-e 's|^(HICOLOR_ICON_DIR)[^/]+/|\1=${PREFIX}/|' \
 		${CONFIGURE_WRKSRC}/${CONFIGURE_SCRIPT}
+	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
+		's|-D.*_DISABLE_DEPRECATED_SOURCE||g ; s|-D.*_DISABLE_DEPRECATED||g'
 
 .include <bsd.port.post.mk>
