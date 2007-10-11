@@ -1,0 +1,8 @@
+@comment $FreeBSD: ports/x11-wm/heliodor/pkg-plist,v 1.1 2007/05/19 20:32:42 flz Exp $
+bin/heliodor
+@cwd %%WINDOWSETTINGSDATADIR%%
+share/gnome/wm-properties/beryl.desktop
+@cwd %%WINDOWSETTINGSLIBDIR%%
+window-manager-settings/libberyl.a
+window-manager-settings/libberyl.la
+window-manager-settings/libberyl.so
