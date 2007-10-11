@@ -292,6 +292,7 @@ share/pixmaps/conglomerate/cong-warning-48.png
 share/pixmaps/conglomerate/cong-wrapper-16.png
 share/pixmaps/conglomerate/conglomerate-icon-32.png
 share/pixmaps/conglomerate/conglomerate-logo.png
+@dirrm share/omf/conglomerate
 @dirrm share/pixmaps/conglomerate
 @dirrm share/gnome/help/conglomerate/C/figures
 @dirrm share/gnome/help/conglomerate/C
