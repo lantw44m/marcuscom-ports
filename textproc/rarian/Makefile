@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/rarian/Makefile,v 1.6 2007/08/18 06:06:20 marcus Exp $
+#   $MCom: ports/textproc/rarian/Makefile,v 1.7 2007/09/12 20:12:35 marcus Exp $
 #
 
 PORTNAME=	rarian
 PORTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
