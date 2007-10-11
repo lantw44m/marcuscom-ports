@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net/evolution-rss/Makefile,v 1.1 2007/09/21 14:56:29 ahze Exp $
 
 PORTNAME=	evolution-rss
 PORTVERSION=	0.0.5
+PORTREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	http://mips.edu.ms/
 
@@ -17,6 +18,7 @@ BUILD_DEPENDS=	evolution:${PORTSDIR}/mail/evolution
 RUN_DEPENDS=	evolution:${PORTSDIR}/mail/evolution
 
 USE_GECKO=	firefox
+USE_GNOME=	intltool
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
