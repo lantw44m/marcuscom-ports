@@ -3,12 +3,12 @@
 # Whom:				Koop Mast <einekoai@chello.nl>
 #
 # $FreeBSD$
-#   $MCom: ports/www/bluefish/Makefile,v 1.4 2007/05/19 21:36:25 marcus Exp $
+#   $MCom: ports/www/bluefish/Makefile,v 1.5 2007/07/23 16:29:58 mezz Exp $
 #
 
 PORTNAME=	bluefish
 PORTVERSION=	1.0.7
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	${PORTNAME}
@@ -28,7 +28,7 @@ RUN_DEPENDS+=	tidy:${PORTSDIR}/www/tidy
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix gtk20 gnomevfs2 gnomemimedata
+USE_GNOME=	gnomeprefix gtk20 gnomevfs2 gnomemimedata desktopfileutils
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
