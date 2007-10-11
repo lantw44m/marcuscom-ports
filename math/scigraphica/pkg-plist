@@ -1,5 +1,5 @@
 bin/scigraphica
-share/apps/Applications/sg.desktop
+share/gnome/apps/Applications/sg.desktop
 share/gnome/help/scigraphica/C/FAQ.html
 share/gnome/help/scigraphica/C/Introduction.html
 share/gnome/help/scigraphica/C/Modules-1.html
