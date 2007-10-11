@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/ghex/Makefile,v 1.5 2007/08/28 18:21:00 marcus Exp $
+#   $MCom: ports/editors/ghex/Makefile,v 1.6 2007/09/18 02:04:59 ahze Exp $
 #
 
 PORTNAME=	ghex
 PORTVERSION=	2.20.0
+PORTREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -18,7 +19,8 @@ COMMENT=	GNOME 2 hex editor
 USE_BZIP2=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gail libgnomeprintui libgnomeui
+USE_GNOME=	gnomeprefix gnomehack intlhack gail libgnomeprintui libgnomeui \
+		gnomedocutils
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
