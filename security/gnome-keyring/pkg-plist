@@ -6,9 +6,9 @@ lib/libgnome-keyring.a
 lib/libgnome-keyring.la
 lib/libgnome-keyring.so
 lib/libgnome-keyring.so.0
-lib/pam_gnome_keyring.a
-lib/pam_gnome_keyring.la
-lib/pam_gnome_keyring.so
+lib/security/pam_gnome_keyring.a
+lib/security/pam_gnome_keyring.la
+lib/security/pam_gnome_keyring.so
 libdata/pkgconfig/gnome-keyring-1.pc
 libexec/gnome-keyring-ask
 %%DOCSDIR%%/ch01.html
@@ -105,6 +105,7 @@ share/locale/zh_CN/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrm %%DOCSDIR%%
+@dirrmtry lib/security
 @dirrm include/gnome-keyring-1
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
