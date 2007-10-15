@@ -3,12 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/gnome-spell/Makefile,v 1.11 2007/04/28 17:49:06 marcus Exp $
+#   $MCom: ports/textproc/gnome-spell/Makefile,v 1.12 2007/05/19 21:36:24 marcus Exp $
 #
 
 PORTNAME=	gnome-spell
-PORTVERSION=	1.0.7
-PORTREVISION=	4
+PORTVERSION=	1.0.8
 CATEGORIES=	textproc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
