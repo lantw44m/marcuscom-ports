@@ -3,12 +3,12 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.10 2007-08-04 22:07:12 marcus Exp $
+#   $Id: Makefile,v 1.11 2007-10-15 23:03:35 mezz Exp $
 #
 
 PORTNAME=	muine
 PORTVERSION=	0.8.7
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	audio gnome
 MASTER_SITES=	http://muine-player.org/releases/
 
@@ -23,6 +23,7 @@ LIB_DEPENDS=	FLAC.7:${PORTSDIR}/audio/flac \
 RUN_DEPENDS=	dbus-daemon:${PORTSDIR}/devel/dbus
 
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intltool libgnomeui gnomesharp20
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
@@ -30,6 +31,8 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GACUTIL_FLAGS="/package muine /gacdir $(libdir) /root $(libdir)"
+
+CONFIGURE_ARGS+=	--enable-compile-warnings=maximum
 
 GCONF_SCHEMAS=	muine.schemas
 
