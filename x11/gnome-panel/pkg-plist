@@ -180,8 +180,8 @@ share/gnome/help/workspace-switcher/ca/workspace-switcher.xml
 share/gnome/help/workspace-switcher/de/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/de/figures/workspacelist_applet.png
 share/gnome/help/workspace-switcher/de/legal.xml
-share/gnome/help/workspace-switcher/el/workspace-switcher.xml
 share/gnome/help/workspace-switcher/de/workspace-switcher.xml
+share/gnome/help/workspace-switcher/el/workspace-switcher.xml
 share/gnome/help/workspace-switcher/es/workspace-switcher.xml
 share/gnome/help/workspace-switcher/fr/workspace-switcher.xml
 share/gnome/help/workspace-switcher/it/workspace-switcher.xml
@@ -340,6 +340,8 @@ share/locale/te/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/th/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/tr/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/uk/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/uz/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/uz@cyrillic/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/vi/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/wa/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/xh/LC_MESSAGES/gnome-panel-2.0.mo
@@ -389,6 +391,7 @@ share/omf/gnome-panel/workspace-switcher-zh_CN.omf
 share/omf/gnome-panel/workspace-switcher-zh_TW.omf
 share/omf/window-list/window-list-C.omf
 share/omf/window-list/window-list-ca.omf
+share/omf/window-list/window-list-de.omf
 share/omf/window-list/window-list-el.omf
 share/omf/window-list/window-list-es.omf
 share/omf/window-list/window-list-fr.omf
@@ -402,6 +405,7 @@ share/omf/window-list/window-list-uk.omf
 share/omf/window-list/window-list-zh_CN.omf
 share/omf/workspace-switcher/workspace-switcher-C.omf
 share/omf/workspace-switcher/workspace-switcher-ca.omf
+share/omf/workspace-switcher/workspace-switcher-de.omf
 share/omf/workspace-switcher/workspace-switcher-el.omf
 share/omf/workspace-switcher/workspace-switcher-es.omf
 share/omf/workspace-switcher/workspace-switcher-fr.omf
@@ -542,6 +546,8 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrmtry share/locale/yi
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
+@dirrmtry share/locale/uz@cyrillic/LC_MESSAGES
+@dirrmtry share/locale/uz@cyrillic
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@ije/LC_MESSAGES
