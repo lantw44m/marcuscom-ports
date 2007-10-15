@@ -300,6 +300,8 @@ lib/evolution/%%VERSION%%/plugins/libmail-account-disable.la
 lib/evolution/%%VERSION%%/plugins/libmail-account-disable.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-addressbook-file.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-addressbook-file.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-backup-restore.la
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-backup-restore.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-file.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-file.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-http.la
@@ -365,6 +367,8 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-select-one-source.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-subject-thread.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-subject-thread.so
 lib/evolution/%%VERSION%%/plugins/org-gnome-addressbook-file.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-backup-restore.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-backup-restore.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-file.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-http.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-weather.eplug
@@ -421,6 +425,7 @@ libexec/evolution/%%VERSION%%/csv2vcard
 libexec/evolution/%%VERSION%%/evolution-addressbook-clean
 libexec/evolution/%%VERSION%%/evolution-addressbook-export
 libexec/evolution/%%VERSION%%/evolution-alarm-notify
+libexec/evolution/%%VERSION%%/evolution-backup
 libexec/evolution/%%VERSION%%/killev
 share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/addresstypes.xml
@@ -448,6 +453,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/errors/mail-composer.error
 %%DATADIR%%/%%VERSION%%/errors/mail.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-attachment-reminder.error
+%%DATADIR%%/%%VERSION%%/errors/org-gnome-backup-restore.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-default-mailer.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-exchange-operations.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-face.errors.xml
@@ -1614,6 +1620,7 @@ share/idl/evolution-%%VERSION%%/Evolution.idl
 share/idl/evolution-%%VERSION%%/evolution-calendar.idl
 share/locale/am/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ar/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/as/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/be/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -1828,4 +1835,6 @@ share/omf/evolution/evolution-sv.omf
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrmtry share/applications
