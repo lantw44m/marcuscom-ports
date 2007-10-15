@@ -57,6 +57,7 @@ share/icons/hicolor/scalable/apps/sound-juicer.svg
 share/locale/ar/LC_MESSAGES/sound-juicer.mo
 share/locale/az/LC_MESSAGES/sound-juicer.mo
 share/locale/be/LC_MESSAGES/sound-juicer.mo
+share/locale/be@latin/LC_MESSAGES/sound-juicer.mo
 share/locale/bg/LC_MESSAGES/sound-juicer.mo
 share/locale/bn/LC_MESSAGES/sound-juicer.mo
 share/locale/bn_IN/LC_MESSAGES/sound-juicer.mo
@@ -176,6 +177,8 @@ share/omf/sound-juicer/sound-juicer-uk.omf
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/applications
