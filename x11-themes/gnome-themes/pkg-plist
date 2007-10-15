@@ -2277,6 +2277,7 @@ share/locale/am/LC_MESSAGES/gnome-themes.mo
 share/locale/ar/LC_MESSAGES/gnome-themes.mo
 share/locale/az/LC_MESSAGES/gnome-themes.mo
 share/locale/be/LC_MESSAGES/gnome-themes.mo
+share/locale/be@latin/LC_MESSAGES/gnome-themes.mo
 share/locale/bg/LC_MESSAGES/gnome-themes.mo
 share/locale/bn/LC_MESSAGES/gnome-themes.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-themes.mo
@@ -3042,3 +3043,5 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
