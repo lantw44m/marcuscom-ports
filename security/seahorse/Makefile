@@ -3,11 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.45 2007/09/17 19:55:01 ahze Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.46 2007/09/19 04:21:09 marcus Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	2.20.0
+PORTVERSION=	2.20.1
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -45,20 +45,20 @@ OPTIONS=	NAUTILUS "Enable the Nautilus component" on \
 		NOTIFY "Enable libnotify support" on \
 		APPLET "Enable clipboard encryption applet" on \
 		KEYRING "Enable GNOME Keyring support" on \
-		MDNS "Enable mDNS key sharing" on
-#		GEDIT "Enable GEdit plug-in support" on
+		MDNS "Enable mDNS key sharing" on \
+		GEDIT "Enable GEdit plug-in support" on
 
 .include <bsd.port.pre.mk>
 
-#.if !defined(WITHOUT_GEDIT)
-#BUILD_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
-#RUN_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
-#PLIST_SUB+=	GEDIT=""
-#GCONF_SCHEMAS+=	seahorse-gedit.schemas
-#.else
+.if !defined(WITHOUT_GEDIT)
+BUILD_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
+RUN_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
+PLIST_SUB+=	GEDIT=""
+GCONF_SCHEMAS+=	seahorse-gedit.schemas
+.else
 PLIST_SUB+=	GEDIT="@comment "
 CONFIGURE_ARGS+=--disable-gedit
-#.endif
+.endif
 
 .if !defined(WITHOUT_NAUTILUS)
 USE_GNOME+=	nautilus2
@@ -119,8 +119,7 @@ CONFIGURE_ARGS+=--disable-sharing
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|" == "|" = "|g ; \
-		s|enable_gedit=yes|enable_gedit=no|g' \
+	@${REINPLACE_CMD} -e 's|" == "|" = "|g' \
 			${WRKSRC}/configure
 
 post-install:
