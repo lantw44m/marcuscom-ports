@@ -268,6 +268,7 @@ share/icons/hicolor/scalable/apps/dasher.svg
 share/locale/ar/LC_MESSAGES/dasher.mo
 share/locale/az/LC_MESSAGES/dasher.mo
 share/locale/be/LC_MESSAGES/dasher.mo
+share/locale/be@latin/LC_MESSAGES/dasher.mo
 share/locale/bg/LC_MESSAGES/dasher.mo
 share/locale/bn/LC_MESSAGES/dasher.mo
 share/locale/bn_IN/LC_MESSAGES/dasher.mo
@@ -382,4 +383,6 @@ share/omf/dasher/dasher-sv.omf
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
 @dirrmtry share/applications

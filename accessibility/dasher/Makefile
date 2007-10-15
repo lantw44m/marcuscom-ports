@@ -3,11 +3,11 @@
 # Whom:					lewiz <purple@lewiz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/dasher/Makefile,v 1.57 2007/08/04 03:51:27 marcus Exp $
+#   $MCom: ports/accessibility/dasher/Makefile,v 1.58 2007/09/18 16:59:21 mezz Exp $
 #
 
 PORTNAME=	dasher
-PORTVERSION=	4.6.0
+PORTVERSION=	4.6.1
 PORTEPOCH=	1
 CATEGORIES=	accessibility editors x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
