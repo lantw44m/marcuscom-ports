@@ -343,6 +343,7 @@ share/locale/am/LC_MESSAGES/gedit.mo
 share/locale/ar/LC_MESSAGES/gedit.mo
 share/locale/az/LC_MESSAGES/gedit.mo
 share/locale/be/LC_MESSAGES/gedit.mo
+share/locale/be@latin/LC_MESSAGES/gedit.mo
 share/locale/bg/LC_MESSAGES/gedit.mo
 share/locale/bn/LC_MESSAGES/gedit.mo
 share/locale/bn_IN/LC_MESSAGES/gedit.mo
@@ -523,4 +524,6 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
 @dirrmtry share/applications
