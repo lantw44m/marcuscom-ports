@@ -182,6 +182,7 @@ share/omf/epiphany-extensions/epiphany-extensions-sv.omf
 @dirrmtry share/epiphany/icons/hicolor/16x16
 @dirrmtry share/epiphany/icons/hicolor
 @dirrmtry share/epiphany/icons
+@dirrmtry share/epiphany
 @dirrm %%DATADIR%%/xml
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%
