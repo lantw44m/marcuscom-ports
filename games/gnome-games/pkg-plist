@@ -34,21 +34,6 @@ lib/gnome-games/gnome-games-render-cards
 %%PYTHON_SITELIBDIR%%/glchess/chess/board.py
 %%PYTHON_SITELIBDIR%%/glchess/chess/board.pyc
 %%PYTHON_SITELIBDIR%%/glchess/chess/board.pyo
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/__init__.py
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/__init__.pyc
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/__init__.pyo
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/client.py
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/client.pyc
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/client.pyo
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/server.py
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/server.pyc
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/server.pyo
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/style12.py
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/style12.pyc
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/style12.pyo
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/telnet.py
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/telnet.pyc
-%%PYTHON_SITELIBDIR%%/glchess/chess/fics/telnet.pyo
 %%PYTHON_SITELIBDIR%%/glchess/chess/lan.py
 %%PYTHON_SITELIBDIR%%/glchess/chess/lan.pyc
 %%PYTHON_SITELIBDIR%%/glchess/chess/lan.pyo
@@ -67,18 +52,6 @@ lib/gnome-games/gnome-games-render-cards
 %%PYTHON_SITELIBDIR%%/glchess/game.py
 %%PYTHON_SITELIBDIR%%/glchess/game.pyc
 %%PYTHON_SITELIBDIR%%/glchess/game.pyo
-%%PYTHON_SITELIBDIR%%/glchess/ggz/__init__.py
-%%PYTHON_SITELIBDIR%%/glchess/ggz/__init__.pyc
-%%PYTHON_SITELIBDIR%%/glchess/ggz/__init__.pyo
-%%PYTHON_SITELIBDIR%%/glchess/ggz/chess.py
-%%PYTHON_SITELIBDIR%%/glchess/ggz/chess.pyc
-%%PYTHON_SITELIBDIR%%/glchess/ggz/chess.pyo
-%%PYTHON_SITELIBDIR%%/glchess/ggz/client.py
-%%PYTHON_SITELIBDIR%%/glchess/ggz/client.pyc
-%%PYTHON_SITELIBDIR%%/glchess/ggz/client.pyo
-%%PYTHON_SITELIBDIR%%/glchess/ggz/protocol.py
-%%PYTHON_SITELIBDIR%%/glchess/ggz/protocol.pyc
-%%PYTHON_SITELIBDIR%%/glchess/ggz/protocol.pyo
 %%PYTHON_SITELIBDIR%%/glchess/glchess.py
 %%PYTHON_SITELIBDIR%%/glchess/glchess.pyc
 %%PYTHON_SITELIBDIR%%/glchess/glchess.pyo
@@ -94,21 +67,9 @@ lib/gnome-games/gnome-games-render-cards
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/gtkui.py
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/gtkui.pyc
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/gtkui.pyo
-%%PYTHON_SITELIBDIR%%/glchess/gtkui/network.py
-%%PYTHON_SITELIBDIR%%/glchess/gtkui/network.pyc
-%%PYTHON_SITELIBDIR%%/glchess/gtkui/network.pyo
 %%PYTHON_SITELIBDIR%%/glchess/main.py
 %%PYTHON_SITELIBDIR%%/glchess/main.pyc
 %%PYTHON_SITELIBDIR%%/glchess/main.pyo
-%%PYTHON_SITELIBDIR%%/glchess/network/__init__.py
-%%PYTHON_SITELIBDIR%%/glchess/network/__init__.pyc
-%%PYTHON_SITELIBDIR%%/glchess/network/__init__.pyo
-%%PYTHON_SITELIBDIR%%/glchess/network/announce.py
-%%PYTHON_SITELIBDIR%%/glchess/network/announce.pyc
-%%PYTHON_SITELIBDIR%%/glchess/network/announce.pyo
-%%PYTHON_SITELIBDIR%%/glchess/network/protocol.py
-%%PYTHON_SITELIBDIR%%/glchess/network/protocol.pyc
-%%PYTHON_SITELIBDIR%%/glchess/network/protocol.pyo
 %%PYTHON_SITELIBDIR%%/glchess/scene/__init__.py
 %%PYTHON_SITELIBDIR%%/glchess/scene/__init__.pyc
 %%PYTHON_SITELIBDIR%%/glchess/scene/__init__.pyo
@@ -332,7 +293,6 @@ share/glchess/ai.xml
 share/glchess/chess_view.glade
 share/glchess/glchess.glade
 share/glchess/load_game.glade
-share/glchess/network_game.glade
 share/glchess/new_game.glade
 share/glchess/save_game.glade
 share/gnect/white_ob.cn4.gz
@@ -863,6 +823,9 @@ share/gnome/help/gnotravex/C/figures/gnotravex_game.png
 share/gnome/help/gnotravex/C/figures/gnotravex_mainwindow.png
 share/gnome/help/gnotravex/C/gnotravex.xml
 share/gnome/help/gnotravex/C/legal.xml
+share/gnome/help/gnotravex/de/figures/gnotravex_game.png
+share/gnome/help/gnotravex/de/figures/gnotravex_mainwindow.png
+share/gnome/help/gnotravex/de/gnotravex.xml
 share/gnome/help/gnotravex/el/figures/gnotravex_game.png
 share/gnome/help/gnotravex/el/figures/gnotravex_mainwindow.png
 share/gnome/help/gnotravex/el/gnotravex.xml
@@ -1239,6 +1202,7 @@ share/omf/gnomine/gnomine-fr.omf
 share/omf/gnomine/gnomine-oc.omf
 share/omf/gnomine/gnomine-sv.omf
 share/omf/gnotravex/gnotravex-C.omf
+share/omf/gnotravex/gnotravex-de.omf
 share/omf/gnotravex/gnotravex-el.omf
 share/omf/gnotravex/gnotravex-es.omf
 share/omf/gnotravex/gnotravex-fr.omf
@@ -1452,6 +1416,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnotravex/es
 @dirrm share/gnome/help/gnotravex/el/figures
 @dirrm share/gnome/help/gnotravex/el
+@dirrm share/gnome/help/gnotravex/de/figures
+@dirrm share/gnome/help/gnotravex/de
 @dirrm share/gnome/help/gnotravex/C/figures
 @dirrm share/gnome/help/gnotravex/C
 @dirrm share/gnome/help/gnotravex
@@ -1591,7 +1557,7 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnibbles
 @dirrm share/gnect
 @dirrm share/glchess
-@dirrm share/ggz/gnome-games
+@dirrmtry share/ggz/gnome-games
 @dirrmtry share/ggz
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku/gtk_goodies
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku
@@ -1599,10 +1565,7 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/scene/opengl
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/scene/cairo
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/scene
-@dirrm %%PYTHON_SITELIBDIR%%/glchess/network
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/gtkui
-@dirrm %%PYTHON_SITELIBDIR%%/glchess/ggz
-@dirrm %%PYTHON_SITELIBDIR%%/glchess/chess/fics
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/chess
 @dirrm %%PYTHON_SITELIBDIR%%/glchess
 @dirrm lib/gnome-games
