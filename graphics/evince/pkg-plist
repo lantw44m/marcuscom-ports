@@ -115,6 +115,8 @@ share/gnome/help/evince/nl/evince.xml
 share/gnome/help/evince/nl/figures/evince_start_window.png
 share/gnome/help/evince/oc/evince.xml
 share/gnome/help/evince/oc/figures/evince_start_window.png
+share/gnome/help/evince/pt_BR/evince.xml
+share/gnome/help/evince/pt_BR/figures/evince_start_window.png
 share/gnome/help/evince/ru/evince.xml
 share/gnome/help/evince/ru/figures/evince_start_window.png
 share/gnome/help/evince/sr/evince.xml
@@ -208,6 +210,7 @@ share/omf/evince/evince-it.omf
 share/omf/evince/evince-ja.omf
 share/omf/evince/evince-nl.omf
 share/omf/evince/evince-oc.omf
+share/omf/evince/evince-pt_BR.omf
 share/omf/evince/evince-ru.omf
 share/omf/evince/evince-sr.omf
 share/omf/evince/evince-sv.omf
@@ -221,6 +224,8 @@ share/omf/evince/evince-uk.omf
 @dirrm share/gnome/help/evince/sr
 @dirrm share/gnome/help/evince/ru/figures
 @dirrm share/gnome/help/evince/ru
+@dirrm share/gnome/help/evince/pt_BR/figures
+@dirrm share/gnome/help/evince/pt_BR
 @dirrm share/gnome/help/evince/oc/figures
 @dirrm share/gnome/help/evince/oc
 @dirrm share/gnome/help/evince/nl/figures
