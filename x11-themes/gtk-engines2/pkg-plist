@@ -27,6 +27,7 @@ share/gtk-engines/redmond95.xml
 share/gtk-engines/smooth.xml
 share/gtk-engines/thinice.xml
 share/locale/ar/LC_MESSAGES/gtk-engines.mo
+share/locale/be@latin/LC_MESSAGES/gtk-engines.mo
 share/locale/bg/LC_MESSAGES/gtk-engines.mo
 share/locale/bn_IN/LC_MESSAGES/gtk-engines.mo
 share/locale/ca/LC_MESSAGES/gtk-engines.mo
@@ -93,3 +94,5 @@ share/themes/ThinIce/gtk-2.0/gtkrc
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
