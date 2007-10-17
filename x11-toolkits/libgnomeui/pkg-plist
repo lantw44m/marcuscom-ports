@@ -60,7 +60,6 @@ lib/libgnomeui-2.la
 lib/libgnomeui-2.so
 lib/libgnomeui-2.so.0
 libdata/pkgconfig/libgnomeui-2.0.pc
-share/pixmaps/gnome-about-logo.png
 share/locale/af/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/am/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ar/LC_MESSAGES/libgnomeui-2.0.mo
@@ -151,6 +150,7 @@ share/locale/zh_CN/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/zu/LC_MESSAGES/libgnomeui-2.0.mo
+share/pixmaps/gnome-about-logo.png
 @dirrmtry lib/gtk-2.0/%%GTK2_VERSION%%/filesystems
 @dirrm include/libgnomeui-2.0/libgnomeui
 @dirrm include/libgnomeui-2.0
