@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/vala/Makefile,v 1.7 2007/09/12 14:41:04 ahze Exp $
+#   $MCom: ports/lang/vala/Makefile,v 1.8 2007/10/10 00:04:51 ahze Exp $
 #
 
 PORTNAME=	vala
 PORTVERSION=	0.1.4
+PORTREVISION=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -22,7 +23,7 @@ USE_GNOME=	glib20 gnomeprefix
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}" LDFLAGS="-L${LOCALBASE}/lib"
-USE_BISON=	yes
+USE_BISON=	build
 MAN1=		valac.1
 USE_LDCONFIG=	yes
 

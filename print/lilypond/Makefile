@@ -4,12 +4,12 @@
 # based on print/lilypond originally by trevor
 #
 # $FreeBSD$
-# $Id: Makefile,v 1.1 2007-08-04 03:51:30 marcus Exp $
+# $Id: Makefile,v 1.2 2007-10-17 21:36:13 mezz Exp $
 #
 
 PORTNAME=	lilypond
 PORTVERSION=	2.2.2
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	print audio
 MASTER_SITES=	http://download.linuxaudio.org/lilypond/sources/v${PORTVERSION:R}/:src \
 		http://distfiles.master.finkmirrors.net/:rpm
@@ -34,7 +34,7 @@ INFO=		lilypond lilypond-internals \
 
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
-USE_BISON=	yes
+USE_BISON=	build
 USE_GMAKE=	YES
 USE_PYTHON=	YES
 MAKEFILE=	GNUmakefile

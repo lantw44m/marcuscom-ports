@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.125 2007/09/21 17:44:07 marcus Exp $
+#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.126 2007/10/15 21:25:45 mezz Exp $
 #
 
 PORTNAME=	gnome-desktop
 PORTVERSION=	2.20.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-desktop/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -27,7 +27,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomedocutils \
 GNOME_DESKTOP_VERSION=2
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_BISON=	yes
+USE_BISON=	build
 USE_XLIB=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
