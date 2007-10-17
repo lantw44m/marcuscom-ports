@@ -43,8 +43,8 @@ lib/totem/plugins/screensaver/screensaver.totem-plugin
 lib/totem/plugins/skipto/libskipto.a
 lib/totem/plugins/skipto/libskipto.la
 lib/totem/plugins/skipto/libskipto.so
-lib/totem/plugins/skipto/skipto.ui
 lib/totem/plugins/skipto/skipto.totem-plugin
+lib/totem/plugins/skipto/skipto.ui
 libdata/pkgconfig/totem-plparser.pc
 share/applications/totem.desktop
 share/gnome/help/totem/C/figures/totem_next_button.png
@@ -253,8 +253,6 @@ share/omf/totem/totem-pt_BR.omf
 share/omf/totem/totem-ru.omf
 share/omf/totem/totem-sv.omf
 share/omf/totem/totem-uk.omf
-share/vala/vapi/totem.deps
-share/vala/vapi/totem.vala
 %%DATADIR%%/filmholes-big-left.png
 %%DATADIR%%/filmholes-big-right.png
 %%DATADIR%%/filmholes.png
@@ -268,6 +266,8 @@ share/vala/vapi/totem.vala
 %%DATADIR%%/totem.ui
 %%DATADIR%%/totem_logo.png
 %%DATADIR%%/uri.ui
+share/vala/vapi/totem.deps
+share/vala/vapi/totem.vala
 @dirrm %%DATADIR%%
 @dirrm share/omf/totem
 @dirrm share/gnome/help/totem/uk/figures
