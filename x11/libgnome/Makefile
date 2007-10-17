@@ -3,11 +3,11 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnome/Makefile,v 1.107 2007/09/17 15:12:53 ahze Exp $
+#   $MCom: ports/x11/libgnome/Makefile,v 1.108 2007/10/15 17:11:01 mezz Exp $
 #
 
 PORTNAME=	libgnome
-PORTVERSION=	2.20.1
+PORTVERSION=	2.20.1.1
 PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
