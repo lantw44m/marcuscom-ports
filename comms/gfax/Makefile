@@ -3,12 +3,12 @@
 # Whom:				John Merryweather Cooper <jmcoopr@webmail.bmi.net>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.2 2007-10-08 19:42:49 mezz Exp $
+#   $Id: Makefile,v 1.3 2007-10-18 16:52:22 mezz Exp $
 #
 
 PORTNAME=	gfax
 PORTVERSION=	0.7.6
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	comms print gnome
 MASTER_SITES=	http://gfax.cowlug.org/
 
@@ -27,8 +27,6 @@ USE_GNOME=	gnomeprefix gnomehier libgnomeprint gnomesharp20
 STRIP=
 
 GCONF_SCHEMAS=	gfax.schemas
-
-BROKEN=		fails to install
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
