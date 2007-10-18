@@ -1,0 +1,36 @@
+# $MCom$
+
+This file documents some of the problems you may encounter when
+upgrading your ports. We try our best to minimize these disruptions,
+but sometimes they are unavoidable.
+
+You should get into the habit of checking this file for changes each
+time you update your ports collection, before attempting any port
+upgrades.
+
+20071018:
+  AFFECTS: All GNOME users and ports depend on gnomehier
+  AUTHOR: gnome@FreeBSD.org
+
+  GNOME has been updated to 2.20.1. All ports that depend on gnomehier have
+  been moved from share/gnome/ to share/. A few of stuff are remind in the
+  share/gnome/ that are default from ports' tarballs. To know which
+  directories that have or haven't been move can be view in
+  misc/gnomehier/files/dirlist. To upgrade your installed ports, you will
+  need to use either sysutils/portupgrade or sysutils/portmaster.
+
+    Portupgrade users:
+  	# pkgdb -Ff
+  	# portupgrade -o textproc/rarian textproc/scrollkeeper
+  	# portupgrade -a
+
+    Portmaster users:
+  	# portmaster -o textproc/rarian textproc/scrollkeeper
+  	# portmaster -a
+
+  If some of icons, applets or else have been disappered from your desktop in
+  this upgrade, you will need to remove and re-add these stuff to make them
+  appear in your desktop again due to change path.
+  
+  If you have some themes that was installed by manual (not done by ports or
+  packages), then you will have to move from share/gnome/ to share/ by manual.
