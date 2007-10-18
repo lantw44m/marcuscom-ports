@@ -5,7 +5,6 @@ etc/X11/sysconfig
 etc/gconf/gconf.xml.defaults
 etc/gconf/gconf.xml.mandatory
 etc/gconf/schemas
-etc/gnome-vfs-2.0
 etc/gnome-vfs-2.0/modules
 etc/gnome/config
 etc/sound/events
@@ -37,7 +36,6 @@ share/control-center/capplets
 share/control-center/keybindings
 share/doc/libgda
 share/games
-share/gnome
 share/gnome-2.0/ui
 share/gnome-about
 share/gnome-control-center/keybindings
