@@ -1,4 +1,4 @@
-# $MCom$
+# $MCom: ports/MC-UPDATING,v 1.1 2007/10/18 21:27:07 mezz Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -31,6 +31,6 @@ upgrades.
   If some of icons, applets or else have been disappered from your desktop in
   this upgrade, you will need to remove and re-add these stuff to make them
   appear in your desktop again due to change path.
-  
+
   If you have some themes that was installed by manual (not done by ports or
   packages), then you will have to move from share/gnome/ to share/ by manual.
