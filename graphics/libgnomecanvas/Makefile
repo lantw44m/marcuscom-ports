@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libgnomecanvas/Makefile,v 1.68 2007/09/18 16:46:22 mezz Exp $
+#   $MCom: ports/graphics/libgnomecanvas/Makefile,v 1.69 2007/10/13 21:11:18 marcus Exp $
 #
 
 PORTNAME=	libgnomecanvas
-PORTVERSION=	2.20.1
+PORTVERSION=	2.20.1.1
 PORTREVISION?=	0
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
