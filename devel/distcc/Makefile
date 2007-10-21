@@ -3,13 +3,13 @@
 # Whom:					Frerich Raabe <frerich.raabe@gmx.de>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/distcc/Makefile,v 1.1 2007/05/19 17:43:14 ahze Exp $
+#   $MCom: ports/devel/distcc/Makefile,v 1.2 2007/10/03 05:29:56 mezz Exp $
 #
 
 PORTNAME=	distcc
 PORTVERSION=	2.18.3
 PORTREVISION=	7
-CATEGORIES=	devel ipv6
+CATEGORIES=	devel
 MASTER_SITES=	http://distcc.samba.org/ftp/distcc/
 PATCH_SITES=	http://0pointer.de/public/
 
@@ -22,6 +22,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_TARGET=	--build=${MACHINE_ARCH}-portbld-freebsd${OSREL}
+CONFIGURE_ARGS=	 --enable-rfc2553
 WANT_GNOME=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
 DISTCCD_PIDFILE=/var/run/distccd.pid
@@ -31,7 +32,6 @@ SUB_LIST=	DISTCCD_PIDFILE=${DISTCCD_PIDFILE}
 OPTIONS=	AVAHI   "Enable Avahi Zeroconf/mDNS/Bonjour support" Off \
 		GNOME	"Build GUI monitor based on GNOME"	Off \
 		GTK	"Build GUI monitor based on GTK"	Off \
-		IPV6	"Enable IPV6 (not available on 4.X)"	Off \
 		COMPILER_LINKS	"Create symlinks to distcc"	On
 
 .include <bsd.port.pre.mk>
@@ -70,10 +70,6 @@ PKGNAMESUFFIX=		-gtk
 PLIST_SUB+=		WITH_GNOME=""
 .else
 PLIST_SUB+=		WITH_GNOME="@comment "
-.endif
-
-.if ( ${OSVERSION} >= 500000 ) && defined(WITH_IPV6)
-CONFIGURE_ARGS+=	--enable-rfc2553
 .endif
 
 MAN1=		distcc.1 distccd.1
