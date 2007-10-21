@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda2/Makefile,v 1.39 2007/08/04 03:51:28 marcus Exp $
+#   $MCom: ports/databases/libgda2/Makefile,v 1.40 2007/10/10 05:09:46 mezz Exp $
 #
 
 PORTNAME=	libgda2
@@ -60,8 +60,10 @@ WITH_MYSQL=	yes
 WITH_LDAP=yes
 .endif
 
-.if exists(${LOCALBASE}/lib/libgds.so)
+.if exists(${LOCALBASE}/lib/libgds.so.1)
 WITH_FIREBIRD=	yes
+.elif exists(${LOCALBASE}/lib/libgds.so.2)
+WITHOUT_FIREBIRD=yes
 .endif
 
 .if exists(${LOCALBASE}/lib/libtds.so)
@@ -116,7 +118,7 @@ LIB_DEPENDS+=		gds.1:${PORTSDIR}/databases/firebird-client
 CONFIGURE_ARGS+=	--with-firebird=${LOCALBASE}
 PLIST_SUB+=		FIREBIRD:=""
 .else
-CONFIGURE_ARGS+=	--without-interbase
+CONFIGURE_ARGS+=	--without-firebird
 PLIST_SUB+=		FIREBIRD:="@comment "
 .endif
 
