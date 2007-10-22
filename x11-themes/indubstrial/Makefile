@@ -17,6 +17,10 @@ COMMENT=	A clean, clear modification on the Industrial GTK+ and Metacity themes
 RUN_DEPENDS=	${LOCALBASE}/lib/gtk-2.0/${GTK2_VERSION}/engines/libindustrial.so:${PORTSDIR}/x11-themes/gnome-themes-extras \
 		${LOCALBASE}/lib/gtk/themes/engines/libindustrial.so:${PORTSDIR}/x11-themes/gtk-industrial-theme
 
+BROKEN=		gnome-themes-extras no longer has industrial engine
+DEPRECATED=	yes
+EXPIRATION_DATE=2007-11-22
+
 WRKSRC=		${WRKDIR}/Indubstrial
 NO_BUILD=	yes
 USE_XLIB=	yes

@@ -21,6 +21,10 @@ EXTRACT_DEPENDS=rpm2cpio.pl:${PORTSDIR}/archivers/rpm2cpio
 BUILD_DEPENDS=	${LOCALBASE}/lib/gtk-2.0/${GTK2_VERSION}/engines/libindustrial.so:${PORTSDIR}/x11-themes/gnome-themes-extras
 RUN_DEPENDS=	${LOCALBASE}/lib/gtk-2.0/${GTK2_VERSION}/engines/libindustrial.so:${PORTSDIR}/x11-themes/gnome-themes-extras
 
+BROKEN=		gnome-themes-extras no longer has industrial engine
+DEPRECATED=	yes
+EXPIRATION_DATE=2007-11-22
+
 NO_BUILD=	yes
 USE_GNOME=	gnomehack libgnomeui
 
