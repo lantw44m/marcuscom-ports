@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/vala/Makefile,v 1.8 2007/10/10 00:04:51 ahze Exp $
+#   $MCom: ports/lang/vala/Makefile,v 1.9 2007/10/17 21:36:11 mezz Exp $
 #
 
 PORTNAME=	vala
 PORTVERSION=	0.1.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -19,7 +19,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant
 
 OPTIONS=	VAPIGEN "Enable VAPI generator" Off
 USE_BZIP2=	yes
-USE_GNOME=	glib20 gnomeprefix
+USE_GNOME=	glib20 gnomeprefix libxslt
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}" LDFLAGS="-L${LOCALBASE}/lib"
