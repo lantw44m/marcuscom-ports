@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-themes/nimbus/Makefile,v 1.3 2007/07/04 12:25:49 ahze Exp $
+#    $MCom: ports/x11-themes/nimbus/Makefile,v 1.4 2007/08/06 13:59:30 ahze Exp $
 
 PORTNAME=	nimbus
-PORTVERSION=	0.0.8
-PORTREVISION=	1
+PORTVERSION=	0.0.9
 CATEGORIES=	x11-themes
 MASTER_SITES=	http://dlc.sun.com/osol/jds/downloads/extras/
 
@@ -24,6 +23,11 @@ USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	intltool
 INTLTOOLIZE?=	${LOCALBASE}/bin/intltoolize
+CONFIGURE_ARGS=	--localedir=${PREFIX}/share/locale
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|$${libdir}/locale|$${datadir}/locale|' \
+		${WRKSRC}/aclocal.m4
 
 pre-configure:
 	@(cd ${WRKSRC} && ${INTLTOOLIZE} -f)
