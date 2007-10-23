@@ -3,16 +3,16 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.1 2007-07-29 21:28:17 mezz Exp $
+#   $Id: Makefile,v 1.2 2007-10-23 21:25:44 mezz Exp $
 #
 
 PORTNAME=	f-spot
-PORTVERSION=	0.3.5
-PORTREVISION=	4
+PORTVERSION=	0.4.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.3
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.4
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com
 COMMENT=	Personal photo management to the GNOME desktop

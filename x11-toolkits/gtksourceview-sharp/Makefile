@@ -3,12 +3,12 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.1 2007-09-10 15:58:12 mezz Exp $
+#   $Id: Makefile,v 1.2 2007-10-23 21:25:45 mezz Exp $
 #
 
 PORTNAME=	gtksourceview-sharp
-PORTVERSION=	0.10
-PORTREVISION=	8
+PORTVERSION=	0.11
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://go-mono.com/sources/gtksourceview-sharp-2.0/
 DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}
@@ -21,6 +21,7 @@ BUILD_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 RUN_DEPENDS=	mono:${PORTSDIR}/lang/mono \
 		monodoc:${PORTSDIR}/devel/mono-tools
 
+USE_BZIP2=	yes
 USE_GNOME=	gtksourceview gnomehack gtksharp20
 USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
