@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/print/gimp-gutenprint/Makefile,v 1.4 2007/10/24 21:03:54 ahze Exp $
 
 PORTREVISION=	2
 PORTEPOCH=	0
-PKGNAMEPREFIX=	gimp-devel-
+PKGNAMEPREFIX=	gimp-
 PKGNAMESUFFIX=	# empty
 
 MAINTAINER=	ahze@FreeBSD.org
