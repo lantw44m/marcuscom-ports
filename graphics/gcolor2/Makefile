@@ -24,6 +24,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 SUB_FILES=	gcolor2.desktop
 
 post-install:
+	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKDIR}/gcolor2.desktop ${PREFIX}/share/applications
 
 .include <bsd.port.mk>
