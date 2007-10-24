@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app-devel/Makefile,v 1.18 2007/10/02 12:29:55 ahze Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.17 2007/10/24 20:59:57 ahze Exp $
 #
 
 PORTNAME=	gimp-app
@@ -72,7 +72,7 @@ GIMP_LIBS=	`${PKG_CONFIG} --libs gimp-2.0`
 GIMP_THUMB_LIBS=`${PKG_CONFIG} --libs gimpthumb-2.0`
 GIMP_UI_LIBS=	`${PKG_CONFIG} --libs gimpui-2.0`
 
-LIB_DEPENDS+=	gimp-2.0.0:${PORTSDIR}/graphics/gimp-app-devel
+LIB_DEPENDS+=	gimp-2.0.0:${PORTSDIR}/graphics/gimp-app
 
 .else
 
