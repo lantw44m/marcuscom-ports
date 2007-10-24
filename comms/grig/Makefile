@@ -24,7 +24,7 @@ USE_GMAKE=	yes
 MAN1=		grig.1
 
 post-patch:
-	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
+	@${FIND} ${WRKSRC} -name Makefile.* | ${XARGS} ${REINPLACE_CMD} -e \
 		's|-D.*_DISABLE_DEPRECATED||g'
 
 .include <bsd.port.mk>
