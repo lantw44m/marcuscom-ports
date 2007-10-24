@@ -1,0 +1,21 @@
+# New ports collection makefile for:	gutenprint-gimp
+# Date created:		2006-12-31
+# Whom:			Michael Johnson <ahze@FreeBSD.org>
+#
+# $FreeBSD$
+#    $MCom$
+
+PORTREVISION=	2
+PORTEPOCH=	0
+PKGNAMEPREFIX=	gimp-devel-
+PKGNAMESUFFIX=	# empty
+
+MAINTAINER=	ahze@FreeBSD.org
+COMMENT=	Gimp print plug-in
+
+MASTERDIR=	${.CURDIR}/../../print/gutenprint-base
+
+GUT_SLAVE=	gimp-devel
+PLIST=	${.CURDIR}/pkg-plist
+
+.include "${MASTERDIR}/Makefile"
