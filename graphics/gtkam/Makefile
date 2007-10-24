@@ -7,7 +7,7 @@
 
 PORTNAME=	gtkam
 PORTVERSION=	0.1.14
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	gphoto
@@ -67,6 +67,7 @@ post-patch:
 		 s|$$(libdir)/gimp/|$$(libexecdir)/gimp/|g'
 
 post-install:
+	${MKDIR} ${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/gtkam.desktop \
 		${PREFIX}/share/applications
 	${INSTALL_DATA} ${WRKSRC}/gtkam.png \
