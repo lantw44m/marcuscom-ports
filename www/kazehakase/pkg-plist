@@ -11,7 +11,7 @@ etc/kazehakase/proxyrc
 etc/kazehakase/smartbookmarks.xml
 lib/kazehakase/libkazehakase.la
 lib/kazehakase/libkazehakase.so
-lib/kazehakase/libkazehakase.so.0
+lib/kazehakase/libkazehakase.so.1
 lib/kazehakase/embed/gecko.la
 lib/kazehakase/embed/gecko.so
 lib/kazehakase/search/hyper-estraier.la
