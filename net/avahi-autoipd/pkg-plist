@@ -1,3 +1,0 @@
-etc/avahi/avahi-autoipd.action
-sbin/avahi-autoipd
-@dirrm etc/avahi
