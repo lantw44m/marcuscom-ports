@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.157 2007/10/15 17:48:45 mezz Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.159 2007/10/29 12:28:45 ahze Exp $
 #
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	2.20.1
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -26,7 +26,7 @@ USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GSTREAMER=	good
 WANT_GNOME=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack metacity nautilus2 \
+USE_GNOME=	gnomeprefix gnomehack intlhack metacity nautiluscdburner \
 		gnomemenus desktopfileutils libgnomekbd gnomepanel
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
@@ -35,6 +35,8 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-gstreamer=0.10
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+MAKE_ENV=	LIBNAUTILUSBURN_CFLAGS="`pkg-config --cflags libnautilus-burn`" \
+		LIBNAUTILUSBURN_LIBS="`pkg-config --libs libnautilus-burn`"
 
 GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		apps_gnome_settings_daemon_keybindings.schemas \

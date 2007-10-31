@@ -1,0 +1,18 @@
+--- gnome-settings-daemon/Makefile.in.orig	2007-10-30 20:03:01.428369527 -0400
++++ gnome-settings-daemon/Makefile.in	2007-10-30 20:05:12.563808528 -0400
+@@ -375,6 +375,7 @@
+ SUBDIRS = xrdb actions
+ INCLUDES = \
+ 	$(DBUS_CFLAGS)					\
++	$(LIBNAUTILUSBURN_CFLAGS)			\
+ 	$(LIBGNOMEKBD_CFLAGS)				\
+ 	$(GNOME_SETTINGS_DAEMON_CFLAGS)			\
+ 	$(FB_CFLAGS)					\
+@@ -411,6 +412,7 @@
+ #	$(AccessX_files)		
+ gnome_settings_daemon_LDADD = \
+ 	$(DBUS_LIBS)						\
++	$(LIBNAUTILUSBURN_LIBS)					\
+ 	$(LIBGNOMEKBD_LIBS)						\
+ 	$(top_builddir)/libbackground/libbackground.la			\
+ 	$(top_builddir)/libsounds/libsounds.a				\
