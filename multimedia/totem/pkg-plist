@@ -1,4 +1,5 @@
 bin/totem
+bin/totem-audio-preview
 bin/totem-video-indexer
 bin/totem-video-thumbnailer
 include/totem/1/plparser/totem-disc.h
@@ -8,7 +9,7 @@ include/totem/1/plparser/totem-pl-parser.h
 lib/libtotem-plparser.a
 lib/libtotem-plparser.la
 lib/libtotem-plparser.so
-lib/libtotem-plparser.so.7
+lib/libtotem-plparser.so.10
 lib/nautilus/extensions-1.0/libtotem-properties-page.a
 lib/nautilus/extensions-1.0/libtotem-properties-page.la
 lib/nautilus/extensions-1.0/libtotem-properties-page.so
@@ -45,6 +46,9 @@ lib/totem/plugins/skipto/libskipto.la
 lib/totem/plugins/skipto/libskipto.so
 lib/totem/plugins/skipto/skipto.totem-plugin
 lib/totem/plugins/skipto/skipto.ui
+lib/totem/plugins/totem/__init__.py
+lib/totem/plugins/totem/__init__.pyc
+lib/totem/plugins/totem/__init__.pyo
 libdata/pkgconfig/totem-plparser.pc
 share/applications/totem.desktop
 share/gnome/help/totem/C/figures/totem_next_button.png
@@ -222,6 +226,7 @@ share/locale/pt_BR/LC_MESSAGES/totem.mo
 share/locale/ro/LC_MESSAGES/totem.mo
 share/locale/ru/LC_MESSAGES/totem.mo
 share/locale/rw/LC_MESSAGES/totem.mo
+share/locale/si/LC_MESSAGES/totem.mo
 share/locale/sk/LC_MESSAGES/totem.mo
 share/locale/sl/LC_MESSAGES/totem.mo
 share/locale/sq/LC_MESSAGES/totem.mo
@@ -258,11 +263,9 @@ share/omf/totem/totem-uk.omf
 %%DATADIR%%/filmholes.png
 %%DATADIR%%/fullscreen.ui
 %%DATADIR%%/mozilla-viewer.ui
-%%DATADIR%%/playlist-ui.xml
 %%DATADIR%%/playlist.ui
 %%DATADIR%%/plugins.ui
 %%DATADIR%%/properties.ui
-%%DATADIR%%/totem-ui.xml
 %%DATADIR%%/totem.ui
 %%DATADIR%%/totem_logo.png
 %%DATADIR%%/uri.ui
@@ -297,6 +300,7 @@ share/vala/vapi/totem.vala
 @dirrm share/gnome/help/totem/C/figures
 @dirrm share/gnome/help/totem/C
 @dirrm share/gnome/help/totem
+@dirrm lib/totem/plugins/totem
 @dirrm lib/totem/plugins/skipto
 @dirrm lib/totem/plugins/screensaver
 @dirrm lib/totem/plugins/properties
@@ -321,6 +325,8 @@ share/vala/vapi/totem.vala
 @dirrmtry share/locale/ug
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
