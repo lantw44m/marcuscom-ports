@@ -21,6 +21,7 @@ bin/themus-theme-applier
 etc/gnome-vfs-2.0/modules/font-method.conf
 etc/gnome-vfs-2.0/modules/theme-method.conf
 etc/xdg/menus/gnomecc.menu
+etc/xdg/autostart/gnome-at-session.desktop
 include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-client.h
 include/gnome-window-settings-2.0/gnome-window-manager.h
 include/gnome-window-settings-2.0/gnome-wm-manager.h
@@ -128,7 +129,6 @@ share/desktop-directories/theme-method.directory
 %%DATADIR%%/xrdb/Motif.ad
 %%DATADIR%%/xrdb/Tk.ad
 %%DATADIR%%/xrdb/Xaw.ad
-share/gnome/autostart/gnome-at-session.desktop
 share/gnome/cursor-fonts/cursor-large-white.pcf
 share/gnome/cursor-fonts/cursor-large.pcf
 share/gnome/cursor-fonts/cursor-white.pcf
@@ -332,3 +332,4 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
 @dirrmtry share/applications
+@dirrmtry etc/xdg/autostart

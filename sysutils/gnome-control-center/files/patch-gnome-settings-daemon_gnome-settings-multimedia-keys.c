@@ -1,41 +1,15 @@
 --- gnome-settings-daemon/gnome-settings-multimedia-keys.c.orig	2007-09-18 05:32:43.000000000 -0400
-+++ gnome-settings-daemon/gnome-settings-multimedia-keys.c	2007-10-31 16:01:14.953632933 -0400
-@@ -31,6 +31,7 @@
- #include <glib/gi18n.h>
- #include <gdk/gdkx.h>
- #include <gtk/gtk.h>
-+#include <nautilus-burn.h>
- 
- #include "eggaccelerators.h"
- 
-@@ -609,9 +610,24 @@
- 					   GCONF_MISC_DIR "/eject_command", NULL);
++++ gnome-settings-daemon/gnome-settings-multimedia-keys.c	2007-11-01 08:29:46.987143617 -0400
+@@ -610,7 +610,7 @@
  	if ((command != NULL) && (strcmp (command, "") != 0))
  		execute (acme, command, FALSE, FALSE);
--	else
+ 	else
 -		execute (acme, "eject -T", FALSE, FALSE);
-+	else {
-+		g_type_init ();
-+		nautilus_burn_init ();
-+		GList *drives, *drivelist;
-+		NautilusBurnDriveMonitor *monitor;
-+
-+		monitor = nautilus_burn_get_drive_monitor ();
-+		drives = nautilus_burn_drive_monitor_get_drives (monitor);
-+
-+		for (drivelist = drives; drivelist != NULL; drivelist = drivelist->next) {
-+			NautilusBurnDrive *drive;
-+			drive = drivelist->data;
++		execute (acme, "gnome-eject -b --device=%%CDROM%%", FALSE, FALSE);
  
-+			nautilus_burn_drive_eject (drive);
-+		}
-+        	nautilus_burn_shutdown ();
-+	}
-+		
  	g_free (command);
  }
- 
-@@ -708,7 +724,7 @@
+@@ -708,7 +708,7 @@
  		do_mail_action (acme);
  		break;
  	case SLEEP_KEY:
