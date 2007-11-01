@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.160 2007/10/31 20:12:43 ahze Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.161 2007/11/01 12:52:04 ahze Exp $
 #
 
 PORTNAME=	gnome-control-center
@@ -35,8 +35,6 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-gstreamer=0.10
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-MAKE_ENV=	LIBNAUTILUSBURN_CFLAGS="`pkg-config --cflags libnautilus-burn`" \
-		LIBNAUTILUSBURN_LIBS="`pkg-config --libs libnautilus-burn`"
 
 GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		apps_gnome_settings_daemon_keybindings.schemas \
