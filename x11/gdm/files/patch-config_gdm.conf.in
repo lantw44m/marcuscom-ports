@@ -1,0 +1,17 @@
+--- config/gdm.conf.in.orig	2007-10-25 15:52:07.000000000 -0400
++++ config/gdm.conf.in	2007-11-01 09:43:55.203216050 -0400
+@@ -199,11 +199,11 @@
+ # using this Xnest, the value should be true.
+ XnestUnscaledFontPath=@X_XNEST_UNSCALED_FONTPATH@
+ 
+-# Automatic VT allocation.  Right now only works on Linux.  This way we force
++# Automatic VT allocation.  This way we force
+ # X to use specific vts.  turn VTAllocation to false if this is causing
+ # problems.
+-#FirstVT=7
+-#VTAllocation=true
++FirstVT=9
++VTAllocation=true
+ # Should double login be treated with a warning (and possibility to change VT's
+ # on Linux and FreeBSD systems for console logins)
+ #DoubleLoginWarning=true
