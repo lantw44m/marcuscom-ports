@@ -449,7 +449,6 @@ share/icons/HighContrast-SVG/scalable/actions/gtk-goto-last-ltr.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-goto-last-rtl.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-goto-top.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-home.svg
-share/icons/HighContrast-SVG/scalable/actions/gtk-indent.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-italic.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-jump-to-ltr.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-jump-to-rtl.svg
@@ -489,7 +488,6 @@ share/icons/HighContrast-SVG/scalable/actions/gtk-stop.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-strikethrough.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-underline.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-undo-ltr.svg
-share/icons/HighContrast-SVG/scalable/actions/gtk-unindent.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-zoom-100.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-zoom-fit.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-zoom-in.svg
@@ -575,12 +573,10 @@ share/icons/HighContrast-SVG/scalable/actions/stock_leave-fullscreen.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_left.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_mail-compose.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_mail-forward.svg
-share/icons/HighContrast-SVG/scalable/actions/stock_mail-open.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_mail-reply-to-all.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_mail-reply.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_mail-send-receive.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_mail-send.svg
-share/icons/HighContrast-SVG/scalable/actions/stock_mail-unread.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_media-fwd.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_media-next.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_media-pause.svg
