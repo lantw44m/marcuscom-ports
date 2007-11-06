@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.80 2007/10/22 04:42:08 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.82 2007/11/03 00:59:39 marcus Exp $
 #
 
 PORTNAME=	gdm
@@ -79,6 +79,8 @@ post-patch:
 .endif
 	@${REINPLACE_CMD} -e 's|root:root|root:wheel|g' \
 		${WRKSRC}/config/Makefile.in
+	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+	    	${FILESDIR}/gnome.desktop > ${WRKDIR}/gnome.desktop
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
@@ -86,6 +88,9 @@ post-install:
 .endif
 	${INSTALL_DATA} ${WRKSRC}/config/gdm.conf-custom \
 		${PREFIX}/etc/gdm/custom.conf.default
+	${MKDIR} ${PREFIX}/share/xsessions
+	${INSTALL_DATA} ${WRKDIR}/gnome.desktop \
+	    	${PREFIX}/share/xsessions/gnome.desktop
 	@${MKDIR} ${PREFIX}/etc/gdm/Sessions
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}

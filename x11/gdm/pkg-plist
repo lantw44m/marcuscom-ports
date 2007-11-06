@@ -141,7 +141,8 @@ share/pixmaps/faces/yellow-rose.jpg
 share/pixmaps/gdm-foot-logo.png
 share/pixmaps/nobody.png
 share/pixmaps/nohost.png
-@dirrm share/xsessions
+share/xsessions/gnome.desktop
+@dirrmtry share/xsessions
 @dirrm share/pixmaps/faces
 @dirrm %%DATADIR%%/BuiltInSessions
 @dirrm %%DATADIR%%
