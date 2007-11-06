@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gio-standalone/Makefile,v 1.1 2007/11/06 18:36:11 ahze Exp $
+#    $MCom: ports/devel/gio-standalone/Makefile,v 1.2 2007/11/06 18:55:04 ahze Exp $
 
 PORTNAME=	gio-standalone
 PORTVERSION=	0.1.1
@@ -19,6 +19,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
 USE_GMAKE=	yes
 USE_FAM=	yes
 USE_LDCONFIG=	yes
+USE_GETTEXT=	yes
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${datadir}/gtk-doc|${DOCSDIR}|' \
