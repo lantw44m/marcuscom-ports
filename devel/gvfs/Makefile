@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/devel/gvfs/Makefile,v 1.1 2007/11/06 23:48:54 ahze Exp $
 
 PORTNAME=	gvfs
 PORTVERSION=	0.0.1
@@ -39,7 +39,7 @@ LIB_DEPENDS+=	smbclient.0:${PORTSDIR}/net/samba-libsmbclient
 PLIST_SUB+=	SMB=""
 .else
 CONFIGURE_ARGS+=	--disable-samba
-PLIST_SUB+=	SMB=""
+PLIST_SUB+=	SMB="@comment "
 .endif
 
 .include <bsd.port.post.mk>
