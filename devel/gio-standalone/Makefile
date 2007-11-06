@@ -3,14 +3,14 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/devel/gio-standalone/Makefile,v 1.1 2007/11/06 18:36:11 ahze Exp $
 
 PORTNAME=	gio-standalone
 PORTVERSION=	0.1.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
-MAINTAINER=	ahze@FreeBSD.org
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Glib I/O library
 
 USE_GNOME=	glib20 gnomehack gnomeprefix
