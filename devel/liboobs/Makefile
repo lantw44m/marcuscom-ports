@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/liboobs/Makefile,v 1.23 2007/09/16 16:45:35 ahze Exp $
+#   $MCom: ports/devel/liboobs/Makefile,v 1.25 2007/10/30 13:56:18 ahze Exp $
 #
 
 PORTNAME=	liboobs
 PORTVERSION=	2.21.1
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -16,7 +17,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Wrapping library to the System Tools Backends
 
 BUILD_DEPENDS=	${LOCALBASE}/etc/dbus-1/system.d/system-tools-backends.conf:${PORTSDIR}/sysutils/system-tools-backends
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+    		hal.1:${PORTSDIR}/sysutils/hal
 RUN_DEPENDS=	${LOCALBASE}/etc/dbus-1/system.d/system-tools-backends.conf:${PORTSDIR}/sysutils/system-tools-backends
 
 USE_BZIP2=	yes
