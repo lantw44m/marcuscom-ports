@@ -1,5 +1,10 @@
-bin/exchange-connector-setup-2.22
-libdata/bonobo/servers/GNOME_Evolution_Exchange_Storage_2.22.server
+bin/exchange-connector-setup-%%VERSION%%
+lib/evolution-data-server-%%EDS_VERSION%%/camel-providers/libcamelexchange.a
+lib/evolution-data-server-%%EDS_VERSION%%/camel-providers/libcamelexchange.la
+lib/evolution-data-server-%%EDS_VERSION%%/camel-providers/libcamelexchange.so
+lib/evolution-data-server-%%EDS_VERSION%%/camel-providers/libcamelexchange.urls
+libdata/bonobo/servers/GNOME_Evolution_Exchange_Storage_%%VERSION%%.server
+libexec/evolution/%%EVO_VERSION%%/evolution-exchange-storage
 %%DOCSDIR%%/ch01.html
 %%DOCSDIR%%/ch02.html
 %%DOCSDIR%%/ch03.html
@@ -147,9 +152,9 @@ share/locale/zh_TW/LC_MESSAGES/evolution-exchange-2.22.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrm %%DATADIR%%/2.22/ui
-@dirrm %%DATADIR%%/2.22/images
-@dirrm %%DATADIR%%/2.22/glade
-@dirrm %%DATADIR%%/2.22
+@dirrm %%DATADIR%%/%%VERSION%%/ui
+@dirrm %%DATADIR%%/%%VERSION%%/images
+@dirrm %%DATADIR%%/%%VERSION%%/glade
+@dirrm %%DATADIR%%/%%VERSION%%
 @dirrm %%DATADIR%%
 @dirrm %%DOCSDIR%%
