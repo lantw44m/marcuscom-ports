@@ -1,0 +1,19 @@
+--- configure.orig	2007-11-12 16:12:40.000000000 -0500
++++ configure	2007-11-12 16:15:09.000000000 -0500
+@@ -26431,7 +26431,6 @@ echo "${ECHO_T}$have_xrender" >&6; }
+ 
+   if test x$have_xrender = xyes; then
+      echo "Building with Render"
+-     METACITY_PC_MODULES="$METACITY_PC_MODULES xrender >= $XRENDER_VERSION"
+   fi
+ fi ## have_composite
+ 
+@@ -30995,7 +30994,7 @@ metacity-$VERSION:
+ "
+ 
+ METACITY_MINOR_VERSION=21
+-if test $(( $(echo $METACITY_MINOR_VERSION) %2)) == "1"; then
++if test $(( $(echo $METACITY_MINOR_VERSION) %2)) = "1"; then
+    stable_version=$(( ($METACITY_MINOR_VERSION / 2) * 2))
+    echo "This is the UNSTABLE branch of metacity"
+    echo -n "Use 2.$stable_version.x for stable "
