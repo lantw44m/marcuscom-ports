@@ -205,14 +205,7 @@ include/evolution-%%VERSION%%/table/e-tree-selection-model.h
 include/evolution-%%VERSION%%/table/e-tree-sorted.h
 include/evolution-%%VERSION%%/table/e-tree-table-adapter.h
 include/evolution-%%VERSION%%/table/e-tree.h
-include/evolution-%%VERSION%%/text/e-completion-callbacks.h
-include/evolution-%%VERSION%%/text/e-completion-match.h
-include/evolution-%%VERSION%%/text/e-completion-view.h
-include/evolution-%%VERSION%%/text/e-completion.h
-include/evolution-%%VERSION%%/text/e-entry.h
-include/evolution-%%VERSION%%/text/e-table-text-model.h
 include/evolution-%%VERSION%%/text/e-text-model-repos.h
-include/evolution-%%VERSION%%/text/e-text-model-uri.h
 include/evolution-%%VERSION%%/text/e-text-model.h
 include/evolution-%%VERSION%%/text/e-text.h
 lib/evolution/%%VERSION%%/components/libevolution-addressbook.la
@@ -534,6 +527,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/help/quickref/pt/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/sq/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/sv/quickref.pdf
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/go-today.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/view-calendar-day.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/view-calendar-list.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/view-calendar-month.png
@@ -542,6 +536,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/places/mail-inbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/places/mail-outbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/places/mail-sent.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/actions/go-today.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/actions/view-calendar-day.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/actions/view-calendar-list.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/actions/view-calendar-month.png
@@ -550,6 +545,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/places/mail-inbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/places/mail-outbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/places/mail-sent.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions/go-today.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions/view-calendar-day.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions/view-calendar-list.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions/view-calendar-month.png
@@ -558,12 +554,22 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places/mail-inbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places/mail-outbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places/mail-sent.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions/view-calendar-day.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions/view-calendar-list.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions/view-calendar-month.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions/view-calendar-week.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions/view-calendar-workweek.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-autocompletion.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-calendar-and-tasks.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-certificates.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-composer.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-mail-accounts.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-mail.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions/view-calendar-day.svg
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions/view-calendar-list.svg
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions/view-calendar-month.svg
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions/view-calendar-week.svg
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions/view-calendar-workweek.svg
 %%DATADIR%%/%%VERSION%%/images/evolution-contacts-mini.png
 %%DATADIR%%/%%VERSION%%/images/minus.png
 %%DATADIR%%/%%VERSION%%/images/offline.png
@@ -1764,8 +1770,8 @@ share/omf/evolution/evolution-sv.omf
 @dirrm share/icons/hicolor/32x32
 @dirrm share/icons/hicolor/24x24/apps
 @dirrm share/icons/hicolor/24x24
-@dirrm share/icons/hicolor/2%%VERSION%%/apps
-@dirrm share/icons/hicolor/2%%VERSION%%
+@dirrm share/icons/hicolor/22x22/apps
+@dirrm share/icons/hicolor/22x22
 @dirrm share/icons/hicolor/16x16/apps
 @dirrm share/icons/hicolor/16x16
 @dirrm share/icons/hicolor
@@ -1799,8 +1805,12 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/ui
 @dirrm %%DATADIR%%/%%VERSION%%/sounds
 @dirrm %%DATADIR%%/%%VERSION%%/images
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24
