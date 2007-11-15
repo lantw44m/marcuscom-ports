@@ -10,6 +10,7 @@ bin/gnome-display-properties
 bin/gnome-font-viewer
 bin/gnome-keybinding-properties
 bin/gnome-keyboard-properties
+bin/gnome-localization-properties
 bin/gnome-mouse-properties
 bin/gnome-network-preferences
 bin/gnome-sound-properties
@@ -62,6 +63,7 @@ share/applications/gnome-theme-installer.desktop
 share/applications/gnomecc.desktop
 share/applications/keybinding.desktop
 share/applications/keyboard.desktop
+share/applications/localization.desktop
 share/applications/themus-theme-applier.desktop
 share/applications/window-properties.desktop
 share/dbus-1/services/org.gnome.SettingsDaemon.service
@@ -80,6 +82,7 @@ share/desktop-directories/theme-method.directory
 %%DATADIR%%/glade/gnome-mouse-properties.glade
 %%DATADIR%%/glade/gnome-network-preferences.glade
 %%DATADIR%%/glade/gnome-window-properties.glade
+%%DATADIR%%/glade/localization.glade
 %%DATADIR%%/glade/modmap-dialog.glade
 %%DATADIR%%/glade/sound-properties.glade
 %%DATADIR%%/gnome-default-applications.xml
