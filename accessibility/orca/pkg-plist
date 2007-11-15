@@ -17,9 +17,6 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/app_prefs.py
 %%PYTHON_SITELIBDIR%%/orca/app_prefs.pyc
 %%PYTHON_SITELIBDIR%%/orca/app_prefs.pyo
-%%PYTHON_SITELIBDIR%%/orca/atspi.py
-%%PYTHON_SITELIBDIR%%/orca/atspi.pyc
-%%PYTHON_SITELIBDIR%%/orca/atspi.pyo
 %%PYTHON_SITELIBDIR%%/orca/bookmarks.py
 %%PYTHON_SITELIBDIR%%/orca/bookmarks.pyc
 %%PYTHON_SITELIBDIR%%/orca/bookmarks.pyo
