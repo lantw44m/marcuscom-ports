@@ -3,12 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.84 2007/11/07 00:38:20 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.85 2007/11/08 20:38:50 marcus Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	2.21.1
-PORTREVISION=	2
+PORTVERSION=	2.21.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -72,7 +71,7 @@ post-patch:
 .endfor
 .endif
 	@${REINPLACE_CMD} -e 's|root:root|root:wheel|g' \
-		${WRKSRC}/config/Makefile.in
+		${WRKSRC}/data/Makefile.in
 	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 	    	${FILESDIR}/gnome.desktop > ${WRKDIR}/gnome.desktop
 
@@ -80,7 +79,7 @@ post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
-	${INSTALL_DATA} ${WRKSRC}/config/gdm.conf-custom \
+	${INSTALL_DATA} ${WRKSRC}/data/gdm.conf-custom \
 		${PREFIX}/etc/gdm/custom.conf.default
 	${MKDIR} ${PREFIX}/share/xsessions
 	${INSTALL_DATA} ${WRKDIR}/gnome.desktop \
