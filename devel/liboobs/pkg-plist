@@ -15,6 +15,7 @@ include/liboobs-1.0/oobs/oobs-ntpconfig.h
 include/liboobs-1.0/oobs/oobs-ntpserver.h
 include/liboobs-1.0/oobs/oobs-object.h
 include/liboobs-1.0/oobs/oobs-result.h
+include/liboobs-1.0/oobs/oobs-selfconfig.h
 include/liboobs-1.0/oobs/oobs-service.h
 include/liboobs-1.0/oobs/oobs-servicesconfig.h
 include/liboobs-1.0/oobs/oobs-session.h
