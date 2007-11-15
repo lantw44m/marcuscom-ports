@@ -228,6 +228,7 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-xml-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserver/md5-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-book-auth-util.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-categories-dialog.h
+include/evolution-data-server-%%VERSION%%/libedataserverui/e-cell-renderer-color.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-contact-store.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-destination-store.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-name-selector-dialog.h
@@ -645,6 +646,7 @@ share/doc/libedataserverui/index.html
 share/doc/libedataserverui/index.sgml
 share/doc/libedataserverui/ix01.html
 share/doc/libedataserverui/left.png
+share/doc/libedataserverui/libedataserverui-ECellRendererColor.html
 share/doc/libedataserverui/libedataserverui-e-book-auth-util.html
 share/doc/libedataserverui/libedataserverui-e-data-server-ui-marshal.html
 share/doc/libedataserverui/libedataserverui-e-passwords.html
