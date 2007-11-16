@@ -3,12 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/accerciser/Makefile,v 1.6 2007/10/30 00:14:56 ahze Exp $
+#   $MCom: ports/accessibility/accerciser/Makefile,v 1.7 2007/10/30 11:29:48 ahze Exp $
 #
 
 PORTNAME=	accerciser
-PORTVERSION=	1.1.1
-PORTREVISION=	1
+PORTVERSION=	1.1.2
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
