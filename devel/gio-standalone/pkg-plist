@@ -98,7 +98,6 @@ share/doc/gio/extending.html
 share/doc/gio/file_mon.html
 share/doc/gio/file_ops.html
 share/doc/gio/gio-GContentType.html
-share/doc/gio/gio-GFileAttribute.html
 share/doc/gio/gio-GIOError.html
 share/doc/gio/gio-GIOScheduler.html
 share/doc/gio/gio-Unix-Mounts.html
