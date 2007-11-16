@@ -3,22 +3,22 @@ etc/gvfs/mounts/sftp.mount
 %%SMB%%etc/gvfs/mounts/smb-browse.mount
 %%SMB%%etc/gvfs/mounts/smb.mount
 etc/gvfs/mounts/trash.mount
+include/gvfs-client/gvfs/gvfsurimapper.h
+include/gvfs-client/gvfs/gvfsuriutils.h
 lib/gio/modules/libgvfsdbus.la
 lib/gio/modules/libgvfsdbus.so
-%%SMB%%lib/gvfs/modules/libsmb.la
-%%SMB%%lib/gvfs/modules/libsmb.so
 lib/libgvfscommon.la
 lib/libgvfscommon.so
 lib/libgvfscommon.so.0
-libexec/gvfs-daemon
-libexec/gvfs-daemon-ftp
-libexec/gvfs-daemon-sftp
-%%SMB%%libexec/gvfs-daemon-smb
-%%SMB%%libexec/gvfs-daemon-smb-browse
-libexec/gvfs-daemon-trash
+libexec/gvfsd
+libexec/gvfsd-ftp
+libexec/gvfsd-sftp
+%%SMB%%libexec/gvfsd-smb
+%%SMB%%libexec/gvfsd-smb-browse
+libexec/gvfsd-trash
 %%FUSE%%libexec/gvfs-fuse-daemon
 share/dbus-1/services/gvfs-daemon.service
-@dirrm lib/gvfs/modules
-@dirrm lib/gvfs
+@dirrm include/gvfs-client/gvfs
+@dirrm include/gvfs-client
 @dirrm etc/gvfs/mounts
 @dirrm etc/gvfs
