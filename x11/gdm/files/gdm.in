@@ -1,9 +1,9 @@
 #!/bin/sh
 # $FreeBSD: ports/x11/gdm/files/gdm.in,v 1.5 2007/10/24 23:36:53 marcus Exp $
-#    $MCom: ports/x11/gdm/files/gdm.in,v 1.15 2007/08/15 17:52:06 mezz Exp $
+#    $MCom: ports/x11/gdm/files/gdm.in,v 1.17 2007/11/03 00:59:40 marcus Exp $
 
 # PROVIDE: gdm
-# REQUIRE: LOGIN cleanvar moused
+# REQUIRE: LOGIN cleanvar moused syscons dbus consolekit
 #
 # Add the following to /etc/rc.conf to start GDM at boot time:
 #
