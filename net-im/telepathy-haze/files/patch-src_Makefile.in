@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2007-10-29 12:23:51.314290502 -0400
++++ src/Makefile.in	2007-10-29 12:23:57.161220768 -0400
+@@ -199,7 +199,7 @@
+                          im-channel-factory.c \
+                          im-channel-factory.h
+ 
+-AM_CFLAGS = @PURPLE_CFLAGS@ @TP_GLIB_CFLAGS@ -Wall -Werror
++AM_CFLAGS = @PURPLE_CFLAGS@ @TP_GLIB_CFLAGS@
+ AM_LDFLAGS = @PURPLE_LIBS@ @TP_GLIB_LIBS@
+ all: all-am
+ 
