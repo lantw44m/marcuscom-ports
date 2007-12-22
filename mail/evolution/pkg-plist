@@ -26,6 +26,7 @@ include/evolution-%%VERSION%%/e-util/e-gui-utils.h
 include/evolution-%%VERSION%%/e-util/e-html-utils.h
 include/evolution-%%VERSION%%/e-util/e-icon-factory.h
 include/evolution-%%VERSION%%/e-util/e-import.h
+include/evolution-%%VERSION%%/e-util/e-logger.h
 include/evolution-%%VERSION%%/e-util/e-menu.h
 include/evolution-%%VERSION%%/e-util/e-mktemp.h
 include/evolution-%%VERSION%%/e-util/e-plugin.h
@@ -88,6 +89,7 @@ include/evolution-%%VERSION%%/menus/gal-view-instance-save-as-dialog.h
 include/evolution-%%VERSION%%/menus/gal-view-instance.h
 include/evolution-%%VERSION%%/menus/gal-view-new-dialog.h
 include/evolution-%%VERSION%%/menus/gal-view.h
+include/evolution-%%VERSION%%/misc/e-account-combo-box.h
 include/evolution-%%VERSION%%/misc/e-activity-handler.h
 include/evolution-%%VERSION%%/misc/e-attachment-bar.h
 include/evolution-%%VERSION%%/misc/e-attachment.h
@@ -126,6 +128,7 @@ include/evolution-%%VERSION%%/misc/e-selection-model-array.h
 include/evolution-%%VERSION%%/misc/e-selection-model-simple.h
 include/evolution-%%VERSION%%/misc/e-selection-model.h
 include/evolution-%%VERSION%%/misc/e-send-options.h
+include/evolution-%%VERSION%%/misc/e-signature-combo-box.h
 include/evolution-%%VERSION%%/misc/e-spinner.c
 include/evolution-%%VERSION%%/misc/e-spinner.h
 include/evolution-%%VERSION%%/misc/e-task-bar.h
@@ -460,7 +463,6 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/etspec/e-addressbook-view.etspec
 %%DATADIR%%/%%VERSION%%/etspec/e-cal-list-view.etspec
 %%DATADIR%%/%%VERSION%%/etspec/e-calendar-table.etspec
-%%DATADIR%%/%%VERSION%%/etspec/e-contact-list-editor.etspec
 %%DATADIR%%/%%VERSION%%/etspec/e-meeting-time-sel.etspec
 %%DATADIR%%/%%VERSION%%/etspec/e-memo-table.etspec
 %%DATADIR%%/%%VERSION%%/etspec/message-list.etspec
