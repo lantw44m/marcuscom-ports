@@ -1,5 +1,5 @@
---- docs/reference/camel/Makefile.in.orig	2007-10-15 09:28:28.000000000 -0400
-+++ docs/reference/camel/Makefile.in	2007-10-15 09:29:49.000000000 -0400
+--- docs/reference/camel/Makefile.in.orig	2007-12-21 11:30:30.000000000 +0100
++++ docs/reference/camel/Makefile.in	2007-12-21 11:55:58.000000000 +0100
 @@ -123,7 +123,7 @@
  GOBJECT_QUERY = @GOBJECT_QUERY@
  GREP = @GREP@
@@ -9,3 +9,14 @@
  ICONV_CFLAGS = @ICONV_CFLAGS@
  ICONV_LIBS = @ICONV_LIBS@
  IDL_INCLUDES = @IDL_INCLUDES@
+@@ -690,8 +690,8 @@
+ 	  done; \
+ 	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
+ 	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR) || :; \
+-	  which gtkdoc-rebase >/dev/null && \
+-	    gtkdoc-rebase --relative --dest-dir=$(DESTDIR) --html-dir=$(DESTDIR)$(TARGET_DIR) ; \
++#	  which gtkdoc-rebase >/dev/null && \
++#	    gtkdoc-rebase --relative --dest-dir=$(DESTDIR) --html-dir=$(DESTDIR)$(TARGET_DIR) ; \
+ 	fi
+ 
+ uninstall-local:
