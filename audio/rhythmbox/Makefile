@@ -3,15 +3,15 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.81 2007/07/30 19:41:19 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	rhythmbox
-PORTVERSION=	0.10.1
-PORTREVISION=	5
+PORTVERSION=	0.11.4
+PORTREVISION=	0
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.10
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.11
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	marcus@FreeBSD.org
@@ -99,10 +99,10 @@ RUN_DEPENDS+=		${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/no
 CONFIGURE_ARGS+=	--disable-libnotify
 .endif
 
-.if ${HAVE_GNOME:Mpygtk2}!=""
+.if exists(${LOCALBASE}/libdata/pkgconfig/gst-python-0.10.pc)
 USE_PYTHON=	yes
 .include "${PORTSDIR}/Mk/bsd.python.mk"
-USE_GNOME+=	pygtk2
+USE_GSTREAMER+=	python
 CONFIGURE_ARGS+=--enable-python
 PLIST_SUB+=	PYTHON=""
 .else
