@@ -3,11 +3,11 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.92 2007/11/01 15:03:28 ahze Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.93 2007/11/13 06:25:27 marcus Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	2.21.2
+PORTVERSION=	2.21.5
 PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
@@ -18,6 +18,7 @@ COMMENT?=	A gstreamer-based video player for the GNOME 2 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	musicbrainz:${PORTSDIR}/audio/libmusicbrainz \
+		totem-plparser.10:${PORTSDIR}/multimedia/totem-pl-parser \
 		hal.1:${PORTSDIR}/sysutils/hal
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 

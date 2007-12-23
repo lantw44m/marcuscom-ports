@@ -2,14 +2,6 @@ bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
 bin/totem-video-thumbnailer
-include/totem/1/plparser/totem-disc.h
-include/totem/1/plparser/totem-pl-parser-builtins.h
-include/totem/1/plparser/totem-pl-parser-features.h
-include/totem/1/plparser/totem-pl-parser.h
-lib/libtotem-plparser.a
-lib/libtotem-plparser.la
-lib/libtotem-plparser.so
-lib/libtotem-plparser.so.10
 lib/nautilus/extensions-1.0/libtotem-properties-page.a
 lib/nautilus/extensions-1.0/libtotem-properties-page.la
 lib/nautilus/extensions-1.0/libtotem-properties-page.so
@@ -49,7 +41,6 @@ lib/totem/plugins/skipto/skipto.ui
 lib/totem/plugins/totem/__init__.py
 lib/totem/plugins/totem/__init__.pyc
 lib/totem/plugins/totem/__init__.pyo
-libdata/pkgconfig/totem-plparser.pc
 share/applications/totem.desktop
 share/gnome/help/totem/C/figures/totem_next_button.png
 share/gnome/help/totem/C/figures/totem_pause_button.png
@@ -163,6 +154,7 @@ share/gnome/help/totem/uk/figures/totem_start_window.png
 share/gnome/help/totem/uk/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/uk/figures/totem_volume_mute_button.png
 share/gnome/help/totem/uk/totem.xml
+share/totem/video-list.ui
 share/icons/hicolor/16x16/apps/totem.png
 share/icons/hicolor/22x22/apps/totem.png
 share/icons/hicolor/24x24/apps/totem.png
@@ -312,9 +304,6 @@ share/vala/vapi/totem.vala
 @dirrm lib/totem/plugins
 @dirrm lib/totem
 @dirrmtry lib/browser_plugins
-@dirrm include/totem/1/plparser
-@dirrm include/totem/1
-@dirrm include/totem
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
