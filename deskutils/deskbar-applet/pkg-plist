@@ -35,6 +35,9 @@ lib/deskbar-applet/modules-2.20-compatible/programs.pyo
 lib/deskbar-applet/modules-2.20-compatible/recent.py
 lib/deskbar-applet/modules-2.20-compatible/recent.pyc
 lib/deskbar-applet/modules-2.20-compatible/recent.pyo
+lib/deskbar-applet/modules-2.20-compatible/templates.py
+lib/deskbar-applet/modules-2.20-compatible/templates.pyc
+lib/deskbar-applet/modules-2.20-compatible/templates.pyo
 lib/deskbar-applet/modules-2.20-compatible/web_address.py
 lib/deskbar-applet/modules-2.20-compatible/web_address.pyc
 lib/deskbar-applet/modules-2.20-compatible/web_address.pyo
@@ -86,6 +89,11 @@ lib/deskbar-applet/modules-2.20-compatible/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/core/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/core/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/core/__init__.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/core/_userdirs/__init__.py
+%%PYTHON_SITELIBDIR%%/deskbar/core/_userdirs/__init__.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/core/_userdirs/__init__.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/core/_userdirs/__userdirs.la
+%%PYTHON_SITELIBDIR%%/deskbar/core/_userdirs/__userdirs.so
 %%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop/__init__.pyo
@@ -330,6 +338,7 @@ share/locale/mr/LC_MESSAGES/deskbar-applet.mo
 share/locale/nb/LC_MESSAGES/deskbar-applet.mo
 share/locale/ne/LC_MESSAGES/deskbar-applet.mo
 share/locale/nl/LC_MESSAGES/deskbar-applet.mo
+share/locale/nn/LC_MESSAGES/deskbar-applet.mo
 share/locale/oc/LC_MESSAGES/deskbar-applet.mo
 share/locale/or/LC_MESSAGES/deskbar-applet.mo
 share/locale/pa/LC_MESSAGES/deskbar-applet.mo
@@ -394,6 +403,7 @@ share/omf/deskbar/deskbar-uk.omf
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/updater
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/keybinder
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop
+@dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/_userdirs
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar
 @dirrm lib/deskbar-applet/modules-2.20-compatible
@@ -404,6 +414,8 @@ share/omf/deskbar/deskbar-uk.omf
 @dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/locale/nn/LC_MESSAGES
+@dirrmtry share/locale/nn
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
