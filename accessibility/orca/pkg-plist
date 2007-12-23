@@ -73,6 +73,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/keynames.py
 %%PYTHON_SITELIBDIR%%/orca/keynames.pyc
 %%PYTHON_SITELIBDIR%%/orca/keynames.pyo
+%%PYTHON_SITELIBDIR%%/orca/liveregions.py
+%%PYTHON_SITELIBDIR%%/orca/liveregions.pyc
+%%PYTHON_SITELIBDIR%%/orca/liveregions.pyo
 %%PYTHON_SITELIBDIR%%/orca/mag.py
 %%PYTHON_SITELIBDIR%%/orca/mag.pyc
 %%PYTHON_SITELIBDIR%%/orca/mag.pyo
