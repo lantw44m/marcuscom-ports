@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.65 2007/09/16 17:47:04 ahze Exp $
+#    $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.67 2007/11/01 16:38:18 ahze Exp $
 #
 
 PORTNAME=	gnome
-PORTVERSION=	2.20.0
-PORTREVISION=	1
+PORTVERSION=	2.21.1
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-python-desktop/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -31,7 +30,8 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gnomehack libgnomeprintui gnomepanel gnomedesktop \
-		gtksourceview libwnck nautiluscdburner pygnome2 metacity
+		gtksourceview libwnck nautiluscdburner pygnome2 metacity \
+		evolutiondataserver
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-metacity
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
