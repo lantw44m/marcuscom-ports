@@ -62,6 +62,7 @@ share/locale/sr/LC_MESSAGES/vino.mo
 share/locale/sr@Latn/LC_MESSAGES/vino.mo
 share/locale/sv/LC_MESSAGES/vino.mo
 share/locale/ta/LC_MESSAGES/vino.mo
+share/locale/te/LC_MESSAGES/vino.mo
 share/locale/th/LC_MESSAGES/vino.mo
 share/locale/tr/LC_MESSAGES/vino.mo
 share/locale/ug/LC_MESSAGES/vino.mo
@@ -81,6 +82,8 @@ share/locale/zh_TW/LC_MESSAGES/vino.mo
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
