@@ -3,12 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.87 2007/11/23 06:47:21 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.88 2007/12/13 17:42:48 marcus Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	2.21.2
-PORTREVISION=	2
+PORTVERSION=	2.21.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,7 +16,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 version of xdm display manager
 
-BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
+BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
+		${LOCALBASE}/libdata/pkgconfig/check.pc:${PORTSDIR}/devel/check
 LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
@@ -33,6 +33,7 @@ USE_GNOME_SUBR=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomehier libgnomeui librsvg2 gnomedocutils \
 		gnomeprefix
+GCONF_SCHEMAS=	gdm-simple-greeter.schemas
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
@@ -43,8 +44,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 GNOME_LOCALSTATEDIR=	/var
 
-OPTIONS=	IPV6 "Enable IPv6 support" on \
-		LOG_LIMIT "Limit ~/.xsession-errors size" on
+OPTIONS=	IPV6 "Enable IPv6 support" on
 
 .include <bsd.port.pre.mk>
 
@@ -58,10 +58,6 @@ PLIST_SUB+=	PAM_MISC="@comment "
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
-.endif
-
-.if defined(WITHOUT_LOG_LIMIT)
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-daemon_slave.c
 .endif
 
 post-patch:
