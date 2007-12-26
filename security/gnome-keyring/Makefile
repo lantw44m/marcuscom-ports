@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/security/gnome-keyring/Makefile,v 1.49 2007/12/23 18:42:43 kwm Exp $
 #
 
 PORTNAME=	gnome-keyring
@@ -18,6 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A program that keeps passwords and other secrets
 
 LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
+		tasn1.3:${PORTSDIR}/security/libtasn1 \
     		gcrypt.13:${PORTSDIR}/security/libgcrypt
 
 USE_BZIP2=	yes
