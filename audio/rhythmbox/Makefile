@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.84 2007/12/23 16:20:17 kwm Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -81,12 +81,12 @@ PLIST_SUB+=	LIRC="@comment "
 
 .if defined(WITH_DAAP)
 CONFIGURE_ARGS+=	--enable-daap  --with-mdns=avahi
-LIB_DEPENDS+=		avahi-client:${PORTSDIR}/net/avahi \
+LIB_DEPENDS+=		avahi-client:${PORTSDIR}/net/avahi-app \
     			gnome-keyring:${PORTSDIR}/security/gnome-keyring
 PLIST_SUB+=		DAAP=""
 .else
 .if exists(${LOCALBASE}/lib/libavahi-client.a)
-LIB_DEPENDS+=		avahi-client:${PORTSDIR}/net/avahi
+LIB_DEPENDS+=		avahi-client:${PORTSDIR}/net/avahi-app
 .endif
 CONFIGURE_ARGS+=	--disable-daap
 PLIST_SUB+=		DAAP="@comment "
