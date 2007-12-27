@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-experimental/www/epiphany/Makefile,v 1.2 2007/10/22 03:33:34 ahze Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.157 2007/11/02 12:51:16 ahze Exp $
 #
 
 PORTNAME=	epiphany
@@ -44,6 +44,8 @@ PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/\.[0-9]+$//}" \
 
 MAN1=		epiphany.1
 
+OPTIONS		SPELL_CHECKER "Enable spell checking support" off
+
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
 WITH_GNOME=	yes
@@ -80,6 +82,11 @@ PLIST_SUB+=	PYTHON=""
 .else
 CONFIGURE_ARGS+=--disable-python
 PLIST_SUB+=	PYTHON="@comment "
+.endif
+
+.if defined(WITH_SPELL_CHECKER)
+LIB_DEPENDS+=	enchant.1:${PORTSDIR}/textproc/enchant
+CONFIGURE_ARGS+=--enable-spell-checker
 .endif
 
 post-patch:
