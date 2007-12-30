@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.84 2007/12/23 16:20:17 kwm Exp $
+#   $MCom: ports/audio/rhythmbox-devel/Makefile,v 1.85 2007/12/27 04:58:04 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
 PORTVERSION=	0.11.4
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.11
@@ -24,6 +24,8 @@ LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 		sexy.2:${PORTSDIR}/x11-toolkits/libsexy \
 		soup-2.2.8:${PORTSDIR}/devel/libsoup \
 		gnome-media-profiles.0:${PORTSDIR}/audio/gnome-media
+
+NO_LATEST_LINK=	yes
 
 USE_BZIP2=	yes
 USE_XLIB=	yes
