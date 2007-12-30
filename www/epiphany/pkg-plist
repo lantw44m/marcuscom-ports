@@ -1,12 +1,14 @@
 bin/epiphany
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-adblock-manager.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-adblock.h
+include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-base-embed.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-bookmarks-type-builtins.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-bookmarks.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-command-manager.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-cookie-manager.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-dbus.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-dialog.h
+include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-container.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-event.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-factory.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-persist.h
@@ -14,6 +16,7 @@ include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-prefs.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-shell.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-single.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-type-builtins.h
+include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-utils.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-extension.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-extensions-manager.h
@@ -30,7 +33,6 @@ include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-session.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-shell.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-state.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-statusbar.h
-include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-tab.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-type-builtins.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-window.h
 lib/epiphany/%%EPHY_VERSION%%/plugins/libdesktopfileplugin.la
@@ -40,6 +42,32 @@ share/aclocal/epiphany.m4
 share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/dbus-1/services/org.gnome.Epiphany.service
+%%DOCSDIR%%/EphyCommandManager.html
+%%DOCSDIR%%/EphyEmbed.html
+%%DOCSDIR%%/EphyNodeDb.html
+%%DOCSDIR%%/EphyTab.html
+%%DOCSDIR%%/EphyWindow.html
+%%DOCSDIR%%/ch01.html
+%%DOCSDIR%%/ch02.html
+%%DOCSDIR%%/epiphany-EphyEmbedFactory.html
+%%DOCSDIR%%/epiphany-EphyEmbedPersist.html
+%%DOCSDIR%%/epiphany-EphyEmbedSingle.html
+%%DOCSDIR%%/epiphany-EphyExtensionsManager.html
+%%DOCSDIR%%/epiphany-EphyGlade.html
+%%DOCSDIR%%/epiphany-EphyPermissionManager.html
+%%DOCSDIR%%/epiphany-ephy-cookie-manager.html
+%%DOCSDIR%%/epiphany-ephy-password-manager.html
+%%DOCSDIR%%/epiphany-ephy-session.html
+%%DOCSDIR%%/epiphany-ephy-shell.html
+%%DOCSDIR%%/epiphany.devhelp
+%%DOCSDIR%%/epiphany.devhelp2
+%%DOCSDIR%%/home.png
+%%DOCSDIR%%/index.html
+%%DOCSDIR%%/index.sgml
+%%DOCSDIR%%/left.png
+%%DOCSDIR%%/right.png
+%%DOCSDIR%%/style.css
+%%DOCSDIR%%/up.png
 %%DATADIR%%/about.ini
 %%DATADIR%%/chrome/branding/brand.dtd
 %%DATADIR%%/chrome/branding/brand.properties
@@ -195,6 +223,7 @@ share/icons/hicolor/scalable/apps/gnome-web-browser.svg
 share/locale/am/LC_MESSAGES/epiphany.mo
 share/locale/ar/LC_MESSAGES/epiphany.mo
 share/locale/az/LC_MESSAGES/epiphany.mo
+share/locale/be@latin/LC_MESSAGES/epiphany.mo
 share/locale/be/LC_MESSAGES/epiphany.mo
 share/locale/bg/LC_MESSAGES/epiphany.mo
 share/locale/bn/LC_MESSAGES/epiphany.mo
@@ -383,4 +412,6 @@ share/pygtk/2.0/defs/epiphany.defs
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
 @dirrmtry share/applications

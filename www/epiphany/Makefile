@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.157 2007/11/02 12:51:16 ahze Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.158 2007/12/27 07:36:55 marcus Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.20.1
-PORTREVISION=	1
+PORTVERSION=	2.21.4
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -44,7 +43,7 @@ PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/\.[0-9]+$//}" \
 
 MAN1=		epiphany.1
 
-OPTIONS		SPELL_CHECKER "Enable spell checking support" off
+OPTIONS=	SPELL_CHECKER "Enable spell checking support" off
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
