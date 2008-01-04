@@ -39,6 +39,8 @@ POST-INSTALL)
 		fi
 	fi
 	${MKDIR} -p /var/gdm
+	${MKDIR} -p /var/gdm/.gconf
+	${MKDIR} -p /var/gdm/.gconfd
 	${MKDIR} -p /var/log/gdm
 	${CHOWN} -R root:${GROUP} /var/gdm
 	${CHMOD} 1770 /var/gdm
