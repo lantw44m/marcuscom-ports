@@ -101,6 +101,7 @@ share/locale/lv/LC_MESSAGES/sound-juicer.mo
 share/locale/mk/LC_MESSAGES/sound-juicer.mo
 share/locale/ml/LC_MESSAGES/sound-juicer.mo
 share/locale/mn/LC_MESSAGES/sound-juicer.mo
+share/locale/mr/LC_MESSAGES/sound-juicer.mo
 share/locale/ms/LC_MESSAGES/sound-juicer.mo
 share/locale/nb/LC_MESSAGES/sound-juicer.mo
 share/locale/ne/LC_MESSAGES/sound-juicer.mo
@@ -184,6 +185,8 @@ share/omf/sound-juicer/sound-juicer-uk.omf
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
