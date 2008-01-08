@@ -2,12 +2,12 @@
 # Date created:				08 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome-session/Makefile,v 1.58 2007/12/12 04:48:43 mezz Exp $
-#   $MCom: ports-stable/x11/gnome-session/Makefile,v 1.1 2007/12/01 20:11:32 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.128 2008/01/05 03:15:49 marcus Exp $
 #
 
 PORTNAME=	gnome-session
-PORTVERSION=	2.20.2
+PORTVERSION=	2.20.3
 PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
