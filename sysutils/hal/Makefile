@@ -2,25 +2,22 @@
 # Date Created:			02 May 2006
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/hal/Makefile,v 1.30 2007/12/24 19:42:03 marcus Exp $
-#   $MCom: ports/sysutils/hal/Makefile,v 1.26 2006/10/13 10:00:57 ahze Exp $
+# $FreeBSD$
+#   $MCom: ports/sysutils/hal/Makefile,v 1.28 2008/01/08 06:46:45 marcus Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
-PORTREVISION?=	0
-CATEGORIES?=	sysutils
+CATEGORIES=	sysutils
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT?=	Hardware Abstraction Layer for simplifying device access
+COMMENT=	Hardware Abstraction Layer for simplifying device access
 
-.if !defined(HAL_SLAVE)
 LIB_DEPENDS=	polkit.2:${PORTSDIR}/sysutils/policykit \
 		volume_id.0:${PORTSDIR}/devel/libvolume_id \
 		ck-connector.0:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:${PORTSDIR}/misc/pciids
-.endif
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
@@ -51,7 +48,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 HALVERSION=	0.5.10
 SNAPVERSION=	20080106
 
-.if !defined(HAL_SLAVE)
 USE_RC_SUBR=	hald
 USE_GNOME_SUBR=	yes
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${HALVERSION}
@@ -70,20 +66,6 @@ MAN1=		hal-disable-polling.1 hal-find-by-capability.1 \
 MAN8=		hald.8
 
 OPTIONS=	FIXED_MOUNTPOINTS "use fixed mountpoints" off
-.else # Slave port stuff
-LIB_DEPENDS+=	hal.1:${PORTSDIR}/sysutils/hal
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
-
-USE_GNOME+=	pygnome2
-DESKTOP_ENTRIES="Device Manager" \
-		"Examine your devices" \
-		"${DATADIR}/device-manager/hal-bus-pci.png" \
-		"hal-device-manager" \
-		"Application;System;" \
-		true
-BUILD_WRKSRC=	${WRKSRC}/tools/device-manager
-INSTALL_WRKSRC=	${BUILD_WRKSRC}
-.endif
 
 .include <bsd.port.pre.mk>
 
@@ -91,7 +73,6 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 IGNORE=	not supported on FreeBSD prior to 5.5-RELEASE
 .endif
 
-.if !defined(HAL_SLAVE)
 .if (${ARCH}=="i386" || ${ARCH}=="amd64" || ${ARCH}=="ia64")
 RUN_DEPENDS+=	dmidecode:${PORTSDIR}/sysutils/dmidecode
 .endif
@@ -106,13 +87,8 @@ PLIST_SUB+=	MEDIA="@comment "
 .if defined(WITH_FIXED_MOUNTPOINTS)
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-tools_hal-storage-mount.c
 .endif
-.endif
 
 post-patch:
-.if !defined(HAL_SLAVE)
-	@${REINPLACE_CMD} -e 's|device-manager||' \
-		${WRKSRC}/tools/Makefile.in
-.endif
 	@${REINPLACE_CMD} -e '/^scriptdir = /s|libdir|libexecdir|' \
 		${WRKSRC}/tools/Makefile.in \
 		${WRKSRC}/tools/freebsd/Makefile.in
@@ -122,14 +98,12 @@ post-patch:
 		${WRKSRC}/hal.conf.in
 
 post-install:
-.if !defined(HAL_SLAVE)
 	${MKDIR} ${DATADIR}/dist
 	${INSTALL_DATA} ${WRKSRC}/hal.conf ${DATADIR}/dist
 	@${SETENV} PKG_PREFIX=${PREFIX} PACKAGE_BUILDING=${PACKAGE_BUILDING} \
 		${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .if !defined(PACKAGE_BUILDING) && defined(NEEDS_MEDIA)
 	${MKDIR} /media
-.endif
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/hald/freebsd/README \
