@@ -3,11 +3,11 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.93 2007/11/13 06:25:27 marcus Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.94 2007/12/23 13:14:28 kwm Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	2.21.5
+PORTVERSION=	2.21.90
 PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
@@ -126,7 +126,7 @@ post-patch:
 post-install:
 	@-update-desktop-database
 	${MKDIR} ${PREFIX}/share/vala/vapi
-	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.vala ${PREFIX}/share/vala/vapi
+	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.vapi ${PREFIX}/share/vala/vapi
 	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.deps ${PREFIX}/share/vala/vapi
 
 .include <bsd.port.post.mk>
