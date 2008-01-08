@@ -2,8 +2,8 @@
 # Date Created:			01 May 2006
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/policykit/Makefile,v 1.5 2007/10/04 06:10:14 edwin Exp $
-#   $MCom: ports/sysutils/policykit/Makefile,v 1.12 2006/10/07 19:45:38 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/sysutils/policykit/Makefile,v 1.14 2008/01/08 06:44:08 marcus Exp $
 #
 
 PORTNAME=	policykit
