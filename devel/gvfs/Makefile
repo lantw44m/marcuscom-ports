@@ -3,26 +3,31 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gvfs/Makefile,v 1.2 2007/11/06 23:49:40 ahze Exp $
+#    $MCom: ports/devel/gvfs/Makefile,v 1.3 2007/11/16 03:49:34 marcus Exp $
 
 PORTNAME=	gvfs
-PORTVERSION=	0.0.2
+PORTVERSION=	0.1.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME virtual file system
 
-LIB_DEPENDS=	gio.0:${PORTSDIR}/devel/gio-standalone \
-		dbus-1.3:${PORTSDIR}/devel/dbus
+LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
+    		hal.1:${PORTSDIR}/sysutils/hal
+RUN_DEPENDS=	gnome-mount:${PORTSDIR}/sysutils/gnome-mount
 
 USE_GNOME=	glib20 gnomehack gnomeprefix
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+
 OPTIONS=	FUSE "Enable fuse" on \
 		SAMBA "Enable Samba" on
+#		CDDA "Enable CDDA" on
 
 .include <bsd.port.pre.mk>
 
@@ -41,5 +46,13 @@ PLIST_SUB+=	SMB=""
 CONFIGURE_ARGS+=	--disable-samba
 PLIST_SUB+=	SMB="@comment "
 .endif
+
+#.if defined(WITH_CDDA)
+#LIB_DEPENDS+=	cdio_paranoia.0:${PORTSDIR}/sysutils/libcdio
+#PLIST_SUB+=	CDDA=""
+#.else
+CONFIGURE_ARGS+=	--disable-cdda
+PLIST_SUB+=	CDDA="@comment "
+#.endif
 
 .include <bsd.port.post.mk>

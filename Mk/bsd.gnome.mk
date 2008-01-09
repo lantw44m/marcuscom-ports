@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.429 2007/08/04 22:09:00 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.430 2007/10/29 11:44:38 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -57,9 +57,9 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
 
 # GNOME 2 components
 _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gail \
-		gal2 gconf2 glib20 gnomecontrolcenter2 gnomedesktop gnomedocutils \
+		gal2 gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop gnomedocutils \
 		gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk20 \
-		gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 \
+		gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 gvfs \
 		libartlgpl2 libbonobo libbonoboui libgailgnome libgda2 libgda3 \
 		libglade2 libgnome libgnomecanvas libgnomedb libgnomekbd libgnomeprint \
 		libgnomeprintui libgnomeui libgsf libgsf_gnome libgtkhtml libidl \
@@ -250,9 +250,13 @@ pygnome_BUILD_DEPENDS=	${pygnome_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome
 pygnome_RUN_DEPENDS=	${pygnome_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome
 pygnome_USE_GNOME_IMPL=	gtkhtml pygtk
 
-glib20_LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20
-glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
-glib20_USE_GNOME_IMPL=gnometarget pkgconfig
+_glib20_LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20
+_glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
+_glib20_USE_GNOME_IMPL=	gnometarget pkgconfig
+
+glib20_RUN_DEPENDS=	${LOCALBASE}/lib/gio/modules/libgiofam.so:${PORTSDIR}/devel/gio-fam-backend
+glib20_DETECT=		${LOCALBASE}/lib/gio/modules/libgiofam.so
+glib20_USE_GNOME_IMPL=	_glib20
 
 atk_LIB_DEPENDS=	atk-1.0.0:${PORTSDIR}/accessibility/atk
 atk_DETECT=		${LOCALBASE}/libdata/pkgconfig/atk.pc
@@ -509,6 +513,10 @@ pygtksourceview_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygtksourceview-2.0.pc
 pygtksourceview_BUILD_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkits/py-gtksourceview
 pygtksourceview_RUN_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkits/py-gtksourceview
 pygtksourceview_USE_GNOME_IMPL=	gtksourceview2 pygtk2
+
+gvfs_DETECT=			${LOCALBASE}/lib/libgvfscommon.so
+gvfs_LIB_DEPENDS=		gvfscommon.0:${PORTSDIR}/devel/gvfs
+gvfs_USE_GNOME_IMPL=		glib20
 
 ########
 #### NOTE: DO NOT COMMIT THIS NEXT PART TO THE MAIN FREEBSD REPO

@@ -1,0 +1,38 @@
+--- configure.orig	2007-12-22 18:32:00.000000000 -0500
++++ configure	2007-12-22 18:32:13.000000000 -0500
+@@ -24091,7 +24091,7 @@ if test "x$enable_cdda" != "xno"; then
+   msg_cdda=yes
+ fi
+ 
+-  if test "x$msg_cdda" == "xyes"; then
++  if test "x$msg_cdda" = "xyes"; then
+ 
+ pkg_failed=no
+ { echo "$as_me:$LINENO: checking for CDDA" >&5
+@@ -24242,7 +24242,7 @@ if test "x$enable_fuse" != "xno"; then
+   msg_fuse=yes
+ fi
+ 
+-  if test "x$msg_fuse" == "xyes"; then
++  if test "x$msg_fuse" = "xyes"; then
+ 
+ pkg_failed=no
+ { echo "$as_me:$LINENO: checking for FUSE" >&5
+@@ -24394,7 +24394,7 @@ if test "x$enable_hal" != "xno"; then
+   msg_hal=yes
+ fi
+ 
+-  if test "x$msg_hal" == "xyes"; then
++  if test "x$msg_hal" = "xyes"; then
+ 
+ pkg_failed=no
+ { echo "$as_me:$LINENO: checking for HAL" >&5
+@@ -24576,7 +24576,7 @@ if test $ac_cv_lib_hal_libhal_get_all_de
+   have_hal_fast_init=yes
+ fi
+ 
+-    if test "x$have_hal_fast_init" == "xyes"; then
++    if test "x$have_hal_fast_init" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_HAL_FAST_INIT 1

@@ -1,0 +1,10 @@
+--- Makefile.in.orig	2007-12-30 16:07:20.000000000 -0500
++++ Makefile.in	2007-12-30 16:07:26.000000000 -0500
+@@ -220,7 +220,6 @@ SUBDIRS = \
+ 	daemon \
+ 	po   \
+ 	programs \
+-	test \
+ 	hal \
+ 	$(NULL)
+ 
