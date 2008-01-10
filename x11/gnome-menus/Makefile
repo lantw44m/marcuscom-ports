@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-menus/Makefile,v 1.64 2007/10/15 21:09:56 mezz Exp $
+#   $MCom: ports/x11/gnome-menus/Makefile,v 1.66 2007/11/15 20:57:06 marcus Exp $
 #
 
 PORTNAME=	gnome-menus
-PORTVERSION=	2.21.2
+PORTVERSION=	2.21.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -20,18 +20,14 @@ USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
+USE_FAM=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomevfs2 ltverhack
 USE_AUTOTOOLS=	libtool:15
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
+CONFIGURE_ARGS=	--with-monitor-backend=fam
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-
-.include <bsd.port.pre.mk>
-
-.if exists(${LOCALBASE}/lib/libfam.so) || !defined(WITHOUT_FAM)
-USE_FAM=	yes
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu||' \
@@ -52,4 +48,4 @@ post-install:
 	@${INSTALL_DATA} ${WRKSRC}/KDE.directory \
 		${PREFIX}/share/desktop-directories
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
