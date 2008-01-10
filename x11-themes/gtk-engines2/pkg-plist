@@ -48,6 +48,7 @@ share/locale/ja/LC_MESSAGES/gtk-engines.mo
 share/locale/ko/LC_MESSAGES/gtk-engines.mo
 share/locale/lt/LC_MESSAGES/gtk-engines.mo
 share/locale/mk/LC_MESSAGES/gtk-engines.mo
+share/locale/mr/LC_MESSAGES/gtk-engines.mo
 share/locale/nb/LC_MESSAGES/gtk-engines.mo
 share/locale/nl/LC_MESSAGES/gtk-engines.mo
 share/locale/nn/LC_MESSAGES/gtk-engines.mo
@@ -92,6 +93,8 @@ share/themes/ThinIce/gtk-2.0/gtkrc
 @dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
