@@ -1,0 +1,11 @@
+--- gconf-2.0.pc.in.orig	2008-01-10 02:17:24.000000000 -0500
++++ gconf-2.0.pc.in	2008-01-10 02:17:31.000000000 -0500
+@@ -8,7 +8,7 @@ gconf_serverdir=@libexecdir@
+ Name: gconf
+ Description: GNOME Config System.
+ Version: @VERSION@
+-Requires: glib
++Requires: glib-2.0
+ Requires.private: ORBit-2.0
+ Libs: -L${libdir} -lgconf-@MAJOR_VERSION@
+ Cflags: -I${includedir}/gconf/@MAJOR_VERSION@
