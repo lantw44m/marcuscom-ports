@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gvfs/Makefile,v 1.3 2007/11/16 03:49:34 marcus Exp $
+#    $MCom: ports/devel/gvfs/Makefile,v 1.4 2008/01/09 19:55:23 marcus Exp $
 
 PORTNAME=	gvfs
 PORTVERSION=	0.1.1
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -15,7 +16,6 @@ COMMENT=	GNOME virtual file system
 
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
     		hal.1:${PORTSDIR}/sysutils/hal
-RUN_DEPENDS=	gnome-mount:${PORTSDIR}/sysutils/gnome-mount
 
 USE_GNOME=	glib20 gnomehack gnomeprefix
 USE_GMAKE=	yes
