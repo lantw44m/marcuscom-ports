@@ -42,10 +42,15 @@ POST-INSTALL)
 	${MKDIR} -p /var/gdm/.gconf
 	${MKDIR} -p /var/gdm/.gconfd
 	${MKDIR} -p /var/log/gdm
+	${CHMOD} 0755 /var/log/gdm
+	${CHOWN} root:wheel /var/log/gdm
 	${CHOWN} -R root:${GROUP} /var/gdm
 	${CHMOD} 1770 /var/gdm
 	${CHOWN} root:wheel ${PKG_PREFIX}/share/gdm
 	${CHMOD} 0755 ${PKG_PREFIX}/share/gdm
+	${MKDIR} -p /var/lib/gdm
+	${CHMOD} 1770 /var/lib/gdm
+	${CHOWN} root:${GROUP} /var/lib/gdm
 
 	${MKDIR} -p ${PKG_PREFIX}/etc/dm/Sessions
 	exit 0

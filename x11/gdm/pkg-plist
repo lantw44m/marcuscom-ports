@@ -160,6 +160,7 @@ share/xsessions/gnome.desktop
 @dirrmtry share/log
 @unexec /bin/rm -rf /var/gdm 2>/dev/null || /usr/bin/true
 @unexec /bin/rm -rf /var/log/gdm 2>/dev/null || /usr/bin/true
+@unexec /bin/rm -rf /var/lig/gdm 2>/dev/null || /usr/bin/true
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
