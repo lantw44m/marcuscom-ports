@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/policykit/Makefile,v 1.14 2008/01/08 06:44:08 marcus Exp $
+#   $MCom: ports/sysutils/policykit/Makefile,v 1.15 2008/01/08 06:53:25 marcus Exp $
 #
 
 PORTNAME=	policykit
@@ -17,7 +17,8 @@ COMMENT=	Framework for controlling access to system-wide components
 
 BUILD_DEPENDS=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
     		${LOCALBASE}/share/sgml/docbook/4.1/catalog:${PORTSDIR}/textproc/docbook-410 \
-		xsltproc:${PORTSDIR}/textproc/libxslt
+		xsltproc:${PORTSDIR}/textproc/libxslt \
+		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
     		expat.6:${PORTSDIR}/textproc/expat2
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
