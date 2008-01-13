@@ -3,9 +3,6 @@ bin/services-admin
 bin/shares-admin
 bin/time-admin
 bin/users-admin
-lib/nautilus/extensions-1.0/libnautilus-gst-shares.a
-lib/nautilus/extensions-1.0/libnautilus-gst-shares.la
-lib/nautilus/extensions-1.0/libnautilus-gst-shares.so
 libdata/pkgconfig/gnome-system-tools.pc
 share/applications/network.desktop
 share/applications/services.desktop
@@ -253,10 +250,6 @@ share/omf/users-admin/users-admin-sv.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
-@dirrm share/icons/hicolor/48x48/devices
-@dirrm share/icons/hicolor/48x48
-@dirrm share/icons/hicolor
-@dirrm share/icons
 @dirrm share/gnome/help/users-admin/sv/figures
 @dirrm share/gnome/help/users-admin/sv
 @dirrm share/gnome/help/users-admin/ru/figures
@@ -333,3 +326,4 @@ share/omf/users-admin/users-admin-sv.omf
 @dirrm %%DATADIR%%/ui
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%
+@dirrmtry share/applications
