@@ -1,0 +1,40 @@
+bin/dwell-click-applet
+bin/mousetweaks
+bin/mousetweaks-preferences
+bin/pointer-capture-applet
+libdata/bonobo/servers/DwellClick_Factory.server
+libdata/bonobo/servers/PointerCapture_Factory.server
+share/applications/mousetweaks-preferences.desktop
+share/gnome/autostart/mousetweaks.desktop
+share/gnome/help/mousetweaks/C/figures/mt-add-applet-to-panel-window.png
+share/gnome/help/mousetweaks/C/figures/mt-control-panel-delay-click-enabled.png
+share/gnome/help/mousetweaks/C/figures/mt-control-panel-dwell-click-enabled.png
+share/gnome/help/mousetweaks/C/figures/mt-delay-click-checkbox.png
+share/gnome/help/mousetweaks/C/figures/mt-delay-click-pause-time-slider.png
+share/gnome/help/mousetweaks/C/figures/mt-dwell-click-checkbox.png
+share/gnome/help/mousetweaks/C/figures/mt-dwell-click-click-type-applet.png
+share/gnome/help/mousetweaks/C/figures/mt-dwell-click-click-type-window.png
+share/gnome/help/mousetweaks/C/figures/mt-dwell-click-gesture-mapping.png
+share/gnome/help/mousetweaks/C/figures/mt-dwell-click-ignore-movement-slider.png
+share/gnome/help/mousetweaks/C/figures/mt-dwell-click-pause-time-slider.png
+share/gnome/help/mousetweaks/C/figures/mt-dwell-click-trigger-choice.png
+share/gnome/help/mousetweaks/C/figures/mt-pointer-capture-context-menu.png
+share/gnome/help/mousetweaks/C/figures/mt-pointer-capture-locked.png
+share/gnome/help/mousetweaks/C/figures/mt-pointer-capture-preferences-window.png
+share/gnome/help/mousetweaks/C/legal.xml
+share/gnome/help/mousetweaks/C/mousetweaks.xml
+share/locale/de/LC_MESSAGES/mousetweaks.mo
+share/locale/fr/LC_MESSAGES/mousetweaks.mo
+share/locale/it/LC_MESSAGES/mousetweaks.mo
+share/mousetweaks/ctw.glade
+share/mousetweaks/dwell-click-applet.glade
+share/mousetweaks/human-double.png
+share/mousetweaks/human-drag.png
+share/mousetweaks/human-right.png
+share/mousetweaks/human-single.png
+share/mousetweaks/mousetweaks.glade
+share/mousetweaks/pointer-capture-applet.glade
+@dirrm share/mousetweaks
+@dirrm share/gnome/help/mousetweaks/C/figures
+@dirrm share/gnome/help/mousetweaks/C
+@dirrm share/gnome/help/mousetweaks
