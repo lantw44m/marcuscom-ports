@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/security/seahorse/Makefile,v 1.49 2007/12/23 18:25:56 kwm Exp $
 #
 
 PORTNAME=	seahorse
@@ -38,8 +38,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 GCONF_SCHEMAS=	seahorse.schemas
 MAN1=		seahorse-agent.1 seahorse-daemon.1 seahorse-tool.1
 
-OPTIONS=	NAUTILUS "Enable the Nautilus component" on \
-		LDAP "Enable LDAP support" on \
+#OPTIONS=	NAUTILUS "Enable the Nautilus component" on
+OPTIONS=	LDAP "Enable LDAP support" on \
 		HKP "Enable HKP keyserver interface" on \
 		EPIPHANY "Enable Epiphany plug-in support" on \
 		NOTIFY "Enable libnotify support" on \
@@ -60,13 +60,13 @@ PLIST_SUB+=	GEDIT="@comment "
 CONFIGURE_ARGS+=--disable-gedit
 .endif
 
-.if !defined(WITHOUT_NAUTILUS)
-USE_GNOME+=	nautilus2
-PLIST_SUB+=	NAUTILUS=""
-.else
+#.if !defined(WITHOUT_NAUTILUS)
+#USE_GNOME+=	nautilus2
+#PLIST_SUB+=	NAUTILUS=""
+#.else
 PLIST_SUB+=	NAUTILUS="@comment "
 CONFIGURE_ARGS+=--disable-nautilus
-.endif
+#.endif
 
 .if !defined(WITHOUT_LDAP)
 USE_OPENLDAP=	yes
