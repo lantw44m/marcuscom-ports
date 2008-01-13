@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/liboobs/Makefile,v 1.28 2007/11/15 22:14:04 marcus Exp $
+#   $MCom: ports/devel/liboobs/Makefile,v 1.29 2008/01/13 18:18:39 mezz Exp $
 #
 
 PORTNAME=	liboobs
@@ -26,9 +26,5 @@ USE_GNOME=	gnomehack glib20
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include"
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|HAL_REQUIRED=0.5.9|HAL_REQUIRED=0.5.8|g' \
-	    	${WRKSRC}/configure
 
 .include <bsd.port.mk>
