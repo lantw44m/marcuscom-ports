@@ -3,9 +3,8 @@ include/liboobs-1.0/oobs/oobs-groupsconfig.h
 include/liboobs-1.0/oobs/oobs-hostsconfig.h
 include/liboobs-1.0/oobs/oobs-iface-ethernet.h
 include/liboobs-1.0/oobs/oobs-iface-irlan.h
-include/liboobs-1.0/oobs/oobs-iface-isdn.h
-include/liboobs-1.0/oobs/oobs-iface-modem.h
 include/liboobs-1.0/oobs/oobs-iface-plip.h
+include/liboobs-1.0/oobs/oobs-iface-ppp.h
 include/liboobs-1.0/oobs/oobs-iface-wireless.h
 include/liboobs-1.0/oobs/oobs-iface.h
 include/liboobs-1.0/oobs/oobs-ifacesconfig.h
