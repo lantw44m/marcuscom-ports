@@ -189,6 +189,14 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/audio-cdda.xml > /dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/blank-media.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/image-dcf.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/software-autostart.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/video-dvd.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/video-svcd.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/video-vcd.xml >/dev/null || /usr/bin/true
+@dirrmtry share/mime/x-content
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
