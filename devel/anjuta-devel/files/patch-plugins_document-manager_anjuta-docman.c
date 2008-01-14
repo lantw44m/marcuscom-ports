@@ -1,14 +1,14 @@
---- plugins/document-manager/anjuta-docman.c.orig	2007-10-09 10:19:41.000000000 +0200
-+++ plugins/document-manager/anjuta-docman.c	2007-11-02 12:04:00.000000000 +0100
-@@ -919,6 +919,7 @@
+--- plugins/document-manager/anjuta-docman.c.orig	2008-01-10 22:41:20.000000000 +0100
++++ plugins/document-manager/anjuta-docman.c	2008-01-13 17:22:34.000000000 +0100
+@@ -1101,6 +1101,7 @@ anjuta_docman_goto_file_line_mark (Anjut
  	const gchar *linenum;
- 	glong lineno;
+ 	gint lineno;
  	gboolean is_local_uri;
 +	gchar normalized_path_buf[PATH_MAX];
  	gchar *normalized_path = NULL;
  	
  	IAnjutaDocument *doc;
-@@ -944,9 +945,11 @@
+@@ -1126,9 +1127,11 @@ anjuta_docman_goto_file_line_mark (Anjut
  	/* Get the normalized file path for comparision */
  	is_local_uri = gnome_vfs_uri_is_local (vfs_uri);
  	if (is_local_uri)
@@ -23,46 +23,48 @@
  	
  	gnome_vfs_uri_unref (vfs_uri);
  	/* g_free(filename); */
-@@ -960,6 +963,7 @@
- 		AnjutaDocmanPage *page;
- 		gboolean te_is_local_uri;
- 		gchar *te_uri;
-+		char te_normalized_path_buf[PATH_MAX];
- 		gchar *te_normalized_path = NULL;
+@@ -1150,6 +1153,7 @@ anjuta_docman_goto_file_line_mark (Anjut
+ 		if (te_uri)
+ 		{
+ 			gboolean te_is_local_uri;
++			char te_normalized_path_buf[PATH_MAX];
+ 			gchar *te_normalized_path;
  		
- 		page = (AnjutaDocmanPage *) node->data;
-@@ -977,9 +981,11 @@
- 		te_is_local_uri = gnome_vfs_uri_is_local (vfs_uri);
- 		if (te_is_local_uri)
- 			te_normalized_path = realpath (gnome_vfs_uri_get_path (vfs_uri),
--										   NULL);
--		if (te_normalized_path == NULL)
--			te_normalized_path = g_strdup (te_uri);
-+										   te_normalized_path_buf);
-+		if (te_normalized_path == NULL) {
-+			(void) strlcpy (te_normalized_path_buf, te_uri, PATH_MAX);
-+			te_normalized_path = te_normalized_path_buf;
-+		}
- 		gnome_vfs_uri_unref (vfs_uri);
- 		
- 		if (strcmp (normalized_path, te_normalized_path) == 0
-@@ -1001,15 +1007,12 @@
- 			an_file_history_push (te_uri, lineno);
- 			g_free (uri);
- 			g_free (te_uri);
--			g_free (normalized_path);
--			g_free (te_normalized_path);
- 			if (IANJUTA_IS_EDITOR(doc))
- 				return IANJUTA_EDITOR(doc);
+ 			/* Get the normalized file path for comparision */
+@@ -1157,9 +1161,13 @@ anjuta_docman_goto_file_line_mark (Anjut
+ 			te_is_local_uri = gnome_vfs_uri_is_local (vfs_uri);
+ 			if (te_is_local_uri)
+ 				te_normalized_path = realpath (gnome_vfs_uri_get_path (vfs_uri),
+-											   NULL);
++											   te_normalized_path_buf);
  			else
- 				return NULL;
+ 				te_normalized_path = g_strdup (te_uri);
++			if (te_normalized_path == NULL) {
++				(void) strlcpy (te_normalized_path_buf, te_uri, PATH_MAX);
++				te_normalized_path = te_normalized_path_buf;
++			}
+ 			gnome_vfs_uri_unref (vfs_uri);
+ 
+ 			if (normalized_path && te_normalized_path)
+@@ -1181,9 +1189,7 @@ anjuta_docman_goto_file_line_mark (Anjut
+ 					anjuta_docman_present_notebook_page (docman, doc);
+ 					an_file_history_push (te_uri, lineno);
+ 					g_free (te_uri);
+-					g_free (te_normalized_path);
+ 					g_free (uri);
+-					g_free (normalized_path);
+ 					return IANJUTA_EDITOR (doc);
+ 				}
+ 			}
+@@ -1192,7 +1198,6 @@ anjuta_docman_goto_file_line_mark (Anjut
+ 				DEBUG_PRINT ("Unexpected NULL path");
+ 			}
+ 			g_free (te_uri);
+-			g_free (te_normalized_path);
  		}
- 		g_free (te_uri);
--		g_free (te_normalized_path);
- 		node = g_list_next (node);
  	}
- 	te = anjuta_docman_add_editor (docman, uri, NULL);
-@@ -1028,7 +1031,6 @@
+ 	/* no deal, open a new document */
+@@ -1213,7 +1218,6 @@ anjuta_docman_goto_file_line_mark (Anjut
  		}
  	}
  	g_free (uri);
