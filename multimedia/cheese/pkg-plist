@@ -1,0 +1,72 @@
+bin/cheese
+share/applications/cheese.desktop
+%%DATADIR%%/cheese-ui.xml
+%%DATADIR%%/cheese.glade
+%%DATADIR%%/effects/Hulk.png
+%%DATADIR%%/effects/Mauve.png
+%%DATADIR%%/effects/NoirBlanc.png
+%%DATADIR%%/effects/Saturation.png
+%%DATADIR%%/effects/dicetv.png
+%%DATADIR%%/effects/edgetv.png
+%%DATADIR%%/effects/identity.png
+%%DATADIR%%/effects/shagadelictv.png
+%%DATADIR%%/effects/vertigotv.png
+%%DATADIR%%/effects/videoflip_h.png
+%%DATADIR%%/effects/videoflip_v.png
+%%DATADIR%%/effects/warptv.png
+%%DATADIR%%/pixmaps/thumbnail-frame.png
+%%DATADIR%%/sounds/shutter0.ogg
+%%DATADIR%%/sounds/shutter1.ogg
+%%DATADIR%%/sounds/shutter2.ogg
+%%DATADIR%%/sounds/shutter3.ogg
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+share/gnome/help/cheese/C/cheese.xml
+share/gnome/help/cheese/C/figures/cheese-screenshot.jpg
+share/gnome/help/cheese/C/legal.xml
+share/gnome/help/cheese/oc/cheese.xml
+share/gnome/help/cheese/oc/figures/cheese-screenshot.jpg
+share/icons/hicolor/16x16/apps/cheese.png
+share/icons/hicolor/22x22/apps/cheese.png
+share/icons/hicolor/24x24/apps/cheese.png
+share/icons/hicolor/32x32/apps/cheese.png
+share/icons/hicolor/48x48/apps/cheese.png
+share/icons/hicolor/scalable/apps/cheese.svg
+share/locale/ar/LC_MESSAGES/cheese.mo
+share/locale/ca/LC_MESSAGES/cheese.mo
+share/locale/cs/LC_MESSAGES/cheese.mo
+share/locale/da/LC_MESSAGES/cheese.mo
+share/locale/de/LC_MESSAGES/cheese.mo
+share/locale/el/LC_MESSAGES/cheese.mo
+share/locale/es/LC_MESSAGES/cheese.mo
+share/locale/fr/LC_MESSAGES/cheese.mo
+share/locale/gl/LC_MESSAGES/cheese.mo
+share/locale/it/LC_MESSAGES/cheese.mo
+share/locale/ja/LC_MESSAGES/cheese.mo
+share/locale/nb/LC_MESSAGES/cheese.mo
+share/locale/nl/LC_MESSAGES/cheese.mo
+share/locale/oc/LC_MESSAGES/cheese.mo
+share/locale/pl/LC_MESSAGES/cheese.mo
+share/locale/pt/LC_MESSAGES/cheese.mo
+share/locale/ro/LC_MESSAGES/cheese.mo
+share/locale/sl/LC_MESSAGES/cheese.mo
+share/locale/sv/LC_MESSAGES/cheese.mo
+share/omf/cheese/cheese-C.omf
+share/omf/cheese/cheese-oc.omf
+@dirrm share/omf/cheese
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrm share/gnome/help/cheese/oc/figures
+@dirrm share/gnome/help/cheese/oc
+@dirrm share/gnome/help/cheese/C/figures
+@dirrm share/gnome/help/cheese/C
+@dirrm share/gnome/help/cheese
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm %%DATADIR%%/sounds
+@dirrm %%DATADIR%%/pixmaps
+@dirrm %%DATADIR%%/effects
+@dirrm %%DATADIR%%
+@dirrmtry share/applications
