@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/graphics/evince/Makefile,v 1.1 2007/12/01 19:16:37 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.83 2007/12/04 17:12:02 ahze Exp $
 #
 
 PORTNAME=	evince
@@ -16,7 +16,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 multi-format document viewer
 
 LIB_DEPENDS=	poppler-glib.2:${PORTSDIR}/graphics/poppler-gtk
-RUN_DEPENDS=	unzip:${PORTSDIR}/archivers/unzip
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
@@ -33,7 +32,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas \
-		evince-thumbnailer-ps.schemas evince-thumbnailer-comics.schemas
+		evince-thumbnailer-ps.schemas
 
 MAN1=		evince.1
 
@@ -41,6 +40,7 @@ OPTIONS=	DVI		"Enable DVI viewer support"		off \
 		T1LIB		"Enable T1LIB for TYPE1 fonts to DVI (Enables DVI)"	off \
 		NAUTILUS	"Enable Nautilus plugin"		on  \
 		DBUS		"Enable D-BUS support"			on \
+		COMICS		"Enable comic book archives support"	on \
 		IMPRESS		"Enable Impress presentations support"	off \
 		DJVU		"Enable DJVU support"			off
 
@@ -94,6 +94,14 @@ CONFIGURE_ARGS+=	--disable-djvu
 
 .if !defined(WITHOUT_DBUS)
 LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+.endif
+
+.if !defined(WITHOUT_COMICS)
+RUN_DEPENDS+=		unzip:${PORTSDIR}/archivers/unzip
+CONFIGURE_ARGS+=	--enable-comics
+GCONF_SCHEMAS+=		evince-thumbnailer-comics.schemas
+.else
+CONFIGURE_ARGS+=	--disable-comics
 .endif
 
 post-patch:
