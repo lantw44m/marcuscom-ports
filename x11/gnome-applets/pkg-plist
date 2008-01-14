@@ -1,13 +1,6 @@
 %%CPUFREQ%%bin/cpufreq-selector
 %%PYTHON%%bin/invest-chart
 %%BATTERY%%etc/sound/events/battstat_applet.soundlist
-include/libgweather/gweather-gconf.h
-include/libgweather/gweather-prefs.h
-include/libgweather/weather.h
-lib/libgweather.a
-lib/libgweather.la
-lib/libgweather.so
-lib/libgweather.so.0
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/__init__.py
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/__init__.pyc
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/__init__.pyo
@@ -52,7 +45,6 @@ libdata/bonobo/servers/GNOME_Panel_TrashApplet.server
 libdata/bonobo/servers/GNOME_Panel_WirelessApplet.server
 libdata/bonobo/servers/GNOME_StickyNotesApplet.server
 %%PYTHON%%libdata/bonobo/servers/Invest_Applet.server
-libdata/pkgconfig/gweather.pc
 libexec/accessx-status-applet
 %%BATTERY%%libexec/battstat-applet-2
 libexec/charpick_applet2
@@ -112,8 +104,6 @@ share/gnome-2.0/ui/GNOME_StickyNotesApplet.xml
 %%PYTHON%%%%DATADIR%%/glade/prefs-dialog.glade
 %%DATADIR%%/glade/stickynotes.glade
 %%DATADIR%%/glade/trashapplet.glade
-%%DATADIR%%/gweather/Locations.xml
-%%DATADIR%%/gweather/locations.dtd
 %%PYTHON%%%%DATADIR%%/invest-applet/invest-16.png
 %%PYTHON%%%%DATADIR%%/invest-applet/invest-button.png
 %%PYTHON%%%%DATADIR%%/invest-applet/invest.svg
@@ -322,6 +312,11 @@ share/gnome/help/char-palette/bg/figures/charpalette_applet.png
 share/gnome/help/char-palette/bg/figures/charpalette_chargroup.png
 share/gnome/help/char-palette/bg/figures/charpick-preferences.png
 share/gnome/help/char-palette/bg/figures/charpick_characters.png
+share/gnome/help/char-palette/ca/char-palette.xml
+share/gnome/help/char-palette/ca/figures/charpalette_applet.png
+share/gnome/help/char-palette/ca/figures/charpalette_chargroup.png
+share/gnome/help/char-palette/ca/figures/charpick-preferences.png
+share/gnome/help/char-palette/ca/figures/charpick_characters.png
 share/gnome/help/char-palette/en_GB/char-palette.xml
 share/gnome/help/char-palette/en_GB/figures/charpalette_applet.png
 share/gnome/help/char-palette/en_GB/figures/charpalette_chargroup.png
@@ -1089,6 +1084,7 @@ share/omf/accessx-status/accessx-status-uk.omf
 %%BATTERY%%share/omf/battstat/battstat-uk.omf
 share/omf/char-palette/char-palette-C.omf
 share/omf/char-palette/char-palette-bg.omf
+share/omf/char-palette/char-palette-ca.omf
 share/omf/char-palette/char-palette-en_GB.omf
 share/omf/char-palette/char-palette-es.omf
 share/omf/char-palette/char-palette-fr.omf
@@ -1602,6 +1598,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/char-palette/es
 @dirrm share/gnome/help/char-palette/en_GB/figures
 @dirrm share/gnome/help/char-palette/en_GB
+@dirrm share/gnome/help/char-palette/ca/figures
+@dirrm share/gnome/help/char-palette/ca
 @dirrm share/gnome/help/char-palette/bg/figures
 @dirrm share/gnome/help/char-palette/bg
 @dirrm share/gnome/help/char-palette/C/figures
@@ -1652,7 +1650,6 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/accessx-status/C
 @dirrm share/gnome/help/accessx-status
 %%PYTHON%%@dirrm %%DATADIR%%/invest-applet
-@dirrm %%DATADIR%%/gweather
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%/geyes/Tango
 @dirrm %%DATADIR%%/geyes/Horrid
@@ -1664,7 +1661,6 @@ share/xmodmap/xmodmap.yu
 @dirrm %%DATADIR%%
 %%COMMANDER%%@dirrmtry libexec/gnome-applets
 %%PYTHON%%@dirrm %%PYTHON_SITELIBDIR%%/invest
-@dirrm include/libgweather
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES

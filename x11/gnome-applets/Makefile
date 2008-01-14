@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.167 2007/11/13 06:33:41 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.168 2007/12/26 23:00:24 kwm Exp $
 #
 
 PORTNAME=	gnome-applets
-PORTVERSION=	2.21.2
+PORTVERSION=	2.21.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -19,6 +19,7 @@ COMMENT=	Applets components for the GNOME 2 Desktop Environment
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/system-tools-backends \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-control-center
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
+		gweather.0:${PORTSDIR}/net/libgweather \
 		xklavier.11:${PORTSDIR}/x11/libxklavier \
 		gucharmap.6:${PORTSDIR}/deskutils/gucharmap
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/system-tools-backends \
@@ -44,8 +45,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		OS_SYS="/usr/include"
 
 GCONF_SCHEMAS=	charpick.schemas drivemount.schemas geyes.schemas \
-		gweather.schemas mixer.schemas multiload.schemas \
-		stickynotes.schemas
+		mixer.schemas multiload.schemas stickynotes.schemas
 
 OPTIONS=	MINI_COMMANDER "Enable mini-commander applet" off
 
@@ -95,8 +95,6 @@ PLIST_SUB+=	PYTHON="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' \
-		${WRKSRC}/libgweather/weather-met.c
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 	    	's|" == "|" = "|g'
 .if !defined(USE_PYTHON)
