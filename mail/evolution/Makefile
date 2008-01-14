@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.156 2007/11/15 20:22:36 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.157 2007/12/22 20:10:27 kwm Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.21.4
+PORTVERSION=	2.21.5
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -59,14 +59,6 @@ OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 USE_LDCONFIG=	${PREFIX}/lib/evolution/${EVO_VERSION}
 .include "${PORTSDIR}/misc/ldconfig_compat/bsd.ldconfig.mk"
 
-.if defined(PACKAGE_BUILDING)
-WITH_DBUS=	yes
-.endif
-
-.if exists(${LOCALBASE}/lib/libdbus-glib-1.so)
-WITH_DBUS=	yes
-.endif
-
 .if defined(WITH_PILOT)
 LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnome-pilot
 CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE} \
@@ -85,13 +77,6 @@ CONFIGURE_ARGS+=--with-openldap=no
 
 .if defined(WITH_SPAMASSASSIN)
 RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
-.endif
-
-.if defined(WITH_DBUS)
-LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
-PLIST_SUB+=	DBUS=""
-.else
-PLIST_SUB+=	DBUS="@comment "
 .endif
 
 .if !defined(NO_KERBEROS) && exists(/usr/lib/libkrb5.so)

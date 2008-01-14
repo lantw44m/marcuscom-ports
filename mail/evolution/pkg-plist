@@ -41,6 +41,7 @@ include/evolution-%%VERSION%%/e-util/e-sorter.h
 include/evolution-%%VERSION%%/e-util/e-text-event-processor-emacs-like.h
 include/evolution-%%VERSION%%/e-util/e-text-event-processor-types.h
 include/evolution-%%VERSION%%/e-util/e-text-event-processor.h
+include/evolution-%%VERSION%%/e-util/e-util-labels.h
 include/evolution-%%VERSION%%/e-util/e-util-marshal.h
 include/evolution-%%VERSION%%/e-util/e-util.h
 include/evolution-%%VERSION%%/e-util/e-xml-utils.h
@@ -296,6 +297,8 @@ lib/evolution/%%VERSION%%/plugins/libmail-account-disable.la
 lib/evolution/%%VERSION%%/plugins/libmail-account-disable.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-addressbook-file.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-addressbook-file.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-backup-restore.la
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-backup-restore.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-bogo-junk-plugin.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-bogo-junk-plugin.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-file.la
@@ -346,8 +349,6 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-mark-all-read.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-mark-all-read.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-mark-calendar-offline.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-mark-calendar-offline.so
-%%DBUS%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-new-mail-notify.la
-%%DBUS%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-new-mail-notify.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-plugin-manager.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-plugin-manager.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-prefer-plain.la
@@ -365,6 +366,8 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-select-one-source.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-subject-thread.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-subject-thread.so
 lib/evolution/%%VERSION%%/plugins/org-gnome-addressbook-file.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-backup-restore.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-backup-restore.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-bogo-junk-plugin.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-file.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-http.eplug
@@ -400,7 +403,6 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-mailing-list-actions.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mailing-list-actions.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-mark-all-read.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mark-calendar-offline.eplug
-%%DBUS%%lib/evolution/%%VERSION%%/plugins/org-gnome-new-mail-notify.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-plugin-manager.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-plugin-manager.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-prefer-plain.eplug
@@ -423,6 +425,7 @@ libexec/evolution/%%VERSION%%/csv2vcard
 libexec/evolution/%%VERSION%%/evolution-addressbook-clean
 libexec/evolution/%%VERSION%%/evolution-addressbook-export
 libexec/evolution/%%VERSION%%/evolution-alarm-notify
+libexec/evolution/%%VERSION%%/evolution-backup
 libexec/evolution/%%VERSION%%/killev
 share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/addresstypes.xml
@@ -450,6 +453,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/errors/mail-composer.error
 %%DATADIR%%/%%VERSION%%/errors/mail.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-attachment-reminder.error
+%%DATADIR%%/%%VERSION%%/errors/org-gnome-backup-restore.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-default-mailer.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-exchange-operations.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-face.errors.xml
@@ -529,7 +533,11 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/help/quickref/pt/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/sq/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/sv/quickref.pdf
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/folder-copy.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/folder-move.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/go-today.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/mail-copy.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/mail-move.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/view-calendar-day.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/view-calendar-list.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/view-calendar-month.png
