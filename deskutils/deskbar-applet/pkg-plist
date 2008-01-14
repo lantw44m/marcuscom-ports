@@ -38,6 +38,9 @@ lib/deskbar-applet/modules-2.20-compatible/recent.pyo
 lib/deskbar-applet/modules-2.20-compatible/templates.py
 lib/deskbar-applet/modules-2.20-compatible/templates.pyc
 lib/deskbar-applet/modules-2.20-compatible/templates.pyo
+lib/deskbar-applet/modules-2.20-compatible/tomboy.py
+lib/deskbar-applet/modules-2.20-compatible/tomboy.pyc
+lib/deskbar-applet/modules-2.20-compatible/tomboy.pyo
 lib/deskbar-applet/modules-2.20-compatible/web_address.py
 lib/deskbar-applet/modules-2.20-compatible/web_address.pyc
 lib/deskbar-applet/modules-2.20-compatible/web_address.pyo
@@ -224,6 +227,9 @@ lib/python2.5/site-packages/deskbar/ui/DeskbarTray.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacTreeView.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacTreeView.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/CuemiacTreeView.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/LingeringSelectionWindow.py
+%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/LingeringSelectionWindow.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/LingeringSelectionWindow.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/ui/cuemiac/__init__.pyo
