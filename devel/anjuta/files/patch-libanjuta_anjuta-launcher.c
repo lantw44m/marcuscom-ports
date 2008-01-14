@@ -1,5 +1,5 @@
---- libanjuta/anjuta-launcher.c.orig	Mon Jun 11 13:22:08 2007
-+++ libanjuta/anjuta-launcher.c	Sun Jul  8 03:39:07 2007
+--- libanjuta/anjuta-launcher.c.orig	2008-01-06 18:26:38.000000000 +0100
++++ libanjuta/anjuta-launcher.c	2008-01-13 14:47:16.000000000 +0100
 @@ -37,7 +37,7 @@
  #include <signal.h>
  
@@ -9,7 +9,7 @@
  #    include <pty.h>
  #  else
  #    include <libutil.h>
-@@ -713,7 +713,8 @@ anjuta_launcher_scan_output (GIOChannel 
+@@ -745,7 +745,8 @@
  		GError *err = NULL;
  		do
  		{
@@ -19,7 +19,7 @@
  			if (n > 0 && !err) /* There is output */
  			{
  				gchar *utf8_chars;
-@@ -733,6 +734,13 @@ anjuta_launcher_scan_output (GIOChannel 
+@@ -772,6 +773,13 @@
  				anjuta_launcher_synchronize (launcher);
  				ret = FALSE;
  			}
@@ -33,7 +33,7 @@
  		/* Read next chars if buffer was too small
  		 * (the maximum length of one character is 6 bytes) */
  		} while (!err && (n > FILE_BUFFER_SIZE - 7));
-@@ -762,7 +770,8 @@ anjuta_launcher_scan_error (GIOChannel *
+@@ -801,7 +809,8 @@
  		GError *err = NULL;
  		do
  		{
@@ -43,7 +43,7 @@
  			if (n > 0 && !err) /* There is stderr output */
  			{
  				gchar *utf8_chars;
-@@ -782,6 +791,13 @@ anjuta_launcher_scan_error (GIOChannel *
+@@ -829,6 +838,13 @@
  				anjuta_launcher_synchronize (launcher);
  				ret = FALSE;
  			}
@@ -57,7 +57,7 @@
  		/* Read next chars if buffer was too small
  		 * (the maximum length of one character is 6 bytes) */
  		} while (!err && (n > FILE_BUFFER_SIZE - 7));
-@@ -811,7 +827,8 @@ anjuta_launcher_scan_pty (GIOChannel *ch
+@@ -858,7 +874,8 @@
  		GError *err = NULL;
  		do
  		{
@@ -67,14 +67,14 @@
  			if (n > 0 && !err) /* There is stderr output */
  			{
  				gchar *utf8_chars;
-@@ -833,6 +850,10 @@ anjuta_launcher_scan_pty (GIOChannel *ch
- 			else if (err && errno != EAGAIN && errno != EINTR)
- 			{
- 				g_warning (_("launcher.c: Error while reading child pty\n"));
-+				ret = FALSE;
-+			}
-+			else if (status == G_IO_STATUS_EOF)
-+			{
+@@ -889,6 +906,10 @@
+ 				DEBUG_PRINT ("pty: %s", err->message);
  				ret = FALSE;
  			}
++			else if (status == G_IO_STATUS_EOF)
++			{
++				ret = FALSE;
++			}
  		/* Read next chars if buffer was too small
+ 		 * (the maximum length of one character is 6 bytes) */
+ 		} while (!err && (n > FILE_BUFFER_SIZE - 7));
