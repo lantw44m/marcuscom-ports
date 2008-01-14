@@ -1,2 +1,3 @@
 sysutils/hal-device-manager|sysutils/gnome-device-manager|%%DATE%%|hal-device-manager has been retired
 security/gnome-keyring-manager|security/seahorse|%%DATE%%|functionality has been rolled into seahorse
+devel/anjuta-devel|devel/anjuta|%%DATE%%|Its now part of the GNOME release cicle.
