@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta-devel/Makefile,v 1.19 2008/01/14 00:05:52 kwm Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.16 2008/01/14 15:57:21 kwm Exp $
 #
 
 PORTNAME=	anjuta
@@ -28,8 +28,6 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		neato:${PORTSDIR}/graphics/graphviz \
 		libtool:${PORTSDIR}/devel/libtool15 \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
-
-CONFLICTS=      anjuta-2.2.*
 
 USE_BZIP2=	yes
 USE_XLIB=	yes
