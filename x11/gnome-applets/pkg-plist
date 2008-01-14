@@ -622,6 +622,7 @@ share/gnome/help/geyes/uk/figures/geyes_applet.png
 share/gnome/help/geyes/uk/geyes.xml
 share/gnome/help/gswitchit/C/gswitchit.xml
 share/gnome/help/gswitchit/C/legal.xml
+share/gnome/help/gswitchit/ca/gswitchit.xml
 share/gnome/help/gswitchit/el/gswitchit.xml
 share/gnome/help/gswitchit/en_GB/gswitchit.xml
 share/gnome/help/gswitchit/es/gswitchit.xml
@@ -1142,6 +1143,7 @@ share/omf/geyes/geyes-ru.omf
 share/omf/geyes/geyes-sv.omf
 share/omf/geyes/geyes-uk.omf
 share/omf/gswitchit/gswitchit-C.omf
+share/omf/gswitchit/gswitchit-ca.omf
 share/omf/gswitchit/gswitchit-el.omf
 share/omf/gswitchit/gswitchit-en_GB.omf
 share/omf/gswitchit/gswitchit-es.omf
@@ -1469,6 +1471,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/gweather/es
 @dirrm share/gnome/help/gweather/en_GB/figures
 @dirrm share/gnome/help/gweather/en_GB
+@dirrm share/gnome/help/gweather/ca/figures
+@dirrm share/gnome/help/gweather/ca
 @dirrm share/gnome/help/gweather/C/figures
 @dirrm share/gnome/help/gweather/C
 @dirrm share/gnome/help/gweather
