@@ -2,7 +2,8 @@
 # Date created:				14 January 2008
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/ndesk-dbus/Makefile,v 1.21 2007/10/24 23:36:52 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	ndesk-dbus
