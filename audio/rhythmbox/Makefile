@@ -3,15 +3,15 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox-devel/Makefile,v 1.87 2008/01/09 23:18:01 marcus Exp $
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.81 2007/07/30 19:41:19 mezz Exp $
 #
 
 PORTNAME=	rhythmbox
-PORTVERSION=	0.11.4
-PORTREVISION=	2
+PORTVERSION=	0.10.1
+PORTREVISION=	6
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.11
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.10
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	marcus@FreeBSD.org
@@ -24,8 +24,6 @@ LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 		sexy.2:${PORTSDIR}/x11-toolkits/libsexy \
 		soup-2.2.8:${PORTSDIR}/devel/libsoup \
 		gnome-media-profiles.0:${PORTSDIR}/audio/gnome-media
-
-NO_LATEST_LINK=	yes
 
 USE_BZIP2=	yes
 USE_XLIB=	yes
@@ -101,10 +99,10 @@ RUN_DEPENDS+=		${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/no
 CONFIGURE_ARGS+=	--disable-libnotify
 .endif
 
-.if exists(${LOCALBASE}/libdata/pkgconfig/gst-python-0.10.pc)
+.if ${HAVE_GNOME:Mpygtk2}!=""
 USE_PYTHON=	yes
 .include "${PORTSDIR}/Mk/bsd.python.mk"
-USE_GSTREAMER+=	python
+USE_GNOME+=	pygtk2
 CONFIGURE_ARGS+=--enable-python
 PLIST_SUB+=	PYTHON=""
 .else
