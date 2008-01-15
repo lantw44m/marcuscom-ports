@@ -41,49 +41,62 @@ share/applications/eog.desktop
 share/gnome/help/eog/C/eog.xml
 share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
+share/gnome/help/eog/C/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/C/legal.xml
 share/gnome/help/eog/de/eog.xml
 share/gnome/help/eog/de/figures/eog_save_as_window.png
 share/gnome/help/eog/de/figures/eog_start_window.png
+share/gnome/help/eog/de/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/en_GB/eog.xml
 share/gnome/help/eog/en_GB/figures/eog_save_as_window.png
 share/gnome/help/eog/en_GB/figures/eog_start_window.png
+share/gnome/help/eog/en_GB/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/es/eog.xml
 share/gnome/help/eog/es/figures/eog_save_as_window.png
 share/gnome/help/eog/es/figures/eog_start_window.png
+share/gnome/help/eog/es/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/eu/eog.xml
 share/gnome/help/eog/eu/figures/eog_start_window.png
 share/gnome/help/eog/eu/legal.xml
 share/gnome/help/eog/fr/eog.xml
 share/gnome/help/eog/fr/figures/eog_save_as_window.png
 share/gnome/help/eog/fr/figures/eog_start_window.png
+share/gnome/help/eog/fr/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/it/eog.xml
 share/gnome/help/eog/it/figures/eog_save_as_window.png
 share/gnome/help/eog/it/figures/eog_start_window.png
+share/gnome/help/eog/it/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/ja/eog.xml
 share/gnome/help/eog/ja/figures/eog_start_window.png
 share/gnome/help/eog/ja/legal.xml
 share/gnome/help/eog/ko/eog.xml
 share/gnome/help/eog/ko/figures/eog_save_as_window.png
 share/gnome/help/eog/ko/figures/eog_start_window.png
+share/gnome/help/eog/ko/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/oc/eog.xml
 share/gnome/help/eog/oc/figures/eog_save_as_window.png
 share/gnome/help/eog/oc/figures/eog_start_window.png
+share/gnome/help/eog/oc/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/pa/eog.xml
 share/gnome/help/eog/pa/figures/eog_save_as_window.png
 share/gnome/help/eog/pa/figures/eog_start_window.png
+share/gnome/help/eog/pa/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/pt_BR/eog.xml
 share/gnome/help/eog/pt_BR/figures/eog_save_as_window.png
 share/gnome/help/eog/pt_BR/figures/eog_start_window.png
+share/gnome/help/eog/pt_BR/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/ru/eog.xml
 share/gnome/help/eog/ru/figures/eog_save_as_window.png
 share/gnome/help/eog/ru/figures/eog_start_window.png
+share/gnome/help/eog/ru/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/sv/eog.xml
 share/gnome/help/eog/sv/figures/eog_save_as_window.png
 share/gnome/help/eog/sv/figures/eog_start_window.png
+share/gnome/help/eog/sv/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/uk/eog.xml
 share/gnome/help/eog/uk/figures/eog_save_as_window.png
 share/gnome/help/eog/uk/figures/eog_start_window.png
+share/gnome/help/eog/uk/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/zh_CN/eog.xml
 share/gnome/help/eog/zh_CN/figures/eog_start_window.png
 share/gnome/help/eog/zh_CN/legal.xml
@@ -223,18 +236,6 @@ share/omf/eog/eog-zh_TW.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
-@dirrm share/icons/hicolor/scalable/apps
-@dirrm share/icons/hicolor/scalable
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor/32x32
-@dirrm share/icons/hicolor/24x24/apps
-@dirrm share/icons/hicolor/24x24
-@dirrm share/icons/hicolor/22x22/apps
-@dirrm share/icons/hicolor/22x22
-@dirrm share/icons/hicolor/16x16/apps
-@dirrm share/icons/hicolor/16x16
-@dirrm share/icons/hicolor
-@dirrm share/icons
 @dirrm share/gnome/help/eog/zh_TW/figures
 @dirrm share/gnome/help/eog/zh_TW
 @dirrm share/gnome/help/eog/zh_CN/figures
@@ -284,6 +285,7 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
+@dirrmtry share/applications
 @dirrm include/eog-2.20/eog
 @dirrm include/eog-2.20
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
