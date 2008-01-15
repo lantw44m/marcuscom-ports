@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.162 2007/11/15 22:09:07 marcus Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.163 2007/12/23 11:12:33 kwm Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	2.21.4
+PORTVERSION=	2.21.5
 CATEGORIES=	games gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -30,6 +30,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui \
 		librsvg2 desktopfileutils pygnomedesktop gnomedocutils
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-sound=gstreamer
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
