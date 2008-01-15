@@ -1,9 +1,9 @@
---- data/Makefile.in.orig	Sun Jan 28 20:39:50 2007
-+++ data/Makefile.in	Sun Jan 28 20:41:03 2007
-@@ -271,7 +271,7 @@ EXTRA_DIST = \
- 	session-properties.desktop.in
+--- data/Makefile.in.orig	2008-01-14 23:22:38.000000000 -0600
++++ data/Makefile.in	2008-01-14 23:23:42.000000000 -0600
+@@ -279,7 +279,7 @@
+ 	gnome.desktop			\
+ 	session-properties.desktop
  
- CLEANFILES = default.session gnome-session.schemas session-properties.desktop
 -all: all-recursive
 +all: all-recursive default.session
  
