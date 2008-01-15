@@ -291,6 +291,7 @@ share/locale/zh_TW/LC_MESSAGES/orca.mo
 %%DATADIR%%/glade/orca-setup.glade
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%
+@dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/orca/scripts
 @dirrm %%PYTHON_SITELIBDIR%%/orca
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
