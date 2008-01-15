@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.5 2008/01/02 22:34:03 mezz Exp $
+# $MCom: ports/MC-UPDATING,v 1.6 2008/01/15 04:16:04 mezz Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -19,10 +19,12 @@ upgrades.
   Portupgrade users:
     # pkg_delete -f gnome-applets\*
     # pkg_delete -f totem\*
+    # pkg_delete -f gnome-control-center\*
     # pkgdb -Ff
     # portupgrade -a
 
   Portmaster users:
     # pkg_delete -f gnome-applets\*
     # pkg_delete -f totem\*
+    # pkg_delete -f gnome-control-center\*
     # portmaster -a
