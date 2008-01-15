@@ -1,0 +1,11 @@
+--- plugins/default-editor/default-editor.gnome-settings-plugin.desktop.in.orig	2008-01-15 18:48:25.000000000 +0100
++++ plugins/default-editor/default-editor.gnome-settings-plugin.desktop.in	2008-01-15 18:48:10.000000000 +0100
+@@ -0,0 +1,8 @@
++[GNOME Settings Plugin]
++Module=default-editor
++IAge=0
++_Name=Default Editor
++_Description=Default editor plugin
++Authors=
++Copyright=Copyright © 2007
++Website=
