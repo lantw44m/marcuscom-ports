@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.92 2008/01/15 05:50:11 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.93 2008/01/15 05:50:40 marcus Exp $
 #
 
 PORTNAME=	gdm
@@ -70,8 +70,6 @@ post-patch:
 .endif
 	@${REINPLACE_CMD} -e 's|root:root|root:wheel|g' \
 		${WRKSRC}/data/Makefile.in
-	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-	    	${FILESDIR}/gnome.desktop > ${WRKDIR}/gnome.desktop
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
