@@ -137,6 +137,7 @@ bin/accerciser
 %%DATADIR%%/pixmaps/hicolor/22x22/tree.png
 %%DATADIR%%/pixmaps/hicolor/22x22/treetable.png
 %%DATADIR%%/pixmaps/hicolor/22x22/window.png
+%%DATADIR%%/plugindata/validate/basic.py
 %%DATADIR%%/plugins/api_view.py
 %%DATADIR%%/plugins/console.py
 %%DATADIR%%/plugins/event_monitor.glade
@@ -147,6 +148,8 @@ bin/accerciser
 %%DATADIR%%/plugins/quick_select.py
 %%DATADIR%%/plugins/script_recorder.glade
 %%DATADIR%%/plugins/script_recorder.py
+%%DATADIR%%/plugins/validate.glade
+%%DATADIR%%/plugins/validate.py
 share/applications/accerciser.desktop
 share/gnome/help/accerciser/C/accerciser.xml
 share/gnome/help/accerciser/C/figures/accerciser.png
@@ -173,6 +176,12 @@ share/gnome/help/accerciser/es/figures/api_browser.png
 share/gnome/help/accerciser/es/figures/event_monitor.png
 share/gnome/help/accerciser/es/figures/interface_viewer.png
 share/gnome/help/accerciser/es/figures/script_recorder.png
+share/gnome/help/accerciser/fr/accerciser.xml
+share/gnome/help/accerciser/fr/figures/accerciser.png
+share/gnome/help/accerciser/fr/figures/api_browser.png
+share/gnome/help/accerciser/fr/figures/event_monitor.png
+share/gnome/help/accerciser/fr/figures/interface_viewer.png
+share/gnome/help/accerciser/fr/figures/script_recorder.png
 share/gnome/help/accerciser/oc/accerciser.xml
 share/gnome/help/accerciser/oc/figures/accerciser.png
 share/gnome/help/accerciser/oc/figures/api_browser.png
@@ -234,6 +243,7 @@ share/omf/accerciser/accerciser-C.omf
 share/omf/accerciser/accerciser-ca.omf
 share/omf/accerciser/accerciser-en_GB.omf
 share/omf/accerciser/accerciser-es.omf
+share/omf/accerciser/accerciser-fr.omf
 share/omf/accerciser/accerciser-oc.omf
 share/omf/accerciser/accerciser-sv.omf
 @dirrm share/omf/accerciser
@@ -241,6 +251,8 @@ share/omf/accerciser/accerciser-sv.omf
 @dirrm share/gnome/help/accerciser/sv
 @dirrm share/gnome/help/accerciser/oc/figures
 @dirrm share/gnome/help/accerciser/oc
+@dirrm share/gnome/help/accerciser/fr/figures
+@dirrm share/gnome/help/accerciser/fr
 @dirrm share/gnome/help/accerciser/es/figures
 @dirrm share/gnome/help/accerciser/es
 @dirrm share/gnome/help/accerciser/en_GB/figures
@@ -251,6 +263,8 @@ share/omf/accerciser/accerciser-sv.omf
 @dirrm share/gnome/help/accerciser/C
 @dirrm share/gnome/help/accerciser
 @dirrm %%DATADIR%%/plugins
+@dirrm %%DATADIR%%/plugindata/validate
+@dirrm %%DATADIR%%/plugindata
 @dirrm %%DATADIR%%/pixmaps/hicolor/22x22
 @dirrm %%DATADIR%%/pixmaps/hicolor
 @dirrm %%DATADIR%%/pixmaps

@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/accerciser/Makefile,v 1.7 2007/10/30 11:29:48 ahze Exp $
+#   $MCom: ports/accessibility/accerciser/Makefile,v 1.8 2007/11/16 03:31:13 marcus Exp $
 #
 
 PORTNAME=	accerciser
-PORTVERSION=	1.1.2
+PORTVERSION=	1.1.5
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -16,15 +16,17 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Interactive Python accessibility explorer for GNOME
 
 USE_BZIP2=	yes
-USE_GNOME=	pygnomedesktop atspi
-GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
+USE_GNOME=	pygnomedesktop atspi
 USE_PYTHON=	yes
-MAN1=		accerciser.1
-INSTALLS_OMF=	yes
 USE_GETTEXT=	yes
+INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+
 GCONF_SCHEMAS=	accerciser.schemas
+MAN1=		accerciser.1
 
 .include <bsd.port.mk>
