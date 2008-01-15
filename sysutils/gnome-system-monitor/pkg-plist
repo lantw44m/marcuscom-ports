@@ -196,7 +196,9 @@ share/omf/gnome-system-monitor/gnome-system-monitor-fr.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-oc.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-pa.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-sv.omf
+share/pixmaps/gnome-system-monitor/download.svg
 share/pixmaps/gnome-system-monitor/side.png
+share/pixmaps/gnome-system-monitor/upload.svg
 @dirrm share/pixmaps/gnome-system-monitor
 @dirrm share/omf/gnome-system-monitor
 @dirrm share/gnome/help/gnome-system-monitor/sv/figures
