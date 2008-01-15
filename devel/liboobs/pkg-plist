@@ -37,8 +37,6 @@ libdata/pkgconfig/liboobs-1.pc
 %%DOCSDIR%%/OobsIface.html
 %%DOCSDIR%%/OobsIfaceEthernet.html
 %%DOCSDIR%%/OobsIfaceIRLan.html
-%%DOCSDIR%%/OobsIfaceISDN.html
-%%DOCSDIR%%/OobsIfaceModem.html
 %%DOCSDIR%%/OobsIfacePlip.html
 %%DOCSDIR%%/OobsIfaceWireless.html
 %%DOCSDIR%%/OobsIfacesConfig.html
@@ -70,6 +68,8 @@ libdata/pkgconfig/liboobs-1.pc
 %%DOCSDIR%%/index.sgml
 %%DOCSDIR%%/left.png
 %%DOCSDIR%%/liboobs-OobsHostsConfig.html
+%%DOCSDIR%%/liboobs-OobsIfaceISDN.html
+%%DOCSDIR%%/liboobs-OobsIfaceModem.html
 %%DOCSDIR%%/liboobs-OobsNTPServer.html
 %%DOCSDIR%%/liboobs.devhelp
 %%DOCSDIR%%/liboobs.devhelp2
