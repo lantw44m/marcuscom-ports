@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.93 2008/01/15 05:50:40 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.94 2008/01/15 06:14:44 mezz Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.21.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -70,6 +70,8 @@ post-patch:
 .endif
 	@${REINPLACE_CMD} -e 's|root:root|root:wheel|g' \
 		${WRKSRC}/data/Makefile.in
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+	    	${WRKSRC}/daemon/gdm-session-worker.c
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
