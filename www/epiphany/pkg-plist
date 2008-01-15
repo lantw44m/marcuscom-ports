@@ -20,6 +20,7 @@ include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-utils.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-extension.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-extensions-manager.h
+include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-history-item.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-history.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-lib-type-builtins.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-link.h
@@ -223,8 +224,8 @@ share/icons/hicolor/scalable/apps/gnome-web-browser.svg
 share/locale/am/LC_MESSAGES/epiphany.mo
 share/locale/ar/LC_MESSAGES/epiphany.mo
 share/locale/az/LC_MESSAGES/epiphany.mo
-share/locale/be@latin/LC_MESSAGES/epiphany.mo
 share/locale/be/LC_MESSAGES/epiphany.mo
+share/locale/be@latin/LC_MESSAGES/epiphany.mo
 share/locale/bg/LC_MESSAGES/epiphany.mo
 share/locale/bn/LC_MESSAGES/epiphany.mo
 share/locale/bn_IN/LC_MESSAGES/epiphany.mo
