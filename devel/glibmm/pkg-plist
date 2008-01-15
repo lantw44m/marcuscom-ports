@@ -1,3 +1,43 @@
+include/giomm-%%API_VERSION%%/giomm/appinfo.h
+include/giomm-%%API_VERSION%%/giomm/asyncresult.h
+include/giomm-%%API_VERSION%%/giomm/cancellable.h
+include/giomm-%%API_VERSION%%/giomm/drive.h
+include/giomm-%%API_VERSION%%/giomm/file.h
+include/giomm-%%API_VERSION%%/giomm/fileattribute.h
+include/giomm-%%API_VERSION%%/giomm/fileenumerator.h
+include/giomm-%%API_VERSION%%/giomm/fileicon.h
+include/giomm-%%API_VERSION%%/giomm/fileinfo.h
+include/giomm-%%API_VERSION%%/giomm/fileinputstream.h
+include/giomm-%%API_VERSION%%/giomm/fileoutputstream.h
+include/giomm-%%API_VERSION%%/giomm/icon.h
+include/giomm-%%API_VERSION%%/giomm/init.h
+include/giomm-%%API_VERSION%%/giomm/inputstream.h
+include/giomm-%%API_VERSION%%/giomm/loadableicon.h
+include/giomm-%%API_VERSION%%/giomm/mountoperation.h
+include/giomm-%%API_VERSION%%/giomm/outputstream.h
+include/giomm-%%API_VERSION%%/giomm/private/appinfo_p.h
+include/giomm-%%API_VERSION%%/giomm/private/asyncresult_p.h
+include/giomm-%%API_VERSION%%/giomm/private/cancellable_p.h
+include/giomm-%%API_VERSION%%/giomm/private/drive_p.h
+include/giomm-%%API_VERSION%%/giomm/private/file_p.h
+include/giomm-%%API_VERSION%%/giomm/private/fileattribute_p.h
+include/giomm-%%API_VERSION%%/giomm/private/fileenumerator_p.h
+include/giomm-%%API_VERSION%%/giomm/private/fileicon_p.h
+include/giomm-%%API_VERSION%%/giomm/private/fileinfo_p.h
+include/giomm-%%API_VERSION%%/giomm/private/fileinputstream_p.h
+include/giomm-%%API_VERSION%%/giomm/private/fileoutputstream_p.h
+include/giomm-%%API_VERSION%%/giomm/private/icon_p.h
+include/giomm-%%API_VERSION%%/giomm/private/inputstream_p.h
+include/giomm-%%API_VERSION%%/giomm/private/loadableicon_p.h
+include/giomm-%%API_VERSION%%/giomm/private/mountoperation_p.h
+include/giomm-%%API_VERSION%%/giomm/private/outputstream_p.h
+include/giomm-%%API_VERSION%%/giomm/private/seekable_p.h
+include/giomm-%%API_VERSION%%/giomm/private/simpleasyncresult_p.h
+include/giomm-%%API_VERSION%%/giomm/private/volume_p.h
+include/giomm-%%API_VERSION%%/giomm/seekable.h
+include/giomm-%%API_VERSION%%/giomm/simpleasyncresult.h
+include/giomm-%%API_VERSION%%/giomm/volume.h
+include/giomm-%%API_VERSION%%/giomm/wrap_init.h
 include/giomm-%%API_VERSION%%/giomm.h
 include/glibmm-%%API_VERSION%%/glibmm.h
 include/glibmm-%%API_VERSION%%/glibmm/arrayhandle.h
@@ -46,6 +86,7 @@ include/glibmm-%%API_VERSION%%/glibmm/private/shell_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/spawn_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/thread_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/unicode_p.h
+include/glibmm-%%API_VERSION%%/glibmm/private/uriutils_p.h
 include/glibmm-%%API_VERSION%%/glibmm/property.h
 include/glibmm-%%API_VERSION%%/glibmm/propertyproxy.h
 include/glibmm-%%API_VERSION%%/glibmm/propertyproxy_base.h
@@ -66,6 +107,7 @@ include/glibmm-%%API_VERSION%%/glibmm/threadpool.h
 include/glibmm-%%API_VERSION%%/glibmm/timer.h
 include/glibmm-%%API_VERSION%%/glibmm/timeval.h
 include/glibmm-%%API_VERSION%%/glibmm/unicode.h
+include/glibmm-%%API_VERSION%%/glibmm/uriutils.h
 include/glibmm-%%API_VERSION%%/glibmm/ustring.h
 include/glibmm-%%API_VERSION%%/glibmm/utility.h
 include/glibmm-%%API_VERSION%%/glibmm/value.h
@@ -133,7 +175,6 @@ lib/libglibmm_generate_extra_defs-%%VERSION%%.so.1
 libdata/pkgconfig/giomm-%%API_VERSION%%.pc
 libdata/pkgconfig/glibmm-%%API_VERSION%%.pc
 share/aclocal/glibmm_check_perl.m4
-@exec mkdir -p %D/include/giomm-%%API_VERSION%%/giomm/private
 @dirrm lib/glibmm-%%API_VERSION%%/proc/pm
 @dirrm lib/glibmm-%%API_VERSION%%/proc/m4
 @dirrm lib/glibmm-%%API_VERSION%%/proc
