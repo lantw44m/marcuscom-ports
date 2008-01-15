@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.4 2007/10/25 03:39:20 marcus Exp $
+# $MCom: ports/MC-UPDATING,v 1.5 2008/01/02 22:34:03 mezz Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -12,14 +12,17 @@ upgrades.
   AFFECTS: All GNOME users and ports depend on gnomehier
   AUTHOR: gnome@FreeBSD.org
 
-  GNOME has been updated to 2.21.x. You have to deinstall totem first before
-  use portupgrade or portmaster to upgrade your installed GNOME 2.20.x.
+  GNOME has been updated to 2.21.x. You have to deinstall gnome-applets and
+  totem first before use portupgrade or portmaster to upgrade your installed
+  GNOME 2.20.x.
 
   Portupgrade users:
+    # pkg_delete -f gnome-applets\*
     # pkg_delete -f totem\*
     # pkgdb -Ff
     # portupgrade -a
 
   Portmaster users:
+    # pkg_delete -f gnome-applets\*
     # pkg_delete -f totem\*
     # portmaster -a
