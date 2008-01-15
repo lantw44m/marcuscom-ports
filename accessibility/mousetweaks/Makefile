@@ -3,23 +3,27 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.1 2008/01/13 13:39:14 kwm Exp $
+#
 
 PORTNAME=	mousetweaks
-PORTVERSION=	0.2.8
+PORTVERSION=	2.21.5
 CATEGORIES=	accessibility
-MASTER_SITES=	https://launchpad.net/mousetweaks/${PORTVERSION:R}/${PORTVERSION}/+download/
+MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Mouse accessibility enhancements for the GNOME desktop
 
-USE_GNOME=	gnomehack gnomepanel
+USE_BZIP2=	yes
+USE_GNOME=	gnomehack gnomeprefix gnomepanel intlhack
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-GCONF_SCHEMAS=	mousetweaks.schemas pointer-capture-applet.schemas
 
+GCONF_SCHEMAS=	mousetweaks.schemas pointer-capture-applet.schemas
 MAN1=		mousetweaks.1
 
 .include <bsd.port.mk>
