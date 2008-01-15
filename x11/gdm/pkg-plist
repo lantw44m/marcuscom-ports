@@ -140,7 +140,7 @@ share/pixmaps/faces/yellow-rose.jpg
 share/pixmaps/gdm-foot-logo.png
 share/pixmaps/nobody.png
 share/pixmaps/nohost.png
-share/xsessions/gnome.desktop
+@exec mkdir -p %D/share/xsessions
 @dirrmtry share/xsessions
 @dirrm share/pixmaps/faces
 @dirrm %%DATADIR%%
