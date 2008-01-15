@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.163 2007/11/15 21:41:07 marcus Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.164 2007/12/22 22:01:13 kwm Exp $
 #
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	2.21.4
+PORTVERSION=	2.21.5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,7 +17,9 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Control center for GNOME 2 project
 
 LIB_DEPENDS=	xklavier.11:${PORTSDIR}/x11/libxklavier
-RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount
+BUILD_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
+RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
+		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
@@ -68,8 +70,8 @@ pre-everything::
 	@${ECHO_MSG} "===>"
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|%%CDROM%%|${DEFAULT_CDROM_DEVICE}|' \
-		${WRKSRC}/gnome-settings-daemon/gnome-settings-multimedia-keys.c
+#	@${REINPLACE_CMD} -e 's|%%CDROM%%|${DEFAULT_CDROM_DEVICE}|' \
+#		${WRKSRC}/gnome-settings-daemon/gnome-settings-multimedia-keys.c
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 	    	${WRKSRC}/capplets/common/gnome-theme-info.c
 
