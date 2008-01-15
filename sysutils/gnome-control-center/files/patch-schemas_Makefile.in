@@ -1,0 +1,14 @@
+--- schemas/Makefile.in.orig	2008-01-15 16:06:19.000000000 -0600
++++ schemas/Makefile.in	2008-01-15 16:06:55.000000000 -0600
+@@ -301,10 +301,7 @@
+ top_srcdir = @top_srcdir@
+ schemadir = $(GCONF_SCHEMA_FILE_DIR)
+ schema_in_files = \
+-	apps_gnome_settings_daemon_screensaver.schemas.in	\
+-	apps_gnome_settings_daemon_default_editor.schemas.in	\
+-	desktop_gnome_font_rendering.schemas.in			\
+-	apps_gnome_settings_daemon_keybindings.schemas.in
++	desktop_gnome_font_rendering.schemas.in
+ 
+ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+ EXTRA_DIST = $(schema_in_files)

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.164 2007/12/22 22:01:13 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.165 2008/01/15 15:11:58 kwm Exp $
 #
 
 PORTNAME=	gnome-control-center
@@ -38,10 +38,7 @@ CONFIGURE_ARGS=	--enable-gstreamer=0.10
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
-		apps_gnome_settings_daemon_keybindings.schemas \
-		apps_gnome_settings_daemon_screensaver.schemas \
-		control-center.schemas \
+GCONF_SCHEMAS=	control-center.schemas \
 		desktop_gnome_font_rendering.schemas \
 		fontilus.schemas themus.schemas
 
