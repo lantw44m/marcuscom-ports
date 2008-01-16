@@ -1,6 +1,6 @@
 #!/bin/sh
 # $FreeBSD: ports/x11/gdm/files/gdm.in,v 1.5 2007/10/24 23:36:53 marcus Exp $
-#    $MCom: ports/x11/gdm/files/gdm.in,v 1.17 2007/11/03 00:59:40 marcus Exp $
+#    $MCom: ports/x11/gdm/files/gdm.in,v 1.18 2007/11/23 06:47:21 marcus Exp $
 
 # PROVIDE: gdm
 # REQUIRE: LOGIN cleanvar moused syscons dbus consolekit
@@ -14,6 +14,8 @@
 . %%GNOME_SUBR%%
 
 gdm_enable=${gdm_enable-${gnome_enable}}
+
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin:%%LOCALBASE%%/bin:%%LOCALBASE%%/sbin
 
 name=gdm
 rcvar=`set_rcvar`
