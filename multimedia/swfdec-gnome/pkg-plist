@@ -1,0 +1,7 @@
+bin/swfdec-player
+bin/swfdec-thumbnailer
+share/applications/swfdec-player.desktop
+share/locale/fr/LC_MESSAGES/swfdec-gnome.mo
+share/locale/pl/LC_MESSAGES/swfdec-gnome.mo
+share/swfdec-gnome/swfdec-player.ui
+@dirrm share/swfdec-gnome
