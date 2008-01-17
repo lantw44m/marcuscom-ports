@@ -3,11 +3,10 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports-stable/net-im/libtelepathy/Makefile,v 1.2 2007/10/29 12:53:57 ahze Exp $
+#    $MCom: ports/net-im/libtelepathy/Makefile,v 1.1 2007/12/18 14:42:10 ahze Exp $
 
 PORTNAME=	libtelepathy
-PORTVERSION=	0.2.0
-PORTREVISION=	1
+PORTVERSION=	0.3.1
 CATEGORIES=	net-im devel
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -17,6 +16,7 @@ COMMENT=	Flexible Communications Framework
 LIB_PC_DEPENDS=	dbus-glib-1.pc:${PORTSDIR}/devel/dbus-glib
 
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
+LIB_DEPENDS=	telepathy-glib.4:${PORTSDIR}/net-im/telepathy-glib
 
 BUILD_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
