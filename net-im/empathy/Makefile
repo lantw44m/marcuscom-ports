@@ -3,25 +3,32 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports-stable/net-im/empathy/Makefile,v 1.1 2007/10/29 14:24:24 ahze Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.1 2007/12/18 14:42:10 ahze Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	0.21.1
+PORTVERSION=	0.21.5
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME IM client based around telepathy
 
-LIB_DEPENDS=	missioncontrol-server.3:${PORTSDIR}/net-im/telepathy-mission-control
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+LIB_DEPENDS=	missioncontrol-server.3:${PORTSDIR}/net-im/telepathy-mission-control \
+    		aspell.16:${PORTSDIR}/textproc/aspell
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
 USE_GMAKE=	yes
+USE_GETTEXT=	yes
+USE_LDCONFIG=	yes
 USE_GNOME=	evolutiondataserver gnomehack gnomeprefix pygtk2
-GCONF_SCHEMAS=	GNOME_Megaphone_Applet.schemas empathy.schemas
 INSTALLS_ICONS=	yes
 USE_PYTHON=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
+
+GCONF_SCHEMAS=	GNOME_Megaphone_Applet.schemas empathy.schemas
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${datadir}/gtk-doc/html|${DOCSDIR}|' \
