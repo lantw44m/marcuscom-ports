@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports-stable/net-im/telepathy-mission-control/Makefile,v 1.1 2007/10/29 13:53:51 ahze Exp $
+#    $MCom: ports/net-im/telepathy-mission-control/Makefile,v 1.1 2007/12/18 14:42:11 ahze Exp $
 
 PORTNAME=	telepathy-mission-control
-PORTVERSION=	4.49
+PORTVERSION=	4.55
 CATEGORIES=	net-im devel
 MASTER_SITES=	SF/mission-control
 

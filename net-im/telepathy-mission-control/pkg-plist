@@ -1,5 +1,4 @@
 bin/mc-account
-bin/mission-control
 include/libmissioncontrol/mc-account-monitor.h
 include/libmissioncontrol/mc-account.h
 include/libmissioncontrol/mc-enum-types.h
@@ -37,6 +36,7 @@ lib/libmissioncontrol-server.so
 lib/libmissioncontrol-server.so.3
 libdata/pkgconfig/libmissioncontrol.pc
 libdata/pkgconfig/mission-control.pc
+libexec/mission-control
 share/dbus-1/services/org.freedesktop.Telepathy.MissionControl.service
 share/doc/libmissioncontrol-server/ch01.html
 share/doc/libmissioncontrol-server/home.png
