@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.226 2008/01/11 06:15:53 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.227 2008/01/18 06:59:36 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -104,6 +104,12 @@ RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga
 RUN_DEPENDS+=	${LOCALBASE}/share/applications/gnome-screensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome
 .else
 RUN_DEPENDS+=	gnome-screensaver:${PORTSDIR}/x11/gnome-screensaver
+.endif
+.endif
+
+.if ${.CURDIR:T}=="gnome2-hacker-tools"
+.if ${ARCH} == "i386"
+RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 .endif
 .endif
 
