@@ -8,14 +8,9 @@ etc/gdm/Xsession
 etc/gdm/custom.conf.default
 @exec [ -f %B/custom.conf ] || cp %B/%f %B/custom.conf
 etc/gdm/gdm.schemas
-lib/gdm/settings/plugins/libxsettings.a
-lib/gdm/settings/plugins/libxsettings.la
-lib/gdm/settings/plugins/libxsettings.so
-lib/gdm/settings/plugins/xsettings.gdm-settings-plugin
 libexec/gdm-factory-slave
 libexec/gdm-product-slave
 libexec/gdm-session-worker
-libexec/gdm-settings-daemon
 libexec/gdm-simple-chooser
 libexec/gdm-simple-greeter
 libexec/gdm-simple-slave
@@ -29,9 +24,6 @@ sbin/gdm-stop
 share/icons/hicolor/16x16/apps/gdm-xnest.png
 share/icons/hicolor/32x32/apps/gdm-setup.png
 share/icons/hicolor/32x32/apps/gdm-xnest.png
-share/pixmaps/gdm-setup.png
-share/pixmaps/gdm-xnest.png
-share/pixmaps/gdm.png
 share/locale/af/LC_MESSAGES/gdm.mo
 share/locale/am/LC_MESSAGES/gdm.mo
 share/locale/ar/LC_MESSAGES/gdm.mo
@@ -138,6 +130,9 @@ share/pixmaps/faces/sunset.jpg
 share/pixmaps/faces/tennis-ball.png
 share/pixmaps/faces/yellow-rose.jpg
 share/pixmaps/gdm-foot-logo.png
+share/pixmaps/gdm-setup.png
+share/pixmaps/gdm-xnest.png
+share/pixmaps/gdm.png
 share/pixmaps/nobody.png
 share/pixmaps/nohost.png
 @exec mkdir -p %D/share/xsessions
@@ -153,9 +148,6 @@ share/pixmaps/nohost.png
 @dirrmtry etc/gdm
 @dirrmtry etc/dm/Sessions
 @dirrmtry etc/dm
-@dirrm lib/gdm/settings/plugins
-@dirrm lib/gdm/settings
-@dirrm lib/gdm
 @dirrmtry sbin
 @dirrmtry share/log/gdm
 @dirrmtry share/log
