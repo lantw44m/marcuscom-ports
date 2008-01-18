@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.225 2007/11/16 03:49:59 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.226 2008/01/11 06:15:53 marcus Exp $
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.21.2
-PORTREVISION?=	1
+PORTVERSION=	2.21.5
+PORTREVISION?=	0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -65,7 +65,10 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		orca:${PORTSDIR}/accessibility/orca \
 		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
 		${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/notification-daemon \
-		seahorse:${PORTSDIR}/security/seahorse
+		seahorse:${PORTSDIR}/security/seahorse \
+		swfdec-player:${PORTSDIR}/multimedia/swfdec-gnome \
+		mousetweaks:${PORTSDIR}/accessibility/mousetweaks \
+		vinagre:${PORTSDIR}/net/vinagre
 
 NO_BUILD=	yes
 
