@@ -2,7 +2,7 @@
 # Date created:				Apr 19 2007
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/telepathy-python/Makefile,v 1.5 2007/07/09 12:32:29 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	telepathy-python

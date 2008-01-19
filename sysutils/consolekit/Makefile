@@ -2,7 +2,7 @@
 # Date Created:				26 Aug 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/consolekit/Makefile,v 1.3 2007/09/06 10:07:40 flz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	consolekit

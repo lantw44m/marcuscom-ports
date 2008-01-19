@@ -2,8 +2,8 @@
 # Date created:				19 August 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/news/pan/Makefile,v 1.90 2007/08/03 03:55:36 mezz Exp $
-#   $MCom: ports-stable/news/pan/Makefile,v 1.1 2006/10/19 16:50:55 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/news/pan/Makefile,v 1.6 2008/01/13 05:25:29 mezz Exp $
 #
 
 PORTNAME=	pan

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/hal/files/hald.in,v 1.4 2007/04/22 23:55:29 marcus Exp $
+# $FreeBSD$
 #
 # PROVIDE: hald
 # REQUIRE: DAEMON usbd devd dbus consolekit

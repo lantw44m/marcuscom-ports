@@ -2,7 +2,7 @@
 # Date created:		04 November 2006
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libvolume_id/Makefile,v 1.5 2007/05/30 20:20:09 marcus Exp $
+# $FreeBSD$
 
 PORTNAME=	libvolume_id
 PORTVERSION=	0.81.0
