@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/policykit/Makefile,v 1.15 2008/01/08 06:53:25 marcus Exp $
+#   $MCom: ports/sysutils/policykit/Makefile,v 1.16 2008/01/13 05:13:13 marcus Exp $
 #
 
 PORTNAME=	policykit
@@ -23,7 +23,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
     		expat.6:${PORTSDIR}/textproc/expat2
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash
 
-USE_GNOME=	gnomehack gnometarget glib20
+USE_GNOME=	gnomehack gnometarget glib20 intlhack
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
