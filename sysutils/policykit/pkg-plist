@@ -63,7 +63,6 @@ share/dbus-1/system-services/org.freedesktop.PolicyKit.service
 @dirrm include/PolicyKit/polkit-dbus
 @dirrm include/PolicyKit
 @dirrmtry etc/profile.d
-@dirrmtry etc/pam.d
 @dirrm etc/PolicyKit
 @unexec rm -rf /var/run/PolicyKit 2>/dev/null || true
 @unexec rmdir /var/lib/PolicyKit 2>/dev/null || true
