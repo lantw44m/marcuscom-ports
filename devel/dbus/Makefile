@@ -7,7 +7,7 @@
 
 PORTNAME=	dbus
 PORTVERSION?=	1.1.2
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -59,6 +59,7 @@ post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
+	${MKDIR} ${PREFIX}/share/dbus-1/interfaces
 .endif
 
 .include <bsd.port.post.mk>
