@@ -3,6 +3,9 @@ bin/services-admin
 bin/shares-admin
 bin/time-admin
 bin/users-admin
+lib/nautilus/extensions-2.0/libnautilus-gst-shares.a
+lib/nautilus/extensions-2.0/libnautilus-gst-shares.la
+lib/nautilus/extensions-2.0/libnautilus-gst-shares.so
 libdata/pkgconfig/gnome-system-tools.pc
 share/applications/network.desktop
 share/applications/services.desktop
@@ -241,6 +244,8 @@ share/omf/users-admin/users-admin-sv.omf
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/ku/LC_MESSAGES
