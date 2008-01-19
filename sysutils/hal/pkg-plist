@@ -112,4 +112,8 @@ share/PolicyKit/policy/hal-wol.policy
 @unexec rm -rf /var/run/hald/hald-local 2>/dev/null || true
 @unexec rm -rf /var/run/hald/hald-runner 2>/dev/null || true
 @unexec rmdir /var/run/hald 2>/dev/null || true
+@unexec rmdir /var/cache/hald 2>/dev/null || true
+@unexec rmdir /var/cache 2>/dev/null || true
+@unexec /var/lib/hal 2>/dev/null || true
+@unexec /var/lib 2>/dev/null || true
 %%MEDIA%%@unexec rmdir /media 2>/dev/null || true

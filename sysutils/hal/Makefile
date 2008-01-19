@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.28 2008/01/08 06:46:45 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.29 2008/01/08 06:50:34 marcus Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -40,7 +41,8 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 		--enable-console-kit \
 		--with-socket-dir=/var/run/hald \
 		--with-eject=/usr/sbin/cdcontrol \
-		--with-pid-file=/var/run/hald/hald.pid
+		--with-pid-file=/var/run/hald/hald.pid \
+		--localstatedir=/var
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
@@ -104,11 +106,11 @@ post-install:
 		${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .if !defined(PACKAGE_BUILDING) && defined(NEEDS_MEDIA)
 	${MKDIR} /media
+.endif
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/hald/freebsd/README \
 		${DOCSDIR}/README.freebsd
-.endif
 .endif
 
 .include <bsd.port.post.mk>
