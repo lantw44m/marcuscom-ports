@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnome-keyring/Makefile,v 1.50 2007/12/26 14:58:21 kwm Exp $
+#   $MCom: ports/security/gnome-keyring/Makefile,v 1.51 2008/01/14 16:34:21 kwm Exp $
 #
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	2.21.5
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -22,7 +23,7 @@ LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
     		gcrypt.13:${PORTSDIR}/security/libgcrypt
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gnomeprefix gtk20 ltverhack
+USE_GNOME=	gnomehack gnomeprefix gtk20 ltverhack intlhack gconf2
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool:15
