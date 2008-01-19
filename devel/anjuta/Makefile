@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.16 2008/01/14 15:57:21 kwm Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.17 2008/01/14 15:59:01 kwm Exp $
 #
 
 PORTNAME=	anjuta
@@ -42,9 +42,9 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-plugin-sourceview --disable-plugin-scintilla \
-		--enable-plugin-symbol-db	
+		--enable-plugin-symbol-db
 USE_LDCONFIG=	yes
-PKGMESSAGE=     ${WRKDIR}/pkg-message
+PKGMESSAGE=	${WRKDIR}/pkg-message
 GCONF_SCHEMAS=	anjuta-build-basic-autotools-plugin.schemas \
 		anjuta-cvs-plugin.schemas anjuta-document-manager.schemas \
 		anjuta-editor-scintilla.schemas anjuta-language-cpp-java.schemas \
