@@ -28,7 +28,7 @@ CONFIGURE_ARGS=--localstatedir=/var \
 		--disable-doxygen-docs \
 		--disable-xml-docs
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
+		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
 .if !defined(DBUS_SLAVE)
