@@ -3,12 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.2 2008/01/19 17:35:20 mezz Exp $
+#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.3 2008/01/19 17:43:03 mezz Exp $
 #
 
 PORTNAME=	swfdec-gnome
 PORTVERSION=	0.5.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://swfdec.freedesktop.org/download/swfdec-gnome/0.5/
 
