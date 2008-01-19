@@ -2,9 +2,9 @@ bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
 bin/totem-video-thumbnailer
-lib/nautilus/extensions-1.0/libtotem-properties-page.a
-lib/nautilus/extensions-1.0/libtotem-properties-page.la
-lib/nautilus/extensions-1.0/libtotem-properties-page.so
+lib/nautilus/extensions-2.0/libtotem-properties-page.a
+lib/nautilus/extensions-2.0/libtotem-properties-page.la
+lib/nautilus/extensions-2.0/libtotem-properties-page.so
 %%GALAGO%%lib/totem/plugins/galago/galago.totem-plugin
 %%GALAGO%%lib/totem/plugins/galago/libtgp.a
 %%GALAGO%%lib/totem/plugins/galago/libtgp.la
