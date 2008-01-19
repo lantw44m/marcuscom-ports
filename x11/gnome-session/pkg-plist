@@ -118,6 +118,7 @@ share/pixmaps/splash/tremulant-blood-2.12.png
 share/pixmaps/splash/tremulant-brushed-metal-2.12.png
 share/xsessions/gnome.desktop
 @dirrmtry share/xsessions
+@dirrmtry share/applications
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -150,4 +151,3 @@ share/xsessions/gnome.desktop
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
-@dirrmtry share/applications

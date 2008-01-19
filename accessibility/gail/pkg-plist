@@ -100,6 +100,8 @@ share/locale/zh_TW/LC_MESSAGES/gail.mo
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/mi/LC_MESSAGES
 @dirrmtry share/locale/mi
 @dirrmtry share/locale/mg/LC_MESSAGES

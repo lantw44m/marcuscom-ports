@@ -546,6 +546,7 @@ share/omf/gnome-power-manager/gnome-power-manager-sv.omf
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
+@dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/si/LC_MESSAGES
@@ -560,4 +561,3 @@ share/omf/gnome-power-manager/gnome-power-manager-sv.omf
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrmtry share/applications

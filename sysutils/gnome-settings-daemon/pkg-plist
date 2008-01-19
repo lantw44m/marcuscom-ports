@@ -156,6 +156,28 @@ share/locale/zh_CN/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
+@dirrm %%DATADIR%%/xrdb
+@dirrm %%DATADIR%%
+@dirrm lib/gnome-settings-daemon/plugins/xsettings
+@dirrm lib/gnome-settings-daemon/plugins/xrdb
+@dirrm lib/gnome-settings-daemon/plugins/xrandr
+@dirrm lib/gnome-settings-daemon/plugins/typing-break
+@dirrm lib/gnome-settings-daemon/plugins/sound
+@dirrm lib/gnome-settings-daemon/plugins/screensaver
+@dirrm lib/gnome-settings-daemon/plugins/mouse
+@dirrm lib/gnome-settings-daemon/plugins/media-keys
+@dirrm lib/gnome-settings-daemon/plugins/keyboard
+@dirrm lib/gnome-settings-daemon/plugins/keybindings
+@dirrm lib/gnome-settings-daemon/plugins/font
+@dirrm lib/gnome-settings-daemon/plugins/dummy
+@dirrm lib/gnome-settings-daemon/plugins/default-editor
+@dirrm lib/gnome-settings-daemon/plugins/clipboard
+@dirrm lib/gnome-settings-daemon/plugins/background
+@dirrm lib/gnome-settings-daemon/plugins/a11y-keyboard
+@dirrm lib/gnome-settings-daemon/plugins
+@dirrm lib/gnome-settings-daemon
+@dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
+@dirrm include/gnome-settings-daemon-2.0
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -184,25 +206,3 @@ share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
-@dirrm %%DATADIR%%/xrdb
-@dirrm %%DATADIR%%
-@dirrm lib/gnome-settings-daemon/plugins/xsettings
-@dirrm lib/gnome-settings-daemon/plugins/xrdb
-@dirrm lib/gnome-settings-daemon/plugins/xrandr
-@dirrm lib/gnome-settings-daemon/plugins/typing-break
-@dirrm lib/gnome-settings-daemon/plugins/sound
-@dirrm lib/gnome-settings-daemon/plugins/screensaver
-@dirrm lib/gnome-settings-daemon/plugins/mouse
-@dirrm lib/gnome-settings-daemon/plugins/media-keys
-@dirrm lib/gnome-settings-daemon/plugins/keyboard
-@dirrm lib/gnome-settings-daemon/plugins/keybindings
-@dirrm lib/gnome-settings-daemon/plugins/font
-@dirrm lib/gnome-settings-daemon/plugins/dummy
-@dirrm lib/gnome-settings-daemon/plugins/default-editor
-@dirrm lib/gnome-settings-daemon/plugins/clipboard
-@dirrm lib/gnome-settings-daemon/plugins/background
-@dirrm lib/gnome-settings-daemon/plugins/a11y-keyboard
-@dirrm lib/gnome-settings-daemon/plugins
-@dirrm lib/gnome-settings-daemon
-@dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
-@dirrm include/gnome-settings-daemon-2.0

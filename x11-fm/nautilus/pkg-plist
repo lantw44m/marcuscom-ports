@@ -197,6 +197,7 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @unexec rm -f %D/share/mime/x-content/video-svcd.xml >/dev/null || /usr/bin/true
 @unexec rm -f %D/share/mime/x-content/video-vcd.xml >/dev/null || /usr/bin/true
 @dirrmtry share/mime/x-content
+@dirrmtry share/applications
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -237,4 +238,3 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry share/applications

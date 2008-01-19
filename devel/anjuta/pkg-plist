@@ -1076,8 +1076,7 @@ share/pixmaps/anjuta/start-with-import.png
 @dirrm include/libanjuta-1.0
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
-@dirrmtry share/locale/sl/LC_MESSAGES
-@dirrmtry share/locale/sl
+@dirrmtry share/applications
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
@@ -1086,4 +1085,3 @@ share/pixmaps/anjuta/start-with-import.png
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
-@dirrmtry share/applications

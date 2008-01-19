@@ -121,6 +121,7 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 @dirrm share/yelp/ui
 @dirrm share/yelp/icons
 @dirrm share/yelp
+@dirrmtry share/applications
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -155,4 +156,3 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
-@dirrmtry share/applications

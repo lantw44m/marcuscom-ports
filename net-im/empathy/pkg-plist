@@ -354,12 +354,6 @@ share/telepathy/managers/empathy-chat.chandler
 @dirrmtry share/telepathy
 @dirrmtry share/mission-control/profiles
 @dirrmtry share/mission-control
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
 @dirrm %%DATADIR%%/icons/hicolor/scalable/status
 @dirrm %%DATADIR%%/icons/hicolor/scalable/apps
 @dirrm %%DATADIR%%/icons/hicolor/scalable
@@ -389,3 +383,9 @@ share/telepathy/managers/empathy-chat.chandler
 @dirrm include/libempathy-gtk
 @dirrm include/libempathy
 @dirrmtry etc/xdg/autostart
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
