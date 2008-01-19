@@ -1,0 +1,56 @@
+# New ports collection makefile for:		tomboy
+# Date created:					20041011
+# Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
+#
+# $FreeBSD$
+#   $Id: Makefile,v 1.14 2008-01-19 21:15:37 mezz Exp $
+#
+
+PORTNAME=	tomboy
+PORTVERSION=	0.9.4
+CATEGORIES=	deskutils gnome
+MASTER_SITES=	${MASTER_SITE_GNOME}
+MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	bsd-sharp-list@forge.novell.com
+COMMENT=	Personal note taking system for the GNOME desktop
+
+LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
+BUILD_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
+RUN_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
+		dbus-daemon:${PORTSDIR}/devel/dbus
+
+USE_BZIP2=	yes
+USE_GETTEXT=	yes
+USE_GNOME=	gnomehack gnometarget intlhack gnomeprefix gnomesharp20
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+INSTALLS_ICONS=	yes
+INSTALLS_OMF=	yes
+
+CONFIGURE_ARGS+=--enable-evolution=yes \
+		--enable-dbus=yes \
+		--enable-dbus-service-dir-check=no \
+		--with-dbus-service-dir=${PREFIX}/share/dbus-1/services
+CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		DBUS_SERVICE_DIR="${PREFIX}/share/dbus-1/services"
+
+MAN1=		tomboy.1
+GCONF_SCHEMAS=	tomboy.schemas
+
+.include <bsd.port.pre.mk>
+
+post-patch:
+	@${REINPLACE_CMD} 's|`$$PKG_CONFIG --variable=libdir libpanelapplet-2.0`|"$$libdir"|g; \
+	s|PANELAPPLET_SERVER_DIR="$$libdir|PANELAPPLET_SERVER_DIR="$$prefix/libdata|g; \
+	s|PANELAPPLET_SERVER_DIR="$$PANELAPPLET_LIBDIR|PANELAPPLET_SERVER_DIR="$$prefix/libdata|g' \
+		${WRKSRC}/configure
+	@${REINPLACE_CMD} 's|/bin/bash|/bin/sh|g' \
+		${WRKSRC}/Tomboy/tomboy*.in
+
+.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
+.include <bsd.port.post.mk>
