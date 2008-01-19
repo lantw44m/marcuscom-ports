@@ -6,6 +6,7 @@ bin/hal-find-by-capability
 bin/hal-find-by-property
 bin/hal-get-property
 bin/hal-is-caller-locked-out
+bin/hal-is-caller-privileged
 bin/hal-lock
 bin/hal-set-property
 bin/lshal

@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.29 2008/01/08 06:50:34 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.30 2008/01/19 21:16:04 marcus Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -63,8 +63,8 @@ SUB_LIST=	RC_FILES="${RC_FILES}"
 
 MAN1=		hal-disable-polling.1 hal-find-by-capability.1 \
 		hal-find-by-property.1 hal-get-property.1 \
-		hal-is-caller-locked-out.1 hal-lock.1 \
-		hal-set-property.1 lshal.1
+		hal-is-caller-locked-out.1 hal-is-caller-privileged.1 \
+		hal-lock.1 hal-set-property.1 lshal.1
 MAN8=		hald.8
 
 OPTIONS=	FIXED_MOUNTPOINTS "use fixed mountpoints" off
