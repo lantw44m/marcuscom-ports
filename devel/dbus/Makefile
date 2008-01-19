@@ -7,7 +7,7 @@
 
 PORTNAME=	dbus
 PORTVERSION?=	1.1.2
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -48,10 +48,7 @@ USE_XLIB=	yes
 .include <bsd.port.pre.mk>
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|%%X11BASE%%|${X11BASE}|' \
-		${WRKSRC}/bus/system.conf.in
-	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
-	    	s|/usr/X11R6|${X11BASE}|g' \
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/dbus/dbus-sysdeps-unix.c
 	@${REINPLACE_CMD} -e 's|/lib/dbus/machine-id|/db/dbus/machine-id|g' \
 		${WRKSRC}/dbus/Makefile.in \
@@ -62,8 +59,6 @@ post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
-	${MKDIR} ${X11BASE}/etc/dbus-1/system.d
-	${MKDIR} ${X11BASE}/share/dbus-1/services
 .endif
 
 .include <bsd.port.post.mk>
