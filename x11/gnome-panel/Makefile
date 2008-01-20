@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.163 2008/01/20 07:24:26 mezz Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.164 2008/01/20 18:40:20 marcus Exp $
 #
 
 PORTNAME=	gnome-panel
 PORTVERSION=	2.21.5
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -28,7 +28,7 @@ USE_XLIB=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop librsvg2 \
 		libwnck gnomemenus gnomedocutils ltverhack referencehack
 WANT_GNOME=	yes
 GNOME_DESKTOP_VERSION=2
