@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.49 2007/12/23 18:25:56 kwm Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.50 2008/01/13 21:32:33 mezz Exp $
 #
 
 PORTNAME=	seahorse
@@ -39,9 +39,9 @@ GCONF_SCHEMAS=	seahorse.schemas
 MAN1=		seahorse-agent.1 seahorse-daemon.1 seahorse-tool.1
 
 #OPTIONS=	NAUTILUS "Enable the Nautilus component" on
+#OPTIONS=	EPIPHANY "Enable Epiphany plug-in support" on
 OPTIONS=	LDAP "Enable LDAP support" on \
 		HKP "Enable HKP keyserver interface" on \
-		EPIPHANY "Enable Epiphany plug-in support" on \
 		NOTIFY "Enable libnotify support" on \
 		APPLET "Enable clipboard encryption applet" on \
 		KEYRING "Enable GNOME Keyring support" on \
@@ -89,14 +89,14 @@ LIB_DEPENDS+=	notify.1:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=--disable-libnotify
 .endif
 
-.if !defined(WITHOUT_EPIPHANY)
-BUILD_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-PLIST_SUB+=	EPHY="" EPHY_VERSION="2.20"
-.else
+#.if !defined(WITHOUT_EPIPHANY)
+#BUILD_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+#RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+#PLIST_SUB+=	EPHY="" EPHY_VERSION="2.20"
+#.else
 CONFIGURE_ARGS+=--disable-epiphany
 PLIST_SUB+=	EPHY="@comment "
-.endif
+#.endif
 
 .if !defined(WITHOUT_APPLET)
 USE_GNOME+=	gnomepanel
