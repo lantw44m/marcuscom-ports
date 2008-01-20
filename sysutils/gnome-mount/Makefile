@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-mount/Makefile,v 1.20 2008/01/08 07:30:20 marcus Exp $
+#   $MCom: ports/sysutils/gnome-mount/Makefile,v 1.21 2008/01/10 07:28:22 marcus Exp $
 #
 
 PORTNAME=	gnome-mount
 PORTVERSION=	0.7
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -20,7 +20,7 @@ LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
 		gnome-keyring:${PORTSDIR}/security/gnome-keyring
 
 USE_XLIB=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gtk20
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 libgnomeui
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
