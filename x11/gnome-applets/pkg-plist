@@ -1484,6 +1484,7 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/gswitchit/es
 @dirrm share/gnome/help/gswitchit/en_GB
 @dirrm share/gnome/help/gswitchit/el
+@dirrm share/gnome/help/gswitchit/ca
 @dirrm share/gnome/help/gswitchit/C
 @dirrm share/gnome/help/gswitchit
 @dirrm share/gnome/help/geyes/uk/figures
