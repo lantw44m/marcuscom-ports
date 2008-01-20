@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.165 2008/01/15 15:11:58 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.166 2008/01/15 22:20:20 mezz Exp $
 #
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	2.21.5
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -39,7 +40,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	control-center.schemas \
-		desktop_gnome_font_rendering.schemas \
 		fontilus.schemas themus.schemas
 
 .if defined(PACKAGE_BUILDING)
