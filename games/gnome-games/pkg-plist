@@ -341,10 +341,13 @@ share/ggz/gnome-games/ggz_gtk_lag5.svg
 share/ggz/gnome-games/ggz_gtk_registered.svg
 @unexec %%LOCALBASE%%/bin/ggz-config -D --remove --modfile=%D/share/ggz/gnome-games/gnect-client.dsc
 share/ggz/gnome-games/gnect-client.dsc
+@exec %%LOCALBASE%%/bin/ggz-config -D --install --modfile=%D/share/ggz/gnome-games/gnect-client.dsc --force
 @unexec %%LOCALBASE%%/bin/ggz-config -D --remove --modfile=%D/share/ggz/gnome-games/gnibbles-client.dsc
 share/ggz/gnome-games/gnibbles-client.dsc
+@exec %%LOCALBASE%%/bin/ggz-config -D --install --modfile=%D/share/ggz/gnome-games/gnibbles-client.dsc --force
 @unexec %%LOCALBASE%%/bin/ggz-config -D --remove --modfile=%D/share/ggz/gnome-games/iango-client.dsc
 share/ggz/gnome-games/iagno-client.dsc
+@exec %%LOCALBASE%%/bin/ggz-config -D --install --modfile=%D/share/ggz/gnome-games/iango-client.dsc --force
 share/glchess/ai.xml
 share/glchess/chess_view.glade
 share/glchess/glchess.glade
