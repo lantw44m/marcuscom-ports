@@ -1,8 +1,8 @@
-etc/xdg/autostart/gnome-volume-manager.desktop
 bin/gnome-volume-properties
+etc/xdg/autostart/gnome-volume-manager.desktop
 libexec/gnome-volume-manager
 share/applications/gnome-volume-properties.desktop
-share/gnome-volume-manager/gnome-volume-properties.glade
+%%DATADIR%%/gnome-volume-properties.glade
 share/locale/ang/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/ar/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/az/LC_MESSAGES/gnome-volume-manager.mo
@@ -41,7 +41,6 @@ share/locale/ko/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/ku/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/lt/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/lv/LC_MESSAGES/gnome-volume-manager.mo
-share/locale/oc/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/mg/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/mk/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/ml/LC_MESSAGES/gnome-volume-manager.mo
@@ -51,6 +50,7 @@ share/locale/nb/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/ne/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/nl/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/nn/LC_MESSAGES/gnome-volume-manager.mo
+share/locale/oc/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/or/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/pa/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/pl/LC_MESSAGES/gnome-volume-manager.mo
@@ -66,8 +66,8 @@ share/locale/sq/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/sr/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/sr@Latn/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/sv/LC_MESSAGES/gnome-volume-manager.mo
-share/locale/te/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/ta/LC_MESSAGES/gnome-volume-manager.mo
+share/locale/te/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/th/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/tr/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/uk/LC_MESSAGES/gnome-volume-manager.mo
@@ -76,7 +76,9 @@ share/locale/xh/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-volume-manager.mo
+@dirrm %%DATADIR%%
 @dirrmtry share/applications
+@dirrmtry etc/xdg/autostart
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
