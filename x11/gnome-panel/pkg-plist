@@ -41,6 +41,7 @@ share/gnome-2.0/ui/GNOME_WorkspaceSwitcherApplet.xml
 %%DATADIR%%/glade/timezone.glade
 %%DATADIR%%/glade/window-list.glade
 %%DATADIR%%/glade/workspace-switcher.glade
+%%DATADIR%%/iso3166.tab
 %%DATADIR%%/pixmaps/clock-calendar-icon.png
 %%DATADIR%%/pixmaps/clock-face-large.svg
 %%DATADIR%%/pixmaps/clock-face-small-day.svg
