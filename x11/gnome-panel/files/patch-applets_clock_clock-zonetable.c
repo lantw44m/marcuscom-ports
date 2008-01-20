@@ -8,7 +8,7 @@
 +        /*priv->iso3166 = g_build_filename (zoneinfodir, "iso3166.tab", NULL);*/
 +	/* FreeBSD doesn't include iso3166.tab, so we install it especially
 +	 * for this clock. */
-+	priv->zonetab = g_build_filename (DATADIR, "gnome-panel", "iso3166.tab", NULL);
++	priv->iso3166 = g_build_filename (DATADIR, "gnome-panel", "iso3166.tab", NULL);
  
  #ifdef CLOCK_TEXTDOMAIN
          /* this is used when clock is embedded in the gnome-panel
