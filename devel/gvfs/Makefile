@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gvfs/Makefile,v 1.5 2008/01/10 16:38:48 marcus Exp $
+#    $MCom: ports/devel/gvfs/Makefile,v 1.6 2008/01/14 21:07:05 marcus Exp $
 
 PORTNAME=	gvfs
-PORTVERSION=	0.1.2
+PORTVERSION=	0.1.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -14,8 +14,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME virtual file system
 
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
-    		hal.1:${PORTSDIR}/sysutils/hal \
-		soup-2.2.8:${PORTSDIR}/devel/libsoup
+    		hal.1:${PORTSDIR}/sysutils/hal
+#		soup-2.2.8:${PORTSDIR}/devel/libsoup
 
 USE_GNOME=	glib20 gnomehack gnomeprefix intlhack
 USE_GMAKE=	yes
