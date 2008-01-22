@@ -13,6 +13,18 @@ lib/libtotem-plparser.so
 lib/libtotem-plparser.so.10
 libdata/pkgconfig/totem-plparser-mini.pc
 libdata/pkgconfig/totem-plparser.pc
+%%DOCSDIR%%/ch01.html
+%%DOCSDIR%%/home.png
+%%DOCSDIR%%/index.html
+%%DOCSDIR%%/index.sgml
+%%DOCSDIR%%/left.png
+%%DOCSDIR%%/right.png
+%%DOCSDIR%%/style.css
+%%DOCSDIR%%/totem-pl-parser-totem-disc.html
+%%DOCSDIR%%/totem-pl-parser-totem-pl-parser.html
+%%DOCSDIR%%/totem-pl-parser.devhelp
+%%DOCSDIR%%/totem-pl-parser.devhelp2
+%%DOCSDIR%%/up.png
 share/locale/am/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ar/LC_MESSAGES/totem-pl-parser.mo
 share/locale/az/LC_MESSAGES/totem-pl-parser.mo
@@ -90,6 +102,7 @@ share/locale/xh/LC_MESSAGES/totem-pl-parser.mo
 share/locale/zh_CN/LC_MESSAGES/totem-pl-parser.mo
 share/locale/zh_HK/LC_MESSAGES/totem-pl-parser.mo
 share/locale/zh_TW/LC_MESSAGES/totem-pl-parser.mo
+@dirrm %%DOCSDIR%%
 @dirrm include/totem-pl-parser/1/plparser
 @dirrm include/totem-pl-parser/1
 @dirrm include/totem-pl-parser
