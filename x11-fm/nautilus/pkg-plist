@@ -1,4 +1,5 @@
 bin/nautilus
+bin/nautilus-autorun-software
 bin/nautilus-file-management-properties
 include/nautilus/libnautilus-extension/nautilus-column-provider.h
 include/nautilus/libnautilus-extension/nautilus-column.h
@@ -17,6 +18,7 @@ lib/libnautilus-extension.so
 lib/libnautilus-extension.so.1
 libdata/bonobo/servers/Nautilus_shell.server
 libdata/pkgconfig/libnautilus-extension.pc
+share/applications/nautilus-autorun-software.desktop
 share/applications/nautilus-computer.desktop
 share/applications/nautilus-file-management-properties.desktop
 share/applications/nautilus-folder-handler.desktop
@@ -190,10 +192,18 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec rm -f %D/share/mime/x-content/audio-cdda.xml > /dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/blank-media.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/audio-dvd.xml > /dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/audio-player.xml > /dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/blank-bd.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/blank-cd.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/blank-dvd.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/blank-hddvd.xml >/dev/null || /usr/bin/true
 @unexec rm -f %D/share/mime/x-content/image-dcf.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/software-autostart.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/image-picturecd.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/software.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/video-bluray.xml >/dev/null || /usr/bin/true
 @unexec rm -f %D/share/mime/x-content/video-dvd.xml >/dev/null || /usr/bin/true
+@unexec rm -f %D/share/mime/x-content/video-hddvd.xml >/dev/null || /usr/bin/true
 @unexec rm -f %D/share/mime/x-content/video-svcd.xml >/dev/null || /usr/bin/true
 @unexec rm -f %D/share/mime/x-content/video-vcd.xml >/dev/null || /usr/bin/true
 @dirrmtry share/mime/x-content
