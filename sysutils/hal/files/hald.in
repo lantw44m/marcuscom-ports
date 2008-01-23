@@ -3,7 +3,7 @@
 # $FreeBSD$
 #
 # PROVIDE: hald
-# REQUIRE: DAEMON usbd devd dbus consolekit
+# REQUIRE: DAEMON usbd devd dbus
 #
 # Add the following line to /etc/rc.conf to enable the HAL daemon:
 #
