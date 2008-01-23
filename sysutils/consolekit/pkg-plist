@@ -25,3 +25,5 @@ share/dbus-1/system-services/org.freedesktop.ConsoleKit.service
 @dirrm etc/ConsoleKit/seats.d
 @dirrmtry etc/ConsoleKit/run-session.d
 @dirrm etc/ConsoleKit
+@exec mkdir -p /var/run/ConsoleKit
+@unexec rm -rf /var/run/ConsoleKit 2>/dev/null || true

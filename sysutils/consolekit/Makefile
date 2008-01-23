@@ -7,6 +7,7 @@
 
 PORTNAME=	consolekit
 PORTVERSION=	0.2.4
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://people.freedesktop.org/~mccann/dist/
 DISTFILES=	ConsoleKit-${PORTVERSION}${EXTRACT_SUFX}
@@ -25,7 +26,8 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--with-pid-file=/var/run/${PORTNAME}.pid
+CONFIGURE_ARGS=	--with-pid-file=/var/run/${PORTNAME}.pid \
+		--localstatedir=/var
 
 post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/ck-get-x11-display-device \
