@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.165 2008/01/20 19:06:44 marcus Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.166 2008/01/20 19:47:43 marcus Exp $
 #
 
 PORTNAME=	gnome-panel
 PORTVERSION=	2.21.5
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -71,6 +71,8 @@ post-patch:
 	@${FIND} ${WRKSRC} -type f | \
 		${XARGS} -n 10 ${REINPLACE_CMD} -e \
 		's|"applications.menu"|"gnome-applications.menu"|'
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
+	    	${WRKSRC}/applets/clock/gweather-xml.c
 .if ( ${OSVERSION} > 600000 && ${OSVERSION} < 600006 ) || \
 	( ${OSVERSION} < 503101 )
 .for po in da.po it.po zh_CN.po zh_TW.po
