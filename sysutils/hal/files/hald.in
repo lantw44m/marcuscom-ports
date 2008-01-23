@@ -46,11 +46,6 @@ hald_precmd()
 	local_force_depend dbus || return 1
     fi
 
-    if ! checkyesno consolekit_enable
-    then
-	local_force_depend consolekit || return 1
-    fi
-
     mkdir -p $(dirname $pidfile)
 }
 
