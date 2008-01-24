@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/policykit-gnome/Makefile,v 1.1 2008/01/21 01:20:30 marcus Exp $
+#   $MCom: ports/sysutils/policykit-gnome/Makefile,v 1.2 2008/01/24 01:25:20 marcus Exp $
 #
 
-PORTNAME=	policykit
+PORTNAME=	policykit-gnome
 PORTVERSION=	0.7
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 DISTNAME=	PolicyKit-gnome-${PORTVERSION}
