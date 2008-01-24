@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/sysutils/policykit-gnome/Makefile,v 1.1 2008/01/21 01:20:30 marcus Exp $
 #
 
 PORTNAME=	policykit
@@ -16,7 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME frontend to the PolicKit framework
 
 LIB_DEPENDS=	polkit.2:${PORTSDIR}/sysutils/policykit \
-    		sexy.2:${PORTSIR}/x11-toolkits/libsexy
+    		sexy.2:${PORTSDIR}/x11-toolkits/libsexy
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
