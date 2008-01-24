@@ -27,5 +27,6 @@ share/dbus-1/system-services/org.freedesktop.ConsoleKit.service
 @dirrm etc/ConsoleKit
 @exec mkdir -p /var/run/ConsoleKit
 @exec mkdir -p /var/log/ConsoleKit
+@exec touch -f /var/log/ConsoleKit/history
 @unexec rm -rf /var/run/ConsoleKit 2>/dev/null || true
 @unexec rm -rf /var/log/ConsoleKit 2>/dev/null || true
