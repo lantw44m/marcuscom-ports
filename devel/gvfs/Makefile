@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gvfs/Makefile,v 1.6 2008/01/14 21:07:05 marcus Exp $
+#    $MCom: ports/devel/gvfs/Makefile,v 1.7 2008/01/21 21:50:47 marcus Exp $
 
 PORTNAME=	gvfs
 PORTVERSION=	0.1.4
@@ -31,7 +31,7 @@ OPTIONS=	FUSE "Enable fuse" on \
 
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_FUSE)
+.if defined(WITH_FUSE) && ${OSVERSION} >= 600000
 LIB_DEPENDS+=	fuse.2:${PORTSDIR}/sysutils/fusefs-libs
 PLIST_SUB+=	FUSE=""
 .else
