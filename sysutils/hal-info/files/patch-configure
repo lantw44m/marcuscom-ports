@@ -1,0 +1,65 @@
+--- configure.orig	2008-01-25 20:29:55.000000000 -0500
++++ configure	2008-01-25 20:30:12.000000000 -0500
+@@ -3479,7 +3479,7 @@ fi
+ 
+ 
+ 
+-if test x$enable_recall == xyes; then
++if test x$enable_recall = xyes; then
+   BUILD_RECALL_TRUE=
+   BUILD_RECALL_FALSE='#'
+ else
+@@ -3497,7 +3497,7 @@ fi
+ 
+ 
+ 
+-if test x$enable_video == xyes; then
++if test x$enable_video = xyes; then
+   BUILD_VIDEO_TRUE=
+   BUILD_VIDEO_FALSE='#'
+ else
+@@ -3515,7 +3515,7 @@ fi
+ 
+ 
+ 
+-if test x$enable_keymaps == xyes; then
++if test x$enable_keymaps = xyes; then
+   BUILD_KEYMAPS_TRUE=
+   BUILD_KEYMAPS_FALSE='#'
+ else
+@@ -3533,7 +3533,7 @@ fi
+ 
+ 
+ 
+-if test x$enable_killswitch_dell_wlan == xyes; then
++if test x$enable_killswitch_dell_wlan = xyes; then
+   BUILD_KILLSWITCH_DELL_WLAN_TRUE=
+   BUILD_KILLSWITCH_DELL_WLAN_FALSE='#'
+ else
+@@ -3551,7 +3551,7 @@ fi
+ 
+ 
+ 
+-if test x$enable_killswitch_dell_bluetooth == xyes; then
++if test x$enable_killswitch_dell_bluetooth = xyes; then
+   BUILD_KILLSWITCH_DELL_BLUETOOTH_TRUE=
+   BUILD_KILLSWITCH_DELL_BLUETOOTH_FALSE='#'
+ else
+@@ -3569,7 +3569,7 @@ fi
+ 
+ 
+ 
+-if test x$enable_killswitch_sony_bluetooth == xyes; then
++if test x$enable_killswitch_sony_bluetooth = xyes; then
+   BUILD_KILLSWITCH_SONY_BLUETOOTH_TRUE=
+   BUILD_KILLSWITCH_SONY_BLUETOOTH_FALSE='#'
+ else
+@@ -3587,7 +3587,7 @@ fi
+ 
+ 
+ 
+-if test x$enable_killswitch_ipw_wlan == xyes; then
++if test x$enable_killswitch_ipw_wlan = xyes; then
+   BUILD_KILLSWITCH_IPW_WLAN_TRUE=
+   BUILD_KILLSWITCH_IPW_WLAN_FALSE='#'
+ else
