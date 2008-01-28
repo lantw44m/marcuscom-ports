@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.93 2008/01/20 23:37:02 marcus Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.94 2008/01/22 04:37:12 marcus Exp $
 #
 
 PORTNAME=	gconf2
-PORTVERSION=	2.21.2
+PORTVERSION=	2.21.90
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -24,7 +24,7 @@ USE_BZIP2=	yes
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehier gnomehack orbit2 gtk20 libxml2 linc ltverhack \
+USE_GNOME=	gnomehier gnomehack orbit2 gtk20 libxml2 ltverhack \
 		referencehack intlhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
