@@ -3,8 +3,10 @@ include/giomm-%%API_VERSION%%/giomm/appinfo.h
 include/giomm-%%API_VERSION%%/giomm/asyncresult.h
 include/giomm-%%API_VERSION%%/giomm/cancellable.h
 include/giomm-%%API_VERSION%%/giomm/drive.h
+include/giomm-%%API_VERSION%%/giomm/error.h
 include/giomm-%%API_VERSION%%/giomm/file.h
-include/giomm-%%API_VERSION%%/giomm/fileattribute.h
+include/giomm-%%API_VERSION%%/giomm/fileattributeinfo.h
+include/giomm-%%API_VERSION%%/giomm/fileattributeinfolist.h
 include/giomm-%%API_VERSION%%/giomm/fileenumerator.h
 include/giomm-%%API_VERSION%%/giomm/fileicon.h
 include/giomm-%%API_VERSION%%/giomm/fileinfo.h
@@ -23,8 +25,10 @@ include/giomm-%%API_VERSION%%/giomm/private/appinfo_p.h
 include/giomm-%%API_VERSION%%/giomm/private/asyncresult_p.h
 include/giomm-%%API_VERSION%%/giomm/private/cancellable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/drive_p.h
+include/giomm-%%API_VERSION%%/giomm/private/error_p.h
 include/giomm-%%API_VERSION%%/giomm/private/file_p.h
-include/giomm-%%API_VERSION%%/giomm/private/fileattribute_p.h
+include/giomm-%%API_VERSION%%/giomm/private/fileattributeinfo_p.h
+include/giomm-%%API_VERSION%%/giomm/private/fileattributeinfolist_p.h
 include/giomm-%%API_VERSION%%/giomm/private/fileenumerator_p.h
 include/giomm-%%API_VERSION%%/giomm/private/fileicon_p.h
 include/giomm-%%API_VERSION%%/giomm/private/fileinfo_p.h
