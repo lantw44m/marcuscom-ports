@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/orca/Makefile,v 1.37 2007/12/23 16:43:15 kwm Exp $
+#   $MCom: ports/accessibility/orca/Makefile,v 1.38 2008/01/15 04:48:17 mezz Exp $
 #
 
 PORTNAME=	orca
-PORTVERSION=	2.21.5
+PORTVERSION=	2.21.90
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -23,7 +23,6 @@ LATEST_LINK=	gnome-orca
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_XLIB=	yes
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack libgnomeui atspi gnomespeech pygnome2
