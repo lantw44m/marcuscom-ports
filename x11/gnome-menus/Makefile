@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-menus/Makefile,v 1.68 2008/01/15 02:53:59 mezz Exp $
+#   $MCom: ports/x11/gnome-menus/Makefile,v 1.69 2008/01/15 07:29:06 marcus Exp $
 #
 
 PORTNAME=	gnome-menus
-PORTVERSION=	2.21.5
-PORTREVISION=	1
+PORTVERSION=	2.21.90
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -19,9 +18,8 @@ COMMENT=	Implementation of the FreeDesktop Desktop Menu Spec
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_XLIB=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomevfs2 ltverhack
+USE_GNOME=	gnomeprefix gnomehack intlhack glib20 ltverhack
 USE_AUTOTOOLS=	libtool:15
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
