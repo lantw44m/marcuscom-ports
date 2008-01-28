@@ -3,12 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.2 2008/01/15 02:31:29 mezz Exp $
+#   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.3 2008/01/20 17:11:31 mezz Exp $
 #
 
 PORTNAME=	mousetweaks
-PORTVERSION=	2.21.5
-PORTREVISION=	1
+PORTVERSION=	2.21.90
 CATEGORIES=	accessibility
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -26,6 +25,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	mousetweaks.schemas pointer-capture-applet.schemas
-MAN1=		mousetweaks.1
+MAN1=		dwell-click-applet.1 mousetweaks.1 pointer-capture-applet.1
 
 .include <bsd.port.mk>

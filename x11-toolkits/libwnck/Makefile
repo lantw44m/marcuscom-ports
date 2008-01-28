@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.101 2007/11/15 22:22:30 marcus Exp $
+#   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.102 2008/01/15 02:40:36 mezz Exp $
 #
 
 PORTNAME=	libwnck
-PORTVERSION=	2.21.5
+PORTVERSION=	2.21.90
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -24,9 +24,9 @@ USE_BZIP2=	yes
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 
 USE_GETTEXT=	yes
-USE_XLIB=	yes
+USE_XORG=	xres
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtk20 ltverhack referencehack
+USE_GNOME=	gnomehack gtk20 ltverhack referencehack intlhack
 USE_BISON=	build
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
