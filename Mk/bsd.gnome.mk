@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.434 2008/01/20 19:07:23 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.435 2008/01/20 23:37:01 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -473,7 +473,7 @@ nautiluscdburner_USE_GNOME_IMPL=nautilus2 desktopfileutils
 
 gnomemenus_LIB_DEPENDS=		gnome-menu.2:${PORTSDIR}/x11/gnome-menus
 gnomemenus_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
-gnomemenus_USE_GNOME_IMPL=	gnomevfs2
+gnomemenus_USE_GNOME_IMPL=	glib20
 
 pygnomeextras_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-extras-2.0.pc
 pygnomeextras_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
