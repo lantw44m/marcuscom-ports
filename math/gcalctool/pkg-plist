@@ -1,7 +1,7 @@
 bin/gcalctool
 bin/gnome-calculator
 share/applications/gcalctool.desktop
-share/gcalctool/gcalctool.glade
+%%DATADIR%%/gcalctool.glade
 share/gnome/help/gcalctool/C/figures/gcalctool_advanced_window.png
 share/gnome/help/gcalctool/C/figures/gcalctool_basic_window.png
 share/gnome/help/gcalctool/C/figures/gcalctool_financial_window.png
@@ -208,7 +208,7 @@ share/omf/gcalctool/gcalctool-zh_TW.omf
 @dirrm share/gnome/help/gcalctool/C/figures
 @dirrm share/gnome/help/gcalctool/C
 @dirrm share/gnome/help/gcalctool
-@dirrm share/gcalctool
+@dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
