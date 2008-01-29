@@ -89,16 +89,10 @@ share/desktop-directories/theme-method.directory
 %%ABOUTME%%%%DATADIR%%/pixmaps/gnome-about-me-lock.png
 %%DATADIR%%/pixmaps/gtk-theme-thumbnailing.png
 %%DATADIR%%/pixmaps/icon-theme-thumbnailing.png
-%%DATADIR%%/pixmaps/keyboard-bell.png
-%%DATADIR%%/pixmaps/keyboard-cursor.png
-%%DATADIR%%/pixmaps/keyboard-repeat.png
-%%DATADIR%%/pixmaps/keyboard-volume.png
 %%DATADIR%%/pixmaps/mouse-cursor-normal-large.png
 %%DATADIR%%/pixmaps/mouse-cursor-normal.png
 %%DATADIR%%/pixmaps/mouse-cursor-white-large.png
 %%DATADIR%%/pixmaps/mouse-cursor-white.png
-%%DATADIR%%/pixmaps/mouse-left.png
-%%DATADIR%%/pixmaps/mouse-right.png
 %%DATADIR%%/pixmaps/ocean-stripes.png
 %%DATADIR%%/pixmaps/stop.png
 %%DATADIR%%/pixmaps/subpixel-bgr.png
