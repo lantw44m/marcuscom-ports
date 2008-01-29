@@ -2,13 +2,13 @@ bin/gnome-keyring-daemon
 include/gnome-keyring-1/gnome-keyring-memory.h
 include/gnome-keyring-1/gnome-keyring-result.h
 include/gnome-keyring-1/gnome-keyring.h
+lib/gnome-keyring/gnome-keyring-pkcs11.a
+lib/gnome-keyring/gnome-keyring-pkcs11.la
+lib/gnome-keyring/gnome-keyring-pkcs11.so
 lib/libgnome-keyring.a
 lib/libgnome-keyring.la
 lib/libgnome-keyring.so
 lib/libgnome-keyring.so.0
-lib/gnome-keyring/gnome-keyring-pkcs11.a
-lib/gnome-keyring/gnome-keyring-pkcs11.la
-lib/gnome-keyring/gnome-keyring-pkcs11.so
 lib/security/pam_gnome_keyring.a
 lib/security/pam_gnome_keyring.la
 lib/security/pam_gnome_keyring.so
