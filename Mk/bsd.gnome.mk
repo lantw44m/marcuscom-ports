@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.437 2008/01/28 18:11:02 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.438 2008/01/28 22:27:18 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -374,7 +374,7 @@ librsvg2_USE_GNOME_IMPL=libgsf gtk20
 
 eel2_LIB_DEPENDS=	eel-2.2:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${LOCALBASE}/libdata/pkgconfig/eel-2.0.pc
-eel2_USE_GNOME_IMPL=	gnomemenus gnomedesktop gail
+eel2_USE_GNOME_IMPL=	gnomedesktop gail
 
 gnomepanel_LIB_DEPENDS=	panel-applet-2.0:${PORTSDIR}/x11/gnome-panel
 gnomepanel_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-2.0.pc
