@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.167 2008/01/20 21:01:47 marcus Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.168 2008/01/29 18:07:53 kwm Exp $
 #
 
 PORTNAME=	gnome-control-center
@@ -46,8 +46,6 @@ GCONF_SCHEMAS=	control-center.schemas \
 WITH_GNOME=	yes
 .endif
 
-DEFAULT_CDROM_DEVICE?=/dev/acd0
-
 .include <bsd.port.pre.mk>
 
 .if ${HAVE_GNOME:Mevolutiondataserver}!=""
@@ -59,15 +57,7 @@ CONFIGURE_ARGS+=--disable-aboutme
 PLIST_SUB+=	ABOUTME="@comment "
 .endif
 
-pre-everything::
-	@${ECHO_CMD} "===> The default CD/DVD device is '${DEFAULT_CDROM_DEVICE}'"
-	@${ECHO_CMD} "===> Define DEFAULT_CDROM_DEVICE if you want to change the default"
-	@${ECHO_MSG} "===> For example, 'make WITH_DVD_DEVICE=\"/dev/somedevice\"'"
-	@${ECHO_MSG} "===>"
-
 post-patch:
-#	@${REINPLACE_CMD} -e 's|%%CDROM%%|${DEFAULT_CDROM_DEVICE}|' \
-#		${WRKSRC}/gnome-settings-daemon/gnome-settings-multimedia-keys.c
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 	    	${WRKSRC}/capplets/common/gnome-theme-info.c
 
