@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.119 2007/12/04 15:28:17 ahze Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.120 2008/01/10 00:04:15 marcus Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	2.21.2
+PORTVERSION=	2.21.90
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -22,10 +22,9 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 USE_GECKO=	firefox xulrunner seamonkey
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_XLIB=	yes
+USE_XORG=	ice
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomedocutils \
-		libgnomeprintui
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
