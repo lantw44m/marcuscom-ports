@@ -1,8 +1,56 @@
 bin/evince
 bin/evince-thumbnailer
-%%NAUTILUS%%lib/nautilus/extensions-1.0/libevince-properties-page.a
-%%NAUTILUS%%lib/nautilus/extensions-1.0/libevince-properties-page.la
-%%NAUTILUS%%lib/nautilus/extensions-1.0/libevince-properties-page.so
+include/evince-2.20/evince/ev-async-renderer.h
+include/evince-2.20/evince/ev-attachment.h
+include/evince-2.20/evince/ev-document-find.h
+include/evince-2.20/evince/ev-document-fonts.h
+include/evince-2.20/evince/ev-document-forms.h
+include/evince-2.20/evince/ev-document-images.h
+include/evince-2.20/evince/ev-document-info.h
+include/evince-2.20/evince/ev-document-links.h
+include/evince-2.20/evince/ev-document-misc.h
+include/evince-2.20/evince/ev-document-security.h
+include/evince-2.20/evince/ev-document-thumbnails.h
+include/evince-2.20/evince/ev-document-transition.h
+include/evince-2.20/evince/ev-document.h
+include/evince-2.20/evince/ev-file-exporter.h
+include/evince-2.20/evince/ev-file-helpers.h
+include/evince-2.20/evince/ev-form-field.h
+include/evince-2.20/evince/ev-image.h
+include/evince-2.20/evince/ev-link-action.h
+include/evince-2.20/evince/ev-link-dest.h
+include/evince-2.20/evince/ev-link.h
+include/evince-2.20/evince/ev-render-context.h
+include/evince-2.20/evince/ev-selection.h
+include/evince-2.20/evince/ev-transition-effect.h
+lib/evince/backends/djvudocument.evince-backend
+lib/evince/backends/dvidocument.evince-backend
+lib/evince/backends/libdjvudocument.a
+lib/evince/backends/libdjvudocument.la
+lib/evince/backends/libdjvudocument.so
+lib/evince/backends/libdvidocument.a
+lib/evince/backends/libdvidocument.la
+lib/evince/backends/libdvidocument.so
+lib/evince/backends/libdvidocument.so.0
+lib/evince/backends/libpdfdocument.a
+lib/evince/backends/libpdfdocument.la
+lib/evince/backends/libpdfdocument.so
+lib/evince/backends/libpsdocument.a
+lib/evince/backends/libpsdocument.la
+lib/evince/backends/libpsdocument.so
+lib/evince/backends/libtiffdocument.a
+lib/evince/backends/libtiffdocument.la
+lib/evince/backends/libtiffdocument.so
+lib/evince/backends/pdfdocument.evince-backend
+lib/evince/backends/psdocument.evince-backend
+lib/evince/backends/tiffdocument.evince-backend
+%%NAUTILUS%%lib/nautilus/extensions-2.0/libevince-properties-page.a
+%%NAUTILUS%%lib/nautilus/extensions-2.0/libevince-properties-page.la
+%%NAUTILUS%%lib/nautilus/extensions-2.0/libevince-properties-page.so
+lib/libevbackend.a
+lib/libevbackend.la
+lib/libevbackend.so
+lib/libevbackend.so.0
 share/applications/evince.desktop
 %%DOCSDIR%%/EvAttachment.html
 %%DOCSDIR%%/EvJobPrint.html
@@ -152,6 +200,7 @@ share/locale/eu/LC_MESSAGES/evince.mo
 share/locale/fa/LC_MESSAGES/evince.mo
 share/locale/fi/LC_MESSAGES/evince.mo
 share/locale/fr/LC_MESSAGES/evince.mo
+share/locale/ga/LC_MESSAGES/evince.mo
 share/locale/gl/LC_MESSAGES/evince.mo
 share/locale/gu/LC_MESSAGES/evince.mo
 share/locale/he/LC_MESSAGES/evince.mo
@@ -184,6 +233,7 @@ share/locale/ru/LC_MESSAGES/evince.mo
 share/locale/rw/LC_MESSAGES/evince.mo
 share/locale/sk/LC_MESSAGES/evince.mo
 share/locale/sl/LC_MESSAGES/evince.mo
+share/locale/si/LC_MESSAGES/evince.mo
 share/locale/sq/LC_MESSAGES/evince.mo
 share/locale/sr/LC_MESSAGES/evince.mo
 share/locale/sr@Latn/LC_MESSAGES/evince.mo
@@ -272,6 +322,8 @@ share/omf/evince/evince-uk.omf
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
@@ -288,3 +340,7 @@ share/omf/evince/evince-uk.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrm lib/evince/backends
+@dirrm lib/evince
+@dirrm include/evince-2.20
+@dirrm include/evince-2.20
