@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.53 2007/12/23 08:55:09 kwm Exp $
+#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.54 2008/01/10 00:36:47 marcus Exp $
 #
 
 PORTNAME=	gtk-engines2
-PORTVERSION=	2.13.3
+PORTVERSION=	2.13.4
 CATEGORIES=	x11-themes
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -21,7 +21,7 @@ CONFLICTS=	gtk-smooth-engine-[0-9]* clearlooks-[0-9]*
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gtk20
+USE_GNOME=	gnomehack gtk20 intlhack
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -39,10 +39,5 @@ pre-everything::
 	@${ECHO_MSG} " WITH_ANIMATION"
 	@${ECHO_MSG} ""
 .endif
-
-# Disable the gtk1 theme.
-post-patch:
-	@${REINPLACE_CMD} -e 's|gtk gtk-2.0|gtk-2.0|g' \
-		${WRKSRC}/themes/Redmond/Makefile.in
 
 .include <bsd.port.mk>
