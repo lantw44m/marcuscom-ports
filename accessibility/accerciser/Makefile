@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/accerciser/Makefile,v 1.8 2007/11/16 03:31:13 marcus Exp $
+#   $MCom: ports/accessibility/accerciser/Makefile,v 1.9 2008/01/15 04:44:55 mezz Exp $
 #
 
 PORTNAME=	accerciser
-PORTVERSION=	1.1.5
+PORTVERSION=	1.1.90
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +17,7 @@ COMMENT=	Interactive Python accessibility explorer for GNOME
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	pygnomedesktop atspi
+USE_GNOME=	pygnomedesktop atspi intlhack
 USE_PYTHON=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
