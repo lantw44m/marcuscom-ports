@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gvfs/Makefile,v 1.7 2008/01/21 21:50:47 marcus Exp $
+#    $MCom: ports/devel/gvfs/Makefile,v 1.8 2008/01/25 18:21:10 marcus Exp $
 
 PORTNAME=	gvfs
-PORTVERSION=	0.1.4
+PORTVERSION=	0.1.5
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -14,8 +14,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME virtual file system
 
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
-    		hal.1:${PORTSDIR}/sysutils/hal
-#		soup-2.2.8:${PORTSDIR}/devel/libsoup
+    		hal.1:${PORTSDIR}/sysutils/hal \
+		soup-2.4.0:${PORTSDIR}/devel/libsoup
 
 USE_GNOME=	glib20 gnomehack gnomeprefix intlhack
 USE_GMAKE=	yes
@@ -54,5 +54,11 @@ PLIST_SUB+=	SMB="@comment "
 CONFIGURE_ARGS+=	--disable-cdda
 PLIST_SUB+=	CDDA="@comment "
 #.endif
+
+post-extract:
+.for f in http dav smb smb-browse
+	@${CP} ${FILESDIR}/${f}.mount.in \
+	    	${WRKSRC}/daemon/${f}.mount.in
+.endfor
 
 .include <bsd.port.post.mk>

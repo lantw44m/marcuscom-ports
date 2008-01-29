@@ -3,6 +3,7 @@ bin/gvfs-copy
 bin/gvfs-info
 bin/gvfs-less
 bin/gvfs-ls
+bin/gvfs-mkdir
 bin/gvfs-monitor-dir
 bin/gvfs-monitor-file
 bin/gvfs-mount
@@ -22,7 +23,9 @@ lib/libgvfscommon.so.0
 libexec/gvfsd
 libexec/gvfsd-burn
 libexec/gvfsd-computer
+libexec/gvfsd-dav
 libexec/gvfsd-ftp
+libexec/gvfsd-http
 libexec/gvfsd-localtest
 libexec/gvfsd-sftp
 %%SMB%%libexec/gvfsd-smb
@@ -32,20 +35,27 @@ libexec/gvfsd-trash
 share/dbus-1/services/gvfs-daemon.service
 share/gvfs/mounts/burn.mount
 share/gvfs/mounts/computer.mount
+share/gvfs/mounts/dav.mount
 share/gvfs/mounts/ftp.mount
+share/gvfs/mounts/http.mount
 share/gvfs/mounts/localtest.mount
 share/gvfs/mounts/sftp.mount
 %%SMB%%share/gvfs/mounts/smb-browse.mount
 %%SMB%%share/gvfs/mounts/smb.mount
 share/gvfs/mounts/trash.mount
 share/locale/ar/LC_MESSAGES/gvfs.mo
+share/locale/ca/LC_MESSAGES/gvfs.mo
 share/locale/de/LC_MESSAGES/gvfs.mo
 share/locale/es/LC_MESSAGES/gvfs.mo
 share/locale/eu/LC_MESSAGES/gvfs.mo
 share/locale/it/LC_MESSAGES/gvfs.mo
 share/locale/nb/LC_MESSAGES/gvfs.mo
+share/locale/pt/LC_MESSAGES/gvfs.mo
 share/locale/ru/LC_MESSAGES/gvfs.mo
+share/locale/sl/LC_MESSAGES/gvfs.mo
 share/locale/sv/LC_MESSAGES/gvfs.mo
+share/locale/ta/LC_MESSAGES/gvfs.mo
+share/locale/zh_CN/LC_MESSAGES/gvfs.mo
 @dirrm share/gvfs/mounts
 @dirrm share/gvfs
 @dirrm include/gvfs-client/gvfs
