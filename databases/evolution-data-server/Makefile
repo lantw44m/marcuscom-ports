@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.135 2008/01/18 06:51:39 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.136 2008/01/29 01:38:25 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -65,7 +65,8 @@ PLIST_SUB+=		IMAP4="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g' \
+	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g ; \
+	    	s|have_libsoup_24=yes|have_libsoup_24=no|' \
 		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
