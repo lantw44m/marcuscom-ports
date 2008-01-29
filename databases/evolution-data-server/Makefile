@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.136 2008/01/29 01:38:25 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.137 2008/01/29 06:42:59 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	2.21.5.1
-PORTREVISION=	1
+PORTVERSION=	2.21.90
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
-LIB_DEPENDS=	soup-2.2.8:${PORTSDIR}/devel/libsoup22 \
+LIB_DEPENDS=	soup-2.4.0:${PORTSDIR}/devel/libsoup \
 		nss3.1:${PORTSDIR}/security/nss \
 		tasn1.3:${PORTSDIR}/security/libtasn1
 
@@ -65,8 +64,7 @@ PLIST_SUB+=		IMAP4="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g ; \
-	    	s|have_libsoup_24=yes|have_libsoup_24=no|' \
+	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g' \
 		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>

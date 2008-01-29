@@ -160,6 +160,8 @@ include/evolution-data-server-%%VERSION%%/groupwise/e-gw-message.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-proxy.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-recur-utils.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-sendoptions.h
+include/evolution-data-server-%%VERSION%%/groupwise/soup-soap-message.h
+include/evolution-data-server-%%VERSION%%/groupwise/soup-soap-response.h
 include/evolution-data-server-%%VERSION%%/libebook/e-address-western.h
 include/evolution-data-server-%%VERSION%%/libebook/e-book-query.h
 include/evolution-data-server-%%VERSION%%/libebook/e-book-types.h
@@ -359,11 +361,11 @@ lib/evolution-data-server-%%EVO_VERSION%%/extensions/libecalbackendweather.so
 lib/libcamel-%%EVO_VERSION%%.a
 lib/libcamel-%%EVO_VERSION%%.la
 lib/libcamel-%%EVO_VERSION%%.so
-lib/libcamel-%%EVO_VERSION%%.so.10
+lib/libcamel-%%EVO_VERSION%%.so.11
 lib/libcamel-provider-%%EVO_VERSION%%.a
 lib/libcamel-provider-%%EVO_VERSION%%.la
 lib/libcamel-provider-%%EVO_VERSION%%.so
-lib/libcamel-provider-%%EVO_VERSION%%.so.10
+lib/libcamel-provider-%%EVO_VERSION%%.so.11
 lib/libebook-%%EVO_VERSION%%.a
 lib/libebook-%%EVO_VERSION%%.la
 lib/libebook-%%EVO_VERSION%%.so
@@ -721,6 +723,7 @@ share/locale/pt_BR/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/ro/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/ru/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/rw/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
+share/locale/si/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/sk/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/sl/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/sq/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
@@ -791,6 +794,8 @@ share/pixmaps/evolution-data-server/category_time-and-expenses_16.png
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
