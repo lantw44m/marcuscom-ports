@@ -3,11 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.17 2008/01/14 15:59:01 kwm Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.18 2008/01/19 07:21:41 marcus Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.3.2
+PORTVERSION=	2.3.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	anjuta
@@ -41,14 +41,14 @@ USE_GNOME=	gnomeprefix gnomehack libgnomeprintui libgnomeui vte \
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--disable-plugin-sourceview --disable-plugin-scintilla \
-		--enable-plugin-symbol-db
+CONFIGURE_ARGS=	--enable-plugin-symbol-db
 USE_LDCONFIG=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
 GCONF_SCHEMAS=	anjuta-build-basic-autotools-plugin.schemas \
 		anjuta-cvs-plugin.schemas anjuta-document-manager.schemas \
 		anjuta-editor-scintilla.schemas anjuta-language-cpp-java.schemas \
 		anjuta-message-manager-plugin.schemas \
+		anjuta-editor-sourceview.schemas \
 		anjuta-symbol-browser-plugin.schemas \
 		anjuta-terminal-plugin.schemas anjuta.schemas
 
@@ -77,7 +77,7 @@ PLIST_SUB+=	SVN="@comment "
 post-configure:
 	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash| ; \
 	    	s|/usr/local|${PREFIX}|' \
-	    	${WRKSRC}/global-tags/create_global_tags.sh
+	    	${WRKSRC}/global-tags/create_global_tags.sh.in
 	@${REINPLACE_CMD} -e 's|PKG_PATH|PKG_CONFIG_PATH|g' \
 	    	${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|make|gmake|g' \
