@@ -67,7 +67,7 @@ lib/gnome-settings-daemon/plugins/xsettings/libxsettings.la
 lib/gnome-settings-daemon/plugins/xsettings/libxsettings.so
 lib/gnome-settings-daemon/plugins/xsettings/xsettings.gnome-settings-plugin
 libdata/pkgconfig/gnome-settings-daemon.pc
-libexec/gnome-settings-daemon/gnome-settings-daemon
+libexec/gnome-settings-daemon
 share/dbus-1/services/org.gnome.SettingsDaemon.service
 %%DATADIR%%/xrdb/Editres.ad
 %%DATADIR%%/xrdb/Emacs.ad
@@ -158,7 +158,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
 @dirrm %%DATADIR%%/xrdb
 @dirrm %%DATADIR%%
-@dirrm libexec/gnome-settings-daemon
 @dirrm lib/gnome-settings-daemon/plugins/xsettings
 @dirrm lib/gnome-settings-daemon/plugins/xrdb
 @dirrm lib/gnome-settings-daemon/plugins/xrandr
