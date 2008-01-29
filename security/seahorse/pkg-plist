@@ -21,9 +21,9 @@ lib/libcryptui.a
 lib/libcryptui.la
 lib/libcryptui.so
 lib/libcryptui.so.0
-%%NAUTILUS%%lib/nautilus/extensions-1.0/libnautilus-seahorse.a
-%%NAUTILUS%%lib/nautilus/extensions-1.0/libnautilus-seahorse.la
-%%NAUTILUS%%lib/nautilus/extensions-1.0/libnautilus-seahorse.so
+%%NAUTILUS%%lib/nautilus/extensions-2.0/libnautilus-seahorse.a
+%%NAUTILUS%%lib/nautilus/extensions-2.0/libnautilus-seahorse.la
+%%NAUTILUS%%lib/nautilus/extensions-2.0/libnautilus-seahorse.so
 %%APPLET%%lib/seahorse/seahorse-applet
 lib/seahorse/seahorse-ssh-askpass
 lib/seahorse/xloadimage

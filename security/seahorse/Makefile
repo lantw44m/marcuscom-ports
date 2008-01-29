@@ -3,11 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.52 2008/01/29 01:42:05 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.53 2008/01/29 16:54:06 kwm Exp $
 #
 
 PORTNAME=	seahorse
 PORTVERSION=	2.21.90
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -38,7 +39,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 GCONF_SCHEMAS=	seahorse.schemas
 MAN1=		seahorse-agent.1 seahorse-daemon.1 seahorse-tool.1
 
-#OPTIONS=	NAUTILUS "Enable the Nautilus component" on
 #OPTIONS=	EPIPHANY "Enable Epiphany plug-in support" on
 OPTIONS=	LDAP "Enable LDAP support" on \
 		HKP "Enable HKP keyserver interface" on \
@@ -46,7 +46,8 @@ OPTIONS=	LDAP "Enable LDAP support" on \
 		APPLET "Enable clipboard encryption applet" on \
 		KEYRING "Enable GNOME Keyring support" on \
 		MDNS "Enable mDNS key sharing" on \
-		GEDIT "Enable GEdit plug-in support" on
+		GEDIT "Enable GEdit plug-in support" on \
+		NAUTILUS "Enable the Nautilus component" on
 
 .include <bsd.port.pre.mk>
 
@@ -60,13 +61,13 @@ PLIST_SUB+=	GEDIT="@comment "
 CONFIGURE_ARGS+=--disable-gedit
 .endif
 
-#.if !defined(WITHOUT_NAUTILUS)
-#USE_GNOME+=	nautilus2
-#PLIST_SUB+=	NAUTILUS=""
-#.else
+.if !defined(WITHOUT_NAUTILUS)
+USE_GNOME+=	nautilus2
+PLIST_SUB+=	NAUTILUS=""
+.else
 PLIST_SUB+=	NAUTILUS="@comment "
 CONFIGURE_ARGS+=--disable-nautilus
-#.endif
+.endif
 
 .if !defined(WITHOUT_LDAP)
 USE_OPENLDAP=	yes
