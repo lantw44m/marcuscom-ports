@@ -3,12 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/libbonobo/Makefile,v 1.67 2007/10/17 21:36:11 mezz Exp $
+#   $MCom: ports/devel/libbonobo/Makefile,v 1.69 2008/01/29 06:38:04 marcus Exp $
 #
 
 PORTNAME=	libbonobo
-PORTVERSION=	2.20.4
-PORTREVISION?=	1
+PORTVERSION=	2.21.90
+PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -37,10 +37,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAKE_ENV=	gnomelocaledir=${PREFIX}/share/locale
 
 MAN1=		bonobo-activation-server.1
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|-DG.*_DISABLE_DEPRECATED||g' \
-	    	${WRKSRC}/bonobo/Makefile.in
 
 .include <bsd.port.mk>
 
