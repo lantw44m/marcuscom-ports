@@ -37,6 +37,8 @@ share/gnome/help/services-admin/C/legal.xml
 share/gnome/help/services-admin/C/services-admin.xml
 share/gnome/help/services-admin/ca/figures/services-tool.png
 share/gnome/help/services-admin/ca/services-admin.xml
+share/gnome/help/services-admin/el/figures/services-tool.png
+share/gnome/help/services-admin/el/services-admin.xml
 share/gnome/help/services-admin/es/figures/services-tool.png
 share/gnome/help/services-admin/es/services-admin.xml
 share/gnome/help/services-admin/fr/figures/services-tool.png
@@ -204,6 +206,7 @@ share/omf/network-admin/network-admin-oc.omf
 share/omf/network-admin/network-admin-sv.omf
 share/omf/services-admin/services-admin-C.omf
 share/omf/services-admin/services-admin-ca.omf
+share/omf/services-admin/services-admin-el.omf
 share/omf/services-admin/services-admin-es.omf
 share/omf/services-admin/services-admin-fr.omf
 share/omf/services-admin/services-admin-oc.omf
@@ -289,6 +292,8 @@ share/omf/users-admin/users-admin-sv.omf
 @dirrm share/gnome/help/services-admin/fr
 @dirrm share/gnome/help/services-admin/es/figures
 @dirrm share/gnome/help/services-admin/es
+@dirrm share/gnome/help/services-admin/el/figures
+@dirrm share/gnome/help/services-admin/el
 @dirrm share/gnome/help/services-admin/ca/figures
 @dirrm share/gnome/help/services-admin/ca
 @dirrm share/gnome/help/services-admin/C/figures
