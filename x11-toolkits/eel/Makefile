@@ -3,11 +3,11 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/eel/Makefile,v 1.62 2008/01/09 19:58:15 marcus Exp $
+#   $MCom: ports/x11-toolkits/eel/Makefile,v 1.63 2008/01/14 21:10:08 marcus Exp $
 #
 
 PORTNAME=	eel
-PORTVERSION=	2.21.5
+PORTVERSION=	2.21.90
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -19,9 +19,9 @@ COMMENT=	Generally useful classes and extensions to GNOME
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_XLIB=	yes
+USE_XORG=	xrender
 GNOME_DESKTOP_VERSION=2
-USE_GNOME=	gnomeprefix gnomehack gail gnomedesktop gnomemenus ltverhack
+USE_GNOME=	gnomeprefix gnomehack gail gnomedesktop ltverhack intlhack
 USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-shared --enable-static
