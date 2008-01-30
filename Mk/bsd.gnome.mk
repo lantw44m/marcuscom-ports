@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.438 2008/01/28 22:27:18 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.439 2008/01/29 04:26:31 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -305,7 +305,7 @@ gconf2_USE_GNOME_IMPL=	orbit2 libxml2 gtk20
 
 gnomevfs2_LIB_DEPENDS=	gnomevfs-2.0:${PORTSDIR}/devel/gnome-vfs
 gnomevfs2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-vfs-2.0.pc
-gnomevfs2_USE_GNOME_IMPL=gconf2 libbonobo gnomemimedata
+gnomevfs2_USE_GNOME_IMPL=gconf2 gnomemimedata
 
 gail_LIB_DEPENDS=	gailutil.18:${PORTSDIR}/accessibility/gail
 gail_DETECT=		${LOCALBASE}/libdata/pkgconfig/gail.pc
