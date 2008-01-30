@@ -1,0 +1,62 @@
+--- trunk/src/evolution-webcal-main.c	2008/01/14 11:00:46	410
++++ src/evolution-webcal-main.c	2008/01/17 14:55:45	411
+@@ -45,7 +45,7 @@
+ 
+   comp = icalparser_parse_string (body);
+   if (comp == NULL) {
+-    SoupUri * tmpuri;
++    SoupURI * tmpuri;
+     gchar * message, * tmpname;
+ 
+     tmpuri = soup_uri_new (uri);
+@@ -100,16 +100,15 @@
+   bonobo_main_quit ();
+ }
+ 
+-static void e_webcal_read (SoupMessage * msg, gpointer data) {
+-  const SoupUri * tmpuri;
++static void e_webcal_read (SoupSession *session, SoupMessage * msg, gpointer data) {
++  const SoupURI * tmpuri;
+   const gchar * uri = (const gchar *) data;
+   const gchar * header;
+-  gchar * body;
+ 
+   tmpuri = soup_message_get_uri (msg);
+ 
+   if (SOUP_STATUS_IS_REDIRECTION (msg->status_code)) {
+-    header = soup_message_get_header (msg->response_headers, "Location");
++    header = soup_message_headers_get (msg->response_headers, "Location");
+     if (header) {
+       e_webcal_open_cal_http (header, uri);
+     }
+@@ -154,9 +153,7 @@
+     return;
+   }
+ 
+-  body = g_strndup (msg->response.body, msg->response.length);
+-  e_webcal_load (body, uri);
+-  g_free (body);
++  e_webcal_load (msg->response_body->data, uri);
+ 
+   g_free (data);
+ }
+@@ -188,7 +185,7 @@
+   soup_message_set_flags (message, SOUP_MESSAGE_NO_REDIRECT);
+ 
+   soup_session_queue_message (session, message,
+-			      (SoupMessageCallbackFn) e_webcal_read,
++			      (SoupSessionCallback) e_webcal_read,
+ 			      (gpointer) olduri);
+ }
+ 
+--- trunk/src/evolution-webcal-notify.c	2008/01/14 11:00:46	410
++++ src/evolution-webcal-notify.c	2008/01/17 14:55:45	411
+@@ -249,7 +249,7 @@
+   GtkWidget * rlabel, * clabel;
+   GtkWidget * cbutton;
+   GtkWidget * label, * button;
+-  SoupUri * tmpuri;
++  SoupURI * tmpuri;
+   gchar * tmpname;
+   gchar * icofile, * mrkname, * ref_str;
+   gint ref_timeout, ref_multi;
