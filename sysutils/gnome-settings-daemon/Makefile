@@ -3,12 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.8 2008/01/29 19:03:58 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.9 2008/01/29 22:04:40 mezz Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
 PORTVERSION=	2.21.90.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -31,5 +31,9 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
 		apps_gnome_settings_daemon_screensaver.schemas \
 		desktop_gnome_font_rendering.schemas \
 		gnome-settings-daemon.schemas
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|gnome-settings-daemon/gnome-settings-daemon|gnome-settings-daemon|g' \
+		${WRKSRC}/data/org.gnome.SettingsDaemon.service.in
 
 .include <bsd.port.mk>
