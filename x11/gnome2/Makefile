@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.229 2008/01/19 21:34:14 mezz Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.230 2008/01/21 18:29:09 marcus Exp $
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.21.5
+PORTVERSION=	2.21.90
 PORTREVISION?=	0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
