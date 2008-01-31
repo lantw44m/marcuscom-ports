@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.168 2008/01/29 18:07:53 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.169 2008/01/29 21:54:12 mezz Exp $
 #
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	2.21.90
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -16,7 +17,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Control center for GNOME 2 project
 
-LIB_DEPENDS=	xklavier.11:${PORTSDIR}/x11/libxklavier
+LIB_DEPENDS=	xklavier.12:${PORTSDIR}/x11/libxklavier
 BUILD_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
