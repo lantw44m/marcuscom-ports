@@ -3,12 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.53 2008/01/29 16:54:06 kwm Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.54 2008/01/29 21:28:21 mezz Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	2.21.90
-PORTREVISION=	1
+PORTVERSION=	2.21.91
 CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -39,7 +38,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 GCONF_SCHEMAS=	seahorse.schemas
 MAN1=		seahorse-agent.1 seahorse-daemon.1 seahorse-tool.1
 
-#OPTIONS=	EPIPHANY "Enable Epiphany plug-in support" on
 OPTIONS=	LDAP "Enable LDAP support" on \
 		HKP "Enable HKP keyserver interface" on \
 		NOTIFY "Enable libnotify support" on \
@@ -47,7 +45,8 @@ OPTIONS=	LDAP "Enable LDAP support" on \
 		KEYRING "Enable GNOME Keyring support" on \
 		MDNS "Enable mDNS key sharing" on \
 		GEDIT "Enable GEdit plug-in support" on \
-		NAUTILUS "Enable the Nautilus component" on
+		NAUTILUS "Enable the Nautilus component" on \
+		EPIPHANY "Enable Epiphany plug-in support" on
 
 .include <bsd.port.pre.mk>
 
@@ -90,14 +89,14 @@ LIB_DEPENDS+=	notify.1:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=--disable-libnotify
 .endif
 
-#.if !defined(WITHOUT_EPIPHANY)
-#BUILD_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-#RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-#PLIST_SUB+=	EPHY="" EPHY_VERSION="2.20"
-#.else
+.if !defined(WITHOUT_EPIPHANY)
+BUILD_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
+PLIST_SUB+=	EPHY="" EPHY_VERSION="2.21"
+.else
 CONFIGURE_ARGS+=--disable-epiphany
 PLIST_SUB+=	EPHY="@comment "
-#.endif
+.endif
 
 .if !defined(WITHOUT_APPLET)
 USE_GNOME+=	gnomepanel
