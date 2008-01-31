@@ -1,3 +1,4 @@
+bin/gdmflexiserver
 etc/dbus-1/system.d/gdm.conf
 etc/gdm/Init/Default
 etc/gdm/PostLogin/Default.sample
@@ -14,6 +15,7 @@ libexec/gdm-session-worker
 libexec/gdm-simple-chooser
 libexec/gdm-simple-greeter
 libexec/gdm-simple-slave
+libexec/gdm-xdmcp-chooser-slave
 %%PAM_MISC%%libexec/gdmaskpass
 sbin/gdm
 sbin/gdm-binary
