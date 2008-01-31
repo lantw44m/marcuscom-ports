@@ -1,5 +1,4 @@
 bin/nautilus-cd-burner
-etc/gnome-vfs-2.0/modules/mapping-modules.conf
 include/libnautilus-burn/nautilus-burn-drive-monitor.h
 include/libnautilus-burn/nautilus-burn-drive-selection.h
 include/libnautilus-burn/nautilus-burn-drive.h
