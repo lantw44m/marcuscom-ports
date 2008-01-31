@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	consolekit
-PORTVERSION=	0.2.5
-PORTREVISION=	1
+PORTVERSION=	0.2.7
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://people.freedesktop.org/~mccann/dist/
 DISTFILES=	ConsoleKit-${PORTVERSION}${EXTRACT_SUFX}
