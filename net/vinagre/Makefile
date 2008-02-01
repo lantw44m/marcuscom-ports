@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net/vinagre/Makefile,v 1.1 2008/01/28 21:57:40 mezz Exp $
 #
 
 PORTNAME=	vinagre
 PORTVERSION=	0.4.90
+PORTREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -24,7 +25,7 @@ LIB_DEPENDS=	gtk-vnc-1.0.0:${PORTSDIR}/net/gtk-vnc \
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_XLIB=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack libglade2 gconf2
+USE_GNOME=	gnomeprefix intlhack gnomehack libglade2 gconf2 gnomedocutils
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
