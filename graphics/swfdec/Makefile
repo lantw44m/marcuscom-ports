@@ -4,10 +4,11 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/swfdec/Makefile,v 1.11 2008/01/29 14:12:32 kwm Exp $
 
 PORTNAME=	swfdec
 PORTVERSION=	0.5.90
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://swfdec.freedesktop.org/download/swfdec/0.5/
 
