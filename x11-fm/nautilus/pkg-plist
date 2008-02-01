@@ -191,22 +191,6 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/audio-cdda.xml > /dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/audio-dvd.xml > /dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/audio-player.xml > /dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/blank-bd.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/blank-cd.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/blank-dvd.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/blank-hddvd.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/image-dcf.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/image-picturecd.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/software.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/video-bluray.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/video-dvd.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/video-hddvd.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/video-svcd.xml >/dev/null || /usr/bin/true
-@unexec rm -f %D/share/mime/x-content/video-vcd.xml >/dev/null || /usr/bin/true
-@dirrmtry share/mime/x-content
 @dirrmtry share/applications
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
