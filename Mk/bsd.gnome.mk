@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.439 2008/01/29 04:26:31 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.440 2008/01/30 18:22:31 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -329,7 +329,7 @@ libgnomeprintui_USE_GNOME_IMPL=	libgnomeprint libgnomecanvas
 
 libgnome_LIB_DEPENDS=	gnome-2.0:${PORTSDIR}/x11/libgnome
 libgnome_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgnome-2.0.pc
-libgnome_USE_GNOME_IMPL=gnomevfs2 esound
+libgnome_USE_GNOME_IMPL=gnomevfs2 esound libbonobo
 
 libbonoboui_LIB_DEPENDS=	bonoboui-2.0:${PORTSDIR}/x11-toolkits/libbonoboui
 libbonoboui_DETECT=		${LOCALBASE}/libdata/pkgconfig/libbonoboui-2.0.pc
