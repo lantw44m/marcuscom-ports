@@ -3,12 +3,12 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11/libgnome/Makefile,v 1.112 2008/01/28 17:41:05 mezz Exp $
 #
 
 PORTNAME=	libgnome
 PORTVERSION=	2.21.90
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -26,7 +26,7 @@ RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack esound \
+USE_GNOME=	gnomeprefix gnomehack intlhack esound libbonobo \
 		gnomevfs2 ltverhack referencehack
 USE_BISON=	build
 USE_XORG=	xpm
