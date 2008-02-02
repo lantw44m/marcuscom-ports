@@ -1,0 +1,4 @@
+vty-checker is a small tool which tries to open each configured VTY line to
+make sure the device is configured.  The idea is to run this program prior to
+starting an application which will bind to a particular VTY.  This is
+especially important for programs starting out of rc.d.
