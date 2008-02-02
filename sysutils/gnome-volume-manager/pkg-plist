@@ -79,6 +79,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-volume-manager.mo
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrmtry etc/xdg/autostart
+@dirrmtry etc/xdg
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
