@@ -71,7 +71,7 @@ main(int argc, char **argv)
 			ty_devptr = ttydev + 6;
 			(void)strlcat(ty_devptr, t->ty_name, PATH_MAX);
 
-			if ((fd = open(ttydev, O_RDONLY)) < 0) {
+			if ((fd = open(ttydev, O_RDONLY | O_NOCTTY)) < 0) {
 				if (debug) {
 					(void)fprintf(stderr,
 						"Failed to open %s: %s\n",

@@ -3,13 +3,13 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/sysutils/vty-checker/Makefile,v 1.1 2008/02/02 23:58:48 marcus Exp $
 #
 # This port is self contained in the src directory.
 #
 
 PORTNAME=	vty-checker
-PORTVERSION=	1.0
+PORTVERSION=	1.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	# none
 DISTFILES=	# none
