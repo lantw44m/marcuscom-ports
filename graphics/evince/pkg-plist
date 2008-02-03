@@ -346,5 +346,5 @@ share/omf/evince/evince-uk.omf
 @dirrmtry share/locale/be@latin
 @dirrm lib/evince/backends
 @dirrm lib/evince
-@dirrm include/evince-2.20/envince
+@dirrm include/evince-2.20/evince
 @dirrm include/evince-2.20
