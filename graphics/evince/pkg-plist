@@ -23,8 +23,12 @@ include/evince-2.20/evince/ev-link.h
 include/evince-2.20/evince/ev-render-context.h
 include/evince-2.20/evince/ev-selection.h
 include/evince-2.20/evince/ev-transition-effect.h
+%%COMICS%%lib/evince/backends/comicsdocument.evince-backend
 %%DJVU%%lib/evince/backends/djvudocument.evince-backend
 %%DVI%%lib/evince/backends/dvidocument.evince-backend
+%%COMICS%%lib/evince/backends/libcomicsdocument.a
+%%COMICS%%lib/evince/backends/libcomicsdocument.la
+%%COMICS%%lib/evince/backends/libcomicsdocument.so
 %%DJVU%%lib/evince/backends/libdjvudocument.a
 %%DJVU%%lib/evince/backends/libdjvudocument.la
 %%DJVU%%lib/evince/backends/libdjvudocument.so
