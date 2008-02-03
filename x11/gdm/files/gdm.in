@@ -1,6 +1,6 @@
 #!/bin/sh
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/files/gdm.in,v 1.20 2008/01/19 22:45:43 mezz Exp $
+#    $MCom: ports/x11/gdm/files/gdm.in,v 1.21 2008/01/23 20:55:25 marcus Exp $
 
 # PROVIDE: gdm
 # REQUIRE: LOGIN cleanvar moused syscons dbus
@@ -22,6 +22,20 @@ rcvar=`set_rcvar`
 command="%%PREFIX%%/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 procname="%%PREFIX%%/sbin/gdm-binary"
+
+start_precmd="gdm_precmd"
+
+gdm_precmd()
+{
+    iter=0
+    while ! %%LOCALBASE/bin/vty-checker ; do
+	if [ ${iter} -eq 60 ]; then
+	    break
+	fi
+	sleep 1
+	iter=$(expr ${iter} + 1)
+    done
+}
 
 load_rc_config ${name}
 run_rc_command "$1"
