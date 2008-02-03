@@ -1,6 +1,6 @@
 #!/bin/sh
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/files/gdm.in,v 1.21 2008/01/23 20:55:25 marcus Exp $
+#    $MCom: ports/x11/gdm/files/gdm.in,v 1.22 2008/02/03 00:07:45 marcus Exp $
 
 # PROVIDE: gdm
 # REQUIRE: LOGIN cleanvar moused syscons dbus
@@ -28,7 +28,7 @@ start_precmd="gdm_precmd"
 gdm_precmd()
 {
     iter=0
-    while ! %%LOCALBASE/bin/vty-checker ; do
+    while ! %%LOCALBASE%%/bin/vty-checker ; do
 	if [ ${iter} -eq 60 ]; then
 	    break
 	fi
