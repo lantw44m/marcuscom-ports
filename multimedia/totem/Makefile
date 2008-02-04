@@ -3,11 +3,11 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.94 2007/12/23 13:14:28 kwm Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.95 2008/01/08 22:58:44 kwm Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	2.21.90
+PORTVERSION=	2.21.92
 PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
@@ -18,15 +18,15 @@ COMMENT?=	A gstreamer-based video player for the GNOME 2 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	musicbrainz:${PORTSDIR}/audio/libmusicbrainz \
-		totem-plparser.10:${PORTSDIR}/multimedia/totem-pl-parser \
-		hal.1:${PORTSDIR}/sysutils/hal
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+		totem-plparser.10:${PORTSDIR}/multimedia/totem-pl-parser
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
+		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_XLIB=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack gnomedesktop desktopfileutils \
-		nautiluscdburner ltverhack gnomecontrolcenter2 pygtk2
+USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui desktopfileutils \
+		nautiluscdburner ltverhack pygtk2
 GNOME_DESKTOP_VERSION=2
 WANT_GSTREAMER=	yes
 INSTALLS_ICONS=	yes

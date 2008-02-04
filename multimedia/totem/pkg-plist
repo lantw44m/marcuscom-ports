@@ -154,7 +154,6 @@ share/gnome/help/totem/uk/figures/totem_start_window.png
 share/gnome/help/totem/uk/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/uk/figures/totem_volume_mute_button.png
 share/gnome/help/totem/uk/totem.xml
-share/totem/video-list.ui
 share/icons/hicolor/16x16/apps/totem.png
 share/icons/hicolor/22x22/apps/totem.png
 share/icons/hicolor/24x24/apps/totem.png
@@ -163,6 +162,7 @@ share/icons/hicolor/48x48/apps/totem.png
 share/icons/hicolor/scalable/apps/totem.svg
 share/locale/am/LC_MESSAGES/totem.mo
 share/locale/ar/LC_MESSAGES/totem.mo
+share/locale/as/LC_MESSAGES/totem.mo
 share/locale/az/LC_MESSAGES/totem.mo
 share/locale/be/LC_MESSAGES/totem.mo
 share/locale/be@latin/LC_MESSAGES/totem.mo
@@ -262,6 +262,7 @@ share/omf/totem/totem-uk.omf
 %%DATADIR%%/totem.ui
 %%DATADIR%%/totem_logo.png
 %%DATADIR%%/uri.ui
+%%DATADIR%%/video-list.ui
 share/vala/vapi/totem.deps
 share/vala/vapi/totem.vapi
 @dirrm %%DATADIR%%
@@ -334,3 +335,5 @@ share/vala/vapi/totem.vapi
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
