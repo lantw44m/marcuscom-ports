@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/pkg-config/Makefile,v 1.9 2007/07/01 20:46:42 mezz Exp $
+#   $MCom: ports/devel/pkg-config/Makefile,v 1.11 2008/02/04 19:10:15 ahze Exp $
 #
 
 PORTNAME=	pkg-config
 PORTVERSION=	0.23
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://pkgconfig.freedesktop.org/releases/
 DIST_SUBDIR=	gnome2
