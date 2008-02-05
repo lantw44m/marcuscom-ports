@@ -3,12 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.33 2008/02/05 00:52:32 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.34 2008/02/05 05:54:21 marcus Exp $
 #
 
 PORTNAME=	hal
 PORTVERSION=	${HALVERSION}.${SNAPVERSION}
-PORTREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 
@@ -48,7 +47,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		GTKDOC="false"
 
 HALVERSION=	0.5.10
-SNAPVERSION=	20080106
+SNAPVERSION=	20080205
 
 USE_RC_SUBR=	hald
 USE_GNOME_SUBR=	yes
