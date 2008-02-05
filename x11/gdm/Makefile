@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.102 2008/02/03 20:52:18 mezz Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.103 2008/02/04 06:07:28 marcus Exp $
 #
 
 PORTNAME=	gdm
@@ -74,6 +74,8 @@ post-patch:
 		${WRKSRC}/data/Makefile.in
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 	    	${WRKSRC}/daemon/gdm-session-worker.c
+	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
+		${WRKSRC}/configure ${WRKSRC}/daemon/*.c ${WRKSRC}/po/*.po
 
 post-install:
 .if !defined(PACKAGE_BUILDING)
