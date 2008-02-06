@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/multimedia/cheese/Makefile,v 1.4 2008/02/06 18:39:16 mezz Exp $
 #
 
 PORTNAME=	cheese
@@ -36,8 +36,8 @@ post-patch:
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|[(]libdir[)]/cheese|(libexecdir)/cheese|g' \
 		${WRKSRC}/data/Makefile.in
-	@${REINPLACE_CMD} -e 's|/usr/local/lib|${PREFIX}/libexec|g' \
-		${WRKSRC}/data/cheese.desktop.in
+	@${REINPLACE_CMD} -e 's|@FULL_LIBDIR@|${PREFIX}/libexec|g' \
+		${WRKSRC}/data/cheese.desktop.in*
 
 .ifndef (NOPORTDOCS)
 post-install:
