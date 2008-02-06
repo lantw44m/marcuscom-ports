@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/databases/libgda3/Makefile,v 1.7 2008/02/05 13:06:53 kwm Exp $
 #
 
 PORTNAME=	libgda3
@@ -49,7 +49,7 @@ PLIST_SUB=	VERSION=${PORTVERSION:R}
 USE_MYSQL=		yes
 CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
 .else
-CONFIGURE_ARGS+=        --without-mysql
+CONFIGURE_ARGS+=	--without-mysql
 .endif
 
 .if ${LIBGDA3_SLAVE}=="postgresql"
@@ -103,7 +103,7 @@ post-patch:
 		${WRKSRC}/providers/sqlite/sqlite-src/${d}
 .endfor
 .if !LIBGDA3_SLAVE=="no"
-. for d in msql firebird odbc freetds mdb ldap mysql sqlite postgres	
+. for d in msql firebird odbc freetds mdb ldap mysql sqlite postgres
 	@${REINPLACE_CMD} -e 's|$$(top_builddir)/libgda/|${LOCALBASE}/lib/|g' \
 		${WRKSRC}/providers/${d}/Makefile.in
 . endfor
