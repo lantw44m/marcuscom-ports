@@ -7,14 +7,14 @@ lib/libglom.so.0
 %%PYTHON_SITELIBDIR%%/glom.la
 %%PYTHON_SITELIBDIR%%/glom.so
 share/applications/glom.desktop
-%%DATADIR%%/examples/example_film_manager.glom
-%%DATADIR%%/examples/example_music_collection.glom
-%%DATADIR%%/examples/example_project_manager.glom
-%%DATADIR%%/examples/example_smallbusiness.glom
-share/glom/glade/glom.glade
-share/glom/glom_document.dtd
-share/glom/xslt/print_details_to_html.xsl
-share/glom/xslt/print_report_to_html.xsl
+%%DATADIR%%/doc/examples/example_film_manager.glom
+%%DATADIR%%/doc/examples/example_music_collection.glom
+%%DATADIR%%/doc/examples/example_project_manager.glom
+%%DATADIR%%/doc/examples/example_smallbusiness.glom
+%%DATADIR%%/glade/glom.glade
+%%DATADIR%%/glom_document.dtd
+%%DATADIR%%/xslt/print_details_to_html.xsl
+%%DATADIR%%/xslt/print_report_to_html.xsl
 share/gnome/help/glom/C/figures/glom_design_fields.png
 share/gnome/help/glom/C/figures/glom_design_fields_dialog_calculated.png
 share/gnome/help/glom/C/figures/start.png
@@ -112,11 +112,11 @@ share/omf/glom/glom-sv.omf
 @dirrm share/gnome/help/glom/C/figures
 @dirrm share/gnome/help/glom/C
 @dirrm share/gnome/help/glom
-@dirrm share/glom/xslt
-@dirrm share/glom/glade
-@dirrm share/glom/doc/examples
-@dirrm share/glom/doc
-@dirrm share/glom
+@dirrm %%DATADIR%%/xslt
+@dirrm %%DATADIR%%/glade
+@dirrm %%DATADIR%%/doc/examples
+@dirrm %%DATADIR%%/doc
+@dirrm %%DATADIR%%
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
