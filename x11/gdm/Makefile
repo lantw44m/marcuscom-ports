@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.104 2008/02/05 05:32:45 mezz Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.105 2008/02/05 05:54:21 marcus Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.21.6
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -21,8 +21,7 @@ BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 		${LOCALBASE}/libdata/pkgconfig/check.pc:${PORTSDIR}/devel/check
 LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
-		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon \
-		vty-checker:${PORTSDIR}/sysutils/vty-checker
+		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
