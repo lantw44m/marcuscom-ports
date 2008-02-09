@@ -82,8 +82,6 @@ share/omf/glom/glom-es.omf
 share/omf/glom/glom-sv.omf
 @dirrmtry share/locale/zh_CN/LC_MESSAGES
 @dirrmtry share/locale/zh_CN
-@dirrmtry share/locale/vi/LC_MESSAGES
-@dirrmtry share/locale/vi
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/pt/LC_MESSAGES
