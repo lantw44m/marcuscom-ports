@@ -3,11 +3,11 @@
 # Whom:				Alan Eldridge <alane@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/firefox/Makefile,v 1.41 2007/12/28 17:39:28 mezz Exp $
+#   $MCom: ports/www/firefox/Makefile,v 1.42 2008/01/10 18:00:51 mezz Exp $
 #
 
 PORTNAME=	firefox
-DISTVERSION=	2.0.0.11
+DISTVERSION=	2.0.0.12
 PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	www ipv6
