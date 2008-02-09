@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.167 2008/01/23 05:57:56 marcus Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.168 2008/01/29 22:35:41 mezz Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -40,9 +40,6 @@ CONFIGURE_ARGS=	--with-kde-datadir=${LOCALBASE}/share \
 		--disable-polkit
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-
-# Remove this in the next release at 2.21.6 or above.
-CFLAGS+=	-DGWEATHER_I_KNOW_THIS_IS_UNSTABLE
 
 MAN1=		gnome-panel.1
 GCONF_SCHEMAS=	clock.schemas fish.schemas \
