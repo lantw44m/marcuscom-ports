@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.88 2008/02/03 15:57:56 marcus Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.89 2008/02/03 16:45:27 marcus Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	2.21.90
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -27,10 +27,11 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 USE_GHOSTSCRIPT=yes
 INSTALLS_OMF=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui libgnomeprintui \
-		desktopfileutils gnomedocutils
+USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui desktopfileutils \
+		gnomedocutils
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--with-print=gtk
 
 GCONF_SCHEMAS=	evince.schemas evince-thumbnailer.schemas \
 		evince-thumbnailer-ps.schemas
@@ -113,7 +114,7 @@ PLIST_SUB+=		COMICS="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|execinfo.h|#|g' \
+	@${REINPLACE_CMD} -e 's|execinfo.h|#|g ; s|libgnomeprintui|disable|g' \
 		${WRKSRC}/configure
 
 post-install:
