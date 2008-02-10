@@ -1,5 +1,5 @@
---- sysdeps/freebsd/procopenfiles.c.orig	2008-02-09 02:05:40.000000000 -0500
-+++ sysdeps/freebsd/procopenfiles.c	2008-02-09 12:41:44.000000000 -0500
+--- sysdeps/freebsd/procopenfiles.c.orig	2007-07-01 09:14:23.000000000 -0400
++++ sysdeps/freebsd/procopenfiles.c	2008-02-10 02:45:20.000000000 -0500
 @@ -28,6 +28,13 @@
  #include <glibtop/error.h>
  #include <glibtop/procopenfiles.h>
@@ -122,7 +122,7 @@
 +		if (kif->kf_fd < 0)
 +			continue;
 +
-+		if (kif->kf_type == KF_VTYPE_VSOCK) {
++		if (kif->kf_type == KF_TYPE_SOCKET) {
 +			if (kif->kf_sock_domain == AF_LOCAL) {
 +				struct sockaddr_un *sun;
 +
