@@ -1,5 +1,5 @@
 --- sysdeps/freebsd/fsusage.c.orig	2007-06-03 16:06:05.000000000 -0400
-+++ sysdeps/freebsd/fsusage.c	2008-02-09 19:10:28.000000000 -0500
++++ sysdeps/freebsd/fsusage.c	2008-02-09 19:50:44.000000000 -0500
 @@ -10,6 +10,7 @@
  #include <unistd.h>
  #include <sys/param.h>
@@ -47,7 +47,7 @@
 +	if (statvfs (path, &fsd) < 0)
 +		return;
 +
-+	buf->block_size = fsd.f_bsize;
++	buf->block_size = fsd.f_frsize;
 +	buf->blocks = fsd.f_blocks;
 +	buf->bfree  = fsd.f_bfree;
 +	buf->bavail = (fsd.f_bavail > fsd.f_bfree) ? 0 : fsd.f_bavail;
