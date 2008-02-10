@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.69 2007/12/23 10:00:56 kwm Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.70 2008/01/15 04:38:54 mezz Exp $
 #
 
 PORTNAME=	eog
 PORTVERSION=	2.21.4
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -18,8 +19,8 @@ COMMENT=	The Eye Of Gnome image viewer
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprintui \
-		librsvg2 desktopfileutils gnomedesktop
+USE_GNOME=	gnomeprefix gnomehack intlhack librsvg2 desktopfileutils \
+		gnomedesktop
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_XLIB=	yes
