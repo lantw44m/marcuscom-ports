@@ -1,74 +1,70 @@
 include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-client.h
-lib/gnome-settings-daemon/plugins/a11y-keyboard/a11y-keyboard.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/a11y-keyboard/liba11y-keyboard.a
-lib/gnome-settings-daemon/plugins/a11y-keyboard/liba11y-keyboard.la
-lib/gnome-settings-daemon/plugins/a11y-keyboard/liba11y-keyboard.so
-lib/gnome-settings-daemon/plugins/background/background.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/background/libbackground.a
-lib/gnome-settings-daemon/plugins/background/libbackground.la
-lib/gnome-settings-daemon/plugins/background/libbackground.so
-lib/gnome-settings-daemon/plugins/clipboard/clipboard.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/clipboard/libclipboard.a
-lib/gnome-settings-daemon/plugins/clipboard/libclipboard.la
-lib/gnome-settings-daemon/plugins/clipboard/libclipboard.so
-lib/gnome-settings-daemon/plugins/default-editor/default-editor.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/default-editor/libdefault-editor.a
-lib/gnome-settings-daemon/plugins/default-editor/libdefault-editor.la
-lib/gnome-settings-daemon/plugins/default-editor/libdefault-editor.so
-lib/gnome-settings-daemon/plugins/dummy/dummy.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/dummy/libdummy.a
-lib/gnome-settings-daemon/plugins/dummy/libdummy.la
-lib/gnome-settings-daemon/plugins/dummy/libdummy.so
-lib/gnome-settings-daemon/plugins/font/font.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/font/libfont.a
-lib/gnome-settings-daemon/plugins/font/libfont.la
-lib/gnome-settings-daemon/plugins/font/libfont.so
-lib/gnome-settings-daemon/plugins/keybindings/keybindings.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/keybindings/libkeybindings.a
-lib/gnome-settings-daemon/plugins/keybindings/libkeybindings.la
-lib/gnome-settings-daemon/plugins/keybindings/libkeybindings.so
-lib/gnome-settings-daemon/plugins/keyboard/keyboard.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/keyboard/libkeyboard.a
-lib/gnome-settings-daemon/plugins/keyboard/libkeyboard.la
-lib/gnome-settings-daemon/plugins/keyboard/libkeyboard.so
-lib/gnome-settings-daemon/plugins/keyboard/modmap-dialog.glade
-lib/gnome-settings-daemon/plugins/media-keys/acme-eject.png
-lib/gnome-settings-daemon/plugins/media-keys/acme.glade
-lib/gnome-settings-daemon/plugins/media-keys/libmedia-keys.a
-lib/gnome-settings-daemon/plugins/media-keys/libmedia-keys.la
-lib/gnome-settings-daemon/plugins/media-keys/libmedia-keys.so
-lib/gnome-settings-daemon/plugins/media-keys/media-keys.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/mouse/libmouse.a
-lib/gnome-settings-daemon/plugins/mouse/libmouse.la
-lib/gnome-settings-daemon/plugins/mouse/libmouse.so
-lib/gnome-settings-daemon/plugins/mouse/mouse.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/screensaver/libscreensaver.a
-lib/gnome-settings-daemon/plugins/screensaver/libscreensaver.la
-lib/gnome-settings-daemon/plugins/screensaver/libscreensaver.so
-lib/gnome-settings-daemon/plugins/screensaver/screensaver.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/sound/libsound.a
-lib/gnome-settings-daemon/plugins/sound/libsound.la
-lib/gnome-settings-daemon/plugins/sound/libsound.so
-lib/gnome-settings-daemon/plugins/sound/sound.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/typing-break/libtyping-break.a
-lib/gnome-settings-daemon/plugins/typing-break/libtyping-break.la
-lib/gnome-settings-daemon/plugins/typing-break/libtyping-break.so
-lib/gnome-settings-daemon/plugins/typing-break/typing-break.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/xrandr/libxrandr.a
-lib/gnome-settings-daemon/plugins/xrandr/libxrandr.la
-lib/gnome-settings-daemon/plugins/xrandr/libxrandr.so
-lib/gnome-settings-daemon/plugins/xrandr/xrandr.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/xrdb/libxrdb.a
-lib/gnome-settings-daemon/plugins/xrdb/libxrdb.la
-lib/gnome-settings-daemon/plugins/xrdb/libxrdb.so
-lib/gnome-settings-daemon/plugins/xrdb/xrdb.gnome-settings-plugin
-lib/gnome-settings-daemon/plugins/xsettings/libxsettings.a
-lib/gnome-settings-daemon/plugins/xsettings/libxsettings.la
-lib/gnome-settings-daemon/plugins/xsettings/libxsettings.so
-lib/gnome-settings-daemon/plugins/xsettings/xsettings.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/a11y-keyboard.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/background.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/clipboard.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/dummy.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/font.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/keybindings.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/keyboard.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/liba11y-keyboard.a
+lib/gnome-settings-daemon-2.0/liba11y-keyboard.la
+lib/gnome-settings-daemon-2.0/liba11y-keyboard.so
+lib/gnome-settings-daemon-2.0/libbackground.a
+lib/gnome-settings-daemon-2.0/libbackground.la
+lib/gnome-settings-daemon-2.0/libbackground.so
+lib/gnome-settings-daemon-2.0/libclipboard.a
+lib/gnome-settings-daemon-2.0/libclipboard.la
+lib/gnome-settings-daemon-2.0/libclipboard.so
+lib/gnome-settings-daemon-2.0/libdummy.a
+lib/gnome-settings-daemon-2.0/libdummy.la
+lib/gnome-settings-daemon-2.0/libdummy.so
+lib/gnome-settings-daemon-2.0/libfont.a
+lib/gnome-settings-daemon-2.0/libfont.la
+lib/gnome-settings-daemon-2.0/libfont.so
+lib/gnome-settings-daemon-2.0/libkeybindings.a
+lib/gnome-settings-daemon-2.0/libkeybindings.la
+lib/gnome-settings-daemon-2.0/libkeybindings.so
+lib/gnome-settings-daemon-2.0/libkeyboard.a
+lib/gnome-settings-daemon-2.0/libkeyboard.la
+lib/gnome-settings-daemon-2.0/libkeyboard.so
+lib/gnome-settings-daemon-2.0/libmedia-keys.a
+lib/gnome-settings-daemon-2.0/libmedia-keys.la
+lib/gnome-settings-daemon-2.0/libmedia-keys.so
+lib/gnome-settings-daemon-2.0/libmouse.a
+lib/gnome-settings-daemon-2.0/libmouse.la
+lib/gnome-settings-daemon-2.0/libmouse.so
+lib/gnome-settings-daemon-2.0/libscreensaver.a
+lib/gnome-settings-daemon-2.0/libscreensaver.la
+lib/gnome-settings-daemon-2.0/libscreensaver.so
+lib/gnome-settings-daemon-2.0/libsound.a
+lib/gnome-settings-daemon-2.0/libsound.la
+lib/gnome-settings-daemon-2.0/libsound.so
+lib/gnome-settings-daemon-2.0/libtyping-break.a
+lib/gnome-settings-daemon-2.0/libtyping-break.la
+lib/gnome-settings-daemon-2.0/libtyping-break.so
+lib/gnome-settings-daemon-2.0/libxrandr.a
+lib/gnome-settings-daemon-2.0/libxrandr.la
+lib/gnome-settings-daemon-2.0/libxrandr.so
+lib/gnome-settings-daemon-2.0/libxrdb.a
+lib/gnome-settings-daemon-2.0/libxrdb.la
+lib/gnome-settings-daemon-2.0/libxrdb.so
+lib/gnome-settings-daemon-2.0/libxsettings.a
+lib/gnome-settings-daemon-2.0/libxsettings.la
+lib/gnome-settings-daemon-2.0/libxsettings.so
+lib/gnome-settings-daemon-2.0/media-keys.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/mouse.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/screensaver.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/sound.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/typing-break.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/xrandr.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/xrdb.gnome-settings-plugin
+lib/gnome-settings-daemon-2.0/xsettings.gnome-settings-plugin
 libdata/pkgconfig/gnome-settings-daemon.pc
 libexec/gnome-settings-daemon
 share/dbus-1/services/org.gnome.SettingsDaemon.service
+%%DATADIR%%/acme-eject.png
+%%DATADIR%%/acme.glade
+%%DATADIR%%/modmap-dialog.glade
 %%DATADIR%%/xrdb/Editres.ad
 %%DATADIR%%/xrdb/Emacs.ad
 %%DATADIR%%/xrdb/General.ad
@@ -158,24 +154,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
 @dirrm %%DATADIR%%/xrdb
 @dirrm %%DATADIR%%
-@dirrm lib/gnome-settings-daemon/plugins/xsettings
-@dirrm lib/gnome-settings-daemon/plugins/xrdb
-@dirrm lib/gnome-settings-daemon/plugins/xrandr
-@dirrm lib/gnome-settings-daemon/plugins/typing-break
-@dirrm lib/gnome-settings-daemon/plugins/sound
-@dirrm lib/gnome-settings-daemon/plugins/screensaver
-@dirrm lib/gnome-settings-daemon/plugins/mouse
-@dirrm lib/gnome-settings-daemon/plugins/media-keys
-@dirrm lib/gnome-settings-daemon/plugins/keyboard
-@dirrm lib/gnome-settings-daemon/plugins/keybindings
-@dirrm lib/gnome-settings-daemon/plugins/font
-@dirrm lib/gnome-settings-daemon/plugins/dummy
-@dirrm lib/gnome-settings-daemon/plugins/default-editor
-@dirrm lib/gnome-settings-daemon/plugins/clipboard
-@dirrm lib/gnome-settings-daemon/plugins/background
-@dirrm lib/gnome-settings-daemon/plugins/a11y-keyboard
-@dirrm lib/gnome-settings-daemon/plugins
-@dirrm lib/gnome-settings-daemon
+@dirrm lib/gnome-settings-daemon-2.0
 @dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
 @dirrm include/gnome-settings-daemon-2.0
 @dirrmtry share/locale/zu/LC_MESSAGES

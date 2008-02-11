@@ -4,6 +4,7 @@ libdata/bonobo/servers/GNOME_RemoteDesktop.server
 libexec/vino-server
 share/applications/vino-preferences.desktop
 share/locale/ar/LC_MESSAGES/vino.mo
+share/locale/as/LC_MESSAGES/vino.mo
 share/locale/az/LC_MESSAGES/vino.mo
 share/locale/bg/LC_MESSAGES/vino.mo
 share/locale/bn/LC_MESSAGES/vino.mo
@@ -100,3 +101,5 @@ share/locale/zh_TW/LC_MESSAGES/vino.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
