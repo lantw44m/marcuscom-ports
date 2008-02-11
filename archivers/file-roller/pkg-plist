@@ -96,6 +96,7 @@ share/icons/hicolor/32x32/apps/file-roller.png
 share/icons/hicolor/scalable/apps/file-roller.svg
 share/locale/am/LC_MESSAGES/file-roller.mo
 share/locale/ar/LC_MESSAGES/file-roller.mo
+share/locale/as/LC_MESSAGES/file-roller.mo
 share/locale/az/LC_MESSAGES/file-roller.mo
 share/locale/be/LC_MESSAGES/file-roller.mo
 share/locale/be@latin/LC_MESSAGES/file-roller.mo
@@ -251,3 +252,5 @@ share/omf/file-roller/file-roller-uk.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
