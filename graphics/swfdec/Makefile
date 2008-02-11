@@ -4,11 +4,11 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/swfdec/Makefile,v 1.11 2008/01/29 14:12:32 kwm Exp $
+#   $MCom: ports/graphics/swfdec/Makefile,v 1.12 2008/02/01 08:37:01 marcus Exp $
 
 PORTNAME=	swfdec
 PORTVERSION=	0.5.90
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://swfdec.freedesktop.org/download/swfdec/0.5/
 
@@ -16,7 +16,7 @@ MAINTAINER=	alexbl@FreeBSD.org
 COMMENT=	Flash Rendering Library
 
 LIB_DEPENDS=	oil-0.3.1:${PORTSDIR}/devel/liboil \
-		soup-2.4.0:${PORTSDIR}/devel/libsoup
+		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 USE_XLIB=	yes
 USE_GNOME=	gnomehack gtk20
