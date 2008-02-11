@@ -859,6 +859,12 @@ share/gnome/help/stickynotes_applet/C/figures/stickynotes-prefs.png
 share/gnome/help/stickynotes_applet/C/figures/stickynotes_applet.png
 share/gnome/help/stickynotes_applet/C/legal.xml
 share/gnome/help/stickynotes_applet/C/stickynotes_applet.xml
+share/gnome/help/stickynotes_applet/ca/figures/stickynote-right-menu-lock.png
+share/gnome/help/stickynotes_applet/ca/figures/stickynote-right-menu-new.png
+share/gnome/help/stickynotes_applet/ca/figures/stickynotes-note-prefs.png
+share/gnome/help/stickynotes_applet/ca/figures/stickynotes-prefs.png
+share/gnome/help/stickynotes_applet/ca/figures/stickynotes_applet.png
+share/gnome/help/stickynotes_applet/ca/stickynotes_applet.xml
 share/gnome/help/stickynotes_applet/el/figures/stickynote-right-menu-lock.png
 share/gnome/help/stickynotes_applet/el/figures/stickynote-right-menu-new.png
 share/gnome/help/stickynotes_applet/el/figures/stickynotes-note-prefs.png
@@ -1186,6 +1192,7 @@ share/omf/multiload/multiload-ru.omf
 share/omf/multiload/multiload-sv.omf
 share/omf/multiload/multiload-uk.omf
 share/omf/stickynotes_applet/stickynotes_applet-C.omf
+share/omf/stickynotes_applet/stickynotes_applet-ca.omf
 share/omf/stickynotes_applet/stickynotes_applet-el.omf
 share/omf/stickynotes_applet/stickynotes_applet-en_GB.omf
 share/omf/stickynotes_applet/stickynotes_applet-es.omf
@@ -1402,6 +1409,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/stickynotes_applet/en_GB
 @dirrm share/gnome/help/stickynotes_applet/el/figures
 @dirrm share/gnome/help/stickynotes_applet/el
+@dirrm share/gnome/help/stickynotes_applet/ca/figures
+@dirrm share/gnome/help/stickynotes_applet/ca
 @dirrm share/gnome/help/stickynotes_applet/C/figures
 @dirrm share/gnome/help/stickynotes_applet/C
 @dirrm share/gnome/help/stickynotes_applet
@@ -1471,8 +1480,6 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/gweather/es
 @dirrm share/gnome/help/gweather/en_GB/figures
 @dirrm share/gnome/help/gweather/en_GB
-@dirrm share/gnome/help/gweather/ca/figures
-@dirrm share/gnome/help/gweather/ca
 @dirrm share/gnome/help/gweather/C/figures
 @dirrm share/gnome/help/gweather/C
 @dirrm share/gnome/help/gweather

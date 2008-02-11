@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.171 2008/01/20 23:41:54 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.172 2008/01/31 08:27:27 marcus Exp $
 #
 
 PORTNAME=	gnome-applets
-PORTVERSION=	2.21.4
-PORTREVISION=	2
+PORTVERSION=	2.21.91
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
