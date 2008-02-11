@@ -3,11 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.18 2008/01/19 07:21:41 marcus Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.19 2008/01/29 13:29:58 kwm Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.3.3
+PORTVERSION=	2.3.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
 MASTER_SITE_SUBDIR=	anjuta
