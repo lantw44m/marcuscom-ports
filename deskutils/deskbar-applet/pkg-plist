@@ -285,6 +285,9 @@ share/gnome/help/deskbar/C/legal.xml
 share/gnome/help/deskbar/ca/deskbar.xml
 share/gnome/help/deskbar/ca/figures/deskbar-applet.png
 share/gnome/help/deskbar/ca/legal.xml
+share/gnome/help/deskbar/el/deskbar.xml
+share/gnome/help/deskbar/el/figures/deskbar-applet.png
+share/gnome/help/deskbar/el/legal.xml
 share/gnome/help/deskbar/en_GB/deskbar.xml
 share/gnome/help/deskbar/en_GB/figures/deskbar-applet.png
 share/gnome/help/deskbar/en_GB/legal.xml
@@ -309,6 +312,7 @@ share/icons/hicolor/32x32/apps/deskbar-applet.png
 share/icons/hicolor/48x48/apps/deskbar-applet.png
 share/icons/hicolor/scalable/apps/deskbar-applet.svg
 share/locale/ar/LC_MESSAGES/deskbar-applet.mo
+share/locale/as/LC_MESSAGES/deskbar-applet.mo
 share/locale/be/LC_MESSAGES/deskbar-applet.mo
 share/locale/be@latin/LC_MESSAGES/deskbar-applet.mo
 share/locale/bg/LC_MESSAGES/deskbar-applet.mo
@@ -376,6 +380,7 @@ share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
 share/omf/deskbar/deskbar-C.omf
 share/omf/deskbar/deskbar-ca.omf
+share/omf/deskbar/deskbar-el.omf
 share/omf/deskbar/deskbar-en_GB.omf
 share/omf/deskbar/deskbar-es.omf
 share/omf/deskbar/deskbar-fr.omf
@@ -395,6 +400,8 @@ share/omf/deskbar/deskbar-uk.omf
 @dirrm share/gnome/help/deskbar/es
 @dirrm share/gnome/help/deskbar/en_GB/figures
 @dirrm share/gnome/help/deskbar/en_GB
+@dirrm share/gnome/help/deskbar/el/figures
+@dirrm share/gnome/help/deskbar/el
 @dirrm share/gnome/help/deskbar/ca/figures
 @dirrm share/gnome/help/deskbar/ca
 @dirrm share/gnome/help/deskbar/C/figures
@@ -438,3 +445,5 @@ share/omf/deskbar/deskbar-uk.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
