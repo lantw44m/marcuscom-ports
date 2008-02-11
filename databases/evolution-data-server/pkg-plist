@@ -416,10 +416,10 @@ libdata/pkgconfig/libedata-book-%%EVO_VERSION%%.pc
 libdata/pkgconfig/libedata-cal-%%EVO_VERSION%%.pc
 libdata/pkgconfig/libedataserver-%%EVO_VERSION%%.pc
 libdata/pkgconfig/libedataserverui-%%EVO_VERSION%%.pc
-libdata/pkgconfig/libgdata-%%EVO_VERSION%%.pc
-libdata/pkgconfig/libgdata-google-%%EVO_VERSION%%.pc
 libdata/pkgconfig/libegroupwise-%%EVO_VERSION%%.pc
 libdata/pkgconfig/libexchange-storage-%%EVO_VERSION%%.pc
+libdata/pkgconfig/libgdata-%%EVO_VERSION%%.pc
+libdata/pkgconfig/libgdata-google-%%EVO_VERSION%%.pc
 libexec/camel-index-control-%%EVO_VERSION%%
 libexec/camel-lock-helper-%%EVO_VERSION%%
 libexec/evolution-data-server-%%VERSION%%
