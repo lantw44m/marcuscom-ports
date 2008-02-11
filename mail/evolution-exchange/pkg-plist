@@ -75,6 +75,7 @@ libexec/evolution/%%EVO_VERSION%%/evolution-exchange-storage
 %%DATADIR%%/%%VERSION%%/images/exchange-oof-48.png
 %%DATADIR%%/%%VERSION%%/ui/ximian-connector.xml
 share/locale/ar/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/as/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/bn/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
@@ -96,6 +97,7 @@ share/locale/fi/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/fr/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/gl/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/gu/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/he/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/hi/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/hu/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/id/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
@@ -164,3 +166,5 @@ share/locale/zh_TW/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
