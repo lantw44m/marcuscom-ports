@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vinagre/Makefile,v 1.1 2008/01/28 21:57:40 mezz Exp $
+#   $MCom: ports/net/vinagre/Makefile,v 1.2 2008/02/01 18:10:25 mezz Exp $
 #
 
 PORTNAME=	vinagre
-PORTVERSION=	0.4.90
-PORTREVISION=	1
+PORTVERSION=	0.4.91
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -33,6 +32,8 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-avahi
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+GCONF_SCHEMAS=	vinagre.schemas
 
 MAN1=		vinagre.1
 

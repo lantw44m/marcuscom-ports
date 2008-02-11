@@ -12,6 +12,8 @@ share/gnome/help/vinagre/C/legal.xml
 share/gnome/help/vinagre/C/vinagre.xml
 share/gnome/help/vinagre/es/figures/vinagre-screenshot.png
 share/gnome/help/vinagre/es/vinagre.xml
+share/gnome/help/vinagre/fr/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/fr/vinagre.xml
 share/gnome/help/vinagre/oc/figures/vinagre-screenshot.png
 share/gnome/help/vinagre/oc/vinagre.xml
 share/gnome/help/vinagre/pt/figures/vinagre-screenshot.png
@@ -37,8 +39,10 @@ share/icons/hicolor/scalable/apps/vinagre.svg
 share/icons/hicolor/scalable/mimetypes/application-x-remote-connection.svg
 share/icons/hicolor/scalable/mimetypes/application-x-vnc.svg
 share/locale/ar/LC_MESSAGES/vinagre.mo
+share/locale/be@latin/LC_MESSAGES/vinagre.mo
 share/locale/bg/LC_MESSAGES/vinagre.mo
 share/locale/ca/LC_MESSAGES/vinagre.mo
+share/locale/cs/LC_MESSAGES/vinagre.mo
 share/locale/de/LC_MESSAGES/vinagre.mo
 share/locale/es/LC_MESSAGES/vinagre.mo
 share/locale/et/LC_MESSAGES/vinagre.mo
@@ -54,6 +58,7 @@ share/locale/mk/LC_MESSAGES/vinagre.mo
 share/locale/nb/LC_MESSAGES/vinagre.mo
 share/locale/nl/LC_MESSAGES/vinagre.mo
 share/locale/oc/LC_MESSAGES/vinagre.mo
+share/locale/pl/LC_MESSAGES/vinagre.mo
 share/locale/pt/LC_MESSAGES/vinagre.mo
 share/locale/pt_BR/LC_MESSAGES/vinagre.mo
 share/locale/ru/LC_MESSAGES/vinagre.mo
@@ -61,11 +66,14 @@ share/locale/si/LC_MESSAGES/vinagre.mo
 share/locale/sl/LC_MESSAGES/vinagre.mo
 share/locale/sv/LC_MESSAGES/vinagre.mo
 share/locale/zh_CN/LC_MESSAGES/vinagre.mo
+share/locale/zh_HK/LC_MESSAGES/vinagre.mo
+share/locale/zh_TW/LC_MESSAGES/vinagre.mo
 share/mime/application/x-remote-connection.xml
 share/mime/application/x-vnc.xml
 share/mime/packages/vinagre-mime.xml
 share/omf/vinagre/vinagre-C.omf
 share/omf/vinagre/vinagre-es.omf
+share/omf/vinagre/vinagre-fr.omf
 share/omf/vinagre/vinagre-oc.omf
 share/omf/vinagre/vinagre-pt.omf
 share/omf/vinagre/vinagre-sv.omf
@@ -83,6 +91,8 @@ share/omf/vinagre/vinagre-sv.omf
 @dirrm share/gnome/help/vinagre/pt
 @dirrm share/gnome/help/vinagre/oc/figures
 @dirrm share/gnome/help/vinagre/oc
+@dirrm share/gnome/help/vinagre/fr/figures
+@dirrm share/gnome/help/vinagre/fr
 @dirrm share/gnome/help/vinagre/es/figures
 @dirrm share/gnome/help/vinagre/es
 @dirrm share/gnome/help/vinagre/C/figures
