@@ -202,6 +202,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/planner.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/planner.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/planner.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/rhythmbox.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/rhythmbox.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/rhythmbox.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.pyo
