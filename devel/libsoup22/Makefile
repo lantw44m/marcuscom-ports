@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/devel/libsoup/Makefile,v 1.7 2007/12/01 19:19:55 marcus Exp $
+#   $MCom: ports/devel/libsoup22/Makefile,v 1.38 2008/01/29 01:33:00 marcus Exp $
 #
 
 PORTNAME=	libsoup
-PORTVERSION=	2.2.104
+PORTVERSION=	2.2.105
 PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
