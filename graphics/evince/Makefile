@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.90 2008/02/09 23:47:26 mezz Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.91 2008/02/12 02:09:16 marcus Exp $
 #
 
 PORTNAME=	evince
@@ -113,7 +113,7 @@ PLIST_SUB+=		COMICS="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|execinfo.h|#|g ; s|libgnomeprintui|disable|g' \
+	@${REINPLACE_CMD} -e 's|execinfo.h|#|g' \
 		${WRKSRC}/configure
 
 post-install:
