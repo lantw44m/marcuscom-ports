@@ -56,8 +56,9 @@ share/gnome/help/eog/es/figures/eog_save_as_window.png
 share/gnome/help/eog/es/figures/eog_start_window.png
 share/gnome/help/eog/es/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/eu/eog.xml
+share/gnome/help/eog/eu/figures/eog_save_as_window.png
 share/gnome/help/eog/eu/figures/eog_start_window.png
-share/gnome/help/eog/eu/legal.xml
+share/gnome/help/eog/eu/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/fr/eog.xml
 share/gnome/help/eog/fr/figures/eog_save_as_window.png
 share/gnome/help/eog/fr/figures/eog_start_window.png
@@ -67,8 +68,9 @@ share/gnome/help/eog/it/figures/eog_save_as_window.png
 share/gnome/help/eog/it/figures/eog_start_window.png
 share/gnome/help/eog/it/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/ja/eog.xml
+share/gnome/help/eog/ja/figures/eog_save_as_window.png
 share/gnome/help/eog/ja/figures/eog_start_window.png
-share/gnome/help/eog/ja/legal.xml
+share/gnome/help/eog/ja/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/ko/eog.xml
 share/gnome/help/eog/ko/figures/eog_save_as_window.png
 share/gnome/help/eog/ko/figures/eog_start_window.png
@@ -98,11 +100,13 @@ share/gnome/help/eog/uk/figures/eog_save_as_window.png
 share/gnome/help/eog/uk/figures/eog_start_window.png
 share/gnome/help/eog/uk/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/zh_CN/eog.xml
+share/gnome/help/eog/zh_CN/figures/eog_save_as_window.png
 share/gnome/help/eog/zh_CN/figures/eog_start_window.png
-share/gnome/help/eog/zh_CN/legal.xml
+share/gnome/help/eog/zh_CN/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/zh_TW/eog.xml
+share/gnome/help/eog/zh_TW/figures/eog_save_as_window.png
 share/gnome/help/eog/zh_TW/figures/eog_start_window.png
-share/gnome/help/eog/zh_TW/legal.xml
+share/gnome/help/eog/zh_TW/figures/eog_toolbar_editor_window.png
 share/icons/hicolor/16x16/apps/eog.png
 share/icons/hicolor/22x22/apps/eog.png
 share/icons/hicolor/24x24/apps/eog.png
@@ -111,6 +115,7 @@ share/icons/hicolor/scalable/apps/eog.svg
 share/locale/af/LC_MESSAGES/eog.mo
 share/locale/am/LC_MESSAGES/eog.mo
 share/locale/ar/LC_MESSAGES/eog.mo
+share/locale/as/LC_MESSAGES/eog.mo
 share/locale/az/LC_MESSAGES/eog.mo
 share/locale/be/LC_MESSAGES/eog.mo
 share/locale/be@latin/LC_MESSAGES/eog.mo
@@ -154,6 +159,7 @@ share/locale/mg/LC_MESSAGES/eog.mo
 share/locale/mk/LC_MESSAGES/eog.mo
 share/locale/ml/LC_MESSAGES/eog.mo
 share/locale/mn/LC_MESSAGES/eog.mo
+share/locale/mr/LC_MESSAGES/eog.mo
 share/locale/ms/LC_MESSAGES/eog.mo
 share/locale/nb/LC_MESSAGES/eog.mo
 share/locale/ne/LC_MESSAGES/eog.mo
@@ -280,6 +286,8 @@ share/omf/eog/eog-zh_TW.omf
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/nso/LC_MESSAGES
 @dirrmtry share/locale/nso
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/ku/LC_MESSAGES
@@ -290,3 +298,5 @@ share/omf/eog/eog-zh_TW.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
