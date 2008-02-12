@@ -35,7 +35,6 @@ include/evince-2.20/evince/ev-transition-effect.h
 %%DVI%%lib/evince/backends/libdvidocument.a
 %%DVI%%lib/evince/backends/libdvidocument.la
 %%DVI%%lib/evince/backends/libdvidocument.so
-%%DVI%%lib/evince/backends/libdvidocument.so.0
 lib/evince/backends/libpdfdocument.a
 lib/evince/backends/libpdfdocument.la
 lib/evince/backends/libpdfdocument.so
@@ -94,7 +93,6 @@ share/applications/evince.desktop
 %%DOCSDIR%%/evince-ev-metadata-manager.html
 %%DOCSDIR%%/evince-ev-page-cache.html
 %%DOCSDIR%%/evince-ev-pixbuf-cache.html
-%%DOCSDIR%%/evince-ev-print-job.html
 %%DOCSDIR%%/evince-ev-properties-dialog.html
 %%DOCSDIR%%/evince-ev-properties-fonts.html
 %%DOCSDIR%%/evince-ev-selection.html
@@ -183,6 +181,7 @@ share/icons/hicolor/24x24/apps/evince.png
 share/icons/hicolor/48x48/apps/evince.png
 share/icons/hicolor/scalable/apps/evince.svg
 share/locale/ar/LC_MESSAGES/evince.mo
+share/locale/as/LC_MESSAGES/evince.mo
 share/locale/be/LC_MESSAGES/evince.mo
 share/locale/be@latin/LC_MESSAGES/evince.mo
 share/locale/bg/LC_MESSAGES/evince.mo
@@ -344,6 +343,8 @@ share/omf/evince/evince-uk.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrm lib/evince/backends
 @dirrm lib/evince
 @dirrm include/evince-2.20/evince
