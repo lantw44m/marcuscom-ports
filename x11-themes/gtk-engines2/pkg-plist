@@ -31,6 +31,7 @@ share/locale/be@latin/LC_MESSAGES/gtk-engines.mo
 share/locale/bg/LC_MESSAGES/gtk-engines.mo
 share/locale/bn_IN/LC_MESSAGES/gtk-engines.mo
 share/locale/ca/LC_MESSAGES/gtk-engines.mo
+share/locale/cs/LC_MESSAGES/gtk-engines.mo
 share/locale/da/LC_MESSAGES/gtk-engines.mo
 share/locale/de/LC_MESSAGES/gtk-engines.mo
 share/locale/dz/LC_MESSAGES/gtk-engines.mo
@@ -49,6 +50,7 @@ share/locale/ja/LC_MESSAGES/gtk-engines.mo
 share/locale/ko/LC_MESSAGES/gtk-engines.mo
 share/locale/lt/LC_MESSAGES/gtk-engines.mo
 share/locale/mk/LC_MESSAGES/gtk-engines.mo
+share/locale/ml/LC_MESSAGES/gtk-engines.mo
 share/locale/mr/LC_MESSAGES/gtk-engines.mo
 share/locale/nb/LC_MESSAGES/gtk-engines.mo
 share/locale/nl/LC_MESSAGES/gtk-engines.mo
@@ -64,6 +66,7 @@ share/locale/si/LC_MESSAGES/gtk-engines.mo
 share/locale/sl/LC_MESSAGES/gtk-engines.mo
 share/locale/sq/LC_MESSAGES/gtk-engines.mo
 share/locale/sr/LC_MESSAGES/gtk-engines.mo
+share/locale/sr@Latn/LC_MESSAGES/gtk-engines.mo
 share/locale/sv/LC_MESSAGES/gtk-engines.mo
 share/locale/ta/LC_MESSAGES/gtk-engines.mo
 share/locale/th/LC_MESSAGES/gtk-engines.mo
