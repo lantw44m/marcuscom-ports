@@ -146,24 +146,14 @@ share/gnome/help/tomboy/uk/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/uk/figures/tomboy-tools.png
 share/gnome/help/tomboy/uk/legal.xml
 share/gnome/help/tomboy/uk/tomboy.xml
-share/icons/hicolor/16x16/apps/tomboy-note.png
-share/icons/hicolor/16x16/apps/tomboy-tag.png
 share/icons/hicolor/16x16/apps/tomboy.png
-share/icons/hicolor/22x22/apps/tomboy-all-notes.png
-share/icons/hicolor/22x22/apps/tomboy-new-note.png
-share/icons/hicolor/22x22/apps/tomboy-new-notebook.png
-share/icons/hicolor/22x22/apps/tomboy-note.png
-share/icons/hicolor/22x22/apps/tomboy-notebook.png
-share/icons/hicolor/22x22/apps/tomboy-tag.png
-share/icons/hicolor/22x22/apps/tomboy-unfiled-notes.png
 share/icons/hicolor/22x22/apps/tomboy.png
-share/icons/hicolor/32x32/apps/tomboy-tag.png
+share/icons/hicolor/24x24/apps/tomboy.png
 share/icons/hicolor/32x32/apps/tomboy.png
-share/icons/hicolor/48x48/apps/tomboy-new-notebook.png
 share/icons/hicolor/48x48/apps/tomboy.png
-share/icons/hicolor/scalable/apps/tomboy-tag.svg
 share/icons/hicolor/scalable/apps/tomboy.svg
 share/locale/ar/LC_MESSAGES/tomboy.mo
+share/locale/as/LC_MESSAGES/tomboy.mo
 share/locale/be/LC_MESSAGES/tomboy.mo
 share/locale/be@latin/LC_MESSAGES/tomboy.mo
 share/locale/bg/LC_MESSAGES/tomboy.mo
@@ -234,7 +224,44 @@ share/omf/tomboy/tomboy-pt_BR.omf
 share/omf/tomboy/tomboy-ru.omf
 share/omf/tomboy/tomboy-sv.omf
 share/omf/tomboy/tomboy-uk.omf
-share/pixmaps/tomboy.png
+%%DATADIR%%/icons/hicolor/16x16/actions/note-new.png
+%%DATADIR%%/icons/hicolor/16x16/actions/notebook-new.png
+%%DATADIR%%/icons/hicolor/16x16/places/note.png
+%%DATADIR%%/icons/hicolor/16x16/places/notebook.png
+%%DATADIR%%/icons/hicolor/16x16/status/pin-active.png
+%%DATADIR%%/icons/hicolor/16x16/status/pin-down.png
+%%DATADIR%%/icons/hicolor/16x16/status/pin-up.png
+%%DATADIR%%/icons/hicolor/22x22/actions/filter-note-all.png
+%%DATADIR%%/icons/hicolor/22x22/actions/filter-note-unfiled.png
+%%DATADIR%%/icons/hicolor/22x22/actions/note-new.png
+%%DATADIR%%/icons/hicolor/22x22/actions/notebook-new.png
+%%DATADIR%%/icons/hicolor/22x22/places/note.png
+%%DATADIR%%/icons/hicolor/22x22/places/notebook.png
+%%DATADIR%%/icons/hicolor/24x24/actions/filter-note-all.png
+%%DATADIR%%/icons/hicolor/24x24/actions/filter-note-unfiled.png
+%%DATADIR%%/icons/hicolor/24x24/actions/note-new.png
+%%DATADIR%%/icons/hicolor/24x24/actions/notebook-new.png
+%%DATADIR%%/icons/hicolor/24x24/places/note.png
+%%DATADIR%%/icons/hicolor/24x24/places/notebook.png
+%%DATADIR%%/icons/hicolor/48x48/actions/notebook-new.png
+%%DATADIR%%/icons/hicolor/scalable/actions/notebook-new.svg
+@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
+@dirrm %%DATADIR%%/icons/hicolor/scalable
+@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
+@dirrm %%DATADIR%%/icons/hicolor/48x48
+@dirrm %%DATADIR%%/icons/hicolor/24x24/places
+@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor/22x22/places
+@dirrm %%DATADIR%%/icons/hicolor/22x22/actions
+@dirrm %%DATADIR%%/icons/hicolor/22x22
+@dirrm %%DATADIR%%/icons/hicolor/16x16/status
+@dirrm %%DATADIR%%/icons/hicolor/16x16/places
+@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
+@dirrm %%DATADIR%%/icons/hicolor/16x16
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
+@dirrm %%DATADIR%%
 @dirrm share/omf/tomboy
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
@@ -254,6 +281,8 @@ share/pixmaps/tomboy.png
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrm share/gnome/help/tomboy/uk/figures
 @dirrm share/gnome/help/tomboy/uk
 @dirrm share/gnome/help/tomboy/sv/figures
