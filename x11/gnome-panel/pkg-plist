@@ -52,7 +52,7 @@ share/gnome-2.0/ui/GNOME_WorkspaceSwitcherApplet.xml
 %%DATADIR%%/pixmaps/clock-map-location-current.png
 %%DATADIR%%/pixmaps/clock-map-location-hilight.png
 %%DATADIR%%/pixmaps/clock-map-location-marker.png
-%%DATADIR%%/pixmaps/clock-map.svg
+%%DATADIR%%/pixmaps/clock-map.png
 %%DATADIR%%/pixmaps/fishanim.png
 %%DATADIR%%/pixmaps/footguy.png
 %%DATADIR%%/pixmaps/gnome-gegl2-2.png
@@ -280,6 +280,7 @@ share/idl/gnome-panel-2.0/GNOME_Panel.idl
 share/locale/af/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/as/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/be@latin/LC_MESSAGES/gnome-panel-2.0.mo
@@ -339,6 +340,7 @@ share/locale/oc/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/or/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/ps/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pt/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ro/LC_MESSAGES/gnome-panel-2.0.mo
@@ -576,6 +578,8 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/ps/LC_MESSAGES
+@dirrmtry share/locale/ps
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/nso/LC_MESSAGES
@@ -598,4 +602,6 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrmtry share/applications
