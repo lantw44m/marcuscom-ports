@@ -110,6 +110,8 @@ share/gnome/help/users-admin/C/legal.xml
 share/gnome/help/users-admin/C/users-admin.xml
 share/gnome/help/users-admin/ca/figures/users-tool.png
 share/gnome/help/users-admin/ca/users-admin.xml
+share/gnome/help/users-admin/el/figures/users-tool.png
+share/gnome/help/users-admin/el/users-admin.xml
 share/gnome/help/users-admin/es/figures/users-tool.png
 share/gnome/help/users-admin/es/users-admin.xml
 share/gnome/help/users-admin/fr/figures/users-tool.png
@@ -226,6 +228,7 @@ share/omf/time-admin/time-admin-ru.omf
 share/omf/time-admin/time-admin-sv.omf
 share/omf/users-admin/users-admin-C.omf
 share/omf/users-admin/users-admin-ca.omf
+share/omf/users-admin/users-admin-el.omf
 share/omf/users-admin/users-admin-es.omf
 share/omf/users-admin/users-admin-fr.omf
 share/omf/users-admin/users-admin-oc.omf
@@ -247,6 +250,8 @@ share/omf/users-admin/users-admin-sv.omf
 @dirrm share/gnome/help/users-admin/fr
 @dirrm share/gnome/help/users-admin/es/figures
 @dirrm share/gnome/help/users-admin/es
+@dirrm share/gnome/help/users-admin/el/figures
+@dirrm share/gnome/help/users-admin/el
 @dirrm share/gnome/help/users-admin/ca/figures
 @dirrm share/gnome/help/users-admin/ca
 @dirrm share/gnome/help/users-admin/C/figures
