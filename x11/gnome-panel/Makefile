@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.169 2008/02/09 23:27:40 mezz Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.170 2008/02/12 01:04:06 marcus Exp $
 #
 
 PORTNAME=	gnome-panel
 PORTVERSION=	2.21.91
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/gnome-panel/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -21,7 +21,8 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS=	gweather.0:${PORTSDIR}/net/libgweather
+LIB_DEPENDS=	gweather.0:${PORTSDIR}/net/libgweather \
+    		polkit-gnome.0:${PORTSDIR}/sysutils/policykit-gnome
 
 USE_GETTEXT=	yes
 USE_XLIB=	yes
@@ -37,7 +38,7 @@ USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--with-kde-datadir=${LOCALBASE}/share \
 		--with-kde-docdir=${LOCALBASE}/share/doc \
 		--disable-network-manager \
-		--disable-polkit
+		--enable-polkit
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
