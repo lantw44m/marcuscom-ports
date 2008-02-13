@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.441 2008/02/01 18:05:44 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.442 2008/02/05 13:10:33 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -516,7 +516,7 @@ pygtksourceview_USE_GNOME_IMPL=	gtksourceview2 pygtk2
 
 gvfs_DETECT=			${LOCALBASE}/lib/libgvfscommon.so
 gvfs_LIB_DEPENDS=		gvfscommon.0:${PORTSDIR}/devel/gvfs
-gvfs_USE_GNOME_IMPL=		glib20
+gvfs_USE_GNOME_IMPL=		glib20 gconf2
 
 ########
 #### NOTE: DO NOT COMMIT THIS NEXT PART TO THE MAIN FREEBSD REPO
