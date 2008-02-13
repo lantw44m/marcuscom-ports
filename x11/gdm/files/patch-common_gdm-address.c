@@ -1,13 +1,17 @@
---- common/gdm-address.c.orig	2008-01-31 03:07:58.000000000 -0500
-+++ common/gdm-address.c	2008-01-31 03:11:17.000000000 -0500
-@@ -26,12 +26,13 @@
+--- common/gdm-address.c.orig	2008-02-03 11:52:26.000000000 -0500
++++ common/gdm-address.c	2008-02-13 01:23:07.000000000 -0500
+@@ -25,8 +25,9 @@
+ #include <stdio.h>
  #include <fcntl.h>
  #include <unistd.h>
+-#include <stropts.h>
  #include <string.h>
 +#include <sys/types.h>
 +#include <sys/param.h>
- #ifdef HAS_SYS_SOCKET
+ #ifdef HAVE_SYS_SOCKET_H
  #include <sys/socket.h>
+ #endif
+@@ -35,7 +36,6 @@
  #endif
  #include <netdb.h>
  #include <sys/ioctl.h>
@@ -15,7 +19,7 @@
  
  #ifndef G_OS_WIN32
  #include <sys/socket.h>
-@@ -42,6 +43,7 @@
+@@ -46,6 +46,7 @@
  #include <winsock2.h>
  #include <ws2tcpip.h>
  #endif

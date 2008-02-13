@@ -9,12 +9,14 @@ etc/gdm/Xsession
 etc/gdm/custom.conf.default
 @exec [ -f %B/custom.conf ] || cp %B/%f %B/custom.conf
 etc/gdm/gdm.schemas
+libdata/bonobo/servers/GNOME_GdmUserSwitchApplet.server
 libexec/gdm-factory-slave
 libexec/gdm-product-slave
 libexec/gdm-session-worker
 libexec/gdm-simple-chooser
 libexec/gdm-simple-greeter
 libexec/gdm-simple-slave
+libexec/gdm-user-switch-applet
 libexec/gdm-xdmcp-chooser-slave
 %%PAM_MISC%%libexec/gdmaskpass
 sbin/gdm
@@ -22,7 +24,10 @@ sbin/gdm-binary
 sbin/gdm-restart
 sbin/gdm-safe-restart
 sbin/gdm-stop
+%%DATADIR%%/gdm-a11y-preferences-dialog.glade
 %%DATADIR%%/gdm-greeter-login-window.glade
+%%DATADIR%%/gdm-user-switch-applet.glade
+share/gnome-2.0/ui/GNOME_GdmUserSwitchApplet.xml
 share/icons/hicolor/16x16/apps/gdm-xnest.png
 share/icons/hicolor/32x32/apps/gdm-setup.png
 share/icons/hicolor/32x32/apps/gdm-xnest.png
@@ -64,6 +69,7 @@ share/locale/is/LC_MESSAGES/gdm.mo
 share/locale/it/LC_MESSAGES/gdm.mo
 share/locale/ja/LC_MESSAGES/gdm.mo
 share/locale/ka/LC_MESSAGES/gdm.mo
+share/locale/kn/LC_MESSAGES/gdm.mo
 share/locale/ko/LC_MESSAGES/gdm.mo
 share/locale/ku/LC_MESSAGES/gdm.mo
 share/locale/lt/LC_MESSAGES/gdm.mo
