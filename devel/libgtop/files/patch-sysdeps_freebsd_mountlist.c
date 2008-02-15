@@ -1,6 +1,6 @@
---- sysdeps/freebsd/mountlist.c.orig	2007-11-02 23:52:58.000000000 -0400
-+++ sysdeps/freebsd/mountlist.c	2007-11-02 23:52:50.000000000 -0400
-@@ -0,0 +1,174 @@
+--- sysdeps/freebsd/mountlist.c.orig	2008-02-15 02:11:59.000000000 -0500
++++ sysdeps/freebsd/mountlist.c	2008-02-15 02:28:14.000000000 -0500
+@@ -0,0 +1,168 @@
 +/* mountlist.c -- return a list of mounted filesystems
 +   Copyright (C) 1991, 1992 Free Software Foundation, Inc.
 +
@@ -92,30 +92,24 @@
 +static gboolean ignore_mount_entry(const struct mount_entry *me)
 +{
 +	/* keep sorted */
-+	static const char ignored[][12] = {
++	static const char ignored[][17] = {
 +		"autofs",
-+		"binfmt_misc",
-+		"ctfs",
 +		"devfs",
-+		"devpts",
 +		"fusectl",
 +		"linprocfs",
++		"linsysfs",
 +		"mfs",
-+		"mntfs",
-+		"mqueue",
 +		"none",
-+		"nsfd",
-+		"objfs",
-+		"openpromfs",
++		"nfs",
++		"nullfs",
++		"nwfs",
++		"portalfs",
 +		"proc",
 +		"procfs",
-+		"securityfs",
-+		"supermount",
-+		"sysfs",
++		"smbfs",
 +		"tmpfs",
-+		"unknown",
-+		"usbdevfs",
-+		"usbfs"
++		"unionfs",
++		"unknown"
 +	};
 +
 +	typedef int (*Comparator)(const void*, const void*);
