@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/policykit-gnome/Makefile,v 1.2 2008/01/24 01:25:20 marcus Exp $
+#   $MCom: ports/sysutils/policykit-gnome/Makefile,v 1.3 2008/01/24 02:56:07 mezz Exp $
 #
 
 PORTNAME=	policykit-gnome
 PORTVERSION=	0.7
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 DISTNAME=	PolicyKit-gnome-${PORTVERSION}
@@ -22,7 +22,7 @@ LIB_DEPENDS=	polkit.2:${PORTSDIR}/sysutils/policykit \
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack gnometarget gnomevfs2 intlhack
+USE_GNOME=	gnomehack gnometarget gnomevfs2 intlhack gnomedocutils
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
