@@ -3,11 +3,12 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.56 2008/02/04 15:10:34 kwm Exp $
 #
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.17
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer/ \
 		${MASTER_SITE_LOCAL}
@@ -20,6 +21,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 
 CFLAGS:=	${CFLAGS} -O2
 USE_BISON=	build
+USE_XORG=	x11 xv xext videoproto xextproto
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 WANT_GNOME=	yes
