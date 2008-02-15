@@ -3,11 +3,12 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese/Makefile,v 1.4 2008/02/06 18:39:16 mezz Exp $
+#   $MCom: ports/multimedia/cheese/Makefile,v 1.5 2008/02/06 18:49:29 mezz Exp $
 #
 
 PORTNAME=	cheese
 PORTVERSION=	2.21.90.1
+PORTREVISION=	1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,7 +20,7 @@ USE_XORG=	xxf86vm
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack evolutiondataserver \
-		librsvg2
+		librsvg2 gnomedocutils
 USE_GETTEXT=	yes
 USE_GSTREAMER=	good
 INSTALLS_OMF=	yes
