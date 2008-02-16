@@ -42,6 +42,7 @@ libexec/hal/scripts/freebsd/hal-system-power-reboot-freebsd
 libexec/hal/scripts/freebsd/hal-system-power-set-power-save-freebsd
 libexec/hal/scripts/freebsd/hal-system-power-shutdown-freebsd
 libexec/hal/scripts/freebsd/hal-system-power-suspend-freebsd
+libexec/hal/scripts/hal-dockstation-undock
 libexec/hal/scripts/hal-functions
 libexec/hal/scripts/hal-luks-remove
 libexec/hal/scripts/hal-luks-setup
@@ -72,6 +73,7 @@ sbin/hald
 %%DATADIR%%/dist/hal.conf
 %%DATADIR%%/fdi/fdi.dtd
 @exec mkdir -p %D/%%DATADIR%%/fdi/information/20thirdparty
+%%DATADIR%%/fdi/policy/10osvendor/10-dockstation.fdi
 %%DATADIR%%/fdi/policy/10osvendor/10-input-policy.fdi
 %%DATADIR%%/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
 %%DATADIR%%/fdi/policy/10osvendor/10-power-mgmt-policy.fdi
