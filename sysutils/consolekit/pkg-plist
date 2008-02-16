@@ -1,6 +1,9 @@
 bin/ck-history
+bin/ck-launch-session
 bin/ck-list-sessions
+sbin/ck-log-system-restart
 sbin/ck-log-system-start
+sbin/ck-log-system-stop
 etc/ConsoleKit/seats.d/00-primary.seat
 etc/dbus-1/system.d/ConsoleKit.conf
 include/ConsoleKit/ck-connector/ck-connector.h
