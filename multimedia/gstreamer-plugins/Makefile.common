@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.65 2008/02/04 15:46:50 kwm Exp $
+#    $MCom$
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -62,6 +62,7 @@ GOOD_GST_ALL_PLUGINS+= \
 		ladspa \
 		libcaca \
 		libpng \
+		taglib \
 		raw1394 \
 		shout2 \
 		speex \
@@ -97,6 +98,7 @@ CONFIGURE_ARGS+=	--enable-${GST_PLUGIN}
 
 CONFIGURE_ARGS+=--disable-tests \
 		--disable-examples \
+		--disable-1394 \
 		--disable-amrnb \
 		--disable-alsa \
 		--disable-http \
@@ -107,6 +109,9 @@ CONFIGURE_ARGS+=--disable-tests \
 		--enable-oss \
 		--disable-osx_audio \
 		--disable-osx_video \
+		--disable-directdrawsink \
+		--disable-directsoundsink \
+		--disable-v4l2src \
 		--disable-tarkin \
 		--enable-static \
 		--disable-sunaudio \
@@ -138,6 +143,7 @@ gst_aalib_PLIST_FILES=	${GST_LIB_DIR}/libgstaasink.so \
 		${GST_LIB_DIR}/libgstaasink.la
 
 # annodex
+gst_annodex_LIB_DEPENDS+=	xml2.5:${PORTSDIR}/textproc/libxml2
 
 # bz2
 gst_bz2_DIST=		bad
@@ -153,6 +159,9 @@ gst_cdaudio_DIST=	bad
 gst_cdparanoia_LIB_DEPENDS+=	cdda_interface.0:${PORTSDIR}/audio/cdparanoia
 gst_cdparanoia_EXTRA_LIBS+=	-lgstcdda-${VERSION}
 gst_cdparanoia_DIST=	base
+
+# cdio
+gst_cdio_LIB_DEPENDS+=	cdio.7:${PORTSDIR}/sysutils/libcdio
 
 # dts
 gst_dts_LIB_DEPENDS+=	dca.0:${PORTSDIR}/multimedia/libdca
@@ -209,6 +218,13 @@ gst_gconf_GCONF_SCHEMAS=	gstreamer-${GST_VERSION}.schemas
 gst_gconf_PLIST_FILES=	${GST_LIB_DIR}/libgstgconfelements.so \
 		${GST_LIB_DIR}/libgstgconfelements.a \
 		${GST_LIB_DIR}/libgstgconfelements.la
+
+# gdk_pixbuf
+gst_gdk_pixbuf_USE_GNOME+=	gtk20
+gst_gdk_pixbuf_GST_PLUGIN_DIR=	ext/gdk_pixbuf
+gst_gdk_pixbuf_PLIST_FILES=	${GST_LIB_DIR}/libgstgdkpixbuf.a \
+				${GST_LIB_DIR}/libgstgdkpixbuf.la \
+				${GST_LIB_DIR}/libgstgdkpixbuf.so
 
 # gnomevfs
 gst_gnomevfs_USE_GNOME+=	gnomevfs2
@@ -336,7 +352,7 @@ gst_sndfile_DIST=	bad
 # soundtouch
 gst_soundtouch_LIB_DEPENDS+=	SoundTouch.0:${PORTSDIR}/audio/soundtouch
 gst_soundtouch_DIST=	bad
-
+ 
 # souphttpsrc
 gst_soup_LIB_DEPENDS+=	soup-2.4.1:${PORTSDIR}/devel/libsoup
 gst_soup_GST_PLUGIN_DIR=ext/soup
@@ -355,6 +371,9 @@ gst_speex_LIB_DEPENDS+=	speex.1:${PORTSDIR}/audio/speex
 # swfdec
 gst_swfdec_LIB_DEPENDS+=swfdec-0.4.1:${PORTSDIR}/graphics/swfdec
 gst_swfdec_DIST=	bad
+
+# taglib
+gst_taglib_LIB_DEPENDS+=	tag.5:${PORTSDIR}audio/taglib
 
 # theora
 gst_theora_LIB_DEPENDS+=	theora.0:${PORTSDIR}/multimedia/libtheora

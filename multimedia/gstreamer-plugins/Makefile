@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.103 2008/02/21 14:20:39 kwm Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.104 2008/02/21 15:33:19 kwm Exp $
 #
 
 PORTNAME=	gstreamer
@@ -37,7 +37,7 @@ BASE_DISTFILE=		${BASE_DISTNAME}${EXTRACT_SUFX}
 BAD_PORTVERSION=	0.10.6
 BAD_DISTNAME=		gst-plugins-bad-${BAD_PORTVERSION}
 BAD_DISTFILE=		${BAD_DISTNAME}${EXTRACT_SUFX}
-GOOD_PORTVERSION=	0.10.6
+GOOD_PORTVERSION=	0.10.7
 GOOD_DISTNAME=		gst-plugins-good-${GOOD_PORTVERSION}
 GOOD_DISTFILE=		${GOOD_DISTNAME}${EXTRACT_SUFX}
 UGLY_PORTVERSION=	0.10.7

@@ -1,4 +1,4 @@
-# New ports collection makefile for:	gstreamer-plugins-cdio
+# New ports collection makefile for:	gstreamer-plugins-hal
 # Date created:			16 May 2006
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
@@ -9,9 +9,9 @@
 PORTREVISION=	0
 CATEGORIES=	sysutils
 
-COMMENT=	Gstreamer cdio plugin
+COMMENT=	Gstreamer hal plugin
 
-GST_PLUGIN=	cdio
+GST_PLUGIN=	hal
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer-plugins
 
