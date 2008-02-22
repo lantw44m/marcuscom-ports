@@ -3,6 +3,7 @@ include/swfdec-%%VERSION%%/swfdec-gtk/swfdec_gtk_keys.h
 include/swfdec-%%VERSION%%/swfdec-gtk/swfdec_gtk_loader.h
 include/swfdec-%%VERSION%%/swfdec-gtk/swfdec_gtk_player.h
 include/swfdec-%%VERSION%%/swfdec-gtk/swfdec_gtk_socket.h
+include/swfdec-%%VERSION%%/swfdec-gtk/swfdec_gtk_system.h
 include/swfdec-%%VERSION%%/swfdec-gtk/swfdec_gtk_widget.h
 include/swfdec-%%VERSION%%/swfdec/swfdec.h
 include/swfdec-%%VERSION%%/swfdec/swfdec_as_array.h
@@ -62,7 +63,7 @@ share/gtk-doc/html/swfdec/index.sgml
 share/gtk-doc/html/swfdec/left.png
 share/gtk-doc/html/swfdec/right.png
 share/gtk-doc/html/swfdec/style.css
-share/gtk-doc/html/swfdec/swfdec-Enumerations.html
+share/gtk-doc/html/swfdec/swfdec-Enumerations-and-Types.html
 share/gtk-doc/html/swfdec/swfdec-Gtk-extension-objects.html
 share/gtk-doc/html/swfdec/swfdec-Internals.html
 share/gtk-doc/html/swfdec/swfdec-SwfdecAsValue.html

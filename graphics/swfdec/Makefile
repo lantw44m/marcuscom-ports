@@ -4,13 +4,12 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/swfdec/Makefile,v 1.12 2008/02/01 08:37:01 marcus Exp $
+#   $MCom: ports/graphics/swfdec/Makefile,v 1.13 2008/02/11 21:38:55 marcus Exp $
 
 PORTNAME=	swfdec
-PORTVERSION=	0.5.90
-PORTREVISION=	2
+PORTVERSION=	0.6.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://swfdec.freedesktop.org/download/swfdec/0.5/
+MASTER_SITES=	http://swfdec.freedesktop.org/download/swfdec/0.6/
 
 MAINTAINER=	alexbl@FreeBSD.org
 COMMENT=	Flash Rendering Library
