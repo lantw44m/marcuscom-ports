@@ -2,3 +2,4 @@ sysutils/hal-device-manager|sysutils/gnome-device-manager|%%DATE%%|hal-device-ma
 security/gnome-keyring-manager|security/seahorse|%%DATE%%|functionality has been rolled into seahorse
 devel/anjuta-devel|devel/anjuta|%%DATE%%|Its now part of the GNOME release cicle
 sysutils/vty-checker||%%DATE%%|No longer need this port
+accessibility/gail|x11-toolkits/gtk20|%%DATE%%|Its now part of Gtk+
