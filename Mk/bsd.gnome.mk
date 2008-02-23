@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.443 2008/02/13 01:01:43 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.444 2008/02/23 17:36:55 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -307,7 +307,7 @@ gnomevfs2_LIB_DEPENDS=	gnomevfs-2.0:${PORTSDIR}/devel/gnome-vfs
 gnomevfs2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-vfs-2.0.pc
 gnomevfs2_USE_GNOME_IMPL=gconf2 gnomemimedata
 
-gail_LIB_DEPENDS=	# Now included in x11-toolkits/gtk20
+gail_LIB_DEPENDS=	gailutil.18:${PORTSDIR}/accessibility/gail
 gail_DETECT=		${LOCALBASE}/libdata/pkgconfig/gail.pc
 gail_USE_GNOME_IMPL=	gtk20
 
