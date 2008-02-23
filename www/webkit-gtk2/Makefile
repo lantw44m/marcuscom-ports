@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.1 2008/02/07 05:54:24 mezz Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	0.0.30028
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://nightly.webkit.org/files/trunk/src/
 PKGNAMESUFFIX=	-gtk2
@@ -16,7 +17,7 @@ DISTNAME=	WebKit-r${PORTVERSION:S/0.0.//}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An opensource browser engine
 
-LIB_DEPENDS=	icutu.36:${PORTSDIR}/devel/icu \
+LIB_DEPENDS=	icutu.38:${PORTSDIR}/devel/icu \
 		curl.4:${PORTSDIR}/ftp/curl \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3
 
