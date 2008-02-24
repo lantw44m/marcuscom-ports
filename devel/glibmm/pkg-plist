@@ -18,8 +18,8 @@ include/giomm-%%API_VERSION%%/giomm/fileenumerator.h
 include/giomm-%%API_VERSION%%/giomm/fileicon.h
 include/giomm-%%API_VERSION%%/giomm/fileinfo.h
 include/giomm-%%API_VERSION%%/giomm/fileinputstream.h
-include/giomm-%%API_VERSION%%/giomm/filenamecompleter.h
 include/giomm-%%API_VERSION%%/giomm/filemonitor.h
+include/giomm-%%API_VERSION%%/giomm/filenamecompleter.h
 include/giomm-%%API_VERSION%%/giomm/fileoutputstream.h
 include/giomm-%%API_VERSION%%/giomm/filterinputstream.h
 include/giomm-%%API_VERSION%%/giomm/filteroutputstream.h
@@ -49,8 +49,8 @@ include/giomm-%%API_VERSION%%/giomm/private/fileenumerator_p.h
 include/giomm-%%API_VERSION%%/giomm/private/fileicon_p.h
 include/giomm-%%API_VERSION%%/giomm/private/fileinfo_p.h
 include/giomm-%%API_VERSION%%/giomm/private/fileinputstream_p.h
-include/giomm-%%API_VERSION%%/giomm/private/filenamecompleter_p.h
 include/giomm-%%API_VERSION%%/giomm/private/filemonitor_p.h
+include/giomm-%%API_VERSION%%/giomm/private/filenamecompleter_p.h
 include/giomm-%%API_VERSION%%/giomm/private/fileoutputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/filterinputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/filteroutputstream_p.h
@@ -106,6 +106,7 @@ include/glibmm-%%API_VERSION%%/glibmm/optioncontext.h
 include/glibmm-%%API_VERSION%%/glibmm/optionentry.h
 include/glibmm-%%API_VERSION%%/glibmm/optiongroup.h
 include/glibmm-%%API_VERSION%%/glibmm/pattern.h
+include/glibmm-%%API_VERSION%%/glibmm/priorities.h
 include/glibmm-%%API_VERSION%%/glibmm/private/checksum_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/convert_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/date_p.h
@@ -128,7 +129,6 @@ include/glibmm-%%API_VERSION%%/glibmm/private/uriutils_p.h
 include/glibmm-%%API_VERSION%%/glibmm/property.h
 include/glibmm-%%API_VERSION%%/glibmm/propertyproxy.h
 include/glibmm-%%API_VERSION%%/glibmm/propertyproxy_base.h
-include/glibmm-%%API_VERSION%%/glibmm/priorities.h
 include/glibmm-%%API_VERSION%%/glibmm/quark.h
 include/glibmm-%%API_VERSION%%/glibmm/random.h
 include/glibmm-%%API_VERSION%%/glibmm/refptr.h
