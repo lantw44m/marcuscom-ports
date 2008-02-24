@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.5 2008/01/19 23:16:39 mezz Exp $
+#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.6 2008/01/22 04:30:45 marcus Exp $
 #
 
 PORTNAME=	totem-pl-parser
-PORTVERSION=	2.21.91
+PORTVERSION=	2.21.92
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 
@@ -18,10 +18,11 @@ LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix gnomevfs2 intlhack evolutiondataserver
+USE_GNOME=	gnomehack gnomeprefix gnomevfs2 intlhack evolutiondataserver \
+		ltverhack
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
-GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
