@@ -3,18 +3,18 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.4 2008/01/19 20:03:01 marcus Exp $
+#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.5 2008/01/29 14:14:42 kwm Exp $
 #
 
 PORTNAME=	swfdec-gnome
-PORTVERSION=	2.21.90
+PORTVERSION=	2.21.91
 CATEGORIES=	multimedia
 MASTER_SITES=	GNOME
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Gtk flash player and thumbnailer
 
-LIB_DEPENDS=	swfdec-0.5.90:${PORTSDIR}/graphics/swfdec
+LIB_DEPENDS=	swfdec-0.6:${PORTSDIR}/graphics/swfdec
 
 USE_GNOME=	gnomehack gnomeprefix gtk20 intlhack gconf2
 USE_GMAKE=	yes
