@@ -6,12 +6,15 @@ include/QtWebKit/qwebnetworkinterface.h
 include/QtWebKit/qwebobjectplugin.h
 include/QtWebKit/qwebobjectpluginconnector.h
 include/QtWebKit/qwebpage.h
-include/QtWebKit/qwebpagehistory.h
 include/QtWebKit/qwebsettings.h
+include/QtWebKit/qwebview.h
 lib/libQtWebKit.prl
 lib/libQtWebKit.so
-lib/libQtWebKit.so.1
-lib/libQtWebKit.so.1.0
-lib/libQtWebKit.so.1.0.0
+lib/libQtWebKit.so.
+lib/libQtWebKit.so..
+lib/libQtWebKit.so...
+lib/qt4/plugins/imageformats/libqtwebico.so
 libdata/pkgconfig/QtWebKit.pc
 mkspecs/features/qtwebkit.prf
+@dirrm mkspecs/features
+@dirrm include/QtWebKit

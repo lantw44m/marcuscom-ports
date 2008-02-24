@@ -19,6 +19,7 @@ lib/libWebKitGtk.a
 lib/libWebKitGtk.la
 lib/libWebKitGtk.so
 lib/libWebKitGtk.so.1
+libdata/pkgconfig/WebKitGtk.pc
 libdata/pkgconfig/webkit-1.0.pc
 @dirrm include/WebKit/webkit
 @dirrm include/WebKit/JavaScriptCore
