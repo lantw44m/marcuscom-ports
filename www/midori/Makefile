@@ -3,19 +3,25 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports-experimental/www/midori/Makefile,v 1.1 2007/10/22 00:57:03 ahze Exp $
+#    $MCom: ports/www/midori/Makefile,v 1.1 2007/11/02 12:51:17 ahze Exp $
 
 PORTNAME=	midori
-PORTVERSION=	0.0.10
+PORTVERSION=	0.0.17
 CATEGORIES=	www
 MASTER_SITES=	http://software.twotoasts.de/media/${PORTNAME}/
 
 MAINTAINER=	ahze@FreeBSD.org
-COMMENT=	Lightweight web browser using webkit browser engine
+COMMENT=	Lightweight web browser using WebKit browser engine
 
 LIB_DEPENDS=	WebKitGtk.1:${PORTSDIR}/www/webkit \
 		sexy.2:${PORTSDIR}/x11-toolkits/libsexy
 
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/WebKit/webkit -I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+
+pre-install:
+	${CHMOD} +x ${WRKSRC}/install-sh
 
 .include <bsd.port.mk>
