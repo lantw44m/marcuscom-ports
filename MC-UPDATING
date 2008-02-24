@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.7 2008/01/15 15:12:51 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.8 2008/02/21 16:56:52 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -21,7 +21,7 @@ upgrades.
 
   Portmaster users:
    # portmaster -a
-   # portmaster -f gstreamer-plugins-good
+   # portmaster gstreamer-plugins-good
 
 20080102:
   AFFECTS: All GNOME users and ports depend on gnomehier
