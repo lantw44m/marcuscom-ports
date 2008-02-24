@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gnome-user-share/Makefile,v 1.5 2007/05/19 21:36:26 marcus Exp $
+#   $MCom: ports/www/gnome-user-share/Makefile,v 1.7 2008/01/25 18:56:44 marcus Exp $
 #
 
 PORTNAME=	gnome-user-share
-PORTVERSION=	0.21
+PORTVERSION=	0.22
 CATEGORIES=	www deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -25,6 +25,7 @@ USE_XLIB=	yes
 USE_APACHE=	2.0+
 USE_GNOME=	gnomeprefix gnomehack intlhack libglade2 gconf2
 GNU_CONFIGURE=	yes
+INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-howl
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

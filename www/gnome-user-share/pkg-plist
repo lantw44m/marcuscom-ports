@@ -7,6 +7,10 @@ share/gnome-user-share/dav_user_2.0.conf
 share/gnome-user-share/dav_user_2.2.conf
 share/gnome-user-share/file-share-properties.glade
 share/gnome/autostart/gnome-user-share.desktop
+share/icons/hicolor/16x16/apps/gnome-obex-server.png
+share/icons/hicolor/22x22/apps/gnome-obex-server.png
+share/icons/hicolor/32x32/apps/gnome-obex-server.png
+share/icons/hicolor/48x48/apps/gnome-obex-server.png
 share/locale/ar/LC_MESSAGES/gnome-user-share.mo
 share/locale/bg/LC_MESSAGES/gnome-user-share.mo
 share/locale/ca/LC_MESSAGES/gnome-user-share.mo
