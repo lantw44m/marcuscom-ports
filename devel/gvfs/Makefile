@@ -1,12 +1,12 @@
-# New ports collection makefile for:	gvfs
+\# New ports collection makefile for:	gvfs
 # Date created:		2007-11-06
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gvfs/Makefile,v 1.11 2008/02/11 21:38:55 marcus Exp $
+#    $MCom: ports/devel/gvfs/Makefile,v 1.12 2008/02/12 01:13:00 marcus Exp $
 
 PORTNAME=	gvfs
-PORTVERSION=	0.1.7
+PORTVERSION=	0.1.8
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -24,6 +24,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS+=--disable-gphoto2
 
 OPTIONS=	FUSE "Enable fuse" on \
 		SAMBA "Enable Samba" on
