@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gvfs/Makefile,v 1.12 2008/02/12 01:13:00 marcus Exp $
+#    $MCom: ports/devel/gvfs/Makefile,v 1.13 2008/02/25 21:42:14 kwm Exp $
 
 PORTNAME=	gvfs
 PORTVERSION=	0.1.8
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -15,7 +16,9 @@ COMMENT=	GNOME virtual file system
 
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
     		hal.1:${PORTSDIR}/sysutils/hal \
-		soup-2.4.1:${PORTSDIR}/devel/libsoup
+		soup-2.4.1:${PORTSDIR}/devel/libsoup \
+		gnome-keyring:${PORTSDIR}/security/gnome-keyring \
+		avahi-client.3:${PORTSDIR}/net/avahi-app
 
 USE_GNOME=	glib20 gnomehack gnomeprefix intlhack gconf2
 USE_GMAKE=	yes
@@ -24,10 +27,10 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS+=--disable-gphoto2
 
 OPTIONS=	FUSE "Enable fuse" on \
-		SAMBA "Enable Samba" on
+		SAMBA "Enable Samba" on \
+		GPHOTO2 "Enable Gphoto 2 camera support" on
 #		CDDA "Enable CDDA" on
 
 .include <bsd.port.pre.mk>
@@ -55,6 +58,14 @@ PLIST_SUB+=	SMB="@comment "
 CONFIGURE_ARGS+=	--disable-cdda
 PLIST_SUB+=	CDDA="@comment "
 #.endif
+
+.if defined(WITH_GPHOTO2)
+LIB_DEPENDS+=	gphoto2.2:${PORTSDIR}/graphics/libgphoto2
+PLIST_SUB+=	GPHOTO2=""
+.else
+CONFIGURE_ARGS+=	--disable-gphoto2
+PLIST_SUB+=	GPHOTO2="@comment "
+.endif
 
 post-extract:
 .for f in http dav smb smb-browse

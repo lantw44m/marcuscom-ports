@@ -31,6 +31,7 @@ libexec/gvfsd-computer
 libexec/gvfsd-dav
 libexec/gvfsd-dnssd
 libexec/gvfsd-ftp
+%%GPHOTO2%%libexec/gvfsd-gphoto2
 libexec/gvfsd-http
 libexec/gvfsd-localtest
 libexec/gvfsd-network
@@ -44,6 +45,7 @@ share/gvfs/mounts/burn.mount
 share/gvfs/mounts/computer.mount
 share/gvfs/mounts/dav.mount
 share/gvfs/mounts/dns-sd.mount
+%%GPHOTO2%%share/gvfs/mounts/gphoto2.mount
 share/gvfs/mounts/http.mount
 share/gvfs/mounts/localtest.mount
 share/gvfs/mounts/network.mount
