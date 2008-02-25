@@ -1,5 +1,6 @@
 bin/nautilus
 bin/nautilus-autorun-software
+bin/nautilus-connect-server
 bin/nautilus-file-management-properties
 include/nautilus/libnautilus-extension/nautilus-column-provider.h
 include/nautilus/libnautilus-extension/nautilus-column.h
