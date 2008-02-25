@@ -530,6 +530,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/help/quickref/fr/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/hu/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/it/quickref.pdf
+%%DATADIR%%/%%VERSION%%/help/quickref/pl/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/pt/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/sq/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/sv/quickref.pdf
