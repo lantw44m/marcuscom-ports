@@ -1,9 +1,9 @@
-\# New ports collection makefile for:	gvfs
+# New ports collection makefile for:	gvfs
 # Date created:		2007-11-06
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gvfs/Makefile,v 1.13 2008/02/25 21:42:14 kwm Exp $
+#    $MCom: ports/devel/gvfs/Makefile,v 1.14 2008/02/25 23:31:02 marcus Exp $
 
 PORTNAME=	gvfs
 PORTVERSION=	0.1.8
@@ -66,11 +66,5 @@ PLIST_SUB+=	GPHOTO2=""
 CONFIGURE_ARGS+=	--disable-gphoto2
 PLIST_SUB+=	GPHOTO2="@comment "
 .endif
-
-post-extract:
-.for f in http dav smb smb-browse
-	@${CP} ${FILESDIR}/${f}.mount.in \
-	    	${WRKSRC}/daemon/${f}.mount.in
-.endfor
 
 .include <bsd.port.post.mk>
