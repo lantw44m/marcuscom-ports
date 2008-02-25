@@ -1,0 +1,19 @@
+--- data/Makefile.in.orig	2008-02-25 10:42:57.000000000 +0100
++++ data/Makefile.in	2008-02-25 10:43:36.000000000 +0100
+@@ -328,7 +328,7 @@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = icons
+ bugreportdir = $(libexecdir)/totem
+-bugreport_SCRIPTS = totem-bugreport.sh
++bugreport_SCRIPTS = totem-bugreport.py
+ man_MANS = totem.1 totem-video-thumbnailer.1
+ stuffdir = $(pkgdatadir)
+ stuff_DATA = \
+@@ -362,6 +362,7 @@
+ EXTRA_DIST = \
+ 	$(man_MANS)			\
+ 	$(stuff_DATA)			\
++	$(bugreport_SCRIPTS)		\
+ 	desktop.sh			\
+ 	handlers.sh			\
+ 	lirc_example			\
