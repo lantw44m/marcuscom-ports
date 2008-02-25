@@ -21,7 +21,6 @@ include/gedit-%%VERSION%%/gedit/gedit-tab.h
 include/gedit-%%VERSION%%/gedit/gedit-utils.h
 include/gedit-%%VERSION%%/gedit/gedit-view.h
 include/gedit-%%VERSION%%/gedit/gedit-window.h
-lib/gedit-2/gedit-bugreport.sh
 lib/gedit-2/plugins/changecase.gedit-plugin
 lib/gedit-2/plugins/docinfo.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/externaltools.gedit-plugin
@@ -127,6 +126,7 @@ lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
 libdata/pkgconfig/gedit-%%VERSION%%.pc
+libexec/gedit-2/gedit-bugreport.sh
 share/applications/gedit.desktop
 %%DOCSDIR%%/GeditApp.html
 %%DOCSDIR%%/GeditDocument.html
@@ -501,6 +501,7 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm share/gedit-2/glade
 @dirrm share/gedit-2
 @dirrm %%DOCSDIR%%
+@dirrmtry libexec/gedit-2
 %%PYTHON%%@dirrm lib/gedit-2/plugins/snippets
 %%PYTHON%%@dirrm lib/gedit-2/plugins/pythonconsole
 %%PYTHON%%@dirrm lib/gedit-2/plugins/externaltools
