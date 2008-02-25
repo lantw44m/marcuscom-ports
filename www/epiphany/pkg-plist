@@ -35,6 +35,7 @@ include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-shell.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-state.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-statusbar.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-type-builtins.h
+include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-version.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-window.h
 lib/epiphany/%%EPHY_VERSION%%/plugins/libdesktopfileplugin.la
 lib/epiphany/%%EPHY_VERSION%%/plugins/libdesktopfileplugin.so
@@ -46,7 +47,6 @@ share/dbus-1/services/org.gnome.Epiphany.service
 %%DOCSDIR%%/EphyCommandManager.html
 %%DOCSDIR%%/EphyEmbed.html
 %%DOCSDIR%%/EphyNodeDb.html
-%%DOCSDIR%%/EphyTab.html
 %%DOCSDIR%%/EphyWindow.html
 %%DOCSDIR%%/ch01.html
 %%DOCSDIR%%/ch02.html
@@ -214,7 +214,6 @@ share/gnome/help/epiphany/uk/figures/ephy-history-window-screenshot.png
 share/gnome/help/epiphany/uk/figures/ephy-screenshot.png
 share/icons/HighContrastLargePrint/48x48/apps/gnome-web-browser.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/gnome-web-browser.png
-share/icons/LowContrastLargePrint/48x48/apps/gnome-web-browser.png
 share/icons/hicolor/16x16/apps/gnome-web-browser.png
 share/icons/hicolor/22x22/apps/gnome-web-browser.png
 share/icons/hicolor/24x24/apps/gnome-web-browser.png
@@ -223,6 +222,7 @@ share/icons/hicolor/48x48/apps/epiphany-bookmarks.png
 share/icons/hicolor/scalable/apps/gnome-web-browser.svg
 share/locale/am/LC_MESSAGES/epiphany.mo
 share/locale/ar/LC_MESSAGES/epiphany.mo
+share/locale/as/LC_MESSAGES/epiphany.mo
 share/locale/az/LC_MESSAGES/epiphany.mo
 share/locale/be/LC_MESSAGES/epiphany.mo
 share/locale/be@latin/LC_MESSAGES/epiphany.mo
@@ -257,6 +257,7 @@ share/locale/is/LC_MESSAGES/epiphany.mo
 share/locale/it/LC_MESSAGES/epiphany.mo
 share/locale/ja/LC_MESSAGES/epiphany.mo
 share/locale/ka/LC_MESSAGES/epiphany.mo
+share/locale/kn/LC_MESSAGES/epiphany.mo
 share/locale/ko/LC_MESSAGES/epiphany.mo
 share/locale/ku/LC_MESSAGES/epiphany.mo
 share/locale/li/LC_MESSAGES/epiphany.mo
@@ -319,9 +320,6 @@ share/omf/epiphany/epiphany-sv.omf
 share/omf/epiphany/epiphany-uk.omf
 share/pygtk/2.0/defs/epiphany.defs
 @dirrm share/omf/epiphany
-@dirrmtry share/icons/LowContrastLargePrint/48x48/apps
-@dirrmtry share/icons/LowContrastLargePrint/48x48
-@dirrmtry share/icons/LowContrastLargePrint
 @dirrm share/gnome/help/epiphany/uk/figures
 @dirrm share/gnome/help/epiphany/uk
 @dirrm share/gnome/help/epiphany/sv/figures
@@ -419,3 +417,5 @@ share/pygtk/2.0/defs/epiphany.defs
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
