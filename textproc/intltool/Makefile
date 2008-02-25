@@ -3,10 +3,10 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCcom$
+#   $MCom$
 
 PORTNAME=	intltool
-PORTVERSION=	0.37.0
+PORTVERSION=	0.37.1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
