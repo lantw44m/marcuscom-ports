@@ -11,6 +11,7 @@ etc/gdm/custom.conf.default
 etc/gdm/gdm.schemas
 libdata/bonobo/servers/GNOME_GdmUserSwitchApplet.server
 libexec/gdm-factory-slave
+libexec/gdm-host-chooser
 libexec/gdm-product-slave
 libexec/gdm-session-worker
 libexec/gdm-simple-chooser
