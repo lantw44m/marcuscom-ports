@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.114 2007/12/23 09:10:03 kwm Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.115 2008/01/22 20:40:02 marcus Exp $
 #
 
 PORTNAME=	pango
-PORTVERSION=	1.19.3
+PORTVERSION=	1.19.4
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/pango/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS=	freetype-config:${PORTSDIR}/print/freetype2
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/fontconfig.pc:${PORTSDIR}/print/freetype2
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
 		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT}
