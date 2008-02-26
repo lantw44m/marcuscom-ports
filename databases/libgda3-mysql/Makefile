@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/databases/libgda3-mysql/Makefile,v 1.1 2008/02/05 13:06:54 kwm Exp $
 #
 
 PORTREVISION?=	0
@@ -19,7 +19,5 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 PLIST=		${.CURDIR}/pkg-plist
 
 LIBGDA3_SLAVE=	mysql
-
-USE_GNOME+=	libgda3
 
 .include "${MASTERDIR}/Makefile"

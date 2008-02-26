@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda3/Makefile,v 1.7 2008/02/05 13:06:53 kwm Exp $
+#   $MCom: ports/databases/libgda3/Makefile,v 1.8 2008/02/06 01:03:06 marcus Exp $
 #
 
 PORTNAME=	libgda3
@@ -41,6 +41,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 .if LIBGDA3_SLAVE=="no"
 MAN1=		gda-config-tool-3.0.1
 MAN5=		gda-config-3.0.5
+.else
+USE_GNOME+=	libgda3
 .endif
 
 PLIST_SUB=	VERSION=${PORTVERSION:R}
