@@ -3,12 +3,11 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese/Makefile,v 1.6 2008/02/15 20:16:31 mezz Exp $
+#   $MCom: ports/multimedia/cheese/Makefile,v 1.7 2008/02/16 04:30:33 marcus Exp $
 #
 
 PORTNAME=	cheese
-PORTVERSION=	2.21.91
-PORTREVISION=	1
+PORTVERSION=	2.21.92
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -35,10 +34,6 @@ GCONF_SCHEMAS=	cheese.schemas
 post-patch:
 	@${REINPLACE_CMD} -e 's|[$$]GMSGFMT[$$]|$$MSGFMT$$|g' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|[(]libdir[)]/cheese|(libexecdir)/cheese|g' \
-		${WRKSRC}/data/Makefile.in
-	@${REINPLACE_CMD} -e 's|@FULL_LIBDIR@|${PREFIX}/libexec|g' \
-		${WRKSRC}/data/cheese.desktop.in*
 
 .ifndef (NOPORTDOCS)
 post-install:

@@ -87,7 +87,7 @@ share/gnome/help/time-admin/fr/figures/time-tool-manual.png
 share/gnome/help/time-admin/fr/time-admin.xml
 share/gnome/help/time-admin/nl/figures/time-map.png
 share/gnome/help/time-admin/nl/figures/time-servers.png
-share/gnome/help/time-admin/nl/figures/time-tool.png
+share/gnome/help/time-admin/nl/figures/time-tool-manual.png
 share/gnome/help/time-admin/nl/legal.xml
 share/gnome/help/time-admin/nl/time-admin.xml
 share/gnome/help/time-admin/oc/figures/time-map.png
@@ -122,8 +122,14 @@ share/gnome/help/users-admin/ru/figures/users-tool.png
 share/gnome/help/users-admin/ru/users-admin.xml
 share/gnome/help/users-admin/sv/figures/users-tool.png
 share/gnome/help/users-admin/sv/users-admin.xml
+share/icons/hicolor/16x16/apps/time-admin.png
+share/icons/hicolor/22x22/apps/time-admin.png
+share/icons/hicolor/24x24/apps/time-admin.png
+share/icons/hicolor/32x32/apps/time-admin.png
+share/icons/hicolor/48x48/apps/time-admin.png
 share/icons/hicolor/48x48/devices/irda.png
 share/icons/hicolor/48x48/devices/plip.png
+share/icons/hicolor/scalable/apps/time-admin.svg
 share/locale/am/LC_MESSAGES/gnome-system-tools.mo
 share/locale/ar/LC_MESSAGES/gnome-system-tools.mo
 share/locale/az/LC_MESSAGES/gnome-system-tools.mo
