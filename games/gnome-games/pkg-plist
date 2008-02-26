@@ -70,9 +70,6 @@ lib/gnome-games/gnome-games-render-cards
 %%PYTHON_SITELIBDIR%%/glchess/game.py
 %%PYTHON_SITELIBDIR%%/glchess/game.pyc
 %%PYTHON_SITELIBDIR%%/glchess/game.pyo
-%%PYTHON_SITELIBDIR%%/glchess/glchess.py
-%%PYTHON_SITELIBDIR%%/glchess/glchess.pyc
-%%PYTHON_SITELIBDIR%%/glchess/glchess.pyo
 %%PYTHON_SITELIBDIR%%/glchess/ggz/__init__.py
 %%PYTHON_SITELIBDIR%%/glchess/ggz/__init__.pyc
 %%PYTHON_SITELIBDIR%%/glchess/ggz/__init__.pyo
@@ -85,6 +82,9 @@ lib/gnome-games/gnome-games-render-cards
 %%PYTHON_SITELIBDIR%%/glchess/ggz/protocol.py
 %%PYTHON_SITELIBDIR%%/glchess/ggz/protocol.pyc
 %%PYTHON_SITELIBDIR%%/glchess/ggz/protocol.pyo
+%%PYTHON_SITELIBDIR%%/glchess/glchess.py
+%%PYTHON_SITELIBDIR%%/glchess/glchess.pyc
+%%PYTHON_SITELIBDIR%%/glchess/glchess.pyo
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/__init__.py
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/__init__.pyc
 %%PYTHON_SITELIBDIR%%/glchess/gtkui/__init__.pyo
@@ -766,6 +766,7 @@ share/gnome/help/gnibbles/C/figures/tables.png
 share/gnome/help/gnibbles/C/figures/worm_op.png
 share/gnome/help/gnibbles/C/gnibbles.xml
 share/gnome/help/gnibbles/C/legal.xml
+share/gnome/help/gnibbles/C/network-games.xml
 share/gnome/help/gnibbles/ca/figures/connect.png
 share/gnome/help/gnibbles/ca/figures/game.png
 share/gnome/help/gnibbles/ca/figures/intro.png
@@ -773,7 +774,6 @@ share/gnome/help/gnibbles/ca/figures/playing.png
 share/gnome/help/gnibbles/ca/figures/tables.png
 share/gnome/help/gnibbles/ca/figures/worm_op.png
 share/gnome/help/gnibbles/ca/gnibbles.xml
-share/gnome/help/gnibbles/C/network-games.xml
 share/gnome/help/gnibbles/es/figures/connect.png
 share/gnome/help/gnibbles/es/figures/game.png
 share/gnome/help/gnibbles/es/figures/intro.png
@@ -1316,6 +1316,7 @@ share/locale/is/LC_MESSAGES/gnome-games.mo
 share/locale/it/LC_MESSAGES/gnome-games.mo
 share/locale/ja/LC_MESSAGES/gnome-games.mo
 share/locale/ka/LC_MESSAGES/gnome-games.mo
+share/locale/kn/LC_MESSAGES/gnome-games.mo
 share/locale/ko/LC_MESSAGES/gnome-games.mo
 share/locale/ku/LC_MESSAGES/gnome-games.mo
 share/locale/lt/LC_MESSAGES/gnome-games.mo
@@ -1824,6 +1825,12 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%/mahjongg/maps
 @dirrm %%DATADIR%%/mahjongg
+@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
+@dirrm %%DATADIR%%/icons/hicolor/scalable
+@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/gnotski
 @dirrm %%DATADIR%%/blackjack/rules
 @dirrm %%DATADIR%%/blackjack/pixmaps
@@ -1832,12 +1839,6 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm %%DATADIR%%/aisleriot
 @dirrm share/gnome-games-common/cards
 @dirrm share/gnome-games-common
-@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
-@dirrm %%DATADIR%%/icons/hicolor/scalable
-@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
-@dirrm %%DATADIR%%/icons/hicolor/24x24
-@dirrm %%DATADIR%%/icons/hicolor
-@dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
 @dirrm share/gnobots2
 @dirrm share/gnibbles
@@ -1845,6 +1846,7 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/glchess
 @dirrmtry share/ggz/gnome-games
 @dirrmtry share/ggz
+@dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku/gtk_goodies
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/ui
@@ -1859,7 +1861,6 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm lib/gnome-games
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
