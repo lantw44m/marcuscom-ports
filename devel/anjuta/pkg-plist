@@ -1,5 +1,4 @@
 bin/anjuta
-bin/anjuta-shell
 bin/anjuta_import.sh
 bin/anjuta_launcher
 include/libanjuta-1.0/libanjuta/anjuta-async-command.h
@@ -420,7 +419,6 @@ share/anjuta/ui/anjuta-patch.ui
 share/anjuta/ui/anjuta-project-manager.ui
 share/anjuta/ui/anjuta-sample.ui
 share/anjuta/ui/anjuta-search.ui
-share/anjuta/ui/anjuta-shell.ui
 %%SVN%%share/anjuta/ui/anjuta-subversion.ui
 share/anjuta/ui/anjuta-symbol-browser-plugin.ui
 share/anjuta/ui/anjuta-tools.ui
@@ -577,8 +575,8 @@ share/gnome/help/anjuta-manual/C/figures/open_file_multiple.png
 share/gnome/help/anjuta-manual/C/figures/prefs_print.png
 share/gnome/help/anjuta-manual/C/figures/print_dlg.png
 share/gnome/help/anjuta-manual/C/figures/print_preview.png
+share/gnome/help/anjuta-manual/C/figures/project-window.png
 share/gnome/help/anjuta-manual/C/figures/project_info.png
-share/gnome/help/anjuta-manual/C/figures/project_win.png
 share/gnome/help/anjuta-manual/C/figures/registers.png
 share/gnome/help/anjuta-manual/C/figures/save_as_file.png
 share/gnome/help/anjuta-manual/C/figures/search_expr.png
@@ -627,8 +625,8 @@ share/gnome/help/anjuta-manual/es/figures/open_file_multiple.png
 share/gnome/help/anjuta-manual/es/figures/prefs_print.png
 share/gnome/help/anjuta-manual/es/figures/print_dlg.png
 share/gnome/help/anjuta-manual/es/figures/print_preview.png
+share/gnome/help/anjuta-manual/es/figures/project-window.png
 share/gnome/help/anjuta-manual/es/figures/project_info.png
-share/gnome/help/anjuta-manual/es/figures/project_win.png
 share/gnome/help/anjuta-manual/es/figures/registers.png
 share/gnome/help/anjuta-manual/es/figures/save_as_file.png
 share/gnome/help/anjuta-manual/es/figures/search_expr.png
@@ -668,8 +666,8 @@ share/gnome/help/anjuta-manual/oc/figures/open_file_multiple.png
 share/gnome/help/anjuta-manual/oc/figures/prefs_print.png
 share/gnome/help/anjuta-manual/oc/figures/print_dlg.png
 share/gnome/help/anjuta-manual/oc/figures/print_preview.png
+share/gnome/help/anjuta-manual/oc/figures/project-window.png
 share/gnome/help/anjuta-manual/oc/figures/project_info.png
-share/gnome/help/anjuta-manual/oc/figures/project_win.png
 share/gnome/help/anjuta-manual/oc/figures/registers.png
 share/gnome/help/anjuta-manual/oc/figures/save_as_file.png
 share/gnome/help/anjuta-manual/oc/figures/search_expr.png
@@ -709,8 +707,8 @@ share/gnome/help/anjuta-manual/sv/figures/open_file_multiple.png
 share/gnome/help/anjuta-manual/sv/figures/prefs_print.png
 share/gnome/help/anjuta-manual/sv/figures/print_dlg.png
 share/gnome/help/anjuta-manual/sv/figures/print_preview.png
+share/gnome/help/anjuta-manual/sv/figures/project-window.png
 share/gnome/help/anjuta-manual/sv/figures/project_info.png
-share/gnome/help/anjuta-manual/sv/figures/project_win.png
 share/gnome/help/anjuta-manual/sv/figures/registers.png
 share/gnome/help/anjuta-manual/sv/figures/save_as_file.png
 share/gnome/help/anjuta-manual/sv/figures/search_expr.png
@@ -754,6 +752,7 @@ share/locale/hu/LC_MESSAGES/anjuta.mo
 share/locale/id/LC_MESSAGES/anjuta.mo
 share/locale/it/LC_MESSAGES/anjuta.mo
 share/locale/ja/LC_MESSAGES/anjuta.mo
+share/locale/kn/LC_MESSAGES/anjuta.mo
 share/locale/ko/LC_MESSAGES/anjuta.mo
 share/locale/mk/LC_MESSAGES/anjuta.mo
 share/locale/ml/LC_MESSAGES/anjuta.mo

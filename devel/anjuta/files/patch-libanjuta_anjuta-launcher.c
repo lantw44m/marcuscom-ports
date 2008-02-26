@@ -1,5 +1,5 @@
---- libanjuta/anjuta-launcher.c.orig	2008-01-06 18:26:38.000000000 +0100
-+++ libanjuta/anjuta-launcher.c	2008-01-13 14:47:16.000000000 +0100
+--- libanjuta/anjuta-launcher.c.orig	2008-02-15 18:32:29.000000000 -0500
++++ libanjuta/anjuta-launcher.c	2008-02-25 22:45:03.000000000 -0500
 @@ -37,7 +37,7 @@
  #include <signal.h>
  
@@ -9,17 +9,17 @@
  #    include <pty.h>
  #  else
  #    include <libutil.h>
-@@ -745,7 +745,8 @@
+@@ -749,7 +749,8 @@ anjuta_launcher_scan_output (GIOChannel 
  		GError *err = NULL;
  		do
  		{
 -			g_io_channel_read_chars (channel, buffer, FILE_BUFFER_SIZE-1, &n, &err);
 +			GIOStatus status;
 +			status = g_io_channel_read_chars (channel, buffer, FILE_BUFFER_SIZE-1, &n, &err);
- 			if (n > 0 && !err) /* There is output */
+ 			if (n > 0) /* There is output */
  			{
  				gchar *utf8_chars;
-@@ -772,6 +773,13 @@
+@@ -776,6 +777,13 @@ anjuta_launcher_scan_output (GIOChannel 
  				anjuta_launcher_synchronize (launcher);
  				ret = FALSE;
  			}
@@ -33,17 +33,17 @@
  		/* Read next chars if buffer was too small
  		 * (the maximum length of one character is 6 bytes) */
  		} while (!err && (n > FILE_BUFFER_SIZE - 7));
-@@ -801,7 +809,8 @@
+@@ -805,7 +813,8 @@ anjuta_launcher_scan_error (GIOChannel *
  		GError *err = NULL;
  		do
  		{
 -			g_io_channel_read_chars (channel, buffer, FILE_BUFFER_SIZE-1, &n, &err);
 +			GIOStatus status;
 +			status = g_io_channel_read_chars (channel, buffer, FILE_BUFFER_SIZE-1, &n, &err);
- 			if (n > 0 && !err) /* There is stderr output */
+ 			if (n > 0) /* There is stderr output */
  			{
  				gchar *utf8_chars;
-@@ -829,6 +838,13 @@
+@@ -833,6 +842,13 @@ anjuta_launcher_scan_error (GIOChannel *
  				anjuta_launcher_synchronize (launcher);
  				ret = FALSE;
  			}
@@ -57,18 +57,18 @@
  		/* Read next chars if buffer was too small
  		 * (the maximum length of one character is 6 bytes) */
  		} while (!err && (n > FILE_BUFFER_SIZE - 7));
-@@ -858,7 +874,8 @@
+@@ -862,7 +878,8 @@ anjuta_launcher_scan_pty (GIOChannel *ch
  		GError *err = NULL;
  		do
  		{
 -			g_io_channel_read_chars (channel, buffer, FILE_BUFFER_SIZE-1, &n, &err);
 +			GIOStatus status;
 +			status = g_io_channel_read_chars (channel, buffer, FILE_BUFFER_SIZE-1, &n, &err);
- 			if (n > 0 && !err) /* There is stderr output */
+ 			if (n > 0) /* There is stderr output */
  			{
  				gchar *utf8_chars;
-@@ -889,6 +906,10 @@
- 				DEBUG_PRINT ("pty: %s", err->message);
+@@ -893,6 +910,10 @@ anjuta_launcher_scan_pty (GIOChannel *ch
+ 				g_warning ("pty: %s", err->message);
  				ret = FALSE;
  			}
 +			else if (status == G_IO_STATUS_EOF)
