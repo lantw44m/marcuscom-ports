@@ -103,7 +103,7 @@ share/gnome-2.0/ui/GNOME_StickyNotesApplet.xml
 %%DATADIR%%/glade/modemlights.glade
 %%PYTHON%%%%DATADIR%%/glade/prefs-dialog.glade
 %%DATADIR%%/glade/stickynotes.glade
-%%DATADIR%%/glade/trashapplet.glade
+%%DATADIR%%/glade/trashapplet-empty-progress.ui
 %%PYTHON%%%%DATADIR%%/invest-applet/invest-16.png
 %%PYTHON%%%%DATADIR%%/invest-applet/invest-button.png
 %%PYTHON%%%%DATADIR%%/invest-applet/invest.svg
@@ -801,6 +801,8 @@ share/gnome/help/mixer_applet2/oc/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/oc/mixer_applet2.xml
 share/gnome/help/mixer_applet2/pa/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/pa/mixer_applet2.xml
+share/gnome/help/mixer_applet2/pt_BR/figures/volumecontrol_applet.png
+share/gnome/help/mixer_applet2/pt_BR/mixer_applet2.xml
 share/gnome/help/mixer_applet2/ru/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/ru/mixer_applet2.xml
 share/gnome/help/mixer_applet2/sv/figures/volumecontrol_applet.png
@@ -1026,6 +1028,7 @@ share/locale/is/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ka/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/kn/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ky/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1177,6 +1180,7 @@ share/omf/mixer_applet2/mixer_applet2-it.omf
 share/omf/mixer_applet2/mixer_applet2-ko.omf
 share/omf/mixer_applet2/mixer_applet2-oc.omf
 share/omf/mixer_applet2/mixer_applet2-pa.omf
+share/omf/mixer_applet2/mixer_applet2-pt_BR.omf
 share/omf/mixer_applet2/mixer_applet2-ru.omf
 share/omf/mixer_applet2/mixer_applet2-sv.omf
 share/omf/mixer_applet2/mixer_applet2-uk.omf
@@ -1443,6 +1447,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/mixer_applet2/sv
 @dirrm share/gnome/help/mixer_applet2/ru/figures
 @dirrm share/gnome/help/mixer_applet2/ru
+@dirrm share/gnome/help/mixer_applet2/pt_BR/figures
+@dirrm share/gnome/help/mixer_applet2/pt_BR
 @dirrm share/gnome/help/mixer_applet2/pa/figures
 @dirrm share/gnome/help/mixer_applet2/pa
 @dirrm share/gnome/help/mixer_applet2/oc/figures
