@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.40 2008/02/23 19:09:17 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -58,7 +58,8 @@ _USE_GSTREAMER10_ALL=	a52dec aalib annodex bad bz2 cairo cdaudio cdparanoia dts 
 			gnonlin good gsm hal ivorbis jack jpeg ladspa lame \
 			libcaca libmms libpng libvisual mm mp3 mpeg2enc mpeg2dec \
 			musepack nas neon ogg pango pulse python sdl shout2 sidplay \
-			sndfile spc speex swfdec theora ugly vorbis wavpack x264 xvid
+			sndfile spc soundtouch soup speex swfdec taglib \
+			theora ugly vorbis wavpack x264 xvid
 
 # other plugins
 OTHER_GSTREAMER_PLUGINS+=	core yes ${_USE_GSTREAMER10_ALL} fluendo-mp3 mad
@@ -144,9 +145,13 @@ smoothwave_DEPENDS=	audio/gstreamer-plugins-smoothwave
 
 sndfile_DEPENDS=	audio/gstreamer-plugins-sndfile
 
+soundtouch_DEPENDS=	audio/gstreamer-plugins-soundtouch
+
 spc_DEPENDS=	audio/gstreamer-plugins-spc
 
 speex_DEPENDS=	audio/gstreamer-plugins-speex
+
+taglib_DEPENDS=	audio/gstreamer-plugins-taglib
 
 vorbis_DEPENDS=	audio/gstreamer-plugins-vorbis
 
@@ -156,6 +161,8 @@ wavpack_DEPENDS=	audio/gstreamer-plugins-wavpack
 gnomevfs_DEPENDS=	devel/gstreamer-plugins-gnomevfs
 
 sdl_DEPENDS=	devel/gstreamer-plugins-sdl
+
+soup_DEPENDS=	devel/gstreamer-plugins-soup
 
 # Graphics Plugins Section
 aalib_DEPENDS=	graphics/gstreamer-plugins-aalib
