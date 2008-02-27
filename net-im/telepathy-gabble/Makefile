@@ -3,10 +3,10 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#
+#    $MCom$
 
 PORTNAME=	telepathy-gabble
-PORTVERSION=	0.7.1
+PORTVERSION=	0.7.2
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
