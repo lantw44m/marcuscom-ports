@@ -29,11 +29,11 @@ include/mission-control/mcd-service.h
 lib/libmissioncontrol-client.a
 lib/libmissioncontrol-client.la
 lib/libmissioncontrol-client.so
-lib/libmissioncontrol-client.so.3
+lib/libmissioncontrol-client.so.0
 lib/libmissioncontrol-server.a
 lib/libmissioncontrol-server.la
 lib/libmissioncontrol-server.so
-lib/libmissioncontrol-server.so.3
+lib/libmissioncontrol-server.so.1
 libdata/pkgconfig/libmissioncontrol.pc
 libdata/pkgconfig/mission-control.pc
 libexec/mission-control
