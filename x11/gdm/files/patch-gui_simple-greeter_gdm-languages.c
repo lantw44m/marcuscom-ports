@@ -1,6 +1,15 @@
 --- gui/simple-greeter/gdm-languages.c.orig	2008-02-25 17:21:43.000000000 -0500
-+++ gui/simple-greeter/gdm-languages.c	2008-02-26 14:04:12.000000000 -0500
-@@ -479,7 +479,7 @@ select_dirs (const struct dirent *dirent
++++ gui/simple-greeter/gdm-languages.c	2008-02-27 01:17:09.000000000 -0500
+@@ -50,6 +50,8 @@
+ #define ISO_CODES_DATADIR ISO_CODES_PREFIX "/share/xml/iso-codes"
+ #define ISO_CODES_LOCALESDIR ISO_CODES_PREFIX "/share/locale"
+ 
++#define GDM_DEFAULT_LOCALE "C"
++
+ typedef struct _GdmLocale {
+         char *id;
+         char *name;
+@@ -479,7 +481,7 @@ select_dirs (const struct dirent *dirent
                                  struct stat st;
                                  char       *path;
  
@@ -9,7 +18,7 @@
                                  if (g_stat (path, &st) == 0) {
                                          mode = st.st_mode;
                                  }
-@@ -499,7 +499,7 @@ collect_locales_from_directory (void)
+@@ -499,7 +501,7 @@ collect_locales_from_directory (void)
          int             ndirents;
          int             cnt;
  
@@ -18,7 +27,7 @@
  
          for (cnt = 0; cnt < ndirents; ++cnt) {
                  char      *path;
-@@ -533,7 +533,7 @@ collect_locales_from_directory (void)
+@@ -533,7 +535,7 @@ collect_locales_from_directory (void)
                  }
  
                  /* try to get additional information from LC_IDENTIFICATION */
@@ -27,7 +36,7 @@
                  res = g_file_test (path, G_FILE_TEST_IS_REGULAR);
                  if (res) {
                          GMappedFile      *mapped;
-@@ -568,6 +568,36 @@ collect_locales_from_aliases (void)
+@@ -568,6 +570,35 @@ collect_locales_from_aliases (void)
  }
  
  static void
@@ -35,10 +44,9 @@
 +{
 +        GdmLocale  *locale;
 +        GdmLocale  *old_locale;
-+        const char *locale_name = "C";
 +
 +        locale = g_new0 (GdmLocale, 1);
-+        gdm_parse_language_name (locale_name,
++        gdm_parse_language_name (GDM_DEFAULT_LOCALE,
 +                                 &locale->language_code,
 +                                 &locale->territory_code,
 +                                 &locale->codeset,
@@ -64,7 +72,7 @@
  collect_locales (void)
  {
  
-@@ -575,6 +605,7 @@ collect_locales (void)
+@@ -575,6 +606,7 @@ collect_locales (void)
                  gdm_available_locales_map = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, (GDestroyNotify) chooser_locale_free);
          }
  
@@ -72,16 +80,12 @@
          collect_locales_from_archive ();
          collect_locales_from_directory ();
          collect_locales_from_aliases ();
-@@ -956,7 +987,11 @@ gdm_get_language_from_name (const char *
-                 goto out;
+@@ -957,6 +989,8 @@ gdm_get_language_from_name (const char *
          }
  
--        language = get_translated_language (language_code, name);
-+        if (! strcmp (language_code, "C")) {
-+                language = "C";
-+        } else {
-+                language = get_translated_language (language_code, name);
-+	}
+         language = get_translated_language (language_code, name);
++        if (language == NULL && ! strcmp (language_code, GDM_DEFAULT_LOCALE))
++                language = GDM_DEFAULT_LOCALE;
  
          if (territory_code != NULL) {
                  territory = get_translated_territory (territory_code, name);
