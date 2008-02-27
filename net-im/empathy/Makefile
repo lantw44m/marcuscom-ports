@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.2 2008/01/17 05:47:16 marcus Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.3 2008/02/09 23:17:57 marcus Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	0.21.90
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -14,7 +15,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME IM client based around telepathy
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-LIB_DEPENDS=	missioncontrol-server.3:${PORTSDIR}/net-im/telepathy-mission-control \
+LIB_DEPENDS=	missioncontrol-server.1:${PORTSDIR}/net-im/telepathy-mission-control \
     		aspell.16:${PORTSDIR}/textproc/aspell
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
