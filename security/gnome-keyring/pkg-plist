@@ -18,6 +18,7 @@ share/dbus-1/services/org.gnome.keyring.service
 %%DOCSDIR%%/ch01.html
 %%DOCSDIR%%/gnome-keyring-gnome-keyring-acl.html
 %%DOCSDIR%%/gnome-keyring-gnome-keyring-attributes.html
+%%DOCSDIR%%/gnome-keyring-gnome-keyring-daemon.html
 %%DOCSDIR%%/gnome-keyring-gnome-keyring-find.html
 %%DOCSDIR%%/gnome-keyring-gnome-keyring-generic-callbacks.html
 %%DOCSDIR%%/gnome-keyring-gnome-keyring-item-info.html
