@@ -52,10 +52,10 @@ include/telepathy-1.0/telepathy-glib/svc-media-interfaces.h
 include/telepathy-1.0/telepathy-glib/svc-properties-interface.h
 include/telepathy-1.0/telepathy-glib/text-mixin.h
 include/telepathy-1.0/telepathy-glib/util.h
-%%LIB32DIR%%/libtelepathy-glib.a
-%%LIB32DIR%%/libtelepathy-glib.la
-%%LIB32DIR%%/libtelepathy-glib.so
-%%LIB32DIR%%/libtelepathy-glib.so.7
+lib/libtelepathy-glib.a
+lib/libtelepathy-glib.la
+lib/libtelepathy-glib.so
+lib/libtelepathy-glib.so.0
 libdata/pkgconfig/telepathy-glib.pc
 share/gtk-doc/html/telepathy-glib/TpBaseConnection.html
 share/gtk-doc/html/telepathy-glib/TpBaseConnectionManager.html
@@ -121,9 +121,9 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-util.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib.devhelp
 share/gtk-doc/html/telepathy-glib/telepathy-glib.devhelp2
 share/gtk-doc/html/telepathy-glib/up.png
-@dirrm share/gtk-doc/html/telepathy-glib
 @dirrmtry share/gtk-doc/html
 @dirrmtry share/gtk-doc
+@dirrm share/gtk-doc/html/telepathy-glib
 @dirrm include/telepathy-1.0/telepathy-glib/_gen
 @dirrm include/telepathy-1.0/telepathy-glib
 @dirrmtry include/telepathy-1.0

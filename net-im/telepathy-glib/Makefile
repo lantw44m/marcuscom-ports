@@ -3,7 +3,7 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.2 2008/02/27 13:53:22 ahze Exp $
 
 PORTNAME=	telepathy-glib
 PORTVERSION=	0.7.3
@@ -21,10 +21,10 @@ BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 BUILD_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 
-GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig glib20
+USE_GNOME=	gnomehack pkgconfig glib20 ltverhack
 USE_PYTHON_BUILD=	yes
 
 post-patch:
