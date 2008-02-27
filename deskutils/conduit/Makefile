@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/conduit/Makefile,v 1.3 2006/10/11 20:26:26 ahze Exp $
+#    $MCom: ports/deskutils/conduit/Makefile,v 1.5 2008/02/27 16:21:52 ahze Exp $
 
 PORTNAME=	conduit
 PORTVERSION=	0.3.8
@@ -23,7 +23,8 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/goocanvasmodule.so:${PORTSDIR}/graphics/py-goo
 		${PYTHON_SITELIBDIR}/elementtree/__init__.py:${PORTSDIR}/devel/py-elementtree \
 		${PYTHON_SITELIBDIR}/pysqlite2/__init__.py:${PORTSDIR}/databases/py-pysqlite23 \
 		xmlproc_parse:${PORTSDIR}/textproc/py-xml \
-		${PYTHON_SITELIBDIR}/vobject/__init__.py:${PORTSDIR}/deskutils/py-vobject
+		${PYTHON_SITELIBDIR}/vobject/__init__.py:${PORTSDIR}/deskutils/py-vobject \
+		firefox:${PORTSDIR}/www/firefox
 
 USE_PYTHON=	2.4+
 USE_GMAKE=	yes
@@ -53,5 +54,8 @@ CONFIGURE_ARGS+=	--enable-eog-plugin
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/data/Makefile.in
+	@${FIND} ${WRKSRC} -type f | ${XARGS} ${REINPLACE_CMD} -e 's|/bin/bash|${SH}|' \
+		-e 's|/usr/bin/python|${LOCALBASE}/bin/python|' \
+		-e 's|/usr/lib/firefox*|${LOCALBASE}/lib/firefox|'
 
 .include <bsd.port.post.mk>
