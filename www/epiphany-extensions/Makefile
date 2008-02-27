@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.103 2008/02/27 04:36:27 mezz Exp $
 #
 
 PORTNAME=	epiphany-extensions
@@ -35,9 +35,9 @@ CONFIGURE_ARGS=	--with-mozilla=${GECKO}
 GCONF_SCHEMAS=	smart-bookmarks.schemas
 
 EPHY_EXTENSIONS=all,rss
-EPHY_VERSION=	2.20
+EPHY_VERSION=	2.21
 
-PLIST_SUB=	VERSION="2.20" EPHY_VERSION=${EPHY_VERSION}
+PLIST_SUB=	VERSION="2.21" EPHY_VERSION=${EPHY_VERSION}
 
 OPTIONS=	OPENSP "Enable OpenSP SGML support" off
 
