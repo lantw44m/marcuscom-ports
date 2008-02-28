@@ -19,8 +19,8 @@ bin/gnome-window-properties
 bin/themus-theme-applier
 etc/gnome-vfs-2.0/modules/font-method.conf
 etc/gnome-vfs-2.0/modules/theme-method.conf
-etc/xdg/menus/gnomecc.menu
 etc/xdg/autostart/gnome-at-session.desktop
+etc/xdg/menus/gnomecc.menu
 include/gnome-window-settings-2.0/gnome-window-manager.h
 include/gnome-window-settings-2.0/gnome-wm-manager.h
 lib/gnome-vfs-2.0/modules/libfont-method.a
@@ -124,11 +124,12 @@ share/gnome/help/control-center/ca/control-center.xml
 share/gnome/help/control-center/en_GB/control-center.xml
 share/gnome/help/control-center/es/control-center.xml
 share/gnome/help/control-center/fr/control-center.xml
+share/gnome/help/control-center/it/control-center.xml
 share/gnome/help/control-center/ja/control-center.xml
 share/gnome/help/control-center/oc/control-center.xml
 share/gnome/help/control-center/pa/control-center.xml
-share/gnome/help/control-center/pt_BR/control-center.xml
 share/gnome/help/control-center/pt/control-center.xml
+share/gnome/help/control-center/pt_BR/control-center.xml
 share/gnome/help/control-center/ru/control-center.xml
 share/gnome/help/control-center/sv/control-center.xml
 share/gnome/help/control-center/uk/control-center.xml
@@ -156,6 +157,7 @@ share/icons/hicolor/scalable/apps/typing-monitor.svg
 share/locale/af/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-control-center-2.0.mo
+share/locale/as/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/be@latin/LC_MESSAGES/gnome-control-center-2.0.mo
@@ -191,6 +193,7 @@ share/locale/is/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ja/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ka/LC_MESSAGES/gnome-control-center-2.0.mo
+share/locale/kn/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-control-center-2.0.mo
@@ -241,11 +244,12 @@ share/omf/control-center/control-center-ca.omf
 share/omf/control-center/control-center-en_GB.omf
 share/omf/control-center/control-center-es.omf
 share/omf/control-center/control-center-fr.omf
+share/omf/control-center/control-center-it.omf
 share/omf/control-center/control-center-ja.omf
 share/omf/control-center/control-center-oc.omf
 share/omf/control-center/control-center-pa.omf
-share/omf/control-center/control-center-pt_BR.omf
 share/omf/control-center/control-center-pt.omf
+share/omf/control-center/control-center-pt_BR.omf
 share/omf/control-center/control-center-ru.omf
 share/omf/control-center/control-center-sv.omf
 share/omf/control-center/control-center-uk.omf
@@ -257,11 +261,12 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrm share/gnome/help/control-center/uk
 @dirrm share/gnome/help/control-center/sv
 @dirrm share/gnome/help/control-center/ru
-@dirrm share/gnome/help/control-center/pt
 @dirrm share/gnome/help/control-center/pt_BR
+@dirrm share/gnome/help/control-center/pt
 @dirrm share/gnome/help/control-center/pa
 @dirrm share/gnome/help/control-center/oc
 @dirrm share/gnome/help/control-center/ja
+@dirrm share/gnome/help/control-center/it
 @dirrm share/gnome/help/control-center/fr
 @dirrm share/gnome/help/control-center/es
 @dirrm share/gnome/help/control-center/en_GB
@@ -272,14 +277,14 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%/glade
 @dirrmtry share/desktop-directories
+@dirrmtry share/applications
 @dirrm lib/window-manager-settings
 @dirrm include/gnome-window-settings-2.0
+@dirrmtry etc/xdg/autostart
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@dirrmtry share/applications
-@dirrmtry etc/xdg/autostart
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -308,3 +313,5 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
