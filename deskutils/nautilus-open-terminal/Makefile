@@ -3,21 +3,17 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/deskutils/nautilus-open-terminal/Makefile,v 1.11 2008/02/10 00:06:25 kwm Exp $
 #
 
 PORTNAME=	nautilus-open-terminal
-PORTVERSION=	0.8.${SVNSNAP}
+PORTVERSION=	0.9
 CATEGORIES=	deskutils
-#MASTER_SITES=	GNOME
-MASTER_SITES=	${MASTER_SITE_LOCAL}
-MASTER_SITE_SUBDIR=	kwm
+MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Nautilus extension which allows you to open a terminal
 
-SVNSNAP=	20080110
-WRKSRC=		${WRKDIR}/${PORTNAME}
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
