@@ -201,19 +201,19 @@ share/themes/Simple/metacity-1/maximized.png
 share/themes/Simple/metacity-1/metacity-theme-1.xml
 share/themes/Simple/metacity-1/minimize.png
 @dirrm share/themes/Simple/metacity-1
-@dirrm share/themes/Simple
+@dirrmtry share/themes/Simple
 @dirrm share/themes/Metabox/metacity-1
-@dirrm share/themes/Metabox
+@dirrmtry share/themes/Metabox
 @dirrm share/themes/Esco/metacity-1
-@dirrm share/themes/Esco
+@dirrmtry share/themes/Esco
 @dirrm share/themes/Crux/metacity-1
-@dirrm share/themes/Crux
+@dirrmtry share/themes/Crux
 @dirrm share/themes/Bright/metacity-1
-@dirrm share/themes/Bright
+@dirrmtry share/themes/Bright
 @dirrm share/themes/Atlanta/metacity-1
-@dirrm share/themes/Atlanta
+@dirrmtry share/themes/Atlanta
 @dirrm share/themes/AgingGorilla/metacity-1
-@dirrm share/themes/AgingGorilla
+@dirrmtry share/themes/AgingGorilla
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
 @dirrm include/metacity-1/metacity-private
