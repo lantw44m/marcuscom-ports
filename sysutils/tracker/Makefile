@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/tracker/Makefile,v 1.10 2008/02/26 18:53:54 ahze Exp $
+#   $MCom: ports/sysutils/tracker/Makefile,v 1.11 2008/02/26 19:31:47 ahze Exp $
 #
 
 PORTNAME=	tracker
-PORTVERSION=	0.6.4
+PORTVERSION=	0.6.5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.gnome.org/~jamiemcc/tracker/
 
@@ -15,15 +15,16 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Object database, tag/metadata database, search tool and indexer
 
 BUILD_DEPENDS=	sqlite3-threads>=3.4.1:${PORTSDIR}/databases/sqlite3-threads
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3-threads \
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		poppler-glib.2:${PORTSDIR}/graphics/poppler-gtk \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		wv-1.2.3:${PORTSDIR}/textproc/wv \
 		gmime-2.0.4:${PORTSDIR}/mail/gmime2 \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3-threads \
 		qdbm.14:${PORTSDIR}/databases/qdbm \
 		exempi.3:${PORTSDIR}/textproc/exempi
-#RUN_DEPENDS=	${LOCALBASE}/lib/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet
+RUN_DEPENDS=	${LOCALBASE}/lib/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
+		xdg-desktop-icon:${PORTSDIR}/devel/xdg-utils
 
 USE_BZIP2=	yes
 USE_FAM=	yes
