@@ -93,14 +93,6 @@ share/omf/cheese/cheese-oc.omf
 share/omf/cheese/cheese-ru.omf
 share/omf/cheese/cheese-sv.omf
 @dirrm share/omf/cheese
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
 @dirrm share/gnome/help/cheese/sv/figures
 @dirrm share/gnome/help/cheese/sv
 @dirrm share/gnome/help/cheese/ru/figures
@@ -119,3 +111,11 @@ share/omf/cheese/cheese-sv.omf
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm libexec/cheese
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN

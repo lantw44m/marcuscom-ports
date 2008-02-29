@@ -564,6 +564,7 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%
 @dirrm include/panel-2.0
+@dirrmtry share/applications
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -608,4 +609,3 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry share/applications

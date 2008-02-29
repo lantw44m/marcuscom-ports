@@ -321,6 +321,10 @@ share/omf/evince/evince-uk.omf
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/applications
+@dirrm lib/evince/backends
+@dirrm lib/evince
+@dirrm include/evince-2.20/evince
+@dirrm include/evince-2.20
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
@@ -345,7 +349,3 @@ share/omf/evince/evince-uk.omf
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm lib/evince/backends
-@dirrm lib/evince
-@dirrm include/evince-2.20/evince
-@dirrm include/evince-2.20

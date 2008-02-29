@@ -210,3 +210,9 @@ share/pixmaps/libgnomedb-%%VERSION%%/gnome-db-within-transaction_24x24.png
 @dirrm include/libgnomedb-%%VERSION%%/libgnomedb-graph
 @dirrm include/libgnomedb-%%VERSION%%/libgnomedb-extra
 @dirrm include/libgnomedb-%%VERSION%%
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz

@@ -65,8 +65,6 @@ share/locale/zh_TW/LC_MESSAGES/nautilus-sendto.mo
 @dirrm lib/nautilus-sendto
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
-@dirrmtry share/locale/ro/LC_MESSAGES
-@dirrmtry share/locale/ro
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/dz/LC_MESSAGES

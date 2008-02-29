@@ -56,12 +56,8 @@ share/locale/zh_CN/LC_MESSAGES/nautilus-open-terminal.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus-open-terminal.mo
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
-@dirrmtry share/locale/pt/LC_MESSAGES
-@dirrmtry share/locale/pt
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
-@dirrmtry share/locale/el/LC_MESSAGES
-@dirrmtry share/locale/el
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES

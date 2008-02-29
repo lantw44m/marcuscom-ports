@@ -557,8 +557,6 @@ share/omf/gnome-power-manager/gnome-power-manager-sv.omf
 @dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
-@dirrmtry share/locale/nn/LC_MESSAGES
-@dirrmtry share/locale/nn
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES

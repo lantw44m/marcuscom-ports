@@ -83,10 +83,6 @@ share/omf/vinagre/vinagre-sv.omf
 %%DATADIR%%/vinagre.glade
 @dirrm %%DATADIR%%
 @dirrm share/omf/vinagre
-@dirrmtry share/locale/si/LC_MESSAGES
-@dirrmtry share/locale/si
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
 @dirrm share/gnome/help/vinagre/sv/figures
 @dirrm share/gnome/help/vinagre/sv
 @dirrm share/gnome/help/vinagre/pt/figures
@@ -108,3 +104,11 @@ share/omf/vinagre/vinagre-sv.omf
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/applications
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin

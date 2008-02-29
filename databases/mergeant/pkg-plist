@@ -110,3 +110,11 @@ share/pixmaps/mergeant/query-view-view_16x16.png
 @dirrm share/gnome/help/mergeant/C/images
 @dirrm share/gnome/help/mergeant/C
 @dirrm share/gnome/help/mergeant
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz

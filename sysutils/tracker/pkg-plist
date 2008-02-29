@@ -192,12 +192,6 @@ share/locale/zh_CN/LC_MESSAGES/tracker.mo
 @dirrm %%DATADIR%%/languages
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
-@dirrmtry share/locale/be@latin/LC_MESSAGES
-@dirrmtry share/locale/be@latin
 @dirrmtry share/applications
 @dirrm lib/tracker/thumbnailers/image
 @dirrm lib/tracker/thumbnailers/application
@@ -210,3 +204,9 @@ share/locale/zh_CN/LC_MESSAGES/tracker.mo
 @dirrm include/libtracker-gtk
 @dirrmtry etc/xdg/autostart
 @dirrmtry etc/xdg
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
