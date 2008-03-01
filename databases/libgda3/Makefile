@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda3/Makefile,v 1.9 2008/02/26 21:23:34 kwm Exp $
+#   $MCom: ports/databases/libgda3/Makefile,v 1.10 2008/03/01 02:24:54 marcus Exp $
 #
 
 PORTNAME=	libgda3
@@ -104,7 +104,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|malloc.h|stdlib.h|g' \
 		${WRKSRC}/providers/sqlite/sqlite-src/${d}
 .endfor
-.if !LIBGDA3_SLAVE=="no"
+.if ${LIBGDA3_SLAVE}!="no"
 . for d in msql firebird odbc freetds mdb ldap mysql sqlite postgres
 	@${REINPLACE_CMD} -e 's|$$(top_builddir)/libgda/|${LOCALBASE}/lib/|g' \
 		${WRKSRC}/providers/${d}/Makefile.in
