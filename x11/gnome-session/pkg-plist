@@ -117,7 +117,6 @@ share/pixmaps/splash/original-gnome-splash.png
 share/pixmaps/splash/tremulant-2.12.png
 share/pixmaps/splash/tremulant-blood-2.12.png
 share/pixmaps/splash/tremulant-brushed-metal-2.12.png
-share/xsessions/gnome.desktop
 @dirrmtry share/xsessions
 @dirrmtry share/applications
 @dirrmtry share/locale/zu/LC_MESSAGES
