@@ -1995,6 +1995,7 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/sv
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/sq
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/pt
+@dirrm %%DATADIR%%/%%VERSION%%/help/quickref/pl
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/it
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/hu
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/fr
