@@ -420,3 +420,6 @@ share/pygtk/2.0/defs/epiphany.defs
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/icons/LowContrastLargePrint/48x48/apps
+@dirrmtry share/icons/LowContrastLargePrint/48x48
+@dirrmtry share/icons/LowContrastLargePrint
