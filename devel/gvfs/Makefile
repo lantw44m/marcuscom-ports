@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gvfs/Makefile,v 1.14 2008/02/25 23:31:02 marcus Exp $
+#    $MCom: ports/devel/gvfs/Makefile,v 1.15 2008/02/25 23:33:07 marcus Exp $
 
 PORTNAME=	gvfs
-PORTVERSION=	0.1.8
-PORTREVISION=	1
+PORTVERSION=	0.1.11
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -27,7 +26,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-
+CONFIGURE_ARGS=	--disable-obexftp
 OPTIONS=	FUSE "Enable fuse" on \
 		SAMBA "Enable Samba" on \
 		GPHOTO2 "Enable Gphoto 2 camera support" on
