@@ -122,7 +122,7 @@ include/libgdamm-3.0/libgdamm/xmlstorage.h
 lib/libgdamm-3.0.a
 lib/libgdamm-3.0.la
 lib/libgdamm-3.0.so
-lib/libgdamm-3.0.so.8
+lib/libgdamm-3.0.so.9
 lib/libgdamm-3.0/include/libgdammconfig.h
 lib/libgdamm-3.0/proc/m4/convert.m4
 lib/libgdamm-3.0/proc/m4/convert_libgdamm.m4
