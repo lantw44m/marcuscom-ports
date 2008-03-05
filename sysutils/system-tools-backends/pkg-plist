@@ -14,6 +14,7 @@ share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.TimeConfig.serv
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.UserConfig.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.UsersConfig.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.service
+share/system-tools-backends-2.0/files/general_gprs_chatscript
 share/system-tools-backends-2.0/files/general_isdn_ppp_options
 share/system-tools-backends-2.0/files/general_pppoe_ppp_options
 share/system-tools-backends-2.0/scripts/GroupsConfig.pm
