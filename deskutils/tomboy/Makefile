@@ -3,11 +3,11 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.17 2008-02-25 20:01:58 kwm Exp $
+#   $Id: Makefile,v 1.18 2008-03-05 17:49:31 mezz Exp $
 #
 
 PORTNAME=	tomboy
-PORTVERSION=	0.9.7
+PORTVERSION=	0.9.8
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -20,8 +20,7 @@ LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell
 BUILD_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
 		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 RUN_DEPENDS=	${LOCALBASE}/lib/mono/gmime-sharp/gmime-sharp.dll:${PORTSDIR}/mail/gmime2-sharp \
-		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib \
-		dbus-daemon:${PORTSDIR}/devel/dbus
+		${LOCALBASE}/libdata/pkgconfig/ndesk-dbus-glib-1.0.pc:${PORTSDIR}/devel/ndesk-dbus-glib
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
