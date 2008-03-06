@@ -3,11 +3,11 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnome/Makefile,v 1.112 2008/01/28 17:41:05 mezz Exp $
+#   $MCom: ports/x11/libgnome/Makefile,v 1.113 2008/02/01 18:04:35 mezz Exp $
 #
 
 PORTNAME=	libgnome
-PORTVERSION=	2.21.90
+PORTVERSION=	2.21.91
 PORTREVISION?=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
@@ -44,6 +44,7 @@ GCONF_SCHEMAS=	desktop_gnome_accessibility_keyboard.schemas \
 		desktop_gnome_applications_at_mobility.schemas \
 		desktop_gnome_applications_at_visual.schemas \
 		desktop_gnome_applications_browser.schemas \
+		desktop_gnome_applications_office.schemas \
 		desktop_gnome_applications_terminal.schemas \
 		desktop_gnome_applications_window_manager.schemas \
 		desktop_gnome_background.schemas \
