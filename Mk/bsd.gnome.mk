@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.444 2008/02/23 17:36:55 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.445 2008/02/23 17:46:07 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -617,6 +617,10 @@ HAVE_GNOME+=	${component}
 .if defined(_POSTMKINCLUDED) && !defined(Gnome_Post_Include)
 
 Gnome_Post_Include=		bsd.gnome.mk
+
+.if !defined(Gnome_Pre_Include)
+.error The Pre include part of bsd.gnome.mk part is not included. Did you forget WANT_GNOME=yes before bsd.port.pre.mk?
+.endif
 
 # DO NOT USE THESE MACROS!  They are obsolete, and only provided for
 # backward compatibility with old ports that have not converted to the new
