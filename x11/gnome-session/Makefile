@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.138 2008/03/07 12:05:42 kwm Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.139 2008/03/08 00:50:19 marcus Exp $
 #
 
 PORTNAME=	gnome-session
@@ -36,8 +36,7 @@ GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
-		ESD_SERVER="${LOCALBASE}/bin/esd"
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		gnome-session.1 gnome-wm.1 session-properties.1 \
 		gnome-session-save.1
