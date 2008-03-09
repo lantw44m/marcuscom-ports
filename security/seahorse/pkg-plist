@@ -185,12 +185,13 @@ share/locale/hr/LC_MESSAGES/seahorse.mo
 share/locale/hu/LC_MESSAGES/seahorse.mo
 share/locale/it/LC_MESSAGES/seahorse.mo
 share/locale/ja/LC_MESSAGES/seahorse.mo
-share/locale/ko/LC_MESSAGES/seahorse.mo
 share/locale/kn/LC_MESSAGES/seahorse.mo
+share/locale/ko/LC_MESSAGES/seahorse.mo
 share/locale/lt/LC_MESSAGES/seahorse.mo
 share/locale/lv/LC_MESSAGES/seahorse.mo
 share/locale/mk/LC_MESSAGES/seahorse.mo
 share/locale/ml/LC_MESSAGES/seahorse.mo
+share/locale/mr/LC_MESSAGES/seahorse.mo
 share/locale/ms/LC_MESSAGES/seahorse.mo
 share/locale/nb/LC_MESSAGES/seahorse.mo
 share/locale/ne/LC_MESSAGES/seahorse.mo
@@ -369,6 +370,8 @@ share/pixmaps/seahorse/scalable/seahorse.svg
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
