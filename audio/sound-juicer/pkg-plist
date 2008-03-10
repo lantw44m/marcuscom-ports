@@ -50,6 +50,11 @@ share/gnome/help/sound-juicer/pt_BR/figures/prefs.png
 share/gnome/help/sound-juicer/pt_BR/figures/startup.png
 share/gnome/help/sound-juicer/pt_BR/legal.xml
 share/gnome/help/sound-juicer/pt_BR/sound-juicer.xml
+share/gnome/help/sound-juicer/ru/fdl-appendix.xml
+share/gnome/help/sound-juicer/ru/figures/prefs.png
+share/gnome/help/sound-juicer/ru/figures/startup.png
+share/gnome/help/sound-juicer/ru/legal.xml
+share/gnome/help/sound-juicer/ru/sound-juicer.xml
 share/gnome/help/sound-juicer/sv/fdl-appendix.xml
 share/gnome/help/sound-juicer/sv/figures/prefs.png
 share/gnome/help/sound-juicer/sv/figures/startup.png
@@ -150,10 +155,9 @@ share/omf/sound-juicer/sound-juicer-nl.omf
 share/omf/sound-juicer/sound-juicer-oc.omf
 share/omf/sound-juicer/sound-juicer-pl.omf
 share/omf/sound-juicer/sound-juicer-pt_BR.omf
+share/omf/sound-juicer/sound-juicer-ru.omf
 share/omf/sound-juicer/sound-juicer-sv.omf
 share/omf/sound-juicer/sound-juicer-uk.omf
-%%DATADIR%%/sj-play.png
-%%DATADIR%%/sj-record.png
 %%DATADIR%%/sound-juicer.glade
 @dirrm %%DATADIR%%
 @dirrm share/omf/sound-juicer
@@ -161,6 +165,8 @@ share/omf/sound-juicer/sound-juicer-uk.omf
 @dirrm share/gnome/help/sound-juicer/uk
 @dirrm share/gnome/help/sound-juicer/sv/figures
 @dirrm share/gnome/help/sound-juicer/sv
+@dirrm share/gnome/help/sound-juicer/ru/figures
+@dirrm share/gnome/help/sound-juicer/ru
 @dirrm share/gnome/help/sound-juicer/pt_BR/figures
 @dirrm share/gnome/help/sound-juicer/pt_BR
 @dirrm share/gnome/help/sound-juicer/pl/figures
@@ -183,6 +189,8 @@ share/omf/sound-juicer/sound-juicer-uk.omf
 @dirrm share/gnome/help/sound-juicer/C
 @dirrm share/gnome/help/sound-juicer
 @dirrmtry share/applications
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
