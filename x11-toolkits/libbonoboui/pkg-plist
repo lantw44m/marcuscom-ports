@@ -50,6 +50,7 @@ share/gnome-2.0/ui/bonobo-browser.xml
 share/locale/af/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/am/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ar/LC_MESSAGES/libbonoboui-2.0.mo
+share/locale/as/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/az/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/be/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/bg/LC_MESSAGES/libbonoboui-2.0.mo
@@ -162,3 +163,5 @@ share/locale/zu/LC_MESSAGES/libbonoboui-2.0.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
