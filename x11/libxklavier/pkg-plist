@@ -25,7 +25,5 @@ libdata/pkgconfig/libxklavier.pc
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
-%%DATADIR%%/xfree86.xml
-@dirrm %%DATADIR%%
 @dirrm %%DOCSDIR%%
 @dirrm include/libxklavier
