@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gvfs/Makefile,v 1.15 2008/02/25 23:33:07 marcus Exp $
+#    $MCom: ports/devel/gvfs/Makefile,v 1.16 2008/03/04 17:54:01 kwm Exp $
 
 PORTNAME=	gvfs
-PORTVERSION=	0.1.11
+PORTVERSION=	0.2.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -19,6 +19,7 @@ LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
 		gnome-keyring:${PORTSDIR}/security/gnome-keyring \
 		avahi-client.3:${PORTSDIR}/net/avahi-app
 
+USE_BZIP2=	yes
 USE_GNOME=	glib20 gnomehack gnomeprefix intlhack gconf2
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
