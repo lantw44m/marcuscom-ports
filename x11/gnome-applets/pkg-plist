@@ -289,6 +289,12 @@ share/gnome/help/accessx-status/uk/figures/accessx_sticky-windows-key.png
 %%BATTERY%%share/gnome/help/battstat/pa/figures/battstat-credits-hal.png
 %%BATTERY%%share/gnome/help/battstat/pa/figures/battstat-preferences.png
 %%BATTERY%%share/gnome/help/battstat/pa/figures/context-menu.png
+%%BATTERY%%share/gnome/help/battstat/pt_BR/battstat.xml
+%%BATTERY%%share/gnome/help/battstat/pt_BR/figures/battstat-applet-expanded.png
+%%BATTERY%%share/gnome/help/battstat/pt_BR/figures/battstat-applet.png
+%%BATTERY%%share/gnome/help/battstat/pt_BR/figures/battstat-credits-hal.png
+%%BATTERY%%share/gnome/help/battstat/pt_BR/figures/battstat-preferences.png
+%%BATTERY%%share/gnome/help/battstat/pt_BR/figures/context-menu.png
 %%BATTERY%%share/gnome/help/battstat/sv/battstat.xml
 %%BATTERY%%share/gnome/help/battstat/sv/figures/battstat-applet-expanded.png
 %%BATTERY%%share/gnome/help/battstat/sv/figures/battstat-applet.png
@@ -480,6 +486,16 @@ share/gnome/help/char-palette/uk/figures/charpick_characters.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/oc/figures/cpufreq-applet-selector-both.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/oc/figures/cpufreq-applet-selector.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/oc/figures/cpufreq-applet.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/pt_BR/cpufreq-applet.xml
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/pt_BR/figures/cpufreq-100.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/pt_BR/figures/cpufreq-25.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/pt_BR/figures/cpufreq-50.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/pt_BR/figures/cpufreq-75.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/pt_BR/figures/cpufreq-applet-preferences-smp.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/pt_BR/figures/cpufreq-applet-preferences.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/pt_BR/figures/cpufreq-applet-selector-both.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/pt_BR/figures/cpufreq-applet-selector.png
+%%CPUFREQ%%share/gnome/help/cpufreq-applet/pt_BR/figures/cpufreq-applet.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/ru/cpufreq-applet.xml
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/ru/figures/cpufreq-100.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/ru/figures/cpufreq-25.png
@@ -752,6 +768,36 @@ share/gnome/help/gweather/pa/figures/stock_weather-snow.png
 share/gnome/help/gweather/pa/figures/stock_weather-storm.png
 share/gnome/help/gweather/pa/figures/stock_weather-sunny.png
 share/gnome/help/gweather/pa/gweather.xml
+share/gnome/help/gweather/pt_BR/figures/gweather-details.png
+share/gnome/help/gweather/pt_BR/figures/gweather-menu-prefs.png
+share/gnome/help/gweather/pt_BR/figures/gweather-prefs-general.png
+share/gnome/help/gweather/pt_BR/figures/gweather-prefs-locations.png
+share/gnome/help/gweather/pt_BR/figures/gweather_applet.png
+share/gnome/help/gweather/pt_BR/figures/stock_weather-cloudy.png
+share/gnome/help/gweather/pt_BR/figures/stock_weather-few-clouds.png
+share/gnome/help/gweather/pt_BR/figures/stock_weather-fog.png
+share/gnome/help/gweather/pt_BR/figures/stock_weather-night-clear.png
+share/gnome/help/gweather/pt_BR/figures/stock_weather-night-few-clouds.png
+share/gnome/help/gweather/pt_BR/figures/stock_weather-showers.png
+share/gnome/help/gweather/pt_BR/figures/stock_weather-snow.png
+share/gnome/help/gweather/pt_BR/figures/stock_weather-storm.png
+share/gnome/help/gweather/pt_BR/figures/stock_weather-sunny.png
+share/gnome/help/gweather/pt_BR/gweather.xml
+share/gnome/help/gweather/ru/figures/gweather-details.png
+share/gnome/help/gweather/ru/figures/gweather-menu-prefs.png
+share/gnome/help/gweather/ru/figures/gweather-prefs-general.png
+share/gnome/help/gweather/ru/figures/gweather-prefs-locations.png
+share/gnome/help/gweather/ru/figures/gweather_applet.png
+share/gnome/help/gweather/ru/figures/stock_weather-cloudy.png
+share/gnome/help/gweather/ru/figures/stock_weather-few-clouds.png
+share/gnome/help/gweather/ru/figures/stock_weather-fog.png
+share/gnome/help/gweather/ru/figures/stock_weather-night-clear.png
+share/gnome/help/gweather/ru/figures/stock_weather-night-few-clouds.png
+share/gnome/help/gweather/ru/figures/stock_weather-showers.png
+share/gnome/help/gweather/ru/figures/stock_weather-snow.png
+share/gnome/help/gweather/ru/figures/stock_weather-storm.png
+share/gnome/help/gweather/ru/figures/stock_weather-sunny.png
+share/gnome/help/gweather/ru/gweather.xml
 share/gnome/help/gweather/sv/figures/gweather-details.png
 share/gnome/help/gweather/sv/figures/gweather-menu-prefs.png
 share/gnome/help/gweather/sv/figures/gweather-prefs-general.png
@@ -909,6 +955,12 @@ share/gnome/help/stickynotes_applet/pa/figures/stickynotes-note-prefs.png
 share/gnome/help/stickynotes_applet/pa/figures/stickynotes-prefs.png
 share/gnome/help/stickynotes_applet/pa/figures/stickynotes_applet.png
 share/gnome/help/stickynotes_applet/pa/stickynotes_applet.xml
+share/gnome/help/stickynotes_applet/ru/figures/stickynote-right-menu-lock.png
+share/gnome/help/stickynotes_applet/ru/figures/stickynote-right-menu-new.png
+share/gnome/help/stickynotes_applet/ru/figures/stickynotes-note-prefs.png
+share/gnome/help/stickynotes_applet/ru/figures/stickynotes-prefs.png
+share/gnome/help/stickynotes_applet/ru/figures/stickynotes_applet.png
+share/gnome/help/stickynotes_applet/ru/stickynotes_applet.xml
 share/gnome/help/stickynotes_applet/sv/figures/stickynote-right-menu-lock.png
 share/gnome/help/stickynotes_applet/sv/figures/stickynote-right-menu-new.png
 share/gnome/help/stickynotes_applet/sv/figures/stickynotes-note-prefs.png
@@ -1090,6 +1142,7 @@ share/omf/accessx-status/accessx-status-uk.omf
 %%BATTERY%%share/omf/battstat/battstat-ko.omf
 %%BATTERY%%share/omf/battstat/battstat-oc.omf
 %%BATTERY%%share/omf/battstat/battstat-pa.omf
+%%BATTERY%%share/omf/battstat/battstat-pt_BR.omf
 %%BATTERY%%share/omf/battstat/battstat-sv.omf
 %%BATTERY%%share/omf/battstat/battstat-uk.omf
 share/omf/char-palette/char-palette-C.omf
@@ -1122,6 +1175,7 @@ share/omf/char-palette/char-palette-uk.omf
 %%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-fr.omf
 %%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-nl.omf
 %%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-oc.omf
+%%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-pt_BR.omf
 %%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-ru.omf
 %%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-sv.omf
 %%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-uk.omf
@@ -1169,6 +1223,8 @@ share/omf/gweather/gweather-ko.omf
 share/omf/gweather/gweather-nl.omf
 share/omf/gweather/gweather-oc.omf
 share/omf/gweather/gweather-pa.omf
+share/omf/gweather/gweather-pt_BR.omf
+share/omf/gweather/gweather-ru.omf
 share/omf/gweather/gweather-sv.omf
 share/omf/gweather/gweather-uk.omf
 share/omf/mixer_applet2/mixer_applet2-C.omf
@@ -1204,6 +1260,7 @@ share/omf/stickynotes_applet/stickynotes_applet-fr.omf
 share/omf/stickynotes_applet/stickynotes_applet-ko.omf
 share/omf/stickynotes_applet/stickynotes_applet-oc.omf
 share/omf/stickynotes_applet/stickynotes_applet-pa.omf
+share/omf/stickynotes_applet/stickynotes_applet-ru.omf
 share/omf/stickynotes_applet/stickynotes_applet-sv.omf
 share/omf/stickynotes_applet/stickynotes_applet-uk.omf
 share/omf/trashapplet/trashapplet-C.omf
@@ -1399,6 +1456,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/stickynotes_applet/uk
 @dirrm share/gnome/help/stickynotes_applet/sv/figures
 @dirrm share/gnome/help/stickynotes_applet/sv
+@dirrm share/gnome/help/stickynotes_applet/ru/figures
+@dirrm share/gnome/help/stickynotes_applet/ru
 @dirrm share/gnome/help/stickynotes_applet/pa/figures
 @dirrm share/gnome/help/stickynotes_applet/pa
 @dirrm share/gnome/help/stickynotes_applet/oc/figures
@@ -1472,6 +1531,10 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/gweather/uk
 @dirrm share/gnome/help/gweather/sv/figures
 @dirrm share/gnome/help/gweather/sv
+@dirrm share/gnome/help/gweather/ru/figures
+@dirrm share/gnome/help/gweather/ru
+@dirrm share/gnome/help/gweather/pt_BR/figures
+@dirrm share/gnome/help/gweather/pt_BR
 @dirrm share/gnome/help/gweather/pa/figures
 @dirrm share/gnome/help/gweather/pa
 @dirrm share/gnome/help/gweather/oc/figures
@@ -1560,6 +1623,8 @@ share/xmodmap/xmodmap.yu
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/sv
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/ru/figures
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/ru
+%%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/pt_BR/figures
+%%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/pt_BR
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/oc/figures
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/oc
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/nl/figures
@@ -1627,6 +1692,8 @@ share/xmodmap/xmodmap.yu
 %%BATTERY%%@dirrm share/gnome/help/battstat/uk
 %%BATTERY%%@dirrm share/gnome/help/battstat/sv/figures
 %%BATTERY%%@dirrm share/gnome/help/battstat/sv
+%%BATTERY%%@dirrm share/gnome/help/battstat/pt_BR/figures
+%%BATTERY%%@dirrm share/gnome/help/battstat/pt_BR
 %%BATTERY%%@dirrm share/gnome/help/battstat/pa/figures
 %%BATTERY%%@dirrm share/gnome/help/battstat/pa
 %%BATTERY%%@dirrm share/gnome/help/battstat/oc/figures
