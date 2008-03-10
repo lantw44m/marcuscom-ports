@@ -3,14 +3,13 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.18 2008-03-05 17:49:31 mezz Exp $
+#   $Id: Makefile,v 1.19 2008-03-10 20:58:33 mezz Exp $
 #
 
 PORTNAME=	tomboy
-PORTVERSION=	0.9.8
+PORTVERSION=	0.10.0
 CATEGORIES=	deskutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	bsd-sharp-list@forge.novell.com

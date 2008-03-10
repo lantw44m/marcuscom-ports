@@ -26,6 +26,13 @@ libdata/bonobo/servers/GNOME_TomboyApplet.server
 libdata/pkgconfig/tomboy-addins.pc
 share/applications/tomboy.desktop
 share/dbus-1/services/org.gnome.Tomboy.service
+share/gnome/help/tomboy/C/figures/add-notebook-search.png
+share/gnome/help/tomboy/C/figures/add-to-notebook.png
+share/gnome/help/tomboy/C/figures/delete-notebook.png
+share/gnome/help/tomboy/C/figures/move-notes-search.png
+share/gnome/help/tomboy/C/figures/new-notebook.png
+share/gnome/help/tomboy/C/figures/note-template.png
+share/gnome/help/tomboy/C/figures/notebook-icon.png
 share/gnome/help/tomboy/C/figures/tomboy-main-menu.png
 share/gnome/help/tomboy/C/figures/tomboy-new-note.png
 share/gnome/help/tomboy/C/figures/tomboy-panel.png
@@ -38,6 +45,13 @@ share/gnome/help/tomboy/C/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/C/figures/tomboy-tools.png
 share/gnome/help/tomboy/C/legal.xml
 share/gnome/help/tomboy/C/tomboy.xml
+share/gnome/help/tomboy/ca/figures/add-notebook-search.png
+share/gnome/help/tomboy/ca/figures/add-to-notebook.png
+share/gnome/help/tomboy/ca/figures/delete-notebook.png
+share/gnome/help/tomboy/ca/figures/move-notes-search.png
+share/gnome/help/tomboy/ca/figures/new-notebook.png
+share/gnome/help/tomboy/ca/figures/note-template.png
+share/gnome/help/tomboy/ca/figures/notebook-icon.png
 share/gnome/help/tomboy/ca/figures/tomboy-main-menu.png
 share/gnome/help/tomboy/ca/figures/tomboy-new-note.png
 share/gnome/help/tomboy/ca/figures/tomboy-panel.png
@@ -50,6 +64,32 @@ share/gnome/help/tomboy/ca/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/ca/figures/tomboy-tools.png
 share/gnome/help/tomboy/ca/legal.xml
 share/gnome/help/tomboy/ca/tomboy.xml
+share/gnome/help/tomboy/de/figures/add-notebook-search.png
+share/gnome/help/tomboy/de/figures/add-to-notebook.png
+share/gnome/help/tomboy/de/figures/delete-notebook.png
+share/gnome/help/tomboy/de/figures/move-notes-search.png
+share/gnome/help/tomboy/de/figures/new-notebook.png
+share/gnome/help/tomboy/de/figures/note-template.png
+share/gnome/help/tomboy/de/figures/notebook-icon.png
+share/gnome/help/tomboy/de/figures/tomboy-main-menu.png
+share/gnome/help/tomboy/de/figures/tomboy-new-note.png
+share/gnome/help/tomboy/de/figures/tomboy-panel.png
+share/gnome/help/tomboy/de/figures/tomboy-pindown.png
+share/gnome/help/tomboy/de/figures/tomboy-pinup.png
+share/gnome/help/tomboy/de/figures/tomboy-preferences-add-ins.png
+share/gnome/help/tomboy/de/figures/tomboy-preferences-editing.png
+share/gnome/help/tomboy/de/figures/tomboy-preferences-hotkeys.png
+share/gnome/help/tomboy/de/figures/tomboy-preferences-synchronization.png
+share/gnome/help/tomboy/de/figures/tomboy-tools.png
+share/gnome/help/tomboy/de/legal.xml
+share/gnome/help/tomboy/de/tomboy.xml
+share/gnome/help/tomboy/en_GB/figures/add-notebook-search.png
+share/gnome/help/tomboy/en_GB/figures/add-to-notebook.png
+share/gnome/help/tomboy/en_GB/figures/delete-notebook.png
+share/gnome/help/tomboy/en_GB/figures/move-notes-search.png
+share/gnome/help/tomboy/en_GB/figures/new-notebook.png
+share/gnome/help/tomboy/en_GB/figures/note-template.png
+share/gnome/help/tomboy/en_GB/figures/notebook-icon.png
 share/gnome/help/tomboy/en_GB/figures/tomboy-main-menu.png
 share/gnome/help/tomboy/en_GB/figures/tomboy-new-note.png
 share/gnome/help/tomboy/en_GB/figures/tomboy-panel.png
@@ -62,6 +102,13 @@ share/gnome/help/tomboy/en_GB/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/en_GB/figures/tomboy-tools.png
 share/gnome/help/tomboy/en_GB/legal.xml
 share/gnome/help/tomboy/en_GB/tomboy.xml
+share/gnome/help/tomboy/es/figures/add-notebook-search.png
+share/gnome/help/tomboy/es/figures/add-to-notebook.png
+share/gnome/help/tomboy/es/figures/delete-notebook.png
+share/gnome/help/tomboy/es/figures/move-notes-search.png
+share/gnome/help/tomboy/es/figures/new-notebook.png
+share/gnome/help/tomboy/es/figures/note-template.png
+share/gnome/help/tomboy/es/figures/notebook-icon.png
 share/gnome/help/tomboy/es/figures/tomboy-main-menu.png
 share/gnome/help/tomboy/es/figures/tomboy-new-note.png
 share/gnome/help/tomboy/es/figures/tomboy-panel.png
@@ -74,6 +121,13 @@ share/gnome/help/tomboy/es/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/es/figures/tomboy-tools.png
 share/gnome/help/tomboy/es/legal.xml
 share/gnome/help/tomboy/es/tomboy.xml
+share/gnome/help/tomboy/fr/figures/add-notebook-search.png
+share/gnome/help/tomboy/fr/figures/add-to-notebook.png
+share/gnome/help/tomboy/fr/figures/delete-notebook.png
+share/gnome/help/tomboy/fr/figures/move-notes-search.png
+share/gnome/help/tomboy/fr/figures/new-notebook.png
+share/gnome/help/tomboy/fr/figures/note-template.png
+share/gnome/help/tomboy/fr/figures/notebook-icon.png
 share/gnome/help/tomboy/fr/figures/tomboy-main-menu.png
 share/gnome/help/tomboy/fr/figures/tomboy-new-note.png
 share/gnome/help/tomboy/fr/figures/tomboy-panel.png
@@ -86,6 +140,13 @@ share/gnome/help/tomboy/fr/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/fr/figures/tomboy-tools.png
 share/gnome/help/tomboy/fr/legal.xml
 share/gnome/help/tomboy/fr/tomboy.xml
+share/gnome/help/tomboy/oc/figures/add-notebook-search.png
+share/gnome/help/tomboy/oc/figures/add-to-notebook.png
+share/gnome/help/tomboy/oc/figures/delete-notebook.png
+share/gnome/help/tomboy/oc/figures/move-notes-search.png
+share/gnome/help/tomboy/oc/figures/new-notebook.png
+share/gnome/help/tomboy/oc/figures/note-template.png
+share/gnome/help/tomboy/oc/figures/notebook-icon.png
 share/gnome/help/tomboy/oc/figures/tomboy-main-menu.png
 share/gnome/help/tomboy/oc/figures/tomboy-new-note.png
 share/gnome/help/tomboy/oc/figures/tomboy-panel.png
@@ -98,6 +159,13 @@ share/gnome/help/tomboy/oc/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/oc/figures/tomboy-tools.png
 share/gnome/help/tomboy/oc/legal.xml
 share/gnome/help/tomboy/oc/tomboy.xml
+share/gnome/help/tomboy/pt_BR/figures/add-notebook-search.png
+share/gnome/help/tomboy/pt_BR/figures/add-to-notebook.png
+share/gnome/help/tomboy/pt_BR/figures/delete-notebook.png
+share/gnome/help/tomboy/pt_BR/figures/move-notes-search.png
+share/gnome/help/tomboy/pt_BR/figures/new-notebook.png
+share/gnome/help/tomboy/pt_BR/figures/note-template.png
+share/gnome/help/tomboy/pt_BR/figures/notebook-icon.png
 share/gnome/help/tomboy/pt_BR/figures/tomboy-main-menu.png
 share/gnome/help/tomboy/pt_BR/figures/tomboy-new-note.png
 share/gnome/help/tomboy/pt_BR/figures/tomboy-panel.png
@@ -110,6 +178,13 @@ share/gnome/help/tomboy/pt_BR/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/pt_BR/figures/tomboy-tools.png
 share/gnome/help/tomboy/pt_BR/legal.xml
 share/gnome/help/tomboy/pt_BR/tomboy.xml
+share/gnome/help/tomboy/ru/figures/add-notebook-search.png
+share/gnome/help/tomboy/ru/figures/add-to-notebook.png
+share/gnome/help/tomboy/ru/figures/delete-notebook.png
+share/gnome/help/tomboy/ru/figures/move-notes-search.png
+share/gnome/help/tomboy/ru/figures/new-notebook.png
+share/gnome/help/tomboy/ru/figures/note-template.png
+share/gnome/help/tomboy/ru/figures/notebook-icon.png
 share/gnome/help/tomboy/ru/figures/tomboy-main-menu.png
 share/gnome/help/tomboy/ru/figures/tomboy-new-note.png
 share/gnome/help/tomboy/ru/figures/tomboy-panel.png
@@ -122,6 +197,13 @@ share/gnome/help/tomboy/ru/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/ru/figures/tomboy-tools.png
 share/gnome/help/tomboy/ru/legal.xml
 share/gnome/help/tomboy/ru/tomboy.xml
+share/gnome/help/tomboy/sv/figures/add-notebook-search.png
+share/gnome/help/tomboy/sv/figures/add-to-notebook.png
+share/gnome/help/tomboy/sv/figures/delete-notebook.png
+share/gnome/help/tomboy/sv/figures/move-notes-search.png
+share/gnome/help/tomboy/sv/figures/new-notebook.png
+share/gnome/help/tomboy/sv/figures/note-template.png
+share/gnome/help/tomboy/sv/figures/notebook-icon.png
 share/gnome/help/tomboy/sv/figures/tomboy-main-menu.png
 share/gnome/help/tomboy/sv/figures/tomboy-new-note.png
 share/gnome/help/tomboy/sv/figures/tomboy-panel.png
@@ -134,6 +216,13 @@ share/gnome/help/tomboy/sv/figures/tomboy-preferences-synchronization.png
 share/gnome/help/tomboy/sv/figures/tomboy-tools.png
 share/gnome/help/tomboy/sv/legal.xml
 share/gnome/help/tomboy/sv/tomboy.xml
+share/gnome/help/tomboy/uk/figures/add-notebook-search.png
+share/gnome/help/tomboy/uk/figures/add-to-notebook.png
+share/gnome/help/tomboy/uk/figures/delete-notebook.png
+share/gnome/help/tomboy/uk/figures/move-notes-search.png
+share/gnome/help/tomboy/uk/figures/new-notebook.png
+share/gnome/help/tomboy/uk/figures/note-template.png
+share/gnome/help/tomboy/uk/figures/notebook-icon.png
 share/gnome/help/tomboy/uk/figures/tomboy-main-menu.png
 share/gnome/help/tomboy/uk/figures/tomboy-new-note.png
 share/gnome/help/tomboy/uk/figures/tomboy-panel.png
@@ -217,6 +306,7 @@ share/locale/zh_HK/LC_MESSAGES/tomboy.mo
 share/locale/zh_TW/LC_MESSAGES/tomboy.mo
 share/omf/tomboy/tomboy-C.omf
 share/omf/tomboy/tomboy-ca.omf
+share/omf/tomboy/tomboy-de.omf
 share/omf/tomboy/tomboy-en_GB.omf
 share/omf/tomboy/tomboy-es.omf
 share/omf/tomboy/tomboy-fr.omf
@@ -300,11 +390,13 @@ share/omf/tomboy/tomboy-uk.omf
 @dirrm share/gnome/help/tomboy/es
 @dirrm share/gnome/help/tomboy/en_GB/figures
 @dirrm share/gnome/help/tomboy/en_GB
+@dirrm share/gnome/help/tomboy/de/figures
+@dirrm share/gnome/help/tomboy/de
 @dirrm share/gnome/help/tomboy/ca/figures
 @dirrm share/gnome/help/tomboy/ca
 @dirrm share/gnome/help/tomboy/C/figures
 @dirrm share/gnome/help/tomboy/C
 @dirrm share/gnome/help/tomboy
+@dirrmtry share/applications
 @dirrm lib/tomboy/addins
 @dirrm lib/tomboy
-@dirrmtry share/applications
