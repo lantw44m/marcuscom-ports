@@ -117,6 +117,7 @@ share/locale/am/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ar/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/az/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/be/LC_MESSAGES/gnome-system-monitor.mo
+share/locale/be@latin/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/bg/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/bn/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-system-monitor.mo
@@ -242,3 +243,5 @@ share/pixmaps/gnome-system-monitor/upload.svg
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
