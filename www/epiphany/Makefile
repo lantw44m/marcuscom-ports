@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.165 2008/03/01 07:28:38 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.166 2008/03/02 02:27:52 marcus Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.21.92
-PORTREVISION=	2
+PORTVERSION=	2.22.0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -40,8 +39,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS} ${EXTRA_CFLAGS
 GCONF_SCHEMAS=	epiphany-lockdown.schemas epiphany.schemas \
 		epiphany-fonts.schemas epiphany-pango.schemas
 
-PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/\.[0-9]+$//}" \
-		EPHY_PREFIX="${PREFIX}"
+PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/\.[0-9]+$//}"
 
 MAN1=		epiphany.1
 
