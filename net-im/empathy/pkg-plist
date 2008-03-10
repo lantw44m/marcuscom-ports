@@ -4,10 +4,8 @@ bin/empathy-logs
 etc/xdg/autostart/empathy.desktop
 include/libempathy-gtk/empathy-about-dialog.h
 include/libempathy-gtk/empathy-account-chooser.h
-include/libempathy-gtk/empathy-account-widget-generic.h
-include/libempathy-gtk/empathy-account-widget-jabber.h
-include/libempathy-gtk/empathy-account-widget-msn.h
-include/libempathy-gtk/empathy-account-widget-salut.h
+include/libempathy-gtk/empathy-account-widget-irc.h
+include/libempathy-gtk/empathy-account-widget.h
 include/libempathy-gtk/empathy-accounts-dialog.h
 include/libempathy-gtk/empathy-avatar-chooser.h
 include/libempathy-gtk/empathy-avatar-image.h
@@ -28,6 +26,7 @@ include/libempathy-gtk/empathy-geometry.h
 include/libempathy-gtk/empathy-group-chat.h
 include/libempathy-gtk/empathy-gtk-enum-types.h
 include/libempathy-gtk/empathy-images.h
+include/libempathy-gtk/empathy-irc-network-dialog.h
 include/libempathy-gtk/empathy-log-window.h
 include/libempathy-gtk/empathy-main-window.h
 include/libempathy-gtk/empathy-new-chatroom-dialog.h
@@ -58,6 +57,9 @@ include/libempathy/empathy-debug.h
 include/libempathy/empathy-enum-types.h
 include/libempathy/empathy-filter.h
 include/libempathy/empathy-idle.h
+include/libempathy/empathy-irc-network-manager.h
+include/libempathy/empathy-irc-network.h
+include/libempathy/empathy-irc-server.h
 include/libempathy/empathy-log-manager.h
 include/libempathy/empathy-message.h
 include/libempathy/empathy-status-presets.h
@@ -73,11 +75,11 @@ include/libempathy/empathy-utils.h
 lib/libempathy-gtk.a
 lib/libempathy-gtk.la
 lib/libempathy-gtk.so
-lib/libempathy-gtk.so.10
+lib/libempathy-gtk.so.11
 lib/libempathy.a
 lib/libempathy.la
 lib/libempathy.so
-lib/libempathy.so.10
+lib/libempathy.so.11
 %%PYTHON_SITELIBDIR%%/empathy.a
 %%PYTHON_SITELIBDIR%%/empathy.la
 %%PYTHON_SITELIBDIR%%/empathy.so
@@ -114,10 +116,8 @@ share/doc/libempathy-gtk/ix01.html
 share/doc/libempathy-gtk/left.png
 share/doc/libempathy-gtk/libempathy-gtk-EmpathyConf.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-about-dialog.html
-share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget-generic.html
-share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget-jabber.html
-share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget-msn.html
-share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget-salut.html
+share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget-irc.html
+share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-accounts-dialog.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-call-window.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-chatrooms-window.html
@@ -125,6 +125,7 @@ share/doc/libempathy-gtk/libempathy-gtk-empathy-contact-dialogs.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-contact-widget.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-geometry.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-images.html
+share/doc/libempathy-gtk/libempathy-gtk-empathy-irc-network-dialog.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-log-window.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-main-window.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-new-chatroom-dialog.html
@@ -148,6 +149,9 @@ share/doc/libempathy/EmpathyContact.html
 share/doc/libempathy/EmpathyContactManager.html
 share/doc/libempathy/EmpathyFilter.html
 share/doc/libempathy/EmpathyIdle.html
+share/doc/libempathy/EmpathyIrcNetwork.html
+share/doc/libempathy/EmpathyIrcNetworkManager.html
+share/doc/libempathy/EmpathyIrcServer.html
 share/doc/libempathy/EmpathyLogManager.html
 share/doc/libempathy/EmpathyMessage.html
 share/doc/libempathy/EmpathyTpCall.html
@@ -165,9 +169,11 @@ share/doc/libempathy/left.png
 share/doc/libempathy/libempathy-EmpathyChandler.html
 share/doc/libempathy/libempathy-EmpathyChatroomManager.html
 share/doc/libempathy/libempathy-EmpathyContactFactory.html
-share/doc/libempathy/libempathy-empathy-enum-types.html
 share/doc/libempathy/libempathy-empathy-avatar.html
+share/doc/libempathy/libempathy-empathy-contact-groups.html
 share/doc/libempathy/libempathy-empathy-contact-list.html
+share/doc/libempathy/libempathy-empathy-enum-types.html
+share/doc/libempathy/libempathy-empathy-status-presets.html
 share/doc/libempathy/libempathy-empathy-time.html
 share/doc/libempathy/libempathy-empathy-utils.html
 share/doc/libempathy/libempathy-hierarchy.html
@@ -180,9 +186,13 @@ share/doc/libempathy/right.png
 share/doc/libempathy/style.css
 share/doc/libempathy/up.png
 %%DATADIR%%/GNOME_Megaphone_Applet.xml
+%%DATADIR%%/empathy-account-widget-generic.glade
+%%DATADIR%%/empathy-account-widget-icq.glade
+%%DATADIR%%/empathy-account-widget-irc.glade
 %%DATADIR%%/empathy-account-widget-jabber.glade
 %%DATADIR%%/empathy-account-widget-msn.glade
 %%DATADIR%%/empathy-account-widget-salut.glade
+%%DATADIR%%/empathy-account-widget-yahoo.glade
 %%DATADIR%%/empathy-accounts-dialog.glade
 %%DATADIR%%/empathy-call-window.glade
 %%DATADIR%%/empathy-chat.glade
@@ -192,6 +202,7 @@ share/doc/libempathy/up.png
 %%DATADIR%%/empathy-contact-groups.dtd
 %%DATADIR%%/empathy-contact-widget.glade
 %%DATADIR%%/empathy-group-chat.glade
+%%DATADIR%%/empathy-irc-networks.dtd
 %%DATADIR%%/empathy-log-manager.xsl
 %%DATADIR%%/empathy-log-window.glade
 %%DATADIR%%/empathy-main-window.glade
@@ -291,6 +302,7 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/scalable/status/empathy-extended-away.svg
 %%DATADIR%%/icons/hicolor/scalable/status/empathy-offline.svg
 %%DATADIR%%/icons/hicolor/scalable/status/empathy-pending.svg
+%%DATADIR%%/irc-networks.xml
 share/icons/hicolor/16x16/apps/empathy.png
 share/icons/hicolor/22x22/apps/empathy.png
 share/icons/hicolor/24x24/apps/empathy.png
@@ -316,6 +328,7 @@ share/locale/fi/LC_MESSAGES/empathy.mo
 share/locale/fr/LC_MESSAGES/empathy.mo
 share/locale/ga/LC_MESSAGES/empathy.mo
 share/locale/gl/LC_MESSAGES/empathy.mo
+share/locale/he/LC_MESSAGES/empathy.mo
 share/locale/hr/LC_MESSAGES/empathy.mo
 share/locale/hu/LC_MESSAGES/empathy.mo
 share/locale/it/LC_MESSAGES/empathy.mo
@@ -353,10 +366,30 @@ share/mission-control/profiles/salut.profile
 share/mission-control/profiles/sofiasip.profile
 share/mission-control/profiles/yahoo.profile
 share/telepathy/managers/empathy-chat.chandler
-@dirrmtry share/telepathy/managers
-@dirrmtry share/telepathy
-@dirrmtry share/mission-control/profiles
-@dirrmtry share/mission-control
+@dirrm share/telepathy/managers
+@dirrm share/telepathy
+@dirrm share/mission-control/profiles
+@dirrm share/mission-control
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrm share/icons/hicolor/scalable/apps
+@dirrm share/icons/hicolor/scalable
+@dirrm share/icons/hicolor/48x48/apps
+@dirrm share/icons/hicolor/48x48
+@dirrm share/icons/hicolor/32x32/apps
+@dirrm share/icons/hicolor/32x32
+@dirrm share/icons/hicolor/24x24/apps
+@dirrm share/icons/hicolor/24x24
+@dirrm share/icons/hicolor/22x22/apps
+@dirrm share/icons/hicolor/22x22
+@dirrm share/icons/hicolor/16x16/apps
+@dirrm share/icons/hicolor/16x16
+@dirrm share/icons/hicolor
+@dirrm share/icons
 @dirrm %%DATADIR%%/icons/hicolor/scalable/status
 @dirrm %%DATADIR%%/icons/hicolor/scalable/apps
 @dirrm %%DATADIR%%/icons/hicolor/scalable
@@ -383,12 +416,11 @@ share/telepathy/managers/empathy-chat.chandler
 @dirrm %%DATADIR%%
 @dirrm share/doc/libempathy-gtk
 @dirrm share/doc/libempathy
+@dirrm share/dbus-1/services
+@dirrm share/dbus-1
+@dirrm %%PYTHON_SITELIBDIR%%
+@dirrm %%PYTHON_LIBDIR%%
 @dirrm include/libempathy-gtk
 @dirrm include/libempathy
-@dirrmtry etc/xdg/autostart
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
+@dirrm etc/xdg/autostart
+@dirrm etc/xdg
