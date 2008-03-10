@@ -3,13 +3,14 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.5 2008/01/29 14:14:42 kwm Exp $
+#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.6 2008/02/24 18:30:46 marcus Exp $
 #
 
 PORTNAME=	swfdec-gnome
-PORTVERSION=	2.21.91
+PORTVERSION=	2.22.0
 CATEGORIES=	multimedia
 MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Gtk flash player and thumbnailer
@@ -26,5 +27,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 GCONF_SCHEMAS=	swfdec-thumbnailer.schemas
 
 MAN1=		swfdec-player.1 swfdec-thumbnailer.1
+
+post-install:
+	@-update-desktop-database
 
 .include <bsd.port.mk>
