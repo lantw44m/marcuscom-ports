@@ -274,6 +274,8 @@ libdata/pkgconfig/deskbar-applet.pc
 %%DATADIR%%/art/generic.png
 %%DATADIR%%/art/gpm-suspend-to-disk.png
 %%DATADIR%%/art/gpm-suspend-to-ram.png
+%%DATADIR%%/art/note-new.png
+%%DATADIR%%/art/note.png
 %%DATADIR%%/art/web-search.png
 %%DATADIR%%/art/yahoo.png
 %%DATADIR%%/mozilla-search.glade
