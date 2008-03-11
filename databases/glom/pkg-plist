@@ -80,24 +80,6 @@ share/omf/glom/glom-de.omf
 share/omf/glom/glom-en_GB.omf
 share/omf/glom/glom-es.omf
 share/omf/glom/glom-sv.omf
-@dirrmtry share/locale/zh_CN/LC_MESSAGES
-@dirrmtry share/locale/zh_CN
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
-@dirrmtry share/locale/pt/LC_MESSAGES
-@dirrmtry share/locale/pt
-@dirrmtry share/locale/ne/LC_MESSAGES
-@dirrmtry share/locale/ne
-@dirrmtry share/locale/gl/LC_MESSAGES
-@dirrmtry share/locale/gl
-@dirrmtry share/locale/fi/LC_MESSAGES
-@dirrmtry share/locale/fi
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
-@dirrmtry share/locale/cs/LC_MESSAGES
-@dirrmtry share/locale/cs
-@dirrmtry share/locale/ca/LC_MESSAGES
-@dirrmtry share/locale/ca/LC_MESSAGES
 @dirrm share/omf/glom
 @dirrm share/gnome/help/glom/sv/figures
 @dirrm share/gnome/help/glom/sv
@@ -115,8 +97,10 @@ share/omf/glom/glom-sv.omf
 @dirrm %%DATADIR%%/doc/examples
 @dirrm %%DATADIR%%/doc
 @dirrm %%DATADIR%%
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @dirrmtry share/applications
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz

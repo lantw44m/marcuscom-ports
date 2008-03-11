@@ -146,8 +146,6 @@ share/locale/uk/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/vi/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/gstreamer-%%VERSION%%.mo
-@dirrmtry share/locale/rw/LC_MESSAGES
-@dirrmtry share/locale/rw
 @dirrm lib/gstreamer-%%VERSION%%
 @dirrm include/gstreamer-%%VERSION%%/gst/net
 @dirrm include/gstreamer-%%VERSION%%/gst/dataprotocol
@@ -156,3 +154,5 @@ share/locale/zh_TW/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 @dirrm include/gstreamer-%%VERSION%%/gst/base
 @dirrm include/gstreamer-%%VERSION%%/gst
 @dirrm include/gstreamer-%%VERSION%%
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw

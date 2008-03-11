@@ -351,6 +351,6 @@ share/locale/zh_TW/LC_MESSAGES/xkeyboard-config.mo
 @dirrm share/X11/xkb/types
 @dirrm share/X11/xkb
 @dirrmtry share/X11
+@dirrmtry /var/lib/xkb
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
-@dirrmtry /var/lib/xkb

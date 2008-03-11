@@ -124,20 +124,6 @@ share/locale/sv/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/uk/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/vi/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/zh_CN/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
-@dirrmtry share/locale/zh_CN/LC_MESSAGES
-@dirrmtry share/locale/zh_CN
-@dirrmtry share/locale/uk/LC_MESSAGES
-@dirrmtry share/locale/uk
-@dirrmtry share/locale/sr/LC_MESSAGES
-@dirrmtry share/locale/sr
-@dirrmtry share/locale/sk/LC_MESSAGES
-@dirrmtry share/locale/sk
-@dirrmtry share/locale/pl/LC_MESSAGES
-@dirrmtry share/locale/pl
+@dirrmtry include/gstreamer-%%VERSION%%/gst/app
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
-@dirrmtry share/locale/fi/LC_MESSAGES
-@dirrmtry share/locale/fi
-@dirrmtry share/locale/cs/LC_MESSAGES
-@dirrmtry share/locale/cs
-@dirrmtry include/gstreamer-%%VERSION%%/gst/app

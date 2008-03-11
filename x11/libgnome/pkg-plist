@@ -119,8 +119,6 @@ share/pixmaps/backgrounds/gnome/background-default.jpg
 @dirrmtry share/locale/yi
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
-@dirrmtry share/locale/fur/LC_MESSAGES
-@dirrmtry share/locale/fur
 @dirrmtry share/locale/tt/LC_MESSAGES
 @dirrmtry share/locale/tt
 @dirrmtry share/locale/sr@ije/LC_MESSAGES
@@ -137,6 +135,8 @@ share/pixmaps/backgrounds/gnome/background-default.jpg
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/fur/LC_MESSAGES
+@dirrmtry share/locale/fur
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
