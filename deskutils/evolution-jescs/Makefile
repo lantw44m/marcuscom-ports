@@ -3,16 +3,17 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/evolution-jescs/Makefile,v 1.26 2008/01/31 21:04:18 marcus Exp $
+#   $MCom: ports/deskutils/evolution-jescs/Makefile,v 1.27 2008/02/27 13:47:53 ahze Exp $
 #
 
 PORTNAME=	jescs
-PORTVERSION=	2.21.91
+PORTVERSION=	2.22
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PKGNAMEPREFIX}${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 PKGNAMEPREFIX=	evolution-
 DISTNAME=	${PKGNAMEPREFIX}${PORTNAME}-${PORTVERSION}
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Sun Java Enterprise System Calendar Server provider for Evolution
