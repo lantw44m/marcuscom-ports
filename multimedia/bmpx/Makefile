@@ -2,7 +2,7 @@
 # Date created:				2005-11-20
 # Whom:					Roman Bogorodskiy <novel@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/bmpx/Makefile,v 1.40 2007/10/17 10:12:49 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	bmpx

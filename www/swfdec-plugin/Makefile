@@ -2,7 +2,7 @@
 # Date created:				Jun 14, 2005
 # Whom:					anholt
 #
-# $FreeBSD: ports/www/swfdec-plugin/Makefile,v 1.26 2007/12/18 20:46:06 alexbl Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	swfdec-plugin
