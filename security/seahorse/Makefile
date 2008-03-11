@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.58 2008/03/07 05:38:17 marcus Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.59 2008/03/09 18:44:46 mezz Exp $
 #
 
 PORTNAME=	seahorse
@@ -112,7 +112,7 @@ CONFIGURE_ARGS+=--disable-gnome-keyring
 .endif
 
 .if !defined(WITHOUT_MDNS)
-LIB_DEPENDS+=	avahi-client:${PORTSDIR}/net/avahi
+LIB_DEPENDS+=	avahi-client:${PORTSDIR}/net/avahi-app
 .else
 CONFIGURE_ARGS+=--disable-sharing
 .endif
