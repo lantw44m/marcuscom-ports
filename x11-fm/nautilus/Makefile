@@ -3,11 +3,12 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.151 2008/03/11 03:33:48 marcus Exp $
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.152 2008/03/11 03:36:11 mezz Exp $
 #
 
 PORTNAME=	nautilus
 PORTVERSION=	2.22.0
+PORTREVISION=	1
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -48,8 +49,7 @@ CONFIGURE_ARGS+=--disable-tracker
 .endif
 
 post-install:
-	${MKDIR} ${PREFIX}/lib/nautilus/extensions-1.0
-	${MKDIR} ${PREFIX}/lib/nautilus/extensions-2.0
+	@${MKDIR} ${PREFIX}/lib/nautilus/extensions-2.0
 	@-update-desktop-database
 
 .include <bsd.port.post.mk>
