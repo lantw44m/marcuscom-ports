@@ -3,15 +3,15 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller/Makefile,v 1.134 2008/02/25 19:39:53 kwm Exp $
+#   $MCom: ports/archivers/file-roller/Makefile,v 1.135 2008/03/11 11:52:43 ahze Exp $
 #
 
 PORTNAME=	file-roller
 PORTVERSION=	2.22.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -29,10 +29,9 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils libgnomeui \
+USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils nautilus2 \
 		gnomedocutils
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--disable-nautilus-actions
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
