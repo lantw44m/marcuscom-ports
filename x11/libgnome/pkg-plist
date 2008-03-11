@@ -108,8 +108,8 @@ share/locale/zh_CN/LC_MESSAGES/libgnome-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/libgnome-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
 share/pixmaps/backgrounds/gnome/background-default.jpg
-@dirrm share/pixmaps/backgrounds/gnome
-@dirrm share/pixmaps/backgrounds
+@dirrmtry share/pixmaps/backgrounds/gnome
+@dirrmtry share/pixmaps/backgrounds
 @dirrmtry share/gnome-background-properties
 @dirrm include/libgnome-2.0/libgnome
 @dirrm include/libgnome-2.0

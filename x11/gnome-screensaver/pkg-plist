@@ -96,7 +96,7 @@ share/pixmaps/backgrounds/cosmos/sombrero.jpg
 share/pixmaps/backgrounds/cosmos/whirlpool.jpg
 share/pixmaps/gnome-logo-white.svg
 @dirrm share/pixmaps/backgrounds/cosmos
-@dirrm share/pixmaps/backgrounds
+@dirrmtry share/pixmaps/backgrounds
 @dirrm %%DATADIR%%
 @dirrm share/applications/screensavers
 @dirrmtry share/applications

@@ -92,8 +92,8 @@ share/pixmaps/backgrounds/gnome/translucent/tentacles.svg
 @dirrm share/pixmaps/backgrounds/gnome/tiles
 @dirrm share/pixmaps/backgrounds/gnome/nature
 @dirrm share/pixmaps/backgrounds/gnome/branded
-@dirrm share/pixmaps/backgrounds/gnome
-@dirrm share/pixmaps/backgrounds
+@dirrmtry share/pixmaps/backgrounds/gnome
+@dirrmtry share/pixmaps/backgrounds
 @dirrmtry share/gnome-background-properties
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
