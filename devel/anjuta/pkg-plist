@@ -754,6 +754,7 @@ share/locale/it/LC_MESSAGES/anjuta.mo
 share/locale/ja/LC_MESSAGES/anjuta.mo
 share/locale/kn/LC_MESSAGES/anjuta.mo
 share/locale/ko/LC_MESSAGES/anjuta.mo
+share/locale/lt/LC_MESSAGES/anjuta.mo
 share/locale/mk/LC_MESSAGES/anjuta.mo
 share/locale/ml/LC_MESSAGES/anjuta.mo
 share/locale/ms/LC_MESSAGES/anjuta.mo
@@ -777,6 +778,7 @@ share/locale/sv/LC_MESSAGES/anjuta.mo
 share/locale/tr/LC_MESSAGES/anjuta.mo
 share/locale/uk/LC_MESSAGES/anjuta.mo
 share/locale/zh_CN/LC_MESSAGES/anjuta.mo
+share/locale/zh_HK/LC_MESSAGES/anjuta.mo
 share/locale/zh_TW/LC_MESSAGES/anjuta.mo
 share/mime/application/x-anjuta.xml
 share/mime/packages/anjuta.xml
@@ -1049,6 +1051,8 @@ share/pixmaps/anjuta/start-with-import.png
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @dirrmtry share/applications
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
