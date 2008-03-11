@@ -2,14 +2,14 @@
 # Date created:				2005-11-20
 # Whom:					Roman Bogorodskiy <novel@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/multimedia/bmpx/Makefile,v 1.41 2008/02/10 19:20:17 novel Exp $
 #
 
 PORTNAME=	bmpx
 PORTVERSION=	0.40.7
 PORTREVISION=	2
 CATEGORIES=	multimedia
-MASTER_SITES=	http://files.beep-media-player.org/releases/0.40/
+MASTER_SITES=	http://files.backtrace.info/releases/0.40/
 
 MAINTAINER=	novel@FreeBSD.org
 COMMENT=	Media player geared towards usability, technical efficiency and looks
