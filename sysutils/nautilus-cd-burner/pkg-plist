@@ -22,6 +22,7 @@ share/icons/hicolor/24x24/apps/nautilus-cd-burner.png
 share/icons/hicolor/scalable/apps/nautilus-cd-burner.svg
 share/locale/am/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/ar/LC_MESSAGES/nautilus-cd-burner.mo
+share/locale/as/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/az/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/be/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/be@latin/LC_MESSAGES/nautilus-cd-burner.mo
@@ -57,6 +58,7 @@ share/locale/is/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/it/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/ja/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/ka/LC_MESSAGES/nautilus-cd-burner.mo
+share/locale/kn/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/ko/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/ku/LC_MESSAGES/nautilus-cd-burner.mo
 share/locale/lt/LC_MESSAGES/nautilus-cd-burner.mo
@@ -108,10 +110,10 @@ share/locale/zh_TW/LC_MESSAGES/nautilus-cd-burner.mo
 %%DATADIR%%/cdspin8.png
 %%DATADIR%%/nautilus-cd-burner.glade
 @dirrm %%DATADIR%%
+@dirrmtry share/applications
 @dirrm include/libnautilus-burn
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -140,3 +142,5 @@ share/locale/zh_TW/LC_MESSAGES/nautilus-cd-burner.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as

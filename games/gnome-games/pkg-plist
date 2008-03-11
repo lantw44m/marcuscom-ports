@@ -709,6 +709,10 @@ share/gnome/help/glines/fr/figures/glines-gameover.png
 share/gnome/help/glines/fr/figures/glines-startgame.png
 share/gnome/help/glines/fr/figures/preferences.png
 share/gnome/help/glines/fr/glines.xml
+share/gnome/help/glines/it/figures/glines-gameover.png
+share/gnome/help/glines/it/figures/glines-startgame.png
+share/gnome/help/glines/it/figures/preferences.png
+share/gnome/help/glines/it/glines.xml
 share/gnome/help/glines/oc/figures/glines-gameover.png
 share/gnome/help/glines/oc/figures/glines-startgame.png
 share/gnome/help/glines/oc/figures/preferences.png
@@ -815,8 +819,8 @@ share/gnome/help/gnobots2/es/figures/gnobots2-main.png
 share/gnome/help/gnobots2/es/gnobots2.xml
 share/gnome/help/gnobots2/fr/figures/gnobots2-main.png
 share/gnome/help/gnobots2/fr/gnobots2.xml
+share/gnome/help/gnobots2/it/figures/gnobots2-main.png
 share/gnome/help/gnobots2/it/gnobots2.xml
-share/gnome/help/gnobots2/it/legal.xml
 share/gnome/help/gnobots2/oc/figures/gnobots2-main.png
 share/gnome/help/gnobots2/oc/gnobots2.xml
 share/gnome/help/gnobots2/sv/figures/gnobots2-main.png
@@ -965,6 +969,20 @@ share/gnome/help/gnomine/fr/figures/main-window.png
 share/gnome/help/gnomine/fr/figures/preferences.png
 share/gnome/help/gnomine/fr/figures/statusbar.png
 share/gnome/help/gnomine/fr/gnomine.xml
+share/gnome/help/gnomine/it/figures/easy-hints-1.png
+share/gnome/help/gnomine/it/figures/easy-hints-2.png
+share/gnome/help/gnomine/it/figures/easy-hints-3.png
+share/gnome/help/gnomine/it/figures/faces.png
+share/gnome/help/gnomine/it/figures/flags.png
+share/gnome/help/gnomine/it/figures/hard-hints-1.png
+share/gnome/help/gnomine/it/figures/hard-hints-2.png
+share/gnome/help/gnomine/it/figures/hard-hints-3.png
+share/gnome/help/gnomine/it/figures/highscores.png
+share/gnome/help/gnomine/it/figures/imnotsureflagscheckbox.png
+share/gnome/help/gnomine/it/figures/main-window.png
+share/gnome/help/gnomine/it/figures/preferences.png
+share/gnome/help/gnomine/it/figures/statusbar.png
+share/gnome/help/gnomine/it/gnomine.xml
 share/gnome/help/gnomine/oc/figures/easy-hints-1.png
 share/gnome/help/gnomine/oc/figures/easy-hints-2.png
 share/gnome/help/gnomine/oc/figures/easy-hints-3.png
@@ -1012,6 +1030,9 @@ share/gnome/help/gnotravex/es/gnotravex.xml
 share/gnome/help/gnotravex/fr/figures/gnotravex_game.png
 share/gnome/help/gnotravex/fr/figures/gnotravex_mainwindow.png
 share/gnome/help/gnotravex/fr/gnotravex.xml
+share/gnome/help/gnotravex/it/figures/gnotravex_game.png
+share/gnome/help/gnotravex/it/figures/gnotravex_mainwindow.png
+share/gnome/help/gnotravex/it/gnotravex.xml
 share/gnome/help/gnotravex/oc/figures/gnotravex_game.png
 share/gnome/help/gnotravex/oc/figures/gnotravex_mainwindow.png
 share/gnome/help/gnotravex/oc/gnotravex.xml
@@ -1031,6 +1052,9 @@ share/gnome/help/gnotski/es/gnotski.xml
 share/gnome/help/gnotski/fr/figures/gnotski_start_window.png
 share/gnome/help/gnotski/fr/figures/gnotski_win.png
 share/gnome/help/gnotski/fr/gnotski.xml
+share/gnome/help/gnotski/it/figures/gnotski_start_window.png
+share/gnome/help/gnotski/it/figures/gnotski_win.png
+share/gnome/help/gnotski/it/gnotski.xml
 share/gnome/help/gnotski/oc/figures/gnotski_start_window.png
 share/gnome/help/gnotski/oc/figures/gnotski_win.png
 share/gnome/help/gnotski/oc/gnotski.xml
@@ -1052,6 +1076,9 @@ share/gnome/help/gtali/es/gtali.xml
 share/gnome/help/gtali/fr/figures/mainwindow.png
 share/gnome/help/gtali/fr/figures/preferences.png
 share/gnome/help/gtali/fr/gtali.xml
+share/gnome/help/gtali/it/figures/mainwindow.png
+share/gnome/help/gtali/it/figures/preferences.png
+share/gnome/help/gtali/it/gtali.xml
 share/gnome/help/gtali/oc/figures/mainwindow.png
 share/gnome/help/gtali/oc/figures/preferences.png
 share/gnome/help/gtali/oc/gtali.xml
@@ -1167,6 +1194,10 @@ share/gnome/help/same-gnome/fr/figures/play.png
 share/gnome/help/same-gnome/fr/figures/start-up.png
 share/gnome/help/same-gnome/fr/legal.xml
 share/gnome/help/same-gnome/fr/same-gnome.xml
+share/gnome/help/same-gnome/it/figures/play.png
+share/gnome/help/same-gnome/it/figures/start-up.png
+share/gnome/help/same-gnome/it/legal.xml
+share/gnome/help/same-gnome/it/same-gnome.xml
 share/gnome/help/same-gnome/oc/figures/play.png
 share/gnome/help/same-gnome/oc/figures/start-up.png
 share/gnome/help/same-gnome/oc/legal.xml
@@ -1382,6 +1413,7 @@ share/omf/glines/glines-ca.omf
 share/omf/glines/glines-en_GB.omf
 share/omf/glines/glines-es.omf
 share/omf/glines/glines-fr.omf
+share/omf/glines/glines-it.omf
 share/omf/glines/glines-oc.omf
 share/omf/glines/glines-ru.omf
 share/omf/glines/glines-sv.omf
@@ -1403,10 +1435,10 @@ share/omf/gnobots2/gnobots2-ca.omf
 share/omf/gnobots2/gnobots2-de.omf
 share/omf/gnobots2/gnobots2-es.omf
 share/omf/gnobots2/gnobots2-fr.omf
+share/omf/gnobots2/gnobots2-it.omf
 share/omf/gnobots2/gnobots2-oc.omf
 share/omf/gnobots2/gnobots2-sv.omf
 share/omf/gnome-games/gnobots2-da.omf
-share/omf/gnome-games/gnobots2-it.omf
 share/omf/gnome-games/gtali-da.omf
 share/omf/gnome-sudoku/gnome-sudoku-C.omf
 share/omf/gnome-sudoku/gnome-sudoku-ca.omf
@@ -1428,6 +1460,7 @@ share/omf/gnomine/gnomine-ca.omf
 share/omf/gnomine/gnomine-de.omf
 share/omf/gnomine/gnomine-es.omf
 share/omf/gnomine/gnomine-fr.omf
+share/omf/gnomine/gnomine-it.omf
 share/omf/gnomine/gnomine-oc.omf
 share/omf/gnomine/gnomine-sv.omf
 share/omf/gnotravex/gnotravex-C.omf
@@ -1436,18 +1469,21 @@ share/omf/gnotravex/gnotravex-de.omf
 share/omf/gnotravex/gnotravex-el.omf
 share/omf/gnotravex/gnotravex-es.omf
 share/omf/gnotravex/gnotravex-fr.omf
+share/omf/gnotravex/gnotravex-it.omf
 share/omf/gnotravex/gnotravex-oc.omf
 share/omf/gnotravex/gnotravex-sv.omf
 share/omf/gnotski/gnotski-C.omf
 share/omf/gnotski/gnotski-ca.omf
 share/omf/gnotski/gnotski-es.omf
 share/omf/gnotski/gnotski-fr.omf
+share/omf/gnotski/gnotski-it.omf
 share/omf/gnotski/gnotski-oc.omf
 share/omf/gnotski/gnotski-sv.omf
 share/omf/gtali/gtali-C.omf
 share/omf/gtali/gtali-ca.omf
 share/omf/gtali/gtali-es.omf
 share/omf/gtali/gtali-fr.omf
+share/omf/gtali/gtali-it.omf
 share/omf/gtali/gtali-oc.omf
 share/omf/gtali/gtali-sv.omf
 share/omf/iagno/iagno-C.omf
@@ -1468,6 +1504,7 @@ share/omf/same-gnome/same-gnome-ca.omf
 share/omf/same-gnome/same-gnome-en_GB.omf
 share/omf/same-gnome/same-gnome-es.omf
 share/omf/same-gnome/same-gnome-fr.omf
+share/omf/same-gnome/same-gnome-it.omf
 share/omf/same-gnome/same-gnome-oc.omf
 share/omf/same-gnome/same-gnome-ru.omf
 share/omf/same-gnome/same-gnome-sv.omf
@@ -1588,6 +1625,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/same-gnome/ru
 @dirrm share/gnome/help/same-gnome/oc/figures
 @dirrm share/gnome/help/same-gnome/oc
+@dirrm share/gnome/help/same-gnome/it/figures
+@dirrm share/gnome/help/same-gnome/it
 @dirrm share/gnome/help/same-gnome/fr/figures
 @dirrm share/gnome/help/same-gnome/fr
 @dirrm share/gnome/help/same-gnome/es/figures
@@ -1631,6 +1670,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gtali/sv
 @dirrm share/gnome/help/gtali/oc/figures
 @dirrm share/gnome/help/gtali/oc
+@dirrm share/gnome/help/gtali/it/figures
+@dirrm share/gnome/help/gtali/it
 @dirrm share/gnome/help/gtali/fr/figures
 @dirrm share/gnome/help/gtali/fr
 @dirrm share/gnome/help/gtali/es/figures
@@ -1645,6 +1686,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnotski/sv
 @dirrm share/gnome/help/gnotski/oc/figures
 @dirrm share/gnome/help/gnotski/oc
+@dirrm share/gnome/help/gnotski/it/figures
+@dirrm share/gnome/help/gnotski/it
 @dirrm share/gnome/help/gnotski/fr/figures
 @dirrm share/gnome/help/gnotski/fr
 @dirrm share/gnome/help/gnotski/es/figures
@@ -1658,6 +1701,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnotravex/sv
 @dirrm share/gnome/help/gnotravex/oc/figures
 @dirrm share/gnome/help/gnotravex/oc
+@dirrm share/gnome/help/gnotravex/it/figures
+@dirrm share/gnome/help/gnotravex/it
 @dirrm share/gnome/help/gnotravex/fr/figures
 @dirrm share/gnome/help/gnotravex/fr
 @dirrm share/gnome/help/gnotravex/es/figures
@@ -1675,6 +1720,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnomine/sv
 @dirrm share/gnome/help/gnomine/oc/figures
 @dirrm share/gnome/help/gnomine/oc
+@dirrm share/gnome/help/gnomine/it/figures
+@dirrm share/gnome/help/gnomine/it
 @dirrm share/gnome/help/gnomine/fr/figures
 @dirrm share/gnome/help/gnomine/fr
 @dirrm share/gnome/help/gnomine/es/figures
@@ -1715,6 +1762,7 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnobots2/sv
 @dirrm share/gnome/help/gnobots2/oc/figures
 @dirrm share/gnome/help/gnobots2/oc
+@dirrm share/gnome/help/gnobots2/it/figures
 @dirrm share/gnome/help/gnobots2/it
 @dirrm share/gnome/help/gnobots2/fr/figures
 @dirrm share/gnome/help/gnobots2/fr
@@ -1762,6 +1810,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/glines/ru
 @dirrm share/gnome/help/glines/oc/figures
 @dirrm share/gnome/help/glines/oc
+@dirrm share/gnome/help/glines/it/figures
+@dirrm share/gnome/help/glines/it
 @dirrm share/gnome/help/glines/fr/figures
 @dirrm share/gnome/help/glines/fr
 @dirrm share/gnome/help/glines/es/figures
