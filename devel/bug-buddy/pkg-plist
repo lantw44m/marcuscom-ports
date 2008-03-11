@@ -15,6 +15,7 @@ share/applications/bug-buddy.desktop
 %%DATADIR%%/bugzilla/ximian/products
 %%DATADIR%%/gdb-cmd
 share/icons/hicolor/48x48/apps/bug-buddy.png
+share/locale/af/LC_MESSAGES/bug-buddy.mo
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
 share/locale/as/LC_MESSAGES/bug-buddy.mo
