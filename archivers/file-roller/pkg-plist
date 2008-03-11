@@ -171,6 +171,8 @@ share/locale/th/LC_MESSAGES/file-roller.mo
 share/locale/tk/LC_MESSAGES/file-roller.mo
 share/locale/tr/LC_MESSAGES/file-roller.mo
 share/locale/uk/LC_MESSAGES/file-roller.mo
+share/locale/ur/LC_MESSAGES/file-roller.mo
+share/locale/ur_PK/LC_MESSAGES/file-roller.mo
 share/locale/vi/LC_MESSAGES/file-roller.mo
 share/locale/xh/LC_MESSAGES/file-roller.mo
 share/locale/zh_CN/LC_MESSAGES/file-roller.mo
@@ -228,6 +230,10 @@ share/omf/file-roller/file-roller-uk.omf
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
+@dirrmtry share/locale/ur_PK/LC_MESSAGES
+@dirrmtry share/locale/ur_PK
+@dirrmtry share/locale/ur/LC_MESSAGES
+@dirrmtry share/locale/ur
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@ije/LC_MESSAGES
