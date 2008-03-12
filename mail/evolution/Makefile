@@ -3,11 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.164 2008/03/01 07:13:34 marcus Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.165 2008/03/11 12:49:10 kwm Exp $
 #
 
 PORTNAME=	evolution
 PORTVERSION=	2.22.0
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -25,8 +26,8 @@ USE_BISON=	build
 USE_GETTEXT=	yes
 USE_XLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver gtkhtml3 \
-		desktopfileutils gnomedocutils
-GNU_CONFIGURE=	yes
+		desktopfileutils gnomedocutils ltasneededhack
+USE_AUTOTOOLS=	libtool:15
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
@@ -35,7 +36,7 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 		--enable-mono=no \
 		--with-sub-version=" FreeBSD GNOME Team Port"
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+		LDFLAGS="-Wl,--as-needed -L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	apps_evolution_addressbook.schemas \
 		apps-evolution-attachment-reminder.schemas \
