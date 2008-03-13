@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.14 2008/03/13 03:04:58 mezz Exp $
+# $MCom: ports/MC-UPDATING,v 1.15 2008/03/13 03:06:13 mezz Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -31,9 +31,9 @@ upgrades.
   before use portupgrade or portmaster to upgrade your installed GNOME 2.20.x.
 
   Portupgrade users:
-    # pkg_delete -f gnome-applets\* totem\* gnome-control-center\*
     # pkgdb -Ff
-    # portupgrade -a
+    # pkg_deinstall -fO gnome-applets\* totem\* gnome-control-center\*
+    # portupgrade -aOW
 
   Portmaster users:
     # pkg_delete -f gnome-applets\* totem\* gnome-control-center\* \
