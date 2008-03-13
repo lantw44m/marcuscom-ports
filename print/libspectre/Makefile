@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/print/libspectre/Makefile,v 1.1 2008/03/13 16:30:12 ahze Exp $
 
 PORTNAME=	libspectre
 PORTVERSION=	0.2.0
@@ -16,6 +16,7 @@ COMMENT=	A small library for rendering Postscript documents
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 
 USE_AUTOTOOLS=	libtool:15
+USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack gnomeprefix ltverhack
 USE_GHOSTSCRIPT=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
