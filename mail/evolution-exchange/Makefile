@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.108 2008/02/25 22:59:16 mezz Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.109 2008/03/11 12:53:28 kwm Exp $
 #
 
 PORTNAME=	evolution-exchange
 PORTVERSION=	2.22.0
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}${PKGNAMESUFFIX}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -22,11 +23,11 @@ RUN_DEPENDS=	evolution:${PORTSDIR}/mail/evolution
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_XLIB=	yes
-GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
 USE_BDB=	41
 USE_OPENLDAP=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack gnometarget
+USE_GNOME=	gnomeprefix intlhack gnomehack gnometarget ltasneededhack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-openldap=${LOCALBASE} \
