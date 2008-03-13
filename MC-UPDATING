@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.13 2008/03/12 17:55:08 mezz Exp $
+# $MCom: ports/MC-UPDATING,v 1.14 2008/03/13 03:04:58 mezz Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -27,7 +27,7 @@ upgrades.
   AFFECTS: All GNOME users and ports depend on gnomehier
   AUTHOR: gnome@FreeBSD.org
 
-  GNOME has been updated to 2.22.x. You have to deinstall three ports first
+  GNOME has been updated to 2.22.x. You have to deinstall a few ports first
   before use portupgrade or portmaster to upgrade your installed GNOME 2.20.x.
 
   Portupgrade users:
