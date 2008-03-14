@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.113 2008/03/11 03:00:26 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.20.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +17,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 version of xdm display manager
 
 BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
+LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
+		ck-connector.0:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
 USE_BZIP2=	yes
@@ -35,6 +36,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
+CONFIGURE_ARGS=--with-console-kit=yes
 
 GDMDIR?=	${PREFIX}/etc/gdm
 PKGMESSAGE=	${WRKDIR}/pkg-message
@@ -44,8 +46,7 @@ GNOME_LOCALSTATEDIR=	/var
 MAN1=		gdm.1
 
 OPTIONS=	IPV6 "Enable IPv6 support" on \
-		LOG_LIMIT "Limit ~/.xsession-errors size" on \
-		CONSOLEKIT "Enable ConsoleKit support" off
+		LOG_LIMIT "Limit ~/.xsession-errors size" on
 
 .include <bsd.port.pre.mk>
 
@@ -63,13 +64,6 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 .if defined(WITHOUT_LOG_LIMIT)
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-daemon_slave.c
-.endif
-
-.if defined(WITH_CONSOLEKIT)
-CONFIGURE_ARGS+=--with-console-kit=yes
-LIB_DEPENDS+=	ck-connector.0:${PORTSDIR}/sysutils/consolekit
-.else
-CONFIGURE_ARGS+=--with-console-kit=no
 .endif
 
 post-patch:
