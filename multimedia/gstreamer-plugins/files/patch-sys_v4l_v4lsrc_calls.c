@@ -1,5 +1,5 @@
---- sys/v4l/v4lsrc_calls.c.orig	2008-02-29 16:36:45.000000000 -0500
-+++ sys/v4l/v4lsrc_calls.c	2008-02-29 16:59:19.000000000 -0500
+--- sys/v4l/v4lsrc_calls.c.orig	2008-03-13 23:13:21.000000000 -0400
++++ sys/v4l/v4lsrc_calls.c	2008-03-14 01:18:32.000000000 -0400
 @@ -26,12 +26,14 @@
  
  #include <stdlib.h>
@@ -15,13 +15,14 @@
  #include "v4lsrc_calls.h"
  #include <sys/time.h>
  
-@@ -87,6 +89,45 @@ gst_v4lsrc_queue_frame (GstV4lSrc * v4ls
+@@ -87,6 +89,51 @@ gst_v4lsrc_queue_frame (GstV4lSrc * v4ls
      return FALSE;
    }
  
 +  if (GST_V4LELEMENT (v4lsrc)->use_read) {
 +    struct video_picture vp;
 +    struct video_window vw;
++
 +
 +    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCGPICT, &vp) == -1) {
 +      GST_ELEMENT_ERROR (v4lsrc, RESOURCE, WRITE, (NULL),
@@ -45,10 +46,15 @@
 +    vw.width = v4lsrc->mmap.width;
 +    vw.height = v4lsrc->mmap.height;
 +    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCSWIN, &vw) == -1) {
-+      GST_ELEMENT_ERROR (v4lsrc, RESOURCE, WRITE, (NULL),
-+          ("Error setting window properties for frame (%d): %s", num, g_strerror (errno)));
-+      return FALSE;
++      vw.flags &= (0x3F00 - 1);
++      vw.flags |= 15 << 16;
++      if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCSWIN, &vw) == -1) {
++          GST_ELEMENT_ERROR (v4lsrc, RESOURCE, WRITE, (NULL),
++              ("Error setting window properties for frame (%d): %s", num, g_strerror (errno)));
++          return FALSE;
++      }
 +    }
++
 +
 +    if (read(GST_V4LELEMENT (v4lsrc)->video_fd, GST_V4LELEMENT (v4lsrc)->buffer + (1024 * 768 * 3 * num), v4lsrc->mmap.width * v4lsrc->mmap.height * 3/2) < 0) {
 +      GST_ELEMENT_ERROR (v4lsrc, RESOURCE, WRITE, (NULL),
@@ -61,7 +67,7 @@
    /* instruct the driver to prepare capture using buffer frame num */
    v4lsrc->mmap.frame = num;
    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd,
-@@ -95,6 +136,7 @@ gst_v4lsrc_queue_frame (GstV4lSrc * v4ls
+@@ -95,6 +142,7 @@ gst_v4lsrc_queue_frame (GstV4lSrc * v4ls
          ("Error queueing a buffer (%d): %s", num, g_strerror (errno)));
      return FALSE;
    }
@@ -69,7 +75,7 @@
  
    v4lsrc->frame_queue_state[num] = QUEUE_STATE_QUEUED;
    v4lsrc->num_queued++;
-@@ -117,6 +159,10 @@ gst_v4lsrc_sync_frame (GstV4lSrc * v4lsr
+@@ -117,6 +165,10 @@ gst_v4lsrc_sync_frame (GstV4lSrc * v4lsr
      return FALSE;
    }
  
@@ -80,7 +86,7 @@
    while (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCSYNC, &num) < 0) {
      /* if the sync() got interrupted, we can retry */
      if (errno != EINTR) {
-@@ -126,6 +172,7 @@ gst_v4lsrc_sync_frame (GstV4lSrc * v4lsr
+@@ -126,6 +178,7 @@ gst_v4lsrc_sync_frame (GstV4lSrc * v4lsr
      }
      GST_DEBUG_OBJECT (v4lsrc, "Sync got interrupted");
    }
@@ -88,7 +94,7 @@
    GST_LOG_OBJECT (v4lsrc, "VIOIOCSYNC on frame %d done", num);
  
    v4lsrc->frame_queue_state[num] = QUEUE_STATE_SYNCED;
-@@ -168,13 +215,28 @@ gst_v4lsrc_capture_init (GstV4lSrc * v4l
+@@ -168,13 +221,28 @@ gst_v4lsrc_capture_init (GstV4lSrc * v4l
    GST_V4L_CHECK_OPEN (GST_V4LELEMENT (v4lsrc));
    GST_V4L_CHECK_NOT_ACTIVE (GST_V4LELEMENT (v4lsrc));
  
@@ -120,7 +126,7 @@
    }
  
    if (v4lsrc->mbuf.frames < MIN_BUFFERS_QUEUED) {
-@@ -205,6 +267,7 @@ gst_v4lsrc_capture_init (GstV4lSrc * v4l
+@@ -205,6 +273,7 @@ gst_v4lsrc_capture_init (GstV4lSrc * v4l
      GST_V4LELEMENT (v4lsrc)->buffer = NULL;
      return FALSE;
    }
@@ -128,7 +134,7 @@
  
    return TRUE;
  }
-@@ -413,10 +476,14 @@ gst_v4lsrc_capture_deinit (GstV4lSrc * v
+@@ -413,10 +482,14 @@ gst_v4lsrc_capture_deinit (GstV4lSrc * v
    v4lsrc->frame_queue_state = NULL;
  
    /* unmap the buffer */
@@ -147,7 +153,7 @@
    }
    GST_V4LELEMENT (v4lsrc)->buffer = NULL;
  
-@@ -446,6 +513,7 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
+@@ -446,6 +519,7 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
    /* so, we need a buffer and some more stuff */
    int frame = 0;
    guint8 *buffer;
@@ -155,7 +161,7 @@
    struct video_mbuf vmbuf;
    struct video_mmap vmmap;
  
-@@ -456,17 +524,17 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
+@@ -456,17 +530,17 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
  
    /* let's start by requesting a buffer and mmap()'ing it */
    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCGMBUF, &vmbuf) < 0) {
@@ -184,13 +190,33 @@
    }
  
    /* now that we have a buffer, let's try out our format */
-@@ -474,6 +542,49 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
+@@ -474,6 +548,54 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
    vmmap.height = height;
    vmmap.format = palette;
    vmmap.frame = frame;
 +  if (use_read) {
 +    struct video_picture vp;
 +    struct video_window vw;
++
++    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCGWIN, &vw) == -1) {
++      GST_ERROR_OBJECT (v4lsrc,
++           "Error getting current window properties: %s", g_strerror (errno));
++      g_free (buffer);
++      return FALSE;
++    }
++
++    vw.width = width;
++    vw.height = height;
++    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCSWIN, &vw) == -1) {
++      vw.flags &= (0x3F00 - 1);
++      vw.flags |= 15 << 16;
++      if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCSWIN, &vw) == -1) {
++          GST_ERROR_OBJECT (v4lsrc,
++               "Error setting window properties: %s", g_strerror (errno));
++          g_free (buffer);
++          return FALSE;
++      }
++    }
 +
 +    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCGPICT, &vp) == -1) {
 +      GST_ERROR_OBJECT (v4lsrc,
@@ -207,21 +233,6 @@
 +      return FALSE;
 +    }
 +
-+    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCGWIN, &vw) == -1) {
-+      GST_ERROR_OBJECT (v4lsrc,
-+           "Error getting current window properties: %s", g_strerror (errno));
-+      g_free (buffer);
-+      return FALSE;
-+    }
-+
-+    vw.width = width;
-+    vw.height = height;
-+    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCSWIN, &vw) == -1) {
-+      GST_ERROR_OBJECT (v4lsrc,
-+           "Error setting window properties: %s", g_strerror (errno));
-+      g_free (buffer);
-+      return FALSE;
-+    }
 +
 +    if (read (GST_V4LELEMENT (v4lsrc)->video_fd, buffer, width * height * 3/2) < 0) {
 +      GST_ERROR_OBJECT (v4lsrc,
@@ -234,7 +245,7 @@
    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCMCAPTURE, &vmmap) < 0) {
      if (errno != EINVAL)        /* our format failed! */
        GST_ERROR_OBJECT (v4lsrc,
-@@ -488,7 +599,11 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
+@@ -488,7 +610,11 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
      return FALSE;
    }
  
