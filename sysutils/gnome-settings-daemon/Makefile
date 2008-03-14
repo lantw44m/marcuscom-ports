@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.14 2008/03/08 16:17:00 marcus Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.15 2008/03/10 21:07:12 mezz Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
@@ -25,8 +25,7 @@ CONFIGURE_ARGS=	--enable-gstreamer=0.10
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas \
-		apps_gnome_settings_daemon_keybindings.schemas \
+GCONF_SCHEMAS=	apps_gnome_settings_daemon_keybindings.schemas \
 		apps_gnome_settings_daemon_screensaver.schemas \
 		desktop_gnome_font_rendering.schemas \
 		gnome-settings-daemon.schemas
