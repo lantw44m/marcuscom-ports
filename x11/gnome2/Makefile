@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.234 2008/02/28 21:09:50 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.235 2008/03/12 21:18:21 marcus Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.22.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -69,7 +69,8 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		swfdec-player:${PORTSDIR}/multimedia/swfdec-gnome \
 		mousetweaks:${PORTSDIR}/accessibility/mousetweaks \
 		vinagre:${PORTSDIR}/net/vinagre \
-		cheese:${PORTSDIR}/multimedia/cheese
+		cheese:${PORTSDIR}/multimedia/cheese \
+		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info
 
 NO_BUILD=	yes
 
