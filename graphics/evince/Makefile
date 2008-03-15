@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.95 2008/03/13 16:38:12 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.96 2008/03/13 16:39:02 ahze Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	2.22.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -21,14 +21,14 @@ LIB_DEPENDS=	poppler-glib.2:${PORTSDIR}/graphics/poppler-gtk \
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-GNU_CONFIGURE=	yes
+USE_AUTOTOOLS=	libtool:15
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_XLIB=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui desktopfileutils \
-		gnomedocutils
+		gnomedocutils ltasneededhack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-print=gtk
