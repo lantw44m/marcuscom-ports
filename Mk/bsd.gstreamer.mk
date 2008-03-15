@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.40 2008/02/23 19:09:17 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.41 2008/02/27 18:27:28 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -53,16 +53,16 @@ GST_SHLIB_VERSION=	1
 #
 # These are the current supported gstreamer-plugins modules
 #
-_USE_GSTREAMER10_ALL=	a52dec aalib annodex bad bz2 cairo cdaudio cdparanoia dts \
+_USE_GSTREAMER10_ALL=	a52dec aalib annodex bz2 cairo cdaudio cdparanoia dts \
 			dv dvd esound faac faad ffmpeg flac gconf gnomevfs \
-			gnonlin good gsm hal ivorbis jack jpeg ladspa lame \
+			gnonlin gsm hal ivorbis jack jpeg ladspa lame \
 			libcaca libmms libpng libvisual mm mp3 mpeg2enc mpeg2dec \
 			musepack nas neon ogg pango pulse python sdl shout2 sidplay \
 			sndfile spc soundtouch soup speex swfdec taglib \
-			theora ugly vorbis wavpack x264 xvid
+			theora vorbis wavpack x264 xvid
 
 # other plugins
-OTHER_GSTREAMER_PLUGINS+=	core yes ${_USE_GSTREAMER10_ALL} fluendo-mp3 mad
+OTHER_GSTREAMER_PLUGINS+=bad good ugly core yes ${_USE_GSTREAMER10_ALL} fluendo-mp3 mad
 
 _USE_GSTREAMER_ALL+=	${OTHER_GSTREAMER_PLUGINS}
 
