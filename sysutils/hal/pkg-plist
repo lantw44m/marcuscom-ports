@@ -36,6 +36,7 @@ libexec/hal-storage-eject
 libexec/hal-storage-mount
 libexec/hal-storage-unmount
 libexec/hal-system-power-pm-is-supported
+libexec/hal-system-setserial
 libexec/hal/scripts/freebsd/hal-system-lcd-get-brightness-freebsd
 libexec/hal/scripts/freebsd/hal-system-lcd-set-brightness-freebsd
 libexec/hal/scripts/freebsd/hal-system-power-reboot-freebsd
@@ -72,21 +73,24 @@ sbin/hald
 %%PORTDOCS%%%%DOCSDIR%%/README.freebsd
 %%DATADIR%%/dist/hal.conf
 %%DATADIR%%/fdi/fdi.dtd
+%%DATADIR%%/fdi/information/10freedesktop/01-deprecated-keys.fdi
 @exec mkdir -p %D/%%DATADIR%%/fdi/information/20thirdparty
 %%DATADIR%%/fdi/policy/10osvendor/10-dockstation.fdi
 %%DATADIR%%/fdi/policy/10osvendor/10-input-policy.fdi
 %%DATADIR%%/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
 %%DATADIR%%/fdi/policy/10osvendor/10-power-mgmt-policy.fdi
 %%DATADIR%%/fdi/policy/10osvendor/10-rfkill-switch.fdi
+%%DATADIR%%/fdi/policy/10osvendor/10-tabletPCs.fdi
 %%DATADIR%%/fdi/policy/10osvendor/10-x11-input.fdi
 %%DATADIR%%/fdi/policy/10osvendor/15-storage-luks.fdi
 %%DATADIR%%/fdi/policy/10osvendor/20-storage-methods.fdi
 %%DATADIR%%/fdi/policy/10osvendor/30-wol.fdi
-share/PolicyKit/policy/hal-killswitch.policy
-share/PolicyKit/policy/hal-lock.policy
-share/PolicyKit/policy/hal-power.policy
-share/PolicyKit/policy/hal-storage.policy
-share/PolicyKit/policy/hal-wol.policy
+share/PolicyKit/policy/org.freedesktop.hal.dockstation.policy
+share/PolicyKit/policy/org.freedesktop.hal.killswitch.policy
+share/PolicyKit/policy/org.freedesktop.hal.policy
+share/PolicyKit/policy/org.freedesktop.hal.power-management.policy
+share/PolicyKit/policy/org.freedesktop.hal.storage.policy
+share/PolicyKit/policy/org.freedesktop.hal.wol.policy
 @exec mkdir -p %D/%%DATADIR%%/fdi/policy/20thirdparty
 @exec mkdir -p %D/%%DATADIR%%/fdi/preprobe/20thirdparty
 @dirrm %%DATADIR%%/fdi/preprobe/20thirdparty

@@ -3,13 +3,13 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.36 2008/02/16 05:28:22 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.37 2008/02/18 22:01:37 marcus Exp $
 #
 
 PORTNAME=	hal
-PORTVERSION=	${HALVERSION}.${SNAPVERSION}
+DISTVERSION=	0.5.11rc1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.marcuscom.com/downloads/
+MASTER_SITES=	http://hal.freedesktop.org/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Hardware Abstraction Layer for simplifying device access
@@ -19,7 +19,6 @@ LIB_DEPENDS=	polkit.2:${PORTSDIR}/sysutils/policykit \
 		ck-connector.0:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:${PORTSDIR}/misc/pciids
 
-USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnometarget intlhack ltverhack
@@ -41,13 +40,14 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-socket-dir=/var/run/hald \
 		--with-eject=/usr/sbin/cdcontrol \
 		--with-pid-file=/var/run/hald/hald.pid \
+		--with-deprecated-keys \
 		--localstatedir=/var
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
 
-HALVERSION=	0.5.10
-SNAPVERSION=	20080218
+#HALVERSION=	0.5.10
+#SNAPVERSION=	20080218
 
 USE_RC_SUBR=	hald
 USE_GNOME_SUBR=	yes
