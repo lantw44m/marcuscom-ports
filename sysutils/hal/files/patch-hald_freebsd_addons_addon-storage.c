@@ -1,5 +1,5 @@
---- addon-storage.c.orig	2008-03-15 14:26:23.000000000 -0400
-+++ addon-storage.c	2008-03-15 14:26:25.000000000 -0400
+--- hald/freebsd/addons/addon-storage.c.orig	2008-03-15 14:26:23.000000000 -0400
++++ hald/freebsd/addons/addon-storage.c	2008-03-15 14:26:25.000000000 -0400
 @@ -150,6 +150,15 @@ hf_addon_storage_update (void)
    return has_media;
  }
