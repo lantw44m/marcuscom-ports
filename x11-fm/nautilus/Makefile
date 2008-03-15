@@ -3,12 +3,12 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.152 2008/03/11 03:36:11 mezz Exp $
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.153 2008/03/11 22:23:13 mezz Exp $
 #
 
 PORTNAME=	nautilus
 PORTVERSION=	2.22.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -24,7 +24,7 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_XLIB=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop eel2 \
-		librsvg2 desktopfileutils ltverhack gvfs
+		librsvg2 desktopfileutils ltverhack gvfs ltasneededhack
 GNOME_DESKTOP_VERSION=2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
