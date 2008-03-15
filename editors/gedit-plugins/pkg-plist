@@ -23,8 +23,10 @@ lib/gedit-2/plugins/gpdefs.pyo
 %%PYTHON%%lib/gedit-2/plugins/joinlines.py
 %%PYTHON%%lib/gedit-2/plugins/joinlines.pyc
 %%PYTHON%%lib/gedit-2/plugins/joinlines.pyo
+lib/gedit-2/plugins/libcharmap.a
 lib/gedit-2/plugins/libcharmap.la
 lib/gedit-2/plugins/libcharmap.so
+lib/gedit-2/plugins/libshowtabbar.a
 lib/gedit-2/plugins/libshowtabbar.la
 lib/gedit-2/plugins/libshowtabbar.so
 %%PYTHON%%lib/gedit-2/plugins/sessionsaver.gedit-plugin
