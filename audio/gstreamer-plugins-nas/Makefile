@@ -3,11 +3,11 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/audio/gstreamer-plugins-nas/Makefile,v 1.3 2008/02/21 15:33:17 kwm Exp $
 #
 
 CATEGORIES=	audio
-PORTREVISION=	0
+PORTREVISION=	1
 
 COMMENT=	GStreamer NAS (Network Audio System) plugin
 

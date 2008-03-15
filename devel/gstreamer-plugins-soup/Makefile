@@ -3,10 +3,10 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/gstreamer-plugins-soup/Makefile,v 1.1 2008/02/21 15:33:19 kwm Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 COMMENT=	Gstreamer soup http src plugin

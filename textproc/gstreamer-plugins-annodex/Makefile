@@ -3,10 +3,10 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/textproc/gstreamer-plugins-annodex/Makefile,v 1.1 2008/02/21 16:27:56 kwm Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	textproc
 
 COMMENT=	Gstreamer annodex xml plugin

@@ -3,12 +3,12 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.56 2008/02/04 15:10:34 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.57 2008/02/15 02:25:30 marcus Exp $
 #
 
 PORTNAME=	gstreamer
 PORTVERSION=	0.10.17
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer/ \
 		${MASTER_SITE_LOCAL}
@@ -25,7 +25,7 @@ USE_XORG=	x11 xv xext videoproto xextproto
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 WANT_GNOME=	yes
-USE_GNOME=	gnomehack glib20 libxml2 ltverhack
+USE_GNOME=	gnomehack glib20 libxml2 ltverhack ltasneededhack
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--disable-tests \

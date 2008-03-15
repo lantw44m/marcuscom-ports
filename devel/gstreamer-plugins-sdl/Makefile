@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/gstreamer-plugins-sdl/Makefile,v 1.3 2008/02/21 15:33:18 kwm Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	devel
 
 COMMENT=	Gstreamer SDL plugin

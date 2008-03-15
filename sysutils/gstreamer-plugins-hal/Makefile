@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/sysutils/gstreamer-plugins-hal/Makefile,v 1.4 2008/02/21 16:27:58 kwm Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 COMMENT=	Gstreamer hal plugin
