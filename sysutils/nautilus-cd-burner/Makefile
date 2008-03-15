@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.139 2008/01/31 04:18:09 mezz Exp $
+#   $MCom: ports/sysutils/nautilus-cd-burner/Makefile,v 1.140 2008/03/11 03:27:33 mezz Exp $
 #
 
 PORTNAME=	nautilus-cd-burner
 PORTVERSION=	2.22.0
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -26,7 +27,7 @@ USE_XLIB=	yes
 USE_GMAKE=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack nautilus2 ltverhack \
-		desktopfileutils
+		desktopfileutils ltasneededhack
 USE_CDRTOOLS=	yes
 INSTALLS_ICONS=	yes
 USE_AUTOTOOLS=	libtool:15
