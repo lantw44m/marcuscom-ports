@@ -47,6 +47,8 @@ hald_precmd()
 	local_force_depend dbus || return 1
     fi
 
+    chmod 0755 /var/cache
+
     mkdir -p $(dirname $pidfile)
 }
 
