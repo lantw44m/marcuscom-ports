@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.100 2008/03/04 13:25:06 ahze Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.101 2008/03/10 15:02:25 ahze Exp $
 #
 
 PORTNAME=	totem
 PORTVERSION=	2.22.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -45,7 +45,8 @@ GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
 CONFLICTS?=	totem-gstreamer-[0-9]* totem-xine-[0-9]*
 
 OPTIONS=	LIRC "Enable lirc support" off \
-		GALAGO "Enable Galago support" off
+		GALAGO "Enable Galago support" off \
+		GECKO_PLUGINS "Enable install plugins for gecko browser" on
 
 TOTEM_PLUGINS=	screensaver ontop gromit media-player-keys properties sidebar-test skipto
 
@@ -67,15 +68,15 @@ TOTEM_PLUGINS:=	${TOTEM_PLUGINS} galago
 PLIST_SUB+=	GALAGO="@comment "
 .endif
 
-.if defined(WITH_MOZILLA_PLUGIN) && ${SLAVE_PORT:L}=="yes"
+.if !defined(WITHOUT_GECKO_PLUGINS)
 USE_GECKO=	firefox mozilla seamonkey xulrunner<->firefox firefox-devel<->firefox
 .include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 CONFIGURE_ARGS+=--with-mozilla=${GECKO} \
+		--enable-browser-plugins \
 		--enable-gmp-plugin \
 		--enable-complex-plugin \
 		--enable-narrowspace-plugin
-BUILD_WRKSRC=	${WRKSRC}/browser-plugin
-INSTALL_WRKSRC=	${WRKSRC}/browser-plugin
+PLIST_SUB+=	GECKO_PLUGINS=""
 .else
 CONFIGURE_ARGS+=--without-mozilla \
 		--disable-browser-plugins \
@@ -84,6 +85,7 @@ CONFIGURE_ARGS+=--without-mozilla \
 		--disable-gmp-plugin \
 		--disable-complex-plugin \
 		--disable-narrowspace-plugin
+PLIST_SUB+=	GECKO_PLUGINS="@comment "
 .endif
 
 .if !defined(WITH_TOTEM_XINE) || ${SLAVE_PORT}=="no"
