@@ -3,12 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/glom/Makefile,v 1.15 2008/02/09 00:08:30 kwm Exp $
+#   $MCom: ports/databases/glom/Makefile,v 1.16 2008/03/04 18:54:07 kwm Exp $
 #
 
 PORTNAME=	glom
-PORTVERSION=	1.6.8
-PORTREVISION=	1
+PORTVERSION=	1.6.9
 CATEGORIES=	databases gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,7 +16,7 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GNOME database designer and user interface
 
 LIB_DEPENDS=	bakery-2.4:${PORTSDIR}/x11-toolkits/bakery \
-		gdamm-3.0.9:${PORTSDIR}/databases/libgdamm \
+		gdamm-3.0.10:${PORTSDIR}/databases/libgdamm \
 		gtksourceviewmm-1.0.1:${PORTSDIR}/x11-toolkits/libgtksourceviewmm \
 		goocanvas.3:${PORTSDIR}/graphics/goocanvas
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
