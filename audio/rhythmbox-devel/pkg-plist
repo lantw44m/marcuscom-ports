@@ -1,12 +1,12 @@
 bin/rhythmbox
 bin/rhythmbox-client
+%%GECKO_PLUGIN%%lib/browser_plugins/librhythmbox-itms-detection-plugin.a
+%%GECKO_PLUGIN%%lib/browser_plugins/librhythmbox-itms-detection-plugin.la
+%%GECKO_PLUGIN%%lib/browser_plugins/librhythmbox-itms-detection-plugin.so
 lib/librhythmbox-core.a
 lib/librhythmbox-core.la
 lib/librhythmbox-core.so
 lib/librhythmbox-core.so.0
-lib/mozilla/plugins/librhythmbox-itms-detection-plugin.a
-lib/mozilla/plugins/librhythmbox-itms-detection-plugin.la
-lib/mozilla/plugins/librhythmbox-itms-detection-plugin.so
 %%PYTHON%%lib/rhythmbox/plugins/artdisplay/AmazonCoverArtSearch.py
 %%PYTHON%%lib/rhythmbox/plugins/artdisplay/AmazonCoverArtSearch.pyc
 %%PYTHON%%lib/rhythmbox/plugins/artdisplay/AmazonCoverArtSearch.pyo
@@ -431,6 +431,7 @@ share/locale/nl/LC_MESSAGES/rhythmbox.mo
 share/locale/oc/LC_MESSAGES/rhythmbox.mo
 share/locale/pa/LC_MESSAGES/rhythmbox.mo
 share/locale/pl/LC_MESSAGES/rhythmbox.mo
+share/locale/ps/LC_MESSAGES/rhythmbox.mo
 share/locale/pt/LC_MESSAGES/rhythmbox.mo
 share/locale/pt_BR/LC_MESSAGES/rhythmbox.mo
 share/locale/ro/LC_MESSAGES/rhythmbox.mo
@@ -577,6 +578,8 @@ share/rhythmbox/rhythmbox-ui.xml
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/ps/LC_MESSAGES
+@dirrmtry share/locale/ps
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/dz/LC_MESSAGES
