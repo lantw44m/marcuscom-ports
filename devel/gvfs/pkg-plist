@@ -9,6 +9,7 @@ bin/gvfs-monitor-file
 bin/gvfs-mount
 bin/gvfs-move
 bin/gvfs-open
+bin/gvfs-rename
 bin/gvfs-rm
 bin/gvfs-save
 bin/gvfs-trash
@@ -27,6 +28,7 @@ lib/libgvfscommon.so
 lib/libgvfscommon.so.0
 %%FUSE%%libexec/gvfs-fuse-daemon
 libexec/gvfsd
+libexec/gvfsd-archive
 libexec/gvfsd-burn
 libexec/gvfsd-computer
 libexec/gvfsd-dav
@@ -41,6 +43,7 @@ libexec/gvfsd-sftp
 %%SMB%%libexec/gvfsd-smb-browse
 libexec/gvfsd-trash
 share/dbus-1/services/gvfs-daemon.service
+share/gvfs/mounts/archive.mount
 share/gvfs/mounts/burn.mount
 share/gvfs/mounts/computer.mount
 share/gvfs/mounts/dav.mount
