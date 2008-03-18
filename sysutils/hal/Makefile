@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.40 2008/03/17 22:24:44 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.41 2008/03/18 07:39:54 marcus Exp $
 #
 
 PORTNAME=	hal
 DISTVERSION=	0.5.11rc2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
