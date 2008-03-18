@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/conduit/Makefile,v 1.5 2008/02/27 16:21:52 ahze Exp $
+#    $MCom: ports/deskutils/conduit/Makefile,v 1.6 2008/02/27 20:29:39 ahze Exp $
 
 PORTNAME=	conduit
-PORTVERSION=	0.3.8
+PORTVERSION=	0.3.9
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 
@@ -17,14 +17,16 @@ BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/goocanvasmodule.so:${PORTSDIR}/graphics/py-g
 		${PYTHON_SITELIBDIR}/elementtree/__init__.py:${PORTSDIR}/devel/py-elementtree \
 		${PYTHON_SITELIBDIR}/pysqlite2/__init__.py:${PORTSDIR}/databases/py-pysqlite23 \
 		xmlproc_parse:${PORTSDIR}/textproc/py-xml \
-		${PYTHON_SITELIBDIR}/vobject/__init__.py:${PORTSDIR}/deskutils/py-vobject
+		${PYTHON_SITELIBDIR}/vobject/__init__.py:${PORTSDIR}/deskutils/py-vobject \
+		${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/goocanvasmodule.so:${PORTSDIR}/graphics/py-goocanvas \
 		${PYTHON_SITELIBDIR}/elementtree/__init__.py:${PORTSDIR}/devel/py-elementtree \
 		${PYTHON_SITELIBDIR}/pysqlite2/__init__.py:${PORTSDIR}/databases/py-pysqlite23 \
 		xmlproc_parse:${PORTSDIR}/textproc/py-xml \
 		${PYTHON_SITELIBDIR}/vobject/__init__.py:${PORTSDIR}/deskutils/py-vobject \
-		firefox:${PORTSDIR}/www/firefox
+		firefox:${PORTSDIR}/www/firefox \
+		${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus
 
 USE_PYTHON=	2.4+
 USE_GMAKE=	yes

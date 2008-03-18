@@ -178,7 +178,6 @@ lib/conduit/modules/__init__.pyo
 lib/conduit/modules/iPodModule.py
 lib/conduit/modules/iPodModule.pyc
 lib/conduit/modules/iPodModule.pyo
-libdata/pkgconfig/conduit.pc
 %%PYTHON_SITELIBDIR%%/conduit/Conduit.py
 %%PYTHON_SITELIBDIR%%/conduit/Conduit.pyc
 %%PYTHON_SITELIBDIR%%/conduit/Conduit.pyo
@@ -338,6 +337,7 @@ libdata/pkgconfig/conduit.pc
 %%PYTHON_SITELIBDIR%%/conduit/hildonui/__init__.py
 %%PYTHON_SITELIBDIR%%/conduit/hildonui/__init__.pyc
 %%PYTHON_SITELIBDIR%%/conduit/hildonui/__init__.pyo
+libdata/pkgconfig/conduit.pc
 share/applications/conduit.desktop
 %%DATADIR%%/backpack.png
 %%DATADIR%%/boxdotnet.png
@@ -356,11 +356,9 @@ share/applications/conduit.desktop
 share/dbus-1/services/org.conduit.service
 share/gnome/autostart/conduit-autostart.desktop
 share/gnome/help/conduit/C/conduit.xml
-share/gnome/help/conduit/C/figures/conduit.png
-share/gnome/help/conduit/es/conduit.xml
-share/gnome/help/conduit/es/figures/conduit.png
-share/gnome/help/conduit/sv/conduit.xml
-share/gnome/help/conduit/sv/figures/conduit.png
+share/gnome/help/conduit/C/figures/conduit-dp.png
+share/gnome/help/conduit/C/figures/conduit-folder-configuration.png
+share/gnome/help/conduit/C/figures/conduit-gui-parts.png
 share/icons/hicolor/16x16/actions/conduit-conflict-ask.png
 share/icons/hicolor/16x16/actions/conduit-conflict-delete.png
 share/icons/hicolor/16x16/actions/conduit-conflict-left.png
@@ -389,25 +387,20 @@ share/icons/hicolor/48x48/apps/conduit.png
 share/icons/hicolor/scalable/apps/conduit.svg
 share/locale/ar/LC_MESSAGES/conduit.mo
 share/locale/ca/LC_MESSAGES/conduit.mo
+share/locale/en_GB/LC_MESSAGES/conduit.mo
 share/locale/es/LC_MESSAGES/conduit.mo
 share/locale/fr/LC_MESSAGES/conduit.mo
 share/locale/it/LC_MESSAGES/conduit.mo
+share/locale/nb/LC_MESSAGES/conduit.mo
+share/locale/pt/LC_MESSAGES/conduit.mo
 share/locale/pt_BR/LC_MESSAGES/conduit.mo
 share/locale/ru/LC_MESSAGES/conduit.mo
 share/locale/sv/LC_MESSAGES/conduit.mo
 share/omf/conduit/conduit-C.omf
-share/omf/conduit/conduit-es.omf
-share/omf/conduit/conduit-sv.omf
 @dirrm share/omf/conduit
-@dirrm share/gnome/help/conduit/sv/figures
-@dirrm share/gnome/help/conduit/sv
-@dirrm share/gnome/help/conduit/es/figures
-@dirrm share/gnome/help/conduit/es
 @dirrm share/gnome/help/conduit/C/figures
 @dirrm share/gnome/help/conduit/C
 @dirrm share/gnome/help/conduit
-@dirrm share/dbus-1/services
-@dirrm share/dbus-1
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/conduit/hildonui
@@ -415,7 +408,6 @@ share/omf/conduit/conduit-sv.omf
 @dirrm %%PYTHON_SITELIBDIR%%/conduit/datatypes
 @dirrm %%PYTHON_SITELIBDIR%%/conduit/dataproviders
 @dirrm %%PYTHON_SITELIBDIR%%/conduit
-@dirrm %%PYTHON_SITELIBDIR%%
 @dirrm lib/conduit/modules/SmugMugModule/SmugMugAPI
 @dirrm lib/conduit/modules/SmugMugModule
 @dirrm lib/conduit/modules/ShutterflyModule/shutterfly
