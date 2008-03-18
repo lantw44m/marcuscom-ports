@@ -3,20 +3,18 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/deskutils/nautilus-locked-folder/Makefile,v 1.6 2008/03/11 22:19:46 mezz Exp $
 #
 
 PORTNAME=	nautilus-locked-folder
 PORTVERSION=	1.0.0
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	deskutils security
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 MASTER_SITE_SUBDIR=	pav
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Nautilus plugin that allows you to encrypt the contents of a folder
-
-BROKEN=		Need to be update with new Nautilus 2.22
 
 USE_AUTOTOOLS=	libtool:15
 GNU_CONFIGURE=	yes
@@ -25,9 +23,9 @@ PKGCONFIGS=	gtk+-2.0 libglade-2.0 libnautilus-extension libgnomeui-2.0
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include `pkg-config --cflags ${PKGCONFIGS}`" \
 		LDFLASG="-L${LOCALBASE}/lib -L${X11BASE}/lib `pkg-config --libs ${PKGCONFIGS}`" \
 		LIBS="-lssl"
-PLIST_FILES=	lib/nautilus/extensions-1.0/libnautilus-locked-folder.a \
-		lib/nautilus/extensions-1.0/libnautilus-locked-folder.la \
-		lib/nautilus/extensions-1.0/libnautilus-locked-folder.so
+PLIST_FILES=	lib/nautilus/extensions-2.0/libnautilus-locked-folder.a \
+		lib/nautilus/extensions-2.0/libnautilus-locked-folder.la \
+		lib/nautilus/extensions-2.0/libnautilus-locked-folder.so
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/share/icons/hicolor/32x32/stock/data/|${LOCALBASE}/share/icons/hicolor/32x32/stock/data/|' \
