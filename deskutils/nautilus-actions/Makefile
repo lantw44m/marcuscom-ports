@@ -3,12 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.6 2008/03/11 22:19:46 mezz Exp $
 #
 
 PORTNAME=	nautilus-actions
-PORTVERSION=	1.4
-PORTREVISION=	2
+PORTVERSION=	1.4.1
 CATEGORIES=	deskutils
 MASTER_SITES=	ftp://ftp2.grumz.net/grumz/
 
@@ -16,8 +15,6 @@ MAINTAINER=	ahze@FreeBSD.org
 COMMENT=	Extension for Nautilus to configure programs to launch on files
 
 LIB_DEPENDS=	uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid
-
-BROKEN=		Need to be update with new Nautilus 2.22
 
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
@@ -27,7 +24,7 @@ GNU_CONFIGURE=	yes
 USE_XLIB=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--with-nautilus-extdir=${LOCALBASE}/lib/nautilus/extensions-1.0
+CONFIGURE_ARGS=	--with-nautilus-extdir=${LOCALBASE}/lib/nautilus/extensions-2.0
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|echo aout|echo elf|' ${WRKSRC}/configure
