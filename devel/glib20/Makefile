@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.114 2008/03/10 19:06:33 marcus Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.115 2008/03/11 03:10:53 marcus Exp $
 #
 
 PORTNAME=	glib
 PORTVERSION=	2.16.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
 		ftp://ftp.gtk.org/pub/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
@@ -60,10 +60,6 @@ GLIB_ARCH=	x86_64
 GLIB_ARCH=	${ARCH}
 .endif
 CONFIGURE_TARGET=	--build=${GLIB_ARCH}-portbld-freebsd${OSREL}
-
-.if ( ( ${OSVERSION} < 504101 ) || ( ${OSVERSION} >= 600000 && ${OSVERSION} < 600012 ) )
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gthread_gthread-posix.c
-.endif
 
 .if defined(WITH_COLLATION_FIX)
 LIB_DEPENDS+=	icui18n:${PORTSDIR}/devel/icu
