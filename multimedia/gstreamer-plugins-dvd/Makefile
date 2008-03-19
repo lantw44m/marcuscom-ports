@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins-dvd/Makefile,v 1.5 2008/02/21 14:20:38 kwm Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins-dvd/Makefile,v 1.6 2008/03/15 21:09:35 ahze Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 
 COMMENT=	Gstreamer dvd plugin set

@@ -3,12 +3,12 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.108 2008/03/14 05:24:15 marcus Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.109 2008/03/15 21:09:34 ahze Exp $
 #
 
 PORTNAME=	gstreamer
 PORTVERSION?=	${BASE_PORTVERSION}
-PORTREVISION?=	4
+PORTREVISION?=	5
 PORTEPOCH=	3
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-plugins-base/:base \
@@ -27,7 +27,7 @@ COMMENT?=	GStreamer written collection of plugins handling several media types
 BUILD_DEPENDS+=	v4l_compat>=1.0.20060801:${PORTSDIR}/multimedia/v4l_compat
 LIB_DEPENDS+=	gstreamer-0.10.0:${PORTSDIR}/multimedia/gstreamer \
 		popt.0:${PORTSDIR}/devel/popt \
-		oil-0.3.1:${PORTSDIR}/devel/liboil
+		oil-0.3.0:${PORTSDIR}/devel/liboil
 
 CFLAGS:=	${CFLAGS} -O2
 

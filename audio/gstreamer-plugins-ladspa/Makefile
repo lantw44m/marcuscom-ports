@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gstreamer-plugins-ladspa/Makefile,v 1.3 2008/02/21 16:27:58 kwm Exp $
+#   $MCom: ports/audio/gstreamer-plugins-ladspa/Makefile,v 1.4 2008/03/15 21:09:29 ahze Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 
 COMMENT=	Gstreamer ladspa (Linux Audio Developer's Simple Plugin API) plugin

@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer-plugins-bad/Makefile,v 1.9 2008/02/21 15:33:19 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins-bad/Makefile,v 1.10 2008/03/15 21:09:34 ahze Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	multimedia
 
 COMMENT=	Bad gstreamer-plugins

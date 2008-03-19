@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gstreamer-plugins-gnomevfs/Makefile,v 1.3 2008/02/04 15:46:49 kwm Exp $
+#   $MCom: ports/devel/gstreamer-plugins-gnomevfs/Makefile,v 1.4 2008/03/15 21:09:32 ahze Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 
 COMMENT=	Gstreamer gnomevfs plugin

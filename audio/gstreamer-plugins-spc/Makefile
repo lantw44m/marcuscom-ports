@@ -3,9 +3,9 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gstreamer-plugins-spc/Makefile,v 1.1 2008/02/21 15:33:18 kwm Exp $
+#   $MCom: ports/audio/gstreamer-plugins-spc/Makefile,v 1.2 2008/03/15 21:09:31 ahze Exp $
 
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 
 COMMENT=	Gstreamer OpenSPC frontend

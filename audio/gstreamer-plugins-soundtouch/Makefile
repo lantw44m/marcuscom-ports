@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gstreamer-plugins-soundtouch/Makefile,v 1.1 2008/02/21 15:33:19 kwm Exp $
+#   $MCom: ports/audio/gstreamer-plugins-soundtouch/Makefile,v 1.2 2008/03/15 21:09:30 ahze Exp $
 #
 
 CATEGORIES=	audio
-PORTREVISION=	1
+PORTREVISION=	2
 
 COMMENT=	GStreamer soundtouch plugin
 

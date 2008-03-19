@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gstreamer-plugins-mad/Makefile,v 1.3 2008/02/21 14:20:38 kwm Exp $
+#   $MCom: ports/audio/gstreamer-plugins-mad/Makefile,v 1.4 2008/03/15 21:09:29 ahze Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 
 COMMENT=	Gstreamer mp3 decoder plugin
