@@ -4,17 +4,18 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/swfdec/Makefile,v 1.13 2008/02/11 21:38:55 marcus Exp $
+#
 
 PORTNAME=	swfdec
 PORTVERSION=	0.6.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://swfdec.freedesktop.org/download/swfdec/0.6/
 
 MAINTAINER=	alexbl@FreeBSD.org
 COMMENT=	Flash Rendering Library
 
-LIB_DEPENDS=	oil-0.3.1:${PORTSDIR}/devel/liboil \
+LIB_DEPENDS=	oil-0.3.0:${PORTSDIR}/devel/liboil \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 USE_XLIB=	yes
