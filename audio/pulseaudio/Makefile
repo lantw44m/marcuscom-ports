@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/pulseaudio/Makefile,v 1.7 2007/09/10 05:10:38 mezz Exp $
+#   $MCom: ports/audio/pulseaudio/Makefile,v 1.9 2008/03/19 13:55:58 ahze Exp $
 #
 
 PORTNAME=	pulseaudio
@@ -25,7 +25,6 @@ USE_XLIB=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15 libltdl:15
 USE_GMAKE=	yes
-USE_GETOPT_LONG=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
