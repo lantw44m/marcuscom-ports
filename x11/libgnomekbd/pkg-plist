@@ -17,7 +17,6 @@ lib/libgnomekbdui.so.2
 libdata/pkgconfig/libgnomekbd.pc
 libdata/pkgconfig/libgnomekbdui.pc
 share/applications/gkbd-indicator-plugins-capplet.desktop
-share/icons/hicolor/48x48/apps/gkbd-indicator-plugins-capplet.png
 %%DATADIR%%/glade/gkbd-indicator-plugins.glade
 share/locale/ar/LC_MESSAGES/libgnomekbd.mo
 share/locale/be@latin/LC_MESSAGES/libgnomekbd.mo
