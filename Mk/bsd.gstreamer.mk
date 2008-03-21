@@ -7,7 +7,7 @@
 # Date:		4 Oct 2004
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.41 2008/02/27 18:27:28 ahze Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.42 2008/03/15 21:19:07 ahze Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -54,7 +54,7 @@ GST_SHLIB_VERSION=	1
 # These are the current supported gstreamer-plugins modules
 #
 _USE_GSTREAMER10_ALL=	a52dec aalib annodex bz2 cairo cdaudio cdparanoia dts \
-			dv dvd esound faac faad ffmpeg flac gconf gnomevfs \
+			dv dvd esound faac faad ffmpeg flac gconf gio gnomevfs \
 			gnonlin gsm hal ivorbis jack jpeg ladspa lame \
 			libcaca libmms libpng libvisual mm mp3 mpeg2enc mpeg2dec \
 			musepack nas neon ogg pango pulse python sdl shout2 sidplay \
@@ -158,6 +158,8 @@ vorbis_DEPENDS=	audio/gstreamer-plugins-vorbis
 wavpack_DEPENDS=	audio/gstreamer-plugins-wavpack
 
 # Devel Plugins Section
+gio_DEPENDS=	devel/gstreamer-plugins-gio
+
 gnomevfs_DEPENDS=	devel/gstreamer-plugins-gnomevfs
 
 sdl_DEPENDS=	devel/gstreamer-plugins-sdl
