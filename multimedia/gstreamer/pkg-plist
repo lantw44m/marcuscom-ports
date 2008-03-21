@@ -16,6 +16,7 @@ include/gstreamer-%%VERSION%%/gst/base/gstbasesrc.h
 include/gstreamer-%%VERSION%%/gst/base/gstbasetransform.h
 include/gstreamer-%%VERSION%%/gst/base/gstcollectpads.h
 include/gstreamer-%%VERSION%%/gst/base/gstdataqueue.h
+include/gstreamer-%%VERSION%%/gst/gstpoll.h
 include/gstreamer-%%VERSION%%/gst/base/gstpushsrc.h
 include/gstreamer-%%VERSION%%/gst/base/gsttypefindhelper.h
 %%CHECK%%include/gstreamer-%%VERSION%%/gst/check/gstbufferstraw.h
