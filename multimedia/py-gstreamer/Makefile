@@ -3,12 +3,12 @@
 # Whom:			Koop Mast <kwm@rainbow-runner.nl>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/py-gstreamer/Makefile,v 1.15 2008/02/04 15:48:40 kwm Exp $
+#    $MCom: ports/multimedia/py-gstreamer/Makefile,v 1.16 2008/03/15 21:09:37 ahze Exp $
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.10.10
-PORTREVISION=	1
+PORTVERSION=	0.10.11
+PORTREVISION=	0
 CATEGORIES=	multimedia python gnome
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-python/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -26,6 +26,7 @@ USE_GMAKE=	yes
 USE_GNOME=	pygtk2 gnomehack pkgconfig
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
+PLIST_SUB=	VERSION="${GST_VERSION}"
 CONFIGURE_ENV=	CPPFLAGS="-I${X11BASE}/include" \
 		LDFLAGS="-L${X11BASE}"
 
