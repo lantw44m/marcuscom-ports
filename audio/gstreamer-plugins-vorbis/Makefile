@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gstreamer-plugins-vorbis/Makefile,v 1.4 2008/03/15 21:09:31 ahze Exp $
+#   $MCom: ports/audio/gstreamer-plugins-vorbis/Makefile,v 1.5 2008/03/19 14:05:32 ahze Exp $
 #
 
-PORTREVISION=	2
+PORTREVISION=	0
 CATEGORIES=	audio
 
 COMMENT=	Gstreamer vorbis encoder/decoder plugin

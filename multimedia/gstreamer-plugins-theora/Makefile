@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/gstreamer-plugins-theora/Makefile,v 1.2 2008/03/15 21:09:36 ahze Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins-theora/Makefile,v 1.3 2008/03/19 14:05:37 ahze Exp $
 #
 
-PORTREVISION=	2
+PORTREVISION=	0
 CATEGORIES=	multimedia
 
 COMMENT=	Gstreamer theora plugin

@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gstreamer-plugins-pango/Makefile,v 1.4 2008/03/15 21:09:38 ahze Exp $
+#   $MCom: ports/x11-toolkits/gstreamer-plugins-pango/Makefile,v 1.5 2008/03/19 14:05:38 ahze Exp $
 #
 
-PORTREVISION=	2
+PORTREVISION=	0
 CATEGORIES=	x11-toolkits
 
 COMMENT=	Gstreamer pango textoverlay plugin

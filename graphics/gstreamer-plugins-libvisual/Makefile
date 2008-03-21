@@ -3,10 +3,10 @@
 # Whom:				Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gstreamer-plugins-libvisual/Makefile,v 1.4 2008/03/15 21:09:34 ahze Exp $
+#   $MCom: ports/graphics/gstreamer-plugins-libvisual/Makefile,v 1.5 2008/03/19 14:05:35 ahze Exp $
 #
 
-PORTREVISION=	2
+PORTREVISION=	0
 CATEGORIES=	graphics
 
 COMMENT=	Gstreamer libvisual plugin

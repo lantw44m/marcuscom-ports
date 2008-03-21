@@ -1,5 +1,5 @@
---- sys/v4l/v4lsrc_calls.c.orig	2008-03-13 23:13:21.000000000 -0400
-+++ sys/v4l/v4lsrc_calls.c	2008-03-14 01:18:32.000000000 -0400
+--- sys/v4l/v4lsrc_calls.c.orig	2008-03-03 17:29:52.000000000 -0500
++++ sys/v4l/v4lsrc_calls.c	2008-03-20 23:50:39.000000000 -0400
 @@ -26,12 +26,14 @@
  
  #include <stdlib.h>
@@ -15,7 +15,7 @@
  #include "v4lsrc_calls.h"
  #include <sys/time.h>
  
-@@ -87,6 +89,51 @@ gst_v4lsrc_queue_frame (GstV4lSrc * v4ls
+@@ -87,6 +89,51 @@
      return FALSE;
    }
  
@@ -67,7 +67,7 @@
    /* instruct the driver to prepare capture using buffer frame num */
    v4lsrc->mmap.frame = num;
    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd,
-@@ -95,6 +142,7 @@ gst_v4lsrc_queue_frame (GstV4lSrc * v4ls
+@@ -95,6 +142,7 @@
          ("Error queueing a buffer (%d): %s", num, g_strerror (errno)));
      return FALSE;
    }
@@ -75,7 +75,7 @@
  
    v4lsrc->frame_queue_state[num] = QUEUE_STATE_QUEUED;
    v4lsrc->num_queued++;
-@@ -117,6 +165,10 @@ gst_v4lsrc_sync_frame (GstV4lSrc * v4lsr
+@@ -117,6 +165,10 @@
      return FALSE;
    }
  
@@ -86,7 +86,7 @@
    while (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCSYNC, &num) < 0) {
      /* if the sync() got interrupted, we can retry */
      if (errno != EINTR) {
-@@ -126,6 +178,7 @@ gst_v4lsrc_sync_frame (GstV4lSrc * v4lsr
+@@ -126,6 +178,7 @@
      }
      GST_DEBUG_OBJECT (v4lsrc, "Sync got interrupted");
    }
@@ -94,7 +94,7 @@
    GST_LOG_OBJECT (v4lsrc, "VIOIOCSYNC on frame %d done", num);
  
    v4lsrc->frame_queue_state[num] = QUEUE_STATE_SYNCED;
-@@ -168,13 +221,28 @@ gst_v4lsrc_capture_init (GstV4lSrc * v4l
+@@ -168,13 +221,28 @@
    GST_V4L_CHECK_OPEN (GST_V4LELEMENT (v4lsrc));
    GST_V4L_CHECK_NOT_ACTIVE (GST_V4LELEMENT (v4lsrc));
  
@@ -126,7 +126,7 @@
    }
  
    if (v4lsrc->mbuf.frames < MIN_BUFFERS_QUEUED) {
-@@ -205,6 +273,7 @@ gst_v4lsrc_capture_init (GstV4lSrc * v4l
+@@ -205,6 +273,7 @@
      GST_V4LELEMENT (v4lsrc)->buffer = NULL;
      return FALSE;
    }
@@ -134,7 +134,7 @@
  
    return TRUE;
  }
-@@ -413,10 +482,14 @@ gst_v4lsrc_capture_deinit (GstV4lSrc * v
+@@ -413,10 +482,14 @@
    v4lsrc->frame_queue_state = NULL;
  
    /* unmap the buffer */
@@ -153,7 +153,7 @@
    }
    GST_V4LELEMENT (v4lsrc)->buffer = NULL;
  
-@@ -446,6 +519,7 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
+@@ -446,6 +519,7 @@
    /* so, we need a buffer and some more stuff */
    int frame = 0;
    guint8 *buffer;
@@ -161,7 +161,7 @@
    struct video_mbuf vmbuf;
    struct video_mmap vmmap;
  
-@@ -456,17 +530,17 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
+@@ -456,24 +530,72 @@
  
    /* let's start by requesting a buffer and mmap()'ing it */
    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCGMBUF, &vmbuf) < 0) {
@@ -170,27 +170,28 @@
 -    return FALSE;
 -  }
 -  /* Map the buffers */
--  buffer = mmap (0, vmbuf.size, PROT_READ | PROT_WRITE,
+-  buffer = mmap (NULL, vmbuf.size, PROT_READ | PROT_WRITE,
 -      MAP_SHARED, GST_V4LELEMENT (v4lsrc)->video_fd, 0);
 -  if (buffer == MAP_FAILED) {
 -    GST_ELEMENT_ERROR (v4lsrc, RESOURCE, OPEN_READ_WRITE, (NULL),
 -        ("Error mapping our try-out buffer: %s", g_strerror (errno)));
 -    return FALSE;
-+    buffer = (gint8 *) g_malloc0 (sizeof (gint8) * 1024 * 768 * 3);
-+    use_read = TRUE;
-+  } else {
-+    /* Map the buffers */
-+    buffer = mmap (0, vmbuf.size, PROT_READ | PROT_WRITE,
-+        MAP_SHARED, GST_V4LELEMENT (v4lsrc)->video_fd, 0);
-+    if (buffer == MAP_FAILED) {
-+      GST_ELEMENT_ERROR (v4lsrc, RESOURCE, OPEN_READ_WRITE, (NULL),
-+          ("Error mapping our try-out buffer: %s", g_strerror (errno)));
-+      return FALSE;
-+    }
-   }
+-  }
++     buffer = (gint8 *) g_malloc0 (sizeof (gint8) * 1024 * 768 * 3);
++     use_read = TRUE;
++   } else {
++     /* Map the buffers */
++     buffer = mmap (0, vmbuf.size, PROT_READ | PROT_WRITE,
++         MAP_SHARED, GST_V4LELEMENT (v4lsrc)->video_fd, 0);
++     if (buffer == MAP_FAILED) {
++       GST_ELEMENT_ERROR (v4lsrc, RESOURCE, OPEN_READ_WRITE, (NULL),
++           ("Error mapping our try-out buffer: %s", g_strerror (errno)));
++       return FALSE;
++     }
++   }
  
    /* now that we have a buffer, let's try out our format */
-@@ -474,6 +548,54 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
+   vmmap.width = width;
    vmmap.height = height;
    vmmap.format = palette;
    vmmap.frame = frame;
@@ -245,7 +246,7 @@
    if (ioctl (GST_V4LELEMENT (v4lsrc)->video_fd, VIDIOCMCAPTURE, &vmmap) < 0) {
      if (errno != EINVAL)        /* our format failed! */
        GST_ERROR_OBJECT (v4lsrc,
-@@ -488,7 +610,11 @@ gst_v4lsrc_try_capture (GstV4lSrc * v4ls
+@@ -488,7 +610,11 @@
      return FALSE;
    }
  
