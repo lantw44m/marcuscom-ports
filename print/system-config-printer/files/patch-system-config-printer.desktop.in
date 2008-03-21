@@ -5,7 +5,7 @@
  _Name=Printing
  _Comment=Configure printers
 -Exec=/usr/bin/system-config-printer
-+Exec=%%PREFIX%%/bin/system-config-printer
++Exec=%%PREFIX%%/sbin/system-config-printer
  Terminal=false
  Type=Application
  Icon=printer
