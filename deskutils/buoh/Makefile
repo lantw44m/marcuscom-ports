@@ -3,7 +3,7 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/deskutils/buoh/Makefile,v 1.1 2006/10/23 21:43:08 mezz Exp $
+#   $MCom: ports/deskutils/buoh/Makefile,v 1.4 2008/01/29 01:39:01 marcus Exp $
 #
 
 PORTNAME=	buoh
@@ -20,7 +20,6 @@ LIB_DEPENDS=	soup-2.2.8:${PORTSDIR}/devel/libsoup22
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui
-USE_XLIB=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
