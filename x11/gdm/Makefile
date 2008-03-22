@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.115 2008/03/14 20:09:03 mezz Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.116 2008/03/15 00:28:10 marcus Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.20.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,7 +19,8 @@ COMMENT=	GNOME 2 version of xdm display manager
 BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
 		ck-connector.0:${PORTSDIR}/sysutils/consolekit
-RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
+RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
+		xrdb:${PORTSDIR}/x11/xrdb
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
