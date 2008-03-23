@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/system-config-printer/Makefile,v 1.1 2008/03/20 16:41:57 ahze Exp $
+#   $MCom: ports/print/system-config-printer/Makefile,v 1.2 2008/03/21 22:16:13 ahze Exp $
 
 PORTNAME=	system-config-printer
 PORTVERSION=	0.7.82
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	print gnome
 MASTER_SITES=	http://cyberelk.net/tim/data/${PORTNAME}/
 

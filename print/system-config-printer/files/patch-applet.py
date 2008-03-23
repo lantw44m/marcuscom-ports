@@ -14,7 +14,7 @@
          if pid == 0:
              # Child.
 -            cmd = "/usr/bin/system-config-printer"
-+            cmd = "%%PREFIX%%/bin/system-config-printer"
++            cmd = "%%PREFIX%%/sbin/system-config-printer"
              argv.insert (0, cmd)
              os.execvp (cmd, argv)
              sys.exit (1)
