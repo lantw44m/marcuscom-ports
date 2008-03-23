@@ -2,8 +2,8 @@
 # Date created:		2006-08-07
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/pciids/Makefile,v 1.13 2008/01/09 14:00:24 ahze Exp $
-#    $MCom: ports/misc/pciids/Makefile,v 1.8 2006/10/26 16:14:10 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/misc/pciids/Makefile,v 1.10 2008/03/12 12:21:42 ahze Exp $
 
 PORTNAME=	pciids
 PORTVERSION=	20080312

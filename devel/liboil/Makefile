@@ -2,9 +2,9 @@
 # Date created:				Nov 24, 2004
 # Whom:					ijliao
 #
-# $FreeBSD: ports/devel/liboil/Makefile,v 1.31 2008/02/05 12:33:13 ahze Exp $
-#    $MCom$
-#      $Id: Makefile,v 1.6 2008-03-19 13:53:25 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/devel/liboil/Makefile,v 1.6 2008/03/19 13:53:25 ahze Exp $
+#      $Id: Makefile,v 1.7 2008-03-23 06:57:57 marcus Exp $
 
 PORTNAME=	liboil
 PORTVERSION=	0.3.14

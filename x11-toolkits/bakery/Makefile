@@ -2,8 +2,8 @@
 # Date created:				12th September 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/bakery/Makefile,v 1.46 2007/12/12 04:41:36 mezz Exp $
-#   $MCom: ports-stable/x11-toolkits/bakery/Makefile,v 1.5 2007/12/02 07:02:19 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-toolkits/bakery/Makefile,v 1.10 2008/03/17 21:10:34 kwm Exp $
 #
 
 PORTNAME=	bakery
