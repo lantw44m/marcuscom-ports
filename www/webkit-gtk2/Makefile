@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.2 2008/02/23 19:33:48 ahze Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.3 2008/02/24 22:04:46 ahze Exp $
 #
 
 PORTNAME=	webkit
@@ -34,22 +34,13 @@ CONFIGURE_ARGS=	--with-webkit-target=x11 \
 		--enable-svg \
 		--enable-video
 
-.if defined(WEBKIT_SLAVE) && ${WEBKIT_SLAVE}=="qt4"
-USE_QT_VER=	4
-QT_COMPONENTS+=	qmake_build moc_build gui xml network
-WEBKIT_PKGNAMESUFFIX=	-qt
-INSTALL_WRKSRC=	${WRKSRC}/WebKitBuild/Release
-.else
-USE_GNOME+=     gtk20
+USE_GNOME+=	gtk20
 WEBKIT_PKGNAMESUFFIX=	-gtk
 USE_GSTREAMER+=	gnomevfs
 USE_AUTOTOOLS+=	autoconf:261 automake:110 libtool:15
 MAKEFILE=	GNUmakefile
-.endif
 
 post-patch:
-.if defined(WEBKIT_SLAVE) && ${WEBKIT_SLAVE}=="qt4"
-.else
 	@${REINPLACE_CMD} -e 's|autoconf|${AUTOCONF}|g ; \
 		s|automake|${AUTOMAKE}|g ; s|aclocal|${ACLOCAL}|g ; \
 		s|autoheader|${AUTOHEADER}|g ; \
@@ -58,33 +49,16 @@ post-patch:
 			${WRKSRC}/autogen.sh
 	@${FIND} ${WRKSRC} -name GNUmakefile.am | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
-.endif
 
 pre-configure:
-.if defined(WEBKIT_SLAVE) && ${WEBKIT_SLAVE}=="qt4"
-.else
 	@(cd ${WRKSRC} && ${SH} autogen.sh)
-.endif
 
 pre-install:
-.if defined(WEBKIT_SLAVE) && ${WEBKIT_SLAVE}=="qt4"
-	@${REINPLACE_CMD} -e 's|lib/pkgconfig|libdata/pkgconfig|g' \
-		${INSTALL_WRKSRC}/WebCore/Makefile
-	@${MKDIR} ${INSTALL_WRKSRC}/libdata
-	@${CP} -Rf ${INSTALL_WRKSRC}/lib/pkgconfig ${INSTALL_WRKSRC}/libdata/
-.endif
 
 do-build:
-.if defined(WEBKIT_SLAVE) && ${WEBKIT_SLAVE}=="qt4"
-	@(cd ${WRKSRC} && ${SETENV} QMAKESPEC=${QMAKESPEC} ${PERL5} WebKitTools/Scripts/build-webkit --qt4 --qmake=${QMAKE} \
-	--qmakearg=WEBKIT_INC_DIR=${PREFIX}/include/WebKit --qmakearg=WEBKIT_LIB_DIR=${PREFIX}/lib)
-.endif
 
 post-install:
-.if defined(WEBKIT_SLAVE) && ${WEBKIT_SLAVE}=="qt4"
-.else
 # Install compat pkg-config file so we don't have to patch ports
 	${CP} ${PREFIX}/libdata/pkgconfig/webkit-1.0.pc ${PREFIX}/libdata/pkgconfig/WebKitGtk.pc
-.endif
 
 .include <bsd.port.mk>
