@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.447 2008/03/12 03:42:31 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.448 2008/03/24 14:58:13 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -721,7 +721,7 @@ EXTRACT_DEPENDS+=${${component}_EXTRACT_DEPENDS}
 BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
 #######################################################
 #
-# *** WARNING: DO NOT MERGE THIS NEXT LINE TO FREEBSD
+# *** WARNING: Remove NODEPENDS before merge in FreeBSD.
 #
 .if !defined(NODEPENDS)
 LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
