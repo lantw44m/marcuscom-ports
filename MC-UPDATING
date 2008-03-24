@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.15 2008/03/13 03:06:13 mezz Exp $
+# $MCom: ports/MC-UPDATING,v 1.16 2008/03/13 20:43:58 mezz Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -7,35 +7,3 @@ but sometimes they are unavoidable.
 You should get into the habit of checking this file for changes each
 time you update your ports collection, before attempting any port
 upgrades.
-
-20080221
-  AFFECTS: Gstreamer users.
-  AUTHOR: multimedia@FreeBSD.org
-
-  Gstreamer is updated. Due to the move of some plugins between ports. You will
-  have to rebuild the gstreamer-plugins-good port after upgrading.
-
-  Portupgrade users:
-    # portupgrade -a
-    # portupgrade -f gstreamer-plugins-good
-
-  Portmaster users:
-    # portmaster -a
-    # portmaster gstreamer-plugins-good
-
-20080102:
-  AFFECTS: All GNOME users and ports depend on gnomehier
-  AUTHOR: gnome@FreeBSD.org
-
-  GNOME has been updated to 2.22.x. You have to deinstall a few ports first
-  before use portupgrade or portmaster to upgrade your installed GNOME 2.20.x.
-
-  Portupgrade users:
-    # pkgdb -Ff
-    # pkg_deinstall -fO gnome-applets\* totem\* gnome-control-center\*
-    # portupgrade -aOW
-
-  Portmaster users:
-    # pkg_delete -f gnome-applets\* totem\* gnome-control-center\* \
-      gnome-keyring-manager\*
-    # portmaster -a
