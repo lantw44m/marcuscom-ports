@@ -3,9 +3,15 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.448 2008/03/24 14:58:13 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.449 2008/03/24 16:35:52 mezz Exp $
 #
 # Please view me with 4 column tabs!
+
+#######################################################
+#
+# *** WARNING: Disable MARCUSCOM before merge in FreeBSD!
+#
+MARCUSCOM_CVS=yes
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gnome_Pre_Include)
 
@@ -519,13 +525,11 @@ gvfs_DETECT=			${LOCALBASE}/lib/libgvfscommon.so
 gvfs_LIB_DEPENDS=		gvfscommon.0:${PORTSDIR}/devel/gvfs
 gvfs_USE_GNOME_IMPL=		glib20 gconf2
 
-########
-#### NOTE: DO NOT COMMIT THIS NEXT PART TO THE MAIN FREEBSD REPO
-########
-.if exists(${PORTSDIR}/Mk/bsd.gnome-experimental.mk)
+.if defined(MARCUSCOM_CVS)
+. if exists(${PORTSDIR}/Mk/bsd.gnome-experimental.mk)
 .include "${PORTSDIR}/Mk/bsd.gnome-experimental.mk"
+. endif
 .endif
-# end part you shouldn't commit.
 
 # End component definition section
 
@@ -712,21 +716,22 @@ ltasneededhack_PRE_PATCH=	if [ -f ${WRKDIR}/gnome-libtool ]; then \
 .ifdef _USE_GNOME
 . if ${USE_GNOME:Mltverhack}!= "" || ${USE_GNOME:Mltasneededhack}!= ""
 GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
-.endif
+. endif
 . for component in ${_USE_GNOME_ALL}
 .  if ${_USE_GNOME:M${component}}!=""
 PATCH_DEPENDS+=	${${component}_PATCH_DEPENDS}
 FETCH_DEPENDS+=	${${component}_FETCH_DEPENDS}
 EXTRACT_DEPENDS+=${${component}_EXTRACT_DEPENDS}
 BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
-#######################################################
-#
-# *** WARNING: Remove NODEPENDS before merge in FreeBSD.
-#
-.if !defined(NODEPENDS)
+.  if defined(MARCUSCOM_CVS)
+.   if !defined(NODEPENDS)
 LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
 RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
-.endif
+.   endif
+.  else
+LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
+RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
+.  endif
 
 .if !defined(WITHOUT_HACK)
 .if defined(${component}_PREFIX)
