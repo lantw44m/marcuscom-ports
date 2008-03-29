@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/tracker/Makefile,v 1.14 2008/03/24 14:24:59 ahze Exp $
+#   $MCom: ports/sysutils/tracker/Makefile,v 1.15 2008/03/29 21:47:37 ahze Exp $
 #
 
 PORTNAME=	tracker
@@ -18,7 +18,7 @@ COMMENT=	Object database, tag/metadata database, search tool and indexer
 BUILD_DEPENDS=	sqlite3-threads>=3.4.1:${PORTSDIR}/databases/sqlite3-threads
 LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3-threads \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		poppler-glib.2:${PORTSDIR}/graphics/poppler-gtk \
+		poppler-glib.3:${PORTSDIR}/graphics/poppler-gtk \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		wv-1.2.3:${PORTSDIR}/textproc/wv \
 		gmime-2.0.4:${PORTSDIR}/mail/gmime2 \
