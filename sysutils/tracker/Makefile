@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/tracker/Makefile,v 1.13 2008/03/08 19:27:12 ahze Exp $
+#   $MCom: ports/sysutils/tracker/Makefile,v 1.14 2008/03/24 14:24:59 ahze Exp $
 #
 
 PORTNAME=	tracker
@@ -18,14 +18,15 @@ COMMENT=	Object database, tag/metadata database, search tool and indexer
 BUILD_DEPENDS=	sqlite3-threads>=3.4.1:${PORTSDIR}/databases/sqlite3-threads
 LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3-threads \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		poppler-glib.3:${PORTSDIR}/graphics/poppler-gtk \
+		poppler-glib.2:${PORTSDIR}/graphics/poppler-gtk \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		wv-1.2.3:${PORTSDIR}/textproc/wv \
 		gmime-2.0.4:${PORTSDIR}/mail/gmime2 \
 		qdbm.14:${PORTSDIR}/databases/qdbm \
 		exempi.3:${PORTSDIR}/textproc/exempi
 RUN_DEPENDS=	${LOCALBASE}/lib/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
-		xdg-desktop-icon:${PORTSDIR}/devel/xdg-utils
+		xdg-desktop-icon:${PORTSDIR}/devel/xdg-utils \
+		pdftotext:${PORTSDIR}/graphics/poppler-utils
 
 USE_BZIP2=	yes
 USE_FAM=	yes
