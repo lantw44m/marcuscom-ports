@@ -2,13 +2,13 @@
 # Date created:		21 May 2002
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome2/Makefile,v 1.144 2008/03/24 03:50:30 marcus Exp $
-#   $MCom: ports/x11/gnome2/Makefile,v 1.236 2008/03/15 18:40:17 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/gnome2/Makefile,v 1.238 2008/03/24 14:59:59 kwm Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.22.0
-PORTREVISION?=	1
+PORTREVISION?=	3
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -70,7 +70,6 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		vinagre:${PORTSDIR}/net/vinagre \
 		cheese:${PORTSDIR}/multimedia/cheese \
 		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info
-#		${LOCALBASE}/libexec/fast-user-switch-applet:${PORTSDIR}/x11/fast-user-switch-applet \
 
 NO_BUILD=	yes
 
