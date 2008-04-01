@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/www/webkit-gtk2/Makefile,v 1.2 2008/03/31 10:33:05 ahze Exp $
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.8 2008/04/01 19:04:47 ahze Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.9 2008/04/01 19:10:19 ahze Exp $
 #
 
 PORTNAME=	webkit
@@ -38,7 +38,6 @@ MAKEFILE=	GNUmakefile
 
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins
 _BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
-_BROWSER_PLUGINS_DIR:=	${_BROWSER_PLUGINS_DIR:S|"",||}
 
 .include <bsd.port.pre.mk>
 
