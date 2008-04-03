@@ -1,9 +1,9 @@
-[B# New ports collection makefile for:	cairo
+# New ports collection makefile for:	cairo
 # Date created:		2004-10-06
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.71 2008/03/30 02:12:51 marcus Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.72 2008/04/03 14:57:19 ahze Exp $
 #
 
 PORTNAME=	cairo
