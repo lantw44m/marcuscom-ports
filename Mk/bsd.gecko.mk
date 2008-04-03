@@ -5,7 +5,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/Mk/bsd.gecko.mk,v 1.1 2008/04/03 16:59:09 ahze Exp $
+#   $MCom: ports/Mk/bsd.gecko.mk,v 1.2 2008/04/03 18:18:21 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -436,12 +436,6 @@ MOZ_SED_ARGS+=	-e's|@CPPFLAGS@|${CPPFLAGS}|g'		\
 		-e 's|%%MOZILLA_BIN%%|${MOZILLA_BIN}|g'	\
 		-e 's|%%MOZDIR%%|${PREFIX}/lib/${MOZILLA}|g'
 MOZCONFIG_SED?= ${SED} ${MOZ_SED_ARGS}
-
-.if ${OSVERSION} >= 700000 || exists(/usr/lib/libbz2_p.a)
-LIB_BZ2=	-lbz2_p
-.else
-LIB_BZ2=	-lbz2
-.endif
 
 .else # bsd.port.post.mk
 
