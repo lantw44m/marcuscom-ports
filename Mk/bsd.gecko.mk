@@ -5,7 +5,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/Mk/bsd.gecko.mk,v 1.1 2008/04/03 16:59:09 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -17,7 +17,7 @@
 
 .if defined(USE_GECKO) && ${USE_GECKO}!="gecko"
 
-.if defined(_POSTMKINCLUDED) && !defined(Gecko_Pre_Include)
+.if !defined(Gecko_Pre_Include)
 # Please make sure all changes to this file are passed through the maintainer.
 # Do not commit them yourself (unless of course you're the Port's Wraith ;).
 Gecko_Include_MAINTAINER=		gnome@FreeBSD.org
@@ -258,7 +258,6 @@ PKGDEINSTALL_INC?=	${MASTER_MOZDIR}/pkg-deinstall.in
 EXTRACT_AFTER_ARGS?=	| ${TAR} -xf - --exclude */CVS/*	\
 			--exclude */macbuild/*			\
 			--exclude */package/*			\
-			--exclude mozilla/dbm			\
 			--exclude mozilla/gc/boehm
 
 JPI_LIST?=\
@@ -292,11 +291,13 @@ _${option}=	${TRUE}
 .endfor
 
 # Standard depends
-_ALL_DEPENDS=	cairo jpeg nspr nss png xft zip
+_ALL_DEPENDS=	cairo dbm jpeg nspr nss png xft zip
 
 cairo_LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 cairo_MOZ_OPTIONS=	--enable-system-cairo
 cairo_EXTRACT_AFTER_ARGS=	--exclude mozilla/gfx/cairo
+
+dbm_EXTRACT_AFTER_ARGS=		--exclude mozilla/dbm
 
 jpeg_LIB_DEPENDS=	jpeg.9:${PORTSDIR}/graphics/jpeg
 jpeg_MOZ_OPTIONS=	--with-system-jpeg=${LOCALBASE}
