@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.97 2008/03/15 20:08:24 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.99 2008/03/24 14:24:58 ahze Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	2.22.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +17,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 multi-format document viewer
 
 LIB_DEPENDS=	poppler-glib.3:${PORTSDIR}/graphics/poppler-gtk \
-		spectre.1:${PORTSDIR}/print/libspectre
+		spectre.1:${PORTSDIR}/print/libspectre \
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
@@ -41,16 +42,11 @@ MAN1=		evince.1
 OPTIONS=	DVI		"Enable DVI viewer support"		off \
 		T1LIB		"Enable T1LIB for TYPE1 fonts to DVI (Enables DVI)"	off \
 		NAUTILUS	"Enable Nautilus plugin"		on  \
-		DBUS		"Enable D-BUS support"			on \
 		COMICS		"Enable comic book archives support"	on \
 		IMPRESS		"Enable Impress presentations support"	off \
 		DJVU		"Enable DJVU support"			off
 
 .include <bsd.port.pre.mk>
-
-.if defined(PACKAGE_BUILDING) || exists(${LOCALBASE}/lib/libdbus-glib-1.so)
-WITH_DBUS=	yes
-.endif
 
 .if defined(WITH_DVI) || defined(WITH_T1LIB) || exists(${LOCALBASE}/lib/libkpathsea.a)
 BUILD_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
@@ -97,10 +93,6 @@ PLIST_SUB+=		DJVU=""
 .else
 CONFIGURE_ARGS+=	--disable-djvu
 PLIST_SUB+=		DJVU="@comment "
-.endif
-
-.if !defined(WITHOUT_DBUS)
-LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 .endif
 
 .if !defined(WITHOUT_COMICS)
