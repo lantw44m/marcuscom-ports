@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/www/webkit-gtk2/Makefile,v 1.2 2008/03/31 10:33:05 ahze Exp $
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.9 2008/04/01 19:10:19 ahze Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.10 2008/04/01 19:15:32 ahze Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	0.0.31436
+PORTVERSION=	0.0.31623
 CATEGORIES=	www
 MASTER_SITES=	http://nightly.webkit.org/files/trunk/src/
 PKGNAMESUFFIX=	-gtk2
@@ -32,8 +32,9 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-webkit-target=x11 \
 		--enable-icon-database \
-		--enable-video
-#		--enable-svg
+		--enable-video \
+		--enable-svg \
+		--enable-svg-fonts
 MAKEFILE=	GNUmakefile
 
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins
