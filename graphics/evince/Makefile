@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/evince/Makefile,v 1.99 2008/03/24 14:24:58 ahze Exp $
+#   $MCom: ports/graphics/evince/Makefile,v 1.100 2008/04/04 20:07:05 ahze Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	2.22.0
-PORTREVISION=	5
+PORTVERSION=	2.22.1
+PORTREVISION=	1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -75,8 +75,10 @@ PLIST_SUB+=		NAUTILUS="@comment "
 
 .if defined(WITH_IMPRESS)
 CONFIGURE_ARGS+=	--enable-impress
+PLIST_SUB+=		IMPRESS=""
 .else
 CONFIGURE_ARGS+=	--disable-impress
+PLIST_SUB+=		IMPRESS="@comment "
 .endif
 
 .if exists(${LOCALBASE}/bin/djview)
