@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports-stable/graphics/gimp-app/Makefile,v 1.1 2007/12/02 18:43:48 ahze Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.20 2008/03/24 14:24:58 ahze Exp $
 #
 
 PORTNAME=	gimp-app
@@ -33,6 +33,8 @@ LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
 		jpeg.9:${PORTSDIR}/graphics/jpeg \
 		tiff.4:${PORTSDIR}/graphics/tiff \
 		lcms.1:${PORTSDIR}/graphics/lcms
+
+CONFLICTS=	gimp-app-devel-[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
