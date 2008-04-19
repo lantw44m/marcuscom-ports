@@ -1,3 +1,2 @@
 USE_GECKO=gecko
 .include "${PORTSDIR}/Mk/bsd.gecko.mk"
-.warning This file has now been moved to ${PORTSDIR}/Mk/bsd.gecko.mk please use USE_GECKO=gecko
