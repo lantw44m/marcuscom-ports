@@ -7,12 +7,15 @@
 
 PORTNAME=	pixman
 PORTVERSION=	0.10.0
+PORTREVISION=	1
 CATEGORIES=	x11
 
 MAINTAINER=	x11@FreeBSD.org
 COMMENT=	Low-level pixel manipulation library
 
 XORG_CAT=	lib
+USE_AUTOTOOLS=	libtool:15
+USE_GNOME=	ltverhack:9
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|gtk+-2\.0|disable-gtk|g' \
