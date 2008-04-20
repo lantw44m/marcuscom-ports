@@ -5,7 +5,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/Mk/bsd.gecko.mk,v 1.2 2008/04/03 18:18:21 ahze Exp $
+#   $MCom: ports/Mk/bsd.gecko.mk,v 1.3 2008/04/03 18:48:11 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -267,9 +267,7 @@ JPI_LIST?=\
 MOZ_PKGCONFIG_FILES?=	${MOZILLA}-gtkmozembed ${MOZILLA}-js \
 			${MOZILLA}-xpcom ${MOZILLA}-plugin
 
-CPPFLAGS+=		-I${LOCALBASE}/include/nss -I${LOCALBASE}/include/nss/nss
 CFLAGS+=		${PTHREAD_CFLAGS}
-LDFLAGS+=		-L${LOCALBASE}/lib/nss -Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}
 LIBS+=			${PTHREAD_LIBS} -L${LOCALBASE}/lib -liconv
 
 _USE_GECKO_OPTIONS_ALL=	java debug logging optimized_cflags
@@ -309,6 +307,9 @@ nspr_MOZ_OPTIONS=	--with-system-nspr
 nss_LIB_DEPENDS=	nss3:${PORTSDIR}/security/nss
 nss_EXTRACT_AFTER_ARGS=	--exclude mozilla/security/nss
 nss_MOZ_OPTIONS=	--with-system-nss
+nss_CPPFLAGS+=		-I${LOCALBASE}/include/nss -I${LOCALBASE}/include/nss/nss
+nss_LDFLAGS+=		-L${LOCALBASE}/lib/nss -Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}
+
 
 png_LIB_DEPENDS=	png.5:${PORTSDIR}/graphics/png
 png_MOZ_OPTIONS=	--with-system-png=${LOCALBASE}
@@ -327,6 +328,8 @@ LIB_DEPENDS+=	${${dep}_LIB_DEPENDS}
 RUN_DEPENDS+=	${${dep}_DEPENDS}
 MOZ_OPTIONS+=	${${dep}_MOZ_OPTIONS}
 EXTRACT_AFTER_ARGS+=	${${dep}_EXTRACT_AFTER_ARGS}
+CPPFLAGS+=	${${dep}_CPPFLAGS}
+LDFLAGS+=	${${dep}_LDFLAGS}
 .endif
 .endfor
 
