@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.75 2008/04/13 16:44:59 ahze Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.76 2008/04/19 14:28:29 ahze Exp $
 #
 
 PORTNAME=	cairo
@@ -31,7 +31,7 @@ USE_GNOME=	gnometarget gnomehack ltverhack referencehack
 USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
 
-CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${X11BASE}/include" \
+CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS}" \
 		LDFLAGS="${PTHREAD_LIBS}"
 
 .if defined(WITHOUT_X11)

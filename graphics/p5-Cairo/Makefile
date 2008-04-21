@@ -3,15 +3,14 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/graphics/p5-Cairo/Makefile,v 1.15 2008/03/25 14:38:25 ahze Exp $
-#    $MCom: ports/graphics/p5-Cairo/Makefile,v 1.8 2007/02/16 18:14:25 mezz Exp $
+#    $MCom: ports/graphics/p5-Cairo/Makefile,v 1.10 2008/03/30 02:13:35 marcus Exp $
 #
 
 PORTNAME=	Cairo
 PORTVERSION=	1.053
 PORTREVISION=	2
 CATEGORIES=	graphics perl5
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE}
-MASTER_SITE_SUBDIR=	gtk2-perl
+MASTER_SITES=	SF/gtk2-perl
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	ahze@FreeBSD.org

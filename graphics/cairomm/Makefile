@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairomm/Makefile,v 1.7 2008/03/21 21:48:49 kwm Exp $
+#   $MCom: ports/graphics/cairomm/Makefile,v 1.9 2008/03/24 15:59:24 ahze Exp $
 #
 
 PORTNAME=	cairomm
@@ -22,8 +22,8 @@ USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnometarget ltverhack
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib -L${X11BASE}/lib" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib" \
 		AUTOMAKE="${TRUE}" AUTOCONF="${TRUE}" DOXYGEN="${TRUE}"
 
 .if defined(NOPORTDOCS)

@@ -3,12 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.20 2008/03/24 14:24:58 ahze Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.21 2008/04/15 18:36:35 ahze Exp $
 #
 
 PORTNAME=	gimp-app
 DISTVERSION=	2.4.5
-PORTREVISION?=	1
+PORTREVISION?=	2
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -38,7 +38,7 @@ CONFLICTS=	gimp-app-devel-[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_XPM=	yes
+USE_XORG=	xpm xmu xext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME+=	gnomehack intltool intlhack gtk20 libartlgpl2 ltverhack desktopfileutils
