@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.102 2008/03/16 06:11:13 mezz Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.104 2008/04/08 21:45:50 ahze Exp $
 #
 
 PORTNAME=	totem
 PORTVERSION=	2.23.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -26,7 +26,6 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 USE_PYTHON=	yes
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_XLIB=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils \
 		nautiluscdburner ltverhack pygtk2
 GNOME_DESKTOP_VERSION=2

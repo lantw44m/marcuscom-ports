@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.172 2008/04/07 13:45:59 ahze Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.173 2008/04/07 17:34:49 ahze Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	2.22.1.1
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -26,7 +26,6 @@ USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_XLIB=	yes
 USE_PYTHON=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop desktopfileutils

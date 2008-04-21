@@ -3,12 +3,12 @@
 # Whom:			michael johnson <ahze@ahze.net>
 #
 # $FreeBSD: ports/www/kazehakase/Makefile,v 1.63 2008/03/30 03:49:18 ahze Exp $
-#   $MCom: ports/www/kazehakase/Makefile,v 1.9 2007/10/24 16:17:14 ahze Exp $
+#   $MCom: ports/www/kazehakase/Makefile,v 1.11 2008/04/01 20:00:26 ahze Exp $
 #
 
 PORTNAME=	kazehakase
 PORTVERSION=	0.5.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
 MASTER_SITE_SUBDIR=	${PORTNAME}/30219
@@ -18,7 +18,6 @@ COMMENT=	Kazehakase is a browser with gecko engine like Epiphany or Galeon
 
 LIB_DEPENDS=	gnutls.26:${PORTSDIR}/security/gnutls
 
-USE_X_PREFIX=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gtk20
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
@@ -26,7 +25,7 @@ USE_GECKO=	firefox mozilla seamonkey xulrunner firefox15<->seamonkey
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gecko_engine=${GECKO}
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${X11BASE}/include ${PTHREAD_CFLAGS}" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 MAN1=		kazehakase.1
 OPTIONS=	WEBKIT "Webkit Backend (along with Gecko)" On

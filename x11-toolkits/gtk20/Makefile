@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.124 2008/03/24 14:57:11 ahze Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.125 2008/04/04 18:41:57 ahze Exp $
 #
 
 PORTNAME=	gtk
 PORTVERSION=	2.13.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
 		ftp://ftp.gtk.org/pub/gtk/%SUBDIR%/ \
@@ -42,11 +42,7 @@ USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack atk pango ltverhack
 USE_GETTEXT=	yes
-USE_XORG=	dmx fontenc fontutil ice libfs oldx sm x11 xau xaw xaw6 xaw7 \
-		xaw8 xbitmaps xcomposite xcursor xdamage xdmcp xevie xext \
-		xfixes xfont xfontcache xft xi xinerama xkbfile xkbui xmu xmuu \
-		xp xpm xprintapputil xprintutil xrandr xrender xres xscrnsaver \
-		xt xtrans xtrap xtst xv xvmc xxf86dga xxf86misc xxf86vm
+USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes
 CONFIGURE_ARGS=	--enable-static --with-xinput=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include" \

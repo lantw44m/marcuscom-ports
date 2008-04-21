@@ -5,7 +5,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/Mk/bsd.gecko.mk,v 1.3 2008/04/03 18:48:11 ahze Exp $
+#   $MCom: ports/Mk/bsd.gecko.mk,v 1.4 2008/04/20 18:36:16 ahze Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -229,7 +229,8 @@ MOZ_RPATH?=	${MOZILLA}
 USE_GNOME+=	gtk20 libidl desktopfileutils
 USE_ICONV=	yes
 USE_PERL5_BUILD=yes
-USE_XLIB=	yes
+USE_XORG=	printproto sm xt xi xext x11 xinerama \
+		ice xproto
 
 MOZILLA_SUFX?=	none
 WRKSRC?=	${WRKDIR}/mozilla
@@ -420,7 +421,6 @@ MOZ_SED_ARGS+=	-e's|@CPPFLAGS@|${CPPFLAGS}|g'		\
 		-e 's|@CFLAGS@|${CFLAGS}|g'		\
 		-e 's|@LDFLAGS@|${LDFLAGS}|g'		\
 		-e 's|@LIBS@|${LIBS}|g'			\
-		-e 's|@X11BASE@|${LOCALBASE}|g'		\
 		-e 's|@LOCALBASE@|${LOCALBASE}|g'	\
 		-e 's|@FAKEDIR@|${FAKEDIR}|g'		\
 		-e 's|@PERL@|${PERL5}|g'			\
@@ -430,7 +430,6 @@ MOZ_SED_ARGS+=	-e's|@CPPFLAGS@|${CPPFLAGS}|g'		\
 		-e 's|%%CFLAGS%%|${CFLAGS}|g'		\
 		-e 's|%%LDFLAGS%%|${LDFLAGS}|g'		\
 		-e 's|%%LIBS%%|${LIBS}|g'		\
-		-e 's|%%X11BASE%%|${LOCALBASE}|g'		\
 		-e 's|%%LOCALBASE%%|${LOCALBASE}|g'	\
 		-e 's|%%FAKEDIR%%|${FAKEDIR}|g'		\
 		-e 's|%%PERL%%|${PERL5}|g'		\

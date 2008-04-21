@@ -3,9 +3,9 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/www/epiphany-webkit/Makefile,v 1.4 2008/04/01 18:55:51 ahze Exp $
+#    $MCom: ports/www/epiphany-webkit/Makefile,v 1.5 2008/04/07 13:46:00 ahze Exp $
 
-PORTVERSION=	1
+PORTVERSION=	2
 PKGNAMESUFFIX=	-webkit
 
 COMMENT=	 An extremely lightweight GNOME browser using the WebKit engine

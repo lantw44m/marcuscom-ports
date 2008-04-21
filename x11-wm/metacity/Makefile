@@ -3,11 +3,12 @@
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-wm/metacity/Makefile,v 1.126 2008/03/24 10:21:01 kwm Exp $
 #
 
 PORTNAME=	metacity
 PORTVERSION=	2.23.3
+PORTREVISION=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -20,7 +21,7 @@ LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 
 CONFLICTS=	expocity-[0-9]*
 USE_BZIP2=	yes
-USE_XORG=	xcomposite xcursor ice xinerama xext xrandr sm
+USE_XORG=	x11 xcomposite xdamage
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
