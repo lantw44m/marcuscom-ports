@@ -1,10 +1,17 @@
 bin/gnome-session
-bin/gnome-session-properties
-bin/gnome-session-remove
-bin/gnome-session-save
 bin/gnome-wm
+lib/gnome-session/helpers/at-spi-registryd-wrapper
+lib/gnome-session/helpers/gnome-keyring-daemon-wrapper
+lib/gnome-session/helpers/gnome-login-sound
+lib/gnome-session/helpers/gnome-session-splash
+lib/gnome-session/helpers/gnome-settings-daemon-helper
 share/applications/session-properties.desktop
-share/gnome/default.session
+share/gnome/default-session/at-spi-registryd-wrapper.desktop
+share/gnome/default-session/gnome-keyring-daemon-wrapper.desktop
+share/gnome/default-session/gnome-login-sound.desktop
+share/gnome/default-session/gnome-session-splash.desktop
+share/gnome/default-session/gnome-settings-daemon-helper.desktop
+share/gnome/shutdown/gnome-logout-sound.sh
 share/icons/hicolor/16x16/apps/session-properties.png
 share/icons/hicolor/22x22/apps/session-properties.png
 share/icons/hicolor/24x24/apps/session-properties.png
@@ -119,7 +126,6 @@ share/pixmaps/splash/tremulant-blood-2.12.png
 share/pixmaps/splash/tremulant-brushed-metal-2.12.png
 share/xsessions/gnome.desktop
 @dirrmtry share/xsessions
-@dirrmtry share/applications
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -154,3 +160,8 @@ share/xsessions/gnome.desktop
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrm share/gnome/shutdown
+@dirrm share/gnome/default-session
+@dirrmtry share/applications
+@dirrm lib/gnome-session/helpers
+@dirrm lib/gnome-session
