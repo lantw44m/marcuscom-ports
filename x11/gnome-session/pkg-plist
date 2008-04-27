@@ -161,7 +161,6 @@ share/xsessions/gnome.desktop
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
 @dirrm share/gnome/shutdown
-@dirrm share/gnome/autostart
 @dirrmtry share/applications
 @dirrm lib/gnome-session/helpers
 @dirrm lib/gnome-session
