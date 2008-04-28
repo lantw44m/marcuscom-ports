@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libxklavier/Makefile,v 1.39 2008/03/20 16:07:22 mezz Exp $
+#   $MCom: ports/x11/libxklavier/Makefile,v 1.41 2008/04/28 05:53:39 marcus Exp $
 #
 
 PORTNAME=	libxklavier
 PORTVERSION=	3.6
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	SF
@@ -16,7 +17,9 @@ MASTER_SITE_SUBDIR=	gswitchit
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An utility library to make XKB stuff easier
 
-RUN_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+RUN_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp \
+    		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 USE_XORG=	x11 xkbfile
 USE_GMAKE=	yes
