@@ -1,0 +1,86 @@
+--- configure.orig	2008-04-28 13:26:14.000000000 -0400
++++ configure	2008-04-28 13:26:14.000000000 -0400
+@@ -25946,7 +25946,7 @@ _ACEOF
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${datadir}/locale"`
++  ac_define_dir=`eval echo "${datadir}/locale"`
+   ac_define_dir=`eval echo $ac_define_dir`
+   GNOMELOCALEDIR="$ac_define_dir"
+ 
+@@ -27893,8 +27893,8 @@ fi
+ 
+ 	   ;;
+        # list of supported OS cores that do not use libapm
+-       i386-*-freebsd*|*-*-netbsd*|*-*-openbsd*|*-*kfreebsd*-gnu)
+-          if  -n "${OS_SYS}" ; then
++       i386-*-freebsd*|amd64-*-freebsd*|*-*-netbsd*|*-*-openbsd*|*-*kfreebsd*-gnu)
++          if test -n "${OS_SYS}" ; then
+ 	       ACPIINC="-I${OS_SYS}"
+ 	   else
+ 	       ACPIINC="-I/usr/src/sys"
+@@ -28815,6 +28815,9 @@ if test x$disable_cpufreq = xno; then
+       *linux*)
+          build_cpufreq_applet=yes
+ 	 ;;
++      i386-*-freebsd*|amd64-*-freebsd*)
++         build_cpufreq_applet=yes
++	 ;;
+       *)
+          { echo "$as_me:$LINENO: WARNING: ${host} is not supported by cpufreq applet, not building" >&5
+ echo "$as_me: WARNING: ${host} is not supported by cpufreq applet, not building" >&2;}
+@@ -29383,7 +29386,7 @@ builderdir="${pkgdatadir}/builder"
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${iconsdir}"`
++  ac_define_dir=`eval echo "${iconsdir}"`
+   ac_define_dir=`eval echo $ac_define_dir`
+   GNOME_ICONDIR="$ac_define_dir"
+ 
+@@ -29396,7 +29399,7 @@ _ACEOF
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${pixmapsdir}"`
++  ac_define_dir=`eval echo "${pixmapsdir}"`
+   ac_define_dir=`eval echo $ac_define_dir`
+   GNOME_PIXMAPSDIR="$ac_define_dir"
+ 
+@@ -29422,7 +29425,7 @@ _ACEOF
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${datadir}"`
++  ac_define_dir=`eval echo "${datadir}"`
+   ac_define_dir=`eval echo $ac_define_dir`
+   DATADIR="$ac_define_dir"
+ 
+@@ -29435,7 +29438,7 @@ _ACEOF
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${sysconfdir}"`
++  ac_define_dir=`eval echo "${sysconfdir}"`
+   ac_define_dir=`eval echo $ac_define_dir`
+   SYSCONFDIR="$ac_define_dir"
+ 
+@@ -29448,7 +29451,7 @@ _ACEOF
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"${libdir}"`
++  ac_define_dir=`eval echo "${libdir}"`
+   ac_define_dir=`eval echo $ac_define_dir`
+   LIBDIR="$ac_define_dir"
+ 
+@@ -29461,7 +29464,7 @@ _ACEOF
+ 
+   test "x$prefix" = xNONE && prefix="$ac_default_prefix"
+   test "x$exec_prefix" = xNONE && exec_prefix='${prefix}'
+-  ac_define_dir=`eval echo $"$prefix"`
++  ac_define_dir=`eval echo "$prefix"`
+   ac_define_dir=`eval echo $ac_define_dir`
+   PREFIX="$ac_define_dir"
+ 
