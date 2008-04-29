@@ -1810,6 +1810,7 @@ share/xmodmap/xmodmap.yu
 @dirrm %%DATADIR%%/geyes/Bloodshot
 @dirrm %%DATADIR%%/geyes/Bizarre
 @dirrm %%DATADIR%%/geyes
+@dirrm %%DATADIR%%/builder
 @dirrm %%DATADIR%%
 %%COMMANDER%%@dirrmtry libexec/gnome-applets
 %%PYTHON%%@dirrm %%PYTHON_SITELIBDIR%%/invest
