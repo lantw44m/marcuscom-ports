@@ -3,7 +3,7 @@
 # Whom:			michael johnson <ahze@ahze.net>
 #
 # $FreeBSD: ports/www/kazehakase/Makefile,v 1.63 2008/03/30 03:49:18 ahze Exp $
-#   $MCom: ports/www/kazehakase/Makefile,v 1.11 2008/04/01 20:00:26 ahze Exp $
+#   $MCom: ports/www/kazehakase/Makefile,v 1.12 2008/04/21 00:10:59 marcus Exp $
 #
 
 PORTNAME=	kazehakase
@@ -21,7 +21,7 @@ LIB_DEPENDS=	gnutls.26:${PORTSDIR}/security/gnutls
 USE_GNOME=	gnomehack intlhack gnomeprefix gtk20
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GECKO=	firefox mozilla seamonkey xulrunner firefox15<->seamonkey
+USE_GECKO=	firefox mozilla seamonkey xulrunner
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gecko_engine=${GECKO}

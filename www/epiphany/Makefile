@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.175 2008/04/27 18:18:42 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.176 2008/04/27 19:23:50 marcus Exp $
 #
 
 PORTNAME=	epiphany
@@ -60,7 +60,7 @@ EXTRA_LIBS+=	`pkg-config --libs WebKitGtk`
 CONFLICTS=	epiphany-[1-9]*
 PLIST_SUB+=	GECKO="@comment "
 .else
-USE_GECKO+=	firefox firefox15<->firefox xulrunner
+USE_GECKO+=	firefox xulrunner
 CONFIGURE_ARGS+=	--with-gecko=${GECKO} \
 			--with-engine=mozilla
 .include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
