@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/tracker-client/Makefile,v 1.1 2008/04/04 14:44:57 ahze Exp $
+#   $MCom: ports/sysutils/tracker-client/Makefile,v 1.2 2008/04/07 21:20:56 ahze Exp $
 #
 
 PORTNAME=	tracker
@@ -49,7 +49,7 @@ CONFIGURE_ARGS=	--enable-video-extractor=gstreamer \
 .include <bsd.port.pre.mk>
 
 .if defined(TRACKER_SLAVE)
-LIB_DEPENDS+=	trackerclient:${PORTSDIR}/sysutils/tracker
+LIB_DEPENDS+=	trackerclient:${PORTSDIR}/sysutils/tracker-client
 . if ${TRACKER_SLAVE}=="gnome"
 PKGNAMESUFFIX=	-gnome
 LIB_DEPENDS+=	tracker-gtk:${PORTSDIR}/sysutils/tracker-libtrackergtk
