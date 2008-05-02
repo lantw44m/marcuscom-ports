@@ -1,3 +1,4 @@
+bin/gdm-screenshot
 bin/gdmflexiserver
 etc/dbus-1/system.d/gdm.conf
 etc/gdm/Init/Default
@@ -28,7 +29,6 @@ sbin/gdm-safe-restart
 sbin/gdm-stop
 %%DATADIR%%/gdm-a11y-preferences-dialog.glade
 %%DATADIR%%/gdm-greeter-login-window.glade
-%%DATADIR%%/gdm-user-switch-applet.glade
 share/gdm/gdb-cmd
 share/gnome-2.0/ui/GNOME_FastUserSwitchApplet.xml
 share/icons/hicolor/16x16/apps/gdm-xnest.png
@@ -59,6 +59,7 @@ share/locale/eu/LC_MESSAGES/gdm.mo
 share/locale/fa/LC_MESSAGES/gdm.mo
 share/locale/fi/LC_MESSAGES/gdm.mo
 share/locale/fr/LC_MESSAGES/gdm.mo
+share/locale/fur/LC_MESSAGES/gdm.mo
 share/locale/ga/LC_MESSAGES/gdm.mo
 share/locale/gl/LC_MESSAGES/gdm.mo
 share/locale/gu/LC_MESSAGES/gdm.mo
@@ -192,6 +193,8 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
+@dirrmtry share/locale/fur/LC_MESSAGES
+@dirrmtry share/locale/fur
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
