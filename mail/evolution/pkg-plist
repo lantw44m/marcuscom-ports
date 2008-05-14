@@ -30,6 +30,7 @@ include/evolution-%%VERSION%%/e-util/e-import.h
 include/evolution-%%VERSION%%/e-util/e-logger.h
 include/evolution-%%VERSION%%/e-util/e-menu.h
 include/evolution-%%VERSION%%/e-util/e-mktemp.h
+include/evolution-%%VERSION%%/e-util/e-plugin-ui.h
 include/evolution-%%VERSION%%/e-util/e-plugin.h
 include/evolution-%%VERSION%%/e-util/e-popup.h
 include/evolution-%%VERSION%%/e-util/e-print.h
@@ -449,7 +450,6 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-exchange-ab-subscription.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-exchange-cal-subscription.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-exchange-operations.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-exchange-tasks-subscription.xml
-lib/evolution/%%VERSION%%/plugins/org-gnome-face-ui.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-face.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-folder-permissions.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-folder-subscription.xml
