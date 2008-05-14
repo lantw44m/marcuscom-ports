@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.457 2008/05/14 02:24:39 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.458 2008/05/14 05:37:55 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -633,6 +633,7 @@ USE_GNOME+=	gtk12
 .endif
 # End of obsolete macros
 
+.if defined(USE_GNOME)
 # First of all expand all USE_GNOME_IMPL recursively
 . for component in ${_USE_GNOME_ALL}
 .  for subcomponent in ${${component}_USE_GNOME_IMPL}
