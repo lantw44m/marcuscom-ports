@@ -58,6 +58,7 @@ include/evolution-data-server-%%VERSION%%/camel/camel-mime-parser.h
 include/evolution-data-server-%%VERSION%%/camel/camel-mime-part-utils.h
 include/evolution-data-server-%%VERSION%%/camel/camel-mime-part.h
 include/evolution-data-server-%%VERSION%%/camel/camel-mime-utils.h
+include/evolution-data-server-%%VERSION%%/camel/camel-msgport.h
 include/evolution-data-server-%%VERSION%%/camel/camel-movemail.h
 include/evolution-data-server-%%VERSION%%/camel/camel-multipart-encrypted.h
 include/evolution-data-server-%%VERSION%%/camel/camel-multipart-signed.h
@@ -105,6 +106,7 @@ include/evolution-data-server-%%VERSION%%/camel/camel-tcp-stream-ssl.h
 include/evolution-data-server-%%VERSION%%/camel/camel-tcp-stream.h
 include/evolution-data-server-%%VERSION%%/camel/camel-text-index.h
 include/evolution-data-server-%%VERSION%%/camel/camel-transport.h
+include/evolution-data-server-%%VERSION%%/camel/camel-trie.h
 include/evolution-data-server-%%VERSION%%/camel/camel-types.h
 include/evolution-data-server-%%VERSION%%/camel/camel-uid-cache.h
 include/evolution-data-server-%%VERSION%%/camel/camel-url-scanner.h
@@ -162,6 +164,10 @@ include/evolution-data-server-%%VERSION%%/groupwise/e-gw-recur-utils.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-sendoptions.h
 include/evolution-data-server-%%VERSION%%/groupwise/soup-soap-message.h
 include/evolution-data-server-%%VERSION%%/groupwise/soup-soap-response.h
+include/evolution-data-server-%%VERSION%%/libebackend/e-data-server-module.h
+include/evolution-data-server-%%VERSION%%/libebackend/e-db3-utils.h
+include/evolution-data-server-%%VERSION%%/libebackend/e-dbhash.h
+include/evolution-data-server-%%VERSION%%/libebackend/e-file-cache.h
 include/evolution-data-server-%%VERSION%%/libebook/e-address-western.h
 include/evolution-data-server-%%VERSION%%/libebook/e-book-query.h
 include/evolution-data-server-%%VERSION%%/libebook/e-book-types.h
@@ -205,11 +211,7 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-account-list.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-account.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-categories.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-component-listener.h
-include/evolution-data-server-%%VERSION%%/libedataserver/e-data-server-module.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-data-server-util.h
-include/evolution-data-server-%%VERSION%%/libedataserver/e-db3-utils.h
-include/evolution-data-server-%%VERSION%%/libedataserver/e-dbhash.h
-include/evolution-data-server-%%VERSION%%/libedataserver/e-file-cache.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-flag.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-iconv.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-iterator.h
@@ -367,6 +369,10 @@ lib/libcamel-provider-%%EVO_VERSION%%.a
 lib/libcamel-provider-%%EVO_VERSION%%.la
 lib/libcamel-provider-%%EVO_VERSION%%.so
 lib/libcamel-provider-%%EVO_VERSION%%.so.12
+lib/libebackend-%%EVO_VERSION%%.a
+lib/libebackend-%%EVO_VERSION%%.la
+lib/libebackend-%%EVO_VERSION%%.so
+lib/libebackend-%%EVO_VERSION%%.so.0
 lib/libebook-%%EVO_VERSION%%.a
 lib/libebook-%%EVO_VERSION%%.la
 lib/libebook-%%EVO_VERSION%%.so
@@ -386,7 +392,7 @@ lib/libedata-cal-%%EVO_VERSION%%.so.6
 lib/libedataserver-%%EVO_VERSION%%.a
 lib/libedataserver-%%EVO_VERSION%%.la
 lib/libedataserver-%%EVO_VERSION%%.so
-lib/libedataserver-%%EVO_VERSION%%.so.9
+lib/libedataserver-%%EVO_VERSION%%.so.11
 lib/libedataserverui-%%EVO_VERSION%%.a
 lib/libedataserverui-%%EVO_VERSION%%.la
 lib/libedataserverui-%%EVO_VERSION%%.so
@@ -411,6 +417,7 @@ libdata/bonobo/servers/GNOME_Evolution_DataServer_%%EVO_VERSION%%.server
 libdata/pkgconfig/camel-%%EVO_VERSION%%.pc
 libdata/pkgconfig/camel-provider-%%EVO_VERSION%%.pc
 libdata/pkgconfig/evolution-data-server-%%EVO_VERSION%%.pc
+libdata/pkgconfig/libebackend-%%EVO_VERSION%%.pc
 libdata/pkgconfig/libebook-%%EVO_VERSION%%.pc
 libdata/pkgconfig/libecal-%%EVO_VERSION%%.pc
 libdata/pkgconfig/libedata-book-%%EVO_VERSION%%.pc
@@ -509,6 +516,20 @@ share/doc/camel/left.png
 share/doc/camel/right.png
 share/doc/camel/style.css
 share/doc/camel/up.png
+share/doc/libebackend/EFileCache.html
+share/doc/libebackend/ch01.html
+share/doc/libebackend/home.png
+share/doc/libebackend/index.html
+share/doc/libebackend/index.sgml
+share/doc/libebackend/left.png
+share/doc/libebackend/libebackend-e-data-server-module.html
+share/doc/libebackend/libebackend-e-db3-utils.html
+share/doc/libebackend/libebackend-e-dbhash.html
+share/doc/libebackend/libebackend.devhelp
+share/doc/libebackend/libebackend.devhelp2
+share/doc/libebackend/right.png
+share/doc/libebackend/style.css
+share/doc/libebackend/up.png
 share/doc/libebook/EBook.html
 share/doc/libebook/EBookListener.html
 share/doc/libebook/EBookView.html
@@ -596,7 +617,6 @@ share/doc/libedata-cal/up.png
 share/doc/libedataserver/EAccount.html
 share/doc/libedataserver/EAccountList.html
 share/doc/libedataserver/EComponentListener.html
-share/doc/libedataserver/EFileCache.html
 share/doc/libedataserver/EIterator.html
 share/doc/libedataserver/EList.html
 share/doc/libedataserver/EListIterator.html
@@ -609,6 +629,7 @@ share/doc/libedataserver/index.html
 share/doc/libedataserver/index.sgml
 share/doc/libedataserver/ix01.html
 share/doc/libedataserver/left.png
+share/doc/libedataserver/libedataserver-EFileCache.html
 share/doc/libedataserver/libedataserver-EFlag.html
 share/doc/libedataserver/libedataserver-EProxy.html
 share/doc/libedataserver/libedataserver-ESExp.html
@@ -773,6 +794,7 @@ share/pixmaps/evolution-data-server/category_time-and-expenses_16.png
 @dirrm share/doc/libedata-book
 @dirrm share/doc/libecal
 @dirrm share/doc/libebook
+@dirrm share/doc/libebackend
 @dirrm share/doc/camel
 @dirrm lib/evolution-data-server-%%EVO_VERSION%%/extensions
 @dirrm lib/evolution-data-server-%%EVO_VERSION%%/camel-providers
@@ -784,6 +806,7 @@ share/pixmaps/evolution-data-server/category_time-and-expenses_16.png
 @dirrm include/evolution-data-server-%%VERSION%%/libedata-book
 @dirrm include/evolution-data-server-%%VERSION%%/libecal
 @dirrm include/evolution-data-server-%%VERSION%%/libebook
+@dirrm include/evolution-data-server-%%VERSION%%/libebackend
 @dirrm include/evolution-data-server-%%VERSION%%/groupwise
 @dirrm include/evolution-data-server-%%VERSION%%/google/gdata-google
 @dirrm include/evolution-data-server-%%VERSION%%/google/gdata
