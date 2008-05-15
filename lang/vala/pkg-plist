@@ -107,6 +107,7 @@ include/vala-1.0/vala/valacastexpression.h
 include/vala-1.0/vala/valacatchclause.h
 include/vala-1.0/vala/valacharacterliteral.h
 include/vala-1.0/vala/valaclass.h
+include/vala-1.0/vala/valaclassinstancetype.h
 include/vala-1.0/vala/valaclasstype.h
 include/vala-1.0/vala/valacfgbuilder.h
 include/vala-1.0/vala/valacodebinding.h
@@ -137,6 +138,7 @@ include/vala-1.0/vala/valaenum.h
 include/vala-1.0/vala/valaenumvalue.h
 include/vala-1.0/vala/valaexpression.h
 include/vala-1.0/vala/valaexpressionstatement.h
+include/vala-1.0/vala/valafieldprototype.h
 include/vala-1.0/vala/valafield.h
 include/vala-1.0/vala/valaforeachstatement.h
 include/vala-1.0/vala/valaformalparameter.h
@@ -147,6 +149,7 @@ include/vala-1.0/vala/valainstancecast.h
 include/vala-1.0/vala/valaintegerliteral.h
 include/vala-1.0/vala/valaintegertype.h
 include/vala-1.0/vala/valainterface.h
+include/vala-1.0/vala/valainterfaceinstancetype.h
 include/vala-1.0/vala/valainterfacetype.h
 include/vala-1.0/vala/valainterfacewriter.h
 include/vala-1.0/vala/valainvalidtype.h
@@ -220,6 +223,7 @@ lib/libvala.so.0
 %%VAPIGEN%%lib/vala/gapi2xml.pl
 %%VAPIGEN%%lib/vala/gapi_pp.pl
 libdata/pkgconfig/vala-1.0.pc
+share/devhelp/books/vala/attributes.html
 share/devhelp/books/vala/classes.html
 share/devhelp/books/vala/default.css
 share/devhelp/books/vala/delegates.html
@@ -228,6 +232,7 @@ share/devhelp/books/vala/exceptions.html
 share/devhelp/books/vala/expressions.html
 share/devhelp/books/vala/index.html
 share/devhelp/books/vala/interfaces.html
+share/devhelp/books/vala/methods.html
 share/devhelp/books/vala/namespaces.html
 share/devhelp/books/vala/overview.html
 share/devhelp/books/vala/statements.html
@@ -250,12 +255,14 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/gio-unix-2.0.deps
 %%DATADIR%%/vapi/gio-unix-2.0.vapi
 %%DATADIR%%/vapi/glib-2.0.vapi
+%%DATADIR%%/vapi/gmodule-2.0.vapi
 %%DATADIR%%/vapi/gnome-desktop-2.0.deps
 %%DATADIR%%/vapi/gnome-desktop-2.0.vapi
 %%DATADIR%%/vapi/gnome-keyring-1.vapi
 %%DATADIR%%/vapi/gnome-vfs-2.0.vapi
 %%DATADIR%%/vapi/goocanvas.deps
 %%DATADIR%%/vapi/goocanvas.vapi
+%%DATADIR%%/vapi/gstreamer-0.10.deps
 %%DATADIR%%/vapi/gstreamer-0.10.vapi
 %%DATADIR%%/vapi/gstreamer-audio-0.10.deps
 %%DATADIR%%/vapi/gstreamer-audio-0.10.vapi
