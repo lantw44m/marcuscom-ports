@@ -1,6 +1,7 @@
 bin/cheese
 libexec/cheese/cheese-bugreport.sh
 share/applications/cheese.desktop
+%%DATADIR%%/cheese-prefs.ui
 %%DATADIR%%/cheese-ui.xml
 %%DATADIR%%/cheese.ui
 %%DATADIR%%/effects/Hulk.png
@@ -15,6 +16,12 @@ share/applications/cheese.desktop
 %%DATADIR%%/effects/videoflip_h.png
 %%DATADIR%%/effects/videoflip_v.png
 %%DATADIR%%/effects/warptv.png
+%%DATADIR%%/icons/hicolor/16x16/actions/browse-webcam-effects.png
+%%DATADIR%%/icons/hicolor/22x22/actions/browse-webcam-effects.png
+%%DATADIR%%/icons/hicolor/24x24/actions/browse-webcam-effects.png
+%%DATADIR%%/icons/hicolor/32x32/actions/browse-webcam-effects.png
+%%DATADIR%%/icons/hicolor/48x48/actions/browse-webcam-effects.png
+%%DATADIR%%/icons/hicolor/scalable/actions/browse-webcam-effects.svg
 %%DATADIR%%/pixmaps/camera-icon.svg
 %%DATADIR%%/pixmaps/thumbnail-frame.png
 %%DATADIR%%/sounds/shutter0.ogg
@@ -49,7 +56,6 @@ share/gnome/help/cheese/ru/figures/cheese-screenshot.jpg
 share/gnome/help/cheese/sv/cheese.xml
 share/gnome/help/cheese/sv/figures/cheese-effects-screenshot.jpg
 share/gnome/help/cheese/sv/figures/cheese-screenshot.jpg
-share/icons/hicolor/16x16/actions/effects.png
 share/icons/hicolor/16x16/apps/cheese.png
 share/icons/hicolor/22x22/apps/cheese.png
 share/icons/hicolor/24x24/apps/cheese.png
@@ -126,6 +132,20 @@ share/omf/cheese/cheese-sv.omf
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrm %%DATADIR%%/sounds
 @dirrm %%DATADIR%%/pixmaps
+@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
+@dirrm %%DATADIR%%/icons/hicolor/scalable
+@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
+@dirrm %%DATADIR%%/icons/hicolor/48x48
+@dirrm %%DATADIR%%/icons/hicolor/32x32/actions
+@dirrm %%DATADIR%%/icons/hicolor/32x32
+@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor/22x22/actions
+@dirrm %%DATADIR%%/icons/hicolor/22x22
+@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
+@dirrm %%DATADIR%%/icons/hicolor/16x16
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/effects
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
