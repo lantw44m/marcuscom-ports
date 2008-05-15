@@ -1,4 +1,5 @@
 bin/gnome-session
+bin/gnome-session-properties
 bin/gnome-wm
 lib/gnome-session/helpers/at-spi-registryd-wrapper
 lib/gnome-session/helpers/gnome-keyring-daemon-wrapper
@@ -6,6 +7,7 @@ lib/gnome-session/helpers/gnome-login-sound
 lib/gnome-session/helpers/gnome-session-splash
 lib/gnome-session/helpers/gnome-settings-daemon-helper
 share/applications/session-properties.desktop
+%%DATADIR%%/session-properties.glade
 share/gnome/autostart/at-spi-registryd-wrapper.desktop
 share/gnome/autostart/gnome-keyring-daemon-wrapper.desktop
 share/gnome/autostart/gnome-login-sound.desktop
@@ -161,6 +163,7 @@ share/xsessions/gnome.desktop
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
 @dirrm share/gnome/shutdown
+@dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm lib/gnome-session/helpers
 @dirrm lib/gnome-session
