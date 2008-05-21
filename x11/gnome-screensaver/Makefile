@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.83 2008/03/11 03:13:07 mezz Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.85 2008/05/15 02:34:57 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
 PORTVERSION=	2.23.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -22,7 +23,8 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomemenus libgnomekbd
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomemenus libgnomekbd \
+		gnomedesktop
 CONFIGURE_ARGS=	--with-gdm-config=${LOCALBASE}/etc/gdm/custom.conf \
 		--with-xscreensaverdir=${XSCREENSAVER_DIR} \
 		--with-xscreensaverhackdir=${LOCALBASE}/bin/xscreensaver-hacks
