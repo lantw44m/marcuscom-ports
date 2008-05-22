@@ -1520,6 +1520,7 @@ share/xmodmap/xmodmap.yu
 @dirrm share/omf/stickynotes_applet
 @dirrm share/omf/multiload
 @dirrm share/omf/mixer_applet2
+@dirrm share/omf/invest-applet
 @dirrm share/omf/gweather
 @dirrm share/omf/gswitchit
 @dirrm share/omf/geyes
