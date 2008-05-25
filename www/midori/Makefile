@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/www/midori/Makefile,v 1.1 2008/03/24 03:50:49 marcus Exp $
-#    $MCom: ports/www/midori/Makefile,v 1.5 2008/04/01 18:55:51 ahze Exp $
+#    $MCom: ports/www/midori/Makefile,v 1.6 2008/05/25 08:49:15 ahze Exp $
 
 PORTNAME=	midori
 PORTVERSION=	0.0.18
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://software.twotoasts.de/media/${PORTNAME}/
 
