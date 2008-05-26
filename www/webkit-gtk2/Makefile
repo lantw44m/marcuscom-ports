@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/www/webkit-gtk2/Makefile,v 1.2 2008/03/31 10:33:05 ahze Exp $
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.12 2008/04/07 23:08:03 ahze Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.13 2008/04/21 13:47:47 ahze Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	0.0.32284
+PORTVERSION=	0.0.34130
 CATEGORIES=	www
 MASTER_SITES=	http://nightly.webkit.org/files/trunk/src/
 PKGNAMESUFFIX=	-gtk2
@@ -39,7 +39,7 @@ CONFIGURE_ARGS=	--with-webkit-target=x11 \
 MAKEFILE=	GNUmakefile
 
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins
-_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
+#_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
 .include <bsd.port.pre.mk>
 
@@ -48,8 +48,8 @@ IGNORE=	Does not build
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|%%_BROWSER_PLUGINS_DIR%%|${_BROWSER_PLUGINS_DIR}|' \
-		${WRKSRC}/WebCore/plugins/gtk/PluginDatabaseGtk.cpp
+	@${REINPLACE_CMD} -e 's|%%BROWSER_PLUGINS_DIR%%|${BROWSER_PLUGINS_DIR}|' \
+		${WRKSRC}/WebCore/plugins/PluginDatabase.cpp
 	@${REINPLACE_CMD} -e 's|autoconf|${AUTOCONF}|g ; \
 		s|automake|${AUTOMAKE}|g ; s|aclocal|${ACLOCAL}|g ; \
 		s|autoheader|${AUTOHEADER}|g ; \
