@@ -2015,6 +2015,10 @@ PLIST_SUB+=		PERL_VERSION=${PERL_VERSION} \
 .include "${PORTSDIR}/Mk/bsd.xfce.mk"
 .endif
 
+.if defined(USE_CMAKE)
+.include "${PORTSDIR}/Mk/bsd.cmake.mk"
+.endif
+
 .if exists(${PORTSDIR}/../Makefile.inc)
 .include "${PORTSDIR}/../Makefile.inc"
 USE_SUBMAKE=	yes
