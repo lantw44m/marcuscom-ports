@@ -165,6 +165,7 @@ include/gtk-2.0/gtk/gtkmenutoolbutton.h
 include/gtk-2.0/gtk/gtkmessagedialog.h
 include/gtk-2.0/gtk/gtkmisc.h
 include/gtk-2.0/gtk/gtkmodules.h
+include/gtk-2.0/gtk/gtkmountoperation.h
 include/gtk-2.0/gtk/gtknotebook.h
 include/gtk-2.0/gtk/gtkobject.h
 include/gtk-2.0/gtk/gtkoldeditable.h
@@ -205,6 +206,7 @@ include/gtk-2.0/gtk/gtkseparator.h
 include/gtk-2.0/gtk/gtkseparatormenuitem.h
 include/gtk-2.0/gtk/gtkseparatortoolitem.h
 include/gtk-2.0/gtk/gtksettings.h
+include/gtk-2.0/gtk/gtkshow.h
 include/gtk-2.0/gtk/gtksignal.h
 include/gtk-2.0/gtk/gtksizegroup.h
 include/gtk-2.0/gtk/gtksocket.h
@@ -265,6 +267,7 @@ include/gtk-unix-print-2.0/gtk/gtkpagesetupunixdialog.h
 include/gtk-unix-print-2.0/gtk/gtkprinter.h
 include/gtk-unix-print-2.0/gtk/gtkprintjob.h
 include/gtk-unix-print-2.0/gtk/gtkprintunixdialog.h
+include/gtk-unix-print-2.0/gtk/gtkunixprint.h
 lib/gtk-2.0/%%GTK_VERSION%%/engines/libpixmap.a
 lib/gtk-2.0/%%GTK_VERSION%%/engines/libpixmap.la
 lib/gtk-2.0/%%GTK_VERSION%%/engines/libpixmap.so
@@ -468,6 +471,8 @@ share/locale/bs/LC_MESSAGES/gtk20-properties.mo
 share/locale/bs/LC_MESSAGES/gtk20.mo
 share/locale/ca/LC_MESSAGES/gtk20-properties.mo
 share/locale/ca/LC_MESSAGES/gtk20.mo
+share/locale/ca@valencia/LC_MESSAGES/gtk20-properties.mo
+share/locale/ca@valencia/LC_MESSAGES/gtk20.mo
 share/locale/cs/LC_MESSAGES/gtk20-properties.mo
 share/locale/cs/LC_MESSAGES/gtk20.mo
 share/locale/cy/LC_MESSAGES/gtk20-properties.mo
@@ -580,6 +585,8 @@ share/locale/ru/LC_MESSAGES/gtk20-properties.mo
 share/locale/ru/LC_MESSAGES/gtk20.mo
 share/locale/rw/LC_MESSAGES/gtk20-properties.mo
 share/locale/rw/LC_MESSAGES/gtk20.mo
+share/locale/si/LC_MESSAGES/gtk20-properties.mo
+share/locale/si/LC_MESSAGES/gtk20.mo
 share/locale/sk/LC_MESSAGES/gtk20-properties.mo
 share/locale/sk/LC_MESSAGES/gtk20.mo
 share/locale/sl/LC_MESSAGES/gtk20-properties.mo
@@ -679,6 +686,8 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@ije/LC_MESSAGES
 @dirrmtry share/locale/sr@ije
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
