@@ -897,6 +897,7 @@ share/gnome/help/gnome-sudoku/sv/gnome-sudoku.xml
 share/gnome/help/gnometris/C/gnometris.xml
 share/gnome/help/gnometris/C/legal.xml
 share/gnome/help/gnometris/ca/gnometris.xml
+share/gnome/help/gnometris/de/gnometris.xml
 share/gnome/help/gnometris/el/gnometris.xml
 share/gnome/help/gnometris/es/gnometris.xml
 share/gnome/help/gnometris/fr/gnometris.xml
@@ -1455,6 +1456,7 @@ share/omf/gnome-sudoku/gnome-sudoku-pt_BR.omf
 share/omf/gnome-sudoku/gnome-sudoku-sv.omf
 share/omf/gnometris/gnometris-C.omf
 share/omf/gnometris/gnometris-ca.omf
+share/omf/gnometris/gnometris-de.omf
 share/omf/gnometris/gnometris-el.omf
 share/omf/gnometris/gnometris-es.omf
 share/omf/gnometris/gnometris-fr.omf
