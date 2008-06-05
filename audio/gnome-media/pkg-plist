@@ -19,7 +19,6 @@ share/applications/gnome-sound-recorder.desktop
 share/applications/gnome-volume-control.desktop
 share/applications/gstreamer-properties.desktop
 %%DATADIR%%/glade/gnome-audio-profiles.glade2
-%%DATADIR%%/gnome-volume-control-ui.xml
 %%DATADIR%%/pixmaps/chain-broken.png
 %%DATADIR%%/pixmaps/chain.png
 share/gnome-sound-recorder/ui/ui.xml
