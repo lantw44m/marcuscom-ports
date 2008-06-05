@@ -1,5 +1,6 @@
 bin/gnome-session
 bin/gnome-session-properties
+bin/gnome-session-save
 bin/gnome-wm
 lib/gnome-session/helpers/at-spi-registryd-wrapper
 lib/gnome-session/helpers/gnome-keyring-daemon-wrapper
