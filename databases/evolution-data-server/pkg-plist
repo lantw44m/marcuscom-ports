@@ -230,6 +230,7 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-uid.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-url.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-xml-hash-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-xml-utils.h
+include/evolution-data-server-%%VERSION%%/libedataserver/eds-version.h
 include/evolution-data-server-%%VERSION%%/libedataserver/md5-utils.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-book-auth-util.h
 include/evolution-data-server-%%VERSION%%/libedataserverui/e-categories-dialog.h
@@ -633,6 +634,7 @@ share/doc/libedataserver/libedataserver-EFileCache.html
 share/doc/libedataserver/libedataserver-EFlag.html
 share/doc/libedataserver/libedataserver-EProxy.html
 share/doc/libedataserver/libedataserver-ESExp.html
+share/doc/libedataserver/libedataserver-Version-Information.html
 share/doc/libedataserver/libedataserver-e-categories.html
 share/doc/libedataserver/libedataserver-e-data-server-module.html
 share/doc/libedataserver/libedataserver-e-db3-utils.html

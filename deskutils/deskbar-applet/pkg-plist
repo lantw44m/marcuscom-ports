@@ -47,6 +47,9 @@ lib/deskbar-applet/modules-2.20-compatible/tomboy.pyo
 lib/deskbar-applet/modules-2.20-compatible/web_address.py
 lib/deskbar-applet/modules-2.20-compatible/web_address.pyc
 lib/deskbar-applet/modules-2.20-compatible/web_address.pyo
+lib/deskbar-applet/modules-2.20-compatible/wikipedia-suggest.py
+lib/deskbar-applet/modules-2.20-compatible/wikipedia-suggest.pyc
+lib/deskbar-applet/modules-2.20-compatible/wikipedia-suggest.pyo
 lib/deskbar-applet/modules-2.20-compatible/yahoo.py
 lib/deskbar-applet/modules-2.20-compatible/yahoo.pyc
 lib/deskbar-applet/modules-2.20-compatible/yahoo.pyo
@@ -299,6 +302,7 @@ libdata/pkgconfig/deskbar-applet.pc
 %%DATADIR%%/art/note-new.png
 %%DATADIR%%/art/note.png
 %%DATADIR%%/art/web-search.png
+%%DATADIR%%/art/wikipedia.png
 %%DATADIR%%/art/yahoo.png
 %%DATADIR%%/mozilla-search.glade
 %%DATADIR%%/prefs-dialog.glade
@@ -336,6 +340,9 @@ share/gnome/help/deskbar/sv/legal.xml
 share/gnome/help/deskbar/uk/deskbar.xml
 share/gnome/help/deskbar/uk/figures/deskbar-applet.png
 share/gnome/help/deskbar/uk/legal.xml
+share/gnome/help/deskbar/zh_CN/deskbar.xml
+share/gnome/help/deskbar/zh_CN/figures/deskbar-applet.png
+share/gnome/help/deskbar/zh_CN/legal.xml
 share/icons/hicolor/16x16/apps/deskbar-applet.png
 share/icons/hicolor/22x22/apps/deskbar-applet.png
 share/icons/hicolor/32x32/apps/deskbar-applet.png
@@ -421,7 +428,10 @@ share/omf/deskbar/deskbar-pt_BR.omf
 share/omf/deskbar/deskbar-ru.omf
 share/omf/deskbar/deskbar-sv.omf
 share/omf/deskbar/deskbar-uk.omf
+share/omf/deskbar/deskbar-zh_CN.omf
 @dirrm share/omf/deskbar
+@dirrm share/gnome/help/deskbar/zh_CN/figures
+@dirrm share/gnome/help/deskbar/zh_CN
 @dirrm share/gnome/help/deskbar/uk/figures
 @dirrm share/gnome/help/deskbar/uk
 @dirrm share/gnome/help/deskbar/sv/figures
