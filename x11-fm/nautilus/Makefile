@@ -3,11 +3,11 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.156 2008/04/22 22:25:37 ahze Exp $
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.157 2008/05/15 02:55:23 marcus Exp $
 #
 
 PORTNAME=	nautilus
-PORTVERSION=	2.23.2
+PORTVERSION=	2.23.3
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -37,6 +37,9 @@ MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 OPTIONS=	TRACKER "Enable Tracker Search (sysutils/tracker)" Off
 
 GCONF_SCHEMAS=	apps_nautilus_preferences.schemas
+
+MAN1=		nautilus-connect-server.1 nautilus-file-management-properties.1 \
+		nautilus.1
 
 .include <bsd.port.pre.mk>
 
