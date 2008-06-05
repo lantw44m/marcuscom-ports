@@ -27,6 +27,9 @@ lib/libgnome-window-settings.a
 lib/libgnome-window-settings.la
 lib/libgnome-window-settings.so
 lib/libgnome-window-settings.so.1
+lib/nautilus/extensions-2.0/libnautilus-fontilus.a
+lib/nautilus/extensions-2.0/libnautilus-fontilus.la
+lib/nautilus/extensions-2.0/libnautilus-fontilus.so
 lib/window-manager-settings/libmetacity.a
 lib/window-manager-settings/libmetacity.la
 lib/window-manager-settings/libmetacity.so
