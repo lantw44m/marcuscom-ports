@@ -353,6 +353,9 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-default-mailer.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-default-source.a
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-default-source.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-default-source.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-email-custom-header.a
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-email-custom-header.la
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-email-custom-header.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-attachment-reminder.a
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-attachment-reminder.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-attachment-reminder.so
@@ -439,6 +442,7 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-compose-send-options.xml
 lib/evolution/%%VERSION%%/plugins/org-gnome-copy-tool.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-default-mailer.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-default-source.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-email-custom-header.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-attachment-reminder.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-bbdb.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-caldav.eplug
@@ -575,6 +579,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/glade/mail-dialogs.glade
 %%DATADIR%%/%%VERSION%%/glade/meeting-page.glade
 %%DATADIR%%/%%VERSION%%/glade/memo-page.glade
+%%DATADIR%%/%%VERSION%%/glade/org-gnome-email-custom-header.glade
 %%DATADIR%%/%%VERSION%%/glade/properties.glade
 %%DATADIR%%/%%VERSION%%/glade/proxy-add-dialog.glade
 %%DATADIR%%/%%VERSION%%/glade/proxy-listing.glade
@@ -664,8 +669,6 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/ui/evolution-mail-messagedisplay.xml
 %%DATADIR%%/%%VERSION%%/ui/evolution-memo-editor.xml
 %%DATADIR%%/%%VERSION%%/ui/evolution-memos.xml
-%%DATADIR%%/%%VERSION%%/ui/evolution-signature-editor.xml
-%%DATADIR%%/%%VERSION%%/ui/evolution-subscribe.xml
 %%DATADIR%%/%%VERSION%%/ui/evolution-task-editor.xml
 %%DATADIR%%/%%VERSION%%/ui/evolution-tasks.xml
 %%DATADIR%%/%%VERSION%%/ui/evolution.xml
