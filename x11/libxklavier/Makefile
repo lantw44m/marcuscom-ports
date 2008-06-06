@@ -3,12 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libxklavier/Makefile,v 1.41 2008/04/28 05:53:39 marcus Exp $
+#   $MCom: ports/x11/libxklavier/Makefile,v 1.42 2008/04/28 06:24:33 marcus Exp $
 #
 
 PORTNAME=	libxklavier
 PORTVERSION=	3.6
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	SF

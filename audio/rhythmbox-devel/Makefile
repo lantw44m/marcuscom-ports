@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox-devel/Makefile,v 1.90 2008/03/17 04:31:25 marcus Exp $
+#   $MCom: ports/audio/rhythmbox-devel/Makefile,v 1.92 2008/05/14 02:10:39 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
 PORTVERSION=	0.11.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.11

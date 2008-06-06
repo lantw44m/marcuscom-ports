@@ -3,12 +3,12 @@
 # Whom:			michael johnson <ahze@ahze.net>
 #
 # $FreeBSD: ports/www/kazehakase/Makefile,v 1.63 2008/03/30 03:49:18 ahze Exp $
-#   $MCom: ports/www/kazehakase/Makefile,v 1.12 2008/04/21 00:10:59 marcus Exp $
+#   $MCom: ports/www/kazehakase/Makefile,v 1.13 2008/04/30 16:44:19 mezz Exp $
 #
 
 PORTNAME=	kazehakase
 PORTVERSION=	0.5.4
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
 MASTER_SITE_SUBDIR=	${PORTNAME}/30219

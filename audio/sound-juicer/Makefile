@@ -3,11 +3,12 @@
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/audio/sound-juicer/Makefile,v 1.81 2008/06/05 13:02:13 kwm Exp $
 #
 
 PORTNAME=	sound-juicer
 PORTVERSION=	2.23.0
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
