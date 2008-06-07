@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.25 2008/05/14 02:10:40 marcus Exp $
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.26 2008/06/06 21:38:52 marcus Exp $
 
 PORTNAME=	brasero
-PORTVERSION=	0.7.1
-PORTREVISION=	5
+PORTVERSION=	0.7.90
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -26,8 +25,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehier nautiluscdburner
 USE_GSTREAMER=	gconf core
 INSTALLS_ICONS=	yes
-CONFIGURE_ARGS=	--disable-inotify \
-		--with-cam
+CONFIGURE_ARGS=	--disable-inotify
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
