@@ -1,0 +1,12 @@
+--- configure.orig	2008-06-12 15:35:11.000000000 -0400
++++ configure	2008-06-12 15:35:40.000000000 -0400
+@@ -25083,7 +25083,9 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+ 
++if [ -z "${BROWSER_PLUGIN_DIR}" ]; then
+ 	BROWSER_PLUGIN_DIR="\${libdir}/mozilla/plugins"
++    fi
+ 
+ 
+ 

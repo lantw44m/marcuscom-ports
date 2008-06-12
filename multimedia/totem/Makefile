@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.108 2008/05/20 22:08:01 marcus Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.109 2008/06/06 21:38:51 marcus Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	2.23.3
-PORTREVISION?=	1
+PORTVERSION=	2.23.4
+PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -37,7 +37,8 @@ USE_LDCONFIG=	yes
 INSTALLS_OMF=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-	       	LIBS="-L${LOCALBASE}/lib -lXrandr"
+	       	LIBS="-L${LOCALBASE}/lib -lXrandr" \
+		BROWSER_PLUGIN_DIR="${PREFIX}/lib/browser_plugins"
 CONFIGURE_ARGS=	--with-plugins="${TOTEM_PLUGINS}"
 
 MAN1=		totem.1 totem-video-thumbnailer.1
@@ -139,10 +140,6 @@ pre-everything::
 
 post-patch:
 	@${CP} -f ${FILESDIR}/pkg-message.in ${PKGMESSAGE}
-	@${REINPLACE_CMD} -e ' s|@MOZILLA_PLUGINDIR@|${PREFIX}/lib/browser_plugins|; \
-		s|mozilla/plugins|browser_plugins|' \
-		${WRKSRC}/browser-plugin/Makefile.in \
-		${WRKSRC}/browser-plugin/idl/Makefile.in
 	@${REINPLACE_CMD} -e 's|dbus >= 0.61|dbus-1 >= 0.61|g' \
 	    	${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/dev/dvd|${DEFAULT_DVD_DEVICE}|' \
