@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.181 2008/06/06 21:38:55 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.182 2008/06/16 18:50:29 marcus Exp $
 #
 
 PORTNAME=	gnome-applets
 PORTVERSION=	2.23.3
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -20,7 +21,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${POR
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		gweather.1:${PORTSDIR}/net/libgweather \
 		xklavier.12:${PORTSDIR}/x11/libxklavier \
-		gucharmap.6:${PORTSDIR}/deskutils/gucharmap
+		gucharmap.7:${PORTSDIR}/deskutils/gucharmap
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTSDIR}/sysutils/system-tools-backends \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 
