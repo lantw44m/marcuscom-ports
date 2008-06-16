@@ -1,5 +1,6 @@
 %%CPUFREQ%%bin/cpufreq-selector
 %%PYTHON%%bin/invest-chart
+%%CPUFREQ%%etc/dbus-1/system.d/org.gnome.CPUFreqSelector.conf
 %%BATTERY%%etc/sound/events/battstat_applet.soundlist
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/__init__.py
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/__init__.pyc
@@ -60,6 +61,8 @@ libexec/multiload-applet-2
 libexec/null_applet
 libexec/stickynotes_applet
 libexec/trashapplet
+%%CPUFREQ%%share/PolicyKit/policy/org.gnome.cpufreqselector.policy
+%%CPUFREQ%%share/dbus-1/system-services/org.gnome.CPUFreqSelector.service
 share/gnome-2.0/ui/GNOME_AccessxApplet.xml
 %%BATTERY%%share/gnome-2.0/ui/GNOME_BattstatApplet.xml
 %%CPUFREQ%%share/gnome-2.0/ui/GNOME_CPUFreqApplet.xml
@@ -906,6 +909,8 @@ share/gnome/help/mixer_applet2/fi/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/fi/mixer_applet2.xml
 share/gnome/help/mixer_applet2/fr/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/fr/mixer_applet2.xml
+share/gnome/help/mixer_applet2/hu/figures/volumecontrol_applet.png
+share/gnome/help/mixer_applet2/hu/mixer_applet2.xml
 share/gnome/help/mixer_applet2/it/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/it/mixer_applet2.xml
 share/gnome/help/mixer_applet2/ko/figures/volumecontrol_applet.png
@@ -1077,6 +1082,8 @@ share/gnome/help/trashapplet/fi/figures/trash-applet.png
 share/gnome/help/trashapplet/fi/trashapplet.xml
 share/gnome/help/trashapplet/fr/figures/trash-applet.png
 share/gnome/help/trashapplet/fr/trashapplet.xml
+share/gnome/help/trashapplet/hu/figures/trash-applet.png
+share/gnome/help/trashapplet/hu/trashapplet.xml
 share/gnome/help/trashapplet/it/figures/trash-applet.png
 share/gnome/help/trashapplet/it/trashapplet.xml
 share/gnome/help/trashapplet/nl/figures/trash-applet.png
@@ -1329,6 +1336,7 @@ share/omf/mixer_applet2/mixer_applet2-en_GB.omf
 share/omf/mixer_applet2/mixer_applet2-es.omf
 share/omf/mixer_applet2/mixer_applet2-fi.omf
 share/omf/mixer_applet2/mixer_applet2-fr.omf
+share/omf/mixer_applet2/mixer_applet2-hu.omf
 share/omf/mixer_applet2/mixer_applet2-it.omf
 share/omf/mixer_applet2/mixer_applet2-ko.omf
 share/omf/mixer_applet2/mixer_applet2-oc.omf
@@ -1372,6 +1380,7 @@ share/omf/trashapplet/trashapplet-en_GB.omf
 share/omf/trashapplet/trashapplet-es.omf
 share/omf/trashapplet/trashapplet-fi.omf
 share/omf/trashapplet/trashapplet-fr.omf
+share/omf/trashapplet/trashapplet-hu.omf
 share/omf/trashapplet/trashapplet-it.omf
 share/omf/trashapplet/trashapplet-nl.omf
 share/omf/trashapplet/trashapplet-oc.omf
@@ -1546,6 +1555,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/trashapplet/nl
 @dirrm share/gnome/help/trashapplet/it/figures
 @dirrm share/gnome/help/trashapplet/it
+@dirrm share/gnome/help/trashapplet/hu/figures
+@dirrm share/gnome/help/trashapplet/hu
 @dirrm share/gnome/help/trashapplet/fr/figures
 @dirrm share/gnome/help/trashapplet/fr
 @dirrm share/gnome/help/trashapplet/fi/figures
@@ -1635,6 +1646,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/mixer_applet2/ko
 @dirrm share/gnome/help/mixer_applet2/it/figures
 @dirrm share/gnome/help/mixer_applet2/it
+@dirrm share/gnome/help/mixer_applet2/hu/figures
+@dirrm share/gnome/help/mixer_applet2/hu
 @dirrm share/gnome/help/mixer_applet2/fr/figures
 @dirrm share/gnome/help/mixer_applet2/fr
 @dirrm share/gnome/help/mixer_applet2/fi/figures
