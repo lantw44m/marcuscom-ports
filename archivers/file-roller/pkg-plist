@@ -22,7 +22,6 @@ share/applications/file-roller.desktop
 %%DATADIR%%/icons/hicolor/24x24/actions/add-files-to-archive.png
 %%DATADIR%%/icons/hicolor/24x24/actions/add-folder-to-archive.png
 %%DATADIR%%/icons/hicolor/24x24/actions/extract-archive.png
-%%DATADIR%%/icons/hicolor/24x24/actions/preview-file.png
 share/gnome/help/file-roller/C/figures/file-roller_home.png
 share/gnome/help/file-roller/C/figures/file-roller_leftarrow.png
 share/gnome/help/file-roller/C/figures/file-roller_main_window.png
