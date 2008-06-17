@@ -21,18 +21,12 @@ include/eog-2.20/eog/eog-thumbnail.h
 include/eog-2.20/eog/eog-transform.h
 include/eog-2.20/eog/eog-window.h
 lib/eog/plugins/fullscreen.eog-plugin
-lib/eog/plugins/libfullscreen.a
 lib/eog/plugins/libfullscreen.la
 lib/eog/plugins/libfullscreen.so
-lib/eog/plugins/libfullscreen.so.0
-lib/eog/plugins/libreload.a
 lib/eog/plugins/libreload.la
 lib/eog/plugins/libreload.so
-lib/eog/plugins/libreload.so.0
-lib/eog/plugins/libstatusbar-date.a
 lib/eog/plugins/libstatusbar-date.la
 lib/eog/plugins/libstatusbar-date.so
-lib/eog/plugins/libstatusbar-date.so.0
 lib/eog/plugins/reload.eog-plugin
 lib/eog/plugins/statusbar-date.eog-plugin
 libdata/pkgconfig/eog.pc
@@ -104,13 +98,19 @@ share/applications/eog.desktop
 %%DATADIR%%/gtkrc
 %%DATADIR%%/icons/hicolor/16x16/actions/eog-image-collection.png
 %%DATADIR%%/icons/hicolor/16x16/actions/eog-plugin.png
+%%DATADIR%%/icons/hicolor/16x16/actions/slideshow-play.png
 %%DATADIR%%/icons/hicolor/22x22/actions/eog-image-collection.png
 %%DATADIR%%/icons/hicolor/22x22/actions/eog-plugin.png
+%%DATADIR%%/icons/hicolor/22x22/actions/slideshow-play.png
 %%DATADIR%%/icons/hicolor/24x24/actions/eog-image-collection.png
+%%DATADIR%%/icons/hicolor/24x24/actions/slideshow-play.png
 %%DATADIR%%/icons/hicolor/32x32/actions/eog-image-collection.png
 %%DATADIR%%/icons/hicolor/32x32/actions/eog-plugin.png
+%%DATADIR%%/icons/hicolor/32x32/actions/slideshow-play.png
+%%DATADIR%%/icons/hicolor/48x48/actions/slideshow-play.png
 %%DATADIR%%/icons/hicolor/scalable/actions/eog-image-collection.svg
 %%DATADIR%%/icons/hicolor/scalable/actions/eog-plugin.svg
+%%DATADIR%%/icons/hicolor/scalable/actions/slideshow-play.svg
 %%DATADIR%%/pixmaps/thumbnail-frame.png
 share/gnome/help/eog/C/eog.xml
 share/gnome/help/eog/C/figures/eog_save_as_window.png
@@ -368,6 +368,8 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%/icons/hicolor/scalable/actions
 @dirrm %%DATADIR%%/icons/hicolor/scalable
+@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
+@dirrm %%DATADIR%%/icons/hicolor/48x48
 @dirrm %%DATADIR%%/icons/hicolor/32x32/actions
 @dirrm %%DATADIR%%/icons/hicolor/32x32
 @dirrm %%DATADIR%%/icons/hicolor/24x24/actions
