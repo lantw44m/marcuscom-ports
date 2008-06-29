@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.115 2008/06/06 21:38:50 marcus Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.116 2008/06/16 23:26:33 marcus Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -58,7 +58,7 @@ CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -fPIC"
 .endif
 
 .if exists(${LOCALBASE}/include/mapi.h)
-IGNORE=	does not build with ${LOCALBASE}/include/mapi.h exists in system, run pkg_info -W ${LOCALBASE}/include/mapi.h to find the offending port and uninstall it, then install ${PORTNAME} and reinstall port
+IGNORE=	build fails when ${LOCALBASE}/include/mapi.h exists in system, run pkg_info -W ${LOCALBASE}/include/mapi.h to find the offending port and uninstall it, then install ${PORTNAME} and reinstall the port that installed mapi.h
 .endif
 
 post-patch:
