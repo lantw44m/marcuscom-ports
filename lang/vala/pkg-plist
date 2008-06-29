@@ -250,6 +250,7 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/gconf-2.0.vapi
 %%DATADIR%%/vapi/gdk-2.0.deps
 %%DATADIR%%/vapi/gdk-2.0.vapi
+%%DATADIR%%/vapi/gdk-pixbuf-2.0.deps
 %%DATADIR%%/vapi/gdk-pixbuf-2.0.vapi
 %%DATADIR%%/vapi/gdk-x11-2.0.deps
 %%DATADIR%%/vapi/gdk-x11-2.0.vapi
@@ -321,6 +322,8 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/libgnome-menu.vapi
 %%DATADIR%%/vapi/libgnomeui-2.0.deps
 %%DATADIR%%/vapi/libgnomeui-2.0.vapi
+%%DATADIR%%/vapi/libgsf-1.deps
+%%DATADIR%%/vapi/libgsf-1.vapi
 %%DATADIR%%/vapi/libnotify.deps
 %%DATADIR%%/vapi/libnotify.vapi
 %%DATADIR%%/vapi/liboobs-1.vapi
@@ -335,6 +338,7 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/libwnck-1.0.deps
 %%DATADIR%%/vapi/libwnck-1.0.vapi
 %%DATADIR%%/vapi/libxml-2.0.vapi
+%%DATADIR%%/vapi/loudmouth-1.0.vapi
 %%DATADIR%%/vapi/pango.deps
 %%DATADIR%%/vapi/pango.vapi
 %%DATADIR%%/vapi/pangocairo.deps
@@ -344,6 +348,7 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/sdl-gfx.vapi
 %%DATADIR%%/vapi/sdl-image.vapi
 %%DATADIR%%/vapi/sdl-mixer.vapi
+%%DATADIR%%/vapi/sdl-net.vapi
 %%DATADIR%%/vapi/sdl-ttf.vapi
 %%DATADIR%%/vapi/sdl.vapi
 %%DATADIR%%/vapi/sqlite3.vapi
