@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.460 2008/05/29 16:37:19 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.461 2008/06/05 08:11:49 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -12,6 +12,13 @@
 # *** WARNING: Disable MARCUSCOM before merge in FreeBSD!
 #
 MARCUSCOM_CVS=yes
+
+# ======================= USERS =================================
+# 
+# There are no significant user-definable settings in here.
+# This file is a framework to make it easier to create GNOME ports.
+# 
+# ======================= /USERS ================================
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gnome_Pre_Include)
 
