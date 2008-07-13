@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox-devel/Makefile,v 1.94 2008/07/13 00:20:16 marcus Exp $
+#   $MCom: ports/audio/rhythmbox-devel/Makefile,v 1.95 2008/07/13 17:41:11 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -53,6 +53,8 @@ OPTIONS=	DAAP "Enable iTunes music sharing" off \
 		LIRC "Enable Infrared syncing support" off \
 		GECKO_PLUGIN "Enable iTunes browser plugin" on
 #		GDA "Enable GDA database storage" off
+
+CONFLICTS=	rhythmbox-0.10.[0-9]*
 
 .include <bsd.port.pre.mk>
 
