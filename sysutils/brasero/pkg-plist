@@ -200,6 +200,7 @@ share/icons/hicolor/scalable/apps/brasero.svg
 share/locale/ar/LC_MESSAGES/brasero.mo
 share/locale/ca/LC_MESSAGES/brasero.mo
 share/locale/cs/LC_MESSAGES/brasero.mo
+share/locale/da/LC_MESSAGES/brasero.mo
 share/locale/de/LC_MESSAGES/brasero.mo
 share/locale/dz/LC_MESSAGES/brasero.mo
 share/locale/el/LC_MESSAGES/brasero.mo
@@ -227,6 +228,7 @@ share/locale/sr/LC_MESSAGES/brasero.mo
 share/locale/sr@Latn/LC_MESSAGES/brasero.mo
 share/locale/sv/LC_MESSAGES/brasero.mo
 share/locale/th/LC_MESSAGES/brasero.mo
+share/locale/zh_CN/LC_MESSAGES/brasero.mo
 share/locale/zh_HK/LC_MESSAGES/brasero.mo
 share/locale/zh_TW/LC_MESSAGES/brasero.mo
 share/mime/packages/brasero.xml
