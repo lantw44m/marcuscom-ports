@@ -145,6 +145,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/script.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/script.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/script.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/script_settings.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/script_settings.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/script_settings.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/speech_generator.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/speech_generator.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/Thunderbird/speech_generator.pyo
@@ -313,12 +316,27 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/Gecko/speech_generator.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/Gecko/speech_generator.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/Gecko/speech_generator.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/Gecko/structural_navigation.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/Gecko/structural_navigation.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/Gecko/structural_navigation.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/Gecko/where_am_i.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/Gecko/where_am_i.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/Gecko/where_am_i.pyo
-%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge.py
-%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge.pyc
-%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/__init__.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/__init__.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/__init__.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/braillegenerator.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/braillegenerator.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/braillegenerator.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/script.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/script.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/script.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/speechgenerator.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/speechgenerator.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/speechgenerator.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/where_am_I.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/where_am_I.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge/where_am_I.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/VCL.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/VCL.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/VCL.pyo
@@ -340,6 +358,12 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/speechserver.py
 %%PYTHON_SITELIBDIR%%/orca/speechserver.pyc
 %%PYTHON_SITELIBDIR%%/orca/speechserver.pyo
+%%PYTHON_SITELIBDIR%%/orca/structural_navigation.py
+%%PYTHON_SITELIBDIR%%/orca/structural_navigation.pyc
+%%PYTHON_SITELIBDIR%%/orca/structural_navigation.pyo
+%%PYTHON_SITELIBDIR%%/orca/text_attribute_names.py
+%%PYTHON_SITELIBDIR%%/orca/text_attribute_names.pyc
+%%PYTHON_SITELIBDIR%%/orca/text_attribute_names.pyo
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.py
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.pyc
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.pyo
@@ -431,6 +455,7 @@ share/locale/zh_TW/LC_MESSAGES/orca.mo
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/applications
+@dirrm %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/J2SE-access-bridge
 @dirrm %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits/Gecko
 @dirrm %%PYTHON_SITELIBDIR%%/orca/scripts/toolkits
 @dirrm %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice
