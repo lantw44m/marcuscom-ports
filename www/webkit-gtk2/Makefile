@@ -3,16 +3,14 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/www/webkit-gtk2/Makefile,v 1.2 2008/03/31 10:33:05 ahze Exp $
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.14 2008/05/26 09:43:48 ahze Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.15 2008/06/06 21:38:54 marcus Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	0.0.34130
-PORTREVISION=	1
+PORTVERSION=	1.0.1
 CATEGORIES=	www
-MASTER_SITES=	http://nightly.webkit.org/files/trunk/src/
+MASTER_SITES=	http://people.freedesktop.org/~alp/webkit/gtk/
 PKGNAMESUFFIX=	-gtk2
-DISTNAME=	WebKit-r${PORTVERSION:S/0.0.//}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An opensource browser engine
@@ -22,7 +20,6 @@ LIB_DEPENDS=	icutu.38:${PORTSDIR}/devel/icu \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3
 
 USE_BISON=	build
-USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget gtk20 libxslt
 USE_PERL5=	yes
@@ -43,10 +40,6 @@ BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 600000
-IGNORE=	Does not build
-.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%BROWSER_PLUGINS_DIR%%|${BROWSER_PLUGINS_DIR}|' \
