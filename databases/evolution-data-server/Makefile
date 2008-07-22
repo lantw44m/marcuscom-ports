@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.148 2008/06/06 21:38:46 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.149 2008/06/16 19:35:56 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	2.23.4
+PORTVERSION=	2.23.5
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +17,8 @@ COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
 LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		nss3.1:${PORTSDIR}/security/nss \
-		tasn1.3:${PORTSDIR}/security/libtasn1
+		tasn1.3:${PORTSDIR}/security/libtasn1 \
+		sqlite3.8:${PORTSDIR}/databases/sqlite3
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -38,7 +39,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_C
 
 PLIST_SUB=	VERSION="2.24" EVO_VERSION="1.2"
 
-OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
+#OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
 
 .include <bsd.port.pre.mk>
 
@@ -55,12 +56,12 @@ CONFIGURE_ARGS+=        --with-krb5=/usr
 KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
 
-.if defined(WITH_IMAP4) || defined(PACKAGE_BUILDING)
-CONFIGURE_ARGS+=	--enable-imap4=yes
-PLIST_SUB+=		IMAP4=""
-.else
+#.if defined(WITH_IMAP4) || defined(PACKAGE_BUILDING)
+#CONFIGURE_ARGS+=	--enable-imap4=yes
+#PLIST_SUB+=		IMAP4=""
+#.else
 PLIST_SUB+=		IMAP4="@comment "
-.endif
+#.endif
 
 EDS_BDB_MSG=	"!!!WARNING!!!: Berkeley Database version is ${BDB_VER}.  If this is an upgrade, you may experience problems if you or any other Evolution-data-server users were previously using BDB_VER 41."
 
