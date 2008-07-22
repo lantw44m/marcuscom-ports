@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.462 2008/07/04 08:20:52 adamw Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.463 2008/07/22 04:09:16 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -631,15 +631,6 @@ Gnome_Post_Include=		bsd.gnome.mk
 .if !defined(Gnome_Pre_Include)
 .error The Pre include part of bsd.gnome.mk part is not included. Did you forget WANT_GNOME=yes before bsd.port.pre.mk?
 .endif
-
-# DO NOT USE THESE MACROS!  They are obsolete, and only provided for
-# backward compatibility with old ports that have not converted to the new
-# GNOME infrastructure.
-.if defined(USE_GTK)
-#.warning The USE_GTK macro is deprecated. It should be replaced by USE_GNOME=gtk12.
-USE_GNOME+=	gtk12
-.endif
-# End of obsolete macros
 
 .if defined(USE_GNOME)
 # First of all expand all USE_GNOME_IMPL recursively
