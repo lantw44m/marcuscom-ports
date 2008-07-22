@@ -117,6 +117,10 @@ share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
 share/gnome/help/eog/C/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/C/legal.xml
+share/gnome/help/eog/ca/eog.xml
+share/gnome/help/eog/ca/figures/eog_save_as_window.png
+share/gnome/help/eog/ca/figures/eog_start_window.png
+share/gnome/help/eog/ca/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/da/eog.xml
 share/gnome/help/eog/da/figures/eog_save_as_window.png
 share/gnome/help/eog/da/figures/eog_start_window.png
@@ -231,6 +235,7 @@ share/locale/ja/LC_MESSAGES/eog.mo
 share/locale/ka/LC_MESSAGES/eog.mo
 share/locale/kn/LC_MESSAGES/eog.mo
 share/locale/ko/LC_MESSAGES/eog.mo
+share/locale/ks/LC_MESSAGES/eog.mo
 share/locale/ku/LC_MESSAGES/eog.mo
 share/locale/lt/LC_MESSAGES/eog.mo
 share/locale/lv/LC_MESSAGES/eog.mo
@@ -249,6 +254,7 @@ share/locale/oc/LC_MESSAGES/eog.mo
 share/locale/or/LC_MESSAGES/eog.mo
 share/locale/pa/LC_MESSAGES/eog.mo
 share/locale/pl/LC_MESSAGES/eog.mo
+share/locale/ps/LC_MESSAGES/eog.mo
 share/locale/pt/LC_MESSAGES/eog.mo
 share/locale/pt_BR/LC_MESSAGES/eog.mo
 share/locale/ro/LC_MESSAGES/eog.mo
@@ -276,6 +282,7 @@ share/locale/zh_HK/LC_MESSAGES/eog.mo
 share/locale/zh_TW/LC_MESSAGES/eog.mo
 share/locale/zu/LC_MESSAGES/eog.mo
 share/omf/eog/eog-C.omf
+share/omf/eog/eog-ca.omf
 share/omf/eog/eog-da.omf
 share/omf/eog/eog-de.omf
 share/omf/eog/eog-en_GB.omf
@@ -308,6 +315,8 @@ share/omf/eog/eog-zh_TW.omf
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/ps/LC_MESSAGES
+@dirrmtry share/locale/ps
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/nso/LC_MESSAGES
@@ -318,6 +327,8 @@ share/omf/eog/eog-zh_TW.omf
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/ks/LC_MESSAGES
+@dirrmtry share/locale/ks
 @dirrmtry share/locale/fur/LC_MESSAGES
 @dirrmtry share/locale/fur
 @dirrmtry share/locale/dz/LC_MESSAGES
@@ -362,6 +373,8 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm share/gnome/help/eog/de
 @dirrm share/gnome/help/eog/da/figures
 @dirrm share/gnome/help/eog/da
+@dirrm share/gnome/help/eog/ca/figures
+@dirrm share/gnome/help/eog/ca
 @dirrm share/gnome/help/eog/C/figures
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
