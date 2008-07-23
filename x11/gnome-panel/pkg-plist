@@ -80,6 +80,9 @@ share/gnome/help/clock/el/legal.xml
 share/gnome/help/clock/es/clock.xml
 share/gnome/help/clock/es/figures/clock_applet.png
 share/gnome/help/clock/es/legal.xml
+share/gnome/help/clock/fi/clock.xml
+share/gnome/help/clock/fi/figures/clock_applet.png
+share/gnome/help/clock/fi/legal.xml
 share/gnome/help/clock/fr/clock.xml
 share/gnome/help/clock/fr/figures/clock_applet.png
 share/gnome/help/clock/fr/legal.xml
@@ -204,6 +207,7 @@ share/gnome/help/workspace-switcher/de/legal.xml
 share/gnome/help/workspace-switcher/de/workspace-switcher.xml
 share/gnome/help/workspace-switcher/el/workspace-switcher.xml
 share/gnome/help/workspace-switcher/es/workspace-switcher.xml
+share/gnome/help/workspace-switcher/fi/workspace-switcher.xml
 share/gnome/help/workspace-switcher/fr/workspace-switcher.xml
 share/gnome/help/workspace-switcher/it/workspace-switcher.xml
 share/gnome/help/workspace-switcher/ja/figures/workspace_switcher_applet.png
@@ -382,6 +386,7 @@ share/omf/clock/clock-ca.omf
 share/omf/clock/clock-de.omf
 share/omf/clock/clock-el.omf
 share/omf/clock/clock-es.omf
+share/omf/clock/clock-fi.omf
 share/omf/clock/clock-fr.omf
 share/omf/clock/clock-it.omf
 share/omf/clock/clock-ja.omf
@@ -438,6 +443,7 @@ share/omf/workspace-switcher/workspace-switcher-da.omf
 share/omf/workspace-switcher/workspace-switcher-de.omf
 share/omf/workspace-switcher/workspace-switcher-el.omf
 share/omf/workspace-switcher/workspace-switcher-es.omf
+share/omf/workspace-switcher/workspace-switcher-fi.omf
 share/omf/workspace-switcher/workspace-switcher-fr.omf
 share/omf/workspace-switcher/workspace-switcher-it.omf
 share/omf/workspace-switcher/workspace-switcher-ko.omf
@@ -472,6 +478,7 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/gnome/help/workspace-switcher/ja
 @dirrm share/gnome/help/workspace-switcher/it
 @dirrm share/gnome/help/workspace-switcher/fr
+@dirrm share/gnome/help/workspace-switcher/fi
 @dirrm share/gnome/help/workspace-switcher/es
 @dirrm share/gnome/help/workspace-switcher/el
 @dirrm share/gnome/help/workspace-switcher/de/figures
@@ -559,6 +566,8 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/gnome/help/clock/it
 @dirrm share/gnome/help/clock/fr/figures
 @dirrm share/gnome/help/clock/fr
+@dirrm share/gnome/help/clock/fi/figures
+@dirrm share/gnome/help/clock/fi
 @dirrm share/gnome/help/clock/es/figures
 @dirrm share/gnome/help/clock/es
 @dirrm share/gnome/help/clock/el/figures
