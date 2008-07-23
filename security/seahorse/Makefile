@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.61 2008/03/14 14:13:03 mezz Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.63 2008/07/23 03:15:45 marcus Exp $
 #
 
 PORTNAME=	seahorse
@@ -44,9 +44,6 @@ OPTIONS=	LDAP "Enable LDAP support" on \
 
 .if !defined(WITHOUT_LDAP)
 USE_OPENLDAP=	yes
-.if ${WANT_OPENLDAP_VER} >= 23
-CFLAGS+=	-DLDAP_DEPRECATED
-.endif
 .else
 CONFIGURE_ARGS+=--disable-ldap
 .endif
