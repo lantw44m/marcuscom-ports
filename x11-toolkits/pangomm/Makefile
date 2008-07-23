@@ -1,12 +1,12 @@
-# New ports collection makefile for:   gtkmm2
-# Date created:        30 September 2002
-# Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
+# New ports collection makefile for:   pangomm
+# Date created:        23 July 2008
+# Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.34 2008/07/18 18:54:22 marcus Exp $
+#   $MCom$
 #
 
-PORTNAME=	gtkmm
+PORTNAME=	pangomm
 PORTVERSION=	2.13.5
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
@@ -15,22 +15,20 @@ MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	C++ wrapper for Gtk+, Pango, Atk
+COMMENT=	C++ wrapper for Pango
 
 USE_BZIP2=	yes
-LATEST_LINK=	gtkmm24
 
 .if !defined(REFERENCE_PORT)
 
 LIB_DEPENDS=	glibmm-2.4.1:${PORTSDIR}/devel/glibmm \
-		cairomm-1.0.1:${PORTSDIR}/graphics/cairomm \
-		pangomm-1.4.1:${PORTSDIR}/x11-toolkits/pangomm
+		cairomm-1.0.1:${PORTSDIR}/graphics/cairomm
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack gtk20
+USE_GNOME=	gnomehack pango
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-demos \
@@ -39,13 +37,11 @@ CONFIGURE_ARGS=	--disable-demos \
 		--enable-static=yes \
 		--with-sigc-prefix=${LOCALBASE}
 
-PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
+PLIST_SUB=	VERSION="2.4" API_VERSION="1.4"
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^SUBDIRS =/s/tests//' \
 		${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e 's|demo[$$][(]EXEEXT[)]|gtkmm-demo$$(EXEEXT)|g' \
-	    	${WRKSRC}/demos/gtk-demo/Makefile.in
 
 .include <bsd.port.mk>
 
