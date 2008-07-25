@@ -59,5 +59,9 @@ lib/libpangomm-%%API_VERSION%%.so.1
 lib/pangomm-%%VERSION%%/proc/m4/convert.m4
 lib/pangomm-%%VERSION%%/proc/m4/convert_pango.m4
 libdata/pkgconfig/pangomm-%%API_VERSION%%.pc
+@dirrm lib/pangomm-%%VERSION%%/proc/m4
+@dirrm lib/pangomm-%%VERSION%%/proc
+@dirrm lib/pangomm-%%VERSION%%
+@dirrm include/pangomm-%%API_VERSION%%/pangomm/private
 @dirrm include/pangomm-%%API_VERSION%%/pangomm
 @dirrm include/pangomm-%%API_VERSION%%
