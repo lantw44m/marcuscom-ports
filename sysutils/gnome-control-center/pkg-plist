@@ -6,33 +6,25 @@ bin/gnome-at-visual
 bin/gnome-control-center
 bin/gnome-default-applications-properties
 bin/gnome-display-properties
-bin/gnome-font-viewer
 bin/gnome-keybinding-properties
 bin/gnome-keyboard-properties
 bin/gnome-mouse-properties
 bin/gnome-network-preferences
 bin/gnome-sound-properties
-bin/gnome-thumbnail-font
 bin/gnome-typing-monitor
 bin/gnome-window-properties
-etc/gnome-vfs-2.0/modules/font-method.conf
 etc/xdg/autostart/gnome-at-session.desktop
 etc/xdg/menus/gnomecc.menu
 include/gnome-window-settings-2.0/gnome-window-manager.h
 include/gnome-window-settings-2.0/gnome-wm-manager.h
-lib/gnome-vfs-2.0/modules/libfont-method.a
-lib/gnome-vfs-2.0/modules/libfont-method.la
-lib/gnome-vfs-2.0/modules/libfont-method.so
 lib/libgnome-window-settings.a
 lib/libgnome-window-settings.la
 lib/libgnome-window-settings.so
 lib/libgnome-window-settings.so.1
-lib/nautilus/extensions-2.0/libnautilus-fontilus.a
-lib/nautilus/extensions-2.0/libnautilus-fontilus.la
-lib/nautilus/extensions-2.0/libnautilus-fontilus.so
 lib/window-manager-settings/libmetacity.a
 lib/window-manager-settings/libmetacity.la
 lib/window-manager-settings/libmetacity.so
+libdata/pkgconfig/gnome-default-applications.pc
 libdata/pkgconfig/gnome-keybindings.pc
 libdata/pkgconfig/gnome-window-settings-2.0.pc
 share/applications/at-properties.desktop
@@ -40,7 +32,6 @@ share/applications/default-applications.desktop
 share/applications/display-properties.desktop
 %%ABOUTME%%share/applications/gnome-about-me.desktop
 share/applications/gnome-appearance-properties.desktop
-share/applications/gnome-font-viewer.desktop
 share/applications/gnome-network-preferences.desktop
 share/applications/gnome-settings-mouse.desktop
 share/applications/gnome-settings-sound.desktop
@@ -49,10 +40,11 @@ share/applications/gnomecc.desktop
 share/applications/keybinding.desktop
 share/applications/keyboard.desktop
 share/applications/window-properties.desktop
-share/desktop-directories/font-method.directory
 share/desktop-directories/gnomecc.directory
+%%DATADIR%%/default-apps/gnome-default-applications.xml
 %%DATADIR%%/glade/appearance.glade
 %%DATADIR%%/glade/at-enable-dialog.glade
+%%DATADIR%%/glade/display-capplet.glade
 %%ABOUTME%%%%DATADIR%%/glade/gnome-about-me.glade
 %%DATADIR%%/glade/gnome-default-applications-properties.glade
 %%DATADIR%%/glade/gnome-keybinding-properties.glade
@@ -61,7 +53,6 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/glade/gnome-network-preferences.glade
 %%DATADIR%%/glade/gnome-window-properties.glade
 %%DATADIR%%/glade/sound-properties.glade
-%%DATADIR%%/gnome-default-applications.xml
 %%DATADIR%%/keybindings/00-multimedia-key.xml
 %%DATADIR%%/keybindings/01-desktop-key.xml
 %%DATADIR%%/pixmaps/at-startup.png
@@ -271,6 +262,7 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrm share/gnome/cursor-fonts
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%/glade
+@dirrm %%DATADIR%%/default-apps
 @dirrmtry share/desktop-directories
 @dirrmtry share/applications
 @dirrm lib/window-manager-settings
