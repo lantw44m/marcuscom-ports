@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/orca/Makefile,v 1.48 2008/06/17 03:49:20 marcus Exp $
+#   $MCom: ports/accessibility/orca/Makefile,v 1.49 2008/07/22 06:36:32 marcus Exp $
 #
 
 PORTNAME=	orca
 PORTVERSION=	2.23.5
+PORTREVISION=	1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -26,7 +27,8 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_PYTHON=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack libgnomeui atspi gnomespeech pygnome2
+USE_GNOME=	gnomeprefix gnomehack libgnomeui atspi gnomespeech pygnome2 \
+		pygnomedesktop
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
