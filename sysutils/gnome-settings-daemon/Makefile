@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.21 2008/06/06 21:38:52 marcus Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.22 2008/06/17 19:38:37 marcus Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	2.23.4
+PORTVERSION=	2.23.5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -21,6 +21,7 @@ USE_GNOME=	gnomeprefix intlhack gnomehack gnomedesktop libgnomekbd
 USE_GETTEXT=	yes
 USE_GSTREAMER=	good
 GNU_CONFIGURE=	yes
+INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-gstreamer=0.10
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

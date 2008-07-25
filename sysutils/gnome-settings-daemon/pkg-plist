@@ -76,6 +76,11 @@ share/dbus-1/services/org.gnome.SettingsDaemon.service
 %%DATADIR%%/xrdb/Motif.ad
 %%DATADIR%%/xrdb/Tk.ad
 %%DATADIR%%/xrdb/Xaw.ad
+share/icons/hicolor/16x16/apps/gsd-xrandr.png
+share/icons/hicolor/22x22/apps/gsd-xrandr.png
+share/icons/hicolor/24x24/apps/gsd-xrandr.png
+share/icons/hicolor/32x32/apps/gsd-xrandr.png
+share/icons/hicolor/scalable/apps/gsd-xrandr.svg
 share/locale/af/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/am/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/ar/LC_MESSAGES/gnome-settings-daemon.mo
