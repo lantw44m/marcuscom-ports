@@ -1,0 +1,2 @@
+USE_GECKO=gecko
+.include "${PORTSDIR}/Mk/bsd.gecko.mk"
