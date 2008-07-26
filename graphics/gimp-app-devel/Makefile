@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app-devel/Makefile,v 1.23 2008/06/06 21:38:49 marcus Exp $
+#   $MCom: ports/graphics/gimp-app-devel/Makefile,v 1.24 2008/07/26 18:12:10 ahze Exp $
 #
 
 PORTNAME=	gimp-app
@@ -83,8 +83,7 @@ MAN1=	gimp-2.5.1 gimptool-2.0.1
 MAN5=	gimp-2.5.5 gimprc-2.5.5
 MLINKS=	gimp-2.4.1 gimp.1 \
 	gimp-2.4.1 gimp-console-2.4.1 \
-	gimprc-2.4.5 gimprc.5 \
-	gimptool-2.0.1 gimptool
+	gimprc-2.4.5 gimprc.5
 
 .if defined(WITHOUT_RSVG)
 CONFIGURE_ARGS+=	--without-librsvg
