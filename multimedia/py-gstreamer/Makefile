@@ -3,12 +3,12 @@
 # Whom:			Koop Mast <kwm@rainbow-runner.nl>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/py-gstreamer/Makefile,v 1.17 2008/03/21 04:06:13 ahze Exp $
+#    $MCom: ports/multimedia/py-gstreamer/Makefile,v 1.19 2008/07/25 17:08:36 marcus Exp $
 #
 
 PORTNAME=	gstreamer
-PORTVERSION=	0.10.11
-PORTREVISION=	2
+PORTVERSION=	0.10.12
+PORTREVISION=	1
 CATEGORIES=	multimedia python gnome
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-python/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
