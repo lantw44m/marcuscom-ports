@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/accerciser/Makefile,v 1.17 2008/06/17 04:01:49 marcus Exp $
+#   $MCom: ports/accessibility/accerciser/Makefile,v 1.18 2008/07/21 17:56:32 marcus Exp $
 #
 
 PORTNAME=	accerciser
@@ -41,7 +41,7 @@ pre-configure:
 
 post-configure:
 	@if [ -f ${WRKDIR}/.Xvfb.pid ]; then \
-	    {CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill || ${TRUE} ; \
+	    ${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill || ${TRUE} ; \
 	    ${RM} -f ${WRKDIR}/.Xvfb.pid ; \
 	fi
 .endif
