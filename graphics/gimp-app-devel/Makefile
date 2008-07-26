@@ -3,12 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app-devel/Makefile,v 1.22 2008/04/21 00:00:32 marcus Exp $
+#   $MCom: ports/graphics/gimp-app-devel/Makefile,v 1.23 2008/06/06 21:38:49 marcus Exp $
 #
 
 PORTNAME=	gimp-app
-DISTVERSION=	2.5.0
-PORTREVISION?=	2
+DISTVERSION=	2.5.2
+PORTREVISION?=	0
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -35,8 +35,6 @@ LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
 		lcms.1:${PORTSDIR}/graphics/lcms \
 		curl.4:${PORTSDIR}/ftp/curl \
 		gegl-0.0.0:${PORTSDIR}/x11/gegl
-
-CONFLICTS=	gimp-app-[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
@@ -81,13 +79,12 @@ LIB_DEPENDS+=	gimp-2.0.0:${PORTSDIR}/graphics/gimp-app-devel
 
 .else
 
-MAN1=	gimp-2.5.1 gimp-console-2.5.1 gimp-remote-2.5.1
-MAN5=	gimp-2.5.5 gimp-remote-2.5.5 gimprc-2.5.5
+MAN1=	gimp-2.5.1 gimptool-2.0.1
+MAN5=	gimp-2.5.5 gimprc-2.5.5
 MLINKS=	gimp-2.4.1 gimp.1 \
 	gimp-2.4.1 gimp-console-2.4.1 \
-	gimp-console-2.4.1 gimp-console.1 \
-	gimp-remote-2.4.1 gimp-remote.1 \
-	gimprc-2.4.5 gimprc.5
+	gimprc-2.4.5 gimprc.5 \
+	gimptool-2.0.1 gimptool
 
 .if defined(WITHOUT_RSVG)
 CONFIGURE_ARGS+=	--without-librsvg
@@ -115,11 +112,11 @@ PLIST_SUB+=		GNOME="@comment "
 .endif
 
 .if defined(WITH_HELPBROWSER)
-USE_GNOME+=		libgtkhtml
-CONFIGURE_ARGS+=	--with-gtkhtml2
+LIB_DEPENDS+=	webkit-1.0.1:${PORTSDIR}/www/webkit-gtk2
+CONFIGURE_ARGS+=	--with-webkit
 PLIST_SUB+=		HELPBROWSER=""
 .else
-CONFIGURE_ARGS+=	--without-gtkhtml2
+CONFIGURE_ARGS+=	--without-webkit
 PLIST_SUB+=		HELPBROWSER="@comment "
 .endif
 
