@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/x11/gegl/Makefile,v 1.1 2008/04/15 02:14:23 ahze Exp $
+#    $MCom: ports/x11/gegl/Makefile,v 1.2 2008/06/06 21:38:55 marcus Exp $
 
 PORTNAME=	gegl
-PORTVERSION=	0.0.16
-PORTREVISION=	1
+PORTVERSION=	0.0.18
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
 		http://gimp.mirrors.hoobly.com/%SUBDIR%/ \
