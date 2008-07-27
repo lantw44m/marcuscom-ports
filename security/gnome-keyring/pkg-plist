@@ -15,9 +15,9 @@ lib/libgp11.a
 lib/libgp11.la
 lib/libgp11.so
 lib/libgp11.so.0
-lib/security/pam_gnome_keyring.a
-lib/security/pam_gnome_keyring.la
-lib/security/pam_gnome_keyring.so
+lib/pam_gnome_keyring.a
+lib/pam_gnome_keyring.la
+lib/pam_gnome_keyring.so
 libdata/pkgconfig/gnome-keyring-1.pc
 libdata/pkgconfig/gp11-0.pc
 libexec/gnome-keyring-ask
@@ -120,7 +120,6 @@ share/locale/zh_CN/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrm %%DOCSDIR%%
-@dirrmtry lib/security
 @dirrm lib/gnome-keyring
 @dirrm include/gp11
 @dirrm include/gnome-keyring-1

@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.124 2008/06/09 05:34:29 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.125 2008/07/26 02:40:42 marcus Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.22.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -39,19 +39,23 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
 
+SUB_FILES+=	gdm.pam
+
 GDMDIR?=	${PREFIX}/etc/gdm
 PKGMESSAGE=	${WRKDIR}/pkg-message
 
 GNOME_LOCALSTATEDIR=	/var
 
-OPTIONS=	IPV6 "Enable IPv6 support" on
+OPTIONS=	IPV6 "Enable IPv6 support" on \
+		KEYRING "Enable GnomeKeyring/PAM integration" on
 
 .include <bsd.port.pre.mk>
 
-.if exists(/usr/include/security/pam_misc.h)
-PLIST_SUB+=	PAM_MISC=""
+.if defined(WITHOUT_KEYRING)
+SUB_LIST+=	PAM_KEYRING=\#
 .else
-PLIST_SUB+=	PAM_MISC="@comment "
+RUN_DEPENDS+=	${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/gnome-keyring
+SUB_LIST+=	PAM_KEYRING=
 .endif
 
 .if !defined(WITHOUT_IPV6)
@@ -81,6 +85,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/gdm.conf-custom \
 		${PREFIX}/etc/gdm/custom.conf.default
 	${MKDIR} ${PREFIX}/share/xsessions
+	${INSTALL_DATA} ${WRKDIR}/gdm.pam ${PREFIX}/etc/pam.d/gdm
 	@${MKDIR} ${PREFIX}/etc/gdm/Sessions
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}

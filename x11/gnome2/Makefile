@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.246 2008/07/23 19:47:14 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.247 2008/07/24 01:28:56 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -102,7 +102,7 @@ RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga
 
 .if ${.CURDIR}==${MASTERDIR} || ${.CURDIR:T}=="gnome2-lite"
 .if defined(WITH_XSCREENSAVER)
-RUN_DEPENDS+=	${LOCALBASE}/share/applications/gnome-screensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome
+RUN_DEPENDS+=	${LOCALBASE}/share/applications/xscreensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome
 .else
 RUN_DEPENDS+=	gnome-screensaver:${PORTSDIR}/x11/gnome-screensaver
 .endif

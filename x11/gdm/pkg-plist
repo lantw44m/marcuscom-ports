@@ -10,6 +10,7 @@ etc/gdm/Xsession
 etc/gdm/custom.conf.default
 @exec [ -f %B/custom.conf ] || cp %B/%f %B/custom.conf
 etc/gdm/gdm.schemas
+etc/pam.d/gdm
 libdata/bonobo/servers/GNOME_FastUserSwitchApplet.server
 libexec/gdm-crash-logger
 libexec/gdm-factory-slave
@@ -21,7 +22,6 @@ libexec/gdm-simple-greeter
 libexec/gdm-simple-slave
 libexec/gdm-user-switch-applet
 libexec/gdm-xdmcp-chooser-slave
-%%PAM_MISC%%libexec/gdmaskpass
 sbin/gdm
 sbin/gdm-binary
 sbin/gdm-restart

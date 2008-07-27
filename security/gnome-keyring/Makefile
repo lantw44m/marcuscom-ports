@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnome-keyring/Makefile,v 1.59 2008/03/09 18:30:40 mezz Exp $
+#   $MCom: ports/security/gnome-keyring/Makefile,v 1.61 2008/07/23 01:22:29 marcus Exp $
 #
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	2.23.5
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -25,6 +26,7 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
+CONFIGURE_ARGS=	--with-pam-dir="${PREFIX}/lib"
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 GCONF_SCHEMAS=	gnome-keyring.schemas
