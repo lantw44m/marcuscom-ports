@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/www/webkit-gtk2/Makefile,v 1.2 2008/03/31 10:33:05 ahze Exp $
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.16 2008/07/22 18:34:39 marcus Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.17 2008/07/23 01:14:28 marcus Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://people.freedesktop.org/~alp/webkit/gtk/
 PKGNAMESUFFIX=	-gtk2
@@ -20,18 +20,18 @@ LIB_DEPENDS=	icutu.38:${PORTSDIR}/devel/icu \
 		curl.4:${PORTSDIR}/ftp/curl \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3
 
+OPTIONS=	VIDEO "Enable video support" on
+WANT_GSTREAMER=	yes
 USE_BISON=	build
 USE_GMAKE=	yes
 USE_GNOME=	gnometarget gtk20 libxslt
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoconf:261 automake:110 libtool:15
-USE_GSTREAMER=	gnomevfs
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-webkit-target=x11 \
 		--enable-icon-database \
-		--enable-video \
 		--enable-svg \
 		--enable-svg-fonts \
 		--enable-svg-experimental
@@ -41,6 +41,11 @@ BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
 .include <bsd.port.pre.mk>
+
+.if defined(WITH_VIDEO)
+USE_GSTREAMER+=	gnomevfs
+CONFIGURE_ARGS+=--enable-video
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%BROWSER_PLUGINS_DIR%%|${BROWSER_PLUGINS_DIR}|' \
