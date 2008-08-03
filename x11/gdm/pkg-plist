@@ -94,6 +94,7 @@ share/locale/oc/LC_MESSAGES/gdm.mo
 share/locale/or/LC_MESSAGES/gdm.mo
 share/locale/pa/LC_MESSAGES/gdm.mo
 share/locale/pl/LC_MESSAGES/gdm.mo
+share/locale/ps/LC_MESSAGES/gdm.mo
 share/locale/pt/LC_MESSAGES/gdm.mo
 share/locale/pt_BR/LC_MESSAGES/gdm.mo
 share/locale/ro/LC_MESSAGES/gdm.mo
@@ -179,6 +180,8 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/te
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/ps/LC_MESSAGES
+@dirrmtry share/locale/ps
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/nso/LC_MESSAGES

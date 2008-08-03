@@ -1,11 +1,11 @@
---- gui/simple-chooser/gdm-host-chooser-widget.c.orig        2008-07-25 22:18:58.000000000 -0400
-+++ gui/simple-chooser/gdm-host-chooser-widget.c        2008-07-25 22:36:43.000000000 -0400
+--- gui/simple-chooser/gdm-host-chooser-widget.c.orig	2008-03-04 14:42:37.000000000 -0500
++++ gui/simple-chooser/gdm-host-chooser-widget.c	2008-08-03 01:48:49.000000000 -0400
 @@ -442,7 +442,7 @@ find_broadcast_addresses (GdmHostChooser
                          /* paranoia */
                          ifreq.ifr_name[sizeof (ifreq.ifr_name) - 1] = '\0';
  
 -                        if (ioctl (sock, SIOCGIFFLAGS, &ifreq) < 0) {
-+                        if ((ioctl (sock, SIOCGIFFLAGS, &ifreq) < 0) && (errno != ENXIO))
++                        if ((ioctl (sock, SIOCGIFFLAGS, &ifreq) < 0) && (errno != ENXIO)) {
                                  g_warning ("Could not get SIOCGIFFLAGS for %s", ifr[i].ifr_name);
                          }
  
