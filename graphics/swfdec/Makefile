@@ -23,7 +23,7 @@ USE_GSTREAMER=	core good mp3 ffmpeg
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ARGS=	--with-audio=none
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+		LDFLAGS="-Wl,-Bsymbolic -L${LOCALBASE}/lib"
 
 PLIST_SUB=	VERSION=${PORTVERSION:R}
 
