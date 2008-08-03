@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.149 2008/06/16 19:35:56 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.150 2008/07/22 04:44:28 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.23.5
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -18,7 +19,8 @@ COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		nss3.1:${PORTSDIR}/security/nss \
 		tasn1.3:${PORTSDIR}/security/libtasn1 \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3
+		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
+		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -32,6 +34,7 @@ USE_BDB=	41+
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--enable-nss=yes \
+		--enable-gnome-keyring=yes \
 		--with-openldap=yes \
 		--with-libdb=${LOCALBASE}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}" \
