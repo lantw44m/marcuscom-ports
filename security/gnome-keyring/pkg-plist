@@ -4,6 +4,8 @@ include/gnome-keyring-1/gnome-keyring-result.h
 include/gnome-keyring-1/gnome-keyring.h
 include/gp11/gp11.h
 include/gp11/pkcs11.h
+include/gp11/pkcs11g.h
+include/gp11/pkcs11n.h
 lib/gnome-keyring/gnome-keyring-pkcs11.a
 lib/gnome-keyring/gnome-keyring-pkcs11.la
 lib/gnome-keyring/gnome-keyring-pkcs11.so
