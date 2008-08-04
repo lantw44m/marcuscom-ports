@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/www/webkit-gtk2/Makefile,v 1.2 2008/03/31 10:33:05 ahze Exp $
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.17 2008/07/23 01:14:28 marcus Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.18 2008/07/27 20:08:13 ahze Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.0.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://people.freedesktop.org/~alp/webkit/gtk/
 PKGNAMESUFFIX=	-gtk2
@@ -37,7 +37,7 @@ CONFIGURE_ARGS=	--with-webkit-target=x11 \
 		--enable-svg-experimental
 MAKEFILE=	GNUmakefile
 
-BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins
+BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
 .include <bsd.port.pre.mk>

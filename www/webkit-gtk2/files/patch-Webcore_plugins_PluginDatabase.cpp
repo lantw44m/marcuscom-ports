@@ -4,7 +4,7 @@
      userPluginPath.append(String("/.netscape/plugins"));
      paths.append(userPluginPath);
  
-+    paths.append("%%BROWSER_PLUGINS");
++    paths.append("%%BROWSER_PLUGINS%%");
      paths.append("/usr/lib/browser/plugins");
      paths.append("/usr/local/lib/mozilla/plugins");
      paths.append("/usr/lib/firefox/plugins");

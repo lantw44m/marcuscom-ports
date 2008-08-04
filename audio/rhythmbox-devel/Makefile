@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox-devel/Makefile,v 1.95 2008/07/13 17:41:11 marcus Exp $
+#   $MCom: ports/audio/rhythmbox-devel/Makefile,v 1.96 2008/07/13 17:48:10 marcus Exp $
 #
 
 PORTNAME=	rhythmbox
 PORTVERSION=	0.11.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/0.11
@@ -127,6 +127,11 @@ PLIST_SUB+=	IPOD="@comment "
 .if !defined(WITHOUT_GECKO_PLUGIN)
 USE_GECKO=	firefox mozilla seamonkey xulrunner<->firefox firefox-devel<->firefox
 .include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
+
+USE_WEBPLUGINS=	gecko18
+WEBPLUGINS_FILES=librhythmbox-itms-detection-plugin.so
+.include "${PORTSDIR}/www/firefox/Makefile.webplugins"
+
 CONFIGURE_ARGS+=--enable-browser-plugin \
 		--with-gecko=${GECKO}
 CONFIGURE_ENV+=	MOZILLA_PLUGINDIR=${BROWSER_PLUGINS_DIR}

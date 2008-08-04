@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.109 2008/06/06 21:38:51 marcus Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.110 2008/06/12 19:49:48 marcus Exp $
 #
 
 PORTNAME=	totem
 PORTVERSION=	2.23.4
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -38,7 +38,7 @@ INSTALLS_OMF=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 	       	LIBS="-L${LOCALBASE}/lib -lXrandr" \
-		BROWSER_PLUGIN_DIR="${PREFIX}/lib/browser_plugins"
+		BROWSER_PLUGIN_DIR="${WEBPLUGINS_DIR}"
 CONFIGURE_ARGS=	--with-plugins="${TOTEM_PLUGINS}"
 
 MAN1=		totem.1 totem-video-thumbnailer.1
@@ -101,6 +101,16 @@ CONFIGURE_ARGS+=--with-mozilla=${GECKO} \
 		--enable-complex-plugin \
 		--enable-narrowspace-plugin
 PLIST_SUB+=	GECKO_PLUGINS=""
+
+USE_WEBPLUGINS=		gecko*
+WEBPLUGINS_FILES=	libtotem-basic-plugin.so libtotem-basic-plugin.xpt \
+			libtotem-complex-plugin.so libtotem-complex-plugin.xpt \
+			libtotem-cone-plugin.so libtotem-cone-plugin.xpt \
+			libtotem-gmp-plugin.so libtotem-gmp-plugin.xpt \
+			libtotem-mully-plugin.so libtotem-mully-plugin.xpt \
+			libtotem-narrowspace-plugin.so \
+			libtotem-narrowspace-plugin.xpt
+.include "${PORTSDIR}/www/firefox/Makefile.webplugins"
 .else
 CONFIGURE_ARGS+=--without-mozilla \
 		--disable-browser-plugins \
