@@ -29,6 +29,19 @@ share/gnome/help/seahorse/C/figures/signature.png
 share/gnome/help/seahorse/C/figures/text-editor.png
 share/gnome/help/seahorse/C/legal.xml
 share/gnome/help/seahorse/C/seahorse.xml
+share/gnome/help/seahorse/de/figures/export.png
+share/gnome/help/seahorse/de/figures/file-manager.png
+share/gnome/help/seahorse/de/figures/generate.png
+share/gnome/help/seahorse/de/figures/import.png
+share/gnome/help/seahorse/de/figures/key-manager.png
+share/gnome/help/seahorse/de/figures/key-properties.png
+share/gnome/help/seahorse/de/figures/passphrase.png
+share/gnome/help/seahorse/de/figures/preferences.png
+share/gnome/help/seahorse/de/figures/recipients.png
+share/gnome/help/seahorse/de/figures/seahorse-window.png
+share/gnome/help/seahorse/de/figures/signature.png
+share/gnome/help/seahorse/de/figures/text-editor.png
+share/gnome/help/seahorse/de/seahorse.xml
 share/gnome/help/seahorse/en_GB/figures/export.png
 share/gnome/help/seahorse/en_GB/figures/file-manager.png
 share/gnome/help/seahorse/en_GB/figures/generate.png
@@ -206,6 +219,7 @@ share/locale/zh_CN/LC_MESSAGES/seahorse.mo
 share/locale/zh_HK/LC_MESSAGES/seahorse.mo
 share/locale/zh_TW/LC_MESSAGES/seahorse.mo
 share/omf/seahorse/seahorse-C.omf
+share/omf/seahorse/seahorse-de.omf
 share/omf/seahorse/seahorse-en_GB.omf
 share/omf/seahorse/seahorse-es.omf
 share/omf/seahorse/seahorse-fr.omf
@@ -315,6 +329,8 @@ share/pixmaps/seahorse/scalable/seahorse.svg
 @dirrm share/gnome/help/seahorse/es
 @dirrm share/gnome/help/seahorse/en_GB/figures
 @dirrm share/gnome/help/seahorse/en_GB
+@dirrm share/gnome/help/seahorse/de/figures
+@dirrm share/gnome/help/seahorse/de
 @dirrm share/gnome/help/seahorse/C/figures
 @dirrm share/gnome/help/seahorse/C
 @dirrm share/gnome/help/seahorse
