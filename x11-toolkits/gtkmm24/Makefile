@@ -3,11 +3,11 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.34 2008/07/18 18:54:22 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.35 2008/07/23 18:56:58 marcus Exp $
 #
 
 PORTNAME=	gtkmm
-PORTVERSION=	2.13.5
+PORTVERSION=	2.13.6
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME}
