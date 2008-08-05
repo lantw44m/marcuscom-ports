@@ -206,6 +206,18 @@ share/gnome/help/accessx-status/it/figures/accessx_sticky-keys.png
 share/gnome/help/accessx-status/it/figures/accessx_sticky-meta-key.png
 share/gnome/help/accessx-status/it/figures/accessx_sticky-shift-key.png
 share/gnome/help/accessx-status/it/figures/accessx_sticky-windows-key.png
+share/gnome/help/accessx-status/ko/accessx-status.xml
+share/gnome/help/accessx-status/ko/figures/accessx-status-applet.png
+share/gnome/help/accessx-status/ko/figures/accessx-status-disabled.png
+share/gnome/help/accessx-status/ko/figures/accessx_bounce-keys.png
+share/gnome/help/accessx-status/ko/figures/accessx_mouse-keys.png
+share/gnome/help/accessx-status/ko/figures/accessx_slow-keys.png
+share/gnome/help/accessx-status/ko/figures/accessx_sticky-altGr-key.png
+share/gnome/help/accessx-status/ko/figures/accessx_sticky-ctrl-key.png
+share/gnome/help/accessx-status/ko/figures/accessx_sticky-keys.png
+share/gnome/help/accessx-status/ko/figures/accessx_sticky-meta-key.png
+share/gnome/help/accessx-status/ko/figures/accessx_sticky-shift-key.png
+share/gnome/help/accessx-status/ko/figures/accessx_sticky-windows-key.png
 share/gnome/help/accessx-status/nl/accessx-status.xml
 share/gnome/help/accessx-status/nl/figures/accessx-status-applet.png
 share/gnome/help/accessx-status/nl/figures/accessx-status-disabled.png
@@ -896,6 +908,8 @@ share/gnome/help/gweather/uk/gweather.xml
 share/gnome/help/invest-applet/C/invest-applet.xml
 share/gnome/help/invest-applet/C/legal.xml
 share/gnome/help/invest-applet/es/invest-applet.xml
+share/gnome/help/invest-applet/fi/invest-applet.xml
+share/gnome/help/invest-applet/sv/invest-applet.xml
 share/gnome/help/mixer_applet2/C/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/C/legal.xml
 share/gnome/help/mixer_applet2/C/mixer_applet2.xml
@@ -1192,6 +1206,7 @@ share/locale/oc/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/or/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/ps/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/pt/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ro/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1223,6 +1238,7 @@ share/omf/accessx-status/accessx-status-es.omf
 share/omf/accessx-status/accessx-status-fi.omf
 share/omf/accessx-status/accessx-status-fr.omf
 share/omf/accessx-status/accessx-status-it.omf
+share/omf/accessx-status/accessx-status-ko.omf
 share/omf/accessx-status/accessx-status-nl.omf
 share/omf/accessx-status/accessx-status-oc.omf
 share/omf/accessx-status/accessx-status-sv.omf
@@ -1330,6 +1346,8 @@ share/omf/gweather/gweather-sv.omf
 share/omf/gweather/gweather-uk.omf
 share/omf/invest-applet/invest-applet-C.omf
 share/omf/invest-applet/invest-applet-es.omf
+share/omf/invest-applet/invest-applet-fi.omf
+share/omf/invest-applet/invest-applet-sv.omf
 share/omf/mixer_applet2/mixer_applet2-C.omf
 share/omf/mixer_applet2/mixer_applet2-ca.omf
 share/omf/mixer_applet2/mixer_applet2-en_GB.omf
@@ -1661,6 +1679,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/mixer_applet2/C/figures
 @dirrm share/gnome/help/mixer_applet2/C
 @dirrm share/gnome/help/mixer_applet2
+@dirrm share/gnome/help/invest-applet/sv
+@dirrm share/gnome/help/invest-applet/fi
 @dirrm share/gnome/help/invest-applet/es
 @dirrm share/gnome/help/invest-applet/C
 @dirrm share/gnome/help/invest-applet
@@ -1871,6 +1891,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/accessx-status/oc
 @dirrm share/gnome/help/accessx-status/nl/figures
 @dirrm share/gnome/help/accessx-status/nl
+@dirrm share/gnome/help/accessx-status/ko/figures
+@dirrm share/gnome/help/accessx-status/ko
 @dirrm share/gnome/help/accessx-status/it/figures
 @dirrm share/gnome/help/accessx-status/it
 @dirrm share/gnome/help/accessx-status/fr/figures
