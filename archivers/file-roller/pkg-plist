@@ -15,6 +15,7 @@ share/applications/file-roller.desktop
 %%DATADIR%%/glade/open-with.glade
 %%DATADIR%%/glade/password.glade
 %%DATADIR%%/glade/properties.glade
+%%DATADIR%%/glade/new.glade
 %%DATADIR%%/glade/update.glade
 %%DATADIR%%/icons/hicolor/16x16/actions/add-files-to-archive.png
 %%DATADIR%%/icons/hicolor/16x16/actions/add-folder-to-archive.png
