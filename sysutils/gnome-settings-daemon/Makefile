@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.22 2008/06/17 19:38:37 marcus Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.23 2008/07/25 06:22:38 marcus Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	2.23.5
+PORTVERSION=	2.23.6
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -27,6 +27,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	apps_gnome_settings_daemon_keybindings.schemas \
+		apps_gnome_settings_daemon_xrandr.schemas \
 		apps_gnome_settings_daemon_screensaver.schemas \
 		desktop_gnome_font_rendering.schemas \
 		gnome-settings-daemon.schemas
