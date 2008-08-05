@@ -4,7 +4,6 @@ lib/gtk-2.0/modules/libgnomebreakpad.so
 share/applications/bug-buddy.desktop
 %%DATADIR%%/bug-buddy.gtkbuilder
 %%DATADIR%%/bug-buddy.menu
-%%DATADIR%%/bug-buddy.png
 %%DATADIR%%/bugzilla/gnome.bugzilla
 %%DATADIR%%/bugzilla/gnome/config
 %%DATADIR%%/bugzilla/gnome/mostfreq
@@ -14,6 +13,12 @@ share/applications/bug-buddy.desktop
 %%DATADIR%%/bugzilla/ximian/mostfreq
 %%DATADIR%%/bugzilla/ximian/products
 %%DATADIR%%/gdb-cmd
+share/icons/HighContrastLargePrint/48x48/apps/bug-buddy.png
+share/icons/hicolor/16x16/apps/bug-buddy.png
+share/icons/hicolor/22x22/apps/bug-buddy.png
+share/icons/hicolor/24x24/apps/bug-buddy.png
+share/icons/hicolor/32x32/apps/bug-buddy.png
+share/icons/hicolor/scalable/apps/bug-buddy.svg
 share/icons/hicolor/48x48/apps/bug-buddy.png
 share/locale/af/LC_MESSAGES/bug-buddy.mo
 share/locale/am/LC_MESSAGES/bug-buddy.mo
@@ -102,6 +107,9 @@ share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
 @dirrm %%DATADIR%%/bugzilla/gnome
 @dirrm %%DATADIR%%/bugzilla
 @dirrm %%DATADIR%%
+@dirrmtry share/icons/HighContrastLargePrint/48x48/apps
+@dirrmtry share/icons/HighContrastLargePrint/48x48
+@dirrmtry share/icons/HighContrastLargePrint
 @dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
