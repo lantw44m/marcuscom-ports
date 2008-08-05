@@ -3,12 +3,12 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.24 2008/06/05 15:04:21 kwm Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.25 2008/06/06 21:38:46 marcus Exp $
 #
 
 PORTNAME=	anjuta
 PORTVERSION=	2.5.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -22,7 +22,7 @@ BUILD_DEPENDS=	autogen:${PORTSDIR}/devel/autogen \
 LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
 		gbf-1.2:${PORTSDIR}/devel/gnome-build \
 		gladeui-1.7:${PORTSDIR}/devel/glade3 \
-		neon.26:${PORTSDIR}/www/neon26 \
+		neon.28:${PORTSDIR}/www/neon28 \
 		devhelp-1.0:${PORTSDIR}/devel/devhelp
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		autogen:${PORTSDIR}/devel/autogen \
