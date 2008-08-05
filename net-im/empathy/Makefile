@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.7 2008/06/07 09:15:35 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.8 2008/07/17 06:42:06 marcus Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	0.23.4
+PORTVERSION=	2.23.6
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -32,7 +32,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	GNOME_Megaphone_Applet.schemas empathy.schemas
 
-MAN1=		empathy-accounts.1 empathy.1
+MAN1=		empathy.1
 
 .include <bsd.port.pre.mk>
 

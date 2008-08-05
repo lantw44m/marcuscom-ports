@@ -1,5 +1,4 @@
 bin/empathy
-bin/empathy-accounts
 bin/empathy-logs
 include/libempathy-gtk/empathy-account-chooser.h
 include/libempathy-gtk/empathy-account-widget-irc.h
@@ -81,6 +80,7 @@ libdata/pkgconfig/libempathy-gtk.pc
 libdata/pkgconfig/libempathy.pc
 libexec/megaphone-applet
 libexec/nothere-applet
+share/applications/empathy-properties.desktop
 share/applications/empathy.desktop
 share/doc/libempathy-gtk/EmpathyAccountChooser.html
 share/doc/libempathy-gtk/EmpathyAvatarChooser.html
@@ -88,6 +88,7 @@ share/doc/libempathy-gtk/EmpathyAvatarImage.html
 share/doc/libempathy-gtk/EmpathyCellRendererActivatable.html
 share/doc/libempathy-gtk/EmpathyCellRendererExpander.html
 share/doc/libempathy-gtk/EmpathyCellRendererText.html
+share/doc/libempathy-gtk/EmpathyChatView.html
 share/doc/libempathy-gtk/EmpathyChat.html
 share/doc/libempathy-gtk/EmpathyContactListStore.html
 share/doc/libempathy-gtk/EmpathyContactListView.html
@@ -102,7 +103,6 @@ share/doc/libempathy-gtk/left.png
 share/doc/libempathy-gtk/libempathy-gtk-EmpathyConf.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget-irc.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget.html
-share/doc/libempathy-gtk/libempathy-gtk-empathy-chat-view.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-contact-dialogs.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-contact-menu.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-contact-widget.html
@@ -299,6 +299,9 @@ share/gnome/help/empathy/es/figures/empathy-new-account.png
 share/gnome/help/empathy/fr/empathy.xml
 share/gnome/help/empathy/fr/figures/empathy-main-window.png
 share/gnome/help/empathy/fr/figures/empathy-new-account.png
+share/gnome/help/empathy/sv/empathy.xml
+share/gnome/help/empathy/sv/figures/empathy-main-window.png
+share/gnome/help/empathy/sv/figures/empathy-new-account.png
 share/icons/hicolor/16x16/apps/empathy.png
 share/icons/hicolor/22x22/apps/empathy.png
 share/icons/hicolor/24x24/apps/empathy.png
@@ -369,6 +372,7 @@ share/omf/empathy/empathy-C.omf
 share/omf/empathy/empathy-de.omf
 share/omf/empathy/empathy-es.omf
 share/omf/empathy/empathy-fr.omf
+share/omf/empathy/empathy-sv.omf
 @dirrm share/omf/empathy
 @dirrm share/mission-control/profiles
 @dirrm share/mission-control
@@ -404,6 +408,8 @@ share/omf/empathy/empathy-fr.omf
 @dirrmtry share/locale/cs
 @dirrmtry share/locale/ca/LC_MESSAGES
 @dirrmtry share/locale/ca
+@dirrm share/gnome/help/empathy/sv/figures
+@dirrm share/gnome/help/empathy/sv
 @dirrm share/gnome/help/empathy/fr/figures
 @dirrm share/gnome/help/empathy/fr
 @dirrm share/gnome/help/empathy/es/figures
