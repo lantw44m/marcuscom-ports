@@ -17,6 +17,8 @@ include/glib-2.0/gio/gcontenttype.h
 include/glib-2.0/gio/gdatainputstream.h
 include/glib-2.0/gio/gdataoutputstream.h
 include/glib-2.0/gio/gdrive.h
+include/glib-2.0/gio/gemblem.h
+include/glib-2.0/gio/gemblemedicon.h
 include/glib-2.0/gio/gfile.h
 include/glib-2.0/gio/gfileattribute.h
 include/glib-2.0/gio/gfileenumerator.h
