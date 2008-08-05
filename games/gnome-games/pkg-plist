@@ -760,6 +760,11 @@ share/gnome/help/gnect/fr/figures/mainwindow.png
 share/gnome/help/gnect/fr/figures/tables.png
 share/gnome/help/gnect/fr/figures/tileset.png
 share/gnome/help/gnect/fr/gnect.xml
+share/gnome/help/gnect/it/figures/connect.png
+share/gnome/help/gnect/it/figures/mainwindow.png
+share/gnome/help/gnect/it/figures/tables.png
+share/gnome/help/gnect/it/figures/tileset.png
+share/gnome/help/gnect/it/gnect.xml
 share/gnome/help/gnect/oc/figures/connect.png
 share/gnome/help/gnect/oc/figures/mainwindow.png
 share/gnome/help/gnect/oc/figures/tables.png
@@ -800,6 +805,13 @@ share/gnome/help/gnibbles/fr/figures/playing.png
 share/gnome/help/gnibbles/fr/figures/tables.png
 share/gnome/help/gnibbles/fr/figures/worm_op.png
 share/gnome/help/gnibbles/fr/gnibbles.xml
+share/gnome/help/gnibbles/it/figures/connect.png
+share/gnome/help/gnibbles/it/figures/game.png
+share/gnome/help/gnibbles/it/figures/intro.png
+share/gnome/help/gnibbles/it/figures/playing.png
+share/gnome/help/gnibbles/it/figures/tables.png
+share/gnome/help/gnibbles/it/figures/worm_op.png
+share/gnome/help/gnibbles/it/gnibbles.xml
 share/gnome/help/gnibbles/oc/figures/connect.png
 share/gnome/help/gnibbles/oc/figures/game.png
 share/gnome/help/gnibbles/oc/figures/intro.png
@@ -882,6 +894,14 @@ share/gnome/help/gnome-sudoku/fr/figures/hints.png
 share/gnome/help/gnome-sudoku/fr/figures/resuming.png
 share/gnome/help/gnome-sudoku/fr/figures/starting.png
 share/gnome/help/gnome-sudoku/fr/gnome-sudoku.xml
+share/gnome/help/gnome-sudoku/it/figures/Print_Sudokus.png
+share/gnome/help/gnome-sudoku/it/figures/always_show_hint.png
+share/gnome/help/gnome-sudoku/it/figures/error_highlighting.png
+share/gnome/help/gnome-sudoku/it/figures/highlighting.png
+share/gnome/help/gnome-sudoku/it/figures/hints.png
+share/gnome/help/gnome-sudoku/it/figures/resuming.png
+share/gnome/help/gnome-sudoku/it/figures/starting.png
+share/gnome/help/gnome-sudoku/it/gnome-sudoku.xml
 share/gnome/help/gnome-sudoku/oc/figures/Print_Sudokus.png
 share/gnome/help/gnome-sudoku/oc/figures/always_show_hint.png
 share/gnome/help/gnome-sudoku/oc/figures/error_highlighting.png
@@ -921,6 +941,7 @@ share/gnome/help/gnometris/de/gnometris.xml
 share/gnome/help/gnometris/el/gnometris.xml
 share/gnome/help/gnometris/es/gnometris.xml
 share/gnome/help/gnometris/fr/gnometris.xml
+share/gnome/help/gnometris/it/gnometris.xml
 share/gnome/help/gnometris/oc/gnometris.xml
 share/gnome/help/gnometris/sv/gnometris.xml
 share/gnome/help/gnomine/C/figures/easy-hints-1.png
@@ -1113,6 +1134,9 @@ share/gnome/help/gtali/it/gtali.xml
 share/gnome/help/gtali/oc/figures/mainwindow.png
 share/gnome/help/gtali/oc/figures/preferences.png
 share/gnome/help/gtali/oc/gtali.xml
+share/gnome/help/gtali/pt_BR/figures/mainwindow.png
+share/gnome/help/gtali/pt_BR/figures/preferences.png
+share/gnome/help/gtali/pt_BR/gtali.xml
 share/gnome/help/gtali/sv/figures/mainwindow.png
 share/gnome/help/gtali/sv/figures/preferences.png
 share/gnome/help/gtali/sv/gtali.xml
@@ -1150,6 +1174,14 @@ share/gnome/help/iagno/fr/figures/START.png
 share/gnome/help/iagno/fr/figures/connect.png
 share/gnome/help/iagno/fr/figures/tables.png
 share/gnome/help/iagno/fr/iagno.xml
+share/gnome/help/iagno/it/figures/ANIMATION.png
+share/gnome/help/iagno/it/figures/BLOCK.png
+share/gnome/help/iagno/it/figures/FIRST.png
+share/gnome/help/iagno/it/figures/PLAYER.png
+share/gnome/help/iagno/it/figures/START.png
+share/gnome/help/iagno/it/figures/connect.png
+share/gnome/help/iagno/it/figures/tables.png
+share/gnome/help/iagno/it/iagno.xml
 share/gnome/help/iagno/oc/figures/ANIMATION.png
 share/gnome/help/iagno/oc/figures/BLOCK.png
 share/gnome/help/iagno/oc/figures/FIRST.png
@@ -1200,6 +1232,11 @@ share/gnome/help/mahjongg/fr/figures/no-move.png
 share/gnome/help/mahjongg/fr/figures/preferences.png
 share/gnome/help/mahjongg/fr/figures/toolbar.png
 share/gnome/help/mahjongg/fr/mahjongg.xml
+share/gnome/help/mahjongg/it/figures/mahjongg.png
+share/gnome/help/mahjongg/it/figures/no-move.png
+share/gnome/help/mahjongg/it/figures/preferences.png
+share/gnome/help/mahjongg/it/figures/toolbar.png
+share/gnome/help/mahjongg/it/mahjongg.xml
 share/gnome/help/mahjongg/oc/figures/mahjongg.png
 share/gnome/help/mahjongg/oc/figures/no-move.png
 share/gnome/help/mahjongg/oc/figures/preferences.png
@@ -1464,12 +1501,14 @@ share/omf/gnect/gnect-ca.omf
 share/omf/gnect/gnect-en_GB.omf
 share/omf/gnect/gnect-es.omf
 share/omf/gnect/gnect-fr.omf
+share/omf/gnect/gnect-it.omf
 share/omf/gnect/gnect-oc.omf
 share/omf/gnect/gnect-sv.omf
 share/omf/gnibbles/gnibbles-C.omf
 share/omf/gnibbles/gnibbles-ca.omf
 share/omf/gnibbles/gnibbles-es.omf
 share/omf/gnibbles/gnibbles-fr.omf
+share/omf/gnibbles/gnibbles-it.omf
 share/omf/gnibbles/gnibbles-oc.omf
 share/omf/gnibbles/gnibbles-sv.omf
 share/omf/gnobots2/gnobots2-C.omf
@@ -1488,6 +1527,7 @@ share/omf/gnome-sudoku/gnome-sudoku-da.omf
 share/omf/gnome-sudoku/gnome-sudoku-de.omf
 share/omf/gnome-sudoku/gnome-sudoku-es.omf
 share/omf/gnome-sudoku/gnome-sudoku-fr.omf
+share/omf/gnome-sudoku/gnome-sudoku-it.omf
 share/omf/gnome-sudoku/gnome-sudoku-oc.omf
 share/omf/gnome-sudoku/gnome-sudoku-pt_BR.omf
 share/omf/gnome-sudoku/gnome-sudoku-ru.omf
@@ -1498,6 +1538,7 @@ share/omf/gnometris/gnometris-de.omf
 share/omf/gnometris/gnometris-el.omf
 share/omf/gnometris/gnometris-es.omf
 share/omf/gnometris/gnometris-fr.omf
+share/omf/gnometris/gnometris-it.omf
 share/omf/gnometris/gnometris-oc.omf
 share/omf/gnometris/gnometris-sv.omf
 share/omf/gnomine/gnomine-C.omf
@@ -1532,11 +1573,13 @@ share/omf/gtali/gtali-es.omf
 share/omf/gtali/gtali-fr.omf
 share/omf/gtali/gtali-it.omf
 share/omf/gtali/gtali-oc.omf
+share/omf/gtali/gtali-pt_BR.omf
 share/omf/gtali/gtali-sv.omf
 share/omf/iagno/iagno-C.omf
 share/omf/iagno/iagno-ca.omf
 share/omf/iagno/iagno-es.omf
 share/omf/iagno/iagno-fr.omf
+share/omf/iagno/iagno-it.omf
 share/omf/iagno/iagno-oc.omf
 share/omf/iagno/iagno-pt_BR.omf
 share/omf/iagno/iagno-sv.omf
@@ -1545,6 +1588,7 @@ share/omf/mahjongg/mahjongg-ca.omf
 share/omf/mahjongg/mahjongg-de.omf
 share/omf/mahjongg/mahjongg-es.omf
 share/omf/mahjongg/mahjongg-fr.omf
+share/omf/mahjongg/mahjongg-it.omf
 share/omf/mahjongg/mahjongg-oc.omf
 share/omf/mahjongg/mahjongg-sv.omf
 share/omf/same-gnome/same-gnome-C.omf
@@ -1693,6 +1737,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/mahjongg/sv
 @dirrm share/gnome/help/mahjongg/oc/figures
 @dirrm share/gnome/help/mahjongg/oc
+@dirrm share/gnome/help/mahjongg/it/figures
+@dirrm share/gnome/help/mahjongg/it
 @dirrm share/gnome/help/mahjongg/fr/figures
 @dirrm share/gnome/help/mahjongg/fr
 @dirrm share/gnome/help/mahjongg/es/figures
@@ -1710,6 +1756,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/iagno/pt_BR
 @dirrm share/gnome/help/iagno/oc/figures
 @dirrm share/gnome/help/iagno/oc
+@dirrm share/gnome/help/iagno/it/figures
+@dirrm share/gnome/help/iagno/it
 @dirrm share/gnome/help/iagno/fr/figures
 @dirrm share/gnome/help/iagno/fr
 @dirrm share/gnome/help/iagno/es/figures
@@ -1723,6 +1771,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gtali/sv
 @dirrm share/gnome/help/gtali/oc/figures
 @dirrm share/gnome/help/gtali/oc
+@dirrm share/gnome/help/gtali/pt_BR/figures
+@dirrm share/gnome/help/gtali/pt_BR
 @dirrm share/gnome/help/gtali/it/figures
 @dirrm share/gnome/help/gtali/it
 @dirrm share/gnome/help/gtali/fr/figures
@@ -1792,6 +1842,7 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnomine
 @dirrm share/gnome/help/gnometris/sv
 @dirrm share/gnome/help/gnometris/oc
+@dirrm share/gnome/help/gnometris/it
 @dirrm share/gnome/help/gnometris/fr
 @dirrm share/gnome/help/gnometris/es
 @dirrm share/gnome/help/gnometris/el
@@ -1807,6 +1858,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnome-sudoku/pt_BR
 @dirrm share/gnome/help/gnome-sudoku/oc/figures
 @dirrm share/gnome/help/gnome-sudoku/oc
+@dirrm share/gnome/help/gnome-sudoku/it/figures
+@dirrm share/gnome/help/gnome-sudoku/it
 @dirrm share/gnome/help/gnome-sudoku/fr/figures
 @dirrm share/gnome/help/gnome-sudoku/fr
 @dirrm share/gnome/help/gnome-sudoku/es/figures
@@ -1842,6 +1895,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnibbles/sv
 @dirrm share/gnome/help/gnibbles/oc/figures
 @dirrm share/gnome/help/gnibbles/oc
+@dirrm share/gnome/help/gnibbles/it/figures
+@dirrm share/gnome/help/gnibbles/it
 @dirrm share/gnome/help/gnibbles/fr/figures
 @dirrm share/gnome/help/gnibbles/fr
 @dirrm share/gnome/help/gnibbles/es/figures
@@ -1855,6 +1910,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnect/sv
 @dirrm share/gnome/help/gnect/oc/figures
 @dirrm share/gnome/help/gnect/oc
+@dirrm share/gnome/help/gnect/it/figures
+@dirrm share/gnome/help/gnect/it
 @dirrm share/gnome/help/gnect/fr/figures
 @dirrm share/gnome/help/gnect/fr
 @dirrm share/gnome/help/gnect/es/figures
