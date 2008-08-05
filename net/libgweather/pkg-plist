@@ -1,6 +1,10 @@
 include/libgweather/gweather-gconf.h
+include/libgweather/gweather-location.h
 include/libgweather/gweather-prefs.h
+include/libgweather/gweather-timezone.h
 include/libgweather/gweather-xml.h
+include/libgweather/location-entry.h
+include/libgweather/timezone-menu.h
 include/libgweather/weather.h
 lib/libgweather.a
 lib/libgweather.la
