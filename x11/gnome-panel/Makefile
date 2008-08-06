@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.183 2008/06/17 19:44:35 marcus Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.184 2008/07/23 05:12:58 marcus Exp $
 #
 
 PORTNAME=	gnome-panel
-PORTVERSION=	2.23.5
+PORTVERSION=	2.23.6
 PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
@@ -74,11 +74,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%-|%|g' ${WRKSRC}/po/${po}
 .endfor
 .endif
-
-post-install:
-	${MKDIR} ${PREFIX}/share/gnome-panel
-	${INSTALL_DATA} ${FILESDIR}/iso3166.tab \
-	    	${PREFIX}/share/gnome-panel/iso3166.tab
 
 .include <bsd.port.post.mk>
 

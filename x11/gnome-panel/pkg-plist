@@ -44,7 +44,6 @@ share/gnome-2.0/ui/GNOME_WorkspaceSwitcherApplet.xml
 %%DATADIR%%/glade/panel-test-applets.glade
 %%DATADIR%%/glade/window-list.glade
 %%DATADIR%%/glade/workspace-switcher.glade
-%%DATADIR%%/iso3166.tab
 %%DATADIR%%/pixmaps/clock-calendar-icon.png
 %%DATADIR%%/pixmaps/clock-face-large.svg
 %%DATADIR%%/pixmaps/clock-face-small-day.svg
@@ -146,6 +145,9 @@ share/gnome/help/fish/C/legal.xml
 share/gnome/help/fish/ca/figures/fish_applet.png
 share/gnome/help/fish/ca/fish.xml
 share/gnome/help/fish/ca/legal.xml
+share/gnome/help/fish/de/figures/fish_applet.png
+share/gnome/help/fish/de/fish.xml
+share/gnome/help/fish/de/legal.xml
 share/gnome/help/fish/el/figures/fish_applet.png
 share/gnome/help/fish/el/fish.xml
 share/gnome/help/fish/el/legal.xml
@@ -403,6 +405,7 @@ share/omf/clock/clock-zh_CN.omf
 share/omf/clock/clock-zh_TW.omf
 share/omf/fish/fish-C.omf
 share/omf/fish/fish-ca.omf
+share/omf/fish/fish-de.omf
 share/omf/fish/fish-el.omf
 share/omf/fish/fish-es.omf
 share/omf/fish/fish-fr.omf
@@ -524,6 +527,8 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/gnome/help/fish/es
 @dirrm share/gnome/help/fish/el/figures
 @dirrm share/gnome/help/fish/el
+@dirrm share/gnome/help/fish/de/figures
+@dirrm share/gnome/help/fish/de
 @dirrm share/gnome/help/fish/ca/figures
 @dirrm share/gnome/help/fish/ca
 @dirrm share/gnome/help/fish/C/figures
