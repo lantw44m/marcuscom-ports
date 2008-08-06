@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.248 2008/07/27 20:33:23 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.249 2008/08/06 15:44:13 mezz Exp $
 #
 
 PORTNAME=	gnome2
-PORTVERSION=	2.23.5
-PORTREVISION?=	1
+PORTVERSION=	2.23.6
+PORTREVISION?=	0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -69,7 +69,9 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		mousetweaks:${PORTSDIR}/accessibility/mousetweaks \
 		vinagre:${PORTSDIR}/net/vinagre \
 		cheese:${PORTSDIR}/multimedia/cheese \
-		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info
+		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info \
+		${LOCALBASE}/lib/hamster-applet/hamster-applet:${PORTSDIR}/deskutils/hamster-applet \
+		empathy:${PORTSDIR}/net-im/empathy
 
 NO_BUILD=	yes
 
