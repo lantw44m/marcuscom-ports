@@ -166,7 +166,7 @@ share/xsessions/gnome.desktop
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
-@dirrm share/gnome/shutdown
+@dirrmtry share/gnome/shutdown
 @dirrm %%DATADIR%%
 @dirrm %%DOCSDIR%%/dbus
 @dirrm %%DOCSDIR%%
