@@ -1,0 +1,10 @@
+--- gnome-pty-helper/configure.orig	2008-08-05 22:13:08.000000000 -0400
++++ gnome-pty-helper/configure	2008-08-05 22:15:42.000000000 -0400
+@@ -696,6 +696,7 @@ AMTAR
+ am__tar
+ am__untar
+ CC
++BSD_PTHREAD_LIBS
+ CFLAGS
+ LDFLAGS
+ CPPFLAGS
