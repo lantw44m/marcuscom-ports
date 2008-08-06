@@ -2,8 +2,8 @@
 # Date created:				10 January 2006
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/py-gobject/Makefile,v 1.10 2008/06/29 23:23:32 marcus Exp $
-#   $MCom: ports/devel/py-gobject/Makefile,v 1.23 2008/07/17 05:57:18 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/devel/py-gobject/Makefile,v 1.24 2008/07/26 17:10:46 marcus Exp $
 #
 
 PORTNAME=	gobject

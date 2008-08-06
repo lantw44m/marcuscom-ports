@@ -2,8 +2,8 @@
 # Date created:		2007-10-21
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/www/midori/Makefile,v 1.1 2008/03/24 03:50:49 marcus Exp $
-#    $MCom: ports/www/midori/Makefile,v 1.7 2008/05/25 20:26:18 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/www/midori/Makefile,v 1.8 2008/06/06 21:38:54 marcus Exp $
 
 PORTNAME=	midori
 PORTVERSION=	0.0.18

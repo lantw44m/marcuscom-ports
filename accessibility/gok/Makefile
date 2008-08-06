@@ -2,8 +2,8 @@
 # Date created:			12 April 2003
 # Whom:				Adam Weinberger <adamw@freebsd.org>
 #
-# $FreeBSD: ports/accessibility/gok/Makefile,v 1.39 2008/06/06 12:59:52 edwin Exp $
-#    $MCom: ports/accessibility/gok/Makefile,v 1.83 2007/10/15 13:40:59 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/accessibility/gok/Makefile,v 1.85 2008/07/17 05:50:27 marcus Exp $
 #
 
 PORTNAME=	gok

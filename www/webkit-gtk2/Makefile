@@ -2,8 +2,8 @@
 # Date created:		2007-10-21
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/www/webkit-gtk2/Makefile,v 1.2 2008/03/31 10:33:05 ahze Exp $
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.18 2008/07/27 20:08:13 ahze Exp $
+# $FreeBSD$
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.19 2008/08/04 16:58:04 mezz Exp $
 #
 
 PORTNAME=	webkit

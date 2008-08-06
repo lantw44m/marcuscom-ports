@@ -2,8 +2,8 @@
 # Date created:		2004-04-06
 # Whom:			michael johnson <ahze@ahze.net>
 #
-# $FreeBSD: ports/www/kazehakase/Makefile,v 1.63 2008/03/30 03:49:18 ahze Exp $
-#   $MCom: ports/www/kazehakase/Makefile,v 1.13 2008/04/30 16:44:19 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/www/kazehakase/Makefile,v 1.14 2008/06/06 21:38:54 marcus Exp $
 #
 
 PORTNAME=	kazehakase
