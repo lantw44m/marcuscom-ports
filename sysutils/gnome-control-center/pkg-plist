@@ -78,7 +78,6 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/pixmaps/subpixel-vbgr.png
 %%DATADIR%%/pixmaps/subpixel-vrgb.png
 %%DATADIR%%/pixmaps/theme-thumbnailing.png
-%%DATADIR%%/pixmaps/visual-bell.png
 %%DATADIR%%/pixmaps/window-theme-thumbnailing.png
 share/gnome/cursor-fonts/cursor-large-white.pcf
 share/gnome/cursor-fonts/cursor-large.pcf
