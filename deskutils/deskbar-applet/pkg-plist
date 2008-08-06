@@ -26,6 +26,9 @@ lib/deskbar-applet/modules-2.20-compatible/gdmactions.pyo
 lib/deskbar-applet/modules-2.20-compatible/googlecodesearch.py
 lib/deskbar-applet/modules-2.20-compatible/googlecodesearch.pyc
 lib/deskbar-applet/modules-2.20-compatible/googlecodesearch.pyo
+lib/deskbar-applet/modules-2.20-compatible/googlesearch.py
+lib/deskbar-applet/modules-2.20-compatible/googlesearch.pyc
+lib/deskbar-applet/modules-2.20-compatible/googlesearch.pyo
 lib/deskbar-applet/modules-2.20-compatible/history.py
 lib/deskbar-applet/modules-2.20-compatible/history.pyc
 lib/deskbar-applet/modules-2.20-compatible/history.pyo
@@ -106,11 +109,6 @@ lib/deskbar-applet/modules-2.20-compatible/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/core/_userdirs/__init__.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/core/_userdirs/__userdirs.la
 %%PYTHON_SITELIBDIR%%/deskbar/core/_userdirs/__userdirs.so
-%%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop/__init__.py
-%%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop/__init__.pyc
-%%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop/__init__.pyo
-%%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop/_gnomedesktop.la
-%%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop/_gnomedesktop.so
 %%PYTHON_SITELIBDIR%%/deskbar/core/keybinder/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/core/keybinder/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/core/keybinder/__init__.pyo
@@ -473,7 +471,6 @@ share/omf/deskbar/deskbar-zh_CN.omf
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/handlers
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/updater
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/keybinder
-@dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/gnomedesktop
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core/_userdirs
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/core
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar
