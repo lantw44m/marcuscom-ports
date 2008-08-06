@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.50 2008/08/05 20:51:53 marcus Exp $
+#   $MCom: ports/deskutils/hamster-applet/Makefile,v 1.1 2008/08/06 04:50:33 marcus Exp $
 #
 
 PORTNAME=	hamster-applet
 PORTVERSION=	2.23.6
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -22,6 +23,7 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
+USE_XORG=	xscrnsaver
 USE_GNOME=	gnomeprefix intlhack gnomehack pygnomedesktop \
 		gnomecontrolcenter2
 GNU_CONFIGURE=	yes
