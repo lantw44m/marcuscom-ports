@@ -8,12 +8,15 @@ lib/gnome-session/helpers/gnome-login-sound
 lib/gnome-session/helpers/gnome-session-splash
 lib/gnome-session/helpers/gnome-settings-daemon-helper
 share/applications/session-properties.desktop
+%%DOCSDIR%%/dbus/gnome-session.html
 %%DATADIR%%/session-properties.glade
+%%DATADIR%%/gsm-inhibit-dialog.glade
 share/gnome/autostart/at-spi-registryd-wrapper.desktop
 share/gnome/autostart/gnome-keyring-daemon-wrapper.desktop
 share/gnome/autostart/gnome-login-sound.desktop
 share/gnome/autostart/gnome-session-splash.desktop
 share/gnome/autostart/gnome-settings-daemon-helper.desktop
+share/gnome/autostart/gnome-wm.desktop
 share/gnome/shutdown/gnome-logout-sound.sh
 share/icons/hicolor/16x16/apps/session-properties.png
 share/icons/hicolor/22x22/apps/session-properties.png
@@ -165,6 +168,8 @@ share/xsessions/gnome.desktop
 @dirrmtry share/locale/be@latin
 @dirrm share/gnome/shutdown
 @dirrm %%DATADIR%%
+@dirrm %%DOCSDIR%%/dbus
+@dirrm %%DOCSDIR%%
 @dirrmtry share/applications
 @dirrm lib/gnome-session/helpers
 @dirrm lib/gnome-session
