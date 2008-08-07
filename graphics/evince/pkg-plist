@@ -91,7 +91,6 @@ share/applications/evince.desktop
 %%DOCSDIR%%/evince-ev-document.html
 %%DOCSDIR%%/evince-ev-file-exporter.html
 %%DOCSDIR%%/evince-ev-file-helpers.html
-%%DOCSDIR%%/evince-ev-job-queue.html
 %%DOCSDIR%%/evince-ev-link-action.html
 %%DOCSDIR%%/evince-ev-link-dest.html
 %%DOCSDIR%%/evince-ev-link.html
