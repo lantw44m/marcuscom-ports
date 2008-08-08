@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.153 2008/08/06 02:30:33 marcus Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.154 2008/08/07 20:33:52 marcus Exp $
 #
 
 PORTNAME=	gnome-session
 PORTVERSION=	2.23.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME} \
 		http://www.marcuscom.com/downloads/:local
@@ -36,6 +36,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
 GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-docbook-docs
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
