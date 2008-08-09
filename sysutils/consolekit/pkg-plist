@@ -22,7 +22,7 @@ share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Manager.xml
 share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Seat.xml
 share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Session.xml
 share/dbus-1/system-services/org.freedesktop.ConsoleKit.service
-@exec %D/etc/ConsoleKit/run-session.d
+@exec mkdir -p %D/etc/ConsoleKit/run-session.d
 @exec mkdir -p %D/lib/ConsoleKit/run-session.d
 @dirrm lib/ConsoleKit/scripts
 @dirrmtry lib/ConsoleKit/run-session.d
