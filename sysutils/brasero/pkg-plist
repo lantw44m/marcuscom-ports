@@ -7,6 +7,8 @@ lib/brasero/plugins/libbrasero-checksum-file.la
 lib/brasero/plugins/libbrasero-checksum-file.so
 lib/brasero/plugins/libbrasero-checksum.la
 lib/brasero/plugins/libbrasero-checksum.so
+lib/brasero/plugins/libbrasero-dvdauthor.la
+lib/brasero/plugins/libbrasero-dvdauthor.so
 lib/brasero/plugins/libbrasero-dvdcss.la
 lib/brasero/plugins/libbrasero-dvdcss.so
 lib/brasero/plugins/libbrasero-dvdrwformat.la
@@ -29,6 +31,10 @@ lib/brasero/plugins/libbrasero-toc2cue.la
 lib/brasero/plugins/libbrasero-toc2cue.so
 lib/brasero/plugins/libbrasero-transcode.la
 lib/brasero/plugins/libbrasero-transcode.so
+lib/brasero/plugins/libbrasero-vcdimager.la
+lib/brasero/plugins/libbrasero-vcdimager.so
+lib/brasero/plugins/libbrasero-vob.la
+lib/brasero/plugins/libbrasero-vob.so
 lib/brasero/plugins/libbrasero-wodim.la
 lib/brasero/plugins/libbrasero-wodim.so
 share/applications/brasero.desktop
@@ -191,6 +197,8 @@ share/gnome/help/brasero/fr/brasero.xml
 share/gnome/help/brasero/fr/figures/brasero_main.png
 share/gnome/help/brasero/it/brasero.xml
 share/gnome/help/brasero/it/figures/brasero_main.png
+share/gnome/help/brasero/sv/brasero.xml
+share/gnome/help/brasero/sv/figures/brasero_main.png
 share/icons/hicolor/16x16/apps/brasero.png
 share/icons/hicolor/22x22/apps/brasero.png
 share/icons/hicolor/24x24/apps/brasero.png
@@ -236,6 +244,7 @@ share/omf/brasero/brasero-C.omf
 share/omf/brasero/brasero-es.omf
 share/omf/brasero/brasero-fr.omf
 share/omf/brasero/brasero-it.omf
+share/omf/brasero/brasero-sv.omf
 @dirrm share/omf/brasero
 @comment locales
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
@@ -264,6 +273,8 @@ share/omf/brasero/brasero-it.omf
 @dirrmtry share/locale/cs
 @dirrmtry share/locale/ca/LC_MESSAGES
 @dirrmtry share/locale/ca
+@dirrm share/gnome/help/brasero/sv/figures
+@dirrm share/gnome/help/brasero/sv
 @dirrm share/gnome/help/brasero/it/figures
 @dirrm share/gnome/help/brasero/it
 @dirrm share/gnome/help/brasero/fr/figures
