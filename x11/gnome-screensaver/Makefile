@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.91 2008/07/27 20:32:19 marcus Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.92 2008/08/03 23:26:52 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
 PORTVERSION=	2.23.3
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -42,19 +43,15 @@ SCREENSAVER_DIR=	share/applications/screensavers
 
 XSCREENSAVER_EXCLUDE=	"(popsquares.xml)"
 
-OPTIONS=	PAM "Pluggable Authentication Module support (broken!)" off \
-		KEYRING "Enable GnomeKeyring integration (needs PAM)" off
+OPTIONS=	PAM "Pluggable Authentication Module support" on \
+		KEYRING "Enable GnomeKeyring integration (needs PAM)" on
 
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_PAM)
-# Currently semi-broken: http://bugzilla.gnome.org/show_bug.cgi?id=370847
-# Our default pam_unix will not be able to authenticate
-# Define GNOME_SCREENSAVER_WITH_BROKEN_PAM only if you know what you are doing.
-.if !defined(GNOME_SCREENSAVER_WITH_BROKEN_PAM)
-IGNORE=			PAM support is partially broken. Please read Makefile
-.endif
-CONFIGURE_ARGS+=	--enable-pam
+RUN_DEPENDS+=		pam_helper:${PORTSDIR}/security/pam_helper
+CONFIGURE_ARGS+=	--enable-authentication-scheme=helper \
+			--with-passwd-helper=${LOCALBASE}/bin/pam_helper
 PLIST_SUB+=		PAM=""
 .else
 CONFIGURE_ARGS+=	--disable-pam
@@ -76,7 +73,7 @@ pre-everything::
 post-patch:
 .if defined(WITH_PAM)
 	@${REINPLACE_CMD} -e 's|/etc/pam.d|${PREFIX}/etc/pam.d|g' \
-		${WRKSRC}/src/gs-auth-pam.c
+	    	${WRKSRC}/src/gs-auth-pam.c
 .endif
 
 pre-install:
