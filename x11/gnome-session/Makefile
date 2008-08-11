@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.154 2008/08/07 20:33:52 marcus Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.155 2008/08/08 01:16:38 marcus Exp $
 #
 
 PORTNAME=	gnome-session
@@ -48,7 +48,7 @@ GCONF_SCHEMAS=	gnome-session.schemas
 SPLASHES=	freebsd-splashes-gnome-2.18_1.tar
 
 post-extract:
-	cd ${WRKDIR} && ${TAR} xf ${DISTDIR}/${DIST_SUBDIR}/${SPLASHES}
+	cd ${WRKDIR} && ${TAR} -xf ${DISTDIR}/${DIST_SUBDIR}/${SPLASHES}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/gnome-splash.png \
