@@ -3,11 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.7 2008/03/10 21:53:57 mezz Exp $
+#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.9 2008/08/03 05:42:14 marcus Exp $
 #
 
 PORTNAME=	swfdec-gnome
 PORTVERSION=	2.23.2
+PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -28,6 +29,10 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 GCONF_SCHEMAS=	swfdec-thumbnailer.schemas
 
 MAN1=		swfdec-player.1 swfdec-thumbnailer.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|Icon=swfdec|Icon=swfdec-gnome|g' \
+		${WRKSRC}/data/swfdec-player.desktop.in
 
 post-install:
 	@-update-desktop-database
