@@ -8,6 +8,7 @@
 
 PORTNAME=	swfdec
 PORTVERSION=	0.7.4
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://swfdec.freedesktop.org/download/swfdec/0.7/
 
@@ -21,10 +22,14 @@ USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack gtk20 ltverhack
 USE_GSTREAMER=	core good mp3 ffmpeg
 USE_AUTOTOOLS=	libtool:15
-CONFIGURE_ARGS=	--with-audio=none
+CONFIGURE_ARGS=	--with-audio=oss
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-Wl,-Bsymbolic -L${LOCALBASE}/lib"
 
 PLIST_SUB=	VERSION=${PORTVERSION:R}
+
+post-extract:
+	@${CP} ${FILESDIR}/swfdec_playback_oss.c \
+	    	${WRKSRC}/swfdec-gtk
 
 .include <bsd.port.mk>
