@@ -45,7 +45,8 @@ lib/gedit-2/plugins/docinfo.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.py
 %%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.pyc
 %%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.pyo
-%%PYTHON%%lib/gedit-2/plugins/externaltools/tools.glade
+%%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.ui
+%%PYTHON%%lib/gedit-2/plugins/externaltools/tools.ui
 lib/gedit-2/plugins/filebrowser.gedit-plugin
 lib/gedit-2/plugins/indent.gedit-plugin
 lib/gedit-2/plugins/libchangecase.a
@@ -130,7 +131,7 @@ lib/gedit-2/plugins/sample.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/snippets/__init__.py
 %%PYTHON%%lib/gedit-2/plugins/snippets/__init__.pyc
 %%PYTHON%%lib/gedit-2/plugins/snippets/__init__.pyo
-%%PYTHON%%lib/gedit-2/plugins/snippets/snippets.glade
+%%PYTHON%%lib/gedit-2/plugins/snippets/snippets.ui
 lib/gedit-2/plugins/sort.gedit-plugin
 lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
@@ -533,6 +534,7 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm share/gedit-2/icons
 @dirrm share/gedit-2
 @dirrm %%DOCSDIR%%
+@dirrmtry share/applications
 @dirrmtry libexec/gedit-2
 %%PYTHON%%@dirrm lib/gedit-2/plugins/snippets
 %%PYTHON%%@dirrm lib/gedit-2/plugins/pythonconsole
@@ -543,7 +545,6 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm include/gedit-%%VERSION%%
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES

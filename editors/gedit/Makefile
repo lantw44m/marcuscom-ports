@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.82 2008/06/06 21:38:48 marcus Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.83 2008/08/13 18:05:16 marcus Exp $
 #
 
 PORTNAME=	gedit
-PORTVERSION=	2.23.2
+PORTVERSION=	2.23.3
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -20,13 +20,14 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
+USE_XORG=	sm
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui gtksourceview2 \
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gtksourceview2 \
 		desktopfileutils gnomedocutils ltasneededhack
 WANT_GNOME=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
