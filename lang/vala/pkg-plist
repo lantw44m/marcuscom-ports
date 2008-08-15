@@ -354,6 +354,8 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/sqlite3.vapi
 %%DATADIR%%/vapi/taglib_c.vapi
 %%DATADIR%%/vapi/tiff.vapi
+%%DATADIR%%/vapi/unique-1.0.deps
+%%DATADIR%%/vapi/unique-1.0.vapi
 %%DATADIR%%/vapi/vala-1.0.vapi
 %%DATADIR%%/vapi/vte.deps
 %%DATADIR%%/vapi/vte.vapi
