@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.463 2008/07/22 04:09:16 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.464 2008/07/22 15:07:01 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -74,7 +74,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gail \
 		gal2 gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop gnomedocutils \
 		gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk20 \
 		gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 gvfs \
-		libartlgpl2 libbonobo libbonoboui libgailgnome libgda2 libgda3 \
+		libartlgpl2 libbonobo libbonoboui libgailgnome libgda2 libgda3 libgda4 \
 		libglade2 libgnome libgnomecanvas libgnomedb libgnomekbd libgnomeprint \
 		libgnomeprintui libgnomeui libgsf libgsf_gnome libgtkhtml libidl \
 		librsvg2 libwnck libxml2 libxslt libzvt linc metacity nautilus2 \
@@ -417,6 +417,10 @@ libgda2_USE_GNOME_IMPL=	glib20 libxslt
 libgda3_LIB_DEPENDS=	gda-3.0.3:${PORTSDIR}/databases/libgda3
 libgda3_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgda-3.0.pc
 libgda3_USE_GNOME_IMPL=	glib20 libxslt
+
+libgda4_LIB_DEPENDS=	gda-4.0.4:${PORTSDIR}/databases/libgda4
+libgda4_DETECT=			 ${LOCALBASE}/libdata/pkgconfig/libgda-4.0.pc
+libgda4_USE_GNOME_IMPL=	glib20 libxslt
 
 libgnomedb_LIB_DEPENDS=	gnomedb-3.0.4:${PORTSDIR}/databases/libgnomedb
 libgnomedb_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomedb.pc
