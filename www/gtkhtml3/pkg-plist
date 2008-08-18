@@ -23,8 +23,8 @@ lib/libgtkhtml-editor.a
 lib/libgtkhtml-editor.la
 lib/libgtkhtml-editor.so
 lib/libgtkhtml-editor.so.0
-libdata/pkgconfig/libgtkhtml-%%VERSION%%.pc
 libdata/pkgconfig/gtkhtml-editor.pc
+libdata/pkgconfig/libgtkhtml-%%VERSION%%.pc
 share/gtkhtml-%%VERSION%%/gtkhtml-editor.glade
 share/gtkhtml-%%VERSION%%/gtkhtml-editor.ui
 share/gtkhtml-%%VERSION%%/icons/bulb.png
@@ -123,7 +123,6 @@ share/locale/zh_HK/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 @dirrm share/gtkhtml-%%VERSION%%/icons
 @dirrm share/gtkhtml-%%VERSION%%
-@dirrmtry lib/gtkhtml
 @dirrm include/libgtkhtml-%%VERSION%%/gtkhtml
 @dirrm include/libgtkhtml-%%VERSION%%/editor
 @dirrm include/libgtkhtml-%%VERSION%%
