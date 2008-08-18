@@ -81,6 +81,7 @@ share/gnome-2.0/ui/GNOME_StickyNotesApplet.xml
 %%DATADIR%%/builder/cpufreq-preferences.ui
 %%DATADIR%%/builder/financialchart.ui
 %%DATADIR%%/builder/gswitchit.ui
+%%COMMANDER%%%%DATADIR%%/builder/mini-commander.ui
 %%DATADIR%%/builder/prefs-dialog.ui
 %%DATADIR%%/builder/stickynotes.ui
 %%DATADIR%%/builder/trashapplet-empty-progress.ui
@@ -1932,6 +1933,8 @@ share/xmodmap/xmodmap.yu
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/ps/LC_MESSAGES
+@dirrmtry share/locale/ps
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
