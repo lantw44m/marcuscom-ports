@@ -152,10 +152,10 @@ include/evolution-data-server-%%VERSION%%/exchange/exchange-hierarchy.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-oof.h
 include/evolution-data-server-%%VERSION%%/exchange/exchange-types.h
 include/evolution-data-server-%%VERSION%%/exchange/mapi.h
-include/evolution-data-server-%%VERSION%%/google/gdata-google/gdata-google-service.h
-include/evolution-data-server-%%VERSION%%/google/gdata/gdata-entry.h
-include/evolution-data-server-%%VERSION%%/google/gdata/gdata-feed.h
-include/evolution-data-server-%%VERSION%%/google/gdata/gdata-service-iface.h
+include/evolution-data-server-%%VERSION%%/google/libgdata-google/gdata-google-service.h
+include/evolution-data-server-%%VERSION%%/google/libgdata/gdata-entry.h
+include/evolution-data-server-%%VERSION%%/google/libgdata/gdata-feed.h
+include/evolution-data-server-%%VERSION%%/google/libgdata/gdata-service-iface.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-connection.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-container.h
 include/evolution-data-server-%%VERSION%%/groupwise/e-gw-filter.h
@@ -382,7 +382,7 @@ lib/libebackend-%%EVO_VERSION%%.so.0
 lib/libebook-%%EVO_VERSION%%.a
 lib/libebook-%%EVO_VERSION%%.la
 lib/libebook-%%EVO_VERSION%%.so
-lib/libebook-%%EVO_VERSION%%.so.10
+lib/libebook-%%EVO_VERSION%%.so.11
 lib/libecal-%%EVO_VERSION%%.a
 lib/libecal-%%EVO_VERSION%%.la
 lib/libecal-%%EVO_VERSION%%.so
@@ -861,8 +861,8 @@ share/pixmaps/evolution-data-server/category_time-and-expenses_16.png
 @dirrm include/evolution-data-server-%%VERSION%%/libebook
 @dirrm include/evolution-data-server-%%VERSION%%/libebackend
 @dirrm include/evolution-data-server-%%VERSION%%/groupwise
-@dirrm include/evolution-data-server-%%VERSION%%/google/gdata-google
-@dirrm include/evolution-data-server-%%VERSION%%/google/gdata
+@dirrm include/evolution-data-server-%%VERSION%%/google/libgdata-google
+@dirrm include/evolution-data-server-%%VERSION%%/google/libgdata
 @dirrm include/evolution-data-server-%%VERSION%%/google
 @dirrm include/evolution-data-server-%%VERSION%%/exchange
 @dirrm include/evolution-data-server-%%VERSION%%/camel
