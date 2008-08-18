@@ -1,3 +1,4 @@
+bin/gnome-keyring
 bin/gnome-keyring-daemon
 include/gnome-keyring-1/gnome-keyring-memory.h
 include/gnome-keyring-1/gnome-keyring-result.h

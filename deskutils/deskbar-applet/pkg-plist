@@ -47,6 +47,9 @@ lib/deskbar-applet/modules-2.20-compatible/recent.pyo
 lib/deskbar-applet/modules-2.20-compatible/templates.py
 lib/deskbar-applet/modules-2.20-compatible/templates.pyc
 lib/deskbar-applet/modules-2.20-compatible/templates.pyo
+lib/deskbar-applet/modules-2.20-compatible/twitter.py
+lib/deskbar-applet/modules-2.20-compatible/twitter.pyc
+lib/deskbar-applet/modules-2.20-compatible/twitter.pyo
 lib/deskbar-applet/modules-2.20-compatible/tomboy.py
 lib/deskbar-applet/modules-2.20-compatible/tomboy.pyc
 lib/deskbar-applet/modules-2.20-compatible/tomboy.pyo
@@ -101,6 +104,9 @@ lib/deskbar-applet/modules-2.20-compatible/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/core/Watcher.py
 %%PYTHON_SITELIBDIR%%/deskbar/core/Watcher.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/core/Watcher.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/core/Web.py
+%%PYTHON_SITELIBDIR%%/deskbar/core/Web.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/core/Web.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/core/__init__.py
 %%PYTHON_SITELIBDIR%%/deskbar/core/__init__.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/core/__init__.pyo
