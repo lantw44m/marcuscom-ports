@@ -550,6 +550,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/view-calendar-month.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/view-calendar-week.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/view-calendar-workweek.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/apps/contact-editor.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/places/mail-inbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/places/mail-outbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/places/mail-sent.png
@@ -559,6 +560,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/actions/view-calendar-month.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/actions/view-calendar-week.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/actions/view-calendar-workweek.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/apps/contact-editor.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/places/mail-inbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/places/mail-outbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/places/mail-sent.png
@@ -569,6 +571,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions/view-calendar-month.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions/view-calendar-week.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions/view-calendar-workweek.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/apps/contact-editor.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places/mail-inbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places/mail-outbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places/mail-sent.png
@@ -577,21 +580,23 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions/view-calendar-month.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions/view-calendar-week.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions/view-calendar-workweek.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/apps/contact-editor.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/status/offline.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/status/online.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/apps/contact-editor.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-autocompletion.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-calendar-and-tasks.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-certificates.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-composer.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-mail-accounts.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-mail.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories/preferences-system-network-proxy.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions/view-calendar-day.svg
 %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions/view-calendar-list.svg
 %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions/view-calendar-month.svg
 %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions/view-calendar-week.svg
 %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions/view-calendar-workweek.svg
-%%DATADIR%%/%%VERSION%%/images/evolution-contacts-mini.png
 %%DATADIR%%/%%VERSION%%/images/minus.png
-%%DATADIR%%/%%VERSION%%/images/offline.png
-%%DATADIR%%/%%VERSION%%/images/online.png
 %%DATADIR%%/%%VERSION%%/images/plus.png
 %%DATADIR%%/%%VERSION%%/images/world_map-960.png
 %%DATADIR%%/%%VERSION%%/memotypes.xml
@@ -1957,10 +1962,25 @@ share/gnome/help/evolution/sv/figures/sub-others-folder.png
 share/gnome/help/evolution/sv/figures/sub-pub-fold.png
 share/gnome/help/evolution/sv/figures/ver_view_a.png
 share/gnome/help/evolution/sv/figures/vfolder-createrule-fig.png
+share/icons/hicolor/16x16/apps/evolution-mail.png
+share/icons/hicolor/16x16/apps/evolution-memos.png
+share/icons/hicolor/16x16/apps/evolution-tasks.png
 share/icons/hicolor/16x16/apps/evolution.png
+share/icons/hicolor/22x22/apps/evolution-mail.png
+share/icons/hicolor/22x22/apps/evolution-memos.png
+share/icons/hicolor/22x22/apps/evolution-tasks.png
 share/icons/hicolor/22x22/apps/evolution.png
+share/icons/hicolor/24x24/apps/evolution-mail.png
+share/icons/hicolor/24x24/apps/evolution-memos.png
+share/icons/hicolor/24x24/apps/evolution-tasks.png
 share/icons/hicolor/24x24/apps/evolution.png
+share/icons/hicolor/32x32/apps/evolution-mail.png
+share/icons/hicolor/32x32/apps/evolution-memos.png
+share/icons/hicolor/32x32/apps/evolution-tasks.png
 share/icons/hicolor/32x32/apps/evolution.png
+share/icons/hicolor/48x48/apps/evolution-mail.png
+share/icons/hicolor/48x48/apps/evolution-memos.png
+share/icons/hicolor/48x48/apps/evolution-tasks.png
 share/icons/hicolor/48x48/apps/evolution.png
 share/icons/hicolor/scalable/apps/evolution.svg
 share/idl/evolution-%%VERSION%%/Evolution-Component.idl
@@ -2100,16 +2120,22 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/categories
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/apps
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/status
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/apps
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/apps
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/places
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/apps
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/actions
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/places
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/apps
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor
