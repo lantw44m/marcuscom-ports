@@ -626,6 +626,9 @@ share/gnome/help/aisleriot/fr/figures/clock-rules.png
 share/gnome/help/aisleriot/oc/aisleriot.xml
 share/gnome/help/aisleriot/oc/figures/camelot-goal.png
 share/gnome/help/aisleriot/oc/figures/clock-rules.png
+share/gnome/help/aisleriot/ru/aisleriot.xml
+share/gnome/help/aisleriot/ru/figures/camelot-goal.png
+share/gnome/help/aisleriot/ru/figures/clock-rules.png
 share/gnome/help/aisleriot/sv/aisleriot.xml
 share/gnome/help/aisleriot/sv/figures/camelot-goal.png
 share/gnome/help/aisleriot/sv/figures/clock-rules.png
@@ -1470,6 +1473,7 @@ share/omf/aisleriot/aisleriot-ca.omf
 share/omf/aisleriot/aisleriot-es.omf
 share/omf/aisleriot/aisleriot-fr.omf
 share/omf/aisleriot/aisleriot-oc.omf
+share/omf/aisleriot/aisleriot-ru.omf
 share/omf/aisleriot/aisleriot-sv.omf
 share/omf/blackjack/blackjack-C.omf
 share/omf/blackjack/blackjack-ca.omf
@@ -1556,6 +1560,7 @@ share/omf/gnotravex/gnotravex-el.omf
 share/omf/gnotravex/gnotravex-es.omf
 share/omf/gnotravex/gnotravex-fr.omf
 share/omf/gnotravex/gnotravex-it.omf
+share/omf/gnotravex/gnotravex-ru.omf
 share/omf/gnotravex/gnotravex-oc.omf
 share/omf/gnotravex/gnotravex-ru.omf
 share/omf/gnotravex/gnotravex-sv.omf
@@ -1769,6 +1774,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/iagno
 @dirrm share/gnome/help/gtali/sv/figures
 @dirrm share/gnome/help/gtali/sv
+@dirrm share/gnome/help/gtali/pt_BR/figures
+@dirrm share/gnome/help/gtali/pt_BR
 @dirrm share/gnome/help/gtali/oc/figures
 @dirrm share/gnome/help/gtali/oc
 @dirrm share/gnome/help/gtali/pt_BR/figures
@@ -1978,6 +1985,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/blackjack
 @dirrm share/gnome/help/aisleriot/sv/figures
 @dirrm share/gnome/help/aisleriot/sv
+@dirrm share/gnome/help/aisleriot/ru/figures
+@dirrm share/gnome/help/aisleriot/ru
 @dirrm share/gnome/help/aisleriot/oc/figures
 @dirrm share/gnome/help/aisleriot/oc
 @dirrm share/gnome/help/aisleriot/fr/figures
