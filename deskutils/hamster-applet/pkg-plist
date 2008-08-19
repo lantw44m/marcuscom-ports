@@ -1,6 +1,4 @@
 lib/hamster-applet/hamster-applet
-lib/hamster-applet/idle.la
-lib/hamster-applet/idle.so
 %%PYTHON_SITELIBDIR%%/hamster/Configuration.py
 %%PYTHON_SITELIBDIR%%/hamster/Configuration.pyc
 %%PYTHON_SITELIBDIR%%/hamster/Configuration.pyo
@@ -34,6 +32,9 @@ lib/hamster-applet/idle.so
 %%PYTHON_SITELIBDIR%%/hamster/eds.py
 %%PYTHON_SITELIBDIR%%/hamster/eds.pyc
 %%PYTHON_SITELIBDIR%%/hamster/eds.pyo
+%%PYTHON_SITELIBDIR%%/hamster/idle.py
+%%PYTHON_SITELIBDIR%%/hamster/idle.pyc
+%%PYTHON_SITELIBDIR%%/hamster/idle.pyo
 %%PYTHON_SITELIBDIR%%/hamster/keybinder/__init__.py
 %%PYTHON_SITELIBDIR%%/hamster/keybinder/__init__.pyc
 %%PYTHON_SITELIBDIR%%/hamster/keybinder/__init__.pyo
@@ -55,7 +56,6 @@ lib/hamster-applet/idle.so
 %%PYTHON_SITELIBDIR%%/hamster/stuff.pyc
 %%PYTHON_SITELIBDIR%%/hamster/stuff.pyo
 libdata/bonobo/servers/Hamster_Applet.server
-share/gnome-control-center/keybindings/99-hamster-applet.xml
 %%DATADIR%%/Hamster_Applet.xml
 %%DATADIR%%/add_custom_fact.glade
 %%DATADIR%%/art/hamster-applet.png
@@ -73,12 +73,21 @@ share/icons/hicolor/48x48/apps/hamster-applet.png
 share/icons/hicolor/scalable/apps/hamster-applet.svg
 share/locale/de/LC_MESSAGES/hamster-applet.mo
 share/locale/es/LC_MESSAGES/hamster-applet.mo
+share/locale/et/LC_MESSAGES/hamster-applet.mo
 share/locale/fr/LC_MESSAGES/hamster-applet.mo
+share/locale/gl/LC_MESSAGES/hamster-applet.mo
+share/locale/he/LC_MESSAGES/hamster-applet.mo
 share/locale/it/LC_MESSAGES/hamster-applet.mo
 share/locale/lv/LC_MESSAGES/hamster-applet.mo
+share/locale/nb/LC_MESSAGES/hamster-applet.mo
 share/locale/nl/LC_MESSAGES/hamster-applet.mo
+share/locale/pt/LC_MESSAGES/hamster-applet.mo
 share/locale/ru/LC_MESSAGES/hamster-applet.mo
 share/locale/sv/LC_MESSAGES/hamster-applet.mo
+@dirrmtry share/locale/gl/LC_MESSAGES
+@dirrmtry share/locale/gl
+@dirrmtry share/locale/pt/LC_MESSAGES
+@dirrmtry share/locale/pt
 @dirrm %%DATADIR%%/art
 @dirrm %%DATADIR%%
 @dirrm %%PYTHON_SITELIBDIR%%/hamster/keybinder
