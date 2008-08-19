@@ -16,6 +16,7 @@ share/applications/cheese.desktop
 %%DATADIR%%/effects/videoflip_h.png
 %%DATADIR%%/effects/videoflip_v.png
 %%DATADIR%%/effects/warptv.png
+%%DATADIR%%/gtkrc
 %%DATADIR%%/icons/hicolor/16x16/actions/browse-webcam-effects.png
 %%DATADIR%%/icons/hicolor/22x22/actions/browse-webcam-effects.png
 %%DATADIR%%/icons/hicolor/24x24/actions/browse-webcam-effects.png
@@ -23,12 +24,14 @@ share/applications/cheese.desktop
 %%DATADIR%%/icons/hicolor/48x48/actions/browse-webcam-effects.png
 %%DATADIR%%/icons/hicolor/scalable/actions/browse-webcam-effects.svg
 %%DATADIR%%/pixmaps/camera-icon.svg
+%%DATADIR%%/pixmaps/cheese-1.svg
 %%DATADIR%%/pixmaps/thumbnail-frame.png
 %%DATADIR%%/sounds/shutter0.ogg
 %%DATADIR%%/sounds/shutter1.ogg
 %%DATADIR%%/sounds/shutter2.ogg
 %%DATADIR%%/sounds/shutter3.ogg
 %%DATADIR%%/sounds/shutter4.ogg
+share/dbus-1/services/org.gnome.Cheese.service
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/COPYING
 %%PORTDOCS%%%%DOCSDIR%%/ChangeLog
@@ -87,6 +90,7 @@ share/locale/he/LC_MESSAGES/cheese.mo
 share/locale/hu/LC_MESSAGES/cheese.mo
 share/locale/it/LC_MESSAGES/cheese.mo
 share/locale/ja/LC_MESSAGES/cheese.mo
+share/locale/kn/LC_MESSAGES/cheese.mo
 share/locale/ko/LC_MESSAGES/cheese.mo
 share/locale/lt/LC_MESSAGES/cheese.mo
 share/locale/mk/LC_MESSAGES/cheese.mo
