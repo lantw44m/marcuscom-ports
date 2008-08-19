@@ -69,6 +69,7 @@ libexec/gnome-settings-daemon
 share/dbus-1/services/org.gnome.SettingsDaemon.service
 %%DATADIR%%/acme-eject.png
 %%DATADIR%%/acme.glade
+%%DATADIR%%/gsd-a11y-preferences-dialog.glade
 %%DATADIR%%/modmap-dialog.glade
 %%DATADIR%%/xrdb/Editres.ad
 %%DATADIR%%/xrdb/Emacs.ad
