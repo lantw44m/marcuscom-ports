@@ -250,6 +250,7 @@ share/icons/gnome/16x16/places/folder.png
 share/icons/gnome/16x16/places/network-server.png
 share/icons/gnome/16x16/places/network-workgroup.png
 share/icons/gnome/16x16/places/start-here.png
+share/icons/gnome/16x16/places/user-bookmarks.png
 share/icons/gnome/16x16/places/user-desktop.png
 share/icons/gnome/16x16/places/user-home.png
 share/icons/gnome/16x16/places/user-trash.png
@@ -1320,6 +1321,7 @@ share/icons/gnome/22x22/places/folder.png
 share/icons/gnome/22x22/places/network-server.png
 share/icons/gnome/22x22/places/network-workgroup.png
 share/icons/gnome/22x22/places/start-here.png
+share/icons/gnome/22x22/places/user-bookmarks.png
 share/icons/gnome/22x22/places/user-desktop.png
 share/icons/gnome/22x22/places/user-home.png
 share/icons/gnome/22x22/places/user-trash.png
@@ -1627,6 +1629,7 @@ share/icons/gnome/24x24/places/folder.png
 share/icons/gnome/24x24/places/network-server.png
 share/icons/gnome/24x24/places/network-workgroup.png
 share/icons/gnome/24x24/places/start-here.png
+share/icons/gnome/24x24/places/user-bookmarks.png
 share/icons/gnome/24x24/places/user-desktop.png
 share/icons/gnome/24x24/places/user-home.png
 share/icons/gnome/24x24/places/user-trash.png
@@ -2537,6 +2540,7 @@ share/icons/gnome/32x32/places/folder.png
 share/icons/gnome/32x32/places/network-server.png
 share/icons/gnome/32x32/places/network-workgroup.png
 share/icons/gnome/32x32/places/start-here.png
+share/icons/gnome/32x32/places/user-bookmarks.png
 share/icons/gnome/32x32/places/user-desktop.png
 share/icons/gnome/32x32/places/user-home.png
 share/icons/gnome/32x32/places/user-trash.png
@@ -2948,6 +2952,7 @@ share/icons/gnome/scalable/places/folder.svg
 share/icons/gnome/scalable/places/network-server.svg
 share/icons/gnome/scalable/places/network-workgroup.svg
 share/icons/gnome/scalable/places/start-here.svg
+share/icons/gnome/scalable/places/user-bookmarks.svg
 share/icons/gnome/scalable/places/user-desktop.svg
 share/icons/gnome/scalable/places/user-home.svg
 share/icons/gnome/scalable/places/user-trash.svg
