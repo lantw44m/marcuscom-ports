@@ -364,6 +364,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/text_attribute_names.py
 %%PYTHON_SITELIBDIR%%/orca/text_attribute_names.pyc
 %%PYTHON_SITELIBDIR%%/orca/text_attribute_names.pyo
+%%PYTHON_SITELIBDIR%%/orca/tutorialgenerator.py
+%%PYTHON_SITELIBDIR%%/orca/tutorialgenerator.pyc
+%%PYTHON_SITELIBDIR%%/orca/tutorialgenerator.pyo
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.py
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.pyc
 %%PYTHON_SITELIBDIR%%/orca/where_am_I.pyo
