@@ -80,7 +80,6 @@ libdata/pkgconfig/libempathy-gtk.pc
 libdata/pkgconfig/libempathy.pc
 libexec/megaphone-applet
 libexec/nothere-applet
-share/applications/empathy-properties.desktop
 share/applications/empathy.desktop
 share/doc/libempathy-gtk/EmpathyAccountChooser.html
 share/doc/libempathy-gtk/EmpathyAvatarChooser.html
@@ -198,11 +197,13 @@ share/doc/libempathy/up.png
 %%DATADIR%%/empathy-status-presets.dtd
 %%DATADIR%%/icons/hicolor/16x16/actions/im-message-new.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-ekiga.png
+share/empathy/icons/hicolor/16x16/apps/im-gadugadu.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-gizmo.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-google-talk.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-irc.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-local-xmpp.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-msn.png
+share/empathy/icons/hicolor/16x16/apps/im-qq.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-sip.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-xmpp.png
 %%DATADIR%%/icons/hicolor/16x16/status/empathy-available.png
@@ -215,11 +216,13 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/16x16/status/user-typing.png
 %%DATADIR%%/icons/hicolor/22x22/actions/im-message-new.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-ekiga.png
+share/empathy/icons/hicolor/22x22/apps/im-gadugadu.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-gizmo.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-google-talk.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-irc.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-local-xmpp.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-msn.png
+share/empathy/icons/hicolor/22x22/apps/im-qq.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-sip.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-xmpp.png
 %%DATADIR%%/icons/hicolor/22x22/status/empathy-available.png
@@ -230,11 +233,13 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/22x22/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/24x24/actions/im-message-new.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-ekiga.png
+share/empathy/icons/hicolor/24x24/apps/im-gadugadu.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-gizmo.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-google-talk.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-irc.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-local-xmpp.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-msn.png
+share/empathy/icons/hicolor/24x24/apps/im-qq.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-sip.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-xmpp.png
 %%DATADIR%%/icons/hicolor/24x24/status/empathy-available.png
@@ -244,11 +249,13 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/24x24/status/empathy-offline.png
 %%DATADIR%%/icons/hicolor/24x24/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-ekiga.png
+share/empathy/icons/hicolor/32x32/apps/im-gadugadu.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-gizmo.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-google-talk.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-irc.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-local-xmpp.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-msn.png
+share/empathy/icons/hicolor/32x32/apps/im-qq.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-sip.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-xmpp.png
 %%DATADIR%%/icons/hicolor/32x32/status/empathy-available.png
@@ -258,11 +265,13 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/32x32/status/empathy-offline.png
 %%DATADIR%%/icons/hicolor/32x32/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-ekiga.png
+share/empathy/icons/hicolor/48x48/apps/im-gadugadu.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-gizmo.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-google-talk.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-irc.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-local-xmpp.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-msn.png
+share/empathy/icons/hicolor/48x48/apps/im-qq.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-sip.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-xmpp.png
 %%DATADIR%%/icons/hicolor/48x48/status/empathy-available.png
@@ -272,11 +281,13 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/48x48/status/empathy-offline.png
 %%DATADIR%%/icons/hicolor/48x48/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/scalable/apps/im-ekiga.svg
+share/empathy/icons/hicolor/scalable/apps/im-gadugadu.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-gizmo.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-google-talk.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-irc.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-local-xmpp.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-msn.svg
+share/empathy/icons/hicolor/scalable/apps/im-qq.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-sip.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-xmpp.svg
 %%DATADIR%%/icons/hicolor/scalable/status/empathy-available.svg
@@ -332,13 +343,16 @@ share/locale/hr/LC_MESSAGES/empathy.mo
 share/locale/hu/LC_MESSAGES/empathy.mo
 share/locale/it/LC_MESSAGES/empathy.mo
 share/locale/ja/LC_MESSAGES/empathy.mo
+share/locale/kn/LC_MESSAGES/empathy.mo
 share/locale/lt/LC_MESSAGES/empathy.mo
 share/locale/ml/LC_MESSAGES/empathy.mo
+share/locale/mr/LC_MESSAGES/empathy.mo
 share/locale/ms/LC_MESSAGES/empathy.mo
 share/locale/nb/LC_MESSAGES/empathy.mo
 share/locale/ne/LC_MESSAGES/empathy.mo
 share/locale/nl/LC_MESSAGES/empathy.mo
 share/locale/oc/LC_MESSAGES/empathy.mo
+share/locale/pa/LC_MESSAGES/empathy.mo
 share/locale/pl/LC_MESSAGES/empathy.mo
 share/locale/pt/LC_MESSAGES/empathy.mo
 share/locale/pt_BR/LC_MESSAGES/empathy.mo
@@ -357,6 +371,7 @@ share/locale/zh_TW/LC_MESSAGES/empathy.mo
 share/mission-control/profiles/aim.profile
 share/mission-control/profiles/ekiga.profile
 share/mission-control/profiles/fwd.profile
+share/mission-control/profiles/gadugadu.profile
 share/mission-control/profiles/groupwise.profile
 share/mission-control/profiles/gtalk.profile
 share/mission-control/profiles/icq.profile
@@ -364,6 +379,7 @@ share/mission-control/profiles/irc.profile
 share/mission-control/profiles/jabber.profile
 share/mission-control/profiles/msn-haze.profile
 share/mission-control/profiles/msn.profile
+share/mission-control/profiles/qq.profile
 share/mission-control/profiles/salut.profile
 share/mission-control/profiles/sipphone.profile
 share/mission-control/profiles/sofiasip.profile
@@ -396,6 +412,8 @@ share/omf/empathy/empathy-sv.omf
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/ne/LC_MESSAGES
 @dirrmtry share/locale/ne
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/gl/LC_MESSAGES
 @dirrmtry share/locale/gl
 @dirrmtry share/locale/fi/LC_MESSAGES
