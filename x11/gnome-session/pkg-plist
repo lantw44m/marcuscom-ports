@@ -4,7 +4,6 @@ bin/gnome-session-save
 bin/gnome-wm
 lib/gnome-session/helpers/at-spi-registryd-wrapper
 lib/gnome-session/helpers/gnome-keyring-daemon-wrapper
-lib/gnome-session/helpers/gnome-login-sound
 lib/gnome-session/helpers/gnome-session-splash
 lib/gnome-session/helpers/gnome-settings-daemon-helper
 share/applications/session-properties.desktop
@@ -12,11 +11,9 @@ share/applications/session-properties.desktop
 %%DATADIR%%/gsm-inhibit-dialog.glade
 share/gnome/autostart/at-spi-registryd-wrapper.desktop
 share/gnome/autostart/gnome-keyring-daemon-wrapper.desktop
-share/gnome/autostart/gnome-login-sound.desktop
 share/gnome/autostart/gnome-session-splash.desktop
 share/gnome/autostart/gnome-settings-daemon-helper.desktop
 share/gnome/autostart/gnome-wm.desktop
-share/gnome/shutdown/gnome-logout-sound.sh
 share/icons/hicolor/16x16/apps/session-properties.png
 share/icons/hicolor/22x22/apps/session-properties.png
 share/icons/hicolor/24x24/apps/session-properties.png
