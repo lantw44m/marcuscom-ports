@@ -4,7 +4,7 @@
 +/***
 +  This file is part of libcanberra.
 +
-+  Copyright 2008 
++  Copyright 2008 Lennart Poettering
 +		  Joe Marcus Clarke
 +
 +  libcanberra is free software; you can redistribute it and/or modify
