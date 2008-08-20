@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.9 2008/08/05 20:32:09 marcus Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.10 2008/08/19 02:29:17 marcus Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.23.90
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -34,7 +35,33 @@ GCONF_SCHEMAS=	GNOME_Megaphone_Applet.schemas empathy.schemas
 
 MAN1=		empathy.1
 
+OPTIONS=	JABBER	"Enable jabber (XMPP) client support" on \
+		MSN	"Enable MSN client support" on \
+		IRC	"Enable IRC client support" on \
+		SALUT	"Enable link-local (serverless) XMPP support" off \
+		HAZE	"Enable libpurple protocol integration" off
+
 .include <bsd.port.pre.mk>
+
+.if defined(WITH_JABBER)
+RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-gabble:${PORTSDIR}/net-im/telepathy-gabble
+.endif
+
+.if defined(WITH_MSN)
+RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-butterfly:${PORTSDIR}/net-im/telepathy-butterfly
+.endif
+
+.if defined(WITH_IRC)
+RUN_DEPENDS+=	telepathy-idle:${PORTSDIR}/net-im/telepathy-idle
+.endif
+
+.if !defined(WITHOUT_SALUT)
+RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-salut:${PORTSDIR}/net-im/telepathy-salut
+.endif
+
+.if !defined(WITHOUT_HAZE)
+RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-haze
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${datadir}/gtk-doc/html|${DOCSDIR}|' \
