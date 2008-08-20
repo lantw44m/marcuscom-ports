@@ -1,6 +1,6 @@
---- src/oss.c.orig	2008-08-20 13:45:45.835585000 -0400
-+++ src/oss.c	2008-08-20 13:48:16.000000000 -0400
-@@ -0,0 +1,495 @@
+--- src/oss.c.orig	2008-08-20 16:49:01.916312000 -0400
++++ src/oss.c	2008-08-20 16:49:58.000000000 -0400
+@@ -0,0 +1,490 @@
 +/***
 +  This file is part of libcanberra.
 +
@@ -244,9 +244,13 @@
 +    if ((out->pcm = open(c->device ? c->device : "/dev/dsp", O_WRONLY | O_NONBLOCK, 0)) < 0)
 +        goto finish;
 +
-+    mode = fcntl(out->pcm, F_GETFL);
++    if ((mode = fcntl(out->pcm, F_GETFL)) < 0) {
++        goto finish;
++    }
 +    mode &= ~O_NONBLOCK;
-+    fcntl(out->pcm, F_SETFL, mode);
++    if (fcntl(out->pcm, F_SETFL, mode) < 0) {
++        goto finish;
++    }
 +
 +    switch (ca_sound_file_get_sample_type(out->file)) {
 +        case CA_SAMPLE_U8:
@@ -264,13 +268,11 @@
 +            break;
 +    }
 +
++    test = val;
 +    if (ioctl(out->pcm, SNDCTL_DSP_SETFMT, &val) < 0)
 +        goto finish;
 +
-+    if (ioctl(out->pcm, SNDCTL_DSP_GETFMTS, &test) < 0)
-+        goto finish;
-+
-+    if ((val & test) == 0) {
++    if (val != test) {
 +        errno = EINVAL;
 +        goto finish;
 +    }
@@ -310,8 +312,8 @@
 +    ssize_t bytes_written;
 +    size_t fs, data_size;
 +    size_t nbytes = 0;
-+    struct pollfd *pfd = NULL;
-+    nfds_t n_pfd;
++    struct pollfd pfd[2];
++    nfds_t n_pfd = 2;
 +    struct private *p;
 +
 +    p = PRIVATE(out->context);
@@ -322,12 +324,6 @@
 +    data_size = (BUFSIZE/fs)*fs;
 +
 +    if (!(data = ca_malloc(data_size))) {
-+        ret = CA_ERROR_OOM;
-+        goto finish;
-+    }
-+
-+    n_pfd = 2;
-+    if (!(pfd = ca_new(struct pollfd, n_pfd))) {
 +        ret = CA_ERROR_OOM;
 +        goto finish;
 +    }
@@ -380,7 +376,6 @@
 +finish:
 +
 +    ca_free(data);
-+    ca_free(pfd);
 +
 +    if (!out->dead)
 +        if (out->callback)
