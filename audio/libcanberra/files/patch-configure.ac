@@ -1,6 +1,16 @@
---- configure.ac.orig	2008-08-09 15:27:28.000000000 -0400
-+++ configure.ac	2008-08-09 15:27:59.000000000 -0400
-@@ -219,6 +219,35 @@ fi
+--- configure.ac.orig	2008-08-20 13:18:28.404065000 -0400
++++ configure.ac	2008-08-20 13:24:02.000000000 -0400
+@@ -139,6 +139,9 @@ AC_CHECK_FUNCS([strerror_r])
+ # BSD
+ AC_CHECK_FUNCS([lstat])
+ 
++# GNU
++AC_CHECK_FUNCS([strndup])
++
+ #### POSIX threads ####
+ 
+ ACX_PTHREAD
+@@ -199,6 +202,35 @@ fi
  AC_SUBST(ALSA_CFLAGS)
  AC_SUBST(ALSA_LIBS)
  
@@ -36,7 +46,7 @@
  ### PulseAudio (optional) ####
  
  AC_ARG_ENABLE([pulse],
-@@ -333,6 +362,7 @@ HAVE_DSO=0
+@@ -336,6 +368,7 @@ HAVE_DSO=0
  BUILTIN_DSO=0
  BUILTIN_PULSE=0
  BUILTIN_ALSA=0
@@ -44,7 +54,7 @@
  BUILTIN_NULL=0
  
  case "x$with_builtin" in
-@@ -343,6 +373,7 @@ case "x$with_builtin" in
+@@ -346,6 +379,7 @@ case "x$with_builtin" in
  
          BUILTIN_PULSE=1
          HAVE_ALSA=0
@@ -52,7 +62,7 @@
          HAVE_NULL=0
       ;;
  
-@@ -352,10 +383,22 @@ case "x$with_builtin" in
+@@ -355,10 +389,22 @@ case "x$with_builtin" in
          fi
  
          BUILTIN_ALSA=1
@@ -75,7 +85,7 @@
       xnull)
          if test "x$HAVE_NULL" != x1 ; then
                  AC_MSG_ERROR([*** Null output selected for builtin driver, but not enabled. ***])
-@@ -364,6 +407,7 @@ case "x$with_builtin" in
+@@ -367,6 +413,7 @@ case "x$with_builtin" in
          BUILTIN_NULL=1
          HAVE_PULSE=0
          HAVE_ALSA=0
@@ -83,7 +93,7 @@
       ;;
  
       xdso)
-@@ -376,24 +420,28 @@ case "x$with_builtin" in
+@@ -379,24 +426,28 @@ case "x$with_builtin" in
          AC_MSG_ERROR([*** Unknown driver $with_builtin selected for builtin ***])
  esac
  
@@ -113,7 +123,7 @@
  AM_CONDITIONAL([BUILTIN_NULL], [test "x$BUILTIN_NULL" = x1])
  
  GTK_DOC_CHECK(1.9)
-@@ -435,6 +483,15 @@ if test "x$BUILTIN_ALSA" = "x1" ; then
+@@ -440,6 +491,15 @@ if test "x$BUILTIN_ALSA" = "x1" ; then
     ENABLE_BUILTIN_ALSA=yes
  fi
  
@@ -129,7 +139,7 @@
  ENABLE_NULL=no
  if test "x$HAVE_NULL" = "x1" ; then
     ENABLE_NULL=yes
-@@ -464,6 +521,8 @@ echo "
+@@ -469,6 +529,8 @@ echo "
      Builtin PulseAudio:     ${ENABLE_BUILTIN_PULSE}
      Enable ALSA:            ${ENABLE_ALSA}
      Builtin ALSA:           ${ENABLE_BUILTIN_ALSA}

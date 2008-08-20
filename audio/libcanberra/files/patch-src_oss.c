@@ -1,11 +1,11 @@
---- src/oss.c.orig	2008-08-10 01:57:54.353155000 -0400
-+++ src/oss.c	2008-08-10 02:12:43.640204000 -0400
-@@ -0,0 +1,476 @@
+--- src/oss.c.orig	2008-08-20 13:45:45.835585000 -0400
++++ src/oss.c	2008-08-20 13:48:16.000000000 -0400
+@@ -0,0 +1,495 @@
 +/***
 +  This file is part of libcanberra.
 +
 +  Copyright 2008 Lennart Poettering
-+		  Joe Marcus Clarke
++                 Joe Marcus Clarke
 +
 +  libcanberra is free software; you can redistribute it and/or modify
 +  it under the terms of the GNU Lesser General Public License as
@@ -29,6 +29,7 @@
 +#include <sys/types.h>
 +#include <sys/ioctl.h>
 +#include <sys/uio.h>
++#include <math.h>
 +#include <unistd.h>
 +
 +#ifdef HAVE_MACHINE_SOUNDCARD_H
@@ -95,7 +96,7 @@
 +
 +    if (o->pcm > -1) {
 +        close(o->pcm);
-+	o->pcm = -1;
++        o->pcm = -1;
 +    }
 +
 +    ca_free(o);
@@ -218,6 +219,8 @@
 +            return CA_ERROR_OOM;
 +        case EBUSY:
 +            return CA_ERROR_NOTAVAILABLE;
++    case EINVAL:
++        return CA_ERROR_INVALID;
 +        default:
 +            if (ca_debug())
 +                fprintf(stderr, "Got unhandled error from OSS: %s\n", strerror(error));
@@ -229,6 +232,7 @@
 +    struct private *p;
 +    int mode;
 +    int val;
++    int test;
 +    int ret;
 +
 +    ca_return_val_if_fail(c, CA_ERROR_INVALID);
@@ -245,31 +249,47 @@
 +    fcntl(out->pcm, F_SETFL, mode);
 +
 +    switch (ca_sound_file_get_sample_type(out->file)) {
-+	    case CA_SAMPLE_U8:
-+		    val = AFMT_U8;
-+		    break;
-+	    case CA_SAMPLE_S16NE:
-+		    val = AFMT_S16_NE;
-+		    break;
-+	    case CA_SAMPLE_S16RE:
++        case CA_SAMPLE_U8:
++            val = AFMT_U8;
++            break;
++        case CA_SAMPLE_S16NE:
++            val = AFMT_S16_NE;
++            break;
++        case CA_SAMPLE_S16RE:
 +#if _BYTE_ORDER == _LITTLE_ENDIAN
-+		    val = AFMT_S16_BE;
++            val = AFMT_S16_BE;
 +#else
-+		    val = AFMT_S16_LE;
++            val = AFMT_S16_LE;
 +#endif
-+		    break;
++            break;
 +    }
 +
 +    if (ioctl(out->pcm, SNDCTL_DSP_SETFMT, &val) < 0)
 +        goto finish;
 +
-+    val = ca_sound_file_get_nchannels(out->file) > 1 ? 1 : 0;
-+    if (ioctl(out->pcm, SNDCTL_DSP_STEREO, &val) < 0)
-+	goto finish;
++    if (ioctl(out->pcm, SNDCTL_DSP_GETFMTS, &test) < 0)
++        goto finish;
 +
-+    val = ca_sound_file_get_rate(out->file);
++    if ((val & test) == 0) {
++        errno = EINVAL;
++        goto finish;
++    }
++
++    val = ca_sound_file_get_nchannels(out->file);
++    if (ioctl(out->pcm, SNDCTL_DSP_CHANNELS, &val) < 0)
++        goto finish;
++
++    val = test = ca_sound_file_get_rate(out->file);
 +    if (ioctl(out->pcm, SNDCTL_DSP_SPEED, &val) < 0)
 +        goto finish;
++
++    /* Taken from esound.  Check to make sure the configured rate is close
++     * enough to the requested rate.
++     */
++    if (fabs((double) (val - test)) > test * 0.05) {
++        errno = EINVAL;
++        goto finish;
++    }
 +
 +    return CA_SUCCESS;
 +
@@ -347,9 +367,8 @@
 +        }
 +
 +        if ((bytes_written = write(out->pcm, d, nbytes)) <= 0) {
-+	    ret = errno;
-+	    goto finish;
-+
++            ret = errno;
++            goto finish;
 +        }
 +
 +        nbytes -= bytes_written;
