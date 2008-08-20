@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.19 2008/08/04 16:58:04 mezz Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.20 2008/08/06 04:22:50 mezz Exp $
 #
 
 PORTNAME=	webkit
@@ -27,7 +27,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnometarget gtk20 libxslt
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	autoconf:261 automake:110 libtool:15
+USE_AUTOTOOLS=	autoconf:262 automake:110 libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-webkit-target=x11 \
