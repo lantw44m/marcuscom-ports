@@ -428,7 +428,6 @@ share/omf/gnome-panel/fish-applet-2-ja.omf
 share/omf/gnome-panel/fish-applet-2-zh_CN.omf
 share/omf/gnome-panel/fish-applet-2-zh_TW.omf
 share/omf/gnome-panel/window-list-de.omf
-share/omf/window-list/window-list-fi.omf
 share/omf/gnome-panel/window-list-ja.omf
 share/omf/gnome-panel/window-list-zh_TW.omf
 share/omf/gnome-panel/workspace-switcher-de.omf
@@ -441,6 +440,7 @@ share/omf/window-list/window-list-da.omf
 share/omf/window-list/window-list-de.omf
 share/omf/window-list/window-list-el.omf
 share/omf/window-list/window-list-es.omf
+share/omf/window-list/window-list-fi.omf
 share/omf/window-list/window-list-fr.omf
 share/omf/window-list/window-list-it.omf
 share/omf/window-list/window-list-ko.omf
