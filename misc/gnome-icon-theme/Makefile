@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.116 2008/07/22 03:11:25 marcus Exp $
+#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.117 2008/08/19 02:45:36 kwm Exp $
 #
 
 PORTNAME=	gnome-icon-theme
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicol
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack intlhack gnometarget gtk20
+USE_GNOME=	gnomehack intlhack gtk20
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

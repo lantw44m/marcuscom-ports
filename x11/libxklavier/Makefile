@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libxklavier/Makefile,v 1.42 2008/04/28 06:24:33 marcus Exp $
+#   $MCom: ports/x11/libxklavier/Makefile,v 1.43 2008/06/06 21:38:57 marcus Exp $
 #
 
 PORTNAME=	libxklavier
@@ -23,7 +23,7 @@ RUN_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp \
 
 USE_XORG=	x11 xkbfile
 USE_GMAKE=	yes
-USE_GNOME=	gnometarget gnomehack libxml2 glib20 ltverhack:12
+USE_GNOME=	gnomehack libxml2 glib20 ltverhack:12
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 CPPFLAGS+=	-I${LOCALBASE}/include

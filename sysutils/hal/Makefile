@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/sysutils/hal/Makefile,v 1.45 2008/08/21 16:04:47 mezz Exp $
 #
 
 PORTNAME=	hal
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:${PORTSDIR}/misc/pciids
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnometarget intlhack ltverhack
+USE_GNOME=	gnomehack intlhack ltverhack
 USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes

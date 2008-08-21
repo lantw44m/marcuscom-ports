@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.126 2008/08/18 16:52:39 mezz Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.127 2008/08/21 20:40:28 mezz Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
@@ -34,7 +34,7 @@ LIB_DEPENDS+=	pcre.0:${PORTSDIR}/devel/pcre
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack gnometarget pkgconfig ltverhack
+USE_GNOME=	gnomehack pkgconfig ltverhack
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_PERL5=	yes

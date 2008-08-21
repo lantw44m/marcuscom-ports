@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.16 2008/08/05 04:57:44 marcus Exp $
+#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.17 2008/08/18 16:52:39 mezz Exp $
 #
 
 PORTNAME=	gio-fam-backend
@@ -26,7 +26,7 @@ USE_BZIP2=	yes
 BUILD_WRKSRC=	${WRKSRC}/gio/fam
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack gnometarget pkgconfig _glib20
+USE_GNOME=	gnomehack pkgconfig _glib20
 USE_FAM=	yes
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu

@@ -3,7 +3,7 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/py-gtksourceview/Makefile,v 1.12 2008/08/11 09:40:43 kwm Exp $
 #
 
 PORTNAME=	gtksourceview
@@ -19,7 +19,7 @@ COMMENT=	A python bindings for the version 2 of the GtkSourceView library
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix gnometarget gtksourceview2 pygtk2
+USE_GNOME=	gnomehack gnomeprefix gtksourceview2 pygtk2
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docs

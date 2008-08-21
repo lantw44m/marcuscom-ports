@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/bakery/Makefile,v 1.13 2008/08/10 18:49:02 kwm Exp $
 #
 
 PORTNAME=	bakery
@@ -19,7 +19,7 @@ LIB_DEPENDS=	gconfmm-2.6:${PORTSDIR}/devel/gconfmm26 \
 		gnomevfsmm-2.6:${PORTSDIR}/devel/gnome-vfsmm \
 		xml\\+\\+-2.6:${PORTSDIR}/textproc/libxml++26
 
-USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack ltverhack
+USE_GNOME=	gnomehack gnomeprefix intlhack ltverhack
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes

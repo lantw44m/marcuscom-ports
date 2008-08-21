@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/intltool/Makefile,v 1.7 2008/07/22 03:03:05 marcus Exp $
+#   $MCom: ports/textproc/intltool/Makefile,v 1.8 2008/07/26 07:37:04 marcus Exp $
 
 PORTNAME=	intltool
 PORTVERSION=	0.40.3
@@ -21,7 +21,6 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_ICONV=	yes
 USE_PERL5=	yes
-USE_GNOME=	gnometarget
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--libdir="${PREFIX}/libdata"
 

@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.20 2008/08/06 04:22:50 mezz Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.21 2008/08/20 19:01:14 marcus Exp $
 #
 
 PORTNAME=	webkit
@@ -24,7 +24,7 @@ OPTIONS=	VIDEO "Enable video support" on
 WANT_GSTREAMER=	yes
 USE_BISON=	build
 USE_GMAKE=	yes
-USE_GNOME=	gnometarget gtk20 libxslt
+USE_GNOME=	gtk20 libxslt
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	autoconf:262 automake:110 libtool:15

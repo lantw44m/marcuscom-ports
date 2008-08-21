@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnomekbd/Makefile,v 1.21 2008/05/14 02:23:57 marcus Exp $
+#   $MCom: ports/x11/libgnomekbd/Makefile,v 1.22 2008/06/06 21:38:57 marcus Exp $
 #
 
 PORTNAME=	libgnomekbd
@@ -20,7 +20,7 @@ LIB_DEPENDS=	xklavier.12:${PORTSDIR}/x11/libxklavier \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 USE_BZIP2=	yes
-USE_GNOME=	libgnomeui gnometarget gnomeprefix gnomehack ltverhack
+USE_GNOME=	libgnomeui gnomeprefix gnomehack ltverhack
 USE_AUTOTOOLS=	libtool:15
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
