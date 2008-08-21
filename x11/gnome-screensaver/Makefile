@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.93 2008/08/09 07:57:28 marcus Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.94 2008/08/15 06:36:34 marcus Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -73,7 +73,7 @@ pre-everything::
 post-patch:
 .if defined(WITH_PAM)
 	@${REINPLACE_CMD} -e 's|/etc/pam.d|${PREFIX}/etc/pam.d|g' \
-	    	${WRKSRC}/src/gs-auth-pam.c
+		${WRKSRC}/src/gs-auth-pam.c
 .endif
 
 pre-install:

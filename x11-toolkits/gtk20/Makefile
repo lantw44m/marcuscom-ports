@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.136 2008/08/06 03:47:24 mezz Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.137 2008/08/19 02:08:49 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -61,13 +61,14 @@ CONFIGURE_ARGS+=	--enable-debug=yes
 
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_CUPS) || exists(${LOCALBASE}/lib/libcups.so)
+.if (defined(WITH_CUPS) || exists(${LOCALBASE}/lib/libcups.so)) && \
+	!defined(WITHOUT_CUPS)
 LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-base
-PLIST_SUB+=	CUPS:=""
 CONFIGURE_ARGS+=--enable-cups=auto
+PLIST_SUB+=	CUPS:=""
 .else
-PLIST_SUB+=	CUPS:="@comment "
 CONFIGURE_ARGS+=--disable-cups
+PLIST_SUB+=	CUPS:="@comment "
 .endif
 
 post-patch:

@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/orca/Makefile,v 1.51 2008/08/05 19:00:01 marcus Exp $
+#   $MCom: ports/accessibility/orca/Makefile,v 1.52 2008/08/19 02:12:19 kwm Exp $
 #
 
 PORTNAME=	orca
 PORTVERSION=	2.23.90
+PORTREVISION=	1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,8 +18,7 @@ COMMENT=	Scriptable screen reader
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus
 LIB_DEPENDS=	gnome-mag.2:${PORTSDIR}/accessibility/gnome-mag
-RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
-		${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus
 
 LATEST_LINK=	gnome-orca
 

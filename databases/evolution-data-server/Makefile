@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.153 2008/08/18 18:56:27 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.154 2008/08/19 17:13:11 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -69,12 +69,12 @@ EDS_BDB_MSG=	"!!!WARNING!!!: Berkeley Database version is ${BDB_VER}.  If this i
 
 pre-everything::
 	@if [ x"${BDB_VER}" != x"41" ]; then \
-	    	${ECHO_MSG} ${EDS_BDB_MSG} | ${FMT} 75 79 ; \
+		${ECHO_MSG} ${EDS_BDB_MSG} | ${FMT} 75 79 ; \
 	fi
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g ; \
-	    	s|heimlibs=".*"|heimlibs="${KRB5_LIB}"|g' \
+		s|heimlibs=".*"|heimlibs="${KRB5_LIB}"|g' \
 			${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
