@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.252 2008/08/20 23:47:33 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.253 2008/08/21 21:43:15 marcus Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.23.90
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -51,7 +51,6 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		totem:${PORTSDIR}/multimedia/totem \
 		gnome-control-center:${PORTSDIR}/sysutils/gnome-control-center \
 		${LOCALBASE}/share/gnome-background-properties/gnome-nature.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
-		${LOCALBASE}/libdata/pkgconfig/libgtkhtml-2.0.pc:${PORTSDIR}/www/libgtkhtml \
 		evince:${PORTSDIR}/graphics/evince \
 		alacarte:${PORTSDIR}/deskutils/alacarte \
 		gnome-power-manager:${PORTSDIR}/sysutils/gnome-power-manager \
