@@ -45,6 +45,7 @@ share/locale/ja/LC_MESSAGES/yelp.mo
 share/locale/ka/LC_MESSAGES/yelp.mo
 share/locale/kn/LC_MESSAGES/yelp.mo
 share/locale/ko/LC_MESSAGES/yelp.mo
+share/locale/ks/LC_MESSAGES/yelp.mo
 share/locale/ku/LC_MESSAGES/yelp.mo
 share/locale/ky/LC_MESSAGES/yelp.mo
 share/locale/li/LC_MESSAGES/yelp.mo
@@ -152,6 +153,8 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 @dirrmtry share/locale/ky
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/ks/LC_MESSAGES
+@dirrmtry share/locale/ks
 @dirrmtry share/locale/fur/LC_MESSAGES
 @dirrmtry share/locale/fur
 @dirrmtry share/locale/dz/LC_MESSAGES
