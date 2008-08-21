@@ -2,7 +2,7 @@
 # Date Created:				Aug 9 2003
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/pixman/Makefile,v 1.6 2008/06/30 20:16:22 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	pixman
