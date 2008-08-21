@@ -14,6 +14,7 @@ COMMENT=	Low-level pixel manipulation library
 
 XORG_CAT=	lib
 USE_AUTOTOOLS=	libtool:15
+USE_PERL5_BUILD=yes
 USE_GNOME=	ltverhack:9
 
 post-patch:
