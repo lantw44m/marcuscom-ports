@@ -66,6 +66,7 @@ libdata/bonobo/servers/Hamster_Applet.server
 %%DATADIR%%/menu.glade
 %%DATADIR%%/preferences.glade
 %%DATADIR%%/stats.glade
+share/gnome-control-center/keybindings/99-hamster-applet.xml
 share/icons/hicolor/16x16/apps/hamster-applet.png
 share/icons/hicolor/22x22/apps/hamster-applet.png
 share/icons/hicolor/32x32/apps/hamster-applet.png
