@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.466 2008/08/21 19:37:02 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.467 2008/08/23 17:00:52 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -70,8 +70,8 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
 		oaf orbit pygnome pygtk
 
 # GNOME 2 components
-_USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gail \
-		gal2 gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop gnomedocutils \
+_USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
+		gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop gnomedocutils \
 		gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk20 \
 		gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 gvfs \
 		libartlgpl2 libbonobo libbonoboui libgailgnome libgda2 libgda3 libgda4 \
@@ -317,13 +317,9 @@ gnomevfs2_LIB_DEPENDS=	gnomevfs-2.0:${PORTSDIR}/devel/gnome-vfs
 gnomevfs2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-vfs-2.0.pc
 gnomevfs2_USE_GNOME_IMPL=gconf2 gnomemimedata
 
-gail_LIB_DEPENDS=	# Now included in x11-toolkits/gtk20
-gail_DETECT=		${LOCALBASE}/libdata/pkgconfig/gail.pc
-gail_USE_GNOME_IMPL=	gtk20
-
 libgnomecanvas_LIB_DEPENDS=	gnomecanvas-2.0:${PORTSDIR}/graphics/libgnomecanvas
 libgnomecanvas_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomecanvas-2.0.pc
-libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2 gail
+libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2
 
 libartlgpl2_LIB_DEPENDS=	art_lgpl_2.5:${PORTSDIR}/graphics/libart_lgpl
 libartlgpl2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libart-2.0.pc
@@ -351,7 +347,7 @@ libgnomeui_USE_GNOME_IMPL=	libbonoboui
 
 atspi_LIB_DEPENDS=	spi.10:${PORTSDIR}/accessibility/at-spi
 atspi_DETECT=		${LOCALBASE}/libdata/pkgconfig/cspi-1.0.pc
-atspi_USE_GNOME_IMPL=	gail libbonobo
+atspi_USE_GNOME_IMPL=	gtk20 libbonobo
 
 libgailgnome_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgail-gnome.pc
 libgailgnome_RUN_DEPENDS=	${libgailgnome_DETECT}:${PORTSDIR}/x11-toolkits/libgail-gnome
@@ -359,7 +355,7 @@ libgailgnome_USE_GNOME_IMPL=	libgnomeui atspi
 
 libgtkhtml_LIB_DEPENDS=	gtkhtml-2.0:${PORTSDIR}/www/libgtkhtml
 libgtkhtml_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgtkhtml-2.0.pc
-libgtkhtml_USE_GNOME_IMPL=libxslt gnomevfs2 gail
+libgtkhtml_USE_GNOME_IMPL=libxslt gnomevfs2
 
 gnomedesktop_LIB_DEPENDS=	gnome-desktop-2.7:${PORTSDIR}/x11/gnome-desktop
 gnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-2.0.pc
@@ -384,7 +380,7 @@ librsvg2_USE_GNOME_IMPL=libgsf gtk20
 
 eel2_LIB_DEPENDS=	eel-2.2:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${LOCALBASE}/libdata/pkgconfig/eel-2.0.pc
-eel2_USE_GNOME_IMPL=	gnomedesktop gail
+eel2_USE_GNOME_IMPL=	gnomedesktop
 
 gnomepanel_LIB_DEPENDS=	panel-applet-2.0:${PORTSDIR}/x11/gnome-panel
 gnomepanel_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-2.0.pc
@@ -466,7 +462,7 @@ intlhack_USE_GNOME_IMPL=intltool
 
 gtkhtml3_LIB_DEPENDS=	gtkhtml-3.14.20:${PORTSDIR}/www/gtkhtml3
 gtkhtml3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgtkhtml-3.14.pc
-gtkhtml3_USE_GNOME_IMPL=gail libgnomeui
+gtkhtml3_USE_GNOME_IMPL=libgnomeui
 
 gnomespeech_LIB_DEPENDS=gnomespeech.7:${PORTSDIR}/accessibility/gnome-speech
 gnomespeech_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-speech-1.0.pc

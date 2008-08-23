@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi/Makefile,v 1.75 2008/07/21 17:52:16 marcus Exp $
+#   $MCom: ports/accessibility/at-spi/Makefile,v 1.76 2008/08/05 05:19:23 marcus Exp $
 #
 
 PORTNAME=	at-spi
@@ -23,8 +23,7 @@ USE_BZIP2=	yes
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomehier intltool gail libbonobo \
-		intlhack
+USE_GNOME=	gnomehack gnomehier intlhack gtk20 libbonobo
 USE_XORG=	x11 xtst
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes

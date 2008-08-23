@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.117 2008/06/05 10:01:45 kwm Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.118 2008/06/06 21:38:45 marcus Exp $
 #
 
 PORTNAME=	gnome-media
@@ -24,8 +24,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 GNOME_DESKTOP_VERSION=2
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
-		gail nautiluscdburner
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop nautiluscdburner
 USE_GSTREAMER=	cdparanoia esound gconf good
 CONFIGURE_ARGS=	--enable-ipv6
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

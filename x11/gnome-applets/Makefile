@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.184 2008/08/05 05:50:46 marcus Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.185 2008/08/18 15:15:21 mezz Exp $
 #
 
 PORTNAME=	gnome-applets
@@ -31,8 +31,8 @@ GNOME_DESKTOP_VERSION=2
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel \
-		gail gnomedocutils libgnomekbd
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel gnomedocutils \
+		libgnomekbd
 WANT_GNOME=	yes
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes

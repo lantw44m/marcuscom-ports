@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml3/Makefile,v 1.134 2008/08/18 16:31:11 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	gtkhtml3
-PORTVERSION=	3.23.90
+PORTVERSION=	3.12.3
+PORTREVISION=	5
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,24 +18,25 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Lightweight HTML rendering/printing/editing engine
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+LIB_DEPENDS=	soup-2.2.8:${PORTSDIR}/devel/libsoup22
+
+NO_LATEST_LINK=	yes
+DEPRECATED=	Older API; newer applications should use www/gtkhtml3
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_XORG=	xinerama xi xrandr xcursor xcomposite xdamage
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui ltverhack
+USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui ltverhack \
+		libgnomeprintui
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-PLIST_SUB=	VERSION="3.14"
+PLIST_SUB=	VERSION="3.8"
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|@INTLTOOL_LIBDIR@|${LOCALBASE}/libdata|' \
-	    	${WRKSRC}/intltool-merge.in
+	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -E -e \
+	    	's|-DG_DISABLE_DEPRECATED[^[:space:]]+||g'
 
 .include <bsd.port.mk>
