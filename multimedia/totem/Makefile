@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.110 2008/06/12 19:49:48 marcus Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.111 2008/08/04 16:58:03 mezz Exp $
 #
 
 PORTNAME=	totem
 PORTVERSION=	2.23.4
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -48,7 +48,7 @@ CONFLICTS?=	totem-gstreamer-[0-9]* totem-xine-[0-9]*
 
 OPTIONS=	LIRC "Enable lirc support" off \
 		GALAGO "Enable Galago support" off \
-		GECKO_PLUGINS "Enable install plugins for gecko browser" on \
+		BROWSER_PLUGINS "Enable install plugins for gecko browser" on \
 		PUBLISH "Enable Publish (network playlist) plugin" off \
 		TRACKER "Enable tracker local search plugin" off
 
@@ -92,34 +92,26 @@ TOTEM_PLUGINS:=	${TOTEM_PLUGINS} galago
 PLIST_SUB+=	GALAGO="@comment "
 .endif
 
-.if !defined(WITHOUT_GECKO_PLUGINS)
-USE_GECKO=	firefox mozilla seamonkey xulrunner<->firefox firefox-devel<->firefox
-.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
-CONFIGURE_ARGS+=--with-mozilla=${GECKO} \
-		--enable-browser-plugins \
+.if !defined(WITHOUT_BROWSER_PLUGINS)
+CONFIGURE_ARGS+=--enable-browser-plugins \
 		--enable-gmp-plugin \
 		--enable-complex-plugin \
 		--enable-narrowspace-plugin
-PLIST_SUB+=	GECKO_PLUGINS=""
+PLIST_SUB+=	BROWSER_PLUGINS=""
 
-USE_WEBPLUGINS=		gecko*
-WEBPLUGINS_FILES=	libtotem-basic-plugin.so libtotem-basic-plugin.xpt \
-			libtotem-complex-plugin.so libtotem-complex-plugin.xpt \
-			libtotem-cone-plugin.so libtotem-cone-plugin.xpt \
-			libtotem-gmp-plugin.so libtotem-gmp-plugin.xpt \
-			libtotem-mully-plugin.so libtotem-mully-plugin.xpt \
-			libtotem-narrowspace-plugin.so \
-			libtotem-narrowspace-plugin.xpt
+USE_WEBPLUGINS=		gecko19 webkit-gtk2
+WEBPLUGINS_FILES=	libtotem-basic-plugin.so libtotem-complex-plugin.so \
+			libtotem-cone-plugin.so libtotem-gmp-plugin.so \
+			libtotem-mully-plugin.so \
+			libtotem-narrowspace-plugin.so
 .include "${PORTSDIR}/www/firefox/Makefile.webplugins"
 .else
-CONFIGURE_ARGS+=--without-mozilla \
-		--disable-browser-plugins \
-		--disable-mozilla \
+CONFIGURE_ARGS+=--disable-browser-plugins \
 		--disable-basic-plugin \
 		--disable-gmp-plugin \
 		--disable-complex-plugin \
 		--disable-narrowspace-plugin
-PLIST_SUB+=	GECKO_PLUGINS="@comment "
+PLIST_SUB+=	BROWSER_PLUGINS="@comment "
 .endif
 
 .if !defined(WITH_TOTEM_XINE) || ${SLAVE_PORT}=="no"
