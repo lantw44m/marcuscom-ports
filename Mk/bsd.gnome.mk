@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.465 2008/08/18 23:53:35 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.466 2008/08/21 19:37:02 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -262,7 +262,7 @@ pygnome_USE_GNOME_IMPL=	gtkhtml pygtk
 
 _glib20_LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20
 _glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
-_glib20_USE_GNOME_IMPL=	gnometarget pkgconfig
+_glib20_USE_GNOME_IMPL=	pkgconfig
 
 glib20_RUN_DEPENDS=	${LOCALBASE}/lib/gio/modules/libgiofam.so:${PORTSDIR}/devel/gio-fam-backend
 glib20_DETECT=		${LOCALBASE}/lib/gio/modules/libgiofam.so
