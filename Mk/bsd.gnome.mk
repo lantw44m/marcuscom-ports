@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.468 2008/08/23 18:22:58 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.469 2008/08/24 16:57:58 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -708,6 +708,7 @@ ltasneededhack_PRE_PATCH=	if [ -f ${WRKDIR}/gnome-libtool ]; then \
 .ifdef _USE_GNOME
 . if ${USE_GNOME:Mltverhack*}!= "" || ${USE_GNOME:Mltasneededhack}!= ""
 GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
+CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
 . endif
 . for component in ${_USE_GNOME_ALL}
 .  if ${_USE_GNOME:M${component}}!=""
