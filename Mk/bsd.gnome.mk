@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.467 2008/08/23 17:00:52 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.468 2008/08/23 18:22:58 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -665,6 +665,7 @@ PLIST_SUB+=			GTK2_VERSION="${GTK2_VERSION}"
 # we rely on some bsd.autotools.mk variables, and bsd.autotools.mk is
 # included in the post-makefile section).
 .if defined(AUTOTOOL_libtool)
+lthacks_CONFIGURE_ENV=		ac_cv_path_DOLT_BASH=
 lthacks_PRE_PATCH=		${CP} -pf ${LTMAIN} ${WRKDIR}/gnome-ltmain.sh && \
 						${CP} -pf ${LIBTOOL} ${WRKDIR}/gnome-libtool && \
 						for file in ${LIBTOOLFILES}; do \
