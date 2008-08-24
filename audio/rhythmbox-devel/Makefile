@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox-devel/Makefile,v 1.96 2008/07/13 17:48:10 marcus Exp $
+#   $MCom: ports/audio/rhythmbox-devel/Makefile,v 1.97 2008/08/04 16:58:02 mezz Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -134,7 +134,7 @@ WEBPLUGINS_FILES=librhythmbox-itms-detection-plugin.so
 
 CONFIGURE_ARGS+=--enable-browser-plugin \
 		--with-gecko=${GECKO}
-CONFIGURE_ENV+=	MOZILLA_PLUGINDIR=${BROWSER_PLUGINS_DIR}
+CONFIGURE_ENV+=	MOZILLA_PLUGINDIR=${WEBPLUGINS_DIR}
 PLIST_SUB+=	GECKO_PLUGIN=""
 .else
 CONFIGURE_ARGS+=--disable-browser-plugin
