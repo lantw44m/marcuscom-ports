@@ -1,5 +1,5 @@
---- daemon/gdm-server.c.orig	2007-11-19 22:53:12.000000000 +0100
-+++ daemon/gdm-server.c	2007-12-25 11:56:07.000000000 +0100
+--- daemon/gdm-server.c.orig	2008-03-17 19:11:00.000000000 -0400
++++ daemon/gdm-server.c	2008-08-25 16:11:10.000000000 -0400
 @@ -44,6 +44,10 @@
  #include "gdm-common.h"
  #include "gdm-signal-handler.h"
@@ -11,7 +11,7 @@
  #include "gdm-server.h"
  
  extern char **environ;
-@@ -77,6 +81,7 @@
+@@ -77,6 +81,7 @@ struct GdmServerPrivate
          char    *parent_display_name;
          char    *parent_auth_file;
          char    *chosen_hostname;
@@ -19,7 +19,16 @@
  
          guint    child_watch_id;
  };
-@@ -663,7 +668,7 @@
+@@ -306,7 +311,7 @@ gdm_server_resolve_command_line (GdmServ
+                 argv[len++] = g_strdup ("tcp");
+         }
+ 
+-        if (vtarg != NULL && ! gotvtarg) {
++        if (vtarg != NULL && ! gotvtarg && strncmp (server->priv->display_name, ":0", 2) == 0) {
+                 argv[len++] = g_strdup (vtarg);
+         }
+ 
+@@ -673,7 +678,7 @@ gdm_server_start (GdmServer *server)
          gboolean res;
  
          /* fork X server process */
@@ -28,7 +37,7 @@
  
          return res;
  }
-@@ -890,12 +895,33 @@
+@@ -925,12 +930,33 @@ static void
  gdm_server_init (GdmServer *server)
  {
  
