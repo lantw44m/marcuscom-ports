@@ -27,9 +27,15 @@ sbin/gdm-binary
 sbin/gdm-restart
 sbin/gdm-safe-restart
 sbin/gdm-stop
-%%DATADIR%%/gdm-a11y-preferences-dialog.glade
+%%DATADIR%%/autostart/LoginWindow/at-spi-registryd-wrapper.desktop
+%%DATADIR%%/autostart/LoginWindow/gdm-simple-greeter.desktop
+%%DATADIR%%/autostart/LoginWindow/gnome-mag.desktop
+%%DATADIR%%/autostart/LoginWindow/gnome-power-manager.desktop
+%%DATADIR%%/autostart/LoginWindow/gnome-settings-daemon.desktop
+%%DATADIR%%/autostart/LoginWindow/gok.desktop
+%%DATADIR%%/autostart/LoginWindow/orca-screen-reader.desktop
 %%DATADIR%%/gdm-greeter-login-window.glade
-share/gdm/gdb-cmd
+%%DATADIR%%/gdb-cmd
 share/gnome-2.0/ui/GNOME_FastUserSwitchApplet.xml
 share/icons/hicolor/16x16/apps/gdm-xnest.png
 share/icons/hicolor/32x32/apps/gdm-setup.png
@@ -78,6 +84,7 @@ share/locale/ko/LC_MESSAGES/gdm.mo
 share/locale/ku/LC_MESSAGES/gdm.mo
 share/locale/lt/LC_MESSAGES/gdm.mo
 share/locale/lv/LC_MESSAGES/gdm.mo
+share/locale/mai/LC_MESSAGES/gdm.mo
 share/locale/mg/LC_MESSAGES/gdm.mo
 share/locale/mi/LC_MESSAGES/gdm.mo
 share/locale/mk/LC_MESSAGES/gdm.mo
@@ -105,7 +112,7 @@ share/locale/sk/LC_MESSAGES/gdm.mo
 share/locale/sl/LC_MESSAGES/gdm.mo
 share/locale/sq/LC_MESSAGES/gdm.mo
 share/locale/sr/LC_MESSAGES/gdm.mo
-share/locale/sr@Latn/LC_MESSAGES/gdm.mo
+share/locale/sr@latin/LC_MESSAGES/gdm.mo
 share/locale/sv/LC_MESSAGES/gdm.mo
 share/locale/ta/LC_MESSAGES/gdm.mo
 share/locale/te/LC_MESSAGES/gdm.mo
@@ -152,6 +159,8 @@ share/pixmaps/nohost.png
 @exec mkdir -p %D/share/xsessions
 @dirrmtry share/xsessions
 @dirrm share/pixmaps/faces
+@dirrm %%DATADIR%%/autostart/LoginWindow
+@dirrm %%DATADIR%%/autostart
 @dirrm %%DATADIR%%
 @dirrm etc/gdm/Sessions
 @dirrm etc/gdm/PreSession
@@ -178,6 +187,8 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/si
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/ps/LC_MESSAGES
@@ -192,6 +203,8 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/mi
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/hy/LC_MESSAGES
