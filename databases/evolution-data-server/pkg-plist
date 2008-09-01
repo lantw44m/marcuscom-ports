@@ -805,7 +805,7 @@ share/locale/sk/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/sl/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/sq/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/sr/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
-share/locale/sr@Latn/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
+share/locale/sr@latin/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/sv/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/ta/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/te/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
