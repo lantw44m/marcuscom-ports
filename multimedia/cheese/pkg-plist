@@ -76,6 +76,7 @@ share/locale/ca/LC_MESSAGES/cheese.mo
 share/locale/cs/LC_MESSAGES/cheese.mo
 share/locale/da/LC_MESSAGES/cheese.mo
 share/locale/de/LC_MESSAGES/cheese.mo
+share/locale/dz/LC_MESSAGES/cheese.mo
 share/locale/el/LC_MESSAGES/cheese.mo
 share/locale/en_GB/LC_MESSAGES/cheese.mo
 share/locale/es/LC_MESSAGES/cheese.mo
@@ -100,6 +101,7 @@ share/locale/nb/LC_MESSAGES/cheese.mo
 share/locale/nl/LC_MESSAGES/cheese.mo
 share/locale/nn/LC_MESSAGES/cheese.mo
 share/locale/oc/LC_MESSAGES/cheese.mo
+share/locale/or/LC_MESSAGES/cheese.mo
 share/locale/pa/LC_MESSAGES/cheese.mo
 share/locale/pl/LC_MESSAGES/cheese.mo
 share/locale/ps/LC_MESSAGES/cheese.mo
@@ -108,7 +110,9 @@ share/locale/pt_BR/LC_MESSAGES/cheese.mo
 share/locale/ro/LC_MESSAGES/cheese.mo
 share/locale/ru/LC_MESSAGES/cheese.mo
 share/locale/sl/LC_MESSAGES/cheese.mo
+share/locale/sq/LC_MESSAGES/cheese.mo
 share/locale/sv/LC_MESSAGES/cheese.mo
+share/locale/te/LC_MESSAGES/cheese.mo
 share/locale/th/LC_MESSAGES/cheese.mo
 share/locale/tr/LC_MESSAGES/cheese.mo
 share/locale/uk/LC_MESSAGES/cheese.mo
@@ -125,6 +129,22 @@ share/omf/cheese/cheese-pt_BR.omf
 share/omf/cheese/cheese-ru.omf
 share/omf/cheese/cheese-sv.omf
 @dirrm share/omf/cheese
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/ps/LC_MESSAGES
+@dirrmtry share/locale/ps
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
 @dirrm share/gnome/help/cheese/sv/figures
 @dirrm share/gnome/help/cheese/sv
 @dirrm share/gnome/help/cheese/ru/figures
@@ -163,15 +183,3 @@ share/omf/cheese/cheese-sv.omf
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm libexec/cheese
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/ps/LC_MESSAGES
-@dirrmtry share/locale/ps
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
-@dirrmtry share/locale/be@latin/LC_MESSAGES
-@dirrmtry share/locale/be@latin
