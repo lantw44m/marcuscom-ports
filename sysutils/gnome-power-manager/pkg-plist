@@ -492,7 +492,7 @@ share/locale/si/LC_MESSAGES/gnome-power-manager.mo
 share/locale/sk/LC_MESSAGES/gnome-power-manager.mo
 share/locale/sl/LC_MESSAGES/gnome-power-manager.mo
 share/locale/sr/LC_MESSAGES/gnome-power-manager.mo
-share/locale/sr@Latn/LC_MESSAGES/gnome-power-manager.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-power-manager.mo
 share/locale/sv/LC_MESSAGES/gnome-power-manager.mo
 share/locale/ta/LC_MESSAGES/gnome-power-manager.mo
 share/locale/th/LC_MESSAGES/gnome-power-manager.mo
@@ -555,6 +555,8 @@ share/omf/gnome-power-manager/gnome-power-manager-sv.omf
 @dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES
