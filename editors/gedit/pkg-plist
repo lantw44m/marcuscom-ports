@@ -261,6 +261,14 @@ share/gnome/help/gedit/eu/figures/gedit_recent_files_menu_icon.png
 share/gnome/help/gedit/eu/figures/gedit_window.png
 share/gnome/help/gedit/eu/gedit.xml
 share/gnome/help/gedit/eu/legal.xml
+share/gnome/help/gedit/fi/figures/gedit_format_bold.png
+share/gnome/help/gedit/fi/figures/gedit_format_italic.png
+share/gnome/help/gedit/fi/figures/gedit_format_strikethrough.png
+share/gnome/help/gedit/fi/figures/gedit_format_underline.png
+share/gnome/help/gedit/fi/figures/gedit_recent_files_menu_icon.png
+share/gnome/help/gedit/fi/figures/gedit_window.png
+share/gnome/help/gedit/fi/gedit.xml
+share/gnome/help/gedit/fi/legal.xml
 share/gnome/help/gedit/fr/figures/gedit_format_bold.png
 share/gnome/help/gedit/fr/figures/gedit_format_italic.png
 share/gnome/help/gedit/fr/figures/gedit_format_strikethrough.png
@@ -440,7 +448,7 @@ share/locale/sk/LC_MESSAGES/gedit.mo
 share/locale/sl/LC_MESSAGES/gedit.mo
 share/locale/sq/LC_MESSAGES/gedit.mo
 share/locale/sr/LC_MESSAGES/gedit.mo
-share/locale/sr@Latn/LC_MESSAGES/gedit.mo
+share/locale/sr@latin/LC_MESSAGES/gedit.mo
 share/locale/sv/LC_MESSAGES/gedit.mo
 share/locale/ta/LC_MESSAGES/gedit.mo
 share/locale/te/LC_MESSAGES/gedit.mo
@@ -460,6 +468,7 @@ share/omf/gedit/gedit-da.omf
 share/omf/gedit/gedit-de.omf
 share/omf/gedit/gedit-es.omf
 share/omf/gedit/gedit-eu.omf
+share/omf/gedit/gedit-fi.omf
 share/omf/gedit/gedit-fr.omf
 share/omf/gedit/gedit-hu.omf
 share/omf/gedit/gedit-it.omf
@@ -503,6 +512,8 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm share/gnome/help/gedit/hu
 @dirrm share/gnome/help/gedit/fr/figures
 @dirrm share/gnome/help/gedit/fr
+@dirrm share/gnome/help/gedit/fi/figures
+@dirrm share/gnome/help/gedit/fi
 @dirrm share/gnome/help/gedit/eu/figures
 @dirrm share/gnome/help/gedit/eu
 @dirrm share/gnome/help/gedit/es/figures
@@ -551,6 +562,8 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
