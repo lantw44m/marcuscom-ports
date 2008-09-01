@@ -18,7 +18,7 @@ include/libgtkhtml-%%VERSION%%/gtkhtml/htmltypes.h
 lib/libgtkhtml-%%VERSION%%.a
 lib/libgtkhtml-%%VERSION%%.la
 lib/libgtkhtml-%%VERSION%%.so
-lib/libgtkhtml-%%VERSION%%.so.20
+lib/libgtkhtml-%%VERSION%%.so.19
 lib/libgtkhtml-editor.a
 lib/libgtkhtml-editor.la
 lib/libgtkhtml-editor.so
@@ -83,6 +83,7 @@ share/locale/it/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/ja/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/ka/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/ko/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
+share/locale/kn/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/ku/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/lt/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/lv/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
@@ -110,7 +111,7 @@ share/locale/sk/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/sl/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/sq/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/sr/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
-share/locale/sr@Latn/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
+share/locale/sr@latin/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/sv/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/ta/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/th/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
@@ -130,6 +131,8 @@ share/locale/zh_TW/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
