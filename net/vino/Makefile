@@ -3,11 +3,11 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino/Makefile,v 1.58 2008/07/23 04:29:47 marcus Exp $
+#   $MCom: ports/net/vino/Makefile,v 1.59 2008/08/19 02:22:40 kwm Exp $
 #
 
 PORTNAME=	vino
-PORTVERSION=	2.23.90
+PORTVERSION=	2.23.91
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
