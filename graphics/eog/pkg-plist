@@ -42,7 +42,6 @@ share/applications/eog.desktop
 %%DOCSDIR%%/EogMessageArea.html
 %%DOCSDIR%%/EogMetadataReaderJpg.html
 %%DOCSDIR%%/EogMetadataReaderPng.html
-%%DOCSDIR%%/EogModule.html
 %%DOCSDIR%%/EogPixbufCellRenderer.html
 %%DOCSDIR%%/EogPlugin.html
 %%DOCSDIR%%/EogPluginManager.html
@@ -50,7 +49,6 @@ share/applications/eog.desktop
 %%DOCSDIR%%/EogPrintImageSetup.html
 %%DOCSDIR%%/EogPrintPreview.html
 %%DOCSDIR%%/EogPropertiesDialog.html
-%%DOCSDIR%%/EogPythonModule.html
 %%DOCSDIR%%/EogScrollView.html
 %%DOCSDIR%%/EogSidebar.html
 %%DOCSDIR%%/EogStatusbar.html
@@ -265,7 +263,7 @@ share/locale/sk/LC_MESSAGES/eog.mo
 share/locale/sl/LC_MESSAGES/eog.mo
 share/locale/sq/LC_MESSAGES/eog.mo
 share/locale/sr/LC_MESSAGES/eog.mo
-share/locale/sr@Latn/LC_MESSAGES/eog.mo
+share/locale/sr@latin/LC_MESSAGES/eog.mo
 share/locale/sv/LC_MESSAGES/eog.mo
 share/locale/ta/LC_MESSAGES/eog.mo
 share/locale/te/LC_MESSAGES/eog.mo

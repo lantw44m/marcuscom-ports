@@ -114,6 +114,7 @@ share/locale/ky/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/li/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/mai/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/mg/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/mi/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -141,7 +142,7 @@ share/locale/sk/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/sr/LC_MESSAGES/gnome-desktop-2.0.mo
-share/locale/sr@Latn/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/te/LC_MESSAGES/gnome-desktop-2.0.mo
