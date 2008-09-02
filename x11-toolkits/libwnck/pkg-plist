@@ -84,7 +84,7 @@ share/locale/sk/LC_MESSAGES/libwnck.mo
 share/locale/sl/LC_MESSAGES/libwnck.mo
 share/locale/sq/LC_MESSAGES/libwnck.mo
 share/locale/sr/LC_MESSAGES/libwnck.mo
-share/locale/sr@Latn/LC_MESSAGES/libwnck.mo
+share/locale/sr@latin/LC_MESSAGES/libwnck.mo
 share/locale/sv/LC_MESSAGES/libwnck.mo
 share/locale/ta/LC_MESSAGES/libwnck.mo
 share/locale/te/LC_MESSAGES/libwnck.mo
