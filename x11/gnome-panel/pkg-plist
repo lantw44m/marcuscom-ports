@@ -172,6 +172,9 @@ share/gnome/help/fish/ko/legal.xml
 share/gnome/help/fish/oc/figures/fish_applet.png
 share/gnome/help/fish/oc/fish.xml
 share/gnome/help/fish/oc/legal.xml
+share/gnome/help/fish/ru/fish.xml
+share/gnome/help/fish/ru/legal.xml
+share/gnome/help/fish/ru/figures/fish_applet.png
 share/gnome/help/fish/sv/figures/fish_applet.png
 share/gnome/help/fish/sv/fish.xml
 share/gnome/help/fish/sv/legal.xml
@@ -345,6 +348,7 @@ share/locale/ky/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/li/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/mai/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/mg/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/mi/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-panel-2.0.mo
@@ -372,7 +376,7 @@ share/locale/sk/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sr/LC_MESSAGES/gnome-panel-2.0.mo
-share/locale/sr@Latn/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sr@ije/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-panel-2.0.mo
@@ -421,6 +425,7 @@ share/omf/fish/fish-fr.omf
 share/omf/fish/fish-it.omf
 share/omf/fish/fish-ko.omf
 share/omf/fish/fish-oc.omf
+share/omf/fish/fish-ru.omf
 share/omf/fish/fish-sv.omf
 share/omf/fish/fish-uk.omf
 share/omf/gnome-panel/fish-applet-2-de.omf
@@ -526,6 +531,8 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/gnome/help/fish/uk
 @dirrm share/gnome/help/fish/sv/figures
 @dirrm share/gnome/help/fish/sv
+@dirrm share/gnome/help/fish/ru/figures
+@dirrm share/gnome/help/fish/ru
 @dirrm share/gnome/help/fish/oc/figures
 @dirrm share/gnome/help/fish/oc
 @dirrm share/gnome/help/fish/ko/figures
