@@ -13,7 +13,6 @@ share/gnome/autostart/at-spi-registryd-wrapper.desktop
 share/gnome/autostart/gnome-keyring-daemon-wrapper.desktop
 share/gnome/autostart/gnome-session-splash.desktop
 share/gnome/autostart/gnome-settings-daemon-helper.desktop
-share/gnome/autostart/gnome-wm.desktop
 share/icons/hicolor/16x16/apps/session-properties.png
 share/icons/hicolor/22x22/apps/session-properties.png
 share/icons/hicolor/24x24/apps/session-properties.png
@@ -90,7 +89,7 @@ share/locale/sk/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sr/LC_MESSAGES/gnome-session-2.0.mo
-share/locale/sr@Latn/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/te/LC_MESSAGES/gnome-session-2.0.mo
