@@ -61,7 +61,6 @@ lib/libevbackend.so
 lib/libevbackend.so.0
 share/applications/evince.desktop
 %%DOCSDIR%%/EvAttachment.html
-%%DOCSDIR%%/EvJobPrint.html
 %%DOCSDIR%%/EvNavigationAction.html
 %%DOCSDIR%%/EvNavigationActionWidget.html
 %%DOCSDIR%%/EvPageAction.html
@@ -69,6 +68,7 @@ share/applications/evince.desktop
 %%DOCSDIR%%/EvWindow.html
 %%DOCSDIR%%/evince-EvHistory.html
 %%DOCSDIR%%/evince-EvImage.html
+%%DOCSDIR%%/evince-EvJobFind.html
 %%DOCSDIR%%/evince-EvPasswordDialog.html
 %%DOCSDIR%%/evince-EvPasswordView.html
 %%DOCSDIR%%/evince-EvRenderContext.html
@@ -250,7 +250,7 @@ share/locale/sk/LC_MESSAGES/evince.mo
 share/locale/sl/LC_MESSAGES/evince.mo
 share/locale/sq/LC_MESSAGES/evince.mo
 share/locale/sr/LC_MESSAGES/evince.mo
-share/locale/sr@Latn/LC_MESSAGES/evince.mo
+share/locale/sr@latin/LC_MESSAGES/evince.mo
 share/locale/sv/LC_MESSAGES/evince.mo
 share/locale/ta/LC_MESSAGES/evince.mo
 share/locale/te/LC_MESSAGES/evince.mo
