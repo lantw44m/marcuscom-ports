@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-gobject/Makefile,v 1.26 2008/08/08 05:03:11 marcus Exp $
+#   $MCom: ports/devel/py-gobject/Makefile,v 1.27 2008/08/31 23:36:04 kwm Exp $
 #
 
 PORTNAME=	gobject
-PORTVERSION=	2.15.3
+PORTVERSION=	2.15.4
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/pygobject/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
