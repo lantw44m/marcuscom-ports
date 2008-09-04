@@ -2,8 +2,8 @@
 # Date created:		2004-10-06
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/cairo/Makefile,v 1.37 2008/06/30 20:16:18 mezz Exp $
-#   $MCom: ports/graphics/cairo/Makefile,v 1.80 2008/08/12 05:21:00 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/graphics/cairo/Makefile,v 1.81 2008/08/21 21:52:58 mezz Exp $
 #
 
 PORTNAME=	cairo
@@ -42,7 +42,8 @@ USE_XORG+=	xrender
 PLIST_SUB+=	X11=""
 .endif
 
-OPTIONS+=	GLITZ "Enable Glitz OpenGL Support" Off
+OPTIONS+=	GLITZ "Enable Glitz OpenGL Support" Off \
+		XCB "Enable XCB (X C-language Binding) Support" Off
 
 .include <bsd.port.pre.mk>
 
@@ -53,6 +54,19 @@ PLIST_SUB+=	GLITZ=""
 .else
 CONFIGURE_ARGS+=	--disable-glitz
 PLIST_SUB+=	GLITZ="@comment "
+.endif
+
+.ifdef(WITH_XCB)
+.ifdef(WITHOUT_X11)
+IGNORE=option WITH_XCB requires X11
+.endif
+BUILD_DEPENDS+= 	${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util
+RUN_DEPENDS+=		${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util
+CONFIGURE_ARGS+=	--enable-xcb
+PLIST_SUB+=		XCB=""
+.else
+CONFIGURE_ARGS+=	--disable-xcb
+PLIST_SUB+=		XCB="@comment "
 .endif
 
 post-patch:
