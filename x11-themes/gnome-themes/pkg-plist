@@ -1146,13 +1146,31 @@ share/icons/HighContrastLargePrint/48x48/actions/exit.png
 share/icons/HighContrastLargePrint/48x48/actions/gnome-logout.png
 share/icons/HighContrastLargePrint/48x48/actions/gnome-run.png
 share/icons/HighContrastLargePrint/48x48/actions/gnome-searchtool.png
+share/icons/HighContrastLargePrint/48x48/actions/go-home.png
+share/icons/HighContrastLargePrint/48x48/actions/gohome.png
 share/icons/HighContrastLargePrint/48x48/actions/gtk-execute.png
+share/icons/HighContrastLargePrint/48x48/actions/gtk-home.png
+share/icons/HighContrastLargePrint/48x48/actions/gtk-media-pause.png
+share/icons/HighContrastLargePrint/48x48/actions/gtk-refresh.png
 share/icons/HighContrastLargePrint/48x48/actions/kfind.png
+share/icons/HighContrastLargePrint/48x48/actions/kfm_home.png
+share/icons/HighContrastLargePrint/48x48/actions/media-playback-pause.png
+share/icons/HighContrastLargePrint/48x48/actions/player_pause.png
+share/icons/HighContrastLargePrint/48x48/actions/redhat-home.png
+share/icons/HighContrastLargePrint/48x48/actions/reload.png
+share/icons/HighContrastLargePrint/48x48/actions/reload3.png
+share/icons/HighContrastLargePrint/48x48/actions/reload_all_tabs.png
+share/icons/HighContrastLargePrint/48x48/actions/reload_page.png
 share/icons/HighContrastLargePrint/48x48/actions/search.png
+share/icons/HighContrastLargePrint/48x48/actions/stock_home.png
+share/icons/HighContrastLargePrint/48x48/actions/stock_media-pause.png
 share/icons/HighContrastLargePrint/48x48/actions/stock_new-tab.png
+share/icons/HighContrastLargePrint/48x48/actions/stock_refresh.png
 share/icons/HighContrastLargePrint/48x48/actions/system-log-out.png
 share/icons/HighContrastLargePrint/48x48/actions/system-run.png
 share/icons/HighContrastLargePrint/48x48/actions/system-search.png
+share/icons/HighContrastLargePrint/48x48/actions/system-shutdown.png
+share/icons/HighContrastLargePrint/48x48/actions/view-refresh.png
 share/icons/HighContrastLargePrint/48x48/apps/access.png
 share/icons/HighContrastLargePrint/48x48/apps/accessibility-directory.png
 share/icons/HighContrastLargePrint/48x48/apps/accessories-calculator.png
@@ -1166,6 +1184,7 @@ share/icons/HighContrastLargePrint/48x48/apps/background.png
 share/icons/HighContrastLargePrint/48x48/apps/calc.png
 share/icons/HighContrastLargePrint/48x48/apps/charpick.png
 share/icons/HighContrastLargePrint/48x48/apps/clock.png
+share/icons/HighContrastLargePrint/48x48/apps/config-language.png
 share/icons/HighContrastLargePrint/48x48/apps/display-capplet.png
 share/icons/HighContrastLargePrint/48x48/apps/eog.png
 share/icons/HighContrastLargePrint/48x48/apps/evince.png
@@ -1231,6 +1250,7 @@ share/icons/HighContrastLargePrint/48x48/apps/knotify.png
 share/icons/HighContrastLargePrint/48x48/apps/konsole.png
 share/icons/HighContrastLargePrint/48x48/apps/kwin.png
 share/icons/HighContrastLargePrint/48x48/apps/launcher-program.png
+share/icons/HighContrastLargePrint/48x48/apps/locale.png
 share/icons/HighContrastLargePrint/48x48/apps/mozilla-icon.png
 share/icons/HighContrastLargePrint/48x48/apps/multimedia-volume-control.png
 share/icons/HighContrastLargePrint/48x48/apps/multimedia.png
@@ -1242,12 +1262,14 @@ share/icons/HighContrastLargePrint/48x48/apps/perfmeter.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-accessibility.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-font.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-keyboard-shortcuts.png
+share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-locale.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-sound.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-theme.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-wallpaper.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-system-session.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-system-windows.png
 share/icons/HighContrastLargePrint/48x48/apps/redhat-filemanager.png
+share/icons/HighContrastLargePrint/48x48/apps/session-properties.png
 share/icons/HighContrastLargePrint/48x48/apps/smc.png
 share/icons/HighContrastLargePrint/48x48/apps/sound-juicer.png
 share/icons/HighContrastLargePrint/48x48/apps/star.png
@@ -1325,9 +1347,9 @@ share/icons/HighContrastLargePrint/48x48/categories/xfce-graphics.png
 share/icons/HighContrastLargePrint/48x48/categories/xfce-internet.png
 share/icons/HighContrastLargePrint/48x48/categories/xfce-multimedia.png
 share/icons/HighContrastLargePrint/48x48/categories/xfce-office.png
+share/icons/HighContrastLargePrint/48x48/categories/xfce-system-settings.png
 share/icons/HighContrastLargePrint/48x48/categories/xfce-utils.png
 share/icons/HighContrastLargePrint/48x48/categories/xfce4-settings.png
-share/icons/HighContrastLargePrint/48x48/categories/xfce-system-settings.png
 share/icons/HighContrastLargePrint/48x48/devices/3floppy_unmount.png
 share/icons/HighContrastLargePrint/48x48/devices/cdrom_unmount.png
 share/icons/HighContrastLargePrint/48x48/devices/cdwriter_unmount.png
@@ -1391,6 +1413,7 @@ share/icons/HighContrastLargePrint/48x48/devices/yast_HD.png
 share/icons/HighContrastLargePrint/48x48/devices/yast_idetude.png
 share/icons/HighContrastLargePrint/48x48/devices/yast_mouse.png
 share/icons/HighContrastLargePrint/48x48/devices/yast_printer.png
+share/icons/HighContrastLargePrint/48x48/emblems/emblem-default.png
 share/icons/HighContrastLargePrint/48x48/emblems/emblem-desktop.png
 share/icons/HighContrastLargePrint/48x48/emblems/emblem-important.png
 share/icons/HighContrastLargePrint/48x48/emblems/emblem-noread.png
@@ -1522,11 +1545,11 @@ share/icons/HighContrastLargePrint/48x48/places/user-desktop.png
 share/icons/HighContrastLargePrint/48x48/places/user-home.png
 share/icons/HighContrastLargePrint/48x48/places/user-trash.png
 share/icons/HighContrastLargePrint/48x48/places/xfce-trash_empty.png
-share/icons/HighContrastLargePrint/48x48/status/edittrash.png
 share/icons/HighContrastLargePrint/48x48/status/audio-volume-high.png
 share/icons/HighContrastLargePrint/48x48/status/audio-volume-low.png
 share/icons/HighContrastLargePrint/48x48/status/audio-volume-medium.png
 share/icons/HighContrastLargePrint/48x48/status/audio-volume-muted.png
+share/icons/HighContrastLargePrint/48x48/status/edittrash.png
 share/icons/HighContrastLargePrint/48x48/status/folder-drag-accept.icon
 share/icons/HighContrastLargePrint/48x48/status/folder-drag-accept.png
 share/icons/HighContrastLargePrint/48x48/status/gnome-fs-directory-accept.icon
@@ -1552,13 +1575,31 @@ share/icons/HighContrastLargePrintInverse/48x48/actions/exit.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/gnome-logout.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/gnome-run.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/gnome-searchtool.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/go-home.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/gohome.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/gtk-execute.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/gtk-home.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/gtk-media-pause.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/gtk-refresh.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/kfind.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/kfm_home.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/media-playback-pause.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/player_pause.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/redhat-home.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/reload.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/reload3.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/reload_all_tabs.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/reload_page.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/search.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/stock_home.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/stock_media-pause.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/stock_new-tab.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/stock_refresh.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/system-log-out.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/system-run.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/system-search.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/system-shutdown.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/view-refresh.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/access.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/accessibility-directory.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/accessories-calculator.png
@@ -1572,6 +1613,7 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/background.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/calc.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/charpick.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/clock.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/config-language.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/display-capplet.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/eog.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/evince.png
@@ -1637,6 +1679,7 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/knotify.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/konsole.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/kwin.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/launcher-program.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/locale.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/mozilla-icon.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/multimedia-volume-control.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/multimedia.png
@@ -1648,12 +1691,14 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/perfmeter.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-accessibility.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-font.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-keyboard-shortcuts.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-locale.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-sound.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-theme.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-wallpaper.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-system-session.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-system-windows.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/redhat-filemanager.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/session-properties.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/smc.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/sound-juicer.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/star.png
@@ -1797,6 +1842,7 @@ share/icons/HighContrastLargePrintInverse/48x48/devices/yast_HD.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/yast_idetude.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/yast_mouse.png
 share/icons/HighContrastLargePrintInverse/48x48/devices/yast_printer.png
+share/icons/HighContrastLargePrintInverse/48x48/emblems/emblem-default.png
 share/icons/HighContrastLargePrintInverse/48x48/emblems/emblem-desktop.png
 share/icons/HighContrastLargePrintInverse/48x48/emblems/emblem-important.png
 share/icons/HighContrastLargePrintInverse/48x48/emblems/emblem-noread.png
@@ -1928,11 +1974,11 @@ share/icons/HighContrastLargePrintInverse/48x48/places/user-desktop.png
 share/icons/HighContrastLargePrintInverse/48x48/places/user-home.png
 share/icons/HighContrastLargePrintInverse/48x48/places/user-trash.png
 share/icons/HighContrastLargePrintInverse/48x48/places/xfce-trash_empty.png
-share/icons/HighContrastLargePrintInverse/48x48/status/edittrash.png
 share/icons/HighContrastLargePrintInverse/48x48/status/audio-volume-high.png
 share/icons/HighContrastLargePrintInverse/48x48/status/audio-volume-low.png
 share/icons/HighContrastLargePrintInverse/48x48/status/audio-volume-medium.png
 share/icons/HighContrastLargePrintInverse/48x48/status/audio-volume-muted.png
+share/icons/HighContrastLargePrintInverse/48x48/status/edittrash.png
 share/icons/HighContrastLargePrintInverse/48x48/status/folder-drag-accept.icon
 share/icons/HighContrastLargePrintInverse/48x48/status/folder-drag-accept.png
 share/icons/HighContrastLargePrintInverse/48x48/status/gnome-fs-directory-accept.icon
@@ -2159,7 +2205,7 @@ share/locale/sk/LC_MESSAGES/gnome-themes.mo
 share/locale/sl/LC_MESSAGES/gnome-themes.mo
 share/locale/sq/LC_MESSAGES/gnome-themes.mo
 share/locale/sr/LC_MESSAGES/gnome-themes.mo
-share/locale/sr@Latn/LC_MESSAGES/gnome-themes.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-themes.mo
 share/locale/sv/LC_MESSAGES/gnome-themes.mo
 share/locale/ta/LC_MESSAGES/gnome-themes.mo
 share/locale/th/LC_MESSAGES/gnome-themes.mo
@@ -2712,6 +2758,8 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
