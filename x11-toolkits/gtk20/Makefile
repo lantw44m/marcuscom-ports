@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.137 2008/08/19 02:08:49 marcus Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.138 2008/08/21 20:40:31 mezz Exp $
 #
 
 PORTNAME=	gtk
@@ -42,7 +42,8 @@ USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack atk pango ltverhack
 USE_GETTEXT=	yes
-USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage
+USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamagee \
+		xcomposite
 CONFIGURE_ARGS=	--enable-static --with-xinput=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include" \
