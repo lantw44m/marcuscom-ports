@@ -21,8 +21,6 @@
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/preferences.pyc
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/preferences.pyo
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/quotes.py
-%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/quotes.pyc
-%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/quotes.pyo
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/widgets.py
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/widgets.pyc
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/widgets.pyo
@@ -1118,9 +1116,11 @@ share/gnome/help/trashapplet/uk/trashapplet.xml
 %%CPUFREQ%%share/icons/hicolor/16x16/apps/gnome-cpu-frequency-applet.png
 share/icons/hicolor/16x16/apps/gnome-eyes-applet.png
 share/icons/hicolor/16x16/apps/gnome-sticky-notes-applet.png
+share/icons/hicolor/16x16/apps/invest-applet.png
 %%CPUFREQ%%share/icons/hicolor/22x22/apps/gnome-cpu-frequency-applet.png
 share/icons/hicolor/22x22/apps/gnome-eyes-applet.png
 share/icons/hicolor/22x22/apps/gnome-sticky-notes-applet.png
+share/icons/hicolor/22x22/apps/invest-applet.png
 %%CPUFREQ%%share/icons/hicolor/24x24/apps/gnome-cpu-frequency-applet.png
 share/icons/hicolor/24x24/apps/gnome-eyes-applet.png
 share/icons/hicolor/24x24/apps/gnome-sticky-notes-applet.png
@@ -1129,9 +1129,11 @@ share/icons/hicolor/32x32/apps/gnome-eyes-applet.png
 share/icons/hicolor/32x32/apps/gnome-sticky-notes-applet.png
 share/icons/hicolor/48x48/apps/ax-applet.png
 %%COMMANDER%%share/icons/hicolor/48x48/apps/gnome-mini-commander.png
+share/icons/hicolor/48x48/apps/invest-applet.png
 %%CPUFREQ%%share/icons/hicolor/scalable/apps/gnome-cpu-frequency-applet.svg
 share/icons/hicolor/scalable/apps/gnome-eyes-applet.svg
 share/icons/hicolor/scalable/apps/gnome-sticky-notes-applet.svg
+share/icons/hicolor/scalable/apps/invest-applet.svg
 share/locale/am/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/as/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1193,6 +1195,7 @@ share/locale/ku/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ky/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/mai/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/mg/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ml/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1218,7 +1221,7 @@ share/locale/sk/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/sr/LC_MESSAGES/gnome-applets-2.0.mo
-share/locale/sr@Latn/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/te/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1449,7 +1452,6 @@ share/pixmaps/accessx-status-applet/sticky-super-none.png
 %%CPUFREQ%%share/pixmaps/cpufreq-applet/cpufreq-50.png
 %%CPUFREQ%%share/pixmaps/cpufreq-applet/cpufreq-75.png
 %%CPUFREQ%%share/pixmaps/cpufreq-applet/cpufreq-na.png
-%%PYTHON%%share/pixmaps/invest-48_neutral.png
 share/pixmaps/stickynotes/close.png
 share/pixmaps/stickynotes/locked.png
 share/pixmaps/stickynotes/resize_se.png
@@ -1929,6 +1931,8 @@ share/xmodmap/xmodmap.yu
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
@@ -1941,6 +1945,8 @@ share/xmodmap/xmodmap.yu
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
 @dirrmtry share/locale/ku/LC_MESSAGES
