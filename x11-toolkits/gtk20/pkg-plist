@@ -545,6 +545,8 @@ share/locale/lt/LC_MESSAGES/gtk20-properties.mo
 share/locale/lt/LC_MESSAGES/gtk20.mo
 share/locale/lv/LC_MESSAGES/gtk20-properties.mo
 share/locale/lv/LC_MESSAGES/gtk20.mo
+share/locale/mai/LC_MESSAGES/gtk20-properties.mo
+share/locale/mai/LC_MESSAGES/gtk20.mo
 share/locale/mi/LC_MESSAGES/gtk20-properties.mo
 share/locale/mi/LC_MESSAGES/gtk20.mo
 share/locale/mk/LC_MESSAGES/gtk20-properties.mo
@@ -597,8 +599,8 @@ share/locale/sq/LC_MESSAGES/gtk20-properties.mo
 share/locale/sq/LC_MESSAGES/gtk20.mo
 share/locale/sr/LC_MESSAGES/gtk20-properties.mo
 share/locale/sr/LC_MESSAGES/gtk20.mo
-share/locale/sr@Latn/LC_MESSAGES/gtk20-properties.mo
-share/locale/sr@Latn/LC_MESSAGES/gtk20.mo
+share/locale/sr@latin/LC_MESSAGES/gtk20-properties.mo
+share/locale/sr@latin/LC_MESSAGES/gtk20.mo
 share/locale/sr@ije/LC_MESSAGES/gtk20-properties.mo
 share/locale/sr@ije/LC_MESSAGES/gtk20.mo
 share/locale/sv/LC_MESSAGES/gtk20-properties.mo
