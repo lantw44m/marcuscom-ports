@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.81 2008/08/21 21:52:58 mezz Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.82 2008/09/04 21:39:53 mezz Exp $
 #
 
 PORTNAME=	cairo
@@ -57,9 +57,6 @@ PLIST_SUB+=	GLITZ="@comment "
 .endif
 
 .ifdef(WITH_XCB)
-.ifdef(WITHOUT_X11)
-IGNORE=option WITH_XCB requires X11
-.endif
 BUILD_DEPENDS+= 	${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util
 RUN_DEPENDS+=		${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util
 CONFIGURE_ARGS+=	--enable-xcb
