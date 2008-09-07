@@ -107,6 +107,8 @@ share/themes/ThinIce/gtk-2.0/gtkrc
 @dirrm share/gtk-engines
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES

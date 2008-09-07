@@ -248,6 +248,8 @@ share/omf/file-roller/file-roller-uk.omf
 @dirrmtry share/locale/ur
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/sr@ije/LC_MESSAGES
 @dirrmtry share/locale/sr@ije
 @dirrmtry share/locale/si/LC_MESSAGES
