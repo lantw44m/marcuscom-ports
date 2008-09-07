@@ -106,6 +106,8 @@ share/pixmaps/backgrounds/gnome/nature/YellowFlower.jpg
 @dirrmtry share/locale/uz@cyrillic
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
