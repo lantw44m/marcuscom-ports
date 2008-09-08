@@ -87,6 +87,7 @@ include/evolution-data-server-%%VERSION%%/camel/camel-sasl-popb4smtp.h
 include/evolution-data-server-%%VERSION%%/camel/camel-sasl.h
 include/evolution-data-server-%%VERSION%%/camel/camel-search-private.h
 include/evolution-data-server-%%VERSION%%/camel/camel-search-sql.h
+include/evolution-data-server-%%VERSION%%/camel/camel-search-sql-sexp.h
 include/evolution-data-server-%%VERSION%%/camel/camel-seekable-stream.h
 include/evolution-data-server-%%VERSION%%/camel/camel-seekable-substream.h
 include/evolution-data-server-%%VERSION%%/camel/camel-service.h
@@ -202,6 +203,7 @@ include/evolution-data-server-%%VERSION%%/libedata-book/e-data-book.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/Evolution-DataServer-Calendar.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-cache.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-factory.h
+include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-loader-factory.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-sexp.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-sync.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-util.h

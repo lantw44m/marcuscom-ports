@@ -70,7 +70,7 @@ share/gdict-1.0/sources/thai.desktop
 share/gnome-2.0/ui/GNOME_DictionaryApplet.xml
 share/gnome-dictionary/gnome-dictionary-preferences.glade
 share/gnome-dictionary/gnome-dictionary-ui.xml
-share/gnome-screenshot/glade/gnome-screenshot.glade
+share/gnome-screenshot/gnome-screenshot.ui
 share/gnome-system-log/gnome-system-log-actions.db
 share/gnome-system-log/gnome-system-log-descript.db
 share/gnome-system-log/gnome-system-log-regexp.db
@@ -442,6 +442,7 @@ share/locale/ko/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-utils-2.0.mo
+share/locale/mai/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/mg/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/ml/LC_MESSAGES/gnome-utils-2.0.mo
@@ -592,7 +593,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/baobab/C
 @dirrm share/gnome/help/baobab
 @dirrm share/gnome-system-log
-@dirrm share/gnome-screenshot/glade
 @dirrm share/gnome-screenshot
 @dirrm share/gnome-dictionary
 @dirrm share/gdict-1.0/sources
@@ -620,6 +620,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES

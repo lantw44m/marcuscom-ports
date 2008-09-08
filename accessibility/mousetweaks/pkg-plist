@@ -81,6 +81,7 @@ share/gnome/help/mousetweaks/sv/figures/mouse-a11y-tab.png
 share/gnome/help/mousetweaks/sv/mousetweaks.xml
 share/locale/ar/LC_MESSAGES/mousetweaks.mo
 share/locale/bg/LC_MESSAGES/mousetweaks.mo
+share/locale/bn_IN/LC_MESSAGES/mousetweaks.mo
 share/locale/ca/LC_MESSAGES/mousetweaks.mo
 share/locale/cs/LC_MESSAGES/mousetweaks.mo
 share/locale/da/LC_MESSAGES/mousetweaks.mo
@@ -157,3 +158,5 @@ share/omf/mousetweaks/mousetweaks-sv.omf
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
