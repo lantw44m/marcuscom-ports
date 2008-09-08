@@ -103,6 +103,7 @@ share/mime/application/x-vnc.xml
 share/mime/packages/vinagre-mime.xml
 share/omf/vinagre/vinagre-C.omf
 share/omf/vinagre/vinagre-ca.omf
+share/omf/vinagre/vinagre-de.omf
 share/omf/vinagre/vinagre-es.omf
 share/omf/vinagre/vinagre-fr.omf
 share/omf/vinagre/vinagre-it.omf

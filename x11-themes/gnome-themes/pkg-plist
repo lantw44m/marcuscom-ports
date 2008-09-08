@@ -1262,6 +1262,7 @@ share/icons/HighContrastLargePrint/48x48/apps/perfmeter.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-accessibility.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-font.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-keyboard-shortcuts.png
+share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-keyboard.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-locale.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-sound.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-theme.png
@@ -1690,6 +1691,7 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/panel-force-quit.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/perfmeter.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-accessibility.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-font.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-keyboard.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-keyboard-shortcuts.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-locale.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-sound.png
