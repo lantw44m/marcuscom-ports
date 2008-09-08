@@ -1,3 +1,4 @@
+include/libgweather/gweather-enum-types.h
 include/libgweather/gweather-gconf.h
 include/libgweather/gweather-location.h
 include/libgweather/gweather-prefs.h
