@@ -706,6 +706,8 @@ share/pygtk/2.0/defs/pango.defs
 share/pygtk/2.0/defs/pangocairo.defs
 share/pygtk/2.0/defs/pangocairo.override
 @dirrm share/pygtk/2.0/defs
+@dirrm share/pygtk/2.0
+@dirrm share/pygtk
 %%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/simple
 %%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/pygtk-demo/demos/images
 %%PORTDOCS%%@dirrm %%EXAMPLESDIR%%/pygtk-demo/demos
@@ -724,5 +726,7 @@ share/pygtk/2.0/defs/pangocairo.override
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0
 @dirrm lib/pygtk/2.0/demos/images
 @dirrm lib/pygtk/2.0/demos
+@dirrm lib/pygtk/2.0
+@dirrm lib/pygtk
 @dirrm include/pygtk-2.0/pygtk
 @dirrm include/pygtk-2.0
