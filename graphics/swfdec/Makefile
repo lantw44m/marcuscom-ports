@@ -4,7 +4,7 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#
+#   $MCom$
 
 PORTNAME=	swfdec
 PORTVERSION=	0.8.0
