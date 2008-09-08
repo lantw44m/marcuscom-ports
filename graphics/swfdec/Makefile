@@ -7,10 +7,9 @@
 #
 
 PORTNAME=	swfdec
-PORTVERSION=	0.7.4
-PORTREVISION=	1
+PORTVERSION=	0.8.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://swfdec.freedesktop.org/download/swfdec/0.7/
+MASTER_SITES=	http://swfdec.freedesktop.org/download/swfdec/0.8/
 
 MAINTAINER=	alexbl@FreeBSD.org
 COMMENT=	Flash Rendering Library
