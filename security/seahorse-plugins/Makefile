@@ -3,11 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.66 2008/08/05 05:13:50 marcus Exp $
+#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.1 2008/09/07 00:46:56 marcus Exp $
 #
 
 PORTNAME=	seahorse-plugins
-PORTVERSION=	2.23.91
+PORTVERSION=	2.23.92
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=--disable-nautilus
 .if !defined(WITHOUT_EPIPHANY)
 BUILD_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
 RUN_DEPENDS+=	epiphany:${PORTSDIR}/www/epiphany
-PLIST_SUB+=	EPHY="" EPHY_VERSION="2.23"
+PLIST_SUB+=	EPIPHANY="" EPHY_VERSION="2.23"
 .else
 CONFIGURE_ARGS+=--disable-epiphany
 PLIST_SUB+=	EPHY="@comment "
