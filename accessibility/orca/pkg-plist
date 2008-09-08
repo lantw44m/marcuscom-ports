@@ -292,6 +292,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/where_am_i.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/where_am_i.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/soffice/where_am_i.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/yelp.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/yelp.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/yelp.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/self_voicing.pyo
@@ -405,6 +408,7 @@ share/locale/kn/LC_MESSAGES/orca.mo
 share/locale/ko/LC_MESSAGES/orca.mo
 share/locale/lt/LC_MESSAGES/orca.mo
 share/locale/lv/LC_MESSAGES/orca.mo
+share/locale/mai/LC_MESSAGES/orca.mo
 share/locale/mk/LC_MESSAGES/orca.mo
 share/locale/ml/LC_MESSAGES/orca.mo
 share/locale/mr/LC_MESSAGES/orca.mo
@@ -455,6 +459,8 @@ share/locale/zh_TW/LC_MESSAGES/orca.mo
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
