@@ -100,6 +100,7 @@ share/idl/at-spi-1.0/Accessibility_StreamableContent.idl
 share/idl/at-spi-1.0/Accessibility_Table.idl
 share/idl/at-spi-1.0/Accessibility_Text.idl
 share/idl/at-spi-1.0/Accessibility_Value.idl
+share/locale/ang/LC_MESSAGES/at-spi.mo
 share/locale/ar/LC_MESSAGES/at-spi.mo
 share/locale/az/LC_MESSAGES/at-spi.mo
 share/locale/be/LC_MESSAGES/at-spi.mo
@@ -139,11 +140,13 @@ share/locale/ka/LC_MESSAGES/at-spi.mo
 share/locale/ko/LC_MESSAGES/at-spi.mo
 share/locale/ku/LC_MESSAGES/at-spi.mo
 share/locale/lt/LC_MESSAGES/at-spi.mo
+share/locale/mk/LC_MESSAGES/at-spi.mo
 share/locale/ml/LC_MESSAGES/at-spi.mo
 share/locale/mn/LC_MESSAGES/at-spi.mo
 share/locale/mr/LC_MESSAGES/at-spi.mo
 share/locale/ms/LC_MESSAGES/at-spi.mo
 share/locale/nb/LC_MESSAGES/at-spi.mo
+share/locale/nds_DE/LC_MESSAGES/at-spi.mo
 share/locale/ne/LC_MESSAGES/at-spi.mo
 share/locale/nl/LC_MESSAGES/at-spi.mo
 share/locale/nn/LC_MESSAGES/at-spi.mo
@@ -164,7 +167,9 @@ share/locale/sr/LC_MESSAGES/at-spi.mo
 share/locale/sr@ije/LC_MESSAGES/at-spi.mo
 share/locale/sr@latin/LC_MESSAGES/at-spi.mo
 share/locale/sv/LC_MESSAGES/at-spi.mo
+share/locale/ta/LC_MESSAGES/at-spi.mo
 share/locale/th/LC_MESSAGES/at-spi.mo
+share/locale/tr/LC_MESSAGES/at-spi.mo
 share/locale/ug/LC_MESSAGES/at-spi.mo
 share/locale/uk/LC_MESSAGES/at-spi.mo
 share/locale/vi/LC_MESSAGES/at-spi.mo
@@ -200,9 +205,13 @@ share/locale/zh_TW/LC_MESSAGES/at-spi.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/nds_DE/LC_MESSAGES
+@dirrmtry share/locale/nds_DE
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ang/LC_MESSAGES
+@dirrmtry share/locale/ang
