@@ -344,6 +344,7 @@ share/locale/ga/LC_MESSAGES/empathy.mo
 share/locale/gl/LC_MESSAGES/empathy.mo
 share/locale/gu/LC_MESSAGES/empathy.mo
 share/locale/he/LC_MESSAGES/empathy.mo
+share/locale/hi/LC_MESSAGES/empathy.mo
 share/locale/hr/LC_MESSAGES/empathy.mo
 share/locale/hu/LC_MESSAGES/empathy.mo
 share/locale/it/LC_MESSAGES/empathy.mo
@@ -368,6 +369,7 @@ share/locale/sq/LC_MESSAGES/empathy.mo
 share/locale/sr/LC_MESSAGES/empathy.mo
 share/locale/sr@latin/LC_MESSAGES/empathy.mo
 share/locale/sv/LC_MESSAGES/empathy.mo
+share/locale/th/LC_MESSAGES/empathy.mo
 share/locale/tr/LC_MESSAGES/empathy.mo
 share/locale/uk/LC_MESSAGES/empathy.mo
 share/locale/vi/LC_MESSAGES/empathy.mo
