@@ -2,18 +2,20 @@
 # Date created:				16 December 2007
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/gtk-vnc/Makefile,v 1.9 2008/06/06 13:50:03 edwin Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtk-vnc
 PORTVERSION=	0.3.7
+PORTREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	SF
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC viewer widget for GTK+
 
-LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls
+LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
+		gtkglext-x11-1.0.0:${PORTSDIR}/x11-toolkits/gtkglext
 
 USE_GNOME=	pygtk2 gnomehack
 USE_GMAKE=	yes
