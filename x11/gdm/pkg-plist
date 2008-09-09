@@ -33,10 +33,21 @@ sbin/gdm-stop
 %%DATADIR%%/autostart/LoginWindow/gnome-power-manager.desktop
 %%DATADIR%%/autostart/LoginWindow/gnome-settings-daemon.desktop
 %%DATADIR%%/autostart/LoginWindow/gok.desktop
+%%DATADIR%%/autostart/LoginWindow/metacity.desktop
 %%DATADIR%%/autostart/LoginWindow/orca-screen-reader.desktop
-%%DATADIR%%/gdm-greeter-login-window.glade
 %%DATADIR%%/gdb-cmd
+%%DATADIR%%/gdm-greeter-login-window.glade
 share/gnome-2.0/ui/GNOME_FastUserSwitchApplet.xml
+share/gnome/help/gdm/C/gdm.xml
+share/gnome/help/gdm/C/legal.xml
+share/gnome/help/gdm/de/gdm.xml
+share/gnome/help/gdm/en_GB/gdm.xml
+share/gnome/help/gdm/es/gdm.xml
+share/gnome/help/gdm/fr/gdm.xml
+share/gnome/help/gdm/ko/gdm.xml
+share/gnome/help/gdm/oc/gdm.xml
+share/gnome/help/gdm/sv/gdm.xml
+share/gnome/help/gdm/uk/gdm.xml
 share/icons/hicolor/16x16/apps/gdm-xnest.png
 share/icons/hicolor/32x32/apps/gdm-setup.png
 share/icons/hicolor/32x32/apps/gdm-xnest.png
@@ -159,6 +170,16 @@ share/pixmaps/nohost.png
 @exec mkdir -p %D/share/xsessions
 @dirrmtry share/xsessions
 @dirrm share/pixmaps/faces
+@dirrm share/gnome/help/gdm/uk
+@dirrm share/gnome/help/gdm/sv
+@dirrm share/gnome/help/gdm/oc
+@dirrm share/gnome/help/gdm/ko
+@dirrm share/gnome/help/gdm/fr
+@dirrm share/gnome/help/gdm/es
+@dirrm share/gnome/help/gdm/en_GB
+@dirrm share/gnome/help/gdm/de
+@dirrm share/gnome/help/gdm/C
+@dirrm share/gnome/help/gdm
 @dirrm %%DATADIR%%/autostart/LoginWindow
 @dirrm %%DATADIR%%/autostart
 @dirrm %%DATADIR%%
@@ -183,12 +204,12 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
-@dirrmtry share/locale/si/LC_MESSAGES
-@dirrmtry share/locale/si
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/ps/LC_MESSAGES
