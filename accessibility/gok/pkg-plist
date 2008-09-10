@@ -1005,6 +1005,7 @@ share/pixmaps/gok.png
 @dirrm share/gnome/help/gok/C
 @dirrm share/gnome/help/gok
 @dirrm %%DOCSDIR%%
+@dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
@@ -1025,6 +1026,7 @@ share/pixmaps/gok.png
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrmtry share/locale/ang/LC_MESSAGES
 @dirrmtry share/locale/ang
-@dirrmtry share/applications

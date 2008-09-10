@@ -470,12 +470,6 @@ share/pixmaps/goffice/%%VERSION%%/stock.xpm
 share/pixmaps/goffice/%%VERSION%%/surface.xpm
 @dirrm share/pixmaps/goffice/%%VERSION%%
 @dirrm share/pixmaps/goffice
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
 @dirrm %%DATADIR%%/%%VERSION%%/patterns
 @dirrm %%DATADIR%%/%%VERSION%%/glade
 @dirrm %%DATADIR%%/%%VERSION%%
@@ -506,3 +500,9 @@ share/pixmaps/goffice/%%VERSION%%/surface.xpm
 @dirrm include/libgoffice-0.6/goffice/app
 @dirrm include/libgoffice-0.6/goffice
 @dirrm include/libgoffice-0.6
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr

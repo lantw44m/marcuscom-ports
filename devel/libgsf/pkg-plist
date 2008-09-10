@@ -97,10 +97,10 @@ share/locale/oc/LC_MESSAGES/libgsf.mo
 share/locale/sv/LC_MESSAGES/libgsf.mo
 share/locale/zh_HK/LC_MESSAGES/libgsf.mo
 share/locale/zh_TW/LC_MESSAGES/libgsf.mo
+@dirrm share/doc/gsf
+@dirrm include/libgsf-1/gsf
+@dirrm include/libgsf-1
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
-@dirrm share/doc/gsf
-@dirrm include/libgsf-1/gsf
-@dirrm include/libgsf-1

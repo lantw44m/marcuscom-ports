@@ -80,6 +80,7 @@ share/locale/zh_TW/LC_MESSAGES/vino.mo
 %%DATADIR%%/vino-preferences.glade
 %%DATADIR%%/vino-prompt.glade
 @dirrm %%DATADIR%%
+@dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -108,4 +109,3 @@ share/locale/zh_TW/LC_MESSAGES/vino.mo
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry share/applications

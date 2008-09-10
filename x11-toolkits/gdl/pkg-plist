@@ -109,8 +109,6 @@ share/locale/zh_TW/LC_MESSAGES/gdl-1.mo
 @dirrm %%DOCSDIR%%
 @dirrm include/libgdl-1.0/gdl
 @dirrm include/libgdl-1.0
-@dirrmtry share/locale/zh_TW/LC_MESSAGES
-@dirrmtry share/locale/zh_TW/
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/si/LC_MESSAGES

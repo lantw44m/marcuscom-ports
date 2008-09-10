@@ -217,6 +217,7 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@dirrm share/doc/libnautilus-extension
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -251,10 +252,10 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/km/LC_MESSAGES
 @dirrmtry share/locale/km
-@dirrmtry share/locale/hy/LC_MESSAGES
-@dirrmtry share/locale/hy
 @dirrmtry share/locale/io/LC_MESSAGES
 @dirrmtry share/locale/io
+@dirrmtry share/locale/hy/LC_MESSAGES
+@dirrmtry share/locale/hy
 @dirrmtry share/locale/fur/LC_MESSAGES
 @dirrmtry share/locale/fur
 @dirrmtry share/locale/dz/LC_MESSAGES
@@ -267,4 +268,3 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm share/doc/libnautilus-extension

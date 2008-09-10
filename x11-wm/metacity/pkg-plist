@@ -220,6 +220,7 @@ share/themes/Simple/metacity-1/minimize.png
 @dirrm %%DATADIR%%
 @dirrm include/metacity-1/metacity-private
 @dirrm include/metacity-1
+@dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -248,4 +249,3 @@ share/themes/Simple/metacity-1/minimize.png
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry share/applications
