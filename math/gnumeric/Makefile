@@ -3,11 +3,12 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/math/gnumeric/Makefile,v 1.44 2008/09/09 00:14:54 kwm Exp $
 #
 
 PORTNAME=	gnumeric
 PORTVERSION=	1.9.2
+PORTREVISION=	1
 CATEGORIES=	math gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:R}
@@ -28,6 +29,7 @@ USE_GNOME=	gnomeprefix intlhack gnomehack gnomehier \
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
+INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-guile --with-bonobo
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
