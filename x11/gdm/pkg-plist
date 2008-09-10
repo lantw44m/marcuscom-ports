@@ -188,7 +188,7 @@ share/pixmaps/nohost.png
 @dirrm etc/gdm/PostSession
 @dirrm etc/gdm/PostLogin
 @dirrm etc/gdm/Init
-@unexec rmdir %D/etc/gdm/home 2> /dev/null || /usr/bin/true
+@dirrmtry etc/gdm/home
 @dirrmtry etc/gdm
 @dirrmtry etc/dm/Sessions
 @dirrmtry etc/dm

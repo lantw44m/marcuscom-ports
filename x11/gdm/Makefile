@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.133 2008/08/25 20:42:06 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.134 2008/09/09 06:18:59 mezz Exp $
 #
 
 PORTNAME=	gdm
@@ -25,7 +25,6 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
-INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_RC_SUBR=	gdm
 USE_GNOME_SUBR=	yes
