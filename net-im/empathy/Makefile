@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.12 2008/09/01 16:43:10 ahze Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.13 2008/09/09 16:23:50 marcus Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.23.92
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -25,6 +26,7 @@ USE_LDCONFIG=	yes
 USE_GNOME=	evolutiondataserver gnomehack gnomeprefix pygtk2 ltverhack \
 		gnomepanel
 USE_AUTOTOOLS=	libtool:15
+INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PYTHON=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
