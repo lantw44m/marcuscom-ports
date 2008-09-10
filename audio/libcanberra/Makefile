@@ -2,7 +2,7 @@
 # Date created:				05 August 2008
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/libcanberra/Makefile,v 1.6 2008/08/10 19:24:30 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libcanberra

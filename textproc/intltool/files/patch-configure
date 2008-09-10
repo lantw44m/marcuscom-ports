@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/textproc/intltool/files/patch-configure,v 1.5 2008/03/24 03:50:21 marcus Exp $
+$FreeBSD$
 
 --- configure.orig	Mon May 20 01:34:39 2002
 +++ configure	Fri May 24 10:52:12 2002

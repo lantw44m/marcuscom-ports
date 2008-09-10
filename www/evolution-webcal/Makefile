@@ -2,8 +2,8 @@
 # Date created:				Mon Apr 26 18:08:00 CEST 2004
 # Whom:					Koop Mast <kwm@rainbow-runner.nl>
 #
-# $FreeBSD: ports/www/evolution-webcal/Makefile,v 1.20 2008/06/06 14:06:52 edwin Exp $
-#   $MCom: ports/www/evolution-webcal/Makefile,v 1.54 2008/02/25 10:46:40 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/www/evolution-webcal/Makefile,v 1.56 2008/08/30 21:19:58 kwm Exp $
 #
 
 PORTNAME=	evolution-webcal
