@@ -21,6 +21,8 @@
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/preferences.pyc
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/preferences.pyo
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/quotes.py
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/quotes.pyc
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/quotes.pyo
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/widgets.py
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/widgets.pyc
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/widgets.pyo
