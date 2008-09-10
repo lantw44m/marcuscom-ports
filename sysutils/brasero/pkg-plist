@@ -246,7 +246,6 @@ share/omf/brasero/brasero-fr.omf
 share/omf/brasero/brasero-it.omf
 share/omf/brasero/brasero-sv.omf
 @dirrm share/omf/brasero
-@comment locales
 @dirrmtry share/locale/zh_TW/LC_MESSAGES
 @dirrmtry share/locale/zh_TW
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
