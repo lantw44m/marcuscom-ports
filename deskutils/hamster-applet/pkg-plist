@@ -56,6 +56,7 @@ lib/hamster-applet/hamster-applet
 %%PYTHON_SITELIBDIR%%/hamster/stuff.pyc
 %%PYTHON_SITELIBDIR%%/hamster/stuff.pyo
 libdata/bonobo/servers/Hamster_Applet.server
+share/gnome-control-center/keybindings/99-hamster-applet.xml
 %%DATADIR%%/Hamster_Applet.xml
 %%DATADIR%%/add_custom_fact.glade
 %%DATADIR%%/art/hamster-applet.png
