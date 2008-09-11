@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese/Makefile,v 1.21 2008/09/01 22:44:58 ahze Exp $
+#   $MCom: ports/multimedia/cheese/Makefile,v 1.22 2008/09/09 16:05:34 marcus Exp $
 #
 
 PORTNAME=	cheese
@@ -14,6 +14,8 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A Photobooth-inspired app for taking pictures and videos from webcam
+
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev.h:${PORTSDIR}/multimedia/v4l_compat
 
 USE_XORG=	xxf86vm
 USE_BZIP2=	yes
