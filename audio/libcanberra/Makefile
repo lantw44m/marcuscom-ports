@@ -45,6 +45,7 @@ PLIST_SUB+=	GSTREAMER="@comment "
 .endif
 
 post-patch:
-	@${FIND} ${WRKSRC} -type f | ${XARGS} ${TOUCH}
+	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
+	    	${WRKSRC}/configure
 
 .include <bsd.port.post.mk>

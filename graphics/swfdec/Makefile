@@ -4,7 +4,7 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/swfdec/Makefile,v 1.24 2008/09/08 23:48:03 kwm Exp $
 
 PORTNAME=	swfdec
 PORTVERSION=	0.8.0
@@ -40,5 +40,9 @@ CONFIGURE_ARGS+=	--with-audio=oss
 post-extract:
 	@${CP} ${FILESDIR}/swfdec_playback_oss.c \
 	    	${WRKSRC}/swfdec-gtk
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
+	    	${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
