@@ -28,6 +28,7 @@ include/libanjuta-1.0/libanjuta/anjuta-sync-command.h
 include/libanjuta-1.0/libanjuta/anjuta-ui.h
 include/libanjuta-1.0/libanjuta/anjuta-utils.h
 include/libanjuta-1.0/libanjuta/anjuta-vcs-status-tree-view.h
+include/libanjuta-1.0/libanjuta/anjuta-version.h
 include/libanjuta-1.0/libanjuta/interfaces/ianjuta-bookmark.h
 include/libanjuta-1.0/libanjuta/interfaces/ianjuta-buildable.h
 include/libanjuta-1.0/libanjuta/interfaces/ianjuta-builder.h
@@ -482,8 +483,6 @@ share/doc/libanjuta/AnjutaUI.html
 share/doc/libanjuta/action-block.html
 share/doc/libanjuta/anjuta-architecture.html
 share/doc/libanjuta/anjuta-architecture.png
-share/doc/libanjuta/ch03s02.html
-share/doc/libanjuta/ch03s03.html
 share/doc/libanjuta/content-block.html
 share/doc/libanjuta/header-block.html
 share/doc/libanjuta/home.png
@@ -579,17 +578,16 @@ share/doc/libanjuta/up.png
 share/doc/libanjuta/writing-plugins-build-setup.html
 share/doc/libanjuta/writing-plugins-simple.html
 share/doc/libanjuta/writing-plugins-sources.html
-share/doc/libanjuta/writing-plugins-vala.html
 share/doc/libanjuta/writing-plugins.html
 share/glade3/catalogs/anjuta-glade.xml
 share/gnome/help/anjuta-faqs/C/anjuta-faqs.xml
 share/gnome/help/anjuta-faqs/C/legal.xml
 share/gnome/help/anjuta-manual/C/anjuta-manual.xml
 share/gnome/help/anjuta-manual/C/authors.xml
+share/gnome/help/anjuta-manual/C/build.xml
 share/gnome/help/anjuta-manual/C/debugger.xml
 share/gnome/help/anjuta-manual/C/figures/add_edit_macro.png
 share/gnome/help/anjuta-manual/C/figures/anjuta-in-action.png
-share/gnome/help/anjuta-manual/C/figures/arguments.png
 share/gnome/help/anjuta-manual/C/figures/attach.png
 share/gnome/help/anjuta-manual/C/figures/brk_add.png
 share/gnome/help/anjuta-manual/C/figures/brk_dlg.png
@@ -639,7 +637,6 @@ share/gnome/help/anjuta-manual/C/tools.xml
 share/gnome/help/anjuta-manual/es/anjuta-manual.xml
 share/gnome/help/anjuta-manual/es/figures/add_edit_macro.png
 share/gnome/help/anjuta-manual/es/figures/anjuta-in-action.png
-share/gnome/help/anjuta-manual/es/figures/arguments.png
 share/gnome/help/anjuta-manual/es/figures/attach.png
 share/gnome/help/anjuta-manual/es/figures/brk_add.png
 share/gnome/help/anjuta-manual/es/figures/brk_dlg.png
@@ -680,7 +677,6 @@ share/gnome/help/anjuta-manual/es/figures/tool-editor.png
 share/gnome/help/anjuta-manual/oc/anjuta-manual.xml
 share/gnome/help/anjuta-manual/oc/figures/add_edit_macro.png
 share/gnome/help/anjuta-manual/oc/figures/anjuta-in-action.png
-share/gnome/help/anjuta-manual/oc/figures/arguments.png
 share/gnome/help/anjuta-manual/oc/figures/attach.png
 share/gnome/help/anjuta-manual/oc/figures/brk_add.png
 share/gnome/help/anjuta-manual/oc/figures/brk_dlg.png
@@ -721,7 +717,6 @@ share/gnome/help/anjuta-manual/oc/figures/tool-editor.png
 share/gnome/help/anjuta-manual/sv/anjuta-manual.xml
 share/gnome/help/anjuta-manual/sv/figures/add_edit_macro.png
 share/gnome/help/anjuta-manual/sv/figures/anjuta-in-action.png
-share/gnome/help/anjuta-manual/sv/figures/arguments.png
 share/gnome/help/anjuta-manual/sv/figures/attach.png
 share/gnome/help/anjuta-manual/sv/figures/brk_add.png
 share/gnome/help/anjuta-manual/sv/figures/brk_dlg.png
@@ -781,6 +776,7 @@ share/locale/fi/LC_MESSAGES/anjuta.mo
 share/locale/fr/LC_MESSAGES/anjuta.mo
 share/locale/ga/LC_MESSAGES/anjuta.mo
 share/locale/gl/LC_MESSAGES/anjuta.mo
+share/locale/gu/LC_MESSAGES/anjuta.mo
 share/locale/he/LC_MESSAGES/anjuta.mo
 share/locale/hi/LC_MESSAGES/anjuta.mo
 share/locale/hr/LC_MESSAGES/anjuta.mo
@@ -793,6 +789,7 @@ share/locale/ko/LC_MESSAGES/anjuta.mo
 share/locale/lt/LC_MESSAGES/anjuta.mo
 share/locale/mk/LC_MESSAGES/anjuta.mo
 share/locale/ml/LC_MESSAGES/anjuta.mo
+share/locale/mr/LC_MESSAGES/anjuta.mo
 share/locale/ms/LC_MESSAGES/anjuta.mo
 share/locale/nb/LC_MESSAGES/anjuta.mo
 share/locale/ne/LC_MESSAGES/anjuta.mo
@@ -809,7 +806,7 @@ share/locale/sk/LC_MESSAGES/anjuta.mo
 share/locale/sl/LC_MESSAGES/anjuta.mo
 share/locale/sq/LC_MESSAGES/anjuta.mo
 share/locale/sr/LC_MESSAGES/anjuta.mo
-share/locale/sr@Latn/LC_MESSAGES/anjuta.mo
+share/locale/sr@latin/LC_MESSAGES/anjuta.mo
 share/locale/sv/LC_MESSAGES/anjuta.mo
 share/locale/th/LC_MESSAGES/anjuta.mo
 share/locale/tr/LC_MESSAGES/anjuta.mo

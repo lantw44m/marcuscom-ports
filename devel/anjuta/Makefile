@@ -3,11 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.26 2008/08/05 13:58:52 kwm Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.27 2008/08/19 00:22:52 kwm Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.5.90
+PORTVERSION=	2.23.91
 PORTREVISION=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -74,7 +74,6 @@ PLIST_SUB+=	SVN="@comment "
 .endif
 
 .if defined(WITH_SCINTILLA)
-BROKEN=		Building this plugins is currently broken, please rerun 'make config' and disable SCINTILLA
 USE_GNOME+=	libgnomeprintui
 CONFIGURE_ARGS+=--enable-plugin-scintilla
 GCONF_SCHEMAS+=	anjuta-editor-scintilla.schemas
@@ -84,17 +83,15 @@ PLIST_SUB+=	SCINTILLA=""
 PLIST_SUB+=	SCINTILLA="@comment "
 .endif
 
-.if defined(WITH_SYMBOL)
-USE_GNOME+=	libgda4
-CONFIGURE_ARGS+=--enable-plugin-symbol-db
-GCONF_SCHEMAS+=	anjuta-symbol-db.schemas
-PLIST_SUB+=	SYMBOL=""
-.else
+#.if defined(WITH_SYMBOL)
+#USE_GNOME+=	libgda4
+#CONFIGURE_ARGS+=--enable-plugin-symbol-db
+#GCONF_SCHEMAS+=	anjuta-symbol-db.schemas
+#PLIST_SUB+=	SYMBOL=""
+#.else
 CONFIGURE_ARGS+=--disable-plugin-symbol-db
 PLIST_SUB+=	SYMBOL="@comment "
-.endif
-
-# vala?
+#.endif
 
 post-configure:
 	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash| ; \
