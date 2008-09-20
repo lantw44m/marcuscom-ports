@@ -3,10 +3,10 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/intltool/Makefile,v 1.8 2008/07/26 07:37:04 marcus Exp $
+#   $MCom: ports/textproc/intltool/Makefile,v 1.9 2008/08/21 21:53:00 mezz Exp $
 
 PORTNAME=	intltool
-PORTVERSION=	0.40.3
+PORTVERSION=	0.40.4
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome
