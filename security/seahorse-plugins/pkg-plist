@@ -214,7 +214,7 @@ share/locale/sk/LC_MESSAGES/seahorse-plugins.mo
 share/locale/sl/LC_MESSAGES/seahorse-plugins.mo
 share/locale/sq/LC_MESSAGES/seahorse-plugins.mo
 share/locale/sr/LC_MESSAGES/seahorse-plugins.mo
-share/locale/sr@Latn/LC_MESSAGES/seahorse-plugins.mo
+share/locale/sr@latin/LC_MESSAGES/seahorse-plugins.mo
 share/locale/sv/LC_MESSAGES/seahorse-plugins.mo
 share/locale/ta/LC_MESSAGES/seahorse-plugins.mo
 share/locale/te/LC_MESSAGES/seahorse-plugins.mo
@@ -245,47 +245,53 @@ share/omf/seahorse-plugins/seahorse-plugins-ru.omf
 share/omf/seahorse-plugins/seahorse-plugins-sv.omf
 share/omf/seahorse-plugins/seahorse-plugins-vi.omf
 share/pixmaps/seahorse-applet.svg
-share/pixmaps/seahorse/22x22/seahorse-applet-encrypted.png
-share/pixmaps/seahorse/22x22/seahorse-applet-key.png
-share/pixmaps/seahorse/22x22/seahorse-applet-signed.png
-share/pixmaps/seahorse/22x22/seahorse-applet-text.png
-share/pixmaps/seahorse/22x22/seahorse-applet-unknown.png
-share/pixmaps/seahorse/22x22/seahorse-key.png
-share/pixmaps/seahorse/22x22/seahorse-sign-bad.png
-share/pixmaps/seahorse/22x22/seahorse-sign-ok.png
-share/pixmaps/seahorse/22x22/seahorse-sign.png
-share/pixmaps/seahorse/48x48/seahorse-applet-encrypted.png
-share/pixmaps/seahorse/48x48/seahorse-applet-key.png
-share/pixmaps/seahorse/48x48/seahorse-applet-signed.png
-share/pixmaps/seahorse/48x48/seahorse-applet-text.png
-share/pixmaps/seahorse/48x48/seahorse-applet-unknown.png
-share/pixmaps/seahorse/48x48/seahorse-applet.png
-share/pixmaps/seahorse/48x48/seahorse-key.png
-share/pixmaps/seahorse/48x48/seahorse-sign-bad.png
-share/pixmaps/seahorse/48x48/seahorse-sign-ok.png
-share/pixmaps/seahorse/48x48/seahorse-sign-unknown.png
-share/pixmaps/seahorse/48x48/seahorse-sign.png
-share/pixmaps/seahorse/scalable/seahorse-applet-encrypted.svg
-share/pixmaps/seahorse/scalable/seahorse-applet-key.svg
-share/pixmaps/seahorse/scalable/seahorse-applet-signed.svg
-share/pixmaps/seahorse/scalable/seahorse-applet-text.svg
-share/pixmaps/seahorse/scalable/seahorse-applet-unknown.svg
-share/pixmaps/seahorse/scalable/seahorse-applet.svg
-share/pixmaps/seahorse/scalable/seahorse-key-personal.svg
-share/pixmaps/seahorse/scalable/seahorse-key-ssh.svg
-share/pixmaps/seahorse/scalable/seahorse-key.svg
-share/pixmaps/seahorse/scalable/seahorse-person.svg
-share/pixmaps/seahorse/scalable/seahorse-share-keys.svg
-share/pixmaps/seahorse/scalable/seahorse-sign-bad.svg
-share/pixmaps/seahorse/scalable/seahorse-sign-ok.svg
-share/pixmaps/seahorse/scalable/seahorse-sign-unknown.svg
-share/pixmaps/seahorse/scalable/seahorse-sign.svg
+share/pixmaps/seahorse-plugins/22x22/seahorse-applet-encrypted.png
+share/pixmaps/seahorse-plugins/22x22/seahorse-applet-key.png
+share/pixmaps/seahorse-plugins/22x22/seahorse-applet-signed.png
+share/pixmaps/seahorse-plugins/22x22/seahorse-applet-text.png
+share/pixmaps/seahorse-plugins/22x22/seahorse-applet-unknown.png
+share/pixmaps/seahorse-plugins/22x22/seahorse-key.png
+share/pixmaps/seahorse-plugins/22x22/seahorse-key-personal.png
+share/pixmaps/seahorse-plugins/22x22/seahorse-sign-bad.png
+share/pixmaps/seahorse-plugins/22x22/seahorse-sign-ok.png
+share/pixmaps/seahorse-plugins/22x22/seahorse-sign.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-applet-encrypted.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-applet-key.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-applet-signed.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-applet-text.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-applet-unknown.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-applet.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-key.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-key-personal.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-sign-bad.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-sign-ok.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-sign-unknown.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-sign.png
+share/pixmaps/seahorse-plugins/scalable/seahorse-applet-encrypted.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-applet-key.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-applet-signed.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-applet-text.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-applet-unknown.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-applet.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-key-personal.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-key-ssh.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-key.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-person.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-share-keys.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-sign-bad.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-sign-ok.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-sign-unknown.svg
+share/pixmaps/seahorse-plugins/scalable/seahorse-sign.svg
 %%DATADIR%%/glade/seahorse-agent-cache.glade
 %%DATADIR%%/glade/seahorse-multi-encrypt.glade
 %%DATADIR%%/glade/seahorse-notify.glade
 %%DATADIR%%/glade/seahorse-prefs.glade
 %%DATADIR%%/glade/seahorse-progress.glade
 share/seahorse/glade/seahorse-applet-preferences.glade
+@dirrmtry share/pixmaps/seahorse-plugins/scalable
+@dirrmtry share/pixmaps/seahorse-plugins/48x48
+@dirrmtry share/pixmaps/seahorse-plugins/22x22
+@dirrmtry share/pixmaps/seahorse-plugins
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%
 @dirrm share/omf/seahorse-plugins
