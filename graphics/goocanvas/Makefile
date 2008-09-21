@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/goocanvas/Makefile,v 1.5 2008/08/10 19:10:11 kwm Exp $
+#    $MCom: ports/graphics/goocanvas/Makefile,v 1.6 2008/09/13 19:33:05 kwm Exp $
 
 PORTNAME=	goocanvas
-PORTVERSION=	0.11
+PORTVERSION=	0.12
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
