@@ -51,6 +51,7 @@ share/dbus-1/services/org.gnome.keyring.service
 %%DOCSDIR%%/up.png
 share/doc/gp11/GP11Object.html
 share/doc/gp11/ch01.html
+share/doc/gp11/gp11-GP11Call.html
 share/doc/gp11/gp11-gp11-test.html
 share/doc/gp11/gp11-pkcs11.html
 share/doc/gp11/gp11.devhelp
