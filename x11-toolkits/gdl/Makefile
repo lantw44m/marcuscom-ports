@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/gdl/Makefile,v 1.17 2008/08/19 22:34:55 kwm Exp $
 #
 
 PORTNAME=	gdl
-PORTVERSION=	2.23.90
+PORTVERSION=	2.24.0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 
