@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/gnome-build/Makefile,v 1.7 2008/08/18 22:41:42 kwm Exp $
 #
 
 PORTNAME=	gnome-build
-PORTVERSION=	2.23.90
+PORTVERSION=	2.24.0
 PORTEPOCH=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNOME Build Framework (GBF)
 
 BUILD_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/Locale/gettext.pm:${PORTSDIR}/devel/p5-Locale-gettext
-LIB_DEPENDS=	gdl-gnome-1.0:${PORTSDIR}/x11-toolkits/gdl
+LIB_DEPENDS=	gdl-1.0:${PORTSDIR}/x11-toolkits/gdl
 RUN_DEPENDS=	${SITE_PERL}/${PERL_ARCH}/Locale/gettext.pm:${PORTSDIR}/devel/p5-Locale-gettext
 
 USE_BZIP2=	yes
