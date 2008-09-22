@@ -676,6 +676,8 @@ share/gnome/help/geyes/bg/figures/geyes_applet.png
 share/gnome/help/geyes/bg/geyes.xml
 share/gnome/help/geyes/ca/figures/geyes_applet.png
 share/gnome/help/geyes/ca/geyes.xml
+share/gnome/help/geyes/da/figures/geyes_applet.png
+share/gnome/help/geyes/da/geyes.xml
 share/gnome/help/geyes/de/figures/geyes_applet.png
 share/gnome/help/geyes/de/geyes.xml
 share/gnome/help/geyes/en_GB/figures/geyes_applet.png
@@ -916,6 +918,8 @@ share/gnome/help/mixer_applet2/C/legal.xml
 share/gnome/help/mixer_applet2/C/mixer_applet2.xml
 share/gnome/help/mixer_applet2/ca/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/ca/mixer_applet2.xml
+share/gnome/help/mixer_applet2/el/figures/volumecontrol_applet.png
+share/gnome/help/mixer_applet2/el/mixer_applet2.xml
 share/gnome/help/mixer_applet2/en_GB/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/en_GB/mixer_applet2.xml
 share/gnome/help/mixer_applet2/es/figures/volumecontrol_applet.png
@@ -1089,6 +1093,8 @@ share/gnome/help/trashapplet/da/figures/trash-applet.png
 share/gnome/help/trashapplet/da/trashapplet.xml
 share/gnome/help/trashapplet/de/figures/trash-applet.png
 share/gnome/help/trashapplet/de/trashapplet.xml
+share/gnome/help/trashapplet/el/figures/trash-applet.png
+share/gnome/help/trashapplet/el/trashapplet.xml
 share/gnome/help/trashapplet/en_GB/figures/trash-applet.png
 share/gnome/help/trashapplet/en_GB/trashapplet.xml
 share/gnome/help/trashapplet/es/figures/trash-applet.png
@@ -1315,6 +1321,7 @@ share/omf/drivemount/drivemount-zh_CN.omf
 share/omf/geyes/geyes-C.omf
 share/omf/geyes/geyes-bg.omf
 share/omf/geyes/geyes-ca.omf
+share/omf/geyes/geyes-da.omf
 share/omf/geyes/geyes-de.omf
 share/omf/geyes/geyes-en_GB.omf
 share/omf/geyes/geyes-es.omf
@@ -1356,6 +1363,7 @@ share/omf/invest-applet/invest-applet-fi.omf
 share/omf/invest-applet/invest-applet-sv.omf
 share/omf/mixer_applet2/mixer_applet2-C.omf
 share/omf/mixer_applet2/mixer_applet2-ca.omf
+share/omf/mixer_applet2/mixer_applet2-el.omf
 share/omf/mixer_applet2/mixer_applet2-en_GB.omf
 share/omf/mixer_applet2/mixer_applet2-es.omf
 share/omf/mixer_applet2/mixer_applet2-fi.omf
@@ -1400,6 +1408,7 @@ share/omf/trashapplet/trashapplet-C.omf
 share/omf/trashapplet/trashapplet-ca.omf
 share/omf/trashapplet/trashapplet-da.omf
 share/omf/trashapplet/trashapplet-de.omf
+share/omf/trashapplet/trashapplet-el.omf
 share/omf/trashapplet/trashapplet-en_GB.omf
 share/omf/trashapplet/trashapplet-es.omf
 share/omf/trashapplet/trashapplet-fi.omf
@@ -1588,6 +1597,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/trashapplet/es
 @dirrm share/gnome/help/trashapplet/en_GB/figures
 @dirrm share/gnome/help/trashapplet/en_GB
+@dirrm share/gnome/help/trashapplet/el/figures
+@dirrm share/gnome/help/trashapplet/el
 @dirrm share/gnome/help/trashapplet/de/figures
 @dirrm share/gnome/help/trashapplet/de
 @dirrm share/gnome/help/trashapplet/da/figures
@@ -1679,6 +1690,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/mixer_applet2/es
 @dirrm share/gnome/help/mixer_applet2/en_GB/figures
 @dirrm share/gnome/help/mixer_applet2/en_GB
+@dirrm share/gnome/help/mixer_applet2/el/figures
+@dirrm share/gnome/help/mixer_applet2/el
 @dirrm share/gnome/help/mixer_applet2/ca/figures
 @dirrm share/gnome/help/mixer_applet2/ca
 @dirrm share/gnome/help/mixer_applet2/C/figures
@@ -1750,6 +1763,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/geyes/en_GB
 @dirrm share/gnome/help/geyes/de/figures
 @dirrm share/gnome/help/geyes/de
+@dirrm share/gnome/help/geyes/da/figures
+@dirrm share/gnome/help/geyes/da
 @dirrm share/gnome/help/geyes/ca/figures
 @dirrm share/gnome/help/geyes/ca
 @dirrm share/gnome/help/geyes/bg/figures
