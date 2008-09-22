@@ -500,10 +500,12 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/addresstypes.xml
 %%DATADIR%%/%%VERSION%%/caltypes.xml
 %%DATADIR%%/%%VERSION%%/default/C/mail/local/Inbox
+%%DATADIR%%/%%VERSION%%/default/cs/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/de/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/es/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/fi/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/fr/mail/local/Inbox
+%%DATADIR%%/%%VERSION%%/default/hu/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/ja/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/ko/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/lt/mail/local/Inbox
@@ -511,6 +513,8 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/default/nl/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/pl/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/pt/mail/local/Inbox
+%%DATADIR%%/%%VERSION%%/default/sr/mail/local/Inbox
+%%DATADIR%%/%%VERSION%%/default/sr@latin/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/sv/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/zh_CN/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/ecps/medbook.ecps
@@ -709,6 +713,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/weather/category_weather_sun_16.png
 %%DATADIR%%/%%VERSION%%/weather/category_weather_tstorm_16.png
 share/gnome/help/evolution/C/evolution.xml
+share/gnome/help/evolution/C/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/C/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/C/figures/account_editor_a.png
 share/gnome/help/evolution/C/figures/addrs_book_a.png
@@ -829,6 +834,7 @@ share/gnome/help/evolution/C/figures/sub-pub-fold.png
 share/gnome/help/evolution/C/figures/ver_view_a.png
 share/gnome/help/evolution/C/figures/vfolder-createrule-fig.png
 share/gnome/help/evolution/cs/evolution.xml
+share/gnome/help/evolution/cs/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/cs/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/cs/figures/account_editor_a.png
 share/gnome/help/evolution/cs/figures/addrs_book_a.png
@@ -949,6 +955,7 @@ share/gnome/help/evolution/cs/figures/sub-pub-fold.png
 share/gnome/help/evolution/cs/figures/ver_view_a.png
 share/gnome/help/evolution/cs/figures/vfolder-createrule-fig.png
 share/gnome/help/evolution/de/evolution.xml
+share/gnome/help/evolution/de/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/de/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/de/figures/account_editor_a.png
 share/gnome/help/evolution/de/figures/addrs_book_a.png
@@ -1069,6 +1076,7 @@ share/gnome/help/evolution/de/figures/sub-pub-fold.png
 share/gnome/help/evolution/de/figures/ver_view_a.png
 share/gnome/help/evolution/de/figures/vfolder-createrule-fig.png
 share/gnome/help/evolution/el/evolution.xml
+share/gnome/help/evolution/el/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/el/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/el/figures/account_editor_a.png
 share/gnome/help/evolution/el/figures/addrs_book_a.png
@@ -1189,6 +1197,7 @@ share/gnome/help/evolution/el/figures/sub-pub-fold.png
 share/gnome/help/evolution/el/figures/ver_view_a.png
 share/gnome/help/evolution/el/figures/vfolder-createrule-fig.png
 share/gnome/help/evolution/en_GB/evolution.xml
+share/gnome/help/evolution/en_GB/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/en_GB/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/en_GB/figures/account_editor_a.png
 share/gnome/help/evolution/en_GB/figures/addrs_book_a.png
@@ -1309,6 +1318,7 @@ share/gnome/help/evolution/en_GB/figures/sub-pub-fold.png
 share/gnome/help/evolution/en_GB/figures/ver_view_a.png
 share/gnome/help/evolution/en_GB/figures/vfolder-createrule-fig.png
 share/gnome/help/evolution/es/evolution.xml
+share/gnome/help/evolution/es/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/es/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/es/figures/account_editor_a.png
 share/gnome/help/evolution/es/figures/addrs_book_a.png
@@ -1429,6 +1439,7 @@ share/gnome/help/evolution/es/figures/sub-pub-fold.png
 share/gnome/help/evolution/es/figures/ver_view_a.png
 share/gnome/help/evolution/es/figures/vfolder-createrule-fig.png
 share/gnome/help/evolution/fr/evolution.xml
+share/gnome/help/evolution/fr/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/fr/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/fr/figures/account_editor_a.png
 share/gnome/help/evolution/fr/figures/addrs_book_a.png
@@ -1549,6 +1560,7 @@ share/gnome/help/evolution/fr/figures/sub-pub-fold.png
 share/gnome/help/evolution/fr/figures/ver_view_a.png
 share/gnome/help/evolution/fr/figures/vfolder-createrule-fig.png
 share/gnome/help/evolution/mk/evolution.xml
+share/gnome/help/evolution/mk/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/mk/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/mk/figures/account_editor_a.png
 share/gnome/help/evolution/mk/figures/addrs_book_a.png
@@ -1669,6 +1681,7 @@ share/gnome/help/evolution/mk/figures/sub-pub-fold.png
 share/gnome/help/evolution/mk/figures/ver_view_a.png
 share/gnome/help/evolution/mk/figures/vfolder-createrule-fig.png
 share/gnome/help/evolution/oc/evolution.xml
+share/gnome/help/evolution/oc/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/oc/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/oc/figures/account_editor_a.png
 share/gnome/help/evolution/oc/figures/addrs_book_a.png
@@ -1789,6 +1802,7 @@ share/gnome/help/evolution/oc/figures/sub-pub-fold.png
 share/gnome/help/evolution/oc/figures/ver_view_a.png
 share/gnome/help/evolution/oc/figures/vfolder-createrule-fig.png
 share/gnome/help/evolution/ru/evolution.xml
+share/gnome/help/evolution/ru/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/ru/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/ru/figures/account_editor_a.png
 share/gnome/help/evolution/ru/figures/addrs_book_a.png
@@ -1909,6 +1923,7 @@ share/gnome/help/evolution/ru/figures/sub-pub-fold.png
 share/gnome/help/evolution/ru/figures/ver_view_a.png
 share/gnome/help/evolution/ru/figures/vfolder-createrule-fig.png
 share/gnome/help/evolution/sv/evolution.xml
+share/gnome/help/evolution/sv/figures/Screenshot-Evolution-mailer-Preferences.png
 share/gnome/help/evolution/sv/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/sv/figures/account_editor_a.png
 share/gnome/help/evolution/sv/figures/addrs_book_a.png
@@ -2228,6 +2243,12 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/default/sv/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/sv/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/sv
+@dirrm %%DATADIR%%/%%VERSION%%/default/sr@latin/mail/local
+@dirrm %%DATADIR%%/%%VERSION%%/default/sr@latin/mail
+@dirrm %%DATADIR%%/%%VERSION%%/default/sr@latin
+@dirrm %%DATADIR%%/%%VERSION%%/default/sr/mail/local
+@dirrm %%DATADIR%%/%%VERSION%%/default/sr/mail
+@dirrm %%DATADIR%%/%%VERSION%%/default/sr
 @dirrm %%DATADIR%%/%%VERSION%%/default/pt/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/pt/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/pt
@@ -2249,6 +2270,9 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/default/ja/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/ja/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/ja
+@dirrm %%DATADIR%%/%%VERSION%%/default/hu/mail/local
+@dirrm %%DATADIR%%/%%VERSION%%/default/hu/mail
+@dirrm %%DATADIR%%/%%VERSION%%/default/hu
 @dirrm %%DATADIR%%/%%VERSION%%/default/fr/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/fr/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/fr
@@ -2261,6 +2285,9 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/default/de/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/de/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/de
+@dirrm %%DATADIR%%/%%VERSION%%/default/cs/mail/local
+@dirrm %%DATADIR%%/%%VERSION%%/default/cs/mail
+@dirrm %%DATADIR%%/%%VERSION%%/default/cs
 @dirrm %%DATADIR%%/%%VERSION%%/default/C/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/C/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/C
