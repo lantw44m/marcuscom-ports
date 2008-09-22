@@ -88,6 +88,7 @@ share/locale/hi/LC_MESSAGES/gvfs.mo
 share/locale/hu/LC_MESSAGES/gvfs.mo
 share/locale/it/LC_MESSAGES/gvfs.mo
 share/locale/ja/LC_MESSAGES/gvfs.mo
+share/locale/kn/LC_MESSAGES/gvfs.mo
 share/locale/ko/LC_MESSAGES/gvfs.mo
 share/locale/ku/LC_MESSAGES/gvfs.mo
 share/locale/lt/LC_MESSAGES/gvfs.mo
@@ -104,6 +105,7 @@ share/locale/pt_BR/LC_MESSAGES/gvfs.mo
 share/locale/ru/LC_MESSAGES/gvfs.mo
 share/locale/sk/LC_MESSAGES/gvfs.mo
 share/locale/sl/LC_MESSAGES/gvfs.mo
+share/locale/sq/LC_MESSAGES/gvfs.mo
 share/locale/sr/LC_MESSAGES/gvfs.mo
 share/locale/sr@latin/LC_MESSAGES/gvfs.mo
 share/locale/sv/LC_MESSAGES/gvfs.mo
