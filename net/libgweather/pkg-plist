@@ -79,7 +79,7 @@ libdata/pkgconfig/gweather.pc
 %%DATADIR%%/Locations.sl.xml
 %%DATADIR%%/Locations.sq.xml
 %%DATADIR%%/Locations.sr.xml
-%%DATADIR%%/Locations.sr@Latn.xml
+%%DATADIR%%/Locations.sr@latin.xml
 %%DATADIR%%/Locations.sv.xml
 %%DATADIR%%/Locations.ta.xml
 %%DATADIR%%/Locations.te.xml
