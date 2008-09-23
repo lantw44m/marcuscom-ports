@@ -23,8 +23,12 @@ share/gnome/help/gconf-editor/it/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/it/gconf-editor.xml
 share/gnome/help/gconf-editor/oc/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/oc/gconf-editor.xml
+share/gnome/help/gconf-editor/pt_BR/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/pt_BR/gconf-editor.xml
 share/gnome/help/gconf-editor/sv/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/sv/gconf-editor.xml
+share/gnome/help/gconf-editor/th/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/th/gconf-editor.xml
 share/gnome/help/gconf-editor/uk/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/uk/gconf-editor.xml
 share/icons/hicolor/48x48/apps/gconf-editor.png
@@ -115,13 +119,19 @@ share/omf/gconf-editor/gconf-editor-es.omf
 share/omf/gconf-editor/gconf-editor-fr.omf
 share/omf/gconf-editor/gconf-editor-it.omf
 share/omf/gconf-editor/gconf-editor-oc.omf
+share/omf/gconf-editor/gconf-editor-pt_BR.omf
 share/omf/gconf-editor/gconf-editor-sv.omf
+share/omf/gconf-editor/gconf-editor-th.omf
 share/omf/gconf-editor/gconf-editor-uk.omf
 @dirrm share/omf/gconf-editor
 @dirrm share/gnome/help/gconf-editor/uk/figures
 @dirrm share/gnome/help/gconf-editor/uk
+@dirrm share/gnome/help/gconf-editor/th/figures
+@dirrm share/gnome/help/gconf-editor/th
 @dirrm share/gnome/help/gconf-editor/sv/figures
 @dirrm share/gnome/help/gconf-editor/sv
+@dirrm share/gnome/help/gconf-editor/pt_BR/figures
+@dirrm share/gnome/help/gconf-editor/pt_BR
 @dirrm share/gnome/help/gconf-editor/oc/figures
 @dirrm share/gnome/help/gconf-editor/oc
 @dirrm share/gnome/help/gconf-editor/it/figures
