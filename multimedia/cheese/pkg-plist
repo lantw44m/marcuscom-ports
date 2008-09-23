@@ -25,6 +25,8 @@ share/applications/cheese.desktop
 %%DATADIR%%/icons/hicolor/scalable/actions/browse-webcam-effects.svg
 %%DATADIR%%/pixmaps/camera-icon.svg
 %%DATADIR%%/pixmaps/cheese-1.svg
+%%DATADIR%%/pixmaps/cheese-2.svg
+%%DATADIR%%/pixmaps/cheese-3.svg
 %%DATADIR%%/pixmaps/thumbnail-frame.png
 %%DATADIR%%/sounds/shutter0.ogg
 %%DATADIR%%/sounds/shutter1.ogg
@@ -62,6 +64,9 @@ share/gnome/help/cheese/ru/figures/cheese-screenshot.jpg
 share/gnome/help/cheese/sv/cheese.xml
 share/gnome/help/cheese/sv/figures/cheese-effects-screenshot.jpg
 share/gnome/help/cheese/sv/figures/cheese-screenshot.jpg
+share/gnome/help/cheese/th/cheese.xml
+share/gnome/help/cheese/th/figures/cheese-effects-screenshot.jpg
+share/gnome/help/cheese/th/figures/cheese-screenshot.jpg
 share/icons/hicolor/16x16/apps/cheese.png
 share/icons/hicolor/22x22/apps/cheese.png
 share/icons/hicolor/24x24/apps/cheese.png
@@ -113,7 +118,10 @@ share/locale/ro/LC_MESSAGES/cheese.mo
 share/locale/ru/LC_MESSAGES/cheese.mo
 share/locale/sl/LC_MESSAGES/cheese.mo
 share/locale/sq/LC_MESSAGES/cheese.mo
+share/locale/sr/LC_MESSAGES/cheese.mo
+share/locale/sr@latin/LC_MESSAGES/cheese.mo
 share/locale/sv/LC_MESSAGES/cheese.mo
+share/locale/ta/LC_MESSAGES/cheese.mo
 share/locale/te/LC_MESSAGES/cheese.mo
 share/locale/th/LC_MESSAGES/cheese.mo
 share/locale/tr/LC_MESSAGES/cheese.mo
@@ -130,7 +138,10 @@ share/omf/cheese/cheese-oc.omf
 share/omf/cheese/cheese-pt_BR.omf
 share/omf/cheese/cheese-ru.omf
 share/omf/cheese/cheese-sv.omf
+share/omf/cheese/cheese-th.omf
 @dirrm share/omf/cheese
+@dirrm share/gnome/help/cheese/th/figures
+@dirrm share/gnome/help/cheese/th
 @dirrm share/gnome/help/cheese/sv/figures
 @dirrm share/gnome/help/cheese/sv
 @dirrm share/gnome/help/cheese/ru/figures
@@ -173,6 +184,8 @@ share/omf/cheese/cheese-sv.omf
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/ps/LC_MESSAGES
 @dirrmtry share/locale/ps
 @dirrmtry share/locale/oc/LC_MESSAGES

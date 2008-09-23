@@ -109,6 +109,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/orca_state.py
 %%PYTHON_SITELIBDIR%%/orca/orca_state.pyc
 %%PYTHON_SITELIBDIR%%/orca/orca_state.pyo
+%%PYTHON_SITELIBDIR%%/orca/outline.py
+%%PYTHON_SITELIBDIR%%/orca/outline.pyc
+%%PYTHON_SITELIBDIR%%/orca/outline.pyo
 %%PYTHON_SITELIBDIR%%/orca/outloud.py
 %%PYTHON_SITELIBDIR%%/orca/outloud.pyc
 %%PYTHON_SITELIBDIR%%/orca/outloud.pyo
