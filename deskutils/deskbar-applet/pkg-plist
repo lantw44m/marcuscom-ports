@@ -47,12 +47,12 @@ lib/deskbar-applet/modules-2.20-compatible/recent.pyo
 lib/deskbar-applet/modules-2.20-compatible/templates.py
 lib/deskbar-applet/modules-2.20-compatible/templates.pyc
 lib/deskbar-applet/modules-2.20-compatible/templates.pyo
-lib/deskbar-applet/modules-2.20-compatible/twitter.py
-lib/deskbar-applet/modules-2.20-compatible/twitter.pyc
-lib/deskbar-applet/modules-2.20-compatible/twitter.pyo
 lib/deskbar-applet/modules-2.20-compatible/tomboy.py
 lib/deskbar-applet/modules-2.20-compatible/tomboy.pyc
 lib/deskbar-applet/modules-2.20-compatible/tomboy.pyo
+lib/deskbar-applet/modules-2.20-compatible/twitter.py
+lib/deskbar-applet/modules-2.20-compatible/twitter.pyc
+lib/deskbar-applet/modules-2.20-compatible/twitter.pyo
 lib/deskbar-applet/modules-2.20-compatible/web_address.py
 lib/deskbar-applet/modules-2.20-compatible/web_address.pyc
 lib/deskbar-applet/modules-2.20-compatible/web_address.pyo
@@ -120,12 +120,12 @@ lib/deskbar-applet/modules-2.20-compatible/yahoo.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/core/keybinder/__init__.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/core/keybinder/_keybinder.la
 %%PYTHON_SITELIBDIR%%/deskbar/core/keybinder/_keybinder.so
-%%PYTHON_SITELIBDIR%%/deskbar/core/updater/__init__.py
-%%PYTHON_SITELIBDIR%%/deskbar/core/updater/__init__.pyc
-%%PYTHON_SITELIBDIR%%/deskbar/core/updater/__init__.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/core/updater/Capuchin.py
 %%PYTHON_SITELIBDIR%%/deskbar/core/updater/Capuchin.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/core/updater/Capuchin.pyo
+%%PYTHON_SITELIBDIR%%/deskbar/core/updater/__init__.py
+%%PYTHON_SITELIBDIR%%/deskbar/core/updater/__init__.pyc
+%%PYTHON_SITELIBDIR%%/deskbar/core/updater/__init__.pyo
 %%PYTHON_SITELIBDIR%%/deskbar/defs.py
 %%PYTHON_SITELIBDIR%%/deskbar/defs.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/defs.pyo
@@ -332,6 +332,9 @@ share/gnome/help/deskbar/es/legal.xml
 share/gnome/help/deskbar/fr/deskbar.xml
 share/gnome/help/deskbar/fr/figures/deskbar-applet.png
 share/gnome/help/deskbar/fr/legal.xml
+share/gnome/help/deskbar/it/deskbar.xml
+share/gnome/help/deskbar/it/figures/deskbar-applet.png
+share/gnome/help/deskbar/it/legal.xml
 share/gnome/help/deskbar/oc/deskbar.xml
 share/gnome/help/deskbar/oc/figures/deskbar-applet.png
 share/gnome/help/deskbar/oc/legal.xml
@@ -355,6 +358,7 @@ share/icons/hicolor/22x22/apps/deskbar-applet.png
 share/icons/hicolor/32x32/apps/deskbar-applet.png
 share/icons/hicolor/48x48/apps/deskbar-applet.png
 share/icons/hicolor/scalable/apps/deskbar-applet.svg
+share/locale/af/LC_MESSAGES/deskbar-applet.mo
 share/locale/ar/LC_MESSAGES/deskbar-applet.mo
 share/locale/as/LC_MESSAGES/deskbar-applet.mo
 share/locale/be/LC_MESSAGES/deskbar-applet.mo
@@ -417,8 +421,8 @@ share/locale/sq/LC_MESSAGES/deskbar-applet.mo
 share/locale/sr/LC_MESSAGES/deskbar-applet.mo
 share/locale/sr@latin/LC_MESSAGES/deskbar-applet.mo
 share/locale/sv/LC_MESSAGES/deskbar-applet.mo
-share/locale/te/LC_MESSAGES/deskbar-applet.mo
 share/locale/ta/LC_MESSAGES/deskbar-applet.mo
+share/locale/te/LC_MESSAGES/deskbar-applet.mo
 share/locale/th/LC_MESSAGES/deskbar-applet.mo
 share/locale/tr/LC_MESSAGES/deskbar-applet.mo
 share/locale/uk/LC_MESSAGES/deskbar-applet.mo
@@ -432,6 +436,7 @@ share/omf/deskbar/deskbar-el.omf
 share/omf/deskbar/deskbar-en_GB.omf
 share/omf/deskbar/deskbar-es.omf
 share/omf/deskbar/deskbar-fr.omf
+share/omf/deskbar/deskbar-it.omf
 share/omf/deskbar/deskbar-oc.omf
 share/omf/deskbar/deskbar-pt_BR.omf
 share/omf/deskbar/deskbar-ru.omf
@@ -451,6 +456,8 @@ share/omf/deskbar/deskbar-zh_CN.omf
 @dirrm share/gnome/help/deskbar/pt_BR
 @dirrm share/gnome/help/deskbar/oc/figures
 @dirrm share/gnome/help/deskbar/oc
+@dirrm share/gnome/help/deskbar/it/figures
+@dirrm share/gnome/help/deskbar/it
 @dirrm share/gnome/help/deskbar/fr/figures
 @dirrm share/gnome/help/deskbar/fr
 @dirrm share/gnome/help/deskbar/es/figures
