@@ -77,12 +77,12 @@ share/gnome-2.0/ui/GNOME_MultiloadApplet.xml
 share/gnome-2.0/ui/GNOME_Panel_TrashApplet.xml
 share/gnome-2.0/ui/GNOME_StickyNotesApplet.xml
 %%PYTHON%%share/gnome-2.0/ui/Invest_Applet.xml
-%%DATADIR%%/builder/battstat_applet.ui
-%%DATADIR%%/builder/cpufreq-preferences.ui
-%%DATADIR%%/builder/financialchart.ui
+%%BATTERY%%%%DATADIR%%/builder/battstat_applet.ui
+%%CPUFREQ%%%%DATADIR%%/builder/cpufreq-preferences.ui
+%%PYTHON%%%%DATADIR%%/builder/financialchart.ui
 %%DATADIR%%/builder/gswitchit.ui
 %%COMMANDER%%%%DATADIR%%/builder/mini-commander.ui
-%%DATADIR%%/builder/prefs-dialog.ui
+%%PYTHON%%%%DATADIR%%/builder/prefs-dialog.ui
 %%DATADIR%%/builder/stickynotes.ui
 %%DATADIR%%/builder/trashapplet-empty-progress.ui
 %%DATADIR%%/geyes/Bizarre/Bizarre-eye.png
@@ -427,6 +427,10 @@ share/gnome/help/char-palette/uk/figures/charpick_characters.png
 %%COMMANDER%%share/gnome/help/command-line/C/figures/prefs-macros.png
 %%COMMANDER%%share/gnome/help/command-line/C/figures/prefs.png
 %%COMMANDER%%share/gnome/help/command-line/C/legal.xml
+%%COMMANDER%%share/gnome/help/command-line/el/command-line.xml
+%%COMMANDER%%share/gnome/help/command-line/el/figures/command-line.png
+%%COMMANDER%%share/gnome/help/command-line/el/figures/prefs-macros.png
+%%COMMANDER%%share/gnome/help/command-line/el/figures/prefs.png
 %%COMMANDER%%share/gnome/help/command-line/en_GB/command-line.xml
 %%COMMANDER%%share/gnome/help/command-line/en_GB/figures/command-line.png
 %%COMMANDER%%share/gnome/help/command-line/en_GB/figures/prefs-macros.png
@@ -908,11 +912,11 @@ share/gnome/help/gweather/uk/figures/stock_weather-snow.png
 share/gnome/help/gweather/uk/figures/stock_weather-storm.png
 share/gnome/help/gweather/uk/figures/stock_weather-sunny.png
 share/gnome/help/gweather/uk/gweather.xml
-share/gnome/help/invest-applet/C/invest-applet.xml
-share/gnome/help/invest-applet/C/legal.xml
-share/gnome/help/invest-applet/es/invest-applet.xml
-share/gnome/help/invest-applet/fi/invest-applet.xml
-share/gnome/help/invest-applet/sv/invest-applet.xml
+%%PYTHON%%share/gnome/help/invest-applet/C/invest-applet.xml
+%%PYTHON%%share/gnome/help/invest-applet/C/legal.xml
+%%PYTHON%%share/gnome/help/invest-applet/es/invest-applet.xml
+%%PYTHON%%share/gnome/help/invest-applet/fi/invest-applet.xml
+%%PYTHON%%share/gnome/help/invest-applet/sv/invest-applet.xml
 share/gnome/help/mixer_applet2/C/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/C/legal.xml
 share/gnome/help/mixer_applet2/C/mixer_applet2.xml
@@ -1124,11 +1128,11 @@ share/gnome/help/trashapplet/uk/trashapplet.xml
 %%CPUFREQ%%share/icons/hicolor/16x16/apps/gnome-cpu-frequency-applet.png
 share/icons/hicolor/16x16/apps/gnome-eyes-applet.png
 share/icons/hicolor/16x16/apps/gnome-sticky-notes-applet.png
-share/icons/hicolor/16x16/apps/invest-applet.png
+%%PYTHON%%share/icons/hicolor/16x16/apps/invest-applet.png
 %%CPUFREQ%%share/icons/hicolor/22x22/apps/gnome-cpu-frequency-applet.png
 share/icons/hicolor/22x22/apps/gnome-eyes-applet.png
 share/icons/hicolor/22x22/apps/gnome-sticky-notes-applet.png
-share/icons/hicolor/22x22/apps/invest-applet.png
+%%PYTHON%%share/icons/hicolor/22x22/apps/invest-applet.png
 %%CPUFREQ%%share/icons/hicolor/24x24/apps/gnome-cpu-frequency-applet.png
 share/icons/hicolor/24x24/apps/gnome-eyes-applet.png
 share/icons/hicolor/24x24/apps/gnome-sticky-notes-applet.png
@@ -1137,11 +1141,11 @@ share/icons/hicolor/32x32/apps/gnome-eyes-applet.png
 share/icons/hicolor/32x32/apps/gnome-sticky-notes-applet.png
 share/icons/hicolor/48x48/apps/ax-applet.png
 %%COMMANDER%%share/icons/hicolor/48x48/apps/gnome-mini-commander.png
-share/icons/hicolor/48x48/apps/invest-applet.png
+%%PYTHON%%share/icons/hicolor/48x48/apps/invest-applet.png
 %%CPUFREQ%%share/icons/hicolor/scalable/apps/gnome-cpu-frequency-applet.svg
 share/icons/hicolor/scalable/apps/gnome-eyes-applet.svg
 share/icons/hicolor/scalable/apps/gnome-sticky-notes-applet.svg
-share/icons/hicolor/scalable/apps/invest-applet.svg
+%%PYTHON%%share/icons/hicolor/scalable/apps/invest-applet.svg
 share/locale/am/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/as/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1284,6 +1288,7 @@ share/omf/char-palette/char-palette-ru.omf
 share/omf/char-palette/char-palette-sv.omf
 share/omf/char-palette/char-palette-uk.omf
 %%COMMANDER%%share/omf/command-line/command-line-C.omf
+%%COMMANDER%%share/omf/command-line/command-line-el.omf
 %%COMMANDER%%share/omf/command-line/command-line-en_GB.omf
 %%COMMANDER%%share/omf/command-line/command-line-es.omf
 %%COMMANDER%%share/omf/command-line/command-line-fr.omf
@@ -1357,10 +1362,10 @@ share/omf/gweather/gweather-pt_BR.omf
 share/omf/gweather/gweather-ru.omf
 share/omf/gweather/gweather-sv.omf
 share/omf/gweather/gweather-uk.omf
-share/omf/invest-applet/invest-applet-C.omf
-share/omf/invest-applet/invest-applet-es.omf
-share/omf/invest-applet/invest-applet-fi.omf
-share/omf/invest-applet/invest-applet-sv.omf
+%%PYTHON%%share/omf/invest-applet/invest-applet-C.omf
+%%PYTHON%%share/omf/invest-applet/invest-applet-es.omf
+%%PYTHON%%share/omf/invest-applet/invest-applet-fi.omf
+%%PYTHON%%share/omf/invest-applet/invest-applet-sv.omf
 share/omf/mixer_applet2/mixer_applet2-C.omf
 share/omf/mixer_applet2/mixer_applet2-ca.omf
 share/omf/mixer_applet2/mixer_applet2-el.omf
@@ -1561,7 +1566,7 @@ share/xmodmap/xmodmap.yu
 @dirrm share/omf/stickynotes_applet
 @dirrm share/omf/multiload
 @dirrm share/omf/mixer_applet2
-@dirrm share/omf/invest-applet
+%%PYTHON%%@dirrm share/omf/invest-applet
 @dirrm share/omf/gweather
 @dirrm share/omf/gswitchit
 @dirrm share/omf/geyes
@@ -1697,11 +1702,11 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/mixer_applet2/C/figures
 @dirrm share/gnome/help/mixer_applet2/C
 @dirrm share/gnome/help/mixer_applet2
-@dirrm share/gnome/help/invest-applet/sv
-@dirrm share/gnome/help/invest-applet/fi
-@dirrm share/gnome/help/invest-applet/es
-@dirrm share/gnome/help/invest-applet/C
-@dirrm share/gnome/help/invest-applet
+%%PYTHON%%@dirrm share/gnome/help/invest-applet/sv
+%%PYTHON%%@dirrm share/gnome/help/invest-applet/fi
+%%PYTHON%%@dirrm share/gnome/help/invest-applet/es
+%%PYTHON%%@dirrm share/gnome/help/invest-applet/C
+%%PYTHON%%@dirrm share/gnome/help/invest-applet
 @dirrm share/gnome/help/gweather/uk/figures
 @dirrm share/gnome/help/gweather/uk
 @dirrm share/gnome/help/gweather/sv/figures
@@ -1842,6 +1847,8 @@ share/xmodmap/xmodmap.yu
 %%COMMANDER%%@dirrm share/gnome/help/command-line/es
 %%COMMANDER%%@dirrm share/gnome/help/command-line/en_GB/figures
 %%COMMANDER%%@dirrm share/gnome/help/command-line/en_GB
+%%COMMANDER%%@dirrm share/gnome/help/command-line/el/figures
+%%COMMANDER%%@dirrm share/gnome/help/command-line/el
 %%COMMANDER%%@dirrm share/gnome/help/command-line/C/figures
 %%COMMANDER%%@dirrm share/gnome/help/command-line/C
 %%COMMANDER%%@dirrm share/gnome/help/command-line
