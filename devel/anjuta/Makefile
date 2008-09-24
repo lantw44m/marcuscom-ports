@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.28 2008/09/16 22:33:42 kwm Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.29 2008/09/24 03:30:30 marcus Exp $
 #
 
 PORTNAME=	anjuta
@@ -83,15 +83,15 @@ PLIST_SUB+=	SCINTILLA=""
 PLIST_SUB+=	SCINTILLA="@comment "
 .endif
 
-#.if defined(WITH_SYMBOL)
-#USE_GNOME+=	libgda4
-#CONFIGURE_ARGS+=--enable-plugin-symbol-db
-#GCONF_SCHEMAS+=	anjuta-symbol-db.schemas
-#PLIST_SUB+=	SYMBOL=""
-#.else
+.if defined(WITH_SYMBOL)
+USE_GNOME+=	libgda4
+CONFIGURE_ARGS+=--enable-plugin-symbol-db
+GCONF_SCHEMAS+=	anjuta-symbol-db.schemas
+PLIST_SUB+=	SYMBOL=""
+.else
 CONFIGURE_ARGS+=--disable-plugin-symbol-db
 PLIST_SUB+=	SYMBOL="@comment "
-#.endif
+.endif
 
 post-configure:
 	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash| ; \
