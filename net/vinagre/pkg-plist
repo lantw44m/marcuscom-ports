@@ -155,8 +155,6 @@ share/omf/vinagre/vinagre-sv.omf
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
-@dirrmtry share/locale/sr/LC_MESSAGES
-@dirrmtry share/locale/sr
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES
