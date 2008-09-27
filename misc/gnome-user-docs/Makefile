@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-user-docs/Makefile,v 1.42 2008/03/10 17:39:04 ahze Exp $
+#   $MCom: ports/misc/gnome-user-docs/Makefile,v 1.44 2008/09/22 22:01:29 marcus Exp $
 #
 
 PORTNAME=	gnome-user-docs
@@ -23,6 +23,6 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier gnometarget gnomedocutils
+USE_GNOME=	gnomeprefix gnomehack gnomehier gnomedocutils
 
 .include <bsd.port.mk>

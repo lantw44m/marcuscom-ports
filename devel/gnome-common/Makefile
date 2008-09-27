@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gnome-common/Makefile,v 1.7 2007/09/17 18:37:36 ahze Exp $
+#    $MCom: ports/devel/gnome-common/Makefile,v 1.9 2008/09/23 04:56:42 marcus Exp $
 #
 
 PORTNAME=	gnome-common
@@ -18,7 +18,7 @@ COMMENT=	Common automake macros for GNOME and GNOME 2
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	pkgconfig gnometarget
+USE_GNOME=	pkgconfig
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>

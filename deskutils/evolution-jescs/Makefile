@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/evolution-jescs/Makefile,v 1.31 2008/08/22 17:03:03 marcus Exp $
+#   $MCom: ports/deskutils/evolution-jescs/Makefile,v 1.32 2008/09/22 21:45:09 marcus Exp $
 #
 
 PORTNAME=	evolution-jescs
@@ -21,7 +21,7 @@ RUN_DEPENDS=	evolution:${PORTSDIR}/mail/evolution
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnometarget
+USE_GNOME=	gnomeprefix gnomehack intlhack
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

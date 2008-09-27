@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-devel-docs/Makefile,v 1.5 2008/09/03 16:59:35 mezz Exp $
+#   $MCom: ports/misc/gnome-devel-docs/Makefile,v 1.6 2008/09/22 22:43:35 marcus Exp $
 #
 
 PORTNAME=	gnome-devel-docs
@@ -21,7 +21,6 @@ RUN_DEPENDS=	gnome-doc-prepare:${PORTSDIR}/textproc/gnome-doc-utils
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnometarget
 INSTALLS_OMF=	yes
 
 .include <bsd.port.mk>

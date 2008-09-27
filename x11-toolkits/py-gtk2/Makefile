@@ -3,7 +3,7 @@
 # Whom:					marc@informatik.uni-bremen.de
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.56 2008/09/03 16:40:40 kwm Exp $
+#   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.57 2008/09/08 00:14:14 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -27,7 +27,7 @@ RUN_DEPENDS=	${PYNUMERIC} \
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnometarget libglade2
+USE_GNOME=	gnomehack libglade2
 USE_PYTHON=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
