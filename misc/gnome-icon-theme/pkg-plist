@@ -6365,6 +6365,8 @@ share/icons/gnome/scalable/status/weather-snow.svg
 share/icons/gnome/scalable/status/weather-storm.svg
 share/icons/gnome/scalable/status/xfce-trash_full.svg
 share/icons/gnome/scalable/stock/generic/stock_person.svg
+@dirrmtry share/local/fur/LC_MESSAGES
+@dirrmtry share/local/fur
 @dirrmtry share/icons/gnome/scalable/stock/generic
 @dirrmtry share/icons/gnome/scalable/stock
 @dirrmtry share/icons/gnome/scalable/status
