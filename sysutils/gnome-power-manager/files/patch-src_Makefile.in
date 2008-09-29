@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2008-09-29 11:20:28.000000000 -0400
++++ src/Makefile.in	2008-09-29 11:21:08.000000000 -0400
+@@ -588,7 +588,7 @@ gnome_power_manager_SOURCES = \
+ gnome_power_manager_LDADD = $(GLIB_LIBS) $(GSTREAMER_LIBS) \
+ 	$(GNOME_LIBS) $(HAL_LIBS) $(POLKIT_LIBS) $(DBUS_LIBS) \
+ 	$(XRANDR_LIBS) $(GPM_EXTRA_LIBS) $(LOCAL_LIBHAL_LIBS) \
+-	$(LOCAL_LIBDBUS_LIBS) $(NULL) $(am__append_3)
++	$(LOCAL_LIBDBUS_LIBS) -lexecinfo $(NULL) $(am__append_3)
+ gnome_power_self_test_SOURCES = \
+ 	egg-color.c					\
+ 	egg-color.h					\
