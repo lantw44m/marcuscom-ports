@@ -1,5 +1,5 @@
 --- sysdeps/freebsd/open.c.orig	2008-05-23 18:13:23.000000000 -0400
-+++ sysdeps/freebsd/open.c	2008-09-29 14:34:51.000000000 -0400
++++ sysdeps/freebsd/open.c	2008-09-29 14:45:16.000000000 -0400
 @@ -20,11 +20,14 @@
  */
  
@@ -19,7 +19,7 @@
  		const unsigned long features,
  		const unsigned flags)
  {
-+	guint64 ncpus;
++	int ncpus;
 +	size_t len;
  #ifdef DEBUG
  	fprintf (stderr, "DEBUG (%d): glibtop_open_p ()\n", getpid ());
