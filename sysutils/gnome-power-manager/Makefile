@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.46 2008/09/01 18:24:43 ahze Exp $
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.47 2008/09/22 22:58:50 kwm Exp $
 #
 
 PORTNAME=	gnome-power-manager
 PORTVERSION=	2.24.0
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -19,7 +20,8 @@ COMMENT=	Power management system for the GNOME Desktop
 BUILD_DEPENDS=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
     		${LOCALBASE}/share/sgml/docbook/4.1/catalog:${PORTSDIR}/textproc/docbook-410
 LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
-		notify.1:${PORTSDIR}/devel/libnotify
+		notify.1:${PORTSDIR}/devel/libnotify \
+		execinfo:${PORTSDIR}/devel/libexecinfo
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
