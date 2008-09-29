@@ -1,5 +1,5 @@
---- sysdeps/freebsd/open.c.orig	2008-09-29 13:44:47.000000000 -0400
-+++ sysdeps/freebsd/open.c	2008-09-29 13:49:37.000000000 -0400
+--- sysdeps/freebsd/open.c.orig	2008-05-23 18:13:23.000000000 -0400
++++ sysdeps/freebsd/open.c	2008-09-29 14:34:51.000000000 -0400
 @@ -20,11 +20,14 @@
  */
  
@@ -15,7 +15,7 @@
  /* !!! THIS FUNCTION RUNS SUID ROOT - CHANGE WITH CAUTION !!! */
  
  void
-@@ -53,11 +56,18 @@ glibtop_open_p (glibtop *server, const c
+@@ -53,11 +56,17 @@ glibtop_open_p (glibtop *server, const c
  		const unsigned long features,
  		const unsigned flags)
  {
@@ -28,9 +28,8 @@
  	/* !!! WE ARE ROOT HERE - CHANGE WITH CAUTION !!! */
 +	len = sizeof (ncpus);
 +	sysctlbyname ("hw.ncpu", &ncpus, &len, NULL, 0);
-+	server->ncpu = ncpus;
-+	/* XXX We should detect HTT CPUs here. */
-+	server->real_ncpu = ncpus;
++	server->real_ncpu = ncpus - 1;
++	server->ncpu = MIN(GLIBTOP_NCPU - 1, server->real_ncpu);
  
  	server->machine.uid = getuid ();
  	server->machine.euid = geteuid ();
