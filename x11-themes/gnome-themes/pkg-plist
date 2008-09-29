@@ -508,7 +508,6 @@ share/icons/HighContrast-SVG/scalable/actions/gtk-undo-ltr.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-unindent-ltr.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-unindent-rtl.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-zoom-100.svg
-share/icons/HighContrast-SVG/scalable/actions/gtk-zoom-fit.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-zoom-in.svg
 share/icons/HighContrast-SVG/scalable/actions/gtk-zoom-out.svg
 share/icons/HighContrast-SVG/scalable/actions/help-about.svg
@@ -644,7 +643,6 @@ share/icons/HighContrast-SVG/scalable/actions/stock_up.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_zoom-1.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_zoom-in.svg
 share/icons/HighContrast-SVG/scalable/actions/stock_zoom-out.svg
-share/icons/HighContrast-SVG/scalable/actions/stock_zoom-page.svg
 share/icons/HighContrast-SVG/scalable/actions/stop.svg
 share/icons/HighContrast-SVG/scalable/actions/system-lock-screen.svg
 share/icons/HighContrast-SVG/scalable/actions/system-log-out.svg
@@ -668,7 +666,6 @@ share/icons/HighContrast-SVG/scalable/actions/view-sort-descending.svg
 share/icons/HighContrast-SVG/scalable/actions/viewmag+.svg
 share/icons/HighContrast-SVG/scalable/actions/viewmag-.svg
 share/icons/HighContrast-SVG/scalable/actions/viewmag1.svg
-share/icons/HighContrast-SVG/scalable/actions/viewmagfit.svg
 share/icons/HighContrast-SVG/scalable/actions/window-close.svg
 share/icons/HighContrast-SVG/scalable/actions/window-new.svg
 share/icons/HighContrast-SVG/scalable/actions/window_fullscreen.svg
