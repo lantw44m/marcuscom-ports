@@ -66,6 +66,7 @@ share/icons/Crux/16x16/places/gnome-fs-smb.png
 share/icons/Crux/16x16/places/gnome-fs-ssh.png
 share/icons/Crux/16x16/places/gnome-mime-x-directory-smb-share.png
 share/icons/Crux/16x16/places/gtk-directory.png
+share/icons/Crux/16x16/places/inode-directory.png
 share/icons/Crux/16x16/places/network.png
 share/icons/Crux/16x16/places/stock_folder.png
 share/icons/Crux/16x16/places/user-home.png
@@ -144,6 +145,7 @@ share/icons/Crux/22x22/places/gnome-fs-smb.png
 share/icons/Crux/22x22/places/gnome-fs-ssh.png
 share/icons/Crux/22x22/places/gnome-mime-x-directory-smb-share.png
 share/icons/Crux/22x22/places/gtk-directory.png
+share/icons/Crux/22x22/places/inode-directory.png
 share/icons/Crux/22x22/places/network.png
 share/icons/Crux/22x22/places/stock_folder.png
 share/icons/Crux/22x22/places/user-home.png
@@ -222,6 +224,7 @@ share/icons/Crux/24x24/places/gnome-fs-smb.png
 share/icons/Crux/24x24/places/gnome-fs-ssh.png
 share/icons/Crux/24x24/places/gnome-mime-x-directory-smb-share.png
 share/icons/Crux/24x24/places/gtk-directory.png
+share/icons/Crux/24x24/places/inode-directory.png
 share/icons/Crux/24x24/places/network.png
 share/icons/Crux/24x24/places/stock_folder.png
 share/icons/Crux/24x24/places/user-home.png
@@ -328,6 +331,7 @@ share/icons/Crux/scalable/places/gnome-fs-smb.svg
 share/icons/Crux/scalable/places/gnome-fs-ssh.svg
 share/icons/Crux/scalable/places/gnome-mime-x-directory-smb-share.svg
 share/icons/Crux/scalable/places/gtk-directory.svg
+share/icons/Crux/scalable/places/inode-directory.svg
 share/icons/Crux/scalable/places/network.svg
 share/icons/Crux/scalable/places/stock_folder.svg
 share/icons/Crux/scalable/places/user-home.svg
@@ -413,6 +417,7 @@ share/icons/HighContrast-SVG/scalable/actions/gnome-lockscreen.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-logout.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-run.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-searchtool.svg
+share/icons/HighContrast-SVG/scalable/actions/gnome-shutdown.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-stock-mail-fwd.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-stock-mail-new.svg
 share/icons/HighContrast-SVG/scalable/actions/gnome-stock-mail-rpl.svg
@@ -1056,6 +1061,7 @@ share/icons/HighContrast-SVG/scalable/places/gnome-mime-x-directory-smb-workgrou
 share/icons/HighContrast-SVG/scalable/places/gnome-stock-trash.svg
 share/icons/HighContrast-SVG/scalable/places/gtk-directory.svg
 share/icons/HighContrast-SVG/scalable/places/gtk-network.svg
+share/icons/HighContrast-SVG/scalable/places/inode-directory.svg
 share/icons/HighContrast-SVG/scalable/places/library-internet-radio.svg
 share/icons/HighContrast-SVG/scalable/places/library-podcast.svg
 share/icons/HighContrast-SVG/scalable/places/network-server.svg
@@ -1146,6 +1152,7 @@ share/icons/HighContrastLargePrint/48x48/actions/exit.png
 share/icons/HighContrastLargePrint/48x48/actions/gnome-logout.png
 share/icons/HighContrastLargePrint/48x48/actions/gnome-run.png
 share/icons/HighContrastLargePrint/48x48/actions/gnome-searchtool.png
+share/icons/HighContrastLargePrint/48x48/actions/gnome-shutdown.png
 share/icons/HighContrastLargePrint/48x48/actions/go-home.png
 share/icons/HighContrastLargePrint/48x48/actions/gohome.png
 share/icons/HighContrastLargePrint/48x48/actions/gtk-execute.png
@@ -1464,6 +1471,8 @@ share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-application-x-gzip
 share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-application-x-jar.png
 share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-application-x-killustrator.png
 share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-application-x-lha.png
+share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-application-x-lzma-compressed-tar.png
+share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-application-x-lzma.png
 share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-application-x-lhz.png
 share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-application-x-ms-dos-executable.png
 share/icons/HighContrastLargePrint/48x48/mimetypes/gnome-mime-application-x-rar.png
@@ -1531,6 +1540,8 @@ share/icons/HighContrastLargePrint/48x48/places/gnome-stock-trash.png
 share/icons/HighContrastLargePrint/48x48/places/gtk-directory.icon
 share/icons/HighContrastLargePrint/48x48/places/gtk-directory.png
 share/icons/HighContrastLargePrint/48x48/places/gtk-network.png
+share/icons/HighContrastLargePrint/48x48/places/inode-directory.icon
+share/icons/HighContrastLargePrint/48x48/places/inode-directory.png
 share/icons/HighContrastLargePrint/48x48/places/network-server.png
 share/icons/HighContrastLargePrint/48x48/places/network-workgroup.png
 share/icons/HighContrastLargePrint/48x48/places/network.png
@@ -1576,6 +1587,7 @@ share/icons/HighContrastLargePrintInverse/48x48/actions/exit.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/gnome-logout.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/gnome-run.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/gnome-searchtool.png
+share/icons/HighContrastLargePrintInverse/48x48/actions/gnome-shutdown.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/go-home.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/gohome.png
 share/icons/HighContrastLargePrintInverse/48x48/actions/gtk-execute.png
@@ -1894,6 +1906,8 @@ share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-application
 share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-application-x-jar.png
 share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-application-x-killustrator.png
 share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-application-x-lha.png
+share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-application-x-lzma.png
+share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-application-x-lzma-compressed-tar.png
 share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-application-x-lhz.png
 share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-application-x-ms-dos-executable.png
 share/icons/HighContrastLargePrintInverse/48x48/mimetypes/gnome-mime-application-x-rar.png
@@ -1961,6 +1975,8 @@ share/icons/HighContrastLargePrintInverse/48x48/places/gnome-stock-trash.png
 share/icons/HighContrastLargePrintInverse/48x48/places/gtk-directory.icon
 share/icons/HighContrastLargePrintInverse/48x48/places/gtk-directory.png
 share/icons/HighContrastLargePrintInverse/48x48/places/gtk-network.png
+share/icons/HighContrastLargePrintInverse/48x48/places/inode-directory.icon
+share/icons/HighContrastLargePrintInverse/48x48/places/inode-directory.png
 share/icons/HighContrastLargePrintInverse/48x48/places/network-server.png
 share/icons/HighContrastLargePrintInverse/48x48/places/network-workgroup.png
 share/icons/HighContrastLargePrintInverse/48x48/places/network.png
@@ -2017,6 +2033,7 @@ share/icons/Mist/16x16/places/gnome-fs-smb.png
 share/icons/Mist/16x16/places/gnome-fs-ssh.png
 share/icons/Mist/16x16/places/gnome-mime-x-directory-smb-share.png
 share/icons/Mist/16x16/places/gtk-directory.png
+share/icons/Mist/16x16/places/inode-directory.png
 share/icons/Mist/16x16/places/network.png
 share/icons/Mist/16x16/places/stock_folder.png
 share/icons/Mist/16x16/places/user-home.png
@@ -2045,6 +2062,7 @@ share/icons/Mist/22x22/places/gnome-fs-smb.png
 share/icons/Mist/22x22/places/gnome-fs-ssh.png
 share/icons/Mist/22x22/places/gnome-mime-x-directory-smb-share.png
 share/icons/Mist/22x22/places/gtk-directory.png
+share/icons/Mist/22x22/places/inode-directory.png
 share/icons/Mist/22x22/places/network.png
 share/icons/Mist/22x22/places/stock_folder.png
 share/icons/Mist/22x22/places/user-home.svg
@@ -2073,6 +2091,7 @@ share/icons/Mist/24x24/places/gnome-fs-smb.png
 share/icons/Mist/24x24/places/gnome-fs-ssh.png
 share/icons/Mist/24x24/places/gnome-mime-x-directory-smb-share.png
 share/icons/Mist/24x24/places/gtk-directory.png
+share/icons/Mist/24x24/places/inode-directory.png
 share/icons/Mist/24x24/places/network.png
 share/icons/Mist/24x24/places/stock_folder.png
 share/icons/Mist/24x24/places/user-home.png
@@ -2101,6 +2120,7 @@ share/icons/Mist/32x32/places/gnome-fs-smb.svg
 share/icons/Mist/32x32/places/gnome-fs-ssh.svg
 share/icons/Mist/32x32/places/gnome-mime-x-directory-smb-share.svg
 share/icons/Mist/32x32/places/gtk-directory.svg
+share/icons/Mist/32x32/places/inode-directory.svg
 share/icons/Mist/32x32/places/network.svg
 share/icons/Mist/32x32/places/stock_folder.svg
 share/icons/Mist/32x32/places/user-home.svg
@@ -2130,6 +2150,7 @@ share/icons/Mist/scalable/places/gnome-fs-smb.svg
 share/icons/Mist/scalable/places/gnome-fs-ssh.svg
 share/icons/Mist/scalable/places/gnome-mime-x-directory-smb-share.svg
 share/icons/Mist/scalable/places/gtk-directory.svg
+share/icons/Mist/scalable/places/inode-directory.svg
 share/icons/Mist/scalable/places/network.svg
 share/icons/Mist/scalable/places/stock_folder.svg
 share/icons/Mist/scalable/places/user-home.svg
