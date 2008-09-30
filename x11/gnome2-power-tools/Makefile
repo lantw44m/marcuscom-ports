@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-power-tools/Makefile,v 1.82 2008/03/12 21:19:04 marcus Exp $
+#   $MCom$
 #
 
 PORTREVISION=	2
