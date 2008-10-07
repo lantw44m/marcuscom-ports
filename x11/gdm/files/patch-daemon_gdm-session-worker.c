@@ -9,14 +9,3 @@
                  }
  
                  len = strlen (file) + 1;
-@@ -1062,6 +1062,10 @@ gdm_session_worker_initialize_pam (GdmSe
-         pam_conversation.conv = (GdmSessionWorkerPamNewMessagesFunc) gdm_session_worker_pam_new_messages_handler;
-         pam_conversation.appdata_ptr = worker;
- 
-+        g_setenv ("DISPLAY", x11_display_name, FALSE);
-+
-+        g_setenv ("XAUTHORITY", x11_authority_file, FALSE);
-+
-         gdm_session_worker_start_auditor (worker);
-         error_code = pam_start (service,
-                                 username,
