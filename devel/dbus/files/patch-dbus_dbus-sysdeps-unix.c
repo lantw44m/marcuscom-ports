@@ -73,12 +73,3 @@
  #elif defined(LOCAL_CREDS)
      pid_read = DBUS_PID_UNSET;
      uid_read = cmsg.cred.sc_uid;
-@@ -1493,7 +1497,7 @@ fill_user_info (DBusUserInfo       *info
-     /* retrieve maximum needed size for buf */
-     buflen = sysconf (_SC_GETPW_R_SIZE_MAX);
- 
--    if (buflen <= 0)
-+    if ((long) buflen <= 0)
-       buflen = 1024;
- 
-     result = -1;
