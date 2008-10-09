@@ -19,7 +19,9 @@ include/libgda-%%VERSION%%/libgda-report/gda-report-engine.h
 include/libgda-%%VERSION%%/libgda-report/gda-report-rml-document.h
 include/libgda-%%VERSION%%/libgda-report/libgda-report.h
 include/libgda-%%VERSION%%/libgda-xslt/libgda-xslt.h
+include/libgda-%%VERSION%%/libgda/gda-attributes-manager.h
 include/libgda-%%VERSION%%/libgda/gda-batch.h
+include/libgda-%%VERSION%%/libgda/gda-binreloc.h
 include/libgda-%%VERSION%%/libgda/gda-blob-op.h
 include/libgda-%%VERSION%%/libgda/gda-column.h
 include/libgda-%%VERSION%%/libgda/gda-config.h
@@ -36,7 +38,6 @@ include/libgda-%%VERSION%%/libgda/gda-data-model-import.h
 include/libgda-%%VERSION%%/libgda/gda-data-model-iter.h
 include/libgda-%%VERSION%%/libgda/gda-data-model-iter-extra.h
 include/libgda-%%VERSION%%/libgda/gda-data-model-private.h
-include/libgda-%%VERSION%%/libgda/gda-data-model-query.h
 include/libgda-%%VERSION%%/libgda/gda-data-model.h
 include/libgda-%%VERSION%%/libgda/gda-data-proxy.h
 include/libgda-%%VERSION%%/libgda/gda-data-select.h
