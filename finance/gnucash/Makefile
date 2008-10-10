@@ -2,13 +2,13 @@
 # Date created:			  Mon Feb 03, 1997
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
-# $FreeBSD$
-#   $MCom$
+# $FreeBSD: ports/finance/gnucash/Makefile,v 1.126 2008/10/10 08:33:01 kwm Exp $
+#   $MCom: ports/finance/gnucash/Makefile,v 1.22 2007/07/30 20:05:51 mezz Exp $
 #
 
 PORTNAME=	gnucash
-PORTVERSION=	2.2.6
-PORTREVISION=	1
+PORTVERSION=	2.2.7
+PORTREVISION=	0
 CATEGORIES=	finance gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.gnucash.org/pub/gnucash/sources/stable/
@@ -20,7 +20,7 @@ COMMENT=	Quicken-like money and finance manager
 BUILD_DEPENDS=	guile>=1.6.8_2:${PORTSDIR}/lang/guile \
     		${LOCALBASE}/share/guile/1.8/slibcat:${PORTSDIR}/lang/slib-guile
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
-		goffice-0.6.6:${PORTSDIR}/devel/goffice06
+		goffice-0.8.7:${PORTSDIR}/devel/goffice
 RUN_DEPENDS=	guile>=1.6.8_2:${PORTSDIR}/lang/guile \
 		${LOCALBASE}/share/guile/1.8/slibcat:${PORTSDIR}/lang/slib-guile \
 		${SITE_PERL}/LWP.pm:${PORTSDIR}/www/p5-libwww \
@@ -57,13 +57,13 @@ GCONF_SCHEMAS=	apps_gnucash_dialog_business_common.schemas \
 		apps_gnucash_dialog_common.schemas \
 		apps_gnucash_dialog_prices.schemas \
 		apps_gnucash_dialog_print_checks.schemas \
-		apps_gnucash_import_qif.schemas \
 		apps_gnucash_dialog_reconcile.schemas \
 		apps_gnucash_dialog_scheduled_transctions.schemas \
 		apps_gnucash_dialog_totd.schemas \
 		apps_gnucash_general.schemas \
 		apps_gnucash_history.schemas \
 		apps_gnucash_import_generic_matcher.schemas \
+		apps_gnucash_import_qif.schemas \
 		apps_gnucash_warnings.schemas \
 		apps_gnucash_window_pages_account_tree.schemas \
 		apps_gnucash_window_pages_register.schemas
@@ -74,6 +74,7 @@ GCONF_SCHEMAS=	apps_gnucash_dialog_business_common.schemas \
 .if defined(WITH_AQBANKING) || defined(WITH_OPENHBCI)
 LIB_DEPENDS+=	aqbanking.21:${PORTSDIR}/finance/aqbanking \
 		ktoblzcheck.6:${PORTSDIR}/finance/ktoblzcheck
+GCONF_SCHEMAS+=	apps_gnucash_dialog_hbci.schemas
 CONFIGURE_ARGS+=--enable-hbci
 GC_LIBS+=	-laqbanking
 PLIST_SUB+=	AQBANKING=""
