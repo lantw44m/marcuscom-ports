@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins/Makefile,v 1.30 2008/09/12 01:31:01 ahze Exp $
+#   $MCom: ports/editors/gedit-plugins/Makefile,v 1.31 2008/09/27 01:52:59 mezz Exp $
 #
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	2.22.3
+PORTVERSION=	2.22.4
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
