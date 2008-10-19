@@ -3,11 +3,11 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/ruby-cairo/Makefile,v 1.8 2008/09/06 04:13:54 mezz Exp $
 #
 
 PORTNAME=	cairo
-PORTVERSION=	1.7.0
+PORTVERSION=	1.8.0
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://cairographics.org/releases/
 PKGNAMEPREFIX=	${RUBY_PKGNAMEPREFIX}
