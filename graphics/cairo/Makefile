@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.84 2008/09/20 09:22:32 kwm Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.85 2008/09/30 14:58:34 kwm Exp $
 #
 
 PORTNAME=	cairo
 PORTVERSION=	1.8.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 PORTEPOCH?=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
@@ -43,7 +43,7 @@ PLIST_SUB+=	X11=""
 .endif
 
 OPTIONS+=	GLITZ "Enable Glitz OpenGL Support" Off \
-		XCB "Enable XCB (X C-language Binding) Support" Off
+		XCB "Enable XCB (X C-language Binding) Support" On
 
 .include <bsd.port.pre.mk>
 
