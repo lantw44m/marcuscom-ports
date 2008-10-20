@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgsf/Makefile,v 1.30 2008/09/11 01:20:20 marcus Exp $
+#   $MCom: ports/devel/libgsf/Makefile,v 1.31 2008/10/20 03:21:00 mezz Exp $
 #
 
 PORTNAME=	libgsf
@@ -11,6 +11,7 @@ PORTVERSION=	1.14.10
 PORTREVISION?=	0
 CATEGORIES?=	devel
 MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	An extensible i/o abstraction for dealing with structured file formats
