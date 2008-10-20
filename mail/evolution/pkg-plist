@@ -4,9 +4,9 @@ include/evolution-%%VERSION%%/addressbook/gui/widgets/eab-menu.h
 include/evolution-%%VERSION%%/addressbook/gui/widgets/eab-popup.h
 include/evolution-%%VERSION%%/calendar/gui/dialogs/comp-editor-page.h
 include/evolution-%%VERSION%%/calendar/gui/dialogs/comp-editor.h
+include/evolution-%%VERSION%%/calendar/gui/e-cal-config.h
 include/evolution-%%VERSION%%/calendar/gui/e-cal-popup.h
 include/evolution-%%VERSION%%/calendar/gui/itip-utils.h
-include/evolution-%%VERSION%%/calendar/gui/e-cal-config.h
 include/evolution-%%VERSION%%/composer/e-msg-composer.h
 include/evolution-%%VERSION%%/e-conduit/e-pilot-map.h
 include/evolution-%%VERSION%%/e-conduit/e-pilot-util.h
@@ -150,14 +150,11 @@ include/evolution-%%VERSION%%/shell/evolution-shell-component-utils.h
 include/evolution-%%VERSION%%/table/e-cell-checkbox.h
 include/evolution-%%VERSION%%/table/e-cell-combo.h
 include/evolution-%%VERSION%%/table/e-cell-date.h
-include/evolution-%%VERSION%%/table/e-cell-float.h
 include/evolution-%%VERSION%%/table/e-cell-hbox.h
 include/evolution-%%VERSION%%/table/e-cell-number.h
 include/evolution-%%VERSION%%/table/e-cell-pixbuf.h
 include/evolution-%%VERSION%%/table/e-cell-popup.h
-include/evolution-%%VERSION%%/table/e-cell-progress.h
 include/evolution-%%VERSION%%/table/e-cell-size.h
-include/evolution-%%VERSION%%/table/e-cell-spin-button.h
 include/evolution-%%VERSION%%/table/e-cell-text.h
 include/evolution-%%VERSION%%/table/e-cell-toggle.h
 include/evolution-%%VERSION%%/table/e-cell-tree.h
@@ -506,6 +503,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/default/fi/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/fr/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/hu/mail/local/Inbox
+%%DATADIR%%/%%VERSION%%/default/it/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/ja/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/ko/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/lt/mail/local/Inbox
@@ -1080,6 +1078,7 @@ share/gnome/help/evolution/el/figures/Screenshot-Evolution-mailer-Preferences.pn
 share/gnome/help/evolution/el/figures/Screenshot-Free-Busy.png
 share/gnome/help/evolution/el/figures/account_editor_a.png
 share/gnome/help/evolution/el/figures/addrs_book_a.png
+share/gnome/help/evolution/el/figures/attach_reminder_a.png
 share/gnome/help/evolution/el/figures/calendar.png
 share/gnome/help/evolution/el/figures/categories_a.png
 share/gnome/help/evolution/el/figures/collap_head_a.png
@@ -1093,7 +1092,6 @@ share/gnome/help/evolution/el/figures/evo_account_editor_a.png
 share/gnome/help/evolution/el/figures/evo_account_info_a.png
 share/gnome/help/evolution/el/figures/evo_add_rule_a.png
 share/gnome/help/evolution/el/figures/evo_adv_search_a.png
-share/gnome/help/evolution/el/figures/attach_reminder_a.png
 share/gnome/help/evolution/el/figures/evo_allday_a.png
 share/gnome/help/evolution/el/figures/evo_attachreminder_plugin.png
 share/gnome/help/evolution/el/figures/evo_backup.png
@@ -2074,8 +2072,8 @@ share/locale/am/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ar/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/as/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-%%VERSION%%.mo
-share/locale/be@latin/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/be/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/be@latin/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/bn/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/bn_IN/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -2204,8 +2202,8 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/apps
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/status
-@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/apps
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/apps
@@ -2270,6 +2268,9 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/default/ja/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/ja/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/ja
+@dirrm %%DATADIR%%/%%VERSION%%/default/it/mail/local
+@dirrm %%DATADIR%%/%%VERSION%%/default/it/mail
+@dirrm %%DATADIR%%/%%VERSION%%/default/it
 @dirrm %%DATADIR%%/%%VERSION%%/default/hu/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/hu/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/hu
