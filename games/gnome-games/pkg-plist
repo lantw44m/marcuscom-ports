@@ -617,6 +617,9 @@ share/gnome/help/aisleriot/C/zebra.xml
 share/gnome/help/aisleriot/ca/aisleriot.xml
 share/gnome/help/aisleriot/ca/figures/camelot-goal.png
 share/gnome/help/aisleriot/ca/figures/clock-rules.png
+share/gnome/help/aisleriot/de/aisleriot.xml
+share/gnome/help/aisleriot/de/figures/camelot-goal.png
+share/gnome/help/aisleriot/de/figures/clock-rules.png
 share/gnome/help/aisleriot/es/aisleriot.xml
 share/gnome/help/aisleriot/es/figures/camelot-goal.png
 share/gnome/help/aisleriot/es/figures/clock-rules.png
@@ -760,6 +763,11 @@ share/gnome/help/gnect/ca/figures/mainwindow.png
 share/gnome/help/gnect/ca/figures/tables.png
 share/gnome/help/gnect/ca/figures/tileset.png
 share/gnome/help/gnect/ca/gnect.xml
+share/gnome/help/gnect/de/figures/connect.png
+share/gnome/help/gnect/de/figures/mainwindow.png
+share/gnome/help/gnect/de/figures/tables.png
+share/gnome/help/gnect/de/figures/tileset.png
+share/gnome/help/gnect/de/gnect.xml
 share/gnome/help/gnect/en_GB/figures/connect.png
 share/gnome/help/gnect/en_GB/figures/mainwindow.png
 share/gnome/help/gnect/en_GB/figures/tables.png
@@ -1501,6 +1509,7 @@ share/locale/zh_HK/LC_MESSAGES/gnome-games.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-games.mo
 share/omf/aisleriot/aisleriot-C.omf
 share/omf/aisleriot/aisleriot-ca.omf
+share/omf/aisleriot/aisleriot-de.omf
 share/omf/aisleriot/aisleriot-es.omf
 share/omf/aisleriot/aisleriot-fr.omf
 share/omf/aisleriot/aisleriot-oc.omf
@@ -1536,6 +1545,7 @@ share/omf/glines/glines-sv.omf
 share/omf/glines/glines-tr.omf
 share/omf/gnect/gnect-C.omf
 share/omf/gnect/gnect-ca.omf
+share/omf/gnect/gnect-de.omf
 share/omf/gnect/gnect-en_GB.omf
 share/omf/gnect/gnect-es.omf
 share/omf/gnect/gnect-fr.omf
@@ -1965,6 +1975,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/gnect/es
 @dirrm share/gnome/help/gnect/en_GB/figures
 @dirrm share/gnome/help/gnect/en_GB
+@dirrm share/gnome/help/gnect/de/figures
+@dirrm share/gnome/help/gnect/de
 @dirrm share/gnome/help/gnect/ca/figures
 @dirrm share/gnome/help/gnect/ca
 @dirrm share/gnome/help/gnect/C/figures
@@ -2039,6 +2051,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/aisleriot/fr
 @dirrm share/gnome/help/aisleriot/es/figures
 @dirrm share/gnome/help/aisleriot/es
+@dirrm share/gnome/help/aisleriot/de/figures
+@dirrm share/gnome/help/aisleriot/de
 @dirrm share/gnome/help/aisleriot/ca/figures
 @dirrm share/gnome/help/aisleriot/ca
 @dirrm share/gnome/help/aisleriot/C/figures
