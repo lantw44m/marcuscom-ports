@@ -304,6 +304,9 @@ share/gnome/help/empathy/C/empathy.xml
 share/gnome/help/empathy/C/figures/empathy-main-window.png
 share/gnome/help/empathy/C/figures/empathy-new-account.png
 share/gnome/help/empathy/C/legal.xml
+share/gnome/help/empathy/cs/empathy.xml
+share/gnome/help/empathy/cs/figures/empathy-main-window.png
+share/gnome/help/empathy/cs/figures/empathy-new-account.png
 share/gnome/help/empathy/de/empathy.xml
 share/gnome/help/empathy/de/figures/empathy-main-window.png
 share/gnome/help/empathy/de/figures/empathy-new-account.png
@@ -397,6 +400,7 @@ share/mission-control/profiles/sipphone.profile
 share/mission-control/profiles/sofiasip.profile
 share/mission-control/profiles/yahoo.profile
 share/omf/empathy/empathy-C.omf
+share/omf/empathy/empathy-cs.omf
 share/omf/empathy/empathy-de.omf
 share/omf/empathy/empathy-es.omf
 share/omf/empathy/empathy-fr.omf
@@ -415,6 +419,8 @@ share/omf/empathy/empathy-sv.omf
 @dirrm share/gnome/help/empathy/es
 @dirrm share/gnome/help/empathy/de/figures
 @dirrm share/gnome/help/empathy/de
+@dirrm share/gnome/help/empathy/cs/figures
+@dirrm share/gnome/help/empathy/cs
 @dirrm share/gnome/help/empathy/C/figures
 @dirrm share/gnome/help/empathy/C
 @dirrm share/gnome/help/empathy

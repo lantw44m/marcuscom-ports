@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.14 2008/09/10 03:59:17 mezz Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.15 2008/09/22 22:30:21 marcus Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	2.24.0
+PORTVERSION=	2.24.1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -20,6 +20,7 @@ LIB_DEPENDS=	missioncontrol-server.1:${PORTSDIR}/net-im/telepathy-mission-contro
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 USE_GMAKE=	yes
+USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	evolutiondataserver gnomehack gnomeprefix pygtk2 ltverhack \
