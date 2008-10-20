@@ -25,6 +25,8 @@ share/gnome/help/gconf-editor/oc/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/oc/gconf-editor.xml
 share/gnome/help/gconf-editor/pt_BR/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/pt_BR/gconf-editor.xml
+share/gnome/help/gconf-editor/ru/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/ru/gconf-editor.xml
 share/gnome/help/gconf-editor/sv/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/sv/gconf-editor.xml
 share/gnome/help/gconf-editor/th/figures/gconf_editor_anno_window.png
@@ -120,6 +122,7 @@ share/omf/gconf-editor/gconf-editor-fr.omf
 share/omf/gconf-editor/gconf-editor-it.omf
 share/omf/gconf-editor/gconf-editor-oc.omf
 share/omf/gconf-editor/gconf-editor-pt_BR.omf
+share/omf/gconf-editor/gconf-editor-ru.omf
 share/omf/gconf-editor/gconf-editor-sv.omf
 share/omf/gconf-editor/gconf-editor-th.omf
 share/omf/gconf-editor/gconf-editor-uk.omf
@@ -130,6 +133,8 @@ share/omf/gconf-editor/gconf-editor-uk.omf
 @dirrm share/gnome/help/gconf-editor/th
 @dirrm share/gnome/help/gconf-editor/sv/figures
 @dirrm share/gnome/help/gconf-editor/sv
+@dirrm share/gnome/help/gconf-editor/ru/figures
+@dirrm share/gnome/help/gconf-editor/ru
 @dirrm share/gnome/help/gconf-editor/pt_BR/figures
 @dirrm share/gnome/help/gconf-editor/pt_BR
 @dirrm share/gnome/help/gconf-editor/oc/figures
