@@ -52,6 +52,9 @@ share/gnome/help/cheese/es/figures/cheese-screenshot.jpg
 share/gnome/help/cheese/fr/cheese.xml
 share/gnome/help/cheese/fr/figures/cheese-effects-screenshot.jpg
 share/gnome/help/cheese/fr/figures/cheese-screenshot.jpg
+share/gnome/help/cheese/nl/cheese.xml
+share/gnome/help/cheese/nl/figures/cheese-effects-screenshot.jpg
+share/gnome/help/cheese/nl/figures/cheese-screenshot.jpg
 share/gnome/help/cheese/oc/cheese.xml
 share/gnome/help/cheese/oc/figures/cheese-effects-screenshot.jpg
 share/gnome/help/cheese/oc/figures/cheese-screenshot.jpg
@@ -134,6 +137,7 @@ share/omf/cheese/cheese-C.omf
 share/omf/cheese/cheese-el.omf
 share/omf/cheese/cheese-es.omf
 share/omf/cheese/cheese-fr.omf
+share/omf/cheese/cheese-nl.omf
 share/omf/cheese/cheese-oc.omf
 share/omf/cheese/cheese-pt_BR.omf
 share/omf/cheese/cheese-ru.omf
@@ -150,6 +154,8 @@ share/omf/cheese/cheese-th.omf
 @dirrm share/gnome/help/cheese/pt_BR
 @dirrm share/gnome/help/cheese/oc/figures
 @dirrm share/gnome/help/cheese/oc
+@dirrm share/gnome/help/cheese/nl/figures
+@dirrm share/gnome/help/cheese/nl
 @dirrm share/gnome/help/cheese/fr/figures
 @dirrm share/gnome/help/cheese/fr
 @dirrm share/gnome/help/cheese/es/figures

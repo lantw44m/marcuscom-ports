@@ -32,6 +32,8 @@ share/gnome/help/vinagre/sq/figures/vinagre-screenshot.png
 share/gnome/help/vinagre/sq/vinagre.xml
 share/gnome/help/vinagre/sv/figures/vinagre-screenshot.png
 share/gnome/help/vinagre/sv/vinagre.xml
+share/gnome/help/vinagre/th/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/th/vinagre.xml
 share/icons/hicolor/16x16/apps/vinagre.png
 share/icons/hicolor/16x16/mimetypes/application-x-remote-connection.png
 share/icons/hicolor/16x16/mimetypes/application-x-vnc.png
@@ -117,11 +119,14 @@ share/omf/vinagre/vinagre-oc.omf
 share/omf/vinagre/vinagre-pt.omf
 share/omf/vinagre/vinagre-sq.omf
 share/omf/vinagre/vinagre-sv.omf
+share/omf/vinagre/vinagre-th.omf
 %%DATADIR%%/GNOME_VinagreApplet.xml
 %%DATADIR%%/vinagre-ui.xml
 %%DATADIR%%/vinagre.glade
 @dirrm %%DATADIR%%
 @dirrm share/omf/vinagre
+@dirrm share/gnome/help/vinagre/th/figures
+@dirrm share/gnome/help/vinagre/th
 @dirrm share/gnome/help/vinagre/sv/figures
 @dirrm share/gnome/help/vinagre/sv
 @dirrm share/gnome/help/vinagre/sq/figures
