@@ -345,6 +345,10 @@ share/gnome/help/gnome-system-log/C/gnome-system-log.xml
 share/gnome/help/gnome-system-log/C/legal.xml
 share/gnome/help/gnome-system-log/ca/figures/syslog_window.png
 share/gnome/help/gnome-system-log/ca/gnome-system-log.xml
+share/gnome/help/gnome-system-log/de/figures/syslog_window.png
+share/gnome/help/gnome-system-log/de/gnome-system-log.xml
+share/gnome/help/gnome-system-log/el/figures/syslog_window.png
+share/gnome/help/gnome-system-log/el/gnome-system-log.xml
 share/gnome/help/gnome-system-log/en_GB/figures/syslog_window.png
 share/gnome/help/gnome-system-log/en_GB/gnome-system-log.xml
 share/gnome/help/gnome-system-log/es/figures/syslog_window.png
@@ -408,6 +412,8 @@ share/omf/gnome-search-tool/gnome-search-tool-sv.omf
 share/omf/gnome-search-tool/gnome-search-tool-uk.omf
 share/omf/gnome-system-log/gnome-system-log-C.omf
 share/omf/gnome-system-log/gnome-system-log-ca.omf
+share/omf/gnome-system-log/gnome-system-log-de.omf
+share/omf/gnome-system-log/gnome-system-log-el.omf
 share/omf/gnome-system-log/gnome-system-log-en_GB.omf
 share/omf/gnome-system-log/gnome-system-log-es.omf
 share/omf/gnome-system-log/gnome-system-log-fi.omf
@@ -526,6 +532,10 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/gnome-system-log/es
 @dirrm share/gnome/help/gnome-system-log/en_GB/figures
 @dirrm share/gnome/help/gnome-system-log/en_GB
+@dirrm share/gnome/help/gnome-system-log/el/figures
+@dirrm share/gnome/help/gnome-system-log/el
+@dirrm share/gnome/help/gnome-system-log/de/figures
+@dirrm share/gnome/help/gnome-system-log/de
 @dirrm share/gnome/help/gnome-system-log/ca/figures
 @dirrm share/gnome/help/gnome-system-log/ca
 @dirrm share/gnome/help/gnome-system-log/C/figures
