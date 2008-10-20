@@ -112,8 +112,10 @@ include/libgoffice-%%SHORT_VER%%/goffice/gtk/go-pixbuf.h
 include/libgoffice-%%SHORT_VER%%/goffice/gtk/go-rotation-sel.h
 include/libgoffice-%%SHORT_VER%%/goffice/gtk/go-selector.h
 include/libgoffice-%%SHORT_VER%%/goffice/gtk/goffice-gtk.h
+include/libgoffice-%%SHORT_VER%%/goffice/math/go-R.h
 include/libgoffice-%%SHORT_VER%%/goffice/math/go-complex.h
 include/libgoffice-%%SHORT_VER%%/goffice/math/go-cspline.h
+include/libgoffice-%%SHORT_VER%%/goffice/math/go-distribution.h
 include/libgoffice-%%SHORT_VER%%/goffice/math/go-fft.h
 include/libgoffice-%%SHORT_VER%%/goffice/math/go-math.h
 include/libgoffice-%%SHORT_VER%%/goffice/math/go-matrix3x3.h
@@ -152,12 +154,12 @@ lib/goffice/%%VERSION%%/plugins/plot_barcol/gog-barcol-prefs.glade
 lib/goffice/%%VERSION%%/plugins/plot_barcol/gog-minmax-prefs.glade
 lib/goffice/%%VERSION%%/plugins/plot_barcol/plot-types.xml
 lib/goffice/%%VERSION%%/plugins/plot_barcol/plugin.xml
-lib/goffice/%%VERSION%%/plugins/plot_boxes/boxplot.a
-lib/goffice/%%VERSION%%/plugins/plot_boxes/boxplot.la
-lib/goffice/%%VERSION%%/plugins/plot_boxes/boxplot.so
-lib/goffice/%%VERSION%%/plugins/plot_boxes/gog-boxplot-prefs.glade
-lib/goffice/%%VERSION%%/plugins/plot_boxes/plot-types.xml
-lib/goffice/%%VERSION%%/plugins/plot_boxes/plugin.xml
+lib/goffice/%%VERSION%%/plugins/plot_distrib/distrib.a
+lib/goffice/%%VERSION%%/plugins/plot_distrib/distrib.la
+lib/goffice/%%VERSION%%/plugins/plot_distrib/distrib.so
+lib/goffice/%%VERSION%%/plugins/plot_distrib/gog-boxplot-prefs.glade
+lib/goffice/%%VERSION%%/plugins/plot_distrib/plot-types.xml
+lib/goffice/%%VERSION%%/plugins/plot_distrib/plugin.xml
 lib/goffice/%%VERSION%%/plugins/plot_pie/gog-pie-prefs.glade
 lib/goffice/%%VERSION%%/plugins/plot_pie/gog-pie-series.glade
 lib/goffice/%%VERSION%%/plugins/plot_pie/gog-ring-prefs.glade
@@ -377,7 +379,6 @@ share/pixmaps/goffice/%%VERSION%%/bar-vboth.png
 share/pixmaps/goffice/%%VERSION%%/bar-vminus.png
 share/pixmaps/goffice/%%VERSION%%/bar-vplus.png
 share/pixmaps/goffice/%%VERSION%%/bar.xpm
-share/pixmaps/goffice/%%VERSION%%/boxplot.xpm
 share/pixmaps/goffice/%%VERSION%%/bubble.xpm
 share/pixmaps/goffice/%%VERSION%%/chart_area_1_1.png
 share/pixmaps/goffice/%%VERSION%%/chart_area_1_2.png
@@ -439,6 +440,7 @@ share/pixmaps/goffice/%%VERSION%%/chart_pie_2_3.png
 share/pixmaps/goffice/%%VERSION%%/chart_pie_3_1.png
 share/pixmaps/goffice/%%VERSION%%/chart_pie_3_2.png
 share/pixmaps/goffice/%%VERSION%%/chart_polar_1_1.png
+share/pixmaps/goffice/%%VERSION%%/chart_prob_1_1.png
 share/pixmaps/goffice/%%VERSION%%/chart_pyramid_1_1.png
 share/pixmaps/goffice/%%VERSION%%/chart_pyramid_1_2.png
 share/pixmaps/goffice/%%VERSION%%/chart_pyramid_1_3.png
@@ -470,9 +472,9 @@ share/pixmaps/goffice/%%VERSION%%/chart_surface_2_2.png
 share/pixmaps/goffice/%%VERSION%%/color.xpm
 share/pixmaps/goffice/%%VERSION%%/column.xpm
 share/pixmaps/goffice/%%VERSION%%/contour.xpm
+share/pixmaps/goffice/%%VERSION%%/dist.xpm
 share/pixmaps/goffice/%%VERSION%%/doughnut.xpm
 share/pixmaps/goffice/%%VERSION%%/dropbar.xpm
-share/pixmaps/goffice/%%VERSION%%/hist.xpm
 share/pixmaps/goffice/%%VERSION%%/linegraph.xpm
 share/pixmaps/goffice/%%VERSION%%/minmax.xpm
 share/pixmaps/goffice/%%VERSION%%/pie.xpm
@@ -495,7 +497,7 @@ share/pixmaps/goffice/%%VERSION%%/surface.xpm
 @dirrm lib/goffice/%%VERSION%%/plugins/plot_surface
 @dirrm lib/goffice/%%VERSION%%/plugins/plot_radar
 @dirrm lib/goffice/%%VERSION%%/plugins/plot_pie
-@dirrm lib/goffice/%%VERSION%%/plugins/plot_boxes
+@dirrm lib/goffice/%%VERSION%%/plugins/plot_distrib
 @dirrm lib/goffice/%%VERSION%%/plugins/plot_barcol
 @dirrm lib/goffice/%%VERSION%%/plugins
 @dirrm lib/goffice/%%VERSION%%
