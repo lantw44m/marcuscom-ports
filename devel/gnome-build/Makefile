@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gnome-build/Makefile,v 1.7 2008/08/18 22:41:42 kwm Exp $
+#   $MCom: ports/devel/gnome-build/Makefile,v 1.8 2008/09/22 18:14:45 marcus Exp $
 #
 
 PORTNAME=	gnome-build
-PORTVERSION=	2.24.0
+PORTVERSION=	2.24.1
 PORTEPOCH=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
