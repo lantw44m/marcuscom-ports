@@ -3,11 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.2 2008/09/08 12:11:25 kwm Exp $
+#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.3 2008/09/21 07:04:54 kwm Exp $
 #
 
 PORTNAME=	seahorse-plugins
-PORTVERSION=	2.24.0
+PORTVERSION=	2.24.1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -76,5 +76,9 @@ PLIST_SUB+=	APPLET="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|" == "|" = "|g' \
 			${WRKSRC}/configure
+
+post-install:
+	@-update-desktop-database
+	@-update-mime-database ${PREFIX}/share/mime
 
 .include <bsd.port.post.mk>

@@ -42,6 +42,19 @@ share/gnome/help/seahorse-plugins/C/figures/signature.png
 share/gnome/help/seahorse-plugins/C/figures/text-editor.png
 share/gnome/help/seahorse-plugins/C/legal.xml
 share/gnome/help/seahorse-plugins/C/seahorse-plugins.xml
+share/gnome/help/seahorse-plugins/cs/figures/export.png
+share/gnome/help/seahorse-plugins/cs/figures/file-manager.png
+share/gnome/help/seahorse-plugins/cs/figures/generate.png
+share/gnome/help/seahorse-plugins/cs/figures/import.png
+share/gnome/help/seahorse-plugins/cs/figures/key-manager.png
+share/gnome/help/seahorse-plugins/cs/figures/key-properties.png
+share/gnome/help/seahorse-plugins/cs/figures/passphrase.png
+share/gnome/help/seahorse-plugins/cs/figures/preferences.png
+share/gnome/help/seahorse-plugins/cs/figures/recipients.png
+share/gnome/help/seahorse-plugins/cs/figures/seahorse-window.png
+share/gnome/help/seahorse-plugins/cs/figures/signature.png
+share/gnome/help/seahorse-plugins/cs/figures/text-editor.png
+share/gnome/help/seahorse-plugins/cs/seahorse-plugins.xml
 share/gnome/help/seahorse-plugins/de/figures/export.png
 share/gnome/help/seahorse-plugins/de/figures/file-manager.png
 share/gnome/help/seahorse-plugins/de/figures/generate.png
@@ -55,6 +68,19 @@ share/gnome/help/seahorse-plugins/de/figures/seahorse-window.png
 share/gnome/help/seahorse-plugins/de/figures/signature.png
 share/gnome/help/seahorse-plugins/de/figures/text-editor.png
 share/gnome/help/seahorse-plugins/de/seahorse-plugins.xml
+share/gnome/help/seahorse-plugins/el/figures/export.png
+share/gnome/help/seahorse-plugins/el/figures/file-manager.png
+share/gnome/help/seahorse-plugins/el/figures/generate.png
+share/gnome/help/seahorse-plugins/el/figures/import.png
+share/gnome/help/seahorse-plugins/el/figures/key-manager.png
+share/gnome/help/seahorse-plugins/el/figures/key-properties.png
+share/gnome/help/seahorse-plugins/el/figures/passphrase.png
+share/gnome/help/seahorse-plugins/el/figures/preferences.png
+share/gnome/help/seahorse-plugins/el/figures/recipients.png
+share/gnome/help/seahorse-plugins/el/figures/seahorse-window.png
+share/gnome/help/seahorse-plugins/el/figures/signature.png
+share/gnome/help/seahorse-plugins/el/figures/text-editor.png
+share/gnome/help/seahorse-plugins/el/seahorse-plugins.xml
 share/gnome/help/seahorse-plugins/en_GB/figures/export.png
 share/gnome/help/seahorse-plugins/en_GB/figures/file-manager.png
 share/gnome/help/seahorse-plugins/en_GB/figures/generate.png
@@ -235,7 +261,9 @@ share/omf/seahorse-applet/seahorse-applet-ru.omf
 share/omf/seahorse-applet/seahorse-applet-sv.omf
 share/omf/seahorse-applet/seahorse-applet-vi.omf
 share/omf/seahorse-plugins/seahorse-plugins-C.omf
+share/omf/seahorse-plugins/seahorse-plugins-cs.omf
 share/omf/seahorse-plugins/seahorse-plugins-de.omf
+share/omf/seahorse-plugins/seahorse-plugins-el.omf
 share/omf/seahorse-plugins/seahorse-plugins-en_GB.omf
 share/omf/seahorse-plugins/seahorse-plugins-es.omf
 share/omf/seahorse-plugins/seahorse-plugins-fr.omf
@@ -250,8 +278,8 @@ share/pixmaps/seahorse-plugins/22x22/seahorse-applet-key.png
 share/pixmaps/seahorse-plugins/22x22/seahorse-applet-signed.png
 share/pixmaps/seahorse-plugins/22x22/seahorse-applet-text.png
 share/pixmaps/seahorse-plugins/22x22/seahorse-applet-unknown.png
-share/pixmaps/seahorse-plugins/22x22/seahorse-key.png
 share/pixmaps/seahorse-plugins/22x22/seahorse-key-personal.png
+share/pixmaps/seahorse-plugins/22x22/seahorse-key.png
 share/pixmaps/seahorse-plugins/22x22/seahorse-sign-bad.png
 share/pixmaps/seahorse-plugins/22x22/seahorse-sign-ok.png
 share/pixmaps/seahorse-plugins/22x22/seahorse-sign.png
@@ -261,8 +289,8 @@ share/pixmaps/seahorse-plugins/48x48/seahorse-applet-signed.png
 share/pixmaps/seahorse-plugins/48x48/seahorse-applet-text.png
 share/pixmaps/seahorse-plugins/48x48/seahorse-applet-unknown.png
 share/pixmaps/seahorse-plugins/48x48/seahorse-applet.png
-share/pixmaps/seahorse-plugins/48x48/seahorse-key.png
 share/pixmaps/seahorse-plugins/48x48/seahorse-key-personal.png
+share/pixmaps/seahorse-plugins/48x48/seahorse-key.png
 share/pixmaps/seahorse-plugins/48x48/seahorse-sign-bad.png
 share/pixmaps/seahorse-plugins/48x48/seahorse-sign-ok.png
 share/pixmaps/seahorse-plugins/48x48/seahorse-sign-unknown.png
@@ -283,18 +311,19 @@ share/pixmaps/seahorse-plugins/scalable/seahorse-sign-ok.svg
 share/pixmaps/seahorse-plugins/scalable/seahorse-sign-unknown.svg
 share/pixmaps/seahorse-plugins/scalable/seahorse-sign.svg
 %%DATADIR%%/glade/seahorse-agent-cache.glade
+%%DATADIR%%/glade/seahorse-applet-preferences.glade
 %%DATADIR%%/glade/seahorse-multi-encrypt.glade
 %%DATADIR%%/glade/seahorse-notify.glade
 %%DATADIR%%/glade/seahorse-prefs.glade
 %%DATADIR%%/glade/seahorse-progress.glade
-share/seahorse/glade/seahorse-applet-preferences.glade
+@dirrm %%DATADIR%%/glade
+@dirrm %%DATADIR%%
 @dirrmtry share/pixmaps/seahorse-plugins/scalable
 @dirrmtry share/pixmaps/seahorse-plugins/48x48
 @dirrmtry share/pixmaps/seahorse-plugins/22x22
 @dirrmtry share/pixmaps/seahorse-plugins
-@dirrm %%DATADIR%%/glade
-@dirrm %%DATADIR%%
 @dirrm share/omf/seahorse-plugins
+@dirrm share/omf/seahorse-applet
 @dirrm share/gnome/help/seahorse-plugins/vi/figures
 @dirrm share/gnome/help/seahorse-plugins/vi
 @dirrm share/gnome/help/seahorse-plugins/sv/figures
@@ -311,8 +340,12 @@ share/seahorse/glade/seahorse-applet-preferences.glade
 @dirrm share/gnome/help/seahorse-plugins/es
 @dirrm share/gnome/help/seahorse-plugins/en_GB/figures
 @dirrm share/gnome/help/seahorse-plugins/en_GB
+@dirrm share/gnome/help/seahorse-plugins/el/figures
+@dirrm share/gnome/help/seahorse-plugins/el
 @dirrm share/gnome/help/seahorse-plugins/de/figures
 @dirrm share/gnome/help/seahorse-plugins/de
+@dirrm share/gnome/help/seahorse-plugins/cs/figures
+@dirrm share/gnome/help/seahorse-plugins/cs
 @dirrm share/gnome/help/seahorse-plugins/C/figures
 @dirrm share/gnome/help/seahorse-plugins/C
 @dirrm share/gnome/help/seahorse-plugins
@@ -326,6 +359,10 @@ share/seahorse/glade/seahorse-applet-preferences.glade
 @dirrm share/gnome/help/seahorse-applet/C
 @dirrm share/gnome/help/seahorse-applet
 @dirrmtry share/applications
+@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
