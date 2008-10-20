@@ -310,9 +310,9 @@ share/pixmaps/seahorse/scalable/seahorse-sign.svg
 @dirrm share/gnome/help/seahorse/C/figures
 @dirrm share/gnome/help/seahorse/C
 @dirrm share/gnome/help/seahorse
+@dirrmtry share/applications
 @dirrm lib/seahorse
 @dirrm include/libcryptui
-@dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
