@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml3/Makefile,v 1.138 2008/09/22 10:32:25 kwm Exp $
+#   $MCom: ports/www/gtkhtml3/Makefile,v 1.139 2008/10/20 21:43:49 mezz Exp $
 #
 
 PORTNAME=	gtkhtml3
 PORTVERSION=	3.24.1
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME}
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -18,7 +19,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Lightweight HTML rendering/printing/editing engine
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
+		enchant.1:${PORTSDIR}/textproc/enchant
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 USE_GETTEXT=	yes
