@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.21 2008/08/20 19:01:14 marcus Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.22 2008/08/21 21:53:00 mezz Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.0.1
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://people.freedesktop.org/~alp/webkit/gtk/
 PKGNAMESUFFIX=	-gtk2
@@ -20,8 +20,8 @@ LIB_DEPENDS=	icutu.38:${PORTSDIR}/devel/icu \
 		curl.4:${PORTSDIR}/ftp/curl \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3
 
-OPTIONS=	VIDEO "Enable video support" on
 WANT_GSTREAMER=	yes
+USE_XORG=	xt
 USE_BISON=	build
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 libxslt
@@ -39,6 +39,8 @@ MAKEFILE=	GNUmakefile
 
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
+
+OPTIONS=	VIDEO "Enable video support" on
 
 .include <bsd.port.pre.mk>
 

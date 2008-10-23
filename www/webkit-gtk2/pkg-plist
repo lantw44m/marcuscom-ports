@@ -17,6 +17,7 @@ include/webkit-1.0/webkit/webkitwebframe.h
 include/webkit-1.0/webkit/webkitwebhistoryitem.h
 include/webkit-1.0/webkit/webkitwebsettings.h
 include/webkit-1.0/webkit/webkitwebview.h
+lib/libwebkit-1.0.a
 lib/libwebkit-1.0.la
 lib/libwebkit-1.0.so
 lib/libwebkit-1.0.so.1
