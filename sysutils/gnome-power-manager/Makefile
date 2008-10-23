@@ -3,15 +3,13 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.47 2008/09/22 22:58:50 kwm Exp $
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.48 2008/09/29 15:20:01 marcus Exp $
 #
 
 PORTNAME=	gnome-power-manager
-PORTVERSION=	2.24.0
-PORTREVISION=	1
+PORTVERSION=	2.24.1
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -32,8 +30,7 @@ USE_AUTOTOOLS=	libtool:15
 USE_GSTREAMER=	good
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui libwnck \
 		gnomedocutils gnomepanel
-CONFIGURE_ARGS=	--disable-icon-framing \
-		--with-doc-dir=${PREFIX}/share/doc \
+CONFIGURE_ARGS=	--with-doc-dir=${PREFIX}/share/doc \
 		--disable-docbook-docs
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
