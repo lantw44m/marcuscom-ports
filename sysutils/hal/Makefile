@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.49 2008/10/10 15:05:06 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.50 2008/10/26 19:42:57 marcus Exp $
 #
 
 PORTNAME=	hal
 DISTVERSION=	0.5.11
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -98,6 +98,8 @@ post-patch:
 		${WRKSRC}/hald/Makefile.in
 	@${REINPLACE_CMD} -e 's|user="0"|group="operator"|g' \
 		${WRKSRC}/hal.conf.in
+	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
+	    	< ${FILESDIR}/README.fuse > ${WRKDIR}/README.fuse
 
 post-install:
 	${MKDIR} ${DATADIR}/dist
@@ -118,7 +120,7 @@ post-install:
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/hald/freebsd/README \
 		${DOCSDIR}/README.freebsd
-	${INSTALL_DATA} ${FILESDIR}/README.fuse \
+	${INSTALL_DATA} ${WRKDIR}/README.fuse \
 	    	${DOCSDIR}/README.fuse
 .endif
 
