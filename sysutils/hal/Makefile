@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.48 2008/10/09 05:12:35 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.49 2008/10/10 15:05:06 marcus Exp $
 #
 
 PORTNAME=	hal
 DISTVERSION=	0.5.11
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -105,6 +105,8 @@ post-install:
 	${MKDIR} ${PREFIX}/share/hal/fdi/policy/10osvendor
 	${INSTALL_DATA} ${FILESDIR}/10-mouse-sysmouse.fdi \
 	    	${PREFIX}/share/hal/fdi/policy/10osvendor
+	${INSTALL_SCRIPT} ${FILESDIR}/mount-fuse \
+	    	${PREFIX}/share/hal/mount-fuse
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} \
 		${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
@@ -116,6 +118,8 @@ post-install:
 	${MKDIR} ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/hald/freebsd/README \
 		${DOCSDIR}/README.freebsd
+	${INSTALL_DATA} ${FILESDIR}/README.fuse \
+	    	${DOCSDIR}/README.fuse
 .endif
 
 .include <bsd.port.post.mk>
