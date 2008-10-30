@@ -254,6 +254,9 @@ share/locale/zh_TW/LC_MESSAGES/glib20.mo
 @dirrm share/glib-2.0/gettext/po
 @dirrm share/glib-2.0/gettext
 @dirrm share/glib-2.0
+@exec mkdir -p %D/lib/gio/modules
+@dirrmtry lib/gio/modules
+@dirrmtry lib/gio
 @dirrm include/glib-2.0/gobject
 @dirrm include/glib-2.0/glib
 @dirrm include/glib-2.0/gio
