@@ -31,6 +31,7 @@ share/gtksourceview-2.0/language-specs/def.lang
 share/gtksourceview-2.0/language-specs/desktop.lang
 share/gtksourceview-2.0/language-specs/diff.lang
 share/gtksourceview-2.0/language-specs/docbook.lang
+share/gtksourceview-2.0/language-specs/dot.lang
 share/gtksourceview-2.0/language-specs/dpatch.lang
 share/gtksourceview-2.0/language-specs/dtd.lang
 share/gtksourceview-2.0/language-specs/eiffel.lang
@@ -120,6 +121,7 @@ share/locale/hu/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/id/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/it/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/ja/LC_MESSAGES/gtksourceview-2.0.mo
+share/locale/kn/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/ko/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/lt/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/lv/LC_MESSAGES/gtksourceview-2.0.mo
