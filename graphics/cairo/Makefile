@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.85 2008/09/30 14:58:34 kwm Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.86 2008/10/19 16:05:34 mezz Exp $
 #
 
 PORTNAME=	cairo
-PORTVERSION=	1.8.0
-PORTREVISION?=	1
+PORTVERSION=	1.8.2
+PORTREVISION?=	0
 PORTEPOCH?=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
