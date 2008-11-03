@@ -1,4 +1,7 @@
+%%VAPIGEN%%bin/vala-gen-introspect
 bin/valac
+%%VAPIGEN%%bin/vapicheck
+%%VAPIGEN%%bin/vapigen
 include/vala-1.0/ccode/valaccodeassignment.h
 include/vala-1.0/ccode/valaccodebinaryexpression.h
 include/vala-1.0/ccode/valaccodeblock.h
@@ -223,9 +226,8 @@ include/vala-1.0/vala/valawhilestatement.h
 lib/libvala.la
 lib/libvala.so
 lib/libvala.so.0
-%%VAPIGEN%%lib/vala/gapi2xml.pl
-%%VAPIGEN%%lib/vala/gapi_pp.pl
 libdata/pkgconfig/vala-1.0.pc
+%%VAPIGEN%%lib/vala/gen-introspect
 share/devhelp/books/vala/attributes.html
 share/devhelp/books/vala/classes.html
 share/devhelp/books/vala/default.css
@@ -370,6 +372,7 @@ share/devhelp/books/vala/vala.devhelp2
 @dirrmtry share/devhelp/books
 @dirrmtry share/devhelp
 %%VAPIGEN%%@dirrm lib/vala
+@dirrm lib/pkgconfig
 @dirrm include/vala-1.0/vala
 @dirrm include/vala-1.0/gobject
 @dirrm include/vala-1.0/gee
