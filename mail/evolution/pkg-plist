@@ -2071,6 +2071,7 @@ share/idl/evolution-%%VERSION%%/evolution-calendar.idl
 share/locale/am/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ar/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/as/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/ast/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/be/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/be@latin/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -2344,5 +2345,7 @@ share/omf/evolution/evolution-sv.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
