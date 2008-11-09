@@ -3,7 +3,7 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.116 2008/10/07 15:45:24 kwm Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.117 2008/10/28 20:25:06 mezz Exp $
 #
 
 PORTNAME=	totem
@@ -44,7 +44,7 @@ CONFIGURE_ARGS=	--with-plugins="${TOTEM_PLUGINS}"
 MAN1=		totem.1 totem-video-thumbnailer.1
 GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
 		totem.schemas
-CONFLICTS?=	totem-gstreamer-[0-9]* totem-xine-[0-9]*
+CONFLICTS?=	totem-xine-[0-9]*
 
 OPTIONS=	LIRC "Enable lirc support" off \
 		GALAGO "Enable Galago support" off \
@@ -152,5 +152,6 @@ post-install:
 	${MKDIR} ${PREFIX}/share/vala/vapi
 	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.vapi ${PREFIX}/share/vala/vapi
 	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.deps ${PREFIX}/share/vala/vapi
+	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>
