@@ -19,6 +19,7 @@ share/desktop-directories/gnome-screensaver.directory
 %%DATADIR%%/lock-dialog-default.glade
 share/locale/ar/LC_MESSAGES/gnome-screensaver.mo
 share/locale/as/LC_MESSAGES/gnome-screensaver.mo
+share/locale/ast/LC_MESSAGES/gnome-screensaver.mo
 share/locale/be/LC_MESSAGES/gnome-screensaver.mo
 share/locale/be@latin/LC_MESSAGES/gnome-screensaver.mo
 share/locale/bg/LC_MESSAGES/gnome-screensaver.mo
@@ -129,5 +130,7 @@ share/pixmaps/gnome-logo-white.svg
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
