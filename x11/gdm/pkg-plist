@@ -46,6 +46,7 @@ share/gnome/help/gdm/es/gdm.xml
 share/gnome/help/gdm/fr/gdm.xml
 share/gnome/help/gdm/ko/gdm.xml
 share/gnome/help/gdm/oc/gdm.xml
+share/gnome/help/gdm/ru/gdm.xml
 share/gnome/help/gdm/sv/gdm.xml
 share/gnome/help/gdm/uk/gdm.xml
 share/icons/hicolor/16x16/apps/gdm-xnest.png
@@ -93,6 +94,7 @@ share/locale/ka/LC_MESSAGES/gdm.mo
 share/locale/kn/LC_MESSAGES/gdm.mo
 share/locale/ko/LC_MESSAGES/gdm.mo
 share/locale/ku/LC_MESSAGES/gdm.mo
+share/locale/la/LC_MESSAGES/gdm.mo
 share/locale/lt/LC_MESSAGES/gdm.mo
 share/locale/lv/LC_MESSAGES/gdm.mo
 share/locale/mai/LC_MESSAGES/gdm.mo
@@ -172,6 +174,7 @@ share/pixmaps/nohost.png
 @dirrm share/pixmaps/faces
 @dirrm share/gnome/help/gdm/uk
 @dirrm share/gnome/help/gdm/sv
+@dirrm share/gnome/help/gdm/ru
 @dirrm share/gnome/help/gdm/oc
 @dirrm share/gnome/help/gdm/ko
 @dirrm share/gnome/help/gdm/fr
@@ -226,6 +229,8 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/mai/LC_MESSAGES
 @dirrmtry share/locale/mai
+@dirrmtry share/locale/la/LC_MESSAGES
+@dirrmtry share/locale/la
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/hy/LC_MESSAGES
