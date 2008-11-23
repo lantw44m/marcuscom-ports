@@ -361,6 +361,7 @@ share/icons/hicolor/scalable/apps/deskbar-applet.svg
 share/locale/af/LC_MESSAGES/deskbar-applet.mo
 share/locale/ar/LC_MESSAGES/deskbar-applet.mo
 share/locale/as/LC_MESSAGES/deskbar-applet.mo
+share/locale/ast/LC_MESSAGES/deskbar-applet.mo
 share/locale/be/LC_MESSAGES/deskbar-applet.mo
 share/locale/be@latin/LC_MESSAGES/deskbar-applet.mo
 share/locale/bg/LC_MESSAGES/deskbar-applet.mo
@@ -514,5 +515,7 @@ share/omf/deskbar/deskbar-zh_CN.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
