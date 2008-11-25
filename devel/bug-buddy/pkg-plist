@@ -104,13 +104,13 @@ share/locale/xh/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_CN/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_HK/LC_MESSAGES/bug-buddy.mo
 share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
+@dirrmtry share/icons/HighContrastLargePrint/48x48/apps
+@dirrmtry share/icons/HighContrastLargePrint/48x48
+@dirrmtry share/icons/HighContrastLargePrint
 @dirrm %%DATADIR%%/bugzilla/ximian
 @dirrm %%DATADIR%%/bugzilla/gnome
 @dirrm %%DATADIR%%/bugzilla
 @dirrm %%DATADIR%%
-@dirrmtry share/icons/HighContrastLargePrint/48x48/apps
-@dirrmtry share/icons/HighContrastLargePrint/48x48
-@dirrmtry share/icons/HighContrastLargePrint
 @dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK

@@ -671,6 +671,11 @@ share/gnome/help/glchess/ca/figures/new_game.png
 share/gnome/help/glchess/ca/figures/preferences_game.png
 share/gnome/help/glchess/ca/figures/preferences_view.png
 share/gnome/help/glchess/ca/glchess.xml
+share/gnome/help/glchess/de/figures/game.png
+share/gnome/help/glchess/de/figures/new_game.png
+share/gnome/help/glchess/de/figures/preferences_game.png
+share/gnome/help/glchess/de/figures/preferences_view.png
+share/gnome/help/glchess/de/glchess.xml
 share/gnome/help/glchess/el/figures/game.png
 share/gnome/help/glchess/el/figures/new_game.png
 share/gnome/help/glchess/el/figures/preferences_game.png
@@ -1468,6 +1473,7 @@ share/locale/ka/LC_MESSAGES/gnome-games.mo
 share/locale/kn/LC_MESSAGES/gnome-games.mo
 share/locale/ko/LC_MESSAGES/gnome-games.mo
 share/locale/ku/LC_MESSAGES/gnome-games.mo
+share/locale/la/LC_MESSAGES/gnome-games.mo
 share/locale/lt/LC_MESSAGES/gnome-games.mo
 share/locale/lv/LC_MESSAGES/gnome-games.mo
 share/locale/mai/LC_MESSAGES/gnome-games.mo
@@ -1525,6 +1531,7 @@ share/omf/blackjack/blackjack-oc.omf
 share/omf/blackjack/blackjack-sv.omf
 share/omf/glchess/glchess-C.omf
 share/omf/glchess/glchess-ca.omf
+share/omf/glchess/glchess-de.omf
 share/omf/glchess/glchess-el.omf
 share/omf/glchess/glchess-es.omf
 share/omf/glchess/glchess-fr.omf
@@ -2019,6 +2026,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrm share/gnome/help/glchess/es
 @dirrm share/gnome/help/glchess/el/figures
 @dirrm share/gnome/help/glchess/el
+@dirrm share/gnome/help/glchess/de/figures
+@dirrm share/gnome/help/glchess/de
 @dirrm share/gnome/help/glchess/ca/figures
 @dirrm share/gnome/help/glchess/ca
 @dirrm share/gnome/help/glchess/C/figures
@@ -2121,6 +2130,8 @@ share/pixmaps/mahjongg/smooth.png
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mai/LC_MESSAGES
 @dirrmtry share/locale/mai
+@dirrmtry share/locale/la/LC_MESSAGES
+@dirrmtry share/locale/la
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
