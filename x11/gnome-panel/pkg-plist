@@ -311,6 +311,7 @@ share/locale/af/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/as/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/ast/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/be@latin/LC_MESSAGES/gnome-panel-2.0.mo
@@ -354,6 +355,7 @@ share/locale/kn/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ky/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/la/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/li/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-panel-2.0.mo
@@ -664,6 +666,8 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrmtry share/locale/mg
 @dirrmtry share/locale/mai/LC_MESSAGES
 @dirrmtry share/locale/mai
+@dirrmtry share/locale/la/LC_MESSAGES
+@dirrmtry share/locale/la
 @dirrmtry share/locale/ky/LC_MESSAGES
 @dirrmtry share/locale/ky
 @dirrmtry share/locale/ku/LC_MESSAGES
@@ -680,5 +684,7 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
