@@ -3,12 +3,13 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.133 2008/10/30 04:46:52 marcus Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.134 2008/11/24 20:03:49 mezz Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
 PORTVERSION=	2.18.3
+PORTREVISION=	1
 PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
@@ -60,6 +61,7 @@ GLIB_ARCH=	x86_64
 .else
 GLIB_ARCH=	${ARCH}
 .endif
+CONFIGURE_TARGET=${GLIB_ARCH}-portbld-freebsd${OSREL}
 
 .if defined(WITH_COLLATION_FIX)
 LIB_DEPENDS+=	icui18n:${PORTSDIR}/devel/icu
