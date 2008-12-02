@@ -8,7 +8,7 @@
 
 PORTNAME=	gimp-app
 DISTVERSION=	2.6.1
-PORTREVISION?=	3
+PORTREVISION?=	4
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -24,6 +24,7 @@ DISTNAME=	gimp-${DISTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNU Image Manipulation Program
 
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
 		wmf.2:${PORTSDIR}/graphics/libwmf \
 		poppler-glib.3:${PORTSDIR}/graphics/poppler-gtk \
@@ -34,6 +35,7 @@ LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
 		tiff.4:${PORTSDIR}/graphics/tiff \
 		lcms.1:${PORTSDIR}/graphics/lcms \
 		gegl-0.0.20:${PORTSDIR}/graphics/gegl
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 CONFLICTS=	gimp-app-devel-[0-9]*
 
@@ -47,14 +49,14 @@ USE_GNOME+=	gnomehack intltool intlhack gtk20 libartlgpl2 ltverhack \
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 LIBTOOLFLAGS=	--disable-ltlibs --release-ignore
-CONFIGURE_ARGS?=--disable-perl \
-		--with-html-dir=${PREFIX}/share/doc/gimp \
+CONFIGURE_ARGS?=--with-html-dir=${PREFIX}/share/doc/gimp \
 		--disable-gtk-doc \
 		--without-print \
 		--disable-python \
 		--with-desktop-dir=${PREFIX}/share \
 		--docdir=${PREFIX}/share/doc/gimp \
-		--enable-default-binary
+		--enable-default-binary \
+		--without-gnomevfs
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GIMP_THREAD_LIBS=${PTHREAD_LIBS}
@@ -64,7 +66,7 @@ WANT_GNOME=	yes
 
 OPTIONS?=	DEBUG "debugging" off \
 		DBUS "D-BUS support" on \
-		GNOMEVFS "Use GNOME VFS for the URI plug-in" on \
+		GVFS "Use GVFS for the URI plug-in" on \
 		HELPBROWSER "internal help browser" on \
 		MP "multiple processor support" off \
 		RSVG "SVG format support" on
@@ -130,9 +132,12 @@ CONFIGURE_ARGS+=	--with-dbus
 CONFIGURE_ARGS+=	--without-dbus
 .endif
 
-.if defined(WITH_GNOMEVFS) || ${HAVE_GNOME:Mgnomevfs2}!=""
+.if defined(WITH_GVFS) || ${HAVE_GNOME:Mgvfs}!=""
 LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
-USE_GNOME+=	gnomevfs2
+USE_GNOME+=	gvfs
+.  if ${HAVE_GNOME:Mlibgnomeui}!=""
+USE_GNOME+=	libgnomeui
+.  endif
 .endif
 
 .endif
