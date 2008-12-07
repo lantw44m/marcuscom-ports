@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgtop/Makefile,v 1.42 2008/09/29 21:30:59 marcus Exp $
+#   $MCom: ports/devel/libgtop/Makefile,v 1.43 2008/11/28 07:33:31 marcus Exp $
 #
 
 PORTNAME=	libgtop
@@ -40,6 +40,9 @@ RUN_DEPENDS+=	lsof:${PORTSDIR}/sysutils/lsof
 .if ${OSVERSION} >= 600000
 PKGMESSAGE=	${FILESDIR}/pkg-message
 .endif
+
+post-patch:
+	@${FIND} ${WRKSRC} -type f | ${XARGS} ${TOUCH} -f
 
 post-install:
 	@${CHGRP} kmem ${PREFIX}/bin/libgtop_server2
