@@ -4,14 +4,13 @@
 # Whom:				Ying-Chieh Liao <ijliao@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/libxml++26/Makefile,v 1.30 2008/08/21 21:53:00 mezz Exp $
+#   $MCom: ports/textproc/libxml++26/Makefile,v 1.31 2008/09/22 11:08:25 kwm Exp $
 #
 
 PORTNAME=	libxml++
-PORTVERSION=	2.24.0
+PORTVERSION=	2.24.1
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME}
-MASTER_SITE_SUBDIR=	sources/${PORTNAME}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	GNOME
 
 MAINTAINER=	bland@FreeBSD.org
 COMMENT=	XML API for C++
