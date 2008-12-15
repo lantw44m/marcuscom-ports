@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.27 2008/12/02 17:43:18 mezz Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.28 2008/12/06 01:10:50 marcus Exp $
 #
 
 PORTNAME=	gimp-app
@@ -45,7 +45,7 @@ USE_XORG=	xpm xmu xext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME+=	gnomehack intltool intlhack gtk20 libartlgpl2 ltverhack \
-		desktopfileutils
+		desktopfileutils librsvg2
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 LIBTOOLFLAGS=	--disable-ltlibs --release-ignore
@@ -68,8 +68,7 @@ OPTIONS?=	DEBUG "debugging" off \
 		DBUS "D-BUS support" on \
 		GVFS "Use GVFS for the URI plug-in" on \
 		HELPBROWSER "internal help browser" on \
-		MP "multiple processor support" off \
-		RSVG "SVG format support" on
+		MP "multiple processor support" off
 .endif
 
 .include <bsd.port.pre.mk>
@@ -90,14 +89,6 @@ MLINKS=	gimp-2.6.1 gimp.1 \
 	gimp-2.6.1 gimp-console-2.6.1 \
 	gimp-console-2.6.1 gimp-console.1 \
 	gimprc-2.6.5 gimprc.5
-
-.if defined(WITHOUT_RSVG)
-CONFIGURE_ARGS+=	--without-librsvg
-PLIST_SUB+=		SVG="@comment "
-.else
-USE_GNOME+=		librsvg2
-PLIST_SUB+=		SVG=""
-.endif
 
 .if defined(WITH_DEBUG)
 CONFIGURE_ARGS+=	--enable-debug
