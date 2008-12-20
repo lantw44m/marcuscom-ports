@@ -1,23 +1,23 @@
---- configure.orig	2008-08-20 16:48:07.000000000 -0400
-+++ configure	2008-08-20 16:48:23.000000000 -0400
+--- configure.orig	2008-12-19 19:07:23.000000000 -0500
++++ configure	2008-12-19 19:08:01.000000000 -0500
 @@ -791,7 +791,6 @@ ac_includes_default="\
  # include <unistd.h>
  #endif"
  
 -enable_option_checking=no
- ac_subst_vars='SHELL
- PATH_SEPARATOR
- PACKAGE_NAME
-@@ -909,7 +908,6 @@ ac_ct_F77
- LIBTOOL
- LTDLINCL
- LIBLTDL
--subdirs
- OS_IS_WIN32_TRUE
- OS_IS_WIN32_FALSE
+ ac_subst_vars='LTLIBOBJS
+ LIBOBJS
+ GTK_DOC_USE_LIBTOOL_FALSE
+@@ -878,7 +877,6 @@ USE_VERSION_SCRIPT_FALSE
  USE_VERSION_SCRIPT_TRUE
-@@ -1015,7 +1020,7 @@ GTK_CFLAGS
- GTK_LIBS
+ OS_IS_WIN32_FALSE
+ OS_IS_WIN32_TRUE
+-subdirs
+ LIBLTDL
+ LTDLINCL
+ LIBTOOL
+@@ -1054,7 +1052,7 @@ TDB_CFLAGS
+ TDB_LIBS
  VORBIS_CFLAGS
  VORBIS_LIBS'
 -ac_subdirs_all='libltdl'
