@@ -1,5 +1,5 @@
---- src/oss.c.orig	2008-08-20 22:11:17.000000000 -0400
-+++ src/oss.c	2008-12-18 02:04:42.000000000 -0500
+--- src/oss.c.orig	2008-09-01 19:53:47.000000000 -0400
++++ src/oss.c	2008-12-21 13:51:09.000000000 -0500
 @@ -235,7 +235,7 @@ static int open_oss(ca_context *c, struc
      ca_return_val_if_fail(c, CA_ERROR_INVALID);
      ca_return_val_if_fail(c->private, CA_ERROR_STATE);
@@ -18,3 +18,11 @@
              val = AFMT_S16_BE;
  #else
              val = AFMT_S16_LE;
+@@ -423,6 +423,7 @@ int driver_play(ca_context *c, uint32_t 
+     out->callback = cb;
+     out->userdata = userdata;
+     out->pipe_fd[0] = out->pipe_fd[1] = -1;
++    out->pcm = -1;
+ 
+     if (pipe(out->pipe_fd) < 0) {
+         ret = CA_ERROR_SYSTEM;
