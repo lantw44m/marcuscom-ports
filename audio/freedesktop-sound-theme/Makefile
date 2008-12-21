@@ -3,30 +3,22 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/audio/freedesktop-sound-theme/Makefile,v 1.1 2008/08/15 17:43:55 marcus Exp $
 #
 
 PORTNAME=	freedesktop-sound-theme
-PORTVERSION=	1.0
+PORTVERSION=	0.2
 CATEGORIES=	audio gnome
-MASTER_SITES=	http://0pointer.de/public/
-DISTNAME=	sound-theme-freedesktop
+MASTER_SITES=	http://people.freedesktop.org/~mccann/dist/
+DISTNAME=	sound-theme-freedesktop-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Sound theme based on the FreeDesktop specification
 
-NO_BUILD=	yes
-USE_GNOME=	gnomehier
-WRKSRC=		${WRKDIR}/freedesktop
-
-do-install:
-	${MKDIR} ${PREFIX}/share/sounds/freedesktop/stereo
-	${INSTALL_DATA} ${WRKSRC}/index.theme \
-	    	${PREFIX}/share/sounds/freedesktop
-	for f in ${WRKSRC}/stereo/*; do \
-	    bn=$$(${BASENAME} $${f}) ; \
-	    ${INSTALL_DATA} $${f} \
-	    	${PREFIX}/share/sounds/freedesktop/stereo/$${bn} ; \
-	done
+USE_BZIP2=	yes
+USE_GNOME=	gnomehier intlhack
+USE_GETTEXT=	yes
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>
