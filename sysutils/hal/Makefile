@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.52 2008/10/27 17:26:32 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.53 2008/12/07 05:58:07 marcus Exp $
 #
 
 PORTNAME=	hal
 DISTVERSION=	0.5.11
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -70,10 +70,6 @@ MAN8=		hald.8
 OPTIONS=	FIXED_MOUNTPOINTS "use fixed mountpoints" off
 
 .include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 505000
-IGNORE=	not supported on FreeBSD prior to 5.5-RELEASE
-.endif
 
 .if (${ARCH}=="i386" || ${ARCH}=="amd64" || ${ARCH}=="ia64")
 RUN_DEPENDS+=	dmidecode:${PORTSDIR}/sysutils/dmidecode
