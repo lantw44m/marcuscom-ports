@@ -6,10 +6,11 @@
 #
 
 PORTNAME=	dbus
-PORTVERSION?=	1.2.4
+PORTVERSION?=	1.2.4.2
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
+DISTNAME=	dbus-${PORTVERSION}permissive
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A message bus system for inter-application communication
