@@ -3,11 +3,11 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/consolekit/Makefile,v 1.17 2008/08/21 21:52:59 mezz Exp $
+#    $MCom: ports/sysutils/consolekit/Makefile,v 1.18 2008/10/18 05:10:57 marcus Exp $
 
 PORTNAME=	consolekit
 PORTVERSION=	0.3.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://people.freedesktop.org/~mccann/dist/
 DISTFILES=	ConsoleKit-${PORTVERSION}${EXTRACT_SUFX}
