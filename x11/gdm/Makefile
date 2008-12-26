@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.138 2008/11/19 19:30:42 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.139 2008/11/24 04:06:42 marcus Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.24.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -34,6 +34,7 @@ USE_GNOME=	gnomehack intlhack gnomehier libgnomeui librsvg2 gnomedocutils \
 		gnomeprefix gnomepanel
 GCONF_SCHEMAS=	gdm-simple-greeter.schemas
 GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--with-working-dir=${PREFIX}/share/gdm/home
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
@@ -73,11 +74,16 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|root:root|root:wheel|g' \
 		${WRKSRC}/data/Makefile.in
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
-	    	${WRKSRC}/daemon/gdm-session-worker.c
+	    	${WRKSRC}/daemon/gdm-session-worker.c \
+		${WRKSRC}/data/gconf.path
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
 		${WRKSRC}/configure ${WRKSRC}/daemon/*.c ${WRKSRC}/po/*.po
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/data/gconf.path \
+	    	${PREFIX}/share/gdm/gconf.path
+	${INSTALL_DATA} ${WRKSRC}/data/session-setup.entries \
+	    	${PREFIX}/share/gdm/session-setup.entries
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
