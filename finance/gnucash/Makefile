@@ -3,12 +3,12 @@
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
 # $FreeBSD: ports/finance/gnucash/Makefile,v 1.126 2008/10/10 08:33:01 kwm Exp $
-#   $MCom: ports/finance/gnucash/Makefile,v 1.22 2007/07/30 20:05:51 mezz Exp $
+#   $MCom: ports/finance/gnucash/Makefile,v 1.25 2008/10/10 08:49:19 kwm Exp $
 #
 
 PORTNAME=	gnucash
 PORTVERSION=	2.2.7
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	finance gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE} \
 		http://www.gnucash.org/pub/gnucash/sources/stable/
