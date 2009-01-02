@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#	$MCom: ports/graphics/py-cairo/Makefile,v 1.24 2008/12/20 05:43:37 marcus Exp $
+#	$MCom: ports/graphics/py-cairo/Makefile,v 1.25 2008/12/31 20:59:55 mezz Exp $
 #
 
 PORTNAME=	cairo
 PORTVERSION=	1.8.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	http://cairographics.org/releases/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,9 +17,7 @@ DISTNAME=	py${PORTNAME}-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Python bindings for Cairo
 
-BUILD_DEPENDS=	${PYNUMPY}
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
-RUN_DEPENDS=	${PYNUMPY}
 
 USE_PYTHON=	yes
 USE_GMAKE=	yes
