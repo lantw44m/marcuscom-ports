@@ -3,11 +3,11 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.28 2008/12/06 01:10:50 marcus Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.29 2008/12/15 06:59:20 marcus Exp $
 #
 
 PORTNAME=	gimp-app
-DISTVERSION=	2.6.3
+DISTVERSION=	2.6.4
 PORTREVISION?=	1
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
