@@ -3,10 +3,10 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/goocanvasmm/Makefile,v 1.1 2008/09/13 19:34:08 kwm Exp $
 
 PORTNAME=	goocanvasmm
-PORTVERSION=	0.11.0
+PORTVERSION=	0.13.0
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
