@@ -250,6 +250,7 @@ share/locale/pa/LC_MESSAGES/brasero.mo
 share/locale/pl/LC_MESSAGES/brasero.mo
 share/locale/pt/LC_MESSAGES/brasero.mo
 share/locale/pt_BR/LC_MESSAGES/brasero.mo
+share/locale/ro/LC_MESSAGES/brasero.mo
 share/locale/ru/LC_MESSAGES/brasero.mo
 share/locale/sl/LC_MESSAGES/brasero.mo
 share/locale/sr/LC_MESSAGES/brasero.mo
@@ -318,6 +319,8 @@ share/omf/brasero/brasero-sv.omf
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ro/LC_MESSAGES
+@dirrmtry share/locale/ro
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/oc/LC_MESSAGES
