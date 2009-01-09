@@ -3,13 +3,14 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/databases/glom/Makefile,v 1.20 2008/08/10 18:51:33 kwm Exp $
 #
 
 PORTNAME=	glom
-PORTVERSION=	1.7.1
+PORTVERSION=	1.8.5
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GNOME database designer and user interface
@@ -17,7 +18,7 @@ COMMENT=	GNOME database designer and user interface
 LIB_DEPENDS=	bakery-2.6:${PORTSDIR}/x11-toolkits/bakery \
 		gdamm-3.0.10:${PORTSDIR}/databases/libgdamm \
 		gtksourceviewmm-2.0.2:${PORTSDIR}/x11-toolkits/libgtksourceviewmm \
-		goocanvasmm-0.1.2:${PORTSDIR}/graphics/goocanvasmm
+		goocanvasmm-0.1.4:${PORTSDIR}/graphics/goocanvasmm
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/libgda-postgres-3.0.pc:${PORTSDIR}/databases/libgda3-postgresql
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
@@ -37,17 +38,17 @@ CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
 CONFIGURE_ARGS=	--with-postgres-utils=${LOCALBASE}/bin
 INSTALLS_ICONS=	yes
 
-OPTIONS=	SELF_HOSTING "Host the database locally" off
+#OPTIONS=	SELF_HOSTING "Host the database locally" on
 
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_SELF_HOSTING)
+#.if defined(WITH_SELF_HOSTING)
 # Note: USE_PGSQL has already been set above.
 BUILD_DEPENDS+=	postmaster:${PORTSDIR}/databases/postgresql${PGSQL_VER}-server
 RUN_DEPENDS+=	postmaster:${PORTSDIR}/databases/postgresql${PGSQL_VER}-server
-.else
-CONFIGURE_ARGS+=--enable-client-only
-.endif
+#.else
+#CONFIGURE_ARGS+=--enable-client-only
+#.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-update-mime-database|true|g' \
