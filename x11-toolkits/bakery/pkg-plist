@@ -27,6 +27,7 @@ libdata/pkgconfig/bakery-%%API_VERSION%%.pc
 share/locale/ar/LC_MESSAGES/bakery.mo
 share/locale/bg/LC_MESSAGES/bakery.mo
 share/locale/ca/LC_MESSAGES/bakery.mo
+share/locale/da/LC_MESSAGES/bakery.mo
 share/locale/de/LC_MESSAGES/bakery.mo
 share/locale/dz/LC_MESSAGES/bakery.mo
 share/locale/el/LC_MESSAGES/bakery.mo
