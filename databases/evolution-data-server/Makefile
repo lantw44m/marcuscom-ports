@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.162 2008/11/07 20:51:29 mezz Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.163 2008/11/25 02:02:29 marcus Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -45,14 +45,11 @@ PLIST_SUB=	VERSION="2.24" EVO_VERSION="1.2"
 
 .include <bsd.port.pre.mk>
 
-.if ( ( ${OSVERSION} < 504101 ) || ( ${OSVERSION} >= 600000 && ${OSVERSION} < 600012 ) )
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-libedataserver_e-msgport.c
-.endif
-
 .if defined(HEIMDAL_HOME) || defined(WITH_HEIMDAL)
 HEIMDAL_HOME?=	${LOCALBASE}
 LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal
 CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} --with-krb5-includes=${HEIMDAL_HOME}/include
+KRB5_LIB=		`${HEIMDAL_HOME}/bin/krb5-config gssapi --libs`
 .elif !defined(NO_KERBEROS)
 CONFIGURE_ARGS+=        --with-krb5=/usr
 KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`

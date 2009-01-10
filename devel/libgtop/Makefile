@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgtop/Makefile,v 1.43 2008/11/28 07:33:31 marcus Exp $
+#   $MCom: ports/devel/libgtop/Makefile,v 1.44 2008/12/07 05:29:10 marcus Exp $
 #
 
 PORTNAME=	libgtop
@@ -30,15 +30,13 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 INFO=		libgtop2
 
+PKGMESSAGE=	${FILESDIR}/pkg-message
+
 .include <bsd.port.pre.mk>
 
 .if ( ${OSVERSION} >= 800000 && ${OSVERSION} < 800019 ) || \
 	${OSVERSION} < 700104
 RUN_DEPENDS+=	lsof:${PORTSDIR}/sysutils/lsof
-.endif
-
-.if ${OSVERSION} >= 600000
-PKGMESSAGE=	${FILESDIR}/pkg-message
 .endif
 
 post-patch:
@@ -47,8 +45,6 @@ post-patch:
 post-install:
 	@${CHGRP} kmem ${PREFIX}/bin/libgtop_server2
 	@${CHMOD} 2555 ${PREFIX}/bin/libgtop_server2
-.if ${OSVERSION} >= 600000
 	@${CAT} ${PKGMESSAGE}
-.endif
 
 .include <bsd.port.post.mk>

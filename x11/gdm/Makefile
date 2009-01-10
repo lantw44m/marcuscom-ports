@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.140 2008/12/26 22:23:12 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.141 2008/12/26 23:27:53 marcus Exp $
 #
 
 PORTNAME=	gdm
@@ -65,12 +65,6 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 post-patch:
-.if ( ${OSVERSION} > 600000 && ${OSVERSION} < 600006 ) || \
-	( ${OSVERSION} < 503101 )
-.for po in zh_CN.po
-	@${REINPLACE_CMD} -e 's|%-|%|g' ${WRKSRC}/po/${po}
-.endfor
-.endif
 	@${REINPLACE_CMD} -e 's|root:root|root:wheel|g' \
 		${WRKSRC}/data/Makefile.in
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
