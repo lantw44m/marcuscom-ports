@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.17 2008/03/24 05:31:51 marcus Exp $
+# $MCom: ports/MC-UPDATING,v 1.18 2008/09/28 04:11:15 mezz Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -7,23 +7,3 @@ but sometimes they are unavoidable.
 You should get into the habit of checking this file for changes each
 time you update your ports collection, before attempting any port
 upgrades.
-
-2008XXXX:
-  AFFECTS: users of GNOME
-  AUTHOR: gnome@FreeBSD.org
-
-  GNOME has been updated to 2.24.x.  You have to deinstall a few ports first
-  before using portupgrade or portmaster in order to successfully upgrade
-  your GNOME installation.  After successfully upgrade, you have to reinstall
-  gnome-session so the gnome.desktop session file is properly installed.
-
-  Portupgrade users:
-    # pkgdb -Ff
-    # pkg_deinstall -fO gtkmm-2.12\*
-    # portupgrade -aOW
-    # portupgrade gnome-session
-
-  Portmaster users:
-    # pkg_delete -f gtkmm-2.12\*
-    # portmaster -a
-    # portmaster gnome-session
