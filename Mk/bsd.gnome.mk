@@ -3,13 +3,14 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.470 2008/08/24 17:25:29 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.471 2008/09/01 16:45:46 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
 #######################################################
 #
 # *** WARNING: Disable MARCUSCOM before merge in FreeBSD!
+#     Please also remove this section before merging into FreeBSD.
 #
 MARCUSCOM_CVS=yes
 
