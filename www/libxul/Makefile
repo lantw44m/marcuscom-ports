@@ -3,16 +3,16 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/xulrunner/Makefile,v 1.15 2007/12/28 17:39:31 mezz Exp $
+#   $MCom: ports/www/xulrunner/Makefile,v 1.17 2008/07/26 17:44:29 ahze Exp $
 #
 
 PORTNAME=	xulrunner
-PORTVERSION=	1.9.0.0
+PORTVERSION=	1.9.0.5
 PORTREVISION?=	0
 CATEGORIES?=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	xulrunner/releases/${PORTVERSION}/source/
-DISTNAME=	${PORTNAME}-${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}-source
+DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Mozilla runtime package that can be used to bootstrap XUL+XPCOM apps
