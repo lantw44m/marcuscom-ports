@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.190 2009/02/21 22:50:36 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.191 2009/02/22 08:15:07 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		notify.1:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-    		${LOCALBASE}/share/themes/LowContrast/index.theme:${PORTSDIR}/x11-themes/gnome-themes
+    		${LOCALBASE}/share/icons/HighContrastLargePrint/index.theme:${PORTSDIR}/x11-themes/gnome-themes
 
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
