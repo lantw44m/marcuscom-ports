@@ -495,6 +495,10 @@ share/gnome/help/char-palette/uk/figures/charpick_characters.png
 %%COMMANDER%%share/gnome/help/command-line/es/figures/command-line.png
 %%COMMANDER%%share/gnome/help/command-line/es/figures/prefs-macros.png
 %%COMMANDER%%share/gnome/help/command-line/es/figures/prefs.png
+%%COMMANDER%%share/gnome/help/command-line/eu/command-line.xml
+%%COMMANDER%%share/gnome/help/command-line/eu/figures/command-line.png
+%%COMMANDER%%share/gnome/help/command-line/eu/figures/prefs-macros.png
+%%COMMANDER%%share/gnome/help/command-line/eu/figures/prefs.png
 %%COMMANDER%%share/gnome/help/command-line/fr/command-line.xml
 %%COMMANDER%%share/gnome/help/command-line/fr/figures/command-line.png
 %%COMMANDER%%share/gnome/help/command-line/fr/figures/prefs-macros.png
@@ -1462,6 +1466,7 @@ share/omf/char-palette/char-palette-uk.omf
 %%COMMANDER%%share/omf/command-line/command-line-el.omf
 %%COMMANDER%%share/omf/command-line/command-line-en_GB.omf
 %%COMMANDER%%share/omf/command-line/command-line-es.omf
+%%COMMANDER%%share/omf/command-line/command-line-eu.omf
 %%COMMANDER%%share/omf/command-line/command-line-fr.omf
 %%COMMANDER%%share/omf/command-line/command-line-ko.omf
 %%COMMANDER%%share/omf/command-line/command-line-oc.omf
@@ -2065,6 +2070,8 @@ share/xmodmap/xmodmap.yu
 %%COMMANDER%%@dirrm share/gnome/help/command-line/ko
 %%COMMANDER%%@dirrm share/gnome/help/command-line/fr/figures
 %%COMMANDER%%@dirrm share/gnome/help/command-line/fr
+%%COMMANDER%%@dirrm share/gnome/help/command-line/eu/figures
+%%COMMANDER%%@dirrm share/gnome/help/command-line/eu
 %%COMMANDER%%@dirrm share/gnome/help/command-line/es/figures
 %%COMMANDER%%@dirrm share/gnome/help/command-line/es
 %%COMMANDER%%@dirrm share/gnome/help/command-line/en_GB/figures
