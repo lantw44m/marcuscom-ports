@@ -1,0 +1,11 @@
+--- configure.orig	2009-02-26 19:24:58.000000000 -0500
++++ configure	2009-02-26 19:25:13.000000000 -0500
+@@ -23806,7 +23806,7 @@ metacity-$VERSION:
+ "
+ 
+ METACITY_MINOR_VERSION=25
+-if test $(( $(echo $METACITY_MINOR_VERSION) %2)) == "1"; then
++if test $(( $(echo $METACITY_MINOR_VERSION) %2)) = "1"; then
+    stable_version=$(( ($METACITY_MINOR_VERSION / 2) * 2))
+    echo "This is the UNSTABLE branch of metacity"
+    echo -n "Use 2.$stable_version.x for stable "
