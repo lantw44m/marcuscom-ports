@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.52 2008/11/25 16:22:57 marcus Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.54 2009/02/27 07:23:25 marcus Exp $
 #
 
 PORTNAME=	libsoup
@@ -49,6 +49,10 @@ pre-everything::
 	@${ECHO_MSG} "libsoup has the following configurable option(s):"
 	@${ECHO_MSG} "	WITHOUT_SSL	Disable GnuTLS SSL support"
 	@${ECHO_MSG} ""
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
 
