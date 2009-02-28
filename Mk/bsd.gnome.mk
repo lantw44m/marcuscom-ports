@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.472 2009/01/12 06:59:31 adamw Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.473 2009/02/21 15:14:34 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -79,7 +79,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
 		libglade2 libgnome libgnomecanvas libgnomedb libgnomekbd libgnomeprint \
 		libgnomeprintui libgnomeui libgsf libgsf_gnome libgtkhtml libidl \
 		librsvg2 libwnck libxml2 libxslt libzvt linc metacity nautilus2 \
-		nautiluscdburner orbit2 pango pygnome2 pygnomedesktop pygnomeextras \
+		orbit2 pango pygnome2 pygnomedesktop pygnomeextras \
 		pygtk2 pygtksourceview vte
 
 GNOME_MAKEFILEIN?=	Makefile.in
@@ -478,10 +478,6 @@ desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-f
 desktopfileutils_DETECT=	${LOCALBASE}/bin/update-desktop-database
 desktopfileutils_USE_GNOME_IMPL=glib20
 
-nautiluscdburner_LIB_DEPENDS=nautilus-burn.4:${PORTSDIR}/sysutils/nautilus-cd-burner
-nautiluscdburner_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-burn.pc
-nautiluscdburner_USE_GNOME_IMPL=nautilus2 desktopfileutils
-
 gnomemenus_LIB_DEPENDS=		gnome-menu.2:${PORTSDIR}/x11/gnome-menus
 gnomemenus_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
 gnomemenus_USE_GNOME_IMPL=	glib20
@@ -499,7 +495,7 @@ gnomedocutils_USE_GNOME_IMPL=libxslt
 pygnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-desktop-2.0.pc
 pygnomedesktop_BUILD_DEPENDS=	${pygnomedesktop_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-desktop
 pygnomedesktop_RUN_DEPENDS=	${pygnomedesktop_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-desktop
-pygnomedesktop_USE_GNOME_IMPL=pygnome2 libgnomeprintui gtksourceview gnomepanel libwnck nautiluscdburner metacity
+pygnomedesktop_USE_GNOME_IMPL=pygnome2 libgnomeprintui gtksourceview gnomepanel libwnck nautilus metacity
 
 gtksharp10_DETECT=			${LOCALBASE}/libdata/pkgconfig/gtk-sharp.pc
 gtksharp10_BUILD_DEPENDS=	${gtksharp10_DETECT}:${PORTSDIR}/x11-toolkits/gtk-sharp10
