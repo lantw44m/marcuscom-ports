@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.82 2009/02/28 01:01:44 marcus Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.83 2009/02/28 01:10:08 marcus Exp $
 #
 
 PORTNAME=	gnome
@@ -25,7 +25,7 @@ LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		totem-plparser.12:${PORTSDIR}/multimedia/totem-pl-parser \
 		gnome-media-profiles.0:${PORTSDIR}/audio/gnome-media \
 		gnome-keyring:${PORTSDIR}/security/gnome-keyring \
-		evdocument.0:${PORTSDIR}/graphics/evince
+		evdocument.1:${PORTSDIR}/graphics/evince
 RUN_DEPENDS=	bug-buddy:${PORTSDIR}/devel/bug-buddy
 
 USE_BZIP2=	yes
