@@ -35,8 +35,6 @@
 %%PYTHON_SITELIBDIR%%/gtk-2.0/mediaprofiles.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/metacity.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/metacity.so
-%%PYTHON_SITELIBDIR%%/gtk-2.0/nautilusburn.la
-%%PYTHON_SITELIBDIR%%/gtk-2.0/nautilusburn.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/rsvg.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/rsvg.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/totem/__init__.py
@@ -103,9 +101,6 @@ libdata/pkgconfig/gnome-python-desktop-2.0.pc
 %%PORTDOCS%%share/examples/py-gnome/keyring-async.py
 %%PORTDOCS%%share/examples/py-gnome/keyring.py
 %%PORTDOCS%%share/examples/py-gnome/mediaprofiles/profiles.py
-%%PORTDOCS%%share/examples/py-gnome/nautilusburn/blank_disc.py
-%%PORTDOCS%%share/examples/py-gnome/nautilusburn/drive_selection.py
-%%PORTDOCS%%share/examples/py-gnome/nautilusburn/write_iso.py
 %%PORTDOCS%%share/examples/py-gnome/rsvg/rsvg-cairo.py
 %%PORTDOCS%%share/examples/py-gnome/wnck_example.py
 share/pygtk/2.0/defs/_gnomedesktop.defs
@@ -117,12 +112,10 @@ share/pygtk/2.0/defs/gnomekeyring.defs
 share/pygtk/2.0/defs/gtksourceview.defs
 share/pygtk/2.0/defs/mediaprofiles.defs
 share/pygtk/2.0/defs/metacity.defs
-share/pygtk/2.0/defs/nautilus_burn.defs
 share/pygtk/2.0/defs/print.defs
 share/pygtk/2.0/defs/printui.defs
 share/pygtk/2.0/defs/wnck.defs
 %%PORTDOCS%%@dirrm share/examples/py-gnome/rsvg
-%%PORTDOCS%%@dirrm share/examples/py-gnome/nautilusburn
 %%PORTDOCS%%@dirrm share/examples/py-gnome/mediaprofiles
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtksourceview
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gnomeprint
