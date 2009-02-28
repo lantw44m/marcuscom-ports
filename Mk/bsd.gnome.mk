@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.473 2009/02/21 15:14:34 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.474 2009/02/28 01:02:25 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -79,7 +79,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
 		libglade2 libgnome libgnomecanvas libgnomedb libgnomekbd libgnomeprint \
 		libgnomeprintui libgnomeui libgsf libgsf_gnome libgtkhtml libidl \
 		librsvg2 libwnck libxml2 libxslt libzvt linc metacity nautilus2 \
-		orbit2 pango pygnome2 pygnomedesktop pygnomeextras \
+		nautiluscdburner orbit2 pango pygnome2 pygnomedesktop pygnomeextras \
 		pygtk2 pygtksourceview vte
 
 GNOME_MAKEFILEIN?=	Makefile.in
@@ -477,6 +477,10 @@ desktopfileutils_BUILD_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop
 desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 desktopfileutils_DETECT=	${LOCALBASE}/bin/update-desktop-database
 desktopfileutils_USE_GNOME_IMPL=glib20
+
+nautiluscdburner_LIB_DEPENDS=nautilus-burn.4:${PORTSDIR}/sysutils/nautilus-cd-burner
+nautiluscdburner_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-burn.pc
+nautiluscdburner_USE_GNOME_IMPL=nautilus2 desktopfileutils
 
 gnomemenus_LIB_DEPENDS=		gnome-menu.2:${PORTSDIR}/x11/gnome-menus
 gnomemenus_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
