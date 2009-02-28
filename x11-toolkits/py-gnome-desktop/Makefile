@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.81 2009/02/27 21:46:20 marcus Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.82 2009/02/28 01:01:44 marcus Exp $
 #
 
 PORTNAME=	gnome
@@ -32,7 +32,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gnomehack libgnomeprintui gnomepanel gnomedesktop \
-		gtksourceview libwnck nautilus pygnome2 metacity \
+		gtksourceview libwnck nautilus2 pygnome2 metacity \
 		evolutiondataserver
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-metacity --disable-nautilusburn
