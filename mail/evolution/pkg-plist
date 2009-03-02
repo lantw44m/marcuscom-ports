@@ -1319,6 +1319,98 @@ share/gnome/help/evolution/es/figures/stock_search.png
 share/gnome/help/evolution/es/figures/sub-others-folder.png
 share/gnome/help/evolution/es/figures/sub-pub-fold.png
 share/gnome/help/evolution/es/figures/ver_view_a.png
+share/gnome/help/evolution/eu/evolution.xml
+share/gnome/help/evolution/eu/figures/account_editor_a.png
+share/gnome/help/evolution/eu/figures/attach_reminder_a.png
+share/gnome/help/evolution/eu/figures/categories_a.png
+share/gnome/help/evolution/eu/figures/collap_head_a.png
+share/gnome/help/evolution/eu/figures/config-cal.png
+share/gnome/help/evolution/eu/figures/config-mail.png
+share/gnome/help/evolution/eu/figures/contacts_mainwindow_a.png
+share/gnome/help/evolution/eu/figures/delgt-add.png
+share/gnome/help/evolution/eu/figures/evo_account_editor_a.png
+share/gnome/help/evolution/eu/figures/evo_adv_search_a.png
+share/gnome/help/evolution/eu/figures/evo_allday_a.png
+share/gnome/help/evolution/eu/figures/evo_attachreminder_plugin.png
+share/gnome/help/evolution/eu/figures/evo_backup.png
+share/gnome/help/evolution/eu/figures/evo_backup_prgsbar.png
+share/gnome/help/evolution/eu/figures/evo_backup_warning.png
+share/gnome/help/evolution/eu/figures/evo_blink.png
+share/gnome/help/evolution/eu/figures/evo_cal_a.png
+share/gnome/help/evolution/eu/figures/evo_cal_advsearch.png
+share/gnome/help/evolution/eu/figures/evo_cal_callout_a.png
+share/gnome/help/evolution/eu/figures/evo_cal_prop_a.png
+share/gnome/help/evolution/eu/figures/evo_calender_appointmnt.png
+share/gnome/help/evolution/eu/figures/evo_calstatus_a.png
+share/gnome/help/evolution/eu/figures/evo_contacteditor_a.png
+share/gnome/help/evolution/eu/figures/evo_crash_recovery.png
+share/gnome/help/evolution/eu/figures/evo_custom_header.png
+share/gnome/help/evolution/eu/figures/evo_debuglogs_a.png
+share/gnome/help/evolution/eu/figures/evo_delegate_permission_a.png
+share/gnome/help/evolution/eu/figures/evo_dialog-info.png
+share/gnome/help/evolution/eu/figures/evo_dialog-warning.png
+share/gnome/help/evolution/eu/figures/evo_edit_rule_a.png
+share/gnome/help/evolution/eu/figures/evo_edit_search.png
+share/gnome/help/evolution/eu/figures/evo_flag_follow_up_a.png
+share/gnome/help/evolution/eu/figures/evo_gwreceive_a.png
+share/gnome/help/evolution/eu/figures/evo_gwreceiveedit_a.png
+share/gnome/help/evolution/eu/figures/evo_gwreceiveoptedit_a.png
+share/gnome/help/evolution/eu/figures/evo_gwstatustrack.png
+share/gnome/help/evolution/eu/figures/evo_identity_a.png
+share/gnome/help/evolution/eu/figures/evo_identityedit_a.png
+share/gnome/help/evolution/eu/figures/evo_imapheader_a.png
+share/gnome/help/evolution/eu/figures/evo_shd_memo_a.png
+share/gnome/help/evolution/eu/figures/evo_timezone_a.png
+share/gnome/help/evolution/eu/figures/evo_usereceive_a.png
+share/gnome/help/evolution/eu/figures/evo_imapreceive_a.png
+share/gnome/help/evolution/eu/figures/evo_import_asst_a.png
+share/gnome/help/evolution/eu/figures/evo_junk_a.png
+share/gnome/help/evolution/eu/figures/evo_label_a.png
+share/gnome/help/evolution/eu/figures/evo_labels_a.png
+share/gnome/help/evolution/eu/figures/evo_mail_a.png
+share/gnome/help/evolution/eu/figures/evo_mail_callout_a.png
+share/gnome/help/evolution/eu/figures/evo_mail_notifier.png
+share/gnome/help/evolution/eu/figures/evo_maildirreceive_a.png
+share/gnome/help/evolution/eu/figures/evo_mboxreceive_a.png
+share/gnome/help/evolution/eu/figures/evo_memo_a.png
+share/gnome/help/evolution/eu/figures/evo_mereceive_a.png
+share/gnome/help/evolution/eu/figures/evo_message_filters_a.png
+share/gnome/help/evolution/eu/figures/evo_mhreceive_a.png
+share/gnome/help/evolution/eu/figures/evo_newmail.png
+share/gnome/help/evolution/eu/figures/evo_newmess_a.png
+share/gnome/help/evolution/eu/figures/evo_offline.png
+share/gnome/help/evolution/eu/figures/evo_popreceive_a.png
+share/gnome/help/evolution/eu/figures/evo_proxyadd_a.png
+share/gnome/help/evolution/eu/figures/evo_receive_setup_a.png
+share/gnome/help/evolution/eu/figures/evo_rmdrnotes_a.png
+share/gnome/help/evolution/eu/figures/evo_rule_a.png
+share/gnome/help/evolution/eu/figures/evo_select_add_folder.png
+share/gnome/help/evolution/eu/figures/evo_select_folder.png
+share/gnome/help/evolution/eu/figures/evo_send_option_a.png
+share/gnome/help/evolution/eu/figures/evo_send_setup_a.png
+share/gnome/help/evolution/eu/figures/evo_sendstatus_a.png
+share/gnome/help/evolution/eu/figures/exchg-identity.png
+share/gnome/help/evolution/eu/figures/exchng-identity.png
+share/gnome/help/evolution/eu/figures/exchng-rec-mail.png
+share/gnome/help/evolution/eu/figures/exchng-rec-mails.png
+share/gnome/help/evolution/eu/figures/exchng-rec-option.png
+share/gnome/help/evolution/eu/figures/exchng-rec-options.png
+share/gnome/help/evolution/eu/figures/exchng-settings.png
+share/gnome/help/evolution/eu/figures/filter-new-fig.png
+share/gnome/help/evolution/eu/figures/free_busy.png
+share/gnome/help/evolution/eu/figures/google_cal_view.png
+share/gnome/help/evolution/eu/figures/mail-threaded.png
+share/gnome/help/evolution/eu/figures/mailer_preferences.png
+share/gnome/help/evolution/eu/figures/minus.png
+share/gnome/help/evolution/eu/figures/plus.png
+share/gnome/help/evolution/eu/figures/proxy-cal.png
+share/gnome/help/evolution/eu/figures/proxy-login.png
+share/gnome/help/evolution/eu/figures/quick_add_a.png
+share/gnome/help/evolution/eu/figures/quick_reference.png
+share/gnome/help/evolution/eu/figures/stock_search.png
+share/gnome/help/evolution/eu/figures/sub-others-folder.png
+share/gnome/help/evolution/eu/figures/sub-pub-fold.png
+share/gnome/help/evolution/eu/figures/ver_view_a.png
 share/gnome/help/evolution/fr/evolution.xml
 share/gnome/help/evolution/fr/figures/account_editor_a.png
 share/gnome/help/evolution/fr/figures/attach_reminder_a.png
@@ -1895,6 +1987,7 @@ share/omf/evolution/evolution-de.omf
 share/omf/evolution/evolution-el.omf
 share/omf/evolution/evolution-en_GB.omf
 share/omf/evolution/evolution-es.omf
+share/omf/evolution/evolution-eu.omf
 share/omf/evolution/evolution-fr.omf
 share/omf/evolution/evolution-mk.omf
 share/omf/evolution/evolution-oc.omf
@@ -1912,6 +2005,8 @@ share/omf/evolution/evolution-sv.omf
 @dirrm share/gnome/help/evolution/mk
 @dirrm share/gnome/help/evolution/fr/figures
 @dirrm share/gnome/help/evolution/fr
+@dirrm share/gnome/help/evolution/eu/figures
+@dirrm share/gnome/help/evolution/eu
 @dirrm share/gnome/help/evolution/es/figures
 @dirrm share/gnome/help/evolution/es
 @dirrm share/gnome/help/evolution/en_GB/figures
