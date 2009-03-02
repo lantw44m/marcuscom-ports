@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/glom/Makefile,v 1.20 2008/08/10 18:51:33 kwm Exp $
+#   $MCom: ports/databases/glom/Makefile,v 1.21 2009/01/09 11:46:25 kwm Exp $
 #
 
 PORTNAME=	glom
-PORTVERSION=	1.8.5
+PORTVERSION=	1.9.3
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -16,13 +16,13 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GNOME database designer and user interface
 
 LIB_DEPENDS=	bakery-2.6:${PORTSDIR}/x11-toolkits/bakery \
-		gdamm-3.0.10:${PORTSDIR}/databases/libgdamm \
+		gdamm-4.0.10:${PORTSDIR}/databases/libgdamm \
 		gtksourceviewmm-2.0.2:${PORTSDIR}/x11-toolkits/libgtksourceviewmm \
 		goocanvasmm-0.1.4:${PORTSDIR}/graphics/goocanvasmm
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		${LOCALBASE}/libdata/pkgconfig/libgda-postgres-3.0.pc:${PORTSDIR}/databases/libgda3-postgresql
+		${LOCALBASE}/libdata/pkgconfig/libgda-postgres-4.0.pc:${PORTSDIR}/databases/libgda4-postgresql
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		${LOCALBASE}/libdata/pkgconfig/libgda-postgres-3.0.pc:${PORTSDIR}/databases/libgda3-postgresql
+		${LOCALBASE}/libdata/pkgconfig/libgda-postgres-4.0.pc:${PORTSDIR}/databases/libgda4-postgresql
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
