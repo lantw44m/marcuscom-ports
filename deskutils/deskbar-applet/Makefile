@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.94 2008/11/23 02:11:32 marcus Exp $
+#   $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.96 2009/02/27 17:50:35 marcus Exp $
 #
 
 PORTNAME=	deskbar-applet
 PORTVERSION=	2.25.91
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -18,7 +19,8 @@ COMMENT=	Omnipresent versatile search interface
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/elementtree/__init__.py:${PORTSDIR}/devel/py-elementtree \
 		${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/elementtree/__init__.py:${PORTSDIR}/devel/py-elementtree \
-		${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus
+		${PYTHON_SITELIBDIR}/dbus/__init__.py:${PORTSDIR}/devel/py-dbus \
+		${PYTHON_SITELIBDIR}/simplejson-2.0.9-py${PYTHON_VER}-${OPSYS:L}-${_OSRELEASE}-${ARCH}.egg:${PORTSDIR}/devel/py-simplejson
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
@@ -37,6 +39,8 @@ GCONF_SCHEMAS=	deskbar-applet.schemas
 OPTIONS=	EVO "Enable evolution support" on
 
 .include <bsd.port.pre.mk>
+
+_OSRELEASE!=	${UNAME} -r
 
 .if !defined(WITHOUT_EVO)
 USE_GNOME+=	evolutiondataserver
