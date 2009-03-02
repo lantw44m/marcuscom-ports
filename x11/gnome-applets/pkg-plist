@@ -483,6 +483,10 @@ share/gnome/help/char-palette/uk/figures/charpick_characters.png
 %%COMMANDER%%share/gnome/help/command-line/C/figures/prefs-macros.png
 %%COMMANDER%%share/gnome/help/command-line/C/figures/prefs.png
 %%COMMANDER%%share/gnome/help/command-line/C/legal.xml
+%%COMMANDER%%share/gnome/help/command-line/de/command-line.xml
+%%COMMANDER%%share/gnome/help/command-line/de/figures/command-line.png
+%%COMMANDER%%share/gnome/help/command-line/de/figures/prefs-macros.png
+%%COMMANDER%%share/gnome/help/command-line/de/figures/prefs.png
 %%COMMANDER%%share/gnome/help/command-line/el/command-line.xml
 %%COMMANDER%%share/gnome/help/command-line/el/figures/command-line.png
 %%COMMANDER%%share/gnome/help/command-line/el/figures/prefs-macros.png
@@ -1054,6 +1058,7 @@ share/gnome/help/gweather/zh_CN/figures/stock_weather-sunny.png
 share/gnome/help/gweather/zh_CN/gweather.xml
 %%PYTHON%%share/gnome/help/invest-applet/C/invest-applet.xml
 %%PYTHON%%share/gnome/help/invest-applet/C/legal.xml
+%%PYTHON%%share/gnome/help/invest-applet/de/invest-applet.xml
 %%PYTHON%%share/gnome/help/invest-applet/el/invest-applet.xml
 %%PYTHON%%share/gnome/help/invest-applet/es/invest-applet.xml
 %%PYTHON%%share/gnome/help/invest-applet/fi/invest-applet.xml
@@ -1463,6 +1468,7 @@ share/omf/char-palette/char-palette-ru.omf
 share/omf/char-palette/char-palette-sv.omf
 share/omf/char-palette/char-palette-uk.omf
 %%COMMANDER%%share/omf/command-line/command-line-C.omf
+%%COMMANDER%%share/omf/command-line/command-line-de.omf
 %%COMMANDER%%share/omf/command-line/command-line-el.omf
 %%COMMANDER%%share/omf/command-line/command-line-en_GB.omf
 %%COMMANDER%%share/omf/command-line/command-line-es.omf
@@ -1549,6 +1555,7 @@ share/omf/gweather/gweather-sv.omf
 share/omf/gweather/gweather-uk.omf
 share/omf/gweather/gweather-zh_CN.omf
 %%PYTHON%%share/omf/invest-applet/invest-applet-C.omf
+%%PYTHON%%share/omf/invest-applet/invest-applet-de.omf
 %%PYTHON%%share/omf/invest-applet/invest-applet-el.omf
 %%PYTHON%%share/omf/invest-applet/invest-applet-es.omf
 %%PYTHON%%share/omf/invest-applet/invest-applet-fi.omf
@@ -1914,6 +1921,7 @@ share/xmodmap/xmodmap.yu
 %%PYTHON%%@dirrm share/gnome/help/invest-applet/fi
 %%PYTHON%%@dirrm share/gnome/help/invest-applet/es
 %%PYTHON%%@dirrm share/gnome/help/invest-applet/el
+%%PYTHON%%@dirrm share/gnome/help/invest-applet/de
 %%PYTHON%%@dirrm share/gnome/help/invest-applet/C
 %%PYTHON%%@dirrm share/gnome/help/invest-applet
 @dirrm share/gnome/help/gweather/zh_CN/figures
@@ -2078,6 +2086,8 @@ share/xmodmap/xmodmap.yu
 %%COMMANDER%%@dirrm share/gnome/help/command-line/en_GB
 %%COMMANDER%%@dirrm share/gnome/help/command-line/el/figures
 %%COMMANDER%%@dirrm share/gnome/help/command-line/el
+%%COMMANDER%%@dirrm share/gnome/help/command-line/de/figures
+%%COMMANDER%%@dirrm share/gnome/help/command-line/de
 %%COMMANDER%%@dirrm share/gnome/help/command-line/C/figures
 %%COMMANDER%%@dirrm share/gnome/help/command-line/C
 %%COMMANDER%%@dirrm share/gnome/help/command-line
