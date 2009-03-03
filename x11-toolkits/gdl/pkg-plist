@@ -45,6 +45,7 @@ libdata/pkgconfig/gdl-1.0.pc
 share/gdl/glade/layout.glade
 share/locale/am/LC_MESSAGES/gdl-1.mo
 share/locale/ar/LC_MESSAGES/gdl-1.mo
+share/locale/ast/LC_MESSAGES/gdl-1.mo
 share/locale/az/LC_MESSAGES/gdl-1.mo
 share/locale/bg/LC_MESSAGES/gdl-1.mo
 share/locale/ca/LC_MESSAGES/gdl-1.mo
@@ -83,6 +84,7 @@ share/locale/pl/LC_MESSAGES/gdl-1.mo
 share/locale/ps/LC_MESSAGES/gdl-1.mo
 share/locale/pt/LC_MESSAGES/gdl-1.mo
 share/locale/pt_BR/LC_MESSAGES/gdl-1.mo
+share/locale/ro/LC_MESSAGES/gdl-1.mo
 share/locale/ru/LC_MESSAGES/gdl-1.mo
 share/locale/rw/LC_MESSAGES/gdl-1.mo
 share/locale/si/LC_MESSAGES/gdl-1.mo
@@ -120,3 +122,5 @@ share/locale/zh_TW/LC_MESSAGES/gdl-1.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
