@@ -1,5 +1,6 @@
 etc/xdg/autostart/gnome-settings-daemon.desktop
 include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-client.h
+include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-plugin.h
 lib/gnome-settings-daemon-2.0/a11y-keyboard.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/background.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/clipboard.gnome-settings-plugin
@@ -86,6 +87,7 @@ share/icons/hicolor/scalable/apps/gsd-xrandr.svg
 share/locale/af/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/am/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/ar/LC_MESSAGES/gnome-settings-daemon.mo
+share/locale/ast/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/az/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/be/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/be@latin/LC_MESSAGES/gnome-settings-daemon.mo
@@ -202,3 +204,5 @@ share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
