@@ -3,11 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/security/seahorse/Makefile,v 1.75 2009/02/24 20:41:14 kwm Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	2.25.91
+PORTVERSION=	2.25.92
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,7 +19,8 @@ BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 LIB_DEPENDS=	gpgme.17:${PORTSDIR}/security/gpgme \
     		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		gnome-keyring:${PORTSDIR}/security/gnome-keyring
+		gnome-keyring:${PORTSDIR}/security/gnome-keyring \
+		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
@@ -36,7 +37,6 @@ GCONF_SCHEMAS=	seahorse.schemas
 MAN1=		seahorse-daemon.1
 
 OPTIONS=	LDAP "Enable LDAP support" on \
-		HKP "Enable HKP keyserver interface" on \
 		NOTIFY "Enable libnotify support" on \
 		MDNS "Enable mDNS key sharing" on
 
@@ -46,12 +46,6 @@ OPTIONS=	LDAP "Enable LDAP support" on \
 USE_OPENLDAP=	yes
 .else
 CONFIGURE_ARGS+=--disable-ldap
-.endif
-
-.if !defined(WITHOUT_HKP)
-LIB_DEPENDS+=	soup-2.4.1:${PORTSDIR}/devel/libsoup
-.else
-CONFIGURE_ARGS+=--disable-hkp
 .endif
 
 .if !defined(WITHOUT_NOTIFY)
