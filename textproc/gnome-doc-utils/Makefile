@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textutils/gnome-doc-utils/Makefile,v 1.1 2009/02/27 19:45:19 marcus Exp $
+#   $MCom: ports/textutils/gnome-doc-utils/Makefile,v 1.2 2009/03/02 12:59:47 kwm Exp $
 #
 
 PORTNAME=	gnome-doc-utils
