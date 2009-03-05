@@ -79,7 +79,7 @@ lib/libempathy-gtk.so.19
 lib/libempathy.a
 lib/libempathy.la
 lib/libempathy.so
-lib/libempathy.so.21
+lib/libempathy.so.22
 %%PYTHON_SITELIBDIR%%/empathy.a
 %%PYTHON_SITELIBDIR%%/empathy.la
 %%PYTHON_SITELIBDIR%%/empathy.so
@@ -150,7 +150,6 @@ share/doc/libempathy/EmpathyCallHandler.html
 share/doc/libempathy/EmpathyChatroom.html
 share/doc/libempathy/EmpathyChatroomManager.html
 share/doc/libempathy/EmpathyContact.html
-share/doc/libempathy/EmpathyContactFactory.html
 share/doc/libempathy/EmpathyContactManager.html
 share/doc/libempathy/EmpathyContactMonitor.html
 share/doc/libempathy/EmpathyDispatcher.html
@@ -166,7 +165,6 @@ share/doc/libempathy/EmpathyTpChat.html
 share/doc/libempathy/EmpathyTpContactFactory.html
 share/doc/libempathy/EmpathyTpContactList.html
 share/doc/libempathy/EmpathyTpFile.html
-share/doc/libempathy/EmpathyTpGroup.html
 share/doc/libempathy/EmpathyTpRoomlist.html
 share/doc/libempathy/EmpathyTpTube.html
 share/doc/libempathy/EmpathyTubeHandler.html
@@ -310,6 +308,7 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/48x48/status/empathy-extended-away.png
 %%DATADIR%%/icons/hicolor/48x48/status/empathy-offline.png
 %%DATADIR%%/icons/hicolor/48x48/status/empathy-pending.png
+%%DATADIR%%/icons/hicolor/icon-theme.cache
 %%DATADIR%%/icons/hicolor/scalable/apps/im-ekiga.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-gadugadu.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-gizmo.svg
@@ -343,9 +342,15 @@ share/gnome/help/empathy/de/figures/empathy-new-account.png
 share/gnome/help/empathy/el/empathy.xml
 share/gnome/help/empathy/el/figures/empathy-main-window.png
 share/gnome/help/empathy/el/figures/empathy-new-account.png
+share/gnome/help/empathy/en_GB/empathy.xml
+share/gnome/help/empathy/en_GB/figures/empathy-main-window.png
+share/gnome/help/empathy/en_GB/figures/empathy-new-account.png
 share/gnome/help/empathy/es/empathy.xml
 share/gnome/help/empathy/es/figures/empathy-main-window.png
 share/gnome/help/empathy/es/figures/empathy-new-account.png
+share/gnome/help/empathy/fi/empathy.xml
+share/gnome/help/empathy/fi/figures/empathy-main-window.png
+share/gnome/help/empathy/fi/figures/empathy-new-account.png
 share/gnome/help/empathy/fr/empathy.xml
 share/gnome/help/empathy/fr/figures/empathy-main-window.png
 share/gnome/help/empathy/fr/figures/empathy-new-account.png
@@ -366,6 +371,7 @@ share/icons/hicolor/48x48/apps/empathy.png
 share/icons/hicolor/scalable/apps/empathy.svg
 share/locale/ar/LC_MESSAGES/empathy.mo
 share/locale/az/LC_MESSAGES/empathy.mo
+share/locale/be@latin/LC_MESSAGES/empathy.mo
 share/locale/bg/LC_MESSAGES/empathy.mo
 share/locale/bn_IN/LC_MESSAGES/empathy.mo
 share/locale/ca/LC_MESSAGES/empathy.mo
@@ -395,6 +401,7 @@ share/locale/kn/LC_MESSAGES/empathy.mo
 share/locale/ko/LC_MESSAGES/empathy.mo
 share/locale/ku/LC_MESSAGES/empathy.mo
 share/locale/lt/LC_MESSAGES/empathy.mo
+share/locale/lv/LC_MESSAGES/empathy.mo
 share/locale/mk/LC_MESSAGES/empathy.mo
 share/locale/ml/LC_MESSAGES/empathy.mo
 share/locale/mr/LC_MESSAGES/empathy.mo
@@ -443,7 +450,9 @@ share/omf/empathy/empathy-ca.omf
 share/omf/empathy/empathy-cs.omf
 share/omf/empathy/empathy-de.omf
 share/omf/empathy/empathy-el.omf
+share/omf/empathy/empathy-en_GB.omf
 share/omf/empathy/empathy-es.omf
+share/omf/empathy/empathy-fi.omf
 share/omf/empathy/empathy-fr.omf
 share/omf/empathy/empathy-it.omf
 share/omf/empathy/empathy-ru.omf
@@ -459,8 +468,12 @@ share/omf/empathy/empathy-sv.omf
 @dirrm share/gnome/help/empathy/it
 @dirrm share/gnome/help/empathy/fr/figures
 @dirrm share/gnome/help/empathy/fr
+@dirrm share/gnome/help/empathy/fi/figures
+@dirrm share/gnome/help/empathy/fi
 @dirrm share/gnome/help/empathy/es/figures
 @dirrm share/gnome/help/empathy/es
+@dirrm share/gnome/help/empathy/en_GB/figures
+@dirrm share/gnome/help/empathy/en_GB
 @dirrm share/gnome/help/empathy/el/figures
 @dirrm share/gnome/help/empathy/el
 @dirrm share/gnome/help/empathy/de/figures
@@ -517,3 +530,5 @@ share/omf/empathy/empathy-sv.omf
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
