@@ -1485,6 +1485,7 @@ share/gnome/help/mahjongg/sv/figures/no-move.png
 share/gnome/help/mahjongg/sv/figures/preferences.png
 share/gnome/help/mahjongg/sv/figures/toolbar.png
 share/gnome/help/mahjongg/sv/mahjongg.xml
+share/gnome/help/same-gnome/C/figures/play.png
 share/gnome/help/same-gnome/C/figures/start-up.png
 share/gnome/help/same-gnome/C/legal.xml
 share/gnome/help/same-gnome/C/same-gnome.xml
@@ -1492,9 +1493,11 @@ share/gnome/help/same-gnome/ca/figures/play.png
 share/gnome/help/same-gnome/ca/figures/start-up.png
 share/gnome/help/same-gnome/ca/legal.xml
 share/gnome/help/same-gnome/ca/same-gnome.xml
+share/gnome/help/same-gnome/de/figures/play.png
 share/gnome/help/same-gnome/de/figures/start-up.png
 share/gnome/help/same-gnome/de/legal.xml
 share/gnome/help/same-gnome/de/same-gnome.xml
+share/gnome/help/same-gnome/en_GB/figures/play.png
 share/gnome/help/same-gnome/en_GB/figures/start-up.png
 share/gnome/help/same-gnome/en_GB/legal.xml
 share/gnome/help/same-gnome/en_GB/same-gnome.xml
@@ -1502,9 +1505,11 @@ share/gnome/help/same-gnome/es/figures/play.png
 share/gnome/help/same-gnome/es/figures/start-up.png
 share/gnome/help/same-gnome/es/legal.xml
 share/gnome/help/same-gnome/es/same-gnome.xml
+share/gnome/help/same-gnome/eu/figures/play.png
 share/gnome/help/same-gnome/eu/figures/start-up.png
 share/gnome/help/same-gnome/eu/legal.xml
 share/gnome/help/same-gnome/eu/same-gnome.xml
+share/gnome/help/same-gnome/fr/figures/play.png
 share/gnome/help/same-gnome/fr/figures/start-up.png
 share/gnome/help/same-gnome/fr/legal.xml
 share/gnome/help/same-gnome/fr/same-gnome.xml
@@ -1512,9 +1517,11 @@ share/gnome/help/same-gnome/it/figures/play.png
 share/gnome/help/same-gnome/it/figures/start-up.png
 share/gnome/help/same-gnome/it/legal.xml
 share/gnome/help/same-gnome/it/same-gnome.xml
+share/gnome/help/same-gnome/oc/figures/play.png
 share/gnome/help/same-gnome/oc/figures/start-up.png
 share/gnome/help/same-gnome/oc/legal.xml
 share/gnome/help/same-gnome/oc/same-gnome.xml
+share/gnome/help/same-gnome/ru/figures/play.png
 share/gnome/help/same-gnome/ru/figures/start-up.png
 share/gnome/help/same-gnome/ru/legal.xml
 share/gnome/help/same-gnome/ru/same-gnome.xml
