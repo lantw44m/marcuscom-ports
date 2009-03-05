@@ -18,12 +18,24 @@ share/gnome/help/gnome-user-share/de/figures/sharing-over-bluetooth.png
 share/gnome/help/gnome-user-share/de/figures/sharing-over-the-network.png
 share/gnome/help/gnome-user-share/de/gnome-user-share.xml
 share/gnome/help/gnome-user-share/de/legal.xml
+share/gnome/help/gnome-user-share/el/figures/file-sharing-preferences.png
+share/gnome/help/gnome-user-share/el/figures/receiving-over-bluetooth.png
+share/gnome/help/gnome-user-share/el/figures/sharing-over-bluetooth.png
+share/gnome/help/gnome-user-share/el/figures/sharing-over-the-network.png
+share/gnome/help/gnome-user-share/el/gnome-user-share.xml
+share/gnome/help/gnome-user-share/el/legal.xml
 share/gnome/help/gnome-user-share/es/figures/file-sharing-preferences.png
 share/gnome/help/gnome-user-share/es/figures/receiving-over-bluetooth.png
 share/gnome/help/gnome-user-share/es/figures/sharing-over-bluetooth.png
 share/gnome/help/gnome-user-share/es/figures/sharing-over-the-network.png
 share/gnome/help/gnome-user-share/es/gnome-user-share.xml
 share/gnome/help/gnome-user-share/es/legal.xml
+share/gnome/help/gnome-user-share/it/figures/file-sharing-preferences.png
+share/gnome/help/gnome-user-share/it/figures/receiving-over-bluetooth.png
+share/gnome/help/gnome-user-share/it/figures/sharing-over-bluetooth.png
+share/gnome/help/gnome-user-share/it/figures/sharing-over-the-network.png
+share/gnome/help/gnome-user-share/it/gnome-user-share.xml
+share/gnome/help/gnome-user-share/it/legal.xml
 share/gnome/help/gnome-user-share/sv/figures/file-sharing-preferences.png
 share/gnome/help/gnome-user-share/sv/figures/receiving-over-bluetooth.png
 share/gnome/help/gnome-user-share/sv/figures/sharing-over-bluetooth.png
@@ -66,27 +78,36 @@ share/locale/pa/LC_MESSAGES/gnome-user-share.mo
 share/locale/pl/LC_MESSAGES/gnome-user-share.mo
 share/locale/pt/LC_MESSAGES/gnome-user-share.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-user-share.mo
+share/locale/ro/LC_MESSAGES/gnome-user-share.mo
 share/locale/ru/LC_MESSAGES/gnome-user-share.mo
 share/locale/rw/LC_MESSAGES/gnome-user-share.mo
 share/locale/sk/LC_MESSAGES/gnome-user-share.mo
 share/locale/sl/LC_MESSAGES/gnome-user-share.mo
 share/locale/sq/LC_MESSAGES/gnome-user-share.mo
 share/locale/sv/LC_MESSAGES/gnome-user-share.mo
+share/locale/ta/LC_MESSAGES/gnome-user-share.mo
 share/locale/th/LC_MESSAGES/gnome-user-share.mo
 share/locale/tr/LC_MESSAGES/gnome-user-share.mo
 share/locale/uk/LC_MESSAGES/gnome-user-share.mo
 share/locale/vi/LC_MESSAGES/gnome-user-share.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-user-share.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-user-share.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-user-share.mo
 share/omf/gnome-user-share/gnome-user-share-C.omf
 share/omf/gnome-user-share/gnome-user-share-de.omf
+share/omf/gnome-user-share/gnome-user-share-el.omf
 share/omf/gnome-user-share/gnome-user-share-es.omf
+share/omf/gnome-user-share/gnome-user-share-it.omf
 share/omf/gnome-user-share/gnome-user-share-sv.omf
 @dirrm share/omf/gnome-user-share
 @dirrm share/gnome/help/gnome-user-share/sv/figures
 @dirrm share/gnome/help/gnome-user-share/sv
+@dirrm share/gnome/help/gnome-user-share/it/figures
+@dirrm share/gnome/help/gnome-user-share/it
 @dirrm share/gnome/help/gnome-user-share/es/figures
 @dirrm share/gnome/help/gnome-user-share/es
+@dirrm share/gnome/help/gnome-user-share/el/figures
+@dirrm share/gnome/help/gnome-user-share/el
 @dirrm share/gnome/help/gnome-user-share/de/figures
 @dirrm share/gnome/help/gnome-user-share/de
 @dirrm share/gnome/help/gnome-user-share/C/figures
@@ -94,6 +115,8 @@ share/omf/gnome-user-share/gnome-user-share-sv.omf
 @dirrm share/gnome/help/gnome-user-share
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
