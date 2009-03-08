@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.15 2009/03/08 00:53:22 mezz Exp $
 #
 
 PORTNAME=	swfdec-gnome
@@ -30,6 +30,10 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 GCONF_SCHEMAS=	swfdec-thumbnailer.schemas
 
 MAN1=		swfdec-player.1 swfdec-thumbnailer.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|MAJORMINOR=0\.8|MAJORMINOR=0\.9|g' \
+		${WRKSRC}/configure
 
 post-install:
 	@-update-desktop-database
