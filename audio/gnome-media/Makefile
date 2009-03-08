@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.126 2009/02/28 00:59:07 marcus Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.127 2009/03/05 08:11:52 marcus Exp $
 #
 
 PORTNAME=	gnome-media
 PORTVERSION=	2.25.92
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -15,7 +16,8 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Multimedia applications for the GNOME 2 desktop
 
-LIB_DEPENDS=	pulse.0:${PORTSDIR}/audio/pulseaudio
+LIB_DEPENDS=	pulse.0:${PORTSDIR}/audio/pulseaudio \
+		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
