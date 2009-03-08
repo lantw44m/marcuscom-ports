@@ -3,11 +3,12 @@
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/metacity/Makefile,v 1.140 2008/10/08 04:21:46 marcus Exp $
+#   $MCom: ports/x11-wm/metacity/Makefile,v 1.142 2009/02/27 00:36:22 marcus Exp $
 #
 
 PORTNAME=	metacity
 PORTVERSION=	2.25.144
+PORTREVISION=	1
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -15,7 +16,9 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A window manager for the adult in you
 
+BUILD_DEPENDS=  zenity:${PORTSDIR}/x11/zenity
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
+RUN_DEPENDS=    zenity:${PORTSDIR}/x11/zenity
 
 CONFLICTS=	expocity-[0-9]*
 USE_BZIP2=	yes
