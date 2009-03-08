@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/pulseaudio/Makefile,v 1.10 2008/03/20 16:07:21 mezz Exp $
+#   $MCom: ports/audio/pulseaudio/Makefile,v 1.12 2009/03/08 01:08:37 marcus Exp $
 #
 
 PORTNAME=	pulseaudio
 PORTVERSION=	0.9.14
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/${PORTNAME}/
 
