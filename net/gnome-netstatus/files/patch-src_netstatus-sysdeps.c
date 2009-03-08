@@ -170,8 +170,8 @@
 +      g_ascii_strncasecmp (iface, "ral",  3) &&
        g_ascii_strncasecmp (iface, "ipw",  3) &&
        g_ascii_strncasecmp (iface, "iwi",  3) &&
-+      g_ascii_strncasecmp (iface, "rum"   3) &&
-+      g_ascii_strncasecmp (iface, "ray"   3) &&
++      g_ascii_strncasecmp (iface, "rum",  3) &&
++      g_ascii_strncasecmp (iface, "ray",  3) &&
        g_ascii_strncasecmp (iface, "acx",  3))
 +#else
 +  if (g_strncasecmp (iface, "wlan", 4))
