@@ -348,8 +348,6 @@ share/pixmaps/vnterm.xpm
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/uz@cyrillic/LC_MESSAGES
 @dirrmtry share/locale/uz@cyrillic
-@dirrmtry share/locale/uz/LC_MESSAGES
-@dirrmtry share/locale/uz
 @dirrmtry share/locale/ur/LC_MESSAGES
 @dirrmtry share/locale/ur
 @dirrmtry share/locale/ug/LC_MESSAGES

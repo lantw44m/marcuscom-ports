@@ -342,3 +342,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-netstatus.mo
 @dirrmtry share/locale/crh
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin

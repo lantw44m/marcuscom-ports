@@ -115,6 +115,8 @@ share/omf/gnome-user-share/gnome-user-share-sv.omf
 @dirrm share/gnome/help/gnome-user-share
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
+@dirrmtry etc/xdg/autostart
+@dirrmtry etc/xdg
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
@@ -125,5 +127,3 @@ share/omf/gnome-user-share/gnome-user-share-sv.omf
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-@dirrmtry etc/xdg/autostart
-@dirrmtry etc/xdg

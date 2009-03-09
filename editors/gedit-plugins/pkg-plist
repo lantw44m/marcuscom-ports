@@ -118,6 +118,11 @@ share/locale/zh_CN/LC_MESSAGES/gedit-plugins.mo
 share/locale/zh_HK/LC_MESSAGES/gedit-plugins.mo
 share/locale/zh_TW/LC_MESSAGES/gedit-plugins.mo
 %%PYTHON%%@dirrm lib/gedit-2/plugins/sessionsaver
+@dirrm share/gedit-2/plugins/sessionsaver
+@dirrm share/gedit-2/plugins/drawspaces
+@dirrm share/gedit-2/plugins/bookmarks
+@dirrm share/gedit-2/plugins
+@dirrm share/gedit-2
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
@@ -128,8 +133,3 @@ share/locale/zh_TW/LC_MESSAGES/gedit-plugins.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
-@dirrm share/gedit-2/plugins/sessionsaver
-@dirrm share/gedit-2/plugins/drawspaces
-@dirrm share/gedit-2/plugins/bookmarks
-@dirrm share/gedit-2/plugins
-@dirrm share/gedit-2

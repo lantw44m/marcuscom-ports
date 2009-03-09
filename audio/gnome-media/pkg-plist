@@ -277,6 +277,8 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrmtry share/applications
 @dirrm include/gnome-media/profiles
 @dirrm include/gnome-media
+@dirrmtry etc/xdg/autostart
+@dirrmtry etc/xdg
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -305,5 +307,3 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry etc/xdg/autostart
-@dirrmtry etc/xdg

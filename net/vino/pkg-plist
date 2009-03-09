@@ -84,6 +84,8 @@ share/locale/zh_TW/LC_MESSAGES/vino.mo
 %%DATADIR%%/webservices
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
+@dirrmtry etc/xdg/autostart
+@dirrmtry etc/xdg
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -114,5 +116,3 @@ share/locale/zh_TW/LC_MESSAGES/vino.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry etc/xdg/autostart
-@dirrmtry etc/xdg
