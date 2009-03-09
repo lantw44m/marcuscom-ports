@@ -198,3 +198,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrmtry share/locale/ast
 @dirrm share/gcr/ui
 @dirrm share/gcr
+@dirrmtry etc/xdg/autostart
+@dirrmtry etc/xdg

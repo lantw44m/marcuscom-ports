@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnome-keyring/Makefile,v 1.73 2009/02/24 20:42:55 kwm Exp $
+#   $MCom: ports/security/gnome-keyring/Makefile,v 1.74 2009/03/02 21:56:04 marcus Exp $
 #
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	2.25.92
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
