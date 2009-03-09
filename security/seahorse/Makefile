@@ -3,11 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.75 2009/02/24 20:41:14 kwm Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.76 2009/03/03 04:43:31 marcus Exp $
 #
 
 PORTNAME=	seahorse
 PORTVERSION=	2.25.92
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -22,6 +23,7 @@ LIB_DEPENDS=	gpgme.17:${PORTSDIR}/security/gpgme \
 		gnome-keyring:${PORTSDIR}/security/gnome-keyring \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
+USE_XORG=	sm
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
