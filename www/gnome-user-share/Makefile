@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gnome-user-share/Makefile,v 1.10 2009/02/27 22:29:00 marcus Exp $
+#   $MCom: ports/www/gnome-user-share/Makefile,v 1.11 2009/03/05 04:53:51 marcus Exp $
 #
 
 PORTNAME=	gnome-user-share
 PORTVERSION=	2.25.92
+PORTREVISION=	1
 CATEGORIES=	www deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -22,7 +23,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_APACHE=	2.2+
-USE_GNOME=	gnomeprefix gnomehack intlhack libglade2 gconf2
+USE_GNOME=	gnomeprefix gnomehack intlhack libglade2 gconf2 gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--with-modules-path=${LOCALBASE}/${APACHEMODDIR}
