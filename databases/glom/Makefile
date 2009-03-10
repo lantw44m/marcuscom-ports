@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/glom/Makefile,v 1.21 2009/01/09 11:46:25 kwm Exp $
+#   $MCom: ports/databases/glom/Makefile,v 1.22 2009/03/02 16:48:27 kwm Exp $
 #
 
 PORTNAME=	glom
-PORTVERSION=	1.9.3
+PORTVERSION=	1.9.4
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
