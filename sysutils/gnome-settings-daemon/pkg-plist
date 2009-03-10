@@ -172,8 +172,6 @@ share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
 @dirrm lib/gnome-settings-daemon-2.0
 @dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
 @dirrm include/gnome-settings-daemon-2.0
-@dirrmtry etc/xdg/autostart
-@dirrmtry etc/xdg
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES

@@ -270,7 +270,6 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrmtry share/applications
 @dirrm lib/window-manager-settings
 @dirrm include/gnome-window-settings-2.0
-@dirrmtry etc/xdg/autostart
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

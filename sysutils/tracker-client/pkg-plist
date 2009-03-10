@@ -171,8 +171,6 @@ share/locale/zh_CN/LC_MESSAGES/tracker.mo
 @dirrm lib/tracker/filters
 @dirrm lib/tracker/extract-modules
 @dirrm lib/tracker
-@dirrmtry etc/xdg/autostart
-@dirrmtry etc/xdg
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/dz/LC_MESSAGES

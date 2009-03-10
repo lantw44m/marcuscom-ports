@@ -128,8 +128,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-menus.mo
 @dirrm share/gnome-menus
 @dirrmtry share/desktop-directories
 @dirrm include/gnome-menus
-@dirrmtry etc/xdg/menus
-@dirrmtry etc/xdg
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/yo/LC_MESSAGES

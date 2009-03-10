@@ -137,8 +137,6 @@ share/xsessions/gnome.desktop
 @dirrmtry share/applications
 @dirrm lib/gnome-session/helpers
 @dirrm lib/gnome-session
-@dirrmtry etc/xdg/autostart
-@dirrmtry etc/xdg
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
