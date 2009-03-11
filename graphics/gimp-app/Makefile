@@ -3,12 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD: ports/graphics/gimp-app/Makefile,v 1.232 2009/02/24 01:33:06 marcus Exp $
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.30 2009/01/04 22:16:26 marcus Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.32 2009/02/27 00:21:44 marcus Exp $
 #
 
 PORTNAME=	gimp-app
 DISTVERSION=	2.6.5
-PORTREVISION?=	1
+PORTREVISION?=	2
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -34,7 +34,7 @@ LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
 		jpeg.9:${PORTSDIR}/graphics/jpeg \
 		tiff.4:${PORTSDIR}/graphics/tiff \
 		lcms.1:${PORTSDIR}/graphics/lcms \
-		gegl-0.0.20:${PORTSDIR}/graphics/gegl
+		gegl-0.0.22:${PORTSDIR}/graphics/gegl
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 CONFLICTS=	gimp-app-devel-[0-9]*
