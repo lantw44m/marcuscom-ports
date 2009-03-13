@@ -2591,11 +2591,9 @@ share/icons/gnome/32x32/status/weather-showers.png
 share/icons/gnome/32x32/status/weather-snow.png
 share/icons/gnome/32x32/status/weather-storm.png
 share/icons/gnome/32x32/stock/generic/stock_person.png
-share/icons/gnome/48x48/actions/appointment-new.png
 share/icons/gnome/48x48/actions/mail-mark-junk.png
 share/icons/gnome/48x48/actions/mail-mark-not-junk.png
-share/icons/gnome/48x48/actions/mail-message-new.png
-share/icons/gnome/48x48/actions/mail-send-receive.png
+share/icons/gnome/48x48/animations/process-working.png
 share/icons/gnome/48x48/apps/applets-screenshooter.png
 share/icons/gnome/48x48/apps/palm-pilot-sync.png
 share/icons/gnome/48x48/apps/palm-pilot.png
