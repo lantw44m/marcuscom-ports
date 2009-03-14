@@ -383,6 +383,8 @@ share/locale/sr@latin/LC_MESSAGES/evince.mo
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
+@dirrm share/doc/libevview
+@dirrm share/doc/libevdocument
 @dirrm %%DOCSDIR%%
 @dirrmtry share/applications
 @dirrm lib/evince/1/backends
