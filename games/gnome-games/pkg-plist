@@ -1880,6 +1880,8 @@ share/omf/same-gnome/same-gnome-sv.omf
 share/pixmaps/glchess/board.png
 share/pixmaps/glchess/piece.png
 share/pixmaps/gnome-sudoku/footprints.png
+@dirrm share/pixmaps/gnome-sudoku
+@dirrm share/pixmaps/glchess
 @dirrm share/omf/same-gnome
 @dirrm share/omf/mahjongg
 @dirrm share/omf/iagno
