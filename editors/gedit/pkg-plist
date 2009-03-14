@@ -29,6 +29,9 @@ include/gedit-%%VERSION%%/gedit/gedit-window.h
 lib/gedit-2/plugin-loaders/libcloader.a
 lib/gedit-2/plugin-loaders/libcloader.la
 lib/gedit-2/plugin-loaders/libcloader.so
+%%PYTHON%%lib/gedit-2/plugin-loaders/libpythonloader.a
+%%PYTHON%%lib/gedit-2/plugin-loaders/libpythonloader.la
+%%PYTHON%%lib/gedit-2/plugin-loaders/libpythonloader.so
 lib/gedit-2/plugins/changecase.gedit-plugin
 lib/gedit-2/plugins/docinfo.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/externaltools.gedit-plugin
@@ -53,8 +56,6 @@ lib/gedit-2/plugins/docinfo.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.py
 %%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.pyc
 %%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.pyo
-%%PYTHON%%lib/gedit-2/plugins/externaltools/outputpanel.ui
-%%PYTHON%%lib/gedit-2/plugins/externaltools/tools.ui
 lib/gedit-2/plugins/filebrowser.gedit-plugin
 lib/gedit-2/plugins/indent.gedit-plugin
 lib/gedit-2/plugins/libchangecase.a
@@ -92,6 +93,9 @@ lib/gedit-2/plugins/modelines.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole/__init__.py
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole/__init__.pyc
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole/__init__.pyo
+%%PYTHON%%lib/gedit-2/plugins/pythonconsole/config.py
+%%PYTHON%%lib/gedit-2/plugins/pythonconsole/config.pyc
+%%PYTHON%%lib/gedit-2/plugins/pythonconsole/config.pyo
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole/console.py
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole/console.pyc
 %%PYTHON%%lib/gedit-2/plugins/pythonconsole/console.pyo
@@ -187,12 +191,16 @@ share/gedit-2/icons/gedit-plugin.png
 share/gedit-2/logo/gedit-logo.png
 @exec mkdir -p %D/share/gedit-2/plugins/changecase
 share/gedit-2/plugins/docinfo/docinfo.ui
+%%PYTHON%%share/gedit-2/plugins/externaltools/ui/tools.ui
+%%PYTHON%%share/gedit-2/plugins/externaltools/ui/outputpanel.ui
 share/gedit-2/plugins/filebrowser/gedit-file-browser-widget-ui.xml
 @exec mkdir -p %D/share/gedit-2/plugins/indent
 share/gedit-2/plugins/modelines/language-mappings
+%%PYTHON%%share/gedit-2/plugins/pythonconsole/ui/config.ui
 @exec mkdir -p %D/share/gedit-2/plugins/sample
-%%PYTHON%%share/gedit-2/plugins/snippets/c++.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/c.xml
+%%PYTHON%%share/gedit-2/plugins/snippets/chdr.xml
+%%PYTHON%%share/gedit-2/plugins/snippets/cpp.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/css.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/docbook.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/global.xml
@@ -210,6 +218,7 @@ share/gedit-2/plugins/modelines/language-mappings
 %%PYTHON%%share/gedit-2/plugins/snippets/sh.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/snippets.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/tcl.xml
+%%PYTHON%%share/gedit-2/plugins/snippets/ui/snippets.ui
 %%PYTHON%%share/gedit-2/plugins/snippets/xml.xml
 share/gedit-2/plugins/sort/sort.ui
 share/gedit-2/plugins/spell/languages-dialog.ui
@@ -545,12 +554,17 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm share/gedit-2/plugins/taglist
 @dirrm share/gedit-2/plugins/spell
 @dirrm share/gedit-2/plugins/sort
+%%PYTHON%%@dirrm share/gedit-2/plugins/snippets/ui
 %%PYTHON%%@dirrm share/gedit-2/plugins/snippets/lang
 %%PYTHON%%@dirrm share/gedit-2/plugins/snippets
 @dirrm share/gedit-2/plugins/sample
+%%PYTHON%%@dirrm share/gedit-2/plugins/pythonconsole/ui
+%%PYTHON%%@dirrm share/gedit-2/plugins/pythonconsole
 @dirrm share/gedit-2/plugins/modelines
 @dirrm share/gedit-2/plugins/indent
 @dirrm share/gedit-2/plugins/filebrowser
+%%PYTHON%%@dirrm share/gedit-2/plugins/externaltools/ui
+%%PYTHON%%@dirrm share/gedit-2/plugins/externaltools
 @dirrm share/gedit-2/plugins/docinfo
 @dirrm share/gedit-2/plugins/changecase
 @dirrm share/gedit-2/plugins
