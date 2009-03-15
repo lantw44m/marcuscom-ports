@@ -143,7 +143,6 @@ lib/gedit-2/plugins/sample.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/snippets/__init__.py
 %%PYTHON%%lib/gedit-2/plugins/snippets/__init__.pyc
 %%PYTHON%%lib/gedit-2/plugins/snippets/__init__.pyo
-%%PYTHON%%lib/gedit-2/plugins/snippets/snippets.ui
 lib/gedit-2/plugins/sort.gedit-plugin
 lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
@@ -578,6 +577,7 @@ share/omf/gedit/gedit-zh_TW.omf
 %%PYTHON%%@dirrm lib/gedit-2/plugins/pythonconsole
 %%PYTHON%%@dirrm lib/gedit-2/plugins/externaltools
 @dirrmtry lib/gedit-2/plugins
+@dirrmtry lib/gedit-2/plugin-loaders
 @dirrmtry lib/gedit-2
 @dirrm include/gedit-%%VERSION%%/gedit
 @dirrm include/gedit-%%VERSION%%
