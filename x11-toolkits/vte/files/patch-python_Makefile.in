@@ -1,5 +1,5 @@
---- python/Makefile.in.orig	2009-02-24 20:14:03.000000000 +0100
-+++ python/Makefile.in	2009-02-24 20:18:03.000000000 +0100
+--- python/Makefile.in.orig	2009-03-16 08:49:19.000000000 +0100
++++ python/Makefile.in	2009-03-16 08:51:17.000000000 +0100
 @@ -56,7 +56,6 @@
  LTLIBRARIES = $(pythonsiteexec_LTLIBRARIES)
  am__DEPENDENCIES_1 =
@@ -8,7 +8,7 @@
  @BUILD_PYTHON_MODULES_TRUE@	$(am__DEPENDENCIES_1) \
  @BUILD_PYTHON_MODULES_TRUE@	$(am__DEPENDENCIES_1) \
  @BUILD_PYTHON_MODULES_TRUE@	$(am__DEPENDENCIES_1)
-@@ -291,11 +290,11 @@
+@@ -290,11 +289,11 @@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  EXTRA_DIST = vte.defs pyvte.pc.in vte.override cat.py unrealize.py vte-demo.py
@@ -26,11 +26,11 @@
  @BUILD_PYTHON_MODULES_TRUE@pythonsiteexec_LTLIBRARIES = $(PYTHON_MODULES)
  @BUILD_PYTHON_MODULES_TRUE@CLEANFILES = vte.c
 @@ -305,7 +304,7 @@
- @BUILD_PYTHON_MODULES_TRUE@AM_LDFLAGS = $(PYTHON_LDFLAGS)
- @BUILD_PYTHON_MODULES_TRUE@vtemodule_la_CFLAGS = $(VTE_CFLAGS) $(X_CFLAGS) $(PYTHON_INCLUDES) $(PYGTK_CFLAGS)
- @BUILD_PYTHON_MODULES_TRUE@vtemodule_la_SOURCES = vtemodule.c
+ # we do this to suport building with -Wl,-z,defs which errors on
+ # vtemodule.so as we cannot include $(PYTHON_LIBS) due to bug 410986.
+ @BUILD_PYTHON_MODULES_TRUE@vtemodule_la_LDFLAGS = -module -avoid-version -export-symbols-regex initvte $(PYTHON_LDFLAGS) $(AM_LDFLAGS)
 -@BUILD_PYTHON_MODULES_TRUE@vtemodule_la_LIBADD = $(top_builddir)/src/libvte.la $(LIBS) $(PYGTK_LIBS) $(VTE_LIBS) $(X_LIBS)
 +@BUILD_PYTHON_MODULES_TRUE@vtemodule_la_LIBADD = -lvte $(LIBS) $(PYGTK_LIBS) $(VTE_LIBS) $(X_LIBS)
- @BUILD_PYTHON_MODULES_TRUE@vtemodule_la_LDFLAGS = -module -avoid-version -export-symbols-regex initvte
  @BUILD_PYTHON_MODULES_TRUE@nodist_vtemodule_la_SOURCES = vte.c
  all: all-am
+ 
