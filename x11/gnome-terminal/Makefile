@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11/gnome-terminal/Makefile,v 1.115 2009/02/24 19:55:36 kwm Exp $
 #
 
 PORTNAME=	gnome-terminal
-PORTVERSION=	2.25.91
+PORTVERSION=	2.26.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
