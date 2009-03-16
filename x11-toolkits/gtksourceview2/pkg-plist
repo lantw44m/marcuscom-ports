@@ -72,6 +72,7 @@ share/gtksourceview-2.0/language-specs/perl.lang
 share/gtksourceview-2.0/language-specs/php.lang
 share/gtksourceview-2.0/language-specs/pkgconfig.lang
 share/gtksourceview-2.0/language-specs/po.lang
+share/gtksourceview-2.0/language-specs/prolog.lang
 share/gtksourceview-2.0/language-specs/python.lang
 share/gtksourceview-2.0/language-specs/rpmspec.lang
 share/gtksourceview-2.0/language-specs/ruby.lang
