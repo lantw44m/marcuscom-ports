@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.40 2009/03/10 06:58:50 marcus Exp $
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.41 2009/03/14 17:22:13 marcus Exp $
 
 PORTNAME=	brasero
-PORTVERSION=	2.25.92
-PORTREVISION=	2
+PORTVERSION=	2.26.0
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
