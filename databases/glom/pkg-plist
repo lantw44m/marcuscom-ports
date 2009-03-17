@@ -1,7 +1,5 @@
 bin/glom
 include/glom-1.0/libglom/appstate.h
-include/glom-1.0/libglom/calcinprogress.h
-include/glom-1.0/libglom/connectionpool.h
 include/glom-1.0/libglom/data_structure/field.h
 include/glom-1.0/libglom/data_structure/fieldtypes.h
 include/glom-1.0/libglom/data_structure/foundset.h
@@ -37,16 +35,11 @@ include/glom-1.0/libglom/data_structure/report.h
 include/glom-1.0/libglom/data_structure/system_prefs.h
 include/glom-1.0/libglom/data_structure/tableinfo.h
 include/glom-1.0/libglom/data_structure/translatable_item.h
-include/glom-1.0/libglom/dialog_progress_creating.h
 include/glom-1.0/libglom/document/document_glom.h
 include/glom-1.0/libglom/document/view.h
-include/glom-1.0/libglom/glade_utils.h
-include/glom-1.0/libglom/gst-package.h
 include/glom-1.0/libglom/libglom_config.h
 include/glom-1.0/libglom/sharedptr.h
-include/glom-1.0/libglom/spawn_with_feedback.h
 include/glom-1.0/libglom/standard_table_prefs_fields.h
-include/glom-1.0/libglom/utils.h
 lib/libglom-1.0.a
 lib/libglom-1.0.la
 lib/libglom-1.0.so
