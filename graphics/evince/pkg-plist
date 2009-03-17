@@ -194,6 +194,8 @@ share/gnome/help/evince/bg/evince.xml
 share/gnome/help/evince/bg/figures/evince_start_window.png
 share/gnome/help/evince/ca/evince.xml
 share/gnome/help/evince/ca/figures/evince_start_window.png
+share/gnome/help/evince/cs/evince.xml
+share/gnome/help/evince/cs/figures/evince_start_window.png
 share/gnome/help/evince/de/evince.xml
 share/gnome/help/evince/de/figures/evince_start_window.png
 share/gnome/help/evince/el/evince.xml
@@ -233,6 +235,7 @@ share/icons/hicolor/22x22/apps/evince.png
 share/icons/hicolor/24x24/apps/evince.png
 share/icons/hicolor/48x48/apps/evince.png
 share/icons/hicolor/scalable/apps/evince.svg
+share/locale/af/LC_MESSAGES/evince.mo
 share/locale/ar/LC_MESSAGES/evince.mo
 share/locale/as/LC_MESSAGES/evince.mo
 share/locale/ast/LC_MESSAGES/evince.mo
@@ -272,6 +275,7 @@ share/locale/ks/LC_MESSAGES/evince.mo
 share/locale/ku/LC_MESSAGES/evince.mo
 share/locale/lt/LC_MESSAGES/evince.mo
 share/locale/lv/LC_MESSAGES/evince.mo
+share/locale/mai/LC_MESSAGES/evince.mo
 share/locale/mg/LC_MESSAGES/evince.mo
 share/locale/mk/LC_MESSAGES/evince.mo
 share/locale/ml/LC_MESSAGES/evince.mo
@@ -309,6 +313,7 @@ share/locale/zh_TW/LC_MESSAGES/evince.mo
 share/omf/evince/evince-C.omf
 share/omf/evince/evince-bg.omf
 share/omf/evince/evince-ca.omf
+share/omf/evince/evince-cs.omf
 share/omf/evince/evince-de.omf
 share/omf/evince/evince-el.omf
 share/omf/evince/evince-en_GB.omf
@@ -363,6 +368,8 @@ share/locale/sr@latin/LC_MESSAGES/evince.mo
 @dirrm share/gnome/help/evince/el
 @dirrm share/gnome/help/evince/de/figures
 @dirrm share/gnome/help/evince/de
+@dirrm share/gnome/help/evince/cs/figures
+@dirrm share/gnome/help/evince/cs
 @dirrm share/gnome/help/evince/ca/figures
 @dirrm share/gnome/help/evince/ca
 @dirrm share/gnome/help/evince/bg/figures
@@ -414,6 +421,8 @@ share/locale/sr@latin/LC_MESSAGES/evince.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/ks/LC_MESSAGES
