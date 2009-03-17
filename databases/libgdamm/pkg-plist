@@ -15,7 +15,6 @@ include/libgdamm-4.0/libgdamm/datamodelimport.h
 include/libgdamm-4.0/libgdamm/datamodeliter.h
 include/libgdamm-4.0/libgdamm/dataproxy.h
 include/libgdamm-4.0/libgdamm/dataselect.h
-include/libgdamm-4.0/libgdamm/error.h
 include/libgdamm-4.0/libgdamm/handlerbin.h
 include/libgdamm-4.0/libgdamm/handlerboolean.h
 include/libgdamm-4.0/libgdamm/handlernumerical.h
@@ -42,7 +41,6 @@ include/libgdamm-4.0/libgdamm/private/datamodelimport_p.h
 include/libgdamm-4.0/libgdamm/private/datamodeliter_p.h
 include/libgdamm-4.0/libgdamm/private/dataproxy_p.h
 include/libgdamm-4.0/libgdamm/private/dataselect_p.h
-include/libgdamm-4.0/libgdamm/private/error_p.h
 include/libgdamm-4.0/libgdamm/private/handlerbin_p.h
 include/libgdamm-4.0/libgdamm/private/handlerboolean_p.h
 include/libgdamm-4.0/libgdamm/private/handlernumerical_p.h
