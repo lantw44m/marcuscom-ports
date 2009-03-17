@@ -58,6 +58,8 @@ include/libempathy/empathy-irc-network-manager.h
 include/libempathy/empathy-irc-network.h
 include/libempathy/empathy-irc-server.h
 include/libempathy/empathy-log-manager.h
+include/libempathy/empathy-log-store-empathy.h
+include/libempathy/empathy-log-store.h
 include/libempathy/empathy-message.h
 include/libempathy/empathy-status-presets.h
 include/libempathy/empathy-time.h
@@ -79,7 +81,7 @@ lib/libempathy-gtk.so.19
 lib/libempathy.a
 lib/libempathy.la
 lib/libempathy.so
-lib/libempathy.so.22
+lib/libempathy.so.23
 %%PYTHON_SITELIBDIR%%/empathy.a
 %%PYTHON_SITELIBDIR%%/empathy.la
 %%PYTHON_SITELIBDIR%%/empathy.so
@@ -150,6 +152,7 @@ share/doc/libempathy/EmpathyCallHandler.html
 share/doc/libempathy/EmpathyChatroom.html
 share/doc/libempathy/EmpathyChatroomManager.html
 share/doc/libempathy/EmpathyContact.html
+share/doc/libempathy/EmpathyContactFactory.html
 share/doc/libempathy/EmpathyContactManager.html
 share/doc/libempathy/EmpathyContactMonitor.html
 share/doc/libempathy/EmpathyDispatcher.html
@@ -159,12 +162,14 @@ share/doc/libempathy/EmpathyIrcNetwork.html
 share/doc/libempathy/EmpathyIrcNetworkManager.html
 share/doc/libempathy/EmpathyIrcServer.html
 share/doc/libempathy/EmpathyLogManager.html
+share/doc/libempathy/EmpathyLogStoreEmpathy.html
 share/doc/libempathy/EmpathyMessage.html
 share/doc/libempathy/EmpathyTpCall.html
 share/doc/libempathy/EmpathyTpChat.html
 share/doc/libempathy/EmpathyTpContactFactory.html
 share/doc/libempathy/EmpathyTpContactList.html
 share/doc/libempathy/EmpathyTpFile.html
+share/doc/libempathy/EmpathyTpGroup.html
 share/doc/libempathy/EmpathyTpRoomlist.html
 share/doc/libempathy/EmpathyTpTube.html
 share/doc/libempathy/EmpathyTubeHandler.html
@@ -176,6 +181,7 @@ share/doc/libempathy/left.png
 share/doc/libempathy/libempathy-empathy-contact-groups.html
 share/doc/libempathy/libempathy-empathy-contact-list.html
 share/doc/libempathy/libempathy-empathy-enum-types.html
+share/doc/libempathy/libempathy-empathy-log-store.html
 share/doc/libempathy/libempathy-empathy-status-presets.html
 share/doc/libempathy/libempathy-empathy-time.html
 share/doc/libempathy/libempathy-empathy-types.html
@@ -328,14 +334,12 @@ share/doc/libempathy/up.png
 %%DATADIR%%/irc-networks.xml
 share/gnome/help/empathy/C/empathy.xml
 share/gnome/help/empathy/C/figures/empathy-main-window.png
-share/gnome/help/empathy/C/figures/empathy-new-account.png
 share/gnome/help/empathy/C/legal.xml
 share/gnome/help/empathy/ca/empathy.xml
 share/gnome/help/empathy/ca/figures/empathy-main-window.png
 share/gnome/help/empathy/ca/figures/empathy-new-account.png
 share/gnome/help/empathy/cs/empathy.xml
 share/gnome/help/empathy/cs/figures/empathy-main-window.png
-share/gnome/help/empathy/cs/figures/empathy-new-account.png
 share/gnome/help/empathy/de/empathy.xml
 share/gnome/help/empathy/de/figures/empathy-main-window.png
 share/gnome/help/empathy/de/figures/empathy-new-account.png
@@ -344,7 +348,6 @@ share/gnome/help/empathy/el/figures/empathy-main-window.png
 share/gnome/help/empathy/el/figures/empathy-new-account.png
 share/gnome/help/empathy/en_GB/empathy.xml
 share/gnome/help/empathy/en_GB/figures/empathy-main-window.png
-share/gnome/help/empathy/en_GB/figures/empathy-new-account.png
 share/gnome/help/empathy/es/empathy.xml
 share/gnome/help/empathy/es/figures/empathy-main-window.png
 share/gnome/help/empathy/es/figures/empathy-new-account.png
@@ -356,10 +359,8 @@ share/gnome/help/empathy/fr/figures/empathy-main-window.png
 share/gnome/help/empathy/fr/figures/empathy-new-account.png
 share/gnome/help/empathy/it/empathy.xml
 share/gnome/help/empathy/it/figures/empathy-main-window.png
-share/gnome/help/empathy/it/figures/empathy-new-account.png
 share/gnome/help/empathy/ru/empathy.xml
 share/gnome/help/empathy/ru/figures/empathy-main-window.png
-share/gnome/help/empathy/ru/figures/empathy-new-account.png
 share/gnome/help/empathy/sv/empathy.xml
 share/gnome/help/empathy/sv/figures/empathy-main-window.png
 share/gnome/help/empathy/sv/figures/empathy-new-account.png
@@ -370,6 +371,7 @@ share/icons/hicolor/32x32/apps/empathy.png
 share/icons/hicolor/48x48/apps/empathy.png
 share/icons/hicolor/scalable/apps/empathy.svg
 share/locale/ar/LC_MESSAGES/empathy.mo
+share/locale/as/LC_MESSAGES/empathy.mo
 share/locale/az/LC_MESSAGES/empathy.mo
 share/locale/be@latin/LC_MESSAGES/empathy.mo
 share/locale/bg/LC_MESSAGES/empathy.mo
@@ -402,6 +404,7 @@ share/locale/ko/LC_MESSAGES/empathy.mo
 share/locale/ku/LC_MESSAGES/empathy.mo
 share/locale/lt/LC_MESSAGES/empathy.mo
 share/locale/lv/LC_MESSAGES/empathy.mo
+share/locale/mai/LC_MESSAGES/empathy.mo
 share/locale/mk/LC_MESSAGES/empathy.mo
 share/locale/ml/LC_MESSAGES/empathy.mo
 share/locale/mr/LC_MESSAGES/empathy.mo
@@ -410,6 +413,7 @@ share/locale/nb/LC_MESSAGES/empathy.mo
 share/locale/ne/LC_MESSAGES/empathy.mo
 share/locale/nl/LC_MESSAGES/empathy.mo
 share/locale/oc/LC_MESSAGES/empathy.mo
+share/locale/or/LC_MESSAGES/empathy.mo
 share/locale/pa/LC_MESSAGES/empathy.mo
 share/locale/pl/LC_MESSAGES/empathy.mo
 share/locale/ps/LC_MESSAGES/empathy.mo
@@ -422,6 +426,8 @@ share/locale/sq/LC_MESSAGES/empathy.mo
 share/locale/sr/LC_MESSAGES/empathy.mo
 share/locale/sr@latin/LC_MESSAGES/empathy.mo
 share/locale/sv/LC_MESSAGES/empathy.mo
+share/locale/ta/LC_MESSAGES/empathy.mo
+share/locale/te/LC_MESSAGES/empathy.mo
 share/locale/th/LC_MESSAGES/empathy.mo
 share/locale/tr/LC_MESSAGES/empathy.mo
 share/locale/uk/LC_MESSAGES/empathy.mo
@@ -516,6 +522,8 @@ share/omf/empathy/empathy-sv.omf
 @dirrm include/libempathy
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/ps/LC_MESSAGES
@@ -524,6 +532,8 @@ share/omf/empathy/empathy-sv.omf
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
@@ -532,3 +542,5 @@ share/omf/empathy/empathy-sv.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
