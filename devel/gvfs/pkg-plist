@@ -70,6 +70,7 @@ share/gvfs/mounts/trash.mount
 %%GPHOTO2%%share/gvfs/remote-volume-monitors/gphoto2.monitor
 share/gvfs/remote-volume-monitors/hal.monitor
 share/locale/ar/LC_MESSAGES/gvfs.mo
+share/locale/as/LC_MESSAGES/gvfs.mo
 share/locale/be@latin/LC_MESSAGES/gvfs.mo
 share/locale/bg/LC_MESSAGES/gvfs.mo
 share/locale/bn_IN/LC_MESSAGES/gvfs.mo
@@ -145,3 +146,5 @@ share/locale/zh_TW/LC_MESSAGES/gvfs.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
