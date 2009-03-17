@@ -86,6 +86,7 @@ share/icons/hicolor/32x32/apps/cheese.png
 share/icons/hicolor/48x48/apps/cheese.png
 share/icons/hicolor/scalable/apps/cheese.svg
 share/locale/ar/LC_MESSAGES/cheese.mo
+share/locale/as/LC_MESSAGES/cheese.mo
 share/locale/be@latin/LC_MESSAGES/cheese.mo
 share/locale/bg/LC_MESSAGES/cheese.mo
 share/locale/bn_IN/LC_MESSAGES/cheese.mo
@@ -226,3 +227,5 @@ share/omf/cheese/cheese-th.omf
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
