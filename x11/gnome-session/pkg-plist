@@ -20,6 +20,7 @@ share/icons/hicolor/scalable/apps/session-properties.svg
 share/locale/af/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/as/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ast/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-session-2.0.mo
@@ -82,6 +83,7 @@ share/locale/oc/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/or/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/ps/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/pt/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ro/LC_MESSAGES/gnome-session-2.0.mo
@@ -155,6 +157,8 @@ share/xsessions/gnome.desktop
 @dirrmtry share/locale/si
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/ps/LC_MESSAGES
+@dirrmtry share/locale/ps
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/nso/LC_MESSAGES
@@ -185,3 +189,5 @@ share/xsessions/gnome.desktop
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/ast/LC_MESSAGES
 @dirrmtry share/locale/ast
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
