@@ -885,6 +885,7 @@ share/locale/nb/LC_MESSAGES/anjuta.mo
 share/locale/ne/LC_MESSAGES/anjuta.mo
 share/locale/nl/LC_MESSAGES/anjuta.mo
 share/locale/oc/LC_MESSAGES/anjuta.mo
+share/locale/or/LC_MESSAGES/anjuta.mo
 share/locale/pa/LC_MESSAGES/anjuta.mo
 share/locale/pl/LC_MESSAGES/anjuta.mo
 share/locale/pt/LC_MESSAGES/anjuta.mo
@@ -898,6 +899,7 @@ share/locale/sq/LC_MESSAGES/anjuta.mo
 share/locale/sr/LC_MESSAGES/anjuta.mo
 share/locale/sr@latin/LC_MESSAGES/anjuta.mo
 share/locale/sv/LC_MESSAGES/anjuta.mo
+share/locale/te/LC_MESSAGES/anjuta.mo
 share/locale/th/LC_MESSAGES/anjuta.mo
 share/locale/tr/LC_MESSAGES/anjuta.mo
 share/locale/uk/LC_MESSAGES/anjuta.mo
@@ -1173,6 +1175,8 @@ share/pixmaps/anjuta/vcs-updated.png
 @dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES

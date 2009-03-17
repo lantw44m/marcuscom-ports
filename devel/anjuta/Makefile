@@ -3,11 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.34 2009/03/01 07:42:19 marcus Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.35 2009/03/03 19:01:38 marcus Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.25.903.0
+PORTVERSION=	2.26.0.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -38,14 +38,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 USE_LDCONFIG=	yes
-GCONF_SCHEMAS=	anjuta-build-basic-autotools-plugin.schemas \
-		anjuta-cvs-plugin.schemas anjuta-document-manager.schemas \
-		anjuta-language-cpp-java.schemas \
-		anjuta-message-manager-plugin.schemas \
-		anjuta-editor-sourceview.schemas \
-		anjuta-editor-scintilla.schemas \
-		anjuta-symbol-db.schemas \
-		anjuta-terminal-plugin.schemas anjuta.schemas
 
 MAN1=		anjuta.1 anjuta_launcher.1
 
