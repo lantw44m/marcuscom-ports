@@ -169,12 +169,24 @@ share/gnome/help/accerciser/cs/figures/api_browser.png
 share/gnome/help/accerciser/cs/figures/event_monitor.png
 share/gnome/help/accerciser/cs/figures/interface_viewer.png
 share/gnome/help/accerciser/cs/figures/script_recorder.png
+share/gnome/help/accerciser/de/accerciser.xml
+share/gnome/help/accerciser/de/figures/accerciser.png
+share/gnome/help/accerciser/de/figures/api_browser.png
+share/gnome/help/accerciser/de/figures/event_monitor.png
+share/gnome/help/accerciser/de/figures/interface_viewer.png
+share/gnome/help/accerciser/de/figures/script_recorder.png
 share/gnome/help/accerciser/en_GB/accerciser.xml
 share/gnome/help/accerciser/en_GB/figures/accerciser.png
 share/gnome/help/accerciser/en_GB/figures/api_browser.png
 share/gnome/help/accerciser/en_GB/figures/event_monitor.png
 share/gnome/help/accerciser/en_GB/figures/interface_viewer.png
 share/gnome/help/accerciser/en_GB/figures/script_recorder.png
+share/gnome/help/accerciser/el/accerciser.xml
+share/gnome/help/accerciser/el/figures/accerciser.png
+share/gnome/help/accerciser/el/figures/api_browser.png
+share/gnome/help/accerciser/el/figures/event_monitor.png
+share/gnome/help/accerciser/el/figures/interface_viewer.png
+share/gnome/help/accerciser/el/figures/script_recorder.png
 share/gnome/help/accerciser/es/accerciser.xml
 share/gnome/help/accerciser/es/figures/accerciser.png
 share/gnome/help/accerciser/es/figures/api_browser.png
@@ -263,7 +275,9 @@ share/locale/zh_TW/LC_MESSAGES/accerciser.mo
 share/omf/accerciser/accerciser-C.omf
 share/omf/accerciser/accerciser-ca.omf
 share/omf/accerciser/accerciser-cs.omf
+share/omf/accerciser/accerciser-de.omf
 share/omf/accerciser/accerciser-en_GB.omf
+share/omf/accerciser/accerciser-el.omf
 share/omf/accerciser/accerciser-es.omf
 share/omf/accerciser/accerciser-fr.omf
 share/omf/accerciser/accerciser-oc.omf
@@ -280,8 +294,12 @@ share/omf/accerciser/accerciser-sv.omf
 @dirrm share/gnome/help/accerciser/fr
 @dirrm share/gnome/help/accerciser/es/figures
 @dirrm share/gnome/help/accerciser/es
+@dirrm share/gnome/help/accerciser/el/figures
+@dirrm share/gnome/help/accerciser/el
 @dirrm share/gnome/help/accerciser/en_GB/figures
 @dirrm share/gnome/help/accerciser/en_GB
+@dirrm share/gnome/help/accerciser/de/figures
+@dirrm share/gnome/help/accerciser/de
 @dirrm share/gnome/help/accerciser/cs/figures
 @dirrm share/gnome/help/accerciser/cs
 @dirrm share/gnome/help/accerciser/ca/figures
