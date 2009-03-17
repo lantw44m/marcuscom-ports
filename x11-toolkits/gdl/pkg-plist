@@ -63,6 +63,7 @@ share/locale/fi/LC_MESSAGES/gdl-1.mo
 share/locale/fr/LC_MESSAGES/gdl-1.mo
 share/locale/ga/LC_MESSAGES/gdl-1.mo
 share/locale/gl/LC_MESSAGES/gdl-1.mo
+share/locale/gu/LC_MESSAGES/gdl-1.mo
 share/locale/he/LC_MESSAGES/gdl-1.mo
 share/locale/hi/LC_MESSAGES/gdl-1.mo
 share/locale/hr/LC_MESSAGES/gdl-1.mo
@@ -79,6 +80,7 @@ share/locale/nb/LC_MESSAGES/gdl-1.mo
 share/locale/ne/LC_MESSAGES/gdl-1.mo
 share/locale/nl/LC_MESSAGES/gdl-1.mo
 share/locale/oc/LC_MESSAGES/gdl-1.mo
+share/locale/or/LC_MESSAGES/gdl-1.mo
 share/locale/pa/LC_MESSAGES/gdl-1.mo
 share/locale/pl/LC_MESSAGES/gdl-1.mo
 share/locale/ps/LC_MESSAGES/gdl-1.mo
@@ -94,6 +96,7 @@ share/locale/sq/LC_MESSAGES/gdl-1.mo
 share/locale/sr/LC_MESSAGES/gdl-1.mo
 share/locale/sr@latin/LC_MESSAGES/gdl-1.mo
 share/locale/sv/LC_MESSAGES/gdl-1.mo
+share/locale/te/LC_MESSAGES/gdl-1.mo
 share/locale/th/LC_MESSAGES/gdl-1.mo
 share/locale/tr/LC_MESSAGES/gdl-1.mo
 share/locale/uk/LC_MESSAGES/gdl-1.mo
@@ -108,6 +111,8 @@ share/locale/zh_TW/LC_MESSAGES/gdl-1.mo
 @dirrm include/libgdl-1.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES

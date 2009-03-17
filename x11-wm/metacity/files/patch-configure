@@ -1,9 +1,9 @@
---- configure.orig	2009-02-26 19:24:58.000000000 -0500
-+++ configure	2009-02-26 19:25:13.000000000 -0500
-@@ -23806,7 +23806,7 @@ metacity-$VERSION:
+--- configure.orig	2009-03-17 18:59:17.000000000 +0100
++++ configure	2009-03-17 19:00:03.000000000 +0100
+@@ -23806,7 +23806,7 @@
  "
  
- METACITY_MINOR_VERSION=25
+ METACITY_MINOR_VERSION=26
 -if test $(( $(echo $METACITY_MINOR_VERSION) %2)) == "1"; then
 +if test $(( $(echo $METACITY_MINOR_VERSION) %2)) = "1"; then
     stable_version=$(( ($METACITY_MINOR_VERSION / 2) * 2))
