@@ -23,6 +23,7 @@ libdata/pkgconfig/libgnomecanvas-2.0.pc
 share/locale/am/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/ang/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/ar/LC_MESSAGES/libgnomecanvas-2.0.mo
+share/locale/as/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/az/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/be/LC_MESSAGES/libgnomecanvas-2.0.mo
 share/locale/bg/LC_MESSAGES/libgnomecanvas-2.0.mo
@@ -138,5 +139,7 @@ share/locale/zh_TW/LC_MESSAGES/libgnomecanvas-2.0.mo
 @dirrmtry share/locale/crh
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrmtry share/locale/ang/LC_MESSAGES
 @dirrmtry share/locale/ang
