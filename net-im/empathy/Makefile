@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.19 2009/03/05 06:27:05 marcus Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.20 2009/03/17 17:11:36 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.26.0
@@ -69,7 +69,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-h
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|$${datadir}/gtk-doc/html|${DOCSDIR}|' \
-		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|$${datadir}/gtk-doc/html|${DOCSDIR}|g ; \
+		s|-Werror||g' ${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
