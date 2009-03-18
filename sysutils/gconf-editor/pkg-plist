@@ -33,6 +33,22 @@ share/gnome/help/gconf-editor/de/figures/entry-schema.png
 share/gnome/help/gconf-editor/de/figures/entry-string.png
 share/gnome/help/gconf-editor/de/figures/gconf_editor_anno_window.png
 share/gnome/help/gconf-editor/de/gconf-editor.xml
+share/gnome/help/gconf-editor/el/figures/entry-blank.png
+share/gnome/help/gconf-editor/el/figures/entry-bool.png
+share/gnome/help/gconf-editor/el/figures/entry-list.png
+share/gnome/help/gconf-editor/el/figures/entry-number.png
+share/gnome/help/gconf-editor/el/figures/entry-schema.png
+share/gnome/help/gconf-editor/el/figures/entry-string.png
+share/gnome/help/gconf-editor/el/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/el/gconf-editor.xml
+share/gnome/help/gconf-editor/en_GB/figures/entry-blank.png
+share/gnome/help/gconf-editor/en_GB/figures/entry-bool.png
+share/gnome/help/gconf-editor/en_GB/figures/entry-list.png
+share/gnome/help/gconf-editor/en_GB/figures/entry-number.png
+share/gnome/help/gconf-editor/en_GB/figures/entry-schema.png
+share/gnome/help/gconf-editor/en_GB/figures/entry-string.png
+share/gnome/help/gconf-editor/en_GB/figures/gconf_editor_anno_window.png
+share/gnome/help/gconf-editor/en_GB/gconf-editor.xml
 share/gnome/help/gconf-editor/es/figures/entry-blank.png
 share/gnome/help/gconf-editor/es/figures/entry-bool.png
 share/gnome/help/gconf-editor/es/figures/entry-list.png
@@ -191,6 +207,8 @@ share/locale/zh_TW/LC_MESSAGES/gconf-editor.mo
 share/omf/gconf-editor/gconf-editor-C.omf
 share/omf/gconf-editor/gconf-editor-ca.omf
 share/omf/gconf-editor/gconf-editor-de.omf
+share/omf/gconf-editor/gconf-editor-el.omf
+share/omf/gconf-editor/gconf-editor-en_GB.omf
 share/omf/gconf-editor/gconf-editor-es.omf
 share/omf/gconf-editor/gconf-editor-fr.omf
 share/omf/gconf-editor/gconf-editor-it.omf
@@ -219,6 +237,10 @@ share/omf/gconf-editor/gconf-editor-uk.omf
 @dirrm share/gnome/help/gconf-editor/fr
 @dirrm share/gnome/help/gconf-editor/es/figures
 @dirrm share/gnome/help/gconf-editor/es
+@dirrm share/gnome/help/gconf-editor/en_GB/figures
+@dirrm share/gnome/help/gconf-editor/en_GB
+@dirrm share/gnome/help/gconf-editor/el/figures
+@dirrm share/gnome/help/gconf-editor/el
 @dirrm share/gnome/help/gconf-editor/de/figures
 @dirrm share/gnome/help/gconf-editor/de
 @dirrm share/gnome/help/gconf-editor/ca/figures
