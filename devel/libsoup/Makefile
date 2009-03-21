@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.56 2009/02/27 20:55:03 marcus Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.57 2009/03/17 14:10:46 kwm Exp $
 #
 
 PORTNAME=	libsoup
 PORTVERSION=	2.26.0
+PORTREVISION=	1
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -24,7 +25,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
     		proxy.0:${PORTSDIR}/net/libproxy \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3
 
-USE_GNOME=	gnomehack glib20 libxml2 ltverhack referencehack
+USE_GNOME=	gnomehack glib20 libxml2 ltverhack referencehack gconf2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GMAKE=	yes
