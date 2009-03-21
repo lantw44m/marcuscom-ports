@@ -3,12 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.136 2009/03/17 23:06:49 kwm Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.137 2009/03/20 07:10:08 marcus Exp $
 #
 
 PORTNAME=	pango
 PORTVERSION=	1.24.0
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME \
 		ftp://ftp.gtk.org/pub/pango/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/
@@ -44,7 +44,7 @@ PLIST_SUB=	VERSION="1.6.0"
 FONTSCALE=	${LOCALBASE}/lib/X11/fonts/TTF/luximb.ttf
 FONTENCOD=	${LOCALBASE}/lib/X11/fonts/encodings/encodings.dir
 
-MAN1=		pango-view.1 pango-querymodules.1
+MAN1=		pango-view.1 pango-querymodules.1 preload.1
 
 .if defined(WITHOUT_X11)
 CONFIGURE_ARGS+=	--with-x=no
