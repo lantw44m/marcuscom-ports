@@ -27,6 +27,10 @@ lib/brasero/plugins/libbrasero-genisoimage.la
 lib/brasero/plugins/libbrasero-genisoimage.so
 lib/brasero/plugins/libbrasero-growisofs.la
 lib/brasero/plugins/libbrasero-growisofs.so
+%%LIBBURNIA%%lib/brasero/plugins/libbrasero-libburn.la
+%%LIBBURNIA%%lib/brasero/plugins/libbrasero-libburn.so
+%%LIBBURNIA%%lib/brasero/plugins/libbrasero-libisofs.la
+%%LIBBURNIA%%lib/brasero/plugins/libbrasero-libisofs.so
 lib/brasero/plugins/libbrasero-local-track.la
 lib/brasero/plugins/libbrasero-local-track.so
 lib/brasero/plugins/libbrasero-mkisofs.la

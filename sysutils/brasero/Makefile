@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.41 2009/03/14 17:22:13 marcus Exp $
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.42 2009/03/16 08:13:37 kwm Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	2.26.0
+PORTREVISION=	1
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -16,6 +17,8 @@ COMMENT=	CD/DVD mastering tool for the GNOME desktop
 
 LIB_DEPENDS=	notify.1:${PORTSDIR}/devel/libnotify \
 		totem-plparser.12:${PORTSDIR}/multimedia/totem-pl-parser
+RUN_DEPENDS=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
+    		cdrdao:${PORTSDIR}/sysutils/cdrdao
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
@@ -33,4 +36,17 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -DHAVE_CAM_LIB_H=1" \
 MAN1=		brasero.1
 GCONF_SCHEMAS=	brasero.schemas
 
-.include <bsd.port.mk>
+OPTIONS=	LIBBURNIA "Enable libburnia plug-ins" off
+
+.include <bsd.port.pre.mk>
+
+.if defined(WITH_LIBBURNIA)
+LIB_DEPENDS+=	burn.4:${PORTSDIR}/devel/libburn \
+    		isofs.6:${PORTSDIR}/devel/libisofs
+CONFIGURE_ARGS+=--enable-libburnia
+PLIST_SUB+=	LIBBURNIA=""
+.else
+PLIST_SUB+=	LIBBURNIA="@comment "
+.endif
+
+.include <bsd.port.post.mk>
