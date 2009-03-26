@@ -3,7 +3,7 @@
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/metacity/Makefile,v 1.143 2009/03/08 19:42:19 mezz Exp $
+#   $MCom: ports/x11-wm/metacity/Makefile,v 1.144 2009/03/17 18:06:08 kwm Exp $
 #
 
 PORTNAME=	metacity
@@ -35,5 +35,9 @@ GCONF_SCHEMAS=	metacity.schemas
 
 MAN1=		metacity-message.1 metacity-theme-viewer.1 \
 		metacity-window-demo.1 metacity.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-Werror||g' \
+	    	${WRKSRC}/configure
 
 .include <bsd.port.mk>
