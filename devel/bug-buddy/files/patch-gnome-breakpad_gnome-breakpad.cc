@@ -48,7 +48,7 @@
  		has_debug_symbols = elf_has_debug_symbols (mypath);
 -
 +#else	
-+		has_debug_sumbols = TRUE;
++		has_debug_symbols = TRUE;
 +#endif
  	g_free (mypath);
  
