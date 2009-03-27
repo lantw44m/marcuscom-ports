@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.137 2009/03/20 07:10:08 marcus Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.138 2009/03/21 03:13:24 marcus Exp $
 #
 
 PORTNAME=	pango
@@ -28,6 +28,7 @@ RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack glib20 ltverhack referencehack

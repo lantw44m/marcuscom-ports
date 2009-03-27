@@ -3,7 +3,7 @@
 # Whom:			jseger@FreeBSD.org
 #
 # $FreeBSD: ports/print/freetype2/Makefile,v 1.83 2008/09/24 22:53:21 marcus Exp $
-#   $MCom: ports/print/freetype2/Makefile,v 1.13 2009/02/26 18:47:20 marcus Exp $
+#   $MCom: ports/print/freetype2/Makefile,v 1.14 2009/03/21 04:21:40 marcus Exp $
 #
 
 PORTNAME=	freetype2
@@ -24,6 +24,7 @@ COMMENT=	A free and portable TrueType font rendering engine
 USE_AUTOTOOLS=	libtool:15
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
 MAKE_ENV=	TOP=""
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
