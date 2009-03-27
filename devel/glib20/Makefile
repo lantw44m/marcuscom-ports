@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.141 2009/03/02 12:54:01 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.142 2009/03/13 15:15:11 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
@@ -36,6 +36,7 @@ USE_AUTOTOOLS=	libtool:15
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack pkgconfig ltverhack
 USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
 USE_PYTHON=	yes
 USE_PERL5=	yes
 CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu \

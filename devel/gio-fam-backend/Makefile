@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.28 2009/03/02 12:54:02 kwm Exp $
+#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.29 2009/03/13 15:15:11 kwm Exp $
 #
 
 PORTNAME=	gio-fam-backend
@@ -29,6 +29,7 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack pkgconfig _glib20
 USE_FAM=	yes
 USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib -lintl" \
