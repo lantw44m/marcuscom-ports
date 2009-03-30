@@ -5,7 +5,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/Mk/bsd.gecko.mk,v 1.7 2009/03/30 01:37:59 marcus Exp $
+#   $MCom: ports/Mk/bsd.gecko.mk,v 1.8 2009/03/30 03:06:02 marcus Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -83,6 +83,7 @@ _GECKO_ALL=	firefox nvu seamonkey thunderbird xulrunner flock mozilla \
 		libxul
 
 thunderbird_PORTSDIR=	mail
+libxul_PLIST=		${LOCALBASE}/lib/libxul/libxul.so
 
 .for gecko in ${_GECKO_ALL}
 ${gecko}_PORTSDIR?=	www
