@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/libxul/Makefile,v 1.20 2009/03/30 01:34:32 marcus Exp $
 #
 
 PORTNAME=	libxul
@@ -38,6 +38,7 @@ MOZ_EXTENSIONS=	default,cookie,permissions
 OPTIONS=	# Empty, used for generic gecko OPTIONS
 USE_GECKO_OPTIONS=	java debug logging optimized_cflags
 USE_GECKO=	gecko
+MOZILLA_EXEC_NAME=xulrunner
 MOZ_TOOLKIT=	cairo-gtk2
 USE_MOZILLA=	-png -nss -dbm -jpeg
 MOZ_PKGCONFIG_FILES=	libxul-embedding-unstable libxul-embedding \
