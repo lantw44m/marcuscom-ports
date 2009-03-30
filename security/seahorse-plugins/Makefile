@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.8 2009/03/16 07:21:12 marcus Exp $
+#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.9 2009/03/17 22:38:44 kwm Exp $
 #
 
 PORTNAME=	seahorse-plugins
@@ -20,7 +20,7 @@ LIB_DEPENDS=	cryptui.0:${PORTSDIR}/security/seahorse
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GECKO=	firefox xulrunner
+USE_GECKO=	firefox libxul
 USE_GNOME=	gnomehack intlhack gnomeprefix libglade2 gconf2 gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
@@ -37,6 +37,12 @@ GCONF_SCHEMAS=	seahorse-plugins.schemas
 MAN1=		seahorse-agent.1 seahorse-tool.1
 
 .include <bsd.port.pre.mk>
+
+.if ${GECKO}=="libxul"
+CONFIGURE_ARGS+=--with-gecko=libxul-unstable
+.else
+CONFIGURE_ARGS+=--with-gecko=${GECKO}
+.endif
 
 .if !defined(WITHOUT_GEDIT)
 BUILD_DEPENDS+=	gedit:${PORTSDIR}/editors/gedit
