@@ -3,16 +3,16 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/xulrunner/Makefile,v 1.18 2009/02/09 02:43:46 ahze Exp $
+#   $MCom$
 #
 
-PORTNAME=	xulrunner
-PORTVERSION=	1.9.0.6
+PORTNAME=	libxul
+PORTVERSION=	1.9.0.7
 PORTREVISION?=	0
 CATEGORIES?=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	xulrunner/releases/${PORTVERSION}/source/
-DISTNAME=	${PORTNAME}-${PORTVERSION}-source
+DISTNAME=	xulrunner-${PORTVERSION}-source
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Mozilla runtime package that can be used to bootstrap XUL+XPCOM apps
@@ -28,6 +28,7 @@ ALL_TARGET=	default
 HAS_CONFIGURE=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
+LDFLAGS+=	-Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}
 
 PORT_MOZCONFIG=	${WRKSRC}/xulrunner/config/mozconfig
 MOZ_OPTIONS?=	--with-default-mozilla-five-home=${PREFIX}/lib/${MOZILLA} \
@@ -42,5 +43,11 @@ USE_MOZILLA=	-png -nss -dbm -jpeg
 MOZ_PKGCONFIG_FILES=	libxul-embedding-unstable libxul-embedding \
 		libxul-unstable	libxul mozilla-gtkmozembed-embedding \
 		mozilla-gtkmozembed mozilla-js mozilla-nss mozilla-plugin
+
+post-build:
+	@${REINPLACE_CMD} -e "s|\(Libs:.*\)\($$\)|\1 -Wl,-rpath,${PREFIX}/lib/${MOZ_RPATH}\2| ; \
+	    	s|%sdkdir%|%sdkdir%/sdk|g ; \
+		s|%%MOZ_LIBDIR%%|${PREFIX}/lib/${MOZILLA}|g" \
+	    	${WRKSRC}/xulrunner/installer/*.pc.in || ${TRUE}
 
 .include <bsd.port.mk>
