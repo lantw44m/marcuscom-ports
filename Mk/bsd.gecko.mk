@@ -5,7 +5,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/Mk/bsd.gecko.mk,v 1.12 2008/08/07 04:42:34 mezz Exp $
+#   $MCom: ports/Mk/bsd.gecko.mk,v 1.7 2009/03/30 01:37:59 marcus Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -248,6 +248,7 @@ MAINTAINER?=	gnome@FreeBSD.org
 MOZILLA?=	${PORTNAME}
 MOZILLA_VER?=	${PORTVERSION}
 MOZILLA_BIN?=	${PORTNAME}-bin
+MOZILLA_EXEC_NAME?=${MOZILLA}
 MOZ_RPATH?=	${MOZILLA}
 USE_GNOME+=	gtk20 libidl desktopfileutils
 USE_ICONV=	yes
@@ -571,10 +572,10 @@ gecko-pre-install:
 .endfor
 	@${REINPLACE_CMD} -e 's|${MOZILLA}-bin|${MOZILLA:S/${MOZILLA_SUFX}//}|; \
 		s|$${progbase}-bin|${MOZILLA:S/${MOZILLA_SUFX}//}-bin|' \
-		${FAKEDIR}/bin/${MOZILLA}*
+		${FAKEDIR}/bin/${MOZILLA_EXEC_NAME}*
 .endif
 	@${REINPLACE_CMD} -e 's|${FAKEDIR}|${PREFIX}|g' \
-		${FAKEDIR}/bin/${MOZILLA}*
+		${FAKEDIR}/bin/${MOZILLA_EXEC_NAME}*
 	${RM} -f ${FAKEDIR}/bin/*.bak
 .endif
 
