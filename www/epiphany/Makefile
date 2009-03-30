@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.193 2009/03/14 17:20:10 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.194 2009/03/16 07:09:20 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -60,9 +60,10 @@ EXTRA_LIBS+=	`pkg-config --libs WebKitGtk`
 CONFLICTS=	epiphany-[1-9]*
 PLIST_SUB+=	GECKO="@comment "
 .else
-USE_GECKO+=	firefox
+USE_GECKO+=	firefox libxul
 CONFIGURE_ARGS+=	--with-gecko=${GECKO} \
-			--with-engine=mozilla
+			--with-engine=mozilla \
+			--with-gecko-home=${LOCALBASE}/lib/${GECKO}
 .include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 CONFLICTS=	epiphany-webkit-[1-9]*
 PLIST_SUB+=	GECKO=""
@@ -94,7 +95,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|WebKitGdk|WebKitGtk|' ${WRKSRC}/configure
 	@${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
 		 's|-lpthread|${PTHREAD_LIBS}|g'
-	@${REINPLACE_CMD} -e 's|execinfo.h|#|g' \
+	@${REINPLACE_CMD} -e 's|execinfo.h|#|g ; \
+	    	s|-ldl"$$|"|g' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/lib/mozilla/plugins"|/lib/browser_plugins/symlinks/gecko18"|' \
 		${WRKSRC}/embed/mozilla/mozilla-embed-single.cpp
