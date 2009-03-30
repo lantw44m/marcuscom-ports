@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/libxul/Makefile,v 1.20 2009/03/30 01:34:32 marcus Exp $
+#   $MCom: ports/www/libxul/Makefile,v 1.21 2009/03/30 03:06:56 marcus Exp $
 #
 
 PORTNAME=	libxul
