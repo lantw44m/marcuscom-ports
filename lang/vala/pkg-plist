@@ -70,6 +70,7 @@ include/vala-1.0/gobject/valaccodeassignmentmodule.h
 include/vala-1.0/gobject/valaccodebasemodule.h
 include/vala-1.0/gobject/valaccodecompiler.h
 include/vala-1.0/gobject/valaccodecontrolflowmodule.h
+include/vala-1.0/gobject/valaccodedeclarationspace.h
 include/vala-1.0/gobject/valaccodedelegatemodule.h
 include/vala-1.0/gobject/valaccodegenerator.h
 include/vala-1.0/gobject/valaccodememberaccessmodule.h
@@ -338,8 +339,11 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/libnotify.deps
 %%DATADIR%%/vapi/libnotify.vapi
 %%DATADIR%%/vapi/liboobs-1.vapi
+%%DATADIR%%/vapi/libosso.vapi
 %%DATADIR%%/vapi/libpanelapplet-2.0.deps
 %%DATADIR%%/vapi/libpanelapplet-2.0.vapi
+%%DATADIR%%/vapi/librsvg-2.0.deps
+%%DATADIR%%/vapi/librsvg-2.0.vapi
 %%DATADIR%%/vapi/libsexy.deps
 %%DATADIR%%/vapi/libsexy.vapi
 %%DATADIR%%/vapi/libsoup-2.2.vapi
@@ -373,6 +377,7 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/tracker-indexer-module-1.0.vapi
 %%DATADIR%%/vapi/unique-1.0.deps
 %%DATADIR%%/vapi/unique-1.0.vapi
+%%DATADIR%%/vapi/v4l2.vapi
 %%DATADIR%%/vapi/vala-1.0.vapi
 %%DATADIR%%/vapi/vte.deps
 %%DATADIR%%/vapi/vte.vapi
