@@ -5,7 +5,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/Mk/bsd.gecko.mk,v 1.8 2009/03/30 03:06:02 marcus Exp $
+#   $MCom: ports/Mk/bsd.gecko.mk,v 1.9 2009/03/30 06:38:09 marcus Exp $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -463,6 +463,11 @@ MOZ_SED_ARGS+=	-e's|@CPPFLAGS@|${CPPFLAGS}|g'		\
 		-e 's|%%MOZILLA_BIN%%|${MOZILLA_BIN}|g'	\
 		-e 's|%%MOZDIR%%|${PREFIX}/lib/${MOZILLA}|g'
 MOZCONFIG_SED?= ${SED} ${MOZ_SED_ARGS}
+
+.if ${ARCH}=="sparc64"
+# Work around miscompilation/mislinkage of the sCanonicalVTable hacks.
+MOZ_OPTIONS+=	--disable-v1-string-abi
+.endif
 
 .else # bsd.port.post.mk
 
