@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/libxul/Makefile,v 1.21 2009/03/30 03:06:56 marcus Exp $
+#   $MCom: ports/www/libxul/Makefile,v 1.22 2009/03/30 03:07:21 marcus Exp $
 #
 
 PORTNAME=	libxul
 PORTVERSION=	1.9.0.7
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	xulrunner/releases/${PORTVERSION}/source/
