@@ -1,0 +1,21 @@
+--- smsd/Makefile.orig	Sun Nov 13 16:00:45 2005
++++ smsd/Makefile	Sun Nov 13 16:00:54 2005
+@@ -7,14 +7,14 @@
+ # $Id: smsd-Makefile-WITH_GLIB.diff,v 1.1 2009-04-05 19:51:04 marcus Exp $
+ #
+ 
+-#GLIBCFLAGS = glib-config --cflags
+-#GLIBLDLIBS = glib-config --libs
++GLIBCFLAGS = glib-config --cflags
++GLIBLDLIBS = glib-config --libs
+ 
+ # Comment out above lines and uncomment below lines if you want compile smsd
+ # with glib2 instead of glib1.
+ #
+-GLIBCFLAGS = pkg-config --cflags glib-2.0
+-GLIBLDLIBS = pkg-config --libs glib-2.0
++#GLIBCFLAGS = pkg-config --cflags glib-2.0
++#GLIBLDLIBS = pkg-config --libs glib-2.0
+ 
+ TOPDIR=..
+ include $(TOPDIR)/Makefile.global
