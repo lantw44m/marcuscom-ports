@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/libxul/Makefile,v 1.22 2009/03/30 03:07:21 marcus Exp $
+#   $MCom: ports/www/libxul/Makefile,v 1.23 2009/04/04 19:56:22 marcus Exp $
 #
 
 PORTNAME=	libxul
@@ -17,7 +17,7 @@ DISTNAME=	xulrunner-${PORTVERSION}-source
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Mozilla runtime package that can be used to bootstrap XUL+XPCOM apps
 
-CONFLICTS=	mozilla-[0-9]*
+CONFLICTS=	mozilla-[0-9]* xulrunner-[0-9]*
 GECKO_PLIST_PRE_DIRS=	lib/${MOZILLA}/bin lib/${MOZILLA}/idl \
 			lib/${MOZILLA}/include lib/${MOZILLA}/lib \
 			lib/${MOZILLA}/sdk/idl lib/${MOZILLA}/sdk/include
