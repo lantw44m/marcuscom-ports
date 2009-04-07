@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/libxul/Makefile,v 1.23 2009/04/04 19:56:22 marcus Exp $
+#   $MCom: ports/www/libxul/Makefile,v 1.24 2009/04/06 05:38:59 marcus Exp $
 #
 
 PORTNAME=	libxul
 PORTVERSION=	1.9.0.7
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES?=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA}
 MASTER_SITE_SUBDIR=	xulrunner/releases/${PORTVERSION}/source/
@@ -16,6 +16,8 @@ DISTNAME=	xulrunner-${PORTVERSION}-source
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Mozilla runtime package that can be used to bootstrap XUL+XPCOM apps
+
+LIB_DEPENDS?=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 CONFLICTS=	mozilla-[0-9]* xulrunner-[0-9]*
 GECKO_PLIST_PRE_DIRS=	lib/${MOZILLA}/bin lib/${MOZILLA}/idl \
