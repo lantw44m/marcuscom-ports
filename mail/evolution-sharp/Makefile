@@ -3,7 +3,7 @@
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $Id: Makefile,v 1.11 2009-04-07 02:53:43 marcus Exp $
+#   $Id: Makefile,v 1.12 2009-04-07 03:10:40 marcus Exp $
 #
 
 PORTNAME=	evolution-sharp
@@ -29,6 +29,5 @@ post-patch:
 		s|.@EDS_SOVERSION@||g' \
 		${WRKSRC}/evolution/evolution-sharp.dll.config.in
 
-#.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
-.include "/usr/ports/lang/mono/bsd.mono.mk"
+.include "${.CURDIR}/../../lang/mono/bsd.mono.mk"
 .include <bsd.port.mk>
