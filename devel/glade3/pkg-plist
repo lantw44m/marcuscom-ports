@@ -108,7 +108,7 @@ share/doc/gladeui/gladeui-glade-xml-utils.html
 %%GNOME:%%%%DATADIR%%/catalogs/bonobo.xml.in
 %%GNOME:%%%%DATADIR%%/catalogs/canvas.xml
 %%GNOME:%%%%DATADIR%%/catalogs/canvas.xml.in
-%%GNOME:%%%%DATADIR%%/catalogs/glade-catalog.dtd
+%%DATADIR%%/catalogs/glade-catalog.dtd
 %%GNOME:%%%%DATADIR%%/catalogs/gnome.xml
 %%GNOME:%%%%DATADIR%%/catalogs/gnome.xml.in
 %%DATADIR%%/catalogs/gtk+.xml
@@ -460,6 +460,7 @@ share/locale/ja/LC_MESSAGES/glade3.mo
 share/locale/ko/LC_MESSAGES/glade3.mo
 share/locale/lt/LC_MESSAGES/glade3.mo
 share/locale/lv/LC_MESSAGES/glade3.mo
+share/locale/mai/LC_MESSAGES/glade3.mo
 share/locale/mk/LC_MESSAGES/glade3.mo
 share/locale/ml/LC_MESSAGES/glade3.mo
 share/locale/mr/LC_MESSAGES/glade3.mo
@@ -559,6 +560,8 @@ share/omf/glade/glade-sv.omf
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/cs/LC_MESSAGES
 @dirrmtry share/locale/cs
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
