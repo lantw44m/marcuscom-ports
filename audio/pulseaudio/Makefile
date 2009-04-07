@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/pulseaudio/Makefile,v 1.12 2009/03/08 01:08:37 marcus Exp $
+#   $MCom: ports/audio/pulseaudio/Makefile,v 1.13 2009/03/08 19:14:47 marcus Exp $
 #
 
 PORTNAME=	pulseaudio
@@ -24,6 +24,7 @@ LIB_DEPENDS=	samplerate.1:${PORTSDIR}/audio/libsamplerate \
 USE_GNOME=	gnometarget gnomehack glib20 intltool ltverhack
 USE_XORG=	x11 sm
 USE_LDCONFIG=	yes
+USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libltdl:15 libtool:15
 USE_GMAKE=	yes
