@@ -2,8 +2,8 @@
 # Date created:		2008-03-30
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/tracker-gnome/Makefile,v 1.3 2009/01/05 19:04:36 delphij Exp $
-#    $MCom: ports-stable/sysutils/tracker-gnome/Makefile,v 1.1 2008/03/30 20:39:09 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/sysutils/tracker-gnome/Makefile,v 1.1 2009/03/11 22:44:13 mezz Exp $
 
 PORTREVISION=	2
 

@@ -2,7 +2,7 @@
 # Date created:			21 Aug 2004
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
-# $FreeBSD: ports/misc/gnome-osd/Makefile,v 1.20 2008/06/06 13:45:24 edwin Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-osd

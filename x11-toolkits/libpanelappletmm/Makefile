@@ -2,7 +2,7 @@
 # Date created:         3 Dec 2003
 # Whom:                 Alexander Nedotsukov <bland@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/libpanelappletmm/Makefile,v 1.22 2009/02/02 01:36:14 araujo Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libpanelappletmm

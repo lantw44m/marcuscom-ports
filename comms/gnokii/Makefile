@@ -2,7 +2,7 @@
 # Date created:				15 March 1999
 # Whom:			Staffan Ulfberg <staffanu@multivac.fatburen.org>
 #
-# $FreeBSD:$
+# $FreeBSD$
 #
 
 PORTNAME=	gnokii

@@ -2,8 +2,8 @@
 # Date Created:				21 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-themes/gtk-engines2/Makefile,v 1.76 2009/02/02 01:36:11 araujo Exp $
-#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.72 2009/03/04 06:28:41 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-themes/gtk-engines2/Makefile,v 1.73 2009/03/17 18:14:05 kwm Exp $
 #
 
 PORTNAME=	gtk-engines2

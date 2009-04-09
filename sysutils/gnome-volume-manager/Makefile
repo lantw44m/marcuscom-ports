@@ -2,8 +2,8 @@
 # Date created:			02 May 2006
 # Whom:				Jean-Yves Lefort <jylefort@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gnome-volume-manager/Makefile,v 1.16 2009/02/23 05:28:28 marcus Exp $
-#   $MCom: ports/sysutils/gnome-volume-manager/Makefile,v 1.26 2008/09/24 03:12:47 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/sysutils/gnome-volume-manager/Makefile,v 1.28 2009/03/11 22:44:12 mezz Exp $
 #
 
 PORTNAME=	gnome-volume-manager

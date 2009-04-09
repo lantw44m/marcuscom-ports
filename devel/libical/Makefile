@@ -2,7 +2,7 @@
 # Date created:        8 November 2002
 # Whom:                Joe Kelsey
 #
-# $FreeBSD: ports/devel/libical/Makefile,v 1.16 2009/01/04 12:56:02 makc Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libical

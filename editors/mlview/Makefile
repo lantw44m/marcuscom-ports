@@ -2,7 +2,7 @@
 # Date created:				24 September 2003
 # Whom:					Simon Barner <barner@gmx.de>
 #
-# $FreeBSD: ports/editors/mlview/Makefile,v 1.32 2009/03/23 01:01:12 linimon Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	mlview

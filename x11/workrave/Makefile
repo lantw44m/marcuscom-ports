@@ -2,7 +2,7 @@
 # Date created:				15 Jul 2003
 # Whom:					Koop Mast <einekoai@chello.nl>
 #
-# $FreeBSD: ports/x11/workrave/Makefile,v 1.28 2009/03/28 17:53:24 garga Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	workrave

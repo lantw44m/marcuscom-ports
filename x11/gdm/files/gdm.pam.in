@@ -1,5 +1,5 @@
 #
-# $FreeBSD: ports/x11/gdm/files/gdm.pam.in,v 1.2 2009/01/10 05:21:55 marcus Exp $
+# $FreeBSD$
 #
 # PAM configuration for the "gdm" service
 #

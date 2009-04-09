@@ -2,7 +2,7 @@
 # Date created:        31 August 2003
 # Whom:                MANTANI Nobutaka <nobutaka@FreeBSD.org>
 #
-# $FreeBSD: ports/textproc/uim-gnome/Makefile,v 1.8 2008/05/11 13:09:44 nobutaka Exp $
+# $FreeBSD$
 #
 
 PKGNAMESUFFIX=	-gnome

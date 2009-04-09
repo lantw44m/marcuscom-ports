@@ -2,8 +2,8 @@
 # Date created:		2006-01-12
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/poppler-gtk/Makefile,v 1.7 2008/07/02 19:59:23 mezz Exp $
-#   $MCom: ports-stable/graphics/poppler-gtk/Makefile,v 1.1 2008/06/16 21:36:00 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/graphics/poppler-gtk/Makefile,v 1.8 2009/02/27 00:16:16 marcus Exp $
 #
 
 PORTREVISION=	0

@@ -2,7 +2,7 @@
 # Date created:				3 November 2004
 # Whom:					Radek Kozlowski <radek@raadradd.com>
 #
-# $FreeBSD: ports/multimedia/gxmms/Makefile,v 1.13 2008/06/06 13:48:07 edwin Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gxmms
