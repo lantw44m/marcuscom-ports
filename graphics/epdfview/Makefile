@@ -6,8 +6,8 @@
 #
 
 PORTNAME=	epdfview
-PORTVERSION=	0.1.6
-PORTREVISION=	8
+PORTVERSION=	0.1.7
+PORTREVISION=	2
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	http://trac.emma-soft.com/epdfview/chrome/site/releases/ \
 		LOCAL/chinsan

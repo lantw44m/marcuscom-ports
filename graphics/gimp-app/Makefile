@@ -2,13 +2,13 @@
 # Date created:         Mon Nov 18 21:28:43 CST 1996
 # Whom:                 erich@FreeBSD.org
 #
-# $FreeBSD: ports/graphics/gimp-app/Makefile,v 1.232 2009/02/24 01:33:06 marcus Exp $
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.32 2009/02/27 00:21:44 marcus Exp $
+# $FreeBSD: ports/graphics/gimp-app/Makefile,v 1.234 2009/03/21 04:52:37 marcus Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.30 2009/01/04 22:16:26 marcus Exp $
 #
 
 PORTNAME=	gimp-app
-DISTVERSION=	2.6.5
-PORTREVISION?=	2
+DISTVERSION=	2.6.6
+PORTREVISION?=	1
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -45,7 +45,7 @@ USE_XORG=	xpm xmu xext
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME+=	gnomehack intltool intlhack gtk20 libartlgpl2 ltverhack \
-		desktopfileutils librsvg2
+		desktopfileutils
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 LIBTOOLFLAGS=	--disable-ltlibs --release-ignore
@@ -68,7 +68,8 @@ OPTIONS?=	DEBUG "debugging" off \
 		DBUS "D-BUS support" on \
 		GVFS "Use GVFS for the URI plug-in" on \
 		HELPBROWSER "internal help browser" on \
-		MP "multiple processor support" off
+		MP "multiple processor support" off \
+		RSVG "SVG format support" on
 .endif
 
 .include <bsd.port.pre.mk>
@@ -89,6 +90,14 @@ MLINKS=	gimp-2.6.1 gimp.1 \
 	gimp-2.6.1 gimp-console-2.6.1 \
 	gimp-console-2.6.1 gimp-console.1 \
 	gimprc-2.6.5 gimprc.5
+
+.if defined(WITHOUT_RSVG)
+CONFIGURE_ARGS+=	--without-librsvg
+PLIST_SUB+=		SVG="@comment "
+.else
+USE_GNOME+=		librsvg2
+PLIST_SUB+=		SVG=""
+.endif
 
 .if defined(WITH_DEBUG)
 CONFIGURE_ARGS+=	--enable-debug

@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/pulseaudio/Makefile,v 1.13 2009/03/08 19:14:47 marcus Exp $
+#   $MCom: ports/audio/pulseaudio/Makefile,v 1.14 2009/04/07 06:48:12 marcus Exp $
 #
 
 PORTNAME=	pulseaudio
@@ -50,6 +50,10 @@ MAN1=		esdcompat.1 pabrowse.1 pacat.1 pacmd.1 pactl.1 padsp.1 \
 MAN5=		default.pa.5 pulse-client.conf.5 pulse-daemon.conf.5
 
 .include <bsd.port.pre.mk>
+
+.if ${ARCH} == "sparc64"
+BROKEN=		Does not compile on sparc64
+.endif
 
 .if defined(WITH_JACK)
 LIB_DEPENDS+=	jack.0:${PORTSDIR}/audio/jack
