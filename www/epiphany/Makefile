@@ -1,0 +1,87 @@
+# Ports collection Makefile for:	epiphany
+# Date created:				24 April 2003
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD$
+#   $MCom$
+#
+
+PORTNAME=	epiphany
+PORTVERSION=	2.27.1
+PORTREVISION?=	0
+CATEGORIES=	www gnome
+MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT?=	An extremely lightweight and simple web browser for GNOME 2
+
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+		webkit-1.0.6:${PORTSDIR}/www/webkit-gtk2 \
+		notify.1:${PORTSDIR}/devel/libnotify
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
+    		${LOCALBASE}/share/icons/HighContrastLargePrint/index.theme:${PORTSDIR}/x11-themes/gnome-themes
+
+USE_LDCONFIG=	yes
+INSTALLS_ICONS=	yes
+USE_GETTEXT=	yes
+USE_BZIP2=	yes
+USE_PYTHON=	yes
+GNOME_DESKTOP_VERSION=2
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop desktopfileutils
+WANT_GNOME=	yes
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+INSTALLS_OMF=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS} ${EXTRA_CFLAGS}" \
+		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS} ${EXTRA_LIBS}"
+
+GCONF_SCHEMAS=	epiphany-lockdown.schemas epiphany.schemas
+
+PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}"
+
+MAN1=		epiphany.1
+
+OPTIONS=	SPELL_CHECKER "Enable spell checking support" off
+
+.if defined(PACKAGE_BUILDING)
+.undef WITHOUT_GNOME
+WITH_GNOME=	yes
+.endif
+
+.include <bsd.port.pre.mk>
+
+NO_WERROR=	yes
+# allow build with more warnings enabled
+.if defined(NO_WERROR)
+CONFIGURE_ARGS+=	--enable-compile-warnings=no
+.endif
+
+.if ${HAVE_GNOME:Mpygnome2}!=""
+USE_PYTHON=	yes
+.include "${PORTSDIR}/Mk/bsd.python.mk"
+USE_GNOME+=	pygnome2
+CONFIGURE_ARGS+=--enable-python
+PLIST_SUB+=	PYTHON=""
+.else
+CONFIGURE_ARGS+=--disable-python
+PLIST_SUB+=	PYTHON="@comment "
+.endif
+
+.if defined(WITH_SPELL_CHECKER)
+LIB_DEPENDS+=	enchant.1:${PORTSDIR}/textproc/enchant
+CONFIGURE_ARGS+=--enable-spell-checker
+.endif
+
+post-patch:
+	@${FIND} ${WRKSRC} -name "Makefile.in*" | ${XARGS} ${REINPLACE_CMD} -e \
+		 's|-lpthread|${PTHREAD_LIBS}|g'
+	@${REINPLACE_CMD} -e 's|execinfo.h|#|g ; \
+	    	s|-ldl"$$|"|g' \
+		${WRKSRC}/configure
+
+post-install:
+	@-update-desktop-database
+
+.include <bsd.port.post.mk>
