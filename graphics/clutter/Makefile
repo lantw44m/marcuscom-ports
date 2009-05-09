@@ -2,7 +2,7 @@
 # Date created:		2008-12-25
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/clutter/Makefile,v 1.3 2009/03/04 07:36:52 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	clutter
