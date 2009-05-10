@@ -1,0 +1,4 @@
+lib/gmpc/plugins/wikiplugin.la
+lib/gmpc/plugins/wikiplugin.so
+@dirrmtry lib/gmpc/plugins
+@dirrmtry lib/gmpc
