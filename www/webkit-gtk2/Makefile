@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.25 2009/05/03 21:43:54 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.26 2009/05/11 03:04:46 marcus Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.1.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -24,6 +24,7 @@ LIB_DEPENDS=	icutu.38:${PORTSDIR}/devel/icu \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 WANT_GSTREAMER=	yes
+MAKE_JOBS_SAFE=	yes
 USE_XORG=	xt
 USE_BISON=	build
 USE_GMAKE=	yes
@@ -35,8 +36,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \
 		ac_cv_path_DOLT_BASH=""
-CONFIGURE_ARGS=	--enable-static \
-		--enable-icon-database \
+CONFIGURE_ARGS=	--enable-icon-database \
 		--enable-svg \
 		--enable-svg-fonts
 MAKEFILE=	GNUmakefile
@@ -44,7 +44,8 @@ MAKEFILE=	GNUmakefile
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
-OPTIONS=	VIDEO "Enable video support" on
+OPTIONS=	VIDEO "Enable video support" on \
+		STATIC "Enable building static library" off
 
 .include <bsd.port.pre.mk>
 
@@ -53,20 +54,18 @@ USE_GSTREAMER+=	gnomevfs
 CONFIGURE_ARGS+=--enable-video
 .endif
 
+.if defined(WITH_STATIC)
+CONFIGURE_ARGS+=--enable-static
+PLIST_SUB+=	STATIC=""
+.else
+PLIST_SUB+=	STATIC="@comment "
+.endif
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%BROWSER_PLUGINS_DIR%%|${BROWSER_PLUGINS_DIR}|' \
 		${WRKSRC}/WebCore/plugins/PluginDatabase.cpp
-#	@${REINPLACE_CMD} -e 's|autoconf|${AUTOCONF}|g ; \
-#		s|automake|${AUTOMAKE}|g ; s|aclocal|${ACLOCAL}|g ; \
-#		s|autoheader|${AUTOHEADER}|g ; \
-#		s|LIBTOOLIZE=libtoolize|LIBTOOLIZE=${LIBTOOLIZE}|g ; \
-#		s|$$srcdir/configure|#$$srcdir/configure|g' \
-#			${WRKSRC}/autogen.sh
 	@${FIND} ${WRKSRC} -name GNUmakefile.am | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
-
-#pre-configure:
-#	@(cd ${WRKSRC} && ${SH} autogen.sh)
 
 post-install:
 # Install compat pkg-config file so we don't have to patch ports
