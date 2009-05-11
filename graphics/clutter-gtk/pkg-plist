@@ -3,6 +3,7 @@ include/clutter-0.9/clutter-gtk/gtk-clutter-embed.h
 include/clutter-0.9/clutter-gtk/gtk-clutter-scrollable.h
 include/clutter-0.9/clutter-gtk/gtk-clutter-util.h
 include/clutter-0.9/clutter-gtk/gtk-clutter-viewport.h
+lib/libclutter-gtk-0.9.a
 lib/libclutter-gtk-0.9.la
 lib/libclutter-gtk-0.9.so
 lib/libclutter-gtk-0.9.so.0
