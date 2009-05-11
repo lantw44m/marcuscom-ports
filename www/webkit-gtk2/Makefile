@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.25 2009/05/03 21:43:54 kwm Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.1.6
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -19,7 +20,8 @@ BUILD_DEPENDS=	flex:${PORTSDIR}/textproc/flex
 LIB_DEPENDS=	icutu.38:${PORTSDIR}/devel/icu \
 		enchant.1:${PORTSDIR}/textproc/enchant \
 		curl.5:${PORTSDIR}/ftp/curl \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3
+		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
+		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 WANT_GSTREAMER=	yes
 USE_XORG=	xt
