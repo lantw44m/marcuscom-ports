@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.19 2009/05/11 04:33:51 marcus Exp $
+#   $MCom: ports/multimedia/swfdec-gnome/Makefile,v 1.20 2009/05/12 08:07:25 kwm Exp $
 #
 
 PORTNAME=	swfdec-gnome
@@ -32,7 +32,7 @@ GCONF_SCHEMAS=	swfdec-thumbnailer.schemas
 MAN1=		swfdec-player.1 swfdec-thumbnailer.1
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|swfdec-0.8|swfdec-0.9|g' \
+	@${REINPLACE_CMD} -e 's|SWFDEC_MAJORMINOR=0.8|SWFDEC_MAJORMINOR=0.9|g' \
 		${WRKSRC}/configure
 
 post-install:
