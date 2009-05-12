@@ -65,6 +65,7 @@ lib/hamster-applet/hamster-applet
 %%PYTHON_SITELIBDIR%%/hamster/widgets.pyc
 %%PYTHON_SITELIBDIR%%/hamster/widgets.pyo
 libdata/bonobo/servers/Hamster_Applet.server
+share/gnome-control-center/keybindings/99-hamster-applet.xml
 %%DATADIR%%/Hamster_Applet.xml
 %%DATADIR%%/applet.ui
 %%DATADIR%%/art/hamster-applet.png
