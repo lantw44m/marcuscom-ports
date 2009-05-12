@@ -7,6 +7,7 @@ share/applications/gok.desktop
 %%DOCSDIR%%/ch02.html
 %%DOCSDIR%%/ch03.html
 %%DOCSDIR%%/ch04.html
+%%DOCSDIR%%/gok-GokButton.html
 %%DOCSDIR%%/gok-arraylist.html
 %%DOCSDIR%%/gok-callbacks.html
 %%DOCSDIR%%/gok-command-common.html
@@ -24,6 +25,7 @@ share/applications/gok.desktop
 %%DOCSDIR%%/gok-gok-data.html
 %%DOCSDIR%%/gok-gok-editor.html
 %%DOCSDIR%%/gok-gok-feedback.html
+%%DOCSDIR%%/gok-gok-gconf-keys.html
 %%DOCSDIR%%/gok-gok-gconf.html
 %%DOCSDIR%%/gok-gok-key.html
 %%DOCSDIR%%/gok-gok-keyboard.html
@@ -933,6 +935,10 @@ share/locale/zh_HK/LC_MESSAGES/gok.mo
 share/locale/zh_TW/LC_MESSAGES/gok.mo
 share/omf/gok/gok-C.omf
 share/pixmaps/gok.png
+share/sounds/freedesktop/stereo/goksound1.wav
+share/sounds/freedesktop/stereo/goksound2.wav
+@dirrmtry share/sounds/freedesktop/stereo
+@dirrmtry share/sounds/freedesktop
 @dirrm share/omf/gok
 @dirrm %%DATADIR%%/zh_TW
 @dirrm %%DATADIR%%/zh_HK
