@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.26 2009/05/11 03:04:46 marcus Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.27 2009/05/11 15:25:58 kwm Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.1.6
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -64,7 +64,7 @@ PLIST_SUB+=	STATIC="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%BROWSER_PLUGINS_DIR%%|${BROWSER_PLUGINS_DIR}|' \
 		${WRKSRC}/WebCore/plugins/PluginDatabase.cpp
-	@${FIND} ${WRKSRC} -name GNUmakefile.am | ${XARGS} ${REINPLACE_CMD} -e \
+	@${FIND} ${WRKSRC} -name GNUmakefile.* | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
 
 post-install:
