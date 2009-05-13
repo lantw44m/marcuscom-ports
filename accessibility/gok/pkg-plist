@@ -1018,6 +1018,7 @@ share/sounds/freedesktop/stereo/goksound2.wav
 @dirrm %%DATADIR%%/am
 @dirrm %%DATADIR%%/C
 @dirrm %%DATADIR%%
+@dirrm %%DOCSDIR%%
 @dirrm share/gnome/help/gok/C
 @dirrm share/gnome/help/gok
 @dirrmtry share/applications
