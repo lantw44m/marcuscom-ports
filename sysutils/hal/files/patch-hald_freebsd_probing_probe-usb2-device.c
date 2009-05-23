@@ -1,8 +1,8 @@
---- hald/freebsd/probing/probe-usb2-device.c.orig	2009-02-24 00:36:27.000000000 -0500
-+++ hald/freebsd/probing/probe-usb2-device.c	2009-02-24 00:39:54.000000000 -0500
-@@ -0,0 +1,203 @@
+--- hald/freebsd/probing/probe-usb2-device.c.orig	2009-05-23 15:56:54.000000000 -0400
++++ hald/freebsd/probing/probe-usb2-device.c	2009-05-23 17:14:06.000000000 -0400
+@@ -0,0 +1,204 @@
 +/***************************************************************************
-+ * CVSID: $Id: patch-hald_freebsd_probing_probe-usb2-device.c,v 1.1 2009-05-17 05:02:48 marcus Exp $
++ * CVSID: $Id: patch-hald_freebsd_probing_probe-usb2-device.c,v 1.2 2009-05-23 21:27:00 marcus Exp $
 + *
 + * probe-usb2-device.c : USB2 Device poller
 + *
@@ -96,7 +96,7 @@
 +      pcfg = libusb20_dev_alloc_config(pdev, curr_config);
 +      cdesc = &(pcfg->desc);
 +
-+      if (libusb20_dev_get_info(pdev, &di))
++      if (pcfg == NULL || libusb20_dev_get_info(pdev, &di))
 +        {
 +          free(pcfg);
 +	  continue;
@@ -196,6 +196,7 @@
 +      libhal_device_set_property_string(hfp_ctx, hfp_udi,
 +        "info.vendor", di.udi_vendor, &hfp_error);
 +
++      libusb20_dev_close(pdev);
 +      free(pcfg);
 +    }
 +end:
