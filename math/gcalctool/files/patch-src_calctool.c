@@ -1,6 +1,6 @@
---- gcalctool/calctool.c.orig	2009-05-04 02:10:30.000000000 +0200
-+++ gcalctool/calctool.c	2009-05-06 16:14:25.000000000 +0200
-@@ -115,7 +115,7 @@ matherr(struct exception *exc)
+--- src/calctool.c.orig	2009-05-24 22:47:31.000000000 +0200
++++ src/calctool.c	2009-05-26 18:30:34.000000000 +0200
+@@ -64,7 +64,7 @@ matherr(struct exception *exc)
      
      /* Translators: Error displayed to user when the math library reports an
       * error */
