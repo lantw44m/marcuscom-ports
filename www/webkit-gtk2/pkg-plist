@@ -30,7 +30,6 @@ include/webkit-1.0/webkit/webkitwebwindowfeatures.h
 lib/libwebkit-1.0.la
 lib/libwebkit-1.0.so
 lib/libwebkit-1.0.so.7
-libdata/pkgconfig/WebKitGtk.pc
 libdata/pkgconfig/webkit-1.0.pc
 share/locale/de/LC_MESSAGES/webkit.mo
 share/locale/it/LC_MESSAGES/webkit.mo

@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.28 2009/05/13 22:43:01 marcus Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.29 2009/05/25 00:32:55 marcus Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.1.7
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -50,7 +50,7 @@ OPTIONS=	VIDEO "Enable video support" on \
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_VIDEO)
-USE_GSTREAMER+=	gnomevfs
+USE_GSTREAMER+=	yes
 CONFIGURE_ARGS+=--enable-video
 .endif
 
@@ -66,10 +66,5 @@ post-patch:
 		${WRKSRC}/WebCore/plugins/PluginDatabase.cpp
 	@${FIND} ${WRKSRC} -name GNUmakefile.* | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
-
-post-install:
-# Install compat pkg-config file so we don't have to patch ports
-	${CP} ${PREFIX}/libdata/pkgconfig/webkit-1.0.pc \
-		${PREFIX}/libdata/pkgconfig/WebKitGtk.pc
 
 .include <bsd.port.post.mk>
