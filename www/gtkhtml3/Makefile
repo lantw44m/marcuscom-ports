@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/gtkhtml3/Makefile,v 1.148 2009/05/06 15:13:43 kwm Exp $
 #
 
 PORTNAME=	gtkhtml3
-PORTVERSION=	3.27.1
+PORTVERSION=	3.27.2
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -37,5 +37,7 @@ PLIST_SUB=	VERSION="3.14"
 post-patch:
 	@${REINPLACE_CMD} -e 's|@INTLTOOL_LIBDIR@|${LOCALBASE}/libdata|' \
 	    	${WRKSRC}/intltool-merge.in
+	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
