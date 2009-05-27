@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/mail/evolution/Makefile,v 1.194 2009/05/06 17:08:21 kwm Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.27.1
+PORTVERSION=	2.27.2
 PORTREVISION=	0
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
@@ -93,6 +93,7 @@ CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^plugins_standard_always/s/audio-inline//' \
+		-e 's|-Wmissing-include-dirs||g' \
 	    	${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|stdlib.n|stdlib.h|' \
 	    	${WRKSRC}/iconv-detect.c
@@ -100,9 +101,5 @@ post-patch:
 		${WRKSRC}/plugins/bogo-junk-plugin/bf-junk-filter.c
 	@${REINPLACE_CMD} -e 's|/usr/sbin|${LOCALBASE}/bin|g' \
 		${WRKSRC}/plugins/sa-junk-plugin/em-junk-filter.c
-
-post-install: install-ldconfig-file
-	${MKDIR} ${PREFIX}/include/evolution-${EVO_VERSION}/composer
-	${INSTALL_DATA} ${WRKSRC}/composer/e-msg*.h ${PREFIX}/include/evolution-${EVO_VERSION}/composer
 
 .include <bsd.port.post.mk>
