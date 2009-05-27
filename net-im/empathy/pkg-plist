@@ -76,11 +76,11 @@ include/libempathy/empathy-utils.h
 lib/libempathy-gtk.a
 lib/libempathy-gtk.la
 lib/libempathy-gtk.so
-lib/libempathy-gtk.so.22
+lib/libempathy-gtk.so.23
 lib/libempathy.a
 lib/libempathy.la
 lib/libempathy.so
-lib/libempathy.so.24
+lib/libempathy.so.25
 %%PYTHON_SITELIBDIR%%/empathy.a
 %%PYTHON_SITELIBDIR%%/empathy.la
 %%PYTHON_SITELIBDIR%%/empathy.so
@@ -423,6 +423,7 @@ share/locale/sq/LC_MESSAGES/empathy.mo
 share/locale/sr/LC_MESSAGES/empathy.mo
 share/locale/sr@latin/LC_MESSAGES/empathy.mo
 share/locale/sv/LC_MESSAGES/empathy.mo
+share/locale/ta/LC_MESSAGES/empathy.mo
 share/locale/th/LC_MESSAGES/empathy.mo
 share/locale/tr/LC_MESSAGES/empathy.mo
 share/locale/uk/LC_MESSAGES/empathy.mo
