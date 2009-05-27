@@ -3,11 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/anjuta/Makefile,v 1.39 2009/05/06 23:18:34 kwm Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.27.1.0
+PORTVERSION=	2.27.2.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -23,7 +23,7 @@ LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
 		gladeui-1.9:${PORTSDIR}/devel/glade3 \
 		neon.28:${PORTSDIR}/www/neon28 \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
-		gdl-1.0:${PORTSDIR}/x11-toolkits/gdl
+		gdl-1.2:${PORTSDIR}/x11-toolkits/gdl
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		autogen:${PORTSDIR}/devel/autogen \
 		neato:${PORTSDIR}/graphics/graphviz \
@@ -52,8 +52,8 @@ GCONF_SCHEMAS=	anjuta-build-basic-autotools-plugin.schemas \
 		anjuta-message-manager-plugin.schemas \
 		anjuta-symbol-db.schemas \
 		anjuta-terminal-plugin.schemas \
-		anjuta.schemas \
-		file-manager.schemas
+		file-manager.schemas \
+		preferences.schemas
 
 MAN1=		anjuta.1 anjuta_launcher.1
 

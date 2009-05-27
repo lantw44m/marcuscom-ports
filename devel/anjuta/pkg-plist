@@ -208,15 +208,14 @@ share/anjuta/class-templates/go-source.tpl
 share/anjuta/gdb.init
 share/anjuta/glade/anjuta-build-basic-autotools-plugin.ui
 share/anjuta/glade/anjuta-class-gen-plugin.ui
-share/anjuta/glade/anjuta-cvs-plugin.glade
+share/anjuta/glade/anjuta-cvs-plugin.ui
 share/anjuta/glade/anjuta-gdb.glade
 share/anjuta/glade/anjuta-debug-manager.ui
 share/anjuta/glade/anjuta-document-manager.ui
 share/anjuta/glade/anjuta-editor-sourceview.ui
 share/anjuta/glade/anjuta-file-wizard.ui
-share/anjuta/glade/anjuta-git.glade
+share/anjuta/glade/anjuta-git.ui
 share/anjuta/glade/anjuta-glade.glade
-share/anjuta/glade/anjuta.glade
 share/anjuta/glade/anjuta-language-cpp-java.ui
 share/anjuta/glade/anjuta-macro.ui
 share/anjuta/glade/anjuta-message-manager-plugin.ui
@@ -233,6 +232,7 @@ share/anjuta/glade/create_dialogs.ui
 share/anjuta/glade/file-manager.ui
 share/anjuta/glade/gbf-am-dialogs.ui
 share/anjuta/glade/patch-plugin.ui
+share/anjuta/glade/preferences.ui
 share/anjuta/glade/project-import.ui
 share/anjuta/glade/start-with-import.png
 share/anjuta/glade/start-with-open.png
@@ -383,7 +383,7 @@ share/anjuta/ui/anjuta-debug-manager.xml
 share/anjuta/ui/anjuta-devhelp-simple.ui
 share/anjuta/ui/anjuta-devhelp.ui
 share/anjuta/ui/anjuta-document-manager.xml
-share/anjuta/ui/anjuta-git.ui
+share/anjuta/ui/anjuta-git.xml
 share/anjuta/ui/anjuta-glade.ui
 share/anjuta/ui/anjuta-gtodo.ui
 share/anjuta/ui/anjuta-language-support-cpp-java.xml
