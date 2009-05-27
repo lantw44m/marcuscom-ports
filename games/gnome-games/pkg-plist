@@ -218,12 +218,9 @@ lib/gnome-games/gnome-games-render-cards
 %%PYTHON_SITELIBDIR%%/glchess/scene/opengl/__init__.py
 %%PYTHON_SITELIBDIR%%/glchess/scene/opengl/__init__.pyc
 %%PYTHON_SITELIBDIR%%/glchess/scene/opengl/__init__.pyo
-%%PYTHON_SITELIBDIR%%/glchess/scene/opengl/builtin_models.py
-%%PYTHON_SITELIBDIR%%/glchess/scene/opengl/builtin_models.pyc
-%%PYTHON_SITELIBDIR%%/glchess/scene/opengl/builtin_models.pyo
-%%PYTHON_SITELIBDIR%%/glchess/scene/opengl/new_models.py
-%%PYTHON_SITELIBDIR%%/glchess/scene/opengl/new_models.pyc
-%%PYTHON_SITELIBDIR%%/glchess/scene/opengl/new_models.pyo
+%%PYTHON_SITELIBDIR%%/glchess/scene/opengl/models.py
+%%PYTHON_SITELIBDIR%%/glchess/scene/opengl/models.pyc
+%%PYTHON_SITELIBDIR%%/glchess/scene/opengl/models.pyo
 %%PYTHON_SITELIBDIR%%/glchess/scene/opengl/opengl.py
 %%PYTHON_SITELIBDIR%%/glchess/scene/opengl/opengl.pyc
 %%PYTHON_SITELIBDIR%%/glchess/scene/opengl/opengl.pyo
@@ -368,6 +365,7 @@ share/gnome-games-common/theme-install.ini
 %%DATADIR%%/aisleriot/games/backbone.scm
 %%DATADIR%%/aisleriot/games/bakers_dozen.scm
 %%DATADIR%%/aisleriot/games/bakers_game.scm
+%%DATADIR%%/aisleriot/games/bear_river.scm
 %%DATADIR%%/aisleriot/games/beleaguered_castle.scm
 %%DATADIR%%/aisleriot/games/block_ten.scm
 %%DATADIR%%/aisleriot/games/bristol.scm
@@ -616,6 +614,7 @@ share/gnome/help/aisleriot/C/athena.xml
 share/gnome/help/aisleriot/C/auld_lang_syne.xml
 share/gnome/help/aisleriot/C/aunt_mary.xml
 share/gnome/help/aisleriot/C/backbone.xml
+share/gnome/help/aisleriot/C/bear_river.xml
 share/gnome/help/aisleriot/C/bakers_dozen.xml
 share/gnome/help/aisleriot/C/bakers_game.xml
 share/gnome/help/aisleriot/C/beleaguered_castle.xml
@@ -1613,6 +1612,13 @@ share/gnome/help/same-gnome/de/figures/play4.png
 share/gnome/help/same-gnome/de/figures/start-up.png
 share/gnome/help/same-gnome/de/legal.xml
 share/gnome/help/same-gnome/de/same-gnome.xml
+share/gnome/help/same-gnome/el/figures/play1.png
+share/gnome/help/same-gnome/el/figures/play2.png
+share/gnome/help/same-gnome/el/figures/play3.png
+share/gnome/help/same-gnome/el/figures/play4.png
+share/gnome/help/same-gnome/el/figures/start-up.png
+share/gnome/help/same-gnome/el/legal.xml
+share/gnome/help/same-gnome/el/same-gnome.xml
 share/gnome/help/same-gnome/en_GB/figures/play1.png
 share/gnome/help/same-gnome/en_GB/figures/play2.png
 share/gnome/help/same-gnome/en_GB/figures/play3.png
@@ -2029,6 +2035,7 @@ share/omf/mahjongg/mahjongg-sv.omf
 share/omf/same-gnome/same-gnome-C.omf
 share/omf/same-gnome/same-gnome-ca.omf
 share/omf/same-gnome/same-gnome-de.omf
+share/omf/same-gnome/same-gnome-el.omf
 share/omf/same-gnome/same-gnome-en_GB.omf
 share/omf/same-gnome/same-gnome-es.omf
 share/omf/same-gnome/same-gnome-eu.omf
@@ -2074,6 +2081,8 @@ share/pixmaps/gnome-sudoku/footprints.png
 @dirrm share/gnome/help/same-gnome/es
 @dirrm share/gnome/help/same-gnome/en_GB/figures
 @dirrm share/gnome/help/same-gnome/en_GB
+@dirrm share/gnome/help/same-gnome/el/figures
+@dirrm share/gnome/help/same-gnome/el
 @dirrm share/gnome/help/same-gnome/de/figures
 @dirrm share/gnome/help/same-gnome/de
 @dirrm share/gnome/help/same-gnome/ca/figures
