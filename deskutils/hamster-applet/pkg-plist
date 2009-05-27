@@ -1,7 +1,4 @@
 lib/hamster-applet/hamster-applet
-%%PYTHON_SITELIBDIR%%/hamster/Configuration.py
-%%PYTHON_SITELIBDIR%%/hamster/Configuration.pyc
-%%PYTHON_SITELIBDIR%%/hamster/Configuration.pyo
 %%PYTHON_SITELIBDIR%%/hamster/KeyBinder.py
 %%PYTHON_SITELIBDIR%%/hamster/KeyBinder.pyc
 %%PYTHON_SITELIBDIR%%/hamster/KeyBinder.pyo
@@ -17,6 +14,9 @@ lib/hamster-applet/hamster-applet
 %%PYTHON_SITELIBDIR%%/hamster/charting.py
 %%PYTHON_SITELIBDIR%%/hamster/charting.pyc
 %%PYTHON_SITELIBDIR%%/hamster/charting.pyo
+%%PYTHON_SITELIBDIR%%/hamster/configuration.py
+%%PYTHON_SITELIBDIR%%/hamster/configuration.pyc
+%%PYTHON_SITELIBDIR%%/hamster/configuration.pyo
 %%PYTHON_SITELIBDIR%%/hamster/db.py
 %%PYTHON_SITELIBDIR%%/hamster/db.pyc
 %%PYTHON_SITELIBDIR%%/hamster/db.pyo
@@ -85,6 +85,7 @@ share/locale/ar/LC_MESSAGES/hamster-applet.mo
 share/locale/bg/LC_MESSAGES/hamster-applet.mo
 share/locale/bn_IN/LC_MESSAGES/hamster-applet.mo
 share/locale/ca/LC_MESSAGES/hamster-applet.mo
+share/locale/ca@valencia/LC_MESSAGES/hamster-applet.mo
 share/locale/cs/LC_MESSAGES/hamster-applet.mo
 share/locale/da/LC_MESSAGES/hamster-applet.mo
 share/locale/de/LC_MESSAGES/hamster-applet.mo
@@ -128,6 +129,7 @@ share/locale/sv/LC_MESSAGES/hamster-applet.mo
 share/locale/ta/LC_MESSAGES/hamster-applet.mo
 share/locale/th/LC_MESSAGES/hamster-applet.mo
 share/locale/tr/LC_MESSAGES/hamster-applet.mo
+share/locale/uk/LC_MESSAGES/hamster-applet.mo
 share/locale/vi/LC_MESSAGES/hamster-applet.mo
 share/locale/zh_CN/LC_MESSAGES/hamster-applet.mo
 share/locale/zh_HK/LC_MESSAGES/hamster-applet.mo
@@ -139,6 +141,8 @@ share/locale/zh_TW/LC_MESSAGES/hamster-applet.mo
 @dirrm lib/hamster-applet
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/uk/LC_MESSAGES
+@dirrmtry share/locale/uk
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES
@@ -149,5 +153,7 @@ share/locale/zh_TW/LC_MESSAGES/hamster-applet.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
