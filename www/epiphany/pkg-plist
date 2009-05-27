@@ -41,35 +41,6 @@ share/aclocal/epiphany.m4
 share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/dbus-1/services/org.gnome.Epiphany.service
-%%DOCSDIR%%/EphyCommandManager.html
-%%DOCSDIR%%/EphyEmbed.html
-%%DOCSDIR%%/EphyLocationEntry.html
-%%DOCSDIR%%/EphyNodeDb.html
-%%DOCSDIR%%/EphySearchEntry.html
-%%DOCSDIR%%/EphySpinner.html
-%%DOCSDIR%%/EphyWindow.html
-%%DOCSDIR%%/EphyZoomControl.html
-%%DOCSDIR%%/ch01.html
-%%DOCSDIR%%/ch02.html
-%%DOCSDIR%%/ch03.html
-%%DOCSDIR%%/epiphany-EphyEmbedFactory.html
-%%DOCSDIR%%/epiphany-EphyEmbedPersist.html
-%%DOCSDIR%%/epiphany-EphyEmbedSingle.html
-%%DOCSDIR%%/epiphany-EphyExtensionsManager.html
-%%DOCSDIR%%/epiphany-EphyGlade.html
-%%DOCSDIR%%/epiphany-EphyPermissionManager.html
-%%DOCSDIR%%/epiphany-ephy-password-manager.html
-%%DOCSDIR%%/epiphany-ephy-session.html
-%%DOCSDIR%%/epiphany-ephy-shell.html
-%%DOCSDIR%%/epiphany.devhelp
-%%DOCSDIR%%/epiphany.devhelp2
-%%DOCSDIR%%/home.png
-%%DOCSDIR%%/index.html
-%%DOCSDIR%%/index.sgml
-%%DOCSDIR%%/left.png
-%%DOCSDIR%%/right.png
-%%DOCSDIR%%/style.css
-%%DOCSDIR%%/up.png
 %%DATADIR%%/about.ini
 %%DATADIR%%/ephy-xml2ini.xsl
 %%DATADIR%%/epiphany-bookmark-editor-ui.xml
@@ -395,7 +366,6 @@ share/pygtk/2.0/defs/epiphany.defs
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%/art
 @dirrmtry %%DATADIR%%
-@dirrm %%DOCSDIR%%
 @dirrmtry share/applications
 @dirrmtry lib/epiphany/%%EPHY_VERSION%%/plugins
 @dirrmtry lib/epiphany/%%EPHY_VERSION%%
