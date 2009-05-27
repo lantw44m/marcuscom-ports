@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.170 2009/05/06 15:25:36 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	2.27.1
+PORTVERSION=	2.27.2
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -81,7 +81,8 @@ pre-everything::
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g ; \
-		s|heimlibs=".*"|heimlibs="${KRB5_LIB}"|g' \
+		s|heimlibs=".*"|heimlibs="${KRB5_LIB}"|g ; \
+		s|-Wmissing-include-dirs||g' \
 			${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
