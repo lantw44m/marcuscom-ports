@@ -13,6 +13,7 @@ include/brasero/brasero-medium-monitor.h
 include/brasero/brasero-medium-selection.h
 include/brasero/brasero-medium.h
 include/brasero/brasero-session-cfg.h
+include/brasero/brasero-session-span.h
 include/brasero/brasero-session.h
 include/brasero/brasero-status.h
 include/brasero/brasero-sum-dialog.h
