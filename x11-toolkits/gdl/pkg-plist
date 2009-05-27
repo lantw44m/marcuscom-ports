@@ -3,8 +3,13 @@ include/libgdl-1.0/gdl/gdl-dock-item.h
 include/libgdl-1.0/gdl/gdl-dock-item-grip.h
 include/libgdl-1.0/gdl/gdl-dock-layout.h
 include/libgdl-1.0/gdl/gdl-dock-master.h
+include/libgdl-1.0/gdl/gdl-dock-notebook.h
 include/libgdl-1.0/gdl/gdl-dock-object.h
+include/libgdl-1.0/gdl/gdl-dock-paned.h
+include/libgdl-1.0/gdl/gdl-dock-placeholder.h
+include/libgdl-1.0/gdl/gdl-dock-tablabel.h
 include/libgdl-1.0/gdl/gdl-dock.h
+include/libgdl-1.0/gdl/gdl-switcher.h
 include/libgdl-1.0/gdl/gdl-tools.h
 include/libgdl-1.0/gdl/gdl.h
 include/libgdl-1.0/gdl/libgdltypebuiltins.h
