@@ -20,8 +20,6 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/braillegenerator.py
 %%PYTHON_SITELIBDIR%%/orca/braillegenerator.pyc
 %%PYTHON_SITELIBDIR%%/orca/braillegenerator.pyo
-%%PYTHON_SITELIBDIR%%/orca/brlmodule.la
-%%PYTHON_SITELIBDIR%%/orca/brlmodule.so
 %%PYTHON_SITELIBDIR%%/orca/brlmon.py
 %%PYTHON_SITELIBDIR%%/orca/brlmon.pyc
 %%PYTHON_SITELIBDIR%%/orca/brlmon.pyo
@@ -160,6 +158,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/acroread.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/acroread.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/acroread.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/ekiga.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/ekiga.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/ekiga.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/evolution/__init__.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/evolution/__init__.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/evolution/__init__.pyo
@@ -226,6 +227,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome_segv2.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome_segv2.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome_segv2.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/gtk-window-decorator.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/gtk-window-decorator.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/gtk-window-decorator.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/liferea.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/liferea.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/liferea.pyo
