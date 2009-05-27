@@ -66,7 +66,6 @@ share/applications/eog.desktop
 %%DOCSDIR%%/ch05.html
 %%DOCSDIR%%/ch06.html
 %%DOCSDIR%%/ch07.html
-%%DOCSDIR%%/eog-EogPixbufCellRenderer.html
 %%DOCSDIR%%/eog-eog-config-keys.html
 %%DOCSDIR%%/eog-eog-debug.html
 %%DOCSDIR%%/eog-eog-error-message-area.html
