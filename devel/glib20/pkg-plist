@@ -5,11 +5,14 @@ bin/gobject-query
 bin/gtester
 bin/gtester-report
 include/gio-unix-2.0/gio/gdesktopappinfo.h
+include/gio-unix-2.0/gio/gunixconnection.h
+include/gio-unix-2.0/gio/gunixfdmessage.h
 include/gio-unix-2.0/gio/gunixinputstream.h
 include/gio-unix-2.0/gio/gunixmounts.h
 include/gio-unix-2.0/gio/gunixoutputstream.h
 include/gio-unix-2.0/gio/gunixsocketaddress.h
 include/glib-2.0/gio/gappinfo.h
+include/glib-2.0/gio/gasyncinitable.h
 include/glib-2.0/gio/gasyncresult.h
 include/glib-2.0/gio/gbufferedinputstream.h
 include/glib-2.0/gio/gbufferedoutputstream.h
@@ -26,6 +29,7 @@ include/glib-2.0/gio/gfileenumerator.h
 include/glib-2.0/gio/gfileicon.h
 include/glib-2.0/gio/gfileinfo.h
 include/glib-2.0/gio/gfileinputstream.h
+include/glib-2.0/gio/gfileiostream.h
 include/glib-2.0/gio/gfilemonitor.h
 include/glib-2.0/gio/gfilenamecompleter.h
 include/glib-2.0/gio/gfileoutputstream.h
@@ -34,6 +38,7 @@ include/glib-2.0/gio/gfilteroutputstream.h
 include/glib-2.0/gio/gicon.h
 include/glib-2.0/gio/ginetaddress.h
 include/glib-2.0/gio/ginetsocketaddress.h
+include/glib-2.0/gio/ginitable.h
 include/glib-2.0/gio/ginputstream.h
 include/glib-2.0/gio/gio.h
 include/glib-2.0/gio/gioenums.h
@@ -41,6 +46,7 @@ include/glib-2.0/gio/gioenumtypes.h
 include/glib-2.0/gio/gioerror.h
 include/glib-2.0/gio/giomodule.h
 include/glib-2.0/gio/gioscheduler.h
+include/glib-2.0/gio/giostream.h
 include/glib-2.0/gio/giotypes.h
 include/glib-2.0/gio/gloadableicon.h
 include/glib-2.0/gio/gmemoryinputstream.h
@@ -54,11 +60,19 @@ include/glib-2.0/gio/goutputstream.h
 include/glib-2.0/gio/gresolver.h
 include/glib-2.0/gio/gseekable.h
 include/glib-2.0/gio/gsimpleasyncresult.h
+include/glib-2.0/gio/gsocket.h
 include/glib-2.0/gio/gsocketaddress.h
 include/glib-2.0/gio/gsocketaddressenumerator.h
+include/glib-2.0/gio/gsocketclient.h
 include/glib-2.0/gio/gsocketconnectable.h
+include/glib-2.0/gio/gsocketconnection.h
+include/glib-2.0/gio/gsocketcontrolmessage.h
+include/glib-2.0/gio/gsocketlistener.h
+include/glib-2.0/gio/gsocketservice.h
 include/glib-2.0/gio/gsrvtarget.h
+include/glib-2.0/gio/gtcpconnection.h
 include/glib-2.0/gio/gthemedicon.h
+include/glib-2.0/gio/gthreadedsocketservice.h
 include/glib-2.0/gio/gvfs.h
 include/glib-2.0/gio/gvolume.h
 include/glib-2.0/gio/gvolumemonitor.h
@@ -187,6 +201,7 @@ share/locale/bn/LC_MESSAGES/glib20.mo
 share/locale/bn_IN/LC_MESSAGES/glib20.mo
 share/locale/bs/LC_MESSAGES/glib20.mo
 share/locale/ca/LC_MESSAGES/glib20.mo
+share/locale/ca@valencia/LC_MESSAGES/glib20.mo
 share/locale/cs/LC_MESSAGES/glib20.mo
 share/locale/cy/LC_MESSAGES/glib20.mo
 share/locale/da/LC_MESSAGES/glib20.mo
@@ -311,6 +326,8 @@ share/locale/zh_TW/LC_MESSAGES/glib20.mo
 @dirrmtry share/locale/hy
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
