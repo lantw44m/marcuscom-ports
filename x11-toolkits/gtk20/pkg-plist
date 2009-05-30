@@ -431,6 +431,7 @@ share/gtk-2.0/demo/iconview.c
 share/gtk-2.0/demo/iconview_edit.c
 share/gtk-2.0/demo/images.c
 share/gtk-2.0/demo/list_store.c
+share/gtk-2.0/demo/links.c
 share/gtk-2.0/demo/menus.c
 share/gtk-2.0/demo/panes.c
 share/gtk-2.0/demo/pickers.c
