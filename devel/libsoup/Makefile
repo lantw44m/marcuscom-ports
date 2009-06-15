@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/devel/libsoup/Makefile,v 1.9 2009/04/15 21:49:46 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.60 2009/05/07 19:05:07 marcus Exp $
 #
 
 PORTNAME=	libsoup
@@ -50,7 +50,8 @@ pre-everything::
 	@${ECHO_MSG} ""
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
+	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g ; \
+	    	s|" == "|" = "|g' \
 		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
