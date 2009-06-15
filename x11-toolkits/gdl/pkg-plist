@@ -3,13 +3,9 @@ include/libgdl-1.0/gdl/gdl-dock-item.h
 include/libgdl-1.0/gdl/gdl-dock-item-grip.h
 include/libgdl-1.0/gdl/gdl-dock-layout.h
 include/libgdl-1.0/gdl/gdl-dock-master.h
-include/libgdl-1.0/gdl/gdl-dock-notebook.h
 include/libgdl-1.0/gdl/gdl-dock-object.h
-include/libgdl-1.0/gdl/gdl-dock-paned.h
 include/libgdl-1.0/gdl/gdl-dock-placeholder.h
-include/libgdl-1.0/gdl/gdl-dock-tablabel.h
 include/libgdl-1.0/gdl/gdl-dock.h
-include/libgdl-1.0/gdl/gdl-switcher.h
 include/libgdl-1.0/gdl/gdl-tools.h
 include/libgdl-1.0/gdl/gdl.h
 include/libgdl-1.0/gdl/libgdltypebuiltins.h
@@ -23,6 +19,7 @@ libdata/pkgconfig/gdl-1.0.pc
 %%DOCSDIR%%/GdlDockLayout.html
 %%DOCSDIR%%/GdlDockMaster.html
 %%DOCSDIR%%/GdlDockObject.html
+%%DOCSDIR%%/GdlDockPlaceholder.html
 %%DOCSDIR%%/gdl-gdl-tools.html
 %%DOCSDIR%%/gdl-main.html
 %%DOCSDIR%%/gdl.devhelp
@@ -34,7 +31,7 @@ libdata/pkgconfig/gdl-1.0.pc
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
-share/gdl/glade/layout.glade
+share/gdl/ui/layout.ui
 share/locale/am/LC_MESSAGES/gdl-1.mo
 share/locale/ar/LC_MESSAGES/gdl-1.mo
 share/locale/ast/LC_MESSAGES/gdl-1.mo
@@ -98,7 +95,7 @@ share/locale/vi/LC_MESSAGES/gdl-1.mo
 share/locale/zh_CN/LC_MESSAGES/gdl-1.mo
 share/locale/zh_HK/LC_MESSAGES/gdl-1.mo
 share/locale/zh_TW/LC_MESSAGES/gdl-1.mo
-@dirrm share/gdl/glade
+@dirrm share/gdl/ui
 @dirrm share/gdl
 @dirrm %%DOCSDIR%%
 @dirrm include/libgdl-1.0/gdl
