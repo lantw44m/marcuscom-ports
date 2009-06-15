@@ -2,7 +2,6 @@ bin/epiphany
 include/epiphany/%%EPHY_VERSION%%/epiphany/epiphany.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-adblock-manager.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-adblock.h
-include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-base-embed.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-bookmarks-type-builtins.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-bookmarks.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-command-manager.h
@@ -10,7 +9,6 @@ include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-dbus.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-dialog.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-container.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-event.h
-include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-factory.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-persist.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-prefs.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-shell.h
@@ -34,6 +32,7 @@ include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-shell.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-state.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-statusbar.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-type-builtins.h
+include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-web-view.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-window.h
 @comment libdata/pkgconfig/epiphany-%%EPHY_VERSION%%.pc
 libdata/pkgconfig/epiphany-%%EPHY_VERSION%%.pc
@@ -41,6 +40,35 @@ share/aclocal/epiphany.m4
 share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/dbus-1/services/org.gnome.Epiphany.service
+%%DOCSDIR%%/EphyCommandManager.html
+%%DOCSDIR%%/EphyEmbed.html
+%%DOCSDIR%%/EphyLocationEntry.html
+%%DOCSDIR%%/EphyNodeDb.html
+%%DOCSDIR%%/EphySearchEntry.html
+%%DOCSDIR%%/EphySpinner.html
+%%DOCSDIR%%/EphyWindow.html
+%%DOCSDIR%%/EphyZoomControl.html
+%%DOCSDIR%%/ch01.html
+%%DOCSDIR%%/ch02.html
+%%DOCSDIR%%/ch03.html
+%%DOCSDIR%%/epiphany-EphyEmbedFactory.html
+%%DOCSDIR%%/epiphany-EphyEmbedPersist.html
+%%DOCSDIR%%/epiphany-EphyEmbedSingle.html
+%%DOCSDIR%%/epiphany-EphyExtensionsManager.html
+%%DOCSDIR%%/epiphany-EphyGlade.html
+%%DOCSDIR%%/epiphany-EphyPermissionManager.html
+%%DOCSDIR%%/epiphany-ephy-password-manager.html
+%%DOCSDIR%%/epiphany-ephy-session.html
+%%DOCSDIR%%/epiphany-ephy-shell.html
+%%DOCSDIR%%/epiphany.devhelp
+%%DOCSDIR%%/epiphany.devhelp2
+%%DOCSDIR%%/home.png
+%%DOCSDIR%%/index.html
+%%DOCSDIR%%/index.sgml
+%%DOCSDIR%%/left.png
+%%DOCSDIR%%/right.png
+%%DOCSDIR%%/style.css
+%%DOCSDIR%%/up.png
 %%DATADIR%%/about.ini
 %%DATADIR%%/ephy-xml2ini.xsl
 %%DATADIR%%/epiphany-bookmark-editor-ui.xml
@@ -299,7 +327,6 @@ share/omf/epiphany/epiphany-oc.omf
 share/omf/epiphany/epiphany-ru.omf
 share/omf/epiphany/epiphany-sv.omf
 share/omf/epiphany/epiphany-uk.omf
-share/pygtk/2.0/defs/epiphany.defs
 @dirrm share/omf/epiphany
 @dirrmtry share/icons/LowContrastLargePrint/48x48/apps
 @dirrmtry share/icons/LowContrastLargePrint/48x48
@@ -366,6 +393,7 @@ share/pygtk/2.0/defs/epiphany.defs
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%/art
 @dirrmtry %%DATADIR%%
+@dirrmtry %%DOCSDIR%%
 @dirrmtry share/applications
 @dirrmtry lib/epiphany/%%EPHY_VERSION%%/plugins
 @dirrmtry lib/epiphany/%%EPHY_VERSION%%
