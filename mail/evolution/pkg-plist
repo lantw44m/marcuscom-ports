@@ -272,9 +272,6 @@ lib/evolution/%%VERSION%%/components/libevolution-calendar.so
 %%PILOT:%%lib/evolution/%%VERSION%%/conduits/libetodo_conduit.a
 %%PILOT:%%lib/evolution/%%VERSION%%/conduits/libetodo_conduit.la
 %%PILOT:%%lib/evolution/%%VERSION%%/conduits/libetodo_conduit.so
-lib/evolution/%%VERSION%%/components/libevolution-mail-shared.a
-lib/evolution/%%VERSION%%/components/libevolution-mail-shared.la
-lib/evolution/%%VERSION%%/components/libevolution-mail-shared.so
 lib/evolution/%%VERSION%%/components/libevolution-mail.a
 lib/evolution/%%VERSION%%/components/libevolution-mail.la
 lib/evolution/%%VERSION%%/components/libevolution-mail.so
@@ -350,6 +347,10 @@ lib/evolution/%%VERSION%%/libevolution-mail-importers.a
 lib/evolution/%%VERSION%%/libevolution-mail-importers.la
 lib/evolution/%%VERSION%%/libevolution-mail-importers.so
 lib/evolution/%%VERSION%%/libevolution-mail-importers.so.0
+lib/evolution/%%VERSION%%/libevolution-mail-shared.a
+lib/evolution/%%VERSION%%/libevolution-mail-shared.la
+lib/evolution/%%VERSION%%/libevolution-mail-shared.so
+lib/evolution/%%VERSION%%/libevolution-mail-shared.so.0
 lib/evolution/%%VERSION%%/libevolution-smime.a
 lib/evolution/%%VERSION%%/libevolution-smime.la
 lib/evolution/%%VERSION%%/libevolution-smime.so

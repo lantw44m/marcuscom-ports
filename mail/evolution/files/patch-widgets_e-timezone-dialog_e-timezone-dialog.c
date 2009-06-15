@@ -1,16 +1,6 @@
---- widgets/e-timezone-dialog/e-timezone-dialog.c.orig	2007-11-30 05:24:05.000000000 +0100
-+++ widgets/e-timezone-dialog/e-timezone-dialog.c	2007-12-21 16:24:39.000000000 +0100
-@@ -82,7 +82,9 @@
- 
- #ifndef G_OS_WIN32 /* Declared properly in time.h already */
- extern char *tzname[2];
-+#ifndef __BSD_VISIBLE
- extern long timezone;
-+#endif
- extern int daylight;
- #endif
- 
-@@ -326,9 +328,20 @@
+--- widgets/e-timezone-dialog/e-timezone-dialog.c.orig	2009-06-12 16:54:41.000000000 +0200
++++ widgets/e-timezone-dialog/e-timezone-dialog.c	2009-06-15 16:43:34.000000000 +0200
+@@ -344,9 +344,20 @@ static icaltimezone*
  get_local_timezone(void)
  {
  	icaltimezone *zone;
