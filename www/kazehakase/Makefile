@@ -3,12 +3,12 @@
 # Whom:			michael johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#   $MCom: ports/www/kazehakase/Makefile,v 1.17 2009/05/10 12:04:20 kwm Exp $
+#   $MCom: ports/www/kazehakase/Makefile,v 1.18 2009/05/25 05:22:31 marcus Exp $
 #
 
 PORTNAME=	kazehakase
 PORTVERSION=	0.5.4
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
 MASTER_SITE_SUBDIR=	${PORTNAME}/30219
@@ -40,7 +40,7 @@ RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/uconv.so:${PORTSDIR}/japanese/ruby-uconv
 .include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 
 .if defined(WITH_WEBKIT)
-LIB_DEPENDS+=	webkit-1.0.7:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS+=	webkit-1.0.9:${PORTSDIR}/www/webkit-gtk2
 PLIST_SUB+=	WEBKIT=""
 .else
 PLIST_SUB+=	WEBKIT="@comment "

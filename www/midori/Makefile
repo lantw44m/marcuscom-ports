@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/midori/Makefile,v 1.12 2009/05/10 12:10:42 kwm Exp $
 #
 
 PORTNAME=	midori
 PORTVERSION=	0.1.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://goodies.xfce.org/releases/${PORTNAME}/
 
