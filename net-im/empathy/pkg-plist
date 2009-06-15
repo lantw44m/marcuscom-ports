@@ -32,6 +32,7 @@ include/libempathy-gtk/empathy-profile-chooser.h
 include/libempathy-gtk/empathy-smiley-manager.h
 include/libempathy-gtk/empathy-spell.h
 include/libempathy-gtk/empathy-status-preset-dialog.h
+include/libempathy-gtk/empathy-theme-adium.h
 include/libempathy-gtk/empathy-theme-boxes.h
 include/libempathy-gtk/empathy-theme-irc.h
 include/libempathy-gtk/empathy-theme-manager.h
@@ -52,6 +53,8 @@ include/libempathy/empathy-debug.h
 include/libempathy/empathy-dispatch-operation.h
 include/libempathy/empathy-dispatcher.h
 include/libempathy/empathy-enum-types.h
+include/libempathy/empathy-ft-factory.h
+include/libempathy/empathy-ft-handler.h
 include/libempathy/empathy-idle.h
 include/libempathy/empathy-irc-network-manager.h
 include/libempathy/empathy-irc-network.h
@@ -69,18 +72,17 @@ include/libempathy/empathy-tp-contact-factory.h
 include/libempathy/empathy-tp-contact-list.h
 include/libempathy/empathy-tp-file.h
 include/libempathy/empathy-tp-roomlist.h
-include/libempathy/empathy-tp-tube.h
 include/libempathy/empathy-tube-handler.h
 include/libempathy/empathy-types.h
 include/libempathy/empathy-utils.h
 lib/libempathy-gtk.a
 lib/libempathy-gtk.la
 lib/libempathy-gtk.so
-lib/libempathy-gtk.so.23
+lib/libempathy-gtk.so.24
 lib/libempathy.a
 lib/libempathy.la
 lib/libempathy.so
-lib/libempathy.so.25
+lib/libempathy.so.26
 %%PYTHON_SITELIBDIR%%/empathy.a
 %%PYTHON_SITELIBDIR%%/empathy.la
 %%PYTHON_SITELIBDIR%%/empathy.so
@@ -167,7 +169,6 @@ share/doc/libempathy/EmpathyTpContactFactory.html
 share/doc/libempathy/EmpathyTpContactList.html
 share/doc/libempathy/EmpathyTpFile.html
 share/doc/libempathy/EmpathyTpRoomlist.html
-share/doc/libempathy/EmpathyTpTube.html
 share/doc/libempathy/EmpathyTubeHandler.html
 share/doc/libempathy/home.png
 share/doc/libempathy/index.html
@@ -193,6 +194,7 @@ share/doc/libempathy/style.css
 share/doc/libempathy/up.png
 %%DATADIR%%/GNOME_Megaphone_Applet.xml
 %%DATADIR%%/GNOME_NotHere_Applet.xml
+%%DATADIR%%/Template.html
 %%DATADIR%%/empathy-account-widget-aim.ui
 %%DATADIR%%/empathy-account-widget-generic.ui
 %%DATADIR%%/empathy-account-widget-groupwise.ui
@@ -234,6 +236,7 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-google-talk.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-irc.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-local-xmpp.png
+%%DATADIR%%/icons/hicolor/16x16/apps/im-meanwhile.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-msn.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-qq.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-sip.png
@@ -255,6 +258,7 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-google-talk.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-irc.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-local-xmpp.png
+%%DATADIR%%/icons/hicolor/22x22/apps/im-meanwhile.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-msn.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-qq.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-sip.png
@@ -310,6 +314,7 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-google-talk.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-irc.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-local-xmpp.png
+%%DATADIR%%/icons/hicolor/48x48/apps/im-meanwhile.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-msn.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-qq.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-sip.png
@@ -327,6 +332,7 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/scalable/apps/im-google-talk.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-irc.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-local-xmpp.svg
+%%DATADIR%%/icons/hicolor/scalable/apps/im-meanwhile.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-msn.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-qq.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-sip.svg
@@ -444,6 +450,7 @@ share/mission-control/profiles/msn-haze.profile
 share/mission-control/profiles/msn.profile
 share/mission-control/profiles/qq.profile
 share/mission-control/profiles/salut.profile
+share/mission-control/profiles/sametime.profile
 share/mission-control/profiles/sipphone.profile
 share/mission-control/profiles/sofiasip.profile
 share/mission-control/profiles/yahoo.profile
