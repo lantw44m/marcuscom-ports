@@ -353,6 +353,10 @@ share/icons/HighContrast-SVG/scalable/status/network-online.svg
 share/icons/HighContrast-SVG/scalable/status/network-receive.svg
 share/icons/HighContrast-SVG/scalable/status/network-transmit-receive.svg
 share/icons/HighContrast-SVG/scalable/status/network-transmit.svg
+share/icons/HighContrast-SVG/scalable/status/nm-signal-100.svg
+share/icons/HighContrast-SVG/scalable/status/nm-signal-25.svg
+share/icons/HighContrast-SVG/scalable/status/nm-signal-50.svg
+share/icons/HighContrast-SVG/scalable/status/nm-signal-75.svg
 share/icons/HighContrast-SVG/scalable/status/printer-printing.svg
 share/icons/HighContrast-SVG/scalable/status/security-high.svg
 share/icons/HighContrast-SVG/scalable/status/security-low.svg
