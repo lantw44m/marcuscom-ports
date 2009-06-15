@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.25 2009/05/27 15:04:53 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.26 2009/06/15 17:08:42 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.27.3
@@ -44,7 +44,8 @@ OPTIONS=	JABBER	"Enable jabber (XMPP) client support" on \
 		MSN	"Enable MSN client support" on \
 		IRC	"Enable IRC client support" on \
 		SALUT	"Enable link-local (serverless) XMPP support" off \
-		HAZE	"Enable libpurple protocol integration" off
+		HAZE	"Enable libpurple protocol integration" off \
+		WEBKIT	"Enable Adium Message Style themes" on
 
 .include <bsd.port.pre.mk>
 
@@ -66,6 +67,15 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-salut:${PORTSDIR}/net-im/telepathy-
 
 .if !defined(WITHOUT_HAZE)
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-haze
+.endif
+
+.if defined(WITH_WEBKIT)
+LIB_DEPENDS+=   webkit-1.0.7:${PORTSDIR}/www/webkit-gtk2
+CONFIGURE_ARGS+=--enable-webkit
+PLIST_SUB+=	ADIUM=""
+.else
+CONFIGURE_ARGS+=--disable-webkit
+PLIST_SUB+=	ADIUM="@comment "
 .endif
 
 post-patch:

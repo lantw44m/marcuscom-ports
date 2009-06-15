@@ -32,7 +32,7 @@ include/libempathy-gtk/empathy-profile-chooser.h
 include/libempathy-gtk/empathy-smiley-manager.h
 include/libempathy-gtk/empathy-spell.h
 include/libempathy-gtk/empathy-status-preset-dialog.h
-include/libempathy-gtk/empathy-theme-adium.h
+%%ADIUM%%include/libempathy-gtk/empathy-theme-adium.h
 include/libempathy-gtk/empathy-theme-boxes.h
 include/libempathy-gtk/empathy-theme-irc.h
 include/libempathy-gtk/empathy-theme-manager.h
