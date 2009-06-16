@@ -138,6 +138,7 @@ include/gtk-2.0/gtk/gtkhsv.h
 include/gtk-2.0/gtk/gtkiconfactory.h
 include/gtk-2.0/gtk/gtkicontheme.h
 include/gtk-2.0/gtk/gtkiconview.h
+include/gtk-2.0/gtk/gtkinfobar.h
 include/gtk-2.0/gtk/gtkimage.h
 include/gtk-2.0/gtk/gtkimagemenuitem.h
 include/gtk-2.0/gtk/gtkimcontext.h
