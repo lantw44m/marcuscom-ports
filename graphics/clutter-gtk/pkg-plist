@@ -8,30 +8,5 @@ lib/libclutter-gtk-0.9.la
 lib/libclutter-gtk-0.9.so
 lib/libclutter-gtk-0.9.so.0
 libdata/pkgconfig/clutter-gtk-0.9.pc
-%%DOCSDIR%%/GtkClutterEmbed.html
-%%DOCSDIR%%/GtkClutterScrollable.html
-%%DOCSDIR%%/GtkClutterViewport.html
-%%DOCSDIR%%/ch01.html
-%%DOCSDIR%%/ch02.html
-%%DOCSDIR%%/ch03.html
-%%DOCSDIR%%/ch04.html
-%%DOCSDIR%%/clutter-gtk-Utility-Functions.html
-%%DOCSDIR%%/clutter-gtk.devhelp
-%%DOCSDIR%%/clutter-gtk.devhelp2
-%%DOCSDIR%%/home.png
-%%DOCSDIR%%/index.html
-%%DOCSDIR%%/index.sgml
-%%DOCSDIR%%/ix01.html
-%%DOCSDIR%%/ix02.html
-%%DOCSDIR%%/ix03.html
-%%DOCSDIR%%/ix04.html
-%%DOCSDIR%%/ix05.html
-%%DOCSDIR%%/ix06.html
-%%DOCSDIR%%/left.png
-%%DOCSDIR%%/license.html
-%%DOCSDIR%%/right.png
-%%DOCSDIR%%/style.css
-%%DOCSDIR%%/up.png
-@dirrm %%DOCSDIR%%
 @dirrm include/clutter-0.9/clutter-gtk
 @dirrm include/clutter-0.9

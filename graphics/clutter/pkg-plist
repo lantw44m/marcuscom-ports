@@ -50,6 +50,11 @@ include/clutter-0.9/clutter/clutter-version.h
 include/clutter-0.9/clutter/clutter.h
 include/clutter-0.9/clutter/glx/clutter-glx-texture-pixmap.h
 include/clutter-0.9/clutter/glx/clutter-glx.h
+include/clutter-0.9/clutter/json/json-generator.h
+include/clutter-0.9/clutter/json/json-glib.h
+include/clutter-0.9/clutter/json/json-marshal.h
+include/clutter-0.9/clutter/json/json-parser.h
+include/clutter-0.9/clutter/json/json-types.h
 include/clutter-0.9/clutter/x11/clutter-x11-enum-types.h
 include/clutter-0.9/clutter/x11/clutter-x11-texture-pixmap.h
 include/clutter-0.9/clutter/x11/clutter-x11.h
@@ -58,6 +63,7 @@ include/clutter-0.9/cogl/cogl-color.h
 include/clutter-0.9/cogl/cogl-debug.h
 include/clutter-0.9/cogl/cogl-defines-gl.h
 include/clutter-0.9/cogl/cogl-deprecated.h
+include/clutter-0.9/cogl/cogl-enum-types.h
 include/clutter-0.9/cogl/cogl-fixed.h
 include/clutter-0.9/cogl/cogl-material.h
 include/clutter-0.9/cogl/cogl-matrix.h
@@ -79,6 +85,7 @@ libdata/pkgconfig/clutter-x11-0.9.pc
 libdata/pkgconfig/cogl-0.9.pc
 libdata/pkgconfig/cogl-gl-0.9.pc
 @dirrm include/clutter-0.9/clutter/x11
+@dirrm include/clutter-0.9/clutter/json
 @dirrm include/clutter-0.9/clutter/glx
 @dirrm include/clutter-0.9/clutter
 @dirrm include/clutter-0.9/cogl
