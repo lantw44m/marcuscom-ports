@@ -446,6 +446,11 @@ share/gnome/help/char-palette/ca/figures/charpalette_applet.png
 share/gnome/help/char-palette/ca/figures/charpalette_chargroup.png
 share/gnome/help/char-palette/ca/figures/charpick-preferences.png
 share/gnome/help/char-palette/ca/figures/charpick_characters.png
+share/gnome/help/char-palette/cs/char-palette.xml
+share/gnome/help/char-palette/cs/figures/charpalette_applet.png
+share/gnome/help/char-palette/cs/figures/charpalette_chargroup.png
+share/gnome/help/char-palette/cs/figures/charpick-preferences.png
+share/gnome/help/char-palette/cs/figures/charpick_characters.png
 share/gnome/help/char-palette/de/char-palette.xml
 share/gnome/help/char-palette/de/figures/charpalette_applet.png
 share/gnome/help/char-palette/de/figures/charpalette_chargroup.png
@@ -521,6 +526,11 @@ share/gnome/help/char-palette/uk/figures/charpalette_applet.png
 share/gnome/help/char-palette/uk/figures/charpalette_chargroup.png
 share/gnome/help/char-palette/uk/figures/charpick-preferences.png
 share/gnome/help/char-palette/uk/figures/charpick_characters.png
+share/gnome/help/char-palette/zh_CN/char-palette.xml
+share/gnome/help/char-palette/zh_CN/figures/charpalette_applet.png
+share/gnome/help/char-palette/zh_CN/figures/charpalette_chargroup.png
+share/gnome/help/char-palette/zh_CN/figures/charpick-preferences.png
+share/gnome/help/char-palette/zh_CN/figures/charpick_characters.png
 %%COMMANDER%%share/gnome/help/command-line/C/command-line.xml
 %%COMMANDER%%share/gnome/help/command-line/C/figures/command-line.png
 %%COMMANDER%%share/gnome/help/command-line/C/figures/prefs-macros.png
@@ -574,6 +584,10 @@ share/gnome/help/char-palette/uk/figures/charpick_characters.png
 %%COMMANDER%%share/gnome/help/command-line/uk/figures/command-line.png
 %%COMMANDER%%share/gnome/help/command-line/uk/figures/prefs-macros.png
 %%COMMANDER%%share/gnome/help/command-line/uk/figures/prefs.png
+%%COMMANDER%%share/gnome/help/command-line/zh_CN/command-line.xml
+%%COMMANDER%%share/gnome/help/command-line/zh_CN/figures/command-line.png
+%%COMMANDER%%share/gnome/help/command-line/zh_CN/figures/prefs-macros.png
+%%COMMANDER%%share/gnome/help/command-line/zh_CN/figures/prefs.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/cpufreq-applet.xml
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-100.png
 %%CPUFREQ%%share/gnome/help/cpufreq-applet/C/figures/cpufreq-25.png
@@ -748,6 +762,12 @@ share/gnome/help/drivemount/ca/figures/drivemount-applet_example.png
 share/gnome/help/drivemount/ca/figures/drivemount-applet_mount.png
 share/gnome/help/drivemount/ca/figures/drivemount-applet_open.png
 share/gnome/help/drivemount/ca/figures/drivemount-applet_status.png
+share/gnome/help/drivemount/cs/drivemount.xml
+share/gnome/help/drivemount/cs/figures/drivemount-applet_eject.png
+share/gnome/help/drivemount/cs/figures/drivemount-applet_example.png
+share/gnome/help/drivemount/cs/figures/drivemount-applet_mount.png
+share/gnome/help/drivemount/cs/figures/drivemount-applet_open.png
+share/gnome/help/drivemount/cs/figures/drivemount-applet_status.png
 share/gnome/help/drivemount/de/drivemount.xml
 share/gnome/help/drivemount/de/figures/drivemount-applet_eject.png
 share/gnome/help/drivemount/de/figures/drivemount-applet_example.png
@@ -875,6 +895,8 @@ share/gnome/help/geyes/sv/figures/geyes_applet.png
 share/gnome/help/geyes/sv/geyes.xml
 share/gnome/help/geyes/uk/figures/geyes_applet.png
 share/gnome/help/geyes/uk/geyes.xml
+share/gnome/help/geyes/zh_CN/figures/geyes_applet.png
+share/gnome/help/geyes/zh_CN/geyes.xml
 share/gnome/help/gswitchit/C/gswitchit.xml
 share/gnome/help/gswitchit/C/legal.xml
 share/gnome/help/gswitchit/ca/gswitchit.xml
@@ -1294,6 +1316,10 @@ share/gnome/help/multiload/uk/figures/multiload-preferences.png
 share/gnome/help/multiload/uk/figures/system-monitor-applet_window.png
 share/gnome/help/multiload/uk/figures/system_monitor.png
 share/gnome/help/multiload/uk/multiload.xml
+share/gnome/help/multiload/zh_CN/figures/multiload-preferences.png
+share/gnome/help/multiload/zh_CN/figures/system-monitor-applet_window.png
+share/gnome/help/multiload/zh_CN/figures/system_monitor.png
+share/gnome/help/multiload/zh_CN/multiload.xml
 share/gnome/help/stickynotes_applet/C/figures/stickynote-right-menu-lock.png
 share/gnome/help/stickynotes_applet/C/figures/stickynote-right-menu-new.png
 share/gnome/help/stickynotes_applet/C/figures/stickynotes-note-prefs.png
@@ -1602,6 +1628,7 @@ share/omf/accessx-status/accessx-status-zh_CN.omf
 share/omf/char-palette/char-palette-C.omf
 share/omf/char-palette/char-palette-bg.omf
 share/omf/char-palette/char-palette-ca.omf
+share/omf/char-palette/char-palette-cs.omf
 share/omf/char-palette/char-palette-de.omf
 share/omf/char-palette/char-palette-el.omf
 share/omf/char-palette/char-palette-en_GB.omf
@@ -1617,6 +1644,7 @@ share/omf/char-palette/char-palette-pt_BR.omf
 share/omf/char-palette/char-palette-ru.omf
 share/omf/char-palette/char-palette-sv.omf
 share/omf/char-palette/char-palette-uk.omf
+share/omf/char-palette/char-palette-zh_CN.omf
 %%COMMANDER%%share/omf/command-line/command-line-C.omf
 %%COMMANDER%%share/omf/command-line/command-line-ca.omf
 %%COMMANDER%%share/omf/command-line/command-line-de.omf
@@ -1630,6 +1658,7 @@ share/omf/char-palette/char-palette-uk.omf
 %%COMMANDER%%share/omf/command-line/command-line-pt_BR.omf
 %%COMMANDER%%share/omf/command-line/command-line-sv.omf
 %%COMMANDER%%share/omf/command-line/command-line-uk.omf
+%%COMMANDER%%share/omf/command-line/command-line-zh_CN.omf
 %%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-C.omf
 %%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-ca.omf
 %%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-de.omf
@@ -1648,6 +1677,7 @@ share/omf/char-palette/char-palette-uk.omf
 %%CPUFREQ%%share/omf/cpufreq-applet/cpufreq-applet-zh_CN.omf
 share/omf/drivemount/drivemount-C.omf
 share/omf/drivemount/drivemount-ca.omf
+share/omf/drivemount/drivemount-cs.omf
 share/omf/drivemount/drivemount-de.omf
 share/omf/drivemount/drivemount-el.omf
 share/omf/drivemount/drivemount-en_GB.omf
@@ -1681,6 +1711,7 @@ share/omf/geyes/geyes-oc.omf
 share/omf/geyes/geyes-ru.omf
 share/omf/geyes/geyes-sv.omf
 share/omf/geyes/geyes-uk.omf
+share/omf/geyes/geyes-zh_CN.omf
 share/omf/gswitchit/gswitchit-C.omf
 share/omf/gswitchit/gswitchit-ca.omf
 share/omf/gswitchit/gswitchit-cs.omf
@@ -1761,6 +1792,7 @@ share/omf/multiload/multiload-pt_BR.omf
 share/omf/multiload/multiload-ru.omf
 share/omf/multiload/multiload-sv.omf
 share/omf/multiload/multiload-uk.omf
+share/omf/multiload/multiload-zh_CN.omf
 share/omf/stickynotes_applet/stickynotes_applet-C.omf
 share/omf/stickynotes_applet/stickynotes_applet-ca.omf
 share/omf/stickynotes_applet/stickynotes_applet-de.omf
@@ -2026,6 +2058,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/stickynotes_applet/C/figures
 @dirrm share/gnome/help/stickynotes_applet/C
 @dirrm share/gnome/help/stickynotes_applet
+@dirrm share/gnome/help/multiload/zh_CN/figures
+@dirrm share/gnome/help/multiload/zh_CN
 @dirrm share/gnome/help/multiload/uk/figures
 @dirrm share/gnome/help/multiload/uk
 @dirrm share/gnome/help/multiload/sv/figures
@@ -2166,6 +2200,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/gswitchit/ca
 @dirrm share/gnome/help/gswitchit/C
 @dirrm share/gnome/help/gswitchit
+@dirrm share/gnome/help/geyes/zh_CN/figures
+@dirrm share/gnome/help/geyes/zh_CN
 @dirrm share/gnome/help/geyes/uk/figures
 @dirrm share/gnome/help/geyes/uk
 @dirrm share/gnome/help/geyes/sv/figures
@@ -2233,6 +2269,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/drivemount/el
 @dirrm share/gnome/help/drivemount/de/figures
 @dirrm share/gnome/help/drivemount/de
+@dirrm share/gnome/help/drivemount/cs/figures
+@dirrm share/gnome/help/drivemount/cs
 @dirrm share/gnome/help/drivemount/ca/figures
 @dirrm share/gnome/help/drivemount/ca
 @dirrm share/gnome/help/drivemount/C/figures
@@ -2271,6 +2309,8 @@ share/xmodmap/xmodmap.yu
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/C/figures
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet/C
 %%CPUFREQ%%@dirrm share/gnome/help/cpufreq-applet
+%%COMMANDER%%@dirrm share/gnome/help/command-line/zh_CN/figures
+%%COMMANDER%%@dirrm share/gnome/help/command-line/zh_CN
 %%COMMANDER%%@dirrm share/gnome/help/command-line/uk/figures
 %%COMMANDER%%@dirrm share/gnome/help/command-line/uk
 %%COMMANDER%%@dirrm share/gnome/help/command-line/sv/figures
@@ -2298,6 +2338,8 @@ share/xmodmap/xmodmap.yu
 %%COMMANDER%%@dirrm share/gnome/help/command-line/C/figures
 %%COMMANDER%%@dirrm share/gnome/help/command-line/C
 %%COMMANDER%%@dirrm share/gnome/help/command-line
+@dirrm share/gnome/help/char-palette/zh_CN/figures
+@dirrm share/gnome/help/char-palette/zh_CN
 @dirrm share/gnome/help/char-palette/uk/figures
 @dirrm share/gnome/help/char-palette/uk
 @dirrm share/gnome/help/char-palette/sv/figures
@@ -2328,6 +2370,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/char-palette/el
 @dirrm share/gnome/help/char-palette/de/figures
 @dirrm share/gnome/help/char-palette/de
+@dirrm share/gnome/help/char-palette/cs/figures
+@dirrm share/gnome/help/char-palette/cs
 @dirrm share/gnome/help/char-palette/ca/figures
 @dirrm share/gnome/help/char-palette/ca
 @dirrm share/gnome/help/char-palette/bg/figures
