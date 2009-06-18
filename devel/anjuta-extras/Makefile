@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/anjuta-extras/Makefile,v 1.1 2009/05/08 14:53:57 kwm Exp $
 #
 
 PORTNAME=	anjuta-extras
-PORTVERSION=	2.27.1
+PORTVERSION=	2.27.3
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
