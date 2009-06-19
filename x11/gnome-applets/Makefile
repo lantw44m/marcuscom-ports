@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.200 2009/05/27 15:52:40 kwm Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.201 2009/06/17 23:11:37 kwm Exp $
 #
 
 PORTNAME=	gnome-applets
@@ -37,7 +37,8 @@ WANT_GNOME=	yes
 USE_GSTREAMER=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gstreamer=0.10 \
-		--enable-mixer-applet
+		--enable-mixer-applet \
+		--disable-networkmanager
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		OS_SYS="/usr/include"
