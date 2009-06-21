@@ -3,11 +3,11 @@
 # Whom:					marc@informatik.uni-bremen.de
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.60 2009/05/03 23:32:32 kwm Exp $
+#   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.61 2009/05/26 16:06:06 kwm Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.15.1
+PORTVERSION=	2.15.2
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pygtk/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}

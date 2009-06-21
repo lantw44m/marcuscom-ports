@@ -746,10 +746,10 @@ share/pygtk/2.0/defs/pangocairo.override
 @dirrm %%DOCSDIR%%/cursors
 @dirrm %%DOCSDIR%%
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/gtk
-@dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0
+@dirrmtry %%PYTHON_SITELIBDIR%%/gtk-2.0
 @dirrm lib/pygtk/2.0/demos/images
 @dirrm lib/pygtk/2.0/demos
 @dirrm lib/pygtk/2.0
 @dirrm lib/pygtk
 @dirrm include/pygtk-2.0/pygtk
-@dirrm include/pygtk-2.0
+@dirrmtry include/pygtk-2.0
