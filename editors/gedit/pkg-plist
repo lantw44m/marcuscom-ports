@@ -1,6 +1,7 @@
 bin/gedit
 bin/gnome-text-editor
 include/gedit-%%VERSION%%/gedit/gedit-app.h
+include/gedit-%%VERSION%%/gedit/gedit-commands.h
 include/gedit-%%VERSION%%/gedit/gedit-convert.h
 include/gedit-%%VERSION%%/gedit/gedit-debug.h
 include/gedit-%%VERSION%%/gedit/gedit-document.h
@@ -164,7 +165,6 @@ share/applications/gedit.desktop
 %%DOCSDIR%%/GeditEncodingsOptionMenu.html
 %%DOCSDIR%%/GeditFileChooserDialog.html
 %%DOCSDIR%%/GeditMessage.html
-%%DOCSDIR%%/GeditMessageArea.html
 %%DOCSDIR%%/GeditMessageBus.html
 %%DOCSDIR%%/GeditNotebook.html
 %%DOCSDIR%%/GeditPanel.html
