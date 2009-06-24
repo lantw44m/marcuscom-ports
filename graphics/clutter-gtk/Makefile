@@ -6,18 +6,16 @@
 #
 
 PORTNAME=	clutter-gtk
-PORTVERSION=	0.9.0.a20090616
+PORTVERSION=	0.9.2
 CATEGORIES=	graphics
-MASTER_SITES=	LOCAL
-MASTER_SITE_SUBDIR=	kwm
-#http://www.clutter-project.org/sources/${PORTNAME}/0.8/
-DISTNAME=	${PORTNAME}-${PORTVERSION:S/.a/./}
+MASTER_SITES=	http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GTK+ Integration library for Clutter
 
 LIB_DEPENDS=	clutter-glx-0.9:${PORTSDIR}/graphics/clutter
 
+USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:15
 USE_GNOME=	gnomehack gtk20 ltverhack gnomeprefix
