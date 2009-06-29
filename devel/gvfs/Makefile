@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/gvfs/Makefile,v 1.45 2009/06/15 18:14:14 kwm Exp $
 #
 
 PORTNAME=	gvfs
@@ -31,7 +31,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-obexftp
-OPTIONS=	FUSE "Enable fuse" on \
+OPTIONS=	FUSE "Enable fuse" off \
 		SAMBA "Enable Samba" on \
 		GPHOTO2 "Enable Gphoto 2 camera support" on \
 		CDDA "Enable CDDA" on
