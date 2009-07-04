@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.66 2009/06/15 13:14:16 kwm Exp $
 #
 
 PORTNAME=	gnome-doc-utils
-PORTVERSION=	0.17.1
+PORTVERSION=	0.17.2
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 
@@ -35,6 +35,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAN1=		xml2po.1
 
 post-install:
-	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PREFIX}/share/xml2po
+	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py -l ${PYTHON_SITELIBDIR}/xml2po
 
 .include <bsd.port.mk>
