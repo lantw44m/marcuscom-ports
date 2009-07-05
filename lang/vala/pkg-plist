@@ -123,6 +123,7 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/libosso.vapi
 %%DATADIR%%/vapi/libpanelapplet-2.0.deps
 %%DATADIR%%/vapi/libpanelapplet-2.0.vapi
+%%DATADIR%%/vapi/libpq.vapi
 %%DATADIR%%/vapi/librsvg-2.0.deps
 %%DATADIR%%/vapi/librsvg-2.0.vapi
 %%DATADIR%%/vapi/libsexy.deps
