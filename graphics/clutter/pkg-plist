@@ -165,10 +165,13 @@ libdata/pkgconfig/cogl-gl-0.9.pc
 %%DOCSDIR%%/ix07.html
 %%DOCSDIR%%/left.png
 %%DOCSDIR%%/license.html
+%%DOCSDIR%%/migrating-ClutterEffect.html
 %%DOCSDIR%%/path-alpha-func.png
 %%DOCSDIR%%/pt06.html
 %%DOCSDIR%%/pt07.html
 %%DOCSDIR%%/pt08.html
+%%DOCSDIR%%/pt09.html
+%%DOCSDIR%%/pt10.html
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/running-clutter.html
 %%DOCSDIR%%/style.css
