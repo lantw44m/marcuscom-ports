@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.66 2009/06/15 13:14:16 kwm Exp $
+#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.67 2009/07/04 16:10:26 kwm Exp $
 #
 
 PORTNAME=	gnome-doc-utils
@@ -15,6 +15,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME doc utils
 
 BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
+		${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml2 \
     		gawk:${PORTSDIR}/lang/gawk
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
 		${PYTHON_SITELIBDIR}/libxml2mod.so:${PORTSDIR}/textproc/py-libxml2 \
