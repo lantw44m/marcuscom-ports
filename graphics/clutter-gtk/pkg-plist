@@ -32,6 +32,6 @@ libdata/pkgconfig/clutter-gtk-0.9.pc
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
-%%DOCSDIR%%@dirrm %%DOCSDIR%%
+@dirrm %%DOCSDIR%%
 @dirrm include/clutter-0.9/clutter-gtk
 @dirrm include/clutter-0.9
