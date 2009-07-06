@@ -20,6 +20,7 @@ include/poppler/Function.h
 include/poppler/Gfx.h
 include/poppler/GfxFont.h
 include/poppler/GfxState.h
+include/poppler/GfxState_helpers.h
 include/poppler/GlobalParams.h
 include/poppler/JArithmeticDecoder.h
 include/poppler/JBIG2Stream.h
@@ -39,6 +40,7 @@ include/poppler/PSTokenizer.h
 include/poppler/Page.h
 include/poppler/PageTransition.h
 include/poppler/Parser.h
+include/poppler/PopplerCache.h
 include/poppler/PreScanOutputDev.h
 include/poppler/ProfileData.h
 include/poppler/SecurityHandler.h
