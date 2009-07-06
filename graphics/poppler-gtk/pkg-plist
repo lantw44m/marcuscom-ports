@@ -14,8 +14,6 @@ lib/libpoppler-glib.la
 lib/libpoppler-glib.so
 lib/libpoppler-glib.so.4
 libdata/pkgconfig/poppler-glib.pc
-%%DOCSDIR%%/poppler/poppler-poppler-annot.html
-%%DOCSDIR%%/poppler/poppler-poppler-layer.html
 @dirrmtry %%DOCSDIR%%/poppler
 @dirrmtry %%DOCSDIR%%
 @dirrm include/poppler/glib
