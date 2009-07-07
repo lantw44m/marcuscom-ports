@@ -9,7 +9,6 @@ include/gedit-%%VERSION%%/gedit/gedit-encodings-option-menu.h
 include/gedit-%%VERSION%%/gedit/gedit-encodings.h
 include/gedit-%%VERSION%%/gedit/gedit-file-chooser-dialog.h
 include/gedit-%%VERSION%%/gedit/gedit-help.h
-include/gedit-%%VERSION%%/gedit/gedit-message-area.h
 include/gedit-%%VERSION%%/gedit/gedit-message-bus.h
 include/gedit-%%VERSION%%/gedit/gedit-message-type.h
 include/gedit-%%VERSION%%/gedit/gedit-message.h
