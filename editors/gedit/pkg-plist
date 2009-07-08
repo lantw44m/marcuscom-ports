@@ -599,6 +599,7 @@ share/omf/gedit/gedit-zh_TW.omf
 %%PYTHON%%@dirrm share/gedit-2/plugins/snippets
 %%PYTHON%%@dirrm share/gedit-2/plugins/pythonconsole/ui
 %%PYTHON%%@dirrm share/gedit-2/plugins/pythonconsole
+@dirrm share/gedit-2/plugins/sample
 @dirrm share/gedit-2/plugins/modelines
 @dirrm share/gedit-2/plugins/indent
 @dirrm share/gedit-2/plugins/filebrowser
