@@ -1,0 +1,53 @@
+--- Makefile.in.orig	2009-07-08 01:52:45.000000000 -0400
++++ Makefile.in	2009-07-08 01:53:30.000000000 -0400
+@@ -896,28 +896,28 @@ fonts.conf: fonts.conf.in Makefile
+ 	mv $@.tmp $@
+ 
+ install-data-local: fonts.conf
+-	$(mkinstalldirs) $(DESTDIR)$(configdir) $(DESTDIR)$(fc_cachedir)
+-	if [ -f $(DESTDIR)$(configdir)/fonts.conf ]; then \
+-	  echo "backing up existing $(DESTDIR)$(configdir)/fonts.conf"; \
+-	  mv $(DESTDIR)$(configdir)/fonts.conf $(DESTDIR)$(configdir)/fonts.conf.bak; \
+-	fi
+-	if [ -f $(srcdir)/fonts.conf ]; then \
+-	  echo " $(INSTALL_DATA) $(srcdir)/fonts.conf $(DESTDIR)$(configdir)/fonts.conf"; \
+-	  $(INSTALL_DATA) $(srcdir)/fonts.conf $(DESTDIR)$(configdir)/fonts.conf; \
+-	else if [ -f fonts.conf ]; then \
+-	  echo " $(INSTALL_DATA) fonts.conf $(DESTDIR)$(configdir)/fonts.conf"; \
+-	  $(INSTALL_DATA) fonts.conf $(DESTDIR)$(configdir)/fonts.conf; \
+-	fi; fi
+-	@(if $(RUN_FC_CACHE_TEST); then \
+-	    echo " $(bindir)/fc-cache -s -f -v"; \
+-	    $(bindir)/fc-cache -s -f -v; \
+-	else \
+-	    echo "***"; \
+-	    echo "*** Warning: fonts.cache not built"; \
+-	    echo "***"; \
+-	    echo "*** Generate this file manually on host system using fc-cache"; \
+-	    echo "***"; \
+-	fi)
++#	$(mkinstalldirs) $(DESTDIR)$(configdir) $(DESTDIR)$(fc_cachedir)
++#	if [ -f $(DESTDIR)$(configdir)/fonts.conf ]; then \
++#	  echo "backing up existing $(DESTDIR)$(configdir)/fonts.conf"; \
++#	  mv $(DESTDIR)$(configdir)/fonts.conf $(DESTDIR)$(configdir)/fonts.conf.bak; \
++#	fi
++#	if [ -f $(srcdir)/fonts.conf ]; then \
++#	  echo " $(INSTALL_DATA) $(srcdir)/fonts.conf $(DESTDIR)$(configdir)/fonts.conf"; \
++#	  $(INSTALL_DATA) $(srcdir)/fonts.conf $(DESTDIR)$(configdir)/fonts.conf; \
++#	else if [ -f fonts.conf ]; then \
++#	  echo " $(INSTALL_DATA) fonts.conf $(DESTDIR)$(configdir)/fonts.conf"; \
++#	  $(INSTALL_DATA) fonts.conf $(DESTDIR)$(configdir)/fonts.conf; \
++#	fi; fi
++#	@(if $(RUN_FC_CACHE_TEST); then \
++#	    echo " $(bindir)/fc-cache -s -f -v"; \
++#	    $(bindir)/fc-cache -s -f -v; \
++#	else \
++#	    echo "***"; \
++#	    echo "*** Warning: fonts.cache not built"; \
++#	    echo "***"; \
++#	    echo "*** Generate this file manually on host system using fc-cache"; \
++#	    echo "***"; \
++#	fi)
+ 
+ uninstall-local:
+ 	if [ -f $(srcdir)/fonts.conf ]; then \
