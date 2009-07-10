@@ -88,7 +88,7 @@ lib/libbrasero-utils.so.1
 libdata/pkgconfig/libbrasero-media.pc
 share/applications/brasero.desktop
 share/applications/brasero-copy-medium.desktop
-share/applications/brasero-nautilus.desktop
+%%NAUTILUS%%share/applications/brasero-nautilus.desktop
 share/applications/brasero-open-image.desktop
 share/applications/brasero-open-playlist.desktop
 share/applications/brasero-open-project.desktop
