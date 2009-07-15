@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp/Makefile,v 1.15 2009/05/25 05:22:30 marcus Exp $
+#   $MCom: ports/devel/devhelp/Makefile,v 1.16 2009/06/15 20:16:28 kwm Exp $
 
 PORTNAME=	devhelp
 PORTVERSION=	0.23
-PORTREVISION=	3
+PORTREVISION=	4
 PORTEPOCH=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Developer help browser for GNOME 2
 
-LIB_DEPENDS=	webkit-1.0.9:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS=	webkit-1.0.10:${PORTSDIR}/www/webkit-gtk2
 
 USE_BZIP2=	yes
 USE_XORG=	x11

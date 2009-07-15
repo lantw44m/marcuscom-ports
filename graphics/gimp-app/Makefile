@@ -3,12 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.38 2009/05/25 05:22:31 marcus Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.39 2009/06/15 20:16:29 kwm Exp $
 #
 
 PORTNAME=	gimp-app
 DISTVERSION=	2.6.6
-PORTREVISION?=	4
+PORTREVISION?=	5
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -117,7 +117,7 @@ PLIST_SUB+=		GNOME="@comment "
 .endif
 
 .if defined(WITH_HELPBROWSER)
-LIB_DEPENDS+=		webkit-1.0.9:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS+=		webkit-1.0.10:${PORTSDIR}/www/webkit-gtk2
 CONFIGURE_ARGS+=	--with-webkit
 PLIST_SUB+=		HELPBROWSER=""
 .else

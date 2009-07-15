@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.27 2009/06/15 17:46:28 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.28 2009/06/15 20:16:29 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.27.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -71,7 +71,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-h
 .endif
 
 .if defined(WITH_WEBKIT)
-LIB_DEPENDS+=   webkit-1.0.9:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS+=   webkit-1.0.10:${PORTSDIR}/www/webkit-gtk2
 CONFIGURE_ARGS+=--enable-webkit
 PLIST_SUB+=	ADIUM=""
 .else
