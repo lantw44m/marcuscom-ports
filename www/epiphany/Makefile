@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.200 2009/06/15 20:38:21 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.201 2009/07/15 11:38:02 avl Exp $
 #
 
 PORTNAME=	epiphany
@@ -56,17 +56,6 @@ NO_WERROR=	yes
 # allow build with more warnings enabled
 .if defined(NO_WERROR)
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
-.endif
-
-.if ${HAVE_GNOME:Mpygnome2}!=""
-USE_PYTHON=	yes
-.include "${PORTSDIR}/Mk/bsd.python.mk"
-USE_GNOME+=	pygnome2
-CONFIGURE_ARGS+=--enable-python
-PLIST_SUB+=	PYTHON=""
-.else
-CONFIGURE_ARGS+=--disable-python
-PLIST_SUB+=	PYTHON="@comment "
 .endif
 
 .if defined(WITH_SPELL_CHECKER)
