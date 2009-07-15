@@ -29,13 +29,17 @@ include/webkit-1.0/webkit/webkitwebwindowfeatures.h
 %%STATIC%%lib/libwebkit-1.0.a
 lib/libwebkit-1.0.la
 lib/libwebkit-1.0.so
-lib/libwebkit-1.0.so.9
+lib/libwebkit-1.0.so.10
 libdata/pkgconfig/webkit-1.0.pc
 share/locale/de/LC_MESSAGES/webkit.mo
 share/locale/it/LC_MESSAGES/webkit.mo
+share/locale/nl/LC_MESSAGES/webkit.mo
 share/locale/pt_BR/LC_MESSAGES/webkit.mo
 share/locale/ru/LC_MESSAGES/webkit.mo
+share/locale/sr/LC_MESSAGES/webkit.mo
+share/locale/sr@latin/LC_MESSAGES/webkit.mo
 share/locale/sv/LC_MESSAGES/webkit.mo
+share/locale/vi/LC_MESSAGES/webkit.mo
 share/webkit-1.0/images/deleteButton.png
 share/webkit-1.0/images/missingImage.png
 share/webkit-1.0/images/nullPlugin.png
@@ -103,6 +107,7 @@ share/webkit-1.0/webinspector/Images/resourceJSIcon.png
 share/webkit-1.0/webinspector/Images/resourcePlainIcon.png
 share/webkit-1.0/webinspector/Images/resourcePlainIconSmall.png
 share/webkit-1.0/webinspector/Images/resourcesIcon.png
+share/webkit-1.0/webinspector/Images/resourcesSilhouette.png
 share/webkit-1.0/webinspector/Images/resourcesSizeGraphIcon.png
 share/webkit-1.0/webinspector/Images/resourcesTimeGraphIcon.png
 share/webkit-1.0/webinspector/Images/scriptsIcon.png
@@ -166,3 +171,5 @@ share/webkit-1.0/webinspector/localizedStrings.js
 @dirrm include/webkit-1.0/webkit
 @dirrm include/webkit-1.0/JavaScriptCore
 @dirrm include/webkit-1.0
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
