@@ -110,6 +110,7 @@ include/gtk-2.0/gtk/gtkdnd.h
 include/gtk-2.0/gtk/gtkdrawingarea.h
 include/gtk-2.0/gtk/gtkeditable.h
 include/gtk-2.0/gtk/gtkentry.h
+include/gtk-2.0/gtk/gtkentrybuffer.h
 include/gtk-2.0/gtk/gtkentrycompletion.h
 include/gtk-2.0/gtk/gtkenums.h
 include/gtk-2.0/gtk/gtkeventbox.h
@@ -414,6 +415,7 @@ share/gtk-2.0/demo/demo.ui
 share/gtk-2.0/demo/dialog.c
 share/gtk-2.0/demo/drawingarea.c
 share/gtk-2.0/demo/editable_cells.c
+share/gtk-2.0/demo/entry_buffer.c
 share/gtk-2.0/demo/entry_completion.c
 share/gtk-2.0/demo/expander.c
 share/gtk-2.0/demo/floppybuddy.gif
