@@ -176,11 +176,6 @@ lib/deskbar-applet/modules-2.20-compatible/yahoo.pyo
 %%EVO%%%%PYTHON_SITELIBDIR%%/deskbar/handlers/evolution/__init__.pyo
 %%EVO%%%%PYTHON_SITELIBDIR%%/deskbar/handlers/evolution/_evolution.la
 %%EVO%%%%PYTHON_SITELIBDIR%%/deskbar/handlers/evolution/_evolution.so
-%%PYTHON_SITELIBDIR%%/deskbar/handlers/gdmclient/__init__.py
-%%PYTHON_SITELIBDIR%%/deskbar/handlers/gdmclient/__init__.pyc
-%%PYTHON_SITELIBDIR%%/deskbar/handlers/gdmclient/__init__.pyo
-%%PYTHON_SITELIBDIR%%/deskbar/handlers/gdmclient/_gdmclient.la
-%%PYTHON_SITELIBDIR%%/deskbar/handlers/gdmclient/_gdmclient.so
 %%PYTHON_SITELIBDIR%%/deskbar/interfaces/Action.py
 %%PYTHON_SITELIBDIR%%/deskbar/interfaces/Action.pyc
 %%PYTHON_SITELIBDIR%%/deskbar/interfaces/Action.pyo
@@ -323,6 +318,9 @@ share/gnome/help/deskbar/C/legal.xml
 share/gnome/help/deskbar/ca/deskbar.xml
 share/gnome/help/deskbar/ca/figures/deskbar-applet.png
 share/gnome/help/deskbar/ca/legal.xml
+share/gnome/help/deskbar/cs/deskbar.xml
+share/gnome/help/deskbar/cs/figures/deskbar-applet.png
+share/gnome/help/deskbar/cs/legal.xml
 share/gnome/help/deskbar/de/deskbar.xml
 share/gnome/help/deskbar/de/figures/deskbar-applet.png
 share/gnome/help/deskbar/de/legal.xml
@@ -439,6 +437,7 @@ share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
 share/omf/deskbar/deskbar-C.omf
 share/omf/deskbar/deskbar-ca.omf
+share/omf/deskbar/deskbar-cs.omf
 share/omf/deskbar/deskbar-de.omf
 share/omf/deskbar/deskbar-el.omf
 share/omf/deskbar/deskbar-en_GB.omf
@@ -476,6 +475,8 @@ share/omf/deskbar/deskbar-zh_CN.omf
 @dirrm share/gnome/help/deskbar/el
 @dirrm share/gnome/help/deskbar/de/figures
 @dirrm share/gnome/help/deskbar/de
+@dirrm share/gnome/help/deskbar/cs/figures
+@dirrm share/gnome/help/deskbar/cs
 @dirrm share/gnome/help/deskbar/ca/figures
 @dirrm share/gnome/help/deskbar/ca
 @dirrm share/gnome/help/deskbar/C/figures
