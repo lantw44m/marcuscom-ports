@@ -1,15 +1,15 @@
---- src/orca/orca.in.orig	2009-06-12 18:15:54.000000000 +0200
-+++ src/orca/orca.in	2009-06-15 20:50:16.000000000 +0200
+--- src/orca/orca.in.orig	2009-07-17 10:44:34.000000000 +1000
++++ src/orca/orca.in	2009-07-17 10:46:14.000000000 +1000
 @@ -30,7 +30,7 @@
  
  # Set the user's $PATH for this script.
  #
--export PATH="${PATH}:/usr/ccs/bin:/usr/bin:/usr/sbin:/bin:/usr/sfw/bin:/usr/openwin/bin:/usr/X11R6/bin"
-+export PATH="${PATH}:/usr/bin:/usr/sbin:/bin:/usr/local/bin"
+-PATH="${PATH}:/usr/ccs/bin:/usr/bin:/usr/sbin:/bin:/usr/sfw/bin:/usr/openwin/bin:/usr/X11R6/bin"
++PATH="${PATH}:/usr/bin:/usr/sbin:/bin:/usr/local/bin"
+ export PATH
  
  # Save the arguments away.
- #
-@@ -83,7 +83,7 @@
+@@ -84,7 +84,7 @@ restoreXmodmap()
  cleanup()
  {
      USERID=`id | cut -f2 -d= | cut -f1 -d\(`
