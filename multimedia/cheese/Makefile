@@ -3,11 +3,11 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese/Makefile,v 1.34 2009/05/27 15:23:57 kwm Exp $
+#   $MCom: ports/multimedia/cheese/Makefile,v 1.35 2009/06/15 21:16:52 kwm Exp $
 #
 
 PORTNAME=	cheese
-PORTVERSION=	2.27.3
+PORTVERSION=	2.27.4
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
