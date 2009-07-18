@@ -602,9 +602,6 @@ share/doc/libedata-book/index.html
 share/doc/libedata-book/index.sgml
 share/doc/libedata-book/ix01.html
 share/doc/libedata-book/left.png
-share/doc/libedata-book/libedata-book-EDataBookFactory.html
-share/doc/libedata-book/libedata-book-e-book-backend-db-cache.html
-share/doc/libedata-book/libedata-book-ximian-vcard.html
 share/doc/libedata-book/libedata-book.devhelp
 share/doc/libedata-book/libedata-book.devhelp2
 share/doc/libedata-book/right.png
@@ -624,7 +621,6 @@ share/doc/libedata-cal/index.html
 share/doc/libedata-cal/index.sgml
 share/doc/libedata-cal/ix01.html
 share/doc/libedata-cal/left.png
-share/doc/libedata-cal/libedata-cal-e-cal-backend-util.html
 share/doc/libedata-cal/libedata-cal.devhelp
 share/doc/libedata-cal/libedata-cal.devhelp2
 share/doc/libedata-cal/right.png
@@ -648,7 +644,6 @@ share/doc/libedataserver/left.png
 share/doc/libedataserver/libedataserver-EFlag.html
 share/doc/libedataserver/libedataserver-EProxy.html
 share/doc/libedataserver/libedataserver-ESExp.html
-share/doc/libedataserver/libedataserver-Version-Information.html
 share/doc/libedataserver/libedataserver-e-categories.html
 share/doc/libedataserver/libedataserver-e-iconv.html
 share/doc/libedataserver/libedataserver-e-memory.html
@@ -684,10 +679,6 @@ share/doc/libedataserverui/index.html
 share/doc/libedataserverui/index.sgml
 share/doc/libedataserverui/ix01.html
 share/doc/libedataserverui/left.png
-share/doc/libedataserverui/libedataserverui-ECategoryCompletion.html
-share/doc/libedataserverui/libedataserverui-ECellRendererColor.html
-share/doc/libedataserverui/libedataserverui-e-book-auth-util.html
-share/doc/libedataserverui/libedataserverui-e-data-server-ui-marshal.html
 share/doc/libedataserverui/libedataserverui-e-passwords.html
 share/doc/libedataserverui/libedataserverui.devhelp
 share/doc/libedataserverui/libedataserverui.devhelp2
