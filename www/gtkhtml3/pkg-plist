@@ -25,8 +25,8 @@ lib/libgtkhtml-editor.so
 lib/libgtkhtml-editor.so.0
 libdata/pkgconfig/gtkhtml-editor.pc
 libdata/pkgconfig/libgtkhtml-%%VERSION%%.pc
-share/gtkhtml-%%VERSION%%/gtkhtml-editor.glade
-share/gtkhtml-%%VERSION%%/gtkhtml-editor.ui
+share/gtkhtml-%%VERSION%%/gtkhtml-editor-builder.ui
+share/gtkhtml-%%VERSION%%/gtkhtml-editor-manager.ui
 share/gtkhtml-%%VERSION%%/icons/bulb.png
 share/gtkhtml-%%VERSION%%/icons/confidential-stamp.jpg
 share/gtkhtml-%%VERSION%%/icons/draft-paper.png
