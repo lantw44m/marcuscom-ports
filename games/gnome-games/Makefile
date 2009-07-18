@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.196 2009/06/16 12:05:11 kwm Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.197 2009/07/05 20:57:42 marcus Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	2.27.3
+PORTVERSION=	2.27.4
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -37,9 +37,9 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	aisleriot.schemas blackjack.schemas glchess.schemas \
 		glines.schemas gnect.schemas gnibbles.schemas \
-		gnobots2.schemas gnometris.schemas gnomine.schemas \
-		gnotravex.schemas gnotski.schemas gtali.schemas \
-		iagno.schemas mahjongg.schemas same-gnome.schemas
+		gnobots2.schemas gnome-sudoku.schemas gnometris.schemas \
+		gnomine.schemas gnotravex.schemas gnotski.schemas \
+		gtali.schemas iagno.schemas mahjongg.schemas same-gnome.schemas
 
 CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]*
 
