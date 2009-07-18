@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.134 2009/06/21 08:15:21 avl Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.135 2009/06/21 08:20:03 avl Exp $
 #
 
 PORTNAME=	gnome-system-monitor
-PORTVERSION=	2.27.3
+PORTVERSION=	2.27.4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -27,7 +27,6 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack libwnck gnomevfs2 gnomedocutils \
 		librsvg2
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--enable-pcrecpp
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lutil"
 
