@@ -12,6 +12,7 @@ bin/gvfs-open
 bin/gvfs-rename
 bin/gvfs-rm
 bin/gvfs-save
+bin/gvfs-set-attribute
 bin/gvfs-trash
 bin/gvfs-tree
 etc/profile.d/gvfs-bash-completion.sh
@@ -43,12 +44,14 @@ libexec/gvfsd-ftp
 %%GPHOTO2%%libexec/gvfsd-gphoto2
 libexec/gvfsd-http
 libexec/gvfsd-localtest
+libexec/gvfsd-metadata
 libexec/gvfsd-network
 libexec/gvfsd-sftp
 %%SMB%%libexec/gvfsd-smb
 %%SMB%%libexec/gvfsd-smb-browse
 libexec/gvfsd-trash
 share/dbus-1/services/gvfs-daemon.service
+share/dbus-1/services/gvfs-metadata.service
 %%GPHOTO2%%share/dbus-1/services/org.gtk.Private.GPhoto2VolumeMonitor.service
 share/dbus-1/services/org.gtk.Private.HalVolumeMonitor.service
 %%ARCHIVE%%share/gvfs/mounts/archive.mount
