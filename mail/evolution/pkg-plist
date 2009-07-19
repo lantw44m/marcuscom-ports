@@ -24,7 +24,6 @@ include/evolution-%%VERSION%%/e-util/e-bconf-map.h
 include/evolution-%%VERSION%%/e-util/e-binding.h
 include/evolution-%%VERSION%%/e-util/e-bit-array.h
 include/evolution-%%VERSION%%/e-util/e-categories-config.h
-include/evolution-%%VERSION%%/e-util/e-config-listener.h
 include/evolution-%%VERSION%%/e-util/e-config.h
 include/evolution-%%VERSION%%/e-util/e-corba-utils.h
 include/evolution-%%VERSION%%/e-util/e-cursor.h
