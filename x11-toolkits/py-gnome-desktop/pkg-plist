@@ -1,3 +1,5 @@
+%%PYTHON_SITELIBDIR%%/gtk-2.0/braseroburn.la
+%%PYTHON_SITELIBDIR%%/gtk-2.0/braseroburn.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/braseromedia.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/braseromedia.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/bugbuddy.py
@@ -47,7 +49,6 @@
 %%PYTHON_SITELIBDIR%%/gtk-2.0/wnck.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/wnck.so
 libdata/pkgconfig/gnome-python-desktop-2.0.pc
-%%PORTDOCS%%%%DOCSDIR%%/pygnomeprint/_placeholder_
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprint/class-gnomeprintconfig.html
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprint/class-gnomeprintcontext.html
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprint/class-gnomeprintfont.html
@@ -58,7 +59,6 @@ libdata/pkgconfig/gnome-python-desktop-2.0.pc
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprint/index.html
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprint/index.sgml
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprint/pygnomeprint.devhelp
-%%PORTDOCS%%%%DOCSDIR%%/pygnomeprintui/_placeholder_
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprintui/class-gnomeprintuidialog.html
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprintui/class-gnomeprintuifontdialog.html
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprintui/class-gnomeprintuifontpreview.html
@@ -70,7 +70,6 @@ libdata/pkgconfig/gnome-python-desktop-2.0.pc
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprintui/index.html
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprintui/index.sgml
 %%PORTDOCS%%%%DOCSDIR%%/pygnomeprintui/pygnomeprintui.devhelp
-%%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/_placeholder_
 %%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcebuffer.html
 %%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcelanguage.html
 %%PORTDOCS%%%%DOCSDIR%%/pygtksourceview/class-gtksourcelanguagesmanager.html
@@ -112,6 +111,7 @@ libdata/pkgconfig/gnome-python-desktop-2.0.pc
 share/pygtk/2.0/defs/_gnomedesktop.defs
 share/pygtk/2.0/defs/applet.defs
 share/pygtk/2.0/defs/art.defs
+share/pygtk/2.0/defs/brasero_burn.defs
 share/pygtk/2.0/defs/brasero_media.defs
 share/pygtk/2.0/defs/ebook.defs
 share/pygtk/2.0/defs/evince.defs
