@@ -39,9 +39,6 @@ lib/gnome-settings-daemon-2.0/libmedia-keys.so
 lib/gnome-settings-daemon-2.0/libmouse.a
 lib/gnome-settings-daemon-2.0/libmouse.la
 lib/gnome-settings-daemon-2.0/libmouse.so
-lib/gnome-settings-daemon-2.0/libscreensaver.a
-lib/gnome-settings-daemon-2.0/libscreensaver.la
-lib/gnome-settings-daemon-2.0/libscreensaver.so
 lib/gnome-settings-daemon-2.0/libsound.a
 lib/gnome-settings-daemon-2.0/libsound.la
 lib/gnome-settings-daemon-2.0/libsound.so
@@ -59,7 +56,6 @@ lib/gnome-settings-daemon-2.0/libxsettings.la
 lib/gnome-settings-daemon-2.0/libxsettings.so
 lib/gnome-settings-daemon-2.0/media-keys.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/mouse.gnome-settings-plugin
-lib/gnome-settings-daemon-2.0/screensaver.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/sound.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/typing-break.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/xrandr.gnome-settings-plugin
@@ -69,10 +65,10 @@ libdata/pkgconfig/gnome-settings-daemon.pc
 libexec/gnome-settings-daemon
 share/dbus-1/services/org.gnome.SettingsDaemon.service
 share/gnome-control-center/keybindings/50-accessibility.xml
+%%DATADIR%%/acme.ui
 %%DATADIR%%/acme-eject.png
-%%DATADIR%%/acme.glade
 %%DATADIR%%/gsd-a11y-preferences-dialog.glade
-%%DATADIR%%/modmap-dialog.glade
+%%DATADIR%%/modmap-dialog.ui
 %%DATADIR%%/xrdb/Editres.ad
 %%DATADIR%%/xrdb/Emacs.ad
 %%DATADIR%%/xrdb/General.ad
