@@ -28,6 +28,7 @@ share/gnome-about/headers/header-bg-snow01.png
 share/gnome-about/headers/header-bg-sunset01.png
 share/gnome/help/fdl/C/fdl.xml
 share/gnome/help/fdl/ar/fdl.xml
+share/gnome/help/fdl/ca/fdl.xml
 share/gnome/help/fdl/de/fdl.xml
 share/gnome/help/fdl/el/fdl.xml
 share/gnome/help/fdl/es/fdl.xml
@@ -179,6 +180,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 share/omf/fdl/fdl-C.omf
 share/omf/fdl/fdl-ar.omf
+share/omf/fdl/fdl-ca.omf
 share/omf/fdl/fdl-de.omf
 share/omf/fdl/fdl-el.omf
 share/omf/fdl/fdl-es.omf
@@ -342,6 +344,7 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/fdl/es
 @dirrm share/gnome/help/fdl/el
 @dirrm share/gnome/help/fdl/de
+@dirrm share/gnome/help/fdl/ca
 @dirrm share/gnome/help/fdl/ar
 @dirrm share/gnome-about/headers
 @dirrmtry share/applications
