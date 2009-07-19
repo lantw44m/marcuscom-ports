@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.189 2009/03/18 00:23:38 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.191 2009/07/07 18:47:15 marcus Exp $
 #
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	2.26.0
-PORTREVISION=	1
+PORTVERSION=	2.27.4.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -34,7 +33,6 @@ GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--enable-gstreamer=0.10
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
