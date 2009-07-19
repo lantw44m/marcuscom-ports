@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.28 2009/06/15 20:16:29 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.29 2009/07/15 11:42:51 avl Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	2.27.3
-PORTREVISION=	2
+PORTVERSION=	2.27.4
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 

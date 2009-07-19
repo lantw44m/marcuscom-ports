@@ -9,11 +9,11 @@ include/libgnomekbd/gkbd-util.h
 lib/libgnomekbd.a
 lib/libgnomekbd.la
 lib/libgnomekbd.so
-lib/libgnomekbd.so.3
+lib/libgnomekbd.so.4
 lib/libgnomekbdui.a
 lib/libgnomekbdui.la
 lib/libgnomekbdui.so
-lib/libgnomekbdui.so.3
+lib/libgnomekbdui.so.4
 libdata/pkgconfig/libgnomekbd.pc
 libdata/pkgconfig/libgnomekbdui.pc
 share/applications/gkbd-indicator-plugins-capplet.desktop

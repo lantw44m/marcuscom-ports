@@ -25,11 +25,14 @@ include/libempathy-gtk/empathy-geometry.h
 include/libempathy-gtk/empathy-gtk-enum-types.h
 include/libempathy-gtk/empathy-images.h
 include/libempathy-gtk/empathy-irc-network-dialog.h
+include/libempathy-gtk/empathy-kludge-label.h
 include/libempathy-gtk/empathy-log-window.h
 include/libempathy-gtk/empathy-new-message-dialog.h
+include/libempathy-gtk/empathy-plist.h
 include/libempathy-gtk/empathy-presence-chooser.h
 include/libempathy-gtk/empathy-profile-chooser.h
 include/libempathy-gtk/empathy-smiley-manager.h
+include/libempathy-gtk/empathy-sound.h
 include/libempathy-gtk/empathy-spell.h
 include/libempathy-gtk/empathy-status-preset-dialog.h
 %%ADIUM%%include/libempathy-gtk/empathy-theme-adium.h
@@ -39,6 +42,7 @@ include/libempathy-gtk/empathy-theme-manager.h
 include/libempathy-gtk/empathy-ui-utils.h
 include/libempathy-gtk/empathy-video-src.h
 include/libempathy-gtk/empathy-video-widget.h
+include/libempathy/empathy-account.h
 include/libempathy/empathy-account-manager.h
 include/libempathy/empathy-call-factory.h
 include/libempathy/empathy-call-handler.h
@@ -50,6 +54,7 @@ include/libempathy/empathy-contact-manager.h
 include/libempathy/empathy-contact-monitor.h
 include/libempathy/empathy-contact.h
 include/libempathy/empathy-debug.h
+include/libempathy/empathy-debugger.h
 include/libempathy/empathy-dispatch-operation.h
 include/libempathy/empathy-dispatcher.h
 include/libempathy/empathy-enum-types.h
@@ -113,6 +118,7 @@ share/doc/libempathy-gtk/EmpathyGstAudioSrc.html
 share/doc/libempathy-gtk/EmpathyGstVideoSrc.html
 share/doc/libempathy-gtk/EmpathyPresenceChooser.html
 share/doc/libempathy-gtk/EmpathySmileyManager.html
+share/doc/libempathy-gtk/EmpathyStatusPresetDialog.html
 share/doc/libempathy-gtk/EmpathyThemeBoxes.html
 share/doc/libempathy-gtk/EmpathyThemeIrc.html
 share/doc/libempathy-gtk/EmpathyThemeManager.html
@@ -417,6 +423,7 @@ share/locale/nb/LC_MESSAGES/empathy.mo
 share/locale/ne/LC_MESSAGES/empathy.mo
 share/locale/nl/LC_MESSAGES/empathy.mo
 share/locale/oc/LC_MESSAGES/empathy.mo
+share/locale/or/LC_MESSAGES/empathy.mo
 share/locale/pa/LC_MESSAGES/empathy.mo
 share/locale/pl/LC_MESSAGES/empathy.mo
 share/locale/ps/LC_MESSAGES/empathy.mo

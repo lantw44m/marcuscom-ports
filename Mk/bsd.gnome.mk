@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.480 2009/04/13 19:06:39 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.481 2009/06/03 05:16:15 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -522,7 +522,7 @@ gnomesharp20_RUN_DEPENDS=	${gnomesharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-
 gnomesharp20_USE_GNOME_IMPL=	gnomepanel gtkhtml3 gtksharp20 librsvg2 vte
 
 libgnomekbd_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
-libgnomekbd_LIB_DEPENDS=	gnomekbd.3:${PORTSDIR}/x11/libgnomekbd
+libgnomekbd_LIB_DEPENDS=	gnomekbd.4:${PORTSDIR}/x11/libgnomekbd
 libgnomekbd_USE_GNOME_IMPL=	libgnomeui
 
 pygtksourceview_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygtksourceview-2.0.pc
