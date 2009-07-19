@@ -3,12 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/Makefile,v 1.57 2009/05/23 21:27:00 marcus Exp $
+#   $MCom: ports/sysutils/hal/Makefile,v 1.58 2009/05/23 22:56:04 marcus Exp $
 #
 
 PORTNAME=	hal
-DISTVERSION=	0.5.12
-PORTREVISION=	2
+DISTVERSION=	0.5.13
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -23,7 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/pciids/pci.ids:${PORTSDIR}/misc/pciids
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack ltverhack
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
@@ -86,11 +85,12 @@ PLIST_SUB+=	USB2="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e '/^scriptdir = /s|libdir|libexecdir|' \
+	@${REINPLACE_CMD} -e '/^scriptdir = /s|[(]libexecdir[)]/scripts|(libexecdir)/hal/scripts|' \
 		${WRKSRC}/tools/Makefile.in \
 		${WRKSRC}/tools/freebsd/Makefile.in
-	@${REINPLACE_CMD} -e 's|[(]libdir[)]/hal/scripts|(libexecdir)/hal/scripts|' \
-		${WRKSRC}/hald/Makefile.in
+	@${REINPLACE_CMD} -e 's|[(]libexecdir[)]/scripts|(libexecdir)/hal/scripts|' \
+		${WRKSRC}/hald/Makefile.in \
+		${WRKSRC}/tools/Makefile.in
 	@${REINPLACE_CMD} -e 's|user="0"|group="operator"|g' \
 		${WRKSRC}/hal.conf.in
 	@${SED} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \

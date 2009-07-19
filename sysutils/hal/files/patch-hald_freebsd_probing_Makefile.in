@@ -1,5 +1,5 @@
---- hald/freebsd/probing/Makefile.in.orig	2009-05-17 00:44:58.000000000 -0400
-+++ hald/freebsd/probing/Makefile.in	2009-05-17 00:44:58.000000000 -0400
+--- hald/freebsd/probing/Makefile.in.orig	2009-07-16 22:17:53.000000000 -0400
++++ hald/freebsd/probing/Makefile.in	2009-07-17 02:32:09.000000000 -0400
 @@ -34,10 +34,16 @@ build_triplet = @build@
  host_triplet = @host@
  @HALD_COMPILE_FREEBSD_TRUE@libexec_PROGRAMS =  \
@@ -99,7 +99,15 @@
  hald_probe_smbios_SOURCES = probe-smbios.c
  hald_probe_smbios_LDADD = \
  	$(top_builddir)/hald/freebsd/libprobe/libhald_freebsd_probe.la
-@@ -349,6 +394,9 @@ clean-libexecPROGRAMS:
+@@ -283,6 +328,7 @@ hald_probe_volume_CPPFLAGS = $(AM_CPPFLA
+ hald_probe_volume_LDADD = \
+ 	@GLIB_LIBS@							\
+ 	@VOLUME_ID_LIBS@						\
++	-lufs								\
+ 	$(top_builddir)/hald/freebsd/libprobe/libhald_freebsd_probe.la
+ 
+ all: all-am
+@@ -349,6 +395,9 @@ clean-libexecPROGRAMS:
  hald-probe-hiddev$(EXEEXT): $(hald_probe_hiddev_OBJECTS) $(hald_probe_hiddev_DEPENDENCIES) 
  	@rm -f hald-probe-hiddev$(EXEEXT)
  	$(LINK) $(hald_probe_hiddev_OBJECTS) $(hald_probe_hiddev_LDADD) $(LIBS)
@@ -109,7 +117,7 @@
  hald-probe-scsi$(EXEEXT): $(hald_probe_scsi_OBJECTS) $(hald_probe_scsi_DEPENDENCIES) 
  	@rm -f hald-probe-scsi$(EXEEXT)
  	$(LINK) $(hald_probe_scsi_OBJECTS) $(hald_probe_scsi_LDADD) $(LIBS)
-@@ -358,6 +406,12 @@ hald-probe-smbios$(EXEEXT): $(hald_probe
+@@ -358,6 +407,12 @@ hald-probe-smbios$(EXEEXT): $(hald_probe
  hald-probe-storage$(EXEEXT): $(hald_probe_storage_OBJECTS) $(hald_probe_storage_DEPENDENCIES) 
  	@rm -f hald-probe-storage$(EXEEXT)
  	$(LINK) $(hald_probe_storage_OBJECTS) $(hald_probe_storage_LDADD) $(LIBS)
@@ -122,7 +130,7 @@
  hald-probe-volume$(EXEEXT): $(hald_probe_volume_OBJECTS) $(hald_probe_volume_DEPENDENCIES) 
  	@rm -f hald-probe-volume$(EXEEXT)
  	$(LINK) $(hald_probe_volume_OBJECTS) $(hald_probe_volume_LDADD) $(LIBS)
-@@ -368,6 +422,7 @@ mostlyclean-compile:
+@@ -368,6 +423,7 @@ mostlyclean-compile:
  distclean-compile:
  	-rm -f *.tab.c
  
@@ -130,7 +138,7 @@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hald_probe_storage-freebsd_dvd_rw_utils.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hald_probe_storage-probe-storage.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/hald_probe_volume-freebsd_dvd_rw_utils.Po@am__quote@
-@@ -375,6 +430,8 @@ distclean-compile:
+@@ -375,6 +431,8 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/probe-hiddev.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/probe-scsi.Po@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/probe-smbios.Po@am__quote@
@@ -139,7 +147,7 @@
  
  .c.o:
  @am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-@@ -397,6 +454,20 @@ distclean-compile:
+@@ -397,6 +455,20 @@ distclean-compile:
  @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
  @am__fastdepCC_FALSE@	$(LTCOMPILE) -c -o $@ $<
  
