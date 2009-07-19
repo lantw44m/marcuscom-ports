@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.160 2009/06/16 12:33:34 kwm Exp $
+#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.161 2009/07/19 08:20:41 avl Exp $
 #
 
 PORTNAME=	gnome-desktop
@@ -32,7 +32,7 @@ USE_BISON=	build
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 CONFIGURE_ARGS=	--with-gnome-distributor="FreeBSD GNOME Project"
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

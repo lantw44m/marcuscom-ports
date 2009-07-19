@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml3/Makefile,v 1.150 2009/06/15 14:24:11 kwm Exp $
+#   $MCom: ports/www/gtkhtml3/Makefile,v 1.151 2009/07/18 20:39:30 kwm Exp $
 #
 
 PORTNAME=	gtkhtml3
@@ -30,7 +30,7 @@ USE_XORG=	xinerama xi xrandr xcursor xcomposite xdamage
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libglade2 ltverhack
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

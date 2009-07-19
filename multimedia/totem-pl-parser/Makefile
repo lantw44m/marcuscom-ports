@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.24 2009/03/31 13:10:18 kwm Exp $
+#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.26 2009/05/07 23:25:19 marcus Exp $
 #
 
 PORTNAME=	totem-pl-parser
@@ -23,7 +23,7 @@ USE_GNOME=	gnomehack gnomeprefix gnomevfs2 intlhack evolutiondataserver \
 		ltverhack
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

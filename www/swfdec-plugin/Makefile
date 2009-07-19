@@ -16,7 +16,7 @@ COMMENT=	Flash rendering plugin
 
 LIB_DEPENDS=	swfdec-0.9:${PORTSDIR}/graphics/swfdec
 
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 INSTALLS_ICONS=	yes
 USE_GNOME=	gtk20
 CONFIGURE_ARGS=	--with-plugin-dir="${WEBPLUGINS_DIR}"

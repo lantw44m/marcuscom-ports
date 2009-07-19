@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/gtksourceview2/Makefile,v 1.74 2009/05/27 16:02:28 kwm Exp $
 #
 
 PORTNAME=	gtksourceview2
@@ -24,7 +24,7 @@ USE_BZIP2=	yes
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomeprefix gnomehack gtk20 libxml2 intlhack \
 		ltverhack referencehack

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.137 2009/05/07 18:55:59 marcus Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.138 2009/06/15 13:52:36 kwm Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -26,7 +26,7 @@ GNOME_DESKTOP_VERSION=2
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel ltverhack
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

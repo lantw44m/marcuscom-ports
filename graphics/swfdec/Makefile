@@ -4,7 +4,7 @@
 # Whom:				ijliao
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/swfdec/Makefile,v 1.30 2009/02/21 23:42:07 kwm Exp $
 
 PORTNAME=	swfdec
 PORTVERSION=	0.9.2
@@ -20,7 +20,7 @@ LIB_DEPENDS=	oil-0.3.0:${PORTSDIR}/devel/liboil \
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack gtk20 ltverhack
 USE_GSTREAMER=	core good mp3 ffmpeg
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-Wl,-Bsymbolic -L${LOCALBASE}/lib"
 

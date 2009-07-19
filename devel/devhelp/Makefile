@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp/Makefile,v 1.17 2009/07/15 11:42:50 avl Exp $
+#   $MCom: ports/devel/devhelp/Makefile,v 1.18 2009/07/19 01:07:15 marcus Exp $
 
 PORTNAME=	devhelp
 PORTVERSION=	0.23
@@ -23,7 +23,7 @@ USE_XORG=	x11
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix libgnomeui libwnck
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes

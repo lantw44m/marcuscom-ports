@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.62 2009/06/16 18:03:02 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.63 2009/07/15 11:40:10 avl Exp $
 #
 
 PORTNAME=	libsoup
@@ -26,7 +26,7 @@ LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
 
 USE_GNOME=	gnomehack glib20 libxml2 ltverhack referencehack gconf2
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc

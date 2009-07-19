@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/x11/gnome-menus/Makefile,v 1.7 2009/04/15 17:32:15 kwm Exp $
+#   $MCom: ports/x11/gnome-menus/Makefile,v 1.94 2009/07/19 12:14:59 avl Exp $
 #
 
 PORTNAME=	gnome-menus
@@ -19,7 +19,7 @@ USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack glib20 ltverhack
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

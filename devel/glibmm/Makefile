@@ -3,7 +3,7 @@
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glibmm/Makefile,v 1.74 2009/07/05 09:03:56 kwm Exp $
+#   $MCom: ports/devel/glibmm/Makefile,v 1.75 2009/07/18 21:25:23 kwm Exp $
 #
 
 PORTNAME=	glibmm
@@ -29,7 +29,7 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20 ltverhack
 USE_PERL5=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static
 

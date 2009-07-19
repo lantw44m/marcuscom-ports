@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.201 2009/07/19 14:18:12 kwm Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -32,7 +32,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop librsvg2 \
 WANT_GNOME=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 CONFIGURE_ARGS=	--disable-network-manager \
 		--enable-polkit
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

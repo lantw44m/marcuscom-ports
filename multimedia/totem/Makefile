@@ -3,7 +3,7 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.128 2009/05/09 22:17:21 kwm Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.129 2009/05/26 12:39:18 kwm Exp $
 #
 
 PORTNAME=	totem
@@ -33,7 +33,7 @@ GNOME_DESKTOP_VERSION=2
 USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly python gio
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_AUTOTOOLS=	libtool:15
+USE_AUTOTOOLS=	libtool:22
 USE_LDCONFIG=	yes
 INSTALLS_OMF=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
