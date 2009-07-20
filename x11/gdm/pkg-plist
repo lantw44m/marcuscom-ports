@@ -43,6 +43,7 @@ share/gnome-2.0/ui/GNOME_FastUserSwitchApplet.xml
 share/gnome/help/gdm/C/gdm.xml
 share/gnome/help/gdm/C/legal.xml
 share/gnome/help/gdm/de/gdm.xml
+share/gnome/help/gdm/el/gdm.xml
 share/gnome/help/gdm/en_GB/gdm.xml
 share/gnome/help/gdm/es/gdm.xml
 share/gnome/help/gdm/fr/gdm.xml
@@ -97,6 +98,7 @@ share/locale/is/LC_MESSAGES/gdm.mo
 share/locale/it/LC_MESSAGES/gdm.mo
 share/locale/ja/LC_MESSAGES/gdm.mo
 share/locale/ka/LC_MESSAGES/gdm.mo
+share/locale/kk/LC_MESSAGES/gdm.mo
 share/locale/kn/LC_MESSAGES/gdm.mo
 share/locale/ko/LC_MESSAGES/gdm.mo
 share/locale/ku/LC_MESSAGES/gdm.mo
@@ -148,6 +150,7 @@ share/locale/zh_TW/LC_MESSAGES/gdm.mo
 share/locale/zu/LC_MESSAGES/gdm.mo
 share/omf/gdm/gdm-C.omf
 share/omf/gdm/gdm-de.omf
+share/omf/gdm/gdm-el.omf
 share/omf/gdm/gdm-en_GB.omf
 share/omf/gdm/gdm-es.omf
 share/omf/gdm/gdm-fr.omf
@@ -200,6 +203,7 @@ share/pixmaps/nohost.png
 @dirrm share/gnome/help/gdm/fr
 @dirrm share/gnome/help/gdm/es
 @dirrm share/gnome/help/gdm/en_GB
+@dirrm share/gnome/help/gdm/el
 @dirrm share/gnome/help/gdm/de
 @dirrm share/gnome/help/gdm/C
 @dirrm share/gnome/help/gdm
@@ -256,6 +260,8 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/kk/LC_MESSAGES
+@dirrmtry share/locale/kk
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
 @dirrmtry share/locale/fur/LC_MESSAGES
