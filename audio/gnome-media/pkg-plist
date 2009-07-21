@@ -243,6 +243,7 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm share/sounds/gnome
 @dirrm share/omf/gstreamer-properties
 @dirrm share/omf/gnome-sound-recorder
+@dirrm share/omf/gnome-audio-profiles
 @dirrm share/gstreamer-properties/icons
 @dirrm share/gstreamer-properties
 @dirrm share/gnome/help/gstreamer-properties/zh_CN/figures
