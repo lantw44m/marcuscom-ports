@@ -351,6 +351,8 @@ share/locale/sr@latin/LC_MESSAGES/evince.mo
 @dirrm share/gnome/help/evince/zh_CN
 @dirrm share/gnome/help/evince/uk/figures
 @dirrm share/gnome/help/evince/uk
+@dirrm share/gnome/help/evince/vi/figures
+@dirrm share/gnome/help/evince/vi
 @dirrm share/gnome/help/evince/sv/figures
 @dirrm share/gnome/help/evince/sv
 @dirrm share/gnome/help/evince/sr/figures
