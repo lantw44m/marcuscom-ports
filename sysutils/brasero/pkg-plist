@@ -251,15 +251,40 @@ share/applications/brasero-copy-medium.desktop
 %%DOCSDIR%%/BraseroMediumMonitor.html
 %%DOCSDIR%%/BraseroMediumSelection.html
 %%DOCSDIR%%/BraseroVolume.html
+%%DOCSDIR%%/api-index-full.html
+%%DOCSDIR%%/brasero-BraseroBlankDialog.html
+%%DOCSDIR%%/brasero-BraseroBurn.html
+%%DOCSDIR%%/brasero-BraseroBurnDialog.html
+%%DOCSDIR%%/brasero-BraseroBurnOptions.html
+%%DOCSDIR%%/brasero-BraseroBurnSession.html
+%%DOCSDIR%%/brasero-BraseroSessionCfg.html
+%%DOCSDIR%%/brasero-BraseroSessionSpan.html
+%%DOCSDIR%%/brasero-BraseroSumDialog.html
+%%DOCSDIR%%/brasero-BraseroToolDialog.html
+%%DOCSDIR%%/brasero-BraseroTrack.html
+%%DOCSDIR%%/brasero-BraseroTrackData.html
+%%DOCSDIR%%/brasero-BraseroTrackDataCfg.html
+%%DOCSDIR%%/brasero-BraseroTrackDisc.html
+%%DOCSDIR%%/brasero-BraseroTrackImage.html
+%%DOCSDIR%%/brasero-BraseroTrackImageCfg.html
+%%DOCSDIR%%/brasero-BraseroTrackStream.html
+%%DOCSDIR%%/brasero-BraseroTrackStreamCfg.html
+%%DOCSDIR%%/brasero-brasero-burn-lib.html
+%%DOCSDIR%%/brasero-brasero-error.html
 %%DOCSDIR%%/brasero-brasero-media.html
+%%DOCSDIR%%/brasero-brasero-status.html
+%%DOCSDIR%%/brasero-brasero-tags.html
+%%DOCSDIR%%/brasero-brasero-track-type.html
 %%DOCSDIR%%/brasero-brasero-units.html
 %%DOCSDIR%%/brasero.devhelp
 %%DOCSDIR%%/brasero.devhelp2
 %%DOCSDIR%%/ch01.html
+%%DOCSDIR%%/ch02.html
 %%DOCSDIR%%/home.png
 %%DOCSDIR%%/index.html
 %%DOCSDIR%%/index.sgml
 %%DOCSDIR%%/left.png
+%%DOCSDIR%%/object-tree.html
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
@@ -268,6 +293,8 @@ share/gnome/help/brasero/C/figures/brasero_main.png
 share/gnome/help/brasero/C/legal.xml
 share/gnome/help/brasero/ca/brasero.xml
 share/gnome/help/brasero/ca/figures/brasero_main.png
+share/gnome/help/brasero/cs/brasero.xml
+share/gnome/help/brasero/cs/figures/brasero_main.png
 share/gnome/help/brasero/de/brasero.xml
 share/gnome/help/brasero/de/figures/brasero_main.png
 share/gnome/help/brasero/el/brasero.xml
@@ -316,6 +343,7 @@ share/locale/it/LC_MESSAGES/brasero.mo
 share/locale/ja/LC_MESSAGES/brasero.mo
 share/locale/kn/LC_MESSAGES/brasero.mo
 share/locale/ko/LC_MESSAGES/brasero.mo
+share/locale/ku/LC_MESSAGES/brasero.mo
 share/locale/lt/LC_MESSAGES/brasero.mo
 share/locale/lv/LC_MESSAGES/brasero.mo
 share/locale/mai/LC_MESSAGES/brasero.mo
@@ -347,6 +375,7 @@ share/locale/zh_TW/LC_MESSAGES/brasero.mo
 share/mime/packages/brasero.xml
 share/omf/brasero/brasero-C.omf
 share/omf/brasero/brasero-ca.omf
+share/omf/brasero/brasero-cs.omf
 share/omf/brasero/brasero-de.omf
 share/omf/brasero/brasero-el.omf
 share/omf/brasero/brasero-en_GB.omf
@@ -375,6 +404,8 @@ share/omf/brasero/brasero-sv.omf
 @dirrm share/gnome/help/brasero/el
 @dirrm share/gnome/help/brasero/de/figures
 @dirrm share/gnome/help/brasero/de
+@dirrm share/gnome/help/brasero/cs/figures
+@dirrm share/gnome/help/brasero/cs
 @dirrm share/gnome/help/brasero/ca/figures
 @dirrm share/gnome/help/brasero/ca
 @dirrm share/gnome/help/brasero/C/figures
@@ -423,6 +454,8 @@ share/omf/brasero/brasero-sv.omf
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mai/LC_MESSAGES
 @dirrmtry share/locale/mai
+@dirrmtry share/locale/ku/LC_MESSAGES
+@dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
