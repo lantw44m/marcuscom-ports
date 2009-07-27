@@ -1,5 +1,6 @@
 bin/anjuta
-bin/anjuta_launcher
+bin/anjuta-launcher
+bin/anjuta-tags
 bin/gbf-am-parse
 bin/gbf-mkfile-parse
 include/libanjuta-1.0/libanjuta/anjuta-async-command.h
@@ -250,10 +251,10 @@ share/anjuta/project/anjuta-plugin/configure.ac.tpl
 share/anjuta/project/anjuta-plugin/po/POTFILES.in
 share/anjuta/project/anjuta-plugin/src/Makefile.am.tpl
 share/anjuta/project/anjuta-plugin/src/plugin.c
-share/anjuta/project/anjuta-plugin/src/plugin.glade
 share/anjuta/project/anjuta-plugin/src/plugin.h
 share/anjuta/project/anjuta-plugin/src/plugin.plugin.in
 share/anjuta/project/anjuta-plugin/src/plugin.ui
+share/anjuta/project/anjuta-plugin/src/plugin.xml
 share/anjuta/project/anjuta-plugin-vala.wiz
 share/anjuta/project/anjuta-plugin-vala/configure.ac.tpl
 share/anjuta/project/anjuta-plugin-vala/po/POTFILES.in
@@ -291,13 +292,13 @@ share/anjuta/project/gtk/src/Makefile.am.tpl
 share/anjuta/project/gtk/src/callbacks.c
 share/anjuta/project/gtk/src/callbacks.h
 share/anjuta/project/gtk/src/main.c
-share/anjuta/project/gtk/src/project.glade
+share/anjuta/project/gtk/src/project.ui
 share/anjuta/project/gtkmm-logo.png
 share/anjuta/project/gtkmm.wiz
 share/anjuta/project/gtkmm/po/POTFILES.in
 share/anjuta/project/gtkmm/src/Makefile.am.tpl
 share/anjuta/project/gtkmm/src/main.cc
-share/anjuta/project/gtkmm/src/project.glade
+share/anjuta/project/gtkmm/src/project.ui
 share/anjuta/project/java-logo.png
 share/anjuta/project/java.wiz
 share/anjuta/project/java/configure.ac.tpl
@@ -310,8 +311,10 @@ share/anjuta/project/licenses/GPL
 share/anjuta/project/licenses/LGPL
 share/anjuta/project/licenses/None
 share/anjuta/project/m4/as-ac-expand.m4
+share/anjuta/project/m4/ac-define-dir.m4
 share/anjuta/project/minimal.wiz
 share/anjuta/project/minimal/Makefile.am.tpl
+share/anjuta/project/minimal/anjuta.session
 share/anjuta/project/minimal/autogen.sh
 share/anjuta/project/minimal/configure.ac.tpl
 share/anjuta/project/minimal/project.anjuta
@@ -372,6 +375,7 @@ share/anjuta/project/xlib/configure.ac.tpl
 share/anjuta/project/xlib/po/POTFILES.in
 share/anjuta/project/xlib/src/Makefile.am.tpl
 share/anjuta/project/xlib/src/main.c
+share/anjuta/tables-from-1-to-228.sql
 share/anjuta/tables.sql
 share/anjuta/tools/find-fixmes.pl
 share/anjuta/tools/prepare-changelog.pl

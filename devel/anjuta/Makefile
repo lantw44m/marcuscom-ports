@@ -3,11 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.40 2009/05/27 18:13:44 kwm Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.41 2009/06/15 13:02:42 kwm Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.27.3.0
+PORTVERSION=	2.27.5.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -39,13 +39,14 @@ USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PERL5=	yes
-USE_GNOME=	gnomeprefix gnomehack libgnomeui vte gtksourceview2 libgda4
+USE_GNOME=	gnomeprefix gnomehack vte gtksourceview2 libgda4
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 USE_LDCONFIG=	yes
 GCONF_SCHEMAS=	anjuta-build-basic-autotools-plugin.schemas \
 		anjuta-cvs-plugin.schemas \
+		anjuta-debug-manager.schemas \
 		anjuta-document-manager.schemas \
 		anjuta-editor-sourceview.schemas \
 		anjuta-language-cpp-java.schemas \
@@ -55,7 +56,7 @@ GCONF_SCHEMAS=	anjuta-build-basic-autotools-plugin.schemas \
 		file-manager.schemas \
 		preferences.schemas
 
-MAN1=		anjuta.1 anjuta_launcher.1
+MAN1=		anjuta.1 anjuta-launcher.1
 
 OPTIONS=	SVN "Build subversion plugin" off \
 		DEVHELP "Build devhelp plugin" on
