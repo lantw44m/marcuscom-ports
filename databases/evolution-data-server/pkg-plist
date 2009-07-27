@@ -183,6 +183,7 @@ include/evolution-data-server-%%VERSION%%/libebook/e-vcard.h
 include/evolution-data-server-%%VERSION%%/libecal/e-cal-check-timezones.h
 include/evolution-data-server-%%VERSION%%/libecal/e-cal-component.h
 include/evolution-data-server-%%VERSION%%/libecal/e-cal-recur.h
+include/evolution-data-server-%%VERSION%%/libecal/e-cal-system-timezone.h
 include/evolution-data-server-%%VERSION%%/libecal/e-cal-time-util.h
 include/evolution-data-server-%%VERSION%%/libecal/e-cal-types.h
 include/evolution-data-server-%%VERSION%%/libecal/e-cal-util.h
@@ -203,8 +204,10 @@ include/evolution-data-server-%%VERSION%%/libedata-book/e-data-book.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/Evolution-DataServer-Calendar.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-cache.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-factory.h
+include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-file-store.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-loader-factory.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-sexp.h
+include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-store.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-sync.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-util.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend.h
