@@ -571,6 +571,7 @@ share/applications/evolution.desktop
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-itip-formatter.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-mail-retract.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-mailing-list-actions.error
+%%DATADIR%%/%%VERSION%%/errors/org-gnome-process-meeting.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-proxy-login.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-proxy.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-shared-folder.error
