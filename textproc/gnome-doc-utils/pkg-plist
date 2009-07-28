@@ -9,6 +9,8 @@ libdata/pkgconfig/xml2po.pc
 %%PYTHON_SITELIBDIR%%/xml2po/docbook.pyc
 %%PYTHON_SITELIBDIR%%/xml2po/gs.py
 %%PYTHON_SITELIBDIR%%/xml2po/gs.pyc
+%%PYTHON_SITELIBDIR%%/xml2po/mallard.py
+%%PYTHON_SITELIBDIR%%/xml2po/mallard.pyc
 %%PYTHON_SITELIBDIR%%/xml2po/ubuntu.py
 %%PYTHON_SITELIBDIR%%/xml2po/ubuntu.pyc
 %%PYTHON_SITELIBDIR%%/xml2po/xhtml.py
@@ -43,6 +45,9 @@ share/aclocal/gnome-doc-utils.m4
 share/gnome/help/gnome-doc-make/C/gnome-doc-make.xml
 share/gnome/help/gnome-doc-make/C/legal.xml
 share/gnome/help/gnome-doc-make/C/make-ref.xml
+share/gnome/help/gnome-doc-make/de/gnome-doc-make.xml
+share/gnome/help/gnome-doc-make/de/legal.xml
+share/gnome/help/gnome-doc-make/de/make-ref.xml
 share/gnome/help/gnome-doc-mallard-spec/C/details.page
 share/gnome/help/gnome-doc-mallard-spec/C/docbook.page
 share/gnome/help/gnome-doc-mallard-spec/C/explore.page
@@ -328,6 +333,7 @@ share/locale/zh_CN/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-doc-utils.mo
 share/omf/gnome-doc-make/gnome-doc-make-C.omf
+share/omf/gnome-doc-make/gnome-doc-make-de.omf
 share/omf/gnome-doc-xslt/gnome-doc-xslt-C.omf
 share/omf/gnome-doc-xslt/gnome-doc-xslt-de.omf
 share/xml/gnome/xslt/common/utils.xsl
@@ -410,6 +416,7 @@ share/xml/mallard/1.0/mallard.rng
 @dirrm share/gnome/help/gnome-doc-mallard-spec/C/figures
 @dirrm share/gnome/help/gnome-doc-mallard-spec/C
 @dirrm share/gnome/help/gnome-doc-mallard-spec
+@dirrm share/gnome/help/gnome-doc-make/de
 @dirrm share/gnome/help/gnome-doc-make/C
 @dirrm share/gnome/help/gnome-doc-make
 @dirrm %%DATADIR%%/watermarks
