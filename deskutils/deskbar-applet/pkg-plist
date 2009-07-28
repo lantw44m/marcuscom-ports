@@ -490,7 +490,6 @@ share/omf/deskbar/deskbar-zh_CN.omf
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/ui
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/osutils
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/interfaces
-@dirrm %%PYTHON_SITELIBDIR%%/deskbar/handlers/gdmclient
 %%EVO%%@dirrm %%PYTHON_SITELIBDIR%%/deskbar/handlers/evolution
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/handlers/actions
 @dirrm %%PYTHON_SITELIBDIR%%/deskbar/handlers
