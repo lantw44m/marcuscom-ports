@@ -125,6 +125,10 @@ share/gnome/help/eog/ca/eog.xml
 share/gnome/help/eog/ca/figures/eog_save_as_window.png
 share/gnome/help/eog/ca/figures/eog_start_window.png
 share/gnome/help/eog/ca/figures/eog_toolbar_editor_window.png
+share/gnome/help/eog/cs/eog.xml
+share/gnome/help/eog/cs/figures/eog_save_as_window.png
+share/gnome/help/eog/cs/figures/eog_start_window.png
+share/gnome/help/eog/cs/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/da/eog.xml
 share/gnome/help/eog/da/figures/eog_save_as_window.png
 share/gnome/help/eog/da/figures/eog_start_window.png
@@ -303,6 +307,7 @@ share/locale/zu/LC_MESSAGES/eog.mo
 share/omf/eog/eog-C.omf
 share/omf/eog/eog-ar.omf
 share/omf/eog/eog-ca.omf
+share/omf/eog/eog-cs.omf
 share/omf/eog/eog-da.omf
 share/omf/eog/eog-de.omf
 share/omf/eog/eog-el.omf
@@ -364,6 +369,8 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm share/gnome/help/eog/de
 @dirrm share/gnome/help/eog/da/figures
 @dirrm share/gnome/help/eog/da
+@dirrm share/gnome/help/eog/cs/figures
+@dirrm share/gnome/help/eog/cs
 @dirrm share/gnome/help/eog/ca/figures
 @dirrm share/gnome/help/eog/ca
 @dirrm share/gnome/help/eog/ar/figures
