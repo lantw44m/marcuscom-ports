@@ -39,6 +39,8 @@ share/gnome/help/seahorse/C/legal.xml
 share/gnome/help/seahorse/C/seahorse.xml
 share/gnome/help/seahorse/ca/figures/seahorse-window.png
 share/gnome/help/seahorse/ca/seahorse.xml
+share/gnome/help/seahorse/cs/figures/seahorse-window.png
+share/gnome/help/seahorse/cs/seahorse.xml
 share/gnome/help/seahorse/de/figures/seahorse-window.png
 share/gnome/help/seahorse/de/seahorse.xml
 share/gnome/help/seahorse/el/figures/seahorse-window.png
@@ -80,6 +82,7 @@ share/locale/bn/LC_MESSAGES/seahorse.mo
 share/locale/bn_IN/LC_MESSAGES/seahorse.mo
 share/locale/ca/LC_MESSAGES/seahorse.mo
 share/locale/cs/LC_MESSAGES/seahorse.mo
+share/locale/cy/LC_MESSAGES/seahorse.mo
 share/locale/da/LC_MESSAGES/seahorse.mo
 share/locale/de/LC_MESSAGES/seahorse.mo
 share/locale/dz/LC_MESSAGES/seahorse.mo
@@ -139,6 +142,7 @@ share/locale/zh_HK/LC_MESSAGES/seahorse.mo
 share/locale/zh_TW/LC_MESSAGES/seahorse.mo
 share/omf/seahorse/seahorse-C.omf
 share/omf/seahorse/seahorse-ca.omf
+share/omf/seahorse/seahorse-cs.omf
 share/omf/seahorse/seahorse-de.omf
 share/omf/seahorse/seahorse-el.omf
 share/omf/seahorse/seahorse-en_GB.omf
@@ -176,34 +180,35 @@ share/pixmaps/seahorse/scalable/seahorse-sign-bad.svg
 share/pixmaps/seahorse/scalable/seahorse-sign-ok.svg
 share/pixmaps/seahorse/scalable/seahorse-sign-unknown.svg
 share/pixmaps/seahorse/scalable/seahorse-sign.svg
-%%DATADIR%%/glade/seahorse-add-keyring.glade
-%%DATADIR%%/glade/seahorse-add-keyserver.glade
-%%DATADIR%%/glade/seahorse-add-subkey.glade
-%%DATADIR%%/glade/seahorse-add-uid.glade
-%%DATADIR%%/glade/seahorse-change-passphrase.glade
-%%DATADIR%%/glade/seahorse-expires.glade
-%%DATADIR%%/glade/seahorse-generate-select.glade
-%%DATADIR%%/glade/seahorse-gkr-item-properties.glade
-%%DATADIR%%/glade/seahorse-gkr-keyring.glade
-%%DATADIR%%/glade/seahorse-key-manager.glade
-%%DATADIR%%/glade/seahorse-key-manager.ui
-%%DATADIR%%/glade/seahorse-keyserver-results.glade
-%%DATADIR%%/glade/seahorse-keyserver-results.ui
-%%DATADIR%%/glade/seahorse-keyserver-search.glade
-%%DATADIR%%/glade/seahorse-keyserver-sync.glade
-%%DATADIR%%/glade/seahorse-notify.glade
-%%DATADIR%%/glade/seahorse-pgp-generate.glade
-%%DATADIR%%/glade/seahorse-pgp-private-key-properties.glade
-%%DATADIR%%/glade/seahorse-pgp-public-key-properties.glade
-%%DATADIR%%/glade/seahorse-prefs.glade
-%%DATADIR%%/glade/seahorse-progress.glade
-%%DATADIR%%/glade/seahorse-revoke.glade
-%%DATADIR%%/glade/seahorse-sign.glade
-%%DATADIR%%/glade/seahorse-signer.glade
-%%DATADIR%%/glade/seahorse-ssh-generate.glade
-%%DATADIR%%/glade/seahorse-ssh-key-properties.glade
-%%DATADIR%%/glade/seahorse-ssh-upload.glade
-@dirrm %%DATADIR%%/glade
+%%DATADIR%%/ui/seahorse-add-keyring.xml
+%%DATADIR%%/ui/seahorse-add-keyserver.xml
+%%DATADIR%%/ui/seahorse-add-subkey.xml
+%%DATADIR%%/ui/seahorse-add-uid.xml
+%%DATADIR%%/ui/seahorse-change-passphrase.xml
+%%DATADIR%%/ui/seahorse-expires.xml
+%%DATADIR%%/ui/seahorse-generate-select.xml
+%%DATADIR%%/ui/seahorse-gkr-add-item.xml
+%%DATADIR%%/ui/seahorse-gkr-item-properties.xml
+%%DATADIR%%/ui/seahorse-gkr-keyring.xml
+%%DATADIR%%/ui/seahorse-key-manager.ui
+%%DATADIR%%/ui/seahorse-key-manager.xml
+%%DATADIR%%/ui/seahorse-keyserver-results.ui
+%%DATADIR%%/ui/seahorse-keyserver-results.xml
+%%DATADIR%%/ui/seahorse-keyserver-search.xml
+%%DATADIR%%/ui/seahorse-keyserver-sync.xml
+%%DATADIR%%/ui/seahorse-notify.xml
+%%DATADIR%%/ui/seahorse-pgp-generate.xml
+%%DATADIR%%/ui/seahorse-pgp-private-key-properties.xml
+%%DATADIR%%/ui/seahorse-pgp-public-key-properties.xml
+%%DATADIR%%/ui/seahorse-prefs.xml
+%%DATADIR%%/ui/seahorse-progress.xml
+%%DATADIR%%/ui/seahorse-revoke.xml
+%%DATADIR%%/ui/seahorse-sign.xml
+%%DATADIR%%/ui/seahorse-signer.xml
+%%DATADIR%%/ui/seahorse-ssh-generate.xml
+%%DATADIR%%/ui/seahorse-ssh-key-properties.xml
+%%DATADIR%%/ui/seahorse-ssh-upload.xml
+@dirrm %%DATADIR%%/ui
 @dirrm %%DATADIR%%
 @dirrm share/pixmaps/seahorse/scalable
 @dirrm share/pixmaps/seahorse/48x48
@@ -232,6 +237,8 @@ share/pixmaps/seahorse/scalable/seahorse-sign.svg
 @dirrm share/gnome/help/seahorse/el
 @dirrm share/gnome/help/seahorse/de/figures
 @dirrm share/gnome/help/seahorse/de
+@dirrm share/gnome/help/seahorse/cs/figures
+@dirrm share/gnome/help/seahorse/cs
 @dirrm share/gnome/help/seahorse/ca/figures
 @dirrm share/gnome/help/seahorse/ca
 @dirrm share/gnome/help/seahorse/C/figures
