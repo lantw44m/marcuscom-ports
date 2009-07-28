@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.31 2009/06/15 20:16:07 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.32 2009/07/15 11:36:57 avl Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.1.11
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -44,6 +45,7 @@ BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
 OPTIONS=	VIDEO "Enable video support" on \
+		DEBUG "Build with debug support" off \
 		STATIC "Enable building static library" off
 
 .include <bsd.port.pre.mk>
@@ -51,6 +53,12 @@ OPTIONS=	VIDEO "Enable video support" on \
 .if defined(WITH_VIDEO)
 USE_GSTREAMER+=	yes
 CONFIGURE_ARGS+=--enable-video
+.endif
+
+.if defined(WITH_DEBUG)
+CONFIGURE_ARGS+=--enable-debug
+.else
+CONFIGURE_ARGS+=--disable-debug
 .endif
 
 .if defined(WITH_STATIC)
