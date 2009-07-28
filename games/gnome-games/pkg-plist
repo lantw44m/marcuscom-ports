@@ -358,12 +358,13 @@ share/glchess/network_new_server.ui
 share/glchess/new_game.ui
 share/glchess/preferences.ui
 share/glchess/save_game.ui
+share/glchess/textures/board.png
+share/glchess/textures/piece.png
 share/gnome-games-common/cards/gnomangelo_bitmap.svg
 %%DATADIR%%/aisleriot/games/accordion.scm
 %%DATADIR%%/aisleriot/games/agnes.scm
 %%DATADIR%%/aisleriot/games/athena.scm
 %%DATADIR%%/aisleriot/games/auld_lang_syne.scm
-%%DATADIR%%/aisleriot/games/aunt_mary.scm
 %%DATADIR%%/aisleriot/games/backbone.scm
 %%DATADIR%%/aisleriot/games/bakers_dozen.scm
 %%DATADIR%%/aisleriot/games/bakers_game.scm
@@ -458,8 +459,6 @@ share/gnome-games-common/cards/gnomangelo_bitmap.svg
 %%DATADIR%%/blackjack/pixmaps/chip-25.svg
 %%DATADIR%%/blackjack/pixmaps/chip-5.svg
 %%DATADIR%%/blackjack/pixmaps/white-outline.svg
-%%DATADIR%%/glchess/textures/board.png
-%%DATADIR%%/glchess/textures/piece.png
 %%DATADIR%%/glines/pixmaps/balls.svg
 %%DATADIR%%/glines/pixmaps/shapes.svg
 %%DATADIR%%/gnect/pixmaps/bg_grotty.jpg
@@ -539,7 +538,7 @@ share/gnome-games-common/cards/gnomangelo_bitmap.svg
 %%DATADIR%%/gnobots2/pixmaps/splat.png
 %%DATADIR%%/gnobots2/pixmaps/ufo.svg
 %%DATADIR%%/gnobots2/pixmaps/yahoo.png
-%%DATADIR%%/gnome-sudoku/pixmaps/footprints.png
+share/gnome-sudoku/images/footprints.png
 %%DATADIR%%/gnometris/pixmaps/7blocks-gw.png
 %%DATADIR%%/gnometris/pixmaps/7blocks-tig.png
 %%DATADIR%%/gnometris/pixmaps/gnometris.svg
@@ -2571,6 +2570,7 @@ share/omf/same-gnome/same-gnome-sv.omf
 @dirrm share/gnome/help/aisleriot/C
 @dirrm share/gnome/help/aisleriot
 @dirrm share/gnome-sudoku/puzzles
+@dirrm share/gnome-sudoku/images
 @dirrm share/gnome-sudoku
 @dirrm %%DATADIR%%/sounds
 @dirrm %%DATADIR%%/same-gnome/themes/2.10
@@ -2604,8 +2604,6 @@ share/omf/same-gnome/same-gnome-sv.omf
 @dirrm %%DATADIR%%/gnomine
 @dirrm %%DATADIR%%/gnometris/pixmaps
 @dirrm %%DATADIR%%/gnometris
-@dirrm %%DATADIR%%/gnome-sudoku/pixmaps
-@dirrm %%DATADIR%%/gnome-sudoku
 @dirrm %%DATADIR%%/gnobots2/pixmaps
 @dirrm %%DATADIR%%/gnobots2/games
 @dirrm %%DATADIR%%/gnobots2
@@ -2616,8 +2614,6 @@ share/omf/same-gnome/same-gnome-sv.omf
 @dirrm %%DATADIR%%/gnect
 @dirrm %%DATADIR%%/glines/pixmaps
 @dirrm %%DATADIR%%/glines
-@dirrm %%DATADIR%%/glchess/textures
-@dirrm %%DATADIR%%/glchess
 @dirrm %%DATADIR%%/blackjack/pixmaps
 @dirrm %%DATADIR%%/blackjack/games
 @dirrm %%DATADIR%%/blackjack
@@ -2626,6 +2622,7 @@ share/omf/same-gnome/same-gnome-sv.omf
 @dirrm share/gnome-games-common/cards
 @dirrm share/gnome-games-common
 @dirrm %%DATADIR%%
+@dirrm share/glchess/textures
 @dirrm share/glchess
 @dirrmtry share/ggz/gnome-games
 @dirrmtry share/ggz
