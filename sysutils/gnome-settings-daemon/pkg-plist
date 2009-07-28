@@ -67,7 +67,7 @@ share/dbus-1/services/org.gnome.SettingsDaemon.service
 share/gnome-control-center/keybindings/50-accessibility.xml
 %%DATADIR%%/acme.ui
 %%DATADIR%%/acme-eject.png
-%%DATADIR%%/gsd-a11y-preferences-dialog.glade
+%%DATADIR%%/gsd-a11y-preferences-dialog.ui
 %%DATADIR%%/modmap-dialog.ui
 %%DATADIR%%/xrdb/Editres.ad
 %%DATADIR%%/xrdb/Emacs.ad

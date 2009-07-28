@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.43 2009/07/19 19:46:47 marcus Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.44 2009/07/19 19:54:43 marcus Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	2.27.4
+PORTVERSION=	2.27.5
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -26,11 +26,11 @@ USE_GETTEXT=	yes
 USE_GSTREAMER=	good
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-CONFIGURE_ARGS=	--enable-gstreamer=0.10
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-GCONF_SCHEMAS=	apps_gnome_settings_daemon_keybindings.schemas \
+GCONF_SCHEMAS=	apps_gnome_settings_daemon_housekeeping.schemas \
+		apps_gnome_settings_daemon_keybindings.schemas \
 		apps_gnome_settings_daemon_xrandr.schemas \
 		desktop_gnome_font_rendering.schemas \
 		desktop_gnome_keybindings.schemas \
