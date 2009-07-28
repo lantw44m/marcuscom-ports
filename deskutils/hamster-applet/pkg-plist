@@ -38,6 +38,9 @@ lib/hamster-applet/hamster-applet
 %%PYTHON_SITELIBDIR%%/hamster/hamsterdbus.py
 %%PYTHON_SITELIBDIR%%/hamster/hamsterdbus.pyc
 %%PYTHON_SITELIBDIR%%/hamster/hamsterdbus.pyo
+%%PYTHON_SITELIBDIR%%/hamster/i18n.py
+%%PYTHON_SITELIBDIR%%/hamster/i18n.pyc
+%%PYTHON_SITELIBDIR%%/hamster/i18n.pyo
 %%PYTHON_SITELIBDIR%%/hamster/idle.py
 %%PYTHON_SITELIBDIR%%/hamster/idle.pyc
 %%PYTHON_SITELIBDIR%%/hamster/idle.pyo
@@ -82,6 +85,7 @@ share/icons/hicolor/32x32/apps/hamster-applet.png
 share/icons/hicolor/48x48/apps/hamster-applet.png
 share/icons/hicolor/scalable/apps/hamster-applet.svg
 share/locale/ar/LC_MESSAGES/hamster-applet.mo
+share/locale/be/LC_MESSAGES/hamster-applet.mo
 share/locale/bg/LC_MESSAGES/hamster-applet.mo
 share/locale/bn_IN/LC_MESSAGES/hamster-applet.mo
 share/locale/ca/LC_MESSAGES/hamster-applet.mo
