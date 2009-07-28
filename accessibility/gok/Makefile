@@ -3,11 +3,11 @@
 # Whom:				Adam Weinberger <adamw@freebsd.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/gok/Makefile,v 1.99 2009/06/15 16:42:28 kwm Exp $
+#    $MCom: ports/accessibility/gok/Makefile,v 1.100 2009/07/18 21:18:29 kwm Exp $
 #
 
 PORTNAME=	gok
-PORTVERSION=	2.27.4
+PORTVERSION=	2.27.5
 PORTEPOCH=	1
 CATEGORIES=	accessibility sysutils gnome
 MASTER_SITES=	GNOME
@@ -30,9 +30,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	gok.schemas
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|<malloc.h>|<stdlib.h>|' \
-		${WRKSRC}/gok/word-complete.c
 
 .include <bsd.port.mk>
