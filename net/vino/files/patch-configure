@@ -1,0 +1,19 @@
+--- configure.orig	2009-04-15 11:26:27.000000000 +0200
++++ configure	2009-04-15 11:26:27.000000000 +0200
+@@ -18108,6 +18108,8 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
++      #include <sys/types.h>
++      #include <sys/socket.h>
+       #include <ifaddrs.h>
+ 
+ int
+@@ -18122,6 +18124,7 @@ main ()
+ }
+ _ACEOF
+ rm -f conftest.$ac_objext
++have_getifaddrs=yes
+ if { (ac_try="$ac_compile"
+ case "(($ac_try" in
+   *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
