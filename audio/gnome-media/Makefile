@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.133 2009/07/19 20:19:29 marcus Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.134 2009/07/21 17:02:40 marcus Exp $
 #
 
 PORTNAME=	gnome-media
-PORTVERSION=	2.27.4
-PORTREVISION=	1
+PORTVERSION=	2.27.5
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -30,7 +29,6 @@ USE_LDCONFIG=	yes
 GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop
 USE_GSTREAMER=	cdparanoia esound gconf good
-CONFIGURE_ARGS=	--enable-ipv6
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
@@ -38,8 +36,6 @@ GCONF_SCHEMAS=	gnome-audio-profiles.schemas \
 		gnome-sound-recorder.schemas
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|[$$][(]CDROM_HOST[)]|freebsd|g' \
-		${WRKSRC}/gnome-cd/Makefile.in
 	@${REINPLACE_CMD} -e 's|acd0c|acd0|g ; s|== "xyes|= "xyes|g' \
 		${WRKSRC}/configure
 
