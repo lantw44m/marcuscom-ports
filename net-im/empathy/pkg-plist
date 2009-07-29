@@ -31,6 +31,7 @@ include/libempathy-gtk/empathy-new-message-dialog.h
 include/libempathy-gtk/empathy-plist.h
 include/libempathy-gtk/empathy-presence-chooser.h
 include/libempathy-gtk/empathy-profile-chooser.h
+include/libempathy-gtk/empathy-share-my-desktop.h
 include/libempathy-gtk/empathy-smiley-manager.h
 include/libempathy-gtk/empathy-sound.h
 include/libempathy-gtk/empathy-spell.h
@@ -83,11 +84,11 @@ include/libempathy/empathy-utils.h
 lib/libempathy-gtk.a
 lib/libempathy-gtk.la
 lib/libempathy-gtk.so
-lib/libempathy-gtk.so.24
+lib/libempathy-gtk.so.25
 lib/libempathy.a
 lib/libempathy.la
 lib/libempathy.so
-lib/libempathy.so.26
+lib/libempathy.so.27
 %%PYTHON_SITELIBDIR%%/empathy.a
 %%PYTHON_SITELIBDIR%%/empathy.la
 %%PYTHON_SITELIBDIR%%/empathy.so
@@ -119,6 +120,7 @@ share/doc/libempathy-gtk/EmpathyGstVideoSrc.html
 share/doc/libempathy-gtk/EmpathyPresenceChooser.html
 share/doc/libempathy-gtk/EmpathySmileyManager.html
 share/doc/libempathy-gtk/EmpathyStatusPresetDialog.html
+share/doc/libempathy-gtk/EmpathyThemeAdium.html
 share/doc/libempathy-gtk/EmpathyThemeBoxes.html
 share/doc/libempathy-gtk/EmpathyThemeIrc.html
 share/doc/libempathy-gtk/EmpathyThemeManager.html
@@ -140,7 +142,7 @@ share/doc/libempathy-gtk/libempathy-gtk-empathy-images.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-irc-network-dialog.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-log-window.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-new-message-dialog.html
-share/doc/libempathy-gtk/libempathy-gtk-empathy-profile-chooser.html
+share/doc/libempathy-gtk/libempathy-gtk-empathy-sound.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-spell.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-ui-utils.html
 share/doc/libempathy-gtk/libempathy-gtk-hierarchy.html
@@ -162,6 +164,8 @@ share/doc/libempathy/EmpathyContactManager.html
 share/doc/libempathy/EmpathyContactMonitor.html
 share/doc/libempathy/EmpathyDispatcher.html
 share/doc/libempathy/EmpathyDispatchOperation.html
+share/doc/libempathy/EmpathyFTFactory.html
+share/doc/libempathy/EmpathyFTHandler.html
 share/doc/libempathy/EmpathyIdle.html
 share/doc/libempathy/EmpathyIrcNetwork.html
 share/doc/libempathy/EmpathyIrcNetworkManager.html
@@ -184,6 +188,7 @@ share/doc/libempathy/left.png
 share/doc/libempathy/libempathy-empathy-contact-groups.html
 share/doc/libempathy/libempathy-empathy-contact-list.html
 share/doc/libempathy/libempathy-empathy-enum-types.html
+share/doc/libempathy/libempathy-empathy-location.html
 share/doc/libempathy/libempathy-empathy-log-store.html
 share/doc/libempathy/libempathy-empathy-status-presets.html
 share/doc/libempathy/libempathy-empathy-time.html
@@ -398,6 +403,7 @@ share/locale/en_CA/LC_MESSAGES/empathy.mo
 share/locale/en_GB/LC_MESSAGES/empathy.mo
 share/locale/eo/LC_MESSAGES/empathy.mo
 share/locale/es/LC_MESSAGES/empathy.mo
+share/locale/et/LC_MESSAGES/empathy.mo
 share/locale/eu/LC_MESSAGES/empathy.mo
 share/locale/fi/LC_MESSAGES/empathy.mo
 share/locale/fr/LC_MESSAGES/empathy.mo
