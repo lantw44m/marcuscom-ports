@@ -1,3 +1,4 @@
+bin/wnck-urgency-monitor
 bin/wnckprop
 include/libwnck-1.0/libwnck/application.h
 include/libwnck-1.0/libwnck/class-group.h
