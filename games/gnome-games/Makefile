@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.198 2009/07/18 22:54:09 kwm Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.199 2009/07/28 11:29:26 kwm Exp $
 #
 
 PORTNAME=	gnome-games
 PORTVERSION=	2.27.5
+PORTREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +18,7 @@ COMMENT=	The game applications package for the GNOME 2 Desktop Environment
 
 LIB_DEPENDS=	guile.20:${PORTSDIR}/lang/guile \
 		clutter-gtk-0.9.0:${PORTSDIR}/graphics/clutter-gtk \
-		clutter-glx-0.9.0:${PORTSDIR}/graphics/clutter \
+		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter \
 		ggzmod.5:${PORTSDIR}/games/ggz-client-libs
 
 USE_BZIP2=	yes
