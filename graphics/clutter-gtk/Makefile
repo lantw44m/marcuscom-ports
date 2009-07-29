@@ -7,13 +7,14 @@
 
 PORTNAME=	clutter-gtk
 PORTVERSION=	0.9.2
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GTK+ Integration library for Clutter
 
-LIB_DEPENDS=	clutter-glx-0.9:${PORTSDIR}/graphics/clutter
+LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -25,5 +26,9 @@ CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|clutter-x11-0.9|clutter-x11-1.0|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
