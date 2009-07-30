@@ -1,0 +1,14 @@
+--- gir/Makefile.in.orig	2009-07-19 23:45:25.000000000 +1000
++++ gir/Makefile.in	2009-07-19 23:45:50.000000000 +1000
+@@ -676,10 +676,9 @@
+ 	    --pkg glib-2.0 \
+ 	    $(CPPFLAGS) \
+ 	    -I$(GLIB_INCLUDEDIR) \
+-	    -I$(GLIB_LIBDIR)/glib-2.0/include \
+ 	    -DGETTEXT_PACKAGE=Dummy \
+ 	    -D__G_I18N_LIB_H__ \
+-	    $(GLIB_LIBDIR)/glib-2.0/include/glibconfig.h \
++	    $(GLIB_INCLUDEDIR)/glibconfig.h \
+ 	    $(srcdir)/glib-2.0.c \
+ 	    $(GLIB_INCLUDEDIR)/glib/*.h
+ 	$(SCANNER) $(SCANNER_ARGS) \

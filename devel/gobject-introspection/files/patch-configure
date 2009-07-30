@@ -1,0 +1,13 @@
+--- configure.orig	2009-07-19 23:45:25.000000000 +1000
++++ configure	2009-07-19 23:45:25.000000000 +1000
+@@ -14709,8 +14709,8 @@
+ SHAVE_SAVED_CXX=$CXX
+ 
+ 
+-CC="\$(SHELL) \$(shavedir)/shave cc '\$(SHAVE_SAVED_CC)'"
+-CXX="\$(SHELL) \$(shavedir)/shave cxx '\$(SHAVE_SAVED_CXX)'"
++CC="\$(SHELL) \$(shavedir)/shave cc \$(SHAVE_SAVED_CC)"
++CXX="\$(SHELL) \$(shavedir)/shave cxx \$(SHAVE_SAVED_CXX)"
+ 
+ 
+ 
