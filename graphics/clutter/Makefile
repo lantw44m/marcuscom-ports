@@ -20,7 +20,8 @@ USE_GNOME=	pkgconfig gtk20 gnomehack ltverhack gnomeprefix
 USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--with-x --with-json=internal
+CONFIGURE_ARGS=	--with-x --with-json=internal \
+		--enable-introspection=no
 CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
