@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.200 2009/07/29 11:51:49 kwm Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.201 2009/07/31 10:01:31 kwm Exp $
 #
 
 PORTNAME=	gnome-games
@@ -32,7 +32,8 @@ USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui \
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-sound=gstreamer \
-		--disable-tests
+		--disable-tests \
+		--enable-introspection=no
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
