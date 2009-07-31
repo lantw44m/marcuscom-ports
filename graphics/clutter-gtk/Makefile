@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	clutter-gtk
-PORTVERSION=	0.9.2
-PORTREVISION=	1
+PORTVERSION=	0.10.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
@@ -22,6 +21,7 @@ USE_AUTOTOOLS=	libtool:22
 USE_GNOME=	gnomehack gtk20 ltverhack gnomeprefix
 USE_XORG=	xp x11
 USE_LDCONFIG=	yes
+CONFIGURE_ARGS=	--enable-introspection=no
 CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
