@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.163 2009/07/29 10:29:06 kwm Exp $
+#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.164 2009/08/02 15:46:53 kwm Exp $
 #
 
 PORTNAME=	gnome-desktop
 PORTVERSION=	2.27.5
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -20,10 +20,11 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
+LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 RUN_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
 
 USE_XORG=	xpm
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils gtk20 \
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils gconf2 \
 		ltverhack referencehack
 GNOME_DESKTOP_VERSION=2
 USE_GETTEXT=	yes
