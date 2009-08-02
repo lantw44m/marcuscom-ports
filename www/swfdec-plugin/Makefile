@@ -14,7 +14,7 @@ DISTNAME=	swfdec-mozilla-${PORTVERSION}
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Flash rendering plugin
 
-LIB_DEPENDS=	swfdec-0.9:${PORTSDIR}/graphics/swfdec
+LIB_DEPENDS=	swfdec-0.8:${PORTSDIR}/graphics/swfdec
 
 USE_AUTOTOOLS=	libtool:22
 INSTALLS_ICONS=	yes
