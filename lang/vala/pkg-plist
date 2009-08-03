@@ -49,6 +49,8 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/gio-unix-2.0.vapi
 %%DATADIR%%/vapi/glib-2.0.vapi
 %%DATADIR%%/vapi/gmodule-2.0.vapi
+%%DATADIR%%/vapi/gnet-2.0.deps
+%%DATADIR%%/vapi/gnet-2.0.vapi
 %%DATADIR%%/vapi/gnome-desktop-2.0.deps
 %%DATADIR%%/vapi/gnome-desktop-2.0.vapi
 %%DATADIR%%/vapi/gnome-keyring-1.vapi
@@ -109,6 +111,8 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/libepc-1.0.vapi
 %%DATADIR%%/vapi/libftdi.deps
 %%DATADIR%%/vapi/libftdi.vapi
+%%DATADIR%%/vapi/libgdata.deps
+%%DATADIR%%/vapi/libgdata.vapi
 %%DATADIR%%/vapi/libglade-2.0.deps
 %%DATADIR%%/vapi/libglade-2.0.vapi
 %%DATADIR%%/vapi/libgnome-2.0.vapi
@@ -131,6 +135,8 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/libsoup-2.2.vapi
 %%DATADIR%%/vapi/libsoup-2.4.deps
 %%DATADIR%%/vapi/libsoup-2.4.vapi
+%%DATADIR%%/vapi/libusb-1.0.deps
+%%DATADIR%%/vapi/libusb-1.0.vapi
 %%DATADIR%%/vapi/libusb.vapi
 %%DATADIR%%/vapi/libwnck-1.0.deps
 %%DATADIR%%/vapi/libwnck-1.0.vapi
