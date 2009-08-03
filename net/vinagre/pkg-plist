@@ -33,7 +33,7 @@ lib/vinagre-1/plugins/vnc.vinagre-plugin
 libdata/pkgconfig/vinagre-1.0.pc
 share/applications/vinagre-file.desktop
 share/applications/vinagre.desktop
-share/dbus-1/services/org.gnome.Empathy.StreamTubeHandler.x_vnc.service
+%%TELEPATHY%%share/dbus-1/services/org.gnome.Empathy.StreamTubeHandler.x_vnc.service
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/COPYING
 %%PORTDOCS%%%%DOCSDIR%%/ChangeLog

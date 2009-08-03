@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net/vinagre/Makefile,v 1.26 2009/07/29 10:05:46 kwm Exp $
 #
 
 PORTNAME=	vinagre
 PORTVERSION=	2.27.5
+PORTREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -36,6 +37,19 @@ GCONF_SCHEMAS=	vinagre.schemas
 
 MAN1=		vinagre.1
 
+OPTIONS=	TELEPATHY "Enable telepathy integration" on
+
+.include <bsd.port.pre.mk>
+
+.if !defined(WITHOUT_TELEPATHY)
+CONFIGURE_ARGS+=--enable-telepathy
+LIB_DEPENDS+=	telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
+PLIST_SUB+=	TELEPATHY=""
+.else
+CONFIGURE_ARGS+=--disable-telepathy
+PLIST_SUB+=	TELEPATHY="@comment "
+.endif
+
 post-install:
 	@-update-desktop-database > /dev/null
 	@-update-mime-database ${PREFIX}/share/mime > /dev/null
@@ -46,4 +60,4 @@ post-install:
 .endfor
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
