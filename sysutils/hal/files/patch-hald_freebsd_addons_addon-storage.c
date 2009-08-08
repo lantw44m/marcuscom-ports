@@ -1,6 +1,6 @@
---- hald/freebsd/addons/addon-storage.c.orig	2008-05-07 19:24:04.000000000 -0400
-+++ hald/freebsd/addons/addon-storage.c	2008-05-19 02:18:59.000000000 -0400
-@@ -36,17 +36,23 @@
+--- hald/freebsd/addons/addon-storage.c.orig	2008-08-10 09:50:10.000000000 -0400
++++ hald/freebsd/addons/addon-storage.c	2009-08-08 15:56:20.000000000 -0400
+@@ -36,17 +36,24 @@
  #include "../libprobe/hfp.h"
  #include "../libprobe/hfp-cdrom.h"
  
@@ -22,11 +22,12 @@
  } addon = { { 2, 0 } };
  
 +static void update_proc_title (const char *device);
++static void unmount_volumes (void);
 +
  /* see MMC-3 Working Draft Revision 10 */
  static boolean
  hf_addon_storage_cdrom_eject_pressed (HFPCDROM *cdrom)
-@@ -144,18 +150,49 @@ hf_addon_storage_update (void)
+@@ -144,18 +151,148 @@ hf_addon_storage_update (void)
  	}
      }
  
@@ -36,6 +37,105 @@
    return has_media;
  }
  
++static void
++unmount_volumes (void)
++{
++  int num_volumes;
++  char **volumes;
++
++  if ((volumes = libhal_manager_find_device_string_match(hfp_ctx,
++                                                         "block.storage_device",
++							 hfp_udi,
++							 &num_volumes,
++							 &hfp_error)) != NULL)
++    {
++      int i;
++
++      dbus_error_free(&hfp_error);
++
++      for (i = 0; i < num_volumes; i++)
++        {
++          char *vol_udi;
++
++	  vol_udi = volumes[i];
++
++	  if (libhal_device_get_property_bool(hfp_ctx, vol_udi, "volume.is_mounted", &hfp_error))
++            {
++              DBusMessage *msg = NULL;
++	      DBusMessage *reply = NULL;
++	      DBusConnection *dbus_connection;
++	      unsigned int num_options = 0;
++	      char **options = NULL;
++	      char *devfile;
++
++	      dbus_error_free(&hfp_error);
++              hfp_info("Forcing unmount of volume '%s'", vol_udi);
++
++	      dbus_connection = libhal_ctx_get_dbus_connection(hfp_ctx);
++	      msg = dbus_message_new_method_call("org.freedesktop.Hal", vol_udi,
++                                                 "org.freedesktop.Hal.Device.Volume",
++						 "Unmount");
++	      if (msg == NULL)
++                {
++                  hfp_warning("Could not create dbus message for %s", vol_udi);
++		  continue;
++		}
++
++	      options = calloc(1, sizeof (char *));
++	      if (options == NULL)
++                {
++                  hfp_warning("Could not allocation memory for options");
++		  dbus_message_unref(msg);
++		  continue;
++		}
++
++	      options[0] = "force";
++	      num_options = 1;
++
++	      devfile = libhal_device_get_property_string(hfp_ctx, vol_udi, "block.device", NULL);
++	      if (devfile != NULL)
++                {
++                  hfp_info("Forcibly attempting to unmount %s as media was removed", devfile);
++		  libhal_free_string(devfile);
++		}
++
++	      if (! dbus_message_append_args(msg, DBUS_TYPE_ARRAY, DBUS_TYPE_STRING, &options, num_options, DBUS_TYPE_INVALID))
++                 {
++                   hfp_warning("Could not append args to dbus message for %s", vol_udi);
++		   free(options);
++		   dbus_message_unref(msg);
++		   continue;
++		 }
++
++	      if (! (reply = dbus_connection_send_with_reply_and_block(dbus_connection, msg, -1, &hfp_error)))
++                {
++                  hfp_warning("Unmount failed for %s: %s: %s", vol_udi, hfp_error.name, hfp_error.message);
++		  dbus_error_free(&hfp_error);
++		  free(options);
++		  dbus_message_unref(msg);
++		  continue;
++		}
++
++	      if (dbus_error_is_set(&hfp_error))
++                {
++                  hfp_warning("Unmount failed for %s: %s : %s", vol_udi, hfp_error.name, hfp_error.message);
++		  dbus_error_free(&hfp_error);
++		  free(options);
++		  dbus_message_unref(msg);
++		  dbus_message_unref(reply);
++		  continue;
++		}
++
++	      hfp_info("Successfully unmounted udi '%s'", vol_udi);
++	      free(options);
++              dbus_message_unref(msg);
++              dbus_message_unref(reply);
++	    }
++	}
++      libhal_free_string_array(volumes);
++    }
++}
++
  static boolean
 -poll_for_media (void)
 +poll_for_media (boolean check_only, boolean force)
@@ -80,7 +180,22 @@
    if (has_media != addon.had_media)
      {
        /*
-@@ -175,20 +212,33 @@ poll_for_media (void)
+@@ -168,6 +305,14 @@ poll_for_media (void)
+        * then hung while rebooting and did not unmount my other
+        * filesystems.
+        */
++#if __FreeBSD_version >= 800066
++      /*
++       * With newusb, it is safe to force unmount volumes.  This may be
++       * safe on newer versions of the old USB stack, but we'll be
++       * extra cautious.
++       */
++      unmount_volumes();
++#endif
+ 
+       libhal_device_rescan(hfp_ctx, hfp_udi, &hfp_error);
+       dbus_error_free(&hfp_error);
+@@ -175,20 +320,33 @@ poll_for_media (void)
  
        return TRUE;
      }
@@ -119,7 +234,7 @@
  {
    if (dbus_message_is_method_call(message,
  			  	  "org.freedesktop.Hal.Device.Storage.Removable",
-@@ -199,7 +249,7 @@ filter_function (DBusConnection *connect
+@@ -199,7 +357,7 @@ filter_function (DBusConnection *connect
  
        hfp_info("Forcing poll for media becusse CheckForMedia() was called");
  
@@ -128,7 +243,7 @@
  
        reply = dbus_message_new_method_return (message);
        dbus_message_append_args(reply, DBUS_TYPE_BOOLEAN, &had_effect, DBUS_TYPE_INVALID);
-@@ -217,8 +267,9 @@ main (int argc, char **argv)
+@@ -217,8 +375,9 @@ main (int argc, char **argv)
    char *removable;
    char *bus;
    char *driver;
@@ -139,7 +254,7 @@
  
    if (! hfp_init(argc, argv))
      goto end;
-@@ -251,16 +302,41 @@ main (int argc, char **argv)
+@@ -251,16 +410,41 @@ main (int argc, char **argv)
    addon.is_scsi_removable = (! strcmp(bus, "scsi") ||
      (! strcmp(bus, "usb") && (! strcmp(driver, "da") || ! strcmp(driver, "sa") ||
      ! strcmp(driver, "cd")))) && ! strcmp(removable, "true");
@@ -183,7 +298,7 @@
  
    if (! libhal_device_claim_interface(hfp_ctx,
  			 	      hfp_udi,
-@@ -280,40 +356,32 @@ main (int argc, char **argv)
+@@ -280,40 +464,32 @@ main (int argc, char **argv)
        /* process dbus traffic until update interval has elapsed */
        while (TRUE)
  	{
