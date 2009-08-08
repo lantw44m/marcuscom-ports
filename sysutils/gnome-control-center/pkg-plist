@@ -18,10 +18,36 @@ etc/xdg/autostart/gnome-at-session.desktop
 etc/xdg/menus/gnomecc.menu
 include/gnome-window-settings-2.0/gnome-window-manager.h
 include/gnome-window-settings-2.0/gnome-wm-manager.h
+include/libslab/app-resizer.h
+include/libslab/app-shell.h
+include/libslab/application-tile.h
+include/libslab/bookmark-agent.h
+include/libslab/directory-tile.h
+include/libslab/document-tile.h
+include/libslab/double-click-detector.h
+include/libslab/gnome-utils.h
+include/libslab/libslab-utils.h
+include/libslab/nameplate-tile.h
+include/libslab/nld-marshal.c
+include/libslab/nld-marshal.h
+include/libslab/search-bar.h
+include/libslab/search-context-picker.h
+include/libslab/search-entry-watermark.h
+include/libslab/search-entry.h
+include/libslab/shell-window.h
+include/libslab/slab-gnome-util.h
+include/libslab/slab-section.h
+include/libslab/slab.h
+include/libslab/system-tile.h
+include/libslab/tile.h
 lib/libgnome-window-settings.a
 lib/libgnome-window-settings.la
 lib/libgnome-window-settings.so
 lib/libgnome-window-settings.so.1
+lib/libslab.a
+lib/libslab.la
+lib/libslab.so
+lib/libslab.so.1
 lib/window-manager-settings/libmetacity.a
 lib/window-manager-settings/libmetacity.la
 lib/window-manager-settings/libmetacity.so
@@ -43,10 +69,6 @@ share/applications/keyboard.desktop
 share/applications/window-properties.desktop
 share/desktop-directories/gnomecc.directory
 %%DATADIR%%/default-apps/gnome-default-applications.xml
-%%DATADIR%%/glade/gnome-about-me-fingerprint.glade
-%%DATADIR%%/glade/gnome-about-me.glade
-%%DATADIR%%/glade/gnome-keyboard-properties.glade
-%%DATADIR%%/glade/gnome-mouse-properties.glade
 %%DATADIR%%/keybindings/00-multimedia-key.xml
 %%DATADIR%%/keybindings/01-desktop-key.xml
 %%DATADIR%%/pixmaps/at-startup.png
@@ -58,6 +80,8 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/pixmaps/double-click-maybe.png
 %%DATADIR%%/pixmaps/double-click-off.png
 %%DATADIR%%/pixmaps/double-click-on.png
+%%DATADIR%%/pixmaps/gnome-about-me-lock-open.png
+%%DATADIR%%/pixmaps/gnome-about-me-lock.png
 %%DATADIR%%/pixmaps/gtk-theme-thumbnailing.png
 %%DATADIR%%/pixmaps/icon-theme-thumbnailing.png
 %%DATADIR%%/pixmaps/left-index-finger.svg
@@ -86,8 +110,17 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/ui/appearance.ui
 %%DATADIR%%/ui/at-enable-dialog.ui
 %%DATADIR%%/ui/display-capplet.ui
+share/gnome-control-center/ui/gnome-about-me-dialog.ui
+share/gnome-control-center/ui/gnome-about-me-fingerprint.ui
+share/gnome-control-center/ui/gnome-about-me-password.ui
 %%DATADIR%%/ui/gnome-default-applications-properties.ui
 %%DATADIR%%/ui/gnome-keybinding-properties.ui
+share/gnome-control-center/ui/gnome-keyboard-properties-a11y-notifications.ui
+share/gnome-control-center/ui/gnome-keyboard-properties-dialog.ui
+share/gnome-control-center/ui/gnome-keyboard-properties-layout-chooser.ui
+share/gnome-control-center/ui/gnome-keyboard-properties-model-chooser.ui
+share/gnome-control-center/ui/gnome-keyboard-properties-options-dialog.ui
+share/gnome-control-center/ui/gnome-mouse-properties.ui
 %%DATADIR%%/ui/gnome-network-properties.ui
 %%DATADIR%%/ui/gnome-window-properties.ui
 share/gnome/cursor-fonts/cursor-large-white.pcf
@@ -282,12 +315,12 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrm share/gnome/help/control-center
 @dirrm share/gnome/cursor-fonts
 @dirrm %%DATADIR%%/ui
-@dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%/default-apps
 @dirrmtry share/desktop-directories
 @dirrmtry share/applications
 @dirrm lib/window-manager-settings
+@dirrm include/libslab
 @dirrm include/gnome-window-settings-2.0
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
