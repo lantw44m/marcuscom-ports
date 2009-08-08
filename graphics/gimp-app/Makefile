@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.35 2009/04/09 03:24:07 mezz Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.43 2009/08/08 21:27:55 marcus Exp $
 #
 
 PORTNAME=	gimp-app
@@ -192,6 +192,7 @@ post-patch:
 		s|%%GIMP_UI_LIBS%%|${GIMP_UI_LIBS}|' \
 			${WRKSRC}/plug-ins/pygimp/Makefile.in
 	@${REINPLACE_CMD} -e 's|"libpng"|"libpng12"|' \
+	    	-e 's|x86_64|amd64|g' \
 		${WRKSRC}/configure
 
 post-install:
