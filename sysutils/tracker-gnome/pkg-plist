@@ -12,5 +12,4 @@ share/applications/tracker-search-tool.desktop
 %%DATADIR%%/tracker-applet-prefs.glade
 %%DATADIR%%/tracker-preferences.glade
 @dirrm %%DATADIR%%/icons
-@dirrm %%DATADIR%%
 @dirrmtry share/applications
