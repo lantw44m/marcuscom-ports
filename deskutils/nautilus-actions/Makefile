@@ -3,13 +3,14 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.9 2009/08/01 08:20:08 kwm Exp $
 #
 
 PORTNAME=	nautilus-actions
 PORTVERSION=	1.11.2
 CATEGORIES=	deskutils
-MASTER_SITES=	http://www.nautilus-actions.org/downloads/ \
+MASTER_SITES=	GNOME \
+		http://www.nautilus-actions.org/downloads/ \
 		ftp://pwi.dyndns.biz/pub/tarballs/nautilus-actions/
 
 MAINTAINER=	ahze@FreeBSD.org
