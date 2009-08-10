@@ -372,6 +372,7 @@ share/locale/bg/LC_MESSAGES/deskbar-applet.mo
 share/locale/bn/LC_MESSAGES/deskbar-applet.mo
 share/locale/bn_IN/LC_MESSAGES/deskbar-applet.mo
 share/locale/ca/LC_MESSAGES/deskbar-applet.mo
+share/locale/ca@valencia/LC_MESSAGES/deskbar-applet.mo
 share/locale/cs/LC_MESSAGES/deskbar-applet.mo
 share/locale/cy/LC_MESSAGES/deskbar-applet.mo
 share/locale/da/LC_MESSAGES/deskbar-applet.mo
@@ -386,6 +387,7 @@ share/locale/eu/LC_MESSAGES/deskbar-applet.mo
 share/locale/fa/LC_MESSAGES/deskbar-applet.mo
 share/locale/fi/LC_MESSAGES/deskbar-applet.mo
 share/locale/fr/LC_MESSAGES/deskbar-applet.mo
+share/locale/ga/LC_MESSAGES/deskbar-applet.mo
 share/locale/gl/LC_MESSAGES/deskbar-applet.mo
 share/locale/gu/LC_MESSAGES/deskbar-applet.mo
 share/locale/he/LC_MESSAGES/deskbar-applet.mo
@@ -520,6 +522,8 @@ share/omf/deskbar/deskbar-zh_CN.omf
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES

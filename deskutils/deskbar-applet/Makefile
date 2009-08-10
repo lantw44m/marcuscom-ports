@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.104 2009/07/18 21:37:05 kwm Exp $
+#   $MCom: ports/deskutils/deskbar-applet/Makefile,v 1.105 2009/07/28 13:15:27 avl Exp $
 #
 
 PORTNAME=	deskbar-applet
-PORTVERSION=	2.27.5
+PORTVERSION=	2.27.90
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
