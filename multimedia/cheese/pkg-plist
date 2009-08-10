@@ -32,6 +32,8 @@ share/applications/cheese.desktop
 %%DATADIR%%/icons/hicolor/48x48/actions/browse-webcam-effects.png
 %%DATADIR%%/icons/hicolor/48x48/actions/cheese-take-burst.png
 %%DATADIR%%/icons/hicolor/48x48/actions/cheese-take-photo.png
+%%DATADIR%%/icons/hicolor/scalable/actions/cheese-take-burst.svg
+%%DATADIR%%/icons/hicolor/scalable/actions/cheese-take-photo.svg
 %%DATADIR%%/icons/hicolor/scalable/actions/browse-webcam-effects.svg
 %%DATADIR%%/pixmaps/camera-icon.svg
 %%DATADIR%%/pixmaps/cheese-1.svg
@@ -95,16 +97,19 @@ share/gnome/help/cheese/th/figures/cheese-screenshot.jpg
 share/icons/hicolor/16x16/apps/cheese.png
 share/icons/hicolor/22x22/apps/cheese.png
 share/icons/hicolor/24x24/apps/cheese.png
+share/icons/hicolor/256x256/apps/cheese.png
 share/icons/hicolor/32x32/apps/cheese.png
 share/icons/hicolor/48x48/apps/cheese.png
 share/icons/hicolor/scalable/apps/cheese.svg
 share/locale/ar/LC_MESSAGES/cheese.mo
 share/locale/as/LC_MESSAGES/cheese.mo
+share/locale/ast/LC_MESSAGES/cheese.mo
 share/locale/be/LC_MESSAGES/cheese.mo
 share/locale/be@latin/LC_MESSAGES/cheese.mo
 share/locale/bg/LC_MESSAGES/cheese.mo
 share/locale/bn_IN/LC_MESSAGES/cheese.mo
 share/locale/ca/LC_MESSAGES/cheese.mo
+share/locale/ca@valencia/LC_MESSAGES/cheese.mo
 share/locale/cs/LC_MESSAGES/cheese.mo
 share/locale/da/LC_MESSAGES/cheese.mo
 share/locale/de/LC_MESSAGES/cheese.mo
@@ -240,11 +245,15 @@ share/omf/cheese/cheese-th.omf
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/be/LC_MESSAGES
 @dirrmtry share/locale/be
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
