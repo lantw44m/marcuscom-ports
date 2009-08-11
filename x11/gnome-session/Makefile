@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/x11/gnome-session/Makefile,v 1.3 2009/04/16 01:54:40 kwm Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.171 2009/07/19 20:00:21 marcus Exp $
 #
 
 PORTNAME=	gnome-session
 PORTVERSION=	2.27.4
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME \
 		http://www.marcuscom.com/downloads/:local
@@ -30,8 +31,8 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gno
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_XORG=	xau xrandr
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeui
+USE_XORG=	ice sm xau xrandr
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2
 GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
