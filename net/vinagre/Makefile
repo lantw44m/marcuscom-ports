@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vinagre/Makefile,v 1.26 2009/07/29 10:05:46 kwm Exp $
+#   $MCom: ports/net/vinagre/Makefile,v 1.27 2009/08/03 06:11:01 marcus Exp $
 #
 
 PORTNAME=	vinagre
-PORTVERSION=	2.27.5
-PORTREVISION=	1
+PORTVERSION=	2.27.90
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -23,13 +22,13 @@ LIB_DEPENDS=	gtk-vnc-1.0.0:${PORTSDIR}/net/gtk-vnc \
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack libglade2 gconf2 gnomedocutils \
+USE_GNOME=	gnomeprefix intlhack gnomehack vte gconf2 gnomedocutils \
 		gnomepanel
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-CONFIGURE_ARGS=	--enable-avahi
+CONFIGURE_ARGS=	--enable-avahi --enable-applet -enable-ssh
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

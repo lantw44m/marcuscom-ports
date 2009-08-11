@@ -23,17 +23,18 @@ include/vinagre-1.0/vinagre/vinagre-tab.h
 include/vinagre-1.0/vinagre/vinagre-ui.h
 include/vinagre-1.0/vinagre/vinagre-utils.h
 include/vinagre-1.0/vinagre/vinagre-window.h
-lib/vinagre-1/plugin-loaders/libcloader.a
 lib/vinagre-1/plugin-loaders/libcloader.la
 lib/vinagre-1/plugin-loaders/libcloader.so
-lib/vinagre-1/plugins/libvnc.a
+lib/vinagre-1/plugins/libssh.la
+lib/vinagre-1/plugins/libssh.so
 lib/vinagre-1/plugins/libvnc.la
 lib/vinagre-1/plugins/libvnc.so
+lib/vinagre-1/plugins/ssh.vinagre-plugin
 lib/vinagre-1/plugins/vnc.vinagre-plugin
 libdata/pkgconfig/vinagre-1.0.pc
 share/applications/vinagre-file.desktop
 share/applications/vinagre.desktop
-%%TELEPATHY%%share/dbus-1/services/org.gnome.Empathy.StreamTubeHandler.x_vnc.service
+%%TELEPATHY%%share/dbus-1/services/org.gnome.Empathy.StreamTubeHandler.rfb.service
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/COPYING
 %%PORTDOCS%%%%DOCSDIR%%/ChangeLog
@@ -97,7 +98,6 @@ share/icons/hicolor/48x48/status/view-minimize.png
 share/icons/hicolor/scalable/apps/vinagre.svg
 share/icons/hicolor/scalable/mimetypes/application-x-remote-connection.svg
 share/icons/hicolor/scalable/mimetypes/application-x-vnc.svg
-share/icons/vinagre-plugin.png
 share/locale/ar/LC_MESSAGES/vinagre.mo
 share/locale/as/LC_MESSAGES/vinagre.mo
 share/locale/ast/LC_MESSAGES/vinagre.mo
@@ -178,7 +178,7 @@ share/omf/vinagre/vinagre-th.omf
 share/omf/vinagre/vinagre-zh_CN.omf
 %%DATADIR%%/GNOME_VinagreApplet.xml
 %%DATADIR%%/vinagre-ui.xml
-%%DATADIR%%/vinagre.glade
+%%DATADIR%%/vinagre.ui
 @dirrm %%DATADIR%%
 @dirrm share/omf/vinagre
 @dirrm share/gnome/help/vinagre/zh_CN/figures
