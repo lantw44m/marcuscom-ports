@@ -226,6 +226,7 @@ share/locale/bn/LC_MESSAGES/eog.mo
 share/locale/bn_IN/LC_MESSAGES/eog.mo
 share/locale/bs/LC_MESSAGES/eog.mo
 share/locale/ca/LC_MESSAGES/eog.mo
+share/locale/ca@valencia/LC_MESSAGES/eog.mo
 share/locale/cs/LC_MESSAGES/eog.mo
 share/locale/cy/LC_MESSAGES/eog.mo
 share/locale/da/LC_MESSAGES/eog.mo
@@ -440,6 +441,8 @@ share/omf/eog/eog-zh_TW.omf
 @dirrmtry share/locale/fur
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
