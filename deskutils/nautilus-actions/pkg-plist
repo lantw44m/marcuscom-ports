@@ -4,6 +4,16 @@ bin/nautilus-actions-schemas
 lib/nautilus/extensions-2.0/libnautilus-actions.la
 lib/nautilus/extensions-2.0/libnautilus-actions.so
 share/applications/nact.desktop
+share/doc/nautilus-actions-1.12.0/AUTHORS
+share/doc/nautilus-actions-1.12.0/COPYING
+share/doc/nautilus-actions-1.12.0/ChangeLog
+share/doc/nautilus-actions-1.12.0/ChangeLog-2008
+share/doc/nautilus-actions-1.12.0/INSTALL
+share/doc/nautilus-actions-1.12.0/MAINTAINERS
+share/doc/nautilus-actions-1.12.0/NEWS
+share/doc/nautilus-actions-1.12.0/README
+share/doc/nautilus-actions-1.12.0/TODO
+share/doc/nautilus-actions-1.12.0/objects-hierarchy.odg
 share/icons/hicolor/16x16/apps/nautilus-actions.png
 share/icons/hicolor/22x22/apps/nautilus-actions.png
 share/icons/hicolor/32x32/apps/nautilus-actions.png
@@ -53,37 +63,20 @@ share/locale/vi/LC_MESSAGES/nautilus-actions.mo
 share/locale/zh_CN/LC_MESSAGES/nautilus-actions.mo
 share/locale/zh_HK/LC_MESSAGES/nautilus-actions.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus-actions.mo
-@dirrmtry share/locale/zh_TW/LC_MESSAGES
-@dirrmtry share/locale/zh_TW
+%%DATADIR%%/nautilus-actions-config-tool.ui
+%%DATADIR%%/nautilus-actions.schemas
+@dirrm %%DATADIR%%
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/zh_CN/LC_MESSAGES
-@dirrmtry share/locale/zh_CN
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
-@dirrmtry share/locale/pt/LC_MESSAGES
-@dirrmtry share/locale/pt
-@dirrmtry share/locale/pl/LC_MESSAGES
-@dirrmtry share/locale/pl
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
-@dirrmtry share/locale/ko/LC_MESSAGES
-@dirrmtry share/locale/ko
-@dirrmtry share/locale/gl/LC_MESSAGES
-@dirrmtry share/locale/gl
-@dirrmtry share/locale/fi/LC_MESSAGES
-@dirrmtry share/locale/fi
-@dirrmtry share/locale/el/LC_MESSAGES
-@dirrmtry share/locale/el
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
-@dirrmtry share/locale/cs/LC_MESSAGES
-@dirrmtry share/locale/cs
-@dirrmtry share/locale/ca/LC_MESSAGES
-@dirrmtry share/locale/ca
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
-share/nautilus-actions/nautilus-actions-config-tool.ui
-@dirrm share/nautilus-actions
+@dirrm share/doc/nautilus-actions-1.12.0
+@dirrmtry share/applications
