@@ -3,11 +3,10 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp/Makefile,v 1.18 2009/07/19 01:07:15 marcus Exp $
+#   $MCom: ports/devel/devhelp/Makefile,v 1.19 2009/07/19 19:46:42 marcus Exp $
 
 PORTNAME=	devhelp
-PORTVERSION=	0.23
-PORTREVISION=	4
+PORTVERSION=	0.23.1
 PORTEPOCH=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -48,7 +47,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|gedit-plugin||' \
 		${WRKSRC}/misc/Makefile.in
 .endif
-	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
-	    	${WRKSRC}/src/Makefile.in
 
 .include <bsd.port.post.mk>

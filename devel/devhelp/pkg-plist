@@ -42,6 +42,7 @@ share/locale/bg/LC_MESSAGES/devhelp.mo
 share/locale/bn/LC_MESSAGES/devhelp.mo
 share/locale/bn_IN/LC_MESSAGES/devhelp.mo
 share/locale/ca/LC_MESSAGES/devhelp.mo
+share/locale/ca@valencia/LC_MESSAGES/devhelp.mo
 share/locale/cs/LC_MESSAGES/devhelp.mo
 share/locale/da/LC_MESSAGES/devhelp.mo
 share/locale/de/LC_MESSAGES/devhelp.mo
@@ -80,6 +81,7 @@ share/locale/pl/LC_MESSAGES/devhelp.mo
 share/locale/ps/LC_MESSAGES/devhelp.mo
 share/locale/pt/LC_MESSAGES/devhelp.mo
 share/locale/pt_BR/LC_MESSAGES/devhelp.mo
+share/locale/ro/LC_MESSAGES/devhelp.mo
 share/locale/ru/LC_MESSAGES/devhelp.mo
 share/locale/rw/LC_MESSAGES/devhelp.mo
 share/locale/sk/LC_MESSAGES/devhelp.mo
@@ -112,6 +114,8 @@ share/locale/zh_TW/LC_MESSAGES/devhelp.mo
 @dirrmtry share/locale/sr@Latn
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
+@dirrmtry share/locale/ro/LC_MESSAGES
+@dirrmtry share/locale/ro
 @dirrmtry share/locale/ps/LC_MESSAGES
 @dirrmtry share/locale/ps
 @dirrmtry share/locale/oc/LC_MESSAGES
@@ -120,6 +124,8 @@ share/locale/zh_TW/LC_MESSAGES/devhelp.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
