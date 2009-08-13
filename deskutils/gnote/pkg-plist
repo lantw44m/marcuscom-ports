@@ -1,28 +1,31 @@
 bin/gnote
-lib/gnote/addins/0.5.3/backlinks.a
-lib/gnote/addins/0.5.3/backlinks.la
-lib/gnote/addins/0.5.3/backlinks.so
-lib/gnote/addins/0.5.3/bugzilla.a
-lib/gnote/addins/0.5.3/bugzilla.la
-lib/gnote/addins/0.5.3/bugzilla.so
-lib/gnote/addins/0.5.3/exporttohtml.a
-lib/gnote/addins/0.5.3/exporttohtml.la
-lib/gnote/addins/0.5.3/exporttohtml.so
-lib/gnote/addins/0.5.3/fixedwidth.a
-lib/gnote/addins/0.5.3/fixedwidth.la
-lib/gnote/addins/0.5.3/fixedwidth.so
-lib/gnote/addins/0.5.3/inserttimestamp.a
-lib/gnote/addins/0.5.3/inserttimestamp.la
-lib/gnote/addins/0.5.3/inserttimestamp.so
-lib/gnote/addins/0.5.3/printnotes.a
-lib/gnote/addins/0.5.3/printnotes.la
-lib/gnote/addins/0.5.3/printnotes.so
-lib/gnote/addins/0.5.3/stickynoteimport.a
-lib/gnote/addins/0.5.3/stickynoteimport.la
-lib/gnote/addins/0.5.3/stickynoteimport.so
-lib/gnote/addins/0.5.3/tomboyimport.a
-lib/gnote/addins/0.5.3/tomboyimport.la
-lib/gnote/addins/0.5.3/tomboyimport.so
+lib/gnote/addins/%%VERSION%%/backlinks.a
+lib/gnote/addins/%%VERSION%%/backlinks.la
+lib/gnote/addins/%%VERSION%%/backlinks.so
+lib/gnote/addins/%%VERSION%%/bugzilla.a
+lib/gnote/addins/%%VERSION%%/bugzilla.la
+lib/gnote/addins/%%VERSION%%/bugzilla.so
+lib/gnote/addins/%%VERSION%%/exporttohtml.a
+lib/gnote/addins/%%VERSION%%/exporttohtml.la
+lib/gnote/addins/%%VERSION%%/exporttohtml.so
+lib/gnote/addins/%%VERSION%%/fixedwidth.a
+lib/gnote/addins/%%VERSION%%/fixedwidth.la
+lib/gnote/addins/%%VERSION%%/fixedwidth.so
+lib/gnote/addins/%%VERSION%%/inserttimestamp.a
+lib/gnote/addins/%%VERSION%%/inserttimestamp.la
+lib/gnote/addins/%%VERSION%%/inserttimestamp.so
+lib/gnote/addins/%%VERSION%%/printnotes.a
+lib/gnote/addins/%%VERSION%%/printnotes.la
+lib/gnote/addins/%%VERSION%%/printnotes.so
+lib/gnote/addins/%%VERSION%%/stickynoteimport.a
+lib/gnote/addins/%%VERSION%%/stickynoteimport.la
+lib/gnote/addins/%%VERSION%%/stickynoteimport.so
+lib/gnote/addins/%%VERSION%%/tomboyimport.a
+lib/gnote/addins/%%VERSION%%/tomboyimport.la
+lib/gnote/addins/%%VERSION%%/tomboyimport.so
+lib/gnote/addins/%%VERSION%%/underline.a
+lib/gnote/addins/%%VERSION%%/underline.la
+lib/gnote/addins/%%VESRION%%/underline.so
 %%APPLET%%libdata/bonobo/servers/GNOME_GnoteApplet.server
 %%APPLET%%libexec/gnote-applet
 share/applications/gnote.desktop
@@ -169,6 +172,7 @@ share/locale/en_GB/LC_MESSAGES/gnote.mo
 share/locale/es/LC_MESSAGES/gnote.mo
 share/locale/fr/LC_MESSAGES/gnote.mo
 share/locale/gu/LC_MESSAGES/gnote.mo
+share/locale/he/LC_MESSAGES/gnote.mo
 share/locale/hu/LC_MESSAGES/gnote.mo
 share/locale/it/LC_MESSAGES/gnote.mo
 share/locale/ja/LC_MESSAGES/gnote.mo
@@ -229,6 +233,6 @@ share/omf/gnote/gnote-sv.omf
 @dirrm share/gnome/help/gnote
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrmtry share/applications
-@dirrmtry lib/gnote/addins/0.5.3
+@dirrmtry lib/gnote/addins/%%VERSION%%
 @dirrmtry lib/gnote/addins
 @dirrmtry lib/gnote
