@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-gobject/Makefile,v 1.31 2009/05/03 23:28:48 kwm Exp $
+#   $MCom: ports/devel/py-gobject/Makefile,v 1.32 2009/08/12 01:41:09 ahze Exp $
 #
 
 PORTNAME=	gobject
 PORTVERSION=	2.19.0
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pygobject/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,6 +18,8 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Python bindings for GObject
+
+LIB_DEPENDS=	girepository-1.0.0:${PORTSDIR}/devel/gobject-introspection
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
