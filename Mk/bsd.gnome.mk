@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.481 2009/06/03 05:16:15 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.482 2009/07/19 13:56:07 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -360,7 +360,7 @@ libgtkhtml_USE_GNOME_IMPL=libxslt gnomevfs2
 
 gnomedesktop_LIB_DEPENDS=	gnome-desktop-2.11:${PORTSDIR}/x11/gnome-desktop
 gnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-2.0.pc
-gnomedesktop_USE_GNOME_IMPL=	libgnomeui gnomedocutils
+gnomedesktop_USE_GNOME_IMPL=	gconf2 gnomedocutils pygtk2
 gnomedesktop_GNOME_DESKTOP_VERSION=2
 
 gnomedesktopsharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-sharp-2.0.pc
@@ -523,7 +523,7 @@ gnomesharp20_USE_GNOME_IMPL=	gnomepanel gtkhtml3 gtksharp20 librsvg2 vte
 
 libgnomekbd_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
 libgnomekbd_LIB_DEPENDS=	gnomekbd.4:${PORTSDIR}/x11/libgnomekbd
-libgnomekbd_USE_GNOME_IMPL=	libgnomeui
+libgnomekbd_USE_GNOME_IMPL=	gconf2
 
 pygtksourceview_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygtksourceview-2.0.pc
 pygtksourceview_BUILD_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkits/py-gtksourceview
