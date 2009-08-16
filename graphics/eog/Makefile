@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.98 2009/07/28 14:16:23 kwm Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.99 2009/08/12 22:53:12 kwm Exp $
 #
 
 PORTNAME=	eog
@@ -14,6 +14,9 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The Eye Of Gnome image viewer
+
+BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
+RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
