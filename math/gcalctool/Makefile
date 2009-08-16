@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool/Makefile,v 1.117 2009/07/28 12:26:16 kwm Exp $
+#   $MCom: ports/math/gcalctool/Makefile,v 1.118 2009/08/11 13:54:19 kwm Exp $
 #
 
 PORTNAME=	gcalctool
@@ -22,7 +22,7 @@ INSTALLS_OMF=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:22
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gnomedocutils libglade2
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gnomedocutils gtk20
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
