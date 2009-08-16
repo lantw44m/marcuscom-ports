@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/audio/rhythmbox/Makefile,v 1.99 2009/07/19 08:54:51 kwm Exp $
 #
 
 PORTNAME=	rhythmbox
 PORTVERSION=	0.12.3
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -115,7 +115,7 @@ PLIST_SUB+=	PYTHON="@comment "
 .endif
 
 .if !defined(WITHOUT_IPOD)
-LIB_DEPENDS+=	gpod.3:${PORTSDIR}/audio/libgpod
+LIB_DEPENDS+=	gpod.5:${PORTSDIR}/audio/libgpod
 CONFIGURE_ARGS+=--with-ipod
 PLIST_SUB+=	IPOD=""
 .else
