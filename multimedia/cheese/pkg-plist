@@ -179,6 +179,8 @@ share/omf/cheese/cheese-ru.omf
 share/omf/cheese/cheese-sv.omf
 share/omf/cheese/cheese-th.omf
 @dirrm share/omf/cheese
+@dirrmtry share/icons/hicolor/256x256/apps
+@dirrmtry share/icons/hicolor/256x256
 @dirrm share/gnome/help/cheese/th/figures
 @dirrm share/gnome/help/cheese/th
 @dirrm share/gnome/help/cheese/sv/figures
