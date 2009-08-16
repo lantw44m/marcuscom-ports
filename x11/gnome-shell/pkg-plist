@@ -1,0 +1,42 @@
+bin/gnome-shell
+lib/gnome-shell/Big-1.0.typelib
+lib/gnome-shell/Shell-0.1.typelib
+lib/gnome-shell/Tidy-1.0.typelib
+lib/mutter/plugins/libgnome-shell.a
+lib/mutter/plugins/libgnome-shell.la
+lib/mutter/plugins/libgnome-shell.so
+share/applications/gnome-shell.desktop
+share/gnome-shell/images/add-workspace.svg
+share/gnome-shell/images/close.svg
+share/gnome-shell/images/info.svg
+share/gnome-shell/images/remove-workspace.svg
+share/gnome-shell/images/view-more-activated.svg
+share/gnome-shell/images/view-more.svg
+share/gnome-shell/js/misc/docInfo.js
+share/gnome-shell/js/ui/altTab.js
+share/gnome-shell/js/ui/appDisplay.js
+share/gnome-shell/js/ui/button.js
+share/gnome-shell/js/ui/chrome.js
+share/gnome-shell/js/ui/dash.js
+share/gnome-shell/js/ui/dnd.js
+share/gnome-shell/js/ui/docDisplay.js
+share/gnome-shell/js/ui/genericDisplay.js
+share/gnome-shell/js/ui/link.js
+share/gnome-shell/js/ui/lookingGlass.js
+share/gnome-shell/js/ui/main.js
+share/gnome-shell/js/ui/overlay.js
+share/gnome-shell/js/ui/panel.js
+share/gnome-shell/js/ui/places.js
+share/gnome-shell/js/ui/runDialog.js
+share/gnome-shell/js/ui/sidebar.js
+share/gnome-shell/js/ui/tweener.js
+share/gnome-shell/js/ui/widget.js
+share/gnome-shell/js/ui/widgetBox.js
+share/gnome-shell/js/ui/windowManager.js
+share/gnome-shell/js/ui/workspaces.js
+@dirrm share/gnome-shell/js/ui
+@dirrm share/gnome-shell/js/misc
+@dirrm share/gnome-shell/js
+@dirrm share/gnome-shell/images
+@dirrm share/gnome-shell
+@dirrm lib/gnome-shell

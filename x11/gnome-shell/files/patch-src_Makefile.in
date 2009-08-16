@@ -1,0 +1,27 @@
+--- src/Makefile.in.orig	2009-08-14 05:12:30.000000000 +0000
++++ src/Makefile.in	2009-08-14 05:12:49.000000000 +0000
+@@ -272,8 +272,6 @@
+ INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+ LD = @LD@
+ LDFLAGS = @LDFLAGS@
+-LIBGNOMEUI_CFLAGS = @LIBGNOMEUI_CFLAGS@
+-LIBGNOMEUI_LIBS = @LIBGNOMEUI_LIBS@
+ LIBOBJS = @LIBOBJS@
+ LIBS = @LIBS@
+ LIBTOOL = @LIBTOOL@
+@@ -528,7 +526,6 @@
+ libtray_la_LDFLAGS = $(LDADD)
+ gnome_shell_cflags = \
+ 	$(MUTTER_PLUGIN_CFLAGS)			\
+-        $(LIBGNOMEUI_CFLAGS)                    \
+ 	-I$(srcdir)/tray			\
+ 	-DGETTEXT_PACKAGE=gnome-shell		\
+ 	-DGNOME_SHELL_DATADIR=\"$(pkgdatadir)\"	\
+@@ -582,7 +579,6 @@
+ libgnome_shell_la_LDFLAGS = -avoid-version -module
+ libgnome_shell_la_LIBADD = \
+ 	$(MUTTER_PLUGIN_LIBS)	\
+-        $(LIBGNOMEUI_LIBS)      \
+ 	libbig-1.0.la		\
+ 	libgdmuser-1.0.la	\
+ 	libtidy-1.0.la		\
