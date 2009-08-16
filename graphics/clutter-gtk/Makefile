@@ -7,12 +7,14 @@
 
 PORTNAME=	clutter-gtk
 PORTVERSION=	0.10.2
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GTK+ Integration library for Clutter
 
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 
 USE_BZIP2=	yes
@@ -21,7 +23,6 @@ USE_AUTOTOOLS=	libtool:22
 USE_GNOME=	gnomehack gtk20 ltverhack gnomeprefix
 USE_XORG=	xp x11
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--enable-introspection=no
 CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
