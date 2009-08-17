@@ -18,36 +18,10 @@ etc/xdg/autostart/gnome-at-session.desktop
 etc/xdg/menus/gnomecc.menu
 include/gnome-window-settings-2.0/gnome-window-manager.h
 include/gnome-window-settings-2.0/gnome-wm-manager.h
-include/libslab/app-resizer.h
-include/libslab/app-shell.h
-include/libslab/application-tile.h
-include/libslab/bookmark-agent.h
-include/libslab/directory-tile.h
-include/libslab/document-tile.h
-include/libslab/double-click-detector.h
-include/libslab/gnome-utils.h
-include/libslab/libslab-utils.h
-include/libslab/nameplate-tile.h
-include/libslab/nld-marshal.c
-include/libslab/nld-marshal.h
-include/libslab/search-bar.h
-include/libslab/search-context-picker.h
-include/libslab/search-entry-watermark.h
-include/libslab/search-entry.h
-include/libslab/shell-window.h
-include/libslab/slab-gnome-util.h
-include/libslab/slab-section.h
-include/libslab/slab.h
-include/libslab/system-tile.h
-include/libslab/tile.h
 lib/libgnome-window-settings.a
 lib/libgnome-window-settings.la
 lib/libgnome-window-settings.so
 lib/libgnome-window-settings.so.1
-lib/libslab.a
-lib/libslab.la
-lib/libslab.so
-lib/libslab.so.1
 lib/window-manager-settings/libmetacity.a
 lib/window-manager-settings/libmetacity.la
 lib/window-manager-settings/libmetacity.so
@@ -320,7 +294,6 @@ share/omf/control-center/control-center-zh_CN.omf
 @dirrmtry share/desktop-directories
 @dirrmtry share/applications
 @dirrm lib/window-manager-settings
-@dirrm include/libslab
 @dirrm include/gnome-window-settings-2.0
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
