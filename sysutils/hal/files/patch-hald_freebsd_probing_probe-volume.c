@@ -1,5 +1,5 @@
 --- hald/freebsd/probing/probe-volume.c.orig	2008-08-10 09:50:10.000000000 -0400
-+++ hald/freebsd/probing/probe-volume.c	2009-07-18 21:20:55.000000000 -0400
++++ hald/freebsd/probing/probe-volume.c	2009-08-19 16:54:15.000000000 -0400
 @@ -36,7 +36,12 @@
  #include <sys/disk.h>
  #include <sys/cdio.h>
@@ -23,7 +23,7 @@
          hf_probe_volume_advanced_disc_detect(fd);
      }
    else
-@@ -555,6 +561,40 @@ main (int argc, char **argv)
+@@ -555,6 +561,45 @@ main (int argc, char **argv)
  
    libhal_device_set_property_bool(hfp_ctx, hfp_udi, "volume.ignore", has_children || is_swap, &hfp_error);
  
@@ -53,10 +53,15 @@
 +                  gboolean mounted;
 +
 +		  mounted = libhal_device_get_property_bool(hfp_ctx, ufs_devs[i], "volume.is_mounted", &hfp_error);
++	          dbus_error_free(&hfp_error);
 +		  if (mounted)
-+                    libhal_device_set_property_bool(hfp_ctx, hfp_udi, "volume.ignore", TRUE, &hfp_error);
++	            {
++                      libhal_device_set_property_bool(hfp_ctx, hfp_udi, "volume.ignore", TRUE, &hfp_error);
++		      dbus_error_free(&hfp_error);
++		    }
 +		}
 +	    }
++	  libhal_free_string_array(ufs_devs);
 +	  ufs_disk_close(&ufsdisk);
 +	}
 +    }
