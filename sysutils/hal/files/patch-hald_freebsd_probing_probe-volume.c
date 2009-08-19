@@ -1,5 +1,5 @@
 --- hald/freebsd/probing/probe-volume.c.orig	2008-08-10 09:50:10.000000000 -0400
-+++ hald/freebsd/probing/probe-volume.c	2009-08-19 16:54:15.000000000 -0400
++++ hald/freebsd/probing/probe-volume.c	2009-08-19 17:00:14.000000000 -0400
 @@ -36,7 +36,12 @@
  #include <sys/disk.h>
  #include <sys/cdio.h>
@@ -23,7 +23,7 @@
          hf_probe_volume_advanced_disc_detect(fd);
      }
    else
-@@ -555,6 +561,45 @@ main (int argc, char **argv)
+@@ -555,6 +561,46 @@ main (int argc, char **argv)
  
    libhal_device_set_property_bool(hfp_ctx, hfp_udi, "volume.ignore", has_children || is_swap, &hfp_error);
  
@@ -34,7 +34,7 @@
 +      if (ufs_disk_fillout(&ufsdisk, device_file) == 0)
 +        {
 +	  char ufsid[64];
-+	  char **ufs_devs;
++	  char **ufs_devs = NULL;
 +	  int num_udis;
 +	  int i;
 +
@@ -61,7 +61,8 @@
 +		    }
 +		}
 +	    }
-+	  libhal_free_string_array(ufs_devs);
++	  if (ufs_devs)
++	    libhal_free_string_array(ufs_devs);
 +	  ufs_disk_close(&ufsdisk);
 +	}
 +    }
