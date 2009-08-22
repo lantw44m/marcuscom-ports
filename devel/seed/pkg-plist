@@ -22,6 +22,10 @@ lib/seed/libseed_example.a
 lib/seed/libseed_example.la
 lib/seed/libseed_example.so
 lib/seed/libseed_example.so.0
+lib/seed/libseed_ffi.a
+lib/seed/libseed_ffi.la
+lib/seed/libseed_ffi.so
+lib/seed/libseed_ffi.so.0
 lib/seed/libseed_gettext.a
 lib/seed/libseed_gettext.la
 lib/seed/libseed_gettext.so
@@ -91,12 +95,11 @@ libdata/pkgconfig/seed.pc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/browser/TabbedBrowser.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/browser/main.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/cairo.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/calculator-mpfr.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/calculator.js
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-0.8.js
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-0.9.js
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-cairo.js
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-cogl-0.8.js
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-cogl-0.9.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-1.0.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-cairo-1.0.js
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-cogl-1.0.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-pad/clutter-pad.ui
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-pad/examples/animated-rectangle.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-pad/examples/box2d.js
@@ -110,10 +113,6 @@ libdata/pkgconfig/seed.pc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-shader/bob.jpg
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-shader/default.glsl
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-shader/main.js
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-transitions/main.js
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-transitions/one.jpg
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-transitions/transition-library.js
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/clutter-transitions/two.jpg
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dbus/dbus-banshee.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dbus/dbus-consolekit.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dbus/dbus-networkmanager.js
@@ -139,11 +138,6 @@ libdata/pkgconfig/seed.pc
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/opengl/triangle-actor.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/pango-fontset.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/pango.js
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/pong/ball.png
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/pong/midline.png
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/pong/player.png
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/pong/player2.png
-%%PORTEXAMPLES%%%%EXAMPLESDIR%%/pong/pong.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/poppler.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/quine.js
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/repl.js
@@ -184,11 +178,9 @@ libdata/pkgconfig/seed.pc
 %%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/clutter-pad/examples
 %%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/clutter-pad
 %%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/clutter-shader
-%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/clutter-transitions
 %%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/dbus
 %%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/glib
 %%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/opengl
-%%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/pong
 %%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%/xml
 %%PORTEXAMPLES%%@dirrm %%EXAMPLESDIR%%
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/mapping

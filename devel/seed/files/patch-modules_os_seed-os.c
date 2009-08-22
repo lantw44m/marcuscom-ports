@@ -1,8 +1,10 @@
---- modules/os/seed-os.c.orig	2009-07-08 14:21:59.000000000 -0400
-+++ modules/os/seed-os.c	2009-07-27 12:55:03.000000000 -0400
-@@ -12,6 +12,9 @@
+--- modules/seed-os.c.orig	2009-08-10 16:23:35.000000000 -0400
++++ modules/seed-os.c	2009-08-22 14:18:53.000000000 -0400
+@@ -30,7 +30,11 @@
+ #include <sys/stat.h>
  #include <sys/utsname.h>
  
++#include <sys/param.h>
  #include <sys/types.h>
 +#include <sys/ioctl.h>
 +#include <termios.h>
@@ -10,7 +12,24 @@
  
  #include <fcntl.h>
  
-@@ -661,6 +664,7 @@ seed_os_fdatasync (SeedContext ctx,
+@@ -55,6 +59,7 @@ seed_os_realpath (SeedContext ctx,
+ 	          SeedException * exception)
+ {
+   gchar *arg;
++  gchar resolved_path[PATH_MAX];
+   gchar *ret;
+ 
+   if (argument_count != 1)
+@@ -62,7 +67,7 @@ seed_os_realpath (SeedContext ctx,
+       EXPECTED_EXCEPTION("os.realpath", "1 argument");
+     }
+   arg = seed_value_to_string (ctx, arguments[0], exception);
+-  ret = canonicalize_file_name(arg);
++  ret = realpath(arg, resolved_path);
+   g_free (arg);
+ 
+   return seed_value_from_string (ctx, ret, exception);
+@@ -702,6 +707,7 @@ seed_os_fdatasync (SeedContext ctx,
  		   const SeedValue arguments[],
  		   SeedException * exception)
  {
@@ -18,7 +37,7 @@
    gint fd;
  
    if (argument_count != 1)
-@@ -670,6 +674,10 @@ seed_os_fdatasync (SeedContext ctx,
+@@ -711,6 +717,10 @@ seed_os_fdatasync (SeedContext ctx,
    fd = seed_value_to_int (ctx, arguments[0], exception);
  
    return seed_value_from_int (ctx, fdatasync (fd), exception);
@@ -29,7 +48,7 @@
  }
  
  SeedValue
-@@ -1070,7 +1078,9 @@ seed_module_init(SeedEngine * eng)
+@@ -1112,7 +1122,9 @@ seed_module_init(SeedEngine * eng)
  #if defined (O_DIRECT)
    OS_DEFINE_QUICK_ENUM (O_DIRECT);
  #endif

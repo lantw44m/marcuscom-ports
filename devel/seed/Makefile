@@ -3,11 +3,11 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/seed/Makefile,v 1.1 2009/07/30 02:46:13 avl Exp $
 #
 
 PORTNAME=	seed
-PORTVERSION=	0.8.5
+PORTVERSION=	2.27.91
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
