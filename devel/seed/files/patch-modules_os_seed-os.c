@@ -1,5 +1,5 @@
---- modules/seed-os.c.orig	2009-08-10 16:23:35.000000000 -0400
-+++ modules/seed-os.c	2009-08-22 14:18:53.000000000 -0400
+--- modules/os/seed-os.c.orig	2009-08-10 16:23:35.000000000 -0400
++++ modules/os/seed-os.c	2009-08-22 14:18:53.000000000 -0400
 @@ -30,7 +30,11 @@
  #include <sys/stat.h>
  #include <sys/utsname.h>
