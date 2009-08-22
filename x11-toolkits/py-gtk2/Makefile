@@ -3,7 +3,7 @@
 # Whom:					marc@informatik.uni-bremen.de
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.62 2009/06/21 09:31:16 avl Exp $
+#   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.63 2009/08/15 16:52:42 marcus Exp $
 #
 
 PORTNAME=	gtk
@@ -26,6 +26,7 @@ RUN_DEPENDS=	${PYNUMERIC} \
 		${PYTHON_SITELIBDIR}/cairo/__init__.py:${PORTSDIR}/graphics/py-cairo \
 		${PYTHON_SITELIBDIR}/gtk-2.0/gobject/_gobject.so:${PORTSDIR}/devel/py-gobject
 
+LATEST_LINK=	py-gtk2
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack libglade2
