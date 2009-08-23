@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.135 2009/07/28 10:23:33 kwm Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.136 2009/08/13 23:25:53 kwm Exp $
 #
 
 PORTNAME=	gnome-media
 PORTVERSION=	2.27.90.fix
+PORTREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -15,8 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Multimedia applications for the GNOME 2 desktop
 
-LIB_DEPENDS=	pulse.0:${PORTSDIR}/audio/pulseaudio \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
+LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 
 USE_BZIP2=	yes
@@ -27,16 +27,23 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 GNOME_DESKTOP_VERSION=2
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop
-USE_GSTREAMER=	cdparanoia esound gconf good
+USE_GNOME=	gnomeprefix gnomehack intlhack gtk20 libxml2 libglade2 \
+		gconf2
+USE_GSTREAMER=	gconf good
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	gnome-audio-profiles.schemas \
 		gnome-sound-recorder.schemas
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|acd0c|acd0|g ; s|== "xyes|= "xyes|g' \
-		${WRKSRC}/configure
+OPTIONS=	PULSEAUDIO "Enable the PulseAudio module" on
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if defined(WITH_PULSEAUDIO)
+LIB_DEPENDS+=	pulse.0:${PORTSDIR}/audio/pulseaudio
+.else
+CONFIGURE_ARGS+=--disable-pulse
+.endif
+
+.include <bsd.port.post.mk>
