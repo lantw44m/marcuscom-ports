@@ -186,6 +186,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%DOCSDIR%%/class-gtkaccessible.html
 %%DOCSDIR%%/class-gtkaction.html
 %%DOCSDIR%%/class-gtkactiongroup.html
+%%DOCSDIR%%/class-gtkactivatable.html
 %%DOCSDIR%%/class-gtkadjustment.html
 %%DOCSDIR%%/class-gtkalignment.html
 %%DOCSDIR%%/class-gtkarrow.html
