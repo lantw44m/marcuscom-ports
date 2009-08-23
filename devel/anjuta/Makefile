@@ -3,7 +3,7 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.42 2009/07/27 22:33:45 kwm Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.43 2009/08/22 17:57:46 marcus Exp $
 #
 
 PORTNAME=	anjuta
@@ -29,7 +29,7 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		autogen:${PORTSDIR}/devel/autogen \
 		neato:${PORTSDIR}/graphics/graphviz \
 		p5-gettext>=1.05:${PORTSDIR}/devel/p5-Locale-gettext \
-		libtool:${PORTSDIR}/devel/libtool15 \
+		libtool:${PORTSDIR}/devel/libtool22 \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		exctags:${PORTSDIR}/devel/ctags
 
