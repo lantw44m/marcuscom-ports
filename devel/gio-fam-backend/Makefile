@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.35 2009/07/08 06:09:49 marcus Exp $
+#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.36 2009/07/18 19:55:47 kwm Exp $
 #
 
 PORTNAME=	gio-fam-backend
-PORTVERSION=	2.21.4
+PORTVERSION=	2.21.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
 		ftp://ftp.gtk.org/pub/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
