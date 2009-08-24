@@ -406,6 +406,7 @@ lib/evolution/%%VERSION%%/libevolution-addressbook-importers.so.0
 lib/evolution/%%VERSION%%/libevolution-cal-shared.a
 lib/evolution/%%VERSION%%/libevolution-cal-shared.la
 lib/evolution/%%VERSION%%/libevolution-cal-shared.so
+lib/evolution/%%VERSION%%/libevolution-cal-shared.so.0
 lib/evolution/%%VERSION%%/libevolution-calendar-a11y.a
 lib/evolution/%%VERSION%%/libevolution-calendar-a11y.la
 lib/evolution/%%VERSION%%/libevolution-calendar-a11y.so
@@ -2011,6 +2012,7 @@ share/locale/bn/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/bn_IN/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/bs/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ca/LC_MESSAGES/evolution-%%VERSION%%.mo
+share/locale/ca@valencia/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/cs/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/cy/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/da/LC_MESSAGES/evolution-%%VERSION%%.mo
@@ -2285,6 +2287,8 @@ share/omf/evolution/evolution-sv.omf
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
