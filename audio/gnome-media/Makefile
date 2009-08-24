@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.137 2009/08/23 00:35:12 marcus Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.138 2009/08/24 02:47:06 marcus Exp $
 #
 
 PORTNAME=	gnome-media
@@ -17,6 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Multimedia applications for the GNOME 2 desktop
 
 LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
+    		pulse.0:${PORTSDIR}/audio/pulseaudio \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 
 USE_BZIP2=	yes
@@ -30,12 +31,11 @@ GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk20 libxml2 libglade2 \
 		gconf2
 USE_GSTREAMER=	gconf good
+CONFIGURE_ARGS=	--disable-gstmix
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	gnome-audio-profiles.schemas \
 		gnome-sound-recorder.schemas
-
-OPTIONS=	PULSEAUDIO "Enable the PulseAudio module" on
 
 .include <bsd.port.mk>
