@@ -28,12 +28,12 @@ lib/libchamplain-gtk-0.3.so
 lib/libchamplain-gtk-0.3.so.3
 libdata/pkgconfig/champlain-0.3.pc
 libdata/pkgconfig/champlain-gtk-0.3.pc
+share/gtk-doc/html/libchamplain-gtk/GtkChamplainEmbed.html
 share/gtk-doc/html/libchamplain-gtk/ch01.html
 share/gtk-doc/html/libchamplain-gtk/home.png
 share/gtk-doc/html/libchamplain-gtk/index.html
 share/gtk-doc/html/libchamplain-gtk/index.sgml
 share/gtk-doc/html/libchamplain-gtk/left.png
-share/gtk-doc/html/libchamplain-gtk/libchamplain-gtk-GtkChamplainEmbed.html
 share/gtk-doc/html/libchamplain-gtk/libchamplain-gtk.devhelp
 share/gtk-doc/html/libchamplain-gtk/libchamplain-gtk.devhelp2
 share/gtk-doc/html/libchamplain-gtk/right.png

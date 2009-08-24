@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libchamplain/Makefile,v 1.1 2009/08/08 17:02:47 kwm Exp $
+#   $MCom: ports/graphics/libchamplain/Makefile,v 1.2 2009/08/10 22:23:15 kwm Exp $
 #
 
 PORTNAME=	libchamplain
-PORTVERSION=	0.3.90
+PORTVERSION=	0.3.91
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
