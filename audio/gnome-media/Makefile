@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.136 2009/08/13 23:25:53 kwm Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.137 2009/08/23 00:35:12 marcus Exp $
 #
 
 PORTNAME=	gnome-media
@@ -38,12 +38,4 @@ GCONF_SCHEMAS=	gnome-audio-profiles.schemas \
 
 OPTIONS=	PULSEAUDIO "Enable the PulseAudio module" on
 
-.include <bsd.port.pre.mk>
-
-.if defined(WITH_PULSEAUDIO)
-LIB_DEPENDS+=	pulse.0:${PORTSDIR}/audio/pulseaudio
-.else
-CONFIGURE_ARGS+=--disable-pulse
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
