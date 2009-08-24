@@ -1,21 +1,21 @@
---- configure.orig	2009-08-10 18:34:31.000000000 +0200
-+++ configure	2009-08-10 18:34:32.000000000 +0200
-@@ -15920,6 +15920,14 @@
+--- configure.orig	2009-08-24 10:39:07.000000000 +0200
++++ configure	2009-08-24 10:44:47.000000000 +0200
+@@ -15988,6 +15988,14 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
-     ;;
+ 	;;
 +*freebsd*)
-+    os_win32=no
-+    NO_UNDEFINED=''
-+    SOCKET_LIBS=''
-+    DL_LIB=''
-+    SOFTOKN3_LIB='-lsoftokn3'
-+    LIBEXECDIR_IN_SERVER_FILE="$libexecdir"
-+    ;;
- *)  os_win32=no
-     NO_UNDEFINED=''
-     SOCKET_LIBS=''
-@@ -24984,7 +24992,7 @@
++	os_win32=no
++	NO_UNDEFINED=''
++	SOCKET_LIBS=''
++	DL_LIB=''
++	SOFTOKN3_LIB='-lsoftokn3'
++	LIBEXECDIR_IN_SERVER_FILE="$libexecdir"
++	;;
+ *)
+ 	os_win32=no
+ 	NO_UNDEFINED=''
+@@ -24777,7 +24785,7 @@ idldir='${datadir}'/idl/evolution-data-s
  imagesdir='${datadir}'/pixmaps/evolution-data-server
  
  
