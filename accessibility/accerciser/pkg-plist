@@ -199,6 +199,12 @@ share/gnome/help/accerciser/fr/figures/api_browser.png
 share/gnome/help/accerciser/fr/figures/event_monitor.png
 share/gnome/help/accerciser/fr/figures/interface_viewer.png
 share/gnome/help/accerciser/fr/figures/script_recorder.png
+share/gnome/help/accerciser/it/accerciser.xml
+share/gnome/help/accerciser/it/figures/accerciser.png
+share/gnome/help/accerciser/it/figures/api_browser.png
+share/gnome/help/accerciser/it/figures/event_monitor.png
+share/gnome/help/accerciser/it/figures/interface_viewer.png
+share/gnome/help/accerciser/it/figures/script_recorder.png
 share/gnome/help/accerciser/oc/accerciser.xml
 share/gnome/help/accerciser/oc/figures/accerciser.png
 share/gnome/help/accerciser/oc/figures/api_browser.png
@@ -282,6 +288,7 @@ share/omf/accerciser/accerciser-en_GB.omf
 share/omf/accerciser/accerciser-el.omf
 share/omf/accerciser/accerciser-es.omf
 share/omf/accerciser/accerciser-fr.omf
+share/omf/accerciser/accerciser-it.omf
 share/omf/accerciser/accerciser-oc.omf
 share/omf/accerciser/accerciser-pt_BR.omf
 share/omf/accerciser/accerciser-sv.omf
@@ -292,6 +299,8 @@ share/omf/accerciser/accerciser-sv.omf
 @dirrm share/gnome/help/accerciser/pt_BR
 @dirrm share/gnome/help/accerciser/oc/figures
 @dirrm share/gnome/help/accerciser/oc
+@dirrm share/gnome/help/accerciser/it/figures
+@dirrm share/gnome/help/accerciser/it
 @dirrm share/gnome/help/accerciser/fr/figures
 @dirrm share/gnome/help/accerciser/fr
 @dirrm share/gnome/help/accerciser/es/figures
