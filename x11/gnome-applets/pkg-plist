@@ -61,7 +61,6 @@ libexec/multiload-applet-2
 libexec/null_applet
 libexec/stickynotes_applet
 libexec/trashapplet
-%%CPUFREQ%%share/PolicyKit/policy/org.gnome.cpufreqselector.policy
 %%CPUFREQ%%share/dbus-1/system-services/org.gnome.CPUFreqSelector.service
 share/gnome-2.0/ui/GNOME_AccessxApplet.xml
 %%BATTERY%%share/gnome-2.0/ui/GNOME_BattstatApplet.xml
@@ -1539,8 +1538,10 @@ share/locale/be@latin/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/br/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-applets-2.0.mo
+share/locale/ca@valencia/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/crh/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-applets-2.0.mo
 share/locale/cy/LC_MESSAGES/gnome-applets-2.0.mo
@@ -1923,6 +1924,7 @@ share/pixmaps/stickynotes/locked.png
 share/pixmaps/stickynotes/resize_se.png
 share/pixmaps/stickynotes/resize_sw.png
 share/pixmaps/stickynotes/unlocked.png
+%%CPUFREQ%%share/polkit-1/actions/org.gnome.cpufreqselector.policy
 share/xmodmap/base.xml
 share/xmodmap/xmodmap.am
 share/xmodmap/xmodmap.ar
@@ -2579,6 +2581,8 @@ share/xmodmap/xmodmap.yu
 @dirrmtry share/locale/es_AR
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
