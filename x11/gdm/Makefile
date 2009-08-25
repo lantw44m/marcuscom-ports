@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.151 2009/07/20 08:27:19 kwm Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.152 2009/08/11 00:06:55 marcus Exp $
 #
 
 PORTNAME=	gdm
@@ -39,6 +39,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -DHAS_SA_LEN" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
+		LIBS="-lm" \
 		GTKDOC="false"
 
 SUB_FILES+=	gdm.pam
