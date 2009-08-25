@@ -101,6 +101,7 @@ share/icons/hicolor/256x256/apps/cheese.png
 share/icons/hicolor/32x32/apps/cheese.png
 share/icons/hicolor/48x48/apps/cheese.png
 share/icons/hicolor/scalable/apps/cheese.svg
+share/locale/af/LC_MESSAGES/cheese.mo
 share/locale/ar/LC_MESSAGES/cheese.mo
 share/locale/as/LC_MESSAGES/cheese.mo
 share/locale/ast/LC_MESSAGES/cheese.mo
