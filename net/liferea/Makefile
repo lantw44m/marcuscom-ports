@@ -61,7 +61,7 @@ PLIST_SUB+=	GTKHTML="@comment "
 .endif
 
 .ifdef WITH_WEBKIT
-LIB_DEPENDS+=	webkit-1.0.10:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS+=	webkit-1.0.11:${PORTSDIR}/www/webkit-gtk2
 CONFIGURE_ARGS+=--enable-webkit
 PLIST_SUB+=	WEBKIT=""
 .else

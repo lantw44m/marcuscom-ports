@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.116 2009/07/19 21:02:06 marcus Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.117 2009/07/28 13:05:57 avl Exp $
 #
 
 PORTNAME=	epiphany-extensions
 PORTVERSION=	2.27.5
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +18,7 @@ COMMENT=	A set of add-ons for the Epiphany web browser
 
 BUILD_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
-    		webkit-1.0.10:${PORTSDIR}/www/webkit-gtk2
+    		webkit-1.0.11:${PORTSDIR}/www/webkit-gtk2
 RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 
 USE_GETTEXT=	yes

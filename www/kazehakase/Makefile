@@ -3,7 +3,7 @@
 # Whom:			michael johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#   $MCom: ports/www/kazehakase/Makefile,v 1.20 2009/07/15 11:42:51 avl Exp $
+#   $MCom: ports/www/kazehakase/Makefile,v 1.21 2009/08/16 23:20:18 kwm Exp $
 #
 
 PORTNAME=	kazehakase
@@ -40,7 +40,7 @@ RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/uconv.so:${PORTSDIR}/japanese/ruby-uconv
 .include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 
 .if defined(WITH_WEBKIT)
-LIB_DEPENDS+=	webkit-1.0.10:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS+=	webkit-1.0.11:${PORTSDIR}/www/webkit-gtk2
 PLIST_SUB+=	WEBKIT=""
 .else
 PLIST_SUB+=	WEBKIT="@comment "
