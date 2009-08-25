@@ -255,6 +255,15 @@ share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-lookup.png
 share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-preferences-print.png
 share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-preferences-source.png
 share/gnome/help/gnome-dictionary/ca/gnome-dictionary.xml
+share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-add-source.png
+share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-applet-window.png
+share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-applet.png
+share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-application.png
+share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-find.png
+share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-lookup.png
+share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-preferences-print.png
+share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-preferences-source.png
+share/gnome/help/gnome-dictionary/cs/gnome-dictionary.xml
 share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-add-source.png
 share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-applet-window.png
 share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-applet.png
@@ -368,6 +377,8 @@ share/gnome/help/gnome-search-tool/C/gnome-search-tool.xml
 share/gnome/help/gnome-search-tool/C/legal.xml
 share/gnome/help/gnome-search-tool/ca/figures/gnome-search-tool_window.png
 share/gnome/help/gnome-search-tool/ca/gnome-search-tool.xml
+share/gnome/help/gnome-search-tool/cs/figures/gnome-search-tool_window.png
+share/gnome/help/gnome-search-tool/cs/gnome-search-tool.xml
 share/gnome/help/gnome-search-tool/de/figures/gnome-search-tool_window.png
 share/gnome/help/gnome-search-tool/de/gnome-search-tool.xml
 share/gnome/help/gnome-search-tool/el/figures/gnome-search-tool_window.png
@@ -447,6 +458,7 @@ share/omf/baobab/baobab-zh_HK.omf
 share/omf/baobab/baobab-zh_TW.omf
 share/omf/gnome-dictionary/gnome-dictionary-C.omf
 share/omf/gnome-dictionary/gnome-dictionary-ca.omf
+share/omf/gnome-dictionary/gnome-dictionary-cs.omf
 share/omf/gnome-dictionary/gnome-dictionary-de.omf
 share/omf/gnome-dictionary/gnome-dictionary-el.omf
 share/omf/gnome-dictionary/gnome-dictionary-en_GB.omf
@@ -461,6 +473,7 @@ share/omf/gnome-dictionary/gnome-dictionary-sv.omf
 share/omf/gnome-dictionary/gnome-dictionary-uk.omf
 share/omf/gnome-search-tool/gnome-search-tool-C.omf
 share/omf/gnome-search-tool/gnome-search-tool-ca.omf
+share/omf/gnome-search-tool/gnome-search-tool-cs.omf
 share/omf/gnome-search-tool/gnome-search-tool-de.omf
 share/omf/gnome-search-tool/gnome-search-tool-el.omf
 share/omf/gnome-search-tool/gnome-search-tool-en_GB.omf
@@ -502,6 +515,7 @@ share/locale/be@latin/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-utils-2.0.mo
+share/locale/br/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-utils-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-utils-2.0.mo
@@ -635,6 +649,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/gnome-search-tool/el
 @dirrm share/gnome/help/gnome-search-tool/de/figures
 @dirrm share/gnome/help/gnome-search-tool/de
+@dirrm share/gnome/help/gnome-search-tool/cs/figures
+@dirrm share/gnome/help/gnome-search-tool/cs
 @dirrm share/gnome/help/gnome-search-tool/ca/figures
 @dirrm share/gnome/help/gnome-search-tool/ca
 @dirrm share/gnome/help/gnome-search-tool/C/figures
@@ -664,6 +680,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-utils-2.0.mo
 @dirrm share/gnome/help/gnome-dictionary/el
 @dirrm share/gnome/help/gnome-dictionary/de/figures
 @dirrm share/gnome/help/gnome-dictionary/de
+@dirrm share/gnome/help/gnome-dictionary/cs/figures
+@dirrm share/gnome/help/gnome-dictionary/cs
 @dirrm share/gnome/help/gnome-dictionary/ca/figures
 @dirrm share/gnome/help/gnome-dictionary/ca
 @dirrm share/gnome/help/gnome-dictionary/C/figures
