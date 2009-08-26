@@ -3,6 +3,7 @@ bin/gnome-session-properties
 bin/gnome-session-save
 bin/gnome-wm
 etc/xdg/autostart/at-spi-registryd-wrapper.desktop
+etc/xdg/autostart/gnome-session-splash.desktop
 etc/xdg/autostart/gnome-settings-daemon-helper.desktop
 lib/gnome-session/helpers/at-spi-registryd-wrapper
 lib/gnome-session/helpers/gnome-session-splash
@@ -10,7 +11,6 @@ lib/gnome-session/helpers/gnome-settings-daemon-helper
 share/applications/session-properties.desktop
 %%DATADIR%%/gsm-inhibit-dialog.ui
 %%DATADIR%%/session-properties.ui
-share/gnome/autostart/gnome-session-splash.desktop
 share/icons/hicolor/16x16/apps/session-properties.png
 share/icons/hicolor/22x22/apps/session-properties.png
 share/icons/hicolor/24x24/apps/session-properties.png
