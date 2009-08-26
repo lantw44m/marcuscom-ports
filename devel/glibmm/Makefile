@@ -3,11 +3,11 @@
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glibmm/Makefile,v 1.76 2009/07/19 19:46:43 marcus Exp $
+#   $MCom: ports/devel/glibmm/Makefile,v 1.77 2009/07/27 21:39:04 kwm Exp $
 #
 
 PORTNAME=	glibmm
-PORTVERSION=	2.21.3
+PORTVERSION=	2.21.4
 PORTREVISION?=	0
 PORTEPOCH=	1
 CATEGORIES=	devel
@@ -31,16 +31,12 @@ USE_GNOME=	gnomehack glib20 ltverhack
 USE_PERL5=	yes
 USE_AUTOTOOLS=	libtool:22
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--enable-static
+CONFIGURE_ARGS=	--enable-static --disable-documentation
 
 post-patch:
 .for d in docs examples tests
 	@${REINPLACE_CMD} -e '/^SUBDIRS = /s/${d}//' ${WRKSRC}/Makefile.in
 .endfor
-
-post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/docs/reference/beautify_docs.pl \
-		${PREFIX}/lib/glibmm-2.4/proc
 
 .include <bsd.port.mk>
 
