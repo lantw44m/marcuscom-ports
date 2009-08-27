@@ -3,12 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.43 2009/08/22 17:57:46 marcus Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.44 2009/08/23 03:03:24 mezz Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.27.5.0
-PORTREVISION=	1
+PORTVERSION=	2.27.91.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -18,8 +17,7 @@ COMMENT=	Integrated Development Environment for C and C++
 
 BUILD_DEPENDS=	autogen:${PORTSDIR}/devel/autogen \
 		bash:${PORTSDIR}/shells/bash \
-		p5-gettext>=1.05:${PORTSDIR}/devel/p5-Locale-gettext \
-		neato:${PORTSDIR}/graphics/graphviz
+		p5-gettext>=1.05:${PORTSDIR}/devel/p5-Locale-gettext
 LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
 		gladeui-1.9:${PORTSDIR}/devel/glade3 \
 		neon.28:${PORTSDIR}/www/neon28 \
@@ -27,7 +25,6 @@ LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
 		gdl-1.2:${PORTSDIR}/x11-toolkits/gdl
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		autogen:${PORTSDIR}/devel/autogen \
-		neato:${PORTSDIR}/graphics/graphviz \
 		p5-gettext>=1.05:${PORTSDIR}/devel/p5-Locale-gettext \
 		libtool:${PORTSDIR}/devel/libtool22 \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \

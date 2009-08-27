@@ -6,6 +6,7 @@ bin/gbf-mkfile-parse
 include/libanjuta-1.0/libanjuta/anjuta-async-command.h
 include/libanjuta-1.0/libanjuta/anjuta-async-notify.h
 include/libanjuta-1.0/libanjuta/anjuta-command.h
+include/libanjuta-1.0/libanjuta/anjuta-command-queue.h
 include/libanjuta-1.0/libanjuta/anjuta-convert.h
 include/libanjuta-1.0/libanjuta/anjuta-debug.h
 include/libanjuta-1.0/libanjuta/anjuta-encodings.h
@@ -181,7 +182,6 @@ lib/anjuta/libanjuta-tools.la
 lib/anjuta/libanjuta-tools.so
 lib/anjuta/libfile-manager.la
 lib/anjuta/libfile-manager.so
-lib/anjuta/libfile-manager.so.0
 lib/anjuta/libgbf-am.la
 lib/anjuta/libgbf-am.so
 lib/anjuta/libgbf-mkfile.la
@@ -210,7 +210,6 @@ share/anjuta/gdb.init
 share/anjuta/glade/anjuta-build-basic-autotools-plugin.ui
 share/anjuta/glade/anjuta-class-gen-plugin.ui
 share/anjuta/glade/anjuta-cvs-plugin.ui
-share/anjuta/glade/anjuta-gdb.glade
 share/anjuta/glade/anjuta-debug-manager.ui
 share/anjuta/glade/anjuta-document-manager.ui
 share/anjuta/glade/anjuta-editor-sourceview.ui
@@ -306,6 +305,13 @@ share/anjuta/project/java/po/POTFILES.in
 share/anjuta/project/java/project.anjuta
 share/anjuta/project/java/src/Makefile.am.tpl
 share/anjuta/project/java/src/main.java
+share/anjuta/project/library.wiz
+share/anjuta/project/library/configure.ac.tpl
+share/anjuta/project/library/po/POTFILES.in
+share/anjuta/project/library/src/Makefile.am.tpl
+share/anjuta/project/library/src/lib.c
+share/anjuta/project/library/src/lib.h
+share/anjuta/project/library/src/library.pc.in
 share/anjuta/project/licenses/BSD
 share/anjuta/project/licenses/GPL
 share/anjuta/project/licenses/LGPL
@@ -916,6 +922,7 @@ share/locale/be/LC_MESSAGES/anjuta.mo
 share/locale/be@latin/LC_MESSAGES/anjuta.mo
 share/locale/bg/LC_MESSAGES/anjuta.mo
 share/locale/ca/LC_MESSAGES/anjuta.mo
+share/locale/ca@valencia/LC_MESSAGES/anjuta.mo
 share/locale/cs/LC_MESSAGES/anjuta.mo
 share/locale/da/LC_MESSAGES/anjuta.mo
 share/locale/de/LC_MESSAGES/anjuta.mo
@@ -1192,6 +1199,9 @@ share/pixmaps/anjuta/vcs-updated.png
 @dirrm share/anjuta/project/minimal
 @dirrm share/anjuta/project/m4
 @dirrm share/anjuta/project/licenses
+@dirrm share/anjuta/project/library/src
+@dirrm share/anjuta/project/library/po
+@dirrm share/anjuta/project/library
 @dirrm share/anjuta/project/java/src
 @dirrm share/anjuta/project/java/po
 @dirrm share/anjuta/project/java
@@ -1249,5 +1259,7 @@ share/pixmaps/anjuta/vcs-updated.png
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
