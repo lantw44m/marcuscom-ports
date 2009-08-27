@@ -125,12 +125,12 @@ share/doc/libbrasero-burn/object-tree.html
 share/doc/libbrasero-burn/right.png
 share/doc/libbrasero-burn/style.css
 share/doc/libbrasero-burn/up.png
-share/doc/libbrasero-media/BraseroDrive.html
-share/doc/libbrasero-media/BraseroDriveSelection.html
-share/doc/libbrasero-media/BraseroMedium.html
-share/doc/libbrasero-media/BraseroMediumMonitor.html
-share/doc/libbrasero-media/BraseroMediumSelection.html
-share/doc/libbrasero-media/BraseroVolume.html
+share/doc/libbrasero-media/libbrasero-media-BraseroDrive.html
+share/doc/libbrasero-media/libbrasero-media-BraseroDriveSelection.html
+share/doc/libbrasero-media/libbrasero-media-BraseroMedium.html
+share/doc/libbrasero-media/libbrasero-media-BraseroMediumMonitor.html
+share/doc/libbrasero-media/libbrasero-media-BraseroMediumSelection.html
+share/doc/libbrasero-media/libbrasero-media-BraseroVolume.html
 share/doc/libbrasero-media/api-index-full.html
 share/doc/libbrasero-media/ch01.html
 share/doc/libbrasero-media/home.png
@@ -383,6 +383,7 @@ share/locale/sv/LC_MESSAGES/brasero.mo
 share/locale/ta/LC_MESSAGES/brasero.mo
 share/locale/te/LC_MESSAGES/brasero.mo
 share/locale/th/LC_MESSAGES/brasero.mo
+share/locale/tr/LC_MESSAGES/brasero.mo
 share/locale/uk/LC_MESSAGES/brasero.mo
 share/locale/vi/LC_MESSAGES/brasero.mo
 share/locale/zh_CN/LC_MESSAGES/brasero.mo
