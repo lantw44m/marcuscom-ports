@@ -3,11 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/lang/gjs/Makefile,v 1.1 2009/08/16 21:50:41 kwm Exp $
 #
 
 PORTNAME=	gjs
-PORTVERSION=	0.3
+PORTVERSION=	0.4
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -26,6 +26,8 @@ USE_PYTHON=	build
 USE_AUTOTOOLS=	libtool:22
 USE_GNOME=	gnomeprefix gnomehack intlhack glib20 ltverhack
 USE_LDCONFIG=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/bin/python|/usr/bin/env python|g' \
