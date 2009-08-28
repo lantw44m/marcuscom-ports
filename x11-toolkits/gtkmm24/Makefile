@@ -3,11 +3,11 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.49 2009/07/19 10:44:59 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtkmm24/Makefile,v 1.50 2009/08/26 18:01:48 marcus Exp $
 #
 
 PORTNAME=	gtkmm
-PORTVERSION=	2.17.9
+PORTVERSION=	2.17.9.3
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -32,11 +32,8 @@ USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack gtk20
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--disable-demos \
-		--disable-documentation \
-		--disable-examples \
-		--enable-static=yes \
-		--with-sigc-prefix=${LOCALBASE}
+CONFIGURE_ARGS=	--disable-documentation \
+		--enable-static=yes
 
 PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
 
