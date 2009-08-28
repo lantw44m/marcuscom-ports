@@ -1,0 +1,11 @@
+--- JavaScriptCore/wtf/Platform.h.orig	2009-08-28 13:44:10.000000000 -0400
++++ JavaScriptCore/wtf/Platform.h	2009-08-28 13:46:18.000000000 -0400
+@@ -601,7 +601,7 @@
+ #endif
+ 
+ #if !defined(WTF_USE_JSVALUE64) && !defined(WTF_USE_JSVALUE32) && !defined(WTF_USE_JSVALUE32_64)
+-#if PLATFORM(X86_64) && (PLATFORM(MAC) || PLATFORM(LINUX))
++#if PLATFORM(X86_64) && (PLATFORM(MAC) || PLATFORM(LINUX) || PLATFORM(FREEBSD))
+ #define WTF_USE_JSVALUE64 1
+ #elif PLATFORM(ARM) || PLATFORM(PPC64)
+ #define WTF_USE_JSVALUE32 1
