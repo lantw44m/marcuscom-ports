@@ -4,8 +4,8 @@ include/eog-2.20/eog/eog-debug.h
 include/eog-2.20/eog/eog-dialog.h
 include/eog-2.20/eog/eog-enums.h
 include/eog-2.20/eog/eog-error-message-area.h
-include/eog-2.20/eog/eog-exif-details.h
-include/eog-2.20/eog/eog-exif-util.h
+%%EXIFEXEMPI%%include/eog-2.20/eog/eog-exif-details.h
+%%EXIF%%include/eog-2.20/eog/eog-exif-util.h
 include/eog-2.20/eog/eog-file-chooser.h
 include/eog-2.20/eog/eog-image-save-info.h
 include/eog-2.20/eog/eog-image.h

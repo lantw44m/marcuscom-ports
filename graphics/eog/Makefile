@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.100 2009/08/16 05:32:34 marcus Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.101 2009/08/25 08:07:56 kwm Exp $
 #
 
 PORTNAME=	eog
 PORTVERSION=	2.27.91
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -22,6 +23,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack librsvg2 desktopfileutils \
 		gnomedesktop
+WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
@@ -34,9 +36,28 @@ GCONF_SCHEMAS=	eog.schemas
 
 .include <bsd.port.pre.mk>
 
+_WITH_EXIF=	no
+_WITH_EXEMPI=	no
+
 .if !defined(WITHOUT_EXIF) || (exists(${LOCALBASE}/lib/libexif.so.12) || \
 	defined(WITH_EXIF))
 LIB_DEPENDS+=	exif.12:${PORTSDIR}/graphics/libexif
+PLIST_SUB+=	EXIF=""
+_WITH_EXIF=	yes
+.else
+PLIST_SUB+=	EXIF="@comment "
+.endif
+
+.if !defined(WITHOUT_EXEMPI) || (exists(${LOCALBASE}/lib/libexempi.so)) || \
+    	defined(WITH_EXEMPI)
+LIB_DEPENDS+=	exempi.3:${PORTSDIR}/textproc/exempi
+_WITH_EXEMPI=	yes
+.endif
+
+.if ${_WITH_EXIF}=="yes" || ${_WITH_EXEMPI}=="yes"
+PLIST_SUB+=	EXIFEXEMPI=""
+.else
+PLIST_SUB+=	EXIFEXEMPI="@comment "
 .endif
 
 .if ${HAVE_GNOME:Mpygnome2}!=""
