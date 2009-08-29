@@ -3,11 +3,11 @@
 # Whom:					Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/gir-repository/Makefile,v 1.1 2009/08/16 21:51:47 kwm Exp $
 #
 
 PORTNAME=	gir-repository
-PORTVERSION=	0.6.3
+PORTVERSION=	0.6.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2

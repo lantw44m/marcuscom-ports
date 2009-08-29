@@ -3,14 +3,23 @@ lib/girepository-1.0/Avahi-0.6.typelib
 lib/girepository-1.0/AvahiCore-0.6.typelib
 lib/girepository-1.0/Babl-0.0.typelib
 lib/girepository-1.0/DBus-1.0.typelib
+lib/girepository-1.0/Everything-1.0.typelib
 lib/girepository-1.0/GConf-2.0.typelib
 lib/girepository-1.0/Gdk-2.0.typelib
 lib/girepository-1.0/GdkPixbuf-2.0.typelib
+lib/girepository-1.0/GIRepository-2.0.typelib
+lib/girepository-1.0/GL-1.0.typelib
+lib/girepository-1.0/GLib-2.0.typelib
 lib/girepository-1.0/GMenu-2.0.typelib
+lib/girepository-1.0/GModule-2.0.typelib
+lib/girepository-1.0/GObject-2.0.typelib
+lib/girepository-1.0/Gio-2.0.typelib
 lib/girepository-1.0/GnomeKeyring-2.0.typelib
 lib/girepository-1.0/GooCanvas-0.10.typelib
 lib/girepository-1.0/Gtk-2.0.typelib
+lib/girepository-1.0/GtkClutter-0.10.typelib
 lib/girepository-1.0/GtkSource-2.2.typelib
+lib/girepository-1.0/Json-1.0.typelib
 lib/girepository-1.0/Nautilus-1.0.typelib
 lib/girepository-1.0/Notify-0.4.typelib
 lib/girepository-1.0/Pango-1.0.typelib
@@ -23,6 +32,13 @@ lib/girepository-1.0/Soup-2.4.typelib
 lib/girepository-1.0/Unique-1.0.typelib
 lib/girepository-1.0/Vte-1.0.typelib
 lib/girepository-1.0/Wnck-1.0.typelib
+lib/girepository-1.0/cairo-1.0.typelib
+lib/girepository-1.0/fontconfig-2.0.typelib
+lib/girepository-1.0/freetype2-2.0.typelib
+lib/girepository-1.0/libxml2-2.0.typelib
+lib/girepository-1.0/xfixes-4.0.typelib
+lib/girepository-1.0/xft-2.0.typelib
+lib/girepository-1.0/xlib-2.0.typelib
 lib/libgirepo-DBus-custom.a
 lib/libgirepo-DBus-custom.la
 lib/libgirepo-DBus-custom.so
@@ -37,8 +53,15 @@ share/gir-1.0/Avahi-0.6.gir
 share/gir-1.0/AvahiCore-0.6.gir
 share/gir-1.0/Babl-0.0.gir
 share/gir-1.0/DBus-1.0.gir
+share/gir-1.0/Everything-1.0.gir
 share/gir-1.0/GConf-2.0.gir
+share/gir-1.0/GIRepository-2.0.gir
+share/gir-1.0/GL-1.0.gir
+share/gir-1.0/GLib-2.0.gir
 share/gir-1.0/GMenu-2.0.gir
+share/gir-1.0/GModule-2.0.gir
+share/gir-1.0/GObject-2.0.gir
+share/gir-1.0/Gio-2.0.gir
 share/gir-1.0/GnomeKeyring-2.0.gir
 share/gir-1.0/GooCanvas-0.10.gir
 share/gir-1.0/Gdk-2.0.gir
@@ -57,5 +80,12 @@ share/gir-1.0/Soup-2.4.gir
 share/gir-1.0/Unique-1.0.gir
 share/gir-1.0/Vte-1.0.gir
 share/gir-1.0/Wnck-1.0.gir
+share/gir-1.0/cairo-1.0.gir
+share/gir-1.0/fontconfig-2.0.gir
+share/gir-1.0/freetype2-2.0.gir
+share/gir-1.0/libxml2-2.0.gir
+share/gir-1.0/xfixes-4.0.gir
+share/gir-1.0/xft-2.0.gir
+share/gir-1.0/xlib-2.0.gir
 @dirrm lib/girepository-1.0
 @dirrm share/gir-1.0
