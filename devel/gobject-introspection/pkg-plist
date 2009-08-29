@@ -62,6 +62,9 @@ lib/gobject-introspection/giscanner/odict.pyo
 lib/gobject-introspection/giscanner/scannermain.py
 lib/gobject-introspection/giscanner/scannermain.pyc
 lib/gobject-introspection/giscanner/scannermain.pyo
+lib/gobject-introspection/giscanner/shlibs.py
+lib/gobject-introspection/giscanner/shlibs.pyc
+lib/gobject-introspection/giscanner/shlibs.pyo
 lib/gobject-introspection/giscanner/sourcescanner.py
 lib/gobject-introspection/giscanner/sourcescanner.pyc
 lib/gobject-introspection/giscanner/sourcescanner.pyo
@@ -83,6 +86,7 @@ lib/libgirepository-everything-1.0.la
 lib/libgirepository-everything-1.0.so
 lib/libgirepository-everything-1.0.so.1
 libdata/pkgconfig/gobject-introspection-1.0.pc
+libdata/pkgconfig/gobject-introspection-no-export-1.0.pc
 share/aclocal/introspection.m4
 share/gir-1.0/Everything-1.0.gir
 share/gir-1.0/GIRepository-2.0.gir
