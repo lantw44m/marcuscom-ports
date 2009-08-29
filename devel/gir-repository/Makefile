@@ -3,11 +3,12 @@
 # Whom:					Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gir-repository/Makefile,v 1.1 2009/08/16 21:51:47 kwm Exp $
+#   $MCom: ports/devel/gir-repository/Makefile,v 1.2 2009/08/29 23:12:13 marcus Exp $
 #
 
 PORTNAME=	gir-repository
 PORTVERSION=	0.6.4
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -21,7 +22,8 @@ LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		avahi-gobject.0:${PORTSDIR}/net/avahi-app \
 		goocanvas.3:${PORTSDIR}/graphics/goocanvas \
 		poppler-glib.4:${PORTSDIR}/graphics/poppler-gtk \
-		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
+		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring \
+		webkit-1.0.11:${PORTSDIR}/www/webkit-gtk2
 
 USE_BZIP2=	yes
 USE_GSTREAMER=	yes
@@ -32,12 +34,5 @@ USE_PYTHON=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:22
-
-post-patch:
-# Make configure not detect Webkit or gstreamer it doesn't build.
-	@${REINPLACE_CMD} -e 's|have_webkit=true|have_webkit=false|g' \
-		-e 's|have_gstreamer_plugins_base=true|have_gstreamer_plugins_base=false|g' \
-		-e 's|have_gstreamer=true|have_gstreamer=false|g' \
-		${WRKSRC}/configure
 
 .include <bsd.port.mk>
