@@ -9,6 +9,7 @@ include/mutter/mutter-private/common.h
 include/mutter/mutter-private/compositor-mutter.h
 include/mutter/mutter-private/compositor.h
 include/mutter/mutter-private/display.h
+include/mutter/mutter-private/errors.h
 include/mutter/mutter-private/gradient.h
 include/mutter/mutter-private/group.h
 include/mutter/mutter-private/keybindings.h
