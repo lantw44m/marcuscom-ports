@@ -1,0 +1,11 @@
+--- clutter/cogl/Makefile.in.orig	2009-08-29 21:15:02.000000000 -0400
++++ clutter/cogl/Makefile.in	2009-08-29 21:15:15.000000000 -0400
+@@ -759,7 +759,7 @@ cogl-$(CLUTTER_COGL)-$(CLUTTER_API_VERSI
+ @HAVE_INTROSPECTION_TRUE@		--c-include='cogl/cogl.h' \
+ @HAVE_INTROSPECTION_TRUE@		--include=GL-1.0 \
+ @HAVE_INTROSPECTION_TRUE@		--include=GObject-2.0 \
+-@HAVE_INTROSPECTION_TRUE@		--library=clutter-cogl \
++@HAVE_INTROSPECTION_TRUE@		--library=libclutter-cogl.la \
+ @HAVE_INTROSPECTION_TRUE@		--libtool="$(top_builddir)/libtool" \
+ @HAVE_INTROSPECTION_TRUE@		--pkg gobject-2.0 \
+ @HAVE_INTROSPECTION_TRUE@		--output $@ \

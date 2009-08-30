@@ -1,0 +1,11 @@
+--- clutter/json/Makefile.in.orig	2009-08-29 21:16:07.000000000 -0400
++++ clutter/json/Makefile.in	2009-08-29 21:16:19.000000000 -0400
+@@ -640,7 +640,7 @@ uninstall-am: uninstall-clutterjsonHEADE
+ @HAVE_INTROSPECTION_TRUE@	$(INTROSPECTION_SCANNER) -v --namespace ClutterJson --nsversion=@CLUTTER_API_VERSION@ \
+ @HAVE_INTROSPECTION_TRUE@		--add-include-path=$(srcdir) --add-include-path=. \
+ @HAVE_INTROSPECTION_TRUE@		--include=GObject-2.0 \
+-@HAVE_INTROSPECTION_TRUE@		--library=clutter-json \
++@HAVE_INTROSPECTION_TRUE@		--library=libclutter-json.la \
+ @HAVE_INTROSPECTION_TRUE@		--libtool="$(top_builddir)/libtool" \
+ @HAVE_INTROSPECTION_TRUE@		--pkg gobject-2.0 \
+ @HAVE_INTROSPECTION_TRUE@		--output $@ \
