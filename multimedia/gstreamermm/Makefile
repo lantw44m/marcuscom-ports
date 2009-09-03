@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/multimedia/gstreamermm/Makefile,v 1.15 2009/08/08 20:04:28 kwm Exp $
-#    $MCom: ports/multimedia/gstreamermm/Makefile,v 1.2 2008/03/15 21:09:37 ahze Exp $
+#    $MCom: ports/multimedia/gstreamermm/Makefile,v 1.4 2009/08/21 18:46:24 kwm Exp $
 
 PORTNAME=	gstreamermm
-PORTVERSION=	0.10.4
+PORTVERSION=	0.10.5
 CATEGORIES=	multimedia
 MASTER_SITES=	GNOME
 
