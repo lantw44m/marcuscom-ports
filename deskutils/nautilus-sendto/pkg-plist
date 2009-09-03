@@ -5,8 +5,6 @@ lib/nautilus-sendto/plugins/libnstburn.la
 lib/nautilus-sendto/plugins/libnstburn.so
 lib/nautilus-sendto/plugins/libnstempathy.la
 lib/nautilus-sendto/plugins/libnstempathy.so
-lib/nautilus-sendto/plugins/libnstevolution.la
-lib/nautilus-sendto/plugins/libnstevolution.so
 %%PIDGIN%%lib/nautilus-sendto/plugins/libnstpidgin.la
 %%PIDGIN%%lib/nautilus-sendto/plugins/libnstpidgin.so
 lib/nautilus-sendto/plugins/libnstremovable_devices.la

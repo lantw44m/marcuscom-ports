@@ -2,11 +2,11 @@
 # Date created:		2004-12-03
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/nautilus-sendto/Makefile,v 1.34 2009/07/31 13:49:58 dinoex Exp $
-#    $MCom: ports-stable/deskutils/nautilus-sendto/Makefile,v 1.4 2009/04/20 06:12:55 marcus Exp $
+# $FreeBSD$
+#    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.18 2009/08/01 20:40:08 marcus Exp $
 
 PORTNAME=	nautilus-sendto
-PORTVERSION=	1.1.6
+PORTVERSION=	1.1.7
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 
