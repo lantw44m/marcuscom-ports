@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.34 2009/08/27 17:31:18 marcus Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.35 2009/08/28 20:59:54 marcus Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.27.91.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -83,5 +83,7 @@ PLIST_SUB+=	ADIUM="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${datadir}/gtk-doc/html|${DOCSDIR}|g ; \
 		s|-Werror||g' ${WRKSRC}/configure
-
+	@${REINPLACE_CMD} -e 's|libmissioncontrol|libmcclient|g' \
+		${WRKSRC}/libempathy/libempathy.pc.in \
+		${WRKSRC}/libempathy-gtk/libempathy-gtk.pc.in
 .include <bsd.port.post.mk>
