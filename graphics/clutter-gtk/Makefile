@@ -15,7 +15,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GTK+ Integration library for Clutter
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		${LOCALBASE}/share/gir-1.0/PangoCairo-1.0.gir:${PORTSDIR}/devel/gir-repository
+		${LOCALBASE}/share/gir-1.0/Gtk-2.0.gir:${PORTSDIR}/devel/gir-repository
 LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 
 USE_BZIP2=	yes
