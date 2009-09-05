@@ -3,6 +3,7 @@ lib/gnome-shell/Big-1.0.typelib
 lib/gnome-shell/Shell-0.1.typelib
 share/applications/gnome-shell.desktop
 %%DATADIR%%/images/add-workspace.svg
+%%DATADIR%%/images/back.svg
 %%DATADIR%%/images/close-black.svg
 %%DATADIR%%/images/close.svg
 %%DATADIR%%/images/info.svg
@@ -33,6 +34,7 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/js/ui/workspaces.js
 share/locale/ca/LC_MESSAGES/gnome-shell.mo
 share/locale/cs/LC_MESSAGES/gnome-shell.mo
+share/locale/da/LC_MESSAGES/gnome-shell.mo
 share/locale/de/LC_MESSAGES/gnome-shell.mo
 share/locale/es/LC_MESSAGES/gnome-shell.mo
 share/locale/fr/LC_MESSAGES/gnome-shell.mo
@@ -43,10 +45,14 @@ share/locale/it/LC_MESSAGES/gnome-shell.mo
 share/locale/ko/LC_MESSAGES/gnome-shell.mo
 share/locale/nb/LC_MESSAGES/gnome-shell.mo
 share/locale/nl/LC_MESSAGES/gnome-shell.mo
+share/locale/pa/LC_MESSAGES/gnome-shell.mo
 share/locale/pl/LC_MESSAGES/gnome-shell.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-shell.mo
 share/locale/sv/LC_MESSAGES/gnome-shell.mo
 share/locale/tr/LC_MESSAGES/gnome-shell.mo
+share/locale/zh_CN/LC_MESSAGES/gnome-shell.mo
+@dirrm share/locale/zh_CN/LC_MESSAGES
+@dirrm share/locale/zh_CN
 @dirrm share/locale/pl/LC_MESSAGES
 @dirrm share/locale/pl
 @dirrm share/locale/ko/LC_MESSAGES
