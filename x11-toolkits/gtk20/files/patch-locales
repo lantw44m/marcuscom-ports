@@ -1,0 +1,22 @@
+--- po/Makefile.in.in.orig	2009-09-06 12:02:56.000000000 +0200
++++ po/Makefile.in.in	2009-09-06 12:03:23.000000000 +0200
+@@ -126,7 +126,7 @@ install-data: install-data-@USE_NLS@
+ install-data-no: all
+ install-data-yes: all
+ 	$(mkdir_p) $(DESTDIR)$(datadir); \
+-	@catalogs='$(CATALOGS)'; \
++	catalogs='$(CATALOGS)'; \
+ 	for cat in $$catalogs; do \
+ 	  cat=`basename $$cat`; \
+ 	  case "$$cat" in \
+--- po-properties/Makefile.in.in.orig	2009-09-06 12:02:56.000000000 +0200
++++ po-properties/Makefile.in.in	2009-09-06 12:03:23.000000000 +0200
+@@ -107,7 +107,7 @@ install-data: install-data-@USE_NLS@
+ install-data-no: all
+ install-data-yes: all
+ 	$(mkdir_p) $(DESTDIR)$(datadir); \
+-	@catalogs='$(CATALOGS)'; \
++	catalogs='$(CATALOGS)'; \
+ 	for cat in $$catalogs; do \
+ 	  cat=`basename $$cat`; \
+ 	  case "$$cat" in \
