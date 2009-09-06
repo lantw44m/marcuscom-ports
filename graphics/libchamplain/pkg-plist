@@ -18,6 +18,8 @@ include/libchamplain-0.3/champlain/champlain-zoom-level.h
 include/libchamplain-0.3/champlain/champlain.h
 include/libchamplain-gtk-0.3/champlain-gtk/champlain-gtk.h
 include/libchamplain-gtk-0.3/champlain-gtk/gtk-champlain-embed.h
+lib/girepository-1.0/Champlain-0.3.typelib
+lib/girepository-1.0/GtkChamplain-0.3.typelib
 lib/libchamplain-0.3.a
 lib/libchamplain-0.3.la
 lib/libchamplain-0.3.so
@@ -26,8 +28,16 @@ lib/libchamplain-gtk-0.3.a
 lib/libchamplain-gtk-0.3.la
 lib/libchamplain-gtk-0.3.so
 lib/libchamplain-gtk-0.3.so.3
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlain.a
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlain.la
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlain.so
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlaingtk.a
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlaingtk.la
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlaingtk.so
 libdata/pkgconfig/champlain-0.3.pc
 libdata/pkgconfig/champlain-gtk-0.3.pc
+share/gir-1.0/Champlain-0.3.gir
+share/gir-1.0/GtkChamplain-0.3.gir
 share/gtk-doc/html/libchamplain-gtk/GtkChamplainEmbed.html
 share/gtk-doc/html/libchamplain-gtk/ch01.html
 share/gtk-doc/html/libchamplain-gtk/home.png
