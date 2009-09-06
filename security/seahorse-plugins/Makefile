@@ -3,12 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.14 2009/07/19 09:06:09 kwm Exp $
+#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.15 2009/08/01 19:32:54 marcus Exp $
 #
 
 PORTNAME=	seahorse-plugins
 PORTVERSION=	2.27.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -21,7 +21,7 @@ LIB_DEPENDS=	cryptui.0:${PORTSDIR}/security/seahorse
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GECKO=	firefox libxul
+USE_GECKO=	libxul
 USE_GNOME=	gnomehack intlhack gnomeprefix libglade2 gconf2 gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.138 2009/08/25 10:00:43 kwm Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.139 2009/08/26 07:48:24 marcus Exp $
 #
 
 PORTNAME=	yelp
@@ -19,7 +19,7 @@ COMMENT=	A help browser for the GNOME 2 desktop
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
     		rarian.0:${PORTSDIR}/textproc/rarian
 
-USE_GECKO=	libxul firefox
+USE_GECKO=	libxul
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_XORG=	ice

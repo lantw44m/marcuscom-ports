@@ -3,12 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.50 2009/05/27 18:27:52 kwm Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.51 2009/08/16 21:57:21 marcus Exp $
 #
 
 PORTNAME=	gnome
 PORTVERSION=	2.25.3
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
@@ -25,7 +25,7 @@ LIB_DEPENDS=	gtkspell.0:${PORTSDIR}/textproc/gtkspell \
 		gksuui1.0.1:${PORTSDIR}/sysutils/libgksuui
 #		gdl-1.2:${PORTSDIR}/x11-toolkits/gdl
 
-USE_GECKO=	firefox libxul xulrunner mozilla
+USE_GECKO=	libxul
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	yes
