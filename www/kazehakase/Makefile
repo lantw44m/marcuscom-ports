@@ -3,29 +3,30 @@
 # Whom:			michael johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#   $MCom: ports/www/kazehakase/Makefile,v 1.21 2009/08/16 23:20:18 kwm Exp $
+#   $MCom: ports/www/kazehakase/Makefile,v 1.22 2009/08/25 00:04:46 marcus Exp $
 #
 
 PORTNAME=	kazehakase
-PORTVERSION=	0.5.4
-PORTREVISION=	9
+PORTVERSION=	0.5.7
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
-MASTER_SITE_SUBDIR=	${PORTNAME}/30219
+MASTER_SITE_SUBDIR=	${PORTNAME}/43338
 
 MAINTAINER=	ahze@FreeBSD.org
 COMMENT=	Kazehakase is a browser with gecko engine like Epiphany or Galeon
 
-LIB_DEPENDS=	gnutls.40:${PORTSDIR}/security/gnutls
+LIB_DEPENDS=	gnutls.40:${PORTSDIR}/security/gnutls \
+		estraier.8:${PORTSDIR}/textproc/hyperestraier
 
 USE_GNOME=	gnomehack intlhack gnomeprefix gtk20
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GECKO=	firefox mozilla seamonkey xulrunner
+USE_GECKO=	libxul seamonkey
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gecko_engine=${GECKO}
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS} \
+		-I${LOCALBASE}/include/nspr" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 MAN1=		kazehakase.1
 OPTIONS=	WEBKIT "Webkit Backend (along with Gecko)" On
@@ -37,7 +38,6 @@ RUN_DEPENDS+=	${RUBY_SITEARCHLIBDIR}/uconv.so:${PORTSDIR}/japanese/ruby-uconv
 .endif
 
 .include <bsd.port.pre.mk>
-.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 
 .if defined(WITH_WEBKIT)
 LIB_DEPENDS+=	webkit-1.0.11:${PORTSDIR}/www/webkit-gtk2
@@ -58,23 +58,11 @@ CONFIGURE_ARGS+=	--enable-migemo
 .endif
 .endif
 
-WITH_SEARCH?=	hyperestraier
-.if ${WITH_SEARCH:L}=="rast"
-LIB_DEPENDS+=	rast.1:${PORTSDIR}/textproc/rast
-CONFIGURE_ARGS+=	--with-search-engine=rast
-.else
-LIB_DEPENDS+=	estraier.8:${PORTSDIR}/textproc/hyperestraier
-CONFIGURE_ARGS+=	--with-search-engine=hyperestraier
-.endif
-
 pre-everything::
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "Enable Migemo (Japanese incremental search) by defining WITH_MIGEMO"
 	@${ECHO_MSG} ""
 	@${ECHO_MSG} "Enable Thumbnail support by defining WITH_THUMBNAIL"
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "By default the search uses hyperestraier but you can"
-	@${ECHO_MSG} "use rast by using WITH_SEARCH=rast"
 	@${ECHO_MSG} ""
 
 post-patch:
