@@ -12,21 +12,3 @@
  	    $(srcdir)/glib-2.0.c \
  	    -DGLIB_COMPILATION \
  	    $(GLIB_INCLUDEDIR)/glib/*.h
-@@ -753,7 +752,7 @@ GObject-2.0.gir: GLib-2.0.gir $(SCANNER_
- 	    --noclosure \
- 	    --output $@ \
- 	    --strip-prefix=g \
--	    --libtool="$(LIBTOOL_LIBTOOL)" \
-+	    --libtool="$(LIBTOOL)" \
- 	    --c-include="glib-object.h" \
- 	    --include=GLib-2.0 \
- 	    --library=$(GOBJECT_LIBRARY) \
-@@ -773,7 +772,7 @@ GModule-2.0.gir: GLib-2.0.gir $(SCANNER_
- 	    --noclosure \
- 	    --output $@ \
- 	    --strip-prefix=g \
--	    --libtool="$(LIBTOOL_LIBTOOL)" \
-+	    --libtool="$(LIBTOOL)" \
- 	    --c-include="gmodule.h" \
- 	    --include=GLib-2.0 \
- 	    --library=$(GMODULE_LIBRARY) \
