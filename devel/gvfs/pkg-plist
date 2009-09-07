@@ -79,6 +79,7 @@ share/locale/bg/LC_MESSAGES/gvfs.mo
 share/locale/bn/LC_MESSAGES/gvfs.mo
 share/locale/bn_IN/LC_MESSAGES/gvfs.mo
 share/locale/ca/LC_MESSAGES/gvfs.mo
+share/locale/ca@valencia/LC_MESSAGES/gvfs.mo
 share/locale/cs/LC_MESSAGES/gvfs.mo
 share/locale/da/LC_MESSAGES/gvfs.mo
 share/locale/de/LC_MESSAGES/gvfs.mo
@@ -146,6 +147,8 @@ share/locale/zh_TW/LC_MESSAGES/gvfs.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
