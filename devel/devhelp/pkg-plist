@@ -18,7 +18,7 @@ include/devhelp-1.0/devhelp/dh-window.h
 lib/libdevhelp-1.a
 lib/libdevhelp-1.la
 lib/libdevhelp-1.so
-lib/libdevhelp-1.so.0
+lib/libdevhelp-1.so.1
 libdata/pkgconfig/libdevhelp-1.0.pc
 share/applications/devhelp.desktop
 share/devhelp/assistant/assistant.css
@@ -100,7 +100,6 @@ share/locale/zh_CN/LC_MESSAGES/devhelp.mo
 share/locale/zh_HK/LC_MESSAGES/devhelp.mo
 share/locale/zh_TW/LC_MESSAGES/devhelp.mo
 @dirrm share/devhelp/ui
-@dirrm share/devhelp/images
 @dirrm share/devhelp/dtd
 @dirrm share/devhelp/assistant
 @dirrm share/devhelp
