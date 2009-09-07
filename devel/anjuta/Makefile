@@ -3,11 +3,12 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.44 2009/08/23 03:03:24 mezz Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.45 2009/08/27 15:36:23 kwm Exp $
 #
 
 PORTNAME=	anjuta
 PORTVERSION=	2.27.91.0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -89,7 +90,7 @@ PLIST_SUB+=	SVN="@comment "
 .endif
 
 .if defined(WITH_DEVHELP)
-LIB_DEPENDS+=	devhelp-1.0:${PORTSDIR}/devel/devhelp
+LIB_DEPENDS+=	devhelp-1.1:${PORTSDIR}/devel/devhelp
 PLIST_SUB+=	DEVHELP=""
 .else
 CONFIGURE_ARGS+=--disable-plugin-devhelp
