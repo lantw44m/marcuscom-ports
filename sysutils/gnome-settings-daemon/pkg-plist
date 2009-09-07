@@ -63,6 +63,7 @@ lib/gnome-settings-daemon-2.0/xrdb.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/xsettings.gnome-settings-plugin
 libdata/pkgconfig/gnome-settings-daemon.pc
 libexec/gnome-settings-daemon
+libexec/gsd-locate-pointer
 share/dbus-1/services/org.gnome.SettingsDaemon.service
 share/gnome-control-center/keybindings/50-accessibility.xml
 %%DATADIR%%/acme.ui
@@ -94,6 +95,7 @@ share/locale/bn_IN/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/br/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/bs/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/ca/LC_MESSAGES/gnome-settings-daemon.mo
+share/locale/ca@valencia/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/cs/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/cy/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/da/LC_MESSAGES/gnome-settings-daemon.mo
@@ -195,6 +197,8 @@ share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
