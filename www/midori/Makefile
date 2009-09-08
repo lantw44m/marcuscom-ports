@@ -3,14 +3,13 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/midori/Makefile,v 1.15 2009/07/15 11:42:51 avl Exp $
+#   $MCom: ports/www/midori/Makefile,v 1.16 2009/09/08 19:21:51 kwm Exp $
 #
 
 PORTNAME=	midori
-PORTVERSION=	0.1.7
-PORTREVISION=	2
+PORTVERSION=	0.1.9
 CATEGORIES=	www
-MASTER_SITES=	http://goodies.xfce.org/releases/${PORTNAME}/
+MASTER_SITES=	http://archive.xfce.org/src/apps/${PORTNAME}/${PORTVERSION:R}/
 
 MAINTAINER=	ahze@FreeBSD.org
 COMMENT=	Lightweight web browser using WebKit browser engine
@@ -35,7 +34,7 @@ USE_LDCONFIG=	yes
 .include <bsd.port.pre.mk>
 
 # WAF needs that
-CONFIGURE_ENV+=	CC="${CC=gcc}"
+CONFIGURE_ENV+=	CC=${CC}
 
 .if !defined(WITHOUT_NLS)
 USE_GETTEXT=	yes

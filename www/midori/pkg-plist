@@ -1,11 +1,15 @@
 bin/midori
 etc/xdg/midori/search
+lib/midori/libadblock.so
 lib/midori/libcolorful-tabs.so
 lib/midori/libcookie-manager.so
 lib/midori/libfeed-panel.so
 lib/midori/libmouse-gestures.so
 lib/midori/libpage-holder.so
+lib/midori/libshortcuts.so
 lib/midori/libstatusbar-features.so
+lib/midori/libtab-panel.so
+lib/midori/libtoolbar-editor.so
 %%NLS%%share/applications/midori.desktop
 %%DOCSDIR%%/AUTHORS
 %%DOCSDIR%%/ChangeLog
@@ -19,6 +23,9 @@ share/icons/hicolor/16x16/status/news-feed.png
 share/icons/hicolor/22x22/apps/midori.png
 share/icons/hicolor/22x22/categories/extension.png
 share/icons/hicolor/22x22/status/news-feed.png
+share/icons/hicolor/24x24/apps/midori.png
+share/icons/hicolor/24x24/categories/extension.png
+share/icons/hicolor/24x24/status/news-feed.png
 share/icons/hicolor/32x32/apps/midori.png
 share/icons/hicolor/32x32/categories/extension.png
 share/icons/hicolor/32x32/status/news-feed.png
@@ -46,6 +53,8 @@ share/icons/hicolor/48x48/status/news-feed.png
 %%NLS%%share/locale/ro/LC_MESSAGES/midori.mo
 %%NLS%%share/locale/ru/LC_MESSAGES/midori.mo
 %%NLS%%share/locale/sk/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/sr/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/sr@latin/LC_MESSAGES/midori.mo
 %%NLS%%share/locale/sv/LC_MESSAGES/midori.mo
 %%NLS%%share/locale/tr/LC_MESSAGES/midori.mo
 %%NLS%%share/locale/uk/LC_MESSAGES/midori.mo
@@ -62,6 +71,10 @@ share/icons/hicolor/48x48/status/news-feed.png
 %%NLS%%@dirrmtry share/locale/zh_CN/LC_MESSAGES
 %%NLS%%@dirrmtry share/locale/uk/LC_MESSAGES
 %%NLS%%@dirrmtry share/locale/uk
+%%NLS%%@dirrmtry share/locale/sr@latin/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/sr@latin
+%%NLS%%@dirrmtry share/locale/sr/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/sr
 %%NLS%%@dirrmtry share/locale/sk/LC_MESSAGES
 %%NLS%%@dirrmtry share/locale/sk
 %%NLS%%@dirrmtry share/locale/ro/LC_MESSAGES
