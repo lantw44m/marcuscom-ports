@@ -532,13 +532,12 @@ share/gnome-games-common/cards/gnomangelo_bitmap.svg
 %%DATADIR%%/gnobots2/games/robots2_easy.cfg
 %%DATADIR%%/gnobots2/games/robots_with_safe_teleport.cfg
 %%DATADIR%%/gnobots2/pixmaps/aieee.png
-%%DATADIR%%/gnobots2/pixmaps/boo.svg
-%%DATADIR%%/gnobots2/pixmaps/gnomes.png
-%%DATADIR%%/gnobots2/pixmaps/robots.svg
 %%DATADIR%%/gnobots2/pixmaps/splat.png
-%%DATADIR%%/gnobots2/pixmaps/ufo.svg
+%%DATADIR%%/gnobots2/themes/ufo.svg
+%%DATADIR%%/gnobots2/themes/boo.svg
+%%DATADIR%%/gnobots2/themes/gnomes.png
+%%DATADIR%%/gnobots2/themes/robots.svg
 %%DATADIR%%/gnobots2/pixmaps/yahoo.png
-share/gnome-sudoku/images/footprints.png
 %%DATADIR%%/gnometris/pixmaps/7blocks-gw.png
 %%DATADIR%%/gnometris/pixmaps/7blocks-tig.png
 %%DATADIR%%/gnometris/pixmaps/gnometris.svg
@@ -608,6 +607,7 @@ share/gnome-sudoku/images/footprints.png
 %%DATADIR%%/sounds/turn.ogg
 %%DATADIR%%/sounds/victory.ogg
 %%DATADIR%%/sounds/yahoo.ogg
+share/gnome-sudoku/images/footprints.png
 share/gnome-sudoku/print_games.ui
 share/gnome-sudoku/puzzle_generator.ui
 share/gnome-sudoku/puzzles/easy
@@ -937,6 +937,11 @@ share/gnome/help/gnect/eu/figures/mainwindow.png
 share/gnome/help/gnect/eu/figures/tables.png
 share/gnome/help/gnect/eu/figures/tileset.png
 share/gnome/help/gnect/eu/gnect.xml
+share/gnome/help/gnect/fi/figures/connect.png
+share/gnome/help/gnect/fi/figures/mainwindow.png
+share/gnome/help/gnect/fi/figures/tables.png
+share/gnome/help/gnect/fi/figures/tileset.png
+share/gnome/help/gnect/fi/gnect.xml
 share/gnome/help/gnect/fr/figures/connect.png
 share/gnome/help/gnect/fr/figures/mainwindow.png
 share/gnome/help/gnect/fr/figures/tables.png
@@ -1873,7 +1878,9 @@ share/locale/be/LC_MESSAGES/gnome-games.mo
 share/locale/bg/LC_MESSAGES/gnome-games.mo
 share/locale/bn/LC_MESSAGES/gnome-games.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-games.mo
+share/locale/br/LC_MESSAGES/gnome-games.mo
 share/locale/ca/LC_MESSAGES/gnome-games.mo
+share/locale/ca@valencia/LC_MESSAGES/gnome-games.mo
 share/locale/cs/LC_MESSAGES/gnome-games.mo
 share/locale/cy/LC_MESSAGES/gnome-games.mo
 share/locale/da/LC_MESSAGES/gnome-games.mo
@@ -1999,6 +2006,7 @@ share/omf/gnect/gnect-el.omf
 share/omf/gnect/gnect-en_GB.omf
 share/omf/gnect/gnect-es.omf
 share/omf/gnect/gnect-eu.omf
+share/omf/gnect/gnect-fi.omf
 share/omf/gnect/gnect-fr.omf
 share/omf/gnect/gnect-it.omf
 share/omf/gnect/gnect-oc.omf
@@ -2450,6 +2458,8 @@ share/omf/same-gnome/same-gnome-sv.omf
 @dirrm share/gnome/help/gnect/it
 @dirrm share/gnome/help/gnect/fr/figures
 @dirrm share/gnome/help/gnect/fr
+@dirrm share/gnome/help/gnect/fi/figures
+@dirrm share/gnome/help/gnect/fi
 @dirrm share/gnome/help/gnect/eu/figures
 @dirrm share/gnome/help/gnect/eu
 @dirrm share/gnome/help/gnect/es/figures
@@ -2604,6 +2614,7 @@ share/omf/same-gnome/same-gnome-sv.omf
 @dirrm %%DATADIR%%/gnomine
 @dirrm %%DATADIR%%/gnometris/pixmaps
 @dirrm %%DATADIR%%/gnometris
+@dirrm %%DATADIR%%/gnobots2/themes
 @dirrm %%DATADIR%%/gnobots2/pixmaps
 @dirrm %%DATADIR%%/gnobots2/games
 @dirrm %%DATADIR%%/gnobots2
@@ -2663,6 +2674,8 @@ share/omf/same-gnome/same-gnome-sv.omf
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/as/LC_MESSAGES
