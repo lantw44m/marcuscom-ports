@@ -607,6 +607,7 @@ share/gnome/help/system-admin-guide/C/sessions.xml
 share/gnome/help/system-admin-guide/C/system-admin-guide.xml
 share/gnome/help/system-admin-guide/C/themes.xml
 share/gnome/help/system-admin-guide/ca/system-admin-guide.xml
+share/gnome/help/system-admin-guide/cs/system-admin-guide.xml
 share/gnome/help/system-admin-guide/de/system-admin-guide.xml
 share/gnome/help/system-admin-guide/el/system-admin-guide.xml
 share/gnome/help/system-admin-guide/es/system-admin-guide.xml
@@ -2256,6 +2257,7 @@ share/omf/gnome-access-guide/gnome-access-guide-sv.omf
 share/omf/gnome-access-guide/gnome-access-guide-zh_CN.omf
 share/omf/system-admin-guide/system-admin-guide-C.omf
 share/omf/system-admin-guide/system-admin-guide-ca.omf
+share/omf/system-admin-guide/system-admin-guide-cs.omf
 share/omf/system-admin-guide/system-admin-guide-de.omf
 share/omf/system-admin-guide/system-admin-guide-el.omf
 share/omf/system-admin-guide/system-admin-guide-es.omf
@@ -2351,6 +2353,7 @@ share/omf/user-guide/user-guide-zh_CN.omf
 @dirrm share/gnome/help/system-admin-guide/es
 @dirrm share/gnome/help/system-admin-guide/el
 @dirrm share/gnome/help/system-admin-guide/de
+@dirrm share/gnome/help/system-admin-guide/cs
 @dirrm share/gnome/help/system-admin-guide/ca
 @dirrm share/gnome/help/system-admin-guide/C
 @dirrm share/gnome/help/system-admin-guide
