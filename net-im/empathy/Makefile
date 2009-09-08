@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.35 2009/08/28 20:59:54 marcus Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.36 2009/09/03 11:54:51 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	2.27.91.1
-PORTREVISION=	2
+PORTVERSION=	2.27.92
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -72,7 +71,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-h
 .endif
 
 .if defined(WITH_WEBKIT)
-LIB_DEPENDS+=   webkit-1.0.11:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS+=   webkit-1.0.12:${PORTSDIR}/www/webkit-gtk2
 CONFIGURE_ARGS+=--enable-webkit
 PLIST_SUB+=	ADIUM=""
 .else
@@ -83,7 +82,5 @@ PLIST_SUB+=	ADIUM="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|$${datadir}/gtk-doc/html|${DOCSDIR}|g ; \
 		s|-Werror||g' ${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|libmissioncontrol|libmcclient|g' \
-		${WRKSRC}/libempathy/libempathy.pc.in \
-		${WRKSRC}/libempathy-gtk/libempathy-gtk.pc.in
+
 .include <bsd.port.post.mk>
