@@ -44,48 +44,37 @@ share/gnome/help/network-admin/sv/figures/network-tool.png
 share/gnome/help/network-admin/sv/network-admin.xml
 share/gnome/help/network-admin/zh_CN/figures/network-tool.png
 share/gnome/help/network-admin/zh_CN/network-admin.xml
-share/gnome/help/services-admin/C/figures/service-properties.png
 share/gnome/help/services-admin/C/figures/services-tool.png
 share/gnome/help/services-admin/C/legal.xml
 share/gnome/help/services-admin/C/services-admin.xml
-share/gnome/help/services-admin/ca/figures/service-properties.png
 share/gnome/help/services-admin/ca/figures/services-tool.png
 share/gnome/help/services-admin/ca/services-admin.xml
-share/gnome/help/services-admin/cs/figures/service-properties.png
 share/gnome/help/services-admin/cs/figures/services-tool.png
 share/gnome/help/services-admin/cs/services-admin.xml
-share/gnome/help/services-admin/de/figures/service-properties.png
 share/gnome/help/services-admin/de/figures/services-tool.png
 share/gnome/help/services-admin/de/services-admin.xml
-share/gnome/help/services-admin/el/figures/service-properties.png
 share/gnome/help/services-admin/el/figures/services-tool.png
 share/gnome/help/services-admin/el/services-admin.xml
-share/gnome/help/services-admin/en_GB/figures/service-properties.png
 share/gnome/help/services-admin/en_GB/figures/services-tool.png
 share/gnome/help/services-admin/en_GB/services-admin.xml
-share/gnome/help/services-admin/es/figures/service-properties.png
 share/gnome/help/services-admin/es/figures/services-tool.png
 share/gnome/help/services-admin/es/services-admin.xml
-share/gnome/help/services-admin/fr/figures/service-properties.png
 share/gnome/help/services-admin/fr/figures/services-tool.png
 share/gnome/help/services-admin/fr/services-admin.xml
-share/gnome/help/services-admin/it/figures/service-properties.png
 share/gnome/help/services-admin/it/figures/services-tool.png
 share/gnome/help/services-admin/it/services-admin.xml
 share/gnome/help/services-admin/nl/figures/service-properties.png
 share/gnome/help/services-admin/nl/figures/services-tool.png
 share/gnome/help/services-admin/nl/legal.xml
 share/gnome/help/services-admin/nl/services-admin.xml
-share/gnome/help/services-admin/oc/figures/service-properties.png
 share/gnome/help/services-admin/oc/figures/services-tool.png
 share/gnome/help/services-admin/oc/services-admin.xml
-share/gnome/help/services-admin/pt_BR/figures/service-properties.png
+share/gnome/help/services-admin/pl/figures/services-tool.png
+share/gnome/help/services-admin/pl/services-admin.xml
 share/gnome/help/services-admin/pt_BR/figures/services-tool.png
 share/gnome/help/services-admin/pt_BR/services-admin.xml
-share/gnome/help/services-admin/sv/figures/service-properties.png
 share/gnome/help/services-admin/sv/figures/services-tool.png
 share/gnome/help/services-admin/sv/services-admin.xml
-share/gnome/help/services-admin/zh_CN/figures/service-properties.png
 share/gnome/help/services-admin/zh_CN/figures/services-tool.png
 share/gnome/help/services-admin/zh_CN/services-admin.xml
 share/gnome/help/shares-admin/C/figures/shares-tool.png
@@ -253,6 +242,7 @@ share/locale/bg/LC_MESSAGES/gnome-system-tools.mo
 share/locale/bn/LC_MESSAGES/gnome-system-tools.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-system-tools.mo
 share/locale/ca/LC_MESSAGES/gnome-system-tools.mo
+share/locale/ca@valencia/LC_MESSAGES/gnome-system-tools.mo
 share/locale/cs/LC_MESSAGES/gnome-system-tools.mo
 share/locale/cy/LC_MESSAGES/gnome-system-tools.mo
 share/locale/da/LC_MESSAGES/gnome-system-tools.mo
@@ -346,6 +336,7 @@ share/omf/services-admin/services-admin-es.omf
 share/omf/services-admin/services-admin-fr.omf
 share/omf/services-admin/services-admin-it.omf
 share/omf/services-admin/services-admin-oc.omf
+share/omf/services-admin/services-admin-pl.omf
 share/omf/services-admin/services-admin-pt_BR.omf
 share/omf/services-admin/services-admin-sv.omf
 share/omf/services-admin/services-admin-zh_CN.omf
@@ -489,6 +480,8 @@ share/omf/users-admin/users-admin-zh_CN.omf
 @dirrm share/gnome/help/services-admin/sv
 @dirrm share/gnome/help/services-admin/pt_BR/figures
 @dirrm share/gnome/help/services-admin/pt_BR
+@dirrm share/gnome/help/services-admin/pl/figures
+@dirrm share/gnome/help/services-admin/pl
 @dirrm share/gnome/help/services-admin/oc/figures
 @dirrm share/gnome/help/services-admin/oc
 @dirrm share/gnome/help/services-admin/nl/figures
@@ -565,6 +558,8 @@ share/omf/users-admin/users-admin-zh_CN.omf
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
