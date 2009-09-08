@@ -185,6 +185,16 @@ share/gnome/help/gok/C/legal.xml
 %%DATADIR%%/ca/quit.kbd
 %%DATADIR%%/ca/text-operations.kbd
 %%DATADIR%%/ca/valuator.kbd
+%%DATADIR%%/ca@valencia/gok-controls.kbd
+%%DATADIR%%/ca@valencia/hide.kbd
+%%DATADIR%%/ca@valencia/launcher.kbd
+%%DATADIR%%/ca@valencia/main.kbd
+%%DATADIR%%/ca@valencia/mouse.kbd
+%%DATADIR%%/ca@valencia/move-resize.kbd
+%%DATADIR%%/ca@valencia/numberpad.kbd
+%%DATADIR%%/ca@valencia/quit.kbd
+%%DATADIR%%/ca@valencia/text-operations.kbd
+%%DATADIR%%/ca@valencia/valuator.kbd
 %%DATADIR%%/cs/gok-controls.kbd
 %%DATADIR%%/cs/hide.kbd
 %%DATADIR%%/cs/launcher.kbd
@@ -868,6 +878,7 @@ share/locale/bg/LC_MESSAGES/gok.mo
 share/locale/bn/LC_MESSAGES/gok.mo
 share/locale/bn_IN/LC_MESSAGES/gok.mo
 share/locale/ca/LC_MESSAGES/gok.mo
+share/locale/ca@valencia/LC_MESSAGES/gok.mo
 share/locale/cs/LC_MESSAGES/gok.mo
 share/locale/cy/LC_MESSAGES/gok.mo
 share/locale/da/LC_MESSAGES/gok.mo
@@ -1006,6 +1017,7 @@ share/sounds/freedesktop/stereo/goksound2.wav
 @dirrm %%DATADIR%%/da
 @dirrm %%DATADIR%%/cy
 @dirrm %%DATADIR%%/cs
+@dirrm %%DATADIR%%/ca@valencia
 @dirrm %%DATADIR%%/ca
 @dirrm %%DATADIR%%/bn_IN
 @dirrm %%DATADIR%%/bn
@@ -1042,6 +1054,8 @@ share/sounds/freedesktop/stereo/goksound2.wav
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/as/LC_MESSAGES
