@@ -37,7 +37,6 @@ include/libsoup-%%VERSION%%/libsoup/soup.h
 include/libsoup-gnome-%%VERSION%%/libsoup/soup-cookie-jar-sqlite.h
 include/libsoup-gnome-%%VERSION%%/libsoup/soup-gnome-features.h
 include/libsoup-gnome-%%VERSION%%/libsoup/soup-gnome.h
-include/libsoup-gnome-%%VERSION%%/libsoup/soup-password-manager-gnome.h
 lib/libsoup-%%VERSION%%.a
 lib/libsoup-%%VERSION%%.la
 lib/libsoup-%%VERSION%%.so
