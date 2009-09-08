@@ -3,7 +3,6 @@ lib/gtk-2.0/modules/libgnomebreakpad.la
 lib/gtk-2.0/modules/libgnomebreakpad.so
 share/applications/bug-buddy.desktop
 %%DATADIR%%/bug-buddy.gtkbuilder
-%%DATADIR%%/bug-buddy.menu
 %%DATADIR%%/gdb-cmd
 share/icons/HighContrastLargePrint/48x48/apps/bug-buddy.png
 share/icons/hicolor/16x16/apps/bug-buddy.png
@@ -24,6 +23,7 @@ share/locale/bn/LC_MESSAGES/bug-buddy.mo
 share/locale/bn_IN/LC_MESSAGES/bug-buddy.mo
 share/locale/bs/LC_MESSAGES/bug-buddy.mo
 share/locale/ca/LC_MESSAGES/bug-buddy.mo
+share/locale/ca@valencia/LC_MESSAGES/bug-buddy.mo
 share/locale/cs/LC_MESSAGES/bug-buddy.mo
 share/locale/cy/LC_MESSAGES/bug-buddy.mo
 share/locale/da/LC_MESSAGES/bug-buddy.mo
@@ -131,6 +131,8 @@ share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES

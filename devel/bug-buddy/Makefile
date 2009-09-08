@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/bug-buddy/Makefile,v 1.76 2009/05/06 15:45:31 kwm Exp $
 #
 
 PORTNAME=	bug-buddy
-PORTVERSION=	2.27.1
+PORTVERSION=	2.27.92
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -23,7 +23,7 @@ USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomemenus \
+USE_GNOME=	gnomeprefix gnomehack intlhack \
 		gnomedocutils evolutiondataserver
 GNOME_DESKTOP_VERSION=2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
