@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.206 2009/08/25 00:04:45 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.207 2009/08/25 07:06:31 kwm Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.27.91
+PORTVERSION=	2.27.92
 PORTREVISION?=	0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
@@ -18,7 +18,7 @@ COMMENT?=	An extremely lightweight and simple web browser for GNOME 2
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		webkit-1.0.11:${PORTSDIR}/www/webkit-gtk2 \
+		webkit-1.0.12:${PORTSDIR}/www/webkit-gtk2 \
 		notify.1:${PORTSDIR}/devel/libnotify \
 		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
@@ -44,7 +44,7 @@ PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}"
 
 MAN1=		epiphany.1
 
-OPTIONS=	SPELL_CHECKER "Enable spell checking support" off
+OPTIONS=	NSS "Import passwords from 2.26 and older on first run" on
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
@@ -59,9 +59,11 @@ NO_WERROR=	yes
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
 .endif
 
-.if defined(WITH_SPELL_CHECKER)
-LIB_DEPENDS+=	enchant.1:${PORTSDIR}/textproc/enchant
-CONFIGURE_ARGS+=--enable-spell-checker
+.if defined(WITH_NSS)
+LIB_DEPENDS+=	nss3.1:${PORTSDIR}/security/nss
+CONFIGURE_ARGS+=--enable-nss
+.else
+CONFIGURE_ARGS+=--disable-nss
 .endif
 
 post-patch:
