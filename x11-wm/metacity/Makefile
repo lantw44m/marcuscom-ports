@@ -3,12 +3,11 @@
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/metacity/Makefile,v 1.148 2009/05/11 03:06:53 marcus Exp $
+#   $MCom: ports/x11-wm/metacity/Makefile,v 1.149 2009/07/19 19:46:49 marcus Exp $
 #
 
 PORTNAME=	metacity
-PORTVERSION=	2.27.0
-PORTREVISION=	1
+PORTVERSION=	2.27.1
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -21,7 +20,6 @@ LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
     		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=    zenity:${PORTSDIR}/x11/zenity
 
-CONFLICTS=	expocity-[0-9]*
 USE_BZIP2=	yes
 USE_XORG=	x11 xcomposite xdamage
 USE_GETTEXT=	yes
