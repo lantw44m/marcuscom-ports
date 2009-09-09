@@ -3,11 +3,11 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/mm-common/Makefile,v 1.3 2009/09/03 08:46:17 kwm Exp $
+#   $MCom: ports/devel/mm-common/Makefile,v 1.4 2009/09/07 14:03:30 bland Exp $
 #
 
 PORTNAME=	mm-common
-PORTVERSION=	0.7.2
+PORTVERSION=	0.7.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -20,7 +20,7 @@ USE_GNOME=	gnomehack
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-#CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-#		LDFLAGS="-L${LOCALBASE}/lib"
+
+MAN1=		mm-common-prepare.1
 
 .include <bsd.port.mk>
