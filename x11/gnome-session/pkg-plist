@@ -2,10 +2,8 @@ bin/gnome-session
 bin/gnome-session-properties
 bin/gnome-session-save
 bin/gnome-wm
-etc/xdg/autostart/at-spi-registryd-wrapper.desktop
 etc/xdg/autostart/gnome-session-splash.desktop
 etc/xdg/autostart/gnome-settings-daemon-helper.desktop
-lib/gnome-session/helpers/at-spi-registryd-wrapper
 lib/gnome-session/helpers/gnome-session-splash
 lib/gnome-session/helpers/gnome-settings-daemon-helper
 share/applications/session-properties.desktop
@@ -28,6 +26,7 @@ share/locale/be@latin/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/br/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ca@valencia/LC_MESSAGES/gnome-session-2.0.mo
