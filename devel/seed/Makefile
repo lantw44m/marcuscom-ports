@@ -3,11 +3,12 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/seed/Makefile,v 1.3 2009/08/25 00:04:44 marcus Exp $
+#   $MCom: ports/devel/seed/Makefile,v 1.4 2009/09/08 15:27:53 kwm Exp $
 #
 
 PORTNAME=	seed
 PORTVERSION=	2.27.92
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +18,7 @@ COMMENT=	GObject JavaScriptCore bridge
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-js-common.pc:${PORTSDIR}/devel/gnome-js-common
 LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi \
-		webkit-1.0.11:${PORTSDIR}/www/webkit-gtk2 \
+		webkit-1.0.12:${PORTSDIR}/www/webkit-gtk2 \
 		girepository-1.0.0:${PORTSDIR}/devel/gobject-introspection \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
