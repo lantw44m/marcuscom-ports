@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.273 2009/08/28 21:17:07 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.274 2009/09/08 21:16:52 kwm Exp $
 #
 
 PORTNAME=	gnome2
@@ -42,7 +42,7 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		dasher:${PORTSDIR}/accessibility/dasher \
 		evolution:${PORTSDIR}/mail/evolution \
 		${LOCALBASE}/libexec/evolution-webcal:${PORTSDIR}/www/evolution-webcal \
-		${LOCALBASE}/libdata/pkgconfig/libexchangemapi-1.0.pc:${PORTSDIR}/mail/evolutino-mapi \
+		${LOCALBASE}/libdata/pkgconfig/libexchangemapi-1.0.pc:${PORTSDIR}/mail/evolution-mapi \
 		network-admin:${PORTSDIR}/sysutils/gnome-system-tools \
 		vino-passwd:${PORTSDIR}/net/vino \
 		exchange-connector-setup-2.28:${PORTSDIR}/mail/evolution-exchange \
