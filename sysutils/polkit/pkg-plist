@@ -4,7 +4,7 @@ bin/pkcheck
 bin/pkexec
 @unexec if cmp -s %D/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf %D/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf.dist; then rm -f %D/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf ; fi
 etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf.dist
-@exec [ -f %B/PolicyKit.conf ] || cp %B/%f %B/PolicyKit.conf
+@exec [ -f %B/org.freedesktop.PolicyKit1.conf ] || cp %B/%f %B/org.freedesktop.PolicyKit1.conf
 etc/pam.d/polkit-1
 etc/polkit-1/localauthority.conf.d/50-localauthority.conf
 etc/polkit-1/nullbackend.conf.d/50-nullbackend.conf
