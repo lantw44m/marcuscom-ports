@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.36 2009/09/03 11:54:51 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.37 2009/09/08 19:11:54 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.27.92
@@ -19,6 +19,7 @@ LIB_DEPENDS=	aspell.16:${PORTSDIR}/textproc/aspell \
 		telepathy.2:${PORTSDIR}/net-im/libtelepathy \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		telepathy-farsight.0:${PORTSDIR}/net-im/telepathy-farsight \
+		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
 		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
