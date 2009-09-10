@@ -1,5 +1,5 @@
---- gir/Makefile.in.orig	2009-08-29 19:46:15.000000000 -0400
-+++ gir/Makefile.in	2009-08-29 19:52:38.000000000 -0400
+--- Makefile.in.orig	2009-09-10 16:15:05.000000000 -0400
++++ Makefile.in	2009-09-10 17:32:05.000000000 -0400
 @@ -413,7 +413,7 @@ libgirepo_DBus_custom_la_SOURCES = \
  
  @BUILD_GCONF_TRUE@GCONF_INCLUDEDIR = `pkg-config --variable=includedir gconf-2.0`/gconf/2
@@ -29,3 +29,11 @@
  @BUILD_GSTREAMER_PLUGINS_BASE_TRUE@GstNetbuffer-0.10.gir: Gst-0.10.gir $(INTROSPECTION_SCANNER)
  @BUILD_GSTREAMER_PLUGINS_BASE_TRUE@	$(DEBUG) $(INTROSPECTION_SCANNER) -v --namespace GstNetbuffer --nsversion=0.10 \
  @BUILD_GSTREAMER_PLUGINS_BASE_TRUE@	    --add-include-path=$(srcdir) --add-include-path=. \
+@@ -1479,6 +1479,7 @@ uninstall-am: uninstall-dist_girDATA uni
+ @BUILD_GSTREAMER_PLUGINS_BASE_TRUE@             --include=Gst-0.10 \
+ @BUILD_GSTREAMER_PLUGINS_BASE_TRUE@             --include=GstBase-0.10 \
+ @BUILD_GSTREAMER_PLUGINS_BASE_TRUE@	     --library=gstvideo-0.10 \
++@BUILD_GSTREAMER_PLUGINS_BASE_TRUE@	     --library=gstbasevideo-0.10 \
+ @BUILD_GSTREAMER_PLUGINS_BASE_TRUE@	     --libtool="$(LIBTOOL)" \
+ @BUILD_GSTREAMER_PLUGINS_BASE_TRUE@             --pkg gobject-2.0 \
+ @BUILD_GSTREAMER_PLUGINS_BASE_TRUE@             --pkg gstreamer-0.10 \
