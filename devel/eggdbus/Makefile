@@ -3,7 +3,7 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/eggdbus/Makefile,v 1.1 2009/08/17 16:45:17 kwm Exp $
 #
 
 PORTNAME=	eggdbus
@@ -24,6 +24,14 @@ CONFIGURE_ARGS=	--localstatedir=/var
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+.if defined(NO_INSTALL_MANPAGES)
+CONFIGURE_ARGS+=--disable-man-pages
+.else
+BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1/catalog:${PORTSDIR}/textproc/docbook-410 \
+    		xsltproc:${PORTSDIR}/textproc/libxslt \
+		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
+
 MAN1=	eggdbus-binding-tool.1
+.endif
 
 .include <bsd.port.mk>
