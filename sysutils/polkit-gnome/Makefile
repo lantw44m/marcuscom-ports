@@ -3,11 +3,12 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.1 2009/08/17 16:50:08 kwm Exp $
+#   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.2 2009/09/10 15:01:19 kwm Exp $
 #
 
 PORTNAME=	polkit-gnome
 PORTVERSION=	0.94
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -19,7 +20,7 @@ LIB_DEPENDS=	polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack gtk20 intlhack
+USE_GNOME=	gnomehack gnometarget gtk20 intlhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \

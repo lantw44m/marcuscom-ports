@@ -57,3 +57,5 @@ share/locale/zh_TW/LC_MESSAGES/polkit-gnome-1.mo
 @dirrmtry share/locale/ca
 @dirrmtry share/locale/be/LC_MESSAGES
 @dirrmtry share/locale/be
+@dirrm include/polkit-gtk-1/polkitgtk
+@dirrm include/polkit-gtk-1
