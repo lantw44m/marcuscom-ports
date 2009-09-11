@@ -3,7 +3,7 @@
 # Whom:					Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gir-repository/Makefile,v 1.3 2009/08/29 23:56:51 marcus Exp $
+#   $MCom: ports/devel/gir-repository/Makefile,v 1.4 2009/09/10 04:59:25 avl Exp $
 #
 
 PORTNAME=	gir-repository
@@ -33,5 +33,9 @@ USE_PYTHON=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:22
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|clutter.*-0\.8|clutter-disable|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
