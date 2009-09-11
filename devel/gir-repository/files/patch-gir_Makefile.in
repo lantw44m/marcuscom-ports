@@ -1,5 +1,5 @@
---- Makefile.in.orig	2009-09-10 16:15:05.000000000 -0400
-+++ Makefile.in	2009-09-10 17:32:05.000000000 -0400
+--- gir/Makefile.in.orig	2009-09-10 16:15:05.000000000 -0400
++++ gir/Makefile.in	2009-09-10 17:32:05.000000000 -0400
 @@ -413,7 +413,7 @@ libgirepo_DBus_custom_la_SOURCES = \
  
  @BUILD_GCONF_TRUE@GCONF_INCLUDEDIR = `pkg-config --variable=includedir gconf-2.0`/gconf/2
