@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.153 2009/08/25 04:47:55 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.154 2009/08/25 07:52:02 kwm Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.27.90
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -20,7 +20,8 @@ BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit \
 		polkit-gtk-1.0:${PORTSDIR}/sysutils/polkit-gnome \
     		execinfo:${PORTSDIR}/devel/libexecinfo \
-		hal.1:${PORTSDIR}/sysutils/hal
+		hal.1:${PORTSDIR}/sysutils/hal \
+		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon \
 		gnome-session:${PORTSDIR}/x11/gnome-session
