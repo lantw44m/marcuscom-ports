@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-mapi/Makefile,v 1.1 2009/09/08 21:10:58 kwm Exp $
+#   $MCom: ports/mail/evolution-mapi/Makefile,v 1.2 2009/09/10 20:16:25 kwm Exp $
 #
 
 PORTNAME=	evolution-mapi
@@ -40,5 +40,7 @@ PLIST_SUB=	EVO_VERSION=${EVO_VERSION} EDS_VERSION=${EDS_VERSION}
 post-patch:
 	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|g' \
 		${WRKSRC}/src/libexchangemapi/Makefile.in
+	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
+	    	${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
