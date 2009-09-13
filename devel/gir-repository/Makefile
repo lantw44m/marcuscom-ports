@@ -3,11 +3,12 @@
 # Whom:					Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gir-repository/Makefile,v 1.4 2009/09/10 04:59:25 avl Exp $
+#   $MCom: ports/devel/gir-repository/Makefile,v 1.5 2009/09/11 17:58:09 mezz Exp $
 #
 
 PORTNAME=	gir-repository
 PORTVERSION=	0.6.5
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -25,7 +26,7 @@ LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		webkit-1.0.12:${PORTSDIR}/www/webkit-gtk2
 
 USE_BZIP2=	yes
-USE_GSTREAMER=	yes
+USE_GSTREAMER=	yes bad
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gtk20 nautilus2 vte gnomemenus libwnck gtksourceview2
