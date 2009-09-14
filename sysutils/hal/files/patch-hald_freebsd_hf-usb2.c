@@ -1,8 +1,8 @@
---- hald/freebsd/hf-usb2.c.orig	2009-03-02 20:16:10.000000000 -0600
-+++ hald/freebsd/hf-usb2.c	2009-03-02 20:33:13.000000000 -0600
-@@ -0,0 +1,287 @@
+--- hald/freebsd/hf-usb2.c.orig	2009-09-12 21:16:02.000000000 -0400
++++ hald/freebsd/hf-usb2.c	2009-09-13 20:57:00.000000000 -0400
+@@ -0,0 +1,312 @@
 +/***************************************************************************
-+ * CVSID: $Id: patch-hald_freebsd_hf-usb2.c,v 1.1 2009-05-17 05:02:48 marcus Exp $
++ * CVSID: $Id: patch-hald_freebsd_hf-usb2.c,v 1.2 2009-09-14 04:34:35 marcus Exp $
 + *
 + * hf-usb.c : USB support
 + *
@@ -199,7 +199,8 @@
 +      else
 +        parent = hf_device_store_match(hald_get_gdl(), "usb_device.bus_number",
 +          HAL_PROPERTY_TYPE_INT32, bus, "usb_device.port_number",
-+	  HAL_PROPERTY_TYPE_INT32, addr - 1, NULL);
++	  HAL_PROPERTY_TYPE_INT32, addr - 1, "info.bus",
++	  HAL_PROPERTY_TYPE_STRING, "usb_device", NULL);
 +      if (! parent || hal_device_property_get_bool(parent, "info.ignore"))
 +        continue;
 +
@@ -219,7 +220,13 @@
 +  HalDevice *parent_device;
 +  int bus, addr, pbus, paddr;
 +
-+  if (strncmp(name, "ugen", strlen("ugen")))
++  if (! parent)
++    return FALSE;
++
++  if (strncmp(name, "ugen", strlen("ugen")) &&
++      ! strncmp(parent, "uhub", strlen("uhub")))
++    return TRUE;
++  else if (strncmp(name, "ugen", strlen("ugen")))
 +    return FALSE;
 +  else if (strncmp(parent, "ugen", strlen("ugen")))
 +    return TRUE;
@@ -235,7 +242,8 @@
 +
 +  parent_device = hf_device_store_match(hald_get_gdl(),
 +    "usb_device.bus_number", HAL_PROPERTY_TYPE_INT32, pbus,
-+    "usb_device.port_number", HAL_PROPERTY_TYPE_INT32, paddr, NULL);
++    "usb_device.port_number", HAL_PROPERTY_TYPE_INT32, paddr, "info.bus",
++    HAL_PROPERTY_TYPE_STRING, "usb_device", NULL);
 +
 +  if (parent_device && ! hal_device_property_get_bool(parent_device,
 +      "info.ignore"))
@@ -258,8 +266,6 @@
 +
 +  if (strncmp(name, "ugen", strlen("ugen")))
 +    return FALSE;
-+  else if (strncmp(parent, "ugen", strlen("ugen")))
-+    return TRUE;
 +
 +  if (sscanf(name, "ugen%i.%i", &bus, &addr) != 2)
 +    return FALSE;
@@ -268,13 +274,31 @@
 +
 +  device = hf_device_store_match(hald_get_gdl(), "usb_device.bus_number",
 +    HAL_PROPERTY_TYPE_INT32, bus, "usb_device.port_number",
-+    HAL_PROPERTY_TYPE_INT32, addr, NULL);
++    HAL_PROPERTY_TYPE_INT32, addr, "info.bus",
++    HAL_PROPERTY_TYPE_STRING, "usb_device", NULL);
 +
 +  if (device)
 +    {
 +      hf_device_remove_tree(device);
 +      return TRUE;
 +    }
++
++  return FALSE;
++}
++
++static gboolean
++hf_usb2_devd_notify (const char *system,
++		     const char *subsystem,
++		     const char *type,
++		     const char *data)
++{
++  if (! data || strcmp(system, "DEVFS") || strcmp(subsystem, "CDEV") ||
++      (strcmp(type, "CREATE") && strcmp(type, "DESTROY")))
++    return FALSE;
++
++  if (! strncmp(data, "cdev=ugen", strlen("cdev=ugen")) ||
++      ! strncmp(data, "cdev=usb", strlen("cdev=usb")))
++    return TRUE;
 +
 +  return FALSE;
 +}
@@ -286,5 +310,6 @@
 +
 +HFDevdHandler hf_usb2_devd_handler = {
 +  .add =	hf_usb2_devd_add,
-+  .remove =	hf_usb2_devd_remove
++  .remove =	hf_usb2_devd_remove,
++  .notify =     hf_usb2_devd_notify
 +};
