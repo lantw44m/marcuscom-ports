@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnome-keyring/Makefile,v 1.80 2009/07/28 09:52:54 kwm Exp $
+#   $MCom: ports/security/gnome-keyring/Makefile,v 1.81 2009/08/10 21:05:41 kwm Exp $
 #
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	2.27.90
+PORTVERSION=	2.27.92
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -29,15 +29,4 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 GCONF_SCHEMAS=	gnome-keyring.schemas
 
-OPTIONS=	HAL "Use HAL for keys on removable drives" on
-
-.include <bsd.port.pre.mk>
-
-.if !defined(WITHOUT_HAL)
-LIB_DEPENDS+=	hal.1:${PORTSDIR}/sysutils/hal
-CONFIGURE_ARGS+=--enable-hal
-.else
-CONFIGURE_ARGS+=--disable-hal
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
