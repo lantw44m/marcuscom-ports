@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.37 2009/09/08 19:11:54 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.38 2009/09/10 19:17:42 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.27.92
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -47,7 +48,8 @@ OPTIONS=	JABBER	"Enable jabber (XMPP) client support" on \
 		IRC	"Enable IRC client support" on \
 		SALUT	"Enable link-local (serverless) XMPP support" off \
 		HAZE	"Enable libpurple protocol integration" off \
-		WEBKIT	"Enable Adium Message Style themes" on
+		WEBKIT	"Enable Adium Message Style themes" on \
+		MAP	"Enable graphical map support" on
 
 .include <bsd.port.pre.mk>
 
@@ -72,12 +74,21 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-h
 .endif
 
 .if defined(WITH_WEBKIT)
-LIB_DEPENDS+=   webkit-1.0.12:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS+=	webkit-1.0.12:${PORTSDIR}/www/webkit-gtk2
 CONFIGURE_ARGS+=--enable-webkit
 PLIST_SUB+=	ADIUM=""
 .else
 CONFIGURE_ARGS+=--disable-webkit
 PLIST_SUB+=	ADIUM="@comment "
+.endif
+
+.if !defined(WITHOUT_MAP)
+LIB_DEPENDS+=	champlain-0.3.3:${PORTSDIR}/graphics/libchamplain
+CONFIGURE_ARGS+=--enable-map
+PLIST_SUB+=	MAP=""
+.else
+CONFIGURE_ARGS+=--disable-map
+PLIST_SUB+=	MAP="@comment "
 .endif
 
 post-patch:

@@ -209,7 +209,7 @@ share/doc/libempathy/up.png
 %%DATADIR%%/codec-preferences
 %%DATADIR%%/element-properties
 %%DATADIR%%/empathy-account-widget-local-xmpp.ui
-%%DATADIR%%/empathy-map-view.ui
+%%MAP%%%%DATADIR%%/empathy-map-view.ui
 %%DATADIR%%/empathy-account-widget-aim.ui
 %%DATADIR%%/empathy-account-widget-generic.ui
 %%DATADIR%%/empathy-account-widget-groupwise.ui
