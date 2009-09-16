@@ -3,11 +3,12 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libchamplain/Makefile,v 1.4 2009/09/06 11:28:37 kwm Exp $
+#   $MCom: ports/graphics/libchamplain/Makefile,v 1.5 2009/09/15 16:58:10 marcus Exp $
 #
 
 PORTNAME=	libchamplain
 PORTVERSION=	0.3.92
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -15,7 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A C library aimed to provide a Gtk+ widget to display rasterized maps and markers
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-    		${LOCALBASE}/share/gir-1.0/PangoCairo-1.0.gir:${PORTSDIR}/devel/gir-repository
+    		${LOCALBASE}/share/gir-1.0/PangoCairo-1.0.gir:${PORTSDIR}/x11-toolkits/gir-repository-pango
 LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		clutter-gtk-0.10.0:${PORTSDIR}/graphics/clutter-gtk \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup

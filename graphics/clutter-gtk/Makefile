@@ -7,7 +7,7 @@
 
 PORTNAME=	clutter-gtk
 PORTVERSION=	0.10.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
@@ -15,7 +15,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GTK+ Integration library for Clutter
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		${LOCALBASE}/share/gir-1.0/Gtk-2.0.gir:${PORTSDIR}/devel/gir-repository
+		${LOCALBASE}/share/gir-1.0/Gtk-2.0.gir:${PORTSDIR}/x11-toolkits/gir-repository-gtk20
 LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 
 USE_BZIP2=	yes
