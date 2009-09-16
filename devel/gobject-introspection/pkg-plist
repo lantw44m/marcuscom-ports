@@ -103,7 +103,7 @@ share/gir-1.0/xfixes-4.0.gir
 share/gir-1.0/xft-2.0.gir
 share/gir-1.0/xlib-2.0.gir
 @dirrm include/gobject-introspection-1.0
-@dirrm lib/girepository-1.0
+@dirrmtry lib/girepository-1.0
 @dirrm lib/gobject-introspection/giscanner
 @dirrm lib/gobject-introspection
-@dirrm share/gir-1.0
+@dirrmtry share/gir-1.0
