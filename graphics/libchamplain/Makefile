@@ -3,12 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libchamplain/Makefile,v 1.6 2009/09/16 02:09:03 avl Exp $
+#   $MCom: ports/graphics/libchamplain/Makefile,v 1.7 2009/09/16 04:36:31 marcus Exp $
 #
 
 PORTNAME=	libchamplain
-PORTVERSION=	0.3.92
-PORTREVISION=	1
+PORTVERSION=	0.4.0
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -33,6 +32,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 # And clutter 1.0 versions of py-clutter and clutter-sharp need to 
 # get released upstream too.
 CONFIGURE_ARGS+=--enable-managed=no
+
+PLIST_SUB=	VERSION=${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 
 .if !defined(WITHOUT_PYTHON)
 USE_PYTHON=	yes
