@@ -3,40 +3,40 @@
 # Whom:					Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gir-repository/Makefile,v 1.5 2009/09/11 17:58:09 mezz Exp $
+#   $MCom: ports/devel/gir-repository/Makefile,v 1.3 2009/08/29 23:56:51 marcus Exp $
 #
 
-PORTNAME=	gir-repository
-PORTVERSION=	0.6.5
-PORTREVISION=	1
-CATEGORIES=	devel gnome
-MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+MASTER_SITES=	# Empty
+DISTFILES=	# None
+PATCHDIR=	# None
 
-MAINTAINER=	gnome@FreeBSD.org
+CATEGORIES=	devel gnome
+
 COMMENT=	Introspection information for various libraries
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
-		babl-0.0.0:${PORTSDIR}/x11/babl \
-		avahi-gobject.0:${PORTSDIR}/net/avahi-app \
-		goocanvas.3:${PORTSDIR}/graphics/goocanvas \
-		poppler-glib.4:${PORTSDIR}/graphics/poppler-gtk \
-		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring \
-		webkit-1.0.12:${PORTSDIR}/www/webkit-gtk2
+NO_BUILD=	yes
 
-USE_BZIP2=	yes
-USE_GSTREAMER=	yes bad
-GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtk20 nautilus2 vte gnomemenus libwnck gtksourceview2
-USE_PYTHON=	yes
-USE_GETTEXT=	yes
-USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool:22
+RUN_DEPENDS=	${GIRDIR}/${atk_GIR}.gir:${PORTSDIR}/${atk_CATEGORY}/gir-repository-atk \
+		${GIRDIR}/${pango_GIR}.gir:${PORTSDIR}/${pango_CATEGORY}/gir-repository-pango \
+		${GIRDIR}/${poppler_GIR}.gir:${PORTSDIR}/${poppler_CATEGORY}/gir-repository-poppler \
+		${GIRDIR}/${gtk20_GIR}.gir:${PORTSDIR}/${gtk20_CATEGORY}/gir-repository-gtk20 \
+		${GIRDIR}/${webkit_GIR}.gir:${PORTSDIR}/${webkit_CATEGORY}/gir-repository-webkit \
+		${GIRDIR}/${libsoup_GIR}.gir:${PORTSDIR}/${libsoup_CATEGORY}/gir-repository-libsoup \
+		${GIRDIR}/${dbus_GIR}.gir:${PORTSDIR}/${dbus_CATEGORY}/gir-repository-dbus \
+		${GIRDIR}/${gconf2_GIR}.gir:${PORTSDIR}/${gconf2_CATEGORY}/gir-repository-gconf2 \
+		${GIRDIR}/${babl_GIR}.gir:${PORTSDIR}/${babl_CATEGORY}/gir-repository-babl \
+		${GIRDIR}/${nautilus_GIR}.gir:${PORTSDIR}/${nautilus_CATEGORY}/gir-repository-nautilus \
+		${GIRDIR}/${gnomekeyring_GIR}.gir:${PORTSDIR}/${gnomekeyring_CATEGORY}/gir-repository-gnome-keyring \
+		${GIRDIR}/${libnotify_GIR}.gir:${PORTSDIR}/${libnotify_CATEGORY}/gir-repository-libnotify \
+		${GIRDIR}/${gstreamer_GIR}.gir:${PORTSDIR}/${gstreamer_CATEGORY}/gir-repository-gstreamer \
+		${GIRDIR}/${gtksourceview2_GIR}.gir:${PORTSDIR}/${gtksourceview2_CATEGORY}/gir-repository-gtksourceview2 \
+		${GIRDIR}/${vte_GIR}.gir:${PORTSDIR}/${vte_CATEGORY}/gir-repository-vte \
+		${GIRDIR}/${unique_GIR}.gir:${PORTSDIR}/${unique_CATEGORY}/gir-repository-unique \
+		${GIRDIR}/${avahi_GIR}.gir:${PORTSDIR}/${avahi_CATEGORY}/gir-repository-avahi \
+		${GIRDIR}/${gnomemenus_GIR}.gir:${PORTSDIR}/${gnomemenus_CATEGORY}/gir-repository-gnome-menus \
+		${GIRDIR}/${libwnck_GIR}.gir:${PORTSDIR}/${libwnck_CATEGORY}/gir-repository-libwnck \
+		${GIRDIR}/${goocanvas_GIR}.gir:${PORTSDIR}/${goocanvas_CATEGORY}/gir-repository-goocanvas
 
-post-patch:
-	@${REINPLACE_CMD} -e 's|clutter.*-0\.8|clutter-disable|g' \
-		${WRKSRC}/configure
+do-install:	# empty
 
-.include <bsd.port.mk>
+.include "${.CURDIR}/../../devel/gir-repository/bsd.gir.mk"
