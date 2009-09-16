@@ -3,11 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.2 2009/09/02 06:56:09 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.3 2009/09/05 12:36:24 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
-PORTVERSION=	2.27.2
+PORTVERSION=	2.27.3
 CATEGORIES=	x11
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Next generation GNOME desktop shell
 
-BUILD_DEPENDS=	${LOCALBASE}/share/gir-1.0/Gtk-2.0.gir:${PORTSDIR}/devel/gir-repository
+BUILD_DEPENDS=	${LOCALBASE}/share/gir-1.0/Gtk-2.0.gir:${PORTSDIR}/x11-toolkits/gir-repository-gtk20
 LIB_DEPENDS=	girepository-1.0:${PORTSDIR}/devel/gobject-introspection \
 		startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
 		mutter-private.0:${PORTSDIR}/x11-wm/mutter \
@@ -29,7 +29,7 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:22
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk20 gconf2 gnomemenus \
-		gnomedesktop ltverhack libgnomeui
+		gnomedesktop ltverhack libgnomeui librsvg2
 USE_GSTREAMER=	theora
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I/usr/local/include/js -I/usr/local/include/nspr"
