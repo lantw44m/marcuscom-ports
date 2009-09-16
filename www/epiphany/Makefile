@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.207 2009/08/25 07:06:31 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.208 2009/09/08 18:45:54 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -44,7 +44,8 @@ PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}"
 
 MAN1=		epiphany.1
 
-OPTIONS=	NSS "Import passwords from 2.26 and older on first run" on
+OPTIONS=	NSS "Import passwords from 2.26 and older on first run" on \
+		SEED "Enable seed support" off
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
@@ -64,6 +65,16 @@ LIB_DEPENDS+=	nss3.1:${PORTSDIR}/security/nss
 CONFIGURE_ARGS+=--enable-nss
 .else
 CONFIGURE_ARGS+=--disable-nss
+.endif
+
+.if defined(WITH_SEED)
+LIB_DEPENDS+=	seed.0:${PORTSDIR}/devel/seed
+BUILD_DEPENDS+=	${LOCALBASE}/share/gir-1.0/WebKit-1.0.gir:${PORTSDIR}/www/gir-repository-webkit
+RUN_DEPENDS+=	${LOCALBASE}/share/gir-1.0/WebKit-1.0.gir:${PORTSDIR}/www/gir-repository-webkit
+CONFIGURE_ARGS+=-enable-seed --enable-introspection
+PLIST_SUB+=	GIR=""
+.else
+PLIST_SUB+=	GIR="@comment "
 .endif
 
 post-patch:

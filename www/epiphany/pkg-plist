@@ -39,6 +39,8 @@ share/aclocal/epiphany.m4
 share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/dbus-1/services/org.gnome.Epiphany.service
+%%GIR%%lib/girepository-1.0/Epiphany-2.27.typelib
+%%GIR%%share/gir-1.0/Epiphany-2.27.gir
 %%DOCSDIR%%/EphyCommandManager.html
 %%DOCSDIR%%/EphyEmbed.html
 %%DOCSDIR%%/EphyLocationEntry.html
@@ -396,6 +398,8 @@ share/omf/epiphany/epiphany-uk.omf
 @dirrmtry %%DATADIR%%
 @dirrmtry %%DOCSDIR%%
 @dirrmtry share/applications
+%%GIR%%@dirrmtry lib/girepository-1.0
+%%GIR%%@dirrmtry share/gir-1.0
 @dirrmtry lib/epiphany/%%EPHY_VERSION%%/plugins
 @dirrmtry lib/epiphany/%%EPHY_VERSION%%
 @dirrmtry lib/epiphany
