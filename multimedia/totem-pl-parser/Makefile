@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.27 2009/07/19 19:46:46 marcus Exp $
+#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.28 2009/07/24 09:50:26 kwm Exp $
 #
 
 PORTNAME=	totem-pl-parser
-PORTVERSION=	2.27.2
+PORTVERSION=	2.27.92
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
