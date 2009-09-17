@@ -1,6 +1,6 @@
 PORTNAME=	gir-repository
 PORTVERSION=	0.6.5
-PORTREVISION?=	2
+PORTREVISION?=	3
 
 MAINTAINER=	gnome@FreeBSD.org
 
@@ -76,6 +76,7 @@ DIST_SUBDIR=	gnome2
 COMMENT?=	Introspection information for ${GIR_NAME}
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+RUN_DEPENDS=	${GIRDIR}/Everything-1.0.gir:${PORTSDIR}/devel/gobject-introspection
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
