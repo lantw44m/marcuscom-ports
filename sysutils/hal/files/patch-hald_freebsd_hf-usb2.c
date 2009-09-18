@@ -2,7 +2,7 @@
 +++ hald/freebsd/hf-usb2.c	2009-09-13 20:57:00.000000000 -0400
 @@ -0,0 +1,312 @@
 +/***************************************************************************
-+ * CVSID: $Id: patch-hald_freebsd_hf-usb2.c,v 1.2 2009-09-14 04:34:35 marcus Exp $
++ * CVSID: $Id: patch-hald_freebsd_hf-usb2.c,v 1.3 2009-09-18 05:47:01 marcus Exp $
 + *
 + * hf-usb.c : USB support
 + *
@@ -195,7 +195,7 @@
 +      addr = libusb20_dev_get_address(pdev);
 +
 +      if (addr == 1)
-+        parent = hf_devtree_find_parent_from_info(hald_get_gdl(), "usbus", bus);
++        parent = hf_devtree_find_from_info(hald_get_gdl(), "usbus", bus);
 +      else
 +        parent = hf_device_store_match(hald_get_gdl(), "usb_device.bus_number",
 +          HAL_PROPERTY_TYPE_INT32, bus, "usb_device.port_number",
