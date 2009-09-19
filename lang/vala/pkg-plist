@@ -27,13 +27,20 @@ share/devhelp/books/vala/statements.html
 share/devhelp/books/vala/structs.html
 share/devhelp/books/vala/types.html
 share/devhelp/books/vala/vala.devhelp2
+%%DATADIR%%/vapi/alsa.vapi
 %%DATADIR%%/vapi/atk.vapi
 %%DATADIR%%/vapi/bzlib.vapi
 %%DATADIR%%/vapi/cairo-xcb.deps
 %%DATADIR%%/vapi/cairo-xcb.vapi
 %%DATADIR%%/vapi/cairo.vapi
+%%DATADIR%%/vapi/clutter-1.0.deps
+%%DATADIR%%/vapi/clutter-1.0.vapi
+%%DATADIR%%/vapi/clutter-json-1.0.vapi
+%%DATADIR%%/vapi/cogl-1.0.deps
+%%DATADIR%%/vapi/cogl-1.0.vapi
 %%DATADIR%%/vapi/curses.vapi
 %%DATADIR%%/vapi/dbus-glib-1.vapi
+%%DATADIR%%/vapi/dconf.vapi
 %%DATADIR%%/vapi/enchant.vapi
 %%DATADIR%%/vapi/fuse.deps
 %%DATADIR%%/vapi/fuse.vapi
@@ -47,6 +54,7 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/gio-2.0.vapi
 %%DATADIR%%/vapi/gio-unix-2.0.deps
 %%DATADIR%%/vapi/gio-unix-2.0.vapi
+%%DATADIR%%/vapi/gl-1.0.vapi
 %%DATADIR%%/vapi/glib-2.0.vapi
 %%DATADIR%%/vapi/gmodule-2.0.vapi
 %%DATADIR%%/vapi/gnet-2.0.deps
@@ -55,6 +63,7 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/gnome-desktop-2.0.vapi
 %%DATADIR%%/vapi/gnome-keyring-1.vapi
 %%DATADIR%%/vapi/gnome-vfs-2.0.vapi
+%%DATADIR%%/vapi/gnutls.vapi
 %%DATADIR%%/vapi/gobject-2.0.vapi
 %%DATADIR%%/vapi/goocanvas.deps
 %%DATADIR%%/vapi/goocanvas.vapi
@@ -121,6 +130,7 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/libgnomeui-2.0.vapi
 %%DATADIR%%/vapi/libgsf-1.deps
 %%DATADIR%%/vapi/libgsf-1.vapi
+%%DATADIR%%/vapi/libnl-1.vapi
 %%DATADIR%%/vapi/libnotify.deps
 %%DATADIR%%/vapi/libnotify.vapi
 %%DATADIR%%/vapi/liboobs-1.vapi
@@ -141,6 +151,8 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/libwnck-1.0.deps
 %%DATADIR%%/vapi/libwnck-1.0.vapi
 %%DATADIR%%/vapi/libxml-2.0.vapi
+%%DATADIR%%/vapi/linux.deps
+%%DATADIR%%/vapi/linux.vapi
 %%DATADIR%%/vapi/loudmouth-1.0.vapi
 %%DATADIR%%/vapi/lua.vapi
 %%DATADIR%%/vapi/mysql.vapi
@@ -153,6 +165,8 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/posix.vapi
 %%DATADIR%%/vapi/raptor.vapi
 %%DATADIR%%/vapi/rasqal.vapi
+%%DATADIR%%/vapi/rest.deps
+%%DATADIR%%/vapi/rest.vapi
 %%DATADIR%%/vapi/sdl-gfx.vapi
 %%DATADIR%%/vapi/sdl-image.vapi
 %%DATADIR%%/vapi/sdl-mixer.vapi
