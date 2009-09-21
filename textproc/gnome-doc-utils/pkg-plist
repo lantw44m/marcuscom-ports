@@ -4,21 +4,13 @@ bin/xml2po
 libdata/pkgconfig/gnome-doc-utils.pc
 libdata/pkgconfig/xml2po.pc
 %%PYTHON_SITELIBDIR%%/xml2po/__init__.py
-%%PYTHON_SITELIBDIR%%/xml2po/__init__.pyc
 %%PYTHON_SITELIBDIR%%/xml2po/modes/__init__.py
-%%PYTHON_SITELIBDIR%%/xml2po/modes/__init__.pyc
 %%PYTHON_SITELIBDIR%%/xml2po/modes/basic.py
-%%PYTHON_SITELIBDIR%%/xml2po/modes/basic.pyc
 %%PYTHON_SITELIBDIR%%/xml2po/modes/docbook.py
-%%PYTHON_SITELIBDIR%%/xml2po/modes/docbook.pyc
 %%PYTHON_SITELIBDIR%%/xml2po/modes/gs.py
-%%PYTHON_SITELIBDIR%%/xml2po/modes/gs.pyc
 %%PYTHON_SITELIBDIR%%/xml2po/modes/mallard.py
-%%PYTHON_SITELIBDIR%%/xml2po/modes/mallard.pyc
 %%PYTHON_SITELIBDIR%%/xml2po/modes/ubuntu.py
-%%PYTHON_SITELIBDIR%%/xml2po/modes/ubuntu.pyc
 %%PYTHON_SITELIBDIR%%/xml2po/modes/xhtml.py
-%%PYTHON_SITELIBDIR%%/xml2po/modes/xhtml.pyc
 share/aclocal/gnome-doc-utils.m4
 %%DATADIR%%/gnome-doc-utils.make
 %%DATADIR%%/icons/hicolor/48x48/admon-bug.png
@@ -86,7 +78,6 @@ share/gnome/help/gnome-doc-mallard-spec/C/mal_block_title.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_block_tree.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_external.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_info.page
-share/gnome/help/gnome-doc-mallard-spec/C/mal_info_copyright.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_info_credit.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_info_desc.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_info_email.page
@@ -95,6 +86,7 @@ share/gnome/help/gnome-doc-mallard-spec/C/mal_info_link.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_info_name.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_info_revision.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_info_title.page
+share/gnome/help/gnome-doc-mallard-spec/C/mal_info_years.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_inline.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_inline_app.page
 share/gnome/help/gnome-doc-mallard-spec/C/mal_inline_cmd.page
@@ -158,7 +150,6 @@ share/gnome/help/gnome-doc-mallard-spec/de/mal_block_title.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_block_tree.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_external.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_info.page
-share/gnome/help/gnome-doc-mallard-spec/de/mal_info_copyright.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_info_credit.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_info_desc.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_info_email.page
@@ -167,6 +158,7 @@ share/gnome/help/gnome-doc-mallard-spec/de/mal_info_link.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_info_name.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_info_revision.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_info_title.page
+share/gnome/help/gnome-doc-mallard-spec/de/mal_info_years.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_inline.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_inline_app.page
 share/gnome/help/gnome-doc-mallard-spec/de/mal_inline_cmd.page
@@ -306,6 +298,7 @@ share/locale/kn/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/ko/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/lt/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/lv/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/mai/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/mg/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/mk/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/ml/LC_MESSAGES/gnome-doc-utils.mo
@@ -451,6 +444,8 @@ share/xml/mallard/1.0/mallard.rng
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES

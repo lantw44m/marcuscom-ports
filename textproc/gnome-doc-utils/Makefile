@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.70 2009/07/28 12:35:46 kwm Exp $
+#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.71 2009/08/25 09:56:08 kwm Exp $
 #
 
 PORTNAME=	gnome-doc-utils
-PORTVERSION=	0.17.4
+PORTVERSION=	0.18.0
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 
