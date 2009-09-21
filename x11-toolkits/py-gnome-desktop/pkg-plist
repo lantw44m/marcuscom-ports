@@ -87,6 +87,9 @@ libdata/pkgconfig/gnome-python-desktop-2.0.pc
 %%PORTDOCS%%share/examples/py-gnome/applet/GNOME_PythonAppletSample.server
 %%PORTDOCS%%share/examples/py-gnome/applet/README
 %%PORTDOCS%%share/examples/py-gnome/applet/applet.py
+%%PORTDOCS%%share/examples/py-gnome/braseroburn/write-audio-video.py
+%%PORTDOCS%%share/examples/py-gnome/braseroburn/write-data.py
+%%PORTDOCS%%share/examples/py-gnome/braseroburn/write-image.py
 %%PORTDOCS%%share/examples/py-gnome/braseromedia/drive_selection.py
 %%PORTDOCS%%share/examples/py-gnome/gnomeprint/README
 %%PORTDOCS%%share/examples/py-gnome/gnomeprint/example_01.py
@@ -127,6 +130,7 @@ share/pygtk/2.0/defs/wnck.defs
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gtksourceview
 %%PORTDOCS%%@dirrm share/examples/py-gnome/gnomeprint
 %%PORTDOCS%%@dirrm share/examples/py-gnome/braseromedia
+%%PORTDOCS%%@dirrm share/examples/py-gnome/braseroburn
 %%PORTDOCS%%@dirrm share/examples/py-gnome/applet
 %%PORTDOCS%%@dirrmtry share/examples/py-gnome
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/pygtksourceview
