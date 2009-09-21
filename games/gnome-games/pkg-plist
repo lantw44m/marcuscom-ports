@@ -1402,6 +1402,9 @@ share/gnome/help/gnotravex/ca/gnotravex.xml
 share/gnome/help/gnotravex/cs/figures/gnotravex_game.png
 share/gnome/help/gnotravex/cs/figures/gnotravex_mainwindow.png
 share/gnome/help/gnotravex/cs/gnotravex.xml
+share/gnome/help/gnotravex/da/figures/gnotravex_game.png
+share/gnome/help/gnotravex/da/figures/gnotravex_mainwindow.png
+share/gnome/help/gnotravex/da/gnotravex.xml
 share/gnome/help/gnotravex/de/figures/gnotravex_game.png
 share/gnome/help/gnotravex/de/figures/gnotravex_mainwindow.png
 share/gnome/help/gnotravex/de/gnotravex.xml
@@ -2080,6 +2083,7 @@ share/omf/gnomine/gnomine-zh_CN.omf
 share/omf/gnotravex/gnotravex-C.omf
 share/omf/gnotravex/gnotravex-ca.omf
 share/omf/gnotravex/gnotravex-cs.omf
+share/omf/gnotravex/gnotravex-da.omf
 share/omf/gnotravex/gnotravex-de.omf
 share/omf/gnotravex/gnotravex-el.omf
 share/omf/gnotravex/gnotravex-en_GB.omf
@@ -2320,6 +2324,8 @@ share/omf/same-gnome/same-gnome-sv.omf
 @dirrm share/gnome/help/gnotravex/el
 @dirrm share/gnome/help/gnotravex/de/figures
 @dirrm share/gnome/help/gnotravex/de
+@dirrm share/gnome/help/gnotravex/da/figures
+@dirrm share/gnome/help/gnotravex/da
 @dirrm share/gnome/help/gnotravex/cs/figures
 @dirrm share/gnome/help/gnotravex/cs
 @dirrm share/gnome/help/gnotravex/ca/figures

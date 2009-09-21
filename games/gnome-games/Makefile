@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.203 2009/08/13 00:17:05 kwm Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.204 2009/09/08 13:32:47 kwm Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	2.27.92
+PORTVERSION=	2.28.0
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -46,6 +46,10 @@ CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]*
 
 DSC_FILES=	iagno/iagno-client.dsc gnect/data/gnect-client.dsc \
 		gnibbles/gnibbles-client.dsc
+
+MAN6=		blackjack.6 glchess.6 glines.6 gnect.6 gnibbles.6 gnobots2.6 \
+		gnome-sudoku.6 gnometris.6 gnomine.6 gnotravex.6 gnotski.6 \
+		gtali.6 iagno.6 mahjongg.6 same-gnome.6 sol.6
 
 .include <bsd.port.pre.mk>
 
