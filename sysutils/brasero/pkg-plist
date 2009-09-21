@@ -337,6 +337,7 @@ share/icons/hicolor/48x48/apps/brasero.png
 share/icons/hicolor/scalable/apps/brasero.svg
 share/locale/ar/LC_MESSAGES/brasero.mo
 share/locale/as/LC_MESSAGES/brasero.mo
+share/locale/ast/LC_MESSAGES/brasero.mo
 share/locale/be/LC_MESSAGES/brasero.mo
 share/locale/bg/LC_MESSAGES/brasero.mo
 share/locale/bn/LC_MESSAGES/brasero.mo
@@ -492,3 +493,5 @@ share/omf/brasero/brasero-zh_TW.omf
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
