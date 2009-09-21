@@ -23,8 +23,12 @@ share/doc/mm-common/skeletonmm/configure.ac
 share/doc/mm-common/skeletonmm/doc/Makefile.am
 share/doc/mm-common/skeletonmm/doc/reference/.gitignore
 share/doc/mm-common/skeletonmm/doc/reference/Doxyfile.in
+share/doc/mm-common/skeletonmm/examples/.gitignore
+share/doc/mm-common/skeletonmm/examples/Makefile.am
+share/doc/mm-common/skeletonmm/examples/example/example.cc
 share/doc/mm-common/skeletonmm/skeleton/.gitignore
 share/doc/mm-common/skeletonmm/skeleton/skeletonmm-uninstalled.pc.in
+share/doc/mm-common/skeletonmm/skeleton/skeletonmm.h
 share/doc/mm-common/skeletonmm/skeleton/skeletonmm.pc.in
 share/doc/mm-common/skeletonmm/skeleton/skeletonmm/Makefile.am
 share/doc/mm-common/skeletonmm/skeleton/skeletonmm/filelist.am
@@ -62,6 +66,8 @@ libdata/pkgconfig/mm-common-libstdc++.pc
 @dirrm share/doc/mm-common/skeletonmm/skeleton
 @dirrm share/doc/mm-common/skeletonmm/doc/reference
 @dirrm share/doc/mm-common/skeletonmm/doc
+@dirrm share/doc/mm-common/skeletonmm/examples/example
+@dirrm share/doc/mm-common/skeletonmm/examples
 @dirrm share/doc/mm-common/skeletonmm/build
 @dirrm share/doc/mm-common/skeletonmm/codegen/m4
 @dirrm share/doc/mm-common/skeletonmm/codegen/extradefs
