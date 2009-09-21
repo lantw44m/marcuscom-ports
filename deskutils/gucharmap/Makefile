@@ -3,15 +3,15 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.62 2009/08/23 19:05:59 kwm Exp $
 #
 
 PORTNAME=	gucharmap
-PORTVERSION=	2.27.0.git
+PORTVERSION=	2.28.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
-DISTNAME=	${PORTNAME}-${PORTVERSION:S/.git/-git/}
+DISTNAME=	${PORTNAME}-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A Unicode/ISO10646 character map and font viewer
