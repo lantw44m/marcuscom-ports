@@ -580,7 +580,9 @@ share/doc/libecal/index.html
 share/doc/libecal/index.sgml
 share/doc/libecal/ix01.html
 share/doc/libecal/left.png
+share/doc/libecal/libecal-e-cal-check-timezones.html
 share/doc/libecal/libecal-e-cal-recur.html
+share/doc/libecal/libecal-e-cal-system-timezone.html
 share/doc/libecal/libecal-e-cal-time-util.html
 share/doc/libecal/libecal-e-cal-types.html
 share/doc/libecal/libecal-e-cal-util.html
@@ -654,6 +656,7 @@ share/doc/libedataserver/libedataserver-e-trie.html
 share/doc/libedataserver/libedataserver-e-uid.html
 share/doc/libedataserver/libedataserver-e-url.html
 share/doc/libedataserver/libedataserver-e-util.html
+share/doc/libedataserver/libedataserver-e-xml-hash-utils.html
 share/doc/libedataserver/libedataserver-md5-utils.html
 share/doc/libedataserver/libedataserver.devhelp
 share/doc/libedataserver/libedataserver.devhelp2
@@ -695,6 +698,7 @@ share/idl/evolution-data-server-%%EVO_VERSION%%/Evolution-DataServer.idl
 share/locale/am/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/ar/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/as/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
+share/locale/ast/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/be/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
@@ -846,5 +850,7 @@ share/pixmaps/evolution-data-server/category_time-and-expenses_16.png
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
