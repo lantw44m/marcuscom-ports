@@ -105,6 +105,7 @@ share/locale/bn/LC_MESSAGES/libgtop-2.0.mo
 share/locale/bn_IN/LC_MESSAGES/libgtop-2.0.mo
 share/locale/bs/LC_MESSAGES/libgtop-2.0.mo
 share/locale/ca/LC_MESSAGES/libgtop-2.0.mo
+share/locale/ca@valencia/LC_MESSAGES/libgtop-2.0.mo
 share/locale/cs/LC_MESSAGES/libgtop-2.0.mo
 share/locale/cy/LC_MESSAGES/libgtop-2.0.mo
 share/locale/da/LC_MESSAGES/libgtop-2.0.mo
@@ -138,6 +139,7 @@ share/locale/ky/LC_MESSAGES/libgtop-2.0.mo
 share/locale/la/LC_MESSAGES/libgtop-2.0.mo
 share/locale/lt/LC_MESSAGES/libgtop-2.0.mo
 share/locale/lv/LC_MESSAGES/libgtop-2.0.mo
+share/locale/mai/LC_MESSAGES/libgtop-2.0.mo
 share/locale/mg/LC_MESSAGES/libgtop-2.0.mo
 share/locale/mi/LC_MESSAGES/libgtop-2.0.mo
 share/locale/mk/LC_MESSAGES/libgtop-2.0.mo
@@ -195,6 +197,8 @@ share/locale/zh_TW/LC_MESSAGES/libgtop-2.0.mo
 @dirrmtry share/locale/mi
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/la/LC_MESSAGES
 @dirrmtry share/locale/la
 @dirrmtry share/locale/ky/LC_MESSAGES
@@ -203,6 +207,8 @@ share/locale/zh_TW/LC_MESSAGES/libgtop-2.0.mo
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/as/LC_MESSAGES
