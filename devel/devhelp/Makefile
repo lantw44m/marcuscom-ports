@@ -3,11 +3,10 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp/Makefile,v 1.22 2009/09/07 10:36:28 kwm Exp $
+#   $MCom: ports/devel/devhelp/Makefile,v 1.23 2009/09/08 19:21:50 kwm Exp $
 
 PORTNAME=	devhelp
-PORTVERSION=	2.27.92
-PORTREVISION=	1
+PORTVERSION=	2.28.0
 PORTEPOCH=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -50,5 +49,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_SINGLE_INCLUDES||g' \
 		${WRKSRC}/src/Makefile.in
 .endif
+
+post-install:
+	@${MKDIR} ${PREFIX}/etc/gconf/schemas
+	@${CP} ${WRKSRC}/data/devhelp.schemas ${PREFIX}/etc/gconf/schemas
 
 .include <bsd.port.post.mk>
