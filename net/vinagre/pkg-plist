@@ -191,6 +191,7 @@ share/locale/bg/LC_MESSAGES/vinagre.mo
 share/locale/bn/LC_MESSAGES/vinagre.mo
 share/locale/bn_IN/LC_MESSAGES/vinagre.mo
 share/locale/ca/LC_MESSAGES/vinagre.mo
+share/locale/ca@valencia/LC_MESSAGES/vinagre.mo
 share/locale/cs/LC_MESSAGES/vinagre.mo
 share/locale/da/LC_MESSAGES/vinagre.mo
 share/locale/de/LC_MESSAGES/vinagre.mo
@@ -214,6 +215,7 @@ share/locale/ko/LC_MESSAGES/vinagre.mo
 share/locale/ku/LC_MESSAGES/vinagre.mo
 share/locale/lt/LC_MESSAGES/vinagre.mo
 share/locale/lv/LC_MESSAGES/vinagre.mo
+share/locale/mai/LC_MESSAGES/vinagre.mo
 share/locale/mk/LC_MESSAGES/vinagre.mo
 share/locale/ml/LC_MESSAGES/vinagre.mo
 share/locale/mr/LC_MESSAGES/vinagre.mo
@@ -326,8 +328,12 @@ share/omf/vinagre/vinagre-zh_CN.omf
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/ca@valencia//LC_MESSAGES
+@dirrmtry share/locale/ca@valencia/
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
