@@ -2,8 +2,10 @@ include/libgdata/gdata/atom/gdata-author.h
 include/libgdata/gdata/atom/gdata-category.h
 include/libgdata/gdata/atom/gdata-generator.h
 include/libgdata/gdata/atom/gdata-link.h
+include/libgdata/gdata/exif/gdata-exif-tags.h
 include/libgdata/gdata/gd/gdata-gd-email-address.h
 include/libgdata/gdata/gd/gdata-gd-im-address.h
+include/libgdata/gdata/gd/gdata-gd-name.h
 include/libgdata/gdata/gd/gdata-gd-organization.h
 include/libgdata/gdata/gd/gdata-gd-phone-number.h
 include/libgdata/gdata/gd/gdata-gd-postal-address.h
@@ -13,6 +15,7 @@ include/libgdata/gdata/gd/gdata-gd-where.h
 include/libgdata/gdata/gd/gdata-gd-who.h
 include/libgdata/gdata/gdata-access-handler.h
 include/libgdata/gdata/gdata-access-rule.h
+include/libgdata/gdata/gdata-download-stream.h
 include/libgdata/gdata/gdata-entry.h
 include/libgdata/gdata/gdata-enums.h
 include/libgdata/gdata/gdata-feed.h
@@ -20,7 +23,9 @@ include/libgdata/gdata/gdata-parsable.h
 include/libgdata/gdata/gdata-query.h
 include/libgdata/gdata/gdata-service.h
 include/libgdata/gdata/gdata-types.h
+include/libgdata/gdata/gdata-upload-stream.h
 include/libgdata/gdata/gdata.h
+include/libgdata/gdata/georss/gdata-georss-where.h
 include/libgdata/gdata/media/gdata-media-category.h
 include/libgdata/gdata/media/gdata-media-content.h
 include/libgdata/gdata/media/gdata-media-credit.h
@@ -58,7 +63,7 @@ include/libgdata/gdata/services/youtube/gdata-youtube-video.h
 lib/libgdata.a
 lib/libgdata.la
 lib/libgdata.so
-lib/libgdata.so.5
+lib/libgdata.so.6
 libdata/pkgconfig/libgdata.pc
 share/doc/gdata/GDataAccessHandler.html
 share/doc/gdata/GDataAccessRule.html
@@ -80,6 +85,7 @@ share/doc/gdata/GDataDocumentsQuery.html
 share/doc/gdata/GDataDocumentsService.html
 share/doc/gdata/GDataDocumentsSpreadsheet.html
 share/doc/gdata/GDataDocumentsText.html
+share/doc/gdata/GDataDownloadStream.html
 share/doc/gdata/GDataEntry.html
 share/doc/gdata/GDataFeed.html
 share/doc/gdata/GDataGDEmailAddress.html
@@ -104,6 +110,7 @@ share/doc/gdata/GDataPicasaWebQuery.html
 share/doc/gdata/GDataPicasaWebService.html
 share/doc/gdata/GDataQuery.html
 share/doc/gdata/GDataService.html
+share/doc/gdata/GDataUploadStream.html
 share/doc/gdata/GDataYouTubeContent.html
 share/doc/gdata/GDataYouTubeCredit.html
 share/doc/gdata/GDataYouTubeQuery.html
@@ -123,6 +130,7 @@ share/doc/gdata/ch09.html
 share/doc/gdata/ch10.html
 share/doc/gdata/ch11.html
 share/doc/gdata/ch12.html
+share/doc/gdata/data-flow.png
 share/doc/gdata/gdata-GData-Types.html
 share/doc/gdata/gdata-overview.html
 share/doc/gdata/gdata.devhelp
@@ -149,10 +157,15 @@ share/locale/de/LC_MESSAGES/gdata.mo
 share/locale/el/LC_MESSAGES/gdata.mo
 share/locale/en_GB/LC_MESSAGES/gdata.mo
 share/locale/es/LC_MESSAGES/gdata.mo
+share/locale/eu/LC_MESSAGES/gdata.mo
 share/locale/fr/LC_MESSAGES/gdata.mo
 share/locale/gl/LC_MESSAGES/gdata.mo
+share/locale/hu/LC_MESSAGES/gdata.mo
 share/locale/nb/LC_MESSAGES/gdata.mo
 share/locale/pa/LC_MESSAGES/gdata.mo
+share/locale/pl/LC_MESSAGES/gdata.mo
+share/locale/pt/LC_MESSAGES/gdata.mo
+share/locale/pt_BR/LC_MESSAGES/gdata.mo
 share/locale/sv/LC_MESSAGES/gdata.mo
 share/locale/uk/LC_MESSAGES/gdata.mo
 share/locale/zh_HK/LC_MESSAGES/gdata.mo
@@ -177,7 +190,9 @@ share/locale/zh_TW/LC_MESSAGES/gdata.mo
 @dirrm include/libgdata/gdata/services/calendar
 @dirrm include/libgdata/gdata/services
 @dirrm include/libgdata/gdata/media
+@dirrm include/libgdata/gdata/georss
 @dirrm include/libgdata/gdata/gd
+@dirrm include/libgdata/gdata/exif
 @dirrm include/libgdata/gdata/atom
 @dirrm include/libgdata/gdata
 @dirrm include/libgdata
