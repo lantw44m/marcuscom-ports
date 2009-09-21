@@ -183,6 +183,7 @@ share/locale/ku/LC_MESSAGES/gconf-editor.mo
 share/locale/li/LC_MESSAGES/gconf-editor.mo
 share/locale/lt/LC_MESSAGES/gconf-editor.mo
 share/locale/lv/LC_MESSAGES/gconf-editor.mo
+share/locale/mai/LC_MESSAGES/gconf-editor.mo
 share/locale/mg/LC_MESSAGES/gconf-editor.mo
 share/locale/mk/LC_MESSAGES/gconf-editor.mo
 share/locale/ml/LC_MESSAGES/gconf-editor.mo
@@ -299,6 +300,8 @@ share/omf/gconf-editor/gconf-editor-zh_CN.omf
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
 @dirrmtry share/locale/mg
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
