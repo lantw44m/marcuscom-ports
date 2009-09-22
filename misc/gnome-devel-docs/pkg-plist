@@ -328,6 +328,18 @@ share/gnome/help/platform-overview/C/ipc-network.xml
 share/gnome/help/platform-overview/C/legal-fdl.xml
 share/gnome/help/platform-overview/C/platform-overview.xml
 share/gnome/help/platform-overview/C/platform.xml
+share/gnome/help/platform-overview/cs/apx-modules.xml
+share/gnome/help/platform-overview/cs/bindings.xml
+share/gnome/help/platform-overview/cs/core-tech.xml
+share/gnome/help/platform-overview/cs/desktop-tech.xml
+share/gnome/help/platform-overview/cs/figures/graphics.png
+share/gnome/help/platform-overview/cs/figures/i18n.png
+share/gnome/help/platform-overview/cs/figures/pango.png
+share/gnome/help/platform-overview/cs/intro.xml
+share/gnome/help/platform-overview/cs/ipc-network.xml
+share/gnome/help/platform-overview/cs/legal-fdl.xml
+share/gnome/help/platform-overview/cs/platform-overview.xml
+share/gnome/help/platform-overview/cs/platform.xml
 share/gnome/help/platform-overview/de/apx-modules.xml
 share/gnome/help/platform-overview/de/bindings.xml
 share/gnome/help/platform-overview/de/core-tech.xml
@@ -428,6 +440,7 @@ share/omf/integration-guide/integration-guide-sv.omf
 share/omf/integration-guide/integration-guide-zh_CN.omf
 share/omf/optimization-guide/optimization-guide-C.omf
 share/omf/platform-overview/platform-overview-C.omf
+share/omf/platform-overview/platform-overview-cs.omf
 share/omf/platform-overview/platform-overview-de.omf
 share/omf/platform-overview/platform-overview-el.omf
 share/omf/platform-overview/platform-overview-es.omf
@@ -456,6 +469,8 @@ share/omf/platform-overview/platform-overview-ru.omf
 @dirrm share/gnome/help/platform-overview/el
 @dirrm share/gnome/help/platform-overview/de/figures
 @dirrm share/gnome/help/platform-overview/de
+@dirrm share/gnome/help/platform-overview/cs/figures
+@dirrm share/gnome/help/platform-overview/cs
 @dirrm share/gnome/help/platform-overview/C/figures
 @dirrm share/gnome/help/platform-overview/C
 @dirrm share/gnome/help/platform-overview

@@ -196,6 +196,7 @@ share/locale/ja/LC_MESSAGES/mousetweaks.mo
 share/locale/kn/LC_MESSAGES/mousetweaks.mo
 share/locale/ko/LC_MESSAGES/mousetweaks.mo
 share/locale/lt/LC_MESSAGES/mousetweaks.mo
+share/locale/mai/LC_MESSAGES/mousetweaks.mo
 share/locale/mk/LC_MESSAGES/mousetweaks.mo
 share/locale/ml/LC_MESSAGES/mousetweaks.mo
 share/locale/mr/LC_MESSAGES/mousetweaks.mo
@@ -279,6 +280,8 @@ share/omf/mousetweaks/mousetweaks-sv.omf
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES

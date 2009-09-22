@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/misc/gnome-devel-docs/Makefile,v 1.12 2009/08/25 09:06:39 kwm Exp $
 #
 
 PORTNAME=	gnome-devel-docs
-PORTVERSION=	2.27.1
+PORTVERSION=	2.28.0
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
