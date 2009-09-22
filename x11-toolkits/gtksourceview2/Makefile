@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtksourceview2/Makefile,v 1.78 2009/08/23 20:28:16 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtksourceview2/Makefile,v 1.79 2009/09/16 06:31:52 avl Exp $
 #
 
 PORTNAME=	gtksourceview2
-PORTVERSION=	2.7.5
+PORTVERSION=	2.8.0
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
