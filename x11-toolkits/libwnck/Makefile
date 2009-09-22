@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.121 2009/07/29 10:31:05 kwm Exp $
+#   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.122 2009/09/09 05:58:36 marcus Exp $
 #
 
 PORTNAME=	libwnck
-PORTVERSION=	2.27.92
+PORTVERSION=	2.28.0
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
