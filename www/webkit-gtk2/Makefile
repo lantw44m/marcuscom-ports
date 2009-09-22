@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.35 2009/08/25 00:01:15 marcus Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.36 2009/09/08 18:33:11 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.1.14
+PORTVERSION=	1.1.15
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -27,7 +27,8 @@ MAKE_JOBS_SAFE=	yes
 USE_XORG=	xt
 USE_BISON=	build
 USE_GMAKE=	yes
-USE_GNOME=	gtk20 libxslt
+USE_AUTOTOOLS=	libtool:22
+USE_GNOME=	gtk20 libxslt ltverhack:13
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -64,7 +65,9 @@ CONFIGURE_ARGS+=--disable-debug
 CONFIGURE_ARGS+=--enable-static
 PLIST_SUB+=	STATIC=""
 .else
-PLIST_SUB+=	STATIC="@comment "
+CONFIGURE_ARGS+=--enable-static=no
+#PLIST_SUB+=	STATIC="@comment "
+PLIST_SUB+=	STATIC=""
 .endif
 
 post-patch:

@@ -14,6 +14,7 @@ include/webkit-1.0/webkit/webkitdefines.h
 include/webkit-1.0/webkit/webkitdownload.h
 include/webkit-1.0/webkit/webkitenumtypes.h
 include/webkit-1.0/webkit/webkiterror.h
+include/webkit-1.0/webkit/webkithittestresult.h
 include/webkit-1.0/webkit/webkitnetworkrequest.h
 include/webkit-1.0/webkit/webkitnetworkresponse.h
 include/webkit-1.0/webkit/webkitsecurityorigin.h
@@ -34,7 +35,7 @@ include/webkit-1.0/webkit/webkitwebwindowfeatures.h
 %%STATIC%%lib/libwebkit-1.0.a
 lib/libwebkit-1.0.la
 lib/libwebkit-1.0.so
-lib/libwebkit-1.0.so.12
+lib/libwebkit-1.0.so.13
 libdata/pkgconfig/webkit-1.0.pc
 share/locale/de/LC_MESSAGES/webkit.mo
 share/locale/en_GB/LC_MESSAGES/webkit.mo
@@ -208,6 +209,7 @@ share/webkit-1.0/webinspector/ObjectProxy.js
 share/webkit-1.0/webinspector/Panel.js
 share/webkit-1.0/webinspector/PanelEnablerView.js
 share/webkit-1.0/webinspector/Placard.js
+share/webkit-1.0/webinspector/Popup.js
 share/webkit-1.0/webinspector/ProfileDataGridTree.js
 share/webkit-1.0/webinspector/ProfileView.js
 share/webkit-1.0/webinspector/ProfilesPanel.js
@@ -230,8 +232,10 @@ share/webkit-1.0/webinspector/StoragePanel.js
 share/webkit-1.0/webinspector/StylesSidebarPane.js
 share/webkit-1.0/webinspector/SummaryBar.js
 share/webkit-1.0/webinspector/TextPrompt.js
+share/webkit-1.0/webinspector/TimelineAgent.js
 share/webkit-1.0/webinspector/TopDownProfileDataGridTree.js
 share/webkit-1.0/webinspector/View.js
+share/webkit-1.0/webinspector/WatchExpressionsSidebarPane.js
 share/webkit-1.0/webinspector/inspector.css
 share/webkit-1.0/webinspector/inspector.html
 share/webkit-1.0/webinspector/inspector.js
