@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.209 2009/09/16 02:39:25 avl Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.210 2009/09/17 01:17:36 avl Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.27.92
-PORTREVISION?=	1
+PORTVERSION=	2.28.0
+PORTREVISION?=	0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,7 +19,7 @@ COMMENT?=	An extremely lightweight and simple web browser for GNOME 2
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/gir-1.0/WebKit-1.0.gir:${PORTSDIR}/www/gir-repository-webkit
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		webkit-1.0.12:${PORTSDIR}/www/webkit-gtk2 \
+		webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2 \
 		notify.1:${PORTSDIR}/devel/libnotify \
 		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
