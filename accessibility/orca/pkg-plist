@@ -251,9 +251,15 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/__init__.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/__init__.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/__init__.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/braille_generator.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/braille_generator.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/braille_generator.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/script.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/script.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/script.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/speech_generator.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/speech_generator.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/speech_generator.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/tutorialgenerator.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/tutorialgenerator.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/tutorialgenerator.pyo
@@ -410,6 +416,7 @@ share/locale/bg/LC_MESSAGES/orca.mo
 share/locale/bn/LC_MESSAGES/orca.mo
 share/locale/bn_IN/LC_MESSAGES/orca.mo
 share/locale/ca/LC_MESSAGES/orca.mo
+share/locale/ca@valencia/LC_MESSAGES/orca.mo
 share/locale/cs/LC_MESSAGES/orca.mo
 share/locale/cy/LC_MESSAGES/orca.mo
 share/locale/da/LC_MESSAGES/orca.mo
@@ -510,5 +517,7 @@ share/locale/zh_TW/LC_MESSAGES/orca.mo
 @dirrmtry share/locale/mai
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
