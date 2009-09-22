@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/libgweather/Makefile,v 1.27 2009/08/25 18:47:43 kwm Exp $
+#   $MCom: ports/net/libgweather/Makefile,v 1.28 2009/09/09 06:11:25 marcus Exp $
 #
 
 PORTNAME=	libgweather
-PORTVERSION=	2.27.92
+PORTVERSION=	2.28.0
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
