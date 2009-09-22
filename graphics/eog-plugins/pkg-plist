@@ -23,11 +23,13 @@ lib/eog/plugins/libfit-to-width.so
 share/locale/ar/LC_MESSAGES/eog-plugins.mo
 share/locale/as/LC_MESSAGES/eog-plugins.mo
 share/locale/be@latin/LC_MESSAGES/eog-plugins.mo
+share/locale/bg/LC_MESSAGES/eog-plugins.mo
 share/locale/bn_IN/LC_MESSAGES/eog-plugins.mo
 share/locale/ca/LC_MESSAGES/eog-plugins.mo
 share/locale/cs/LC_MESSAGES/eog-plugins.mo
 share/locale/da/LC_MESSAGES/eog-plugins.mo
 share/locale/de/LC_MESSAGES/eog-plugins.mo
+share/locale/el/LC_MESSAGES/eog-plugins.mo
 share/locale/en_GB/LC_MESSAGES/eog-plugins.mo
 share/locale/es/LC_MESSAGES/eog-plugins.mo
 share/locale/eu/LC_MESSAGES/eog-plugins.mo
