@@ -45,6 +45,7 @@ share/locale/ja/LC_MESSAGES/evolution-mapi.mo
 share/locale/kn/LC_MESSAGES/evolution-mapi.mo
 share/locale/ko/LC_MESSAGES/evolution-mapi.mo
 share/locale/lt/LC_MESSAGES/evolution-mapi.mo
+share/locale/mai/LC_MESSAGES/evolution-mapi.mo
 share/locale/ml/LC_MESSAGES/evolution-mapi.mo
 share/locale/mr/LC_MESSAGES/evolution-mapi.mo
 share/locale/nb/LC_MESSAGES/evolution-mapi.mo
@@ -88,6 +89,8 @@ share/evolution-data-server-%%EVO_VERSION%%/mapi/tz-ical-to-mapi
 @dirrmtry share/local/si
 @dirrmtry share/local/mr/LC_MESSAGES
 @dirrmtry share/local/mr
+@dirrmtry share/local/mai/LC_MESSAGES
+@dirrmtry share/local/mai
 @dirrmtry share/local/ca@valencia/LC_MESSAGES
 @dirrmtry share/local/ca@valencia
 @dirrmtry share/local/bn_IN/LC_MESSAGES
