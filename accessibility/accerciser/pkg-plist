@@ -223,6 +223,12 @@ share/gnome/help/accerciser/sv/figures/api_browser.png
 share/gnome/help/accerciser/sv/figures/event_monitor.png
 share/gnome/help/accerciser/sv/figures/interface_viewer.png
 share/gnome/help/accerciser/sv/figures/script_recorder.png
+share/gnome/help/accerciser/uk/accerciser.xml
+share/gnome/help/accerciser/uk/figures/accerciser.png
+share/gnome/help/accerciser/uk/figures/api_browser.png
+share/gnome/help/accerciser/uk/figures/event_monitor.png
+share/gnome/help/accerciser/uk/figures/interface_viewer.png
+share/gnome/help/accerciser/uk/figures/script_recorder.png
 share/icons/hicolor/16x16/apps/accerciser.png
 share/icons/hicolor/22x22/apps/accerciser.png
 share/icons/hicolor/32x32/apps/accerciser.png
@@ -256,6 +262,7 @@ share/locale/ja/LC_MESSAGES/accerciser.mo
 share/locale/kn/LC_MESSAGES/accerciser.mo
 share/locale/lt/LC_MESSAGES/accerciser.mo
 share/locale/lv/LC_MESSAGES/accerciser.mo
+share/locale/mai/LC_MESSAGES/accerciser.mo
 share/locale/mk/LC_MESSAGES/accerciser.mo
 share/locale/ml/LC_MESSAGES/accerciser.mo
 share/locale/mr/LC_MESSAGES/accerciser.mo
@@ -267,6 +274,7 @@ share/locale/pa/LC_MESSAGES/accerciser.mo
 share/locale/pl/LC_MESSAGES/accerciser.mo
 share/locale/pt/LC_MESSAGES/accerciser.mo
 share/locale/pt_BR/LC_MESSAGES/accerciser.mo
+share/locale/ro/LC_MESSAGES/accerciser.mo
 share/locale/ru/LC_MESSAGES/accerciser.mo
 share/locale/si/LC_MESSAGES/accerciser.mo
 share/locale/sl/LC_MESSAGES/accerciser.mo
@@ -292,7 +300,10 @@ share/omf/accerciser/accerciser-it.omf
 share/omf/accerciser/accerciser-oc.omf
 share/omf/accerciser/accerciser-pt_BR.omf
 share/omf/accerciser/accerciser-sv.omf
+share/omf/accerciser/accerciser-uk.omf
 @dirrm share/omf/accerciser
+@dirrm share/gnome/help/accerciser/uk/figures
+@dirrm share/gnome/help/accerciser/uk
 @dirrm share/gnome/help/accerciser/sv/figures
 @dirrm share/gnome/help/accerciser/sv
 @dirrm share/gnome/help/accerciser/pt_BR/figures
@@ -336,6 +347,8 @@ share/omf/accerciser/accerciser-sv.omf
 @dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/dz/LC_MESSAGES
