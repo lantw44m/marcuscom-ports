@@ -3,16 +3,19 @@
 # Whom:                 		Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/json-glib/Makefile,v 1.2 2009/07/19 19:46:43 marcus Exp $
+#   $MCom: ports/devel/json-glib/Makefile,v 1.3 2009/08/12 22:41:42 kwm Exp $
 #
 
 PORTNAME=	json-glib
-PORTVERSION=	0.7.6
+PORTVERSION=	0.8.0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	JSON (RFC 4627) interface for Glib
+
+BUILD_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
+RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
