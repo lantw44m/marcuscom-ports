@@ -1,0 +1,22 @@
+--- glib/Makefile.in.orig	2009-09-23 00:28:57.000000000 +0200
++++ glib/Makefile.in	2009-09-23 00:30:16.000000000 +0200
+@@ -1395,7 +1395,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-dist_gdbSCRIPTS \
++install-data-am: install-data-local \
+ 	install-glibincludeHEADERS install-glibsubincludeHEADERS
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+@@ -1602,9 +1602,7 @@ distclean-local:
+ libglib-gdb.py: libglib-gdb.py.in
+ 	sed -e "s|\@datadir\@|$(datadir)|" $(srcdir)/libglib-gdb.py.in > libglib-gdb.py
+ 
+-install-data-hook: libglib-gdb.py
+-	mkdir -p $(DESTDIR)$(datadir)/gdb/auto-load${libdir}
+-	$(INSTALL) libglib-gdb.py $(DESTDIR)$(datadir)/gdb/auto-load${libdir}/libglib-2.0.so.0.$(LT_CURRENT).0-gdb.py
++install-data-hook:
+ @HAVE_GLIB_RUNTIME_LIBDIR_TRUE@	mkdir -p $(DESTDIR)$(libdir)/$(GLIB_RUNTIME_LIBDIR)
+ @HAVE_GLIB_RUNTIME_LIBDIR_TRUE@	mv $(DESTDIR)$(libdir)/libglib-2.0.so.0 $(DESTDIR)$(libdir)/$(GLIB_RUNTIME_LIBDIR)
+ @HAVE_GLIB_RUNTIME_LIBDIR_TRUE@	mv $(DESTDIR)$(libdir)/libglib-2.0.so.0.$(LT_CURRENT).0 $(DESTDIR)$(libdir)/$(GLIB_RUNTIME_LIBDIR)
