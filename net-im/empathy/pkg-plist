@@ -108,6 +108,7 @@ libexec/nothere-applet
 share/applications/empathy.desktop
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 share/doc/libempathy-gtk/EmpathyAccountChooser.html
+share/doc/libempathy-gtk/EmpathyAccountWidget.html
 share/doc/libempathy-gtk/EmpathyAvatarChooser.html
 share/doc/libempathy-gtk/EmpathyAvatarImage.html
 share/doc/libempathy-gtk/EmpathyCellRendererActivatable.html
@@ -122,9 +123,13 @@ share/doc/libempathy-gtk/EmpathyContactSelector.html
 share/doc/libempathy-gtk/EmpathyGstAudioSink.html
 share/doc/libempathy-gtk/EmpathyGstAudioSrc.html
 share/doc/libempathy-gtk/EmpathyGstVideoSrc.html
+share/doc/libempathy-gtk/EmpathyKludgeLabel.html
+share/doc/libempathy-gtk/EmpathyLocationManager.html
 share/doc/libempathy-gtk/EmpathyPresenceChooser.html
+share/doc/libempathy-gtk/EmpathyProtocolChooser.html
 share/doc/libempathy-gtk/EmpathySmileyManager.html
 share/doc/libempathy-gtk/EmpathyStatusPresetDialog.html
+share/doc/libempathy-gtk/EmpathyThemeAdium.html
 share/doc/libempathy-gtk/EmpathyThemeBoxes.html
 share/doc/libempathy-gtk/EmpathyThemeIrc.html
 share/doc/libempathy-gtk/EmpathyThemeManager.html
@@ -135,8 +140,8 @@ share/doc/libempathy-gtk/index.sgml
 share/doc/libempathy-gtk/ix01.html
 share/doc/libempathy-gtk/left.png
 share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget-irc.html
+share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget-private.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget-sip.html
-share/doc/libempathy-gtk/libempathy-gtk-empathy-account-widget.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-chat-view.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-contact-dialogs.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-contact-menu.html
@@ -146,6 +151,9 @@ share/doc/libempathy-gtk/libempathy-gtk-empathy-images.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-irc-network-dialog.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-log-window.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-new-message-dialog.html
+share/doc/libempathy-gtk/libempathy-gtk-empathy-plist.html
+share/doc/libempathy-gtk/libempathy-gtk-empathy-share-my-desktop.html
+share/doc/libempathy-gtk/libempathy-gtk-empathy-sound.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-spell.html
 share/doc/libempathy-gtk/libempathy-gtk-empathy-ui-utils.html
 share/doc/libempathy-gtk/libempathy-gtk-hierarchy.html
@@ -157,7 +165,9 @@ share/doc/libempathy-gtk/pt02.html
 share/doc/libempathy-gtk/right.png
 share/doc/libempathy-gtk/style.css
 share/doc/libempathy-gtk/up.png
+share/doc/libempathy/EmpathyAccount.html
 share/doc/libempathy/EmpathyAccountManager.html
+share/doc/libempathy/EmpathyAccountSettings.html
 share/doc/libempathy/EmpathyCallFactory.html
 share/doc/libempathy/EmpathyCallHandler.html
 share/doc/libempathy/EmpathyChatroom.html
@@ -165,8 +175,13 @@ share/doc/libempathy/EmpathyChatroomManager.html
 share/doc/libempathy/EmpathyContact.html
 share/doc/libempathy/EmpathyContactManager.html
 share/doc/libempathy/EmpathyContactMonitor.html
+share/doc/libempathy/EmpathyConnectionManagers.html
+share/doc/libempathy/EmpathyConnectivity.html
+share/doc/libempathy/EmpathyDebugger.html
 share/doc/libempathy/EmpathyDispatcher.html
 share/doc/libempathy/EmpathyDispatchOperation.html
+share/doc/libempathy/EmpathyFTFactory.html
+share/doc/libempathy/EmpathyFTHandler.html
 share/doc/libempathy/EmpathyIdle.html
 share/doc/libempathy/EmpathyIrcNetwork.html
 share/doc/libempathy/EmpathyIrcNetworkManager.html
@@ -189,6 +204,7 @@ share/doc/libempathy/left.png
 share/doc/libempathy/libempathy-empathy-contact-groups.html
 share/doc/libempathy/libempathy-empathy-contact-list.html
 share/doc/libempathy/libempathy-empathy-enum-types.html
+share/doc/libempathy/libempathy-empathy-location.html
 share/doc/libempathy/libempathy-empathy-log-store.html
 share/doc/libempathy/libempathy-empathy-status-presets.html
 share/doc/libempathy/libempathy-empathy-time.html
@@ -412,7 +428,6 @@ share/gnome/help/empathy/C/send-file.page
 share/gnome/help/empathy/C/send-message.page
 share/gnome/help/empathy/C/set-custom-status.page
 share/gnome/help/empathy/C/share-desktop.page
-share/gnome/help/empathy/C/start-conversation.page
 share/gnome/help/empathy/C/status-icons.page
 share/gnome/help/empathy/C/video-call.page
 share/gnome/help/empathy/ca/account-irc.page
@@ -466,7 +481,6 @@ share/gnome/help/empathy/ca/send-file.page
 share/gnome/help/empathy/ca/send-message.page
 share/gnome/help/empathy/ca/set-custom-status.page
 share/gnome/help/empathy/ca/share-desktop.page
-share/gnome/help/empathy/ca/start-conversation.page
 share/gnome/help/empathy/ca/status-icons.page
 share/gnome/help/empathy/ca/video-call.page
 share/gnome/help/empathy/cs/account-irc.page
@@ -520,7 +534,6 @@ share/gnome/help/empathy/cs/send-file.page
 share/gnome/help/empathy/cs/send-message.page
 share/gnome/help/empathy/cs/set-custom-status.page
 share/gnome/help/empathy/cs/share-desktop.page
-share/gnome/help/empathy/cs/start-conversation.page
 share/gnome/help/empathy/cs/status-icons.page
 share/gnome/help/empathy/cs/video-call.page
 share/gnome/help/empathy/de/account-irc.page
@@ -574,7 +587,6 @@ share/gnome/help/empathy/de/send-file.page
 share/gnome/help/empathy/de/send-message.page
 share/gnome/help/empathy/de/set-custom-status.page
 share/gnome/help/empathy/de/share-desktop.page
-share/gnome/help/empathy/de/start-conversation.page
 share/gnome/help/empathy/de/status-icons.page
 share/gnome/help/empathy/de/video-call.page
 share/gnome/help/empathy/el/account-irc.page
@@ -628,7 +640,6 @@ share/gnome/help/empathy/el/send-file.page
 share/gnome/help/empathy/el/send-message.page
 share/gnome/help/empathy/el/set-custom-status.page
 share/gnome/help/empathy/el/share-desktop.page
-share/gnome/help/empathy/el/start-conversation.page
 share/gnome/help/empathy/el/status-icons.page
 share/gnome/help/empathy/el/video-call.page
 share/gnome/help/empathy/en_GB/account-irc.page
@@ -682,7 +693,6 @@ share/gnome/help/empathy/en_GB/send-file.page
 share/gnome/help/empathy/en_GB/send-message.page
 share/gnome/help/empathy/en_GB/set-custom-status.page
 share/gnome/help/empathy/en_GB/share-desktop.page
-share/gnome/help/empathy/en_GB/start-conversation.page
 share/gnome/help/empathy/en_GB/status-icons.page
 share/gnome/help/empathy/en_GB/video-call.page
 share/gnome/help/empathy/es/account-irc.page
@@ -736,7 +746,6 @@ share/gnome/help/empathy/es/send-file.page
 share/gnome/help/empathy/es/send-message.page
 share/gnome/help/empathy/es/set-custom-status.page
 share/gnome/help/empathy/es/share-desktop.page
-share/gnome/help/empathy/es/start-conversation.page
 share/gnome/help/empathy/es/status-icons.page
 share/gnome/help/empathy/es/video-call.page
 share/gnome/help/empathy/fi/account-irc.page
@@ -790,7 +799,6 @@ share/gnome/help/empathy/fi/send-file.page
 share/gnome/help/empathy/fi/send-message.page
 share/gnome/help/empathy/fi/set-custom-status.page
 share/gnome/help/empathy/fi/share-desktop.page
-share/gnome/help/empathy/fi/start-conversation.page
 share/gnome/help/empathy/fi/status-icons.page
 share/gnome/help/empathy/fi/video-call.page
 share/gnome/help/empathy/fr/account-irc.page
@@ -844,7 +852,6 @@ share/gnome/help/empathy/fr/send-file.page
 share/gnome/help/empathy/fr/send-message.page
 share/gnome/help/empathy/fr/set-custom-status.page
 share/gnome/help/empathy/fr/share-desktop.page
-share/gnome/help/empathy/fr/start-conversation.page
 share/gnome/help/empathy/fr/status-icons.page
 share/gnome/help/empathy/fr/video-call.page
 share/gnome/help/empathy/it/account-irc.page
@@ -898,7 +905,6 @@ share/gnome/help/empathy/it/send-file.page
 share/gnome/help/empathy/it/send-message.page
 share/gnome/help/empathy/it/set-custom-status.page
 share/gnome/help/empathy/it/share-desktop.page
-share/gnome/help/empathy/it/start-conversation.page
 share/gnome/help/empathy/it/status-icons.page
 share/gnome/help/empathy/it/video-call.page
 share/gnome/help/empathy/ru/account-irc.page
@@ -952,7 +958,6 @@ share/gnome/help/empathy/ru/send-file.page
 share/gnome/help/empathy/ru/send-message.page
 share/gnome/help/empathy/ru/set-custom-status.page
 share/gnome/help/empathy/ru/share-desktop.page
-share/gnome/help/empathy/ru/start-conversation.page
 share/gnome/help/empathy/ru/status-icons.page
 share/gnome/help/empathy/ru/video-call.page
 share/gnome/help/empathy/sv/account-irc.page
@@ -1006,7 +1011,6 @@ share/gnome/help/empathy/sv/send-file.page
 share/gnome/help/empathy/sv/send-message.page
 share/gnome/help/empathy/sv/set-custom-status.page
 share/gnome/help/empathy/sv/share-desktop.page
-share/gnome/help/empathy/sv/start-conversation.page
 share/gnome/help/empathy/sv/status-icons.page
 share/gnome/help/empathy/sv/video-call.page
 share/icons/hicolor/16x16/apps/empathy.png
@@ -1016,10 +1020,13 @@ share/icons/hicolor/32x32/apps/empathy.png
 share/icons/hicolor/48x48/apps/empathy.png
 share/icons/hicolor/scalable/apps/empathy.svg
 share/locale/ar/LC_MESSAGES/empathy.mo
+share/locale/as/LC_MESSAGES/empathy.mo
+share/locale/ast/LC_MESSAGES/empathy.mo
 share/locale/az/LC_MESSAGES/empathy.mo
 share/locale/be/LC_MESSAGES/empathy.mo
 share/locale/be@latin/LC_MESSAGES/empathy.mo
 share/locale/bg/LC_MESSAGES/empathy.mo
+share/locale/bn/LC_MESSAGES/empathy.mo
 share/locale/bn_IN/LC_MESSAGES/empathy.mo
 share/locale/br/LC_MESSAGES/empathy.mo
 share/locale/ca/LC_MESSAGES/empathy.mo
@@ -1052,6 +1059,7 @@ share/locale/ko/LC_MESSAGES/empathy.mo
 share/locale/ku/LC_MESSAGES/empathy.mo
 share/locale/lt/LC_MESSAGES/empathy.mo
 share/locale/lv/LC_MESSAGES/empathy.mo
+share/locale/mai/LC_MESSAGES/empathy.mo
 share/locale/mk/LC_MESSAGES/empathy.mo
 share/locale/ml/LC_MESSAGES/empathy.mo
 share/locale/mr/LC_MESSAGES/empathy.mo
@@ -1151,6 +1159,8 @@ share/telepathy/clients/Empathy.client
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
@@ -1161,3 +1171,5 @@ share/telepathy/clients/Empathy.client
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
