@@ -1,68 +1,137 @@
---- configure.orig	2009-08-25 09:31:58.000000000 +0200
-+++ configure	2009-08-25 09:34:28.000000000 +0200
-@@ -22627,15 +22637,18 @@
-     if test -n "$PKG_CONFIG" && \
+--- configure.orig	2009-09-22 12:26:34.000000000 +0200
++++ configure	2009-09-22 12:29:51.000000000 +0200
+@@ -22494,10 +22494,12 @@
      { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"dbus-glib-1 >= \$DBUS_GLIB_REQUIRED_VERSION
          gobject-2.0 >= \$GLIB_REQUIRED_VERSION
+         gio-2.0 >= \$GLIB_REQUIRED_VERSION
 +	hal
  \"") >&5
    ($PKG_CONFIG --exists --print-errors "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
          gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
 +	hal
  ") 2>&5
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; then
+@@ -22519,10 +22521,12 @@
+     { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"dbus-glib-1 >= \$DBUS_GLIB_REQUIRED_VERSION
+         gobject-2.0 >= \$GLIB_REQUIRED_VERSION
+         gio-2.0 >= \$GLIB_REQUIRED_VERSION
++	hal
+ \"") >&5
+   ($PKG_CONFIG --exists --print-errors "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
+         gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
++	hal
+ ") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+@@ -22530,6 +22534,7 @@
+   pkg_cv_COMMON_LIBS=`$PKG_CONFIG --libs "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
+         gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
++	hal
+ " 2>/dev/null`
+ else
+   pkg_failed=yes
+@@ -22551,11 +22556,13 @@
+ 	        COMMON_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
+         gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
++	hal
+ " 2>&1`
+         else
+ 	        COMMON_PKG_ERRORS=`$PKG_CONFIG --print-errors "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
+         gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
++	hal
+ " 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+@@ -22564,6 +22571,7 @@
+ 	{ { echo "$as_me:$LINENO: error: Package requirements (dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
+         gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
++	hal
+ ) were not met:
+ 
+ $COMMON_PKG_ERRORS
+@@ -22578,6 +22586,7 @@
+ echo "$as_me: error: Package requirements (dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
+         gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
++	hal
+ ) were not met:
+ 
+ $COMMON_PKG_ERRORS
+@@ -22634,10 +22643,12 @@
+     { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"dbus-glib-1 >= \$DBUS_GLIB_REQUIRED_VERSION
+         gobject-2.0 >= \$GLIB_REQUIRED_VERSION
+         gio-2.0 >= \$GLIB_REQUIRED_VERSION
++	hal
+ \"") >&5
+   ($PKG_CONFIG --exists --print-errors "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
+         gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
++	hal
+ ") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+@@ -22645,6 +22656,7 @@
    pkg_cv_DAEMON_CFLAGS=`$PKG_CONFIG --cflags "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
          gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
 +	hal
  " 2>/dev/null`
  else
    pkg_failed=yes
-@@ -22649,15 +22662,18 @@
-     if test -n "$PKG_CONFIG" && \
+@@ -22659,10 +22671,12 @@
      { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"dbus-glib-1 >= \$DBUS_GLIB_REQUIRED_VERSION
          gobject-2.0 >= \$GLIB_REQUIRED_VERSION
+         gio-2.0 >= \$GLIB_REQUIRED_VERSION
 +	hal
  \"") >&5
    ($PKG_CONFIG --exists --print-errors "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
          gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
 +	hal
  ") 2>&5
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); }; then
+@@ -22670,6 +22684,7 @@
    pkg_cv_DAEMON_LIBS=`$PKG_CONFIG --libs "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
          gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
 +	hal
  " 2>/dev/null`
  else
    pkg_failed=yes
-@@ -22678,10 +22694,12 @@
-         if test $_pkg_short_errors_supported = yes; then
+@@ -22691,11 +22706,13 @@
  	        DAEMON_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
          gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
 +	hal
  " 2>&1`
          else
  	        DAEMON_PKG_ERRORS=`$PKG_CONFIG --print-errors "dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
          gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
 +	hal
  " 2>&1`
          fi
  	# Put the nasty error message in config.log where it belongs
-@@ -22689,6 +22707,7 @@
- 
+@@ -22704,6 +22721,7 @@
  	{ { echo "$as_me:$LINENO: error: Package requirements (dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
          gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
 +	hal
  ) were not met:
  
  $DAEMON_PKG_ERRORS
-@@ -22702,6 +22721,7 @@
- " >&5
+@@ -22718,6 +22736,7 @@
  echo "$as_me: error: Package requirements (dbus-glib-1 >= $DBUS_GLIB_REQUIRED_VERSION
          gobject-2.0 >= $GLIB_REQUIRED_VERSION
+         gio-2.0 >= $GLIB_REQUIRED_VERSION
 +	hal
  ) were not met:
  
