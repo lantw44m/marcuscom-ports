@@ -23,6 +23,7 @@ share/locale/ar/LC_MESSAGES/libgnomekbd.mo
 share/locale/as/LC_MESSAGES/libgnomekbd.mo
 share/locale/be@latin/LC_MESSAGES/libgnomekbd.mo
 share/locale/bg/LC_MESSAGES/libgnomekbd.mo
+share/locale/bn/LC_MESSAGES/libgnomekbd.mo
 share/locale/bn_IN/LC_MESSAGES/libgnomekbd.mo
 share/locale/ca/LC_MESSAGES/libgnomekbd.mo
 share/locale/ca@valencia/LC_MESSAGES/libgnomekbd.mo
@@ -50,6 +51,7 @@ share/locale/kn/LC_MESSAGES/libgnomekbd.mo
 share/locale/ko/LC_MESSAGES/libgnomekbd.mo
 share/locale/lt/LC_MESSAGES/libgnomekbd.mo
 share/locale/lv/LC_MESSAGES/libgnomekbd.mo
+share/locale/mai/LC_MESSAGES/libgnomekbd.mo
 share/locale/mk/LC_MESSAGES/libgnomekbd.mo
 share/locale/ml/LC_MESSAGES/libgnomekbd.mo
 share/locale/mr/LC_MESSAGES/libgnomekbd.mo
@@ -95,6 +97,8 @@ share/locale/zh_TW/LC_MESSAGES/libgnomekbd.mo
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
