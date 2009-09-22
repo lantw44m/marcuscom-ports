@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.119 2009/08/26 16:34:08 marcus Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.120 2009/09/08 19:27:37 kwm Exp $
 #
 
 PORTNAME=	epiphany-extensions
-PORTVERSION=	2.27.92
+PORTVERSION=	2.28.0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +17,7 @@ COMMENT=	A set of add-ons for the Epiphany web browser
 
 BUILD_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
-    		webkit-1.0.12:${PORTSDIR}/www/webkit-gtk2
+    		webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2
 RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 
 USE_GETTEXT=	yes
@@ -32,8 +32,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 EPHY_EXTENSIONS=all,rss
 EPHY_VERSION=	${PORTVERSION:R}
 
-#PLIST_SUB=	VERSION=${EPHY_VERSION} EPHY_VERSION=${EPHY_VERSION}
-PLIST_SUB=	VERSION=2.27 EPHY_VERSION=2.27
+PLIST_SUB=	VERSION=${EPHY_VERSION} EPHY_VERSION=${EPHY_VERSION}
 
 OPTIONS=	OPENSP "Enable OpenSP SGML support" off
 
