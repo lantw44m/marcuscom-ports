@@ -147,14 +147,14 @@ share/locale/ko/LC_MESSAGES/at-spi.mo
 share/locale/ku/LC_MESSAGES/at-spi.mo
 share/locale/lt/LC_MESSAGES/at-spi.mo
 share/locale/lv/LC_MESSAGES/at-spi.mo
+share/locale/mai/LC_MESSAGES/at-spi.mo
 share/locale/mk/LC_MESSAGES/at-spi.mo
 share/locale/ml/LC_MESSAGES/at-spi.mo
 share/locale/mn/LC_MESSAGES/at-spi.mo
 share/locale/mr/LC_MESSAGES/at-spi.mo
 share/locale/ms/LC_MESSAGES/at-spi.mo
 share/locale/nb/LC_MESSAGES/at-spi.mo
-share/locale/nds_DE/LC_MESSAGES/at-spi.mo
-share/locale/nds_NFE/LC_MESSAGES/at-spi.mo
+share/locale/nds/LC_MESSAGES/at-spi.mo
 share/locale/ne/LC_MESSAGES/at-spi.mo
 share/locale/nl/LC_MESSAGES/at-spi.mo
 share/locale/nn/LC_MESSAGES/at-spi.mo
@@ -212,10 +212,8 @@ share/locale/zh_TW/LC_MESSAGES/at-spi.mo
 @dirrmtry share/locale/ps
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
-@dirrmtry share/locale/nds_NFE/LC_MESSAGES
-@dirrmtry share/locale/nds_NFE
-@dirrmtry share/locale/nds_DE/LC_MESSAGES
-@dirrmtry share/locale/nds_DE
+@dirrmtry share/locale/nds/LC_MESSAGES
+@dirrmtry share/locale/nds
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/ku/LC_MESSAGES
