@@ -97,6 +97,8 @@ share/gnome/help/gstreamer-properties/it/figures/gstreamer_properties_window.png
 share/gnome/help/gstreamer-properties/it/gstreamer-properties.xml
 share/gnome/help/gstreamer-properties/oc/figures/gstreamer_properties_window.png
 share/gnome/help/gstreamer-properties/oc/gstreamer-properties.xml
+share/gnome/help/gstreamer-properties/pt_BR/figures/gstreamer_properties_window.png
+share/gnome/help/gstreamer-properties/pt_BR/gstreamer-properties.xml
 share/gnome/help/gstreamer-properties/ru/figures/gstreamer_properties_window.png
 share/gnome/help/gstreamer-properties/ru/gstreamer-properties.xml
 share/gnome/help/gstreamer-properties/sv/figures/gstreamer_properties_window.png
@@ -126,6 +128,7 @@ share/icons/hicolor/scalable/apps/gnome-volume-control.svg
 share/locale/am/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/as/LC_MESSAGES/gnome-media-2.0.mo
+share/locale/ast/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/be@latin/LC_MESSAGES/gnome-media-2.0.mo
@@ -216,6 +219,7 @@ share/omf/gnome-sound-recorder/gnome-sound-recorder-es.omf
 share/omf/gnome-sound-recorder/gnome-sound-recorder-fr.omf
 share/omf/gnome-sound-recorder/gnome-sound-recorder-it.omf
 share/omf/gnome-sound-recorder/gnome-sound-recorder-oc.omf
+share/omf/gstreamer-properties/gstreamer-properties-pt_BR.omf
 share/omf/gnome-sound-recorder/gnome-sound-recorder-ru.omf
 share/omf/gnome-sound-recorder/gnome-sound-recorder-sv.omf
 share/omf/gnome-sound-recorder/gnome-sound-recorder-uk.omf
@@ -254,6 +258,8 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm share/gnome/help/gstreamer-properties/sv
 @dirrm share/gnome/help/gstreamer-properties/ru/figures
 @dirrm share/gnome/help/gstreamer-properties/ru
+@dirrm share/gnome/help/gstreamer-properties/pt_BR/figures
+@dirrm share/gnome/help/gstreamer-properties/pt_BR
 @dirrm share/gnome/help/gstreamer-properties/oc/figures
 @dirrm share/gnome/help/gstreamer-properties/oc
 @dirrm share/gnome/help/gstreamer-properties/it/figures
@@ -357,5 +363,7 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
