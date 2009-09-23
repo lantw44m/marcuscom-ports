@@ -358,7 +358,6 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/48x48/status/empathy-extended-away.png
 %%DATADIR%%/icons/hicolor/48x48/status/empathy-offline.png
 %%DATADIR%%/icons/hicolor/48x48/status/empathy-pending.png
-%%DATADIR%%/icons/hicolor/icon-theme.cache
 %%DATADIR%%/icons/hicolor/scalable/apps/im-ekiga.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-gadugadu.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-gizmo.svg
