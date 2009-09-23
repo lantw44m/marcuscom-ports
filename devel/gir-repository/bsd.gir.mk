@@ -123,7 +123,7 @@ DEP_NAMES=	gtk
 .endif
 
 .if ${GIR_NAME} == "webkit"
-LIB_DEPENDS+=	webkit-1.0.12:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS+=	webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2
 USE_GIR=	gtk20 libsoup
 GIR_FILES=	WebKit-1.0 JSCore-1.0
 .endif

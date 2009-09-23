@@ -3,10 +3,11 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/gir-repository-webkit/Makefile,v 1.1 2009/09/16 02:05:12 avl Exp $
 #
 
 CATEGORIES=	www
+PORTREVISION=	4
 
 MASTERDIR=	${.CURDIR}/../../devel/gir-repository
 
