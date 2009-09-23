@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-mission-control/Makefile,v 1.4 2008/03/20 03:20:54 marcus Exp $
+#    $MCom: ports/net-im/telepathy-mission-control/Makefile,v 1.6 2009/08/28 20:57:42 marcus Exp $
 
 PORTNAME=	telepathy-mission-control
-PORTVERSION=	5.2.1
+PORTVERSION=	5.2.5
 CATEGORIES=	net-im devel
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-mission-control/
 
@@ -24,6 +24,8 @@ USE_LDCONFIG=	yes
 
 MAN1=		mc-account-convert.1 mc-tool.1 mc-wait-for-name.1
 MAN8=		mission-control-5.8
+
+PLIST_SUB=	VERSION=${PORTVERSION}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/gtk-doc/html|/${DOCSDIR}|' \
