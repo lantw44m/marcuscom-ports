@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.37 2009/09/22 18:11:57 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.38 2009/09/23 17:49:59 kwm Exp $
 #
 
 PORTNAME=	webkit
@@ -66,8 +66,7 @@ CONFIGURE_ARGS+=--enable-static
 PLIST_SUB+=	STATIC=""
 .else
 CONFIGURE_ARGS+=--enable-static=no
-#PLIST_SUB+=	STATIC="@comment "
-PLIST_SUB+=	STATIC=""
+PLIST_SUB+=	STATIC="@comment "
 .endif
 
 post-patch:
@@ -75,5 +74,9 @@ post-patch:
 		${WRKSRC}/WebCore/plugins/PluginDatabase.cpp
 	@${FIND} ${WRKSRC} -name GNUmakefile.* | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
+.if !defined(WITH_STATIC)
+	@${REINPLACE_CMD} -e 's|build_old_libs=yes|build_old_libs=no|g' \
+		${WRKDIR}/gnome-libtool
+.endif
 
 .include <bsd.port.post.mk>
