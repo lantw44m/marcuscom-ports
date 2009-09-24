@@ -3,11 +3,10 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp/Makefile,v 1.24 2009/09/21 15:50:41 kwm Exp $
+#   $MCom: ports/devel/devhelp/Makefile,v 1.25 2009/09/23 15:44:48 kwm Exp $
 
 PORTNAME=	devhelp
-PORTVERSION=	2.28.0
-PORTREVISION=	1
+PORTVERSION=	2.28.0.1
 PORTEPOCH=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
