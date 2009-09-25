@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.38 2009/09/23 17:49:59 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.39 2009/09/24 08:58:38 kwm Exp $
 #
 
 PORTNAME=	webkit
@@ -41,6 +41,11 @@ CONFIGURE_ARGS=	--enable-icon-database \
 		--enable-svg-fonts
 MAKEFILE=	GNUmakefile
 
+CONFIGURE_ARGS+=--with-unicode-backend=glib
+#                          Select Unicode backend (WARNING: the glib-based
+#                          backend is slow, and incomplete) default=icu
+#  --with-font-backend=[freetype/pango]
+
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
@@ -65,7 +70,7 @@ CONFIGURE_ARGS+=--disable-debug
 CONFIGURE_ARGS+=--enable-static
 PLIST_SUB+=	STATIC=""
 .else
-CONFIGURE_ARGS+=--enable-static=no
+EXTRA_PATCHES+= ${FILESDIR}/extra-patch-libtool
 PLIST_SUB+=	STATIC="@comment "
 .endif
 
@@ -74,9 +79,5 @@ post-patch:
 		${WRKSRC}/WebCore/plugins/PluginDatabase.cpp
 	@${FIND} ${WRKSRC} -name GNUmakefile.* | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
-.if !defined(WITH_STATIC)
-	@${REINPLACE_CMD} -e 's|build_old_libs=yes|build_old_libs=no|g' \
-		${WRKDIR}/gnome-libtool
-.endif
 
 .include <bsd.port.post.mk>

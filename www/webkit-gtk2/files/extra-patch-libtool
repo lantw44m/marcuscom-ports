@@ -1,0 +1,13 @@
+Manual tell our libtool not to build static libs.
+
+--- ../gnome-libtool.orig	2009-09-25 21:59:02.000000000 +0200
++++ ../gnome-libtool	2009-09-25 21:59:52.000000000 +0200
+@@ -55,7 +55,7 @@ OBJDUMP=objdump
+ build_libtool_libs=yes
+ 
+ # Whether or not to build static libraries.
+-build_old_libs=yes
++build_old_libs=no
+ 
+ # What type of objects to build.
+ pic_mode=default
