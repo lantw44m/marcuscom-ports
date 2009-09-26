@@ -23,6 +23,7 @@ share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Session.xml
 share/dbus-1/system-services/org.freedesktop.ConsoleKit.service
 share/polkit-1/actions/org.freedesktop.consolekit.policy
 @exec mkdir -p %D/etc/ConsoleKit/run-session.d
+@exec mkdir -p %D/etc/ConsoleKit/run-seat.d
 @exec mkdir -p %D/lib/ConsoleKit/run-session.d
 @dirrm lib/ConsoleKit/scripts
 @dirrmtry lib/ConsoleKit/run-session.d
@@ -31,6 +32,7 @@ share/polkit-1/actions/org.freedesktop.consolekit.policy
 @dirrm include/ConsoleKit
 @dirrm etc/ConsoleKit/seats.d
 @dirrmtry etc/ConsoleKit/run-session.d
+@dirrmtry etc/ConsoleKit/run-seat.d
 @dirrm etc/ConsoleKit
 @exec mkdir -p /var/run/ConsoleKit
 @exec mkdir -p /var/log/ConsoleKit
