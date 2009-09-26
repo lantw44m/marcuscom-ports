@@ -2,7 +2,7 @@
 # Date created:				09 May 2006
 # Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-fonts/fontconfig-reference/Makefile,v 1.6 2009/01/11 16:57:53 mezz Exp $
+# $FreeBSD$
 #
 
 PORTREVISION=	5

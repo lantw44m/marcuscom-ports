@@ -2,7 +2,7 @@
 # Date created:				09 May 2006
 # Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/glibmm-reference/Makefile,v 1.6 2008/05/19 20:12:05 mezz Exp $
+# $FreeBSD$
 #
 
 PORTREVISION=	4

@@ -2,7 +2,7 @@
 # Date created:		2008-05-28
 # Whom:			Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: ports/net/desktop-data-model/Makefile,v 1.4 2009/07/31 13:54:37 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	desktop-data-model

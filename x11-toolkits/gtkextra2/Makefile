@@ -2,7 +2,7 @@
 # Date created:				17 August 2000
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gtkextra2/Makefile,v 1.32 2009/08/22 00:39:22 amdmi3 Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtkextra
