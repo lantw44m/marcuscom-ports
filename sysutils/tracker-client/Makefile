@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/tracker-client/Makefile,v 1.6 2009/02/27 00:23:22 marcus Exp $
+#   $MCom: ports/sysutils/tracker-client/Makefile,v 1.8 2009/08/08 18:46:41 ahze Exp $
 #
 
 PORTNAME=	tracker
@@ -19,7 +19,7 @@ LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		poppler-glib.4:${PORTSDIR}/graphics/poppler-gtk \
 		exif.12:${PORTSDIR}/graphics/libexif \
-		wv-1.2.4:${PORTSDIR}/textproc/wv \
+		wv-1.2.3:${PORTSDIR}/textproc/wv \
 		gmime-2.0.4:${PORTSDIR}/mail/gmime2 \
 		qdbm.14:${PORTSDIR}/databases/qdbm \
 		exempi.3:${PORTSDIR}/textproc/exempi \
