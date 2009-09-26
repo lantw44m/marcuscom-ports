@@ -1,5 +1,5 @@
 --- hald/freebsd/probing/probe-volume.c.orig	2008-08-10 09:50:10.000000000 -0400
-+++ hald/freebsd/probing/probe-volume.c	2009-08-19 17:00:14.000000000 -0400
++++ hald/freebsd/probing/probe-volume.c	2009-09-26 03:54:16.000000000 -0400
 @@ -36,7 +36,12 @@
  #include <sys/disk.h>
  #include <sys/cdio.h>
@@ -23,7 +23,7 @@
          hf_probe_volume_advanced_disc_detect(fd);
      }
    else
-@@ -555,6 +561,46 @@ main (int argc, char **argv)
+@@ -555,6 +561,48 @@ main (int argc, char **argv)
  
    libhal_device_set_property_bool(hfp_ctx, hfp_udi, "volume.ignore", has_children || is_swap, &hfp_error);
  
@@ -40,6 +40,7 @@
 +
 +	  snprintf(ufsid, sizeof(ufsid), "%08x%08x", ufsdisk.d_fs.fs_id[0], ufsdisk.d_fs.fs_id[1]);
 +	  libhal_device_set_property_string(hfp_ctx, hfp_udi, "volume.freebsd.ufsid", ufsid, &hfp_error);
++	  dbus_error_free(&hfp_error);
 +	  ufs_devs = libhal_manager_find_device_string_match(hfp_ctx,
 +			  				     "volume.freebsd.ufsid",
 +							     ufsid,
@@ -48,7 +49,7 @@
 +	  dbus_error_free(&hfp_error);
 +	  for (i = 0; i < num_udis; i++)
 +            {
-+              if (ufs_devs[i] != NULL)
++              if (ufs_devs[i] != NULL && strcmp(ufs_devs[i], hfp_udi))
 +                {
 +                  gboolean mounted;
 +
@@ -58,6 +59,7 @@
 +	            {
 +                      libhal_device_set_property_bool(hfp_ctx, hfp_udi, "volume.ignore", TRUE, &hfp_error);
 +		      dbus_error_free(&hfp_error);
++		      break;
 +		    }
 +		}
 +	    }
