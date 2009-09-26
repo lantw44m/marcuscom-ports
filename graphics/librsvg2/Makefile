@@ -2,8 +2,8 @@
 # Date created:         		8th May 2001
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/librsvg2/Makefile,v 1.76 2009/08/02 19:34:12 mezz Exp $
-#   $MCom: ports/graphics/librsvg2/Makefile,v 1.125 2009/09/06 09:39:22 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/graphics/librsvg2/Makefile,v 1.126 2009/09/07 10:19:45 kwm Exp $
 #
 
 PORTNAME=	librsvg2

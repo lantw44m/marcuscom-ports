@@ -2,8 +2,8 @@
 # Date created:		2008-12-26
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/py-clutter/Makefile,v 1.6 2009/08/02 19:34:16 mezz Exp $
-#   $MCom: ports/graphics/py-clutter/Makefile,v 1.1 2009/08/07 13:57:47 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/graphics/py-clutter/Makefile,v 1.2 2009/08/30 12:36:46 kwm Exp $
 #
 
 PORTNAME=	clutter

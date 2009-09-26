@@ -2,7 +2,7 @@
 # Date created:         		June 27, 2004
 # Whom:					fjoe@FreeBSD.ORG
 #
-# $FreeBSD: ports/x11-toolkits/wxgtk26/Makefile,v 1.43 2009/08/22 00:39:32 amdmi3 Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	wx

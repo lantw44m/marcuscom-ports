@@ -2,7 +2,7 @@
 # Date created:					Oct 27 2003
 # Whom:						clsung@dragon2.net
 #
-# $FreeBSD: ports/x11-toolkits/p5-Gtk2/Makefile,v 1.35 2009/08/22 00:39:26 amdmi3 Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	Gtk2

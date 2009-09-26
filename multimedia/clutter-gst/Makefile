@@ -2,7 +2,7 @@
 # Date created:		2008-12-25
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/clutter-gst/Makefile,v 1.1 2008/12/26 22:05:01 miwi Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	clutter-gst

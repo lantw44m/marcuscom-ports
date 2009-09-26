@@ -2,7 +2,7 @@
 # Date created:		26 February 2009
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/libproxy-webkit/Makefile,v 1.1 2009/02/27 05:31:08 marcus Exp $
+# $FreeBSD$
 #
 
 PORTREVISION=	7

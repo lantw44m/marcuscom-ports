@@ -2,7 +2,7 @@
 # Date created:		2008-12-25
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/clutter-box2d/Makefile,v 1.2 2009/03/04 07:37:49 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	clutter-box2d

@@ -2,7 +2,8 @@
 # Date Created:			22 June 2004
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/dbus/Makefile,v 1.74 2009/05/09 05:03:50 marcus Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	dbus

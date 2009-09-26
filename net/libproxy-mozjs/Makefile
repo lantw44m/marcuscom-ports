@@ -2,7 +2,7 @@
 # Date created:		26 February 2009
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/libproxy-mozjs/Makefile,v 1.3 2009/07/31 13:54:44 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTREVISION=	2

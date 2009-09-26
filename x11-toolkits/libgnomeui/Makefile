@@ -2,8 +2,8 @@
 # Date created:				07 April 2002
 # Whom:					Joe Marcus Clarke <marcus@FreBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/libgnomeui/Makefile,v 1.66 2009/08/02 19:36:25 mezz Exp $
-#   $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.122 2008/09/22 12:50:50 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-toolkits/libgnomeui/Makefile,v 1.124 2009/09/23 02:12:17 avl Exp $
 #
 
 PORTNAME=	libgnomeui

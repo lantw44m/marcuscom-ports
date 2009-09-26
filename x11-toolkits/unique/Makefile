@@ -2,8 +2,8 @@
 # Date created:			22 Feb 2009
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/unique/Makefile,v 1.5 2009/08/02 19:36:30 mezz Exp $
-#   $MCom$
+# $FreeBSD$
+#   $MCom: ports/x11-toolkits/unique/Makefile,v 1.1 2009/09/19 18:56:19 kwm Exp $
 #
 
 PORTNAME=	unique

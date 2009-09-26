@@ -2,8 +2,8 @@
 # Date created:		2008-02-23
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/gstreamermm/Makefile,v 1.15 2009/08/08 20:04:28 kwm Exp $
-#    $MCom: ports/multimedia/gstreamermm/Makefile,v 1.4 2009/08/21 18:46:24 kwm Exp $
+# $FreeBSD$
+#    $MCom: ports/multimedia/gstreamermm/Makefile,v 1.5 2009/09/03 08:45:19 kwm Exp $
 
 PORTNAME=	gstreamermm
 PORTVERSION=	0.10.5
