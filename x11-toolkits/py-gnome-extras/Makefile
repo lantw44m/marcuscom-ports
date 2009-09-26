@@ -3,17 +3,16 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.52 2009/09/06 09:39:27 kwm Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.53 2009/09/17 22:32:50 marcus Exp $
 #
 
-PORTNAME=	gnome
+PORTNAME=	gnome-extras
 PORTVERSION=	2.25.3
 PORTREVISION=	6
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gnome-python-extras/${PORTVERSION:C/..$//}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-PKGNAMESUFFIX=	-extras
 DISTNAME=	gnome-python-extras-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
