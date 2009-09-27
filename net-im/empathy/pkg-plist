@@ -375,6 +375,8 @@ share/doc/libempathy/up.png
 %%DATADIR%%/icons/hicolor/scalable/status/empathy-extended-away.svg
 %%DATADIR%%/icons/hicolor/scalable/status/empathy-offline.svg
 %%DATADIR%%/icons/hicolor/scalable/status/empathy-pending.svg
+@exec %%LOCALBASE%%/bin/gtk-update-icon-cache -q -t -f %D/%%DATADIR%%/icons/hicolor 2>/dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/gtk-update-icon-cache -q -t -f %D/%%DATADIR%%/icons/hicolor 2>/dev/null || /usr/bin/true
 %%DATADIR%%/irc-networks.xml
 share/gnome/help/empathy/C/account-irc.page
 share/gnome/help/empathy/C/account-jabber.page
