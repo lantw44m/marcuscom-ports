@@ -34,7 +34,6 @@ DATADIR=	${PREFIX}/share/mysql-gui
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-#		`pkg-config --cflags libgnomeui-2.0`" \
 
 CONFIGURE_ARGS+=	--with-gtkhtml=libgtkhtml-3.14
 
