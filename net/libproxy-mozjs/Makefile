@@ -5,7 +5,7 @@
 # $FreeBSD$
 #
 
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net devel
 PKGNAMESUFFIX=	-mozjs
 
@@ -25,5 +25,9 @@ CONFIGURE_ARGS=--without-gnome --without-kde --without-webkit \
 		--without-envvar --without-file
 
 LIBPROXY_SLAVE=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|mozilla-js|mozilla-js libxul-unstable|g' \
+		${WRKSRC}/configure
 
 .include "${MASTERDIR}/Makefile"
