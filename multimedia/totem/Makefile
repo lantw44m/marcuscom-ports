@@ -3,11 +3,11 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.133 2009/09/21 10:19:16 kwm Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.134 2009/09/21 19:07:11 kwm Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	2.28.0
+PORTVERSION=	2.28.1
 PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
@@ -102,7 +102,7 @@ CONFIGURE_ARGS+=--enable-browser-plugins \
 PLIST_SUB+=	BROWSER_PLUGINS=""
 
 USE_WEBPLUGINS=		gecko19 webkit-gtk2
-WEBPLUGINS_FILES=	libtotem-basic-plugin.so libtotem-complex-plugin.so \
+WEBPLUGINS_FILES=	libtotem-complex-plugin.so \
 			libtotem-cone-plugin.so libtotem-gmp-plugin.so \
 			libtotem-mully-plugin.so \
 			libtotem-narrowspace-plugin.so

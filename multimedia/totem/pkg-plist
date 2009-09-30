@@ -92,10 +92,8 @@ share/applications/totem.desktop
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/totem-Interface.html
-%%DOCSDIR%%/totem-plugins.html
 %%DOCSDIR%%/totem.devhelp
 %%DOCSDIR%%/totem.devhelp2
-%%DOCSDIR%%/tutorials.html
 %%DOCSDIR%%/up.png
 %%DOCSDIR%%/widget-api.html
 share/gnome/help/totem/C/figures/totem_next_button.png
