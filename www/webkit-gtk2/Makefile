@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.40 2009/09/25 20:52:46 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.41 2009/09/25 21:41:01 marcus Exp $
 #
 
 PORTNAME=	webkit
@@ -40,11 +40,6 @@ CONFIGURE_ARGS=	--enable-icon-database \
 		--enable-svg \
 		--enable-svg-fonts
 MAKEFILE=	GNUmakefile
-
-CONFIGURE_ARGS+=--with-unicode-backend=glib
-#                          Select Unicode backend (WARNING: the glib-based
-#                          backend is slow, and incomplete) default=icu
-#  --with-font-backend=[freetype/pango]
 
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
