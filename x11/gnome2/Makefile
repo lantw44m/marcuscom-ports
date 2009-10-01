@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.276 2009/09/10 00:57:38 kwm Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.277 2009/09/24 07:14:46 kwm Exp $
 #
 
 PORTNAME=	gnome2
@@ -42,7 +42,6 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		dasher:${PORTSDIR}/accessibility/dasher \
 		evolution:${PORTSDIR}/mail/evolution \
 		${LOCALBASE}/libexec/evolution-webcal:${PORTSDIR}/www/evolution-webcal \
-		${LOCALBASE}/libdata/pkgconfig/libexchangemapi-1.0.pc:${PORTSDIR}/mail/evolution-mapi \
 		network-admin:${PORTSDIR}/sysutils/gnome-system-tools \
 		vino-passwd:${PORTSDIR}/net/vino \
 		exchange-connector-setup-2.28:${PORTSDIR}/mail/evolution-exchange \
@@ -69,7 +68,8 @@ USE_PYTHON=	yes
 .endif
 
 .if !defined(GNOME_SLAVE) || ${.CURDIR:T}=="gnome2-lite"
-OPTIONS=	XSCREENSAVER "Use xscreensaver as screen saver app" off
+OPTIONS=	XSCREENSAVER "Use xscreensaver as screen saver app" off \
+		MAPI "Depend on evolution-mapi (pulls in samba4)" on
 .endif
 
 do-install:	# empty
@@ -99,6 +99,9 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 .endif
 .if ${OSVERSION}>=600000
 RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga
+.endif
+.if defined(WITH_MAPI)
+RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/libexchangemapi-1.0.pc:${PORTSDIR}/mail/evolution-mapi
 .endif
 .endif
 .endif
