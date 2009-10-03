@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.146 2009/09/08 18:25:07 kwm Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.147 2009/09/22 00:51:22 avl Exp $
 #
 
 PORTNAME=	pango
@@ -60,6 +60,12 @@ CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 PLIST_SUB+=		X11=""
 .endif
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 700000
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-gcc
+.endif
+
+.include <bsd.port.post.mk>
 
 .endif
