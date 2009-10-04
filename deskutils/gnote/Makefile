@@ -3,12 +3,12 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnote/Makefile,v 1.2 2009/08/13 14:19:04 kwm Exp $
+#   $MCom: ports/deskutils/gnote/Makefile,v 1.3 2009/09/27 11:56:39 kwm Exp $
 #
 
 PORTNAME=	gnote
 PORTVERSION=	0.6.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
