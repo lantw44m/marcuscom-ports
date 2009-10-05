@@ -90,6 +90,7 @@ libdata/pkgconfig/libbrasero-media.pc
 share/applications/brasero.desktop
 share/applications/brasero-copy-medium.desktop
 %%NAUTILUS%%share/applications/brasero-nautilus.desktop
+share/doc/libbrasero-burn/annotation-glossary.html
 share/doc/libbrasero-burn/api-index-full.html
 share/doc/libbrasero-burn/ch01.html
 share/doc/libbrasero-burn/home.png
@@ -125,13 +126,14 @@ share/doc/libbrasero-burn/object-tree.html
 share/doc/libbrasero-burn/right.png
 share/doc/libbrasero-burn/style.css
 share/doc/libbrasero-burn/up.png
-share/doc/libbrasero-media/libbrasero-media-BraseroDrive.html
-share/doc/libbrasero-media/libbrasero-media-BraseroDriveSelection.html
-share/doc/libbrasero-media/libbrasero-media-BraseroMedium.html
-share/doc/libbrasero-media/libbrasero-media-BraseroMediumMonitor.html
-share/doc/libbrasero-media/libbrasero-media-BraseroMediumSelection.html
-share/doc/libbrasero-media/libbrasero-media-BraseroVolume.html
+share/doc/libbrasero-media/BraseroDrive.html
+share/doc/libbrasero-media/BraseroDriveSelection.html
+share/doc/libbrasero-media/BraseroMedium.html
+share/doc/libbrasero-media/BraseroMediumMonitor.html
+share/doc/libbrasero-media/BraseroMediumSelection.html
+share/doc/libbrasero-media/BraseroVolume.html
 share/doc/libbrasero-media/api-index-full.html
+share/doc/libbrasero-media/annotation-glossary.html
 share/doc/libbrasero-media/ch01.html
 share/doc/libbrasero-media/home.png
 share/doc/libbrasero-media/index.html
@@ -325,6 +327,8 @@ share/gnome/help/brasero/ru/brasero.xml
 share/gnome/help/brasero/ru/figures/brasero_main.png
 share/gnome/help/brasero/sv/brasero.xml
 share/gnome/help/brasero/sv/figures/brasero_main.png
+share/gnome/help/brasero/zh_CN/brasero.xml
+share/gnome/help/brasero/zh_CN/figures/brasero_main.png
 share/gnome/help/brasero/zh_HK/brasero.xml
 share/gnome/help/brasero/zh_HK/figures/brasero_main.png
 share/gnome/help/brasero/zh_TW/brasero.xml
@@ -409,6 +413,7 @@ share/omf/brasero/brasero-it.omf
 share/omf/brasero/brasero-pl.omf
 share/omf/brasero/brasero-ru.omf
 share/omf/brasero/brasero-sv.omf
+share/omf/brasero/brasero-zh_CN.omf
 share/omf/brasero/brasero-zh_HK.omf
 share/omf/brasero/brasero-zh_TW.omf
 @dirrm share/omf/brasero
@@ -416,6 +421,8 @@ share/omf/brasero/brasero-zh_TW.omf
 @dirrm share/gnome/help/brasero/zh_TW
 @dirrm share/gnome/help/brasero/zh_HK/figures
 @dirrm share/gnome/help/brasero/zh_HK
+@dirrm share/gnome/help/brasero/zh_CN/figures
+@dirrm share/gnome/help/brasero/zh_CN
 @dirrm share/gnome/help/brasero/sv/figures
 @dirrm share/gnome/help/brasero/sv
 @dirrm share/gnome/help/brasero/ru/figures
