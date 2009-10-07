@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.157 2009/09/23 03:12:46 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.158 2009/10/07 22:53:40 mezz Exp $
 #
 
 PORTNAME=	gdm
@@ -81,7 +81,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
 		${WRKSRC}/configure ${WRKSRC}/daemon/*.c ${WRKSRC}/po/*.po
 	@${REINPLACE_CMD} -e 's|/usr/lib|${LOCALBASE}/lib|g' \
-		${WRKSRC}/data/greeter-autostart/*.desktop.in
+		${WRKSRC}/data/greeter-autostart/*.desktop.in*
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/gconf.path \
