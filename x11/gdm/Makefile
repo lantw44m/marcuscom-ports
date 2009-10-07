@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.156 2009/09/22 10:42:06 kwm Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.157 2009/09/23 03:12:46 marcus Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.28.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -80,6 +80,8 @@ post-patch:
 	    	${WRKSRC}/data/session-setup.entries
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
 		${WRKSRC}/configure ${WRKSRC}/daemon/*.c ${WRKSRC}/po/*.po
+	@${REINPLACE_CMD} -e 's|/usr/lib|${LOCALBASE}/lib|g' \
+		${WRKSRC}/data/greeter-autostart/*.desktop.in
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/gconf.path \
