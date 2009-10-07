@@ -2,7 +2,6 @@ bin/mutter
 bin/mutter-message
 bin/mutter-theme-viewer
 bin/mutter-window-demo
-include/mutter/mutter-private/alttabhandler.h
 include/mutter/mutter-private/atomnames.h
 include/mutter/mutter-private/boxes.h
 include/mutter/mutter-private/common.h
@@ -29,8 +28,8 @@ lib/libmutter-private.a
 lib/libmutter-private.la
 lib/libmutter-private.so
 lib/libmutter-private.so.0
-lib/mutter/Meta-2.27.gir
-lib/mutter/Meta-2.27.typelib
+lib/mutter/Meta-2.28.gir
+lib/mutter/Meta-2.28.typelib
 lib/mutter/plugins/default.so
 libdata/pkgconfig/libmutter-private.pc
 libdata/pkgconfig/mutter-plugins.pc
