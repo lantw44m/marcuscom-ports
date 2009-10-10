@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.42 2009/10/01 13:06:02 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.43 2009/10/07 10:23:28 kwm Exp $
 #
 
 PORTNAME=	webkit
@@ -66,6 +66,10 @@ CONFIGURE_ARGS+=--enable-static
 PLIST_SUB+=	STATIC=""
 .else
 PLIST_SUB+=	STATIC="@comment "
+.endif
+
+.if ${OSVERSION} < 700000
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-JavaScriptCore_yarr_RegexJIT.h
 .endif
 
 post-patch:
