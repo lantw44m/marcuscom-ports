@@ -25,7 +25,7 @@ lib/gnote/addins/%%VERSION%%/tomboyimport.la
 lib/gnote/addins/%%VERSION%%/tomboyimport.so
 lib/gnote/addins/%%VERSION%%/underline.a
 lib/gnote/addins/%%VERSION%%/underline.la
-lib/gnote/addins/%%VESRION%%/underline.so
+lib/gnote/addins/%%VERSION%%/underline.so
 %%APPLET%%libdata/bonobo/servers/GNOME_GnoteApplet.server
 %%APPLET%%libexec/gnote-applet
 share/applications/gnote.desktop
