@@ -141,6 +141,9 @@ libdata/pkgconfig/tracker.pc
 libexec/tracker-extract
 libexec/tracker-indexer
 libexec/trackerd
+share/dbus-1/services/org.freedesktop.Tracker.Extract.service
+share/dbus-1/services/org.freedesktop.Tracker.Indexer.service
+share/dbus-1/services/org.freedesktop.Tracker.service
 share/doc/libtracker-common/ch01.html
 share/doc/libtracker-common/ch02.html
 share/doc/libtracker-common/ch03.html
