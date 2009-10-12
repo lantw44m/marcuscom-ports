@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.206 2009/09/22 03:16:41 avl Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.207 2009/10/12 13:12:23 avl Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -21,7 +21,7 @@ USE_BZIP2=	yes
 .if !defined(REFERENCE_PORT)
 
 LIB_DEPENDS=	gweather.1:${PORTSDIR}/net/libgweather \
-    		polkit-gnome.0:${PORTSDIR}/sysutils/policykit-gnome
+		polkit-gnome.0:${PORTSDIR}/sysutils/policykit-gnome
 
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
