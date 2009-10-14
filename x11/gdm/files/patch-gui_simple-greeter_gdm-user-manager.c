@@ -1,6 +1,15 @@
---- gui/simple-greeter/gdm-user-manager.c.orig	2009-07-20 03:09:09.000000000 +0200
-+++ gui/simple-greeter/gdm-user-manager.c	2009-07-20 10:07:37.000000000 +0200
-@@ -1303,17 +1303,24 @@ reload_passwd (GdmUserManager *manager)
+--- gui/simple-greeter/gdm-user-manager.c.orig	2009-09-21 16:05:27.000000000 -0400
++++ gui/simple-greeter/gdm-user-manager.c	2009-10-14 12:58:37.000000000 -0400
+@@ -65,6 +65,8 @@
+ 
+ #ifdef __sun
+ #define DEFAULT_MINIMAL_UID     100
++#elif defined(__FreeBSD__)
++#define DEFAULT_MINIMAL_UID     1000
+ #else
+ #define DEFAULT_MINIMAL_UID     500
+ #endif
+@@ -1366,17 +1368,24 @@ reload_passwd (GdmUserManager *manager)
          GSList        *new_users;
          GSList        *list;
          GSList        *dup;
@@ -25,7 +34,7 @@
  
          g_hash_table_foreach (manager->priv->users, listify_hash_values_hfunc, &old_users);
          g_slist_foreach (old_users, (GFunc) g_object_ref, NULL);
-@@ -1327,7 +1334,11 @@ reload_passwd (GdmUserManager *manager)
+@@ -1390,7 +1399,11 @@ reload_passwd (GdmUserManager *manager)
                  }
          }
  
@@ -37,7 +46,7 @@
                  GdmUser *user;
  
                  user = NULL;
-@@ -1398,7 +1409,11 @@ reload_passwd (GdmUserManager *manager)
+@@ -1461,7 +1474,11 @@ reload_passwd (GdmUserManager *manager)
   out:
          /* Cleanup */
  
