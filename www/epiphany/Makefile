@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.210 2009/09/17 01:17:36 avl Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.211 2009/09/22 18:45:40 kwm Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	2.28.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
