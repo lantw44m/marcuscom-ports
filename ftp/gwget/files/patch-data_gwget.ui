@@ -1,0 +1,38 @@
+--- data/gwget.ui.orig	2009-10-18 15:47:22.000000000 +1000
++++ data/gwget.ui	2009-10-18 15:48:27.000000000 +1000
+@@ -356,7 +356,7 @@
+       </object>
+     </child>
+     <child>
+-      <object class="GtkSeparatorMenuItem" id="separatormenuitem1">
++      <object class="GtkSeparatorMenuItem" id="separatormenuitem5">
+         <property name="visible">True</property>
+       </object>
+     </child>
+@@ -381,7 +381,7 @@
+       </object>
+     </child>
+     <child>
+-      <object class="GtkSeparatorMenuItem" id="separatormenuitem2">
++      <object class="GtkSeparatorMenuItem" id="separatormenuitem6">
+         <property name="visible">True</property>
+       </object>
+     </child>
+@@ -404,7 +404,7 @@
+       </object>
+     </child>
+     <child>
+-      <object class="GtkSeparatorMenuItem" id="separatormenuitem3">
++      <object class="GtkSeparatorMenuItem" id="separatormenuitem7">
+         <property name="visible">True</property>
+       </object>
+     </child>
+@@ -702,7 +702,7 @@
+                             <property name="visible">True</property>
+                             <property name="resize_mode">immediate</property>
+                             <child>
+-                              <object class="GtkImage" id="image1">
++                              <object class="GtkImage" id="image13">
+                                 <property name="visible">True</property>
+                                 <property name="stock">gtk-execute</property>
+                               </object>
