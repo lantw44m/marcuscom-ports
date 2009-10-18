@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-menus/Makefile,v 1.98 2009/09/22 09:08:43 kwm Exp $
+#   $MCom: ports/x11/gnome-menus/Makefile,v 1.99 2009/10/01 17:11:10 kwm Exp $
 #
 
 PORTNAME=	gnome-menus
@@ -37,6 +37,8 @@ post-patch:
 		< ${FILESDIR}/KDE.directory > ${WRKSRC}/KDE.directory
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/simple-editor/GMenuSimpleEditor/menutreemodel.py
+	@${REINPLACE_CMD} -e 's|%%PTHREAD_LIBS%%|${PTHREAD_LIBS}|' \
+	    	${WRKSRC}/util/Makefile.in
 
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/layout/applications.menu \
