@@ -164,6 +164,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/acroread.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/acroread.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/acroread.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/ddu.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/ddu.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/ddu.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/ekiga.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/ekiga.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/ekiga.pyo
