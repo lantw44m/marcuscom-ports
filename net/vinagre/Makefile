@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vinagre/Makefile,v 1.30 2009/09/07 12:21:14 kwm Exp $
+#   $MCom: ports/net/vinagre/Makefile,v 1.31 2009/09/21 22:50:04 avl Exp $
 #
 
 PORTNAME=	vinagre
-PORTVERSION=	2.28.0.1
+PORTVERSION=	2.28.1
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
