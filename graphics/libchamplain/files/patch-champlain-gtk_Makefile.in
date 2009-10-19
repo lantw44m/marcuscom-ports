@@ -1,10 +1,20 @@
---- champlain-gtk/Makefile.in.orig	2009-09-16 02:44:48.000000000 -0400
-+++ champlain-gtk/Makefile.in	2009-09-16 02:45:14.000000000 -0400
-@@ -714,6 +714,7 @@ champlain-gtk-marshal.c: $(CHAMPLAIN_GTK
- @HAVE_INTROSPECTION_TRUE@	$(INCLUDES) \
- @HAVE_INTROSPECTION_TRUE@	--add-include-path=$(srcdir) --add-include=path=. \
+--- champlain-gtk/Makefile.in.orig	2009-10-19 16:10:37.000000000 +0200
++++ champlain-gtk/Makefile.in	2009-10-19 16:21:13.000000000 +0200
+@@ -715,7 +715,7 @@ champlain-gtk-marshal.c: $(CHAMPLAIN_GTK
+ @HAVE_INTROSPECTION_TRUE@	$(SOUP_CFLAGS) \
+ @HAVE_INTROSPECTION_TRUE@	-I$(top_srcdir)			\
+ @HAVE_INTROSPECTION_TRUE@	-DCHAMPLAIN_COMPILATION 	\
+-@HAVE_INTROSPECTION_TRUE@	--add-include-path=$(builddir) \
++@HAVE_INTROSPECTION_TRUE@	--add-include-path=$(top_builddir)/champlain \
  @HAVE_INTROSPECTION_TRUE@	--c-include="$(libchamplain_include_HEADERS)" \
-+@HAVE_INTROSPECTION_TRUE@	--libtool="$(top_builddir)/libtool" \
+ @HAVE_INTROSPECTION_TRUE@	--include=Champlain-0.4 \
  @HAVE_INTROSPECTION_TRUE@	--include=Clutter-1.0 \
- @HAVE_INTROSPECTION_TRUE@	--include=Gtk-2.0 \
- @HAVE_INTROSPECTION_TRUE@	--library=champlain-gtk-0.4 \
+@@ -729,7 +729,7 @@ champlain-gtk-marshal.c: $(CHAMPLAIN_GTK
+ @HAVE_INTROSPECTION_TRUE@	$(addprefix $(srcdir)/,$(libchamplain_include_HEADERS))
+ 
+ @HAVE_INTROSPECTION_TRUE@%.typelib: %.gir $(INTROSPECTION_COMPILER)
+-@HAVE_INTROSPECTION_TRUE@	$(QUIET_GEN)$(DEBUG) $(INTROSPECTION_COMPILER) --includedir=$(srcdir) --includedir=. $(INTROSPECTION_COMPILER_OPTS) $< -o $(builddir)/$(@F)
++@HAVE_INTROSPECTION_TRUE@	$(QUIET_GEN)$(DEBUG) $(INTROSPECTION_COMPILER) --includedir=$(srcdir) --includedir=. --includedir=$(top_builddir)/champlain $(INTROSPECTION_COMPILER_OPTS) $< -o $(builddir)/$(@F)
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
