@@ -3,11 +3,11 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese/Makefile,v 1.42 2009/09/21 09:41:10 kwm Exp $
+#   $MCom: ports/multimedia/cheese/Makefile,v 1.43 2009/09/25 04:49:26 marcus Exp $
 #
 
 PORTNAME=	cheese
-PORTVERSION=	2.28.0.1
+PORTVERSION=	2.28.1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -32,8 +32,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 DOCS=		AUTHORS COPYING ChangeLog NEWS README
 GCONF_SCHEMAS=	cheese.schemas
-
-PLIST_SUB=	VERSION=2.28.0
 
 .ifndef (NOPORTDOCS)
 post-install:
