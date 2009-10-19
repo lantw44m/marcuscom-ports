@@ -254,12 +254,6 @@ share/anjuta/project/anjuta-plugin/src/plugin.h
 share/anjuta/project/anjuta-plugin/src/plugin.plugin.in
 share/anjuta/project/anjuta-plugin/src/plugin.ui
 share/anjuta/project/anjuta-plugin/src/plugin.xml
-share/anjuta/project/anjuta-plugin-vala.wiz
-share/anjuta/project/anjuta-plugin-vala/configure.ac.tpl
-share/anjuta/project/anjuta-plugin-vala/po/POTFILES.in
-share/anjuta/project/anjuta-plugin-vala/src/Makefile.am.tpl
-share/anjuta/project/anjuta-plugin-vala/src/config.vapi
-share/anjuta/project/anjuta-plugin-vala/src/plugin.vala
 share/anjuta/project/appwiz_sdl.png
 share/anjuta/project/cpp-logo.png
 share/anjuta/project/cpp.wiz
@@ -955,6 +949,49 @@ share/gnome/help/anjuta-manual/uk/figures/signals.png
 share/gnome/help/anjuta-manual/uk/figures/stack.png
 share/gnome/help/anjuta-manual/uk/figures/symbol_browser.png
 share/gnome/help/anjuta-manual/uk/figures/tool-editor.png
+share/gnome/help/anjuta-manual/zh_CN/anjuta-manual.xml
+share/gnome/help/anjuta-manual/zh_CN/figures/add_edit_macro.png
+share/gnome/help/anjuta-manual/zh_CN/figures/anjuta-in-action.png
+share/gnome/help/anjuta-manual/zh_CN/figures/attach.png
+share/gnome/help/anjuta-manual/zh_CN/figures/brk_add.png
+share/gnome/help/anjuta-manual/zh_CN/figures/brk_dlg.png
+share/gnome/help/anjuta-manual/zh_CN/figures/configure_dlg.png
+share/gnome/help/anjuta-manual/zh_CN/figures/display_macro.png
+share/gnome/help/anjuta-manual/zh_CN/figures/editor_guides.png
+share/gnome/help/anjuta-manual/zh_CN/figures/editor_margins.png
+share/gnome/help/anjuta-manual/zh_CN/figures/editor_markers.png
+share/gnome/help/anjuta-manual/zh_CN/figures/file_menu.png
+share/gnome/help/anjuta-manual/zh_CN/figures/insert_text.png
+share/gnome/help/anjuta-manual/zh_CN/figures/keyword_macro.png
+share/gnome/help/anjuta-manual/zh_CN/figures/local_variables.png
+share/gnome/help/anjuta-manual/zh_CN/figures/menubar.png
+share/gnome/help/anjuta-manual/zh_CN/figures/message_win.png
+share/gnome/help/anjuta-manual/zh_CN/figures/new_file_wizard.png
+share/gnome/help/anjuta-manual/zh_CN/figures/open_file.png
+share/gnome/help/anjuta-manual/zh_CN/figures/open_file_multiple.png
+share/gnome/help/anjuta-manual/zh_CN/figures/prefs_print.png
+share/gnome/help/anjuta-manual/zh_CN/figures/print_dlg.png
+share/gnome/help/anjuta-manual/zh_CN/figures/print_preview.png
+share/gnome/help/anjuta-manual/zh_CN/figures/project-window.png
+share/gnome/help/anjuta-manual/zh_CN/figures/project_group.png
+share/gnome/help/anjuta-manual/zh_CN/figures/project_info.png
+share/gnome/help/anjuta-manual/zh_CN/figures/project_target.png
+share/gnome/help/anjuta-manual/zh_CN/figures/project_target_details.png
+share/gnome/help/anjuta-manual/zh_CN/figures/registers.png
+share/gnome/help/anjuta-manual/zh_CN/figures/save_as_file.png
+share/gnome/help/anjuta-manual/zh_CN/figures/search_expr.png
+share/gnome/help/anjuta-manual/zh_CN/figures/search_expr_basic.png
+share/gnome/help/anjuta-manual/zh_CN/figures/search_file_pattern.png
+share/gnome/help/anjuta-manual/zh_CN/figures/search_replace.png
+share/gnome/help/anjuta-manual/zh_CN/figures/search_setting.png
+share/gnome/help/anjuta-manual/zh_CN/figures/search_target.png
+share/gnome/help/anjuta-manual/zh_CN/figures/search_target_action.png
+share/gnome/help/anjuta-manual/zh_CN/figures/search_target_in.png
+share/gnome/help/anjuta-manual/zh_CN/figures/sharedlibs.png
+share/gnome/help/anjuta-manual/zh_CN/figures/signals.png
+share/gnome/help/anjuta-manual/zh_CN/figures/stack.png
+share/gnome/help/anjuta-manual/zh_CN/figures/symbol_browser.png
+share/gnome/help/anjuta-manual/zh_CN/figures/tool-editor.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-x-anjuta.png
 share/icons/gnome/scalable/mimetypes/gnome-mime-application-x-anjuta.svg
 share/icons/hicolor/48x48/apps/anjuta.png
@@ -1033,6 +1070,7 @@ share/omf/anjuta-manual/anjuta-manual-oc.omf
 share/omf/anjuta-manual/anjuta-manual-sv.omf
 share/omf/anjuta-manual/anjuta-manual-th.omf
 share/omf/anjuta-manual/anjuta-manual-uk.omf
+share/omf/anjuta-manual/anjuta-manual-zh_CN.omf
 share/pixmaps/anjuta/anjuta-attach-16.png
 share/pixmaps/anjuta/anjuta-attach-24.png
 share/pixmaps/anjuta/anjuta-block-end-16.png
@@ -1195,6 +1233,8 @@ share/pixmaps/anjuta/vcs-unversioned.png
 share/pixmaps/anjuta/vcs-updated.png
 @dirrm share/pixmaps/anjuta
 @dirrm share/omf/anjuta-manual
+@dirrm share/gnome/help/anjuta-manual/zh_CN/figures
+@dirrm share/gnome/help/anjuta-manual/zh_CN
 @dirrm share/gnome/help/anjuta-manual/uk/figures
 @dirrm share/gnome/help/anjuta-manual/uk
 @dirrm share/gnome/help/anjuta-manual/th/figures
@@ -1267,9 +1307,6 @@ share/pixmaps/anjuta/vcs-updated.png
 @dirrm share/anjuta/project/cpp/src
 @dirrm share/anjuta/project/cpp/po
 @dirrm share/anjuta/project/cpp
-@dirrm share/anjuta/project/anjuta-plugin-vala/src
-@dirrm share/anjuta/project/anjuta-plugin-vala/po
-@dirrm share/anjuta/project/anjuta-plugin-vala
 @dirrm share/anjuta/project/anjuta-plugin/src
 @dirrm share/anjuta/project/anjuta-plugin/po
 @dirrm share/anjuta/project/anjuta-plugin
