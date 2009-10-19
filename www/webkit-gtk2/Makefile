@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.45 2009/10/18 17:47:51 marcus Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.46 2009/10/19 12:38:18 marcus Exp $
 #
 
 PORTNAME=	webkit
@@ -72,7 +72,8 @@ PLIST_SUB+=	STATIC="@comment "
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-JavaScriptCore_yarr_RegexJIT.h \
 		${FILESDIR}/extra-patch-JavaScriptCore_jit_JITStubCall.h \
 		${FILESDIR}/extra-patch-JavaScriptCore_jit_JITOpcodes.cpp \
-		${FILESDIR}/extra-patch-JavaScriptCore_assembler_MacroAssemblerCodeRef.h
+		${FILESDIR}/extra-patch-JavaScriptCore_assembler_MacroAssemblerCodeRef.h \
+		${FILESDIR}/extra-patch-JavaScriptCore_jit_JITStubs.cpp
 .endif
 
 post-patch:
