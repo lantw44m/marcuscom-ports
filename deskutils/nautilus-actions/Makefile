@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.10 2009/08/08 19:24:28 ahze Exp $
+#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.11 2009/08/12 01:48:23 ahze Exp $
 #
 
 PORTNAME=	nautilus-actions
-PORTVERSION=	1.12.0
+PORTVERSION=	1.12.1
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME \
 		http://www.nautilus-actions.org/downloads/ \
@@ -28,4 +28,22 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-nautilus-extdir=${LOCALBASE}/lib/nautilus/extensions-2.0
 
-.include <bsd.port.mk>
+PORTDOCS=	AUTHORS COPYING ChangeLog ChangeLog-2008 INSTALL MAINTAINERS \
+		NEWS README TODO objects-hierarchy.odg
+
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 700000
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-configure
+.endif
+
+post-patch:
+.if defined(NOPORTDOCS)
+	@${REINPLACE_CMD} -e 's| install-dist_pkgdocDATA||g' \
+		${WRKSRC}/Makefile.in ${WRKSRC}/doc/Makefile.in
+.else
+	@${REINPLACE_CMD} -e 's|doc/@PACKAGE@-@VERSION@|doc/@PACKAGE@|g' \
+		${WRKSRC}/Makefile.in ${WRKSRC}/doc/Makefile.in
+.endif
+
+.include <bsd.port.post.mk>>
