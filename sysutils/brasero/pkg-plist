@@ -90,7 +90,6 @@ libdata/pkgconfig/libbrasero-media.pc
 share/applications/brasero.desktop
 share/applications/brasero-copy-medium.desktop
 %%NAUTILUS%%share/applications/brasero-nautilus.desktop
-share/doc/libbrasero-burn/annotation-glossary.html
 share/doc/libbrasero-burn/api-index-full.html
 share/doc/libbrasero-burn/ch01.html
 share/doc/libbrasero-burn/home.png
@@ -126,12 +125,6 @@ share/doc/libbrasero-burn/object-tree.html
 share/doc/libbrasero-burn/right.png
 share/doc/libbrasero-burn/style.css
 share/doc/libbrasero-burn/up.png
-share/doc/libbrasero-media/BraseroDrive.html
-share/doc/libbrasero-media/BraseroDriveSelection.html
-share/doc/libbrasero-media/BraseroMedium.html
-share/doc/libbrasero-media/BraseroMediumMonitor.html
-share/doc/libbrasero-media/BraseroMediumSelection.html
-share/doc/libbrasero-media/BraseroVolume.html
 share/doc/libbrasero-media/api-index-full.html
 share/doc/libbrasero-media/annotation-glossary.html
 share/doc/libbrasero-media/ch01.html
@@ -139,6 +132,12 @@ share/doc/libbrasero-media/home.png
 share/doc/libbrasero-media/index.html
 share/doc/libbrasero-media/index.sgml
 share/doc/libbrasero-media/left.png
+share/doc/libbrasero-media/libbrasero-media-BraseroDrive.html
+share/doc/libbrasero-media/libbrasero-media-BraseroDriveSelection.html
+share/doc/libbrasero-media/libbrasero-media-BraseroMedium.html
+share/doc/libbrasero-media/libbrasero-media-BraseroMediumMonitor.html
+share/doc/libbrasero-media/libbrasero-media-BraseroMediumSelection.html
+share/doc/libbrasero-media/libbrasero-media-BraseroVolume.html
 share/doc/libbrasero-media/libbrasero-media-brasero-media.html
 share/doc/libbrasero-media/libbrasero-media-brasero-units.html
 share/doc/libbrasero-media/libbrasero-media.devhelp
