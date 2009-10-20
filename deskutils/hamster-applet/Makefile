@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/hamster-applet/Makefile,v 1.27 2009/09/08 14:19:48 kwm Exp $
+#   $MCom: ports/deskutils/hamster-applet/Makefile,v 1.28 2009/09/22 10:35:27 avl Exp $
 #
 
 PORTNAME=	hamster-applet
-PORTVERSION=	2.28.0
+PORTVERSION=	2.28.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
