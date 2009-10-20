@@ -1,0 +1,21 @@
+# New ports collection makefile for:	poppler-data
+# Date created:		2006-09-30
+# Whom:			Michael Johnson <ahze@FreeBSD.org>
+#
+# $FreeBSD: ports/graphics/poppler-data/Makefile,v 1.3 2008/11/22 17:28:35 ahze Exp $
+#
+
+PORTNAME=	poppler-data
+PORTVERSION=	0.3.0
+CATEGORIES=	graphics
+MASTER_SITES=	http://poppler.freedesktop.org/
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	Poppler encoding data
+
+NO_BUILD=	yes
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|' ${WRKSRC}/Makefile
+
+.include <bsd.port.mk>
