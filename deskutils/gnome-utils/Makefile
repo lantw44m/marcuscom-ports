@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.141 2009/09/22 08:46:02 kwm Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.142 2009/10/22 12:33:09 avl Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -38,7 +38,6 @@ GCONF_SCHEMAS=	gnome-dictionary.schemas gnome-screenshot.schemas \
 		gnome-system-log.schemas
 
 post-patch:
-	@${REINPLACE_CMD} "/gettext_domain/d" \
-		${WRKSRC}/gsearchtool/gnome-search-tool.schemas
+	@${RM} ${WRKSRC}/gsearchtool/gnome-search-tool.schemas
 
 .include <bsd.port.mk>
