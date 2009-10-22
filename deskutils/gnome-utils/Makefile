@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.140 2009/08/25 07:24:50 kwm Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.141 2009/09/22 08:46:02 kwm Exp $
 #
 
 PORTNAME=	gnome-utils
-PORTVERSION=	2.28.0
+PORTVERSION=	2.28.1
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
@@ -36,5 +36,9 @@ MAN1=		gnome-dictionary.1 gnome-screenshot.1 gnome-search-tool.1 \
 GCONF_SCHEMAS=	gnome-dictionary.schemas gnome-screenshot.schemas \
 		gnome-search-tool.schemas baobab.schemas \
 		gnome-system-log.schemas
+
+post-patch:
+	@${REINPLACE_CMD} "/gettext_domain/d" \
+		${WRKSRC}/gsearchtool/gnome-search-tool.schemas
 
 .include <bsd.port.mk>
