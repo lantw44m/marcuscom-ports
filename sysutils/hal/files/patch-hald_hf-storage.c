@@ -1,5 +1,5 @@
 --- hald/freebsd/hf-storage.c.orig	2009-05-12 08:24:28.000000000 -0400
-+++ hald/freebsd/hf-storage.c	2009-10-04 23:45:07.000000000 -0400
++++ hald/freebsd/hf-storage.c	2009-10-24 02:30:22.000000000 -0400
 @@ -30,6 +30,8 @@
  #include <limits.h>
  #include <inttypes.h>
@@ -60,7 +60,7 @@
  
    if (hf_runner_run_sync(device, 0, "hald-probe-storage",
  			 "HF_HAS_CHILDREN", HF_BOOL_TO_STRING(hf_storage_device_has_partitions(device)),
-@@ -403,13 +410,33 @@ hf_storage_parse_conftxt (const char *co
+@@ -403,13 +410,49 @@ hf_storage_parse_conftxt (const char *co
            continue;
  	}
  
@@ -91,12 +91,28 @@
 -      depth = atoi(fields[0]);
        geom_obj->class = g_strdup(fields[1]);
        geom_obj->dev = g_strdup(fields[2]);
++      /* Allow for spaces in label names. */
++      if (! strcmp(fields[1], "LABEL"))
++        {
++          int j;
++
++	  for (j = 3; g_strv_length(fields) > (j + 2) &&
++               strcmp(fields[j + 2], "i"); j++)
++            {
++              char *tmp;
++
++	      tmp = g_strdup_printf("%s %s", geom_obj->dev, fields[j]);
++	      g_free(geom_obj->dev);
++	      geom_obj->dev = tmp;
++	    }
++	}
++
        geom_obj->type = -1;	/* We use -1 here to denote a missing type. */
 -      hash = g_str_hash(geom_obj->dev);
        geom_obj->hash = hash;
  
        if (g_strv_length(fields) >= 5)
-@@ -433,6 +460,30 @@ hf_storage_parse_conftxt (const char *co
+@@ -433,6 +476,30 @@ hf_storage_parse_conftxt (const char *co
                if (! strcmp (geom_obj->class, "GPT") ||
                    ! strcmp (geom_obj->class, "APPLE"))
                  geom_obj->str_type = g_strdup(fields[10]);
@@ -127,7 +143,7 @@
  	      else
                  geom_obj->type = atoi(fields[10]);
  	    }
-@@ -541,17 +592,27 @@ hf_storage_device_rescan_real (HalDevice
+@@ -541,17 +608,27 @@ hf_storage_device_rescan_real (HalDevice
  }
  
  static gboolean
@@ -158,7 +174,7 @@
    new_disks = hf_storage_parse_conftxt(conftxt);
    g_free(conftxt);
  
-@@ -572,6 +633,7 @@ hf_storage_conftxt_timeout_cb (gpointer 
+@@ -572,6 +649,7 @@ hf_storage_conftxt_timeout_cb (gpointer 
  	  if (! hf_storage_find_disk(disks, disk->name))
  	    {
  	      osspec_probe();	/* catch new disk(s) */
@@ -166,7 +182,7 @@
  	      break;
  	    }
  	}
-@@ -593,7 +655,10 @@ hf_storage_conftxt_timeout_cb (gpointer 
+@@ -593,7 +671,10 @@ hf_storage_conftxt_timeout_cb (gpointer 
  		  device = hf_devtree_find_from_name(hald_get_gdl(), disk->name);
  		  if (device && hal_device_has_capability(device, "storage") &&
  		      ! hf_storage_device_has_addon(device))
@@ -178,7 +194,7 @@
  		}
  	    }
  	  else
-@@ -601,7 +666,10 @@ hf_storage_conftxt_timeout_cb (gpointer 
+@@ -601,7 +682,10 @@ hf_storage_conftxt_timeout_cb (gpointer 
  	      /* disk removed */
  	      device = hf_devtree_find_from_name(hald_get_gdl(), disk->name);
  	      if (device && hal_device_has_capability(device, "storage"))
@@ -190,7 +206,7 @@
  	    }
  	}
      }
-@@ -610,17 +678,30 @@ hf_storage_conftxt_timeout_cb (gpointer 
+@@ -610,17 +694,30 @@ hf_storage_conftxt_timeout_cb (gpointer 
    g_slist_free(disks);
    disks = new_disks;
  
@@ -223,7 +239,7 @@
      return;
  
    conftxt = hf_get_string_sysctl(NULL, "kern.geom.conftxt");
-@@ -636,8 +717,10 @@ hf_storage_init_geom (void)
+@@ -636,8 +733,10 @@ hf_storage_init_geom (void)
  static void
  hf_storage_init (void)
  {
@@ -235,7 +251,7 @@
  }
  
  void
-@@ -719,8 +802,6 @@ hf_storage_device_add (HalDevice *device
+@@ -719,8 +818,6 @@ hf_storage_device_add (HalDevice *device
  {
    g_return_if_fail(HAL_IS_DEVICE(device));
  
@@ -244,7 +260,7 @@
    if (hf_device_preprobe(device))
      {
        hf_storage_device_probe(device, FALSE);
-@@ -738,7 +819,7 @@ hf_storage_get_geoms (const char *devnam
+@@ -738,7 +835,7 @@ hf_storage_get_geoms (const char *devnam
  
    g_return_val_if_fail(devname != NULL, NULL);
  
@@ -253,7 +269,7 @@
  
    hash = g_str_hash(devname);
    node = g_node_find(hf_storage_geom_tree, G_PRE_ORDER, G_TRAVERSE_ALL,
-@@ -801,3 +882,7 @@ HFHandler hf_storage_handler = {
+@@ -801,3 +898,7 @@ HFHandler hf_storage_handler = {
    .probe =		hf_storage_probe,
    .device_rescan =	hf_storage_device_rescan
  };
