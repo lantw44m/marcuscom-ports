@@ -3,12 +3,12 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.53 2009/09/10 13:16:23 kwm Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.54 2009/10/20 04:03:58 marcus Exp $
 #
 
 PORTNAME=	poppler
 PORTVERSION=	0.12.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
 
@@ -31,7 +31,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${LOCALBASE}/include/freetype2
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
 .if !defined(SLAVEPORT)
-OPTIONS=	CAIRO "Enable cairo output backend" on
+OPTIONS=	CAIRO "Enable cairo output backend" on \
+		OPENJPEG "Enable JPEG 2000 support" on
 .endif
 
 .include <bsd.port.pre.mk>
@@ -95,6 +96,13 @@ PLIST_SUB+=	CAIRO="@comment "
 .else
 LIB_DEPENDS+=	cairo.2:${PORTSDIR}/graphics/cairo
 PLIST_SUB+=	CAIRO=""
+.endif
+
+.if defined(WITHOUT_OPENJPEG)
+CONFIGURE_ARGS+=--disable-libopenjpeg
+.else
+CONFIGURE_ARGS+=--enable-libopenjpeg
+LIB_DEPENDS+=	openjpeg.2:${PORTSDIR}/graphics/openjpeg
 .endif
 .endif
 
