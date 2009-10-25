@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.212 2009/10/15 10:27:06 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.213 2009/10/18 19:40:57 kwm Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	2.28.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -48,7 +48,8 @@ PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}"
 MAN1=		epiphany.1
 
 OPTIONS=	NSS "Import passwords from 2.26 and older on first run" on \
-		SEED "Enable seed support" off
+		SEED "Enable seed support" off \
+		SPELLCHECK "Enable spell checking by default" on
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
@@ -73,6 +74,10 @@ CONFIGURE_ARGS+=--disable-nss
 .if defined(WITH_SEED)
 LIB_DEPENDS+=	seed.0:${PORTSDIR}/devel/seed
 CONFIGURE_ARGS+=--enable-seed
+.endif
+
+.if defined(WITH_SPELLCHECK)
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-embed_ephy-embed-prefs.c
 .endif
 
 post-patch:
