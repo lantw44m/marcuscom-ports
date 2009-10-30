@@ -3,11 +3,11 @@
 # Whom:                 		Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/json-glib/Makefile,v 1.3 2009/08/12 22:41:42 kwm Exp $
+#   $MCom: ports/devel/json-glib/Makefile,v 1.4 2009/09/22 20:49:02 kwm Exp $
 #
 
 PORTNAME=	json-glib
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.2
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
