@@ -3,7 +3,7 @@
 # Whom:					Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gir-repository/Makefile,v 1.7 2009/09/16 02:05:10 avl Exp $
+#   $MCom: ports/devel/gir-repository/Makefile,v 1.8 2009/09/27 21:25:15 marcus Exp $
 #
 
 MASTER_SITES=	# Empty
@@ -28,7 +28,6 @@ RUN_DEPENDS=	${GIRDIR}/${atk_GIR}.gir:${PORTSDIR}/${atk_CATEGORY}/gir-repository
 		${GIRDIR}/${nautilus_GIR}.gir:${PORTSDIR}/${nautilus_CATEGORY}/gir-repository-nautilus \
 		${GIRDIR}/${gnomekeyring_GIR}.gir:${PORTSDIR}/${gnomekeyring_CATEGORY}/gir-repository-gnome-keyring \
 		${GIRDIR}/${libnotify_GIR}.gir:${PORTSDIR}/${libnotify_CATEGORY}/gir-repository-libnotify \
-		${GIRDIR}/${gstreamer_GIR}.gir:${PORTSDIR}/${gstreamer_CATEGORY}/gir-repository-gstreamer \
 		${GIRDIR}/${gtksourceview2_GIR}.gir:${PORTSDIR}/${gtksourceview2_CATEGORY}/gir-repository-gtksourceview2 \
 		${GIRDIR}/${vte_GIR}.gir:${PORTSDIR}/${vte_CATEGORY}/gir-repository-vte \
 		${GIRDIR}/${avahi_GIR}.gir:${PORTSDIR}/${avahi_CATEGORY}/gir-repository-avahi \

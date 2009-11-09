@@ -44,17 +44,11 @@ gnomekeyring_GIR=	GnomeKeyring-2.0
 libnotify_CATEGORY=	devel
 libnotify_GIR=	Notify-0.4
 
-gstreamer_CATEGORY=	multimedia
-gstreamer_GIR=	Gst-0.10
-
 gtksourceview2_CATEGORY=	x11-toolkits
 gtksourceview2_GIR=	GtkSource-2.2
 
 vte_CATEGORY=	x11-toolkits
 vte_GIR=	Vte-1.0
-
-unique_CATEGORY=	x11-toolkits
-unique_GIR=	Unique-1.0
 
 avahi_CATEGORY=	net
 avahi_GIR=	Avahi-0.6
@@ -93,8 +87,7 @@ PLIST=		${NONEXISTENT}
 
 _USE_GIR_ALL=	dbus atk pango pangoxft poppler gtk gconf soup babl nautilusextension \
 		gnomekeyring webkit notify gnio clutter clutter_gtk clutter_cairo \
-		gstreamer gstbufferlist_h gstreamer_plugins_base gtksourceview vte \
-		goocanvas gssdp gupnp avahi unique gmenu wnck
+		gtksourceview vte goocanvas gssdp gupnp avahi gmenu wnck
 
 .if ${GIR_NAME} == "atk"
 USE_GNOME+=	atk
@@ -170,15 +163,6 @@ GIR_FILES=	DBus-1.0
 LIB_FILES=	DBus
 .endif
 
-.if ${GIR_NAME} == "gstreamer"
-USE_GSTREAMER=	yes bad
-DEP_NAMES+=	gstbufferlist_h gstreamer_plugins_base
-GIR_FILES=	Gst-0.10 GstBase-0.10 GstNet-0.10 GstController-0.10 \
-		GstAudio-0.10 GstFft-0.10 GstInterfaces-0.10 GstNetbuffer-0.10 \
-		GstPbutils-0.10 GstRiff-0.10 GstRtp-0.10 GstRtsp-0.10 \
-		GstSdp-0.10 GstTag-0.10 GstVideo-0.10
-.endif
-
 .if ${GIR_NAME} == "gtksourceview2"
 USE_GNOME+=	gtksourceview2
 USE_GIR=	gtk20
@@ -190,12 +174,6 @@ DEP_NAMES=	gtksourceview
 USE_GNOME+=	vte
 USE_GIR=	gtk20
 GIR_FILES=	Vte-1.0
-.endif
-
-.if ${GIR_NAME} == "unique"
-LIB_DEPENDS+=	unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
-USE_GIR=	gtk20
-GIR_FILES=	Unique-1.0
 .endif
 
 .if ${GIR_NAME} == "avahi"
