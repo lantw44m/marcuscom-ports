@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.47 2009/10/19 19:18:17 marcus Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.48 2009/10/25 16:52:37 marcus Exp $
 #
 
 PORTNAME=	webkit
@@ -85,5 +85,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|^build_old_libs=yes|build_old_libs=no|' \
 		${WRKDIR}/gnome-libtool
 .endif
+	@${REINPLACE_CMD} -e 's|/usr/bin/gcc|${CC}|' \
+		${WRKSRC}/WebCore/dom/make_names.pl \
+		${WRKSRC}/WebCore/css/make-css-file-arrays.pl \
+		${WRKSRC}/WebCore/bindings/scripts/IDLParser.pm
 
 .include <bsd.port.post.mk>
