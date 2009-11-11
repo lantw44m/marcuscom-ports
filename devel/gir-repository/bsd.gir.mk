@@ -85,9 +85,12 @@ TYPELIBDIR_REL=	lib/girepository-1.0
 
 PLIST=		${NONEXISTENT}
 
+# This list is used to enable/disable gir modules in the configure script.
+# So all girs should be here even if we don't use them.
 _USE_GIR_ALL=	dbus atk pango pangoxft poppler gtk gconf soup babl nautilusextension \
 		gnomekeyring webkit notify gnio clutter clutter_gtk clutter_cairo \
-		gtksourceview vte goocanvas gssdp gupnp avahi gmenu wnck
+		gstreamer gstbufferlist_h gstreamer_plugins_base gtksourceview vte \
+		goocanvas gssdp gupnp avahi unique gmenu wnck
 
 .if ${GIR_NAME} == "atk"
 USE_GNOME+=	atk
