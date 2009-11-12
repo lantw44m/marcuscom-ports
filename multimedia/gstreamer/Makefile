@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.65 2009/11/09 09:31:58 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.66 2009/11/12 11:08:35 kwm Exp $
 #
 
 PORTNAME=	gstreamer
@@ -52,7 +52,7 @@ MAN1=	gst-feedback-${GST_VERSION}.1 gst-inspect-${GST_VERSION}.1 \
 LIB_DEPENDS+=	check.0:${PORTSDIR}/devel/libcheck
 PLIST_SUB+=	CHECK=""
 .else
-CONFIGURE_ARGS+=--without-check
+CONFIGURE_ARGS+=--disable-check
 PLIST_SUB+=	CHECK="@comment "
 .endif
 

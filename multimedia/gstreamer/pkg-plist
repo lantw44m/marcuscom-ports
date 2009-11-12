@@ -91,7 +91,7 @@ include/gstreamer-%%VERSION%%/gst/net/gstnettimepacket.h
 include/gstreamer-%%VERSION%%/gst/net/gstnettimeprovider.h
 lib/girepository-1.0/Gst-0.10.typelib
 lib/girepository-1.0/GstBase-0.10.typelib
-lib/girepository-1.0/GstCheck-0.10.typelib
+%%CHECK%%lib/girepository-1.0/GstCheck-0.10.typelib
 lib/girepository-1.0/GstController-0.10.typelib
 lib/girepository-1.0/GstNet-0.10.typelib
 lib/gstreamer-%%VERSION%%/libgstcoreelements.la
@@ -131,7 +131,7 @@ libdata/pkgconfig/gstreamer-net-%%VERSION%%.pc
 share/aclocal/gst-element-check-%%VERSION%%.m4
 share/gir-1.0/Gst-0.10.gir
 share/gir-1.0/GstBase-0.10.gir
-share/gir-1.0/GstCheck-0.10.gir
+%%CHECK%%share/gir-1.0/GstCheck-0.10.gir
 share/gir-1.0/GstController-0.10.gir
 share/gir-1.0/GstNet-0.10.gir
 share/locale/af/LC_MESSAGES/gstreamer-%%VERSION%%.mo
