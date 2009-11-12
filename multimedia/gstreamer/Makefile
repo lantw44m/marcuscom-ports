@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer/Makefile,v 1.65 2009/11/09 09:31:58 kwm Exp $
 #
 
 PORTNAME=	gstreamer
@@ -15,8 +15,8 @@ MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer/ \
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT=	Development framework for creating media applications
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
+		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 
