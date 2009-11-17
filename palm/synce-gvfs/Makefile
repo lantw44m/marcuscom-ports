@@ -2,12 +2,11 @@
 # Date created:                28 August 2003
 # Whom:                        Sam Lawrance <boris@brooknet.com.au>
 #
-# $FreeBSD: ports/palm/synce-gvfs/Makefile,v 1.32 2009/10/12 10:30:02 avl Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	synce-gvfs
-PORTVERSION=	0.3
-PORTREVISION=	1
+PORTVERSION=	0.3.1
 CATEGORIES=	palm
 MASTER_SITES=	SF/synce/SynCE-GNOME/0.14
 
