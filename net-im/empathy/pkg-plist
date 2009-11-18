@@ -1032,6 +1032,7 @@ share/locale/bn_IN/LC_MESSAGES/empathy.mo
 share/locale/br/LC_MESSAGES/empathy.mo
 share/locale/ca/LC_MESSAGES/empathy.mo
 share/locale/ca@valencia/LC_MESSAGES/empathy.mo
+share/locale/crh/LC_MESSAGES/empathy.mo
 share/locale/cs/LC_MESSAGES/empathy.mo
 share/locale/cy/LC_MESSAGES/empathy.mo
 share/locale/da/LC_MESSAGES/empathy.mo
@@ -1166,6 +1167,8 @@ share/telepathy/clients/Empathy.client
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/crh/LC_MESSAGES
+@dirrmtry share/locale/crh
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
