@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.143 2009/09/22 07:20:40 avl Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.144 2009/11/20 05:19:22 avl Exp $
 #
 
 PORTNAME=	yelp
 PORTVERSION=	2.28.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -34,5 +35,8 @@ CONFIGURE_ARGS=	--with-gecko=${GECKO} \
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
 GCONF_SCHEMAS=	yelp.schemas
+
+post-extract:
+	${RM} -f ${WRKSRC}/data/yelp.schemas
 
 .include <bsd.port.mk>
