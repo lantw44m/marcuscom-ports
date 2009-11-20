@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.142 2009/09/10 00:46:12 kwm Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.143 2009/09/22 07:20:40 avl Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	2.28.0
+PORTVERSION=	2.28.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
