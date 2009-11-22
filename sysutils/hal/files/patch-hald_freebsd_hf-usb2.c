@@ -1,8 +1,8 @@
---- hald/freebsd/hf-usb2.c.orig	2009-09-12 21:16:02.000000000 -0400
-+++ hald/freebsd/hf-usb2.c	2009-09-13 20:57:00.000000000 -0400
+--- hald/freebsd/hf-usb2.c.orig	2009-11-21 19:57:40.000000000 -0500
++++ hald/freebsd/hf-usb2.c	2009-11-21 19:58:07.000000000 -0500
 @@ -0,0 +1,312 @@
 +/***************************************************************************
-+ * CVSID: $Id: patch-hald_freebsd_hf-usb2.c,v 1.3 2009-09-18 05:47:01 marcus Exp $
++ * CVSID: $Id: patch-hald_freebsd_hf-usb2.c,v 1.4 2009-11-22 01:04:37 marcus Exp $
 + *
 + * hf-usb.c : USB support
 + *
@@ -102,7 +102,7 @@
 +            {
 +	      if (! strcmp(driver, "ukbd"))
 +                hf_device_set_input(device, "keyboard", NULL);
-+	      else if (! strcmp(driver, "ums"))
++	      else if (! strcmp(driver, "ums") || ! strcmp(driver, "atp"))
 +                {
 +                  hf_device_set_input(device, "mouse", devname);
 +	          hf_runner_run_sync(device, 0, "hald-probe-mouse", NULL);
