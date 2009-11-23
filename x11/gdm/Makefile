@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.161 2009/10/20 10:40:55 kwm Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.162 2009/10/25 00:14:31 marcus Exp $
 #
 
 PORTNAME=	gdm
@@ -95,7 +95,6 @@ post-install:
 		${PREFIX}/etc/gdm/custom.conf.default
 	${MKDIR} ${PREFIX}/share/xsessions
 	${INSTALL_DATA} ${WRKDIR}/gdm.pam ${PREFIX}/etc/pam.d/gdm
-	@${MKDIR} ${PREFIX}/etc/gdm/Sessions
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
 	@${CAT} ${PKGMESSAGE}

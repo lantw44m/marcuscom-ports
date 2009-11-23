@@ -62,6 +62,7 @@ POST-INSTALL)
 	${CHMOD} 1750 ${PKG_PREFIX}/etc/gdm/home/.gconf.mandatory
 	${CHMOD} 1640 ${PKG_PREFIX}/etc/gdm/home/.gconf.mandatory/*.xml
 
+	${MKDIR} -p ${PKG_PREFIX}/etc/gdm/Sessions
 	${MKDIR} -p ${PKG_PREFIX}/etc/dm/Sessions
 	exit 0
 	;;
