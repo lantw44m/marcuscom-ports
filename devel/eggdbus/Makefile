@@ -3,11 +3,11 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/eggdbus/Makefile,v 1.1 2009/08/17 16:45:17 kwm Exp $
+#   $MCom: ports/devel/eggdbus/Makefile,v 1.2 2009/09/10 04:39:40 marcus Exp $
 #
 
 PORTNAME=	eggdbus
-PORTVERSION=	0.5
+PORTVERSION=	0.6
 CATEGORIES=	devel
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
