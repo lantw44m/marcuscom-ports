@@ -41,6 +41,7 @@ include/polkit-1/polkitbackend/polkitbackendlocalauthority.h
 include/polkit-1/polkitbackend/polkitbackendlocalauthorizationstore.h
 include/polkit-1/polkitbackend/polkitbackendsessionmonitor.h
 include/polkit-1/polkitbackend/polkitbackendtypes.h
+lib/girepository-1.0/Polkit-1.0.typelib
 lib/libpolkit-agent-1.a
 lib/libpolkit-agent-1.la
 lib/libpolkit-agent-1.so
@@ -65,6 +66,7 @@ libdata/pkgconfig/polkit-gobject-1.pc
 libexec/polkit-agent-helper-1
 libexec/polkitd
 share/dbus-1/system-services/org.freedesktop.PolicyKit1.service
+share/gir-1.0/Polkit-1.0.gir
 share/locale/da/LC_MESSAGES/polkit-1.mo
 share/polkit-1/actions/org.freedesktop.policykit.policy
 @dirrmtry share/polkit-1/actions
