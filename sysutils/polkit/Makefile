@@ -3,12 +3,11 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.1 2009/08/17 16:49:09 kwm Exp $
+#   $MCom: ports/sysutils/polkit/Makefile,v 1.2 2009/09/10 04:34:25 marcus Exp $
 #
 
 PORTNAME=	polkit
-PORTVERSION=	0.94
-PORTREVISION=	1
+PORTVERSION=	0.95
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -29,7 +28,6 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-os-type=freebsd \
 		--disable-introspection \
 		--localstatedir=/var \
-		--with-polkit-user=polkit
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
