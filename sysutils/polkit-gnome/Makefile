@@ -3,19 +3,20 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.3 2009/09/11 17:30:45 marcus Exp $
+#   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.4 2009/09/13 16:28:31 marcus Exp $
 #
 
 PORTNAME=	polkit-gnome
-PORTVERSION=	0.94
-PORTREVISION=	2
+PORTVERSION=	0.95
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME frontend to the PolicKit framework
 
+BUILD_DEPENDS=	${LOCALBASE}/share/gir-1.0/Gtk-2.0.gir:${PORTSDIR}/x11-toolkits/gir-repository-gtk20
 LIB_DEPENDS=	polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
+RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/Gtk-2.0.gir:${PORTSDIR}/x11-toolkits/gir-repository-gtk20
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
