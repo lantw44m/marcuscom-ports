@@ -2,10 +2,10 @@
 bin/valac
 %%VAPIGEN%%bin/vapicheck
 %%VAPIGEN%%bin/vapigen
-include/vala-1.0/gee.h
 include/vala-1.0/vala.h
 include/vala-1.0/valaccode.h
 include/vala-1.0/valacodegen.h
+include/vala-1.0/valagee.h
 lib/libvala.la
 lib/libvala.so
 lib/libvala.so.0
@@ -120,6 +120,8 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/libepc-1.0.vapi
 %%DATADIR%%/vapi/libftdi.deps
 %%DATADIR%%/vapi/libftdi.vapi
+%%DATADIR%%/vapi/libgda-4.0.deps
+%%DATADIR%%/vapi/libgda-4.0.vapi
 %%DATADIR%%/vapi/libgdata.deps
 %%DATADIR%%/vapi/libgdata.vapi
 %%DATADIR%%/vapi/libglade-2.0.deps
