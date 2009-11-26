@@ -3,13 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/freedesktop-sound-theme/Makefile,v 1.2 2008/12/21 20:39:32 marcus Exp $
+#   $MCom: ports/audio/freedesktop-sound-theme/Makefile,v 1.4 2009/08/24 19:19:15 marcus Exp $
 #
 
 PORTNAME=	freedesktop-sound-theme
-PORTVERSION=	0.4
+PORTVERSION=	0.7
 CATEGORIES=	audio gnome
-MASTER_SITES=	http://people.freedesktop.org/~mccann/dist/
+#MASTER_SITES=	http://people.freedesktop.org/~mccann/dist/
+MASTER_SITES=	LOCAL:kwm
 DISTNAME=	sound-theme-freedesktop-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
