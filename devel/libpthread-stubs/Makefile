@@ -7,7 +7,7 @@
 
 PORTNAME=	libpthread-stubs
 PORTVERSION=	0.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 
@@ -29,7 +29,7 @@ CONFIGURE_ENV+=	LDFLAGS=-lpthread
 # XXX This is a hack to fix a problem where pthread_condattr_{init,destroy}
 # are not found leading to crashes.
 # When the stubs are added to libc, this hack can be removed.
-CONFIGURE_ENV+=	LDFLAGS=${PTHREAD_FLAGS}
+CONFIGURE_ENV+=	LDFLAGS=${PTHREAD_LIBS}
 .endif
 
 .include <bsd.port.post.mk>
