@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.162 2009/10/25 00:14:31 marcus Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.163 2009/11/23 18:16:00 kwm Exp $
 #
 
 PORTNAME=	gdm
@@ -25,6 +25,9 @@ LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit \
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon \
 		gnome-session:${PORTSDIR}/x11/gnome-session
+
+USERS=		gdm
+GROUPS=		gdm
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes

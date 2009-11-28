@@ -2,7 +2,7 @@
 # Date created:				30 May 2001
 # Whom:				Jonathan McGee <mcgee@wam.umd.edu>
 #
-# $FreeBSD: ports/misc/uf-view/Makefile,v 1.24 2009/07/31 13:54:20 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	uf-view

@@ -2,7 +2,7 @@
 # Date created:		19 December 2003
 # Whom:			Lev Serebryakov <lev@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/nip2/Makefile,v 1.21 2009/07/31 13:52:29 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	nip2

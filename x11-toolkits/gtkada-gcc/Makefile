@@ -2,7 +2,7 @@
 # Date Created:			24 Dec 2006
 # Whom:				Petr Holub <hopet@ics.muni.cz>
 #
-# $FreeBSD: ports/x11-toolkits/gtkada-gcc/Makefile,v 1.8 2009/08/22 00:39:22 amdmi3 Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtkada

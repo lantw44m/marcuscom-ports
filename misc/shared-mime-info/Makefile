@@ -2,8 +2,8 @@
 # Date created:        31 May 2002
 # Whom:                olgeni@FreeBSD.org
 #
-# $FreeBSD: ports/misc/shared-mime-info/Makefile,v 1.56 2009/05/11 12:23:00 mezz Exp $
-#   $MCom: ports/misc/shared-mime-info/Makefile,v 1.13 2008/02/01 04:17:52 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/misc/shared-mime-info/Makefile,v 1.15 2009/10/10 15:52:41 marcus Exp $
 #
 
 PORTNAME=	shared-mime-info

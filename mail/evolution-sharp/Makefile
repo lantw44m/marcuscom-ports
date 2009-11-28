@@ -2,8 +2,8 @@
 # Date created:					20041012
 # Whom:				Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
-# $FreeBSD: ports/mail/evolution-sharp/Makefile,v 1.21 2009/07/31 13:53:21 dinoex Exp $
-#   $Id: Makefile,v 1.14 2009-09-28 12:13:48 kwm Exp $
+# $FreeBSD$
+#   $Id: Makefile,v 1.15 2009-11-28 05:59:01 mezz Exp $
 #
 
 PORTNAME=	evolution-sharp

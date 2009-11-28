@@ -2,7 +2,7 @@
 # Date created:			3 November 2002
 # Whom:				Kimura Fuyuki <fuyuki@hadaly.org>
 #
-# $FreeBSD: ports/x11-toolkits/gauche-gtk/Makefile,v 1.35 2009/08/22 00:39:22 amdmi3 Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gauche

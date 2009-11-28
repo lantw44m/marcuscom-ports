@@ -2,7 +2,7 @@
 # Date created:         		September 18, 1999
 # Whom:					nectar@FreeBSD.ORG
 #
-# $FreeBSD: ports/x11-toolkits/wxgtk24/Makefile,v 1.62 2009/08/22 00:39:31 amdmi3 Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	wx

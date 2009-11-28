@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/dbus/Makefile,v 1.32 2009/09/26 13:41:58 marcus Exp $
 #
 
 PORTNAME=	dbus
@@ -35,6 +35,9 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 .if !defined(DBUS_SLAVE)
 USE_RC_SUBR=	dbus
 USE_GNOME_SUBR=	yes
+
+USERS=		messagebus
+GROUPS=		messagebus
 
 PLIST_SUB=	VERSION="1.0"
 

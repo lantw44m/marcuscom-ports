@@ -2,7 +2,7 @@
 # Date created:				14 Sep 2006
 # Whom:					Jackson Low <xxjack12xx@gmail.com>
 #
-# $FreeBSD: ports/audio/audacity-devel/Makefile,v 1.37 2009/10/22 08:36:03 wen Exp $
+# $FreeBSD$
 
 PORTNAME=	audacity
 PORTVERSION=	1.3.9
@@ -16,6 +16,8 @@ DISTNAME=	${PORTNAME}-minsrc-${PORTVERSION}
 MAINTAINER=	xxjack12xx@gmail.com
 COMMENT=	Audacity is a GUI editor for digital audio waveforms
 
+BUILD_DEPENDS+=	automake-1.10:${PORTSDIR}/devel/automake110
+BUILD_DEPENDS+=	autoconf-2.62:${PORTSDIR}/devel/autoconf262
 LIB_DEPENDS=	sndfile.1:${PORTSDIR}/audio/libsndfile
 
 CONFLICTS=	audacity-[0-9]*

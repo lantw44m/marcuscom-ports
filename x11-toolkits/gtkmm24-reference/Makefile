@@ -2,7 +2,7 @@
 # Date created:				09 May 2006
 # Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/gtkmm24-reference/Makefile,v 1.8 2009/07/31 13:57:26 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTREVISION=	5

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/x11-wm/compiz/pkg-plist,v 1.6 2009/04/08 06:55:27 rnoland Exp $
+@comment $FreeBSD$
 bin/compiz
 bin/compiz-manager
 %%GTK%%bin/gtk-window-decorator

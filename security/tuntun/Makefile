@@ -2,7 +2,7 @@
 # Date created:		2008-09-16
 # Whom:			Anderson S. Ferreira <anderson@cnpm.embrapa.br>
 #
-# $FreeBSD: ports/security/tuntun/Makefile,v 1.3 2009/07/31 13:55:46 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	tuntun

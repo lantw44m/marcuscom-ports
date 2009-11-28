@@ -2,8 +2,8 @@
 # Date created:		2005-09-17
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/deskutils/nautilus-locked-folder/Makefile,v 1.17 2009/08/02 19:33:00 mezz Exp $
-#   $MCom: ports/deskutils/nautilus-locked-folder/Makefile,v 1.9 2009/04/07 03:12:16 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/deskutils/nautilus-locked-folder/Makefile,v 1.11 2009/09/27 12:56:22 kwm Exp $
 #
 
 PORTNAME=	nautilus-locked-folder

@@ -2,12 +2,12 @@
 # Date created:			28 Jan 2005
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
-# $FreeBSD: ports/textproc/gnome-translate/Makefile,v 1.14 2009/07/31 13:56:11 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=		gnome-translate
 PORTVERSION=		0.99
-PORTREVISION=	11
+PORTREVISION=	12
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SAVANNAH}
 MASTER_SITE_SUBDIR=	libtranslate
@@ -20,7 +20,7 @@ LIB_DEPENDS=		translate:${PORTSDIR}/textproc/libtranslate
 INSTALLS_OMF=		yes
 INSTALLS_ICONS=		yes
 GCONF_SCHEMAS=		gnome-translate.schemas
-USE_GNOME=		gnomehack gnomeprefix eel2 intlhack
+USE_GNOME=		gnomehack gnomeprefix eel2 intlhack libgnomeui
 USE_GMAKE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV=		CPPFLAGS="-I${LOCALBASE}/include" \

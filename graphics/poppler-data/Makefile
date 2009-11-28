@@ -2,7 +2,7 @@
 # Date created:		2006-09-30
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/poppler-data/Makefile,v 1.3 2008/11/22 17:28:35 ahze Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	poppler-data

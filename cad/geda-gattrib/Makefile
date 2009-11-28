@@ -2,7 +2,7 @@
 # Date created:			26 June 2006
 # Whom:				Stanislav Sedov <ssedov@mbsd.msk.ru>
 #
-# $FreeBSD: ports/cad/geda-gattrib/Makefile,v 1.12 2009/07/31 13:49:20 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gattrib

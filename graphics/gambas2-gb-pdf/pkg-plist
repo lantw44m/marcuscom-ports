@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/graphics/gambas2-gb-pdf/pkg-plist,v 1.1 2009/05/09 01:29:08 acm Exp $
+@comment $FreeBSD$
 lib/gambas2/gb.pdf.component
 lib/gambas2/gb.pdf.so.0
 lib/gambas2/gb.pdf.so

@@ -3,7 +3,7 @@
 # Date created:				6 March 2008
 # Whom:					gahr
 #
-# $FreeBSD: ports/databases/mysql-gui-tools/Makefile,v 1.8 2009/08/02 19:32:46 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	mysql-gui-tools

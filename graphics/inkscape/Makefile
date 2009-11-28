@@ -2,7 +2,7 @@
 # Date created:		17 Nov 2003
 # Whom:			Alexander Nedotsukov <bland@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/inkscape/Makefile,v 1.51 2009/07/31 13:52:19 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	inkscape

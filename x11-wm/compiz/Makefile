@@ -2,7 +2,7 @@
 # Date created:				Dec 20 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-wm/compiz/Makefile,v 1.18 2009/08/02 19:36:31 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	compiz

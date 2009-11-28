@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/evolution-jescs/Makefile,v 1.38 2009/07/24 10:42:05 kwm Exp $
+#   $MCom: ports/deskutils/evolution-jescs/Makefile,v 1.39 2009/09/22 12:28:17 avl Exp $
 #
 
 PORTNAME=	evolution-jescs
@@ -26,6 +26,7 @@ INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+MAKE_JOBS_UNSAFE=	yes
 
 EVO_VERSION=	2.28
 PLIST_SUB=	EVO_VERSION=${EVO_VERSION} EDS_VERSION="1.2" VERSION="2.28"

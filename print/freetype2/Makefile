@@ -2,8 +2,8 @@
 # Date created:		January 24, 1998
 # Whom:			jseger@FreeBSD.org
 #
-# $FreeBSD: ports/print/freetype2/Makefile,v 1.87 2009/08/22 00:34:34 amdmi3 Exp $
-#   $MCom: ports/print/freetype2/Makefile,v 1.16 2009/04/09 03:24:09 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/print/freetype2/Makefile,v 1.18 2009/10/24 06:09:00 marcus Exp $
 #
 
 PORTNAME=	freetype2

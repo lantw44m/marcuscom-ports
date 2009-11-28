@@ -2,7 +2,7 @@
 # Date created:				1 November 2004
 # Whom:					Radek Kozlowski <radek@raadradd.com>
 #
-# $FreeBSD: ports/ftp/gwget/Makefile,v 1.22 2009/10/04 00:06:51 avl Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gwget

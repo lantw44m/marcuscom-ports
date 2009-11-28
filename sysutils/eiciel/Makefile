@@ -2,7 +2,7 @@
 # Date created:				July 20, 2005
 # Whom:					andreas@syndrom23.de
 #
-# $FreeBSD: ports/sysutils/eiciel/Makefile,v 1.21 2009/08/02 19:35:34 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	eiciel

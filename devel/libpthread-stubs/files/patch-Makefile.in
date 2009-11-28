@@ -1,5 +1,5 @@
 
-$FreeBSD: ports/devel/libpthread-stubs/files/patch-Makefile.in,v 1.2 2009/11/05 20:16:01 miwi Exp $
+$FreeBSD$
 
 --- Makefile.in.orig
 +++ Makefile.in

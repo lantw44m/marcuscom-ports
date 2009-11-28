@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.53 2009/09/17 22:32:50 marcus Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-extras/Makefile,v 1.54 2009/09/26 12:46:35 marcus Exp $
 #
 
 PORTNAME=	gnome-extras
@@ -43,7 +43,6 @@ DOCSDIR=	${WRKSRC}/share/doc/py-gnome-extras
 .endif
 
 .include <bsd.port.pre.mk>
-.include "${PORTSDIR}/www/mozilla/bsd.gecko.mk"
 
 .if defined(GECKO) && ${GECKO:Mlibxul}!=""
 CONFIGURE_ARGS+=	--with-gtkmozembed=mozilla
