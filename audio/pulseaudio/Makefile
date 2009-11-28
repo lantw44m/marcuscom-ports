@@ -3,10 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/pulseaudio/Makefile,v 1.19 2009/11/24 16:00:46 kwm Exp $
+#   $MCom: ports/audio/pulseaudio/Makefile,v 1.20 2009/11/28 18:59:53 marcus Exp $
 #
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
-# PORTREVISION bumps to audio/gnome-media and sysutils/gnome-settings-daemon.
+# PORTREVISION bumps to audio/gnome-media, sysutils/gnome-settings-daemon,
+# and audio/gstreamer-plugins-pulse.
 #
 
 PORTNAME=	pulseaudio
