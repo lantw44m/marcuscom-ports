@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/accessibility/atk/Makefile,v 1.100 2009/12/08 18:55:42 kwm Exp $
 #
 
 PORTNAME=	atk
-PORTVERSION=	1.29.3
+PORTVERSION=	1.29.4
 PORTREVISION?=	0
 CATEGORIES=	accessibility devel
 MASTER_SITES=	GNOME
@@ -21,6 +21,7 @@ USE_BZIP2=	yes
 .if !defined(REFERENCE_PORT)
 
 USE_GETTEXT=	yes
+USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:22
 USE_GNOME=	gnomehack glib20 ltverhack referencehack
