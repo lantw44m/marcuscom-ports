@@ -1,0 +1,30 @@
+include/gnome-keyring-1/gnome-keyring-memory.h
+include/gnome-keyring-1/gnome-keyring-result.h
+include/gnome-keyring-1/gnome-keyring.h
+lib/libgnome-keyring.a
+lib/libgnome-keyring.la
+lib/libgnome-keyring.so
+lib/libgnome-keyring.so.0
+libdata/pkgconfig/gnome-keyring-1.pc
+share/doc/gnome-keyring/ch01.html
+share/doc/gnome-keyring/gnome-keyring-gnome-keyring-acl.html
+share/doc/gnome-keyring/gnome-keyring-gnome-keyring-daemon.html
+share/doc/gnome-keyring/gnome-keyring-gnome-keyring-find.html
+share/doc/gnome-keyring/gnome-keyring-gnome-keyring-items.html
+share/doc/gnome-keyring/gnome-keyring-gnome-keyring-keyrings.html
+share/doc/gnome-keyring/gnome-keyring-gnome-keyring-memory.html
+share/doc/gnome-keyring/gnome-keyring-gnome-keyring-misc.html
+share/doc/gnome-keyring/gnome-keyring-gnome-keyring-network.html
+share/doc/gnome-keyring/gnome-keyring-gnome-keyring-password.html
+share/doc/gnome-keyring/gnome-keyring-gnome-keyring-result.html
+share/doc/gnome-keyring/gnome-keyring.devhelp
+share/doc/gnome-keyring/gnome-keyring.devhelp2
+share/doc/gnome-keyring/home.png
+share/doc/gnome-keyring/index.html
+share/doc/gnome-keyring/index.sgml
+share/doc/gnome-keyring/left.png
+share/doc/gnome-keyring/right.png
+share/doc/gnome-keyring/style.css
+share/doc/gnome-keyring/up.png
+@dirrm share/doc/gnome-keyring
+@dirrm include/gnome-keyring-1
