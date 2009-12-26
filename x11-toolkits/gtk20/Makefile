@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.176 2009/12/08 19:16:21 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.177 2009/12/26 11:00:11 kwm Exp $
 #
 
 PORTNAME=	gtk
 PORTVERSION=	2.19.2
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
 		ftp://ftp.gtk.org/pub/gtk/%SUBDIR%/ \
@@ -29,12 +29,14 @@ LATEST_LINK=	gtk20
 
 .if !defined(REFERENCE_PORT)
 
+BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS+=	png.5:${PORTSDIR}/graphics/png \
 		tiff.4:${PORTSDIR}/graphics/tiff \
 		jpeg.10:${PORTSDIR}/graphics/jpeg \
 		jasper.4:${PORTSDIR}/graphics/jasper
 RUN_DEPENDS+=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
-		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
+		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme \
+		${LOCALBASE}/share/gir-1.0/Pango-1.0.gir:${PORTSDIR}/x11-toolkits/gir-repository-pango
 
 USE_GMAKE=	yes
 USE_PERL5=	yes
@@ -44,8 +46,7 @@ USE_GNOME=	gnomehack atk pango ltverhack
 USE_GETTEXT=	yes
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
-CONFIGURE_ARGS=	--enable-static --with-xinput=yes --with-libjasper \
-		--enable-introspection=no
+CONFIGURE_ARGS=	--enable-static --with-xinput=yes --with-libjasper
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
