@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/mail/evolution/Makefile,v 1.206 2009/12/26 20:29:16 kwm Exp $
 #
 
 PORTNAME=	evolution
@@ -83,11 +83,6 @@ RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 
 .if !defined(NO_KERBEROS) && exists(/usr/lib/libkrb5.so)
 CONFIGURE_ARGS+=	--with-krb5=/usr
-#			--with-krb5-includes=/usr/include \
-#			--with-krb5-libs=/usr/lib
-#  --with-krb5=PATH        Location of Kerberos 5 install dir
-#  --with-krb5-libs=PATH   Location of Kerberos 5 libraries
-#  --with-krb5-includes=PATH Location of Kerberos 5 headers
 .else
 LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal
 .if defined(HEIMDAL_HOME)
