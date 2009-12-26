@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.176 2009/12/08 19:16:21 kwm Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.19.1
+PORTVERSION=	2.19.2
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
@@ -44,7 +44,8 @@ USE_GNOME=	gnomehack atk pango ltverhack
 USE_GETTEXT=	yes
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
-CONFIGURE_ARGS=	--enable-static --with-xinput=yes --with-libjasper
+CONFIGURE_ARGS=	--enable-static --with-xinput=yes --with-libjasper \
+		--enable-introspection=no
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
