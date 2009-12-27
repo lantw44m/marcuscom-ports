@@ -3,7 +3,7 @@
 # Whom:					marc@informatik.uni-bremen.de
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.67 2009/12/26 22:48:47 kwm Exp $
+#   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.68 2009/12/27 16:42:32 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -73,9 +73,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/MAPPING ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/THREADS ${DOCSDIR}
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|datadir)/gtk-doc/html/pygtk|datadir)/doc/py-gtk|g' \
-		${WRKSRC}/docs/Makefile.in
 
 .include <bsd.port.mk>
