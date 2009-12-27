@@ -1925,6 +1925,7 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/default
 @dirrm %%DATADIR%%/%%VERSION%%
 @dirrm %%DATADIR%%
+@dirrm share/doc/eshell
 @dirrmtry share/applications
 @dirrm libexec/evolution/%%VERSION%%
 @dirrm libexec/evolution

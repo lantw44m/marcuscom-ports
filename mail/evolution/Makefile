@@ -3,11 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.206 2009/12/26 20:29:16 kwm Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.207 2009/12/26 21:31:06 kwm Exp $
 #
 
 PORTNAME=	evolution
 PORTVERSION=	2.29.4
+PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -16,6 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An integrated mail, calendar and address book distributed suite
 
 LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss \
+		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
 		gtkimageview.0:${PORTSDIR}/x11-toolkits/gtkimageview
 RUN_DEPENDS=	${LOCALBASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnome-spell
 
@@ -26,6 +28,7 @@ USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver gtkhtml3 \
 		desktopfileutils gnomedocutils ltasneededhack gnomedesktop
 USE_AUTOTOOLS=	libtool:22
+USE_GSTREAMER=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
@@ -54,6 +57,7 @@ PLIST_SUB=	VERSION=${EVO_VERSION} \
 
 OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
 		LDAP "Enable LDAP support" on \
+		CANBERRA "Enable canberra plugin" on \
 		SPAMASSASSIN "Enable SpamAssassin spam filtering" off
 
 .include <bsd.port.pre.mk>
@@ -92,6 +96,16 @@ CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
 .endif
 .endif
 
+.if defined(WITH_CANBERRA)
+LIB_DEPENDS+=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra
+CONFIGURE_ARGS+=--enable-canberra=yes
+PLIST_SUB+=	CANBERRA=""
+.else
+CONFIGURE_ARGS+=--enable-canberra=no
+PLIST_SUB+=	CANBERRA="@comment "
+.endif
+
+# needs newer libpst version 0.6.41 or higher
 #.if defined (WITH_PST)
 #CONFIGURE_ARGS+=	--enable-pst-import
 #BUILD_DEPENDS+=		lspst:${PORTSDIR}/mail/libpst
