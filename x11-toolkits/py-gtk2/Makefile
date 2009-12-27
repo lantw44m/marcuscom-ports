@@ -3,11 +3,12 @@
 # Whom:					marc@informatik.uni-bremen.de
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/py-gtk2/Makefile,v 1.67 2009/12/26 22:48:47 kwm Exp $
 #
 
 PORTNAME=	gtk
 PORTVERSION=	2.17.0
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pygtk/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -72,5 +73,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/MAPPING ${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/THREADS ${DOCSDIR}
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|datadir)/gtk-doc/html/pygtk|datadir)/doc/py-gtk|g' \
+		${WRKSRC}/docs/Makefile.in
 
 .include <bsd.port.mk>
