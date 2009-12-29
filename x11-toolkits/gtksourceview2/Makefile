@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/gtksourceview2/Makefile,v 1.83 2009/12/23 12:16:25 kwm Exp $
 #
 
 PORTNAME=	gtksourceview2
 PORTVERSION=	2.9.3
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/2$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -26,7 +26,7 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:22
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomeprefix gnomehack gtk20 libxml2 intlhack \
+USE_GNOME=	gnomeprefix gnomehack gtk20 gconf2 libxml2 intlhack \
 		ltverhack referencehack
 CONFIGURE_ARGS=	--enable-compile-warnings=no
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
