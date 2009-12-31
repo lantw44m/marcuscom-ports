@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/devicekit-power/Makefile,v 1.1 2009/12/30 21:58:31 marcus Exp $
+#   $MCom: ports/sysutils/devicekit-power/Makefile,v 1.2 2009/12/31 02:51:41 marcus Exp $
 #
 
 PORTNAME=	DeviceKit-power
@@ -30,8 +30,6 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		GTKDOC="false"
-
-BROKEN=	requires some additional fixes to the FreeBSD backend
 
 .if defined(NO_INSTALL_MANPAGES)
 CONFIGURE_ARGS+=--disable-man-pages
