@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/devicekit-power/Makefile,v 1.2 2009/12/31 02:51:41 marcus Exp $
+#   $MCom: ports/sysutils/devicekit-power/Makefile,v 1.3 2009/12/31 22:00:24 marcus Exp $
 #
 
 PORTNAME=	DeviceKit-power
 DISTVERSION=	013
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.marcuscom.com/downloads/
 

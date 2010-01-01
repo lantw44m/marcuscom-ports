@@ -23,5 +23,8 @@ share/dbus-1/interfaces/org.freedesktop.DeviceKit.Power.xml
 share/dbus-1/system-services/org.freedesktop.DeviceKit.Power.service
 share/polkit-1/actions/org.freedesktop.devicekit.power.policy
 share/polkit-1/actions/org.freedesktop.devicekit.power.qos.policy
+@exec mkdir -p /var/lib/DeviceKit-power
 @dirrm include/DeviceKit-power/devkit-power-gobject
 @dirrm include/DeviceKit-power
+@dirrmtry /var/lib/DeviceKit-power
+@dirrmtry /var/lib
