@@ -3,11 +3,11 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/seed/Makefile,v 1.10 2009/12/25 15:02:33 kwm Exp $
 #
 
 PORTNAME=	seed
-PORTVERSION=	2.29.4
+PORTVERSION=	2.29.5.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -42,12 +42,12 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|== x|= x|g' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|reference||g' ${WRKSRC}/doc/Makefile.in
-	@${FIND} ${WRKSRC}/examples -name Makefile.in -type f | ${XARGS} ${REINPLACE_CMD} -e \
-		's|$$(datadir)/doc/seed/examples|${EXAMPLESDIR}|g'
-.if defined(NOPORTEXAMPLES)
-	@${REINPLACE_CMD} -e 's|examples||g' \
-		${WRKSRC}/Makefile.in
-.endif
+#	@${FIND} ${WRKSRC}/examples -name Makefile.in -type f | ${XARGS} ${REINPLACE_CMD} -e \
+#		's|$$(datadir)/doc/seed/examples|${EXAMPLESDIR}|g'
+#.if defined(NOPORTEXAMPLES)
+#	@${REINPLACE_CMD} -e 's|examples||g' \
+#		${WRKSRC}/Makefile.in
+#.endif
 .if defined(NOPORTDOCS)
 	@${REINPLACE_CMD} -e 's| install-seeddocDATA||g ; s|doc$$||g' \
 		${WRKSRC}/Makefile.in

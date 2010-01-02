@@ -1,5 +1,5 @@
---- modules/os/seed-os.c.orig	2009-10-07 01:43:54.000000000 -0400
-+++ modules/os/seed-os.c	2009-12-19 14:53:48.000000000 -0500
+--- modules/os/seed-os.c.orig	2009-12-31 11:44:49.000000000 +0100
++++ modules/os/seed-os.c	2010-01-02 02:07:19.000000000 +0100
 @@ -29,8 +29,15 @@
  
  #include <sys/stat.h>
@@ -31,7 +31,7 @@
        EXPECTED_EXCEPTION("os.realpath", "1 argument");
      }
    arg = seed_value_to_string (ctx, arguments[0], exception);
--  ret = canonicalize_file_name(arg);
+-  ret = realpath(arg, NULL);
 +#ifdef PATH_MAX
 +  path_max = PATH_MAX;
 +#else

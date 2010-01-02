@@ -58,6 +58,7 @@ libdata/pkgconfig/seed.pc
 %%DATADIR%%/extensions/Seed.js
 %%DATADIR%%/extensions/xml.js
 %%DATADIR%%/lang.js
+%%DATADIR%%/repl.js
 %%PORTDOCS%%%%DOCSDIR%%/AUTHORS
 %%PORTDOCS%%%%DOCSDIR%%/COPYING
 %%PORTDOCS%%%%DOCSDIR%%/ChangeLog
