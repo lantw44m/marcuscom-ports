@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.148 2009/12/27 20:57:40 kwm Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -40,17 +40,16 @@ GCONF_SCHEMAS=	apps_exchange_addressbook-${VERSION}.schemas
 
 .include <bsd.port.pre.mk>
 
-.if !defined(NO_KERBEROS) && exists(/usr/lib/libkrb5.so)
-CONFIGURE_ARGS+=        --with-krb5=/usr
-.else
+.if defined(HEIMDAL_HOME) || defined(WITH_HEIMDAL) || defined(NO_KERBEROS)
+HEIMDAL_HOME?=		${LOCALBASE}
 LIB_DEPENDS+=           krb5:${PORTSDIR}/security/heimdal
-.if defined(HEIMDAL_HOME)
-CONFIGURE_ARGS+=        --with-krb5=${HEIMDAL_HOME} --with-krb5-includes=${HEIMDAL_HOME}/include
-.else
-CONFIGURE_ARGS+=        --with-krb5=${LOCALBASE}
+CONFIGURE_ARGS+=        --with-krb5=${HEIMDAL_HOME} \
+			--with-krb5-includes=${HEIMDAL_HOME}/include
+KRB5_LIB=		`${HEIMDAL_HOME}/bin/krb5-config gssapi --libs`
+.elif !defined(NO_KERBEROS)
+CONFIGURE_ARGS+=        --with-krb5=/usr
+KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
-.endif
-
 
 .if ${ARCH} == "amd64"
 CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -fPIC"
@@ -62,6 +61,7 @@ IGNORE=	build fails when ${LOCALBASE}/include/mapi.h exists in system, run pkg_i
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g' \
+	    	-e 's|heimlibs".*"|heimlibs="${KRB5_LIB}"|g' \
 		-e 's|-Wmissing-include-dirs||g' \
 		${WRKSRC}/configure
 
