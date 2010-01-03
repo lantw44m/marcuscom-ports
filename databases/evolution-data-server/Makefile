@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.183 2009/12/25 19:58:27 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.184 2009/12/27 17:02:19 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -47,12 +47,14 @@ OPTIONS=	WEATHER "Enable weather calendar backend" on
 
 .include <bsd.port.pre.mk>
 
-.if defined(HEIMDAL_HOME) || defined(WITH_HEIMDAL)
-HEIMDAL_HOME?=	${LOCALBASE}
+.if defined(HEIMDAL_HOME) || defined(WITH_HEIMDAL) || defined(NO_KERBEROS)
+HEIMDAL_HOME?=		${LOCALBASE}
 LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal
-CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} --with-krb5-includes=${HEIMDAL_HOME}/include
+CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} \
+			--with-krb5-includes=${HEIMDAL_HOME}/include
+KRB5_LIB=		`${HEIMDAL_HOME}/bin/krb5-config gssapi --libs`
 .elif !defined(NO_KERBEROS)
-CONFIGURE_ARGS+=        --with-krb5=/usr
+CONFIGURE_ARGS+=	--with-krb5=/usr
 KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
 
