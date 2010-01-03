@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.207 2009/12/26 21:31:06 kwm Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.208 2009/12/27 19:44:46 kwm Exp $
 #
 
 PORTNAME=	evolution
@@ -85,15 +85,15 @@ CONFIGURE_ARGS+=--with-openldap=no
 RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 .endif
 
-.if !defined(NO_KERBEROS) && exists(/usr/lib/libkrb5.so)
-CONFIGURE_ARGS+=	--with-krb5=/usr
-.else
+.if defined(HEIMDAL_HOME) || defined(WITH_HEIMDAL) || defined(NO_KERBEROS)
+HEIMDAL_HOME?=		${LOCALBASE}
 LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal
-.if defined(HEIMDAL_HOME)
-CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} --with-krb5-includes=${HEIMDAL_HOME}/include
-.else
-CONFIGURE_ARGS+=	--with-krb5=${LOCALBASE}
-.endif
+CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} \
+			--with-krb5-includes=${HEIMDAL_HOME}/include
+KRB5_LIB=		`${HEIMDAL_HOME}/bin/krb5-config gssapi --libs`
+.elif !defined(NO_KERBEROS)
+CONFIGURE_ARGS+=	--with-krb5=/usr
+KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
 
 .if defined(WITH_CANBERRA)
@@ -118,6 +118,7 @@ PLIST_SUB+=		PST="@comment "
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^plugins_standard_always/s/audio-inline//' \
+	    	-e 's|heimlibs".*"|heimlibs="${KRB5_LIB}"|g' \
 		-e 's|-Wmissing-include-dirs||g' \
 	    	${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|stdlib.n|stdlib.h|' \
