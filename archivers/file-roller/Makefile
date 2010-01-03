@@ -3,7 +3,7 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller/Makefile,v 1.167 2009/12/22 01:12:31 ahze Exp $
+#   $MCom: ports/archivers/file-roller/Makefile,v 1.168 2010/01/02 22:26:47 marcus Exp $
 #
 
 PORTNAME=	file-roller
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--disable-nautilus-actions
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/src/fr-command-tar.c \
-		${WRKSRC}/src/fr-command.zip.c
+		${WRKSRC}/src/fr-command-zip.c
 
 post-install:
 	@-update-desktop-database
