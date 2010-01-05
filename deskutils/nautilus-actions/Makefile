@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.14 2009/11/09 09:08:28 kwm Exp $
+#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.16 2010/01/03 05:44:24 marcus Exp $
 #
 
 PORTNAME=	nautilus-actions
-PORTVERSION=	2.29.2
+PORTVERSION=	2.29.3
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 

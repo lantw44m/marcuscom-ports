@@ -91,11 +91,13 @@ share/locale/vi/LC_MESSAGES/nautilus-actions.mo
 share/locale/zh_CN/LC_MESSAGES/nautilus-actions.mo
 share/locale/zh_HK/LC_MESSAGES/nautilus-actions.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus-actions.mo
+%%DATADIR%%/locked.png
 %%DATADIR%%/nautilus-actions.schemas
 %%DATADIR%%/nautilus-actions-config-tool.actions
 %%DATADIR%%/nautilus-actions-config-tool.ui
 %%DATADIR%%/nautilus-actions-maintainer.actions
 %%DATADIR%%/nact-assistant-export.ui
+%%DATADIR%%/transparent.png
 @dirrm %%DATADIR%%
 @dirrm lib/nautilus-actions
 @dirrm include/nautilus-actions/private
