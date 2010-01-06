@@ -3,12 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.1 2010/01/06 00:41:11 marcus Exp $
+#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.1 2010/01/06 00:47:00 marcus Exp $
 #
 
 PORTNAME=	at-spi2-atk
 PORTVERSION=	0.1.4
-PORTREVISION?=	0
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,6 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Assisted Technology Provider module for GTK+
 
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+RUN_DEPENDS=	at-spi-dbus-bus:${PORTSDIR}/accessibility/at-spi2-core
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
