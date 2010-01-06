@@ -3,7 +3,7 @@
 # Whom:				Adam Weinberger <adamw@freebsd.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/gok/Makefile,v 1.106 2009/10/19 19:03:32 kwm Exp $
+#    $MCom: ports/accessibility/gok/Makefile,v 1.108 2010/01/05 23:39:59 marcus Exp $
 #
 
 PORTNAME=	gok
@@ -23,7 +23,7 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack libgnomeui atspi libwnck \
-		gnomespeech gail libxml2
+		gnomespeech libxml2
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
