@@ -1,5 +1,5 @@
---- modules/os/seed-os.c.orig	2009-12-31 11:44:49.000000000 +0100
-+++ modules/os/seed-os.c	2010-01-02 02:07:19.000000000 +0100
+--- modules/os/seed-os.c.orig	2009-12-31 05:44:49.000000000 -0500
++++ modules/os/seed-os.c	2010-01-07 19:01:05.000000000 -0500
 @@ -29,8 +29,15 @@
  
  #include <sys/stat.h>
@@ -83,7 +83,17 @@
  }
  
  SeedValue
-@@ -1112,7 +1143,9 @@ seed_module_init(SeedEngine * eng)
+@@ -1065,7 +1096,8 @@ seed_static_function os_funcs[] = {
+   {"ttyname", seed_os_ttyname, 0},
+   {"tcgetpgrp", seed_os_tcgetpgrp, 0},
+   {"tcsetpgrp", seed_os_tcsetpgrp, 0},
+-  {"access", seed_os_access, 0}
++  {"access", seed_os_access, 0},
++  {NULL, NULL, 0}
+ };
+ 
+ #define OS_DEFINE_ENUM(name, value) \
+@@ -1112,7 +1144,9 @@ seed_module_init(SeedEngine * eng)
  #if defined (O_DIRECT)
    OS_DEFINE_QUICK_ENUM (O_DIRECT);
  #endif

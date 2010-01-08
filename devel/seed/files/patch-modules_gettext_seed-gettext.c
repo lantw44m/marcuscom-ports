@@ -1,6 +1,16 @@
---- modules/gettext/seed-gettext.c.orig	2009-07-26 19:23:31.000000000 -0400
-+++ modules/gettext/seed-gettext.c	2009-07-26 19:25:12.000000000 -0400
-@@ -293,12 +293,24 @@ seed_module_init(SeedEngine *local_eng)
+--- modules/gettext/seed-gettext.c.orig	2009-12-31 05:42:51.000000000 -0500
++++ modules/gettext/seed-gettext.c	2010-01-07 19:07:10.000000000 -0500
+@@ -287,7 +287,8 @@ seed_static_function gettext_funcs[] = {
+ 	{"dngettext", seed_gettext_dngettext, 0},
+ 	{"dcngettext", seed_gettext_dcngettext, 0},
+ 	{"setlocale", seed_gettext_setlocale, 0},
+-	{"gettext", seed_gettext_gettext, 0}
++	{"gettext", seed_gettext_gettext, 0},
++	{NULL, NULL, 0}
+ };
+ 
+ SeedObject
+@@ -312,12 +313,24 @@ seed_module_init(SeedEngine *local_eng)
  	DEFINE_ENUM_MEMBER(ns_ref, LC_MONETARY);
  	DEFINE_ENUM_MEMBER(ns_ref, LC_MESSAGES);
  	DEFINE_ENUM_MEMBER(ns_ref, LC_ALL);
