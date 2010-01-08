@@ -192,6 +192,8 @@ share/locale/zh_TW/LC_MESSAGES/at-spi.mo
 @dirrm share/idl/at-spi-1.0
 @dirrm %%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi
 @dirrm %%PYTHON_SITELIBDIR%%/pyatspi-corba
+@dirrm lib/gtk-2.0/modules/at-spi-corba/modules
+@dirrm lib/gtk-2.0/modules/at-spi-corba
 @dirrm include/at-spi-1.0/login-helper
 @dirrm include/at-spi-1.0/libspi
 @dirrm include/at-spi-1.0/cspi
