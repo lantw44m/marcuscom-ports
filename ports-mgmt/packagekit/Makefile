@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.1 2010/01/08 02:16:38 kwm Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.5.5
@@ -20,7 +20,7 @@ LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	glib20
+USE_GNOME=	glib20 intltool
 USE_ICONV=	yes
 USE_LDCONFIG=	yes
 USE_PYTHON_BUILD=	2.4+
