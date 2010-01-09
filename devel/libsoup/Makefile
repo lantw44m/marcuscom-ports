@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/libsoup/Makefile,v 1.73 2009/12/25 15:31:52 kwm Exp $
 #
 
 PORTNAME=	libsoup
 PORTVERSION=	2.29.3
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -54,6 +54,10 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g ; \
 	    	s|" == "|" = "|g' \
 		${WRKSRC}/configure
+
+post-install:
+	@${INSTALL_DATA} ${WRKSRC}/libsoup/soup-connection.h \
+	    	${PREFIX}/include/libsoup-2.4/libsoup/soup-connection.h
 
 .include <bsd.port.post.mk>
 
