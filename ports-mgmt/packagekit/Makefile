@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.3 2010/01/09 06:46:08 marcus Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.4 2010/01/09 08:29:39 marcus Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.5.5
@@ -51,7 +51,7 @@ OPTIONS=PORTS "Use portupgrade for management, dummy if disabled" on \
 .if defined(NO_INSTALL_MANPAGES)
 CONFIGURE_ARGS+=--disable-man-pages
 .else
-BUILD_DEPENDS+= ${LOCALBASE}/share/sgml/docbook/4.1/catalog:${PORTSDIR}/textproc/docbook-410 \
+BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1/catalog:${PORTSDIR}/textproc/docbook-410 \
 		xsltproc:${PORTSDIR}/textproc/libxslt \
 		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
 MAN1=	pkcon.1 pkmon.1 pkgenpack.1 pk-debuginfo-install.1
@@ -64,10 +64,10 @@ MAN1=	pkcon.1 pkmon.1 pkgenpack.1 pk-debuginfo-install.1
 RUN_DEPENDS+=	portupgrade:${PORTSDIR}/ports-mgmt/portupgrade
 USE_RUBY=	yes
 CONFIGURE_ARGS+=--enable-ports --with-default-backend=ports
-PLIST_SUB+=     PORTS=""
+PLIST_SUB+=	PORTS=""
 .else
 CONFIGURE_ARGS+=--disable-ports --with-default-backend=dummy
-PLIST_SUB+=     PORTS="@comment "
+PLIST_SUB+=	PORTS="@comment "
 .endif
 
 .if defined(WITH_RUCK)
