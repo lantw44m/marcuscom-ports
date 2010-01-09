@@ -1272,6 +1272,8 @@ share/themes/Simple/gtk-2.0/gtkrc
 @dirrm share/themes/Glider/gtk-2.0
 @dirrm share/themes/Glider
 @dirrm share/themes/Crux
+@dirrm share/themes/ClearlooksTest/gtk-2.0
+@dirrm share/themes/ClearlooksTest
 @dirrm share/themes/ClearlooksClassic/metacity-1
 @dirrm share/themes/ClearlooksClassic/gtk-2.0
 @dirrm share/themes/ClearlooksClassic
