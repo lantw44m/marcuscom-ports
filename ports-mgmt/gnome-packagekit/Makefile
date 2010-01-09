@@ -3,11 +3,11 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#  $MCom$
+#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.1 2010/01/08 02:18:02 kwm Exp $
 
 PORTNAME=	gnome-packagekit
 PORTVERSION=	2.29.2
-CATEGORIES=	gnome
+CATEGORIES=	ports-mgmt sysutils gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	afb@users.souceforge.net
