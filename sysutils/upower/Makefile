@@ -3,14 +3,13 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/devicekit-power/Makefile,v 1.4 2010/01/01 07:15:52 marcus Exp $
+#   $MCom: ports/sysutils/devicekit-power/Makefile,v 1.5 2010/01/02 19:29:10 marcus Exp $
 #
 
 PORTNAME=	DeviceKit-power
-DISTVERSION=	013
-PORTREVISION=	2
+DISTVERSION=	014
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.marcuscom.com/downloads/
+MASTER_SITES=	http://hal.freedesktop.org/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	D-Bus daemon for simplifying power management tasks
@@ -18,7 +17,6 @@ COMMENT=	D-Bus daemon for simplifying power management tasks
 LIB_DEPENDS=	polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
     		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
-USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack ltverhack glib20

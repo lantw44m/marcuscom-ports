@@ -1,0 +1,221 @@
+From 83a4bda6bfc4da2b454a4916f262dc025503b47a Mon Sep 17 00:00:00 2001
+From: Joe Marcus Clarke <marcus@FreeBSD.org>
+Date: Sat, 2 Jan 2010 14:04:57 -0500
+Subject: [PATCH 3/3] add backend support for obtaining kernel info
+
+Add FreeBSD-only support for pulling information about supported
+suspend states, commands, swap, etc. from the backend.
+---
+ src/dkp-backend.h |   14 +++++++
+ src/dkp-daemon.c  |   99 ++++++++++++++++++++++++++++++++++++-----------------
+ 2 files changed, 81 insertions(+), 32 deletions(-)
+
+diff --git a/src/dkp-backend.h b/src/dkp-backend.h
+index c03bac9..f4e488f 100644
+--- src/dkp-backend.h
++++ src/dkp-backend.h
+@@ -68,6 +68,20 @@ void		 dkp_backend_test			(gpointer	 user_data);
+ gboolean	 dkp_backend_coldplug			(DkpBackend	*backend,
+ 							 DkpDaemon	*daemon);
+ 
++gboolean	dkp_backend_can_suspend			(DkpBackend	*backend);
++
++gboolean	dkp_backend_can_hibernate		(DkpBackend	*backend);
++
++gboolean	dkp_backend_has_encrypted_swap		(DkpBackend	*backend);
++
++gfloat		dkp_backend_get_used_swap		(DkpBackend	*backend);
++
++gchar		*dkp_backend_get_powersave_command	(DkpBackend	*backend,							 gboolean	powersave);
++
++gchar		*dkp_backend_get_suspend_command	(DkpBackend	*backend);
++
++gchar		*dkp_backend_get_hibernate_command	(DkpBackend	*backend);
++
+ G_END_DECLS
+ 
+ #endif /* __DKP_BACKEND_H */
+diff --git a/src/dkp-daemon.c b/src/dkp-daemon.c
+index 47d84d5..4085fb3 100644
+--- src/dkp-daemon.c
++++ src/dkp-daemon.c
+@@ -109,6 +109,7 @@ G_DEFINE_TYPE (DkpDaemon, dkp_daemon, G_TYPE_OBJECT)
+ static gboolean
+ dkp_daemon_check_sleep_states (DkpDaemon *daemon)
+ {
++#ifndef __FreeBSD__
+ 	gchar *contents = NULL;
+ 	GError *error = NULL;
+ 	gboolean ret;
+@@ -128,6 +129,12 @@ dkp_daemon_check_sleep_states (DkpDaemon *daemon)
+ out:
+ 	g_free (contents);
+ 	return ret;
++#else
++	daemon->priv->kernel_can_suspend = dkp_backend_can_suspend (daemon->priv->backend);
++	daemon->priv->kernel_can_hibernate = dkp_backend_can_hibernate (daemon->priv->backend);
++
++	return TRUE;
++#endif
+ }
+ 
+ /**
+@@ -146,6 +153,7 @@ out:
+ static gboolean
+ dkp_daemon_check_encrypted_swap (DkpDaemon *daemon)
+ {
++#ifndef __FreeBSD__
+ 	gchar *contents_swaps = NULL;
+ 	gchar *contents_crypttab = NULL;
+ 	gchar **lines_swaps = NULL;
+@@ -235,6 +243,9 @@ out:
+ 	g_strfreev (lines_swaps);
+ 	g_strfreev (lines_crypttab);
+ 	return encrypted_swap;
++#else
++	return dkp_backend_has_encrypted_swap (daemon->priv->backend);
++#endif
+ }
+ 
+ /**
+@@ -243,6 +254,7 @@ out:
+ static gfloat
+ dkp_daemon_check_swap_space (DkpDaemon *daemon)
+ {
++#ifndef __FreeBSD__
+ 	gchar *contents = NULL;
+ 	gchar **lines = NULL;
+ 	GError *error = NULL;
+@@ -295,6 +297,9 @@ out:
+ 	g_free (contents);
+ 	g_strfreev (lines);
+ 	return percentage;
++#else
++	return dkp_backend_get_used_swap (daemon->priv->backend);
++#endif
+ }
+ 
+ /**
+@@ -423,13 +428,21 @@ dkp_daemon_set_pmutils_powersave (DkpDaemon *daemon, gboolean powersave)
+ 	GError *error = NULL;
+ 
+ 	/* run script from pm-utils */
++#ifndef __FreeBSD__
+ 	command = g_strdup_printf ("/usr/sbin/pm-powersave %s", powersave ? "true" : "false");
+-	egg_debug ("excuting command: %s", command);
+-	ret = g_spawn_command_line_async (command, &error);
+-	if (!ret) {
+-		egg_warning ("failed to run script: %s", error->message);
+-		g_error_free (error);
+-		goto out;
++#else
++	command = dkp_backend_get_powersave_command (daemon->priv->backend, powersave);
++#endif
++	if (command != NULL) {
++		egg_debug ("excuting command: %s", command);
++		ret = g_spawn_command_line_async (command, &error);
++		if (!ret) {
++			egg_warning ("failed to run script: %s", error->message);
++			g_error_free (error);
++			goto out;
++		}
++	} else {
++		return TRUE;
+ 	}
+ out:
+ 	g_free (command);
+@@ -501,6 +514,7 @@ dkp_daemon_suspend (DkpDaemon *daemon, DBusGMethodInvocation *context)
+ 	GError *error;
+ 	GError *error_local = NULL;
+ 	PolkitSubject *subject = NULL;
++	gchar *command = NULL;
+ 	gchar *stdout = NULL;
+ 	gchar *stderr = NULL;
+ 
+@@ -521,19 +535,29 @@ dkp_daemon_suspend (DkpDaemon *daemon, DBusGMethodInvocation *context)
+ 	if (!dkp_polkit_check_auth (daemon->priv->polkit, subject, "org.freedesktop.devicekit.power.suspend", context))
+ 		goto out;
+ 
+-	ret = g_spawn_command_line_sync ("/usr/sbin/pm-suspend", &stdout, &stderr, NULL, &error_local);
+-	if (!ret) {
+-		error = g_error_new (DKP_DAEMON_ERROR,
+-				     DKP_DAEMON_ERROR_GENERAL,
+-				     "Failed to spawn: %s, stdout:%s, stderr:%s", error_local->message, stdout, stderr);
+-		g_error_free (error_local);
+-		dbus_g_method_return_error (context, error);
+-		goto out;
++#ifndef __FreeBSD__
++	command = g_strdup ("/usr/sbin/pm-suspend");
++#else
++	command = dkp_backend_get_suspend_command (daemon->priv->backend);
++#endif
++	if (command != NULL) {
++		ret = g_spawn_command_line_sync (command, &stdout, &stderr, NULL, &error_local);
++		if (!ret) {
++			error = g_error_new (DKP_DAEMON_ERROR,
++				     	DKP_DAEMON_ERROR_GENERAL,
++				     	"Failed to spawn: %s, stdout:%s, stderr:%s", error_local->message, stdout, stderr);
++			g_error_free (error_local);
++			dbus_g_method_return_error (context, error);
++			goto out;
++		}
++	} else {
++		ret = TRUE;
+ 	}
+ 	dbus_g_method_return (context, NULL);
+ out:
+ 	g_free (stdout);
+ 	g_free (stderr);
++	g_free (command);
+ 	if (subject != NULL)
+ 		g_object_unref (subject);
+ 	return TRUE;
+@@ -549,6 +573,7 @@ dkp_daemon_hibernate (DkpDaemon *daemon, DBusGMethodInvocation *context)
+ 	GError *error;
+ 	GError *error_local = NULL;
+ 	PolkitSubject *subject = NULL;
++	gchar *command = NULL;
+ 	gchar *stdout = NULL;
+ 	gchar *stderr = NULL;
+ 
+@@ -589,19 +614,29 @@ dkp_daemon_hibernate (DkpDaemon *daemon, DBusGMethodInvocation *context)
+ 	if (!dkp_polkit_check_auth (daemon->priv->polkit, subject, "org.freedesktop.devicekit.power.hibernate", context))
+ 		goto out;
+ 
+-	ret = g_spawn_command_line_sync ("/usr/sbin/pm-hibernate", &stdout, &stderr, NULL, &error_local);
+-	if (!ret) {
+-		error = g_error_new (DKP_DAEMON_ERROR,
+-				     DKP_DAEMON_ERROR_GENERAL,
+-				     "Failed to spawn: %s, stdout:%s, stderr:%s", error_local->message, stdout, stderr);
+-		g_error_free (error_local);
+-		dbus_g_method_return_error (context, error);
+-		goto out;
++#ifndef __FreeBSD__
++	command = g_strdup ("/usr/sbin/pm-hibernate");
++#else
++	command = dkp_backend_get_hibernate_command (daemon->priv->backend);
++#endif
++	if (command != NULL) {
++		ret = g_spawn_command_line_sync (command, &stdout, &stderr, NULL, &error_local);
++		if (!ret) {
++			error = g_error_new (DKP_DAEMON_ERROR,
++				     	DKP_DAEMON_ERROR_GENERAL,
++				     	"Failed to spawn: %s, stdout:%s, stderr:%s", error_local->message, stdout, stderr);
++			g_error_free (error_local);
++			dbus_g_method_return_error (context, error);
++			goto out;
++		}
++	} else {
++		ret = TRUE;
+ 	}
+ 	dbus_g_method_return (context, NULL);
+ out:
+ 	g_free (stdout);
+ 	g_free (stderr);
++	g_free (command);
+ 	if (subject != NULL)
+ 		g_object_unref (subject);
+ 	return TRUE;
+-- 
+1.6.5.7
+
