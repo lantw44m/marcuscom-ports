@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.1 2010/01/08 02:18:02 kwm Exp $
+#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.2 2010/01/09 06:46:38 marcus Exp $
 
 PORTNAME=	gnome-packagekit
 PORTVERSION=	2.29.2
@@ -28,10 +28,6 @@ USE_ICONV=	yes
 USE_PYTHON_BUILD= 2.4+
 GCONF_SCHEMAS=	gnome-packagekit.schemas
 GNU_CONFIGURE=	yes
-
-.if defined(WITHOUT_NLS)
-CONFIGURE_ARGS+=--disable-nls
-.endif
 
 MAN1=	gpk-application.1 gpk-backend-status.1 gpk-install-local-file.1 \
 	gpk-install-mime-type.1 gpk-install-package-name.1 \
