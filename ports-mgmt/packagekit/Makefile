@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.4 2010/01/09 08:29:39 marcus Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.5 2010/01/09 08:31:33 marcus Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.5.5
@@ -15,6 +15,7 @@ COMMENT?=	A DBUS packaging abstraction layer
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils
 LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
+		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		polkit-dbus:${PORTSDIR}/sysutils/policykit
 
@@ -43,8 +44,7 @@ MAKE_ARGS=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
 .if !defined(SLAVEPORT)
 OPTIONS=PORTS "Use portupgrade for management, dummy if disabled" on \
 	PORTDOCS "Build documentation" on \
-	RUCK "Enable ruck" on \
-	QT4 "Enable QT 4 module" off
+	RUCK "Enable ruck" on
 # gtk module seems to be broken/disabled/gone?
 #	GTK20 "Enable GTK+ modules" off \
 
