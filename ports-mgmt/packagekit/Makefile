@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.2 2010/01/08 21:02:24 kwm Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.3 2010/01/09 06:46:08 marcus Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.5.5
@@ -43,7 +43,6 @@ MAKE_ARGS=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
 .if !defined(SLAVEPORT)
 OPTIONS=PORTS "Use portupgrade for management, dummy if disabled" on \
 	PORTDOCS "Build documentation" on \
-	NLS "Enable localization support" on \
 	RUCK "Enable ruck" on \
 	QT4 "Enable QT 4 module" off
 # gtk module seems to be broken/disabled/gone?
@@ -69,13 +68,6 @@ PLIST_SUB+=     PORTS=""
 .else
 CONFIGURE_ARGS+=--disable-ports --with-default-backend=dummy
 PLIST_SUB+=     PORTS="@comment "
-.endif
-
-.if defined(WITH_NLS)
-PLIST_SUB+=	NLS=""
-.else
-CONFIGURE_ARGS+=--disable-nls
-PLIST_SUB+=	NLS="@comment "
 .endif
 
 .if defined(WITH_RUCK)
