@@ -76,6 +76,8 @@ lib/brasero/plugins/libbrasero-vob.la
 lib/brasero/plugins/libbrasero-vob.so
 lib/brasero/plugins/libbrasero-wodim.la
 lib/brasero/plugins/libbrasero-wodim.so
+lib/girepository-1.0/BraseroBurn-1.0.typelib
+lib/girepository-1.0/BraseroMedia-1.0.typelib
 lib/libbrasero-burn.la
 lib/libbrasero-burn.so
 lib/libbrasero-burn.so.2
@@ -304,6 +306,8 @@ share/doc/libbrasero-media/up.png
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-90.svg
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-95.svg
 %%DATADIR%%/logo.png
+share/gir-1.0/BraseroBurn-1.0.gir
+share/gir-1.0/BraseroMedia-1.0.gir
 share/gnome/help/brasero/C/brasero.xml
 share/gnome/help/brasero/C/figures/brasero_main.png
 share/gnome/help/brasero/C/legal.xml
