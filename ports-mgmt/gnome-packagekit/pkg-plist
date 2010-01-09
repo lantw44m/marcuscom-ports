@@ -437,20 +437,20 @@ share/omf/gnome-packagekit/gnome-packagekit-pl.omf
 share/omf/gnome-packagekit/gnome-packagekit-sv.omf
 share/omf/gnome-packagekit/gnome-packagekit-zh_CN.omf
 @dirrm share/omf/gnome-packagekit
-@dirrm share/locale/zh_HK/LC_MESSAGES
-@dirrm share/locale/zh_HK
-@dirrm share/locale/te/LC_MESSAGES
-@dirrm share/locale/te
-@dirrm share/locale/oc/LC_MESSAGES
-@dirrm share/locale/oc
-@dirrm share/locale/mr/LC_MESSAGES
-@dirrm share/locale/mr
-@dirrm share/locale/en@shaw/LC_MESSAGES
-@dirrm share/locale/en@shaw
-@dirrm share/locale/bn_IN/LC_MESSAGES
-@dirrm share/locale/bn_IN
-@dirrm share/locale/as/LC_MESSAGES
-@dirrm share/locale/as
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/en@shaw/LC_MESSAGES
+@dirrmtry share/locale/en@shaw
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrm share/gnome/help/gnome-packagekit/zh_CN/figures
 @dirrm share/gnome/help/gnome-packagekit/zh_CN
 @dirrm share/gnome/help/gnome-packagekit/sv/figures
