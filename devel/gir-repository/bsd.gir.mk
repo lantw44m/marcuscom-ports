@@ -15,10 +15,6 @@ pango_GIR=	Pango-1.0
 poppler_CATEGORY=	graphics
 poppler_GIR=	Poppler-0.8
 
-gtk20_CATEGORY=	x11-toolkits
-gtk20_GIR=	Gtk-2.0
-gtk20_GIR_TMPL=	gtk
-
 webkit_CATEGORY=	www
 webkit_GIR=	WebKit-1.0
 
@@ -105,22 +101,14 @@ DEP_NAMES+=	pangoxft
 
 .if ${GIR_NAME} == "poppler"
 LIB_DEPENDS+=	poppler-glib.4:${PORTSDIR}/graphics/poppler-gtk
-USE_GIR=	gtk20 pango
+USE_GIR=	pango
 GIR_FILES=	Poppler-0.8
 CLEAR_DEPS+=	Gdk-2.0
 .endif
 
-.if ${GIR_NAME} == "gtk20"
-USE_GNOME+=	gtk20
-USE_GIR=	atk pango
-GIR_FILES=	Gdk-2.0 Gtk-2.0 GdkPixbuf-2.0
-LIB_FILES=	Gdk Gtk
-DEP_NAMES=	gtk
-.endif
-
 .if ${GIR_NAME} == "webkit"
 LIB_DEPENDS+=	webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2
-USE_GIR=	gtk20 libsoup
+USE_GIR=	libsoup
 GIR_FILES=	WebKit-1.0 JSCore-1.0
 .endif
 
@@ -143,7 +131,6 @@ GIR_FILES=	Babl-0.0
 
 .if ${GIR_NAME} == "nautilus"
 USE_GNOME+=	nautilus2
-USE_GIR=	gtk20
 GIR_FILES=	Nautilus-1.0
 DEP_NAMES=	nautilusextension
 .endif
@@ -155,7 +142,7 @@ GIR_FILES=	GnomeKeyring-2.0
 
 .if ${GIR_NAME} == "libnotify"
 LIB_DEPENDS+=	notify.1:${PORTSDIR}/devel/libnotify
-USE_GIR=	gtk20
+USE_GNOME+=	gtk20
 GIR_FILES=	Notify-0.4
 DEP_NAMES=	notify
 .endif
@@ -168,14 +155,12 @@ LIB_FILES=	DBus
 
 .if ${GIR_NAME} == "gtksourceview2"
 USE_GNOME+=	gtksourceview2
-USE_GIR=	gtk20
 GIR_FILES=	GtkSource-2.2
 DEP_NAMES=	gtksourceview
 .endif
 
 .if ${GIR_NAME} == "vte"
 USE_GNOME+=	vte
-USE_GIR=	gtk20
 GIR_FILES=	Vte-1.0
 .endif
 
@@ -185,22 +170,20 @@ GIR_FILES=	Avahi-0.6 AvahiCore-0.6
 .endif
 
 .if ${GIR_NAME} == "gnomemenus"
-USE_GNOME+=	gnomemenus
-USE_GIR=	gtk20
+USE_GNOME+=	gtk20 gnomemenus
 GIR_FILES=	GMenu-2.0
 DEP_NAMES=	gmenu
 .endif
 
 .if ${GIR_NAME} == "libwnck"
 USE_GNOME+=	libwnck
-USE_GIR=	gtk20
 GIR_FILES=	Wnck-1.0
 DEP_NAMES=	wnck
 .endif
 
 .if ${GIR_NAME} == "goocanvas"
 LIB_DEPENDS+=	goocanvas.3:${PORTSDIR}/graphics/goocanvas
-USE_GIR=	gtk20
+USE_GNOME+=	gtk20
 GIR_FILES=	GooCanvas-0.10
 .endif
 
