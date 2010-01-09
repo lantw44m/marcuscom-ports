@@ -3,11 +3,11 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.7 2010/01/09 20:49:13 marcus Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.8 2010/01/09 20:50:09 marcus Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.5.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	ports-mgmt sysutils
 MASTER_SITES=	http://www.packagekit.org/releases/
 
@@ -20,6 +20,7 @@ LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
 		ck-connector.0:${PORTSDIR}/sysutils/consolekit
+RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
@@ -107,5 +108,7 @@ CONFIGURE_ARGS+=--disable-qt
 post-patch:
 	@${REINPLACE_CMD} -E -e 's/.*WARNINGFLAGS_CPP.*-Werror/#$$&/' \
 		-e 's|-Wmissing-include-dirs||g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+	    	${WRKSRC}/src/pk-lsof.c
 
 .include <bsd.port.post.mk>
