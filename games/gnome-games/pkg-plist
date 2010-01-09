@@ -2203,6 +2203,7 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/omf/swell-foop
 @dirrm share/omf/quadrapassel
 @dirrm share/omf/mahjongg
+@dirrm share/omf/lightsoff
 @dirrm share/omf/iagno
 @dirrm share/omf/gtali
 @dirrm share/omf/gnotski
@@ -2289,6 +2290,7 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/mahjongg
 @dirrm share/gnome/help/lightsoff/de
 @dirrm share/gnome/help/lightsoff/C
+@dirrm share/gnome/help/lightsoff
 @dirrm share/gnome/help/iagno/sv/figures
 @dirrm share/gnome/help/iagno/sv
 @dirrm share/gnome/help/iagno/sr/figures
