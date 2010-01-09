@@ -3,10 +3,11 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.5 2010/01/09 08:31:33 marcus Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.6 2010/01/09 14:52:13 kwm Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.5.5
+PORTREVISION=	1
 CATEGORIES=	ports-mgmt sysutils
 MASTER_SITES=	http://www.packagekit.org/releases/
 
@@ -17,7 +18,7 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils
 LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		polkit-dbus:${PORTSDIR}/sysutils/policykit
+		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
