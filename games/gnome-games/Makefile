@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.208 2009/12/25 16:50:29 kwm Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.209 2010/01/09 19:17:51 marcus Exp $
 #
 
 PORTNAME=	gnome-games
 PORTVERSION=	2.29.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -16,10 +16,12 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The game applications package for the GNOME 2 Desktop Environment
 
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	guile.20:${PORTSDIR}/lang/guile \
 		clutter-gtk-0.10.0:${PORTSDIR}/graphics/clutter-gtk \
 		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter \
 		ggzmod.5:${PORTSDIR}/games/ggz-client-libs
+RUN_DEPENDS=	seed:${PORTSDIR}/devel/seed
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
@@ -32,8 +34,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack \
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-sound=gstreamer \
-		--disable-tests \
-		--enable-introspection=no
+		--disable-tests
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

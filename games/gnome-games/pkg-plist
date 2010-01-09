@@ -99,7 +99,12 @@ bin/swell-foop
 @unexec [ -s %D/share/games/mahjongg.tictactoe.scores ] || rm -f %D/share/games/mahjongg.tictactoe.scores
 @unexec [ -s %D/share/games/mahjongg.ziggurat.scores ] || rm -f %D/share/games/mahjongg.ziggurat.scores
 @unexec [ -s %D/share/games/quadrapassel.scores ] || rm -f %D/share/games/quadrapassel.scores
+lib/girepository-1.0/GnomeGamesSupport-1.0.typelib
 lib/gnome-games/gnome-games-render-cards
+lib/gnome-games/libgames-support-gi.a
+lib/gnome-games/libgames-support-gi.la
+lib/gnome-games/libgames-support-gi.so
+lib/gnome-games/libgames-support-gi.so.0
 %%PYTHON_SITELIBDIR%%/glchess/__init__.py
 %%PYTHON_SITELIBDIR%%/glchess/__init__.pyc
 %%PYTHON_SITELIBDIR%%/glchess/__init__.pyo
@@ -324,6 +329,7 @@ share/applications/mahjongg.desktop
 share/applications/quadrapassel.desktop
 share/applications/sol.desktop
 share/applications/swell-foop.desktop
+share/gir-1.0/GnomeGamesSupport-1.0.gir
 share/glchess/ai.xml
 share/glchess/chess_view.ui
 share/glchess/glchess.ui
