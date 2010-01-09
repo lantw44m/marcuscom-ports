@@ -180,7 +180,7 @@ GIR_FILES=	Avahi-0.6 AvahiCore-0.6
 USE_GNOME+=	gtk20 gnomemenus
 GIR_FILES=	GMenu-2.0
 DEP_NAMES=	gmenu
-CLEAR_DEPS+	Gtk-2.0
+CLEAR_DEPS+=	Gtk-2.0
 .endif
 
 .if ${GIR_NAME} == "libwnck"
