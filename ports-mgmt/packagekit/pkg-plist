@@ -475,6 +475,6 @@ share/polkit-1/actions/org.freedesktop.packagekit.policy
 @dirrmtry etc/sysconfig
 @dirrmtry etc/profile.d
 @dirrmtry etc/cron.daily
-@dirrm etc/Packagekit
+@dirrm etc/PackageKit
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
