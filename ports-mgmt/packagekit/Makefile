@@ -3,11 +3,11 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.8 2010/01/09 20:50:09 marcus Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.9 2010/01/09 21:00:43 marcus Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.5.5
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	ports-mgmt sysutils
 MASTER_SITES=	http://www.packagekit.org/releases/
 
@@ -20,7 +20,8 @@ LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
 		ck-connector.0:${PORTSDIR}/sysutils/consolekit
-RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof
+RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof \
+    		${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
@@ -110,5 +111,10 @@ post-patch:
 		-e 's|-Wmissing-include-dirs||g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 	    	${WRKSRC}/src/pk-lsof.c
+
+post-install:
+	@${INSTALL_DATA} ${WRKSRC}/data/transactions.db \
+	    	${PREFIX}/share/PackageKit/transactions.db
+	@-update-mime-database ${PREFIX}/share/mime > /dev/null
 
 .include <bsd.port.post.mk>

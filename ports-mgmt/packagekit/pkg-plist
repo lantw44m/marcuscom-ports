@@ -149,6 +149,9 @@ sbin/packagekitd
 %%PORTS%%share/PackageKit/helpers/ports/ruby_packagekit/prints.rb
 share/PackageKit/helpers/test_spawn/search-name.sh
 share/PackageKit/pk-upgrade-distro.sh
+share/PackageKit/transactions.db
+@exec mkdir -p /var/lib/PackageKit
+@exec if [ ! -f /var/lib/PackageKit/%f ]; then cp -f %B/%f /var/lib/PackageKit; chmod o-r /var/lib/PackageKit/%f; fi
 share/PackageKit/website/img/assassin.png
 share/PackageKit/website/img/author-alefebvre.png
 share/PackageKit/website/img/author-btimothy.png
@@ -430,21 +433,22 @@ share/polkit-1/actions/org.freedesktop.packagekit.policy
 %%RUCK%%share/ruck/ruckmain.py
 %%RUCK%%share/ruck/rucktalk.py
 %%RUCK%%share/ruck/ruckyum.py
-@comment var/lib/PackageKit/transactions.db
+@exec mkdir -p /var/cache/PackageKit/downloads
+@unexec rmdir /var/cache/PackageKit/downloads 2>/dev/null
+@unexec rmdir /var/cache/PackageKit 2>/dev/null
+@unexec rmdir /var/cache 2>/dev/null
+@unexec rmdir /var/lib/PackageKit 2>/dev/null
+@unexec rmdir /var/lib 2>/dev/null
 %%RUCK%%@dirrm share/ruck/commands
 %%RUCK%%@dirrm share/ruck
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
-@dirrmtry share/locale/no/LC_MESSAGES
-@dirrmtry share/locale/no
 @dirrmtry share/locale/nn/LC_MESSAGES
 @dirrmtry share/locale/nn
 @dirrmtry share/locale/ne/LC_MESSAGES
 @dirrmtry share/locale/ne
-@dirrmtry share/locale/mt/LC_MESSAGES
-@dirrmtry share/locale/mt
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
@@ -452,6 +456,8 @@ share/polkit-1/actions/org.freedesktop.packagekit.policy
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
 @dirrm share/gtk-doc/html/PackageKit
+@dirrmtry share/gtk-doc/html
+@dirrmtry share/gtk-doc
 %%PORTS%%@dirrm share/PackageKit/website/img/thumbnails
 %%PORTS%%@dirrm share/PackageKit/website/img
 %%PORTS%%@dirrm share/PackageKit/website
@@ -466,3 +472,9 @@ share/polkit-1/actions/org.freedesktop.packagekit.policy
 @dirrm include/PackageKit/packagekit-glib
 @dirrm include/PackageKit/backend
 @dirrm include/PackageKit
+@dirrmtry etc/sysconfig
+@dirrmtry etc/profile.d
+@dirrmtry etc/cron.daily
+@dirrm etc/Packagekit
+@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
