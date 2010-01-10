@@ -3,11 +3,11 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.3 2010/01/09 08:25:22 marcus Exp $
+#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.4 2010/01/09 08:34:17 marcus Exp $
 
 PORTNAME=	gnome-packagekit
 PORTVERSION=	2.29.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	ports-mgmt sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -22,7 +22,7 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gnomemenus
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gnomemenus gnomedocutils
 USE_GETTEXT=	yes
 USE_ICONV=	yes
 USE_PYTHON_BUILD=2.4+
