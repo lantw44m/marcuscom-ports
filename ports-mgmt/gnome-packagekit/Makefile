@@ -3,11 +3,11 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.4 2010/01/09 08:34:17 marcus Exp $
+#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.5 2010/01/10 20:22:13 marcus Exp $
 
 PORTNAME=	gnome-packagekit
 PORTVERSION=	2.29.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	ports-mgmt sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils
 LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		packagekit-glib.12:${PORTSDIR}/ports-mgmt/packagekit \
 		notify:${PORTSDIR}/devel/libnotify \
-		unique-1.0:${PORTSDIR}/x11-toolkits/unique
+		unique-1.0:${PORTSDIR}/x11-toolkits/unique \
+		devkit-power-gobject.1:${PORTSDIR}/sysutils/devicekit-power
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
