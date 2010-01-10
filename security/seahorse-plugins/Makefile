@@ -2,8 +2,8 @@
 # Date created:		06 August 2008
 # Whom:			Dave McKay <dave@mu.org>
 #
-# $FreeBSD: ports/security/seahorse-plugins/Makefile,v 1.11 2009/11/28 20:05:58 marcus Exp $
-#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.18 2009/10/19 10:24:17 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.20 2010/01/10 15:56:11 avl Exp $
 #
 
 PORTNAME=	seahorse-plugins
