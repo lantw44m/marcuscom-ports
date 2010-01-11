@@ -467,6 +467,7 @@ share/omf/gnome-packagekit/gnome-packagekit-zh_CN.omf
 @dirrm share/gnome/help/gnome-packagekit/de
 @dirrm share/gnome/help/gnome-packagekit/C/figures
 @dirrm share/gnome/help/gnome-packagekit/C
+@dirrm share/gnome/help/gnome-packagekit
 @dirrm share/gnome-packagekit/icons/hicolor/scalable/status
 @dirrm share/gnome-packagekit/icons/hicolor/scalable/actions
 @dirrm share/gnome-packagekit/icons/hicolor/scalable
@@ -489,4 +490,7 @@ share/omf/gnome-packagekit/gnome-packagekit-zh_CN.omf
 @dirrm share/gnome-packagekit/icons/hicolor
 @dirrm share/gnome-packagekit/icons
 @dirrm share/gnome-packagekit
+@dirrmtry share/applications
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrm %%PYTHON_SITELIBDIR%%/packagekit

@@ -3,11 +3,11 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.7 2010/01/10 21:11:40 marcus Exp $
+#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.8 2010/01/11 01:12:08 marcus Exp $
 
 PORTNAME=	gnome-packagekit
 PORTVERSION=	2.29.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	ports-mgmt sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -24,7 +24,8 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gnomemenus gnomedocutils
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gnomemenus gnomedocutils \
+		desktopfileutils
 USE_GETTEXT=	yes
 USE_ICONV=	yes
 USE_PYTHON_BUILD=2.4+
@@ -43,5 +44,8 @@ MAN1=	gpk-application.1 gpk-backend-status.1 gpk-install-local-file.1 \
 pre-configure:
 	@${REINPLACE_CMD} -E -e 's/.*CPPFLAGS.*-Werror/#$$&/' \
 		-e 's|-Wmissing-include-dirs||g' ${WRKSRC}/configure
+
+post-install:
+	@-update-desktop-database
 
 .include <bsd.port.mk>
