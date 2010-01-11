@@ -99,6 +99,9 @@ bin/swell-foop
 @unexec [ -s %D/share/games/mahjongg.tictactoe.scores ] || rm -f %D/share/games/mahjongg.tictactoe.scores
 @unexec [ -s %D/share/games/mahjongg.ziggurat.scores ] || rm -f %D/share/games/mahjongg.ziggurat.scores
 @unexec [ -s %D/share/games/quadrapassel.scores ] || rm -f %D/share/games/quadrapassel.scores
+@unexec [ -s %D/share/games/sweel-foop.Large.scores ] || rm -f %D/share/games/swell-foop.Large.scores
+@unexec [ -s %D/share/games/sweel-foop.Medium.scores ] || rm -f %D/share/games/swell-foop.Medium.scores
+@unexec [ -s %D/share/games/sweel-foop.Small.scores ] || rm -f %D/share/games/swell-foop.Small.scores
 lib/girepository-1.0/GnomeGamesSupport-1.0.typelib
 lib/gnome-games/gnome-games-render-cards
 lib/gnome-games/libgames-support-gi.a
