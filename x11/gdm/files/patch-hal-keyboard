@@ -1,3 +1,5 @@
+Patch from https://bugzilla.gnome.org/show_bug.cgi?id=572765
+
 --- daemon/gdm-session-direct.c.orig	2010-01-02 20:41:23.000000000 +0100
 +++ daemon/gdm-session-direct.c	2010-01-02 20:41:31.000000000 +0100
 @@ -45,6 +45,8 @@
