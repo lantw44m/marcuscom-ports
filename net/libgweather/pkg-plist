@@ -383,6 +383,7 @@ share/icons/gnome/scalable/status/weather-few-clouds-night-350.svg
 %%DATADIR%%/Locations.ang.xml
 %%DATADIR%%/Locations.ar.xml
 %%DATADIR%%/Locations.as.xml
+%%DATADIR%%/Locations.ast.xml
 %%DATADIR%%/Locations.az.xml
 %%DATADIR%%/Locations.be.xml
 %%DATADIR%%/Locations.be@latin.xml
@@ -467,6 +468,7 @@ share/icons/gnome/scalable/status/weather-few-clouds-night-350.svg
 share/locale/am/LC_MESSAGES/libgweather.mo
 share/locale/ar/LC_MESSAGES/libgweather.mo
 share/locale/as/LC_MESSAGES/libgweather.mo
+share/locale/ast/LC_MESSAGES/libgweather.mo
 share/locale/az/LC_MESSAGES/libgweather.mo
 share/locale/be/LC_MESSAGES/libgweather.mo
 share/locale/be@latin/LC_MESSAGES/libgweather.mo
