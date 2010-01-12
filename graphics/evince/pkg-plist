@@ -44,6 +44,7 @@ include/evince/2.29/libview/ev-job-scheduler.h
 include/evince/2.29/libview/ev-jobs.h
 include/evince/2.29/libview/ev-print-operation.h
 include/evince/2.29/libview/ev-stock-icons.h
+include/evince/2.29/libview/ev-view-presentation.h
 include/evince/2.29/libview/ev-view-type-builtins.h
 include/evince/2.29/libview/ev-view.h
 %%COMICS%%lib/evince/2/backends/comicsdocument.evince-backend
