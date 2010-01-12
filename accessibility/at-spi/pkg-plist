@@ -54,25 +54,24 @@ lib/orbit-2.0/Accessibility_LoginHelper_module.so
 lib/orbit-2.0/Accessibility_module.a
 lib/orbit-2.0/Accessibility_module.la
 lib/orbit-2.0/Accessibility_module.so
-%%PYTHON_SITELIBDIR%%/pyatspi-corba.pth
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/__init__.py
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/__init__.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/__init__.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/accessible.py
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/accessible.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/accessible.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/constants.py
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/constants.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/constants.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/event.py
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/event.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/event.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/registry.py
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/registry.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/registry.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/utils.py
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/utils.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi/utils.pyo
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/__init__.py
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/__init__.pyc
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/__init__.pyo
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/accessible.py
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/accessible.pyc
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/accessible.pyo
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/constants.py
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/constants.pyc
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/constants.pyo
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/event.py
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/event.pyc
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/event.pyo
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/registry.py
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/registry.pyc
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/registry.pyo
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/utils.py
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/utils.pyc
+%%PYTHON_SITELIBDIR%%/pyatspi_corba/utils.pyo
 libdata/bonobo/servers/Accessibility_Registry.server
 libdata/pkgconfig/cspi-1.0.pc
 libdata/pkgconfig/libloginhelper-1.0.pc
@@ -190,8 +189,7 @@ share/locale/zh_CN/LC_MESSAGES/at-spi.mo
 share/locale/zh_HK/LC_MESSAGES/at-spi.mo
 share/locale/zh_TW/LC_MESSAGES/at-spi.mo
 @dirrm share/idl/at-spi-1.0
-@dirrm %%PYTHON_SITELIBDIR%%/pyatspi-corba/pyatspi
-@dirrm %%PYTHON_SITELIBDIR%%/pyatspi-corba
+@dirrm %%PYTHON_SITELIBDIR%%/pyatspi_corba
 @dirrm lib/gtk-2.0/modules/at-spi-corba/modules
 @dirrm lib/gtk-2.0/modules/at-spi-corba
 @dirrm include/at-spi-1.0/login-helper

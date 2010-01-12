@@ -3,12 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi/Makefile,v 1.91 2010/01/05 23:32:20 marcus Exp $
+#   $MCom: ports/accessibility/at-spi/Makefile,v 1.92 2010/01/08 21:11:13 kwm Exp $
 #
 
 PORTNAME=	at-spi
-PORTVERSION=	1.29.3
-PORTREVISION?=	1
+PORTVERSION=	1.29.5
+PORTREVISION?=	0
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomehier intlhack gtk20 libbonobo
+USE_GNOME=	gnomehack gnomehier intlhack gtk20 gconf2 libbonobo
 USE_XORG=	x11 xtst
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
