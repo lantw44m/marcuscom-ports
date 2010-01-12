@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.208 2009/12/27 19:44:46 kwm Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.209 2010/01/03 06:12:02 marcus Exp $
 #
 
 PORTNAME=	evolution
@@ -118,11 +118,9 @@ PLIST_SUB+=		PST="@comment "
 
 post-patch:
 	@${REINPLACE_CMD} -e '/^plugins_standard_always/s/audio-inline//' \
-	    	-e 's|heimlibs".*"|heimlibs="${KRB5_LIB}"|g' \
+	    	-e 's|-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi|${KRB5_LIB}|g' \
 		-e 's|-Wmissing-include-dirs||g' \
 	    	${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|stdlib.n|stdlib.h|' \
-	    	${WRKSRC}/iconv-detect.c
 	@${REINPLACE_CMD} -e 's|/usr|${LOCALBASE}|g' \
 		${WRKSRC}/plugins/bogo-junk-plugin/bf-junk-filter.c
 	@${REINPLACE_CMD} -e 's|/usr/sbin|${LOCALBASE}/bin|g' \

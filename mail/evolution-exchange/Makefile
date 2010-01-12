@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.148 2009/12/27 20:57:40 kwm Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.149 2010/01/03 06:15:33 marcus Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -61,7 +61,7 @@ IGNORE=	build fails when ${LOCALBASE}/include/mapi.h exists in system, run pkg_i
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g' \
-	    	-e 's|heimlibs".*"|heimlibs="${KRB5_LIB}"|g' \
+		-e 's|-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi|${KRB5_LIB}|g' \
 		-e 's|-Wmissing-include-dirs||g' \
 		${WRKSRC}/configure
 
