@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.2 2010/01/06 00:42:25 marcus Exp $
+#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.3 2010/01/06 00:56:10 marcus Exp $
 #
 
 PORTNAME=	at-spi2-core
-PORTVERSION=	0.1.4
+PORTVERSION=	0.1.5
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -20,8 +20,8 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomehier intlhack gtk20
-USE_XORG=	x11 xtst
+USE_GNOME=	gnomehack gnomehier intlhack
+USE_XORG=	x11 xi xtst
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
