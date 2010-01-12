@@ -170,6 +170,7 @@ include/gtk-2.0/gtk/gtkmodules.h
 include/gtk-2.0/gtk/gtkmountoperation.h
 include/gtk-2.0/gtk/gtknotebook.h
 include/gtk-2.0/gtk/gtkobject.h
+include/gtk-2.0/gtk/gtkoffscreenwindow.h
 include/gtk-2.0/gtk/gtkoldeditable.h
 include/gtk-2.0/gtk/gtkoptionmenu.h
 include/gtk-2.0/gtk/gtkorientable.h
@@ -276,6 +277,7 @@ include/gtk-unix-print-2.0/gtk/gtkprinter.h
 include/gtk-unix-print-2.0/gtk/gtkprintjob.h
 include/gtk-unix-print-2.0/gtk/gtkprintunixdialog.h
 include/gtk-unix-print-2.0/gtk/gtkunixprint.h
+lib/girepository-1.0/Gdk-2.0.typelib
 lib/girepository-1.0/GdkPixbuf-2.0.typelib
 lib/girepository-1.0/Gtk-2.0.typelib
 lib/gtk-2.0/%%GTK_VERSION%%/engines/libpixmap.a

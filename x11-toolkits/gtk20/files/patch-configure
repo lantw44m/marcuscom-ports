@@ -12,15 +12,3 @@
         INTROSPECTION_CFLAGS=`$PKG_CONFIG --cflags gobject-introspection-1.0`
         INTROSPECTION_LIBS=`$PKG_CONFIG --libs gobject-introspection-1.0`
         INTROSPECTION_MAKEFILE=`$PKG_CONFIG --variable=datadir gobject-introspection-1.0`/gobject-introspection-1.0/Makefile.introspection
-@@ -33913,9 +33913,9 @@
- 
- # Hack around introspection installing into an absolute path breaking distcheck
- tmp=`pkg-config --variable=datadir gobject-introspection-1.0`
--INTROSPECTION_GIRDIR=${INTROSPECTION_GIRDIR/$tmp/\$(datadir)}
-+INTROSPECTION_GIRDIR=`echo ${INTROSPECTION_GIRDIR} | sed -e "s|${tmp}|\\\$(datadir)|"`
- tmp=`pkg-config --variable=libdir gobject-introspection-1.0`
--INTROSPECTION_TYPELIBDIR=${INTROSPECTION_TYPELIBDIR/$tmp/\$(libdir)}
-+INTROSPECTION_TYPELIBDIR=`echo ${INTROSPECTION_TYPELIBDIR} | sed -e "s|${tmp}|\\\$(libdir)|"`
- 
- ##################################################
- # Checks for gtk-doc and docbook-tools
