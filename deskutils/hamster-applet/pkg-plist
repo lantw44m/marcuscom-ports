@@ -91,9 +91,6 @@ lib/hamster-applet/hamster-applet
 %%PYTHON_SITELIBDIR%%/hamster/widgets/facttree.py
 %%PYTHON_SITELIBDIR%%/hamster/widgets/facttree.pyc
 %%PYTHON_SITELIBDIR%%/hamster/widgets/facttree.pyo
-%%PYTHON_SITELIBDIR%%/hamster/widgets/newtimeline.py
-%%PYTHON_SITELIBDIR%%/hamster/widgets/newtimeline.pyc
-%%PYTHON_SITELIBDIR%%/hamster/widgets/newtimeline.pyo
 %%PYTHON_SITELIBDIR%%/hamster/widgets/reportchooserdialog.py
 %%PYTHON_SITELIBDIR%%/hamster/widgets/reportchooserdialog.pyc
 %%PYTHON_SITELIBDIR%%/hamster/widgets/reportchooserdialog.pyo
@@ -117,7 +114,6 @@ share/gnome-control-center/keybindings/99-hamster-applet.xml
 %%DATADIR%%/edit_activity.ui
 %%DATADIR%%/hamster.db
 %%DATADIR%%/preferences.ui
-%%DATADIR%%/stats_overview.ui
 %%DATADIR%%/stats_reports.ui
 %%DATADIR%%/stats_stats.ui
 %%DATADIR%%/stats.ui
