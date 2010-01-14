@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.52 2009/12/25 14:52:56 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.1.17
+PORTVERSION=	1.1.18
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -69,7 +69,8 @@ PLIST_SUB+=	STATIC="@comment "
 .endif
 
 .if ${OSVERSION} < 700000
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-JavaScriptCore_yarr_RegexJIT.h
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-JavaScriptCore_yarr_RegexJIT.h \
+		${FILESDIR}/extra-patch-JavaScriptCore_assembler_MacroAssemblerCodeRef.h
 .endif
 
 post-patch:
