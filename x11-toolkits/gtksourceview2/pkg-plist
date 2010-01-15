@@ -26,8 +26,10 @@ share/gtksourceview-2.0/language-specs/R.lang
 share/gtksourceview-2.0/language-specs/ada.lang
 share/gtksourceview-2.0/language-specs/asp.lang
 share/gtksourceview-2.0/language-specs/awk.lang
+share/gtksourceview-2.0/language-specs/bibtex.lang
 share/gtksourceview-2.0/language-specs/boo.lang
 share/gtksourceview-2.0/language-specs/c.lang
+share/gtksourceview-2.0/language-specs/cg.lang
 share/gtksourceview-2.0/language-specs/changelog.lang
 share/gtksourceview-2.0/language-specs/chdr.lang
 share/gtksourceview-2.0/language-specs/check.sh
@@ -112,6 +114,7 @@ share/gtksourceview-2.0/styles/styles.rng
 share/gtksourceview-2.0/styles/tango.xml
 share/locale/ar/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/as/LC_MESSAGES/gtksourceview-2.0.mo
+share/locale/ast/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/az/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/be/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/bg/LC_MESSAGES/gtksourceview-2.0.mo
