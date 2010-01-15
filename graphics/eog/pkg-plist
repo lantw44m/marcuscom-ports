@@ -12,7 +12,6 @@ include/eog-2.20/eog/eog-image.h
 include/eog-2.20/eog/eog-job-queue.h
 include/eog-2.20/eog/eog-jobs.h
 include/eog-2.20/eog/eog-list-store.h
-include/eog-2.20/eog/eog-message-area.h
 include/eog-2.20/eog/eog-plugin.h
 include/eog-2.20/eog/eog-properties-dialog.h
 include/eog-2.20/eog/eog-scroll-view.h
@@ -42,7 +41,6 @@ share/applications/eog.desktop
 %%DOCSDIR%%/EogImageSaveInfo.html
 %%DOCSDIR%%/EogJobCopy.html
 %%DOCSDIR%%/EogListStore.html
-%%DOCSDIR%%/EogMessageArea.html
 %%DOCSDIR%%/EogMetadataReaderJpg.html
 %%DOCSDIR%%/EogMetadataReaderPng.html
 %%DOCSDIR%%/EogPlugin.html
@@ -271,6 +269,7 @@ share/locale/mn/LC_MESSAGES/eog.mo
 share/locale/mr/LC_MESSAGES/eog.mo
 share/locale/ms/LC_MESSAGES/eog.mo
 share/locale/nb/LC_MESSAGES/eog.mo
+share/locale/nds/LC_MESSAGES/eog.mo
 share/locale/ne/LC_MESSAGES/eog.mo
 share/locale/nl/LC_MESSAGES/eog.mo
 share/locale/nn/LC_MESSAGES/eog.mo
