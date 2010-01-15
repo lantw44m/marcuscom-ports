@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/eog-plugins/Makefile,v 1.7 2009/12/29 12:27:23 kwm Exp $
 #
 
 PORTNAME=	eog-plugins
-PORTVERSION=	2.29.2
+PORTVERSION=	2.29.5
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
