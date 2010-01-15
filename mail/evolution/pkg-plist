@@ -231,10 +231,9 @@ include/evolution-%%VERSION%%/misc/e-canvas-vbox.h
 include/evolution-%%VERSION%%/misc/e-canvas.h
 include/evolution-%%VERSION%%/misc/e-cell-renderer-combo.h
 include/evolution-%%VERSION%%/misc/e-charset-combo-box.h
-include/evolution-%%VERSION%%/misc/e-colors.h
 include/evolution-%%VERSION%%/misc/e-combo-cell-editable.h
 include/evolution-%%VERSION%%/misc/e-dateedit.h
-include/evolution-%%VERSION%%/misc/e-gui-utils.h
+include/evolution-%%VERSION%%/misc/e-focus-tracker.h
 include/evolution-%%VERSION%%/misc/e-hinted-entry.h
 include/evolution-%%VERSION%%/misc/e-hsv-utils.h
 include/evolution-%%VERSION%%/misc/e-image-chooser.h
@@ -249,6 +248,7 @@ include/evolution-%%VERSION%%/misc/e-popup-action.h
 include/evolution-%%VERSION%%/misc/e-popup-menu.h
 include/evolution-%%VERSION%%/misc/e-preferences-window.h
 include/evolution-%%VERSION%%/misc/e-printable.h
+include/evolution-%%VERSION%%/misc/e-selectable.h
 include/evolution-%%VERSION%%/misc/e-selection-model-array.h
 include/evolution-%%VERSION%%/misc/e-selection-model-simple.h
 include/evolution-%%VERSION%%/misc/e-selection-model.h
