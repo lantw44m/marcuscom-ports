@@ -38,7 +38,7 @@ sbin/gdm-stop
 %%DATADIR%%/autostart/LoginWindow/polkit-gnome-authentication-agent-1.desktop
 %%DATADIR%%/gconf.path
 %%DATADIR%%/gdb-cmd
-%%DATADIR%%/gdm-greeter-login-window.glade
+%%DATADIR%%/gdm-greeter-login-window.ui
 %%DATADIR%%/session-setup.entries
 share/gnome-2.0/ui/GNOME_FastUserSwitchApplet.xml
 share/gnome/help/gdm/C/gdm.xml
