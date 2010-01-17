@@ -22,6 +22,7 @@ include/libanjuta-1.0/libanjuta/anjuta-preferences-dialog.h
 include/libanjuta-1.0/libanjuta/anjuta-preferences.h
 include/libanjuta-1.0/libanjuta/anjuta-profile-manager.h
 include/libanjuta-1.0/libanjuta/anjuta-profile.h
+include/libanjuta-1.0/libanjuta/anjuta-project.h
 include/libanjuta-1.0/libanjuta/anjuta-save-prompt.h
 include/libanjuta-1.0/libanjuta/anjuta-serializer.h
 include/libanjuta-1.0/libanjuta/anjuta-session.h
@@ -83,6 +84,7 @@ include/libanjuta-1.0/libanjuta/interfaces/ianjuta-preferences.h
 include/libanjuta-1.0/libanjuta/interfaces/ianjuta-print.h
 include/libanjuta-1.0/libanjuta/interfaces/ianjuta-project-backend.h
 include/libanjuta-1.0/libanjuta/interfaces/ianjuta-project-manager.h
+include/libanjuta-1.0/libanjuta/interfaces/ianjuta-project.h
 include/libanjuta-1.0/libanjuta/interfaces/ianjuta-provider.h
 include/libanjuta-1.0/libanjuta/interfaces/ianjuta-stream-loader.h
 include/libanjuta-1.0/libanjuta/interfaces/ianjuta-stream-savable.h
@@ -103,6 +105,7 @@ lib/anjuta/anjuta-class-gen.plugin
 lib/anjuta/anjuta-cvs.plugin
 lib/anjuta/anjuta-debug-manager.plugin
 %%DEVHELP%%lib/anjuta/anjuta-devhelp.plugin
+lib/anjuta/dir-project.plugin
 lib/anjuta/anjuta-document-manager.plugin
 lib/anjuta/anjuta-file-wizard.plugin
 lib/anjuta/anjuta-gdb.plugin
@@ -183,6 +186,8 @@ lib/anjuta/libanjuta-terminal.la
 lib/anjuta/libanjuta-terminal.so
 lib/anjuta/libanjuta-tools.la
 lib/anjuta/libanjuta-tools.so
+lib/anjuta/libdir-project.la
+lib/anjuta/libdir-project.so
 lib/anjuta/libfile-manager.la
 lib/anjuta/libfile-manager.so
 lib/anjuta/libgbf-am.la
@@ -272,6 +277,7 @@ share/anjuta/project/cpp/po/POTFILES.in
 share/anjuta/project/cpp/src/Makefile.am.tpl
 share/anjuta/project/cpp/src/cvsignore
 share/anjuta/project/cpp/src/main.cc
+share/anjuta/project/directory/project.anjuta
 share/anjuta/project/django-logo.png
 share/anjuta/project/django.wiz
 share/anjuta/project/gcj-logo.png
@@ -395,6 +401,7 @@ share/anjuta/project/xlib/configure.ac.tpl
 share/anjuta/project/xlib/po/POTFILES.in
 share/anjuta/project/xlib/src/Makefile.am.tpl
 share/anjuta/project/xlib/src/main.c
+share/anjuta/sources.list
 share/anjuta/tables.sql
 share/anjuta/tools/find-fixmes.pl
 share/anjuta/tools/prepare-changelog.pl
@@ -1230,6 +1237,7 @@ share/pixmaps/anjuta/anjuta_logo.png
 share/pixmaps/anjuta/anjuta_splash.png
 share/pixmaps/anjuta/breakpoint.png
 share/pixmaps/anjuta/class_logo.xpm
+share/pixmaps/anjuta/dir-project-plugin-48.png
 share/pixmaps/anjuta/directory-accept.png
 share/pixmaps/anjuta/directory.png
 share/pixmaps/anjuta/gbf-am-plugin-48.png
@@ -1330,6 +1338,7 @@ share/pixmaps/anjuta/vcs-updated.png
 @dirrm share/anjuta/project/gnome
 @dirrm share/anjuta/project/gcj/src
 @dirrm share/anjuta/project/gcj
+@dirrm share/anjuta/project/directory
 @dirrm share/anjuta/project/cpp/src
 @dirrm share/anjuta/project/cpp/po
 @dirrm share/anjuta/project/cpp
