@@ -10,7 +10,7 @@ include/gnome-desktop-2.0/libgnomeui/gnome-rr.h
 lib/libgnome-desktop-2.a
 lib/libgnome-desktop-2.la
 lib/libgnome-desktop-2.so
-lib/libgnome-desktop-2.so.11
+lib/libgnome-desktop-2.so.17
 libdata/pkgconfig/gnome-desktop-2.0.pc
 share/applications/gnome-about.desktop
 share/gnome-about/contributors.list
