@@ -1923,6 +1923,7 @@ share/locale/af/LC_MESSAGES/gnome-games.mo
 share/locale/am/LC_MESSAGES/gnome-games.mo
 share/locale/ar/LC_MESSAGES/gnome-games.mo
 share/locale/as/LC_MESSAGES/gnome-games.mo
+share/locale/ast/LC_MESSAGES/gnome-games.mo
 share/locale/az/LC_MESSAGES/gnome-games.mo
 share/locale/be/LC_MESSAGES/gnome-games.mo
 share/locale/bg/LC_MESSAGES/gnome-games.mo
@@ -2745,5 +2746,7 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
