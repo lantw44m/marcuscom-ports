@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.106 2009/12/22 16:11:38 ahze Exp $
+#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.107 2010/01/14 02:27:25 avl Exp $
 #
 
 PORTNAME=	vte
@@ -37,6 +37,10 @@ OPTIONS=	GLX	"Enable support for DRI/GLX rendering" off
 .endif
 
 .include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 900007
+EXTRA_PATCHES+=		${FILESDIR}/extra-patch-gnome-pty-helper_gnome-utmp.c
+.endif
 
 .if defined(WITH_GLX) && !defined(MASTERDIR)
 CONFIGURE_ARGS+=	--with-glX
