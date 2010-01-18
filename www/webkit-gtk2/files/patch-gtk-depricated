@@ -1,0 +1,125 @@
+GTK 2.19.3 depricated some stuff
+http://trac.webkit.org/changeset/53351
+
+diff -Naur webkit-1.1.18/WebCore/platform/gtk/PlatformScreenGtk.cpp webkitgtk.new/WebCore/platform/gtk/PlatformScreenGtk.cpp
+--- WebCore/platform/gtk/PlatformScreenGtk.cpp	2009-11-12 16:40:52.000000000 -0500
++++ WebCore/platform/gtk/PlatformScreenGtk.cpp	2010-01-12 15:33:51.000000000 -0500
+@@ -56,7 +56,7 @@
+ 
+     if (!GTK_WIDGET_REALIZED(container)) {
+         GtkWidget* toplevel = gtk_widget_get_toplevel(container);
+-        if (GTK_WIDGET_TOPLEVEL(toplevel))
++        if (gtk_widget_is_toplevel(toplevel))
+             container = toplevel;
+         else
+             return 0;
+@@ -94,7 +94,7 @@
+         return FloatRect();
+ 
+     GtkWidget* container = gtk_widget_get_toplevel(GTK_WIDGET(widget->root()->hostWindow()->platformPageClient()));
+-    if (!GTK_WIDGET_TOPLEVEL(container))
++    if (!gtk_widget_is_toplevel(container))
+         return FloatRect();
+ 
+     GdkScreen* screen = gtk_widget_has_screen(container) ? gtk_widget_get_screen(container) : gdk_screen_get_default();
+diff -Naur webkit-1.1.18/WebKit/gtk/WebCoreSupport/ChromeClientGtk.cpp webkitgtk.new/WebKit/gtk/WebCoreSupport/ChromeClientGtk.cpp
+--- WebKit/gtk/WebCoreSupport/ChromeClientGtk.cpp	2009-12-17 10:59:43.000000000 -0500
++++ WebKit/gtk/WebCoreSupport/ChromeClientGtk.cpp	2010-01-12 13:15:04.000000000 -0500
+@@ -45,6 +45,7 @@
+ #include <glib.h>
+ #include <glib/gi18n-lib.h>
+ #include <gtk/gtk.h>
++#include <gtk/gtkwidget.h>
+ 
+ using namespace WebCore;
+ 
+@@ -64,7 +65,7 @@
+ FloatRect ChromeClient::windowRect()
+ {
+     GtkWidget* window = gtk_widget_get_toplevel(GTK_WIDGET(m_webView));
+-    if (GTK_WIDGET_TOPLEVEL(window)) {
++    if (gtk_widget_is_toplevel(window)) {
+         gint left, top, width, height;
+         gtk_window_get_position(GTK_WINDOW(window), &left, &top);
+         gtk_window_get_size(GTK_WINDOW(window), &width, &height);
+@@ -106,7 +107,7 @@
+ void ChromeClient::unfocus()
+ {
+     GtkWidget* window = gtk_widget_get_toplevel(GTK_WIDGET(m_webView));
+-    if (GTK_WIDGET_TOPLEVEL(window))
++    if (gtk_widget_is_toplevel(window))
+         gtk_window_set_focus(GTK_WINDOW(window), NULL);
+ }
+ 
+@@ -234,7 +235,7 @@
+ 
+ bool ChromeClient::canTakeFocus(FocusDirection)
+ {
+-    return GTK_WIDGET_CAN_FOCUS(m_webView);
++  return gtk_widget_get_can_focus((GtkWidget*)m_webView);
+ }
+ 
+ void ChromeClient::takeFocus(FocusDirection)
+@@ -451,7 +452,7 @@
+ 
+     GdkDisplay* gdkDisplay;
+     GtkWidget* window = gtk_widget_get_toplevel(GTK_WIDGET(m_webView));
+-    if (GTK_WIDGET_TOPLEVEL(window))
++    if (gtk_widget_is_toplevel(window))
+         gdkDisplay = gtk_widget_get_display(window);
+     else
+         gdkDisplay = gdk_display_get_default();
+diff -Naur webkit-1.1.18/WebKit/gtk/webkit/webkitprivate.cpp webkitgtk.new/WebKit/gtk/webkit/webkitprivate.cpp
+--- WebKit/gtk/webkit/webkitprivate.cpp	2009-12-20 13:06:50.000000000 -0500
++++ WebKit/gtk/webkit/webkitprivate.cpp	2010-01-12 13:21:47.000000000 -0500
+@@ -223,7 +223,7 @@
+         return NULL;
+ 
+     GtkWidget* toplevel =  gtk_widget_get_toplevel(GTK_WIDGET(frame->page()->chrome()->platformPageClient()));
+-    if (GTK_WIDGET_TOPLEVEL(toplevel))
++    if (gtk_widget_is_toplevel(toplevel))
+         return toplevel;
+     else
+         return NULL;
+diff -Naur webkit-1.1.18/WebKit/gtk/webkit/webkitwebframe.cpp webkitgtk.new/WebKit/gtk/webkit/webkitwebframe.cpp
+--- WebKit/gtk/webkit/webkitwebframe.cpp	2009-12-20 08:30:25.000000000 -0500
++++ WebKit/gtk/webkit/webkitwebframe.cpp	2010-01-12 13:22:36.000000000 -0500
+@@ -910,7 +910,7 @@
+     g_return_val_if_fail(GTK_IS_PRINT_OPERATION(operation), GTK_PRINT_OPERATION_RESULT_ERROR);
+ 
+     GtkWidget* topLevel = gtk_widget_get_toplevel(GTK_WIDGET(webkit_web_frame_get_web_view(frame)));
+-    if (!GTK_WIDGET_TOPLEVEL(topLevel))
++    if (!gtk_widget_is_toplevel(topLevel))
+         topLevel = NULL;
+ 
+     Frame* coreFrame = core(frame);
+@@ -949,7 +949,7 @@
+ 
+     if (error) {
+         GtkWidget* window = gtk_widget_get_toplevel(GTK_WIDGET(priv->webView));
+-        GtkWidget* dialog = gtk_message_dialog_new(GTK_WIDGET_TOPLEVEL(window) ? GTK_WINDOW(window) : 0,
++        GtkWidget* dialog = gtk_message_dialog_new(gtk_widget_is_toplevel(window) ? GTK_WINDOW(window) : 0,
+                                                    GTK_DIALOG_DESTROY_WITH_PARENT,
+                                                    GTK_MESSAGE_ERROR,
+                                                    GTK_BUTTONS_CLOSE,
+diff -Naur webkit-1.1.18/WebKit/gtk/webkit/webkitwebview.cpp webkitgtk.new/WebKit/gtk/webkit/webkitwebview.cpp
+--- WebKit/gtk/webkit/webkitwebview.cpp	2009-12-30 07:50:34.000000000 -0500
++++ WebKit/gtk/webkit/webkitwebview.cpp	2010-01-12 13:25:13.000000000 -0500
+@@ -650,7 +650,7 @@
+     // TODO: Improve focus handling as suggested in
+     // http://bugs.webkit.org/show_bug.cgi?id=16910
+     GtkWidget* toplevel = gtk_widget_get_toplevel(widget);
+-    if (GTK_WIDGET_TOPLEVEL(toplevel) && gtk_window_has_toplevel_focus(GTK_WINDOW(toplevel))) {
++    if (gtk_widget_is_toplevel(toplevel) && gtk_window_has_toplevel_focus(GTK_WINDOW(toplevel))) {
+         WebKitWebView* webView = WEBKIT_WEB_VIEW(widget);
+         FocusController* focusController = core(webView)->focusController();
+ 
+@@ -839,7 +839,7 @@
+     }
+ 
+     window = gtk_widget_get_toplevel(GTK_WIDGET(webView));
+-    dialog = gtk_message_dialog_new(GTK_WIDGET_TOPLEVEL(window) ? GTK_WINDOW(window) : 0, GTK_DIALOG_DESTROY_WITH_PARENT, messageType, buttons, "%s", message);
++    dialog = gtk_message_dialog_new(gtk_widget_is_toplevel(window) ? GTK_WINDOW(window) : 0, GTK_DIALOG_DESTROY_WITH_PARENT, messageType, buttons, "%s", message);
+     gchar* title = g_strconcat("JavaScript - ", webkit_web_frame_get_uri(frame), NULL);
+     gtk_window_set_title(GTK_WINDOW(dialog), title);
+     g_free(title);
