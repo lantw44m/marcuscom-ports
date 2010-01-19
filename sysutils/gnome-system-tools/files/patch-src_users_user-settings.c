@@ -1,17 +1,11 @@
---- src/users/user-settings.c.orig	2009-11-30 17:40:27.000000000 -0500
-+++ src/users/user-settings.c	2010-01-05 18:51:40.000000000 -0500
-@@ -1228,12 +1228,12 @@ on_edit_user_passwd (GtkButton *button, 
- 			                                    "changed"));
+--- src/users/user-settings.c.orig	2010-01-11 19:53:32.000000000 +0100
++++ src/users/user-settings.c	2010-01-19 14:04:14.000000000 +0100
+@@ -1142,7 +1142,7 @@ on_edit_user_passwd (GtkButton *button, 
  
- 		if (passwd_changed)
--			oobs_user_set_password (user,
-+			oobs_user_set_crypted_password (user,
- 			                        gtk_entry_get_text (GTK_ENTRY (passwd_entry)));
- 	} else {
- 		passwd_entry = gst_dialog_get_widget (tool->main_dialog,
- 		                                      "user_settings_random_passwd");
--		oobs_user_set_password (user,
-+		oobs_user_set_crypted_password (user,
- 		                        gtk_entry_get_text (GTK_ENTRY (passwd_entry)));
- 	}
+ 	/* empty password means: don't change it */
+ 	if (strlen (passwd) > 0)
+-		oobs_user_set_password (user, passwd);
++		oobs_user_set_crypted_password (user, passwd);
  
+ 	/* check whether user is allowed to login without password */
+ 	no_passwd_login_group = get_no_passwd_login_group ();
