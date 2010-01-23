@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.56 2010/01/01 16:56:03 avl Exp $
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.57 2010/01/02 04:49:32 marcus Exp $
 #
 
 PORTNAME=	gnome-power-manager
@@ -41,7 +41,7 @@ GCONF_SCHEMAS=	gnome-power-manager.schemas
 
 .if !defined(NO_INSTALL_MANPAGES)
 BUILD_DEPENDS+=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
-		${LOCALBASE}/share/sgml/docbook/4.1/catalog:${PORTSDIR}/textproc/docbook-410
+		${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/textproc/docbook-410
 MAN1=		gnome-power-manager.1 gnome-power-preferences.1 \
 		gnome-power-statistics.1
 .endif

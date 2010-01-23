@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/devicekit-power/Makefile,v 1.5 2010/01/02 19:29:10 marcus Exp $
+#   $MCom: ports/sysutils/devicekit-power/Makefile,v 1.6 2010/01/09 06:41:35 marcus Exp $
 #
 
 PORTNAME=	DeviceKit-power
@@ -33,7 +33,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 .if defined(NO_INSTALL_MANPAGES)
 CONFIGURE_ARGS+=--disable-man-pages
 .else
-BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1/catalog:${PORTSDIR}/textproc/docbook-410 \
+BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/textproc/docbook-410 \
     		xsltproc:${PORTSDIR}/textproc/libxslt \
 		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
 MAN1=		devkit-power.1
