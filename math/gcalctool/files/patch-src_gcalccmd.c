@@ -1,6 +1,11 @@
---- src/gcalccmd.c.orig	2010-01-13 00:30:10.000000000 -0500
-+++ src/gcalccmd.c	2010-01-13 00:39:51.000000000 -0500
-@@ -22,12 +22,84 @@
+--- src/gcalccmd.c.orig	2009-12-08 21:27:37.000000000 -0500
++++ src/gcalccmd.c	2010-01-24 13:38:19.000000000 -0500
+@@ -18,16 +18,89 @@
+  *  02111-1307, USA.
+  */
+ 
++#include <errno.h>
+ #include <stdio.h>
  #include <stdlib.h>
  #include <string.h>
  #include <sys/types.h>
@@ -38,7 +43,7 @@
 +		if (line == NULL)
 +				return (ssize_t) -1;
 +		*lineptr = line;
-+		*n = MAX_CANNON;
++		*n = MAX_CANON;
 +	}
 +
 +	line = *lineptr;
