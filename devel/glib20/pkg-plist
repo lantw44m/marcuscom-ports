@@ -1,3 +1,4 @@
+bin/gio-querymodules
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -146,6 +147,7 @@ include/glib-2.0/glib/gtypes.h
 include/glib-2.0/glib/gunicode.h
 include/glib-2.0/glib/gurifuncs.h
 include/glib-2.0/glib/gutils.h
+include/glib-2.0/glib/gvarianttype.h
 include/glib-2.0/glib/gwin32.h
 include/glib-2.0/glibconfig.h
 include/glib-2.0/gmodule.h
@@ -201,6 +203,7 @@ share/glib-2.0/gettext/po/Makefile.in.in
 share/locale/am/LC_MESSAGES/glib20.mo
 share/locale/ar/LC_MESSAGES/glib20.mo
 share/locale/as/LC_MESSAGES/glib20.mo
+share/locale/ast/LC_MESSAGES/glib20.mo
 share/locale/az/LC_MESSAGES/glib20.mo
 share/locale/be/LC_MESSAGES/glib20.mo
 share/locale/be@latin/LC_MESSAGES/glib20.mo
@@ -343,5 +346,7 @@ share/locale/zh_TW/LC_MESSAGES/glib20.mo
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
