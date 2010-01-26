@@ -25,3 +25,11 @@
  		$(GLIB_LIBS) \
  		$(FAM_LIBS) \
  		$(NULL)
+@@ -659,7 +658,6 @@ info-am:
+ 
+ install-data-am: install-giomoduleLTLIBRARIES
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-dvi: install-dvi-am
+ 
+ install-dvi-am:
