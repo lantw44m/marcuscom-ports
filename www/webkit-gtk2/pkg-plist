@@ -224,6 +224,7 @@ share/webkit-1.0/webinspector/InjectedScriptAccess.js
 share/webkit-1.0/webinspector/InspectorBackendStub.js
 share/webkit-1.0/webinspector/InspectorFrontendHostStub.js
 share/webkit-1.0/webinspector/JavaScriptSourceSyntaxHighlighter.js
+share/webkit-1.0/webinspector/JavaScriptTokenizer.js
 share/webkit-1.0/webinspector/KeyboardShortcut.js
 share/webkit-1.0/webinspector/MetricsSidebarPane.js
 share/webkit-1.0/webinspector/Object.js
@@ -251,6 +252,7 @@ share/webkit-1.0/webinspector/Settings.js
 share/webkit-1.0/webinspector/SidebarPane.js
 share/webkit-1.0/webinspector/SidebarTreeElement.js
 share/webkit-1.0/webinspector/SourceFrame.js
+share/webkit-1.0/webinspector/SourceFrame2.js
 share/webkit-1.0/webinspector/SourceSyntaxHighlighter.js
 share/webkit-1.0/webinspector/SourceView.js
 share/webkit-1.0/webinspector/StatusBarButton.js
@@ -258,6 +260,9 @@ share/webkit-1.0/webinspector/StoragePanel.js
 share/webkit-1.0/webinspector/StylesSidebarPane.js
 share/webkit-1.0/webinspector/SummaryBar.js
 share/webkit-1.0/webinspector/TestController.js
+share/webkit-1.0/webinspector/TextEditor.js
+share/webkit-1.0/webinspector/TextEditorHighlighter.js
+share/webkit-1.0/webinspector/TextEditorModel.js
 share/webkit-1.0/webinspector/TextPrompt.js
 share/webkit-1.0/webinspector/TimelineAgent.js
 share/webkit-1.0/webinspector/TimelineGrid.js
@@ -266,6 +271,7 @@ share/webkit-1.0/webinspector/TimelinePanel.js
 share/webkit-1.0/webinspector/TopDownProfileDataGridTree.js
 share/webkit-1.0/webinspector/View.js
 share/webkit-1.0/webinspector/WatchExpressionsSidebarPane.js
+share/webkit-1.0/webinspector/WelcomeView.js
 share/webkit-1.0/webinspector/audits.css
 share/webkit-1.0/webinspector/inspector.css
 share/webkit-1.0/webinspector/inspector.html
