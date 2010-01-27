@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.62 2010/01/09 05:37:44 marcus Exp $
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.63 2010/01/09 18:17:48 marcus Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	2.29.4
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +17,7 @@ COMMENT=	CD/DVD mastering tool for the GNOME desktop
 
 LIB_DEPENDS=	notify.1:${PORTSDIR}/devel/libnotify \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
-		totem-plparser.12:${PORTSDIR}/multimedia/totem-pl-parser \
+		totem-plparser.17:${PORTSDIR}/multimedia/totem-pl-parser \
 		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 		cdrdao:${PORTSDIR}/sysutils/cdrdao
