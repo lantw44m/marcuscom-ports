@@ -36,7 +36,11 @@ include/webkit-1.0/webkit/webkitwebwindowfeatures.h
 lib/libwebkit-1.0.la
 lib/libwebkit-1.0.so
 lib/libwebkit-1.0.so.13
+lib/girepository-1.0/JSCore-1.0.typelib
+lib/girepository-1.0/WebKit-1.0.typelib
 libdata/pkgconfig/webkit-1.0.pc
+share/gir-1.0/JSCore-1.0.gir
+share/gir-1.0/WebKit-1.0.gir
 share/locale/de/LC_MESSAGES/webkit.mo
 share/locale/en_GB/LC_MESSAGES/webkit.mo
 share/locale/es/LC_MESSAGES/webkit.mo

@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.53 2010/01/14 16:05:24 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.54 2010/01/27 22:28:45 kwm Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.1.19
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -15,12 +16,15 @@ PKGNAMESUFFIX=	-gtk2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An opensource browser engine
 
-BUILD_DEPENDS=	flex:${PORTSDIR}/textproc/flex
+BUILD_DEPENDS=	flex:${PORTSDIR}/textproc/flex \
+		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
+		${LOCALBASE}/share/gir-1.0/Soup-2.4.gir:${PORTSDIR}/devel/gir-repository-libsoup
 LIB_DEPENDS=	icutu.38:${PORTSDIR}/devel/icu \
 		enchant.1:${PORTSDIR}/textproc/enchant \
 		curl.5:${PORTSDIR}/ftp/curl \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
+RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/Soup-2.4.gir:${PORTSDIR}/devel/gir-repository-libsoup
 
 WANT_GSTREAMER=	yes
 MAKE_JOBS_SAFE=	yes
@@ -38,7 +42,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		ac_cv_path_DOLT_BASH=""
 CONFIGURE_ARGS=	--enable-icon-database \
 		--enable-svg \
-		--enable-svg-fonts
+		--enable-svg-fonts \
+		--enable-introspection
 MAKEFILE=	GNUmakefile
 
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
