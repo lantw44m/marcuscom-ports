@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.217 2010/01/14 17:42:39 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.218 2010/01/17 00:23:14 kwm Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	2.29.5
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -16,14 +16,12 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	An extremely lightweight and simple web browser for GNOME 2
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		${LOCALBASE}/share/gir-1.0/WebKit-1.0.gir:${PORTSDIR}/www/gir-repository-webkit
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2 \
 		notify.1:${PORTSDIR}/devel/libnotify \
 		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		${LOCALBASE}/share/gir-1.0/WebKit-1.0.gir:${PORTSDIR}/www/gir-repository-webkit \
 		${LOCALBASE}/share/icons/HighContrastLargePrint/index.theme:${PORTSDIR}/x11-themes/gnome-themes
 
 USE_LDCONFIG=	yes

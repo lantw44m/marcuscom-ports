@@ -15,9 +15,6 @@ pango_GIR=	Pango-1.0
 poppler_CATEGORY=	graphics
 poppler_GIR=	Poppler-0.8
 
-webkit_CATEGORY=	www
-webkit_GIR=	WebKit-1.0
-
 libsoup_CATEGORY=	devel
 libsoup_GIR=	Soup-2.4
 libsoup_GIR_TMPL=	soup
@@ -105,14 +102,6 @@ USE_GNOME+=	gtk20
 USE_GIR=	pango
 GIR_FILES=	Poppler-0.8
 CLEAR_DEPS+=	Gdk-2.0
-.endif
-
-.if ${GIR_NAME} == "webkit"
-LIB_DEPENDS+=	webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2
-USE_GNOME+=	gtk20
-USE_GIR=	libsoup
-GIR_FILES=	WebKit-1.0 JSCore-1.0
-CLEAR_DEPS+=	Gtk-2.0
 .endif
 
 .if ${GIR_NAME} == "libsoup"
