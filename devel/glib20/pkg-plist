@@ -294,6 +294,8 @@ share/locale/zh_TW/LC_MESSAGES/glib20.mo
 @dirrm share/glib-2.0/gettext
 @dirrm share/glib-2.0
 @exec mkdir -p %D/lib/gio/modules
+@exec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
+@unexec /bin/rm -f %D/lib/gio/modules/giomodule.cache
 @dirrmtry lib/gio/modules
 @dirrmtry lib/gio
 @dirrm include/glib-2.0/gobject
