@@ -34,6 +34,7 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/empathy-map-view.ui
 %%DATADIR%%/empathy-new-chatroom-dialog.ui
 %%DATADIR%%/empathy-preferences.ui
+%%DATADIR%%/empathy-search-bar.ui
 %%DATADIR%%/empathy-status-icon.ui
 %%DATADIR%%/empathy-status-preset-dialog.ui
 %%DATADIR%%/empathy-status-presets.dtd
