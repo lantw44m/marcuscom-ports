@@ -311,6 +311,8 @@ share/gir-1.0/BraseroMedia-1.0.gir
 share/gnome/help/brasero/C/brasero.xml
 share/gnome/help/brasero/C/figures/brasero_main.png
 share/gnome/help/brasero/C/legal.xml
+share/gnome/help/brasero/bg/brasero.xml
+share/gnome/help/brasero/bg/figures/brasero_main.png
 share/gnome/help/brasero/ca/brasero.xml
 share/gnome/help/brasero/ca/figures/brasero_main.png
 share/gnome/help/brasero/cs/brasero.xml
@@ -410,6 +412,7 @@ share/locale/zh_HK/LC_MESSAGES/brasero.mo
 share/locale/zh_TW/LC_MESSAGES/brasero.mo
 share/mime/packages/brasero.xml
 share/omf/brasero/brasero-C.omf
+share/omf/brasero/brasero-bg.omf
 share/omf/brasero/brasero-ca.omf
 share/omf/brasero/brasero-cs.omf
 share/omf/brasero/brasero-de.omf
@@ -453,6 +456,8 @@ share/omf/brasero/brasero-zh_TW.omf
 @dirrm share/gnome/help/brasero/cs
 @dirrm share/gnome/help/brasero/ca/figures
 @dirrm share/gnome/help/brasero/ca
+@dirrm share/gnome/help/brasero/bg/figures
+@dirrm share/gnome/help/brasero/bg
 @dirrm share/gnome/help/brasero/C/figures
 @dirrm share/gnome/help/brasero/C
 @dirrm share/gnome/help/brasero
