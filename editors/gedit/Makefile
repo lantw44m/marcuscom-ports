@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.111 2010/01/03 09:00:04 avl Exp $
+#   $MCom: ports/editors/gedit/Makefile,v 1.112 2010/01/16 02:16:41 avl Exp $
 #
 
 PORTNAME=	gedit
-PORTVERSION=	2.29.4
+PORTVERSION=	2.29.5
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
