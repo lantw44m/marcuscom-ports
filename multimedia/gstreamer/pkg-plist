@@ -171,6 +171,7 @@ share/locale/zh_TW/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrm lib/gstreamer-%%VERSION%%
+@dirrm libexec/gstreamer-%%VERSION%%
 @dirrm include/gstreamer-%%VERSION%%/gst/net
 @dirrm include/gstreamer-%%VERSION%%/gst/dataprotocol
 @dirrm include/gstreamer-%%VERSION%%/gst/controller
