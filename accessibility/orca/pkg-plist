@@ -275,6 +275,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/script.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/script.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/script.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/script_settings.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/script_settings.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/script_settings.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/speech_generator.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/speech_generator.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/packagemanager/speech_generator.pyo
