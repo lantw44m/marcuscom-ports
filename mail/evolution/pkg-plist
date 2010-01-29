@@ -62,6 +62,7 @@ include/evolution-%%VERSION%%/calendar/gui/e-week-view-layout.h
 include/evolution-%%VERSION%%/calendar/gui/e-week-view-main-item.h
 include/evolution-%%VERSION%%/calendar/gui/e-week-view-titles-item.h
 include/evolution-%%VERSION%%/calendar/gui/e-week-view.h
+include/evolution-%%VERSION%%/calendar/gui/gnome-cal.h
 include/evolution-%%VERSION%%/calendar/gui/goto.h
 include/evolution-%%VERSION%%/calendar/gui/itip-utils.h
 include/evolution-%%VERSION%%/calendar/gui/misc.h
@@ -152,11 +153,9 @@ include/evolution-%%VERSION%%/mail/e-mail-local.h
 include/evolution-%%VERSION%%/mail/e-mail-migrate.h
 include/evolution-%%VERSION%%/mail/e-mail-reader-utils.h
 include/evolution-%%VERSION%%/mail/e-mail-reader.h
-include/evolution-%%VERSION%%/mail/e-mail-search-bar.h
 include/evolution-%%VERSION%%/mail/e-mail-sidebar.h
 include/evolution-%%VERSION%%/mail/e-mail-store.h
 include/evolution-%%VERSION%%/mail/e-mail-tag-editor.h
-include/evolution-%%VERSION%%/mail/e-searching-tokenizer.h
 include/evolution-%%VERSION%%/mail/em-account-editor.h
 include/evolution-%%VERSION%%/mail/em-composer-utils.h
 include/evolution-%%VERSION%%/mail/em-config.h
@@ -247,7 +246,10 @@ include/evolution-%%VERSION%%/misc/e-paned.h
 include/evolution-%%VERSION%%/misc/e-popup-action.h
 include/evolution-%%VERSION%%/misc/e-popup-menu.h
 include/evolution-%%VERSION%%/misc/e-preferences-window.h
+include/evolution-%%VERSION%%/misc/e-preview-pane.h
 include/evolution-%%VERSION%%/misc/e-printable.h
+include/evolution-%%VERSION%%/misc/e-search-bar.h
+include/evolution-%%VERSION%%/misc/e-searching-tokenizer.h
 include/evolution-%%VERSION%%/misc/e-selectable.h
 include/evolution-%%VERSION%%/misc/e-selection-model-array.h
 include/evolution-%%VERSION%%/misc/e-selection-model-simple.h
@@ -329,7 +331,6 @@ include/evolution-%%VERSION%%/table/e-table-specification.h
 include/evolution-%%VERSION%%/table/e-table-state.h
 include/evolution-%%VERSION%%/table/e-table-subset-variable.h
 include/evolution-%%VERSION%%/table/e-table-subset.h
-include/evolution-%%VERSION%%/table/e-table-tooltip.h
 include/evolution-%%VERSION%%/table/e-table-utils.h
 include/evolution-%%VERSION%%/table/e-table-without.h
 include/evolution-%%VERSION%%/table/e-table.h
