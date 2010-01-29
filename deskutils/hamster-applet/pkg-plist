@@ -1,3 +1,5 @@
+bin/gnome-time-tracker
+bin/hamster-standalone
 lib/hamster-applet/hamster-applet
 %%PYTHON_SITELIBDIR%%/hamster/KeyBinder.py
 %%PYTHON_SITELIBDIR%%/hamster/KeyBinder.pyc
@@ -49,6 +51,15 @@ lib/hamster-applet/hamster-applet
 %%PYTHON_SITELIBDIR%%/hamster/keybinder/__init__.pyo
 %%PYTHON_SITELIBDIR%%/hamster/keybinder/_keybinder.la
 %%PYTHON_SITELIBDIR%%/hamster/keybinder/_keybinder.so
+%%PYTHON_SITELIBDIR%%/hamster/overview_activities.py
+%%PYTHON_SITELIBDIR%%/hamster/overview_activities.pyc
+%%PYTHON_SITELIBDIR%%/hamster/overview_activities.pyo
+%%PYTHON_SITELIBDIR%%/hamster/overview_totals.py
+%%PYTHON_SITELIBDIR%%/hamster/overview_totals.pyc
+%%PYTHON_SITELIBDIR%%/hamster/overview_totals.pyo
+%%PYTHON_SITELIBDIR%%/hamster/overview.py
+%%PYTHON_SITELIBDIR%%/hamster/overview.pyc
+%%PYTHON_SITELIBDIR%%/hamster/overview.pyo
 %%PYTHON_SITELIBDIR%%/hamster/preferences.py
 %%PYTHON_SITELIBDIR%%/hamster/preferences.pyc
 %%PYTHON_SITELIBDIR%%/hamster/preferences.pyo
@@ -58,15 +69,6 @@ lib/hamster-applet/hamster-applet
 %%PYTHON_SITELIBDIR%%/hamster/reports.py
 %%PYTHON_SITELIBDIR%%/hamster/reports.pyc
 %%PYTHON_SITELIBDIR%%/hamster/reports.pyo
-%%PYTHON_SITELIBDIR%%/hamster/stats_overview.py
-%%PYTHON_SITELIBDIR%%/hamster/stats_overview.pyc
-%%PYTHON_SITELIBDIR%%/hamster/stats_overview.pyo
-%%PYTHON_SITELIBDIR%%/hamster/stats_reports.py
-%%PYTHON_SITELIBDIR%%/hamster/stats_reports.pyc
-%%PYTHON_SITELIBDIR%%/hamster/stats_reports.pyo
-%%PYTHON_SITELIBDIR%%/hamster/stats_stats.py
-%%PYTHON_SITELIBDIR%%/hamster/stats_stats.pyc
-%%PYTHON_SITELIBDIR%%/hamster/stats_stats.pyo
 %%PYTHON_SITELIBDIR%%/hamster/stats.py
 %%PYTHON_SITELIBDIR%%/hamster/stats.pyc
 %%PYTHON_SITELIBDIR%%/hamster/stats.pyo
@@ -97,12 +99,12 @@ lib/hamster-applet/hamster-applet
 %%PYTHON_SITELIBDIR%%/hamster/widgets/tags.py
 %%PYTHON_SITELIBDIR%%/hamster/widgets/tags.pyc
 %%PYTHON_SITELIBDIR%%/hamster/widgets/tags.pyo
+%%PYTHON_SITELIBDIR%%/hamster/widgets/timechart.py
+%%PYTHON_SITELIBDIR%%/hamster/widgets/timechart.pyc
+%%PYTHON_SITELIBDIR%%/hamster/widgets/timechart.pyo
 %%PYTHON_SITELIBDIR%%/hamster/widgets/timeinput.py
 %%PYTHON_SITELIBDIR%%/hamster/widgets/timeinput.pyc
 %%PYTHON_SITELIBDIR%%/hamster/widgets/timeinput.pyo
-%%PYTHON_SITELIBDIR%%/hamster/widgets/timeline.py
-%%PYTHON_SITELIBDIR%%/hamster/widgets/timeline.pyc
-%%PYTHON_SITELIBDIR%%/hamster/widgets/timeline.pyo
 libdata/bonobo/servers/Hamster_Applet.server
 share/gnome-control-center/keybindings/99-hamster-applet.xml
 %%DATADIR%%/Hamster_Applet.xml
@@ -113,10 +115,19 @@ share/gnome-control-center/keybindings/99-hamster-applet.xml
 %%DATADIR%%/art/stock_calendar-view-week.png
 %%DATADIR%%/edit_activity.ui
 %%DATADIR%%/hamster.db
+%%DATADIR%%/hamster.ui
+%%DATADIR%%/overview.ui
+%%DATADIR%%/overview_totals.ui
 %%DATADIR%%/preferences.ui
-%%DATADIR%%/stats_reports.ui
-%%DATADIR%%/stats_stats.ui
 %%DATADIR%%/stats.ui
+share/applications/hamster-standalone.desktop
+share/gnome/help/hamster-applet/C/legal.xml
+share/gnome/help/hamster-applet/C/backup.page
+share/gnome/help/hamster-applet/C/index.page
+share/gnome/help/hamster-applet/C/input.page
+share/gnome/help/hamster-applet/C/merge.page
+share/gnome/help/hamster-applet/C/reports.page
+share/gnome/help/hamster-applet/C/statistics.page
 share/icons/hicolor/16x16/apps/hamster-applet.png
 share/icons/hicolor/22x22/apps/hamster-applet.png
 share/icons/hicolor/32x32/apps/hamster-applet.png
@@ -187,6 +198,8 @@ share/locale/zh_TW/LC_MESSAGES/hamster-applet.mo
 @dirrm %%PYTHON_SITELIBDIR%%/hamster/keybinder
 @dirrm %%PYTHON_SITELIBDIR%%/hamster
 @dirrm lib/hamster-applet
+@dirrm share/gnome/help/hamster-applet/C
+@dirrm share/gnome/help/hamster-applet
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
