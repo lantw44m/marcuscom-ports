@@ -123,6 +123,12 @@ share/gnome/help/file-roller/vi/figures/file-roller_main_window.png
 share/gnome/help/file-roller/vi/figures/file-roller_rightarrow.png
 share/gnome/help/file-roller/vi/figures/file-roller_uparrow.png
 share/gnome/help/file-roller/vi/file-roller.xml
+share/gnome/help/file-roller/zh_CN/figures/file-roller_home.png
+share/gnome/help/file-roller/zh_CN/figures/file-roller_leftarrow.png
+share/gnome/help/file-roller/zh_CN/figures/file-roller_main_window.png
+share/gnome/help/file-roller/zh_CN/figures/file-roller_rightarrow.png
+share/gnome/help/file-roller/zh_CN/figures/file-roller_uparrow.png
+share/gnome/help/file-roller/zh_CN/file-roller.xml
 share/icons/hicolor/16x16/apps/file-roller.png
 share/icons/hicolor/22x22/apps/file-roller.png
 share/icons/hicolor/24x24/apps/file-roller.png
@@ -238,7 +244,10 @@ share/omf/file-roller/file-roller-ru.omf
 share/omf/file-roller/file-roller-sv.omf
 share/omf/file-roller/file-roller-uk.omf
 share/omf/file-roller/file-roller-vi.omf
+share/omf/file-roller/file-roller-zh_CN.omf
 @dirrm share/omf/file-roller
+@dirrm share/gnome/help/file-roller/zh_CN/figures
+@dirrm share/gnome/help/file-roller/zh_CN
 @dirrm share/gnome/help/file-roller/vi/figures
 @dirrm share/gnome/help/file-roller/vi
 @dirrm share/gnome/help/file-roller/uk/figures
