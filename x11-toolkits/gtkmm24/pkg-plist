@@ -147,6 +147,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/dialog.h
 include/gtkmm-%%API_VERSION%%/gtkmm/drawingarea.h
 include/gtkmm-%%API_VERSION%%/gtkmm/editable.h
 include/gtkmm-%%API_VERSION%%/gtkmm/entry.h
+include/gtkmm-%%API_VERSION%%/gtkmm/entrybuffer.h
 include/gtkmm-%%API_VERSION%%/gtkmm/entrycompletion.h
 include/gtkmm-%%API_VERSION%%/gtkmm/enums.h
 include/gtkmm-%%API_VERSION%%/gtkmm/eventbox.h
@@ -189,6 +190,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/messagedialog.h
 include/gtkmm-%%API_VERSION%%/gtkmm/misc.h
 include/gtkmm-%%API_VERSION%%/gtkmm/notebook.h
 include/gtkmm-%%API_VERSION%%/gtkmm/object.h
+include/gtkmm-%%API_VERSION%%/gtkmm/offscreenwindow.h
 include/gtkmm-%%API_VERSION%%/gtkmm/optionmenu.h
 include/gtkmm-%%API_VERSION%%/gtkmm/orientable.h
 include/gtkmm-%%API_VERSION%%/gtkmm/pagesetup.h
@@ -246,6 +248,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/dialog_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/drawingarea_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/editable_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/entry_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/entrybuffer_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/entrycompletion_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/enums_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/eventbox_p.h
@@ -286,6 +289,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/messagedialog_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/misc_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/notebook_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/object_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/offscreenwindow_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/optionmenu_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/orientable_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/pagesetup_p.h
