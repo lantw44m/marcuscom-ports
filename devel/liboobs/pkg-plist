@@ -1,5 +1,6 @@
 include/liboobs-1.0/oobs/oobs-defines.h
 include/liboobs-1.0/oobs/oobs-enum-types.h
+include/liboobs-1.0/oobs/oobs-error.h
 include/liboobs-1.0/oobs/oobs-group.h
 include/liboobs-1.0/oobs/oobs-groupsconfig.h
 include/liboobs-1.0/oobs/oobs-hostsconfig.h
