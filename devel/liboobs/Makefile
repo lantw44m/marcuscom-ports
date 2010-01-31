@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/liboobs/Makefile,v 1.38 2009/11/28 05:59:00 mezz Exp $
+#   $MCom: ports/devel/liboobs/Makefile,v 1.41 2010/01/18 07:09:10 marcus Exp $
 #
 
 PORTNAME=	liboobs
-PORTVERSION=	2.29.2.1
+PORTVERSION=	2.29.3
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -28,4 +28,14 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include"
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+# disable utmpx detection on early 9.x and below.
+# We still have only utmp there
+post-patch:
+.if ${OSVERSION} < 900007
+	@${REINPLACE_CMD} -e 's|utmpx|utmp|g' \
+		${WRKSRC}/configure
+.endif
+
+.include <bsd.port.post.mk>
