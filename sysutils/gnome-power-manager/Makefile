@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.57 2010/01/02 04:49:32 marcus Exp $
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.58 2010/01/23 16:40:05 marcus Exp $
 #
 
 PORTNAME=	gnome-power-manager
-PORTVERSION=	2.29.1
-PORTREVISION=	1
+PORTVERSION=	2.29.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
