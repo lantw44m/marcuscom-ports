@@ -1,5 +1,5 @@
 # $FreeBSD: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.96 2009/12/21 07:07:52 ahze Exp $
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.76 2009/11/17 19:08:45 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.78 2010/01/27 16:32:16 kwm Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -296,7 +296,7 @@ gst_jack_PLIST_FILES=	${GST_LIB_DIR}/libgstjack.la \
 gst_jack_DIST=	bad
 
 # jpeg
-gst_jpeg_LIB_DEPENDS+=	jpeg.10:${PORTSDIR}/graphics/jpeg
+gst_jpeg_LIB_DEPENDS+=	jpeg.11:${PORTSDIR}/graphics/jpeg
 gst_jpeg_PLIST_FILES=	${GST_LIB_DIR}/libgstjpeg.la \
 			${GST_LIB_DIR}/libgstjpeg.so
 
