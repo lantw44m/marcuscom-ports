@@ -3,11 +3,11 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/mm-common/Makefile,v 1.8 2009/12/26 22:45:15 kwm Exp $
+#   $MCom: ports/devel/mm-common/Makefile,v 1.9 2010/01/02 21:03:07 kwm Exp $
 #
 
 PORTNAME=	mm-common
-PORTVERSION=	0.9.1
+PORTVERSION=	0.9.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
