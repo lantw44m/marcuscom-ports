@@ -22,6 +22,7 @@ lib/libexchangemapi-1.0.so
 lib/libexchangemapi-1.0.so.0
 share/locale/as/LC_MESSAGES/evolution-mapi.mo
 share/locale/bg/LC_MESSAGES/evolution-mapi.mo
+share/locale/bn/LC_MESSAGES/evolution-mapi.mo
 share/locale/bn_IN/LC_MESSAGES/evolution-mapi.mo
 share/locale/ca/LC_MESSAGES/evolution-mapi.mo
 share/locale/ca@valencia/LC_MESSAGES/evolution-mapi.mo
