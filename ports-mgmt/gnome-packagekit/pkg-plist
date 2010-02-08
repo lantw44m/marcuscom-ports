@@ -376,7 +376,6 @@ share/icons/hicolor/48x48/apps/gpk-service-pack.png
 share/icons/hicolor/48x48/mimetypes/application-x-catalog.png
 share/icons/hicolor/48x48/mimetypes/application-x-package-list.png
 share/icons/hicolor/48x48/mimetypes/application-x-servicepack.png
-share/icons/hicolor/icon-theme.cache
 share/icons/hicolor/scalable/apps/gpk-log.svg
 share/icons/hicolor/scalable/apps/gpk-prefs.svg
 share/icons/hicolor/scalable/apps/gpk-repo.svg
@@ -387,6 +386,7 @@ share/icons/hicolor/scalable/mimetypes/application-x-servicepack.svg
 share/locale/ar/LC_MESSAGES/gnome-packagekit.mo
 share/locale/as/LC_MESSAGES/gnome-packagekit.mo
 share/locale/bg/LC_MESSAGES/gnome-packagekit.mo
+share/locale/bn/LC_MESSAGES/gnome-packagekit.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-packagekit.mo
 share/locale/ca/LC_MESSAGES/gnome-packagekit.mo
 share/locale/cs/LC_MESSAGES/gnome-packagekit.mo
