@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.12 2010/01/23 16:40:05 marcus Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.13 2010/02/08 12:36:30 kwm Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.1
@@ -93,7 +93,7 @@ PLIST_SUB+=	GTK="@comment "
 #.endif
 
 .if defined(SLAVEPORT)
-LIB_DEPENDS+=	packagekit-glib2.12:${PORTSDIR}/ports-mgmt/packagekit
+LIB_DEPENDS+=	packagekit-glib2.13:${PORTSDIR}/ports-mgmt/packagekit
 
 .if ${SLAVEPORT}=="qt4"
 CONFIGURE_ARGS+=--enable-qt
