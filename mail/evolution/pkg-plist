@@ -2,6 +2,7 @@ bin/evolution
 bin/evolution-alarm-notify
 etc/xdg/autostart/evolution-alarm-notify.desktop
 include/evolution-%%VERSION%%/addressbook/gui/widgets/eab-config.h
+include/evolution-%%VERSION%%/calendar/common/authentication.h
 %%PILOT%%include/evolution-%%VERSION%%/calendar/conduits/common/libecalendar-common-conduit.h
 include/evolution-%%VERSION%%/calendar/gui/cal-editor-utils.h
 include/evolution-%%VERSION%%/calendar/gui/calendar-config-keys.h
@@ -39,6 +40,7 @@ include/evolution-%%VERSION%%/calendar/gui/e-cal-config.h
 include/evolution-%%VERSION%%/calendar/gui/e-cal-event.h
 include/evolution-%%VERSION%%/calendar/gui/e-cal-model-calendar.h
 include/evolution-%%VERSION%%/calendar/gui/e-cal-model.h
+include/evolution-%%VERSION%%/calendar/gui/e-calendar-selector.h
 include/evolution-%%VERSION%%/calendar/gui/e-calendar-view.h
 include/evolution-%%VERSION%%/calendar/gui/e-cell-date-edit-text.h
 include/evolution-%%VERSION%%/calendar/gui/e-date-time-list.h
@@ -108,6 +110,7 @@ include/evolution-%%VERSION%%/e-util/e-mktemp.h
 include/evolution-%%VERSION%%/e-util/e-module.h
 include/evolution-%%VERSION%%/e-util/e-non-intrusive-error-dialog.h
 include/evolution-%%VERSION%%/e-util/e-plugin-ui.h
+include/evolution-%%VERSION%%/e-util/e-plugin-util.h
 include/evolution-%%VERSION%%/e-util/e-plugin.h
 include/evolution-%%VERSION%%/e-util/e-print.h
 include/evolution-%%VERSION%%/e-util/e-profile-event.h
@@ -1948,6 +1951,7 @@ share/omf/evolution/evolution-sv.omf
 @dirrm include/evolution-%%VERSION%%/composer
 @dirrm include/evolution-%%VERSION%%/calendar/gui/dialogs
 @dirrm include/evolution-%%VERSION%%/calendar/gui
+@dirrm include/evolution-%%VERSION%%/calendar/common
 %%PILOT%%@dirrm include/evolution-%%VERSION%%/calendar/conduits/common
 %%PILOT%%@dirrm include/evolution-%%VERSION%%/calendar/conduits
 @dirrm include/evolution-%%VERSION%%/calendar
