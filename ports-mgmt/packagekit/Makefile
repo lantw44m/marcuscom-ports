@@ -3,24 +3,25 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.11 2010/01/10 21:09:42 marcus Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.12 2010/01/23 16:40:05 marcus Exp $
 
 PORTNAME=	PackageKit
-PORTVERSION=	0.5.5
-PORTREVISION=	4
+PORTVERSION=	0.6.1
 CATEGORIES=	ports-mgmt sysutils
 MASTER_SITES=	http://www.packagekit.org/releases/
 
 MAINTAINER=	afb@users.souceforge.net
 COMMENT?=	A DBUS packaging abstraction layer
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils
+BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils \
+		${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection		
 LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
 		ck-connector.0:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof \
+		${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection		
     		${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 
 USE_GMAKE=	yes

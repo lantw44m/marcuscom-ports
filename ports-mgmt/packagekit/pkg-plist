@@ -18,30 +18,6 @@ etc/profile.d/PackageKit.sh
 etc/sysconfig/packagekit-background
 include/PackageKit/backend/pk-backend-spawn.h
 include/PackageKit/backend/pk-backend.h
-include/PackageKit/packagekit-glib/packagekit.h
-include/PackageKit/packagekit-glib/pk-bitfield.h
-include/PackageKit/packagekit-glib/pk-catalog.h
-include/PackageKit/packagekit-glib/pk-category-obj.h
-include/PackageKit/packagekit-glib/pk-client-pool.h
-include/PackageKit/packagekit-glib/pk-client.h
-include/PackageKit/packagekit-glib/pk-common.h
-include/PackageKit/packagekit-glib/pk-connection.h
-include/PackageKit/packagekit-glib/pk-control.h
-include/PackageKit/packagekit-glib/pk-desktop.h
-include/PackageKit/packagekit-glib/pk-details-obj.h
-include/PackageKit/packagekit-glib/pk-distro-upgrade-obj.h
-include/PackageKit/packagekit-glib/pk-enum.h
-include/PackageKit/packagekit-glib/pk-obj-list.h
-include/PackageKit/packagekit-glib/pk-package-id.h
-include/PackageKit/packagekit-glib/pk-package-ids.h
-include/PackageKit/packagekit-glib/pk-package-list.h
-include/PackageKit/packagekit-glib/pk-package-obj.h
-include/PackageKit/packagekit-glib/pk-require-restart-obj.h
-include/PackageKit/packagekit-glib/pk-service-pack.h
-include/PackageKit/packagekit-glib/pk-task-list.h
-include/PackageKit/packagekit-glib/pk-transaction-obj.h
-include/PackageKit/packagekit-glib/pk-update-detail-obj.h
-include/PackageKit/packagekit-glib/pk-version.h
 include/PackageKit/packagekit-glib2/packagekit.h
 include/PackageKit/packagekit-glib2/pk-bitfield.h
 include/PackageKit/packagekit-glib2/pk-catalog.h
@@ -62,6 +38,7 @@ include/PackageKit/packagekit-glib2/pk-media-change-required.h
 include/PackageKit/packagekit-glib2/pk-message.h
 include/PackageKit/packagekit-glib2/pk-package-id.h
 include/PackageKit/packagekit-glib2/pk-package-ids.h
+include/PackageKit/packagekit-glib2/pk-package-sack-sync.h
 include/PackageKit/packagekit-glib2/pk-package-sack.h
 include/PackageKit/packagekit-glib2/pk-package.h
 include/PackageKit/packagekit-glib2/pk-progress.h
@@ -70,19 +47,17 @@ include/PackageKit/packagekit-glib2/pk-repo-signature-required.h
 include/PackageKit/packagekit-glib2/pk-require-restart.h
 include/PackageKit/packagekit-glib2/pk-results.h
 include/PackageKit/packagekit-glib2/pk-service-pack.h
+include/PackageKit/packagekit-glib2/pk-source.h
 include/PackageKit/packagekit-glib2/pk-task.h
 include/PackageKit/packagekit-glib2/pk-transaction-list.h
 include/PackageKit/packagekit-glib2/pk-transaction-past.h
 include/PackageKit/packagekit-glib2/pk-update-detail.h
 include/PackageKit/packagekit-glib2/pk-version.h
-lib/libpackagekit-glib.a
-lib/libpackagekit-glib.la
-lib/libpackagekit-glib.so
-lib/libpackagekit-glib.so.12
+lib/girepositry-1.0/PackageKitGlib-1.0.typelib
 lib/libpackagekit-glib2.a
 lib/libpackagekit-glib2.la
 lib/libpackagekit-glib2.so
-lib/libpackagekit-glib2.so.12
+lib/libpackagekit-glib2.so.13
 lib/packagekit-backend/libpk_backend_dummy.a
 lib/packagekit-backend/libpk_backend_dummy.la
 lib/packagekit-backend/libpk_backend_dummy.so
@@ -140,7 +115,6 @@ lib/polkit-1/extensions/libpackagekit-action-lookup.so
 %%PYTHON_SITELIBDIR%%/packagekit/progress.py
 %%PYTHON_SITELIBDIR%%/packagekit/progress.pyc
 %%PYTHON_SITELIBDIR%%/packagekit/progress.pyo
-libdata/pkgconfig/packagekit-glib.pc
 libdata/pkgconfig/packagekit-glib2.pc
 libexec/pk-command-not-found
 sbin/packagekitd
@@ -299,6 +273,7 @@ share/PackageKit/website/pk-screenshots.html
 share/PackageKit/website/pk-using.html
 share/PackageKit/website/style.css
 share/dbus-1/system-services/org.freedesktop.PackageKit.service
+share/gir-1.0/PackageKitGlib-1.0.gir
 share/gtk-doc/html/PackageKit/PackageKit-egg-debug.html
 share/gtk-doc/html/PackageKit/PackageKit-pk-bitfield.html
 share/gtk-doc/html/PackageKit/PackageKit-pk-client-sync.html
@@ -469,7 +444,6 @@ share/polkit-1/actions/org.freedesktop.packagekit.policy
 @dirrm %%PYTHON_SITELIBDIR%%/packagekit
 @dirrm lib/packagekit-backend/
 @dirrm include/PackageKit/packagekit-glib2
-@dirrm include/PackageKit/packagekit-glib
 @dirrm include/PackageKit/backend
 @dirrm include/PackageKit
 @dirrmtry etc/sysconfig
