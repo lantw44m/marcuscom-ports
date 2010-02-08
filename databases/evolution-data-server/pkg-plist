@@ -492,6 +492,7 @@ share/doc/camel/left.png
 share/doc/camel/right.png
 share/doc/camel/style.css
 share/doc/camel/up.png
+share/doc/libebackend/EFileCache.html
 share/doc/libebackend/ch01.html
 share/doc/libebackend/home.png
 share/doc/libebackend/index.html
@@ -501,7 +502,6 @@ share/doc/libebackend/libebackend-EOfflineListener.html
 share/doc/libebackend/libebackend-e-data-server-module.html
 share/doc/libebackend/libebackend-e-db3-utils.html
 share/doc/libebackend/libebackend-e-dbhash.html
-share/doc/libebackend/libebackend-e-file-cache.html
 share/doc/libebackend/libebackend.devhelp
 share/doc/libebackend/libebackend.devhelp2
 share/doc/libebackend/right.png
