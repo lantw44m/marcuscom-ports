@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.56 2010/01/17 00:23:14 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.57 2010/01/31 02:21:23 avl Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	2.29.6
+PORTVERSION=	2.29.90
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
