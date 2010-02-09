@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/hamster-applet/Makefile,v 1.32 2010/01/14 14:06:04 avl Exp $
+#   $MCom: ports/deskutils/hamster-applet/Makefile,v 1.33 2010/01/29 11:01:54 avl Exp $
 #
 
 PORTNAME=	hamster-applet
-PORTVERSION=	2.29.6
+PORTVERSION=	2.29.90
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -31,6 +31,6 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 	       	LDFLAGS="-L${LOCALBASE}/lib"
 
-#GCONF_SCHEMAS=	hamster-applet.schemas
+GCONF_SCHEMAS=	hamster-applet.schemas
 
 .include <bsd.port.mk>
