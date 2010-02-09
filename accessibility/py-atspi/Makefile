@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/py-atspi/Makefile,v 1.1 2010/01/06 00:55:15 marcus Exp $
+#   $MCom: ports/accessibility/py-atspi/Makefile,v 1.2 2010/01/12 15:54:12 avl Exp $
 #
 
 PORTNAME=	atspi
-PORTVERSION=	0.1.5
+PORTVERSION=	0.1.6
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=     sources/pyatspi/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -19,7 +19,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Python API for the D-BUS based SPI framework
 
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
-RUN_DEPENDS=	at-spi-dbus-bus:${PORTSDIR}/accessibility/at-spi2-core
+RUN_DEPENDS=	${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
