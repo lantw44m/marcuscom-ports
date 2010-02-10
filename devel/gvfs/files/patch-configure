@@ -1,7 +1,7 @@
---- configure.orig	2009-04-24 00:15:09.000000000 -0400
-+++ configure	2009-04-24 00:16:04.000000000 -0400
-@@ -26973,6 +26973,9 @@ fi
-     *-linux*)
+--- configure.orig	2010-02-10 20:52:05.000000000 +0000
++++ configure	2010-02-10 20:54:21.000000000 +0000
+@@ -15666,6 +15666,9 @@ fi
+     *-linux* | *-freebsd* | *-kfreebsd*-gnu)
        use_gphoto2=yes
        ;;
 +    *-freebsd*)
@@ -10,16 +10,16 @@
      *)
        use_gphoto2=no
        ;;
-@@ -28018,7 +28021,7 @@ if test "${ac_cv_lib_archive_archive_ent
+@@ -16191,7 +16194,7 @@ if test "${ac_cv_lib_archive_archive_ent
    $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-larchive  $LIBS"
 +LIBS="-larchive -lcrypto -lmd  $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
-@@ -28094,7 +28097,7 @@ _ACEOF
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -16236,7 +16239,7 @@ $as_echo "#define HAVE_ARCHIVE /**/" >>c
                  if test x$with_archive_libs != x/usr/lib; then
                          ARCHIVE_LIBS="-L$with_archive_libs -larchive"
                  else
@@ -27,4 +27,13 @@
 +                	ARCHIVE_LIBS="-larchive -lcrypto -lmd"
                  fi
  	else
- 		{ $as_echo "$as_me:$LINENO: checking for archive_entry_filetype in -larchive" >&5
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for archive_entry_filetype in -larchive" >&5
+@@ -16245,7 +16248,7 @@ if test "${ac_cv_lib_archive_archive_ent
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-larchive  $LIBS"
++LIBS="-larchive -lcrypto -lmd  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
