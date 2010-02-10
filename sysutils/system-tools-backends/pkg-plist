@@ -10,6 +10,7 @@ share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.NTPConfig.servi
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.Platform.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.SMBConfig.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.SelfConfig2.service
+share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.ServiceConfig2.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.ServicesConfig.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.TimeConfig.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.UserConfig2.service
@@ -74,6 +75,7 @@ share/system-tools-backends-2.0/scripts/Network/Ifaces.pm
 share/system-tools-backends-2.0/scripts/Platform.pm
 share/system-tools-backends-2.0/scripts/SMBConfig.pm
 share/system-tools-backends-2.0/scripts/SelfConfig.pm
+share/system-tools-backends-2.0/scripts/ServiceConfig.pm
 share/system-tools-backends-2.0/scripts/ServicesConfig.pm
 share/system-tools-backends-2.0/scripts/Shares/NFS.pm
 share/system-tools-backends-2.0/scripts/Shares/SMB.pm
