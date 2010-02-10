@@ -71,7 +71,6 @@ share/gir-1.0/Epiphany-2.29.gir
 %%DOCSDIR%%/up.png
 %%DATADIR%%/about.ini
 %%DATADIR%%/default-bookmarks.rdf
-%%DATADIR%%/ephy-xml2ini.xsl
 %%DATADIR%%/epiphany-bookmark-editor-ui.xml
 %%DATADIR%%/epiphany-bookmarks-html.xsl
 %%DATADIR%%/epiphany-bookmarksbar.xml
