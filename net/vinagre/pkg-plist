@@ -8,6 +8,7 @@ include/vinagre-1.0/vinagre/vinagre-bookmarks-migration.h
 include/vinagre-1.0/vinagre/vinagre-bookmarks-tree.h
 include/vinagre-1.0/vinagre/vinagre-bookmarks-ui.h
 include/vinagre-1.0/vinagre/vinagre-bookmarks.h
+include/vinagre-1.0/vinagre/vinagre-cache-prefs.h
 include/vinagre-1.0/vinagre/vinagre-commands.h
 include/vinagre-1.0/vinagre/vinagre-connect.h
 include/vinagre-1.0/vinagre/vinagre-connection.h
