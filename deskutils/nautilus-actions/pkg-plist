@@ -92,6 +92,7 @@ share/locale/zh_CN/LC_MESSAGES/nautilus-actions.mo
 share/locale/zh_HK/LC_MESSAGES/nautilus-actions.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus-actions.mo
 %%DATADIR%%/locked.png
+%%DATADIR%%/nact-preferences.ui
 %%DATADIR%%/nautilus-actions.schemas
 %%DATADIR%%/nautilus-actions-config-tool.actions
 %%DATADIR%%/nautilus-actions-config-tool.ui

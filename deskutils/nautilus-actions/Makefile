@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.16 2010/01/03 05:44:24 marcus Exp $
+#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.17 2010/01/05 23:21:42 marcus Exp $
 #
 
 PORTNAME=	nautilus-actions
-PORTVERSION=	2.29.3
+PORTVERSION=	2.29.4
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 
@@ -15,6 +15,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Extension for Nautilus to configure programs to launch on files
 
 LIB_DEPENDS=	uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid \
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 
 INSTALLS_ICONS=	yes
