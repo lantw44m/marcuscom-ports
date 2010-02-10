@@ -9,6 +9,7 @@ include/gcr/gcr-certificate.h
 include/gcr/gcr-importer.h
 include/gcr/gcr-parser.h
 include/gcr/gcr-types.h
+include/gcr/gcr-unlock-options-widget.h
 include/gcr/gcr.h
 include/gp11/gp11.h
 include/gp11/pkcs11.h
@@ -84,6 +85,7 @@ share/doc/gp11/style.css
 share/doc/gp11/up.png
 share/gcr/ui/gcr-certificate-basics-widget.ui
 share/gcr/ui/gcr-import-dialog.ui
+share/gcr/ui/gcr-unlock-options-widget.ui
 %%DATADIR%%/introspect/introspect-collection.xml
 %%DATADIR%%/introspect/introspect-item.xml
 %%DATADIR%%/introspect/introspect-prompt.xml
