@@ -3,12 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.54 2010/01/27 22:28:45 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.55 2010/01/28 13:32:16 avl Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.1.19
-PORTREVISION=	1
+PORTVERSION=	1.1.21
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -19,8 +18,7 @@ COMMENT=	An opensource browser engine
 BUILD_DEPENDS=	flex:${PORTSDIR}/textproc/flex \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/share/gir-1.0/Soup-2.4.gir:${PORTSDIR}/devel/gir-repository-libsoup
-LIB_DEPENDS=	icutu.38:${PORTSDIR}/devel/icu \
-		enchant.1:${PORTSDIR}/textproc/enchant \
+LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		curl.5:${PORTSDIR}/ftp/curl \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
@@ -54,6 +52,13 @@ OPTIONS=	VIDEO "Enable video support" on \
 		STATIC "Enable building static library" off
 
 .include <bsd.port.pre.mk>
+
+.if exists (${LOCALBASE}/lib/libicutu.so.43)
+LIB_DEPENDS+=	icutu.43:${PORTSDIR}/devel/icu4
+EXTRA_PATCHES+=	${FILESDIR}/extra-patch-WebCore_platform_text_TextBreakIterator.h
+.else
+LIB_DEPENDS+=	icutu.38:${PORTSDIR}/devel/icu
+.endif
 
 .if defined(WITH_VIDEO)
 USE_GSTREAMER+=	yes

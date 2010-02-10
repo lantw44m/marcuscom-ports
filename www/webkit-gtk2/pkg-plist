@@ -68,7 +68,6 @@ share/webkit-1.0/webinspector/AuditsPanel.js
 share/webkit-1.0/webinspector/BottomUpProfileDataGridTree.js
 share/webkit-1.0/webinspector/Breakpoint.js
 share/webkit-1.0/webinspector/BreakpointsSidebarPane.js
-share/webkit-1.0/webinspector/CSSSourceSyntaxHighlighter.js
 share/webkit-1.0/webinspector/CallStackSidebarPane.js
 share/webkit-1.0/webinspector/Callback.js
 share/webkit-1.0/webinspector/ChangesView.js
@@ -80,6 +79,7 @@ share/webkit-1.0/webinspector/CookieItemsView.js
 share/webkit-1.0/webinspector/DOMAgent.js
 share/webkit-1.0/webinspector/DOMStorage.js
 share/webkit-1.0/webinspector/DOMStorageItemsView.js
+share/webkit-1.0/webinspector/DOMSyntaxHighlighter.js
 share/webkit-1.0/webinspector/DataGrid.js
 share/webkit-1.0/webinspector/Database.js
 share/webkit-1.0/webinspector/DatabaseQueryView.js
@@ -227,10 +227,9 @@ share/webkit-1.0/webinspector/InjectedScript.js
 share/webkit-1.0/webinspector/InjectedScriptAccess.js
 share/webkit-1.0/webinspector/InspectorBackendStub.js
 share/webkit-1.0/webinspector/InspectorFrontendHostStub.js
-share/webkit-1.0/webinspector/JavaScriptSourceSyntaxHighlighter.js
-share/webkit-1.0/webinspector/JavaScriptTokenizer.js
 share/webkit-1.0/webinspector/KeyboardShortcut.js
 share/webkit-1.0/webinspector/MetricsSidebarPane.js
+share/webkit-1.0/webinspector/NativeTextViewer.js
 share/webkit-1.0/webinspector/Object.js
 share/webkit-1.0/webinspector/ObjectPropertiesSection.js
 share/webkit-1.0/webinspector/ObjectProxy.js
@@ -255,9 +254,11 @@ share/webkit-1.0/webinspector/Section.js
 share/webkit-1.0/webinspector/Settings.js
 share/webkit-1.0/webinspector/SidebarPane.js
 share/webkit-1.0/webinspector/SidebarTreeElement.js
+share/webkit-1.0/webinspector/SourceCSSTokenizer.js
 share/webkit-1.0/webinspector/SourceFrame.js
-share/webkit-1.0/webinspector/SourceFrame2.js
-share/webkit-1.0/webinspector/SourceSyntaxHighlighter.js
+share/webkit-1.0/webinspector/SourceHTMLTokenizer.js
+share/webkit-1.0/webinspector/SourceJavaScriptTokenizer.js
+share/webkit-1.0/webinspector/SourceTokenizer.js
 share/webkit-1.0/webinspector/SourceView.js
 share/webkit-1.0/webinspector/StatusBarButton.js
 share/webkit-1.0/webinspector/StoragePanel.js
@@ -282,6 +283,7 @@ share/webkit-1.0/webinspector/inspector.html
 share/webkit-1.0/webinspector/inspector.js
 share/webkit-1.0/webinspector/inspectorSyntaxHighlight.css
 share/webkit-1.0/webinspector/localizedStrings.js
+share/webkit-1.0/webinspector/textEditor.css
 share/webkit-1.0/webinspector/treeoutline.js
 share/webkit-1.0/webinspector/utilities.js
 @dirrm share/webkit-1.0/webinspector/Images
