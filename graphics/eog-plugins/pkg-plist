@@ -1,4 +1,3 @@
-%%CHAMPLAIN%%lib/eog/plugins/champlain.eog-plugin
 %%PYTHON%%lib/eog/plugins/console.py
 %%PYTHON%%lib/eog/plugins/console.pyc
 %%PYTHON%%lib/eog/plugins/console.pyo
@@ -6,14 +5,15 @@
 %%EXIF%%lib/eog/plugins/exif-display/exif-display-config.ui
 %%EXIF%%lib/eog/plugins/exif-display/exif-display.ui
 lib/eog/plugins/fit-to-width.eog-plugin
-%%CHAMPLAIN%%lib/eog/plugins/libchamplain.la
-%%CHAMPLAIN%%lib/eog/plugins/libchamplain.so
 %%EXIF%%lib/eog/plugins/libexif-display.la
 %%EXIF%%lib/eog/plugins/libexif-display.so
 lib/eog/plugins/libfit-to-width.la
 lib/eog/plugins/libfit-to-width.so
+%%CHAMPLAIN%%lib/eog/plugins/libmap.la
+%%CHAMPLAIN%%lib/eog/plugins/libmap.so
 lib/eog/plugins/libsend-by-mail.la
 lib/eog/plugins/libsend-by-mail.so
+%%CHAMPLAIN%%lib/eog/plugins/map.eog-plugin
 %%PYTHON%%lib/eog/plugins/pythonconsole.eog-plugin
 %%PYTHON%%lib/eog/plugins/pythonconsole.py
 %%PYTHON%%lib/eog/plugins/pythonconsole.pyc

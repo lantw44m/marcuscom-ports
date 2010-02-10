@@ -3,11 +3,13 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog-plugins/Makefile,v 1.7 2009/12/29 12:27:23 kwm Exp $
+#   $MCom: ports/graphics/eog-plugins/Makefile,v 1.8 2010/01/15 05:07:33 avl Exp $
 #
 
+# NOTE: new plugin picasaWeb uploader. Depends on libgdata 0.6.0 (not yet released)
+
 PORTNAME=	eog-plugins
-PORTVERSION=	2.29.5
+PORTVERSION=	2.29.90
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
