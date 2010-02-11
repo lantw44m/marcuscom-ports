@@ -1,6 +1,5 @@
 bin/seahorse
 bin/seahorse-daemon
-etc/xdg/autostart/seahorse-daemon.desktop
 include/libcryptui/cryptui-key-chooser.h
 include/libcryptui/cryptui-key-combo.h
 include/libcryptui/cryptui-key-list.h
