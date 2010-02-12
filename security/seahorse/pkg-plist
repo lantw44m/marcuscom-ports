@@ -119,6 +119,7 @@ share/icons/hicolor/48x48/apps/seahorse-preferences.png
 share/icons/hicolor/48x48/apps/seahorse.png
 share/locale/ar/LC_MESSAGES/seahorse.mo
 share/locale/as/LC_MESSAGES/seahorse.mo
+share/locale/ast/LC_MESSAGES/seahorse.mo
 share/locale/az/LC_MESSAGES/seahorse.mo
 share/locale/be@latin/LC_MESSAGES/seahorse.mo
 share/locale/bg/LC_MESSAGES/seahorse.mo

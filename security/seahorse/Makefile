@@ -3,12 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.91 2010/02/10 21:32:20 kwm Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.92 2010/02/11 15:37:52 kwm Exp $
 #
 
 PORTNAME=	seahorse
 PORTVERSION=	2.29.90
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
