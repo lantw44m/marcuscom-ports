@@ -1,5 +1,6 @@
 bin/devkit-power
-etc/dbus-1/system.d/org.freedesktop.DeviceKit.Power.conf
+bin/upower
+etc/dbus-1/system.d/org.freedesktop.UPower.conf
 include/DeviceKit-power/devkit-power-gobject/devicekit-power.h
 include/DeviceKit-power/devkit-power-gobject/dkp-client.h
 include/DeviceKit-power/devkit-power-gobject/dkp-device.h
@@ -10,19 +11,41 @@ include/DeviceKit-power/devkit-power-gobject/dkp-stats-obj.h
 include/DeviceKit-power/devkit-power-gobject/dkp-version.h
 include/DeviceKit-power/devkit-power-gobject/dkp-wakeups-obj.h
 include/DeviceKit-power/devkit-power-gobject/dkp-wakeups.h
+include/upower-glib/up-client.h
+include/upower-glib/up-device.h
+include/upower-glib/up-history-item.h
+include/upower-glib/up-qos-item.h
+include/upower-glib/up-stats-item.h
+include/upower-glib/up-types.h
+include/upower-glib/up-version.h
+include/upower-glib/up-wakeup-item.h
+include/upower-glib/upower.h
+lib/girepositry-1.0/DeviceKitPowerGlib-1.0.typelib
+lib/girepositry-1.0/UPowerGlib-1.0.typelib
 lib/libdevkit-power-gobject.a
 lib/libdevkit-power-gobject.la
 lib/libdevkit-power-gobject.so
 lib/libdevkit-power-gobject.so.1
+lib/libupower-glib.a
+lib/libupower-glib.la
+lib/libupower-glib.so
+lib/libupower-glib.so.1
 libdata/pkgconfig/devkit-power-gobject.pc
+libdata/pkgconfig/upower-glib.pc
 libexec/devkit-power-daemon
-share/dbus-1/interfaces/org.freedesktop.DeviceKit.Power.Device.xml
-share/dbus-1/interfaces/org.freedesktop.DeviceKit.Power.QoS.xml
-share/dbus-1/interfaces/org.freedesktop.DeviceKit.Power.Wakeups.xml
-share/dbus-1/interfaces/org.freedesktop.DeviceKit.Power.xml
-share/dbus-1/system-services/org.freedesktop.DeviceKit.Power.service
-share/polkit-1/actions/org.freedesktop.devicekit.power.policy
-share/polkit-1/actions/org.freedesktop.devicekit.power.qos.policy
+libexec/upowerd
+share/dbus-1/interfaces/org.freedesktop.UPower.Device.xml
+share/dbus-1/interfaces/org.freedesktop.UPower.QoS.xml
+share/dbus-1/interfaces/org.freedesktop.UPower.Wakeups.xml
+share/dbus-1/interfaces/org.freedesktop.UPower.xml
+share/dbus-1/system-services/org.freedesktop.UPower.service
+share/gir-1.0/DeviceKitPowerGlib-1.0.gir
+share/gir-1.0/UPowerGlib-1.0.gir
+share/locale/it/LC_MESSAGES/UPower.mo
+share/locale/pl/LC_MESSAGES/UPower.mo
+share/locale/sv/LC_MESSAGES/UPower.mo
+share/polkit-1/actions/org.freedesktop.upower.policy
+share/polkit-1/actions/org.freedesktop.upower.qos.policy
 @exec mkdir -p /var/lib/DeviceKit-power
 @dirrm include/DeviceKit-power/devkit-power-gobject
 @dirrm include/DeviceKit-power

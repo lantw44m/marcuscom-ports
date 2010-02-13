@@ -3,21 +3,24 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/devicekit-power/Makefile,v 1.6 2010/01/09 06:41:35 marcus Exp $
+#   $MCom: ports/sysutils/upower/Makefile,v 1.7 2010/01/23 16:40:05 marcus Exp $
 #
 
-PORTNAME=	DeviceKit-power
-DISTVERSION=	014
+PORTNAME=	UPower
+DISTVERSION=	0.9.0
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	D-Bus daemon for simplifying power management tasks
 
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
     		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
 
 USE_GETTEXT=	yes
+USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack ltverhack glib20
 USE_AUTOTOOLS=	libtool:22
@@ -34,11 +37,12 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 CONFIGURE_ARGS+=--disable-man-pages
 .else
 BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/textproc/docbook-410 \
+    		${LOCALBASE}/share/xml/docbook/4.1.2/docbookx.dtd:${PORTSDIR}/textproc/docbook-sk \
     		xsltproc:${PORTSDIR}/textproc/libxslt \
 		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
-MAN1=		devkit-power.1
-MAN7=		DeviceKit-power.7
-MAN8=		devkit-power-daemon.8
+MAN1=		upower.1
+MAN7=		UPower.7
+MAN8=		upowerd.8
 .endif
 
 .include <bsd.port.mk>

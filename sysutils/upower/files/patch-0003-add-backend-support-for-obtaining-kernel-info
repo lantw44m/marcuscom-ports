@@ -6,54 +6,54 @@ Subject: [PATCH 3/3] add backend support for obtaining kernel info
 Add FreeBSD-only support for pulling information about supported
 suspend states, commands, swap, etc. from the backend.
 ---
- src/dkp-backend.h |   14 +++++++
- src/dkp-daemon.c  |   99 ++++++++++++++++++++++++++++++++++++-----------------
+ src/up-backend.h |   14 +++++++
+ src/up-daemon.c  |   99 ++++++++++++++++++++++++++++++++++++-----------------
  2 files changed, 81 insertions(+), 32 deletions(-)
 
-diff --git a/src/dkp-backend.h b/src/dkp-backend.h
+diff --git a/src/up-backend.h b/src/up-backend.h
 index c03bac9..f4e488f 100644
---- src/dkp-backend.h
-+++ src/dkp-backend.h
-@@ -68,6 +68,20 @@ void		 dkp_backend_test			(gpointer	 user_data);
- gboolean	 dkp_backend_coldplug			(DkpBackend	*backend,
- 							 DkpDaemon	*daemon);
+--- src/up-backend.h
++++ src/up-backend.h
+@@ -68,6 +68,20 @@ void		 up_backend_test			(gpointer	 user_data);
+ gboolean	 up_backend_coldplug			(UpBackend	*backend,
+ 							 UpDaemon	*daemon);
  
-+gboolean	dkp_backend_can_suspend			(DkpBackend	*backend);
++gboolean	up_backend_can_suspend			(UpBackend	*backend);
 +
-+gboolean	dkp_backend_can_hibernate		(DkpBackend	*backend);
++gboolean	up_backend_can_hibernate		(UpBackend	*backend);
 +
-+gboolean	dkp_backend_has_encrypted_swap		(DkpBackend	*backend);
++gboolean	up_backend_has_encrypted_swap		(UpBackend	*backend);
 +
-+gfloat		dkp_backend_get_used_swap		(DkpBackend	*backend);
++gfloat		up_backend_get_used_swap		(UpBackend	*backend);
 +
-+gchar		*dkp_backend_get_powersave_command	(DkpBackend	*backend,							 gboolean	powersave);
++gchar		*up_backend_get_powersave_command	(UpBackend	*backend,							 gboolean	powersave);
 +
-+gchar		*dkp_backend_get_suspend_command	(DkpBackend	*backend);
++gchar		*up_backend_get_suspend_command	(UpBackend	*backend);
 +
-+gchar		*dkp_backend_get_hibernate_command	(DkpBackend	*backend);
++gchar		*up_backend_get_hibernate_command	(UpBackend	*backend);
 +
  G_END_DECLS
  
- #endif /* __DKP_BACKEND_H */
-diff --git a/src/dkp-daemon.c b/src/dkp-daemon.c
+ #endif /* __UP_BACKEND_H */
+diff --git a/src/up-daemon.c b/src/up-daemon.c
 index 47d84d5..4085fb3 100644
---- src/dkp-daemon.c
-+++ src/dkp-daemon.c
-@@ -109,6 +109,7 @@ G_DEFINE_TYPE (DkpDaemon, dkp_daemon, G_TYPE_OBJECT)
+--- src/up-daemon.c
++++ src/up-daemon.c
+@@ -109,6 +109,7 @@ G_DEFINE_TYPE (UpDaemon, up_daemon, G_TYPE_OBJECT)
  static gboolean
- dkp_daemon_check_sleep_states (DkpDaemon *daemon)
+ up_daemon_check_sleep_states (UpDaemon *daemon)
  {
 +#ifndef __FreeBSD__
  	gchar *contents = NULL;
  	GError *error = NULL;
  	gboolean ret;
-@@ -128,6 +129,12 @@ dkp_daemon_check_sleep_states (DkpDaemon *daemon)
+@@ -128,6 +129,12 @@ up_daemon_check_sleep_states (UpDaemon *daemon)
  out:
  	g_free (contents);
  	return ret;
 +#else
-+	daemon->priv->kernel_can_suspend = dkp_backend_can_suspend (daemon->priv->backend);
-+	daemon->priv->kernel_can_hibernate = dkp_backend_can_hibernate (daemon->priv->backend);
++	daemon->priv->kernel_can_suspend = up_backend_can_suspend (daemon->priv->backend);
++	daemon->priv->kernel_can_hibernate = up_backend_can_hibernate (daemon->priv->backend);
 +
 +	return TRUE;
 +#endif
@@ -62,7 +62,7 @@ index 47d84d5..4085fb3 100644
  /**
 @@ -146,6 +153,7 @@ out:
  static gboolean
- dkp_daemon_check_encrypted_swap (DkpDaemon *daemon)
+ up_daemon_check_encrypted_swap (UpDaemon *daemon)
  {
 +#ifndef __FreeBSD__
  	gchar *contents_swaps = NULL;
@@ -73,14 +73,14 @@ index 47d84d5..4085fb3 100644
  	g_strfreev (lines_crypttab);
  	return encrypted_swap;
 +#else
-+	return dkp_backend_has_encrypted_swap (daemon->priv->backend);
++	return up_backend_has_encrypted_swap (daemon->priv->backend);
 +#endif
  }
  
  /**
 @@ -243,6 +254,7 @@ out:
  static gfloat
- dkp_daemon_check_swap_space (DkpDaemon *daemon)
+ up_daemon_check_swap_space (UpDaemon *daemon)
  {
 +#ifndef __FreeBSD__
  	gchar *contents = NULL;
@@ -91,12 +91,12 @@ index 47d84d5..4085fb3 100644
  	g_strfreev (lines);
  	return percentage;
 +#else
-+	return dkp_backend_get_used_swap (daemon->priv->backend);
++	return up_backend_get_used_swap (daemon->priv->backend);
 +#endif
  }
  
  /**
-@@ -423,13 +428,21 @@ dkp_daemon_set_pmutils_powersave (DkpDaemon *daemon, gboolean powersave)
+@@ -423,13 +428,21 @@ up_daemon_set_pmutils_powersave (UpDaemon *daemon, gboolean powersave)
  	GError *error = NULL;
  
  	/* run script from pm-utils */
@@ -109,7 +109,7 @@ index 47d84d5..4085fb3 100644
 -		g_error_free (error);
 -		goto out;
 +#else
-+	command = dkp_backend_get_powersave_command (daemon->priv->backend, powersave);
++	command = up_backend_get_powersave_command (daemon->priv->backend, powersave);
 +#endif
 +	if (command != NULL) {
 +		egg_debug ("excuting command: %s", command);
@@ -124,7 +124,7 @@ index 47d84d5..4085fb3 100644
  	}
  out:
  	g_free (command);
-@@ -501,6 +514,7 @@ dkp_daemon_suspend (DkpDaemon *daemon, DBusGMethodInvocation *context)
+@@ -501,6 +514,7 @@ up_daemon_suspend (UpDaemon *daemon, DBusGMethodInvocation *context)
  	GError *error;
  	GError *error_local = NULL;
  	PolkitSubject *subject = NULL;
@@ -132,14 +132,14 @@ index 47d84d5..4085fb3 100644
  	gchar *stdout = NULL;
  	gchar *stderr = NULL;
  
-@@ -521,19 +535,29 @@ dkp_daemon_suspend (DkpDaemon *daemon, DBusGMethodInvocation *context)
- 	if (!dkp_polkit_check_auth (daemon->priv->polkit, subject, "org.freedesktop.devicekit.power.suspend", context))
+@@ -521,19 +535,29 @@ up_daemon_suspend (UpDaemon *daemon, DBusGMethodInvocation *context)
+ 	if (!up_polkit_check_auth (daemon->priv->polkit, subject, "org.freedesktop.devicekit.power.suspend", context))
  		goto out;
  
 -	ret = g_spawn_command_line_sync ("/usr/sbin/pm-suspend", &stdout, &stderr, NULL, &error_local);
 -	if (!ret) {
--		error = g_error_new (DKP_DAEMON_ERROR,
--				     DKP_DAEMON_ERROR_GENERAL,
+-		error = g_error_new (UP_DAEMON_ERROR,
+-				     UP_DAEMON_ERROR_GENERAL,
 -				     "Failed to spawn: %s, stdout:%s, stderr:%s", error_local->message, stdout, stderr);
 -		g_error_free (error_local);
 -		dbus_g_method_return_error (context, error);
@@ -147,13 +147,13 @@ index 47d84d5..4085fb3 100644
 +#ifndef __FreeBSD__
 +	command = g_strdup ("/usr/sbin/pm-suspend");
 +#else
-+	command = dkp_backend_get_suspend_command (daemon->priv->backend);
++	command = up_backend_get_suspend_command (daemon->priv->backend);
 +#endif
 +	if (command != NULL) {
 +		ret = g_spawn_command_line_sync (command, &stdout, &stderr, NULL, &error_local);
 +		if (!ret) {
-+			error = g_error_new (DKP_DAEMON_ERROR,
-+				     	DKP_DAEMON_ERROR_GENERAL,
++			error = g_error_new (UP_DAEMON_ERROR,
++				     	UP_DAEMON_ERROR_GENERAL,
 +				     	"Failed to spawn: %s, stdout:%s, stderr:%s", error_local->message, stdout, stderr);
 +			g_error_free (error_local);
 +			dbus_g_method_return_error (context, error);
@@ -170,7 +170,7 @@ index 47d84d5..4085fb3 100644
  	if (subject != NULL)
  		g_object_unref (subject);
  	return TRUE;
-@@ -549,6 +573,7 @@ dkp_daemon_hibernate (DkpDaemon *daemon, DBusGMethodInvocation *context)
+@@ -549,6 +573,7 @@ up_daemon_hibernate (UpDaemon *daemon, DBusGMethodInvocation *context)
  	GError *error;
  	GError *error_local = NULL;
  	PolkitSubject *subject = NULL;
@@ -178,14 +178,14 @@ index 47d84d5..4085fb3 100644
  	gchar *stdout = NULL;
  	gchar *stderr = NULL;
  
-@@ -589,19 +614,29 @@ dkp_daemon_hibernate (DkpDaemon *daemon, DBusGMethodInvocation *context)
- 	if (!dkp_polkit_check_auth (daemon->priv->polkit, subject, "org.freedesktop.devicekit.power.hibernate", context))
+@@ -589,19 +614,29 @@ up_daemon_hibernate (UpDaemon *daemon, DBusGMethodInvocation *context)
+ 	if (!up_polkit_check_auth (daemon->priv->polkit, subject, "org.freedesktop.devicekit.power.hibernate", context))
  		goto out;
  
 -	ret = g_spawn_command_line_sync ("/usr/sbin/pm-hibernate", &stdout, &stderr, NULL, &error_local);
 -	if (!ret) {
--		error = g_error_new (DKP_DAEMON_ERROR,
--				     DKP_DAEMON_ERROR_GENERAL,
+-		error = g_error_new (UP_DAEMON_ERROR,
+-				     UP_DAEMON_ERROR_GENERAL,
 -				     "Failed to spawn: %s, stdout:%s, stderr:%s", error_local->message, stdout, stderr);
 -		g_error_free (error_local);
 -		dbus_g_method_return_error (context, error);
@@ -193,13 +193,13 @@ index 47d84d5..4085fb3 100644
 +#ifndef __FreeBSD__
 +	command = g_strdup ("/usr/sbin/pm-hibernate");
 +#else
-+	command = dkp_backend_get_hibernate_command (daemon->priv->backend);
++	command = up_backend_get_hibernate_command (daemon->priv->backend);
 +#endif
 +	if (command != NULL) {
 +		ret = g_spawn_command_line_sync (command, &stdout, &stderr, NULL, &error_local);
 +		if (!ret) {
-+			error = g_error_new (DKP_DAEMON_ERROR,
-+				     	DKP_DAEMON_ERROR_GENERAL,
++			error = g_error_new (UP_DAEMON_ERROR,
++				     	UP_DAEMON_ERROR_GENERAL,
 +				     	"Failed to spawn: %s, stdout:%s, stderr:%s", error_local->message, stdout, stderr);
 +			g_error_free (error_local);
 +			dbus_g_method_return_error (context, error);
