@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.58 2010/01/23 16:40:05 marcus Exp $
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.59 2010/02/04 12:41:25 avl Exp $
 #
 
 PORTNAME=	gnome-power-manager
 PORTVERSION=	2.29.2
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -16,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Power management system for the GNOME Desktop
 
 LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
-		devkit-power-gobject.1:${PORTSDIR}/sysutils/devicekit-power \
+		devkit-power-gobject.1:${PORTSDIR}/sysutils/upower \
 		canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
 		notify.1:${PORTSDIR}/devel/libnotify \
 		execinfo:${PORTSDIR}/devel/libexecinfo \
