@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.285 2010/01/17 13:32:50 kwm Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.286 2010/02/11 10:00:47 kwm Exp $
 #
 
 PORTNAME=	gnome2
@@ -94,7 +94,7 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 		gnome-file-share-properties:${PORTSDIR}/www/gnome-user-share \
 		${LOCALBASE}/libexec/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
 		${LOCALBASE}/lib/hamster-applet/hamster-applet:${PORTSDIR}/deskutils/hamster-applet \
-		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi2-atk \
+		${LOCALBASE}/lib/gtk-2.0/modules/at-spi-dbus/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi2-atk \
 		gpk-application:${PORTSDIR}/ports-mgmt/gnome-packagekit
 .if ${ARCH} == "i386"
 #RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
