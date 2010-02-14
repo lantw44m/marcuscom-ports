@@ -1,6 +1,22 @@
 --- src/sharp/datetime.cpp.orig	2009-12-28 12:46:01.000000000 +0100
-+++ src/sharp/datetime.cpp	2010-01-02 22:05:18.000000000 +0100
-@@ -83,14 +83,14 @@ namespace sharp {
++++ src/sharp/datetime.cpp	2010-02-14 15:47:21.000000000 +0100
+@@ -69,28 +69,28 @@ namespace sharp {
+   int DateTime::day() const
+   {
+     struct tm result;
+-    localtime_r(&m_date.tv_sec, &result);
++    localtime_r((const time_t *)&m_date.tv_sec, &result);
+     return result.tm_mday;
+   }
+ 
+   int DateTime::month() const
+   {
+     struct tm result;
+-    localtime_r(&m_date.tv_sec, &result);
++    localtime_r((const time_t *)&m_date.tv_sec, &result);
+     return result.tm_mon + 1;
+   }
+ 
    int DateTime::year() const
    {
      struct tm result;
