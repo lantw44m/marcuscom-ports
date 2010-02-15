@@ -11,9 +11,14 @@ lib/eog/plugins/libfit-to-width.la
 lib/eog/plugins/libfit-to-width.so
 %%CHAMPLAIN%%lib/eog/plugins/libmap.la
 %%CHAMPLAIN%%lib/eog/plugins/libmap.so
+lib/eog/plugins/libpostasa.la
+lib/eog/plugins/libpostasa.so
 lib/eog/plugins/libsend-by-mail.la
 lib/eog/plugins/libsend-by-mail.so
 %%CHAMPLAIN%%lib/eog/plugins/map.eog-plugin
+lib/eog/plugins/postasa.eog-plugin
+lib/eog/plugins/postasa/postasa-config.xml
+lib/eog/plugins/postasa/postasa-uploads.xml
 %%PYTHON%%lib/eog/plugins/pythonconsole.eog-plugin
 %%PYTHON%%lib/eog/plugins/pythonconsole.py
 %%PYTHON%%lib/eog/plugins/pythonconsole.pyc
@@ -75,4 +80,5 @@ share/locale/zh_TW/LC_MESSAGES/eog-plugins.mo
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrm lib/eog/plugins/postasa
 %%EXIF%%@dirrm lib/eog/plugins/exif-display

@@ -3,13 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog-plugins/Makefile,v 1.8 2010/01/15 05:07:33 avl Exp $
+#   $MCom: ports/graphics/eog-plugins/Makefile,v 1.9 2010/02/10 22:47:17 kwm Exp $
 #
-
-# NOTE: new plugin picasaWeb uploader. Depends on libgdata 0.6.0 (not yet released)
 
 PORTNAME=	eog-plugins
 PORTVERSION=	2.29.90
+PORTREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -18,6 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plug-ins for the Eye of GNOME image viewer application
 
 BUILD_DEPENDS=	eog:${PORTSDIR}/graphics/eog
+LIB_DEPENDS=	gdata.7:${PORTSDIR}/devel/libgdata
 RUN_DEPENDS=	eog:${PORTSDIR}/graphics/eog
 
 USE_BZIP2=	yes
