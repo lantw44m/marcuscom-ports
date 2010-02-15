@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libchamplain/Makefile,v 1.14 2010/01/11 05:21:56 marcus Exp $
+#   $MCom: ports/graphics/libchamplain/Makefile,v 1.15 2010/01/30 23:34:40 marcus Exp $
 #
 
 PORTNAME=	libchamplain
@@ -28,16 +28,14 @@ USE_LDCONFIG=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-# python bindings and mono need to be ported to clutter 1.0 first.
-# And clutter 1.0 versions of py-clutter and clutter-sharp need to
-# get released upstream too.
+# clutter-sharp need to get released.
 CONFIGURE_ARGS+=--enable-managed=no
 
 PLIST_SUB=	VERSION=${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 
 .if !defined(WITHOUT_PYTHON)
 USE_PYTHON=	yes
-PYCLUTTER_GTK=		${LOCALBASE}/libdata/pkgconfig/pyclutter-gtk-0.9.pc
+PYCLUTTER_GTK=		${LOCALBASE}/libdata/pkgconfig/pyclutter-gtk-0.10.pc
 BUILD_DEPENDS+=		${PYCLUTTER_GTK}:${PORTSDIR}/graphics/py-clutter-gtk
 RUN_DEPENDS+=		${PYCLUTTER_GTK}:${PORTSDIR}/graphics/py-clutter-gtk
 CONFIGURE_ARGS+=	--enable-python=yes
@@ -51,5 +49,9 @@ PLIST_SUB+=		PYTHON="@comment "
 	@${ECHO_CMD} ""
 	@${ECHO_CMD} "Specify WITHOUT_PYTHON=yes to disable python bindings"
 	@${ECHO_CMD} ""
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|pyclutter-gtk-0.9|pyclutter-gtk-0.10|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
