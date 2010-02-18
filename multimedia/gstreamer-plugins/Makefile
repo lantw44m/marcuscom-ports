@@ -3,7 +3,7 @@
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 #
 # $FreeBSD: ports/multimedia/gstreamer-plugins/Makefile,v 1.150 2009/12/21 07:07:52 ahze Exp $
-#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.121 2010/01/28 13:39:23 kwm Exp $
+#   $MCom: ports/multimedia/gstreamer-plugins/Makefile,v 1.122 2010/02/09 14:43:27 kwm Exp $
 #
 
 PORTNAME=	gstreamer
@@ -11,7 +11,7 @@ PORTVERSION?=	${BASE_PORTVERSION}
 PORTREVISION?=	0
 PORTEPOCH=	3
 CATEGORIES?=	multimedia audio
-MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-plugins-base/pre/:base \
+MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-plugins-base/:base \
 		http://gstreamer.freedesktop.org/src/gst-plugins-bad/:bad \
 		http://gstreamer.freedesktop.org/src/gst-plugins-good/:good \
 		http://gstreamer.freedesktop.org/src/gst-plugins-ugly/:ugly \
@@ -31,13 +31,13 @@ LIB_DEPENDS+=	gstreamer-0.10.0:${PORTSDIR}/multimedia/gstreamer \
 
 CFLAGS:=	${CFLAGS} -O2 -Wno-format
 
-BASE_PORTVERSION=	0.10.25.3
+BASE_PORTVERSION=	0.10.26
 BASE_DISTNAME=		gst-plugins-base-${BASE_PORTVERSION}
 BASE_DISTFILE=		${BASE_DISTNAME}${EXTRACT_SUFX}
 BAD_PORTVERSION=	0.10.17
 BAD_DISTNAME=		gst-plugins-bad-${BAD_PORTVERSION}
 BAD_DISTFILE=		${BAD_DISTNAME}${EXTRACT_SUFX}
-GOOD_PORTVERSION=	0.10.17
+GOOD_PORTVERSION=	0.10.18
 GOOD_DISTNAME=		gst-plugins-good-${GOOD_PORTVERSION}
 GOOD_DISTFILE=		${GOOD_DISTNAME}${EXTRACT_SUFX}
 UGLY_PORTVERSION=	0.10.13
