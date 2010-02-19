@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.8 2010/01/09 05:54:46 marcus Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.9 2010/02/19 06:30:36 marcus Exp $
 #
 
 PORTNAME=	mutter
@@ -17,7 +17,8 @@ COMMENT=	Window and compositing manager based on Clutter
 
 BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
-		clutter-glx-1.0:${PORTSDIR}/graphics/clutter
+		clutter-glx-1.0:${PORTSDIR}/graphics/clutter \
+		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
 USE_BZIP2=	yes
