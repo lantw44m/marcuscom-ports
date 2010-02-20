@@ -1,8 +1,10 @@
+bin/at-spi-dbus-bus
 libexec/at-spi2-registryd
+etc/at-spi2/accessibility.conf
+etc/xdg/autostart/at-spi-dbus-bus.desktop
 share/at-spi2/dbus/org.freedesktop.atspi.Accessible
 share/at-spi2/dbus/org.freedesktop.atspi.Action
 share/at-spi2/dbus/org.freedesktop.atspi.Application
-share/at-spi2/dbus/org.freedesktop.atspi.Cache
 share/at-spi2/dbus/org.freedesktop.atspi.Collection
 share/at-spi2/dbus/org.freedesktop.atspi.Component
 share/at-spi2/dbus/org.freedesktop.atspi.Desktop
@@ -21,7 +23,10 @@ share/at-spi2/dbus/org.freedesktop.atspi.Selection
 share/at-spi2/dbus/org.freedesktop.atspi.State
 share/at-spi2/dbus/org.freedesktop.atspi.Table
 share/at-spi2/dbus/org.freedesktop.atspi.Text
+share/at-spi2/dbus/org.freedesktop.atspi.Tree
 share/at-spi2/dbus/org.freedesktop.atspi.Value
+share/dbus-1/services/org.a11y.atspi.Registry.service
 share/dbus-1/services/org.freedesktop.atspi.Registry.service
 @dirrm share/at-spi2/dbus
 @dirrm share/at-spi2
+@dirrm etc/at-spi2
