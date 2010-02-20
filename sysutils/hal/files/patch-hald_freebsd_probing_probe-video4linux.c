@@ -1,8 +1,8 @@
---- hald/freebsd/probing/probe-video4linux.c.orig	2010-02-19 23:28:30.000000000 -0500
-+++ hald/freebsd/probing/probe-video4linux.c	2010-02-19 23:36:53.000000000 -0500
+--- hald/freebsd/probing/probe-video4linux.c.orig	2010-02-20 10:53:06.000000000 +0100
++++ hald/freebsd/probing/probe-video4linux.c	2010-02-20 10:53:31.000000000 +0100
 @@ -0,0 +1,230 @@
 +/***************************************************************************
-+ * CVSID: $Id: patch-hald_freebsd_probing_probe-video4linux.c,v 1.2 2010-02-20 04:38:55 marcus Exp $
++ * CVSID: $Id: patch-hald_freebsd_probing_probe-video4linux.c,v 1.3 2010-02-20 09:56:32 kwm Exp $
 + *
 + * probe-video4linux.c : Probe video4linux devices
 + * Adapted for FreeBSD by : Joe Marcus Clarke <marcus@FreeBSD.org>
@@ -137,7 +137,7 @@
 +
 +	bus = atoi (busstr);
 +	addr = atoi (addrstr);
-+	intf = aoti (intfstr);
++	intf = atoi (intfstr);
 +	if (intf != 0)
 +		goto out;
 +
