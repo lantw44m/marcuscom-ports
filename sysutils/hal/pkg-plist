@@ -66,6 +66,7 @@ libexec/hald-probe-smbios
 libexec/hald-probe-storage
 %%USB2%%libexec/hald-probe-usb2-device
 %%USB2%%libexec/hald-probe-usb2-interface
+%%USB2%%libexec/hald-probe-video4linux
 libexec/hald-probe-volume
 libexec/hald-runner
 sbin/hald
