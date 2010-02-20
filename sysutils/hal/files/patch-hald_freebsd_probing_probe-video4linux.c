@@ -1,8 +1,8 @@
---- hald/freebsd/probing/probe-video4linux.c.orig	2010-02-19 23:15:08.000000000 -0500
-+++ hald/freebsd/probing/probe-video4linux.c	2010-02-19 23:18:00.000000000 -0500
-@@ -0,0 +1,221 @@
+--- hald/freebsd/probing/probe-video4linux.c.orig	2010-02-19 23:28:30.000000000 -0500
++++ hald/freebsd/probing/probe-video4linux.c	2010-02-19 23:36:53.000000000 -0500
+@@ -0,0 +1,230 @@
 +/***************************************************************************
-+ * CVSID: $Id: patch-hald_freebsd_probing_probe-video4linux.c,v 1.1 2010-02-20 04:24:16 marcus Exp $
++ * CVSID: $Id: patch-hald_freebsd_probing_probe-video4linux.c,v 1.2 2010-02-20 04:38:55 marcus Exp $
 + *
 + * probe-video4linux.c : Probe video4linux devices
 + * Adapted for FreeBSD by : Joe Marcus Clarke <marcus@FreeBSD.org>
@@ -113,9 +113,11 @@
 +	int unit = -1;
 +	int bus = -1;
 +	int addr = -1;
++	int intf = -1;
 +	char *device_file = NULL;
 +	char *busstr;
 +	char *addrstr;
++	char *intfstr;
 +	struct video_capability v1cap;
 +	struct v4l2_capability v2cap;
 +	LibHalChangeSet *cset;
@@ -129,9 +131,16 @@
 +	addrstr = getenv ("HAL_PROP_USB_PORT_NUMBER");
 +	if (! addrstr)
 +		goto out;
++	intfstr = getenv ("HAL_PROP_USB_INTERFACE_NUMBER");
++	if (! intfstr)
++		goto out;
 +
 +	bus = atoi (busstr);
 +	addr = atoi (addrstr);
++	intf = aoti (intfstr);
++	if (intf != 0)
++		goto out;
++
 +	unit = hfp_v4l_get_unit (bus, addr);
 +	if (unit == -1)
 +		goto out;
