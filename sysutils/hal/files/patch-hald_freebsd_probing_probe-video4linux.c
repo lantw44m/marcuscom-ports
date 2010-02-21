@@ -1,8 +1,8 @@
---- hald/freebsd/probing/probe-video4linux.c.orig	2010-02-20 10:53:06.000000000 +0100
-+++ hald/freebsd/probing/probe-video4linux.c	2010-02-20 10:53:31.000000000 +0100
-@@ -0,0 +1,230 @@
+--- hald/freebsd/probing/probe-video4linux.c.orig	2010-02-21 14:51:01.000000000 -0500
++++ hald/freebsd/probing/probe-video4linux.c	2010-02-21 14:54:51.000000000 -0500
+@@ -0,0 +1,225 @@
 +/***************************************************************************
-+ * CVSID: $Id: patch-hald_freebsd_probing_probe-video4linux.c,v 1.3 2010-02-20 09:56:32 kwm Exp $
++ * CVSID: $Id: patch-hald_freebsd_probing_probe-video4linux.c,v 1.4 2010-02-21 19:57:47 marcus Exp $
 + *
 + * probe-video4linux.c : Probe video4linux devices
 + * Adapted for FreeBSD by : Joe Marcus Clarke <marcus@FreeBSD.org>
@@ -31,7 +31,6 @@
 +#  include <config.h>
 +#endif
 +
-+#include <sys/param.h>
 +#include <sys/types.h>
 +#include <sys/user.h>
 +#include <sys/sysctl.h>
@@ -50,7 +49,6 @@
 +
 +#include "../libprobe/hfp.h"
 +
-+#if __FreeBSD_version >= 800064
 +#define WEBCAMD_PID_FILE "/var/run/webcamd"
 +#define V4B_DEVICES_MAX 10 /* XXX from video4bsd.h */
 +
@@ -102,13 +100,11 @@
 +
 +	return i;
 +}
-+#endif
 +
 +int
 +main (int argc, char **argv)
 +{
 +	int ret = 1;
-+#if __FreeBSD_version >= 800064
 +	int fd = -1;
 +	int unit = -1;
 +	int bus = -1;
@@ -227,7 +223,6 @@
 +	if (fd >= 0)
 +		close (fd);
 +
-+#endif
 +	return ret;
 +}
 +

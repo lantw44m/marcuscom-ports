@@ -1,5 +1,5 @@
 --- hald/freebsd/hf-usb2.c.orig	2009-08-24 08:42:29.000000000 -0400
-+++ hald/freebsd/hf-usb2.c	2010-02-19 22:53:40.000000000 -0500
++++ hald/freebsd/hf-usb2.c	2010-02-21 14:54:07.000000000 -0500
 @@ -42,22 +42,6 @@
  static struct libusb20_backend *hf_usb2_be = NULL;
  
@@ -48,21 +48,19 @@
  	          hf_runner_run_sync(device, 0, "hald-probe-mouse", NULL);
  	        }
  	      else if (! strcmp(driver, "uhid"))
-@@ -133,6 +117,13 @@ hf_usb2_probe_interfaces(HalDevice *pare
+@@ -133,6 +117,11 @@ hf_usb2_probe_interfaces(HalDevice *pare
                    hf_usb_add_webcam_properties(device);
  	        }
  	    }
 +	  else
 +            {
-+#if __FreeBSD_version >= 800064
 +	      /* Try and detect webcamd devices. */
 +              hf_runner_run_sync(device, 0, "hald-probe-video4linux", NULL);
-+#endif
 +	    }
  
  	  hf_usb_device_compute_udi(device);
  	  hf_device_add(device);
-@@ -192,11 +183,12 @@ hf_usb2_probe (void)
+@@ -192,11 +181,12 @@ hf_usb2_probe (void)
        addr = libusb20_dev_get_address(pdev);
  
        if (addr == 1)
@@ -77,7 +75,7 @@
        if (! parent || hal_device_property_get_bool(parent, "info.ignore"))
          continue;
  
-@@ -216,7 +208,13 @@ hf_usb2_devd_add (const char *name,
+@@ -216,7 +206,13 @@ hf_usb2_devd_add (const char *name,
    HalDevice *parent_device;
    int bus, addr, pbus, paddr;
  
@@ -92,7 +90,7 @@
      return FALSE;
    else if (strncmp(parent, "ugen", strlen("ugen")))
      return TRUE;
-@@ -232,7 +230,8 @@ hf_usb2_devd_add (const char *name,
+@@ -232,7 +228,8 @@ hf_usb2_devd_add (const char *name,
  
    parent_device = hf_device_store_match(hald_get_gdl(),
      "usb_device.bus_number", HAL_PROPERTY_TYPE_INT32, pbus,
@@ -102,7 +100,7 @@
  
    if (parent_device && ! hal_device_property_get_bool(parent_device,
        "info.ignore"))
-@@ -255,8 +254,6 @@ hf_usb2_devd_remove (const char *name,
+@@ -255,8 +252,6 @@ hf_usb2_devd_remove (const char *name,
  
    if (strncmp(name, "ugen", strlen("ugen")))
      return FALSE;
@@ -111,7 +109,7 @@
  
    if (sscanf(name, "ugen%i.%i", &bus, &addr) != 2)
      return FALSE;
-@@ -265,7 +262,8 @@ hf_usb2_devd_remove (const char *name,
+@@ -265,7 +260,8 @@ hf_usb2_devd_remove (const char *name,
  
    device = hf_device_store_match(hald_get_gdl(), "usb_device.bus_number",
      HAL_PROPERTY_TYPE_INT32, bus, "usb_device.port_number",
@@ -121,7 +119,7 @@
  
    if (device)
      {
-@@ -276,6 +274,23 @@ hf_usb2_devd_remove (const char *name,
+@@ -276,6 +272,23 @@ hf_usb2_devd_remove (const char *name,
    return FALSE;
  }
  
@@ -145,7 +143,7 @@
  HFHandler hf_usb2_handler = {
    .privileged_init	= hf_usb2_privileged_init,
    .probe		= hf_usb2_probe
-@@ -283,5 +298,6 @@ HFHandler hf_usb2_handler = {
+@@ -283,5 +296,6 @@ HFHandler hf_usb2_handler = {
  
  HFDevdHandler hf_usb2_devd_handler = {
    .add =	hf_usb2_devd_add,
