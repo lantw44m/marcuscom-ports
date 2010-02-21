@@ -3,18 +3,21 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgdata/Makefile,v 1.5 2010/02/15 10:08:26 kwm Exp $
+#   $MCom: ports/devel/libgdata/Makefile,v 1.6 2010/02/16 05:30:39 marcus Exp $
 #
 
 PORTNAME=	libgdata
-PORTVERSION=	0.6.1
+PORTVERSION=	0.6.2
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GLib based implimentation of the GData protocol
 
+BUILD_DEPENDS=	${LOCALBASE}/share/gir-1.0/Soup-2.4.gir:${PORTSDIR}/devel/gir-repository-libsoup \
+		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup
+RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/Soup-2.4.gir:${PORTSDIR}/devel/gir-repository-libsoup
 
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
@@ -22,15 +25,9 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	libtool:22
-USE_GNOME=	intltool
+USE_GNOME=	gnomehack intltool
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include " \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS+=--with-html-dir="${PREFIX}/share/doc"
-# introspection is broken
-CONFIGURE_ARGS+=--enable-introspection=no
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|g' \
-		${WRKSRC}/Makefile.in
 
 .include <bsd.port.mk>

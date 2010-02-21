@@ -60,6 +60,7 @@ include/libgdata/gdata/services/youtube/gdata-youtube-query.h
 include/libgdata/gdata/services/youtube/gdata-youtube-service.h
 include/libgdata/gdata/services/youtube/gdata-youtube-state.h
 include/libgdata/gdata/services/youtube/gdata-youtube-video.h
+lib/girepository-1.0/GData-0.0.typelib
 lib/libgdata.a
 lib/libgdata.la
 lib/libgdata.so
@@ -155,6 +156,7 @@ share/doc/gdata/right.png
 share/doc/gdata/structure.png
 share/doc/gdata/style.css
 share/doc/gdata/up.png
+share/gir-1.0/GData-0.0.gir
 share/locale/ca/LC_MESSAGES/gdata.mo
 share/locale/cs/LC_MESSAGES/gdata.mo
 share/locale/de/LC_MESSAGES/gdata.mo
