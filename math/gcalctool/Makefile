@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool/Makefile,v 1.127 2010/01/31 05:28:05 avl Exp $
+#   $MCom: ports/math/gcalctool/Makefile,v 1.128 2010/02/10 21:05:11 kwm Exp $
 #
 
 PORTNAME=	gcalctool
-PORTVERSION=	5.29.90
+PORTVERSION=	5.29.91
 PORTEPOCH=	2
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
@@ -20,7 +20,6 @@ LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 USE_BZIP2=	yes
 USE_BISON=	build
-INSTALLS_OMF=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:22
