@@ -3,11 +3,12 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.53 2010/01/31 15:24:54 avl Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.54 2010/02/08 11:16:57 kwm Exp $
 #
 
 PORTNAME=	anjuta
 PORTVERSION=	2.29.90.0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -29,7 +30,8 @@ RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
 		libtool:${PORTSDIR}/devel/libtool22 \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		exctags:${PORTSDIR}/devel/ctags \
-		gdb66:${PORTSDIR}/devel/gdb6
+		gdb66:${PORTSDIR}/devel/gdb6 \
+		yelp:${PORTSDIR}/x11/yelp
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	autotools:run
