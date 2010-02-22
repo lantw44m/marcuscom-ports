@@ -1,5 +1,5 @@
 --- hald/freebsd/hf-storage.c.orig	2009-08-24 08:42:29.000000000 -0400
-+++ hald/freebsd/hf-storage.c	2009-12-23 14:09:05.000000000 -0500
++++ hald/freebsd/hf-storage.c	2010-02-21 19:43:45.000000000 -0500
 @@ -30,6 +30,7 @@
  #include <limits.h>
  #include <inttypes.h>
@@ -8,7 +8,7 @@
  #include <sys/param.h>
  #include <sys/types.h>
  #include <sys/disklabel.h>
-@@ -418,10 +419,39 @@ hf_storage_parse_conftxt (const char *co
+@@ -418,10 +419,40 @@ hf_storage_parse_conftxt (const char *co
  	  continue;
  	}
  
@@ -18,7 +18,8 @@
 +       * things happen in applications like nautilus.
 +       */
 +      if ((! strcmp(fields[1], "LABEL") ||
-+          ! strcmp(fields[1], "BSD")) &&
++          ! strcmp(fields[1], "BSD") ||
++	  ! strcmp(fields[1], "PART")) &&
 +          ! strncmp(fields[2], "ufsid/", strlen("ufsid/")))
 +        {
 +          g_strfreev(fields);
@@ -48,7 +49,7 @@
        geom_obj->type = -1;	/* We use -1 here to denote a missing type. */
        geom_obj->hash = hash;
  
-@@ -589,11 +619,16 @@ hf_storage_devd_notify (const char *syst
+@@ -589,11 +620,16 @@ hf_storage_devd_notify (const char *syst
    char *conftxt;
    GSList *new_disks;
  
@@ -66,7 +67,7 @@
    new_disks = hf_storage_parse_conftxt(conftxt);
    g_free(conftxt);
  
-@@ -669,7 +704,7 @@ hf_storage_conftxt_timeout_cb (gpointer 
+@@ -669,7 +705,7 @@ hf_storage_conftxt_timeout_cb (gpointer 
    if (hf_is_waiting)
      return TRUE;
  
