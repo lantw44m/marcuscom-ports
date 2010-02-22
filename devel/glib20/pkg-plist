@@ -6,6 +6,7 @@ bin/gobject-query
 bin/gtester
 bin/gtester-report
 include/gio-unix-2.0/gio/gdesktopappinfo.h
+include/gio-unix-2.0/gio/gfiledescriptorbased.h
 include/gio-unix-2.0/gio/gunixconnection.h
 include/gio-unix-2.0/gio/gunixfdlist.h
 include/gio-unix-2.0/gio/gunixfdmessage.h
@@ -148,6 +149,7 @@ include/glib-2.0/glib/gtypes.h
 include/glib-2.0/glib/gunicode.h
 include/glib-2.0/glib/gurifuncs.h
 include/glib-2.0/glib/gutils.h
+include/glib-2.0/glib/gvariant.h
 include/glib-2.0/glib/gvarianttype.h
 include/glib-2.0/glib/gwin32.h
 include/glib-2.0/glibconfig.h
