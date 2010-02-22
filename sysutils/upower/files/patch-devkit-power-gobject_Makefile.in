@@ -1,0 +1,11 @@
+--- devkit-power-gobject/Makefile.in.orig	2010-02-21 20:24:59.000000000 -0500
++++ devkit-power-gobject/Makefile.in	2010-02-21 20:25:03.000000000 -0500
+@@ -387,7 +387,7 @@ CLEANFILES = $(BUILT_SOURCES) $(am__appe
+ @HAVE_INTROSPECTION_TRUE@DeviceKitPowerGlib_1_0_gir_FILES = $(addprefix $(srcdir)/,$(introspection_sources))
+ @HAVE_INTROSPECTION_TRUE@girdir = $(datadir)/gir-1.0
+ @HAVE_INTROSPECTION_TRUE@dist_gir_DATA = $(INTROSPECTION_GIRS)
+-@HAVE_INTROSPECTION_TRUE@typelibdir = $(libdir)/girepositry-1.0
++@HAVE_INTROSPECTION_TRUE@typelibdir = $(libdir)/girepository-1.0
+ @HAVE_INTROSPECTION_TRUE@typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
+ all: all-am
+ 

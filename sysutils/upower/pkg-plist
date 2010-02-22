@@ -20,8 +20,8 @@ include/upower-glib/up-types.h
 include/upower-glib/up-version.h
 include/upower-glib/up-wakeup-item.h
 include/upower-glib/upower.h
-lib/girepositry-1.0/DeviceKitPowerGlib-1.0.typelib
-lib/girepositry-1.0/UPowerGlib-1.0.typelib
+lib/girepository-1.0/DeviceKitPowerGlib-1.0.typelib
+lib/girepository-1.0/UPowerGlib-1.0.typelib
 lib/libdevkit-power-gobject.a
 lib/libdevkit-power-gobject.la
 lib/libdevkit-power-gobject.so
@@ -49,5 +49,6 @@ share/polkit-1/actions/org.freedesktop.upower.qos.policy
 @exec mkdir -p /var/lib/DeviceKit-power
 @dirrm include/DeviceKit-power/devkit-power-gobject
 @dirrm include/DeviceKit-power
+@dirrm include/upower-glib
 @unexec rmdir /var/lib/DeviceKit-power 2>/dev/null || true
 @unexec rmdir /var/lib 2>/dev/null || true
