@@ -83,6 +83,7 @@ include/clutter-1.0/cogl/cogl-offscreen.h
 include/clutter-1.0/cogl/cogl-pango.h
 include/clutter-1.0/cogl/cogl-path.h
 include/clutter-1.0/cogl/cogl-pixel-buffer.h
+include/clutter-1.0/cogl/cogl-primitives.h
 include/clutter-1.0/cogl/cogl-shader.h
 include/clutter-1.0/cogl/cogl-texture.h
 include/clutter-1.0/cogl/cogl-types.h
