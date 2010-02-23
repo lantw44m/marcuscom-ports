@@ -15,6 +15,7 @@ include/gtksourceview-2.0/gtksourceview/gtksourceprintcompositor.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestyle.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestylescheme.h
 include/gtksourceview-2.0/gtksourceview/gtksourcestyleschememanager.h
+include/gtksourceview-2.0/gtksourceview/gtksourceundomanager.h
 include/gtksourceview-2.0/gtksourceview/gtksourceview-typebuiltins.h
 include/gtksourceview-2.0/gtksourceview/gtksourceview.h
 lib/libgtksourceview-2.0.a
@@ -82,6 +83,7 @@ share/gtksourceview-2.0/language-specs/objc.lang
 share/gtksourceview-2.0/language-specs/ocaml.lang
 share/gtksourceview-2.0/language-specs/ocl.lang
 share/gtksourceview-2.0/language-specs/octave.lang
+share/gtksourceview-2.0/language-specs/ooc.lang
 share/gtksourceview-2.0/language-specs/pascal.lang
 share/gtksourceview-2.0/language-specs/perl.lang
 share/gtksourceview-2.0/language-specs/php.lang
@@ -129,9 +131,9 @@ share/locale/da/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/de/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/dz/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/el/LC_MESSAGES/gtksourceview-2.0.mo
+share/locale/en@shaw/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/en_CA/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gtksourceview-2.0.mo
-share/locale/en@shaw/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/es/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/et/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/eu/LC_MESSAGES/gtksourceview-2.0.mo
@@ -189,13 +191,6 @@ share/locale/xh/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gtksourceview-2.0.mo
-@dirrm share/gtksourceview-2.0/styles
-@dirrm share/gtksourceview-2.0/language-specs
-@dirrm share/gtksourceview-2.0
-@dirrm include/gtksourceview-2.0/gtksourceview/completion-providers/words
-@dirrm include/gtksourceview-2.0/gtksourceview/completion-providers
-@dirrm include/gtksourceview-2.0/gtksourceview
-@dirrm include/gtksourceview-2.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -224,5 +219,7 @@ share/locale/zh_TW/LC_MESSAGES/gtksourceview-2.0.mo
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
