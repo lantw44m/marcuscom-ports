@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.56 2010/01/27 13:38:32 avl Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.57 2010/02/10 20:05:10 kwm Exp $
 #
 
 PORTNAME=	gvfs
-PORTVERSION=	1.5.3
+PORTVERSION=	1.5.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -35,6 +35,9 @@ OPTIONS=	FUSE "Enable fuse" off \
 		SAMBA "Enable Samba" on \
 		GPHOTO2 "Enable Gphoto 2 camera support" on \
 		CDDA "Enable CDDA" on
+
+# work around for bug in 1.5.4. Fixed upstream
+CONFIGURE_ARGS+=--with-dbus-service-dir=${PREFIX}/share/dbus-1/services
 
 .include <bsd.port.pre.mk>
 
