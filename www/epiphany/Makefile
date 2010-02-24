@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.220 2010/01/28 16:40:22 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.221 2010/02/10 19:16:29 kwm Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.29.90.1
+PORTVERSION=	2.29.91
 PORTREVISION?=	0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
@@ -16,12 +16,14 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	An extremely lightweight and simple web browser for GNOME 2
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
+		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2 \
 		notify.1:${PORTSDIR}/devel/libnotify \
 		gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
+		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 		${LOCALBASE}/share/icons/HighContrastLargePrint/index.theme:${PORTSDIR}/x11-themes/gnome-themes
 
 USE_LDCONFIG=	yes
@@ -35,7 +37,8 @@ WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-CONFIGURE_ARGS+=--enable-introspection
+CONFIGURE_ARGS+=--enable-introspection \
+		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS} ${EXTRA_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS} ${EXTRA_LIBS}"
 
