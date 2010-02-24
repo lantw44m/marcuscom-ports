@@ -5,7 +5,7 @@ include/cheese/cheese-widget.h
 lib/libcheese-gtk.a
 lib/libcheese-gtk.la
 lib/libcheese-gtk.so
-lib/libcheese-gtk.so.17
+lib/libcheese-gtk.so.18
 libdata/pkgconfig/cheese-gtk.pc
 libexec/cheese/cheese-bugreport.sh
 share/applications/cheese.desktop
@@ -58,7 +58,7 @@ share/dbus-1/services/org.gnome.Cheese.service
 %%DOCSDIR%%/CheeseWidget.html
 %%DOCSDIR%%/api-index-full.html
 %%DOCSDIR%%/ch01.html
-%%DOCSDIR%%/cheese-CheeseCameraDeviceMonitor.html
+%%DOCSDIR%%/cheese-cheese-camera-device-monitor.html
 %%DOCSDIR%%/cheese.devhelp
 %%DOCSDIR%%/cheese.devhelp2
 %%DOCSDIR%%/home.png
