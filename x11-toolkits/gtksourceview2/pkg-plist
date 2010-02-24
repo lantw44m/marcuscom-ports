@@ -191,6 +191,13 @@ share/locale/xh/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gtksourceview-2.0.mo
+@dirrm share/gtksourceview-2.0/styles
+@dirrm share/gtksourceview-2.0/language-specs
+@dirrm share/gtksourceview-2.0
+@dirrm include/gtksourceview-2.0/gtksourceview/completion-providers/words
+@dirrm include/gtksourceview-2.0/gtksourceview/completion-providers
+@dirrm include/gtksourceview-2.0/gtksourceview
+@dirrm include/gtksourceview-2.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
