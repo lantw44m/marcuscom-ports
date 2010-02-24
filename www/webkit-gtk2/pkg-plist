@@ -33,20 +33,22 @@ include/webkit-1.0/webkit/webkitwebsettings.h
 include/webkit-1.0/webkit/webkitwebview.h
 include/webkit-1.0/webkit/webkitwebwindowfeatures.h
 %%STATIC%%lib/libwebkit-1.0.a
+lib/girepository-1.0/JSCore-1.0.typelib
+lib/girepository-1.0/WebKit-1.0.typelib
 lib/libwebkit-1.0.la
 lib/libwebkit-1.0.so
 lib/libwebkit-1.0.so.13
-lib/girepository-1.0/JSCore-1.0.typelib
-lib/girepository-1.0/WebKit-1.0.typelib
 libdata/pkgconfig/webkit-1.0.pc
 share/gir-1.0/JSCore-1.0.gir
 share/gir-1.0/WebKit-1.0.gir
 share/locale/de/LC_MESSAGES/webkit.mo
 share/locale/en_GB/LC_MESSAGES/webkit.mo
 share/locale/es/LC_MESSAGES/webkit.mo
+share/locale/he/LC_MESSAGES/webkit.mo
 share/locale/it/LC_MESSAGES/webkit.mo
 share/locale/lt/LC_MESSAGES/webkit.mo
 share/locale/nl/LC_MESSAGES/webkit.mo
+share/locale/pa/LC_MESSAGES/webkit.mo
 share/locale/pt_BR/LC_MESSAGES/webkit.mo
 share/locale/ru/LC_MESSAGES/webkit.mo
 share/locale/sr/LC_MESSAGES/webkit.mo
@@ -62,8 +64,10 @@ share/webkit-1.0/images/textAreaResizeCorner.png
 share/webkit-1.0/images/urlIcon.png
 share/webkit-1.0/resources/error.html
 share/webkit-1.0/webinspector/AbstractTimelinePanel.js
+share/webkit-1.0/webinspector/AuditCategories.js
 share/webkit-1.0/webinspector/AuditLauncherView.js
 share/webkit-1.0/webinspector/AuditResultView.js
+share/webkit-1.0/webinspector/AuditRules.js
 share/webkit-1.0/webinspector/AuditsPanel.js
 share/webkit-1.0/webinspector/BottomUpProfileDataGridTree.js
 share/webkit-1.0/webinspector/Breakpoint.js
@@ -99,6 +103,8 @@ share/webkit-1.0/webinspector/Images/consoleIcon.png
 share/webkit-1.0/webinspector/Images/cookie.png
 share/webkit-1.0/webinspector/Images/database.png
 share/webkit-1.0/webinspector/Images/databaseTable.png
+share/webkit-1.0/webinspector/Images/deactivateBreakpointsButtonGlyph.png
+share/webkit-1.0/webinspector/Images/deactivateBreakpointsDisabledButtonGlyph.png
 share/webkit-1.0/webinspector/Images/debuggerContinue.png
 share/webkit-1.0/webinspector/Images/debuggerPause.png
 share/webkit-1.0/webinspector/Images/debuggerStepInto.png
@@ -123,6 +129,7 @@ share/webkit-1.0/webinspector/Images/errorRedDot.png
 share/webkit-1.0/webinspector/Images/excludeButtonGlyph.png
 share/webkit-1.0/webinspector/Images/focusButtonGlyph.png
 share/webkit-1.0/webinspector/Images/forward.png
+share/webkit-1.0/webinspector/Images/gearButtonGlyph.png
 share/webkit-1.0/webinspector/Images/glossyHeader.png
 share/webkit-1.0/webinspector/Images/glossyHeaderPressed.png
 share/webkit-1.0/webinspector/Images/glossyHeaderSelected.png
@@ -140,6 +147,8 @@ share/webkit-1.0/webinspector/Images/paneGrowHandleLine.png
 share/webkit-1.0/webinspector/Images/paneSettingsButtons.png
 share/webkit-1.0/webinspector/Images/pauseOnExceptionButtonGlyph.png
 share/webkit-1.0/webinspector/Images/percentButtonGlyph.png
+share/webkit-1.0/webinspector/Images/popoverArrows.png
+share/webkit-1.0/webinspector/Images/popoverBackground.png
 share/webkit-1.0/webinspector/Images/profileGroupIcon.png
 share/webkit-1.0/webinspector/Images/profileIcon.png
 share/webkit-1.0/webinspector/Images/profileSmallIcon.png
@@ -183,6 +192,12 @@ share/webkit-1.0/webinspector/Images/statusbarResizerHorizontal.png
 share/webkit-1.0/webinspector/Images/statusbarResizerVertical.png
 share/webkit-1.0/webinspector/Images/storageIcon.png
 share/webkit-1.0/webinspector/Images/successGreenDot.png
+share/webkit-1.0/webinspector/Images/thumbActiveHoriz.png
+share/webkit-1.0/webinspector/Images/thumbActiveVert.png
+share/webkit-1.0/webinspector/Images/thumbHoriz.png
+share/webkit-1.0/webinspector/Images/thumbHoverHoriz.png
+share/webkit-1.0/webinspector/Images/thumbHoverVert.png
+share/webkit-1.0/webinspector/Images/thumbVert.png
 share/webkit-1.0/webinspector/Images/timelineBarBlue.png
 share/webkit-1.0/webinspector/Images/timelineBarGray.png
 share/webkit-1.0/webinspector/Images/timelineBarGreen.png
@@ -208,6 +223,8 @@ share/webkit-1.0/webinspector/Images/timelinePillPurple.png
 share/webkit-1.0/webinspector/Images/timelinePillRed.png
 share/webkit-1.0/webinspector/Images/timelinePillYellow.png
 share/webkit-1.0/webinspector/Images/toolbarItemSelected.png
+share/webkit-1.0/webinspector/Images/trackHoriz.png
+share/webkit-1.0/webinspector/Images/trackVert.png
 share/webkit-1.0/webinspector/Images/treeDownTriangleBlack.png
 share/webkit-1.0/webinspector/Images/treeDownTriangleWhite.png
 share/webkit-1.0/webinspector/Images/treeRightTriangleBlack.png
@@ -229,14 +246,13 @@ share/webkit-1.0/webinspector/InspectorBackendStub.js
 share/webkit-1.0/webinspector/InspectorFrontendHostStub.js
 share/webkit-1.0/webinspector/KeyboardShortcut.js
 share/webkit-1.0/webinspector/MetricsSidebarPane.js
-share/webkit-1.0/webinspector/NativeTextViewer.js
 share/webkit-1.0/webinspector/Object.js
 share/webkit-1.0/webinspector/ObjectPropertiesSection.js
 share/webkit-1.0/webinspector/ObjectProxy.js
 share/webkit-1.0/webinspector/Panel.js
 share/webkit-1.0/webinspector/PanelEnablerView.js
 share/webkit-1.0/webinspector/Placard.js
-share/webkit-1.0/webinspector/Popup.js
+share/webkit-1.0/webinspector/Popover.js
 share/webkit-1.0/webinspector/ProfileDataGridTree.js
 share/webkit-1.0/webinspector/ProfileView.js
 share/webkit-1.0/webinspector/ProfilesPanel.js
@@ -265,10 +281,10 @@ share/webkit-1.0/webinspector/StoragePanel.js
 share/webkit-1.0/webinspector/StylesSidebarPane.js
 share/webkit-1.0/webinspector/SummaryBar.js
 share/webkit-1.0/webinspector/TestController.js
-share/webkit-1.0/webinspector/TextEditor.js
 share/webkit-1.0/webinspector/TextEditorHighlighter.js
 share/webkit-1.0/webinspector/TextEditorModel.js
 share/webkit-1.0/webinspector/TextPrompt.js
+share/webkit-1.0/webinspector/TextViewer.js
 share/webkit-1.0/webinspector/TimelineAgent.js
 share/webkit-1.0/webinspector/TimelineGrid.js
 share/webkit-1.0/webinspector/TimelineOverviewPane.js
@@ -283,7 +299,8 @@ share/webkit-1.0/webinspector/inspector.html
 share/webkit-1.0/webinspector/inspector.js
 share/webkit-1.0/webinspector/inspectorSyntaxHighlight.css
 share/webkit-1.0/webinspector/localizedStrings.js
-share/webkit-1.0/webinspector/textEditor.css
+share/webkit-1.0/webinspector/popover.css
+share/webkit-1.0/webinspector/textViewer.css
 share/webkit-1.0/webinspector/treeoutline.js
 share/webkit-1.0/webinspector/utilities.js
 @dirrm share/webkit-1.0/webinspector/Images
@@ -291,8 +308,8 @@ share/webkit-1.0/webinspector/utilities.js
 @dirrm share/webkit-1.0/resources
 @dirrm share/webkit-1.0/images
 @dirrm share/webkit-1.0
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrm include/webkit-1.0/webkit
 @dirrm include/webkit-1.0/JavaScriptCore
 @dirrm include/webkit-1.0
-@dirrmtry share/locale/sr@latin/LC_MESSAGES
-@dirrmtry share/locale/sr@latin
