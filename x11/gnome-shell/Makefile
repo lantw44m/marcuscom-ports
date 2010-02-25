@@ -3,12 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.8 2010/01/09 05:56:08 marcus Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.9 2010/01/17 00:23:15 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
-PORTVERSION=	2.28.0
-PORTREVISION=	3
+PORTVERSION=	2.29.0
 CATEGORIES=	x11
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -36,12 +35,17 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/js -I${LOCALBASE}/include/nspr"
 
 GCONF_SCHEMAS=	gnome-shell.schemas
 
+MAN1=		gnome-shell.1
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Werror||g' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|/usr/bin/env python|g' \
 		-e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/src/gnome-shell.in
+# temp hack around configure failure in 2.29.90. Fixed upstream
+	@${REINPLACE_CMD} -e 's|@GETTEXT_PACKAGE@|gnome-shell|g' \
+		${WRKSRC}/po/Makefile.in.in
 
 post-install:
 	@${CAT} ${PKGMESSAGE}
