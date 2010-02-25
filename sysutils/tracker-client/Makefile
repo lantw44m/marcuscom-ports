@@ -2,8 +2,8 @@
 # Date created:		2006-12-09
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/tracker-client/Makefile,v 1.34 2010/02/14 20:43:42 marcus Exp $
-#   $MCom: ports/sysutils/tracker-client/Makefile,v 1.10 2009/10/11 11:11:33 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/sysutils/tracker-client/Makefile,v 1.12 2010/02/25 12:28:25 avl Exp $
 #
 
 PORTNAME=	tracker
