@@ -9,9 +9,6 @@ GIRDIR=		${LOCALBASE}/share/gir-1.0
 atk_CATEGORY=	accessibility
 atk_GIR=	Atk-1.0
 
-pango_CATEGORY=	x11-toolkits
-pango_GIR=	Pango-1.0
-
 poppler_CATEGORY=	graphics
 poppler_GIR=	Poppler-0.8
 
@@ -90,16 +87,9 @@ USE_GNOME+=	atk
 GIR_FILES=	Atk-1.0
 .endif
 
-.if ${GIR_NAME} == "pango"
-USE_GNOME+=	pango
-GIR_FILES=	Pango-1.0 PangoFT2-1.0 PangoCairo-1.0 PangoX-1.0 PangoXft-1.0
-DEP_NAMES+=	pangoxft
-.endif
-
 .if ${GIR_NAME} == "poppler"
 LIB_DEPENDS+=	poppler-glib.4:${PORTSDIR}/graphics/poppler-gtk
 USE_GNOME+=	gtk20
-USE_GIR=	pango
 GIR_FILES=	Poppler-0.8
 CLEAR_DEPS+=	Gdk-2.0
 .endif
