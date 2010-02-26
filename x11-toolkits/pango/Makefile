@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.151 2010/02/25 16:55:56 kwm Exp $
 #
 
 PORTNAME=	pango
@@ -21,7 +21,8 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/freetype2.pc:${PORTSDIR}/print/freetype2
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/freetype2.pc:${PORTSDIR}/print/freetype2 \
+		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
 		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT}
