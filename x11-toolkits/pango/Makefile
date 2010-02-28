@@ -3,12 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.151 2010/02/25 16:55:56 kwm Exp $
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.152 2010/02/26 00:53:57 kwm Exp $
 #
 
 PORTNAME=	pango
 PORTVERSION=	1.27.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME \
 		ftp://ftp.gtk.org/pub/pango/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/
@@ -25,7 +25,8 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/freetype2.pc:${PORTSDIR}/print/fre
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	cairo.2:${PORTSDIR}/graphics/cairo
 RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
-		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT}
+		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT} \
+		${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
