@@ -1808,6 +1808,7 @@ share/icons/gnome/index.theme
 @dirrmtry share/icons/gnome/256x256/categories
 @dirrmtry share/icons/gnome/256x256/apps
 @dirrmtry share/icons/gnome/256x256/actions
+@dirrmtry share/icons/gnome/256x256
 @dirrmtry share/icons/gnome/24x24/stock/text
 @dirrmtry share/icons/gnome/24x24/stock/table
 @dirrmtry share/icons/gnome/24x24/stock/object
