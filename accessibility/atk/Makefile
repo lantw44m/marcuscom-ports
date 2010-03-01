@@ -3,12 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/atk/Makefile,v 1.100 2009/12/08 18:55:42 kwm Exp $
+#   $MCom: ports/accessibility/atk/Makefile,v 1.101 2009/12/21 10:34:11 kwm Exp $
 #
 
 PORTNAME=	atk
 PORTVERSION=	1.29.4
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	accessibility devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,6 +19,8 @@ COMMENT=	A GNOME accessibility toolkit (ATK)
 USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
+
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
