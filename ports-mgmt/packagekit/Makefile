@@ -3,11 +3,11 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.14 2010/02/08 12:49:18 kwm Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.15 2010/02/12 17:43:31 avl Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	ports-mgmt sysutils
 MASTER_SITES=	http://www.packagekit.org/releases/
 
@@ -112,7 +112,9 @@ post-patch:
 	@${REINPLACE_CMD} -E -e 's/.*WARNINGFLAGS_CPP.*-Werror/#$$&/' \
 		-e 's|-Wmissing-include-dirs||g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-	    	${WRKSRC}/src/pk-lsof.c
+		${WRKSRC}/src/pk-lsof.c
+	@${REINPLACE_CMD} -e 's|girepositry|girepository|g' \
+		${WRKSRC}/lib/packagekit-glib2/Makefile.in
 
 post-install:
 	@${INSTALL_DATA} ${WRKSRC}/data/transactions.db \

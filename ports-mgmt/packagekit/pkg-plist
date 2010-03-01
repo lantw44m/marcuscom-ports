@@ -53,7 +53,7 @@ include/PackageKit/packagekit-glib2/pk-transaction-list.h
 include/PackageKit/packagekit-glib2/pk-transaction-past.h
 include/PackageKit/packagekit-glib2/pk-update-detail.h
 include/PackageKit/packagekit-glib2/pk-version.h
-lib/girepositry-1.0/PackageKitGlib-1.0.typelib
+lib/girepository-1.0/PackageKitGlib-1.0.typelib
 lib/libpackagekit-glib2.a
 lib/libpackagekit-glib2.la
 lib/libpackagekit-glib2.so
