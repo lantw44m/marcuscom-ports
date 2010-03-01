@@ -3,7 +3,7 @@
 # Whom:					Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gir-repository/Makefile,v 1.12 2010/01/28 13:41:55 avl Exp $
+#   $MCom: ports/devel/gir-repository/Makefile,v 1.13 2010/02/26 05:00:30 avl Exp $
 #
 
 MASTER_SITES=	# Empty
@@ -16,8 +16,7 @@ COMMENT=	Introspection information for various libraries
 
 NO_BUILD=	yes
 
-RUN_DEPENDS=	${GIRDIR}/${atk_GIR}.gir:${PORTSDIR}/${atk_CATEGORY}/gir-repository-atk \
-		${GIRDIR}/${poppler_GIR}.gir:${PORTSDIR}/${poppler_CATEGORY}/gir-repository-poppler \
+RUN_DEPENDS=	${GIRDIR}/${poppler_GIR}.gir:${PORTSDIR}/${poppler_CATEGORY}/gir-repository-poppler \
 		${GIRDIR}/${libsoup_GIR}.gir:${PORTSDIR}/${libsoup_CATEGORY}/gir-repository-libsoup \
 		${GIRDIR}/${dbus_GIR}.gir:${PORTSDIR}/${dbus_CATEGORY}/gir-repository-dbus \
 		${GIRDIR}/${gconf2_GIR}.gir:${PORTSDIR}/${gconf2_CATEGORY}/gir-repository-gconf2 \

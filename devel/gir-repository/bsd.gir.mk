@@ -6,9 +6,6 @@ MAINTAINER=	gnome@FreeBSD.org
 
 GIRDIR=		${LOCALBASE}/share/gir-1.0
 
-atk_CATEGORY=	accessibility
-atk_GIR=	Atk-1.0
-
 poppler_CATEGORY=	graphics
 poppler_GIR=	Poppler-0.8
 
@@ -81,11 +78,6 @@ _USE_GIR_ALL=	dbus atk pango pangoxft poppler gtk gconf soup babl nautilusextens
 		gnomekeyring webkit notify gnio clutter clutter_gtk clutter_cairo \
 		gstreamer gstbufferlist_h gstreamer_plugins_base gtksourceview vte \
 		goocanvas gssdp gupnp avahi unique gmenu wnck
-
-.if ${GIR_NAME} == "atk"
-USE_GNOME+=	atk
-GIR_FILES=	Atk-1.0
-.endif
 
 .if ${GIR_NAME} == "poppler"
 LIB_DEPENDS+=	poppler-glib.4:${PORTSDIR}/graphics/poppler-gtk
