@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.54 2010/02/10 08:27:35 avl Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.55 2010/02/23 14:40:47 avl Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	2.29.91
+PORTVERSION=	2.29.91.1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -15,7 +15,7 @@ COMMENT=	GNOME IM client based around telepathy
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
-LIB_DEPENDS=	aspell.16:${PORTSDIR}/textproc/aspell \
+LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		telepathy.2:${PORTSDIR}/net-im/libtelepathy \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		telepathy-farsight.0:${PORTSDIR}/net-im/telepathy-farsight \
@@ -37,6 +37,7 @@ INSTALLS_ICONS=	yes
 USE_PYTHON=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--enable-tpl=no
 
 GCONF_SCHEMAS=	empathy.schemas
 

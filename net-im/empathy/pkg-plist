@@ -41,8 +41,6 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/empathy-status-preset-dialog.ui
 %%DATADIR%%/empathy-status-presets.dtd
 %%DATADIR%%/icons/hicolor/16x16/actions/im-message-new.png
-%%DATADIR%%/icons/hicolor/16x16/apps/empathy-starred.png
-%%DATADIR%%/icons/hicolor/16x16/apps/empathy-unstarred.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-ekiga.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-facebook.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-gadugadu.png
@@ -70,8 +68,6 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/icons/hicolor/16x16/status/im-message.png
 %%DATADIR%%/icons/hicolor/16x16/status/user-typing.png
 %%DATADIR%%/icons/hicolor/22x22/actions/im-message-new.png
-%%DATADIR%%/icons/hicolor/22x22/apps/empathy-starred.png
-%%DATADIR%%/icons/hicolor/22x22/apps/empathy-unstarred.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-ekiga.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-facebook.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-gadugadu.png
@@ -97,8 +93,6 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/icons/hicolor/22x22/status/empathy-offline.png
 %%DATADIR%%/icons/hicolor/22x22/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/24x24/actions/im-message-new.png
-%%DATADIR%%/icons/hicolor/24x24/apps/empathy-starred.png
-%%DATADIR%%/icons/hicolor/24x24/apps/empathy-unstarred.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-ekiga.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-gadugadu.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-gizmo.png
@@ -122,8 +116,6 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/icons/hicolor/24x24/status/empathy-extended-away.png
 %%DATADIR%%/icons/hicolor/24x24/status/empathy-offline.png
 %%DATADIR%%/icons/hicolor/24x24/status/empathy-pending.png
-%%DATADIR%%/icons/hicolor/32x32/apps/empathy-starred.png
-%%DATADIR%%/icons/hicolor/32x32/apps/empathy-unstarred.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-ekiga.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-gadugadu.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-gizmo.png
@@ -147,8 +139,6 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/icons/hicolor/32x32/status/empathy-extended-away.png
 %%DATADIR%%/icons/hicolor/32x32/status/empathy-offline.png
 %%DATADIR%%/icons/hicolor/32x32/status/empathy-pending.png
-%%DATADIR%%/icons/hicolor/48x48/apps/empathy-starred.png
-%%DATADIR%%/icons/hicolor/48x48/apps/empathy-unstarred.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-ekiga.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-facebook.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-gadugadu.png
