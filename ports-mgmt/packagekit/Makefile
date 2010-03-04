@@ -3,11 +3,10 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.15 2010/02/12 17:43:31 avl Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.16 2010/03/01 09:45:10 avl Exp $
 
 PORTNAME=	PackageKit
-PORTVERSION=	0.6.1
-PORTREVISION=	2
+PORTVERSION=	0.6.2
 CATEGORIES=	ports-mgmt sysutils
 MASTER_SITES=	http://www.packagekit.org/releases/
 
@@ -94,7 +93,7 @@ PLIST_SUB+=	GTK="@comment "
 #.endif
 
 .if defined(SLAVEPORT)
-LIB_DEPENDS+=	packagekit-glib2.13:${PORTSDIR}/ports-mgmt/packagekit
+LIB_DEPENDS+=	packagekit-glib2.14:${PORTSDIR}/ports-mgmt/packagekit
 
 .if ${SLAVEPORT}=="qt4"
 CONFIGURE_ARGS+=--enable-qt
@@ -117,8 +116,10 @@ post-patch:
 		${WRKSRC}/lib/packagekit-glib2/Makefile.in
 
 post-install:
+.if !defined(SLAVEPORT)
 	@${INSTALL_DATA} ${WRKSRC}/data/transactions.db \
 	    	${PREFIX}/share/PackageKit/transactions.db
 	@-update-mime-database ${PREFIX}/share/mime > /dev/null
+.endif
 
 .include <bsd.port.post.mk>
