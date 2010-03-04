@@ -103,6 +103,7 @@ share/icons/gnome/16x16/actions/zoom-fit-best.png
 share/icons/gnome/16x16/actions/zoom-in.png
 share/icons/gnome/16x16/actions/zoom-original.png
 share/icons/gnome/16x16/actions/zoom-out.png
+share/icons/gnome/16x16/animations/process-working.png
 share/icons/gnome/16x16/apps/accessories-calculator.png
 share/icons/gnome/16x16/apps/accessories-character-map.png
 share/icons/gnome/16x16/apps/accessories-dictionary.png
@@ -425,6 +426,7 @@ share/icons/gnome/22x22/actions/zoom-fit-best.png
 share/icons/gnome/22x22/actions/zoom-in.png
 share/icons/gnome/22x22/actions/zoom-original.png
 share/icons/gnome/22x22/actions/zoom-out.png
+share/icons/gnome/22x22/animations/process-working.png
 share/icons/gnome/22x22/apps/accessories-calculator.png
 share/icons/gnome/22x22/apps/accessories-character-map.png
 share/icons/gnome/22x22/apps/accessories-dictionary.png
@@ -1210,6 +1212,7 @@ share/icons/gnome/32x32/actions/zoom-fit-best.png
 share/icons/gnome/32x32/actions/zoom-in.png
 share/icons/gnome/32x32/actions/zoom-original.png
 share/icons/gnome/32x32/actions/zoom-out.png
+share/icons/gnome/32x32/animations/process-working.png
 share/icons/gnome/32x32/apps/accessories-calculator.png
 share/icons/gnome/32x32/apps/accessories-character-map.png
 share/icons/gnome/32x32/apps/accessories-dictionary.png
@@ -1527,6 +1530,7 @@ share/icons/gnome/48x48/actions/zoom-fit-best.png
 share/icons/gnome/48x48/actions/zoom-in.png
 share/icons/gnome/48x48/actions/zoom-original.png
 share/icons/gnome/48x48/actions/zoom-out.png
+share/icons/gnome/48x48/animations/process-working.png
 share/icons/gnome/48x48/apps/accessories-calculator.png
 share/icons/gnome/48x48/apps/accessories-character-map.png
 share/icons/gnome/48x48/apps/accessories-dictionary.png
