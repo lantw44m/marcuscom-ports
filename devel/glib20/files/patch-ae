@@ -1,19 +1,16 @@
---- configure.orig	2009-09-05 10:54:38.000000000 +0200
-+++ configure	2009-09-05 10:56:40.000000000 +0200
-@@ -29571,6 +29571,12 @@ cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- $ac_includes_default
+--- configure.orig	2010-03-03 21:31:46.000000000 -0500
++++ configure	2010-03-03 21:47:47.000000000 -0500
+@@ -714,6 +714,9 @@ ac_includes_default="\
+ #ifdef HAVE_SYS_TYPES_H
+ # include <sys/types.h>
+ #endif
 +#ifdef HAVE_SYS_PARAM_H
-+#include <sys/param.h>
++# include <sys/param.h>
 +#endif
-+#ifdef HAVE_SYS_MOUNT_H
-+#include <sys/mount.h>
-+#endif
- int
- main ()
- {
-@@ -23020,7 +23026,7 @@ _ACEOF
+ #ifdef HAVE_SYS_STAT_H
+ # include <sys/stat.h>
+ #endif
+@@ -23020,7 +23023,7 @@ _ACEOF
  fi
  done
  
@@ -22,7 +19,7 @@
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -39943,6 +39949,8 @@ fi
+@@ -25631,6 +25634,8 @@ fi
           ;;
      esac
    fi
