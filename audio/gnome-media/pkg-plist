@@ -9,6 +9,9 @@ include/gnome-media/profiles/audio-profile-edit.h
 include/gnome-media/profiles/audio-profile.h
 include/gnome-media/profiles/audio-profiles-edit.h
 include/gnome-media/profiles/gnome-media-profiles.h
+lib/glade3/modules/libgnome-media-profiles.so
+lib/glade3/modules/libgnome-media-profiles.la
+lib/glade3/modules/libgnome-media-profiles.a
 lib/libgnome-media-profiles.a
 lib/libgnome-media-profiles.la
 lib/libgnome-media-profiles.so
@@ -17,6 +20,7 @@ libdata/pkgconfig/gnome-media-profiles.pc
 share/applications/gnome-sound-recorder.desktop
 share/applications/gnome-volume-control.desktop
 share/applications/gstreamer-properties.desktop
+share/glade3/catalogs/gnome-media-profiles.xml
 %%DATADIR%%/gnome-audio-profile-edit.ui
 %%DATADIR%%/gnome-audio-profile-new.ui
 %%DATADIR%%/icons/hicolor/16x16/status/audio-input-microphone-high.png
