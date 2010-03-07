@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.66 2010/02/10 21:18:37 kwm Exp $
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.67 2010/02/25 11:53:46 avl Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	2.29.91
+PORTREVISION=	1
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -60,5 +61,9 @@ PLIST_SUB+=	LIBBURNIA=""
 .else
 PLIST_SUB+=	LIBBURNIA="@comment "
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
+	    	${WRKSRC}/libbrasero-burn/burn-process.c
 
 .include <bsd.port.post.mk>
