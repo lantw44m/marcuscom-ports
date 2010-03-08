@@ -229,6 +229,10 @@ lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.a
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.la
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.so
 lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap.urls
+lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimapx.a
+lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimapx.la
+lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimapx.so
+lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimapx.urls
 %%IMAP4%%lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.a
 %%IMAP4%%lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.la
 %%IMAP4%%lib/evolution-data-server-%%EVO_VERSION%%/camel-providers/libcamelimap4.so
@@ -492,6 +496,7 @@ share/doc/camel/left.png
 share/doc/camel/right.png
 share/doc/camel/style.css
 share/doc/camel/up.png
+share/doc/libebackend/EFileCache.html
 share/doc/libebackend/ch01.html
 share/doc/libebackend/home.png
 share/doc/libebackend/index.html
@@ -501,7 +506,6 @@ share/doc/libebackend/libebackend-EOfflineListener.html
 share/doc/libebackend/libebackend-e-data-server-module.html
 share/doc/libebackend/libebackend-e-db3-utils.html
 share/doc/libebackend/libebackend-e-dbhash.html
-share/doc/libebackend/libebackend-e-file-cache.html
 share/doc/libebackend/libebackend.devhelp
 share/doc/libebackend/libebackend.devhelp2
 share/doc/libebackend/right.png
