@@ -64,6 +64,8 @@ lib/gstreamer-%%VERSION%%/libgstrtpmanager.la
 lib/gstreamer-%%VERSION%%/libgstrtpmanager.so
 lib/gstreamer-%%VERSION%%/libgstrtsp.la
 lib/gstreamer-%%VERSION%%/libgstrtsp.so
+lib/gstreamer-%%VERSION%%/libgstshapewipe.la
+lib/gstreamer-%%VERSION%%/libgstshapewipe.so
 lib/gstreamer-%%VERSION%%/libgstsmpte.la
 lib/gstreamer-%%VERSION%%/libgstsmpte.so
 lib/gstreamer-%%VERSION%%/libgstspectrum.la
@@ -128,7 +130,5 @@ share/locale/zh_HK/LC_MESSAGES/gst-plugins-good-%%VERSION%%.mo
 share/locale/zh_TW/LC_MESSAGES/gst-plugins-good-%%VERSION%%.mo
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/el/LC_MESSAGES
-@dirrmtry share/locale/el
 @dirrmtry share/gstreamer-%%VERSION%%/presets
 @dirrmtry share/gstreamer-%%VERSION%%

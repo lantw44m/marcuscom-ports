@@ -1,5 +1,5 @@
 # $FreeBSD: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.96 2009/12/21 07:07:52 ahze Exp $
-#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.78 2010/01/27 16:32:16 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer-plugins/Makefile.common,v 1.79 2010/02/05 13:27:38 kwm Exp $
 # base
 BASE_GST_ALL_PLUGINS= \
 		alsa \
@@ -30,7 +30,6 @@ BAD_GST_ALL_PLUGINS+= \
 		faad \
 		gme \
 		gsm \
-		ivorbis \
 		jack \
 		jp2k \
 		kate \
@@ -73,7 +72,6 @@ GOOD_GST_ALL_PLUGINS+= \
 		gdk_pixbuf \
 		hal \
 		jpeg \
-		ladspa \
 		libcaca \
 		libpng \
 		pulse \
@@ -278,12 +276,6 @@ gst_gsm_PLIST_FILES=	${GST_LIB_DIR}/libgstgsm.la \
 		${GST_LIB_DIR}/libgstgsm.so
 gst_gsm_DIST=	bad
 
-# ivorbis
-gst_ivorbis_LIB_DEPENDS+=	vorbisidec.1:${PORTSDIR}/audio/libtremor
-gst_ivorbis_PLIST_FILES=	${GST_LIB_DIR}/libgstivorbis.la \
-		${GST_LIB_DIR}/libgstivorbis.so
-gst_ivorbis_DIST=	bad
-
 # hal
 gst_hal_LIB_DEPENDS+=	hal.1:${PORTSDIR}/sysutils/hal
 gst_hal_PLIST_FILES=	${GST_LIB_DIR}/libgsthalelements.la \
@@ -304,6 +296,7 @@ gst_jpeg_PLIST_FILES=	${GST_LIB_DIR}/libgstjpeg.la \
 gst_ladspa_BUILD_DEPENDS+=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
 gst_ladspa_PLIST_FILES=		${GST_LIB_DIR}/libgstladspa.la \
 				${GST_LIB_DIR}/libgstladspa.so
+gst_ladspa_DIST=bad
 
 # lame
 gst_lame_LIB_DEPENDS+=	mp3lame.0:${PORTSDIR}/audio/lame
