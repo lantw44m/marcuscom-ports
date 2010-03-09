@@ -3,3 +3,4 @@ www/gir-repository-webkit|www/webkit-gtk2|%%DATE%%|Now installed by www/webkit-g
 sysutils/devicekit-power|sysutils/upower|%%DATE%%|Project name has changed
 x11-toolkits/gir-repository-pango|x11-toolkits/pango|%%DATE%%|Now installed by x11-toolkits/pango
 accessibility/gir-repository-atk|accessibility/atk|%%DATE%%|Now installed by accessibility/atk
+x11/gir-repository-gnome-menus|x11/gnome-menus|%%DATE%%|Now installed by x11/gnome-menus

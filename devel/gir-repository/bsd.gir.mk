@@ -40,9 +40,6 @@ vte_GIR=	Vte-1.0
 avahi_CATEGORY=	net
 avahi_GIR=	Avahi-0.6
 
-gnomemenus_CATEGORY=	x11
-gnomemenus_GIR=	GMenu-2.0
-
 libwnck_CATEGORY=	x11-toolkits
 libwnck_GIR=	Wnck-1.0
 
@@ -145,13 +142,6 @@ CLEAR_DEPS+=	Gtk-2.0
 .if ${GIR_NAME} == "avahi"
 LIB_DEPENDS+=	avahi-gobject.0:${PORTSDIR}/net/avahi-app
 GIR_FILES=	Avahi-0.6 AvahiCore-0.6
-.endif
-
-.if ${GIR_NAME} == "gnomemenus"
-USE_GNOME+=	gtk20 gnomemenus
-GIR_FILES=	GMenu-2.0
-DEP_NAMES=	gmenu
-CLEAR_DEPS+=	Gtk-2.0
 .endif
 
 .if ${GIR_NAME} == "libwnck"
