@@ -1,5 +1,32 @@
 --- configure.orig	2010-02-23 11:53:07.000000000 +0000
 +++ configure	2010-02-23 11:56:03.000000000 +0000
+@@ -16196,7 +16196,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-larchive  $LIBS"
++LIBS="-larchive -lcrypto -lmd  $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+@@ -16241,7 +16241,7 @@
+                 if test x$with_archive_libs != x/usr/lib; then
+                         ARCHIVE_LIBS="-L$with_archive_libs -larchive"
+                 else
+-                	ARCHIVE_LIBS="-larchive"
++                	ARCHIVE_LIBS="-larchive -lcrypto -lmd"
+                 fi
+ 	else
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for archive_entry_filetype in -larchive" >&5
+@@ -16250,7 +16250,7 @@
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-larchive  $LIBS"
++LIBS="-larchive -lcrypto -lmd $LIBS"
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
 @@ -19061,6 +19061,9 @@
      *-linux* | *-freebsd* | *-kfreebsd*-gnu)
        use_gphoto2=yes
@@ -10,30 +37,3 @@
      *)
        use_gphoto2=no
        ;;
-@@ -20173,7 +20176,7 @@
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-larchive  $LIBS"
-+LIBS="-larchive -lcrypto -lmd  $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
-@@ -20249,7 +20252,7 @@
-                 if test x$with_archive_libs != x/usr/lib; then
-                         ARCHIVE_LIBS="-L$with_archive_libs -larchive"
-                 else
--                	ARCHIVE_LIBS="-larchive"
-+                	ARCHIVE_LIBS="-larchive -lcrypto -lmd"
-                 fi
- 	else
- 		{ $as_echo "$as_me:$LINENO: checking for archive_entry_filetype in -larchive" >&5
-@@ -20258,7 +20261,7 @@
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-larchive  $LIBS"
-+LIBS="-larchive -lcrypto -lmd  $LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
