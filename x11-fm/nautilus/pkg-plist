@@ -27,6 +27,9 @@ share/applications/nautilus-folder-handler.desktop
 share/applications/nautilus-home.desktop
 share/applications/nautilus.desktop
 share/applications/network-scheme.desktop
+share/doc/libnautilus-extension/NautilusColumn.html
+share/doc/libnautilus-extension/NautilusMenuItem.html
+share/doc/libnautilus-extension/NautilusPropertyPage.html
 share/doc/libnautilus-extension/ch01.html
 share/doc/libnautilus-extension/home.png
 share/doc/libnautilus-extension/index.html
@@ -36,15 +39,12 @@ share/doc/libnautilus-extension/left.png
 share/doc/libnautilus-extension/libnautilus-extension.devhelp
 share/doc/libnautilus-extension/libnautilus-extension.devhelp2
 share/doc/libnautilus-extension/libnautilus-extension-nautilus-column-provider.html
-share/doc/libnautilus-extension/libnautilus-extension-nautilus-column.html
 share/doc/libnautilus-extension/libnautilus-extension-nautilus-extension-types.html
 share/doc/libnautilus-extension/libnautilus-extension-nautilus-file-info.html
 share/doc/libnautilus-extension/libnautilus-extension-nautilus-info-provider.html
 share/doc/libnautilus-extension/libnautilus-extension-nautilus-location-widget-provider.html
 share/doc/libnautilus-extension/libnautilus-extension-nautilus-menu-provider.html
-share/doc/libnautilus-extension/libnautilus-extension-nautilus-menu.html
 share/doc/libnautilus-extension/libnautilus-extension-nautilus-property-page-provider.html
-share/doc/libnautilus-extension/libnautilus-extension-nautilus-property-page.html
 share/doc/libnautilus-extension/pt01.html
 share/doc/libnautilus-extension/right.png
 share/doc/libnautilus-extension/style.css
