@@ -55,6 +55,7 @@ share/dbus-1/services/org.gnome.Cheese.service
 %%PORTDOCS%%%%DOCSDIR%%/NEWS
 %%PORTDOCS%%%%DOCSDIR%%/README
 %%DOCSDIR%%/CheeseAvatarChooser.html
+%%DOCSDIR%%/CheeseCameraDeviceMonitor.html
 %%DOCSDIR%%/CheeseWidget.html
 %%DOCSDIR%%/api-index-full.html
 %%DOCSDIR%%/ch01.html
