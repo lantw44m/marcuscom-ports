@@ -118,21 +118,16 @@ share/gnome-control-center/keybindings/99-hamster-applet.xml
 %%DATADIR%%/preferences.ui
 %%DATADIR%%/stats.ui
 share/applications/hamster-standalone.desktop
-share/gnome/help/hamster-applet/C/legal.xml
 share/gnome/help/hamster-applet/C/backup.page
+share/gnome/help/hamster-applet/C/figures/hamster-logo.png
 share/gnome/help/hamster-applet/C/index.page
 share/gnome/help/hamster-applet/C/input.page
+share/gnome/help/hamster-applet/C/legal.xml
 share/gnome/help/hamster-applet/C/merge.page
 share/gnome/help/hamster-applet/C/reports.page
 share/gnome/help/hamster-applet/C/statistics.page
-share/gnome/help/hamster-applet/es/backup.page
-share/gnome/help/hamster-applet/es/index.page
-share/gnome/help/hamster-applet/es/input.page
-share/gnome/help/hamster-applet/es/legal.xml
-share/gnome/help/hamster-applet/es/merge.page
-share/gnome/help/hamster-applet/es/reports.page
-share/gnome/help/hamster-applet/es/statistics.page
 share/gnome/help/hamster-applet/cs/backup.page
+share/gnome/help/hamster-applet/cs/figures/hamster-logo.png
 share/gnome/help/hamster-applet/cs/index.page
 share/gnome/help/hamster-applet/cs/input.page
 share/gnome/help/hamster-applet/cs/legal.xml
@@ -140,12 +135,21 @@ share/gnome/help/hamster-applet/cs/merge.page
 share/gnome/help/hamster-applet/cs/reports.page
 share/gnome/help/hamster-applet/cs/statistics.page
 share/gnome/help/hamster-applet/de/backup.page
+share/gnome/help/hamster-applet/de/figures/hamster-logo.png
 share/gnome/help/hamster-applet/de/index.page
 share/gnome/help/hamster-applet/de/input.page
 share/gnome/help/hamster-applet/de/legal.xml
 share/gnome/help/hamster-applet/de/merge.page
 share/gnome/help/hamster-applet/de/reports.page
 share/gnome/help/hamster-applet/de/statistics.page
+share/gnome/help/hamster-applet/es/backup.page
+share/gnome/help/hamster-applet/es/figures/hamster-logo.png
+share/gnome/help/hamster-applet/es/index.page
+share/gnome/help/hamster-applet/es/input.page
+share/gnome/help/hamster-applet/es/legal.xml
+share/gnome/help/hamster-applet/es/merge.page
+share/gnome/help/hamster-applet/es/reports.page
+share/gnome/help/hamster-applet/es/statistics.page
 share/icons/hicolor/16x16/apps/hamster-applet.png
 share/icons/hicolor/22x22/apps/hamster-applet.png
 share/icons/hicolor/32x32/apps/hamster-applet.png
@@ -216,9 +220,13 @@ share/locale/zh_TW/LC_MESSAGES/hamster-applet.mo
 @dirrm %%PYTHON_SITELIBDIR%%/hamster/keybinder
 @dirrm %%PYTHON_SITELIBDIR%%/hamster
 @dirrm lib/hamster-applet
+@dirrm share/gnome/help/hamster-applet/es/figures
 @dirrm share/gnome/help/hamster-applet/es
+@dirrm share/gnome/help/hamster-applet/de/figures
 @dirrm share/gnome/help/hamster-applet/de
+@dirrm share/gnome/help/hamster-applet/cs/figures
 @dirrm share/gnome/help/hamster-applet/cs
+@dirrm share/gnome/help/hamster-applet/C/figures
 @dirrm share/gnome/help/hamster-applet/C
 @dirrm share/gnome/help/hamster-applet
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
