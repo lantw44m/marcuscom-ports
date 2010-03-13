@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/accessibility/gnome-mag/Makefile,v 1.49 2010/02/10 22:03:24 kwm Exp $
 #
 
 PORTNAME=	gnome-mag
 PORTVERSION=	0.16.0
+PORTREVISION=	1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
