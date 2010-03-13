@@ -7,6 +7,8 @@ include/evolution-%%VERSION%%/calendar/common/authentication.h
 include/evolution-%%VERSION%%/calendar/gui/cal-editor-utils.h
 include/evolution-%%VERSION%%/calendar/gui/calendar-config-keys.h
 include/evolution-%%VERSION%%/calendar/gui/calendar-config.h
+include/evolution-%%VERSION%%/calendar/gui/calendar-view-factory.h
+include/evolution-%%VERSION%%/calendar/gui/calendar-view.h
 include/evolution-%%VERSION%%/calendar/gui/comp-util.h
 include/evolution-%%VERSION%%/calendar/gui/dialogs/alarm-dialog.h
 include/evolution-%%VERSION%%/calendar/gui/dialogs/alarm-list-dialog.h
@@ -38,6 +40,7 @@ include/evolution-%%VERSION%%/calendar/gui/dialogs/task-page.h
 include/evolution-%%VERSION%%/calendar/gui/e-alarm-list.h
 include/evolution-%%VERSION%%/calendar/gui/e-cal-config.h
 include/evolution-%%VERSION%%/calendar/gui/e-cal-event.h
+include/evolution-%%VERSION%%/calendar/gui/e-cal-list-view.h
 include/evolution-%%VERSION%%/calendar/gui/e-cal-model-calendar.h
 include/evolution-%%VERSION%%/calendar/gui/e-cal-model.h
 include/evolution-%%VERSION%%/calendar/gui/e-calendar-selector.h

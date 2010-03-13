@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.215 2010/02/23 08:13:03 avl Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.216 2010/03/06 17:04:13 marcus Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.29.91
+PORTVERSION=	2.29.92.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -125,5 +125,6 @@ post-patch:
 		${WRKSRC}/plugins/bogo-junk-plugin/bf-junk-filter.c
 	@${REINPLACE_CMD} -e 's|/usr/sbin|${LOCALBASE}/bin|g' \
 		${WRKSRC}/plugins/sa-junk-plugin/em-junk-filter.c
+	@${SH} ${FILESDIR}/fix-plugins.sh ${WRKSRC}
 
 .include <bsd.port.post.mk>
