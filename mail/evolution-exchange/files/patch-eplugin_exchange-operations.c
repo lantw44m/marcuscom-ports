@@ -14,5 +14,5 @@
 +void g_module_unload (gpointer module);
 +void
 +g_module_unload (gpointer module) {
-+	return NULL;
++	return;
 +}

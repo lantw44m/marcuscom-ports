@@ -13,7 +13,7 @@ for i in ${plugin_srcs}; do
     printf "const char * g_module_check_init (gpointer module);\n" >> ${WRKSRC}/plugins/${i}
     printf "const char *\ng_module_check_init (gpointer module) {\n\treturn NULL;\n}\n" >> ${WRKSRC}/plugins/${i}
     printf "void g_module_unload (gpointer module);\n" >> ${WRKSRC}/plugins/${i}
-    printf "void\ng_module_unload (gpointer module) {\n\treturn NULL;\n}\n" >> ${WRKSRC}/plugins/${i}
+    printf "void\ng_module_unload (gpointer module) {\n\treturn;\n}\n" >> ${WRKSRC}/plugins/${i}
     dir=$(dirname ${WRKSRC}/plugins/${i})
     if ! grep -q e_plugin_lib_enable ${dir}/*.c; then
 	printf "#include <e-util/e-config.h>\n" >> ${WRKSRC}/plugins/${i}
