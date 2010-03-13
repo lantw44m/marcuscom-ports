@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/dbus/Makefile,v 1.77 2009/11/28 20:05:31 marcus Exp $
-#   $MCom: ports/devel/dbus/Makefile,v 1.36 2010/02/13 18:57:59 marcus Exp $
+#   $MCom: ports/devel/dbus/Makefile,v 1.37 2010/02/15 13:38:59 kwm Exp $
 #
 
 PORTNAME=	dbus
 PORTVERSION?=	1.2.20
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
