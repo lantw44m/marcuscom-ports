@@ -23,6 +23,11 @@ for i in ${plugin_srcs}; do
 	printf "gint e_plugin_lib_enable (EPlugin *ep, gint enable);\n" >> ${WRKSRC}/plugins/${i}
 	printf "gint\ne_plugin_lib_enable (EPlugin *ep, gint enable) {\n\treturn 0;\n}\n" >> ${WRKSRC}/plugins/${i}
     fi
+    if ! grep -q e_plugin_lib_get_configure_widget ${dir}/*.c; then
+	printf "#include <e-util/e-config.h>\n" >> ${WRKSRC}/plugins/${i}
+	printf "GtkWidget *e_plugin_lib_get_configure_widget (EPlugin *plugin);\n" >> ${WRKSRC}/plugins/${i}
+	printf "GtkWidget *\ne_plugin_lib_get_configure_widget (EPlugin *plugin) {\n\treturn NULL;\n}" >> ${WRKSRC}/plugins/${i}
+    fi
 done
 
 for i in ${module_srcs}; do
