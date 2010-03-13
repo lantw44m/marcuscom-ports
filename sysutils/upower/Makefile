@@ -3,12 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/upower/Makefile,v 1.8 2010/02/13 19:21:35 marcus Exp $
+#   $MCom: ports/sysutils/upower/Makefile,v 1.9 2010/02/22 01:26:54 marcus Exp $
 #
 
 PORTNAME=	UPower
-DISTVERSION=	0.9.0
-PORTREVISION=	1
+DISTVERSION=	0.9.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
