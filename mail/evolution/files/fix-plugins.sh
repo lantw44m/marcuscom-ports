@@ -36,10 +36,15 @@ for i in ${module_srcs}; do
 	continue
     fi
     cp ${WRKSRC}/modules/${i} ${WRKSRC}/modules/${i}.bak
-    printf "const char * g_module_check_init (gpointer module);\n" >> ${WRKSRC}/modules/${i}
-    printf "const char *\ng_module_check_init (gpointer module) {\n\treturn NULL;\n}\n" >> ${WRKSRC}/modules/${i}
-    printf "void g_module_unload (gpointer module);\n" >> ${WRKSRC}/modules/${i}
-    printf "void\ng_module_unload (gpointer module) {\n\treturn;\n}\n" >> ${WRKSRC}/modules/${i}
+    dir=$(dirname ${WRKSRC}/modules/${i})
+    if ! grep -q g_module_check_init ${dir}/*.c; then
+        printf "const char * g_module_check_init (gpointer module);\n" >> ${WRKSRC}/modules/${i}
+        printf "const char *\ng_module_check_init (gpointer module) {\n\treturn NULL;\n}\n" >> ${WRKSRC}/modules/${i}
+    fi
+    if ! grep g_module_unload ${dir}/*.c; then
+        printf "void g_module_unload (gpointer module);\n" >> ${WRKSRC}/modules/${i}
+        printf "void\ng_module_unload (gpointer module) {\n\treturn;\n}\n" >> ${WRKSRC}/modules/${i}
+    fi
 done
 
 
