@@ -19,6 +19,6 @@
 +
 +GtkWidget *e_plugin_lib_get_configure_widget (EPlugin *plugin);
 +GtkWidget *
-+e_plugin_lib_get_configure_widget (Eplugin *plugin) {
++e_plugin_lib_get_configure_widget (EPlugin *plugin) {
 +	return NULL;
 +}
