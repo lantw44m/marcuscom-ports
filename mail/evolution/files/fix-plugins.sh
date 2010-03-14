@@ -11,7 +11,7 @@ for i in ${plugin_srcs}; do
 	echo "WARNING: Failed to find plugin source file ${WRKSRC}/plugins/${i}"
 	continue
     fi
-    irintf "void\ng_module_unload (gpointer module) {\n\treturn;\n}\n" >> ${WRKSRC}/plugins/${i}
+    printf "void\ng_module_unload (gpointer module) {\n\treturn;\n}\n" >> ${WRKSRC}/plugins/${i}
     cp ${WRKSRC}/plugins/${i} ${WRKSRC}/plugins/${i}.bak
     printf "const char * g_module_check_init (gpointer module);\n" >> ${WRKSRC}/plugins/${i}
     printf "const char *\ng_module_check_init (gpointer module) {\n\treturn NULL;\n}\n" >> ${WRKSRC}/plugins/${i}
