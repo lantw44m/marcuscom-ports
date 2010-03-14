@@ -3,7 +3,7 @@
 # Whom:					Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gir-repository/Makefile,v 1.14 2010/03/01 09:11:46 avl Exp $
+#   $MCom: ports/devel/gir-repository/Makefile,v 1.15 2010/03/09 11:11:46 avl Exp $
 #
 
 MASTER_SITES=	# Empty
@@ -27,7 +27,6 @@ RUN_DEPENDS=	${GIRDIR}/${poppler_GIR}.gir:${PORTSDIR}/${poppler_CATEGORY}/gir-re
 		${GIRDIR}/${gtksourceview2_GIR}.gir:${PORTSDIR}/${gtksourceview2_CATEGORY}/gir-repository-gtksourceview2 \
 		${GIRDIR}/${vte_GIR}.gir:${PORTSDIR}/${vte_CATEGORY}/gir-repository-vte \
 		${GIRDIR}/${avahi_GIR}.gir:${PORTSDIR}/${avahi_CATEGORY}/gir-repository-avahi \
-		${GIRDIR}/${libwnck_GIR}.gir:${PORTSDIR}/${libwnck_CATEGORY}/gir-repository-libwnck \
 		${GIRDIR}/${goocanvas_GIR}.gir:${PORTSDIR}/${goocanvas_CATEGORY}/gir-repository-goocanvas
 
 do-install:	# empty

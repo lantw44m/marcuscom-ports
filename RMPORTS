@@ -5,3 +5,4 @@ x11-toolkits/gir-repository-pango|x11-toolkits/pango|%%DATE%%|Now installed by x
 accessibility/gir-repository-atk|accessibility/atk|%%DATE%%|Now installed by accessibility/atk
 x11/gir-repository-gnome-menus|x11/gnome-menus|%%DATE%%|Now installed by x11/gnome-menus
 audio/gstreamer-plugins-ivorbis|audio/gstreamer-plugins-vorbis|%%DATE%%|merged with vorbis plugin
+x11-toolkits/gir-repository-libwnck|x11-toolkits/libwnck|%%DATE%%|Now installed by x11-toolkits/libwnck
