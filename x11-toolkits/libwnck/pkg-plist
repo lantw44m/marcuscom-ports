@@ -17,6 +17,7 @@ lib/libwnck-1.la
 lib/libwnck-1.so
 lib/libwnck-1.so.22
 libdata/pkgconfig/libwnck-1.0.pc
+lib/girepository-1.0/Wnck-1.0.typelib
 share/locale/am/LC_MESSAGES/libwnck.mo
 share/locale/ar/LC_MESSAGES/libwnck.mo
 share/locale/as/LC_MESSAGES/libwnck.mo
@@ -104,6 +105,7 @@ share/locale/xh/LC_MESSAGES/libwnck.mo
 share/locale/zh_CN/LC_MESSAGES/libwnck.mo
 share/locale/zh_HK/LC_MESSAGES/libwnck.mo
 share/locale/zh_TW/LC_MESSAGES/libwnck.mo
+share/gir-1.0/Wnck-1.0.gir
 @dirrm include/libwnck-1.0/libwnck
 @dirrm include/libwnck-1.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES

@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.125 2010/01/31 08:44:29 avl Exp $
+#   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.126 2010/02/24 04:25:54 avl Exp $
 #
 
 PORTNAME=	libwnck
-PORTVERSION=	2.29.91
+PORTVERSION=	2.29.92
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
@@ -20,7 +20,9 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
+RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 USE_GETTEXT=	yes
 USE_XORG=	xres
