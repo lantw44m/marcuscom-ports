@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.190 2010/03/06 17:04:13 marcus Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.191 2010/03/08 13:35:28 avl Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -27,7 +27,8 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	build
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack ltverhack ltasneededhack
+USE_GNOME=	gnomeprefix gnomehack intlhack ltverhack ltasneededhack gconf2 \
+		libxml2
 USE_OPENLDAP=	yes
 USE_AUTOTOOLS=	libtool:22
 USE_BDB=	41+
