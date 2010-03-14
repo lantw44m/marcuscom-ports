@@ -59,7 +59,6 @@ share/dbus-1/services/org.gnome.Cheese.service
 %%DOCSDIR%%/CheeseWidget.html
 %%DOCSDIR%%/api-index-full.html
 %%DOCSDIR%%/ch01.html
-%%DOCSDIR%%/cheese-cheese-camera-device-monitor.html
 %%DOCSDIR%%/cheese.devhelp
 %%DOCSDIR%%/cheese.devhelp2
 %%DOCSDIR%%/home.png
