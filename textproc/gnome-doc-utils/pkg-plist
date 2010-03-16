@@ -298,6 +298,8 @@ share/xml/mallard/1.0/mallard.rng
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
+@dirrm %%PYTHON_SITELIBDIR%%/xml2po/modes
+@dirrm %%PYTHON_SITELIBDIR%%/xml2po
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
@@ -328,5 +330,3 @@ share/xml/mallard/1.0/mallard.rng
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm %%PYTHON_SITELIBDIR%%/xml2po/modes
-@dirrm %%PYTHON_SITELIBDIR%%/xml2po

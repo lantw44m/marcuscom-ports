@@ -538,6 +538,7 @@ share/omf/users-admin/users-admin-zh_CN.omf
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
+@dirrm etc/gnome-system-tools
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -578,4 +579,3 @@ share/omf/users-admin/users-admin-zh_CN.omf
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm etc/gnome-system-tools

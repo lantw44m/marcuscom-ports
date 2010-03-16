@@ -308,8 +308,8 @@ share/webkit-1.0/webinspector/utilities.js
 @dirrm share/webkit-1.0/resources
 @dirrm share/webkit-1.0/images
 @dirrm share/webkit-1.0
-@dirrmtry share/locale/sr@latin/LC_MESSAGES
-@dirrmtry share/locale/sr@latin
 @dirrm include/webkit-1.0/webkit
 @dirrm include/webkit-1.0/JavaScriptCore
 @dirrm include/webkit-1.0
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin

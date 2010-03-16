@@ -97,8 +97,6 @@ share/locale/sv/LC_MESSAGES/gnome-shell.mo
 share/locale/tr/LC_MESSAGES/gnome-shell.mo
 share/locale/vi/LC_MESSAGES/gnome-shell.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-shell.mo
-@dirrmtry share/locale/sr@latin/LC_MESSAGES
-@dirrmtry share/locale/sr@latin
 @dirrm %%DATADIR%%/theme
 @dirrm %%DATADIR%%/js/ui
 @dirrm %%DATADIR%%/js/misc
@@ -106,3 +104,5 @@ share/locale/zh_CN/LC_MESSAGES/gnome-shell.mo
 @dirrm %%DATADIR%%/images
 @dirrm %%DATADIR%%
 @dirrm lib/gnome-shell
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin

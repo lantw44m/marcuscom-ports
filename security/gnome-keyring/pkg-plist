@@ -172,6 +172,18 @@ share/locale/xh/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
+@dirrm %%DATADIR%%/ui
+@dirrm %%DATADIR%%/introspect
+@dirrm %%DATADIR%%
+@dirrm share/gcr/ui
+@dirrm share/gcr
+@dirrm share/doc/gp11
+@dirrm share/doc/gcr
+@dirrm lib/gnome-keyring/standalone
+@dirrm lib/gnome-keyring/devel
+@dirrm lib/gnome-keyring
+@dirrm include/gp11
+@dirrm include/gcr
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -206,15 +218,3 @@ share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm %%DATADIR%%/ui
-@dirrm %%DATADIR%%/introspect
-@dirrm %%DATADIR%%
-@dirrm share/gcr/ui
-@dirrm share/gcr
-@dirrm share/doc/gp11
-@dirrm share/doc/gcr
-@dirrm lib/gnome-keyring/standalone
-@dirrm lib/gnome-keyring/devel
-@dirrm lib/gnome-keyring
-@dirrm include/gp11
-@dirrm include/gcr

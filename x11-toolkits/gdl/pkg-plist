@@ -127,7 +127,5 @@ share/locale/zh_TW/LC_MESSAGES/gdl-1.mo
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
-@dirrmtry share/locale/be/LC_MESSAGES
-@dirrmtry share/locale/be
 @dirrmtry share/locale/ast/LC_MESSAGES
 @dirrmtry share/locale/ast

@@ -227,14 +227,6 @@ share/omf/gnote/gnote-es.omf
 share/omf/gnote/gnote-sv.omf
 share/omf/gnote/gnote-zh_CN.omf
 @dirrm share/omf/gnote
-@dirrmtry share/locale/te/LC_MESSAGES
-@dirrmtry share/locale/te
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
-@dirrmtry share/locale/as/LC_MESSAGES
-@dirrmtry share/locale/as
 @dirrm %%DATADIR%%/icons/hicolor/scalable/actions
 @dirrm %%DATADIR%%/icons/hicolor/scalable
 @dirrm %%DATADIR%%/icons/hicolor/48x48/actions
@@ -271,3 +263,11 @@ share/omf/gnote/gnote-zh_CN.omf
 @dirrmtry lib/gnote/addins/%%VERSION%%
 @dirrmtry lib/gnote/addins
 @dirrmtry lib/gnote
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
