@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/sysutils/hal/files/hald.in,v 1.9 2009/11/28 20:06:02 marcus Exp $
-#   $MCom: ports/sysutils/hal/files/hald.in,v 1.19 2009/12/23 19:20:50 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/sysutils/hal/files/hald.in,v 1.20 2010/02/21 19:50:05 marcus Exp $
 #
 # PROVIDE: hald
 # REQUIRE: DAEMON usbd devd dbus moused webcamd

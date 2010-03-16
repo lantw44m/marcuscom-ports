@@ -2,8 +2,8 @@
 # Date Created:			25 January 2008
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/hal-info/Makefile,v 1.3 2008/06/06 14:03:08 edwin Exp $
-#   $MCom: ports/sysutils/hal-info/Makefile,v 1.3 2008/03/17 22:31:58 marcus Exp $
+# $FreeBSD$
+#   $MCom: ports/sysutils/hal-info/Makefile,v 1.5 2009/12/25 17:19:06 marcus Exp $
 #
 
 PORTNAME=	hal-info
