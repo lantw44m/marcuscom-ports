@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.58 2010/03/12 02:38:35 avl Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.59 2010/03/16 12:40:41 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.29.93
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -28,8 +29,7 @@ USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	evolutiondataserver gnomehack gnomeprefix pygtk2 ltverhack \
-		gnomepanel
+USE_GNOME=	evolutiondataserver gnomehack gnomeprefix pygtk2 ltverhack
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool:22
 INSTALLS_OMF=	yes
