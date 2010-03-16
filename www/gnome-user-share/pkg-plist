@@ -80,6 +80,7 @@ share/icons/hicolor/32x32/apps/gnome-obex-server.png
 share/icons/hicolor/48x48/apps/gnome-obex-server.png
 share/locale/ar/LC_MESSAGES/gnome-user-share.mo
 share/locale/as/LC_MESSAGES/gnome-user-share.mo
+share/locale/ast/LC_MESSAGES/gnome-user-share.mo
 share/locale/bg/LC_MESSAGES/gnome-user-share.mo
 share/locale/bn/LC_MESSAGES/gnome-user-share.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-user-share.mo
@@ -109,6 +110,7 @@ share/locale/ja/LC_MESSAGES/gnome-user-share.mo
 share/locale/kn/LC_MESSAGES/gnome-user-share.mo
 share/locale/ko/LC_MESSAGES/gnome-user-share.mo
 share/locale/lt/LC_MESSAGES/gnome-user-share.mo
+share/locale/lv/LC_MESSAGES/gnome-user-share.mo
 share/locale/mai/LC_MESSAGES/gnome-user-share.mo
 share/locale/mk/LC_MESSAGES/gnome-user-share.mo
 share/locale/ml/LC_MESSAGES/gnome-user-share.mo
@@ -197,5 +199,7 @@ share/omf/gnome-user-share/gnome-user-share-zh_CN.omf
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
