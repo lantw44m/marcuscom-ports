@@ -1,5 +1,6 @@
 bin/empathy
 bin/empathy-accounts
+bin/empathy-debugger
 share/applications/empathy-accounts.desktop
 share/applications/empathy.desktop
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
@@ -235,6 +236,7 @@ share/gnome/help/empathy/C/geolocation-turn.page
 share/gnome/help/empathy/C/geolocation-what-is.page
 share/gnome/help/empathy/C/geolocation.page
 share/gnome/help/empathy/C/group-conversations.page
+share/gnome/help/empathy/C/hide-contacts.page
 share/gnome/help/empathy/C/import-account.page
 share/gnome/help/empathy/C/index.page
 share/gnome/help/empathy/C/introduction.page
@@ -246,7 +248,6 @@ share/gnome/help/empathy/C/irc-nick-password.page
 share/gnome/help/empathy/C/irc-send-file.page
 share/gnome/help/empathy/C/irc-start-conversation.page
 share/gnome/help/empathy/C/license.page
-share/gnome/help/empathy/C/offline-contacts.page
 share/gnome/help/empathy/C/prev-conv.page
 share/gnome/help/empathy/C/prob-conn-acctdisabled.page
 share/gnome/help/empathy/C/prob-conn-auth.page
@@ -290,6 +291,7 @@ share/gnome/help/empathy/ca/geolocation-turn.page
 share/gnome/help/empathy/ca/geolocation-what-is.page
 share/gnome/help/empathy/ca/geolocation.page
 share/gnome/help/empathy/ca/group-conversations.page
+share/gnome/help/empathy/ca/hide-contacts.page
 share/gnome/help/empathy/ca/import-account.page
 share/gnome/help/empathy/ca/index.page
 share/gnome/help/empathy/ca/introduction.page
@@ -301,7 +303,6 @@ share/gnome/help/empathy/ca/irc-nick-password.page
 share/gnome/help/empathy/ca/irc-send-file.page
 share/gnome/help/empathy/ca/irc-start-conversation.page
 share/gnome/help/empathy/ca/license.page
-share/gnome/help/empathy/ca/offline-contacts.page
 share/gnome/help/empathy/ca/prev-conv.page
 share/gnome/help/empathy/ca/prob-conn-acctdisabled.page
 share/gnome/help/empathy/ca/prob-conn-auth.page
@@ -345,6 +346,7 @@ share/gnome/help/empathy/cs/geolocation-turn.page
 share/gnome/help/empathy/cs/geolocation-what-is.page
 share/gnome/help/empathy/cs/geolocation.page
 share/gnome/help/empathy/cs/group-conversations.page
+share/gnome/help/empathy/cs/hide-contacts.page
 share/gnome/help/empathy/cs/import-account.page
 share/gnome/help/empathy/cs/index.page
 share/gnome/help/empathy/cs/introduction.page
@@ -356,7 +358,6 @@ share/gnome/help/empathy/cs/irc-nick-password.page
 share/gnome/help/empathy/cs/irc-send-file.page
 share/gnome/help/empathy/cs/irc-start-conversation.page
 share/gnome/help/empathy/cs/license.page
-share/gnome/help/empathy/cs/offline-contacts.page
 share/gnome/help/empathy/cs/prev-conv.page
 share/gnome/help/empathy/cs/prob-conn-acctdisabled.page
 share/gnome/help/empathy/cs/prob-conn-auth.page
@@ -400,6 +401,7 @@ share/gnome/help/empathy/de/geolocation-turn.page
 share/gnome/help/empathy/de/geolocation-what-is.page
 share/gnome/help/empathy/de/geolocation.page
 share/gnome/help/empathy/de/group-conversations.page
+share/gnome/help/empathy/de/hide-contacts.page
 share/gnome/help/empathy/de/import-account.page
 share/gnome/help/empathy/de/index.page
 share/gnome/help/empathy/de/introduction.page
@@ -411,7 +413,6 @@ share/gnome/help/empathy/de/irc-nick-password.page
 share/gnome/help/empathy/de/irc-send-file.page
 share/gnome/help/empathy/de/irc-start-conversation.page
 share/gnome/help/empathy/de/license.page
-share/gnome/help/empathy/de/offline-contacts.page
 share/gnome/help/empathy/de/prev-conv.page
 share/gnome/help/empathy/de/prob-conn-acctdisabled.page
 share/gnome/help/empathy/de/prob-conn-auth.page
@@ -455,6 +456,7 @@ share/gnome/help/empathy/el/geolocation-turn.page
 share/gnome/help/empathy/el/geolocation-what-is.page
 share/gnome/help/empathy/el/geolocation.page
 share/gnome/help/empathy/el/group-conversations.page
+share/gnome/help/empathy/el/hide-contacts.page
 share/gnome/help/empathy/el/import-account.page
 share/gnome/help/empathy/el/index.page
 share/gnome/help/empathy/el/introduction.page
@@ -466,7 +468,6 @@ share/gnome/help/empathy/el/irc-nick-password.page
 share/gnome/help/empathy/el/irc-send-file.page
 share/gnome/help/empathy/el/irc-start-conversation.page
 share/gnome/help/empathy/el/license.page
-share/gnome/help/empathy/el/offline-contacts.page
 share/gnome/help/empathy/el/prev-conv.page
 share/gnome/help/empathy/el/prob-conn-acctdisabled.page
 share/gnome/help/empathy/el/prob-conn-auth.page
@@ -510,6 +511,7 @@ share/gnome/help/empathy/en_GB/geolocation-turn.page
 share/gnome/help/empathy/en_GB/geolocation-what-is.page
 share/gnome/help/empathy/en_GB/geolocation.page
 share/gnome/help/empathy/en_GB/group-conversations.page
+share/gnome/help/empathy/en_GB/hide-contacts.page
 share/gnome/help/empathy/en_GB/import-account.page
 share/gnome/help/empathy/en_GB/index.page
 share/gnome/help/empathy/en_GB/introduction.page
@@ -521,7 +523,6 @@ share/gnome/help/empathy/en_GB/irc-nick-password.page
 share/gnome/help/empathy/en_GB/irc-send-file.page
 share/gnome/help/empathy/en_GB/irc-start-conversation.page
 share/gnome/help/empathy/en_GB/license.page
-share/gnome/help/empathy/en_GB/offline-contacts.page
 share/gnome/help/empathy/en_GB/prev-conv.page
 share/gnome/help/empathy/en_GB/prob-conn-acctdisabled.page
 share/gnome/help/empathy/en_GB/prob-conn-auth.page
@@ -565,6 +566,7 @@ share/gnome/help/empathy/es/geolocation-turn.page
 share/gnome/help/empathy/es/geolocation-what-is.page
 share/gnome/help/empathy/es/geolocation.page
 share/gnome/help/empathy/es/group-conversations.page
+share/gnome/help/empathy/es/hide-contacts.page
 share/gnome/help/empathy/es/import-account.page
 share/gnome/help/empathy/es/index.page
 share/gnome/help/empathy/es/introduction.page
@@ -576,7 +578,6 @@ share/gnome/help/empathy/es/irc-nick-password.page
 share/gnome/help/empathy/es/irc-send-file.page
 share/gnome/help/empathy/es/irc-start-conversation.page
 share/gnome/help/empathy/es/license.page
-share/gnome/help/empathy/es/offline-contacts.page
 share/gnome/help/empathy/es/prev-conv.page
 share/gnome/help/empathy/es/prob-conn-acctdisabled.page
 share/gnome/help/empathy/es/prob-conn-auth.page
@@ -620,6 +621,7 @@ share/gnome/help/empathy/fi/geolocation-turn.page
 share/gnome/help/empathy/fi/geolocation-what-is.page
 share/gnome/help/empathy/fi/geolocation.page
 share/gnome/help/empathy/fi/group-conversations.page
+share/gnome/help/empathy/fi/hide-contacts.page
 share/gnome/help/empathy/fi/import-account.page
 share/gnome/help/empathy/fi/index.page
 share/gnome/help/empathy/fi/introduction.page
@@ -631,7 +633,6 @@ share/gnome/help/empathy/fi/irc-nick-password.page
 share/gnome/help/empathy/fi/irc-send-file.page
 share/gnome/help/empathy/fi/irc-start-conversation.page
 share/gnome/help/empathy/fi/license.page
-share/gnome/help/empathy/fi/offline-contacts.page
 share/gnome/help/empathy/fi/prev-conv.page
 share/gnome/help/empathy/fi/prob-conn-acctdisabled.page
 share/gnome/help/empathy/fi/prob-conn-auth.page
@@ -675,6 +676,7 @@ share/gnome/help/empathy/fr/geolocation-turn.page
 share/gnome/help/empathy/fr/geolocation-what-is.page
 share/gnome/help/empathy/fr/geolocation.page
 share/gnome/help/empathy/fr/group-conversations.page
+share/gnome/help/empathy/fr/hide-contacts.page
 share/gnome/help/empathy/fr/import-account.page
 share/gnome/help/empathy/fr/index.page
 share/gnome/help/empathy/fr/introduction.page
@@ -686,7 +688,6 @@ share/gnome/help/empathy/fr/irc-nick-password.page
 share/gnome/help/empathy/fr/irc-send-file.page
 share/gnome/help/empathy/fr/irc-start-conversation.page
 share/gnome/help/empathy/fr/license.page
-share/gnome/help/empathy/fr/offline-contacts.page
 share/gnome/help/empathy/fr/prev-conv.page
 share/gnome/help/empathy/fr/prob-conn-acctdisabled.page
 share/gnome/help/empathy/fr/prob-conn-auth.page
@@ -730,6 +731,7 @@ share/gnome/help/empathy/it/geolocation-turn.page
 share/gnome/help/empathy/it/geolocation-what-is.page
 share/gnome/help/empathy/it/geolocation.page
 share/gnome/help/empathy/it/group-conversations.page
+share/gnome/help/empathy/it/hide-contacts.page
 share/gnome/help/empathy/it/import-account.page
 share/gnome/help/empathy/it/index.page
 share/gnome/help/empathy/it/introduction.page
@@ -741,7 +743,6 @@ share/gnome/help/empathy/it/irc-nick-password.page
 share/gnome/help/empathy/it/irc-send-file.page
 share/gnome/help/empathy/it/irc-start-conversation.page
 share/gnome/help/empathy/it/license.page
-share/gnome/help/empathy/it/offline-contacts.page
 share/gnome/help/empathy/it/prev-conv.page
 share/gnome/help/empathy/it/prob-conn-acctdisabled.page
 share/gnome/help/empathy/it/prob-conn-auth.page
@@ -785,6 +786,7 @@ share/gnome/help/empathy/ru/geolocation-turn.page
 share/gnome/help/empathy/ru/geolocation-what-is.page
 share/gnome/help/empathy/ru/geolocation.page
 share/gnome/help/empathy/ru/group-conversations.page
+share/gnome/help/empathy/ru/hide-contacts.page
 share/gnome/help/empathy/ru/import-account.page
 share/gnome/help/empathy/ru/index.page
 share/gnome/help/empathy/ru/introduction.page
@@ -796,7 +798,6 @@ share/gnome/help/empathy/ru/irc-nick-password.page
 share/gnome/help/empathy/ru/irc-send-file.page
 share/gnome/help/empathy/ru/irc-start-conversation.page
 share/gnome/help/empathy/ru/license.page
-share/gnome/help/empathy/ru/offline-contacts.page
 share/gnome/help/empathy/ru/prev-conv.page
 share/gnome/help/empathy/ru/prob-conn-acctdisabled.page
 share/gnome/help/empathy/ru/prob-conn-auth.page
@@ -840,6 +841,7 @@ share/gnome/help/empathy/sv/geolocation-turn.page
 share/gnome/help/empathy/sv/geolocation-what-is.page
 share/gnome/help/empathy/sv/geolocation.page
 share/gnome/help/empathy/sv/group-conversations.page
+share/gnome/help/empathy/sv/hide-contacts.page
 share/gnome/help/empathy/sv/import-account.page
 share/gnome/help/empathy/sv/index.page
 share/gnome/help/empathy/sv/introduction.page
@@ -851,7 +853,6 @@ share/gnome/help/empathy/sv/irc-nick-password.page
 share/gnome/help/empathy/sv/irc-send-file.page
 share/gnome/help/empathy/sv/irc-start-conversation.page
 share/gnome/help/empathy/sv/license.page
-share/gnome/help/empathy/sv/offline-contacts.page
 share/gnome/help/empathy/sv/prev-conv.page
 share/gnome/help/empathy/sv/prob-conn-acctdisabled.page
 share/gnome/help/empathy/sv/prob-conn-auth.page
