@@ -14,6 +14,7 @@ include/webkit-1.0/webkit/webkitdefines.h
 include/webkit-1.0/webkit/webkitdownload.h
 include/webkit-1.0/webkit/webkitenumtypes.h
 include/webkit-1.0/webkit/webkiterror.h
+include/webkit-1.0/webkit/webkitgeolocationpolicydecision.h
 include/webkit-1.0/webkit/webkithittestresult.h
 include/webkit-1.0/webkit/webkitnetworkrequest.h
 include/webkit-1.0/webkit/webkitnetworkresponse.h
@@ -44,13 +45,18 @@ share/gir-1.0/WebKit-1.0.gir
 share/locale/de/LC_MESSAGES/webkit.mo
 share/locale/en_GB/LC_MESSAGES/webkit.mo
 share/locale/es/LC_MESSAGES/webkit.mo
+share/locale/et/LC_MESSAGES/webkit.mo
+share/locale/gu/LC_MESSAGES/webkit.mo
 share/locale/he/LC_MESSAGES/webkit.mo
 share/locale/it/LC_MESSAGES/webkit.mo
 share/locale/lt/LC_MESSAGES/webkit.mo
+share/locale/lv/LC_MESSAGES/webkit.mo
 share/locale/nl/LC_MESSAGES/webkit.mo
 share/locale/pa/LC_MESSAGES/webkit.mo
+share/locale/pt/LC_MESSAGES/webkit.mo
 share/locale/pt_BR/LC_MESSAGES/webkit.mo
 share/locale/ru/LC_MESSAGES/webkit.mo
+share/locale/sl/LC_MESSAGES/webkit.mo
 share/locale/sr/LC_MESSAGES/webkit.mo
 share/locale/sr@latin/LC_MESSAGES/webkit.mo
 share/locale/sv/LC_MESSAGES/webkit.mo
@@ -75,6 +81,7 @@ share/webkit-1.0/webinspector/BreakpointsSidebarPane.js
 share/webkit-1.0/webinspector/CallStackSidebarPane.js
 share/webkit-1.0/webinspector/Callback.js
 share/webkit-1.0/webinspector/ChangesView.js
+share/webkit-1.0/webinspector/Checkbox.js
 share/webkit-1.0/webinspector/Color.js
 share/webkit-1.0/webinspector/ConsolePanel.js
 share/webkit-1.0/webinspector/ConsoleView.js
@@ -94,7 +101,14 @@ share/webkit-1.0/webinspector/ElementsTreeOutline.js
 share/webkit-1.0/webinspector/EventListenersSidebarPane.js
 share/webkit-1.0/webinspector/FontView.js
 share/webkit-1.0/webinspector/ImageView.js
+share/webkit-1.0/webinspector/Images/auditsIcon.png
 share/webkit-1.0/webinspector/Images/back.png
+share/webkit-1.0/webinspector/Images/breakpointBorder.png
+share/webkit-1.0/webinspector/Images/breakpointConditionalBorder.png
+share/webkit-1.0/webinspector/Images/breakpointConditionalCounterBorder.png
+share/webkit-1.0/webinspector/Images/breakpointCounterBorder.png
+share/webkit-1.0/webinspector/Images/breakpointsActivateButtonGlyph.png
+share/webkit-1.0/webinspector/Images/breakpointsDeactivateButtonGlyph.png
 share/webkit-1.0/webinspector/Images/checker.png
 share/webkit-1.0/webinspector/Images/clearConsoleButtonGlyph.png
 share/webkit-1.0/webinspector/Images/closeButtons.png
@@ -103,8 +117,6 @@ share/webkit-1.0/webinspector/Images/consoleIcon.png
 share/webkit-1.0/webinspector/Images/cookie.png
 share/webkit-1.0/webinspector/Images/database.png
 share/webkit-1.0/webinspector/Images/databaseTable.png
-share/webkit-1.0/webinspector/Images/deactivateBreakpointsButtonGlyph.png
-share/webkit-1.0/webinspector/Images/deactivateBreakpointsDisabledButtonGlyph.png
 share/webkit-1.0/webinspector/Images/debuggerContinue.png
 share/webkit-1.0/webinspector/Images/debuggerPause.png
 share/webkit-1.0/webinspector/Images/debuggerStepInto.png
@@ -154,6 +166,7 @@ share/webkit-1.0/webinspector/Images/profileIcon.png
 share/webkit-1.0/webinspector/Images/profileSmallIcon.png
 share/webkit-1.0/webinspector/Images/profilesIcon.png
 share/webkit-1.0/webinspector/Images/profilesSilhouette.png
+share/webkit-1.0/webinspector/Images/programCounterBorder.png
 share/webkit-1.0/webinspector/Images/radioDot.png
 share/webkit-1.0/webinspector/Images/recordButtonGlyph.png
 share/webkit-1.0/webinspector/Images/recordToggledButtonGlyph.png
@@ -181,6 +194,7 @@ share/webkit-1.0/webinspector/Images/segmentHoverEnd.png
 share/webkit-1.0/webinspector/Images/segmentSelected.png
 share/webkit-1.0/webinspector/Images/segmentSelectedEnd.png
 share/webkit-1.0/webinspector/Images/sessionStorage.png
+share/webkit-1.0/webinspector/Images/spinner.gif
 share/webkit-1.0/webinspector/Images/splitviewDimple.png
 share/webkit-1.0/webinspector/Images/splitviewDividerBackground.png
 share/webkit-1.0/webinspector/Images/statusbarBackground.png
@@ -240,6 +254,7 @@ share/webkit-1.0/webinspector/Images/warningMediumIcon.png
 share/webkit-1.0/webinspector/Images/warningOrangeDot.png
 share/webkit-1.0/webinspector/Images/warningsErrors.png
 share/webkit-1.0/webinspector/Images/whiteConnectorPoint.png
+share/webkit-1.0/webinspector/InjectedFakeWorker.js
 share/webkit-1.0/webinspector/InjectedScript.js
 share/webkit-1.0/webinspector/InjectedScriptAccess.js
 share/webkit-1.0/webinspector/InspectorBackendStub.js
@@ -293,6 +308,7 @@ share/webkit-1.0/webinspector/TopDownProfileDataGridTree.js
 share/webkit-1.0/webinspector/View.js
 share/webkit-1.0/webinspector/WatchExpressionsSidebarPane.js
 share/webkit-1.0/webinspector/WelcomeView.js
+share/webkit-1.0/webinspector/WorkersSidebarPane.js
 share/webkit-1.0/webinspector/audits.css
 share/webkit-1.0/webinspector/inspector.css
 share/webkit-1.0/webinspector/inspector.html
