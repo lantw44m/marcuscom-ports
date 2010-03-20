@@ -146,6 +146,7 @@ share/doc/gdata/ix04.html
 share/doc/gdata/ix05.html
 share/doc/gdata/ix06.html
 share/doc/gdata/ix07.html
+share/doc/gdata/ix08.html
 share/doc/gdata/left.png
 share/doc/gdata/pt01.html
 share/doc/gdata/pt02.html
@@ -174,6 +175,7 @@ share/locale/pa/LC_MESSAGES/gdata.mo
 share/locale/pl/LC_MESSAGES/gdata.mo
 share/locale/pt/LC_MESSAGES/gdata.mo
 share/locale/pt_BR/LC_MESSAGES/gdata.mo
+share/locale/ru/LC_MESSAGES/gdata.mo
 share/locale/sl/LC_MESSAGES/gdata.mo
 share/locale/sv/LC_MESSAGES/gdata.mo
 share/locale/uk/LC_MESSAGES/gdata.mo
