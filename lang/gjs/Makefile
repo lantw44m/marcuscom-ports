@@ -3,11 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/lang/gjs/Makefile,v 1.4 2010/02/25 15:44:04 kwm Exp $
 #
 
 PORTNAME=	gjs
-PORTVERSION=	0.5
+PORTVERSION=	0.6
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
