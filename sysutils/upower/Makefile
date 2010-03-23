@@ -3,13 +3,13 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/upower/Makefile,v 1.9 2010/02/22 01:26:54 marcus Exp $
+#   $MCom: ports/sysutils/upower/Makefile,v 1.10 2010/03/13 10:48:14 kwm Exp $
 #
 
 PORTNAME=	UPower
 DISTVERSION=	0.9.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://hal.freedesktop.org/releases/
+MASTER_SITES=	http://upower.freedesktop.org/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	D-Bus daemon for simplifying power management tasks
