@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.139 2010/03/04 14:07:29 kwm Exp $
+#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.140 2010/03/04 22:12:18 kwm Exp $
 #
 
 PORTNAME=	gnome-icon-theme
-PORTVERSION=	2.29.2
+PORTVERSION=	2.29.3
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -24,7 +24,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack intlhack gtk20
 INSTALLS_ICONS=	yes
-CONFIGURE_ARGS=	CPPFLAGS="-I${LOCALBASE}/include" \
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>
