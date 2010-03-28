@@ -113,6 +113,7 @@ share/icons/gnome/16x16/actions/gtk-goto-first-rtl.png
 share/icons/gnome/16x16/actions/gtk-goto-last-ltr.png
 share/icons/gnome/16x16/actions/gtk-goto-last-rtl.png
 share/icons/gnome/16x16/actions/gtk-goto-top.png
+share/icons/gnome/16x16/actions/gtk-help.png
 share/icons/gnome/16x16/actions/gtk-home.png
 share/icons/gnome/16x16/actions/gtk-indent-ltr.png
 share/icons/gnome/16x16/actions/gtk-indent-rtl.png
@@ -167,6 +168,7 @@ share/icons/gnome/16x16/actions/gtk-zoom-out.png
 share/icons/gnome/16x16/actions/help-about.png
 share/icons/gnome/16x16/actions/help-contents.png
 share/icons/gnome/16x16/actions/help-faq.png
+share/icons/gnome/16x16/actions/help.png
 share/icons/gnome/16x16/actions/insert-image.png
 share/icons/gnome/16x16/actions/insert-link.png
 share/icons/gnome/16x16/actions/insert-object.png
@@ -242,6 +244,7 @@ share/icons/gnome/16x16/actions/stock_file-properites.png
 share/icons/gnome/16x16/actions/stock_first.png
 share/icons/gnome/16x16/actions/stock_fullscreen.png
 share/icons/gnome/16x16/actions/stock_help-add-bookmark.png
+share/icons/gnome/16x16/actions/stock_help.png
 share/icons/gnome/16x16/actions/stock_home.png
 share/icons/gnome/16x16/actions/stock_last.png
 share/icons/gnome/16x16/actions/stock_leave-fullscreen.png
@@ -366,10 +369,8 @@ share/icons/gnome/16x16/apps/gnome-settings-keybindings.png
 share/icons/gnome/16x16/apps/gnome-settings-theme.png
 share/icons/gnome/16x16/apps/gnome-terminal.png
 share/icons/gnome/16x16/apps/gnome-window-manager.png
-share/icons/gnome/16x16/apps/gtk-help.png
 share/icons/gnome/16x16/apps/gucharmap.png
 share/icons/gnome/16x16/apps/help-browser.png
-share/icons/gnome/16x16/apps/help.png
 share/icons/gnome/16x16/apps/kcalc.png
 share/icons/gnome/16x16/apps/kcharselect.png
 share/icons/gnome/16x16/apps/kcmkwm.png
@@ -402,7 +403,6 @@ share/icons/gnome/16x16/apps/preferences-desktop-wallpaper.png
 share/icons/gnome/16x16/apps/preferences-system-windows.png
 share/icons/gnome/16x16/apps/redhat-filemanager.png
 share/icons/gnome/16x16/apps/screensaver.png
-share/icons/gnome/16x16/apps/stock_help.png
 share/icons/gnome/16x16/apps/style.png
 share/icons/gnome/16x16/apps/susehelpcenter.png
 share/icons/gnome/16x16/apps/system-config-users.png
@@ -610,7 +610,6 @@ share/icons/gnome/16x16/emblems/emblem-system.png
 share/icons/gnome/16x16/emblems/emblem-unreadable.png
 share/icons/gnome/16x16/emblems/emblem-urgent.png
 share/icons/gnome/16x16/emblems/emblem-web.png
-share/icons/gnome/16x16/emblems/stock_mail-priority-high.png
 share/icons/gnome/16x16/emotes/face-angel.png
 share/icons/gnome/16x16/emotes/face-angry.png
 share/icons/gnome/16x16/emotes/face-cool.png
@@ -648,6 +647,15 @@ share/icons/gnome/16x16/emotes/stock_smiley-6.png
 share/icons/gnome/16x16/emotes/stock_smiley-7.png
 share/icons/gnome/16x16/emotes/stock_smiley-8.png
 share/icons/gnome/16x16/mimetypes/application-certificate.png
+share/icons/gnome/16x16/mimetypes/application-vnd.ms-excel.sheet.macroEnabled.12.png
+share/icons/gnome/16x16/mimetypes/application-vnd.ms-powerpoint.presentation.macroEnabled.12.png
+share/icons/gnome/16x16/mimetypes/application-vnd.ms-word.document.macroEnabled.12.png
+share/icons/gnome/16x16/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/gnome/16x16/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/gnome/16x16/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/gnome/16x16/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/gnome/16x16/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/gnome/16x16/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/gnome/16x16/mimetypes/application-x-executable.png
 share/icons/gnome/16x16/mimetypes/ascii.png
 share/icons/gnome/16x16/mimetypes/audio-x-generic.png
@@ -1104,6 +1112,7 @@ share/icons/gnome/22x22/actions/gtk-goto-first-rtl.png
 share/icons/gnome/22x22/actions/gtk-goto-last-ltr.png
 share/icons/gnome/22x22/actions/gtk-goto-last-rtl.png
 share/icons/gnome/22x22/actions/gtk-goto-top.png
+share/icons/gnome/22x22/actions/gtk-help.png
 share/icons/gnome/22x22/actions/gtk-home.png
 share/icons/gnome/22x22/actions/gtk-indent-ltr.png
 share/icons/gnome/22x22/actions/gtk-indent-rtl.png
@@ -1158,6 +1167,7 @@ share/icons/gnome/22x22/actions/gtk-zoom-out.png
 share/icons/gnome/22x22/actions/help-about.png
 share/icons/gnome/22x22/actions/help-contents.png
 share/icons/gnome/22x22/actions/help-faq.png
+share/icons/gnome/22x22/actions/help.png
 share/icons/gnome/22x22/actions/insert-image.png
 share/icons/gnome/22x22/actions/insert-link.png
 share/icons/gnome/22x22/actions/insert-object.png
@@ -1233,6 +1243,7 @@ share/icons/gnome/22x22/actions/stock_file-properites.png
 share/icons/gnome/22x22/actions/stock_first.png
 share/icons/gnome/22x22/actions/stock_fullscreen.png
 share/icons/gnome/22x22/actions/stock_help-add-bookmark.png
+share/icons/gnome/22x22/actions/stock_help.png
 share/icons/gnome/22x22/actions/stock_home.png
 share/icons/gnome/22x22/actions/stock_last.png
 share/icons/gnome/22x22/actions/stock_leave-fullscreen.png
@@ -1357,10 +1368,8 @@ share/icons/gnome/22x22/apps/gnome-settings-keybindings.png
 share/icons/gnome/22x22/apps/gnome-settings-theme.png
 share/icons/gnome/22x22/apps/gnome-terminal.png
 share/icons/gnome/22x22/apps/gnome-window-manager.png
-share/icons/gnome/22x22/apps/gtk-help.png
 share/icons/gnome/22x22/apps/gucharmap.png
 share/icons/gnome/22x22/apps/help-browser.png
-share/icons/gnome/22x22/apps/help.png
 share/icons/gnome/22x22/apps/kcalc.png
 share/icons/gnome/22x22/apps/kcharselect.png
 share/icons/gnome/22x22/apps/kcmkwm.png
@@ -1393,7 +1402,6 @@ share/icons/gnome/22x22/apps/preferences-desktop-wallpaper.png
 share/icons/gnome/22x22/apps/preferences-system-windows.png
 share/icons/gnome/22x22/apps/redhat-filemanager.png
 share/icons/gnome/22x22/apps/screensaver.png
-share/icons/gnome/22x22/apps/stock_help.png
 share/icons/gnome/22x22/apps/style.png
 share/icons/gnome/22x22/apps/susehelpcenter.png
 share/icons/gnome/22x22/apps/system-config-users.png
@@ -1601,7 +1609,6 @@ share/icons/gnome/22x22/emblems/emblem-system.png
 share/icons/gnome/22x22/emblems/emblem-unreadable.png
 share/icons/gnome/22x22/emblems/emblem-urgent.png
 share/icons/gnome/22x22/emblems/emblem-web.png
-share/icons/gnome/22x22/emblems/stock_mail-priority-high.png
 share/icons/gnome/22x22/emotes/face-angel.png
 share/icons/gnome/22x22/emotes/face-angry.png
 share/icons/gnome/22x22/emotes/face-cool.png
@@ -1639,6 +1646,15 @@ share/icons/gnome/22x22/emotes/stock_smiley-6.png
 share/icons/gnome/22x22/emotes/stock_smiley-7.png
 share/icons/gnome/22x22/emotes/stock_smiley-8.png
 share/icons/gnome/22x22/mimetypes/application-certificate.png
+share/icons/gnome/22x22/mimetypes/application-vnd.ms-excel.sheet.macroEnabled.12.png
+share/icons/gnome/22x22/mimetypes/application-vnd.ms-powerpoint.presentation.macroEnabled.12.png
+share/icons/gnome/22x22/mimetypes/application-vnd.ms-word.document.macroEnabled.12.png
+share/icons/gnome/22x22/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/gnome/22x22/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/gnome/22x22/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/gnome/22x22/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/gnome/22x22/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/gnome/22x22/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/gnome/22x22/mimetypes/application-x-executable.png
 share/icons/gnome/22x22/mimetypes/ascii.png
 share/icons/gnome/22x22/mimetypes/audio-x-generic.png
@@ -2095,6 +2111,7 @@ share/icons/gnome/24x24/actions/gtk-goto-first-rtl.png
 share/icons/gnome/24x24/actions/gtk-goto-last-ltr.png
 share/icons/gnome/24x24/actions/gtk-goto-last-rtl.png
 share/icons/gnome/24x24/actions/gtk-goto-top.png
+share/icons/gnome/24x24/actions/gtk-help.png
 share/icons/gnome/24x24/actions/gtk-home.png
 share/icons/gnome/24x24/actions/gtk-indent-ltr.png
 share/icons/gnome/24x24/actions/gtk-indent-rtl.png
@@ -2149,6 +2166,7 @@ share/icons/gnome/24x24/actions/gtk-zoom-out.png
 share/icons/gnome/24x24/actions/help-about.png
 share/icons/gnome/24x24/actions/help-contents.png
 share/icons/gnome/24x24/actions/help-faq.png
+share/icons/gnome/24x24/actions/help.png
 share/icons/gnome/24x24/actions/insert-image.png
 share/icons/gnome/24x24/actions/insert-link.png
 share/icons/gnome/24x24/actions/insert-object.png
@@ -2224,6 +2242,7 @@ share/icons/gnome/24x24/actions/stock_file-properites.png
 share/icons/gnome/24x24/actions/stock_first.png
 share/icons/gnome/24x24/actions/stock_fullscreen.png
 share/icons/gnome/24x24/actions/stock_help-add-bookmark.png
+share/icons/gnome/24x24/actions/stock_help.png
 share/icons/gnome/24x24/actions/stock_home.png
 share/icons/gnome/24x24/actions/stock_last.png
 share/icons/gnome/24x24/actions/stock_leave-fullscreen.png
@@ -2346,10 +2365,8 @@ share/icons/gnome/24x24/apps/gnome-settings-keybindings.png
 share/icons/gnome/24x24/apps/gnome-settings-theme.png
 share/icons/gnome/24x24/apps/gnome-terminal.png
 share/icons/gnome/24x24/apps/gnome-window-manager.png
-share/icons/gnome/24x24/apps/gtk-help.png
 share/icons/gnome/24x24/apps/gucharmap.png
 share/icons/gnome/24x24/apps/help-browser.png
-share/icons/gnome/24x24/apps/help.png
 share/icons/gnome/24x24/apps/kcalc.png
 share/icons/gnome/24x24/apps/kcharselect.png
 share/icons/gnome/24x24/apps/kcmkwm.png
@@ -2382,7 +2399,6 @@ share/icons/gnome/24x24/apps/preferences-desktop-wallpaper.png
 share/icons/gnome/24x24/apps/preferences-system-windows.png
 share/icons/gnome/24x24/apps/redhat-filemanager.png
 share/icons/gnome/24x24/apps/screensaver.png
-share/icons/gnome/24x24/apps/stock_help.png
 share/icons/gnome/24x24/apps/style.png
 share/icons/gnome/24x24/apps/susehelpcenter.png
 share/icons/gnome/24x24/apps/system-config-users.png
@@ -2590,7 +2606,6 @@ share/icons/gnome/24x24/emblems/emblem-system.png
 share/icons/gnome/24x24/emblems/emblem-unreadable.png
 share/icons/gnome/24x24/emblems/emblem-urgent.png
 share/icons/gnome/24x24/emblems/emblem-web.png
-share/icons/gnome/24x24/emblems/stock_mail-priority-high.png
 share/icons/gnome/24x24/emotes/face-angel.png
 share/icons/gnome/24x24/emotes/face-angry.png
 share/icons/gnome/24x24/emotes/face-cool.png
@@ -2628,6 +2643,15 @@ share/icons/gnome/24x24/emotes/stock_smiley-6.png
 share/icons/gnome/24x24/emotes/stock_smiley-7.png
 share/icons/gnome/24x24/emotes/stock_smiley-8.png
 share/icons/gnome/24x24/mimetypes/application-certificate.png
+share/icons/gnome/24x24/mimetypes/application-vnd.ms-excel.sheet.macroEnabled.12.png
+share/icons/gnome/24x24/mimetypes/application-vnd.ms-powerpoint.presentation.macroEnabled.12.png
+share/icons/gnome/24x24/mimetypes/application-vnd.ms-word.document.macroEnabled.12.png
+share/icons/gnome/24x24/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/gnome/24x24/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/gnome/24x24/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/gnome/24x24/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/gnome/24x24/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/gnome/24x24/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/gnome/24x24/mimetypes/application-x-executable.png
 share/icons/gnome/24x24/mimetypes/ascii.png
 share/icons/gnome/24x24/mimetypes/audio-x-generic.png
@@ -3055,9 +3079,7 @@ share/icons/gnome/256x256/apps/gnome-settings-background.png
 share/icons/gnome/256x256/apps/gnome-settings-font.png
 share/icons/gnome/256x256/apps/gnome-settings-theme.png
 share/icons/gnome/256x256/apps/gnome-terminal.png
-share/icons/gnome/256x256/apps/gtk-help.png
 share/icons/gnome/256x256/apps/help-browser.png
-share/icons/gnome/256x256/apps/help.png
 share/icons/gnome/256x256/apps/kcalc.png
 share/icons/gnome/256x256/apps/kedit.png
 share/icons/gnome/256x256/apps/kfm.png
@@ -3080,7 +3102,6 @@ share/icons/gnome/256x256/apps/preferences-desktop-theme.png
 share/icons/gnome/256x256/apps/preferences-desktop-wallpaper.png
 share/icons/gnome/256x256/apps/redhat-filemanager.png
 share/icons/gnome/256x256/apps/screensaver.png
-share/icons/gnome/256x256/apps/stock_help.png
 share/icons/gnome/256x256/apps/style.png
 share/icons/gnome/256x256/apps/susehelpcenter.png
 share/icons/gnome/256x256/apps/system-config-users.png
@@ -3225,6 +3246,15 @@ share/icons/gnome/256x256/emotes/stock_smiley-5.png
 share/icons/gnome/256x256/emotes/stock_smiley-6.png
 share/icons/gnome/256x256/emotes/stock_smiley-7.png
 share/icons/gnome/256x256/emotes/stock_smiley-8.png
+share/icons/gnome/256x256/mimetypes/application-vnd.ms-excel.sheet.macroEnabled.12.png
+share/icons/gnome/256x256/mimetypes/application-vnd.ms-powerpoint.presentation.macroEnabled.12.png
+share/icons/gnome/256x256/mimetypes/application-vnd.ms-word.document.macroEnabled.12.png
+share/icons/gnome/256x256/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/gnome/256x256/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/gnome/256x256/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/gnome/256x256/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/gnome/256x256/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/gnome/256x256/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/gnome/256x256/mimetypes/application-x-executable.png
 share/icons/gnome/256x256/mimetypes/ascii.png
 share/icons/gnome/256x256/mimetypes/audio-x-generic.png
@@ -3608,6 +3638,7 @@ share/icons/gnome/32x32/actions/gtk-goto-first-rtl.png
 share/icons/gnome/32x32/actions/gtk-goto-last-ltr.png
 share/icons/gnome/32x32/actions/gtk-goto-last-rtl.png
 share/icons/gnome/32x32/actions/gtk-goto-top.png
+share/icons/gnome/32x32/actions/gtk-help.png
 share/icons/gnome/32x32/actions/gtk-home.png
 share/icons/gnome/32x32/actions/gtk-indent-ltr.png
 share/icons/gnome/32x32/actions/gtk-indent-rtl.png
@@ -3662,6 +3693,7 @@ share/icons/gnome/32x32/actions/gtk-zoom-out.png
 share/icons/gnome/32x32/actions/help-about.png
 share/icons/gnome/32x32/actions/help-contents.png
 share/icons/gnome/32x32/actions/help-faq.png
+share/icons/gnome/32x32/actions/help.png
 share/icons/gnome/32x32/actions/insert-image.png
 share/icons/gnome/32x32/actions/insert-link.png
 share/icons/gnome/32x32/actions/insert-object.png
@@ -3734,6 +3766,7 @@ share/icons/gnome/32x32/actions/stock_file-properites.png
 share/icons/gnome/32x32/actions/stock_first.png
 share/icons/gnome/32x32/actions/stock_fullscreen.png
 share/icons/gnome/32x32/actions/stock_help-add-bookmark.png
+share/icons/gnome/32x32/actions/stock_help.png
 share/icons/gnome/32x32/actions/stock_home.png
 share/icons/gnome/32x32/actions/stock_last.png
 share/icons/gnome/32x32/actions/stock_leave-fullscreen.png
@@ -3854,10 +3887,8 @@ share/icons/gnome/32x32/apps/gnome-settings-keybindings.png
 share/icons/gnome/32x32/apps/gnome-settings-theme.png
 share/icons/gnome/32x32/apps/gnome-terminal.png
 share/icons/gnome/32x32/apps/gnome-window-manager.png
-share/icons/gnome/32x32/apps/gtk-help.png
 share/icons/gnome/32x32/apps/gucharmap.png
 share/icons/gnome/32x32/apps/help-browser.png
-share/icons/gnome/32x32/apps/help.png
 share/icons/gnome/32x32/apps/kcalc.png
 share/icons/gnome/32x32/apps/kcharselect.png
 share/icons/gnome/32x32/apps/kcmkwm.png
@@ -3890,7 +3921,6 @@ share/icons/gnome/32x32/apps/preferences-desktop-wallpaper.png
 share/icons/gnome/32x32/apps/preferences-system-windows.png
 share/icons/gnome/32x32/apps/redhat-filemanager.png
 share/icons/gnome/32x32/apps/screensaver.png
-share/icons/gnome/32x32/apps/stock_help.png
 share/icons/gnome/32x32/apps/style.png
 share/icons/gnome/32x32/apps/susehelpcenter.png
 share/icons/gnome/32x32/apps/system-config-users.png
@@ -4098,7 +4128,6 @@ share/icons/gnome/32x32/emblems/emblem-system.png
 share/icons/gnome/32x32/emblems/emblem-unreadable.png
 share/icons/gnome/32x32/emblems/emblem-urgent.png
 share/icons/gnome/32x32/emblems/emblem-web.png
-share/icons/gnome/32x32/emblems/stock_mail-priority-high.png
 share/icons/gnome/32x32/emotes/face-angel.png
 share/icons/gnome/32x32/emotes/face-angry.png
 share/icons/gnome/32x32/emotes/face-cool.png
@@ -4136,6 +4165,15 @@ share/icons/gnome/32x32/emotes/stock_smiley-6.png
 share/icons/gnome/32x32/emotes/stock_smiley-7.png
 share/icons/gnome/32x32/emotes/stock_smiley-8.png
 share/icons/gnome/32x32/mimetypes/application-certificate.png
+share/icons/gnome/32x32/mimetypes/application-vnd.ms-excel.sheet.macroEnabled.12.png
+share/icons/gnome/32x32/mimetypes/application-vnd.ms-powerpoint.presentation.macroEnabled.12.png
+share/icons/gnome/32x32/mimetypes/application-vnd.ms-word.document.macroEnabled.12.png
+share/icons/gnome/32x32/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/gnome/32x32/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/gnome/32x32/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/gnome/32x32/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/gnome/32x32/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/gnome/32x32/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/gnome/32x32/mimetypes/application-x-executable.png
 share/icons/gnome/32x32/mimetypes/ascii.png
 share/icons/gnome/32x32/mimetypes/audio-x-generic.png
@@ -4587,6 +4625,7 @@ share/icons/gnome/48x48/actions/gtk-goto-first-rtl.png
 share/icons/gnome/48x48/actions/gtk-goto-last-ltr.png
 share/icons/gnome/48x48/actions/gtk-goto-last-rtl.png
 share/icons/gnome/48x48/actions/gtk-goto-top.png
+share/icons/gnome/48x48/actions/gtk-help.png
 share/icons/gnome/48x48/actions/gtk-home.png
 share/icons/gnome/48x48/actions/gtk-indent-ltr.png
 share/icons/gnome/48x48/actions/gtk-indent-rtl.png
@@ -4641,6 +4680,7 @@ share/icons/gnome/48x48/actions/gtk-zoom-out.png
 share/icons/gnome/48x48/actions/help-about.png
 share/icons/gnome/48x48/actions/help-contents.png
 share/icons/gnome/48x48/actions/help-faq.png
+share/icons/gnome/48x48/actions/help.png
 share/icons/gnome/48x48/actions/insert-image.png
 share/icons/gnome/48x48/actions/insert-link.png
 share/icons/gnome/48x48/actions/insert-object.png
@@ -4716,6 +4756,7 @@ share/icons/gnome/48x48/actions/stock_file-properites.png
 share/icons/gnome/48x48/actions/stock_first.png
 share/icons/gnome/48x48/actions/stock_fullscreen.png
 share/icons/gnome/48x48/actions/stock_help-add-bookmark.png
+share/icons/gnome/48x48/actions/stock_help.png
 share/icons/gnome/48x48/actions/stock_home.png
 share/icons/gnome/48x48/actions/stock_last.png
 share/icons/gnome/48x48/actions/stock_leave-fullscreen.png
@@ -4838,10 +4879,8 @@ share/icons/gnome/48x48/apps/gnome-settings-keybindings.png
 share/icons/gnome/48x48/apps/gnome-settings-theme.png
 share/icons/gnome/48x48/apps/gnome-terminal.png
 share/icons/gnome/48x48/apps/gnome-window-manager.png
-share/icons/gnome/48x48/apps/gtk-help.png
 share/icons/gnome/48x48/apps/gucharmap.png
 share/icons/gnome/48x48/apps/help-browser.png
-share/icons/gnome/48x48/apps/help.png
 share/icons/gnome/48x48/apps/kcalc.png
 share/icons/gnome/48x48/apps/kcharselect.png
 share/icons/gnome/48x48/apps/kcmkwm.png
@@ -4876,7 +4915,6 @@ share/icons/gnome/48x48/apps/preferences-desktop-wallpaper.png
 share/icons/gnome/48x48/apps/preferences-system-windows.png
 share/icons/gnome/48x48/apps/redhat-filemanager.png
 share/icons/gnome/48x48/apps/screensaver.png
-share/icons/gnome/48x48/apps/stock_help.png
 share/icons/gnome/48x48/apps/style.png
 share/icons/gnome/48x48/apps/susehelpcenter.png
 share/icons/gnome/48x48/apps/system-config-users.png
@@ -5088,7 +5126,6 @@ share/icons/gnome/48x48/emblems/emblem-system.png
 share/icons/gnome/48x48/emblems/emblem-unreadable.png
 share/icons/gnome/48x48/emblems/emblem-urgent.png
 share/icons/gnome/48x48/emblems/emblem-web.png
-share/icons/gnome/48x48/emblems/stock_mail-priority-high.png
 share/icons/gnome/48x48/emotes/face-angel.png
 share/icons/gnome/48x48/emotes/face-angry.png
 share/icons/gnome/48x48/emotes/face-cool.png
@@ -5126,6 +5163,15 @@ share/icons/gnome/48x48/emotes/stock_smiley-6.png
 share/icons/gnome/48x48/emotes/stock_smiley-7.png
 share/icons/gnome/48x48/emotes/stock_smiley-8.png
 share/icons/gnome/48x48/mimetypes/application-certificate.png
+share/icons/gnome/48x48/mimetypes/application-vnd.ms-excel.sheet.macroEnabled.12.png
+share/icons/gnome/48x48/mimetypes/application-vnd.ms-powerpoint.presentation.macroEnabled.12.png
+share/icons/gnome/48x48/mimetypes/application-vnd.ms-word.document.macroEnabled.12.png
+share/icons/gnome/48x48/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.presentation.png
+share/icons/gnome/48x48/mimetypes/application-vnd.openxmlformats-officedocument.presentationml.template.png
+share/icons/gnome/48x48/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.sheet.png
+share/icons/gnome/48x48/mimetypes/application-vnd.openxmlformats-officedocument.spreadsheetml.template.png
+share/icons/gnome/48x48/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
+share/icons/gnome/48x48/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.template.png
 share/icons/gnome/48x48/mimetypes/application-x-executable.png
 share/icons/gnome/48x48/mimetypes/ascii.png
 share/icons/gnome/48x48/mimetypes/audio-x-generic.png
