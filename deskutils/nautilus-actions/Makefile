@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.17 2010/01/05 23:21:42 marcus Exp $
+#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.18 2010/02/10 22:18:21 kwm Exp $
 #
 
 PORTNAME=	nautilus-actions
-PORTVERSION=	2.29.4
+PORTVERSION=	2.30.0
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 
@@ -27,8 +27,9 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-nautilus-extdir=${LOCALBASE}/lib/nautilus/extensions-2.0
 
-PORTDOCS=	AUTHORS COPYING ChangeLog ChangeLog-2008 INSTALL MAINTAINERS \
-		NEWS README TODO objects-hierarchy.odg
+PORTDOCS=	AUTHORS COPYING ChangeLog ChangeLog-2008 ChangeLog-2009 INSTALL \
+		MAINTAINERS NEWS README TODO export-format-id io-provider-id \
+		objects-hierarchy.odg
 
 .include <bsd.port.pre.mk>
 
@@ -45,4 +46,4 @@ post-patch:
 		${WRKSRC}/Makefile.in ${WRKSRC}/doc/Makefile.in
 .endif
 
-.include <bsd.port.post.mk>>
+.include <bsd.port.post.mk>

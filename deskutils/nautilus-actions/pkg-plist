@@ -2,39 +2,38 @@ bin/nautilus-actions-config-tool
 bin/nautilus-actions-new
 bin/nautilus-actions-run
 bin/nautilus-actions-schemas
-include/nautilus-actions/api/na-api.h
-include/nautilus-actions/api/na-dbus.h
-include/nautilus-actions/api/na-gconf-keys.h
-include/nautilus-actions/api/na-gconf-monitor.h
-include/nautilus-actions/api/na-iio-provider.h
-include/nautilus-actions/api/na-object-api.h
-include/nautilus-actions/private/na-object-action-class.h
-include/nautilus-actions/private/na-object-action-fn.h
-include/nautilus-actions/private/na-object-class.h
-include/nautilus-actions/private/na-object-fn.h
-include/nautilus-actions/private/na-object-id-class.h
-include/nautilus-actions/private/na-object-id-fn.h
-include/nautilus-actions/private/na-object-item-class.h
-include/nautilus-actions/private/na-object-item-fn.h
-include/nautilus-actions/private/na-object-menu-class.h
-include/nautilus-actions/private/na-object-menu-fn.h
-include/nautilus-actions/private/na-object-profile-class.h
-include/nautilus-actions/private/na-object-profile-fn.h
-lib/nautilus-actions/libna-api.la
-lib/nautilus-actions/libna-api.so
-lib/nautilus-actions/libna-api.so.1
-lib/nautilus-actions/libna-io-provider-desktop.la
-lib/nautilus-actions/libna-io-provider-desktop.so
-lib/nautilus-actions/libna-io-provider-desktop.so.1
-lib/nautilus-actions/libna-io-provider-gconf.la
-lib/nautilus-actions/libna-io-provider-gconf.so
-lib/nautilus-actions/libna-io-provider-gconf.so.1
-lib/nautilus-actions/libna-private.la
-lib/nautilus-actions/libna-private.so
-lib/nautilus-actions/libna-private.so.1
-lib/nautilus-actions/libna-runtime.la
-lib/nautilus-actions/libna-runtime.so
-lib/nautilus-actions/libna-runtime.so.1
+include/nautilus-actions/na-core-utils.h
+include/nautilus-actions/na-data-boxed.h
+include/nautilus-actions/na-data-def.h
+include/nautilus-actions/na-data-types.h
+include/nautilus-actions/na-dbus.h
+include/nautilus-actions/na-extension.h
+include/nautilus-actions/na-gconf-monitor.h
+include/nautilus-actions/na-gconf-utils.h
+include/nautilus-actions/na-icontextual.h
+include/nautilus-actions/na-iduplicable.h
+include/nautilus-actions/na-iexporter.h
+include/nautilus-actions/na-ifactory-object-data.h
+include/nautilus-actions/na-ifactory-object.h
+include/nautilus-actions/na-ifactory-provider-provider.h
+include/nautilus-actions/na-ifactory-provider.h
+include/nautilus-actions/na-iimporter.h
+include/nautilus-actions/na-iio-provider.h
+include/nautilus-actions/na-object-action.h
+include/nautilus-actions/na-object-api.h
+include/nautilus-actions/na-object-id.h
+include/nautilus-actions/na-object-item.h
+include/nautilus-actions/na-object-menu.h
+include/nautilus-actions/na-object-profile.h
+include/nautilus-actions/na-object.h
+lib/nautilus-actions/libna-core.la
+lib/nautilus-actions/libna-core.so
+lib/nautilus-actions/libna-io-desktop.la
+lib/nautilus-actions/libna-io-desktop.so
+lib/nautilus-actions/libna-io-gconf.la
+lib/nautilus-actions/libna-io-gconf.so
+lib/nautilus-actions/libna-io-xml.la
+lib/nautilus-actions/libna-io-xml.so
 lib/nautilus/extensions-2.0/libnautilus-actions-tracker.la
 lib/nautilus/extensions-2.0/libnautilus-actions-tracker.so
 lib/nautilus/extensions-2.0/libnautilus-actions.la
@@ -92,17 +91,17 @@ share/locale/zh_CN/LC_MESSAGES/nautilus-actions.mo
 share/locale/zh_HK/LC_MESSAGES/nautilus-actions.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus-actions.mo
 %%DATADIR%%/locked.png
+%%DATADIR%%/na-importer-ask.ui
+%%DATADIR%%/nact-assistant-export.ui
 %%DATADIR%%/nact-preferences.ui
-%%DATADIR%%/nautilus-actions.schemas
 %%DATADIR%%/nautilus-actions-config-tool.actions
 %%DATADIR%%/nautilus-actions-config-tool.ui
+%%DATADIR%%/nautilus-actions-confs.schemas
 %%DATADIR%%/nautilus-actions-maintainer.actions
-%%DATADIR%%/nact-assistant-export.ui
+%%DATADIR%%/nautilus-actions-prefs.schemas
 %%DATADIR%%/transparent.png
 @dirrm %%DATADIR%%
 @dirrm lib/nautilus-actions
-@dirrm include/nautilus-actions/private
-@dirrm include/nautilus-actions/api
 @dirrm include/nautilus-actions
 @dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
