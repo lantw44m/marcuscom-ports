@@ -17,6 +17,9 @@
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/defs.py
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/defs.pyc
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/defs.pyo
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/networkmanager.py
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/networkmanager.pyc
+%%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/networkmanager.pyo
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/preferences.py
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/preferences.pyc
 %%PYTHON%%%%PYTHON_SITELIBDIR%%/invest/preferences.pyo
@@ -35,6 +38,7 @@ libdata/bonobo/servers/GNOME_DriveMountApplet.server
 libdata/bonobo/servers/GNOME_GWeatherApplet_Factory.server
 libdata/bonobo/servers/GNOME_GeyesApplet.server
 %%PYTHON%%libdata/bonobo/servers/GNOME_GtikApplet.server
+libdata/bonobo/servers/GNOME_KeyboardApplet.server
 libdata/bonobo/servers/GNOME_MailcheckApplet_Factory.server
 libdata/bonobo/servers/GNOME_MiniCommanderApplet.server
 libdata/bonobo/servers/GNOME_MixerApplet.server
@@ -347,6 +351,12 @@ share/gnome/help/accessx-status/zh_CN/figures/accessx_sticky-windows-key.png
 %%BATTERY%%share/gnome/help/battstat/cs/figures/battstat-credits-hal.png
 %%BATTERY%%share/gnome/help/battstat/cs/figures/battstat-preferences.png
 %%BATTERY%%share/gnome/help/battstat/cs/figures/context-menu.png
+%%BATTERY%%share/gnome/help/battstat/da/battstat.xml
+%%BATTERY%%share/gnome/help/battstat/da/figures/battstat-applet-expanded.png
+%%BATTERY%%share/gnome/help/battstat/da/figures/battstat-applet.png
+%%BATTERY%%share/gnome/help/battstat/da/figures/battstat-credits-hal.png
+%%BATTERY%%share/gnome/help/battstat/da/figures/battstat-preferences.png
+%%BATTERY%%share/gnome/help/battstat/da/figures/context-menu.png
 %%BATTERY%%share/gnome/help/battstat/de/battstat.xml
 %%BATTERY%%share/gnome/help/battstat/de/figures/battstat-applet-expanded.png
 %%BATTERY%%share/gnome/help/battstat/de/figures/battstat-applet.png
@@ -902,6 +912,8 @@ share/gnome/help/drivemount/zh_CN/figures/drivemount-applet_status.png
 share/gnome/help/geyes/C/figures/geyes_applet.png
 share/gnome/help/geyes/C/geyes.xml
 share/gnome/help/geyes/C/legal.xml
+share/gnome/help/geyes/ast/figures/geyes_applet.png
+share/gnome/help/geyes/ast/geyes.xml
 share/gnome/help/geyes/bg/figures/geyes_applet.png
 share/gnome/help/geyes/bg/geyes.xml
 share/gnome/help/geyes/ca/figures/geyes_applet.png
@@ -938,6 +950,10 @@ share/gnome/help/geyes/uk/figures/geyes_applet.png
 share/gnome/help/geyes/uk/geyes.xml
 share/gnome/help/geyes/zh_CN/figures/geyes_applet.png
 share/gnome/help/geyes/zh_CN/geyes.xml
+share/gnome/help/geyes/zh_HK/figures/geyes_applet.png
+share/gnome/help/geyes/zh_HK/geyes.xml
+share/gnome/help/geyes/zh_TW/figures/geyes_applet.png
+share/gnome/help/geyes/zh_TW/geyes.xml
 share/gnome/help/gweather/C/figures/gweather-details.png
 share/gnome/help/gweather/C/figures/gweather-menu-prefs.png
 share/gnome/help/gweather/C/figures/gweather-prefs-general.png
@@ -1257,6 +1273,8 @@ share/gnome/help/mixer_applet2/ca/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/ca/mixer_applet2.xml
 share/gnome/help/mixer_applet2/cs/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/cs/mixer_applet2.xml
+share/gnome/help/mixer_applet2/da/figures/volumecontrol_applet.png
+share/gnome/help/mixer_applet2/da/mixer_applet2.xml
 share/gnome/help/mixer_applet2/de/figures/volumecontrol_applet.png
 share/gnome/help/mixer_applet2/de/mixer_applet2.xml
 share/gnome/help/mixer_applet2/el/figures/volumecontrol_applet.png
@@ -1473,6 +1491,18 @@ share/gnome/help/stickynotes_applet/zh_CN/figures/stickynotes-note-prefs.png
 share/gnome/help/stickynotes_applet/zh_CN/figures/stickynotes-prefs.png
 share/gnome/help/stickynotes_applet/zh_CN/figures/stickynotes_applet.png
 share/gnome/help/stickynotes_applet/zh_CN/stickynotes_applet.xml
+share/gnome/help/stickynotes_applet/zh_HK/figures/stickynote-right-menu-lock.png
+share/gnome/help/stickynotes_applet/zh_HK/figures/stickynote-right-menu-new.png
+share/gnome/help/stickynotes_applet/zh_HK/figures/stickynotes-note-prefs.png
+share/gnome/help/stickynotes_applet/zh_HK/figures/stickynotes-prefs.png
+share/gnome/help/stickynotes_applet/zh_HK/figures/stickynotes_applet.png
+share/gnome/help/stickynotes_applet/zh_HK/stickynotes_applet.xml
+share/gnome/help/stickynotes_applet/zh_TW/figures/stickynote-right-menu-lock.png
+share/gnome/help/stickynotes_applet/zh_TW/figures/stickynote-right-menu-new.png
+share/gnome/help/stickynotes_applet/zh_TW/figures/stickynotes-note-prefs.png
+share/gnome/help/stickynotes_applet/zh_TW/figures/stickynotes-prefs.png
+share/gnome/help/stickynotes_applet/zh_TW/figures/stickynotes_applet.png
+share/gnome/help/stickynotes_applet/zh_TW/stickynotes_applet.xml
 share/gnome/help/trashapplet/C/figures/trash-applet.png
 share/gnome/help/trashapplet/C/legal.xml
 share/gnome/help/trashapplet/C/trashapplet.xml
@@ -1669,6 +1699,7 @@ share/omf/accessx-status/accessx-status-zh_CN.omf
 %%BATTERY%%share/omf/battstat/battstat-bg.omf
 %%BATTERY%%share/omf/battstat/battstat-ca.omf
 %%BATTERY%%share/omf/battstat/battstat-cs.omf
+%%BATTERY%%share/omf/battstat/battstat-da.omf
 %%BATTERY%%share/omf/battstat/battstat-de.omf
 %%BATTERY%%share/omf/battstat/battstat-el.omf
 %%BATTERY%%share/omf/battstat/battstat-en_GB.omf
@@ -1756,6 +1787,7 @@ share/omf/drivemount/drivemount-sv.omf
 share/omf/drivemount/drivemount-uk.omf
 share/omf/drivemount/drivemount-zh_CN.omf
 share/omf/geyes/geyes-C.omf
+share/omf/geyes/geyes-ast.omf
 share/omf/geyes/geyes-bg.omf
 share/omf/geyes/geyes-ca.omf
 share/omf/geyes/geyes-cs.omf
@@ -1774,6 +1806,8 @@ share/omf/geyes/geyes-ru.omf
 share/omf/geyes/geyes-sv.omf
 share/omf/geyes/geyes-uk.omf
 share/omf/geyes/geyes-zh_CN.omf
+share/omf/geyes/geyes-zh_HK.omf
+share/omf/geyes/geyes-zh_TW.omf
 share/omf/gweather/gweather-C.omf
 share/omf/gweather/gweather-ar.omf
 share/omf/gweather/gweather-ca.omf
@@ -1807,6 +1841,7 @@ share/omf/gweather/gweather-zh_CN.omf
 share/omf/mixer_applet2/mixer_applet2-C.omf
 share/omf/mixer_applet2/mixer_applet2-ca.omf
 share/omf/mixer_applet2/mixer_applet2-cs.omf
+share/omf/mixer_applet2/mixer_applet2-da.omf
 share/omf/mixer_applet2/mixer_applet2-de.omf
 share/omf/mixer_applet2/mixer_applet2-el.omf
 share/omf/mixer_applet2/mixer_applet2-en_GB.omf
@@ -1860,6 +1895,8 @@ share/omf/stickynotes_applet/stickynotes_applet-ru.omf
 share/omf/stickynotes_applet/stickynotes_applet-sv.omf
 share/omf/stickynotes_applet/stickynotes_applet-uk.omf
 share/omf/stickynotes_applet/stickynotes_applet-zh_CN.omf
+share/omf/stickynotes_applet/stickynotes_applet-zh_HK.omf
+share/omf/stickynotes_applet/stickynotes_applet-zh_TW.omf
 share/omf/trashapplet/trashapplet-C.omf
 share/omf/trashapplet/trashapplet-ca.omf
 share/omf/trashapplet/trashapplet-cs.omf
@@ -2079,6 +2116,10 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/trashapplet/C/figures
 @dirrm share/gnome/help/trashapplet/C
 @dirrm share/gnome/help/trashapplet
+@dirrm share/gnome/help/stickynotes_applet/zh_TW/figures
+@dirrm share/gnome/help/stickynotes_applet/zh_TW
+@dirrm share/gnome/help/stickynotes_applet/zh_HK/figures
+@dirrm share/gnome/help/stickynotes_applet/zh_HK
 @dirrm share/gnome/help/stickynotes_applet/zh_CN/figures
 @dirrm share/gnome/help/stickynotes_applet/zh_CN
 @dirrm share/gnome/help/stickynotes_applet/uk/figures
@@ -2187,6 +2228,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/mixer_applet2/el
 @dirrm share/gnome/help/mixer_applet2/de/figures
 @dirrm share/gnome/help/mixer_applet2/de
+@dirrm share/gnome/help/mixer_applet2/da/figures
+@dirrm share/gnome/help/mixer_applet2/da
 @dirrm share/gnome/help/mixer_applet2/cs/figures
 @dirrm share/gnome/help/mixer_applet2/cs
 @dirrm share/gnome/help/mixer_applet2/ca/figures
@@ -2246,6 +2289,10 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/gweather/C/figures
 @dirrm share/gnome/help/gweather/C
 @dirrm share/gnome/help/gweather
+@dirrm share/gnome/help/geyes/zh_TW/figures
+@dirrm share/gnome/help/geyes/zh_TW
+@dirrm share/gnome/help/geyes/zh_HK/figures
+@dirrm share/gnome/help/geyes/zh_HK
 @dirrm share/gnome/help/geyes/zh_CN/figures
 @dirrm share/gnome/help/geyes/zh_CN
 @dirrm share/gnome/help/geyes/uk/figures
@@ -2282,6 +2329,8 @@ share/xmodmap/xmodmap.yu
 @dirrm share/gnome/help/geyes/ca
 @dirrm share/gnome/help/geyes/bg/figures
 @dirrm share/gnome/help/geyes/bg
+@dirrm share/gnome/help/geyes/ast/figures
+@dirrm share/gnome/help/geyes/ast
 @dirrm share/gnome/help/geyes/C/figures
 @dirrm share/gnome/help/geyes/C
 @dirrm share/gnome/help/geyes
@@ -2461,6 +2510,8 @@ share/xmodmap/xmodmap.yu
 %%BATTERY%%@dirrm share/gnome/help/battstat/el
 %%BATTERY%%@dirrm share/gnome/help/battstat/de/figures
 %%BATTERY%%@dirrm share/gnome/help/battstat/de
+%%BATTERY%%@dirrm share/gnome/help/battstat/da/figures
+%%BATTERY%%@dirrm share/gnome/help/battstat/da
 %%BATTERY%%@dirrm share/gnome/help/battstat/bg/figures
 %%BATTERY%%@dirrm share/gnome/help/battstat/bg
 %%BATTERY%%@dirrm share/gnome/help/battstat/cs/figures
