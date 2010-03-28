@@ -2,15 +2,14 @@
 # Date created:		2008-12-25
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/graphics/clutter/Makefile,v 1.6 2009/11/28 20:05:41 marcus Exp $
 #
 
 PORTNAME=	clutter
-PORTVERSION=	1.0.10
-PORTREVISION=	2
+PORTVERSION=	1.2.4
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME \
-		http://www.clutter-project.org/sources/${PORTNAME}/1.0/
+		http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	OpenGL based interactive canvas library
