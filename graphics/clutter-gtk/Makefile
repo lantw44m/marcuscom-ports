@@ -6,8 +6,8 @@
 #
 
 PORTNAME=	clutter-gtk
-PORTVERSION=	0.10.2
-PORTREVISION=	5
+PORTVERSION=	0.10.4
+PORTREVISION=	0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
