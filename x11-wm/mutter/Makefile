@@ -3,11 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.9 2010/02/19 06:30:36 marcus Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.10 2010/02/19 06:33:15 marcus Exp $
 #
 
 PORTNAME=	mutter
-PORTVERSION=	2.29.0
+PORTVERSION=	2.29.1
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
