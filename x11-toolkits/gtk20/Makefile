@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.187 2010/03/10 00:33:19 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.188 2010/03/24 15:08:03 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -30,7 +30,7 @@ LATEST_LINK=	gtk20
 .if !defined(REFERENCE_PORT)
 
 BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS+=	png.5:${PORTSDIR}/graphics/png \
+LIB_DEPENDS+=	png.6:${PORTSDIR}/graphics/png \
 		tiff.4:${PORTSDIR}/graphics/tiff \
 		jpeg.11:${PORTSDIR}/graphics/jpeg \
 		jasper.4:${PORTSDIR}/graphics/jasper

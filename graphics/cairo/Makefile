@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/cairo/Makefile,v 1.91 2010/02/23 12:35:23 kwm Exp $
 #
 
 PORTNAME=	cairo
@@ -20,7 +20,7 @@ COMMENT=	Vector graphics library with cross-device output support
 .if !defined(REFERENCE_PORT)
 
 LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
-		png.5:${PORTSDIR}/graphics/png \
+		png.6:${PORTSDIR}/graphics/png \
 		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig \
 		pixman-1.9:${PORTSDIR}/x11/pixman
 
