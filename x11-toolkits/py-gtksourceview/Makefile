@@ -3,11 +3,11 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gtksourceview/Makefile,v 1.20 2009/09/22 08:25:11 kwm Exp $
+#   $MCom: ports/x11-toolkits/py-gtksourceview/Makefile,v 1.22 2010/02/24 09:46:43 avl Exp $
 #
 
 PORTNAME=	gtksourceview
-PORTVERSION=	2.9.2
+PORTVERSION=	2.10.0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pygtksourceview/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
