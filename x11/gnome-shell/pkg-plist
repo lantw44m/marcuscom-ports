@@ -49,9 +49,11 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/theme/close-window.svg
 %%DATADIR%%/theme/close.svg
 %%DATADIR%%/theme/corner-ripple.png
+%%DATADIR%%/theme/dialog-error.svg
 %%DATADIR%%/theme/gnome-shell.css
 %%DATADIR%%/theme/mosaic-view-active.svg
 %%DATADIR%%/theme/mosaic-view.svg
+%%DATADIR%%/theme/move-window-on-new.svg
 %%DATADIR%%/theme/remove-workspace.svg
 %%DATADIR%%/theme/scroll-button-down-hover.png
 %%DATADIR%%/theme/scroll-button-down.png
