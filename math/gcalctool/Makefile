@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool/Makefile,v 1.129 2010/02/22 10:20:54 avl Exp $
+#   $MCom: ports/math/gcalctool/Makefile,v 1.130 2010/03/13 23:23:13 kwm Exp $
 #
 
 PORTNAME=	gcalctool
-PORTVERSION=	5.29.92
+PORTVERSION=	5.30.0
 PORTEPOCH=	2
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
@@ -15,8 +15,6 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNOME 2 calculator tool based on the old calctool for OpenWindows
-
-LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 USE_BZIP2=	yes
 USE_BISON=	build
