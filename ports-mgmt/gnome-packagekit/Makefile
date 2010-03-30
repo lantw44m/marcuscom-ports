@@ -3,14 +3,14 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.12 2010/02/27 06:37:59 avl Exp $
+#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.13 2010/03/04 14:56:50 kwm Exp $
 
 PORTNAME=	gnome-packagekit
-PORTVERSION=	2.29.91
+PORTVERSION=	2.30.0
 CATEGORIES=	ports-mgmt sysutils gnome
 MASTER_SITES=	GNOME
 
-MAINTAINER=	afb@users.souceforge.net
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	PackageKit client programs for the GNOME desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils
