@@ -3,14 +3,14 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.16 2010/03/01 09:45:10 avl Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.17 2010/03/04 14:53:35 kwm Exp $
 
 PORTNAME=	PackageKit
-PORTVERSION=	0.6.2
+PORTVERSION=	0.6.3
 CATEGORIES=	ports-mgmt sysutils
 MASTER_SITES=	http://www.packagekit.org/releases/
 
-MAINTAINER=	afb@users.souceforge.net
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	A DBUS packaging abstraction layer
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils \
