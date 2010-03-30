@@ -3,11 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.55 2010/02/22 03:42:48 mezz Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.56 2010/03/14 01:05:42 kwm Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.29.92.0
+PORTVERSION=	2.30.0.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -101,6 +101,9 @@ CONFIGURE_ARGS+=--disable-plugin-devhelp
 #PLIST_SUB+=	DEVHELP="@comment "
 PLIST_SUB+=	DEVHELP=""
 .endif
+
+post-patch:
+	@${RM} ${WRKSRC}/plugins/debug-manager/anjuta-debug-manager.schemas
 
 post-configure:
 	@${REINPLACE_CMD} -e 's|PKG_PATH|PKG_CONFIG_PATH|g' \
