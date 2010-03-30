@@ -96,7 +96,6 @@ share/icons/gnome/16x16/actions/gtk-close.png
 share/icons/gnome/16x16/actions/gtk-copy.png
 share/icons/gnome/16x16/actions/gtk-cut.png
 share/icons/gnome/16x16/actions/gtk-delete.png
-share/icons/gnome/16x16/actions/gtk-edit.png
 share/icons/gnome/16x16/actions/gtk-execute.png
 share/icons/gnome/16x16/actions/gtk-find-and-replace.png
 share/icons/gnome/16x16/actions/gtk-find.png
@@ -1095,7 +1094,6 @@ share/icons/gnome/22x22/actions/gtk-close.png
 share/icons/gnome/22x22/actions/gtk-copy.png
 share/icons/gnome/22x22/actions/gtk-cut.png
 share/icons/gnome/22x22/actions/gtk-delete.png
-share/icons/gnome/22x22/actions/gtk-edit.png
 share/icons/gnome/22x22/actions/gtk-execute.png
 share/icons/gnome/22x22/actions/gtk-find-and-replace.png
 share/icons/gnome/22x22/actions/gtk-find.png
@@ -2094,7 +2092,6 @@ share/icons/gnome/24x24/actions/gtk-close.png
 share/icons/gnome/24x24/actions/gtk-copy.png
 share/icons/gnome/24x24/actions/gtk-cut.png
 share/icons/gnome/24x24/actions/gtk-delete.png
-share/icons/gnome/24x24/actions/gtk-edit.png
 share/icons/gnome/24x24/actions/gtk-execute.png
 share/icons/gnome/24x24/actions/gtk-find-and-replace.png
 share/icons/gnome/24x24/actions/gtk-find.png

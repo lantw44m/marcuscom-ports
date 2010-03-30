@@ -1,5 +1,6 @@
 share/icons/gnome/16x16/devices/multimedia-player-apple-ipod-touch.png
 share/icons/gnome/16x16/devices/phone-apple-iphone.png
+share/icons/gnome/16x16/devices/phone-google-nexus-one.png
 share/icons/gnome/16x16/devices/phone-htc-g1-white.png
 share/icons/gnome/16x16/devices/phone-palm-pre.png
 share/icons/gnome/16x16/mimetypes/application-rss+xml.png
@@ -8,6 +9,7 @@ share/icons/gnome/16x16/mimetypes/application-x-blender.png
 share/icons/gnome/16x16/mimetypes/application-x-mono-develop-xib.png
 share/icons/gnome/22x22/devices/multimedia-player-apple-ipod-touch.png
 share/icons/gnome/22x22/devices/phone-apple-iphone.png
+share/icons/gnome/22x22/devices/phone-google-nexus-one.png
 share/icons/gnome/22x22/devices/phone-htc-g1-white.png
 share/icons/gnome/22x22/devices/phone-palm-pre.png
 share/icons/gnome/22x22/mimetypes/application-rss+xml.png
@@ -16,6 +18,7 @@ share/icons/gnome/22x22/mimetypes/application-x-blender.png
 share/icons/gnome/22x22/mimetypes/application-x-mono-develop-xib.png
 share/icons/gnome/24x24/devices/multimedia-player-apple-ipod-touch.png
 share/icons/gnome/24x24/devices/phone-apple-iphone.png
+share/icons/gnome/24x24/devices/phone-google-nexus-one.png
 share/icons/gnome/24x24/devices/phone-htc-g1-white.png
 share/icons/gnome/24x24/devices/phone-palm-pre.png
 share/icons/gnome/24x24/mimetypes/application-rss+xml.png
@@ -24,6 +27,7 @@ share/icons/gnome/24x24/mimetypes/application-x-blender.png
 share/icons/gnome/24x24/mimetypes/application-x-mono-develop-xib.png
 share/icons/gnome/256x256/devices/multimedia-player-apple-ipod-touch.png
 share/icons/gnome/256x256/devices/phone-apple-iphone.png
+share/icons/gnome/256x256/devices/phone-google-nexus-one.png
 share/icons/gnome/256x256/devices/phone-htc-g1-white.png
 share/icons/gnome/256x256/devices/phone-palm-pre.png
 share/icons/gnome/256x256/mimetypes/application-rss+xml.png
@@ -32,6 +36,7 @@ share/icons/gnome/256x256/mimetypes/application-x-blender.png
 share/icons/gnome/256x256/mimetypes/application-x-mono-develop-xib.png
 share/icons/gnome/32x32/devices/multimedia-player-apple-ipod-touch.png
 share/icons/gnome/32x32/devices/phone-apple-iphone.png
+share/icons/gnome/32x32/devices/phone-google-nexus-one.png
 share/icons/gnome/32x32/devices/phone-htc-g1-white.png
 share/icons/gnome/32x32/devices/phone-palm-pre.png
 share/icons/gnome/32x32/mimetypes/application-rss+xml.png
@@ -40,6 +45,7 @@ share/icons/gnome/32x32/mimetypes/application-x-blender.png
 share/icons/gnome/32x32/mimetypes/application-x-mono-develop-xib.png
 share/icons/gnome/48x48/devices/multimedia-player-apple-ipod-touch.png
 share/icons/gnome/48x48/devices/phone-apple-iphone.png
+share/icons/gnome/48x48/devices/phone-google-nexus-one.png
 share/icons/gnome/48x48/devices/phone-htc-g1-white.png
 share/icons/gnome/48x48/devices/phone-palm-pre.png
 share/icons/gnome/48x48/mimetypes/application-rss+xml.png
