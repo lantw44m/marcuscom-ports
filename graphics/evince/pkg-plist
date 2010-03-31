@@ -1,52 +1,52 @@
 bin/evince
 bin/evince-previewer
 bin/evince-thumbnailer
-include/evince/2.29/evince-document.h
-include/evince/2.29/evince-view.h
-include/evince/2.29/libdocument/ev-annotation.h
-include/evince/2.29/libdocument/ev-async-renderer.h
-include/evince/2.29/libdocument/ev-attachment.h
-include/evince/2.29/libdocument/ev-backends-manager.h
-include/evince/2.29/libdocument/ev-document-annotations.h
-include/evince/2.29/libdocument/ev-document-attachments.h
-include/evince/2.29/libdocument/ev-document-factory.h
-include/evince/2.29/libdocument/ev-document-find.h
-include/evince/2.29/libdocument/ev-document-fonts.h
-include/evince/2.29/libdocument/ev-document-forms.h
-include/evince/2.29/libdocument/ev-document-images.h
-include/evince/2.29/libdocument/ev-document-info.h
-include/evince/2.29/libdocument/ev-document-layers.h
-include/evince/2.29/libdocument/ev-document-links.h
-include/evince/2.29/libdocument/ev-document-misc.h
-include/evince/2.29/libdocument/ev-document-print.h
-include/evince/2.29/libdocument/ev-document-security.h
-include/evince/2.29/libdocument/ev-document-thumbnails.h
-include/evince/2.29/libdocument/ev-document-transition.h
-include/evince/2.29/libdocument/ev-document-type-builtins.h
-include/evince/2.29/libdocument/ev-document.h
-include/evince/2.29/libdocument/ev-file-exporter.h
-include/evince/2.29/libdocument/ev-file-helpers.h
-include/evince/2.29/libdocument/ev-form-field.h
-include/evince/2.29/libdocument/ev-image.h
-include/evince/2.29/libdocument/ev-init.h
-include/evince/2.29/libdocument/ev-layer.h
-include/evince/2.29/libdocument/ev-link-action.h
-include/evince/2.29/libdocument/ev-link-dest.h
-include/evince/2.29/libdocument/ev-link.h
-include/evince/2.29/libdocument/ev-mapping.h
-include/evince/2.29/libdocument/ev-page.h
-include/evince/2.29/libdocument/ev-render-context.h
-include/evince/2.29/libdocument/ev-selection.h
-include/evince/2.29/libdocument/ev-transition-effect.h
-include/evince/2.29/libdocument/ev-version.h
-include/evince/2.29/libview/ev-document-model.h
-include/evince/2.29/libview/ev-job-scheduler.h
-include/evince/2.29/libview/ev-jobs.h
-include/evince/2.29/libview/ev-print-operation.h
-include/evince/2.29/libview/ev-stock-icons.h
-include/evince/2.29/libview/ev-view-presentation.h
-include/evince/2.29/libview/ev-view-type-builtins.h
-include/evince/2.29/libview/ev-view.h
+include/evince/2.30/evince-document.h
+include/evince/2.30/evince-view.h
+include/evince/2.30/libdocument/ev-annotation.h
+include/evince/2.30/libdocument/ev-async-renderer.h
+include/evince/2.30/libdocument/ev-attachment.h
+include/evince/2.30/libdocument/ev-backends-manager.h
+include/evince/2.30/libdocument/ev-document-annotations.h
+include/evince/2.30/libdocument/ev-document-attachments.h
+include/evince/2.30/libdocument/ev-document-factory.h
+include/evince/2.30/libdocument/ev-document-find.h
+include/evince/2.30/libdocument/ev-document-fonts.h
+include/evince/2.30/libdocument/ev-document-forms.h
+include/evince/2.30/libdocument/ev-document-images.h
+include/evince/2.30/libdocument/ev-document-info.h
+include/evince/2.30/libdocument/ev-document-layers.h
+include/evince/2.30/libdocument/ev-document-links.h
+include/evince/2.30/libdocument/ev-document-misc.h
+include/evince/2.30/libdocument/ev-document-print.h
+include/evince/2.30/libdocument/ev-document-security.h
+include/evince/2.30/libdocument/ev-document-thumbnails.h
+include/evince/2.30/libdocument/ev-document-transition.h
+include/evince/2.30/libdocument/ev-document-type-builtins.h
+include/evince/2.30/libdocument/ev-document.h
+include/evince/2.30/libdocument/ev-file-exporter.h
+include/evince/2.30/libdocument/ev-file-helpers.h
+include/evince/2.30/libdocument/ev-form-field.h
+include/evince/2.30/libdocument/ev-image.h
+include/evince/2.30/libdocument/ev-init.h
+include/evince/2.30/libdocument/ev-layer.h
+include/evince/2.30/libdocument/ev-link-action.h
+include/evince/2.30/libdocument/ev-link-dest.h
+include/evince/2.30/libdocument/ev-link.h
+include/evince/2.30/libdocument/ev-mapping.h
+include/evince/2.30/libdocument/ev-page.h
+include/evince/2.30/libdocument/ev-render-context.h
+include/evince/2.30/libdocument/ev-selection.h
+include/evince/2.30/libdocument/ev-transition-effect.h
+include/evince/2.30/libdocument/ev-version.h
+include/evince/2.30/libview/ev-document-model.h
+include/evince/2.30/libview/ev-job-scheduler.h
+include/evince/2.30/libview/ev-jobs.h
+include/evince/2.30/libview/ev-print-operation.h
+include/evince/2.30/libview/ev-stock-icons.h
+include/evince/2.30/libview/ev-view-presentation.h
+include/evince/2.30/libview/ev-view-type-builtins.h
+include/evince/2.30/libview/ev-view.h
 %%COMICS%%lib/evince/2/backends/comicsdocument.evince-backend
 %%DJVU%%lib/evince/2/backends/djvudocument.evince-backend
 %%DVI%%lib/evince/2/backends/dvidocument.evince-backend
@@ -86,8 +86,8 @@ lib/libevview.so.2
 %%NAUTILUS%%lib/nautilus/extensions-2.0/libevince-properties-page.a
 %%NAUTILUS%%lib/nautilus/extensions-2.0/libevince-properties-page.la
 %%NAUTILUS%%lib/nautilus/extensions-2.0/libevince-properties-page.so
-libdata/pkgconfig/evince-document-2.29.pc
-libdata/pkgconfig/evince-view-2.29.pc
+libdata/pkgconfig/evince-document-2.30.pc
+libdata/pkgconfig/evince-view-2.30.pc
 libexec/evince-convert-metadata
 libexec/evinced
 share/applications/evince.desktop
@@ -346,6 +346,7 @@ share/locale/mai/LC_MESSAGES/evince.mo
 share/locale/mg/LC_MESSAGES/evince.mo
 share/locale/mk/LC_MESSAGES/evince.mo
 share/locale/ml/LC_MESSAGES/evince.mo
+share/locale/mn/LC_MESSAGES/evince.mo
 share/locale/mr/LC_MESSAGES/evince.mo
 share/locale/ms/LC_MESSAGES/evince.mo
 share/locale/nb/LC_MESSAGES/evince.mo
@@ -475,9 +476,9 @@ share/omf/evince/evince-zh_CN.omf
 @dirrm lib/evince/2/backends
 @dirrm lib/evince/2
 @dirrm lib/evince
-@dirrm include/evince/2.29/libview
-@dirrm include/evince/2.29/libdocument
-@dirrm include/evince/2.29
+@dirrm include/evince/2.30/libview
+@dirrm include/evince/2.30/libdocument
+@dirrm include/evince/2.30
 @dirrm include/evince
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
