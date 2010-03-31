@@ -142,6 +142,14 @@ share/gnome/help/hamster-applet/de/legal.xml
 share/gnome/help/hamster-applet/de/merge.page
 share/gnome/help/hamster-applet/de/reports.page
 share/gnome/help/hamster-applet/de/statistics.page
+share/gnome/help/hamster-applet/el/backup.page
+share/gnome/help/hamster-applet/el/figures/hamster-logo.png
+share/gnome/help/hamster-applet/el/index.page
+share/gnome/help/hamster-applet/el/input.page
+share/gnome/help/hamster-applet/el/legal.xml
+share/gnome/help/hamster-applet/el/merge.page
+share/gnome/help/hamster-applet/el/reports.page
+share/gnome/help/hamster-applet/el/statistics.page
 share/gnome/help/hamster-applet/es/backup.page
 share/gnome/help/hamster-applet/es/figures/hamster-logo.png
 share/gnome/help/hamster-applet/es/index.page
@@ -150,6 +158,30 @@ share/gnome/help/hamster-applet/es/legal.xml
 share/gnome/help/hamster-applet/es/merge.page
 share/gnome/help/hamster-applet/es/reports.page
 share/gnome/help/hamster-applet/es/statistics.page
+share/gnome/help/hamster-applet/fr/backup.page
+share/gnome/help/hamster-applet/fr/figures/hamster-logo.png
+share/gnome/help/hamster-applet/fr/index.page
+share/gnome/help/hamster-applet/fr/input.page
+share/gnome/help/hamster-applet/fr/legal.xml
+share/gnome/help/hamster-applet/fr/merge.page
+share/gnome/help/hamster-applet/fr/reports.page
+share/gnome/help/hamster-applet/fr/statistics.page
+share/gnome/help/hamster-applet/zh_HK/backup.page
+share/gnome/help/hamster-applet/zh_HK/figures/hamster-logo.png
+share/gnome/help/hamster-applet/zh_HK/index.page
+share/gnome/help/hamster-applet/zh_HK/input.page
+share/gnome/help/hamster-applet/zh_HK/legal.xml
+share/gnome/help/hamster-applet/zh_HK/merge.page
+share/gnome/help/hamster-applet/zh_HK/reports.page
+share/gnome/help/hamster-applet/zh_HK/statistics.page
+share/gnome/help/hamster-applet/zh_TW/backup.page
+share/gnome/help/hamster-applet/zh_TW/figures/hamster-logo.png
+share/gnome/help/hamster-applet/zh_TW/index.page
+share/gnome/help/hamster-applet/zh_TW/input.page
+share/gnome/help/hamster-applet/zh_TW/legal.xml
+share/gnome/help/hamster-applet/zh_TW/merge.page
+share/gnome/help/hamster-applet/zh_TW/reports.page
+share/gnome/help/hamster-applet/zh_TW/statistics.page
 share/icons/hicolor/16x16/apps/hamster-applet.png
 share/icons/hicolor/22x22/apps/hamster-applet.png
 share/icons/hicolor/32x32/apps/hamster-applet.png
@@ -220,8 +252,16 @@ share/locale/zh_TW/LC_MESSAGES/hamster-applet.mo
 @dirrm %%PYTHON_SITELIBDIR%%/hamster/keybinder
 @dirrm %%PYTHON_SITELIBDIR%%/hamster
 @dirrm lib/hamster-applet
+@dirrm share/gnome/help/hamster-applet/zh_TW/figures
+@dirrm share/gnome/help/hamster-applet/zh_TW
+@dirrm share/gnome/help/hamster-applet/zh_HK/figures
+@dirrm share/gnome/help/hamster-applet/zh_HK
+@dirrm share/gnome/help/hamster-applet/fr/figures
+@dirrm share/gnome/help/hamster-applet/fr
 @dirrm share/gnome/help/hamster-applet/es/figures
 @dirrm share/gnome/help/hamster-applet/es
+@dirrm share/gnome/help/hamster-applet/el/figures
+@dirrm share/gnome/help/hamster-applet/el
 @dirrm share/gnome/help/hamster-applet/de/figures
 @dirrm share/gnome/help/hamster-applet/de
 @dirrm share/gnome/help/hamster-applet/cs/figures
