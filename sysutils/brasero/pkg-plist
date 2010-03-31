@@ -111,8 +111,6 @@ share/doc/libbrasero-burn/libbrasero-burn-BraseroSessionSpan.html
 share/doc/libbrasero-burn/libbrasero-burn-BraseroSumDialog.html
 share/doc/libbrasero-burn/libbrasero-burn-BraseroToolDialog.html
 share/doc/libbrasero-burn/libbrasero-burn-BraseroTrack.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackData.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackDataCfg.html
 share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackDisc.html
 share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackImage.html
 share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackImageCfg.html
@@ -123,6 +121,8 @@ share/doc/libbrasero-burn/libbrasero-burn-brasero-enums.html
 share/doc/libbrasero-burn/libbrasero-burn-brasero-error.html
 share/doc/libbrasero-burn/libbrasero-burn-brasero-status.html
 share/doc/libbrasero-burn/libbrasero-burn-brasero-tags.html
+share/doc/libbrasero-burn/libbrasero-burn-brasero-track-data-cfg.html
+share/doc/libbrasero-burn/libbrasero-burn-brasero-track-data.html
 share/doc/libbrasero-burn/libbrasero-burn-brasero-track-type.html
 share/doc/libbrasero-burn/libbrasero-burn.devhelp
 share/doc/libbrasero-burn/libbrasero-burn.devhelp2
@@ -137,12 +137,12 @@ share/doc/libbrasero-media/home.png
 share/doc/libbrasero-media/index.html
 share/doc/libbrasero-media/index.sgml
 share/doc/libbrasero-media/left.png
-share/doc/libbrasero-media/libbrasero-media-BraseroDrive.html
 share/doc/libbrasero-media/libbrasero-media-BraseroDriveSelection.html
 share/doc/libbrasero-media/libbrasero-media-BraseroMedium.html
 share/doc/libbrasero-media/libbrasero-media-BraseroMediumMonitor.html
 share/doc/libbrasero-media/libbrasero-media-BraseroMediumSelection.html
 share/doc/libbrasero-media/libbrasero-media-BraseroVolume.html
+share/doc/libbrasero-media/libbrasero-media-brasero-drive.html
 share/doc/libbrasero-media/libbrasero-media-brasero-media.html
 share/doc/libbrasero-media/libbrasero-media-brasero-units.html
 share/doc/libbrasero-media/libbrasero-media.devhelp
@@ -347,6 +347,7 @@ share/icons/hicolor/24x24/apps/brasero.png
 share/icons/hicolor/32x32/apps/brasero.png
 share/icons/hicolor/48x48/apps/brasero.png
 share/icons/hicolor/scalable/apps/brasero.svg
+share/locale/af/LC_MESSAGES/brasero.mo
 share/locale/ar/LC_MESSAGES/brasero.mo
 share/locale/as/LC_MESSAGES/brasero.mo
 share/locale/ast/LC_MESSAGES/brasero.mo
