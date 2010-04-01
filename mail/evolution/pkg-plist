@@ -1,5 +1,6 @@
 bin/evolution
 bin/evolution-alarm-notify
+bin/evolution-settings
 etc/xdg/autostart/evolution-alarm-notify.desktop
 include/evolution-%%VERSION%%/addressbook/gui/widgets/eab-config.h
 include/evolution-%%VERSION%%/calendar/common/authentication.h
@@ -127,6 +128,7 @@ include/evolution-%%VERSION%%/e-util/e-text-event-processor-emacs-like.h
 include/evolution-%%VERSION%%/e-util/e-text-event-processor-types.h
 include/evolution-%%VERSION%%/e-util/e-text-event-processor.h
 include/evolution-%%VERSION%%/e-util/e-timeout-activity.h
+include/evolution-%%VERSION%%/e-util/e-ui-manager.h
 include/evolution-%%VERSION%%/e-util/e-unicode.h
 include/evolution-%%VERSION%%/e-util/e-util.h
 include/evolution-%%VERSION%%/e-util/e-xml-utils.h
@@ -461,6 +463,10 @@ lib/evolution/%%VERSION%%/libevolution-mail-importers.a
 lib/evolution/%%VERSION%%/libevolution-mail-importers.la
 lib/evolution/%%VERSION%%/libevolution-mail-importers.so
 lib/evolution/%%VERSION%%/libevolution-mail-importers.so.0
+lib/evolution/%%VERSION%%/libevolution-mail-settings.a
+lib/evolution/%%VERSION%%/libevolution-mail-settings.la
+lib/evolution/%%VERSION%%/libevolution-mail-settings.so
+lib/evolution/%%VERSION%%/libevolution-mail-settings.so.0
 lib/evolution/%%VERSION%%/libevolution-smime.a
 lib/evolution/%%VERSION%%/libevolution-smime.la
 lib/evolution/%%VERSION%%/libevolution-smime.so
@@ -624,6 +630,7 @@ libexec/evolution/%%VERSION%%/evolution-addressbook-export
 libexec/evolution/%%VERSION%%/evolution-backup
 libexec/evolution/%%VERSION%%/killev
 share/applications/evolution.desktop
+share/applications/evolution-settings.desktop
 share/doc/eshell/EShell.html
 share/doc/eshell/EShellBackend.html
 share/doc/eshell/EShellContent.html
@@ -732,6 +739,65 @@ share/doc/eshell/up.png
 %%DATADIR%%/%%VERSION%%/help/quickref/pt/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/sq/quickref.pdf
 %%DATADIR%%/%%VERSION%%/help/quickref/sv/quickref.pdf
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/data/stock_signature-bad.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/data/stock_signature-ok.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/data/stock_signature.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/document/stock_task-assigned-to.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/document/stock_task-assigned.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/document/stock_task-recurring.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/document/stock_task.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/document/stock_todo.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_bell.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_check-filled.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_new-meeting.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_score-high.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_score-higher.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_score-highest.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_score-low.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_score-lower.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_score-lowest.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_score-normal.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_show-all.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_timezone.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic/stock_view-details.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/net/stock_contact-list.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/net/stock_mail-filters-apply.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/net/stock_mail-flag-for-followup-done.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/net/stock_mail-flag-for-followup.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/net/stock_mail-open-multiple.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/net/stock_mail-unread-multiple.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/net/stock_shared-by-me.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/net/stock_shared-to-me.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/net/stock_video-conferencing.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/object/stock_insert-note.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/data/stock_signature-bad.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/data/stock_signature-ok.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/data/stock_signature.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/document/stock_task-assigned-to.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/document/stock_task-assigned.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/document/stock_task-recurring.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/document/stock_task.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/document/stock_todo.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/generic/stock_new-meeting.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/generic/stock_show-all.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/generic/stock_timezone.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/net/stock_contact-list.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/net/stock_mail-filters-apply.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/net/stock_mail-open-multiple.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/net/stock_mail-unread-multiple.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/net/stock_shared-by-me.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/net/stock_shared-to-me.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/net/stock_video-conferencing.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/object/stock_insert-note.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/data/stock_signature-bad.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/data/stock_signature-ok.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/data/stock_signature.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/document/stock_todo.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/generic/stock_alarm.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/generic/stock_new-meeting.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/generic/stock_timezone.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/net/stock_mail-flag-for-followup-done.png
+%%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/net/stock_mail-flag-for-followup.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/folder-copy.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/folder-move.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/go-today.png
@@ -1849,6 +1915,27 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/net
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/generic
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/document
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock/data
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/48x48/stock
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/48x48
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/object
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/net
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/generic
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/document
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock/data
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/24x24/stock
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/24x24
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/object
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/net
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/generic
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/document
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock/data
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/16x16/stock
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome/16x16
+@dirrm %%DATADIR%%/%%VERSION%%/icons/gnome
 @dirrm %%DATADIR%%/%%VERSION%%/icons
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/sv
 @dirrm %%DATADIR%%/%%VERSION%%/help/quickref/sq
