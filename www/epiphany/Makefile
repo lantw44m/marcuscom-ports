@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.223 2010/02/25 01:29:56 mezz Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.224 2010/03/11 16:36:48 kwm Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.29.92
-PORTREVISION?=	0
+PORTVERSION=	2.30.0
+PORTREVISION?=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -86,6 +86,7 @@ post-patch:
 		 's|-lpthread|${PTHREAD_LIBS}|g'
 	@${REINPLACE_CMD} -e 's|execinfo.h|#|g ; \
 	    	s|-ldl"$$|"|g' \
+		-e 's|EPIPHANY_API_VERSION=2.29|EPIPHANY_API_VERSION=2.30|g' \
 		${WRKSRC}/configure
 
 post-install:
