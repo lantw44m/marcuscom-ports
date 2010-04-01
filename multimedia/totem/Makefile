@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.143 2010/03/16 13:07:16 kwm Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.144 2010/03/16 20:15:55 mezz Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	2.29.92
-PORTREVISION?=	1
+PORTVERSION=	2.30.0
+PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -56,9 +56,11 @@ OPTIONS=	LIRC "Enable lirc support" off \
 
 # check configure script for allowed_plugins="..." for new plugins
 TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
-		properties skipto youtube
+		properties skipto youtube opensubtitles screenshot \
+		brasero-disc-recorder coherence_upnp dbus-service iplayer
+
 # Not using:
-# TOTEM_PLUGINS= mythtv bemused
+# TOTEM_PLUGINS= mythtv bemused jamendo
 
 .include <bsd.port.pre.mk>
 
@@ -97,7 +99,6 @@ PLIST_SUB+=	GALAGO="@comment "
 .if !defined(WITHOUT_BROWSER_PLUGINS)
 CONFIGURE_ARGS+=--enable-browser-plugins \
 		--enable-gmp-plugin \
-		--enable-complex-plugin \
 		--enable-narrowspace-plugin
 PLIST_SUB+=	BROWSER_PLUGINS=""
 
@@ -110,7 +111,6 @@ WEBPLUGINS_FILES=	libtotem-cone-plugin.so libtotem-gmp-plugin.so \
 CONFIGURE_ARGS+=--disable-browser-plugins \
 		--disable-basic-plugin \
 		--disable-gmp-plugin \
-		--disable-complex-plugin \
 		--disable-narrowspace-plugin
 PLIST_SUB+=	BROWSER_PLUGINS="@comment "
 .endif
