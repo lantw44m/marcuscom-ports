@@ -3,7 +3,7 @@
 # Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-wm/metacity/Makefile,v 1.153 2010/04/01 11:55:05 kwm Exp $
 #
 
 PORTNAME=	metacity
@@ -15,10 +15,10 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A window manager for the adult in you
 
-BUILD_DEPENDS=  zenity:${PORTSDIR}/x11/zenity
+BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
-    		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
-RUN_DEPENDS=    zenity:${PORTSDIR}/x11/zenity
+		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
+RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
 USE_BZIP2=	yes
 USE_XORG=	x11 xcomposite xdamage
@@ -38,6 +38,6 @@ MAN1=		metacity-message.1 metacity-theme-viewer.1 \
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Werror||g' \
-	    	${WRKSRC}/configure
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
