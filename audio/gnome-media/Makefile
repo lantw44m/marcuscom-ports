@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.149 2010/02/23 22:06:11 ahze Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.150 2010/03/05 01:10:00 kwm Exp $
 #
 
 PORTNAME=	gnome-media
-PORTVERSION=	2.29.91
-PORTREVISION=	1
+PORTVERSION=	2.30.0
 CATEGORIES=	audio gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,8 +18,7 @@ COMMENT=	Multimedia applications for the GNOME 2 desktop
 BUILD_DEPENDS=	xml2po:${PORTSDIR}/textproc/gnome-doc-utils
 LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
     		pulse.0:${PORTSDIR}/audio/pulseaudio \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
-		gladeui-1.9:${PORTSDIR}/devel/glade3
+		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
@@ -38,5 +36,9 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	gnome-audio-profiles.schemas \
 		gnome-sound-recorder.schemas
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|have_gladeui=true|have_gladeui=false|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

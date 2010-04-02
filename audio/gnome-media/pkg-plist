@@ -9,9 +9,6 @@ include/gnome-media/profiles/audio-profile-edit.h
 include/gnome-media/profiles/audio-profile.h
 include/gnome-media/profiles/audio-profiles-edit.h
 include/gnome-media/profiles/gnome-media-profiles.h
-lib/glade3/modules/libgnome-media-profiles.so
-lib/glade3/modules/libgnome-media-profiles.la
-lib/glade3/modules/libgnome-media-profiles.a
 lib/libgnome-media-profiles.a
 lib/libgnome-media-profiles.la
 lib/libgnome-media-profiles.so
@@ -20,7 +17,6 @@ libdata/pkgconfig/gnome-media-profiles.pc
 share/applications/gnome-sound-recorder.desktop
 share/applications/gnome-volume-control.desktop
 share/applications/gstreamer-properties.desktop
-share/glade3/catalogs/gnome-media-profiles.xml
 %%DATADIR%%/gnome-audio-profile-edit.ui
 %%DATADIR%%/gnome-audio-profile-new.ui
 %%DATADIR%%/icons/hicolor/16x16/status/audio-input-microphone-high.png
@@ -53,10 +49,18 @@ share/gnome/help/gnome-audio-profiles/de/figures/gnome-audio-profiles-profile-wi
 share/gnome/help/gnome-audio-profiles/de/figures/gnome-audio-profiles-profiles-window.png
 share/gnome/help/gnome-audio-profiles/de/gnome-audio-profiles.xml
 share/gnome/help/gnome-audio-profiles/de/legal.xml
+share/gnome/help/gnome-audio-profiles/el/figures/gnome-audio-profiles-profile-window.png
+share/gnome/help/gnome-audio-profiles/el/figures/gnome-audio-profiles-profiles-window.png
+share/gnome/help/gnome-audio-profiles/el/gnome-audio-profiles.xml
+share/gnome/help/gnome-audio-profiles/el/legal.xml
 share/gnome/help/gnome-audio-profiles/es/figures/gnome-audio-profiles-profile-window.png
 share/gnome/help/gnome-audio-profiles/es/figures/gnome-audio-profiles-profiles-window.png
 share/gnome/help/gnome-audio-profiles/es/gnome-audio-profiles.xml
 share/gnome/help/gnome-audio-profiles/es/legal.xml
+share/gnome/help/gnome-audio-profiles/fr/figures/gnome-audio-profiles-profile-window.png
+share/gnome/help/gnome-audio-profiles/fr/figures/gnome-audio-profiles-profiles-window.png
+share/gnome/help/gnome-audio-profiles/fr/gnome-audio-profiles.xml
+share/gnome/help/gnome-audio-profiles/fr/legal.xml
 share/gnome/help/gnome-audio-profiles/sv/figures/gnome-audio-profiles-profile-window.png
 share/gnome/help/gnome-audio-profiles/sv/figures/gnome-audio-profiles-profiles-window.png
 share/gnome/help/gnome-audio-profiles/sv/gnome-audio-profiles.xml
@@ -143,6 +147,7 @@ share/icons/hicolor/48x48/apps/gnome-volume-control.png
 share/icons/hicolor/48x48/apps/gstreamer-properties.png
 share/icons/hicolor/scalable/apps/gnome-sound-recorder.svg
 share/icons/hicolor/scalable/apps/gnome-volume-control.svg
+share/locale/af/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/as/LC_MESSAGES/gnome-media-2.0.mo
@@ -230,7 +235,9 @@ share/locale/zh_HK/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 share/omf/gnome-audio-profiles/gnome-audio-profiles-C.omf
 share/omf/gnome-audio-profiles/gnome-audio-profiles-de.omf
+share/omf/gnome-audio-profiles/gnome-audio-profiles-el.omf
 share/omf/gnome-audio-profiles/gnome-audio-profiles-es.omf
+share/omf/gnome-audio-profiles/gnome-audio-profiles-fr.omf
 share/omf/gnome-audio-profiles/gnome-audio-profiles-sv.omf
 share/omf/gnome-sound-recorder/gnome-sound-recorder-C.omf
 share/omf/gnome-sound-recorder/gnome-sound-recorder-ca.omf
@@ -341,8 +348,12 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm share/gnome/help/gnome-sound-recorder
 @dirrm share/gnome/help/gnome-audio-profiles/sv/figures
 @dirrm share/gnome/help/gnome-audio-profiles/sv
+@dirrm share/gnome/help/gnome-audio-profiles/fr/figures
+@dirrm share/gnome/help/gnome-audio-profiles/fr
 @dirrm share/gnome/help/gnome-audio-profiles/es/figures
 @dirrm share/gnome/help/gnome-audio-profiles/es
+@dirrm share/gnome/help/gnome-audio-profiles/el/figures
+@dirrm share/gnome/help/gnome-audio-profiles/el
 @dirrm share/gnome/help/gnome-audio-profiles/de/figures
 @dirrm share/gnome/help/gnome-audio-profiles/de
 @dirrm share/gnome/help/gnome-audio-profiles/C/figures
