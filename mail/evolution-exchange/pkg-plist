@@ -78,6 +78,7 @@ lib/evolution-data-server-%%EDS_VERSION%%/extensions/libecalbackendexchange.so
 share/evolution/%%VERSION%%/errors/org-gnome-exchange-operations.error
 share/locale/ar/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/as/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
+share/locale/ast/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
 share/locale/bn/LC_MESSAGES/evolution-exchange-%%VERSION%%.mo
