@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.124 2010/03/05 14:38:01 kwm Exp $
 #
 
 PORTNAME=	epiphany-extensions
-PORTVERSION=	2.29.91
+PORTVERSION=	2.30.0
 PORTREVISION=	0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
@@ -48,15 +48,10 @@ CONFIGURE_ARGS+=	--disable-opensp
 
 CONFIGURE_ARGS+=--with-extensions="${EPHY_EXTENSIONS}"
 
-pre-everything::
-	@${ECHO_MSG} "Epiphany-extensions also supports the following tunable option(s):"
-	@${ECHO_MSG} "	WITH_OPENSP=yes		Enable support for OpenSP SGML validation"
-	@${ECHO_MSG} ""
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$($$PKG_CONFIG --variable=extensionsdir epiphany-$$_epiphany_api_version)|${PREFIX}/lib/epiphany/${PORTVERSION:R}/extensions|g' \
-		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|$$($$PKG_CONFIG --variable=icondir epiphany-$$EPIPHANY_API_VERSION)|${PREFIX}/share/epiphany/icons|g' \
+		-e 's|$$($$PKG_CONFIG --variable=icondir epiphany-$$EPIPHANY_API_VERSION)|${PREFIX}/share/epiphany/icons|g' \
+		-e 's|EPIPHANY_API_VERSION=2.29|EPIPHANY_API_VERSION=2.30|g' \
 		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
