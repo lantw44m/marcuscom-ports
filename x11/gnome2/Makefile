@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.288 2010/02/26 00:15:04 kwm Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.289 2010/03/14 02:39:24 kwm Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.29.92
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -100,7 +100,7 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 #RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
 .endif
 .if ${OSVERSION}>=600000
-RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga
+RUN_DEPENDS+=	ekiga:${PORTSDIR}/net/ekiga3
 .endif
 .if defined(WITH_MAPI)
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/libexchangemapi-1.0.pc:${PORTSDIR}/mail/evolution-mapi
