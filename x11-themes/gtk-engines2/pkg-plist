@@ -31,8 +31,10 @@ share/gtk-engines/industrial.xml
 share/gtk-engines/mist.xml
 share/gtk-engines/redmond95.xml
 share/gtk-engines/thinice.xml
+share/locale/af/LC_MESSAGES/gtk-engines.mo
 share/locale/ar/LC_MESSAGES/gtk-engines.mo
 share/locale/as/LC_MESSAGES/gtk-engines.mo
+share/locale/ast/LC_MESSAGES/gtk-engines.mo
 share/locale/be@latin/LC_MESSAGES/gtk-engines.mo
 share/locale/bg/LC_MESSAGES/gtk-engines.mo
 share/locale/bn/LC_MESSAGES/gtk-engines.mo
