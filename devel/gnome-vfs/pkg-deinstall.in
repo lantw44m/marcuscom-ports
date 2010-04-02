@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-# $FreeBSD: ports/devel/gnome-vfs/pkg-deinstall.in,v 1.11 2009/11/28 20:05:34 marcus Exp $
-#   $MCom: ports/devel/gnome-vfs/pkg-deinstall.in,v 1.23 2009/11/28 05:58:59 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/devel/gnome-vfs/pkg-deinstall.in,v 1.25 2010/04/01 14:24:30 kwm Exp $
 #
 # Restore gconf keys of libgnome.
 

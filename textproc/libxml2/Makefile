@@ -2,7 +2,7 @@
 # Date created:				28 September 1998
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
-# $FreeBSD: ports/textproc/libxml2/Makefile,v 1.163 2010/03/17 21:06:17 delphij Exp $
+# $FreeBSD$
 #
 # WITHOUT_SCHEMA disable XML schema support
 # WITH_MEM_DEBUG enable memory debugging (DEVELOPERS ONLY!)
