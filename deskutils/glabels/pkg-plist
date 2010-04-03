@@ -60,6 +60,7 @@ share/doc/libglabels/up.png
 %%DATADIR%%/templates/misc-other-templates.xml
 %%DATADIR%%/templates/misc-us-templates.xml
 %%DATADIR%%/templates/paper-sizes.xml
+%%DATADIR%%/templates/pearl-templates.xml
 %%DATADIR%%/templates/zweckform-iso-templates.xml
 share/gnome/help/glabels/C/figures/glabels-template-cd.png
 share/gnome/help/glabels/C/figures/glabels-template-label.png
@@ -80,6 +81,24 @@ share/gnome/help/glabels/C/figures/print-copies.png
 share/gnome/help/glabels/C/figures/print-merge.png
 share/gnome/help/glabels/C/glabels.xml
 share/gnome/help/glabels/C/legal.xml
+share/gnome/help/glabels/cs/figures/glabels-template-cd.png
+share/gnome/help/glabels/cs/figures/glabels-template-label.png
+share/gnome/help/glabels/cs/figures/glabels-template-layout.png
+share/gnome/help/glabels/cs/figures/main-window-empty.png
+share/gnome/help/glabels/cs/figures/merge-ex1-1.png
+share/gnome/help/glabels/cs/figures/merge-ex1-2.png
+share/gnome/help/glabels/cs/figures/merge-ex1-3.png
+share/gnome/help/glabels/cs/figures/merge-ex1-4.png
+share/gnome/help/glabels/cs/figures/merge-ex2-1.png
+share/gnome/help/glabels/cs/figures/merge-ex2-2.png
+share/gnome/help/glabels/cs/figures/merge-ex2-3.png
+share/gnome/help/glabels/cs/figures/merge-ex2-4.png
+share/gnome/help/glabels/cs/figures/merge-ex3-1.png
+share/gnome/help/glabels/cs/figures/merge-ex3-2.png
+share/gnome/help/glabels/cs/figures/object-editor-sidebar.png
+share/gnome/help/glabels/cs/figures/print-copies.png
+share/gnome/help/glabels/cs/figures/print-merge.png
+share/gnome/help/glabels/cs/glabels.xml
 share/gnome/help/glabels/de/figures/glabels-template-cd.png
 share/gnome/help/glabels/de/figures/glabels-template-label.png
 share/gnome/help/glabels/de/figures/glabels-template-layout.png
@@ -98,8 +117,45 @@ share/gnome/help/glabels/de/figures/object-editor-sidebar.png
 share/gnome/help/glabels/de/figures/print-copies.png
 share/gnome/help/glabels/de/figures/print-merge.png
 share/gnome/help/glabels/de/glabels.xml
+share/gnome/help/glabels/es/figures/glabels-template-cd.png
+share/gnome/help/glabels/es/figures/glabels-template-label.png
+share/gnome/help/glabels/es/figures/glabels-template-layout.png
+share/gnome/help/glabels/es/figures/main-window-empty.png
+share/gnome/help/glabels/es/figures/merge-ex1-1.png
+share/gnome/help/glabels/es/figures/merge-ex1-2.png
+share/gnome/help/glabels/es/figures/merge-ex1-3.png
+share/gnome/help/glabels/es/figures/merge-ex1-4.png
+share/gnome/help/glabels/es/figures/merge-ex2-1.png
+share/gnome/help/glabels/es/figures/merge-ex2-2.png
+share/gnome/help/glabels/es/figures/merge-ex2-3.png
+share/gnome/help/glabels/es/figures/merge-ex2-4.png
+share/gnome/help/glabels/es/figures/merge-ex3-1.png
+share/gnome/help/glabels/es/figures/merge-ex3-2.png
+share/gnome/help/glabels/es/figures/object-editor-sidebar.png
+share/gnome/help/glabels/es/figures/print-copies.png
+share/gnome/help/glabels/es/figures/print-merge.png
+share/gnome/help/glabels/es/glabels.xml
+share/gnome/help/glabels/fr/figures/glabels-template-cd.png
+share/gnome/help/glabels/fr/figures/glabels-template-label.png
+share/gnome/help/glabels/fr/figures/glabels-template-layout.png
+share/gnome/help/glabels/fr/figures/main-window-empty.png
+share/gnome/help/glabels/fr/figures/merge-ex1-1.png
+share/gnome/help/glabels/fr/figures/merge-ex1-2.png
+share/gnome/help/glabels/fr/figures/merge-ex1-3.png
+share/gnome/help/glabels/fr/figures/merge-ex1-4.png
+share/gnome/help/glabels/fr/figures/merge-ex2-1.png
+share/gnome/help/glabels/fr/figures/merge-ex2-2.png
+share/gnome/help/glabels/fr/figures/merge-ex2-3.png
+share/gnome/help/glabels/fr/figures/merge-ex2-4.png
+share/gnome/help/glabels/fr/figures/merge-ex3-1.png
+share/gnome/help/glabels/fr/figures/merge-ex3-2.png
+share/gnome/help/glabels/fr/figures/object-editor-sidebar.png
+share/gnome/help/glabels/fr/figures/print-copies.png
+share/gnome/help/glabels/fr/figures/print-merge.png
+share/gnome/help/glabels/fr/glabels.xml
 share/locale/ca/LC_MESSAGES/glabels.mo
 share/locale/cs/LC_MESSAGES/glabels.mo
+share/locale/da/LC_MESSAGES/glabels.mo
 share/locale/de/LC_MESSAGES/glabels.mo
 share/locale/eo/LC_MESSAGES/glabels.mo
 share/locale/es/LC_MESSAGES/glabels.mo
@@ -110,6 +166,7 @@ share/locale/ko/LC_MESSAGES/glabels.mo
 share/locale/pl/LC_MESSAGES/glabels.mo
 share/locale/pt_BR/LC_MESSAGES/glabels.mo
 share/locale/ru/LC_MESSAGES/glabels.mo
+share/locale/sl/LC_MESSAGES/glabels.mo
 share/locale/sv/LC_MESSAGES/glabels.mo
 share/locale/zh_CN/LC_MESSAGES/glabels.mo
 share/locale/zh_TW/LC_MESSAGES/glabels.mo
@@ -118,7 +175,10 @@ share/mime-info/glabels.mime
 share/mime/application/x-glabels.xml
 share/mime/packages/glabels.xml
 share/omf/glabels/glabels-C.omf
+share/omf/glabels/glabels-cs.omf
 share/omf/glabels/glabels-de.omf
+share/omf/glabels/glabels-es.omf
+share/omf/glabels/glabels-fr.omf
 share/pixmaps/glabels-application-x-glabels.png
 share/pixmaps/glabels.png
 share/pixmaps/glabels/ex-1layout.png
@@ -130,8 +190,14 @@ share/pixmaps/glabels/glabels-about-logo.png
 share/pixmaps/glabels/glabels-splash.png
 @dirrm share/pixmaps/glabels
 @dirrm share/omf/glabels
+@dirrm share/gnome/help/glabels/fr/figures
+@dirrm share/gnome/help/glabels/fr
+@dirrm share/gnome/help/glabels/es/figures
+@dirrm share/gnome/help/glabels/es
 @dirrm share/gnome/help/glabels/de/figures
 @dirrm share/gnome/help/glabels/de
+@dirrm share/gnome/help/glabels/cs/figures
+@dirrm share/gnome/help/glabels/cs
 @dirrm share/gnome/help/glabels/C/figures
 @dirrm share/gnome/help/glabels/C
 @dirrm share/gnome/help/glabels
