@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.215 2010/03/14 02:38:18 kwm Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.216 2010/04/03 09:40:27 kwm Exp $
 #
 
 PORTNAME=	gnome-games
@@ -15,14 +15,13 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The game applications package for the GNOME 2 Desktop Environment
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		${LOCALBASE}/share/gir-1.0/GConf-2.0.gir:${PORTSDID}/devel/gir-repository-gconf2
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	guile.20:${PORTSDIR}/lang/guile \
 		clutter-gtk-0.10.0:${PORTSDIR}/graphics/clutter-gtk \
 		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter \
 		ggzmod.5:${PORTSDIR}/games/ggz-client-libs
 RUN_DEPENDS=	seed:${PORTSDIR}/devel/seed \
-		${LOCALBASE}/share/gir-1.0/GConf-2.0.gir:${PORTSDID}/devel/gir-repository-gconf2
+		${LOCALBASE}/share/gir-1.0/GConf-2.0.gir:${PORTSDIR}/devel/gir-repository-gconf2
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
