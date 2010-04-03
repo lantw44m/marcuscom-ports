@@ -3,12 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.91 2010/02/23 12:35:23 kwm Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.92 2010/03/28 10:31:59 kwm Exp $
 #
 
 PORTNAME=	cairo
 PORTVERSION=	1.8.10
-PORTREVISION?=	0
+PORTREVISION?=	1
 PORTEPOCH?=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
@@ -32,7 +32,8 @@ USE_AUTOTOOLS=	libtool:22
 USE_LDCONFIG=	yes
 
 CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS}" \
-		LDFLAGS="${PTHREAD_LIBS}"
+		LDFLAGS="${PTHREAD_LIBS}" \
+		png_REQUIRES="libpng"
 
 .if defined(WITHOUT_X11)
 CONFIGURE_ARGS+=--disable-xlib
