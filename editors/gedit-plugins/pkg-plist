@@ -19,6 +19,9 @@ lib/gedit-2/plugins/charmap.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/commander/commands/__init__.py
 %%PYTHON%%lib/gedit-2/plugins/commander/commands/__init__.pyc
 %%PYTHON%%lib/gedit-2/plugins/commander/commands/__init__.pyo
+%%PYTHON%%lib/gedit-2/plugins/commander/commands/accel_group.py
+%%PYTHON%%lib/gedit-2/plugins/commander/commands/accel_group.pyc
+%%PYTHON%%lib/gedit-2/plugins/commander/commands/accel_group.pyo
 %%PYTHON%%lib/gedit-2/plugins/commander/commands/completion.py
 %%PYTHON%%lib/gedit-2/plugins/commander/commands/completion.pyc
 %%PYTHON%%lib/gedit-2/plugins/commander/commands/completion.pyo
@@ -37,9 +40,6 @@ lib/gedit-2/plugins/charmap.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/commander/commands/rollbackimporter.py
 %%PYTHON%%lib/gedit-2/plugins/commander/commands/rollbackimporter.pyc
 %%PYTHON%%lib/gedit-2/plugins/commander/commands/rollbackimporter.pyo
-%%PYTHON%%lib/gedit-2/plugins/commander/drawing.py
-%%PYTHON%%lib/gedit-2/plugins/commander/drawing.pyc
-%%PYTHON%%lib/gedit-2/plugins/commander/drawing.pyo
 %%PYTHON%%lib/gedit-2/plugins/commander/entry.py
 %%PYTHON%%lib/gedit-2/plugins/commander/entry.pyc
 %%PYTHON%%lib/gedit-2/plugins/commander/entry.pyo
@@ -118,6 +118,9 @@ lib/gedit-2/plugins/showtabbar.gedit-plugin
 %%PYTHON%%lib/gedit-2/plugins/terminal.pyo
 lib/gedit-2/plugins/wordcompletion.gedit-plugin
 share/gedit-2/plugins/bookmarks/bookmark.png
+%%PYTHON%%share/gedit-2/plugins/commander/modules/align.py
+%%PYTHON%%share/gedit-2/plugins/commander/modules/align.pyc
+%%PYTHON%%share/gedit-2/plugins/commander/modules/align.pyo
 %%PYTHON%%share/gedit-2/plugins/commander/modules/bookmark.py
 %%PYTHON%%share/gedit-2/plugins/commander/modules/bookmark.pyc
 %%PYTHON%%share/gedit-2/plugins/commander/modules/bookmark.pyo

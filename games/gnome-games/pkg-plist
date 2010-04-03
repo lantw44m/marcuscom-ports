@@ -738,6 +738,9 @@ share/gnome/help/aisleriot/de/figures/clock-rules.png
 share/gnome/help/aisleriot/el/aisleriot.xml
 share/gnome/help/aisleriot/el/figures/camelot-goal.png
 share/gnome/help/aisleriot/el/figures/clock-rules.png
+share/gnome/help/aisleriot/en_GB/aisleriot.xml
+share/gnome/help/aisleriot/en_GB/figures/camelot-goal.png
+share/gnome/help/aisleriot/en_GB/figures/clock-rules.png
 share/gnome/help/aisleriot/es/aisleriot.xml
 share/gnome/help/aisleriot/es/figures/camelot-goal.png
 share/gnome/help/aisleriot/es/figures/clock-rules.png
@@ -1232,6 +1235,22 @@ share/gnome/help/gnome-sudoku/ru/figures/hints.png
 share/gnome/help/gnome-sudoku/ru/figures/resuming.png
 share/gnome/help/gnome-sudoku/ru/figures/starting.png
 share/gnome/help/gnome-sudoku/ru/gnome-sudoku.xml
+share/gnome/help/gnome-sudoku/sr/figures/Print_Sudokus.png
+share/gnome/help/gnome-sudoku/sr/figures/always_show_hint.png
+share/gnome/help/gnome-sudoku/sr/figures/error_highlighting.png
+share/gnome/help/gnome-sudoku/sr/figures/highlighting.png
+share/gnome/help/gnome-sudoku/sr/figures/hints.png
+share/gnome/help/gnome-sudoku/sr/figures/resuming.png
+share/gnome/help/gnome-sudoku/sr/figures/starting.png
+share/gnome/help/gnome-sudoku/sr/gnome-sudoku.xml
+share/gnome/help/gnome-sudoku/sr@latin/figures/Print_Sudokus.png
+share/gnome/help/gnome-sudoku/sr@latin/figures/always_show_hint.png
+share/gnome/help/gnome-sudoku/sr@latin/figures/error_highlighting.png
+share/gnome/help/gnome-sudoku/sr@latin/figures/highlighting.png
+share/gnome/help/gnome-sudoku/sr@latin/figures/hints.png
+share/gnome/help/gnome-sudoku/sr@latin/figures/resuming.png
+share/gnome/help/gnome-sudoku/sr@latin/figures/starting.png
+share/gnome/help/gnome-sudoku/sr@latin/gnome-sudoku.xml
 share/gnome/help/gnome-sudoku/sv/figures/Print_Sudokus.png
 share/gnome/help/gnome-sudoku/sv/figures/always_show_hint.png
 share/gnome/help/gnome-sudoku/sv/figures/error_highlighting.png
@@ -1291,6 +1310,20 @@ share/gnome/help/gnomine/cs/figures/main-window.png
 share/gnome/help/gnomine/cs/figures/preferences.png
 share/gnome/help/gnomine/cs/figures/statusbar.png
 share/gnome/help/gnomine/cs/gnomine.xml
+share/gnome/help/gnomine/da/figures/easy-hints-1.png
+share/gnome/help/gnomine/da/figures/easy-hints-2.png
+share/gnome/help/gnomine/da/figures/easy-hints-3.png
+share/gnome/help/gnomine/da/figures/faces.png
+share/gnome/help/gnomine/da/figures/flags.png
+share/gnome/help/gnomine/da/figures/hard-hints-1.png
+share/gnome/help/gnomine/da/figures/hard-hints-2.png
+share/gnome/help/gnomine/da/figures/hard-hints-3.png
+share/gnome/help/gnomine/da/figures/highscores.png
+share/gnome/help/gnomine/da/figures/imnotsureflagscheckbox.png
+share/gnome/help/gnomine/da/figures/main-window.png
+share/gnome/help/gnomine/da/figures/preferences.png
+share/gnome/help/gnomine/da/figures/statusbar.png
+share/gnome/help/gnomine/da/gnomine.xml
 share/gnome/help/gnomine/de/figures/easy-hints-1.png
 share/gnome/help/gnomine/de/figures/easy-hints-2.png
 share/gnome/help/gnomine/de/figures/easy-hints-3.png
@@ -1403,6 +1436,34 @@ share/gnome/help/gnomine/oc/figures/main-window.png
 share/gnome/help/gnomine/oc/figures/preferences.png
 share/gnome/help/gnomine/oc/figures/statusbar.png
 share/gnome/help/gnomine/oc/gnomine.xml
+share/gnome/help/gnomine/sr/figures/easy-hints-1.png
+share/gnome/help/gnomine/sr/figures/easy-hints-2.png
+share/gnome/help/gnomine/sr/figures/easy-hints-3.png
+share/gnome/help/gnomine/sr/figures/faces.png
+share/gnome/help/gnomine/sr/figures/flags.png
+share/gnome/help/gnomine/sr/figures/hard-hints-1.png
+share/gnome/help/gnomine/sr/figures/hard-hints-2.png
+share/gnome/help/gnomine/sr/figures/hard-hints-3.png
+share/gnome/help/gnomine/sr/figures/highscores.png
+share/gnome/help/gnomine/sr/figures/imnotsureflagscheckbox.png
+share/gnome/help/gnomine/sr/figures/main-window.png
+share/gnome/help/gnomine/sr/figures/preferences.png
+share/gnome/help/gnomine/sr/figures/statusbar.png
+share/gnome/help/gnomine/sr/gnomine.xml
+share/gnome/help/gnomine/sr@latin/figures/easy-hints-1.png
+share/gnome/help/gnomine/sr@latin/figures/easy-hints-2.png
+share/gnome/help/gnomine/sr@latin/figures/easy-hints-3.png
+share/gnome/help/gnomine/sr@latin/figures/faces.png
+share/gnome/help/gnomine/sr@latin/figures/flags.png
+share/gnome/help/gnomine/sr@latin/figures/hard-hints-1.png
+share/gnome/help/gnomine/sr@latin/figures/hard-hints-2.png
+share/gnome/help/gnomine/sr@latin/figures/hard-hints-3.png
+share/gnome/help/gnomine/sr@latin/figures/highscores.png
+share/gnome/help/gnomine/sr@latin/figures/imnotsureflagscheckbox.png
+share/gnome/help/gnomine/sr@latin/figures/main-window.png
+share/gnome/help/gnomine/sr@latin/figures/preferences.png
+share/gnome/help/gnomine/sr@latin/figures/statusbar.png
+share/gnome/help/gnomine/sr@latin/gnomine.xml
 share/gnome/help/gnomine/sv/figures/easy-hints-1.png
 share/gnome/help/gnomine/sv/figures/easy-hints-2.png
 share/gnome/help/gnomine/sv/figures/easy-hints-3.png
@@ -1611,6 +1672,18 @@ share/gnome/help/gnotravex/sr/shortcut.page
 share/gnome/help/gnotravex/sr/size.page
 share/gnome/help/gnotravex/sr/usage.page
 share/gnome/help/gnotravex/sr/winning.page
+share/gnome/help/gnotravex/sr@latin/figures/gnotravex-main-window.png
+share/gnome/help/gnotravex/sr@latin/figures/gnotravex-video.ogv
+share/gnome/help/gnotravex/sr@latin/gameplay.page
+share/gnome/help/gnotravex/sr@latin/hint.page
+share/gnome/help/gnotravex/sr@latin/index.page
+share/gnome/help/gnotravex/sr@latin/license.page
+share/gnome/help/gnotravex/sr@latin/move.page
+share/gnome/help/gnotravex/sr@latin/multiplayer.page
+share/gnome/help/gnotravex/sr@latin/shortcut.page
+share/gnome/help/gnotravex/sr@latin/size.page
+share/gnome/help/gnotravex/sr@latin/usage.page
+share/gnome/help/gnotravex/sr@latin/winning.page
 share/gnome/help/gnotravex/sv/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/sv/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/sv/gameplay.page
@@ -1840,7 +1913,9 @@ share/gnome/help/iagno/sv/iagno.xml
 share/gnome/help/lightsoff/C/legal.xml
 share/gnome/help/lightsoff/C/lightsoff.xml
 share/gnome/help/lightsoff/de/lightsoff.xml
+share/gnome/help/lightsoff/el/lightsoff.xml
 share/gnome/help/lightsoff/es/lightsoff.xml
+share/gnome/help/lightsoff/fr/lightsoff.xml
 share/gnome/help/mahjongg/C/figures/mahjongg.png
 share/gnome/help/mahjongg/C/figures/no-move.png
 share/gnome/help/mahjongg/C/figures/preferences.png
@@ -2222,6 +2297,7 @@ share/omf/aisleriot/aisleriot-C.omf
 share/omf/aisleriot/aisleriot-ca.omf
 share/omf/aisleriot/aisleriot-de.omf
 share/omf/aisleriot/aisleriot-el.omf
+share/omf/aisleriot/aisleriot-en_GB.omf
 share/omf/aisleriot/aisleriot-es.omf
 share/omf/aisleriot/aisleriot-eu.omf
 share/omf/aisleriot/aisleriot-fr.omf
@@ -2320,11 +2396,14 @@ share/omf/gnome-sudoku/gnome-sudoku-it.omf
 share/omf/gnome-sudoku/gnome-sudoku-oc.omf
 share/omf/gnome-sudoku/gnome-sudoku-pt_BR.omf
 share/omf/gnome-sudoku/gnome-sudoku-ru.omf
+share/omf/gnome-sudoku/gnome-sudoku-sr.omf
+share/omf/gnome-sudoku/gnome-sudoku-sr@latin.omf
 share/omf/gnome-sudoku/gnome-sudoku-sv.omf
 share/omf/gnome-sudoku/gnome-sudoku-zh_CN.omf
 share/omf/gnomine/gnomine-C.omf
 share/omf/gnomine/gnomine-ca.omf
 share/omf/gnomine/gnomine-cs.omf
+share/omf/gnomine/gnomine-da.omf
 share/omf/gnomine/gnomine-de.omf
 share/omf/gnomine/gnomine-el.omf
 share/omf/gnomine/gnomine-en_GB.omf
@@ -2333,6 +2412,8 @@ share/omf/gnomine/gnomine-eu.omf
 share/omf/gnomine/gnomine-fr.omf
 share/omf/gnomine/gnomine-it.omf
 share/omf/gnomine/gnomine-oc.omf
+share/omf/gnomine/gnomine-sr.omf
+share/omf/gnomine/gnomine-sr@latin.omf
 share/omf/gnomine/gnomine-sv.omf
 share/omf/gnomine/gnomine-zh_CN.omf
 share/omf/gnotski/gnotski-C.omf
@@ -2382,7 +2463,9 @@ share/omf/iagno/iagno-sr@latin.omf
 share/omf/iagno/iagno-sv.omf
 share/omf/lightsoff/lightsoff-C.omf
 share/omf/lightsoff/lightsoff-de.omf
+share/omf/lightsoff/lightsoff-el.omf
 share/omf/lightsoff/lightsoff-es.omf
+share/omf/lightsoff/lightsoff-fr.omf
 share/omf/mahjongg/mahjongg-C.omf
 share/omf/mahjongg/mahjongg-ca.omf
 share/omf/mahjongg/mahjongg-cs.omf
@@ -2523,7 +2606,9 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/mahjongg/C/figures
 @dirrm share/gnome/help/mahjongg/C
 @dirrm share/gnome/help/mahjongg
+@dirrm share/gnome/help/lightsoff/fr
 @dirrm share/gnome/help/lightsoff/es
+@dirrm share/gnome/help/lightsoff/el
 @dirrm share/gnome/help/lightsoff/de
 @dirrm share/gnome/help/lightsoff/C
 @dirrm share/gnome/help/lightsoff
@@ -2622,6 +2707,8 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/gnotski
 @dirrm share/gnome/help/gnotravex/sv/figures
 @dirrm share/gnome/help/gnotravex/sv
+@dirrm share/gnome/help/gnotravex/sr@latin/figures
+@dirrm share/gnome/help/gnotravex/sr@latin
 @dirrm share/gnome/help/gnotravex/sr/figures
 @dirrm share/gnome/help/gnotravex/sr
 @dirrm share/gnome/help/gnotravex/sl/figures
@@ -2657,6 +2744,10 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/gnomine/zh_CN
 @dirrm share/gnome/help/gnomine/sv/figures
 @dirrm share/gnome/help/gnomine/sv
+@dirrm share/gnome/help/gnomine/sr@latin/figures
+@dirrm share/gnome/help/gnomine/sr@latin
+@dirrm share/gnome/help/gnomine/sr/figures
+@dirrm share/gnome/help/gnomine/sr
 @dirrm share/gnome/help/gnomine/oc/figures
 @dirrm share/gnome/help/gnomine/oc
 @dirrm share/gnome/help/gnomine/it/figures
@@ -2673,6 +2764,8 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/gnomine/el
 @dirrm share/gnome/help/gnomine/de/figures
 @dirrm share/gnome/help/gnomine/de
+@dirrm share/gnome/help/gnomine/da/figures
+@dirrm share/gnome/help/gnomine/da
 @dirrm share/gnome/help/gnomine/cs/figures
 @dirrm share/gnome/help/gnomine/cs
 @dirrm share/gnome/help/gnomine/ca/figures
@@ -2684,6 +2777,10 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/gnome-sudoku/zh_CN
 @dirrm share/gnome/help/gnome-sudoku/sv/figures
 @dirrm share/gnome/help/gnome-sudoku/sv
+@dirrm share/gnome/help/gnome-sudoku/sr@latin/figures
+@dirrm share/gnome/help/gnome-sudoku/sr@latin
+@dirrm share/gnome/help/gnome-sudoku/sr/figures
+@dirrm share/gnome/help/gnome-sudoku/sr
 @dirrm share/gnome/help/gnome-sudoku/ru/figures
 @dirrm share/gnome/help/gnome-sudoku/ru
 @dirrm share/gnome/help/gnome-sudoku/pt_BR/figures
@@ -2886,6 +2983,8 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/aisleriot/eu
 @dirrm share/gnome/help/aisleriot/es/figures
 @dirrm share/gnome/help/aisleriot/es
+@dirrm share/gnome/help/aisleriot/en_GB/figures
+@dirrm share/gnome/help/aisleriot/en_GB
 @dirrm share/gnome/help/aisleriot/el/figures
 @dirrm share/gnome/help/aisleriot/el
 @dirrm share/gnome/help/aisleriot/de/figures
