@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.224 2010/03/11 16:36:48 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.225 2010/04/01 22:14:35 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -49,7 +49,7 @@ PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}"
 MAN1=		epiphany.1
 
 OPTIONS=	NSS "Import passwords from 2.26 and older on first run" on \
-		SEED "Enable seed (JavaScript) support" off \
+		SEED "Enable seed (JavaScript) support" on \
 		SPELLCHECK "Enable spell checking by default" on
 
 .if defined(PACKAGE_BUILDING)
