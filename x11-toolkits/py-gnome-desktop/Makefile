@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.97 2010/03/13 09:13:51 marcus Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.98 2010/03/31 06:20:26 avl Exp $
 #
 
 PORTNAME=	gnome-desktop
 PORTVERSION=	2.30.0
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gnome-python-desktop/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -20,6 +21,7 @@ COMMENT=	A set of Python bindings used by modules in the GNOME Desktop
 
 BUILD_DEPENDS=	bug-buddy:${PORTSDIR}/devel/bug-buddy
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
+		totem-plparser.17:${PORTSDIR}/multimedia/totem-pl-parser \
 		gnome-media-profiles.0:${PORTSDIR}/audio/gnome-media \
 		gnome-keyring:${PORTSDIR}/security/gnome-keyring \
 		brasero-media.2:${PORTSDIR}/sysutils/brasero \
@@ -34,8 +36,6 @@ USE_GNOME=	gnomehack libgnomeprintui gnomepanel gnomedesktop \
 		evolutiondataserver
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-metacity --disable-nautilusburn
-#Currently borken, needs update to new totem-pl-parser API
-CONFIGURE_ARGS+=--disable-totem_plparser
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

@@ -41,6 +41,11 @@
 %%PYTHON_SITELIBDIR%%/gtk-2.0/metacity.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/rsvg.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/rsvg.so
+%%PYTHON_SITELIBDIR%%/gtk-2.0/totem/__init__.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/totem/__init__.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/totem/__init__.pyo
+%%PYTHON_SITELIBDIR%%/gtk-2.0/totem/plparser.la
+%%PYTHON_SITELIBDIR%%/gtk-2.0/totem/plparser.so
 %%PYTHON_SITELIBDIR%%/gtk-2.0/wnck.la
 %%PYTHON_SITELIBDIR%%/gtk-2.0/wnck.so
 libdata/pkgconfig/gnome-python-desktop-2.0.pc
@@ -132,6 +137,7 @@ share/pygtk/2.0/defs/wnck.defs
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/pygnomeprintui
 %%PORTDOCS%%@dirrm %%DOCSDIR%%/pygnomeprint
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/totem
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomeprint
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/gnomedesktop
 @dirrm %%PYTHON_SITELIBDIR%%/gtk-2.0/evolution
