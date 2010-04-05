@@ -1,0 +1,89 @@
+bin/midori
+etc/xdg/midori/search
+lib/midori/libadblock.so
+lib/midori/libcolorful-tabs.so
+lib/midori/libcookie-manager.so
+lib/midori/libfeed-panel.so
+lib/midori/libformhistory.so
+lib/midori/libmouse-gestures.so
+lib/midori/libpage-holder.so
+lib/midori/libshortcuts.so
+lib/midori/libstatusbar-features.so
+lib/midori/libtab-panel.so
+lib/midori/libtab-switcher.so
+lib/midori/libtoolbar-editor.so
+lib/midori/libweb-cache.so
+%%NLS%%share/applications/midori.desktop
+%%DOCSDIR%%/AUTHORS
+%%DOCSDIR%%/COPYING
+%%DOCSDIR%%/ChangeLog
+%%DOCSDIR%%/EXPAT
+%%DOCSDIR%%/README
+share/icons/hicolor/16x16/apps/midori.png
+share/icons/hicolor/16x16/categories/extension.png
+share/icons/hicolor/16x16/status/news-feed.png
+share/icons/hicolor/22x22/apps/midori.png
+share/icons/hicolor/22x22/categories/extension.png
+share/icons/hicolor/22x22/status/news-feed.png
+share/icons/hicolor/24x24/apps/midori.png
+share/icons/hicolor/24x24/categories/extension.png
+share/icons/hicolor/24x24/status/news-feed.png
+share/icons/hicolor/32x32/apps/midori.png
+share/icons/hicolor/32x32/categories/extension.png
+share/icons/hicolor/32x32/status/news-feed.png
+share/icons/hicolor/48x48/apps/midori.png
+share/icons/hicolor/48x48/categories/extension.png
+share/icons/hicolor/48x48/status/news-feed.png
+%%NLS%%share/locale/ast/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/ca/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/cs/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/da/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/de/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/el/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/en_GB/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/es/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/et/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/fi/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/fr/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/gl/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/he/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/hu/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/id/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/it/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/ja/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/ko/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/nl/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/no/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/pl/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/pt/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/pt_BR/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/ro/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/ru/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/sk/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/sr/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/sr@latin/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/sv/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/tr/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/uk/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/zh_CN/LC_MESSAGES/midori.mo
+%%NLS%%share/locale/zh_TW/LC_MESSAGES/midori.mo
+%%DATADIR%%/res/autosuggestcontrol.css
+%%DATADIR%%/res/autosuggestcontrol.js
+%%DATADIR%%/res/error.html
+%%DATADIR%%/res/logo-shade.png
+%%DATADIR%%/res/mootools.js
+%%DATADIR%%/res/speeddial-head.html
+%%DATADIR%%/res/speeddial.json
+@dirrm %%DATADIR%%/res
+@dirrm %%DATADIR%%
+%%NLS%%@dirrmtry share/locale/sr@latin/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/sr@latin
+%%NLS%%@dirrmtry share/locale/ast/LC_MESSAGES
+%%NLS%%@dirrmtry share/locale/ast
+@dirrm %%DOCSDIR%%
+@dirrmtry share/applications
+@dirrm lib/midori
+@dirrm etc/xdg/midori
+@dirrmtry etc/xdg
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
