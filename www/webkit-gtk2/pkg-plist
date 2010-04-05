@@ -42,6 +42,7 @@ lib/libwebkit-1.0.so.13
 libdata/pkgconfig/webkit-1.0.pc
 share/gir-1.0/JSCore-1.0.gir
 share/gir-1.0/WebKit-1.0.gir
+share/locale/cs/LC_MESSAGES/webkit.mo
 share/locale/de/LC_MESSAGES/webkit.mo
 share/locale/en_GB/LC_MESSAGES/webkit.mo
 share/locale/es/LC_MESSAGES/webkit.mo
@@ -60,6 +61,7 @@ share/locale/sl/LC_MESSAGES/webkit.mo
 share/locale/sr/LC_MESSAGES/webkit.mo
 share/locale/sr@latin/LC_MESSAGES/webkit.mo
 share/locale/sv/LC_MESSAGES/webkit.mo
+share/locale/uk/LC_MESSAGES/webkit.mo
 share/locale/vi/LC_MESSAGES/webkit.mo
 share/locale/zh_CN/LC_MESSAGES/webkit.mo
 share/webkit-1.0/images/deleteButton.png
