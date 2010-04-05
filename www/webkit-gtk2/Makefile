@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.57 2010/02/24 02:45:06 ahze Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.58 2010/03/20 14:45:23 kwm Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.1.90
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -19,7 +20,7 @@ BUILD_DEPENDS=	flex:${PORTSDIR}/textproc/flex \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/share/gir-1.0/Soup-2.4.gir:${PORTSDIR}/devel/gir-repository-libsoup
 LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
-		curl.5:${PORTSDIR}/ftp/curl \
+		curl.6:${PORTSDIR}/ftp/curl \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/Soup-2.4.gir:${PORTSDIR}/devel/gir-repository-libsoup
