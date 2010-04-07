@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.18 2010/03/30 11:59:14 kwm Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.19 2010/04/05 01:26:07 marcus Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.3
@@ -46,6 +46,8 @@ CONFIGURE_ARGS+=--with-security-framework=polkit \
 		--disable-connman
 
 MAKE_ARGS=	pkgconfigdir="${PREFIX}/libdata/pkgconfig"
+
+MAKE_JOBS_UNSAFE=yes
 
 .if !defined(SLAVEPORT)
 OPTIONS=PORTS "Use portupgrade for management, dummy if disabled" on \
