@@ -34,10 +34,10 @@ lib/nautilus-actions/libna-io-gconf.la
 lib/nautilus-actions/libna-io-gconf.so
 lib/nautilus-actions/libna-io-xml.la
 lib/nautilus-actions/libna-io-xml.so
+lib/nautilus/extensions-2.0/libnautilus-actions-menu.la
+lib/nautilus/extensions-2.0/libnautilus-actions-menu.so
 lib/nautilus/extensions-2.0/libnautilus-actions-tracker.la
 lib/nautilus/extensions-2.0/libnautilus-actions-tracker.so
-lib/nautilus/extensions-2.0/libnautilus-actions.la
-lib/nautilus/extensions-2.0/libnautilus-actions.so
 share/applications/nact.desktop
 share/icons/hicolor/16x16/apps/nautilus-actions.png
 share/icons/hicolor/22x22/apps/nautilus-actions.png
