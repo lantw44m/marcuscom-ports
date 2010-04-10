@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.61 2010/03/31 07:50:36 avl Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.62 2010/04/10 15:35:11 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.30.0.1
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -48,6 +49,7 @@ OPTIONS=	JABBER	"Enable jabber (XMPP) client support" on \
 		SALUT	"Enable link-local (serverless) XMPP support" off \
 		HAZE	"Enable libpurple protocol integration" off \
 		WEBKIT	"Enable Adium Message Style themes" on \
+		NST	"Enable Nautilus SendTo plugin"	on \
 		MAP	"Enable graphical map support" on
 
 .include <bsd.port.pre.mk>
@@ -79,6 +81,16 @@ PLIST_SUB+=	ADIUM=""
 .else
 CONFIGURE_ARGS+=--disable-webkit
 PLIST_SUB+=	ADIUM="@comment "
+.endif
+
+.if defined(WITH_NST)
+BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/nautilus-sendto.pc:${PORTSDIR}/deskutils/nautilus-sendto
+RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/nautilus-sendto.pc:${PORTSDIR}/deskutils/nautilus-sendto
+CONFIGURE_ARGS+=--enable-nautilus-sendto=yes
+PLIST_SUB+=	NST=""
+.else
+CONFIGURE_ARGS+=--enable-nautilus-sendto=no
+PLIST_SUB+=	NST="@comment "
 .endif
 
 .if !defined(WITHOUT_MAP)

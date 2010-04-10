@@ -1,6 +1,9 @@
 bin/empathy
 bin/empathy-accounts
 bin/empathy-debugger
+%%NST%%lib/nautilus-sendto/plugins/libnstempathy.a
+%%NST%%lib/nautilus-sendto/plugins/libnstempathy.la
+%%NST%%lib/nautilus-sendto/plugins/libnstempathy.so
 share/applications/empathy-accounts.desktop
 share/applications/empathy.desktop
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
