@@ -1,5 +1,5 @@
---- hald/freebsd/hf-usb2.c.orig	2009-08-24 08:42:29.000000000 -0400
-+++ hald/freebsd/hf-usb2.c	2010-02-21 14:54:07.000000000 -0500
+--- hald/freebsd/hf-usb2.c.orig	2009-08-24 07:42:29.000000000 -0500
++++ hald/freebsd/hf-usb2.c	2010-03-17 22:25:17.000000000 -0500
 @@ -42,22 +42,6 @@
  static struct libusb20_backend *hf_usb2_be = NULL;
  
@@ -23,7 +23,7 @@
  hf_usb2_probe_interfaces(HalDevice *parent)
  {
    int num_interfaces;
-@@ -79,9 +63,9 @@ hf_usb2_probe_interfaces(HalDevice *pare
+@@ -79,9 +63,9 @@
  
        hal_device_property_set_string(device, "info.subsystem", "usb");
        hal_device_property_set_int(device, "usb.interface.number", i);
@@ -34,13 +34,13 @@
  
        if (hf_device_preprobe(device))
          {
-@@ -98,10 +82,10 @@ hf_usb2_probe_interfaces(HalDevice *pare
+@@ -98,10 +82,10 @@
  	  if (driver)
              {
  	      if (! strcmp(driver, "ukbd"))
 -                hf_device_set_input(device, "keyboard", NULL);
 -	      else if (! strcmp(driver, "ums"))
-+                hf_device_set_input(device, "keyboard", "keys", devname);
++                hf_device_set_input(device, "keyboard", "keys", NULL);
 +	      else if (! strcmp(driver, "ums") || ! strcmp(driver, "atp"))
                  {
 -                  hf_device_set_input(device, "mouse", devname);
@@ -48,7 +48,7 @@
  	          hf_runner_run_sync(device, 0, "hald-probe-mouse", NULL);
  	        }
  	      else if (! strcmp(driver, "uhid"))
-@@ -133,6 +117,11 @@ hf_usb2_probe_interfaces(HalDevice *pare
+@@ -133,6 +117,11 @@
                    hf_usb_add_webcam_properties(device);
  	        }
  	    }
@@ -60,7 +60,7 @@
  
  	  hf_usb_device_compute_udi(device);
  	  hf_device_add(device);
-@@ -192,11 +181,12 @@ hf_usb2_probe (void)
+@@ -192,11 +181,12 @@
        addr = libusb20_dev_get_address(pdev);
  
        if (addr == 1)
@@ -75,7 +75,7 @@
        if (! parent || hal_device_property_get_bool(parent, "info.ignore"))
          continue;
  
-@@ -216,7 +206,13 @@ hf_usb2_devd_add (const char *name,
+@@ -216,7 +206,13 @@
    HalDevice *parent_device;
    int bus, addr, pbus, paddr;
  
@@ -90,7 +90,7 @@
      return FALSE;
    else if (strncmp(parent, "ugen", strlen("ugen")))
      return TRUE;
-@@ -232,7 +228,8 @@ hf_usb2_devd_add (const char *name,
+@@ -232,7 +228,8 @@
  
    parent_device = hf_device_store_match(hald_get_gdl(),
      "usb_device.bus_number", HAL_PROPERTY_TYPE_INT32, pbus,
@@ -100,7 +100,7 @@
  
    if (parent_device && ! hal_device_property_get_bool(parent_device,
        "info.ignore"))
-@@ -255,8 +252,6 @@ hf_usb2_devd_remove (const char *name,
+@@ -255,8 +252,6 @@
  
    if (strncmp(name, "ugen", strlen("ugen")))
      return FALSE;
@@ -109,7 +109,7 @@
  
    if (sscanf(name, "ugen%i.%i", &bus, &addr) != 2)
      return FALSE;
-@@ -265,7 +260,8 @@ hf_usb2_devd_remove (const char *name,
+@@ -265,7 +260,8 @@
  
    device = hf_device_store_match(hald_get_gdl(), "usb_device.bus_number",
      HAL_PROPERTY_TYPE_INT32, bus, "usb_device.port_number",
@@ -119,7 +119,7 @@
  
    if (device)
      {
-@@ -276,6 +272,23 @@ hf_usb2_devd_remove (const char *name,
+@@ -276,6 +272,23 @@
    return FALSE;
  }
  
@@ -143,7 +143,7 @@
  HFHandler hf_usb2_handler = {
    .privileged_init	= hf_usb2_privileged_init,
    .probe		= hf_usb2_probe
-@@ -283,5 +296,6 @@ HFHandler hf_usb2_handler = {
+@@ -283,5 +296,6 @@
  
  HFDevdHandler hf_usb2_devd_handler = {
    .add =	hf_usb2_devd_add,
