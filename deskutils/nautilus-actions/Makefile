@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.19 2010/03/28 02:34:41 avl Exp $
+#   $MCom: ports/deskutils/nautilus-actions/Makefile,v 1.20 2010/04/10 09:46:14 kwm Exp $
 #
 
 PORTNAME=	nautilus-actions
-PORTVERSION=	2.30.1
+PORTVERSION=	2.30.2
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 
@@ -19,6 +19,7 @@ LIB_DEPENDS=	uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 
 INSTALLS_ICONS=	yes
+USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GNOME=	nautilus2 intlhack
 USE_GMAKE=	yes

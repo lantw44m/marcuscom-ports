@@ -10,7 +10,7 @@ include/nautilus-actions/na-dbus.h
 include/nautilus-actions/na-extension.h
 include/nautilus-actions/na-gconf-monitor.h
 include/nautilus-actions/na-gconf-utils.h
-include/nautilus-actions/na-icontextual.h
+include/nautilus-actions/na-icontext.h
 include/nautilus-actions/na-iduplicable.h
 include/nautilus-actions/na-iexporter.h
 include/nautilus-actions/na-ifactory-object-data.h
