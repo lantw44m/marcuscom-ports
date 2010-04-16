@@ -460,6 +460,7 @@ libdata/pkgconfig/sigc++-%%API_VERSION%%.pc
 %%PORTDOCS%%share/doc/libsigc++-%%API_VERSION%%/reference/html/group__mem__fun.html
 %%PORTDOCS%%share/doc/libsigc++-%%API_VERSION%%/reference/html/group__ptr__fun.html
 %%PORTDOCS%%share/doc/libsigc++-%%API_VERSION%%/reference/html/group__retype.html
+%%PORTDOCS%%share/doc/libsigc++-%%API_VERSION%%/reference/html/group__sigcfunctors.html
 %%PORTDOCS%%share/doc/libsigc++-%%API_VERSION%%/reference/html/group__signal.html
 %%PORTDOCS%%share/doc/libsigc++-%%API_VERSION%%/reference/html/group__slot.html
 %%PORTDOCS%%share/doc/libsigc++-%%API_VERSION%%/reference/html/hierarchy.html
