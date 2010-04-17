@@ -1,12 +1,12 @@
 --- libcheese/cheese-camera-device-monitor.c.orig	2010-03-29 16:27:42.000000000 -0400
-+++ libcheese/cheese-camera-device-monitor.c	2010-04-17 12:09:21.000000000 -0400
-@@ -25,24 +25,9 @@
++++ libcheese/cheese-camera-device-monitor.c	2010-04-17 16:03:28.000000000 -0400
+@@ -25,23 +25,9 @@
  
  #include <glib-object.h>
  #include <dbus/dbus-glib-lowlevel.h>
 +#include <libhal.h>
  #include <string.h>
- 
+-
 -#ifdef HAVE_UDEV
 -  #define G_UDEV_API_IS_SUBJECT_TO_CHANGE 1
 -  #include <gudev/gudev.h>
@@ -22,11 +22,11 @@
 -    #include <sys/videodev2.h>
 -  #endif /* USE_SYS_VIDEOIO_H */
 -#endif
--
++#include <unistd.h>
+ 
  #include "cheese-camera-device-monitor.h"
  #include "cheese-marshal.h"
- 
-@@ -54,9 +39,9 @@
+@@ -54,9 +40,9 @@
   * #CheeseCameraDeviceMonitor provides a basic interface for
   * video4linux device enumeration and hotplugging.
   *
@@ -38,7 +38,7 @@
   * CheeseCameraDeviceMonitor::added or
   * CheeseCameraDeviceMonitor::removed signal when an event happens.
   */
-@@ -80,11 +65,9 @@ enum CheeseCameraDeviceMonitorError
+@@ -80,11 +66,9 @@ enum CheeseCameraDeviceMonitorError
  
  typedef struct
  {
@@ -52,7 +52,7 @@
  } CheeseCameraDeviceMonitorPrivate;
  
  enum
-@@ -102,111 +85,79 @@ cheese_camera_device_monitor_error_quark
+@@ -102,111 +86,79 @@ cheese_camera_device_monitor_error_quark
    return g_quark_from_static_string ("cheese-camera-error-quark");
  }
  
@@ -207,7 +207,7 @@
  }
  
  /**
-@@ -222,115 +173,85 @@ void
+@@ -222,115 +174,85 @@ void
  cheese_camera_device_monitor_coldplug (CheeseCameraDeviceMonitor *monitor)
  {
    CheeseCameraDeviceMonitorPrivate *priv = CHEESE_CAMERA_DEVICE_MONITOR_GET_PRIVATE (monitor);
@@ -371,7 +371,7 @@
    G_OBJECT_CLASS (cheese_camera_device_monitor_parent_class)->finalize (object);
  }
  
-@@ -385,14 +306,52 @@ cheese_camera_device_monitor_class_init 
+@@ -385,14 +307,52 @@ cheese_camera_device_monitor_class_init 
  static void
  cheese_camera_device_monitor_init (CheeseCameraDeviceMonitor *monitor)
  {
