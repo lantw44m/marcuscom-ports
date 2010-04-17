@@ -181,7 +181,7 @@ share/icons/gnome/16x16/actions/lock.png
 share/icons/gnome/16x16/actions/mail-forward.png
 share/icons/gnome/16x16/actions/mail-mark-important.png
 share/icons/gnome/16x16/actions/mail-mark-junk.png
-share/icons/gnome/16x16/actions/mail-mark-notjunk.png
+share/icons/gnome/16x16/actions/mail-mark-not-junk.png
 share/icons/gnome/16x16/actions/mail-mark-read.png
 share/icons/gnome/16x16/actions/mail-mark-unread.png
 share/icons/gnome/16x16/actions/mail-message-new.png
@@ -269,6 +269,7 @@ share/icons/gnome/16x16/actions/stock_new-dir.png
 share/icons/gnome/16x16/actions/stock_new-tab.png
 share/icons/gnome/16x16/actions/stock_new-text.png
 share/icons/gnome/16x16/actions/stock_new-window.png
+share/icons/gnome/16x16/actions/stock_not-spam.png
 share/icons/gnome/16x16/actions/stock_paste.png
 share/icons/gnome/16x16/actions/stock_print-preview.png
 share/icons/gnome/16x16/actions/stock_print-setup.png
@@ -671,6 +672,7 @@ share/icons/gnome/16x16/mimetypes/font_bitmap.png
 share/icons/gnome/16x16/mimetypes/font_truetype.png
 share/icons/gnome/16x16/mimetypes/font_type1.png
 share/icons/gnome/16x16/mimetypes/gnome-fs-executable.png
+share/icons/gnome/16x16/mimetypes/gnome-fs-regular.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-magicpoint.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-msword.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-application-ogg.png
@@ -767,6 +769,7 @@ share/icons/gnome/16x16/mimetypes/gnome-mime-text.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-video.png
 share/icons/gnome/16x16/mimetypes/gnome-mime-x-font-afm.png
 share/icons/gnome/16x16/mimetypes/gnome-package.png
+share/icons/gnome/16x16/mimetypes/gtk-file.png
 share/icons/gnome/16x16/mimetypes/html.png
 share/icons/gnome/16x16/mimetypes/image-x-generic.png
 share/icons/gnome/16x16/mimetypes/image.png
@@ -791,6 +794,7 @@ share/icons/gnome/16x16/mimetypes/template_source.png
 share/icons/gnome/16x16/mimetypes/text-html.png
 share/icons/gnome/16x16/mimetypes/text-x-generic-template.png
 share/icons/gnome/16x16/mimetypes/text-x-generic.png
+share/icons/gnome/16x16/mimetypes/text-x-preview.png
 share/icons/gnome/16x16/mimetypes/text-x-script.png
 share/icons/gnome/16x16/mimetypes/tgz.png
 share/icons/gnome/16x16/mimetypes/txt.png
@@ -978,12 +982,12 @@ share/icons/gnome/16x16/status/sunny.png
 share/icons/gnome/16x16/status/task-due.png
 share/icons/gnome/16x16/status/task-past-due.png
 share/icons/gnome/16x16/status/trashcan_full.png
+share/icons/gnome/16x16/status/user-available.png
 share/icons/gnome/16x16/status/user-away.png
 share/icons/gnome/16x16/status/user-busy.png
 share/icons/gnome/16x16/status/user-idle.png
 share/icons/gnome/16x16/status/user-invisible.png
 share/icons/gnome/16x16/status/user-offline.png
-share/icons/gnome/16x16/status/user-online.png
 share/icons/gnome/16x16/status/user-trash-full.png
 share/icons/gnome/16x16/status/weather-clear-night.png
 share/icons/gnome/16x16/status/weather-clear.png
@@ -1179,7 +1183,7 @@ share/icons/gnome/22x22/actions/lock.png
 share/icons/gnome/22x22/actions/mail-forward.png
 share/icons/gnome/22x22/actions/mail-mark-important.png
 share/icons/gnome/22x22/actions/mail-mark-junk.png
-share/icons/gnome/22x22/actions/mail-mark-notjunk.png
+share/icons/gnome/22x22/actions/mail-mark-not-junk.png
 share/icons/gnome/22x22/actions/mail-mark-read.png
 share/icons/gnome/22x22/actions/mail-mark-unread.png
 share/icons/gnome/22x22/actions/mail-message-new.png
@@ -1267,6 +1271,7 @@ share/icons/gnome/22x22/actions/stock_new-dir.png
 share/icons/gnome/22x22/actions/stock_new-tab.png
 share/icons/gnome/22x22/actions/stock_new-text.png
 share/icons/gnome/22x22/actions/stock_new-window.png
+share/icons/gnome/22x22/actions/stock_not-spam.png
 share/icons/gnome/22x22/actions/stock_paste.png
 share/icons/gnome/22x22/actions/stock_print-preview.png
 share/icons/gnome/22x22/actions/stock_print-setup.png
@@ -1669,6 +1674,7 @@ share/icons/gnome/22x22/mimetypes/font_bitmap.png
 share/icons/gnome/22x22/mimetypes/font_truetype.png
 share/icons/gnome/22x22/mimetypes/font_type1.png
 share/icons/gnome/22x22/mimetypes/gnome-fs-executable.png
+share/icons/gnome/22x22/mimetypes/gnome-fs-regular.png
 share/icons/gnome/22x22/mimetypes/gnome-mime-application-magicpoint.png
 share/icons/gnome/22x22/mimetypes/gnome-mime-application-msword.png
 share/icons/gnome/22x22/mimetypes/gnome-mime-application-ogg.png
@@ -1765,6 +1771,7 @@ share/icons/gnome/22x22/mimetypes/gnome-mime-text.png
 share/icons/gnome/22x22/mimetypes/gnome-mime-video.png
 share/icons/gnome/22x22/mimetypes/gnome-mime-x-font-afm.png
 share/icons/gnome/22x22/mimetypes/gnome-package.png
+share/icons/gnome/22x22/mimetypes/gtk-file.png
 share/icons/gnome/22x22/mimetypes/html.png
 share/icons/gnome/22x22/mimetypes/image-x-generic.png
 share/icons/gnome/22x22/mimetypes/image.png
@@ -1789,6 +1796,7 @@ share/icons/gnome/22x22/mimetypes/template_source.png
 share/icons/gnome/22x22/mimetypes/text-html.png
 share/icons/gnome/22x22/mimetypes/text-x-generic-template.png
 share/icons/gnome/22x22/mimetypes/text-x-generic.png
+share/icons/gnome/22x22/mimetypes/text-x-preview.png
 share/icons/gnome/22x22/mimetypes/text-x-script.png
 share/icons/gnome/22x22/mimetypes/tgz.png
 share/icons/gnome/22x22/mimetypes/txt.png
@@ -1976,12 +1984,12 @@ share/icons/gnome/22x22/status/sunny.png
 share/icons/gnome/22x22/status/task-due.png
 share/icons/gnome/22x22/status/task-past-due.png
 share/icons/gnome/22x22/status/trashcan_full.png
+share/icons/gnome/22x22/status/user-available.png
 share/icons/gnome/22x22/status/user-away.png
 share/icons/gnome/22x22/status/user-busy.png
 share/icons/gnome/22x22/status/user-idle.png
 share/icons/gnome/22x22/status/user-invisible.png
 share/icons/gnome/22x22/status/user-offline.png
-share/icons/gnome/22x22/status/user-online.png
 share/icons/gnome/22x22/status/user-trash-full.png
 share/icons/gnome/22x22/status/weather-clear-night.png
 share/icons/gnome/22x22/status/weather-clear.png
@@ -2177,7 +2185,7 @@ share/icons/gnome/24x24/actions/lock.png
 share/icons/gnome/24x24/actions/mail-forward.png
 share/icons/gnome/24x24/actions/mail-mark-important.png
 share/icons/gnome/24x24/actions/mail-mark-junk.png
-share/icons/gnome/24x24/actions/mail-mark-notjunk.png
+share/icons/gnome/24x24/actions/mail-mark-not-junk.png
 share/icons/gnome/24x24/actions/mail-mark-read.png
 share/icons/gnome/24x24/actions/mail-mark-unread.png
 share/icons/gnome/24x24/actions/mail-message-new.png
@@ -2265,6 +2273,7 @@ share/icons/gnome/24x24/actions/stock_new-dir.png
 share/icons/gnome/24x24/actions/stock_new-tab.png
 share/icons/gnome/24x24/actions/stock_new-text.png
 share/icons/gnome/24x24/actions/stock_new-window.png
+share/icons/gnome/24x24/actions/stock_not-spam.png
 share/icons/gnome/24x24/actions/stock_paste.png
 share/icons/gnome/24x24/actions/stock_print-preview.png
 share/icons/gnome/24x24/actions/stock_print-setup.png
@@ -2665,6 +2674,7 @@ share/icons/gnome/24x24/mimetypes/font_bitmap.png
 share/icons/gnome/24x24/mimetypes/font_truetype.png
 share/icons/gnome/24x24/mimetypes/font_type1.png
 share/icons/gnome/24x24/mimetypes/gnome-fs-executable.png
+share/icons/gnome/24x24/mimetypes/gnome-fs-regular.png
 share/icons/gnome/24x24/mimetypes/gnome-mime-application-magicpoint.png
 share/icons/gnome/24x24/mimetypes/gnome-mime-application-msword.png
 share/icons/gnome/24x24/mimetypes/gnome-mime-application-ogg.png
@@ -2761,6 +2771,7 @@ share/icons/gnome/24x24/mimetypes/gnome-mime-text.png
 share/icons/gnome/24x24/mimetypes/gnome-mime-video.png
 share/icons/gnome/24x24/mimetypes/gnome-mime-x-font-afm.png
 share/icons/gnome/24x24/mimetypes/gnome-package.png
+share/icons/gnome/24x24/mimetypes/gtk-file.png
 share/icons/gnome/24x24/mimetypes/html.png
 share/icons/gnome/24x24/mimetypes/image-x-generic.png
 share/icons/gnome/24x24/mimetypes/image.png
@@ -2785,6 +2796,7 @@ share/icons/gnome/24x24/mimetypes/template_source.png
 share/icons/gnome/24x24/mimetypes/text-html.png
 share/icons/gnome/24x24/mimetypes/text-x-generic-template.png
 share/icons/gnome/24x24/mimetypes/text-x-generic.png
+share/icons/gnome/24x24/mimetypes/text-x-preview.png
 share/icons/gnome/24x24/mimetypes/text-x-script.png
 share/icons/gnome/24x24/mimetypes/tgz.png
 share/icons/gnome/24x24/mimetypes/txt.png
@@ -2972,12 +2984,12 @@ share/icons/gnome/24x24/status/sunny.png
 share/icons/gnome/24x24/status/task-due.png
 share/icons/gnome/24x24/status/task-past-due.png
 share/icons/gnome/24x24/status/trashcan_full.png
+share/icons/gnome/24x24/status/user-available.png
 share/icons/gnome/24x24/status/user-away.png
 share/icons/gnome/24x24/status/user-busy.png
 share/icons/gnome/24x24/status/user-idle.png
 share/icons/gnome/24x24/status/user-invisible.png
 share/icons/gnome/24x24/status/user-offline.png
-share/icons/gnome/24x24/status/user-online.png
 share/icons/gnome/24x24/status/user-trash-full.png
 share/icons/gnome/24x24/status/weather-clear-night.png
 share/icons/gnome/24x24/status/weather-clear.png
@@ -3212,6 +3224,7 @@ share/icons/gnome/256x256/emblems/emblem-noread.png
 share/icons/gnome/256x256/emblems/emblem-nowrite.png
 share/icons/gnome/256x256/emblems/emblem-package.png
 share/icons/gnome/256x256/emblems/emblem-readonly.png
+share/icons/gnome/256x256/emblems/emblem-shared.png
 share/icons/gnome/256x256/emblems/emblem-symbolic-link.png
 share/icons/gnome/256x256/emblems/emblem-unreadable.png
 share/icons/gnome/256x256/emotes/face-angel.png
@@ -3268,6 +3281,7 @@ share/icons/gnome/256x256/mimetypes/font_bitmap.png
 share/icons/gnome/256x256/mimetypes/font_truetype.png
 share/icons/gnome/256x256/mimetypes/font_type1.png
 share/icons/gnome/256x256/mimetypes/gnome-fs-executable.png
+share/icons/gnome/256x256/mimetypes/gnome-fs-regular.png
 share/icons/gnome/256x256/mimetypes/gnome-mime-application-magicpoint.png
 share/icons/gnome/256x256/mimetypes/gnome-mime-application-msword.png
 share/icons/gnome/256x256/mimetypes/gnome-mime-application-ogg.png
@@ -3363,6 +3377,7 @@ share/icons/gnome/256x256/mimetypes/gnome-mime-text.png
 share/icons/gnome/256x256/mimetypes/gnome-mime-video.png
 share/icons/gnome/256x256/mimetypes/gnome-mime-x-font-afm.png
 share/icons/gnome/256x256/mimetypes/gnome-package.png
+share/icons/gnome/256x256/mimetypes/gtk-file.png
 share/icons/gnome/256x256/mimetypes/html.png
 share/icons/gnome/256x256/mimetypes/image-x-generic.png
 share/icons/gnome/256x256/mimetypes/image.png
@@ -3384,6 +3399,7 @@ share/icons/gnome/256x256/mimetypes/template_source.png
 share/icons/gnome/256x256/mimetypes/text-html.png
 share/icons/gnome/256x256/mimetypes/text-x-generic-template.png
 share/icons/gnome/256x256/mimetypes/text-x-generic.png
+share/icons/gnome/256x256/mimetypes/text-x-preview.png
 share/icons/gnome/256x256/mimetypes/text-x-script.png
 share/icons/gnome/256x256/mimetypes/tgz.png
 share/icons/gnome/256x256/mimetypes/txt.png
@@ -3703,6 +3719,8 @@ share/icons/gnome/32x32/actions/list-remove.png
 share/icons/gnome/32x32/actions/lock.png
 share/icons/gnome/32x32/actions/mail-forward.png
 share/icons/gnome/32x32/actions/mail-mark-important.png
+share/icons/gnome/32x32/actions/mail-mark-junk.png
+share/icons/gnome/32x32/actions/mail-mark-not-junk.png
 share/icons/gnome/32x32/actions/mail-mark-read.png
 share/icons/gnome/32x32/actions/mail-mark-unread.png
 share/icons/gnome/32x32/actions/mail-message-new.png
@@ -3715,6 +3733,7 @@ share/icons/gnome/32x32/actions/mail_new.png
 share/icons/gnome/32x32/actions/mail_reply.png
 share/icons/gnome/32x32/actions/mail_replyall.png
 share/icons/gnome/32x32/actions/mail_send.png
+share/icons/gnome/32x32/actions/mail_spam.png
 share/icons/gnome/32x32/actions/media-eject.png
 share/icons/gnome/32x32/actions/media-playback-pause.png
 share/icons/gnome/32x32/actions/media-playback-start.png
@@ -3788,6 +3807,7 @@ share/icons/gnome/32x32/actions/stock_new-bcard.png
 share/icons/gnome/32x32/actions/stock_new-dir.png
 share/icons/gnome/32x32/actions/stock_new-text.png
 share/icons/gnome/32x32/actions/stock_new-window.png
+share/icons/gnome/32x32/actions/stock_not-spam.png
 share/icons/gnome/32x32/actions/stock_paste.png
 share/icons/gnome/32x32/actions/stock_print-preview.png
 share/icons/gnome/32x32/actions/stock_print-setup.png
@@ -3801,6 +3821,7 @@ share/icons/gnome/32x32/actions/stock_save.png
 share/icons/gnome/32x32/actions/stock_search-and-replace.png
 share/icons/gnome/32x32/actions/stock_search.png
 share/icons/gnome/32x32/actions/stock_select-all.png
+share/icons/gnome/32x32/actions/stock_spam.png
 share/icons/gnome/32x32/actions/stock_spellcheck.png
 share/icons/gnome/32x32/actions/stock_stop.png
 share/icons/gnome/32x32/actions/stock_text-strikethrough.png
@@ -4187,6 +4208,7 @@ share/icons/gnome/32x32/mimetypes/font_bitmap.png
 share/icons/gnome/32x32/mimetypes/font_truetype.png
 share/icons/gnome/32x32/mimetypes/font_type1.png
 share/icons/gnome/32x32/mimetypes/gnome-fs-executable.png
+share/icons/gnome/32x32/mimetypes/gnome-fs-regular.png
 share/icons/gnome/32x32/mimetypes/gnome-mime-application-magicpoint.png
 share/icons/gnome/32x32/mimetypes/gnome-mime-application-msword.png
 share/icons/gnome/32x32/mimetypes/gnome-mime-application-ogg.png
@@ -4283,6 +4305,7 @@ share/icons/gnome/32x32/mimetypes/gnome-mime-text.png
 share/icons/gnome/32x32/mimetypes/gnome-mime-video.png
 share/icons/gnome/32x32/mimetypes/gnome-mime-x-font-afm.png
 share/icons/gnome/32x32/mimetypes/gnome-package.png
+share/icons/gnome/32x32/mimetypes/gtk-file.png
 share/icons/gnome/32x32/mimetypes/html.png
 share/icons/gnome/32x32/mimetypes/image-x-generic.png
 share/icons/gnome/32x32/mimetypes/image.png
@@ -4307,6 +4330,7 @@ share/icons/gnome/32x32/mimetypes/template_source.png
 share/icons/gnome/32x32/mimetypes/text-html.png
 share/icons/gnome/32x32/mimetypes/text-x-generic-template.png
 share/icons/gnome/32x32/mimetypes/text-x-generic.png
+share/icons/gnome/32x32/mimetypes/text-x-preview.png
 share/icons/gnome/32x32/mimetypes/text-x-script.png
 share/icons/gnome/32x32/mimetypes/tgz.png
 share/icons/gnome/32x32/mimetypes/txt.png
@@ -4490,12 +4514,12 @@ share/icons/gnome/32x32/status/sunny.png
 share/icons/gnome/32x32/status/task-due.png
 share/icons/gnome/32x32/status/task-past-due.png
 share/icons/gnome/32x32/status/trashcan_full.png
+share/icons/gnome/32x32/status/user-available.png
 share/icons/gnome/32x32/status/user-away.png
 share/icons/gnome/32x32/status/user-busy.png
 share/icons/gnome/32x32/status/user-idle.png
 share/icons/gnome/32x32/status/user-invisible.png
 share/icons/gnome/32x32/status/user-offline.png
-share/icons/gnome/32x32/status/user-online.png
 share/icons/gnome/32x32/status/user-trash-full.png
 share/icons/gnome/32x32/status/weather-clear-night.png
 share/icons/gnome/32x32/status/weather-clear.png
@@ -5185,6 +5209,7 @@ share/icons/gnome/48x48/mimetypes/font_bitmap.png
 share/icons/gnome/48x48/mimetypes/font_truetype.png
 share/icons/gnome/48x48/mimetypes/font_type1.png
 share/icons/gnome/48x48/mimetypes/gnome-fs-executable.png
+share/icons/gnome/48x48/mimetypes/gnome-fs-regular.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-magicpoint.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-msword.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-application-ogg.png
@@ -5281,6 +5306,7 @@ share/icons/gnome/48x48/mimetypes/gnome-mime-text.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-video.png
 share/icons/gnome/48x48/mimetypes/gnome-mime-x-font-afm.png
 share/icons/gnome/48x48/mimetypes/gnome-package.png
+share/icons/gnome/48x48/mimetypes/gtk-file.png
 share/icons/gnome/48x48/mimetypes/html.png
 share/icons/gnome/48x48/mimetypes/image-x-generic.png
 share/icons/gnome/48x48/mimetypes/image.png
@@ -5305,6 +5331,7 @@ share/icons/gnome/48x48/mimetypes/template_source.png
 share/icons/gnome/48x48/mimetypes/text-html.png
 share/icons/gnome/48x48/mimetypes/text-x-generic-template.png
 share/icons/gnome/48x48/mimetypes/text-x-generic.png
+share/icons/gnome/48x48/mimetypes/text-x-preview.png
 share/icons/gnome/48x48/mimetypes/text-x-script.png
 share/icons/gnome/48x48/mimetypes/tgz.png
 share/icons/gnome/48x48/mimetypes/txt.png
@@ -5488,12 +5515,12 @@ share/icons/gnome/48x48/status/sunny.png
 share/icons/gnome/48x48/status/task-due.png
 share/icons/gnome/48x48/status/task-past-due.png
 share/icons/gnome/48x48/status/trashcan_full.png
+share/icons/gnome/48x48/status/user-available.png
 share/icons/gnome/48x48/status/user-away.png
 share/icons/gnome/48x48/status/user-busy.png
 share/icons/gnome/48x48/status/user-idle.png
 share/icons/gnome/48x48/status/user-invisible.png
 share/icons/gnome/48x48/status/user-offline.png
-share/icons/gnome/48x48/status/user-online.png
 share/icons/gnome/48x48/status/user-trash-full.png
 share/icons/gnome/48x48/status/weather-clear-night.png
 share/icons/gnome/48x48/status/weather-clear.png
