@@ -1,5 +1,5 @@
 --- libcheese/cheese-camera-device-monitor.c.orig	2010-03-29 16:27:42.000000000 -0400
-+++ libcheese/cheese-camera-device-monitor.c	2010-04-17 16:06:20.000000000 -0400
++++ libcheese/cheese-camera-device-monitor.c	2010-04-17 17:57:57.000000000 -0400
 @@ -24,24 +24,11 @@
  #endif
  
@@ -128,7 +128,7 @@
 -  /* vbi devices support capture capability too, but cannot be used,
 -   * so detect them by device name */
 -  if (strstr (device_file, "vbi"))
-+  if (!g_access (device_file, (R_OK | W_OK)))
++  if (g_access (device_file, (R_OK | W_OK)) == -1)
    {
 -    GST_INFO ("Skipping vbi device: %s", device_file);
 +    GST_WARNING ("Device %s does not have proper permissions.  Permissions must be 0666", device_file);
