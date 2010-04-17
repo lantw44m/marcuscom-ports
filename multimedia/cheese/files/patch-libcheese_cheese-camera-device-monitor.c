@@ -1,5 +1,5 @@
---- cheese-camera-device-monitor.c.orig	2010-04-16 22:08:31.000000000 -0400
-+++ cheese-camera-device-monitor.c	2010-04-16 23:01:33.000000000 -0400
+--- libcheese/cheese-camera-device-monitor.c.orig	2010-04-16 22:08:31.000000000 -0400
++++ libcheese/cheese-camera-device-monitor.c	2010-04-16 23:01:33.000000000 -0400
 @@ -25,24 +25,9 @@
  
  #include <glib-object.h>
