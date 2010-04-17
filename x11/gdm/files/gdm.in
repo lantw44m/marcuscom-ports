@@ -1,6 +1,6 @@
 #!/bin/sh
 # $FreeBSD$
-#    $MCom: ports/x11/gdm/files/gdm.in,v 1.41 2010/03/13 22:53:05 kwm Exp $
+#    $MCom: ports/x11/gdm/files/gdm.in,v 1.42 2010/03/16 19:33:11 mezz Exp $
 
 # PROVIDE: gdm
 # REQUIRE: LOGIN cleanvar moused syscons dbus
@@ -10,7 +10,7 @@
 # gdm_enable="YES"
 #
 
-. %%RC_SUBR%%
+. /etc/rc.subr
 . %%GNOME_SUBR%%
 
 gdm_enable=${gdm_enable-${gnome_enable}}

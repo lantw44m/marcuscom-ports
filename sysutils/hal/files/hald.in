@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/hal/files/hald.in,v 1.20 2010/02/21 19:50:05 marcus Exp $
+#   $MCom: ports/sysutils/hal/files/hald.in,v 1.21 2010/03/16 19:33:11 mezz Exp $
 #
 # PROVIDE: hald
 # REQUIRE: DAEMON usbd devd dbus moused webcamd
@@ -11,7 +11,7 @@
 # hald_enable="YES"
 #
 
-. %%RC_SUBR%%
+. /etc/rc.subr
 . %%GNOME_SUBR%%
 
 hald_enable=${hald_enable-${gnome_enable}}
