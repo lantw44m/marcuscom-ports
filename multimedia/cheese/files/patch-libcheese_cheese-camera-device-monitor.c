@@ -1,8 +1,10 @@
 --- libcheese/cheese-camera-device-monitor.c.orig	2010-03-29 16:27:42.000000000 -0400
-+++ libcheese/cheese-camera-device-monitor.c	2010-04-17 16:03:28.000000000 -0400
-@@ -25,23 +25,9 @@
++++ libcheese/cheese-camera-device-monitor.c	2010-04-17 16:06:20.000000000 -0400
+@@ -24,24 +24,11 @@
+ #endif
  
  #include <glib-object.h>
++#include <glib/gstdio.h>
  #include <dbus/dbus-glib-lowlevel.h>
 +#include <libhal.h>
  #include <string.h>
@@ -26,7 +28,7 @@
  
  #include "cheese-camera-device-monitor.h"
  #include "cheese-marshal.h"
-@@ -54,9 +40,9 @@
+@@ -54,9 +41,9 @@
   * #CheeseCameraDeviceMonitor provides a basic interface for
   * video4linux device enumeration and hotplugging.
   *
@@ -38,7 +40,7 @@
   * CheeseCameraDeviceMonitor::added or
   * CheeseCameraDeviceMonitor::removed signal when an event happens.
   */
-@@ -80,11 +66,9 @@ enum CheeseCameraDeviceMonitorError
+@@ -80,11 +67,9 @@ enum CheeseCameraDeviceMonitorError
  
  typedef struct
  {
@@ -52,7 +54,7 @@
  } CheeseCameraDeviceMonitorPrivate;
  
  enum
-@@ -102,111 +86,79 @@ cheese_camera_device_monitor_error_quark
+@@ -102,111 +87,79 @@ cheese_camera_device_monitor_error_quark
    return g_quark_from_static_string ("cheese-camera-error-quark");
  }
  
@@ -85,9 +87,7 @@
  
 -  bus = g_udev_device_get_property (udevice, "ID_BUS");
 -  if (g_strcmp0 (bus, "usb") == 0)
-+  product_name = libhal_device_get_property_string (priv->hal_ctx, udi, "info.product", &error);
-+  if (dbus_error_is_set (&error))
-   {
+-  {
 -    vendor = g_udev_device_get_property (udevice, "ID_VENDOR_ID");
 -    if (vendor != NULL)
 -      vendor_id = g_ascii_strtoll (vendor, NULL, 16);
@@ -104,7 +104,9 @@
 -    }
 -  }
 -  else
--  {
++  product_name = libhal_device_get_property_string (priv->hal_ctx, udi, "info.product", &error);
++  if (dbus_error_is_set (&error))
+   {
 -    GST_INFO ("Not an usb device, skipping vendor and model id retrieval");
 +    GST_WARNING ("error getting product name: %s: %s", error.name, error.message);
 +    dbus_error_free (&error);
@@ -207,7 +209,7 @@
  }
  
  /**
-@@ -222,115 +174,85 @@ void
+@@ -222,115 +175,85 @@ void
  cheese_camera_device_monitor_coldplug (CheeseCameraDeviceMonitor *monitor)
  {
    CheeseCameraDeviceMonitorPrivate *priv = CHEESE_CAMERA_DEVICE_MONITOR_GET_PRIVATE (monitor);
@@ -217,10 +219,10 @@
 +  int         num_udis = 0;
 +  char      **udis;
 +  DBusError   error;
-+
-+  GST_INFO ("Probing devices with HAL...");
  
 -  if (priv->client == NULL)
++  GST_INFO ("Probing devices with HAL...");
++
 +  if (priv->hal_ctx == NULL)
      return;
  
@@ -353,25 +355,25 @@
  
 -  if (priv->client != NULL)
 +  if (priv->connection != NULL)
-+  {
-+    dbus_connection_unref (priv->connection);
-+    priv->connection = NULL;
-+  }
-+  if (priv->hal_ctx != NULL)
    {
 -    g_object_unref (priv->client);
 -    priv->client = NULL;
++    dbus_connection_unref (priv->connection);
++    priv->connection = NULL;
+   }
+-#endif /* HAVE_UDEV */
++  if (priv->hal_ctx != NULL)
++  {
 +    libhal_ctx_set_device_added (priv->hal_ctx, NULL);
 +    libhal_ctx_set_device_removed (priv->hal_ctx, NULL);
 +    libhal_ctx_free (priv->hal_ctx);
 +    priv->hal_ctx = NULL;
-   }
--#endif /* HAVE_UDEV */
++  }
 +
    G_OBJECT_CLASS (cheese_camera_device_monitor_parent_class)->finalize (object);
  }
  
-@@ -385,14 +307,52 @@ cheese_camera_device_monitor_class_init 
+@@ -385,14 +308,52 @@ cheese_camera_device_monitor_class_init 
  static void
  cheese_camera_device_monitor_init (CheeseCameraDeviceMonitor *monitor)
  {
