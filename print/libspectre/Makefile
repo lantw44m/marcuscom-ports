@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/print/libspectre/Makefile,v 1.6 2010/02/23 16:00:33 kwm Exp $
 
 PORTNAME=	libspectre
-PORTVERSION=	0.2.4
+PORTVERSION=	0.2.5
 CATEGORIES=	print
 MASTER_SITES=	http://libspectre.freedesktop.org/releases/
 
