@@ -3,11 +3,11 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-icon-theme-extras/Makefile,v 1.1 2010/03/26 17:09:29 avl Exp $
+#   $MCom: ports/misc/gnome-icon-theme-extras/Makefile,v 1.2 2010/03/30 12:20:09 kwm Exp $
 #
 
 PORTNAME=	gnome-icon-theme-extras
-PORTVERSION=	2.30.0
+PORTVERSION=	2.30.1
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
