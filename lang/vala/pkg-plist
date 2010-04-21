@@ -43,6 +43,8 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/clutter-json-1.0.vapi
 %%DATADIR%%/vapi/cogl-1.0.deps
 %%DATADIR%%/vapi/cogl-1.0.vapi
+%%DATADIR%%/vapi/clutter-gst-1.0.deps
+%%DATADIR%%/vapi/clutter-gst-1.0.vapi
 %%DATADIR%%/vapi/curses.vapi
 %%DATADIR%%/vapi/dbus-glib-1.vapi
 %%DATADIR%%/vapi/dconf.vapi
@@ -58,6 +60,10 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/gdk-pixbuf-2.0.vapi
 %%DATADIR%%/vapi/gdk-x11-2.0.deps
 %%DATADIR%%/vapi/gdk-x11-2.0.vapi
+%%DATADIR%%/vapi/gdu-gtk.deps
+%%DATADIR%%/vapi/gdu-gtk.vapi
+%%DATADIR%%/vapi/gdu.deps
+%%DATADIR%%/vapi/gdu.vapi
 %%DATADIR%%/vapi/gio-2.0.vapi
 %%DATADIR%%/vapi/gio-unix-2.0.deps
 %%DATADIR%%/vapi/gio-unix-2.0.vapi
@@ -151,6 +157,7 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/libgvc.vapi
 %%DATADIR%%/vapi/libmagic.vapi
 %%DATADIR%%/vapi/libnl-1.vapi
+%%DATADIR%%/vapi/libnl-2.0.deps
 %%DATADIR%%/vapi/libnl-2.0.vapi
 %%DATADIR%%/vapi/libnotify.deps
 %%DATADIR%%/vapi/libnotify.vapi
