@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.63 2010/04/10 23:25:30 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.64 2010/04/20 11:21:21 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.30.0.2
@@ -34,6 +34,7 @@ USE_AUTOTOOLS=	libtool:22
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PYTHON=	yes
+MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--enable-tpl=no
