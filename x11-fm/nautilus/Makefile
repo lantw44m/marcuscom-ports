@@ -3,11 +3,11 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.194 2010/03/10 14:55:33 kwm Exp $
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.195 2010/03/30 08:23:48 avl Exp $
 #
 
 PORTNAME=	nautilus
-PORTVERSION=	2.30.0
+PORTVERSION=	2.30.1
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -34,22 +34,12 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 CONFIGURE_ARGS=	--enable-static --disable-packagekit
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
-OPTIONS=	TRACKER "Enable Tracker Search (sysutils/tracker)" Off
-
 GCONF_SCHEMAS=	apps_nautilus_preferences.schemas
 
 MAN1=		nautilus-connect-server.1 nautilus-file-management-properties.1 \
 		nautilus.1
 
 .include <bsd.port.pre.mk>
-
-.if defined(WITH_TRACKER)
-#RUN_DEPENDS+=	tracker-applet:${PORTSDIR}/sysutils/tracker-gnome		
-LIB_DEPENDS+=	trackerclient.0:${PORTSDIR}/sysutils/tracker-client \
-		tracker-gtk.0:${PORTSDIR}/sysutils/tracker-libtrackergtk
-.else
-CONFIGURE_ARGS+=--disable-tracker
-.endif
 
 post-install:
 	@${MKDIR} ${PREFIX}/lib/nautilus/extensions-2.0
