@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi/Makefile,v 1.97 2010/03/09 01:08:09 avl Exp $
+#   $MCom: ports/accessibility/at-spi/Makefile,v 1.98 2010/04/02 17:02:23 kwm Exp $
 #
 
 PORTNAME=	at-spi
-PORTVERSION=	1.30.0
+PORTVERSION=	1.30.1
 PORTREVISION?=	0
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
