@@ -920,6 +920,12 @@ share/gnome/help/optimization-guide/C/optimization-guide.xml
 share/gnome/help/optimization-guide/C/optimization-harmful.xml
 share/gnome/help/optimization-guide/C/optimization-intro.xml
 share/gnome/help/optimization-guide/C/optimization-massif.xml
+share/gnome/help/optimization-guide/cs/figures/massif-after.png
+share/gnome/help/optimization-guide/cs/figures/massif-before.png
+share/gnome/help/optimization-guide/cs/optimization-guide.xml
+share/gnome/help/optimization-guide/cs/optimization-harmful.xml
+share/gnome/help/optimization-guide/cs/optimization-intro.xml
+share/gnome/help/optimization-guide/cs/optimization-massif.xml
 share/gnome/help/optimization-guide/de/optimization-guide.xml
 share/gnome/help/optimization-guide/de/optimization-harmful.xml
 share/gnome/help/optimization-guide/de/optimization-massif.xml
@@ -1046,6 +1052,18 @@ share/gnome/help/platform-overview/ru/ipc-network.xml
 share/gnome/help/platform-overview/ru/legal-fdl.xml
 share/gnome/help/platform-overview/ru/platform-overview.xml
 share/gnome/help/platform-overview/ru/platform.xml
+share/gnome/help/platform-overview/uk/apx-modules.xml
+share/gnome/help/platform-overview/uk/bindings.xml
+share/gnome/help/platform-overview/uk/core-tech.xml
+share/gnome/help/platform-overview/uk/desktop-tech.xml
+share/gnome/help/platform-overview/uk/figures/graphics.png
+share/gnome/help/platform-overview/uk/figures/i18n.png
+share/gnome/help/platform-overview/uk/figures/pango.png
+share/gnome/help/platform-overview/uk/intro.xml
+share/gnome/help/platform-overview/uk/ipc-network.xml
+share/gnome/help/platform-overview/uk/legal-fdl.xml
+share/gnome/help/platform-overview/uk/platform-overview.xml
+share/gnome/help/platform-overview/uk/platform.xml
 share/omf/accessibility-devel-guide/accessibility-devel-guide-C.omf
 share/omf/accessibility-devel-guide/accessibility-devel-guide-de.omf
 share/omf/accessibility-devel-guide/accessibility-devel-guide-el.omf
@@ -1068,6 +1086,7 @@ share/omf/integration-guide/integration-guide-pt_BR.omf
 share/omf/integration-guide/integration-guide-sv.omf
 share/omf/integration-guide/integration-guide-zh_CN.omf
 share/omf/optimization-guide/optimization-guide-C.omf
+share/omf/optimization-guide/optimization-guide-cs.omf
 share/omf/optimization-guide/optimization-guide-de.omf
 share/omf/optimization-guide/optimization-guide-el.omf
 share/omf/optimization-guide/optimization-guide-es.omf
@@ -1080,6 +1099,7 @@ share/omf/platform-overview/platform-overview-fr.omf
 share/omf/platform-overview/platform-overview-it.omf
 share/omf/platform-overview/platform-overview-oc.omf
 share/omf/platform-overview/platform-overview-ru.omf
+share/omf/platform-overview/platform-overview-uk.omf
 @dirrm share/omf/platform-overview
 @dirrm share/omf/optimization-guide
 @dirrm share/omf/integration-guide
@@ -1087,6 +1107,8 @@ share/omf/platform-overview/platform-overview-ru.omf
 @dirrm share/omf/gdp-style-guide
 @dirrm share/omf/gdp-handbook
 @dirrm share/omf/accessibility-devel-guide
+@dirrm share/gnome/help/platform-overview/uk/figures
+@dirrm share/gnome/help/platform-overview/uk
 @dirrm share/gnome/help/platform-overview/ru/figures
 @dirrm share/gnome/help/platform-overview/ru
 @dirrm share/gnome/help/platform-overview/oc/figures
@@ -1112,6 +1134,8 @@ share/omf/platform-overview/platform-overview-ru.omf
 @dirrm share/gnome/help/optimization-guide/el
 @dirrm share/gnome/help/optimization-guide/de/figures
 @dirrm share/gnome/help/optimization-guide/de
+@dirrm share/gnome/help/optimization-guide/cs/figures
+@dirrm share/gnome/help/optimization-guide/cs
 @dirrm share/gnome/help/optimization-guide/C/figures
 @dirrm share/gnome/help/optimization-guide/C
 @dirrm share/gnome/help/optimization-guide
