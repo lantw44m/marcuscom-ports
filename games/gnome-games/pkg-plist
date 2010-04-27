@@ -1100,6 +1100,8 @@ share/gnome/help/gnobots2/ca/figures/gnobots2-main.png
 share/gnome/help/gnobots2/ca/gnobots2.xml
 share/gnome/help/gnobots2/cs/figures/gnobots2-main.png
 share/gnome/help/gnobots2/cs/gnobots2.xml
+share/gnome/help/gnobots2/da/figures/gnobots2-main.png
+share/gnome/help/gnobots2/da/gnobots2.xml
 share/gnome/help/gnobots2/de/figures/gnobots2-main.png
 share/gnome/help/gnobots2/de/gnobots2.xml
 share/gnome/help/gnobots2/el/figures/gnobots2-main.png
@@ -2371,6 +2373,7 @@ share/omf/gnibbles/gnibbles-sv.omf
 share/omf/gnobots2/gnobots2-C.omf
 share/omf/gnobots2/gnobots2-ca.omf
 share/omf/gnobots2/gnobots2-cs.omf
+share/omf/gnobots2/gnobots2-da.omf
 share/omf/gnobots2/gnobots2-de.omf
 share/omf/gnobots2/gnobots2-el.omf
 share/omf/gnobots2/gnobots2-en_GB.omf
@@ -2832,6 +2835,8 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/gnobots2/el
 @dirrm share/gnome/help/gnobots2/de/figures
 @dirrm share/gnome/help/gnobots2/de
+@dirrm share/gnome/help/gnobots2/da/figures
+@dirrm share/gnome/help/gnobots2/da
 @dirrm share/gnome/help/gnobots2/cs/figures
 @dirrm share/gnome/help/gnobots2/cs
 @dirrm share/gnome/help/gnobots2/ca/figures
