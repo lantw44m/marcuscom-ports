@@ -46,6 +46,7 @@ share/icons/hicolor/48x48/apps/seahorse-applet.png
 share/icons/hicolor/scalable/apps/seahorse-applet.svg
 share/locale/ar/LC_MESSAGES/seahorse-plugins.mo
 share/locale/as/LC_MESSAGES/seahorse-plugins.mo
+share/locale/ast/LC_MESSAGES/seahorse-plugins.mo
 share/locale/az/LC_MESSAGES/seahorse-plugins.mo
 share/locale/be@latin/LC_MESSAGES/seahorse-plugins.mo
 share/locale/bg/LC_MESSAGES/seahorse-plugins.mo
@@ -246,5 +247,7 @@ share/pixmaps/seahorse-plugins/scalable/seahorse-sign.svg
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
 @dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
