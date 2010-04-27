@@ -537,7 +537,6 @@ share/icons/gnome/16x16/devices/gnome-dev-removable-1394.png
 share/icons/gnome/16x16/devices/gnome-dev-removable-usb.png
 share/icons/gnome/16x16/devices/gnome-dev-removable.png
 share/icons/gnome/16x16/devices/gnome-dev-wavelan.png
-share/icons/gnome/16x16/devices/gnome-dev-zipdisk.png
 share/icons/gnome/16x16/devices/gnome-fs-client.png
 share/icons/gnome/16x16/devices/gnome-modem.png
 share/icons/gnome/16x16/devices/gnome-stock-mic.png
@@ -561,7 +560,6 @@ share/icons/gnome/16x16/devices/media-flash.png
 share/icons/gnome/16x16/devices/media-floppy.png
 share/icons/gnome/16x16/devices/media-optical.png
 share/icons/gnome/16x16/devices/media-tape.png
-share/icons/gnome/16x16/devices/media-zip.png
 share/icons/gnome/16x16/devices/modem.png
 share/icons/gnome/16x16/devices/mouse.png
 share/icons/gnome/16x16/devices/multimedia-player.png
@@ -873,6 +871,7 @@ share/icons/gnome/16x16/status/audio-volume-high.png
 share/icons/gnome/16x16/status/audio-volume-low.png
 share/icons/gnome/16x16/status/audio-volume-medium.png
 share/icons/gnome/16x16/status/audio-volume-muted.png
+share/icons/gnome/16x16/status/avatar-default.png
 share/icons/gnome/16x16/status/battery-caution.png
 share/icons/gnome/16x16/status/battery-charging.png
 share/icons/gnome/16x16/status/battery-full.png
@@ -1539,7 +1538,6 @@ share/icons/gnome/22x22/devices/gnome-dev-removable-1394.png
 share/icons/gnome/22x22/devices/gnome-dev-removable-usb.png
 share/icons/gnome/22x22/devices/gnome-dev-removable.png
 share/icons/gnome/22x22/devices/gnome-dev-wavelan.png
-share/icons/gnome/22x22/devices/gnome-dev-zipdisk.png
 share/icons/gnome/22x22/devices/gnome-fs-client.png
 share/icons/gnome/22x22/devices/gnome-modem.png
 share/icons/gnome/22x22/devices/gnome-stock-mic.png
@@ -1563,7 +1561,6 @@ share/icons/gnome/22x22/devices/media-flash.png
 share/icons/gnome/22x22/devices/media-floppy.png
 share/icons/gnome/22x22/devices/media-optical.png
 share/icons/gnome/22x22/devices/media-tape.png
-share/icons/gnome/22x22/devices/media-zip.png
 share/icons/gnome/22x22/devices/modem.png
 share/icons/gnome/22x22/devices/mouse.png
 share/icons/gnome/22x22/devices/multimedia-player.png
@@ -1875,6 +1872,7 @@ share/icons/gnome/22x22/status/audio-volume-high.png
 share/icons/gnome/22x22/status/audio-volume-low.png
 share/icons/gnome/22x22/status/audio-volume-medium.png
 share/icons/gnome/22x22/status/audio-volume-muted.png
+share/icons/gnome/22x22/status/avatar-default.png
 share/icons/gnome/22x22/status/battery-caution.png
 share/icons/gnome/22x22/status/battery-charging.png
 share/icons/gnome/22x22/status/battery-full.png
@@ -2539,7 +2537,6 @@ share/icons/gnome/24x24/devices/gnome-dev-removable-1394.png
 share/icons/gnome/24x24/devices/gnome-dev-removable-usb.png
 share/icons/gnome/24x24/devices/gnome-dev-removable.png
 share/icons/gnome/24x24/devices/gnome-dev-wavelan.png
-share/icons/gnome/24x24/devices/gnome-dev-zipdisk.png
 share/icons/gnome/24x24/devices/gnome-fs-client.png
 share/icons/gnome/24x24/devices/gnome-modem.png
 share/icons/gnome/24x24/devices/gnome-stock-mic.png
@@ -2563,7 +2560,6 @@ share/icons/gnome/24x24/devices/media-flash.png
 share/icons/gnome/24x24/devices/media-floppy.png
 share/icons/gnome/24x24/devices/media-optical.png
 share/icons/gnome/24x24/devices/media-tape.png
-share/icons/gnome/24x24/devices/media-zip.png
 share/icons/gnome/24x24/devices/modem.png
 share/icons/gnome/24x24/devices/mouse.png
 share/icons/gnome/24x24/devices/multimedia-player.png
@@ -2875,6 +2871,7 @@ share/icons/gnome/24x24/status/audio-volume-high.png
 share/icons/gnome/24x24/status/audio-volume-low.png
 share/icons/gnome/24x24/status/audio-volume-medium.png
 share/icons/gnome/24x24/status/audio-volume-muted.png
+share/icons/gnome/24x24/status/avatar-default.png
 share/icons/gnome/24x24/status/battery-caution.png
 share/icons/gnome/24x24/status/battery-charging.png
 share/icons/gnome/24x24/status/battery-full.png
@@ -3468,6 +3465,7 @@ share/icons/gnome/256x256/places/user-trash.png
 share/icons/gnome/256x256/places/xfce-trash_empty.png
 share/icons/gnome/256x256/status/appointment-missed.png
 share/icons/gnome/256x256/status/appointment-soon.png
+share/icons/gnome/256x256/status/avatar-default.png
 share/icons/gnome/256x256/status/battery-caution.png
 share/icons/gnome/256x256/status/battery-charging.png
 share/icons/gnome/256x256/status/battery-full.png
@@ -4073,7 +4071,6 @@ share/icons/gnome/32x32/devices/gnome-dev-removable-1394.png
 share/icons/gnome/32x32/devices/gnome-dev-removable-usb.png
 share/icons/gnome/32x32/devices/gnome-dev-removable.png
 share/icons/gnome/32x32/devices/gnome-dev-wavelan.png
-share/icons/gnome/32x32/devices/gnome-dev-zipdisk.png
 share/icons/gnome/32x32/devices/gnome-fs-client.png
 share/icons/gnome/32x32/devices/gnome-modem.png
 share/icons/gnome/32x32/devices/gnome-stock-mic.png
@@ -4097,7 +4094,6 @@ share/icons/gnome/32x32/devices/media-flash.png
 share/icons/gnome/32x32/devices/media-floppy.png
 share/icons/gnome/32x32/devices/media-optical.png
 share/icons/gnome/32x32/devices/media-tape.png
-share/icons/gnome/32x32/devices/media-zip.png
 share/icons/gnome/32x32/devices/modem.png
 share/icons/gnome/32x32/devices/mouse.png
 share/icons/gnome/32x32/devices/multimedia-player.png
@@ -4409,6 +4405,7 @@ share/icons/gnome/32x32/status/audio-volume-high.png
 share/icons/gnome/32x32/status/audio-volume-low.png
 share/icons/gnome/32x32/status/audio-volume-medium.png
 share/icons/gnome/32x32/status/audio-volume-muted.png
+share/icons/gnome/32x32/status/avatar-default.png
 share/icons/gnome/32x32/status/battery-caution.png
 share/icons/gnome/32x32/status/battery-charging.png
 share/icons/gnome/32x32/status/battery-full.png
@@ -5059,7 +5056,6 @@ share/icons/gnome/48x48/devices/gnome-dev-harddisk-1394.png
 share/icons/gnome/48x48/devices/gnome-dev-harddisk-usb.png
 share/icons/gnome/48x48/devices/gnome-dev-harddisk.png
 share/icons/gnome/48x48/devices/gnome-dev-ipod.png
-share/icons/gnome/48x48/devices/gnome-dev-jazdisk.png
 share/icons/gnome/48x48/devices/gnome-dev-keyboard.png
 share/icons/gnome/48x48/devices/gnome-dev-media-cf.png
 share/icons/gnome/48x48/devices/gnome-dev-media-ms.png
@@ -5072,7 +5068,6 @@ share/icons/gnome/48x48/devices/gnome-dev-removable-1394.png
 share/icons/gnome/48x48/devices/gnome-dev-removable-usb.png
 share/icons/gnome/48x48/devices/gnome-dev-removable.png
 share/icons/gnome/48x48/devices/gnome-dev-wavelan.png
-share/icons/gnome/48x48/devices/gnome-dev-zipdisk.png
 share/icons/gnome/48x48/devices/gnome-fs-client.png
 share/icons/gnome/48x48/devices/gnome-modem.png
 share/icons/gnome/48x48/devices/gnome-stock-mic.png
@@ -5094,10 +5089,8 @@ share/icons/gnome/48x48/devices/kxkb.png
 share/icons/gnome/48x48/devices/media-cdrom.png
 share/icons/gnome/48x48/devices/media-flash.png
 share/icons/gnome/48x48/devices/media-floppy.png
-share/icons/gnome/48x48/devices/media-jaz.png
 share/icons/gnome/48x48/devices/media-optical.png
 share/icons/gnome/48x48/devices/media-tape.png
-share/icons/gnome/48x48/devices/media-zip.png
 share/icons/gnome/48x48/devices/modem.png
 share/icons/gnome/48x48/devices/mouse.png
 share/icons/gnome/48x48/devices/multimedia-player.png
@@ -5410,6 +5403,7 @@ share/icons/gnome/48x48/status/audio-volume-high.png
 share/icons/gnome/48x48/status/audio-volume-low.png
 share/icons/gnome/48x48/status/audio-volume-medium.png
 share/icons/gnome/48x48/status/audio-volume-muted.png
+share/icons/gnome/48x48/status/avatar-default.png
 share/icons/gnome/48x48/status/battery-caution.png
 share/icons/gnome/48x48/status/battery-charging.png
 share/icons/gnome/48x48/status/battery-full.png
