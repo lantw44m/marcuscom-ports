@@ -214,7 +214,7 @@ share/doc/libevview/view-view.html
 %%DATADIR%%/icons/hicolor/16x16/actions/object-rotate-right.png
 %%DATADIR%%/icons/hicolor/16x16/actions/view-page-continuous.png
 %%DATADIR%%/icons/hicolor/16x16/actions/view-page-facing.png
-%%DATADIR%%/icons/hicolor/16x16/actions/zoom-fit-page.png
+%%DATADIR%%/icons/hicolor/16x16/actions/zoom-fit-height.png
 %%DATADIR%%/icons/hicolor/16x16/actions/zoom-fit-width.png
 %%DATADIR%%/icons/hicolor/16x16/actions/zoom.png
 %%DATADIR%%/icons/hicolor/16x16/mimetypes/x-office-presentation.png
@@ -232,7 +232,7 @@ share/doc/libevview/view-view.html
 %%DATADIR%%/icons/hicolor/24x24/actions/stock_filters-invert.png
 %%DATADIR%%/icons/hicolor/24x24/actions/view-page-continuous.png
 %%DATADIR%%/icons/hicolor/24x24/actions/view-page-facing.png
-%%DATADIR%%/icons/hicolor/24x24/actions/zoom-fit-page.png
+%%DATADIR%%/icons/hicolor/24x24/actions/zoom-fit-height.png
 %%DATADIR%%/icons/hicolor/24x24/actions/zoom-fit-width.png
 %%DATADIR%%/icons/hicolor/24x24/actions/zoom.png
 %%DATADIR%%/icons/hicolor/24x24/mimetypes/x-office-presentation.png
