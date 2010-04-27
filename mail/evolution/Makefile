@@ -3,12 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution/Makefile,v 1.220 2010/04/01 11:17:55 kwm Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.221 2010/04/11 16:50:29 marcus Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.30.0.1
-PORTREVISION=	1
+PORTVERSION=	2.30.1.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
