@@ -21,6 +21,7 @@ lib/libexchangemapi-1.0.la
 lib/libexchangemapi-1.0.so
 lib/libexchangemapi-1.0.so.0
 share/locale/as/LC_MESSAGES/evolution-mapi.mo
+share/locale/ast/LC_MESSAGES/evolution-mapi.mo
 share/locale/bg/LC_MESSAGES/evolution-mapi.mo
 share/locale/bn/LC_MESSAGES/evolution-mapi.mo
 share/locale/bn_IN/LC_MESSAGES/evolution-mapi.mo
@@ -51,6 +52,7 @@ share/locale/lv/LC_MESSAGES/evolution-mapi.mo
 share/locale/mai/LC_MESSAGES/evolution-mapi.mo
 share/locale/ml/LC_MESSAGES/evolution-mapi.mo
 share/locale/mr/LC_MESSAGES/evolution-mapi.mo
+share/locale/ms/LC_MESSAGES/evolution-mapi.mo
 share/locale/nb/LC_MESSAGES/evolution-mapi.mo
 share/locale/nl/LC_MESSAGES/evolution-mapi.mo
 share/locale/or/LC_MESSAGES/evolution-mapi.mo
@@ -78,30 +80,6 @@ share/locale/zh_TW/LC_MESSAGES/evolution-mapi.mo
 libdata/pkgconfig/libexchangemapi-1.0.pc
 share/evolution-data-server-%%EVO_VERSION%%/mapi/tz-mapi-to-ical
 share/evolution-data-server-%%EVO_VERSION%%/mapi/tz-ical-to-mapi
-@dirrmtry share/local/zh_TW/LC_MESSAGES
-@dirrmtry share/local/zh_TW
-@dirrmtry share/local/zh_HK/LC_MESSAGES
-@dirrmtry share/local/zh_HK
-@dirrmtry share/local/zh_CN/LC_MESSAGES
-@dirrmtry share/local/zh_CN
-@dirrmtry share/local/te/LC_MESSAGES
-@dirrmtry share/local/te
-@dirrmtry share/local/sr@latin/LC_MESSAGES
-@dirrmtry share/local/sr@latin
-@dirrmtry share/local/si/LC_MESSAGES
-@dirrmtry share/local/si
-@dirrmtry share/local/mr/LC_MESSAGES
-@dirrmtry share/local/mr
-@dirrmtry share/local/mai/LC_MESSAGES
-@dirrmtry share/local/mai
-@dirrmtry share/local/en@shaw/LC_MESSAGES
-@dirrmtry share/local/en@shaw
-@dirrmtry share/local/ca@valencia/LC_MESSAGES
-@dirrmtry share/local/ca@valencia
-@dirrmtry share/local/bn_IN/LC_MESSAGES
-@dirrmtry share/local/bn_IN
-@dirrmtry share/local/as/LC_MESSAGES
-@dirrmtry share/local/as
 @dirrm share/evolution-data-server-%%EVO_VERSION%%/mapi
 @dirrm include/evolution-data-server-%%EVO_VERSION%%/mapi
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -122,5 +100,7 @@ share/evolution-data-server-%%EVO_VERSION%%/mapi/tz-ical-to-mapi
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
