@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.188 2010/03/24 15:08:03 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.189 2010/03/28 10:32:00 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -38,7 +38,7 @@ RUN_DEPENDS+=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
 		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
 USE_GMAKE=	yes
-USE_PERL5=	yes
+USE_PERL5_BUILD=yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:22
 USE_GNOME=	gnomehack atk pango ltverhack
