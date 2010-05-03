@@ -3,18 +3,19 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/mm-common/Makefile,v 1.9 2010/01/02 21:03:07 kwm Exp $
+#   $MCom: ports/devel/mm-common/Makefile,v 1.10 2010/02/07 15:37:15 kwm Exp $
 #
 
 PORTNAME=	mm-common
 PORTVERSION=	0.9.2
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Common build infrastructure for the GNOME C++ binding libraries
 
-LIB_DEPENDS=	curl.5:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
 
 USE_GNOME=	gnomehack
 USE_BZIP2=	yes
