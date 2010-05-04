@@ -3,11 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pangomm/Makefile,v 1.13 2009/09/21 17:22:55 kwm Exp $
+#   $MCom: ports/x11-toolkits/pangomm/Makefile,v 1.15 2010/04/16 22:10:31 kwm Exp $
 #
 
 PORTNAME=	pangomm
-PORTVERSION=	2.26.1
+PORTVERSION=	2.26.2
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
