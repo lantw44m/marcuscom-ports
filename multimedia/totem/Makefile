@@ -3,11 +3,11 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.144 2010/03/16 20:15:55 mezz Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.145 2010/04/01 20:16:02 kwm Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	2.30.0
+PORTVERSION=	2.30.1
 PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
@@ -52,7 +52,7 @@ OPTIONS=	LIRC "Enable lirc support" off \
 		GALAGO "Enable Galago support" off \
 		BROWSER_PLUGINS "Enable install plugins for gecko browser" on \
 		PUBLISH "Enable Publish (network playlist) plugin" off \
-		TRACKER "Enable tracker local search plugin" off
+#		TRACKER "Enable tracker local search plugin" off
 
 # check configure script for allowed_plugins="..." for new plugins
 TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
@@ -72,13 +72,13 @@ TOTEM_PLUGINS:=	${TOTEM_PLUGINS} publish
 PLIST_SUB+=	PUBLISH="@comment "
 .endif
 
-.if defined(WITH_TRACKER)
-LIB_DEPENDS+=	tracker-gtk.0:${PORTSDIR}/sysutils/tracker-libtrackergtk
-TOTEM_PLUGINS:=	${TOTEM_PLUGINS} tracker
-PLIST_SUB+=	TRACKER=""
-.else
+#.if defined(WITH_TRACKER)
+#LIB_DEPENDS+=	tracker-gtk.0:${PORTSDIR}/sysutils/tracker-libtrackergtk
+#TOTEM_PLUGINS:=	${TOTEM_PLUGINS} tracker
+#PLIST_SUB+=	TRACKER=""
+#.else
 PLIST_SUB+=	TRACKER="@comment "
-.endif
+#.endif
 
 .if defined(WITH_LIRC)
 LIB_DEPENDS+=	lirc_client.1:${PORTSDIR}/comms/lirc
