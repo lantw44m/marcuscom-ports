@@ -3,7 +3,10 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/seed/Makefile,v 1.17 2010/02/24 00:54:09 ahze Exp $
+#   $MCom: ports/devel/seed/Makefile,v 1.18 2010/03/29 04:29:13 avl Exp $
+#
+# NOTE: It may be necessary to update ${FILESDIR}/Seed.js on each release.
+# To do that, just replace imports.searchPaths with "." and ".." elements.
 #
 
 PORTNAME=	seed
@@ -52,5 +55,14 @@ post-patch:
 	@${REINPLACE_CMD} -e 's| install-seeddocDATA||g ; s|doc$$||g' \
 		${WRKSRC}/Makefile.in
 .endif
+
+pre-build:
+	cd ${WRKSRC}/extensions && ${SETENV} ${MAKE_ENV} ${GMAKE} \
+	    	${MAKE_FLAGS} Makefile ${MAKE_ARGS} all
+	${CP} ${WRKSRC}/extensions/Seed.js ${WRKSRC}/extensions/Seed.js.sav
+	${CP} ${FILESDIR}/Seed.js ${WRKSRC}/extensions/Seed.js
+
+post-build:
+	${CP} ${WRKSRC}/extensions/Seed.js.sav ${WRKSRC}/extensions/Seed.js
 
 .include <bsd.port.post.mk>
