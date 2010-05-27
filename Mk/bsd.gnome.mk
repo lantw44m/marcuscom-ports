@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.490 2010/03/14 18:13:44 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.491 2010/04/28 01:49:42 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -74,7 +74,7 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
 _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
 		gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop gnomedesktopsharp20 \
 		gnomedocutils gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk20 \
-		gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 gvfs \
+		gtk30 gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 gvfs \
 		libartlgpl2 libbonobo libbonoboui libgailgnome libgda2 libgda3 libgda4 \
 		libglade2 libgnome libgnomecanvas libgnomedb libgnomekbd libgnomeprint \
 		libgnomeprintui libgnomeui libgsf libgsf_gnome libgtkhtml libidl \
@@ -281,6 +281,11 @@ gtk20_LIB_DEPENDS=	gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20
 gtk20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
 gtk20_USE_GNOME_IMPL=	intltool atk pango
 GTK2_VERSION=		2.10.0
+
+gtk30_LIB_DEPENDS=	gtk-x11-3.0.0:${PORTSDIR}/x11-toolkits/gtk30
+gtk30_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
+gtk30_USE_GNOME_IMPL=	intltool atk pango
+GTK3_VERSION=		3.0.0
 
 linc_LIB_DEPENDS=	linc.1:${PORTSDIR}/net/linc
 linc_DETECT=		${LOCALBASE}/libdata/pkgconfig/linc.pc
@@ -665,7 +670,8 @@ _USE_GNOME+=	${${component}_USE_GNOME_IMPL} ${component}
 
 # Setup the GTK+ API version for pixbuf loaders, input method modules,
 # and theme engines.
-PLIST_SUB+=			GTK2_VERSION="${GTK2_VERSION}"
+PLIST_SUB+=			GTK2_VERSION="${GTK2_VERSION}" \
+				GTK3_VERSION="${GTK3_VERSION}"
 
 # Then handle the ltverhack component (it has to be done here, because
 # we rely on some bsd.autotools.mk variables, and bsd.autotools.mk is
