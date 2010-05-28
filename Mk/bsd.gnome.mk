@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.491 2010/04/28 01:49:42 marcus Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.492 2010/05/27 23:18:34 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -74,13 +74,16 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
 _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
 		gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop gnomedesktopsharp20 \
 		gnomedocutils gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk20 \
-		gtk30 gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 gvfs \
+		gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 gvfs \
 		libartlgpl2 libbonobo libbonoboui libgailgnome libgda2 libgda3 libgda4 \
 		libglade2 libgnome libgnomecanvas libgnomedb libgnomekbd libgnomeprint \
 		libgnomeprintui libgnomeui libgsf libgsf_gnome libgtkhtml libidl \
 		librsvg2 libwnck libxml2 libxslt libzvt linc metacity nautilus2 \
 		nautiluscdburner orbit2 pango pygnome2 pygnomedesktop pygnomeextras \
 		pygtk2 pygtksourceview vte
+
+# GNOME 3 components
+_USE_GNOME_ALL+= dconf gtk30
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -273,6 +276,10 @@ atk_LIB_DEPENDS=	atk-1.0.0:${PORTSDIR}/accessibility/atk
 atk_DETECT=		${LOCALBASE}/libdata/pkgconfig/atk.pc
 atk_USE_GNOME_IMPL=	glib20
 
+dconf_LIB_DEPENDS=	dconf.0:${PORTSDIR}/devel/dconf
+dconf_DETECT=		${LOCALBASE}/libdata/pkgconfig/dconf.pc
+dconf_USE_GNOME_IMPL=	glib20
+
 pango_LIB_DEPENDS=	pango-1.0.0:${PORTSDIR}/x11-toolkits/pango
 pango_DETECT=		${LOCALBASE}/libdata/pkgconfig/pango.pc
 pango_USE_GNOME_IMPL=	glib20
@@ -289,7 +296,7 @@ GTK3_VERSION=		3.0.0
 
 linc_LIB_DEPENDS=	linc.1:${PORTSDIR}/net/linc
 linc_DETECT=		${LOCALBASE}/libdata/pkgconfig/linc.pc
-linc_USE_GNOME_IMPL=glib20
+linc_USE_GNOME_IMPL=	glib20
 
 libidl_LIB_DEPENDS=	IDL-2.0:${PORTSDIR}/devel/libIDL
 libidl_DETECT=		${LOCALBASE}/libdata/pkgconfig/libIDL-2.0.pc
