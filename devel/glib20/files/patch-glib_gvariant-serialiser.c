@@ -1,6 +1,15 @@
---- glib-2.25.7/glib/gvariant-serialiser.c	2010-05-24 18:39:22.000000000 +0200
-+++ glib/gvariant-serialiser.c	2010-05-25 18:10:30.000000000 +0200
-@@ -139,6 +139,24 @@
+--- glib/gvariant-serialiser.c.orig	2010-05-24 18:39:22.000000000 +0200
++++ glib/gvariant-serialiser.c	2010-05-28 11:03:39.000000000 +0200
+@@ -129,7 +129,7 @@
+ g_variant_serialised_check (GVariantSerialised serialised)
+ {
+   gsize fixed_size;
+-  guint alignment;
++  gsize alignment;
+ 
+   g_assert (serialised.type_info != NULL);
+   g_variant_type_info_query (serialised.type_info, &alignment, &fixed_size);
+@@ -139,6 +139,34 @@
    else
      g_assert (serialised.size == 0 || serialised.data != NULL);
  
@@ -21,6 +30,16 @@
 +                         } b;
 +                       }
 +                      ) - 9;
++
++  /* Some OSes (FreeBSD is a known example) have a malloc() that returns
++   * unaligned memory if you request small sizes.  'malloc (1);', for
++   * example, has been seen to return pointers aligned to 6 mod 16.
++   *
++   * Check if this is a small allocation and return without enforcing
++   * the alignment assertion if this is the case.
++   */
++  if (serialised.size <= alignment)
++    return;
 +
    g_assert_cmpint (alignment & (gsize) serialised.data, ==, 0);
  }
