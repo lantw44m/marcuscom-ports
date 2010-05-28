@@ -1,0 +1,11 @@
+--- gsettings/Makefile.in.orig	2010-05-28 23:45:20.000000000 +0200
++++ gsettings/Makefile.in	2010-05-28 23:46:17.000000000 +0200
+@@ -230,7 +230,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AM_CFLAGS = -std=c89 -Wall -Wmissing-prototypes -Wwrite-strings
+-INCLUDES = -I$(top_srcdir)/{common,gvdb,engine} $(gio_CFLAGS)
++INCLUDES = -I$(top_srcdir)/common -I$(top_srcdir)/gvdb -I$(top_srcdir)/engine $(gio_CFLAGS)
+ giomodules_LTLIBRARIES = libdconfsettings.la
+ libdconfsettings_la_LIBADD = $(gio_LIBS)
+ libdconfsettings_la_LDFLAGS = -module -avoid-version -shared

@@ -1,0 +1,19 @@
+bin/dconf
+include/dconf/dconf-client.h
+include/dconf/dconf-engine.h
+include/dconf/dconf-paths.h
+include/dconf/dconf-readtype.h
+include/dconf/dconf-resetlist.h
+include/dconf/dconf.h
+lib/gio/modules/libdconfsettings.so
+lib/libdconf.a
+lib/libdconf.la
+lib/libdconf.so
+lib/libdconf.so.0
+libdata/pkgconfig/dconf.pc
+libexec/dconf-service
+share/dbus-1/services/ca.desrt.dconf.service
+share/dbus-1/system-services/ca.desrt.dconf.service
+@dirrm include/dconf
+@exec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
+@unexec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true

@@ -1,0 +1,11 @@
+--- bin/Makefile.in.orig	2010-05-29 00:02:28.000000000 +0200
++++ bin/Makefile.in	2010-05-29 00:03:32.000000000 +0200
+@@ -204,7 +204,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AM_CFLAGS = -std=c89 -Wall -Wmissing-prototypes -Wwrite-strings
+-INCLUDES = -I$(top_srcdir)/{common,engine,client} $(gio_CFLAGS)
++INCLUDES = -I$(top_srcdir)/common -I$(top_srcdir)/engine -I$(top_srcdir)/client $(gio_CFLAGS)
+ dconf_LDADD = ../client/libdconf.la
+ all: all-am
+ 

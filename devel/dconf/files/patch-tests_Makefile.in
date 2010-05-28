@@ -1,0 +1,11 @@
+--- tests/Makefile.in.orig	2010-05-28 23:48:23.000000000 +0200
++++ tests/Makefile.in	2010-05-28 23:49:04.000000000 +0200
+@@ -204,7 +204,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AM_CFLAGS = -std=c89 -Wall -Wmissing-prototypes -Wwrite-strings
+-INCLUDES = -I$(top_srcdir)/{common,engine,client} $(gio_CFLAGS)
++INCLUDES = -I$(top_srcdir)/common -I$(top_srcdir)/engine -I$(top_srcdir)/client $(gio_CFLAGS)
+ paths_LDADD = $(gio_LIBS)
+ paths_SOURCES = \
+ 	../common/dconf-paths.c		\

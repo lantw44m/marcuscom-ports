@@ -1,0 +1,11 @@
+--- client/Makefile.in.orig	2010-05-28 23:50:30.000000000 +0200
++++ client/Makefile.in	2010-05-28 23:51:00.000000000 +0200
+@@ -232,7 +232,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AM_CFLAGS = -std=c89 -Wall -Wmissing-prototypes -Wwrite-strings
+-INCLUDES = -I$(top_srcdir)/{common,gvdb,engine} $(gio_CFLAGS)
++INCLUDES = -I$(top_srcdir)/common -I$(top_srcdir)/gvdb -I$(top_srcdir)/engine $(gio_CFLAGS)
+ lib_LTLIBRARIES = libdconf.la
+ dconfinclude_HEADERS = \
+ 	dconf-client.h	\
