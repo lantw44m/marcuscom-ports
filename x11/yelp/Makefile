@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11/yelp/Makefile,v 1.156 2010/05/29 19:52:57 kwm Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	2.31.3
+PORTVERSION=	2.31.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -42,5 +42,9 @@ GLIB_SCHEMAS=	org.gnome.yelp.gschema.xml
 .if ${OSVERSION} >= 800040
 LDFLAGS+=	-fstack-protector
 .endif
+
+pre-install:
+	@${INSTALL_DATA} ${WRKSRC}/data/org.gnome.yelp.gschema.xml \
+		${PREFIX}/share/glib-2.0/schemas
 
 .include <bsd.port.post.mk>
