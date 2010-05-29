@@ -102,12 +102,12 @@ bin/swell-foop
 @unexec [ -s %D/share/games/sweel-foop.Large.scores ] || rm -f %D/share/games/swell-foop.Large.scores
 @unexec [ -s %D/share/games/sweel-foop.Medium.scores ] || rm -f %D/share/games/swell-foop.Medium.scores
 @unexec [ -s %D/share/games/sweel-foop.Small.scores ] || rm -f %D/share/games/swell-foop.Small.scores
-lib/girepository-1.0/GnomeGamesSupport-1.0.typelib
+@comment lib/girepository-1.0/GnomeGamesSupport-1.0.typelib
 lib/gnome-games/ar-cards-renderer
-lib/gnome-games/libgames-support-gi.a
-lib/gnome-games/libgames-support-gi.la
-lib/gnome-games/libgames-support-gi.so
-lib/gnome-games/libgames-support-gi.so.0
+@comment lib/gnome-games/libgames-support-gi.a
+@comment lib/gnome-games/libgames-support-gi.la
+@comment lib/gnome-games/libgames-support-gi.so
+@comment lib/gnome-games/libgames-support-gi.so.0
 %%PYTHON_SITELIBDIR%%/glchess/__init__.py
 %%PYTHON_SITELIBDIR%%/glchess/__init__.pyc
 %%PYTHON_SITELIBDIR%%/glchess/__init__.pyo
@@ -216,9 +216,6 @@ lib/gnome-games/libgames-support-gi.so.0
 %%PYTHON_SITELIBDIR%%/glchess/scene/cairo/__init__.py
 %%PYTHON_SITELIBDIR%%/glchess/scene/cairo/__init__.pyc
 %%PYTHON_SITELIBDIR%%/glchess/scene/cairo/__init__.pyo
-%%PYTHON_SITELIBDIR%%/glchess/scene/cairo/pieces.py
-%%PYTHON_SITELIBDIR%%/glchess/scene/cairo/pieces.pyc
-%%PYTHON_SITELIBDIR%%/glchess/scene/cairo/pieces.pyo
 %%PYTHON_SITELIBDIR%%/glchess/scene/human.py
 %%PYTHON_SITELIBDIR%%/glchess/scene/human.pyc
 %%PYTHON_SITELIBDIR%%/glchess/scene/human.pyo
@@ -303,9 +300,6 @@ lib/gnome-games/libgames-support-gi.so.0
 %%PYTHON_SITELIBDIR%%/gnome_sudoku/sudoku.py
 %%PYTHON_SITELIBDIR%%/gnome_sudoku/sudoku.pyc
 %%PYTHON_SITELIBDIR%%/gnome_sudoku/sudoku.pyo
-%%PYTHON_SITELIBDIR%%/gnome_sudoku/sudoku_generator_gui.py
-%%PYTHON_SITELIBDIR%%/gnome_sudoku/sudoku_generator_gui.pyc
-%%PYTHON_SITELIBDIR%%/gnome_sudoku/sudoku_generator_gui.pyo
 %%PYTHON_SITELIBDIR%%/gnome_sudoku/sudoku_maker.py
 %%PYTHON_SITELIBDIR%%/gnome_sudoku/sudoku_maker.pyc
 %%PYTHON_SITELIBDIR%%/gnome_sudoku/sudoku_maker.pyo
@@ -315,6 +309,9 @@ lib/gnome-games/libgames-support-gi.so.0
 %%PYTHON_SITELIBDIR%%/gnome_sudoku/timer.py
 %%PYTHON_SITELIBDIR%%/gnome_sudoku/timer.pyc
 %%PYTHON_SITELIBDIR%%/gnome_sudoku/timer.pyo
+%%PYTHON_SITELIBDIR%%/gnome_sudoku/tracker_info.py
+%%PYTHON_SITELIBDIR%%/gnome_sudoku/tracker_info.pyc
+%%PYTHON_SITELIBDIR%%/gnome_sudoku/tracker_info.pyo
 share/applications/freecell.desktop
 share/applications/glchess.desktop
 share/applications/glines.desktop
@@ -332,20 +329,44 @@ share/applications/mahjongg.desktop
 share/applications/quadrapassel.desktop
 share/applications/sol.desktop
 share/applications/swell-foop.desktop
-share/gir-1.0/GnomeGamesSupport-1.0.gir
+@comment share/gir-1.0/GnomeGamesSupport-1.0.gir
 share/glchess/ai.xml
-share/glchess/chess_view.ui
 share/glchess/glchess.ui
 share/glchess/load_game.ui
 share/glchess/log.ui
 share/glchess/network_game.ui
 share/glchess/network_new_server.ui
 share/glchess/new_game.ui
+share/glchess/pieces/fancy/blackBishop.svg
+share/glchess/pieces/fancy/blackKing.svg
+share/glchess/pieces/fancy/blackKnight.svg
+share/glchess/pieces/fancy/blackPawn.svg
+share/glchess/pieces/fancy/blackQueen.svg
+share/glchess/pieces/fancy/blackRook.svg
+share/glchess/pieces/fancy/whiteBishop.svg
+share/glchess/pieces/fancy/whiteKing.svg
+share/glchess/pieces/fancy/whiteKnight.svg
+share/glchess/pieces/fancy/whitePawn.svg
+share/glchess/pieces/fancy/whiteQueen.svg
+share/glchess/pieces/fancy/whiteRook.svg
+share/glchess/pieces/simple/blackBishop.svg
+share/glchess/pieces/simple/blackKing.svg
+share/glchess/pieces/simple/blackKnight.svg
+share/glchess/pieces/simple/blackPawn.svg
+share/glchess/pieces/simple/blackQueen.svg
+share/glchess/pieces/simple/blackRook.svg
+share/glchess/pieces/simple/whiteBishop.svg
+share/glchess/pieces/simple/whiteKing.svg
+share/glchess/pieces/simple/whiteKnight.svg
+share/glchess/pieces/simple/whitePawn.svg
+share/glchess/pieces/simple/whiteQueen.svg
+share/glchess/pieces/simple/whiteRook.svg
 share/glchess/preferences.ui
 share/glchess/save_game.ui
 share/glchess/textures/board.png
 share/glchess/textures/piece.png
 share/gnome-games-common/cards/gnomangelo_bitmap.svg
+share/gnome-games-common/theme-install.ini
 %%DATADIR%%/aisleriot/games/accordion.scm
 %%DATADIR%%/aisleriot/games/agnes.scm
 %%DATADIR%%/aisleriot/games/athena.scm
@@ -556,6 +577,7 @@ share/gnome-games-common/cards/gnomangelo_bitmap.svg
 %%DATADIR%%/lightsoff/LED.js
 %%DATADIR%%/lightsoff/Light.js
 %%DATADIR%%/lightsoff/Path.js
+%%DATADIR%%/lightsoff/Puzzle.js
 %%DATADIR%%/lightsoff/Settings.js
 %%DATADIR%%/lightsoff/ThemeLoader.js
 %%DATADIR%%/lightsoff/lightsoff.ui
@@ -631,7 +653,6 @@ share/gnome-games-common/cards/gnomangelo_bitmap.svg
 %%DATADIR%%/swell-foop/themes/test/yellow.svg
 share/gnome-sudoku/images/footprints.png
 share/gnome-sudoku/print_games.ui
-share/gnome-sudoku/puzzle_generator.ui
 share/gnome-sudoku/puzzles/easy
 share/gnome-sudoku/puzzles/hard
 share/gnome-sudoku/puzzles/medium
@@ -1708,6 +1729,9 @@ share/gnome/help/gnotski/ca/gnotski.xml
 share/gnome/help/gnotski/cs/figures/gnotski_start_window.png
 share/gnome/help/gnotski/cs/figures/gnotski_win.png
 share/gnome/help/gnotski/cs/gnotski.xml
+share/gnome/help/gnotski/da/figures/gnotski_start_window.png
+share/gnome/help/gnotski/da/figures/gnotski_win.png
+share/gnome/help/gnotski/da/gnotski.xml
 share/gnome/help/gnotski/de/figures/gnotski_start_window.png
 share/gnome/help/gnotski/de/figures/gnotski_win.png
 share/gnome/help/gnotski/de/gnotski.xml
@@ -2422,6 +2446,7 @@ share/omf/gnomine/gnomine-zh_CN.omf
 share/omf/gnotski/gnotski-C.omf
 share/omf/gnotski/gnotski-ca.omf
 share/omf/gnotski/gnotski-cs.omf
+share/omf/gnotski/gnotski-da.omf
 share/omf/gnotski/gnotski-de.omf
 share/omf/gnotski/gnotski-el.omf
 share/omf/gnotski/gnotski-en_GB.omf
@@ -2701,6 +2726,8 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/gnotski/el
 @dirrm share/gnome/help/gnotski/de/figures
 @dirrm share/gnome/help/gnotski/de
+@dirrm share/gnome/help/gnotski/da/figures
+@dirrm share/gnome/help/gnotski/da
 @dirrm share/gnome/help/gnotski/cs/figures
 @dirrm share/gnome/help/gnotski/cs
 @dirrm share/gnome/help/gnotski/ca/figures
@@ -3056,9 +3083,10 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome-games-common/cards
 @dirrm share/gnome-games-common
 @dirrm share/glchess/textures
+@dirrm share/glchess/pieces/simple
+@dirrm share/glchess/pieces/fancy
+@dirrm share/glchess/pieces
 @dirrm share/glchess
-@dirrmtry share/ggz/gnome-games
-@dirrmtry share/ggz
 @dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku/gtk_goodies
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku

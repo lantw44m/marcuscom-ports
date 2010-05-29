@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/games/gnome-games/Makefile,v 1.220 2010/05/28 08:55:41 kwm Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	2.30.1
-PORTREVISION=	1
+PORTVERSION=	2.31.2
+PORTREVISION=	0
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -18,9 +18,9 @@ COMMENT=	The game applications package for the GNOME 2 Desktop Environment
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	guile.20:${PORTSDIR}/lang/guile \
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		clutter-gtk-0.10.0:${PORTSDIR}/graphics/clutter-gtk \
-		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter \
-		ggzmod.5:${PORTSDIR}/games/ggz-client-libs
+		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter
 RUN_DEPENDS=	seed:${PORTSDIR}/devel/seed
 
 USE_BZIP2=	yes
@@ -28,13 +28,14 @@ USE_PYTHON=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
+GLIB_SCHEMAS=	org.gnome.Games.WindowState.gschema.xml
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 \
-		librsvg2 desktopfileutils pygnomedesktop gnomedocutils
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 pygtk2 \
+		librsvg2 desktopfileutils gnomedocutils
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-sound=gstreamer \
-		--disable-tests
+# temporarly disable, seems GSettings is missing from glib gir. (or I'm missing something)
+CONFIGURE_ARGS=--enable-introspection=no 
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
@@ -45,9 +46,6 @@ GCONF_SCHEMAS=	aisleriot.schemas glchess.schemas glines.schemas \
 		mahjongg.schemas quadrapassel.schemas swell-foop.schemas
 
 CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]*
-
-#DSC_FILES=	iagno/iagno-client.dsc gnect/data/gnect-client.dsc \
-#		gnibbles/gnibbles-client.dsc
 
 MAN6=		glchess.6 glines.6 gnect.6 gnibbles.6 gnobots2.6 \
 		gnome-sudoku.6 gnomine.6 gnotravex.6 gnotski.6 \
@@ -60,15 +58,14 @@ LIB_DEPENDS+=	avahi-client:${PORTSDIR}/net/avahi-app
 .endif
 
 post-patch:
+#	workaround for configure bug, should be fixed in 2.31.3.
+	@${REINPLACE_CMD} -e 's|as_fn_error "couldn|as_fn_warning "couldn|g' \
+		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' \
 	    	${WRKSRC}/gnome-sudoku/src/lib/defaults.py.in \
 		${WRKSRC}/glchess/src/lib/defaults.py.in
 
 post-install:
-	${MKDIR} ${PREFIX}/share/ggz/gnome-games
-#.for dsc in ${DSC_FILES}
-#	${INSTALL_DATA} ${WRKSRC}/${dsc} ${PREFIX}/share/ggz/gnome-games/${dsc:T}
-#.endfor
 	@-update-desktop-database
 
 .include <bsd.port.post.mk>
