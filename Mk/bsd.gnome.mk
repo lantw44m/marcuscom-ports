@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.492 2010/05/27 23:18:34 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.493 2010/05/28 22:48:11 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -400,7 +400,7 @@ eel2_LIB_DEPENDS=	eel-2.2:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${LOCALBASE}/libdata/pkgconfig/eel-2.0.pc
 eel2_USE_GNOME_IMPL=	gnomedesktop
 
-gnomepanel_LIB_DEPENDS=	panel-applet-2.0:${PORTSDIR}/x11/gnome-panel
+gnomepanel_LIB_DEPENDS=	panel-applet-3.0:${PORTSDIR}/x11/gnome-panel
 gnomepanel_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-2.0.pc
 gnomepanel_USE_GNOME_IMPL=gnomedesktop libwnck gnomemenus gnomedocutils librsvg2 libbonoboui
 gnomepanel_GNOME_DESKTOP_VERSION=2
