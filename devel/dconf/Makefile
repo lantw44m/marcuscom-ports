@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/dconf/Makefile,v 1.1 2010/05/28 22:45:39 kwm Exp $
 #
 
 PORTNAME=	dconf
@@ -26,5 +26,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 #MAN1=		gconftool-2.1
+
+post-install:
+	-${PREFIX}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
 
 .include <bsd.port.mk>
