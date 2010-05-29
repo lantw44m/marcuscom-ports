@@ -318,6 +318,10 @@ share/locale/yi/LC_MESSAGES/glib20.mo
 share/locale/zh_CN/LC_MESSAGES/glib20.mo
 share/locale/zh_HK/LC_MESSAGES/glib20.mo
 share/locale/zh_TW/LC_MESSAGES/glib20.mo
+@comment I don't think we need to remove this. It looks like if there are no
+@comment gschema.xml files the gschemas.compiled is removed
+@comment @unexec /bin/rm -f %D/share/glib-2.0/schemas/gschemas.compiled
+@exec glib-compile-schemas --uninstall %D/share/glib-2.0/schemas
 @dirrm share/glib-2.0/schemas
 @dirrm share/glib-2.0/gettext/po
 @dirrm share/glib-2.0/gettext
