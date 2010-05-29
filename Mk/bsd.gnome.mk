@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.494 2010/05/29 13:08:31 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.495 2010/05/29 13:12:54 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -41,22 +41,30 @@ Gnome_Pre_Include=			bsd.gnome.mk
 # and MAKE_ENV defined.
 #
 #
-# GCONF_SCHEMAS		- Set the following to list of all schema files
-#					  that your port installs. These schema files and
-#					  %gconf.xml files will be automatically added to
-#					  ${PLIST}. For example, if your port has
-#					  "etc/gconf/schemas/(foo.schemas and bar.schemas)",
-#					  add the following to your Makefile:
-#					  "GCONF_SCHEMAS=foo.schemas bar.schemas".
+# GCONF_SCHEMAS		- Set the following to list of all the gconf schema files
+#				that your port installs. These schema files and
+#				%gconf.xml files will be automatically added to
+#				the ${PLIST}. For example, if your port has
+#				"etc/gconf/schemas/(foo.schemas and bar.schemas)",
+#				add the following to your Makefile:
+#				"GCONF_SCHEMAS=foo.schemas bar.schemas".
+#
+# GLIB_SCHEMAS		- Set the following to list of all gsettings schema files
+#				(*.gschema.xml) that your ports installs. The 
+#				schema files will be automatically added to 
+#				the ${PLIST}. For example, if your port has 
+#				"share/glib-2.0/schemas/(foo.gschema.xml and bar.gschema.xml)", 
+#				add the following to your Makefile:
+#				"GLIB_SCHEMAS=foo.gschema.xml bar.gschema.xml".
 #
 # INSTALLS_OMF		- If set, bsd.gnome.mk will automatically scan pkg-plist
-#					  file and add apropriate @exec/@unexec directives for
-#					  each .omf file found to track OMF registration database.
+#				file and add apropriate @exec/@unexec directives for
+#				each .omf file found to track OMF registration database.
 #
 # INSTALLS_ICONS	- If your port installs Freedesktop-style icons to
-#					  ${LOCALBASE}/share/icons, then you should use this
-#					  macro. If the icons are not cached, they will not be
-#					  displayed.
+#				${LOCALBASE}/share/icons, then you should use this
+#				macro. If the icons are not cached, they will not be
+#				displayed.
 #
 
 # non-version specific components
@@ -798,7 +806,7 @@ CONFIGURE_FAIL_MESSAGE= "Please run the gnomelogalyzer, available from \"http://
 
 
 .if defined(GCONF_SCHEMAS) || defined(INSTALLS_OMF) || defined(INSTALLS_ICONS) \
-	|| (defined(_USE_GNOME) && ${_USE_GNOME:Mgnomehier}!="")
+	|| defined(GLIB_SCHEMAS) || (defined(_USE_GNOME) && ${_USE_GNOME:Mgnomehier}!="")
 pre-su-install: gnome-pre-su-install
 post-install: gnome-post-install
 
@@ -822,6 +830,18 @@ gnome-post-install:
 			>> ${TMPPLIST}; \
 	done
 .  endif
+
+# we put the @unexec behind the plist schema entry, because it compiles files 
+# in the directory. So we should remove the port file first before recompiling.
+.  if defined(GLIB_SCHEMAS)
+	@for i in ${GLIB_SCHEMAS}; do \
+		${ECHO_CMD} "share/glib-2.0/schemas/$${i}" >> ${TMPPLIST}; \
+		${ECHO_CMD} "@exec glib-compile-schemas %D/share/glib-2.0/schemas > /dev/null || /usr/bin/true" \
+			>> ${TMPPLIST}; \
+		${ECHO_CMD} "@unexec glib-compile-schemas --uninstall %D/share/glib-2.0/schemas > /dev/null || /usr/bin/true" \
+			>> ${TMPPLIST}; \
+	done	
+.endif
 
 .  if defined(INSTALLS_OMF)
 	@for i in `${GREP} "\.omf$$" ${TMPPLIST}`; do \
