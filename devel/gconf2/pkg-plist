@@ -1,8 +1,10 @@
 bin/gconf-merge-tree
 bin/gconftool-2
+bin/gsettings-data-convert
 etc/dbus-1/system.d/org.gnome.GConf.Defaults.conf
 %%LDAP%%etc/gconf/2/evoldap.conf
 etc/gconf/2/path
+etc/xdg/autostart/gsettings-data-convert.desktop
 include/gconf/2/gconf/gconf-changeset.h
 include/gconf/2/gconf/gconf-client.h
 include/gconf/2/gconf/gconf-engine.h
@@ -23,6 +25,9 @@ lib/GConf/2/libgconfbackend-xml.a
 lib/GConf/2/libgconfbackend-xml.la
 lib/GConf/2/libgconfbackend-xml.so
 lib/girepository-1.0/GConf-2.0.typelib
+lib/gio/modules/libgsettingsgconfbackend.a
+lib/gio/modules/libgsettingsgconfbackend.la
+lib/gio/modules/libgsettingsgconfbackend.so
 lib/libgconf-2.a
 lib/libgconf-2.la
 lib/libgconf-2.so
@@ -162,3 +167,5 @@ share/sgml/gconf/gconf-1.0.dtd
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@exec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
+@unexec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
