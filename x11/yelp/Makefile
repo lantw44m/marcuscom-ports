@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.156 2010/05/29 19:52:57 kwm Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.157 2010/05/29 20:03:48 kwm Exp $
 #
 
 PORTNAME=	yelp
@@ -17,7 +17,6 @@ COMMENT=	A help browser for the GNOME 2 desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/x11/yelp-xsl
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		lzma.0:${PORTSDIR}/archivers/xz \
 		webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/x11/yelp-xsl
 
@@ -41,6 +40,13 @@ GLIB_SCHEMAS=	org.gnome.yelp.gschema.xml
 # SVN rev 180012 on 2008-06-25 21:33:28Z by ru
 .if ${OSVERSION} >= 800040
 LDFLAGS+=	-fstack-protector
+.endif
+
+.if ${OSVERSION} >= 900012 || (${OSVERSION} >= 800505 && ${OSVERSION} < 900000)
+CONFIGURE_ENV+=	YELP_LZMA_CFLAGS="/usr/include" \
+		YELP_LZMA_LIBS="/usr/lib"
+.else
+LIB_DEPENDS+=	lzma.0:${PORTSDIR}/archivers/xz
 .endif
 
 pre-install:
