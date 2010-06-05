@@ -19,9 +19,6 @@ dbus_GIR=	DBus-1.0
 babl_CATEGORY=	x11
 babl_GIR=	Babl-0.1
 
-nautilus_CATEGORY=	x11-fm
-nautilus_GIR=	Nautilus-1.0
-
 gnomekeyring_CATEGORY=	security
 gnomekeyring_GIR=	GnomeKeyring-2.0
 
@@ -86,13 +83,6 @@ DEP_NAMES=	soup
 .if ${GIR_NAME} == "babl"
 LIB_DEPENDS+=	babl-0.1.0:${PORTSDIR}/x11/babl
 GIR_FILES=	Babl-0.1
-.endif
-
-.if ${GIR_NAME} == "nautilus"
-USE_GNOME+=	nautilus2
-GIR_FILES=	Nautilus-1.0
-DEP_NAMES=	nautilusextension
-CLEAR_DEPS+=	Gtk-2.0
 .endif
 
 .if ${GIR_NAME} == "gnomekeyring"
