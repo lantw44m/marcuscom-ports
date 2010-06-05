@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.495 2010/05/29 13:12:54 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.496 2010/05/29 17:18:10 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -438,7 +438,7 @@ libgda3_LIB_DEPENDS=	gda-3.0.3:${PORTSDIR}/databases/libgda3
 libgda3_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgda-3.0.pc
 libgda3_USE_GNOME_IMPL=	glib20 libxslt
 
-libgda4_LIB_DEPENDS=	gda-4.0.4:${PORTSDIR}/databases/libgda4
+libgda4_LIB_DEPENDS=	gda-4.0.5:${PORTSDIR}/databases/libgda4
 libgda4_DETECT=			 ${LOCALBASE}/libdata/pkgconfig/libgda-4.0.pc
 libgda4_USE_GNOME_IMPL=	glib20 libxslt
 
