@@ -9,10 +9,6 @@ GIRDIR=		${LOCALBASE}/share/gir-1.0
 poppler_CATEGORY=	graphics
 poppler_GIR=	Poppler-0.8
 
-libsoup_CATEGORY=	devel
-libsoup_GIR=	Soup-2.4
-libsoup_GIR_TMPL=	soup
-
 dbus_CATEGORY=	devel
 dbus_GIR=	DBus-1.0
 
@@ -24,9 +20,6 @@ gnomekeyring_GIR=	GnomeKeyring-2.0
 
 libnotify_CATEGORY=	devel
 libnotify_GIR=	Notify-0.4
-
-gtksourceview2_CATEGORY=	x11-toolkits
-gtksourceview2_GIR=	GtkSource-2.2
 
 vte_CATEGORY=	x11-toolkits
 vte_GIR=	Vte-1.0
@@ -74,12 +67,6 @@ GIR_FILES=	Poppler-0.8
 CLEAR_DEPS+=	Gdk-2.0
 .endif
 
-.if ${GIR_NAME} == "libsoup"
-LIB_DEPENDS+=	soup-2.4.1:${PORTSDIR}/devel/libsoup
-GIR_FILES=	Soup-2.4
-DEP_NAMES=	soup
-.endif
-
 .if ${GIR_NAME} == "babl"
 LIB_DEPENDS+=	babl-0.1.0:${PORTSDIR}/x11/babl
 GIR_FILES=	Babl-0.1
@@ -102,13 +89,6 @@ CLEAR_DEPS+=	Gtk-2.0
 LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 GIR_FILES=	DBus-1.0
 LIB_FILES=	DBus
-.endif
-
-.if ${GIR_NAME} == "gtksourceview2"
-USE_GNOME+=	gtksourceview2
-GIR_FILES=	GtkSource-2.2
-DEP_NAMES=	gtksourceview
-CLEAR_DEPS+=	Gtk-2.0
 .endif
 
 .if ${GIR_NAME} == "vte"
