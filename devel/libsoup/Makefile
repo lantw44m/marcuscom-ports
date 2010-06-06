@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/libsoup/Makefile,v 1.83 2010/06/05 21:11:09 kwm Exp $
 #
 
 PORTNAME=	libsoup
 PORTVERSION=	2.31.2
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -44,7 +44,7 @@ USE_GNOME+=	gconf2
 CONFIGURE_ARGS+=--without-gnome
 .endif
 
-.if defined(WITH_GNUTLS)
+.if !defined(WITHOUT_SSL)
 LIB_DEPENDS+=	gnutls.40:${PORTSDIR}/security/gnutls
 .else
 CONFIGURE_ARGS+=--disable-ssl
