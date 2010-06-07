@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.496 2010/05/29 17:18:10 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.497 2010/06/05 22:07:25 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -494,7 +494,7 @@ gnomespeech_LIB_DEPENDS=gnomespeech.7:${PORTSDIR}/accessibility/gnome-speech
 gnomespeech_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-speech-1.0.pc
 gnomespeech_USE_GNOME_IMPL=libbonobo
 
-evolutiondataserver_LIB_DEPENDS=edataserver-1.2.11:${PORTSDIR}/databases/evolution-data-server
+evolutiondataserver_LIB_DEPENDS=edataserver-1.2.14:${PORTSDIR}/databases/evolution-data-server
 evolutiondataserver_DETECT=		${LOCALBASE}/libdata/pkgconfig/evolution-data-server-1.2.pc
 evolutiondataserver_USE_GNOME_IMPL=gconf2 libxml2
 
