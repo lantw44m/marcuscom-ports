@@ -139,7 +139,6 @@ share/yelp-xsl/xslt/gettext/l10n.xml
 share/yelp-xsl/xslt/mallard/cache/mal-cache.xsl
 share/yelp-xsl/xslt/mallard/common/mal-link.xsl
 share/yelp-xsl/xslt/mallard/html/mal2html-block.xsl
-share/yelp-xsl/xslt/mallard/html/mal2html-css.xsl
 share/yelp-xsl/xslt/mallard/html/mal2html-inline.xsl
 share/yelp-xsl/xslt/mallard/html/mal2html-list.xsl
 share/yelp-xsl/xslt/mallard/html/mal2html-media.xsl

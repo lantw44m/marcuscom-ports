@@ -3,18 +3,17 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11/yelp-xsl/Makefile,v 1.1 2010/05/29 19:50:34 kwm Exp $
 #
 
 PORTNAME=	yelp-xsl
-PORTVERSION=	2.31.2
+PORTVERSION=	2.31.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=
-#	A help browser for the GNOME 2 desktop
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
