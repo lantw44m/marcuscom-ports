@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.157 2010/05/29 20:03:48 kwm Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.158 2010/06/04 17:48:42 kwm Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	2.31.4
+PORTVERSION=	2.31.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -43,13 +43,14 @@ LDFLAGS+=	-fstack-protector
 .endif
 
 .if ${OSVERSION} >= 900012 || (${OSVERSION} >= 800505 && ${OSVERSION} < 900000)
-CONFIGURE_ENV+=	YELP_LZMA_CFLAGS="/usr/include" \
-		YELP_LZMA_LIBS="/usr/lib"
+CONFIGURE_ENV+=	YELP_LZMA_CFLAGS="-I/usr/include" \
+		YELP_LZMA_LIBS="-L/usr/lib -llzma"
 .else
 LIB_DEPENDS+=	lzma.0:${PORTSDIR}/archivers/xz
 .endif
 
 pre-install:
+	@${MKDIR} ${PREFIX}/share/glib-2.0/schemas
 	@${INSTALL_DATA} ${WRKSRC}/data/org.gnome.yelp.gschema.xml \
 		${PREFIX}/share/glib-2.0/schemas
 

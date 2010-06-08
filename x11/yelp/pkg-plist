@@ -5,6 +5,7 @@ include/libyelp/yelp-document.h
 include/libyelp/yelp-info-document.h
 include/libyelp/yelp-location-entry.h
 include/libyelp/yelp-mallard-document.h
+include/libyelp/yelp-man-document.h
 include/libyelp/yelp-settings.h
 include/libyelp/yelp-simple-document.h
 include/libyelp/yelp-transform.h
