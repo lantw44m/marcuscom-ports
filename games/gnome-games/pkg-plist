@@ -1515,6 +1515,7 @@ share/gnome/help/gnomine/zh_CN/figures/preferences.png
 share/gnome/help/gnomine/zh_CN/figures/statusbar.png
 share/gnome/help/gnomine/zh_CN/gnomine.xml
 share/gnome/help/gnomine/sv/gnomine.xml
+share/gnome/help/gnotravex/C/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/C/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/C/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/C/gameplay.page
@@ -1527,6 +1528,7 @@ share/gnome/help/gnotravex/C/shortcut.page
 share/gnome/help/gnotravex/C/size.page
 share/gnome/help/gnotravex/C/usage.page
 share/gnome/help/gnotravex/C/winning.page
+share/gnome/help/gnotravex/ca/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/ca/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/ca/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/ca/gameplay.page
@@ -1539,6 +1541,7 @@ share/gnome/help/gnotravex/ca/shortcut.page
 share/gnome/help/gnotravex/ca/size.page
 share/gnome/help/gnotravex/ca/usage.page
 share/gnome/help/gnotravex/ca/winning.page
+share/gnome/help/gnotravex/cs/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/cs/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/cs/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/cs/gameplay.page
@@ -1551,6 +1554,7 @@ share/gnome/help/gnotravex/cs/shortcut.page
 share/gnome/help/gnotravex/cs/size.page
 share/gnome/help/gnotravex/cs/usage.page
 share/gnome/help/gnotravex/cs/winning.page
+share/gnome/help/gnotravex/da/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/da/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/da/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/da/gameplay.page
@@ -1563,6 +1567,7 @@ share/gnome/help/gnotravex/da/shortcut.page
 share/gnome/help/gnotravex/da/size.page
 share/gnome/help/gnotravex/da/usage.page
 share/gnome/help/gnotravex/da/winning.page
+share/gnome/help/gnotravex/de/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/de/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/de/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/de/gameplay.page
@@ -1575,6 +1580,7 @@ share/gnome/help/gnotravex/de/shortcut.page
 share/gnome/help/gnotravex/de/size.page
 share/gnome/help/gnotravex/de/usage.page
 share/gnome/help/gnotravex/de/winning.page
+share/gnome/help/gnotravex/el/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/el/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/el/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/el/gameplay.page
@@ -1587,6 +1593,7 @@ share/gnome/help/gnotravex/el/shortcut.page
 share/gnome/help/gnotravex/el/size.page
 share/gnome/help/gnotravex/el/usage.page
 share/gnome/help/gnotravex/el/winning.page
+share/gnome/help/gnotravex/en_GB/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/en_GB/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/en_GB/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/en_GB/gameplay.page
@@ -1599,6 +1606,7 @@ share/gnome/help/gnotravex/en_GB/shortcut.page
 share/gnome/help/gnotravex/en_GB/size.page
 share/gnome/help/gnotravex/en_GB/usage.page
 share/gnome/help/gnotravex/en_GB/winning.page
+share/gnome/help/gnotravex/es/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/es/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/es/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/es/gameplay.page
@@ -1611,6 +1619,7 @@ share/gnome/help/gnotravex/es/shortcut.page
 share/gnome/help/gnotravex/es/size.page
 share/gnome/help/gnotravex/es/usage.page
 share/gnome/help/gnotravex/es/winning.page
+share/gnome/help/gnotravex/eu/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/eu/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/eu/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/eu/gameplay.page
@@ -1623,6 +1632,7 @@ share/gnome/help/gnotravex/eu/shortcut.page
 share/gnome/help/gnotravex/eu/size.page
 share/gnome/help/gnotravex/eu/usage.page
 share/gnome/help/gnotravex/eu/winning.page
+share/gnome/help/gnotravex/fr/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/fr/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/fr/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/fr/gameplay.page
@@ -1635,6 +1645,7 @@ share/gnome/help/gnotravex/fr/shortcut.page
 share/gnome/help/gnotravex/fr/size.page
 share/gnome/help/gnotravex/fr/usage.page
 share/gnome/help/gnotravex/fr/winning.page
+share/gnome/help/gnotravex/it/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/it/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/it/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/it/gameplay.page
@@ -1647,6 +1658,7 @@ share/gnome/help/gnotravex/it/shortcut.page
 share/gnome/help/gnotravex/it/size.page
 share/gnome/help/gnotravex/it/usage.page
 share/gnome/help/gnotravex/it/winning.page
+share/gnome/help/gnotravex/oc/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/oc/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/oc/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/oc/gameplay.page
@@ -1659,6 +1671,7 @@ share/gnome/help/gnotravex/oc/shortcut.page
 share/gnome/help/gnotravex/oc/size.page
 share/gnome/help/gnotravex/oc/usage.page
 share/gnome/help/gnotravex/oc/winning.page
+share/gnome/help/gnotravex/ru/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/ru/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/ru/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/ru/gameplay.page
@@ -1671,6 +1684,7 @@ share/gnome/help/gnotravex/ru/shortcut.page
 share/gnome/help/gnotravex/ru/size.page
 share/gnome/help/gnotravex/ru/usage.page
 share/gnome/help/gnotravex/ru/winning.page
+share/gnome/help/gnotravex/sl/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/sl/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/sl/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/sl/gameplay.page
@@ -1683,6 +1697,7 @@ share/gnome/help/gnotravex/sl/shortcut.page
 share/gnome/help/gnotravex/sl/size.page
 share/gnome/help/gnotravex/sl/usage.page
 share/gnome/help/gnotravex/sl/winning.page
+share/gnome/help/gnotravex/sr/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/sr/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/sr/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/sr/gameplay.page
@@ -1695,6 +1710,7 @@ share/gnome/help/gnotravex/sr/shortcut.page
 share/gnome/help/gnotravex/sr/size.page
 share/gnome/help/gnotravex/sr/usage.page
 share/gnome/help/gnotravex/sr/winning.page
+share/gnome/help/gnotravex/sr@latin/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/sr@latin/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/sr@latin/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/sr@latin/gameplay.page
@@ -1707,6 +1723,7 @@ share/gnome/help/gnotravex/sr@latin/shortcut.page
 share/gnome/help/gnotravex/sr@latin/size.page
 share/gnome/help/gnotravex/sr@latin/usage.page
 share/gnome/help/gnotravex/sr@latin/winning.page
+share/gnome/help/gnotravex/sv/figures/gnotravex-logo.png
 share/gnome/help/gnotravex/sv/figures/gnotravex-main-window.png
 share/gnome/help/gnotravex/sv/figures/gnotravex-video.ogv
 share/gnome/help/gnotravex/sv/gameplay.page
@@ -1941,6 +1958,7 @@ share/gnome/help/lightsoff/C/lightsoff.xml
 share/gnome/help/lightsoff/de/lightsoff.xml
 share/gnome/help/lightsoff/el/lightsoff.xml
 share/gnome/help/lightsoff/es/lightsoff.xml
+share/gnome/help/lightsoff/fi/lightsoff.xml
 share/gnome/help/lightsoff/fr/lightsoff.xml
 share/gnome/help/mahjongg/C/figures/mahjongg.png
 share/gnome/help/mahjongg/C/figures/no-move.png
@@ -2493,6 +2511,7 @@ share/omf/lightsoff/lightsoff-C.omf
 share/omf/lightsoff/lightsoff-de.omf
 share/omf/lightsoff/lightsoff-el.omf
 share/omf/lightsoff/lightsoff-es.omf
+share/omf/lightsoff/lightsoff-fi.omf
 share/omf/lightsoff/lightsoff-fr.omf
 share/omf/mahjongg/mahjongg-C.omf
 share/omf/mahjongg/mahjongg-ca.omf
@@ -2635,6 +2654,7 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/mahjongg/C
 @dirrm share/gnome/help/mahjongg
 @dirrm share/gnome/help/lightsoff/fr
+@dirrm share/gnome/help/lightsoff/fi
 @dirrm share/gnome/help/lightsoff/es
 @dirrm share/gnome/help/lightsoff/el
 @dirrm share/gnome/help/lightsoff/de

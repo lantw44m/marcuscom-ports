@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.220 2010/05/28 08:55:41 kwm Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.221 2010/05/29 17:23:49 kwm Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	2.31.2
+PORTVERSION=	2.31.3
 PORTREVISION=	0
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
@@ -64,6 +64,11 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' \
 	    	${WRKSRC}/gnome-sudoku/src/lib/defaults.py.in \
 		${WRKSRC}/glchess/src/lib/defaults.py.in
+
+pre-install:
+	@cd ${WRKSRC}/libgames-support && gmake org.gnome.Games.WindowState.gschema.xml
+	@${INSTALL_DATA} ${WRKSRC}/libgames-support/org.gnome.Games.WindowState.gschema.xml \
+		${PREFIX}/share/glib-2.0/schemas/
 
 post-install:
 	@-update-desktop-database
