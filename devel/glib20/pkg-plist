@@ -21,6 +21,7 @@ include/gio-unix-2.0/gio/gunixmounts.h
 include/gio-unix-2.0/gio/gunixoutputstream.h
 include/gio-unix-2.0/gio/gunixsocketaddress.h
 include/glib-2.0/gio/gappinfo.h
+include/glib-2.0/gio/gapplication.h
 include/glib-2.0/gio/gasyncinitable.h
 include/glib-2.0/gio/gasyncresult.h
 include/glib-2.0/gio/gbufferedinputstream.h
@@ -84,11 +85,13 @@ include/glib-2.0/gio/gnativevolumemonitor.h
 include/glib-2.0/gio/gnetworkaddress.h
 include/glib-2.0/gio/gnetworkservice.h
 include/glib-2.0/gio/goutputstream.h
+include/glib-2.0/gio/gpermission.h
 include/glib-2.0/gio/gresolver.h
 include/glib-2.0/gio/gseekable.h
 include/glib-2.0/gio/gsettings.h
 include/glib-2.0/gio/gsettingsbackend.h
 include/glib-2.0/gio/gsimpleasyncresult.h
+include/glib-2.0/gio/gsimplepermission.h
 include/glib-2.0/gio/gsocket.h
 include/glib-2.0/gio/gsocketaddress.h
 include/glib-2.0/gio/gsocketaddressenumerator.h
