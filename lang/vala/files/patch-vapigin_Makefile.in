@@ -1,0 +1,36 @@
+--- vapigen/Makefile.in.orig	2010-06-08 10:47:30.000000000 +0200
++++ vapigen/Makefile.in	2010-06-08 10:48:13.000000000 +0200
+@@ -56,7 +56,7 @@
+ am_vapicheck_OBJECTS = $(am__objects_2) $(am__objects_1)
+ vapicheck_OBJECTS = $(am_vapicheck_OBJECTS)
+ am__DEPENDENCIES_1 =
+-vapicheck_DEPENDENCIES = $(am__DEPENDENCIES_1) ../codegen/libvala.la \
++vapicheck_DEPENDENCIES = $(am__DEPENDENCIES_1) \
+ 	../gobject-introspection/libgidl.la $(am__DEPENDENCIES_1)
+ AM_V_lt = $(am__v_lt_$(V))
+ am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
+@@ -65,7 +65,7 @@
+ 	$(am__objects_1)
+ am_vapigen_OBJECTS = $(am__objects_3) $(am__objects_1)
+ vapigen_OBJECTS = $(am_vapigen_OBJECTS)
+-vapigen_DEPENDENCIES = $(am__DEPENDENCIES_1) ../codegen/libvala.la \
++vapigen_DEPENDENCIES = $(am__DEPENDENCIES_1)  \
+ 	../gobject-introspection/libgidl.la $(am__DEPENDENCIES_1)
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
+@@ -304,13 +304,13 @@
+ 
+ vapigen_LDADD = \
+ 	$(GLIB_LIBS) \
+-	../codegen/libvala.la \
++	-lvala \
+ 	../gobject-introspection/libgidl.la \
+ 	$(NULL)
+ 
+ vapicheck_LDADD = \
+ 	$(GLIB_LIBS) \
+-	../codegen/libvala.la \
++	-lvala \
+ 	../gobject-introspection/libgidl.la \
+ 	$(NULL)
+ 

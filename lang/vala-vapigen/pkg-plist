@@ -1,0 +1,5 @@
+bin/vala-gen-introspect
+bin/vapicheck
+bin/vapigen
+lib/vala/gen-introspect
+@dirrm lib/vala
