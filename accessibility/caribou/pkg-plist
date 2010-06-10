@@ -1,0 +1,46 @@
+bin/caribou
+%%PYTHON_SITELIBDIR%%/caribou/__init__.py
+%%PYTHON_SITELIBDIR%%/caribou/__init__.pyc
+%%PYTHON_SITELIBDIR%%/caribou/__init__.pyo
+%%PYTHON_SITELIBDIR%%/caribou/animation.py
+%%PYTHON_SITELIBDIR%%/caribou/animation.pyc
+%%PYTHON_SITELIBDIR%%/caribou/animation.pyo
+%%PYTHON_SITELIBDIR%%/caribou/i18n.py
+%%PYTHON_SITELIBDIR%%/caribou/i18n.pyc
+%%PYTHON_SITELIBDIR%%/caribou/i18n.pyo
+%%PYTHON_SITELIBDIR%%/caribou/keyboard.py
+%%PYTHON_SITELIBDIR%%/caribou/keyboard.pyc
+%%PYTHON_SITELIBDIR%%/caribou/keyboard.pyo
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/__init__.py
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/__init__.pyc
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/__init__.pyo
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/keysyms.py
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/keysyms.pyc
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/keysyms.pyo
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/qwerty.py
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/qwerty.pyc
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/qwerty.pyo
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/qwerty_es.py
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/qwerty_es.pyc
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/qwerty_es.pyo
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/qwerty_sv.py
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/qwerty_sv.pyc
+%%PYTHON_SITELIBDIR%%/caribou/keyboards/qwerty_sv.pyo
+%%PYTHON_SITELIBDIR%%/caribou/main.py
+%%PYTHON_SITELIBDIR%%/caribou/main.pyc
+%%PYTHON_SITELIBDIR%%/caribou/main.pyo
+%%PYTHON_SITELIBDIR%%/caribou/opacity.py
+%%PYTHON_SITELIBDIR%%/caribou/opacity.pyc
+%%PYTHON_SITELIBDIR%%/caribou/opacity.pyo
+%%PYTHON_SITELIBDIR%%/caribou/window.py
+%%PYTHON_SITELIBDIR%%/caribou/window.pyc
+%%PYTHON_SITELIBDIR%%/caribou/window.pyo
+share/caribou/caribou-prefs.ui
+share/locale/de/LC_MESSAGES/caribou.mo
+share/locale/es/LC_MESSAGES/caribou.mo
+share/locale/fr/LC_MESSAGES/caribou.mo
+share/locale/gl/LC_MESSAGES/caribou.mo
+share/locale/sl/LC_MESSAGES/caribou.mo
+@dirrm share/caribou
+@dirrm %%PYTHON_SITELIBDIR%%/caribou/keyboards
+@dirrm %%PYTHON_SITELIBDIR%%/caribou
