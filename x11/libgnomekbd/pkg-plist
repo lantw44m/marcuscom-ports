@@ -20,6 +20,7 @@ libdata/pkgconfig/libgnomekbdui.pc
 share/applications/gkbd-indicator-plugins-capplet.desktop
 %%DATADIR%%/ui/gkbd-indicator-plugins.ui
 %%DATADIR%%/ui/gkbd-indicator-plugins_add.ui
+%%DATADIR%%/ui/show-layout.ui
 share/locale/ar/LC_MESSAGES/libgnomekbd.mo
 share/locale/as/LC_MESSAGES/libgnomekbd.mo
 share/locale/ast/LC_MESSAGES/libgnomekbd.mo
