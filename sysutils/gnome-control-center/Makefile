@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.209 2010/05/29 18:16:41 kwm Exp $
 #
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	2.31.2
+PORTVERSION=	2.31.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -62,7 +62,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 	    	${WRKSRC}/capplets/common/gnome-theme-info.c
 	@${REINPLACE_CMD} -e 's|/usr/sbin|${PREFIX}/sbin|g' \
-		${WRKSRC}/capplets/display/org.gnome.randr.policy.in
+		${WRKSRC}/panels/display/org.gnome.randr.policy.in
 
 post-install:
 	@-update-desktop-database
