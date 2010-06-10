@@ -31,7 +31,6 @@ include/gtk-3.0/gdk/gdkcolor.h
 include/gtk-3.0/gdk/gdkcursor.h
 include/gtk-3.0/gdk/gdkdevice.h
 include/gtk-3.0/gdk/gdkdevicemanager.h
-include/gtk-3.0/gdk/gdkdeviceprivate.h
 include/gtk-3.0/gdk/gdkdisplay.h
 include/gtk-3.0/gdk/gdkdisplaymanager.h
 include/gtk-3.0/gdk/gdkdnd.h
@@ -72,6 +71,7 @@ include/gtk-3.0/gtk/gtkactiongroup.h
 include/gtk-3.0/gtk/gtkactivatable.h
 include/gtk-3.0/gtk/gtkadjustment.h
 include/gtk-3.0/gtk/gtkalignment.h
+include/gtk-3.0/gtk/gtkapplication.h
 include/gtk-3.0/gtk/gtkarrow.h
 include/gtk-3.0/gtk/gtkaspectframe.h
 include/gtk-3.0/gtk/gtkassistant.h
@@ -262,6 +262,7 @@ include/gtk-3.0/unix-print/gtk/gtkprintunixdialog.h
 include/gtk-3.0/unix-print/gtk/gtkunixprint.h
 lib/girepository-1.0/Gdk-3.0.typelib
 lib/girepository-1.0/GdkPixbuf-3.0.typelib
+lib/girepository-1.0/GdkX11-3.0.typelib
 lib/girepository-1.0/Gtk-3.0.typelib
 lib/gtk-3.0/%%GTK_VERSION%%/engines/libpixmap.a
 lib/gtk-3.0/%%GTK_VERSION%%/engines/libpixmap.la
@@ -400,6 +401,7 @@ libdata/pkgconfig/gtk+-x11-3.0.pc
 share/aclocal/gtk-3.0.m4
 share/gir-1.0/Gdk-3.0.gir
 share/gir-1.0/GdkPixbuf-3.0.gir
+share/gir-1.0/GdkX11-3.0.gir
 share/gir-1.0/Gtk-3.0.gir
 share/gtk-3.0/demo/alphatest.png
 share/gtk-3.0/demo/apple-red.png
