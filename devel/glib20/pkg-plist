@@ -45,7 +45,6 @@ include/glib-2.0/gio/gdbusmethodinvocation.h
 include/glib-2.0/gio/gdbusnameowning.h
 include/glib-2.0/gio/gdbusnamewatching.h
 include/glib-2.0/gio/gdbusproxy.h
-include/glib-2.0/gio/gdbusproxywatching.h
 include/glib-2.0/gio/gdbusserver.h
 include/glib-2.0/gio/gdbusutils.h
 include/glib-2.0/gio/gdrive.h
@@ -178,6 +177,7 @@ include/glib-2.0/glib/gvarianttype.h
 include/glib-2.0/glib/gwin32.h
 include/glib-2.0/glibconfig.h
 include/glib-2.0/gmodule.h
+include/glib-2.0/gobject/gbinding.h
 include/glib-2.0/gobject/gboxed.h
 include/glib-2.0/gobject/gclosure.h
 include/glib-2.0/gobject/genums.h
