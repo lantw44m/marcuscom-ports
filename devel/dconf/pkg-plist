@@ -6,6 +6,7 @@ include/dconf/dconf-readtype.h
 include/dconf/dconf-resetlist.h
 include/dconf/dconf.h
 lib/gio/modules/libdconfsettings.so
+lib/girepository-1.0/dconf-0.3.typelib
 lib/libdconf.a
 lib/libdconf.la
 lib/libdconf.so
@@ -14,6 +15,25 @@ libdata/pkgconfig/dconf.pc
 libexec/dconf-service
 share/dbus-1/services/ca.desrt.dconf.service
 share/dbus-1/system-services/ca.desrt.dconf.service
+share/gir-1.0/dconf-0.3.gir
+share/gtk-doc/html/dconf/annotation-glossary.html
+share/gtk-doc/html/dconf/api-index-full.html
+share/gtk-doc/html/dconf/ch01.html
+share/gtk-doc/html/dconf/dconf-dconf-client.html
+share/gtk-doc/html/dconf/dconf-paths.html
+share/gtk-doc/html/dconf/dconf.devhelp
+share/gtk-doc/html/dconf/dconf.devhelp2
+share/gtk-doc/html/dconf/home.png
+share/gtk-doc/html/dconf/index.html
+share/gtk-doc/html/dconf/index.sgml
+share/gtk-doc/html/dconf/left.png
+share/gtk-doc/html/dconf/object-tree.html
+share/gtk-doc/html/dconf/right.png
+share/gtk-doc/html/dconf/style.css
+share/gtk-doc/html/dconf/up.png
+@dirrm share/gtk-doc/html/dconf
+@dirrmtry share/gtk-doc/html
+@dirrmtry share/gtk-doc
 @dirrm include/dconf
 @exec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
 @unexec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true

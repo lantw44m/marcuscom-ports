@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.1 2010/05/28 22:45:39 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.2 2010/05/29 09:54:18 kwm Exp $
 #
 
 PORTNAME=	dconf
-PORTVERSION=	0.3.1
+PORTVERSION=	0.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,17 +15,17 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A configuration database system for GNOME
 
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 #USE_GETTEXT=	yes
 USE_GNOME=	gnomehack glib20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-#USE_AUTOTOOLS=	libtool:22
 
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-#MAN1=		gconftool-2.1
 
 post-install:
 	-${PREFIX}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
