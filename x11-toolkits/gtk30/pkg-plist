@@ -174,7 +174,6 @@ include/gtk-3.0/gtk/gtkprintoperation.h
 include/gtk-3.0/gtk/gtkprintoperationpreview.h
 include/gtk-3.0/gtk/gtkprintsettings.h
 include/gtk-3.0/gtk/gtkprivate.h
-include/gtk-3.0/gtk/gtkprogress.h
 include/gtk-3.0/gtk/gtkprogressbar.h
 include/gtk-3.0/gtk/gtkradioaction.h
 include/gtk-3.0/gtk/gtkradiobutton.h
