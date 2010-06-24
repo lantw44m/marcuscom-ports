@@ -1,0 +1,18 @@
+--- gir/Makefile.in.orig	2010-06-06 15:58:29.000000000 -0400
++++ gir/Makefile.in	2010-06-06 15:59:15.000000000 -0400
+@@ -436,14 +436,13 @@ GLib_2_0_gir_SCANNERFLAGS = --noclosure 
+ GLib_2_0_gir_PACKAGES = glib-2.0
+ GLib_2_0_gir_CFLAGS = $(CPPFLAGS) \
+             -I$(GLIB_INCLUDEDIR) \
+-            -I$(GLIB_LIBDIR)/glib-2.0/include \
+             -DGETTEXT_PACKAGE=Dummy \
+             -DGLIB_COMPILATION \
+             -D__G_I18N_LIB_H__
+ 
+ GLib_2_0_gir_ASSERTIONS = GLib-2.0.xpath
+ GLib_2_0_gir_FILES = \
+-                $(GLIB_LIBDIR)/glib-2.0/include/glibconfig.h \
++                $(GLIB_INCLUDEDIR)/glibconfig.h \
+ 	$(GLIB_INCLUDEDIR)/glib/*.h \
+                 glib-2.0.c
+ 
