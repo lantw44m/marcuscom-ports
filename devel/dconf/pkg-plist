@@ -1,4 +1,5 @@
 bin/dconf
+bin/dconf-editor
 include/dconf/dconf-client.h
 include/dconf/dconf-engine.h
 include/dconf/dconf-paths.h

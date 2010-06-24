@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.2 2010/05/29 09:54:18 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.3 2010/06/18 13:09:09 kwm Exp $
 #
 
 PORTNAME=	dconf
-PORTVERSION=	0.4
+PORTVERSION=	0.4.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,7 +15,9 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A configuration database system for GNOME
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
+		valac:${PORTSDIR}/lang/vala
+LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -28,6 +30,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-install:
-	-${PREFIX}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
+	-${LOCALBASE}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
 
 .include <bsd.port.mk>
