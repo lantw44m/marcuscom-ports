@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.497 2010/06/05 22:07:25 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.498 2010/06/07 12:52:41 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -91,7 +91,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
 		pygtk2 pygtksourceview vte
 
 # GNOME 3 components
-_USE_GNOME_ALL+= dconf gtk30
+_USE_GNOME_ALL+= dconf gtk30 gtksourceview3
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -453,6 +453,10 @@ gtksourceview_USE_GNOME_IMPL=libgnome libgnomeprintui
 gtksourceview2_LIB_DEPENDS=	gtksourceview-2.0.0:${PORTSDIR}/x11-toolkits/gtksourceview2
 gtksourceview2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-2.0.pc
 gtksourceview2_USE_GNOME_IMPL=gtk20 libxml2
+
+gtksourceview3_LIB_DEPENDS=	gtksoruceview-3.0.0:${PORTSDIR}/x11-toolkits/gtksourceview3
+gtksourceview3_DETECT=	${LOCALBASE}/libdata/pkgconfig/gtksoureview-3.0.pc
+gtksourceview3_USE_GNOME_IMPL=gtk30 libxml2
 
 pkgconfig_DETECT=			${LOCALBASE}/bin/pkg-config
 pkgconfig_BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkg-config
