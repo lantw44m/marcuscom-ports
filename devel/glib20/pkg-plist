@@ -6,7 +6,6 @@ bin/glib-gettextize
 bin/glib-mkenums
 bin/gobject-query
 bin/gsettings
-bin/gsettings-schema-convert
 bin/gtester
 bin/gtester-report
 etc/bash_completion.d/gdbus-bash-completion.sh
