@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.498 2010/06/07 12:52:41 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.499 2010/06/24 11:30:48 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -79,7 +79,7 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 glibwww \
 		oaf orbit pygnome pygtk
 
 # GNOME 2 components
-_USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
+_USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 gdkpixbuf2 \
 		gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop gnomedesktopsharp20 \
 		gnomedocutils gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk20 \
 		gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 gvfs \
@@ -291,6 +291,10 @@ dconf_USE_GNOME_IMPL=	glib20
 pango_LIB_DEPENDS=	pango-1.0.0:${PORTSDIR}/x11-toolkits/pango
 pango_DETECT=		${LOCALBASE}/libdata/pkgconfig/pango.pc
 pango_USE_GNOME_IMPL=	glib20
+
+gdkpixbuf2_LIB_DEPENDS=	gdk_pixbuf-2.0.0:${PORTSDIR}/graphics/gdk-pixbuf2
+gdkpixbuf2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gdk-pixbuf-2.0.pc
+gdkpixbuf2_USE_GNOME_IMPL=glib20
 
 gtk20_LIB_DEPENDS=	gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20
 gtk20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
