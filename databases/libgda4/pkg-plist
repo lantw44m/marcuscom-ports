@@ -24,6 +24,7 @@ include/libgda-%%VERSION%%/libgda-report/libgda-report.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-basic-form.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-cloud.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-combo.h
+include/libgda-%%VERSION%%/libgda-ui/gdaui-data-cell-renderer-util.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-data-entry.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-data-filter.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-data-proxy-info.h
