@@ -3,21 +3,20 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/libunique3/Makefile,v 1.1 2010/06/20 13:09:43 kwm Exp $
 #
 
-PORTNAME=	libunique3
-PORTVERSION=	2.90.0.a1
+PORTNAME=	libunique
+PORTVERSION=	2.90.1
 CATEGORIES=	x11-toolkits
-#MASTER_SITES=	GNOME/sources/${PORTNAME:S/3//}/${PORTVERSION:R}/
-MASTER_SITES=	http://rainbow-runner.nl/~kwm/
-DISTNAME=	${PORTNAME:S/3//}-${PORTVERSION}
+MASTER_SITES=	GNOME
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Library for single instance applications
 
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus
 
+LATEST_LINK=	libunique3
 USE_XORG=	ice
 USE_BZIP2=	yes
 USE_GMAKE=	yes
