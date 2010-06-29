@@ -1,16 +1,16 @@
---- girepository/ginfo.c.orig	2010-06-01 15:48:36.000000000 -0400
-+++ girepository/ginfo.c	2010-06-06 16:02:36.000000000 -0400
-@@ -2110,6 +2110,9 @@ g_constant_info_get_type (GIConstantInfo
-   return g_type_info_new ((GIBaseInfo*)info, rinfo->typelib, rinfo->offset + 8);
+--- girepository/giconstantinfo.c.orig	2010-06-29 22:02:31.000000000 +0200
++++ girepository/giconstantinfo.c	2010-06-29 22:08:27.000000000 +0200
+@@ -64,6 +64,9 @@ g_constant_info_get_type (GIConstantInfo
+   return _g_type_info_new ((GIBaseInfo*)info, rinfo->typelib, rinfo->offset + 8);
  }
  
 +#define DO_ALIGNED_COPY(dest_addr, src_addr, type) \
-+       memcpy((dest_addr), (src_addr), sizeof(type))
++   memcpy((dest_addr), (src_addr), sizeof(type))
 +
- gint
- g_constant_info_get_value (GIConstantInfo *info,
- 			   GArgument      *value)
-@@ -2148,16 +2151,16 @@ g_constant_info_get_value (GIConstantInf
+ /**
+  * g_constant_info_get_value:
+  * @info: a #GIConstantInfo
+@@ -118,16 +121,16 @@ g_constant_info_get_value (GIConstantInf
  	      value->v_uint32 = *(guint32*)&rinfo->typelib->data[blob->offset];
  	      break;
  	    case GI_TYPE_TAG_INT64:
@@ -31,7 +31,7 @@
  	      break;
  	    case GI_TYPE_TAG_TIME_T:
  	      value->v_long = *(long*)&rinfo->typelib->data[blob->offset];
-@@ -2175,10 +2178,10 @@ g_constant_info_get_value (GIConstantInf
+@@ -145,10 +148,10 @@ g_constant_info_get_value (GIConstantInf
  	      value->v_uint = *(guint*)&rinfo->typelib->data[blob->offset];
  	      break;
  	    case GI_TYPE_TAG_LONG:
