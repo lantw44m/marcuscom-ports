@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.115 2010/05/29 10:05:51 kwm Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.116 2010/06/19 07:02:36 kwm Exp $
 #
 
 PORTNAME=	gconf2
-PORTVERSION=	2.31.4
+PORTVERSION=	2.31.5
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -37,7 +37,8 @@ CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-MAN1=		gconftool-2.1 gsettings-data-convert.1
+MAN1=		gconftool-2.1 gsettings-data-convert.1 \
+		gsettings-schema-convert.1
 
 OPTIONS=	LDAP "Enable LDAP support" off
 
