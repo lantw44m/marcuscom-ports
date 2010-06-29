@@ -151,6 +151,8 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-text.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-tube.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-tubes.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-cli-anonymity.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-cli-service-point.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-client.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-aliasing.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-avatars.html
@@ -191,6 +193,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-simple-handler.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-simple-observer.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-account-manager.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-account.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-anonymity.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-channel-contactlist.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-channel-dispatch-operation.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-channel-dispatcher.html
@@ -209,6 +212,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-connection.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-debug.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-generic.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-media-interfaces.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-service-point.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-svc.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-util.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib.devhelp
