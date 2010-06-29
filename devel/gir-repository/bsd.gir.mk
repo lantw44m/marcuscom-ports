@@ -1,6 +1,6 @@
 PORTNAME=	gir-repository
 PORTVERSION=	0.6.5
-PORTREVISION?=	4
+PORTREVISION?=	5
 
 MAINTAINER=	gnome@FreeBSD.org
 
