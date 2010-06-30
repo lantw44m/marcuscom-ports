@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-themes/gtk-engines3/Makefile,v 1.1 2010/06/18 14:57:25 kwm Exp $
 #
 
 PORTNAME=	gtk-engines3
-PORTVERSION=	2.90.2.1
+PORTVERSION=	2.90.3.1
 CATEGORIES=	x11-themes
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -17,6 +17,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Theme engine for the GTK+-3.0 toolkit
 
+LICENSE=	LGPL21
+LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gtk30 intlhack ltasneededhack
