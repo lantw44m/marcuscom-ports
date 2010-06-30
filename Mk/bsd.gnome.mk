@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.499 2010/06/24 11:30:48 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.500 2010/06/27 18:40:25 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -91,7 +91,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 gdkpix
 		pygtk2 pygtksourceview vte
 
 # GNOME 3 components
-_USE_GNOME_ALL+= dconf gtk30 gtksourceview3
+_USE_GNOME_ALL+= dconf gtk30 gtkhtml4 gtksourceview3
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -497,6 +497,10 @@ intlhack_USE_GNOME_IMPL=intltool
 gtkhtml3_LIB_DEPENDS=	gtkhtml-3.14.19:${PORTSDIR}/www/gtkhtml3
 gtkhtml3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgtkhtml-3.14.pc
 gtkhtml3_USE_GNOME_IMPL=libglade2
+
+gtkhtml4_LIB_DEPENDS=	gtkhtml-4.0.0:${PORTSDIR}/www/gtkhtml4
+gtkhtml4_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgtkhtml-4.0.pc
+gtkhtml4_USE_GNOME_IMPL=gtk30 libxml2
 
 gnomespeech_LIB_DEPENDS=gnomespeech.7:${PORTSDIR}/accessibility/gnome-speech
 gnomespeech_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-speech-1.0.pc
