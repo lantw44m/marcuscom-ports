@@ -28,6 +28,7 @@ include/clutter-1.0/clutter/clutter-color.h
 include/clutter-1.0/clutter/clutter-colorize-effect.h
 include/clutter-1.0/clutter/clutter-container.h
 include/clutter-1.0/clutter/clutter-constraint.h
+include/clutter-1.0/clutter/clutter-deform-effect.h
 include/clutter-1.0/clutter/clutter-deprecated.h
 include/clutter-1.0/clutter/clutter-desaturate-effect.h
 include/clutter-1.0/clutter/clutter-device-manager.h
@@ -49,14 +50,17 @@ include/clutter-1.0/clutter/clutter-layout-manager.h
 include/clutter-1.0/clutter/clutter-layout-meta.h
 include/clutter-1.0/clutter/clutter-list-model.h
 include/clutter-1.0/clutter/clutter-main.h
+include/clutter-1.0/clutter/clutter-marshal.h
 include/clutter-1.0/clutter/clutter-media.h
 include/clutter-1.0/clutter/clutter-model.h
 include/clutter-1.0/clutter/clutter-offscreen-effect.h
+include/clutter-1.0/clutter/clutter-page-turn-effect.h
 include/clutter-1.0/clutter/clutter-path.h
 include/clutter-1.0/clutter/clutter-rectangle.h
 include/clutter-1.0/clutter/clutter-score.h
 include/clutter-1.0/clutter/clutter-script.h
 include/clutter-1.0/clutter/clutter-scriptable.h
+include/clutter-1.0/clutter/clutter-settings.h
 include/clutter-1.0/clutter/clutter-shader-effect.h
 include/clutter-1.0/clutter/clutter-shader-types.h
 include/clutter-1.0/clutter/clutter-shader.h
@@ -96,6 +100,7 @@ include/clutter-1.0/cogl/cogl-pixel-buffer.h
 include/clutter-1.0/cogl/cogl-primitives.h
 include/clutter-1.0/cogl/cogl-shader.h
 include/clutter-1.0/cogl/cogl-texture.h
+include/clutter-1.0/cogl/cogl-texture-pixmap-x11.h
 include/clutter-1.0/cogl/cogl-types.h
 include/clutter-1.0/cogl/cogl-vector.h
 include/clutter-1.0/cogl/cogl-vertex-buffer.h
@@ -137,6 +142,7 @@ libdata/pkgconfig/cogl-gl-1.0.pc
 %%DOCSDIR%%/ClutterColorizeEffect.html
 %%DOCSDIR%%/ClutterContainer.html
 %%DOCSDIR%%/ClutterConstraint.html
+%%DOCSDIR%%/ClutterDeformEffect.html
 %%DOCSDIR%%/ClutterDeviceManager.html
 %%DOCSDIR%%/ClutterDesaturateEffect.html
 %%DOCSDIR%%/ClutterDragAction.html
@@ -152,11 +158,13 @@ libdata/pkgconfig/cogl-gl-1.0.pc
 %%DOCSDIR%%/ClutterModel.html
 %%DOCSDIR%%/ClutterModelIter.html
 %%DOCSDIR%%/ClutterOffscreenEffect.html
+%%DOCSDIR%%/ClutterPageTurnEffect.html
 %%DOCSDIR%%/ClutterPath.html
 %%DOCSDIR%%/ClutterRectangle.html
 %%DOCSDIR%%/ClutterScore.html
 %%DOCSDIR%%/ClutterScript.html
 %%DOCSDIR%%/ClutterScriptable.html
+%%DOCSDIR%%/ClutterSettings.html
 %%DOCSDIR%%/ClutterShaderEffect.html
 %%DOCSDIR%%/ClutterStage.html
 %%DOCSDIR%%/ClutterState.html
@@ -184,7 +192,6 @@ libdata/pkgconfig/cogl-gl-1.0.pc
 %%DOCSDIR%%/clutter-ClutterBackend.html
 %%DOCSDIR%%/clutter-Colors.html
 %%DOCSDIR%%/clutter-EGL-Specific-Support.html
-%%DOCSDIR%%/clutter-EGLX-Specific-Support.html
 %%DOCSDIR%%/clutter-Events.html
 %%DOCSDIR%%/clutter-Features.html
 %%DOCSDIR%%/clutter-GLX-Specific-Support.html
@@ -265,7 +272,9 @@ share/doc/cogl/cogl-Vectors.html
 share/doc/cogl/cogl-Vertex-Buffers.html
 share/doc/cogl/cogl.devhelp
 share/doc/cogl/cogl.devhelp2
-share/doc/cogl/fill-rule.png
+share/doc/cogl/cogl_ortho.png
+share/doc/cogl/fill-rule-even-odd.png
+share/doc/cogl/fill-rule-non-zero.png
 share/doc/cogl/home.png
 share/doc/cogl/index.html
 share/doc/cogl/index.sgml
