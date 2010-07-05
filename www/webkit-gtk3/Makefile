@@ -10,7 +10,7 @@ PORTNAME=	webkit
 PORTVERSION=	1.3.2
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
-PKGNAMESUFFIX=	-gtk2
+PKGNAMESUFFIX=	-gtk3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An opensource browser engine
@@ -28,7 +28,7 @@ USE_XORG=	xt
 USE_BISON=	build
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:22
-USE_GNOME=	gtk20 libxslt ltverhack:13
+USE_GNOME=	gtk30 libxslt ltverhack:0
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -40,10 +40,10 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 CONFIGURE_ARGS=	--enable-icon-database \
 		--enable-svg \
 		--enable-svg-fonts \
-		--with-gtk=2.0
+		--with-gtk=3.0
 MAKEFILE=	GNUmakefile
 
-BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
+BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk3
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
 OPTIONS=	VIDEO "Enable video support" on \
@@ -80,8 +80,6 @@ PLIST_SUB+=	STATIC="@comment "
 .endif
 
 .if ${OSVERSION} < 700000
-EXTRA_PATCHES+=	${FILESDIR}/extra-patch-JavaScriptCore_yarr_RegexJIT.h \
-		${FILESDIR}/extra-patch-JavaScriptCore_assembler_MacroAssemblerCodeRef.h
 BROKEN=		does not compile on 6.X
 .endif
 
@@ -92,7 +90,7 @@ post-patch:
 		${WRKSRC}/WebCore/make-hash-tools.pl \
 		${WRKSRC}/WebCore/css/makevalues.pl \
 		${WRKSRC}/WebCore/css/makeprop.pl
-	@${REINPLACE_CMD} -e 's|GETTEXT_PACKAGE=$$PACKAGE|GETTEXT_PACKAGE=$$PACKAGE-1.0|g' \
+	@${REINPLACE_CMD} -e 's|GETTEXT_PACKAGE=$$PACKAGE|GETTEXT_PACKAGE=$$PACKAGE-3.0|g' \
 		${WRKSRC}/configure
 	@${FIND} ${WRKSRC} -name GNUmakefile.* | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
