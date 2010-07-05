@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.230 2010/06/06 09:49:54 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.228 2010/05/09 00:11:47 marcus Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.31.3
-PORTREVISION?=	0
+PORTVERSION=	2.30.2
+PORTREVISION?=	2
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,8 +19,7 @@ COMMENT?=	An extremely lightweight and simple web browser for GNOME 2
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2 \
-		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
+		webkitgtk-1.0.13:${PORTSDIR}/www/webkit-gtk2 \
 		notify.1:${PORTSDIR}/devel/libnotify \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
@@ -87,6 +86,7 @@ post-patch:
 		 's|-lpthread|${PTHREAD_LIBS}|g'
 	@${REINPLACE_CMD} -e 's|execinfo.h|#|g ; \
 	    	s|-ldl"$$|"|g' \
+		-e 's|EPIPHANY_API_VERSION=2.29|EPIPHANY_API_VERSION=2.30|g' \
 		${WRKSRC}/configure
 
 post-install:
