@@ -2,13 +2,13 @@
 # Date created:				09 January 2005
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD$
-#    $MCom: ports/graphics/evince/Makefile,v 1.139 2010/06/08 09:26:39 kwm Exp $
+# $FreeBSD: ports/graphics/evince/Makefile,v 1.57 2010/07/06 00:37:53 marcus Exp $
+#    $MCom: ports/graphics/evince/Makefile,v 1.137 2010/04/27 14:14:36 kwm Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	2.31.3
-PORTREVISION=	1
+PORTVERSION=	2.30.1
+PORTREVISION=	3
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 multi-format document viewer
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	poppler-glib.4:${PORTSDIR}/graphics/poppler-gtk \
+LIB_DEPENDS=	poppler-glib.5:${PORTSDIR}/graphics/poppler-gtk \
 		spectre.1:${PORTSDIR}/print/libspectre
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
@@ -32,8 +32,10 @@ USE_GNOME=	gnomehack intlhack gnomeprefix desktopfileutils \
 		gnomedocutils ltasneededhack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--without-gconf
-GLIB_SCHEMAS=	org.gnome.Evince.gschema.xml
+
+GCONF_SCHEMAS=	evince.schemas \
+		evince-thumbnailer.schemas \
+		evince-thumbnailer-ps.schemas
 
 MAN1=		evince.1
 
@@ -57,7 +59,7 @@ BUILD_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
 RUN_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
 
 CONFIGURE_ARGS+=	--enable-dvi
-#GCONF_SCHEMAS+=	evince-thumbnailer-dvi.schemas
+GCONF_SCHEMAS+=	evince-thumbnailer-dvi.schemas
 PLIST_SUB+=		DVI=""
 . if defined(WITH_T1LIB)
 LIB_DEPENDS+=	t1.5:${PORTSDIR}/devel/t1lib
@@ -76,7 +78,7 @@ PLIST_SUB+=		NAUTILUS=""
 BUILD_DEPENDS+=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 RUN_DEPENDS+=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 .if !defined(WITHOUT_KEYRING)
-LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
+LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 .else
 CONFIGURE_ARGS+=	--without-keyring
 .endif
@@ -95,7 +97,7 @@ PLIST_SUB+=		IMPRESS="@comment "
 .if defined(WITH_DJVU)
 LIB_DEPENDS+=		djvulibre.22:${PORTSDIR}/graphics/djvulibre-nox11
 CONFIGURE_ARGS+=	--enable-djvu
-#GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
+GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
 PLIST_SUB+=		DJVU=""
 .else
 CONFIGURE_ARGS+=	--disable-djvu
@@ -109,7 +111,7 @@ LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 .if !defined(WITHOUT_COMICS)
 RUN_DEPENDS+=		unzip:${PORTSDIR}/archivers/unzip
 CONFIGURE_ARGS+=	--enable-comics
-#GCONF_SCHEMAS+=		evince-thumbnailer-comics.schemas
+GCONF_SCHEMAS+=		evince-thumbnailer-comics.schemas
 PLIST_SUB+=		COMICS=""
 .else
 CONFIGURE_ARGS+=	--disable-comics
@@ -122,12 +124,6 @@ post-patch:
 	@${REINPLACE_CMD} -e '/^DOC_MODULE_VERSION/d' \
 		${WRKSRC}/help/reference/libdocument/Makefile.in \
 		${WRKSRC}/help/reference/libview/Makefile.in
-
-pre-install:
-	@cd ${WRKSRC}/data && ${GMAKE} org.gnome.Evince.gschema.xml
-	@${MKDIR} ${PREFIX}/share/glib-2.0/schemas
-	@${INSTALL_DATA} ${WRKSRC}/data/org.gnome.Evince.gschema.xml \
-		${PREFIX}/share/glib-2.0/schemas/
 
 post-install:
 	@-update-desktop-database

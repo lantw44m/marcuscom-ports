@@ -90,7 +90,6 @@ libdata/pkgconfig/evince-document-2.30.pc
 libdata/pkgconfig/evince-view-2.30.pc
 libexec/evince-convert-metadata
 libexec/evinced
-share/GConf/gsettings/evince.convert
 share/applications/evince.desktop
 share/dbus-1/services/org.gnome.evince.Daemon.service
 %%DOCSDIR%%/EggFindBar.html
