@@ -3,12 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD: ports/graphics/gimp-app/Makefile,v 1.247 2010/06/24 17:12:09 mezz Exp $
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.48 2009/09/23 15:44:49 kwm Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.50 2010/07/05 11:34:42 kwm Exp $
 #
 
 PORTNAME=	gimp-app
 DISTVERSION=	2.6.9
-PORTREVISION?=	1
+PORTREVISION?=	2
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -155,7 +155,7 @@ CONFIGURE_ARGS+=	--disable-mp
 .endif
 
 .if defined(WITH_POPPLER)
-LIB_DEPENDS+=		poppler-glib.4:${PORTSDIR}/graphics/poppler-gtk
+LIB_DEPENDS+=		poppler-glib.5:${PORTSDIR}/graphics/poppler-gtk
 PLIST_SUB+=		POPPLER=""
 .else
 CONFIGURE_ARGS+=	--without-poppler

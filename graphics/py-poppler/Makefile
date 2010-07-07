@@ -1,0 +1,28 @@
+# New ports collection makefile for:	py-poppler
+# Date created:		2008-04-14
+# Whom:			Romain Tartiere <romain@blogreen.org>
+#
+# $FreeBSD: ports/graphics/py-poppler/Makefile,v 1.12 2010/03/28 06:37:43 dinoex Exp $
+#
+
+PORTNAME=	poppler
+PORTVERSION=	0.10.1
+PORTREVISION=	3
+CATEGORIES=	graphics python
+MASTER_SITES=	https://launchpad.net/poppler-python/trunk/development/+download/ \
+		http://launchpadlibrarian.net/30270080/ \
+		http://romain.blogreen.org/distfiles/
+PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	py${PORTNAME}-${PORTVERSION}
+
+MAINTAINER=	romain@FreeBSD.org
+COMMENT=	Python bindings for the Poppler PDF rendering library
+
+LIB_DEPENDS=	poppler-glib.5:${PORTSDIR}/graphics/poppler-gtk
+
+USE_PYTHON=	yes
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+USE_GNOME=	pkgconfig atk pygtk2
+
+.include <bsd.port.mk>

@@ -61,7 +61,7 @@ _USE_GIR_ALL=	dbus atk pango pangoxft poppler gtk gconf soup babl nautilusextens
 		goocanvas gssdp gupnp avahi unique gmenu wnck
 
 .if ${GIR_NAME} == "poppler"
-LIB_DEPENDS+=	poppler-glib.4:${PORTSDIR}/graphics/poppler-gtk
+LIB_DEPENDS+=	poppler-glib.5:${PORTSDIR}/graphics/poppler-gtk
 USE_GNOME+=	gtk20
 GIR_FILES=	Poppler-0.8
 CLEAR_DEPS+=	Gdk-2.0
