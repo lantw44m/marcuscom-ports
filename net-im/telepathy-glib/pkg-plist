@@ -158,6 +158,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-aliasing.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-avatars.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-balance.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-caps.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-cellular.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-contact-info.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-contacts.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-location.html
