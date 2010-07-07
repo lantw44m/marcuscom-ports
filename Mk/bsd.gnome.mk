@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.500 2010/06/27 18:40:25 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.501 2010/06/30 07:38:08 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -91,7 +91,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 gdkpix
 		pygtk2 pygtksourceview vte
 
 # GNOME 3 components
-_USE_GNOME_ALL+= dconf gtk30 gtkhtml4 gtksourceview3
+_USE_GNOME_ALL+= dconf gtk30 gtkhtml4 gtksourceview3 librsvg3
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -407,6 +407,11 @@ libzvt_USE_GNOME_IMPL=	gtk20
 librsvg2_LIB_DEPENDS=	rsvg-2.2:${PORTSDIR}/graphics/librsvg2
 librsvg2_DETECT=	${LOCALBASE}/libdata/pkgconfig/librsvg-2.0.pc
 librsvg2_USE_GNOME_IMPL=libgsf gtk20
+
+librsvg3_DETECT=	${LOCALBASE}bin/rsvg-view-3
+librsvg3_BUILD_DEPENDS=	${librsvg3_DETECT}:${PORTSDIR}/graphics/librsvg3
+librsvg3_RUN_DEPENDS=	${librsvg3_DETECT}:${PORTSDIR}/graphics/librsvg3
+librsvg3_USE_GNOME_IMPL=gtk30 librsvg2
 
 eel2_LIB_DEPENDS=	eel-2.2:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${LOCALBASE}/libdata/pkgconfig/eel-2.0.pc
