@@ -1,15 +1,14 @@
---- glib/Makefile.in.orig	2010-07-07 14:12:26.000000000 +0200
-+++ glib/Makefile.in	2010-07-07 14:14:09.000000000 +0200
-@@ -81,8 +81,6 @@
+--- glib//Makefile.in.orig	2010-07-07 14:30:15.000000000 +0200
++++ glib/Makefile.in	2010-07-07 14:33:14.000000000 +0200
+@@ -81,7 +81,6 @@
  LTLIBRARIES = $(lib_LTLIBRARIES)
  am__DEPENDENCIES_1 =
  libpoppler_glib_la_DEPENDENCIES =  \
 -	$(top_builddir)/poppler/libpoppler.la \
--	$(top_builddir)/poppler/libpoppler-cairo.la \
+ 	$(top_builddir)/poppler/libpoppler-cairo.la \
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
- am__objects_1 = poppler-enums.lo
-@@ -104,8 +102,7 @@
+@@ -104,8 +103,7 @@
  @BUILD_WITH_GDK_TRUE@	test-poppler-glib.$(OBJEXT)
  test_poppler_glib_OBJECTS = $(am_test_poppler_glib_OBJECTS)
  @BUILD_WITH_GDK_TRUE@test_poppler_glib_DEPENDENCIES =  \
@@ -19,18 +18,25 @@
  @BUILD_WITH_GDK_TRUE@	$(am__DEPENDENCIES_1) \
  @BUILD_WITH_GDK_TRUE@	$(am__DEPENDENCIES_1)
  DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir) -I$(top_builddir)/poppler
-@@ -436,8 +433,8 @@
+@@ -383,7 +381,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ win32_libs = @win32_libs@
+-SUBDIRS = . reference demo
++SUBDIRS = . reference
+ INCLUDES = \
+ 	-DG_LOG_DOMAIN=\"Poppler\"		\
+ 	-I$(top_srcdir)				\
+@@ -436,7 +434,7 @@
  	poppler-private.h
  
  libpoppler_glib_la_LIBADD = \
 -	$(top_builddir)/poppler/libpoppler.la		\
--	$(top_builddir)/poppler/libpoppler-cairo.la	\
 +	-lpoppler	\
-+	-lpoppler-cairo	\
+ 	$(top_builddir)/poppler/libpoppler-cairo.la	\
  	$(POPPLER_GLIB_LIBS)				\
  	$(GDK_LIBS)					\
- 	$(FREETYPE_LIBS)				\
-@@ -448,7 +445,7 @@
+@@ -448,7 +446,7 @@
  @BUILD_WITH_GDK_TRUE@       test-poppler-glib.cc
  
  @BUILD_WITH_GDK_TRUE@test_poppler_glib_LDADD = \
