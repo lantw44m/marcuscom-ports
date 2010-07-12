@@ -3,11 +3,11 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.60 2010/07/07 12:25:48 kwm Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.61 2010/07/07 13:03:18 kwm Exp $
 #
 
 PORTNAME=	poppler
-PORTVERSION=	0.14.0
+PORTVERSION=	0.14.1
 PORTREVISION?=	0
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
@@ -20,6 +20,8 @@ LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
 		lcms.1:${PORTSDIR}/graphics/lcms
 RUN_DEPENDS=	poppler-data>0:${PORTSDIR}/graphics/poppler-data
 
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnometarget libxml2 ltverhack
 USE_AUTOTOOLS=	libtool:22
