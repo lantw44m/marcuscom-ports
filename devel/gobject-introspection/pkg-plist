@@ -101,7 +101,7 @@ lib/gobject-introspection/giscanner/xmlwriter.pyo
 lib/libgirepository-1.0.a
 lib/libgirepository-1.0.la
 lib/libgirepository-1.0.so
-lib/libgirepository-1.0.so.0
+lib/libgirepository-1.0.so.1
 lib/libgirepository-everything-1.0.a
 lib/libgirepository-everything-1.0.la
 lib/libgirepository-everything-1.0.so
@@ -130,7 +130,50 @@ share/gir-1.0/xft-2.0.gir
 share/gir-1.0/xlib-2.0.gir
 share/gir-1.0/xrandr-1.3.gir
 share/gobject-introspection-1.0/Makefile.introspection
-@dirrm share/gobject-introspection-1.0
+share/gtk-doc/html/gi/annotation-glossary.html
+share/gtk-doc/html/gi/gi-GIArgInfo.html
+share/gtk-doc/html/gi/gi-GIBaseInfo.html
+share/gtk-doc/html/gi/gi-GICallableInfo.html
+share/gtk-doc/html/gi/gi-GIConstantInfo.html
+share/gtk-doc/html/gi/gi-GIEnumInfo.html
+share/gtk-doc/html/gi/gi-GIErrorDomainInfo.html
+share/gtk-doc/html/gi/gi-GIFieldInfo.html
+share/gtk-doc/html/gi/gi-GIFunctionInfo.html
+share/gtk-doc/html/gi/gi-GIInterfaceInfo.html
+share/gtk-doc/html/gi/gi-GIObjectInfo.html
+share/gtk-doc/html/gi/gi-GIPropertyInfo.html
+share/gtk-doc/html/gi/gi-GIRegisteredTypeInfo.html
+share/gtk-doc/html/gi/gi-GISignalInfo.html
+share/gtk-doc/html/gi/gi-GITypeInfo.html
+share/gtk-doc/html/gi/gi-GIVFuncInfo.html
+share/gtk-doc/html/gi/gi-ffi.html
+share/gtk-doc/html/gi/gi-gir-reference.html
+share/gtk-doc/html/gi/gi-gir.html
+share/gtk-doc/html/gi/gi-girepository.html
+share/gtk-doc/html/gi/gi-girffi.html
+share/gtk-doc/html/gi/gi-gistructinfo.html
+share/gtk-doc/html/gi/gi-giunioninfo.html
+share/gtk-doc/html/gi/gi-gtypelib.html
+share/gtk-doc/html/gi/gi-libgirepository.html
+share/gtk-doc/html/gi/gi-overview.html
+share/gtk-doc/html/gi/gi-repository-structs.html
+share/gtk-doc/html/gi/gi-struct-hierarchy.html
+share/gtk-doc/html/gi/gi-typelib.html
+share/gtk-doc/html/gi/gi.devhelp
+share/gtk-doc/html/gi/gi.devhelp2
+share/gtk-doc/html/gi/girepository.html
+share/gtk-doc/html/gi/glib.html
+share/gtk-doc/html/gi/home.png
+share/gtk-doc/html/gi/index.html
+share/gtk-doc/html/gi/index.sgml
+share/gtk-doc/html/gi/left.png
+share/gtk-doc/html/gi/overview.png
+share/gtk-doc/html/gi/right.png
+share/gtk-doc/html/gi/style.css
+share/gtk-doc/html/gi/up.png
+@dirrm share/gtk-doc/html/gi
+@dirrmtry share/gtk-doc/html
+@dirrmtry share/gtk-doc
 @dirrm include/gobject-introspection-1.0
 @dirrmtry lib/girepository-1.0
 @dirrm lib/gobject-introspection/giscanner
