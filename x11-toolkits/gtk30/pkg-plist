@@ -20,7 +20,6 @@ include/gtk-3.0/gdk/gdkdnd.h
 include/gtk-3.0/gdk/gdkdrawable.h
 include/gtk-3.0/gdk/gdkenumtypes.h
 include/gtk-3.0/gdk/gdkevents.h
-include/gtk-3.0/gdk/gdkfont.h
 include/gtk-3.0/gdk/gdkgc.h
 include/gtk-3.0/gdk/gdkimage.h
 include/gtk-3.0/gdk/gdkinput.h
@@ -31,7 +30,6 @@ include/gtk-3.0/gdk/gdkpixbuf.h
 include/gtk-3.0/gdk/gdkpixmap.h
 include/gtk-3.0/gdk/gdkprivate.h
 include/gtk-3.0/gdk/gdkproperty.h
-include/gtk-3.0/gdk/gdkregion.h
 include/gtk-3.0/gdk/gdkrgb.h
 include/gtk-3.0/gdk/gdkscreen.h
 include/gtk-3.0/gdk/gdkselection.h
