@@ -32,6 +32,7 @@ libdata/pkgconfig/cairo-png.pc
 libdata/pkgconfig/cairo-ps.pc
 libdata/pkgconfig/cairo-svg.pc
 %%XCB%%libdata/pkgconfig/cairo-xcb.pc
+%%XCB%%libdata/pkgconfig/cairo-xcb-shm.pc
 %%X11%%libdata/pkgconfig/cairo-xlib.pc
 %%X11%%libdata/pkgconfig/cairo-xlib-xrender.pc
 libdata/pkgconfig/cairo-xml.pc
