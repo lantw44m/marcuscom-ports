@@ -1,15 +1,15 @@
---- Makefile.in.orig	2008-02-12 00:16:23.000000000 +0100
-+++ Makefile.in	2008-02-12 00:16:23.000000000 +0100
-@@ -338,7 +338,7 @@ EXTRA_DIST = ChangeLog.pre-2-14 ChangeLo
- 	gio-2.0-uninstalled.pc.in gio-unix-2.0-uninstalled.pc.in
+--- Makefile.in.orig	2010-07-12 08:06:03.000000000 +0200
++++ Makefile.in	2010-07-12 08:07:23.000000000 +0200
+@@ -415,7 +415,7 @@ EXTRA_DIST = ChangeLog.pre-2-20 ChangeLo
  TEST_PROGS = 
  AUTOMAKE_OPTIONS = 1.7
+ ACLOCAL_AMFLAGS = -I m4macros
 -SUBDIRS = . m4macros glib gmodule gthread gobject gio tests po docs
 +SUBDIRS = . m4macros glib gmodule gthread gobject gio po docs
  DIST_SUBDIRS = $(SUBDIRS) build
  bin_SCRIPTS = glib-gettextize
  AM_CPPFLAGS = \
-@@ -356,7 +356,8 @@ BUILT_EXTRA_DIST = \
+@@ -434,7 +434,8 @@ BUILT_EXTRA_DIST = \
  	config.h.win32		\
  	gtk-doc.make
  
