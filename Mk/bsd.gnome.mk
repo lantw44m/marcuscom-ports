@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.503 2010/07/13 15:25:01 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.504 2010/07/13 15:33:58 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -91,7 +91,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 gdkpix
 		pygtk2 pygtksourceview vte
 
 # GNOME 3 components
-_USE_GNOME_ALL+= dconf evolutiondataserver3 gtk30 gtkhtml4 gtksourceview3 librsvg3
+_USE_GNOME_ALL+= dconf evolutiondataserver3 gnomedesktop3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 librsvg3
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -387,6 +387,11 @@ gnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-2.0.pc
 gnomedesktop_USE_GNOME_IMPL=	gconf2 gnomedocutils pygtk2
 gnomedesktop_GNOME_DESKTOP_VERSION=2
 
+gnomedesktop3_LIB_DEPENDS=	gnome-desktop-3.0:${PORTSDIR}/x11/gnome-desktop3
+gnomedesktop3_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-3.0.pc
+gnomedesktop3_USE_GNOME_IMPL=	gconf2 gnomedocutils pygtk2 gtk30
+gnomedesktop3_GNOME_DESKTOP_VERSION=3
+
 gnomedesktopsharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-sharp-2.0.pc
 gnomedesktopsharp20_BUILD_DEPENDS=	${gnomedesktopsharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-desktop-sharp20
 gnomedesktopsharp20_RUN_DEPENDS=	${gnomedesktopsharp20_DETECT}:${PORTSDIR}/x11-toolkits/gnome-desktop-sharp20
@@ -417,10 +422,15 @@ eel2_LIB_DEPENDS=	eel-2.2:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${LOCALBASE}/libdata/pkgconfig/eel-2.0.pc
 eel2_USE_GNOME_IMPL=	gnomedesktop
 
-gnomepanel_LIB_DEPENDS=	panel-applet-3.0:${PORTSDIR}/x11/gnome-panel
-gnomepanel_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-3.0.pc
+gnomepanel_LIB_DEPENDS=	panel-applet-2.0:${PORTSDIR}/x11/gnome-panel
+gnomepanel_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-2.0.pc
 gnomepanel_USE_GNOME_IMPL=gnomedesktop libwnck gnomemenus gnomedocutils librsvg2
 gnomepanel_GNOME_DESKTOP_VERSION=2
+
+gnomepanel3_LIB_DEPENDS=panel-applet-3.0:${PORTSDIR}/x11/gnome-panel3
+gnomepanel3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-3.0.pc
+gnomepanel3_USE_GNOME_IMPL=gnomedesktop libwnck gnomemenus gnomedocutils librsvg2
+gnomepanel3_GNOME_DESKTOP_VERSION=3
 
 nautilus2_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus
 nautilus2_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-extension.pc
