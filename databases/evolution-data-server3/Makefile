@@ -2,21 +2,21 @@
 # Date created:				09 December 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/evolution-data-server/Makefile,v 1.75 2010/05/31 01:57:45 ade Exp $
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.194 2010/04/26 13:45:12 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.197 2010/06/10 10:56:54 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	2.30.1
-PORTREVISION=	2
+PORTVERSION=	2.31.5
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
-LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
+LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
+		gdata.7:${PORTSDIR}/devel/libgdata \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		ical.44:${PORTSDIR}/devel/libical \
 		nss3.1:${PORTSDIR}/security/nss \
@@ -24,29 +24,33 @@ LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 
-CONFLICTS=      evolution-data-server-2.31.*
+CONFLICTS=	evolution-data-server-2.30.*
 
+LATEST_LINK=	evolution-data-server3
+LICENSE=	LGPL20
+LICENSE_FILE=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	build
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack ltverhack ltasneededhack gconf2 \
-		libxml2
+		libxml2 gtk30
 USE_OPENLDAP=	yes
 USE_AUTOTOOLS=	libtool:22
 USE_BDB=	41+
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static \
+		--enable-gtk3 \
 		--enable-gnome-keyring=yes \
 		--with-openldap=yes \
 		--with-libdb=${LOCALBASE}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
-PLIST_SUB=	VERSION="2.30" EVO_VERSION="1.2"
+PLIST_SUB=	VERSION="3.0" EVO_VERSION="1.2"
 
 #OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
-OPTIONS=	WEATHER "Enable weather calendar backend" on
+#OPTIONS=	WEATHER "Enable weather calendar backend" on
 
 .include <bsd.port.pre.mk>
 
@@ -68,14 +72,14 @@ KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 PLIST_SUB+=		IMAP4="@comment "
 #.endif
 
-.if defined(WITH_WEATHER)
-LIB_DEPENDS+=		gweather.1:${PORTSDIR}/net/libgweather
-CONFIGURE_ARGS+=	--with-weather
-PLIST_SUB+=		WEATHER=""
-.else
+#.if defined(WITH_WEATHER)
+#LIB_DEPENDS+=		gweather.1:${PORTSDIR}/net/libgweather
+#CONFIGURE_ARGS+=	--with-weather
+#PLIST_SUB+=		WEATHER=""
+#.else
 CONFIGURE_ARGS+=	--without-weather
 PLIST_SUB+=		WEATHER="@comment "
-.endif
+#.endif
 
 EDS_BDB_MSG=	"!!!WARNING!!!: Berkeley Database version is ${BDB_VER}.  If this is an upgrade, you may experience problems if you or any other Evolution-data-server users were previously using BDB_VER 41."
 
