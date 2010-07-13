@@ -2,12 +2,12 @@
 # Date created:				10 January 2006
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/py-gobject/Makefile,v 1.15 2010/05/10 21:18:11 kwm Exp $
-#   $MCom: ports/devel/py-gobject/Makefile,v 1.39 2010/06/07 08:47:31 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/devel/py-gobject/Makefile,v 1.40 2010/06/29 11:13:23 kwm Exp $
 #
 
 PORTNAME=	gobject
-PORTVERSION=	2.21.4
+PORTVERSION=	2.21.5
 CATEGORIES=	devel python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pygobject/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -31,7 +31,7 @@ USE_GNOME=	gnomehack glib20
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--disable-docs --enable-pygi
+CONFIGURE_ARGS=	--disable-docs
 
 CONFLICTS=	py*-gtk-0*
 PLIST_SUB=	PYTHON_VER="${PYTHON_VER}"
