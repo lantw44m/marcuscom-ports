@@ -2,12 +2,13 @@
 # Date created:				18 May 2002
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD$
-#   $MCom: ports/x11/yelp/Makefile,v 1.158 2010/06/04 17:48:42 kwm Exp $
+# $FreeBSD: ports/x11/yelp/Makefile,v 1.73 2010/05/31 02:01:43 ade Exp $
+#   $MCom: ports/x11/yelp/Makefile,v 1.154 2010/04/27 13:32:17 kwm Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	2.31.5
+PORTVERSION=	2.30.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -15,23 +16,27 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A help browser for the GNOME 2 desktop
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/x11/yelp-xsl
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/x11/yelp-xsl
+		startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
+    		rarian.0:${PORTSDIR}/textproc/rarian
 
+CONFLICTS=	yelp-2.31.*
+
+USE_GECKO=	libxul
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_XORG=	x11
+USE_XORG=	ice
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk20 libxslt libxml2
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--with-gecko=${GECKO} \
+		--with-gecko-home=${LOCALBASE}/lib/${GECKO}
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
-GLIB_SCHEMAS=	org.gnome.yelp.gschema.xml
+GCONF_SCHEMAS=	yelp.schemas
 
 .include <bsd.port.pre.mk>
 
@@ -42,16 +47,7 @@ GLIB_SCHEMAS=	org.gnome.yelp.gschema.xml
 LDFLAGS+=	-fstack-protector
 .endif
 
-.if ${OSVERSION} >= 900012 || (${OSVERSION} >= 800505 && ${OSVERSION} < 900000)
-CONFIGURE_ENV+=	YELP_LZMA_CFLAGS="-I/usr/include" \
-		YELP_LZMA_LIBS="-L/usr/lib -llzma"
-.else
-LIB_DEPENDS+=	lzma.0:${PORTSDIR}/archivers/xz
-.endif
-
-pre-install:
-	@${MKDIR} ${PREFIX}/share/glib-2.0/schemas
-	@${INSTALL_DATA} ${WRKSRC}/data/org.gnome.yelp.gschema.xml \
-		${PREFIX}/share/glib-2.0/schemas
+post-extract:
+	${RM} -f ${WRKSRC}/data/yelp.schemas
 
 .include <bsd.port.post.mk>

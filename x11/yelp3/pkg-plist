@@ -1,6 +1,42 @@
 bin/gnome-help
 bin/yelp
+include/libyelp/yelp-docbook-document.h
+include/libyelp/yelp-document.h
+include/libyelp/yelp-info-document.h
+include/libyelp/yelp-location-entry.h
+include/libyelp/yelp-mallard-document.h
+include/libyelp/yelp-man-document.h
+include/libyelp/yelp-settings.h
+include/libyelp/yelp-simple-document.h
+include/libyelp/yelp-transform.h
+include/libyelp/yelp-types.h
+include/libyelp/yelp-uri.h
+include/libyelp/yelp-view.h
+lib/libyelp.a
+lib/libyelp.la
+lib/libyelp.so
+lib/libyelp.so.0
 share/applications/yelp.desktop
+share/doc/libyelp/YelpDocument.html
+share/doc/libyelp/YelpLocationEntry.html
+share/doc/libyelp/YelpSettings.html
+share/doc/libyelp/YelpSimpleDocument.html
+share/doc/libyelp/YelpUri.html
+share/doc/libyelp/YelpView.html
+share/doc/libyelp/api-index-full.html
+share/doc/libyelp/ch01.html
+share/doc/libyelp/ch01s02.html
+share/doc/libyelp/home.png
+share/doc/libyelp/index.html
+share/doc/libyelp/index.sgml
+share/doc/libyelp/left.png
+share/doc/libyelp/libyelp-yelp-error.html
+share/doc/libyelp/libyelp.devhelp
+share/doc/libyelp/libyelp.devhelp2
+share/doc/libyelp/object-tree.html
+share/doc/libyelp/right.png
+share/doc/libyelp/style.css
+share/doc/libyelp/up.png
 share/icons/hicolor/192x192/apps/yelp-icon-big.png
 share/locale/af/LC_MESSAGES/yelp.mo
 share/locale/am/LC_MESSAGES/yelp.mo
@@ -16,7 +52,6 @@ share/locale/bn_IN/LC_MESSAGES/yelp.mo
 share/locale/br/LC_MESSAGES/yelp.mo
 share/locale/bs/LC_MESSAGES/yelp.mo
 share/locale/ca/LC_MESSAGES/yelp.mo
-share/locale/ca@valencia/LC_MESSAGES/yelp.mo
 share/locale/crh/LC_MESSAGES/yelp.mo
 share/locale/cs/LC_MESSAGES/yelp.mo
 share/locale/cy/LC_MESSAGES/yelp.mo
@@ -24,7 +59,6 @@ share/locale/da/LC_MESSAGES/yelp.mo
 share/locale/de/LC_MESSAGES/yelp.mo
 share/locale/dz/LC_MESSAGES/yelp.mo
 share/locale/el/LC_MESSAGES/yelp.mo
-share/locale/en@shaw/LC_MESSAGES/yelp.mo
 share/locale/en_CA/LC_MESSAGES/yelp.mo
 share/locale/en_GB/LC_MESSAGES/yelp.mo
 share/locale/eo/LC_MESSAGES/yelp.mo
@@ -103,6 +137,11 @@ share/locale/zh_HK/LC_MESSAGES/yelp.mo
 share/locale/zh_TW/LC_MESSAGES/yelp.mo
 share/locale/zu/LC_MESSAGES/yelp.mo
 %%DATADIR%%/default.css
+%%DATADIR%%/icons/hicolor/16x16/status/bookmark.png
+%%DATADIR%%/icons/hicolor/16x16/status/yelp-page-task.png
+%%DATADIR%%/icons/hicolor/16x16/status/yelp-page-tip.png
+%%DATADIR%%/icons/hicolor/16x16/status/yelp-page-ui.png
+%%DATADIR%%/icons/hicolor/16x16/status/yelp-page-video.png
 %%DATADIR%%/icons/yelp-icon-caution.png
 %%DATADIR%%/icons/yelp-icon-important.png
 %%DATADIR%%/icons/yelp-icon-note.png
@@ -113,17 +152,13 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 %%DATADIR%%/icons/yelp-watermark-blockquote-201C.png
 %%DATADIR%%/icons/yelp-watermark-blockquote-201D.png
 %%DATADIR%%/icons/yelp-watermark-blockquote-201E.png
+%%DATADIR%%/jquery-1.4.2.min.js
+%%DATADIR%%/jquery-ui-1.8.custom.min.js
 %%DATADIR%%/important_docs.xml
 %%DATADIR%%/info.xml
 %%DATADIR%%/man.xml
 %%DATADIR%%/scrollkeeper.xml
 %%DATADIR%%/toc.xml
-%%DATADIR%%/ui/yelp-bookmarks-add.ui
-%%DATADIR%%/ui/yelp-bookmarks.ui
-%%DATADIR%%/ui/yelp-open-location.ui
-%%DATADIR%%/ui/yelp-preferences.ui
-%%DATADIR%%/ui/yelp-search-ui.xml
-%%DATADIR%%/ui/yelp-ui.xml
 %%DATADIR%%/xslt/db-title.xsl
 %%DATADIR%%/xslt/db2html.xsl
 %%DATADIR%%/xslt/info2html.xsl
@@ -134,7 +169,9 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 %%DATADIR%%/xslt/yelp-common.xsl
 %%DATADIR%%/yelp.js
 @dirrm %%DATADIR%%/xslt
-@dirrm %%DATADIR%%/ui
+@dirrm %%DATADIR%%/icons/hicolor/16x16/status
+@dirrm %%DATADIR%%/icons/hicolor/16x16
+@dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
@@ -180,14 +217,10 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 @dirrmtry share/locale/ks
 @dirrmtry share/locale/fur/LC_MESSAGES
 @dirrmtry share/locale/fur
-@dirrmtry share/locale/en@shaw/LC_MESSAGES
-@dirrmtry share/locale/en@shaw
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
 @dirrmtry share/locale/crh/LC_MESSAGES
 @dirrmtry share/locale/crh
-@dirrmtry share/locale/ca@valencia/LC_MESSAGES
-@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
