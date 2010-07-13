@@ -2,8 +2,11 @@ bin/gcalccmd
 bin/gcalctool
 bin/gnome-calculator
 share/applications/gcalctool.desktop
-%%DATADIR%%/gcalctool.ui
-%%DATADIR%%/financial.ui
+%%DATADIR%%/buttons-advanced.ui
+%%DATADIR%%/buttons-basic.ui
+%%DATADIR%%/buttons-financial.ui
+%%DATADIR%%/buttons-programming.ui
+%%DATADIR%%/preferences.ui
 share/gnome/help/gcalctool/C/absolute.page
 share/gnome/help/gcalctool/C/base.page
 share/gnome/help/gcalctool/C/boolean.page
@@ -560,6 +563,7 @@ share/locale/en@shaw/LC_MESSAGES/gcalctool.mo
 share/locale/en_CA/LC_MESSAGES/gcalctool.mo
 share/locale/en_GB/LC_MESSAGES/gcalctool.mo
 share/locale/en_US/LC_MESSAGES/gcalctool.mo
+share/locale/eo/LC_MESSAGES/gcalctool.mo
 share/locale/es/LC_MESSAGES/gcalctool.mo
 share/locale/et/LC_MESSAGES/gcalctool.mo
 share/locale/eu/LC_MESSAGES/gcalctool.mo
