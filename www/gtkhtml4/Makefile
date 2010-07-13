@@ -3,16 +3,16 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml3/Makefile,v 1.171 2010/06/07 11:18:15 kwm Exp $
+#   $MCom: ports/www/gtkhtml4/Makefile,v 1.1 2010/06/30 07:12:11 kwm Exp $
 #
 
 PORTNAME=	gtkhtml4
-PORTVERSION=	3.31.4
+PORTVERSION=	3.31.5
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/4$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DISTNAME=	${PORTNAME:S/4$//}-${PORTVERSION}
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Lightweight HTML rendering/printing/editing engine
