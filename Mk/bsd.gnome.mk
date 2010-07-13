@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.504 2010/07/13 15:33:58 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.505 2010/07/13 16:59:06 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -631,10 +631,10 @@ gvfs_USE_GNOME_IMPL=		glib20 gconf2
 # If the user has not defined GNOME_DESKTOP_VERSION, let's try to prevent
 # users from shooting themselves in the foot.  We will try to make an
 # intelligent choice on the user's behalf.
-.if exists(${gnomepanel_DETECT})
+.if exists(${gnomepanel3_DETECT})
+GNOME_DESKTOP_VERSION?=	3
+.elif exists(${gnomepanel_DETECT})
 GNOME_DESKTOP_VERSION?=	2
-#.elif exists(${libpanel_DETECT})
-#GNOME_DESKTOP_VERSION?=	1
 .endif
 
 # We also check each component to see if it has a desktop requirement.  If
