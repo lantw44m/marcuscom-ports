@@ -6,9 +6,11 @@ include/libpeas-1.0/libpeas/peas-extension-set.h
 include/libpeas-1.0/libpeas/peas-extension.h
 include/libpeas-1.0/libpeas/peas-object-module.h
 include/libpeas-1.0/libpeas/peas-plugin-info.h
+include/libpeas-1.0/libpeas/peas.h
 include/libpeas-1.0/libpeasui/peas-ui-configurable.h
 include/libpeas-1.0/libpeasui/peas-ui-plugin-info.h
 include/libpeas-1.0/libpeasui/peas-ui-plugin-manager.h
+include/libpeas-1.0/libpeasui/peas-ui.h
 lib/girepository-1.0/Peas-1.0.typelib
 lib/girepository-1.0/PeasUI-1.0.typelib
 lib/libpeas-1.0.a
@@ -49,6 +51,7 @@ share/gtk-doc/html/libpeas/PeasExtensionBase.html
 share/gtk-doc/html/libpeas/PeasExtensionSet.html
 share/gtk-doc/html/libpeas/PeasUIConfigurable.html
 share/gtk-doc/html/libpeas/PeasUIPluginManager.html
+share/gtk-doc/html/libpeas/annotation-glossary.html
 share/gtk-doc/html/libpeas/api-index-full.html
 share/gtk-doc/html/libpeas/ch01.html
 share/gtk-doc/html/libpeas/ch02.html
