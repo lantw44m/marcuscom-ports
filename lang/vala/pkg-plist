@@ -50,12 +50,18 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/gconf-2.0.vapi
 %%DATADIR%%/vapi/gdk-2.0.deps
 %%DATADIR%%/vapi/gdk-2.0.vapi
+%%DATADIR%%/vapi/gdk-3.0.deps
+%%DATADIR%%/vapi/gdk-3.0.vapi
 %%DATADIR%%/vapi/gdl-1.0.deps
 %%DATADIR%%/vapi/gdl-1.0.vapi
 %%DATADIR%%/vapi/gdk-pixbuf-2.0.deps
 %%DATADIR%%/vapi/gdk-pixbuf-2.0.vapi
+%%DATADIR%%/vapi/gdk-pixbuf-3.0.deps
+%%DATADIR%%/vapi/gdk-pixbuf-3.0.vapi
 %%DATADIR%%/vapi/gdk-x11-2.0.deps
 %%DATADIR%%/vapi/gdk-x11-2.0.vapi
+%%DATADIR%%/vapi/gdk-x11-3.0.deps
+%%DATADIR%%/vapi/gdk-x11-3.0.vapi
 %%DATADIR%%/vapi/gdu-gtk.deps
 %%DATADIR%%/vapi/gdu-gtk.vapi
 %%DATADIR%%/vapi/gdu.deps
@@ -116,6 +122,8 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/gstreamer-video-0.10.vapi
 %%DATADIR%%/vapi/gtk+-2.0.deps
 %%DATADIR%%/vapi/gtk+-2.0.vapi
+%%DATADIR%%/vapi/gtk+-3.0.deps
+%%DATADIR%%/vapi/gtk+-3.0.vapi
 %%DATADIR%%/vapi/gtkmozembed.deps
 %%DATADIR%%/vapi/gtkmozembed.vapi
 %%DATADIR%%/vapi/gtksourceview-2.0.deps
