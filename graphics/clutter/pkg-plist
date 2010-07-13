@@ -1,3 +1,15 @@
+include/clutter-1.0/cally/cally-actor.h
+include/clutter-1.0/cally/cally-clone.h
+include/clutter-1.0/cally/cally-factory.h
+include/clutter-1.0/cally/cally-group.h
+include/clutter-1.0/cally/cally-main.h
+include/clutter-1.0/cally/cally-rectangle.h
+include/clutter-1.0/cally/cally-root.h
+include/clutter-1.0/cally/cally-stage.h
+include/clutter-1.0/cally/cally-text.h
+include/clutter-1.0/cally/cally-texture.h
+include/clutter-1.0/cally/cally-util.h
+include/clutter-1.0/cally/cally.h
 include/clutter-1.0/clutter/clutter-action.h
 include/clutter-1.0/clutter/clutter-actor.h
 include/clutter-1.0/clutter/clutter-actor-meta.h
@@ -96,7 +108,7 @@ include/clutter-1.0/cogl/cogl-object.h
 include/clutter-1.0/cogl/cogl-offscreen.h
 include/clutter-1.0/cogl/cogl-pango.h
 include/clutter-1.0/cogl/cogl-path.h
-include/clutter-1.0/cogl/cogl-pixel-buffer.h
+include/clutter-1.0/cogl/cogl-pixel-array.h
 include/clutter-1.0/cogl/cogl-primitives.h
 include/clutter-1.0/cogl/cogl-shader.h
 include/clutter-1.0/cogl/cogl-texture.h
@@ -105,17 +117,49 @@ include/clutter-1.0/cogl/cogl-types.h
 include/clutter-1.0/cogl/cogl-vector.h
 include/clutter-1.0/cogl/cogl-vertex-buffer.h
 include/clutter-1.0/cogl/cogl.h
+lib/girepository-1.0/Cally-1.0.typelib
 lib/girepository-1.0/Clutter-1.0.typelib
 lib/girepository-1.0/Cogl-1.0.typelib
 lib/libclutter-glx-1.0.a
 lib/libclutter-glx-1.0.la
 lib/libclutter-glx-1.0.so
 lib/libclutter-glx-1.0.so.0
+libdata/pkgconfig/cally-1.0.pc
 libdata/pkgconfig/clutter-1.0.pc
 libdata/pkgconfig/clutter-glx-1.0.pc
 libdata/pkgconfig/clutter-x11-1.0.pc
 libdata/pkgconfig/cogl-1.0.pc
 libdata/pkgconfig/cogl-gl-1.0.pc
+share/doc/cally/CallyActor.html
+share/doc/cally/CallyClone.html
+share/doc/cally/CallyGroup.html
+share/doc/cally/CallyRectangle.html
+share/doc/cally/CallyRoot.html
+share/doc/cally/CallyStage.html
+share/doc/cally/CallyText.html
+share/doc/cally/CallyTexture.html
+share/doc/cally/CallyUtil.html
+share/doc/cally/cally-General-API.html
+share/doc/cally/cally.devhelp
+share/doc/cally/cally.devhelp2
+share/doc/cally/callybase.html
+share/doc/cally/callyobjecthierarchy.html
+share/doc/cally/callyobjectindex.html
+share/doc/cally/callyobjects.html
+share/doc/cally/ch01.html
+share/doc/cally/ch02.html
+share/doc/cally/clutter-overview.html
+share/doc/cally/home.png
+share/doc/cally/index.html
+share/doc/cally/index.sgml
+share/doc/cally/ix01.html
+share/doc/cally/ix02.html
+share/doc/cally/ix03.html
+share/doc/cally/left.png
+share/doc/cally/license.html
+share/doc/cally/right.png
+share/doc/cally/style.css
+share/doc/cally/up.png
 %%DOCSDIR%%/ClutterAction.html
 %%DOCSDIR%%/ClutterActor.html
 %%DOCSDIR%%/ClutterActorMeta.html
@@ -265,6 +309,7 @@ share/doc/cogl/cogl-General-API.html
 share/doc/cogl/cogl-Materials.html
 share/doc/cogl/cogl-Matrices.html
 share/doc/cogl/cogl-Offscreen-Buffers.html
+share/doc/cogl/cogl-Path-Primitives.html
 share/doc/cogl/cogl-Primitives.html
 share/doc/cogl/cogl-Shaders-and-Programmable-Pipeline.html
 share/doc/cogl/cogl-Textures.html
@@ -286,15 +331,20 @@ share/doc/cogl/ix05.html
 share/doc/cogl/ix06.html
 share/doc/cogl/left.png
 share/doc/cogl/license.html
+share/doc/cogl/quad-indices-order.png
+share/doc/cogl/quad-indices-triangles.png
 share/doc/cogl/right.png
 share/doc/cogl/style.css
 share/doc/cogl/up.png
+share/gir-1.0/Cally-1.0.gir
 share/gir-1.0/Clutter-1.0.gir
 share/gir-1.0/Cogl-1.0.gir
 @dirrm share/doc/cogl
+@dirrm share/doc/cally
 @dirrm %%DOCSDIR%%
 @dirrm include/clutter-1.0/clutter/x11
 @dirrm include/clutter-1.0/clutter/glx
 @dirrm include/clutter-1.0/clutter
 @dirrm include/clutter-1.0/cogl
+@dirrm include/clutter-1.0/cally
 @dirrm include/clutter-1.0

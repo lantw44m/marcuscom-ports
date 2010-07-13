@@ -3,11 +3,11 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.28 2010/06/29 21:14:00 kwm Exp $
+#  $MCom: ports/graphics/clutter/Makefile,v 1.29 2010/07/01 08:46:07 kwm Exp $
 #
 
 PORTNAME=	clutter
-PORTVERSION=	1.3.6
+PORTVERSION=	1.3.8
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME \
 		http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
@@ -17,11 +17,13 @@ COMMENT=	OpenGL based interactive canvas library
 
 LIB_DEPENDS=	json-glib-1.0.0:${PORTSDIR}/devel/json-glib
 
+LICENSE=	LGPL21
+LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool:22
-USE_GNOME=	pkgconfig gtk20 gnomehack ltverhack gnomeprefix
+USE_GNOME=	pkgconfig gdkpixbuf2 gnomehack ltverhack gnomeprefix
 USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes
