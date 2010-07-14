@@ -3,12 +3,11 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity/Makefile,v 1.104 2010/03/29 03:35:02 avl Exp $
+#   $MCom: ports/x11/zenity/Makefile,v 1.106 2010/06/10 12:57:33 kwm Exp $
 #
 
 PORTNAME=	zenity
-PORTVERSION=	2.30.0
-PORTREVISION=	1
+PORTVERSION=	2.31.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,8 +18,10 @@ COMMENT=	Display GNOME dialogs from the command line
 BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
+LICENSE=	LGPL20
+LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gtk20 gnomedocutils intlhack
+USE_GNOME=	gnomeprefix gnomehack gtk30 gnomedocutils intlhack
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
