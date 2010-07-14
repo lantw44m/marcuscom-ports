@@ -38,14 +38,12 @@ include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbufformat_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbufloader_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixmap_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/rectangle_p.h
-include/gdkmm-%%API_VERSION%%/gdkmm/private/region_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/rgbcmap_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/screen_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/types_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/visual_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/window_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/rectangle.h
-include/gdkmm-%%API_VERSION%%/gdkmm/region.h
 include/gdkmm-%%API_VERSION%%/gdkmm/rgb.h
 include/gdkmm-%%API_VERSION%%/gdkmm/rgbcmap.h
 include/gdkmm-%%API_VERSION%%/gdkmm/screen.h
