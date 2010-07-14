@@ -3,14 +3,13 @@
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libnotify/Makefile,v 1.3 2008/11/30 19:42:57 marcus Exp $
+#   $MCom: ports/devel/libnotify/Makefile,v 1.5 2010/06/28 22:03:21 kwm Exp $
 #
 
 PORTNAME=	libnotify
-PORTVERSION=	0.5.0
+PORTVERSION=	0.5.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
-#DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A library for desktop notifications
