@@ -36,7 +36,6 @@ include/webkit-3.0/webkit/WebKitDOMEvent.h
 include/webkit-3.0/webkit/WebKitDOMEventTarget.h
 include/webkit-3.0/webkit/WebKitDOMFile.h
 include/webkit-3.0/webkit/WebKitDOMFileList.h
-include/webkit-3.0/webkit/WebKitDOMGeolocation.h
 include/webkit-3.0/webkit/WebKitDOMHTMLAnchorElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLAppletElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLAreaElement.h
@@ -102,8 +101,8 @@ include/webkit-3.0/webkit/WebKitDOMLocation.h
 include/webkit-3.0/webkit/WebKitDOMMediaList.h
 include/webkit-3.0/webkit/WebKitDOMMemoryInfo.h
 include/webkit-3.0/webkit/WebKitDOMMessagePort.h
-include/webkit-3.0/webkit/WebKitDOMMimeType.h
-include/webkit-3.0/webkit/WebKitDOMMimeTypeArray.h
+include/webkit-3.0/webkit/WebKitDOMDOMMimeType.h
+include/webkit-3.0/webkit/WebKitDOMDOMMimeTypeArray.h
 include/webkit-3.0/webkit/WebKitDOMNamedNodeMap.h
 include/webkit-3.0/webkit/WebKitDOMNavigator.h
 include/webkit-3.0/webkit/WebKitDOMNode.h
@@ -111,11 +110,12 @@ include/webkit-3.0/webkit/WebKitDOMNodeFilter.h
 include/webkit-3.0/webkit/WebKitDOMNodeIterator.h
 include/webkit-3.0/webkit/WebKitDOMNodeList.h
 include/webkit-3.0/webkit/WebKitDOMObject.h
-include/webkit-3.0/webkit/WebKitDOMPlugin.h
-include/webkit-3.0/webkit/WebKitDOMPluginArray.h
+include/webkit-3.0/webkit/WebKitDOMDOMPlugin.h
+include/webkit-3.0/webkit/WebKitDOMDOMPluginArray.h
 include/webkit-3.0/webkit/WebKitDOMProcessingInstruction.h
 include/webkit-3.0/webkit/WebKitDOMRange.h
 include/webkit-3.0/webkit/WebKitDOMScreen.h
+include/webkit-3.0/webkit/WebKitDOMDOMStringMap.h
 include/webkit-3.0/webkit/WebKitDOMStorage.h
 include/webkit-3.0/webkit/WebKitDOMStyleMedia.h
 include/webkit-3.0/webkit/WebKitDOMStyleSheet.h
@@ -153,11 +153,15 @@ include/webkit-3.0/webkit/webkitwebresource.h
 include/webkit-3.0/webkit/webkitwebsettings.h
 include/webkit-3.0/webkit/webkitwebview.h
 include/webkit-3.0/webkit/webkitwebwindowfeatures.h
+lib/girepository-1.0/JSCore-3.0.typelib
+lib/girepository-1.0/WebKit-3.0.typelib
 %%STATIC%%lib/libwebkitgtk-3.0.a
 lib/libwebkitgtk-3.0.la
 lib/libwebkitgtk-3.0.so
 lib/libwebkitgtk-3.0.so.0
 libdata/pkgconfig/webkitgtk-3.0.pc
+share/gir-1.0/JSCore-3.0.gir
+share/gir-1.0/WebKit-3.0.gir
 share/locale/cs/LC_MESSAGES/webkit-3.0.mo
 share/locale/de/LC_MESSAGES/webkit-3.0.mo
 share/locale/en_GB/LC_MESSAGES/webkit-3.0.mo
@@ -182,6 +186,7 @@ share/locale/uk/LC_MESSAGES/webkit-3.0.mo
 share/locale/vi/LC_MESSAGES/webkit-3.0.mo
 share/locale/zh_CN/LC_MESSAGES/webkit-3.0.mo
 share/webkit-3.0/images/deleteButton.png
+share/webkit-3.0/images/inputSpeech.png
 share/webkit-3.0/images/missingImage.png
 share/webkit-3.0/images/nullPlugin.png
 share/webkit-3.0/images/panIcon.png
@@ -189,6 +194,7 @@ share/webkit-3.0/images/textAreaResizeCorner.png
 share/webkit-3.0/images/urlIcon.png
 share/webkit-3.0/resources/error.html
 share/webkit-3.0/webinspector/AbstractTimelinePanel.js
+share/webkit-3.0/webinspector/ApplicationCacheItemsView.js
 share/webkit-3.0/webinspector/AuditCategories.js
 share/webkit-3.0/webinspector/AuditLauncherView.js
 share/webkit-3.0/webinspector/AuditResultView.js
@@ -224,6 +230,7 @@ share/webkit-3.0/webinspector/FontView.js
 share/webkit-3.0/webinspector/HAREntry.js
 share/webkit-3.0/webinspector/HelpScreen.js
 share/webkit-3.0/webinspector/ImageView.js
+share/webkit-3.0/webinspector/Images/applicationCache.png
 share/webkit-3.0/webinspector/Images/auditsIcon.png
 share/webkit-3.0/webinspector/Images/back.png
 share/webkit-3.0/webinspector/Images/breakpointBorder.png

@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.63 2010/07/05 11:31:46 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.64 2010/07/13 09:56:34 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.3.2
+PORTVERSION=	1.3.3
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -52,8 +52,8 @@ OPTIONS=	VIDEO "Enable video support" on \
 
 .include <bsd.port.pre.mk>
 
-.if exists (${LOCALBASE}/lib/libicutu.so.43)
-LIB_DEPENDS+=	icutu.43:${PORTSDIR}/devel/icu4
+.if exists (${LOCALBASE}/lib/libicutu.so.44)
+LIB_DEPENDS+=	icutu.44:${PORTSDIR}/devel/icu4
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-WebCore_platform_text_TextBreakIterator.h
 .else
 LIB_DEPENDS+=	icutu.38:${PORTSDIR}/devel/icu
@@ -92,8 +92,6 @@ post-patch:
 		${WRKSRC}/WebCore/make-hash-tools.pl \
 		${WRKSRC}/WebCore/css/makevalues.pl \
 		${WRKSRC}/WebCore/css/makeprop.pl
-	@${REINPLACE_CMD} -e 's|GETTEXT_PACKAGE=$$PACKAGE|GETTEXT_PACKAGE=$$PACKAGE-1.0|g' \
-		${WRKSRC}/configure
 	@${FIND} ${WRKSRC} -name GNUmakefile.* | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
 .if !defined(WITH_STATIC)
