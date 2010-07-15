@@ -1,3 +1,4 @@
+bin/vala
 bin/valac
 include/vala-1.0/vala.h
 include/vala-1.0/valaccode.h
@@ -56,8 +57,6 @@ share/devhelp/books/vala/vala.devhelp2
 %%DATADIR%%/vapi/gdl-1.0.vapi
 %%DATADIR%%/vapi/gdk-pixbuf-2.0.deps
 %%DATADIR%%/vapi/gdk-pixbuf-2.0.vapi
-%%DATADIR%%/vapi/gdk-pixbuf-3.0.deps
-%%DATADIR%%/vapi/gdk-pixbuf-3.0.vapi
 %%DATADIR%%/vapi/gdk-x11-2.0.deps
 %%DATADIR%%/vapi/gdk-x11-2.0.vapi
 %%DATADIR%%/vapi/gdk-x11-3.0.deps
