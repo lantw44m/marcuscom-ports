@@ -1,0 +1,56 @@
+--- src/Makefile.in.orig	2010-07-23 15:03:55.000000000 +0200
++++ src/Makefile.in	2010-07-23 15:04:54.000000000 +0200
+@@ -238,7 +238,7 @@
+ 	$(libcanberra_gtk_la_LDFLAGS) $(LDFLAGS) -o $@
+ @HAVE_GTK_TRUE@am_libcanberra_gtk_la_rpath = -rpath $(libdir)
+ @HAVE_GTK3_TRUE@libcanberra_gtk3_module_la_DEPENDENCIES =  \
+-@HAVE_GTK3_TRUE@	$(am__DEPENDENCIES_1) libcanberra.la \
++@HAVE_GTK3_TRUE@	$(am__DEPENDENCIES_1) \
+ @HAVE_GTK3_TRUE@	libcanberra-gtk3.la
+ am__libcanberra_gtk3_module_la_SOURCES_DIST = canberra-gtk-module.c
+ @HAVE_GTK3_TRUE@am_libcanberra_gtk3_module_la_OBJECTS = libcanberra_gtk3_module_la-canberra-gtk-module.lo
+@@ -251,7 +251,7 @@
+ @HAVE_GTK3_TRUE@am_libcanberra_gtk3_module_la_rpath = -rpath \
+ @HAVE_GTK3_TRUE@	$(gtk3moduledir)
+ @HAVE_GTK3_TRUE@libcanberra_gtk3_la_DEPENDENCIES =  \
+-@HAVE_GTK3_TRUE@	$(am__DEPENDENCIES_1) libcanberra.la
++@HAVE_GTK3_TRUE@	$(am__DEPENDENCIES_1)
+ am__libcanberra_gtk3_la_SOURCES_DIST = canberra-gtk.h canberra-gtk.c
+ @HAVE_GTK3_TRUE@am_libcanberra_gtk3_la_OBJECTS =  \
+ @HAVE_GTK3_TRUE@	libcanberra_gtk3_la-canberra-gtk.lo
+@@ -360,7 +360,7 @@
+ @HAVE_GTK3_FALSE@@HAVE_GTK_TRUE@	libcanberra.la \
+ @HAVE_GTK3_FALSE@@HAVE_GTK_TRUE@	libcanberra-gtk.la
+ @HAVE_GTK3_TRUE@canberra_gtk_play_DEPENDENCIES =  \
+-@HAVE_GTK3_TRUE@	$(am__DEPENDENCIES_1) libcanberra.la \
++@HAVE_GTK3_TRUE@	$(am__DEPENDENCIES_1) \
+ @HAVE_GTK3_TRUE@	libcanberra-gtk3.la
+ canberra_gtk_play_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
+ 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
+@@ -750,7 +750,7 @@
+ 
+ @HAVE_GTK3_TRUE@libcanberra_gtk3_la_LIBADD = \
+ @HAVE_GTK3_TRUE@	$(GTK3_LIBS) \
+-@HAVE_GTK3_TRUE@	libcanberra.la
++@HAVE_GTK3_TRUE@	-lcanberra
+ 
+ @HAVE_GTK3_TRUE@libcanberra_gtk3_la_LDFLAGS = \
+ @HAVE_GTK3_TRUE@	-export-dynamic -version-info $(LIBCANBERRA_GTK_VERSION_INFO)
+@@ -763,7 +763,7 @@
+ 
+ @HAVE_GTK3_TRUE@libcanberra_gtk3_module_la_LIBADD = \
+ @HAVE_GTK3_TRUE@	$(GTK3_LIBS) \
+-@HAVE_GTK3_TRUE@	libcanberra.la \
++@HAVE_GTK3_TRUE@	-lcanberra \
+ @HAVE_GTK3_TRUE@	libcanberra-gtk3.la
+ 
+ @HAVE_GTK3_TRUE@libcanberra_gtk3_module_la_LDFLAGS = \
+@@ -807,7 +807,7 @@
+ 
+ @HAVE_GTK3_TRUE@canberra_gtk_play_LDADD = \
+ @HAVE_GTK3_TRUE@	$(GTK3_LIBS) \
+-@HAVE_GTK3_TRUE@	libcanberra.la \
++@HAVE_GTK3_TRUE@	-lcanberra \
+ @HAVE_GTK3_TRUE@	libcanberra-gtk3.la
+ 
+ @HAVE_GTK3_FALSE@@HAVE_GTK_TRUE@canberra_gtk_play_CFLAGS = \
