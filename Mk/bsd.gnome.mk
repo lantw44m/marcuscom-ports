@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.506 2010/07/13 17:11:27 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.507 2010/07/23 13:50:05 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -91,7 +91,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 gdkpix
 		pygtk2 pygtksourceview vte
 
 # GNOME 3 components
-_USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 librsvg3
+_USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 librsvg3 nautilus3
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -436,6 +436,11 @@ nautilus2_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus
 nautilus2_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-extension.pc
 nautilus2_USE_GNOME_IMPL=librsvg2 gnomedesktop desktopfileutils gvfs
 nautilus2_GNOME_DESKTOP_VERSION=2
+
+nautilus3_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus3
+nautilus3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-extension.pc
+nautilus3_USE_GNOME_IMPL=gnomedesktop3 desktopfileutils gvfs
+nautilus3_GNOME_DESKTOP_VERSION=3
 
 metacity_LIB_DEPENDS=	metacity-private.0:${PORTSDIR}/x11-wm/metacity
 metacity_DETECT=	${LOCALBASE}/libdata/pkgconfig/libmetacity-private.pc

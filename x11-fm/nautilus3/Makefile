@@ -2,31 +2,32 @@
 # Date created:         		28th August 2000
 # Whom:                 		ade, archie
 #
-# $FreeBSD: ports/x11-fm/nautilus/Makefile,v 1.104 2010/05/31 02:01:45 ade Exp $
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.196 2010/04/26 22:22:10 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.199 2010/06/08 09:12:49 kwm Exp $
 #
 
 PORTNAME=	nautilus
-PORTVERSION=	2.30.1
-PORTREVISION=	1
+PORTVERSION=	2.31.5
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	File manager for the GNOME desktop
 
+BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
+		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
 		exempi.3:${PORTSDIR}/textproc/exempi
+RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop \
-		librsvg2 desktopfileutils ltverhack gvfs ltasneededhack
-GNOME_DESKTOP_VERSION=2
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop3 \
+		desktopfileutils ltverhack gvfs ltasneededhack
+GNOME_DESKTOP_VERSION=3
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:22
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
