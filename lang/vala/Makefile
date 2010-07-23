@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/vala/Makefile,v 1.35 2010/07/13 08:02:07 kwm Exp $
+#   $MCom: ports/lang/vala/Makefile,v 1.36 2010/07/15 14:58:18 kwm Exp $
 #
 
 PORTNAME=	vala
 PORTVERSION=	0.9.3
+PORTREVISION=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -17,7 +18,7 @@ COMMENT=	Programming language and compiler that converts Vala code into C code
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
-USE_GNOME=	glib20 gnomeprefix libxslt
+USE_GNOME=	gnomehack glib20 gnomeprefix libxslt
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}" LDFLAGS="-L${LOCALBASE}/lib"
@@ -39,8 +40,13 @@ CONFIGURE_ARGS+=--disable-vapigen
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|$$(libdir)/pkgconfig|$$(prefix)/libdata/pkgconfig|' \
-		${WRKSRC}/Makefile.in
+# We cheat here, because vala records vapigen related stuff in its .pc file
+# This makes the vapigen work again, although it might get weird when
+# vala-vapigen isn't installed.
+	@${REINPLACE_CMD} -e 's|@vapigen_decl@|vapigen=$${bindir}/vapigen|g' \
+		-e 's|@gen_introspect_decl@|gen_introspect=$${libdir}/vala/gen-introspect|g' \
+		-e 's|@vala_gen_introspect_decl@|vala_gen_introspect=$${bindir}/vala-gen-introspect|g' \
+		${WRKSRC}/vala-1.0.pc.in
 
 .if defined(VALA_SLAVE)
 pre-build:
