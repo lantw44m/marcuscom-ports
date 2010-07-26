@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.507 2010/07/23 13:50:05 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.508 2010/07/23 14:40:13 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -641,7 +641,7 @@ gvfs_USE_GNOME_IMPL=		glib20 gconf2
 # users from shooting themselves in the foot.  We will try to make an
 # intelligent choice on the user's behalf.
 .if exists(${gnomepanel3_DETECT})
-GNOME_DESKTOP_VERSION?=	3
+#GNOME_DESKTOP_VERSION?=	3
 .elif exists(${gnomepanel_DETECT})
 GNOME_DESKTOP_VERSION?=	2
 .endif
