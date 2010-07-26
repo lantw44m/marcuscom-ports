@@ -1,5 +1,5 @@
---- daemon/gdm-session-worker.c.orig	2010-05-24 23:58:38.000000000 +0200
-+++ daemon/gdm-session-worker.c	2010-06-05 22:45:34.000000000 +0200
+--- daemon/gdm-session-worker.c.orig	2009-09-21 22:05:27.000000000 +0200
++++ daemon/gdm-session-worker.c	2009-09-22 12:33:59.000000000 +0200
 @@ -31,6 +31,9 @@
  #include <errno.h>
  #include <grp.h>
@@ -19,13 +19,13 @@
                  }
  
                  len = strlen (file) + 1;
-@@ -2009,15 +2012,16 @@ gdm_session_worker_start_user_session (G
+@@ -1995,15 +1998,16 @@ gdm_session_worker_start_user_session (G
                  char  *cachedirname;
                  char  *home_dir;
                  int    fd;
 +#ifdef HAVE_LOGINCAP
-+		char *login = worker->priv->username;
-+		struct passwd *pwent = getpwnam (login);
++                char *login = worker->priv->username;
++                struct passwd *pwent = getpwnam (login);
 +#endif
  
                  /* Make sure cachedir gets created before we drop to user */
@@ -33,14 +33,14 @@
                  g_free (cachedirname);
  
 -                if (setuid (worker->priv->uid) < 0) {
--                        g_debug ("GdmSessionWorker: could not reset uid: %s", g_strerror (errno));
+-                        g_debug ("GdmSessionWorker: could not reset uid - %s", g_strerror (errno));
 -                        _exit (1);
 -                }
 +                /* Call setsid() before setusercontext() */
  
                  if (setsid () < 0) {
-                         g_debug ("GdmSessionWorker: could not set pid '%u' as leader of new session and process group: %s",
-@@ -2025,6 +2029,28 @@ gdm_session_worker_start_user_session (G
+                         g_debug ("GdmSessionWorker: could not set pid '%u' as leader of new session and process group - %s",
+@@ -2011,6 +2015,28 @@ gdm_session_worker_start_user_session (G
                          _exit (2);
                  }
  
