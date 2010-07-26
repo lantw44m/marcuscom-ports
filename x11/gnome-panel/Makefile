@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.220 2010/07/26 12:42:31 kwm Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -56,12 +56,12 @@ WITH_GNOME=	yes
 
 .include <bsd.port.pre.mk>
 
-.if !defined(WITHOUT_EVOLUTION) && ${HAVE_GNOME:Mevolutiondataserver}!=""
-USE_GNOME+=	evolutiondataserver
-CONFIGURE_ARGS+=--enable-eds
-.else
+#.if !defined(WITHOUT_EVOLUTION) && ${HAVE_GNOME:Mevolutiondataserver}!=""
+#USE_GNOME+=	evolutiondataserver
+#CONFIGURE_ARGS+=--enable-eds
+#.else
 CONFIGURE_ARGS+=--disable-eds
-.endif
+#.endif
 
 post-patch:
 	@${FIND} ${WRKSRC} -type f | \
