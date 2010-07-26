@@ -2,12 +2,12 @@
 # Date created:        20 May 2002
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gdm/Makefile,v 1.134 2010/07/25 19:35:04 kwm Exp $
-#   $MCom: ports-stable/x11/gdm/Makefile,v 1.10 2010/07/21 13:50:45 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/gdm/Makefile,v 1.176 2010/06/05 20:47:56 kwm Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	2.30.4
+PORTVERSION=	2.31.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -31,6 +31,7 @@ RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 USERS=		gdm
 GROUPS=		gdm
 
+LATEST_LINK=	gdm3
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
@@ -64,7 +65,7 @@ OPTIONS=	IPV6 "Enable IPv6 support" off \
 .if defined(WITHOUT_KEYRING)
 SUB_LIST+=	PAM_KEYRING=\#
 .else
-RUN_DEPENDS+=	${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/gnome-keyring
+RUN_DEPENDS+=	${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/libgnome-keyring
 SUB_LIST+=	PAM_KEYRING=
 .endif
 
