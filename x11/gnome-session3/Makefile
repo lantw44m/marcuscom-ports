@@ -2,30 +2,28 @@
 # Date created:				08 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome-session/Makefile,v 1.77 2010/05/31 02:01:36 ade Exp $
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.181 2010/04/02 17:25:12 kwm Exp $
+# $FreeBSD$
+#   $MCom$
 #
 
 PORTNAME=	gnome-session
-PORTVERSION=	2.30.0
+PORTVERSION=	2.31.2
 PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME \
 		http://www.marcuscom.com/downloads/:local
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		${SPLASHES}:local
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Session component for the GNOME 2 desktop
+COMMENT=	Session component for the GNOME 3 desktop
 
-CONFLICTS=	gnome-session-2.31.* gnome-session-2.90.* gnome-session-3.*
+CONFLICTS=	gnome-session-2.30.*
 
 BUILD_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
-		notify.1:${PORTSDIR}/devel/libnotify \
 		execinfo:${PORTSDIR}/devel/libexecinfo \
 		upower-glib.1:${PORTSDIR}/sysutils/upower
 RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon \
@@ -35,9 +33,9 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gno
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
-USE_XORG=	ice sm xau xrandr
+USE_XORG=	ice sm xau xext xtst xrender
 USE_GNOME=	gnomeprefix gnomehack intlhack gconf2
-GNOME_DESKTOP_VERSION=2
+GNOME_DESKTOP_VERSION=3
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs \
