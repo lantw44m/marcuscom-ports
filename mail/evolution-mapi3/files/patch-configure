@@ -1,0 +1,11 @@
+--- configure.orig	2010-07-26 17:53:40.000000000 +0200
++++ configure	2010-07-26 17:54:05.000000000 +0200
+@@ -13306,7 +13306,7 @@ LIBMAPI_REQUIRED=0.9
+ EVO_PLUGIN_RULE=$srcdir/eplugin-rule.mk
+ 
+ 
+-plugindir=`$PKG_CONFIG --variable=plugindir evolution-plugin`
++plugindir=`$PKG_CONFIG --variable=plugindir $EVO_PLUGIN_PACKAGE`
+ 
+ 
+ extensiondir=`$PKG_CONFIG --variable=extensiondir evolution-data-server-$EDS_PACKAGE`

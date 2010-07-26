@@ -2,12 +2,12 @@
 # Date created:				24 Mar, 2009
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/evolution-mapi/Makefile,v 1.8 2010/07/25 19:35:02 kwm Exp $
-#   $MCom: ports-stable/mail/evolution-mapi/Makefile,v 1.1 2010/06/23 09:55:28 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/mail/evolution-mapi/Makefile,v 1.16 2010/06/07 15:07:03 kwm Exp $
 #
 
 PORTNAME=	evolution-mapi
-PORTVERSION=	0.30.2.1
+PORTVERSION=	0.31.5
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,18 +19,19 @@ BUILD_DEPENDS=	${PKGFILES}:${PORTSDIR}/mail/evolution
 LIB_DEPENDS=	mapi.0:${PORTSDIR}/mail/libmapi
 RUN_DEPENDS=	${PKGFILES}:${PORTSDIR}/mail/evolution
 
-PKGFILES=	${LOCALBASE}/libdata/pkgconfig/evolution-plugin.pc
+PKGFILES=	${LOCALBASE}/libdata/pkgconfig/evolution-plugin-3.0.pc
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	evolutiondataserver
+USE_GNOME=	evolutiondataserver3
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--enable-gtk3 --disable-silent-rules
 
-EVO_VERSION=	2.30
+EVO_VERSION=	3.0
 EDS_VERSION=	1.2
 PLIST_SUB=	EVO_VERSION=${EVO_VERSION} EDS_VERSION=${EDS_VERSION}
 
