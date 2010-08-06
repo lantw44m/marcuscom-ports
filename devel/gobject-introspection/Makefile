@@ -3,11 +3,11 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.13 2010/06/29 20:12:54 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.14 2010/07/12 19:28:06 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
-PORTVERSION=	0.9.2
+PORTVERSION=	0.9.3
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
