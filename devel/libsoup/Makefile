@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.84 2010/06/06 20:17:30 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.85 2010/06/29 21:13:59 kwm Exp $
 #
 
 PORTNAME=	libsoup
-PORTVERSION=	2.31.2
-PORTREVISION?=	2
+PORTVERSION=	2.31.6
+PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -35,12 +35,13 @@ PLIST_SUB=	VERSION="2.4"
 
 .if defined(SOUP_SLAVE)
 LIB_DEPENDS+=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
-    		proxy.0:${PORTSDIR}/net/libproxy \
+		proxy.0:${PORTSDIR}/net/libproxy \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3
 CONFIGURE_ARGS+=--with-gnome
 USE_GNOME+=	gconf2
 .else
+BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 CONFIGURE_ARGS+=--without-gnome
 .endif
 

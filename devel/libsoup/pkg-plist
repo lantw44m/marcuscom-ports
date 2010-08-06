@@ -36,12 +36,12 @@ include/libsoup-%%VERSION%%/libsoup/soup-uri.h
 include/libsoup-%%VERSION%%/libsoup/soup-value-utils.h
 include/libsoup-%%VERSION%%/libsoup/soup-xmlrpc.h
 include/libsoup-%%VERSION%%/libsoup/soup.h
+lib/girepository-1.0/Soup-%%VERSION%%.typelib
 lib/libsoup-%%VERSION%%.a
 lib/libsoup-%%VERSION%%.la
 lib/libsoup-%%VERSION%%.so
 lib/libsoup-%%VERSION%%.so.1
 libdata/pkgconfig/libsoup-%%VERSION%%.pc
-lib/girepository-1.0/Soup-%%VERSION%%.typelib
 share/gir-1.0/Soup-%%VERSION%%.gir
 @dirrm include/libsoup-%%VERSION%%/libsoup
 @dirrm include/libsoup-%%VERSION%%
