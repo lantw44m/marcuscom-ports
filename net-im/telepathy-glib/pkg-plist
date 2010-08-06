@@ -235,3 +235,5 @@ share/gtk-doc/html/telepathy-glib/up.png
 @dirrm include/telepathy-1.0/telepathy-glib/_gen
 @dirrm include/telepathy-1.0/telepathy-glib
 @dirrmtry include/telepathy-1.0
+@dirrmtry lib/girepository-1.0
+@dirrmtry share/gir-1.0
