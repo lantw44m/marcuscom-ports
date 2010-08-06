@@ -3,10 +3,10 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.9 2010/06/29 21:51:40 kwm Exp $
+#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.10 2010/07/07 14:11:30 kwm Exp $
 
 PORTNAME=	telepathy-glib
-PORTVERSION=	0.11.9
+PORTVERSION=	0.11.11
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -16,7 +16,8 @@ COMMENT=	GLib utility library for the Telepathy framework
 LIB_PC_DEPENDS=	gobject-2.0.pc:${PORTSDIR}/devel/glib20 \
 		dbus-glib-1.pc:${PORTSDIR}/devel/dbus-glib
 
-BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
+BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
+		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 BUILD_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
 RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
