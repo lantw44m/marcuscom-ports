@@ -97,7 +97,6 @@ include/clutter-1.0/clutter/x11/clutter-x11.h
 include/clutter-1.0/cogl/cogl-bitmap.h
 include/clutter-1.0/cogl/cogl-buffer.h
 include/clutter-1.0/cogl/cogl-color.h
-include/clutter-1.0/cogl/cogl-debug.h
 include/clutter-1.0/cogl/cogl-defines.h
 include/clutter-1.0/cogl/cogl-deprecated.h
 include/clutter-1.0/cogl/cogl-enum-types.h
@@ -111,8 +110,9 @@ include/clutter-1.0/cogl/cogl-path.h
 include/clutter-1.0/cogl/cogl-pixel-array.h
 include/clutter-1.0/cogl/cogl-primitives.h
 include/clutter-1.0/cogl/cogl-shader.h
-include/clutter-1.0/cogl/cogl-texture.h
+include/clutter-1.0/cogl/cogl-texture-3d.h
 include/clutter-1.0/cogl/cogl-texture-pixmap-x11.h
+include/clutter-1.0/cogl/cogl-texture.h
 include/clutter-1.0/cogl/cogl-types.h
 include/clutter-1.0/cogl/cogl-vector.h
 include/clutter-1.0/cogl/cogl-vertex-buffer.h
@@ -300,6 +300,7 @@ share/doc/cally/up.png
 %%DOCSDIR%%/using-cairo.html
 share/doc/cogl/ch01.html
 share/doc/cogl/ch02.html
+share/doc/cogl/cogl-3D-textures.html
 share/doc/cogl/cogl-Blend-Strings.html
 share/doc/cogl/cogl-Buffers.html
 share/doc/cogl/cogl-Clipping.html
@@ -339,6 +340,9 @@ share/doc/cogl/up.png
 share/gir-1.0/Cally-1.0.gir
 share/gir-1.0/Clutter-1.0.gir
 share/gir-1.0/Cogl-1.0.gir
+share/locale/de/LC_MESSAGES/clutter-1.0.mo
+share/locale/pl/LC_MESSAGES/clutter-1.0.mo
+share/locale/zh_CN/LC_MESSAGES/clutter-1.0.mo
 @dirrm share/doc/cogl
 @dirrm share/doc/cally
 @dirrm %%DOCSDIR%%

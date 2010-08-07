@@ -3,11 +3,11 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.29 2010/07/01 08:46:07 kwm Exp $
+#  $MCom: ports/graphics/clutter/Makefile,v 1.30 2010/07/13 14:17:26 kwm Exp $
 #
 
 PORTNAME=	clutter
-PORTVERSION=	1.3.8
+PORTVERSION=	1.3.10
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME \
 		http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
@@ -23,7 +23,7 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool:22
-USE_GNOME=	pkgconfig gdkpixbuf2 gnomehack ltverhack gnomeprefix
+USE_GNOME=	pkgconfig gdkpixbuf2 gnomehack ltverhack gnomeprefix atk pango
 USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes
