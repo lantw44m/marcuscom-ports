@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.219 2010/05/29 11:53:11 kwm Exp $
+#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.1 2010/07/26 12:42:30 kwm Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -14,9 +14,11 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Panel component for the GNOME 2 Desktop
+COMMENT=	Panel component for the GNOME 3 Desktop
 
 USE_BZIP2=	yes
+
+IGNORE=		Not supported yet
 
 .if !defined(REFERENCE_PORT)
 
