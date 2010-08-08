@@ -272,6 +272,7 @@ share/locale/is/LC_MESSAGES/glib20.mo
 share/locale/it/LC_MESSAGES/glib20.mo
 share/locale/ja/LC_MESSAGES/glib20.mo
 share/locale/ka/LC_MESSAGES/glib20.mo
+share/locale/kk/LC_MESSAGES/glib20.mo
 share/locale/kn/LC_MESSAGES/glib20.mo
 share/locale/ko/LC_MESSAGES/glib20.mo
 share/locale/ku/LC_MESSAGES/glib20.mo
@@ -374,6 +375,8 @@ share/locale/zh_TW/LC_MESSAGES/glib20.mo
 @dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/kk/LC_MESSAGES
+@dirrmtry share/locale/kk
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
 @dirrmtry share/locale/en@shaw/LC_MESSAGES

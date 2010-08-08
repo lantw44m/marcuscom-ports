@@ -1,6 +1,15 @@
---- glib/Makefile.in.orig	2010-06-08 09:17:31.000000000 +0200
-+++ glib/Makefile.in	2010-06-08 09:18:52.000000000 +0200
-@@ -1484,7 +1484,7 @@ info: info-recursive
+--- glib/Makefile.in.orig	2010-08-08 12:46:01.000000000 +0200
++++ glib/Makefile.in	2010-08-08 12:46:01.000000000 +0200
+@@ -529,7 +529,7 @@ BUILT_SOURCES = glibconfig-stamp $(am__a
+ #
+ DISTCLEANFILES = glibconfig-stamp glibconfig.h
+ CLEANFILES = $(am__append_2)
+-configexecincludedir = $(libdir)/glib-2.0/include
++configexecincludedir = $(includedir)/glib-2.0
+ nodist_configexecinclude_HEADERS = glibconfig.h
+ @HAVE_GOOD_PRINTF_FALSE@PRINTF_SUBDIR = gnulib
+ @HAVE_GOOD_PRINTF_FALSE@printf_la = gnulib/libgnulib.la
+@@ -1530,7 +1530,7 @@ info: info-recursive
  
  info-am:
  
@@ -9,9 +18,9 @@
  	install-glibincludeHEADERS install-glibsubincludeHEADERS \
  	install-tapsetDATA
  	@$(NORMAL_INSTALL)
-@@ -1709,9 +1709,7 @@ distclean-local:
+@@ -1786,9 +1786,7 @@ distclean-local:
  libglib-gdb.py: libglib-gdb.py.in
- 	sed -e "s|\@datadir\@|$(datadir)|" $(srcdir)/libglib-gdb.py.in > libglib-gdb.py
+ 	$(AM_V_GEN) $(SED) -e "s|\@datadir\@|$(datadir)|" $(srcdir)/libglib-gdb.py.in > libglib-gdb.py
  
 -install-data-hook: libglib-gdb.py
 -	mkdir -p $(DESTDIR)$(datadir)/gdb/auto-load$(ABS_GLIB_RUNTIME_LIBDIR)
