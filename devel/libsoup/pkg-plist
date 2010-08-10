@@ -45,3 +45,5 @@ libdata/pkgconfig/libsoup-%%VERSION%%.pc
 share/gir-1.0/Soup-%%VERSION%%.gir
 @dirrm include/libsoup-%%VERSION%%/libsoup
 @dirrm include/libsoup-%%VERSION%%
+@dirrmtry lib/girepository-1.0
+@dirrmtry share/gir-1.0
