@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2010-08-10 23:18:30.000000000 +0200
++++ Makefile.in	2010-08-10 23:18:42.000000000 +0200
+@@ -290,7 +290,7 @@ QUIET_RM = $(QUIET_RM_$(V))
+ QUIET_RM_ = $(QUIET_RM_$(AM_DEFAULT_VERBOSITY))
+ QUIET_RM_0 = @echo '  RM     '$@;
+ ACLOCAL_AMFLAGS = -I build/autotools
+-SUBDIRS = build clutter-gtk doc examples
++SUBDIRS = build clutter-gtk examples
+ pkgconfigdir = $(prefix)/libdata/pkgconfig
+ pkgconfig_DATA = clutter-gtk-1.0.pc
+ EXTRA_DIST = clutter-gtk.pc.in
