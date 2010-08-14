@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.115 2010/06/08 10:03:07 kwm Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.116 2010/06/18 11:31:50 kwm Exp $
 #
 
 PORTNAME=	eog
-PORTVERSION=	2.31.3
+PORTVERSION=	2.31.5
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -34,7 +34,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	eog.schemas
-GLIB_SCHEMAS=	org.gnome.eog.gschema.xml
 
 .include <bsd.port.pre.mk>
 
@@ -68,11 +67,6 @@ CONFIGURE_ARGS+=--enable-python
 .else
 CONFIGURE_ARGS+=--disable-python
 .endif
-
-pre-install:
-	@${MKDIR} ${PREFIX}/share/glib-2.0/schemas
-	@${INSTALL_DATA} ${WRKSRC}/data/org.gnome.eog.gschema.xml \
-		${PREFIX}/share/glib-2.0/schemas
 
 post-install:
 	@-update-desktop-database > /dev/null
