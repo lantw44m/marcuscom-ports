@@ -3,11 +3,11 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.61 2010/07/07 13:03:18 kwm Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.62 2010/07/12 06:33:13 kwm Exp $
 #
 
 PORTNAME=	poppler
-PORTVERSION=	0.14.1
+PORTVERSION=	0.14.2
 PORTREVISION?=	0
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
@@ -112,11 +112,13 @@ LIB_DEPENDS+=	openjpeg.2:${PORTSDIR}/graphics/openjpeg
 .endif
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|7:0:0|6:0:0|' ${WRKSRC}/poppler/Makefile.in
+
 .if defined(SLAVEPORT) && ${SLAVEPORT}=="qt"
 	@${REINPLACE_CMD} -e 's|/usr/local/qt/include|${LOCALBASE}/include|; \
+		s|$$QTDIR|${QT_PREFIX}|; \
 		s|/usr/local/qt/lib|${LOCALBASE}/lib|' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|$$QTDIR|${QT_PREFIX}|' ${WRKSRC}/configure
 .endif
 .if defined(SLAVEPORT) && ${SLAVEPORT}=="qt4"
 	@${REINPLACE_CMD} -e 's|MOCQT4=`.*|MOCQT4="${LOCALBASE}/bin/moc-qt4"|' \
