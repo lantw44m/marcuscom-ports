@@ -3,14 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports-stable/editors/gedit/Makefile,v 1.13 2010/06/22 20:00:07 kwm Exp $
 #
 
 PORTNAME=	gedit
-PORTVERSION=	2.31.3
+PORTVERSION=	2.30.3
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A small but powerful text editor for GNOME 2 Desktop Environment
@@ -27,15 +27,16 @@ INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool:22
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gconf2 gtksourceview2 \
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gtksourceview2 \
 		desktopfileutils gnomedocutils ltasneededhack
+GNOME_DESKTOP_VERSION=2
 WANT_GNOME=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-PLIST_SUB=	VERSION="3.0"
+PLIST_SUB=	VERSION="2.20"
 
 MAN1=		gedit.1
-GLIB_SCHEMAS=	org.gnome.gedit.gschema.xml
+GCONF_SCHEMAS=	gedit.schemas gedit-file-browser.schemas
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
@@ -60,10 +61,6 @@ PLIST_SUB+=	PYTHON="@comment "
 #.for ff in gedit_la-gedit.Plo gedit_la-geditcommands.Plo gedit_la-geditutils.Plo
 #	${TOUCH} ${WRKSRC}/bindings/python/.deps/${ff}
 #.endfor
-
-pre-install:
-	@${INSTALL_DATA} ${WRKSRC}/data/org.gnome.gedit.gschema.xml \
-		${PREFIX}/share/glib-2.0/schemas/
 
 post-install:
 	@-update-desktop-database

@@ -7,11 +7,15 @@ include/gedit-%%VERSION%%/gedit/gedit-document.h
 include/gedit-%%VERSION%%/gedit/gedit-encodings-combo-box.h
 include/gedit-%%VERSION%%/gedit/gedit-encodings.h
 include/gedit-%%VERSION%%/gedit/gedit-file-chooser-dialog.h
+include/gedit-%%VERSION%%/gedit/gedit-help.h
 include/gedit-%%VERSION%%/gedit/gedit-message-bus.h
 include/gedit-%%VERSION%%/gedit/gedit-message-type.h
 include/gedit-%%VERSION%%/gedit/gedit-message.h
+include/gedit-%%VERSION%%/gedit/gedit-notebook.h
 include/gedit-%%VERSION%%/gedit/gedit-panel.h
 include/gedit-%%VERSION%%/gedit/gedit-plugin.h
+include/gedit-%%VERSION%%/gedit/gedit-prefs-manager-app.h
+include/gedit-%%VERSION%%/gedit/gedit-prefs-manager.h
 include/gedit-%%VERSION%%/gedit/gedit-progress-message-area.h
 include/gedit-%%VERSION%%/gedit/gedit-statusbar.h
 include/gedit-%%VERSION%%/gedit/gedit-status-combo-box.h
@@ -151,7 +155,6 @@ lib/gedit-2/plugins/time.gedit-plugin
 libdata/pkgconfig/gedit-%%VERSION%%.pc
 libexec/gedit-2/gedit-bugreport.sh
 share/applications/gedit.desktop
-share/dbus-1/services/org.gnome.gedit.service
 %%DOCSDIR%%/GeditMessage.html
 %%DOCSDIR%%/GeditMessageBus.html
 %%DOCSDIR%%/GeditPlugin.html
