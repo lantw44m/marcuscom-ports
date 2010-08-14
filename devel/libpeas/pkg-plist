@@ -38,6 +38,10 @@ lib/peas-demo/plugins/pythonhello/pythonhello.peasdemo-plugin
 lib/peas-demo/plugins/pythonhello/pythonhello.py
 lib/peas-demo/plugins/pythonhello/pythonhello.pyc
 lib/peas-demo/plugins/pythonhello/pythonhello.pyo
+lib/peas-demo/plugins/secondtime/libsecondtime.a
+lib/peas-demo/plugins/secondtime/libsecondtime.la
+lib/peas-demo/plugins/secondtime/libsecondtime.so
+lib/peas-demo/plugins/secondtime/secondtime.peasdemo-plugin
 lib/peas-demo/plugins/seedhello/seedhello.js
 lib/peas-demo/plugins/seedhello/seedhello.peasdemo-plugin
 libdata/pkgconfig/libpeas-1.0.pc
@@ -83,12 +87,14 @@ share/locale/gl/LC_MESSAGES/libpeas.mo
 share/locale/hu/LC_MESSAGES/libpeas.mo
 share/locale/nb/LC_MESSAGES/libpeas.mo
 share/locale/pl/LC_MESSAGES/libpeas.mo
+share/locale/pt/LC_MESSAGES/libpeas.mo
 share/locale/pt_BR/LC_MESSAGES/libpeas.mo
 share/locale/sl/LC_MESSAGES/libpeas.mo
 share/locale/sv/LC_MESSAGES/libpeas.mo
 share/locale/zh_CN/LC_MESSAGES/libpeas.mo
 @dirrm share/gtk-doc/html/libpeas
 @dirrm lib/peas-demo/plugins/seedhello
+@dirrm lib/peas-demo/plugins/secondtime
 @dirrm lib/peas-demo/plugins/pythonhello
 @dirrm lib/peas-demo/plugins/helloworld
 @dirrm lib/peas-demo/plugins
