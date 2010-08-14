@@ -2,13 +2,12 @@
 # Date created:				09 January 2005
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/evince/Makefile,v 1.57 2010/07/06 00:37:53 marcus Exp $
-#    $MCom: ports/graphics/evince/Makefile,v 1.137 2010/04/27 14:14:36 kwm Exp $
+# $FreeBSD$
+#    $MCom: ports/graphics/evince/Makefile,v 1.141 2010/07/07 13:43:39 kwm Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	2.30.1
-PORTREVISION=	3
+PORTVERSION=	2.31.6.1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -33,7 +32,8 @@ USE_GNOME=	gnomehack intlhack gnomeprefix desktopfileutils \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-GCONF_SCHEMAS=	evince.schemas \
+GLIB_SCHEMAS=	org.gnome.Evince.gschema.xml
+GCONF_SCHEMAS=	\
 		evince-thumbnailer.schemas \
 		evince-thumbnailer-ps.schemas
 
@@ -120,6 +120,7 @@ PLIST_SUB+=		COMICS="@comment "
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|execinfo.h|#|g' \
+		-e 's|" == "|" = "|g' \
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e '/^DOC_MODULE_VERSION/d' \
 		${WRKSRC}/help/reference/libdocument/Makefile.in \
@@ -127,5 +128,7 @@ post-patch:
 
 post-install:
 	@-update-desktop-database
+	@${INSTALL_DATA} ${WRKSRC}/data/org.gnome.Evince.gschema.xml \
+		${PREFIX}/share/glib-2.0/schemas
 
 .include <bsd.port.post.mk>

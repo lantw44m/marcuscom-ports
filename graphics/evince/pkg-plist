@@ -20,6 +20,7 @@ include/evince/2.30/libdocument/ev-document-links.h
 include/evince/2.30/libdocument/ev-document-misc.h
 include/evince/2.30/libdocument/ev-document-print.h
 include/evince/2.30/libdocument/ev-document-security.h
+include/evince/2.30/libdocument/ev-document-text.h
 include/evince/2.30/libdocument/ev-document-thumbnails.h
 include/evince/2.30/libdocument/ev-document-transition.h
 include/evince/2.30/libdocument/ev-document-type-builtins.h
@@ -33,7 +34,7 @@ include/evince/2.30/libdocument/ev-layer.h
 include/evince/2.30/libdocument/ev-link-action.h
 include/evince/2.30/libdocument/ev-link-dest.h
 include/evince/2.30/libdocument/ev-link.h
-include/evince/2.30/libdocument/ev-mapping.h
+include/evince/2.30/libdocument/ev-mapping-list.h
 include/evince/2.30/libdocument/ev-page.h
 include/evince/2.30/libdocument/ev-render-context.h
 include/evince/2.30/libdocument/ev-selection.h
@@ -90,6 +91,7 @@ libdata/pkgconfig/evince-document-2.30.pc
 libdata/pkgconfig/evince-view-2.30.pc
 libexec/evince-convert-metadata
 libexec/evinced
+share/GConf/gsettings/evince.convert
 share/applications/evince.desktop
 share/dbus-1/services/org.gnome.evince.Daemon.service
 %%DOCSDIR%%/EggFindBar.html
@@ -317,6 +319,7 @@ share/locale/da/LC_MESSAGES/evince.mo
 share/locale/de/LC_MESSAGES/evince.mo
 share/locale/dz/LC_MESSAGES/evince.mo
 share/locale/el/LC_MESSAGES/evince.mo
+share/locale/eo/LC_MESSAGES/evince.mo
 share/locale/en@shaw/LC_MESSAGES/evince.mo
 share/locale/en_CA/LC_MESSAGES/evince.mo
 share/locale/en_GB/LC_MESSAGES/evince.mo
@@ -336,6 +339,7 @@ share/locale/id/LC_MESSAGES/evince.mo
 share/locale/it/LC_MESSAGES/evince.mo
 share/locale/ja/LC_MESSAGES/evince.mo
 share/locale/ka/LC_MESSAGES/evince.mo
+share/locale/kk/LC_MESSAGES/evince.mo
 share/locale/kn/LC_MESSAGES/evince.mo
 share/locale/ko/LC_MESSAGES/evince.mo
 share/locale/ks/LC_MESSAGES/evince.mo
@@ -508,6 +512,8 @@ share/omf/evince/evince-zh_CN.omf
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/ks/LC_MESSAGES
 @dirrmtry share/locale/ks
+@dirrmtry share/locale/kk/LC_MESSAGES
+@dirrmtry share/locale/kk
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
 @dirrmtry share/locale/en@shaw
 @dirrmtry share/locale/dz/LC_MESSAGES
