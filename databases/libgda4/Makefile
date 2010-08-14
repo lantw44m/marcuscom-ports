@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.7 2010/06/05 22:07:25 kwm Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.8 2010/06/29 21:43:25 kwm Exp $
 #
 
 PORTNAME=	libgda4
@@ -35,6 +35,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack glib20 libxslt intlhack referencehack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
+MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ARGS=	--without-sybase \
 		--enable-introspection
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
