@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.117 2010/06/29 21:46:29 kwm Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.118 2010/07/13 12:29:56 kwm Exp $
 #
 
 PORTNAME=	gconf2
-PORTVERSION=	2.31.6
+PORTVERSION=	2.31.7
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
