@@ -2,6 +2,7 @@ bin/gjs
 bin/gjs-console
 include/gjs-1.0/gjs-dbus/dbus-proxy.h
 include/gjs-1.0/gjs-dbus/dbus.h
+include/gjs-1.0/gjs/byteArray.h
 include/gjs-1.0/gjs/context.h
 include/gjs-1.0/gjs/gi/arg.h
 include/gjs-1.0/gjs/gi/boxed.h
@@ -9,6 +10,7 @@ include/gjs-1.0/gjs/gi/closure.h
 include/gjs-1.0/gjs/gi/enumeration.h
 include/gjs-1.0/gjs/gi/foreign.h
 include/gjs-1.0/gjs/gi/function.h
+include/gjs-1.0/gjs/gi/gjs_gi_trace.h
 include/gjs-1.0/gjs/gi/keep-alive.h
 include/gjs-1.0/gjs/gi/ns.h
 include/gjs-1.0/gjs/gi/object.h
@@ -65,6 +67,7 @@ share/gjs-1.0/dbus.js
 share/gjs-1.0/gettext.js
 share/gjs-1.0/jsUnit.js
 share/gjs-1.0/lang.js
+share/gjs-1.0/promise.js
 share/gjs-1.0/signals.js
 share/gjs-1.0/tweener/equations.js
 share/gjs-1.0/tweener/tweenList.js
