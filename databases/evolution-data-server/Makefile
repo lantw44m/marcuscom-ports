@@ -2,13 +2,12 @@
 # Date created:				09 December 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/evolution-data-server/Makefile,v 1.75 2010/05/31 01:57:45 ade Exp $
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.194 2010/04/26 13:45:12 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.198 2010/07/13 15:25:01 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	2.30.1
-PORTREVISION=	2
+PORTVERSION=	2.31.90
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,6 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
 LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
+		gdata.7:${PORTSDIR}/devel/libgdata \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		ical.44:${PORTSDIR}/devel/libical \
 		nss3.1:${PORTSDIR}/security/nss \
@@ -24,14 +24,13 @@ LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 
-CONFLICTS=      evolution-data-server-2.31.*
-
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	build
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack ltverhack ltasneededhack gconf2 \
 		libxml2
+GNOME_DESKTOP_VERSION=2
 USE_OPENLDAP=	yes
 USE_AUTOTOOLS=	libtool:22
 USE_BDB=	41+
@@ -43,7 +42,7 @@ CONFIGURE_ARGS=	--enable-static \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}" \
 		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
-PLIST_SUB=	VERSION="2.30" EVO_VERSION="1.2"
+PLIST_SUB=	VERSION="2.32" EVO_VERSION="1.2"
 
 #OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
 OPTIONS=	WEATHER "Enable weather calendar backend" on
