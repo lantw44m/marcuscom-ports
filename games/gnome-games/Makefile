@@ -2,13 +2,12 @@
 # Date created:				08 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/games/gnome-games/Makefile,v 1.144 2010/05/31 01:58:58 ade Exp $
-#   $MCom: ports/games/gnome-games/Makefile,v 1.218 2010/04/27 19:42:25 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/games/gnome-games/Makefile,v 1.224 2010/07/23 19:35:48 kwm Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	2.30.1
-PORTREVISION=	1
+PORTVERSION=	2.31.90
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,8 +18,7 @@ COMMENT=	The game applications package for the GNOME 2 Desktop Environment
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	guile.20:${PORTSDIR}/lang/guile \
 		clutter-gtk-0.10.0:${PORTSDIR}/graphics/clutter-gtk \
-		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter \
-		ggzmod.5:${PORTSDIR}/games/ggz-client-libs
+		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter
 RUN_DEPENDS=	seed:${PORTSDIR}/devel/seed \
 		${LOCALBASE}/share/gir-1.0/GConf-2.0.gir:${PORTSDIR}/devel/gir-repository-gconf2
 
