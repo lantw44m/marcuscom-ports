@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.48 2010/06/06 11:30:35 kwm Exp $
+#   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.49 2010/06/07 15:14:10 kwm Exp $
 #
 
 PORTNAME=	mousetweaks
-PORTVERSION=	2.31.3
+PORTVERSION=	2.31.90
 CATEGORIES=	accessibility
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
