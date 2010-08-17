@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.62 2010/04/26 23:24:41 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.66 2010/07/14 10:22:09 kwm Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
@@ -16,8 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 settings daemon
 
-LIB_DEPENDS=	pulse.0:${PORTSDIR}/audio/pulseaudio \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
+LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
 		notify.1:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	xrdb:${PORTSDIR}/x11/xrdb
 
@@ -27,10 +26,13 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomedesktop libgnomekbd
 USE_GETTEXT=	yes
 USE_GSTREAMER=	good
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+OPTIONS=	PULSEAUDIO "Enable Pulseaudio support" On
 
 GCONF_SCHEMAS=	apps_gnome_settings_daemon_housekeeping.schemas \
 		apps_gnome_settings_daemon_keybindings.schemas \
@@ -40,4 +42,15 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_housekeeping.schemas \
 		desktop_gnome_peripherals_touchpad.schemas \
 		gnome-settings-daemon.schemas
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if defined(WITHOUT_PULSEAUDIO)
+CONFIGURE_ARGS+=--disable-pulse
+PLIST_SUB+=	PULSEAUDIO="@comment "
+.else
+LIB_DEPENDS+=	pulse.0:${PORTSDIR}/audio/pulseaudio
+CONFIGURE_ARGS+=--enable-pulse
+PLIST_SUB+=	PULSEAUDIO=""
+.endif
+
+.include <bsd.port.post.mk>
