@@ -2,13 +2,12 @@
 # Date created:				28th June 2000
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/evolution/Makefile,v 1.183 2010/06/08 19:40:54 makc Exp $
-#   $MCom: ports/mail/evolution/Makefile,v 1.222 2010/04/27 12:12:48 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/mail/evolution/Makefile,v 1.226 2010/07/26 14:29:52 kwm Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.30.1.2
-PORTREVISION=	3
+PORTVERSION=	2.31.90
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -21,15 +20,13 @@ LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss \
 		gtkimageview.0:${PORTSDIR}/x11-toolkits/gtkimageview
 RUN_DEPENDS=	${LOCALBASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnome-spell
 
-CONFLICTS=	evolution-2.31.*
-
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	build
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver gtkhtml3 \
-		desktopfileutils gnomedocutils ltasneededhack gnomedesktop \
-		libgnomecanvas
+		desktopfileutils gnomedocutils ltasneededhack gnomedesktop
+GNOME_DESKTOP_VERSION=2
 USE_AUTOTOOLS=	libtool:22
 USE_GSTREAMER=	yes
 INSTALLS_OMF=	yes
@@ -53,25 +50,15 @@ GCONF_SCHEMAS=	apps_evolution_addressbook.schemas \
 		bogo-junk-plugin.schemas \
 		evolution-mail.schemas
 
-EVO_VERSION=	2.30
+EVO_VERSION=	2.32
 PLIST_SUB=	VERSION=${EVO_VERSION} \
 		PORTVERSION=2.12
 
-OPTIONS=	PILOT "Enable Palm Pilot sync support" off \
-		LDAP "Enable LDAP support" on \
+OPTIONS=	LDAP "Enable LDAP support" on \
 		CANBERRA "Enable canberra plugin" on \
 		SPAMASSASSIN "Enable SpamAssassin spam filtering" off
 
 .include <bsd.port.pre.mk>
-
-.if defined(WITH_PILOT)
-LIB_DEPENDS+=	gpilotdconduit.2:${PORTSDIR}/palm/gnome-pilot
-CONFIGURE_ARGS+=	--with-pisock=${LOCALBASE} \
-			--enable-pilot-conduits=yes
-PLIST_SUB+=	PILOT=""
-.else
-PLIST_SUB+=	PILOT="@comment "
-.endif
 
 .if !defined(WITHOUT_LDAP)
 USE_OPENLDAP=	yes
