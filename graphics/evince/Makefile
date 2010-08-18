@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/evince/Makefile,v 1.141 2010/07/07 13:43:39 kwm Exp $
+#    $MCom: ports/graphics/evince/Makefile,v 1.142 2010/08/14 13:47:51 kwm Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	2.31.6.1
+PORTVERSION=	2.31.90
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -36,6 +36,8 @@ GLIB_SCHEMAS=	org.gnome.Evince.gschema.xml
 GCONF_SCHEMAS=	\
 		evince-thumbnailer.schemas \
 		evince-thumbnailer-ps.schemas
+
+PLIST_SUB+=	VERSION=2.32
 
 MAN1=		evince.1
 
