@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net-im/folks/Makefile,v 1.1 2010/08/18 12:45:58 kwm Exp $
 #
 
 PORTNAME=	folks
@@ -20,17 +20,10 @@ LIB_DEPENDS= 	gee.2:${PORTSDIR}/devel/libgee \
 
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-#USE_GETTEXT=	yes
 USE_GMAKE=	yes
-#MAKE_JOBS_SAFE=	yes
-#USE_AUTOTOOLS=	libtool:22
 USE_GNOME=	gnomehack
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include " \
 		LDFLAGS="-L${LOCALBASE}/lib"
-#CONFIGURE_ARGS+=	--enable-maintainer-mode
-
-post-configure:
-	${TOUCH} ${WRKSRC}/backends/telepathy/folks-telepathy.vala.stamp
 
 .include <bsd.port.mk>
