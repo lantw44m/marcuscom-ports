@@ -80,6 +80,7 @@ include/clutter-1.0/clutter/clutter-stage-manager.h
 include/clutter-1.0/clutter/clutter-stage-window.h
 include/clutter-1.0/clutter/clutter-stage.h
 include/clutter-1.0/clutter/clutter-state.h
+include/clutter-1.0/clutter/clutter-table-layout.h
 include/clutter-1.0/clutter/clutter-text.h
 include/clutter-1.0/clutter/clutter-texture.h
 include/clutter-1.0/clutter/clutter-timeline.h
@@ -212,6 +213,7 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ClutterShaderEffect.html
 %%DOCSDIR%%/ClutterStage.html
 %%DOCSDIR%%/ClutterState.html
+%%DOCSDIR%%/ClutterTableLayout.html
 %%DOCSDIR%%/ClutterText.html
 %%DOCSDIR%%/ClutterTexture.html
 %%DOCSDIR%%/ClutterTimeline.html
