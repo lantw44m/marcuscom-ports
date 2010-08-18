@@ -7,12 +7,12 @@ include/libpeas-1.0/libpeas/peas-extension.h
 include/libpeas-1.0/libpeas/peas-object-module.h
 include/libpeas-1.0/libpeas/peas-plugin-info.h
 include/libpeas-1.0/libpeas/peas.h
-include/libpeas-1.0/libpeasui/peas-ui-configurable.h
-include/libpeas-1.0/libpeasui/peas-ui-plugin-manager-view.h
-include/libpeas-1.0/libpeasui/peas-ui-plugin-manager.h
-include/libpeas-1.0/libpeasui/peas-ui.h
+include/libpeas-1.0/libpeas-gtk/peas-gtk-configurable.h
+include/libpeas-1.0/libpeas-gtk/peas-gtk-plugin-manager-view.h
+include/libpeas-1.0/libpeas-gtk/peas-gtk-plugin-manager.h
+include/libpeas-1.0/libpeas-gtk/peas-gtk.h
 lib/girepository-1.0/Peas-1.0.typelib
-lib/girepository-1.0/PeasUI-1.0.typelib
+lib/girepository-1.0/PeasGtk-1.0.typelib
 lib/libpeas-1.0.a
 lib/libpeas-1.0.la
 lib/libpeas-1.0.so
@@ -26,10 +26,10 @@ lib/libpeas-1.0/loaders/libpythonloader.so
 lib/libpeas-1.0/loaders/libseedloader.a
 lib/libpeas-1.0/loaders/libseedloader.la
 lib/libpeas-1.0/loaders/libseedloader.so
-lib/libpeasui-1.0.a
-lib/libpeasui-1.0.la
-lib/libpeasui-1.0.so
-lib/libpeasui-1.0.so.0
+lib/libpeas-gtk-1.0.a
+lib/libpeas-gtk-1.0.la
+lib/libpeas-gtk-1.0.so
+lib/libpeas-gtk-1.0.so.0
 lib/peas-demo/plugins/helloworld/helloworld.peasdemo-plugin
 lib/peas-demo/plugins/helloworld/libhelloworld.a
 lib/peas-demo/plugins/helloworld/libhelloworld.la
@@ -45,18 +45,18 @@ lib/peas-demo/plugins/secondtime/secondtime.peasdemo-plugin
 lib/peas-demo/plugins/seedhello/seedhello.js
 lib/peas-demo/plugins/seedhello/seedhello.peasdemo-plugin
 libdata/pkgconfig/libpeas-1.0.pc
-libdata/pkgconfig/libpeasui-1.0.pc
+libdata/pkgconfig/libpeas-gtk-1.0.pc
 share/gir-1.0/Peas-1.0.gir
-share/gir-1.0/PeasUI-1.0.gir
+share/gir-1.0/PeasGtk-1.0.gir
 share/gtk-doc/html/libpeas/PeasActivatable.html
 share/gtk-doc/html/libpeas/PeasEngine.html
 share/gtk-doc/html/libpeas/PeasExtension.html
 share/gtk-doc/html/libpeas/PeasExtensionBase.html
 share/gtk-doc/html/libpeas/PeasExtensionSet.html
+share/gtk-doc/html/libpeas/PeasGtkConfigurable.html
+share/gtk-doc/html/libpeas/PeasGtkPluginManager.html
+share/gtk-doc/html/libpeas/PeasGtkPluginManagerView.html
 share/gtk-doc/html/libpeas/PeasObjectModule.html
-share/gtk-doc/html/libpeas/PeasUIConfigurable.html
-share/gtk-doc/html/libpeas/PeasUIPluginManager.html
-share/gtk-doc/html/libpeas/PeasUIPluginManagerView.html
 share/gtk-doc/html/libpeas/annotation-glossary.html
 share/gtk-doc/html/libpeas/api-index-full.html
 share/gtk-doc/html/libpeas/ch01.html
@@ -69,7 +69,7 @@ share/gtk-doc/html/libpeas/left.png
 share/gtk-doc/html/libpeas/libpeas-PeasPluginInfo.html
 share/gtk-doc/html/libpeas/libpeas.devhelp
 share/gtk-doc/html/libpeas/libpeas.devhelp2
-share/gtk-doc/html/libpeas/peas-ui-plugin-manager.png
+share/gtk-doc/html/libpeas/peas-gtk-plugin-manager.png
 share/gtk-doc/html/libpeas/pt01.html
 share/gtk-doc/html/libpeas/right.png
 share/gtk-doc/html/libpeas/style.css
@@ -86,12 +86,15 @@ share/locale/fr/LC_MESSAGES/libpeas.mo
 share/locale/gl/LC_MESSAGES/libpeas.mo
 share/locale/hu/LC_MESSAGES/libpeas.mo
 share/locale/nb/LC_MESSAGES/libpeas.mo
+share/locale/nds/LC_MESSAGES/libpeas.mo
 share/locale/pl/LC_MESSAGES/libpeas.mo
 share/locale/pt/LC_MESSAGES/libpeas.mo
 share/locale/pt_BR/LC_MESSAGES/libpeas.mo
 share/locale/sl/LC_MESSAGES/libpeas.mo
 share/locale/sv/LC_MESSAGES/libpeas.mo
 share/locale/zh_CN/LC_MESSAGES/libpeas.mo
+@dirrm share/locale/nds/LC_MESSAGES
+@dirrm share/locale/nds
 @dirrm share/gtk-doc/html/libpeas
 @dirrm lib/peas-demo/plugins/seedhello
 @dirrm lib/peas-demo/plugins/secondtime
@@ -101,6 +104,6 @@ share/locale/zh_CN/LC_MESSAGES/libpeas.mo
 @dirrm lib/peas-demo
 @dirrm lib/libpeas-1.0/loaders
 @dirrm lib/libpeas-1.0
-@dirrm include/libpeas-1.0/libpeasui
+@dirrm include/libpeas-1.0/libpeas-gtk
 @dirrm include/libpeas-1.0/libpeas
 @dirrm include/libpeas-1.0
