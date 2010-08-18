@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	vala
-PORTVERSION=	0.9.5
+PORTVERSION=	0.9.6
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -46,13 +46,14 @@ post-patch:
 		-e 's|@gen_introspect_decl@|gen_introspect=$${libdir}/vala/gen-introspect|g' \
 		-e 's|@vala_gen_introspect_decl@|vala_gen_introspect=$${bindir}/vala-gen-introspect|g' \
 		${WRKSRC}/vala.pc.in
-	${REINPLACE_CMD} -e 's|cp $$< $$@|cp vala.pc vala-0.10.pc|g' \
+	@${REINPLACE_CMD} -e 's|cp $$< $$@|cp vala.pc vala-0.10.pc|g' \
 		${WRKSRC}/Makefile.in
 
 .if defined(VALA_SLAVE)
 pre-build:
 	@cd ${WRKSRC} && ${GMAKE} version.h
-	@cd ${WRKSRC}/gobject-introspection && ${GMAKE} libgidl.la
+	@cd ${WRKSRC}/gobject-introspection && ${GMAKE} libgidl.la && \
+		${GMAKE} gen-introspect
 
 post-install:
 	@cd ${WRKSRC}/gobject-introspection && ${GMAKE} install
