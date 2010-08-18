@@ -31,6 +31,7 @@ include/telepathy-1.0/telepathy-glib/_gen/tp-svc-generic.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-media-session-handler.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-media-stream-handler.h
 include/telepathy-1.0/telepathy-glib/_gen/tp-svc-protocol.h
+include/telepathy-1.0/telepathy-glib/account-channel-request.h
 include/telepathy-1.0/telepathy-glib/account-manager.h
 include/telepathy-1.0/telepathy-glib/account.h
 include/telepathy-1.0/telepathy-glib/add-dispatch-operation-context.h
@@ -139,6 +140,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-TpMessageMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpPresenceMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpPropertiesMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpTextMixin.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-account-channel-request.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-add-dispatch-operation-context.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-asv.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-account-manager.html
@@ -229,6 +231,8 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-util.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib.devhelp
 share/gtk-doc/html/telepathy-glib/telepathy-glib.devhelp2
 share/gtk-doc/html/telepathy-glib/up.png
+share/vala-0.10/vapi/telepathy-glib.deps
+share/vala-0.10/vapi/telepathy-glib.vapi
 @dirrm share/gtk-doc/html/telepathy-glib
 @dirrmtry share/gtk-doc/html
 @dirrmtry share/gtk-doc
