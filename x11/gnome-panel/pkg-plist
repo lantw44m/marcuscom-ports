@@ -1,48 +1,70 @@
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
+%%BONOBO%%bin/panel-test-applets-bonobo
 etc/dbus-1/system.d/org.gnome.ClockApplet.Mechanism.conf
 @unexec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --unload %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel > /dev/null || /usr/bin/true
 @unexec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --unload %D/etc/gconf/schemas/panel-default-setup.entries > /dev/null || /usr/bin/true
 etc/gconf/schemas/panel-default-setup.entries
 @exec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --load %D/etc/gconf/schemas/panel-default-setup.entries > /dev/null || /usr/bin/true
 @exec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --load %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel > /dev/null || /usr/bin/true
-include/panel-2.0/GNOME_Panel.h
-include/panel-2.0/panel-applet-enums.h
-include/panel-2.0/panel-applet-gconf.h
-include/panel-2.0/panel-applet.h
-lib/libpanel-applet-2.a
-lib/libpanel-applet-2.la
-lib/libpanel-applet-2.so
-lib/libpanel-applet-2.so.0
-libdata/bonobo/servers/GNOME_ClockApplet_Factory.server
-libdata/bonobo/servers/GNOME_FishApplet_Factory.server
-libdata/bonobo/servers/GNOME_NotificationAreaApplet.server
-libdata/bonobo/servers/GNOME_Wncklet_Factory.server
-libdata/pkgconfig/libpanelapplet-2.0.pc
+%%BONOBO%%include/panel-2.0/GNOME_Panel.h
+%%BONOBO%%include/panel-2.0/panel-applet-enums.h
+%%BONOBO%%include/panel-2.0/panel-applet-gconf.h
+%%BONOBO%%include/panel-2.0/panel-applet.h
+include/gnome-panel-3.0/libpanel-applet/panel-applet-enums.h
+include/gnome-panel-3.0/libpanel-applet/panel-applet-gconf.h
+include/gnome-panel-3.0/libpanel-applet/panel-applet.h
+lib/girepository-1.0/PanelApplet-3.0.typelib
+@exec mkdir -p %D/lib/gnome-panel/modules
+%%BONOBO%%lib/gnome-panel/modules/libpanel-applets-bonobo.a
+%%BONOBO%%lib/gnome-panel/modules/libpanel-applets-bonobo.la
+%%BONOBO%%lib/gnome-panel/modules/libpanel-applets-bonobo.so
+@exec %%LOCALBASE%%/bin/gio-querymodules %D/lib/gnome-panel/modules 2>1/dev/null || /usr/bin/true
+@unexec /bin/rm -f %D/lib/gnome-panel/modules/giomodule.cache
+%%BONOBO%%lib/libpanel-applet-2.a
+%%BONOBO%%lib/libpanel-applet-2.la
+%%BONOBO%%lib/libpanel-applet-2.so
+%%BONOBO%%lib/libpanel-applet-2.so.0
+lib/libpanel-applet-3.a
+lib/libpanel-applet-3.la
+lib/libpanel-applet-3.so
+lib/libpanel-applet-3.so.0
+%%BONOBO%%libdata/pkgconfig/libpanelapplet-2.0.pc
+libdata/pkgconfig/libpanelapplet-3.0.pc
 libexec/clock-applet
-libexec/fish-applet-2
+libexec/fish-applet
 libexec/gnome-clock-applet-mechanism
 libexec/gnome-panel-add
 libexec/notification-area-applet
 libexec/wnck-applet
 share/applications/gnome-panel.desktop
+share/dbus-1/services/org.gnome.panel.applet.ClockAppletFactory.service
+share/dbus-1/services/org.gnome.panel.applet.FishAppletFactory.service
+share/dbus-1/services/org.gnome.panel.applet.NotificationAreaAppletFactory.service
+share/dbus-1/services/org.gnome.panel.applet.WnckletFactory.service
 share/dbus-1/system-services/org.gnome.ClockApplet.Mechanism.service
-share/gnome-2.0/ui/GNOME_ClockApplet.xml
-share/gnome-2.0/ui/GNOME_FishApplet.xml
-share/gnome-2.0/ui/GNOME_NotificationAreaApplet.xml
-share/gnome-2.0/ui/GNOME_Panel_Popup.xml
-share/gnome-2.0/ui/GNOME_ShowDesktopApplet.xml
-share/gnome-2.0/ui/GNOME_WindowListApplet.xml
-share/gnome-2.0/ui/GNOME_WindowMenuApplet.xml
-share/gnome-2.0/ui/GNOME_WorkspaceSwitcherApplet.xml
+%%BONOBO%%share/gnome-2.0/ui/GNOME_Panel_Popup.xml
+share/gir-1.0/PanelApplet-3.0.gir
+%%DATADIR%%/applets/org.gnome.panel.ClockApplet.panel-applet
+%%DATADIR%%/applets/org.gnome.panel.FishApplet.panel-applet
+%%DATADIR%%/applets/org.gnome.panel.NotificationAreaApplet.panel-applet
+%%DATADIR%%/applets/org.gnome.panel.Wncklet.panel-applet
 %%DATADIR%%/ui/clock.ui
+%%DATADIR%%/ui/clock-menu.xml
 %%DATADIR%%/ui/fish.ui
+%%DATADIR%%/ui/fish-menu.xml
+%%DATADIR%%/ui/notification-area-menu.xml
+%%BONOBO%%%%DATADIR%%/ui/panel-test-applets-bonobo.ui
 %%DATADIR%%/ui/panel-properties-dialog.ui
 %%DATADIR%%/ui/panel-run-dialog.ui
+%%DATADIR%%/ui/showdesktop-menu.xml
 %%DATADIR%%/ui/panel-test-applets.ui
 %%DATADIR%%/ui/window-list.ui
+%%DATADIR%%/ui/window-list-menu.xml
+%%DATADIR%%/ui/window-menu-menu.xml
 %%DATADIR%%/ui/workspace-switcher.ui
+%%DATADIR%%/ui/workspace-switcher-menu.xml
 %%DATADIR%%/pixmaps/clock-calendar-icon.png
 %%DATADIR%%/pixmaps/clock-face-large.svg
 %%DATADIR%%/pixmaps/clock-face-small-day.svg
@@ -257,7 +279,7 @@ share/icons/hicolor/scalable/apps/gnome-panel-window-list.svg
 share/icons/hicolor/scalable/apps/gnome-panel-window-menu.svg
 share/icons/hicolor/scalable/apps/gnome-panel-workspace-switcher.svg
 share/icons/hicolor/scalable/apps/gnome-panel.svg
-share/idl/gnome-panel-2.0/GNOME_Panel.idl
+%%BONOBO%%share/idl/gnome-panel-2.0/GNOME_Panel.idl
 share/locale/af/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-panel-2.0.mo
@@ -411,7 +433,7 @@ share/omf/fish/fish-zh_CN.omf
 share/polkit-1/actions/org.gnome.clockapplet.mechanism.policy
 @dirrm share/omf/fish
 @dirrm share/omf/clock
-@dirrm share/idl/gnome-panel-2.0
+%%BONOBO%%@dirrm share/idl/gnome-panel-2.0
 @dirrm share/gnome/help/fish/zh_CN/figures
 @dirrm share/gnome/help/fish/zh_CN
 @dirrm share/gnome/help/fish/uk/figures
@@ -508,9 +530,13 @@ share/polkit-1/actions/org.gnome.clockapplet.mechanism.policy
 @dirrm share/gnome/help/clock
 @dirrm %%DATADIR%%/pixmaps
 @dirrm %%DATADIR%%/ui
+@dirrm %%DATADIR%%/applets
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
-@dirrm include/panel-2.0
+@dirrmtry lib/gnome-panel/modules
+@dirrm include/gnome-panel-3.0/libpanel-applet
+@dirrm include/gnome-panel-3.0/
+%%BONOBO%%@dirrm include/panel-2.0
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
