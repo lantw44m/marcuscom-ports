@@ -46,6 +46,7 @@ share/gnome/help/gdm/el/gdm.xml
 share/gnome/help/gdm/en_GB/gdm.xml
 share/gnome/help/gdm/es/gdm.xml
 share/gnome/help/gdm/fr/gdm.xml
+share/gnome/help/gdm/id/gdm.xml
 share/gnome/help/gdm/it/gdm.xml
 share/gnome/help/gdm/ko/gdm.xml
 share/gnome/help/gdm/oc/gdm.xml
@@ -89,9 +90,11 @@ share/locale/fa/LC_MESSAGES/gdm.mo
 share/locale/fi/LC_MESSAGES/gdm.mo
 share/locale/fr/LC_MESSAGES/gdm.mo
 share/locale/fur/LC_MESSAGES/gdm.mo
+share/locale/fy/LC_MESSAGES/gdm.mo
 share/locale/ga/LC_MESSAGES/gdm.mo
 share/locale/gl/LC_MESSAGES/gdm.mo
 share/locale/gu/LC_MESSAGES/gdm.mo
+share/locale/gv/LC_MESSAGES/gdm.mo
 share/locale/he/LC_MESSAGES/gdm.mo
 share/locale/hi/LC_MESSAGES/gdm.mo
 share/locale/hr/LC_MESSAGES/gdm.mo
@@ -143,6 +146,7 @@ share/locale/ta/LC_MESSAGES/gdm.mo
 share/locale/te/LC_MESSAGES/gdm.mo
 share/locale/th/LC_MESSAGES/gdm.mo
 share/locale/tr/LC_MESSAGES/gdm.mo
+share/locale/ug/LC_MESSAGES/gdm.mo
 share/locale/uk/LC_MESSAGES/gdm.mo
 share/locale/uz/LC_MESSAGES/gdm.mo
 share/locale/uz@cyrillic/LC_MESSAGES/gdm.mo
@@ -159,6 +163,7 @@ share/omf/gdm/gdm-el.omf
 share/omf/gdm/gdm-en_GB.omf
 share/omf/gdm/gdm-es.omf
 share/omf/gdm/gdm-fr.omf
+share/omf/gdm/gdm-id.omf
 share/omf/gdm/gdm-it.omf
 share/omf/gdm/gdm-ko.omf
 share/omf/gdm/gdm-oc.omf
@@ -207,6 +212,7 @@ share/pixmaps/nohost.png
 @dirrm share/gnome/help/gdm/oc
 @dirrm share/gnome/help/gdm/ko
 @dirrm share/gnome/help/gdm/it
+@dirrm share/gnome/help/gdm/id
 @dirrm share/gnome/help/gdm/fr
 @dirrm share/gnome/help/gdm/es
 @dirrm share/gnome/help/gdm/en_GB
@@ -242,6 +248,8 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/xh
 @dirrmtry share/locale/uz@cyrillic/LC_MESSAGES
 @dirrmtry share/locale/uz@cyrillic
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
@@ -272,6 +280,10 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/kk
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
+@dirrmtry share/locale/gv/LC_MESSAGES
+@dirrmtry share/locale/gv
+@dirrmtry share/locale/fy/LC_MESSAGES
+@dirrmtry share/locale/fy
 @dirrmtry share/locale/fur/LC_MESSAGES
 @dirrmtry share/locale/fur
 @dirrmtry share/locale/en@shaw/LC_MESSAGES

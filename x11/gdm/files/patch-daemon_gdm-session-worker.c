@@ -1,5 +1,5 @@
---- daemon/gdm-session-worker.c.orig	2009-09-21 22:05:27.000000000 +0200
-+++ daemon/gdm-session-worker.c	2009-09-22 12:33:59.000000000 +0200
+--- daemon/gdm-session-worker.c.orig	2010-08-17 19:42:18.000000000 +0200
++++ daemon/gdm-session-worker.c	2010-08-18 10:05:46.000000000 +0200
 @@ -31,6 +31,9 @@
  #include <errno.h>
  #include <grp.h>
@@ -10,7 +10,7 @@
  
  #ifdef  HAVE_LOGINDEVPERM
  #include <libdevinfo.h>
-@@ -340,7 +343,7 @@ gdm_session_execute (const char *file,
+@@ -341,7 +344,7 @@ gdm_session_execute (const char *file,
                           * what to search if PATH is unset. POSIX may, dunno.
                           */
  
@@ -19,7 +19,7 @@
                  }
  
                  len = strlen (file) + 1;
-@@ -1995,15 +1998,16 @@ gdm_session_worker_start_user_session (G
+@@ -2027,15 +2030,16 @@ gdm_session_worker_start_user_session (G
                  char  *cachedirname;
                  char  *home_dir;
                  int    fd;
@@ -33,14 +33,14 @@
                  g_free (cachedirname);
  
 -                if (setuid (worker->priv->uid) < 0) {
--                        g_debug ("GdmSessionWorker: could not reset uid - %s", g_strerror (errno));
+-                        g_debug ("GdmSessionWorker: could not reset uid: %s", g_strerror (errno));
 -                        _exit (1);
 -                }
 +                /* Call setsid() before setusercontext() */
  
                  if (setsid () < 0) {
-                         g_debug ("GdmSessionWorker: could not set pid '%u' as leader of new session and process group - %s",
-@@ -2011,6 +2015,28 @@ gdm_session_worker_start_user_session (G
+                         g_debug ("GdmSessionWorker: could not set pid '%u' as leader of new session and process group: %s",
+@@ -2043,6 +2047,28 @@ gdm_session_worker_start_user_session (G
                          _exit (2);
                  }
  
