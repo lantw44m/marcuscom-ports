@@ -107,6 +107,7 @@ share/locale/is/LC_MESSAGES/nautilus.mo
 share/locale/it/LC_MESSAGES/nautilus.mo
 share/locale/ja/LC_MESSAGES/nautilus.mo
 share/locale/ka/LC_MESSAGES/nautilus.mo
+share/locale/kk/LC_MESSAGES/nautilus.mo
 share/locale/km/LC_MESSAGES/nautilus.mo
 share/locale/kn/LC_MESSAGES/nautilus.mo
 share/locale/ko/LC_MESSAGES/nautilus.mo
@@ -286,6 +287,8 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/km/LC_MESSAGES
 @dirrmtry share/locale/km
+@dirrmtry share/locale/kk/LC_MESSAGES
+@dirrmtry share/locale/kk
 @dirrmtry share/locale/io/LC_MESSAGES
 @dirrmtry share/locale/io
 @dirrmtry share/locale/ig/LC_MESSAGES

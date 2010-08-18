@@ -3,12 +3,11 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.201 2010/08/13 14:54:44 kwm Exp $
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.202 2010/08/18 09:12:54 kwm Exp $
 #
 
 PORTNAME=	nautilus
-PORTVERSION=	2.31.6
-PORTREVISION=	1
+PORTVERSION=	2.31.90
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -18,7 +17,6 @@ COMMENT?=	File manager for the GNOME desktop
 
 BUILD_DEPENDS=	g-ir-compiler:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
 		exempi.3:${PORTSDIR}/textproc/exempi
 
 INSTALLS_ICONS=	yes
