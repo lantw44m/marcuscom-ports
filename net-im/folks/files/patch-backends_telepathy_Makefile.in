@@ -1,0 +1,17 @@
+--- backends/telepathy/Makefile.in.orig	2010-08-18 14:27:20.000000000 +0200
++++ backends/telepathy/Makefile.in	2010-08-18 14:27:51.000000000 +0200
+@@ -1001,12 +1001,8 @@
+ 
+ folks-telepathy.h $(folks_telepathy_valasources:.vala=.c): folks-telepathy.vala.stamp
+ 
+-folks-telepathy.vapi folks-telepathy.vala.stamp: $(folks_telepathy_vapi_deps)
+-	$(VALA_V)$(VALAC) $(VALACFLAGS) $(VALAFLAGS) -H folks-telepathy.h -C \
+-		--library folks-telepathy \
+-		$(addprefix --pkg ,$(folks_telepathy_deps)) \
+-		$(addprefix $(srcdir)/,$(folks_telepathy_valasources))
+-	touch $@
++folks-telepathy.vapi folks-telepathy.vala.stamp: 
++	echo foo
+ 
+ folks-backend-telepathy.h $(libfolks_backend_telepathy_la_SOURCES): \
+ 		folks-backend-telepathy.vala.stamp
