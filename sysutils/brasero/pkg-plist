@@ -76,8 +76,8 @@ lib/brasero/plugins/libbrasero-vob.la
 lib/brasero/plugins/libbrasero-vob.so
 lib/brasero/plugins/libbrasero-wodim.la
 lib/brasero/plugins/libbrasero-wodim.so
-lib/girepository-1.0/BraseroBurn-1.0.typelib
-lib/girepository-1.0/BraseroMedia-1.0.typelib
+@comment lib/girepository-1.0/BraseroBurn-1.0.typelib
+@comment lib/girepository-1.0/BraseroMedia-1.0.typelib
 lib/libbrasero-burn.la
 lib/libbrasero-burn.so
 lib/libbrasero-burn.so.3
@@ -91,8 +91,8 @@ lib/libbrasero-utils.so.3
 %%NAUTILUS%%lib/nautilus/extensions-2.0/libnautilus-brasero-extension.so
 libdata/pkgconfig/libbrasero-burn.pc
 libdata/pkgconfig/libbrasero-media.pc
+share/GConf/gsettings/brasero.convert
 share/applications/brasero.desktop
-share/applications/brasero-copy-medium.desktop
 %%NAUTILUS%%share/applications/brasero-nautilus.desktop
 share/doc/libbrasero-burn/annotation-glossary.html
 share/doc/libbrasero-burn/api-index-full.html
@@ -306,9 +306,8 @@ share/doc/libbrasero-media/up.png
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-85.svg
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-90.svg
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-95.svg
-%%DATADIR%%/logo.png
-share/gir-1.0/BraseroBurn-1.0.gir
-share/gir-1.0/BraseroMedia-1.0.gir
+@comment share/gir-1.0/BraseroBurn-1.0.gir
+@comment share/gir/1.0/BraseroMedia-1.0.gir
 share/gnome/help/brasero/C/brasero.xml
 share/gnome/help/brasero/C/figures/brasero_main.png
 share/gnome/help/brasero/C/legal.xml
@@ -330,6 +329,8 @@ share/gnome/help/brasero/fi/brasero.xml
 share/gnome/help/brasero/fi/figures/brasero_main.png
 share/gnome/help/brasero/fr/brasero.xml
 share/gnome/help/brasero/fr/figures/brasero_main.png
+share/gnome/help/brasero/gl/brasero.xml
+share/gnome/help/brasero/gl/figures/brasero_main.png
 share/gnome/help/brasero/it/brasero.xml
 share/gnome/help/brasero/it/figures/brasero_main.png
 share/gnome/help/brasero/pl/brasero.xml
@@ -370,6 +371,7 @@ share/locale/dz/LC_MESSAGES/brasero.mo
 share/locale/el/LC_MESSAGES/brasero.mo
 share/locale/en_GB/LC_MESSAGES/brasero.mo
 share/locale/en@shaw/LC_MESSAGES/brasero.mo
+share/locale/eo/LC_MESSAGES/brasero.mo
 share/locale/es/LC_MESSAGES/brasero.mo
 share/locale/et/LC_MESSAGES/brasero.mo
 share/locale/eu/LC_MESSAGES/brasero.mo
@@ -393,6 +395,7 @@ share/locale/mai/LC_MESSAGES/brasero.mo
 share/locale/mk/LC_MESSAGES/brasero.mo
 share/locale/ml/LC_MESSAGES/brasero.mo
 share/locale/mr/LC_MESSAGES/brasero.mo
+share/locale/ms/LC_MESSAGES/brasero.mo
 share/locale/nb/LC_MESSAGES/brasero.mo
 share/locale/nds/LC_MESSAGES/brasero.mo
 share/locale/nl/LC_MESSAGES/brasero.mo
@@ -405,6 +408,7 @@ share/locale/pt/LC_MESSAGES/brasero.mo
 share/locale/pt_BR/LC_MESSAGES/brasero.mo
 share/locale/ro/LC_MESSAGES/brasero.mo
 share/locale/ru/LC_MESSAGES/brasero.mo
+share/locale/sk/LC_MESSAGES/brasero.mo
 share/locale/sl/LC_MESSAGES/brasero.mo
 share/locale/sr/LC_MESSAGES/brasero.mo
 share/locale/sr@latin/LC_MESSAGES/brasero.mo
@@ -429,6 +433,7 @@ share/omf/brasero/brasero-en_GB.omf
 share/omf/brasero/brasero-es.omf
 share/omf/brasero/brasero-fi.omf
 share/omf/brasero/brasero-fr.omf
+share/omf/brasero/brasero-gl.omf
 share/omf/brasero/brasero-it.omf
 share/omf/brasero/brasero-pl.omf
 share/omf/brasero/brasero-ru.omf
