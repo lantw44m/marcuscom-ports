@@ -4,8 +4,11 @@ bin/empathy-debugger
 %%NST%%lib/nautilus-sendto/plugins/libnstempathy.a
 %%NST%%lib/nautilus-sendto/plugins/libnstempathy.la
 %%NST%%lib/nautilus-sendto/plugins/libnstempathy.so
+libexec/empathy-av
+share/GConf/gsettings/empathy.convert
 share/applications/empathy-accounts.desktop
 share/applications/empathy.desktop
+share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.AudioVideo.service
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/Template.html
 %%DATADIR%%/codec-preferences
@@ -34,7 +37,6 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/empathy-ft-manager.ui
 %%DATADIR%%/empathy-import-dialog.ui
 %%DATADIR%%/empathy-irc-networks.dtd
-%%DATADIR%%/empathy-log-manager.xsl
 %%DATADIR%%/empathy-log-window.ui
 %%DATADIR%%/empathy-main-window.ui
 %%MAP%%%%DATADIR%%/empathy-map-view.ui
@@ -66,13 +68,13 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/icons/hicolor/16x16/apps/im-sip.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-yahoo.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-zephyr.png
+%%DATADIR%%/icons/hicolor/16x16/status/empathy-pending.png
+%%DATADIR%%/icons/hicolor/16x16/status/im-message.png
 %%DATADIR%%/icons/hicolor/16x16/status/user-available.png
 %%DATADIR%%/icons/hicolor/16x16/status/user-away.png
 %%DATADIR%%/icons/hicolor/16x16/status/user-busy.png
 %%DATADIR%%/icons/hicolor/16x16/status/user-idle.png
 %%DATADIR%%/icons/hicolor/16x16/status/user-offline.png
-%%DATADIR%%/icons/hicolor/16x16/status/empathy-pending.png
-%%DATADIR%%/icons/hicolor/16x16/status/im-message.png
 %%DATADIR%%/icons/hicolor/16x16/status/user-typing.png
 %%DATADIR%%/icons/hicolor/22x22/actions/im-message-new.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-aim.png
@@ -87,7 +89,6 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/icons/hicolor/22x22/apps/im-jabber.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-local-xmpp.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-meanwhile.png
-%%DATADIR%%/icons/hicolor/22x22/status/im-message.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-msn.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-mxit.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-myspace.png
@@ -97,12 +98,13 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/icons/hicolor/22x22/apps/im-sip.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-yahoo.png
 %%DATADIR%%/icons/hicolor/22x22/apps/im-zephyr.png
+%%DATADIR%%/icons/hicolor/22x22/status/empathy-pending.png
+%%DATADIR%%/icons/hicolor/22x22/status/im-message.png
 %%DATADIR%%/icons/hicolor/22x22/status/user-available.png
 %%DATADIR%%/icons/hicolor/22x22/status/user-away.png
 %%DATADIR%%/icons/hicolor/22x22/status/user-busy.png
 %%DATADIR%%/icons/hicolor/22x22/status/user-idle.png
 %%DATADIR%%/icons/hicolor/22x22/status/user-offline.png
-%%DATADIR%%/icons/hicolor/22x22/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/24x24/actions/im-message-new.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-aim.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-ekiga.png
@@ -124,12 +126,12 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/icons/hicolor/24x24/apps/im-sip.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-yahoo.png
 %%DATADIR%%/icons/hicolor/24x24/apps/im-zephyr.png
+%%DATADIR%%/icons/hicolor/24x24/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/24x24/status/user-available.png
 %%DATADIR%%/icons/hicolor/24x24/status/user-away.png
 %%DATADIR%%/icons/hicolor/24x24/status/user-busy.png
 %%DATADIR%%/icons/hicolor/24x24/status/user-idle.png
 %%DATADIR%%/icons/hicolor/24x24/status/user-offline.png
-%%DATADIR%%/icons/hicolor/24x24/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-aim.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-ekiga.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-gadugadu.png
@@ -150,12 +152,12 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/icons/hicolor/32x32/apps/im-sip.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-yahoo.png
 %%DATADIR%%/icons/hicolor/32x32/apps/im-zephyr.png
+%%DATADIR%%/icons/hicolor/32x32/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/32x32/status/user-available.png
 %%DATADIR%%/icons/hicolor/32x32/status/user-away.png
 %%DATADIR%%/icons/hicolor/32x32/status/user-busy.png
 %%DATADIR%%/icons/hicolor/32x32/status/user-idle.png
 %%DATADIR%%/icons/hicolor/32x32/status/user-offline.png
-%%DATADIR%%/icons/hicolor/32x32/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-aim.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-ekiga.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-facebook.png
@@ -177,12 +179,12 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/icons/hicolor/48x48/apps/im-sip.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-yahoo.png
 %%DATADIR%%/icons/hicolor/48x48/apps/im-zephyr.png
+%%DATADIR%%/icons/hicolor/48x48/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/48x48/status/user-available.png
 %%DATADIR%%/icons/hicolor/48x48/status/user-away.png
 %%DATADIR%%/icons/hicolor/48x48/status/user-busy.png
 %%DATADIR%%/icons/hicolor/48x48/status/user-idle.png
 %%DATADIR%%/icons/hicolor/48x48/status/user-offline.png
-%%DATADIR%%/icons/hicolor/48x48/status/empathy-pending.png
 %%DATADIR%%/icons/hicolor/icon-theme.cache
 %%DATADIR%%/icons/hicolor/scalable/apps/im-aim.svg
 %%DATADIR%%/icons/hicolor/scalable/apps/im-ekiga.svg
@@ -706,6 +708,61 @@ share/gnome/help/empathy/fr/set-custom-status.page
 share/gnome/help/empathy/fr/share-desktop.page
 share/gnome/help/empathy/fr/status-icons.page
 share/gnome/help/empathy/fr/video-call.page
+share/gnome/help/empathy/gl/account-irc.page
+share/gnome/help/empathy/gl/account-jabber.page
+share/gnome/help/empathy/gl/accounts-window.page
+share/gnome/help/empathy/gl/add-account.page
+share/gnome/help/empathy/gl/add-contact.page
+share/gnome/help/empathy/gl/audio-call.page
+share/gnome/help/empathy/gl/audio-video.page
+share/gnome/help/empathy/gl/change-status.page
+share/gnome/help/empathy/gl/create-account.page
+share/gnome/help/empathy/gl/disable-account.page
+share/gnome/help/empathy/gl/favorite-rooms.page
+share/gnome/help/empathy/gl/figures/audio-input-microphone.png
+share/gnome/help/empathy/gl/figures/available.png
+share/gnome/help/empathy/gl/figures/away.png
+share/gnome/help/empathy/gl/figures/busy.png
+share/gnome/help/empathy/gl/figures/camera-web.png
+share/gnome/help/empathy/gl/figures/empathy-logo.png
+share/gnome/help/empathy/gl/figures/empathy-main-window.png
+share/gnome/help/empathy/gl/figures/gtk-add.png
+share/gnome/help/empathy/gl/figures/gtk-edit.png
+share/gnome/help/empathy/gl/figures/gtk-remove.png
+share/gnome/help/empathy/gl/figures/offline.png
+share/gnome/help/empathy/gl/geolocation-not-showing.page
+share/gnome/help/empathy/gl/geolocation-privacy.page
+share/gnome/help/empathy/gl/geolocation-supported.page
+share/gnome/help/empathy/gl/geolocation-turn.page
+share/gnome/help/empathy/gl/geolocation-what-is.page
+share/gnome/help/empathy/gl/geolocation.page
+share/gnome/help/empathy/gl/group-conversations.page
+share/gnome/help/empathy/gl/hide-contacts.page
+share/gnome/help/empathy/gl/import-account.page
+share/gnome/help/empathy/gl/index.page
+share/gnome/help/empathy/gl/introduction.page
+share/gnome/help/empathy/gl/irc-commands.page
+share/gnome/help/empathy/gl/irc-join-pwd.page
+share/gnome/help/empathy/gl/irc-join-room.page
+share/gnome/help/empathy/gl/irc-manage.page
+share/gnome/help/empathy/gl/irc-nick-password.page
+share/gnome/help/empathy/gl/irc-send-file.page
+share/gnome/help/empathy/gl/irc-start-conversation.page
+share/gnome/help/empathy/gl/license.page
+share/gnome/help/empathy/gl/prev-conv.page
+share/gnome/help/empathy/gl/prob-conn-acctdisabled.page
+share/gnome/help/empathy/gl/prob-conn-auth.page
+share/gnome/help/empathy/gl/prob-conn-name.page
+share/gnome/help/empathy/gl/prob-conn-neterror.page
+share/gnome/help/empathy/gl/prob-conn.page
+share/gnome/help/empathy/gl/remove-account.page
+share/gnome/help/empathy/gl/salut-protocol.page
+share/gnome/help/empathy/gl/send-file.page
+share/gnome/help/empathy/gl/send-message.page
+share/gnome/help/empathy/gl/set-custom-status.page
+share/gnome/help/empathy/gl/share-desktop.page
+share/gnome/help/empathy/gl/status-icons.page
+share/gnome/help/empathy/gl/video-call.page
 share/gnome/help/empathy/it/account-irc.page
 share/gnome/help/empathy/it/account-jabber.page
 share/gnome/help/empathy/it/accounts-window.page
@@ -871,6 +928,61 @@ share/gnome/help/empathy/sv/set-custom-status.page
 share/gnome/help/empathy/sv/share-desktop.page
 share/gnome/help/empathy/sv/status-icons.page
 share/gnome/help/empathy/sv/video-call.page
+share/gnome/help/empathy/zh_CN/account-irc.page
+share/gnome/help/empathy/zh_CN/account-jabber.page
+share/gnome/help/empathy/zh_CN/accounts-window.page
+share/gnome/help/empathy/zh_CN/add-account.page
+share/gnome/help/empathy/zh_CN/add-contact.page
+share/gnome/help/empathy/zh_CN/audio-call.page
+share/gnome/help/empathy/zh_CN/audio-video.page
+share/gnome/help/empathy/zh_CN/change-status.page
+share/gnome/help/empathy/zh_CN/create-account.page
+share/gnome/help/empathy/zh_CN/disable-account.page
+share/gnome/help/empathy/zh_CN/favorite-rooms.page
+share/gnome/help/empathy/zh_CN/figures/audio-input-microphone.png
+share/gnome/help/empathy/zh_CN/figures/available.png
+share/gnome/help/empathy/zh_CN/figures/away.png
+share/gnome/help/empathy/zh_CN/figures/busy.png
+share/gnome/help/empathy/zh_CN/figures/camera-web.png
+share/gnome/help/empathy/zh_CN/figures/empathy-logo.png
+share/gnome/help/empathy/zh_CN/figures/empathy-main-window.png
+share/gnome/help/empathy/zh_CN/figures/gtk-add.png
+share/gnome/help/empathy/zh_CN/figures/gtk-edit.png
+share/gnome/help/empathy/zh_CN/figures/gtk-remove.png
+share/gnome/help/empathy/zh_CN/figures/offline.png
+share/gnome/help/empathy/zh_CN/geolocation-not-showing.page
+share/gnome/help/empathy/zh_CN/geolocation-privacy.page
+share/gnome/help/empathy/zh_CN/geolocation-supported.page
+share/gnome/help/empathy/zh_CN/geolocation-turn.page
+share/gnome/help/empathy/zh_CN/geolocation-what-is.page
+share/gnome/help/empathy/zh_CN/geolocation.page
+share/gnome/help/empathy/zh_CN/group-conversations.page
+share/gnome/help/empathy/zh_CN/hide-contacts.page
+share/gnome/help/empathy/zh_CN/import-account.page
+share/gnome/help/empathy/zh_CN/index.page
+share/gnome/help/empathy/zh_CN/introduction.page
+share/gnome/help/empathy/zh_CN/irc-commands.page
+share/gnome/help/empathy/zh_CN/irc-join-pwd.page
+share/gnome/help/empathy/zh_CN/irc-join-room.page
+share/gnome/help/empathy/zh_CN/irc-manage.page
+share/gnome/help/empathy/zh_CN/irc-nick-password.page
+share/gnome/help/empathy/zh_CN/irc-send-file.page
+share/gnome/help/empathy/zh_CN/irc-start-conversation.page
+share/gnome/help/empathy/zh_CN/license.page
+share/gnome/help/empathy/zh_CN/prev-conv.page
+share/gnome/help/empathy/zh_CN/prob-conn-acctdisabled.page
+share/gnome/help/empathy/zh_CN/prob-conn-auth.page
+share/gnome/help/empathy/zh_CN/prob-conn-name.page
+share/gnome/help/empathy/zh_CN/prob-conn-neterror.page
+share/gnome/help/empathy/zh_CN/prob-conn.page
+share/gnome/help/empathy/zh_CN/remove-account.page
+share/gnome/help/empathy/zh_CN/salut-protocol.page
+share/gnome/help/empathy/zh_CN/send-file.page
+share/gnome/help/empathy/zh_CN/send-message.page
+share/gnome/help/empathy/zh_CN/set-custom-status.page
+share/gnome/help/empathy/zh_CN/share-desktop.page
+share/gnome/help/empathy/zh_CN/status-icons.page
+share/gnome/help/empathy/zh_CN/video-call.page
 share/icons/hicolor/16x16/apps/empathy.png
 share/icons/hicolor/22x22/apps/empathy.png
 share/icons/hicolor/24x24/apps/empathy.png
@@ -928,6 +1040,7 @@ share/locale/ms/LC_MESSAGES/empathy.mo
 share/locale/nb/LC_MESSAGES/empathy.mo
 share/locale/ne/LC_MESSAGES/empathy.mo
 share/locale/nl/LC_MESSAGES/empathy.mo
+share/locale/nn/LC_MESSAGES/empathy.mo
 share/locale/oc/LC_MESSAGES/empathy.mo
 share/locale/or/LC_MESSAGES/empathy.mo
 share/locale/pa/LC_MESSAGES/empathy.mo
@@ -952,15 +1065,20 @@ share/locale/vi/LC_MESSAGES/empathy.mo
 share/locale/zh_CN/LC_MESSAGES/empathy.mo
 share/locale/zh_HK/LC_MESSAGES/empathy.mo
 share/locale/zh_TW/LC_MESSAGES/empathy.mo
+share/telepathy/clients/Empathy.AudioVideo.client
 share/telepathy/clients/Empathy.client
 @dirrmtry share/telepathy/clients
 @dirrmtry share/telepathy
+@dirrm share/gnome/help/empathy/zh_CN/figures
+@dirrm share/gnome/help/empathy/zh_CN
 @dirrm share/gnome/help/empathy/sv/figures
 @dirrm share/gnome/help/empathy/sv
 @dirrm share/gnome/help/empathy/ru/figures
 @dirrm share/gnome/help/empathy/ru
 @dirrm share/gnome/help/empathy/it/figures
 @dirrm share/gnome/help/empathy/it
+@dirrm share/gnome/help/empathy/gl/figures
+@dirrm share/gnome/help/empathy/gl
 @dirrm share/gnome/help/empathy/fr/figures
 @dirrm share/gnome/help/empathy/fr
 @dirrm share/gnome/help/empathy/fi/figures

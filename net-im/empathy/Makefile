@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net-im/empathy/Makefile,v 1.66 2010/04/26 23:54:08 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	2.31.3
+PORTVERSION=	2.31.90
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -19,6 +19,8 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		telepathy.2:${PORTSDIR}/net-im/libtelepathy \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		telepathy-farsight.0:${PORTSDIR}/net-im/telepathy-farsight \
+		telepathy-logger.1:${PORTSDIR}/net-im/telepathy-logger \
+		folks-telepathy.12:${PORTSDIR}/net-im/folks \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
 		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
@@ -37,11 +39,11 @@ USE_PYTHON=	yes
 MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--enable-tpl=no
+CONFIGURE_ARGS=	--enable-tpl=no --enable-gtk3=no
 
-GCONF_SCHEMAS=	empathy.schemas
+GLIB_SCHEMAS=	org.gnome.Empathy.gschema.xml
 
-MAN1=		empathy.1
+MAN1=		empathy.1 empathy-accounts.1
 
 OPTIONS=	JABBER	"Enable jabber (XMPP) client support" on \
 		MSN	"Enable MSN client support" on \
@@ -75,7 +77,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-h
 .endif
 
 .if defined(WITH_WEBKIT)
-LIB_DEPENDS+=	webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS+=	webkitgtk-1.0.13:${PORTSDIR}/www/webkit-gtk2
 CONFIGURE_ARGS+=--enable-webkit
 PLIST_SUB+=	ADIUM=""
 .else
