@@ -2,12 +2,12 @@
 # Date created:				13 April 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gnome-desktop/Makefile,v 1.87 2010/05/10 21:18:51 kwm Exp $
-#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.184 2010/07/26 13:07:43 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.185 2010/08/18 09:37:26 kwm Exp $
 #
 
 PORTNAME=	gnome-desktop
-PORTVERSION=	2.31.6
+PORTVERSION=	2.31.90
 PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
