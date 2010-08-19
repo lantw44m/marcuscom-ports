@@ -68,6 +68,10 @@ share/gnome/help/sound-juicer/uk/figures/prefs.png
 share/gnome/help/sound-juicer/uk/figures/startup.png
 share/gnome/help/sound-juicer/uk/legal.xml
 share/gnome/help/sound-juicer/uk/sound-juicer.xml
+share/gnome/help/sound-juicer/zh_CN/figures/prefs.png
+share/gnome/help/sound-juicer/zh_CN/figures/startup.png
+share/gnome/help/sound-juicer/zh_CN/legal.xml
+share/gnome/help/sound-juicer/zh_CN/sound-juicer.xml
 share/icons/hicolor/16x16/apps/sound-juicer.png
 share/icons/hicolor/22x22/apps/sound-juicer.png
 share/icons/hicolor/24x24/apps/sound-juicer.png
@@ -171,9 +175,12 @@ share/omf/sound-juicer/sound-juicer-pt_BR.omf
 share/omf/sound-juicer/sound-juicer-ru.omf
 share/omf/sound-juicer/sound-juicer-sv.omf
 share/omf/sound-juicer/sound-juicer-uk.omf
-%%DATADIR%%/sound-juicer.glade
+share/omf/sound-juicer/sound-juicer-zh_CN.omf
+%%DATADIR%%/sound-juicer.ui
 @dirrm %%DATADIR%%
 @dirrm share/omf/sound-juicer
+@dirrm share/gnome/help/sound-juicer/zh_CN/figures
+@dirrm share/gnome/help/sound-juicer/zh_CN
 @dirrm share/gnome/help/sound-juicer/uk/figures
 @dirrm share/gnome/help/sound-juicer/uk
 @dirrm share/gnome/help/sound-juicer/sv/figures
