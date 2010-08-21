@@ -3,13 +3,13 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.176 2010/08/16 21:18:12 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.177 2010/08/18 13:40:39 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
 PORTVERSION=	2.25.14
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
 		ftp://ftp.gtk.org/pub/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
@@ -76,6 +76,9 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-glib_Makefile.in \
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 		${WRKSRC}/glib/gutils.c
+	@${REINPLACE_CMD} -e 's|/lib/dbus/machine-id|/db/dbus/machine-id|g' \
+		${WRKSRC}/gio/gdbusaddress.c ${WRKSRC}/gio/gdbusprivate.c \
+		${WRKSRC}/po/*.po
 
 post-install:
 	@${MKDIR} -p share/GConf/gsettings
