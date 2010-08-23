@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.294 2010/06/10 15:11:01 kwm Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.295 2010/08/23 07:21:23 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -93,7 +93,7 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 		gnome-file-share-properties:${PORTSDIR}/www/gnome-user-share \
 		${LOCALBASE}/libexec/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
 		${LOCALBASE}/lib/hamster-applet/hamster-applet:${PORTSDIR}/deskutils/hamster-applet \
-		${LOCALBASE}/lib/gtk-2.0/modules/at-spi-dbus/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi2-atk \
+		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi2-atk \
 		gpk-application:${PORTSDIR}/ports-mgmt/gnome-packagekit
 .if ${OSVERSION}>=800000
 RUN_DEPENDS+=	cheese:${PORTSDIR}/multimedia/cheese
