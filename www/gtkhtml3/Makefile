@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml3/Makefile,v 1.171 2010/06/07 11:18:15 kwm Exp $
+#   $MCom: ports/www/gtkhtml3/Makefile,v 1.172 2010/08/16 20:26:20 kwm Exp $
 #
 
 PORTNAME=	gtkhtml3
@@ -39,7 +39,8 @@ PLIST_SUB=	VERSION="3.14"
 post-patch:
 	@${REINPLACE_CMD} -e 's|@INTLTOOL_LIBDIR@|${LOCALBASE}/libdata|' \
 	    	${WRKSRC}/intltool-merge.in
-	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
+	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g ; \
+	    	s|-DGDK_DISABLE_DEPRECATED||g' \
 		${WRKSRC}/configure
 
 .include <bsd.port.mk>
