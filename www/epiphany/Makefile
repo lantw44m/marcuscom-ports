@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.232 2010/07/05 11:34:46 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.233 2010/08/19 07:13:32 kwm Exp $
 #
 
 PORTNAME=	epiphany
 PORTVERSION=	2.30.3
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -20,6 +20,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		webkitgtk-1.0.13:${PORTSDIR}/www/webkit-gtk2 \
+		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
 		notify.1:${PORTSDIR}/devel/libnotify \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
