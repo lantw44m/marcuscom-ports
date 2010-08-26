@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.35 2010/04/01 18:58:58 kwm Exp $
+#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.37 2010/06/29 21:14:00 kwm Exp $
 #
 
 PORTNAME=	totem-pl-parser
-PORTVERSION=	2.30.1
+PORTVERSION=	2.30.2
 PORTREVISION=	2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
@@ -18,7 +18,8 @@ COMMENT=	GObject-based library to parse a host of playlist formats
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	hal.1:${PORTSDIR}/sysutils/hal \
-		gmime-2.4.6:${PORTSDIR}/mail/gmime24
+		gmime-2.4.6:${PORTSDIR}/mail/gmime24 \
+		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 
 USE_BZIP2=	yes
