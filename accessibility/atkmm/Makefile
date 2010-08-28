@@ -3,11 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/atkmm/Makefile,v 1.1 2010/06/24 10:33:02 kwm Exp $
+#   $MCom: ports/accessibility/atkmm/Makefile,v 1.2 2010/06/28 21:20:53 kwm Exp $
 #
 
 PORTNAME=	atkmm
 PORTVERSION=	2.21.2
+PORTREVISION=	1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 
@@ -20,7 +21,7 @@ USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack atk
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include " \
 		LDFLAGS="-L${LOCALBASE}/lib"
