@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.224 2010/07/23 19:35:48 kwm Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.225 2010/08/17 11:20:30 kwm Exp $
 #
 
 PORTNAME=	gnome-games
@@ -19,8 +19,7 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	guile.20:${PORTSDIR}/lang/guile \
 		clutter-gtk-0.10.0:${PORTSDIR}/graphics/clutter-gtk \
 		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter
-RUN_DEPENDS=	seed:${PORTSDIR}/devel/seed \
-		${LOCALBASE}/share/gir-1.0/GConf-2.0.gir:${PORTSDIR}/devel/gir-repository-gconf2
+RUN_DEPENDS=	seed:${PORTSDIR}/devel/seed
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
