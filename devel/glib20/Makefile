@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.177 2010/08/18 13:40:39 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.178 2010/08/21 16:53:43 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
@@ -81,7 +81,7 @@ post-patch:
 		${WRKSRC}/po/*.po
 
 post-install:
-	@${MKDIR} -p share/GConf/gsettings
+	@${MKDIR} ${PREFIX}/share/GConf/gsettings
 	-${PREFIX}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
 
 .include <bsd.port.post.mk>
