@@ -66,7 +66,7 @@
 +    cred = data;
 +
 +    credentials = g_credentials_new ();
-+    g_credentials_set_native (credentials, G_CREDENTIALS_TYPE_FREEBSD_CMSGCRED, ucred);
++    g_credentials_set_native (credentials, G_CREDENTIALS_TYPE_FREEBSD_CMSGCRED, cred);
 +    message = g_unix_credentials_message_new_with_credentials (credentials);
 +    g_object_unref (credentials);
 + out:
