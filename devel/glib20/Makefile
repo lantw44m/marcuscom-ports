@@ -3,13 +3,13 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.179 2010/08/28 04:25:14 avl Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.180 2010/08/29 21:04:30 marcus Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
 PORTVERSION=	2.25.14
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
 		ftp://ftp.gtk.org/pub/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
