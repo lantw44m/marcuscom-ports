@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.295 2010/08/23 07:21:23 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.296 2010/08/23 07:26:21 marcus Exp $
 #
 
 PORTNAME=	gnome2
 PORTVERSION=	2.31.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -32,7 +32,6 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		${LOCALBASE}/sbin/gdm:${PORTSDIR}/x11/gdm \
 		${LOCALBASE}/share/gnome/help/user-guide/C/user-guide.xml:${PORTSDIR}/misc/gnome-user-docs \
 		${LOCALBASE}/share/sounds/question.wav:${PORTSDIR}/audio/gnome-audio \
-		${LOCALBASE}/libdata/pkgconfig/libgail-gnome.pc:${PORTSDIR}/x11-toolkits/libgail-gnome \
 		file-roller:${PORTSDIR}/archivers/file-roller \
 		${LOCALBASE}/share/themes/HighContrast/gtk-2.0/gtkrc:${PORTSDIR}/x11-themes/gnome-themes \
 		caribou:${PORTSDIR}/accessibility/caribou \
