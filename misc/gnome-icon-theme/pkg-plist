@@ -5649,6 +5649,8 @@ share/icons/gnome/index.theme
 @dirrmtry share/locale/nds
 @dirrmtry share/locale/kk/LC_MESSAGES
 @dirrmtry share/locale/kk
+@dirrmtry share/locale/fy/LC_MESSAGES
+@dirrmtry share/locale/fy
 @dirrmtry share/locale/fur/LC_MESSAGES
 @dirrmtry share/locale/fur
 @dirrmtry share/icons/gnome/scalable/stock/generic
