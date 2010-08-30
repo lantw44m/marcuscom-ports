@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.9 2010/07/13 13:31:54 kwm Exp $
+#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.10 2010/08/17 10:14:46 kwm Exp $
 #
 
 PORTNAME=	at-spi2-atk
@@ -17,6 +17,8 @@ COMMENT=	Assisted Technology Provider module for GTK+
 
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core
+
+BROKEN=		Not for GNOME 2.32
 
 LICENSE=        LGPL21
 LICENSE_FILE=   ${WRKSRC}/COPYING

@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/py-atspi/Makefile,v 1.7 2010/06/05 14:58:18 kwm Exp $
+#   $MCom: ports/accessibility/py-atspi/Makefile,v 1.8 2010/08/17 10:16:01 kwm Exp $
 #
 
 PORTNAME=	atspi
@@ -17,6 +17,8 @@ DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Python API for the D-BUS based SPI framework
+
+BROKEN=		Not for GNOME 2.32
 
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core
