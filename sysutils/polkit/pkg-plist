@@ -29,6 +29,7 @@ include/polkit-1/polkit/polkitunixprocess.h
 include/polkit-1/polkit/polkitunixsession.h
 include/polkit-1/polkit/polkitunixuser.h
 include/polkit-1/polkitagent/polkitagent.h
+include/polkit-1/polkitagent/polkitagentenumtypes.h
 include/polkit-1/polkitagent/polkitagentlistener.h
 include/polkit-1/polkitagent/polkitagentsession.h
 include/polkit-1/polkitagent/polkitagenttypes.h

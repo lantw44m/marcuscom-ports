@@ -3,11 +3,12 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.7 2010/06/29 21:14:04 kwm Exp $
+#   $MCom: ports/sysutils/polkit/Makefile,v 1.8 2010/08/30 00:17:10 marcus Exp $
 #
 
 PORTNAME=	polkit
 PORTVERSION=	0.98
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -58,6 +59,8 @@ post-install:
 	fi
 	${INSTALL_DATA} ${WRKSRC}/data/org.freedesktop.PolicyKit1.conf \
 	    	${PREFIX}/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf.dist
+	${INSTALL_DATA} ${WRKSRC}/src/polkitagent/polkitagentenumtypes.h \
+	    	${PREFIX}/include/polkit-1/polkitagent/polkitagentenumtypes.h
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
