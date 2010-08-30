@@ -829,6 +829,11 @@ share/gnome/help/glchess/fr/figures/new_game.png
 share/gnome/help/glchess/fr/figures/preferences_game.png
 share/gnome/help/glchess/fr/figures/preferences_view.png
 share/gnome/help/glchess/fr/glchess.xml
+share/gnome/help/glchess/ja/figures/game.png
+share/gnome/help/glchess/ja/figures/new_game.png
+share/gnome/help/glchess/ja/figures/preferences_game.png
+share/gnome/help/glchess/ja/figures/preferences_view.png
+share/gnome/help/glchess/ja/glchess.xml
 share/gnome/help/glchess/oc/figures/game.png
 share/gnome/help/glchess/oc/figures/new_game.png
 share/gnome/help/glchess/oc/figures/preferences_game.png
@@ -2378,6 +2383,7 @@ share/omf/glchess/glchess-en_GB.omf
 share/omf/glchess/glchess-es.omf
 share/omf/glchess/glchess-eu.omf
 share/omf/glchess/glchess-fr.omf
+share/omf/glchess/glchess-ja.omf
 share/omf/glchess/glchess-oc.omf
 share/omf/glchess/glchess-pt_BR.omf
 share/omf/glchess/glchess-ru.omf
@@ -3021,6 +3027,8 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/glchess/pt_BR
 @dirrm share/gnome/help/glchess/oc/figures
 @dirrm share/gnome/help/glchess/oc
+@dirrm share/gnome/help/glchess/ja/figures
+@dirrm share/gnome/help/glchess/ja
 @dirrm share/gnome/help/glchess/fr/figures
 @dirrm share/gnome/help/glchess/fr
 @dirrm share/gnome/help/glchess/eu/figures
