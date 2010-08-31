@@ -742,6 +742,7 @@ share/doc/eshell/up.png
 %%DATADIR%%/%%VERSION%%/default/fi/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/fr/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/hu/mail/local/Inbox
+%%DATADIR%%/%%VERSION%%/default/id/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/it/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/ja/mail/local/Inbox
 %%DATADIR%%/%%VERSION%%/default/ko/mail/local/Inbox
@@ -832,6 +833,12 @@ share/doc/eshell/up.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/stock_video-conferencing.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/actions/stock_view-details.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/apps/contact-editor.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/apps/im-aim.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/apps/im-icq.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/apps/im-jabber.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/apps/im-msn.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/apps/im-nov.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/apps/im-yahoo.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/places/mail-inbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/places/mail-outbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/16x16/places/mail-sent.png
@@ -854,6 +861,12 @@ share/doc/eshell/up.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/actions/view-calendar-week.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/actions/view-calendar-workweek.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/apps/contact-editor.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/apps/im-aim.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/apps/im-icq.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/apps/im-jabber.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/apps/im-msn.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/apps/im-nov.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/apps/im-yahoo.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/places/mail-inbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/places/mail-outbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/22x22/places/mail-sent.png
@@ -889,6 +902,12 @@ share/doc/eshell/up.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions/view-calendar-week.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/actions/view-calendar-workweek.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/apps/contact-editor.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/apps/im-aim.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/apps/im-icq.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/apps/im-jabber.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/apps/im-msn.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/apps/im-nov.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/apps/im-yahoo.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places/mail-inbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places/mail-outbox.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/24x24/places/mail-sent.png
@@ -901,6 +920,12 @@ share/doc/eshell/up.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions/view-calendar-week.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/actions/view-calendar-workweek.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/apps/contact-editor.png
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/apps/im-aim.svg
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/apps/im-icq.svg
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/apps/im-jabber.svg
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/apps/im-msn.svg
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/apps/im-nov.svg
+%%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/apps/im-yahoo.svg
 %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/status/offline.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/32x32/status/online.png
 %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/actions/stock_alarm.png
@@ -2061,6 +2086,72 @@ share/gnome/help/evolution/sv/figures/quick_add_a.png
 share/gnome/help/evolution/sv/figures/quick_reference.png
 share/gnome/help/evolution/sv/figures/stock_search.png
 share/gnome/help/evolution/sv/figures/ver_view_a.png
+share/gnome/help/evolution/zh_CN/evolution.xml
+share/gnome/help/evolution/zh_CN/figures/attach_reminder_a.png
+share/gnome/help/evolution/zh_CN/figures/calendar_preference_display.png
+share/gnome/help/evolution/zh_CN/figures/categories_a.png
+share/gnome/help/evolution/zh_CN/figures/contacts_mainwindow_a.png
+share/gnome/help/evolution/zh_CN/figures/delgt-add.png
+share/gnome/help/evolution/zh_CN/figures/evo_Wcal_prop_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_adv_search_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_attachreminder_plugin.png
+share/gnome/help/evolution/zh_CN/figures/evo_backup_prgsbar.png
+share/gnome/help/evolution/zh_CN/figures/evo_backup_warning.png
+share/gnome/help/evolution/zh_CN/figures/evo_blink.png
+share/gnome/help/evolution/zh_CN/figures/evo_cal_callout_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_calender_appointmnt.png
+share/gnome/help/evolution/zh_CN/figures/evo_calstatus_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_caltasks_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_contacteditor_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_delegate_permission_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_dialog-info.png
+share/gnome/help/evolution/zh_CN/figures/evo_dialog-warning.png
+share/gnome/help/evolution/zh_CN/figures/evo_edit_search.png
+share/gnome/help/evolution/zh_CN/figures/evo_exchng_mapi.png
+share/gnome/help/evolution/zh_CN/figures/evo_flag_follow_up_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_gwreceive_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_gwstatustrack.png
+share/gnome/help/evolution/zh_CN/figures/evo_imapreceive_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_junk_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_label_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_labels_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_mail_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_mail_callout_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_maildirreceive_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_mboxreceive_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_memo_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_mhreceive_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_newmail.png
+share/gnome/help/evolution/zh_CN/figures/evo_newmess_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_offline.png
+share/gnome/help/evolution/zh_CN/figures/evo_popreceive_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_proxyadd_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_rule_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_send_option_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_send_setup_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_sendstatus_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_shd_memo_a.png
+share/gnome/help/evolution/zh_CN/figures/evo_usereceive_a.png
+share/gnome/help/evolution/zh_CN/figures/evolution_contact_preference.png
+share/gnome/help/evolution/zh_CN/figures/evolution_mail_preference.png
+share/gnome/help/evolution/zh_CN/figures/exchng-rec-mails.png
+share/gnome/help/evolution/zh_CN/figures/exchng-rec-options.png
+share/gnome/help/evolution/zh_CN/figures/filter-new-fig.png
+share/gnome/help/evolution/zh_CN/figures/folder_plus.png
+share/gnome/help/evolution/zh_CN/figures/folder_size_mapi.png
+share/gnome/help/evolution/zh_CN/figures/folder_size_preference.png
+share/gnome/help/evolution/zh_CN/figures/google_cal_view.png
+share/gnome/help/evolution/zh_CN/figures/groupwise_resend.png
+share/gnome/help/evolution/zh_CN/figures/groupwise_resend_retract.png
+share/gnome/help/evolution/zh_CN/figures/local_ics_calendar.png
+share/gnome/help/evolution/zh_CN/figures/mailer_preferences.png
+share/gnome/help/evolution/zh_CN/figures/meeting.png
+share/gnome/help/evolution/zh_CN/figures/minus.png
+share/gnome/help/evolution/zh_CN/figures/plus.png
+share/gnome/help/evolution/zh_CN/figures/quick_add_a.png
+share/gnome/help/evolution/zh_CN/figures/quick_reference.png
+share/gnome/help/evolution/zh_CN/figures/stock_search.png
+share/gnome/help/evolution/zh_CN/figures/ver_view_a.png
 share/icons/hicolor/16x16/apps/evolution-mail.png
 share/icons/hicolor/16x16/apps/evolution-memos.png
 share/icons/hicolor/16x16/apps/evolution-tasks.png
@@ -2183,7 +2274,10 @@ share/omf/evolution/evolution-mk.omf
 share/omf/evolution/evolution-oc.omf
 share/omf/evolution/evolution-ru.omf
 share/omf/evolution/evolution-sv.omf
+share/omf/evolution/evolution-zh_CN.omf
 @dirrm share/omf/evolution
+@dirrm share/gnome/help/evolution/zh_CN/figures
+@dirrm share/gnome/help/evolution/zh_CN
 @dirrm share/gnome/help/evolution/sv/figures
 @dirrm share/gnome/help/evolution/sv
 @dirrm share/gnome/help/evolution/ru/figures
@@ -2222,6 +2316,7 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/sounds
 @dirrm %%DATADIR%%/%%VERSION%%/mail-autoconfig
 @dirrm %%DATADIR%%/%%VERSION%%/images
+@dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/apps
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable/actions
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/scalable
 @dirrm %%DATADIR%%/%%VERSION%%/icons/hicolor/48x48/status
@@ -2305,6 +2400,9 @@ share/omf/evolution/evolution-sv.omf
 @dirrm %%DATADIR%%/%%VERSION%%/default/it/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/it/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/it
+@dirrm %%DATADIR%%/%%VERSION%%/default/id/mail/local
+@dirrm %%DATADIR%%/%%VERSION%%/default/id/mail
+@dirrm %%DATADIR%%/%%VERSION%%/default/id
 @dirrm %%DATADIR%%/%%VERSION%%/default/hu/mail/local
 @dirrm %%DATADIR%%/%%VERSION%%/default/hu/mail
 @dirrm %%DATADIR%%/%%VERSION%%/default/hu
