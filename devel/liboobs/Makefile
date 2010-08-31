@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/liboobs/Makefile,v 1.48 2010/05/29 18:22:56 kwm Exp $
 #
 
 PORTNAME=	liboobs
-PORTVERSION=	2.31.1
+PORTVERSION=	2.31.91
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
