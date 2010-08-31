@@ -76,8 +76,8 @@ lib/brasero/plugins/libbrasero-vob.la
 lib/brasero/plugins/libbrasero-vob.so
 lib/brasero/plugins/libbrasero-wodim.la
 lib/brasero/plugins/libbrasero-wodim.so
-@comment lib/girepository-1.0/BraseroBurn-1.0.typelib
-@comment lib/girepository-1.0/BraseroMedia-1.0.typelib
+lib/girepository-1.0/BraseroBurn-2.31.91.typelib
+lib/girepository-1.0/BraseroMedia-2.31.91.typelib
 lib/libbrasero-burn.la
 lib/libbrasero-burn.so
 lib/libbrasero-burn.so.3
@@ -306,8 +306,8 @@ share/doc/libbrasero-media/up.png
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-85.svg
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-90.svg
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-95.svg
-@comment share/gir-1.0/BraseroBurn-1.0.gir
-@comment share/gir/1.0/BraseroMedia-1.0.gir
+share/gir-1.0/BraseroBurn-2.31.91.gir
+share/gir-1.0/BraseroMedia-2.31.91.gir
 share/gnome/help/brasero/C/brasero.xml
 share/gnome/help/brasero/C/figures/brasero_main.png
 share/gnome/help/brasero/C/legal.xml
@@ -417,6 +417,7 @@ share/locale/ta/LC_MESSAGES/brasero.mo
 share/locale/te/LC_MESSAGES/brasero.mo
 share/locale/th/LC_MESSAGES/brasero.mo
 share/locale/tr/LC_MESSAGES/brasero.mo
+share/locale/ug/LC_MESSAGES/brasero.mo
 share/locale/uk/LC_MESSAGES/brasero.mo
 share/locale/vi/LC_MESSAGES/brasero.mo
 share/locale/zh_CN/LC_MESSAGES/brasero.mo
@@ -459,6 +460,8 @@ share/omf/brasero/brasero-zh_TW.omf
 @dirrm share/gnome/help/brasero/pl
 @dirrm share/gnome/help/brasero/it/figures
 @dirrm share/gnome/help/brasero/it
+@dirrm share/gnome/help/brasero/gl/figures
+@dirrm share/gnome/help/brasero/gl
 @dirrm share/gnome/help/brasero/fr/figures
 @dirrm share/gnome/help/brasero/fr
 @dirrm share/gnome/help/brasero/fi/figures
@@ -506,6 +509,8 @@ share/omf/brasero/brasero-zh_TW.omf
 @dirrm lib/brasero/plugins
 @dirrm lib/brasero
 @dirrm include/brasero
+@dirrmtry share/GConf/gsettings
+@dirrmtry share/GConf
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
