@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/lang/vala-vapigen/Makefile,v 1.1 2010/06/08 08:57:38 kwm Exp $
 #
 
 PORTREVISION=	0
@@ -12,6 +12,8 @@ PKGNAMESUFFIX=	-vapigen
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The vapigen program from vala
+
+USE_GMAKE=	yes
 
 MASTERDIR=	${.CURDIR}/../vala
 BUILD_WRKSRC=	${WRKSRC}/vapigen
