@@ -236,6 +236,8 @@ share/devhelp/books/vala-0.10/vala.devhelp2
 %%DATADIR%%-0.10/vapi/x11.vapi
 %%DATADIR%%-0.10/vapi/xcb.vapi
 %%DATADIR%%-0.10/vapi/zlib.vapi
+@dirrm %%DATADIR%%-0.10/vapi
+@dirrm %%DATADIR%%-0.10
 @dirrm share/devhelp/books/vala-0.10
 @dirrmtry share/devhelp/books
 @dirrmtry share/devhelp
