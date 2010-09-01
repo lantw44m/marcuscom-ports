@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.296 2010/08/23 07:26:21 marcus Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.297 2010/08/29 23:04:18 marcus Exp $
 #
 
 PORTNAME=	gnome2
@@ -34,7 +34,7 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		${LOCALBASE}/share/sounds/question.wav:${PORTSDIR}/audio/gnome-audio \
 		file-roller:${PORTSDIR}/archivers/file-roller \
 		${LOCALBASE}/share/themes/HighContrast/gtk-2.0/gtkrc:${PORTSDIR}/x11-themes/gnome-themes \
-		caribou:${PORTSDIR}/accessibility/caribou \
+		gok:${PORTSDIR}/accessibility/gok \
 		gcalctool:${PORTSDIR}/math/gcalctool \
 		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		${LOCALBASE}/libexec/gnome-netstatus-applet:${PORTSDIR}/net/gnome-netstatus \
