@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/x11-toolkits/py-gnome-desktop/Makefile,v 1.2 2010/06/24 10:03:55 kwm Exp $
+#   $MCom: ports/x11-toolkits/py-gnome-desktop/Makefile,v 1.101 2010/08/24 04:16:28 marcus Exp $
 #
 
 PORTNAME=	gnome-desktop
-PORTVERSION=	2.30.2
-PORTREVISION=	2
+PORTVERSION=	2.31.1
 CATEGORIES=	x11-toolkits python gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gnome-python-desktop/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -52,6 +51,7 @@ DOCSDIR=	${WRKSRC}/share/doc/py-gnome-desktop
 post-patch:
 	@${FIND} ${WRKSRC}/docs -name Makefile.in | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|^HTML_DIR =.*|HTML_DIR = ${DOCSDIR}|g'
+	@${REINPLACE_CMD} -e 's|2.30|2.32|g' ${WRKSRC}/configure
 
 .if !defined(NOPORTDOCS)
 post-install:
