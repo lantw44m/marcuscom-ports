@@ -3,11 +3,11 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.60 2010/06/07 07:22:12 kwm Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.61 2010/06/08 08:12:44 kwm Exp $
 #
 
 PORTNAME=	anjuta
-PORTVERSION=	2.31.3.0
+PORTVERSION=	2.31.91.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	autogen:${PORTSDIR}/devel/autogen \
 		p5-gettext>=1.05:${PORTSDIR}/devel/p5-Locale-gettext
 LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
 		gladeui-1.10:${PORTSDIR}/devel/glade3 \
-		vala.0:${PORTSDIR}/lang/vala \
+		vala-0.10.0:${PORTSDIR}/lang/vala \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
 		gdl-1.3:${PORTSDIR}/x11-toolkits/gdl
 RUN_DEPENDS=	bash:${PORTSDIR}/shells/bash \
@@ -39,11 +39,13 @@ USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PERL5=	yes
+USE_PYTHON=	yes
 USE_GNOME=	gnomeprefix gnomehack vte gtksourceview2 libgda4
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--with-symbol-db-shm=/tmp
+CONFIGURE_ARGS=	--with-symbol-db-shm=/tmp \
+		--enable-introspection=no
 USE_LDCONFIG=	yes
 GCONF_SCHEMAS=	anjuta-build-basic-autotools-plugin.schemas \
 		anjuta-cvs-plugin.schemas \
@@ -55,7 +57,8 @@ GCONF_SCHEMAS=	anjuta-build-basic-autotools-plugin.schemas \
 		anjuta-symbol-db.schemas \
 		anjuta-terminal-plugin.schemas \
 		file-manager.schemas \
-		preferences.schemas
+		preferences.schemas \
+		python-plugin-properties.schemas
 
 MAN1=		anjuta.1 anjuta-launcher.1
 
@@ -67,11 +70,7 @@ OPTIONS=	SVN "Build subversion plugin" off \
 .if defined(WITH_SVN)
 BUILD_DEPENDS+=	svn:${PORTSDIR}/devel/subversion
 LIB_DEPENDS+=	apr-1.4:${PORTSDIR}/devel/apr1
-.if exists(${LOCALBASE}/lib/libneon.so.29)
-LIB_DEPENDS+=	neon.29:${PORTSDIR}/www/neon29
-.else
-LIB_DEPENDS+=	neon.28:${PORTSDIR}/www/neon28
-.endif
+LIB_DEPENDS+=	neon.27:${PORTSDIR}/www/neon29
 RUN_DEPENDS+=	svn:${PORTSDIR}/devel/subversion
 PLIST_SUB+=	SVN=""
 .else
@@ -80,7 +79,7 @@ PLIST_SUB+=	SVN="@comment "
 .endif
 
 .if defined(WITH_DEVHELP)
-LIB_DEPENDS+=	devhelp-1.1:${PORTSDIR}/devel/devhelp
+LIB_DEPENDS+=	devhelp-2.1:${PORTSDIR}/devel/devhelp
 PLIST_SUB+=	DEVHELP=""
 .else
 CONFIGURE_ARGS+=--disable-plugin-devhelp
