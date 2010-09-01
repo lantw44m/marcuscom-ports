@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.8 2010/06/29 21:43:25 kwm Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.9 2010/08/14 17:47:17 marcus Exp $
 #
 
 PORTNAME=	libgda4
 PORTVERSION?=	4.1.7
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/4$//}/${PORTVERSION:R}
