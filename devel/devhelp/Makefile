@@ -3,11 +3,10 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/devel/devhelp/Makefile,v 1.1 2010/06/23 12:12:25 kwm Exp $
+#   $MCom: ports/devel/devhelp/Makefile,v 1.34 2010/07/05 11:34:41 kwm Exp $
 
 PORTNAME=	devhelp
-PORTVERSION=	2.30.1
-PORTREVISION=	1
+PORTVERSION=	2.31.91
 PORTEPOCH=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -16,8 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Developer help browser for GNOME 2
 
-LIB_DEPENDS=	webkitgtk-1.0.13:${PORTSDIR}/www/webkit-gtk2 \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
+LIB_DEPENDS=	webkitgtk-1.0.13:${PORTSDIR}/www/webkit-gtk2
 
 USE_BZIP2=	yes
 USE_XORG=	x11
@@ -51,9 +49,5 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_SINGLE_INCLUDES||g' \
 		${WRKSRC}/src/Makefile.in
 .endif
-
-post-install:
-	@${MKDIR} ${PREFIX}/etc/gconf/schemas
-	@${CP} ${WRKSRC}/data/devhelp.schemas ${PREFIX}/etc/gconf/schemas
 
 .include <bsd.port.post.mk>
