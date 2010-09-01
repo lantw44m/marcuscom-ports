@@ -3,11 +3,12 @@
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.61 2010/06/08 08:12:44 kwm Exp $
+#   $MCom: ports/devel/anjuta/Makefile,v 1.62 2010/09/01 15:54:18 kwm Exp $
 #
 
 PORTNAME=	anjuta
 PORTVERSION=	2.31.91.0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -63,7 +64,8 @@ GCONF_SCHEMAS=	anjuta-build-basic-autotools-plugin.schemas \
 MAN1=		anjuta.1 anjuta-launcher.1
 
 OPTIONS=	SVN "Build subversion plugin" off \
-		DEVHELP "Build devhelp plugin" on
+		DEVHELP "Build devhelp plugin" on \
+		GRAPHVIZ "Build inheritance plugin" on
 
 .include <bsd.port.pre.mk>
 
@@ -87,6 +89,16 @@ CONFIGURE_ARGS+=--disable-plugin-devhelp
 # See if versions beyond 2.26.1.0 still do this.
 #PLIST_SUB+=	DEVHELP="@comment "
 PLIST_SUB+=	DEVHELP=""
+.endif
+
+.if defined(WITH_GRAPHVIZ)
+CONFIGURE_ARGS+=--enable-graphviz
+BUILD_DEPENDS+=	neato:${PORTSDIR}/graphics/graphviz
+RUN_DEPENDS+=	neato:${PORTSDIR}/graphics/graphviz
+PLIST_SUB+=	GRAPHVIZ=""
+.else
+CONFIGURE_ARGS+=--disable-graphviz
+PLIST_SUB+=	GRAPHVIZ="@comment "
 .endif
 
 post-patch:
