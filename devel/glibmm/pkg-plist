@@ -1,6 +1,7 @@
 include/giomm-%%API_VERSION%%/giomm.h
 include/giomm-%%API_VERSION%%/giomm/appinfo.h
 include/giomm-%%API_VERSION%%/giomm/application.h
+include/giomm-%%API_VERSION%%/giomm/asyncinitable.h
 include/giomm-%%API_VERSION%%/giomm/asyncresult.h
 include/giomm-%%API_VERSION%%/giomm/bufferedinputstream.h
 include/giomm-%%API_VERSION%%/giomm/bufferedoutputstream.h
@@ -51,6 +52,7 @@ include/giomm-%%API_VERSION%%/giomm/networkservice.h
 include/giomm-%%API_VERSION%%/giomm/outputstream.h
 include/giomm-%%API_VERSION%%/giomm/private/appinfo_p.h
 include/giomm-%%API_VERSION%%/giomm/private/application_p.h
+include/giomm-%%API_VERSION%%/giomm/private/asyncinitable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/asyncresult_p.h
 include/giomm-%%API_VERSION%%/giomm/private/bufferedinputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/bufferedoutputstream_p.h
@@ -107,6 +109,7 @@ include/giomm-%%API_VERSION%%/giomm/private/socketaddressenumerator_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socketclient_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socketconnectable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socketconnection_p.h
+include/giomm-%%API_VERSION%%/giomm/private/socketcontrolmessage_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socketlistener_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socketservice_p.h
 include/giomm-%%API_VERSION%%/giomm/private/srvtarget_p.h
@@ -114,7 +117,9 @@ include/giomm-%%API_VERSION%%/giomm/private/tcpconnection_p.h
 include/giomm-%%API_VERSION%%/giomm/private/themedicon_p.h
 include/giomm-%%API_VERSION%%/giomm/private/threadedsocketservice_p.h
 include/giomm-%%API_VERSION%%/giomm/private/unixconnection_p.h
+include/giomm-%%API_VERSION%%/giomm/private/unixcredentialsmessage_p.h
 include/giomm-%%API_VERSION%%/giomm/private/unixfdlist_p.h
+include/giomm-%%API_VERSION%%/giomm/private/unixfdmessage_p.h
 include/giomm-%%API_VERSION%%/giomm/private/unixinputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/unixoutputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/volume_p.h
@@ -129,6 +134,7 @@ include/giomm-%%API_VERSION%%/giomm/socketaddressenumerator.h
 include/giomm-%%API_VERSION%%/giomm/socketclient.h
 include/giomm-%%API_VERSION%%/giomm/socketconnectable.h
 include/giomm-%%API_VERSION%%/giomm/socketconnection.h
+include/giomm-%%API_VERSION%%/giomm/socketcontrolmessage.h
 include/giomm-%%API_VERSION%%/giomm/socketlistener.h
 include/giomm-%%API_VERSION%%/giomm/socketservice.h
 include/giomm-%%API_VERSION%%/giomm/srvtarget.h
@@ -136,7 +142,9 @@ include/giomm-%%API_VERSION%%/giomm/tcpconnection.h
 include/giomm-%%API_VERSION%%/giomm/themedicon.h
 include/giomm-%%API_VERSION%%/giomm/threadedsocketservice.h
 include/giomm-%%API_VERSION%%/giomm/unixconnection.h
+include/giomm-%%API_VERSION%%/giomm/unixcredentialsmessage.h
 include/giomm-%%API_VERSION%%/giomm/unixfdlist.h
+include/giomm-%%API_VERSION%%/giomm/unixfdmessage.h
 include/giomm-%%API_VERSION%%/giomm/unixinputstream.h
 include/giomm-%%API_VERSION%%/giomm/unixoutputstream.h
 include/giomm-%%API_VERSION%%/giomm/volume.h
