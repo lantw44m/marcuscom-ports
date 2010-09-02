@@ -3,12 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.66 2010/07/14 10:22:09 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon/Makefile,v 1.67 2010/08/17 20:12:46 kwm Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	2.30.1
-PORTREVISION=	1
+PORTVERSION=	2.31.91
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -39,6 +38,7 @@ GCONF_SCHEMAS=	apps_gnome_settings_daemon_housekeeping.schemas \
 		apps_gnome_settings_daemon_xrandr.schemas \
 		desktop_gnome_font_rendering.schemas \
 		desktop_gnome_keybindings.schemas \
+		desktop_gnome_peripherals_smartcard.schemas \
 		desktop_gnome_peripherals_touchpad.schemas \
 		gnome-settings-daemon.schemas
 
