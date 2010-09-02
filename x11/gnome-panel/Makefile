@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.223 2010/08/18 22:07:44 kwm Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.224 2010/08/30 16:26:28 avl Exp $
 #
 
 PORTNAME=	gnome-panel
-PORTVERSION=	2.31.90
-PORTREVISION?=	1
+PORTVERSION=	2.31.91
+PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -21,6 +21,7 @@ USE_BZIP2=	yes
 .if !defined(REFERENCE_PORT)
 
 LIB_DEPENDS=	gweather.1:${PORTSDIR}/net/libgweather \
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 
 USE_GETTEXT=	yes

@@ -199,6 +199,9 @@ share/gnome/help/fish/fr/legal.xml
 share/gnome/help/fish/it/figures/fish_applet.png
 share/gnome/help/fish/it/fish.xml
 share/gnome/help/fish/it/legal.xml
+share/gnome/help/fish/ja/figures/fish_applet.png
+share/gnome/help/fish/ja/fish.xml
+share/gnome/help/fish/ja/legal.xml
 share/gnome/help/fish/ko/figures/fish_applet.png
 share/gnome/help/fish/ko/fish.xml
 share/gnome/help/fish/ko/legal.xml
@@ -423,6 +426,7 @@ share/omf/fish/fish-eu.omf
 share/omf/fish/fish-fi.omf
 share/omf/fish/fish-fr.omf
 share/omf/fish/fish-it.omf
+share/omf/fish/fish-ja.omf
 share/omf/fish/fish-ko.omf
 share/omf/fish/fish-oc.omf
 share/omf/fish/fish-ru.omf
@@ -447,6 +451,8 @@ share/omf/fish/fish-zh_CN.omf
 @dirrm share/gnome/help/fish/oc
 @dirrm share/gnome/help/fish/ko/figures
 @dirrm share/gnome/help/fish/ko
+@dirrm share/gnome/help/fish/ja/figures
+@dirrm share/gnome/help/fish/ja
 @dirrm share/gnome/help/fish/it/figures
 @dirrm share/gnome/help/fish/it
 @dirrm share/gnome/help/fish/fr/figures
