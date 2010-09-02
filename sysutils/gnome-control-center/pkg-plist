@@ -1,44 +1,23 @@
 %%ABOUTME%%bin/gnome-about-me
 bin/gnome-appearance-properties
 bin/gnome-at-mobility
+bin/gnome-at-properties
 bin/gnome-at-visual
 bin/gnome-control-center
+bin/gnome-default-applications-properties
+bin/gnome-display-properties
 bin/gnome-font-viewer
+bin/gnome-keybinding-properties
+bin/gnome-keyboard-properties
+bin/gnome-mouse-properties
+bin/gnome-network-properties
 bin/gnome-thumbnail-font
 bin/gnome-typing-monitor
+bin/gnome-window-properties
 etc/xdg/autostart/gnome-at-session.desktop
 etc/xdg/menus/gnomecc.menu
-include/gnome-control-center-1/libgnome-control-center/cc-panel.h
-include/gnome-control-center-1/libgnome-control-center/cc-shell.h
-include/gnome-control-center-1/libgnome-control-center/gconf-property-editor-marshal.h
-include/gnome-control-center-1/libgnome-control-center/gconf-property-editor.h
 include/gnome-window-settings-2.0/gnome-window-manager.h
 include/gnome-window-settings-2.0/gnome-wm-manager.h
-lib/control-center-1/panels/libdefault-applications.a
-lib/control-center-1/panels/libdefault-applications.la
-lib/control-center-1/panels/libdefault-applications.so
-lib/control-center-1/panels/libdisplay.a
-lib/control-center-1/panels/libdisplay.la
-lib/control-center-1/panels/libdisplay.so
-lib/control-center-1/panels/libkeybinding-properties.a
-lib/control-center-1/panels/libkeybinding-properties.la
-lib/control-center-1/panels/libkeybinding-properties.so
-lib/control-center-1/panels/libkeybinding-properties.so.0
-lib/control-center-1/panels/libkeyboard-properties.a
-lib/control-center-1/panels/libkeyboard-properties.la
-lib/control-center-1/panels/libkeyboard-properties.so
-lib/control-center-1/panels/libmouse-properties.a
-lib/control-center-1/panels/libmouse-properties.la
-lib/control-center-1/panels/libmouse-properties.so
-lib/control-center-1/panels/libnetwork.a
-lib/control-center-1/panels/libnetwork.la
-lib/control-center-1/panels/libnetwork.so
-lib/control-center-1/panels/libuniversal-access.a
-lib/control-center-1/panels/libuniversal-access.la
-lib/control-center-1/panels/libuniversal-access.so
-lib/libgnome-control-center.la
-lib/libgnome-control-center.so
-lib/libgnome-control-center.so.0
 lib/libgnome-window-settings.a
 lib/libgnome-window-settings.la
 lib/libgnome-window-settings.so
@@ -49,38 +28,26 @@ lib/window-manager-settings/libmetacity.so
 libdata/pkgconfig/gnome-default-applications.pc
 libdata/pkgconfig/gnome-keybindings.pc
 libdata/pkgconfig/gnome-window-settings-2.0.pc
-libdata/pkgconfig/libgnome-control-center.pc
 sbin/gnome-display-properties-install-systemwide
 %%ABOUTME%%share/applications/gnome-about-me.desktop
+share/applications/at-properties.desktop
+share/applications/default-applications.desktop
+share/applications/display-properties.desktop
 share/applications/gnome-appearance-properties.desktop
-share/applications/gnome-control-center.desktop
-share/applications/gnome-default-applications-panel.desktop
-share/applications/gnome-display-panel.desktop
 share/applications/gnome-font-viewer.desktop
-share/applications/gnome-keybindings-panel.desktop
-share/applications/gnome-keyboard-panel.desktop
-share/applications/gnome-mouse-panel.desktop
-share/applications/gnome-network-panel.desktop
+share/applications/gnome-network-properties.desktop
+share/applications/gnome-settings-mouse.desktop
 share/applications/gnome-theme-installer.desktop
-share/applications/gnome-universal-access-panel.desktop
+share/applications/gnomecc.desktop
+share/applications/keybinding.desktop
+share/applications/keyboard.desktop
+share/applications/window-properties.desktop
 share/desktop-directories/gnomecc.directory
-share/doc/libgnome-control-center/api-index-full.html
-share/doc/libgnome-control-center/ch01.html
-share/doc/libgnome-control-center/home.png
-share/doc/libgnome-control-center/index.html
-share/doc/libgnome-control-center/index.sgml
-share/doc/libgnome-control-center/left.png
-share/doc/libgnome-control-center/libgnome-control-center-CcPanel.html
-share/doc/libgnome-control-center/libgnome-control-center-CcShell.html
-share/doc/libgnome-control-center/libgnome-control-center.devhelp
-share/doc/libgnome-control-center/libgnome-control-center.devhelp2
-share/doc/libgnome-control-center/object-tree.html
-share/doc/libgnome-control-center/right.png
-share/doc/libgnome-control-center/style.css
-share/doc/libgnome-control-center/up.png
 %%DATADIR%%/default-apps/gnome-default-applications.xml
 %%DATADIR%%/keybindings/00-multimedia-key.xml
 %%DATADIR%%/keybindings/01-desktop-key.xml
+%%DATADIR%%/pixmaps/at-startup.png
+%%DATADIR%%/pixmaps/at-support.png
 %%DATADIR%%/pixmaps/bar-disabled.png
 %%DATADIR%%/pixmaps/bar-green.png
 %%DATADIR%%/pixmaps/bar-red.png
@@ -126,6 +93,7 @@ share/doc/libgnome-control-center/up.png
 %%DATADIR%%/pixmaps/theme-thumbnailing.png
 %%DATADIR%%/pixmaps/window-theme-thumbnailing.png
 %%DATADIR%%/ui/appearance.ui
+%%DATADIR%%/ui/at-enable-dialog.ui
 %%DATADIR%%/ui/display-capplet.ui
 %%ABOUTME%%%%DATADIR%%/ui/gnome-about-me-dialog.ui
 %%ABOUTME%%%%DATADIR%%/ui/gnome-about-me-fingerprint.ui
@@ -139,8 +107,7 @@ share/doc/libgnome-control-center/up.png
 %%DATADIR%%/ui/gnome-keyboard-properties-options-dialog.ui
 %%DATADIR%%/ui/gnome-mouse-properties.ui
 %%DATADIR%%/ui/gnome-network-properties.ui
-%%DATADIR%%/ui/shell.ui
-%%DATADIR%%/ui/uap.ui
+%%DATADIR%%/ui/gnome-window-properties.ui
 share/gnome/cursor-fonts/cursor-large-white.pcf
 share/gnome/cursor-fonts/cursor-large.pcf
 share/gnome/cursor-fonts/cursor-white.pcf
@@ -174,7 +141,6 @@ share/gnome/help/control-center/pl/control-center.xml
 share/gnome/help/control-center/pt/control-center.xml
 share/gnome/help/control-center/pt_BR/control-center.xml
 share/gnome/help/control-center/ru/control-center.xml
-share/gnome/help/control-center/sl/control-center.xml
 share/gnome/help/control-center/sv/control-center.xml
 share/gnome/help/control-center/th/control-center.xml
 share/gnome/help/control-center/uk/control-center.xml
@@ -236,7 +202,6 @@ share/locale/he/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/hi/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/hr/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/hu/LC_MESSAGES/gnome-control-center-2.0.mo
-share/locale/hy/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/id/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/is/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/it/LC_MESSAGES/gnome-control-center-2.0.mo
@@ -309,7 +274,6 @@ share/omf/control-center/control-center-pl.omf
 share/omf/control-center/control-center-pt.omf
 share/omf/control-center/control-center-pt_BR.omf
 share/omf/control-center/control-center-ru.omf
-share/omf/control-center/control-center-sl.omf
 share/omf/control-center/control-center-sv.omf
 share/omf/control-center/control-center-th.omf
 share/omf/control-center/control-center-uk.omf
@@ -322,7 +286,6 @@ share/polkit-1/actions/org.gnome.randr.policy
 @dirrm share/gnome/help/control-center/uk
 @dirrm share/gnome/help/control-center/th
 @dirrm share/gnome/help/control-center/sv
-@dirrm share/gnome/help/control-center/sl
 @dirrm share/gnome/help/control-center/ru
 @dirrm share/gnome/help/control-center/pt_BR
 @dirrm share/gnome/help/control-center/pt
@@ -351,6 +314,8 @@ share/polkit-1/actions/org.gnome.randr.policy
 @dirrm include/gnome-window-settings-2.0
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
+@comment not sure about this ..
+@unexec rm -f %D/share/applications/mimeinfo.cache > /dev/null || /usr/bin/true
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zu/LC_MESSAGES
