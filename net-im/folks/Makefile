@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/folks/Makefile,v 1.4 2010/08/30 12:33:08 kwm Exp $
+#   $MCom: ports/net-im/folks/Makefile,v 1.5 2010/09/01 21:23:34 kwm Exp $
 #
 
 PORTNAME=	folks
@@ -14,8 +14,9 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	library to aggregates people from multiple sources
 
-BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
-LIB_DEPENDS= 	gee.2:${PORTSDIR}/devel/libgee \
+BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen \
+		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
 
 USE_BZIP2=	yes
