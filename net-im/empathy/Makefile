@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.69 2010/08/18 13:25:16 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.70 2010/08/30 12:34:44 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	2.31.90
-PORTREVISION=	1
+PORTVERSION=	2.31.91.1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -97,7 +96,7 @@ PLIST_SUB+=	NST="@comment "
 .endif
 
 .if !defined(WITHOUT_MAP)
-LIB_DEPENDS+=	champlain-0.4.1:${PORTSDIR}/graphics/libchamplain
+LIB_DEPENDS+=	champlain-0.8.1:${PORTSDIR}/graphics/libchamplain
 CONFIGURE_ARGS+=--enable-map
 PLIST_SUB+=	MAP=""
 .else

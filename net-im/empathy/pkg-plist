@@ -4,11 +4,13 @@ bin/empathy-debugger
 %%NST%%lib/nautilus-sendto/plugins/libnstempathy.a
 %%NST%%lib/nautilus-sendto/plugins/libnstempathy.la
 %%NST%%lib/nautilus-sendto/plugins/libnstempathy.so
+libexec/empathy-auth-client
 libexec/empathy-av
 share/GConf/gsettings/empathy.convert
 share/applications/empathy-accounts.desktop
 share/applications/empathy.desktop
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.AudioVideo.service
+share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Auth.service
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/Template.html
 %%DATADIR%%/codec-preferences
@@ -36,6 +38,7 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/empathy-contact-widget.ui
 %%DATADIR%%/empathy-ft-manager.ui
 %%DATADIR%%/empathy-import-dialog.ui
+%%DATADIR%%/empathy-individual-widget.ui
 %%DATADIR%%/empathy-irc-networks.dtd
 %%DATADIR%%/empathy-log-window.ui
 %%DATADIR%%/empathy-main-window.ui
@@ -1027,6 +1030,7 @@ share/locale/hu/LC_MESSAGES/empathy.mo
 share/locale/id/LC_MESSAGES/empathy.mo
 share/locale/it/LC_MESSAGES/empathy.mo
 share/locale/ja/LC_MESSAGES/empathy.mo
+share/locale/kk/LC_MESSAGES/empathy.mo
 share/locale/kn/LC_MESSAGES/empathy.mo
 share/locale/ko/LC_MESSAGES/empathy.mo
 share/locale/ku/LC_MESSAGES/empathy.mo
@@ -1066,6 +1070,7 @@ share/locale/zh_CN/LC_MESSAGES/empathy.mo
 share/locale/zh_HK/LC_MESSAGES/empathy.mo
 share/locale/zh_TW/LC_MESSAGES/empathy.mo
 share/telepathy/clients/Empathy.AudioVideo.client
+share/telepathy/clients/Empathy.Auth.client
 share/telepathy/clients/Empathy.client
 @dirrmtry share/telepathy/clients
 @dirrmtry share/telepathy
