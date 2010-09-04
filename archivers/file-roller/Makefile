@@ -3,11 +3,11 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller/Makefile,v 1.180 2010/06/08 10:38:05 kwm Exp $
+#   $MCom: ports/archivers/file-roller/Makefile,v 1.181 2010/08/17 09:37:53 kwm Exp $
 #
 
 PORTNAME=	file-roller
-PORTVERSION=	2.31.90
+PORTVERSION=	2.31.91
 PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
@@ -34,6 +34,7 @@ USE_XORG=	sm
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--disable-packagekit
 
 PORTDOCS=	AUTHORS NEWS README TODO ChangeLog
 GCONF_SCHEMAS=	file-roller.schemas
