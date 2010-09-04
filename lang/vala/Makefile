@@ -3,12 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/vala/Makefile,v 1.41 2010/08/19 08:10:01 kwm Exp $
+#   $MCom: ports/lang/vala/Makefile,v 1.42 2010/08/31 14:14:44 avl Exp $
 #
 
 PORTNAME=	vala
-PORTVERSION=	0.9.7
-PORTREVISION=	1
+PORTVERSION=	0.9.8
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
