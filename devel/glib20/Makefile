@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.182 2010/08/29 23:00:17 marcus Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.183 2010/09/01 11:56:05 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
@@ -71,6 +71,8 @@ CONFIGURE_TARGET=${GLIB_ARCH}-portbld-freebsd${OSREL}
 LIB_DEPENDS+=	icui18n:${PORTSDIR}/devel/icu
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-glib_Makefile.in \
 		${FILESDIR}/extra-patch-glib_gunicollate.c
+# Disable it until someone can figure why it causes net-im/pidgin crashed.
+#CONFIGURE_ENV+=	CFLAGS="-D__STDC_ISO_10646__"
 .endif
 
 post-patch:
