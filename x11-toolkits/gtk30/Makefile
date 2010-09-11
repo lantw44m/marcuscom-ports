@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.6 2010/07/12 23:01:14 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.7 2010/08/17 19:49:34 kwm Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.90.6
+PORTVERSION=	2.90.7
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
@@ -31,10 +31,6 @@ LATEST_LINK=	gtk30
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS+=	png.6:${PORTSDIR}/graphics/png \
-		tiff.4:${PORTSDIR}/graphics/tiff \
-		jpeg.11:${PORTSDIR}/graphics/jpeg \
-		jasper.4:${PORTSDIR}/graphics/jasper
 RUN_DEPENDS+=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
 		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 

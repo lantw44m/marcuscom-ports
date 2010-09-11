@@ -22,6 +22,7 @@ include/gtk-3.0/gdk/gdkenumtypes.h
 include/gtk-3.0/gdk/gdkevents.h
 include/gtk-3.0/gdk/gdkinput.h
 include/gtk-3.0/gdk/gdkkeys.h
+include/gtk-3.0/gdk/gdkkeysyms-compat.h
 include/gtk-3.0/gdk/gdkkeysyms.h
 include/gtk-3.0/gdk/gdkpango.h
 include/gtk-3.0/gdk/gdkpixbuf.h
@@ -72,6 +73,7 @@ include/gtk-3.0/gtk/gtkcellrendererspin.h
 include/gtk-3.0/gtk/gtkcellrendererspinner.h
 include/gtk-3.0/gtk/gtkcellrenderertext.h
 include/gtk-3.0/gtk/gtkcellrenderertoggle.h
+include/gtk-3.0/gtk/gtkcellsizerequest.h
 include/gtk-3.0/gtk/gtkcellview.h
 include/gtk-3.0/gtk/gtkcheckbutton.h
 include/gtk-3.0/gtk/gtkcheckmenuitem.h
@@ -122,7 +124,6 @@ include/gtk-3.0/gtk/gtkimcontextsimple.h
 include/gtk-3.0/gtk/gtkimmodule.h
 include/gtk-3.0/gtk/gtkimmulticontext.h
 include/gtk-3.0/gtk/gtkinvisible.h
-include/gtk-3.0/gtk/gtkitem.h
 include/gtk-3.0/gtk/gtklabel.h
 include/gtk-3.0/gtk/gtklayout.h
 include/gtk-3.0/gtk/gtklinkbutton.h
@@ -231,6 +232,7 @@ include/gtk-3.0/gtk/gtkvscrollbar.h
 include/gtk-3.0/gtk/gtkvseparator.h
 include/gtk-3.0/gtk/gtkwidget.h
 include/gtk-3.0/gtk/gtkwindow.h
+include/gtk-3.0/gtk/gtkwrapbox.h
 include/gtk-3.0/unix-print/gtk/gtkpagesetupunixdialog.h
 include/gtk-3.0/unix-print/gtk/gtkprinter.h
 include/gtk-3.0/unix-print/gtk/gtkprintjob.h
