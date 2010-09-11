@@ -3,10 +3,10 @@
 # Whom:			Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.3 2010/06/29 21:14:00 kwm Exp $
+#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.4 2010/07/12 14:14:14 kwm Exp $
 
 PORTNAME?=	gdk-pixbuf
-PORTVERSION=	2.21.6
+PORTVERSION=	2.21.7
 CATEGORIES?=	graphics
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gdk-pixbuf/${PORTVERSION:R}
@@ -31,8 +31,12 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--enable-introspection=yes
 
 MAN1=		gdk-pixbuf-csource.1 gdk-pixbuf-query-loaders.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|" == "|" = "|g' ${WRKSRC}/configure
 
 post-install:
 	@cd ${WRKSRC}/docs/reference/gdk-pixbuf && gmake install-man1
