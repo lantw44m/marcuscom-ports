@@ -28,6 +28,9 @@ lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-icns.so
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-ico.a
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-ico.la
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-ico.so
+lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-jasper.a
+lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-jasper.la
+lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-jasper.so
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-jpeg.a
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-jpeg.la
 lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders/libpixbufloader-jpeg.so
