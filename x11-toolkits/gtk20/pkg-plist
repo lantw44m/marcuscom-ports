@@ -25,6 +25,7 @@ include/gtk-2.0/gdk/gdki18n.h
 include/gtk-2.0/gdk/gdkimage.h
 include/gtk-2.0/gdk/gdkinput.h
 include/gtk-2.0/gdk/gdkkeys.h
+include/gtk-2.0/gdk/gdkkeysyms-compat.h
 include/gtk-2.0/gdk/gdkkeysyms.h
 include/gtk-2.0/gdk/gdkpango.h
 include/gtk-2.0/gdk/gdkpixbuf.h
