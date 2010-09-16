@@ -3,12 +3,11 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.8 2010/08/30 00:17:10 marcus Exp $
+#   $MCom: ports/sysutils/polkit/Makefile,v 1.9 2010/08/30 00:25:50 marcus Exp $
 #
 
 PORTNAME=	polkit
-PORTVERSION=	0.98
-PORTREVISION=	1
+PORTVERSION=	0.99
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
@@ -54,13 +53,11 @@ post-patch:
 post-install:
 	${MKDIR} ${PREFIX}/etc/dbus-1/system.d/
 	if [ ! -f ${PREFIX}/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf ]; then \
-	    	${INSTALL_DATA} ${WRKSRC}/data/org.freedesktop.PolicyKit1.conf \
+		${INSTALL_DATA} ${WRKSRC}/data/org.freedesktop.PolicyKit1.conf \
 			${PREFIX}/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf ; \
 	fi
 	${INSTALL_DATA} ${WRKSRC}/data/org.freedesktop.PolicyKit1.conf \
-	    	${PREFIX}/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf.dist
-	${INSTALL_DATA} ${WRKSRC}/src/polkitagent/polkitagentenumtypes.h \
-	    	${PREFIX}/include/polkit-1/polkitagent/polkitagentenumtypes.h
+		${PREFIX}/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf.dist
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
