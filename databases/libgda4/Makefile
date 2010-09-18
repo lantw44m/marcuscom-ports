@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.9 2010/08/14 17:47:17 marcus Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.10 2010/09/01 11:30:41 kwm Exp $
 #
 
 PORTNAME=	libgda4
-PORTVERSION?=	4.1.7
-PORTREVISION?=	1
+PORTVERSION?=	4.1.11
+PORTREVISION?=	0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/4$//}/${PORTVERSION:R}
@@ -37,7 +37,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ARGS=	--without-sybase \
-		--enable-introspection
+		--enable-introspection=no
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lintl"
 
