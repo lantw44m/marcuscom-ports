@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	clutter-gtk
-PORTVERSION=	0.10.4
-PORTREVISION=	2
+PORTVERSION=	0.10.8
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
@@ -27,9 +26,5 @@ CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|clutter-x11-0.9|clutter-x11-1.0|g' \
-		${WRKSRC}/configure
 
 .include <bsd.port.mk>
