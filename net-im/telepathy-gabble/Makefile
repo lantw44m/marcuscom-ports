@@ -2,12 +2,12 @@
 # Date created:				Apr 19 2007
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/telepathy-gabble/Makefile,v 1.42 2010/05/22 07:25:23 marcus Exp $
-#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.7 2010/08/10 06:01:36 avl Exp $
+# $FreeBSD$
+#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.8 2010/09/05 18:45:41 marcus Exp $
 
 PORTNAME=	telepathy-gabble
-PORTVERSION=	0.8.14
-PORTREVISION=	1
+PORTVERSION=	0.10.0
+PORTREVISION=	0
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -16,6 +16,8 @@ COMMENT=	Jabber Connection Manager for Telepathy Framework
 
 LIB_PC_DEPENDS=	gobject-2.0.pc:${PORTSDIR}/devel/glib20 \
 		dbus-glib-1.pc:${PORTSDIR}/devel/dbus-glib \
+		nice.pc:${PORTSDIR}/net-im/libnice \
+		uuid.pc:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		telepathy-glib.pc:${PORTSDIR}/net-im/telepathy-glib \
 		loudmouth-1.0.pc:${PORTSDIR}/net-im/loudmouth
 
