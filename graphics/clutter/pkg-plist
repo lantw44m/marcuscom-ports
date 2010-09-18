@@ -57,6 +57,7 @@ include/clutter-1.0/clutter/clutter-group.h
 include/clutter-1.0/clutter/clutter-input-device.h
 include/clutter-1.0/clutter/clutter-interval.h
 include/clutter-1.0/clutter/clutter-json.h
+include/clutter-1.0/clutter/clutter-keysyms-compat.h
 include/clutter-1.0/clutter/clutter-keysyms.h
 include/clutter-1.0/clutter/clutter-layout-manager.h
 include/clutter-1.0/clutter/clutter-layout-meta.h
@@ -120,6 +121,7 @@ include/clutter-1.0/cogl/cogl-vertex-buffer.h
 include/clutter-1.0/cogl/cogl.h
 lib/girepository-1.0/Cally-1.0.typelib
 lib/girepository-1.0/Clutter-1.0.typelib
+lib/girepository-1.0/ClutterX11-1.0.typelib
 lib/girepository-1.0/Cogl-1.0.typelib
 lib/libclutter-glx-1.0.a
 lib/libclutter-glx-1.0.la
@@ -236,6 +238,7 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ch10.html
 %%DOCSDIR%%/ch11.html
 %%DOCSDIR%%/clutter-ClutterBackend.html
+%%DOCSDIR%%/clutter-ClutterX11TexturePixmap.html
 %%DOCSDIR%%/clutter-Colors.html
 %%DOCSDIR%%/clutter-EGL-Specific-Support.html
 %%DOCSDIR%%/clutter-Events.html
@@ -243,6 +246,7 @@ share/doc/cally/up.png
 %%DOCSDIR%%/clutter-GLX-Specific-Support.html
 %%DOCSDIR%%/clutter-General.html
 %%DOCSDIR%%/clutter-Implicit-Animations.html
+%%DOCSDIR%%/clutter-Intel-CE3100-CE4100-Specific-Support.html
 %%DOCSDIR%%/clutter-Key-Bindings.html
 %%DOCSDIR%%/clutter-Shaders.html
 %%DOCSDIR%%/clutter-Stage-Manager.html
@@ -321,6 +325,7 @@ share/doc/cogl/cogl-Vertex-Buffers.html
 share/doc/cogl/cogl.devhelp
 share/doc/cogl/cogl.devhelp2
 share/doc/cogl/cogl_ortho.png
+share/doc/cogl/coglglossary.html
 share/doc/cogl/fill-rule-even-odd.png
 share/doc/cogl/fill-rule-non-zero.png
 share/doc/cogl/home.png
@@ -341,8 +346,10 @@ share/doc/cogl/style.css
 share/doc/cogl/up.png
 share/gir-1.0/Cally-1.0.gir
 share/gir-1.0/Clutter-1.0.gir
+share/gir-1.0/ClutterX11-1.0.gir
 share/gir-1.0/Cogl-1.0.gir
 share/locale/de/LC_MESSAGES/clutter-1.0.mo
+share/locale/it/LC_MESSAGES/clutter-1.0.mo
 share/locale/pl/LC_MESSAGES/clutter-1.0.mo
 share/locale/zh_CN/LC_MESSAGES/clutter-1.0.mo
 @dirrm share/doc/cogl
