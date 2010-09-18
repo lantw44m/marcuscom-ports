@@ -13,6 +13,7 @@ include/libchamplain-0.8/champlain/champlain-map-source-desc.h
 include/libchamplain-0.8/champlain/champlain-map-source-factory.h
 include/libchamplain-0.8/champlain/champlain-map-source.h
 include/libchamplain-0.8/champlain/champlain-marker.h
+include/libchamplain-0.8/champlain/champlain-marshal.h
 include/libchamplain-0.8/champlain/champlain-memory-cache.h
 include/libchamplain-0.8/champlain/champlain-network-bbox-tile-source.h
 include/libchamplain-0.8/champlain/champlain-network-tile-source.h
@@ -28,6 +29,8 @@ include/libchamplain-0.8/champlain/champlain-version.h
 include/libchamplain-0.8/champlain/champlain-view.h
 include/libchamplain-0.8/champlain/champlain.h
 include/libchamplain-gtk-0.8/champlain-gtk/champlain-gtk.h
+include/libchamplain-gtk-0.8/champlain-gtk/champlain-gtk-enum-types.h
+include/libchamplain-gtk-0.8/champlain-gtk/champlain-gtk-marshal.h
 include/libchamplain-gtk-0.8/champlain-gtk/gtk-champlain-embed.h
 lib/girepository-1.0/Champlain-0.8.typelib
 lib/girepository-1.0/GtkChamplain-0.8.typelib
