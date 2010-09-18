@@ -1,16 +1,5 @@
 --- glib/gregex.c.orig	2007-09-09 18:35:32.000000000 -0400
 +++ glib/gregex.c	2007-09-09 18:36:05.000000000 -0400
-@@ -31,6 +31,10 @@
- 
- #include "gtypes.h"
- #include "gregex.h"
-+#include "gatomic.h"
-+#include "glist.h"
-+#include "gmessages.h"
-+#include "gstrfuncs.h"
- #include "glibintl.h"
- 
- /**
 @@ -164,8 +164,10 @@ match_error (gint errcode)
      case PCRE_ERROR_DFA_RECURSE:
      case PCRE_ERROR_RECURSIONLIMIT:
