@@ -116,12 +116,15 @@ share/applications/totem.desktop
 %%DOCSDIR%%/TotemObject.html
 %%DOCSDIR%%/TotemPlugin.html
 %%DOCSDIR%%/TotemVideoList.html
+%%DOCSDIR%%/annotation-glossary.html
 %%DOCSDIR%%/api-index-deprecated.html
 %%DOCSDIR%%/api-index-full.html
 %%DOCSDIR%%/core-api.html
 %%DOCSDIR%%/home.png
 %%DOCSDIR%%/index.html
 %%DOCSDIR%%/index.sgml
+%%DOCSDIR%%/ix02.html
+%%DOCSDIR%%/ix03.html
 %%DOCSDIR%%/left.png
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
