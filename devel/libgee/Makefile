@@ -6,12 +6,11 @@
 #
 
 PORTNAME=	libgee
-PORTVERSION=	0.5.2
-PORTREVISION=	1
+PORTVERSION=	0.5.3
 CATEGORIES=	devel
 MASTER_SITES=	GNOME/sources/${PORTNAME}/0.5/
 
-MAINTAINER=	steinex@nognu.de
+MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GObject collection library
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
