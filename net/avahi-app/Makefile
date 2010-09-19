@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/net/avahi-app/Makefile,v 1.1 2009/04/20 23:42:18 marcus Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.11 2010/08/14 16:50:16 kwm Exp $
 #
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.27
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES?=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 PKGNAMESUFFIX?=	-app
@@ -128,7 +128,7 @@ avahi-post-patch:
 	@${REINPLACE_CMD} -e 's|^_||g' \
 		${WRKSRC}/avahi-ui/*.desktop.in.in
 # Fix pre-generated gir file with new gobject-introspection
-	@${REINPLACE_CMD} -e 's|<repository version="1.0"|<repository version="1.1"|g' \
+	@${REINPLACE_CMD} -e 's|<repository version="1.0"|<repository version="1.2"|g' \
 		${WRKSRC}/avahi-gobject/AvahiCore-0.6.gir
 
 post-build: avahi-post-build
