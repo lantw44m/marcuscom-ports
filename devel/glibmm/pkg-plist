@@ -1,6 +1,5 @@
 include/giomm-%%API_VERSION%%/giomm.h
 include/giomm-%%API_VERSION%%/giomm/appinfo.h
-include/giomm-%%API_VERSION%%/giomm/application.h
 include/giomm-%%API_VERSION%%/giomm/asyncinitable.h
 include/giomm-%%API_VERSION%%/giomm/asyncresult.h
 include/giomm-%%API_VERSION%%/giomm/bufferedinputstream.h
@@ -12,10 +11,15 @@ include/giomm-%%API_VERSION%%/giomm/datainputstream.h
 include/giomm-%%API_VERSION%%/giomm/dataoutputstream.h
 include/giomm-%%API_VERSION%%/giomm/dbusauthobserver.h
 include/giomm-%%API_VERSION%%/giomm/dbusconnection.h
+include/giomm-%%API_VERSION%%/giomm/dbuserror.h
+include/giomm-%%API_VERSION%%/giomm/dbusintrospection.h
 include/giomm-%%API_VERSION%%/giomm/dbusmessage.h
 include/giomm-%%API_VERSION%%/giomm/dbusmethodinvocation.h
 include/giomm-%%API_VERSION%%/giomm/dbusownname.h
+include/giomm-%%API_VERSION%%/giomm/dbusproxy.h
 include/giomm-%%API_VERSION%%/giomm/dbusserver.h
+include/giomm-%%API_VERSION%%/giomm/dbusutils.h
+include/giomm-%%API_VERSION%%/giomm/dbuswatchname.h
 include/giomm-%%API_VERSION%%/giomm/desktopappinfo.h
 include/giomm-%%API_VERSION%%/giomm/drive.h
 include/giomm-%%API_VERSION%%/giomm/emblem.h
@@ -51,7 +55,6 @@ include/giomm-%%API_VERSION%%/giomm/networkaddress.h
 include/giomm-%%API_VERSION%%/giomm/networkservice.h
 include/giomm-%%API_VERSION%%/giomm/outputstream.h
 include/giomm-%%API_VERSION%%/giomm/private/appinfo_p.h
-include/giomm-%%API_VERSION%%/giomm/private/application_p.h
 include/giomm-%%API_VERSION%%/giomm/private/asyncinitable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/asyncresult_p.h
 include/giomm-%%API_VERSION%%/giomm/private/bufferedinputstream_p.h
@@ -62,10 +65,15 @@ include/giomm-%%API_VERSION%%/giomm/private/datainputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dataoutputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusauthobserver_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusconnection_p.h
+include/giomm-%%API_VERSION%%/giomm/private/dbuserror_p.h
+include/giomm-%%API_VERSION%%/giomm/private/dbusintrospection_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusmessage_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusmethodinvocation_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusownname_p.h
+include/giomm-%%API_VERSION%%/giomm/private/dbusproxy_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusserver_p.h
+include/giomm-%%API_VERSION%%/giomm/private/dbusutils_p.h
+include/giomm-%%API_VERSION%%/giomm/private/dbuswatchname_p.h
 include/giomm-%%API_VERSION%%/giomm/private/desktopappinfo_p.h
 include/giomm-%%API_VERSION%%/giomm/private/drive_p.h
 include/giomm-%%API_VERSION%%/giomm/private/emblem_p.h
@@ -99,6 +107,9 @@ include/giomm-%%API_VERSION%%/giomm/private/mountoperation_p.h
 include/giomm-%%API_VERSION%%/giomm/private/networkaddress_p.h
 include/giomm-%%API_VERSION%%/giomm/private/networkservice_p.h
 include/giomm-%%API_VERSION%%/giomm/private/outputstream_p.h
+include/giomm-%%API_VERSION%%/giomm/private/proxy_p.h
+include/giomm-%%API_VERSION%%/giomm/private/proxyaddress_p.h
+include/giomm-%%API_VERSION%%/giomm/private/proxyresolver_p.h
 include/giomm-%%API_VERSION%%/giomm/private/resolver_p.h
 include/giomm-%%API_VERSION%%/giomm/private/seekable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/settings_p.h
@@ -124,6 +135,9 @@ include/giomm-%%API_VERSION%%/giomm/private/unixinputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/unixoutputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/volume_p.h
 include/giomm-%%API_VERSION%%/giomm/private/volumemonitor_p.h
+include/giomm-%%API_VERSION%%/giomm/proxy.h
+include/giomm-%%API_VERSION%%/giomm/proxyaddress.h
+include/giomm-%%API_VERSION%%/giomm/proxyresolver.h
 include/giomm-%%API_VERSION%%/giomm/resolver.h
 include/giomm-%%API_VERSION%%/giomm/seekable.h
 include/giomm-%%API_VERSION%%/giomm/settings.h
@@ -208,6 +222,7 @@ include/glibmm-%%API_VERSION%%/glibmm/private/unicode_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/uriutils_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/valuearray_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/variant_p.h
+include/glibmm-%%API_VERSION%%/glibmm/private/variantiter_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/varianttype_p.h
 include/glibmm-%%API_VERSION%%/glibmm/property.h
 include/glibmm-%%API_VERSION%%/glibmm/propertyproxy.h
@@ -238,6 +253,7 @@ include/glibmm-%%API_VERSION%%/glibmm/value_custom.h
 include/glibmm-%%API_VERSION%%/glibmm/valuearray.h
 include/glibmm-%%API_VERSION%%/glibmm/variant.h
 include/glibmm-%%API_VERSION%%/glibmm/variant_basictypes.h
+include/glibmm-%%API_VERSION%%/glibmm/variantiter.h
 include/glibmm-%%API_VERSION%%/glibmm/varianttype.h
 include/glibmm-%%API_VERSION%%/glibmm/wrap.h
 include/glibmm-%%API_VERSION%%/glibmm/wrap_init.h
