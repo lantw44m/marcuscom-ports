@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.235 2010/08/28 19:21:44 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.236 2010/08/28 19:22:03 marcus Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.30.3
-PORTREVISION?=	2
+PORTVERSION=	2.30.6
+PORTREVISION?=	0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,7 +19,7 @@ COMMENT?=	An extremely lightweight and simple web browser for GNOME 2
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		webkitgtk-1.0.13:${PORTSDIR}/www/webkit-gtk2 \
+		webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2 \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
 		notify.1:${PORTSDIR}/devel/libnotify \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
@@ -38,7 +38,7 @@ WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-CONFIGURE_ARGS+=--enable-introspection=no \
+CONFIGURE_ARGS+=--enable-introspection \
 		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS} ${EXTRA_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS} ${EXTRA_LIBS}"
@@ -50,8 +50,8 @@ PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}"
 MAN1=		epiphany.1
 
 OPTIONS=	NSS "Import passwords from 2.26 and older on first run" on \
-		SPELLCHECK "Enable spell checking by default" on
-#		SEED "Enable seed (JavaScript) support" off \
+		SPELLCHECK "Enable spell checking by default" on \
+		SEED "Enable seed (JavaScript) support" off \
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
@@ -73,10 +73,10 @@ CONFIGURE_ARGS+=--enable-nss
 CONFIGURE_ARGS+=--disable-nss
 .endif
 
-#.if defined(WITH_SEED)
-#LIB_DEPENDS+=	seed.0:${PORTSDIR}/devel/seed
-#CONFIGURE_ARGS+=--enable-seed
-#.endif
+.if defined(WITH_SEED)
+LIB_DEPENDS+=	seed.0:${PORTSDIR}/devel/seed
+CONFIGURE_ARGS+=--enable-seed
+.endif
 
 .if defined(WITH_SPELLCHECK)
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-embed_ephy-embed-prefs.c
