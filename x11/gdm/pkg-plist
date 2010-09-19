@@ -9,7 +9,6 @@ etc/gdm/Xsession
 @unexec if cmp -s %D/etc/gdm/custom.conf %D/etc/gdm/custom.conf.default; then rm -f %D/etc/gdm/custom.conf; fi
 etc/gdm/custom.conf.default
 @exec [ -f %B/custom.conf ] || cp %B/%f %B/custom.conf
-etc/gdm/gdm.schemas
 etc/pam.d/gdm
 libdata/bonobo/servers/GNOME_FastUserSwitchApplet.server
 libexec/gdm-crash-logger
@@ -36,6 +35,7 @@ sbin/gdm-binary
 %%DATADIR%%/gconf.path
 %%DATADIR%%/gdb-cmd
 %%DATADIR%%/gdm-greeter-login-window.ui
+%%DATADIR%%/gdm.schemas
 %%DATADIR%%/locale.alias
 %%DATADIR%%/session-setup.entries
 share/gnome-2.0/ui/GNOME_FastUserSwitchApplet.xml
