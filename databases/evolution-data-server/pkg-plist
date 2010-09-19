@@ -158,6 +158,7 @@ include/evolution-data-server-%%VERSION%%/libedata-book/e-data-book.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-cache.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-factory.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-file-store.h
+include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-intervaltree.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-sexp.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-store.h
 include/evolution-data-server-%%VERSION%%/libedata-cal/e-cal-backend-sync.h
@@ -172,6 +173,7 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-account-list.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-account.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-categories.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-data-server-util.h
+include/evolution-data-server-%%VERSION%%/libedataserver/e-debug-log.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-flag.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-iterator.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-list-iterator.h
@@ -605,6 +607,7 @@ share/doc/libedata-cal/libedata-cal-ECalBackendLoaderFactory.html
 share/doc/libedata-cal/libedata-cal-ECalBackendStore.html
 share/doc/libedata-cal/libedata-cal-EDataCalFactory.html
 share/doc/libedata-cal/libedata-cal-EDataCalView.html
+share/doc/libedata-cal/libedata-cal-EIntervalTree.html
 share/doc/libedata-cal/libedata-cal-e-cal-backend-util.html
 share/doc/libedata-cal/libedata-cal.devhelp
 share/doc/libedata-cal/libedata-cal.devhelp2
@@ -638,6 +641,7 @@ share/doc/libedataserver/libedataserver-EProxy.html
 share/doc/libedataserver/libedataserver-ESExp.html
 share/doc/libedataserver/libedataserver-Version-Information.html
 share/doc/libedataserver/libedataserver-e-categories.html
+share/doc/libedataserver/libedataserver-e-debug-log.html
 share/doc/libedataserver/libedataserver-e-memory.html
 share/doc/libedataserver/libedataserver-e-time-utils.html
 share/doc/libedataserver/libedataserver-e-uid.html
