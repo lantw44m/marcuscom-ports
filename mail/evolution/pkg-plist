@@ -73,7 +73,6 @@ include/evolution-%%VERSION%%/calendar/gui/misc.h
 include/evolution-%%VERSION%%/calendar/gui/tag-calendar.h
 include/evolution-%%VERSION%%/calendar/gui/weekday-picker.h
 include/evolution-%%VERSION%%/composer/e-composer-actions.h
-include/evolution-%%VERSION%%/composer/e-composer-autosave.h
 include/evolution-%%VERSION%%/composer/e-composer-common.h
 include/evolution-%%VERSION%%/composer/e-composer-from-header.h
 include/evolution-%%VERSION%%/composer/e-composer-header-table.h
@@ -533,6 +532,9 @@ lib/evolution/%%VERSION%%/modules/libevolution-module-addressbook.so
 lib/evolution/%%VERSION%%/modules/libevolution-module-calendar.a
 lib/evolution/%%VERSION%%/modules/libevolution-module-calendar.la
 lib/evolution/%%VERSION%%/modules/libevolution-module-calendar.so
+lib/evolution/%%VERSION%%/modules/libevolution-module-composer-autosave.a
+lib/evolution/%%VERSION%%/modules/libevolution-module-composer-autosave.la
+lib/evolution/%%VERSION%%/modules/libevolution-module-composer-autosave.so
 lib/evolution/%%VERSION%%/modules/libevolution-module-mail.a
 lib/evolution/%%VERSION%%/modules/libevolution-module-mail.la
 lib/evolution/%%VERSION%%/modules/libevolution-module-mail.so
