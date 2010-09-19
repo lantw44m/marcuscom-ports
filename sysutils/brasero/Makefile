@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.77 2010/08/31 16:48:06 avl Exp $
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.78 2010/09/05 06:27:12 marcus Exp $
 
 PORTNAME=	brasero
-PORTVERSION=	2.31.91
-PORTREVISION=	1
+PORTVERSION=	2.31.92
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -43,6 +42,8 @@ GLIB_SCHEMAS=	org.gnome.brasero.gschema.xml
 
 OPTIONS=	NAUTILUS "Enable Nautilus extension" on \
 		LIBBURNIA "Enable libburnia plug-ins" off
+
+PLIST_SUB=	FULL_VERSION=${PORTVERSION}
 
 .include <bsd.port.pre.mk>
 
