@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.162 2010/08/17 10:00:04 kwm Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.163 2010/09/04 15:57:15 kwm Exp $
 #
 
 PORTNAME=	evolution-exchange
-PORTVERSION=	2.31.91
+PORTVERSION=	2.31.92
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
