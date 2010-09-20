@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.7 2010/08/17 19:49:34 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.8 2010/09/11 13:54:07 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -23,6 +23,8 @@ DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
+
+BROKEN=		Needs GApplication API which is only available in Glib 2.27.0 and higher
 
 LICENSE=        LGPL20
 LICENSE_FILE=   ${WRKSRC}/COPYING
