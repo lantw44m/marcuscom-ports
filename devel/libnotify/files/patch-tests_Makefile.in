@@ -1,0 +1,56 @@
+--- tests/Makefile.in.orig	2010-09-20 18:54:10.000000000 +1000
++++ tests/Makefile.in	2010-09-20 18:54:43.000000000 +1000
+@@ -40,8 +40,7 @@
+ 	test-basic$(EXEEXT) test-error$(EXEEXT) test-markup$(EXEEXT) \
+ 	test-rtl$(EXEEXT) test-size-changes$(EXEEXT) \
+ 	test-urgency$(EXEEXT) test-xy$(EXEEXT) \
+-	test-xy-actions$(EXEEXT) test-xy-stress$(EXEEXT) \
+-	test-gtk3$(EXEEXT)
++	test-xy-actions$(EXEEXT) test-xy-stress$(EXEEXT)
+ subdir = tests
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -138,7 +137,7 @@
+ am__v_GEN_ = $(am__v_GEN_$(AM_DEFAULT_VERBOSITY))
+ am__v_GEN_0 = @echo "  GEN   " $@;
+ SOURCES = $(test_basic_SOURCES) $(test_default_action_SOURCES) \
+-	$(test_error_SOURCES) $(test_gtk3_SOURCES) \
++	$(test_error_SOURCES) \
+ 	$(test_image_SOURCES) $(test_markup_SOURCES) \
+ 	$(test_multi_actions_SOURCES) $(test_replace_SOURCES) \
+ 	$(test_replace_widget_SOURCES) $(test_rtl_SOURCES) \
+@@ -146,7 +145,7 @@
+ 	$(test_urgency_SOURCES) $(test_xy_SOURCES) \
+ 	$(test_xy_actions_SOURCES) $(test_xy_stress_SOURCES)
+ DIST_SOURCES = $(test_basic_SOURCES) $(test_default_action_SOURCES) \
+-	$(test_error_SOURCES) $(test_gtk3_SOURCES) \
++	$(test_error_SOURCES) \
+ 	$(test_image_SOURCES) $(test_markup_SOURCES) \
+ 	$(test_multi_actions_SOURCES) $(test_replace_SOURCES) \
+ 	$(test_replace_widget_SOURCES) $(test_rtl_SOURCES) \
+@@ -325,7 +324,6 @@
+ test_gtk3_LDADD = $(top_builddir)/libnotify/libnotify.la $(GTK3_LIBS)
+ EXTRA_DIST = applet-critical.png
+ INCLUDES = $(PACKAGE_CFLAGS)	\
+-	$(GTK3_CFLAGS)		\
+ 	-I$(top_srcdir)
+ 
+ all: all-am
+@@ -380,9 +378,6 @@
+ test-error$(EXEEXT): $(test_error_OBJECTS) $(test_error_DEPENDENCIES) 
+ 	@rm -f test-error$(EXEEXT)
+ 	$(AM_V_CCLD)$(LINK) $(test_error_OBJECTS) $(test_error_LDADD) $(LIBS)
+-test-gtk3$(EXEEXT): $(test_gtk3_OBJECTS) $(test_gtk3_DEPENDENCIES) 
+-	@rm -f test-gtk3$(EXEEXT)
+-	$(AM_V_CCLD)$(LINK) $(test_gtk3_OBJECTS) $(test_gtk3_LDADD) $(LIBS)
+ test-image$(EXEEXT): $(test_image_OBJECTS) $(test_image_DEPENDENCIES) 
+ 	@rm -f test-image$(EXEEXT)
+ 	$(AM_V_CCLD)$(LINK) $(test_image_OBJECTS) $(test_image_LDADD) $(LIBS)
+@@ -429,7 +424,6 @@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test-basic.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test-default-action.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test-error.Po@am__quote@
+-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test-gtk3.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test-image.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test-markup.Po@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/test-multi-actions.Po@am__quote@
