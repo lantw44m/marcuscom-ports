@@ -1,6 +1,6 @@
---- gir/Makefile.in.orig	2010-09-11 12:46:28.000000000 +0000
-+++ gir/Makefile.in	2010-09-11 12:46:53.000000000 +0000
-@@ -393,13 +393,12 @@ GLib_2_0_gir_SCANNERFLAGS = \
+--- gir/Makefile.in.orig	2010-09-18 21:40:00.000000000 +0000
++++ gir/Makefile.in	2010-09-18 21:40:00.000000000 +0000
+@@ -393,13 +393,12 @@
  GLib_2_0_gir_PACKAGES = glib-2.0
  GLib_2_0_gir_CFLAGS = \
              -I$(GLIB_INCLUDEDIR) \
