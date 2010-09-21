@@ -3,11 +3,10 @@
 # Whom:			Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.6 2010/09/11 14:01:51 kwm Exp $
+#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.7 2010/09/12 10:58:54 avl Exp $
 
 PORTNAME?=	gdk-pixbuf
-PORTVERSION=	2.21.7
-PORTREVISION=	2
+PORTVERSION=	2.22.0
 CATEGORIES?=	graphics
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gdk-pixbuf/${PORTVERSION:R}
