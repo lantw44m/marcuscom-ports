@@ -47,15 +47,17 @@ share/locale/vi/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_CN/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_HK/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_TW/LC_MESSAGES/at-spi2-atk.mo
-@dirrm share/locale/zh_HK/LC_MESSAGES
-@dirrm share/locale/zh_HK
-@dirrm share/locale/sr@latin/LC_MESSAGES
-@dirrm share/locale/sr@latin
-@dirrm share/locale/en@shaw/LC_MESSAGES
-@dirrm share/locale/en@shaw
-@dirrm share/locale/ast/LC_MESSAGES
-@dirrm share/locale/ast
 @dirrm lib/gtk-2.0/modules/at-spi-dbus/modules
 @dirrm lib/gtk-2.0/modules/at-spi-dbus
 @dirrm lib/gtk-3.0/modules/at-spi-dbus/modules
 @dirrm lib/gtk-3.0/modules/at-spi-dbus
+@dirrmtry lib/gtk-3.0/modules
+@dirrmtry lib/gtk-3.0
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/en@shaw/LC_MESSAGES
+@dirrmtry share/locale/en@shaw
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
