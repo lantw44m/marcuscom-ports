@@ -257,6 +257,7 @@ share/gnome/help/empathy/C/irc-nick-password.page
 share/gnome/help/empathy/C/irc-send-file.page
 share/gnome/help/empathy/C/irc-start-conversation.page
 share/gnome/help/empathy/C/license.page
+share/gnome/help/empathy/C/link-contacts.page
 share/gnome/help/empathy/C/prev-conv.page
 share/gnome/help/empathy/C/prob-conn-acctdisabled.page
 share/gnome/help/empathy/C/prob-conn-auth.page
@@ -312,6 +313,7 @@ share/gnome/help/empathy/ca/irc-nick-password.page
 share/gnome/help/empathy/ca/irc-send-file.page
 share/gnome/help/empathy/ca/irc-start-conversation.page
 share/gnome/help/empathy/ca/license.page
+share/gnome/help/empathy/ca/link-contacts.page
 share/gnome/help/empathy/ca/prev-conv.page
 share/gnome/help/empathy/ca/prob-conn-acctdisabled.page
 share/gnome/help/empathy/ca/prob-conn-auth.page
@@ -367,6 +369,7 @@ share/gnome/help/empathy/cs/irc-nick-password.page
 share/gnome/help/empathy/cs/irc-send-file.page
 share/gnome/help/empathy/cs/irc-start-conversation.page
 share/gnome/help/empathy/cs/license.page
+share/gnome/help/empathy/cs/link-contacts.page
 share/gnome/help/empathy/cs/prev-conv.page
 share/gnome/help/empathy/cs/prob-conn-acctdisabled.page
 share/gnome/help/empathy/cs/prob-conn-auth.page
@@ -422,6 +425,7 @@ share/gnome/help/empathy/de/irc-nick-password.page
 share/gnome/help/empathy/de/irc-send-file.page
 share/gnome/help/empathy/de/irc-start-conversation.page
 share/gnome/help/empathy/de/license.page
+share/gnome/help/empathy/de/link-contacts.page
 share/gnome/help/empathy/de/prev-conv.page
 share/gnome/help/empathy/de/prob-conn-acctdisabled.page
 share/gnome/help/empathy/de/prob-conn-auth.page
@@ -477,6 +481,7 @@ share/gnome/help/empathy/el/irc-nick-password.page
 share/gnome/help/empathy/el/irc-send-file.page
 share/gnome/help/empathy/el/irc-start-conversation.page
 share/gnome/help/empathy/el/license.page
+share/gnome/help/empathy/el/link-contacts.page
 share/gnome/help/empathy/el/prev-conv.page
 share/gnome/help/empathy/el/prob-conn-acctdisabled.page
 share/gnome/help/empathy/el/prob-conn-auth.page
@@ -532,6 +537,7 @@ share/gnome/help/empathy/en_GB/irc-nick-password.page
 share/gnome/help/empathy/en_GB/irc-send-file.page
 share/gnome/help/empathy/en_GB/irc-start-conversation.page
 share/gnome/help/empathy/en_GB/license.page
+share/gnome/help/empathy/en_GB/link-contacts.page
 share/gnome/help/empathy/en_GB/prev-conv.page
 share/gnome/help/empathy/en_GB/prob-conn-acctdisabled.page
 share/gnome/help/empathy/en_GB/prob-conn-auth.page
@@ -587,6 +593,7 @@ share/gnome/help/empathy/es/irc-nick-password.page
 share/gnome/help/empathy/es/irc-send-file.page
 share/gnome/help/empathy/es/irc-start-conversation.page
 share/gnome/help/empathy/es/license.page
+share/gnome/help/empathy/es/link-contacts.page
 share/gnome/help/empathy/es/prev-conv.page
 share/gnome/help/empathy/es/prob-conn-acctdisabled.page
 share/gnome/help/empathy/es/prob-conn-auth.page
@@ -642,6 +649,7 @@ share/gnome/help/empathy/fi/irc-nick-password.page
 share/gnome/help/empathy/fi/irc-send-file.page
 share/gnome/help/empathy/fi/irc-start-conversation.page
 share/gnome/help/empathy/fi/license.page
+share/gnome/help/empathy/fi/link-contacts.page
 share/gnome/help/empathy/fi/prev-conv.page
 share/gnome/help/empathy/fi/prob-conn-acctdisabled.page
 share/gnome/help/empathy/fi/prob-conn-auth.page
@@ -697,6 +705,7 @@ share/gnome/help/empathy/fr/irc-nick-password.page
 share/gnome/help/empathy/fr/irc-send-file.page
 share/gnome/help/empathy/fr/irc-start-conversation.page
 share/gnome/help/empathy/fr/license.page
+share/gnome/help/empathy/fr/link-contacts.page
 share/gnome/help/empathy/fr/prev-conv.page
 share/gnome/help/empathy/fr/prob-conn-acctdisabled.page
 share/gnome/help/empathy/fr/prob-conn-auth.page
@@ -752,6 +761,7 @@ share/gnome/help/empathy/gl/irc-nick-password.page
 share/gnome/help/empathy/gl/irc-send-file.page
 share/gnome/help/empathy/gl/irc-start-conversation.page
 share/gnome/help/empathy/gl/license.page
+share/gnome/help/empathy/gl/link-contacts.page
 share/gnome/help/empathy/gl/prev-conv.page
 share/gnome/help/empathy/gl/prob-conn-acctdisabled.page
 share/gnome/help/empathy/gl/prob-conn-auth.page
@@ -807,6 +817,7 @@ share/gnome/help/empathy/it/irc-nick-password.page
 share/gnome/help/empathy/it/irc-send-file.page
 share/gnome/help/empathy/it/irc-start-conversation.page
 share/gnome/help/empathy/it/license.page
+share/gnome/help/empathy/it/link-contacts.page
 share/gnome/help/empathy/it/prev-conv.page
 share/gnome/help/empathy/it/prob-conn-acctdisabled.page
 share/gnome/help/empathy/it/prob-conn-auth.page
@@ -862,6 +873,7 @@ share/gnome/help/empathy/ru/irc-nick-password.page
 share/gnome/help/empathy/ru/irc-send-file.page
 share/gnome/help/empathy/ru/irc-start-conversation.page
 share/gnome/help/empathy/ru/license.page
+share/gnome/help/empathy/ru/link-contacts.page
 share/gnome/help/empathy/ru/prev-conv.page
 share/gnome/help/empathy/ru/prob-conn-acctdisabled.page
 share/gnome/help/empathy/ru/prob-conn-auth.page
@@ -917,6 +929,7 @@ share/gnome/help/empathy/sv/irc-nick-password.page
 share/gnome/help/empathy/sv/irc-send-file.page
 share/gnome/help/empathy/sv/irc-start-conversation.page
 share/gnome/help/empathy/sv/license.page
+share/gnome/help/empathy/sv/link-contacts.page
 share/gnome/help/empathy/sv/prev-conv.page
 share/gnome/help/empathy/sv/prob-conn-acctdisabled.page
 share/gnome/help/empathy/sv/prob-conn-auth.page
@@ -972,6 +985,7 @@ share/gnome/help/empathy/zh_CN/irc-nick-password.page
 share/gnome/help/empathy/zh_CN/irc-send-file.page
 share/gnome/help/empathy/zh_CN/irc-start-conversation.page
 share/gnome/help/empathy/zh_CN/license.page
+share/gnome/help/empathy/zh_CN/link-contacts.page
 share/gnome/help/empathy/zh_CN/prev-conv.page
 share/gnome/help/empathy/zh_CN/prob-conn-acctdisabled.page
 share/gnome/help/empathy/zh_CN/prob-conn-auth.page

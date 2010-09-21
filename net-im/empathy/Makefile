@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.70 2010/08/30 12:34:44 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.71 2010/09/04 18:08:12 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	2.31.91.1
+PORTVERSION=	2.31.92
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -20,7 +20,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		telepathy-farsight.0:${PORTSDIR}/net-im/telepathy-farsight \
 		telepathy-logger.1:${PORTSDIR}/net-im/telepathy-logger \
-		folks-telepathy.13:${PORTSDIR}/net-im/folks \
+		folks-telepathy.15:${PORTSDIR}/net-im/folks \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
 		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
@@ -77,7 +77,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-h
 .endif
 
 .if defined(WITH_WEBKIT)
-LIB_DEPENDS+=	webkitgtk-1.0.13:${PORTSDIR}/www/webkit-gtk2
+LIB_DEPENDS+=	webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2
 CONFIGURE_ARGS+=--enable-webkit
 PLIST_SUB+=	ADIUM=""
 .else
