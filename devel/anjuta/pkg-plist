@@ -858,6 +858,49 @@ share/gnome/help/anjuta-manual/fr/figures/signals.png
 share/gnome/help/anjuta-manual/fr/figures/stack.png
 share/gnome/help/anjuta-manual/fr/figures/symbol_browser.png
 share/gnome/help/anjuta-manual/fr/figures/tool-editor.png
+share/gnome/help/anjuta-manual/ja/anjuta-manual.xml
+share/gnome/help/anjuta-manual/ja/figures/add_edit_macro.png
+share/gnome/help/anjuta-manual/ja/figures/anjuta-in-action.png
+share/gnome/help/anjuta-manual/ja/figures/attach.png
+share/gnome/help/anjuta-manual/ja/figures/brk_add.png
+share/gnome/help/anjuta-manual/ja/figures/brk_dlg.png
+share/gnome/help/anjuta-manual/ja/figures/configure_dlg.png
+share/gnome/help/anjuta-manual/ja/figures/display_macro.png
+share/gnome/help/anjuta-manual/ja/figures/editor_guides.png
+share/gnome/help/anjuta-manual/ja/figures/editor_margins.png
+share/gnome/help/anjuta-manual/ja/figures/editor_markers.png
+share/gnome/help/anjuta-manual/ja/figures/file_menu.png
+share/gnome/help/anjuta-manual/ja/figures/insert_text.png
+share/gnome/help/anjuta-manual/ja/figures/keyword_macro.png
+share/gnome/help/anjuta-manual/ja/figures/local_variables.png
+share/gnome/help/anjuta-manual/ja/figures/menubar.png
+share/gnome/help/anjuta-manual/ja/figures/message_win.png
+share/gnome/help/anjuta-manual/ja/figures/new_file_wizard.png
+share/gnome/help/anjuta-manual/ja/figures/open_file.png
+share/gnome/help/anjuta-manual/ja/figures/open_file_multiple.png
+share/gnome/help/anjuta-manual/ja/figures/prefs_print.png
+share/gnome/help/anjuta-manual/ja/figures/print_dlg.png
+share/gnome/help/anjuta-manual/ja/figures/print_preview.png
+share/gnome/help/anjuta-manual/ja/figures/project-window.png
+share/gnome/help/anjuta-manual/ja/figures/project_group.png
+share/gnome/help/anjuta-manual/ja/figures/project_info.png
+share/gnome/help/anjuta-manual/ja/figures/project_target.png
+share/gnome/help/anjuta-manual/ja/figures/project_target_details.png
+share/gnome/help/anjuta-manual/ja/figures/registers.png
+share/gnome/help/anjuta-manual/ja/figures/save_as_file.png
+share/gnome/help/anjuta-manual/ja/figures/search_expr.png
+share/gnome/help/anjuta-manual/ja/figures/search_expr_basic.png
+share/gnome/help/anjuta-manual/ja/figures/search_file_pattern.png
+share/gnome/help/anjuta-manual/ja/figures/search_replace.png
+share/gnome/help/anjuta-manual/ja/figures/search_setting.png
+share/gnome/help/anjuta-manual/ja/figures/search_target.png
+share/gnome/help/anjuta-manual/ja/figures/search_target_action.png
+share/gnome/help/anjuta-manual/ja/figures/search_target_in.png
+share/gnome/help/anjuta-manual/ja/figures/sharedlibs.png
+share/gnome/help/anjuta-manual/ja/figures/signals.png
+share/gnome/help/anjuta-manual/ja/figures/stack.png
+share/gnome/help/anjuta-manual/ja/figures/symbol_browser.png
+share/gnome/help/anjuta-manual/ja/figures/tool-editor.png
 share/gnome/help/anjuta-manual/oc/anjuta-manual.xml
 share/gnome/help/anjuta-manual/oc/figures/add_edit_macro.png
 share/gnome/help/anjuta-manual/oc/figures/anjuta-in-action.png
@@ -1159,6 +1202,7 @@ share/omf/anjuta-manual/anjuta-manual-el.omf
 share/omf/anjuta-manual/anjuta-manual-es.omf
 share/omf/anjuta-manual/anjuta-manual-eu.omf
 share/omf/anjuta-manual/anjuta-manual-fr.omf
+share/omf/anjuta-manual/anjuta-manual-ja.omf
 share/omf/anjuta-manual/anjuta-manual-oc.omf
 share/omf/anjuta-manual/anjuta-manual-sv.omf
 share/omf/anjuta-manual/anjuta-manual-th.omf
@@ -1356,6 +1400,8 @@ share/pixmaps/anjuta/vcs-updated.png
 @dirrm share/gnome/help/anjuta-manual/sv
 @dirrm share/gnome/help/anjuta-manual/oc/figures
 @dirrm share/gnome/help/anjuta-manual/oc
+@dirrm share/gnome/help/anjuta-manual/ja/figures
+@dirrm share/gnome/help/anjuta-manual/ja
 @dirrm share/gnome/help/anjuta-manual/fr/figures
 @dirrm share/gnome/help/anjuta-manual/fr
 @dirrm share/gnome/help/anjuta-manual/eu/figures
