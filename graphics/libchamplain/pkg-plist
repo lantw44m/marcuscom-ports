@@ -120,8 +120,6 @@ share/vala/vapi/champlain-0.8.deps
 share/vala/vapi/champlain-0.8.vapi
 share/vala/vapi/champlain-gtk-0.8.deps
 share/vala/vapi/champlain-gtk-0.8.vapi
-@dirrmtry share/vala/vapi
-@dirrmtry share/vala
 @dirrm share/gtk-doc/html/libchamplain
 @dirrm share/gtk-doc/html/libchamplain-gtk
 @dirrmtry share/gtk-doc/html
