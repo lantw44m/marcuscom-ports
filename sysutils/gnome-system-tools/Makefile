@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-tools/Makefile,v 1.99 2010/05/29 18:35:07 kwm Exp $
+#   $MCom: ports/sysutils/gnome-system-tools/Makefile,v 1.100 2010/08/31 17:01:58 kwm Exp $
 #
 
 PORTNAME=	gnome-system-tools
-PORTVERSION=	2.31.91
+PORTVERSION=	2.31.92
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
