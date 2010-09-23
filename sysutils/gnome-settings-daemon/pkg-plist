@@ -198,6 +198,8 @@ share/polkit-1/actions/org.gnome.settingsdaemon.datetimemechanism.policy
 @dirrm lib/gnome-settings-daemon-2.0
 @dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
 @dirrm include/gnome-settings-daemon-2.0
+@dirrmtry etc/gnome-settings-daemon/xrandr
+@dirrmtry etc/gnome-settings-daemon
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
