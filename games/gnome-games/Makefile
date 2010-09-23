@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.227 2010/08/30 13:11:19 kwm Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.228 2010/09/04 09:57:16 kwm Exp $
 #
 
 PORTNAME=	gnome-games
@@ -59,8 +59,10 @@ LIB_DEPENDS+=	avahi-client:${PORTSDIR}/net/avahi-app
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' \
-	    	${WRKSRC}/gnome-sudoku/src/lib/defaults.py.in \
+		${WRKSRC}/gnome-sudoku/src/lib/defaults.py.in \
 		${WRKSRC}/glchess/src/lib/defaults.py.in
+	@${REINPLACE_CMD} -e 's|strip-prefix=games|strip-prefix=Games|' \
+		${WRKSRC}/libgames-support/Makefile.in
 
 post-install:
 	${MKDIR} ${PREFIX}/share/ggz/gnome-games
