@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.179 2010/08/18 08:13:55 kwm Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.180 2010/09/19 11:31:00 kwm Exp $
 #
 
 PORTNAME=	gdm
@@ -65,7 +65,7 @@ OPTIONS=	IPV6 "Enable IPv6 support" off \
 .if defined(WITHOUT_KEYRING)
 SUB_LIST+=	PAM_KEYRING=\#
 .else
-RUN_DEPENDS+=	${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/libgnome-keyring
+LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 SUB_LIST+=	PAM_KEYRING=
 .endif
 
