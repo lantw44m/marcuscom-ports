@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.27 2010/08/18 09:32:04 kwm Exp $
+#    $MCom: ports/deskutils/nautilus-sendto/Makefile,v 1.28 2010/08/30 12:41:36 kwm Exp $
 
 PORTNAME=	nautilus-sendto
-PORTVERSION=	2.31.7
+PORTVERSION=	2.31.90
 CATEGORIES=	deskutils
 MASTER_SITES=	GNOME
 
@@ -26,13 +26,11 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-plugins="${SENDTO_PLUGINS}"
 
-OPTIONS=	PIDGIN	"Build pidgin sendto plugin" off
+OPTIONS=	PIDGIN	"Build pidgin sendto plugin" off \
+		UPNP	"Build upnp sendto plugin" off
 
 # check configure script for allowed_plugins="..." for new plugins
-SENDTO_PLUGINS=	bluetooth evolution gajim nautilus-burn removable-devices
-
-# Not these plugins:
-# empathy (moved to empathy port) upnp
+SENDTO_PLUGINS=	evolution gajim nautilus-burn removable-devices
 
 .include <bsd.port.pre.mk>
 
@@ -43,6 +41,14 @@ RUN_DEPENDS+=	pidgin:${PORTSDIR}/net-im/pidgin
 PLIST_SUB+=	PIDGIN=""
 .else
 PLIST_SUB+=	PIDGIN="@comment "
+.endif
+
+.if defined(WITH_UPNP)
+SENDTO_PLUGINS:=${SENDTO_PLUGINS} upnp
+LIB_DEPENDS+=	gupnp-1.0:${PORTSDIR}/net/gupnp
+PLIST_SUB+=	UPNP=""
+.else
+PLIST_SUB+=	UPNP="@comment "
 .endif
 
 .include <bsd.port.post.mk>

@@ -1,7 +1,5 @@
 bin/nautilus-sendto
 include/nautilus-sendto/nautilus-sendto-plugin.h
-lib/nautilus-sendto/plugins/libnstbluetooth.la
-lib/nautilus-sendto/plugins/libnstbluetooth.so
 lib/nautilus-sendto/plugins/libnstburn.la
 lib/nautilus-sendto/plugins/libnstburn.so
 lib/nautilus-sendto/plugins/libnstevolution.la
@@ -12,10 +10,13 @@ lib/nautilus-sendto/plugins/libnstgajim.so
 %%PIDGIN%%lib/nautilus-sendto/plugins/libnstpidgin.so
 lib/nautilus-sendto/plugins/libnstremovable_devices.la
 lib/nautilus-sendto/plugins/libnstremovable_devices.so
+%%UPNP%%lib/nautilus-sendto/plugins/libnstupnp.la
+%%UPNP%%lib/nautilus-sendto/plugins/libnstupnp.so
 lib/nautilus/extensions-2.0/libnautilus-sendto.la
 lib/nautilus/extensions-2.0/libnautilus-sendto.so
 libdata/pkgconfig/nautilus-sendto.pc
 share/GConf/gsettings/nautilus-sendto-convert
+%%DOCSDIR%%/annotation-glossary.html
 %%DOCSDIR%%/api-index-full.html
 %%DOCSDIR%%/ch01.html
 %%DOCSDIR%%/home.png
