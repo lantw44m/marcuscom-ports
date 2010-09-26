@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.113 2010/08/17 08:02:38 kwm Exp $
+#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.114 2010/08/30 12:15:44 kwm Exp $
 #
 
 PORTNAME=	vte
-PORTVERSION=	0.25.91
+PORTVERSION=	0.26.0
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
@@ -30,6 +30,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 #		BSD_PTHREAD_LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS?=--disable-python \
+		--disable-Bsymbolic \
 		--disable-freetypetest
 
 .if !defined(MASTERDIR)
