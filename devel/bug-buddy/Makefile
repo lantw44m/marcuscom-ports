@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/bug-buddy/Makefile,v 1.83 2010/06/08 09:06:06 kwm Exp $
+#   $MCom: ports/devel/bug-buddy/Makefile,v 1.84 2010/09/20 20:19:38 kwm Exp $
 #
 
 PORTNAME=	bug-buddy
-PORTVERSION=	2.31.92
+PORTVERSION=	2.32.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
