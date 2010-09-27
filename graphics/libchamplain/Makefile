@@ -3,12 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libchamplain/Makefile,v 1.21 2010/09/20 18:38:36 kwm Exp $
+#   $MCom: ports/graphics/libchamplain/Makefile,v 1.22 2010/09/21 08:14:18 avl Exp $
 #
 
 PORTNAME=	libchamplain
-PORTVERSION=	0.7.2
-PORTREVISION=	1
+PORTVERSION=	0.8.0
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -27,9 +26,6 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-
-# clutter-sharp need to get released.
-CONFIGURE_ARGS+=--enable-managed=no
 
 PLIST_SUB=	VERSION=0.8
 
