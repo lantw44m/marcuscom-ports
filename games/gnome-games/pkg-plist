@@ -2078,6 +2078,7 @@ share/gnome/help/quadrapassel/eu/quadrapassel.xml
 share/gnome/help/quadrapassel/fi/quadrapassel.xml
 share/gnome/help/quadrapassel/fr/quadrapassel.xml
 share/gnome/help/quadrapassel/it/quadrapassel.xml
+share/gnome/help/quadrapassel/ja/quadrapassel.xml
 share/gnome/help/quadrapassel/oc/quadrapassel.xml
 share/gnome/help/quadrapassel/sr/quadrapassel.xml
 share/gnome/help/quadrapassel/sr@latin/quadrapassel.xml
@@ -2326,6 +2327,7 @@ share/locale/is/LC_MESSAGES/gnome-games.mo
 share/locale/it/LC_MESSAGES/gnome-games.mo
 share/locale/ja/LC_MESSAGES/gnome-games.mo
 share/locale/ka/LC_MESSAGES/gnome-games.mo
+share/locale/kk/LC_MESSAGES/gnome-games.mo
 share/locale/kn/LC_MESSAGES/gnome-games.mo
 share/locale/ko/LC_MESSAGES/gnome-games.mo
 share/locale/ku/LC_MESSAGES/gnome-games.mo
@@ -2573,6 +2575,7 @@ share/omf/quadrapassel/quadrapassel-eu.omf
 share/omf/quadrapassel/quadrapassel-fi.omf
 share/omf/quadrapassel/quadrapassel-fr.omf
 share/omf/quadrapassel/quadrapassel-it.omf
+share/omf/quadrapassel/quadrapassel-ja.omf
 share/omf/quadrapassel/quadrapassel-oc.omf
 share/omf/quadrapassel/quadrapassel-sr.omf
 share/omf/quadrapassel/quadrapassel-sr@latin.omf
@@ -2644,6 +2647,7 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm share/gnome/help/quadrapassel/sr@latin
 @dirrm share/gnome/help/quadrapassel/sr
 @dirrm share/gnome/help/quadrapassel/oc
+@dirrm share/gnome/help/quadrapassel/ja
 @dirrm share/gnome/help/quadrapassel/it
 @dirrm share/gnome/help/quadrapassel/fr
 @dirrm share/gnome/help/quadrapassel/fi
@@ -3186,6 +3190,8 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/kk/LC_MESSAGES
+@dirrmtry share/locale/kk
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
 @dirrmtry share/locale/en@shaw
 @dirrmtry share/locale/dz/LC_MESSAGES
