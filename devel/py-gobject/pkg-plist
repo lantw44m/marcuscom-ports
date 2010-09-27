@@ -23,6 +23,9 @@ lib/libpyglib-2.0-python%%PYTHON_VER%%.so.0
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gi/overrides/GIMarshallingTests.py
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gi/overrides/GIMarshallingTests.pyc
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gi/overrides/GIMarshallingTests.pyo
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gi/overrides/GLib.py
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gi/overrides/GLib.pyc
+%%PYTHON_SITELIBDIR%%/gtk-2.0/gi/overrides/GLib.pyo
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gi/overrides/Gdk.py
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gi/overrides/Gdk.pyc
 %%PYTHON_SITELIBDIR%%/gtk-2.0/gi/overrides/Gdk.pyo
