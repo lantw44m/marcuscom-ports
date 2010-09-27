@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.120 2010/08/30 21:41:12 kwm Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.121 2010/09/19 08:05:39 kwm Exp $
 #
 
 PORTNAME=	gconf2
-PORTVERSION=	2.31.91
-PORTREVISION?=	1
+PORTVERSION=	2.32.0
+PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/GConf/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -57,7 +57,7 @@ PLIST_SUB+=	LDAP="@comment "
 .endif
 
 post-install:
-	-${PREFIX}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
+	-${LOCALBASE}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
 
 .include <bsd.port.post.mk>
 
