@@ -61,6 +61,7 @@ share/locale/is/LC_MESSAGES/libwnck.mo
 share/locale/it/LC_MESSAGES/libwnck.mo
 share/locale/ja/LC_MESSAGES/libwnck.mo
 share/locale/ka/LC_MESSAGES/libwnck.mo
+share/locale/kk/LC_MESSAGES/libwnck.mo
 share/locale/kn/LC_MESSAGES/libwnck.mo
 share/locale/ko/LC_MESSAGES/libwnck.mo
 share/locale/ku/LC_MESSAGES/libwnck.mo
@@ -133,6 +134,8 @@ share/gir-1.0/Wnck-1.0.gir
 @dirrmtry share/locale/ky
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/kk/LC_MESSAGES
+@dirrmtry share/locale/kk
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
 @dirrmtry share/locale/en@shaw
 @dirrmtry share/locale/dz/LC_MESSAGES
