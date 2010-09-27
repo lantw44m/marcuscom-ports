@@ -315,6 +315,34 @@ share/gnome/help/gcalctool/gl/scientific.page
 share/gnome/help/gcalctool/gl/superscript.page
 share/gnome/help/gcalctool/gl/trigonometry.page
 share/gnome/help/gcalctool/gl/variables.page
+share/gnome/help/gcalctool/hu/absolute.page
+share/gnome/help/gcalctool/hu/base.page
+share/gnome/help/gcalctool/hu/boolean.page
+share/gnome/help/gcalctool/hu/complex.page
+share/gnome/help/gcalctool/hu/conv-base.page
+share/gnome/help/gcalctool/hu/conv-character.page
+share/gnome/help/gcalctool/hu/conv-currency.page
+share/gnome/help/gcalctool/hu/conv-length.page
+share/gnome/help/gcalctool/hu/conv-time.page
+share/gnome/help/gcalctool/hu/conv-weight.page
+share/gnome/help/gcalctool/hu/equation.page
+share/gnome/help/gcalctool/hu/factorial.page
+share/gnome/help/gcalctool/hu/factorize.page
+share/gnome/help/gcalctool/hu/financial.page
+share/gnome/help/gcalctool/hu/functions.page
+share/gnome/help/gcalctool/hu/index.page
+share/gnome/help/gcalctool/hu/keyboard.page
+share/gnome/help/gcalctool/hu/legal.xml
+share/gnome/help/gcalctool/hu/logarithm.page
+share/gnome/help/gcalctool/hu/modulus.page
+share/gnome/help/gcalctool/hu/mouse.page
+share/gnome/help/gcalctool/hu/number-display.page
+share/gnome/help/gcalctool/hu/percentage.page
+share/gnome/help/gcalctool/hu/power.page
+share/gnome/help/gcalctool/hu/scientific.page
+share/gnome/help/gcalctool/hu/superscript.page
+share/gnome/help/gcalctool/hu/trigonometry.page
+share/gnome/help/gcalctool/hu/variables.page
 share/gnome/help/gcalctool/it/absolute.page
 share/gnome/help/gcalctool/it/base.page
 share/gnome/help/gcalctool/it/boolean.page
@@ -633,10 +661,12 @@ share/locale/he/LC_MESSAGES/gcalctool.mo
 share/locale/hi/LC_MESSAGES/gcalctool.mo
 share/locale/hr/LC_MESSAGES/gcalctool.mo
 share/locale/hu/LC_MESSAGES/gcalctool.mo
+share/locale/hy/LC_MESSAGES/gcalctool.mo
 share/locale/id/LC_MESSAGES/gcalctool.mo
 share/locale/it/LC_MESSAGES/gcalctool.mo
 share/locale/ja/LC_MESSAGES/gcalctool.mo
 share/locale/ka/LC_MESSAGES/gcalctool.mo
+share/locale/kk/LC_MESSAGES/gcalctool.mo
 share/locale/kn/LC_MESSAGES/gcalctool.mo
 share/locale/ko/LC_MESSAGES/gcalctool.mo
 share/locale/ku/LC_MESSAGES/gcalctool.mo
@@ -690,6 +720,7 @@ share/locale/zh_TW/LC_MESSAGES/gcalctool.mo
 @dirrm share/gnome/help/gcalctool/ko
 @dirrm share/gnome/help/gcalctool/ja
 @dirrm share/gnome/help/gcalctool/it
+@dirrm share/gnome/help/gcalctool/hu
 @dirrm share/gnome/help/gcalctool/gl
 @dirrm share/gnome/help/gcalctool/fr
 @dirrm share/gnome/help/gcalctool/fi
@@ -726,6 +757,10 @@ share/locale/zh_TW/LC_MESSAGES/gcalctool.mo
 @dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/kk/LC_MESSAGES
+@dirrmtry share/locale/kk
+@dirrmtry share/locale/hy/LC_MESSAGES
+@dirrmtry share/locale/hy
 @dirrmtry share/locale/en_US/LC_MESSAGES
 @dirrmtry share/locale/en_US
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
