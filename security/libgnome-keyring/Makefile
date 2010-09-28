@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/security/libgnome-keyring/Makefile,v 1.5 2010/09/04 10:02:23 kwm Exp $
+#    $MCom: ports/security/libgnome-keyring/Makefile,v 1.6 2010/09/19 10:45:05 kwm Exp $
 
 PORTNAME=	libgnome-keyring
-PORTVERSION=	2.31.92
+PORTVERSION=	2.32.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
