@@ -98,6 +98,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/mouse_review.py
 %%PYTHON_SITELIBDIR%%/orca/mouse_review.pyc
 %%PYTHON_SITELIBDIR%%/orca/mouse_review.pyo
+%%PYTHON_SITELIBDIR%%/orca/notification_messages.py
+%%PYTHON_SITELIBDIR%%/orca/notification_messages.pyc
+%%PYTHON_SITELIBDIR%%/orca/notification_messages.pyo
 %%PYTHON_SITELIBDIR%%/orca/openttsfactory.py
 %%PYTHON_SITELIBDIR%%/orca/openttsfactory.pyc
 %%PYTHON_SITELIBDIR%%/orca/openttsfactory.pyo
