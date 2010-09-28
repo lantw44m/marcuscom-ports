@@ -3,11 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.181 2010/09/23 20:19:21 kwm Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.182 2010/09/27 18:09:33 kwm Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.32.0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -44,7 +45,8 @@ USE_GNOME=	gnomehack intlhack gnomehier gconf2 librsvg2 \
 		gnomedocutils gnomeprefix gnomepanel
 GCONF_SCHEMAS=	gdm-simple-greeter.schemas
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home
+CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home \
+		--with-at-spi-registryd-directory=${LOCALBASE}/libexec
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -DHAS_SA_LEN" \
 		LDFLAGS="-L${LOCALBASE}/lib" \
 		LIBS="-lm" \
