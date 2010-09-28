@@ -2,7 +2,7 @@
 # Date created:		2009-09-27
 # Whom:			Charlie & <root@ws.ipfw.ru>
 #
-# $FreeBSD: ports/net/ekiga3/Makefile,v 1.6 2010/05/31 02:00:16 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	ekiga3

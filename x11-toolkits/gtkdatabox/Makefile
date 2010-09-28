@@ -3,7 +3,7 @@
 # Date created:			Mar 20, 2002
 # Whom:				ijliao
 #
-# $FreeBSD: ports/x11-toolkits/gtkdatabox/Makefile,v 1.23 2010/05/23 20:45:06 makc Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtkdatabox

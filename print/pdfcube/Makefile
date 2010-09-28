@@ -2,7 +2,7 @@
 # Date created:		Apr. 20, 2007
 # Whom:			Li-Wen Hsu <lwhsu@FreeBSD.org>
 #
-# $FreeBSD: ports/print/pdfcube/Makefile,v 1.12 2010/03/28 06:42:45 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	pdfcube

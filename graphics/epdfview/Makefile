@@ -2,7 +2,7 @@
 # Date created:				2006/06/01
 # Whom:					chinsan <chinsan.tw@gmail.com>
 #
-# $FreeBSD: ports/graphics/epdfview/Makefile,v 1.27 2010/05/31 01:59:13 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	epdfview

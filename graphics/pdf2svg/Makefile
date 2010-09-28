@@ -2,7 +2,7 @@
 # Date created:		Mar 13 2009
 # Whom:			martin.dieringer@gmx.de
 #
-# $FreeBSD: ports/graphics/pdf2svg/Makefile,v 1.4 2010/03/28 06:37:29 dinoex Exp $
+# $FreeBSD$
 
 PORTNAME=	pdf2svg
 PORTVERSION=	0.2.1

@@ -2,8 +2,8 @@
 # Date created:				07 September 2009
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/gir-repository-poppler/Makefile,v 1.1 2009/11/28 20:06:32 marcus Exp $
-#   $MCom: ports/graphics/gir-repository-poppler/Makefile,v 1.1 2009/09/16 02:05:11 avl Exp $
+# $FreeBSD$
+#   $MCom: ports/graphics/gir-repository-poppler/Makefile,v 1.3 2010/07/07 15:14:27 kwm Exp $
 #
 
 PORTREVISION=	6

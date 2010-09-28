@@ -2,7 +2,7 @@
 # Date created:			7 Mar 2008
 # Whom:					Denise H. G. <darcsis@gmail.com>
 #
-# $FreeBSD: ports/converters/pdf2djvu/Makefile,v 1.15 2010/03/28 06:32:04 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	pdf2djvu

@@ -2,7 +2,7 @@
 # Date created:                03 May 2010
 # Whom:                        Ju Pengfei <jupengfei@gmail.com>
 #
-# $FreeBSD: ports/graphics/apvlv/Makefile,v 1.1 2010/05/04 03:23:13 wen Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	apvlv

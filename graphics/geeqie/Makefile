@@ -2,7 +2,7 @@
 # Date created:				17 May 2008
 # Whom:					Martin Tournoij <carpetsmoker@rwxrwxrwx.net>
 #
-# $FreeBSD: ports/graphics/geeqie/Makefile,v 1.14 2010/08/20 08:34:49 kwm Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	geeqie

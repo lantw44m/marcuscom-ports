@@ -2,7 +2,7 @@
 # Date created:         21 Jan 2006
 # Whom:                 dirk.meyer@dinoex.sub.org
 #
-# $FreeBSD: ports/graphics/popplerkit/Makefile,v 1.14 2010/06/04 13:49:09 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	popplerkit

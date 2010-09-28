@@ -2,7 +2,7 @@
 # Date created:				26 Apr 2001
 # Whom:					Randall Hopper <aa8vb@nc.rr.com>
 #
-# $FreeBSD: ports/graphics/osg-devel/Makefile,v 1.53 2010/04/16 11:17:14 amdmi3 Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	osg

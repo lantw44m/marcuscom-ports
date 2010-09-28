@@ -2,7 +2,7 @@
 # Date created:		2008-04-14
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD: ports/graphics/py-poppler/Makefile,v 1.12 2010/03/28 06:37:43 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	poppler
