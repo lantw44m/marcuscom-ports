@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.10 2010/09/01 11:30:41 kwm Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.11 2010/09/18 12:04:38 kwm Exp $
 #
 
 PORTNAME=	libgda4
-PORTVERSION?=	4.1.11
+PORTVERSION?=	4.2.0
 PORTREVISION?=	0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
@@ -41,6 +41,10 @@ CONFIGURE_ARGS=	--without-sybase \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lintl"
 
+.if ${LIBGDA4_SLAVE}=="no"
+OPTIONS=	UI "Build UI tools" on
+.endif
+
 .include <bsd.port.pre.mk>
 
 #VERSION=	${PORTVERSION:R}
@@ -48,7 +52,16 @@ VERSION=	4.0
 PLIST_SUB=	VERSION=${VERSION}
 
 .if ${LIBGDA4_SLAVE}=="no"
-MAN1=		gda-sql-4.0.1
+.if defined(WITH_UI)
+CONFIGURE_ARGS+=--with-ui
+USE_GNOME+=	gtk20
+PLIST_SUB+=	UI=""
+.else
+CONFIGURE_ARGS+=--without-ui
+PLIST_SUB+=	UI="@comment "
+.endif
+
+MAN1=		gda-sql.1 gda-sql-4.0.1
 .else
 USE_GNOME+=	libgda4
 .endif

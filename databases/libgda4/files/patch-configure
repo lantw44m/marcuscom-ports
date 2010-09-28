@@ -1,14 +1,41 @@
---- configure.orig	2010-06-29 23:18:23.000000000 +0200
-+++ configure	2010-06-29 23:20:36.000000000 +0200
-@@ -19720,9 +19720,9 @@
-        INTROSPECTION_COMPILER=`$PKG_CONFIG --variable=g_ir_compiler gobject-introspection-1.0`
-        INTROSPECTION_GENERATE=`$PKG_CONFIG --variable=g_ir_generate gobject-introspection-1.0`
-        INTROSPECTION_GIRDIR=`$PKG_CONFIG --variable=girdir gobject-introspection-1.0`
--       INTROSPECTION_GIRDIR=${INTROSPECTION_GIRDIR/$datadir/\$(datadir)}
-+       INTROSPECTION_GIRDIR=`echo ${INTROSPECTION_GIRDIR} | sed -e "s|${datadir}|\\\$(datadir)|"`
-        INTROSPECTION_TYPELIBDIR="$($PKG_CONFIG --variable=typelibdir gobject-introspection-1.0)"
--       INTROSPECTION_TYPELIBDIR=${INTROSPECTION_TYPELIBDIR/$libdir/\$(libdir)}
-+       INTROSPECTION_TYPELIBDIR=`echo ${INTROSPECTION_TYPELIBDIR} | sed -e "s|${libdir}|\\\$(libdir)|"`
-        INTROSPECTION_CFLAGS=`$PKG_CONFIG --cflags gobject-introspection-1.0`
-        INTROSPECTION_LIBS=`$PKG_CONFIG --libs gobject-introspection-1.0`
-        INTROSPECTION_MAKEFILE=`$PKG_CONFIG --variable=datadir gobject-introspection-1.0`/gobject-introspection-1.0/Makefile.introspection
+--- configure.orig	2010-09-26 23:47:18.000000000 +0000
++++ configure	2010-09-28 00:05:04.000000000 +0000
+@@ -19504,9 +19504,9 @@
+             INTROSPECTION_COMPILER=`$PKG_CONFIG --variable=g_ir_compiler gobject-introspection-1.0`
+             INTROSPECTION_GENERATE=`$PKG_CONFIG --variable=g_ir_generate gobject-introspection-1.0`
+             INTROSPECTION_GIRDIR=`$PKG_CONFIG --variable=girdir gobject-introspection-1.0`
+-            INTROSPECTION_GIRDIR=${INTROSPECTION_GIRDIR/$datadir/\$(datadir)}
++            INTROSPECTION_GIRDIR=`echo ${INTROSPECTION_GIRDIR} | sed -e "s|${datadir}|\\\$(datadir)|"`
+             INTROSPECTION_TYPELIBDIR="$($PKG_CONFIG --variable=typelibdir gobject-introspection-1.0)"
+-            INTROSPECTION_TYPELIBDIR=${INTROSPECTION_TYPELIBDIR/$libdir/\$(libdir)}
++            INTROSPECTION_TYPELIBDIR=`echo ${INTROSPECTION_TYPELIBDIR} | sed -e "s|${libdir}|\\\$(libdir)|"`
+             INTROSPECTION_CFLAGS=`$PKG_CONFIG --cflags gobject-introspection-1.0`
+             INTROSPECTION_LIBS=`$PKG_CONFIG --libs gobject-introspection-1.0`
+             INTROSPECTION_MAKEFILE=$introspection_makefile
+@@ -21517,6 +21517,15 @@
+ 	    fi
+ 	    CFLAGS="$save_CFLAGS"
+ 	fi
++    else
++         if false; then
++  MDB_TRUE=
++  MDB_FALSE='#'
++else
++  MDB_TRUE='#'
++  MDB_FALSE=
++fi
++
+     fi
+ 
+ 
+@@ -23351,6 +23360,10 @@
+   as_fn_error "conditional \"MDB\" was never defined.
+ Usually this means the macro was only invoked conditionally." "$LINENO" 5
+ fi
++if test -z "${MDB_TRUE}" && test -z "${MDB_FALSE}"; then
++  as_fn_error $? "conditional \"MDB\" was never defined.
++Usually this means the macro was only invoked conditionally." "$LINENO" 5
++fi
+ if test -z "${LDAP_TRUE}" && test -z "${LDAP_FALSE}"; then
+   as_fn_error "conditional \"LDAP\" was never defined.
+ Usually this means the macro was only invoked conditionally." "$LINENO" 5
