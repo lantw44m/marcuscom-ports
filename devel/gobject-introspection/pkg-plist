@@ -1,3 +1,4 @@
+bin/g-ir-annotation-tool
 bin/g-ir-compiler
 bin/g-ir-generate
 bin/g-ir-scanner
@@ -44,6 +45,9 @@ lib/gobject-introspection/giscanner/__init__.pyo
 lib/gobject-introspection/giscanner/_giscanner.a
 lib/gobject-introspection/giscanner/_giscanner.la
 lib/gobject-introspection/giscanner/_giscanner.so
+lib/gobject-introspection/giscanner/annotationmain.py
+lib/gobject-introspection/giscanner/annotationmain.pyc
+lib/gobject-introspection/giscanner/annotationmain.pyo
 lib/gobject-introspection/giscanner/annotationparser.py
 lib/gobject-introspection/giscanner/annotationparser.pyc
 lib/gobject-introspection/giscanner/annotationparser.pyo

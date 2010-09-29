@@ -3,11 +3,11 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.19 2010/09/16 00:51:41 avl Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.20 2010/09/21 14:45:09 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
-PORTVERSION=	0.9.6
+PORTVERSION=	0.9.8
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -32,6 +32,7 @@ MAKE_JOBS_UNSAFE=yes
 
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--disable-tests
 
 MAN1=		g-ir-compiler.1 g-ir-generate.1 g-ir-scanner.1
 
