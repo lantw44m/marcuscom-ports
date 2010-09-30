@@ -217,6 +217,7 @@ share/gedit-2/plugins/modelines/language-mappings
 %%PYTHON%%share/gedit-2/plugins/snippets/javascript.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/lang/snippets.lang
 %%PYTHON%%share/gedit-2/plugins/snippets/latex.xml
+%%PYTHON%%share/gedit-2/plugins/snippets/mallard.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/perl.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/php.xml
 %%PYTHON%%share/gedit-2/plugins/snippets/python.xml
