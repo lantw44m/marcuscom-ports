@@ -628,7 +628,6 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrmtry share/themes/Default
 @dirrmtry share/themes
 @dirrmtry lib/gtk-2.0/modules
-@dirrmtry lib/gtk-2.0/engines
 @dirrmtry lib/gtk-2.0/%%GTK2_VERSION%%/printbackends
 @dirrmtry lib/gtk-2.0/%%GTK2_VERSION%%/modules
 @dirrmtry lib/gtk-2.0/%%GTK2_VERSION%%/loaders
