@@ -2,17 +2,16 @@
 # Date created:		2004-10-06
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD$
-#   $MCom: ports/graphics/cairo/Makefile,v 1.96 2010/07/12 15:32:41 kwm Exp $
+# $FreeBSD: ports/graphics/cairo/Makefile,v 1.47 2010/06/03 12:35:42 pav Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.93 2010/04/03 05:40:01 marcus Exp $
 #
 
 PORTNAME=	cairo
-PORTVERSION=	1.9.12
-PORTREVISION?=	1
+PORTVERSION=	1.10.0
 PORTEPOCH?=	1
 CATEGORIES=	graphics
-#MASTER_SITES=	http://cairographics.org/releases/
-MASTER_SITES=	http://cairographics.org/snapshots/
+MASTER_SITES=	http://cairographics.org/releases/
+#MASTER_SITES=	http://cairographics.org/snapshots/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Vector graphics library with cross-device output support
@@ -24,18 +23,16 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig \
 		pixman-1.9:${PORTSDIR}/x11/pixman
 
+CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" \
+		LDFLAGS="${LDFLAGS}"
 CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR} \
-		--disable-directfb \
-		--enable-pdf \
-		--enable-ps
-USE_GNOME=	gnomehack ltverhack referencehack
+		--enable-gobject
+USE_GNOME=	glib20 gnomehack ltverhack referencehack
 USE_AUTOTOOLS=	libtool:22
-USE_LDCONFIG=	${PREFIX}/lib ${PREFIX}/lib/cairo
-#USE_LDCONFIG=	yes
+USE_LDCONFIG=	yes
 
-CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS}" \
-		LDFLAGS="${PTHREAD_LIBS}" \
-		png_REQUIRES="libpng"
+CPPFLAGS+=	${PTHREAD_CFLAGS}
+LDFLAGS+=	${PTHREAD_LIBS}
 
 .if defined(WITHOUT_X11)
 CONFIGURE_ARGS+=--disable-xlib
@@ -45,14 +42,34 @@ USE_XORG+=	xrender
 PLIST_SUB+=	X11=""
 .endif
 
-OPTIONS+=	XCB "Enable XCB (X C-language Binding) Support" On
+OPTIONS+=	DIRECTFB "Enable DirectFB Support" Off \
+		GL "Enable OpenGL Support" Off \
+		XCB "Enable XCB (X C-language Binding) Support" On
 
 .include <bsd.port.pre.mk>
 
-.ifdef(WITH_XCB)
+.if defined(WITH_DIRECTFB)
+LIB_DEPENDS+=	directfb-1.4.3:${PORTSDIR}/devel/directfb
+CONFIGURE_ARGS+=	--enable-directfb
+PLIST_SUB+=	DIRECTFB=""
+.else
+CONFIGURE_ARGS+=	--disable-directfb
+PLIST_SUB+=	DIRECTFB="@comment "
+.endif
+
+.if defined(WITH_GL)
+USE_GL=		gl
+CONFIGURE_ARGS+=	--enable-gl
+PLIST_SUB+=	GL=""
+.else
+CONFIGURE_ARGS+=	--disable-gl
+PLIST_SUB+=	GL="@comment "
+.endif
+
+.if defined(WITH_XCB)
 BUILD_DEPENDS+= 	${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util
 RUN_DEPENDS+=		${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util
-CONFIGURE_ARGS+=	--enable-xcb
+CONFIGURE_ARGS+=	--enable-xcb --enable-xlib-xcb=auto
 PLIST_SUB+=		XCB=""
 .else
 CONFIGURE_ARGS+=	--disable-xcb
@@ -60,14 +77,17 @@ PLIST_SUB+=		XCB="@comment "
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-lpthread|${PTHREAD_LIBS}|' \
-		${WRKSRC}/test/Makefile.in
+	@${REINPLACE_CMD} -e '/test/s/==/=/g' \
+		-e '/LIBS/s/-lrt//' \
+		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|-lcairo|-lcairo ${PTHREAD_LIBS}|' \
 		${WRKSRC}/src/*.pc.in
-	@${REINPLACE_CMD} -e 's|src test doc|src doc|; \
-		s|@CAIRO_HAS_PNG_FUNCTIONS_TRUE@am__append_1 = test||' \
+	@${REINPLACE_CMD} -e '/@CAIRO_HAS_PNG_FUNCTIONS_TRUE@.*=/d' \
 		${WRKSRC}/Makefile.in
-	@${REINPLACE_CMD} -e 's|" == "|" = "|g' ${WRKSRC}/configure
+.if defined(WITH_GL)
+	@${REINPLACE_CMD} 's|@CAIRO_CFLAGS@|-I$$(top_srcdir)/src/glew &|' \
+		${WRKSRC}/src/Makefile.in
+.endif
 
 .include <bsd.port.post.mk>
 
