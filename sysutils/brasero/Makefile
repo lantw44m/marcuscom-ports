@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.79 2010/09/19 10:42:08 kwm Exp $
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.80 2010/09/27 21:02:58 kwm Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	2.32.0
@@ -26,7 +26,7 @@ USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_XORG=	sm
-USE_GNOME=	intlhack gnomeprefix gnomehack
+USE_GNOME=	intlhack gnomeprefix gnomehack gnomedocutils
 GNOME_DESKTOP_VERSION=2
 USE_LDCONFIG=	yes
 USE_GSTREAMER=	gconf core
