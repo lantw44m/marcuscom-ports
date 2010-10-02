@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/graphics/cairo/Makefile,v 1.47 2010/06/03 12:35:42 pav Exp $
-#   $MCom: ports/graphics/cairo/Makefile,v 1.93 2010/04/03 05:40:01 marcus Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.98 2010/09/30 08:10:21 kwm Exp $
 #
 
 PORTNAME=	cairo
@@ -26,6 +26,7 @@ LIB_DEPENDS=	freetype.9:${PORTSDIR}/print/freetype2 \
 CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" \
 		LDFLAGS="${LDFLAGS}"
 CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR} \
+		--disable-directfb \
 		--enable-gobject
 USE_GNOME=	glib20 gnomehack ltverhack referencehack
 USE_AUTOTOOLS=	libtool:22
@@ -42,20 +43,10 @@ USE_XORG+=	xrender
 PLIST_SUB+=	X11=""
 .endif
 
-OPTIONS+=	DIRECTFB "Enable DirectFB Support" Off \
-		GL "Enable OpenGL Support" Off \
+OPTIONS+=	GL "Enable OpenGL Support" Off \
 		XCB "Enable XCB (X C-language Binding) Support" On
 
 .include <bsd.port.pre.mk>
-
-.if defined(WITH_DIRECTFB)
-LIB_DEPENDS+=	directfb-1.4.3:${PORTSDIR}/devel/directfb
-CONFIGURE_ARGS+=	--enable-directfb
-PLIST_SUB+=	DIRECTFB=""
-.else
-CONFIGURE_ARGS+=	--disable-directfb
-PLIST_SUB+=	DIRECTFB="@comment "
-.endif
 
 .if defined(WITH_GL)
 USE_GL=		gl
