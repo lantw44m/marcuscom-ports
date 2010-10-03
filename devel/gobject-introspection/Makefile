@@ -3,7 +3,7 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.22 2010/09/30 19:48:27 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.23 2010/09/30 20:01:06 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
@@ -33,6 +33,9 @@ MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-tests
+
+# Force it to put the .cache in ${WRKSRC} instead of ~/.cache. ports/143260
+MAKE_ENV=	HOME=${WRKDIR}
 
 MAN1=		g-ir-compiler.1 g-ir-generate.1 g-ir-scanner.1
 
