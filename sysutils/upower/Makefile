@@ -3,12 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/upower/Makefile,v 1.15 2010/05/09 17:43:53 marcus Exp $
+#   $MCom: ports/sysutils/upower/Makefile,v 1.17 2010/06/29 21:14:03 kwm Exp $
 #
 
 PORTNAME=	upower
-PORTVERSION=	0.9.4
-PORTREVISION=	2
+PORTVERSION=	0.9.6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://upower.freedesktop.org/releases/
 
@@ -28,6 +27,7 @@ USE_AUTOTOOLS=	libtool:22
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
+		--enable-introspection=no \
 		--with-backend=freebsd \
 		--localstatedir=/var
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
