@@ -3,7 +3,7 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.63 2010/08/14 14:52:24 kwm Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.64 2010/09/24 09:04:57 kwm Exp $
 #
 
 PORTNAME=	poppler
@@ -25,6 +25,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnometarget libxml2 ltverhack
 USE_AUTOTOOLS=	libtool:22
+MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-zlib \
 		--enable-xpdf-headers \
