@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.236 2010/08/28 19:22:03 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.237 2010/09/19 15:26:46 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -38,7 +38,7 @@ WANT_GNOME=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-CONFIGURE_ARGS+=--enable-introspection \
+CONFIGURE_ARGS+=--enable-introspection --disable-silent-rules \
 		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS} ${EXTRA_CFLAGS}" \
 		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS} ${EXTRA_LIBS}"
