@@ -10,6 +10,8 @@ etc/PackageKit/CommandNotFound.conf
 etc/PackageKit/PackageKit.conf
 @exec [ -f %B/PackageKit.conf ] || cp %B/%f %B/PackageKit.conf
 etc/PackageKit/Vendor.conf
+etc/PackageKit/events/post-transaction.d/README
+etc/PackageKit/events/pre-transaction.d/README
 etc/bash_completion.d/pk-completion.bash
 etc/cron.daily/packagekit-background.cron
 etc/dbus-1/system.d/org.freedesktop.PackageKit.conf
@@ -52,6 +54,7 @@ include/PackageKit/packagekit-glib2/pk-transaction-list.h
 include/PackageKit/packagekit-glib2/pk-transaction-past.h
 include/PackageKit/packagekit-glib2/pk-update-detail.h
 include/PackageKit/packagekit-glib2/pk-version.h
+lib/girepository-1.0/PackageKitGlib-1.0.typelib
 lib/libpackagekit-glib2.a
 lib/libpackagekit-glib2.la
 lib/libpackagekit-glib2.so
@@ -271,6 +274,7 @@ share/PackageKit/website/pk-screenshots.html
 share/PackageKit/website/pk-using.html
 share/PackageKit/website/style.css
 share/dbus-1/system-services/org.freedesktop.PackageKit.service
+share/gir-1.0/PackageKitGlib-1.0.gir
 share/gtk-doc/html/PackageKit/PackageKit-egg-debug.html
 share/gtk-doc/html/PackageKit/PackageKit-pk-bitfield.html
 share/gtk-doc/html/PackageKit/PackageKit-pk-client-sync.html
@@ -435,6 +439,9 @@ share/polkit-1/actions/org.freedesktop.packagekit.policy
 @dirrmtry etc/sysconfig
 @dirrmtry etc/profile.d
 @dirrmtry etc/cron.daily
+@dirrmtry etc/PackageKit/events/post-transaction.d
+@dirrmtry etc/PackageKit/events/pre-transaction.d
+@dirrmtry etc/PackageKit/events
 @dirrmtry etc/PackageKit
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime

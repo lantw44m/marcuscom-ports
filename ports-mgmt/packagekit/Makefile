@@ -3,10 +3,10 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.23 2010/09/05 05:14:22 marcus Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.24 2010/10/04 20:26:29 kwm Exp $
 
 PORTNAME=	PackageKit
-PORTVERSION=	0.6.8
+PORTVERSION=	0.6.9
 PORTREVISION?=	0
 CATEGORIES=	ports-mgmt sysutils
 MASTER_SITES=	http://www.packagekit.org/releases/
@@ -37,7 +37,6 @@ LDFLAGS=	-L${LOCALBASE}/lib -lexecinfo
 CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" \
 		LDFLAGS="${LDFLAGS}"
 CONFIGURE_ARGS+=--with-security-framework=polkit \
-		--enable-introspection=no \
 		--localstatedir=/var \
 		--disable-gtk-doc \
 		--disable-managed \
