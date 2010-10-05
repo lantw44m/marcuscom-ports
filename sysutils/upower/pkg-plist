@@ -12,6 +12,7 @@ include/libupower-glib/up-version.h
 include/libupower-glib/up-wakeup-item.h
 include/libupower-glib/up-wakeups.h
 include/libupower-glib/upower.h
+lib/girepository-1.0/UPowerGlib-1.0.typelib
 lib/libupower-glib.a
 lib/libupower-glib.la
 lib/libupower-glib.so
@@ -24,6 +25,7 @@ share/dbus-1/interfaces/org.freedesktop.UPower.QoS.xml
 share/dbus-1/interfaces/org.freedesktop.UPower.Wakeups.xml
 share/dbus-1/interfaces/org.freedesktop.UPower.xml
 share/dbus-1/system-services/org.freedesktop.UPower.service
+share/gir-1.0/UPowerGlib-1.0.gir
 share/locale/it/LC_MESSAGES/upower.mo
 share/locale/pl/LC_MESSAGES/upower.mo
 share/locale/sv/LC_MESSAGES/upower.mo
