@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	osg
-PORTVERSION=	2.9.7
+PORTVERSION=	2.9.8
 PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.openscenegraph.org/downloads/developer_releases/ \
@@ -32,7 +32,7 @@ USE_LDCONFIG=	yes
 MAKE_JOBS_SAFE=	yes
 
 PLIST_SUB=	OSG_VERSION=${PORTVERSION} \
-		OSG_SHLIBVER=63 \
+		OSG_SHLIBVER=66 \
 		OPENTHREADS_VERSION=2.5.0 \
 		OPENTHREADS_SHLIBVER=12
 
@@ -87,7 +87,7 @@ PLIST_SUB+=	FREETYPE="@comment "
 
 .if defined(WITH_GDAL)
 FORCE_REQUIRE+=	GDAL
-LIB_DEPENDS+=	gdal.14:${PORTSDIR}/graphics/gdal
+LIB_DEPENDS+=	gdal.15:${PORTSDIR}/graphics/gdal
 PLIST_SUB+=	GDAL=""
 .else
 FORCE_IGNORE+=	GDAL
