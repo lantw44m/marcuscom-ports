@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.24 2010/10/04 20:26:29 kwm Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.25 2010/10/05 08:26:07 kwm Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.9
@@ -107,6 +107,8 @@ post-patch:
 		${WRKSRC}/src/pk-lsof.c
 	@${REINPLACE_CMD} -e 's|girepositry|girepository|g' \
 		${WRKSRC}/lib/packagekit-glib2/Makefile.in
+	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
+	    	'/xsltproc/s|.xsl [$$]? &> /dev|.xsl $$? > /dev|g'
 
 post-install:
 .if !defined(SLAVEPORT)
