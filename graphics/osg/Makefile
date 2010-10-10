@@ -84,7 +84,7 @@ PLIST_SUB+=	FREETYPE="@comment "
 
 .if defined(WITH_GDAL)
 FORCE_REQUIRE+=	GDAL
-LIB_DEPENDS+=	gdal.14:${PORTSDIR}/graphics/gdal
+LIB_DEPENDS+=	gdal.15:${PORTSDIR}/graphics/gdal
 PLIST_SUB+=	GDAL=""
 .else
 FORCE_IGNORE+=	GDAL
