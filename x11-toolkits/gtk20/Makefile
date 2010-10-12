@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.205 2010/09/30 20:15:29 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.206 2010/09/30 23:01:55 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -55,10 +55,11 @@ MAN1=		gtk-query-immodules-2.0.1 gtk-update-icon-cache.1
 CONFIGURE_ARGS+=	--enable-debug=yes
 .endif
 
+OPTIONS=	CUPS "Enable cups printing support" on
+
 .include <bsd.port.pre.mk>
 
-.if (defined(WITH_CUPS) || exists(${LOCALBASE}/lib/libcups.so)) && \
-	!defined(WITHOUT_CUPS)
+.if defined(WITH_CUPS)
 LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
 CONFIGURE_ARGS+=--enable-cups=auto
 PLIST_SUB+=	CUPS:=""
