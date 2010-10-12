@@ -1,5 +1,14 @@
 --- configure.orig	2010-09-20 18:47:25.000000000 +1000
 +++ configure	2010-09-20 18:48:13.000000000 +1000
+@@ -10831,7 +10831,7 @@
+ 
+ 
+ 
+-link_modules="glib-2.0 >= $REQ_GLIB_VERSION, dbus-1 >= $REQ_DBUS_VERSION, dbus-glib-1 >= $REQ_DBUS_VERSION, gmodule-2.0"
++link_modules="gtk+-2.0 >= $REQ_GTK_VERSION, glib-2.0 >= $REQ_GLIB_VERSION, dbus-1 >= $REQ_DBUS_VERSION, dbus-glib-1 >= $REQ_DBUS_VERSION, gmodule-2.0"
+ 
+ 
+ pkg_failed=no
 @@ -10961,7 +10961,7 @@
  
  
