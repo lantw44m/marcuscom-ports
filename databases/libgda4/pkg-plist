@@ -316,6 +316,7 @@ share/libgda-%%VERSION%%/dtd/libgda-server-operation.dtd
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/32x32/actions/bookmark-view.png
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/32x32/actions/glade.png
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/32x32/actions/history-view.png
+%%UI%%share/libgda-%%VERSION%%/icons/hicolor/icon-theme.cache
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/scalable/actions/bookmark-view.svg
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/scalable/actions/glade.svg
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/scalable/actions/history-view.svg
@@ -461,6 +462,7 @@ share/locale/zh_TW/LC_MESSAGES/libgda-%%VERSION%%.mo
 @dirrm share/libgda-%%VERSION%%/dtd
 %%UI%%@dirrm share/libgda-%%VERSION%%/demo
 @dirrm share/libgda-%%VERSION%%/
+%%UI%%@dirrmtry share/applications
 @dirrm lib/libgda-%%VERSION%%/providers
 %%UI%%@dirrm lib/libgda-%%VERSION%%/plugins
 @dirrm lib/libgda-%%VERSION%%

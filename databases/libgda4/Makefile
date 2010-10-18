@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.11 2010/09/18 12:04:38 kwm Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.12 2010/09/28 07:19:33 kwm Exp $
 #
 
 PORTNAME=	libgda4
 PORTVERSION?=	4.2.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/4$//}/${PORTVERSION:R}
@@ -25,6 +25,7 @@ LIBGDA4_SLAVE?=	no
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
+		gcrypt.17:${PORTSDIR}/security/libgcrypt \
     		soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		json-glib-1.0.0:${PORTSDIR}/devel/json-glib
 RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
@@ -45,6 +46,10 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 OPTIONS=	UI "Build UI tools" on
 .endif
 
+.if defined(WITH_UI)
+INSTALLS_ICONS=	yes
+.endif
+
 .include <bsd.port.pre.mk>
 
 #VERSION=	${PORTVERSION:R}
@@ -54,6 +59,7 @@ PLIST_SUB=	VERSION=${VERSION}
 .if ${LIBGDA4_SLAVE}=="no"
 .if defined(WITH_UI)
 CONFIGURE_ARGS+=--with-ui
+BUILD_DEPENDS+=	xml2po:${PORTSDIR}/textproc/gnome-doc-utils
 USE_GNOME+=	gtk20
 PLIST_SUB+=	UI=""
 .else
@@ -148,10 +154,19 @@ post-patch:
 		${WRKSRC}/providers/bdb/gda-bdb-test.c
 .if ${LIBGDA4_SLAVE}!="no"
 #. for d in msql firebird odbc freetds mdb ldap mysql sqlite postgres
-. for d in bdb jdbc mdb mysql postgres
+. for d in bdb jdbc mdb mysql postgres reuseable/postgres reuseable/mysql
 	@${REINPLACE_CMD} -e 's|$$(top_builddir)/libgda/libgda-4.0.la|${LOCALBASE}/lib/libgda-4.0.la|g' \
 		${WRKSRC}/providers/${d}/Makefile.in
 . endfor
+.endif
+
+pre-build:
+.if ${LIBGDA4_SLAVE}=="postgresql"
+	cd ${WRKSRC}/providers/reuseable/postgres && ${GMAKE} libgda-postgres.la
+.endif
+
+.if ${LIBGDA4_SLAVE}=="mysql"
+	cd ${WRKSRC}/providers/reuseable/mysql && ${GMAKE} libgda-mysql.la
 .endif
 
 .if ${LIBGDA4_SLAVE}=="no"
