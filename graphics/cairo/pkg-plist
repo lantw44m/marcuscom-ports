@@ -42,7 +42,7 @@ libdata/pkgconfig/cairo-svg.pc
 %%XCB%%libdata/pkgconfig/cairo-xcb.pc
 %%XCB%%libdata/pkgconfig/cairo-xcb-shm.pc
 %%X11%%libdata/pkgconfig/cairo-xlib.pc
-%%X11%%%%XCB%%libdata/pkgconfig/cairo-xlib-xcb.pc
+@comment %%X11%%%%XCB%%libdata/pkgconfig/cairo-xlib-xcb.pc
 %%X11%%libdata/pkgconfig/cairo-xlib-xrender.pc
 @dirrm include/cairo
 @dirrm lib/cairo

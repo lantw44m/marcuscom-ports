@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/graphics/cairo/Makefile,v 1.47 2010/06/03 12:35:42 pav Exp $
-#   $MCom: ports/graphics/cairo/Makefile,v 1.98 2010/09/30 08:10:21 kwm Exp $
+#   $MCom: ports/graphics/cairo/Makefile,v 1.99 2010/10/02 19:24:44 kwm Exp $
 #
 
 PORTNAME=	cairo
 PORTVERSION=	1.10.0
+PORTREVISION=	1
 PORTEPOCH?=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
@@ -60,7 +61,8 @@ PLIST_SUB+=	GL="@comment "
 .if defined(WITH_XCB)
 BUILD_DEPENDS+= 	${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util
 RUN_DEPENDS+=		${LOCALBASE}/libdata/pkgconfig/xcb-renderutil.pc:${PORTSDIR}/x11/xcb-util
-CONFIGURE_ARGS+=	--enable-xcb --enable-xlib-xcb=auto
+CONFIGURE_ARGS+=	--enable-xcb
+# this option exposes a bug --enable-xlib-xcb=auto
 PLIST_SUB+=		XCB=""
 .else
 CONFIGURE_ARGS+=	--disable-xcb
