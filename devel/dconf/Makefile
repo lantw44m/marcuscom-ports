@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.5 2010/06/29 21:13:58 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.6 2010/07/13 08:07:04 kwm Exp $
 #
 
 PORTNAME=	dconf
-PORTVERSION=	0.4.2
+PORTVERSION=	0.5.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +22,7 @@ LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 #USE_GETTEXT=	yes
-USE_GNOME=	gnomehack glib20
+USE_GNOME=	gnomehack gtk20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 
