@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.120 2010/09/20 20:12:49 kwm Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.121 2010/09/28 08:07:19 kwm Exp $
 #
 
 PORTNAME=	eog
@@ -61,7 +61,7 @@ PLIST_SUB+=	EXIFEXEMPI=""
 PLIST_SUB+=	EXIFEXEMPI="@comment "
 .endif
 
-.if ${HAVE_GNOME:Mpygnome2}!=""
+.if ${HAVE_GNOME:Mpygtk2}!=""
 USE_GNOME+=	pygtk2
 CONFIGURE_ARGS+=--enable-python
 .else
