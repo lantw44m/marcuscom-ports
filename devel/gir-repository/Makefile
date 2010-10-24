@@ -3,7 +3,7 @@
 # Whom:					Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gir-repository/Makefile,v 1.19 2010/06/05 18:00:23 kwm Exp $
+#   $MCom: ports/devel/gir-repository/Makefile,v 1.20 2010/06/06 11:07:05 kwm Exp $
 #
 
 MASTER_SITES=	# Empty
@@ -22,7 +22,6 @@ RUN_DEPENDS=	${GIRDIR}/${poppler_GIR}.gir:${PORTSDIR}/${poppler_CATEGORY}/gir-re
 		${GIRDIR}/${gnomekeyring_GIR}.gir:${PORTSDIR}/${gnomekeyring_CATEGORY}/gir-repository-gnome-keyring \
 		${GIRDIR}/${libnotify_GIR}.gir:${PORTSDIR}/${libnotify_CATEGORY}/gir-repository-libnotify \
 		${GIRDIR}/${vte_GIR}.gir:${PORTSDIR}/${vte_CATEGORY}/gir-repository-vte \
-		${GIRDIR}/${avahi_GIR}.gir:${PORTSDIR}/${avahi_CATEGORY}/gir-repository-avahi \
 		${GIRDIR}/${goocanvas_GIR}.gir:${PORTSDIR}/${goocanvas_CATEGORY}/gir-repository-goocanvas
 
 do-install:	# empty
