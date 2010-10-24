@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/vala/Makefile,v 1.43 2010/09/04 18:17:39 kwm Exp $
+#   $MCom: ports/lang/vala/Makefile,v 1.44 2010/09/18 08:55:07 kwm Exp $
 #
 
 PORTNAME=	vala
 PORTVERSION=	0.10.0
+PORTREVISION=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -42,9 +43,9 @@ post-patch:
 # We cheat here, because vala records vapigen related stuff in its .pc file
 # This makes the vapigen work again, although it might get weird when
 # vala-vapigen isn't installed.
-	@${REINPLACE_CMD} -e 's|@vapigen_decl@|vapigen=$${bindir}/vapigen|g' \
-		-e 's|@gen_introspect_decl@|gen_introspect=$${libdir}/vala/gen-introspect|g' \
-		-e 's|@vala_gen_introspect_decl@|vala_gen_introspect=$${bindir}/vala-gen-introspect|g' \
+	@${REINPLACE_CMD} -e 's|@vapigen_decl@|vapigen=$${bindir}/vapigen-0.10|g' \
+		-e 's|@gen_introspect_decl@|gen_introspect=$${libdir}/vala-0.10/gen-introspect-0.10|g' \
+		-e 's|@vala_gen_introspect_decl@|vala_gen_introspect=$${bindir}/vala-gen-introspect-0.10|g' \
 		${WRKSRC}/vala.pc.in
 	@${REINPLACE_CMD} -e 's|cp $$< $$@|cp vala.pc vala-0.10.pc|g' \
 		${WRKSRC}/Makefile.in
