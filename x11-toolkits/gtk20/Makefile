@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.206 2010/09/30 23:01:55 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.207 2010/10/12 10:02:19 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -58,6 +58,10 @@ CONFIGURE_ARGS+=	--enable-debug=yes
 OPTIONS=	CUPS "Enable cups printing support" on
 
 .include <bsd.port.pre.mk>
+
+.if ${ARCH} == powerpc64
+EXTRA_PATCHES=	${.CURDIR}/files/extra-arch-powerpc64
+.endif
 
 .if defined(WITH_CUPS)
 LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
