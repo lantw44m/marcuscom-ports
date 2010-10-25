@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.187 2010/09/19 07:56:17 kwm Exp $
+#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.188 2010/09/27 12:04:11 kwm Exp $
 #
 
 PORTNAME=	gnome-desktop
@@ -25,7 +25,7 @@ LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 USE_XORG=	xpm
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils gconf2 pygtk2 \
 		ltverhack referencehack
-#GNOME_DESKTOP_VERSION=2
+GNOME_DESKTOP_VERSION=2
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_BISON=	build
