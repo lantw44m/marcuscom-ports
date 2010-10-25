@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-tools/Makefile,v 1.101 2010/09/22 07:38:30 kwm Exp $
+#   $MCom: ports/sysutils/gnome-system-tools/Makefile,v 1.102 2010/09/27 17:55:43 kwm Exp $
 #
 
 PORTNAME=	gnome-system-tools
 PORTVERSION=	2.32.0
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -32,11 +33,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GLIB_SCHEMAS=	org.gnome.system-tools.gschema.xml
-
-# can't use post-install: already in use by GLIB_SCHEMAS
-pre-install:
-	@${MKDIR} ${PREFIX}/share/glib-2.0/schemas
-	@${INSTALL_DATA} ${WRKSRC}/org.gnome.system-tools.gschema.xml \
-		${PREFIX}/share/glib-2.0/schemas
 
 .include <bsd.port.mk>
