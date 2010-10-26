@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.72 2010/09/21 20:39:30 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.73 2010/09/27 14:19:18 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.32.0
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -20,7 +21,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		telepathy-farsight.0:${PORTSDIR}/net-im/telepathy-farsight \
 		telepathy-logger.1:${PORTSDIR}/net-im/telepathy-logger \
-		folks-telepathy.15:${PORTSDIR}/net-im/folks \
+		folks-telepathy.16:${PORTSDIR}/net-im/folks \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
 		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
