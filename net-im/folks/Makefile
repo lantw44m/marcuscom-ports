@@ -1,13 +1,13 @@
-# New ports collection makefile for:	llibfolks
+# New ports collection makefile for:	folks
 # Date created:				23 July 2010
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/folks/Makefile,v 1.6 2010/09/02 00:43:33 avl Exp $
+#   $MCom: ports/net-im/folks/Makefile,v 1.7 2010/09/21 19:23:29 kwm Exp $
 #
 
 PORTNAME=	folks
-PORTVERSION=	0.2.0
+PORTVERSION=	0.2.1
 CATEGORIES=	net-im
 MASTER_SITES=	GNOME
 
@@ -27,6 +27,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include " \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-PLIST_SUB=	VERSION=15
+PLIST_SUB=	VERSION=16
 
 .include <bsd.port.mk>
