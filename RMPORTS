@@ -3,3 +3,5 @@ x11-fm/gir-repository-nautilus|x11-fm/nautilus|%DATA%|merged into nautilus
 devel/gir-repository-libsoup|devel/libsoup|%DATA%|merged into libsoup
 x11-toolkits/gir-repository-gtksourceview2|x11-toolkits/gtksourceview2|%DATA%|merged into gtksourceview2
 devel/py-gi|devel/py-gobject|%DATE%|merged into py-gobject
+security/gir-repository-gnome-keyring||%DATE%|Not buildable
+devel/gir-repository-dbus|devel/gobject-introspection|%DATE%|merged into gobject-introspection

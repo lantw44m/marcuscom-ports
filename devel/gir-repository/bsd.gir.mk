@@ -9,14 +9,8 @@ GIRDIR=		${LOCALBASE}/share/gir-1.0
 poppler_CATEGORY=	graphics
 poppler_GIR=	Poppler-0.8
 
-dbus_CATEGORY=	devel
-dbus_GIR=	DBus-1.0
-
 babl_CATEGORY=	x11
 babl_GIR=	Babl-0.1
-
-gnomekeyring_CATEGORY=	security
-gnomekeyring_GIR=	GnomeKeyring-2.0
 
 libnotify_CATEGORY=	devel
 libnotify_GIR=	Notify-0.4
@@ -69,23 +63,12 @@ LIB_DEPENDS+=	babl-0.1.0:${PORTSDIR}/x11/babl
 GIR_FILES=	Babl-0.1
 .endif
 
-.if ${GIR_NAME} == "gnomekeyring"
-LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
-GIR_FILES=	GnomeKeyring-2.0
-.endif
-
 .if ${GIR_NAME} == "libnotify"
 LIB_DEPENDS+=	notify.1:${PORTSDIR}/devel/libnotify
 USE_GNOME+=	gtk20
 GIR_FILES=	Notify-0.4
 DEP_NAMES=	notify
 CLEAR_DEPS+=	Gtk-2.0
-.endif
-
-.if ${GIR_NAME} == "dbus"
-LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
-GIR_FILES=	DBus-1.0
-LIB_FILES=	DBus
 .endif
 
 .if ${GIR_NAME} == "vte"
