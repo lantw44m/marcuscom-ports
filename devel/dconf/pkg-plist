@@ -7,21 +7,19 @@ include/dconf/dconf-readtype.h
 include/dconf/dconf-resetlist.h
 include/dconf/dconf.h
 lib/gio/modules/libdconfsettings.so
-lib/girepository-1.0/dconf-0.3.typelib
-lib/libdconf.a
-lib/libdconf.la
+lib/girepository-1.0/dconf-1.0.typelib
 lib/libdconf.so
 lib/libdconf.so.0
 libdata/pkgconfig/dconf.pc
 libexec/dconf-service
 share/dbus-1/services/ca.desrt.dconf.service
 share/dbus-1/system-services/ca.desrt.dconf.service
-share/gir-1.0/dconf-0.3.gir
+share/gir-1.0/dconf-1.0.gir
+share/gtk-doc/html/dconf/DConfClient.html
+share/gtk-doc/html/dconf/dconf-DConf-Paths.html
 share/gtk-doc/html/dconf/annotation-glossary.html
 share/gtk-doc/html/dconf/api-index-full.html
 share/gtk-doc/html/dconf/ch01.html
-share/gtk-doc/html/dconf/dconf-dconf-client.html
-share/gtk-doc/html/dconf/dconf-paths.html
 share/gtk-doc/html/dconf/dconf.devhelp
 share/gtk-doc/html/dconf/dconf.devhelp2
 share/gtk-doc/html/dconf/home.png
@@ -32,6 +30,9 @@ share/gtk-doc/html/dconf/object-tree.html
 share/gtk-doc/html/dconf/right.png
 share/gtk-doc/html/dconf/style.css
 share/gtk-doc/html/dconf/up.png
+share/vala/vapi/dconf.deps
+share/vala/vapi/dconf.vapi
+@dirrmtry share/vala/vapi
 @dirrm share/gtk-doc/html/dconf
 @dirrmtry share/gtk-doc/html
 @dirrmtry share/gtk-doc

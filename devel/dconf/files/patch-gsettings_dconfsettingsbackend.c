@@ -12,7 +12,7 @@
                                     gpointer          origin_tag)
  {
    DConfSettingsBackend *dcsb = (DConfSettingsBackend *) backend;
-+  gboolean success = False;
++  gboolean success = FALSE;
    volatile guint32 *serial;
    DConfEngineMessage dcem;
    GDBusConnection *bus;
