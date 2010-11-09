@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.63 2010/08/31 03:53:12 avl Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.64 2010/09/27 17:43:48 kwm Exp $
 #
 
 PORTNAME=	gvfs
-PORTVERSION=	1.6.4
+PORTVERSION=	1.6.5
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2

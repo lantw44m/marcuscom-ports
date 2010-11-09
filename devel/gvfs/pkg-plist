@@ -18,8 +18,6 @@ bin/gvfs-tree
 etc/profile.d/gvfs-bash-completion.sh
 include/gvfs-client/gvfs/gvfsurimapper.h
 include/gvfs-client/gvfs/gvfsuriutils.h
-lib/gio/modules/libgiogconf.la
-lib/gio/modules/libgiogconf.so
 lib/gio/modules/libgioremote-volume-monitor.la
 lib/gio/modules/libgioremote-volume-monitor.so
 lib/gio/modules/libgvfsdbus.la
