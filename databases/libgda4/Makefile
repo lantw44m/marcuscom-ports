@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.12 2010/09/28 07:19:33 kwm Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.13 2010/10/18 12:47:12 kwm Exp $
 #
 
 PORTNAME=	libgda4
-PORTVERSION?=	4.2.0
-PORTREVISION?=	1
+PORTVERSION?=	4.2.1
+PORTREVISION?=	0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/4$//}/${PORTVERSION:R}
@@ -37,7 +37,7 @@ USE_GNOME=	gnomeprefix gnomehack glib20 libxslt intlhack referencehack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
-CONFIGURE_ARGS=	--without-sybase \
+CONFIGURE_ARGS=	--without-oracle \
 		--enable-introspection=no
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LIBS="-L${LOCALBASE}/lib -lintl"
@@ -93,25 +93,11 @@ CONFIGURE_ARGS+=	--with-postgres=${LOCALBASE}
 CONFIGURE_ARGS+=	--without-postgres
 .endif
 
-.if ${LIBGDA4_SLAVE}=="ldap"
-USE_OPENLDAP=		yes
-CONFIGURE_ARGS+=	--with-ldap=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=	--without-ldap
-.endif
-
 .if ${LIBGDA4_SLAVE}=="firebird"
 LIB_DEPENDS+=		gds.2:${PORTSDIR}/databases/firebird2-client
 CONFIGURE_ARGS+=	--with-firebird=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-firebird
-.endif
-
-.if ${LIBGDA4_SLAVE}=="freetds"
-LIB_DEPENDS+=		tds.5:${PORTSDIR}/databases/freetds
-CONFIGURE_ARGS+=	--with-tds=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=	--without-tds
 .endif
 
 # MDB (MS Access)
@@ -120,13 +106,6 @@ LIB_DEPENDS+=		mdbsql.0:${PORTSDIR}/databases/mdbtools
 CONFIGURE_ARGS+=	--with-mdb=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-mdb
-.endif
-
-.if ${LIBGDA4_SLAVE}=="odbc"
-LIB_DEPENDS+=		odbc.1:${PORTSDIR}/databases/unixODBC
-CONFIGURE_ARGS+=	--with-odbc=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=	--without-odbc
 .endif
 
 .if ${LIBGDA4_SLAVE}=="jdbc"

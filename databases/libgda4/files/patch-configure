@@ -1,6 +1,6 @@
---- configure.orig	2010-09-26 23:47:18.000000000 +0000
-+++ configure	2010-09-28 00:05:04.000000000 +0000
-@@ -19504,9 +19504,9 @@
+--- configure.orig	2010-11-14 17:29:29.000000000 +0100
++++ configure	2010-11-14 17:33:39.000000000 +0100
+@@ -19487,9 +19487,9 @@
              INTROSPECTION_COMPILER=`$PKG_CONFIG --variable=g_ir_compiler gobject-introspection-1.0`
              INTROSPECTION_GENERATE=`$PKG_CONFIG --variable=g_ir_generate gobject-introspection-1.0`
              INTROSPECTION_GIRDIR=`$PKG_CONFIG --variable=girdir gobject-introspection-1.0`
@@ -12,7 +12,25 @@
              INTROSPECTION_CFLAGS=`$PKG_CONFIG --cflags gobject-introspection-1.0`
              INTROSPECTION_LIBS=`$PKG_CONFIG --libs gobject-introspection-1.0`
              INTROSPECTION_MAKEFILE=$introspection_makefile
-@@ -21517,6 +21517,15 @@
+@@ -19586,7 +19586,7 @@
+ 	echo "$LIBCRYPTO_PKG_ERRORS" >&5
+ 
+ 	if test "$enable_crypto" = "yes"; then
+-		as_fn_error $? "libcrypto support requested but not found" "$LINENO" 5
++#		as_fn_error $? "libcrypto support requested but not found" "$LINENO" 5
+ 	fi
+ 	have_crypto=no
+ 
+@@ -19594,7 +19594,7 @@
+      	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+ 	if test "$enable_crypto" = "yes"; then
+-		as_fn_error $? "libcrypto support requested but not found" "$LINENO" 5
++#		as_fn_error $? "libcrypto support requested but not found" "$LINENO" 5
+ 	fi
+ 	have_crypto=no
+ 
+@@ -21772,6 +21772,15 @@
  	    fi
  	    CFLAGS="$save_CFLAGS"
  	fi
@@ -27,15 +45,4 @@
 +
      fi
  
- 
-@@ -23351,6 +23360,10 @@
-   as_fn_error "conditional \"MDB\" was never defined.
- Usually this means the macro was only invoked conditionally." "$LINENO" 5
- fi
-+if test -z "${MDB_TRUE}" && test -z "${MDB_FALSE}"; then
-+  as_fn_error $? "conditional \"MDB\" was never defined.
-+Usually this means the macro was only invoked conditionally." "$LINENO" 5
-+fi
- if test -z "${LDAP_TRUE}" && test -z "${LDAP_FALSE}"; then
-   as_fn_error "conditional \"LDAP\" was never defined.
- Usually this means the macro was only invoked conditionally." "$LINENO" 5
+      if test "$mdbtools_found" = "yes"; then

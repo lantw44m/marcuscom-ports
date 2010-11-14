@@ -386,6 +386,7 @@ share/libgda-%%VERSION%%/web/mouseirb_2.js
 share/locale/ar/LC_MESSAGES/libgda-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/libgda-%%VERSION%%.mo
 share/locale/ca/LC_MESSAGES/libgda-%%VERSION%%.mo
+share/locale/ca@valencia/LC_MESSAGES/libgda-4.0.mo
 share/locale/cs/LC_MESSAGES/libgda-%%VERSION%%.mo
 share/locale/da/LC_MESSAGES/libgda-%%VERSION%%.mo
 share/locale/de/LC_MESSAGES/libgda-%%VERSION%%.mo
@@ -488,3 +489,5 @@ share/locale/zh_TW/LC_MESSAGES/libgda-%%VERSION%%.mo
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
