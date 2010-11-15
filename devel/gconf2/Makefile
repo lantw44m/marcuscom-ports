@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.122 2010/09/27 20:22:41 kwm Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.123 2010/11/14 17:56:35 marcus Exp $
 #
 
 PORTNAME=	gconf2
 PORTVERSION=	2.32.0
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/GConf/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -31,7 +31,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomehier gnomehack orbit2 gtk20 libxml2 ltverhack \
-		referencehack intlhack
+		referencehack intlhack dconf
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool:22
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
