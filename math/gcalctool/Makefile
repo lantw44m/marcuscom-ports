@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool/Makefile,v 1.138 2010/09/27 13:28:44 kwm Exp $
+#   $MCom: ports/math/gcalctool/Makefile,v 1.139 2010/10/29 12:46:59 kwm Exp $
 #
 
 PORTNAME=	gcalctool
-PORTVERSION=	5.32.0
-PORTREVISION=	1
+PORTVERSION=	5.32.1
 PORTEPOCH=	2
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
