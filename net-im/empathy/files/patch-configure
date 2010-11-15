@@ -1,6 +1,6 @@
---- configure.orig	2010-08-18 15:00:58.000000000 +0200
-+++ configure	2010-08-18 15:04:03.000000000 +0200
-@@ -13408,8 +13408,8 @@
+--- configure.orig	2010-11-15 14:52:20.000000000 +0100
++++ configure	2010-11-15 14:52:21.000000000 +0100
+@@ -13388,8 +13388,8 @@
  .SECONDARY: $(gsettings_SCHEMAS)
  
  gsettings__base_list = \
@@ -11,48 +11,3 @@
  
  install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid)
  	@$(NORMAL_INSTALL)
-@@ -14591,7 +14591,7 @@
-    as_fn_error "Could not find gtk3 dependencies." "$LINENO" 5
- fi
- 
--if test "x$have_gtk3" == "xyes"; then
-+if test "x$have_gtk3" = "xyes"; then
-    # GTK3 specific deps
- 
- pkg_failed=no
-@@ -16219,7 +16219,7 @@
- 
- if test "x$enable_webkit" != "xno"; then
- 
--   if test "x$have_gtk3" == "xno"; then
-+   if test "x$have_gtk3" = "xno"; then
- 
- pkg_failed=no
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for WEBKIT" >&5
-@@ -16545,7 +16545,7 @@
- 
- if test "x$enable_map" != "xno"; then
- 
--   if test "x$have_gtk3" == "xno"; then
-+   if test "x$have_gtk3" = "xno"; then
- 
- pkg_failed=no
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for LIBCHAMPLAIN" >&5
-@@ -16936,7 +16936,7 @@
- 
- 
- if test "x$enable_nautilus_sendto" != "xno"; then
--   if test "x$have_gtk3" == "xno"; then
-+   if test "x$have_gtk3" = "xno"; then
-       # Newer NST requires GTK+3 so we can't use it
- 
- pkg_failed=no
-@@ -17156,7 +17156,7 @@
- 
- if test "x$enable_control_center_embedding" != "xno"; then
- 
--   if test "x$have_gtk3" == "xno"; then
-+   if test "x$have_gtk3" = "xno"; then
- 
- pkg_failed=no
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for CONTROL_CENTER_EMBEDDING" >&5
