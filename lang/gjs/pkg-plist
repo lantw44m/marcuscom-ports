@@ -3,6 +3,7 @@ bin/gjs-console
 include/gjs-1.0/gjs-dbus/dbus-proxy.h
 include/gjs-1.0/gjs-dbus/dbus.h
 include/gjs-1.0/gjs/byteArray.h
+include/gjs-1.0/gjs/compat.h
 include/gjs-1.0/gjs/context.h
 include/gjs-1.0/gjs/gi/arg.h
 include/gjs-1.0/gjs/gi/boxed.h
