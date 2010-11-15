@@ -409,7 +409,6 @@ include/evolution-%%VERSION%%/table/e-tree-table-adapter.h
 include/evolution-%%VERSION%%/table/e-tree.h
 include/evolution-%%VERSION%%/table/gal-a11y-e-cell-popup.h
 include/evolution-%%VERSION%%/table/gal-a11y-e-cell-registry.h
-include/evolution-%%VERSION%%/table/gal-a11y-e-cell-text.h
 include/evolution-%%VERSION%%/table/gal-a11y-e-cell-toggle.h
 include/evolution-%%VERSION%%/table/gal-a11y-e-cell-tree.h
 include/evolution-%%VERSION%%/table/gal-a11y-e-cell-vbox.h
