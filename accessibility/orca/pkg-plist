@@ -323,6 +323,9 @@ bin/orca
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome-panel/script.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome-panel/script.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome-panel/script.pyo
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome-panel/speech_generator.py
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome-panel/speech_generator.pyc
+%%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome-panel/speech_generator.pyo
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome-screensaver-dialog/__init__.py
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome-screensaver-dialog/__init__.pyc
 %%PYTHON_SITELIBDIR%%/orca/scripts/apps/gnome-screensaver-dialog/__init__.pyo
@@ -598,6 +601,7 @@ share/icons/hicolor/32x32/apps/orca.png
 share/icons/hicolor/48x48/apps/orca.png
 share/icons/hicolor/scalable/apps/orca.svg
 share/locale/ar/LC_MESSAGES/orca.mo
+share/locale/ast/LC_MESSAGES/orca.mo
 share/locale/bg/LC_MESSAGES/orca.mo
 share/locale/bn/LC_MESSAGES/orca.mo
 share/locale/bn_IN/LC_MESSAGES/orca.mo
@@ -737,3 +741,5 @@ share/locale/zh_TW/LC_MESSAGES/orca.mo
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
