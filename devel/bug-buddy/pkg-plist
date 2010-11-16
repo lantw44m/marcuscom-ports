@@ -1,4 +1,5 @@
 bin/bug-buddy
+lib/gtk-2.0/modules/libgnomebreakpad.so
 lib/gtk-2.0/modules/libgnomesegvhandler.la
 lib/gtk-2.0/modules/libgnomesegvhandler.so
 share/applications/bug-buddy.desktop

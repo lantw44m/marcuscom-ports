@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/bug-buddy/Makefile,v 1.84 2010/09/20 20:19:38 kwm Exp $
+#   $MCom: ports/devel/bug-buddy/Makefile,v 1.85 2010/09/27 18:27:07 kwm Exp $
 #
 
 PORTNAME=	bug-buddy
 PORTVERSION=	2.32.0
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -39,5 +40,9 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|libelf.h||g ; \
 	    	s|gelf.h||g' \
 	    	${WRKSRC}/configure
+
+post-install:
+	@${LN} -fs ${PREFIX}/lib/gtk-2.0/modules/libgnomesegvhandler.so \
+		${PREFIX}/lib/gtk-2.0/modules/libgnomebreakpad.so
 
 .include <bsd.port.mk>
