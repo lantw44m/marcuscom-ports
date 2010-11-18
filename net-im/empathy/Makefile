@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.74 2010/10/26 08:50:10 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.75 2010/11/15 14:07:53 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	2.32.1
+PORTVERSION=	2.32.2
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -14,6 +14,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME IM client based around telepathy
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
+		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
 LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		telepathy.2:${PORTSDIR}/net-im/libtelepathy \
@@ -24,6 +25,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
 		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
+		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
 
 USE_GMAKE=	yes
@@ -39,7 +41,8 @@ USE_PYTHON=	yes
 MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--enable-tpl=no --enable-gtk3=no
+CONFIGURE_ARGS=	--disable-Werror \
+		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
 
 GLIB_SCHEMAS=	org.gnome.Empathy.gschema.xml
 
@@ -103,9 +106,5 @@ PLIST_SUB+=	MAP=""
 CONFIGURE_ARGS+=--disable-map
 PLIST_SUB+=	MAP="@comment "
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|$${datadir}/gtk-doc/html|${DOCSDIR}|g ; \
-		s|-Werror||g' ${WRKSRC}/configure
 
 .include <bsd.port.post.mk>

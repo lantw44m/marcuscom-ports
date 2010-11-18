@@ -1,6 +1,6 @@
---- configure.orig	2010-11-15 14:52:20.000000000 +0100
-+++ configure	2010-11-15 14:52:21.000000000 +0100
-@@ -13388,8 +13388,8 @@
+--- configure.orig	2010-11-18 17:41:43.000000000 +0100
++++ configure	2010-11-18 17:41:43.000000000 +0100
+@@ -13390,8 +13390,8 @@
  .SECONDARY: $(gsettings_SCHEMAS)
  
  gsettings__base_list = \
@@ -11,3 +11,18 @@
  
  install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid)
  	@$(NORMAL_INSTALL)
+@@ -15049,11 +15049,11 @@
+ fi
+ 
+ # Enable GSEAL checks if needed
+-if test $USE_MAINTAINER_MODE = yes; then
++#if test $USE_MAINTAINER_MODE = yes; then
+ 
+-$as_echo "#define GSEAL_ENABLE /**/" >>confdefs.h
++#$as_echo "#define GSEAL_ENABLE /**/" >>confdefs.h
+ 
+-fi
++#fi
+ 
+ # -----------------------------------------------------------
+ # Enable debug
