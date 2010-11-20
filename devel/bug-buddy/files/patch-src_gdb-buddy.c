@@ -5,7 +5,7 @@
  #else
  	/* if someone knows how to do this on BSD, please send a patch */
 -	return NULL;
-+	link = g_file_read_link ("proc/curproc/file", NULL);
++	link = g_file_read_link ("/proc/curproc/file", NULL);
  #endif
  	exe = g_file_read_link (link, &error);
  
