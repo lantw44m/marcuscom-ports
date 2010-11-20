@@ -1,11 +1,10 @@
---- clutter/cogl/cogl/Makefile.in.orig	2010-10-07 12:11:29.000000000 +0200
-+++ clutter/cogl/cogl/Makefile.in	2010-10-07 12:12:52.000000000 +0200
-@@ -773,7 +773,7 @@
- @HAVE_INTROSPECTION_TRUE@Cogl_@CLUTTER_API_VERSION_AM@_gir_VERSION = @CLUTTER_API_VERSION@
- @HAVE_INTROSPECTION_TRUE@Cogl_@CLUTTER_API_VERSION_AM@_gir_LIBS = libclutter-cogl.la
- @HAVE_INTROSPECTION_TRUE@Cogl_@CLUTTER_API_VERSION_AM@_gir_FILES = $(cogl_headers) cogl-enum-types.h
--@HAVE_INTROSPECTION_TRUE@Cogl_@CLUTTER_API_VERSION_AM@_gir_CFLAGS = $(INCLUDES) $(AM_CPPFLAGS)
-+@HAVE_INTROSPECTION_TRUE@Cogl_@CLUTTER_API_VERSION_AM@_gir_CFLAGS = $(INCLUDES) -I/usr/local/include $(AM_CPPFLAGS)
- @HAVE_INTROSPECTION_TRUE@Cogl_@CLUTTER_API_VERSION_AM@_gir_INCLUDES = GL-1.0 GObject-2.0
- @HAVE_INTROSPECTION_TRUE@Cogl_@CLUTTER_API_VERSION_AM@_gir_SCANNERFLAGS = --warn-all --c-include='cogl/cogl.h'
- @HAVE_INTROSPECTION_TRUE@girdir = $(datadir)/gir-1.0
+--- clutter/cogl/cogl/Makefile.in.orig	2010-11-20 14:38:12.000000000 +0100
++++ clutter/cogl/cogl/Makefile.in	2010-11-20 14:47:42.000000000 +0100
+@@ -582,6 +582,7 @@
+ 	-I$(srcdir)/winsys 			\
+ 	-I$(srcdir)/driver/$(COGL_DRIVER) 	\
+ 	-I$(top_builddir)/clutter/cogl          \
++	`pkg-config --cflags gl`		\
+ 	$(NULL)
+ 
+ AM_CPPFLAGS = \
