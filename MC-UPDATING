@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.20 2010/06/24 10:37:44 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.21 2010/06/28 21:06:08 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -8,29 +8,21 @@ You should get into the habit of checking this file for changes each
 time you update your ports collection, before attempting any port
 upgrades.
 
-2010MONTHDAY:
-  AFFECTS: users of GNOME and GTK+
+2011MONTHDAY:
+  AFFECTS: users of GNOME
   AUTHOR: gnome@FreeBSD.org
 
-  GNOME 3.0 has been added to the ports tree.  GNOME 3.0 and 2.30 are mutual 
-  exclusive.  So either you keep GNOME 2.30 or switch to GNOME 3.0. If you want 
-  to keep using GNOME 2.30 please follow the next instructions. 
+  GNOME 3.0 has been added to the ports tree.  GNOME 3.0 and 2.32 are mutual 
+  exclusive. If you want to stick around with GNOME 2.32 you will not have to
+  do anything. However if you want to switch to GNOME 3.0, you should follow
+  the instructions below. GNOME 3.0 is based on GTK 3. We did our best to test
+  excisting Gtk 2 based programs, but we couldn't test them all. Please let us
+  know at gnome@FreeBSD.org if you experiance problems.
 
-  Portupgrade users:
+  Switch GNOME 2.32 to GNOME 3.0 instructions:
 
-        # pkgdb -Ff
-        # pkg_deinstall -fO gtkmm-2.20\* gtk-2.20\*
-        # portupgrade -aOW
-
-  Portmaster users:
-
-        # pkg_delete -f gtkmm-2.20\* gtk-2.20\*
-        # portmaster -a
-
-  If you want to switch to GNOME 3.0 do the following:
-
-        Make a list of your installed ports.
-        pkg_delete -r glib-2.\*
-        After go to x11/gnome3 and do make install clean.
-        Install applications your missing from the list you made earlier.
+  Make a list of your installed ports.
+  pkg_delete -r glib-2.\*
+  After go to x11/gnome3 and do make install clean.
+  Install applications your missing from the list you made earlier.
 
