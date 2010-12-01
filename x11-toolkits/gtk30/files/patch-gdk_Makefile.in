@@ -1,0 +1,11 @@
+--- gdk/Makefile.in.orig	2010-12-01 00:07:46.000000000 +0100
++++ gdk/Makefile.in	2010-12-01 00:08:24.000000000 +0100
+@@ -698,7 +698,7 @@
+ #
+ # Rule to install gdkconfig.h header file
+ #
+-configexecincludedir = $(libdir)/gtk-3.0/include
++configexecincludedir = $(prefix)/include/gtk-3.0
+ 
+ #note: not gdkconfig.h
+ BUILT_SOURCES = \

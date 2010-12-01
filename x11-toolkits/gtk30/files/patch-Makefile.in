@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2010-12-01 00:07:00.000000000 +0100
++++ Makefile.in	2010-12-01 00:07:21.000000000 +0100
+@@ -416,7 +416,7 @@
+ 	|| { echo "Gtk+Tests:ERROR: Failed to start Xvfb environment for X11 target tests."; exit 1; } \
+ 	&& DISPLAY=:$$XID && export DISPLAY
+ 
+-SRC_SUBDIRS = gdk gtk modules demos tests perf examples
++SRC_SUBDIRS = gdk gtk modules demos perf examples
+ SUBDIRS = po po-properties $(SRC_SUBDIRS) docs m4macros build
+ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+ MAINTAINERCLEANFILES = \
