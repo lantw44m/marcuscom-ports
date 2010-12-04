@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.209 2010/11/15 21:17:48 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.211 2010/11/30 22:55:02 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -39,7 +39,7 @@ USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool:22
+USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack
 USE_GETTEXT=	yes
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \

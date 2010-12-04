@@ -3,7 +3,7 @@
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libnotify/Makefile,v 1.10 2010/10/15 06:43:06 avl Exp $
+#   $MCom: ports/devel/libnotify/Makefile,v 1.12 2010/12/01 14:22:30 kwm Exp $
 #
 
 PORTNAME=	libnotify
@@ -21,7 +21,7 @@ USE_GNOME=	gnomehack gnometarget intlhack glib20 gtk30 ltverhack
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool:22
+USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

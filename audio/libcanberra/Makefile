@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/audio/libcanberra/Makefile,v 1.20 2010/11/21 23:48:16 marcus Exp $
-#   $MCom$
+#   $MCom: ports/audio/libcanberra/Makefile,v 1.23 2010/12/01 15:23:45 kwm Exp $
 
 PORTNAME=	libcanberra
 PORTVERSION=	0.26
@@ -20,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/LGPL
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gtk20 ltverhack gconf2
 USE_LDCONFIG=	yes
-USE_AUTOTOOLS=	libtool:22 libltdl:22
+USE_AUTOTOOLS=	libtool libltdl
 CONFIGURE_ARGS=	--disable-lynx --disable-tdb
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
