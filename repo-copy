@@ -1,0 +1,4 @@
+x11-toolkits/gtk20 -> x11-toolkits/gtk30
+x11-toolkits/unique -> x11-toolkits/libunique3
+www/webkit-gtk2 -> www/webkit-gtk3
+
