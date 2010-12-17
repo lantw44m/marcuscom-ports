@@ -1,0 +1,20 @@
+--- configure.orig	2010-11-29 22:57:13.000000000 +0000
++++ configure	2010-12-16 16:38:32.000000000 +0000
+@@ -19795,7 +19795,7 @@
+ $as_echo "#define ENABLE_YARR_JIT 1" >>confdefs.h
+ 
+         ;;
+-        i*86|x86_64)
++        i*86|x86_64|amd64)
+ 
+ $as_echo "#define ENABLE_JIT 1" >>confdefs.h
+ 
+@@ -19820,7 +19820,7 @@
+ $as_echo "#define WTF_USE_JIT_STUB_ARGUMENT_VA_LIST 1" >>confdefs.h
+ 
+                 ;;
+-                x86_64)
++                x86_64|amd64)
+ 
+ $as_echo "#define WTF_USE_JIT_STUB_ARGUMENT_REGISTER 1" >>confdefs.h
+ 
