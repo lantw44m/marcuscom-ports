@@ -1,6 +1,6 @@
---- configure.orig	2009-12-26 21:41:27.000000000 +0100
-+++ configure	2009-12-26 21:51:04.000000000 +0100
-@@ -33884,9 +33884,9 @@
+--- configure.orig	2010-12-25 21:43:58.000000000 +0100
++++ configure	2010-12-25 21:51:36.000000000 +0100
+@@ -23978,9 +23978,9 @@
         INTROSPECTION_COMPILER=`$PKG_CONFIG --variable=g_ir_compiler gobject-introspection-1.0`
         INTROSPECTION_GENERATE=`$PKG_CONFIG --variable=g_ir_generate gobject-introspection-1.0`
         INTROSPECTION_GIRDIR=`$PKG_CONFIG --variable=girdir gobject-introspection-1.0`
@@ -12,3 +12,28 @@
         INTROSPECTION_CFLAGS=`$PKG_CONFIG --cflags gobject-introspection-1.0`
         INTROSPECTION_LIBS=`$PKG_CONFIG --libs gobject-introspection-1.0`
         INTROSPECTION_MAKEFILE=`$PKG_CONFIG --variable=datadir gobject-introspection-1.0`/gobject-introspection-1.0/Makefile.introspection
+@@ -24530,7 +24530,7 @@
+ fi
+ 
+ 
+-if test "x${enable_Bsymbolic}" == "xyes"; then
++if test "x${enable_Bsymbolic}" = "xyes"; then
+   GTK_LINK_FLAGS=-Wl,-Bsymbolic-functions
+ fi
+ 
+@@ -25859,11 +25859,13 @@
+ 
+ gdk_windowing=''
+ if expr "$gdktarget" : ".*x11.*" > /dev/null ; then
+-  gdk_windowing+='
++  gdk_windowing='
++$gdk_windowing
+ #define GDK_WINDOWING_X11'
+ fi
+ if expr "$gdktarget" : ".*win32.*" > /dev/null ; then
+-  gdk_windowing+='
++  gdk_windowing='
++$gdk_windowing
+ #define GDK_NATIVE_WINDOW_POINTER
+ #define GDK_WINDOWING_WIN32'
+ fi
