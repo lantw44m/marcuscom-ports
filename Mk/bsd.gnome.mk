@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.515 2010/12/25 21:19:58 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.516 2010/12/25 21:42:41 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -91,7 +91,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 gdkpix
 		pygtk2 pygtksourceview vte
 
 # GNOME 3 components
-_USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 librsvg3 nautilus3
+_USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 librsvg3 nautilus3 vte3
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -404,6 +404,10 @@ libwnck_USE_GNOME_IMPL=	gtk20
 vte_LIB_DEPENDS=	vte.9:${PORTSDIR}/x11-toolkits/vte
 vte_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte.pc
 vte_USE_GNOME_IMPL=	gtk20
+
+vte3_LIB_DEPENDS=	vte2_90.9:${PORTSDIR}/x11-toolkits/vte3
+vte3_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte-2.90.pc
+vte3_USE_GNOME_IMPL=	gtk30
 
 libzvt_LIB_DEPENDS=	zvt-2.0.0:${PORTSDIR}/x11-toolkits/libzvt
 libzvt_DETECT=	${LOCALBASE}/libdata/pkgconfig/libzvt-2.0.pc
