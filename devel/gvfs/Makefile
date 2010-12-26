@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.66 2010/11/13 01:48:28 kwm Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.68 2010/12/26 18:07:19 kwm Exp $
 #
 
 PORTNAME=	gvfs
@@ -18,7 +18,7 @@ COMMENT=	GNOME virtual file system
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
     		hal.1:${PORTSDIR}/sysutils/hal \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
-		gnome-keyring:${PORTSDIR}/security/gnome-keyring
+		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	gnome-mount:${PORTSDIR}/sysutils/gnome-mount
 
 USE_BZIP2=	yes
