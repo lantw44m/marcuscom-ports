@@ -236,6 +236,8 @@ share/omf/lgpl/lgpl-zh_CN.omf
 @dirrm share/gnome/help/lgpl/vi
 @dirrm share/gnome/help/lgpl/uk
 @dirrm share/gnome/help/lgpl/sv
+@dirrm share/gnome/help/lgpl/sl
+@dirrm share/gnome/help/lgpl/pt_BR
 @dirrm share/gnome/help/lgpl/pa
 @dirrm share/gnome/help/lgpl/oc
 @dirrm share/gnome/help/lgpl/ko
@@ -251,6 +253,7 @@ share/omf/lgpl/lgpl-zh_CN.omf
 @dirrm share/gnome/help/gpl/vi
 @dirrm share/gnome/help/gpl/uk
 @dirrm share/gnome/help/gpl/sv
+@dirrm share/gnome/help/gpl/sl
 @dirrm share/gnome/help/gpl/pa
 @dirrm share/gnome/help/gpl/oc
 @dirrm share/gnome/help/gpl/nds
@@ -268,6 +271,7 @@ share/omf/lgpl/lgpl-zh_CN.omf
 @dirrm share/gnome/help/fdl/vi
 @dirrm share/gnome/help/fdl/uk
 @dirrm share/gnome/help/fdl/sv
+@dirrm share/gnome/help/fdl/sl
 @dirrm share/gnome/help/fdl/pl
 @dirrm share/gnome/help/fdl/oc
 @dirrm share/gnome/help/fdl/ko
