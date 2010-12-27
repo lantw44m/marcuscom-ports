@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/libcanberra-gtk3/Makefile,v 1.1 2010/07/23 13:11:15 kwm Exp $
+#   $MCom: ports/audio/libcanberra-gtk3/Makefile,v 1.3 2010/12/01 15:23:45 kwm Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	audio devel
 PKGNAMESUFFIX=	-gtk3
 
@@ -21,6 +21,10 @@ do-build:
 	cd ${WRKSRC} && ${GMAKE} libcanberra-gtk3.pc
 	cd ${WRKSRC}/src && ${GMAKE} libcanberra-gtk3.la
 	cd ${WRKSRC}/src && ${GMAKE} libcanberra-gtk3-module.la
+# fix the .la file so it doesn't point to the build dir anymore.
+	@${REINPLACE_CMD} -e '/^relink_command/ d' \
+		-e 's|${WRKSRC}/src/libcanberra.la|${LOCALBASE}/lib/libcanberra.la|g' \
+		${WRKSRC}/src/.libs/libcanberra-gtk3.la
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libcanberra-gtk3.pc \
