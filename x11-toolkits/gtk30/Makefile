@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.14 2010/12/25 21:39:38 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.15 2010/12/26 09:24:16 kwm Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.91.7
-PORTREVISION?=	1
+PORTVERSION=	2.99.0
+PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
 		ftp://ftp.gtk.org/pub/gtk/%SUBDIR%/ \
@@ -40,19 +40,18 @@ USE_PERL5_BUILD=yes
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack
+USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack gtk20
 USE_GETTEXT=	yes
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
-CONFIGURE_ARGS=	--enable-static --with-xinput=yes
+CONFIGURE_ARGS=	--enable-static --enable-xinput=yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 GLIB_SCHEMAS=	org.gtk.Settings.FileChooser.gschema.xml
 
-MAN1=		gtk-builder-convert-3.0.1 gtk-query-immodules-3.0.1 \
-		gtk-update-icon-cache-3.0.1
+MAN1=		gtk-query-immodules-3.0.1
 
 .if defined(WITH_DEBUG)
 CONFIGURE_ARGS+=	--enable-debug=yes
