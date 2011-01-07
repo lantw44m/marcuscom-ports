@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.212 2010/12/04 18:13:59 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.213 2010/12/23 23:23:06 kwm Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	2.23.3
+PORTVERSION=	2.23.90
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
