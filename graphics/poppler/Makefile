@@ -3,7 +3,7 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.66 2010/11/17 15:03:00 kwm Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.68 2011/01/05 15:45:13 kwm Exp $
 #
 
 PORTNAME=	poppler
@@ -110,6 +110,7 @@ LIB_DEPENDS+=	openjpeg.2:${PORTSDIR}/graphics/openjpeg
 .endif
 .endif
 
+post-patch:
 .if defined(SLAVEPORT) && ${SLAVEPORT}=="qt"
 	@${REINPLACE_CMD} -e 's|/usr/local/qt/include|${LOCALBASE}/include|; \
 		s|$$QTDIR|${QT_PREFIX}|; \
