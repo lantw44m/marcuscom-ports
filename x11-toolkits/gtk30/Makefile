@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.16 2011/01/07 13:54:53 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.17 2011/01/11 11:23:02 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -59,7 +59,11 @@ CONFIGURE_ARGS+=	--enable-debug=yes
 
 OPTIONS=	CUPS "Enable cups printing support" on
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
+
+.if !exists(${LOCALBASE}/libdata/pkgconfig/cairo-xlib.pc)
+BROKEN=		Rebuild graphics/cairo with X11 support.
+.endif
 
 .if defined(WITH_CUPS)
 LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
@@ -91,6 +95,6 @@ post-install:
 	${INSTALL_MAN} ${MAN1:S|^|${WRKSRC}/docs/reference/gtk/|} \
 		${PREFIX}/man/man1
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
 
 .endif
