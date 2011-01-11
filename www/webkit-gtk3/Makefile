@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.7 2010/12/26 10:44:08 kwm Exp $
+#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.8 2010/12/26 10:55:54 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.3.9
+PORTVERSION=	1.3.10
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk3
@@ -73,19 +73,19 @@ CFLAGS+= -mminimal-toc
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%BROWSER_PLUGINS_DIR%%|${BROWSER_PLUGINS_DIR}|' \
-		${WRKSRC}/WebCore/plugins/PluginDatabase.cpp
+		${WRKSRC}/Source/WebCore/plugins/PluginDatabase.cpp
 	@${FIND} ${WRKSRC} -name GNUmakefile.* | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
 # disable static library. 
 	@${REINPLACE_CMD} -e 's|^build_old_libs=yes|build_old_libs=no|' \
 		${WRKDIR}/gnome-libtool
 	@${REINPLACE_CMD} -e 's|/usr/bin/gcc|${CC}|' \
-		${WRKSRC}/WebCore/dom/make_names.pl \
-		${WRKSRC}/WebCore/css/make-css-file-arrays.pl \
-		${WRKSRC}/WebCore/bindings/scripts/IDLParser.pm
+		${WRKSRC}/Source/WebCore/dom/make_names.pl \
+		${WRKSRC}/Source/WebCore/css/make-css-file-arrays.pl \
+		${WRKSRC}/Source/WebCore/bindings/scripts/IDLParser.pm
 	@${REINPLACE_CMD} -e 's|"gperf|"${LOCALBASE}/bin/gperf|g' \
-		${WRKSRC}/WebCore/css/makevalues.pl \
-		${WRKSRC}/WebCore/css/makeprop.pl \
-		${WRKSRC}/WebCore/make-hash-tools.pl
+		${WRKSRC}/Source/WebCore/css/makevalues.pl \
+		${WRKSRC}/Source/WebCore/css/makeprop.pl \
+		${WRKSRC}/Source/WebCore/make-hash-tools.pl
 
 .include <bsd.port.post.mk>
