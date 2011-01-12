@@ -1,5 +1,6 @@
 audio/libcanberra -> audio/libcanberra-gtk3?
 www/webkit-gtk2 -> www/webkit-gtk3
+x11-themes/gnome-themes -> x11-themes/gnome-themes3
 x11-themes/gtk-engines2 -> x11-themes/gtk-engines3
 x11-toolkits/gtk20 -> x11-toolkits/gtk30
 x11-toolkits/gtkmm24 -> x11-toolkits/gtkmm30
