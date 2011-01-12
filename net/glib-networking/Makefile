@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net/glib-networking/Makefile,v 1.1 2011/01/12 14:55:47 kwm Exp $
 #
 
 PORTNAME=	glib-networking
@@ -23,7 +23,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_ro
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack pkgconfig _glib20 intltool
+USE_GNOME=	gnomehack pkgconfig glib20 intltool
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
