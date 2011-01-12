@@ -1,0 +1,40 @@
+# New ports collection makefile for:   glib-networking
+# Date Created:			06 Jan 2011
+# Whom:				Koop Mast <kwm@FreeBSD.org>
+#
+# $FreeBSD$
+#   $MCom$
+#
+
+PORTNAME=	glib-networking
+PORTVERSION=	2.27.90
+PORTREVISION=	0
+CATEGORIES=	net
+MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	Network-related giomodules for glib
+
+BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+LIB_DEPENDS=	gnutls.40:${PORTSDIR}/security/gnutls \
+		proxy.1:${PORTSDIR}/net/libproxy
+RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+
+USE_BZIP2=	yes
+GNU_CONFIGURE=	yes
+USE_GNOME=	gnomehack pkgconfig _glib20 intltool
+USE_GETTEXT=	yes
+USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
+CONFIGURE_ARGS=	--enable-static \
+		--with-ca-certificates=${LOCALBASE}/share/cert/ca-root-nss.crt
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
+		PTHREAD_LIBS="${PTHREAD_LIBS}"
+
+post-patch:
+	@${REINPLACE_CMD} -e' s|-Wmissing-include-dirs||g' ${WRKSRC}/configure
+
+.include <bsd.port.mk>

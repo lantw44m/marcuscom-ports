@@ -1,0 +1,9 @@
+lib/gio/modules/libgiognutls.a
+lib/gio/modules/libgiognutls.la
+lib/gio/modules/libgiognutls.so
+lib/gio/modules/libgiolibproxy.a
+lib/gio/modules/libgiolibproxy.la
+lib/gio/modules/libgiolibproxy.so
+share/locale/en_CA/LC_MESSAGES/glib-networking.mo
+@exec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
+@unexec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
