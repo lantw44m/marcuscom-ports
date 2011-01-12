@@ -1,6 +1,8 @@
-x11-toolkits/gtk20 -> x11-toolkits/gtk30
-x11-toolkits/unique -> x11-toolkits/libunique3
-www/webkit-gtk2 -> www/webkit-gtk3
-x11-toolkits/vte -> x11-toolkits/vte3
 audio/libcanberra -> audio/libcanberra-gtk3?
+www/webkit-gtk2 -> www/webkit-gtk3
 x11-themes/gtk-engines2 -> x11-themes/gtk-engines3
+x11-toolkits/gtk20 -> x11-toolkits/gtk30
+x11-toolkits/gtkmm24 -> x11-toolkits/gtkmm30
+x11-toolkits/unique -> x11-toolkits/libunique3
+x11-toolkits/vte -> x11-toolkits/vte3
+
