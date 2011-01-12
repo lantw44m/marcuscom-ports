@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-themes/gnome-themes3/Makefile,v 1.1 2011/01/12 22:51:24 kwm Exp $
 #
 
 PORTNAME=	gnome-themes
@@ -13,7 +13,7 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A collection of themes and icons for GNOME2
+COMMENT=	A collection of themes and icons for GNOME 3
 
 BUILD_DEPENDS=	gtk-engines3>=2.15.0:${PORTSDIR}/x11-themes/gtk-engines3 \
 		icon-naming-utils>=0.8.7:${PORTSDIR}/x11-themes/icon-naming-utils
