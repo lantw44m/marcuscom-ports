@@ -1,9 +1,14 @@
 audio/libcanberra -> audio/libcanberra-gtk3?
 www/webkit-gtk2 -> www/webkit-gtk3
+x11/libgnomekbd -> x11/libgnomekbd3
+x11/gnome-terminal -> x11/gnome-terminal3
+x11/yelp -> x11/yelp3
+x11/zenity -> x11/zenity3
 x11-themes/gnome-themes -> x11-themes/gnome-themes3
 x11-themes/gtk-engines2 -> x11-themes/gtk-engines3
 x11-toolkits/gtk20 -> x11-toolkits/gtk30
 x11-toolkits/gtkmm24 -> x11-toolkits/gtkmm30
+x11-toolkits/gtksourceview2 -> x11-toolkits/gtksourceview3
 x11-toolkits/unique -> x11-toolkits/libunique3
 x11-toolkits/vte -> x11-toolkits/vte3
 
