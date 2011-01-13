@@ -1,25 +1,43 @@
---- gtk/Makefile.in.orig	2011-01-06 19:51:02.000000000 +0000
-+++ gtk/Makefile.in	2011-01-06 20:27:55.000000000 +0000
-@@ -79,8 +79,7 @@ DIST_COMMON = $(am__gtkunixprintinclude_
- @HAVE_INTROSPECTION_TRUE@@USE_X11_TRUE@am__append_14 = --add-include-path=$(top_builddir)/gdk/x11
- @HAVE_INTROSPECTION_TRUE@am__append_15 = Gtk-3.0.gir
- @HAVE_INTROSPECTION_TRUE@am__append_16 = $(gir_DATA) $(typelibs_DATA)
+--- gtk/Makefile.in.orig	2011-01-13 10:58:39.000000000 +0000
++++ gtk/Makefile.in	2011-01-13 10:58:39.000000000 +0000
+@@ -83,8 +83,7 @@ DIST_COMMON = $(am__gtkunixprintinclude_
+ @HAVE_INTROSPECTION_TRUE@@USE_X11_TRUE@am__append_16 = --add-include-path=$(top_builddir)/gdk/x11
+ @HAVE_INTROSPECTION_TRUE@am__append_17 = Gtk-3.0.gir
+ @HAVE_INTROSPECTION_TRUE@am__append_18 = $(gir_DATA) $(typelibs_DATA)
 -bin_PROGRAMS = gtk-query-immodules-3.0$(EXEEXT) \
 -	gtk-update-icon-cache$(EXEEXT)
 +bin_PROGRAMS = gtk-query-immodules-3.0$(EXEEXT)
- @OS_WIN32_TRUE@am__append_17 = \
+ @OS_WIN32_TRUE@am__append_19 = \
  @OS_WIN32_TRUE@	$(GTK_UPDATE_ICON_CACHE_MANIFEST)
  
-@@ -1422,7 +1421,7 @@ LDADDS = \
+@@ -544,7 +543,7 @@ LIBTOOL = @LIBTOOL@
+ LIBTOOL_EXPORT_OPTIONS = @LIBTOOL_EXPORT_OPTIONS@
+ LIB_EXE_MACHINE_FLAG = @LIB_EXE_MACHINE_FLAG@
+ LIPO = @LIPO@
+-LN_S = @LN_S@
++LN_S = /bin/ln -sf
+ LTLIBOBJS = @LTLIBOBJS@
+ LT_CURRENT_MINUS_AGE = @LT_CURRENT_MINUS_AGE@
+ LT_VERSION_INFO = @LT_VERSION_INFO@
+@@ -710,7 +709,7 @@ SUBDIRS = theme-bits . tests
+ DIST_SUBDIRS = theme-bits tests
+ @HAVE_CUPS_FALSE@@HAVE_PAPI_CUPS_FALSE@@HAVE_PAPI_FALSE@GTK_PRINT_BACKENDS = file,lpr
+ @HAVE_CUPS_FALSE@@HAVE_PAPI_CUPS_FALSE@@HAVE_PAPI_TRUE@GTK_PRINT_BACKENDS = file,papi
+-@HAVE_CUPS_TRUE@@HAVE_PAPI_CUPS_FALSE@GTK_PRINT_BACKENDS = file,cups
++@HAVE_CUPS_TRUE@@HAVE_PAPI_CUPS_FALSE@GTK_PRINT_BACKENDS = file,cups,lpr
+ @HAVE_PAPI_CUPS_TRUE@GTK_PRINT_BACKENDS = file,papi,cups
+ INCLUDES = \
+ 	-DG_LOG_DOMAIN=\"Gtk\"				\
+@@ -1426,7 +1425,7 @@ LDADDS = \
  @HAVE_INTROSPECTION_TRUE@gir_DATA = $(INTROSPECTION_GIRS)
  @HAVE_INTROSPECTION_TRUE@typelibsdir = $(libdir)/girepository-1.0
  @HAVE_INTROSPECTION_TRUE@typelibs_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
--bin_SCRIPTS = gtk-builder-convert $(am__append_17)
-+bin_SCRIPTS = $(am__append_17)
+-bin_SCRIPTS = gtk-builder-convert $(am__append_19)
++bin_SCRIPTS = $(am__append_19)
  
  # Workaround for UAC silliness: programs with "update" in their name
  # are believed to be installers and require elevated privileges to be
-@@ -1430,9 +1429,9 @@ bin_SCRIPTS = gtk-builder-convert $(am__
+@@ -1434,9 +1433,9 @@ bin_SCRIPTS = gtk-builder-convert $(am__
  # gtk-update-icon-cache.exe doesn't require any special privileges.
  @OS_WIN32_TRUE@GTK_UPDATE_ICON_CACHE_MANIFEST = gtk-update-icon-cache.exe.manifest
  gtk_query_immodules_3_0_DEPENDENCIES = $(DEPS)
@@ -31,7 +49,7 @@
  gtk_update_icon_cache_SOURCES = updateiconcache.c
  STOCK_ICONS = \
  	stock-icons/16/document-open-recent.png		\
-@@ -1673,7 +1672,171 @@ GENERATED_ICONS = \
+@@ -1677,7 +1676,171 @@ GENERATED_ICONS = \
  	stock-icons/24/folder-remote.png 		\
  	stock-icons/24/user-home.png 			\
  	stock-icons/24/user-desktop.png 		\
@@ -204,7 +222,7 @@
  
  @CROSS_COMPILING_FALSE@gtk_update_icon_cache_program = \
  @CROSS_COMPILING_FALSE@	   ./gtk-update-icon-cache
-@@ -2911,6 +3074,88 @@ stamp-icons: $(STOCK_ICONS)
+@@ -2916,6 +3079,88 @@ stamp-icons: $(STOCK_ICONS)
  	   && $(LN_S) folder.png user-desktop.png 			\
  	   && $(RM) text-x-generic.png 					\
  	   && $(LN_S) document-x-generic.png text-x-generic.png 	\

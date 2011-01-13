@@ -56,8 +56,8 @@ include/gtk-3.0/gdk/x11/gdkx11visual.h
 include/gtk-3.0/gdk/x11/gdkx11window.h
 include/gtk-3.0/gtk/gtkcellarea.h
 include/gtk-3.0/gtk/gtkcellareabox.h
-include/gtk-3.0/gtk/gtkcellareaboxcontext.h
 include/gtk-3.0/gtk/gtkcellareacontext.h
+include/gtk-3.0/gtk/gtkcellareaboxcontextprivate.h
 include/gtk-3.0/gtk/gtk.h
 include/gtk-3.0/gtk/gtkaboutdialog.h
 include/gtk-3.0/gtk/gtkaccelgroup.h
@@ -217,6 +217,7 @@ include/gtk-3.0/gtk/gtksymboliccolor.h
 include/gtk-3.0/gtk/gtktable.h
 include/gtk-3.0/gtk/gtktearoffmenuitem.h
 include/gtk-3.0/gtk/gtktestutils.h
+include/gtk-3.0/gtk/gtktextattributes.h
 include/gtk-3.0/gtk/gtktextbuffer.h
 include/gtk-3.0/gtk/gtktextbufferrichtext.h
 include/gtk-3.0/gtk/gtktextchild.h
