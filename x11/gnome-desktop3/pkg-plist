@@ -6,11 +6,14 @@ include/gnome-desktop-3.0/libgnome-desktop/gnome-rr-config.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-rr-labeler.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-rr.h
 include/gnome-desktop-3.0/libgnome-desktop/gnome-tz-monitor.h
+lib/girepository-1.0/GnomeDesktop-3.0.typelib
 lib/libgnome-desktop-3.a
 lib/libgnome-desktop-3.la
 lib/libgnome-desktop-3.so
 lib/libgnome-desktop-3.so.0
 libdata/pkgconfig/gnome-desktop-3.0.pc
+share/gir-1.0/GnomeDesktop-3.0.gir
+share/gnome/gnome-version.xml
 share/gnome/help/fdl/C/fdl.xml
 share/gnome/help/fdl/ar/fdl.xml
 share/gnome/help/fdl/ca/fdl.xml
