@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.519 2010/12/26 20:58:23 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.520 2011/01/13 00:51:47 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -389,7 +389,7 @@ gnomedesktop_GNOME_DESKTOP_VERSION=2
 
 gnomedesktop3_LIB_DEPENDS=	gnome-desktop-3.0:${PORTSDIR}/x11/gnome-desktop3
 gnomedesktop3_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-3.0.pc
-gnomedesktop3_USE_GNOME_IMPL=	gconf2 gnomedocutils gtk30
+gnomedesktop3_USE_GNOME_IMPL=	gnomedocutils gtk30
 gnomedesktop3_GNOME_DESKTOP_VERSION=3
 
 gnomedesktopsharp20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-sharp-2.0.pc
