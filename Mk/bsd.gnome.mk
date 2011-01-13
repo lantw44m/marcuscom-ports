@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.518 2010/12/26 20:43:24 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.519 2010/12/26 20:58:23 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -890,7 +890,7 @@ gnome-post-install:
 	@for i in ${GLIB_SCHEMAS}; do \
 		${ECHO_CMD} "share/glib-2.0/schemas/$${i}" >> ${TMPPLIST}; \
 	done
-	${ECHO_CMD} "@exec glib-compile-schemas %D/share/glib-2.0/schemas > /dev/null || /usr/bin/true" \
+	@${ECHO_CMD} "@exec glib-compile-schemas %D/share/glib-2.0/schemas > /dev/null || /usr/bin/true" \
 			>> ${TMPPLIST}; \
 	${ECHO_CMD} "@unexec glib-compile-schemas --uninstall %D/share/glib-2.0/schemas > /dev/null || /usr/bin/true" \
 			>> ${TMPPLIST};
