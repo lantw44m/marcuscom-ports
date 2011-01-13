@@ -3,12 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.3 2010/12/24 16:11:19 kwm Exp $
+#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.4 2010/12/27 12:57:36 kwm Exp $
 #
 
 PORTNAME=	gsettings-desktop-schemas
-PORTVERSION=	0.1.3
-PORTREVISION=	1
+PORTVERSION=	0.1.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -35,6 +34,7 @@ GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
 		org.gnome.desktop.lockdown.gschema.xml \
 		org.gnome.desktop.media-handling.gschema.xml \
 		org.gnome.desktop.sound.gschema.xml \
+		org.gnome.desktop.thumbnailers.gschema.xml \
 		org.gnome.desktop.thumbnail-cache.gschema.xml \
 		org.gnome.system.proxy.gschema.xml
 
