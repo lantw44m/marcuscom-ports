@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnomekbd/Makefile,v 1.50 2010/12/26 11:31:47 kwm Exp $
+#   $MCom: ports/x11/libgnomekbd3/Makefile,v 1.1 2010/12/26 20:58:24 kwm Exp $
 #
 
 PORTNAME=	libgnomekbd
-PORTVERSION=	2.91.4
+PORTVERSION=	2.91.5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,6 +15,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME keyboard shared library
 
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	xklavier.12:${PORTSDIR}/x11/libxklavier
 
 LATEST_LINK=	libgnomekbd3

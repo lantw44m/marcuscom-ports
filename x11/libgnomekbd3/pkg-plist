@@ -1,4 +1,5 @@
 bin/gkbd-indicator-plugins-capplet
+include/libgnomekbd/gkbd-configuration.h
 include/libgnomekbd/gkbd-desktop-config.h
 include/libgnomekbd/gkbd-indicator-config.h
 include/libgnomekbd/gkbd-indicator-plugin.h
@@ -7,6 +8,7 @@ include/libgnomekbd/gkbd-keyboard-config.h
 include/libgnomekbd/gkbd-keyboard-drawing.h
 include/libgnomekbd/gkbd-status.h
 include/libgnomekbd/gkbd-util.h
+lib/girepository-1.0/Gkbd-3.0.typelib
 lib/libgnomekbd.a
 lib/libgnomekbd.la
 lib/libgnomekbd.so
@@ -18,6 +20,7 @@ lib/libgnomekbdui.so.7
 libdata/pkgconfig/libgnomekbd.pc
 libdata/pkgconfig/libgnomekbdui.pc
 share/applications/gkbd-indicator-plugins-capplet.desktop
+share/gir-1.0/Gkbd-3.0.gir
 %%DATADIR%%/ui/gkbd-indicator-plugins.ui
 %%DATADIR%%/ui/gkbd-indicator-plugins_add.ui
 %%DATADIR%%/ui/show-layout.ui
