@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.520 2011/01/13 00:51:47 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.521 2011/01/13 10:06:55 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -437,13 +437,13 @@ gnomepanel3_USE_GNOME_IMPL=gnomedesktop libwnck gnomemenus gnomedocutils librsvg
 gnomepanel3_GNOME_DESKTOP_VERSION=3
 
 nautilus2_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus
-nautilus2_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-extension.pc
+nautilus2_DETECT=	${LOCALBASE}/share/gir-1.0/Nautilus-2.0.gir
 nautilus2_USE_GNOME_IMPL=librsvg2 gnomedesktop desktopfileutils gvfs
 nautilus2_GNOME_DESKTOP_VERSION=2
 
 nautilus3_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus3
-nautilus3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-extension.pc
-nautilus3_USE_GNOME_IMPL=gnomedesktop3 desktopfileutils gvfs
+nautilus3_DETECT=	${LOCALBASE}/share/gir-1.0/Nautilus-3.0.gir
+nautilus3_USE_GNOME_IMPL=gnomedesktop3 desktopfileutils gvfs libxml2 gconf2
 nautilus3_GNOME_DESKTOP_VERSION=3
 
 metacity_LIB_DEPENDS=	metacity-private.0:${PORTSDIR}/x11-wm/metacity
