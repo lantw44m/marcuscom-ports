@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.521 2011/01/13 10:06:55 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.522 2011/01/13 11:23:22 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -589,9 +589,9 @@ libgnomekbd_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
 libgnomekbd_LIB_DEPENDS=	gnomekbd.4:${PORTSDIR}/x11/libgnomekbd
 libgnomekbd_USE_GNOME_IMPL=	gconf2
 
-libgnomekbd3_DETECT=             ${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
-libgnomekbd3_LIB_DEPENDS=        gnomekbd.7:${PORTSDIR}/x11/libgnomekbd
-libgnomekbd3_USE_GNOME_IMPL=     gtk30
+libgnomekbd3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
+libgnomekbd3_LIB_DEPENDS=	gnomekbd.7:${PORTSDIR}/x11/libgnomekbd3
+libgnomekbd3_USE_GNOME_IMPL=	gtk30
 
 pygtksourceview_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygtksourceview-2.0.pc
 pygtksourceview_BUILD_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkits/py-gtksourceview
