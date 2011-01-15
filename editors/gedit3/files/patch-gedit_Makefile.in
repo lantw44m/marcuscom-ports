@@ -1,0 +1,14 @@
+--- gedit/Makefile.in.orig	2011-01-15 21:08:56.000000000 +0000
++++ gedit/Makefile.in	2011-01-15 21:09:23.000000000 +0000
+@@ -677,9 +677,9 @@
+ @HAVE_INTROSPECTION_TRUE@Gedit_3_0_gir_PROGRAM = $(builddir)/gedit
+ @HAVE_INTROSPECTION_TRUE@Gedit_3_0_gir_FILES = $(INST_H_FILES) $(libgedit_c_files) $(BUILT_SOURCES)
+ @HAVE_INTROSPECTION_TRUE@Gedit_3_0_gir_INCLUDES = Gtk-3.0 GtkSource-3.0
+-@HAVE_INTROSPECTION_TRUE@girdir = $(datadir)/gedit/gir-1.0
++@HAVE_INTROSPECTION_TRUE@girdir = $(datadir)/gir-1.0
+ @HAVE_INTROSPECTION_TRUE@gir_DATA = $(INTROSPECTION_GIRS)
+-@HAVE_INTROSPECTION_TRUE@typelibdir = $(libdir)/gedit/girepository-1.0
++@HAVE_INTROSPECTION_TRUE@typelibdir = $(libdir)/girepository-1.0
+ @HAVE_INTROSPECTION_TRUE@typelib_DATA = $(INTROSPECTION_GIRS:.gir=.typelib)
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
