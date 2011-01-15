@@ -3,17 +3,18 @@
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libnotify/Makefile,v 1.13 2010/12/04 18:13:59 kwm Exp $
+#   $MCom: ports/devel/libnotify/Makefile,v 1.14 2010/12/26 13:47:26 kwm Exp $
 #
 
 PORTNAME=	libnotify
-PORTVERSION=	0.7.0
-PORTREVISION=	1
+PORTVERSION=	0.7.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A library for desktop notifications
+
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
