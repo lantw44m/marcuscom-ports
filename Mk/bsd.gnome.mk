@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.522 2011/01/13 11:23:22 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.523 2011/01/15 15:05:07 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -486,7 +486,7 @@ gtksourceview2_LIB_DEPENDS=	gtksourceview-2.0.0:${PORTSDIR}/x11-toolkits/gtksour
 gtksourceview2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gtksourceview-2.0.pc
 gtksourceview2_USE_GNOME_IMPL=gtk20 libxml2
 
-gtksourceview3_LIB_DEPENDS=	gtksoruceview-3.0.0:${PORTSDIR}/x11-toolkits/gtksourceview3
+gtksourceview3_LIB_DEPENDS=	gtksourceview-3.0.0:${PORTSDIR}/x11-toolkits/gtksourceview3
 gtksourceview3_DETECT=	${LOCALBASE}/libdata/pkgconfig/gtksoureview-3.0.pc
 gtksourceview3_USE_GNOME_IMPL=gtk30 libxml2
 
