@@ -1,0 +1,109 @@
+bin/peas-demo
+include/libpeas-1.0/libpeas/peas-activatable.h
+include/libpeas-1.0/libpeas/peas-engine.h
+include/libpeas-1.0/libpeas/peas-extension-base.h
+include/libpeas-1.0/libpeas/peas-extension-set.h
+include/libpeas-1.0/libpeas/peas-extension.h
+include/libpeas-1.0/libpeas/peas-object-module.h
+include/libpeas-1.0/libpeas/peas-plugin-info.h
+include/libpeas-1.0/libpeas/peas.h
+include/libpeas-1.0/libpeas-gtk/peas-gtk-configurable.h
+include/libpeas-1.0/libpeas-gtk/peas-gtk-plugin-manager-view.h
+include/libpeas-1.0/libpeas-gtk/peas-gtk-plugin-manager.h
+include/libpeas-1.0/libpeas-gtk/peas-gtk.h
+lib/girepository-1.0/Peas-1.0.typelib
+lib/girepository-1.0/PeasGtk-1.0.typelib
+lib/libpeas-1.0.a
+lib/libpeas-1.0.la
+lib/libpeas-1.0.so
+lib/libpeas-1.0.so.0
+lib/libpeas-1.0/loaders/libcloader.a
+lib/libpeas-1.0/loaders/libcloader.la
+lib/libpeas-1.0/loaders/libcloader.so
+%%PYTHONS%%lib/libpeas-1.0/loaders/libpythonloader.a
+%%PYTHONS%%lib/libpeas-1.0/loaders/libpythonloader.la
+%%PYTHONS%%lib/libpeas-1.0/loaders/libpythonloader.so
+%%SEED%%lib/libpeas-1.0/loaders/libseedloader.a
+%%SEED%%lib/libpeas-1.0/loaders/libseedloader.la
+%%SEED%%lib/libpeas-1.0/loaders/libseedloader.so
+lib/libpeas-gtk-1.0.a
+lib/libpeas-gtk-1.0.la
+lib/libpeas-gtk-1.0.so
+lib/libpeas-gtk-1.0.so.0
+lib/peas-demo/plugins/helloworld/helloworld.plugin
+lib/peas-demo/plugins/helloworld/libhelloworld.a
+lib/peas-demo/plugins/helloworld/libhelloworld.la
+lib/peas-demo/plugins/helloworld/libhelloworld.so
+%%PYTHONS%%lib/peas-demo/plugins/pythonhello/pythonhello.plugin
+%%PYTHONS%%lib/peas-demo/plugins/pythonhello/pythonhello.py
+%%PYTHONS%%lib/peas-demo/plugins/pythonhello/pythonhello.pyc
+%%PYTHONS%%lib/peas-demo/plugins/pythonhello/pythonhello.pyo
+lib/peas-demo/plugins/secondtime/libsecondtime.a
+lib/peas-demo/plugins/secondtime/libsecondtime.la
+lib/peas-demo/plugins/secondtime/libsecondtime.so
+lib/peas-demo/plugins/secondtime/secondtime.plugin
+%%SEED%%lib/peas-demo/plugins/seedhello/seedhello.js
+%%SEED%%lib/peas-demo/plugins/seedhello/seedhello.plugin
+libdata/pkgconfig/libpeas-1.0.pc
+libdata/pkgconfig/libpeas-gtk-1.0.pc
+share/gir-1.0/Peas-1.0.gir
+share/gir-1.0/PeasGtk-1.0.gir
+share/gtk-doc/html/libpeas/PeasActivatable.html
+share/gtk-doc/html/libpeas/PeasEngine.html
+share/gtk-doc/html/libpeas/PeasExtension.html
+share/gtk-doc/html/libpeas/PeasExtensionBase.html
+share/gtk-doc/html/libpeas/PeasExtensionSet.html
+share/gtk-doc/html/libpeas/PeasGtkConfigurable.html
+share/gtk-doc/html/libpeas/PeasGtkPluginManager.html
+share/gtk-doc/html/libpeas/PeasGtkPluginManagerView.html
+share/gtk-doc/html/libpeas/PeasObjectModule.html
+share/gtk-doc/html/libpeas/annotation-glossary.html
+share/gtk-doc/html/libpeas/api-index-full.html
+share/gtk-doc/html/libpeas/ch01.html
+share/gtk-doc/html/libpeas/ch02.html
+share/gtk-doc/html/libpeas/ch03.html
+share/gtk-doc/html/libpeas/home.png
+share/gtk-doc/html/libpeas/index.html
+share/gtk-doc/html/libpeas/index.sgml
+share/gtk-doc/html/libpeas/left.png
+share/gtk-doc/html/libpeas/libpeas-PeasPluginInfo.html
+share/gtk-doc/html/libpeas/libpeas.devhelp
+share/gtk-doc/html/libpeas/libpeas.devhelp2
+share/gtk-doc/html/libpeas/peas-gtk-plugin-manager.png
+share/gtk-doc/html/libpeas/pt01.html
+share/gtk-doc/html/libpeas/right.png
+share/gtk-doc/html/libpeas/style.css
+share/gtk-doc/html/libpeas/up.png
+share/icons/hicolor/16x16/actions/libpeas-plugin.png
+share/icons/hicolor/22x22/actions/libpeas-plugin.png
+share/icons/hicolor/32x32/actions/libpeas-plugin.png
+share/icons/hicolor/scalable/actions/libpeas-plugin.svg
+share/locale/cs/LC_MESSAGES/libpeas.mo
+share/locale/da/LC_MESSAGES/libpeas.mo
+share/locale/de/LC_MESSAGES/libpeas.mo
+share/locale/es/LC_MESSAGES/libpeas.mo
+share/locale/fr/LC_MESSAGES/libpeas.mo
+share/locale/gl/LC_MESSAGES/libpeas.mo
+share/locale/hu/LC_MESSAGES/libpeas.mo
+share/locale/nb/LC_MESSAGES/libpeas.mo
+share/locale/nds/LC_MESSAGES/libpeas.mo
+share/locale/pl/LC_MESSAGES/libpeas.mo
+share/locale/pt/LC_MESSAGES/libpeas.mo
+share/locale/pt_BR/LC_MESSAGES/libpeas.mo
+share/locale/sl/LC_MESSAGES/libpeas.mo
+share/locale/sv/LC_MESSAGES/libpeas.mo
+share/locale/zh_CN/LC_MESSAGES/libpeas.mo
+@dirrm share/locale/nds/LC_MESSAGES
+@dirrm share/locale/nds
+@dirrm share/gtk-doc/html/libpeas
+%%SEED%%@dirrm lib/peas-demo/plugins/seedhello
+@dirrm lib/peas-demo/plugins/secondtime
+%%PYTHONS%%@dirrm lib/peas-demo/plugins/pythonhello
+@dirrm lib/peas-demo/plugins/helloworld
+@dirrm lib/peas-demo/plugins
+@dirrm lib/peas-demo
+@dirrm lib/libpeas-1.0/loaders
+@dirrm lib/libpeas-1.0
+@dirrm include/libpeas-1.0/libpeas-gtk
+@dirrm include/libpeas-1.0/libpeas
+@dirrm include/libpeas-1.0
