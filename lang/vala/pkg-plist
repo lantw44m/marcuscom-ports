@@ -140,6 +140,7 @@ share/devhelp/books/vala-%%VERSION%%/vala.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/hildon-1.vapi
 %%DATADIR%%-%%VERSION%%/vapi/hildon-fm-2.deps
 %%DATADIR%%-%%VERSION%%/vapi/hildon-fm-2.vapi
+%%DATADIR%%-%%VERSION%%/vapi/json-glib-1.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/json-glib-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/libarchive.deps
 %%DATADIR%%-%%VERSION%%/vapi/libarchive.vapi
