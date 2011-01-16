@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.16 2010/11/20 15:05:25 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.18 2011/01/15 18:20:27 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
@@ -19,7 +19,7 @@ LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
 		mutter-private.0:${PORTSDIR}/x11-wm/mutter \
 		pulse.0:${PORTSDIR}/audio/pulseaudio \
 		croco-0.6.3:${PORTSDIR}/textproc/libcroco \
-		gbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		clutter-glx-1.0:${PORTSDIR}/graphics/clutter \
 		gjs-gi:${PORTSDIR}/lang/gjs
 #RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
