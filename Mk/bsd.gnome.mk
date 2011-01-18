@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.523 2011/01/15 15:05:07 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.524 2011/01/15 19:35:56 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -91,7 +91,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 gdkpix
 		pygtk2 pygtksourceview vte
 
 # GNOME 3 components
-_USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgnomekbd3 librsvg3 nautilus3 vte3
+_USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgnomekbd3 librsvg3 libwnck3 nautilus3 vte3
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -400,6 +400,10 @@ gnomedesktopsharp20_USE_GNOME_IMPL=	gnomesharp20 gnomepanel gtkhtml3 librsvg2 vt
 libwnck_LIB_DEPENDS=	wnck-1.22:${PORTSDIR}/x11-toolkits/libwnck
 libwnck_DETECT=		${LOCALBASE}/libdata/pkgconfig/libwnck-1.0.pc
 libwnck_USE_GNOME_IMPL=	gtk20
+
+libwnck3_LIB_DEPENDS=	wnck-3.22:${PORTSDIR}/x11-toolkits/libwnck3
+libwnck3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libwnck-3.0.pc
+libwnck3_USE_GNOME_IMPL=gtk30
 
 vte_LIB_DEPENDS=	vte.9:${PORTSDIR}/x11-toolkits/vte
 vte_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte.pc
