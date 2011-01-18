@@ -1,0 +1,38 @@
+--- client/Makefile.in.orig	2011-01-18 11:48:50.000000000 +0000
++++ client/Makefile.in	2011-01-18 11:50:05.000000000 +0000
+@@ -34,7 +34,7 @@
+ NORMAL_UNINSTALL = :
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+-shlib_PROGRAMS = libdconf.so.0.0.0$(EXEEXT)
++shlib_PROGRAMS = libdconf.so.0$(EXEEXT)
+ subdir = client
+ DIST_COMMON = $(dconfinclude_HEADERS) $(srcdir)/Makefile.am \
+ 	$(srcdir)/Makefile.in $(srcdir)/dconf.pc.in dconf-client.c \
+@@ -320,9 +320,10 @@
+ 
+ clean-shlibPROGRAMS:
+ 	-test -z "$(shlib_PROGRAMS)" || rm -f $(shlib_PROGRAMS)
+-libdconf.so.0.0.0$(EXEEXT): $(libdconf_so_0_0_0_OBJECTS) $(libdconf_so_0_0_0_DEPENDENCIES) 
+-	@rm -f libdconf.so.0.0.0$(EXEEXT)
++libdconf.so.0$(EXEEXT): $(libdconf_so_0_0_0_OBJECTS) $(libdconf_so_0_0_0_DEPENDENCIES) 
++	@rm -f libdconf.so.0$(EXEEXT)
+ 	$(AM_V_CCLD)$(libdconf_so_0_0_0_LINK) $(libdconf_so_0_0_0_OBJECTS) $(libdconf_so_0_0_0_LDADD) $(LIBS)
++	$(AM_V_GEN) ln -fs libdconf.so.0 libdconf.so
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
+@@ -693,12 +694,8 @@
+ 	uninstall-vapiDATA
+ 
+ 
+-libdconf.so.0 libdconf.so: libdconf.so.0.0.0
+-	$(AM_V_GEN) ln -fs libdconf.so.0.0.0 $@
+-
+ install-data-hook:
+-	ln -fs libdconf.so.0.0.0 $(DESTDIR)$(shlibdir)/libdconf.so.0
+-	ln -fs libdconf.so.0.0.0 $(DESTDIR)$(shlibdir)/libdconf.so
++	ln -fs libdconf.so.0 $(DESTDIR)$(shlibdir)/libdconf.so
+ 
+ uninstall-hook:
+ 	rm -f $(DESTDIR)$(shlibdir)/libdconf.so.0
