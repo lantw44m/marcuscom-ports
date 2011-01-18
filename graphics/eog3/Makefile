@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.123 2010/11/16 10:11:41 kwm Exp $
+#   $MCom: ports/graphics/eog3/Makefile,v 1.1 2011/01/16 13:39:00 kwm Exp $
 #
 
 PORTNAME=	eog
@@ -27,7 +27,8 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-i
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack librsvg2 desktopfileutils gtk30
+USE_GNOME=	gnomeprefix gnomehack intlhack librsvg2 desktopfileutils gtk30 \
+		gnomedesktop3 gnomedocutils
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
