@@ -241,9 +241,9 @@ lib/evolution-data-server/calendar-backends/libecalbackendgroupwise.so
 lib/evolution-data-server/calendar-backends/libecalbackendhttp.a
 lib/evolution-data-server/calendar-backends/libecalbackendhttp.la
 lib/evolution-data-server/calendar-backends/libecalbackendhttp.so
-lib/evolution-data-server/calendar-backends/libecalbackendweather.a
-lib/evolution-data-server/calendar-backends/libecalbackendweather.la
-lib/evolution-data-server/calendar-backends/libecalbackendweather.so
+%%WEATHER%%lib/evolution-data-server/calendar-backends/libecalbackendweather.a
+%%WEATHER%%lib/evolution-data-server/calendar-backends/libecalbackendweather.la
+%%WEATHER%%lib/evolution-data-server/calendar-backends/libecalbackendweather.so
 lib/evolution-data-server/camel-providers/libcamelgroupwise.a
 lib/evolution-data-server/camel-providers/libcamelgroupwise.la
 lib/evolution-data-server/camel-providers/libcamelgroupwise.so
@@ -693,7 +693,6 @@ share/doc/libedataserverui/right.png
 share/doc/libedataserverui/style.css
 share/doc/libedataserverui/up.png
 share/evolution-data-server-%%VERSION%%/evolutionperson.schema
-%%WEATHER%%share/evolution-data-server-%%VERSION%%/weather/Locations.xml
 share/gir-1.0/ECalendar-1.2.gir
 share/gir-1.0/EDataServer-1.2.gir
 share/locale/am/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
@@ -798,7 +797,6 @@ share/pixmaps/evolution-data-server/category_strategies_16.png
 share/pixmaps/evolution-data-server/category_suppliers_16.png
 share/pixmaps/evolution-data-server/category_time-and-expenses_16.png
 @dirrm share/pixmaps/evolution-data-server
-%%WEATHER%%@dirrm share/evolution-data-server-%%VERSION%%/weather
 @dirrm share/doc/libedataserverui
 @dirrm share/doc/libedataserver
 @dirrm share/doc/libedata-cal

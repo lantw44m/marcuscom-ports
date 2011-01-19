@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.1 2010/07/13 15:25:01 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.3 2011/01/19 19:02:27 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -40,7 +40,6 @@ USE_BDB=	41+
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--enable-gtk3 \
-		--enable-gnome-keyring=yes \
 		--with-openldap=yes \
 		--with-libdb=${LOCALBASE}
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}" \
@@ -49,7 +48,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_C
 PLIST_SUB=	VERSION="2.92" EVO_VERSION="1.2"
 
 #OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
-#OPTIONS=	WEATHER "Enable weather calendar backend" on
+OPTIONS+=	WEATHER "Enable weather calendar backend" on
 
 .include <bsd.port.pre.mk>
 
@@ -71,14 +70,14 @@ KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 PLIST_SUB+=		IMAP4="@comment "
 #.endif
 
-#.if defined(WITH_WEATHER)
-#LIB_DEPENDS+=		gweather.1:${PORTSDIR}/net/libgweather
-#CONFIGURE_ARGS+=	--with-weather
-#PLIST_SUB+=		WEATHER=""
-#.else
-CONFIGURE_ARGS+=	--without-weather
+.if defined(WITH_WEATHER)
+LIB_DEPENDS+=		gweather-3.0:${PORTSDIR}/net/libgweather3
+CONFIGURE_ARGS+=	--enable-weather
+PLIST_SUB+=		WEATHER=""
+.else
+CONFIGURE_ARGS+=	--disable-weather
 PLIST_SUB+=		WEATHER="@comment "
-#.endif
+.endif
 
 EDS_BDB_MSG=	"!!!WARNING!!!: Berkeley Database version is ${BDB_VER}.  If this is an upgrade, you may experience problems if you or any other Evolution-data-server users were previously using BDB_VER 41."
 
