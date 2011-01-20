@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.3 2011/01/20 15:17:32 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.4 2011/01/20 16:14:40 kwm Exp $
 #
 
 # add cheese suppor when it gets gtk3 version
@@ -36,7 +36,7 @@ GNOME_DESKTOP_VERSION=3
 WANT_GNOME=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack libxml2 gnomemenus libgnomekbd3 \
 		desktopfileutils gnomedesktop3 gconf2
-USE_XORG=	xscrnsaver
+USE_XORG=	xscrnsaver x11 xxf86misc kbproto
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
