@@ -1,0 +1,11 @@
+--- configure.orig	2011-01-20 15:29:00.000000000 +0000
++++ configure	2011-01-20 15:29:07.000000000 +0000
+@@ -16762,7 +16762,7 @@
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $with_libsocialweb" >&5
+ $as_echo "$with_libsocialweb" >&6; }
+ 
+-if test "x$with_libsocialweb" == "xyes"; then
++if test "x$with_libsocialweb" = "xyes"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for SOCIALWEB" >&5

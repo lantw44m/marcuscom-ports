@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.524 2011/01/15 19:35:56 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.525 2011/01/18 12:39:29 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -464,7 +464,7 @@ gnomecontrolcenter2_USE_GNOME_IMPL=metacity gnomemenus desktopfileutils libgnome
 
 gnomecontrolcenter3_LIB_DEPENDS=gnome-control-center.1:${PORTSDIR}/sysutils/gnome-control-center3
 gnomecontrolcenter3_DETECT=${LOCALBASE}/libdata/pkgconfig/libgnome-control-center.pc
-gnomecontrolcenter3_USE_GNOME_IMPL=gnomemenus desktopfileutils libgnomekbd gnomedesktop3
+gnomecontrolcenter3_USE_GNOME_IMPL=gnomemenus desktopfileutils libgnomekbd3 gnomedesktop3 gconf2
 
 libgda2_LIB_DEPENDS=	gda-2.3:${PORTSDIR}/databases/libgda2
 libgda2_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgda.pc
@@ -542,9 +542,9 @@ evolutiondataserver_LIB_DEPENDS=edataserverui-1.2.11:${PORTSDIR}/databases/evolu
 evolutiondataserver_DETECT=		${LOCALBASE}/libdata/pkgconfig/evolution-data-server-1.2.pc
 evolutiondataserver_USE_GNOME_IMPL=gconf2 libxml2
 
-evolutiondataserver3_LIB_DEPENDS=edataserverui-3.0.0:${PORTSDIR}/databases/evolution-data-server3
+evolutiondataserver3_LIB_DEPENDS=	edataserverui-3.0.0:${PORTSDIR}/databases/evolution-data-server3
 evolutiondataserver3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libedataserverui-3.0.pc
-evolutiondataserver3_USE_GNOME_IMPL=gconf2 libxml2 gtk30
+evolutiondataserver3_USE_GNOME_IMPL=	gconf2 libxml2 gtk30
 
 desktopfileutils_BUILD_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
