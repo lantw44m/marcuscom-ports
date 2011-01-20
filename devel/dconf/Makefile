@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.9 2010/11/04 16:41:01 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.11 2011/01/18 10:55:10 kwm Exp $
 #
 
 PORTNAME=	dconf
@@ -33,6 +33,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 pre-build:
 	${GMAKE} -C ${WRKSRC}/client dconf-client.c libdconf.so.0
+	${GMAKE} -C ${WRKSRC}/dbus-1 dconf-dbus-1.c libdconf-dbus-1.so.0
 
 post-install:
 	-${LOCALBASE}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
