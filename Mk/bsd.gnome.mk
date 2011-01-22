@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.525 2011/01/18 12:39:29 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.526 2011/01/20 15:17:31 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -88,7 +88,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 gdkpix
 		libgnomeprintui libgnomeui libgsf libgsf_gnome libgtkhtml libidl \
 		librsvg2 libwnck libxml2 libxslt libzvt linc metacity nautilus2 \
 		nautiluscdburner orbit2 pango pygnome2 pygnomedesktop pygnomeextras \
-		pygtk2 pygtksourceview vte
+		pygobject pygtk2 pygtksourceview vte
 
 # GNOME 3 components
 _USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgnomekbd3 librsvg3 libwnck3 nautilus3 vte3
@@ -505,6 +505,11 @@ libgsf_USE_GNOME_IMPL=		glib20 libxml2
 libgsf_gnome_LIB_DEPENDS=	gsf-gnome-1.114:${PORTSDIR}/devel/libgsf-gnome
 libgsf_gnome_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgsf-gnome-1.pc
 libgsf_gnome_USE_GNOME_IMPL=	gconf2 libgsf gnomevfs2
+
+pygobject_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygobject-2.0.pc
+pygobject_BUILD_DEPENDS=	pygobject-codegen-2.0:${PORSTDIR}/devel/py-gobject
+pygobject_RUN_DEPENDS=		pygobject-codegen-2.0:${PORSTDIR}/devel/py-gobject
+pygobject_USE_GNOME_IMPL=	glib20
 
 pygtk2_DETECT=			${LOCALBASE}/libdata/pkgconfig/pygtk-2.0.pc
 pygtk2_BUILD_DEPENDS=	${pygtk2_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk2
