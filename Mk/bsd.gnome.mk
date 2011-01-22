@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.526 2011/01/20 15:17:31 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.527 2011/01/22 21:24:37 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -430,13 +430,13 @@ eel2_LIB_DEPENDS=	eel-2.2:${PORTSDIR}/x11-toolkits/eel
 eel2_DETECT=		${LOCALBASE}/libdata/pkgconfig/eel-2.0.pc
 eel2_USE_GNOME_IMPL=	gnomedesktop
 
-gnomepanel_LIB_DEPENDS=	panel-applet-2.0:${PORTSDIR}/x11/gnome-panel
-gnomepanel_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-2.0.pc
+gnomepanel_LIB_DEPENDS=	panel-applet-3.0:${PORTSDIR}/x11/gnome-panel
+gnomepanel_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-3.0.pc
 gnomepanel_USE_GNOME_IMPL=gnomedesktop libwnck gnomemenus gnomedocutils librsvg2
 gnomepanel_GNOME_DESKTOP_VERSION=2
 
-gnomepanel3_LIB_DEPENDS=panel-applet-3.0:${PORTSDIR}/x11/gnome-panel3
-gnomepanel3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-3.0.pc
+gnomepanel3_LIB_DEPENDS=panel-applet-4.0:${PORTSDIR}/x11/gnome-panel3
+gnomepanel3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-4.0.pc
 gnomepanel3_USE_GNOME_IMPL=gnomedesktop libwnck gnomemenus gnomedocutils librsvg2
 gnomepanel3_GNOME_DESKTOP_VERSION=3
 
@@ -658,7 +658,7 @@ gvfs_USE_GNOME_IMPL=		glib20 gconf2
 # users from shooting themselves in the foot.  We will try to make an
 # intelligent choice on the user's behalf.
 .if exists(${gnomepanel3_DETECT})
-#GNOME_DESKTOP_VERSION?=	3
+GNOME_DESKTOP_VERSION?=	3
 .elif exists(${gnomepanel_DETECT})
 GNOME_DESKTOP_VERSION?=	2
 .endif
