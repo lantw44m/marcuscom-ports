@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.302 2011/01/23 19:00:08 marcus Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.1 2011/01/23 19:08:30 marcus Exp $
 #
 
 PORTNAME=	gnome3
@@ -25,7 +25,7 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		gnect:${PORTSDIR}/games/gnome-games \
 		gedit:${PORTSDIR}/editors/gedit3 \
 		gnome-terminal:${PORTSDIR}/x11/gnome-terminal3 \
-		gnome-session:${PORTSDIR}/x11/gnome-sessionr3 \
+		gnome-session:${PORTSDIR}/x11/gnome-session3 \
 		bug-buddy:${PORTSDIR}/devel/bug-buddy \
 		gnome-system-monitor:${PORTSDIR}/sysutils/gnome-system-monitor \
 		nautilus:${PORTSDIR}/x11-fm/nautilus3 \
