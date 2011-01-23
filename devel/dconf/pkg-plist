@@ -45,6 +45,7 @@ share/vala/vapi/dconf.vapi
 @dirrmtry share/dbus-1/system-services
 @dirrmtry share/dbus-1/services
 @dirrmtry share/dbus-1
+@dirrm include/dconf-dbus-1
 @dirrm include/dconf
 @exec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
 @unexec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true

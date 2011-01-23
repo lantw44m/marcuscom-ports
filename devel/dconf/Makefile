@@ -3,12 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.12 2011/01/20 23:54:50 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.13 2011/01/23 07:10:38 marcus Exp $
 #
 
 PORTNAME=	dconf
 PORTVERSION=	0.7.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
