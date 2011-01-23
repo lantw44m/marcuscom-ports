@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp-xsl/Makefile,v 1.5 2010/12/18 11:46:09 kwm Exp $
+#   $MCom: ports/x11/yelp-xsl/Makefile,v 1.6 2011/01/12 23:25:08 kwm Exp $
 #
 
 PORTNAME=	yelp-xsl
@@ -18,7 +18,7 @@ COMMENT=
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack
+USE_GNOME=	gnomeprefix gnomehack intlhack pkgconfig
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
