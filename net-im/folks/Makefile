@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/folks/Makefile,v 1.8 2010/10/26 08:47:55 kwm Exp $
+#   $MCom: ports/net-im/folks/Makefile,v 1.10 2011/01/23 17:06:28 kwm Exp $
 #
 
 PORTNAME=	folks
@@ -22,7 +22,7 @@ LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack intlhack
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include " \
