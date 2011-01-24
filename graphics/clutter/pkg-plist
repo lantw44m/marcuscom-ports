@@ -39,6 +39,7 @@ include/clutter-1.0/clutter/clutter-clone.h
 include/clutter-1.0/clutter/clutter-color.h
 include/clutter-1.0/clutter/clutter-color-static.h
 include/clutter-1.0/clutter/clutter-colorize-effect.h
+include/clutter-1.0/clutter/clutter-config.h
 include/clutter-1.0/clutter/clutter-container.h
 include/clutter-1.0/clutter/clutter-constraint.h
 include/clutter-1.0/clutter/clutter-deform-effect.h
@@ -97,6 +98,7 @@ include/clutter-1.0/clutter/glx/clutter-glx-texture-pixmap.h
 include/clutter-1.0/clutter/glx/clutter-glx.h
 include/clutter-1.0/clutter/x11/clutter-x11-texture-pixmap.h
 include/clutter-1.0/clutter/x11/clutter-x11.h
+include/clutter-1.0/cogl/cogl-attribute.h
 include/clutter-1.0/cogl/cogl-bitmap.h
 include/clutter-1.0/cogl/cogl-buffer.h
 include/clutter-1.0/cogl/cogl-color.h
@@ -123,7 +125,6 @@ include/clutter-1.0/cogl/cogl-texture.h
 include/clutter-1.0/cogl/cogl-types.h
 include/clutter-1.0/cogl/cogl-vector.h
 include/clutter-1.0/cogl/cogl-vertex-array.h
-include/clutter-1.0/cogl/cogl-vertex-attribute.h
 include/clutter-1.0/cogl/cogl-vertex-buffer.h
 include/clutter-1.0/cogl/cogl.h
 include/clutter-1.0/cogl/cogl2-path.h
@@ -179,6 +180,7 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ClutterAlpha.html
 %%DOCSDIR%%/ClutterAnimatable.html
 %%DOCSDIR%%/ClutterAnimator.html
+%%DOCSDIR%%/ClutterBackend.html
 %%DOCSDIR%%/ClutterBehaviour.html
 %%DOCSDIR%%/ClutterBehaviourDepth.html
 %%DOCSDIR%%/ClutterBehaviourEllipse.html
@@ -250,7 +252,6 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ch11.html
 %%DOCSDIR%%/ch12.html
 %%DOCSDIR%%/ch13.html
-%%DOCSDIR%%/clutter-ClutterBackend.html
 %%DOCSDIR%%/clutter-ClutterX11TexturePixmap.html
 %%DOCSDIR%%/clutter-Colors.html
 %%DOCSDIR%%/clutter-EGL-Specific-Support.html
@@ -325,6 +326,7 @@ share/doc/cogl/ch01.html
 share/doc/cogl/ch02.html
 share/doc/cogl/ch03.html
 share/doc/cogl/cogl-3D-textures.html
+share/doc/cogl/cogl-Bitmaps.html
 share/doc/cogl/cogl-Blend-Strings.html
 share/doc/cogl/cogl-Buffers.html
 share/doc/cogl/cogl-Clipping-(Deprecated).html
