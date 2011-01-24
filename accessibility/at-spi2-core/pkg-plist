@@ -49,4 +49,5 @@ share/gtk-doc/html/libatspi/style.css
 share/gtk-doc/html/libatspi/up.png
 @dirrm share/gtk-doc/html/libatspi
 @dirrmtry share/gtk-doc/html
+@dirrmtry share/gtk-doc
 @dirrm etc/at-spi2
