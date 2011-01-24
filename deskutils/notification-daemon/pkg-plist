@@ -1,6 +1,7 @@
 libexec/notification-daemon
 share/dbus-1/services/org.freedesktop.Notifications.service
 share/locale/ar/LC_MESSAGES/notification-daemon.mo
+share/locale/ca/LC_MESSAGES/notification-daemon.mo
 share/locale/cs/LC_MESSAGES/notification-daemon.mo
 share/locale/da/LC_MESSAGES/notification-daemon.mo
 share/locale/de/LC_MESSAGES/notification-daemon.mo
