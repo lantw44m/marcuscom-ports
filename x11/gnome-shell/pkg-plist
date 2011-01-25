@@ -4,6 +4,9 @@ lib/gnome-shell/Gdm-1.0.typelib
 lib/gnome-shell/Gvc-1.0.typelib
 lib/gnome-shell/Shell-0.1.typelib
 lib/gnome-shell/St-1.0.typelib
+lib/mutter/plugins/libgnome-shell.a
+lib/mutter/plugins/libgnome-shell.la
+lib/mutter/plugins/libgnome-shell.so
 share/applications/gnome-shell.desktop
 %%DATADIR%%/images/close-black.svg
 %%DATADIR%%/images/magnifier.svg
