@@ -542,8 +542,13 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/default-apps
 @dirrm %%DATADIR%%
+@dirrm share/doc/libgnome-control-center
 @dirrmtry share/desktop-directories
 @dirrmtry share/applications
+@dirrm lib/control-center-1/panels
+@dirrm lib/control-center-1
+@dirrm include/gnome-control-center-1/libgnome-control-center
+@dirrm include/gnome-control-center-1
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zu/LC_MESSAGES
@@ -576,6 +581,8 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/ilo/LC_MESSAGES
+@dirrmtry share/locale/ilo
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
 @dirrmtry share/locale/en@shaw
 @dirrmtry share/locale/dz/LC_MESSAGES
