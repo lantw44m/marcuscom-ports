@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.1 2011/01/23 19:08:30 marcus Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.2 2011/01/23 19:26:23 marcus Exp $
 #
 
 PORTNAME=	gnome3
@@ -35,7 +35,7 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		file-roller:${PORTSDIR}/archivers/file-roller3 \
 		${LOCALBASE}/share/themes/HighContrast/gtk-3.0/gtkrc:${PORTSDIR}/x11-themes/gnome-themes3 \
 		gok:${PORTSDIR}/accessibility/gok \
-		gcalctool:${PORTSDIR}/math/gcalctool \
+		gcalctool:${PORTSDIR}/math/gcalctool3 \
 		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		${LOCALBASE}/libexec/gnome-netstatus-applet:${PORTSDIR}/net/gnome-netstatus \
 		dasher:${PORTSDIR}/accessibility/dasher \

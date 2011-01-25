@@ -3,6 +3,7 @@ databases/evolution-data-server -> databases/evolution-data-server3
 devel/libgdata -> devel/libgdata08 ? (api changes, may be patchable)
 editors/gedit -> editors/gedit3
 graphics/evince -> graphics/evince3
+math/gcalctool -> math/gcalctool3
 net/libgweather -> net/libgweather3
 www/gtkhtml3 -> www/gtkhtml4
 www/webkit-gtk2 -> www/webkit-gtk3
