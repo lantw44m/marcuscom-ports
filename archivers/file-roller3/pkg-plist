@@ -1,4 +1,5 @@
 bin/file-roller
+%%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-fileroller.a
 %%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-fileroller.la
 %%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-fileroller.so
 libexec/file-roller-server
