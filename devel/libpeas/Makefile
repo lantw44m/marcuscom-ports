@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libpeas/Makefile,v 1.7 2010/08/18 20:47:03 kwm Exp $
+#   $MCom: ports/devel/libpeas/Makefile,v 1.9 2011/01/15 19:24:41 kwm Exp $
 #
 
 PORTNAME=	libpeas
-PORTVERSION=	0.7.0
+PORTVERSION=	0.7.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,7 +18,7 @@ COMMENT=	Next evolution of the Gedit plugins engine
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 USE_BZIP2=	yes
-USE_PYTHON=	yes
+USE_PYTHON=	2.5+
 USE_LDCONFIG=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes

@@ -57,6 +57,7 @@ share/gtk-doc/html/libpeas/PeasGtkConfigurable.html
 share/gtk-doc/html/libpeas/PeasGtkPluginManager.html
 share/gtk-doc/html/libpeas/PeasGtkPluginManagerView.html
 share/gtk-doc/html/libpeas/PeasObjectModule.html
+share/gtk-doc/html/libpeas/PeasPluginInfo.html
 share/gtk-doc/html/libpeas/annotation-glossary.html
 share/gtk-doc/html/libpeas/api-index-full.html
 share/gtk-doc/html/libpeas/ch01.html
@@ -66,7 +67,6 @@ share/gtk-doc/html/libpeas/home.png
 share/gtk-doc/html/libpeas/index.html
 share/gtk-doc/html/libpeas/index.sgml
 share/gtk-doc/html/libpeas/left.png
-share/gtk-doc/html/libpeas/libpeas-PeasPluginInfo.html
 share/gtk-doc/html/libpeas/libpeas.devhelp
 share/gtk-doc/html/libpeas/libpeas.devhelp2
 share/gtk-doc/html/libpeas/peas-gtk-plugin-manager.png
@@ -78,6 +78,7 @@ share/icons/hicolor/16x16/actions/libpeas-plugin.png
 share/icons/hicolor/22x22/actions/libpeas-plugin.png
 share/icons/hicolor/32x32/actions/libpeas-plugin.png
 share/icons/hicolor/scalable/actions/libpeas-plugin.svg
+share/locale/ar/LC_MESSAGES/libpeas.mo
 share/locale/cs/LC_MESSAGES/libpeas.mo
 share/locale/da/LC_MESSAGES/libpeas.mo
 share/locale/de/LC_MESSAGES/libpeas.mo
@@ -93,8 +94,8 @@ share/locale/pt_BR/LC_MESSAGES/libpeas.mo
 share/locale/sl/LC_MESSAGES/libpeas.mo
 share/locale/sv/LC_MESSAGES/libpeas.mo
 share/locale/zh_CN/LC_MESSAGES/libpeas.mo
-@dirrm share/locale/nds/LC_MESSAGES
-@dirrm share/locale/nds
+@dirrmtry share/locale/nds/LC_MESSAGES
+@dirrmtry share/locale/nds
 @dirrm share/gtk-doc/html/libpeas
 %%SEED%%@dirrm lib/peas-demo/plugins/seedhello
 @dirrm lib/peas-demo/plugins/secondtime
