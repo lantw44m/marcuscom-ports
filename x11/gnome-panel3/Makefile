@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.5 2011/01/21 08:59:24 kwm Exp $
+#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.6 2011/01/23 23:03:48 kwm Exp $
 #
 
 PORTNAME=	gnome-panel
 PORTVERSION=	2.91.0.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	LOCAL/kwm
 #MASTER_SITES=	GNOME
@@ -23,7 +23,7 @@ USE_BZIP2=	yes
 
 LIB_DEPENDS=	gweather-3.0:${PORTSDIR}/net/libgweather3 \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
+		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 
 USE_GETTEXT=	yes
@@ -31,9 +31,8 @@ USE_XORG=	ice sm x11 xau xrandr
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop3 libwnck3 gnomemenus \
-		gnomedocutils ltverhack referencehack
-#USE_GNOME+=	librsvg2
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop3 librsvg2 libwnck3 \
+		gnomemenus gnomedocutils ltverhack referencehack
 WANT_GNOME=	yes
 GNOME_DESKTOP_VERSION=3
 USE_GMAKE=	yes

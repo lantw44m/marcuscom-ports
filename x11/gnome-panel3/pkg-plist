@@ -420,6 +420,7 @@ share/omf/clock/clock-zh_TW.omf
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrmtry lib/gnome-panel/modules
+@dirrmtry lib/gnome-panel
 @dirrm include/gnome-panel-4.0/libpanel-applet
 @dirrm include/gnome-panel-4.0/
 %%BONOBO%%@dirrm include/panel-2.0
