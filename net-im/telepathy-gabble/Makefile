@@ -3,10 +3,10 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.10 2010/11/14 16:18:09 marcus Exp $
+#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.12 2011/01/23 16:32:34 kwm Exp $
 
 PORTNAME=	telepathy-gabble
-PORTVERSION=	0.11.5
+PORTVERSION=	0.11.6
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
