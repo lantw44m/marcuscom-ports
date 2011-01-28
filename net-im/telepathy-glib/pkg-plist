@@ -58,6 +58,8 @@ include/telepathy-1.0/telepathy-glib/client.h
 include/telepathy-1.0/telepathy-glib/cm-message.h
 include/telepathy-1.0/telepathy-glib/connection-manager.h
 include/telepathy-1.0/telepathy-glib/connection.h
+include/telepathy-1.0/telepathy-glib/contact-search-result.h
+include/telepathy-1.0/telepathy-glib/contact-search.h
 include/telepathy-1.0/telepathy-glib/contact.h
 include/telepathy-1.0/telepathy-glib/contacts-mixin.h
 include/telepathy-1.0/telepathy-glib/dbus-daemon.h
@@ -207,6 +209,8 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-presence.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-requests.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection-simple-presence.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-connection.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-contact-search-result.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-contact-search.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-contact.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-dbus-properties-mixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-dbus.html
