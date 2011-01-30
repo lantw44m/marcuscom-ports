@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/libcanberra-gtk3/Makefile,v 1.4 2010/12/27 12:45:44 kwm Exp $
+#   $MCom: ports/audio/libcanberra-gtk3/Makefile,v 1.5 2011/01/30 16:00:49 kwm Exp $
 #
 
 PORTREVISION=	2
@@ -29,9 +29,6 @@ do-build:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libcanberra-gtk3.pc \
 		${PREFIX}/libdata/pkgconfig/
-# fixup the .la file ..	
-	@${REINPLACE_CMD} -e 's|relink_command.*|| -e |d' \
-		${WRKSRC}/src/.libs/libcanberra-gtk3.la
 .for i in .a .la .so .so.0
 	${INSTALL_DATA} ${WRKSRC}/src/.libs/libcanberra-gtk3${i} \
 		${PREFIX}/lib/
