@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.4 2011/01/25 10:36:49 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.5 2011/01/25 10:45:30 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -18,25 +18,29 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	The "meta-port" for the GNOME 3 integrated X11 desktop
 
 RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
+		dconf:${PORTSDIR}/devel/dconf \
 		eog>=2.91.0:${PORTSDIR}/graphics/eog3 \
 		gedit>=2.91.0:${PORTSDIR}/editors/gedit3 \
 		zenity>=2.91.0:${PORTSDIR}/x11/zenity3 \
-		metacity:${PORTSDIR}/x11-wm/metacity \
 		gnome-terminal>=2.33.0:${PORTSDIR}/x11/gnome-terminal3 \
 		gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		nautilus>=2.91.0:${PORTSDIR}/x11-fm/nautilus3 \
 		gcalctool>=2.91.0:${PORTSDIR}/math/gcalctool3 \
 		file-roller>=2.91.0:${PORTSDIR}/archivers/file-roller3 \
-		${LOCALBASE}/share/themes/Glider/gtk-3.0/gtkrc:${PORTSDIR}/x11-themes/gnome-themes3 \
+		gnome-themes>=2.91.0:${PORTSDIR}/x11-themes/gnome-themes3 \
+		gnome-themes-standard>=2.91.0:${PORTSDIR}/x11-themes/gnome-themes-standard \
 		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		${LOCALBASE}/lib/gstreamer-0.10/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins-core \
 		${LOCALBASE}/lib/gstreamer-0.10/libgstgconfelements.so:${PORTSDIR}/devel/gstreamer-plugins-gconf \
 		gnome-control-center>=2.91.0:${PORTSDIR}/sysutils/gnome-control-center3 \
 		${LOCALBASE}/share/gnome-background-properties/gnome-nature.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
 		evince>=2.91.0:${PORTSDIR}/graphics/evince3 \
+		gnome-kerying>=2.91.0:${PORTSDIR}/security/gnomne-keyring3 \
+		gnome-power-manager>=2.91.0:${PORTSDIR}/sysutils/gnome-power-manager3 \
 		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
 		${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/notification-daemon \
 		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info \
+		totem>=2.91.0:${PORTSDIR}/multimedia/totem3 \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme
 
 NO_BUILD=	yes
@@ -47,12 +51,15 @@ USE_PYTHON=	yes
 
 .if !defined(GNOME_SLAVE) || ${.CURDIR:T}=="gnome2-lite"
 #OPTIONS=	XSCREENSAVER "Use xscreensaver as screen saver app" off \
+OPTIONS=	GNOME_SHELL "Build Gnome-shell (pulls in libxul)" off
 #		MAPI "Depend on evolution-mapi (pulls in samba4)" on
 .endif
-
-do-install:	# empty
-
 .include <bsd.port.pre.mk>
+
+.if defined(WITH_GNOME_SHELL)
+RUN_DEPENDS+=	gnome-shell>=2.91.0:${PORTSDIR}/x11/gnome-shell
+.endif
+
 
 .if !defined(GNOME_SLAVE)
 .if ${ARCH}!="sparc64" && ${ARCH}!="ia64"
@@ -92,5 +99,7 @@ RUN_DEPENDS+=	yelp>=2.91.0:${PORTSDIR}/x11/yelp3 \
 #RUN_DEPENDS+=	gnome-screensaver:${PORTSDIR}/x11/gnome-screensaver
 .endif
 .endif
+
+do-install:	# empty
 
 .include <bsd.port.post.mk>
