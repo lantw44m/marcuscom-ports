@@ -195,8 +195,13 @@ share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrm %%DATADIR%%/introspect
 @dirrm %%DATADIR%%
+@dirrm share/gnome-keyring-3/ui
+@dirrm share/gnome-keyring-3
+@dirrm share/gcr-3/ui
+@dirrm share/gcr-3
 @dirrm share/doc/gcr-3
 @dirrm share/doc/gck
+@dirrm lib/pkcs11
 @dirrm lib/gnome-keyring/devel
 @dirrm lib/gnome-keyring
 @dirrm include/gcr-3/gcr
