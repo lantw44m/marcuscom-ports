@@ -495,6 +495,7 @@ share/omf/totem/totem-uk.omf
 share/omf/totem/totem-zh_CN.omf
 share/omf/totem/totem-zh_HK.omf
 share/omf/totem/totem-zh_TW.omf
+share/thumbnailers/totem.thumbnailer
 %%DATADIR%%/filmholes-big-left.png
 %%DATADIR%%/filmholes-big-right.png
 %%DATADIR%%/filmholes.png
@@ -507,6 +508,7 @@ share/omf/totem/totem-zh_TW.omf
 %%DATADIR%%/uri.ui
 %%DATADIR%%/video-list.ui
 @dirrm %%DATADIR%%
+@dirrm share/thumbnailers
 @dirrm share/omf/totem
 @dirrm share/gnome/help/totem/zh_TW/figures
 @dirrm share/gnome/help/totem/zh_TW

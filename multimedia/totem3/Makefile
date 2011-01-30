@@ -3,11 +3,11 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.1 2011/01/22 23:03:53 kwm Exp $
+#   $MCom: ports/multimedia/totem3/Makefile,v 1.2 2011/01/25 11:20:55 kwm Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	2.91.4
+PORTVERSION=	2.91.5
 PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
@@ -137,8 +137,6 @@ post-patch:
 	@${CP} -f ${FILESDIR}/pkg-message.in ${PKGMESSAGE}
 	@${REINPLACE_CMD} -e 's|/dev/dvd|${DEFAULT_DVD_DEVICE}|' \
 		${WRKSRC}/src/backend/bacon-video-widget-gst-0.10.c
-	@${REINPLACE_CMD} -e 's|--variable=target|--variable=targets|g' \
-		${WRKSRC}/configure
 
 post-install:
 	@-update-desktop-database
