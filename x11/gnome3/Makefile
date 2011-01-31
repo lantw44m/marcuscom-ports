@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.6 2011/01/30 16:13:24 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.7 2011/01/30 16:34:07 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -23,6 +23,7 @@ RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		gedit>=2.91.0:${PORTSDIR}/editors/gedit3 \
 		zenity>=2.91.0:${PORTSDIR}/x11/zenity3 \
 		gnome-terminal>=2.33.0:${PORTSDIR}/x11/gnome-terminal3 \
+		mousetweaks>=2.91.0:${PORTSDIR}/accessibility/mousetweaks3 \
 		gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		nautilus>=2.91.0:${PORTSDIR}/x11-fm/nautilus3 \
 		gcalctool>=2.91.0:${PORTSDIR}/math/gcalctool3 \

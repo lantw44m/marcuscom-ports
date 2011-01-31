@@ -1,3 +1,4 @@
+accessibility/mousetweaks -> accessibility/mousetweaks3
 audio/libcanberra -> audio/libcanberra-gtk3?
 databases/evolution-data-server -> databases/evolution-data-server3
 devel/libgdata -> devel/libgdata08 ? (api changes, may be patchable)
