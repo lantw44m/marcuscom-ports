@@ -1,5 +1,6 @@
 bin/eog
 include/eog-%%VERSION%%/eog/eog-application.h
+include/eog-%%VERSION%%/eog/eog-clipboard-handler.h
 include/eog-%%VERSION%%/eog/eog-debug.h
 include/eog-%%VERSION%%/eog/eog-dialog.h
 include/eog-%%VERSION%%/eog/eog-enums.h
@@ -57,7 +58,6 @@ share/applications/eog.desktop
 %%DOCSDIR%%/ch05.html
 %%DOCSDIR%%/ch06.html
 %%DOCSDIR%%/ch07.html
-%%DOCSDIR%%/eog-EogPluginManager.html
 %%DOCSDIR%%/eog-eog-application.html
 %%DOCSDIR%%/eog-eog-clipboard-handler.html
 %%DOCSDIR%%/eog-eog-config-keys.html
@@ -70,7 +70,6 @@ share/applications/eog.desktop
 %%DOCSDIR%%/eog-eog-list-store.html
 %%DOCSDIR%%/eog-eog-metadata-reader.html
 %%DOCSDIR%%/eog-eog-pixbuf-util.html
-%%DOCSDIR%%/eog-eog-plugin.html
 %%DOCSDIR%%/eog-eog-plugin-engine.html
 %%DOCSDIR%%/eog-eog-print.html
 %%DOCSDIR%%/eog-eog-properties-dialog.html
@@ -82,7 +81,6 @@ share/applications/eog.desktop
 %%DOCSDIR%%/eog-eog-transform.html
 %%DOCSDIR%%/eog-eog-uri-converter.html
 %%DOCSDIR%%/eog-eog-util.html
-%%DOCSDIR%%/eog-uta.html
 %%DOCSDIR%%/eog-eog-window.html
 %%DOCSDIR%%/eog-zoom.html
 %%DOCSDIR%%/eog.devhelp
