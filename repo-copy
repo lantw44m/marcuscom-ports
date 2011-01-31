@@ -6,6 +6,7 @@ editors/gedit -> editors/gedit3
 graphics/evince -> graphics/evince3
 math/gcalctool -> math/gcalctool3
 net/libgweather -> net/libgweather3
+sysutils/brasero -> sysutils/brasero3
 www/gtkhtml3 -> www/gtkhtml4
 www/webkit-gtk2 -> www/webkit-gtk3
 x11-fm/nautilus -> x11-fm/nautilus3
