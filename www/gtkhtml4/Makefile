@@ -3,15 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml4/Makefile,v 1.2 2010/07/13 14:47:06 kwm Exp $
+#   $MCom: ports/www/gtkhtml4/Makefile,v 1.4 2011/01/19 22:10:48 kwm Exp $
 #
 
 PORTNAME=	gtkhtml4
-PORTVERSION=	3.91.5
+PORTVERSION=	3.91.6
 CATEGORIES=	www gnome
-MASTER_SITES=	LOCAL/kwm
-#MASTER_SITES=	GNOME
-#MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/4$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	GNOME
+MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/4$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DISTNAME=	${PORTNAME:S/4$//}-${PORTVERSION}
 DIST_SUBDIR=	gnome3
 
@@ -28,7 +27,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 WRKSRC=		${WRKDIR}/${PORTNAME:S/4//}-3.91.6
 
 USE_GETTEXT=	yes
-#USE_BZIP2=	yes
+USE_BZIP2=	yes
 USE_XORG=	xinerama xi xrandr xcursor xcomposite xdamage xproto
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gconf2 ltverhack
