@@ -24,12 +24,7 @@ libexec/nautilus-convert-metadata
 libdata/pkgconfig/libnautilus-extension.pc
 share/GConf/gsettings/nautilus.convert
 share/applications/nautilus-autorun-software.desktop
-share/applications/nautilus-browser.desktop
-share/applications/nautilus-computer.desktop
-share/applications/nautilus-folder-handler.desktop
-share/applications/nautilus-home.desktop
 share/applications/nautilus.desktop
-share/applications/network-scheme.desktop
 share/doc/libnautilus-extension/ch01.html
 share/doc/libnautilus-extension/home.png
 share/doc/libnautilus-extension/index.html
