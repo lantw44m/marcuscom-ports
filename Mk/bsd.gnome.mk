@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.528 2011/01/22 22:22:55 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.529 2011/01/25 11:11:04 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -437,7 +437,7 @@ gnomepanel_GNOME_DESKTOP_VERSION=2
 
 gnomepanel3_LIB_DEPENDS=panel-applet-4.0:${PORTSDIR}/x11/gnome-panel3
 gnomepanel3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-4.0.pc
-gnomepanel3_USE_GNOME_IMPL=gnomedesktop libwnck gnomemenus gnomedocutils librsvg2
+gnomepanel3_USE_GNOME_IMPL=gnomedesktop3 libwnck3 gnomemenus gnomedocutils librsvg2
 gnomepanel3_GNOME_DESKTOP_VERSION=3
 
 nautilus2_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus
