@@ -80,8 +80,6 @@ include/evolution-data-server-%%VERSION%%/camel/camel-sasl.h
 include/evolution-data-server-%%VERSION%%/camel/camel-search-private.h
 include/evolution-data-server-%%VERSION%%/camel/camel-search-sql-sexp.h
 include/evolution-data-server-%%VERSION%%/camel/camel-search-sql.h
-include/evolution-data-server-%%VERSION%%/camel/camel-seekable-stream.h
-include/evolution-data-server-%%VERSION%%/camel/camel-seekable-substream.h
 include/evolution-data-server-%%VERSION%%/camel/camel-service.h
 include/evolution-data-server-%%VERSION%%/camel/camel-session.h
 include/evolution-data-server-%%VERSION%%/camel/camel-smime-context.h
@@ -281,11 +279,11 @@ lib/girepository-1.0/EDataServer-1.2.typelib
 lib/libcamel-%%EVO_VERSION%%.a
 lib/libcamel-%%EVO_VERSION%%.la
 lib/libcamel-%%EVO_VERSION%%.so
-lib/libcamel-%%EVO_VERSION%%.so.22
+lib/libcamel-%%EVO_VERSION%%.so.23
 lib/libcamel-provider-%%EVO_VERSION%%.a
 lib/libcamel-provider-%%EVO_VERSION%%.la
 lib/libcamel-provider-%%EVO_VERSION%%.so
-lib/libcamel-provider-%%EVO_VERSION%%.so.22
+lib/libcamel-provider-%%EVO_VERSION%%.so.23
 lib/libebackend-%%EVO_VERSION%%.a
 lib/libebackend-%%EVO_VERSION%%.la
 lib/libebackend-%%EVO_VERSION%%.so
@@ -394,8 +392,6 @@ share/doc/camel/CamelSaslLogin.html
 share/doc/camel/CamelSaslNTLM.html
 share/doc/camel/CamelSaslPOPB4SMTP.html
 share/doc/camel/CamelSaslPlain.html
-share/doc/camel/CamelSeekableStream.html
-share/doc/camel/CamelSeekableSubstream.html
 share/doc/camel/CamelService.html
 share/doc/camel/CamelSession.html
 share/doc/camel/CamelStore.html
