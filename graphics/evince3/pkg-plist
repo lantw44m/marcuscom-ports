@@ -138,6 +138,7 @@ share/doc/libevdocument/EvDocumentFind.html
 share/doc/libevdocument/EvDocumentFonts.html
 share/doc/libevdocument/EvDocumentForms.html
 share/doc/libevdocument/EvDocumentImages.html
+share/doc/libevdocument/EvDocumentInfo.html
 share/doc/libevdocument/EvDocumentLayers.html
 share/doc/libevdocument/EvDocumentLinks.html
 share/doc/libevdocument/EvDocumentPrint.html
@@ -158,7 +159,6 @@ share/doc/libevdocument/home.png
 share/doc/libevdocument/index.html
 share/doc/libevdocument/index.sgml
 share/doc/libevdocument/left.png
-share/doc/libevdocument/libevdocument-EvDocumentInfo.html
 share/doc/libevdocument/libevdocument-EvDocumentMisc.html
 share/doc/libevdocument/libevdocument-Version-checks.html
 share/doc/libevdocument/libevdocument-ev-backends-manager.html
