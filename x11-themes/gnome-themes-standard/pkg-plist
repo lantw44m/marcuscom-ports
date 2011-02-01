@@ -110,6 +110,8 @@ share/locale/th/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ug/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/vi/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/zh_TW/LC_MESSAGES/gnome-themes-standard.mo
 share/themes/Adwaita/backgrounds/stripes.jpg
 share/themes/Adwaita/gtk-2.0/gtkrc
 share/themes/Adwaita/gtk-3.0/gtk.css
@@ -127,5 +129,7 @@ share/themes/Adwaita/metacity-1/metacity-theme-3.xml
 @dirrmtry share/icons
 @dirrm share/gnome-background-properties
 @dirrmtry lib/gtk-3.0/%%GTK3_VERSION%%/theming-engines
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
