@@ -1,0 +1,13 @@
+--- configure.orig	2011-01-24 12:26:18.000000000 +0000
++++ configure	2011-01-24 12:53:12.000000000 +0000
+@@ -13358,8 +13358,8 @@
+ .SECONDARY: $(gsettings_SCHEMAS)
+ 
+ gsettings__base_list = \
+-  sed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
+-  sed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
++  sed '\''$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g'\'' | \
++  sed '\''$$!N;$$!N;$$!N;$$!N;s/\n/ /g'\''
+ 
+ install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid)
+ 	@$(NORMAL_INSTALL)
