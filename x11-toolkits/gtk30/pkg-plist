@@ -57,7 +57,6 @@ include/gtk-3.0/gdk/x11/gdkx11window.h
 include/gtk-3.0/gtk/gtkcellarea.h
 include/gtk-3.0/gtk/gtkcellareabox.h
 include/gtk-3.0/gtk/gtkcellareacontext.h
-include/gtk-3.0/gtk/gtkcellareaboxcontextprivate.h
 include/gtk-3.0/gtk/gtk.h
 include/gtk-3.0/gtk/gtkaboutdialog.h
 include/gtk-3.0/gtk/gtkaccelgroup.h
@@ -262,6 +261,7 @@ include/gtk-3.0/gtk/gtkvseparator.h
 include/gtk-3.0/gtk/gtkwidget.h
 include/gtk-3.0/gtk/gtkwidgetpath.h
 include/gtk-3.0/gtk/gtkwindow.h
+include/gtk-3.0/gtk/gtkx.h
 include/gtk-3.0/unix-print/gtk/gtkpagesetupunixdialog.h
 include/gtk-3.0/unix-print/gtk/gtkprinter.h
 include/gtk-3.0/unix-print/gtk/gtkprintjob.h
@@ -270,10 +270,9 @@ include/gtk-3.0/unix-print/gtk/gtkunixprint.h
 lib/girepository-1.0/Gdk-3.0.typelib
 lib/girepository-1.0/GdkX11-3.0.typelib
 lib/girepository-1.0/Gtk-3.0.typelib
-@comment plugin needs to be ported to new API
-@comment lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.a
-@comment lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.la
-@comment lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.so
+lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.a
+lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.la
+lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.so
 lib/gtk-3.0/%%GTK3_VERSION%%/immodules/im-am-et.a
 lib/gtk-3.0/%%GTK3_VERSION%%/immodules/im-am-et.la
 lib/gtk-3.0/%%GTK3_VERSION%%/immodules/im-am-et.so
@@ -612,16 +611,16 @@ share/locale/zh_HK/LC_MESSAGES/gtk30-properties.mo
 share/locale/zh_HK/LC_MESSAGES/gtk30.mo
 share/locale/zh_TW/LC_MESSAGES/gtk30-properties.mo
 share/locale/zh_TW/LC_MESSAGES/gtk30.mo
-share/themes/Default/gtk-3.0-key/gtkrc
-share/themes/Emacs/gtk-3.0-key/gtkrc
-share/themes/Raleigh/gtk-3.0/gtkrc
+share/themes/Default/gtk-3.0/gtk-keys.css
+share/themes/Emacs/gtk-3.0/gtk-keys.css
+share/themes/Raleigh/gtk-3.0/gtk.css
 @exec /usr/bin/find %%LOCALBASE%%/share/icons -type d -depth 1 -exec %D/bin/gtk-update-icon-cache-3.0 -q -f {} \; 2>/dev/null || /usr/bin/true
 @unexec /usr/bin/find %%LOCALBASE%%/share/icons -type f -depth 2 -name icon-theme.cache -delete 2>/dev/null || /usr/bin/true
 @dirrm share/themes/Raleigh/gtk-3.0
 @dirrm share/themes/Raleigh
-@dirrm share/themes/Emacs/gtk-3.0-key
+@dirrm share/themes/Emacs/gtk-3.0
 @dirrm share/themes/Emacs
-@dirrm share/themes/Default/gtk-3.0-key
+@dirrm share/themes/Default/gtk-3.0
 @dirrm share/gtk-3.0/demo
 @dirrm share/gtk-3.0
 @dirrm include/gtk-3.0/unix-print/gtk
