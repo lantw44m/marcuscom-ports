@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.20 2011/01/23 23:57:29 kwm Exp $
+#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.21 2011/02/01 04:15:51 avl Exp $
 #
 
 PORTNAME=	at-spi2-core
-PORTVERSION=	1.91.6
+PORTVERSION=	1.91.6.1
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
