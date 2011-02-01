@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/folks/Makefile,v 1.10 2011/01/23 17:06:28 kwm Exp $
+#   $MCom: ports/net-im/folks/Makefile,v 1.11 2011/01/23 18:30:20 marcus Exp $
 #
 
 PORTNAME=	folks
-PORTVERSION=	0.3.3
+PORTVERSION=	0.3.4
 CATEGORIES=	net-im
 MASTER_SITES=	GNOME
 
@@ -28,6 +28,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include " \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-PLIST_SUB=	VERSION=19
+PLIST_SUB=	VERSION=20
 
 .include <bsd.port.mk>
