@@ -1,6 +1,34 @@
 bin/at-spi-dbus-bus
 etc/at-spi2/accessibility.conf
 etc/xdg/autostart/at-spi-dbus-bus.desktop
+include/at-spi-2.0/atspi/atspi.h
+include/at-spi-2.0/atspi/atspi-accessible.h
+include/at-spi-2.0/atspi/atspi-action.h
+include/at-spi-2.0/atspi/atspi-application.h
+include/at-spi-2.0/atspi/atspi-collection.h
+include/at-spi-2.0/atspi/atspi-component.h
+include/at-spi-2.0/atspi/atspi-constants.h
+include/at-spi-2.0/atspi/atspi-device-listener.h
+include/at-spi-2.0/atspi/atspi-device-listener-private.h
+include/at-spi-2.0/atspi/atspi-document.h
+include/at-spi-2.0/atspi/atspi-editabletext.h
+include/at-spi-2.0/atspi/atspi-event-listener.h
+include/at-spi-2.0/atspi/atspi-event-listener-private.h
+include/at-spi-2.0/atspi/atspi-hyperlink.h
+include/at-spi-2.0/atspi/atspi-hypertext.h
+include/at-spi-2.0/atspi/atspi-image.h
+include/at-spi-2.0/atspi/atspi-misc.h
+include/at-spi-2.0/atspi/atspi-matchrule.h
+include/at-spi-2.0/atspi/atspi-object.h
+include/at-spi-2.0/atspi/atspi-private.h
+include/at-spi-2.0/atspi/atspi-registry.h
+include/at-spi-2.0/atspi/atspi-relation.h
+include/at-spi-2.0/atspi/atspi-selection.h
+include/at-spi-2.0/atspi/atspi-stateset.h
+include/at-spi-2.0/atspi/atspi-table.h
+include/at-spi-2.0/atspi/atspi-text.h
+include/at-spi-2.0/atspi/atspi-types.h
+include/at-spi-2.0/atspi/atspi-value.h
 lib/girepository-1.0/Atspi-2.0.typelib
 lib/libatspi.a
 lib/libatspi.la
@@ -47,7 +75,22 @@ share/gtk-doc/html/libatspi/object-tree.html
 share/gtk-doc/html/libatspi/right.png
 share/gtk-doc/html/libatspi/style.css
 share/gtk-doc/html/libatspi/up.png
+share/locale/ca/LC_MESSAGES/at-spi2-core.mo
+share/locale/cs/LC_MESSAGES/at-spi2-core.mo
+share/locale/de/LC_MESSAGES/at-spi2-core.mo
+share/locale/el/LC_MESSAGES/at-spi2-core.mo
+share/locale/es/LC_MESSAGES/at-spi2-core.mo
+share/locale/gl/LC_MESSAGES/at-spi2-core.mo
+share/locale/he/LC_MESSAGES/at-spi2-core.mo
+share/locale/nb/LC_MESSAGES/at-spi2-core.mo
+share/locale/pa/LC_MESSAGES/at-spi2-core.mo
+share/locale/sl/LC_MESSAGES/at-spi2-core.mo
+share/locale/sv/LC_MESSAGES/at-spi2-core.mo
+share/locale/zh_HK/LC_MESSAGES/at-spi2-core.mo
+share/locale/zh_TW/LC_MESSAGES/at-spi2-core.mo
 @dirrm share/gtk-doc/html/libatspi
 @dirrmtry share/gtk-doc/html
 @dirrmtry share/gtk-doc
+@dirrm include/at-spi-2.0/atspi
+@dirrm include/at-spi-2.0
 @dirrm etc/at-spi2
