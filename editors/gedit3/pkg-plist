@@ -19,6 +19,7 @@ include/gedit-%%VERSION%%/gedit/gedit-view-activatable.h
 include/gedit-%%VERSION%%/gedit/gedit-view.h
 include/gedit-%%VERSION%%/gedit/gedit-window-activatable.h
 include/gedit-%%VERSION%%/gedit/gedit-window.h
+lib/gedit/girepository-1.0/Gedit-%%VERSION%%.typelib
 lib/gedit/plugins/changecase.plugin
 lib/gedit/plugins/docinfo.plugin
 lib/gedit/plugins/filebrowser.plugin
@@ -54,10 +55,19 @@ lib/gedit/plugins/pythonconsole/config.pyo
 lib/gedit/plugins/pythonconsole/console.py
 lib/gedit/plugins/pythonconsole/console.pyc
 lib/gedit/plugins/pythonconsole/console.pyo
+lib/gedit/plugins/quickopen.plugin
+lib/gedit/plugins/quickopen/__init__.py
+lib/gedit/plugins/quickopen/__init__.pyc
+lib/gedit/plugins/quickopen/__init__.pyo
+lib/gedit/plugins/quickopen/popup.py
+lib/gedit/plugins/quickopen/popup.pyc
+lib/gedit/plugins/quickopen/popup.pyo
+lib/gedit/plugins/quickopen/virtualdirs.py
+lib/gedit/plugins/quickopen/virtualdirs.pyc
+lib/gedit/plugins/quickopen/virtualdirs.pyo
 lib/gedit/plugins/sort.plugin
 lib/gedit/plugins/spell.plugin
 lib/gedit/plugins/time.plugin
-lib/girepository-1.0/Gedit-%%VERSION%%.typelib
 lib/libgedit-private.a
 lib/libgedit-private.la
 lib/libgedit-private.so
@@ -98,6 +108,7 @@ share/dbus-1/services/org.gnome.gedit.service
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
+share/gedit/gir-1.0/Gedit-%%VERSION%%.gir
 share/gedit/logo/gedit-logo.png
 share/gedit/plugins/docinfo/gedit-docinfo-plugin.ui
 share/gedit/plugins/filebrowser/gedit-file-browser-widget-ui.xml
@@ -113,7 +124,6 @@ share/gedit/ui/gedit-preferences-dialog.ui
 share/gedit/ui/gedit-print-preferences.ui
 share/gedit/ui/gedit-replace-dialog.ui
 share/gedit/ui/gedit-ui.xml
-share/gir-1.0/Gedit-%%VERSION%%.gir
 share/gnome/help/gedit/C/figures/gedit_format_bold.png
 share/gnome/help/gedit/C/figures/gedit_format_italic.png
 share/gnome/help/gedit/C/figures/gedit_format_strikethrough.png
@@ -486,6 +496,7 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm share/gnome/help/gedit/C/figures
 @dirrm share/gnome/help/gedit/C
 @dirrm share/gnome/help/gedit
+@dirrm share/gedit/gir-1.0
 @dirrm share/gedit/ui
 @dirrm share/gedit/plugins/time
 @dirrm share/gedit/plugins/spell
@@ -502,6 +513,8 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm %%DOCSDIR%%
 @dirrmtry share/applications
 @dirrmtry libexec/gedit
+@dirrm lib/gedit/girepository-1.0
+@dirrm lib/gedit/plugins/quickopen
 @dirrm lib/gedit/plugins/pythonconsole
 @dirrmtry lib/gedit/plugins
 @dirrmtry lib/gedit
