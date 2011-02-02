@@ -1,8 +1,5 @@
-bin/gnome-at-mobility
-bin/gnome-at-visual
 bin/gnome-control-center
 bin/gnome-sound-applet
-etc/xdg/autostart/gnome-at-session.desktop
 etc/xdg/autostart/gnome-sound-applet.desktop
 etc/xdg/menus/gnomecc.menu
 include/gnome-control-center-1/libgnome-control-center/cc-panel.h
@@ -14,9 +11,6 @@ lib/control-center-1/panels/libbackground.so
 lib/control-center-1/panels/libdate_time.a
 lib/control-center-1/panels/libdate_time.la
 lib/control-center-1/panels/libdate_time.so
-lib/control-center-1/panels/libdefault-applications.a
-lib/control-center-1/panels/libdefault-applications.la
-lib/control-center-1/panels/libdefault-applications.so
 lib/control-center-1/panels/libdisplay.a
 lib/control-center-1/panels/libdisplay.la
 lib/control-center-1/panels/libdisplay.so
@@ -38,6 +32,9 @@ lib/control-center-1/panels/libnetwork.so
 lib/control-center-1/panels/libpower.a
 lib/control-center-1/panels/libpower.la
 lib/control-center-1/panels/libpower.so
+lib/control-center-1/panels/libprinters.a
+lib/control-center-1/panels/libprinters.la
+lib/control-center-1/panels/libprinters.so
 lib/control-center-1/panels/libregion.a
 lib/control-center-1/panels/libregion.la
 lib/control-center-1/panels/libregion.so
@@ -56,13 +53,11 @@ lib/control-center-1/panels/libuser-accounts.so
 lib/libgnome-control-center.la
 lib/libgnome-control-center.so
 lib/libgnome-control-center.so.1
-libdata/pkgconfig/gnome-default-applications.pc
 libdata/pkgconfig/gnome-keybindings.pc
 libdata/pkgconfig/libgnome-control-center.pc
 share/applications/gnome-background-panel.desktop
 share/applications/gnome-control-center.desktop
 share/applications/gnome-datetime-panel.desktop
-share/applications/gnome-default-applications-panel.desktop
 share/applications/gnome-display-panel.desktop
 share/applications/gnome-info-panel.desktop
 share/applications/gnome-keyboard-panel.desktop
@@ -70,6 +65,7 @@ share/applications/gnome-media-panel.desktop
 share/applications/gnome-mouse-panel.desktop
 share/applications/gnome-network-panel.desktop
 share/applications/gnome-power-panel.desktop
+share/applications/gnome-printers-panel.desktop
 share/applications/gnome-region-panel.desktop
 share/applications/gnome-screen-panel.desktop
 share/applications/gnome-sound-panel.desktop
@@ -90,7 +86,6 @@ share/doc/libgnome-control-center/object-tree.html
 share/doc/libgnome-control-center/right.png
 share/doc/libgnome-control-center/style.css
 share/doc/libgnome-control-center/up.png
-%%DATADIR%%/default-apps/gnome-default-applications.xml
 %%DATADIR%%/icons/hicolor/16x16/devices/audio-headset.svg
 %%DATADIR%%/icons/hicolor/16x16/status/audio-input-microphone-high.png
 %%DATADIR%%/icons/hicolor/16x16/status/audio-input-microphone-low.png
@@ -207,17 +202,16 @@ share/doc/libgnome-control-center/up.png
 %%DATADIR%%/ui/datetime/timezone_9.5.png
 %%DATADIR%%/ui/datetime/timezone_9.png
 %%DATADIR%%/ui/display-capplet.ui
-%%DATADIR%%/ui/gnome-default-applications-properties.ui
 %%DATADIR%%/ui/gnome-keyboard-panel.ui
 %%DATADIR%%/ui/gnome-media-properties.ui
 %%DATADIR%%/ui/gnome-mouse-properties.ui
 %%DATADIR%%/ui/gnome-region-panel-layout-chooser.ui
-%%DATADIR%%/ui/gnome-region-panel-model-chooser.ui
 %%DATADIR%%/ui/gnome-region-panel-options-dialog.ui
 %%DATADIR%%/ui/gnome-region-panel.ui
 %%DATADIR%%/ui/info.ui
 %%DATADIR%%/ui/network.ui
 %%DATADIR%%/ui/power.ui
+%%DATADIR%%/ui/printers/printers.ui
 %%DATADIR%%/ui/screen.ui
 %%DATADIR%%/ui/shell.ui
 %%DATADIR%%/ui/uap.ui
@@ -264,26 +258,21 @@ share/gnome/help/control-center/th/control-center.xml
 share/gnome/help/control-center/uk/control-center.xml
 share/gnome/help/control-center/vi/control-center.xml
 share/gnome/help/control-center/zh_CN/control-center.xml
-share/icons/hicolor/16x16/apps/gnome-settings-default-applications.png
 share/icons/hicolor/16x16/apps/multimedia-volume-control.png
 share/icons/hicolor/16x16/apps/multimedia-volume-control.svg
 share/icons/hicolor/16x16/apps/preferences-desktop-display.png
 share/icons/hicolor/16x16/apps/preferences-system-time.png
-share/icons/hicolor/22x22/apps/gnome-settings-default-applications.png
 share/icons/hicolor/22x22/apps/multimedia-volume-control.png
 share/icons/hicolor/22x22/apps/multimedia-volume-control.svg
 share/icons/hicolor/22x22/apps/preferences-desktop-display.png
 share/icons/hicolor/22x22/apps/preferences-system-time.png
-share/icons/hicolor/24x24/apps/gnome-settings-default-applications.png
 share/icons/hicolor/24x24/apps/multimedia-volume-control.png
 share/icons/hicolor/24x24/apps/preferences-desktop-display.png
 share/icons/hicolor/256x256/apps/preferences-system-time.png
-share/icons/hicolor/32x32/apps/gnome-settings-default-applications.png
 share/icons/hicolor/32x32/apps/multimedia-volume-control.png
 share/icons/hicolor/32x32/apps/multimedia-volume-control.svg
 share/icons/hicolor/32x32/apps/preferences-desktop-display.png
 share/icons/hicolor/32x32/apps/preferences-system-time.png
-share/icons/hicolor/48x48/apps/gnome-settings-default-applications.png
 share/icons/hicolor/48x48/apps/multimedia-volume-control.png
 share/icons/hicolor/48x48/apps/preferences-system-time.png
 share/icons/hicolor/48x48/devices/audio-headset.svg
@@ -333,6 +322,7 @@ share/locale/dz/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/el/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/el/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/en@shaw/LC_MESSAGES/gnome-control-center-2.0.mo
+share/locale/en/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/en_CA/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/en_GB/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/en_GB/LC_MESSAGES/gnome-control-center-2.0.mo
@@ -519,6 +509,7 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm share/gnome/help/control-center/C
 @dirrm share/gnome/help/control-center
 @dirrm %%DATADIR%%/ui/user-accounts
+@dirrm %%DATADIR%%/ui/printers
 @dirrm %%DATADIR%%/ui/datetime
 @dirrm %%DATADIR%%/ui/background
 @dirrm %%DATADIR%%/ui
@@ -540,7 +531,6 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm %%DATADIR%%/icons/hicolor/16x16
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
-@dirrm %%DATADIR%%/default-apps
 @dirrm %%DATADIR%%
 @dirrm share/doc/libgnome-control-center
 @dirrmtry share/desktop-directories

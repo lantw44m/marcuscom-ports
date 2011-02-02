@@ -3,14 +3,13 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.5 2011/01/20 17:06:11 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.6 2011/01/25 14:44:09 kwm Exp $
 #
 
 # add cheese suppor when it gets gtk3 version
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	2.91.5
-PORTREVISION=	1
+PORTVERSION=	2.91.6
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,6 +22,7 @@ BUILD_DEPENDS=	gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings
 LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		xklavier.12:${PORTSDIR}/x11/libxklavier \
 		upower-glib.1:${PORTSDIR}/sysutils/upower \
+		gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
