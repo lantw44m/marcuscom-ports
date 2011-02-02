@@ -3,15 +3,14 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.6 2011/01/23 23:03:48 kwm Exp $
+#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.7 2011/01/26 10:47:58 avl Exp $
 #
 
 PORTNAME=	gnome-panel
-PORTVERSION=	2.91.0.1
-PORTREVISION?=	1
+PORTVERSION=	2.91.6
+PORTREVISION?=	0
 CATEGORIES=	x11 gnome
-MASTER_SITES=	LOCAL/kwm
-#MASTER_SITES=	GNOME
+MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -27,6 +26,7 @@ LIB_DEPENDS=	gweather-3.0:${PORTSDIR}/net/libgweather3 \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 
 USE_GETTEXT=	yes
+USE_BZIP2=	yes
 USE_XORG=	ice sm x11 xau xrandr
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
@@ -43,6 +43,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 MAN1=		gnome-panel.1
 GCONF_SCHEMAS=	clock.schemas \
+		fish.schemas \
 		panel-compatibility.schemas panel-general.schemas \
 		panel-global.schemas panel-object.schemas \
 		panel-toplevel.schemas window-list.schemas \
@@ -70,7 +71,7 @@ CONFIGURE_ARGS+=--disable-eds
 #CONFIGURE_ARGS+=--enable-bonobo
 #PLIST_SUB+=	BONOBO=""
 #.else
-CONFIGURE_ARGS+=--disable-bonobo
+#CONFIGURE_ARGS+=--disable-bonobo
 PLIST_SUB+=	BONOBO="@comment "
 #.endif
 
@@ -79,12 +80,8 @@ post-patch:
 		${XARGS} -n 10 ${REINPLACE_CMD} -e \
 		's|"applications.menu"|"gnome-applications.menu"|'
 	@${REINPLACE_CMD} -e 's|xsltproc -o| xsltproc --nonet -o|g' \
-		${WRKSRC}/help/clock/Makefile.in
-#		${WRKSRC}/help/fish/Makefile.in
-#	@${REINPLACE_CMD} -e 's|libedataserverui-1.2|libedataserverui-3.0|g' \
-#		${WRKSRC}/configure
-#		-e 's|gtk+-2.0|gtk+-3.0|g' \
-#		-e 's|gnome-desktop-2.0|gnome-desktop-3.0|g' \
+		${WRKSRC}/help/clock/Makefile.in \
+		${WRKSRC}/help/fish/Makefile.in
 
 post-install:
 	@${MKDIR} ${PREFIX}/lib/gnome-panel/modules

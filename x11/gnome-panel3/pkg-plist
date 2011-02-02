@@ -32,16 +32,19 @@ lib/libpanel-applet-4.so.0
 %%BONOBO%%libdata/pkgconfig/libpanelapplet-2.0.pc
 libdata/pkgconfig/libpanelapplet-4.0.pc
 libexec/clock-applet
+libexec/fish-applet
 libexec/gnome-panel-add
 libexec/notification-area-applet
 libexec/wnck-applet
 share/applications/gnome-panel.desktop
 share/dbus-1/services/org.gnome.panel.applet.ClockAppletFactory.service
+share/dbus-1/services/org.gnome.panel.applet.FishAppletFactory.service
 share/dbus-1/services/org.gnome.panel.applet.NotificationAreaAppletFactory.service
 share/dbus-1/services/org.gnome.panel.applet.WnckletFactory.service
 %%BONOBO%%share/gnome-2.0/ui/GNOME_Panel_Popup.xml
 share/gir-1.0/PanelApplet-4.0.gir
 %%DATADIR%%/4.0/applets/org.gnome.panel.ClockApplet.panel-applet
+%%DATADIR%%/4.0/applets/org.gnome.panel.FishApplet.panel-applet
 %%DATADIR%%/4.0/applets/org.gnome.panel.NotificationAreaApplet.panel-applet
 %%DATADIR%%/4.0/applets/org.gnome.panel.Wncklet.panel-applet
 %%DATADIR%%/ui/clock.ui
@@ -68,9 +71,15 @@ share/gir-1.0/PanelApplet-4.0.gir
 %%DATADIR%%/pixmaps/clock-map-location-hilight.png
 %%DATADIR%%/pixmaps/clock-map-location-marker.png
 %%DATADIR%%/pixmaps/clock-map.png
+%%DATADIR%%/pixmaps/fishanim.png
+%%DATADIR%%/pixmaps/footguy.png
 %%DATADIR%%/pixmaps/gnome-gegl2-2.png
 %%DATADIR%%/pixmaps/gnome-gegl2.png
-share/gnome-panelrc
+%%DATADIR%%/pixmaps/monkey.png
+%%DATADIR%%/pixmaps/oldwanda.png
+%%DATADIR%%/pixmaps/wanda.png
+%%DATADIR%%/ui/fish-menu.xml
+%%DATADIR%%/ui/fish.ui
 share/gnome/help/clock/C/clock.xml
 share/gnome/help/clock/C/figures/clock_applet.png
 share/gnome/help/clock/C/legal.xml
@@ -158,6 +167,69 @@ share/gnome/help/clock/zh_HK/legal.xml
 share/gnome/help/clock/zh_TW/clock.xml
 share/gnome/help/clock/zh_TW/figures/clock_applet.png
 share/gnome/help/clock/zh_TW/legal.xml
+share/gnome/help/fish/C/figures/fish_applet.png
+share/gnome/help/fish/C/fish.xml
+share/gnome/help/fish/C/legal.xml
+share/gnome/help/fish/ca/figures/fish_applet.png
+share/gnome/help/fish/ca/fish.xml
+share/gnome/help/fish/ca/legal.xml
+share/gnome/help/fish/cs/figures/fish_applet.png
+share/gnome/help/fish/cs/fish.xml
+share/gnome/help/fish/cs/legal.xml
+share/gnome/help/fish/da/figures/fish_applet.png
+share/gnome/help/fish/da/fish.xml
+share/gnome/help/fish/da/legal.xml
+share/gnome/help/fish/de/figures/fish_applet.png
+share/gnome/help/fish/de/fish.xml
+share/gnome/help/fish/de/legal.xml
+share/gnome/help/fish/el/figures/fish_applet.png
+share/gnome/help/fish/el/fish.xml
+share/gnome/help/fish/el/legal.xml
+share/gnome/help/fish/en_GB/figures/fish_applet.png
+share/gnome/help/fish/en_GB/fish.xml
+share/gnome/help/fish/en_GB/legal.xml
+share/gnome/help/fish/es/figures/fish_applet.png
+share/gnome/help/fish/es/fish.xml
+share/gnome/help/fish/es/legal.xml
+share/gnome/help/fish/eu/figures/fish_applet.png
+share/gnome/help/fish/eu/fish.xml
+share/gnome/help/fish/eu/legal.xml
+share/gnome/help/fish/fi/figures/fish_applet.png
+share/gnome/help/fish/fi/fish.xml
+share/gnome/help/fish/fi/legal.xml
+share/gnome/help/fish/fr/figures/fish_applet.png
+share/gnome/help/fish/fr/fish.xml
+share/gnome/help/fish/fr/legal.xml
+share/gnome/help/fish/it/figures/fish_applet.png
+share/gnome/help/fish/it/fish.xml
+share/gnome/help/fish/it/legal.xml
+share/gnome/help/fish/ja/figures/fish_applet.png
+share/gnome/help/fish/ja/fish.xml
+share/gnome/help/fish/ja/legal.xml
+share/gnome/help/fish/ko/figures/fish_applet.png
+share/gnome/help/fish/ko/fish.xml
+share/gnome/help/fish/ko/legal.xml
+share/gnome/help/fish/oc/figures/fish_applet.png
+share/gnome/help/fish/oc/fish.xml
+share/gnome/help/fish/oc/legal.xml
+share/gnome/help/fish/ru/figures/fish_applet.png
+share/gnome/help/fish/ru/fish.xml
+share/gnome/help/fish/ru/legal.xml
+share/gnome/help/fish/sl/figures/fish_applet.png
+share/gnome/help/fish/sl/fish.xml
+share/gnome/help/fish/sl/legal.xml
+share/gnome/help/fish/sv/figures/fish_applet.png
+share/gnome/help/fish/sv/fish.xml
+share/gnome/help/fish/sv/legal.xml
+share/gnome/help/fish/th/figures/fish_applet.png
+share/gnome/help/fish/th/fish.xml
+share/gnome/help/fish/th/legal.xml
+share/gnome/help/fish/uk/figures/fish_applet.png
+share/gnome/help/fish/uk/fish.xml
+share/gnome/help/fish/uk/legal.xml
+share/gnome/help/fish/zh_CN/figures/fish_applet.png
+share/gnome/help/fish/zh_CN/fish.xml
+share/gnome/help/fish/zh_CN/legal.xml
 share/icons/hicolor/16x16/apps/gnome-panel-clock.png
 share/icons/hicolor/16x16/apps/gnome-panel-drawer.png
 share/icons/hicolor/16x16/apps/gnome-panel-fish.png
@@ -352,8 +424,72 @@ share/omf/clock/clock-uk.omf
 share/omf/clock/clock-zh_CN.omf
 share/omf/clock/clock-zh_HK.omf
 share/omf/clock/clock-zh_TW.omf
+share/omf/fish/fish-C.omf
+share/omf/fish/fish-ca.omf
+share/omf/fish/fish-cs.omf
+share/omf/fish/fish-da.omf
+share/omf/fish/fish-de.omf
+share/omf/fish/fish-el.omf
+share/omf/fish/fish-en_GB.omf
+share/omf/fish/fish-es.omf
+share/omf/fish/fish-eu.omf
+share/omf/fish/fish-fi.omf
+share/omf/fish/fish-fr.omf
+share/omf/fish/fish-it.omf
+share/omf/fish/fish-ja.omf
+share/omf/fish/fish-ko.omf
+share/omf/fish/fish-oc.omf
+share/omf/fish/fish-ru.omf
+share/omf/fish/fish-sl.omf
+share/omf/fish/fish-sv.omf
+share/omf/fish/fish-th.omf
+share/omf/fish/fish-uk.omf
+share/omf/fish/fish-zh_CN.omf
+@dirrm share/omf/fish
 @dirrm share/omf/clock
 %%BONOBO%%@dirrm share/idl/gnome-panel-2.0
+@dirrm share/gnome/help/fish/zh_CN/figures
+@dirrm share/gnome/help/fish/zh_CN
+@dirrm share/gnome/help/fish/uk/figures
+@dirrm share/gnome/help/fish/uk
+@dirrm share/gnome/help/fish/th/figures
+@dirrm share/gnome/help/fish/th
+@dirrm share/gnome/help/fish/sv/figures
+@dirrm share/gnome/help/fish/sv
+@dirrm share/gnome/help/fish/sl/figures
+@dirrm share/gnome/help/fish/sl
+@dirrm share/gnome/help/fish/ru/figures
+@dirrm share/gnome/help/fish/ru
+@dirrm share/gnome/help/fish/oc/figures
+@dirrm share/gnome/help/fish/oc
+@dirrm share/gnome/help/fish/ko/figures
+@dirrm share/gnome/help/fish/ko
+@dirrm share/gnome/help/fish/ja/figures
+@dirrm share/gnome/help/fish/ja
+@dirrm share/gnome/help/fish/it/figures
+@dirrm share/gnome/help/fish/it
+@dirrm share/gnome/help/fish/fr/figures
+@dirrm share/gnome/help/fish/fr
+@dirrm share/gnome/help/fish/fi/figures
+@dirrm share/gnome/help/fish/fi
+@dirrm share/gnome/help/fish/eu/figures
+@dirrm share/gnome/help/fish/eu
+@dirrm share/gnome/help/fish/es/figures
+@dirrm share/gnome/help/fish/es
+@dirrm share/gnome/help/fish/en_GB/figures
+@dirrm share/gnome/help/fish/en_GB
+@dirrm share/gnome/help/fish/el/figures
+@dirrm share/gnome/help/fish/el
+@dirrm share/gnome/help/fish/de/figures
+@dirrm share/gnome/help/fish/de
+@dirrm share/gnome/help/fish/da/figures
+@dirrm share/gnome/help/fish/da
+@dirrm share/gnome/help/fish/cs/figures
+@dirrm share/gnome/help/fish/cs
+@dirrm share/gnome/help/fish/ca/figures
+@dirrm share/gnome/help/fish/ca
+@dirrm share/gnome/help/fish/C/figures
+@dirrm share/gnome/help/fish/C
 @dirrm share/gnome/help/clock/zh_TW/figures
 @dirrm share/gnome/help/clock/zh_TW
 @dirrm share/gnome/help/clock/zh_HK/figures
