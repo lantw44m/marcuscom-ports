@@ -3,12 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.19 2011/01/16 09:24:51 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.20 2011/01/25 14:45:54 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
-PORTVERSION=	2.91.5
-PORTREVISION=	1
+PORTVERSION=	2.91.6
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

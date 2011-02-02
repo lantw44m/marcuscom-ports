@@ -17,7 +17,7 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/js/misc/gnomeSession.js
 %%DATADIR%%/js/misc/params.js
 %%DATADIR%%/js/misc/telepathy.js
-%%DATADIR%%/js/misc/utils.js
+%%DATADIR%%/js/misc/util.js
 %%DATADIR%%/js/perf/core.js
 %%DATADIR%%/js/ui/altTab.js
 %%DATADIR%%/js/ui/appDisplay.js
@@ -27,11 +27,12 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/js/ui/chrome.js
 %%DATADIR%%/js/ui/ctrlAltTab.js
 %%DATADIR%%/js/ui/dash.js
+%%DATADIR%%/js/ui/dateMenu.js
 %%DATADIR%%/js/ui/dnd.js
 %%DATADIR%%/js/ui/docDisplay.js
+%%DATADIR%%/js/ui/endSessionDialog.js
 %%DATADIR%%/js/ui/environment.js
 %%DATADIR%%/js/ui/extensionSystem.js
-%%DATADIR%%/js/ui/genericDisplay.js
 %%DATADIR%%/js/ui/iconGrid.js
 %%DATADIR%%/js/ui/lightbox.js
 %%DATADIR%%/js/ui/link.js
@@ -40,6 +41,7 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/js/ui/magnifierDBus.js
 %%DATADIR%%/js/ui/main.js
 %%DATADIR%%/js/ui/messageTray.js
+%%DATADIR%%/js/ui/modalDialog.js
 %%DATADIR%%/js/ui/notificationDaemon.js
 %%DATADIR%%/js/ui/overview.js
 %%DATADIR%%/js/ui/panel.js
@@ -53,6 +55,7 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/js/ui/shellDBus.js
 %%DATADIR%%/js/ui/status/accessibility.js
 %%DATADIR%%/js/ui/status/bluetooth.js
+%%DATADIR%%/js/ui/status/keyboard.js
 %%DATADIR%%/js/ui/status/power.js
 %%DATADIR%%/js/ui/status/volume.js
 %%DATADIR%%/js/ui/statusIconDispatcher.js
@@ -66,13 +69,16 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/js/ui/workspaceSwitcherPopup.js
 %%DATADIR%%/js/ui/workspacesView.js
 %%DATADIR%%/js/ui/xdndHandler.js
+%%DATADIR%%/search_providers/google.xml
+%%DATADIR%%/search_providers/wikipedia.xml
 %%DATADIR%%/shaders/dim-window.glsl
 %%DATADIR%%/theme/add-workspace.svg
+%%DATADIR%%/theme/calendar-arrow-left.svg
+%%DATADIR%%/theme/calendar-arrow-right.svg
 %%DATADIR%%/theme/close-window.svg
 %%DATADIR%%/theme/close.svg
 %%DATADIR%%/theme/corner-ripple.png
 %%DATADIR%%/theme/dash-placeholder.svg
-%%DATADIR%%/theme/dialog-error.svg
 %%DATADIR%%/theme/filter-selected.svg
 %%DATADIR%%/theme/gnome-shell.css
 %%DATADIR%%/theme/mosaic-view-active.svg
@@ -144,6 +150,7 @@ share/locale/zh_HK/LC_MESSAGES/gnome-shell.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-shell.mo
 @dirrm %%DATADIR%%/theme
 @dirrm %%DATADIR%%/shaders
+@dirrm %%DATADIR%%/search_providers
 @dirrm %%DATADIR%%/js/ui/status
 @dirrm %%DATADIR%%/js/ui
 @dirrm %%DATADIR%%/js/perf
