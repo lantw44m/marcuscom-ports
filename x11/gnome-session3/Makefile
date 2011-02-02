@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session3/Makefile,v 1.3 2010/12/26 20:01:24 kwm Exp $
+#   $MCom: ports/x11/gnome-session3/Makefile,v 1.4 2010/12/26 22:32:30 kwm Exp $
 #
 
 PORTNAME=	gnome-session
-PORTVERSION=	2.91.4
+PORTVERSION=	2.91.6
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -36,9 +36,9 @@ CONFIGURE_ARGS=	--disable-docbook-docs
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-MAN1=		gnome-session.1 gnome-wm.1 gnome-session-properties.1 \
+MAN1=		gnome-session.1 gnome-session-properties.1 \
 		gnome-session-save.1
-GCONF_SCHEMAS=	gnome-session.schemas
+GLIB_SCHEMAS=	org.gnome.SessionManager.gschema.xml
 
 PKGMESSAGE=	${.CURDIR}/pkg-message
 
