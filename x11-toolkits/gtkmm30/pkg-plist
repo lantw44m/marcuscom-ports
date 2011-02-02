@@ -8,7 +8,7 @@ include/gdkmm-%%API_VERSION%%/gdkmm/displaymanager.h
 include/gdkmm-%%API_VERSION%%/gdkmm/dragcontext.h
 include/gdkmm-%%API_VERSION%%/gdkmm/event.h
 include/gdkmm-%%API_VERSION%%/gdkmm/general.h
-include/gdkmm-%%API_VERSION%%/gdkmm/list.h
+include/gtkmm-%%API_VERSION%%/gtkmm/numerableicon.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbuf.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbufanimation.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbufanimationiter.h
@@ -22,6 +22,7 @@ include/gdkmm-%%API_VERSION%%/gdkmm/private/display_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/displaymanager_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/dragcontext_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/event_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/numerableicon_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbuf_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbufanimation_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbufanimationiter_p.h
