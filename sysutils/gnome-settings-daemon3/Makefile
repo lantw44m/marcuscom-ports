@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.5 2010/12/27 14:37:53 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.6 2011/01/15 15:43:38 kwm Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	2.91.8
+PORTVERSION=	2.91.9
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -44,6 +44,7 @@ GLIB_SCHEMAS=	org.gnome.settings-daemon.enums.xml \
 		org.gnome.settings-daemon.plugins.keyboard.gschema.xml \
 		org.gnome.settings-daemon.plugins.media-keys.gschema.xml \
 		org.gnome.settings-daemon.plugins.power.gschema.xml \
+		org.gnome.settings-daemon.plugins.print-notifications.gschema.xml \
 		org.gnome.settings-daemon.plugins.xrandr.gschema.xml \
 		org.gnome.settings-daemon.plugins.xsettings.gschema.xml
 
