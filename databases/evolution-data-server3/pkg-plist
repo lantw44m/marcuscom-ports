@@ -793,6 +793,7 @@ share/pixmaps/evolution-data-server/category_strategies_16.png
 share/pixmaps/evolution-data-server/category_suppliers_16.png
 share/pixmaps/evolution-data-server/category_time-and-expenses_16.png
 @dirrm share/pixmaps/evolution-data-server
+@dirrm share/evolution-data-server-%%VERSION%%
 @dirrm share/doc/libedataserverui
 @dirrm share/doc/libedataserver
 @dirrm share/doc/libedata-cal
