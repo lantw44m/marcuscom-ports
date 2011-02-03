@@ -5,6 +5,9 @@ deskutils/gnome-utils -> deskutils/gnome-utils3
 devel/libgdata -> devel/libgdata08 ? (api changes, may be patchable)
 editors/gedit -> editors/gedit3
 graphics/evince -> graphics/evince3
+mail/evolution -> mail/evolution3
+mail/evolution-exchange -> mail/evolution-exchange3
+mail/evolution-mapi -> mail/evolution-mapi3
 math/gcalctool -> math/gcalctool3
 net/libgweather -> net/libgweather3
 security/gnome-keyring -> security/gnome-keyring3

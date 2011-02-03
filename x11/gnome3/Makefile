@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.12 2011/02/03 16:03:21 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.13 2011/02/03 16:09:54 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -46,6 +46,8 @@ RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info \
 		totem>=2.91.0:${PORTSDIR}/multimedia/totem3 \
 		evolution>=2.91.0:${PORTSDIR}/mail/evolution3 \
+		evolution-exchange>=2.91.0:${PORTSDIR}/mail/evolution-exchange3 \
+		evolution-mapi>=2.91.0:${PORTSDIR}/mail/evolution-mapi3 \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme
 
 NO_BUILD=	yes
