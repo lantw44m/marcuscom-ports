@@ -39,9 +39,9 @@ lib/gnome-settings-daemon-3.0/libmouse.so
 lib/gnome-settings-daemon-3.0/libprint-notifications.a
 lib/gnome-settings-daemon-3.0/libprint-notifications.la
 lib/gnome-settings-daemon-3.0/libprint-notifications.so
-lib/gnome-settings-daemon-3.0/libsmartcard.a
-lib/gnome-settings-daemon-3.0/libsmartcard.la
-lib/gnome-settings-daemon-3.0/libsmartcard.so
+%%SMARTCARD%%lib/gnome-settings-daemon-3.0/libsmartcard.a
+%%SMARTCARD%%lib/gnome-settings-daemon-3.0/libsmartcard.la
+%%SMARTCARD%%lib/gnome-settings-daemon-3.0/libsmartcard.so
 lib/gnome-settings-daemon-3.0/libsound.a
 lib/gnome-settings-daemon-3.0/libsound.la
 lib/gnome-settings-daemon-3.0/libsound.so
@@ -57,7 +57,7 @@ lib/gnome-settings-daemon-3.0/libxsettings.so
 %%PULSEAUDIO%%lib/gnome-settings-daemon-3.0/media-keys.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/mouse.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/print-notifications.gnome-settings-plugin
-lib/gnome-settings-daemon-3.0/smartcard.gnome-settings-plugin
+%%SMARTCARD%%lib/gnome-settings-daemon-3.0/smartcard.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/sound.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/wacom.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/xrandr.gnome-settings-plugin

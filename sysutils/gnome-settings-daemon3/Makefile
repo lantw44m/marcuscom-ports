@@ -3,11 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.6 2011/01/15 15:43:38 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.7 2011/02/02 10:45:40 kwm Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
 PORTVERSION=	2.91.9
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -34,7 +35,8 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-OPTIONS=	PULSEAUDIO "Enable Pulseaudio support" On
+OPTIONS=	PULSEAUDIO "Enable Pulseaudio support" On \
+		SMARTCARD "Enable smartcard support" On
 
 GLIB_SCHEMAS=	org.gnome.settings-daemon.enums.xml \
 		org.gnome.settings-daemon.peripherals.gschema.xml \
@@ -59,6 +61,15 @@ PLIST_SUB+=	PULSEAUDIO="@comment "
 LIB_DEPENDS+=	pulse.0:${PORTSDIR}/audio/pulseaudio
 CONFIGURE_ARGS+=--enable-pulse
 PLIST_SUB+=	PULSEAUDIO=""
+.endif
+
+.if defined(WITHOUT_SMARTCARD)
+CONFIGURE_ARGS+=--disable-smartcard-support
+PLIST_SUB+=	SMARTCARD="@comment "
+.else
+LIB_DEPENDS+=	nss3.1:${PORTSDIR}/security/nss
+CONFIGURE_ARGS+=--enable-smartcard-support
+PLIST_SUB+=	SMARTCARD=""
 .endif
 
 .include <bsd.port.mk>
