@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.8 2010/12/26 10:55:54 kwm Exp $
+#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.9 2011/01/11 20:55:11 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.3.10
+PORTVERSION=	1.3.11
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk3
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=--disable-debug
 .endif
 
 .if ${ARCH} == powerpc64
-CFLAGS+= -mminimal-toc
+CFLAGS+=	-mminimal-toc
 .endif
 
 post-patch:
@@ -76,7 +76,7 @@ post-patch:
 		${WRKSRC}/Source/WebCore/plugins/PluginDatabase.cpp
 	@${FIND} ${WRKSRC} -name GNUmakefile.* | ${XARGS} ${REINPLACE_CMD} -e \
 		's|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g'
-# disable static library. 
+# disable static library.
 	@${REINPLACE_CMD} -e 's|^build_old_libs=yes|build_old_libs=no|' \
 		${WRKDIR}/gnome-libtool
 	@${REINPLACE_CMD} -e 's|/usr/bin/gcc|${CC}|' \
