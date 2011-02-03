@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.9 2011/01/31 22:52:26 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.10 2011/02/02 13:32:30 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -65,10 +65,11 @@ RUN_DEPENDS+=	gnome-shell>=2.91.0:${PORTSDIR}/x11/gnome-shell
 
 
 .if !defined(GNOME_SLAVE)
-.if ${ARCH}!="sparc64" && ${ARCH}!="ia64"
+# see if they build on these args.
+#.if ${ARCH}!="sparc64" && ${ARCH}!="ia64"
 RUN_DEPENDS+=	yelp>=2.91.0:${PORTSDIR}/x11/yelp3 \
-#		epiphany:${PORTSDIR}/www/epiphany
-.endif
+		epiphany>=2.91.0:${PORTSDIR}/www/epiphany3
+#.endif
 #.if ${.CURDIR:T}!="gnome2-lite"
 #RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 #		gucharmap:${PORTSDIR}/deskutils/gucharmap \

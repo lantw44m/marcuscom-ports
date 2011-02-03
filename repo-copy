@@ -9,6 +9,7 @@ math/gcalctool -> math/gcalctool3
 net/libgweather -> net/libgweather3
 security/gnome-keyring -> security/gnome-keyring3
 sysutils/brasero -> sysutils/brasero3
+www/epiphany -> www/epiphany3
 www/gtkhtml3 -> www/gtkhtml4
 www/webkit-gtk2 -> www/webkit-gtk3
 x11-fm/nautilus -> x11-fm/nautilus3
