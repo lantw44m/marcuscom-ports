@@ -3,11 +3,11 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.3 2011/01/13 11:23:22 kwm Exp $
+#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.4 2011/01/31 23:08:27 kwm Exp $
 #
 
 PORTNAME=	nautilus
-PORTVERSION=	2.91.8
+PORTVERSION=	2.91.9
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -27,7 +27,7 @@ INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop3 gconf2 libxml2 \
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop3 libxml2 \
 		desktopfileutils ltverhack gvfs ltasneededhack
 GNOME_DESKTOP_VERSION=3
 USE_LDCONFIG=	yes
