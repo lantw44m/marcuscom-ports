@@ -515,8 +515,6 @@ share/omf/brasero/brasero-zh_TW.omf
 @dirrm lib/brasero3/plugins
 @dirrm lib/brasero3
 @dirrm include/brasero3
-@dirrmtry share/GConf/gsettings
-@dirrmtry share/GConf
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
