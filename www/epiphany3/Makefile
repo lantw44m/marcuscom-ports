@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany/Makefile,v 1.240 2010/10/10 19:16:00 marcus Exp $
+#   $MCom: ports/www/epiphany3/Makefile,v 1.1 2011/02/03 11:15:30 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -17,14 +17,17 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	An extremely lightweight and simple web browser for GNOME 3
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
+		gsettings-desktop-schemas:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3 \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
+		startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
 		notify.1:${PORTSDIR}/devel/libnotify \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
+		gsettings-desktop-schemas:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		${LOCALBASE}/share/icons/HighContrastLargePrint/index.theme:${PORTSDIR}/x11-themes/gnome-themes3
 
 USE_LDCONFIG=	yes
