@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.531 2011/02/02 03:43:16 avl Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.532 2011/02/04 23:00:50 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -301,7 +301,7 @@ gtk20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
 gtk20_USE_GNOME_IMPL=	intltool atk pango
 GTK2_VERSION=		2.10.0
 
-gtk30_LIB_DEPENDS=	gtk-3.0.0:${PORTSDIR}/x11-toolkits/gtk30
+gtk30_LIB_DEPENDS=	gtk-3.0:${PORTSDIR}/x11-toolkits/gtk30
 gtk30_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-3.0.pc
 gtk30_USE_GNOME_IMPL=	intltool atk pango
 GTK3_VERSION=		3.0.0

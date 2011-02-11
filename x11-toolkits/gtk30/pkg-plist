@@ -270,9 +270,9 @@ include/gtk-3.0/unix-print/gtk/gtkunixprint.h
 lib/girepository-1.0/Gdk-3.0.typelib
 lib/girepository-1.0/GdkX11-3.0.typelib
 lib/girepository-1.0/Gtk-3.0.typelib
-lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.a
-lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.la
-lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.so
+@comment lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.a
+@comment lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.la
+@comment lib/gtk-3.0/%%GTK3_VERSION%%/engines/libpixmap.so
 lib/gtk-3.0/%%GTK3_VERSION%%/immodules/im-am-et.a
 lib/gtk-3.0/%%GTK3_VERSION%%/immodules/im-am-et.la
 lib/gtk-3.0/%%GTK3_VERSION%%/immodules/im-am-et.so
@@ -322,18 +322,18 @@ lib/gtk-3.0/modules/libferret.so
 lib/gtk-3.0/modules/libgail.a
 lib/gtk-3.0/modules/libgail.la
 lib/gtk-3.0/modules/libgail.so
-lib/libgailutil-3.0.a
-lib/libgailutil-3.0.la
-lib/libgailutil-3.0.so
-lib/libgailutil-3.0.so.0
-lib/libgdk-3.0.a
-lib/libgdk-3.0.la
-lib/libgdk-3.0.so
-lib/libgdk-3.0.so.0
-lib/libgtk-3.0.a
-lib/libgtk-3.0.la
-lib/libgtk-3.0.so
-lib/libgtk-3.0.so.0
+lib/libgailutil-3.a
+lib/libgailutil-3.la
+lib/libgailutil-3.so
+lib/libgailutil-3.so.0
+lib/libgdk-3.a
+lib/libgdk-3.la
+lib/libgdk-3.so
+lib/libgdk-3.so.0
+lib/libgtk-3.a
+lib/libgtk-3.la
+lib/libgtk-3.so
+lib/libgtk-3.so.0
 libdata/pkgconfig/gail-3.0.pc
 libdata/pkgconfig/gdk-3.0.pc
 libdata/pkgconfig/gdk-x11-3.0.pc
@@ -445,6 +445,8 @@ share/locale/dz/LC_MESSAGES/gtk30-properties.mo
 share/locale/dz/LC_MESSAGES/gtk30.mo
 share/locale/el/LC_MESSAGES/gtk30-properties.mo
 share/locale/el/LC_MESSAGES/gtk30.mo
+share/locale/en/LC_MESSAGES/gtk30-properties.mo
+share/locale/en/LC_MESSAGES/gtk30.mo
 share/locale/en_CA/LC_MESSAGES/gtk30-properties.mo
 share/locale/en_CA/LC_MESSAGES/gtk30.mo
 share/locale/en_GB/LC_MESSAGES/gtk30-properties.mo
