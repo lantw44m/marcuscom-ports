@@ -8,7 +8,6 @@ include/gdkmm-%%API_VERSION%%/gdkmm/displaymanager.h
 include/gdkmm-%%API_VERSION%%/gdkmm/dragcontext.h
 include/gdkmm-%%API_VERSION%%/gdkmm/event.h
 include/gdkmm-%%API_VERSION%%/gdkmm/general.h
-include/gtkmm-%%API_VERSION%%/gtkmm/numerableicon.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbuf.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbufanimation.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbufanimationiter.h
@@ -22,7 +21,6 @@ include/gdkmm-%%API_VERSION%%/gdkmm/private/display_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/displaymanager_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/dragcontext_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/event_p.h
-include/gtkmm-%%API_VERSION%%/gtkmm/private/numerableicon_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbuf_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbufanimation_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/pixbufanimationiter_p.h
@@ -54,6 +52,10 @@ include/gtkmm-%%API_VERSION%%/gtkmm/actiongroup.h
 include/gtkmm-%%API_VERSION%%/gtkmm/activatable.h
 include/gtkmm-%%API_VERSION%%/gtkmm/adjustment.h
 include/gtkmm-%%API_VERSION%%/gtkmm/alignment.h
+include/gtkmm-%%API_VERSION%%/gtkmm/appchooser.h
+include/gtkmm-%%API_VERSION%%/gtkmm/appchooserbutton.h
+include/gtkmm-%%API_VERSION%%/gtkmm/appchooserdialog.h
+include/gtkmm-%%API_VERSION%%/gtkmm/appchooserwidget.h
 include/gtkmm-%%API_VERSION%%/gtkmm/application.h
 include/gtkmm-%%API_VERSION%%/gtkmm/arrow.h
 include/gtkmm-%%API_VERSION%%/gtkmm/aspectframe.h
@@ -136,6 +138,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/menutoolbutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/messagedialog.h
 include/gtkmm-%%API_VERSION%%/gtkmm/misc.h
 include/gtkmm-%%API_VERSION%%/gtkmm/notebook.h
+include/gtkmm-%%API_VERSION%%/gtkmm/numerableicon.h
 include/gtkmm-%%API_VERSION%%/gtkmm/object.h
 include/gtkmm-%%API_VERSION%%/gtkmm/offscreenwindow.h
 include/gtkmm-%%API_VERSION%%/gtkmm/orientable.h
@@ -159,6 +162,10 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/actiongroup_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/activatable_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/adjustment_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/alignment_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooser_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooserbutton_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooserdialog_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooserwidget_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/application_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/arrow_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/aspectframe_p.h
@@ -238,6 +245,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/menutoolbutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/messagedialog_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/misc_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/notebook_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/numerableicon_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/object_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/offscreenwindow_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/orientable_p.h
