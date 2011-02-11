@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-gobject/Makefile,v 1.42 2010/09/27 18:04:22 kwm Exp $
+#   $MCom: ports/devel/py-gobject/Makefile,v 1.44 2011/01/22 22:17:24 kwm Exp $
 #
 
 PORTNAME=	gobject
-PORTVERSION=	2.27.0
+PORTVERSION=	2.27.90
 CATEGORIES=	devel python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pygobject/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -28,7 +28,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20
-USE_PYTHON=	yes
+USE_PYTHON=	2.5+
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-docs
