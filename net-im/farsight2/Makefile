@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net-im/farsight2/Makefile,v 1.1 2011/01/23 16:57:37 kwm Exp $
 
 PORTNAME=	farsight2
-PORTVERSION=	0.0.23
+PORTVERSION=	0.0.24
 CATEGORIES=	net-im devel
 MASTER_SITES=	http://farsight.freedesktop.org/releases/farsight2/
 
