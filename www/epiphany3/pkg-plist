@@ -419,6 +419,7 @@ share/omf/epiphany/epiphany-zh_CN.omf
 @dirrmtry %%DATADIR%%/icons/hicolor/16x16
 @dirrmtry %%DATADIR%%/icons/hicolor
 @dirrmtry %%DATADIR%%/icons
+@dirrm %%DATADIR%%/pages
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%/art
 @dirrmtry %%DATADIR%%
