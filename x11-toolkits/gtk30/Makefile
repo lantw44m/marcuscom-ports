@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.21 2011/02/01 22:40:58 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.22 2011/02/11 00:30:59 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -85,7 +85,6 @@ pre-configure:
 	@${ECHO_CMD} "${PKGNAME}: Needs cairo build with X11 support."
 	@${FALSE}
 .endif
-
 
 pre-build:
 	@${RM} -rf ${WRKSRC}/docs/gtk.info*
