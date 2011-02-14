@@ -41,6 +41,8 @@ share/devhelp/books/vala-%%VERSION%%/vala.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/clutter-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/clutter-gtk-0.10.deps
 %%DATADIR%%-%%VERSION%%/vapi/clutter-gtk-0.10.vapi
+%%DATADIR%%-%%VERSION%%/vapi/clutter-gtk-1.0.deps
+%%DATADIR%%-%%VERSION%%/vapi/clutter-gtk-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/clutter-json-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/cogl-1.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/cogl-1.0.vapi
@@ -202,6 +204,7 @@ share/devhelp/books/vala-%%VERSION%%/vala.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/pango.vapi
 %%DATADIR%%-%%VERSION%%/vapi/pangocairo.deps
 %%DATADIR%%-%%VERSION%%/vapi/pangocairo.vapi
+%%DATADIR%%-%%VERSION%%/vapi/pixman-1.vapi
 %%DATADIR%%-%%VERSION%%/vapi/poppler-glib.deps
 %%DATADIR%%-%%VERSION%%/vapi/poppler-glib.vapi
 %%DATADIR%%-%%VERSION%%/vapi/posix.vapi
