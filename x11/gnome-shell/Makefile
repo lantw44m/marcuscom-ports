@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.20 2011/01/25 14:45:54 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.21 2011/02/02 00:29:39 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
@@ -40,5 +40,7 @@ GLIB_SCHEMAS=	org.gnome.accessibility.magnifier.gschema.xml \
 GCONF_SCHEMAS=	gnome-shell.schemas
 
 MAN1=		gnome-shell.1
+
+CONFIGURE_ARGS+=--enable-compile-warnings=no
 
 .include <bsd.port.mk>
