@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.21 2011/02/02 00:29:39 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.22 2011/02/15 17:01:53 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
@@ -22,7 +22,7 @@ LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		clutter-glx-1.0:${PORTSDIR}/graphics/clutter \
 		gjs-gi:${PORTSDIR}/lang/gjs
-#RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus
 #    		glxinfo:${PORTSDIR}/graphics/mesa-demos
 
 USE_BZIP2=	yes
