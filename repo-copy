@@ -2,8 +2,10 @@ accessibility/mousetweaks -> accessibility/mousetweaks3
 audio/libcanberra -> audio/libcanberra-gtk3?
 databases/evolution-data-server -> databases/evolution-data-server3
 deskutils/gnome-utils -> deskutils/gnome-utils3
-devel/libgdata -> devel/libgdata08 ? (api changes, may be patchable)
+deskutils/gucharmap -> desktutils/gucharmap3
+devel/libgdata -> devel/libgdata08
 editors/gedit -> editors/gedit3
+editors/gedit-plugins -> editors/gedit-plugins3
 graphics/evince -> graphics/evince3
 graphics/goocanvas -> graphics/goocanvas2
 graphics/goocanvasmm -> graphics/goocanvasmm2
