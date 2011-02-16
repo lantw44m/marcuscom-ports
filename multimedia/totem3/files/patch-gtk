@@ -1,0 +1,92 @@
+diff --git a/browser-plugin/totem-plugin-viewer.c b/browser-plugin/totem-plugin-viewer.c
+index 3b6e2da..8f63842 100644
+--- browser-plugin/totem-plugin-viewer.c
++++ browser-plugin/totem-plugin-viewer.c
+@@ -33,7 +33,7 @@
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ #include <gio/gio.h>
+-#include <gdk/gdkx.h>
++#include <gtk/gtkx.h>
+ #include <gtk/gtk.h>
+ 
+ #include <gdk/gdk.h>
+@@ -1797,7 +1797,7 @@ totem_embedded_key_press_event (GtkWidget *widget, GdkEventKey *event,
+ 
+ static gboolean
+ totem_embedded_construct (TotemEmbedded *emb,
+-			  GdkNativeWindow xid,
++			  Window xid,
+ 			  int width,
+ 			  int height)
+ {
+@@ -2086,7 +2086,7 @@ totem_embedded_set_window (TotemEmbedded *embedded,
+ 	embedded->width = width;
+ 	embedded->height = height;
+ 
+-	totem_embedded_construct (embedded, (GdkNativeWindow) window,
++	totem_embedded_construct (embedded, (Window) window,
+ 				  width, height);
+ 
+ 	return TRUE;
+diff --git a/src/backend/bacon-video-widget-gst-missing-plugins.c b/src/backend/bacon-video-widget-gst-missing-plugins.c
+index bb874ca..f91c58f 100644
+--- src/backend/bacon-video-widget-gst-missing-plugins.c
++++ src/backend/bacon-video-widget-gst-missing-plugins.c
+@@ -35,7 +35,7 @@
+ #include <gtk/gtk.h>
+ 
+ #ifdef GDK_WINDOWING_X11
+-#include <gdk/gdkx.h>
++#include <gtk/gtkx.h>
+ #endif
+ 
+ #include <string.h>
+@@ -57,12 +57,12 @@ TotemCodecInstallContext;
+ 
+ #ifdef GDK_WINDOWING_X11
+ /* Adapted from totem-interface.c */
+-static GdkNativeWindow
++static Window
+ bacon_video_widget_gtk_plug_get_toplevel (GtkPlug *plug)
+ {
+ 	Window root, parent, *children;
+ 	guint nchildren;
+-	GdkNativeWindow xid;
++	Window xid;
+ 
+ 	g_return_val_if_fail (GTK_IS_PLUG (plug), 0);
+ 
+@@ -86,7 +86,7 @@ bacon_video_widget_gtk_plug_get_toplevel (GtkPlug *plug)
+ 	while (TRUE);
+ }
+ 
+-static GdkNativeWindow
++static Window
+ bacon_video_widget_gst_get_toplevel (GtkWidget *widget)
+ {
+ 	GtkWidget *parent;
+diff --git a/src/totem-interface.c b/src/totem-interface.c
+index 5d2b42d..a17fef5 100644
+--- src/totem-interface.c
++++ src/totem-interface.c
+@@ -43,7 +43,7 @@
+ #include <glib.h>
+ #include <glib/gi18n.h>
+ #include <gtk/gtk.h>
+-#include <gdk/gdkx.h>
++#include <gtk/gtkx.h>
+ 
+ #include "totem-interface.h"
+ 
+@@ -293,7 +293,7 @@ totem_gtk_plug_get_toplevel (GtkPlug *plug)
+ {
+ 	Window root, parent, *children;
+ 	guint nchildren;
+-	GdkNativeWindow xid;
++	Window xid;
+ 
+ 	g_return_val_if_fail (GTK_IS_PLUG (plug), NULL);
+ 
+--
+cgit v0.8.3.1

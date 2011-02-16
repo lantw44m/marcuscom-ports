@@ -1,0 +1,28 @@
+diff --git a/src/plugins/totem-plugins-engine.c b/src/plugins/totem-plugins-engine.c
+index cdff0bf..4518fe2 100644
+--- src/plugins/totem-plugins-engine.c
++++ src/plugins/totem-plugins-engine.c
+@@ -120,6 +120,8 @@ totem_plugins_engine_get_default (TotemObject *totem)
+ 	}
+ 	g_strfreev (paths);
+ 
++	peas_engine_enable_loader (PEAS_ENGINE (engine), "python");
++
+ 	g_object_add_weak_pointer (G_OBJECT (engine),
+ 				   (gpointer) &engine);
+ 
+diff --git a/src/totem-menu.c b/src/totem-menu.c
+index 6e76184..1a2e54e 100644
+--- src/totem-menu.c
++++ src/totem-menu.c
+@@ -1234,7 +1234,7 @@ plugins_action_callback (GtkAction *action, Totem *totem)
+ 					 G_CALLBACK (totem_plugins_response_cb),
+ 					 NULL, 0);
+ 
+-		manager = peas_gtk_plugin_manager_new ();
++		manager = peas_gtk_plugin_manager_new (NULL);
+ 		gtk_widget_show_all (GTK_WIDGET (manager));
+ 		gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (totem->plugins))),
+ 				    manager, TRUE, TRUE, 0);
+--
+cgit v0.8.3.1
