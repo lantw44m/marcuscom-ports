@@ -1,0 +1,31 @@
+# New ports collection makefile for:	gucharmap
+# Date created:				02 Mar 2003
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD$
+#   $MCom: ports/deskutils/gucharmap/Makefile,v 1.75 2010/11/13 13:05:08 kwm Exp $
+#
+
+PORTNAME=	gucharmap
+PORTVERSION=	2.33.2
+CATEGORIES=	deskutils gnome
+MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome3
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	A Unicode/ISO10646 character map and font viewer
+
+USE_BZIP2=	yes
+USE_GETTEXT=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 gnomedocutils gconf2
+GNU_CONFIGURE=	yes
+INSTALLS_OMF=	yes
+USE_LDCONFIG=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
+	       	LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--with-gtk=3.0
+
+GCONF_SCHEMAS=	gucharmap.schemas
+
+.include <bsd.port.mk>
