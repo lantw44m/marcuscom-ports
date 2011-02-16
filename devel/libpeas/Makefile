@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libpeas/Makefile,v 1.9 2011/01/15 19:24:41 kwm Exp $
+#   $MCom: ports/devel/libpeas/Makefile,v 1.10 2011/01/26 19:47:28 kwm Exp $
 #
 
 PORTNAME=	libpeas
-PORTVERSION=	0.7.1
+PORTVERSION=	0.7.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
