@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.4 2011/01/19 21:23:44 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.5 2011/01/31 15:23:39 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.91.6
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
 LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
-		gdata.11:${PORTSDIR}/devel/libgdata \
+		gdata.11:${PORTSDIR}/devel/libgdata08 \
 		ical.44:${PORTSDIR}/devel/libical \
 		nss3.1:${PORTSDIR}/security/nss \
 		tasn1.4:${PORTSDIR}/security/libtasn1 \

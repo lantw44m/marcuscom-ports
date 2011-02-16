@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.4 2011/02/02 19:55:45 kwm Exp $
+#   $MCom: ports/multimedia/totem3/Makefile,v 1.5 2011/02/16 15:37:13 kwm Exp $
 #
 
 PORTNAME=	totem
 PORTVERSION=	2.91.6
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,7 +19,7 @@ COMMENT?=	A gstreamer-based video player for the GNOME 3 Desktop
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	gdata.11:${PORTSDIR}/devel/libgdata \
+LIB_DEPENDS=	gdata.11:${PORTSDIR}/devel/libgdata08 \
 		dbus-1.3:${PORTSDIR}/devel/dbus \
 		peas-1.0.0:${PORTSDIR}/devel/libpeas \
 		totem-plparser.17:${PORTSDIR}/multimedia/totem-pl-parser
