@@ -619,9 +619,7 @@ share/themes/Raleigh/gtk-3.0/gtk.css
 @exec /usr/bin/find %%LOCALBASE%%/share/icons -type d -depth 1 -exec %D/bin/gtk-update-icon-cache -q -f {} \; 2>/dev/null || /usr/bin/true
 @unexec /usr/bin/find %%LOCALBASE%%/share/icons -type f -depth 2 -name icon-theme.cache -delete 2>/dev/null || /usr/bin/true
 @dirrm share/themes/Raleigh/gtk-3.0
-@dirrm share/themes/Raleigh
 @dirrm share/themes/Emacs/gtk-3.0
-@dirrm share/themes/Emacs
 @dirrm share/themes/Default/gtk-3.0
 @dirrm share/gtk-3.0/demo
 @dirrm share/gtk-3.0
