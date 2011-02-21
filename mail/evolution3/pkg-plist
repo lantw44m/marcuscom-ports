@@ -556,6 +556,9 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-google.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-webdav.a
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-webdav.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-evolution-webdav.so
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-face.a
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-face.la
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-face.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-groupwise-features.a
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-groupwise-features.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-groupwise-features.so
@@ -610,6 +613,7 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-bbdb.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-caldav.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-google.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-evolution-webdav.eplug
+lib/evolution/%%VERSION%%/plugins/org-gnome-face.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-groupwise-features.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-imap-features.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-itip-formatter.eplug
@@ -719,6 +723,7 @@ share/doc/eshell/up.png
 %%DATADIR%%/%%VERSION%%/errors/mail.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-attachment-reminder.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-backup-restore.error
+%%DATADIR%%/%%VERSION%%/errors/org-gnome-face.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-itip-formatter.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-mail-retract.error
 %%DATADIR%%/%%VERSION%%/errors/org-gnome-mailing-list-actions.error
@@ -1231,7 +1236,6 @@ share/gnome/help/evolution/C/figures/exchng-rec-options.png
 share/gnome/help/evolution/C/figures/filter-new-fig.png
 share/gnome/help/evolution/C/figures/folder_plus.png
 share/gnome/help/evolution/C/figures/folder_size_mapi.png
-share/gnome/help/evolution/C/figures/folder_size_preference.png
 share/gnome/help/evolution/C/figures/google_cal_view.png
 share/gnome/help/evolution/C/figures/groupwise_resend.png
 share/gnome/help/evolution/C/figures/groupwise_resend_retract.png
@@ -1295,7 +1299,6 @@ share/gnome/help/evolution/cs/figures/exchng-rec-options.png
 share/gnome/help/evolution/cs/figures/filter-new-fig.png
 share/gnome/help/evolution/cs/figures/folder_plus.png
 share/gnome/help/evolution/cs/figures/folder_size_mapi.png
-share/gnome/help/evolution/cs/figures/folder_size_preference.png
 share/gnome/help/evolution/cs/figures/google_cal_view.png
 share/gnome/help/evolution/cs/figures/groupwise_resend.png
 share/gnome/help/evolution/cs/figures/groupwise_resend_retract.png
@@ -1359,7 +1362,6 @@ share/gnome/help/evolution/de/figures/exchng-rec-options.png
 share/gnome/help/evolution/de/figures/filter-new-fig.png
 share/gnome/help/evolution/de/figures/folder_plus.png
 share/gnome/help/evolution/de/figures/folder_size_mapi.png
-share/gnome/help/evolution/de/figures/folder_size_preference.png
 share/gnome/help/evolution/de/figures/google_cal_view.png
 share/gnome/help/evolution/de/figures/groupwise_resend.png
 share/gnome/help/evolution/de/figures/groupwise_resend_retract.png
@@ -1423,7 +1425,6 @@ share/gnome/help/evolution/el/figures/exchng-rec-options.png
 share/gnome/help/evolution/el/figures/filter-new-fig.png
 share/gnome/help/evolution/el/figures/folder_plus.png
 share/gnome/help/evolution/el/figures/folder_size_mapi.png
-share/gnome/help/evolution/el/figures/folder_size_preference.png
 share/gnome/help/evolution/el/figures/google_cal_view.png
 share/gnome/help/evolution/el/figures/groupwise_resend.png
 share/gnome/help/evolution/el/figures/groupwise_resend_retract.png
@@ -1487,7 +1488,6 @@ share/gnome/help/evolution/en_GB/figures/exchng-rec-options.png
 share/gnome/help/evolution/en_GB/figures/filter-new-fig.png
 share/gnome/help/evolution/en_GB/figures/folder_plus.png
 share/gnome/help/evolution/en_GB/figures/folder_size_mapi.png
-share/gnome/help/evolution/en_GB/figures/folder_size_preference.png
 share/gnome/help/evolution/en_GB/figures/google_cal_view.png
 share/gnome/help/evolution/en_GB/figures/groupwise_resend.png
 share/gnome/help/evolution/en_GB/figures/groupwise_resend_retract.png
@@ -1551,7 +1551,6 @@ share/gnome/help/evolution/es/figures/exchng-rec-options.png
 share/gnome/help/evolution/es/figures/filter-new-fig.png
 share/gnome/help/evolution/es/figures/folder_plus.png
 share/gnome/help/evolution/es/figures/folder_size_mapi.png
-share/gnome/help/evolution/es/figures/folder_size_preference.png
 share/gnome/help/evolution/es/figures/google_cal_view.png
 share/gnome/help/evolution/es/figures/groupwise_resend.png
 share/gnome/help/evolution/es/figures/groupwise_resend_retract.png
@@ -1615,7 +1614,6 @@ share/gnome/help/evolution/eu/figures/exchng-rec-options.png
 share/gnome/help/evolution/eu/figures/filter-new-fig.png
 share/gnome/help/evolution/eu/figures/folder_plus.png
 share/gnome/help/evolution/eu/figures/folder_size_mapi.png
-share/gnome/help/evolution/eu/figures/folder_size_preference.png
 share/gnome/help/evolution/eu/figures/google_cal_view.png
 share/gnome/help/evolution/eu/figures/groupwise_resend.png
 share/gnome/help/evolution/eu/figures/groupwise_resend_retract.png
@@ -1679,7 +1677,6 @@ share/gnome/help/evolution/fr/figures/exchng-rec-options.png
 share/gnome/help/evolution/fr/figures/filter-new-fig.png
 share/gnome/help/evolution/fr/figures/folder_plus.png
 share/gnome/help/evolution/fr/figures/folder_size_mapi.png
-share/gnome/help/evolution/fr/figures/folder_size_preference.png
 share/gnome/help/evolution/fr/figures/google_cal_view.png
 share/gnome/help/evolution/fr/figures/groupwise_resend.png
 share/gnome/help/evolution/fr/figures/groupwise_resend_retract.png
@@ -1743,7 +1740,6 @@ share/gnome/help/evolution/gl/figures/exchng-rec-options.png
 share/gnome/help/evolution/gl/figures/filter-new-fig.png
 share/gnome/help/evolution/gl/figures/folder_plus.png
 share/gnome/help/evolution/gl/figures/folder_size_mapi.png
-share/gnome/help/evolution/gl/figures/folder_size_preference.png
 share/gnome/help/evolution/gl/figures/google_cal_view.png
 share/gnome/help/evolution/gl/figures/groupwise_resend.png
 share/gnome/help/evolution/gl/figures/groupwise_resend_retract.png
@@ -1807,7 +1803,6 @@ share/gnome/help/evolution/mk/figures/exchng-rec-options.png
 share/gnome/help/evolution/mk/figures/filter-new-fig.png
 share/gnome/help/evolution/mk/figures/folder_plus.png
 share/gnome/help/evolution/mk/figures/folder_size_mapi.png
-share/gnome/help/evolution/mk/figures/folder_size_preference.png
 share/gnome/help/evolution/mk/figures/google_cal_view.png
 share/gnome/help/evolution/mk/figures/groupwise_resend.png
 share/gnome/help/evolution/mk/figures/groupwise_resend_retract.png
@@ -1871,7 +1866,6 @@ share/gnome/help/evolution/oc/figures/exchng-rec-options.png
 share/gnome/help/evolution/oc/figures/filter-new-fig.png
 share/gnome/help/evolution/oc/figures/folder_plus.png
 share/gnome/help/evolution/oc/figures/folder_size_mapi.png
-share/gnome/help/evolution/oc/figures/folder_size_preference.png
 share/gnome/help/evolution/oc/figures/google_cal_view.png
 share/gnome/help/evolution/oc/figures/groupwise_resend.png
 share/gnome/help/evolution/oc/figures/groupwise_resend_retract.png
@@ -1935,7 +1929,6 @@ share/gnome/help/evolution/ru/figures/exchng-rec-options.png
 share/gnome/help/evolution/ru/figures/filter-new-fig.png
 share/gnome/help/evolution/ru/figures/folder_plus.png
 share/gnome/help/evolution/ru/figures/folder_size_mapi.png
-share/gnome/help/evolution/ru/figures/folder_size_preference.png
 share/gnome/help/evolution/ru/figures/google_cal_view.png
 share/gnome/help/evolution/ru/figures/groupwise_resend.png
 share/gnome/help/evolution/ru/figures/groupwise_resend_retract.png
@@ -1999,7 +1992,6 @@ share/gnome/help/evolution/sl/figures/exchng-rec-options.png
 share/gnome/help/evolution/sl/figures/filter-new-fig.png
 share/gnome/help/evolution/sl/figures/folder_plus.png
 share/gnome/help/evolution/sl/figures/folder_size_mapi.png
-share/gnome/help/evolution/sl/figures/folder_size_preference.png
 share/gnome/help/evolution/sl/figures/google_cal_view.png
 share/gnome/help/evolution/sl/figures/groupwise_resend.png
 share/gnome/help/evolution/sl/figures/groupwise_resend_retract.png
@@ -2063,7 +2055,6 @@ share/gnome/help/evolution/sv/figures/exchng-rec-options.png
 share/gnome/help/evolution/sv/figures/filter-new-fig.png
 share/gnome/help/evolution/sv/figures/folder_plus.png
 share/gnome/help/evolution/sv/figures/folder_size_mapi.png
-share/gnome/help/evolution/sv/figures/folder_size_preference.png
 share/gnome/help/evolution/sv/figures/google_cal_view.png
 share/gnome/help/evolution/sv/figures/groupwise_resend.png
 share/gnome/help/evolution/sv/figures/groupwise_resend_retract.png
@@ -2127,7 +2118,6 @@ share/gnome/help/evolution/zh_CN/figures/exchng-rec-options.png
 share/gnome/help/evolution/zh_CN/figures/filter-new-fig.png
 share/gnome/help/evolution/zh_CN/figures/folder_plus.png
 share/gnome/help/evolution/zh_CN/figures/folder_size_mapi.png
-share/gnome/help/evolution/zh_CN/figures/folder_size_preference.png
 share/gnome/help/evolution/zh_CN/figures/google_cal_view.png
 share/gnome/help/evolution/zh_CN/figures/groupwise_resend.png
 share/gnome/help/evolution/zh_CN/figures/groupwise_resend_retract.png
@@ -2486,5 +2476,4 @@ share/omf/evolution/evolution-zh_CN.omf
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/ast/LC_MESSAGES
 @dirrmtry share/locale/ast
-@dirrmtry share/locale/as/LC_MESSAGES
-@dirrmtry share/locale/as
+@dirrmtry share/locale/as/LC_MESSAGES@dirrmtry share/locale/as
