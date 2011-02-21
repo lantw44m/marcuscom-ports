@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.5 2011/01/13 02:23:12 kwm Exp $
+#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.6 2011/02/02 09:29:14 kwm Exp $
 #
 
 PORTNAME=	gsettings-desktop-schemas
-PORTVERSION=	0.1.5
+PORTVERSION=	0.1.7
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,6 +26,7 @@ GNU_CONFIGURE=	yes
 
 GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
 		org.gnome.desktop.a11y.keyboard.gschema.xml \
+		org.gnome.desktop.a11y.magnifier.gschema.xml \
 		org.gnome.desktop.a11y.mouse.gschema.xml \
 		org.gnome.desktop.background.gschema.xml \
 		org.gnome.desktop.default-applications.gschema.xml \
@@ -33,6 +34,7 @@ GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
 		org.gnome.desktop.interface.gschema.xml \
 		org.gnome.desktop.lockdown.gschema.xml \
 		org.gnome.desktop.media-handling.gschema.xml \
+		org.gnome.desktop.screensaver.gschema.xml \
 		org.gnome.desktop.session.gschema.xml \
 		org.gnome.desktop.sound.gschema.xml \
 		org.gnome.desktop.thumbnailers.gschema.xml \
