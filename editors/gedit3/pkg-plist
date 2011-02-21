@@ -77,13 +77,14 @@ libexec/gedit/gedit-bugreport.sh
 share/GConf/gsettings/gedit.convert
 share/applications/gedit.desktop
 share/dbus-1/services/org.gnome.gedit.service
+%%DOCSDIR%%/GeditAppActivatable.html
 %%DOCSDIR%%/GeditMessage.html
 %%DOCSDIR%%/GeditMessageBus.html
 %%DOCSDIR%%/GeditMessageType.html
+%%DOCSDIR%%/GeditViewActivatable.html
 %%DOCSDIR%%/GeditWindowActivatable.html
 %%DOCSDIR%%/ch01.html
 %%DOCSDIR%%/gedit-GeditPrintJob.html
-%%DOCSDIR%%/gedit-GeditWiewActivatable.html
 %%DOCSDIR%%/gedit-gedit-app.html
 %%DOCSDIR%%/gedit-gedit-debug.html
 %%DOCSDIR%%/gedit-gedit-document.html
