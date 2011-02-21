@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.151 2011/01/13 10:24:39 kwm Exp $
+#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.152 2011/02/02 13:43:49 kwm Exp $
 #
 
 PORTNAME=	gnome-icon-theme
-PORTVERSION=	2.91.6
-PORTREVISION=	0
+PORTVERSION=	2.91.7
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

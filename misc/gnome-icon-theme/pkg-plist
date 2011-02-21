@@ -571,6 +571,7 @@ share/icons/gnome/16x16/devices/printer.png
 share/icons/gnome/16x16/devices/printer1.png
 share/icons/gnome/16x16/devices/printmgr.png
 share/icons/gnome/16x16/devices/scanner.png
+share/icons/gnome/16x16/devices/speaker.png
 share/icons/gnome/16x16/devices/stock_cell-phone.png
 share/icons/gnome/16x16/devices/stock_mic.png
 share/icons/gnome/16x16/devices/stock_printers.png
@@ -1582,6 +1583,7 @@ share/icons/gnome/22x22/devices/printer.png
 share/icons/gnome/22x22/devices/printer1.png
 share/icons/gnome/22x22/devices/printmgr.png
 share/icons/gnome/22x22/devices/scanner.png
+share/icons/gnome/22x22/devices/speaker.png
 share/icons/gnome/22x22/devices/stock_cell-phone.png
 share/icons/gnome/22x22/devices/stock_mic.png
 share/icons/gnome/22x22/devices/stock_printers.png
@@ -2591,6 +2593,7 @@ share/icons/gnome/24x24/devices/printer.png
 share/icons/gnome/24x24/devices/printer1.png
 share/icons/gnome/24x24/devices/printmgr.png
 share/icons/gnome/24x24/devices/scanner.png
+share/icons/gnome/24x24/devices/speaker.png
 share/icons/gnome/24x24/devices/stock_cell-phone.png
 share/icons/gnome/24x24/devices/stock_mic.png
 share/icons/gnome/24x24/devices/stock_printers.png
@@ -3300,6 +3303,7 @@ share/icons/gnome/256x256/devices/printer.png
 share/icons/gnome/256x256/devices/printer1.png
 share/icons/gnome/256x256/devices/printmgr.png
 share/icons/gnome/256x256/devices/stock_mic.png
+share/icons/gnome/256x256/devices/speaker.png
 share/icons/gnome/256x256/devices/stock_cell-phone.png
 share/icons/gnome/256x256/devices/stock_printers.png
 share/icons/gnome/256x256/devices/system.png
@@ -4222,6 +4226,7 @@ share/icons/gnome/32x32/devices/printer.png
 share/icons/gnome/32x32/devices/printer1.png
 share/icons/gnome/32x32/devices/printmgr.png
 share/icons/gnome/32x32/devices/scanner.png
+share/icons/gnome/32x32/devices/speaker.png
 share/icons/gnome/32x32/devices/stock_cell-phone.png
 share/icons/gnome/32x32/devices/stock_mic.png
 share/icons/gnome/32x32/devices/stock_printers.png
@@ -5226,6 +5231,7 @@ share/icons/gnome/48x48/devices/printer.png
 share/icons/gnome/48x48/devices/printer1.png
 share/icons/gnome/48x48/devices/printmgr.png
 share/icons/gnome/48x48/devices/scanner.png
+share/icons/gnome/48x48/devices/speaker.png
 share/icons/gnome/48x48/devices/stock_cell-phone.png
 share/icons/gnome/48x48/devices/stock_mic.png
 share/icons/gnome/48x48/devices/stock_printers.png
