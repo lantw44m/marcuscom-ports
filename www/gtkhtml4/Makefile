@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml4/Makefile,v 1.4 2011/01/19 22:10:48 kwm Exp $
+#   $MCom: ports/www/gtkhtml4/Makefile,v 1.5 2011/01/31 14:11:04 kwm Exp $
 #
 
 PORTNAME=	gtkhtml4
-PORTVERSION=	3.91.6
+PORTVERSION=	3.91.90
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/4$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -23,8 +23,6 @@ LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		enchant.1:${PORTSDIR}/textproc/enchant
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
-
-WRKSRC=		${WRKDIR}/${PORTNAME:S/4//}-3.91.6
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
