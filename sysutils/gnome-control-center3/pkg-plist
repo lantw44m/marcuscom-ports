@@ -26,15 +26,9 @@ lib/control-center-1/panels/libmedia.so
 lib/control-center-1/panels/libmouse-properties.a
 lib/control-center-1/panels/libmouse-properties.la
 lib/control-center-1/panels/libmouse-properties.so
-lib/control-center-1/panels/libnetwork.a
-lib/control-center-1/panels/libnetwork.la
-lib/control-center-1/panels/libnetwork.so
 lib/control-center-1/panels/libpower.a
 lib/control-center-1/panels/libpower.la
 lib/control-center-1/panels/libpower.so
-lib/control-center-1/panels/libprinters.a
-lib/control-center-1/panels/libprinters.la
-lib/control-center-1/panels/libprinters.so
 lib/control-center-1/panels/libregion.a
 lib/control-center-1/panels/libregion.la
 lib/control-center-1/panels/libregion.so
@@ -63,9 +57,7 @@ share/applications/gnome-info-panel.desktop
 share/applications/gnome-keyboard-panel.desktop
 share/applications/gnome-media-panel.desktop
 share/applications/gnome-mouse-panel.desktop
-share/applications/gnome-network-panel.desktop
 share/applications/gnome-power-panel.desktop
-share/applications/gnome-printers-panel.desktop
 share/applications/gnome-region-panel.desktop
 share/applications/gnome-screen-panel.desktop
 share/applications/gnome-sound-panel.desktop
@@ -86,6 +78,7 @@ share/doc/libgnome-control-center/object-tree.html
 share/doc/libgnome-control-center/right.png
 share/doc/libgnome-control-center/style.css
 share/doc/libgnome-control-center/up.png
+%%DATADIR%%/datetime/backward
 %%DATADIR%%/icons/hicolor/16x16/devices/audio-headset.svg
 %%DATADIR%%/icons/hicolor/16x16/status/audio-input-microphone-high.png
 %%DATADIR%%/icons/hicolor/16x16/status/audio-input-microphone-low.png
@@ -123,8 +116,10 @@ share/doc/libgnome-control-center/up.png
 %%DATADIR%%/icons/hicolor/48x48/devices/audio-speaker-right.svg
 %%DATADIR%%/icons/hicolor/48x48/devices/audio-subwoofer-testing.svg
 %%DATADIR%%/icons/hicolor/48x48/devices/audio-subwoofer.svg
-%%DATADIR%%/keybindings/00-multimedia-key.xml
-%%DATADIR%%/keybindings/01-desktop-key.xml
+%%DATADIR%%/keybindings/00-multimedia.xml
+%%DATADIR%%/keybindings/01-launchers.xml
+%%DATADIR%%/keybindings/01-system.xml
+%%DATADIR%%/keybindings/50-accessibility.xml
 %%DATADIR%%/pixmaps/double-click-maybe.png
 %%DATADIR%%/pixmaps/double-click-off.png
 %%DATADIR%%/pixmaps/double-click-on.png
@@ -209,9 +204,7 @@ share/doc/libgnome-control-center/up.png
 %%DATADIR%%/ui/gnome-region-panel-options-dialog.ui
 %%DATADIR%%/ui/gnome-region-panel.ui
 %%DATADIR%%/ui/info.ui
-%%DATADIR%%/ui/network.ui
 %%DATADIR%%/ui/power.ui
-%%DATADIR%%/ui/printers/printers.ui
 %%DATADIR%%/ui/screen.ui
 %%DATADIR%%/ui/shell.ui
 %%DATADIR%%/ui/uap.ui
@@ -509,7 +502,6 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm share/gnome/help/control-center/C
 @dirrm share/gnome/help/control-center
 @dirrm %%DATADIR%%/ui/user-accounts
-@dirrm %%DATADIR%%/ui/printers
 @dirrm %%DATADIR%%/ui/datetime
 @dirrm %%DATADIR%%/ui/background
 @dirrm %%DATADIR%%/ui
@@ -531,6 +523,7 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm %%DATADIR%%/icons/hicolor/16x16
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
+@dirrm %%DATADIR%%/datetime
 @dirrm %%DATADIR%%
 @dirrm share/doc/libgnome-control-center
 @dirrmtry share/desktop-directories

@@ -3,13 +3,13 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.6 2011/01/25 14:44:09 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.7 2011/02/02 12:44:30 kwm Exp $
 #
 
 # add cheese suppor when it gets gtk3 version
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	2.91.6
+PORTVERSION=	2.91.90
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
