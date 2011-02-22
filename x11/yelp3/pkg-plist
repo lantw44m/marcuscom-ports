@@ -10,6 +10,8 @@ include/libyelp/yelp-mallard-document.h
 include/libyelp/yelp-man-document.h
 include/libyelp/yelp-settings.h
 include/libyelp/yelp-simple-document.h
+include/libyelp/yelp-sqlite-storage.h
+include/libyelp/yelp-storage.h
 include/libyelp/yelp-transform.h
 include/libyelp/yelp-types.h
 include/libyelp/yelp-uri.h
@@ -141,11 +143,40 @@ share/locale/zh_HK/LC_MESSAGES/yelp.mo
 share/locale/zh_TW/LC_MESSAGES/yelp.mo
 share/locale/zu/LC_MESSAGES/yelp.mo
 %%DATADIR%%/default.css
+%%DATADIR%%/dtd/catalog
+%%DATADIR%%/dtd/docbookx.dtd
+%%DATADIR%%/dtd/isoamsa.ent
+%%DATADIR%%/dtd/isoamsb.ent
+%%DATADIR%%/dtd/isoamsc.ent
+%%DATADIR%%/dtd/isoamsn.ent
+%%DATADIR%%/dtd/isoamso.ent
+%%DATADIR%%/dtd/isoamsr.ent
+%%DATADIR%%/dtd/isobox.ent
+%%DATADIR%%/dtd/isocyr1.ent
+%%DATADIR%%/dtd/isocyr2.ent
+%%DATADIR%%/dtd/isodia.ent
+%%DATADIR%%/dtd/isogrk1.ent
+%%DATADIR%%/dtd/isogrk2.ent
+%%DATADIR%%/dtd/isogrk3.ent
+%%DATADIR%%/dtd/isogrk4.ent
+%%DATADIR%%/dtd/isolat1.ent
+%%DATADIR%%/dtd/isolat2.ent
+%%DATADIR%%/dtd/isonum.ent
+%%DATADIR%%/dtd/isopub.ent
+%%DATADIR%%/dtd/isotech.ent
 %%DATADIR%%/icons/hicolor/16x16/status/bookmark.png
 %%DATADIR%%/icons/hicolor/16x16/status/yelp-page-task.png
 %%DATADIR%%/icons/hicolor/16x16/status/yelp-page-tip.png
 %%DATADIR%%/icons/hicolor/16x16/status/yelp-page-ui.png
 %%DATADIR%%/icons/hicolor/16x16/status/yelp-page-video.png
+%%DATADIR%%/icons/hicolor/scalable/actions/yelp-bookmark-symbolic.svg
+%%DATADIR%%/icons/hicolor/scalable/status/yelp-page-problem-symbolic.svg
+%%DATADIR%%/icons/hicolor/scalable/status/yelp-page-search-symbolic.svg
+%%DATADIR%%/icons/hicolor/scalable/status/yelp-page-symbolic.svg
+%%DATADIR%%/icons/hicolor/scalable/status/yelp-page-task-symbolic.svg
+%%DATADIR%%/icons/hicolor/scalable/status/yelp-page-tip-symbolic.svg
+%%DATADIR%%/icons/hicolor/scalable/status/yelp-page-ui-symbolic.svg
+%%DATADIR%%/icons/hicolor/scalable/status/yelp-page-video-symbolic.svg
 %%DATADIR%%/icons/yelp-icon-caution.png
 %%DATADIR%%/icons/yelp-icon-important.png
 %%DATADIR%%/icons/yelp-icon-note.png
@@ -173,10 +204,14 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 %%DATADIR%%/xslt/yelp-common.xsl
 %%DATADIR%%/yelp.js
 @dirrm %%DATADIR%%/xslt
+@dirrm %%DATADIR%%/icons/hicolor/scalable/status
+@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
+@dirrm %%DATADIR%%/icons/hicolor/scalable
 @dirrm %%DATADIR%%/icons/hicolor/16x16/status
 @dirrm %%DATADIR%%/icons/hicolor/16x16
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
+@dirrm %%DATADIR%%/dtd
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm share/doc/libyelp
