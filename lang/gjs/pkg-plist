@@ -34,6 +34,9 @@ lib/gjs-1.0/console.so
 lib/gjs-1.0/dbusNative.a
 lib/gjs-1.0/dbusNative.la
 lib/gjs-1.0/dbusNative.so
+lib/gjs-1.0/debugger.a
+lib/gjs-1.0/debugger.la
+lib/gjs-1.0/debugger.so
 lib/gjs-1.0/gettextNative.a
 lib/gjs-1.0/gettextNative.la
 lib/gjs-1.0/gettextNative.so
