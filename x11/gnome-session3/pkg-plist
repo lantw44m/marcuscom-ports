@@ -5,6 +5,7 @@ libexec/gnome-session-is-accelerated
 share/applications/session-properties.desktop
 share/GConf/gsettings/org.gnome.SessionManager.gschema.migrate
 %%DATADIR%%/gsm-inhibit-dialog.ui
+%%DATADIR%%/sad-computer.svgz
 %%DATADIR%%/session-properties.ui
 %%DATADIR%%/sessions/gnome-fallback.session
 %%DATADIR%%/sessions/gnome.session
