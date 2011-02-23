@@ -3,17 +3,17 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/seed/Makefile,v 1.11 2010/12/04 07:31:27 ade Exp $
-#   $MCom: ports/devel/seed/Makefile,v 1.26 2011/01/15 18:47:23 kwm Exp $
+#   $MCom: ports/devel/seed3/Makefile,v 1.3 2011/01/15 18:52:14 kwm Exp $
 #
 # NOTE: It may be necessary to update ${FILESDIR}/Seed.js on each release.
 # To do that, just replace imports.searchPaths with "." and ".." elements.
 #
 
 PORTNAME=	seed
-PORTVERSION=	2.31.91
+PORTVERSION=	2.91.90
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GObject JavaScriptCore bridge
@@ -29,13 +29,14 @@ LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi \
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack gtk20 intltool libxml2
+USE_GNOME=	gnomehack gtk30 intltool libxml2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS+=--enable-gtk-doc=no --with-webkit=3.0
+DATADIR=	share/seed-gtk3
 
 MAN1=		seed.1
 
