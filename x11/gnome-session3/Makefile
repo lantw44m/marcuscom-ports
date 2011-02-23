@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session3/Makefile,v 1.5 2011/02/02 12:06:05 avl Exp $
+#   $MCom: ports/x11/gnome-session3/Makefile,v 1.6 2011/02/23 11:37:38 kwm Exp $
 #
 
 PORTNAME=	gnome-session
@@ -28,7 +28,7 @@ USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_XORG=	ice sm xau xext xtst xrender xtrans xcomposite
 USE_GL=		gl
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 intltool gtk30
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 intltool gtk30 librsvg2
 GNOME_DESKTOP_VERSION=3
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
