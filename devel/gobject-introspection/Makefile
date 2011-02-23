@@ -3,14 +3,14 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.30 2011/01/12 23:22:46 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.31 2011/02/07 21:58:12 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
-PORTVERSION=	0.10.2
+PORTVERSION=	0.10.3
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Generate interface introspection data for GObject libraries
