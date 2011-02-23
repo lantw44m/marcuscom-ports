@@ -49,15 +49,12 @@ share/gir-1.0/PanelApplet-4.0.gir
 %%DATADIR%%/4.0/applets/org.gnome.panel.Wncklet.panel-applet
 %%DATADIR%%/ui/clock.ui
 %%DATADIR%%/ui/clock-menu.xml
-%%DATADIR%%/ui/notification-area-menu.xml
 %%BONOBO%%%%DATADIR%%/ui/panel-test-applets-bonobo.ui
 %%DATADIR%%/ui/panel-properties-dialog.ui
 %%DATADIR%%/ui/panel-run-dialog.ui
-%%DATADIR%%/ui/showdesktop-menu.xml
 %%DATADIR%%/ui/panel-test-applets.ui
 %%DATADIR%%/ui/window-list.ui
 %%DATADIR%%/ui/window-list-menu.xml
-%%DATADIR%%/ui/window-menu-menu.xml
 %%DATADIR%%/ui/workspace-switcher.ui
 %%DATADIR%%/ui/workspace-switcher-menu.xml
 %%DATADIR%%/pixmaps/clock-calendar-icon.png
@@ -73,8 +70,6 @@ share/gir-1.0/PanelApplet-4.0.gir
 %%DATADIR%%/pixmaps/clock-map.png
 %%DATADIR%%/pixmaps/fishanim.png
 %%DATADIR%%/pixmaps/footguy.png
-%%DATADIR%%/pixmaps/gnome-gegl2-2.png
-%%DATADIR%%/pixmaps/gnome-gegl2.png
 %%DATADIR%%/pixmaps/monkey.png
 %%DATADIR%%/pixmaps/oldwanda.png
 %%DATADIR%%/pixmaps/wanda.png
