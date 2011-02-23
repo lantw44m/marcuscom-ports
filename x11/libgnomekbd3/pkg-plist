@@ -1,4 +1,5 @@
 bin/gkbd-indicator-plugins-capplet
+bin/gkbd-keyboard-display
 include/libgnomekbd/gkbd-configuration.h
 include/libgnomekbd/gkbd-desktop-config.h
 include/libgnomekbd/gkbd-indicator-config.h
@@ -19,8 +20,12 @@ lib/libgnomekbdui.so
 lib/libgnomekbdui.so.7
 libdata/pkgconfig/libgnomekbd.pc
 libdata/pkgconfig/libgnomekbdui.pc
+share/GConf/gsettings/libgnomekbd.convert
 share/applications/gkbd-indicator-plugins-capplet.desktop
 share/gir-1.0/Gkbd-3.0.gir
+%%DATADIR%%/icons/kbdled-caps-lock.svg
+%%DATADIR%%/icons/kbdled-num-lock.svg
+%%DATADIR%%/icons/kbdled-scroll-lock.svg
 %%DATADIR%%/ui/gkbd-indicator-plugins.ui
 %%DATADIR%%/ui/gkbd-indicator-plugins_add.ui
 %%DATADIR%%/ui/show-layout.ui
@@ -94,6 +99,7 @@ share/locale/zh_CN/LC_MESSAGES/libgnomekbd.mo
 share/locale/zh_HK/LC_MESSAGES/libgnomekbd.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomekbd.mo
 @dirrm %%DATADIR%%/ui
+@dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm include/libgnomekbd
