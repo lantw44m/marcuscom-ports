@@ -1,6 +1,6 @@
---- configure.orig	2011-01-24 12:26:18.000000000 +0000
-+++ configure	2011-01-24 12:53:12.000000000 +0000
-@@ -13358,8 +13358,8 @@
+--- configure.orig	2011-02-24 14:17:23.000000000 +0000
++++ configure	2011-02-24 14:25:36.000000000 +0000
+@@ -13366,8 +13366,8 @@
  .SECONDARY: $(gsettings_SCHEMAS)
  
  gsettings__base_list = \
@@ -11,3 +11,70 @@
  
  install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid)
  	@$(NORMAL_INSTALL)
+@@ -15968,21 +15968,21 @@
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"
+-       champlain-0.10
+        champlain-gtk-0.10
++       champlain-0.10
+        clutter-gtk-1.0
+     \""; } >&5
+   ($PKG_CONFIG --exists --print-errors "
+-       champlain-0.10
+        champlain-gtk-0.10
++       champlain-0.10
+        clutter-gtk-1.0
+     ") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_LIBCHAMPLAIN_CFLAGS=`$PKG_CONFIG --cflags "
+-       champlain-0.10
+        champlain-gtk-0.10
++       champlain-0.10
+        clutter-gtk-1.0
+     " 2>/dev/null`
+ else
+@@ -15996,21 +15996,21 @@
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+     { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"
+-       champlain-0.10
+        champlain-gtk-0.10
++       champlain-0.10
+        clutter-gtk-1.0
+     \""; } >&5
+   ($PKG_CONFIG --exists --print-errors "
+-       champlain-0.10
+        champlain-gtk-0.10
++       champlain-0.10
+        clutter-gtk-1.0
+     ") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_LIBCHAMPLAIN_LIBS=`$PKG_CONFIG --libs "
+-       champlain-0.10
+        champlain-gtk-0.10
++       champlain-0.10
+        clutter-gtk-1.0
+     " 2>/dev/null`
+ else
+@@ -16033,14 +16033,14 @@
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+ 	        LIBCHAMPLAIN_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "
+-       champlain-0.10
+        champlain-gtk-0.10
++       champlain-0.10
+        clutter-gtk-1.0
+     " 2>&1`
+         else
+ 	        LIBCHAMPLAIN_PKG_ERRORS=`$PKG_CONFIG --print-errors "
+-       champlain-0.10
+        champlain-gtk-0.10
++       champlain-0.10
+        clutter-gtk-1.0
+     " 2>&1`
+         fi

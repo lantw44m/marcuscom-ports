@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.4 2011/02/02 00:02:40 kwm Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.5 2011/02/15 09:34:00 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	2.91.6.1
-PORTREVISION=	1
+PORTVERSION=	2.91.90
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -59,8 +58,8 @@ OPTIONS=	JABBER	"Enable jabber (XMPP) client support" on \
 		SALUT	"Enable link-local (serverless) XMPP support" off \
 		HAZE	"Enable libpurple protocol integration" off \
 		WEBKIT	"Enable Adium Message Style themes" on \
+		MAP	"Enable graphical map support" on
 #		NST	"Enable Nautilus SendTo plugin"	on \
-#		MAP	"Enable graphical map support" on
 
 .include <bsd.port.pre.mk>
 
@@ -104,13 +103,13 @@ PLIST_SUB+=	NST="@comment "
 #.endif
 
 # needs ported to gtk3
-#.if !defined(WITHOUT_MAP)
-#LIB_DEPENDS+=	champlain-0.8.1:${PORTSDIR}/graphics/libchamplain
-#CONFIGURE_ARGS+=--enable-map
-#PLIST_SUB+=	MAP=""
-#.else
+.if !defined(WITHOUT_MAP)
+LIB_DEPENDS+=	champlain-0.10.0:${PORTSDIR}/graphics/libchamplain010
+CONFIGURE_ARGS+=--enable-map
+PLIST_SUB+=	MAP=""
+.else
 CONFIGURE_ARGS+=--disable-map
 PLIST_SUB+=	MAP="@comment "
-#.endif
+.endif
 
 .include <bsd.port.post.mk>
