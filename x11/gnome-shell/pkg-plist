@@ -8,15 +8,13 @@ lib/mutter/plugins/libgnome-shell.a
 lib/mutter/plugins/libgnome-shell.la
 lib/mutter/plugins/libgnome-shell.so
 share/applications/gnome-shell.desktop
-%%DATADIR%%/images/close-black.svg
-%%DATADIR%%/images/magnifier.svg
 %%DATADIR%%/js/misc/config.js
 %%DATADIR%%/js/misc/docInfo.js
 %%DATADIR%%/js/misc/fileUtils.js
 %%DATADIR%%/js/misc/format.js
 %%DATADIR%%/js/misc/gnomeSession.js
+%%DATADIR%%/js/misc/history.js
 %%DATADIR%%/js/misc/params.js
-%%DATADIR%%/js/misc/telepathy.js
 %%DATADIR%%/js/misc/util.js
 %%DATADIR%%/js/perf/core.js
 %%DATADIR%%/js/ui/altTab.js
@@ -47,6 +45,7 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/js/ui/panel.js
 %%DATADIR%%/js/ui/panelMenu.js
 %%DATADIR%%/js/ui/placeDisplay.js
+%%DATADIR%%/js/ui/polkitAuthenticationAgent.js
 %%DATADIR%%/js/ui/popupMenu.js
 %%DATADIR%%/js/ui/runDialog.js
 %%DATADIR%%/js/ui/scripting.js
@@ -67,14 +66,15 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/js/ui/windowManager.js
 %%DATADIR%%/js/ui/workspace.js
 %%DATADIR%%/js/ui/workspaceSwitcherPopup.js
+%%DATADIR%%/js/ui/workspaceThumbnail.js
 %%DATADIR%%/js/ui/workspacesView.js
 %%DATADIR%%/js/ui/xdndHandler.js
 %%DATADIR%%/search_providers/google.xml
 %%DATADIR%%/search_providers/wikipedia.xml
 %%DATADIR%%/shaders/dim-window.glsl
-%%DATADIR%%/theme/add-workspace.svg
 %%DATADIR%%/theme/calendar-arrow-left.svg
 %%DATADIR%%/theme/calendar-arrow-right.svg
+%%DATADIR%%/theme/calendar-today.svg
 %%DATADIR%%/theme/close-window.svg
 %%DATADIR%%/theme/close.svg
 %%DATADIR%%/theme/corner-ripple.png
@@ -84,8 +84,10 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/theme/mosaic-view-active.svg
 %%DATADIR%%/theme/mosaic-view.svg
 %%DATADIR%%/theme/move-window-on-new.svg
+%%DATADIR%%/theme/panel-button-border.svg
+%%DATADIR%%/theme/panel-button-highlight-narrow.svg
+%%DATADIR%%/theme/panel-button-highlight-wide.svg
 %%DATADIR%%/theme/process-working.png
-%%DATADIR%%/theme/remove-workspace.svg
 %%DATADIR%%/theme/running-indicator.svg
 %%DATADIR%%/theme/scroll-button-down-hover.png
 %%DATADIR%%/theme/scroll-button-down.png
@@ -102,8 +104,8 @@ share/applications/gnome-shell.desktop
 %%DATADIR%%/theme/toggle-off-us.svg
 %%DATADIR%%/theme/toggle-on-intl.svg
 %%DATADIR%%/theme/toggle-on-us.svg
-%%DATADIR%%/theme/ws-switch-arrow-left.svg
-%%DATADIR%%/theme/ws-switch-arrow-right.svg
+%%DATADIR%%/theme/ws-switch-arrow-down.svg
+%%DATADIR%%/theme/ws-switch-arrow-up.svg
 share/locale/ar/LC_MESSAGES/gnome-shell.mo
 share/locale/bg/LC_MESSAGES/gnome-shell.mo
 share/locale/ca/LC_MESSAGES/gnome-shell.mo
@@ -119,11 +121,13 @@ share/locale/fi/LC_MESSAGES/gnome-shell.mo
 share/locale/fr/LC_MESSAGES/gnome-shell.mo
 share/locale/ga/LC_MESSAGES/gnome-shell.mo
 share/locale/gl/LC_MESSAGES/gnome-shell.mo
+share/locale/gu/LC_MESSAGES/gnome-shell.mo
 share/locale/he/LC_MESSAGES/gnome-shell.mo
 share/locale/hu/LC_MESSAGES/gnome-shell.mo
 share/locale/id/LC_MESSAGES/gnome-shell.mo
 share/locale/it/LC_MESSAGES/gnome-shell.mo
 share/locale/ja/LC_MESSAGES/gnome-shell.mo
+share/locale/kn/LC_MESSAGES/gnome-shell.mo
 share/locale/ko/LC_MESSAGES/gnome-shell.mo
 share/locale/lt/LC_MESSAGES/gnome-shell.mo
 share/locale/nb/LC_MESSAGES/gnome-shell.mo
@@ -156,7 +160,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-shell.mo
 @dirrm %%DATADIR%%/js/perf
 @dirrm %%DATADIR%%/js/misc
 @dirrm %%DATADIR%%/js
-@dirrm %%DATADIR%%/images
 @dirrm %%DATADIR%%
 @dirrm lib/gnome-shell
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
