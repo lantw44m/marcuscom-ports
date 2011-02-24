@@ -8,30 +8,30 @@ include/libgdl-3.0/gdl/gdl-dock-placeholder.h
 include/libgdl-3.0/gdl/gdl-dock.h
 include/libgdl-3.0/gdl/gdl.h
 include/libgdl-3.0/gdl/libgdltypebuiltins.h
-lib/girepository-1.0/Gdl-1.typelib
+lib/girepository-1.0/Gdl-3.typelib
 lib/libgdl-3.la
 lib/libgdl-3.so
 lib/libgdl-3.so.1
 libdata/pkgconfig/gdl-3.0.pc
-share/doc/gdl3/GdlDock.html
-share/doc/gdl3/GdlDockBar.html
-share/doc/gdl3/GdlDockItem.html
-share/doc/gdl3/GdlDockLayout.html
-share/doc/gdl3/GdlDockMaster.html
-share/doc/gdl3/GdlDockObject.html
-share/doc/gdl3/GdlDockPlaceholder.html
-share/doc/gdl3/gdl-main.html
-share/doc/gdl3/gdl.devhelp
-share/doc/gdl3/gdl.devhelp2
-share/doc/gdl3/home.png
-share/doc/gdl3/index.html
-share/doc/gdl3/index.sgml
-share/doc/gdl3/left.png
-share/doc/gdl3/right.png
-share/doc/gdl3/style.css
-share/doc/gdl3/up.png
-share/gir-1.0/Gdl-1.gir
-share/gdl/ui/layout.ui
+share/doc/gdl3-3.0/GdlDock.html
+share/doc/gdl3-3.0/GdlDockItem.html
+share/doc/gdl3-3.0/GdlDockLayout.html
+share/doc/gdl3-3.0/GdlDockMaster.html
+share/doc/gdl3-3.0/GdlDockObject.html
+share/doc/gdl3-3.0/GdlDockPlaceholder.html
+share/doc/gdl3-3.0/gdl-GdlDockBar.html
+share/doc/gdl3-3.0/gdl-main.html
+share/doc/gdl3-3.0/gdl.devhelp
+share/doc/gdl3-3.0/gdl.devhelp2
+share/doc/gdl3-3.0/home.png
+share/doc/gdl3-3.0/index.html
+share/doc/gdl3-3.0/index.sgml
+share/doc/gdl3-3.0/left.png
+share/doc/gdl3-3.0/right.png
+share/doc/gdl3-3.0/style.css
+share/doc/gdl3-3.0/up.png
+share/gdl-3/ui/layout.ui
+share/gir-1.0/Gdl-3.gir
 share/locale/am/LC_MESSAGES/gdl-3.mo
 share/locale/ar/LC_MESSAGES/gdl-3.mo
 share/locale/ast/LC_MESSAGES/gdl-3.mo
@@ -102,9 +102,9 @@ share/locale/vi/LC_MESSAGES/gdl-3.mo
 share/locale/zh_CN/LC_MESSAGES/gdl-3.mo
 share/locale/zh_HK/LC_MESSAGES/gdl-3.mo
 share/locale/zh_TW/LC_MESSAGES/gdl-3.mo
-@dirrm share/gdl/ui
-@dirrm share/gdl
-@dirrm share/doc/gdl3
+@dirrm share/gdl-3/ui
+@dirrm share/gdl-3
+@dirrm share/doc/gdl3-3.0
 @dirrm include/libgdl-3.0/gdl
 @dirrm include/libgdl-3.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
