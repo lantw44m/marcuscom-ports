@@ -175,9 +175,8 @@ share/mime/packages/nautilus.xml
 %%DATADIR%%/ui/nautilus-directory-view-ui.xml
 %%DATADIR%%/ui/nautilus-icon-view-ui.xml
 %%DATADIR%%/ui/nautilus-list-view-ui.xml
-%%DATADIR%%/ui/nautilus-navigation-window-ui.xml
 %%DATADIR%%/ui/nautilus-shell-ui.xml
-%%DATADIR%%/ui/nautilus-spatial-window-ui.xml
+%%DATADIR%%/ui/nautilus-toolbar-ui.xml
 share/pixmaps/nautilus/audio.svg
 share/pixmaps/nautilus/knob.png
 share/pixmaps/nautilus/thumbnail_frame.png
