@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/evince3/Makefile,v 1.3 2011/01/14 20:48:50 kwm Exp $
+#    $MCom: ports/graphics/evince3/Makefile,v 1.4 2011/01/31 16:39:07 kwm Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	2.91.6
+PORTVERSION=	2.91.90
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,6 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-i
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
+USE_XORG=	ice
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
