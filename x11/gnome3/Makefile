@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.13 2011/02/03 16:09:54 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.14 2011/02/03 23:13:03 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -42,6 +42,7 @@ RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		gnome-keyring>=2.91.0:${PORTSDIR}/security/gnome-keyring3 \
 		gnome-power-manager>=2.91.0:${PORTSDIR}/sysutils/gnome-power-manager3 \
 		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
+		gnome-games>=2.91.90:${PORTSDIR}/games/gnome-games3 \
 		${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/notification-daemon \
 		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info \
 		totem>=2.91.0:${PORTSDIR}/multimedia/totem3 \

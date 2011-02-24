@@ -1,0 +1,35 @@
+--- gnibbles/Makefile.in.orig	2011-02-24 11:34:54.000000000 +0000
++++ gnibbles/Makefile.in	2011-02-24 11:36:04.000000000 +0000
+@@ -439,11 +439,11 @@ gnibbles_CPPFLAGS = \
+ 	-I$(top_srcdir) \
+ 	$(AM_CPPFLAGS)
+ 
+-gnibbles_CFLAGS = $(GTK_CFLAGS) $(CLUTTER_CFLAGS) \
+-	$(CLUTTER_GTK_CFLAGS) $(AM_CFLAGS) $(am__append_2) \
++gnibbles_CFLAGS = $(GTK_CFLAGS) $(CLUTTER_GTK_CFLAGS) \
++	$(CLUTTER_CFLAGS) $(AM_CFLAGS) $(am__append_2) \
+ 	$(am__append_4) $(am__append_6)
+ gnibbles_LDADD = $(top_builddir)/libgames-support/libgames-support.la \
+-	$(GTK_LIBS) $(CLUTTER_LIBS) $(CLUTTER_GTK_LIBS) $(INTLLIBS) \
++	$(GTK_LIBS) $(CLUTTER_GTK_LIBS) $(CLUTTER_LIBS) $(INTLLIBS) \
+ 	$(am__append_3) $(am__append_5) $(am__append_7)
+ pixmapdir = $(datadir)/gnome-games/gnibbles/pixmaps
+ pixmap_DATA = gnibbles-logo.svg
+--- quadrapassel/Makefile.in.orig	2011-02-24 11:36:22.000000000 +0000
++++ quadrapassel/Makefile.in	2011-02-24 11:36:51.000000000 +0000
+@@ -449,12 +449,12 @@ quadrapassel_CPPFLAGS = \
+ 	-I$(top_srcdir) \
+ 	$(AM_CPPFLAGS)
+ 
+-quadrapassel_CXXFLAGS = $(GTK_CFLAGS) $(CLUTTER_CFLAGS) \
+-	$(CLUTTER_GTK_CFLAGS) $(AM_CXXFLAGS) $(am__append_2) \
++quadrapassel_CXXFLAGS = $(GTK_CFLAGS) $(CLUTTER_GTK_CFLAGS) \
++	$(CLUTTER_CFLAGS) $(AM_CXXFLAGS) $(am__append_2) \
+ 	$(am__append_4) $(am__append_6)
+ quadrapassel_LDADD =  \
+ 	$(top_builddir)/libgames-support/libgames-support.la \
+-	$(CLUTTER_LIBS) $(CLUTTER_GTK_LIBS) $(GTK_LIBS) $(INTLLIBS) \
++	$(CLUTTER_GTK_LIBS) $(CLUTTER_LIBS) $(GTK_LIBS) $(INTLLIBS) \
+ 	$(am__append_3) $(am__append_5) $(am__append_7)
+ pixmapdir = $(pkgdatadir)/quadrapassel/pixmaps
+ pixmap_DATA = quadrapassel.svg

@@ -6,6 +6,7 @@ deskutils/gucharmap -> desktutils/gucharmap3
 devel/libgdata -> devel/libgdata08
 editors/gedit -> editors/gedit3
 editors/gedit-plugins -> editors/gedit-plugins3
+games/gnome-games -> games/gnome-games3
 graphics/evince -> graphics/evince3
 graphics/goocanvas -> graphics/goocanvas2
 graphics/goocanvasmm -> graphics/goocanvasmm2
