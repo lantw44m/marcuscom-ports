@@ -709,6 +709,7 @@ share/pygtk/2.0/defs/gdk-2.16.defs
 share/pygtk/2.0/defs/gdk-2.18.defs
 share/pygtk/2.0/defs/gdk-2.20.defs
 share/pygtk/2.0/defs/gdk-2.22.defs
+share/pygtk/2.0/defs/gdk-2.24.defs
 share/pygtk/2.0/defs/gdk-base-types.defs
 share/pygtk/2.0/defs/gdk-base.defs
 share/pygtk/2.0/defs/gdk-types.defs
@@ -727,6 +728,8 @@ share/pygtk/2.0/defs/gtk-2.20-types.defs
 share/pygtk/2.0/defs/gtk-2.20.defs
 share/pygtk/2.0/defs/gtk-2.22-types.defs
 share/pygtk/2.0/defs/gtk-2.22.defs
+share/pygtk/2.0/defs/gtk-2.24-types.defs
+share/pygtk/2.0/defs/gtk-2.24.defs
 share/pygtk/2.0/defs/gtk-base-types.defs
 share/pygtk/2.0/defs/gtk-base.defs
 share/pygtk/2.0/defs/gtk-extrafuncs.defs
