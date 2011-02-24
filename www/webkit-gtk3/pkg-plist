@@ -107,6 +107,7 @@ include/webkit-3.0/webkit/WebKitDOMHTMLTableSectionElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLTextAreaElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLTitleElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLUListElement.h
+include/webkit-3.0/webkit/WebKitDOMHTMLVideoElement.h
 include/webkit-3.0/webkit/WebKitDOMHistory.h
 include/webkit-3.0/webkit/WebKitDOMLocation.h
 include/webkit-3.0/webkit/WebKitDOMMediaError.h
@@ -199,7 +200,6 @@ share/webkitgtk-3.0/webinspector/CSSCompletions.js
 share/webkitgtk-3.0/webinspector/CSSKeywordCompletions.js
 share/webkitgtk-3.0/webinspector/CSSStyleModel.js
 share/webkitgtk-3.0/webinspector/CallStackSidebarPane.js
-share/webkitgtk-3.0/webinspector/ChangesView.js
 share/webkitgtk-3.0/webinspector/Checkbox.js
 share/webkitgtk-3.0/webinspector/Color.js
 share/webkitgtk-3.0/webinspector/ConsolePanel.js
@@ -208,6 +208,8 @@ share/webkitgtk-3.0/webinspector/ContextMenu.js
 share/webkitgtk-3.0/webinspector/CookieItemsView.js
 share/webkitgtk-3.0/webinspector/CookieParser.js
 share/webkitgtk-3.0/webinspector/CookiesTable.js
+share/webkitgtk-3.0/webinspector/DebuggerPresentationModel.js
+share/webkitgtk-3.0/webinspector/DetailedHeapshotGridNodes.js
 share/webkitgtk-3.0/webinspector/DetailedHeapshotView.js
 share/webkitgtk-3.0/webinspector/DOMAgent.js
 share/webkitgtk-3.0/webinspector/DOMStorage.js
@@ -228,7 +230,6 @@ share/webkitgtk-3.0/webinspector/ExtensionCommon.js
 share/webkitgtk-3.0/webinspector/ExtensionPanel.js
 share/webkitgtk-3.0/webinspector/ExtensionRegistryStub.js
 share/webkitgtk-3.0/webinspector/ExtensionServer.js
-share/webkitgtk-3.0/webinspector/FileSystemView.js
 share/webkitgtk-3.0/webinspector/FontView.js
 share/webkitgtk-3.0/webinspector/GoToLineDialog.js
 share/webkitgtk-3.0/webinspector/HAREntry.js
@@ -402,6 +403,7 @@ share/webkitgtk-3.0/webinspector/ObjectPropertiesSection.js
 share/webkitgtk-3.0/webinspector/Panel.js
 share/webkitgtk-3.0/webinspector/PanelEnablerView.js
 share/webkitgtk-3.0/webinspector/Placard.js
+share/webkitgtk-3.0/webinspector/PleaseWaitMessage.js
 share/webkitgtk-3.0/webinspector/Popover.js
 share/webkitgtk-3.0/webinspector/ProfileDataGridTree.js
 share/webkitgtk-3.0/webinspector/ProfileView.js
@@ -425,10 +427,12 @@ share/webkitgtk-3.0/webinspector/ScriptsPanel.js
 share/webkitgtk-3.0/webinspector/Section.js
 share/webkitgtk-3.0/webinspector/Settings.js
 share/webkitgtk-3.0/webinspector/ShortcutsHelp.js
+share/webkitgtk-3.0/webinspector/ShowMoreDataGridNode.js
 share/webkitgtk-3.0/webinspector/SidebarPane.js
 share/webkitgtk-3.0/webinspector/SidebarTreeElement.js
 share/webkitgtk-3.0/webinspector/SourceCSSTokenizer.js
 share/webkitgtk-3.0/webinspector/SourceFrame.js
+share/webkitgtk-3.0/webinspector/SourceFrameContent.js
 share/webkitgtk-3.0/webinspector/SourceHTMLTokenizer.js
 share/webkitgtk-3.0/webinspector/SourceJavaScriptTokenizer.js
 share/webkitgtk-3.0/webinspector/SourceTokenizer.js
@@ -445,6 +449,7 @@ share/webkitgtk-3.0/webinspector/TimelineAgent.js
 share/webkitgtk-3.0/webinspector/TimelineGrid.js
 share/webkitgtk-3.0/webinspector/TimelineOverviewPane.js
 share/webkitgtk-3.0/webinspector/TimelinePanel.js
+share/webkitgtk-3.0/webinspector/Toolbar.js
 share/webkitgtk-3.0/webinspector/TopDownProfileDataGridTree.js
 share/webkitgtk-3.0/webinspector/View.js
 share/webkitgtk-3.0/webinspector/WatchExpressionsSidebarPane.js

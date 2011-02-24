@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.9 2011/01/11 20:55:11 kwm Exp $
+#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.10 2011/02/03 04:38:26 avl Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.3.11
+PORTVERSION=	1.3.12
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk3
@@ -45,6 +45,7 @@ CONFIGURE_ARGS=	--enable-icon-database \
 		--enable-svg-fonts \
 		--enable-introspection
 MAKEFILE=	GNUmakefile
+GLIB_SCHEMAS=	org.webkitgtk-3.0.gschema.xml
 
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk3
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
