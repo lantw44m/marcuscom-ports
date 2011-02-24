@@ -8,7 +8,7 @@
 PORTNAME=	clutter-gtk
 PORTVERSION=	0.91.8
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
+MASTER_SITES=	http://source.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GTK+ Integration library for Clutter

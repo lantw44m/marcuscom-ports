@@ -3,14 +3,14 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.41 2011/02/14 16:31:54 kwm Exp $
+#  $MCom: ports/graphics/clutter/Makefile,v 1.42 2011/02/21 15:25:59 kwm Exp $
 #
 
 PORTNAME=	clutter
 PORTVERSION=	1.6.6
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME \
-		http://www.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
+		http://source.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	OpenGL based interactive canvas library
