@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libpeas/Makefile,v 1.11 2011/02/16 15:03:53 kwm Exp $
+#   $MCom: ports/devel/libpeas/Makefile,v 1.12 2011/02/23 16:37:58 kwm Exp $
 #
 
 PORTNAME=	libpeas
@@ -36,7 +36,7 @@ OPTIONS=	PYTHONS "Enable python plugins" on \
 
 .if defined(WITH_SEED)
 CONFIGURE_ARGS+=--enable-seed
-LIB_DEPENDS=	seed.0:${PORTSDIR}/devel/seed3
+LIB_DEPENDS=	seed-gtk3.0:${PORTSDIR}/devel/seed3
 PLIST_SUB+=	SEED=""
 .else
 CONFIGURE_ARGS+=--enable-seed=no
