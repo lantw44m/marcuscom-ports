@@ -1,6 +1,5 @@
 bin/gnome-screensaver
 bin/gnome-screensaver-command
-bin/gnome-screensaver-preferences
 %%PAM%%etc/pam.d/gnome-screensaver
 etc/xdg/autostart/gnome-screensaver.desktop
 etc/xdg/menus/gnome-screensavers.menu
@@ -10,15 +9,11 @@ libexec/gnome-screensaver-gl-helper
 libexec/gnome-screensaver/floaters
 libexec/gnome-screensaver/popsquares
 libexec/gnome-screensaver/slideshow
-share/GConf/gsettings/org.gnome.screensaver.gschema.migrate
-share/applications/gnome-screensaver-preferences.desktop
 share/applications/screensavers/cosmos-slideshow.desktop
 share/applications/screensavers/footlogo-floaters.desktop
 share/applications/screensavers/personal-slideshow.desktop
 share/applications/screensavers/popsquares.desktop
-share/dbus-1/services/org.gnome.ScreenSaver.service
 share/desktop-directories/gnome-screensaver.directory
-%%DATADIR%%/gnome-screensaver-preferences.ui
 share/locale/ar/LC_MESSAGES/gnome-screensaver.mo
 share/locale/as/LC_MESSAGES/gnome-screensaver.mo
 share/locale/ast/LC_MESSAGES/gnome-screensaver.mo
@@ -117,11 +112,12 @@ share/pixmaps/gnome-logo-white.svg
 @dirrm share/gnome-background-properties
 @dirrm share/backgrounds/cosmos
 @dirrmtry share/backgrounds
-@dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm libexec/gnome-screensaver
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES

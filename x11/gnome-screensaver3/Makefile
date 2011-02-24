@@ -7,7 +7,7 @@
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	2.91.4
+PORTVERSION=	2.91.90
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,7 +25,7 @@ USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	xtst xxf86vm
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomemenus libgnomekbd3 \
-		gtk30 gnomedesktop3
+		gnomedesktop3
 GNOME_DESKTOP_VERSION=3
 CONFIGURE_ARGS=	--with-gdm-config=${LOCALBASE}/etc/gdm/custom.conf \
 		--with-xscreensaverdir=${XSCREENSAVER_DIR} \
@@ -33,9 +33,7 @@ CONFIGURE_ARGS=	--with-gdm-config=${LOCALBASE}/etc/gdm/custom.conf \
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-GLIB_SCHEMAS=	org.gnome.screensaver.gschema.xml
-MAN1=		gnome-screensaver-command.1 gnome-screensaver-preferences.1 \
-		gnome-screensaver.1
+MAN1=		gnome-screensaver-command.1 gnome-screensaver.1
 
 PLIST=	${WRKDIR}/pkg-plist
 SUB_FILES+=	gnome-screensaver.pam
@@ -62,7 +60,7 @@ PLIST_SUB+=		PAM="@comment "
 
 .if defined(WITH_KEYRING) && defined(WITH_PAM)
 SUB_LIST+=		PAM_KEYRING=
-RUN_DEPENDS+=		${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/gnome-keyring3
+RUN_DEPENDS+=		gnome-keyring>=2.91.0:${PORTSDIR}/security/gnome-keyring3
 .else
 SUB_LIST+=		PAM_KEYRING=\#
 .endif
