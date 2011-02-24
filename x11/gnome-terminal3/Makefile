@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-terminal3/Makefile,v 1.2 2011/02/02 20:05:34 kwm Exp $
+#   $MCom: ports/x11/gnome-terminal3/Makefile,v 1.3 2011/02/21 20:11:19 kwm Exp $
 #
 
 PORTNAME=	gnome-terminal
@@ -15,7 +15,9 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Terminal component for the GNOME 3 Desktop
 
+BUILD_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
+RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
