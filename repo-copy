@@ -13,6 +13,7 @@ mail/evolution -> mail/evolution3
 mail/evolution-exchange -> mail/evolution-exchange3
 mail/evolution-mapi -> mail/evolution-mapi3
 math/gcalctool -> math/gcalctool3
+net/avahi-gtk -> net/avahi-gtk3
 net/libgweather -> net/libgweather3
 security/gnome-keyring -> security/gnome-keyring3
 sysutils/brasero -> sysutils/brasero3
