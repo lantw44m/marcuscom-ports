@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes-standard/Makefile,v 1.3 2011/01/23 23:02:45 kwm Exp $
+#   $MCom: ports/x11-themes/gnome-themes-standard/Makefile,v 1.4 2011/02/01 23:24:14 kwm Exp $
 #
 
 PORTNAME=	gnome-themes-standard
-PORTVERSION=	2.91.8
+PORTVERSION=	2.91.90.1
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
