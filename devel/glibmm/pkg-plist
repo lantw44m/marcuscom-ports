@@ -15,6 +15,7 @@ include/giomm-%%API_VERSION%%/giomm/dataoutputstream.h
 include/giomm-%%API_VERSION%%/giomm/dbusaddress.h
 include/giomm-%%API_VERSION%%/giomm/dbusauthobserver.h
 include/giomm-%%API_VERSION%%/giomm/dbusconnection.h
+include/giomm-%%API_VERSION%%/giomm/dbuserror.h
 include/giomm-%%API_VERSION%%/giomm/dbuserrorutils.h
 include/giomm-%%API_VERSION%%/giomm/dbusintrospection.h
 include/giomm-%%API_VERSION%%/giomm/dbusmessage.h
@@ -73,6 +74,7 @@ include/giomm-%%API_VERSION%%/giomm/private/dataoutputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusaddress_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusauthobserver_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusconnection_p.h
+include/giomm-%%API_VERSION%%/giomm/private/dbuserror_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbuserrorutils_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusintrospection_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusmessage_p.h
