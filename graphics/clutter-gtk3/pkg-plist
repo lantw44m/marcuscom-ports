@@ -13,3 +13,4 @@ lib/libclutter-gtk-1.0.so.0
 libdata/pkgconfig/clutter-gtk-1.0.pc
 share/gir-1.0/GtkClutter-1.0.gir
 @dirrm include/clutter-gtk-1.0/clutter-gtk
+@dirrm include/clutter-gtk-1.0
