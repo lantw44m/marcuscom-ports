@@ -3,7 +3,7 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm30/Makefile,v 1.9 2011/02/11 19:54:14 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtkmm30/Makefile,v 1.10 2011/02/21 16:17:56 kwm Exp $
 #
 
 PORTNAME=	gtkmm
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for Gtk+, Pango
 
 USE_BZIP2=	yes
-LATEST_LINK=	gtkmm24
+LATEST_LINK=	gtkmm30
 
 .if !defined(REFERENCE_PORT)
 
