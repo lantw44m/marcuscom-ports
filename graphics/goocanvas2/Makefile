@@ -3,13 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/goocanvas2/Makefile,v 1.1 2010/06/24 11:50:01 kwm Exp $
+#    $MCom: ports/graphics/goocanvas2/Makefile,v 1.3 2011/02/14 15:31:30 kwm Exp $
 
 PORTNAME=	goocanvas
-PORTVERSION=	1.90.3
+PORTVERSION=	2.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
-#DISTNAME=	${PORTNAME:S/2//}-${PORTVERSION}
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Canvas widget for GTK+ 3
