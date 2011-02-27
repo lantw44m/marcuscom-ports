@@ -2,5 +2,4 @@ graphics/gir-repository-poppler|graphics/poppler-gtk|%DATE%|gir support was merg
 devel/gir-repository-libnotify|devel/libnotify|%DATE%|gir support was merged into libnotify
 devel/gir-repository/||%DATE%|removed
 graphics/gir-repository-goocanvas||%DATE%|removed
-x11/gir-repository-babl||%DATE%|removed
 x11-toolkits/gir-repository-vte||%DATE%|removed
