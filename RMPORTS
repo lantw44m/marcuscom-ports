@@ -3,4 +3,3 @@ devel/gir-repository-libnotify|devel/libnotify|%DATE%|gir support was merged int
 devel/gir-repository/||%DATE%|removed
 graphics/gir-repository-goocanvas||%DATE%|removed
 x11-toolkits/gir-repository-vte||%DATE%|removed
-accessibility/at-spi||%DATE%|replaced by the at-spi2-[core|atk] and py-atspi
