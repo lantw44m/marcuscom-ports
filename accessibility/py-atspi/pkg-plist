@@ -34,6 +34,9 @@
 %%PYTHON_SITELIBDIR%%/pyatspi/document.py
 %%PYTHON_SITELIBDIR%%/pyatspi/document.pyc
 %%PYTHON_SITELIBDIR%%/pyatspi/document.pyo
+%%PYTHON_SITELIBDIR%%/pyatspi/editabletext.py
+%%PYTHON_SITELIBDIR%%/pyatspi/editabletext.pyc
+%%PYTHON_SITELIBDIR%%/pyatspi/editabletext.pyo
 %%PYTHON_SITELIBDIR%%/pyatspi/enum.py
 %%PYTHON_SITELIBDIR%%/pyatspi/enum.pyc
 %%PYTHON_SITELIBDIR%%/pyatspi/enum.pyo
