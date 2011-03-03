@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/libcanberra-gtk3/Makefile,v 1.5 2011/01/30 16:00:49 kwm Exp $
+#   $MCom: ports/audio/libcanberra-gtk3/Makefile,v 1.6 2011/01/30 23:20:40 kwm Exp $
 #
 
-PORTREVISION=	2
+PORTREVISION=	0
 CATEGORIES=	audio devel
 PKGNAMESUFFIX=	-gtk3
 
