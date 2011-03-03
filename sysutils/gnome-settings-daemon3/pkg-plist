@@ -184,7 +184,8 @@ share/polkit-1/actions/org.gnome.settingsdaemon.datetimemechanism.policy
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
-@dirrm lib/gnome-settings-daemon-3.0
+@comment this is done in libcanberra
+@comment @dirrm lib/gnome-settings-daemon-3.0
 @dirrm include/gnome-settings-daemon-3.0/gnome-settings-daemon
 @dirrm include/gnome-settings-daemon-3.0
 @dirrmtry etc/gnome-settings-daemon/xrandr
