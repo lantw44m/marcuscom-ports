@@ -1,3 +1,4 @@
+bin/pk-example-frobnicate
 bin/pkaction
 bin/pkcheck
 bin/pkexec
@@ -57,9 +58,6 @@ lib/libpolkit-gobject-1.so.0
 lib/polkit-1/extensions/libnullbackend.a
 lib/polkit-1/extensions/libnullbackend.la
 lib/polkit-1/extensions/libnullbackend.so
-lib/polkit-1/extensions/libpkexec-action-lookup.a
-lib/polkit-1/extensions/libpkexec-action-lookup.la
-lib/polkit-1/extensions/libpkexec-action-lookup.so
 libdata/pkgconfig/polkit-agent-1.pc
 libdata/pkgconfig/polkit-backend-1.pc
 libdata/pkgconfig/polkit-gobject-1.pc
@@ -69,6 +67,7 @@ share/dbus-1/system-services/org.freedesktop.PolicyKit1.service
 share/gir-1.0/Polkit-1.0.gir
 share/gir-1.0/PolkitAgent-1.0.gir
 share/locale/da/LC_MESSAGES/polkit-1.mo
+share/polkit-1/actions/org.freedesktop.policykit.examples.pkexec.policy
 share/polkit-1/actions/org.freedesktop.policykit.policy
 @dirrmtry share/polkit-1/actions
 @dirrmtry share/polkit-1

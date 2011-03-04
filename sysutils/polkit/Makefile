@@ -3,11 +3,11 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.10 2010/09/16 02:09:43 avl Exp $
+#   $MCom: ports/sysutils/polkit/Makefile,v 1.12 2011/02/23 17:36:51 kwm Exp $
 #
 
 PORTNAME=	polkit
-PORTVERSION=	0.100
+PORTVERSION=	0.101
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://hal.freedesktop.org/releases/
 
