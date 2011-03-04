@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.533 2011/02/11 00:30:58 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.534 2011/02/11 22:12:29 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -80,7 +80,7 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 \
 # GNOME 2 components
 _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 gdkpixbuf2 \
 		gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop gnomedesktopsharp20 \
-		gnomedocutils gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk20 \
+		gnomedocutils gnomemenus gnomepanel gnomesharp20 gnomespeech gnomevfs2 gtk-update-icon-cache gtk20 \
 		gtkhtml3 gtksharp10 gtksharp20 gtksourceview gtksourceview2 gvfs \
 		libartlgpl2 libbonobo libbonoboui libgailgnome libgda2 libgda3 libgda4 \
 		libglade2 libgnome libgnomecanvas libgnomedb libgnomekbd libgnomeprint \
@@ -277,6 +277,11 @@ pango_USE_GNOME_IMPL=	glib20
 gdkpixbuf2_LIB_DEPENDS=	gdk_pixbuf-2.0.0:${PORTSDIR}/graphics/gdk-pixbuf2
 gdkpixbuf2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gdk-pixbuf-2.0.pc
 gdkpixbuf2_USE_GNOME_IMPL=glib20
+
+gtk-update-icon-cache_BUILD_DEPENDS=	gtk-update-icon-cache:${PORTSDIR}/graphics/gtk-update-icon-cache
+gtk-update-icon-cache_RUN_DEPENDS=	gtk-update-icon-cache:${PORTSDIR}/graphics/gtk-update-icon-cache
+gtk-update-icon-cache_DETECT=		${LOCALBASE}/bin/gtk-update-icon-cache
+gtk-update-icon-cache_USE_GNOME_IMPL=	atk pango gdkpixbuf2
 
 gtk20_LIB_DEPENDS=	gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20
 gtk20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-x11-2.0.pc

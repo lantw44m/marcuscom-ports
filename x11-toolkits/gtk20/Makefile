@@ -3,12 +3,13 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.218 2011/02/21 20:17:35 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.219 2011/03/04 09:46:52 kwm Exp $
 #
+# Remember to update graphics/gtk-update-icon-cache too.
 
 PORTNAME=	gtk
 PORTVERSION=	2.24.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
 		ftp://ftp.gtk.org/pub/gtk/%SUBDIR%/ \
@@ -40,7 +41,7 @@ USE_PERL5_BUILD=yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack
+USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack gtk-update-icon-cache
 USE_GETTEXT=	yes
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
@@ -49,7 +50,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-MAN1=		gtk-query-immodules-2.0.1 gtk-update-icon-cache.1
+MAN1=		gtk-query-immodules-2.0.1
 
 .if defined(WITH_DEBUG)
 CONFIGURE_ARGS+=	--enable-debug=yes
