@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.217 2011/01/30 10:29:09 avl Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.218 2011/02/21 20:17:35 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -22,7 +22,7 @@ DISTNAME=	gtk+-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
+COMMENT=	Gimp Toolkit for X11 GUI (previous stable version)
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
