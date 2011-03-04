@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.14 2011/02/03 23:13:03 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.15 2011/02/24 11:44:49 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -29,6 +29,7 @@ RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		nautilus>=2.91.0:${PORTSDIR}/x11-fm/nautilus3 \
 		gcalctool>=2.91.0:${PORTSDIR}/math/gcalctool3 \
 		gnome-utils>=2.91.0:${PORTSDIR}/deskutils/gnome-utils3 \
+		gnome-system-montior>=2.99.0:${PORTSDIR}/sysutils/gnome-system-monitor3 \
 		file-roller>=2.91.0:${PORTSDIR}/archivers/file-roller3 \
 		gnome-themes>=2.91.0:${PORTSDIR}/x11-themes/gnome-themes3 \
 		gnome-themes-standard>=2.91.0:${PORTSDIR}/x11-themes/gnome-themes-standard \
