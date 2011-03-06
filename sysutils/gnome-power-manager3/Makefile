@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.1 2011/01/23 00:25:09 kwm Exp $
+#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.2 2011/02/24 09:51:14 kwm Exp $
 #
 
 PORTNAME=	gnome-power-manager
 PORTVERSION=	2.91.90
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,7 +19,7 @@ COMMENT=	Power management system for the GNOME Desktop
 LIB_DEPENDS=	upower-glib.1:${PORTSDIR}/sysutils/upower \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
-		notify.1:${PORTSDIR}/devel/libnotify \
+		notify.4:${PORTSDIR}/devel/libnotify \
 		execinfo:${PORTSDIR}/devel/libexecinfo
 RUN_DEPENDS=	pkexec:${PORTSDIR}/sysutils/polkit
 

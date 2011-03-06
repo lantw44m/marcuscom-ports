@@ -3,12 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.9 2011/02/23 14:02:11 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.10 2011/03/03 11:13:26 kwm Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
 PORTVERSION=	2.91.90
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libexec/gnome-session-is-accelerated:${PORTSDIR}/x11
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
-		notify.1:${PORTSDIR}/devel/libnotify
+		notify.4:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-session-is-accelerated:${PORTSDIR}/x11/gnome-session3 \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 

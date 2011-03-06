@@ -3,11 +3,12 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.5 2011/02/04 23:00:50 kwm Exp $
+#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.6 2011/02/24 09:30:01 kwm Exp $
 #
 
 PORTNAME=	nautilus
 PORTVERSION=	2.91.90.1
+PORTREVISION=	1
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,6 +20,7 @@ BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
+		notify.4:${PORTSDIR}/devel/libnotify \
 		exempi.3:${PORTSDIR}/textproc/exempi
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas

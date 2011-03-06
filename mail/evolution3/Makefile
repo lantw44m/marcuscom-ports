@@ -3,12 +3,12 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.7 2011/02/24 09:22:14 kwm Exp $
+#   $MCom: ports/mail/evolution3/Makefile,v 1.8 2011/02/25 10:48:43 kwm Exp $
 #
 
 PORTNAME=	evolution
 PORTVERSION=	2.91.90
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,7 +18,7 @@ COMMENT=	An integrated mail, calendar and address book distributed suite
 
 LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss \
 		unique-3.0.0:${PORTSDIR}/x11-toolkits/libunique3 \
-		notify.1:${PORTSDIR}/devel/libnotify
+		notify.4:${PORTSDIR}/devel/libnotify
 #		gtkimageview.0:${PORTSDIR}/x11-toolkits/gtkimageview
 #RUN_DEPENDS=	${LOCALBASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnome-spell
 
