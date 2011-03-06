@@ -478,3 +478,5 @@ share/webkitgtk-3.0/webinspector/utilities.js
 @dirrm include/webkit-3.0/webkit
 @dirrm include/webkit-3.0/JavaScriptCore
 @dirrm include/webkit-3.0
+@dirrmtry share/locale/gr/LC_MESSAGES
+@dirrmtry share/locale/gr
