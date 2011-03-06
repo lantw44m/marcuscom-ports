@@ -1,0 +1,25 @@
+--- wscript.orig	2011-02-20 00:00:26.000000000 +0100
++++ wscript	2011-02-20 10:27:54.000000000 +0100
+@@ -99,10 +99,9 @@
+     conf.check_tool ('glib2')
+ 
+     if option_enabled ('userdocs'):
+-        conf.find_program ('rst2html.py', var='RST2HTML')
+-        # debian renames the executable, check that as well :(
++        conf.find_program ('rst2html', var='RST2HTML')
+         if not conf.env['RST2HTML']:
+-            conf.find_program ('rst2html', var='RST2HTML')
++            conf.find_program ('rst2html.py', var='RST2HTML')
+         if conf.env['RST2HTML']:
+             user_docs = 'yes'
+         else:
+@@ -261,8 +260,7 @@
+     if not conf.env['HAVE_UNIQUE']:
+         if Options.platform == 'win32':
+             conf.check (lib='ws2_32')
+-        check_pkg ('openssl', mandatory=False)
+-        conf.define ('USE_SSL', [0,1][conf.env['HAVE_OPENSSL'] == 1])
++        conf.define ('HAVE_OPENSSL', [0,1][conf.check (header_name='openssl/opensslv.h')])
+         conf.define ('HAVE_NETDB_H', [0,1][conf.check (header_name='netdb.h')])
+         conf.check (header_name='sys/wait.h')
+         conf.check (header_name='sys/select.h')

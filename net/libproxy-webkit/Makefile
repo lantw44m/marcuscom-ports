@@ -3,9 +3,9 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net/libproxy-webkit/Makefile,v 1.12 2011/01/12 13:10:54 kwm Exp $
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	net www
 PKGNAMESUFFIX=	-webkit
 
@@ -13,7 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	WebKit Javascript plug-in for libproxy
 
 LIB_DEPENDS=	proxy.1:${PORTSDIR}/net/libproxy \
-    		webkit-1.0.13:${PORTSDIR}/www/webkit-gtk2
+		webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2
 
 MASTERDIR=	${.CURDIR}/../libproxy
 DESCR=		${.CURDIR}/pkg-descr
