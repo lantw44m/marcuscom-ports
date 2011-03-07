@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/www/epiphany/Makefile,v 1.148 2010/11/20 15:36:57 kwm Exp $
-#   $MCom: ports/www/epiphany/Makefile,v 1.240 2010/10/10 19:16:00 marcus Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.242 2011/03/06 23:12:42 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -21,7 +21,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2 \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
-		notify.1:${PORTSDIR}/devel/libnotify \
+		notify.4:${PORTSDIR}/devel/libnotify \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
