@@ -431,7 +431,7 @@ share/doc/camel/api-index-2.26.html
 share/doc/camel/api-index-2.28.html
 share/doc/camel/api-index-2.30.html
 share/doc/camel/api-index-2.32.html
-share/doc/camel/api-index-2.92.html
+share/doc/camel/api-index-3.0.html
 share/doc/camel/api-index-deprecated.html
 share/doc/camel/api-index-full.html
 share/doc/camel/camel-CamelDB.html
@@ -498,6 +498,7 @@ share/doc/libebook/EBookView.html
 share/doc/libebook/EContact.html
 share/doc/libebook/EDestination.html
 share/doc/libebook/EVCard.html
+share/doc/libebook/annotation-glossary.html
 share/doc/libebook/api-index-deprecated.html
 share/doc/libebook/api-index-1.12.html
 share/doc/libebook/api-index-2.22.html
@@ -506,6 +507,7 @@ share/doc/libebook/api-index-2.26.html
 share/doc/libebook/api-index-2.28.html
 share/doc/libebook/api-index-2.30.html
 share/doc/libebook/api-index-2.32.html
+share/doc/libebook/api-index-3.0.html
 share/doc/libebook/api-index-full.html
 share/doc/libebook/ch01.html
 share/doc/libebook/home.png
@@ -533,6 +535,7 @@ share/doc/libecal/api-index-2.26.html
 share/doc/libecal/api-index-2.28.html
 share/doc/libecal/api-index-2.30.html
 share/doc/libecal/api-index-2.32.html
+share/doc/libecal/api-index-3.0.html
 share/doc/libecal/api-index-full.html
 share/doc/libecal/ch01.html
 share/doc/libecal/home.png
@@ -566,6 +569,7 @@ share/doc/libedata-book/api-index-2.26.html
 share/doc/libedata-book/api-index-2.28.html
 share/doc/libedata-book/api-index-2.30.html
 share/doc/libedata-book/api-index-2.32.html
+share/doc/libedata-book/api-index-3.0.html
 share/doc/libedata-book/api-index-full.html
 share/doc/libedata-book/ch01.html
 share/doc/libedata-book/home.png
@@ -594,6 +598,7 @@ share/doc/libedata-cal/api-index-2.26.html
 share/doc/libedata-cal/api-index-2.28.html
 share/doc/libedata-cal/api-index-2.30.html
 share/doc/libedata-cal/api-index-2.32.html
+share/doc/libedata-cal/api-index-3.0.html
 share/doc/libedata-cal/api-index-full.html
 share/doc/libedata-cal/ch01.html
 share/doc/libedata-cal/home.png
@@ -629,6 +634,7 @@ share/doc/libedataserver/api-index-2.26.html
 share/doc/libedataserver/api-index-2.28.html
 share/doc/libedataserver/api-index-2.30.html
 share/doc/libedataserver/api-index-2.32.html
+share/doc/libedataserver/api-index-3.0.html
 share/doc/libedataserver/api-index-full.html
 share/doc/libedataserver/ch01.html
 share/doc/libedataserver/home.png
@@ -673,6 +679,7 @@ share/doc/libedataserverui/api-index-2.26.html
 share/doc/libedataserverui/api-index-2.28.html
 share/doc/libedataserverui/api-index-2.30.html
 share/doc/libedataserverui/api-index-2.32.html
+share/doc/libedataserverui/api-index-3.0.html
 share/doc/libedataserverui/api-index-full.html
 share/doc/libedataserverui/ch01.html
 share/doc/libedataserverui/home.png
