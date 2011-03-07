@@ -1,9 +1,10 @@
 bin/gnome-session
 bin/gnome-session-properties
-bin/gnome-session-save
-libexec/gnome-session-is-accelerated
+bin/gnome-session-quit
+libexec/gnome-session-check-accelerated
+libexec/gnome-session-check-accelerated-helper
 share/applications/session-properties.desktop
-share/GConf/gsettings/org.gnome.SessionManager.gschema.migrate
+share/GConf/gsettings/gnome-session.convert
 %%DATADIR%%/gsm-inhibit-dialog.ui
 %%DATADIR%%/sad-computer.svgz
 %%DATADIR%%/session-properties.ui
