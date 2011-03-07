@@ -3,12 +3,12 @@
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
 # $FreeBSD: ports/finance/gnucash/Makefile,v 1.152 2011/03/02 16:02:53 kwm Exp $
-#   $MCom: ports/finance/gnucash/Makefile,v 1.26 2008/12/31 03:25:18 mezz Exp $
+#   $MCom: ports/finance/gnucash/Makefile,v 1.28 2011/03/06 23:12:38 kwm Exp $
 #
 
 PORTNAME=	gnucash
 PORTVERSION=	2.4.3
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	finance gnome
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}%20%28stable%29/${PORTVERSION}
 
@@ -92,7 +92,7 @@ PLIST_SUB+=	OFX="@comment "
 
 .if defined(WITH_DATABASE)
 CONFIGURE_ARGS+=--enable-dbi
-LIB_DEPENDS+=	dbi.0:${PORTSDIR}/databases/libdbi
+LIB_DEPENDS+=	dbi.1:${PORTSDIR}/databases/libdbi
 PLIST_SUB+=	DATABASE=""
 .else
 CONFIGURE_ARGS+=--disable-dbi
