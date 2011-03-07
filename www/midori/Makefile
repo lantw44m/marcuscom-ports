@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/www/midori/Makefile,v 1.23 2011/02/25 11:08:41 kwm Exp $
-#   $MCom: ports/www/midori/Makefile,v 1.21 2010/04/05 21:56:26 kwm Exp $
+#   $MCom: ports/www/midori/Makefile,v 1.28 2011/03/06 23:12:44 kwm Exp $
 #
 
 PORTNAME=	midori
@@ -19,7 +19,7 @@ COMMENT=	Lightweight web browser using WebKit browser engine
 
 LIB_DEPENDS=	webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2 \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
-		notify.1:${PORTSDIR}/devel/libnotify
+		notify.4:${PORTSDIR}/devel/libnotify
 BUILD_DEPENDS=	rsvg-convert:${PORTSDIR}/graphics/librsvg2 \
 		valac:${PORTSDIR}/lang/vala
 
