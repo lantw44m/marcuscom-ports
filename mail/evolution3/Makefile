@@ -3,12 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.8 2011/02/25 10:48:43 kwm Exp $
+#   $MCom: ports/mail/evolution3/Makefile,v 1.9 2011/03/06 07:48:46 kwm Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	2.91.90
-PORTREVISION=	3
+PORTVERSION=	2.91.91
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -57,7 +56,7 @@ GCONF_SCHEMAS=	apps_evolution_addressbook.schemas \
 		bogo-junk-plugin.schemas \
 		evolution-mail.schemas
 
-EVO_VERSION=	2.92
+EVO_VERSION=	3.0
 PLIST_SUB=	VERSION=${EVO_VERSION} \
 		PORTVERSION=2.12
 
