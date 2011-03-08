@@ -3,7 +3,7 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity3/Makefile,v 1.3 2011/01/13 01:50:47 kwm Exp $
+#   $MCom: ports/x11/zenity3/Makefile,v 1.4 2011/02/23 14:04:46 kwm Exp $
 #
 
 PORTNAME=	zenity
@@ -36,7 +36,7 @@ OPTIONS=	NOTIFY "Enable libnotify support" on
 .include <bsd.port.options.mk>
 
 .if !defined(WITHOUT_NOTIFY)
-LIB_DEPENDS+=		notify.1:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS+=		notify.4:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=	--enable-libnotify
 .else
 CONFIGURE_ARGS+=	--disable-libnotify
