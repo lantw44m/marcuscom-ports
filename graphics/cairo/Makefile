@@ -2,13 +2,13 @@
 # Date created:		2004-10-06
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/graphics/cairo/Makefile,v 1.52 2011/03/02 13:53:45 kwm Exp $
 #   $MCom: ports/graphics/cairo/Makefile,v 1.101 2010/10/29 15:40:04 kwm Exp $
 #
 
 PORTNAME=	cairo
 PORTVERSION=	1.10.2
-PORTREVISION=	0
+PORTREVISION=	1
 PORTEPOCH?=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
@@ -28,6 +28,7 @@ CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" \
 		LDFLAGS="${LDFLAGS}"
 CONFIGURE_ARGS=	--with-html-dir=${DOCSDIR} \
 		--disable-directfb \
+		--enable-tee \
 		--enable-gobject
 USE_GNOME=	glib20 gnomehack ltverhack referencehack
 USE_AUTOTOOLS=	libtool
