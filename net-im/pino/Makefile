@@ -17,7 +17,7 @@ COMMENT=	A simple and fast Twitter and Identi.ca client
 BUILD_DEPENDS=	${LOCALBASE}/bin/valac:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
 		gtkspell.0:${PORTSDIR}/textproc/gtkspell \
-		notify.1:${PORTSDIR}/devel/libnotify \
+		notify.4:${PORTSDIR}/devel/libnotify \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
 		webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2
