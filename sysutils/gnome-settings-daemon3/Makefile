@@ -3,12 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.12 2011/03/08 22:40:54 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.13 2011/03/08 22:44:04 kwm Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	2.91.90
-PORTREVISION=	2
+PORTVERSION=	2.91.91
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -36,6 +35,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 OPTIONS=	PULSEAUDIO "Enable Pulseaudio support" On \
+		CUPS "Enable cups (printing) support" On \
 		SMARTCARD "Enable smartcard support" On
 
 GLIB_SCHEMAS=	org.gnome.settings-daemon.enums.xml \
@@ -61,6 +61,14 @@ PLIST_SUB+=	PULSEAUDIO="@comment "
 LIB_DEPENDS+=	pulse.0:${PORTSDIR}/audio/pulseaudio
 CONFIGURE_ARGS+=--enable-pulse
 PLIST_SUB+=	PULSEAUDIO=""
+.endif
+
+.if defined(WITH_CUPS)
+LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
+PLIST_SUB+=	CUPS=""
+.else
+PLIST_SUB+=	CUPS="@comment "
+CONFIGURE_ARGS+=--disable-cups
 .endif
 
 .if defined(WITHOUT_SMARTCARD)

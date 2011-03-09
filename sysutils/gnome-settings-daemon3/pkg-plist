@@ -36,6 +36,9 @@ lib/gnome-settings-daemon-3.0/libkeyboard.so
 lib/gnome-settings-daemon-3.0/libmouse.a
 lib/gnome-settings-daemon-3.0/libmouse.la
 lib/gnome-settings-daemon-3.0/libmouse.so
+%%CUPS%%lib/gnome-settings-daemon-3.0/libprint-notifications.a
+%%CUPS%%lib/gnome-settings-daemon-3.0/libprint-notifications.la
+%%CUPS%%lib/gnome-settings-daemon-3.0/libprint-notifications.so
 %%SMARTCARD%%lib/gnome-settings-daemon-3.0/libsmartcard.a
 %%SMARTCARD%%lib/gnome-settings-daemon-3.0/libsmartcard.la
 %%SMARTCARD%%lib/gnome-settings-daemon-3.0/libsmartcard.so
@@ -53,6 +56,7 @@ lib/gnome-settings-daemon-3.0/libxsettings.la
 lib/gnome-settings-daemon-3.0/libxsettings.so
 %%PULSEAUDIO%%lib/gnome-settings-daemon-3.0/media-keys.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/mouse.gnome-settings-plugin
+%%CUPS%%lib/gnome-settings-daemon-3.0/print-notifications.gnome-settings-plugin
 %%SMARTCARD%%lib/gnome-settings-daemon-3.0/smartcard.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/sound.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/wacom.gnome-settings-plugin
