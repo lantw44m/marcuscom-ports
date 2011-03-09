@@ -2,36 +2,41 @@ bin/mutter
 bin/mutter-message
 bin/mutter-theme-viewer
 bin/mutter-window-demo
-include/mutter/mutter-private/atomnames.h
-include/mutter/mutter-private/boxes.h
-include/mutter/mutter-private/common.h
-include/mutter/mutter-private/compositor-mutter.h
-include/mutter/mutter-private/compositor.h
-include/mutter/mutter-private/display.h
-include/mutter/mutter-private/errors.h
-include/mutter/mutter-private/gradient.h
-include/mutter/mutter-private/group.h
-include/mutter/mutter-private/keybindings.h
-include/mutter/mutter-private/main.h
-include/mutter/mutter-private/meta-plugin.h
-include/mutter/mutter-private/meta-shadow-factory.h
-include/mutter/mutter-private/meta-window-actor.h
-include/mutter/mutter-private/prefs.h
-include/mutter/mutter-private/preview-widget.h
-include/mutter/mutter-private/screen.h
-include/mutter/mutter-private/theme.h
-include/mutter/mutter-private/types.h
-include/mutter/mutter-private/util.h
-include/mutter/mutter-private/window.h
-include/mutter/mutter-private/workspace.h
+include/mutter/meta/atomnames.h
+include/mutter/meta/boxes.h
+include/mutter/meta/common.h
+include/mutter/meta/compositor-mutter.h
+include/mutter/meta/compositor.h
+include/mutter/meta/display.h
+include/mutter/meta/errors.h
+include/mutter/meta/gradient.h
+include/mutter/meta/group.h
+include/mutter/meta/keybindings.h
+include/mutter/meta/main.h
+include/mutter/meta/meta-plugin.h
+include/mutter/meta/meta-shadow-factory.h
+include/mutter/meta/meta-window-actor.h
+include/mutter/meta/prefs.h
+include/mutter/meta/preview-widget.h
+include/mutter/meta/screen.h
+include/mutter/meta/theme.h
+include/mutter/meta/types.h
+include/mutter/meta/util.h
+include/mutter/meta/window.h
+include/mutter/meta/workspace.h
 lib/libmutter-private.a
 lib/libmutter-private.la
 lib/libmutter-private.so
 lib/libmutter-private.so.0
+lib/libmutter-wm.a
+lib/libmutter-wm.la
+lib/libmutter-wm.so
+lib/libmutter-wm.so.0
 lib/mutter/Meta-%%VERSION%%.gir
 lib/mutter/Meta-%%VERSION%%.typelib
 lib/mutter/plugins/default.so
 libdata/pkgconfig/libmutter-private.pc
+libdata/pkgconfig/libmutter-wm.pc
 libdata/pkgconfig/mutter-plugins.pc
 share/applications/mutter.desktop
 share/gnome/wm-properties/mutter-wm.desktop
@@ -132,7 +137,7 @@ share/locale/zh_TW/LC_MESSAGES/mutter.mo
 @dirrmtry lib/girepository-1.0
 @dirrm lib/mutter/plugins
 @dirrm lib/mutter
-@dirrm include/mutter/mutter-private
+@dirrm include/mutter/meta
 @dirrm include/mutter
 @dirrmtry share/applications
 @dirrmtry share/gir-1.0
