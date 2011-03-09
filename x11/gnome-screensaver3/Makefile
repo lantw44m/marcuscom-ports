@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.3 2011/03/08 20:12:35 kwm Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.4 2011/03/09 15:59:43 kwm Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -29,6 +29,8 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomemenus libgnomekbd3 \
 GNOME_DESKTOP_VERSION=3
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+# explicit disable locking, the new binary needs work. doesn't unlock.
+CONFIGURE_ARGS=	--disable-locking
 
 MAN1=		gnome-screensaver-command.1 gnome-screensaver.1
 
