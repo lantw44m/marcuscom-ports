@@ -3,13 +3,13 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.7 2011/02/02 12:44:30 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.8 2011/02/22 16:44:38 kwm Exp $
 #
 
 # add cheese suppor when it gets gtk3 version
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	2.91.90
+PORTVERSION=	2.91.91
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -53,13 +53,19 @@ GCONF_SCHEMAS=	gnome-control-center.schemas
 WITH_GNOME=	yes
 .endif
 
-.include <bsd.port.pre.mk>
+OPTIONS=	CUPS "Enable cups (printing) support" On
 
-post-patch:
-#	@${REINPLACE_CMD} -e 's|/usr/sbin|${PREFIX}/sbin|g' \
-#		${WRKSRC}/panels/display/org.gnome.randr.policy.in
+.include <bsd.port.options.mk>
+
+.if defined(WITH_CUPS)
+LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
+PLIST_SUB+=	CUPS=""
+.else
+PLIST_SUB+=	CUPS="@comment "
+CONFIGURE_ARGS+=--disable-cups
+.endif
 
 post-install:
 	@-update-desktop-database
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

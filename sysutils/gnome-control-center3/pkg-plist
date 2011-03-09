@@ -2,6 +2,7 @@ bin/gnome-control-center
 bin/gnome-sound-applet
 etc/xdg/autostart/gnome-sound-applet.desktop
 etc/xdg/menus/gnomecc.menu
+include/gnome-control-center-1/libgnome-control-center/cc-lockbutton.h
 include/gnome-control-center-1/libgnome-control-center/cc-panel.h
 include/gnome-control-center-1/libgnome-control-center/cc-shell.h
 include/gnome-control-center-1/libgnome-control-center/gconf-property-editor.h
@@ -29,6 +30,9 @@ lib/control-center-1/panels/libmouse-properties.so
 lib/control-center-1/panels/libpower.a
 lib/control-center-1/panels/libpower.la
 lib/control-center-1/panels/libpower.so
+%%CUPS%%lib/control-center-1/panels/libprinters.a
+%%CUPS%%lib/control-center-1/panels/libprinters.la
+%%CUPS%%lib/control-center-1/panels/libprinters.so
 lib/control-center-1/panels/libregion.a
 lib/control-center-1/panels/libregion.la
 lib/control-center-1/panels/libregion.so
@@ -57,6 +61,7 @@ share/applications/gnome-info-panel.desktop
 share/applications/gnome-keyboard-panel.desktop
 share/applications/gnome-media-panel.desktop
 share/applications/gnome-mouse-panel.desktop
+%%CUPS%%share/applications/gnome-printers-panel.desktop
 share/applications/gnome-power-panel.desktop
 share/applications/gnome-region-panel.desktop
 share/applications/gnome-screen-panel.desktop
@@ -204,6 +209,8 @@ share/doc/libgnome-control-center/up.png
 %%DATADIR%%/ui/gnome-region-panel-options-dialog.ui
 %%DATADIR%%/ui/gnome-region-panel.ui
 %%DATADIR%%/ui/info.ui
+%%CUPS%%%%DATADIR%%/ui/printers/new-printer-dialog.ui
+%%CUPS%%%%DATADIR%%/ui/printers/printers.ui
 %%DATADIR%%/ui/power.ui
 %%DATADIR%%/ui/screen.ui
 %%DATADIR%%/ui/shell.ui
@@ -502,6 +509,7 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm share/gnome/help/control-center/C
 @dirrm share/gnome/help/control-center
 @dirrm %%DATADIR%%/ui/user-accounts
+%%CUPS%%@dirrm %%DATADIR%%/ui/printers
 @dirrm %%DATADIR%%/ui/datetime
 @dirrm %%DATADIR%%/ui/background
 @dirrm %%DATADIR%%/ui
