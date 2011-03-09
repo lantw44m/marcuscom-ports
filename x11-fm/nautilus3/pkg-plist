@@ -25,6 +25,7 @@ libdata/pkgconfig/libnautilus-extension.pc
 share/GConf/gsettings/nautilus.convert
 share/applications/nautilus-autorun-software.desktop
 share/applications/nautilus.desktop
+share/dbus-1/services/org.gnome.Nautilus.service
 share/doc/libnautilus-extension/ch01.html
 share/doc/libnautilus-extension/home.png
 share/doc/libnautilus-extension/index.html
