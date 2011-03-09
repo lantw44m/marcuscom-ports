@@ -75,6 +75,7 @@ share/gtk-doc/html/libatspi/object-tree.html
 share/gtk-doc/html/libatspi/right.png
 share/gtk-doc/html/libatspi/style.css
 share/gtk-doc/html/libatspi/up.png
+share/locale/bg/LC_MESSAGES/at-spi2-core.mo
 share/locale/bn_IN/LC_MESSAGES/at-spi2-core.mo
 share/locale/ca/LC_MESSAGES/at-spi2-core.mo
 share/locale/cs/LC_MESSAGES/at-spi2-core.mo
@@ -87,9 +88,13 @@ share/locale/gu/LC_MESSAGES/at-spi2-core.mo
 share/locale/he/LC_MESSAGES/at-spi2-core.mo
 share/locale/nb/LC_MESSAGES/at-spi2-core.mo
 share/locale/id/LC_MESSAGES/at-spi2-core.mo
+share/locale/it/LC_MESSAGES/at-spi2-core.mo
 share/locale/kn/LC_MESSAGES/at-spi2-core.mo
 share/locale/ko/LC_MESSAGES/at-spi2-core.mo
+share/locale/lv/LC_MESSAGES/at-spi2-core.mo
 share/locale/pa/LC_MESSAGES/at-spi2-core.mo
+share/locale/pt/LC_MESSAGES/at-spi2-core.mo
+share/locale/ru/LC_MESSAGES/at-spi2-core.mo
 share/locale/sl/LC_MESSAGES/at-spi2-core.mo
 share/locale/sq/LC_MESSAGES/at-spi2-core.mo
 share/locale/sv/LC_MESSAGES/at-spi2-core.mo
