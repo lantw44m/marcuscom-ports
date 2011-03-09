@@ -2,18 +2,8 @@ bin/gnome-screensaver
 bin/gnome-screensaver-command
 %%PAM%%etc/pam.d/gnome-screensaver
 etc/xdg/autostart/gnome-screensaver.desktop
-etc/xdg/menus/gnome-screensavers.menu
 libdata/pkgconfig/gnome-screensaver.pc
 libexec/gnome-screensaver-dialog
-libexec/gnome-screensaver-gl-helper
-libexec/gnome-screensaver/floaters
-libexec/gnome-screensaver/popsquares
-libexec/gnome-screensaver/slideshow
-share/applications/screensavers/cosmos-slideshow.desktop
-share/applications/screensavers/footlogo-floaters.desktop
-share/applications/screensavers/personal-slideshow.desktop
-share/applications/screensavers/popsquares.desktop
-share/desktop-directories/gnome-screensaver.directory
 share/locale/ar/LC_MESSAGES/gnome-screensaver.mo
 share/locale/as/LC_MESSAGES/gnome-screensaver.mo
 share/locale/ast/LC_MESSAGES/gnome-screensaver.mo
@@ -97,23 +87,7 @@ share/locale/vi/LC_MESSAGES/gnome-screensaver.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-screensaver.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-screensaver.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-screensaver.mo
-share/backgrounds/cosmos/background-1.xml
-share/backgrounds/cosmos/blue-marble-west.jpg
-share/backgrounds/cosmos/cloud.jpg
-share/backgrounds/cosmos/comet.jpg
-share/backgrounds/cosmos/earth-horizon.jpg
-share/backgrounds/cosmos/galaxy-ngc3370.jpg
-share/backgrounds/cosmos/helix-nebula.jpg
-share/backgrounds/cosmos/jupiter.jpg
-share/backgrounds/cosmos/sombrero.jpg
-share/backgrounds/cosmos/whirlpool.jpg
-share/gnome-background-properties/cosmos.xml
-share/pixmaps/gnome-logo-white.svg
-@dirrm share/gnome-background-properties
-@dirrm share/backgrounds/cosmos
-@dirrmtry share/backgrounds
 @dirrmtry share/applications
-@dirrm libexec/gnome-screensaver
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
