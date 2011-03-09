@@ -3,7 +3,7 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.32 2011/02/23 17:07:30 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.33 2011/03/01 20:46:32 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
@@ -23,7 +23,7 @@ GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20 ltverhack
 USE_PYTHON=	yes
-USE_BISON=	both
+USE_BISON=	build
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
