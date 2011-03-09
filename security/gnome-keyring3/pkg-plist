@@ -5,7 +5,6 @@ etc/xdg/autostart/gnome-keyring-gpg.desktop
 etc/xdg/autostart/gnome-keyring-pkcs11.desktop
 etc/xdg/autostart/gnome-keyring-secrets.desktop
 etc/xdg/autostart/gnome-keyring-ssh.desktop
-etc/xdg/pkcs11.conf.defaults
 include/gck/gck.h
 include/gck/pkcs11.h
 include/gck/pkcs11n.h
@@ -74,6 +73,7 @@ share/doc/gck/gck-Errors.html
 share/doc/gck/gck-GckAttribute.html
 share/doc/gck/gck-GckAttributes.html
 share/doc/gck/gck-Miscellaneous-Functions.html
+share/doc/gck/gck-PKCS11-URIs.html
 share/doc/gck/gck.devhelp
 share/doc/gck/gck.devhelp2
 share/doc/gck/home.png
@@ -106,11 +106,6 @@ share/doc/gcr-3/style.css
 share/doc/gcr-3/up.png
 share/gcr-3/ui/gcr-import-dialog.ui
 share/gcr-3/ui/gcr-unlock-options-widget.ui
-%%DATADIR%%/introspect/introspect-collection.xml
-%%DATADIR%%/introspect/introspect-item.xml
-%%DATADIR%%/introspect/introspect-prompt.xml
-%%DATADIR%%/introspect/introspect-service.xml
-%%DATADIR%%/introspect/introspect-session.xml
 share/gnome-keyring-3/ui/gku-prompt.ui
 share/locale/ar/LC_MESSAGES/gnome-keyring.mo
 share/locale/as/LC_MESSAGES/gnome-keyring.mo
@@ -193,8 +188,6 @@ share/locale/xh/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
-@dirrm %%DATADIR%%/introspect
-@dirrm %%DATADIR%%
 @dirrm share/gnome-keyring-3/ui
 @dirrm share/gnome-keyring-3
 @dirrm share/gcr-3/ui
