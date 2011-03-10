@@ -1,0 +1,101 @@
+bin/caribou
+%%PYTHON_SITELIBDIR%%/caribou/__init__.py
+%%PYTHON_SITELIBDIR%%/caribou/__init__.pyc
+%%PYTHON_SITELIBDIR%%/caribou/__init__.pyo
+%%PYTHON_SITELIBDIR%%/caribou/common/__init__.py
+%%PYTHON_SITELIBDIR%%/caribou/common/__init__.pyc
+%%PYTHON_SITELIBDIR%%/caribou/common/__init__.pyo
+%%PYTHON_SITELIBDIR%%/caribou/common/const.py
+%%PYTHON_SITELIBDIR%%/caribou/common/const.pyc
+%%PYTHON_SITELIBDIR%%/caribou/common/const.pyo
+%%PYTHON_SITELIBDIR%%/caribou/common/setting_types.py
+%%PYTHON_SITELIBDIR%%/caribou/common/setting_types.pyc
+%%PYTHON_SITELIBDIR%%/caribou/common/setting_types.pyo
+%%PYTHON_SITELIBDIR%%/caribou/common/settings.py
+%%PYTHON_SITELIBDIR%%/caribou/common/settings.pyc
+%%PYTHON_SITELIBDIR%%/caribou/common/settings.pyo
+%%PYTHON_SITELIBDIR%%/caribou/common/settings_manager.py
+%%PYTHON_SITELIBDIR%%/caribou/common/settings_manager.pyc
+%%PYTHON_SITELIBDIR%%/caribou/common/settings_manager.pyo
+%%PYTHON_SITELIBDIR%%/caribou/ui/__init__.py
+%%PYTHON_SITELIBDIR%%/caribou/ui/__init__.pyc
+%%PYTHON_SITELIBDIR%%/caribou/ui/__init__.pyo
+%%PYTHON_SITELIBDIR%%/caribou/ui/i18n.py
+%%PYTHON_SITELIBDIR%%/caribou/ui/i18n.pyc
+%%PYTHON_SITELIBDIR%%/caribou/ui/i18n.pyo
+%%PYTHON_SITELIBDIR%%/caribou/ui/keyboard.py
+%%PYTHON_SITELIBDIR%%/caribou/ui/keyboard.pyc
+%%PYTHON_SITELIBDIR%%/caribou/ui/keyboard.pyo
+%%PYTHON_SITELIBDIR%%/caribou/ui/main.py
+%%PYTHON_SITELIBDIR%%/caribou/ui/main.pyc
+%%PYTHON_SITELIBDIR%%/caribou/ui/main.pyo
+%%PYTHON_SITELIBDIR%%/caribou/ui/opacity.py
+%%PYTHON_SITELIBDIR%%/caribou/ui/opacity.pyc
+%%PYTHON_SITELIBDIR%%/caribou/ui/opacity.pyo
+%%PYTHON_SITELIBDIR%%/caribou/ui/preferences_window.py
+%%PYTHON_SITELIBDIR%%/caribou/ui/preferences_window.pyc
+%%PYTHON_SITELIBDIR%%/caribou/ui/preferences_window.pyo
+%%PYTHON_SITELIBDIR%%/caribou/ui/scan.py
+%%PYTHON_SITELIBDIR%%/caribou/ui/scan.pyc
+%%PYTHON_SITELIBDIR%%/caribou/ui/scan.pyo
+%%PYTHON_SITELIBDIR%%/caribou/ui/window.py
+%%PYTHON_SITELIBDIR%%/caribou/ui/window.pyc
+%%PYTHON_SITELIBDIR%%/caribou/ui/window.pyo
+share/applications/caribou.desktop
+share/caribou/keyboards/hebrew.xml
+share/caribou/keyboards/lexic_es.json
+share/caribou/keyboards/qwerty_en.json
+share/caribou/keyboards/qwerty_es.json
+share/caribou/keyboards/qwerty.xml
+share/locale/ar/LC_MESSAGES/caribou.mo
+share/locale/ast/LC_MESSAGES/caribou.mo
+share/locale/bg/LC_MESSAGES/caribou.mo
+share/locale/ca/LC_MESSAGES/caribou.mo
+share/locale/ca@valencia/LC_MESSAGES/caribou.mo
+share/locale/cs/LC_MESSAGES/caribou.mo
+share/locale/da/LC_MESSAGES/caribou.mo
+share/locale/de/LC_MESSAGES/caribou.mo
+share/locale/el/LC_MESSAGES/caribou.mo
+share/locale/en_GB/LC_MESSAGES/caribou.mo
+share/locale/es/LC_MESSAGES/caribou.mo
+share/locale/fr/LC_MESSAGES/caribou.mo
+share/locale/gl/LC_MESSAGES/caribou.mo
+share/locale/he/LC_MESSAGES/caribou.mo
+share/locale/hu/LC_MESSAGES/caribou.mo
+share/locale/id/LC_MESSAGES/caribou.mo
+share/locale/it/LC_MESSAGES/caribou.mo
+share/locale/ja/LC_MESSAGES/caribou.mo
+share/locale/ml/LC_MESSAGES/caribou.mo
+share/locale/ms/LC_MESSAGES/caribou.mo
+share/locale/nb/LC_MESSAGES/caribou.mo
+share/locale/nl/LC_MESSAGES/caribou.mo
+share/locale/nn/LC_MESSAGES/caribou.mo
+share/locale/pa/LC_MESSAGES/caribou.mo
+share/locale/pl/LC_MESSAGES/caribou.mo
+share/locale/pt_BR/LC_MESSAGES/caribou.mo
+share/locale/ro/LC_MESSAGES/caribou.mo
+share/locale/ru/LC_MESSAGES/caribou.mo
+share/locale/sl/LC_MESSAGES/caribou.mo
+share/locale/sr/LC_MESSAGES/caribou.mo
+share/locale/sr@latin/LC_MESSAGES/caribou.mo
+share/locale/sv/LC_MESSAGES/caribou.mo
+share/locale/ta/LC_MESSAGES/caribou.mo
+share/locale/ug/LC_MESSAGES/caribou.mo
+share/locale/zh_CN/LC_MESSAGES/caribou.mo
+share/locale/zh_HK/LC_MESSAGES/caribou.mo
+share/locale/zh_TW/LC_MESSAGES/caribou.mo
+@dirrm share/caribou/keyboards
+@dirrm share/caribou
+@dirrm %%PYTHON_SITELIBDIR%%/caribou/ui
+@dirrm %%PYTHON_SITELIBDIR%%/caribou/common
+@dirrm %%PYTHON_SITELIBDIR%%/caribou
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
