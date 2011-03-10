@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.4 2011/01/30 23:29:17 kwm Exp $
+#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.5 2011/03/09 22:58:27 kwm Exp $
 #
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	2.91.91
+PORTVERSION=	2.91.92
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -34,5 +34,9 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 GLIB_SCHEMAS=	org.gnome.crypto.cache.gschema.xml \
 		org.gnome.crypto.pgp.gschema.xml
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|make --version|${GMAKE} --version|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
