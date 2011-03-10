@@ -44,6 +44,10 @@ lib/peas-demo/plugins/secondtime/libsecondtime.so
 lib/peas-demo/plugins/secondtime/secondtime.plugin
 %%SEED%%lib/peas-demo/plugins/seedhello/seedhello.js
 %%SEED%%lib/peas-demo/plugins/seedhello/seedhello.plugin
+lib/peas-demo/plugins/valahello/libvalahello.a
+lib/peas-demo/plugins/valahello/libvalahello.la
+lib/peas-demo/plugins/valahello/libvalahello.so
+lib/peas-demo/plugins/valahello/valahello.plugin
 libdata/pkgconfig/libpeas-1.0.pc
 libdata/pkgconfig/libpeas-gtk-1.0.pc
 share/gir-1.0/Peas-1.0.gir
@@ -97,6 +101,7 @@ share/locale/zh_CN/LC_MESSAGES/libpeas.mo
 @dirrmtry share/locale/nds/LC_MESSAGES
 @dirrmtry share/locale/nds
 @dirrm share/gtk-doc/html/libpeas
+@dirrm lib/peas-demo/plugins/valahello
 %%SEED%%@dirrm lib/peas-demo/plugins/seedhello
 @dirrm lib/peas-demo/plugins/secondtime
 %%PYTHONS%%@dirrm lib/peas-demo/plugins/pythonhello

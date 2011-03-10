@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libpeas/Makefile,v 1.12 2011/02/23 16:37:58 kwm Exp $
+#   $MCom: ports/devel/libpeas/Makefile,v 1.13 2011/02/24 08:35:16 kwm Exp $
 #
 
 PORTNAME=	libpeas
-PORTVERSION=	0.7.3
+PORTVERSION=	0.7.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,7 +15,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Next evolution of the Gedit plugins engine
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
+		valac:${PORTSDIR}/lang/vala
 
 USE_BZIP2=	yes
 USE_PYTHON=	2.5+
@@ -45,8 +46,8 @@ PLIST_SUB+=	SEED="@comment "
 
 .if defined(WITH_PYTHONS)
 CONFIGURE_ARGS+=--enable-python
-BUILD_DEPENDS+=	pygobject-codegen-2.0:${PORTSDIR}/devel/py-gobject
-RUN_DEPENDS+=	pygobject-codegen-2.0:${PORTSDIR}/devel/py-gobject
+BUILD_DEPENDS+=	py*-gobject>=2.28.0:${PORTSDIR}/devel/py-gobject
+USE_GNOME+=	pygobject
 PLIST_SUB+=	PYTHONS=""
 .else
 CONFIGURE_ARGS+=--enable-python=no
