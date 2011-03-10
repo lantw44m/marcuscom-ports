@@ -16,10 +16,14 @@ mail/evolution -> mail/evolution3
 mail/evolution-exchange -> mail/evolution-exchange3
 mail/evolution-mapi -> mail/evolution-mapi3
 math/gcalctool -> math/gcalctool3
+multimedia/cheese -> multimedia/cheese3
 net/avahi-gtk -> net/avahi-gtk3
 net/libgweather -> net/libgweather3
+net/vinagre -> net/vinagre3
+net/vino -> net/vino3
 security/gnome-keyring -> security/gnome-keyring3
 sysutils/brasero -> sysutils/brasero3
+sysutils/gconf-editor -> sysutils/gconf-editor3
 sysutils/gnome-system-monitor -> sysutils/gnome-system-monitor3
 www/epiphany -> www/epiphany3
 www/gtkhtml3 -> www/gtkhtml4
@@ -33,6 +37,7 @@ x11-toolkits/gtksourceview2 -> x11-toolkits/gtksourceview3
 x11-toolkits/libwnck -> x11-toolkits/libwnck3
 x11-toolkits/unique -> x11-toolkits/libunique3
 x11-toolkits/vte -> x11-toolkits/vte3
+x11/gdm -> x11/gdm3
 x11/gnome-desktop -> gnome-desktop3
 x11/gnome-panel -> x11/gnome-panel3
 x11/gnome-screensaver -> x11/gnome-screensaver3
