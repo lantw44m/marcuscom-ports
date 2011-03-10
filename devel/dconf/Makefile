@@ -3,12 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.16 2011/02/05 17:22:31 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.17 2011/03/10 16:04:51 kwm Exp $
 #
 
 PORTNAME=	dconf
 PORTVERSION=	0.7.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -32,13 +32,18 @@ MAKE_JOBS_SAFE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
+post-patch:
+	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|g' \
+		${WRKSRC}/engine/dconf-engine.c \
+		${WRKSRC}/bin/dconf-update.c
+
 pre-build:
 	${GMAKE} -C ${WRKSRC}/client dconf-client.c libdconf.so.0
 	${GMAKE} -C ${WRKSRC}/dbus-1 dconf-dbus-1.c libdconf-dbus-1.so.0
 
 post-install:
 	-${LOCALBASE}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
-	-${MKDIR} ${PREFIX}/etc/dconf/db
-	-${MKDIR} ${PREFIX}/etc/dconf/profile
+	@${MKDIR} ${PREFIX}/etc/dconf/db
+	@${MKDIR} ${PREFIX}/etc/dconf/profile
 
 .include <bsd.port.mk>
