@@ -3,11 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.15 2011/01/25 14:40:34 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.16 2011/02/05 17:22:31 kwm Exp $
 #
 
 PORTNAME=	dconf
 PORTVERSION=	0.7.2
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -37,5 +38,7 @@ pre-build:
 
 post-install:
 	-${LOCALBASE}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
+	-${MKDIR} ${PREFIX}/etc/dconf/db
+	-${MKDIR} ${PREFIX}/etc/dconf/profile
 
 .include <bsd.port.mk>

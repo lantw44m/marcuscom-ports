@@ -46,3 +46,8 @@ share/vala/vapi/dconf.vapi
 @dirrm include/dconf
 @exec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
 @unexec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
+@exec mkdir -p %D/etc/dconf/db
+@exec mkdir -p %D/etc/dconf/profile
+@dirrmtry etc/dconf/db
+@dirrmtry etc/dconf/profile
+@dirrmtry etc/dconf
