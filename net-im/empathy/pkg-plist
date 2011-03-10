@@ -32,6 +32,7 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/empathy-chat.ui
 %%DATADIR%%/empathy-chatroom-manager.dtd
 %%DATADIR%%/empathy-chatrooms-window.ui
+%%DATADIR%%/empathy-contact-blocking-dialog.ui
 %%DATADIR%%/empathy-contact-dialogs.ui
 %%DATADIR%%/empathy-contact-groups.dtd
 %%DATADIR%%/empathy-contact-selector-dialog.ui
@@ -1059,6 +1060,7 @@ share/gnome/help/empathy/zh_CN/video-call.page
 share/icons/hicolor/16x16/apps/empathy.png
 share/icons/hicolor/22x22/apps/empathy.png
 share/icons/hicolor/24x24/apps/empathy.png
+share/icons/hicolor/256x256/apps/empathy.png
 share/icons/hicolor/32x32/apps/empathy.png
 share/icons/hicolor/48x48/apps/empathy.png
 share/icons/hicolor/scalable/apps/empathy.svg

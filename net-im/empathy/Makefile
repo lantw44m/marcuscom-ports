@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/net-im/empathy/Makefile,v 1.27 2011/02/25 01:32:03 delphij Exp $
-#    $MCom: ports/net-im/empathy/Makefile,v 1.76 2010/11/18 18:04:55 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.78 2011/03/06 23:12:41 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	2.32.2
-PORTREVISION=	1
+PORTVERSION=	2.33.3
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -21,9 +20,10 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		telepathy.2:${PORTSDIR}/net-im/libtelepathy \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		telepathy-farsight.0:${PORTSDIR}/net-im/telepathy-farsight \
-		telepathy-logger.1:${PORTSDIR}/net-im/telepathy-logger \
-		folks-telepathy.16:${PORTSDIR}/net-im/folks \
+		telepathy-logger.2:${PORTSDIR}/net-im/telepathy-logger \
+		folks-telepathy.21:${PORTSDIR}/net-im/folks \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
+		gcr.0:${PORTSDIR}/security/gnome-keyring \
 		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \

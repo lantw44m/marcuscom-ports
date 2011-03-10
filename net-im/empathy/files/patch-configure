@@ -11,18 +11,3 @@
  
  install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid)
  	@$(NORMAL_INSTALL)
-@@ -15049,11 +15049,11 @@
- fi
- 
- # Enable GSEAL checks if needed
--if test $USE_MAINTAINER_MODE = yes; then
-+#if test $USE_MAINTAINER_MODE = yes; then
- 
--$as_echo "#define GSEAL_ENABLE /**/" >>confdefs.h
-+#$as_echo "#define GSEAL_ENABLE /**/" >>confdefs.h
- 
--fi
-+#fi
- 
- # -----------------------------------------------------------
- # Enable debug
