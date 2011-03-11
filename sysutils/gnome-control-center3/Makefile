@@ -3,10 +3,8 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.8 2011/02/22 16:44:38 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.9 2011/03/09 15:28:00 kwm Exp $
 #
-
-# add cheese suppor when it gets gtk3 version
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	2.91.91
@@ -53,7 +51,8 @@ GCONF_SCHEMAS=	gnome-control-center.schemas
 WITH_GNOME=	yes
 .endif
 
-OPTIONS=	CUPS "Enable cups (printing) support" On
+OPTIONS=	CUPS "Enable cups (printing) support" On \
+		CHEESE "Enable cheese webcam support" Off
 
 .include <bsd.port.options.mk>
 
@@ -63,6 +62,13 @@ PLIST_SUB+=	CUPS=""
 .else
 PLIST_SUB+=	CUPS="@comment "
 CONFIGURE_ARGS+=--disable-cups
+.endif
+
+.if defined(WITH_CHEESE)
+CONFIGURE_ARGS+=--with-cheese
+LIB_DEPENDS+=	cheese.0:${PORTSDIR}/multimedia/cheese3
+.else
+CONFIGURE_ARGS+=--without-cheese
 .endif
 
 post-install:
