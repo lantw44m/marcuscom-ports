@@ -211,6 +211,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%DOCSDIR%%/class-gtkcellrendererpixbuf.html
 %%DOCSDIR%%/class-gtkcellrendererprogress.html
 %%DOCSDIR%%/class-gtkcellrendererspin.html
+%%DOCSDIR%%/class-gtkcellrendererspinner.html
 %%DOCSDIR%%/class-gtkcellrenderertext.html
 %%DOCSDIR%%/class-gtkcellrenderertoggle.html
 %%DOCSDIR%%/class-gtkcellview.html
@@ -223,12 +224,14 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%DOCSDIR%%/class-gtkcombo.html
 %%DOCSDIR%%/class-gtkcombobox.html
 %%DOCSDIR%%/class-gtkcomboboxentry.html
+%%DOCSDIR%%/class-gtkcomboboxtext.html
 %%DOCSDIR%%/class-gtkcontainer.html
 %%DOCSDIR%%/class-gtkcurve.html
 %%DOCSDIR%%/class-gtkdialog.html
 %%DOCSDIR%%/class-gtkdrawingarea.html
 %%DOCSDIR%%/class-gtkeditable.html
 %%DOCSDIR%%/class-gtkentry.html
+%%DOCSDIR%%/class-gtkentrybuffer.html
 %%DOCSDIR%%/class-gtkentrycompletion.html
 %%DOCSDIR%%/class-gtkeventbox.html
 %%DOCSDIR%%/class-gtkexpander.html
@@ -263,6 +266,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%DOCSDIR%%/class-gtkimcontext.html
 %%DOCSDIR%%/class-gtkimcontextsimple.html
 %%DOCSDIR%%/class-gtkimmulticontext.html
+%%DOCSDIR%%/class-gtkinfobar.html
 %%DOCSDIR%%/class-gtkinputdialog.html
 %%DOCSDIR%%/class-gtkinvisible.html
 %%DOCSDIR%%/class-gtkitem.html
@@ -281,6 +285,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%DOCSDIR%%/class-gtkmountoperation.html
 %%DOCSDIR%%/class-gtknotebook.html
 %%DOCSDIR%%/class-gtkobject.html
+%%DOCSDIR%%/class-gtkoffscreenwindow.html
 %%DOCSDIR%%/class-gtkoptionmenu.html
 %%DOCSDIR%%/class-gtkpagesetup.html
 %%DOCSDIR%%/class-gtkpagesetupunixdialog.html
@@ -323,6 +328,7 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%DOCSDIR%%/class-gtksizegroup.html
 %%DOCSDIR%%/class-gtksocket.html
 %%DOCSDIR%%/class-gtkspinbutton.html
+%%DOCSDIR%%/class-gtkspinner.html
 %%DOCSDIR%%/class-gtkstatusbar.html
 %%DOCSDIR%%/class-gtkstatusicon.html
 %%DOCSDIR%%/class-gtkstyle.html
@@ -342,6 +348,8 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%DOCSDIR%%/class-gtktoolbar.html
 %%DOCSDIR%%/class-gtktoolbutton.html
 %%DOCSDIR%%/class-gtktoolitem.html
+%%DOCSDIR%%/class-gtktoolitemgroup.html
+%%DOCSDIR%%/class-gtktoolpalette.html
 %%DOCSDIR%%/class-gtktoolshell.html
 %%DOCSDIR%%/class-gtktooltip.html
 %%DOCSDIR%%/class-gtktooltips.html
@@ -603,7 +611,6 @@ libdata/pkgconfig/pygtk-2.0.pc
 %%DOCSDIR%%/pangocairo-constants.html
 %%DOCSDIR%%/pangocairo-functions.html
 %%DOCSDIR%%/pygtk-introduction.html
-%%DOCSDIR%%/pygtk-reference-format.html
 %%DOCSDIR%%/pygtk.devhelp
 %%DOCSDIR%%/unixprint-class-reference.html
 %%DOCSDIR%%/unixprint-constants.html
