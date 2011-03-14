@@ -523,6 +523,9 @@ share/gnome/help/aisleriot/sr@latin/figures/clock-rules.png
 share/gnome/help/aisleriot/sv/aisleriot.xml
 share/gnome/help/aisleriot/sv/figures/camelot-goal.png
 share/gnome/help/aisleriot/sv/figures/clock-rules.png
+share/gnome/help/aisleriot/zh_CN/aisleriot.xml
+share/gnome/help/aisleriot/zh_CN/figures/camelot-goal.png
+share/gnome/help/aisleriot/zh_CN/figures/clock-rules.png
 share/gnome/help/glchess/C/figures/game.png
 share/gnome/help/glchess/C/figures/new_game.png
 share/gnome/help/glchess/C/figures/preferences_game.png
@@ -609,6 +612,11 @@ share/gnome/help/glchess/sv/figures/new_game.png
 share/gnome/help/glchess/sv/figures/preferences_game.png
 share/gnome/help/glchess/sv/figures/preferences_view.png
 share/gnome/help/glchess/sv/glchess.xml
+share/gnome/help/glchess/zh_CN/figures/game.png
+share/gnome/help/glchess/zh_CN/figures/new_game.png
+share/gnome/help/glchess/zh_CN/figures/preferences_game.png
+share/gnome/help/glchess/zh_CN/figures/preferences_view.png
+share/gnome/help/glchess/zh_CN/glchess.xml
 share/gnome/help/glines/C/figures/glines-gameover.png
 share/gnome/help/glines/C/figures/glines-startgame.png
 share/gnome/help/glines/C/figures/preferences.png
@@ -1638,6 +1646,14 @@ share/gnome/help/iagno/sv/figures/START.png
 share/gnome/help/iagno/sv/figures/connect.png
 share/gnome/help/iagno/sv/figures/tables.png
 share/gnome/help/iagno/sv/iagno.xml
+share/gnome/help/iagno/zh_CN/figures/ANIMATION.png
+share/gnome/help/iagno/zh_CN/figures/BLOCK.png
+share/gnome/help/iagno/zh_CN/figures/FIRST.png
+share/gnome/help/iagno/zh_CN/figures/PLAYER.png
+share/gnome/help/iagno/zh_CN/figures/START.png
+share/gnome/help/iagno/zh_CN/figures/connect.png
+share/gnome/help/iagno/zh_CN/figures/tables.png
+share/gnome/help/iagno/zh_CN/iagno.xml
 share/gnome/help/mahjongg/C/figures/mahjongg.png
 share/gnome/help/mahjongg/C/figures/no-move.png
 share/gnome/help/mahjongg/C/figures/preferences.png
@@ -1926,6 +1942,7 @@ share/omf/aisleriot/aisleriot-sl.omf
 share/omf/aisleriot/aisleriot-sr.omf
 share/omf/aisleriot/aisleriot-sr@latin.omf
 share/omf/aisleriot/aisleriot-sv.omf
+share/omf/aisleriot/aisleriot-zh_CN.omf
 share/omf/glchess/glchess-C.omf
 share/omf/glchess/glchess-ca.omf
 share/omf/glchess/glchess-cs.omf
@@ -1944,6 +1961,7 @@ share/omf/glchess/glchess-sl.omf
 share/omf/glchess/glchess-sr.omf
 share/omf/glchess/glchess-sr@latin.omf
 share/omf/glchess/glchess-sv.omf
+share/omf/glchess/glchess-zh_CN.omf
 share/omf/glines/glines-C.omf
 share/omf/glines/glines-ca.omf
 share/omf/glines/glines-cs.omf
@@ -2081,6 +2099,7 @@ share/omf/iagno/iagno-sl.omf
 share/omf/iagno/iagno-sr.omf
 share/omf/iagno/iagno-sr@latin.omf
 share/omf/iagno/iagno-sv.omf
+share/omf/iagno/iagno-zh_CN.omf
 share/omf/mahjongg/mahjongg-C.omf
 share/omf/mahjongg/mahjongg-ca.omf
 share/omf/mahjongg/mahjongg-cs.omf
@@ -2182,6 +2201,8 @@ share/omf/quadrapassel/quadrapassel-zh_CN.omf
 @dirrm share/gnome/help/mahjongg/C/figures
 @dirrm share/gnome/help/mahjongg/C
 @dirrm share/gnome/help/mahjongg
+@dirrm share/gnome/help/iagno/zh_CN/figures
+@dirrm share/gnome/help/iagno/zh_CN
 @dirrm share/gnome/help/iagno/sv/figures
 @dirrm share/gnome/help/iagno/sv
 @dirrm share/gnome/help/iagno/sr@latin/figures
@@ -2501,6 +2522,8 @@ share/omf/quadrapassel/quadrapassel-zh_CN.omf
 @dirrm share/gnome/help/glines/C/figures
 @dirrm share/gnome/help/glines/C
 @dirrm share/gnome/help/glines
+@dirrm share/gnome/help/glchess/zh_CN/figures
+@dirrm share/gnome/help/glchess/zh_CN
 @dirrm share/gnome/help/glchess/sv/figures
 @dirrm share/gnome/help/glchess/sv
 @dirrm share/gnome/help/glchess/sr@latin/figures
@@ -2538,6 +2561,8 @@ share/omf/quadrapassel/quadrapassel-zh_CN.omf
 @dirrm share/gnome/help/glchess/C/figures
 @dirrm share/gnome/help/glchess/C
 @dirrm share/gnome/help/glchess
+@dirrm share/gnome/help/aisleriot/zh_CN/figures
+@dirrm share/gnome/help/aisleriot/zh_CN
 @dirrm share/gnome/help/aisleriot/sv/figures
 @dirrm share/gnome/help/aisleriot/sv
 @dirrm share/gnome/help/aisleriot/sr@latin/figures
