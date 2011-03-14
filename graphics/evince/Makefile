@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD: ports/graphics/evince/Makefile,v 1.63 2010/12/04 07:31:56 ade Exp $
-#    $MCom: ports/graphics/evince/Makefile,v 1.147 2010/09/28 07:27:12 kwm Exp $
+#    $MCom: ports/graphics/evince/Makefile,v 1.149 2011/03/07 09:12:49 kwm Exp $
 #
 
 PORTNAME=	evince
@@ -29,7 +29,7 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix desktopfileutils \
-		gnomedocutils ltasneededhack
+		gnomedocutils ltasneededhack gconf2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

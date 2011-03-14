@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.200 2011/03/07 20:38:48 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.201 2011/03/14 17:26:50 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
@@ -76,6 +76,10 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-glib_Makefile.in \
 		${FILESDIR}/extra-patch-glib_gunicollate.c
 # Disable it until someone can figure why it causes net-im/pidgin crashed.
 #CONFIGURE_ENV+=	CFLAGS="-D__STDC_ISO_10646__"
+.endif
+
+.if defined(WITH_DEBUG)
+CONFIGURE_ARGS+=	--enable-debug=yes
 .endif
 
 post-patch:
