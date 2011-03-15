@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.4 2011/03/09 15:59:43 kwm Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.5 2011/03/09 20:59:34 kwm Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -18,6 +18,8 @@ COMMENT=	GNOME screen saver and locker
 LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 #RUN_DEPENDS=	xscreensaver-gl-helper:${PORTSDIR}/x11/xscreensaver-gnome-hacks
+RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
+		${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/gnome-keyring
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -29,8 +31,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomemenus libgnomekbd3 \
 GNOME_DESKTOP_VERSION=3
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-# explicit disable locking, the new binary needs work. doesn't unlock.
-CONFIGURE_ARGS=	--disable-locking
+CONFIGURE_ARGS=	--with-pam-prefix=${PREFIX}/etc/pam.d
 
 MAN1=		gnome-screensaver-command.1 gnome-screensaver.1
 
@@ -42,37 +43,9 @@ SUB_FILES+=	gnome-screensaver.pam
 
 XSCREENSAVER_EXCLUDE=	"(popsquares.xml)"
 
-OPTIONS=	PAM "Pluggable Authentication Module support" on \
-		KEYRING "Enable GnomeKeyring integration (needs PAM)" on
-
-.include <bsd.port.pre.mk>
-
-.if defined(WITH_PAM)
-RUN_DEPENDS+=		pam_helper:${PORTSDIR}/security/pam_helper
-CONFIGURE_ARGS+=	--with-pam-prefix=${PREFIX}/etc/pam.d
-PLIST_SUB+=		PAM=""
-.else
-CONFIGURE_ARGS+=	--disable-pam
-PLIST_SUB+=		PAM="@comment "
-.endif
-
-.if defined(WITH_KEYRING) && defined(WITH_PAM)
-SUB_LIST+=		PAM_KEYRING=
-RUN_DEPENDS+=		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
-.else
-SUB_LIST+=		PAM_KEYRING=\#
-.endif
-
-pre-everything::
-.if defined(WITHOUT_PAM) && defined(WITH_KEYRING)
-	@${ECHO_MSG} "Keyring integration is disabled because it needs PAM."
-.endif
-
 post-patch:
-.if defined(WITH_PAM)
 	@${REINPLACE_CMD} -e 's|/etc/pam.d|${PREFIX}/etc/pam.d|g' \
 		${WRKSRC}/src/gs-auth-pam.c
-.endif
 
 #pre-install:
 #	@${CAT} ${.CURDIR}/pkg-plist > ${PLIST}
@@ -90,8 +63,6 @@ post-install:
 #		${FIND} -s ${XSCREENSAVER_DIR} -maxdepth 1 -type f -name "*.xml" | \
 #			${GREP} -Ev ${XSCREENSAVER_EXCLUDE} | \
 #			${XARGS} ${WRKSRC}/data/migrate-xscreensaver-config.sh
-.if defined(WITH_PAM)
 	${INSTALL_DATA} ${WRKDIR}/gnome-screensaver.pam ${PREFIX}/etc/pam.d/gnome-screensaver
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

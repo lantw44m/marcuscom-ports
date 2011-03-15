@@ -1,6 +1,6 @@
 bin/gnome-screensaver
 bin/gnome-screensaver-command
-%%PAM%%etc/pam.d/gnome-screensaver
+etc/pam.d/gnome-screensaver
 etc/xdg/autostart/gnome-screensaver.desktop
 libdata/pkgconfig/gnome-screensaver.pc
 libexec/gnome-screensaver-dialog
