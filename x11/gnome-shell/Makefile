@@ -3,11 +3,12 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.26 2011/03/09 10:47:59 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.27 2011/03/09 12:45:02 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
 PORTVERSION=	2.91.91
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -42,5 +43,9 @@ GCONF_SCHEMAS=	gnome-shell.schemas
 MAN1=		gnome-shell.1
 
 CONFIGURE_ARGS+=--enable-compile-warnings=no
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|g' \
+		${WRKSRC}/src/shell-app-system.c
 
 .include <bsd.port.mk>
