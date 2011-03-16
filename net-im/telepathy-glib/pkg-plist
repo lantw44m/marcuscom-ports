@@ -173,6 +173,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-asv.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-automatic-proxy-factory.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-base-client.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-base-contact-list.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-base-password-channel.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-base-protocol.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-basic-proxy-factory.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-capabilities.html
