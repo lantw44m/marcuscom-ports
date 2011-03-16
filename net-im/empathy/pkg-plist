@@ -11,6 +11,7 @@ share/applications/empathy-accounts.desktop
 share/applications/empathy.desktop
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.AudioVideo.service
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Auth.service
+share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Call.service
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.service
 %%DATADIR%%/Template.html
 %%DATADIR%%/codec-preferences
@@ -1144,6 +1145,7 @@ share/locale/zh_HK/LC_MESSAGES/empathy.mo
 share/locale/zh_TW/LC_MESSAGES/empathy.mo
 share/telepathy/clients/Empathy.AudioVideo.client
 share/telepathy/clients/Empathy.Auth.client
+share/telepathy/clients/Empathy.Call.client
 share/telepathy/clients/Empathy.client
 @dirrmtry share/telepathy/clients
 @dirrmtry share/telepathy
