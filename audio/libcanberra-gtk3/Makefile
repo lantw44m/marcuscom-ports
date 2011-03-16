@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/libcanberra-gtk3/Makefile,v 1.6 2011/01/30 23:20:40 kwm Exp $
+#   $MCom: ports/audio/libcanberra-gtk3/Makefile,v 1.7 2011/03/03 10:38:09 kwm Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	audio devel
 PKGNAMESUFFIX=	-gtk3
 
@@ -34,5 +34,7 @@ do-install:
 		${PREFIX}/lib/
 .endfor
 	cd ${WRKSRC}/src && ${GMAKE} install-gtk3moduleLTLIBRARIES
+	cd ${PREFIX}/lib/gtk-3.0/modules && \
+		${LN} -sf libcanberra-gtk3-module.so libcanberra-gtk-module.so
 
 .include "${MASTERDIR}/Makefile"
