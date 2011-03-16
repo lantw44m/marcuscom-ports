@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.7 2011/02/22 10:08:19 kwm Exp $
+#   $MCom: ports/multimedia/totem3/Makefile,v 1.8 2011/03/10 19:36:11 kwm Exp $
 #
 
 PORTNAME=	totem
 PORTVERSION=	2.91.91
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,6 +26,7 @@ LIB_DEPENDS=	gdata.11:${PORTSDIR}/devel/libgdata08 \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
+		gnome-icon-theme-symbolic>=2.91.0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic
 
 USE_PYTHON=	yes
 USE_XORG=	x11 xrandr xxf86vm
