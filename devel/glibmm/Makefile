@@ -3,11 +3,11 @@
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glibmm/Makefile,v 1.106 2011/02/25 15:36:46 kwm Exp $
+#   $MCom: ports/devel/glibmm/Makefile,v 1.107 2011/03/16 08:49:39 kwm Exp $
 #
 
 PORTNAME=	glibmm
-PORTVERSION=	2.27.96
+PORTVERSION=	2.27.97
 PORTREVISION?=	0
 PORTEPOCH=	1
 CATEGORIES=	devel
@@ -24,7 +24,8 @@ PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
 .if !defined(REFERENCE_PORT)
 
 LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20
-BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
+BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4 \
+		mm-common-prepare:${PORTSDIR}/devel/mm-common
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
