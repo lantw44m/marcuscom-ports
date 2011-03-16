@@ -1,0 +1,10 @@
+--- Makefile.in.orig	2011-03-16 12:07:52.000000000 -0500
++++ Makefile.in	2011-03-16 12:07:59.000000000 -0500
+@@ -602,7 +602,6 @@
+ 
+ install-data-am: install-data-local
+ 	@$(NORMAL_INSTALL)
+-	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-dvi: install-dvi-recursive
+ 
+ install-dvi-am:
