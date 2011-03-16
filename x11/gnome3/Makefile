@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.16 2011/03/04 22:18:26 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.17 2011/03/09 16:25:57 kwm Exp $
 #
 
 PORTNAME=	gnome3
 PORTVERSION=	2.32.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -27,6 +27,8 @@ RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		brasero>=2.91.0:${PORTSDIR}/sysutils/brasero3 \
 		nautilus>=2.91.0:${PORTSDIR}/x11-fm/nautilus3 \
+		gdm>=2.91.0:${PORTSDIR}/x11/gdm3 \
+		metacity>=2.30.0:${PORTSDIR}/x11-wm/metacity \
 		gcalctool>=2.91.0:${PORTSDIR}/math/gcalctool3 \
 		gnome-utils>=2.91.0:${PORTSDIR}/deskutils/gnome-utils3 \
 		gnome-system-monitor>=2.99.0:${PORTSDIR}/sysutils/gnome-system-monitor3 \
