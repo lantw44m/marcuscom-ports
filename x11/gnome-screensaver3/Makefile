@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.5 2011/03/09 20:59:34 kwm Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.6 2011/03/15 19:38:07 mezz Exp $
 #
 
 PORTNAME=	gnome-screensaver
 PORTVERSION=	2.91.91
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -46,6 +47,10 @@ XSCREENSAVER_EXCLUDE=	"(popsquares.xml)"
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/pam.d|${PREFIX}/etc/pam.d|g' \
 		${WRKSRC}/src/gs-auth-pam.c
+	@${REINPLACE_CMD} -e 's|gs-auth-pam.|gs-auth-helper.|g' \
+		${WRKSRC}/src/Makefile.in
+	@${ECHO} "#define PASSWD_HELPER_PROGRAM \"/usr/local/bin/pam_helper\"" \
+		>> ${WRKSRC}/config.h.in
 
 #pre-install:
 #	@${CAT} ${.CURDIR}/pkg-plist > ${PLIST}
@@ -63,6 +68,7 @@ post-install:
 #		${FIND} -s ${XSCREENSAVER_DIR} -maxdepth 1 -type f -name "*.xml" | \
 #			${GREP} -Ev ${XSCREENSAVER_EXCLUDE} | \
 #			${XARGS} ${WRKSRC}/data/migrate-xscreensaver-config.sh
-	${INSTALL_DATA} ${WRKDIR}/gnome-screensaver.pam ${PREFIX}/etc/pam.d/gnome-screensaver
+	${INSTALL_DATA} ${WRKDIR}/gnome-screensaver.pam \
+		${PREFIX}/etc/pam.d/gnome-screensaver
 
 .include <bsd.port.mk>
