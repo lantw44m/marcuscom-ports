@@ -1,0 +1,50 @@
+bin/gnome-tweak-tool
+%%PYTHON_SITELIBDIR%%/gtweak/__init__.py
+%%PYTHON_SITELIBDIR%%/gtweak/__init__.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/__init__.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/defs.py
+%%PYTHON_SITELIBDIR%%/gtweak/defs.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/defs.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/gconf.py
+%%PYTHON_SITELIBDIR%%/gtweak/gconf.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/gconf.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/gsettings.py
+%%PYTHON_SITELIBDIR%%/gtweak/gsettings.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/gsettings.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/gshellwrapper.py
+%%PYTHON_SITELIBDIR%%/gtweak/gshellwrapper.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/gshellwrapper.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/tweakmodel.py
+%%PYTHON_SITELIBDIR%%/gtweak/tweakmodel.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/tweakmodel.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/__init__.py
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/__init__.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/__init__.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_font.py
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_font.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_font.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_interface.py
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_interface.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_interface.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_nautilus.py
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_nautilus.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_nautilus.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_shell.py
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_shell.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_shell.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_test.py
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_test.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_test.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/tweakview.py
+%%PYTHON_SITELIBDIR%%/gtweak/tweakview.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/tweakview.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/widgets.py
+%%PYTHON_SITELIBDIR%%/gtweak/widgets.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/widgets.pyo
+share/applications/gnome-tweak-tool.desktop
+%%DATADIR%%/shell.ui
+%%DATADIR%%/welcome.png
+@dirrm %%DATADIR%%
+@dirrmtry share/applications
+@dirrm %%PYTHON_SITELIBDIR%%/gtweak/tweaks
+@dirrm %%PYTHON_SITELIBDIR%%/gtweak
