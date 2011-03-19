@@ -3,12 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.17 2011/03/10 16:04:51 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.18 2011/03/10 16:54:25 kwm Exp $
 #
 
 PORTNAME=	dconf
 PORTVERSION=	0.7.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -36,6 +36,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|g' \
 		${WRKSRC}/engine/dconf-engine.c \
 		${WRKSRC}/bin/dconf-update.c
+	@${REINPLACE_CMD} -e 's|/usr/local/|${LOCALBASE}/|g' \
+		${WRKSRC}/editor/dconf-model.c
 
 pre-build:
 	${GMAKE} -C ${WRKSRC}/client dconf-client.c libdconf.so.0
