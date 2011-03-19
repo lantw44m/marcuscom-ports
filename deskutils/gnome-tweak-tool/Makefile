@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	gnome-tweak-tool
-PORTVERSION=	0.01.20110317
+PORTVERSION=	2.91.92
 CATEGORIES=	deskutils gnome
-MASTER_SITES=	LOCAL/mezz
+MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Allows to tweak some hidden settings in GTK3/GNOME3

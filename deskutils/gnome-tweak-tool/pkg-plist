@@ -35,6 +35,9 @@ bin/gnome-tweak-tool
 %%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_test.py
 %%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_test.pyc
 %%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_test.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_windows.py
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_windows.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_windows.pyo
 %%PYTHON_SITELIBDIR%%/gtweak/tweakview.py
 %%PYTHON_SITELIBDIR%%/gtweak/tweakview.pyc
 %%PYTHON_SITELIBDIR%%/gtweak/tweakview.pyo
