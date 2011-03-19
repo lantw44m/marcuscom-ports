@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml3/Makefile,v 1.177 2010/11/15 16:59:05 kwm Exp $
+#   $MCom: ports/www/gtkhtml3/Makefile,v 1.179 2011/03/06 20:20:29 kwm Exp $
 #
 
 PORTNAME=	gtkhtml3
 PORTVERSION=	3.32.1
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/3$//}/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -43,5 +44,7 @@ post-patch:
 		s|-DGTK_DISABLE_DEPRECATED||g ; \
 	    	s|-DGDK_DISABLE_DEPRECATED||g' \
 		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|gtkhtml-editor-test[$$]|gtkhtml3-editor-test$$|' \
+	    	${WRKSRC}/components/editor/Makefile.in
 
 .include <bsd.port.mk>
