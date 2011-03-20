@@ -3,7 +3,7 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm30/Makefile,v 1.11 2011/02/27 15:10:07 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtkmm30/Makefile,v 1.12 2011/03/17 09:57:27 kwm Exp $
 #
 
 PORTNAME=	gtkmm
@@ -25,7 +25,8 @@ LIB_DEPENDS=	glibmm-2.4.1:${PORTSDIR}/devel/glibmm \
 		cairomm-1.0.1:${PORTSDIR}/graphics/cairomm \
 		atkmm-1.6.2:${PORTSDIR}/accessibility/atkmm \
 		pangomm-1.4.1:${PORTSDIR}/x11-toolkits/pangomm
-BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
+BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4 \
+		mm-common-prepare:${PORTSDIR}/devel/mm-common
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
