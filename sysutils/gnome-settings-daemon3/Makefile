@@ -3,11 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.13 2011/03/08 22:44:04 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.14 2011/03/09 14:41:32 kwm Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
 PORTVERSION=	2.91.91
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -79,5 +80,9 @@ LIB_DEPENDS+=	nss3.1:${PORTSDIR}/security/nss
 CONFIGURE_ARGS+=--enable-smartcard-support
 PLIST_SUB+=	SMARTCARD=""
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/etc/gnome|${PREFIX}/etc/gnome|g' \
+		${WRKSRC}/data/org.gnome.settings-daemon.plugins.xrandr.gschema.xml.in.in
 
 .include <bsd.port.mk>
