@@ -3,11 +3,12 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes-standard/Makefile,v 1.6 2011/03/09 22:45:02 kwm Exp $
+#   $MCom: ports/x11-themes/gnome-icon-theme-symbolic/Makefile,v 1.1 2011/03/16 17:24:56 mezz Exp $
 #
 
 PORTNAME=	gnome-icon-theme-symbolic
 PORTVERSION=	2.91.7
+PORTREVISION=	1
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,7 +21,7 @@ BUILD_DEPENDS=	icon-naming-utils>=0.8.7:${PORTSDIR}/x11-themes/icon-naming-utils
 USE_BZIP2=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix pkgconfig
+USE_GNOME=	gnomehack gnomeprefix pkgconfig gtk-update-icon-cache
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
