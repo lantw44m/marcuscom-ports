@@ -3,12 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.18 2011/03/10 16:54:25 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.19 2011/03/19 22:08:01 kwm Exp $
 #
 
 PORTNAME=	dconf
 PORTVERSION=	0.7.2
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +22,6 @@ LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-#USE_GETTEXT=	yes
 USE_GNOME=	gnomehack gtk20 gtk30
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -38,6 +37,8 @@ post-patch:
 		${WRKSRC}/bin/dconf-update.c
 	@${REINPLACE_CMD} -e 's|/usr/local/|${LOCALBASE}/|g' \
 		${WRKSRC}/editor/dconf-model.c
+	@${REINPLACE_CMD} -e 's|/usr/share|${LOCALBASE}/share|g' \
+		${WRKSRC}/editor/dconf-model.vala
 
 pre-build:
 	${GMAKE} -C ${WRKSRC}/client dconf-client.c libdconf.so.0
