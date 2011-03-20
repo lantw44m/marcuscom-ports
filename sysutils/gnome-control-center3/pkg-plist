@@ -515,7 +515,6 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm %%DATADIR%%/ui
 @dirrm %%DATADIR%%/sounds
 @dirrm %%DATADIR%%/pixmaps
-@dirrm %%DATADIR%%/keybindings
 @dirrm %%DATADIR%%/icons/hicolor/48x48/devices
 @dirrm %%DATADIR%%/icons/hicolor/48x48
 @dirrm %%DATADIR%%/icons/hicolor/32x32/status
@@ -532,7 +531,6 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/datetime
-@dirrm %%DATADIR%%
 @dirrm share/doc/libgnome-control-center
 @dirrmtry share/desktop-directories
 @dirrmtry share/applications
