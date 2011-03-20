@@ -623,6 +623,7 @@ share/themes/LowContrast/index.theme
 @dirrm share/icons/LowContrast
 @dirrm share/icons/HighContrastInverse/48x48/stock
 @dirrm share/icons/HighContrastInverse/48x48
+@dirrmtry share/icons/HighContrastInverse
 @dirrm share/icons/HighContrast/scalable/status
 @dirrm share/icons/HighContrast/scalable/places
 @dirrm share/icons/HighContrast/scalable/mimetypes
