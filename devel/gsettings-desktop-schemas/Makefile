@@ -3,18 +3,20 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.8 2011/03/09 12:14:49 kwm Exp $
+#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.9 2011/03/16 00:39:35 mezz Exp $
 #
 
 PORTNAME=	gsettings-desktop-schemas
 PORTVERSION=	2.91.91
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Collection of globally shared GSetting schemas
+
+RUN_DEPENDS=	${LOCALBASE}/etc/fonts/conf.avail/31-cantarell.conf:${PORTSDIR}/x11-fonts/cantarell-fonts
 
 LICENSE=	LGPL21
 
