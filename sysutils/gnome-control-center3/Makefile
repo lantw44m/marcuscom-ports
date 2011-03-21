@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.10 2011/03/11 20:00:25 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.11 2011/03/20 03:21:25 avl Exp $
 #
 
 PORTNAME=	gnome-control-center
@@ -55,7 +55,7 @@ WITH_GNOME=	yes
 OPTIONS=	CUPS "Enable cups (printing) support" On \
 		CHEESE "Enable cheese webcam support" Off
 
-.include <bsd.port.options.mk>
+.include <bsd.port.pre.mk>
 
 .if defined(WITH_CUPS)
 LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
@@ -65,7 +65,7 @@ PLIST_SUB+=	CUPS="@comment "
 CONFIGURE_ARGS+=--disable-cups
 .endif
 
-.if defined(WITH_CHEESE)
+.if defined(WITH_CHEESE) && (${ARCH}=="i386" || ${ARCH}=="amd64")
 CONFIGURE_ARGS+=--with-cheese
 LIB_DEPENDS+=	cheese.0:${PORTSDIR}/multimedia/cheese3
 .else
@@ -75,4 +75,4 @@ CONFIGURE_ARGS+=--without-cheese
 post-install:
 	@-update-desktop-database
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
