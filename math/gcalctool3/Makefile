@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool3/Makefile,v 1.5 2011/02/22 08:55:27 avl Exp $
+#   $MCom: ports/math/gcalctool3/Makefile,v 1.6 2011/03/18 12:47:33 kwm Exp $
 #
 
 PORTNAME=	gcalctool
-PORTVERSION=	5.91.91
+PORTVERSION=	5.91.92
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,7 +25,7 @@ GNOME_DESKTOP_VERSION=	3
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
-MAN1=		gcalctool.1
+MAN1=		gcalccmd.1 gcalctool.1
 GLIB_SCHEMAS=	org.gnome.gcalctool.gschema.xml
 
 .include <bsd.port.mk>
