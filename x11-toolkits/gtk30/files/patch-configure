@@ -1,69 +1,6 @@
---- configure.orig	2011-01-06 19:45:42.000000000 +0000
-+++ configure	2011-01-06 19:48:43.000000000 +0000
-@@ -18656,7 +18656,7 @@
- GIO_PACKAGE=gio-2.0
- PANGO_PACKAGES="pango pangocairo"
- 
--if test "x$enable_x11_backend" == xyes; then
-+if test "x$enable_x11_backend" = xyes; then
-   # GDK calls the xlib backend "x11," cairo calls it "xlib." Other
-   # backend names are identical.
-   cairo_backends="$cairo_backends cairo-xlib"
-@@ -18669,7 +18669,7 @@
- #define GDK_WINDOWING_X11"
- fi
- 
--if test "x$enable_win32_backend" == xyes; then
-+if test "x$enable_win32_backend" = xyes; then
-   cairo_backends="$cairo_backends cairo-win32"
-   GDK_BACKENDS="$GDK_BACKENDS win32"
-   backend_immodules="$backend_immodules,ime"
-@@ -18697,7 +18697,7 @@
- 
- fi
- 
--if test "x$enable_quartz_backend" == xyes; then
-+if test "x$enable_quartz_backend" = xyes; then
-   cairo_backends="$cairo_backends cairo-quartz"
-   GDK_BACKENDS="$GDK_BACKENDS quartz"
-   GDK_WINDOWING="$GDK_WINDOWING
-@@ -18723,7 +18723,7 @@
- fi
- 
- # strip leading space
--GDK_BACKENDS=${GDK_BACKENDS/# }
-+GDK_BACKENDS=${GDK_BACKENDS# }
- 
- 
- 
-@@ -21834,7 +21834,7 @@
- GTK_DEP_LIBS_FOR_X=
- X_EXTENSIONS=
- 
--if test "x$enable_x11_backend" == xyes; then
-+if test "x$enable_x11_backend" = xyes; then
-   X_PACKAGES=fontconfig
- 
-   #
-@@ -22992,7 +22992,7 @@
- 
- 
-   # strip leading space
--  X_EXTENSIONS=${X_EXTENSIONS/# }
-+  X_EXTENSIONS=${X_EXTENSIONS# }
- 
- else
-   XPACKAGES=
-@@ -23164,7 +23164,7 @@
- fi
- 
- GTK_PACKAGES="atk cairo cairo-gobject gdk-pixbuf-2.0 gio-2.0"
--if test "x$enable_x11_backend" == xyes; then
-+if test "x$enable_x11_backend" = xyes; then
-   GTK_PACKAGES="$GTK_PACKAGES pangoft2"
- fi
- GTK_EXTRA_LIBS=
-@@ -24043,9 +24043,9 @@
+--- configure.orig	2011-03-21 20:08:47.000000000 +0100
++++ configure	2011-03-21 20:10:50.000000000 +0100
+@@ -23728,9 +23728,9 @@
         INTROSPECTION_COMPILER=`$PKG_CONFIG --variable=g_ir_compiler gobject-introspection-1.0`
         INTROSPECTION_GENERATE=`$PKG_CONFIG --variable=g_ir_generate gobject-introspection-1.0`
         INTROSPECTION_GIRDIR=`$PKG_CONFIG --variable=girdir gobject-introspection-1.0`
@@ -75,12 +12,3 @@
         INTROSPECTION_CFLAGS=`$PKG_CONFIG --cflags gobject-introspection-1.0`
         INTROSPECTION_LIBS=`$PKG_CONFIG --libs gobject-introspection-1.0`
         INTROSPECTION_MAKEFILE=`$PKG_CONFIG --variable=datadir gobject-introspection-1.0`/gobject-introspection-1.0/Makefile.introspection
-@@ -27580,7 +27580,7 @@
- 
- 
- # beautify the immodule list a bit
--included_immodules=${included_immodules//,/ }
-+included_immodules=`printf '%s' "$included_immodules" | sed -e 's/,/ /g'`
- included_immodules=${included_immodules:-none}
- 
- echo "configuration:"
