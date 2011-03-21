@@ -179,8 +179,6 @@ include/evolution-data-server-%%VERSION%%/libedataserver/e-list.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-memory.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-proxy.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-sexp.h
-include/evolution-data-server-%%VERSION%%/libedataserver/e-soap-message.h
-include/evolution-data-server-%%VERSION%%/libedataserver/e-soap-response.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-source-group.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-source-list.h
 include/evolution-data-server-%%VERSION%%/libedataserver/e-source.h
@@ -472,6 +470,8 @@ share/doc/camel/left.png
 share/doc/camel/right.png
 share/doc/camel/style.css
 share/doc/camel/up.png
+share/doc/libebackend/EFileCache.html
+share/doc/libebackend/EOfflineListener.html
 share/doc/libebackend/api-index-deprecated.html
 share/doc/libebackend/api-index-2.24.html
 share/doc/libebackend/api-index-2.26.html
@@ -483,11 +483,9 @@ share/doc/libebackend/index.html
 share/doc/libebackend/index.sgml
 share/doc/libebackend/ix01.html
 share/doc/libebackend/left.png
-share/doc/libebackend/libebackend-EOfflineListener.html
 share/doc/libebackend/libebackend-e-data-server-module.html
 share/doc/libebackend/libebackend-e-db3-utils.html
 share/doc/libebackend/libebackend-e-dbhash.html
-share/doc/libebackend/libebackend-e-file-cache.html
 share/doc/libebackend/libebackend.devhelp
 share/doc/libebackend/libebackend.devhelp2
 share/doc/libebackend/right.png
@@ -622,6 +620,7 @@ share/doc/libedataserver/EAccountList.html
 share/doc/libedataserver/EIterator.html
 share/doc/libedataserver/EList.html
 share/doc/libedataserver/EListIterator.html
+share/doc/libedataserver/EProxy.html
 share/doc/libedataserver/ESource.html
 share/doc/libedataserver/ESourceGroup.html
 share/doc/libedataserver/ESourceList.html
@@ -642,9 +641,7 @@ share/doc/libedataserver/index.html
 share/doc/libedataserver/index.sgml
 share/doc/libedataserver/left.png
 share/doc/libedataserver/libedataserver-EFlag.html
-share/doc/libedataserver/libedataserver-EProxy.html
 share/doc/libedataserver/libedataserver-ESExp.html
-share/doc/libedataserver/libedataserver-ESoapMessage.html
 share/doc/libedataserver/libedataserver-Version-Information.html
 share/doc/libedataserver/libedataserver-e-categories.html
 share/doc/libedataserver/libedataserver-e-debug-log.html
