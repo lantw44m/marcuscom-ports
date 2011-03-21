@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.535 2011/03/04 14:34:03 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.536 2011/03/19 20:42:08 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -605,6 +605,10 @@ gvfs_USE_GNOME_IMPL=		glib20 gconf2
 . if exists(${PORTSDIR}/Mk/bsd.gnome-experimental.mk)
 .include "${PORTSDIR}/Mk/bsd.gnome-experimental.mk"
 . endif
+.endif
+
+.if defined(INSTALLS_ICONS)
+USE_GNOME+=	gtk-update-icon-cache
 .endif
 
 # End component definition section
