@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.96 2011/03/22 09:32:28 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.97 2011/03/22 10:57:25 kwm Exp $
 #
 
 PORTNAME=	libsoup
@@ -59,7 +59,7 @@ pre-everything::
 	@${ECHO_MSG} ""
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g ; \
+	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
 		${WRKSRC}/configure
 
 .if defined(SOUP_SLAVE)
