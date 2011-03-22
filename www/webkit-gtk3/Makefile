@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.10 2011/02/03 04:38:26 avl Exp $
+#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.11 2011/02/24 15:26:05 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.3.12
+PORTVERSION=	1.3.13
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk3
@@ -35,8 +35,8 @@ USE_GNOME=	gtk30 libxslt ltverhack
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
+CPPFLAGS=	"-I${LOCALBASE}/include"
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
 		ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \
 		ac_cv_path_DOLT_BASH=""
 CONFIGURE_ARGS=	--enable-icon-database \

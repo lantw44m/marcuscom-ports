@@ -1,6 +1,17 @@
---- configure.orig	2010-11-29 22:57:13.000000000 +0000
-+++ configure	2010-12-16 16:38:32.000000000 +0000
-@@ -19795,7 +19795,7 @@
+--- configure.orig	2011-03-22 15:43:40.000000000 +0100
++++ configure	2011-03-22 15:44:04.000000000 +0100
+@@ -18331,8 +18331,8 @@
+ .SECONDARY: $(gsettings_SCHEMAS)
+ 
+ gsettings__base_list = \
+-  sed "$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g" | \
+-  sed "$$!N;$$!N;$$!N;$$!N;s/\n/ /g"
++  sed '\''$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g'\'' | \
++  sed '\''$$!N;$$!N;$$!N;$$!N;s/\n/ /g'\''
+ 
+ install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid) $(gsettings__enum_file)
+ 	@$(NORMAL_INSTALL)
+@@ -20131,7 +20131,7 @@
  $as_echo "#define ENABLE_YARR_JIT 1" >>confdefs.h
  
          ;;
@@ -9,7 +20,7 @@
  
  $as_echo "#define ENABLE_JIT 1" >>confdefs.h
  
-@@ -19820,7 +19820,7 @@
+@@ -20156,7 +20156,7 @@
  $as_echo "#define WTF_USE_JIT_STUB_ARGUMENT_VA_LIST 1" >>confdefs.h
  
                  ;;

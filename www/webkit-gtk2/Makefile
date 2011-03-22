@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.72 2011/03/06 18:55:36 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.3.12
+PORTVERSION=	1.3.13
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
