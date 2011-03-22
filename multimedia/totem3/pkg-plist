@@ -307,6 +307,15 @@ share/gnome/help/totem/pt_BR/figures/totem_start_window.png
 share/gnome/help/totem/pt_BR/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/pt_BR/figures/totem_volume_mute_button.png
 share/gnome/help/totem/pt_BR/totem.xml
+share/gnome/help/totem/ro/figures/totem_next_button.png
+share/gnome/help/totem/ro/figures/totem_pause_button.png
+share/gnome/help/totem/ro/figures/totem_play_button.png
+share/gnome/help/totem/ro/figures/totem_previous_button.png
+share/gnome/help/totem/ro/figures/totem_show_playlist_button.png
+share/gnome/help/totem/ro/figures/totem_start_window.png
+share/gnome/help/totem/ro/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/ro/figures/totem_volume_mute_button.png
+share/gnome/help/totem/ro/totem.xml
 share/gnome/help/totem/ru/figures/totem_next_button.png
 share/gnome/help/totem/ru/figures/totem_pause_button.png
 share/gnome/help/totem/ru/figures/totem_play_button.png
@@ -488,6 +497,7 @@ share/omf/totem/totem-oc.omf
 share/omf/totem/totem-pa.omf
 share/omf/totem/totem-pl.omf
 share/omf/totem/totem-pt_BR.omf
+share/omf/totem/totem-ro.omf
 share/omf/totem/totem-ru.omf
 share/omf/totem/totem-sl.omf
 share/omf/totem/totem-sv.omf
@@ -524,6 +534,8 @@ share/thumbnailers/totem.thumbnailer
 @dirrm share/gnome/help/totem/sl
 @dirrm share/gnome/help/totem/ru/figures
 @dirrm share/gnome/help/totem/ru
+@dirrm share/gnome/help/totem/ro/figures
+@dirrm share/gnome/help/totem/ro
 @dirrm share/gnome/help/totem/pt_BR/figures
 @dirrm share/gnome/help/totem/pt_BR
 @dirrm share/gnome/help/totem/pl/figures
