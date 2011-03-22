@@ -9,7 +9,9 @@ include/gck/gck.h
 include/gck/pkcs11.h
 include/gck/pkcs11n.h
 include/gck/pkcs11x.h
+include/gcr-3/gcr/gcr-certificate-basics-widget.h
 include/gcr-3/gcr/gcr-certificate-chain.h
+include/gcr-3/gcr/gcr-certificate-details-widget.h
 include/gcr-3/gcr/gcr-certificate-renderer.h
 include/gcr-3/gcr/gcr-certificate-widget.h
 include/gcr-3/gcr/gcr-certificate.h
@@ -108,6 +110,7 @@ share/doc/gcr-3/up.png
 share/gcr-3/ui/gcr-import-dialog.ui
 share/gcr-3/ui/gcr-unlock-options-widget.ui
 share/gnome-keyring-3/ui/gku-prompt.ui
+share/locale/af/LC_MESSAGES/gnome-keyring.mo
 share/locale/ar/LC_MESSAGES/gnome-keyring.mo
 share/locale/as/LC_MESSAGES/gnome-keyring.mo
 share/locale/ast/LC_MESSAGES/gnome-keyring.mo

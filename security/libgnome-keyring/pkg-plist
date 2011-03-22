@@ -48,6 +48,7 @@ share/locale/eu/LC_MESSAGES/libgnome-keyring.mo
 share/locale/fa/LC_MESSAGES/libgnome-keyring.mo
 share/locale/fi/LC_MESSAGES/libgnome-keyring.mo
 share/locale/fr/LC_MESSAGES/libgnome-keyring.mo
+share/locale/fy/LC_MESSAGES/libgnome-keyring.mo
 share/locale/gl/LC_MESSAGES/libgnome-keyring.mo
 share/locale/gu/LC_MESSAGES/libgnome-keyring.mo
 share/locale/he/LC_MESSAGES/libgnome-keyring.mo
@@ -94,6 +95,8 @@ share/locale/zh_TW/LC_MESSAGES/libgnome-keyring.mo
 @dirrmtry share/local/sr@latin
 @dirrmtry share/local/nds/LC_MESSAGES
 @dirrmtry share/local/nds
+@dirrmtry share/local/fy/LC_MESSAGES
+@dirrmtry share/local/fy
 @dirrmtry share/local/ca@valencia/LC_MESSAGES
 @dirrmtry share/local/ca@valencia
 @dirrmtry share/local/ast/LC_MESSAGES
