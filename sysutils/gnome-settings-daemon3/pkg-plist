@@ -66,6 +66,7 @@ libdata/pkgconfig/gnome-settings-daemon.pc
 libexec/gnome-settings-daemon
 libexec/gsd-datetime-mechanism
 libexec/gsd-locate-pointer
+libexec/gsd-printer
 share/GConf/gsettings/gnome-settings-daemon.convert
 share/dbus-1/services/org.gnome.SettingsDaemon.service
 share/dbus-1/system-services/org.gnome.SettingsDaemon.DateTimeMechanism.service
@@ -77,6 +78,7 @@ share/dbus-1/system-services/org.gnome.SettingsDaemon.DateTimeMechanism.service
 %%DATADIR%%/icons/hicolor/64x64/devices/kbd-numlock-on.png
 %%DATADIR%%/icons/hicolor/64x64/devices/kbd-scrolllock-off.png
 %%DATADIR%%/icons/hicolor/64x64/devices/kbd-scrolllock-on.png
+share/gnome-settings-daemon-3.0/input-device-example.sh
 share/icons/hicolor/16x16/actions/touchpad-disabled.png
 share/icons/hicolor/16x16/actions/touchpad-enabled.png
 share/icons/hicolor/16x16/apps/gsd-xrandr.png
@@ -183,6 +185,7 @@ share/locale/zh_HK/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
 share/polkit-1/actions/org.gnome.settingsdaemon.datetimemechanism.policy
+@dirrm share/gnome-settings-daemon-3.0
 @dirrm %%DATADIR%%/icons/hicolor/64x64/devices
 @dirrm %%DATADIR%%/icons/hicolor/64x64
 @dirrm %%DATADIR%%/icons/hicolor
