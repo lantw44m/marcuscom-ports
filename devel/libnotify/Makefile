@@ -3,12 +3,11 @@
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libnotify/Makefile,v 1.15 2011/01/15 01:24:15 kwm Exp $
+#   $MCom: ports/devel/libnotify/Makefile,v 1.16 2011/03/06 07:47:39 kwm Exp $
 #
 
 PORTNAME=	libnotify
-PORTVERSION=	0.7.1
-PORTREVISION=	1
+PORTVERSION=	0.7.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
