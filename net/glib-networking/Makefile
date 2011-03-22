@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/glib-networking/Makefile,v 1.2 2011/01/12 15:08:11 kwm Exp $
+#   $MCom: ports/net/glib-networking/Makefile,v 1.3 2011/02/22 15:58:27 kwm Exp $
 #
 
 PORTNAME=	glib-networking
-PORTVERSION=	2.28.0
+PORTVERSION=	2.28.4
 PORTREVISION=	0
 CATEGORIES=	net
 MASTER_SITES=	GNOME
@@ -16,10 +16,12 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Network-related giomodules for glib
 
-BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
+		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	gnutls.40:${PORTSDIR}/security/gnutls \
 		proxy.1:${PORTSDIR}/net/libproxy
-RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
+		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
@@ -27,10 +29,9 @@ USE_GNOME=	gnomehack pkgconfig glib20 intltool
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
-CONFIGURE_ARGS=	--enable-static \
-		--with-ca-certificates=${LOCALBASE}/share/cert/ca-root-nss.crt
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
+CONFIGURE_ARGS=	--with-ca-certificates=${LOCALBASE}/share/cert/ca-root-nss.crt
+CPPFLAGS=	"-I${LOCALBASE}/include"
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
 		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
