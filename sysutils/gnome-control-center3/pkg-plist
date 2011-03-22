@@ -83,6 +83,30 @@ share/doc/libgnome-control-center/object-tree.html
 share/doc/libgnome-control-center/right.png
 share/doc/libgnome-control-center/style.css
 share/doc/libgnome-control-center/up.png
+share/pixmaps/faces/astronaut.jpg
+share/pixmaps/faces/baseball.png
+share/pixmaps/faces/butterfly.png
+share/pixmaps/faces/cat-eye.jpg
+share/pixmaps/faces/chess.jpg
+share/pixmaps/faces/coffee.jpg
+share/pixmaps/faces/dice.jpg
+share/pixmaps/faces/energy-arc.jpg
+share/pixmaps/faces/fish.jpg
+share/pixmaps/faces/flake.jpg
+share/pixmaps/faces/flower.jpg
+share/pixmaps/faces/grapes.jpg
+share/pixmaps/faces/guitar.jpg
+share/pixmaps/faces/launch.jpg
+share/pixmaps/faces/leaf.jpg
+share/pixmaps/faces/lightning.jpg
+share/pixmaps/faces/penguin.jpg
+share/pixmaps/faces/puppy.jpg
+share/pixmaps/faces/sky.jpg
+share/pixmaps/faces/soccerball.png
+share/pixmaps/faces/sunflower.jpg
+share/pixmaps/faces/sunset.jpg
+share/pixmaps/faces/tennis-ball.png
+share/pixmaps/faces/yellow-rose.jpg
 %%DATADIR%%/datetime/backward
 %%DATADIR%%/icons/hicolor/16x16/devices/audio-headset.svg
 %%DATADIR%%/icons/hicolor/16x16/status/audio-input-microphone-high.png
@@ -187,6 +211,7 @@ share/doc/libgnome-control-center/up.png
 %%DATADIR%%/ui/datetime/timezone_12.75.png
 %%DATADIR%%/ui/datetime/timezone_12.png
 %%DATADIR%%/ui/datetime/timezone_13.png
+%%DATADIR%%/ui/datetime/timezone_14.png
 %%DATADIR%%/ui/datetime/timezone_2.png
 %%DATADIR%%/ui/datetime/timezone_3.5.png
 %%DATADIR%%/ui/datetime/timezone_3.png
@@ -199,6 +224,7 @@ share/doc/libgnome-control-center/up.png
 %%DATADIR%%/ui/datetime/timezone_6.png
 %%DATADIR%%/ui/datetime/timezone_7.png
 %%DATADIR%%/ui/datetime/timezone_8.png
+%%DATADIR%%/ui/datetime/timezone_8.75.png
 %%DATADIR%%/ui/datetime/timezone_9.5.png
 %%DATADIR%%/ui/datetime/timezone_9.png
 %%DATADIR%%/ui/display-capplet.ui
@@ -531,6 +557,7 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/datetime
+@dirrmtry share/pixmaps/faces
 @dirrm share/doc/libgnome-control-center
 @dirrmtry share/desktop-directories
 @dirrmtry share/applications
