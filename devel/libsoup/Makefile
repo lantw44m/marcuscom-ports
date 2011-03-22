@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.95 2011/02/24 20:31:20 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.96 2011/03/22 09:32:28 kwm Exp $
 #
 
 PORTNAME=	libsoup
@@ -29,8 +29,8 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	"-I${LOCALBASE}/include"
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 PLIST_SUB=	VERSION="2.4"
 
@@ -38,11 +38,9 @@ PLIST_SUB=	VERSION="2.4"
 
 .if defined(SOUP_SLAVE)
 LIB_DEPENDS+=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
-		proxy.1:${PORTSDIR}/net/libproxy \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3
 CONFIGURE_ARGS+=--with-gnome
-USE_GNOME+=	gconf2
 .else
 BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 CONFIGURE_ARGS+=--without-gnome
@@ -62,7 +60,6 @@ pre-everything::
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g ; \
-	    	s|" == "|" = "|g' \
 		${WRKSRC}/configure
 
 .if defined(SOUP_SLAVE)
