@@ -446,6 +446,22 @@ share/icons/HighContrastInverse/48x48/stock/zoom-in.png
 share/icons/HighContrastInverse/48x48/stock/zoom-original.png
 share/icons/HighContrastInverse/48x48/stock/zoom-out.png
 share/icons/HighContrastInverse/index.theme
+share/icons/LowContrast/48x48/actions/system-lock-screen.png
+share/icons/LowContrast/48x48/apps/bluetooth.png
+share/icons/LowContrast/48x48/apps/gnome-power-manager.png
+share/icons/LowContrast/48x48/apps/multimedia-volume-control.png
+share/icons/LowContrast/48x48/apps/preferences-desktop-accessibility.png
+share/icons/LowContrast/48x48/apps/preferences-desktop-display.png
+share/icons/LowContrast/48x48/apps/preferences-desktop-keyboard.png
+share/icons/LowContrast/48x48/apps/preferences-desktop-locale.png
+share/icons/LowContrast/48x48/apps/preferences-desktop-wallpaper.png
+share/icons/LowContrast/48x48/apps/preferences-system-network.png
+share/icons/LowContrast/48x48/apps/preferences-system-time.png
+share/icons/LowContrast/48x48/apps/system-users.png
+share/icons/LowContrast/48x48/categories/applications-system.png
+share/icons/LowContrast/48x48/devices/drive-optical.png
+share/icons/LowContrast/48x48/devices/input-mouse.png
+share/icons/LowContrast/48x48/devices/printer.png
 share/icons/LowContrast/48x48/stock/application-exit.png
 share/icons/LowContrast/48x48/stock/audio-input-microphone.png
 share/icons/LowContrast/48x48/stock/audio-volume-high.png
@@ -540,6 +556,7 @@ share/icons/LowContrast/48x48/stock/zoom-out.png
 share/icons/LowContrast/index.theme
 share/locale/af/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ar/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/as/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/bg/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ca/LC_MESSAGES/gnome-themes-standard.mo
@@ -552,6 +569,7 @@ share/locale/es/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/et/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/fa/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/fr/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/fy/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/gl/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/gu/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/he/LC_MESSAGES/gnome-themes-standard.mo
@@ -566,8 +584,12 @@ share/locale/nl/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/or/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/pa/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/pl/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/pt/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ro/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/ru/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/sl/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/sr/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/sv/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/th/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ug/LC_MESSAGES/gnome-themes-standard.mo
@@ -588,6 +610,8 @@ share/themes/Adwaita/gtk-3.0/assets/radio-selected-insensitive.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-selected.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-unselected-insensitive.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-unselected.svg
+share/themes/Adwaita/gtk-3.0/gtk-dark.css
+share/themes/Adwaita/gtk-3.0/gtk-widgets.css
 share/themes/Adwaita/gtk-3.0/gtk.css
 share/themes/Adwaita/gtk-3.0/settings.ini
 share/themes/Adwaita/index.theme
@@ -619,6 +643,10 @@ share/themes/LowContrast/index.theme
 @dirrm share/themes/Adwaita
 @dirrmtry share/themes
 @dirrm share/icons/LowContrast/48x48/stock
+@dirrm share/icons/LowContrast/48x48/devices
+@dirrm share/icons/LowContrast/48x48/categories
+@dirrm share/icons/LowContrast/48x48/apps
+@dirrm share/icons/LowContrast/48x48/actions
 @dirrm share/icons/LowContrast/48x48
 @dirrm share/icons/LowContrast
 @dirrm share/icons/HighContrastInverse/48x48/stock
@@ -647,5 +675,11 @@ share/themes/LowContrast/index.theme
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/fy/LC_MESSAGES
+@dirrmtry share/locale/fy
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
