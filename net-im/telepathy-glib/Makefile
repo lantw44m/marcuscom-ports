@@ -3,10 +3,10 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.25 2011/03/16 15:48:08 kwm Exp $
+#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.26 2011/03/22 07:07:42 kwm Exp $
 
 PORTNAME=	telepathy-glib
-PORTVERSION=	0.14.0
+PORTVERSION=	0.14.1
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
