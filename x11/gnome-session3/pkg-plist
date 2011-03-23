@@ -6,7 +6,6 @@ libexec/gnome-session-check-accelerated-helper
 share/applications/session-properties.desktop
 share/GConf/gsettings/gnome-session.convert
 %%DATADIR%%/gsm-inhibit-dialog.ui
-%%DATADIR%%/sad-computer.svgz
 %%DATADIR%%/session-properties.ui
 %%DATADIR%%/sessions/gnome-fallback.session
 %%DATADIR%%/sessions/gnome.session
