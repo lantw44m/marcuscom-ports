@@ -385,7 +385,6 @@ share/icons/gnome/16x16/apps/ksysguard.png
 share/icons/gnome/16x16/apps/kuser.png
 share/icons/gnome/16x16/apps/kwin.png
 share/icons/gnome/16x16/apps/locale.png
-share/icons/gnome/16x16/apps/logviewer.png
 share/icons/gnome/16x16/apps/multimedia-volume-control.png
 share/icons/gnome/16x16/apps/multimedia.png
 share/icons/gnome/16x16/apps/openterm.png
@@ -562,6 +561,7 @@ share/icons/gnome/16x16/devices/media-tape.png
 share/icons/gnome/16x16/devices/modem.png
 share/icons/gnome/16x16/devices/mouse.png
 share/icons/gnome/16x16/devices/multimedia-player.png
+share/icons/gnome/16x16/devices/network-vpn.png
 share/icons/gnome/16x16/devices/network-wired.png
 share/icons/gnome/16x16/devices/network-wireless.png
 share/icons/gnome/16x16/devices/pda.png
@@ -886,6 +886,7 @@ share/icons/gnome/16x16/status/battery-low.png
 share/icons/gnome/16x16/status/battery-missing.png
 share/icons/gnome/16x16/status/changes-allow.png
 share/icons/gnome/16x16/status/changes-prevent.png
+share/icons/gnome/16x16/status/computer-fail.png
 share/icons/gnome/16x16/status/connect_creating.png
 share/icons/gnome/16x16/status/connect_established.png
 share/icons/gnome/16x16/status/connect_no.png
@@ -943,6 +944,7 @@ share/icons/gnome/16x16/status/network-offline.png
 share/icons/gnome/16x16/status/network-receive.png
 share/icons/gnome/16x16/status/network-transmit-receive.png
 share/icons/gnome/16x16/status/network-transmit.png
+share/icons/gnome/16x16/status/network-wired-disconnected.png
 share/icons/gnome/16x16/status/network-wireless-encrypted.png
 share/icons/gnome/16x16/status/nm-adhoc.png
 share/icons/gnome/16x16/status/nm-device-wired.png
@@ -1397,7 +1399,6 @@ share/icons/gnome/22x22/apps/ksysguard.png
 share/icons/gnome/22x22/apps/kuser.png
 share/icons/gnome/22x22/apps/kwin.png
 share/icons/gnome/22x22/apps/locale.png
-share/icons/gnome/22x22/apps/logviewer.png
 share/icons/gnome/22x22/apps/multimedia-volume-control.png
 share/icons/gnome/22x22/apps/multimedia.png
 share/icons/gnome/22x22/apps/openterm.png
@@ -1574,6 +1575,7 @@ share/icons/gnome/22x22/devices/media-tape.png
 share/icons/gnome/22x22/devices/modem.png
 share/icons/gnome/22x22/devices/mouse.png
 share/icons/gnome/22x22/devices/multimedia-player.png
+share/icons/gnome/22x22/devices/network-vpn.png
 share/icons/gnome/22x22/devices/network-wired.png
 share/icons/gnome/22x22/devices/network-wireless.png
 share/icons/gnome/22x22/devices/pda.png
@@ -1898,6 +1900,7 @@ share/icons/gnome/22x22/status/battery-low.png
 share/icons/gnome/22x22/status/battery-missing.png
 share/icons/gnome/22x22/status/changes-allow.png
 share/icons/gnome/22x22/status/changes-prevent.png
+share/icons/gnome/22x22/status/computer-fail.png
 share/icons/gnome/22x22/status/connect_creating.png
 share/icons/gnome/22x22/status/connect_established.png
 share/icons/gnome/22x22/status/connect_no.png
@@ -1955,6 +1958,7 @@ share/icons/gnome/22x22/status/network-offline.png
 share/icons/gnome/22x22/status/network-receive.png
 share/icons/gnome/22x22/status/network-transmit-receive.png
 share/icons/gnome/22x22/status/network-transmit.png
+share/icons/gnome/22x22/status/network-wired-disconnected.png
 share/icons/gnome/22x22/status/network-wireless-encrypted.png
 share/icons/gnome/22x22/status/nm-adhoc.png
 share/icons/gnome/22x22/status/nm-device-wired.png
@@ -2407,7 +2411,6 @@ share/icons/gnome/24x24/apps/ksysguard.png
 share/icons/gnome/24x24/apps/kuser.png
 share/icons/gnome/24x24/apps/kwin.png
 share/icons/gnome/24x24/apps/locale.png
-share/icons/gnome/24x24/apps/logviewer.png
 share/icons/gnome/24x24/apps/multimedia-volume-control.png
 share/icons/gnome/24x24/apps/multimedia.png
 share/icons/gnome/24x24/apps/openterm.png
@@ -2584,6 +2587,7 @@ share/icons/gnome/24x24/devices/media-tape.png
 share/icons/gnome/24x24/devices/modem.png
 share/icons/gnome/24x24/devices/mouse.png
 share/icons/gnome/24x24/devices/multimedia-player.png
+share/icons/gnome/24x24/devices/network-vpn.png
 share/icons/gnome/24x24/devices/network-wired.png
 share/icons/gnome/24x24/devices/network-wireless.png
 share/icons/gnome/24x24/devices/pda.png
@@ -2907,6 +2911,7 @@ share/icons/gnome/24x24/status/battery-low.png
 share/icons/gnome/24x24/status/battery-missing.png
 share/icons/gnome/24x24/status/changes-allow.png
 share/icons/gnome/24x24/status/changes-prevent.png
+share/icons/gnome/24x24/status/computer-fail.png
 share/icons/gnome/24x24/status/connect_creating.png
 share/icons/gnome/24x24/status/connect_established.png
 share/icons/gnome/24x24/status/connect_no.png
@@ -2964,6 +2969,7 @@ share/icons/gnome/24x24/status/network-offline.png
 share/icons/gnome/24x24/status/network-receive.png
 share/icons/gnome/24x24/status/network-transmit-receive.png
 share/icons/gnome/24x24/status/network-transmit.png
+share/icons/gnome/24x24/status/network-wired-disconnected.png
 share/icons/gnome/24x24/status/network-wireless-encrypted.png
 share/icons/gnome/24x24/status/nm-adhoc.png
 share/icons/gnome/24x24/status/nm-device-wired.png
@@ -3215,14 +3221,17 @@ share/icons/gnome/256x256/apps/xfce-terminal.png
 share/icons/gnome/256x256/apps/xfce4-backdrop.png
 share/icons/gnome/256x256/apps/xscreensaver.png
 share/icons/gnome/256x256/apps/zen-icon.png
+share/icons/gnome/256x256/categories/applications-development.png
 share/icons/gnome/256x256/categories/applications-graphics.png
 share/icons/gnome/256x256/categories/applications-internet.png
 share/icons/gnome/256x256/categories/applications-office.png
 share/icons/gnome/256x256/categories/applications-system.png
 share/icons/gnome/256x256/categories/gnome-applications.png
+share/icons/gnome/256x256/categories/gnome-devel.png
 share/icons/gnome/256x256/categories/gnome-globe.png
 share/icons/gnome/256x256/categories/gnome-graphics.png
 share/icons/gnome/256x256/categories/gnome-system.png
+share/icons/gnome/256x256/categories/package_development.png
 share/icons/gnome/256x256/categories/package_graphics.png
 share/icons/gnome/256x256/categories/package_network.png
 share/icons/gnome/256x256/categories/package_office.png
@@ -3233,6 +3242,7 @@ share/icons/gnome/256x256/categories/preferences-system.png
 share/icons/gnome/256x256/categories/redhat-graphics.png
 share/icons/gnome/256x256/categories/redhat-internet.png
 share/icons/gnome/256x256/categories/redhat-office.png
+share/icons/gnome/256x256/categories/redhat-programming.png
 share/icons/gnome/256x256/categories/redhat-system_settings.png
 share/icons/gnome/256x256/categories/redhat-system_tools.png
 share/icons/gnome/256x256/categories/stock_internet.png
@@ -3302,6 +3312,7 @@ share/icons/gnome/256x256/devices/printer-remote.png
 share/icons/gnome/256x256/devices/printer.png
 share/icons/gnome/256x256/devices/printer1.png
 share/icons/gnome/256x256/devices/printmgr.png
+share/icons/gnome/256x256/devices/scanner.png
 share/icons/gnome/256x256/devices/stock_mic.png
 share/icons/gnome/256x256/devices/speaker.png
 share/icons/gnome/256x256/devices/stock_cell-phone.png
@@ -3581,11 +3592,13 @@ share/icons/gnome/256x256/status/battery-good.png
 share/icons/gnome/256x256/status/battery-low-charging.png
 share/icons/gnome/256x256/status/battery-low.png
 share/icons/gnome/256x256/status/battery-missing.png
+share/icons/gnome/256x256/status/computer-fail.png
 share/icons/gnome/256x256/status/connect_creating.png
 share/icons/gnome/256x256/status/connect_established.png
 share/icons/gnome/256x256/status/connect_no.png
 share/icons/gnome/256x256/status/dialog-error.png
 share/icons/gnome/256x256/status/dialog-information.png
+share/icons/gnome/256x256/status/dialog-password.png
 share/icons/gnome/256x256/status/dialog-question.png
 share/icons/gnome/256x256/status/dialog-warning.png
 share/icons/gnome/256x256/status/edittrash.png
@@ -3605,6 +3618,7 @@ share/icons/gnome/256x256/status/gnome-netstatus-rx.png
 share/icons/gnome/256x256/status/gnome-netstatus-tx.png
 share/icons/gnome/256x256/status/gnome-netstatus-txrx.png
 share/icons/gnome/256x256/status/gnome-stock-trash-full.png
+share/icons/gnome/256x256/status/gtk-dialog-authentication.png
 share/icons/gnome/256x256/status/gtk-dialog-error.png
 share/icons/gnome/256x256/status/gtk-dialog-info.png
 share/icons/gnome/256x256/status/gtk-dialog-question.png
@@ -3624,6 +3638,7 @@ share/icons/gnome/256x256/status/network-offline.png
 share/icons/gnome/256x256/status/network-receive.png
 share/icons/gnome/256x256/status/network-transmit-receive.png
 share/icons/gnome/256x256/status/network-transmit.png
+share/icons/gnome/256x256/status/network-wired-disconnected.png
 share/icons/gnome/256x256/status/nm-adhoc.png
 share/icons/gnome/256x256/status/nm-device-wired.png
 share/icons/gnome/256x256/status/nm-device-wireless.png
@@ -4040,7 +4055,6 @@ share/icons/gnome/32x32/apps/ksysguard.png
 share/icons/gnome/32x32/apps/kuser.png
 share/icons/gnome/32x32/apps/kwin.png
 share/icons/gnome/32x32/apps/locale.png
-share/icons/gnome/32x32/apps/logviewer.png
 share/icons/gnome/32x32/apps/multimedia-volume-control.png
 share/icons/gnome/32x32/apps/multimedia.png
 share/icons/gnome/32x32/apps/openterm.png
@@ -4217,6 +4231,7 @@ share/icons/gnome/32x32/devices/media-tape.png
 share/icons/gnome/32x32/devices/modem.png
 share/icons/gnome/32x32/devices/mouse.png
 share/icons/gnome/32x32/devices/multimedia-player.png
+share/icons/gnome/32x32/devices/network-vpn.png
 share/icons/gnome/32x32/devices/network-wired.png
 share/icons/gnome/32x32/devices/network-wireless.png
 share/icons/gnome/32x32/devices/pda.png
@@ -4541,6 +4556,7 @@ share/icons/gnome/32x32/status/battery-low.png
 share/icons/gnome/32x32/status/battery-missing.png
 share/icons/gnome/32x32/status/changes-allow.png
 share/icons/gnome/32x32/status/changes-prevent.png
+share/icons/gnome/32x32/status/computer-fail.png
 share/icons/gnome/32x32/status/connect_creating.png
 share/icons/gnome/32x32/status/connect_established.png
 share/icons/gnome/32x32/status/connect_no.png
@@ -4595,6 +4611,7 @@ share/icons/gnome/32x32/status/network-offline.png
 share/icons/gnome/32x32/status/network-receive.png
 share/icons/gnome/32x32/status/network-transmit-receive.png
 share/icons/gnome/32x32/status/network-transmit.png
+share/icons/gnome/32x32/status/network-wired-disconnected.png
 share/icons/gnome/32x32/status/nm-adhoc.png
 share/icons/gnome/32x32/status/nm-device-wired.png
 share/icons/gnome/32x32/status/nm-device-wireless.png
@@ -5045,7 +5062,6 @@ share/icons/gnome/48x48/apps/ksysguard.png
 share/icons/gnome/48x48/apps/kuser.png
 share/icons/gnome/48x48/apps/kwin.png
 share/icons/gnome/48x48/apps/locale.png
-share/icons/gnome/48x48/apps/logviewer.png
 share/icons/gnome/48x48/apps/multimedia-volume-control.png
 share/icons/gnome/48x48/apps/multimedia.png
 share/icons/gnome/48x48/apps/openterm.png
@@ -5222,6 +5238,7 @@ share/icons/gnome/48x48/devices/media-tape.png
 share/icons/gnome/48x48/devices/modem.png
 share/icons/gnome/48x48/devices/mouse.png
 share/icons/gnome/48x48/devices/multimedia-player.png
+share/icons/gnome/48x48/devices/network-vpn.png
 share/icons/gnome/48x48/devices/network-wired.png
 share/icons/gnome/48x48/devices/network-wireless.png
 share/icons/gnome/48x48/devices/pda.png
@@ -5547,6 +5564,7 @@ share/icons/gnome/48x48/status/battery-low.png
 share/icons/gnome/48x48/status/battery-missing.png
 share/icons/gnome/48x48/status/changes-allow.png
 share/icons/gnome/48x48/status/changes-prevent.png
+share/icons/gnome/48x48/status/computer-fail.png
 share/icons/gnome/48x48/status/connect_creating.png
 share/icons/gnome/48x48/status/connect_established.png
 share/icons/gnome/48x48/status/connect_no.png
@@ -5601,6 +5619,7 @@ share/icons/gnome/48x48/status/network-offline.png
 share/icons/gnome/48x48/status/network-receive.png
 share/icons/gnome/48x48/status/network-transmit-receive.png
 share/icons/gnome/48x48/status/network-transmit.png
+share/icons/gnome/48x48/status/network-wired-disconnected.png
 share/icons/gnome/48x48/status/nm-adhoc.png
 share/icons/gnome/48x48/status/nm-device-wired.png
 share/icons/gnome/48x48/status/nm-device-wireless.png
