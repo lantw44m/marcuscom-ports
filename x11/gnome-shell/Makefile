@@ -3,12 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.27 2011/03/09 12:45:02 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.28 2011/03/15 22:14:00 mezz Exp $
 #
 
 PORTNAME=	gnome-shell
-PORTVERSION=	2.91.91
-PORTREVISION=	1
+PORTVERSION=	2.91.92
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Next generation GNOME desktop shell
 
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
-		mutter-private.0:${PORTSDIR}/x11-wm/mutter \
+		mutter.0:${PORTSDIR}/x11-wm/mutter \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		pulse.0:${PORTSDIR}/audio/pulseaudio \
 		croco-0.6.3:${PORTSDIR}/textproc/libcroco \

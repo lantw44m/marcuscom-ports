@@ -8,6 +8,7 @@ lib/gnome-shell/libgnome-shell.a
 lib/gnome-shell/libgnome-shell.la
 lib/gnome-shell/libgnome-shell.so
 libexec/gnome-shell-calendar-server
+libexec/gnome-shell-perf-helper
 share/applications/gnome-shell.desktop
 share/dbus-1/services/org.gnome.Shell.CalendarServer.service
 %%DATADIR%%/js/misc/config.js
@@ -16,6 +17,7 @@ share/dbus-1/services/org.gnome.Shell.CalendarServer.service
 %%DATADIR%%/js/misc/format.js
 %%DATADIR%%/js/misc/gnomeSession.js
 %%DATADIR%%/js/misc/history.js
+%%DATADIR%%/js/misc/modemManager.js
 %%DATADIR%%/js/misc/params.js
 %%DATADIR%%/js/misc/util.js
 %%DATADIR%%/js/perf/core.js
@@ -57,6 +59,7 @@ share/dbus-1/services/org.gnome.Shell.CalendarServer.service
 %%DATADIR%%/js/ui/status/accessibility.js
 %%DATADIR%%/js/ui/status/bluetooth.js
 %%DATADIR%%/js/ui/status/keyboard.js
+%%DATADIR%%/js/ui/status/network.js
 %%DATADIR%%/js/ui/status/power.js
 %%DATADIR%%/js/ui/status/volume.js
 %%DATADIR%%/js/ui/statusIconDispatcher.js
@@ -79,7 +82,8 @@ share/dbus-1/services/org.gnome.Shell.CalendarServer.service
 %%DATADIR%%/theme/calendar-today.svg
 %%DATADIR%%/theme/close-window.svg
 %%DATADIR%%/theme/close.svg
-%%DATADIR%%/theme/corner-ripple.png
+%%DATADIR%%/theme/corner-ripple-ltr.png
+%%DATADIR%%/theme/corner-ripple-rtl.png
 %%DATADIR%%/theme/dash-placeholder.svg
 %%DATADIR%%/theme/filter-selected-ltr.svg
 %%DATADIR%%/theme/filter-selected-rtl.svg
@@ -104,12 +108,14 @@ share/dbus-1/services/org.gnome.Shell.CalendarServer.service
 %%DATADIR%%/theme/separator-white.png
 %%DATADIR%%/theme/single-view-active.svg
 %%DATADIR%%/theme/single-view.svg
+%%DATADIR%%/theme/source-button-border.svg
 %%DATADIR%%/theme/toggle-off-intl.svg
 %%DATADIR%%/theme/toggle-off-us.svg
 %%DATADIR%%/theme/toggle-on-intl.svg
 %%DATADIR%%/theme/toggle-on-us.svg
 %%DATADIR%%/theme/ws-switch-arrow-down.svg
 %%DATADIR%%/theme/ws-switch-arrow-up.svg
+share/locale/af/LC_MESSAGES/gnome-shell.mo
 share/locale/ar/LC_MESSAGES/gnome-shell.mo
 share/locale/bg/LC_MESSAGES/gnome-shell.mo
 share/locale/ca/LC_MESSAGES/gnome-shell.mo
@@ -134,6 +140,7 @@ share/locale/ja/LC_MESSAGES/gnome-shell.mo
 share/locale/kn/LC_MESSAGES/gnome-shell.mo
 share/locale/ko/LC_MESSAGES/gnome-shell.mo
 share/locale/lt/LC_MESSAGES/gnome-shell.mo
+share/locale/lv/LC_MESSAGES/gnome-shell.mo
 share/locale/nb/LC_MESSAGES/gnome-shell.mo
 share/locale/nl/LC_MESSAGES/gnome-shell.mo
 share/locale/nn/LC_MESSAGES/gnome-shell.mo
