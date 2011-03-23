@@ -50,6 +50,7 @@ share/locale/eu/LC_MESSAGES/libwnck-3.0.mo
 share/locale/fa/LC_MESSAGES/libwnck-3.0.mo
 share/locale/fi/LC_MESSAGES/libwnck-3.0.mo
 share/locale/fr/LC_MESSAGES/libwnck-3.0.mo
+share/locale/fy/LC_MESSAGES/libwnck-3.0.mo
 share/locale/ga/LC_MESSAGES/libwnck-3.0.mo
 share/locale/gl/LC_MESSAGES/libwnck-3.0.mo
 share/locale/gu/LC_MESSAGES/libwnck-3.0.mo
@@ -138,6 +139,8 @@ share/gir-1.0/Wnck-3.0.gir
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/kk/LC_MESSAGES
 @dirrmtry share/locale/kk
+@dirrmtry share/locale/fy/LC_MESSAGES
+@dirrmtry share/locale/fy
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
 @dirrmtry share/locale/en@shaw
 @dirrmtry share/locale/dz/LC_MESSAGES
