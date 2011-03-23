@@ -3,17 +3,18 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/atkmm/Makefile,v 1.4 2010/09/27 21:08:01 kwm Exp $
+#   $MCom: ports/accessibility/atkmm/Makefile,v 1.6 2011/01/12 18:54:02 kwm Exp $
 #
 
 PORTNAME=	atkmm
-PORTVERSION=	2.22.2
+PORTVERSION=	2.22.3
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	C++ wrapper for ATK API library
 
+BUILD_DEPENDS=	mm-common-prepare:${PORTSDIR}/devel/mm-common
 LIB_DEPENDS=	glibmm-2.4.1:${PORTSDIR}/devel/glibmm
 
 USE_BZIP2=	yes
