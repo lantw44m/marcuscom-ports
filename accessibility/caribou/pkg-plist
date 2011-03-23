@@ -1,4 +1,5 @@
 bin/caribou
+etc/xdg/autostart/caribou-autostart.desktop
 %%PYTHON_SITELIBDIR%%/caribou/__init__.py
 %%PYTHON_SITELIBDIR%%/caribou/__init__.pyc
 %%PYTHON_SITELIBDIR%%/caribou/__init__.pyo
