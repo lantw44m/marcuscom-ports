@@ -6,6 +6,7 @@ lib/gtk-3.0/modules/libatk-bridge.a
 lib/gtk-3.0/modules/libatk-bridge.la
 lib/gtk-3.0/modules/libatk-bridge.so
 share/locale/ar/LC_MESSAGES/at-spi2-atk.mo
+share/locale/as/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ast/LC_MESSAGES/at-spi2-atk.mo
 share/locale/bg/LC_MESSAGES/at-spi2-atk.mo
 share/locale/bn/LC_MESSAGES/at-spi2-atk.mo
@@ -22,6 +23,7 @@ share/locale/et/LC_MESSAGES/at-spi2-atk.mo
 share/locale/eu/LC_MESSAGES/at-spi2-atk.mo
 share/locale/fi/LC_MESSAGES/at-spi2-atk.mo
 share/locale/fr/LC_MESSAGES/at-spi2-atk.mo
+share/locale/fy/LC_MESSAGES/at-spi2-atk.mo
 share/locale/gl/LC_MESSAGES/at-spi2-atk.mo
 share/locale/gu/LC_MESSAGES/at-spi2-atk.mo
 share/locale/he/LC_MESSAGES/at-spi2-atk.mo
@@ -35,8 +37,8 @@ share/locale/lv/LC_MESSAGES/at-spi2-atk.mo
 share/locale/nb/LC_MESSAGES/at-spi2-atk.mo
 share/locale/nl/LC_MESSAGES/at-spi2-atk.mo
 share/locale/nn/LC_MESSAGES/at-spi2-atk.mo
+share/locale/or/LC_MESSAGES/at-spi2-atk.mo
 share/locale/pa/LC_MESSAGES/at-spi2-atk.mo
-share/locale/pl/LC_MESSAGES/at-spi2-atk.mo
 share/locale/pt/LC_MESSAGES/at-spi2-atk.mo
 share/locale/pt_BR/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ro/LC_MESSAGES/at-spi2-atk.mo
@@ -64,9 +66,15 @@ share/locale/zh_TW/LC_MESSAGES/at-spi2-atk.mo
 @dirrmtry share/locale/ug
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/or/LC_MESSAGES
+@dirrmtry share/locale/or
+@dirrmtry share/locale/fy/LC_MESSAGES
+@dirrmtry share/locale/fy
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
 @dirrmtry share/locale/en@shaw
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/ast/LC_MESSAGES
 @dirrmtry share/locale/ast
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
