@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany3/Makefile,v 1.8 2011/03/09 21:59:21 kwm Exp $
+#   $MCom: ports/www/epiphany3/Makefile,v 1.9 2011/03/13 20:30:31 kwm Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	2.91.91.1
+PORTVERSION=	2.91.92
 PORTREVISION?=	0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
@@ -36,16 +36,17 @@ USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_PYTHON=	yes
 GNOME_DESKTOP_VERSION=3
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils
-#gnomedesktop desktopfileutils
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils libxml2
+USE_XORG=	ice x11 sm
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-CONFIGURE_ARGS+=--enable-introspection=no \
+CONFIGURE_ARGS+=--enable-introspection \
 		--enable-network-manager=no \
 		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS} ${EXTRA_CFLAGS}" \
-		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS} ${EXTRA_LIBS}"
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		LIBS="${PTHREAD_LIBS}"
 
 GLIB_SCHEMAS=	org.gnome.Epiphany.enums.xml \
 		org.gnome.epiphany.gschema.xml
@@ -56,7 +57,7 @@ MAN1=		epiphany.1
 
 OPTIONS=	NSS "Import passwords from 2.26 and older on first run" off \
 		SPELLCHECK "Enable spell checking by default" on \
-#		SEED "Enable seed (JavaScript) support" off
+		SEED "Enable seed (JavaScript) support" off
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
@@ -78,10 +79,10 @@ CONFIGURE_ARGS+=--enable-nss
 CONFIGURE_ARGS+=--disable-nss
 .endif
 
-#.if defined(WITH_SEED)
-#LIB_DEPENDS+=	seed.0:${PORTSDIR}/devel/seed3
-#CONFIGURE_ARGS+=--enable-seed
-#.endif
+.if defined(WITH_SEED)
+LIB_DEPENDS+=	seed-gtk3.0:${PORTSDIR}/devel/seed3
+CONFIGURE_ARGS+=--enable-seed
+.endif
 
 .if defined(WITH_SPELLCHECK)
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-embed_ephy-embed-prefs.c
