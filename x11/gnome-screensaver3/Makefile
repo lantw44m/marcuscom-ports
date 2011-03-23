@@ -3,12 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.8 2011/03/17 03:14:28 mezz Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.9 2011/03/20 03:11:12 avl Exp $
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	2.91.91
-PORTREVISION=	3
+PORTVERSION=	2.91.92
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -36,7 +35,6 @@ CONFIGURE_ARGS=	--with-pam-prefix=${PREFIX}/etc/pam.d
 
 MAN1=		gnome-screensaver-command.1 gnome-screensaver.1
 
-#PLIST=	${WRKDIR}/pkg-plist
 SUB_FILES+=	gnome-screensaver.pam
 
 #XSCREENSAVER_DIR=	${LOCALBASE}/share/xscreensaver/config
