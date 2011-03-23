@@ -28,6 +28,7 @@ sbin/gdm-binary
 %%DATADIR%%/autostart/LoginWindow/gnome-mag.desktop
 %%DATADIR%%/autostart/LoginWindow/gnome-power-manager.desktop
 %%DATADIR%%/autostart/LoginWindow/gnome-settings-daemon.desktop
+%%DATADIR%%/autostart/LoginWindow/gnome-session-check-accelerated.desktop
 %%DATADIR%%/autostart/LoginWindow/gok.desktop
 %%DATADIR%%/autostart/LoginWindow/metacity.desktop
 %%DATADIR%%/autostart/LoginWindow/orca-screen-reader.desktop
@@ -38,6 +39,7 @@ sbin/gdm-binary
 %%DATADIR%%/gdm.schemas
 %%DATADIR%%/locale.alias
 %%DATADIR%%/session-setup.entries
+share/gnome-session/sessions/gdm.session
 share/gnome/help/gdm/C/gdm.xml
 share/gnome/help/gdm/C/legal.xml
 share/gnome/help/gdm/de/gdm.xml
@@ -172,30 +174,6 @@ share/omf/gdm/gdm-sl.omf
 share/omf/gdm/gdm-sv.omf
 share/omf/gdm/gdm-uk.omf
 share/omf/gdm/gdm-zh_CN.omf
-share/pixmaps/faces/astronaut.jpg
-share/pixmaps/faces/baseball.png
-share/pixmaps/faces/butterfly.png
-share/pixmaps/faces/cat-eye.jpg
-share/pixmaps/faces/chess.jpg
-share/pixmaps/faces/coffee.jpg
-share/pixmaps/faces/dice.jpg
-share/pixmaps/faces/energy-arc.jpg
-share/pixmaps/faces/fish.jpg
-share/pixmaps/faces/flake.jpg
-share/pixmaps/faces/flower.jpg
-share/pixmaps/faces/grapes.jpg
-share/pixmaps/faces/guitar.jpg
-share/pixmaps/faces/launch.jpg
-share/pixmaps/faces/leaf.jpg
-share/pixmaps/faces/lightning.jpg
-share/pixmaps/faces/penguin.jpg
-share/pixmaps/faces/puppy.jpg
-share/pixmaps/faces/sky.jpg
-share/pixmaps/faces/soccerball.png
-share/pixmaps/faces/sunflower.jpg
-share/pixmaps/faces/sunset.jpg
-share/pixmaps/faces/tennis-ball.png
-share/pixmaps/faces/yellow-rose.jpg
 share/pixmaps/gdm-foot-logo.png
 share/pixmaps/gdm-setup.png
 share/pixmaps/gdm-xnest.png
@@ -204,7 +182,6 @@ share/pixmaps/nobody.png
 share/pixmaps/nohost.png
 @exec mkdir -p %D/share/xsessions
 @dirrmtry share/xsessions
-@dirrm share/pixmaps/faces
 @dirrm share/omf/gdm
 @dirrm share/gnome/help/gdm/zh_CN
 @dirrm share/gnome/help/gdm/uk

@@ -3,11 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-stable/x11/gdm/Makefile,v 1.10 2010/07/21 13:50:45 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.1 2011/03/11 13:18:55 kwm Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	2.91.93
+PORTVERSION=	2.91.94
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -44,7 +44,6 @@ USE_GNOME_SUBR=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomehier gconf2 librsvg2 dconf \
 		gnomeprefix gnomepanel3
-#		gnomedocutils gnomeprefix gnomepanel
 GCONF_SCHEMAS=	gdm-simple-greeter.schemas
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home \
