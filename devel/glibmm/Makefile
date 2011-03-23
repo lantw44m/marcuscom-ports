@@ -3,11 +3,11 @@
 # Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glibmm/Makefile,v 1.107 2011/03/16 08:49:39 kwm Exp $
+#   $MCom: ports/devel/glibmm/Makefile,v 1.108 2011/03/16 16:25:10 kwm Exp $
 #
 
 PORTNAME=	glibmm
-PORTVERSION=	2.27.97
+PORTVERSION=	2.27.98
 PORTREVISION?=	0
 PORTEPOCH=	1
 CATEGORIES=	devel
