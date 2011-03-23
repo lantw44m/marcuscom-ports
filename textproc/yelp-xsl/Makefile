@@ -3,17 +3,17 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp-xsl/Makefile,v 1.9 2011/02/22 16:47:41 kwm Exp $
+#   $MCom: ports/x11/yelp-xsl/Makefile,v 1.10 2011/03/09 22:10:01 kwm Exp $
 #
 
 PORTNAME=	yelp-xsl
-PORTVERSION=	2.91.91
+PORTVERSION=	2.91.92
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=
+COMMENT=	DocBook XSLT stylesheets for yelp
 
 LIB_DEPENDS=	xslt.2:${PORTSDIR}/textproc/libxslt
 
@@ -24,7 +24,6 @@ USE_GNOME=	gnomeprefix gnomehack intlhack pkgconfig libxml2
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
-#MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
 .include <bsd.port.pre.mk>
 
