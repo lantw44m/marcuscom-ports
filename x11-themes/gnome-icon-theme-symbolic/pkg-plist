@@ -71,6 +71,7 @@ share/icons/gnome/scalable/devices/computer-symbolic.svg
 share/icons/gnome/scalable/devices/drive-harddisk-symbolic.svg
 share/icons/gnome/scalable/devices/input-keyboard-symbolic.svg
 share/icons/gnome/scalable/devices/media-optical-symbolic.svg
+share/icons/gnome/scalable/devices/phone-symbolic.svg
 share/icons/gnome/scalable/devices/printer-symbolic.svg
 share/icons/gnome/scalable/devices/video-display-symbolic.svg
 share/icons/gnome/scalable/emblems/emblem-default-symbolic.svg
@@ -133,6 +134,7 @@ share/icons/gnome/scalable/status/microphone-sensitivity-muted-symbolic.svg
 share/icons/gnome/scalable/status/network-cellular-3g-symbolic.svg
 share/icons/gnome/scalable/status/network-cellular-4g-symbolic.svg
 share/icons/gnome/scalable/status/network-cellular-acquiring-symbolic.svg
+share/icons/gnome/scalable/status/network-cellular-connected-symbolic.svg
 share/icons/gnome/scalable/status/network-cellular-edge-symbolic.svg
 share/icons/gnome/scalable/status/network-cellular-gprs-symbolic.svg
 share/icons/gnome/scalable/status/network-cellular-signal-excellent-symbolic.svg
@@ -148,11 +150,13 @@ share/icons/gnome/scalable/status/network-offline-symbolic.svg
 share/icons/gnome/scalable/status/network-receive-symbolic.svg
 share/icons/gnome/scalable/status/network-transmit-receive-symbolic.svg
 share/icons/gnome/scalable/status/network-transmit-symbolic.svg
+share/icons/gnome/scalable/status/network-vpn-acquiring-symbolic.svg
 share/icons/gnome/scalable/status/network-vpn-symbolic.svg
 share/icons/gnome/scalable/status/network-wired-acquiring-symbolic.svg
 share/icons/gnome/scalable/status/network-wired-disconnected-symbolic.svg
 share/icons/gnome/scalable/status/network-wired-symbolic.svg
 share/icons/gnome/scalable/status/network-wireless-acquiring-symbolic.svg
+share/icons/gnome/scalable/status/network-wireless-connected-symbolic.svg
 share/icons/gnome/scalable/status/network-wireless-signal-excellent-symbolic.svg
 share/icons/gnome/scalable/status/network-wireless-signal-good-symbolic.svg
 share/icons/gnome/scalable/status/network-wireless-signal-none-symbolic.svg
