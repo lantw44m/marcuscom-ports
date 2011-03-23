@@ -14,12 +14,12 @@ lib/libgdl-3.so
 lib/libgdl-3.so.1
 libdata/pkgconfig/gdl-3.0.pc
 share/doc/gdl3-3.0/GdlDock.html
+share/doc/gdl3-3.0/GdlDockBar.html
 share/doc/gdl3-3.0/GdlDockItem.html
 share/doc/gdl3-3.0/GdlDockLayout.html
 share/doc/gdl3-3.0/GdlDockMaster.html
 share/doc/gdl3-3.0/GdlDockObject.html
 share/doc/gdl3-3.0/GdlDockPlaceholder.html
-share/doc/gdl3-3.0/gdl-GdlDockBar.html
 share/doc/gdl3-3.0/gdl-main.html
 share/doc/gdl3-3.0/gdl.devhelp
 share/doc/gdl3-3.0/gdl.devhelp2
