@@ -3,13 +3,13 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp3/Makefile,v 1.3 2011/03/06 23:00:07 kwm Exp $
+#   $MCom: ports/devel/devhelp3/Makefile,v 1.4 2011/03/09 12:12:42 kwm Exp $
 
 PORTNAME=	devhelp
-PORTVERSION=	2.91.91.2
+PORTVERSION=	2.91.92
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Developer help browser for GNOME 3
