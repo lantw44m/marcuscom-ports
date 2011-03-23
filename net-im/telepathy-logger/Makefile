@@ -3,10 +3,10 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-logger/Makefile,v 1.6 2011/03/02 10:45:02 kwm Exp $
+#    $MCom: ports/net-im/telepathy-logger/Makefile,v 1.7 2011/03/04 12:38:35 kwm Exp $
 
 PORTNAME=	telepathy-logger
-PORTVERSION=	0.2.5
+PORTVERSION=	0.2.6
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -32,8 +32,8 @@ USE_PYTHON_BUILD=	yes
 #MAKE_JOBS_UNSAFE=	yes
 GLIB_SCHEMAS=	org.freedesktop.Telepathy.Logger.gschema.xml
 
-#post-patch:
-#	@${REINPLACE_CMD} -e 's|\(^pkgconfigdir =\).*|\1 ${PREFIX}/libdata/pkgconfig|' \
-#		${WRKSRC}/telepathy-glib/Makefile.in
+post-patch:
+	@${REINPLACE_CMD} -e 's|/usr/bin/python|/usr/bin/env python|g' \
+		${WRKSRC}/tools/*.py
 
 .include <bsd.port.mk>
