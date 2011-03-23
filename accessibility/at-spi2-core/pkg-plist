@@ -1,4 +1,3 @@
-bin/at-spi-dbus-bus
 etc/at-spi2/accessibility.conf
 etc/xdg/autostart/at-spi-dbus-bus.desktop
 include/at-spi-2.0/atspi/atspi.h
@@ -14,6 +13,8 @@ include/at-spi-2.0/atspi/atspi-document.h
 include/at-spi-2.0/atspi/atspi-editabletext.h
 include/at-spi-2.0/atspi/atspi-event-listener.h
 include/at-spi-2.0/atspi/atspi-event-listener-private.h
+include/at-spi-2.0/atspi/atspi-gmain.c
+include/at-spi-2.0/atspi/atspi-gmain.h
 include/at-spi-2.0/atspi/atspi-hyperlink.h
 include/at-spi-2.0/atspi/atspi-hypertext.h
 include/at-spi-2.0/atspi/atspi-image.h
@@ -34,7 +35,10 @@ lib/libatspi.a
 lib/libatspi.la
 lib/libatspi.so
 lib/libatspi.so.0
+libdata/pkgconfig/atspi-2.pc
+libexec/at-spi-bus-launcher
 libexec/at-spi2-registryd
+share/dbus-1/services/org.a11y.Bus.service
 share/dbus-1/services/org.a11y.atspi.Registry.service
 share/gir-1.0/Atspi-2.0.gir
 share/gtk-doc/html/libatspi/AtspiAccessible.html
@@ -75,28 +79,37 @@ share/gtk-doc/html/libatspi/object-tree.html
 share/gtk-doc/html/libatspi/right.png
 share/gtk-doc/html/libatspi/style.css
 share/gtk-doc/html/libatspi/up.png
+share/locale/as/LC_MESSAGES/at-spi2-core.mo
 share/locale/bg/LC_MESSAGES/at-spi2-core.mo
 share/locale/bn_IN/LC_MESSAGES/at-spi2-core.mo
 share/locale/ca/LC_MESSAGES/at-spi2-core.mo
 share/locale/cs/LC_MESSAGES/at-spi2-core.mo
 share/locale/de/LC_MESSAGES/at-spi2-core.mo
 share/locale/el/LC_MESSAGES/at-spi2-core.mo
+share/locale/en_GB/LC_MESSAGES/at-spi2-core.mo
 share/locale/es/LC_MESSAGES/at-spi2-core.mo
 share/locale/fr/LC_MESSAGES/at-spi2-core.mo
 share/locale/gl/LC_MESSAGES/at-spi2-core.mo
 share/locale/gu/LC_MESSAGES/at-spi2-core.mo
 share/locale/he/LC_MESSAGES/at-spi2-core.mo
-share/locale/nb/LC_MESSAGES/at-spi2-core.mo
+share/locale/hu/LC_MESSAGES/at-spi2-core.mo
 share/locale/id/LC_MESSAGES/at-spi2-core.mo
 share/locale/it/LC_MESSAGES/at-spi2-core.mo
 share/locale/kn/LC_MESSAGES/at-spi2-core.mo
 share/locale/ko/LC_MESSAGES/at-spi2-core.mo
 share/locale/lv/LC_MESSAGES/at-spi2-core.mo
+share/locale/nb/LC_MESSAGES/at-spi2-core.mo
+share/locale/nl/LC_MESSAGES/at-spi2-core.mo
+share/locale/or/LC_MESSAGES/at-spi2-core.mo
 share/locale/pa/LC_MESSAGES/at-spi2-core.mo
+share/locale/pl/LC_MESSAGES/at-spi2-core.mo
 share/locale/pt/LC_MESSAGES/at-spi2-core.mo
+share/locale/ro/LC_MESSAGES/at-spi2-core.mo
 share/locale/ru/LC_MESSAGES/at-spi2-core.mo
 share/locale/sl/LC_MESSAGES/at-spi2-core.mo
 share/locale/sq/LC_MESSAGES/at-spi2-core.mo
+share/locale/sr/LC_MESSAGES/at-spi2-core.mo
+share/locale/sr@latin/LC_MESSAGES/at-spi2-core.mo
 share/locale/sv/LC_MESSAGES/at-spi2-core.mo
 share/locale/ug/LC_MESSAGES/at-spi2-core.mo
 share/locale/uk/LC_MESSAGES/at-spi2-core.mo
@@ -111,5 +124,9 @@ share/locale/zh_TW/LC_MESSAGES/at-spi2-core.mo
 @dirrm etc/at-spi2
 @dirrm share/locale/ug/LC_MESSAGES
 @dirrm share/locale/ug
+@dirrm share/locale/sr@latin/LC_MESSAGES
+@dirrm share/locale/sr@latin
 @dirrm share/locale/bn_IN/LC_MESSAGES
 @dirrm share/locale/bn_IN
+@dirrm share/locale/as/LC_MESSAGES
+@dirrm share/locale/as
