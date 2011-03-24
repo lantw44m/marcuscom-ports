@@ -1,0 +1,60 @@
+# Ports collection Makefile for:	epiphany-extensions
+# Date created:				30 December 2003
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD$
+#   $MCom$
+#
+
+PORTNAME=	epiphany-extensions
+PORTVERSION=	2.91.92
+CATEGORIES=	www gnome
+MASTER_SITES=	GNOME
+DIST_SUBDIR=	gnome3
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	A set of add-ons for the Epiphany web browser
+
+BUILD_DEPENDS=	epiphany>=2.91.0:${PORTSDIR}/www/epiphany3
+LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
+		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3
+RUN_DEPENDS=	epiphany>=2.91.0:${PORTSDIR}/www/epiphany3
+
+USE_GETTEXT=	yes
+USE_BZIP2=	yes
+USE_GNOME=	gnomeprefix gnomehack intlhack
+INSTALLS_OMF=	yes
+GNU_CONFIGURE=	yes
+USE_GMAKE=	yes
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
+		LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
+CONFIGURE_ARGS=	--disable-maintainer-mode
+GLIB_SCHEMAS=	org.gnome.epiphanyextensions.gschema.xml
+
+EPHY_EXTENSIONS=really-all
+EPHY_VERSION=	${PORTVERSION:R}
+
+PLIST_SUB=	VERSION=${EPHY_VERSION} EPHY_VERSION=2.31
+
+OPTIONS=	OPENSP "Enable OpenSP SGML support" off
+
+.include <bsd.port.pre.mk>
+
+.if defined(WITH_OPENSP)
+CONFIGURE_ARGS+=	--enable-opensp=yes
+LIB_DEPENDS+=		osp.5:${PORTSDIR}/textproc/opensp
+.else
+CONFIGURE_ARGS+=	--disable-opensp
+.endif
+
+CONFIGURE_ARGS+=--with-extensions="${EPHY_EXTENSIONS}"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|$$($$PKG_CONFIG --variable=extensionsdir epiphany-$$_epiphany_api_version)|${PREFIX}/lib/epiphany/${PORTVERSION:R}/extensions|g' \
+		-e 's|$$($$PKG_CONFIG --variable=icondir epiphany-$$EPIPHANY_API_VERSION)|${PREFIX}/share/epiphany/icons|g' \
+		${WRKSRC}/configure
+# temp disable until autoscroller and permissions gets updated to new API.
+	@${REINPLACE_CMD} -e 's|auto-scroller||g' -e 's|permissions||g' \
+		${WRKSRC}/configure
+
+.include <bsd.port.post.mk>

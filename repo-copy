@@ -26,6 +26,7 @@ sysutils/brasero -> sysutils/brasero3
 sysutils/gconf-editor -> sysutils/gconf-editor3
 sysutils/gnome-system-monitor -> sysutils/gnome-system-monitor3
 www/epiphany -> www/epiphany3
+www/epiphany-extensions -> www/epiphany-extensions3
 www/gtkhtml3 -> www/gtkhtml4
 www/webkit-gtk2 -> www/webkit-gtk3
 x11-fm/nautilus -> x11-fm/nautilus3
