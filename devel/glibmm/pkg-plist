@@ -1,8 +1,5 @@
 include/giomm-%%API_VERSION%%/giomm.h
-include/giomm-%%API_VERSION%%/giomm/actiongroup.h
 include/giomm-%%API_VERSION%%/giomm/appinfo.h
-include/giomm-%%API_VERSION%%/giomm/application.h
-include/giomm-%%API_VERSION%%/giomm/applicationcommandline.h
 include/giomm-%%API_VERSION%%/giomm/asyncinitable.h
 include/giomm-%%API_VERSION%%/giomm/asyncresult.h
 include/giomm-%%API_VERSION%%/giomm/bufferedinputstream.h
@@ -61,10 +58,7 @@ include/giomm-%%API_VERSION%%/giomm/mountoperation.h
 include/giomm-%%API_VERSION%%/giomm/networkaddress.h
 include/giomm-%%API_VERSION%%/giomm/networkservice.h
 include/giomm-%%API_VERSION%%/giomm/outputstream.h
-include/giomm-%%API_VERSION%%/giomm/private/actiongroup_p.h
 include/giomm-%%API_VERSION%%/giomm/private/appinfo_p.h
-include/giomm-%%API_VERSION%%/giomm/private/application_p.h
-include/giomm-%%API_VERSION%%/giomm/private/applicationcommandline_p.h
 include/giomm-%%API_VERSION%%/giomm/private/asyncinitable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/asyncresult_p.h
 include/giomm-%%API_VERSION%%/giomm/private/bufferedinputstream_p.h
@@ -127,7 +121,6 @@ include/giomm-%%API_VERSION%%/giomm/private/proxyresolver_p.h
 include/giomm-%%API_VERSION%%/giomm/private/resolver_p.h
 include/giomm-%%API_VERSION%%/giomm/private/seekable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/settings_p.h
-include/giomm-%%API_VERSION%%/giomm/private/settingsbackend_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socket_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socketaddress_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socketaddressenumerator_p.h
@@ -156,7 +149,6 @@ include/giomm-%%API_VERSION%%/giomm/proxyresolver.h
 include/giomm-%%API_VERSION%%/giomm/resolver.h
 include/giomm-%%API_VERSION%%/giomm/seekable.h
 include/giomm-%%API_VERSION%%/giomm/settings.h
-include/giomm-%%API_VERSION%%/giomm/settingsbackend.h
 include/giomm-%%API_VERSION%%/giomm/socket.h
 include/giomm-%%API_VERSION%%/giomm/socketaddress.h
 include/giomm-%%API_VERSION%%/giomm/socketaddressenumerator.h
