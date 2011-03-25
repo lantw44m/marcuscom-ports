@@ -3,11 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pangomm/Makefile,v 1.18 2011/01/12 18:16:30 kwm Exp $
+#   $MCom: ports/x11-toolkits/pangomm/Makefile,v 1.19 2011/03/23 17:47:45 kwm Exp $
 #
 
 PORTNAME=	pangomm
-PORTVERSION=	2.28.0
+PORTVERSION=	2.28.1
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -22,8 +22,7 @@ USE_BZIP2=	yes
 
 LIB_DEPENDS=	glibmm-2.4.1:${PORTSDIR}/devel/glibmm \
 		cairomm-1.0.1:${PORTSDIR}/graphics/cairomm
-BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4 \
-		mm-common-prepare:${PORTSDIR}/devel/mm-common
+BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
