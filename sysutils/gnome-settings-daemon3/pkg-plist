@@ -3,6 +3,7 @@ etc/xdg/autostart/gnome-settings-daemon.desktop
 include/gnome-settings-daemon-3.0/gnome-settings-daemon/gnome-settings-plugin.h
 include/gnome-settings-daemon-3.0/gnome-settings-daemon/gsd-enums.h
 lib/gnome-settings-daemon-3.0/a11y-keyboard.gnome-settings-plugin
+lib/gnome-settings-daemon-3.0/a11y-settings.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/automount.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/background.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/clipboard.gnome-settings-plugin
@@ -12,6 +13,9 @@ lib/gnome-settings-daemon-3.0/keyboard.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/liba11y-keyboard.a
 lib/gnome-settings-daemon-3.0/liba11y-keyboard.la
 lib/gnome-settings-daemon-3.0/liba11y-keyboard.so
+lib/gnome-settings-daemon-3.0/liba11y-settings.a
+lib/gnome-settings-daemon-3.0/liba11y-settings.la
+lib/gnome-settings-daemon-3.0/liba11y-settings.so
 lib/gnome-settings-daemon-3.0/libautomount.a
 lib/gnome-settings-daemon-3.0/libautomount.la
 lib/gnome-settings-daemon-3.0/libautomount.so
