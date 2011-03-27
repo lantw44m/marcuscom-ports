@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	accountsservice
-PORTVERSION=	0.6.5
+PORTVERSION=	0.6.7
 CATEGORIES=	sysutils devel
-MASTER_SITES=	LOCAL/kwm
+MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	D-Bus interface for user account query and manipulation
@@ -25,5 +25,9 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/etc/gdm/custon.conf|${LOCALBASE}/etc/gdm/custom.conf|g' \
+		${WRKSRC}/src/daemon.c
 
 .include <bsd.port.mk>
