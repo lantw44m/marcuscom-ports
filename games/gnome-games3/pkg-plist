@@ -155,8 +155,7 @@ share/glchess/pieces/simple/whiteRook.svg
 share/glchess/preferences.ui
 share/glchess/textures/board.png
 share/glchess/textures/piece.png
-
-share/gnome-games-common/cards/gnomangelo_bitmap.svg
+share/gnome-games-common/cards/bonded.svg
 share/gnome-games-common/theme-install.ini
 %%DATADIR%%/aisleriot/games/accordion.scm
 %%DATADIR%%/aisleriot/games/agnes.scm
@@ -1768,7 +1767,7 @@ share/icons/hicolor/16x16/apps/gnome-gnibbles.png
 share/icons/hicolor/16x16/apps/gnome-iagno.png
 share/icons/hicolor/16x16/apps/gnome-klotski.png
 share/icons/hicolor/16x16/apps/gnome-mahjongg.png
-share/icons/hicolor/16x16/apps/gnome-mines.png
+share/icons/hicolor/16x16/apps/gnomine.png
 share/icons/hicolor/16x16/apps/gnome-quadrapassel.png
 share/icons/hicolor/16x16/apps/gnome-robots.png
 share/icons/hicolor/16x16/apps/gnome-tali.png
@@ -1782,7 +1781,7 @@ share/icons/hicolor/22x22/apps/gnome-gnibbles.png
 share/icons/hicolor/22x22/apps/gnome-iagno.png
 share/icons/hicolor/22x22/apps/gnome-klotski.png
 share/icons/hicolor/22x22/apps/gnome-mahjongg.png
-share/icons/hicolor/22x22/apps/gnome-mines.png
+share/icons/hicolor/22x22/apps/gnomine.png
 share/icons/hicolor/22x22/apps/gnome-quadrapassel.png
 share/icons/hicolor/22x22/apps/gnome-robots.png
 share/icons/hicolor/22x22/apps/gnome-tali.png
@@ -1796,11 +1795,14 @@ share/icons/hicolor/24x24/apps/gnome-gnibbles.png
 share/icons/hicolor/24x24/apps/gnome-iagno.png
 share/icons/hicolor/24x24/apps/gnome-klotski.png
 share/icons/hicolor/24x24/apps/gnome-mahjongg.png
-share/icons/hicolor/24x24/apps/gnome-mines.png
+share/icons/hicolor/24x24/apps/gnomine.png
 share/icons/hicolor/24x24/apps/gnome-quadrapassel.png
 share/icons/hicolor/24x24/apps/gnome-robots.png
 share/icons/hicolor/24x24/apps/gnome-tali.png
 share/icons/hicolor/24x24/apps/gnome-tetravex.png
+share/icons/hicolor/256x256/apps/gnome-aisleriot.png
+share/icons/hicolor/256x256/apps/gnome-freecell.png
+share/icons/hicolor/256x256/apps/gnomine.png
 share/icons/hicolor/32x32/apps/gnome-aisleriot.png
 share/icons/hicolor/32x32/apps/gnome-freecell.png
 share/icons/hicolor/32x32/apps/gnome-glchess.png
@@ -1810,7 +1812,7 @@ share/icons/hicolor/32x32/apps/gnome-gnibbles.png
 share/icons/hicolor/32x32/apps/gnome-iagno.png
 share/icons/hicolor/32x32/apps/gnome-klotski.png
 share/icons/hicolor/32x32/apps/gnome-mahjongg.png
-share/icons/hicolor/32x32/apps/gnome-mines.png
+share/icons/hicolor/32x32/apps/gnomine.png
 share/icons/hicolor/32x32/apps/gnome-quadrapassel.png
 share/icons/hicolor/32x32/apps/gnome-robots.png
 share/icons/hicolor/32x32/apps/gnome-tali.png
@@ -1824,7 +1826,7 @@ share/icons/hicolor/48x48/apps/gnome-gnibbles.png
 share/icons/hicolor/48x48/apps/gnome-iagno.png
 share/icons/hicolor/48x48/apps/gnome-klotski.png
 share/icons/hicolor/48x48/apps/gnome-mahjongg.png
-share/icons/hicolor/48x48/apps/gnome-mines.png
+share/icons/hicolor/48x48/apps/gnomine.png
 share/icons/hicolor/48x48/apps/gnome-quadrapassel.png
 share/icons/hicolor/48x48/apps/gnome-robots.png
 share/icons/hicolor/48x48/apps/gnome-tali.png
@@ -1838,7 +1840,6 @@ share/icons/hicolor/scalable/apps/gnome-gnibbles.svg
 share/icons/hicolor/scalable/apps/gnome-iagno.svg
 share/icons/hicolor/scalable/apps/gnome-klotski.svg
 share/icons/hicolor/scalable/apps/gnome-mahjongg.svg
-share/icons/hicolor/scalable/apps/gnome-mines.svg
 share/icons/hicolor/scalable/apps/gnome-quadrapassel.svg
 share/icons/hicolor/scalable/apps/gnome-robots.svg
 share/icons/hicolor/scalable/apps/gnome-tali.svg
