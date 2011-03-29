@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.2 2011/03/07 15:00:55 kwm Exp $
+#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.3 2011/03/24 11:27:04 kwm Exp $
 #
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	2.91.2
+PORTVERSION=	2.91.3
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,9 +15,9 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plugins for GEdit 3
 
-BUILD_DEPENDS=	gedit>=2.91.6:${PORTSDIR}/editors/gedit3
+BUILD_DEPENDS=	gedit>=2.91.11:${PORTSDIR}/editors/gedit3
 LIB_DEPENDS=	peas-1.0.0:${PORTSDIR}/devel/libpeas
-RUN_DEPENDS=	gedit>=2.91.6:${PORTSDIR}/editors/gedit3
+RUN_DEPENDS=	gedit>=2.91.11:${PORTSDIR}/editors/gedit3
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
