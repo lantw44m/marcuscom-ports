@@ -573,9 +573,11 @@ share/locale/fy/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/gl/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/gu/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/he/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/hi/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/hu/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/id/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/it/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/ja/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/kn/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ko/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/lv/LC_MESSAGES/gnome-themes-standard.mo
@@ -585,6 +587,7 @@ share/locale/or/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/pa/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/pl/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/pt/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ro/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ru/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/sl/LC_MESSAGES/gnome-themes-standard.mo
@@ -610,7 +613,6 @@ share/themes/Adwaita/gtk-3.0/assets/radio-selected-insensitive.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-selected.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-unselected-insensitive.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-unselected.svg
-share/themes/Adwaita/gtk-3.0/gtk-dark.css
 share/themes/Adwaita/gtk-3.0/gtk-widgets.css
 share/themes/Adwaita/gtk-3.0/gtk.css
 share/themes/Adwaita/gtk-3.0/settings.ini
