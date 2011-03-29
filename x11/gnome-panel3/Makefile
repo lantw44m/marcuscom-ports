@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.10 2011/03/07 14:10:52 kwm Exp $
+#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.11 2011/03/23 15:05:42 kwm Exp $
 #
 
 PORTNAME=	gnome-panel
-PORTVERSION=	2.91.92
+PORTVERSION=	2.91.93
 PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
@@ -42,12 +42,16 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		gnome-panel.1
-GCONF_SCHEMAS=	clock.schemas \
-		fish.schemas \
-		panel-compatibility.schemas panel-general.schemas \
-		panel-global.schemas panel-object.schemas \
-		panel-toplevel.schemas window-list.schemas \
-		workspace-switcher.schemas
+GCONF_SCHEMAS=	clock.schemas
+GLIB_SCHEMAS=	org.gnome.gnome-panel.applet.fish.gschema.xml \
+		org.gnome.gnome-panel.applet.window-list.gschema.xml \
+		org.gnome.gnome-panel.applet.workspace-switcher.gschema.xml \
+		org.gnome.gnome-panel.enums.xml \
+		org.gnome.gnome-panel.gschema.xml \
+		org.gnome.gnome-panel.launcher.gschema.xml \
+		org.gnome.gnome-panel.menu-button.gschema.xml \
+		org.gnome.gnome-panel.object.gschema.xml \
+		org.gnome.gnome-panel.toplevel.gschema.xml
 
 #OPTIONS=	EVOLUTION "use the Evolution calendar if installed" on \
 #		BONOBO "Support for bonobo applets aka Gnome 2 applets" on

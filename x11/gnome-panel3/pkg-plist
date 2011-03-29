@@ -2,11 +2,6 @@ bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
 %%BONOBO%%bin/panel-test-applets-bonobo
-@unexec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --unload %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel > /dev/null || /usr/bin/true
-@unexec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --unload %D/etc/gconf/schemas/panel-default-setup.entries > /dev/null || /usr/bin/true
-etc/gconf/schemas/panel-default-setup.entries
-@exec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --load %D/etc/gconf/schemas/panel-default-setup.entries > /dev/null || /usr/bin/true
-@exec gconftool-2 --direct --config-source=xml::%D/etc/gconf/gconf.xml.defaults --load %D/etc/gconf/schemas/panel-default-setup.entries /apps/panel > /dev/null || /usr/bin/true
 %%BONOBO%%include/panel-2.0/GNOME_Panel.h
 %%BONOBO%%include/panel-2.0/panel-applet-enums.h
 %%BONOBO%%include/panel-2.0/panel-applet-gconf.h
@@ -47,6 +42,7 @@ share/gir-1.0/PanelApplet-4.0.gir
 %%DATADIR%%/4.0/applets/org.gnome.panel.FishApplet.panel-applet
 %%DATADIR%%/4.0/applets/org.gnome.panel.NotificationAreaApplet.panel-applet
 %%DATADIR%%/4.0/applets/org.gnome.panel.Wncklet.panel-applet
+%%DATADIR%%/panel-default-layout.layout
 %%DATADIR%%/ui/clock.ui
 %%DATADIR%%/ui/clock-menu.xml
 %%BONOBO%%%%DATADIR%%/ui/panel-test-applets-bonobo.ui
@@ -68,10 +64,15 @@ share/gir-1.0/PanelApplet-4.0.gir
 %%DATADIR%%/pixmaps/clock-map-location-hilight.png
 %%DATADIR%%/pixmaps/clock-map-location-marker.png
 %%DATADIR%%/pixmaps/clock-map.png
+%%DATADIR%%/pixmaps/fishanim.fish
 %%DATADIR%%/pixmaps/fishanim.png
+%%DATADIR%%/pixmaps/footguy.fish
 %%DATADIR%%/pixmaps/footguy.png
+%%DATADIR%%/pixmaps/monkey.fish
 %%DATADIR%%/pixmaps/monkey.png
+%%DATADIR%%/pixmaps/oldwanda.fish
 %%DATADIR%%/pixmaps/oldwanda.png
+%%DATADIR%%/pixmaps/wanda.fish
 %%DATADIR%%/pixmaps/wanda.png
 %%DATADIR%%/ui/fish-menu.xml
 %%DATADIR%%/ui/fish.ui
@@ -226,7 +227,6 @@ share/gnome/help/fish/zh_CN/figures/fish_applet.png
 share/gnome/help/fish/zh_CN/fish.xml
 share/gnome/help/fish/zh_CN/legal.xml
 share/icons/hicolor/16x16/apps/gnome-panel-clock.png
-share/icons/hicolor/16x16/apps/gnome-panel-drawer.png
 share/icons/hicolor/16x16/apps/gnome-panel-fish.png
 share/icons/hicolor/16x16/apps/gnome-panel-force-quit.png
 share/icons/hicolor/16x16/apps/gnome-panel-launcher.png
@@ -237,7 +237,6 @@ share/icons/hicolor/16x16/apps/gnome-panel-window-menu.png
 share/icons/hicolor/16x16/apps/gnome-panel-workspace-switcher.png
 share/icons/hicolor/16x16/apps/gnome-panel.png
 share/icons/hicolor/22x22/apps/gnome-panel-clock.png
-share/icons/hicolor/22x22/apps/gnome-panel-drawer.png
 share/icons/hicolor/22x22/apps/gnome-panel-fish.png
 share/icons/hicolor/22x22/apps/gnome-panel-force-quit.png
 share/icons/hicolor/22x22/apps/gnome-panel-launcher.png
@@ -248,7 +247,6 @@ share/icons/hicolor/22x22/apps/gnome-panel-window-menu.png
 share/icons/hicolor/22x22/apps/gnome-panel-workspace-switcher.png
 share/icons/hicolor/22x22/apps/gnome-panel.png
 share/icons/hicolor/24x24/apps/gnome-panel-clock.png
-share/icons/hicolor/24x24/apps/gnome-panel-drawer.png
 share/icons/hicolor/24x24/apps/gnome-panel-fish.png
 share/icons/hicolor/24x24/apps/gnome-panel-force-quit.png
 share/icons/hicolor/24x24/apps/gnome-panel-launcher.png
@@ -259,7 +257,6 @@ share/icons/hicolor/24x24/apps/gnome-panel-window-menu.png
 share/icons/hicolor/24x24/apps/gnome-panel-workspace-switcher.png
 share/icons/hicolor/24x24/apps/gnome-panel.png
 share/icons/hicolor/32x32/apps/gnome-panel-clock.png
-share/icons/hicolor/32x32/apps/gnome-panel-drawer.png
 share/icons/hicolor/32x32/apps/gnome-panel-fish.png
 share/icons/hicolor/32x32/apps/gnome-panel-force-quit.png
 share/icons/hicolor/32x32/apps/gnome-panel-launcher.png
@@ -271,7 +268,6 @@ share/icons/hicolor/32x32/apps/gnome-panel-workspace-switcher.png
 share/icons/hicolor/32x32/apps/gnome-panel.png
 share/icons/hicolor/48x48/apps/gnome-panel.png
 share/icons/hicolor/scalable/apps/gnome-panel-clock.svg
-share/icons/hicolor/scalable/apps/gnome-panel-drawer.svg
 share/icons/hicolor/scalable/apps/gnome-panel-fish.svg
 share/icons/hicolor/scalable/apps/gnome-panel-force-quit.svg
 share/icons/hicolor/scalable/apps/gnome-panel-launcher.svg
