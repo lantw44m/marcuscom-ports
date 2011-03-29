@@ -98,6 +98,7 @@ share/locale/it/LC_MESSAGES/at-spi2-core.mo
 share/locale/kn/LC_MESSAGES/at-spi2-core.mo
 share/locale/ko/LC_MESSAGES/at-spi2-core.mo
 share/locale/lv/LC_MESSAGES/at-spi2-core.mo
+share/locale/mr/LC_MESSAGES/at-spi2-core.mo
 share/locale/nb/LC_MESSAGES/at-spi2-core.mo
 share/locale/nl/LC_MESSAGES/at-spi2-core.mo
 share/locale/or/LC_MESSAGES/at-spi2-core.mo
@@ -126,6 +127,8 @@ share/locale/zh_TW/LC_MESSAGES/at-spi2-core.mo
 @dirrm share/locale/ug
 @dirrm share/locale/sr@latin/LC_MESSAGES
 @dirrm share/locale/sr@latin
+@dirrm share/locale/mr/LC_MESSAGES
+@dirrm share/locale/mr
 @dirrm share/locale/bn_IN/LC_MESSAGES
 @dirrm share/locale/bn_IN
 @dirrm share/locale/as/LC_MESSAGES
