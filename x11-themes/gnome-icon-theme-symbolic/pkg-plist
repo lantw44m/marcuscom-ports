@@ -157,6 +157,7 @@ share/icons/gnome/scalable/status/network-wired-disconnected-symbolic.svg
 share/icons/gnome/scalable/status/network-wired-symbolic.svg
 share/icons/gnome/scalable/status/network-wireless-acquiring-symbolic.svg
 share/icons/gnome/scalable/status/network-wireless-connected-symbolic.svg
+share/icons/gnome/scalable/status/network-wireless-encrypted-symbolic.svg
 share/icons/gnome/scalable/status/network-wireless-signal-excellent-symbolic.svg
 share/icons/gnome/scalable/status/network-wireless-signal-good-symbolic.svg
 share/icons/gnome/scalable/status/network-wireless-signal-none-symbolic.svg
@@ -174,7 +175,6 @@ share/icons/gnome/scalable/status/user-available-symbolic.svg
 share/icons/gnome/scalable/status/user-away-symbolic.svg
 share/icons/gnome/scalable/status/user-busy-symbolic.svg
 share/icons/gnome/scalable/status/user-idle-symbolic.svg
-share/icons/gnome/scalable/status/user-invisible-alt-symbolic.svg
 share/icons/gnome/scalable/status/user-invisible-symbolic.svg
 share/icons/gnome/scalable/status/user-offline-symbolic.svg
 share/icons/gnome/scalable/status/weather-clear-night-symbolic.svg
