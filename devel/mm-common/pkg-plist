@@ -23,4 +23,3 @@ libdata/pkgconfig/mm-common-libstdc++.pc
 @dirrm share/mm-common/build
 @dirrm share/mm-common
 @dirrm share/doc/mm-common
-@dirrmtry share/aclocal
