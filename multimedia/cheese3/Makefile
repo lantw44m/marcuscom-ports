@@ -3,11 +3,11 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese3/Makefile,v 1.1 2011/03/10 19:20:06 kwm Exp $
+#   $MCom: ports/multimedia/cheese3/Makefile,v 1.2 2011/03/22 11:55:01 kwm Exp $
 #
 
 PORTNAME=	cheese
-PORTVERSION=	2.91.92
+PORTVERSION=	2.91.93
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,6 +20,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev.h:${PORTSDIR}/multimedia/v4l_
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
 		hal.1:${PORTSDIR}/sysutils/hal \
+		mx-1.0.2:${PORTSDIR}/x11-toolkits/mx \
 		clutter-gst-1.0.0:${PORTSDIR}/multimedia/clutter-gst
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-video-effects.pc:${PORTSDIR}/graphics/gnome-video-effects
 
