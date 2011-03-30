@@ -34,6 +34,7 @@ share/locale/kn/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ko/LC_MESSAGES/at-spi2-atk.mo
 share/locale/lt/LC_MESSAGES/at-spi2-atk.mo
 share/locale/lv/LC_MESSAGES/at-spi2-atk.mo
+share/locale/mr/LC_MESSAGES/at-spi2-atk.mo
 share/locale/nb/LC_MESSAGES/at-spi2-atk.mo
 share/locale/nl/LC_MESSAGES/at-spi2-atk.mo
 share/locale/nn/LC_MESSAGES/at-spi2-atk.mo
@@ -68,6 +69,8 @@ share/locale/zh_TW/LC_MESSAGES/at-spi2-atk.mo
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/or/LC_MESSAGES
 @dirrmtry share/locale/or
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/fy/LC_MESSAGES
 @dirrmtry share/locale/fy
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
