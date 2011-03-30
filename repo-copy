@@ -1,6 +1,12 @@
 accessibility/mousetweaks -> accessibility/mousetweaks3
 audio/libcanberra -> audio/libcanberra-gtk3?
 databases/evolution-data-server -> databases/evolution-data-server3
+databases/libgda4 -> libgda5
+databases/libgda4-bdb -> libgda5-bdb
+databases/libgda4-jdbc -> libgda5-jdbc
+databases/libgda4-mdb -> libgda5-mdb
+databases/libgda4-mysql -> libgda5-mysql
+databases/libgda4-postgresql -> libgda5-postgresql
 deskutils/gnome-utils -> deskutils/gnome-utils3
 deskutils/gucharmap -> desktutils/gucharmap3
 devel/libgdata -> devel/libgdata08
