@@ -3157,6 +3157,7 @@ share/icons/gnome/256x256/apps/accessories-character-map.png
 share/icons/gnome/256x256/apps/accessories-dictionary.png
 share/icons/gnome/256x256/apps/accessories-text-editor.png
 share/icons/gnome/256x256/apps/applets-screenshooter.png
+share/icons/gnome/256x256/apps/arts.png
 share/icons/gnome/256x256/apps/background.png
 share/icons/gnome/256x256/apps/calc.png
 share/icons/gnome/256x256/apps/config-language.png
@@ -3166,6 +3167,7 @@ share/icons/gnome/256x256/apps/fonts.png
 share/icons/gnome/256x256/apps/gnome-calculator.png
 share/icons/gnome/256x256/apps/gnome-character-map.png
 share/icons/gnome/256x256/apps/gnome-help.png
+share/icons/gnome/256x256/apps/gnome-mixer.png
 share/icons/gnome/256x256/apps/gnome-monitor.png
 share/icons/gnome/256x256/apps/gnome-remote-desktop.png
 share/icons/gnome/256x256/apps/gnome-settings-accessibility-technologies.png
@@ -3178,6 +3180,7 @@ share/icons/gnome/256x256/apps/gucharmap.png
 share/icons/gnome/256x256/apps/help-browser.png
 share/icons/gnome/256x256/apps/kcalc.png
 share/icons/gnome/256x256/apps/kcharselect.png
+share/icons/gnome/256x256/apps/kcmsound.png
 share/icons/gnome/256x256/apps/kedit.png
 share/icons/gnome/256x256/apps/key_bindings.png
 share/icons/gnome/256x256/apps/kfm.png
@@ -3188,6 +3191,8 @@ share/icons/gnome/256x256/apps/kscreensaver.png
 share/icons/gnome/256x256/apps/ksysguard.png
 share/icons/gnome/256x256/apps/kuser.png
 share/icons/gnome/256x256/apps/locale.png
+share/icons/gnome/256x256/apps/multimedia-volume-control.png
+share/icons/gnome/256x256/apps/multimedia.png
 share/icons/gnome/256x256/apps/openterm.png
 share/icons/gnome/256x256/apps/preferences-desktop-accessibility.png
 share/icons/gnome/256x256/apps/preferences-desktop-display.png
@@ -3214,11 +3219,13 @@ share/icons/gnome/256x256/apps/update-manager.png
 share/icons/gnome/256x256/apps/user-info.png
 share/icons/gnome/256x256/apps/utilities-system-monitor.png
 share/icons/gnome/256x256/apps/utilities-terminal.png
+share/icons/gnome/256x256/apps/volume-knob.png
 share/icons/gnome/256x256/apps/wallpaper.png
 share/icons/gnome/256x256/apps/web-browser.png
 share/icons/gnome/256x256/apps/xfce-filemanager.png
 share/icons/gnome/256x256/apps/xfce-terminal.png
 share/icons/gnome/256x256/apps/xfce4-backdrop.png
+share/icons/gnome/256x256/apps/xfce4-mixer.png
 share/icons/gnome/256x256/apps/xscreensaver.png
 share/icons/gnome/256x256/apps/zen-icon.png
 share/icons/gnome/256x256/categories/applications-development.png
@@ -3287,6 +3294,8 @@ share/icons/gnome/256x256/devices/gnome-dev-media-cf.png
 share/icons/gnome/256x256/devices/gnome-dev-media-ms.png
 share/icons/gnome/256x256/devices/gnome-dev-media-sdmmc.png
 share/icons/gnome/256x256/devices/gnome-dev-media-sm.png
+share/icons/gnome/256x256/devices/gnome-dev-mouse-ball.png
+share/icons/gnome/256x256/devices/gnome-dev-mouse-optical.png
 share/icons/gnome/256x256/devices/gnome-dev-printer.png
 share/icons/gnome/256x256/devices/gnome-dev-removable-1394.png
 share/icons/gnome/256x256/devices/gnome-dev-removable-usb.png
@@ -3298,6 +3307,7 @@ share/icons/gnome/256x256/devices/gtk-harddisk.png
 share/icons/gnome/256x256/devices/harddrive.png
 share/icons/gnome/256x256/devices/hdd_unmount.png
 share/icons/gnome/256x256/devices/input-keyboard.png
+share/icons/gnome/256x256/devices/input-mouse.png
 share/icons/gnome/256x256/devices/input-tablet.png
 share/icons/gnome/256x256/devices/ipod_mount.png
 share/icons/gnome/256x256/devices/keyboard.png
@@ -3306,6 +3316,7 @@ share/icons/gnome/256x256/devices/kxkb.png
 share/icons/gnome/256x256/devices/media-cdrom.png
 share/icons/gnome/256x256/devices/media-flash.png
 share/icons/gnome/256x256/devices/media-optical.png
+share/icons/gnome/256x256/devices/mouse.png
 share/icons/gnome/256x256/devices/multimedia-player.png
 share/icons/gnome/256x256/devices/phone.png
 share/icons/gnome/256x256/devices/printer-remote.png
@@ -3323,8 +3334,10 @@ share/icons/gnome/256x256/devices/video-display.png
 share/icons/gnome/256x256/devices/xfce-printer.png
 share/icons/gnome/256x256/devices/xfce4-display.png
 share/icons/gnome/256x256/devices/xfce4-keyboard.png
+share/icons/gnome/256x256/devices/xfce4-mouse.png
 share/icons/gnome/256x256/devices/yast_HD.png
 share/icons/gnome/256x256/devices/yast_idetude.png
+share/icons/gnome/256x256/devices/yast_mouse.png
 share/icons/gnome/256x256/devices/yast_printer.png
 share/icons/gnome/256x256/emblems/emblem-mail.png
 share/icons/gnome/256x256/emblems/emblem-noread.png
