@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit3/Makefile,v 1.8 2011/03/25 15:34:06 kwm Exp $
+#   $MCom: ports/editors/gedit3/Makefile,v 1.9 2011/03/29 19:35:14 kwm Exp $
 #
 
 PORTNAME=	gedit
 PORTVERSION=	2.91.11
+PORTREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -32,7 +33,7 @@ USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix gnomehack intlhack gtksourceview3 libxml2 \
-		desktopfileutils gnomedocutils
+		desktopfileutils gnomedocutils pygobject
 GNOME_DESKTOP_VERSION=3
 CONFIGURE_ARGS=	--disable-updater --enable-indicator=no
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
