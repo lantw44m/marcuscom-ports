@@ -1,0 +1,158 @@
+# New ports collection makefile for:	libgda2
+# Date created:				02 June 2002
+# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
+#
+# $FreeBSD$
+#   $MCom: ports/databases/libgda4/Makefile,v 1.14 2010/11/14 20:57:58 kwm Exp $
+#
+
+PORTNAME=	libgda5
+PORTVERSION?=	4.99.0
+PORTREVISION?=	0
+CATEGORIES=	databases gnome
+MASTER_SITES=	GNOME
+MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/5$//}/${PORTVERSION:R}
+DISTNAME=	libgda-${PORTVERSION}
+DIST_SUBDIR=	gnome3
+
+MAINTAINER?=	gnome@FreeBSD.org
+COMMENT?=	Provides uniform access to different kinds of data sources
+
+USE_BZIP2=	yes
+LIBGDA5_SLAVE?=	no
+
+.if !defined(REFERENCE_PORT)
+
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
+		gcrypt.17:${PORTSDIR}/security/libgcrypt \
+    		soup-2.4.1:${PORTSDIR}/devel/libsoup \
+		json-glib-1.0.0:${PORTSDIR}/devel/json-glib
+RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
+
+USE_AUTOTOOLS=	libtool
+USE_GETTEXT=	yes
+USE_GMAKE=	yes
+USE_GNOME=	gnomeprefix gnomehack glib20 libxslt intlhack referencehack
+USE_LDCONFIG=	yes
+GNU_CONFIGURE=	yes
+MAKE_JOBS_UNSAFE=yes
+CONFIGURE_ARGS=	--without-oracle \
+		--disable-crypto \
+		--enable-introspection=no
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+
+.include <bsd.port.options.mk>
+
+#VERSION=	${PORTVERSION:R}
+VERSION=	5.0
+PLIST_SUB=	VERSION=${VERSION}
+
+.if ${LIBGDA5_SLAVE}=="no"
+MAN1=		gda-sql-5.0.1
+.else
+USE_GNOME+=	libgda5
+.endif
+
+.if ${LIBGDA5_SLAVE}=="ui"
+CONFIGURE_ARGS+=--with-ui
+USE_GNOME+=	gtk30 gnomedocutils
+.else
+CONFIGURE_ARGS+=--without-ui
+.endif
+
+
+.if ${LIBGDA5_SLAVE}=="bdb"
+USE_BDB=		yes
+CONFIGURE_ARGS+=	--with-bdb=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-bdb
+.endif
+
+.if ${LIBGDA5_SLAVE}=="mysql"
+USE_MYSQL=		yes
+CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-mysql
+.endif
+
+.if ${LIBGDA5_SLAVE}=="postgresql"
+USE_PGSQL=		yes
+CONFIGURE_ARGS+=	--with-postgres=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-postgres
+.endif
+
+.if ${LIBGDA5_SLAVE}=="firebird"
+LIB_DEPENDS+=		gds.2:${PORTSDIR}/databases/firebird2-client
+CONFIGURE_ARGS+=	--with-firebird=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-firebird
+.endif
+
+# MDB (MS Access)
+.if ${LIBGDA5_SLAVE}=="mdb"
+LIB_DEPENDS+=		mdbsql.0:${PORTSDIR}/databases/mdbtools
+CONFIGURE_ARGS+=	--with-mdb=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-mdb
+.endif
+
+.if ${LIBGDA5_SLAVE}=="jdbc"
+USE_JAVA=		yes
+JAVA_VENDOR=		bsdjava openjdk
+.else
+CONFIGURE_ARGS+=	--without-java
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-ldl||g' \
+	    	${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|"db.h|"db${BDB_VER}/db.h|g' \
+		-e 's|ldb47|l${BDB_LIB_NAME}|g' \
+		-e 's|ldb|l${BDB_LIB_NAME}|g' \
+		-e 's|libdb|lib${BDB_LIB_NAME}|g' \
+		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|<db\.h>|<db${BDB_VER}/db.h>|' \
+	    	${WRKSRC}/providers/bdb/gda-bdb-provider.c \
+		${WRKSRC}/providers/bdb/gda-bdb-test.c
+.if ${LIBGDA5_SLAVE}!="no"
+	@${FIND} ${WRKSRC} -name Makefile.in -exec ${REINPLACE_CMD} \
+		-e 's|$$(top_builddir)/libgda/libgda-5.0.la|${LOCALBASE}/lib/libgda-5.0.la|g' \
+		-e 's|../libgda/libgda-5.0.la|${LOCALBASE}/lib/libgda-5.0.la|g' \
+		{} \;
+.endif
+
+pre-build:
+.if ${LIBGDA5_SLAVE}=="postgresql"
+	cd ${WRKSRC}/providers/reuseable/postgres && ${GMAKE} libgda-postgres.la
+.endif
+
+.if ${LIBGDA5_SLAVE}=="mysql"
+	cd ${WRKSRC}/providers/reuseable/mysql && ${GMAKE} libgda-mysql.la
+.endif
+
+.if ${LIBGDA5_SLAVE}=="ui"
+	cd ${WRKSRC}/libgda && ${GMAKE} gda-enum-types.h
+.endif
+
+.if ${LIBGDA5_SLAVE}=="no"
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/data/config \
+		${PREFIX}/etc/libgda-${VERSION}/config.default
+.endif
+.if ${LIBGDA5_SLAVE}=="ui"
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/libgda-ui-5.0.pc \
+		${PREFIX}/libdata/pkgconfig/
+.endif
+
+.include <bsd.port.pre.mk>
+
+.if ${LIBGDA5_SLAVE}=="jdbc" && ${OSVERSION} < 800000
+BROKEN=		does not compile on 7.x
+.endif
+
+.include <bsd.port.post.mk>
+.endif

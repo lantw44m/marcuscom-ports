@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.536 2011/03/19 20:42:08 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.537 2011/03/21 09:19:57 avl Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -92,7 +92,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
 
 # GNOME 3 components
 _USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
-		gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgnomekbd3 librsvg3 \
+		gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgda5 libgda5-ui libgnomekbd3 librsvg3 \
 		libwnck3 nautilus3 vte3
 
 GNOME_MAKEFILEIN?=	Makefile.in
@@ -467,6 +467,14 @@ libgda3_USE_GNOME_IMPL=	glib20 libxslt
 libgda4_LIB_DEPENDS=	gda-4.0.5:${PORTSDIR}/databases/libgda4
 libgda4_DETECT=			 ${LOCALBASE}/libdata/pkgconfig/libgda-4.0.pc
 libgda4_USE_GNOME_IMPL=	glib20 libxslt
+
+libgda5_LIB_DEPENDS=	gda-5.0.5:${PORTSDIR}/databases/libgda5
+libgda5_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgda-5.0.pc
+libgda5_USE_GNOME_IMPL=	glib20 libxslt
+
+libgda5-ui_LIB_DEPENDS=	gda-ui-5.0.5:${PORTSDIR}/databases/libgda5-ui
+libgda5-ui_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgda-ui-5.0.pc
+libgda5-ui_USE_GNOME_IMPL=glib20 libxslt libgda5
 
 libgnomedb_LIB_DEPENDS=	gnomedb-3.0.4:${PORTSDIR}/databases/libgnomedb
 libgnomedb_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomedb.pc
