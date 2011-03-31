@@ -3,7 +3,7 @@
 # Whom:					Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net/avahi-gtk/Makefile,v 1.4 2011/03/31 01:51:20 mezz Exp $
 #
 
 PORTREVISION=	1
@@ -14,7 +14,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gtk+ tools and bindings to the Avahi mDNS system
 
 LIB_DEPENDS=	avahi-common.3:${PORTSDIR}/net/avahi-app
-RUN_DEPENDS=	avahi-header>=0.6${PORTSDIR}/net/avahi-header
+RUN_DEPENDS=	avahi-header>=0.6:${PORTSDIR}/net/avahi-header
 
 MASTERDIR=	${.CURDIR}/../avahi-app
 BUILD_WRKSRC=	${WRKSRC}/avahi-ui
