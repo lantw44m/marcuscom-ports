@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.9 2011/03/20 03:11:12 avl Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.10 2011/03/23 12:56:04 kwm Exp $
 #
 
 PORTNAME=	gnome-screensaver
 PORTVERSION=	2.91.92
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +18,6 @@ COMMENT=	GNOME screen saver and locker
 
 LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
-#RUN_DEPENDS=	xscreensaver-gl-helper:${PORTSDIR}/x11/xscreensaver-gnome-hacks
 RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
 		${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/gnome-keyring3
 
@@ -36,11 +36,6 @@ CONFIGURE_ARGS=	--with-pam-prefix=${PREFIX}/etc/pam.d
 MAN1=		gnome-screensaver-command.1 gnome-screensaver.1
 
 SUB_FILES+=	gnome-screensaver.pam
-
-#XSCREENSAVER_DIR=	${LOCALBASE}/share/xscreensaver/config
-#SCREENSAVER_DIR=	share/applications/screensavers
-
-XSCREENSAVER_EXCLUDE=	"(popsquares.xml)"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/pam.d|${PREFIX}/etc/pam.d|g' \
