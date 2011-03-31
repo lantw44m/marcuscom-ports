@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/net/avahi-app/Makefile,v 1.29 2010/12/04 07:32:51 ade Exp $
-#   $MCom: ports/net/avahi-app/Makefile,v 1.16 2011/02/23 15:13:26 kwm Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.17 2011/03/13 17:23:19 kwm Exp $
 #
 
 PORTNAME=	avahi
@@ -16,6 +16,7 @@ PKGNAMESUFFIX?=	-app
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Service discovery on a local network
 
+.if ${AVAHI_SLAVE}!="header"
 BUILD_DEPENDS?=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS?=	expat.6:${PORTSDIR}/textproc/expat2 \
 		daemon.0:${PORTSDIR}/devel/libdaemon \
@@ -59,9 +60,10 @@ DAEMON_CONFIG_FILES=	hosts avahi-daemon.conf
 .endif
 
 USE_RC_SUBR=yes
+.endif # avahi-header
 
 .include <bsd.port.pre.mk>
-
+.if ${AVAHI_SLAVE}!="header"
 .if ${AVAHI_SLAVE}=="autoipd"
 CONFIGURE_ARGS+=--enable-autoipd
 .else
@@ -127,6 +129,8 @@ avahi-post-patch:
 		${WRKSRC}/avahi-daemon/dbus-protocol.c
 	@${REINPLACE_CMD} -e 's|^_||g' \
 		${WRKSRC}/avahi-ui/*.desktop.in.in
+	@${REINPLACE_CMD} -e 's|am: install-avahiincludeHEADERS|am:|g' \
+			${WRKSRC}/avahi-ui/Makefile.in
 
 post-build: avahi-post-build
 
@@ -171,5 +175,5 @@ avahi-post-install:
 .if !defined(PACKAGE_BUILDING) && (${AVAHI_SLAVE}=="no" || ${AVAHI_SLAVE}=="autoipd")
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
-
+.endif # avahi-header
 .include <bsd.port.post.mk>

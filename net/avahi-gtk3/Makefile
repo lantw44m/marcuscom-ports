@@ -3,10 +3,10 @@
 # Whom:					Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-gtk/Makefile,v 1.2 2007/09/12 12:41:45 ahze Exp $
+#   $MCom: ports/net/avahi-gtk3/Makefile,v 1.1 2011/02/23 15:13:28 kwm Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	net
 PKGNAMESUFFIX=	-gtk3
 
@@ -14,6 +14,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gtk+ 3 library to the Avahi mDNS system
 
 LIB_DEPENDS=	avahi-common.3:${PORTSDIR}/net/avahi-app
+RUN_DEPENDS=	avahi-header>=0.6${PORTSDIR}/net/avahi-header
 
 MASTERDIR=	${.CURDIR}/../avahi-app
 BUILD_WRKSRC=	${WRKSRC}/avahi-ui
