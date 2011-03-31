@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/net/avahi-app/Makefile,v 1.29 2010/12/04 07:32:51 ade Exp $
-#   $MCom: ports/net/avahi-app/Makefile,v 1.17 2011/03/13 17:23:19 kwm Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.18 2011/03/31 01:51:20 mezz Exp $
 #
 
 PORTNAME=	avahi
@@ -15,6 +15,8 @@ PKGNAMESUFFIX?=	-app
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Service discovery on a local network
+
+AVAHI_SLAVE?=	no
 
 .if ${AVAHI_SLAVE}!="header"
 BUILD_DEPENDS?=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
@@ -30,7 +32,6 @@ USE_GNOME_SUBR=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-AVAHI_SLAVE?=	no
 CONFIGURE_ARGS?=--with-distro=freebsd \
 		--with-dbus-system-socket=unix:path=/var/run/dbus/system_bus_socket \
 		--disable-monodoc \
