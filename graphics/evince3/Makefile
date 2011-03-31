@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/evince3/Makefile,v 1.7 2011/03/22 10:48:41 kwm Exp $
+#    $MCom: ports/graphics/evince3/Makefile,v 1.8 2011/03/26 16:46:30 kwm Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	2.91.93
+PORTREVISION=	1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -93,7 +94,7 @@ CONFIGURE_ARGS+=	--disable-xps
 #.endif
 
 .if defined(WITH_DJVU)
-LIB_DEPENDS+=		djvulibre.23:${PORTSDIR}/graphics/djvulibre-nox11
+LIB_DEPENDS+=		djvulibre.24:${PORTSDIR}/graphics/djvulibre-nox11
 CONFIGURE_ARGS+=	--enable-djvu
 PLIST_SUB+=		DJVU=""
 .else
