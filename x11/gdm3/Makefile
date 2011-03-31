@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.2 2011/03/23 15:30:18 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.3 2011/03/28 07:05:09 kwm Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.91.94
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -30,6 +30,7 @@ LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit \
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity3 \
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
 		gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
+		${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 USERS=		gdm

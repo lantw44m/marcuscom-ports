@@ -208,6 +208,8 @@ share/pixmaps/nohost.png
 @dirrm etc/gdm/PostLogin
 @dirrm etc/gdm/Init
 @unexec rm -rf %D/etc/gdm/home/.gconf*
+@dirrmtry etc/gdm/home/.config/dconf
+@dirrmtry etc/gdm/home/.config
 @dirrmtry etc/gdm/home
 @dirrmtry etc/gdm
 @dirrmtry etc/dm/Sessions

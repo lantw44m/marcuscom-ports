@@ -1,0 +1,11 @@
+--- data/greeter-autostart/at-spi-registryd-wrapper.desktop.in.orig	2011-03-31 16:27:11.000000000 +0200
++++ data/greeter-autostart/at-spi-registryd-wrapper.desktop.in	2011-03-31 16:27:16.000000000 +0200
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
+ Type=Application
+ _Name=AT-SPI Registry Wrapper
+-Exec=${exec_prefix}/libexec/at-spi-registryd
++Exec=${exec_prefix}/libexec/at-spi2-registryd
+ OnlyShowIn=GNOME;
+ AutostartCondition=GNOME /desktop/gnome/interface/accessibility
+ X-GNOME-Autostart-Phase=Initialization
