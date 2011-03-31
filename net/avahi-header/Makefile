@@ -3,12 +3,12 @@
 # Whom:					Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net/avahi-header/Makefile,v 1.1 2011/03/31 01:51:21 mezz Exp $
 #
 
-PORTNAME=	avahi-header
 PORTREVISION=	0
 CATEGORIES=	net
+PKGNAMESUFFIX=	-header
 
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Install an avahi-gtk* header to avoid conflict
