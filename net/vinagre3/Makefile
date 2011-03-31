@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom$
+#  $MCom: ports/net/vinagre3/Makefile,v 1.1 2011/03/30 21:39:30 mezz Exp $
 #
 
 PORTNAME=	vinagre
@@ -20,8 +20,6 @@ LIB_DEPENDS=	gtk-vnc-2.0.0:${PORTSDIR}/net/gtk-vnc3 \
     		avahi-core.7:${PORTSDIR}/net/avahi-app \
 		avahi-ui-gtk3.0:${PORTSDIR}/net/avahi-gtk3 \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
-
-BROKEN=		avahi-gtk3 needs to be fixed first
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
