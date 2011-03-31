@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.4 2011/03/21 12:38:43 kwm Exp $
+#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.5 2011/03/29 14:43:25 kwm Exp $
 #
 
 PORTNAME=	gnome-power-manager
 PORTVERSION=	2.91.93
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,7 +21,8 @@ LIB_DEPENDS=	upower-glib.1:${PORTSDIR}/sysutils/upower \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		notify.4:${PORTSDIR}/devel/libnotify \
 		execinfo:${PORTSDIR}/devel/libexecinfo
-RUN_DEPENDS=	pkexec:${PORTSDIR}/sysutils/polkit
+RUN_DEPENDS=	pkexec:${PORTSDIR}/sysutils/polkit \
+		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
@@ -57,8 +59,6 @@ MAN1=		gnome-power-manager.1 \
 .endif
 
 post-patch:
-#	@${REINPLACE_CMD} -e 's|-lresolv|| ; s|-Werror||g' \
-#		${WRKSRC}/configure
 .if !defined(WITH_MANPAGES)
 	@${REINPLACE_CMD} -e "s|2MAN_TRUE=$$|2MAN_TRUE='#'|g ; \
 		s|2MAN_FALSE='#'|2MAN_FALSE=|g" ${WRKSRC}/configure
