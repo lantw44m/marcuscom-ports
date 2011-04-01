@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.17 2011/03/09 16:25:57 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.18 2011/03/16 04:20:01 mezz Exp $
 #
 
 PORTNAME=	gnome3
-PORTVERSION=	2.32.1
-PORTREVISION?=	1
+PORTVERSION=	2.91.93
+PORTREVISION?=	0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -17,100 +17,78 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	The "meta-port" for the GNOME 3 integrated X11 desktop
 
+CONFLICTS?=	gnome3-lite-[0-9]*
+
 RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		dconf:${PORTSDIR}/devel/dconf \
-		eog>=2.91.0:${PORTSDIR}/graphics/eog3 \
-		gedit>=2.91.0:${PORTSDIR}/editors/gedit3 \
-		zenity>=2.91.0:${PORTSDIR}/x11/zenity3 \
-		gnome-terminal>=2.33.0:${PORTSDIR}/x11/gnome-terminal3 \
-		mousetweaks>=2.91.0:${PORTSDIR}/accessibility/mousetweaks3 \
 		gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
-		brasero>=2.91.0:${PORTSDIR}/sysutils/brasero3 \
-		nautilus>=2.91.0:${PORTSDIR}/x11-fm/nautilus3 \
-		gdm>=2.91.0:${PORTSDIR}/x11/gdm3 \
-		metacity>=2.30.0:${PORTSDIR}/x11-wm/metacity \
-		gcalctool>=2.91.0:${PORTSDIR}/math/gcalctool3 \
-		gnome-utils>=2.91.0:${PORTSDIR}/deskutils/gnome-utils3 \
-		gnome-system-monitor>=2.99.0:${PORTSDIR}/sysutils/gnome-system-monitor3 \
-		file-roller>=2.91.0:${PORTSDIR}/archivers/file-roller3 \
 		gnome-themes>=2.91.0:${PORTSDIR}/x11-themes/gnome-themes3 \
 		gnome-themes-standard>=2.91.0:${PORTSDIR}/x11-themes/gnome-themes-standard \
-		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
-		${LOCALBASE}/lib/gstreamer-0.10/.gstreamer-plugins-core.keep:${PORTSDIR}/multimedia/gstreamer-plugins-core \
-		${LOCALBASE}/lib/gstreamer-0.10/libgstgconfelements.so:${PORTSDIR}/devel/gstreamer-plugins-gconf \
 		gnome-screensaver>=2.91.0:${PORTSDIR}/x11/gnome-screensaver3 \
-		gnome-control-center>=2.91.0:${PORTSDIR}/sysutils/gnome-control-center3 \
-		${LOCALBASE}/share/gnome-background-properties/gnome-nature.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
-		evince>=2.91.0:${PORTSDIR}/graphics/evince3 \
 		gnome-keyring>=2.91.0:${PORTSDIR}/security/gnome-keyring3 \
 		gnome-power-manager>=2.91.0:${PORTSDIR}/sysutils/gnome-power-manager3 \
 		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
-		gnome-games>=2.91.90:${PORTSDIR}/games/gnome-games3 \
-		${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/notification-daemon \
+		nautilus>=2.91.0:${PORTSDIR}/x11-fm/nautilus3 \
+		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info \
-		totem>=2.91.0:${PORTSDIR}/multimedia/totem3 \
-		evolution>=2.91.0:${PORTSDIR}/mail/evolution3 \
-		evolution-exchange>=2.91.0:${PORTSDIR}/mail/evolution-exchange3 \
-		evolution-mapi>=2.91.0:${PORTSDIR}/mail/evolution-mapi3 \
+		yelp>=2.91.0:${PORTSDIR}/x11/yelp3 \
+		zenity>=2.91.0:${PORTSDIR}/x11/zenity3 \
+		metacity>=2.30.0:${PORTSDIR}/x11-wm/metacity \
+		gnome-control-center>=2.91.0:${PORTSDIR}/sysutils/gnome-control-center3 \
+		${LOCALBASE}/share/gnome-background-properties/gnome-nature.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
+		gnome-tweak-tool:${PORTSDIR}/deskutils/gnome-tweak-tool \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme
 
 NO_BUILD=	yes
 
-.if !defined(GNOME_SLAVE)
-USE_PYTHON=	yes
+OPTIONS=	GNOME_SHELL "Build Gnome-shell (pulls in libxul)" off
+
+.if ${.CURDIR:T}!="gnome3-lite"
+OPTIONS+=	MAPI "Depend on evolution-mapi (pulls in samba4)" on
 .endif
 
-.if !defined(GNOME_SLAVE) || ${.CURDIR:T}=="gnome2-lite"
-#OPTIONS=	XSCREENSAVER "Use xscreensaver as screen saver app" off \
-OPTIONS=	GNOME_SHELL "Build Gnome-shell (pulls in libxul)" off
-#		MAPI "Depend on evolution-mapi (pulls in samba4)" on
-.endif
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_GNOME_SHELL)
 RUN_DEPENDS+=	gnome-shell>=2.91.0:${PORTSDIR}/x11/gnome-shell
 .endif
 
+.if ${.CURDIR:T}!="gnome3-lite"
+RUN_DEPENDS+=	empathy>=2.91.0:${PORTSDIR}/net-im/empathy3 \
+		epiphany>=2.91.0:${PORTSDIR}/www/epiphany3 \
+		epiphany-extensions>=2.91.0:${PORTSDIR}/www/epiphany-extensions3 \
+		gucharmap>=2.33.0:${PORTSDIR}/deskutils/gucharmap3 \
+		brasero>=2.91.0:${PORTSDIR}/sysutils/brasero3 \
+		eog>=2.91.0:${PORTSDIR}/graphics/eog3 \
+		eog-plugins>=2.91.0:${PORTSDIR}/graphics/eog-plugins3 \
+		gedit>=2.91.0:${PORTSDIR}/editors/gedit3 \
+		gedit-plugins>=2.91.0:${PORTSDIR}/editors/gedit-plugins3 \
+		gnome-terminal>=2.33.0:${PORTSDIR}/x11/gnome-terminal3 \
+		mousetweaks>=2.91.0:${PORTSDIR}/accessibility/mousetweaks3 \
+		brasero>=2.91.0:${PORTSDIR}/sysutils/brasero3 \
+		gcalctool>=2.91.0:${PORTSDIR}/math/gcalctool3 \
+		gnome-utils>=2.91.0:${PORTSDIR}/deskutils/gnome-utils3 \
+		gnome-system-monitor>=2.99.0:${PORTSDIR}/sysutils/gnome-system-monitor3 \
+		file-roller>=2.91.0:${PORTSDIR}/archivers/file-roller3 \
+		evince>=2.91.0:${PORTSDIR}/graphics/evince3 \
+		vino>=2.91.0:${PORTSDIR}/net/vino3 \
+		vinagre>=2.91.0:${PORTSDIR}/net/vinagre3 \
+		gnome-games>=2.91.90:${PORTSDIR}/games/gnome-games3 \
+		totem>=2.91.0:${PORTSDIR}/multimedia/totem3 \
+		gconf-editor>=2.91.0:${PORTSDIR}/sysutils/gconf-editor3 \
+		gdm>=2.91.0:${PORTSDIR}/x11/gdm3 \
+		evolution>=2.91.0:${PORTSDIR}/mail/evolution3 \
+		evolution-exchange>=2.91.0:${PORTSDIR}/mail/evolution-exchange3 \
+		${LOCALBASE}/lib/gtk-3.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi2-atk
 
-.if !defined(GNOME_SLAVE)
-# see if they build on these args.
-#.if ${ARCH}!="sparc64" && ${ARCH}!="ia64"
-RUN_DEPENDS+=	yelp>=2.91.0:${PORTSDIR}/x11/yelp3 \
-		epiphany>=2.91.0:${PORTSDIR}/www/epiphany3
-#.endif
-#.if ${.CURDIR:T}!="gnome2-lite"
-#RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
-#		gucharmap:${PORTSDIR}/deskutils/gucharmap \
-#		sound-juicer:${PORTSDIR}/audio/sound-juicer \
-#		zenity:${PORTSDIR}/x11/zenity \
-#		gnome-nettool:${PORTSDIR}/net/gnome-nettool \
-#		vinagre:${PORTSDIR}/net/vinagre \
-#		brasero:${PORTSDIR}/sysutils/brasero \
-#		gnome-file-share-properties:${PORTSDIR}/www/gnome-user-share \
-#		${LOCALBASE}/libexec/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
-#		${LOCALBASE}/lib/hamster-applet/hamster-applet:${PORTSDIR}/deskutils/hamster-applet \
-#		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi \
-#		gpk-application:${PORTSDIR}/ports-mgmt/gnome-packagekit \
-#		ekiga:${PORTSDIR}/net/ekiga3
 .if ${OSVERSION}>=800000
-#RUN_DEPENDS+=	cheese:${PORTSDIR}/multimedia/cheese
-.endif
-#.if ${ARCH} == "i386"
-#RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
-#.endif
-#.if defined(WITH_MAPI)
-#RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/libexchangemapi-1.0.pc:${PORTSDIR}/mail/evolution-mapi
-#.endif
-#.endif
+RUN_DEPENDS+=	cheese>=2.91.0:${PORTSDIR}/multimedia/cheese3
 .endif
 
-.if ${.CURDIR}==${MASTERDIR} || ${.CURDIR:T}=="gnome2-lite"
-.if defined(WITH_XSCREENSAVER)
-#RUN_DEPENDS+=	${LOCALBASE}/share/applications/xscreensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome
-.else
-#RUN_DEPENDS+=	gnome-screensaver:${PORTSDIR}/x11/gnome-screensaver
+.if defined(WITH_MAPI)
+RUN_DEPENDS+=	evolution-mapi>=2.91.0:${PORTSDIR}/mail/evolution-mapi3
 .endif
-.endif
+.endif # !gnome3-lite section
 
 do-install:	# empty
 

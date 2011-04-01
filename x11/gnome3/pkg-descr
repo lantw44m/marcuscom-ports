@@ -1,7 +1,7 @@
 GNU Network Object Model Environment
 
 This metaport installs the entire GNOME 3 desktop, including
-the the most common user applications.  Other popular GNOME
+the user applications released with it. Other popular GNOME
 applications can be installed from the other GNOME 3 metaports:
 
     * x11/gnome2-power-tools
