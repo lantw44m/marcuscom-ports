@@ -47,6 +47,9 @@ bin/gnome-tweak-tool
 share/applications/gnome-tweak-tool.desktop
 %%DATADIR%%/shell.ui
 %%DATADIR%%/welcome.png
+share/locale/cs/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/nb/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/pt/LC_MESSAGES/gnome-tweak-tool.mo
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/gtweak/tweaks

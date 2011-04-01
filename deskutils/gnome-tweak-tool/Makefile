@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome-tweak-tool
-PORTVERSION=	2.91.93
+PORTVERSION=	3.0.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 

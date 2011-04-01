@@ -1,0 +1,11 @@
+--- po/Makefile.in.in.orig	2011-04-01 14:27:56.000000000 +0200
++++ po/Makefile.in.in	2011-04-01 14:28:07.000000000 +0200
+@@ -17,7 +17,7 @@
+ # We have the following line for use by intltoolize:
+ # INTLTOOL_MAKEFILE
+ 
+-GETTEXT_PACKAGE = @GETTEXT_PACKAGE@
++GETTEXT_PACKAGE = gnome-tweak-tool
+ PACKAGE = @PACKAGE@
+ VERSION = @VERSION@
+ 
