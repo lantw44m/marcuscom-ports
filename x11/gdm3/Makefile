@@ -3,12 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.3 2011/03/28 07:05:09 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.4 2011/03/31 15:32:02 kwm Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	2.91.94
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 version of xdm display manager
 
-BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity3 \
+BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
     		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
@@ -27,7 +27,7 @@ LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit \
 		accountsservice.0:${PORTSDIR}/sysutils/accountsservice \
 		xklavier.12:${PORTSDIR}/x11/libxklavier \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
-RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity3 \
+RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
 		gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core \
