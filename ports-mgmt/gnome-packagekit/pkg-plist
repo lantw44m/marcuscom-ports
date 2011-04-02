@@ -27,7 +27,6 @@ share/applications/gpk-prefs.desktop
 share/applications/gpk-service-pack.desktop
 share/applications/gpk-update-viewer.desktop
 share/dbus-1/services/org.freedesktop.PackageKit.service
-share/glib-2.0/schemas/org.gnome.packagekit.gschema.xml
 %%DATADIR%%/gpk-application.ui
 %%DATADIR%%/gpk-client.ui
 %%DATADIR%%/gpk-error.ui
@@ -568,10 +567,6 @@ share/omf/gnome-packagekit/gnome-packagekit-zh_CN.omf
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
-@dirrm %%PYTHON_SITELIBDIR%%/packagekit
-@dirrm %%PYTHON_SITELIBDIR%%
-@dirrm %%PYTHON_LIBDIR%%
-@comment lib/gnome-settings-daemon-3.0/gtk-modules is done in libcanberra.
-@comment @dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
+@dirrmtry %%PYTHON_SITELIBDIR%%/packagekit
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
