@@ -568,12 +568,10 @@ share/omf/gnome-packagekit/gnome-packagekit-zh_CN.omf
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
-@dirrmtry share/GConf/gsettings
-@dirrmtry share/GConf
 @dirrm %%PYTHON_SITELIBDIR%%/packagekit
 @dirrm %%PYTHON_SITELIBDIR%%
 @dirrm %%PYTHON_LIBDIR%%
-@dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
-@dirrmtry lib/gnome-settings-daemon-3.0
+@comment lib/gnome-settings-daemon-3.0/gtk-modules is done in libcanberra.
+@comment @dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
