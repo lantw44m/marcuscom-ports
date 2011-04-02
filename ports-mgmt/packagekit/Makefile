@@ -3,11 +3,11 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.28 2011/04/02 03:34:51 mezz Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.13
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	ports-mgmt sysutils
 MASTER_SITES=	http://www.packagekit.org/releases/
 
@@ -49,9 +49,8 @@ MAKE_JOBS_UNSAFE=yes
 
 .if !defined(SLAVEPORT)
 OPTIONS=PORTS "Use portupgrade for management, dummy if disabled" on \
-	PORTDOCS "Build documentation" on
-# gtk module seems to be broken/disabled/gone?
-#	GTK20 "Enable GTK+ modules" off \
+	PORTDOCS "Build documentation" on \
+	GTK30 "Enable GTK+ modules" on
 
 .if defined(NO_INSTALL_MANPAGES)
 CONFIGURE_ARGS+=--disable-man-pages
@@ -75,14 +74,14 @@ CONFIGURE_ARGS+=--disable-ports --with-default-backend=dummy
 PLIST_SUB+=	PORTS="@comment "
 .endif
 
-#.if defined(WITH_GTK)
-#USE_GNOME+=	gtk20
-#CONFIGURE_ARGS+=--enable-gtk-module
-#PLIST_SUB+=	GTK=""
-#.else
+.if defined(WITH_GTK30)
+USE_GNOME+=	gtk30
+CONFIGURE_ARGS+=--enable-gtk-module
+PLIST_SUB+=	GTK=""
+.else
 CONFIGURE_ARGS+=--disable-gtk-module
 PLIST_SUB+=	GTK="@comment "
-#.endif
+.endif
 
 .if defined(SLAVEPORT)
 LIB_DEPENDS+=	packagekit-glib2.14:${PORTSDIR}/ports-mgmt/packagekit
@@ -100,7 +99,9 @@ CONFIGURE_ARGS+=--disable-qt
 
 post-patch:
 	@${REINPLACE_CMD} -E -e 's/.*WARNINGFLAGS_CPP.*-Werror/#$$&/' \
-		-e 's|-Wmissing-include-dirs||g' ${WRKSRC}/configure
+		-e 's|-Wmissing-include-dirs||g ; \
+		s|build_gtk_module_gtk2=yes|build_gtk_module_gtk2=no|g' \
+			${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/src/pk-lsof.c
 	@${REINPLACE_CMD} -e 's|girepositry|girepository|g' \

@@ -56,6 +56,9 @@ include/PackageKit/packagekit-glib2/pk-transaction-past.h
 include/PackageKit/packagekit-glib2/pk-update-detail.h
 include/PackageKit/packagekit-glib2/pk-version.h
 lib/girepository-1.0/PackageKitGlib-1.0.typelib
+%%GTK%%lib/gtk-3.0/modules/libpk-gtk-module.a
+%%GTK%%lib/gtk-3.0/modules/libpk-gtk-module.la
+%%GTK%%lib/gtk-3.0/modules/libpk-gtk-module.so
 lib/libpackagekit-glib2.a
 lib/libpackagekit-glib2.la
 lib/libpackagekit-glib2.so
