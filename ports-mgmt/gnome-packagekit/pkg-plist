@@ -1,6 +1,6 @@
 bin/gpk-application
-bin/gpk-backend-status
 bin/gpk-dbus-service
+bin/gpk-distro-upgrade
 bin/gpk-install-catalog
 bin/gpk-install-local-file
 bin/gpk-install-mime-type
@@ -8,209 +8,207 @@ bin/gpk-install-package-name
 bin/gpk-install-provide-file
 bin/gpk-log
 bin/gpk-prefs
-bin/gpk-repo
 bin/gpk-service-pack
-bin/gpk-update-icon
 bin/gpk-update-viewer
+lib/gnome-settings-daemon-3.0/gtk-modules/gpk-pk-gtk-module.desktop
 %%PYTHON_SITELIBDIR%%/packagekit/genums.py
 %%PYTHON_SITELIBDIR%%/packagekit/genums.pyc
 %%PYTHON_SITELIBDIR%%/packagekit/genums.pyo
 %%PYTHON_SITELIBDIR%%/packagekit/gtkwidgets.py
 %%PYTHON_SITELIBDIR%%/packagekit/gtkwidgets.pyc
 %%PYTHON_SITELIBDIR%%/packagekit/gtkwidgets.pyo
+share/GConf/gsettings/org.gnome.packagekit.gschema.migrate
 share/applications/gpk-application.desktop
+share/applications/gpk-distro-upgrade.desktop
 share/applications/gpk-install-catalog.desktop
-share/applications/gpk-install-file.desktop
+share/applications/gpk-install-local-file.desktop
 share/applications/gpk-log.desktop
 share/applications/gpk-prefs.desktop
-share/applications/gpk-repo.desktop
 share/applications/gpk-service-pack.desktop
 share/applications/gpk-update-viewer.desktop
 share/dbus-1/services/org.freedesktop.PackageKit.service
-share/gnome-packagekit/gpk-application.ui
-share/gnome-packagekit/gpk-backend-status.ui
-share/gnome-packagekit/gpk-client.ui
-share/gnome-packagekit/gpk-error.ui
-share/gnome-packagekit/gpk-eula.ui
-share/gnome-packagekit/gpk-log.ui
-share/gnome-packagekit/gpk-prefs.ui
-share/gnome-packagekit/gpk-repo.ui
-share/gnome-packagekit/gpk-service-pack.ui
-share/gnome-packagekit/gpk-signature.ui
-share/gnome-packagekit/gpk-update-viewer.ui
-share/gnome-packagekit/icons/hicolor/16x16/actions/pk-desktop-gnome.png
-share/gnome-packagekit/icons/hicolor/16x16/actions/pk-desktop-kde.png
-share/gnome-packagekit/icons/hicolor/16x16/actions/pk-desktop-xfce.png
-share/gnome-packagekit/icons/hicolor/16x16/animations/pk-action-cleanup.png
-share/gnome-packagekit/icons/hicolor/16x16/animations/pk-action-download.png
-share/gnome-packagekit/icons/hicolor/16x16/animations/pk-action-installing.png
-share/gnome-packagekit/icons/hicolor/16x16/animations/pk-action-refresh-cache.png
-share/gnome-packagekit/icons/hicolor/16x16/animations/pk-action-removing.png
-share/gnome-packagekit/icons/hicolor/16x16/animations/pk-action-searching.png
-share/gnome-packagekit/icons/hicolor/16x16/animations/pk-action-testing.png
-share/gnome-packagekit/icons/hicolor/16x16/animations/pk-action-waiting.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-collection-available.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-collection-installed.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-add.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-available.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-blocked.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-cleanup.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-delete.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-download.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-downloaded.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-info.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-installed.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-search.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-sources.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-package-update.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-refresh-cache.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-rollback.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-service-pack.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-setup.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-update-bugfix.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-update-enhancement.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-update-high.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-update-low.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-update-normal.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-update-security.png
-share/gnome-packagekit/icons/hicolor/16x16/status/pk-wait.png
-share/gnome-packagekit/icons/hicolor/22x22/actions/pk-desktop-gnome.png
-share/gnome-packagekit/icons/hicolor/22x22/actions/pk-desktop-kde.png
-share/gnome-packagekit/icons/hicolor/22x22/actions/pk-desktop-xfce.png
-share/gnome-packagekit/icons/hicolor/22x22/animations/pk-action-cleanup.png
-share/gnome-packagekit/icons/hicolor/22x22/animations/pk-action-download.png
-share/gnome-packagekit/icons/hicolor/22x22/animations/pk-action-installing.png
-share/gnome-packagekit/icons/hicolor/22x22/animations/pk-action-refresh-cache.png
-share/gnome-packagekit/icons/hicolor/22x22/animations/pk-action-removing.png
-share/gnome-packagekit/icons/hicolor/22x22/animations/pk-action-searching.png
-share/gnome-packagekit/icons/hicolor/22x22/animations/pk-action-testing.png
-share/gnome-packagekit/icons/hicolor/22x22/animations/pk-action-waiting.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-collection-available.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-collection-installed.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-add.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-available.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-blocked.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-cleanup.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-delete.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-download.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-downloaded.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-info.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-installed.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-search.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-sources.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-package-update.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-refresh-cache.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-rollback.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-service-pack.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-setup.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-update-bugfix.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-update-enhancement.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-update-high.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-update-low.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-update-normal.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-update-security.png
-share/gnome-packagekit/icons/hicolor/22x22/status/pk-wait.png
-share/gnome-packagekit/icons/hicolor/24x24/actions/pk-desktop-gnome.png
-share/gnome-packagekit/icons/hicolor/24x24/actions/pk-desktop-kde.png
-share/gnome-packagekit/icons/hicolor/24x24/actions/pk-desktop-xfce.png
-share/gnome-packagekit/icons/hicolor/24x24/animations/pk-action-cleanup.png
-share/gnome-packagekit/icons/hicolor/24x24/animations/pk-action-download.png
-share/gnome-packagekit/icons/hicolor/24x24/animations/pk-action-installing.png
-share/gnome-packagekit/icons/hicolor/24x24/animations/pk-action-refresh-cache.png
-share/gnome-packagekit/icons/hicolor/24x24/animations/pk-action-removing.png
-share/gnome-packagekit/icons/hicolor/24x24/animations/pk-action-searching.png
-share/gnome-packagekit/icons/hicolor/24x24/animations/pk-action-testing.png
-share/gnome-packagekit/icons/hicolor/24x24/animations/pk-action-waiting.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-collection-available.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-collection-installed.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-add.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-available.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-blocked.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-cleanup.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-delete.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-download.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-downloaded.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-info.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-installed.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-search.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-sources.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-package-update.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-refresh-cache.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-rollback.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-service-pack.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-setup.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-update-bugfix.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-update-enhancement.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-update-high.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-update-low.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-update-normal.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-update-security.png
-share/gnome-packagekit/icons/hicolor/24x24/status/pk-wait.png
-share/gnome-packagekit/icons/hicolor/48x48/actions/pk-desktop-gnome.png
-share/gnome-packagekit/icons/hicolor/48x48/actions/pk-desktop-kde.png
-share/gnome-packagekit/icons/hicolor/48x48/actions/pk-desktop-xfce.png
-share/gnome-packagekit/icons/hicolor/48x48/animations/pk-action-cleanup.png
-share/gnome-packagekit/icons/hicolor/48x48/animations/pk-action-download.png
-share/gnome-packagekit/icons/hicolor/48x48/animations/pk-action-installing.png
-share/gnome-packagekit/icons/hicolor/48x48/animations/pk-action-refresh-cache.png
-share/gnome-packagekit/icons/hicolor/48x48/animations/pk-action-removing.png
-share/gnome-packagekit/icons/hicolor/48x48/animations/pk-action-searching.png
-share/gnome-packagekit/icons/hicolor/48x48/animations/pk-action-testing.png
-share/gnome-packagekit/icons/hicolor/48x48/animations/pk-action-waiting.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-collection-available.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-collection-installed.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-add.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-available.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-blocked.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-cleanup.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-delete.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-download.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-downloaded.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-info.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-installed.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-search.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-sources.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-package-update.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-refresh-cache.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-rollback.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-service-pack.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-setup.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-update-bugfix.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-update-enhancement.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-update-high.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-update-low.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-update-normal.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-update-security.png
-share/gnome-packagekit/icons/hicolor/48x48/status/pk-wait.png
-share/gnome-packagekit/icons/hicolor/scalable/actions/pk-desktop-gnome.svg
-share/gnome-packagekit/icons/hicolor/scalable/actions/pk-desktop-kde.svgz
-share/gnome-packagekit/icons/hicolor/scalable/actions/pk-desktop-xfce.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-collection-available.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-collection-installed.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-add.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-available.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-blocked.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-cleanup.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-delete.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-download.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-downloaded.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-info.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-installed.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-search.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-sources.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-package-update.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-refresh-cache.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-rollback.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-service-pack.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-setup.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-update-bugfix.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-update-enhancement.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-update-high.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-update-low.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-update-normal.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-update-security.svg
-share/gnome-packagekit/icons/hicolor/scalable/status/pk-wait.svg
-share/gnome/autostart/gpk-update-icon.desktop
+share/glib-2.0/schemas/org.gnome.packagekit.gschema.xml
+%%DATADIR%%/gpk-application.ui
+%%DATADIR%%/gpk-client.ui
+%%DATADIR%%/gpk-error.ui
+%%DATADIR%%/gpk-eula.ui
+%%DATADIR%%/gpk-log.ui
+%%DATADIR%%/gpk-prefs.ui
+%%DATADIR%%/gpk-service-pack.ui
+%%DATADIR%%/gpk-signature.ui
+%%DATADIR%%/gpk-update-viewer.ui
+%%DATADIR%%/icons/hicolor/16x16/actions/pk-desktop-gnome.png
+%%DATADIR%%/icons/hicolor/16x16/actions/pk-desktop-kde.png
+%%DATADIR%%/icons/hicolor/16x16/actions/pk-desktop-xfce.png
+%%DATADIR%%/icons/hicolor/16x16/animations/pk-action-cleanup.png
+%%DATADIR%%/icons/hicolor/16x16/animations/pk-action-download.png
+%%DATADIR%%/icons/hicolor/16x16/animations/pk-action-installing.png
+%%DATADIR%%/icons/hicolor/16x16/animations/pk-action-refresh-cache.png
+%%DATADIR%%/icons/hicolor/16x16/animations/pk-action-removing.png
+%%DATADIR%%/icons/hicolor/16x16/animations/pk-action-searching.png
+%%DATADIR%%/icons/hicolor/16x16/animations/pk-action-testing.png
+%%DATADIR%%/icons/hicolor/16x16/animations/pk-action-waiting.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-collection-available.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-collection-installed.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-add.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-available.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-blocked.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-cleanup.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-delete.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-download.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-downloaded.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-info.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-installed.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-search.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-sources.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-package-update.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-refresh-cache.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-rollback.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-service-pack.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-setup.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-update-bugfix.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-update-enhancement.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-update-high.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-update-low.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-update-normal.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-update-security.png
+%%DATADIR%%/icons/hicolor/16x16/status/pk-wait.png
+%%DATADIR%%/icons/hicolor/22x22/actions/pk-desktop-gnome.png
+%%DATADIR%%/icons/hicolor/22x22/actions/pk-desktop-kde.png
+%%DATADIR%%/icons/hicolor/22x22/actions/pk-desktop-xfce.png
+%%DATADIR%%/icons/hicolor/22x22/animations/pk-action-cleanup.png
+%%DATADIR%%/icons/hicolor/22x22/animations/pk-action-download.png
+%%DATADIR%%/icons/hicolor/22x22/animations/pk-action-installing.png
+%%DATADIR%%/icons/hicolor/22x22/animations/pk-action-refresh-cache.png
+%%DATADIR%%/icons/hicolor/22x22/animations/pk-action-removing.png
+%%DATADIR%%/icons/hicolor/22x22/animations/pk-action-searching.png
+%%DATADIR%%/icons/hicolor/22x22/animations/pk-action-testing.png
+%%DATADIR%%/icons/hicolor/22x22/animations/pk-action-waiting.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-collection-available.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-collection-installed.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-add.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-available.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-blocked.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-cleanup.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-delete.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-download.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-downloaded.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-info.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-installed.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-search.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-sources.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-package-update.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-refresh-cache.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-rollback.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-service-pack.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-setup.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-update-bugfix.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-update-enhancement.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-update-high.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-update-low.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-update-normal.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-update-security.png
+%%DATADIR%%/icons/hicolor/22x22/status/pk-wait.png
+%%DATADIR%%/icons/hicolor/24x24/actions/pk-desktop-gnome.png
+%%DATADIR%%/icons/hicolor/24x24/actions/pk-desktop-kde.png
+%%DATADIR%%/icons/hicolor/24x24/actions/pk-desktop-xfce.png
+%%DATADIR%%/icons/hicolor/24x24/animations/pk-action-cleanup.png
+%%DATADIR%%/icons/hicolor/24x24/animations/pk-action-download.png
+%%DATADIR%%/icons/hicolor/24x24/animations/pk-action-installing.png
+%%DATADIR%%/icons/hicolor/24x24/animations/pk-action-refresh-cache.png
+%%DATADIR%%/icons/hicolor/24x24/animations/pk-action-removing.png
+%%DATADIR%%/icons/hicolor/24x24/animations/pk-action-searching.png
+%%DATADIR%%/icons/hicolor/24x24/animations/pk-action-testing.png
+%%DATADIR%%/icons/hicolor/24x24/animations/pk-action-waiting.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-collection-available.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-collection-installed.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-add.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-available.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-blocked.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-cleanup.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-delete.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-download.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-downloaded.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-info.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-installed.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-search.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-sources.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-package-update.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-refresh-cache.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-rollback.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-service-pack.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-setup.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-update-bugfix.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-update-enhancement.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-update-high.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-update-low.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-update-normal.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-update-security.png
+%%DATADIR%%/icons/hicolor/24x24/status/pk-wait.png
+%%DATADIR%%/icons/hicolor/48x48/actions/pk-desktop-gnome.png
+%%DATADIR%%/icons/hicolor/48x48/actions/pk-desktop-kde.png
+%%DATADIR%%/icons/hicolor/48x48/actions/pk-desktop-xfce.png
+%%DATADIR%%/icons/hicolor/48x48/animations/pk-action-cleanup.png
+%%DATADIR%%/icons/hicolor/48x48/animations/pk-action-download.png
+%%DATADIR%%/icons/hicolor/48x48/animations/pk-action-installing.png
+%%DATADIR%%/icons/hicolor/48x48/animations/pk-action-refresh-cache.png
+%%DATADIR%%/icons/hicolor/48x48/animations/pk-action-removing.png
+%%DATADIR%%/icons/hicolor/48x48/animations/pk-action-searching.png
+%%DATADIR%%/icons/hicolor/48x48/animations/pk-action-testing.png
+%%DATADIR%%/icons/hicolor/48x48/animations/pk-action-waiting.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-collection-available.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-collection-installed.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-add.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-available.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-blocked.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-cleanup.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-delete.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-download.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-downloaded.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-info.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-installed.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-search.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-sources.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-package-update.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-refresh-cache.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-rollback.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-service-pack.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-setup.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-update-bugfix.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-update-enhancement.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-update-high.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-update-low.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-update-normal.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-update-security.png
+%%DATADIR%%/icons/hicolor/48x48/status/pk-wait.png
+%%DATADIR%%/icons/hicolor/scalable/actions/pk-desktop-gnome.svg
+%%DATADIR%%/icons/hicolor/scalable/actions/pk-desktop-kde.svgz
+%%DATADIR%%/icons/hicolor/scalable/actions/pk-desktop-xfce.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-collection-available.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-collection-installed.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-add.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-available.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-blocked.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-cleanup.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-delete.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-download.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-downloaded.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-info.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-installed.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-search.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-sources.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-package-update.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-refresh-cache.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-rollback.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-service-pack.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-setup.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-update-bugfix.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-update-enhancement.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-update-high.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-update-low.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-update-normal.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-update-security.svg
+%%DATADIR%%/icons/hicolor/scalable/status/pk-wait.svg
 share/gnome/help/gnome-packagekit/C/figures/gpk-added-deps.png
 share/gnome/help/gnome-packagekit/C/figures/gpk-application-groups.png
 share/gnome/help/gnome-packagekit/C/figures/gpk-client-codecs.png
@@ -280,6 +278,23 @@ share/gnome/help/gnome-packagekit/es/figures/gpk-updates-overview.png
 share/gnome/help/gnome-packagekit/es/figures/gpk-updates-warning.png
 share/gnome/help/gnome-packagekit/es/figures/gpk-updates.png
 share/gnome/help/gnome-packagekit/es/gnome-packagekit.xml
+share/gnome/help/gnome-packagekit/fr/figures/gpk-added-deps.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-application-groups.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-client-codecs.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-client-copy-local.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-eula.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-log.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-prefs.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-remove-confirm.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-repo-auth.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-repo.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-service-pack-example.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-service-pack.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-signature.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-updates-overview.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-updates-warning.png
+share/gnome/help/gnome-packagekit/fr/figures/gpk-updates.png
+share/gnome/help/gnome-packagekit/fr/gnome-packagekit.xml
 share/gnome/help/gnome-packagekit/oc/figures/gpk-added-deps.png
 share/gnome/help/gnome-packagekit/oc/figures/gpk-application-groups.png
 share/gnome/help/gnome-packagekit/oc/figures/gpk-client-codecs.png
@@ -297,6 +312,23 @@ share/gnome/help/gnome-packagekit/oc/figures/gpk-updates-overview.png
 share/gnome/help/gnome-packagekit/oc/figures/gpk-updates-warning.png
 share/gnome/help/gnome-packagekit/oc/figures/gpk-updates.png
 share/gnome/help/gnome-packagekit/oc/gnome-packagekit.xml
+share/gnome/help/gnome-packagekit/pa/figures/gpk-added-deps.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-application-groups.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-client-codecs.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-client-copy-local.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-eula.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-log.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-prefs.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-remove-confirm.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-repo-auth.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-repo.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-service-pack-example.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-service-pack.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-signature.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-updates-overview.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-updates-warning.png
+share/gnome/help/gnome-packagekit/pa/figures/gpk-updates.png
+share/gnome/help/gnome-packagekit/pa/gnome-packagekit.xml
 share/gnome/help/gnome-packagekit/pl/figures/gpk-added-deps.png
 share/gnome/help/gnome-packagekit/pl/figures/gpk-application-groups.png
 share/gnome/help/gnome-packagekit/pl/figures/gpk-client-codecs.png
@@ -314,6 +346,23 @@ share/gnome/help/gnome-packagekit/pl/figures/gpk-updates-overview.png
 share/gnome/help/gnome-packagekit/pl/figures/gpk-updates-warning.png
 share/gnome/help/gnome-packagekit/pl/figures/gpk-updates.png
 share/gnome/help/gnome-packagekit/pl/gnome-packagekit.xml
+share/gnome/help/gnome-packagekit/sl/figures/gpk-added-deps.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-application-groups.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-client-codecs.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-client-copy-local.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-eula.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-log.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-prefs.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-remove-confirm.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-repo-auth.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-repo.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-service-pack-example.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-service-pack.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-signature.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-updates-overview.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-updates-warning.png
+share/gnome/help/gnome-packagekit/sl/figures/gpk-updates.png
+share/gnome/help/gnome-packagekit/sl/gnome-packagekit.xml
 share/gnome/help/gnome-packagekit/sv/figures/gpk-added-deps.png
 share/gnome/help/gnome-packagekit/sv/figures/gpk-application-groups.png
 share/gnome/help/gnome-packagekit/sv/figures/gpk-client-codecs.png
@@ -399,6 +448,7 @@ share/locale/en@shaw/LC_MESSAGES/gnome-packagekit.mo
 share/locale/en_GB/LC_MESSAGES/gnome-packagekit.mo
 share/locale/es/LC_MESSAGES/gnome-packagekit.mo
 share/locale/et/LC_MESSAGES/gnome-packagekit.mo
+share/locale/fa/LC_MESSAGES/gnome-packagekit.mo
 share/locale/fi/LC_MESSAGES/gnome-packagekit.mo
 share/locale/fr/LC_MESSAGES/gnome-packagekit.mo
 share/locale/gl/LC_MESSAGES/gnome-packagekit.mo
@@ -410,6 +460,7 @@ share/locale/id/LC_MESSAGES/gnome-packagekit.mo
 share/locale/it/LC_MESSAGES/gnome-packagekit.mo
 share/locale/ja/LC_MESSAGES/gnome-packagekit.mo
 share/locale/kn/LC_MESSAGES/gnome-packagekit.mo
+share/locale/ko/LC_MESSAGES/gnome-packagekit.mo
 share/locale/lt/LC_MESSAGES/gnome-packagekit.mo
 share/locale/lv/LC_MESSAGES/gnome-packagekit.mo
 share/locale/ml/LC_MESSAGES/gnome-packagekit.mo
@@ -417,6 +468,7 @@ share/locale/mr/LC_MESSAGES/gnome-packagekit.mo
 share/locale/ms/LC_MESSAGES/gnome-packagekit.mo
 share/locale/nb/LC_MESSAGES/gnome-packagekit.mo
 share/locale/nl/LC_MESSAGES/gnome-packagekit.mo
+share/locale/nn/LC_MESSAGES/gnome-packagekit.mo
 share/locale/oc/LC_MESSAGES/gnome-packagekit.mo
 share/locale/or/LC_MESSAGES/gnome-packagekit.mo
 share/locale/pa/LC_MESSAGES/gnome-packagekit.mo
@@ -433,6 +485,7 @@ share/locale/sv/LC_MESSAGES/gnome-packagekit.mo
 share/locale/ta/LC_MESSAGES/gnome-packagekit.mo
 share/locale/te/LC_MESSAGES/gnome-packagekit.mo
 share/locale/tr/LC_MESSAGES/gnome-packagekit.mo
+share/locale/ug/LC_MESSAGES/gnome-packagekit.mo
 share/locale/uk/LC_MESSAGES/gnome-packagekit.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-packagekit.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-packagekit.mo
@@ -441,15 +494,22 @@ share/omf/gnome-packagekit/gnome-packagekit-C.omf
 share/omf/gnome-packagekit/gnome-packagekit-de.omf
 share/omf/gnome-packagekit/gnome-packagekit-el.omf
 share/omf/gnome-packagekit/gnome-packagekit-es.omf
+share/omf/gnome-packagekit/gnome-packagekit-fr.omf
 share/omf/gnome-packagekit/gnome-packagekit-oc.omf
+share/omf/gnome-packagekit/gnome-packagekit-pa.omf
 share/omf/gnome-packagekit/gnome-packagekit-pl.omf
+share/omf/gnome-packagekit/gnome-packagekit-sl.omf
 share/omf/gnome-packagekit/gnome-packagekit-sv.omf
 share/omf/gnome-packagekit/gnome-packagekit-zh_CN.omf
 @dirrm share/omf/gnome-packagekit
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
 @dirrmtry share/locale/mr/LC_MESSAGES
@@ -466,10 +526,16 @@ share/omf/gnome-packagekit/gnome-packagekit-zh_CN.omf
 @dirrm share/gnome/help/gnome-packagekit/zh_CN
 @dirrm share/gnome/help/gnome-packagekit/sv/figures
 @dirrm share/gnome/help/gnome-packagekit/sv
+@dirrm share/gnome/help/gnome-packagekit/sl/figures
+@dirrm share/gnome/help/gnome-packagekit/sl
 @dirrm share/gnome/help/gnome-packagekit/pl/figures
 @dirrm share/gnome/help/gnome-packagekit/pl
+@dirrm share/gnome/help/gnome-packagekit/pa/figures
+@dirrm share/gnome/help/gnome-packagekit/pa
 @dirrm share/gnome/help/gnome-packagekit/oc/figures
 @dirrm share/gnome/help/gnome-packagekit/oc
+@dirrm share/gnome/help/gnome-packagekit/fr/figures
+@dirrm share/gnome/help/gnome-packagekit/fr
 @dirrm share/gnome/help/gnome-packagekit/es/figures
 @dirrm share/gnome/help/gnome-packagekit/es
 @dirrm share/gnome/help/gnome-packagekit/el/figures
@@ -479,29 +545,35 @@ share/omf/gnome-packagekit/gnome-packagekit-zh_CN.omf
 @dirrm share/gnome/help/gnome-packagekit/C/figures
 @dirrm share/gnome/help/gnome-packagekit/C
 @dirrm share/gnome/help/gnome-packagekit
-@dirrm share/gnome-packagekit/icons/hicolor/scalable/status
-@dirrm share/gnome-packagekit/icons/hicolor/scalable/actions
-@dirrm share/gnome-packagekit/icons/hicolor/scalable
-@dirrm share/gnome-packagekit/icons/hicolor/48x48/status
-@dirrm share/gnome-packagekit/icons/hicolor/48x48/animations
-@dirrm share/gnome-packagekit/icons/hicolor/48x48/actions
-@dirrm share/gnome-packagekit/icons/hicolor/48x48
-@dirrm share/gnome-packagekit/icons/hicolor/24x24/status
-@dirrm share/gnome-packagekit/icons/hicolor/24x24/animations
-@dirrm share/gnome-packagekit/icons/hicolor/24x24/actions
-@dirrm share/gnome-packagekit/icons/hicolor/24x24
-@dirrm share/gnome-packagekit/icons/hicolor/22x22/status
-@dirrm share/gnome-packagekit/icons/hicolor/22x22/animations
-@dirrm share/gnome-packagekit/icons/hicolor/22x22/actions
-@dirrm share/gnome-packagekit/icons/hicolor/22x22
-@dirrm share/gnome-packagekit/icons/hicolor/16x16/status
-@dirrm share/gnome-packagekit/icons/hicolor/16x16/animations
-@dirrm share/gnome-packagekit/icons/hicolor/16x16/actions
-@dirrm share/gnome-packagekit/icons/hicolor/16x16
-@dirrm share/gnome-packagekit/icons/hicolor
-@dirrm share/gnome-packagekit/icons
-@dirrm share/gnome-packagekit
+@dirrm %%DATADIR%%/icons/hicolor/scalable/status
+@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
+@dirrm %%DATADIR%%/icons/hicolor/scalable
+@dirrm %%DATADIR%%/icons/hicolor/48x48/status
+@dirrm %%DATADIR%%/icons/hicolor/48x48/animations
+@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
+@dirrm %%DATADIR%%/icons/hicolor/48x48
+@dirrm %%DATADIR%%/icons/hicolor/24x24/status
+@dirrm %%DATADIR%%/icons/hicolor/24x24/animations
+@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor/22x22/status
+@dirrm %%DATADIR%%/icons/hicolor/22x22/animations
+@dirrm %%DATADIR%%/icons/hicolor/22x22/actions
+@dirrm %%DATADIR%%/icons/hicolor/22x22
+@dirrm %%DATADIR%%/icons/hicolor/16x16/status
+@dirrm %%DATADIR%%/icons/hicolor/16x16/animations
+@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
+@dirrm %%DATADIR%%/icons/hicolor/16x16
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
+@dirrm %%DATADIR%%
 @dirrmtry share/applications
+@dirrmtry share/GConf/gsettings
+@dirrmtry share/GConf
+@dirrm %%PYTHON_SITELIBDIR%%/packagekit
+@dirrm %%PYTHON_SITELIBDIR%%
+@dirrm %%PYTHON_LIBDIR%%
+@dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
+@dirrmtry lib/gnome-settings-daemon-3.0
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@dirrmtry %%PYTHON_SITELIBDIR%%/packagekit

@@ -3,11 +3,10 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.19 2010/10/04 20:40:36 kwm Exp $
+#  $MCom: ports/ports-mgmt/gnome-packagekit/Makefile,v 1.21 2011/03/06 20:52:37 kwm Exp $
 
 PORTNAME=	gnome-packagekit
-PORTVERSION=	2.32.0
-PORTREVISION=	2
+PORTVERSION=	2.91.92
 CATEGORIES=	ports-mgmt sysutils gnome
 MASTER_SITES=	GNOME
 
@@ -18,23 +17,23 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils
 LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		packagekit-glib2.14:${PORTSDIR}/ports-mgmt/packagekit \
 		notify.4:${PORTSDIR}/devel/libnotify \
-		unique-1.0:${PORTSDIR}/x11-toolkits/unique \
 		upower-glib.1:${PORTSDIR}/sysutils/upower \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
+		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gnomemenus gnomedocutils \
+USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gnomemenus gnomedocutils \
 		desktopfileutils
 USE_GETTEXT=	yes
 USE_ICONV=	yes
 USE_PYTHON_BUILD=2.5+
-GCONF_SCHEMAS=	gnome-packagekit.schemas
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+GLIB_SCHEMAS=	org.gnome.packagekit.gschema.xml
 
 MAN1=	gpk-application.1 gpk-backend-status.1 gpk-install-local-file.1 \
 	gpk-install-mime-type.1 gpk-install-package-name.1 \
