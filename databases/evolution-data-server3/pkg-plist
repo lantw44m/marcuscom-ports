@@ -717,6 +717,7 @@ share/locale/en_AU/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/en_CA/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/en_GB/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/en@shaw/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
+share/locale/eo/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/es/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/et/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
 share/locale/eu/LC_MESSAGES/evolution-data-server-%%VERSION%%.mo
