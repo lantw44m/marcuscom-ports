@@ -2127,6 +2127,7 @@ share/icons/hicolor/24x24/apps/evolution-mail.png
 share/icons/hicolor/24x24/apps/evolution-memos.png
 share/icons/hicolor/24x24/apps/evolution-tasks.png
 share/icons/hicolor/24x24/apps/evolution.png
+share/icons/hicolor/256x256/apps/evolution.png
 share/icons/hicolor/32x32/apps/evolution-mail.png
 share/icons/hicolor/32x32/apps/evolution-memos.png
 share/icons/hicolor/32x32/apps/evolution-tasks.png
@@ -2135,7 +2136,6 @@ share/icons/hicolor/48x48/apps/evolution-mail.png
 share/icons/hicolor/48x48/apps/evolution-memos.png
 share/icons/hicolor/48x48/apps/evolution-tasks.png
 share/icons/hicolor/48x48/apps/evolution.png
-share/icons/hicolor/scalable/apps/evolution.svg
 share/locale/af/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/am/LC_MESSAGES/evolution-%%VERSION%%.mo
 share/locale/ar/LC_MESSAGES/evolution-%%VERSION%%.mo

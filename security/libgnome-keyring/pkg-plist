@@ -30,6 +30,7 @@ share/doc/gnome-keyring/left.png
 share/doc/gnome-keyring/right.png
 share/doc/gnome-keyring/style.css
 share/doc/gnome-keyring/up.png
+share/locale/af/LC_MESSAGES/libgnome-keyring.mo
 share/locale/ar/LC_MESSAGES/libgnome-keyring.mo
 share/locale/ast/LC_MESSAGES/libgnome-keyring.mo
 share/locale/bg/LC_MESSAGES/libgnome-keyring.mo
