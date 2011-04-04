@@ -50,12 +50,6 @@ lib/libchamplain-gtk-%%VERSION%%.a
 lib/libchamplain-gtk-%%VERSION%%.la
 lib/libchamplain-gtk-%%VERSION%%.so
 lib/libchamplain-gtk-%%VERSION%%.so.0
-%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlain.a
-%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlain.la
-%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlain.so
-%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlaingtk.a
-%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlaingtk.la
-%%PYTHON%%%%PYTHON_SITELIBDIR%%/champlaingtk.so
 libdata/pkgconfig/champlain-%%VERSION%%.pc
 libdata/pkgconfig/champlain-gtk-%%VERSION%%.pc
 share/gir-1.0/Champlain-%%VERSION%%.gir
@@ -133,10 +127,6 @@ share/gtk-doc/html/libchamplain-gtk3/pt07.html
 share/gtk-doc/html/libchamplain-gtk3/right.png
 share/gtk-doc/html/libchamplain-gtk3/style.css
 share/gtk-doc/html/libchamplain-gtk3/up.png
-share/vala/vapi/champlain-%%VERSION%%.deps
-share/vala/vapi/champlain-%%VERSION%%.vapi
-share/vala/vapi/champlain-gtk-%%VERSION%%.deps
-share/vala/vapi/champlain-gtk-%%VERSION%%.vapi
 @dirrm share/gtk-doc/html/libchamplain-gtk3
 @dirrm share/gtk-doc/html/libchamplain-gtk3-gtk
 @dirrmtry share/gtk-doc/html

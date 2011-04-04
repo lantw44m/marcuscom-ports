@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libchamplain010/Makefile,v 1.1 2011/02/24 13:10:25 kwm Exp $
+#   $MCom: ports/graphics/libchamplain010/Makefile,v 1.2 2011/03/29 17:22:42 kwm Exp $
 #
 
 PORTNAME=	libchamplain
-PORTVERSION=	0.9.1
+PORTVERSION=	0.10.0
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -29,26 +29,6 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 CONFIGURE_ARGS=	--enable-gtk-doc-html=no
 
 PLIST_SUB=	VERSION=0.10
-
-# python bindings need to get ported
-WITHOUT_PYTHON=yes
-
-.if !defined(WITHOUT_PYTHON)
-USE_PYTHON=	yes
-PYCLUTTER_GTK=		${LOCALBASE}/libdata/pkgconfig/pyclutter-gtk-0.10.pc
-BUILD_DEPENDS+=		${PYCLUTTER_GTK}:${PORTSDIR}/graphics/py-clutter-gtk
-RUN_DEPENDS+=		${PYCLUTTER_GTK}:${PORTSDIR}/graphics/py-clutter-gtk
-CONFIGURE_ARGS+=	--enable-python=yes
-PLIST_SUB+=		PYTHON=""
-.else
-CONFIGURE_ARGS+=	--enable-python=no
-PLIST_SUB+=		PYTHON="@comment "
-.endif
-
-.pre-everything:
-	@${ECHO_CMD} ""
-	@${ECHO_CMD} "Specify WITHOUT_PYTHON=yes to disable python bindings"
-	@${ECHO_CMD} ""
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|DOC_MODULE = libchamplain|DOC_MODULE = libchamplain-gtk3|g' \
