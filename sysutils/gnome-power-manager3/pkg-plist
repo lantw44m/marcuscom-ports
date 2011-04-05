@@ -525,6 +525,7 @@ share/icons/hicolor/scalable/apps/gnome-brightness-applet.svg
 share/icons/hicolor/scalable/apps/gnome-inhibit-applet.svg
 share/icons/hicolor/scalable/apps/gnome-power-manager.svg
 share/icons/hicolor/scalable/apps/gnome-power-statistics.svg
+share/locale/af/LC_MESSAGES/gnome-power-manager.mo
 share/locale/ar/LC_MESSAGES/gnome-power-manager.mo
 share/locale/as/LC_MESSAGES/gnome-power-manager.mo
 share/locale/ast/LC_MESSAGES/gnome-power-manager.mo
