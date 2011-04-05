@@ -1120,6 +1120,79 @@ share/gnome/help/evince/gl/synctex-search.page
 share/gnome/help/evince/gl/synctex-support.page
 share/gnome/help/evince/gl/synctex.page
 share/gnome/help/evince/gl/textselection.page
+share/gnome/help/evince/hu/annotation-properties.page
+share/gnome/help/evince/hu/annotations-delete.page
+share/gnome/help/evince/hu/annotations-disabled.page
+share/gnome/help/evince/hu/annotations-navigate.page
+share/gnome/help/evince/hu/annotations-save.page
+share/gnome/help/evince/hu/annotations.page
+share/gnome/help/evince/hu/bookmarks.page
+share/gnome/help/evince/hu/bug-filing.page
+share/gnome/help/evince/hu/commandline.page
+share/gnome/help/evince/hu/convertPostScript.page
+share/gnome/help/evince/hu/convertSVG.page
+share/gnome/help/evince/hu/convertpdf.page
+share/gnome/help/evince/hu/duplex-10pages.page
+share/gnome/help/evince/hu/duplex-11pages.page
+share/gnome/help/evince/hu/duplex-12pages.page
+share/gnome/help/evince/hu/duplex-13pages.page
+share/gnome/help/evince/hu/duplex-14pages.page
+share/gnome/help/evince/hu/duplex-15pages.page
+share/gnome/help/evince/hu/duplex-16pages.page
+share/gnome/help/evince/hu/duplex-3pages.page
+share/gnome/help/evince/hu/duplex-4pages.page
+share/gnome/help/evince/hu/duplex-5pages.page
+share/gnome/help/evince/hu/duplex-6pages.page
+share/gnome/help/evince/hu/duplex-7pages.page
+share/gnome/help/evince/hu/duplex-8pages.page
+share/gnome/help/evince/hu/duplex-9pages.page
+share/gnome/help/evince/hu/duplex-npages.page
+share/gnome/help/evince/hu/editing.page
+share/gnome/help/evince/hu/figures/add-text-annotation.png
+share/gnome/help/evince/hu/figures/annotations-nav-to-page.png
+share/gnome/help/evince/hu/figures/annotations-navigate.png
+share/gnome/help/evince/hu/figures/evincelogo.png
+share/gnome/help/evince/hu/figures/gconf-editor.png
+share/gnome/help/evince/hu/figures/list-add-tabs.png
+share/gnome/help/evince/hu/figures/print-2sided.png
+share/gnome/help/evince/hu/figures/print-select.png
+share/gnome/help/evince/hu/figures/reverse-collate.png
+share/gnome/help/evince/hu/figures/zoom.png
+share/gnome/help/evince/hu/finding.page
+share/gnome/help/evince/hu/formats.page
+share/gnome/help/evince/hu/forms-saving.page
+share/gnome/help/evince/hu/forms.page
+share/gnome/help/evince/hu/index.page
+share/gnome/help/evince/hu/introduction.page
+share/gnome/help/evince/hu/invert-colors.page
+share/gnome/help/evince/hu/legal.xml
+share/gnome/help/evince/hu/movingaround.page
+share/gnome/help/evince/hu/noprint.page
+share/gnome/help/evince/hu/openerror.page
+share/gnome/help/evince/hu/opening.page
+share/gnome/help/evince/hu/password.page
+share/gnome/help/evince/hu/presentations.page
+share/gnome/help/evince/hu/print-2sided.page
+share/gnome/help/evince/hu/print-booklet.page
+share/gnome/help/evince/hu/print-differentsize.page
+share/gnome/help/evince/hu/print-order.page
+share/gnome/help/evince/hu/print-select.page
+share/gnome/help/evince/hu/printing.page
+share/gnome/help/evince/hu/reload.page
+share/gnome/help/evince/hu/shortcuts.page
+share/gnome/help/evince/hu/singlesided-13-16pages.page
+share/gnome/help/evince/hu/singlesided-17-20pages.page
+share/gnome/help/evince/hu/singlesided-3-4pages.page
+share/gnome/help/evince/hu/singlesided-5-8pages.page
+share/gnome/help/evince/hu/singlesided-9-12pages.page
+share/gnome/help/evince/hu/singlesided-npages.page
+share/gnome/help/evince/hu/synctex-beamer.page
+share/gnome/help/evince/hu/synctex-compile.page
+share/gnome/help/evince/hu/synctex-editors.page
+share/gnome/help/evince/hu/synctex-search.page
+share/gnome/help/evince/hu/synctex-support.page
+share/gnome/help/evince/hu/synctex.page
+share/gnome/help/evince/hu/textselection.page
 share/gnome/help/evince/it/annotation-properties.page
 share/gnome/help/evince/it/annotations-delete.page
 share/gnome/help/evince/it/annotations-disabled.page
@@ -2112,6 +2185,8 @@ share/thumbnailers/evince.thumbnailer
 @dirrm share/gnome/help/evince/ja
 @dirrm share/gnome/help/evince/it/figures
 @dirrm share/gnome/help/evince/it
+@dirrm share/gnome/help/evince/hu/figures
+@dirrm share/gnome/help/evince/hu
 @dirrm share/gnome/help/evince/gl/figures
 @dirrm share/gnome/help/evince/gl
 @dirrm share/gnome/help/evince/fr/figures
