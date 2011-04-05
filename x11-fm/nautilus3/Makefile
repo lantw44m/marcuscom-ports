@@ -3,11 +3,11 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.10 2011/03/29 21:27:21 kwm Exp $
+#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.11 2011/03/31 07:27:46 kwm Exp $
 #
 
 PORTNAME=	nautilus
-PORTVERSION=	2.91.94
+PORTVERSION=	3.0.0
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
