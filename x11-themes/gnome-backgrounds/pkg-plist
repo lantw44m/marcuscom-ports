@@ -1,21 +1,21 @@
-share/backgrounds/gnome/nature/Aqua.jpg
-share/backgrounds/gnome/nature/Blinds.jpg
-share/backgrounds/gnome/nature/BlueMarbleWest.jpg
-share/backgrounds/gnome/nature/FootFall.png
-share/backgrounds/gnome/nature/FreshFlower.jpg
-share/backgrounds/gnome/nature/Garden.jpg
-share/backgrounds/gnome/nature/GreenMeadow.jpg
-share/backgrounds/gnome/nature/Spaceflare-nova.jpg
-share/backgrounds/gnome/nature/Spaceflare-supernova.jpg
-share/backgrounds/gnome/nature/Spaceflare.jpg
-share/backgrounds/gnome/nature/SundownDunes.jpg
-share/backgrounds/gnome/nature/Terraform-blue.jpg
-share/backgrounds/gnome/nature/Terraform-green.jpg
-share/backgrounds/gnome/nature/Terraform-orange.jpg
-share/backgrounds/gnome/nature/TwoWings.jpg
-share/backgrounds/gnome/nature/Wood.jpg
-share/backgrounds/gnome/nature/YellowFlower.jpg
-share/gnome-background-properties/gnome-nature.xml
+share/backgrounds/gnome/Aqua.jpg
+share/backgrounds/gnome/Blinds.jpg
+share/backgrounds/gnome/BlueMarbleWest.jpg
+share/backgrounds/gnome/FootFall.png
+share/backgrounds/gnome/FreshFlower.jpg
+share/backgrounds/gnome/Garden.jpg
+share/backgrounds/gnome/GreenMeadow.jpg
+share/backgrounds/gnome/Spaceflare-nova.jpg
+share/backgrounds/gnome/Spaceflare-supernova.jpg
+share/backgrounds/gnome/Spaceflare.jpg
+share/backgrounds/gnome/SundownDunes.jpg
+share/backgrounds/gnome/Terraform-blue.jpg
+share/backgrounds/gnome/Terraform-green.jpg
+share/backgrounds/gnome/Terraform-orange.jpg
+share/backgrounds/gnome/TwoWings.jpg
+share/backgrounds/gnome/Wood.jpg
+share/backgrounds/gnome/YellowFlower.jpg
+share/gnome-background-properties/gnome-backgrounds.xml
 share/locale/af/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/an/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ar/LC_MESSAGES/gnome-backgrounds.mo
@@ -105,7 +105,7 @@ share/locale/vi/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-backgrounds.mo
-@dirrm share/backgrounds/gnome/nature
+@dirrm share/backgrounds/gnome
 @dirrmtry share/backgrounds/gnome
 @dirrmtry share/backgrounds
 @dirrmtry share/gnome-background-properties
