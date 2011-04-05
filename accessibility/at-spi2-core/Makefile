@@ -3,12 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.26 2011/03/29 21:35:24 kwm Exp $
+#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.27 2011/03/31 15:55:52 kwm Exp $
 #
 
 PORTNAME=	at-spi2-core
-PORTVERSION=	1.91.93
-PORTREVISION=	1
+PORTVERSION=	2.0.0
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,7 +24,7 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomehier glib20 intlhack
-USE_XORG=	x11 xi xtst
+USE_XORG=	x11 xi xtst xext
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
