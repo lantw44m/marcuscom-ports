@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libunique3/Makefile,v 1.2 2010/06/29 22:01:59 kwm Exp $
+#   $MCom: ports/x11-toolkits/libunique3/Makefile,v 1.4 2010/12/16 19:08:09 kwm Exp $
 #
 
 PORTNAME=	libunique
-PORTVERSION=	2.91.4
+PORTVERSION=	3.0.0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 
