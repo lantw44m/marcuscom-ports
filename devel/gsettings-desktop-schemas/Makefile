@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.10 2011/03/21 02:47:29 mezz Exp $
+#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.11 2011/03/21 18:50:51 kwm Exp $
 #
 
 PORTNAME=	gsettings-desktop-schemas
-PORTVERSION=	2.91.92
+PORTVERSION=	3.0.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
