@@ -2,12 +2,12 @@
 # Date created:		18 November 2005
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/avahi-app/Makefile,v 1.29 2010/12/04 07:32:51 ade Exp $
-#   $MCom: ports/net/avahi-app/Makefile,v 1.18 2011/03/31 01:51:20 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/net/avahi-app/Makefile,v 1.19 2011/03/31 02:01:43 mezz Exp $
 #
 
 PORTNAME=	avahi
-PORTVERSION=	0.6.29
+PORTVERSION=	0.6.30
 PORTREVISION?=	0
 CATEGORIES?=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
