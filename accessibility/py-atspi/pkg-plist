@@ -4,27 +4,9 @@
 %%PYTHON_SITELIBDIR%%/pyatspi/__init__.py
 %%PYTHON_SITELIBDIR%%/pyatspi/__init__.pyc
 %%PYTHON_SITELIBDIR%%/pyatspi/__init__.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi/accessible.py
-%%PYTHON_SITELIBDIR%%/pyatspi/accessible.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi/accessible.pyo
 %%PYTHON_SITELIBDIR%%/pyatspi/appevent.py
 %%PYTHON_SITELIBDIR%%/pyatspi/appevent.pyc
 %%PYTHON_SITELIBDIR%%/pyatspi/appevent.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi/application.py
-%%PYTHON_SITELIBDIR%%/pyatspi/application.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi/application.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi/busutils/__init__.py
-%%PYTHON_SITELIBDIR%%/pyatspi/busutils/__init__.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi/busutils/__init__.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi/busutils/bus.py
-%%PYTHON_SITELIBDIR%%/pyatspi/busutils/bus.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi/busutils/bus.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi/busutils/proxy.py
-%%PYTHON_SITELIBDIR%%/pyatspi/busutils/proxy.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi/busutils/proxy.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi/cache.py
-%%PYTHON_SITELIBDIR%%/pyatspi/cache.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi/cache.pyo
 %%PYTHON_SITELIBDIR%%/pyatspi/constants.py
 %%PYTHON_SITELIBDIR%%/pyatspi/constants.pyc
 %%PYTHON_SITELIBDIR%%/pyatspi/constants.pyo
@@ -40,12 +22,6 @@
 %%PYTHON_SITELIBDIR%%/pyatspi/enum.py
 %%PYTHON_SITELIBDIR%%/pyatspi/enum.pyc
 %%PYTHON_SITELIBDIR%%/pyatspi/enum.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi/exceptions.py
-%%PYTHON_SITELIBDIR%%/pyatspi/exceptions.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi/exceptions.pyo
-%%PYTHON_SITELIBDIR%%/pyatspi/factory.py
-%%PYTHON_SITELIBDIR%%/pyatspi/factory.pyc
-%%PYTHON_SITELIBDIR%%/pyatspi/factory.pyo
 %%PYTHON_SITELIBDIR%%/pyatspi/interfaces.py
 %%PYTHON_SITELIBDIR%%/pyatspi/interfaces.pyc
 %%PYTHON_SITELIBDIR%%/pyatspi/interfaces.pyo
@@ -64,5 +40,4 @@
 %%PYTHON_SITELIBDIR%%/pyatspi/utils.py
 %%PYTHON_SITELIBDIR%%/pyatspi/utils.pyc
 %%PYTHON_SITELIBDIR%%/pyatspi/utils.pyo
-@dirrm %%PYTHON_SITELIBDIR%%/pyatspi/busutils
 @dirrm %%PYTHON_SITELIBDIR%%/pyatspi
