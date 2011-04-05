@@ -69,20 +69,6 @@ share/applications/gnome-sound-panel.desktop
 share/applications/gnome-universal-access-panel.desktop
 share/applications/gnome-user-accounts-panel.desktop
 share/desktop-directories/gnomecc.directory
-share/doc/libgnome-control-center/api-index-full.html
-share/doc/libgnome-control-center/ch01.html
-share/doc/libgnome-control-center/home.png
-share/doc/libgnome-control-center/index.html
-share/doc/libgnome-control-center/index.sgml
-share/doc/libgnome-control-center/left.png
-share/doc/libgnome-control-center/libgnome-control-center-CcPanel.html
-share/doc/libgnome-control-center/libgnome-control-center-CcShell.html
-share/doc/libgnome-control-center/libgnome-control-center.devhelp
-share/doc/libgnome-control-center/libgnome-control-center.devhelp2
-share/doc/libgnome-control-center/object-tree.html
-share/doc/libgnome-control-center/right.png
-share/doc/libgnome-control-center/style.css
-share/doc/libgnome-control-center/up.png
 share/pixmaps/faces/astronaut.jpg
 share/pixmaps/faces/baseball.png
 share/pixmaps/faces/butterfly.png
@@ -558,7 +544,6 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/datetime
 @dirrmtry share/pixmaps/faces
-@dirrm share/doc/libgnome-control-center
 @dirrmtry share/desktop-directories
 @dirrmtry share/applications
 @dirrm lib/control-center-1/panels
