@@ -1801,8 +1801,8 @@ share/icons/hicolor/24x24/apps/gnome-robots.png
 share/icons/hicolor/24x24/apps/gnome-tali.png
 share/icons/hicolor/24x24/apps/gnome-tetravex.png
 share/icons/hicolor/256x256/apps/gnome-aisleriot.png
-share/icons/hicolor/256x256/apps/gnome-freecell.png
 share/icons/hicolor/256x256/apps/gnomine.png
+share/icons/hicolor/26x26/apps/gnome-aisleriot.png
 share/icons/hicolor/32x32/apps/gnome-aisleriot.png
 share/icons/hicolor/32x32/apps/gnome-freecell.png
 share/icons/hicolor/32x32/apps/gnome-glchess.png
@@ -1817,6 +1817,8 @@ share/icons/hicolor/32x32/apps/gnome-quadrapassel.png
 share/icons/hicolor/32x32/apps/gnome-robots.png
 share/icons/hicolor/32x32/apps/gnome-tali.png
 share/icons/hicolor/32x32/apps/gnome-tetravex.png
+share/icons/hicolor/34x34/apps/gnome-aisleriot.png
+share/icons/hicolor/40x40/apps/gnome-aisleriot.png
 share/icons/hicolor/48x48/apps/gnome-aisleriot.png
 share/icons/hicolor/48x48/apps/gnome-freecell.png
 share/icons/hicolor/48x48/apps/gnome-glchess.png
@@ -1831,8 +1833,8 @@ share/icons/hicolor/48x48/apps/gnome-quadrapassel.png
 share/icons/hicolor/48x48/apps/gnome-robots.png
 share/icons/hicolor/48x48/apps/gnome-tali.png
 share/icons/hicolor/48x48/apps/gnome-tetravex.png
-share/icons/hicolor/scalable/apps/gnome-aisleriot.svg
-share/icons/hicolor/scalable/apps/gnome-freecell.svg
+share/icons/hicolor/50x50/apps/gnome-aisleriot.png
+share/icons/hicolor/64x50/apps/gnome-aisleriot.png
 share/icons/hicolor/scalable/apps/gnome-glchess.svg
 share/icons/hicolor/scalable/apps/gnome-glines.svg
 share/icons/hicolor/scalable/apps/gnome-gnect.svg
@@ -2148,6 +2150,17 @@ share/omf/quadrapassel/quadrapassel-zh_CN.omf
 @dirrm share/omf/glines
 @dirrm share/omf/glchess
 @dirrm share/omf/aisleriot
+@comment 64x64 is in misc/hicolor-icon-theme
+@dirrmtry share/icons/hicolor/64x50/apps
+@dirrmtry share/icons/hicolor/64x50
+@dirrmtry share/icons/hicolor/50x50/apps
+@dirrmtry share/icons/hicolor/50x50
+@dirrmtry share/icons/hicolor/40x40/apps
+@dirrmtry share/icons/hicolor/40x40
+@dirrmtry share/icons/hicolor/34x34/apps
+@dirrmtry share/icons/hicolor/34x34
+@dirrmtry share/icons/hicolor/26x26/apps
+@dirrmtry share/icons/hicolor/26x26
 @dirrm share/gnome/help/quadrapassel/zh_CN
 @dirrm share/gnome/help/quadrapassel/sv
 @dirrm share/gnome/help/quadrapassel/sr@latin
