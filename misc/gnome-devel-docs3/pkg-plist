@@ -148,107 +148,117 @@ share/gnome/help/accessibility-devel-guide/sl/figures/label_below.png
 share/gnome/help/accessibility-devel-guide/sl/figures/label_left.png
 share/gnome/help/accessibility-devel-guide/sl/figures/label_right.png
 share/gnome/help/accessibility-devel-guide/sl/figures/nodrop.png
-share/gnome/help/devtools-install/C/fedora.page
-share/gnome/help/devtools-install/C/fedora.png
-share/gnome/help/devtools-install/C/index.page
-share/gnome/help/devtools-install/C/opensuse.page
-share/gnome/help/devtools-install/C/opensuse.png
-share/gnome/help/devtools-install/C/ubuntu.page
-share/gnome/help/devtools-install/C/ubuntu.png
-share/gnome/help/gdp-handbook/C/builddocs.xml
-share/gnome/help/gdp-handbook/C/callout_procedure.xml
-share/gnome/help/gdp-handbook/C/contexthelp.xml
-share/gnome/help/gdp-handbook/C/conventions.xml
-share/gnome/help/gdp-handbook/C/crossreferencing.xml
-share/gnome/help/gdp-handbook/C/docbook.xml
-share/gnome/help/gdp-handbook/C/docsystem.xml
-share/gnome/help/gdp-handbook/C/finish.xml
-share/gnome/help/gdp-handbook/C/gdp-handbook.xml
-share/gnome/help/gdp-handbook/C/getstarted.xml
-share/gnome/help/gdp-handbook/C/introduction.xml
-share/gnome/help/gdp-handbook/C/legal.xml
-share/gnome/help/gdp-handbook/C/manuals.xml
-share/gnome/help/gdp-handbook/C/resources.xml
-share/gnome/help/gdp-handbook/C/screenshot_procedure.xml
-share/gnome/help/gdp-handbook/C/sectids.xml
-share/gnome/help/gdp-handbook/C/teamwork.xml
-share/gnome/help/gdp-style-guide/C/Authorlist.xml
-share/gnome/help/gdp-style-guide/C/accessibility.xml
-share/gnome/help/gdp-style-guide/C/figures/applet_popup_menu.png
-share/gnome/help/gdp-style-guide/C/figures/arrow_button1.png
-share/gnome/help/gdp-style-guide/C/figures/arrow_button2.png
-share/gnome/help/gdp-style-guide/C/figures/callout_notflow.png
-share/gnome/help/gdp-style-guide/C/figures/check_box.png
-share/gnome/help/gdp-style-guide/C/figures/color_selector_button.png
-share/gnome/help/gdp-style-guide/C/figures/color_wheel1.png
-share/gnome/help/gdp-style-guide/C/figures/color_wheel2.png
-share/gnome/help/gdp-style-guide/C/figures/column_heading.png
-share/gnome/help/gdp-style-guide/C/figures/command_button.png
-share/gnome/help/gdp-style-guide/C/figures/desktop_background_menu.png
-share/gnome/help/gdp-style-guide/C/figures/desktop_elements.png
-share/gnome/help/gdp-style-guide/C/figures/dropdown_combination_box.png
-share/gnome/help/gdp-style-guide/C/figures/dropdown_list_box.png
-share/gnome/help/gdp-style-guide/C/figures/dropdown_section1.png
-share/gnome/help/gdp-style-guide/C/figures/dropdown_section2.png
-share/gnome/help/gdp-style-guide/C/figures/field.png
-share/gnome/help/gdp-style-guide/C/figures/font_selector_button.png
-share/gnome/help/gdp-style-guide/C/figures/footprint_icon.png
-share/gnome/help/gdp-style-guide/C/figures/gnome_menu.png
-share/gnome/help/gdp-style-guide/C/figures/group_box.png
-share/gnome/help/gdp-style-guide/C/figures/icon_selector_button1.png
-share/gnome/help/gdp-style-guide/C/figures/icon_selector_button2.png
-share/gnome/help/gdp-style-guide/C/figures/launcher_popup_menu.png
-share/gnome/help/gdp-style-guide/C/figures/list_box.png
-share/gnome/help/gdp-style-guide/C/figures/panel_elements.png
-share/gnome/help/gdp-style-guide/C/figures/panel_object_popup_menu.png
-share/gnome/help/gdp-style-guide/C/figures/panel_popup_menu.png
-share/gnome/help/gdp-style-guide/C/figures/radio_button.png
-share/gnome/help/gdp-style-guide/C/figures/sample_anno_panel.png
-share/gnome/help/gdp-style-guide/C/figures/scrollbar.png
-share/gnome/help/gdp-style-guide/C/figures/slider.png
-share/gnome/help/gdp-style-guide/C/figures/spin_box.png
-share/gnome/help/gdp-style-guide/C/figures/tabbed_section.png
-share/gnome/help/gdp-style-guide/C/figures/table.png
-share/gnome/help/gdp-style-guide/C/figures/tabs.png
-share/gnome/help/gdp-style-guide/C/figures/text_box.png
-share/gnome/help/gdp-style-guide/C/figures/toggle_button.png
-share/gnome/help/gdp-style-guide/C/figures/toolbar_button.png
-share/gnome/help/gdp-style-guide/C/figures/window_elements.png
-share/gnome/help/gdp-style-guide/C/figures/window_frame_button.png
-share/gnome/help/gdp-style-guide/C/figures/window_list_button.png
-share/gnome/help/gdp-style-guide/C/figures/window_menu.png
-share/gnome/help/gdp-style-guide/C/figures/window_panes.png
-share/gnome/help/gdp-style-guide/C/figures/window_titlebar_elements.png
-share/gnome/help/gdp-style-guide/C/fundamentals.xml
-share/gnome/help/gdp-style-guide/C/gdp-style-guide.xml
-share/gnome/help/gdp-style-guide/C/grammar_usage.xml
-share/gnome/help/gdp-style-guide/C/gui.xml
-share/gnome/help/gdp-style-guide/C/improving.xml
-share/gnome/help/gdp-style-guide/C/indexing.xml
-share/gnome/help/gdp-style-guide/C/infoblocks.xml
-share/gnome/help/gdp-style-guide/C/infodesign.xml
-share/gnome/help/gdp-style-guide/C/language.xml
-share/gnome/help/gdp-style-guide/C/legal.xml
-share/gnome/help/gdp-style-guide/C/legal_issues.xml
-share/gnome/help/gdp-style-guide/C/locale.xml
-share/gnome/help/gdp-style-guide/C/preface.xml
-share/gnome/help/gdp-style-guide/C/screenshot.xml
-share/gnome/help/gdp-style-guide/C/units.xml
-share/gnome/help/gdp-style-guide/C/usability.xml
-share/gnome/help/gdp-style-guide/C/wordlist.xml
+share/gnome/help/gnome-devel-demos/C/getting-ready.page
 share/gnome/help/gnome-devel-demos/C/guitar-tuner.c.page
+share/gnome/help/gnome-devel-demos/C/guitar-tuner.cpp.page
+share/gnome/help/gnome-devel-demos/C/guitar-tuner.py.page
+share/gnome/help/gnome-devel-demos/C/guitar-tuner.vala.page
+share/gnome/help/gnome-devel-demos/C/guitar-tuner/guitar-tuner.c
+share/gnome/help/gnome-devel-demos/C/guitar-tuner/guitar-tuner.cc
+share/gnome/help/gnome-devel-demos/C/guitar-tuner/guitar-tuner.py
+share/gnome/help/gnome-devel-demos/C/guitar-tuner/guitar-tuner.vala
 share/gnome/help/gnome-devel-demos/C/image-viewer.c.page
+share/gnome/help/gnome-devel-demos/C/image-viewer.cpp.page
 share/gnome/help/gnome-devel-demos/C/image-viewer.js.page
+share/gnome/help/gnome-devel-demos/C/image-viewer.py.page
+share/gnome/help/gnome-devel-demos/C/image-viewer/image-viewer.c
+share/gnome/help/gnome-devel-demos/C/image-viewer/image-viewer.cc
+share/gnome/help/gnome-devel-demos/C/image-viewer/image-viewer.js
+share/gnome/help/gnome-devel-demos/C/image-viewer/image-viewer.py
 share/gnome/help/gnome-devel-demos/C/index.page
 share/gnome/help/gnome-devel-demos/C/magic-mirror.vala.page
+share/gnome/help/gnome-devel-demos/C/magic-mirror/magic-mirror-advanced.vala
+share/gnome/help/gnome-devel-demos/C/magic-mirror/magic-mirror.vala
+share/gnome/help/gnome-devel-demos/C/media/fedora.png
+share/gnome/help/gnome-devel-demos/C/media/guitar-tuner-glade.png
+share/gnome/help/gnome-devel-demos/C/media/guitar-tuner-pipeline.png
 share/gnome/help/gnome-devel-demos/C/media/guitar-tuner.png
 share/gnome/help/gnome-devel-demos/C/media/image-viewer.png
-share/gnome/help/gnome-devel-demos/C/media/photo-wall-zoomed.png
+share/gnome/help/gnome-devel-demos/C/media/magic-mirror.png
+share/gnome/help/gnome-devel-demos/C/media/opensuse.png
 share/gnome/help/gnome-devel-demos/C/media/photo-wall.png
 share/gnome/help/gnome-devel-demos/C/media/record-collection.png
+share/gnome/help/gnome-devel-demos/C/media/ubuntu.png
 share/gnome/help/gnome-devel-demos/C/message-board.c.page
+share/gnome/help/gnome-devel-demos/C/message-board/message-board.c
 share/gnome/help/gnome-devel-demos/C/photo-wall.c.page
+share/gnome/help/gnome-devel-demos/C/photo-wall/photo-wall.c
 share/gnome/help/gnome-devel-demos/C/record-collection.js.page
+share/gnome/help/gnome-devel-demos/C/record-collection/record-collection.js
+share/gnome/help/gnome-devel-demos/de/getting-ready.page
+share/gnome/help/gnome-devel-demos/de/guitar-tuner.c.page
+share/gnome/help/gnome-devel-demos/de/guitar-tuner.cpp.page
+share/gnome/help/gnome-devel-demos/de/guitar-tuner.py.page
+share/gnome/help/gnome-devel-demos/de/guitar-tuner.vala.page
+share/gnome/help/gnome-devel-demos/de/guitar-tuner/guitar-tuner.c
+share/gnome/help/gnome-devel-demos/de/guitar-tuner/guitar-tuner.cc
+share/gnome/help/gnome-devel-demos/de/guitar-tuner/guitar-tuner.py
+share/gnome/help/gnome-devel-demos/de/guitar-tuner/guitar-tuner.vala
+share/gnome/help/gnome-devel-demos/de/image-viewer.c.page
+share/gnome/help/gnome-devel-demos/de/image-viewer.cpp.page
+share/gnome/help/gnome-devel-demos/de/image-viewer.js.page
+share/gnome/help/gnome-devel-demos/de/image-viewer.py.page
+share/gnome/help/gnome-devel-demos/de/image-viewer/image-viewer.c
+share/gnome/help/gnome-devel-demos/de/image-viewer/image-viewer.cc
+share/gnome/help/gnome-devel-demos/de/image-viewer/image-viewer.js
+share/gnome/help/gnome-devel-demos/de/image-viewer/image-viewer.py
+share/gnome/help/gnome-devel-demos/de/index.page
+share/gnome/help/gnome-devel-demos/de/magic-mirror.vala.page
+share/gnome/help/gnome-devel-demos/de/magic-mirror/magic-mirror-advanced.vala
+share/gnome/help/gnome-devel-demos/de/magic-mirror/magic-mirror.vala
+share/gnome/help/gnome-devel-demos/de/media/fedora.png
+share/gnome/help/gnome-devel-demos/de/media/guitar-tuner-glade.png
+share/gnome/help/gnome-devel-demos/de/media/guitar-tuner-pipeline.png
+share/gnome/help/gnome-devel-demos/de/media/guitar-tuner.png
+share/gnome/help/gnome-devel-demos/de/media/image-viewer.png
+share/gnome/help/gnome-devel-demos/de/media/magic-mirror.png
+share/gnome/help/gnome-devel-demos/de/media/opensuse.png
+share/gnome/help/gnome-devel-demos/de/media/photo-wall.png
+share/gnome/help/gnome-devel-demos/de/media/record-collection.png
+share/gnome/help/gnome-devel-demos/de/media/ubuntu.png
+share/gnome/help/gnome-devel-demos/de/message-board.c.page
+share/gnome/help/gnome-devel-demos/de/message-board/message-board.c
+share/gnome/help/gnome-devel-demos/de/photo-wall.c.page
+share/gnome/help/gnome-devel-demos/de/photo-wall/photo-wall.c
+share/gnome/help/gnome-devel-demos/de/record-collection.js.page
+share/gnome/help/gnome-devel-demos/de/record-collection/record-collection.js
+share/gnome/help/gnome-devel-demos/es/getting-ready.page
+share/gnome/help/gnome-devel-demos/es/guitar-tuner.c.page
+share/gnome/help/gnome-devel-demos/es/guitar-tuner.cpp.page
+share/gnome/help/gnome-devel-demos/es/guitar-tuner.py.page
+share/gnome/help/gnome-devel-demos/es/guitar-tuner.vala.page
+share/gnome/help/gnome-devel-demos/es/guitar-tuner/guitar-tuner.c
+share/gnome/help/gnome-devel-demos/es/guitar-tuner/guitar-tuner.cc
+share/gnome/help/gnome-devel-demos/es/guitar-tuner/guitar-tuner.py
+share/gnome/help/gnome-devel-demos/es/guitar-tuner/guitar-tuner.vala
+share/gnome/help/gnome-devel-demos/es/image-viewer.c.page
+share/gnome/help/gnome-devel-demos/es/image-viewer.cpp.page
+share/gnome/help/gnome-devel-demos/es/image-viewer.js.page
+share/gnome/help/gnome-devel-demos/es/image-viewer.py.page
+share/gnome/help/gnome-devel-demos/es/image-viewer/image-viewer.c
+share/gnome/help/gnome-devel-demos/es/image-viewer/image-viewer.cc
+share/gnome/help/gnome-devel-demos/es/image-viewer/image-viewer.js
+share/gnome/help/gnome-devel-demos/es/image-viewer/image-viewer.py
+share/gnome/help/gnome-devel-demos/es/index.page
+share/gnome/help/gnome-devel-demos/es/magic-mirror.vala.page
+share/gnome/help/gnome-devel-demos/es/magic-mirror/magic-mirror-advanced.vala
+share/gnome/help/gnome-devel-demos/es/magic-mirror/magic-mirror.vala
+share/gnome/help/gnome-devel-demos/es/media/fedora.png
+share/gnome/help/gnome-devel-demos/es/media/guitar-tuner-glade.png
+share/gnome/help/gnome-devel-demos/es/media/guitar-tuner-pipeline.png
+share/gnome/help/gnome-devel-demos/es/media/guitar-tuner.png
+share/gnome/help/gnome-devel-demos/es/media/image-viewer.png
+share/gnome/help/gnome-devel-demos/es/media/magic-mirror.png
+share/gnome/help/gnome-devel-demos/es/media/opensuse.png
+share/gnome/help/gnome-devel-demos/es/media/photo-wall.png
+share/gnome/help/gnome-devel-demos/es/media/record-collection.png
+share/gnome/help/gnome-devel-demos/es/media/ubuntu.png
+share/gnome/help/gnome-devel-demos/es/message-board.c.page
+share/gnome/help/gnome-devel-demos/es/message-board/message-board.c
+share/gnome/help/gnome-devel-demos/es/photo-wall.c.page
+share/gnome/help/gnome-devel-demos/es/photo-wall/photo-wall.c
+share/gnome/help/gnome-devel-demos/es/record-collection.js.page
+share/gnome/help/gnome-devel-demos/es/record-collection/record-collection.js
 share/gnome/help/hig-book/C/hig-book.xml
 share/gnome/help/hig-book/C/hig-ch-bibliography.xml
 share/gnome/help/hig-book/C/hig-ch-checks.xml
@@ -256,6 +266,7 @@ share/gnome/help/hig-book/C/hig-ch-controls.xml
 share/gnome/help/hig-book/C/hig-ch-credits.xml
 share/gnome/help/hig-book/C/hig-ch-desktop.xml
 share/gnome/help/hig-book/C/hig-ch-feedback.xml
+share/gnome/help/hig-book/C/hig-ch-gnome3.xml
 share/gnome/help/hig-book/C/hig-ch-icons-new.xml
 share/gnome/help/hig-book/C/hig-ch-icons.xml
 share/gnome/help/hig-book/C/hig-ch-input.xml
@@ -1946,162 +1957,272 @@ share/gnome/help/optimization-guide/zh_CN/optimization-guide.xml
 share/gnome/help/optimization-guide/zh_CN/optimization-harmful.xml
 share/gnome/help/optimization-guide/zh_CN/optimization-intro.xml
 share/gnome/help/optimization-guide/zh_CN/optimization-massif.xml
-share/gnome/help/platform-overview/C/apx-modules.xml
-share/gnome/help/platform-overview/C/bindings.xml
-share/gnome/help/platform-overview/C/core-tech.xml
-share/gnome/help/platform-overview/C/desktop-tech.xml
-share/gnome/help/platform-overview/C/figures/graphics.png
-share/gnome/help/platform-overview/C/figures/i18n.png
-share/gnome/help/platform-overview/C/figures/pango.png
-share/gnome/help/platform-overview/C/intro.xml
-share/gnome/help/platform-overview/C/ipc-network.xml
-share/gnome/help/platform-overview/C/legal-fdl.xml
-share/gnome/help/platform-overview/C/platform-overview.xml
-share/gnome/help/platform-overview/C/platform.xml
-share/gnome/help/platform-overview/cs/apx-modules.xml
-share/gnome/help/platform-overview/cs/bindings.xml
-share/gnome/help/platform-overview/cs/core-tech.xml
-share/gnome/help/platform-overview/cs/desktop-tech.xml
-share/gnome/help/platform-overview/cs/figures/graphics.png
-share/gnome/help/platform-overview/cs/figures/i18n.png
-share/gnome/help/platform-overview/cs/figures/pango.png
-share/gnome/help/platform-overview/cs/intro.xml
-share/gnome/help/platform-overview/cs/ipc-network.xml
-share/gnome/help/platform-overview/cs/legal-fdl.xml
-share/gnome/help/platform-overview/cs/platform-overview.xml
-share/gnome/help/platform-overview/cs/platform.xml
-share/gnome/help/platform-overview/de/apx-modules.xml
-share/gnome/help/platform-overview/de/bindings.xml
-share/gnome/help/platform-overview/de/core-tech.xml
-share/gnome/help/platform-overview/de/desktop-tech.xml
-share/gnome/help/platform-overview/de/figures/graphics.png
-share/gnome/help/platform-overview/de/figures/i18n.png
-share/gnome/help/platform-overview/de/figures/pango.png
-share/gnome/help/platform-overview/de/intro.xml
-share/gnome/help/platform-overview/de/ipc-network.xml
-share/gnome/help/platform-overview/de/legal-fdl.xml
-share/gnome/help/platform-overview/de/platform-overview.xml
-share/gnome/help/platform-overview/de/platform.xml
-share/gnome/help/platform-overview/el/apx-modules.xml
-share/gnome/help/platform-overview/el/bindings.xml
-share/gnome/help/platform-overview/el/core-tech.xml
-share/gnome/help/platform-overview/el/desktop-tech.xml
-share/gnome/help/platform-overview/el/figures/graphics.png
-share/gnome/help/platform-overview/el/figures/i18n.png
-share/gnome/help/platform-overview/el/figures/pango.png
-share/gnome/help/platform-overview/el/intro.xml
-share/gnome/help/platform-overview/el/ipc-network.xml
-share/gnome/help/platform-overview/el/legal-fdl.xml
-share/gnome/help/platform-overview/el/platform-overview.xml
-share/gnome/help/platform-overview/el/platform.xml
-share/gnome/help/platform-overview/es/apx-modules.xml
-share/gnome/help/platform-overview/es/bindings.xml
-share/gnome/help/platform-overview/es/core-tech.xml
-share/gnome/help/platform-overview/es/desktop-tech.xml
-share/gnome/help/platform-overview/es/figures/graphics.png
-share/gnome/help/platform-overview/es/figures/i18n.png
-share/gnome/help/platform-overview/es/figures/pango.png
-share/gnome/help/platform-overview/es/intro.xml
-share/gnome/help/platform-overview/es/ipc-network.xml
-share/gnome/help/platform-overview/es/legal-fdl.xml
-share/gnome/help/platform-overview/es/platform-overview.xml
-share/gnome/help/platform-overview/es/platform.xml
-share/gnome/help/platform-overview/fr/apx-modules.xml
-share/gnome/help/platform-overview/fr/bindings.xml
-share/gnome/help/platform-overview/fr/core-tech.xml
-share/gnome/help/platform-overview/fr/desktop-tech.xml
-share/gnome/help/platform-overview/fr/figures/graphics.png
-share/gnome/help/platform-overview/fr/figures/i18n.png
-share/gnome/help/platform-overview/fr/figures/pango.png
-share/gnome/help/platform-overview/fr/intro.xml
-share/gnome/help/platform-overview/fr/ipc-network.xml
-share/gnome/help/platform-overview/fr/legal-fdl.xml
-share/gnome/help/platform-overview/fr/platform-overview.xml
-share/gnome/help/platform-overview/fr/platform.xml
-share/gnome/help/platform-overview/it/apx-modules.xml
-share/gnome/help/platform-overview/it/bindings.xml
-share/gnome/help/platform-overview/it/core-tech.xml
-share/gnome/help/platform-overview/it/desktop-tech.xml
-share/gnome/help/platform-overview/it/figures/graphics.png
-share/gnome/help/platform-overview/it/figures/i18n.png
-share/gnome/help/platform-overview/it/figures/pango.png
-share/gnome/help/platform-overview/it/intro.xml
-share/gnome/help/platform-overview/it/ipc-network.xml
-share/gnome/help/platform-overview/it/legal-fdl.xml
-share/gnome/help/platform-overview/it/platform-overview.xml
-share/gnome/help/platform-overview/it/platform.xml
-share/gnome/help/platform-overview/ja/apx-modules.xml
-share/gnome/help/platform-overview/ja/bindings.xml
-share/gnome/help/platform-overview/ja/core-tech.xml
-share/gnome/help/platform-overview/ja/desktop-tech.xml
-share/gnome/help/platform-overview/ja/figures/graphics.png
-share/gnome/help/platform-overview/ja/figures/i18n.png
-share/gnome/help/platform-overview/ja/figures/pango.png
-share/gnome/help/platform-overview/ja/intro.xml
-share/gnome/help/platform-overview/ja/ipc-network.xml
-share/gnome/help/platform-overview/ja/legal-fdl.xml
-share/gnome/help/platform-overview/ja/platform-overview.xml
-share/gnome/help/platform-overview/ja/platform.xml
-share/gnome/help/platform-overview/oc/apx-modules.xml
-share/gnome/help/platform-overview/oc/bindings.xml
-share/gnome/help/platform-overview/oc/core-tech.xml
-share/gnome/help/platform-overview/oc/desktop-tech.xml
-share/gnome/help/platform-overview/oc/figures/graphics.png
-share/gnome/help/platform-overview/oc/figures/i18n.png
-share/gnome/help/platform-overview/oc/figures/pango.png
-share/gnome/help/platform-overview/oc/intro.xml
-share/gnome/help/platform-overview/oc/ipc-network.xml
-share/gnome/help/platform-overview/oc/legal-fdl.xml
-share/gnome/help/platform-overview/oc/platform-overview.xml
-share/gnome/help/platform-overview/oc/platform.xml
-share/gnome/help/platform-overview/pt_BR/apx-modules.xml
-share/gnome/help/platform-overview/pt_BR/bindings.xml
-share/gnome/help/platform-overview/pt_BR/core-tech.xml
-share/gnome/help/platform-overview/pt_BR/desktop-tech.xml
-share/gnome/help/platform-overview/pt_BR/figures/graphics.png
-share/gnome/help/platform-overview/pt_BR/figures/i18n.png
-share/gnome/help/platform-overview/pt_BR/figures/pango.png
-share/gnome/help/platform-overview/pt_BR/intro.xml
-share/gnome/help/platform-overview/pt_BR/ipc-network.xml
-share/gnome/help/platform-overview/pt_BR/legal-fdl.xml
-share/gnome/help/platform-overview/pt_BR/platform-overview.xml
-share/gnome/help/platform-overview/pt_BR/platform.xml
-share/gnome/help/platform-overview/ru/apx-modules.xml
-share/gnome/help/platform-overview/ru/bindings.xml
-share/gnome/help/platform-overview/ru/core-tech.xml
-share/gnome/help/platform-overview/ru/desktop-tech.xml
-share/gnome/help/platform-overview/ru/figures/graphics.png
-share/gnome/help/platform-overview/ru/figures/i18n.png
-share/gnome/help/platform-overview/ru/figures/pango.png
-share/gnome/help/platform-overview/ru/intro.xml
-share/gnome/help/platform-overview/ru/ipc-network.xml
-share/gnome/help/platform-overview/ru/legal-fdl.xml
-share/gnome/help/platform-overview/ru/platform-overview.xml
-share/gnome/help/platform-overview/ru/platform.xml
-share/gnome/help/platform-overview/sl/apx-modules.xml
-share/gnome/help/platform-overview/sl/bindings.xml
-share/gnome/help/platform-overview/sl/core-tech.xml
-share/gnome/help/platform-overview/sl/desktop-tech.xml
-share/gnome/help/platform-overview/sl/figures/graphics.png
-share/gnome/help/platform-overview/sl/figures/i18n.png
-share/gnome/help/platform-overview/sl/figures/pango.png
-share/gnome/help/platform-overview/sl/intro.xml
-share/gnome/help/platform-overview/sl/ipc-network.xml
-share/gnome/help/platform-overview/sl/legal-fdl.xml
-share/gnome/help/platform-overview/sl/platform-overview.xml
-share/gnome/help/platform-overview/sl/platform.xml
-share/gnome/help/platform-overview/uk/apx-modules.xml
-share/gnome/help/platform-overview/uk/bindings.xml
-share/gnome/help/platform-overview/uk/core-tech.xml
-share/gnome/help/platform-overview/uk/desktop-tech.xml
-share/gnome/help/platform-overview/uk/figures/graphics.png
-share/gnome/help/platform-overview/uk/figures/i18n.png
-share/gnome/help/platform-overview/uk/figures/pango.png
-share/gnome/help/platform-overview/uk/intro.xml
-share/gnome/help/platform-overview/uk/ipc-network.xml
-share/gnome/help/platform-overview/uk/legal-fdl.xml
-share/gnome/help/platform-overview/uk/platform-overview.xml
-share/gnome/help/platform-overview/uk/platform.xml
+share/gnome/help/platform-overview/C/atk.page
+share/gnome/help/platform-overview/C/cairo.page
+share/gnome/help/platform-overview/C/canberra.page
+share/gnome/help/platform-overview/C/clutter.page
+share/gnome/help/platform-overview/C/d-bus.page
+share/gnome/help/platform-overview/C/eds.page
+share/gnome/help/platform-overview/C/gda.page
+share/gnome/help/platform-overview/C/gdk.page
+share/gnome/help/platform-overview/C/gio-network.page
+share/gnome/help/platform-overview/C/gio.page
+share/gnome/help/platform-overview/C/gstreamer.page
+share/gnome/help/platform-overview/C/gtk.page
+share/gnome/help/platform-overview/C/help.page
+share/gnome/help/platform-overview/C/index.page
+share/gnome/help/platform-overview/C/keyring.page
+share/gnome/help/platform-overview/C/notify.page
+share/gnome/help/platform-overview/C/pango.page
+share/gnome/help/platform-overview/C/telepathy.page
+share/gnome/help/platform-overview/C/webkit.page
+share/gnome/help/platform-overview/cs/atk.page
+share/gnome/help/platform-overview/cs/cairo.page
+share/gnome/help/platform-overview/cs/canberra.page
+share/gnome/help/platform-overview/cs/clutter.page
+share/gnome/help/platform-overview/cs/d-bus.page
+share/gnome/help/platform-overview/cs/eds.page
+share/gnome/help/platform-overview/cs/gda.page
+share/gnome/help/platform-overview/cs/gdk.page
+share/gnome/help/platform-overview/cs/gio-network.page
+share/gnome/help/platform-overview/cs/gio.page
+share/gnome/help/platform-overview/cs/gstreamer.page
+share/gnome/help/platform-overview/cs/gtk.page
+share/gnome/help/platform-overview/cs/help.page
+share/gnome/help/platform-overview/cs/index.page
+share/gnome/help/platform-overview/cs/keyring.page
+share/gnome/help/platform-overview/cs/notify.page
+share/gnome/help/platform-overview/cs/pango.page
+share/gnome/help/platform-overview/cs/telepathy.page
+share/gnome/help/platform-overview/cs/webkit.page
+share/gnome/help/platform-overview/de/atk.page
+share/gnome/help/platform-overview/de/cairo.page
+share/gnome/help/platform-overview/de/canberra.page
+share/gnome/help/platform-overview/de/clutter.page
+share/gnome/help/platform-overview/de/d-bus.page
+share/gnome/help/platform-overview/de/eds.page
+share/gnome/help/platform-overview/de/gda.page
+share/gnome/help/platform-overview/de/gdk.page
+share/gnome/help/platform-overview/de/gio-network.page
+share/gnome/help/platform-overview/de/gio.page
+share/gnome/help/platform-overview/de/gstreamer.page
+share/gnome/help/platform-overview/de/gtk.page
+share/gnome/help/platform-overview/de/help.page
+share/gnome/help/platform-overview/de/index.page
+share/gnome/help/platform-overview/de/keyring.page
+share/gnome/help/platform-overview/de/notify.page
+share/gnome/help/platform-overview/de/pango.page
+share/gnome/help/platform-overview/de/telepathy.page
+share/gnome/help/platform-overview/de/webkit.page
+share/gnome/help/platform-overview/el/atk.page
+share/gnome/help/platform-overview/el/cairo.page
+share/gnome/help/platform-overview/el/canberra.page
+share/gnome/help/platform-overview/el/clutter.page
+share/gnome/help/platform-overview/el/d-bus.page
+share/gnome/help/platform-overview/el/eds.page
+share/gnome/help/platform-overview/el/gda.page
+share/gnome/help/platform-overview/el/gdk.page
+share/gnome/help/platform-overview/el/gio-network.page
+share/gnome/help/platform-overview/el/gio.page
+share/gnome/help/platform-overview/el/gstreamer.page
+share/gnome/help/platform-overview/el/gtk.page
+share/gnome/help/platform-overview/el/help.page
+share/gnome/help/platform-overview/el/index.page
+share/gnome/help/platform-overview/el/keyring.page
+share/gnome/help/platform-overview/el/notify.page
+share/gnome/help/platform-overview/el/pango.page
+share/gnome/help/platform-overview/el/telepathy.page
+share/gnome/help/platform-overview/el/webkit.page
+share/gnome/help/platform-overview/es/atk.page
+share/gnome/help/platform-overview/es/cairo.page
+share/gnome/help/platform-overview/es/canberra.page
+share/gnome/help/platform-overview/es/clutter.page
+share/gnome/help/platform-overview/es/d-bus.page
+share/gnome/help/platform-overview/es/eds.page
+share/gnome/help/platform-overview/es/gda.page
+share/gnome/help/platform-overview/es/gdk.page
+share/gnome/help/platform-overview/es/gio-network.page
+share/gnome/help/platform-overview/es/gio.page
+share/gnome/help/platform-overview/es/gstreamer.page
+share/gnome/help/platform-overview/es/gtk.page
+share/gnome/help/platform-overview/es/help.page
+share/gnome/help/platform-overview/es/index.page
+share/gnome/help/platform-overview/es/keyring.page
+share/gnome/help/platform-overview/es/notify.page
+share/gnome/help/platform-overview/es/pango.page
+share/gnome/help/platform-overview/es/telepathy.page
+share/gnome/help/platform-overview/es/webkit.page
+share/gnome/help/platform-overview/fr/atk.page
+share/gnome/help/platform-overview/fr/cairo.page
+share/gnome/help/platform-overview/fr/canberra.page
+share/gnome/help/platform-overview/fr/clutter.page
+share/gnome/help/platform-overview/fr/d-bus.page
+share/gnome/help/platform-overview/fr/eds.page
+share/gnome/help/platform-overview/fr/gda.page
+share/gnome/help/platform-overview/fr/gdk.page
+share/gnome/help/platform-overview/fr/gio-network.page
+share/gnome/help/platform-overview/fr/gio.page
+share/gnome/help/platform-overview/fr/gstreamer.page
+share/gnome/help/platform-overview/fr/gtk.page
+share/gnome/help/platform-overview/fr/help.page
+share/gnome/help/platform-overview/fr/index.page
+share/gnome/help/platform-overview/fr/keyring.page
+share/gnome/help/platform-overview/fr/notify.page
+share/gnome/help/platform-overview/fr/pango.page
+share/gnome/help/platform-overview/fr/telepathy.page
+share/gnome/help/platform-overview/fr/webkit.page
+share/gnome/help/platform-overview/it/atk.page
+share/gnome/help/platform-overview/it/cairo.page
+share/gnome/help/platform-overview/it/canberra.page
+share/gnome/help/platform-overview/it/clutter.page
+share/gnome/help/platform-overview/it/d-bus.page
+share/gnome/help/platform-overview/it/eds.page
+share/gnome/help/platform-overview/it/gda.page
+share/gnome/help/platform-overview/it/gdk.page
+share/gnome/help/platform-overview/it/gio-network.page
+share/gnome/help/platform-overview/it/gio.page
+share/gnome/help/platform-overview/it/gstreamer.page
+share/gnome/help/platform-overview/it/gtk.page
+share/gnome/help/platform-overview/it/help.page
+share/gnome/help/platform-overview/it/index.page
+share/gnome/help/platform-overview/it/keyring.page
+share/gnome/help/platform-overview/it/notify.page
+share/gnome/help/platform-overview/it/pango.page
+share/gnome/help/platform-overview/it/telepathy.page
+share/gnome/help/platform-overview/it/webkit.page
+share/gnome/help/platform-overview/ja/atk.page
+share/gnome/help/platform-overview/ja/cairo.page
+share/gnome/help/platform-overview/ja/canberra.page
+share/gnome/help/platform-overview/ja/clutter.page
+share/gnome/help/platform-overview/ja/d-bus.page
+share/gnome/help/platform-overview/ja/eds.page
+share/gnome/help/platform-overview/ja/gda.page
+share/gnome/help/platform-overview/ja/gdk.page
+share/gnome/help/platform-overview/ja/gio-network.page
+share/gnome/help/platform-overview/ja/gio.page
+share/gnome/help/platform-overview/ja/gstreamer.page
+share/gnome/help/platform-overview/ja/gtk.page
+share/gnome/help/platform-overview/ja/help.page
+share/gnome/help/platform-overview/ja/index.page
+share/gnome/help/platform-overview/ja/keyring.page
+share/gnome/help/platform-overview/ja/notify.page
+share/gnome/help/platform-overview/ja/pango.page
+share/gnome/help/platform-overview/ja/telepathy.page
+share/gnome/help/platform-overview/ja/webkit.page
+share/gnome/help/platform-overview/oc/atk.page
+share/gnome/help/platform-overview/oc/cairo.page
+share/gnome/help/platform-overview/oc/canberra.page
+share/gnome/help/platform-overview/oc/clutter.page
+share/gnome/help/platform-overview/oc/d-bus.page
+share/gnome/help/platform-overview/oc/eds.page
+share/gnome/help/platform-overview/oc/gda.page
+share/gnome/help/platform-overview/oc/gdk.page
+share/gnome/help/platform-overview/oc/gio-network.page
+share/gnome/help/platform-overview/oc/gio.page
+share/gnome/help/platform-overview/oc/gstreamer.page
+share/gnome/help/platform-overview/oc/gtk.page
+share/gnome/help/platform-overview/oc/help.page
+share/gnome/help/platform-overview/oc/index.page
+share/gnome/help/platform-overview/oc/keyring.page
+share/gnome/help/platform-overview/oc/notify.page
+share/gnome/help/platform-overview/oc/pango.page
+share/gnome/help/platform-overview/oc/telepathy.page
+share/gnome/help/platform-overview/oc/webkit.page
+share/gnome/help/platform-overview/pt_BR/atk.page
+share/gnome/help/platform-overview/pt_BR/cairo.page
+share/gnome/help/platform-overview/pt_BR/canberra.page
+share/gnome/help/platform-overview/pt_BR/clutter.page
+share/gnome/help/platform-overview/pt_BR/d-bus.page
+share/gnome/help/platform-overview/pt_BR/eds.page
+share/gnome/help/platform-overview/pt_BR/gda.page
+share/gnome/help/platform-overview/pt_BR/gdk.page
+share/gnome/help/platform-overview/pt_BR/gio-network.page
+share/gnome/help/platform-overview/pt_BR/gio.page
+share/gnome/help/platform-overview/pt_BR/gstreamer.page
+share/gnome/help/platform-overview/pt_BR/gtk.page
+share/gnome/help/platform-overview/pt_BR/help.page
+share/gnome/help/platform-overview/pt_BR/index.page
+share/gnome/help/platform-overview/pt_BR/keyring.page
+share/gnome/help/platform-overview/pt_BR/notify.page
+share/gnome/help/platform-overview/pt_BR/pango.page
+share/gnome/help/platform-overview/pt_BR/telepathy.page
+share/gnome/help/platform-overview/pt_BR/webkit.page
+share/gnome/help/platform-overview/ru/atk.page
+share/gnome/help/platform-overview/ru/cairo.page
+share/gnome/help/platform-overview/ru/canberra.page
+share/gnome/help/platform-overview/ru/clutter.page
+share/gnome/help/platform-overview/ru/d-bus.page
+share/gnome/help/platform-overview/ru/eds.page
+share/gnome/help/platform-overview/ru/gda.page
+share/gnome/help/platform-overview/ru/gdk.page
+share/gnome/help/platform-overview/ru/gio-network.page
+share/gnome/help/platform-overview/ru/gio.page
+share/gnome/help/platform-overview/ru/gstreamer.page
+share/gnome/help/platform-overview/ru/gtk.page
+share/gnome/help/platform-overview/ru/help.page
+share/gnome/help/platform-overview/ru/index.page
+share/gnome/help/platform-overview/ru/keyring.page
+share/gnome/help/platform-overview/ru/notify.page
+share/gnome/help/platform-overview/ru/pango.page
+share/gnome/help/platform-overview/ru/telepathy.page
+share/gnome/help/platform-overview/ru/webkit.page
+share/gnome/help/platform-overview/sl/atk.page
+share/gnome/help/platform-overview/sl/cairo.page
+share/gnome/help/platform-overview/sl/canberra.page
+share/gnome/help/platform-overview/sl/clutter.page
+share/gnome/help/platform-overview/sl/d-bus.page
+share/gnome/help/platform-overview/sl/eds.page
+share/gnome/help/platform-overview/sl/gda.page
+share/gnome/help/platform-overview/sl/gdk.page
+share/gnome/help/platform-overview/sl/gio-network.page
+share/gnome/help/platform-overview/sl/gio.page
+share/gnome/help/platform-overview/sl/gstreamer.page
+share/gnome/help/platform-overview/sl/gtk.page
+share/gnome/help/platform-overview/sl/help.page
+share/gnome/help/platform-overview/sl/index.page
+share/gnome/help/platform-overview/sl/keyring.page
+share/gnome/help/platform-overview/sl/notify.page
+share/gnome/help/platform-overview/sl/pango.page
+share/gnome/help/platform-overview/sl/telepathy.page
+share/gnome/help/platform-overview/sl/webkit.page
+share/gnome/help/platform-overview/uk/atk.page
+share/gnome/help/platform-overview/uk/cairo.page
+share/gnome/help/platform-overview/uk/canberra.page
+share/gnome/help/platform-overview/uk/clutter.page
+share/gnome/help/platform-overview/uk/d-bus.page
+share/gnome/help/platform-overview/uk/eds.page
+share/gnome/help/platform-overview/uk/gda.page
+share/gnome/help/platform-overview/uk/gdk.page
+share/gnome/help/platform-overview/uk/gio-network.page
+share/gnome/help/platform-overview/uk/gio.page
+share/gnome/help/platform-overview/uk/gstreamer.page
+share/gnome/help/platform-overview/uk/gtk.page
+share/gnome/help/platform-overview/uk/help.page
+share/gnome/help/platform-overview/uk/index.page
+share/gnome/help/platform-overview/uk/keyring.page
+share/gnome/help/platform-overview/uk/notify.page
+share/gnome/help/platform-overview/uk/pango.page
+share/gnome/help/platform-overview/uk/telepathy.page
+share/gnome/help/platform-overview/uk/webkit.page
+share/gnome/help/platform-overview/zh_CN/atk.page
+share/gnome/help/platform-overview/zh_CN/cairo.page
+share/gnome/help/platform-overview/zh_CN/canberra.page
+share/gnome/help/platform-overview/zh_CN/clutter.page
+share/gnome/help/platform-overview/zh_CN/d-bus.page
+share/gnome/help/platform-overview/zh_CN/eds.page
+share/gnome/help/platform-overview/zh_CN/gda.page
+share/gnome/help/platform-overview/zh_CN/gdk.page
+share/gnome/help/platform-overview/zh_CN/gio-network.page
+share/gnome/help/platform-overview/zh_CN/gio.page
+share/gnome/help/platform-overview/zh_CN/gstreamer.page
+share/gnome/help/platform-overview/zh_CN/gtk.page
+share/gnome/help/platform-overview/zh_CN/help.page
+share/gnome/help/platform-overview/zh_CN/index.page
+share/gnome/help/platform-overview/zh_CN/keyring.page
+share/gnome/help/platform-overview/zh_CN/notify.page
+share/gnome/help/platform-overview/zh_CN/pango.page
+share/gnome/help/platform-overview/zh_CN/telepathy.page
+share/gnome/help/platform-overview/zh_CN/webkit.page
 share/omf/accessibility-devel-guide/accessibility-devel-guide-C.omf
 share/omf/accessibility-devel-guide/accessibility-devel-guide-de.omf
 share/omf/accessibility-devel-guide/accessibility-devel-guide-el.omf
@@ -2109,8 +2230,6 @@ share/omf/accessibility-devel-guide/accessibility-devel-guide-es.omf
 share/omf/accessibility-devel-guide/accessibility-devel-guide-fr.omf
 share/omf/accessibility-devel-guide/accessibility-devel-guide-ja.omf
 share/omf/accessibility-devel-guide/accessibility-devel-guide-sl.omf
-share/omf/gdp-handbook/gdp-handbook-C.omf
-share/omf/gdp-style-guide/gdp-style-guide-C.omf
 share/omf/hig-book/hig-book-C.omf
 share/omf/hig-book/hig-book-de.omf
 share/omf/hig-book/hig-book-el.omf
@@ -2140,51 +2259,23 @@ share/omf/optimization-guide/optimization-guide-es.omf
 share/omf/optimization-guide/optimization-guide-fr.omf
 share/omf/optimization-guide/optimization-guide-sl.omf
 share/omf/optimization-guide/optimization-guide-zh_CN.omf
-share/omf/platform-overview/platform-overview-C.omf
-share/omf/platform-overview/platform-overview-cs.omf
-share/omf/platform-overview/platform-overview-de.omf
-share/omf/platform-overview/platform-overview-el.omf
-share/omf/platform-overview/platform-overview-es.omf
-share/omf/platform-overview/platform-overview-fr.omf
-share/omf/platform-overview/platform-overview-it.omf
-share/omf/platform-overview/platform-overview-ja.omf
-share/omf/platform-overview/platform-overview-oc.omf
-share/omf/platform-overview/platform-overview-pt_BR.omf
-share/omf/platform-overview/platform-overview-ru.omf
-share/omf/platform-overview/platform-overview-sl.omf
-share/omf/platform-overview/platform-overview-uk.omf
-@dirrm share/omf/platform-overview
 @dirrm share/omf/optimization-guide
 @dirrm share/omf/integration-guide
 @dirrm share/omf/hig-book
-@dirrm share/omf/gdp-style-guide
-@dirrm share/omf/gdp-handbook
 @dirrm share/omf/accessibility-devel-guide
-@dirrm share/gnome/help/platform-overview/uk/figures
+@dirrm share/gnome/help/platform-overview/zh_CN
 @dirrm share/gnome/help/platform-overview/uk
-@dirrm share/gnome/help/platform-overview/sl/figures
 @dirrm share/gnome/help/platform-overview/sl
-@dirrm share/gnome/help/platform-overview/ru/figures
 @dirrm share/gnome/help/platform-overview/ru
-@dirrm share/gnome/help/platform-overview/pt_BR/figures
 @dirrm share/gnome/help/platform-overview/pt_BR
-@dirrm share/gnome/help/platform-overview/oc/figures
 @dirrm share/gnome/help/platform-overview/oc
-@dirrm share/gnome/help/platform-overview/ja/figures
 @dirrm share/gnome/help/platform-overview/ja
-@dirrm share/gnome/help/platform-overview/it/figures
 @dirrm share/gnome/help/platform-overview/it
-@dirrm share/gnome/help/platform-overview/fr/figures
 @dirrm share/gnome/help/platform-overview/fr
-@dirrm share/gnome/help/platform-overview/es/figures
 @dirrm share/gnome/help/platform-overview/es
-@dirrm share/gnome/help/platform-overview/el/figures
 @dirrm share/gnome/help/platform-overview/el
-@dirrm share/gnome/help/platform-overview/de/figures
 @dirrm share/gnome/help/platform-overview/de
-@dirrm share/gnome/help/platform-overview/cs/figures
 @dirrm share/gnome/help/platform-overview/cs
-@dirrm share/gnome/help/platform-overview/C/figures
 @dirrm share/gnome/help/platform-overview/C
 @dirrm share/gnome/help/platform-overview
 @dirrm share/gnome/help/optimization-guide/zh_CN/figures
@@ -2236,16 +2327,31 @@ share/omf/platform-overview/platform-overview-uk.omf
 @dirrm share/gnome/help/hig-book/C/images
 @dirrm share/gnome/help/hig-book/C
 @dirrm share/gnome/help/hig-book
+@dirrm share/gnome/help/gnome-devel-demos/es/record-collection 
+@dirrm share/gnome/help/gnome-devel-demos/es/photo-wall                  
+@dirrm share/gnome/help/gnome-devel-demos/es/message-board 
+@dirrm share/gnome/help/gnome-devel-demos/es/media
+@dirrm share/gnome/help/gnome-devel-demos/es/magic-mirror 
+@dirrm share/gnome/help/gnome-devel-demos/es/image-viewer 
+@dirrm share/gnome/help/gnome-devel-demos/es/guitar-tuner
+@dirrm share/gnome/help/gnome-devel-demos/es
+@dirrm share/gnome/help/gnome-devel-demos/de/record-collection 
+@dirrm share/gnome/help/gnome-devel-demos/de/photo-wall                  
+@dirrm share/gnome/help/gnome-devel-demos/de/message-board 
+@dirrm share/gnome/help/gnome-devel-demos/de/media
+@dirrm share/gnome/help/gnome-devel-demos/de/magic-mirror 
+@dirrm share/gnome/help/gnome-devel-demos/de/image-viewer 
+@dirrm share/gnome/help/gnome-devel-demos/de/guitar-tuner
+@dirrm share/gnome/help/gnome-devel-demos/de
+@dirrm share/gnome/help/gnome-devel-demos/C/record-collection
+@dirrm share/gnome/help/gnome-devel-demos/C/photo-wall
+@dirrm share/gnome/help/gnome-devel-demos/C/message-board
 @dirrm share/gnome/help/gnome-devel-demos/C/media
+@dirrm share/gnome/help/gnome-devel-demos/C/magic-mirror
+@dirrm share/gnome/help/gnome-devel-demos/C/image-viewer
+@dirrm share/gnome/help/gnome-devel-demos/C/guitar-tuner
 @dirrm share/gnome/help/gnome-devel-demos/C
 @dirrm share/gnome/help/gnome-devel-demos
-@dirrm share/gnome/help/gdp-style-guide/C/figures
-@dirrm share/gnome/help/gdp-style-guide/C
-@dirrm share/gnome/help/gdp-style-guide
-@dirrm share/gnome/help/gdp-handbook/C
-@dirrm share/gnome/help/gdp-handbook
-@dirrm share/gnome/help/devtools-install/C
-@dirrm share/gnome/help/devtools-install
 @dirrm share/gnome/help/accessibility-devel-guide/sl/figures
 @dirrm share/gnome/help/accessibility-devel-guide/sl
 @dirrm share/gnome/help/accessibility-devel-guide/ja/figures
