@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.19 2011/04/01 10:59:08 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.20 2011/04/01 15:53:32 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -22,9 +22,7 @@ CONFLICTS?=	gnome3-lite-[0-9]*
 RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		dconf:${PORTSDIR}/devel/dconf \
 		gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
-		gnome-themes>=2.91.0:${PORTSDIR}/x11-themes/gnome-themes3 \
 		gnome-themes-standard>=2.91.0:${PORTSDIR}/x11-themes/gnome-themes-standard \
-		gnome-screensaver>=2.91.0:${PORTSDIR}/x11/gnome-screensaver3 \
 		gnome-keyring>=2.91.0:${PORTSDIR}/security/gnome-keyring3 \
 		gnome-power-manager>=2.91.0:${PORTSDIR}/sysutils/gnome-power-manager3 \
 		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
@@ -37,6 +35,7 @@ RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		gnome-control-center>=2.91.0:${PORTSDIR}/sysutils/gnome-control-center3 \
 		${LOCALBASE}/share/gnome-background-properties/gnome-nature.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
 		gnome-tweak-tool:${PORTSDIR}/deskutils/gnome-tweak-tool \
+		${LOCALBASE}/share/gnome/help/gnome-help/C/index.page:${PORTSDIR}/misc/gnome-user-docs3 \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme
 
 NO_BUILD=	yes
@@ -57,6 +56,7 @@ RUN_DEPENDS+=	gnome-shell>=2.91.0:${PORTSDIR}/x11/gnome-shell
 RUN_DEPENDS+=	empathy>=2.91.0:${PORTSDIR}/net-im/empathy3 \
 		epiphany>=2.91.0:${PORTSDIR}/www/epiphany3 \
 		epiphany-extensions>=2.91.0:${PORTSDIR}/www/epiphany-extensions3 \
+		gnome-screensaver>=2.91.0:${PORTSDIR}/x11/gnome-screensaver3 \
 		gucharmap>=2.33.0:${PORTSDIR}/deskutils/gucharmap3 \
 		brasero>=2.91.0:${PORTSDIR}/sysutils/brasero3 \
 		eog>=2.91.0:${PORTSDIR}/graphics/eog3 \
