@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.23 2011/03/30 06:16:18 kwm Exp $
+#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.24 2011/04/05 19:56:02 kwm Exp $
 #
 
 PORTNAME=	at-spi2-atk
@@ -15,7 +15,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Assisted Technology Provider module for GTK+
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
+		${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus
 RUN_DEPENDS=	${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core
 
