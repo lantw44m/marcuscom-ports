@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/atk/Makefile,v 1.110 2011/02/01 11:11:17 kwm Exp $
+#   $MCom: ports/accessibility/atk/Makefile,v 1.111 2011/03/23 17:06:15 kwm Exp $
 #
 
 PORTNAME=	atk
-PORTVERSION=	1.91.92
+PORTVERSION=	2.0.0
 PORTREVISION?=	0
 CATEGORIES=	accessibility devel
 MASTER_SITES=	GNOME
