@@ -91,6 +91,7 @@ share/icons/gnome/scalable/places/folder-symbolic.svg
 share/icons/gnome/scalable/places/folder-templates-symbolic.svg
 share/icons/gnome/scalable/places/folder-videos-symbolic.svg
 share/icons/gnome/scalable/places/network-server-symbolic.svg
+share/icons/gnome/scalable/places/network-workgroup-symbolic.svg
 share/icons/gnome/scalable/places/start-here-symbolic.svg
 share/icons/gnome/scalable/places/user-bookmarks-symbolic.svg
 share/icons/gnome/scalable/places/user-trash-symbolic.svg
@@ -175,6 +176,7 @@ share/icons/gnome/scalable/status/user-available-symbolic.svg
 share/icons/gnome/scalable/status/user-away-symbolic.svg
 share/icons/gnome/scalable/status/user-busy-symbolic.svg
 share/icons/gnome/scalable/status/user-idle-symbolic.svg
+share/icons/gnome/scalable/status/user-invisible-alt-symbolic.svg
 share/icons/gnome/scalable/status/user-invisible-symbolic.svg
 share/icons/gnome/scalable/status/user-offline-symbolic.svg
 share/icons/gnome/scalable/status/weather-clear-night-symbolic.svg

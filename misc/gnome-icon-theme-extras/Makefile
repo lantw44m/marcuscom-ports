@@ -3,11 +3,11 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-icon-theme-extras/Makefile,v 1.3 2010/04/20 20:56:39 kwm Exp $
+#   $MCom: ports/misc/gnome-icon-theme-extras/Makefile,v 1.5 2011/02/21 16:47:47 kwm Exp $
 #
 
 PORTNAME=	gnome-icon-theme-extras
-PORTVERSION=	2.90.7
+PORTVERSION=	3.0.0
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicol
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack intlhack gtk30
+USE_GNOME=	gnomehack intlhack gtk-update-icon-cache
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-icon-mapping
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
