@@ -9,6 +9,7 @@ databases/libgda4-mysql -> libgda5-mysql
 databases/libgda4-postgresql -> libgda5-postgresql
 deskutils/gnome-utils -> deskutils/gnome-utils3
 deskutils/gucharmap -> desktutils/gucharmap3
+devel/glade3 -> devel/glade
 devel/libgdata -> devel/libgdata08
 editors/gedit -> editors/gedit3
 editors/gedit-plugins -> editors/gedit-plugins3
