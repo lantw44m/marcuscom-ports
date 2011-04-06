@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/caribou/Makefile,v 1.4 2011/03/10 20:10:54 kwm Exp $
+#    $MCom: ports/accessibility/caribou/Makefile,v 1.5 2011/03/23 12:05:45 kwm Exp $
 #
 
 PORTNAME=	caribou
-PORTVERSION=	0.1.92
+PORTVERSION=	0.2.00
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
