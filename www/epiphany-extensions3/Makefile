@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/www/epiphany-extensions3/Makefile,v 1.1 2011/03/24 09:27:05 kwm Exp $
 #
 
 PORTNAME=	epiphany-extensions
 PORTVERSION=	2.91.92
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -52,6 +53,7 @@ CONFIGURE_ARGS+=--with-extensions="${EPHY_EXTENSIONS}"
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$($$PKG_CONFIG --variable=extensionsdir epiphany-$$_epiphany_api_version)|${PREFIX}/lib/epiphany/${PORTVERSION:R}/extensions|g' \
 		-e 's|$$($$PKG_CONFIG --variable=icondir epiphany-$$EPIPHANY_API_VERSION)|${PREFIX}/share/epiphany/icons|g' \
+		-e 's|2.31|3.0|g' \
 		${WRKSRC}/configure
 # temp disable until autoscroller and permissions gets updated to new API.
 	@${REINPLACE_CMD} -e 's|auto-scroller||g' -e 's|permissions||g' \
