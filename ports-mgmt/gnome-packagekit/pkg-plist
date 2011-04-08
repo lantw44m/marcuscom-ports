@@ -19,6 +19,7 @@ lib/gnome-settings-daemon-3.0/gtk-modules/gpk-pk-gtk-module.desktop
 %%PYTHON_SITELIBDIR%%/packagekit/gtkwidgets.pyo
 share/GConf/gsettings/org.gnome.packagekit.gschema.migrate
 share/applications/gpk-application.desktop
+share/applications/gpk-dbus-service.desktop
 share/applications/gpk-distro-upgrade.desktop
 share/applications/gpk-install-catalog.desktop
 share/applications/gpk-install-local-file.desktop
@@ -447,6 +448,7 @@ share/locale/en@shaw/LC_MESSAGES/gnome-packagekit.mo
 share/locale/en_GB/LC_MESSAGES/gnome-packagekit.mo
 share/locale/es/LC_MESSAGES/gnome-packagekit.mo
 share/locale/et/LC_MESSAGES/gnome-packagekit.mo
+share/locale/eu/LC_MESSAGES/gnome-packagekit.mo
 share/locale/fa/LC_MESSAGES/gnome-packagekit.mo
 share/locale/fi/LC_MESSAGES/gnome-packagekit.mo
 share/locale/fr/LC_MESSAGES/gnome-packagekit.mo
