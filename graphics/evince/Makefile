@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD: ports/graphics/evince/Makefile,v 1.63 2010/12/04 07:31:56 ade Exp $
-#    $MCom: ports/graphics/evince/Makefile,v 1.150 2011/03/14 21:40:52 mezz Exp $
+#    $MCom: ports/graphics/evince/Makefile,v 1.151 2011/03/31 09:49:56 kwm Exp $
 #
 
 PORTNAME=	evince
@@ -20,6 +20,8 @@ BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome
 LIB_DEPENDS=	poppler-glib.6:${PORTSDIR}/graphics/poppler-gtk \
 		spectre.1:${PORTSDIR}/print/libspectre
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
+
+CONFLICTS=	evince-3.[0-9]*
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
