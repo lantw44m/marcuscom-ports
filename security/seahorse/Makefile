@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.99 2010/09/28 09:01:33 kwm Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.101 2011/03/06 20:09:35 kwm Exp $
 #
 
 PORTNAME=	seahorse
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 LIB_DEPENDS=	gpgme.18:${PORTSDIR}/security/gpgme \
     		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		gnome-keyring:${PORTSDIR}/security/gnome-keyring \
+		gcr.0:${PORTSDIR}/security/gnome-keyring \
 		gcrypt.17:${PORTSDIR}/security/libgcrypt \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 

@@ -3,12 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD: ports/graphics/gimp-app/Makefile,v 1.253 2011/03/04 02:11:55 wen Exp $
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.53 2010/10/08 08:29:33 kwm Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.55 2011/03/06 23:12:39 kwm Exp $
 #
 
 PORTNAME=	gimp-app
 DISTVERSION=	2.6.11
-PORTREVISION?=	3
+PORTREVISION?=	4
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -125,7 +125,7 @@ CONFIGURE_ARGS+=	--without-libexif
 .endif
 
 .if defined(WITH_GVFS) || ${HAVE_GNOME:Mgvfs}!=""
-LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/gnome-keyring
+LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 USE_GNOME+=	gvfs
 .  if ${HAVE_GNOME:Mlibgnomeui}!=""
 USE_GNOME+=	libgnomeui
