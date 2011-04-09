@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.7 2011/03/22 11:16:19 kwm Exp $
+#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.8 2011/04/04 12:04:24 kwm Exp $
 #
 
 PORTNAME=	gnome-keyring
@@ -20,6 +20,8 @@ LIB_DEPENDS=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
 		tasn1.4:${PORTSDIR}/security/libtasn1 \
 		gcrypt.17:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+
+CONFLICTS=	gnome-keyring-2.[0-9]*
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomehack gnomeprefix gtk30 ltverhack intlhack

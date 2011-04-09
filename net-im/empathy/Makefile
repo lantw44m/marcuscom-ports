@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/net-im/empathy/Makefile,v 1.27 2011/02/25 01:32:03 delphij Exp $
-#    $MCom: ports/net-im/empathy/Makefile,v 1.80 2011/03/14 20:14:45 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.81 2011/03/16 21:49:08 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.33.4
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -28,6 +29,8 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
+
+CONFLICTS=	empathy-3.[0-9]*
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes

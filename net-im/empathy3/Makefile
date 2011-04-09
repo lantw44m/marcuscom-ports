@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.11 2011/03/29 16:32:25 kwm Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.12 2011/04/05 10:53:44 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	3.0.0
@@ -29,6 +29,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
+
+CONFLICTS=	empathy-2.[0-9]*
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
