@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD: ports/mail/evolution/Makefile,v 1.188 2011/02/25 01:31:48 delphij Exp $
-#   $MCom: ports/mail/evolution/Makefile,v 1.234 2011/03/07 09:05:10 kwm Exp $
+#   $MCom: ports/mail/evolution/Makefile,v 1.235 2011/03/07 17:30:47 kwm Exp $
 #
 
 PORTNAME=	evolution
@@ -21,13 +21,14 @@ LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss \
 		gtkimageview.0:${PORTSDIR}/x11-toolkits/gtkimageview
 RUN_DEPENDS=	${LOCALBASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnome-spell
 
+CONFLICTS=	evolution-3.[0-9]*
+
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	build
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver gtkhtml3 \
 		desktopfileutils gnomedocutils ltasneededhack gnomedesktop
-GNOME_DESKTOP_VERSION=2
 USE_AUTOTOOLS=	libtool
 USE_GSTREAMER=	yes
 INSTALLS_OMF=	yes

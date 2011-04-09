@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.11 2011/03/21 21:53:11 kwm Exp $
+#   $MCom: ports/mail/evolution3/Makefile,v 1.12 2011/04/04 11:48:11 kwm Exp $
 #
 
 PORTNAME=	evolution
@@ -18,8 +18,8 @@ COMMENT=	An integrated mail, calendar and address book distributed suite
 LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss \
 		unique-3.0.0:${PORTSDIR}/x11-toolkits/libunique3 \
 		notify.4:${PORTSDIR}/devel/libnotify
-#		gtkimageview.0:${PORTSDIR}/x11-toolkits/gtkimageview
-#RUN_DEPENDS=	${LOCALBASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnome-spell
+
+CONFLICTS=	evolution-2.[0-9]*
 
 LATEST_LINK=	evolution3
 USE_BZIP2=	yes
@@ -28,7 +28,6 @@ USE_BISON=	build
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver3 gtkhtml4 \
 		desktopfileutils gnomedocutils ltasneededhack gnomedesktop3
-# gnomedesktop
 USE_AUTOTOOLS=	libtool
 USE_GSTREAMER=	yes
 INSTALLS_OMF=	yes
