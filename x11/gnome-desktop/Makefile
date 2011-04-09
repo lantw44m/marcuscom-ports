@@ -3,41 +3,40 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop3/Makefile,v 1.13 2011/04/05 12:31:23 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gnome-desktop
-PORTVERSION=	3.0.0
-PORTREVISION?=	0
+PORTVERSION=	2.32.1
+PORTREVISION?=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Additional UI API for GNOME 3
+COMMENT=	Additional UI API for GNOME 2
 
 USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USE_XORG=	x11 xrandr
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils gtk30 \
+USE_XORG=	xpm
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils gconf2 pygtk2 \
 		ltverhack referencehack
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_BISON=	build
 USE_PYTHON=	yes
-INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ARGS=	--with-gnome-distributor="FreeBSD GNOME Project"
+CONFIGURE_ARGS=	--with-gnome-distributor="FreeBSD GNOME Project" \
+		--disable-desktop-docs
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
+
+MAN1=	gnome-about.1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|xsltproc -o| xsltproc --nonet -o|g' \
