@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.11 2011/03/31 10:55:11 kwm Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.12 2011/04/05 12:59:56 kwm Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -19,6 +19,8 @@ LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
 		${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/gnome-keyring3
+
+CONFLICTS=	gnome-screensaver-2.[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes

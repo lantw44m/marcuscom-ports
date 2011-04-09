@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.121 2010/09/30 19:51:41 kwm Exp $
+#   $MCom: ports/x11/gnome-screensaver/Makefile,v 1.123 2011/03/06 20:29:27 kwm Exp $
 #
 
 PORTNAME=	gnome-screensaver
@@ -18,6 +18,8 @@ COMMENT=	GNOME screen saver and locker
 
 LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	xscreensaver-gl-helper:${PORTSDIR}/x11/xscreensaver-gnome-hacks
+
+CONFLICTS=	gnome-screensaver-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
