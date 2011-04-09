@@ -3,13 +3,13 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.203 2011/03/21 19:01:22 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.204 2011/04/02 09:34:10 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
 PORTVERSION=	2.28.5
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
 		ftp://ftp.gtk.org/pub/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
@@ -83,8 +83,9 @@ CONFIGURE_ARGS+=	--enable-debug=yes
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
-		${WRKSRC}/glib/gutils.c
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g ; \
+		s|/usr/share/locale/locale|${LOCALBASE}/share/locale/locale|g' \
+			${WRKSRC}/glib/gutils.c
 	@${REINPLACE_CMD} -e 's|/lib/dbus/machine-id|/db/dbus/machine-id|g' \
 		${WRKSRC}/gio/gdbusaddress.c ${WRKSRC}/gio/gdbusprivate.c \
 		${WRKSRC}/po/*.po
