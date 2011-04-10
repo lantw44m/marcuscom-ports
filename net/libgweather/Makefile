@@ -2,12 +2,12 @@
 # Date created:				14th Jan 2008
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD$
-#   $MCom: ports/net/libgweather3/Makefile,v 1.4 2011/04/05 18:38:42 kwm Exp $
+# $FreeBSD: ports/net/libgweather/Makefile,v 1.22 2010/12/04 07:32:55 ade Exp $
+#   $MCom: ports/net/libgweather/Makefile,v 1.42 2010/09/27 14:03:30 kwm Exp $
 #
 
 PORTNAME=	libgweather
-PORTVERSION=	3.0.0
+PORTVERSION=	2.30.3
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
@@ -18,12 +18,12 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/mi
 LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
-CONFLICTS=	libgweather-2.[0-9]*
+CONFLICTS=	libgweather-3.[0-9]*
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 ltverhack gtk30
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 ltverhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
