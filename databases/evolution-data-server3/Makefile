@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.10 2011/03/21 19:55:33 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.11 2011/04/04 10:36:53 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -23,7 +23,7 @@ LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 
-CONFLICTS=	evolution-data-server-2.30.*
+CONFLICTS=	evolution-data-server-2.[0-9]*
 
 LATEST_LINK=	evolution-data-server3
 LICENSE=	LGPL20

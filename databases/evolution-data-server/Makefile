@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/databases/evolution-data-server/Makefile,v 1.81 2011/02/25 01:31:35 delphij Exp $
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.205 2011/03/06 20:31:31 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.206 2011/03/07 16:54:34 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -25,13 +25,14 @@ LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 
+CONFLICTS=	evolution-data-server-3.[0-9]*
+
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_BISON=	build
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack ltverhack ltasneededhack gconf2 \
 		libxml2
-GNOME_DESKTOP_VERSION=2
 USE_OPENLDAP=	yes
 USE_AUTOTOOLS=	libtool
 USE_BDB=	41+

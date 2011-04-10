@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.539 2011/04/09 02:44:27 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.540 2011/04/10 15:14:12 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -388,10 +388,12 @@ gnomedesktopsharp20_USE_GNOME_IMPL=	gnomesharp20 gnomepanel gtkhtml3 librsvg2 vt
 libwnck_LIB_DEPENDS=	wnck-1.22:${PORTSDIR}/x11-toolkits/libwnck
 libwnck_DETECT=		${LOCALBASE}/libdata/pkgconfig/libwnck-1.0.pc
 libwnck_USE_GNOME_IMPL=	gtk20
+libwnck_GNOME_DESKTOP_VERSION=2
 
 libwnck3_LIB_DEPENDS=	wnck-3.0:${PORTSDIR}/x11-toolkits/libwnck3
 libwnck3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libwnck-3.0.pc
 libwnck3_USE_GNOME_IMPL=gtk30
+libwnck3_GNOME_DESKTOP_VERSION=3
 
 vte_LIB_DEPENDS=	vte.9:${PORTSDIR}/x11-toolkits/vte
 vte_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte.pc
@@ -542,10 +544,12 @@ gnomespeech_USE_GNOME_IMPL=libbonobo
 evolutiondataserver_LIB_DEPENDS=edataserverui-1.2.11:${PORTSDIR}/databases/evolution-data-server
 evolutiondataserver_DETECT=		${LOCALBASE}/libdata/pkgconfig/evolution-data-server-1.2.pc
 evolutiondataserver_USE_GNOME_IMPL=gconf2 libxml2
+evolutiondataserver_GNOME_DESKTOP_VERSION=2
 
 evolutiondataserver3_LIB_DEPENDS=	edataserverui-3.0.0:${PORTSDIR}/databases/evolution-data-server3
 evolutiondataserver3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libedataserverui-3.0.pc
 evolutiondataserver3_USE_GNOME_IMPL=	gconf2 libxml2 gtk30
+evolutiondataserver3_GNOME_DESKTOP_VERSION=3
 
 desktopfileutils_BUILD_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
 desktopfileutils_RUN_DEPENDS=update-desktop-database:${PORTSDIR}/devel/desktop-file-utils
