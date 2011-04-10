@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange3/Makefile,v 1.6 2011/03/22 09:43:13 kwm Exp $
+#   $MCom: ports/mail/evolution-exchange3/Makefile,v 1.7 2011/04/05 09:02:40 kwm Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -17,6 +17,8 @@ COMMENT=	Evolution plugin to connect to Microsoft Exchange servers
 
 BUILD_DEPENDS=	evolution>=2.91.0:${PORTSDIR}/mail/evolution3
 RUN_DEPENDS=	evolution>=2.91.0:${PORTSDIR}/mail/evolution3
+
+CONFLICTS=	evolution-exchange-2.[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
