@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.25 2011/04/06 08:35:44 kwm Exp $
+#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.26 2011/04/10 19:41:34 mezz Exp $
 #
 
 PORTNAME=	at-spi2-atk
@@ -19,6 +19,8 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus
 RUN_DEPENDS=	${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core
+
+CONFLICTS=	at-spi-1.[0-9]*
 
 LICENSE=        LGPL21
 LICENSE_FILE=   ${WRKSRC}/COPYING
