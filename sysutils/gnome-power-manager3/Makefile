@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.6 2011/03/31 11:38:31 kwm Exp $
+#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.7 2011/04/05 11:35:06 kwm Exp $
 #
 
 PORTNAME=	gnome-power-manager
@@ -30,7 +30,6 @@ USE_XORG=	xrandr xrender x11 xext xproto
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_AUTOTOOLS=	libtool
-GNOME_DESKTOP_VERSION=3
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomecontrolcenter3 \
 		gnomedocutils
 CONFIGURE_ARGS=	--with-doc-dir=${PREFIX}/share/doc \

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/www/epiphany/Makefile,v 1.148 2010/11/20 15:36:57 kwm Exp $
-#   $MCom: ports/www/epiphany/Makefile,v 1.242 2011/03/06 23:12:42 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.243 2011/03/07 07:56:29 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -32,7 +32,6 @@ INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-GNOME_DESKTOP_VERSION=2
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop desktopfileutils
 WANT_GNOME=	yes
 GNU_CONFIGURE=	yes

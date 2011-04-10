@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany3/Makefile,v 1.10 2011/03/23 20:37:01 kwm Exp $
+#   $MCom: ports/www/epiphany3/Makefile,v 1.11 2011/04/05 21:44:40 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -35,7 +35,6 @@ INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-GNOME_DESKTOP_VERSION=3
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils libxml2
 USE_XORG=	ice x11 sm
 GNU_CONFIGURE=	yes

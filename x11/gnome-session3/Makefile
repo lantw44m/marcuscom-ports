@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session3/Makefile,v 1.14 2011/03/29 15:37:07 kwm Exp $
+#   $MCom: ports/x11/gnome-session3/Makefile,v 1.15 2011/04/05 18:18:05 kwm Exp $
 #
 
 PORTNAME=	gnome-session
@@ -29,7 +29,6 @@ USE_BZIP2=	yes
 USE_XORG=	ice sm xau xext xtst xrender xtrans xcomposite
 USE_GL=		gl
 USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 intltool gtk30 librsvg2
-GNOME_DESKTOP_VERSION=3
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.17 2011/04/05 13:25:10 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.18 2011/04/07 07:24:16 kwm Exp $
 #
 
 PORTNAME=	gnome-control-center
@@ -31,11 +31,9 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-GNOME_DESKTOP_VERSION=3
-#USE_GSTREAMER=	good
 WANT_GNOME=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack libxml2 gnomemenus libgnomekbd3 \
-		desktopfileutils gnomedesktop3 gconf2
+USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack libxml2 gnomemenus \
+		libgnomekbd3 desktopfileutils gnomedesktop3 gconf2
 USE_XORG=	xscrnsaver x11 xxf86misc kbproto
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes

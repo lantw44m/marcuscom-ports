@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-applets/Makefile,v 1.216 2010/09/27 10:14:28 kwm Exp $
+#   $MCom: ports/x11/gnome-applets/Makefile,v 1.218 2011/03/07 16:36:36 kwm Exp $
 #
 
 PORTNAME=	gnome-applets
@@ -29,7 +29,6 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/system-tools-backends-2.0.pc:${PORTS
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-GNOME_DESKTOP_VERSION=2
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes

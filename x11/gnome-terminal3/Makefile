@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-terminal3/Makefile,v 1.4 2011/02/24 12:15:29 kwm Exp $
+#   $MCom: ports/x11/gnome-terminal3/Makefile,v 1.5 2011/04/05 09:29:34 kwm Exp $
 #
 
 PORTNAME=	gnome-terminal
@@ -26,7 +26,6 @@ USE_GMAKE=	yes
 USE_XORG=	sm ice
 USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 vte3 gnomedocutils
 GNU_CONFIGURE=	yes
-GNOME_DESKTOP_VERSION=3
 CONFIGURE_ARGS=	--with-gtk=3.0
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

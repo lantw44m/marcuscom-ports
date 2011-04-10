@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils3/Makefile,v 1.5 2011/03/30 06:54:42 kwm Exp $
+#   $MCom: ports/deskutils/gnome-utils3/Makefile,v 1.6 2011/04/05 13:40:20 kwm Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -24,7 +24,6 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
-GNOME_DESKTOP_VERSION=3
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_XORG=	xext x11

@@ -3,7 +3,7 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino3/Makefile,v 1.3 2011/03/29 21:29:39 kwm Exp $
+#   $MCom: ports/net/vino3/Makefile,v 1.4 2011/04/05 14:34:44 kwm Exp $
 #
 
 PORTNAME=	vino
@@ -27,7 +27,6 @@ USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gtk30
 USE_XORG=	xdamage xfixes xtst
 USE_GMAKE=	yes
-GNOME_DESKTOP_VERSION=3
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--without-network-manager \

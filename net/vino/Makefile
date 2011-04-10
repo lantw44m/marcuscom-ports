@@ -3,7 +3,7 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino/Makefile,v 1.81 2010/09/27 13:51:24 kwm Exp $
+#   $MCom: ports/net/vino/Makefile,v 1.83 2011/03/07 08:48:34 kwm Exp $
 #
 
 PORTNAME=	vino
@@ -25,7 +25,6 @@ USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gnomepanel
 USE_XORG=	xtst
 USE_GMAKE=	yes
-GNOME_DESKTOP_VERSION=2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

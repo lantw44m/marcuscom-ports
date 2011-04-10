@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.24 2011/04/05 19:56:02 kwm Exp $
+#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.25 2011/04/06 08:35:44 kwm Exp $
 #
 
 PORTNAME=	at-spi2-atk
@@ -26,7 +26,6 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomehier intlhack gconf2 libxml2
-GNOME_DESKTOP_VERSION=3
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

@@ -3,7 +3,7 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.11 2011/03/31 07:27:46 kwm Exp $
+#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.12 2011/04/05 12:47:52 kwm Exp $
 #
 
 PORTNAME=	nautilus
@@ -30,7 +30,6 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop3 libxml2 \
 		desktopfileutils ltverhack gvfs ltasneededhack
-GNOME_DESKTOP_VERSION=3
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
