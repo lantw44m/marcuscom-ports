@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero3/Makefile,v 1.8 2011/04/05 19:21:36 kwm Exp $
+#    $MCom: ports/sysutils/brasero3/Makefile,v 1.9 2011/04/10 19:41:37 mezz Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	3.0.0
@@ -19,6 +19,8 @@ LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 		cdrdao:${PORTSDIR}/sysutils/cdrdao
+
+CONFLICTS=	brasero-2.[0-9]*
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
