@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnomekbd3/Makefile,v 1.6 2011/04/05 17:53:25 kwm Exp $
+#   $MCom: ports/x11/libgnomekbd3/Makefile,v 1.7 2011/04/06 06:30:58 kwm Exp $
 #
 
 PORTNAME=	libgnomekbd
@@ -19,6 +19,8 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	xklavier.12:${PORTSDIR}/x11/libxklavier
 
 LATEST_LINK=	libgnomekbd3
+
+CONFLICTS=	libgnomekbd-2.[0-9]*
 
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomehack ltverhack intltool gtk30

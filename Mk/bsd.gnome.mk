@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.538 2011/03/30 19:23:02 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.539 2011/04/09 02:44:27 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -92,8 +92,8 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
 
 # GNOME 3 components
 _USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
-		gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgda5 libgda5-ui libgnomekbd3 librsvg3 \
-		libwnck3 nautilus3 vte3
+		gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgda5 libgda5-ui \
+		libgnomekbd3 librsvg3 libwnck3 nautilus3 vte3
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -593,10 +593,12 @@ gnomesharp20_USE_GNOME_IMPL=	gnomepanel gtkhtml3 gtksharp20 librsvg2 vte
 libgnomekbd_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
 libgnomekbd_LIB_DEPENDS=	gnomekbd.4:${PORTSDIR}/x11/libgnomekbd
 libgnomekbd_USE_GNOME_IMPL=	gconf2
+libgnomekbd_GNOME_DESKTOP_VERSION=2
 
 libgnomekbd3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
 libgnomekbd3_LIB_DEPENDS=	gnomekbd.7:${PORTSDIR}/x11/libgnomekbd3
 libgnomekbd3_USE_GNOME_IMPL=	gtk30
+libgnomekbd3_GNOME_DESKTOP_VERSION=3
 
 pygtksourceview_DETECT=		${LOCALBASE}/libdata/pkgconfig/pygtksourceview-2.0.pc
 pygtksourceview_BUILD_DEPENDS=	${pygtksourceview_DETECT}:${PORTSDIR}/x11-toolkits/py-gtksourceview
