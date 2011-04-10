@@ -2,16 +2,16 @@
 # Date created:				05 October 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.5 2011/04/05 09:26:05 kwm Exp $
+# $FreeBSD: ports/x11-toolkits/vte/Makefile,v 1.99 2010/12/04 07:34:24 ade Exp $
+#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.117 2010/11/13 13:16:58 kwm Exp $
 #
 
 PORTNAME=	vte
-PORTVERSION=	0.28.0
+PORTVERSION=	0.26.2
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome2
 
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Terminal widget with improved accessibility and I18N support
@@ -20,28 +20,24 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-CONFLICTS=	vte-0.26.[0-9]*
+CONFLICTS=	vte-0.28.[0-9]*
 
 USE_GMAKE=	yes
 USE_BISON=	build
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GETTEXT=	yes
-USE_GNOME?=	gnomeprefix gnomehack gtk30 ltverhack referencehack
+USE_GNOME?=	gnomeprefix gnomehack gtk20 ltverhack referencehack
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 #		BSD_PTHREAD_LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS?=--disable-python \
-		--with-gtk=3.0 \
-		--enable-introspection \
 		--disable-Bsymbolic \
 		--disable-freetypetest
 
 .if !defined(MASTERDIR)
 OPTIONS=	GLX	"Enable support for DRI/GLX rendering" off
 .endif
-
-PLIST_SUB=	VERSION=2.90
 
 .include <bsd.port.pre.mk>
 

@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.540 2011/04/10 15:14:12 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.541 2011/04/10 19:28:34 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -398,10 +398,12 @@ libwnck3_GNOME_DESKTOP_VERSION=3
 vte_LIB_DEPENDS=	vte.9:${PORTSDIR}/x11-toolkits/vte
 vte_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte.pc
 vte_USE_GNOME_IMPL=	gtk20
+vte_GNOME_DESKTOP_VERSION=2
 
 vte3_LIB_DEPENDS=	vte2_90.9:${PORTSDIR}/x11-toolkits/vte3
 vte3_DETECT=		${LOCALBASE}/libdata/pkgconfig/vte-2.90.pc
 vte3_USE_GNOME_IMPL=	gtk30
+vte3_GNOME_DESKTOP_VERSION=3
 
 libzvt_LIB_DEPENDS=	zvt-2.0.0:${PORTSDIR}/x11-toolkits/libzvt
 libzvt_DETECT=	${LOCALBASE}/libdata/pkgconfig/libzvt-2.0.pc
