@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes-standard/Makefile,v 1.10 2011/03/29 16:20:55 kwm Exp $
+#   $MCom: ports/x11-themes/gnome-themes-standard/Makefile,v 1.11 2011/04/05 13:06:32 kwm Exp $
 #
 
 PORTNAME=	gnome-themes-standard
@@ -14,6 +14,8 @@ DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Standard themes for GNOME
+
+CONFLICTS=	gnome-themes-2.[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
