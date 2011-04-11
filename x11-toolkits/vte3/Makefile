@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.5 2011/04/05 09:26:05 kwm Exp $
+#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.6 2011/04/10 20:46:10 mezz Exp $
 #
 
 PORTNAME=	vte
@@ -19,8 +19,6 @@ COMMENT?=	Terminal widget with improved accessibility and I18N support
 USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
-
-CONFLICTS=	vte-0.26.[0-9]*
 
 USE_GMAKE=	yes
 USE_BISON=	build
