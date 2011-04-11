@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD: ports/accessibility/at-spi/Makefile,v 1.75 2010/11/20 15:36:23 kwm Exp $
-#   $MCom: ports/accessibility/at-spi/Makefile,v 1.103 2010/09/27 09:47:42 kwm Exp $
+#   $MCom: ports/accessibility/at-spi/Makefile,v 1.105 2011/04/10 20:06:06 mezz Exp $
 #
 
 PORTNAME=	at-spi
@@ -20,7 +20,7 @@ USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-CONFLICTS=	at-spi2-atk-2.[0-9]*
+CONFLICTS=	at-spi2-atk-2.[0-9]* py[0-9][0-9]-atspi-2.[0-9]*
 
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
