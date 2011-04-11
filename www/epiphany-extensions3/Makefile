@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions3/Makefile,v 1.1 2011/03/24 09:27:05 kwm Exp $
+#   $MCom: ports/www/epiphany-extensions3/Makefile,v 1.2 2011/04/07 10:36:46 kwm Exp $
 #
 
 PORTNAME=	epiphany-extensions
-PORTVERSION=	2.91.92
-PORTREVISION=	1
+PORTVERSION=	3.0.0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,6 +19,8 @@ BUILD_DEPENDS=	epiphany>=2.91.0:${PORTSDIR}/www/epiphany3
 LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
 		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3
 RUN_DEPENDS=	epiphany>=2.91.0:${PORTSDIR}/www/epiphany3
+
+CONFLICTS=	epiphany-extensions-2.[0-9]*
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
@@ -35,7 +36,7 @@ GLIB_SCHEMAS=	org.gnome.epiphanyextensions.gschema.xml
 EPHY_EXTENSIONS=really-all
 EPHY_VERSION=	${PORTVERSION:R}
 
-PLIST_SUB=	VERSION=${EPHY_VERSION} EPHY_VERSION=2.31
+PLIST_SUB=	VERSION=${EPHY_VERSION} EPHY_VERSION=3.0
 
 OPTIONS=	OPENSP "Enable OpenSP SGML support" off
 
@@ -53,7 +54,6 @@ CONFIGURE_ARGS+=--with-extensions="${EPHY_EXTENSIONS}"
 post-patch:
 	@${REINPLACE_CMD} -e 's|$$($$PKG_CONFIG --variable=extensionsdir epiphany-$$_epiphany_api_version)|${PREFIX}/lib/epiphany/${PORTVERSION:R}/extensions|g' \
 		-e 's|$$($$PKG_CONFIG --variable=icondir epiphany-$$EPIPHANY_API_VERSION)|${PREFIX}/share/epiphany/icons|g' \
-		-e 's|2.31|3.0|g' \
 		${WRKSRC}/configure
 # temp disable until autoscroller and permissions gets updated to new API.
 	@${REINPLACE_CMD} -e 's|auto-scroller||g' -e 's|permissions||g' \
