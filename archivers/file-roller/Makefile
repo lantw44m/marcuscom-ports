@@ -3,14 +3,15 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller3/Makefile,v 1.9 2011/04/10 19:41:34 mezz Exp $
+#   $MCom: ports/archivers/file-roller/Makefile,v 1.184 2010/11/15 22:58:48 kwm Exp $
 #
 
 PORTNAME=	file-roller
-PORTVERSION=	3.0.0
+PORTVERSION=	2.32.1
+PORTEPOCH=	1
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An archive manager for zip files, tar, etc
@@ -20,7 +21,7 @@ OPTIONS=	NAUTILUS	"Enable Nautilus extension"	on
 RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar \
     		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 
-CONFLICTS=	file-roller-2.[0-9]*
+CONFLICTS=	file-roller-3.[0-9]*
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
@@ -29,7 +30,8 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils gnomedocutils \
-		gtk30 gconf2
+		gtk20 gconf2
+GNOME_DESKTOP_VERSION=2
 USE_XORG=	sm
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
@@ -37,12 +39,12 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 CONFIGURE_ARGS=	--disable-packagekit
 
 PORTDOCS=	AUTHORS NEWS README TODO ChangeLog
-GLIB_SCHEMAS=	org.gnome.FileRoller.gschema.xml
+GCONF_SCHEMAS=	file-roller.schemas
 
 .include <bsd.port.pre.mk>
 
 .if !defined(WITHOUT_NAUTILUS)
-USE_GNOME+=	nautilus3
+USE_GNOME+=	nautilus2
 PLIST_SUB+=	NAUTILUS=""
 .else
 PLIST_SUB+=	NAUTILUS="@comment "
