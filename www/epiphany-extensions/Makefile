@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/www/epiphany-extensions/Makefile,v 1.66 2010/11/20 15:36:58 kwm Exp $
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.132 2010/09/19 15:40:33 kwm Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.134 2011/03/06 23:12:43 kwm Exp $
 #
 
 PORTNAME=	epiphany-extensions
@@ -20,6 +20,8 @@ BUILD_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 LIB_DEPENDS=	pcre.0:${PORTSDIR}/devel/pcre \
 		webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2
 RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
+
+CONFLICTS=	epiphany-extensions-3.[0-9]*
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
