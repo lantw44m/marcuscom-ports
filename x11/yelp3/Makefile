@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp3/Makefile,v 1.9 2011/03/23 13:20:29 kwm Exp $
+#   $MCom: ports/x11/yelp3/Makefile,v 1.10 2011/04/06 05:45:38 kwm Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,6 +18,8 @@ COMMENT=	A help browser for the GNOME 3 desktop
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/textproc/yelp-xsl
 LIB_DEPENDS=	webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/textproc/yelp-xsl
+
+CONFLICTS=	yelp-2.[0-9]*
 
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
