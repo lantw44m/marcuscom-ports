@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany3/Makefile,v 1.11 2011/04/05 21:44:40 kwm Exp $
+#   $MCom: ports/www/epiphany3/Makefile,v 1.12 2011/04/10 19:41:38 mezz Exp $
 #
 
 PORTNAME=	epiphany
@@ -29,6 +29,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
+
+CONFLICTS=	epiphany-2.[0-9]*
 
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes

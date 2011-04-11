@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/www/epiphany/Makefile,v 1.148 2010/11/20 15:36:57 kwm Exp $
-#   $MCom: ports/www/epiphany/Makefile,v 1.243 2011/03/07 07:56:29 kwm Exp $
+#   $MCom: ports/www/epiphany/Makefile,v 1.244 2011/04/10 19:41:37 mezz Exp $
 #
 
 PORTNAME=	epiphany
@@ -26,6 +26,8 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		${LOCALBASE}/share/icons/HighContrastLargePrint/index.theme:${PORTSDIR}/x11-themes/gnome-themes
+
+CONFLICTS=	epiphany-3.[0-9]*
 
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
