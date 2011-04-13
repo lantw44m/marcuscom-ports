@@ -68,8 +68,8 @@ lib/libmx-gtk-1.0.a
 lib/libmx-gtk-1.0.la
 lib/libmx-gtk-1.0.so
 lib/libmx-gtk-1.0.so.0
-lib/pkgconfig/mx-1.0.pc
-lib/pkgconfig/mx-gtk-1.0.pc
+libdata/pkgconfig/mx-1.0.pc
+libdata/pkgconfig/mx-gtk-1.0.pc
 share/gir-1.0/Mx-1.0.gir
 share/gir-1.0/MxGtk-1.0.gir
 share/gtk-doc/html/mx/MxAction.html

@@ -3,11 +3,12 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.45 2011/03/21 14:46:23 kwm Exp $
+#  $MCom: ports/x11-toolkits/mx/Makefile,v 1.1 2011/03/30 07:48:54 kwm Exp $
 #
 
 PORTNAME=	mx
 PORTVERSION=	1.0.4
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://source.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
 
@@ -23,7 +24,7 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	glib20 gtk20 intlhack ltverhack
+USE_GNOME=	gnomehack glib20 gtk20 intlhack ltverhack
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	LDFLAGS="${LDFLAGS}"
 
