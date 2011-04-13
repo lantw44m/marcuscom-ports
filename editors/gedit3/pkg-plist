@@ -191,6 +191,7 @@ share/dbus-1/services/org.gnome.gedit.service
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
+share/gedit/css/gedit.css
 share/gedit/gir-1.0/Gedit-%%VERSION%%.gir
 share/gedit/logo/gedit-logo.png
 share/gedit/plugins/docinfo/gedit-docinfo-plugin.ui
@@ -1503,6 +1504,7 @@ share/locale/zh_TW/LC_MESSAGES/gedit.mo
 @dirrm share/gedit/plugins/changecase
 @dirrm share/gedit/plugins
 @dirrm share/gedit/logo
+@dirrm share/gedit/css
 @dirrm share/gedit
 @dirrm %%DOCSDIR%%
 @dirrmtry share/applications
