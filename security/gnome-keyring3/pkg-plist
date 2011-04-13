@@ -198,6 +198,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrm share/gcr-3
 @dirrm share/doc/gcr-3
 @dirrm share/doc/gck
+@dirrmtry share/applications
 @dirrm lib/pkcs11
 @dirrm lib/gnome-keyring/devel
 @dirrm lib/gnome-keyring
