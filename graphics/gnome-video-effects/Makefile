@@ -14,7 +14,7 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	A collection of Gstreamer effects
 
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack
+USE_GNOME=	gnomehack intlhack
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
