@@ -3,11 +3,12 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino3/Makefile,v 1.4 2011/04/05 14:34:44 kwm Exp $
+#   $MCom: ports/net/vino3/Makefile,v 1.5 2011/04/10 19:41:36 mezz Exp $
 #
 
 PORTNAME=	vino
 PORTVERSION=	3.0.0
+PORTREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,9 +19,9 @@ COMMENT=	VNC server that allows for remote access to your GNOME desktop
 LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+		soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
-		avahi-glib.1:${PORTSDIR}/net/avahi-app \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
+		avahi-glib.1:${PORTSDIR}/net/avahi-app
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
