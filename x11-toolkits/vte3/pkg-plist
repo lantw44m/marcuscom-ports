@@ -13,7 +13,6 @@ lib/libvte2_90.la
 lib/libvte2_90.so
 lib/libvte2_90.so.9
 libdata/pkgconfig/vte-%%VERSION%%.pc
-libexec/gnome-pty-helper
 share/gir-1.0/Vte-%%VERSION%%.gir
 share/locale/am/LC_MESSAGES/vte-2.90.mo
 share/locale/ang/LC_MESSAGES/vte-2.90.mo

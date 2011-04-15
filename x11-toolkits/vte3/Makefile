@@ -3,14 +3,15 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.6 2011/04/10 20:46:10 mezz Exp $
+#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.7 2011/04/11 02:36:01 mezz Exp $
 #
 
-PORTNAME=	vte
+PORTNAME?=	vte
 PORTVERSION=	0.28.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
+DISTNAME=	vte-${PORTVERSION}
 DIST_SUBDIR=	gnome3
 
 MAINTAINER?=	gnome@FreeBSD.org
@@ -19,6 +20,8 @@ COMMENT?=	Terminal widget with improved accessibility and I18N support
 USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
+
+RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gnome-pty-helper
 
 USE_GMAKE=	yes
 USE_BISON=	build
@@ -33,6 +36,7 @@ CONFIGURE_ARGS?=--disable-python \
 		--with-gtk=3.0 \
 		--enable-introspection \
 		--disable-Bsymbolic \
+		--disable-gnome-pty-helper \
 		--disable-freetypetest
 
 .if !defined(MASTERDIR)

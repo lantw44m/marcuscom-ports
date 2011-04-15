@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/x11-toolkits/vte/Makefile,v 1.99 2010/12/04 07:34:24 ade Exp $
-#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.119 2011/04/10 20:46:10 mezz Exp $
+#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.120 2011/04/11 02:36:01 mezz Exp $
 #
 
 PORTNAME=	vte
 PORTVERSION=	0.26.2
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,6 +19,8 @@ COMMENT?=	Terminal widget with improved accessibility and I18N support
 USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
+
+RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gnome-pty-helper
 
 USE_GMAKE=	yes
 USE_BISON=	build
