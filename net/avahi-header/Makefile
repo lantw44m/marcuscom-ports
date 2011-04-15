@@ -3,22 +3,20 @@
 # Whom:					Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-header/Makefile,v 1.1 2011/03/31 01:51:21 mezz Exp $
+#   $MCom: ports/net/avahi-header/Makefile,v 1.2 2011/03/31 02:06:52 mezz Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	net
 PKGNAMESUFFIX=	-header
 
-MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Install an avahi-gtk* header to avoid conflict
 
 MASTERDIR=	${.CURDIR}/../avahi-app
 BUILD_WRKSRC=	${WRKSRC}/avahi-ui
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 DESCR=		${.CURDIR}/pkg-descr
-PLIST_FILES=	include/avahi-ui/avahi-ui.h
-PLIST_DIRS=	include/avahi-ui
+PLIST=		${.CURDIR}/pkg-plist
 
 AVAHI_SLAVE=	header
 
