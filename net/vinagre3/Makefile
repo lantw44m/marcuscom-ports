@@ -3,14 +3,15 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/net/vinagre3/Makefile,v 1.2 2011/03/31 02:13:54 mezz Exp $
+#  $MCom: ports/net/vinagre3/Makefile,v 1.3 2011/04/08 23:02:14 mezz Exp $
 #
 
 PORTNAME=	vinagre
 PORTVERSION=	3.0.0
+PORTREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC client for the GNOME Desktop
@@ -23,8 +24,7 @@ LIB_DEPENDS=	gtk-vnc-2.0.0:${PORTSDIR}/net/gtk-vnc3 \
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 libxml2 vte3 \
-		gnomepanel3
+USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 libxml2 vte3
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
@@ -37,7 +37,8 @@ GLIB_SCHEMAS=	org.gnome.Vinagre.gschema.xml
 
 MAN1=		vinagre.1
 
-OPTIONS=	TELEPATHY "Enable telepathy integration" on
+OPTIONS=	TELEPATHY "Enable telepathy integration" on \
+		PANEL "Build gnome-panel applet" off
 
 .include <bsd.port.pre.mk>
 
@@ -47,6 +48,14 @@ PLIST_SUB+=	TELEPATHY=""
 .else
 CONFIGURE_ARGS+=--without-telepathy
 PLIST_SUB+=	TELEPATHY="@comment "
+.endif
+
+.if defined(WITH_PANEL)
+USE_GNOME+=	gnomepanel3
+PLIST_SUB+=	PANEL=""
+.else
+CONFIGURE_ARGS+=--without-panelapplet
+PLIST_SUB+=	PANEL="@comment "
 .endif
 
 post-install:
