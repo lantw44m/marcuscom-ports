@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese3/Makefile,v 1.4 2011/04/05 19:55:37 kwm Exp $
+#   $MCom: ports/multimedia/cheese3/Makefile,v 1.5 2011/04/13 09:44:34 kwm Exp $
 #
 
 PORTNAME=	cheese
@@ -19,9 +19,10 @@ COMMENT=	A Photobooth-inspired app for taking pictures and videos from webcam
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev.h:${PORTSDIR}/multimedia/v4l_compat \
 		${LOCALBASE}/libdata/pkgconfig/gnome-video-effects.pc:${PORTSDIR}/graphics/gnome-video-effects \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
+LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		hal.1:${PORTSDIR}/sysutils/hal \
 		mx-1.0.2:${PORTSDIR}/x11-toolkits/mx \
+		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
 		clutter-gst-1.0.0:${PORTSDIR}/multimedia/clutter-gst
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-video-effects.pc:${PORTSDIR}/graphics/gnome-video-effects
 
