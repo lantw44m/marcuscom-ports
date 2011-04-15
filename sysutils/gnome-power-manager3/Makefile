@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.7 2011/04/05 11:35:06 kwm Exp $
+#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.8 2011/04/10 19:41:37 mezz Exp $
 #
 
 PORTNAME=	gnome-power-manager
 PORTVERSION=	3.0.0
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,8 +21,7 @@ LIB_DEPENDS=	upower-glib.1:${PORTSDIR}/sysutils/upower \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		notify.4:${PORTSDIR}/devel/libnotify \
 		execinfo:${PORTSDIR}/devel/libexecinfo
-RUN_DEPENDS=	pkexec:${PORTSDIR}/sysutils/polkit \
-		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
+RUN_DEPENDS=	pkexec:${PORTSDIR}/sysutils/polkit
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes

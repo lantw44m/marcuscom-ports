@@ -620,6 +620,8 @@ share/omf/gnome-power-manager/gnome-power-manager-sv.omf
 share/omf/gnome-power-manager/gnome-power-manager-zh_CN.omf
 share/polkit-1/actions/org.gnome.power.policy
 @dirrm share/omf/gnome-power-manager
+@dirrmtry share/icons/gnome/scalable/status
+@dirrmtry share/icons/gnome/scalable
 @dirrm share/gnome/help/gnome-power-manager/zh_CN/figures
 @dirrm share/gnome/help/gnome-power-manager/zh_CN
 @dirrm share/gnome/help/gnome-power-manager/sv/figures
