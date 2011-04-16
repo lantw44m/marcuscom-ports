@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/audio/gnome-media/Makefile,v 1.105 2010/12/12 16:51:50 marcus Exp $
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.155 2010/09/29 08:17:11 kwm Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.157 2011/04/10 21:55:36 mezz Exp $
 #
 
 PORTNAME=	gnome-media
@@ -20,7 +20,7 @@ BUILD_DEPENDS=	xml2po:${PORTSDIR}/textproc/gnome-doc-utils
 LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 
-CONFLICTS=	gnome-control-center-3.[0-9]*
+CONFLICTS=	gnome-control-center-3.[0-9]* libgnome-media-profiles-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
