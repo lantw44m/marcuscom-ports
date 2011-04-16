@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.31 2011/04/04 08:39:28 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.32 2011/04/15 16:26:07 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -48,7 +48,8 @@ CONFIGURE_ARGS=	--enable-static --enable-xinput=yes
 CONFIGURE_ARGS+=--enable-gtk2-dependency
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
 			  -I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+		LDFLAGS="-L${LOCALBASE}/lib" \
+		INTROSPECTION_GIRDIR=`pkg-config --variable=girdir gobject-introspection-1.0`
 
 GLIB_SCHEMAS=	org.gtk.Settings.FileChooser.gschema.xml
 
