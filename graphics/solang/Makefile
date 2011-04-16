@@ -7,7 +7,7 @@
 
 PORTNAME=	solang
 PORTVERSION=	0.3
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	graphics
 MASTER_SITES=	http://rishi.fedorapeople.org/solang/
 
@@ -19,7 +19,7 @@ MAINTAINER=	ashish@FreeBSD.org
 COMMENT=	A photo manager for GNOME
 
 LIB_DEPENDS=	gegl-0.1.105:${PORTSDIR}/graphics/gegl \
-		exiv2.9:${PORTSDIR}/graphics/exiv2 \
+		exiv2.10:${PORTSDIR}/graphics/exiv2 \
 		flickcurl.0:${PORTSDIR}/www/flickcurl \
 		gtkimageview.0:${PORTSDIR}/x11-toolkits/gtkimageview \
 		webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2 \
