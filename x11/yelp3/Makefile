@@ -3,11 +3,12 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp3/Makefile,v 1.10 2011/04/06 05:45:38 kwm Exp $
+#   $MCom: ports/x11/yelp3/Makefile,v 1.11 2011/04/11 07:15:55 kwm Exp $
 #
 
 PORTNAME=	yelp
 PORTVERSION=	3.0.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -51,5 +52,9 @@ CONFIGURE_ENV+=	YELP_LZMA_CFLAGS="-I/usr/include" \
 .else
 LIB_DEPENDS+=	lzma.0:${PORTSDIR}/archivers/xz
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/home/shaunm/Projects/yelp/data/dtd|${PREFIX}/share/yelp/dtd|g' \
+		${WRKSRC}/data/dtd/catalog
 
 .include <bsd.port.post.mk>
