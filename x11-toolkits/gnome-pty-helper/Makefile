@@ -3,13 +3,15 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/gnome-pty-helper/Makefile,v 1.1 2011/04/15 14:34:32 kwm Exp $
 #
 
 PORTNAME=	gnome-pty-helper
 PORTREVISION?=	0
 
 COMMENT?=	utmp/wtmp/lastlog helper program for the vte Terminal widget
+
+VTE3_SLAVE=	yes
 
 MASTERDIR=	${.CURDIR}/../../x11-toolkits/vte3
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PORTNAME}

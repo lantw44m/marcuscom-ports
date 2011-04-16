@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.7 2011/04/11 02:36:01 mezz Exp $
+#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.8 2011/04/15 14:34:32 kwm Exp $
 #
 
 PORTNAME?=	vte
@@ -20,8 +20,11 @@ COMMENT?=	Terminal widget with improved accessibility and I18N support
 USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
+VTE3_SLAVE?=	no
 
+.if ${VTE3_SLAVE}!="yes"
 RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gnome-pty-helper
+.endif
 
 USE_GMAKE=	yes
 USE_BISON=	build
