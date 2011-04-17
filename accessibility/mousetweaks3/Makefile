@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.6 2011/03/22 10:21:56 kwm Exp $
+#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.7 2011/04/05 13:32:52 kwm Exp $
 #
 
 PORTNAME=	mousetweaks
@@ -17,6 +17,8 @@ COMMENT=	Mouse accessibility enhancements for the GNOME desktop
 
 BUILD_DEPENDS=	gsettings-desktop-schemas>=0.1.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 RUN_DEPENDS=	gsettings-desktop-schemas>=0.1.0:${PORTSDIR}/devel/gsettings-desktop-schemas
+
+CONFLICTS=	mousetweaks-2.[0-9]*
 
 USE_XORG=	x11 xfixes xcursor xtst
 USE_BZIP2=	yes

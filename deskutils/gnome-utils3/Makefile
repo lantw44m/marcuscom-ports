@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils3/Makefile,v 1.6 2011/04/05 13:40:20 kwm Exp $
+#   $MCom: ports/deskutils/gnome-utils3/Makefile,v 1.7 2011/04/10 19:41:35 mezz Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -19,6 +19,8 @@ BUILD_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
+
+CONFLICTS=	gnome-utils-2.[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
