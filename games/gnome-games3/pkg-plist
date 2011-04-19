@@ -9,9 +9,11 @@ bin/gnotravex
 bin/gnotski
 bin/gtali
 bin/iagno
+bin/lightsoff
 bin/mahjongg
 bin/quadrapassel
 bin/sol
+bin/swell-foop
 @unexec [ -s %D/share/games/glines.Large.scores ] || rm -f %D/share/games/glines.Large.scores
 @unexec [ -s %D/share/games/glines.Medium.scores ] || rm -f %D/share/games/glines.Medium.scores
 @unexec [ -s %D/share/games/glines.Small.scores ] || rm -f %D/share/games/glines.Small.scores
@@ -99,7 +101,8 @@ bin/sol
 @unexec [ -s %D/share/games/sweel-foop.Large.scores ] || rm -f %D/share/games/swell-foop.Large.scores
 @unexec [ -s %D/share/games/sweel-foop.Medium.scores ] || rm -f %D/share/games/swell-foop.Medium.scores
 @unexec [ -s %D/share/games/sweel-foop.Small.scores ] || rm -f %D/share/games/swell-foop.Small.scores
-lib/girepository-1.0/GnomeGamesSupport-1.0.typelib
+lib/gnome-games/GnomeGamesSupport-1.0.gir
+lib/gnome-games/GnomeGamesSupport-1.0.typelib
 lib/gnome-games/ar-cards-renderer
 lib/gnome-games/libgames-support-gi.a
 lib/gnome-games/libgames-support-gi.la
@@ -116,10 +119,11 @@ share/applications/gnotravex.desktop
 share/applications/gnotski.desktop
 share/applications/gtali.desktop
 share/applications/iagno.desktop
+share/applications/lightsoff.desktop
 share/applications/mahjongg.desktop
 share/applications/quadrapassel.desktop
 share/applications/sol.desktop
-share/gir-1.0/GnomeGamesSupport-1.0.gir
+share/applications/swell-foop.desktop
 share/glchess/engines.conf
 share/glchess/glchess.ui
 share/glchess/pieces/3d/bishop.3ds
@@ -360,6 +364,33 @@ share/gnome-games-common/theme-install.ini
 %%DATADIR%%/icons/hicolor/32x32/actions/cards-deal.png
 %%DATADIR%%/icons/hicolor/48x48/actions/cards-deal.png
 %%DATADIR%%/icons/hicolor/scalable/actions/cards-deal.svg
+%%DATADIR%%/lightsoff/About.js
+%%DATADIR%%/lightsoff/Arrow.js
+%%DATADIR%%/lightsoff/Board.js
+%%DATADIR%%/lightsoff/Game.js
+%%DATADIR%%/lightsoff/LED.js
+%%DATADIR%%/lightsoff/Light.js
+%%DATADIR%%/lightsoff/Path.js
+%%DATADIR%%/lightsoff/Puzzle.js
+%%DATADIR%%/lightsoff/Settings.js
+%%DATADIR%%/lightsoff/ThemeLoader.js
+%%DATADIR%%/lightsoff/lightsoff.ui
+%%DATADIR%%/lightsoff/main.js
+%%DATADIR%%/lightsoff/settings.ui
+%%DATADIR%%/lightsoff/themes/tango/arrow.svg
+%%DATADIR%%/lightsoff/themes/tango/backing.svg
+%%DATADIR%%/lightsoff/themes/tango/highlight.svg
+%%DATADIR%%/lightsoff/themes/tango/led-back.svg
+%%DATADIR%%/lightsoff/themes/tango/off.svg
+%%DATADIR%%/lightsoff/themes/tango/on.svg
+%%DATADIR%%/lightsoff/themes/tango/theme.js
+%%DATADIR%%/lightsoff/themes/up/arrow.svg
+%%DATADIR%%/lightsoff/themes/up/backing.svg
+%%DATADIR%%/lightsoff/themes/up/highlight.svg
+%%DATADIR%%/lightsoff/themes/up/led-back.svg
+%%DATADIR%%/lightsoff/themes/up/off.svg
+%%DATADIR%%/lightsoff/themes/up/on.svg
+%%DATADIR%%/lightsoff/themes/up/theme.js
 %%DATADIR%%/mahjongg/games/mahjongg.map
 %%DATADIR%%/mahjongg/pixmaps/postmodern.svg
 %%DATADIR%%/mahjongg/pixmaps/smooth.png
@@ -392,6 +423,28 @@ share/gnome-games-common/theme-install.ini
 %%DATADIR%%/sounds/turn.ogg
 %%DATADIR%%/sounds/victory.ogg
 %%DATADIR%%/sounds/yahoo.ogg
+%%DATADIR%%/swell-foop/About.js
+%%DATADIR%%/swell-foop/Board.js
+%%DATADIR%%/swell-foop/Light.js
+%%DATADIR%%/swell-foop/Path.js
+%%DATADIR%%/swell-foop/Score.js
+%%DATADIR%%/swell-foop/Settings.js
+%%DATADIR%%/swell-foop/ThemeLoader.js
+%%DATADIR%%/swell-foop/main.js
+%%DATADIR%%/swell-foop/settings.ui
+%%DATADIR%%/swell-foop/swell-foop.ui
+%%DATADIR%%/swell-foop/themes/tango/bkg.svg
+%%DATADIR%%/swell-foop/themes/tango/blue.svg
+%%DATADIR%%/swell-foop/themes/tango/green.svg
+%%DATADIR%%/swell-foop/themes/tango/red.svg
+%%DATADIR%%/swell-foop/themes/tango/theme.js
+%%DATADIR%%/swell-foop/themes/tango/yellow.svg
+%%DATADIR%%/swell-foop/themes/test/bkg.svg
+%%DATADIR%%/swell-foop/themes/test/blue.svg
+%%DATADIR%%/swell-foop/themes/test/green.svg
+%%DATADIR%%/swell-foop/themes/test/red.svg
+%%DATADIR%%/swell-foop/themes/test/theme.js
+%%DATADIR%%/swell-foop/themes/test/yellow.svg
 share/gnome/help/aisleriot/C/accordion.xml
 share/gnome/help/aisleriot/C/agnes.xml
 share/gnome/help/aisleriot/C/aisleriot.xml
@@ -1653,6 +1706,17 @@ share/gnome/help/iagno/zh_CN/figures/START.png
 share/gnome/help/iagno/zh_CN/figures/connect.png
 share/gnome/help/iagno/zh_CN/figures/tables.png
 share/gnome/help/iagno/zh_CN/iagno.xml
+share/gnome/help/lightsoff/C/legal.xml
+share/gnome/help/lightsoff/C/lightsoff.xml
+share/gnome/help/lightsoff/de/lightsoff.xml
+share/gnome/help/lightsoff/el/lightsoff.xml
+share/gnome/help/lightsoff/es/lightsoff.xml
+share/gnome/help/lightsoff/fi/lightsoff.xml
+share/gnome/help/lightsoff/fr/lightsoff.xml
+share/gnome/help/lightsoff/ro/lightsoff.xml
+share/gnome/help/lightsoff/sl/lightsoff.xml
+share/gnome/help/lightsoff/sv/lightsoff.xml
+share/gnome/help/lightsoff/zh_CN/lightsoff.xml
 share/gnome/help/mahjongg/C/figures/mahjongg.png
 share/gnome/help/mahjongg/C/figures/no-move.png
 share/gnome/help/mahjongg/C/figures/preferences.png
@@ -1758,6 +1822,125 @@ share/gnome/help/quadrapassel/sr/quadrapassel.xml
 share/gnome/help/quadrapassel/sr@latin/quadrapassel.xml
 share/gnome/help/quadrapassel/sv/quadrapassel.xml
 share/gnome/help/quadrapassel/zh_CN/quadrapassel.xml
+share/gnome/help/swell-foop/C/figures/play1.png
+share/gnome/help/swell-foop/C/figures/play2.png
+share/gnome/help/swell-foop/C/figures/play3.png
+share/gnome/help/swell-foop/C/figures/play4.png
+share/gnome/help/swell-foop/C/figures/start-up.png
+share/gnome/help/swell-foop/C/legal.xml
+share/gnome/help/swell-foop/C/swell-foop.xml
+share/gnome/help/swell-foop/ca/figures/play1.png
+share/gnome/help/swell-foop/ca/figures/play2.png
+share/gnome/help/swell-foop/ca/figures/play3.png
+share/gnome/help/swell-foop/ca/figures/play4.png
+share/gnome/help/swell-foop/ca/figures/start-up.png
+share/gnome/help/swell-foop/ca/legal.xml
+share/gnome/help/swell-foop/ca/swell-foop.xml
+share/gnome/help/swell-foop/cs/figures/play1.png
+share/gnome/help/swell-foop/cs/figures/play2.png
+share/gnome/help/swell-foop/cs/figures/play3.png
+share/gnome/help/swell-foop/cs/figures/play4.png
+share/gnome/help/swell-foop/cs/figures/start-up.png
+share/gnome/help/swell-foop/cs/legal.xml
+share/gnome/help/swell-foop/cs/swell-foop.xml
+share/gnome/help/swell-foop/de/figures/play1.png
+share/gnome/help/swell-foop/de/figures/play2.png
+share/gnome/help/swell-foop/de/figures/play3.png
+share/gnome/help/swell-foop/de/figures/play4.png
+share/gnome/help/swell-foop/de/figures/start-up.png
+share/gnome/help/swell-foop/de/legal.xml
+share/gnome/help/swell-foop/de/swell-foop.xml
+share/gnome/help/swell-foop/el/figures/play1.png
+share/gnome/help/swell-foop/el/figures/play2.png
+share/gnome/help/swell-foop/el/figures/play3.png
+share/gnome/help/swell-foop/el/figures/play4.png
+share/gnome/help/swell-foop/el/figures/start-up.png
+share/gnome/help/swell-foop/el/legal.xml
+share/gnome/help/swell-foop/el/swell-foop.xml
+share/gnome/help/swell-foop/en_GB/figures/play1.png
+share/gnome/help/swell-foop/en_GB/figures/play2.png
+share/gnome/help/swell-foop/en_GB/figures/play3.png
+share/gnome/help/swell-foop/en_GB/figures/play4.png
+share/gnome/help/swell-foop/en_GB/figures/start-up.png
+share/gnome/help/swell-foop/en_GB/legal.xml
+share/gnome/help/swell-foop/en_GB/swell-foop.xml
+share/gnome/help/swell-foop/es/figures/play1.png
+share/gnome/help/swell-foop/es/figures/play2.png
+share/gnome/help/swell-foop/es/figures/play3.png
+share/gnome/help/swell-foop/es/figures/play4.png
+share/gnome/help/swell-foop/es/figures/start-up.png
+share/gnome/help/swell-foop/es/legal.xml
+share/gnome/help/swell-foop/es/swell-foop.xml
+share/gnome/help/swell-foop/eu/figures/play1.png
+share/gnome/help/swell-foop/eu/figures/play2.png
+share/gnome/help/swell-foop/eu/figures/play3.png
+share/gnome/help/swell-foop/eu/figures/play4.png
+share/gnome/help/swell-foop/eu/figures/start-up.png
+share/gnome/help/swell-foop/eu/legal.xml
+share/gnome/help/swell-foop/eu/swell-foop.xml
+share/gnome/help/swell-foop/fr/figures/play1.png
+share/gnome/help/swell-foop/fr/figures/play2.png
+share/gnome/help/swell-foop/fr/figures/play3.png
+share/gnome/help/swell-foop/fr/figures/play4.png
+share/gnome/help/swell-foop/fr/figures/start-up.png
+share/gnome/help/swell-foop/fr/legal.xml
+share/gnome/help/swell-foop/fr/swell-foop.xml
+share/gnome/help/swell-foop/it/figures/play1.png
+share/gnome/help/swell-foop/it/figures/play2.png
+share/gnome/help/swell-foop/it/figures/play3.png
+share/gnome/help/swell-foop/it/figures/play4.png
+share/gnome/help/swell-foop/it/figures/start-up.png
+share/gnome/help/swell-foop/it/legal.xml
+share/gnome/help/swell-foop/it/swell-foop.xml
+share/gnome/help/swell-foop/oc/figures/play1.png
+share/gnome/help/swell-foop/oc/figures/play2.png
+share/gnome/help/swell-foop/oc/figures/play3.png
+share/gnome/help/swell-foop/oc/figures/play4.png
+share/gnome/help/swell-foop/oc/figures/start-up.png
+share/gnome/help/swell-foop/oc/legal.xml
+share/gnome/help/swell-foop/oc/swell-foop.xml
+share/gnome/help/swell-foop/ru/figures/play1.png
+share/gnome/help/swell-foop/ru/figures/play2.png
+share/gnome/help/swell-foop/ru/figures/play3.png
+share/gnome/help/swell-foop/ru/figures/play4.png
+share/gnome/help/swell-foop/ru/figures/start-up.png
+share/gnome/help/swell-foop/ru/legal.xml
+share/gnome/help/swell-foop/ru/swell-foop.xml
+share/gnome/help/swell-foop/sl/figures/play1.png
+share/gnome/help/swell-foop/sl/figures/play2.png
+share/gnome/help/swell-foop/sl/figures/play3.png
+share/gnome/help/swell-foop/sl/figures/play4.png
+share/gnome/help/swell-foop/sl/figures/start-up.png
+share/gnome/help/swell-foop/sl/legal.xml
+share/gnome/help/swell-foop/sl/swell-foop.xml
+share/gnome/help/swell-foop/sr/figures/play1.png
+share/gnome/help/swell-foop/sr/figures/play2.png
+share/gnome/help/swell-foop/sr/figures/play3.png
+share/gnome/help/swell-foop/sr/figures/play4.png
+share/gnome/help/swell-foop/sr/figures/start-up.png
+share/gnome/help/swell-foop/sr/legal.xml
+share/gnome/help/swell-foop/sr/swell-foop.xml
+share/gnome/help/swell-foop/sr@latin/figures/play1.png
+share/gnome/help/swell-foop/sr@latin/figures/play2.png
+share/gnome/help/swell-foop/sr@latin/figures/play3.png
+share/gnome/help/swell-foop/sr@latin/figures/play4.png
+share/gnome/help/swell-foop/sr@latin/figures/start-up.png
+share/gnome/help/swell-foop/sr@latin/legal.xml
+share/gnome/help/swell-foop/sr@latin/swell-foop.xml
+share/gnome/help/swell-foop/sv/figures/play1.png
+share/gnome/help/swell-foop/sv/figures/play2.png
+share/gnome/help/swell-foop/sv/figures/play3.png
+share/gnome/help/swell-foop/sv/figures/play4.png
+share/gnome/help/swell-foop/sv/figures/start-up.png
+share/gnome/help/swell-foop/sv/legal.xml
+share/gnome/help/swell-foop/sv/swell-foop.xml
+share/gnome/help/swell-foop/zh_CN/figures/play1.png
+share/gnome/help/swell-foop/zh_CN/figures/play2.png
+share/gnome/help/swell-foop/zh_CN/figures/play3.png
+share/gnome/help/swell-foop/zh_CN/figures/play4.png
+share/gnome/help/swell-foop/zh_CN/figures/start-up.png
+share/gnome/help/swell-foop/zh_CN/legal.xml
+share/gnome/help/swell-foop/zh_CN/swell-foop.xml
 share/icons/hicolor/16x16/apps/gnome-aisleriot.png
 share/icons/hicolor/16x16/apps/gnome-freecell.png
 share/icons/hicolor/16x16/apps/gnome-glchess.png
@@ -1770,6 +1953,7 @@ share/icons/hicolor/16x16/apps/gnome-mahjongg.png
 share/icons/hicolor/16x16/apps/gnomine.png
 share/icons/hicolor/16x16/apps/gnome-quadrapassel.png
 share/icons/hicolor/16x16/apps/gnome-robots.png
+share/icons/hicolor/16x16/apps/gnome-swell-foop.png
 share/icons/hicolor/16x16/apps/gnome-tali.png
 share/icons/hicolor/16x16/apps/gnome-tetravex.png
 share/icons/hicolor/22x22/apps/gnome-aisleriot.png
@@ -1784,6 +1968,7 @@ share/icons/hicolor/22x22/apps/gnome-mahjongg.png
 share/icons/hicolor/22x22/apps/gnomine.png
 share/icons/hicolor/22x22/apps/gnome-quadrapassel.png
 share/icons/hicolor/22x22/apps/gnome-robots.png
+share/icons/hicolor/22x22/apps/gnome-swell-foop.png
 share/icons/hicolor/22x22/apps/gnome-tali.png
 share/icons/hicolor/22x22/apps/gnome-tetravex.png
 share/icons/hicolor/24x24/apps/gnome-aisleriot.png
@@ -1798,6 +1983,7 @@ share/icons/hicolor/24x24/apps/gnome-mahjongg.png
 share/icons/hicolor/24x24/apps/gnomine.png
 share/icons/hicolor/24x24/apps/gnome-quadrapassel.png
 share/icons/hicolor/24x24/apps/gnome-robots.png
+share/icons/hicolor/24x24/apps/gnome-swell-foop.png
 share/icons/hicolor/24x24/apps/gnome-tali.png
 share/icons/hicolor/24x24/apps/gnome-tetravex.png
 share/icons/hicolor/256x256/apps/gnome-aisleriot.png
@@ -1815,6 +2001,7 @@ share/icons/hicolor/32x32/apps/gnome-mahjongg.png
 share/icons/hicolor/32x32/apps/gnomine.png
 share/icons/hicolor/32x32/apps/gnome-quadrapassel.png
 share/icons/hicolor/32x32/apps/gnome-robots.png
+share/icons/hicolor/32x32/apps/gnome-swell-foop.png
 share/icons/hicolor/32x32/apps/gnome-tali.png
 share/icons/hicolor/32x32/apps/gnome-tetravex.png
 share/icons/hicolor/34x34/apps/gnome-aisleriot.png
@@ -1831,6 +2018,7 @@ share/icons/hicolor/48x48/apps/gnome-mahjongg.png
 share/icons/hicolor/48x48/apps/gnomine.png
 share/icons/hicolor/48x48/apps/gnome-quadrapassel.png
 share/icons/hicolor/48x48/apps/gnome-robots.png
+share/icons/hicolor/48x48/apps/gnome-swell-foop.png
 share/icons/hicolor/48x48/apps/gnome-tali.png
 share/icons/hicolor/48x48/apps/gnome-tetravex.png
 share/icons/hicolor/50x50/apps/gnome-aisleriot.png
@@ -1841,9 +2029,11 @@ share/icons/hicolor/scalable/apps/gnome-gnect.svg
 share/icons/hicolor/scalable/apps/gnome-gnibbles.svg
 share/icons/hicolor/scalable/apps/gnome-iagno.svg
 share/icons/hicolor/scalable/apps/gnome-klotski.svg
+share/icons/hicolor/scalable/apps/gnome-lightsoff.svg
 share/icons/hicolor/scalable/apps/gnome-mahjongg.svg
 share/icons/hicolor/scalable/apps/gnome-quadrapassel.svg
 share/icons/hicolor/scalable/apps/gnome-robots.svg
+share/icons/hicolor/scalable/apps/gnome-swell-foop.svg
 share/icons/hicolor/scalable/apps/gnome-tali.svg
 share/icons/hicolor/scalable/apps/gnome-tetravex.svg
 share/locale/af/LC_MESSAGES/gnome-games.mo
@@ -2103,6 +2293,16 @@ share/omf/iagno/iagno-sr.omf
 share/omf/iagno/iagno-sr@latin.omf
 share/omf/iagno/iagno-sv.omf
 share/omf/iagno/iagno-zh_CN.omf
+share/omf/lightsoff/lightsoff-C.omf
+share/omf/lightsoff/lightsoff-de.omf
+share/omf/lightsoff/lightsoff-el.omf
+share/omf/lightsoff/lightsoff-es.omf
+share/omf/lightsoff/lightsoff-fi.omf
+share/omf/lightsoff/lightsoff-fr.omf
+share/omf/lightsoff/lightsoff-ro.omf
+share/omf/lightsoff/lightsoff-sl.omf
+share/omf/lightsoff/lightsoff-sv.omf
+share/omf/lightsoff/lightsoff-zh_CN.omf
 share/omf/mahjongg/mahjongg-C.omf
 share/omf/mahjongg/mahjongg-ca.omf
 share/omf/mahjongg/mahjongg-cs.omf
@@ -2138,8 +2338,27 @@ share/omf/quadrapassel/quadrapassel-sr.omf
 share/omf/quadrapassel/quadrapassel-sr@latin.omf
 share/omf/quadrapassel/quadrapassel-sv.omf
 share/omf/quadrapassel/quadrapassel-zh_CN.omf
+share/omf/swell-foop/swell-foop-C.omf
+share/omf/swell-foop/swell-foop-ca.omf
+share/omf/swell-foop/swell-foop-cs.omf
+share/omf/swell-foop/swell-foop-de.omf
+share/omf/swell-foop/swell-foop-el.omf
+share/omf/swell-foop/swell-foop-en_GB.omf
+share/omf/swell-foop/swell-foop-es.omf
+share/omf/swell-foop/swell-foop-eu.omf
+share/omf/swell-foop/swell-foop-fr.omf
+share/omf/swell-foop/swell-foop-it.omf
+share/omf/swell-foop/swell-foop-oc.omf
+share/omf/swell-foop/swell-foop-ru.omf
+share/omf/swell-foop/swell-foop-sl.omf
+share/omf/swell-foop/swell-foop-sr.omf
+share/omf/swell-foop/swell-foop-sr@latin.omf
+share/omf/swell-foop/swell-foop-sv.omf
+share/omf/swell-foop/swell-foop-zh_CN.omf
+@dirrm share/omf/swell-foop
 @dirrm share/omf/quadrapassel
 @dirrm share/omf/mahjongg
+@dirrm share/omf/lightsoff
 @dirrm share/omf/iagno
 @dirrm share/omf/gtali
 @dirrm share/omf/gnotski
@@ -2161,6 +2380,41 @@ share/omf/quadrapassel/quadrapassel-zh_CN.omf
 @dirrmtry share/icons/hicolor/34x34
 @dirrmtry share/icons/hicolor/26x26/apps
 @dirrmtry share/icons/hicolor/26x26
+@dirrm share/gnome/help/swell-foop/zh_CN/figures
+@dirrm share/gnome/help/swell-foop/zh_CN
+@dirrm share/gnome/help/swell-foop/sv/figures
+@dirrm share/gnome/help/swell-foop/sv
+@dirrm share/gnome/help/swell-foop/sr@latin/figures
+@dirrm share/gnome/help/swell-foop/sr@latin
+@dirrm share/gnome/help/swell-foop/sr/figures
+@dirrm share/gnome/help/swell-foop/sr
+@dirrm share/gnome/help/swell-foop/sl/figures
+@dirrm share/gnome/help/swell-foop/sl
+@dirrm share/gnome/help/swell-foop/ru/figures
+@dirrm share/gnome/help/swell-foop/ru
+@dirrm share/gnome/help/swell-foop/oc/figures
+@dirrm share/gnome/help/swell-foop/oc
+@dirrm share/gnome/help/swell-foop/it/figures
+@dirrm share/gnome/help/swell-foop/it
+@dirrm share/gnome/help/swell-foop/fr/figures
+@dirrm share/gnome/help/swell-foop/fr
+@dirrm share/gnome/help/swell-foop/eu/figures
+@dirrm share/gnome/help/swell-foop/eu
+@dirrm share/gnome/help/swell-foop/es/figures
+@dirrm share/gnome/help/swell-foop/es
+@dirrm share/gnome/help/swell-foop/en_GB/figures
+@dirrm share/gnome/help/swell-foop/en_GB
+@dirrm share/gnome/help/swell-foop/el/figures
+@dirrm share/gnome/help/swell-foop/el
+@dirrm share/gnome/help/swell-foop/de/figures
+@dirrm share/gnome/help/swell-foop/de
+@dirrm share/gnome/help/swell-foop/cs/figures
+@dirrm share/gnome/help/swell-foop/cs
+@dirrm share/gnome/help/swell-foop/ca/figures
+@dirrm share/gnome/help/swell-foop/ca
+@dirrm share/gnome/help/swell-foop/C/figures
+@dirrm share/gnome/help/swell-foop/C
+@dirrm share/gnome/help/swell-foop
 @dirrm share/gnome/help/quadrapassel/zh_CN
 @dirrm share/gnome/help/quadrapassel/sv
 @dirrm share/gnome/help/quadrapassel/sr@latin
@@ -2215,6 +2469,17 @@ share/omf/quadrapassel/quadrapassel-zh_CN.omf
 @dirrm share/gnome/help/mahjongg/C/figures
 @dirrm share/gnome/help/mahjongg/C
 @dirrm share/gnome/help/mahjongg
+@dirrm share/gnome/help/lightsoff/zh_CN
+@dirrm share/gnome/help/lightsoff/sv
+@dirrm share/gnome/help/lightsoff/sl
+@dirrm share/gnome/help/lightsoff/ro
+@dirrm share/gnome/help/lightsoff/fr
+@dirrm share/gnome/help/lightsoff/fi
+@dirrm share/gnome/help/lightsoff/es
+@dirrm share/gnome/help/lightsoff/el
+@dirrm share/gnome/help/lightsoff/de
+@dirrm share/gnome/help/lightsoff/C
+@dirrm share/gnome/help/lightsoff
 @dirrm share/gnome/help/iagno/zh_CN/figures
 @dirrm share/gnome/help/iagno/zh_CN
 @dirrm share/gnome/help/iagno/sv/figures
@@ -2606,6 +2871,10 @@ share/omf/quadrapassel/quadrapassel-zh_CN.omf
 @dirrm share/gnome/help/aisleriot/C/figures
 @dirrm share/gnome/help/aisleriot/C
 @dirrm share/gnome/help/aisleriot
+@dirrm %%DATADIR%%/swell-foop/themes/test
+@dirrm %%DATADIR%%/swell-foop/themes/tango
+@dirrm %%DATADIR%%/swell-foop/themes
+@dirrm %%DATADIR%%/swell-foop
 @dirrm %%DATADIR%%/sounds
 @dirrm %%DATADIR%%/quadrapassel/pixmaps
 @dirrm %%DATADIR%%/quadrapassel
@@ -2613,6 +2882,10 @@ share/omf/quadrapassel/quadrapassel-zh_CN.omf
 @dirrm %%DATADIR%%/mahjongg/pixmaps
 @dirrm %%DATADIR%%/mahjongg/games
 @dirrm %%DATADIR%%/mahjongg
+@dirrm %%DATADIR%%/lightsoff/themes/up
+@dirrm %%DATADIR%%/lightsoff/themes/tango
+@dirrm %%DATADIR%%/lightsoff/themes
+@dirrm %%DATADIR%%/lightsoff
 @dirrm %%DATADIR%%/icons/hicolor/scalable/actions
 @dirrm %%DATADIR%%/icons/hicolor/scalable
 @dirrm %%DATADIR%%/icons/hicolor/48x48/actions

@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.7 2011/03/29 20:30:58 kwm Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.8 2011/04/05 15:09:27 kwm Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -46,7 +46,8 @@ GCONF_SCHEMAS=	aisleriot.schemas glines.schemas \
 		gnect.schemas gnibbles.schemas gnobots2.schemas \
 		gnomine.schemas gnotravex.schemas \
 		gnotski.schemas gtali.schemas iagno.schemas \
-		mahjongg.schemas quadrapassel.schemas
+		mahjongg.schemas lightsoff.schemas quadrapassel.schemas \
+		swell-foop.schemas
 GLIB_SCHEMAS=	org.gnome.Games.WindowState.gschema.xml \
 		org.gnome.glchess.gschema.xml
 
