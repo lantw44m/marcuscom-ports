@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.22 2010/11/30 21:53:55 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.23 2010/12/04 18:13:58 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -9,20 +9,29 @@ time you update your ports collection, before attempting any port
 upgrades.
 
 2011MONTHDAY:
-  AFFECTS: users of GNOME
+  AFFECTS: users of x11-toolkits/gtk20, avahi-gtk and GNOME 2
   AUTHOR: gnome@FreeBSD.org
 
   GNOME 3.0 has been added to the ports tree.  GNOME 3.0 and 2.32 desktop
   components are mutual exclusive. If you want to stick around with GNOME 2.32
-  you will not have to do anything. However if you want to switch to GNOME 3.0,
-  you should follow the instructions below. GNOME 3.0 is based on GTK 3. We
-  did our best to test excisting Gtk 2 based programs, but we couldn't test
-  them all. Please let us know at gnome@FreeBSD.org if you experiance problems.
+  The instructions are very simple.
+
+  # pkg_delete -f avahi-gtk-\* gtk-2.\*
+  # portmaster x11-toolkits/gtk20 net/avahi-gtk
+
+  If you want to start using the GNOME 3.0 desktop. you should follow the
+  instructions below. GNOME 3.0 is based on GTK 3, but Gtk 2 applications
+  should work without any problems with the GNOME 3 desktop.
+  However should you run into a application that won't compile or give any kind
+  of trouble let us know at gnome@FreeBSD.org and we will take a look at it.
 
   Switch GNOME 2.32 to GNOME 3.0 instructions:
 
   Make a list of your installed ports.
-  pkg_delete -r glib-2.\*
-  After go to x11/gnome3 and do make install clean.
-  Install applications your missing from the list you made earlier.
+
+  # pkg_delete -fr gtk-2.\* gnome-\*
+  # portmaster -a
+
+  Go to x11/gnome3 or x11/gnome3-lite and do make install clean.
+  Install any missing applications from the list.
 
