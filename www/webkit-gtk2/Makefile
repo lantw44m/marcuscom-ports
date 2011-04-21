@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.72 2011/03/06 18:55:36 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.73 2011/03/22 22:05:58 kwm Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.3.13
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -47,7 +48,7 @@ CONFIGURE_ARGS=	--enable-icon-database \
 MAKEFILE=	GNUmakefile
 GLIB_SCHEMAS=	org.webkitgtk-1.0.gschema.xml
 
-BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk3
+BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
 OPTIONS=	VIDEO "Enable video support" on \
