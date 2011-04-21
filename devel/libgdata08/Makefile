@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgdata/Makefile,v 1.16 2011/01/18 14:55:01 kwm Exp $
+#   $MCom: ports/devel/libgdata08/Makefile,v 1.1 2011/02/16 17:35:12 kwm Exp $
 #
 
 PORTNAME=	libgdata
-PORTVERSION=	0.8.0
+PORTVERSION=	0.8.1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
