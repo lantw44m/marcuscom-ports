@@ -2,29 +2,29 @@
 # Date created:		28 August 2009
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD$
-#   $MCom: ports/graphics/eog-plugins3/Makefile,v 1.3 2011/04/22 10:44:44 kwm Exp $
+# $FreeBSD: ports/graphics/eog-plugins/Makefile,v 1.8 2011/03/04 02:15:08 wen Exp $
+#   $MCom: ports/graphics/eog-plugins/Makefile,v 1.14 2010/09/04 18:09:30 kwm Exp $
 #
 
 PORTNAME=	eog-plugins
-PORTVERSION=	3.0.0
+PORTVERSION=	2.30.1
+PORTREVISION=	2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plug-ins for the Eye of GNOME image viewer application
 
-BUILD_DEPENDS=	eog>=2.91.0:${PORTSDIR}/graphics/eog3
-LIB_DEPENDS=	gdata.11:${PORTSDIR}/devel/libgdata08 \
-		peas-1.0.0:${PORTSDIR}/devel/libpeas
-RUN_DEPENDS=	eog>=2.91.0:${PORTSDIR}/graphics/eog3
+BUILD_DEPENDS=	eog:${PORTSDIR}/graphics/eog
+LIB_DEPENDS=	gdata.7:${PORTSDIR}/devel/libgdata
+RUN_DEPENDS=	eog:${PORTSDIR}/graphics/eog
 
-CONFLICTS=	eog-plugins-2.[0-9]*
+CONFLICTS=	eog-plugins-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30
+USE_GNOME=	gnomeprefix gnomehack intlhack gtk20
 WANT_GNOME=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
@@ -34,8 +34,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 .include <bsd.port.pre.mk>
 
 .if !defined(WITHOUT_CHAMPLAIN) || \
-    (exists(${LOCALBASE}/lib/libchamplain-0.10.so)) || defined(WITH_CHAMPLIAN)
-LIB_DEPENDS+=	champlain-0.10.0:${PORTSDIR}/graphics/libchamplain010
+    (exists(${LOCALBASE}/lib/libchamplain-0.8.so)) || defined(WITH_CHAMPLIAN)
+LIB_DEPENDS+=	champlain-0.8.1:${PORTSDIR}/graphics/libchamplain
 PLIST_SUB+=	CHAMPLAIN=""
 .else
 PLUST_SUB+=	CHAMPLAIN="@comment "
@@ -45,18 +45,22 @@ PLUST_SUB+=	CHAMPLAIN="@comment "
 	defined(WITH_EXIF))
 LIB_DEPENDS+=	exif.12:${PORTSDIR}/graphics/libexif
 PLIST_SUB+=	EXIF=""
-GLIB_SCHEMAS=	org.gnome.eog.plugins.exif-display.gschema.xml
 .else
 PLIST_SUB+=	EXIF="@comment "
 .endif
 
-#.if ${HAVE_GNOME:Mpygtk2}!=""
-#USE_GNOME+=	pygtk2
-#CONFIGURE_ARGS+=--enable-python
-#PLIST_SUB+=	PYTHON=""
-#.else
+.if ${HAVE_GNOME:Mpygnome2}!=""
+USE_GNOME+=	pygnome2
+CONFIGURE_ARGS+=--enable-python
+PLIST_SUB+=	PYTHON=""
+.else
 CONFIGURE_ARGS+=--disable-python
 PLIST_SUB+=	PYTHON="@comment "
-#.endif
+.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|champlain-0.4|champlain-0.8|g' \
+		-e 's|champlain-gtk-0.4|champlain-gtk-0.8|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.post.mk>
