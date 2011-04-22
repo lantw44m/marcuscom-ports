@@ -3,7 +3,7 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD: ports/devel/seed/Makefile,v 1.11 2010/12/04 07:31:27 ade Exp $
-#   $MCom: ports/devel/seed/Makefile,v 1.24 2010/09/19 15:06:42 kwm Exp $
+#   $MCom: ports/devel/seed/Makefile,v 1.28 2011/03/06 23:12:37 kwm Exp $
 #
 # NOTE: It may be necessary to update ${FILESDIR}/Seed.js on each release.
 # To do that, just replace imports.searchPaths with "." and ".." elements.
@@ -26,6 +26,8 @@ LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		mpfr.4:${PORTSDIR}/math/mpfr
+
+CONFLICTS=	seed-3.[0-9]*
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
