@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.22 2011/04/01 11:49:27 kwm Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.23 2011/04/05 18:23:01 kwm Exp $
 #
 
 PORTNAME=	mutter
@@ -41,5 +41,9 @@ MAN1=		mutter-message.1 mutter-theme-viewer.1 \
 		mutter-window-demo.1 mutter.1
 
 PLIST_SUB=	VERSION=${PORTVERSION:R}
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-Wcast-align||g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>
