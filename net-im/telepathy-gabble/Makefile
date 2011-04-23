@@ -3,10 +3,10 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.14 2011/02/22 19:25:49 kwm Exp $
+#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.15 2011/03/16 08:55:30 kwm Exp $
 
 PORTNAME=	telepathy-gabble
-PORTVERSION=	0.11.8
+PORTVERSION=	0.12.0
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -20,6 +20,7 @@ LIB_PC_DEPENDS=	dbus-glib-1.pc:${PORTSDIR}/devel/dbus-glib \
 		loudmouth-1.0.pc:${PORTSDIR}/net-im/loudmouth
 
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
+		telepathy-glib>=0.14.5:${PORTSDIR}/net-im/telepathy-glib \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
 BUILD_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
