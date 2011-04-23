@@ -229,12 +229,6 @@
 %%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/base.py
 %%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/base.pyc
 %%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/base.pyo
-%%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/default.py
-%%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/default.pyc
-%%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/default.pyo
-%%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/nat_traversal.py
-%%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/nat_traversal.pyc
-%%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/nat_traversal.pyo
 %%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/notification.py
 %%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/notification.pyc
 %%PYTHON_SITELIBDIR%%/papyon/msnp2p/transport/notification.pyo

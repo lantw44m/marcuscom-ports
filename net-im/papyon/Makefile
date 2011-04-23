@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	papyon
-PORTVERSION=	0.5.4
+PORTVERSION=	0.5.5
 CATEGORIES=	net-im
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/releases/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
