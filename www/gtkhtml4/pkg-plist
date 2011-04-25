@@ -69,6 +69,7 @@ share/locale/el/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/en@shaw/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/en_CA/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/en_GB/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
+share/locale/eo/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/es/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/et/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
 share/locale/eu/LC_MESSAGES/gtkhtml-%%VERSION%%.mo
