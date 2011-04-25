@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.22 2011/04/14 06:36:53 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.23 2011/04/15 18:11:44 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -17,7 +17,7 @@ EXTRACT_ONLY=	# empty
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	The "meta-port" for the GNOME 3 integrated X11 desktop
 
-CONFLICTS?=	gnome3-lite-[0-9]*
+CONFLICTS?=	gnome2-[0-9]* gnome2-lite-[0-9]* gnome3-lite-[0-9]*
 
 RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		dconf:${PORTSDIR}/devel/dconf \

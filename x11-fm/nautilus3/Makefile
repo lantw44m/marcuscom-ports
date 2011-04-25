@@ -3,7 +3,7 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.12 2011/04/05 12:47:52 kwm Exp $
+#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.13 2011/04/10 19:41:39 mezz Exp $
 #
 
 PORTNAME=	nautilus
@@ -23,6 +23,8 @@ LIB_DEPENDS=	exif.12:${PORTSDIR}/graphics/libexif \
 		exempi.3:${PORTSDIR}/textproc/exempi
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
+
+CONFLICTS=	nautilus-2.[0-9]*
 
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
