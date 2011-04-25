@@ -2,41 +2,38 @@
 # Date created:         17 Oct 2002
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
-# $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.13 2011/04/10 19:41:36 mezz Exp $
+# $FreeBSD: ports/multimedia/totem/Makefile,v 1.120 2011/03/05 12:05:28 miwi Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.151 2010/09/27 19:04:37 kwm Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	3.0.0
-PORTREVISION?=	0
+PORTVERSION=	2.32.0
+PORTREVISION?=	1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome2
 
 MAINTAINER?=	gnome@FreeBSD.org
-COMMENT?=	A gstreamer-based video player for the GNOME 3 Desktop
+COMMENT?=	A gstreamer-based video player for the GNOME 2 Desktop
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	gdata.11:${PORTSDIR}/devel/libgdata08 \
-		dbus-1.3:${PORTSDIR}/devel/dbus \
-		peas-1.0.0:${PORTSDIR}/devel/libpeas \
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+LIB_DEPENDS=	musicbrainz:${PORTSDIR}/audio/libmusicbrainz \
+		gdata.7:${PORTSDIR}/devel/libgdata \
+		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
 		totem-plparser.17:${PORTSDIR}/multimedia/totem-pl-parser
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
-		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
-		gnome-icon-theme-symbolic>=2.91.0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic
+		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon \
+		${PYTHON_SITELIBDIR}/atom/__init__.py:${PORTSDIR}/devel/py-gdata
 
-CONFLICTS=	totem-2.[0-9]*
+CONFLICTS=	totem-3.[0-9]*
 
 USE_PYTHON=	yes
-USE_XORG=	x11 xrandr xxf86vm
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils \
-		nautilus3 ltverhack pygobject gnomedocutils
-USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly gio
+		nautilus2 ltverhack pygtk2
+GNOME_DESKTOP_VERSION=2
+USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly python gio
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
@@ -49,9 +46,8 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 CONFIGURE_ARGS=	--with-plugins="${TOTEM_PLUGINS}"
 
 MAN1=		totem.1 totem-video-thumbnailer.1
-GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
-		org.gnome.totem.gschema.xml \
-		org.gnome.totem.plugins.opensubtitles.gschema.xml
+GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
+		totem.schemas
 
 OPTIONS=	LIRC "Enable lirc support" off \
 		GALAGO "Enable Galago support" off \
@@ -62,14 +58,10 @@ OPTIONS=	LIRC "Enable lirc support" off \
 # check configure script for allowed_plugins="..." for new plugins
 TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
 		properties skipto youtube opensubtitles screenshot \
-		brasero-disc-recorder dbus-service iplayer
+		brasero-disc-recorder coherence_upnp dbus-service iplayer
 
 # Not using:
 # TOTEM_PLUGINS= mythtv bemused jamendo
-# coherence_upnp (uses py-gtk2 conflict with py-gobject >=2.27.0)
-
-# current full list, needs sorting (again)
-#allowed_plugins="bemused brasero-disc-recorder chapters coherence_upnp dbus-service galago gromit iplayer jamendo lirc media-player-keys ontop opensubtitles properties publish pythonconsole save-file sample-python screensaver screenshot sidebar-test skipto thumbnail tracker youtube"
 
 .include <bsd.port.pre.mk>
 
@@ -90,7 +82,7 @@ PLIST_SUB+=	TRACKER="@comment "
 #.endif
 
 .if defined(WITH_LIRC)
-LIB_DEPENDS+=	lirc_client.1:${PORTSDIR}/comms/lirc
+LIB_DEPENDS+=	lirc_client.2:${PORTSDIR}/comms/lirc
 PLIST_SUB+=	LIRC=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
 .else
@@ -142,9 +134,9 @@ post-patch:
 
 post-install:
 	@-update-desktop-database
-#	${MKDIR} ${PREFIX}/share/vala/vapi
-#	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.vapi ${PREFIX}/share/vala/vapi
-#	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.deps ${PREFIX}/share/vala/vapi
+	${MKDIR} ${PREFIX}/share/vala/vapi
+	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.vapi ${PREFIX}/share/vala/vapi
+	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.deps ${PREFIX}/share/vala/vapi
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.post.mk>

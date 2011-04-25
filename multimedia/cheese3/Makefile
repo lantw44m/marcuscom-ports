@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese3/Makefile,v 1.5 2011/04/13 09:44:34 kwm Exp $
+#   $MCom: ports/multimedia/cheese3/Makefile,v 1.6 2011/04/15 15:35:21 kwm Exp $
 #
 
 PORTNAME=	cheese
@@ -25,6 +25,8 @@ LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
 		clutter-gst-1.0.0:${PORTSDIR}/multimedia/clutter-gst
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-video-effects.pc:${PORTSDIR}/graphics/gnome-video-effects
+
+CONFLICTS=	cheese-2.[0-9]*
 
 USE_XORG=	xxf86vm
 USE_BZIP2=	yes
