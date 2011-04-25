@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.8 2011/04/15 14:34:32 kwm Exp $
+#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.9 2011/04/16 19:05:06 mezz Exp $
 #
 
 PORTNAME?=	vte
@@ -11,6 +11,7 @@ PORTVERSION=	0.28.0
 PORTREVISION?=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
+MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/gnome-pty-helper/vte/}/${PORTVERSION:R}
 DISTNAME=	vte-${PORTVERSION}
 DIST_SUBDIR=	gnome3
 
