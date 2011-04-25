@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.542 2011/04/10 20:46:09 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.543 2011/04/11 02:36:00 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -451,10 +451,12 @@ gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
 gnomecontrolcenter2_LIB_DEPENDS=gnome-window-settings.1:${PORTSDIR}/sysutils/gnome-control-center
 gnomecontrolcenter2_DETECT=${LOCALBASE}/libdata/pkgconfig/gnome-window-settings-2.0.pc
 gnomecontrolcenter2_USE_GNOME_IMPL=metacity gnomemenus desktopfileutils libgnomekbd gnomedesktop librsvg2
+gnomecontrolcenter2_GNOME_DESKTOP_VERSION=2
 
 gnomecontrolcenter3_LIB_DEPENDS=gnome-control-center.1:${PORTSDIR}/sysutils/gnome-control-center3
 gnomecontrolcenter3_DETECT=${LOCALBASE}/libdata/pkgconfig/libgnome-control-center.pc
 gnomecontrolcenter3_USE_GNOME_IMPL=gnomemenus desktopfileutils libgnomekbd3 gnomedesktop3 gconf2
+gnomecontrolcenter3_GNOME_DESKTOP_VERSION=3
 
 libgda2_LIB_DEPENDS=	gda-2.3:${PORTSDIR}/databases/libgda2
 libgda2_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgda.pc
