@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session3/Makefile,v 1.15 2011/04/05 18:18:05 kwm Exp $
+#   $MCom: ports/x11/gnome-session3/Makefile,v 1.16 2011/04/10 19:41:39 mezz Exp $
 #
 
 PORTNAME=	gnome-session
@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Session component for the GNOME 3 desktop
 
-CONFLICTS=	gnome-session-2.30.*
+CONFLICTS=	gnome-session-2.[0-9]*
 
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		execinfo:${PORTSDIR}/devel/libexecinfo \
