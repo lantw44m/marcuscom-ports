@@ -2,27 +2,28 @@
 # Date created:				12 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD$
-#   $MCom: ports/sysutils/gconf-editor3/Makefile,v 1.2 2011/04/05 14:19:17 kwm Exp $
+# $FreeBSD: ports/sysutils/gconf-editor/Makefile,v 1.55 2010/11/20 15:36:54 kwm Exp $
+#   $MCom: ports/sysutils/gconf-editor/Makefile,v 1.85 2010/09/27 18:22:59 kwm Exp $
 #
 
 PORTNAME=	gconf-editor
-PORTVERSION=	3.0.0
+PORTVERSION=	2.32.0
+PORTEPOCH=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A gconf database editor for the GNOME 3 environment
+COMMENT=	A gconf database editor for the GNOME 2 environment
 
-CONFLICTS=	gconf-editor-2.[0-9]*
+CONFLICTS=	gconf-editor-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 gconf2 gnomedocutils
+USE_GNOME=	gnomeprefix intlhack gnomehack libgnomeui gnomedocutils
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

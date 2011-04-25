@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/sysutils/gnome-power-manager/Makefile,v 1.35 2010/12/04 07:33:35 ade Exp $
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.69 2010/09/27 18:49:22 kwm Exp $
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.71 2011/03/07 11:52:41 kwm Exp $
 #
 
 PORTNAME=	gnome-power-manager
@@ -22,6 +22,8 @@ LIB_DEPENDS=	upower-glib.1:${PORTSDIR}/sysutils/upower \
 		execinfo:${PORTSDIR}/devel/libexecinfo \
 		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
 RUN_DEPENDS=	pkexec:${PORTSDIR}/sysutils/polkit
+
+CONFLICTS=	gnome-power-manager-3.[0-9]*
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes

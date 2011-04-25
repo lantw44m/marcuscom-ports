@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.20 2011/04/07 07:30:24 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.21 2011/04/17 07:11:56 kwm Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
@@ -23,6 +23,8 @@ LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		notify.4:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
+
+CONFLICTS=	gnome-settings-daemon-2.[0-9]*
 
 LATEST_LINK=	gnome-settings-daemon3
 USE_XORG=	xxf86misc

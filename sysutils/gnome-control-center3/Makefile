@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.19 2011/04/10 19:41:37 mezz Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.20 2011/04/10 21:55:36 mezz Exp $
 #
 
 PORTNAME=	gnome-control-center
@@ -28,7 +28,7 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		glxinfo:${PORTSDIR}/graphics/mesa-demos
 
-CONFLICTS=	gnome-media-2.[0-9]*
+CONFLICTS=	gnome-control-center-2.[0-9]* gnome-media-2.[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
