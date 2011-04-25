@@ -3,7 +3,7 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino3/Makefile,v 1.5 2011/04/10 19:41:36 mezz Exp $
+#   $MCom: ports/net/vino3/Makefile,v 1.6 2011/04/14 20:32:17 kwm Exp $
 #
 
 PORTNAME=	vino
@@ -22,6 +22,8 @@ LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
 		avahi-glib.1:${PORTSDIR}/net/avahi-app
+
+CONFLICTS=	vino-2.[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
