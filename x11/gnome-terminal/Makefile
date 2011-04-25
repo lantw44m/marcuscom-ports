@@ -2,33 +2,31 @@
 # Date created:				1 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD$
-#   $MCom: ports/x11/gnome-terminal3/Makefile,v 1.6 2011/04/10 19:41:39 mezz Exp $
+# $FreeBSD: ports/x11/gnome-terminal/Makefile,v 1.71 2010/11/23 19:44:53 kwm Exp $
+#   $MCom: ports/x11/gnome-terminal/Makefile,v 1.137 2010/11/13 13:25:22 kwm Exp $
 #
 
 PORTNAME=	gnome-terminal
-PORTVERSION=	3.0.0
+PORTVERSION=	2.32.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome3
+DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Terminal component for the GNOME 3 Desktop
+COMMENT=	Terminal component for the GNOME 2 Desktop
 
-BUILD_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
-RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-CONFLICTS=	gnome-terminal-2.[0-9]*
+CONFLICTS=	gnome-terminal-3.[0-9]*
 
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
-USE_XORG=	sm ice
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 vte3 gnomedocutils
+USE_XORG=	sm
+USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 vte gnomedocutils \
+		libgnome
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-gtk=3.0
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
