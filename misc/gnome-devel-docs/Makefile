@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/misc/gnome-devel-docs/Makefile,v 1.11 2010/11/20 15:36:46 kwm Exp $
-#   $MCom: ports/misc/gnome-devel-docs/Makefile,v 1.22 2010/09/29 15:17:53 kwm Exp $
+#   $MCom: ports/misc/gnome-devel-docs/Makefile,v 1.24 2011/04/25 19:13:29 mezz Exp $
 #
 
 PORTNAME=	gnome-devel-docs
@@ -18,7 +18,7 @@ COMMENT=	Documents targeted for GNOME developers
 BUILD_DEPENDS=	gnome-doc-prepare:${PORTSDIR}/textproc/gnome-doc-utils
 RUN_DEPENDS=	gnome-doc-prepare:${PORTSDIR}/textproc/gnome-doc-utils
 
-CONFLICTS=	gnome-devel-docs-3.[0-9-]*
+CONFLICTS=	gnome-devel-docs-3.[0-9]*
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
