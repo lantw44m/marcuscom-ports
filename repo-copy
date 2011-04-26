@@ -1,4 +1,5 @@
 accessibility/mousetweaks -> accessibility/mousetweaks3
+accessibility/orca -> accessibility/orca3
 audio/libcanberra -> audio/libcanberra-gtk3?
 databases/evolution-data-server -> databases/evolution-data-server3
 databases/libgda4 -> libgda5
