@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit3/Makefile,v 1.12 2011/04/10 19:41:35 mezz Exp $
+#   $MCom: ports/editors/gedit3/Makefile,v 1.13 2011/04/13 10:24:48 kwm Exp $
 #
 
 PORTNAME=	gedit
@@ -22,6 +22,8 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
+
+CONFLICTS=	gedit-2.[0-9]*
 
 USE_XORG=	sm
 USE_BZIP2=	yes
