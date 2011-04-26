@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/net/vinagre3/Makefile,v 1.4 2011/04/15 16:24:18 kwm Exp $
+#  $MCom: ports/net/vinagre3/Makefile,v 1.5 2011/04/25 19:38:37 mezz Exp $
 #
 
 PORTNAME=	vinagre
@@ -26,7 +26,8 @@ CONFLICTS=	vinagre-2.[0-9]*
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 libxml2 vte3
+USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 libxml2 vte3 \
+		gnomedocutils
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
