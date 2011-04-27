@@ -170,6 +170,7 @@ share/gnome/help/gnome-devel-demos/C/magic-mirror.vala.page
 share/gnome/help/gnome-devel-demos/C/magic-mirror/magic-mirror-advanced.vala
 share/gnome/help/gnome-devel-demos/C/magic-mirror/magic-mirror.vala
 share/gnome/help/gnome-devel-demos/C/media/fedora.png
+share/gnome/help/gnome-devel-demos/C/media/gnome-devtools.catalog
 share/gnome/help/gnome-devel-demos/C/media/guitar-tuner-glade.png
 share/gnome/help/gnome-devel-demos/C/media/guitar-tuner-pipeline.png
 share/gnome/help/gnome-devel-demos/C/media/guitar-tuner.png
@@ -207,6 +208,7 @@ share/gnome/help/gnome-devel-demos/de/magic-mirror.vala.page
 share/gnome/help/gnome-devel-demos/de/magic-mirror/magic-mirror-advanced.vala
 share/gnome/help/gnome-devel-demos/de/magic-mirror/magic-mirror.vala
 share/gnome/help/gnome-devel-demos/de/media/fedora.png
+share/gnome/help/gnome-devel-demos/de/media/gnome-devtools.catalog
 share/gnome/help/gnome-devel-demos/de/media/guitar-tuner-glade.png
 share/gnome/help/gnome-devel-demos/de/media/guitar-tuner-pipeline.png
 share/gnome/help/gnome-devel-demos/de/media/guitar-tuner.png
@@ -244,6 +246,7 @@ share/gnome/help/gnome-devel-demos/es/magic-mirror.vala.page
 share/gnome/help/gnome-devel-demos/es/magic-mirror/magic-mirror-advanced.vala
 share/gnome/help/gnome-devel-demos/es/magic-mirror/magic-mirror.vala
 share/gnome/help/gnome-devel-demos/es/media/fedora.png
+share/gnome/help/gnome-devel-demos/es/media/gnome-devtools.catalog
 share/gnome/help/gnome-devel-demos/es/media/guitar-tuner-glade.png
 share/gnome/help/gnome-devel-demos/es/media/guitar-tuner-pipeline.png
 share/gnome/help/gnome-devel-demos/es/media/guitar-tuner.png
@@ -259,6 +262,44 @@ share/gnome/help/gnome-devel-demos/es/photo-wall.c.page
 share/gnome/help/gnome-devel-demos/es/photo-wall/photo-wall.c
 share/gnome/help/gnome-devel-demos/es/record-collection.js.page
 share/gnome/help/gnome-devel-demos/es/record-collection/record-collection.js
+share/gnome/help/gnome-devel-demos/gl/getting-ready.page
+share/gnome/help/gnome-devel-demos/gl/guitar-tuner.c.page
+share/gnome/help/gnome-devel-demos/gl/guitar-tuner.cpp.page
+share/gnome/help/gnome-devel-demos/gl/guitar-tuner.py.page
+share/gnome/help/gnome-devel-demos/gl/guitar-tuner.vala.page
+share/gnome/help/gnome-devel-demos/gl/guitar-tuner/guitar-tuner.c
+share/gnome/help/gnome-devel-demos/gl/guitar-tuner/guitar-tuner.cc
+share/gnome/help/gnome-devel-demos/gl/guitar-tuner/guitar-tuner.py
+share/gnome/help/gnome-devel-demos/gl/guitar-tuner/guitar-tuner.vala
+share/gnome/help/gnome-devel-demos/gl/image-viewer.c.page
+share/gnome/help/gnome-devel-demos/gl/image-viewer.cpp.page
+share/gnome/help/gnome-devel-demos/gl/image-viewer.js.page
+share/gnome/help/gnome-devel-demos/gl/image-viewer.py.page
+share/gnome/help/gnome-devel-demos/gl/image-viewer/image-viewer.c
+share/gnome/help/gnome-devel-demos/gl/image-viewer/image-viewer.cc
+share/gnome/help/gnome-devel-demos/gl/image-viewer/image-viewer.js
+share/gnome/help/gnome-devel-demos/gl/image-viewer/image-viewer.py
+share/gnome/help/gnome-devel-demos/gl/index.page
+share/gnome/help/gnome-devel-demos/gl/magic-mirror.vala.page
+share/gnome/help/gnome-devel-demos/gl/magic-mirror/magic-mirror-advanced.vala
+share/gnome/help/gnome-devel-demos/gl/magic-mirror/magic-mirror.vala
+share/gnome/help/gnome-devel-demos/gl/media/fedora.png
+share/gnome/help/gnome-devel-demos/gl/media/gnome-devtools.catalog
+share/gnome/help/gnome-devel-demos/gl/media/guitar-tuner-glade.png
+share/gnome/help/gnome-devel-demos/gl/media/guitar-tuner-pipeline.png
+share/gnome/help/gnome-devel-demos/gl/media/guitar-tuner.png
+share/gnome/help/gnome-devel-demos/gl/media/image-viewer.png
+share/gnome/help/gnome-devel-demos/gl/media/magic-mirror.png
+share/gnome/help/gnome-devel-demos/gl/media/opensuse.png
+share/gnome/help/gnome-devel-demos/gl/media/photo-wall.png
+share/gnome/help/gnome-devel-demos/gl/media/record-collection.png
+share/gnome/help/gnome-devel-demos/gl/media/ubuntu.png
+share/gnome/help/gnome-devel-demos/gl/message-board.c.page
+share/gnome/help/gnome-devel-demos/gl/message-board/message-board.c
+share/gnome/help/gnome-devel-demos/gl/photo-wall.c.page
+share/gnome/help/gnome-devel-demos/gl/photo-wall/photo-wall.c
+share/gnome/help/gnome-devel-demos/gl/record-collection.js.page
+share/gnome/help/gnome-devel-demos/gl/record-collection/record-collection.js
 share/gnome/help/hig-book/C/hig-book.xml
 share/gnome/help/hig-book/C/hig-ch-bibliography.xml
 share/gnome/help/hig-book/C/hig-ch-checks.xml
@@ -2071,6 +2112,25 @@ share/gnome/help/platform-overview/fr/notify.page
 share/gnome/help/platform-overview/fr/pango.page
 share/gnome/help/platform-overview/fr/telepathy.page
 share/gnome/help/platform-overview/fr/webkit.page
+share/gnome/help/platform-overview/gl/atk.page
+share/gnome/help/platform-overview/gl/cairo.page
+share/gnome/help/platform-overview/gl/canberra.page
+share/gnome/help/platform-overview/gl/clutter.page
+share/gnome/help/platform-overview/gl/d-bus.page
+share/gnome/help/platform-overview/gl/eds.page
+share/gnome/help/platform-overview/gl/gda.page
+share/gnome/help/platform-overview/gl/gdk.page
+share/gnome/help/platform-overview/gl/gio-network.page
+share/gnome/help/platform-overview/gl/gio.page
+share/gnome/help/platform-overview/gl/gstreamer.page
+share/gnome/help/platform-overview/gl/gtk.page
+share/gnome/help/platform-overview/gl/help.page
+share/gnome/help/platform-overview/gl/index.page
+share/gnome/help/platform-overview/gl/keyring.page
+share/gnome/help/platform-overview/gl/notify.page
+share/gnome/help/platform-overview/gl/pango.page
+share/gnome/help/platform-overview/gl/telepathy.page
+share/gnome/help/platform-overview/gl/webkit.page
 share/gnome/help/platform-overview/it/atk.page
 share/gnome/help/platform-overview/it/cairo.page
 share/gnome/help/platform-overview/it/canberra.page
@@ -2271,6 +2331,7 @@ share/omf/optimization-guide/optimization-guide-zh_CN.omf
 @dirrm share/gnome/help/platform-overview/oc
 @dirrm share/gnome/help/platform-overview/ja
 @dirrm share/gnome/help/platform-overview/it
+@dirrm share/gnome/help/platform-overview/gl
 @dirrm share/gnome/help/platform-overview/fr
 @dirrm share/gnome/help/platform-overview/es
 @dirrm share/gnome/help/platform-overview/el
@@ -2327,6 +2388,14 @@ share/omf/optimization-guide/optimization-guide-zh_CN.omf
 @dirrm share/gnome/help/hig-book/C/images
 @dirrm share/gnome/help/hig-book/C
 @dirrm share/gnome/help/hig-book
+@dirrm share/gnome/help/gnome-devel-demos/gl/record-collection
+@dirrm share/gnome/help/gnome-devel-demos/gl/photo-wall
+@dirrm share/gnome/help/gnome-devel-demos/gl/message-board
+@dirrm share/gnome/help/gnome-devel-demos/gl/media
+@dirrm share/gnome/help/gnome-devel-demos/gl/magic-mirror
+@dirrm share/gnome/help/gnome-devel-demos/gl/image-viewer
+@dirrm share/gnome/help/gnome-devel-demos/gl/guitar-tuner
+@dirrm share/gnome/help/gnome-devel-demos/gl
 @dirrm share/gnome/help/gnome-devel-demos/es/record-collection 
 @dirrm share/gnome/help/gnome-devel-demos/es/photo-wall                  
 @dirrm share/gnome/help/gnome-devel-demos/es/message-board 
