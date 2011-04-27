@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/net/vinagre3/Makefile,v 1.5 2011/04/25 19:38:37 mezz Exp $
+#  $MCom: ports/net/vinagre3/Makefile,v 1.6 2011/04/26 06:37:56 kwm Exp $
 #
 
 PORTNAME=	vinagre
-PORTVERSION=	3.0.0
-PORTREVISION=	1
+PORTVERSION=	3.0.1
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,6 +20,7 @@ LIB_DEPENDS=	gtk-vnc-2.0.0:${PORTSDIR}/net/gtk-vnc3 \
     		avahi-core.7:${PORTSDIR}/net/avahi-app \
 		avahi-ui-gtk3.0:${PORTSDIR}/net/avahi-gtk3 \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
 CONFLICTS=	vinagre-2.[0-9]*
 
@@ -32,7 +32,7 @@ USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-CONFIGURE_ARGS=	--disable-spice
+CONFIGURE_ARGS=	--disable-spice -enable-ssh
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 

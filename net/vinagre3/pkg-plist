@@ -26,9 +26,12 @@ lib/vinagre-3.0/plugins/im-status.js
 lib/vinagre-3.0/plugins/im-status.plugin
 lib/vinagre-3.0/plugins/libreversevnc.la
 lib/vinagre-3.0/plugins/libreversevnc.so
+lib/vinagre-3.0/plugins/libssh.la
+lib/vinagre-3.0/plugins/libssh.so
 lib/vinagre-3.0/plugins/libvnc.la
 lib/vinagre-3.0/plugins/libvnc.so
 lib/vinagre-3.0/plugins/reverse-vnc.plugin
+lib/vinagre-3.0/plugins/ssh.plugin
 lib/vinagre-3.0/plugins/vnc.plugin
 libdata/pkgconfig/vinagre-3.0.pc
 %%PANEL%%libexec/vinagre-applet
