@@ -3,11 +3,11 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.13 2011/04/10 19:41:36 mezz Exp $
+#   $MCom: ports/multimedia/totem3/Makefile,v 1.14 2011/04/25 19:23:44 mezz Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.1
 PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
@@ -36,7 +36,7 @@ USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils \
 		nautilus3 ltverhack pygobject gnomedocutils
-USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly gio
+USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly gio resindvd
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
