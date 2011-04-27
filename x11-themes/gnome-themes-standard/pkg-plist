@@ -555,6 +555,7 @@ share/icons/LowContrast/48x48/stock/zoom-original.png
 share/icons/LowContrast/48x48/stock/zoom-out.png
 share/icons/LowContrast/index.theme
 share/locale/af/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/an/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ar/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/as/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/bg/LC_MESSAGES/gnome-themes-standard.mo
@@ -596,6 +597,7 @@ share/locale/sr/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/sr@latin/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/sv/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/th/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/tr/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ug/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/uk/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/vi/LC_MESSAGES/gnome-themes-standard.mo
@@ -686,3 +688,5 @@ share/themes/LowContrast/index.theme
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/locale/an/LC_MESSAGES
+@dirrmtry share/locale/an
