@@ -1,0 +1,25 @@
+# New ports collection makefile for:   
+# Date Created:			
+# Whom:				Koop Mast <kwm@FreeBSD.org>
+#
+# $FreeBSD$
+#
+
+PORTNAME=	rest
+PORTVERSION=	0.7.10
+CATEGORIES=	www
+MASTER_SITES=	GNOME
+
+MAINTAINER=	kwm@FreeBSD.org
+COMMENT=	"RESTful" state website access web services
+
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome
+
+USE_GNOME=	gnomehack glib20 intlhack libxml2
+USE_BZIP2=	yes
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+
+.include <bsd.port.mk>
