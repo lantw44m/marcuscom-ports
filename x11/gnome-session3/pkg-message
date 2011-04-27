@@ -1,7 +1,0 @@
---
-Gnome-session ships a tool it runs to find out if it should run gnome-shell or
-gnome-panel + metacity.
-
-Please file a bug with send-pr or mail freebsd-gnome@FreeBSD.org if this tool
-doesn't do the right thing for you.
---

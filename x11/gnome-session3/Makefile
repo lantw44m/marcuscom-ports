@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session3/Makefile,v 1.16 2011/04/10 19:41:39 mezz Exp $
+#   $MCom: ports/x11/gnome-session3/Makefile,v 1.17 2011/04/25 22:02:03 mezz Exp $
 #
 
 PORTNAME=	gnome-session
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -38,10 +38,5 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 MAN1=		gnome-session.1 gnome-session-properties.1 \
 		gnome-session-quit.1
 GLIB_SCHEMAS=	org.gnome.SessionManager.gschema.xml
-
-PKGMESSAGE=	${.CURDIR}/pkg-message
-
-post-install:
-	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
