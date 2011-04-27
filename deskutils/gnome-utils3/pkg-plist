@@ -71,7 +71,6 @@ share/doc/gdict/up.png
 share/gdict-1.0/sources/default.desktop
 share/gdict-1.0/sources/spanish.desktop
 share/gdict-1.0/sources/thai.desktop
-share/gnome-2.0/ui/GNOME_DictionaryApplet.xml
 share/gnome-dictionary/gnome-dictionary-preferences.ui
 share/gnome-dictionary/gnome-dictionary-source.ui
 share/gnome-dictionary/gnome-dictionary-ui.xml
