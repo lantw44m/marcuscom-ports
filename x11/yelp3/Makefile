@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp3/Makefile,v 1.12 2011/04/16 07:37:59 kwm Exp $
+#   $MCom: ports/x11/yelp3/Makefile,v 1.13 2011/04/27 17:08:30 kwm Exp $
 #
 
 PORTNAME=	yelp
@@ -49,7 +49,7 @@ LDFLAGS+=	-fstack-protector
 CONFIGURE_ENV+=	YELP_LZMA_CFLAGS="-I/usr/include" \
 		YELP_LZMA_LIBS="-L/usr/lib -llzma"
 .else
-LIB_DEPENDS+=	lzma.0:${PORTSDIR}/archivers/xz
+LIB_DEPENDS+=	lzma.5:${PORTSDIR}/archivers/xz
 .endif
 
 post-patch:
