@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.23 2010/12/04 18:13:58 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.24 2011/04/21 08:53:48 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -16,8 +16,9 @@ upgrades.
   components are mutual exclusive. If you want to stick around with GNOME 2.32
   The instructions are very simple.
 
-  # pkg_delete -f avahi-gtk-\* gtk-2.\*
+  # pkg_delete -f avahi-gtk-\* gtk-2.\* libchamplain-0.\*
   # portmaster x11-toolkits/gtk20 net/avahi-gtk
+  # portmaster -a
 
   If you want to start using the GNOME 3.0 desktop. you should follow the
   instructions below. GNOME 3.0 is based on GTK 3, but Gtk 2 applications
