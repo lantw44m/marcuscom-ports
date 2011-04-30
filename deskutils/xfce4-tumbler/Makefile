@@ -2,7 +2,7 @@
 # Date created:				2010-12-03
 # Whom:					Olivier Duchateau <duchateau.olivier@gmail.com>
 #
-# $FreeBSD: ports/deskutils/xfce4-tumbler/Makefile,v 1.2 2011/03/03 14:55:53 miwi Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	tumbler

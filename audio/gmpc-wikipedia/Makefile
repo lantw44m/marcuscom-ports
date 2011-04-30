@@ -2,7 +2,7 @@
 # Date created:		March 27 2008
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/gmpc-wikipedia/Makefile,v 1.13 2011/01/26 15:38:48 miwi Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gmpc-wikipedia

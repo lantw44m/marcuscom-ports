@@ -2,7 +2,7 @@
 # Date created:				07 Mar 2010
 # Whom:					Ju Pengfei <jupengfei@gmail.com>
 #
-# $FreeBSD: ports/www/py-jswebkit/Makefile,v 1.6 2010/10/21 00:55:59 wen Exp $
+# $FreeBSD$
 #
 
 PORTNAME=		jswebkit

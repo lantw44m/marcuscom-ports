@@ -2,8 +2,8 @@
 # Date created:				04 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gnome-control-center/Makefile,v 1.120 2010/11/20 15:36:54 kwm Exp $
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.214 2010/11/18 11:46:09 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.216 2011/04/25 19:49:26 mezz Exp $
 #
 
 PORTNAME=	gnome-control-center

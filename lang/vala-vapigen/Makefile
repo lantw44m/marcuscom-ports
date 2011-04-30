@@ -2,8 +2,8 @@
 # Date created:				
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/lang/vala-vapigen/Makefile,v 1.1 2010/11/20 15:36:44 kwm Exp $
-#   $MCom: ports/lang/vala-vapigen/Makefile,v 1.2 2010/08/31 14:51:44 avl Exp $
+# $FreeBSD$
+#   $MCom: ports/lang/vala-vapigen/Makefile,v 1.4 2010/12/01 14:59:18 kwm Exp $
 #
 
 PORTREVISION=	0

@@ -2,8 +2,8 @@
 # Date created:         		28th August 2000
 # Whom:                 		ade, archie
 #
-# $FreeBSD: ports/x11-fm/nautilus/Makefile,v 1.109 2011/03/04 02:15:10 wen Exp $
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.206 2010/11/13 12:53:45 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.208 2011/04/25 22:17:51 mezz Exp $
 #
 
 PORTNAME=	nautilus

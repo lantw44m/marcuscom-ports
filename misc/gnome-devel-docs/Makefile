@@ -2,8 +2,8 @@
 # Date created:		2007-09-18
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/misc/gnome-devel-docs/Makefile,v 1.11 2010/11/20 15:36:46 kwm Exp $
-#   $MCom: ports/misc/gnome-devel-docs/Makefile,v 1.24 2011/04/25 19:13:29 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/misc/gnome-devel-docs/Makefile,v 1.25 2011/04/25 19:19:35 mezz Exp $
 #
 
 PORTNAME=	gnome-devel-docs

@@ -2,8 +2,8 @@
 # Date created:				09 December 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/evolution-data-server/Makefile,v 1.81 2011/02/25 01:31:35 delphij Exp $
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.206 2011/03/07 16:54:34 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.207 2011/04/10 19:28:35 mezz Exp $
 #
 
 PORTNAME=	evolution-data-server

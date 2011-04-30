@@ -2,8 +2,8 @@
 # Date created:			2008 01 10
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/mousetweaks/Makefile,v 1.19 2010/11/20 15:36:24 kwm Exp $
-#   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.53 2010/11/15 21:25:36 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.55 2011/04/17 19:05:40 mezz Exp $
 #
 
 PORTNAME=	mousetweaks

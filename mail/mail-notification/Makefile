@@ -2,7 +2,7 @@
 # Date created:			18 Sep 2003
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
-# $FreeBSD: ports/mail/mail-notification/Makefile,v 1.66 2010/08/09 16:31:15 arved Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	mail-notification

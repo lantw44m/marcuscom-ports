@@ -2,7 +2,7 @@
 # Date created:				Nov 16 2007
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/gnome-gmail-notifier/Makefile,v 1.17 2010/05/31 01:59:40 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-gmail-notifier

@@ -2,7 +2,7 @@
 # Date created:		2006-02-20
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/www/libxul/Makefile,v 1.26 2011/03/02 16:32:43 beat Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libxul

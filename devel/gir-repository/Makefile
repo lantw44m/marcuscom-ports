@@ -2,8 +2,8 @@
 # Date created:				14 Aug 2009
 # Whom:					Pawel Worach <pawel.worach@gmail.com>
 #
-# $FreeBSD: ports/devel/gir-repository/Makefile,v 1.5 2010/11/20 16:06:47 kwm Exp $
-#   $MCom: ports/devel/gir-repository/Makefile,v 1.21 2010/10/24 16:26:19 avl Exp $
+# $FreeBSD$
+#   $MCom: ports/devel/gir-repository/Makefile,v 1.23 2011/01/07 20:44:21 kwm Exp $
 #
 
 MASTER_SITES=	# Empty

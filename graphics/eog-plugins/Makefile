@@ -2,8 +2,8 @@
 # Date created:		28 August 2009
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/eog-plugins/Makefile,v 1.8 2011/03/04 02:15:08 wen Exp $
-#   $MCom: ports/graphics/eog-plugins/Makefile,v 1.14 2010/09/04 18:09:30 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/graphics/eog-plugins/Makefile,v 1.16 2011/04/22 16:10:56 mezz Exp $
 #
 
 PORTNAME=	eog-plugins

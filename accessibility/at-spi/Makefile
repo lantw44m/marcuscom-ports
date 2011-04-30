@@ -2,8 +2,8 @@
 # Date Created:			12 April 2002
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/at-spi/Makefile,v 1.75 2010/11/20 15:36:23 kwm Exp $
-#   $MCom: ports/accessibility/at-spi/Makefile,v 1.105 2011/04/10 20:06:06 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/accessibility/at-spi/Makefile,v 1.106 2011/04/11 02:42:14 mezz Exp $
 #
 
 PORTNAME=	at-spi

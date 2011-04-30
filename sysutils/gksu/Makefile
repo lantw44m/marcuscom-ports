@@ -2,7 +2,7 @@
 # Date created:        2 October 2004
 # Whom:                Jesse van den Kieboom <troplosti@orcaweb.cjb.net>
 #
-# $FreeBSD: ports/sysutils/gksu/Makefile,v 1.22 2010/03/28 06:43:45 dinoex Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gksu

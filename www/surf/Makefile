@@ -2,7 +2,7 @@
 # Date created:                December 21, 2009
 # Whom:                        Christopher Knaust <jigboe@gmx.de>
 #
-# $FreeBSD: ports/www/surf/Makefile,v 1.8 2010/11/23 09:57:57 pav Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	surf

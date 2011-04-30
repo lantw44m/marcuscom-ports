@@ -2,8 +2,8 @@
 # Date created:		06 October 2002
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-fonts/fontconfig/Makefile,v 1.77 2011/01/14 16:59:28 kwm Exp $
-#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.27 2011/03/20 20:24:56 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.28 2011/03/20 20:26:03 mezz Exp $
 #
 
 PORTNAME=	fontconfig

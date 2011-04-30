@@ -2,8 +2,8 @@
 # Date created:				08 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/games/gnome-games/Makefile,v 1.148 2011/02/25 01:31:45 delphij Exp $
-#   $MCom: ports/games/gnome-games/Makefile,v 1.232 2010/11/15 22:52:01 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/games/gnome-games/Makefile,v 1.234 2011/04/22 16:01:45 mezz Exp $
 #
 
 PORTNAME=	gnome-games

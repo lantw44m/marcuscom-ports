@@ -2,8 +2,8 @@
 # Date created:		2007-10-29
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/empathy/Makefile,v 1.27 2011/02/25 01:32:03 delphij Exp $
-#    $MCom: ports/net-im/empathy/Makefile,v 1.82 2011/04/09 16:38:14 mezz Exp $
+# $FreeBSD$
+#    $MCom: ports/net-im/empathy/Makefile,v 1.83 2011/04/28 11:15:15 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.34.0

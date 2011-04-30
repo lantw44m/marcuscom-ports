@@ -2,7 +2,7 @@
 # Date created:		2009-06-11
 # Whom:			Ashish SHUKLA <wahjava@gmail.com>
 #
-# $FreeBSD: ports/graphics/solang/Makefile,v 1.14 2011/03/01 16:26:19 gahr Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	solang

@@ -1,4 +1,4 @@
-@comment $FreeBSD: ports/mail/claws-mail-fancy/pkg-plist,v 1.2 2010/01/21 23:22:03 miwi Exp $
+@comment $FreeBSD$
 lib/claws-mail/plugins/fancy.so
 lib/claws-mail/plugins/fancy.la
 lib/claws-mail/plugins/fancy.a

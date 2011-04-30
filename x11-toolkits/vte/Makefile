@@ -2,8 +2,8 @@
 # Date created:				05 October 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-toolkits/vte/Makefile,v 1.99 2010/12/04 07:34:24 ade Exp $
-#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.120 2011/04/11 02:36:01 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.121 2011/04/15 14:34:32 kwm Exp $
 #
 
 PORTNAME=	vte

@@ -2,8 +2,8 @@
 # Date Created:				05 October 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-themes/gnome-themes/Makefile,v 1.68 2010/12/04 07:34:11 ade Exp $
-#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.183 2010/11/15 22:11:44 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.185 2011/04/10 21:44:14 mezz Exp $
 #
 
 PORTNAME=	gnome-themes

@@ -2,7 +2,7 @@
 # Date Created:				8 Jun 2000
 # Whom:					Roman Shterenzon <roman@xpert.com>
 #
-# $FreeBSD: ports/net/gq/Makefile,v 1.50 2011/02/25 01:31:57 delphij Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gq

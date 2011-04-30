@@ -2,8 +2,8 @@
 # Date created:				03 May 2006
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gnome-power-manager/Makefile,v 1.35 2010/12/04 07:33:35 ade Exp $
-#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.71 2011/03/07 11:52:41 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/sysutils/gnome-power-manager/Makefile,v 1.72 2011/04/25 19:53:56 mezz Exp $
 #
 
 PORTNAME=	gnome-power-manager

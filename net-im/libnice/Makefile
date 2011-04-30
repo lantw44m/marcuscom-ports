@@ -2,7 +2,7 @@
 # Date created:				27 February 2009
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/libnice/Makefile,v 1.20 2011/01/01 16:32:00 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libnice

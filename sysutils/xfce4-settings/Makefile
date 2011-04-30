@@ -2,7 +2,7 @@
 # Date created:		2 October 2008
 # Whom:			Oliver Lehmann <oliver@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/xfce4-settings/Makefile,v 1.13 2011/03/03 10:12:25 oliver Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	xfce4-settings

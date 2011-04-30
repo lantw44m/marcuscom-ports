@@ -2,7 +2,7 @@
 # Date created:				24/07/2001
 # Whom:					roger@FreeBSD.org
 #
-# $FreeBSD: ports/net/ekiga/Makefile,v 1.86 2011/02/25 01:31:56 delphij Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	ekiga

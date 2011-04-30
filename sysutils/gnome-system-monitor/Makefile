@@ -2,8 +2,8 @@
 # Date created:				09 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/gnome-system-monitor/Makefile,v 1.100 2010/11/20 15:36:55 kwm Exp $
-#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.141 2010/09/29 13:44:33 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/sysutils/gnome-system-monitor/Makefile,v 1.143 2011/04/25 19:59:37 mezz Exp $
 #
 
 PORTNAME=	gnome-system-monitor

@@ -2,8 +2,8 @@
 # Date created:				19 July 2009
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/seed/Makefile,v 1.11 2010/12/04 07:31:27 ade Exp $
-#   $MCom: ports/devel/seed3/Makefile,v 1.5 2011/04/02 10:56:50 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/devel/seed3/Makefile,v 1.6 2011/04/22 03:35:00 mezz Exp $
 #
 # NOTE: It may be necessary to update ${FILESDIR}/Seed.js on each release.
 # To do that, just replace imports.searchPaths with "." and ".." elements.

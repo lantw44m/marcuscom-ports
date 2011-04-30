@@ -2,8 +2,8 @@
 # Date created:				16 December 2007
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/vinagre/Makefile,v 1.24 2010/11/20 15:36:49 kwm Exp $
-#   $MCom: ports/net/vinagre/Makefile,v 1.42 2010/09/29 14:23:36 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/net/vinagre/Makefile,v 1.44 2011/04/25 19:38:11 mezz Exp $
 #
 
 PORTNAME=	vinagre

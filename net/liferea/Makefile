@@ -2,7 +2,7 @@
 # Date created:		28 August 2003
 # Whom:			Hye-Shik Chang <perky@FreeBSD.org>
 #
-# $FreeBSD: ports/net/liferea/Makefile,v 1.148 2010/12/04 07:32:56 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	liferea

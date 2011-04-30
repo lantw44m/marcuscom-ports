@@ -2,7 +2,7 @@
 # Date created:				16 December 2007
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net/gtk-vnc/Makefile,v 1.19 2010/05/31 02:00:18 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gtk-vnc

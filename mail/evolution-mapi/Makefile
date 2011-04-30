@@ -2,8 +2,8 @@
 # Date created:				24 Mar, 2009
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/mail/evolution-mapi/Makefile,v 1.11 2011/02/25 01:31:48 delphij Exp $
-#   $MCom: ports/mail/evolution-mapi/Makefile,v 1.23 2010/11/16 09:58:56 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/mail/evolution-mapi/Makefile,v 1.25 2011/04/22 16:17:21 mezz Exp $
 #
 
 PORTNAME=	evolution-mapi

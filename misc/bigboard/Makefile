@@ -2,7 +2,7 @@
 # Date created:		2008-05-28
 # Whom:			Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: ports/misc/bigboard/Makefile,v 1.10 2010/06/11 13:37:37 ashish Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	bigboard

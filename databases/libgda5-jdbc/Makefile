@@ -2,7 +2,7 @@
 # Date created:				10 Mar 2009
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgda4-jdbc/Makefile,v 1.6 2011/03/03 10:21:36 kwm Exp $
+# $FreeBSD$
 #
 
 PORTREVISION?=	0

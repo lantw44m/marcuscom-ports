@@ -2,7 +2,7 @@
 # Date created:		2009-01-26
 # Whom:			Zane C, Bowers <vvelox@vvelox.net>
 #
-# $FreeBSD: ports/www/p5-Gtk2-WebKit/Makefile,v 1.10 2010/09/23 03:23:33 pgollucci Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	Gtk2-WebKit

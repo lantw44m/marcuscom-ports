@@ -2,7 +2,7 @@
 # Date created:		2009-07-06
 # Whom:			Pawel Pekala <c0rn@o2.pl>
 #
-# $FreeBSD: ports/mail/claws-mail-fancy/Makefile,v 1.15 2010/12/16 08:19:15 miwi Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	fancy

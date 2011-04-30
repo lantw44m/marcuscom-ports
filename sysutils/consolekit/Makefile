@@ -2,8 +2,8 @@
 # Date Created:				26 Aug 2006
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
-# $FreeBSD: ports/sysutils/consolekit/Makefile,v 1.18 2010/11/26 23:37:11 marcus Exp $
-#    $MCom: ports/sysutils/consolekit/Makefile,v 1.25 2010/10/23 10:12:30 kwm Exp $
+# $FreeBSD$
+#    $MCom: ports/sysutils/consolekit/Makefile,v 1.27 2011/02/22 19:17:46 kwm Exp $
 
 PORTNAME=	consolekit
 PORTVERSION=	0.4.4

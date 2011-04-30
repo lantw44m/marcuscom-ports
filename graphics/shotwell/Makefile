@@ -2,7 +2,7 @@
 # Date created:		Tue Sep  7 02:00:03 UTC 2010
 # Whom:			Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org> et al.
 #
-# $FreeBSD: ports/graphics/shotwell/Makefile,v 1.8 2011/03/04 02:15:09 wen Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	shotwell

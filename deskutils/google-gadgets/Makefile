@@ -2,7 +2,7 @@
 # Date created:		2008-06-08
 # Whom:			Ashish Shukla <wahjava@gmail.com>
 #
-# $FreeBSD: ports/deskutils/google-gadgets/Makefile,v 1.24 2010/12/04 07:30:54 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	google-gadgets

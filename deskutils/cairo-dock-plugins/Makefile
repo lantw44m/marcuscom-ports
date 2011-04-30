@@ -2,7 +2,7 @@
 # Date created:		2010-03-19
 # Whom:			Ivan Klymenko <fidaj@ukr.net>
 #
-# $FreeBSD: ports/deskutils/cairo-dock-plugins/Makefile,v 1.6 2011/03/04 02:10:39 wen Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	cairo-dock-plugins

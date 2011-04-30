@@ -2,8 +2,8 @@
 # Date created:				28 April, 2005
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
-# $FreeBSD: ports/mail/evolution-exchange/Makefile,v 1.67 2011/02/25 01:31:48 delphij Exp $
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.168 2011/03/07 13:35:38 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.169 2011/04/10 19:53:00 mezz Exp $
 #
 
 PORTNAME=	evolution-exchange

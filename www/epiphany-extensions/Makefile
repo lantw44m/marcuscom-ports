@@ -2,8 +2,8 @@
 # Date created:				30 December 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/www/epiphany-extensions/Makefile,v 1.66 2010/11/20 15:36:58 kwm Exp $
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.134 2011/03/06 23:12:43 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.135 2011/04/11 08:54:43 kwm Exp $
 #
 
 PORTNAME=	epiphany-extensions

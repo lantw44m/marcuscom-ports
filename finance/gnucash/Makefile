@@ -2,8 +2,8 @@
 # Date created:			  Mon Feb 03, 1997
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
-# $FreeBSD: ports/finance/gnucash/Makefile,v 1.152 2011/03/02 16:02:53 kwm Exp $
-#   $MCom: ports/finance/gnucash/Makefile,v 1.28 2011/03/06 23:12:38 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/finance/gnucash/Makefile,v 1.29 2011/03/07 17:14:35 kwm Exp $
 #
 
 PORTNAME=	gnucash

@@ -2,8 +2,8 @@
 # Date created:				14th Jan 2008
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/net/libgweather/Makefile,v 1.22 2010/12/04 07:32:55 ade Exp $
-#   $MCom: ports/net/libgweather/Makefile,v 1.42 2010/09/27 14:03:30 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/net/libgweather/Makefile,v 1.44 2011/04/10 15:36:08 mezz Exp $
 #
 
 PORTNAME=	libgweather

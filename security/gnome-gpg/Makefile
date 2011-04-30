@@ -2,8 +2,8 @@
 # Date created:		2006-09-02
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/security/gnome-gpg/Makefile,v 1.10 2010/03/28 06:43:18 dinoex Exp $
-#    $MCom: ports/security/gnome-gpg/Makefile,v 1.1 2006/09/02 15:20:58 ahze Exp $
+# $FreeBSD$
+#    $MCom: ports/security/gnome-gpg/Makefile,v 1.3 2011/04/09 15:57:11 mezz Exp $
 
 PORTNAME=	gnome-gpg
 PORTVERSION=	0.5.0

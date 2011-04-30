@@ -2,8 +2,8 @@
 # Date created:				02 June 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgda4-mdb/Makefile,v 1.6 2011/03/03 10:21:36 kwm Exp $
-#   $MCom: ports/databases/libgda4-mdb/Makefile,v 1.1 2008/08/18 23:53:35 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/databases/libgda5-mdb/Makefile,v 1.1 2011/03/30 19:23:03 kwm Exp $
 #
 
 PORTREVISION?=	0

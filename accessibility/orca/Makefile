@@ -2,8 +2,8 @@
 # Date created:				25 Jul 2006
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/accessibility/orca/Makefile,v 1.35 2011/02/25 01:31:33 delphij Exp $
-#   $MCom: ports/accessibility/orca/Makefile,v 1.90 2010/11/16 12:00:48 avl Exp $
+# $FreeBSD$
+#   $MCom: ports/accessibility/orca/Makefile,v 1.92 2011/04/26 02:37:59 mezz Exp $
 #
 
 PORTNAME=	orca

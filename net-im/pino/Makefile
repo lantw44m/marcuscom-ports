@@ -2,7 +2,7 @@
 # Date created:                         2010-03-14
 # Whom:                                 Frank Steinborn <steinex@nognu.de>
 #
-# $FreeBSD: ports/net-im/pino/Makefile,v 1.9 2010/11/20 15:36:50 kwm Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	pino

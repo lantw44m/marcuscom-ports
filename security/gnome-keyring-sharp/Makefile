@@ -2,7 +2,7 @@
 # Date created:		2008-10-08
 # Whom:			Romain Tartiere <romain@blogreen.org>
 #
-# $FreeBSD: ports/security/gnome-keyring-sharp/Makefile,v 1.1 2010/09/30 18:23:42 romain Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gnome-keyring-sharp

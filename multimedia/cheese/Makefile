@@ -2,8 +2,8 @@
 # Date created:				13 January 2008
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
-# $FreeBSD: ports/multimedia/cheese/Makefile,v 1.22 2011/02/25 01:31:53 delphij Exp $
-#   $MCom: ports/multimedia/cheese/Makefile,v 1.63 2010/09/28 08:21:02 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/multimedia/cheese/Makefile,v 1.65 2011/04/25 19:18:46 mezz Exp $
 #
 
 PORTNAME=	cheese

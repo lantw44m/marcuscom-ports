@@ -2,7 +2,7 @@
 # Date created:				2009/12/14
 # Whom:					aehlig@linta.de
 #
-# $FreeBSD: ports/www/uzbl/Makefile,v 1.9 2010/12/01 12:48:45 pav Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	uzbl

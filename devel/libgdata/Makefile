@@ -2,8 +2,8 @@
 # Date created:				9 May 2009
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/libgdata/Makefile,v 1.12 2010/12/12 10:52:35 kwm Exp $
-#   $MCom: ports/devel/libgdata/Makefile,v 1.17 2011/02/16 17:35:12 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/devel/libgdata/Makefile,v 1.18 2011/03/07 16:54:34 kwm Exp $
 #
 
 PORTNAME=	libgdata

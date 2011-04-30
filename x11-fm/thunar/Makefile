@@ -2,7 +2,7 @@
 # Date created:		19.04.2006
 # Whom:			Oliver Lehmann <oliver@FreeBSD.org>
 #
-# $FreeBSD: ports/x11-fm/thunar/Makefile,v 1.28 2011/03/04 02:15:10 wen Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	Thunar

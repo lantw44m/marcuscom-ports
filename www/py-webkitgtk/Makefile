@@ -2,7 +2,7 @@
 # Date created:				07 Mar 2010
 # Whom:					Ju Pengfei <jupengfei@gmail.com>
 #
-# $FreeBSD: ports/www/py-webkitgtk/Makefile,v 1.2 2011/01/28 10:45:35 arved Exp $
+# $FreeBSD$
 #
 
 PORTNAME=		webkitgtk

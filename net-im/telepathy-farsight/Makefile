@@ -2,7 +2,7 @@
 # Date created:				27 February 2009
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/telepathy-farsight/Makefile,v 1.16 2010/12/04 07:33:07 ade Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	telepathy-farsight

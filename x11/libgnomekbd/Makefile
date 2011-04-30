@@ -2,8 +2,8 @@
 # Date created:		2006-11-07
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/libgnomekbd/Makefile,v 1.23 2010/12/04 07:34:05 ade Exp $
-#   $MCom: ports/x11/libgnomekbd/Makefile,v 1.52 2011/04/09 19:55:18 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/libgnomekbd/Makefile,v 1.53 2011/04/10 15:14:12 mezz Exp $
 #
 
 PORTNAME=	libgnomekbd

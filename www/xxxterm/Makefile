@@ -2,7 +2,7 @@
 # Date created:				2011.01.15
 # Whom:					Aldis Berjoza <aldis@bsdroot.lv>
 #
-# $FreeBSD: ports/www/xxxterm/Makefile,v 1.3 2011/02/15 07:21:37 miwi Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	xxxterm

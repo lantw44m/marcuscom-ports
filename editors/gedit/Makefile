@@ -2,8 +2,8 @@
 # Date created:				14 May 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/editors/gedit/Makefile,v 1.90 2010/12/04 07:31:33 ade Exp $
-#   $MCom: ports/editors/gedit/Makefile,v 1.125 2010/09/30 19:58:54 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/editors/gedit/Makefile,v 1.127 2011/04/26 03:09:52 mezz Exp $
 #
 
 PORTNAME=	gedit

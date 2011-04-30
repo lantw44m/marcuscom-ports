@@ -2,7 +2,7 @@
 # Date created:				August 1 2009
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/net-im/papyon/Makefile,v 1.16 2010/12/19 07:39:13 marcus Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	papyon
