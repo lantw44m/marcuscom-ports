@@ -3,7 +3,7 @@
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libnotify/Makefile,v 1.16 2011/03/06 07:47:39 kwm Exp $
+#   $MCom: ports/devel/libnotify/Makefile,v 1.17 2011/03/22 09:37:24 kwm Exp $
 #
 
 PORTNAME=	libnotify
@@ -26,8 +26,5 @@ USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-
-# Installs libnotify.so.4 by default, hack it to become so.1.
-# Should we leave it like this?
 
 .include <bsd.port.mk>
