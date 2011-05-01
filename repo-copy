@@ -28,6 +28,7 @@ misc/gnome-devel-docs -> misc/gnome-devel-docs3
 misc/gnome-user-docs -> misc/gnome-user-docs3
 multimedia/cheese -> multimedia/cheese3
 net/avahi-gtk -> net/avahi-gtk3
+net/gnome-nettool -> net/gnome-nettool3
 net/libgweather -> net/libgweather3
 net/vinagre -> net/vinagre3
 net/vino -> net/vino3
