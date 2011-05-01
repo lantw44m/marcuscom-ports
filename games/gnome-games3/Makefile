@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.10 2011/04/21 09:25:35 kwm Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.11 2011/04/22 16:01:45 mezz Exp $
 #
 
 PORTNAME=	gnome-games
@@ -25,7 +25,7 @@ LIB_DEPENDS=	guile.20:${PORTSDIR}/lang/guile \
 		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter
 #RUN_DEPENDS=	seed:${PORTSDIR}/devel/seed
 
-CONFLICTS=	gnome-games-2.[0-9]*
+CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-2.[0-9]*
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
@@ -52,8 +52,6 @@ GCONF_SCHEMAS=	aisleriot.schemas glines.schemas \
 		swell-foop.schemas
 GLIB_SCHEMAS=	org.gnome.Games.WindowState.gschema.xml \
 		org.gnome.glchess.gschema.xml
-
-CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]*
 
 MAN6=		glchess.6 glines.6 gnect.6 gnibbles.6 gnobots2.6 \
 		gnomine.6 gnotravex.6 gnotski.6 \
