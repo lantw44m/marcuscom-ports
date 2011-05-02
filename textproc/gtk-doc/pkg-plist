@@ -32,8 +32,8 @@ share/gnome/help/gtk-doc-manual/te/gtk-doc-manual.xml
 %%DATADIR%%/data/gtk-doc.dsl
 %%DATADIR%%/data/gtk-doc.flat.make
 %%DATADIR%%/data/gtk-doc.make
-%%DATADIR%%/data/gtk-doc.notmpl.make
 %%DATADIR%%/data/gtk-doc.notmpl-flat.make
+%%DATADIR%%/data/gtk-doc.notmpl.make
 %%DATADIR%%/data/gtk-doc.xsl
 %%DATADIR%%/data/gtkdoc-common.pl
 %%DATADIR%%/data/home.png
@@ -61,16 +61,16 @@ share/sgml/gtk-doc/gtk-doc.cat
 @dirrm share/omf/gtk-doc-manual
 @dirrm %%DATADIR%%/data
 @dirrm %%DATADIR%%
-@dirrm share/gnome/help/gtk-doc-manual/bn_IN
-@dirrm share/gnome/help/gtk-doc-manual/de
-@dirrm share/gnome/help/gtk-doc-manual/el
-@dirrm share/gnome/help/gtk-doc-manual/en_GB
-@dirrm share/gnome/help/gtk-doc-manual/es
-@dirrm share/gnome/help/gtk-doc-manual/fr
-@dirrm share/gnome/help/gtk-doc-manual/gu
+@dirrm share/gnome/help/gtk-doc-manual/te
+@dirrm share/gnome/help/gtk-doc-manual/ta
 @dirrm share/gnome/help/gtk-doc-manual/sv
 @dirrm share/gnome/help/gtk-doc-manual/sl
-@dirrm share/gnome/help/gtk-doc-manual/ta
-@dirrm share/gnome/help/gtk-doc-manual/te
+@dirrm share/gnome/help/gtk-doc-manual/gu
+@dirrm share/gnome/help/gtk-doc-manual/fr
+@dirrm share/gnome/help/gtk-doc-manual/es
+@dirrm share/gnome/help/gtk-doc-manual/en_GB
+@dirrm share/gnome/help/gtk-doc-manual/el
+@dirrm share/gnome/help/gtk-doc-manual/de
+@dirrm share/gnome/help/gtk-doc-manual/bn_IN
 @dirrm share/gnome/help/gtk-doc-manual/C
 @dirrm share/gnome/help/gtk-doc-manual
