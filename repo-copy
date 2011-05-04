@@ -1,6 +1,7 @@
 accessibility/mousetweaks -> accessibility/mousetweaks3
 accessibility/orca -> accessibility/orca3
 audio/libcanberra -> audio/libcanberra-gtk3?
+audio/rhythmbox -> audio/rhythmbox3
 databases/evolution-data-server -> databases/evolution-data-server3
 databases/libgda4 -> libgda5
 databases/libgda4-bdb -> libgda5-bdb
