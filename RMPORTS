@@ -1,6 +1,6 @@
 graphics/gir-repository-poppler|graphics/poppler-gtk|%DATE%|gir support was merged into poppler-gtk
 devel/gir-repository-libnotify|devel/libnotify|%DATE%|gir support was merged into libnotify
-devel/gir-repository/||%DATE%|removed
+devel/gir-repository||%DATE%|removed
 graphics/gir-repository-goocanvas||%DATE%|removed
 x11-toolkits/gir-repository-vte||%DATE%|removed
 x11/yelp-xsl|textproc/yelp-xsl|%DATE%|moved to beter location
