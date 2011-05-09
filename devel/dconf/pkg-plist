@@ -1,5 +1,6 @@
 bin/dconf
 bin/dconf-editor
+etc/bash_completion.d/dconf-bash-completion.sh
 include/dconf/dconf-client.h
 include/dconf-dbus-1/dconf-dbus-1.h
 include/dconf/dconf-engine.h
@@ -51,3 +52,4 @@ share/vala/vapi/dconf.vapi
 @dirrmtry etc/dconf/db
 @dirrmtry etc/dconf/profile
 @dirrmtry etc/dconf
+@dirrmtry etc/bash_completion.d
