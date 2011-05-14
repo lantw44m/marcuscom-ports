@@ -207,6 +207,11 @@ libdata/pkgconfig/libgda-xslt-%%VERSION%%.pc
 %%UI%%share/gnome/help/gda-browser/C/figures/trans-begin.png
 %%UI%%share/gnome/help/gda-browser/C/figures/trans-commit.png
 %%UI%%share/gnome/help/gda-browser/C/figures/trans-rollback.png
+%%UI%%share/gnome/help/gda-browser/C/figures/virtual-cnc-2.png
+%%UI%%share/gnome/help/gda-browser/C/figures/virtual-cnc-3.png
+%%UI%%share/gnome/help/gda-browser/C/figures/virtual-cnc-4.png
+%%UI%%share/gnome/help/gda-browser/C/figures/virtual-cnc-5.png
+%%UI%%share/gnome/help/gda-browser/C/figures/virtual-cnc.png
 %%UI%%share/gnome/help/gda-browser/C/general-ui.page
 %%UI%%share/gnome/help/gda-browser/C/index.page
 %%UI%%share/gnome/help/gda-browser/C/legal.xml
@@ -215,6 +220,7 @@ libdata/pkgconfig/libgda-xslt-%%VERSION%%.pc
 %%UI%%share/gnome/help/gda-browser/C/table-insert-data.page
 %%UI%%share/gnome/help/gda-browser/C/transactions.page
 %%UI%%share/gnome/help/gda-browser/C/variables.page
+%%UI%%share/gnome/help/gda-browser/C/virtual-connections.page
 %%UI%%share/gnome/help/gda-browser/de/actions.page
 %%UI%%share/gnome/help/gda-browser/de/data-manager-perspective.page
 %%UI%%share/gnome/help/gda-browser/de/data-manager-source-editor.page
@@ -241,6 +247,11 @@ libdata/pkgconfig/libgda-xslt-%%VERSION%%.pc
 %%UI%%share/gnome/help/gda-browser/de/figures/trans-begin.png
 %%UI%%share/gnome/help/gda-browser/de/figures/trans-commit.png
 %%UI%%share/gnome/help/gda-browser/de/figures/trans-rollback.png
+%%UI%%share/gnome/help/gda-browser/de/figures/virtual-cnc-2.png
+%%UI%%share/gnome/help/gda-browser/de/figures/virtual-cnc-3.png
+%%UI%%share/gnome/help/gda-browser/de/figures/virtual-cnc-4.png
+%%UI%%share/gnome/help/gda-browser/de/figures/virtual-cnc-5.png
+%%UI%%share/gnome/help/gda-browser/de/figures/virtual-cnc.png
 %%UI%%share/gnome/help/gda-browser/de/general-ui.page
 %%UI%%share/gnome/help/gda-browser/de/index.page
 %%UI%%share/gnome/help/gda-browser/de/legal.xml
@@ -249,6 +260,7 @@ libdata/pkgconfig/libgda-xslt-%%VERSION%%.pc
 %%UI%%share/gnome/help/gda-browser/de/table-insert-data.page
 %%UI%%share/gnome/help/gda-browser/de/transactions.page
 %%UI%%share/gnome/help/gda-browser/de/variables.page
+%%UI%%share/gnome/help/gda-browser/de/virtual-connections.page
 %%UI%%share/gnome/help/gda-browser/es/actions.page
 %%UI%%share/gnome/help/gda-browser/es/data-manager-perspective.page
 %%UI%%share/gnome/help/gda-browser/es/data-manager-source-editor.page
@@ -275,6 +287,11 @@ libdata/pkgconfig/libgda-xslt-%%VERSION%%.pc
 %%UI%%share/gnome/help/gda-browser/es/figures/trans-begin.png
 %%UI%%share/gnome/help/gda-browser/es/figures/trans-commit.png
 %%UI%%share/gnome/help/gda-browser/es/figures/trans-rollback.png
+%%UI%%share/gnome/help/gda-browser/es/figures/virtual-cnc-2.png
+%%UI%%share/gnome/help/gda-browser/es/figures/virtual-cnc-3.png
+%%UI%%share/gnome/help/gda-browser/es/figures/virtual-cnc-4.png
+%%UI%%share/gnome/help/gda-browser/es/figures/virtual-cnc-5.png
+%%UI%%share/gnome/help/gda-browser/es/figures/virtual-cnc.png
 %%UI%%share/gnome/help/gda-browser/es/general-ui.page
 %%UI%%share/gnome/help/gda-browser/es/index.page
 %%UI%%share/gnome/help/gda-browser/es/legal.xml
@@ -283,6 +300,7 @@ libdata/pkgconfig/libgda-xslt-%%VERSION%%.pc
 %%UI%%share/gnome/help/gda-browser/es/table-insert-data.page
 %%UI%%share/gnome/help/gda-browser/es/transactions.page
 %%UI%%share/gnome/help/gda-browser/es/variables.page
+%%UI%%share/gnome/help/gda-browser/es/virtual-connections.page
 %%UI%%share/gnome/help/gda-browser/sl/actions.page
 %%UI%%share/gnome/help/gda-browser/sl/data-manager-perspective.page
 %%UI%%share/gnome/help/gda-browser/sl/data-manager-source-editor.page
@@ -309,6 +327,11 @@ libdata/pkgconfig/libgda-xslt-%%VERSION%%.pc
 %%UI%%share/gnome/help/gda-browser/sl/figures/trans-begin.png
 %%UI%%share/gnome/help/gda-browser/sl/figures/trans-commit.png
 %%UI%%share/gnome/help/gda-browser/sl/figures/trans-rollback.png
+%%UI%%share/gnome/help/gda-browser/sl/figures/virtual-cnc-2.png
+%%UI%%share/gnome/help/gda-browser/sl/figures/virtual-cnc-3.png
+%%UI%%share/gnome/help/gda-browser/sl/figures/virtual-cnc-4.png
+%%UI%%share/gnome/help/gda-browser/sl/figures/virtual-cnc-5.png
+%%UI%%share/gnome/help/gda-browser/sl/figures/virtual-cnc.png
 %%UI%%share/gnome/help/gda-browser/sl/general-ui.page
 %%UI%%share/gnome/help/gda-browser/sl/index.page
 %%UI%%share/gnome/help/gda-browser/sl/legal.xml
@@ -317,6 +340,7 @@ libdata/pkgconfig/libgda-xslt-%%VERSION%%.pc
 %%UI%%share/gnome/help/gda-browser/sl/table-insert-data.page
 %%UI%%share/gnome/help/gda-browser/sl/transactions.page
 %%UI%%share/gnome/help/gda-browser/sl/variables.page
+%%UI%%share/gnome/help/gda-browser/sl/virtual-connections.page
 %%UI%%share/icons/hicolor/16x16/apps/gda-control-center.png
 %%UI%%share/icons/hicolor/22x22/apps/gda-control-center.png
 %%UI%%share/icons/hicolor/24x24/apps/gda-control-center.png
