@@ -24,12 +24,15 @@ include/vinagre-3.0/vinagre/vinagre-window.h
 lib/vinagre-3.0/girepository-1.0/Vinagre-3.0.typelib
 lib/vinagre-3.0/plugins/im-status.js
 lib/vinagre-3.0/plugins/im-status.plugin
+%%RDP%%lib/vinagre-3.0/plugins/librdp.la
+%%RDP%%lib/vinagre-3.0/plugins/librdp.so
 lib/vinagre-3.0/plugins/libreversevnc.la
 lib/vinagre-3.0/plugins/libreversevnc.so
 lib/vinagre-3.0/plugins/libssh.la
 lib/vinagre-3.0/plugins/libssh.so
 lib/vinagre-3.0/plugins/libvnc.la
 lib/vinagre-3.0/plugins/libvnc.so
+%%RDP%%lib/vinagre-3.0/plugins/rdp.plugin
 lib/vinagre-3.0/plugins/reverse-vnc.plugin
 lib/vinagre-3.0/plugins/ssh.plugin
 lib/vinagre-3.0/plugins/vnc.plugin

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/net/vinagre3/Makefile,v 1.6 2011/04/26 06:37:56 kwm Exp $
+#  $MCom: ports/net/vinagre3/Makefile,v 1.7 2011/04/27 11:37:43 kwm Exp $
 #
 
 PORTNAME=	vinagre
@@ -41,6 +41,7 @@ GLIB_SCHEMAS=	org.gnome.Vinagre.gschema.xml
 MAN1=		vinagre.1
 
 OPTIONS=	TELEPATHY "Enable telepathy integration" on \
+		RDP "Enable MS Windows remote desktop support" off \
 		PANEL "Build gnome-panel applet" off
 
 .include <bsd.port.pre.mk>
@@ -51,6 +52,16 @@ PLIST_SUB+=	TELEPATHY=""
 .else
 CONFIGURE_ARGS+=--without-telepathy
 PLIST_SUB+=	TELEPATHY="@comment "
+.endif
+
+.if !defined(WITHOUT_RDP)
+BUILD_DEPENDS+=	rdesktop:${PORTSDIR}/net/rdesktop
+RUN_DEPENDS+=	rdesktop:${PORTSDIR}/net/rdesktop
+CONFIGURE_ARGS+=--enable-rdp
+PLIST_SUB+=	RDP=""
+.else
+CONFIGURE_ARGS+=--disable-rdp
+PLIST_SUB+=	RDP="@comment "
 .endif
 
 .if defined(WITH_PANEL)
