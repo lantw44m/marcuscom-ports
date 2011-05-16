@@ -3,12 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/midori/Makefile,v 1.29 2011/03/07 10:20:55 kwm Exp $
+#   $MCom: ports/www/midori/Makefile,v 1.21 2010/04/05 21:56:26 kwm Exp $
 #
 
 PORTNAME=	midori
-PORTVERSION=	0.3.2
-PORTREVISION=	1
+PORTVERSION=	0.3.6
 CATEGORIES=	www xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/apps/${PORTNAME}/${PORTVERSION:R}
@@ -22,6 +21,7 @@ LIB_DEPENDS=	webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2 \
 		notify.4:${PORTSDIR}/devel/libnotify
 BUILD_DEPENDS=	rsvg-convert:${PORTSDIR}/graphics/librsvg2 \
 		valac:${PORTSDIR}/lang/vala
+RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
@@ -31,6 +31,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 CONFIGURE_ARGS+=--disable-libidn \
 		--enable-libnotify \
 		--enable-addons \
+		--enable-docs \
 		--jobs=${MAKE_JOBS_NUMBER}
 
 MAKE_JOBS_SAFE=	yes
@@ -48,7 +49,6 @@ USE_GETTEXT=	yes
 PLIST_SUB=	VERSION="${PORTVERSION:R}"
 
 OPTIONS=	NLS "Enable Native Language support" on \
-		USERDOCS "Build user documentation" off \
 		APIDOCS "Build api documentation" off \
 		UNIQUE "Enable single instance support" off
 
@@ -62,15 +62,6 @@ PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
 PLIST_SUB+=	NLS="@comment "
-.endif
-
-.if defined(WITH_USERDOCS)
-BUILD_DEPENDS+=rst2html:${PORTSDIR}/textproc/py-docutils
-CONFIGURE_ARGS+=--enable-userdocs
-PLIST_SUB+=	USERDOCS=""
-.else
-CONFIGURE_ARGS+=--disable-userdocs
-PLIST_SUB+=	USERDOCS="@comment "
 .endif
 
 .if defined(WITH_APIDOCS)

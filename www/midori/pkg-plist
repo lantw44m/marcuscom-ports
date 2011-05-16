@@ -10,7 +10,6 @@ lib/midori/libfeed-panel.so
 lib/midori/libformhistory.so
 lib/midori/libhistory-list.so
 lib/midori/libmouse-gestures.so
-lib/midori/libpage-holder.so
 lib/midori/libshortcuts.so
 lib/midori/libstatus-clock.so
 lib/midori/libstatusbar-features.so
@@ -73,7 +72,8 @@ share/applications/midori.desktop
 %%APIDOCS%%%%DOCSDIR%%/api/midori/html/right.png
 %%APIDOCS%%%%DOCSDIR%%/api/midori/html/style.css
 %%APIDOCS%%%%DOCSDIR%%/api/midori/html/up.png
-%%USERDOCS%%%%DOCSDIR%%/user/midori.html
+%%DOCSDIR%%/faq.css
+%%DOCSDIR%%/faq.html
 share/icons/hicolor/16x16/apps/midori.png
 share/icons/hicolor/16x16/categories/extension.png
 share/icons/hicolor/16x16/status/news-feed.png
@@ -136,7 +136,6 @@ share/icons/hicolor/scalable/status/news-feed.svg
 %%DATADIR%%/res/logo-shade.png
 %%DATADIR%%/res/mootools.js
 %%DATADIR%%/res/speeddial-head.html
-%%DATADIR%%/res/speeddial.json
 share/vala/vapi/history-list.deps
 share/vala/vapi/history-list.vapi
 @dirrmtry share/vala/vapi
@@ -154,13 +153,10 @@ share/vala/vapi/history-list.vapi
 %%APIDOCS%%@dirrm %%DOCSDIR%%/api/katze/html
 %%APIDOCS%%@dirrm %%DOCSDIR%%/api/katze
 %%APIDOCS%%@dirrm %%DOCSDIR%%/api
-%%USERDOCS%%@dirrm %%DOCSDIR%%/user
 @dirrm %%DOCSDIR%%
-@dirrmtry share/applications
 @dirrm lib/midori
 @dirrm include/midori-%%VERSION%%/extensions
 @dirrm include/midori-%%VERSION%%
 @dirrm etc/xdg/midori
-@dirrmtry etc/xdg
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
