@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	accountsservice
-PORTVERSION=	0.6.7
+PORTVERSION=	0.6.10
 CATEGORIES=	sysutils devel
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 
@@ -27,7 +27,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/etc/gdm/custon.conf|${LOCALBASE}/etc/gdm/custom.conf|g' \
+	@${REINPLACE_CMD} -e 's|/etc/gdm/custom.conf|${LOCALBASE}/etc/gdm/custom.conf|g' \
 		${WRKSRC}/src/daemon.c
 
 .include <bsd.port.mk>
