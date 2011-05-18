@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gtranslator/Makefile,v 1.14 2011/04/12 09:02:56 kwm Exp $
+#   $MCom: ports/devel/gtranslator/Makefile,v 1.15 2011/04/27 20:57:58 kwm Exp $
 #
 
 PORTNAME=	gtranslator
-PORTVERSION=	2.90.2
+PORTVERSION=	2.90.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 

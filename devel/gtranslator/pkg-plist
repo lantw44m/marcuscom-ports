@@ -10,6 +10,7 @@ include/gtranslator-3.0/gtranslator/gtr-po.h
 include/gtranslator-3.0/gtranslator/gtr-profile.h
 include/gtranslator-3.0/gtranslator/gtr-statusbar.h
 include/gtranslator-3.0/gtranslator/gtr-tab.h
+include/gtranslator-3.0/gtranslator/gtr-tab-activatable.h
 include/gtranslator-3.0/gtranslator/gtr-translation-memory-ui.h
 include/gtranslator-3.0/gtranslator/gtr-translation-memory.h
 include/gtranslator-3.0/gtranslator/gtr-view.h
@@ -163,6 +164,17 @@ share/gnome/help/gtranslator/gl/figures/profiles.png
 share/gnome/help/gtranslator/gl/figures/tm.png
 share/gnome/help/gtranslator/gl/figures/toolbar.png
 share/gnome/help/gtranslator/gl/gtranslator.xml
+share/gnome/help/gtranslator/ja/figures/closedialog.png
+share/gnome/help/gtranslator/ja/figures/mainwindow.png
+share/gnome/help/gtranslator/ja/figures/prefs-editor.png
+share/gnome/help/gtranslator/ja/figures/prefs-interface.png
+share/gnome/help/gtranslator/ja/figures/prefs-tm.png
+share/gnome/help/gtranslator/ja/figures/prefs.png
+share/gnome/help/gtranslator/ja/figures/profiles-dialog.png
+share/gnome/help/gtranslator/ja/figures/profiles.png
+share/gnome/help/gtranslator/ja/figures/tm.png
+share/gnome/help/gtranslator/ja/figures/toolbar.png
+share/gnome/help/gtranslator/ja/gtranslator.xml
 share/gnome/help/gtranslator/sl/figures/closedialog.png
 share/gnome/help/gtranslator/sl/figures/mainwindow.png
 share/gnome/help/gtranslator/sl/figures/prefs-editor.png
@@ -209,10 +221,6 @@ share/gnome/help/gtranslator/zh_CN/figures/toolbar.png
 share/gnome/help/gtranslator/zh_CN/gtranslator.xml
 %%DATADIR%%/dtd/umtf.dtd
 %%DATADIR%%/gir-1.0/Gtranslator-3.0.gir
-%%DATADIR%%/gtr-plural-forms.ini
-%%DATADIR%%/gtr-toolbar.xml
-%%DATADIR%%/gtranslator-ui.xml
-%%DATADIR%%/layout.xml
 %%DATADIR%%/pixmaps/gtranslator-fuzzy-next.png
 %%DATADIR%%/pixmaps/gtranslator-fuzzy-prev.png
 %%DATADIR%%/pixmaps/gtranslator-fuzzy-untranslated-next.png
@@ -221,16 +229,20 @@ share/gnome/help/gtranslator/zh_CN/gtranslator.xml
 %%DATADIR%%/pixmaps/gtranslator-plugin.png
 %%DATADIR%%/pixmaps/gtranslator-untranslated-next.png
 %%DATADIR%%/pixmaps/gtranslator-untranslated-prev.png
-%%DATADIR%%/po.lang
 %%DATADIR%%/ui/gtr-codeview-dialog.ui
 %%DATADIR%%/ui/gtr-header-dialog.ui
 %%DATADIR%%/ui/gtr-jump-dialog.ui
 %%DATADIR%%/ui/gtr-languages-fetcher.ui
 %%DATADIR%%/ui/gtr-open-tran-dialog.ui
+%%DATADIR%%/ui/gtr-plural-forms.ini
 %%DATADIR%%/ui/gtr-preferences-dialog.ui
 %%DATADIR%%/ui/gtr-profile-dialog.ui
 %%DATADIR%%/ui/gtr-search-dialog.ui
+%%DATADIR%%/ui/gtr-toolbar.xml
 %%DATADIR%%/ui/gtr-viewer.ui
+%%DATADIR%%/ui/gtranslator-ui.xml
+%%DATADIR%%/ui/layout.xml
+%%DATADIR%%/ui/po.lang
 share/icons/hicolor/16x16/apps/gtranslator.png
 share/icons/hicolor/22x22/apps/gtranslator.png
 share/icons/hicolor/24x24/apps/gtranslator.png
@@ -305,6 +317,7 @@ share/omf/gtranslator/gtranslator-el.omf
 share/omf/gtranslator/gtranslator-es.omf
 share/omf/gtranslator/gtranslator-fr.omf
 share/omf/gtranslator/gtranslator-gl.omf
+share/omf/gtranslator/gtranslator-ja.omf
 share/omf/gtranslator/gtranslator-sl.omf
 share/omf/gtranslator/gtranslator-th.omf
 share/omf/gtranslator/gtranslator-uk.omf
@@ -336,6 +349,8 @@ share/pixmaps/gtranslator/xfce.png
 @dirrm share/gnome/help/gtranslator/th
 @dirrm share/gnome/help/gtranslator/sl/figures
 @dirrm share/gnome/help/gtranslator/sl
+@dirrm share/gnome/help/gtranslator/ja/figures
+@dirrm share/gnome/help/gtranslator/ja
 @dirrm share/gnome/help/gtranslator/gl/figures
 @dirrm share/gnome/help/gtranslator/gl
 @dirrm share/gnome/help/gtranslator/fr/figures
