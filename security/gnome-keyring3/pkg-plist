@@ -97,7 +97,9 @@ share/doc/gcr-3/GcrImporter.html
 share/doc/gcr-3/GcrParser.html
 share/doc/gcr-3/GcrPkcs11Certificate.html
 share/doc/gcr-3/GcrSimpleCertificate.html
+share/doc/gcr-3/certificate-widget.png
 share/doc/gcr-3/certificates.html
+share/doc/gcr-3/ch01.html
 share/doc/gcr-3/gcr-3.devhelp
 share/doc/gcr-3/gcr-3.devhelp2
 share/doc/gcr-3/gcr-GcrCertificate.html
@@ -111,6 +113,7 @@ share/doc/gcr-3/gcr-gcr-misc.html
 share/doc/gcr-3/home.png
 share/doc/gcr-3/index.html
 share/doc/gcr-3/index.sgml
+share/doc/gcr-3/key-widget.png
 share/doc/gcr-3/left.png
 share/doc/gcr-3/misc.html
 share/doc/gcr-3/right.png
