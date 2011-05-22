@@ -32,6 +32,9 @@ bin/gnome-tweak-tool
 %%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_shell.py
 %%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_shell.pyc
 %%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_shell.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_shell_extensions.py
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_shell_extensions.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_shell_extensions.pyo
 %%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_test.py
 %%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_test.pyc
 %%PYTHON_SITELIBDIR%%/gtweak/tweaks/tweak_test.pyo
@@ -53,6 +56,7 @@ share/applications/gnome-tweak-tool.desktop
 share/locale/cs/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/da/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/de/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/el/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/es/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/ja/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/lv/LC_MESSAGES/gnome-tweak-tool.mo
@@ -62,6 +66,7 @@ share/locale/pt/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/sl/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/sv/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/uk/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/vi/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-tweak-tool.mo
 @dirrm %%DATADIR%%
