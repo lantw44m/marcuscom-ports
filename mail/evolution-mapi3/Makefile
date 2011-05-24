@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.8 2011/04/22 16:17:22 mezz Exp $
+#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.9 2011/04/27 11:04:24 kwm Exp $
 #
 
 PORTNAME=	evolution-mapi
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
