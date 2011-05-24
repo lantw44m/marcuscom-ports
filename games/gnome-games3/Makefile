@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.11 2011/04/22 16:01:45 mezz Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.12 2011/05/01 23:44:47 mezz Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	3.0.1.1
+PORTVERSION=	3.0.2
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -46,7 +46,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 GCONF_SCHEMAS=	aisleriot.schemas glines.schemas \
 		gnect.schemas gnibbles.schemas gnobots2.schemas \
-		gnomine.schemas gnotravex.schemas \
+		gnome-sudoku.schemas gnomine.schemas gnotravex.schemas \
 		gnotski.schemas gtali.schemas iagno.schemas \
 		mahjongg.schemas lightsoff.schemas quadrapassel.schemas \
 		swell-foop.schemas
@@ -54,7 +54,7 @@ GLIB_SCHEMAS=	org.gnome.Games.WindowState.gschema.xml \
 		org.gnome.glchess.gschema.xml
 
 MAN6=		glchess.6 glines.6 gnect.6 gnibbles.6 gnobots2.6 \
-		gnomine.6 gnotravex.6 gnotski.6 \
+		gnome-sudoku.6 gnomine.6 gnotravex.6 gnotski.6 \
 		gtali.6 iagno.6 mahjongg.6 quadrapassel.6 sol.6
 
 .include <bsd.port.pre.mk>
