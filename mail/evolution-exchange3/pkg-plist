@@ -60,7 +60,6 @@ lib/evolution-data-server/camel-providers/libcamelexchange.urls
 %%DOCSDIR%%/evolution-exchange-xntlm-des.html
 %%DOCSDIR%%/evolution-exchange-xntlm-md4.html
 %%DOCSDIR%%/evolution-exchange-xntlm.html
-%%DOCSDIR%%/evolution-exchange.devhelp
 %%DOCSDIR%%/evolution-exchange.devhelp2
 %%DOCSDIR%%/home.png
 %%DOCSDIR%%/index.html
