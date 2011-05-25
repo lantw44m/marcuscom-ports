@@ -61,6 +61,7 @@ share/icons/hicolor/32x32/apps/gdm-setup.png
 share/icons/hicolor/32x32/apps/gdm-xnest.png
 share/locale/af/LC_MESSAGES/gdm.mo
 share/locale/am/LC_MESSAGES/gdm.mo
+share/locale/an/LC_MESSAGES/gdm.mo
 share/locale/ar/LC_MESSAGES/gdm.mo
 share/locale/as/LC_MESSAGES/gdm.mo
 share/locale/ast/LC_MESSAGES/gdm.mo
@@ -283,3 +284,5 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/locale/an/LC_MESSAGES
+@dirrmtry share/locale/an
