@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/glib-networking/Makefile,v 1.6 2011/04/05 14:15:01 kwm Exp $
+#   $MCom: ports/net/glib-networking/Makefile,v 1.7 2011/04/27 19:49:59 kwm Exp $
 #
 
 PORTNAME=	glib-networking
-PORTVERSION=	2.28.6.1
+PORTVERSION=	2.28.7
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
