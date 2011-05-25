@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	accountsservice
-PORTVERSION=	0.6.10
+PORTVERSION=	0.6.12
 CATEGORIES=	sysutils devel
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 
