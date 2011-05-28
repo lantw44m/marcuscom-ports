@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/py-atspi/Makefile,v 1.21 2011/04/11 02:42:14 mezz Exp $
+#   $MCom: ports/accessibility/py-atspi/Makefile,v 1.22 2011/04/27 16:26:13 kwm Exp $
 #
 
 PORTNAME=	atspi
-PORTVERSION=	2.0.1
+PORTVERSION=	2.0.2
 CATEGORIES=	accessibility x11-toolkits python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=     sources/pyatspi/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
