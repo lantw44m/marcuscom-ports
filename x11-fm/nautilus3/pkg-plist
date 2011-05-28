@@ -1,6 +1,7 @@
 bin/nautilus
 bin/nautilus-autorun-software
 bin/nautilus-connect-server
+etc/xdg/autostart/nautilus-autostart.desktop
 include/nautilus/libnautilus-extension/nautilus-column-provider.h
 include/nautilus/libnautilus-extension/nautilus-column.h
 include/nautilus/libnautilus-extension/nautilus-extension-types.h
