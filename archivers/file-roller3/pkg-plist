@@ -152,6 +152,7 @@ share/icons/hicolor/32x32/apps/file-roller.png
 share/icons/hicolor/48x48/apps/file-roller.png
 share/locale/af/LC_MESSAGES/file-roller.mo
 share/locale/am/LC_MESSAGES/file-roller.mo
+share/locale/an/LC_MESSAGES/file-roller.mo
 share/locale/ar/LC_MESSAGES/file-roller.mo
 share/locale/as/LC_MESSAGES/file-roller.mo
 share/locale/ast/LC_MESSAGES/file-roller.mo
@@ -376,3 +377,5 @@ share/omf/file-roller/file-roller-zh_CN.omf
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/locale/an/LC_MESSAGES
+@dirrmtry share/locale/an
