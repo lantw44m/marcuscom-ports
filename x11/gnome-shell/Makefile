@@ -3,11 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.35 2011/04/07 07:16:40 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.36 2011/04/27 12:26:58 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,7 +25,6 @@ LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
 		clutter-glx-1.0:${PORTSDIR}/graphics/clutter \
 		gjs-gi:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus
-#    		glxinfo:${PORTSDIR}/graphics/mesa-demos
 
 USE_BZIP2=	yes
 USE_XORG=	x11 xfixes sm
