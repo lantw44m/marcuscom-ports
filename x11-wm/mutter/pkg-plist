@@ -28,8 +28,8 @@ lib/libmutter.a
 lib/libmutter.la
 lib/libmutter.so
 lib/libmutter.so.0
-lib/mutter/Meta-%%VERSION%%.gir
-lib/mutter/Meta-%%VERSION%%.typelib
+lib/mutter/Meta-3.0.gir
+lib/mutter/Meta-3.0.typelib
 lib/mutter/plugins/default.so
 libdata/pkgconfig/libmutter.pc
 libdata/pkgconfig/mutter-plugins.pc
