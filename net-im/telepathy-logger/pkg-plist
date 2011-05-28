@@ -13,14 +13,9 @@ libexec/telepathy-logger
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Logger.service
 share/dbus-1/services/org.freedesktop.Telepathy.Logger.service
 share/gir-1.0/TelepathyLogger-0.2.gir
-share/gtk-doc/html/telepathy-logger/TplEntity.html
-share/gtk-doc/html/telepathy-logger/TplEvent.html
-share/gtk-doc/html/telepathy-logger/TplLogManager.html
-share/gtk-doc/html/telepathy-logger/TplTextEvent.html
 share/gtk-doc/html/telepathy-logger/ch-public.html
 share/gtk-doc/html/telepathy-logger/home.png
 share/gtk-doc/html/telepathy-logger/index.html
-share/gtk-doc/html/telepathy-logger/index.sgml
 share/gtk-doc/html/telepathy-logger/left.png
 share/gtk-doc/html/telepathy-logger/right.png
 share/gtk-doc/html/telepathy-logger/style.css
