@@ -3,17 +3,17 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor3/Makefile,v 1.6 2011/04/10 19:41:37 mezz Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor3/Makefile,v 1.7 2011/04/25 19:59:38 mezz Exp $
 #
 
 PORTNAME=	gnome-system-monitor
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	GNOME 2 system monitor program
+COMMENT=	GNOME 3 system monitor program
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
