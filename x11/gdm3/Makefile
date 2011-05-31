@@ -3,11 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.6 2011/04/05 13:30:01 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.7 2011/05/25 15:23:46 kwm Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	3.0.2
+PORTVERSION=	3.0.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -36,7 +36,7 @@ RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 USERS=		gdm
 GROUPS=		gdm
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
