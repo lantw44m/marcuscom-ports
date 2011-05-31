@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit3/Makefile,v 1.15 2011/04/27 12:13:00 kwm Exp $
+#   $MCom: ports/editors/gedit3/Makefile,v 1.16 2011/05/28 12:06:10 kwm Exp $
 #
 
 PORTNAME=	gedit
-PORTVERSION=	3.0.3
+PORTVERSION=	3.0.4
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,7 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 CONFLICTS=	gedit-2.[0-9]*
 
 USE_XORG=	sm
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
