@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.14 2010/11/14 20:57:58 kwm Exp $
+#   $MCom: ports/databases/libgda5/Makefile,v 1.1 2011/03/30 19:23:02 kwm Exp $
 #
 
 PORTNAME=	libgda5
-PORTVERSION?=	4.99.0
+PORTVERSION?=	4.99.1
 PORTREVISION?=	0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
@@ -18,7 +18,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Provides uniform access to different kinds of data sources
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 LIBGDA5_SLAVE?=	no
 
 .if !defined(REFERENCE_PORT)
@@ -68,6 +68,13 @@ USE_BDB=		yes
 CONFIGURE_ARGS+=	--with-bdb=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-bdb
+.endif
+
+.if ${LIBGDA5_SLAVE}=="ldap"
+USE_LDAP=	yes
+CONFIGURE_ARGS+=	--with-ldap=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-ldap
 .endif
 
 .if ${LIBGDA5_SLAVE}=="mysql"
