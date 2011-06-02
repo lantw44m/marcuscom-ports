@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.17 2011/04/30 20:43:13 mezz Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.18 2011/05/14 08:17:22 kwm Exp $
 #
 
 PORTNAME=	libgda4
-PORTVERSION?=	4.2.7
+PORTVERSION?=	4.2.8
 PORTREVISION?=	0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
@@ -20,7 +20,7 @@ COMMENT?=	Provides uniform access to different kinds of data sources
 
 CONFLICTS=	libgda5-ui-*
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 LIBGDA4_SLAVE?=	no
 
 .if !defined(REFERENCE_PORT)
@@ -82,6 +82,13 @@ CONFIGURE_ARGS+=	--with-bdb=${LOCALBASE}
 CONFIGURE_ARGS+=	--without-bdb
 .endif
 
+.if ${LIBGDA4_SLAVE}=="ldap"
+USE_OPENLDAP=	yes
+CONFIGURE_ARGS+=	--with-ldap=${LOCALBASE}
+.else
+CONFIGURE_ARGS+=	--without-ldap
+.endif
+
 .if ${LIBGDA4_SLAVE}=="mysql"
 USE_MYSQL=		yes
 CONFIGURE_ARGS+=	--with-mysql=${LOCALBASE}
@@ -131,7 +138,7 @@ post-patch:
 		${WRKSRC}/providers/bdb/gda-bdb-test.c
 .if ${LIBGDA4_SLAVE}!="no"
 #. for d in msql firebird odbc freetds mdb ldap mysql sqlite postgres
-. for d in bdb jdbc mdb mysql postgres reuseable/postgres reuseable/mysql
+. for d in bdb jdbc mdb mysql postgres reuseable/postgres reuseable/mysql ldap
 	@${REINPLACE_CMD} -e 's|$$(top_builddir)/libgda/libgda-4.0.la|${LOCALBASE}/lib/libgda-4.0.la|g' \
 		${WRKSRC}/providers/${d}/Makefile.in
 . endfor
