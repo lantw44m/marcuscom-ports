@@ -28,6 +28,7 @@ share/devhelp/books/vala-%%VERSION%%/statements.html
 share/devhelp/books/vala-%%VERSION%%/structs.html
 share/devhelp/books/vala-%%VERSION%%/types.html
 share/devhelp/books/vala-%%VERSION%%/vala.devhelp2
+%%DATADIR%%-%%VERSION%%/vapi/alsa.deps
 %%DATADIR%%-%%VERSION%%/vapi/alsa.vapi
 %%DATADIR%%-%%VERSION%%/vapi/atk.vapi
 %%DATADIR%%-%%VERSION%%/vapi/avahi-gobject.deps
