@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5/Makefile,v 1.1 2011/03/30 19:23:02 kwm Exp $
+#   $MCom: ports/databases/libgda5/Makefile,v 1.2 2011/06/02 13:29:13 kwm Exp $
 #
 
 PORTNAME=	libgda5
@@ -71,7 +71,7 @@ CONFIGURE_ARGS+=	--without-bdb
 .endif
 
 .if ${LIBGDA5_SLAVE}=="ldap"
-USE_LDAP=	yes
+USE_OPENLDAP=	yes
 CONFIGURE_ARGS+=	--with-ldap=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-ldap
