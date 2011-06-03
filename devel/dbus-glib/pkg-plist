@@ -1,7 +1,6 @@
 bin/dbus-binding-tool
 etc/bash_completion.d/dbus-bash-completion.sh
 include/dbus-%%VERSION%%/dbus/dbus-glib-bindings.h
-include/dbus-%%VERSION%%/dbus/dbus-glib-error-enum.h
 include/dbus-%%VERSION%%/dbus/dbus-glib-lowlevel.h
 include/dbus-%%VERSION%%/dbus/dbus-glib.h
 include/dbus-%%VERSION%%/dbus/dbus-gtype-specialized.h
