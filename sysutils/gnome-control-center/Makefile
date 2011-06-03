@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.216 2011/04/25 19:49:26 mezz Exp $
+#   $MCom: ports/sysutils/gnome-control-center/Makefile,v 1.217 2011/04/30 20:43:26 mezz Exp $
 #
 
 PORTNAME=	gnome-control-center
@@ -28,7 +28,6 @@ CONFLICTS=	gnome-control-center-3.[0-9]*
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-GNOME_DESKTOP_VERSION=2
 USE_GSTREAMER=	good
 WANT_GNOME=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack metacity gnomemenus \

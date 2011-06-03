@@ -3,7 +3,7 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller/Makefile,v 1.184 2010/11/15 22:58:48 kwm Exp $
+#   $MCom: ports/archivers/file-roller/Makefile,v 1.186 2011/04/11 10:18:16 kwm Exp $
 #
 
 PORTNAME=	file-roller
@@ -31,7 +31,6 @@ INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils gnomedocutils \
 		gtk20 gconf2
-GNOME_DESKTOP_VERSION=2
 USE_XORG=	sm
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \

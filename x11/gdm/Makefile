@@ -2,8 +2,8 @@
 # Date created:        20 May 2002
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/gdm/Makefile,v 1.137 2011/03/29 13:40:09 kwm Exp $
-#   $MCom: ports/x11/gdm/Makefile,v 1.186 2011/06/02 11:58:24 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/x11/gdm/Makefile,v 1.187 2011/06/03 19:56:54 kwm Exp $
 #
 
 PORTNAME=	gdm

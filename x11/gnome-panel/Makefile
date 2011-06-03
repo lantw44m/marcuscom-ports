@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.232 2011/04/25 21:58:24 mezz Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.233 2011/04/30 20:43:30 mezz Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -34,7 +34,6 @@ INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop libwnck gnomemenus \
 		gnomedocutils ltverhack referencehack librsvg2
 WANT_GNOME=	yes
-GNOME_DESKTOP_VERSION=2
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-network-manager \

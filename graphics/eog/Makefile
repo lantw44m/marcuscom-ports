@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog/Makefile,v 1.125 2011/04/22 16:10:56 mezz Exp $
+#   $MCom: ports/graphics/eog/Makefile,v 1.126 2011/04/30 20:43:17 mezz Exp $
 #
 
 PORTNAME=	eog
@@ -32,7 +32,6 @@ INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-GNOME_DESKTOP_VERSION=2
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 
