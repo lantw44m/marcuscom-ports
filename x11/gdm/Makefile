@@ -3,12 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/x11/gdm/Makefile,v 1.137 2011/03/29 13:40:09 kwm Exp $
-#   $MCom: ports-stable/x11/gdm/Makefile,v 1.10 2010/07/21 13:50:45 kwm Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.186 2011/06/02 11:58:24 kwm Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	2.30.5
-PORTREVISION=	3
+PORTVERSION=	2.30.7
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -32,7 +31,7 @@ RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 USERS=		gdm
 GROUPS=		gdm
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
