@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dbus/Makefile,v 1.46 2011/03/06 22:39:38 kwm Exp $
+#   $MCom: ports/devel/dbus/Makefile,v 1.47 2011/04/30 20:43:15 mezz Exp $
 #
 
 PORTNAME=	dbus
-PORTVERSION?=	1.4.6
+PORTVERSION?=	1.4.10
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
@@ -28,11 +28,10 @@ CONFIGURE_ARGS=--localstatedir=/var \
 		--with-session-socket-dir=/var/tmp \
 		--disable-doxygen-docs \
 		--disable-xml-docs
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
-.if !defined(DBUS_SLAVE)
 USE_RC_SUBR=	dbus
 USE_GNOME_SUBR=	yes
 
@@ -49,9 +48,6 @@ USE_XORG=	x11
 .else
 CONFIGURE_ARGS+=--without-x
 .endif
-.endif
-
-.include <bsd.port.pre.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
@@ -63,12 +59,10 @@ post-patch:
 		s|dummy man2html|dummy man2html_disable|g' \
 			${WRKSRC}/configure
 
-.if !defined(DBUS_SLAVE)
 post-install:
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
 	${MKDIR} ${PREFIX}/share/dbus-1/interfaces
-.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
