@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.233 2011/04/30 20:43:30 mezz Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.234 2011/06/03 21:27:51 mezz Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -28,6 +28,7 @@ CONFLICTS=	gnome-panel-3.[0-9]*
 
 USE_GETTEXT=	yes
 USE_XORG=	ice sm x11 xau xrandr
+USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
@@ -36,10 +37,9 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop libwnck gnomemenus \
 WANT_GNOME=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ARGS=	--disable-network-manager \
-		--enable-polkit
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--disable-network-manager
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS="-I${LOCALBASE}/include"
 
 MAN1=		gnome-panel.1
 GCONF_SCHEMAS=	clock.schemas fish.schemas \
@@ -81,6 +81,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|xsltproc -o| xsltproc --nonet -o|g' \
 		${WRKSRC}/help/clock/Makefile.in \
 		${WRKSRC}/help/fish/Makefile.in
+	@${REINPLACE_CMD} -e 's|python.* python2\.0|${PYTHON_VERSION}|g' \
+		${WRKSRC}/configure
 
 post-install:
 	@${MKDIR} ${PREFIX}/lib/gnome-panel/modules

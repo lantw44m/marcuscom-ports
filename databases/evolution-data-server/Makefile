@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.207 2011/04/10 19:28:35 mezz Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.208 2011/04/30 20:43:13 mezz Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -47,17 +47,12 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_C
 PLIST_SUB=	VERSION="2.32" EVO_VERSION="1.2"
 
 #OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
-OPTIONS=	WEATHER "Enable weather calendar backend" on
+OPTIONS=	WEATHER		"Enable weather calendar backend"	on \
+		KERBEROS	"Adds Kerberos support"			on
 
 .include <bsd.port.pre.mk>
 
-.if defined(HEIMDAL_HOME) || defined(WITH_HEIMDAL) || defined(NO_KERBEROS)
-HEIMDAL_HOME?=		${LOCALBASE}
-LIB_DEPENDS+=		krb5:${PORTSDIR}/security/heimdal
-CONFIGURE_ARGS+=	--with-krb5=${HEIMDAL_HOME} \
-			--with-krb5-includes=${HEIMDAL_HOME}/include
-KRB5_LIB=		`${HEIMDAL_HOME}/bin/krb5-config gssapi --libs`
-.elif !defined(NO_KERBEROS)
+.if !defined(WITHOUT_KERBEROS)
 CONFIGURE_ARGS+=	--with-krb5=/usr
 KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
