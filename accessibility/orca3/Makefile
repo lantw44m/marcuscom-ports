@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/accessibility/orca3/Makefile,v 1.1 2011/04/26 02:36:53 mezz Exp $
 #
 
 PORTNAME=	orca
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
