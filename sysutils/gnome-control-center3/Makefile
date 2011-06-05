@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.23 2011/05/28 11:38:57 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.24 2011/06/05 00:36:17 mezz Exp $
 #
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	3.0.2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -28,7 +28,8 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		glxinfo:${PORTSDIR}/graphics/mesa-demos \
-		apg:${PORTSDIR}/security/apg
+		apg:${PORTSDIR}/security/apg \
+		cups-pk-helper-mechanism:${PORTSDIR}/print/cups-pk-helper
 
 CONFLICTS=	gnome-control-center-2.[0-9]* gnome-media-2.[0-9]*
 
