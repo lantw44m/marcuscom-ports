@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.22 2011/04/27 21:43:43 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.23 2011/05/28 11:38:57 kwm Exp $
 #
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	3.0.2
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,7 +27,8 @@ LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		glxinfo:${PORTSDIR}/graphics/mesa-demos
+		glxinfo:${PORTSDIR}/graphics/mesa-demos \
+		apg:${PORTSDIR}/security/apg
 
 CONFLICTS=	gnome-control-center-2.[0-9]* gnome-media-2.[0-9]*
 
