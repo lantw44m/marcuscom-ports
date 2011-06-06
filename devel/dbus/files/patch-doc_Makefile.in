@@ -1,0 +1,11 @@
+--- doc/Makefile.in.orig	2011-06-06 20:05:26.000000000 +0200
++++ doc/Makefile.in	2011-06-06 20:09:42.000000000 +0200
+@@ -549,7 +549,7 @@
+ 
+ info-am:
+ 
+-install-data-am: install-apiDATA install-data-local install-man
++install-data-am: install-data-local install-man
+ 
+ install-dvi: install-dvi-am
+ 
