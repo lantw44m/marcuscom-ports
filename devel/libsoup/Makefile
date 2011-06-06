@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.100 2011/04/27 11:59:04 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.101 2011/05/25 15:58:52 kwm Exp $
 #
 
 PORTNAME=	libsoup
 PORTVERSION=	2.34.2
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -45,18 +45,6 @@ CONFIGURE_ARGS+=--with-gnome
 BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 CONFIGURE_ARGS+=--without-gnome
 .endif
-
-.if !defined(WITHOUT_SSL)
-LIB_DEPENDS+=	gnutls.40:${PORTSDIR}/security/gnutls
-.else
-CONFIGURE_ARGS+=--disable-ssl
-.endif
-
-pre-everything::
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "libsoup has the following configurable option(s):"
-	@${ECHO_MSG} "  WITHOUT_SSL     Disable GnuTLS SSL support"
-	@${ECHO_MSG} ""
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
