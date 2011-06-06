@@ -3,12 +3,12 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/clutter-gst/Makefile,v 1.6 2010/06/29 21:14:02 kwm Exp $
+#   $MCom: ports/multimedia/clutter-gst/Makefile,v 1.8 2011/05/14 07:53:15 kwm Exp $
 
 PORTNAME=	clutter-gst
-PORTVERSION=	1.3.10
+PORTVERSION=	1.3.12
 CATEGORIES=	multimedia
-MASTER_SITES=	http://source.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
+MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Clutter GStreamer integration
@@ -16,7 +16,7 @@ COMMENT=	Clutter GStreamer integration
 LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 
 USE_GMAKE=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack ltverhack gnomeprefix
 USE_GSTREAMER=	yes
