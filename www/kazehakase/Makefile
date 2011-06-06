@@ -3,12 +3,12 @@
 # Whom:			michael johnson <ahze@ahze.net>
 #
 # $FreeBSD$
-#   $MCom: ports/www/kazehakase/Makefile,v 1.30 2011/03/06 23:12:43 kwm Exp $
+#   $MCom: ports/www/kazehakase/Makefile,v 1.31 2011/04/30 20:43:28 mezz Exp $
 #
 
 PORTNAME=	kazehakase
 PORTVERSION=	0.5.8
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP}
 MASTER_SITE_SUBDIR=	${PORTNAME}/43802
@@ -16,7 +16,7 @@ MASTER_SITE_SUBDIR=	${PORTNAME}/43802
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Kazehakase is a browser with gecko engine like Epiphany or Galeon
 
-LIB_DEPENDS=	gnutls.40:${PORTSDIR}/security/gnutls \
+LIB_DEPENDS=	gnutls.47:${PORTSDIR}/security/gnutls \
 		estraier.8:${PORTSDIR}/textproc/hyperestraier
 
 USE_GNOME=	gnomehack intlhack gnomeprefix gtk20

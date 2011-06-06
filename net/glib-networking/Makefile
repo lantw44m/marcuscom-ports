@@ -3,11 +3,12 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/glib-networking/Makefile,v 1.7 2011/04/27 19:49:59 kwm Exp $
+#   $MCom: ports/net/glib-networking/Makefile,v 1.8 2011/05/25 15:55:00 kwm Exp $
 #
 
 PORTNAME=	glib-networking
 PORTVERSION=	2.28.7
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +18,7 @@ COMMENT=	Network-related giomodules for glib
 
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	gnutls.40:${PORTSDIR}/security/gnutls \
+LIB_DEPENDS=	gnutls.47:${PORTSDIR}/security/gnutls \
 		dbus-1.3:${PORTSDIR}/devel/dbus \
 		proxy.1:${PORTSDIR}/net/libproxy
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
