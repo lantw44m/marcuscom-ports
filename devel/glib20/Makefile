@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.206 2011/04/14 06:20:55 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.207 2011/05/21 18:28:13 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
-PORTVERSION=	2.28.7
+PORTVERSION=	2.28.8
 PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
@@ -25,7 +25,7 @@ COMMENT=	Some useful routines of C programming (current stable version)
 
 LATEST_LINK=	glib20
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
