@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.33 2011/04/16 18:54:56 mezz Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.34 2011/05/24 10:02:21 kwm Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	3.0.10
+PORTVERSION=	3.0.11
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
@@ -26,7 +26,7 @@ COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
-USE_BZIP2=	yes
+USE_XZ=		yes
 LATEST_LINK=	gtk30
 
 .if !defined(REFERENCE_PORT)
