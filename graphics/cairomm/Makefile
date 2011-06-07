@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/cairomm/Makefile,v 1.16 2010/10/26 09:42:43 kwm Exp $
+#   $MCom: ports/graphics/cairomm/Makefile,v 1.18 2011/02/27 12:53:29 kwm Exp $
 #
 
 PORTNAME=	cairomm
-PORTVERSION=	1.9.8
+PORTVERSION=	1.10.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
