@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD: ports/print/cups-pk-helper/Makefile,v 1.5 2010/07/25 23:03:46 linimon Exp $
-#   $MCom: ports/print/cups-pk-helper/Makefile,v 1.1 2009/12/29 16:01:07 ahze Exp $
+#   $MCom: ports/print/cups-pk-helper/Makefile,v 1.3 2011/06/05 01:04:00 mezz Exp $
 
 PORTNAME=	cups-pk-helper
 PORTVERSION=	0.1.2
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/releases/
 
@@ -15,7 +16,7 @@ COMMENT=	A helper that makes system-config-printer use PolicyKit
 
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		cups.2:${PORTSDIR}/print/cups-client \
-		polkit.2:${PORTSDIR}/sysutils/policykit
+		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
