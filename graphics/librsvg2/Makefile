@@ -3,12 +3,12 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/librsvg2/Makefile,v 1.139 2011/04/30 03:29:23 mezz Exp $
+#   $MCom: ports/graphics/librsvg2/Makefile,v 1.140 2011/04/30 20:43:18 mezz Exp $
 #
 
-PORTNAME?=	librsvg2
+PORTNAME=	librsvg2
 PORTVERSION=	2.34.0
-PORTVERSION?=	0
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/librsvg/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -27,13 +27,14 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack gnomeprefix libgsf ltverhack
+USE_GNOME=	gnomehack gnomeprefix libgsf ltverhack gtk20
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--with-svgz \
 		--with-croco \
 		--enable-gtk-theme
 CROCO_VERSION=	0.6
+MAN1=		rsvg.1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|GTK3_REQUIRED=2.90.0|GTK3_REQUIRED=9.90.0|g' \
