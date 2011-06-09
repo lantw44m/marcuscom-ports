@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.14 2011/05/28 12:53:39 kwm Exp $
+#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.15 2011/06/07 13:35:09 kwm Exp $
 #
 
 PORTNAME=	webkit
@@ -73,7 +73,7 @@ CFLAGS+=	-mminimal-toc
 .endif
 
 .if ${PERL_LEVEL} >= 501400
-BUILD_DEPENDS+=	p5-Switch:${PORTSDIR}/lang/p5-Switch
+BUILD_DEPENDS+=	p5-Switch>0:${PORTSDIR}/lang/p5-Switch
 .endif
 
 post-patch:
