@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.15 2011/06/07 13:35:09 kwm Exp $
+#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.16 2011/06/09 10:13:51 kwm Exp $
 #
 
 PORTNAME=	webkit
@@ -35,7 +35,7 @@ USE_GNOME=	gtk30 libxslt ltverhack
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS=	"-I${LOCALBASE}/include"
+CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
 		ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \
 		ac_cv_path_DOLT_BASH=""

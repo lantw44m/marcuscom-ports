@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.101 2011/05/25 15:58:52 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.102 2011/06/06 17:50:29 kwm Exp $
 #
 
 PORTNAME=	libsoup
@@ -29,7 +29,7 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
 		--disable-gtk-doc
-CPPFLAGS=	"-I${LOCALBASE}/include"
+CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 PLIST_SUB=	VERSION="2.4"

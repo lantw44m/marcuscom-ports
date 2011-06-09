@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/glib-networking/Makefile,v 1.8 2011/05/25 15:55:00 kwm Exp $
+#   $MCom: ports/net/glib-networking/Makefile,v 1.9 2011/06/06 17:54:23 kwm Exp $
 #
 
 PORTNAME=	glib-networking
@@ -31,7 +31,7 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--with-ca-certificates=${LOCALBASE}/share/cert/ca-root-nss.crt
-CPPFLAGS=	"-I${LOCALBASE}/include"
+CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
 		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
