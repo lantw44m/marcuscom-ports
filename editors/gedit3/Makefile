@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit3/Makefile,v 1.16 2011/05/28 12:06:10 kwm Exp $
+#   $MCom: ports/editors/gedit3/Makefile,v 1.17 2011/05/31 19:34:48 kwm Exp $
 #
 
 PORTNAME=	gedit
@@ -25,6 +25,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 CONFLICTS=	gedit-2.[0-9]*
 
+LATEST_LINK=	gedit3
 USE_XORG=	sm
 USE_XZ=		yes
 USE_GETTEXT=	yes

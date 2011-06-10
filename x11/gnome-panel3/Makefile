@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.18 2011/05/28 10:49:14 kwm Exp $
+#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.19 2011/06/10 21:14:06 mezz Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -28,6 +28,7 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/noti
 
 CONFLICTS=	gnome-panel-2.[0-9]*
 
+LATEST_LINK=	gnome-panel3
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_XORG=	ice sm x11 xau xrandr

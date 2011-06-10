@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/evince3/Makefile,v 1.11 2011/04/09 21:37:53 mezz Exp $
+#    $MCom: ports/graphics/evince3/Makefile,v 1.12 2011/05/25 14:52:26 kwm Exp $
 #
 
 PORTNAME=	evince
@@ -25,6 +25,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-i
 
 CONFLICTS=	evince-2.[0-9]*
 
+LATEST_LINK=	evince3
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool

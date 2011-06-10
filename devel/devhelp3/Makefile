@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp3/Makefile,v 1.6 2011/04/05 09:35:08 kwm Exp $
+#   $MCom: ports/devel/devhelp3/Makefile,v 1.7 2011/04/17 19:18:07 mezz Exp $
 
 PORTNAME=	devhelp
 PORTVERSION=	3.0.0
@@ -18,6 +18,7 @@ LIB_DEPENDS=	webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3
 
 CONFLICTS=	devhelp-2.[0-9]*
 
+LATEST_LINK=	devhelp3
 USE_BZIP2=	yes
 USE_XORG=	x11
 USE_GETTEXT=	yes

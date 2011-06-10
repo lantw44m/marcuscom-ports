@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/net/vinagre3/Makefile,v 1.7 2011/04/27 11:37:43 kwm Exp $
+#  $MCom: ports/net/vinagre3/Makefile,v 1.8 2011/05/15 12:19:35 kwm Exp $
 #
 
 PORTNAME=	vinagre
@@ -24,6 +24,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 
 CONFLICTS=	vinagre-2.[0-9]*
 
+LATEST_LINK=	vinagre3
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 libxml2 vte3 \

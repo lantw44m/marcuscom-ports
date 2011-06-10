@@ -3,7 +3,7 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.16 2011/05/02 06:47:49 kwm Exp $
+#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.17 2011/05/28 11:51:35 kwm Exp $
 #
 
 PORTNAME=	nautilus
@@ -26,6 +26,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-i
 
 CONFLICTS=	nautilus-2.[0-9]*
 
+LATEST_LINK=	nautilus3
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes

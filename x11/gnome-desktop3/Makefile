@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop3/Makefile,v 1.15 2011/04/27 21:07:05 kwm Exp $
+#   $MCom: ports/x11/gnome-desktop3/Makefile,v 1.16 2011/05/25 16:18:21 kwm Exp $
 #
 
 PORTNAME=	gnome-desktop
@@ -24,6 +24,8 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${POR
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
+
+LATEST_LINK=	gnome-desktop3
 
 USE_XORG=	x11 xrandr
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils gtk30 \

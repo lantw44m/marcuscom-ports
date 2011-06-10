@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.26 2011/06/08 14:26:55 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.27 2011/06/10 21:14:05 mezz Exp $
 #
 
 PORTNAME=	gnome-control-center
@@ -33,6 +33,7 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 
 CONFLICTS=	gnome-control-center-2.[0-9]* gnome-media-2.[0-9]*
 
+LATEST_LINK=	gnome-control-center3
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes

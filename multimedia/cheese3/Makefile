@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese3/Makefile,v 1.7 2011/04/25 19:18:47 mezz Exp $
+#   $MCom: ports/multimedia/cheese3/Makefile,v 1.8 2011/04/27 16:14:05 kwm Exp $
 #
 
 PORTNAME=	cheese
@@ -27,6 +27,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-video-effects.pc:${PORTSDIR}/g
 
 CONFLICTS=	cheese-2.[0-9]*
 
+LATEST_LINK=	cheese3
 USE_XORG=	xxf86vm
 USE_BZIP2=	yes
 USE_GMAKE=	yes

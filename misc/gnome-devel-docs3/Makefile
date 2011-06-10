@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-devel-docs3/Makefile,v 1.5 2011/04/27 19:45:56 kwm Exp $
+#   $MCom: ports/misc/gnome-devel-docs3/Makefile,v 1.6 2011/05/28 11:09:06 kwm Exp $
 #
 
 PORTNAME=	gnome-devel-docs
@@ -17,6 +17,7 @@ COMMENT=	Documents targeted for GNOME developers
 
 CONFLICTS=	gnome-devel-docs-2.[0-9]*
 
+LATEST_LINK=	gnome-devel-docs3
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes

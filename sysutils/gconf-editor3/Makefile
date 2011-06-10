@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gconf-editor3/Makefile,v 1.2 2011/04/05 14:19:17 kwm Exp $
+#   $MCom: ports/sysutils/gconf-editor3/Makefile,v 1.3 2011/04/25 19:45:50 mezz Exp $
 #
 
 PORTNAME=	gconf-editor
@@ -17,6 +17,7 @@ COMMENT=	A gconf database editor for the GNOME 3 environment
 
 CONFLICTS=	gconf-editor-2.[0-9]*
 
+LATEST_LINK=	gconf-editor3
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes

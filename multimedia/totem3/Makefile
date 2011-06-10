@@ -3,7 +3,7 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.14 2011/04/25 19:23:44 mezz Exp $
+#   $MCom: ports/multimedia/totem3/Makefile,v 1.15 2011/04/27 19:28:15 kwm Exp $
 #
 
 PORTNAME=	totem
@@ -30,6 +30,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 CONFLICTS=	totem-2.[0-9]*
 
+LATEST_LINK=	totem3
 USE_PYTHON=	yes
 USE_XORG=	x11 xrandr xxf86vm
 USE_BZIP2=	yes

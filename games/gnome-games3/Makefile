@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.12 2011/05/01 23:44:47 mezz Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.13 2011/05/24 20:31:42 kwm Exp $
 #
 
 PORTNAME=	gnome-games
@@ -27,6 +27,7 @@ LIB_DEPENDS=	guile.20:${PORTSDIR}/lang/guile \
 
 CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-2.[0-9]*
 
+LATEST_LINK=	gnome-games3
 USE_BZIP2=	yes
 USE_PYTHON=	yes
 USE_GETTEXT=	yes

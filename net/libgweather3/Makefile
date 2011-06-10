@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/libgweather3/Makefile,v 1.5 2011/04/10 15:36:08 mezz Exp $
+#   $MCom: ports/net/libgweather3/Makefile,v 1.6 2011/05/25 17:08:18 kwm Exp $
 #
 
 PORTNAME=	libgweather
@@ -20,6 +20,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 
 CONFLICTS=	libgweather-2.[0-9]*
 
+LATEST_LINK=	libgweather3
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes

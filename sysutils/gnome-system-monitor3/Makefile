@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor3/Makefile,v 1.7 2011/04/25 19:59:38 mezz Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor3/Makefile,v 1.8 2011/05/28 10:37:06 kwm Exp $
 #
 
 PORTNAME=	gnome-system-monitor
@@ -22,6 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 
 CONFLICTS=	gnome-system-monitor-2.[0-9]*
 
+LATEST_LINK=	gnome-system-monitor3
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes

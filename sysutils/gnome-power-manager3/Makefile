@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.10 2011/04/25 19:53:57 mezz Exp $
+#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.11 2011/05/24 16:41:01 kwm Exp $
 #
 
 PORTNAME=	gnome-power-manager
@@ -24,6 +24,7 @@ RUN_DEPENDS=	pkexec:${PORTSDIR}/sysutils/polkit
 
 CONFLICTS=	gnome-power-manager-2.[0-9]*
 
+LATEST_LINK=	gnome-power-manager3
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes

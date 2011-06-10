@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap3/Makefile,v 1.3 2011/04/17 19:14:30 mezz Exp $
+#   $MCom: ports/deskutils/gucharmap3/Makefile,v 1.4 2011/04/27 10:33:56 kwm Exp $
 #
 
 PORTNAME=	gucharmap
@@ -17,6 +17,7 @@ COMMENT=	A Unicode/ISO10646 character map and font viewer
 
 CONFLICTS=	gucharmap-2.[0-9]*
 
+LATEST_LINK=	gucharmap3
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes

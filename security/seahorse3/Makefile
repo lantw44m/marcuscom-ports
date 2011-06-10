@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse3/Makefile,v 1.6 2011/04/25 12:15:44 kwm Exp $
+#   $MCom: ports/security/seahorse3/Makefile,v 1.7 2011/05/24 10:42:39 kwm Exp $
 #
 
 PORTNAME=	seahorse
@@ -26,6 +26,7 @@ LIB_DEPENDS=	gpgme.18:${PORTSDIR}/security/gpgme \
 
 CONFLICTS=	seahorse-2.[0-9]*
 
+LATEST_LINK=	seahorse3
 USE_XORG=	sm
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes

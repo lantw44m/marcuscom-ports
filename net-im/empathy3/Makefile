@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.15 2011/04/27 10:44:36 kwm Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.16 2011/05/24 19:43:09 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	3.0.2
@@ -33,6 +33,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 CONFLICTS=	empathy-2.[0-9]*
 
+LATEST_LINK=	empathy3
 USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GETTEXT=	yes

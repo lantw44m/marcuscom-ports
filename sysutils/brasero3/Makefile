@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero3/Makefile,v 1.10 2011/04/10 20:50:04 mezz Exp $
+#    $MCom: ports/sysutils/brasero3/Makefile,v 1.11 2011/05/29 05:21:52 marcus Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	3.0.0
@@ -23,6 +23,7 @@ RUN_DEPENDS=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 
 CONFLICTS=	brasero-2.[0-9]*
 
+LATEST_LINK=	brasero3
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes

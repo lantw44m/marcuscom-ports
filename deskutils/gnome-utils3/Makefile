@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils3/Makefile,v 1.8 2011/04/17 19:09:42 mezz Exp $
+#   $MCom: ports/deskutils/gnome-utils3/Makefile,v 1.9 2011/04/27 10:57:14 kwm Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -22,6 +22,7 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-sc
 
 CONFLICTS=	gnome-utils-2.[0-9]*
 
+LATEST_LINK=	gnome-utils3
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes

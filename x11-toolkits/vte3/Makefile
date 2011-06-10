@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.9 2011/04/16 19:05:06 mezz Exp $
+#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.10 2011/04/25 17:18:40 kwm Exp $
 #
 
 PORTNAME?=	vte
@@ -27,6 +27,7 @@ VTE3_SLAVE?=	no
 RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gnome-pty-helper
 .endif
 
+LATEST_LINK=	vte3
 USE_GMAKE=	yes
 USE_BISON=	build
 USE_LDCONFIG=	yes

@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox/Makefile,v 1.113 2011/04/09 15:57:07 mezz Exp $
+#   $MCom: ports/audio/rhythmbox3/Makefile,v 1.1 2011/05/04 18:44:36 kwm Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -30,6 +30,7 @@ LIB_DEPENDS=	musicbrainz.4:${PORTSDIR}/audio/libmusicbrainz \
 
 CONFLICTS=	rhythmbox-0.[0-9]*
 
+LATEST_LINK=	rhythmbox3
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes

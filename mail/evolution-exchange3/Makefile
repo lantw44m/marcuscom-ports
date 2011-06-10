@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange3/Makefile,v 1.9 2011/04/25 12:06:16 kwm Exp $
+#   $MCom: ports/mail/evolution-exchange3/Makefile,v 1.10 2011/05/24 16:37:24 kwm Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -20,6 +20,7 @@ RUN_DEPENDS=	evolution>=2.91.0:${PORTSDIR}/mail/evolution3
 
 CONFLICTS=	evolution-exchange-2.[0-9]*
 
+LATEST_LINK=	evolution-exchange3
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool

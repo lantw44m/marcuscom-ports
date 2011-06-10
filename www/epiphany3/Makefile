@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany3/Makefile,v 1.15 2011/05/02 06:54:31 kwm Exp $
+#   $MCom: ports/www/epiphany3/Makefile,v 1.16 2011/05/14 07:44:34 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -32,6 +32,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 CONFLICTS=	epiphany-2.[0-9]*
 
+LATEST_LINK=	epiphany3
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes

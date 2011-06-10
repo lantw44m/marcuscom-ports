@@ -19,14 +19,13 @@ LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 
 CONFLICTS=	gtk-vnc-0.3.[0-9]*
 
+LATEST_LINK=	gtk-vnc3
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING.LIB
-#USE_GNOME=	pygtk2 gnomehack
 USE_GNOME=	gnomehack gtk30
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
-#USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"

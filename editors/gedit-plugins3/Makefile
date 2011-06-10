@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.8 2011/04/27 20:07:30 kwm Exp $
+#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.9 2011/05/28 12:46:36 kwm Exp $
 #
 
 PORTNAME=	gedit-plugins
@@ -21,6 +21,7 @@ RUN_DEPENDS=	gedit>=2.91.11:${PORTSDIR}/editors/gedit3
 
 CONFLICTS=	gedit-plugins-2.[0-9]*
 
+LATEST_LINK=	gedit-plugins3
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes

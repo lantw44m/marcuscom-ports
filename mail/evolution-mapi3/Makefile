@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.9 2011/04/27 11:04:24 kwm Exp $
+#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.10 2011/05/24 17:45:31 kwm Exp $
 #
 
 PORTNAME=	evolution-mapi
@@ -21,6 +21,7 @@ RUN_DEPENDS=	evolution>=2.91.0:${PORTSDIR}/mail/evolution3
 
 CONFLICTS=	evolution-mapi-2.[0-9]*
 
+LATEST_LINK=	evolution-mapi3
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes

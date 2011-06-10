@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-terminal3/Makefile,v 1.7 2011/04/25 22:05:11 mezz Exp $
+#   $MCom: ports/x11/gnome-terminal3/Makefile,v 1.8 2011/04/27 10:30:26 kwm Exp $
 #
 
 PORTNAME=	gnome-terminal
@@ -21,6 +21,7 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-sc
 
 CONFLICTS=	gnome-terminal-2.[0-9]*
 
+LATEST_LINK=	gnome-terminal3
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libwnck3/Makefile,v 1.6 2011/04/10 19:28:35 mezz Exp $
+#   $MCom: ports/x11-toolkits/libwnck3/Makefile,v 1.7 2011/05/25 16:09:54 kwm Exp $
 #
 
 PORTNAME=	libwnck
@@ -26,6 +26,7 @@ RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 CONFLICTS=	libwnck-2.[0-9]*
 
+LATEST_LINK=	libwnck3
 USE_GETTEXT=	yes
 USE_XORG=	xres x11
 USE_GMAKE=	yes

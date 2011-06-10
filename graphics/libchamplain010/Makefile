@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libchamplain010/Makefile,v 1.2 2011/03/29 17:22:42 kwm Exp $
+#   $MCom: ports/graphics/libchamplain010/Makefile,v 1.3 2011/04/04 09:46:37 kwm Exp $
 #
 
 PORTNAME=	libchamplain
@@ -18,6 +18,7 @@ LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome
 
+LATEST_LINK=	libchamplain010
 USE_BZIP2=	yes
 USE_GNOME=	pkgconfig gtk30 gnomehack ltverhack
 USE_AUTOTOOLS=	libtool

@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp3/Makefile,v 1.14 2011/04/30 08:14:38 kwm Exp $
+#   $MCom: ports/x11/yelp3/Makefile,v 1.15 2011/05/28 11:25:17 kwm Exp $
 #
 
 PORTNAME=	yelp
@@ -21,6 +21,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/textproc/yel
 
 CONFLICTS=	yelp-2.[0-9]*
 
+LATEST_LINK=	yelp3
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GETTEXT=	yes

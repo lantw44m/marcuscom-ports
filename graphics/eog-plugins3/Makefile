@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog-plugins3/Makefile,v 1.3 2011/04/22 10:44:44 kwm Exp $
+#   $MCom: ports/graphics/eog-plugins3/Makefile,v 1.4 2011/04/22 16:10:57 mezz Exp $
 #
 
 PORTNAME=	eog-plugins
@@ -22,6 +22,7 @@ RUN_DEPENDS=	eog>=2.91.0:${PORTSDIR}/graphics/eog3
 
 CONFLICTS=	eog-plugins-2.[0-9]*
 
+LATEST_LINK=	eog-plugins3
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30

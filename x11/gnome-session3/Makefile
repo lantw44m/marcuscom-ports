@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session3/Makefile,v 1.18 2011/04/27 21:17:11 kwm Exp $
+#   $MCom: ports/x11/gnome-session3/Makefile,v 1.19 2011/05/25 16:14:27 kwm Exp $
 #
 
 PORTNAME=	gnome-session
@@ -23,6 +23,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 RUN_DEPENDS=	${LOCALBASE}/sbin/console-kit-daemon:${PORTSDIR}/sysutils/consolekit \
 		${LOCALBASE}/bin/xdpyinfo:${PORTSDIR}/x11/xdpyinfo
 
+LATEST_LINK=	gnome-session3
 INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_BZIP2=	yes

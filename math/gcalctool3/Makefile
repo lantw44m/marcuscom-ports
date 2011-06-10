@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool3/Makefile,v 1.13 2011/05/28 11:29:29 kwm Exp $
+#   $MCom: ports/math/gcalctool3/Makefile,v 1.14 2011/05/30 23:25:21 marcus Exp $
 #
 
 PORTNAME=	gcalctool
@@ -18,6 +18,7 @@ COMMENT=	A GNOME 3 calculator tool based on the old calctool for OpenWindows
 
 CONFLICTS=	gcalctool-5.[0-9]*
 
+LATEST_LINK=	gcalctool3
 USE_BZIP2=	yes
 USE_BISON=	build
 USE_GETTEXT=	yes
