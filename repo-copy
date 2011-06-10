@@ -49,6 +49,7 @@ x11-toolkits/gtksourceview2 -> x11-toolkits/gtksourceview3
 x11-toolkits/libwnck -> x11-toolkits/libwnck3
 x11-toolkits/unique -> x11-toolkits/libunique3
 x11-toolkits/vte -> x11-toolkits/vte3
+x11-wm/metacity -> x11-wm/metacity3
 x11/gdm -> x11/gdm3
 x11/gnome-desktop -> gnome-desktop3
 x11/gnome-menus -> gnome-menus3

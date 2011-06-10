@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.547 2011/06/10 19:47:43 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.548 2011/06/10 21:14:05 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -93,7 +93,7 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
 # GNOME 3 components
 _USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
 		gnomemenus3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgda5 \
-		libgda5-ui libgnomekbd3 libwnck3 nautilus3 vte3
+		libgda5-ui libgnomekbd3 libwnck3 metacity3 nautilus3 vte3
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -439,6 +439,12 @@ nautilus3_GNOME_DESKTOP_VERSION=3
 metacity_LIB_DEPENDS=	metacity-private.0:${PORTSDIR}/x11-wm/metacity
 metacity_DETECT=	${LOCALBASE}/libdata/pkgconfig/libmetacity-private.pc
 metacity_USE_GNOME_IMPL=gconf2
+metacity_GNOME_DESKTOP_VERSION=2
+
+metacity3_LIB_DEPENDS=	metacity-private.0:${PORTSDIR}/x11-wm/metacity3
+metacity3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libmetacity-private.pc
+metacity3_USE_GNOME_IMPL=gconf2
+metacity3_GNOME_DESKTOP_VERSION=3
 
 gal2_LIB_DEPENDS=	gal-2.4.0:${PORTSDIR}/x11-toolkits/gal2
 gal2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gal-2.4.pc

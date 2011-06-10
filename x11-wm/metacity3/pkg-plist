@@ -15,9 +15,13 @@ lib/libmetacity-private.so
 lib/libmetacity-private.so.0
 libdata/pkgconfig/libmetacity-private.pc
 share/applications/metacity.desktop
-share/gnome-control-center/keybindings/50-metacity-desktop-key.xml
-share/gnome-control-center/keybindings/50-metacity-key.xml
+share/gnome-control-center/keybindings/50-metacity-launchers.xml
+share/gnome-control-center/keybindings/50-metacity-navigation.xml
+share/gnome-control-center/keybindings/50-metacity-screenshot.xml
+share/gnome-control-center/keybindings/50-metacity-system.xml
+share/gnome-control-center/keybindings/50-metacity-windows.xml
 share/gnome/help/creating-metacity-themes/C/creating-metacity-themes.xml
+share/gnome/help/creating-metacity-themes/de/creating-metacity-themes.xml
 share/gnome/wm-properties/metacity-wm.desktop
 share/locale/am/LC_MESSAGES/metacity.mo
 share/locale/ar/LC_MESSAGES/metacity.mo
@@ -104,6 +108,7 @@ share/locale/te/LC_MESSAGES/metacity.mo
 share/locale/th/LC_MESSAGES/metacity.mo
 share/locale/tk/LC_MESSAGES/metacity.mo
 share/locale/tr/LC_MESSAGES/metacity.mo
+share/locale/ug/LC_MESSAGES/metacity.mo
 share/locale/uk/LC_MESSAGES/metacity.mo
 share/locale/vi/LC_MESSAGES/metacity.mo
 share/locale/wa/LC_MESSAGES/metacity.mo
@@ -231,6 +236,7 @@ share/themes/Simple/metacity-1/minimize.png
 @dirrmtry share/themes/AgingGorilla
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
+@dirrm share/gnome/help/creating-metacity-themes/de
 @dirrm share/gnome/help/creating-metacity-themes/C
 @dirrm share/gnome/help/creating-metacity-themes
 @dirrm include/metacity-1/metacity-private
@@ -242,6 +248,8 @@ share/themes/Simple/metacity-1/minimize.png
 @dirrmtry share/locale/yo
 @dirrmtry share/locale/xh/LC_MESSAGES
 @dirrmtry share/locale/xh
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
