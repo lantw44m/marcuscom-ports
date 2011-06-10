@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.545 2011/04/26 02:45:35 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.546 2011/04/27 03:09:44 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -92,8 +92,8 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
 
 # GNOME 3 components
 _USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
-		gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgda5 libgda5-ui \
-		libgnomekbd3 libwnck3 nautilus3 vte3
+		gnomemenus3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgda5 \
+		libgda5-ui libgnomekbd3 libwnck3 nautilus3 vte3
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -423,7 +423,7 @@ gnomepanel_GNOME_DESKTOP_VERSION=2
 
 gnomepanel3_LIB_DEPENDS=panel-applet-4.0:${PORTSDIR}/x11/gnome-panel3
 gnomepanel3_DETECT=	${LOCALBASE}/libdata/pkgconfig/libpanelapplet-4.0.pc
-gnomepanel3_USE_GNOME_IMPL=gnomedesktop3 libwnck3 gnomemenus gnomedocutils librsvg2
+gnomepanel3_USE_GNOME_IMPL=gnomedesktop3 libwnck3 gnomemenus3 gnomedocutils librsvg2
 gnomepanel3_GNOME_DESKTOP_VERSION=3
 
 nautilus2_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus
@@ -451,7 +451,7 @@ gnomecontrolcenter2_GNOME_DESKTOP_VERSION=2
 
 gnomecontrolcenter3_LIB_DEPENDS=gnome-control-center.1:${PORTSDIR}/sysutils/gnome-control-center3
 gnomecontrolcenter3_DETECT=${LOCALBASE}/libdata/pkgconfig/libgnome-control-center.pc
-gnomecontrolcenter3_USE_GNOME_IMPL=gnomemenus desktopfileutils libgnomekbd3 gnomedesktop3 gconf2
+gnomecontrolcenter3_USE_GNOME_IMPL=gnomemenus3 desktopfileutils libgnomekbd3 gnomedesktop3 gconf2
 gnomecontrolcenter3_GNOME_DESKTOP_VERSION=3
 
 libgda2_LIB_DEPENDS=	gda-2.3:${PORTSDIR}/databases/libgda2
@@ -562,6 +562,12 @@ nautiluscdburner_GNOME_DESKTOP_VERSION=2
 gnomemenus_LIB_DEPENDS=		gnome-menu.2:${PORTSDIR}/x11/gnome-menus
 gnomemenus_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
 gnomemenus_USE_GNOME_IMPL=	glib20
+gnomemenus_GNOME_DESKTOP_VERSION=2
+
+gnomemenus3_LIB_DEPENDS=	gnome-menu.2:${PORTSDIR}/x11/gnome-menus
+gnomemenus3_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
+gnomemenus3_USE_GNOME_IMPL=	glib20
+gnomemenus3_GNOME_DESKTOP_VERSION=3
 
 pygnomeextras_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-extras-2.0.pc
 pygnomeextras_BUILD_DEPENDS=	${pygnomeextras_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome-extras
