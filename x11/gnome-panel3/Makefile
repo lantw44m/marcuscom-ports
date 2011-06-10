@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.17 2011/04/25 21:58:25 mezz Exp $
+#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.18 2011/05/28 10:49:14 kwm Exp $
 #
 
 PORTNAME=	gnome-panel
 PORTVERSION=	3.0.2
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -35,7 +35,7 @@ INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop3 librsvg2 libwnck3 \
-		gnomemenus gnomedocutils ltverhack referencehack
+		gnomemenus3 gnomedocutils ltverhack referencehack
 WANT_GNOME=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool

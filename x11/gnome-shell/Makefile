@@ -3,11 +3,12 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.36 2011/04/27 12:26:58 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.37 2011/05/28 12:31:53 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
 PORTVERSION=	3.0.2
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -31,7 +32,7 @@ USE_XORG=	x11 xfixes sm
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gconf2 gnomemenus \
+USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gconf2 gnomemenus3 \
 		gnomedesktop3 evolutiondataserver3 ltverhack
 USE_GSTREAMER=	theora vp8 ogg
 USE_LDCONFIG=	yes

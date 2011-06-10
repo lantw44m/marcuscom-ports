@@ -3,23 +3,24 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-menus/Makefile,v 1.110 2010/11/17 11:29:19 kwm Exp $
+#   $MCom: ports/x11/gnome-menus/Makefile,v 1.116 2011/04/27 21:12:21 kwm Exp $
 #
 
 PORTNAME=	gnome-menus
-PORTVERSION=	2.30.5
+PORTVERSION=	3.0.1
 PORTREVISION=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Implementation of the FreeDesktop Desktop Menu Spec
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
-CONFLICTS=	gnome-menus-3.[0-9]*
+CONFLICTS=	gnome-menus-2.[0-9]*
 
+LATEST_LINK=	gnome-menus3
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -36,8 +37,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|' \
 		${WRKSRC}/util/test-menu-spec.c
 	@${REINPLACE_CMD} -e 's|/usr/share/gnome|${LOCALBASE}/share/gnome|g' \
-		${WRKSRC}/layout/applications.menu \
-		${WRKSRC}/layout/settings.menu
+		${WRKSRC}/layout/applications.menu
 	@${SED} -e 's|/usr/local|${LOCALBASE}|g' \
 		< ${FILESDIR}/KDE.directory > ${WRKSRC}/KDE.directory
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \

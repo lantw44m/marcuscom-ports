@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.546 2011/04/27 03:09:44 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.547 2011/06/10 19:47:43 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -559,12 +559,14 @@ nautiluscdburner_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-burn.pc
 nautiluscdburner_USE_GNOME_IMPL=nautilus2 desktopfileutils
 nautiluscdburner_GNOME_DESKTOP_VERSION=2
 
-gnomemenus_LIB_DEPENDS=		gnome-menu.2:${PORTSDIR}/x11/gnome-menus
+gnomemenus_BUILD_DEPENDS=	gnome-menus<=2.39.0:${PORTSDIR}/x11/gnome-menus
+gnomemenus_RUN_DEPENDS=		gnome-menus<=2.39.0:${PORTSDIR}/x11/gnome-menus
 gnomemenus_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
 gnomemenus_USE_GNOME_IMPL=	glib20
 gnomemenus_GNOME_DESKTOP_VERSION=2
 
-gnomemenus3_LIB_DEPENDS=	gnome-menu.2:${PORTSDIR}/x11/gnome-menus
+gnomemenus3_BUILD_DEPENDS=	gnome-menus>=2.91.0:${PORTSDIR}/x11/gnome-menus3
+gnomemenus3_RUN_DEPENDS=	gnome-menus>=2.91.0:${PORTSDIR}/x11/gnome-menus3
 gnomemenus3_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
 gnomemenus3_USE_GNOME_IMPL=	glib20
 gnomemenus3_GNOME_DESKTOP_VERSION=3

@@ -51,6 +51,7 @@ x11-toolkits/unique -> x11-toolkits/libunique3
 x11-toolkits/vte -> x11-toolkits/vte3
 x11/gdm -> x11/gdm3
 x11/gnome-desktop -> gnome-desktop3
+x11/gnome-menus -> gnome-menus3
 x11/gnome-panel -> x11/gnome-panel3
 x11/gnome-screensaver -> x11/gnome-screensaver3
 x11/gnome-terminal -> x11/gnome-terminal3
