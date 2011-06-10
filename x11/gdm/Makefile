@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm/Makefile,v 1.187 2011/06/03 19:56:54 kwm Exp $
+#   $MCom: ports/x11/gdm/Makefile,v 1.188 2011/06/03 21:27:51 mezz Exp $
 #
 
 PORTNAME=	gdm
@@ -27,6 +27,8 @@ RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon \
 		gnome-session:${PORTSDIR}/x11/gnome-session \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+
+CONFLICTS=	gdm-3.[0-9]*
 
 USERS=		gdm
 GROUPS=		gdm

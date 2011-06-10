@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.8 2011/05/31 21:49:31 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.9 2011/06/10 22:59:10 mezz Exp $
 #
 
 PORTNAME=	gdm
@@ -32,6 +32,8 @@ RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 		gnome-icon-theme-symbolic>=0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic \
 		${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
+
+CONFLICTS=	gdm-2.[0-9]*
 
 USERS=		gdm
 GROUPS=		gdm
