@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.55 2011/04/17 19:05:40 mezz Exp $
+#   $MCom: ports/accessibility/mousetweaks/Makefile,v 1.56 2011/04/30 20:43:12 mezz Exp $
 #
 
 PORTNAME=	mousetweaks
@@ -24,8 +24,8 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	mousetweaks.schemas pointer-capture-applet.schemas
 MAN1=		dwell-click-applet.1 mousetweaks.1 pointer-capture-applet.1

@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/py-atspi/Makefile,v 1.22 2011/04/27 16:26:13 kwm Exp $
+#   $MCom: ports/accessibility/py-atspi/Makefile,v 1.23 2011/05/28 10:58:11 kwm Exp $
 #
 
 PORTNAME=	atspi
@@ -29,7 +29,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomehier intlhack gtk20 libxml2 pygobject
 GNU_CONFIGURE=	yes
 USE_PYTHON=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>

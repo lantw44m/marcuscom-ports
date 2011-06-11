@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/atkmm/Makefile,v 1.8 2011/03/25 15:13:36 kwm Exp $
+#   $MCom: ports/accessibility/atkmm/Makefile,v 1.9 2011/03/30 22:07:49 kwm Exp $
 #
 
 PORTNAME=	atkmm
@@ -22,8 +22,8 @@ USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_GNOME=	gnomehack atk
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include " \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-documentation
 
 .include <bsd.port.mk>

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/gnome-media/Makefile,v 1.159 2011/04/30 20:43:12 mezz Exp $
+#   $MCom: ports/audio/gnome-media/Makefile,v 1.160 2011/06/03 21:27:49 mezz Exp $
 #
 
 PORTNAME=	gnome-media
@@ -32,8 +32,8 @@ USE_LDCONFIG=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk20 libxml2 gconf2
 USE_GSTREAMER=	gconf good
 CONFIGURE_ARGS=	--disable-gstmix
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	gnome-audio-profiles.schemas \
 		gnome-sound-recorder.schemas

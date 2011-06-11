@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.10 2011/05/25 15:44:59 kwm Exp $
+#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.11 2011/06/10 22:59:01 mezz Exp $
 #
 
 PORTNAME=	mousetweaks
@@ -28,8 +28,8 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 GLIB_SCHEMAS=	org.gnome.mousetweaks.enums.xml \
 		org.gnome.mousetweaks.gschema.xml

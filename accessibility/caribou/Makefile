@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/caribou/Makefile,v 1.5 2011/03/23 12:05:45 kwm Exp $
+#    $MCom: ports/accessibility/caribou/Makefile,v 1.6 2011/04/06 05:49:22 kwm Exp $
 #
 
 PORTNAME=	caribou
@@ -24,10 +24,9 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_PYTHON=	yes
 USE_GNOME=	gnomehack intltool pygobject gtk30 intlhack gnomedocutils
-#USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-#CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-#		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 GLIB_SCHEMAS=	org.gnome.caribou.gschema.xml
 
 .include <bsd.port.mk>

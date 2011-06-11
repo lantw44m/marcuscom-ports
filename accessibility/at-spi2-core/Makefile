@@ -3,7 +3,7 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.30 2011/04/27 16:26:13 kwm Exp $
+#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.31 2011/05/28 10:58:11 kwm Exp $
 #
 
 PORTNAME=	at-spi2-core
@@ -25,10 +25,11 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomehier glib20 intlhack
 USE_XORG=	x11 xi xtst xext
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--disable-xevie
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>
