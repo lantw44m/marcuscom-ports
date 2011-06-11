@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.18 2011/05/14 08:17:22 kwm Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.19 2011/06/02 15:43:38 kwm Exp $
 #
 
 PORTNAME=	libgda4
@@ -18,7 +18,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Provides uniform access to different kinds of data sources
 
-CONFLICTS=	libgda5-ui-*
+CONFLICTS=	libgda5-ui-[0-9]*
 
 USE_XZ=		yes
 LIBGDA4_SLAVE?=	no
@@ -42,22 +42,21 @@ MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ARGS=	--without-oracle \
 		--disable-crypto \
 		--enable-introspection=no
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LIBS="-L${LOCALBASE}/lib -lintl"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl"
 
 .if ${LIBGDA4_SLAVE}=="no"
 OPTIONS=	UI "Build UI tools" on
 .endif
 
+.include <bsd.port.options.mk>
+
+VERSION=	4.0
+PLIST_SUB=	VERSION=${VERSION}
+
 .if defined(WITH_UI)
 INSTALLS_ICONS=	yes
 .endif
-
-.include <bsd.port.options.mk>
-
-#VERSION=	${PORTVERSION:R}
-VERSION=	4.0
-PLIST_SUB=	VERSION=${VERSION}
 
 .if ${LIBGDA4_SLAVE}=="no"
 .if defined(WITH_UI)
@@ -101,13 +100,6 @@ USE_PGSQL=		yes
 CONFIGURE_ARGS+=	--with-postgres=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-postgres
-.endif
-
-.if ${LIBGDA4_SLAVE}=="firebird"
-LIB_DEPENDS+=		gds.2:${PORTSDIR}/databases/firebird2-client
-CONFIGURE_ARGS+=	--with-firebird=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=	--without-firebird
 .endif
 
 # MDB (MS Access)

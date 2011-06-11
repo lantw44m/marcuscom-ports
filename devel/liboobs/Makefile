@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/liboobs/Makefile,v 1.50 2010/09/27 17:46:12 kwm Exp $
+#   $MCom: ports/devel/liboobs/Makefile,v 1.52 2011/04/04 09:31:41 kwm Exp $
 #
 
 PORTNAME=	liboobs
@@ -26,7 +26,7 @@ GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack glib20
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc --with-hal
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include"
+CPPFLAGS=	-I${LOCALBASE}/include
 
 .include <bsd.port.pre.mk>
 

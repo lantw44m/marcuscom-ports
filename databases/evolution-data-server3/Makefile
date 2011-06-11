@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.14 2011/05/24 11:21:08 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.15 2011/06/04 22:51:27 mezz Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -42,8 +42,8 @@ CONFIGURE_ARGS=	--enable-static \
 		--enable-gtk3 \
 		--with-openldap=yes \
 		--with-libdb=${LOCALBASE}
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}" \
-		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
+CPPFLAGS=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
 PLIST_SUB=	VERSION="3.0" EVO_VERSION="1.2"
 

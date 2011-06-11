@@ -49,6 +49,6 @@ libexec/dbus-daemon-launch-helper
 @dirrm etc/dbus-1
 @unexec rm -f /var/run/dbus/dbus.pid
 @unexec rm -f /var/run/dbus/dbus.pipe
-@unexec rmdir /var/run/dbus 2>/dev/null || true
+@dirrmtry /var/run/dbus
 @unexec rm -f /var/db/dbus/machine-id
-@unexec rmdir /var/db/dbus 2>/dev/null || true
+@dirrmtry /var/db/dbus

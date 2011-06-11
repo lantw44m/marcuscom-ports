@@ -3,7 +3,7 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.37 2011/04/05 16:20:15 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.38 2011/04/21 16:00:10 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
@@ -28,9 +28,8 @@ USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
-
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-tests
 
 # Force it to put the .cache in ${WRKSRC} instead of ~/.cache. ports/143260
@@ -45,4 +44,3 @@ post-patch:
 		${WRKSRC}/giscanner/sourcescanner.py
 
 .include <bsd.port.post.mk>
-

@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.21 2011/03/23 13:56:00 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.22 2011/05/09 17:53:48 kwm Exp $
 #
 
 PORTNAME=	dconf
@@ -25,8 +25,8 @@ USE_GNOME=	gnomehack gtk20 gtk30
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 GLIB_SCHEMAS=	ca.desrt.dconf-editor.gschema.xml
 
 post-patch:

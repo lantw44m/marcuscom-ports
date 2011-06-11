@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5/Makefile,v 1.2 2011/06/02 13:29:13 kwm Exp $
+#   $MCom: ports/databases/libgda5/Makefile,v 1.3 2011/06/02 15:39:39 kwm Exp $
 #
 
 PORTNAME=	libgda5
@@ -45,7 +45,6 @@ CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.options.mk>
 
-#VERSION=	${PORTVERSION:R}
 VERSION=	5.0
 PLIST_SUB=	VERSION=${VERSION}
 
@@ -58,10 +57,10 @@ USE_GNOME+=	libgda5
 .if ${LIBGDA5_SLAVE}=="ui"
 CONFIGURE_ARGS+=--with-ui
 USE_GNOME+=	gtk30 gnomedocutils
+INSTALLS_ICONS=	yes
 .else
 CONFIGURE_ARGS+=--without-ui
 .endif
-
 
 .if ${LIBGDA5_SLAVE}=="bdb"
 USE_BDB=		yes
@@ -89,13 +88,6 @@ USE_PGSQL=		yes
 CONFIGURE_ARGS+=	--with-postgres=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-postgres
-.endif
-
-.if ${LIBGDA5_SLAVE}=="firebird"
-LIB_DEPENDS+=		gds.2:${PORTSDIR}/databases/firebird2-client
-CONFIGURE_ARGS+=	--with-firebird=${LOCALBASE}
-.else
-CONFIGURE_ARGS+=	--without-firebird
 .endif
 
 # MDB (MS Access)

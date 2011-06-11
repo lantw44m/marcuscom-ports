@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.102 2011/06/06 17:50:29 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.103 2011/06/09 16:27:51 mezz Exp $
 #
 
 PORTNAME=	libsoup
@@ -70,7 +70,7 @@ post-install:
 .else
 	@${INSTALL_DATA} ${WRKSRC}/libsoup/soup-connection.h \
 	    	${PREFIX}/include/libsoup-2.4/libsoup/soup-connection.h
-.endif	
+.endif
 
 .include <bsd.port.post.mk>
 

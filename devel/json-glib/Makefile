@@ -3,7 +3,7 @@
 # Whom:                 		Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/json-glib/Makefile,v 1.14 2011/01/13 02:19:43 kwm Exp $
+#   $MCom: ports/devel/json-glib/Makefile,v 1.15 2011/04/12 09:11:47 kwm Exp $
 #
 
 PORTNAME=	json-glib
@@ -22,7 +22,7 @@ USE_BZIP2=	yes
 USE_GNOME=	glib20 gnomehack gnomeprefix ltverhack
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>

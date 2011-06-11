@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp3/Makefile,v 1.7 2011/04/17 19:18:07 mezz Exp $
+#   $MCom: ports/devel/devhelp3/Makefile,v 1.8 2011/06/10 22:59:02 mezz Exp $
 
 PORTNAME=	devhelp
 PORTVERSION=	3.0.0
@@ -24,14 +24,13 @@ USE_XORG=	x11
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gtk30 gconf2
-# libwnck3
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GCONF_SCHEMAS=	devhelp.schemas
-CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${LOCALBASE}/include" \
-		LDFLAGS="${PTHREAD_LIBS} -L${LOCALBASE}/lib"
+CPPFLAGS=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="${PTHREAD_LIBS} -L${LOCALBASE}/lib"
 
 #OPTIONS=	GEDIT "Enable GEdit plug-in support" off
 

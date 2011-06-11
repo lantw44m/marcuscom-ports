@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.44 2010/06/06 22:11:46 kwm Exp $
+#   $MCom: ports/devel/glade/Makefile,v 1.1 2011/04/06 12:05:30 kwm Exp $
 #
 
 PORTNAME=	glade
@@ -16,9 +16,9 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A user interface builder for GTK+ 3
 
-CONFLICTS=	glade3-3.*
-
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+
+CONFLICTS=	glade3-3.*
 
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes

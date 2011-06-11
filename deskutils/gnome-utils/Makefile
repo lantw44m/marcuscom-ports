@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.153 2011/04/10 19:41:35 mezz Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.154 2011/04/17 19:09:42 mezz Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -30,8 +30,8 @@ INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel ltverhack
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-maintainer-flags=no
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		gnome-dictionary.1 gnome-screenshot.1 gnome-search-tool.1 \
 		gnome-system-log.1 baobab.1

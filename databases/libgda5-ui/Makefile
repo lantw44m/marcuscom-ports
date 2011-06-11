@@ -3,20 +3,20 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4-postgresql/Makefile,v 1.3 2010/10/18 12:47:12 kwm Exp $
+#   $MCom: ports/databases/libgda5-ui/Makefile,v 1.1 2011/03/30 19:23:04 kwm Exp $
 #
 
 PORTREVISION?=	0
 CATEGORIES=	databases gnome
 PKGNAMESUFFIX?=	-ui
 
-CONFLICTS=	libgda4-4.*
-
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	libgda 5 ui library
+COMMENT=	The libgda 5 ui library
 
 MASTERDIR=	${.CURDIR}/../libgda5
 PLIST=		${.CURDIR}/pkg-plist
+
+CONFLICTS=	libgda4-4.*
 
 LIBGDA5_SLAVE=	ui
 

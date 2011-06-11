@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp/Makefile,v 1.41 2011/04/17 19:18:07 mezz Exp $
+#   $MCom: ports/devel/devhelp/Makefile,v 1.42 2011/04/30 20:43:15 mezz Exp $
 
 PORTNAME=	devhelp
 PORTVERSION=	2.32.0
@@ -31,10 +31,10 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GCONF_SCHEMAS=	devhelp.schemas
-CONFIGURE_ENV=	CPPFLAGS="${PTHREAD_CFLAGS} -I${LOCALBASE}/include" \
-		LDFLAGS="${PTHREAD_LIBS} -L${LOCALBASE}/lib"
+CPPFLAGS=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="${PTHREAD_LIBS} -L${LOCALBASE}/lib"
 
-OPTIONS=		GEDIT "Enable GEdit plug-in support" off
+OPTIONS=	GEDIT "Enable GEdit plug-in support" off
 
 .include <bsd.port.pre.mk>
 
