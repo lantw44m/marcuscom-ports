@@ -23,7 +23,6 @@ BUILD_DEPENDS=	intltoolize:${PORTSDIR}/textproc/intltool \
 
 CONFLICTS=	ekiga-2.*
 
-LATEST_LINK=	ekiga3
 USE_PERL5=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
