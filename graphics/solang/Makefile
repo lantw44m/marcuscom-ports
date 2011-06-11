@@ -29,7 +29,7 @@ LIB_DEPENDS=	gegl-0.1.105:${PORTSDIR}/graphics/gegl \
 		gdamm-4.0.12:${PORTSDIR}/databases/libgdamm \
 		gphoto2.2:${PORTSDIR}/graphics/libgphoto2
 
-BROKEN=		bad plist
+BROKEN=		bad plist + do not build with latest exiv2
 
 USE_AUTOTOOLS=	autoconf
 USE_GMAKE=	yes
