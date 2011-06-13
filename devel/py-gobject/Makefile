@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-gobject/Makefile,v 1.50 2011/03/23 17:47:21 kwm Exp $
+#   $MCom: ports/devel/py-gobject/Makefile,v 1.51 2011/04/18 20:08:32 kwm Exp $
 #
 
 PORTNAME=	gobject
-PORTVERSION=	2.28.4
+PORTVERSION=	2.28.6
 CATEGORIES=	devel python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pygobject/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -25,7 +25,7 @@ RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20
 USE_PYTHON=	2.5+
