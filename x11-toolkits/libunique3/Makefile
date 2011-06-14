@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libunique3/Makefile,v 1.4 2010/12/16 19:08:09 kwm Exp $
+#   $MCom: ports/x11-toolkits/libunique3/Makefile,v 1.5 2011/04/05 18:48:33 kwm Exp $
 #
 
 PORTNAME=	libunique
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.2
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
 
@@ -18,7 +18,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 LATEST_LINK=	libunique3
 USE_XORG=	ice x11
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
