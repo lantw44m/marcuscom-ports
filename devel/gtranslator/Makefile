@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gtranslator/Makefile,v 1.15 2011/04/27 20:57:58 kwm Exp $
+#   $MCom: ports/devel/gtranslator/Makefile,v 1.16 2011/05/18 10:58:21 kwm Exp $
 #
 
 PORTNAME=	gtranslator
-PORTVERSION=	2.90.4
+PORTVERSION=	2.90.5
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -23,7 +23,7 @@ LIB_DEPENDS=	peas-1.0.0:${PORTSDIR}/devel/libpeas \
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gnometarget gtk30 libgda4 \
 		gtksourceview3 libxml2 gnomedocutils
 USE_GMAKE=	yes
