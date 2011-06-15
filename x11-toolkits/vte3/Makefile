@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.10 2011/04/25 17:18:40 kwm Exp $
+#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.11 2011/06/10 22:59:12 mezz Exp $
 #
 
 PORTNAME?=	vte
-PORTVERSION=	0.28.0
-PORTREVISION?=	1
+PORTVERSION=	0.28.1
+PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/gnome-pty-helper/vte/}/${PORTVERSION:R}
@@ -18,7 +18,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER?=	gnome@FreeBSD.org
 COMMENT?=	Terminal widget with improved accessibility and I18N support
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 VTE3_SLAVE?=	no
