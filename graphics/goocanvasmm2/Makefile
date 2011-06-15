@@ -3,10 +3,10 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/goocanvasmm/Makefile,v 1.4 2010/10/29 10:27:45 kwm Exp $
+#   $MCom: ports/graphics/goocanvasmm2/Makefile,v 1.3 2011/02/14 15:58:09 kwm Exp $
 
 PORTNAME=	goocanvasmm
-PORTVERSION=	1.90.3
+PORTVERSION=	1.90.5
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -20,7 +20,7 @@ USE_GNOME=	gnomehack ltverhack
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-documentation
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 
 .include <bsd.port.mk>
