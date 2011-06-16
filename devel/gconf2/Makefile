@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.127 2011/04/25 12:19:03 kwm Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.128 2011/06/11 19:51:14 mezz Exp $
 #
 
 PORTNAME=	gconf2
-PORTVERSION=	2.32.3
+PORTVERSION=	2.32.4
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -18,7 +18,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A configuration database system for GNOME
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
