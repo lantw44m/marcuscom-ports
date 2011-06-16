@@ -185,7 +185,6 @@ share/dbus-1/services/org.gnome.gedit.service
 %%DOCSDIR%%/gedit-gedit-utils.html
 %%DOCSDIR%%/gedit-gedit-view.html
 %%DOCSDIR%%/gedit-gedit-window.html
-%%DOCSDIR%%/gedit.devhelp
 %%DOCSDIR%%/gedit.devhelp2
 %%DOCSDIR%%/home.png
 %%DOCSDIR%%/index.html
