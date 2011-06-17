@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5/Makefile,v 1.3 2011/06/02 15:39:39 kwm Exp $
+#   $MCom: ports/databases/libgda5/Makefile,v 1.4 2011/06/11 19:51:11 mezz Exp $
 #
 
 PORTNAME=	libgda5
 PORTVERSION?=	4.99.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/5$//}/${PORTVERSION:R}
@@ -24,8 +24,7 @@ LIBGDA5_SLAVE?=	no
 .if !defined(REFERENCE_PORT)
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	popt.0:${PORTSDIR}/devel/popt \
-		gcrypt.17:${PORTSDIR}/security/libgcrypt \
+LIB_DEPENDS=	gcrypt.17:${PORTSDIR}/security/libgcrypt \
     		soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		json-glib-1.0.0:${PORTSDIR}/devel/json-glib
 RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
@@ -39,7 +38,7 @@ GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ARGS=	--without-oracle \
 		--disable-crypto \
-		--enable-introspection=no
+		--enable-introspection
 CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 

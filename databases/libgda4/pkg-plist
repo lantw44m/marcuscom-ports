@@ -143,6 +143,8 @@ include/libgda-%%VERSION%%/libgda/virtual/gda-virtual-provider.h
 include/libgda-%%VERSION%%/libgda/virtual/gda-vprovider-data-model.h
 include/libgda-%%VERSION%%/libgda/virtual/gda-vprovider-hub.h
 include/libgda-%%VERSION%%/libgda/virtual/libgda-virtual.h
+lib/girepository-1.0/Gda-%%VERSION%%.typelib
+%%UI%%lib/girepository-1.0/Gdaui-%%VERSION%%.typelib
 lib/libgda-%%VERSION%%.a
 lib/libgda-%%VERSION%%.la
 lib/libgda-%%VERSION%%.so
@@ -181,6 +183,8 @@ libdata/pkgconfig/libgda-web-%%VERSION%%.pc
 libdata/pkgconfig/libgda-xslt-%%VERSION%%.pc
 %%UI%%share/applications/gda-browser-%%VERSION%%.desktop
 %%UI%%share/applications/gda-control-center-%%VERSION%%.desktop
+share/gir-1.0/Gda-%%VERSION%%.gir
+%%UI%%share/gir-1.0/Gdaui-%%VERSION%%.gir
 %%UI%%share/gnome/help/gda-browser/C/actions.page
 %%UI%%share/gnome/help/gda-browser/C/data-manager-perspective.page
 %%UI%%share/gnome/help/gda-browser/C/data-manager-source-editor.page

@@ -3,10 +3,10 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5-ui/Makefile,v 1.1 2011/03/30 19:23:04 kwm Exp $
+#   $MCom: ports/databases/libgda5-ui/Makefile,v 1.2 2011/06/11 19:51:11 mezz Exp $
 #
 
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	databases gnome
 PKGNAMESUFFIX?=	-ui
 
