@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome-tweak-tool
-PORTVERSION=	3.0.4
+PORTVERSION=	3.0.5
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -16,7 +16,7 @@ COMMENT=	Allows to tweak some hidden settings in GTK3/GNOME3
 BUILD_DEPENDS=	gsettings-desktop-schemas>=0.1.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 RUN_DEPENDS=	gsettings-desktop-schemas>=0.1.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix gconf2 pygobject
 USE_PYTHON=	yes
