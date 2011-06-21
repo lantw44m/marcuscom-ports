@@ -135,6 +135,52 @@ share/gnome/help/gda-browser/de/table-insert-data.page
 share/gnome/help/gda-browser/de/transactions.page
 share/gnome/help/gda-browser/de/variables.page
 share/gnome/help/gda-browser/de/virtual-connections.page
+share/gnome/help/gda-browser/el/actions.page
+share/gnome/help/gda-browser/el/data-manager-perspective.page
+share/gnome/help/gda-browser/el/data-manager-source-editor.page
+share/gnome/help/gda-browser/el/data-manager-xml-syntax.page
+share/gnome/help/gda-browser/el/declaredfk.page
+share/gnome/help/gda-browser/el/diagram.page
+share/gnome/help/gda-browser/el/features.page
+share/gnome/help/gda-browser/el/figures/action-1.png
+share/gnome/help/gda-browser/el/figures/action-2.png
+share/gnome/help/gda-browser/el/figures/action-3.png
+share/gnome/help/gda-browser/el/figures/action-4.png
+share/gnome/help/gda-browser/el/figures/cnc_open.png
+share/gnome/help/gda-browser/el/figures/data-man-mode.png
+share/gnome/help/gda-browser/el/figures/data-man-persp.png
+share/gnome/help/gda-browser/el/figures/data-man-uicompose.png
+share/gnome/help/gda-browser/el/figures/data-man-xmlcompose.png
+share/gnome/help/gda-browser/el/figures/declaredfk-dialog.png
+share/gnome/help/gda-browser/el/figures/declaredfk.png
+share/gnome/help/gda-browser/el/figures/diagram.png
+share/gnome/help/gda-browser/el/figures/ldap-browser-persp.png
+share/gnome/help/gda-browser/el/figures/ldap-classes.png
+share/gnome/help/gda-browser/el/figures/ldap-search.png
+share/gnome/help/gda-browser/el/figures/ldap-table-mapping.png
+share/gnome/help/gda-browser/el/figures/mainwin.png
+share/gnome/help/gda-browser/el/figures/query-exec-persp.png
+share/gnome/help/gda-browser/el/figures/schema-browser-persp.png
+share/gnome/help/gda-browser/el/figures/table-insert-data.png
+share/gnome/help/gda-browser/el/figures/trans-begin.png
+share/gnome/help/gda-browser/el/figures/trans-commit.png
+share/gnome/help/gda-browser/el/figures/trans-rollback.png
+share/gnome/help/gda-browser/el/figures/virtual-cnc-2.png
+share/gnome/help/gda-browser/el/figures/virtual-cnc-3.png
+share/gnome/help/gda-browser/el/figures/virtual-cnc-4.png
+share/gnome/help/gda-browser/el/figures/virtual-cnc-5.png
+share/gnome/help/gda-browser/el/figures/virtual-cnc.png
+share/gnome/help/gda-browser/el/general-ui.page
+share/gnome/help/gda-browser/el/index.page
+share/gnome/help/gda-browser/el/ldap-browser-perspective.page
+share/gnome/help/gda-browser/el/ldap-connections.page
+share/gnome/help/gda-browser/el/legal.xml
+share/gnome/help/gda-browser/el/query-execution-perspective.page
+share/gnome/help/gda-browser/el/schema-browser-perspective.page
+share/gnome/help/gda-browser/el/table-insert-data.page
+share/gnome/help/gda-browser/el/transactions.page
+share/gnome/help/gda-browser/el/variables.page
+share/gnome/help/gda-browser/el/virtual-connections.page
 share/gnome/help/gda-browser/es/actions.page
 share/gnome/help/gda-browser/es/data-manager-perspective.page
 share/gnome/help/gda-browser/es/data-manager-source-editor.page
@@ -181,6 +227,52 @@ share/gnome/help/gda-browser/es/table-insert-data.page
 share/gnome/help/gda-browser/es/transactions.page
 share/gnome/help/gda-browser/es/variables.page
 share/gnome/help/gda-browser/es/virtual-connections.page
+share/gnome/help/gda-browser/gl/actions.page
+share/gnome/help/gda-browser/gl/data-manager-perspective.page
+share/gnome/help/gda-browser/gl/data-manager-source-editor.page
+share/gnome/help/gda-browser/gl/data-manager-xml-syntax.page
+share/gnome/help/gda-browser/gl/declaredfk.page
+share/gnome/help/gda-browser/gl/diagram.page
+share/gnome/help/gda-browser/gl/features.page
+share/gnome/help/gda-browser/gl/figures/action-1.png
+share/gnome/help/gda-browser/gl/figures/action-2.png
+share/gnome/help/gda-browser/gl/figures/action-3.png
+share/gnome/help/gda-browser/gl/figures/action-4.png
+share/gnome/help/gda-browser/gl/figures/cnc_open.png
+share/gnome/help/gda-browser/gl/figures/data-man-mode.png
+share/gnome/help/gda-browser/gl/figures/data-man-persp.png
+share/gnome/help/gda-browser/gl/figures/data-man-uicompose.png
+share/gnome/help/gda-browser/gl/figures/data-man-xmlcompose.png
+share/gnome/help/gda-browser/gl/figures/declaredfk-dialog.png
+share/gnome/help/gda-browser/gl/figures/declaredfk.png
+share/gnome/help/gda-browser/gl/figures/diagram.png
+share/gnome/help/gda-browser/gl/figures/ldap-browser-persp.png
+share/gnome/help/gda-browser/gl/figures/ldap-classes.png
+share/gnome/help/gda-browser/gl/figures/ldap-search.png
+share/gnome/help/gda-browser/gl/figures/ldap-table-mapping.png
+share/gnome/help/gda-browser/gl/figures/mainwin.png
+share/gnome/help/gda-browser/gl/figures/query-exec-persp.png
+share/gnome/help/gda-browser/gl/figures/schema-browser-persp.png
+share/gnome/help/gda-browser/gl/figures/table-insert-data.png
+share/gnome/help/gda-browser/gl/figures/trans-begin.png
+share/gnome/help/gda-browser/gl/figures/trans-commit.png
+share/gnome/help/gda-browser/gl/figures/trans-rollback.png
+share/gnome/help/gda-browser/gl/figures/virtual-cnc-2.png
+share/gnome/help/gda-browser/gl/figures/virtual-cnc-3.png
+share/gnome/help/gda-browser/gl/figures/virtual-cnc-4.png
+share/gnome/help/gda-browser/gl/figures/virtual-cnc-5.png
+share/gnome/help/gda-browser/gl/figures/virtual-cnc.png
+share/gnome/help/gda-browser/gl/general-ui.page
+share/gnome/help/gda-browser/gl/index.page
+share/gnome/help/gda-browser/gl/ldap-browser-perspective.page
+share/gnome/help/gda-browser/gl/ldap-connections.page
+share/gnome/help/gda-browser/gl/legal.xml
+share/gnome/help/gda-browser/gl/query-execution-perspective.page
+share/gnome/help/gda-browser/gl/schema-browser-perspective.page
+share/gnome/help/gda-browser/gl/table-insert-data.page
+share/gnome/help/gda-browser/gl/transactions.page
+share/gnome/help/gda-browser/gl/variables.page
+share/gnome/help/gda-browser/gl/virtual-connections.page
 share/gnome/help/gda-browser/sl/actions.page
 share/gnome/help/gda-browser/sl/data-manager-perspective.page
 share/gnome/help/gda-browser/sl/data-manager-source-editor.page
@@ -378,8 +470,12 @@ share/pixmaps/gda-browser-%%VERSION%%.png
 @dirrm share/gnome/help/gda-browser/zh_CN
 @dirrm share/gnome/help/gda-browser/sl/figures
 @dirrm share/gnome/help/gda-browser/sl
+@dirrm share/gnome/help/gda-browser/gl/figures
+@dirrm share/gnome/help/gda-browser/gl
 @dirrm share/gnome/help/gda-browser/es/figures
 @dirrm share/gnome/help/gda-browser/es
+@dirrm share/gnome/help/gda-browser/el/figures
+@dirrm share/gnome/help/gda-browser/el
 @dirrm share/gnome/help/gda-browser/de/figures
 @dirrm share/gnome/help/gda-browser/de
 @dirrm share/gnome/help/gda-browser/C/figures
