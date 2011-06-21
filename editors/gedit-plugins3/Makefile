@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.9 2011/05/28 12:46:36 kwm Exp $
+#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.10 2011/06/10 22:59:03 mezz Exp $
 #
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	3.0.3
+PORTVERSION=	3.0.4
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,7 +23,7 @@ CONFLICTS=	gedit-plugins-2.[0-9]*
 
 LATEST_LINK=	gedit-plugins3
 USE_LDCONFIG=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
