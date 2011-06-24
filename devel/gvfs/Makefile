@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.75 2011/06/04 22:51:27 mezz Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.76 2011/06/11 19:51:15 mezz Exp $
 #
 
 PORTNAME=	gvfs
@@ -31,8 +31,8 @@ CONFIGURE_ARGS=	--disable-obexftp
 OPTIONS=	FUSE "Enable fuse" off \
 		AVAHI "Enable AVAHI" on \
 		SAMBA "Enable Samba" on \
-		GPHOTO2 "Enable Gphoto 2 camera support (required HAL)" on \
-		CDDA "Enable CDDA (required HAL)" on \
+		GPHOTO2 "Enable Gphoto 2 camera support (requires HAL)" on \
+		CDDA "Enable CDDA (requires HAL)" on \
 		HAL "Enable HAL" on
 
 GLIB_SCHEMAS=	org.gnome.system.gvfs.enums.xml
