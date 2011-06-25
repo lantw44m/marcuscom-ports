@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp3/Makefile,v 1.15 2011/05/28 11:25:17 kwm Exp $
+#   $MCom: ports/x11/yelp3/Makefile,v 1.16 2011/06/10 22:59:11 mezz Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	3.0.3
+PORTVERSION=	3.0.4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,7 +25,7 @@ LATEST_LINK=	yelp3
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GETTEXT=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_XORG=	x11 ice
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 libxslt libxml2
@@ -52,9 +52,5 @@ CONFIGURE_ENV+=	YELP_LZMA_CFLAGS="-I/usr/include" \
 .else
 LIB_DEPENDS+=	lzma.5:${PORTSDIR}/archivers/xz
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|/home/shaunm/Projects/yelp/data/dtd|${PREFIX}/share/yelp/dtd|g' \
-		${WRKSRC}/data/dtd/catalog
 
 .include <bsd.port.post.mk>
