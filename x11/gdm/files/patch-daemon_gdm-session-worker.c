@@ -1,5 +1,5 @@
---- daemon/gdm-session-worker.c.orig	2011-06-02 16:50:17.000000000 +0200
-+++ daemon/gdm-session-worker.c	2011-06-03 21:08:07.000000000 +0200
+--- daemon/gdm-session-worker.c.orig	2011-06-02 09:50:17.000000000 -0500
++++ daemon/gdm-session-worker.c	2011-06-24 17:59:50.000000000 -0500
 @@ -31,6 +31,9 @@
  #include <errno.h>
  #include <grp.h>
@@ -40,16 +40,13 @@
  
                  if (setsid () < 0) {
                          g_debug ("GdmSessionWorker: could not set pid '%u' as leader of new session and process group - %s",
-@@ -2048,6 +2052,28 @@
+@@ -2048,6 +2052,25 @@
                          _exit (2);
                  }
  
 +#ifdef HAVE_LOGINCAP
 +                if (setusercontext (NULL, pwent, pwent->pw_uid,
-+                            LOGIN_SETLOGIN | LOGIN_SETPATH |
-+                            LOGIN_SETPRIORITY | LOGIN_SETRESOURCES |
-+                            LOGIN_SETUMASK | LOGIN_SETUSER |
-+                            LOGIN_SETENV) < 0) {
++                            LOGIN_SETALL & ~LOGIN_SETGROUP) < 0) {
 +                        g_debug ("%s: setusercontext () failed for %s. "
 +                                  "Aborting.", "gdm_session_worker_start_user_session",
 +                                login ? login : "(null)");
