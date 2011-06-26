@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.548 2011/06/10 21:14:05 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.549 2011/06/10 22:16:59 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -516,7 +516,7 @@ pygobject_USE_GNOME_IMPL=	glib20
 pygtk2_DETECT=			${LOCALBASE}/libdata/pkgconfig/pygtk-2.0.pc
 pygtk2_BUILD_DEPENDS=	${pygtk2_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk2
 pygtk2_RUN_DEPENDS=		${pygtk2_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk2
-pygtk2_USE_GNOME_IMPL=	libglade2
+pygtk2_USE_GNOME_IMPL=	libglade2 pygobject
 
 pygnome2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-python-2.0.pc
 pygnome2_BUILD_DEPENDS=	${pygnome2_DETECT}:${PORTSDIR}/x11-toolkits/py-gnome2
