@@ -3,12 +3,12 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.56 2011/04/09 15:57:08 mezz Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.57 2011/04/30 20:43:18 mezz Exp $
 #
 
 PORTNAME=	gimp-app
 DISTVERSION=	2.6.11
-PORTREVISION?=	4
+PORTREVISION?=	5
 PORTEPOCH?=	1
 CATEGORIES?=	graphics gnome
 MASTER_SITES=	ftp://ftp.gimp.org/pub/%SUBDIR%/ \
@@ -124,12 +124,11 @@ LIB_DEPENDS+=		exif.12:${PORTSDIR}/graphics/libexif
 CONFIGURE_ARGS+=	--without-libexif
 .endif
 
-.if defined(WITH_GVFS) || ${HAVE_GNOME:Mgvfs}!=""
-LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
-USE_GNOME+=	gvfs
-.  if ${HAVE_GNOME:Mlibgnomeui}!=""
-USE_GNOME+=	libgnomeui
-.  endif
+.if defined(WITH_GVFS)
+USE_GNOME+=		gvfs
+.else
+LIB_DEPENDS=		curl.6:${PORTSDIR}/ftp/curl
+CONFIGURE_ARGS+=	--without-gvfs
 .endif
 
 .if defined(WITH_HELPBROWSER)
@@ -156,7 +155,7 @@ CONFIGURE_ARGS+=	--disable-mp
 .endif
 
 .if defined(WITH_POPPLER)
-LIB_DEPENDS+=		poppler-glib.5:${PORTSDIR}/graphics/poppler-gtk
+LIB_DEPENDS+=		poppler-glib.6:${PORTSDIR}/graphics/poppler-gtk
 PLIST_SUB+=		POPPLER=""
 .else
 CONFIGURE_ARGS+=	--without-poppler
