@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.235 2011/04/30 20:43:17 mezz Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.236 2011/05/01 23:44:47 mezz Exp $
 #
 
 PORTNAME=	gnome-games
@@ -36,8 +36,8 @@ USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-sound=gstreamer \
 		--disable-tests
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	aisleriot.schemas glchess.schemas glines.schemas \
 		gnect.schemas gnibbles.schemas gnobots2.schemas \

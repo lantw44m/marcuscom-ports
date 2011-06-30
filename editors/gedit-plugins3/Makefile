@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.10 2011/06/10 22:59:03 mezz Exp $
+#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.11 2011/06/21 09:17:02 kwm Exp $
 #
 
 PORTNAME=	gedit-plugins
@@ -29,8 +29,8 @@ USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack gnomeprefix intlhack gtk30 gtksourceview3
 WANT_GNOME=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 GLIB_SCHEMAS=	org.gnome.gedit.plugins.drawspaces.gschema.xml
 

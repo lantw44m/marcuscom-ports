@@ -3,7 +3,7 @@
 # Whom:				  David O'Brien (obrien@NUXI.com)
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/finance/gnucash/Makefile,v 1.31 2011/06/11 17:49:09 mezz Exp $
 #
 
 PORTNAME=	gnucash
@@ -43,8 +43,8 @@ INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix libglade2 libgnomeui
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-error-on-warning \
 		--disable-doxygen
 

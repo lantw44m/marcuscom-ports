@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.13 2011/05/24 20:31:42 kwm Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.14 2011/06/10 22:59:03 mezz Exp $
 #
 
 PORTNAME=	gnome-games
@@ -23,7 +23,6 @@ LIB_DEPENDS=	guile.20:${PORTSDIR}/lang/guile \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
 		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter
-#RUN_DEPENDS=	seed:${PORTSDIR}/devel/seed
 
 CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-2.[0-9]*
 
@@ -38,12 +37,12 @@ USE_GL=		gl glu
 USE_XORG=	ice x11
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gconf2 pygtk2 \
-		librsvg2 desktopfileutils gnomedocutils 
+		librsvg2 desktopfileutils gnomedocutils
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk=3.0
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	aisleriot.schemas glines.schemas \
 		gnect.schemas gnibbles.schemas gnobots2.schemas \
