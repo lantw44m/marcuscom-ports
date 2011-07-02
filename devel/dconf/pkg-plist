@@ -1,5 +1,5 @@
 bin/dconf
-bin/dconf-editor
+%%EDITOR%%bin/dconf-editor
 etc/bash_completion.d/dconf-bash-completion.sh
 include/dconf/dconf-client.h
 include/dconf-dbus-1/dconf-dbus-1.h
@@ -16,10 +16,10 @@ lib/libdconf-dbus-1.so.0
 libdata/pkgconfig/dconf.pc
 libdata/pkgconfig/dconf-dbus-1.pc
 libexec/dconf-service
-share/applications/dconf-editor.desktop
+%%EDITOR%%share/applications/dconf-editor.desktop
 share/dbus-1/services/ca.desrt.dconf.service
 share/dbus-1/system-services/ca.desrt.dconf.service
-share/dconf-editor/dconf-editor.ui
+%%EDITOR%%share/dconf-editor/dconf-editor.ui
 share/gtk-doc/html/dconf/DConfClient.html
 share/gtk-doc/html/dconf/dconf-DConf-Paths.html
 share/gtk-doc/html/dconf/annotation-glossary.html

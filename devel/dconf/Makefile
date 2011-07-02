@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.22 2011/05/09 17:53:48 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.23 2011/06/11 19:51:13 mezz Exp $
 #
 
 PORTNAME=	dconf
@@ -21,13 +21,25 @@ LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtk20 gtk30
+USE_GNOME=	gnomehack glib20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+
+OPTIONS=	EDITOR "Build the dconf editor (requires Gtk+3)" On
+
+.include <bsd.port.options.mk>
+
+.if defined(WITHOUT_EDITOR)
+CONFIGURE_ARGS+=--disable-editor
+PLIST_SUB+=	EDITOR="@comment "
+.else
+USE_GNOME+=	gtk30
 GLIB_SCHEMAS=	ca.desrt.dconf-editor.gschema.xml
+PLIST_SUB+=	EDITOR=""
+.endif
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/|${PREFIX}/etc/|g' \
