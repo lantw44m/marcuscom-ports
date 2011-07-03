@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.12 2011/05/28 12:41:50 kwm Exp $
+#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.13 2011/06/10 22:59:07 mezz Exp $
 #
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	3.0.3
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,7 +19,7 @@ COMMENT=	A program that keeps passwords and other secrets
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 LIB_DEPENDS=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
 		tasn1.4:${PORTSDIR}/security/libtasn1 \
-		gcrypt.17:${PORTSDIR}/security/libgcrypt
+		gcrypt.18:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
 CONFLICTS=	gnome-keyring-2.[0-9]*

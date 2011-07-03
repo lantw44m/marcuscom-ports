@@ -3,11 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse3/Makefile,v 1.7 2011/05/24 10:42:39 kwm Exp $
+#   $MCom: ports/security/seahorse3/Makefile,v 1.8 2011/06/10 22:59:08 mezz Exp $
 #
 
 PORTNAME=	seahorse
 PORTVERSION=	3.0.2
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,7 +22,7 @@ LIB_DEPENDS=	gpgme.18:${PORTSDIR}/security/gpgme \
     		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
 		gcr-3.0:${PORTSDIR}/security/gnome-keyring3 \
-		gcrypt.17:${PORTSDIR}/security/libgcrypt \
+		gcrypt.18:${PORTSDIR}/security/libgcrypt \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 CONFLICTS=	seahorse-2.[0-9]*

@@ -3,12 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.25 2010/04/27 22:22:07 kwm Exp $
+#   $MCom: ports/security/seahorse-plugins/Makefile,v 1.27 2011/03/07 08:30:01 kwm Exp $
 #
 
 PORTNAME=	seahorse-plugins
 PORTVERSION=	2.30.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plug-ins for the Seahorse key and password management application
 
 LIB_DEPENDS=	cryptui.0:${PORTSDIR}/security/seahorse \
-		gcrypt.17:${PORTSDIR}/security/libgcrypt
+		gcrypt.18:${PORTSDIR}/security/libgcrypt
 
 USE_BZIP2=	yes
 USE_GETTEXT=	yes

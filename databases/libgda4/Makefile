@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.20 2011/06/11 19:51:10 mezz Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.21 2011/06/17 11:02:12 kwm Exp $
 #
 
 PORTNAME=	libgda4
 PORTVERSION?=	4.2.8
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/4$//}/${PORTVERSION:R}
@@ -26,7 +26,7 @@ LIBGDA4_SLAVE?=	no
 .if !defined(REFERENCE_PORT)
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	gcrypt.17:${PORTSDIR}/security/libgcrypt \
+LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt \
     		soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		json-glib-1.0.0:${PORTSDIR}/devel/json-glib
 RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
