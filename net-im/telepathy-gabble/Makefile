@@ -3,7 +3,7 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.15 2011/03/16 08:55:30 kwm Exp $
+#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.16 2011/04/23 08:25:34 kwm Exp $
 
 PORTNAME=	telepathy-gabble
 PORTVERSION=	0.12.0
@@ -44,5 +44,9 @@ MAN8=		telepathy-gabble.8
 .if defined(WITH_OPENSSL_BASE)
 CONFIGURE_ENV+=	OPENSSL_LIBS="-L/usr/lib -ssl -crypto" OPENSSL_CFLAGS="-I/usr/include"
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|-Werror||g' \
+		${WRKSRC}/lib/ext/wocky/configure
 
 .include <bsd.port.post.mk>
