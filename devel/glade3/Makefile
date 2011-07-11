@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.47 2011/06/10 22:59:03 mezz Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.48 2011/06/11 19:51:14 mezz Exp $
 #
 
 PORTNAME=	glade3
@@ -28,7 +28,7 @@ USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-CPPFLAGS=	${CPPFLAGS} -I${LOCALBASE}/include
+CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
 
 DOCSDIR=	${PREFIX}/share/doc/gladeui
