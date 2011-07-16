@@ -2,14 +2,13 @@
 # Date created:		28 August 2003
 # Whom:			Hye-Shik Chang <perky@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/net/liferea/Makefile,v 1.151 2011/06/24 19:32:14 pav Exp $
 #
 
 PORTNAME=	liferea
-PORTVERSION=	1.6.5
-PORTREVISION=	2
+PORTVERSION=	1.6.6b
 CATEGORIES=	net gnome
-MASTER_SITES=	SF/${PORTNAME}/Liferea%20Stable/${PORTVERSION}
+MASTER_SITES=	SF/${PORTNAME}/Liferea%20Stable/1.6.6
 
 MAINTAINER=	pav@FreeBSD.org
 COMMENT=	Simple RSS/RDF feed reader
@@ -21,8 +20,9 @@ USE_GNOME=	gnomeprefix gnomehack libglade2 gconf2
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CONFIGURE_ARGS=	--disable-libnotify
 MAKE_JOBS_SAFE=	yes
 
 MAN1=		liferea.1
@@ -30,16 +30,6 @@ MANLANG=	"" pl
 GCONF_SCHEMAS=	liferea.schemas
 INSTALLS_ICONS=	yes
 
-OPTIONS=	LIBNOTIFY "Enable libnotify support" on
+LICENSE=	GPLv2
 
-.include <bsd.port.pre.mk>
-
-.ifdef WITHOUT_LIBNOTIFY
-CONFIGURE_ARGS+=--disable-libnotify
-PLIST_SUB+=	NOTIFY="@comment "
-.else
-LIB_DEPENDS+=	notify.4:${PORTSDIR}/devel/libnotify
-PLIST_SUB+=	NOTIFY=""
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
