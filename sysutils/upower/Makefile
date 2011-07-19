@@ -3,11 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/upower/Makefile,v 1.23 2011/05/04 19:51:23 kwm Exp $
+#   $MCom: ports/sysutils/upower/Makefile,v 1.24 2011/05/25 16:30:20 kwm Exp $
 #
 
 PORTNAME=	upower
-PORTVERSION=	0.9.11
+PORTVERSION=	0.9.12
 CATEGORIES=	sysutils
 MASTER_SITES=	http://upower.freedesktop.org/releases/
 
@@ -22,7 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/d
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GETTEXT=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack ltverhack glib20
 USE_AUTOTOOLS=	libtool
