@@ -3,12 +3,12 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.103 2011/04/09 16:46:23 mezz Exp $
+#   $MCom: ports/security/seahorse/Makefile,v 1.104 2011/07/03 11:57:45 kwm Exp $
 #
 
 PORTNAME=	seahorse
 PORTVERSION=	2.32.0
-PORTREVISION=	4
+PORTREVISION=	6
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -18,7 +18,7 @@ COMMENT=	GNOME application for managing encryption keys (PGP, SSH)
 
 BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
-LIB_DEPENDS=	gpgme.18:${PORTSDIR}/security/gpgme \
+LIB_DEPENDS=	gpgme.19:${PORTSDIR}/security/gpgme \
     		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		gcr.0:${PORTSDIR}/security/gnome-keyring \
 		gcrypt.18:${PORTSDIR}/security/libgcrypt \
