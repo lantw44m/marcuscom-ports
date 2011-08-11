@@ -20,7 +20,7 @@ LIB_DEPENDS=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 OPTIONS=	DND	"Enable Drag and drop support in browse mode" On \
 		CACHE	"Support the OpenLDAP experimental client cache" On
 
-USE_GNOME=	gnometarget libglade2 gnomedocutils
+USE_GNOME=	libglade2 gnomedocutils
 USE_OPENSSL=	yes
 USE_OPENLDAP=	yes
 USE_GETTEXT=	yes

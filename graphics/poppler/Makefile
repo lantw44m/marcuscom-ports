@@ -3,7 +3,7 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.73 2011/03/29 16:34:44 kwm Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.74 2011/08/05 14:05:23 kwm Exp $
 #
 
 PORTNAME=	poppler
@@ -23,7 +23,7 @@ RUN_DEPENDS=	poppler-data>0:${PORTSDIR}/graphics/poppler-data
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnometarget libxml2 ltverhack
+USE_GNOME=	gnomehack libxml2 ltverhack
 USE_AUTOTOOLS=	libtool
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes

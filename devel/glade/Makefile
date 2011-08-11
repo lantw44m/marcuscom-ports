@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade/Makefile,v 1.1 2011/04/06 12:05:30 kwm Exp $
+#   $MCom: ports/devel/glade/Makefile,v 1.2 2011/06/11 19:51:14 mezz Exp $
 #
 
 PORTNAME=	glade
@@ -23,7 +23,7 @@ CONFLICTS=	glade3-3.*
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnometarget gtk30 gnomeprefix gnomehack ltverhack
+USE_GNOME=	gtk30 gnomeprefix gnomehack ltverhack
 WANT_GNOME=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes

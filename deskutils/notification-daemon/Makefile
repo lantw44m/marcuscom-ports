@@ -3,7 +3,7 @@
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/notification-daemon/Makefile,v 1.10 2011/03/16 04:09:23 mezz Exp $
+#   $MCom: ports/deskutils/notification-daemon/Makefile,v 1.11 2011/06/11 19:51:12 mezz Exp $
 #
 
 PORTNAME=	notification-daemon
@@ -20,7 +20,7 @@ LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gnomeprefix gnometarget intlhack gtk30
+USE_GNOME=	gnomehack gnomeprefix intlhack gtk30
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_XORG=	x11

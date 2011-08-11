@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.48 2011/06/11 19:51:14 mezz Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.49 2011/07/11 12:25:25 kwm Exp $
 #
 
 PORTNAME=	glade3
@@ -21,7 +21,7 @@ LATEST_LINK=	glade3
 INSTALLS_ICONS=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnometarget gtk20 libxml2 gnomeprefix gnomehack \
+USE_GNOME=	gtk20 libxml2 gnomeprefix gnomehack \
 		gnomedocutils desktopfileutils ltverhack:10
 WANT_GNOME=	yes
 USE_GETTEXT=	yes

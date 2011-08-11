@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-dbus/Makefile,v 1.12 2011/06/03 18:46:17 kwm Exp $
+#   $MCom: ports/devel/py-dbus/Makefile,v 1.13 2011/06/11 19:51:16 mezz Exp $
 #
 
 PORTNAME=	dbus
@@ -19,7 +19,7 @@ COMMENT=	Python bindings for the D-BUS messaging system
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack gnometarget
+USE_GNOME=	gnomehack
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool

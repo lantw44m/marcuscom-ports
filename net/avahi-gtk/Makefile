@@ -3,7 +3,7 @@
 # Whom:					Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-gtk/Makefile,v 1.5 2011/03/31 02:03:53 mezz Exp $
+#   $MCom: ports/net/avahi-gtk/Makefile,v 1.6 2011/04/05 10:34:44 kwm Exp $
 #
 
 PORTREVISION=	0
@@ -28,7 +28,7 @@ AVAHI_PKGCONFIG=avahi-ui.pc
 MAN1+=		bssh.1
 MLINKS+=	bssh.1 bvnc.1 \
 		bssh.1 bshell.1
-USE_GNOME=	gnomehack gnometarget ltverhack intltool libglade2
+USE_GNOME=	gnomehack ltverhack intltool libglade2
 
 post-build:
 	@(cd ${WRKSRC}/avahi-discover-standalone; \

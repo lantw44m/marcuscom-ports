@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gtranslator/Makefile,v 1.16 2011/05/18 10:58:21 kwm Exp $
+#   $MCom: ports/devel/gtranslator/Makefile,v 1.17 2011/06/14 12:49:15 kwm Exp $
 #
 
 PORTNAME=	gtranslator
@@ -24,7 +24,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack intlhack gnomeprefix gnometarget gtk30 libgda4 \
+USE_GNOME=	gnomehack intlhack gnomeprefix gtk30 libgda4 \
 		gtksourceview3 libxml2 gnomedocutils
 USE_GMAKE=	yes
 USE_GETTEXT=	yes

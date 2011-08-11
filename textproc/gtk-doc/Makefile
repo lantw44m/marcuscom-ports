@@ -3,7 +3,7 @@
 # Whom:					fenner
 #
 # $FreeBSD$
-#    $MCom: ports/textproc/gtk-doc/Makefile,v 1.10 2011/01/15 18:26:45 kwm Exp $
+#    $MCom: ports/textproc/gtk-doc/Makefile,v 1.11 2011/05/02 00:41:18 mezz Exp $
 
 PORTNAME=	gtk-doc
 PORTVERSION=	1.17
@@ -32,7 +32,7 @@ USE_BZIP2=	yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack gnometarget gnomeprefix libxslt gnomedocutils
+USE_GNOME=	gnomehack gnomeprefix libxslt gnomedocutils
 INSTALLS_OMF=	yes
 CONFIGURE_ARGS=	--with-xml-catalog=${LOCALBASE}/share/xml/catalog.ports
 

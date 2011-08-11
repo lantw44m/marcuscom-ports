@@ -3,7 +3,7 @@
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libnotify/Makefile,v 1.20 2011/06/10 17:04:17 kwm Exp $
+#   $MCom: ports/devel/libnotify/Makefile,v 1.21 2011/06/11 19:51:15 mezz Exp $
 #
 
 PORTNAME=	libnotify
@@ -21,7 +21,7 @@ RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gnometarget intlhack glib20 gdkpixbuf2 ltverhack
+USE_GNOME=	gnomehack intlhack glib20 gdkpixbuf2 ltverhack
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes

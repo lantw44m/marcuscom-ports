@@ -3,7 +3,7 @@
 # Whom:					Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-gtk3/Makefile,v 1.3 2011/03/31 02:03:53 mezz Exp $
+#   $MCom: ports/net/avahi-gtk3/Makefile,v 1.4 2011/04/05 10:34:45 kwm Exp $
 #
 
 PORTREVISION=	0
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=--disable-silent-rules
 AVAHI_SLAVE=	gtk3
 AVAHI_PKGCONFIG=avahi-ui-gtk3.pc
 
-USE_GNOME=	gnomehack gnometarget ltverhack intltool gtk30
+USE_GNOME=	gnomehack ltverhack intltool gtk30
 
 do-build:
 	@(cd ${WRKSRC}/avahi-ui; ${GMAKE} libavahi-ui-gtk3.la)
