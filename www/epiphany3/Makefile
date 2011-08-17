@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany3/Makefile,v 1.17 2011/06/10 22:59:09 mezz Exp $
+#   $MCom: ports/www/epiphany3/Makefile,v 1.18 2011/07/02 09:29:39 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -59,7 +59,7 @@ MAN1=		epiphany.1
 
 OPTIONS=	NSS "Import passwords from 2.26 and older on first run" off \
 		SPELLCHECK "Enable spell checking by default" on \
-		SEED "Enable seed (JavaScript) support" off
+		SEED "Enable seed (JavaScript) support" on
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
