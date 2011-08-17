@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.14 2011/06/10 22:59:03 mezz Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.15 2011/06/30 04:23:56 mezz Exp $
 #
 
 PORTNAME=	gnome-games
 PORTVERSION=	3.0.2
+PORTREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +18,7 @@ COMMENT=	The game applications package for the GNOME 3 Desktop Environment
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		valac:${PORTSDIR}/lang/vala
-LIB_DEPENDS=	guile.20:${PORTSDIR}/lang/guile \
+LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
