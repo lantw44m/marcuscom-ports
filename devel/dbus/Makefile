@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dbus/Makefile,v 1.48 2011/06/03 18:44:56 kwm Exp $
+#   $MCom: ports/devel/dbus/Makefile,v 1.49 2011/08/14 09:36:49 kwm Exp $
 #
 
 PORTNAME=	dbus
-PORTVERSION?=	1.4.14
-PORTREVISION?=	0
+PORTVERSION=	1.4.14
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -17,7 +17,7 @@ COMMENT=	A message bus system for inter-application communication
 
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 
-USE_GNOME?=	gnomehack libxml2 ltverhack
+USE_GNOME=	gnomehack libxml2 ltverhack
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
@@ -28,7 +28,7 @@ CONFIGURE_ARGS=--localstatedir=/var \
 		--with-session-socket-dir=/var/tmp \
 		--disable-doxygen-docs \
 		--disable-xml-docs
-CPPFLAGS=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
 
@@ -55,6 +55,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/lib/dbus/machine-id|/db/dbus/machine-id|g' \
 		${WRKSRC}/dbus/Makefile.in \
 		${WRKSRC}/tools/Makefile.in
+	@${REINPLACE_CMD} '/^SUBDIRS/,/^$$/ s|test||g' ${WRKSRC}/Makefile.in
 	@${REINPLACE_CMD} -e 's|THREAD_LIBS -lrt|THREAD_LIBS|g ; \
 		s|dummy man2html|dummy man2html_disable|g' \
 			${WRKSRC}/configure
