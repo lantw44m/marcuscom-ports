@@ -7,7 +7,7 @@
 
 PORTNAME=	gtk-vnc
 PORTVERSION=	0.4.3
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
@@ -15,6 +15,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC viewer widget for GTK+
 
 LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
+		gcrypt.18:${PORTSDIR}/security/libgcrypt \
 		sasl2.2:${PORTSDIR}/security/cyrus-sasl2
 
 CONFLICTS=	gtk-vnc-0.3.[0-9]*
