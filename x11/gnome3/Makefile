@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.26 2011/06/10 22:16:59 mezz Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.27 2011/07/02 09:41:59 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -23,6 +23,8 @@ RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		dconf:${PORTSDIR}/devel/dconf \
 		gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		gnome-themes-standard>=2.91.0:${PORTSDIR}/x11-themes/gnome-themes-standard \
+		gnome-icon-theme-extras>=3.0.0:${PORTSDIR}/misc/gnome-icon-theme-extras \
+		gnome-icon-theme-symbolic>=3.0.0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic \
 		gnome-keyring>=2.91.0:${PORTSDIR}/security/gnome-keyring3 \
 		gnome-power-manager>=2.91.0:${PORTSDIR}/sysutils/gnome-power-manager3 \
 		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
