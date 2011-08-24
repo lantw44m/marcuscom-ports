@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.25 2011/04/30 20:55:25 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.26 2011/05/14 11:41:22 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -13,26 +13,34 @@ upgrades.
   AUTHOR: gnome@FreeBSD.org
 
   GNOME 3.0 has been added to the ports tree.  GNOME 3.0 and 2.32 desktop
-  components are mutual exclusive. If you want to stick around with GNOME 2.32
-  The instructions are very simple.
+  components are mutual exclusive. There shouldn't be any issue running gtk2
+  applications with GNOME 3 or the other way around. 
 
-  # pkg_delete -f avahi-gtk-\* gtk-2.\* libchamplain-0.\*
-  # portmaster x11-toolkits/gtk20 net/avahi-gtk
-  # portmaster -r libproxy
+  The following instuctions are for people wanting to keep using GNOME 2.32.
+
+  # portmaster -o devel/libgdata06 devel/libgdata
+  # portmaster -o graphics/libchamplain08 graphics/libchamplain
+  # pkg_delete -f vte-0.\*
+  # portmaster x11-toolkits/vte
   # portmaster -a
 
-  If you want to start using the GNOME 3.0 desktop. you should follow the
-  instructions below. GNOME 3.0 is based on GTK 3, but Gtk 2 applications
-  should work without any problems with the GNOME 3 desktop.
-  However should you run into a application that won't compile or give any kind
-  of trouble let us know at gnome@FreeBSD.org and we will take a look at it.
+or
 
-  Switch GNOME 2.32 to GNOME 3.0 instructions:
+does portupgrade handle the extra avahi-header port in avahi-gtk correctly?
+
+  # portupgrade -o devel/libgdata06 devel/libgdata
+  # portupgrade -o graphics/libchamplain08 graphics/libchamplain
+  # pkg_delete -f vte-0.\*
+  # portinstall x11-toolkits/vte
+  # portupgrade -a
+
+  If you want to start using the GNOME 3.0 desktop. and you have currently
+  GNOME 2.32 installed please use the instructions below.
 
   Make a list of your installed ports.
 
-  # pkg_delete -fr gtk-2.\* gnome-\*
-  # portmaster -r libproxy
+  # pkg_delete -fr gnome-\*
+mention gnome-icon-* gnome-theme-*
   # portmaster -a
 
   Go to x11/gnome3 or x11/gnome3-lite and do make install clean.
