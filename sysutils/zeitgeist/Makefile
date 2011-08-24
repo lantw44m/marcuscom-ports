@@ -16,6 +16,7 @@ COMMENT=	Event logging framework - engine
 BUILD_DEPENDS=	rapper:${PORTSDIR}/textproc/raptor \
 		${PYTHON_SITELIBDIR}/rdflib/__init__.py:${PORTSDIR}/textproc/py-rdflib
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/rdflib/__init__.py:${PORTSDIR}/textproc/py-rdflib \
+		${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3 \
 		${LOCALBASE}/bin/dbus-daemon:${PORTSDIR}/devel/dbus
 
 USE_GNOME=	gnomehack intlhack
@@ -24,9 +25,8 @@ USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_GETTEXT=	yes
-#CONFIGURE_ARGS=	--disable-gtk-doc \
-#CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-#		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=	zeitgeist-daemon.1
 
