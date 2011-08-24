@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog-plugins3/Makefile,v 1.5 2011/06/10 22:59:04 mezz Exp $
+#   $MCom: ports/graphics/eog-plugins3/Makefile,v 1.6 2011/08/24 13:49:30 kwm Exp $
 #
 
 PORTNAME=	eog-plugins
@@ -36,7 +36,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 
 .if !defined(WITHOUT_CHAMPLAIN) || \
     (exists(${LOCALBASE}/lib/libchamplain-0.10.so)) || defined(WITH_CHAMPLIAN)
-LIB_DEPENDS+=	champlain-0.10.0:${PORTSDIR}/graphics/libchamplain010
+LIB_DEPENDS+=	champlain-0.10.0:${PORTSDIR}/graphics/libchamplain
 PLIST_SUB+=	CHAMPLAIN=""
 .else
 PLUST_SUB+=	CHAMPLAIN="@comment "
