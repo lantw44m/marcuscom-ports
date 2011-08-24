@@ -20,6 +20,7 @@ graphics/eog-plugins -> graphics/eog-plugins3
 graphics/evince -> graphics/evince3
 graphics/goocanvas -> graphics/goocanvas2
 graphics/goocanvasmm -> graphics/goocanvasmm2
+graphics/libchamplain -> graphics/libchamplain08
 mail/evolution -> mail/evolution3
 mail/evolution-exchange -> mail/evolution-exchange3
 mail/evolution-mapi -> mail/evolution-mapi3
