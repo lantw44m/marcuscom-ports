@@ -11,7 +11,7 @@ databases/libgda4-postgresql -> libgda5-postgresql
 deskutils/gnome-utils -> deskutils/gnome-utils3
 deskutils/gucharmap -> desktutils/gucharmap3
 devel/glade3 -> devel/glade
-devel/libgdata -> devel/libgdata08
+devel/libgdata -> devel/libgdata06
 editors/gedit -> editors/gedit3
 editors/gedit-plugins -> editors/gedit-plugins3
 games/gnome-games -> games/gnome-games3

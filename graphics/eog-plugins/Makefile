@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog-plugins/Makefile,v 1.16 2011/04/22 16:10:56 mezz Exp $
+#   $MCom: ports/graphics/eog-plugins/Makefile,v 1.17 2011/04/30 20:43:18 mezz Exp $
 #
 
 PORTNAME=	eog-plugins
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plug-ins for the Eye of GNOME image viewer application
 
 BUILD_DEPENDS=	eog:${PORTSDIR}/graphics/eog
-LIB_DEPENDS=	gdata.7:${PORTSDIR}/devel/libgdata
+LIB_DEPENDS=	gdata.7:${PORTSDIR}/devel/libgdata06
 RUN_DEPENDS=	eog:${PORTSDIR}/graphics/eog
 
 CONFLICTS=	eog-plugins-3.[0-9]*
