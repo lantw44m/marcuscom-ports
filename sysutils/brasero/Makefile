@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.87 2011/04/10 20:50:04 mezz Exp $
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.88 2011/05/29 05:20:56 marcus Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	2.32.1
@@ -72,5 +72,6 @@ post-patch:
 	    	${WRKSRC}/libbrasero-burn/burn-process.c
 	@${REINPLACE_CMD} -e 's|" == "|" = "|g' \
 		${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|/proc/self/fd/0|/dev/fd/0|g' ${WRKSRC}/po/*.po
 
 .include <bsd.port.post.mk>
