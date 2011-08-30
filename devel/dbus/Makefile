@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dbus/Makefile,v 1.49 2011/08/14 09:36:49 kwm Exp $
+#   $MCom: ports/devel/dbus/Makefile,v 1.50 2011/08/19 11:15:15 kwm Exp $
 #
 
 PORTNAME=	dbus
@@ -44,7 +44,7 @@ MAN1=		dbus-cleanup-sockets.1 dbus-daemon.1 dbus-launch.1 \
 		dbus-monitor.1 dbus-send.1 dbus-uuidgen.1
 
 .if !defined(WITHOUT_X11)
-USE_XORG=	x11
+USE_XORG=	ice sm x11
 .else
 CONFIGURE_ARGS+=--without-x
 .endif
