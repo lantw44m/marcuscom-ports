@@ -6,9 +6,9 @@
 #
 
 PORTNAME=	clutter-gtk
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.2
 CATEGORIES=	graphics
-MASTER_SITES=	http://source.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
+MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GTK+ Integration library for Clutter
@@ -16,7 +16,7 @@ COMMENT=	GTK+ Integration library for Clutter
 LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 
 LATEST_LINK=	clutter-gtk3
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
