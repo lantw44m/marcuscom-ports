@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.135 2011/04/10 19:28:35 mezz Exp $
+#   $MCom: ports/x11-toolkits/libwnck/Makefile,v 1.136 2011/04/30 20:43:32 mezz Exp $
 #
 
 PORTNAME=	libwnck
-PORTVERSION=	2.30.6
+PORTVERSION=	2.30.7
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library used for writing pagers and taskslists
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
@@ -27,7 +27,7 @@ RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 CONFLICTS=	libwnck-3.[0-9]*
 
 USE_GETTEXT=	yes
-USE_XORG=	xres
+USE_XORG=	xres x11
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gtk20 ltverhack referencehack intlhack
 USE_BISON=	build
