@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/net/vinagre3/Makefile,v 1.8 2011/05/15 12:19:35 kwm Exp $
+#  $MCom: ports/net/vinagre3/Makefile,v 1.9 2011/06/10 22:59:07 mezz Exp $
 #
 
 PORTNAME=	vinagre
-PORTVERSION=	3.0.1
+PORTVERSION=	3.0.2
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,7 +25,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 CONFLICTS=	vinagre-2.[0-9]*
 
 LATEST_LINK=	vinagre3
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 libxml2 vte3 \
 		gnomedocutils
@@ -48,7 +48,8 @@ OPTIONS=	TELEPATHY "Enable telepathy integration" on \
 .include <bsd.port.pre.mk>
 
 .if !defined(WITHOUT_TELEPATHY)
-LIB_DEPENDS+=	telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
+LIB_DEPENDS+=	telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 PLIST_SUB+=	TELEPATHY=""
 .else
 CONFIGURE_ARGS+=--without-telepathy

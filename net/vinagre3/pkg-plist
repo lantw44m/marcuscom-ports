@@ -38,6 +38,7 @@ lib/vinagre-3.0/plugins/ssh.plugin
 lib/vinagre-3.0/plugins/vnc.plugin
 libdata/pkgconfig/vinagre-3.0.pc
 %%PANEL%%libexec/vinagre-applet
+share/GConf/gsettings/org.gnome.Vinagre.convert
 share/applications/vinagre-file.desktop
 share/applications/vinagre.desktop
 %%TELEPATHY%%share/dbus-1/services/org.freedesktop.Telepathy.Client.Vinagre.service
