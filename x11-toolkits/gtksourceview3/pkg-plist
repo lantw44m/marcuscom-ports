@@ -1,4 +1,5 @@
 include/gtksourceview-3.0/gtksourceview/completion-providers/words/gtksourcecompletionwords.h
+include/gtksourceview-3.0/gtksourceview/gtksource.h
 include/gtksourceview-3.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-3.0/gtksourceview/gtksourcecompletion.h
 include/gtksourceview-3.0/gtksourceview/gtksourcecompletioncontext.h
