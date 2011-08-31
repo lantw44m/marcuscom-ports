@@ -2,6 +2,7 @@ bin/vino-passwd
 bin/vino-preferences
 etc/xdg/autostart/vino-server.desktop
 libexec/vino-server
+share/GConf/gsettings/org.gnome.Vino.convert
 share/applications/vino-preferences.desktop
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Vino.service
 share/locale/ar/LC_MESSAGES/vino.mo

@@ -3,12 +3,11 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino3/Makefile,v 1.11 2011/06/09 16:27:51 mezz Exp $
+#   $MCom: ports/net/vino3/Makefile,v 1.12 2011/06/10 22:59:07 mezz Exp $
 #
 
 PORTNAME=	vino
-PORTVERSION=	3.0.2
-PORTREVISION=	1
+PORTVERSION=	3.0.3
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,7 +25,7 @@ LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 CONFLICTS=	vino-2.[0-9]*
 
 LATEST_LINK=	vino3
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gtk30
 USE_XORG=	xdamage xfixes xtst
