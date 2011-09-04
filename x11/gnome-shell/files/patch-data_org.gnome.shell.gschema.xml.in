@@ -1,0 +1,11 @@
+--- data/org.gnome.shell.gschema.xml.in.orig	2011-09-02 12:44:15.000000000 +0200
++++ data/org.gnome.shell.gschema.xml.in	2011-09-04 19:13:22.000000000 +0200
+@@ -30,7 +30,7 @@
+       </_description>
+     </key>
+     <key name="favorite-apps" type="as">
+-      <default>[ 'mozilla-firefox.desktop', 'evolution.desktop', 'empathy.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'openoffice.org-writer.desktop', 'nautilus.desktop' ]</default>
++      <default>[ 'epiphany.desktop', 'evolution.desktop', 'empathy.desktop', 'rhythmbox.desktop', 'shotwell.desktop', 'openoffice.org-writer.desktop', 'nautilus.desktop' ]</default>
+       <_summary>List of desktop file IDs for favorite applications</_summary>
+       <_description>
+         The applications corresponding to these identifiers
