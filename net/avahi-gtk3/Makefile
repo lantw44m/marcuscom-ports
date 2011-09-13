@@ -3,10 +3,10 @@
 # Whom:					Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-gtk3/Makefile,v 1.4 2011/04/05 10:34:45 kwm Exp $
+#   $MCom: ports/net/avahi-gtk3/Makefile,v 1.5 2011/08/11 19:48:47 kwm Exp $
 #
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	net
 PKGNAMESUFFIX=	-gtk3
 

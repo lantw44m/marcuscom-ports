@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-app/Makefile,v 1.19 2011/03/31 02:01:43 mezz Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.20 2011/04/05 10:34:44 kwm Exp $
 #
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.30
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 PKGNAMESUFFIX?=	-app
@@ -23,7 +23,7 @@ BUILD_DEPENDS?=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS?=	expat.6:${PORTSDIR}/textproc/expat2 \
 		daemon.0:${PORTSDIR}/devel/libdaemon \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		gdbm.3:${PORTSDIR}/databases/gdbm
+		gdbm.4:${PORTSDIR}/databases/gdbm
 RUN_DEPENDS?=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 USE_GNOME?=	gnomehack ltverhack glib20 intltool
