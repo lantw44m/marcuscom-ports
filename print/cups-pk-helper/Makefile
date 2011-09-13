@@ -2,12 +2,11 @@
 # Date created:		2009-12-29
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/print/cups-pk-helper/Makefile,v 1.5 2010/07/25 23:03:46 linimon Exp $
-#   $MCom: ports/print/cups-pk-helper/Makefile,v 1.4 2011/06/08 15:02:14 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/print/cups-pk-helper/Makefile,v 1.5 2011/06/11 04:47:01 mezz Exp $
 
 PORTNAME=	cups-pk-helper
-PORTVERSION=	0.1.2
-PORTREVISION=	1
+PORTVERSION=	0.1.3
 CATEGORIES=	print
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/releases/
 
