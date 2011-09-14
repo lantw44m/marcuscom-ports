@@ -152,7 +152,6 @@ share/doc/cally/CallyText.html
 share/doc/cally/CallyTexture.html
 share/doc/cally/CallyUtil.html
 share/doc/cally/cally-General-API.html
-share/doc/cally/cally.devhelp
 share/doc/cally/cally.devhelp2
 share/doc/cally/callybase.html
 share/doc/cally/callyobjecthierarchy.html
@@ -278,7 +277,6 @@ share/doc/cally/up.png
 %%DOCSDIR%%/clutter-animations.html
 %%DOCSDIR%%/clutter-overview.html
 %%DOCSDIR%%/clutter-subclassing-ClutterActor.html
-%%DOCSDIR%%/clutter.devhelp
 %%DOCSDIR%%/clutter.devhelp2
 %%DOCSDIR%%/clutteranimation.html
 %%DOCSDIR%%/clutterbackends.html
@@ -350,7 +348,6 @@ share/doc/cogl/cogl-Textures.html
 share/doc/cogl/cogl-Vectors.html
 share/doc/cogl/cogl-Vertex-Buffers-(Deprecated).html
 share/doc/cogl/cogl-Vertex-Buffers.html
-share/doc/cogl/cogl.devhelp
 share/doc/cogl/cogl.devhelp2
 share/doc/cogl/cogl_ortho.png
 share/doc/cogl/coglglossary.html
