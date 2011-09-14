@@ -2,7 +2,6 @@ bin/gnome-screensaver
 bin/gnome-screensaver-command
 etc/pam.d/gnome-screensaver
 etc/xdg/autostart/gnome-screensaver.desktop
-libdata/pkgconfig/gnome-screensaver.pc
 libexec/gnome-screensaver-dialog
 share/locale/af/LC_MESSAGES/gnome-screensaver.mo
 share/locale/ar/LC_MESSAGES/gnome-screensaver.mo

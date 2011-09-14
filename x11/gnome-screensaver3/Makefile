@@ -3,12 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.15 2011/06/10 21:14:06 mezz Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.16 2011/06/10 22:59:10 mezz Exp $
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	3.0.0
-PORTREVISION=	1
+PORTVERSION=	3.0.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,7 +23,7 @@ RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
 CONFLICTS=	gnome-screensaver-2.[0-9]*
 
 LATEST_LINK=	gnome-screensaver3
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
