@@ -3,10 +3,10 @@
 # Whom:					fenner
 #
 # $FreeBSD$
-#    $MCom: ports/textproc/gtk-doc/Makefile,v 1.11 2011/05/02 00:41:18 mezz Exp $
+#    $MCom: ports/textproc/gtk-doc/Makefile,v 1.12 2011/08/11 19:48:48 kwm Exp $
 
 PORTNAME=	gtk-doc
-PORTVERSION=	1.17
+PORTVERSION=	1.18
 CATEGORIES=	textproc
 MASTER_SITES=	GNOME
 
@@ -28,7 +28,7 @@ CATALOG_DIR=		${PREFIX}/share/sgml/${PORTNAME}
 XMLCATMGR=		${LOCALBASE}/bin/xmlcatmgr
 CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_PERL5=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes

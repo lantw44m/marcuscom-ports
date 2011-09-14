@@ -26,7 +26,6 @@ share/gnome/help/gtk-doc-manual/sl/gtk-doc-manual.xml
 share/gnome/help/gtk-doc-manual/sv/gtk-doc-manual.xml
 share/gnome/help/gtk-doc-manual/ta/gtk-doc-manual.xml
 share/gnome/help/gtk-doc-manual/te/gtk-doc-manual.xml
-%%DATADIR%%/data/devhelp.xsl
 %%DATADIR%%/data/devhelp2.xsl
 %%DATADIR%%/data/gtk-doc.dcl
 %%DATADIR%%/data/gtk-doc.dsl
