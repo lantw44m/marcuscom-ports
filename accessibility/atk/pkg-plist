@@ -28,6 +28,7 @@ include/atk-1.0/atk/atktable.h
 include/atk-1.0/atk/atktext.h
 include/atk-1.0/atk/atkutil.h
 include/atk-1.0/atk/atkvalue.h
+include/atk-1.0/atk/atkwindow.h
 lib/girepository-1.0/Atk-1.0.typelib
 lib/libatk-1.0.a
 lib/libatk-1.0.la
