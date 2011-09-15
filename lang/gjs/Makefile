@@ -3,11 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/gjs/Makefile,v 1.17 2011/03/13 20:23:45 kwm Exp $
+#   $MCom: ports/lang/gjs/Makefile,v 1.18 2011/04/05 10:40:31 kwm Exp $
 #
 
 PORTNAME=	gjs
-PORTVERSION=	0.7.14
+PORTVERSION=	1.29.17
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
 USE_GECKO=	libxul
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_PYTHON=	build
