@@ -3,11 +3,11 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.48 2011/06/14 15:47:17 kwm Exp $
+#  $MCom: ports/graphics/clutter/Makefile,v 1.49 2011/09/14 20:55:53 kwm Exp $
 #
 
 PORTNAME=	clutter
-PORTVERSION=	1.6.18
+PORTVERSION=	1.6.20
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
