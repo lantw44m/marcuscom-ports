@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/vala/Makefile,v 1.54 2011/04/04 08:51:58 kwm Exp $
+#   $MCom: ports/lang/vala/Makefile,v 1.55 2011/06/02 12:10:13 kwm Exp $
 #
 
 PORTNAME=	vala
-PORTVERSION=	0.12.1
+PORTVERSION=	0.13.4
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -24,14 +24,14 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}" LDFLAGS="-L${LOCALBASE}/lib"
 USE_BISON=	build
 USE_LDCONFIG=	yes
 
-MAN1?=		valac.1 valac-0.12.1
+MAN1?=		valac.1 valac-0.14.1
 
-PLIST_SUB=	VERSION=0.12
+PLIST_SUB=	VERSION=0.14
 
 .include <bsd.port.pre.mk>
 
 .if defined(VALA_SLAVE)
-LIB_DEPENDS+=	vala-0.12.0:${PORTSDIR}/lang/vala
+LIB_DEPENDS+=	vala-0.14.0:${PORTSDIR}/lang/vala
 CONFIGURE_ARGS+=--enable-vapigen
 BUILD_DEPENDS+=	${SITE_PERL}/${PERL_ARCH}/XML/LibXML.pm:${PORTSDIR}/textproc/p5-XML-LibXML
 RUN_DEPENDS+=	${SITE_PERL}/${PERL_ARCH}/XML/LibXML.pm:${PORTSDIR}/textproc/p5-XML-LibXML
@@ -44,11 +44,11 @@ post-patch:
 # We cheat here, because vala records vapigen related stuff in its .pc file
 # This makes the vapigen work again, although it might get weird when
 # vala-vapigen isn't installed.
-	@${REINPLACE_CMD} -e 's|@vapigen_decl@|vapigen=$${bindir}/vapigen-0.12|g' \
-		-e 's|@gen_introspect_decl@|gen_introspect=$${libdir}/vala-0.12/gen-introspect-0.12|g' \
-		-e 's|@vala_gen_introspect_decl@|vala_gen_introspect=$${bindir}/vala-gen-introspect-0.12|g' \
+	@${REINPLACE_CMD} -e 's|@vapigen_decl@|vapigen=$${bindir}/vapigen-0.14|g' \
+		-e 's|@gen_introspect_decl@|gen_introspect=$${libdir}/vala-0.14/gen-introspect-0.14|g' \
+		-e 's|@vala_gen_introspect_decl@|vala_gen_introspect=$${bindir}/vala-gen-introspect-0.14|g' \
 		${WRKSRC}/libvala.pc.in
-	@${REINPLACE_CMD} -e 's|cp $$< $$@|cp libvala.pc libvala-0.12.pc|g' \
+	@${REINPLACE_CMD} -e 's|cp $$< $$@|cp libvala.pc libvala-0.14.pc|g' \
 		${WRKSRC}/Makefile.in
 
 .if defined(VALA_SLAVE)
@@ -64,7 +64,7 @@ post-install:
 .else
 # want to see what will fail.
 post-install:
-	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-0.12.pc \
+	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-0.14.pc \
 		${PREFIX}/libdata/pkgconfig/vala-1.0.pc
 .endif
 

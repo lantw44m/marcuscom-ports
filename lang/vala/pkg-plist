@@ -73,6 +73,8 @@ share/devhelp/books/vala-%%VERSION%%/vala.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/gdu.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gedit-2.20.deps
 %%DATADIR%%-%%VERSION%%/vapi/gedit-2.20.vapi
+%%DATADIR%%-%%VERSION%%/vapi/gedit.deps
+%%DATADIR%%-%%VERSION%%/vapi/gedit.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gio-2.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gio-unix-2.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/gio-unix-2.0.vapi
@@ -135,6 +137,8 @@ share/devhelp/books/vala-%%VERSION%%/vala.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/gtkmozembed.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gtksourceview-2.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/gtksourceview-2.0.vapi
+%%DATADIR%%-%%VERSION%%/vapi/gtksourceview-3.0.deps
+%%DATADIR%%-%%VERSION%%/vapi/gtksourceview-3.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gudev-1.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/gudev-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/hal.deps
@@ -178,6 +182,7 @@ share/devhelp/books/vala-%%VERSION%%/vala.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/libosso.vapi
 %%DATADIR%%-%%VERSION%%/vapi/libpanelapplet-2.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/libpanelapplet-2.0.vapi
+%%DATADIR%%-%%VERSION%%/vapi/libpeas-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/libpq.vapi
 %%DATADIR%%-%%VERSION%%/vapi/librsvg-2.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/librsvg-2.0.vapi
@@ -217,6 +222,7 @@ share/devhelp/books/vala-%%VERSION%%/vala.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/readline.vapi
 %%DATADIR%%-%%VERSION%%/vapi/rest-0.6.deps
 %%DATADIR%%-%%VERSION%%/vapi/rest-0.6.vapi
+%%DATADIR%%-%%VERSION%%/vapi/rest-0.7.vapi
 %%DATADIR%%-%%VERSION%%/vapi/rest-extras-0.6.deps
 %%DATADIR%%-%%VERSION%%/vapi/rest-extras-0.6.vapi
 %%DATADIR%%-%%VERSION%%/vapi/sdl-gfx.deps
@@ -240,6 +246,8 @@ share/devhelp/books/vala-%%VERSION%%/vala.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/unique-1.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/unique-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/v4l2.vapi
+%%DATADIR%%-%%VERSION%%/vapi/vte-2.90.deps
+%%DATADIR%%-%%VERSION%%/vapi/vte-2.90.vapi
 %%DATADIR%%-%%VERSION%%/vapi/vte.deps
 %%DATADIR%%-%%VERSION%%/vapi/vte.vapi
 %%DATADIR%%-%%VERSION%%/vapi/webkit-1.0.deps
