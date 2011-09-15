@@ -3,7 +3,7 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom$
+#  $MCom: ports/graphics/cogl/Makefile,v 1.1 2011/09/15 17:54:58 kwm Exp $
 #
 
 PORTNAME=	cogl
@@ -12,7 +12,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	OpenGL based interactive canvas library
+COMMENT=	Clutter OpenGL abstraction library
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
