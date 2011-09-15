@@ -3,7 +3,7 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/cogl/Makefile,v 1.1 2011/09/15 17:54:58 kwm Exp $
+#  $MCom: ports/graphics/cogl/Makefile,v 1.2 2011/09/15 17:55:50 kwm Exp $
 #
 
 PORTNAME=	cogl
@@ -18,7 +18,6 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	json-glib-1.0.0:${PORTSDIR}/devel/json-glib
 
 CONFLICTS=	clutter-1.6.[0-9]*
 
