@@ -1,6 +1,6 @@
---- ggio/unixmounts.c.orig	2008-03-10 20:31:58.000000000 -0400
-+++ gio/gunixmounts.c	2008-03-19 22:31:23.000000000 -0400
-@@ -128,6 +128,9 @@ struct _GUnixMountMonitor {
+--- gio/gunixmounts.c.orig	2011-09-05 05:34:35.000000000 +0200
++++ gio/gunixmounts.c	2011-09-15 17:39:22.000000000 +0200
+@@ -153,6 +153,9 @@ struct _GUnixMountMonitor {
  
    GFileMonitor *fstab_monitor;
    GFileMonitor *mtab_monitor;
@@ -10,7 +10,7 @@
  };
  
  struct _GUnixMountMonitorClass {
-@@ -139,6 +142,8 @@ static GUnixMountMonitor *the_mount_moni
+@@ -164,6 +167,8 @@ static GUnixMountMonitor *the_mount_moni
  static GList *_g_get_unix_mounts (void);
  static GList *_g_get_unix_mount_points (void);
  
@@ -19,15 +19,15 @@
  G_DEFINE_TYPE (GUnixMountMonitor, g_unix_mount_monitor, G_TYPE_OBJECT);
  
  #define MOUNT_POLL_INTERVAL 4000
-@@ -165,6 +170,7 @@ G_DEFINE_TYPE (GUnixMountMonitor, g_unix
+@@ -190,6 +195,7 @@ G_DEFINE_TYPE (GUnixMountMonitor, g_unix
  #endif
  
- #if defined(HAVE_GETMNTINFO) && defined(HAVE_FSTAB_H) && defined(HAVE_SYS_MOUNT_H)
+ #if (defined(HAVE_GETVFSSTAT) || defined(HAVE_GETFSSTAT)) && defined(HAVE_FSTAB_H) && defined(HAVE_SYS_MOUNT_H)
 +#include <sys/param.h>
  #include <sys/ucred.h>
  #include <sys/mount.h>
  #include <fstab.h>
-@@ -215,20 +221,28 @@ g_unix_is_mount_path_system_internal (co
+@@ -240,22 +246,30 @@ g_unix_is_mount_path_system_internal (co
      "/",              /* we already have "Filesystem root" in Nautilus */ 
      "/bin",
      "/boot",
@@ -39,6 +39,8 @@
      "/lib",
      "/lib64",
 +    "/libexec",
+     "/live/cow",
+     "/live/image",
      "/media",
      "/mnt",
      "/opt",
@@ -54,9 +56,17 @@
 +    "/usr/ports",
 +    "/usr/src",
      "/var",
-     "/var/log/audit", /* https://bugzilla.redhat.com/show_bug.cgi?id=333041 */
-     "/var/tmp",       /* https://bugzilla.redhat.com/show_bug.cgi?id=335241 */
-@@ -988,6 +1002,10 @@ get_mounts_timestamp (void)
+     "/var/crash",
+     "/var/local",
+@@ -1033,6 +1047,7 @@ _g_get_unix_mount_points (void)
+   
+ #ifdef HAVE_SYS_SYSCTL_H
+ #if defined(HAVE_SYSCTLBYNAME)
++  size_t len = sizeof(usermnt);
+   sysctlbyname ("vfs.usermount", &usermnt, &len, NULL, 0);
+ #elif defined(CTL_VFS) && defined(VFS_USERMOUNT)
+   {
+@@ -1108,6 +1123,10 @@ get_mounts_timestamp (void)
        if (stat (monitor_file, &buf) == 0)
  	return (guint64)buf.st_mtime;
      }
@@ -67,7 +77,7 @@
    return 0;
  }
  
-@@ -1129,6 +1147,13 @@ g_unix_mount_monitor_finalize (GObject *
+@@ -1250,6 +1269,13 @@ g_unix_mount_monitor_finalize (GObject *
        g_object_unref (monitor->mtab_monitor);
      }
  
@@ -79,9 +89,9 @@
 +    }
 +
    the_mount_monitor = NULL;
-   
-   if (G_OBJECT_CLASS (g_unix_mount_monitor_parent_class)->finalize)
-@@ -1206,6 +1231,51 @@ mtab_file_changed (GFileMonitor      *mo
+ 
+   G_OBJECT_CLASS (g_unix_mount_monitor_parent_class)->finalize (object);
+@@ -1330,6 +1356,51 @@ mtab_file_changed (GFileMonitor      *mo
    g_signal_emit (mount_monitor, signals[MOUNTS_CHANGED], 0);
  }
  
@@ -133,7 +143,7 @@
  static void
  g_unix_mount_monitor_init (GUnixMountMonitor *monitor)
  {
-@@ -1228,6 +1298,12 @@ g_unix_mount_monitor_init (GUnixMountMon
+@@ -1352,6 +1423,12 @@ g_unix_mount_monitor_init (GUnixMountMon
        
        g_signal_connect (monitor->mtab_monitor, "changed", (GCallback)mtab_file_changed, monitor);
      }

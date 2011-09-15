@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.208 2011/06/06 13:37:22 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.209 2011/06/11 19:51:14 mezz Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
-PORTVERSION=	2.28.8
+PORTVERSION=	2.29.90
 PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
@@ -39,7 +39,7 @@ USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack pkgconfig ltverhack
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
-USE_PYTHON=	yes
+USE_PYTHON=	2.5+
 USE_PERL5=	yes
 CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu \
 		--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc \

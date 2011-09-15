@@ -1,15 +1,15 @@
---- glib/Makefile.in.orig	2010-08-08 12:46:01.000000000 +0200
-+++ glib/Makefile.in	2010-08-08 12:46:01.000000000 +0200
-@@ -529,7 +529,7 @@ BUILT_SOURCES = glibconfig-stamp $(am__a
+--- glib/Makefile.in.orig	2011-09-15 17:08:59.000000000 +0200
++++ glib/Makefile.in	2011-09-15 17:10:38.000000000 +0200
+@@ -542,7 +542,7 @@ BUILT_SOURCES = glibconfig-stamp $(am__a
  #
  DISTCLEANFILES = glibconfig-stamp glibconfig.h
- CLEANFILES = $(am__append_2)
+ CLEANFILES = glib-public-headers.txt $(am__append_3)
 -configexecincludedir = $(libdir)/glib-2.0/include
 +configexecincludedir = $(includedir)/glib-2.0
  nodist_configexecinclude_HEADERS = glibconfig.h
  @HAVE_GOOD_PRINTF_FALSE@PRINTF_SUBDIR = gnulib
  @HAVE_GOOD_PRINTF_FALSE@printf_la = gnulib/libgnulib.la
-@@ -1530,7 +1530,7 @@ info: info-recursive
+@@ -1481,7 +1481,7 @@ info: info-recursive
  
  info-am:
  
@@ -18,7 +18,7 @@
  	install-glibincludeHEADERS install-glibsubincludeHEADERS \
  	install-tapsetDATA
  	@$(NORMAL_INSTALL)
-@@ -1786,9 +1786,7 @@ distclean-local:
+@@ -1774,9 +1774,7 @@ distclean-local:
  libglib-gdb.py: libglib-gdb.py.in
  	$(AM_V_GEN) $(SED) -e "s|\@datadir\@|$(datadir)|" $(srcdir)/libglib-gdb.py.in > libglib-gdb.py
  
