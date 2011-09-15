@@ -36,6 +36,7 @@ include/telepathy-1.0/telepathy-glib/account-channel-request.h
 include/telepathy-1.0/telepathy-glib/account-manager.h
 include/telepathy-1.0/telepathy-glib/account.h
 include/telepathy-1.0/telepathy-glib/add-dispatch-operation-context.h
+include/telepathy-1.0/telepathy-glib/automatic-client-factory.h
 include/telepathy-1.0/telepathy-glib/automatic-proxy-factory.h
 include/telepathy-1.0/telepathy-glib/base-channel.h
 include/telepathy-1.0/telepathy-glib/base-client.h
@@ -57,8 +58,10 @@ include/telepathy-1.0/telepathy-glib/client-channel-factory.h
 include/telepathy-1.0/telepathy-glib/client-message.h
 include/telepathy-1.0/telepathy-glib/client.h
 include/telepathy-1.0/telepathy-glib/cm-message.h
+include/telepathy-1.0/telepathy-glib/connection-contact-list.h
 include/telepathy-1.0/telepathy-glib/connection-manager.h
 include/telepathy-1.0/telepathy-glib/connection.h
+include/telepathy-1.0/telepathy-glib/contact-operations.h
 include/telepathy-1.0/telepathy-glib/contact-search-result.h
 include/telepathy-1.0/telepathy-glib/contact-search.h
 include/telepathy-1.0/telepathy-glib/contact.h
@@ -74,6 +77,7 @@ include/telepathy-1.0/telepathy-glib/dtmf.h
 include/telepathy-1.0/telepathy-glib/enums.h
 include/telepathy-1.0/telepathy-glib/errors.h
 include/telepathy-1.0/telepathy-glib/exportable-channel.h
+include/telepathy-1.0/telepathy-glib/file-transfer-channel.h
 include/telepathy-1.0/telepathy-glib/gnio-util.h
 include/telepathy-1.0/telepathy-glib/group-mixin.h
 include/telepathy-1.0/telepathy-glib/gtypes.h
@@ -97,6 +101,7 @@ include/telepathy-1.0/telepathy-glib/proxy.h
 include/telepathy-1.0/telepathy-glib/run.h
 include/telepathy-1.0/telepathy-glib/signalled-message.h
 include/telepathy-1.0/telepathy-glib/simple-approver.h
+include/telepathy-1.0/telepathy-glib/simple-client-factory.h
 include/telepathy-1.0/telepathy-glib/simple-handler.h
 include/telepathy-1.0/telepathy-glib/simple-observer.h
 include/telepathy-1.0/telepathy-glib/simple-password-manager.h
@@ -139,6 +144,7 @@ share/gtk-doc/html/telepathy-glib/TpChannelManager.html
 share/gtk-doc/html/telepathy-glib/TpClientMessage.html
 share/gtk-doc/html/telepathy-glib/TpDynamicHandleRepo.html
 share/gtk-doc/html/telepathy-glib/TpExportableChannel.html
+share/gtk-doc/html/telepathy-glib/TpIntset.html
 share/gtk-doc/html/telepathy-glib/TpMessage.html
 share/gtk-doc/html/telepathy-glib/TpSignalledMessage.html
 share/gtk-doc/html/telepathy-glib/TpStaticHandleRepo.html
@@ -160,7 +166,6 @@ share/gtk-doc/html/telepathy-glib/style.css
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpContactsMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpGroupMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpHeap.html
-share/gtk-doc/html/telepathy-glib/telepathy-glib-TpIntset.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpMessageMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpPresenceMixin.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-TpPropertiesMixin.html
@@ -170,6 +175,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-account-manager.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-account.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-add-dispatch-operation-context.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-asv.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-automatic-client-factory.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-automatic-proxy-factory.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-base-client.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-base-contact-list.html
@@ -223,6 +229,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-defs.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-dtmf.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-enums.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-errors.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-file-transfer-channel.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-gnio-util.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-gtypes.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-handle-channels-context.html
@@ -238,6 +245,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-proxy-tp-properties.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-proxy.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-run.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-simple-approver.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-simple-client-factory.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-simple-handler.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-simple-observer.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-simple-password-manager.html

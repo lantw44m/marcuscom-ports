@@ -3,26 +3,21 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.29 2011/04/23 08:15:48 kwm Exp $
+#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.30 2011/05/28 13:18:18 kwm Exp $
 
 PORTNAME=	telepathy-glib
-PORTVERSION=	0.14.6
+PORTVERSION=	0.15.5
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GLib utility library for the Telepathy framework
 
-LIB_PC_DEPENDS=	gobject-2.0.pc:${PORTSDIR}/devel/glib20 \
-		dbus-glib-1.pc:${PORTSDIR}/devel/dbus-glib
-
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
-		vapigen-0.12:${PORTSDIR}/lang/vala-vapigen \
+		vala-vapigen>=0.13.4:${PORTSDIR}/lang/vala-vapigen \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-
-BUILD_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
-RUN_DEPENDS+=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g} \
-		vapigen-0.12:${PORTSDIR}/lang/vala-vapigen
+LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+RUN_DEPENDS+=	vapigen:${PORTSDIR}/lang/vala-vapigen
 
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
