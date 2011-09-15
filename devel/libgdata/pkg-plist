@@ -22,13 +22,19 @@ include/libgdata/gdata/gd/gdata-gd-where.h
 include/libgdata/gdata/gd/gdata-gd-who.h
 include/libgdata/gdata/gdata-access-handler.h
 include/libgdata/gdata/gdata-access-rule.h
+include/libgdata/gdata/gdata-authorization-domain.h
+include/libgdata/gdata/gdata-authorizer.h
 include/libgdata/gdata/gdata-batch-operation.h
 include/libgdata/gdata/gdata-batchable.h
+include/libgdata/gdata/gdata-client-login-authorizer.h
+include/libgdata/gdata/gdata-comment.h
+include/libgdata/gdata/gdata-commentable.h
 include/libgdata/gdata/gdata-comparable.h
 include/libgdata/gdata/gdata-download-stream.h
 include/libgdata/gdata/gdata-entry.h
 include/libgdata/gdata/gdata-enums.h
 include/libgdata/gdata/gdata-feed.h
+include/libgdata/gdata/gdata-oauth1-authorizer.h
 include/libgdata/gdata/gdata-parsable.h
 include/libgdata/gdata/gdata-query.h
 include/libgdata/gdata/gdata-service.h
@@ -60,6 +66,7 @@ include/libgdata/gdata/services/documents/gdata-documents-service.h
 include/libgdata/gdata/services/documents/gdata-documents-spreadsheet.h
 include/libgdata/gdata/services/documents/gdata-documents-text.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-album.h
+include/libgdata/gdata/services/picasaweb/gdata-picasaweb-comment.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-enums.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-feed.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-file.h
@@ -68,6 +75,7 @@ include/libgdata/gdata/services/picasaweb/gdata-picasaweb-service.h
 include/libgdata/gdata/services/picasaweb/gdata-picasaweb-user.h
 include/libgdata/gdata/services/youtube/gdata-youtube-category.h
 include/libgdata/gdata/services/youtube/gdata-youtube-content.h
+include/libgdata/gdata/services/youtube/gdata-youtube-comment.h
 include/libgdata/gdata/services/youtube/gdata-youtube-credit.h
 include/libgdata/gdata/services/youtube/gdata-youtube-enums.h
 include/libgdata/gdata/services/youtube/gdata-youtube-query.h
@@ -78,12 +86,14 @@ lib/girepository-1.0/GData-0.0.typelib
 lib/libgdata.a
 lib/libgdata.la
 lib/libgdata.so
-lib/libgdata.so.11
+lib/libgdata.so.13
 libdata/pkgconfig/libgdata.pc
 share/doc/gdata/GDataAPPCategories.html
 share/doc/gdata/GDataAccessHandler.html
 share/doc/gdata/GDataAccessRule.html
 share/doc/gdata/GDataAuthor.html
+share/doc/gdata/GDataAuthorizationDomain.html
+share/doc/gdata/GDataAuthorizer.html
 share/doc/gdata/GDataBatchOperation.html
 share/doc/gdata/GDataBatchable.html
 share/doc/gdata/GDataCalendarCalendar.html
@@ -92,6 +102,9 @@ share/doc/gdata/GDataCalendarFeed.html
 share/doc/gdata/GDataCalendarQuery.html
 share/doc/gdata/GDataCalendarService.html
 share/doc/gdata/GDataCategory.html
+share/doc/gdata/GDataClientLoginAuthorizer.html
+share/doc/gdata/GDataComment.html
+share/doc/gdata/GDataCommentable.html
 share/doc/gdata/GDataComparable.html
 share/doc/gdata/GDataContactsContact.html
 share/doc/gdata/GDataContactsGroup.html
@@ -132,8 +145,10 @@ share/doc/gdata/GDataMediaCategory.html
 share/doc/gdata/GDataMediaContent.html
 share/doc/gdata/GDataMediaCredit.html
 share/doc/gdata/GDataMediaThumbnail.html
+share/doc/gdata/GDataOAuth1Authorizer.html
 share/doc/gdata/GDataParsable.html
 share/doc/gdata/GDataPicasaWebAlbum.html
+share/doc/gdata/GDataPicasaWebComment.html
 share/doc/gdata/GDataPicasaWebFeed.html
 share/doc/gdata/GDataPicasaWebFile.html
 share/doc/gdata/GDataPicasaWebQuery.html
@@ -143,6 +158,7 @@ share/doc/gdata/GDataQuery.html
 share/doc/gdata/GDataService.html
 share/doc/gdata/GDataUploadStream.html
 share/doc/gdata/GDataYouTubeCategory.html
+share/doc/gdata/GDataYouTubeComment.html
 share/doc/gdata/GDataYouTubeContent.html
 share/doc/gdata/GDataYouTubeCredit.html
 share/doc/gdata/GDataYouTubeQuery.html
@@ -168,11 +184,12 @@ share/doc/gdata/ch12.html
 share/doc/gdata/ch13.html
 share/doc/gdata/ch14.html
 share/doc/gdata/ch15.html
+share/doc/gdata/ch16.html
+share/doc/gdata/ch17.html
 share/doc/gdata/data-flow.png
 share/doc/gdata/gdata-GData-Types.html
 share/doc/gdata/gdata-overview.html
 share/doc/gdata/gdata-running.html
-share/doc/gdata/gdata.devhelp
 share/doc/gdata/gdata.devhelp2
 share/doc/gdata/home.png
 share/doc/gdata/index.html
@@ -185,6 +202,9 @@ share/doc/gdata/ix07.html
 share/doc/gdata/ix08.html
 share/doc/gdata/ix09.html
 share/doc/gdata/ix10.html
+share/doc/gdata/ix11.html
+share/doc/gdata/ix12.html
+share/doc/gdata/ix13.html
 share/doc/gdata/left.png
 share/doc/gdata/pt01.html
 share/doc/gdata/pt02.html
@@ -196,6 +216,7 @@ share/doc/gdata/structure.png
 share/doc/gdata/style.css
 share/doc/gdata/up.png
 share/gir-1.0/GData-0.0.gir
+share/locale/as/LC_MESSAGES/gdata.mo
 share/locale/bg/LC_MESSAGES/gdata.mo
 share/locale/bn_IN/LC_MESSAGES/gdata.mo
 share/locale/ca/LC_MESSAGES/gdata.mo
@@ -205,18 +226,24 @@ share/locale/da/LC_MESSAGES/gdata.mo
 share/locale/de/LC_MESSAGES/gdata.mo
 share/locale/el/LC_MESSAGES/gdata.mo
 share/locale/en_GB/LC_MESSAGES/gdata.mo
+share/locale/eo/LC_MESSAGES/gdata.mo
 share/locale/es/LC_MESSAGES/gdata.mo
 share/locale/eu/LC_MESSAGES/gdata.mo
+share/locale/fi/LC_MESSAGES/gdata.mo
 share/locale/fr/LC_MESSAGES/gdata.mo
 share/locale/gl/LC_MESSAGES/gdata.mo
 share/locale/gu/LC_MESSAGES/gdata.mo
+share/locale/he/LC_MESSAGES/gdata.mo
+share/locale/hi/LC_MESSAGES/gdata.mo
 share/locale/hu/LC_MESSAGES/gdata.mo
 share/locale/id/LC_MESSAGES/gdata.mo
 share/locale/it/LC_MESSAGES/gdata.mo
 share/locale/ja/LC_MESSAGES/gdata.mo
+share/locale/kn/LC_MESSAGES/gdata.mo
 share/locale/ko/LC_MESSAGES/gdata.mo
 share/locale/lt/LC_MESSAGES/gdata.mo
 share/locale/lv/LC_MESSAGES/gdata.mo
+share/locale/mr/LC_MESSAGES/gdata.mo
 share/locale/nb/LC_MESSAGES/gdata.mo
 share/locale/or/LC_MESSAGES/gdata.mo
 share/locale/pa/LC_MESSAGES/gdata.mo
@@ -226,7 +253,12 @@ share/locale/pt_BR/LC_MESSAGES/gdata.mo
 share/locale/ro/LC_MESSAGES/gdata.mo
 share/locale/ru/LC_MESSAGES/gdata.mo
 share/locale/sl/LC_MESSAGES/gdata.mo
+share/locale/sr/LC_MESSAGES/gdata.mo
+share/locale/sr@latin/LC_MESSAGES/gdata.mo
 share/locale/sv/LC_MESSAGES/gdata.mo
+share/locale/ta/LC_MESSAGES/gdata.mo
+share/locale/th/LC_MESSAGES/gdata.mo
+share/locale/tr/LC_MESSAGES/gdata.mo
 share/locale/ug/LC_MESSAGES/gdata.mo
 share/locale/uk/LC_MESSAGES/gdata.mo
 share/locale/zh_CN/LC_MESSAGES/gdata.mo
@@ -240,6 +272,12 @@ share/locale/zh_TW/LC_MESSAGES/gdata.mo
 @dirrmtry share/locale/uk
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/sr/LC_MESSAGES
+@dirrmtry share/locale/sr
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/gl/LC_MESSAGES
 @dirrmtry share/locale/gl
 @dirrmtry share/locale/el/LC_MESSAGES
@@ -250,6 +288,8 @@ share/locale/zh_TW/LC_MESSAGES/gdata.mo
 @dirrmtry share/locale/ca
 @dirrmtry share/locale/ba_IN/LC_MESSAGES
 @dirrmtry share/locale/ba_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrm share/doc/gdata
 @dirrm include/libgdata/gdata/services/youtube
 @dirrm include/libgdata/gdata/services/picasaweb
