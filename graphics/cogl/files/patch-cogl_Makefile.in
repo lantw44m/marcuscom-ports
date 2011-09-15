@@ -1,0 +1,11 @@
+--- cogl/Makefile.in.orig	2011-09-15 19:41:54.000000000 +0200
++++ cogl/Makefile.in	2011-09-15 19:42:09.000000000 +0200
+@@ -110,7 +110,7 @@ DIST_COMMON = $(am__coglinclude_HEADERS_
+ @SUPPORT_EGL_TRUE@       $(srcdir)/winsys/cogl-winsys-egl-feature-functions.h \
+ @SUPPORT_EGL_TRUE@       $(srcdir)/winsys/cogl-winsys-egl-private.h
+ 
+-@SUPPORT_GLX_TRUE@am__append_11 = -ldl
++@SUPPORT_GLX_TRUE@am__append_11 =
+ @HAVE_INTROSPECTION_TRUE@am__append_12 = Cogl-1.0.gir
+ @HAVE_INTROSPECTION_TRUE@am__append_13 = $(gir_DATA) $(typelib_DATA)
+ subdir = cogl
