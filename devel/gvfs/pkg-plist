@@ -3,6 +3,7 @@ bin/gvfs-copy
 bin/gvfs-info
 bin/gvfs-less
 bin/gvfs-ls
+bin/gvfs-mime
 bin/gvfs-mkdir
 bin/gvfs-monitor-dir
 bin/gvfs-monitor-file
@@ -28,6 +29,8 @@ lib/gio/modules/libgvfsdbus.so
 lib/libgvfscommon.la
 lib/libgvfscommon.so
 lib/libgvfscommon.so.0
+libexec/gvfsd-afp
+libexec/gvfsd-afp-browse
 %%FUSE%%libexec/gvfs-fuse-daemon
 %%GPHOTO2%%libexec/gvfs-gphoto2-volume-monitor
 %%HAL%%libexec/gvfs-hal-volume-monitor
@@ -54,6 +57,8 @@ share/dbus-1/services/gvfs-daemon.service
 share/dbus-1/services/gvfs-metadata.service
 %%GPHOTO2%%share/dbus-1/services/org.gtk.Private.GPhoto2VolumeMonitor.service
 %%HAL%%share/dbus-1/services/org.gtk.Private.HalVolumeMonitor.service
+share/gvfs/mounts/afp-browse.mount
+share/gvfs/mounts/afp.mount
 %%DATADIR%%/mounts/archive.mount
 %%DATADIR%%/mounts/burn.mount
 %%CDDA%%%%DATADIR%%/mounts/cdda.mount
@@ -76,6 +81,7 @@ share/locale/af/LC_MESSAGES/gvfs.mo
 share/locale/ar/LC_MESSAGES/gvfs.mo
 share/locale/as/LC_MESSAGES/gvfs.mo
 share/locale/ast/LC_MESSAGES/gvfs.mo
+share/locale/be/LC_MESSAGES/gvfs.mo
 share/locale/be@latin/LC_MESSAGES/gvfs.mo
 share/locale/bg/LC_MESSAGES/gvfs.mo
 share/locale/bn/LC_MESSAGES/gvfs.mo

@@ -3,23 +3,24 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.76 2011/06/11 19:51:15 mezz Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.77 2011/06/24 03:00:22 mezz Exp $
 #
 
 PORTNAME=	gvfs
-PORTVERSION=	1.8.2
+PORTVERSION=	1.9.5
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
-DIST_SUBDIR=	gnome2
+DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME virtual file system
 
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
+		gcrypt.18:${PORTSDIR}/security/libcrypt \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GNOME=	glib20 gnomehack gnomeprefix intlhack intltool
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
@@ -28,6 +29,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--disable-obexftp
+
 OPTIONS=	FUSE "Enable fuse" off \
 		AVAHI "Enable AVAHI" on \
 		SAMBA "Enable Samba" on \
