@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.550 2011/06/26 10:59:39 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.551 2011/08/09 06:54:37 marcus Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -550,7 +550,7 @@ evolutiondataserver_DETECT=		${LOCALBASE}/libdata/pkgconfig/evolution-data-serve
 evolutiondataserver_USE_GNOME_IMPL=gconf2 libxml2
 evolutiondataserver_GNOME_DESKTOP_VERSION=2
 
-evolutiondataserver3_LIB_DEPENDS=	edataserverui-3.0.0:${PORTSDIR}/databases/evolution-data-server3
+evolutiondataserver3_LIB_DEPENDS=	edataserverui-3.0.1:${PORTSDIR}/databases/evolution-data-server3
 evolutiondataserver3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libedataserverui-3.0.pc
 evolutiondataserver3_USE_GNOME_IMPL=	gconf2 libxml2 gtk30
 evolutiondataserver3_GNOME_DESKTOP_VERSION=3

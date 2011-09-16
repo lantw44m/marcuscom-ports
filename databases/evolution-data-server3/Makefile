@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.17 2011/08/24 13:49:29 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.18 2011/08/31 14:13:41 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.0.3
+PORTVERSION=	3.1.91
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,7 +19,9 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
-		gdata.11:${PORTSDIR}/devel/libgdata \
+		oauth.8:${PORTSDIR}/net/liboauth \
+		goa-1.0.0:${PORTSDIR}/net/gnome-online-accounts \
+		gdata.13:${PORTSDIR}/devel/libgdata \
 		ical.44:${PORTSDIR}/devel/libical \
 		nss3.1:${PORTSDIR}/security/nss \
 		tasn1.4:${PORTSDIR}/security/libtasn1 \
@@ -46,7 +48,7 @@ CONFIGURE_ARGS=	--enable-static \
 CPPFLAGS=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 
-PLIST_SUB=	VERSION="3.0" EVO_VERSION="1.2"
+PLIST_SUB=	VERSION="3.2" EVO_VERSION="1.2"
 
 #OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
 OPTIONS+=	WEATHER 	"Enable weather calendar backend"	on \
