@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/graphics/colord/Makefile,v 1.1 2011/09/16 18:52:30 kwm Exp $
 #
 
 PORTNAME=	colord
