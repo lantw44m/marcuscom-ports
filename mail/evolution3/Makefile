@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.15 2011/05/24 15:27:17 kwm Exp $
+#   $MCom: ports/mail/evolution3/Makefile,v 1.16 2011/08/31 14:39:00 kwm Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	3.0.3
+PORTVERSION=	3.1.91
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,6 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An integrated mail, calendar and address book distributed suite
 
 LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss \
+		goa-1.0.0:${PORTSDIR}/net/gnome-online-accounts \
 		unique-3.0.0:${PORTSDIR}/x11-toolkits/libunique3 \
 		notify.4:${PORTSDIR}/devel/libnotify
 
@@ -52,10 +53,11 @@ GCONF_SCHEMAS=	apps_evolution_addressbook.schemas \
 		apps-evolution-mail-prompts-checkdefault.schemas \
 		apps_evolution_shell.schemas \
 		apps-evolution-template-placeholders.schemas \
-		bogo-junk-plugin.schemas \
-		evolution-mail.schemas
+		evolution-bogofilter.schemas \
+		evolution-mail.schemas \
+		evolution-spamassassin.schemas
 
-EVO_VERSION=	3.0
+EVO_VERSION=	3.2
 PLIST_SUB=	VERSION=${EVO_VERSION} \
 		PORTVERSION=2.12
 
@@ -117,9 +119,8 @@ post-patch:
 		-e 's|-Wmissing-include-dirs||g' \
 	    	${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/usr|${LOCALBASE}|g' \
-		${WRKSRC}/plugins/bogo-junk-plugin/bf-junk-filter.c
-	@${REINPLACE_CMD} -e 's|/usr/sbin|${LOCALBASE}/bin|g' \
-		${WRKSRC}/plugins/sa-junk-plugin/em-junk-filter.c
+		${WRKSRC}/modules/spamassassin/evolution-spamassassin.c \
+		${WRKSRC}/modules/bogofilter/evolution-bogofilter.c
 	@${SH} ${FILESDIR}/fix-plugins.sh ${WRKSRC}
 
 .include <bsd.port.post.mk>
