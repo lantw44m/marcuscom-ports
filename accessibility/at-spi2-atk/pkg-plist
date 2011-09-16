@@ -5,13 +5,16 @@ lib/gtk-2.0/modules/libatk-bridge.so
 lib/gtk-3.0/modules/libatk-bridge.a
 lib/gtk-3.0/modules/libatk-bridge.la
 lib/gtk-3.0/modules/libatk-bridge.so
+share/locale/an/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ar/LC_MESSAGES/at-spi2-atk.mo
 share/locale/as/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ast/LC_MESSAGES/at-spi2-atk.mo
+share/locale/be/LC_MESSAGES/at-spi2-atk.mo
 share/locale/bg/LC_MESSAGES/at-spi2-atk.mo
 share/locale/bn/LC_MESSAGES/at-spi2-atk.mo
 share/locale/bn_IN/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ca/LC_MESSAGES/at-spi2-atk.mo
+share/locale/ca@valencia/LC_MESSAGES/at-spi2-atk.mo
 share/locale/cs/LC_MESSAGES/at-spi2-atk.mo
 share/locale/cy/LC_MESSAGES/at-spi2-atk.mo
 share/locale/da/LC_MESSAGES/at-spi2-atk.mo
@@ -82,9 +85,13 @@ share/locale/zh_TW/LC_MESSAGES/at-spi2-atk.mo
 @dirrmtry share/locale/fy
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
 @dirrmtry share/locale/en@shaw
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/ast/LC_MESSAGES
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/locale/an/LC_MESSAGES
+@dirrmtry share/locale/an
