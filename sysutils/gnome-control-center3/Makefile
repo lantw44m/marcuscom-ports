@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.27 2011/06/10 21:14:05 mezz Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.28 2011/06/10 22:59:08 mezz Exp $
 #
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.0.2
-PORTREVISION=	3
+PORTVERSION=	3.1.91
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,16 +15,20 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Control center for GNOME 3 project
 
-BUILD_DEPENDS=	gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
+BUILD_DEPENDS=	gnome-settings-daemon>=3.1.90:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
+		gsettings-desktop-schemas>=3.1.2:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		xklavier.12:${PORTSDIR}/x11/libxklavier \
 		upower-glib.1:${PORTSDIR}/sysutils/upower \
+		colord.1:${PORTSDIR}/graphics/colord \
+		goa-1.0.0:${PORTSDIR}/net/gnome-online-accounts \
 		gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
-		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
+		gnome-settings-daemon>=3.1.90:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
+		gsettings-desktop-schemas>=3.1.2:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		glxinfo:${PORTSDIR}/graphics/mesa-demos \
 		apg:${PORTSDIR}/security/apg \
@@ -34,7 +37,7 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 CONFLICTS=	gnome-control-center-2.[0-9]* gnome-media-2.[0-9]*
 
 LATEST_LINK=	gnome-control-center3
-USE_BZIP2=	yes
+USE_XZ=	yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 WANT_GNOME=	yes

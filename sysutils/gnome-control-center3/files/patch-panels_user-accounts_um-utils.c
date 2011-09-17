@@ -1,6 +1,6 @@
---- panels/user-accounts/um-account-dialog.c.orig	2011-01-21 09:07:21.000000000 +0100
-+++ panels/user-accounts/um-account-dialog.c	2011-01-21 09:16:37.000000000 +0100
-@@ -24,7 +24,16 @@
+--- panels/user-accounts/um-utils.c.orig	2011-09-17 14:55:58.000000000 +0200
++++ panels/user-accounts/um-utils.c	2011-09-17 14:57:01.000000000 +0200
+@@ -25,7 +25,16 @@
  #include <stdlib.h>
  #include <sys/types.h>
  #include <pwd.h>

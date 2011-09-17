@@ -2,13 +2,12 @@ bin/gnome-control-center
 bin/gnome-sound-applet
 etc/xdg/autostart/gnome-sound-applet.desktop
 etc/xdg/menus/gnomecc.menu
-include/gnome-control-center-1/libgnome-control-center/cc-lockbutton.h
-include/gnome-control-center-1/libgnome-control-center/cc-panel.h
-include/gnome-control-center-1/libgnome-control-center/cc-shell.h
-include/gnome-control-center-1/libgnome-control-center/gconf-property-editor.h
 lib/control-center-1/panels/libbackground.a
 lib/control-center-1/panels/libbackground.la
 lib/control-center-1/panels/libbackground.so
+lib/control-center-1/panels/libcolor.a
+lib/control-center-1/panels/libcolor.la
+lib/control-center-1/panels/libcolor.so
 lib/control-center-1/panels/libdate_time.a
 lib/control-center-1/panels/libdate_time.la
 lib/control-center-1/panels/libdate_time.so
@@ -27,6 +26,9 @@ lib/control-center-1/panels/libmedia.so
 lib/control-center-1/panels/libmouse-properties.a
 lib/control-center-1/panels/libmouse-properties.la
 lib/control-center-1/panels/libmouse-properties.so
+lib/control-center-1/panels/libonline-accounts.a
+lib/control-center-1/panels/libonline-accounts.la
+lib/control-center-1/panels/libonline-accounts.so
 lib/control-center-1/panels/libpower.a
 lib/control-center-1/panels/libpower.la
 lib/control-center-1/panels/libpower.so
@@ -48,12 +50,15 @@ lib/control-center-1/panels/libuniversal-access.so
 lib/control-center-1/panels/libuser-accounts.a
 lib/control-center-1/panels/libuser-accounts.la
 lib/control-center-1/panels/libuser-accounts.so
+lib/control-center-1/panels/libwacom-properties.a
+lib/control-center-1/panels/libwacom-properties.la
+lib/control-center-1/panels/libwacom-properties.so
 lib/libgnome-control-center.la
 lib/libgnome-control-center.so
 lib/libgnome-control-center.so.1
 libdata/pkgconfig/gnome-keybindings.pc
-libdata/pkgconfig/libgnome-control-center.pc
 share/applications/gnome-background-panel.desktop
+share/applications/gnome-color-panel.desktop
 share/applications/gnome-control-center.desktop
 share/applications/gnome-datetime-panel.desktop
 share/applications/gnome-display-panel.desktop
@@ -61,6 +66,7 @@ share/applications/gnome-info-panel.desktop
 share/applications/gnome-keyboard-panel.desktop
 share/applications/gnome-media-panel.desktop
 share/applications/gnome-mouse-panel.desktop
+share/applications/gnome-online-accounts-panel.desktop
 %%CUPS%%share/applications/gnome-printers-panel.desktop
 share/applications/gnome-power-panel.desktop
 share/applications/gnome-region-panel.desktop
@@ -68,6 +74,7 @@ share/applications/gnome-screen-panel.desktop
 share/applications/gnome-sound-panel.desktop
 share/applications/gnome-universal-access-panel.desktop
 share/applications/gnome-user-accounts-panel.desktop
+share/applications/gnome-wacom-panel.desktop
 share/desktop-directories/gnomecc.directory
 share/pixmaps/faces/astronaut.jpg
 share/pixmaps/faces/baseball.png
@@ -164,11 +171,14 @@ share/pixmaps/faces/yellow-rose.jpg
 %%DATADIR%%/pixmaps/right-ring-finger.svg
 %%DATADIR%%/pixmaps/right-thumb.png
 %%DATADIR%%/pixmaps/right-thumb.svg
+%%DATADIR%%/pixmaps/wacom-stylus.png
+%%DATADIR%%/pixmaps/wacom-tablet.png
 %%DATADIR%%/sounds/gnome-sounds-default.xml
 %%DATADIR%%/ui/GnomeLogoVerticalMedium.svg
 %%DATADIR%%/ui/background/background.ui
 %%DATADIR%%/ui/background/display-base.png
 %%DATADIR%%/ui/background/display-overlay.png
+%%DATADIR%%/ui/color.ui
 %%DATADIR%%/ui/datetime/bg.png
 %%DATADIR%%/ui/datetime/cc.png
 %%DATADIR%%/ui/datetime/datetime.ui
@@ -220,8 +230,11 @@ share/pixmaps/faces/yellow-rose.jpg
 %%DATADIR%%/ui/gnome-region-panel-layout-chooser.ui
 %%DATADIR%%/ui/gnome-region-panel-options-dialog.ui
 %%DATADIR%%/ui/gnome-region-panel.ui
+%%DATADIR%%/ui/gnome-wacom-properties.ui
 %%DATADIR%%/ui/info.ui
+%%DATADIR%%/ui/language-chooser.ui
 %%CUPS%%%%DATADIR%%/ui/printers/new-printer-dialog.ui
+%%DATADIR%%/ui/online-accounts.ui
 %%CUPS%%%%DATADIR%%/ui/printers/printers.ui
 %%DATADIR%%/ui/power.ui
 %%DATADIR%%/ui/screen.ui
@@ -229,7 +242,6 @@ share/pixmaps/faces/yellow-rose.jpg
 %%DATADIR%%/ui/uap.ui
 %%DATADIR%%/ui/user-accounts/account-dialog.ui
 %%DATADIR%%/ui/user-accounts/account-fingerprint.ui
-%%DATADIR%%/ui/user-accounts/language-chooser.ui
 %%DATADIR%%/ui/user-accounts/password-dialog.ui
 %%DATADIR%%/ui/user-accounts/photo-dialog.ui
 %%DATADIR%%/ui/user-accounts/user-accounts-dialog.ui
@@ -272,25 +284,45 @@ share/gnome/help/control-center/vi/control-center.xml
 share/gnome/help/control-center/zh_CN/control-center.xml
 share/gnome/help/control-center/zh_HK/control-center.xml
 share/gnome/help/control-center/zh_TW/control-center.xml
+share/icons/hicolor/16x16/apps/gnome-power-manager.png
+share/icons/hicolor/16x16/apps/goa-panel.png
 share/icons/hicolor/16x16/apps/multimedia-volume-control.png
 share/icons/hicolor/16x16/apps/multimedia-volume-control.svg
+share/icons/hicolor/16x16/apps/preferences-color.png
 share/icons/hicolor/16x16/apps/preferences-desktop-display.png
 share/icons/hicolor/16x16/apps/preferences-system-time.png
+share/icons/hicolor/22x22/apps/gnome-power-manager.png
+share/icons/hicolor/22x22/apps/goa-panel.png
 share/icons/hicolor/22x22/apps/multimedia-volume-control.png
 share/icons/hicolor/22x22/apps/multimedia-volume-control.svg
+share/icons/hicolor/22x22/apps/preferences-color.png
 share/icons/hicolor/22x22/apps/preferences-desktop-display.png
 share/icons/hicolor/22x22/apps/preferences-system-time.png
+share/icons/hicolor/24x24/apps/gnome-power-manager.png
+share/icons/hicolor/24x24/apps/goa-panel.png
 share/icons/hicolor/24x24/apps/multimedia-volume-control.png
+share/icons/hicolor/24x24/apps/preferences-color.png
 share/icons/hicolor/24x24/apps/preferences-desktop-display.png
+share/icons/hicolor/256x256/apps/gnome-power-manager.png
+share/icons/hicolor/256x256/apps/goa-panel.png
+share/icons/hicolor/256x256/apps/preferences-color.png
 share/icons/hicolor/256x256/apps/preferences-system-time.png
+share/icons/hicolor/32x32/apps/gnome-power-manager.png
+share/icons/hicolor/32x32/apps/goa-panel.png
 share/icons/hicolor/32x32/apps/multimedia-volume-control.png
 share/icons/hicolor/32x32/apps/multimedia-volume-control.svg
+share/icons/hicolor/32x32/apps/preferences-color.png
 share/icons/hicolor/32x32/apps/preferences-desktop-display.png
 share/icons/hicolor/32x32/apps/preferences-system-time.png
+share/icons/hicolor/48x48/apps/gnome-power-manager.png
+share/icons/hicolor/48x48/apps/goa-panel.png
 share/icons/hicolor/48x48/apps/multimedia-volume-control.png
+share/icons/hicolor/48x48/apps/preferences-color.png
 share/icons/hicolor/48x48/apps/preferences-system-time.png
 share/icons/hicolor/48x48/devices/audio-headset.svg
+share/icons/hicolor/64x64/apps/preferences-color.png
 share/icons/hicolor/scalable/apps/multimedia-volume-control.svg
+share/icons/hicolor/scalable/apps/preferences-color.svg
 share/icons/hicolor/scalable/apps/preferences-desktop-display.svg
 share/icons/hicolor/scalable/apps/preferences-system-time.svg
 share/icons/hicolor/scalable/categories/slideshow-symbolic.svg
@@ -410,7 +442,6 @@ share/locale/nl/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/nl/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/nn/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/nn/LC_MESSAGES/gnome-control-center-2.0.mo
-share/locale/no/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/nso/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/oc/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/or/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
@@ -554,8 +585,6 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrmtry share/applications
 @dirrm lib/control-center-1/panels
 @dirrm lib/control-center-1
-@dirrm include/gnome-control-center-1/libgnome-control-center
-@dirrm include/gnome-control-center-1
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zu/LC_MESSAGES
