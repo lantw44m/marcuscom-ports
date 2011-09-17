@@ -3,17 +3,20 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp3/Makefile,v 1.16 2011/06/10 22:59:11 mezz Exp $
+#   $MCom: ports/x11/yelp3/Makefile,v 1.17 2011/06/25 09:08:46 kwm Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	3.0.4
+PORTVERSION=	3.1.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A help browser for the GNOME 3 desktop
+
+LICENSE=	GPLv2
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/textproc/yelp-xsl
 LIB_DEPENDS=	webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3
@@ -22,8 +25,6 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/textproc/yel
 CONFLICTS=	yelp-2.[0-9]*
 
 LATEST_LINK=	yelp3
-LICENSE=	GPLv2
-LICENSE_FILE=	${WRKSRC}/COPYING
 USE_GETTEXT=	yes
 USE_XZ=		yes
 USE_XORG=	x11 ice
@@ -34,8 +35,6 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
-
-GLIB_SCHEMAS=	org.gnome.yelp.gschema.xml
 
 .include <bsd.port.pre.mk>
 

@@ -41,7 +41,6 @@ share/doc/libyelp/object-tree.html
 share/doc/libyelp/right.png
 share/doc/libyelp/style.css
 share/doc/libyelp/up.png
-share/icons/hicolor/192x192/apps/yelp-icon-big.png
 share/locale/af/LC_MESSAGES/yelp.mo
 share/locale/am/LC_MESSAGES/yelp.mo
 share/locale/ar/LC_MESSAGES/yelp.mo
@@ -142,7 +141,6 @@ share/locale/zh_CN/LC_MESSAGES/yelp.mo
 share/locale/zh_HK/LC_MESSAGES/yelp.mo
 share/locale/zh_TW/LC_MESSAGES/yelp.mo
 share/locale/zu/LC_MESSAGES/yelp.mo
-%%DATADIR%%/default.css
 %%DATADIR%%/dtd/catalog
 %%DATADIR%%/dtd/docbookx.dtd
 %%DATADIR%%/dtd/isoamsa.ent
@@ -178,33 +176,14 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 %%DATADIR%%/icons/hicolor/scalable/status/yelp-page-tip-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/status/yelp-page-ui-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/status/yelp-page-video-symbolic.svg
-%%DATADIR%%/icons/yelp-icon-caution.png
-%%DATADIR%%/icons/yelp-icon-important.png
-%%DATADIR%%/icons/yelp-icon-note.png
-%%DATADIR%%/icons/yelp-icon-tip.png
-%%DATADIR%%/icons/yelp-icon-warning.png
-%%DATADIR%%/icons/yelp-watermark-blockquote-00AB.png
-%%DATADIR%%/icons/yelp-watermark-blockquote-00BB.png
-%%DATADIR%%/icons/yelp-watermark-blockquote-201C.png
-%%DATADIR%%/icons/yelp-watermark-blockquote-201D.png
-%%DATADIR%%/icons/yelp-watermark-blockquote-201E.png
-%%DATADIR%%/jquery-1.4.2.min.js
-%%DATADIR%%/jquery-ui-1.8.custom.min.js
-%%DATADIR%%/important_docs.xml
-%%DATADIR%%/info.xml
-%%DATADIR%%/man.xml
-%%DATADIR%%/scrollkeeper.xml
-%%DATADIR%%/toc.xml
-%%DATADIR%%/xslt/db-title.xsl
+%%DATADIR%%/js/jquery-ui-1.8.custom.min.js
 %%DATADIR%%/xslt/db2html.xsl
 %%DATADIR%%/xslt/info2html.xsl
 %%DATADIR%%/xslt/mal2html.xsl
 %%DATADIR%%/xslt/man2html.xsl
-%%DATADIR%%/xslt/search2html.xsl
-%%DATADIR%%/xslt/toc2html.xsl
 %%DATADIR%%/xslt/yelp-common.xsl
-%%DATADIR%%/yelp.js
 @dirrm %%DATADIR%%/xslt
+@dirrm %%DATADIR%%/js
 @dirrm %%DATADIR%%/icons/hicolor/scalable/status
 @dirrm %%DATADIR%%/icons/hicolor/scalable/actions
 @dirrm %%DATADIR%%/icons/hicolor/scalable
