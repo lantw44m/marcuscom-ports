@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.209 2011/06/11 19:51:14 mezz Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.210 2011/09/15 15:56:29 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
@@ -31,7 +31,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS+=	pcre.0:${PORTSDIR}/devel/pcre
+LIB_DEPENDS+=	pcre.0:${PORTSDIR}/devel/pcre \
+		ffi.5:${PORTSDIR}/devel/libffi
 
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
