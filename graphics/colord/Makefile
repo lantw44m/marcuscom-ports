@@ -3,11 +3,12 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/colord/Makefile,v 1.1 2011/09/16 18:52:30 kwm Exp $
+#    $MCom: ports/graphics/colord/Makefile,v 1.2 2011/09/16 18:57:16 kwm Exp $
 #
 
 PORTNAME=	colord
 PORTVERSION=	0.1.12
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 
