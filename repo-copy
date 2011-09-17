@@ -8,6 +8,7 @@ databases/libgda4-jdbc -> libgda5-jdbc
 databases/libgda4-mdb -> libgda5-mdb
 databases/libgda4-mysql -> libgda5-mysql
 databases/libgda4-postgresql -> libgda5-postgresql
+devel/py-gobject -> devel/py-gobject3
 deskutils/gnome-utils -> deskutils/gnome-utils3
 deskutils/gucharmap -> desktutils/gucharmap3
 devel/glade3 -> devel/glade
@@ -15,6 +16,7 @@ devel/libgdata -> devel/libgdata06
 editors/gedit -> editors/gedit3
 editors/gedit-plugins -> editors/gedit-plugins3
 games/gnome-games -> games/gnome-games3
+graphics/clutter -> graphics/cogl
 graphics/eog -> graphics/eog3
 graphics/eog-plugins -> graphics/eog-plugins3
 graphics/evince -> graphics/evince3
