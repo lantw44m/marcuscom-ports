@@ -1,0 +1,104 @@
+include/pygobject-3.0/pygobject.h
+lib/libpyglib-gi-2.0-python2.7.la
+lib/libpyglib-gi-2.0-python2.7.so
+lib/libpyglib-gi-2.0-python2.7.so.0
+lib/python2.7/site-packages/gi/__init__.py
+lib/python2.7/site-packages/gi/__init__.pyc
+lib/python2.7/site-packages/gi/__init__.pyo
+lib/python2.7/site-packages/gi/_gi.la
+lib/python2.7/site-packages/gi/_gi.so
+lib/python2.7/site-packages/gi/_gi_cairo.la
+lib/python2.7/site-packages/gi/_gi_cairo.so
+lib/python2.7/site-packages/gi/_glib/__init__.py
+lib/python2.7/site-packages/gi/_glib/__init__.pyc
+lib/python2.7/site-packages/gi/_glib/__init__.pyo
+lib/python2.7/site-packages/gi/_glib/_glib.la
+lib/python2.7/site-packages/gi/_glib/_glib.so
+lib/python2.7/site-packages/gi/_glib/option.py
+lib/python2.7/site-packages/gi/_glib/option.pyc
+lib/python2.7/site-packages/gi/_glib/option.pyo
+lib/python2.7/site-packages/gi/_gobject/__init__.py
+lib/python2.7/site-packages/gi/_gobject/__init__.pyc
+lib/python2.7/site-packages/gi/_gobject/__init__.pyo
+lib/python2.7/site-packages/gi/_gobject/_gobject.la
+lib/python2.7/site-packages/gi/_gobject/_gobject.so
+lib/python2.7/site-packages/gi/_gobject/constants.py
+lib/python2.7/site-packages/gi/_gobject/constants.pyc
+lib/python2.7/site-packages/gi/_gobject/constants.pyo
+lib/python2.7/site-packages/gi/_gobject/propertyhelper.py
+lib/python2.7/site-packages/gi/_gobject/propertyhelper.pyc
+lib/python2.7/site-packages/gi/_gobject/propertyhelper.pyo
+lib/python2.7/site-packages/gi/importer.py
+lib/python2.7/site-packages/gi/importer.pyc
+lib/python2.7/site-packages/gi/importer.pyo
+lib/python2.7/site-packages/gi/module.py
+lib/python2.7/site-packages/gi/module.pyc
+lib/python2.7/site-packages/gi/module.pyo
+lib/python2.7/site-packages/gi/overrides/GIMarshallingTests.py
+lib/python2.7/site-packages/gi/overrides/GIMarshallingTests.pyc
+lib/python2.7/site-packages/gi/overrides/GIMarshallingTests.pyo
+lib/python2.7/site-packages/gi/overrides/GLib.py
+lib/python2.7/site-packages/gi/overrides/GLib.pyc
+lib/python2.7/site-packages/gi/overrides/GLib.pyo
+lib/python2.7/site-packages/gi/overrides/Gdk.py
+lib/python2.7/site-packages/gi/overrides/Gdk.pyc
+lib/python2.7/site-packages/gi/overrides/Gdk.pyo
+lib/python2.7/site-packages/gi/overrides/Gio.py
+lib/python2.7/site-packages/gi/overrides/Gio.pyc
+lib/python2.7/site-packages/gi/overrides/Gio.pyo
+lib/python2.7/site-packages/gi/overrides/Gtk.py
+lib/python2.7/site-packages/gi/overrides/Gtk.pyc
+lib/python2.7/site-packages/gi/overrides/Gtk.pyo
+lib/python2.7/site-packages/gi/overrides/Pango.py
+lib/python2.7/site-packages/gi/overrides/Pango.pyc
+lib/python2.7/site-packages/gi/overrides/Pango.pyo
+lib/python2.7/site-packages/gi/overrides/__init__.py
+lib/python2.7/site-packages/gi/overrides/__init__.pyc
+lib/python2.7/site-packages/gi/overrides/__init__.pyo
+lib/python2.7/site-packages/gi/overrides/keysyms.py
+lib/python2.7/site-packages/gi/overrides/keysyms.pyc
+lib/python2.7/site-packages/gi/overrides/keysyms.pyo
+lib/python2.7/site-packages/gi/repository/__init__.py
+lib/python2.7/site-packages/gi/repository/__init__.pyc
+lib/python2.7/site-packages/gi/repository/__init__.pyo
+lib/python2.7/site-packages/gi/types.py
+lib/python2.7/site-packages/gi/types.pyc
+lib/python2.7/site-packages/gi/types.pyo
+lib/python2.7/site-packages/gtk-2.0/dsextras.py
+lib/python2.7/site-packages/gtk-2.0/dsextras.pyc
+lib/python2.7/site-packages/gtk-2.0/dsextras.pyo
+libdata/pkgconfig/pygobject-3.0.pc
+share/doc/pygobject/class-glibmaincontext.html
+share/doc/pygobject/class-glibmainloop.html
+share/doc/pygobject/class-gobject.html
+share/doc/pygobject/class-gobjectgboxed.html
+share/doc/pygobject/class-gobjectginterface.html
+share/doc/pygobject/class-gobjectgpointer.html
+share/doc/pygobject/glib-class-reference.html
+share/doc/pygobject/glib-constants.html
+share/doc/pygobject/glib-functions.html
+share/doc/pygobject/gobject-class-reference.html
+share/doc/pygobject/gobject-constants.html
+share/doc/pygobject/gobject-functions.html
+share/doc/pygobject/index.html
+share/doc/pygobject/index.sgml
+share/doc/pygobject/pygobject-introduction.html
+share/doc/pygobject/pygobject.devhelp
+share/doc/pygobject/style.css
+share/pygobject/xsl/common.xsl
+share/pygobject/xsl/devhelp.xsl
+share/pygobject/xsl/fixxref.py
+share/pygobject/xsl/html.xsl
+share/pygobject/xsl/pdf-style.xsl
+share/pygobject/xsl/pdf.xsl
+share/pygobject/xsl/ref-html-style.xsl
+@dirrm share/pygobject/xsl
+@dirrm share/pygobject
+@dirrm share/doc/pygobject
+@dirrmtry %%PYTHON_SITELIBDIR%%/gtk-2.0
+@dirrm %%PYTHON_SITELIBDIR%%/gi/repository
+@dirrm %%PYTHON_SITELIBDIR%%/gi/overrides
+@dirrm %%PYTHON_SITELIBDIR%%/gi/_gobject
+@dirrm %%PYTHON_SITELIBDIR%%/gi/_glib
+@dirrm %%PYTHON_SITELIBDIR%%/gi
+@dirrmtry include/pygobject-3.0
