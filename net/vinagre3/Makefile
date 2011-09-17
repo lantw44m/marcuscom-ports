@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/net/vinagre3/Makefile,v 1.9 2011/06/10 22:59:07 mezz Exp $
+#  $MCom: ports/net/vinagre3/Makefile,v 1.10 2011/08/31 08:29:21 kwm Exp $
 #
 
 PORTNAME=	vinagre
@@ -19,6 +19,7 @@ LIB_DEPENDS=	gtk-vnc-2.0.0:${PORTSDIR}/net/gtk-vnc3 \
 		peas-1.0.0:${PORTSDIR}/devel/libpeas \
     		avahi-core.7:${PORTSDIR}/net/avahi-app \
 		avahi-ui-gtk3.0:${PORTSDIR}/net/avahi-gtk3 \
+		gdbm.4:${PORTSDIR}/databases/gdbm \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
