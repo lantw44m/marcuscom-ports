@@ -543,6 +543,7 @@ share/icons/gnome/16x16/devices/gtk-floppy.png
 share/icons/gnome/16x16/devices/gtk-harddisk.png
 share/icons/gnome/16x16/devices/harddrive.png
 share/icons/gnome/16x16/devices/hdd_unmount.png
+share/icons/gnome/16x16/devices/input-dialpad.png
 share/icons/gnome/16x16/devices/input-gaming.png
 share/icons/gnome/16x16/devices/input-keyboard.png
 share/icons/gnome/16x16/devices/input-mouse.png
@@ -557,6 +558,7 @@ share/icons/gnome/16x16/devices/media-cdrom.png
 share/icons/gnome/16x16/devices/media-flash.png
 share/icons/gnome/16x16/devices/media-floppy.png
 share/icons/gnome/16x16/devices/media-optical.png
+share/icons/gnome/16x16/devices/media-removable.png
 share/icons/gnome/16x16/devices/media-tape.png
 share/icons/gnome/16x16/devices/modem.png
 share/icons/gnome/16x16/devices/mouse.png
@@ -566,6 +568,7 @@ share/icons/gnome/16x16/devices/network-wired.png
 share/icons/gnome/16x16/devices/network-wireless.png
 share/icons/gnome/16x16/devices/pda.png
 share/icons/gnome/16x16/devices/phone.png
+share/icons/gnome/16x16/devices/printer-network.png
 share/icons/gnome/16x16/devices/printer-remote.png
 share/icons/gnome/16x16/devices/printer.png
 share/icons/gnome/16x16/devices/printer1.png
@@ -950,6 +953,7 @@ share/icons/gnome/16x16/status/nm-adhoc.png
 share/icons/gnome/16x16/status/nm-device-wired.png
 share/icons/gnome/16x16/status/nm-device-wireless.png
 share/icons/gnome/16x16/status/nm-no-connection.png
+share/icons/gnome/16x16/status/non-starred.png
 share/icons/gnome/16x16/status/printer-error.png
 share/icons/gnome/16x16/status/printer-printing.png
 share/icons/gnome/16x16/status/security-high.png
@@ -957,6 +961,7 @@ share/icons/gnome/16x16/status/security-low.png
 share/icons/gnome/16x16/status/security-medium.png
 share/icons/gnome/16x16/status/software-update-available.png
 share/icons/gnome/16x16/status/software-update-urgent.png
+share/icons/gnome/16x16/status/starred.png
 share/icons/gnome/16x16/status/stock_appointment-reminder-excl.png
 share/icons/gnome/16x16/status/stock_appointment-reminder.png
 share/icons/gnome/16x16/status/stock_attach.png
@@ -1557,6 +1562,7 @@ share/icons/gnome/22x22/devices/gtk-floppy.png
 share/icons/gnome/22x22/devices/gtk-harddisk.png
 share/icons/gnome/22x22/devices/harddrive.png
 share/icons/gnome/22x22/devices/hdd_unmount.png
+share/icons/gnome/22x22/devices/input-dialpad.png
 share/icons/gnome/22x22/devices/input-gaming.png
 share/icons/gnome/22x22/devices/input-keyboard.png
 share/icons/gnome/22x22/devices/input-mouse.png
@@ -1571,6 +1577,7 @@ share/icons/gnome/22x22/devices/media-cdrom.png
 share/icons/gnome/22x22/devices/media-flash.png
 share/icons/gnome/22x22/devices/media-floppy.png
 share/icons/gnome/22x22/devices/media-optical.png
+share/icons/gnome/22x22/devices/media-removable.png
 share/icons/gnome/22x22/devices/media-tape.png
 share/icons/gnome/22x22/devices/modem.png
 share/icons/gnome/22x22/devices/mouse.png
@@ -1580,6 +1587,7 @@ share/icons/gnome/22x22/devices/network-wired.png
 share/icons/gnome/22x22/devices/network-wireless.png
 share/icons/gnome/22x22/devices/pda.png
 share/icons/gnome/22x22/devices/phone.png
+share/icons/gnome/22x22/devices/printer-network.png
 share/icons/gnome/22x22/devices/printer-remote.png
 share/icons/gnome/22x22/devices/printer.png
 share/icons/gnome/22x22/devices/printer1.png
@@ -1964,6 +1972,7 @@ share/icons/gnome/22x22/status/nm-adhoc.png
 share/icons/gnome/22x22/status/nm-device-wired.png
 share/icons/gnome/22x22/status/nm-device-wireless.png
 share/icons/gnome/22x22/status/nm-no-connection.png
+share/icons/gnome/22x22/status/non-starred.png
 share/icons/gnome/22x22/status/printer-error.png
 share/icons/gnome/22x22/status/printer-printing.png
 share/icons/gnome/22x22/status/security-high.png
@@ -1971,6 +1980,7 @@ share/icons/gnome/22x22/status/security-low.png
 share/icons/gnome/22x22/status/security-medium.png
 share/icons/gnome/22x22/status/software-update-available.png
 share/icons/gnome/22x22/status/software-update-urgent.png
+share/icons/gnome/22x22/status/starred.png
 share/icons/gnome/22x22/status/stock_appointment-reminder-excl.png
 share/icons/gnome/22x22/status/stock_appointment-reminder.png
 share/icons/gnome/22x22/status/stock_attach.png
@@ -2569,6 +2579,7 @@ share/icons/gnome/24x24/devices/gtk-floppy.png
 share/icons/gnome/24x24/devices/gtk-harddisk.png
 share/icons/gnome/24x24/devices/harddrive.png
 share/icons/gnome/24x24/devices/hdd_unmount.png
+share/icons/gnome/24x24/devices/input-dialpad.png
 share/icons/gnome/24x24/devices/input-gaming.png
 share/icons/gnome/24x24/devices/input-keyboard.png
 share/icons/gnome/24x24/devices/input-mouse.png
@@ -2583,6 +2594,7 @@ share/icons/gnome/24x24/devices/media-cdrom.png
 share/icons/gnome/24x24/devices/media-flash.png
 share/icons/gnome/24x24/devices/media-floppy.png
 share/icons/gnome/24x24/devices/media-optical.png
+share/icons/gnome/24x24/devices/media-removable.png
 share/icons/gnome/24x24/devices/media-tape.png
 share/icons/gnome/24x24/devices/modem.png
 share/icons/gnome/24x24/devices/mouse.png
@@ -2592,6 +2604,7 @@ share/icons/gnome/24x24/devices/network-wired.png
 share/icons/gnome/24x24/devices/network-wireless.png
 share/icons/gnome/24x24/devices/pda.png
 share/icons/gnome/24x24/devices/phone.png
+share/icons/gnome/24x24/devices/printer-network.png
 share/icons/gnome/24x24/devices/printer-remote.png
 share/icons/gnome/24x24/devices/printer.png
 share/icons/gnome/24x24/devices/printer1.png
@@ -2975,6 +2988,7 @@ share/icons/gnome/24x24/status/nm-adhoc.png
 share/icons/gnome/24x24/status/nm-device-wired.png
 share/icons/gnome/24x24/status/nm-device-wireless.png
 share/icons/gnome/24x24/status/nm-no-connection.png
+share/icons/gnome/24x24/status/non-starred.png
 share/icons/gnome/24x24/status/printer-error.png
 share/icons/gnome/24x24/status/printer-printing.png
 share/icons/gnome/24x24/status/security-high.png
@@ -2982,6 +2996,7 @@ share/icons/gnome/24x24/status/security-low.png
 share/icons/gnome/24x24/status/security-medium.png
 share/icons/gnome/24x24/status/software-update-available.png
 share/icons/gnome/24x24/status/software-update-urgent.png
+share/icons/gnome/24x24/status/starred.png
 share/icons/gnome/24x24/status/stock_appointment-reminder-excl.png
 share/icons/gnome/24x24/status/stock_appointment-reminder.png
 share/icons/gnome/24x24/status/stock_attach.png
@@ -3307,6 +3322,7 @@ share/icons/gnome/256x256/devices/gtk-cdrom.png
 share/icons/gnome/256x256/devices/gtk-harddisk.png
 share/icons/gnome/256x256/devices/harddrive.png
 share/icons/gnome/256x256/devices/hdd_unmount.png
+share/icons/gnome/256x256/devices/input-dialpad.png
 share/icons/gnome/256x256/devices/input-keyboard.png
 share/icons/gnome/256x256/devices/input-mouse.png
 share/icons/gnome/256x256/devices/input-tablet.png
@@ -3317,17 +3333,19 @@ share/icons/gnome/256x256/devices/kxkb.png
 share/icons/gnome/256x256/devices/media-cdrom.png
 share/icons/gnome/256x256/devices/media-flash.png
 share/icons/gnome/256x256/devices/media-optical.png
+share/icons/gnome/256x256/devices/media-removable.png
 share/icons/gnome/256x256/devices/mouse.png
 share/icons/gnome/256x256/devices/multimedia-player.png
 share/icons/gnome/256x256/devices/phone.png
+share/icons/gnome/256x256/devices/printer-network.png
 share/icons/gnome/256x256/devices/printer-remote.png
 share/icons/gnome/256x256/devices/printer.png
 share/icons/gnome/256x256/devices/printer1.png
 share/icons/gnome/256x256/devices/printmgr.png
 share/icons/gnome/256x256/devices/scanner.png
-share/icons/gnome/256x256/devices/stock_mic.png
 share/icons/gnome/256x256/devices/speaker.png
 share/icons/gnome/256x256/devices/stock_cell-phone.png
+share/icons/gnome/256x256/devices/stock_mic.png
 share/icons/gnome/256x256/devices/stock_printers.png
 share/icons/gnome/256x256/devices/system.png
 share/icons/gnome/256x256/devices/usbpendrive_unmount.png
@@ -3657,6 +3675,7 @@ share/icons/gnome/256x256/status/nm-adhoc.png
 share/icons/gnome/256x256/status/nm-device-wired.png
 share/icons/gnome/256x256/status/nm-device-wireless.png
 share/icons/gnome/256x256/status/nm-no-connection.png
+share/icons/gnome/256x256/status/non-starred.png
 share/icons/gnome/256x256/status/printer-error.png
 share/icons/gnome/256x256/status/printer-printing.png
 share/icons/gnome/256x256/status/security-high.png
@@ -3664,6 +3683,7 @@ share/icons/gnome/256x256/status/security-low.png
 share/icons/gnome/256x256/status/security-medium.png
 share/icons/gnome/256x256/status/software-update-available.png
 share/icons/gnome/256x256/status/software-update-urgent.png
+share/icons/gnome/256x256/status/starred.png
 share/icons/gnome/256x256/status/stock_appointment-reminder-excl.png
 share/icons/gnome/256x256/status/stock_appointment-reminder.png
 share/icons/gnome/256x256/status/stock_dialog-error.png
@@ -3684,6 +3704,12 @@ share/icons/gnome/256x256/status/stock_volume-min.png
 share/icons/gnome/256x256/status/stock_volume-mute.png
 share/icons/gnome/256x256/status/stock_volume.png
 share/icons/gnome/256x256/status/trashcan_full.png
+share/icons/gnome/256x256/status/user-available.png
+share/icons/gnome/256x256/status/user-away.png
+share/icons/gnome/256x256/status/user-busy.png
+share/icons/gnome/256x256/status/user-idle.png
+share/icons/gnome/256x256/status/user-invisible.png
+share/icons/gnome/256x256/status/user-offline.png
 share/icons/gnome/256x256/status/user-trash-full.png
 share/icons/gnome/256x256/status/xfce-trash_full.png
 share/icons/gnome/32x32/actions/add.png
@@ -4227,6 +4253,7 @@ share/icons/gnome/32x32/devices/gtk-floppy.png
 share/icons/gnome/32x32/devices/gtk-harddisk.png
 share/icons/gnome/32x32/devices/harddrive.png
 share/icons/gnome/32x32/devices/hdd_unmount.png
+share/icons/gnome/32x32/devices/input-dialpad.png
 share/icons/gnome/32x32/devices/input-gaming.png
 share/icons/gnome/32x32/devices/input-keyboard.png
 share/icons/gnome/32x32/devices/input-mouse.png
@@ -4241,6 +4268,7 @@ share/icons/gnome/32x32/devices/media-cdrom.png
 share/icons/gnome/32x32/devices/media-flash.png
 share/icons/gnome/32x32/devices/media-floppy.png
 share/icons/gnome/32x32/devices/media-optical.png
+share/icons/gnome/32x32/devices/media-removable.png
 share/icons/gnome/32x32/devices/media-tape.png
 share/icons/gnome/32x32/devices/modem.png
 share/icons/gnome/32x32/devices/mouse.png
@@ -4250,6 +4278,7 @@ share/icons/gnome/32x32/devices/network-wired.png
 share/icons/gnome/32x32/devices/network-wireless.png
 share/icons/gnome/32x32/devices/pda.png
 share/icons/gnome/32x32/devices/phone.png
+share/icons/gnome/32x32/devices/printer-network.png
 share/icons/gnome/32x32/devices/printer-remote.png
 share/icons/gnome/32x32/devices/printer.png
 share/icons/gnome/32x32/devices/printer1.png
@@ -4630,6 +4659,7 @@ share/icons/gnome/32x32/status/nm-adhoc.png
 share/icons/gnome/32x32/status/nm-device-wired.png
 share/icons/gnome/32x32/status/nm-device-wireless.png
 share/icons/gnome/32x32/status/nm-no-connection.png
+share/icons/gnome/32x32/status/non-starred.png
 share/icons/gnome/32x32/status/printer-error.png
 share/icons/gnome/32x32/status/printer-printing.png
 share/icons/gnome/32x32/status/security-high.png
@@ -4637,6 +4667,7 @@ share/icons/gnome/32x32/status/security-low.png
 share/icons/gnome/32x32/status/security-medium.png
 share/icons/gnome/32x32/status/software-update-available.png
 share/icons/gnome/32x32/status/software-update-urgent.png
+share/icons/gnome/32x32/status/starred.png
 share/icons/gnome/32x32/status/stock_appointment-reminder-excl.png
 share/icons/gnome/32x32/status/stock_appointment-reminder.png
 share/icons/gnome/32x32/status/stock_attach.png
@@ -5234,6 +5265,7 @@ share/icons/gnome/48x48/devices/gtk-floppy.png
 share/icons/gnome/48x48/devices/gtk-harddisk.png
 share/icons/gnome/48x48/devices/harddrive.png
 share/icons/gnome/48x48/devices/hdd_unmount.png
+share/icons/gnome/48x48/devices/input-dialpad.png
 share/icons/gnome/48x48/devices/input-gaming.png
 share/icons/gnome/48x48/devices/input-keyboard.png
 share/icons/gnome/48x48/devices/input-mouse.png
@@ -5248,6 +5280,7 @@ share/icons/gnome/48x48/devices/media-cdrom.png
 share/icons/gnome/48x48/devices/media-flash.png
 share/icons/gnome/48x48/devices/media-floppy.png
 share/icons/gnome/48x48/devices/media-optical.png
+share/icons/gnome/48x48/devices/media-removable.png
 share/icons/gnome/48x48/devices/media-tape.png
 share/icons/gnome/48x48/devices/modem.png
 share/icons/gnome/48x48/devices/mouse.png
@@ -5257,6 +5290,7 @@ share/icons/gnome/48x48/devices/network-wired.png
 share/icons/gnome/48x48/devices/network-wireless.png
 share/icons/gnome/48x48/devices/pda.png
 share/icons/gnome/48x48/devices/phone.png
+share/icons/gnome/48x48/devices/printer-network.png
 share/icons/gnome/48x48/devices/printer-remote.png
 share/icons/gnome/48x48/devices/printer.png
 share/icons/gnome/48x48/devices/printer1.png
@@ -5638,6 +5672,7 @@ share/icons/gnome/48x48/status/nm-adhoc.png
 share/icons/gnome/48x48/status/nm-device-wired.png
 share/icons/gnome/48x48/status/nm-device-wireless.png
 share/icons/gnome/48x48/status/nm-no-connection.png
+share/icons/gnome/48x48/status/non-starred.png
 share/icons/gnome/48x48/status/printer-error.png
 share/icons/gnome/48x48/status/printer-printing.png
 share/icons/gnome/48x48/status/security-high.png
@@ -5645,6 +5680,7 @@ share/icons/gnome/48x48/status/security-low.png
 share/icons/gnome/48x48/status/security-medium.png
 share/icons/gnome/48x48/status/software-update-available.png
 share/icons/gnome/48x48/status/software-update-urgent.png
+share/icons/gnome/48x48/status/starred.png
 share/icons/gnome/48x48/status/stock_appointment-reminder-excl.png
 share/icons/gnome/48x48/status/stock_appointment-reminder.png
 share/icons/gnome/48x48/status/stock_attach.png

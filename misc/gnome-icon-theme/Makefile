@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.156 2011/04/06 06:39:12 kwm Exp $
+#   $MCom: ports/misc/gnome-icon-theme/Makefile,v 1.157 2011/04/15 11:20:59 kwm Exp $
 #
 
 PORTNAME=	gnome-icon-theme
-PORTVERSION=	3.0.0
-PORTREVISION=	1
+PORTVERSION=	3.1.90
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,7 +19,7 @@ BUILD_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hic
 		icon-naming-utils>=0.8.7:${PORTSDIR}/x11-themes/icon-naming-utils
 RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack intlhack gtk-update-icon-cache
