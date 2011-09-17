@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.19 2011/06/10 21:14:06 mezz Exp $
+#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.20 2011/06/10 22:59:10 mezz Exp $
 #
 
 PORTNAME=	gnome-panel
-PORTVERSION=	3.0.2
-PORTREVISION?=	1
+PORTVERSION=	3.1.91
+PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Panel component for the GNOME 3 Desktop
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
@@ -30,7 +30,6 @@ CONFLICTS=	gnome-panel-2.[0-9]*
 
 LATEST_LINK=	gnome-panel3
 USE_GETTEXT=	yes
-USE_BZIP2=	yes
 USE_XORG=	ice sm x11 xau xrandr
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
