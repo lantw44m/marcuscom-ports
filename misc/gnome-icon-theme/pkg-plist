@@ -5754,6 +5754,8 @@ share/icons/gnome/index.theme
 @dirrmtry share/locale/fy
 @dirrmtry share/locale/fur/LC_MESSAGES
 @dirrmtry share/locale/fur
+@dirrmtry share/locale/an/LC_MESSAGES
+@dirrmtry share/locale/an
 @dirrmtry share/icons/gnome/8x8/emblems
 @dirrmtry share/icons/gnome/8x8
 @dirrmtry share/icons/gnome/48x48/stock/net
