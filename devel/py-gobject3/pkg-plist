@@ -64,38 +64,7 @@ lib/python2.7/site-packages/gi/repository/__init__.pyo
 lib/python2.7/site-packages/gi/types.py
 lib/python2.7/site-packages/gi/types.pyc
 lib/python2.7/site-packages/gi/types.pyo
-lib/python2.7/site-packages/gtk-2.0/dsextras.py
-lib/python2.7/site-packages/gtk-2.0/dsextras.pyc
-lib/python2.7/site-packages/gtk-2.0/dsextras.pyo
 libdata/pkgconfig/pygobject-3.0.pc
-share/doc/pygobject/class-glibmaincontext.html
-share/doc/pygobject/class-glibmainloop.html
-share/doc/pygobject/class-gobject.html
-share/doc/pygobject/class-gobjectgboxed.html
-share/doc/pygobject/class-gobjectginterface.html
-share/doc/pygobject/class-gobjectgpointer.html
-share/doc/pygobject/glib-class-reference.html
-share/doc/pygobject/glib-constants.html
-share/doc/pygobject/glib-functions.html
-share/doc/pygobject/gobject-class-reference.html
-share/doc/pygobject/gobject-constants.html
-share/doc/pygobject/gobject-functions.html
-share/doc/pygobject/index.html
-share/doc/pygobject/index.sgml
-share/doc/pygobject/pygobject-introduction.html
-share/doc/pygobject/pygobject.devhelp
-share/doc/pygobject/style.css
-share/pygobject/xsl/common.xsl
-share/pygobject/xsl/devhelp.xsl
-share/pygobject/xsl/fixxref.py
-share/pygobject/xsl/html.xsl
-share/pygobject/xsl/pdf-style.xsl
-share/pygobject/xsl/pdf.xsl
-share/pygobject/xsl/ref-html-style.xsl
-@dirrm share/pygobject/xsl
-@dirrm share/pygobject
-@dirrm share/doc/pygobject
-@dirrmtry %%PYTHON_SITELIBDIR%%/gtk-2.0
 @dirrm %%PYTHON_SITELIBDIR%%/gi/repository
 @dirrm %%PYTHON_SITELIBDIR%%/gi/overrides
 @dirrm %%PYTHON_SITELIBDIR%%/gi/_gobject
