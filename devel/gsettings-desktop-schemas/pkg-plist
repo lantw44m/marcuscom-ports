@@ -5,6 +5,10 @@ share/locale/cs/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/de/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/es/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/ja/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/nb/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/pt_BR/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/sl/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/sv/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/vi/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/zh_CN/LC_MESSAGES/gsettings-desktop-schemas.mo
 @dirrm include/gsettings-desktop-schemas
