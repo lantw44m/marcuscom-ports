@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.553 2011/09/16 16:17:23 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.554 2011/09/17 10:40:11 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -576,9 +576,9 @@ gnomemenus_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
 gnomemenus_USE_GNOME_IMPL=	glib20
 gnomemenus_GNOME_DESKTOP_VERSION=2
 
-gnomemenus3_BUILD_DEPENDS=	gnome-menus>=2.91.0:${PORTSDIR}/x11/gnome-menus3
-gnomemenus3_RUN_DEPENDS=	gnome-menus>=2.91.0:${PORTSDIR}/x11/gnome-menus3
-gnomemenus3_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgnome-menu.pc
+gnomemenus3_BUILD_DEPENDS=	gnome-menus>=3.1.90:${PORTSDIR}/x11/gnome-menus3
+gnomemenus3_RUN_DEPENDS=	gnome-menus>=3.1.90:${PORTSDIR}/x11/gnome-menus3
+gnomemenus3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnome-menu-3.0.pc
 gnomemenus3_USE_GNOME_IMPL=	glib20
 gnomemenus3_GNOME_DESKTOP_VERSION=3
 
