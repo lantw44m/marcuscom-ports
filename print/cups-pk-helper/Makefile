@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/cups-pk-helper/Makefile,v 1.5 2011/06/11 04:47:01 mezz Exp $
+#   $MCom: ports/print/cups-pk-helper/Makefile,v 1.6 2011/09/13 18:10:27 kwm Exp $
 
 PORTNAME=	cups-pk-helper
-PORTVERSION=	0.1.3
+PORTVERSION=	0.2.0
 CATEGORIES=	print
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/releases/
 
