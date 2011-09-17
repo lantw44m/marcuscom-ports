@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.77 2011/06/24 03:00:22 mezz Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.78 2011/09/16 12:30:07 kwm Exp $
 #
 
 PORTNAME=	gvfs
@@ -17,7 +17,7 @@ COMMENT=	GNOME virtual file system
 
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
-		gcrypt.18:${PORTSDIR}/security/libcrypt \
+		gcrypt.18:${PORTSDIR}/security/libgcrypt \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 
 USE_XZ=		yes
