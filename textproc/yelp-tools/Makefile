@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/textproc/yelp-tools/Makefile,v 1.1 2011/09/17 13:59:31 kwm Exp $
 #
 
 PORTNAME=	yelp-tools
-PORTVERSION=	3.1.5
+PORTVERSION=	3.1.6
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
