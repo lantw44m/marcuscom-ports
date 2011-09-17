@@ -3,10 +3,10 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup-gnome/Makefile,v 1.1 2010/06/05 21:11:10 kwm Exp $
+#   $MCom: ports/devel/libsoup-gnome/Makefile,v 1.3 2011/06/06 17:50:29 kwm Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	0
 CATEGORIES=	devel gnome
 PKGNAMESUFFIX=	-gnome
 
