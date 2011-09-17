@@ -5,7 +5,6 @@ include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-adblock-manager.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-adblock.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-bookmarks-type-builtins.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-bookmarks.h
-include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-dbus.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-dialog.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-download.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-embed-container.h
@@ -33,16 +32,16 @@ include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-state.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-type-builtins.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-web-view.h
 include/epiphany/%%EPHY_VERSION%%/epiphany/ephy-window.h
-lib/girepository-1.0/EphyEgg-%%EPHY_VERSION%%.typelib
-lib/girepository-1.0/Epiphany-%%EPHY_VERSION%%.typelib
-libdata/pkgconfig/epiphany-%%EPHY_VERSION%%.pc
+lib/girepository-1.0/EphyEgg-3.0.typelib
+lib/girepository-1.0/Epiphany-3.0.typelib
+libdata/pkgconfig/epiphany-3.0.pc
 share/aclocal/epiphany.m4
 share/applications/bme.desktop
 share/applications/epiphany.desktop
 share/dbus-1/services/org.gnome.Epiphany.service
 share/GConf/gsettings/epiphany.convert
-share/gir-1.0/EphyEgg-%%EPHY_VERSION%%.gir
-share/gir-1.0/Epiphany-%%EPHY_VERSION%%.gir
+share/gir-1.0/EphyEgg-3.0.gir
+share/gir-1.0/Epiphany-3.0.gir
 %%DATADIR%%/about.ini
 %%DATADIR%%/default-bookmarks.rdf
 %%DATADIR%%/epiphany-bookmark-editor-ui.xml
@@ -52,6 +51,7 @@ share/gir-1.0/Epiphany-%%EPHY_VERSION%%.gir
 %%DATADIR%%/epiphany-history-window-ui.xml
 %%DATADIR%%/epiphany-toolbar.xml
 %%DATADIR%%/epiphany-ui.xml
+%%DATADIR%%/epiphany.css
 %%DATADIR%%/epiphany.xhtml
 %%DATADIR%%/glade/certificate-dialogs.ui
 %%DATADIR%%/glade/epiphany.ui
@@ -95,6 +95,7 @@ share/gir-1.0/Epiphany-%%EPHY_VERSION%%.gir
 %%DATADIR%%/icons/hicolor/scalable/actions/location-entry.svg
 %%DATADIR%%/icons/hicolor/scalable/status/popup-hidden.svg
 %%DATADIR%%/mime-types-permissions.xml
+share/epiphany/pages/about.css
 share/epiphany/pages/error.html
 share/epiphany/pages/recovery.html
 share/gnome/help/epiphany/C/epiphany.xml
