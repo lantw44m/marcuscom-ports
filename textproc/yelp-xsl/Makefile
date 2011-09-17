@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/yelp-xsl/Makefile,v 1.4 2011/04/25 07:34:53 kwm Exp $
+#   $MCom: ports/textproc/yelp-xsl/Makefile,v 1.5 2011/05/28 11:22:55 kwm Exp $
 #
 
 PORTNAME=	yelp-xsl
-PORTVERSION=	3.0.2
+PORTVERSION=	3.1.5
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,10 +15,11 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	DocBook XSLT stylesheets for yelp
 
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	xslt.2:${PORTSDIR}/textproc/libxslt
 
-USE_GETTEXT=	yes
-USE_BZIP2=	yes
+#USE_GETTEXT=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack pkgconfig libxml2
 GNU_CONFIGURE=	yes
