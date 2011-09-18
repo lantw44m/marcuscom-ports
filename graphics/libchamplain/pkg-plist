@@ -60,7 +60,6 @@ share/gtk-doc/html/libchamplain-gtk3-gtk/home.png
 share/gtk-doc/html/libchamplain-gtk3-gtk/index.html
 share/gtk-doc/html/libchamplain-gtk3-gtk/index.sgml
 share/gtk-doc/html/libchamplain-gtk3-gtk/left.png
-share/gtk-doc/html/libchamplain-gtk3-gtk/libchamplain-gtk.devhelp
 share/gtk-doc/html/libchamplain-gtk3-gtk/libchamplain-gtk.devhelp2
 share/gtk-doc/html/libchamplain-gtk3-gtk/pt01.html
 share/gtk-doc/html/libchamplain-gtk3-gtk/right.png
@@ -113,9 +112,10 @@ share/gtk-doc/html/libchamplain-gtk3/ix04.html
 share/gtk-doc/html/libchamplain-gtk3/ix05.html
 share/gtk-doc/html/libchamplain-gtk3/ix06.html
 share/gtk-doc/html/libchamplain-gtk3/ix07.html
+share/gtk-doc/html/libchamplain-gtk3/ix08.html
+share/gtk-doc/html/libchamplain-gtk3/ix09.html
 share/gtk-doc/html/libchamplain-gtk3/left.png
 share/gtk-doc/html/libchamplain-gtk3/libchamplain-ChamplainVersion.html
-share/gtk-doc/html/libchamplain-gtk3/libchamplain.devhelp
 share/gtk-doc/html/libchamplain-gtk3/libchamplain.devhelp2
 share/gtk-doc/html/libchamplain-gtk3/pt01.html
 share/gtk-doc/html/libchamplain-gtk3/pt02.html
@@ -127,6 +127,8 @@ share/gtk-doc/html/libchamplain-gtk3/pt07.html
 share/gtk-doc/html/libchamplain-gtk3/right.png
 share/gtk-doc/html/libchamplain-gtk3/style.css
 share/gtk-doc/html/libchamplain-gtk3/up.png
+share/vala/vapi/champlain-%%VERSION%%.vapi
+share/vala/vapi/champlain-gtk-%%VERSION%%.vapi
 @dirrm share/gtk-doc/html/libchamplain-gtk3
 @dirrm share/gtk-doc/html/libchamplain-gtk3-gtk
 @dirrmtry share/gtk-doc/html

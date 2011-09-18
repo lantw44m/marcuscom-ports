@@ -3,23 +3,23 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/libchamplain/Makefile,v 1.28 2011/08/24 13:49:30 kwm Exp $
 #
 
 PORTNAME=	libchamplain
-PORTVERSION=	0.10.0
+PORTVERSION=	0.12.0
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A C library aimed to provide a Gtk+ widget to display rasterized maps and markers
 
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome
 
-LATEST_LINK=	libchamplain010
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GNOME=	pkgconfig gtk30 gnomehack ltverhack
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
@@ -29,7 +29,7 @@ CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 CONFIGURE_ARGS=	--enable-gtk-doc-html=no
 
-PLIST_SUB=	VERSION=0.10
+PLIST_SUB=	VERSION=0.12
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|DOC_MODULE = libchamplain|DOC_MODULE = libchamplain-gtk3|g' \
