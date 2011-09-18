@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.28 2011/06/10 22:59:08 mezz Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.29 2011/09/17 13:27:37 kwm Exp $
 #
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	3.1.91
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -73,7 +74,7 @@ CONFIGURE_ARGS+=--disable-cups
 .if defined(WITH_CHEESE) && (${ARCH}=="i386" || ${ARCH}=="amd64")
 CONFIGURE_ARGS+=--with-cheese
 BUILD_DEPENDS+=	cheese>=3.0.1:${PORTSDIR}/multimedia/cheese3
-LIB_DEPENDS+=	cheese.1:${PORTSDIR}/multimedia/cheese3
+LIB_DEPENDS+=	cheese.2:${PORTSDIR}/multimedia/cheese3
 .else
 CONFIGURE_ARGS+=--without-cheese
 .endif
