@@ -3,12 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse3/Makefile,v 1.8 2011/06/10 22:59:08 mezz Exp $
+#   $MCom: ports/security/seahorse3/Makefile,v 1.9 2011/07/03 11:57:46 kwm Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	3.0.2
-PORTREVISION=	1
+PORTVERSION=	3.1.92
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,20 +16,21 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME application for managing encryption keys (PGP, SSH)
 
 BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
-RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
-LIB_DEPENDS=	gpgme.18:${PORTSDIR}/security/gpgme \
+LIB_DEPENDS=	gpgme.19:${PORTSDIR}/security/gpgme \
     		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
-		gcr-3.0:${PORTSDIR}/security/gnome-keyring3 \
+		cryptui.0:${PORTSDIR}/security/libcryptui \
+		gcr-3.1:${PORTSDIR}/security/gnome-keyring3 \
 		gcrypt.18:${PORTSDIR}/security/libgcrypt \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
+RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 
 CONFLICTS=	seahorse-2.[0-9]*
 
 LATEST_LINK=	seahorse3
 USE_XORG=	sm
 USE_LDCONFIG=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gconf2 gnomedocutils
@@ -39,11 +39,12 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--enable-introspection=no \
-		--with-gtk=3.0
+CONFIGURE_ARGS=	--enable-introspection=no
 
-GCONF_SCHEMAS=	seahorse.schemas
-MAN1=		seahorse.1 seahorse-daemon.1
+GLIB_SCHEMAS=	org.gnome.seahorse.gschema.xml \
+		org.gnome.seahorse.manager.gschema.xml \
+		org.gnome.seahorse.window.gschema.xml
+MAN1=		seahorse.1
 
 OPTIONS=	LDAP "Enable LDAP support" on \
 		NOTIFY "Enable libnotify support" on \
