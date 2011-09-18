@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.12 2011/06/10 22:59:09 mezz Exp $
+#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.13 2011/09/18 10:47:46 kwm Exp $
 #
 
 PORTNAME=	gnome-power-manager
@@ -16,11 +16,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Power management system for the GNOME Desktop
 
 LIB_DEPENDS=	upower-glib.1:${PORTSDIR}/sysutils/upower \
-		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
-		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
-		notify.4:${PORTSDIR}/devel/libnotify \
-		execinfo:${PORTSDIR}/devel/libexecinfo
-RUN_DEPENDS=	pkexec:${PORTSDIR}/sysutils/polkit
 
 CONFLICTS=	gnome-power-manager-2.[0-9]*
 
@@ -28,18 +23,12 @@ LATEST_LINK=	gnome-power-manager3
 USE_GETTEXT=	yes
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_XORG=	xrandr xrender x11 xext xproto
-INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomecontrolcenter3 \
-		gnomedocutils
+USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gnomedocutils
 CONFIGURE_ARGS=	--with-doc-dir=${PREFIX}/share/doc \
-		--disable-docbook-docs \
-		--enable-hal
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
-		LIBS="-lexecinfo"
+		--disable-docbook-docs
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 GLIB_SCHEMAS=	org.gnome.power-manager.gschema.xml
 
