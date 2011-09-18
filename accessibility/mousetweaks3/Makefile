@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.11 2011/06/10 22:59:01 mezz Exp $
+#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.12 2011/06/11 18:55:55 mezz Exp $
 #
 
 PORTNAME=	mousetweaks
-PORTVERSION=	3.0.2
+PORTVERSION=	3.1.91
 CATEGORIES=	accessibility
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +22,7 @@ CONFLICTS=	mousetweaks-2.[0-9]*
 
 LATEST_LINK=	mousetweaks3
 USE_XORG=	x11 xfixes xcursor xtst
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GNOME=	gnomehack gnomeprefix intlhack gnomedocutils gtk30
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
