@@ -3,11 +3,11 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.17 2011/08/24 13:49:31 kwm Exp $
+#   $MCom: ports/multimedia/totem3/Makefile,v 1.18 2011/09/18 15:25:11 kwm Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	3.0.1
+PORTVERSION=	3.1.91
 PORTREVISION?=	0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
@@ -34,7 +34,7 @@ CONFLICTS=	totem-2.[0-9]*
 LATEST_LINK=	totem3
 USE_PYTHON=	yes
 USE_XORG=	x11 xrandr xxf86vm
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils \
 		nautilus3 ltverhack pygobject3 gnomedocutils
@@ -63,9 +63,8 @@ OPTIONS=	LIRC "Enable lirc support" off \
 
 # check configure script for allowed_plugins="..." for new plugins
 TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
-		properties skipto opensubtitles screenshot \
+		properties skipto youtube opensubtitles screenshot \
 		brasero-disc-recorder dbus-service iplayer
-#youtube
 
 # Not using:
 # TOTEM_PLUGINS= mythtv bemused jamendo

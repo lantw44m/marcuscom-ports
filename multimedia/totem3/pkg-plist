@@ -1,6 +1,5 @@
 bin/totem
 bin/totem-audio-preview
-bin/totem-video-indexer
 bin/totem-video-thumbnailer
 include/totem/1.0/totem-cell-renderer-video.h
 include/totem/1.0/totem-dirs.h
@@ -32,10 +31,6 @@ lib/totem/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin
 lib/totem/plugins/brasero-disc-recorder/libbrasero-disc-recorder.a
 lib/totem/plugins/brasero-disc-recorder/libbrasero-disc-recorder.la
 lib/totem/plugins/brasero-disc-recorder/libbrasero-disc-recorder.so
-lib/totem/plugins/dbus/dbus-service.py
-lib/totem/plugins/dbus/dbus-service.pyc
-lib/totem/plugins/dbus/dbus-service.pyo
-lib/totem/plugins/dbus/dbus-service.plugin
 %%GALAGO%%lib/totem/plugins/galago/galago.plugin
 %%GALAGO%%lib/totem/plugins/galago/libtgp.a
 %%GALAGO%%lib/totem/plugins/galago/libtgp.la
@@ -99,14 +94,15 @@ lib/totem/plugins/skipto/libskipto.la
 lib/totem/plugins/skipto/libskipto.so
 lib/totem/plugins/skipto/skipto.plugin
 lib/totem/plugins/skipto/skipto.ui
-lib/totem/plugins/thumbnail/libthumbnail.a
-lib/totem/plugins/thumbnail/libthumbnail.la
-lib/totem/plugins/thumbnail/libthumbnail.so
-lib/totem/plugins/thumbnail/thumbnail.plugin
 %%TRACKER%%lib/totem/plugins/tracker/libtracker.a
 %%TRACKER%%lib/totem/plugins/tracker/libtracker.la
 %%TRACKER%%lib/totem/plugins/tracker/libtracker.so
 %%TRACKER%%lib/totem/plugins/tracker/tracker.plugin
+lib/totem/plugins/youtube/libyoutube.a
+lib/totem/plugins/youtube/libyoutube.la
+lib/totem/plugins/youtube/libyoutube.so
+lib/totem/plugins/youtube/youtube.plugin
+lib/totem/plugins/youtube/youtube.ui
 libdata/pkgconfig/totem.pc
 %%BROWSER_PLUGINS%%libexec/totem-plugin-viewer
 libexec/totem/totem-bugreport.py
@@ -132,7 +128,6 @@ share/applications/totem.desktop
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/totem-Interface.html
 %%DOCSDIR%%/totem-TotemPlugin.html
-%%DOCSDIR%%/totem.devhelp
 %%DOCSDIR%%/totem.devhelp2
 %%DOCSDIR%%/totem-plugins.html
 %%DOCSDIR%%/tutorials.html
@@ -475,6 +470,7 @@ share/locale/xh/LC_MESSAGES/totem.mo
 share/locale/zh_CN/LC_MESSAGES/totem.mo
 share/locale/zh_HK/LC_MESSAGES/totem.mo
 share/locale/zh_TW/LC_MESSAGES/totem.mo
+share/locale/zu/LC_MESSAGES/totem.mo
 share/omf/totem/totem-C.omf
 share/omf/totem/totem-bg.omf
 share/omf/totem/totem-ca.omf
@@ -572,8 +568,8 @@ share/thumbnailers/totem.thumbnailer
 @dirrm %%DOCSDIR%%
 @dirrmtry share/applications
 @dirrm libexec/totem
+@dirrm lib/totem/plugins/youtube
 %%TRACKER%%@dirrm lib/totem/plugins/tracker
-@dirrm lib/totem/plugins/thumbnail
 @dirrm lib/totem/plugins/skipto
 @dirrm lib/totem/plugins/screenshot
 @dirrm lib/totem/plugins/screensaver
@@ -586,7 +582,6 @@ share/thumbnailers/totem.thumbnailer
 @dirrm lib/totem/plugins/iplayer
 @dirrm lib/totem/plugins/gromit
 %%GALAGO%%@dirrm lib/totem/plugins/galago
-@dirrm lib/totem/plugins/dbus
 @dirrm lib/totem/plugins/brasero-disc-recorder
 @dirrm lib/totem/plugins
 @dirrm lib/totem
@@ -595,6 +590,8 @@ share/thumbnailers/totem.thumbnailer
 @dirrm include/totem
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@dirrmtry share/locale/zu/LC_MESSAGES
+@dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
