@@ -1,4 +1,6 @@
 include/clutter-1.0/clutter-gst/clutter-gst-enum-types.h
+include/clutter-1.0/clutter-gst/clutter-gst-player.h
+include/clutter-1.0/clutter-gst/clutter-gst-types.h
 include/clutter-1.0/clutter-gst/clutter-gst-util.h
 include/clutter-1.0/clutter-gst/clutter-gst-version.h
 include/clutter-1.0/clutter-gst/clutter-gst-video-sink.h
@@ -10,6 +12,7 @@ lib/libclutter-gst-1.0.so
 lib/libclutter-gst-1.0.so.0
 lib/girepository-1.0/ClutterGst-1.0.typelib
 libdata/pkgconfig/clutter-gst-1.0.pc
+%%DOCSDIR%%/ClutterGstPlayer.html
 %%DOCSDIR%%/ClutterGstVideoSink.html
 %%DOCSDIR%%/ClutterGstVideoTexture.html
 %%DOCSDIR%%/ch01.html
