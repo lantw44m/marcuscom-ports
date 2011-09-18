@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes-standard/Makefile,v 1.14 2011/05/24 17:49:27 kwm Exp $
+#   $MCom: ports/x11-themes/gnome-themes-standard/Makefile,v 1.15 2011/09/17 11:29:49 kwm Exp $
 #
 
 PORTNAME=	gnome-themes-standard
@@ -21,7 +21,7 @@ USE_XZ=		yes
 USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix intlhack gtk30
+USE_GNOME=	gnomehack gnomeprefix intlhack gtk30 librsvg2
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
