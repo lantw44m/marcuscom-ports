@@ -3,6 +3,7 @@ bin/mc-wait-for-name
 include/mission-control-5.5/mission-control-plugins/account-storage.h
 include/mission-control-5.5/mission-control-plugins/account.h
 include/mission-control-5.5/mission-control-plugins/dbus-acl.h
+include/mission-control-5.5/mission-control-plugins/debug.h
 include/mission-control-5.5/mission-control-plugins/dispatch-operation-policy.h
 include/mission-control-5.5/mission-control-plugins/dispatch-operation.h
 include/mission-control-5.5/mission-control-plugins/loader.h
