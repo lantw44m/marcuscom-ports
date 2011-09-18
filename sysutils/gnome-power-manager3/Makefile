@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.13 2011/09/18 10:47:46 kwm Exp $
+#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.14 2011/09/18 10:52:20 kwm Exp $
 #
 
 PORTNAME=	gnome-power-manager
@@ -25,6 +25,7 @@ USE_XZ=		yes
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gnomedocutils
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-doc-dir=${PREFIX}/share/doc \
 		--disable-docbook-docs
 CPPFLAGS=	-I${LOCALBASE}/include
