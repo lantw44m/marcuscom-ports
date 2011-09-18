@@ -3,7 +3,7 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.16 2011/06/10 22:59:06 mezz Exp $
+#   $MCom: ports/multimedia/totem3/Makefile,v 1.17 2011/08/24 13:49:31 kwm Exp $
 #
 
 PORTNAME=	totem
@@ -19,8 +19,9 @@ COMMENT?=	A gstreamer-based video player for the GNOME 3 Desktop
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	gdata.11:${PORTSDIR}/devel/libgdata \
+LIB_DEPENDS=	gdata.13:${PORTSDIR}/devel/libgdata \
 		dbus-1.3:${PORTSDIR}/devel/dbus \
+		clutter-gst-1.0.0:${PORTSDIR}/multimedia/clutter-gst \
 		peas-1.0.0:${PORTSDIR}/devel/libpeas \
 		totem-plparser.17:${PORTSDIR}/multimedia/totem-pl-parser
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
@@ -36,7 +37,7 @@ USE_XORG=	x11 xrandr xxf86vm
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils \
-		nautilus3 ltverhack pygobject gnomedocutils
+		nautilus3 ltverhack pygobject3 gnomedocutils
 USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly gio resindvd
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
@@ -62,8 +63,9 @@ OPTIONS=	LIRC "Enable lirc support" off \
 
 # check configure script for allowed_plugins="..." for new plugins
 TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
-		properties skipto youtube opensubtitles screenshot \
+		properties skipto opensubtitles screenshot \
 		brasero-disc-recorder dbus-service iplayer
+#youtube
 
 # Not using:
 # TOTEM_PLUGINS= mythtv bemused jamendo

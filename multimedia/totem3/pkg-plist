@@ -107,11 +107,6 @@ lib/totem/plugins/thumbnail/thumbnail.plugin
 %%TRACKER%%lib/totem/plugins/tracker/libtracker.la
 %%TRACKER%%lib/totem/plugins/tracker/libtracker.so
 %%TRACKER%%lib/totem/plugins/tracker/tracker.plugin
-lib/totem/plugins/youtube/libyoutube.a
-lib/totem/plugins/youtube/libyoutube.la
-lib/totem/plugins/youtube/libyoutube.so
-lib/totem/plugins/youtube/youtube.plugin
-lib/totem/plugins/youtube/youtube.ui
 libdata/pkgconfig/totem.pc
 %%BROWSER_PLUGINS%%libexec/totem-plugin-viewer
 libexec/totem/totem-bugreport.py
@@ -577,7 +572,6 @@ share/thumbnailers/totem.thumbnailer
 @dirrm %%DOCSDIR%%
 @dirrmtry share/applications
 @dirrm libexec/totem
-@dirrm lib/totem/plugins/youtube
 %%TRACKER%%@dirrm lib/totem/plugins/tracker
 @dirrm lib/totem/plugins/thumbnail
 @dirrm lib/totem/plugins/skipto
