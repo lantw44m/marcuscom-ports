@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.12 2011/06/30 04:23:56 mezz Exp $
+#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.13 2011/08/30 21:30:20 kwm Exp $
 #
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	3.0.6
+PORTVERSION=	3.1.4
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -46,10 +46,10 @@ WITH_GNOME=	yes
 #.if ${HAVE_GNOME:Mpygtksourceview}!="" && ${ARCH}!="sparc64" || defined(WITH_PYTHON)
 .if defined(WITH_PYTHON)
 USE_PYTHON=	yes
-BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/bus.py:${PORTSDIR}/devel/py-dbus \
-		gucharmap>=2.33.2:${PORTSDIR}/deskutils/gucharmap3
-RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/bus.py:${PORTSDIR}/devel/py-dbus \
-		gucharmap>=2.33.2:${PORTSDIR}/deskutils/gucharmap3
+BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/bus.py:${PORTSDIR}/devel/py-dbus
+RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/bus.py:${PORTSDIR}/devel/py-dbus
+#		gucharmap>=2.33.2:${PORTSDIR}/deskutils/gucharmap3
+# the charmap plugin doesn't work, missing py-gucharmap stuff
 CONFIGURE_ARGS+=--enable-python
 GLIB_SCHEMAS+=	org.gnome.gedit.plugins.terminal.gschema.xml
 PLIST_SUB+=	PYTHON=""
