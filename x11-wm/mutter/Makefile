@@ -3,11 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.25 2011/04/27 11:53:59 kwm Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.26 2011/05/28 12:19:03 kwm Exp $
 #
 
 PORTNAME=	mutter
-PORTVERSION=	3.0.2.1
+PORTVERSION=	3.1.91.1
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,7 +23,7 @@ LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
 USE_PYTHON=	2.5+
 USE_GETTEXT=	yes
