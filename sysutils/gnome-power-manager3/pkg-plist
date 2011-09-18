@@ -1,17 +1,6 @@
-bin/gnome-power-bugreport.sh
-bin/gnome-power-manager
 bin/gnome-power-statistics
-etc/xdg/autostart/gnome-power-manager.desktop
-sbin/gnome-power-backlight-helper
 share/applications/gnome-power-statistics.desktop
-share/dbus-1/services/gnome-power-manager.service
-share/GConf/gsettings/org.gnome.power-manager.gschema.migrate
-share/icons/gnome/scalable/status/keyboard-brightness-symbolic.svg
-%%DATADIR%%/acme.ui
-%%DATADIR%%/gpm-feedback-widget.ui
 %%DATADIR%%/gpm-statistics.ui
-%%DATADIR%%/icons/hicolor/16x16/actions/gpm-hibernate.png
-%%DATADIR%%/icons/hicolor/16x16/actions/gpm-suspend.png
 %%DATADIR%%/icons/hicolor/16x16/status/battery-caution-charging.png
 %%DATADIR%%/icons/hicolor/16x16/status/battery-caution.png
 %%DATADIR%%/icons/hicolor/16x16/status/battery-empty.png
@@ -53,8 +42,6 @@ share/icons/gnome/scalable/status/keyboard-brightness-symbolic.svg
 %%DATADIR%%/icons/hicolor/16x16/status/gpm-ups-100-charging.png
 %%DATADIR%%/icons/hicolor/16x16/status/gpm-ups-100.png
 %%DATADIR%%/icons/hicolor/16x16/status/gpm-ups-missing.png
-%%DATADIR%%/icons/hicolor/22x22/actions/gpm-hibernate.png
-%%DATADIR%%/icons/hicolor/22x22/actions/gpm-suspend.png
 %%DATADIR%%/icons/hicolor/22x22/status/battery-caution-charging.png
 %%DATADIR%%/icons/hicolor/22x22/status/battery-caution.png
 %%DATADIR%%/icons/hicolor/22x22/status/battery-empty.png
@@ -96,8 +83,6 @@ share/icons/gnome/scalable/status/keyboard-brightness-symbolic.svg
 %%DATADIR%%/icons/hicolor/22x22/status/gpm-ups-100-charging.png
 %%DATADIR%%/icons/hicolor/22x22/status/gpm-ups-100.png
 %%DATADIR%%/icons/hicolor/22x22/status/gpm-ups-missing.png
-%%DATADIR%%/icons/hicolor/24x24/actions/gpm-hibernate.png
-%%DATADIR%%/icons/hicolor/24x24/actions/gpm-suspend.png
 %%DATADIR%%/icons/hicolor/24x24/status/battery-caution-charging.png
 %%DATADIR%%/icons/hicolor/24x24/status/battery-caution.png
 %%DATADIR%%/icons/hicolor/24x24/status/battery-empty.png
@@ -139,8 +124,6 @@ share/icons/gnome/scalable/status/keyboard-brightness-symbolic.svg
 %%DATADIR%%/icons/hicolor/24x24/status/gpm-ups-100-charging.png
 %%DATADIR%%/icons/hicolor/24x24/status/gpm-ups-100.png
 %%DATADIR%%/icons/hicolor/24x24/status/gpm-ups-missing.png
-%%DATADIR%%/icons/hicolor/32x32/actions/gpm-hibernate.png
-%%DATADIR%%/icons/hicolor/32x32/actions/gpm-suspend.png
 %%DATADIR%%/icons/hicolor/32x32/status/battery-caution-charging.png
 %%DATADIR%%/icons/hicolor/32x32/status/battery-caution.png
 %%DATADIR%%/icons/hicolor/32x32/status/battery-empty.png
@@ -182,8 +165,6 @@ share/icons/gnome/scalable/status/keyboard-brightness-symbolic.svg
 %%DATADIR%%/icons/hicolor/32x32/status/gpm-ups-100-charging.png
 %%DATADIR%%/icons/hicolor/32x32/status/gpm-ups-100.png
 %%DATADIR%%/icons/hicolor/32x32/status/gpm-ups-missing.png
-%%DATADIR%%/icons/hicolor/48x48/actions/gpm-hibernate.png
-%%DATADIR%%/icons/hicolor/48x48/actions/gpm-suspend.png
 %%DATADIR%%/icons/hicolor/48x48/status/battery-caution-charging.png
 %%DATADIR%%/icons/hicolor/48x48/status/battery-caution.png
 %%DATADIR%%/icons/hicolor/48x48/status/battery-empty.png
@@ -227,8 +208,6 @@ share/icons/gnome/scalable/status/keyboard-brightness-symbolic.svg
 %%DATADIR%%/icons/hicolor/48x48/status/gpm-ups-100.png
 %%DATADIR%%/icons/hicolor/48x48/status/gpm-ups-missing.png
 %%DATADIR%%/icons/hicolor/icon-theme.cache
-%%DATADIR%%/icons/hicolor/scalable/actions/gpm-hibernate.svg
-%%DATADIR%%/icons/hicolor/scalable/actions/gpm-suspend.svg
 %%DATADIR%%/icons/hicolor/scalable/status/battery-caution-charging.svg
 %%DATADIR%%/icons/hicolor/scalable/status/battery-caution.svg
 %%DATADIR%%/icons/hicolor/scalable/status/battery-empty.svg
@@ -262,268 +241,12 @@ share/icons/gnome/scalable/status/keyboard-brightness-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/status/gpm-ups-100-charging.svg
 %%DATADIR%%/icons/hicolor/scalable/status/gpm-ups-100.svg
 %%DATADIR%%/icons/hicolor/scalable/status/gpm-ups-missing.svg
-share/gnome/help/gnome-power-manager/C/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/C/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/C/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/C/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/C/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/C/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/C/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/C/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/C/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/C/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/C/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/C/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/C/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/C/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/C/legal.xml
-share/gnome/help/gnome-power-manager/ca/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/ca/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/ca/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/ca/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/ca/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/ca/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/ca/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/ca/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/ca/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/ca/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/ca/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/ca/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/ca/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/ca/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/de/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/de/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/de/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/de/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/de/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/de/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/de/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/de/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/de/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/de/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/de/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/de/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/de/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/de/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/el/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/el/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/el/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/el/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/el/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/el/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/el/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/el/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/el/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/el/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/el/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/el/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/el/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/el/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/en_GB/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/en_GB/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/en_GB/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/en_GB/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/es/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/es/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/es/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/es/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/es/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/es/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/es/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/es/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/es/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/es/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/es/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/es/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/es/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/es/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/eu/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/eu/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/eu/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/eu/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/eu/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/eu/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/eu/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/eu/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/eu/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/eu/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/eu/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/eu/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/eu/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/eu/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/fi/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/fi/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/fi/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/fi/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/fi/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/fi/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/fi/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/fi/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/fi/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/fi/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/fi/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/fi/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/fi/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/fi/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/fr/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/fr/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/fr/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/fr/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/fr/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/fr/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/fr/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/fr/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/fr/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/fr/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/fr/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/fr/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/fr/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/fr/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/hu/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/hu/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/hu/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/hu/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/hu/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/hu/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/hu/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/hu/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/hu/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/hu/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/hu/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/hu/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/hu/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/hu/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/it/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/it/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/it/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/it/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/it/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/it/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/it/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/it/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/it/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/it/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/it/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/it/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/it/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/it/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/oc/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/oc/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/oc/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/oc/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/oc/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/oc/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/oc/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/oc/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/oc/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/oc/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/oc/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/oc/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/oc/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/oc/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/pa/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/pa/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/pa/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/pa/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/pa/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/pa/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/pa/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/pa/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/pa/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/pa/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/pa/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/pa/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/pa/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/pa/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/ru/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/ru/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/ru/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/ru/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/ru/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/ru/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/ru/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/ru/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/ru/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/ru/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/ru/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/ru/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/ru/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/ru/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/sl/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/sl/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/sl/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/sl/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/sl/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/sl/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/sl/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/sl/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/sl/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/sl/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/sl/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/sl/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/sl/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/sl/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/sv/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/sv/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/sv/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/sv/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/sv/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/sv/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/sv/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/sv/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/sv/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/sv/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/sv/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/sv/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/sv/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/sv/gnome-power-manager.xml
-share/gnome/help/gnome-power-manager/zh_CN/figures/applet-brightness.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/applet-inhibit.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gpm-cell-capacity.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gpm-charged.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gpm-critical.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gpm-low.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gpm-prefs-ac.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gpm-prefs-battery.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gpm-prefs-general.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gpm-stats-graph.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gpm-suspend-problem.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gpm-unplugged.png
-share/gnome/help/gnome-power-manager/zh_CN/figures/gs-prefs.png
-share/gnome/help/gnome-power-manager/zh_CN/gnome-power-manager.xml
-share/icons/hicolor/16x16/apps/gnome-brightness-applet.png
-share/icons/hicolor/16x16/apps/gnome-inhibit-applet.png
-share/icons/hicolor/16x16/apps/gnome-power-manager.png
+share/icons/gnome/scalable/status/keyboard-brightness-symbolic.svg
 share/icons/hicolor/16x16/apps/gnome-power-statistics.png
-share/icons/hicolor/22x22/apps/gnome-brightness-applet.png
-share/icons/hicolor/22x22/apps/gnome-inhibit-applet.png
-share/icons/hicolor/22x22/apps/gnome-power-manager.png
 share/icons/hicolor/22x22/apps/gnome-power-statistics.png
-share/icons/hicolor/24x24/apps/gnome-brightness-applet.png
-share/icons/hicolor/24x24/apps/gnome-inhibit-applet.png
-share/icons/hicolor/24x24/apps/gnome-power-manager.png
 share/icons/hicolor/24x24/apps/gnome-power-statistics.png
-share/icons/hicolor/32x32/apps/gnome-brightness-applet.png
-share/icons/hicolor/32x32/apps/gnome-inhibit-applet.png
-share/icons/hicolor/32x32/apps/gnome-power-manager.png
 share/icons/hicolor/32x32/apps/gnome-power-statistics.png
-share/icons/hicolor/48x48/apps/gnome-brightness-applet.png
-share/icons/hicolor/48x48/apps/gnome-inhibit-applet.png
-share/icons/hicolor/48x48/apps/gnome-power-manager.png
 share/icons/hicolor/48x48/apps/gnome-power-statistics.png
-share/icons/hicolor/scalable/apps/gnome-brightness-applet.svg
-share/icons/hicolor/scalable/apps/gnome-inhibit-applet.svg
-share/icons/hicolor/scalable/apps/gnome-power-manager.svg
 share/icons/hicolor/scalable/apps/gnome-power-statistics.svg
 share/locale/af/LC_MESSAGES/gnome-power-manager.mo
 share/locale/ar/LC_MESSAGES/gnome-power-manager.mo
@@ -542,10 +265,10 @@ share/locale/da/LC_MESSAGES/gnome-power-manager.mo
 share/locale/de/LC_MESSAGES/gnome-power-manager.mo
 share/locale/dz/LC_MESSAGES/gnome-power-manager.mo
 share/locale/el/LC_MESSAGES/gnome-power-manager.mo
-share/locale/eo/LC_MESSAGES/gnome-power-manager.mo
 share/locale/en@shaw/LC_MESSAGES/gnome-power-manager.mo
 share/locale/en_CA/LC_MESSAGES/gnome-power-manager.mo
 share/locale/en_GB/LC_MESSAGES/gnome-power-manager.mo
+share/locale/eo/LC_MESSAGES/gnome-power-manager.mo
 share/locale/es/LC_MESSAGES/gnome-power-manager.mo
 share/locale/et/LC_MESSAGES/gnome-power-manager.mo
 share/locale/eu/LC_MESSAGES/gnome-power-manager.mo
@@ -601,81 +324,20 @@ share/locale/vi/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
-share/omf/gnome-power-manager/gnome-power-manager-C.omf
-share/omf/gnome-power-manager/gnome-power-manager-ca.omf
-share/omf/gnome-power-manager/gnome-power-manager-de.omf
-share/omf/gnome-power-manager/gnome-power-manager-el.omf
-share/omf/gnome-power-manager/gnome-power-manager-en_GB.omf
-share/omf/gnome-power-manager/gnome-power-manager-es.omf
-share/omf/gnome-power-manager/gnome-power-manager-eu.omf
-share/omf/gnome-power-manager/gnome-power-manager-fi.omf
-share/omf/gnome-power-manager/gnome-power-manager-fr.omf
-share/omf/gnome-power-manager/gnome-power-manager-hu.omf
-share/omf/gnome-power-manager/gnome-power-manager-it.omf
-share/omf/gnome-power-manager/gnome-power-manager-oc.omf
-share/omf/gnome-power-manager/gnome-power-manager-pa.omf
-share/omf/gnome-power-manager/gnome-power-manager-ru.omf
-share/omf/gnome-power-manager/gnome-power-manager-sl.omf
-share/omf/gnome-power-manager/gnome-power-manager-sv.omf
-share/omf/gnome-power-manager/gnome-power-manager-zh_CN.omf
-share/polkit-1/actions/org.gnome.power.policy
-@dirrm share/omf/gnome-power-manager
 @dirrmtry share/icons/gnome/scalable/status
 @dirrmtry share/icons/gnome/scalable
 @dirrmtry share/icons/gnome
-@dirrmtry share/icons
-@dirrm share/gnome/help/gnome-power-manager/zh_CN/figures
-@dirrm share/gnome/help/gnome-power-manager/zh_CN
-@dirrm share/gnome/help/gnome-power-manager/sv/figures
-@dirrm share/gnome/help/gnome-power-manager/sv
-@dirrm share/gnome/help/gnome-power-manager/sl/figures
-@dirrm share/gnome/help/gnome-power-manager/sl
-@dirrm share/gnome/help/gnome-power-manager/ru/figures
-@dirrm share/gnome/help/gnome-power-manager/ru
-@dirrm share/gnome/help/gnome-power-manager/pa/figures
-@dirrm share/gnome/help/gnome-power-manager/pa
-@dirrm share/gnome/help/gnome-power-manager/oc/figures
-@dirrm share/gnome/help/gnome-power-manager/oc
-@dirrm share/gnome/help/gnome-power-manager/it/figures
-@dirrm share/gnome/help/gnome-power-manager/it
-@dirrm share/gnome/help/gnome-power-manager/hu/figures
-@dirrm share/gnome/help/gnome-power-manager/hu
-@dirrm share/gnome/help/gnome-power-manager/fr/figures
-@dirrm share/gnome/help/gnome-power-manager/fr
-@dirrm share/gnome/help/gnome-power-manager/fi/figures
-@dirrm share/gnome/help/gnome-power-manager/fi
-@dirrm share/gnome/help/gnome-power-manager/eu/figures
-@dirrm share/gnome/help/gnome-power-manager/eu
-@dirrm share/gnome/help/gnome-power-manager/es/figures
-@dirrm share/gnome/help/gnome-power-manager/es
-@dirrm share/gnome/help/gnome-power-manager/en_GB/figures
-@dirrm share/gnome/help/gnome-power-manager/en_GB
-@dirrm share/gnome/help/gnome-power-manager/el/figures
-@dirrm share/gnome/help/gnome-power-manager/el
-@dirrm share/gnome/help/gnome-power-manager/de/figures
-@dirrm share/gnome/help/gnome-power-manager/de
-@dirrm share/gnome/help/gnome-power-manager/ca/figures
-@dirrm share/gnome/help/gnome-power-manager/ca
-@dirrm share/gnome/help/gnome-power-manager/C/figures
-@dirrm share/gnome/help/gnome-power-manager/C
-@dirrm share/gnome/help/gnome-power-manager
 @dirrm %%DATADIR%%/icons/hicolor/scalable/status
-@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
 @dirrm %%DATADIR%%/icons/hicolor/scalable
 @dirrm %%DATADIR%%/icons/hicolor/48x48/status
-@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
 @dirrm %%DATADIR%%/icons/hicolor/48x48
 @dirrm %%DATADIR%%/icons/hicolor/32x32/status
-@dirrm %%DATADIR%%/icons/hicolor/32x32/actions
 @dirrm %%DATADIR%%/icons/hicolor/32x32
 @dirrm %%DATADIR%%/icons/hicolor/24x24/status
-@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
 @dirrm %%DATADIR%%/icons/hicolor/24x24
 @dirrm %%DATADIR%%/icons/hicolor/22x22/status
-@dirrm %%DATADIR%%/icons/hicolor/22x22/actions
 @dirrm %%DATADIR%%/icons/hicolor/22x22
 @dirrm %%DATADIR%%/icons/hicolor/16x16/status
-@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
 @dirrm %%DATADIR%%/icons/hicolor/16x16
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
