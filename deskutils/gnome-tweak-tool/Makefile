@@ -3,10 +3,11 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
+#    $MCom$
 #
 
 PORTNAME=	gnome-tweak-tool
-PORTVERSION=	3.0.5
+PORTVERSION=	3.1.90
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -18,7 +19,7 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0.1.0:${PORTSDIR}/devel/gsettings-deskto
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix gconf2 pygobject
+USE_GNOME=	gnomehack gnomeprefix gconf2 pygobject3
 USE_PYTHON=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes

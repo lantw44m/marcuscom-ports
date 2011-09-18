@@ -14,6 +14,9 @@ bin/gnome-tweak-tool
 %%PYTHON_SITELIBDIR%%/gtweak/gshellwrapper.py
 %%PYTHON_SITELIBDIR%%/gtweak/gshellwrapper.pyc
 %%PYTHON_SITELIBDIR%%/gtweak/gshellwrapper.pyo
+%%PYTHON_SITELIBDIR%%/gtweak/mainwindow.py
+%%PYTHON_SITELIBDIR%%/gtweak/mainwindow.pyc
+%%PYTHON_SITELIBDIR%%/gtweak/mainwindow.pyo
 %%PYTHON_SITELIBDIR%%/gtweak/tweakmodel.py
 %%PYTHON_SITELIBDIR%%/gtweak/tweakmodel.pyc
 %%PYTHON_SITELIBDIR%%/gtweak/tweakmodel.pyo
@@ -53,22 +56,36 @@ bin/gnome-tweak-tool
 share/applications/gnome-tweak-tool.desktop
 %%DATADIR%%/shell.ui
 %%DATADIR%%/welcome.png
+share/locale/ca/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/cs/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/da/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/de/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/el/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/es/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/fa/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/gl/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/he/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/hu/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/ja/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/lv/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/nb/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/pl/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/pt/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/ru/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/sl/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/sr/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/sv/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/uk/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/vi/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-tweak-tool.mo
+share/locale/zh_TW/LC_MESSAGES/gnome-tweak-tool.mo
+@dirrm share/locale/zh_HK/LC_MESSAGES
+@dirrm share/locale/zh_HK
+@dirrm share/locale/sr@latin/LC_MESSAGES
+@dirrm share/locale/sr@latin
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/gtweak/tweaks
