@@ -3,12 +3,11 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.13 2011/06/10 22:59:07 mezz Exp $
+#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.14 2011/07/03 11:57:45 kwm Exp $
 #
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	3.0.3
-PORTREVISION=	1
+PORTVERSION=	3.1.91
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,7 +15,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A program that keeps passwords and other secrets
 
-BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
+		update-mime-database:${PORTSDIR}/misc/shared-mime-info
 LIB_DEPENDS=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
 		tasn1.4:${PORTSDIR}/security/libtasn1 \
 		gcrypt.18:${PORTSDIR}/security/libgcrypt
@@ -25,15 +25,15 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_ro
 CONFLICTS=	gnome-keyring-2.[0-9]*
 
 LATEST_LINK=	gnome-keyring3
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GNOME=	gnomehack gnomeprefix gtk30 ltverhack intlhack
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
+INSTALLS_ICONS=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-pam-dir="${PREFIX}/lib" \
-		--with-root-certs=${LOCALBASE}/share/certs \
-		--with-gtk=3.0
+		--with-root-certs=${LOCALBASE}/share/certs
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
 		LDFLAGS="-L${LOCALBASE}/lib"
 GLIB_SCHEMAS=	org.gnome.crypto.cache.gschema.xml \
