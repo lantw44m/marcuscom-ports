@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/net/gnome-online-accounts/Makefile,v 1.1 2011/09/16 13:16:53 kwm Exp $
 
 PORTNAME=	gnome-online-accounts
 PORTVERSION=	3.1.90
@@ -13,7 +13,8 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Interface privider to access the user's online accounts.
 
-BUILD_DEPENDS=	g-ir-scanner:${PORSTDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	g-ir-scanner:${PORSTDIR}/devel/gobject-introspection \
+		docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 LIB_DEPENDS=	webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3 \
 		json-glib:${PORTSDIR}/devel/json-glib \
 		notify.4:${PORTSDIR}/devel/libnotify \
