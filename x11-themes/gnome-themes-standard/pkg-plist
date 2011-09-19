@@ -567,6 +567,7 @@ share/locale/cs/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/da/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/de/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/el/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/en_CA/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/en_GB/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/eo/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/es/LC_MESSAGES/gnome-themes-standard.mo
@@ -600,6 +601,7 @@ share/locale/sl/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/sr/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/sr@latin/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/sv/LC_MESSAGES/gnome-themes-standard.mo
+share/locale/ta/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/th/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/tr/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/ug/LC_MESSAGES/gnome-themes-standard.mo
@@ -620,9 +622,14 @@ share/themes/Adwaita/gtk-3.0/assets/checkbox-checked-dark.svg
 share/themes/Adwaita/gtk-3.0/assets/checkbox-checked-insensitive-dark.svg
 share/themes/Adwaita/gtk-3.0/assets/checkbox-checked-insensitive.svg
 share/themes/Adwaita/gtk-3.0/assets/checkbox-checked.svg
+share/themes/Adwaita/gtk-3.0/assets/checkbox-menuitem-checked-insensitive.svg
 share/themes/Adwaita/gtk-3.0/assets/checkbox-menuitem-checked-selected.svg
 share/themes/Adwaita/gtk-3.0/assets/checkbox-menuitem-checked.svg
+share/themes/Adwaita/gtk-3.0/assets/checkbox-menuitem-mixed-insensitive.svg
+share/themes/Adwaita/gtk-3.0/assets/checkbox-menuitem-mixed.svg
 share/themes/Adwaita/gtk-3.0/assets/checkbox-mixed-dark.svg
+share/themes/Adwaita/gtk-3.0/assets/checkbox-mixed-insensitive-dark.svg
+share/themes/Adwaita/gtk-3.0/assets/checkbox-mixed-insensitive.svg
 share/themes/Adwaita/gtk-3.0/assets/checkbox-mixed.svg
 share/themes/Adwaita/gtk-3.0/assets/checkbox-unchecked-dark.svg
 share/themes/Adwaita/gtk-3.0/assets/checkbox-unchecked-insensitive-dark.svg
@@ -641,9 +648,14 @@ share/themes/Adwaita/gtk-3.0/assets/progressbar-border-dark.svg
 share/themes/Adwaita/gtk-3.0/assets/progressbar-border-vertical-dark.svg
 share/themes/Adwaita/gtk-3.0/assets/progressbar-border-vertical.svg
 share/themes/Adwaita/gtk-3.0/assets/progressbar-border.svg
+share/themes/Adwaita/gtk-3.0/assets/radio-menuitem-checked-insensitive.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-menuitem-checked-selected.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-menuitem-checked.svg
+share/themes/Adwaita/gtk-3.0/assets/radio-menuitem-mixed-insensitive.svg
+share/themes/Adwaita/gtk-3.0/assets/radio-menuitem-mixed.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-mixed-dark.svg
+share/themes/Adwaita/gtk-3.0/assets/radio-mixed-insensitive-dark.svg
+share/themes/Adwaita/gtk-3.0/assets/radio-mixed-insensitive.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-mixed.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-selected-dark.svg
 share/themes/Adwaita/gtk-3.0/assets/radio-selected-insensitive-dark.svg
@@ -693,6 +705,7 @@ share/themes/Adwaita/gtk-3.0/assets/trough-border-horizontal-dark.svg
 share/themes/Adwaita/gtk-3.0/assets/trough-border-horizontal.svg
 share/themes/Adwaita/gtk-3.0/assets/trough-border-vertical-dark.svg
 share/themes/Adwaita/gtk-3.0/assets/trough-border-vertical.svg
+share/themes/Adwaita/gtk-3.0/gnome-applications.css
 share/themes/Adwaita/gtk-3.0/gtk-dark.css
 share/themes/Adwaita/gtk-3.0/gtk-widgets-assets-dark.css
 share/themes/Adwaita/gtk-3.0/gtk-widgets-assets.css
