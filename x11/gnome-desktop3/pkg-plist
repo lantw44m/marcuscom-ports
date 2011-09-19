@@ -12,6 +12,29 @@ lib/libgnome-desktop-3.la
 lib/libgnome-desktop-3.so
 lib/libgnome-desktop-3.so.2
 libdata/pkgconfig/gnome-desktop-3.0.pc
+share/doc/gnome-desktop3/GnomeDesktopThumbnailFactory.html
+share/doc/gnome-desktop3/background.html
+share/doc/gnome-desktop3/gnome-desktop3-gnome-bg.html
+share/doc/gnome-desktop3/gnome-desktop3-gnome-desktop-utils.html
+share/doc/gnome-desktop3/gnome-desktop3-gnome-rr-config.html
+share/doc/gnome-desktop3/gnome-desktop3-gnome-rr-crtc.html
+share/doc/gnome-desktop3/gnome-desktop3-gnome-rr-labeler.html
+share/doc/gnome-desktop3/gnome-desktop3-gnome-rr-mode.html
+share/doc/gnome-desktop3/gnome-desktop3-gnome-rr-output.html
+share/doc/gnome-desktop3/gnome-desktop3-gnome-rr-screen.html
+share/doc/gnome-desktop3/gnome-desktop3.devhelp
+share/doc/gnome-desktop3/gnome-desktop3.devhelp2
+share/doc/gnome-desktop3/home.png
+share/doc/gnome-desktop3/index.html
+share/doc/gnome-desktop3/index.sgml
+share/doc/gnome-desktop3/intro.html
+share/doc/gnome-desktop3/left.png
+share/doc/gnome-desktop3/libgnome.html
+share/doc/gnome-desktop3/randr.html
+share/doc/gnome-desktop3/right.png
+share/doc/gnome-desktop3/style.css
+share/doc/gnome-desktop3/thumbnail.html
+share/doc/gnome-desktop3/up.png
 share/gir-1.0/GnomeDesktop-3.0.gir
 share/gnome/gnome-version.xml
 share/gnome/help/fdl/C/fdl.xml
@@ -108,6 +131,7 @@ share/locale/fy/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/ga/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/gl/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/gu/LC_MESSAGES/gnome-desktop-3.0.mo
+share/locale/ha/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/he/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/hi/LC_MESSAGES/gnome-desktop-3.0.mo
 share/locale/hr/LC_MESSAGES/gnome-desktop-3.0.mo
@@ -289,9 +313,10 @@ share/omf/lgpl/lgpl-zh_CN.omf
 @dirrm share/gnome/help/fdl/de
 @dirrm share/gnome/help/fdl/ca
 @dirrm share/gnome/help/fdl/ar
+@dirrm share/libgnome-desktop-3.0
+@dirrm share/doc/gnome-desktop3
 @dirrm include/gnome-desktop-3.0/libgnome-desktop
 @dirrm include/gnome-desktop-3.0
-@dirrm share/libgnome-desktop-3.0
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
