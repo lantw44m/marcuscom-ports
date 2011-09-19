@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog3/Makefile,v 1.12 2011/05/28 11:42:47 kwm Exp $
+#   $MCom: ports/graphics/eog3/Makefile,v 1.13 2011/06/10 22:59:04 mezz Exp $
 #
 
 PORTNAME=	eog
-PORTVERSION=	3.0.2
+PORTVERSION=	3.1.92
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -28,7 +28,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-i
 CONFLICTS=	eog-2.[0-9]*
 
 LATEST_LINK=	eog3
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack librsvg2 desktopfileutils gtk30 \
 		gnomedesktop3 gnomedocutils
@@ -36,8 +36,8 @@ INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 GLIB_SCHEMAS=	org.gnome.eog.enums.xml \
 		org.gnome.eog.gschema.xml
