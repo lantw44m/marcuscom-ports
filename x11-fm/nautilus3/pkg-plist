@@ -33,7 +33,6 @@ share/doc/libnautilus-extension/index.html
 share/doc/libnautilus-extension/index.sgml
 share/doc/libnautilus-extension/ix01.html
 share/doc/libnautilus-extension/left.png
-share/doc/libnautilus-extension/libnautilus-extension.devhelp
 share/doc/libnautilus-extension/libnautilus-extension.devhelp2
 share/doc/libnautilus-extension/libnautilus-extension-nautilus-column-provider.html
 share/doc/libnautilus-extension/libnautilus-extension-nautilus-column.html
@@ -168,7 +167,6 @@ share/mime/packages/nautilus.xml
 %%DATADIR%%/icons/hicolor/16x16/emblems/emblem-note.png
 %%DATADIR%%/icons/hicolor/24x24/emblems/emblem-note.png
 %%DATADIR%%/icons/hicolor/48x48/emblems/emblem-note.png
-%%DATADIR%%/nautilus.css
 %%DATADIR%%/nautilus-extras.placeholder
 %%DATADIR%%/nautilus-suggested.placeholder
 %%DATADIR%%/ui/nautilus-bookmarks-window.ui
@@ -179,7 +177,6 @@ share/mime/packages/nautilus.xml
 %%DATADIR%%/ui/nautilus-list-view-ui.xml
 %%DATADIR%%/ui/nautilus-shell-ui.xml
 %%DATADIR%%/ui/nautilus-toolbar-ui.xml
-share/pixmaps/nautilus/audio.svg
 share/pixmaps/nautilus/knob.png
 share/pixmaps/nautilus/thumbnail_frame.png
 @dirrm share/pixmaps/nautilus
