@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop3/Makefile,v 1.17 2011/06/10 22:59:10 mezz Exp $
+#   $MCom: ports/x11/gnome-desktop3/Makefile,v 1.18 2011/09/16 16:17:23 kwm Exp $
 #
 
 PORTNAME=	gnome-desktop
@@ -27,7 +27,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTS
 
 LATEST_LINK=	gnome-desktop3
 
-USE_XORG=	x11 xrandr
+USE_XORG=	x11 xrandr xext
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils gtk30 \
 		ltverhack referencehack
 USE_GETTEXT=	yes
