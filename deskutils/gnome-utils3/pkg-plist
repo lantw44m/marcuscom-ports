@@ -51,7 +51,6 @@ share/doc/gdict/gdict-Gdict-Utilities.html
 share/doc/gdict/gdict-Gdict-Version-Checking.html
 share/doc/gdict/gdict-GdictContext.html
 share/doc/gdict/gdict-utils.html
-share/doc/gdict/gdict.devhelp
 share/doc/gdict/gdict.devhelp2
 share/doc/gdict/gdict.html
 share/doc/gdict/gdictui.html
@@ -477,6 +476,8 @@ share/gnome/help/gnome-system-log/fr/figures/syslog_window.png
 share/gnome/help/gnome-system-log/fr/gnome-system-log.xml
 share/gnome/help/gnome-system-log/it/figures/syslog_window.png
 share/gnome/help/gnome-system-log/it/gnome-system-log.xml
+share/gnome/help/gnome-system-log/ja/figures/syslog_window.png
+share/gnome/help/gnome-system-log/ja/gnome-system-log.xml
 share/gnome/help/gnome-system-log/ko/figures/syslog_window.png
 share/gnome/help/gnome-system-log/ko/gnome-system-log.xml
 share/gnome/help/gnome-system-log/oc/figures/syslog_window.png
@@ -560,6 +561,7 @@ share/omf/gnome-system-log/gnome-system-log-eu.omf
 share/omf/gnome-system-log/gnome-system-log-fi.omf
 share/omf/gnome-system-log/gnome-system-log-fr.omf
 share/omf/gnome-system-log/gnome-system-log-it.omf
+share/omf/gnome-system-log/gnome-system-log-ja.omf
 share/omf/gnome-system-log/gnome-system-log-ko.omf
 share/omf/gnome-system-log/gnome-system-log-oc.omf
 share/omf/gnome-system-log/gnome-system-log-ru.omf
@@ -689,6 +691,8 @@ share/thumbnailers/gnome-font-viewer.thumbnailer
 @dirrm share/gnome/help/gnome-system-log/oc
 @dirrm share/gnome/help/gnome-system-log/ko/figures
 @dirrm share/gnome/help/gnome-system-log/ko
+@dirrm share/gnome/help/gnome-system-log/ja/figures
+@dirrm share/gnome/help/gnome-system-log/ja
 @dirrm share/gnome/help/gnome-system-log/it/figures
 @dirrm share/gnome/help/gnome-system-log/it
 @dirrm share/gnome/help/gnome-system-log/fr/figures

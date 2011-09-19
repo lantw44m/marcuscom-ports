@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils3/Makefile,v 1.10 2011/06/10 22:59:02 mezz Exp $
+#   $MCom: ports/deskutils/gnome-utils3/Makefile,v 1.11 2011/06/11 19:51:12 mezz Exp $
 #
 
 PORTNAME=	gnome-utils
-PORTVERSION=	3.0.1
+PORTVERSION=	3.1.92
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,14 +23,14 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-sc
 CONFLICTS=	gnome-utils-2.[0-9]*
 
 LATEST_LINK=	gnome-utils3
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_XORG=	xext x11
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel3 ltverhack gconf2
+USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 ltverhack gconf2
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-maintainer-flags=no
 CPPFLAGS=	-I${LOCALBASE}/include
