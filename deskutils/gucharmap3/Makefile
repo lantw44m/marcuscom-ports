@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap3/Makefile,v 1.5 2011/06/10 22:59:02 mezz Exp $
+#   $MCom: ports/deskutils/gucharmap3/Makefile,v 1.6 2011/06/11 19:51:12 mezz Exp $
 #
 
 PORTNAME=	gucharmap
-PORTVERSION=	3.0.1
+PORTVERSION=	3.1.92
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,7 +18,7 @@ COMMENT=	A Unicode/ISO10646 character map and font viewer
 CONFLICTS=	gucharmap-2.[0-9]*
 
 LATEST_LINK=	gucharmap3
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 gnomedocutils gconf2
@@ -27,7 +27,6 @@ INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--with-gtk=3.0
 
 GCONF_SCHEMAS=	gucharmap.schemas
 
