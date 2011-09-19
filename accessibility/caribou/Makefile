@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/caribou/Makefile,v 1.7 2011/06/11 18:55:55 mezz Exp $
+#    $MCom: ports/accessibility/caribou/Makefile,v 1.8 2011/09/18 13:53:09 kwm Exp $
 #
 
 PORTNAME=	caribou
-PORTVERSION=	0.3.91
+PORTVERSION=	0.3.92
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,6 +22,7 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter \
 		gee.2:${PORTSDIR}/devel/libgee \
 		xklavier.12:${PORTSDIR}/x11/libxklavier
+RUN_DEPENDS=	py*-atspi>=2.1.91:${PORTSDIR}/accessibility/py-atspi
 
 USE_XZ=		yes
 USE_GMAKE=	yes
@@ -41,5 +42,11 @@ GLIB_SCHEMAS=	org.gnome.caribou.gschema.xml \
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${PYTHON_CMD}|g' \
 		${WRKSRC}/tools/*.py
+	@${REINPLACE_CMD} -e 's|/bin/bash|/bin/sh|g' \
+		-e 's|$${BASH_SOURCE[0]}|.|g' \
+		${WRKSRC}/bin/antler-keyboard.in \
+		${WRKSRC}/bin/caribou-preferences.in \
+		${WRKSRC}/bin/caribou.in
+
 
 .include <bsd.port.mk>

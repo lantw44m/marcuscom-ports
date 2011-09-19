@@ -2,6 +2,7 @@ bin/caribou
 bin/caribou-preferences
 etc/xdg/autostart/caribou-autostart.desktop
 lib/girepository-1.0/Caribou-1.0.typelib
+lib/gnome-settings-daemon-3.0/gtk-modules/caribou-gtk-module.desktop
 lib/gtk-3.0/modules/libcaribou-gtk-module.a
 lib/gtk-3.0/modules/libcaribou-gtk-module.la
 lib/gtk-3.0/modules/libcaribou-gtk-module.so
@@ -77,18 +78,24 @@ share/locale/es/LC_MESSAGES/caribou.mo
 share/locale/fa/LC_MESSAGES/caribou.mo
 share/locale/fr/LC_MESSAGES/caribou.mo
 share/locale/gl/LC_MESSAGES/caribou.mo
+share/locale/gu/LC_MESSAGES/caribou.mo
 share/locale/he/LC_MESSAGES/caribou.mo
+share/locale/hi/LC_MESSAGES/caribou.mo
 share/locale/hu/LC_MESSAGES/caribou.mo
 share/locale/id/LC_MESSAGES/caribou.mo
 share/locale/it/LC_MESSAGES/caribou.mo
 share/locale/ja/LC_MESSAGES/caribou.mo
+share/locale/lt/LC_MESSAGES/caribou.mo
+share/locale/lv/LC_MESSAGES/caribou.mo
 share/locale/ml/LC_MESSAGES/caribou.mo
 share/locale/ms/LC_MESSAGES/caribou.mo
 share/locale/nb/LC_MESSAGES/caribou.mo
 share/locale/nl/LC_MESSAGES/caribou.mo
 share/locale/nn/LC_MESSAGES/caribou.mo
+share/locale/or/LC_MESSAGES/caribou.mo
 share/locale/pa/LC_MESSAGES/caribou.mo
 share/locale/pl/LC_MESSAGES/caribou.mo
+share/locale/pt/LC_MESSAGES/caribou.mo
 share/locale/pt_BR/LC_MESSAGES/caribou.mo
 share/locale/ro/LC_MESSAGES/caribou.mo
 share/locale/ru/LC_MESSAGES/caribou.mo
@@ -97,6 +104,7 @@ share/locale/sr/LC_MESSAGES/caribou.mo
 share/locale/sr@latin/LC_MESSAGES/caribou.mo
 share/locale/sv/LC_MESSAGES/caribou.mo
 share/locale/ta/LC_MESSAGES/caribou.mo
+share/locale/tr/LC_MESSAGES/caribou.mo
 share/locale/ug/LC_MESSAGES/caribou.mo
 share/locale/uk/LC_MESSAGES/caribou.mo
 share/locale/zh_CN/LC_MESSAGES/caribou.mo
@@ -111,6 +119,8 @@ share/locale/zh_TW/LC_MESSAGES/caribou.mo
 @dirrm %%PYTHON_SITELIBDIR%%/caribou/daemon
 @dirrm %%PYTHON_SITELIBDIR%%/caribou/antler
 @dirrm %%PYTHON_SITELIBDIR%%/caribou
+@dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
+@dirrmtry lib/gnome-settings-daemon-3.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
