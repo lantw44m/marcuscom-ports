@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.29 2011/09/17 13:27:37 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.30 2011/09/18 10:35:34 kwm Exp $
 #
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.1.91
-PORTREVISION=	1
+PORTVERSION=	3.1.92
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -50,8 +49,8 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-libsocialweb=no
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME

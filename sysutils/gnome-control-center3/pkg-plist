@@ -171,8 +171,8 @@ share/pixmaps/faces/yellow-rose.jpg
 %%DATADIR%%/pixmaps/right-ring-finger.svg
 %%DATADIR%%/pixmaps/right-thumb.png
 %%DATADIR%%/pixmaps/right-thumb.svg
-%%DATADIR%%/pixmaps/wacom-stylus.png
-%%DATADIR%%/pixmaps/wacom-tablet.png
+%%DATADIR%%/pixmaps/wacom-stylus.svg
+%%DATADIR%%/pixmaps/wacom-tablet.svg
 %%DATADIR%%/sounds/gnome-sounds-default.xml
 %%DATADIR%%/ui/GnomeLogoVerticalMedium.svg
 %%DATADIR%%/ui/background/background.ui
@@ -270,6 +270,7 @@ share/gnome/help/control-center/fr/control-center.xml
 share/gnome/help/control-center/gl/control-center.xml
 share/gnome/help/control-center/it/control-center.xml
 share/gnome/help/control-center/ja/control-center.xml
+share/gnome/help/control-center/ko/control-center.xml
 share/gnome/help/control-center/oc/control-center.xml
 share/gnome/help/control-center/pa/control-center.xml
 share/gnome/help/control-center/pl/control-center.xml
@@ -508,6 +509,7 @@ share/omf/control-center/control-center-fr.omf
 share/omf/control-center/control-center-gl.omf
 share/omf/control-center/control-center-it.omf
 share/omf/control-center/control-center-ja.omf
+share/omf/control-center/control-center-ko.omf
 share/omf/control-center/control-center-oc.omf
 share/omf/control-center/control-center-pa.omf
 share/omf/control-center/control-center-pl.omf
@@ -544,6 +546,7 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm share/gnome/help/control-center/pl
 @dirrm share/gnome/help/control-center/pa
 @dirrm share/gnome/help/control-center/oc
+@dirrm share/gnome/help/control-center/ko
 @dirrm share/gnome/help/control-center/ja
 @dirrm share/gnome/help/control-center/it
 @dirrm share/gnome/help/control-center/gl
