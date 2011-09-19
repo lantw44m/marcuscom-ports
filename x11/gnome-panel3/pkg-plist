@@ -36,6 +36,56 @@ share/dbus-1/services/org.gnome.panel.applet.ClockAppletFactory.service
 share/dbus-1/services/org.gnome.panel.applet.FishAppletFactory.service
 share/dbus-1/services/org.gnome.panel.applet.NotificationAreaAppletFactory.service
 share/dbus-1/services/org.gnome.panel.applet.WnckletFactory.service
+share/doc/panel-applet-4.0/getting-started.concepts.html
+share/doc/panel-applet-4.0/getting-started.concepts.html.bak
+share/doc/panel-applet-4.0/getting-started.context-menu.html
+share/doc/panel-applet-4.0/getting-started.context-menu.html.bak
+share/doc/panel-applet-4.0/getting-started.example.html
+share/doc/panel-applet-4.0/getting-started.example.html.bak
+share/doc/panel-applet-4.0/getting-started.html
+share/doc/panel-applet-4.0/getting-started.html.bak
+share/doc/panel-applet-4.0/getting-started.in-out-process.html
+share/doc/panel-applet-4.0/getting-started.in-out-process.html.bak
+share/doc/panel-applet-4.0/getting-started.install.html
+share/doc/panel-applet-4.0/getting-started.install.html.bak
+share/doc/panel-applet-4.0/getting-started.integration.html
+share/doc/panel-applet-4.0/getting-started.integration.html.bak
+share/doc/panel-applet-4.0/getting-started.intro.html
+share/doc/panel-applet-4.0/getting-started.intro.html.bak
+share/doc/panel-applet-4.0/getting-started.introspection.html
+share/doc/panel-applet-4.0/getting-started.introspection.html.bak
+share/doc/panel-applet-4.0/getting-started.settings.html
+share/doc/panel-applet-4.0/getting-started.settings.html.bak
+share/doc/panel-applet-4.0/home.png
+share/doc/panel-applet-4.0/home.png.bak
+share/doc/panel-applet-4.0/index.html
+share/doc/panel-applet-4.0/index.html.bak
+share/doc/panel-applet-4.0/index.sgml
+share/doc/panel-applet-4.0/index.sgml.bak
+share/doc/panel-applet-4.0/left.png
+share/doc/panel-applet-4.0/left.png.bak
+share/doc/panel-applet-4.0/overview.html
+share/doc/panel-applet-4.0/overview.html.bak
+share/doc/panel-applet-4.0/panel-applet-4.0.devhelp2
+share/doc/panel-applet-4.0/panel-applet-GConf-Utilities.html
+share/doc/panel-applet-4.0/panel-applet-GConf-Utilities.html.bak
+share/doc/panel-applet-4.0/panel-applet-Panel-Applet-Factory.html
+share/doc/panel-applet-4.0/panel-applet-Panel-Applet-Factory.html.bak
+share/doc/panel-applet-4.0/panel-applet-Panel-Applet.html
+share/doc/panel-applet-4.0/panel-applet-Panel-Applet.html.bak
+share/doc/panel-applet-4.0/panel-applet.devhelp
+share/doc/panel-applet-4.0/panel-applet.devhelp.bak
+share/doc/panel-applet-4.0/panel-applet.devhelp2.bak
+share/doc/panel-applet-4.0/port-gnome2.html
+share/doc/panel-applet-4.0/port-gnome2.html.bak
+share/doc/panel-applet-4.0/reference.html
+share/doc/panel-applet-4.0/reference.html.bak
+share/doc/panel-applet-4.0/right.png
+share/doc/panel-applet-4.0/right.png.bak
+share/doc/panel-applet-4.0/style.css
+share/doc/panel-applet-4.0/style.css.bak
+share/doc/panel-applet-4.0/up.png
+share/doc/panel-applet-4.0/up.png.bak
 %%BONOBO%%share/gnome-2.0/ui/GNOME_Panel_Popup.xml
 share/gir-1.0/PanelApplet-4.0.gir
 %%DATADIR%%/4.0/applets/org.gnome.panel.ClockApplet.panel-applet
@@ -546,6 +596,7 @@ share/omf/fish/fish-zh_CN.omf
 @dirrm %%DATADIR%%/4.0/applets
 @dirrm %%DATADIR%%/4.0
 @dirrm %%DATADIR%%
+@dirrm share/doc/panel-applet-4.0
 @dirrmtry share/applications
 @dirrmtry lib/gnome-panel/modules
 @dirrmtry lib/gnome-panel

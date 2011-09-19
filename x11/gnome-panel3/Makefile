@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.20 2011/06/10 22:59:10 mezz Exp $
+#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.21 2011/09/17 12:04:08 kwm Exp $
 #
 
 PORTNAME=	gnome-panel
-PORTVERSION=	3.1.91
+PORTVERSION=	3.1.92
 PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
@@ -40,8 +40,8 @@ WANT_GNOME=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-network-manager
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		gnome-panel.1
 GCONF_SCHEMAS=	clock.schemas
