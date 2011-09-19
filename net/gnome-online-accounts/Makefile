@@ -3,10 +3,10 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/gnome-online-accounts/Makefile,v 1.1 2011/09/16 13:16:53 kwm Exp $
+#    $MCom: ports/net/gnome-online-accounts/Makefile,v 1.2 2011/09/18 17:33:01 kwm Exp $
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.1.90
+PORTVERSION=	3.1.91
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 

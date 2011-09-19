@@ -18,6 +18,7 @@ include/goa-1.0/goabackend/goaoauthprovider.h
 include/goa-1.0/goabackend/goaprovider.h
 include/goa-1.0/goabackend/goatwitterprovider.h
 include/goa-1.0/goabackend/goayahooprovider.h
+lib/girepository-1.0/Goa-1.0.typelib
 lib/libgoa-1.0.a
 lib/libgoa-1.0.la
 lib/libgoa-1.0.so
@@ -30,6 +31,7 @@ libdata/pkgconfig/goa-1.0.pc
 libdata/pkgconfig/goa-backend-1.0.pc
 libexec/goa-daemon
 share/dbus-1/services/org.gnome.OnlineAccounts.service
+share/gir-1.0/Goa-1.0.gir
 share/icons/hicolor/16x16/apps/goa-account-facebook.png
 share/icons/hicolor/16x16/apps/goa-account-google.png
 share/icons/hicolor/16x16/apps/goa-account-twitter.png
@@ -56,7 +58,40 @@ share/icons/hicolor/48x48/apps/goa-account-google.png
 share/icons/hicolor/48x48/apps/goa-account-twitter.png
 share/icons/hicolor/48x48/apps/goa-account-yahoo.png
 share/icons/hicolor/48x48/apps/goa-account.png
+share/locale/ar/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/be/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/de/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/en_GB/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/eo/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/es/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/fa/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/fr/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/gl/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/gu/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/hu/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/id/LC_MESSAGES/gnome-online-accounts.mo
 share/locale/it/LC_MESSAGES/gnome-online-accounts.mo
 share/locale/ja/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/lv/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/nb/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/pa/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/pl/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/pt/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/ru/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/sl/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/sr/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/sv/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/ta/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/tr/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/zh_CN/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/zh_HK/LC_MESSAGES/gnome-online-accounts.mo
+share/locale/zh_TW/LC_MESSAGES/gnome-online-accounts.mo
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrm include/goa-1.0/goabackend
 @dirrm include/goa-1.0/goa
+@dirrm include/goa-1.0
