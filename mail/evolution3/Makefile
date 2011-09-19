@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.16 2011/08/31 14:39:00 kwm Exp $
+#   $MCom: ports/mail/evolution3/Makefile,v 1.17 2011/09/16 16:02:07 kwm Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	3.1.91
+PORTVERSION=	3.1.92
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -41,8 +41,8 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 		--with-sub-version=" FreeBSD GNOME Team Port"
 # gweather and gtkimageview needs to get a gtk3 release first.
 CONFIGURE_ARGS+=--disable-weather --disable-image-inline
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 GCONF_SCHEMAS=	apps_evolution_addressbook.schemas \
 		apps-evolution-attachment-reminder.schemas \
