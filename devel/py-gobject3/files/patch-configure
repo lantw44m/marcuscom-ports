@@ -1,0 +1,24 @@
+--- configure.orig	2011-09-19 17:19:31.000000000 +0200
++++ configure	2011-09-19 17:19:16.000000000 +0200
+@@ -14913,7 +14913,7 @@
+ 
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for headers required to compile python extensions" >&5
+ $as_echo_n "checking for headers required to compile python extensions... " >&6; }
+-if test "x$PYTHON_INCLUDES" == x; then
++if test "x$PYTHON_INCLUDES" = x; then
+   PYTHON_CONFIG=`which $PYTHON`-config
+   if test -x "$PYTHON_CONFIG"; then
+     PYTHON_INCLUDES=`$PYTHON_CONFIG --includes 2>/dev/null`
+@@ -14950,10 +14950,10 @@
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for libraries required to embed python" >&5
+ $as_echo_n "checking for libraries required to embed python... " >&6; }
+ py_exec_prefix=`$PYTHON -c "import sys; print(sys.exec_prefix)"`
+-if test "x$PYTHON_LIBS" == x; then
++if test "x$PYTHON_LIBS" = x; then
+ 	PYTHON_LIBS="-L${py_prefix}/lib -lpython${PYTHON_VERSION}"
+ fi
+-if test "x$PYTHON_LIB_LOC" == x; then
++if test "x$PYTHON_LIB_LOC" = x; then
+ 	PYTHON_LIB_LOC="${py_prefix}/lib"
+ fi
+ 
