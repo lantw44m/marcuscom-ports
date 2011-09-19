@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.17 2011/06/10 22:59:07 mezz Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.18 2011/08/24 16:05:57 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	3.0.2
+PORTVERSION=	3.1.91
+PORTREVISION=	1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -22,9 +23,9 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		telepathy-farsight.0:${PORTSDIR}/net-im/telepathy-farsight \
 		telepathy-logger.2:${PORTSDIR}/net-im/telepathy-logger \
-		folks-telepathy.22:${PORTSDIR}/net-im/folks \
+		folks-telepathy.27:${PORTSDIR}/net-im/folks \
 		notify.4:${PORTSDIR}/devel/libnotify \
-		gcr-3.0:${PORTSDIR}/security/gnome-keyring3 \
+		gcr-3.1:${PORTSDIR}/security/gnome-keyring3 \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
@@ -35,7 +36,7 @@ CONFLICTS=	empathy-2.[0-9]*
 
 LATEST_LINK=	empathy3
 USE_GMAKE=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	evolutiondataserver3 gnomehack gnomeprefix ltverhack
