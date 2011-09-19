@@ -21,7 +21,6 @@ share/doc/gnome-keyring/gnome-keyring-Non-pageable-Memory.html
 share/doc/gnome-keyring/gnome-keyring-Result-Codes.html
 share/doc/gnome-keyring/gnome-keyring-Search-Functionality.html
 share/doc/gnome-keyring/gnome-keyring-Simple-Password-Storage.html
-share/doc/gnome-keyring/gnome-keyring.devhelp
 share/doc/gnome-keyring/gnome-keyring.devhelp2
 share/doc/gnome-keyring/home.png
 share/doc/gnome-keyring/index.html
@@ -34,6 +33,7 @@ share/locale/af/LC_MESSAGES/libgnome-keyring.mo
 share/locale/ar/LC_MESSAGES/libgnome-keyring.mo
 share/locale/as/LC_MESSAGES/libgnome-keyring.mo
 share/locale/ast/LC_MESSAGES/libgnome-keyring.mo
+share/locale/be/LC_MESSAGES/libgnome-keyring.mo
 share/locale/bg/LC_MESSAGES/libgnome-keyring.mo
 share/locale/bn/LC_MESSAGES/libgnome-keyring.mo
 share/locale/ca/LC_MESSAGES/libgnome-keyring.mo
