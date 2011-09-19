@@ -241,7 +241,6 @@ share/applications/gnome-power-statistics.desktop
 %%DATADIR%%/icons/hicolor/scalable/status/gpm-ups-100-charging.svg
 %%DATADIR%%/icons/hicolor/scalable/status/gpm-ups-100.svg
 %%DATADIR%%/icons/hicolor/scalable/status/gpm-ups-missing.svg
-share/icons/gnome/scalable/status/keyboard-brightness-symbolic.svg
 share/icons/hicolor/16x16/apps/gnome-power-statistics.png
 share/icons/hicolor/22x22/apps/gnome-power-statistics.png
 share/icons/hicolor/24x24/apps/gnome-power-statistics.png
