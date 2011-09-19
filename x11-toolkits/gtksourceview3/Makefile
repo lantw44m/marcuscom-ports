@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtksourceview3/Makefile,v 1.15 2011/08/31 13:28:30 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtksourceview3/Makefile,v 1.16 2011/09/17 16:14:32 kwm Exp $
 #
 
 PORTNAME=	gtksourceview3
-PORTVERSION=	3.1.5
+PORTVERSION=	3.1.6
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
@@ -29,9 +29,9 @@ USE_LDCONFIG=	yes
 USE_GNOME=	gnomeprefix gnomehack gtk30 libxml2 intlhack \
 		ltverhack referencehack
 CONFIGURE_ARGS=	--enable-compile-warnings=no --enable-glade-catalog=no \
-		--enable-introspection --enable-completion-providers
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+		--enable-introspection
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|--warn-all||g' \
