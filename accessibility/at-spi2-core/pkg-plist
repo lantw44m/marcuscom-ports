@@ -91,6 +91,7 @@ share/locale/cs/LC_MESSAGES/at-spi2-core.mo
 share/locale/da/LC_MESSAGES/at-spi2-core.mo
 share/locale/de/LC_MESSAGES/at-spi2-core.mo
 share/locale/el/LC_MESSAGES/at-spi2-core.mo
+share/locale/en_CA/LC_MESSAGES/at-spi2-core.mo
 share/locale/en_GB/LC_MESSAGES/at-spi2-core.mo
 share/locale/eo/LC_MESSAGES/at-spi2-core.mo
 share/locale/es/LC_MESSAGES/at-spi2-core.mo
@@ -123,6 +124,7 @@ share/locale/sq/LC_MESSAGES/at-spi2-core.mo
 share/locale/sr/LC_MESSAGES/at-spi2-core.mo
 share/locale/sr@latin/LC_MESSAGES/at-spi2-core.mo
 share/locale/sv/LC_MESSAGES/at-spi2-core.mo
+share/locale/ta/LC_MESSAGES/at-spi2-core.mo
 share/locale/te/LC_MESSAGES/at-spi2-core.mo
 share/locale/tr/LC_MESSAGES/at-spi2-core.mo
 share/locale/ug/LC_MESSAGES/at-spi2-core.mo
