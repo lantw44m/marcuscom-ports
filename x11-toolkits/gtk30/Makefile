@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.36 2011/08/30 21:31:32 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.37 2011/09/15 18:44:03 kwm Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	3.1.90
+PORTVERSION=	3.1.92
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
@@ -26,6 +26,7 @@ COMMENT=	Gimp Toolkit for X11 GUI (current stable version)
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
+
 USE_XZ=		yes
 LATEST_LINK=	gtk30
 
@@ -46,9 +47,9 @@ USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 CONFIGURE_ARGS=	--enable-static --enable-xinput=yes
 CONFIGURE_ARGS+=--enable-gtk2-dependency
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include/freetype2 \
-			  -I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
+#CPPFLAGS=	-I${LOCALBASE}/include/freetype2 \
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
 		INTROSPECTION_GIRDIR=`pkg-config --variable=girdir gobject-introspection-1.0`
 
 GLIB_SCHEMAS=	org.gtk.Settings.FileChooser.gschema.xml
