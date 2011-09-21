@@ -60,6 +60,9 @@ lib/gobject-introspection/giscanner/cachestore.pyo
 lib/gobject-introspection/giscanner/codegen.py
 lib/gobject-introspection/giscanner/codegen.pyc
 lib/gobject-introspection/giscanner/codegen.pyo
+lib/gobject-introspection/giscanner/docbookdescription.py
+lib/gobject-introspection/giscanner/docbookdescription.pyc
+lib/gobject-introspection/giscanner/docbookdescription.pyo
 lib/gobject-introspection/giscanner/docbookwriter.py
 lib/gobject-introspection/giscanner/docbookwriter.pyc
 lib/gobject-introspection/giscanner/docbookwriter.pyo
@@ -184,6 +187,7 @@ share/gtk-doc/html/gi/home.png
 share/gtk-doc/html/gi/index.html
 share/gtk-doc/html/gi/index.sgml
 share/gtk-doc/html/gi/left.png
+share/gtk-doc/html/gi/overview.png
 share/gtk-doc/html/gi/right.png
 share/gtk-doc/html/gi/style.css
 share/gtk-doc/html/gi/up.png
