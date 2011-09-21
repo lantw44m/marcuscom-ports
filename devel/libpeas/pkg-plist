@@ -76,7 +76,6 @@ share/gtk-doc/html/libpeas/index.html
 share/gtk-doc/html/libpeas/index.sgml
 share/gtk-doc/html/libpeas/left.png
 share/gtk-doc/html/libpeas/libpeas-PeasExtension.html
-share/gtk-doc/html/libpeas/libpeas.devhelp
 share/gtk-doc/html/libpeas/libpeas.devhelp2
 share/gtk-doc/html/libpeas/peas-gtk-plugin-manager.png
 share/gtk-doc/html/libpeas/pt01.html
@@ -89,6 +88,8 @@ share/icons/hicolor/32x32/actions/libpeas-plugin.png
 share/icons/hicolor/scalable/actions/libpeas-plugin.svg
 share/locale/ar/LC_MESSAGES/libpeas.mo
 share/locale/as/LC_MESSAGES/libpeas.mo
+share/locale/ast/LC_MESSAGES/libpeas.mo
+share/locale/be/LC_MESSAGES/libpeas.mo
 share/locale/bg/LC_MESSAGES/libpeas.mo
 share/locale/ca/LC_MESSAGES/libpeas.mo
 share/locale/ca@valencia/LC_MESSAGES/libpeas.mo
@@ -114,6 +115,7 @@ share/locale/it/LC_MESSAGES/libpeas.mo
 share/locale/ja/LC_MESSAGES/libpeas.mo
 share/locale/ko/LC_MESSAGES/libpeas.mo
 share/locale/lt/LC_MESSAGES/libpeas.mo
+share/locale/th/LC_MESSAGES/libpeas.mo
 share/locale/tr/LC_MESSAGES/libpeas.mo
 share/locale/lv/LC_MESSAGES/libpeas.mo
 share/locale/nb/LC_MESSAGES/libpeas.mo
@@ -146,6 +148,8 @@ share/locale/zh_TW/LC_MESSAGES/libpeas.mo
 @dirrmtry share/locale/nds
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
 @dirrm share/gtk-doc/html/libpeas

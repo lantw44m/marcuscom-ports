@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libpeas/Makefile,v 1.15 2011/04/05 17:20:58 kwm Exp $
+#   $MCom: ports/devel/libpeas/Makefile,v 1.16 2011/09/18 09:46:57 kwm Exp $
 #
 
 PORTNAME=	libpeas
-PORTVERSION=	1.1.3
+PORTVERSION=	1.1.4
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -31,8 +31,8 @@ CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 OPTIONS=	PYTHON "Enable python plugins" on \
-		SEED "Enable JavaScript plugins (based on webkit-gtk3)" on \
-		GJS "Enable JavaScript plugins (based on libxul)" off
+		SEED "Enable JavaScript plugins (based on webkit-gtk3)" off \
+		GJS "Enable JavaScript plugins (based on libxul)" on
 
 .include <bsd.port.options.mk>
 
