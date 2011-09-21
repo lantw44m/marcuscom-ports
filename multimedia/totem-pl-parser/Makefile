@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.46 2011/03/21 18:46:26 kwm Exp $
+#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.47 2011/05/11 07:33:51 kwm Exp $
 #
 
 PORTNAME=	totem-pl-parser
-PORTVERSION=	2.32.5
+PORTVERSION=	2.32.6
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -20,13 +20,13 @@ LIB_DEPENDS=	gmime-2.4.6:${PORTSDIR}/mail/gmime24 \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix glib20 libxml2 intlhack ltverhack
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 .include <bsd.port.mk>

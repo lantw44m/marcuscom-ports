@@ -30,10 +30,10 @@ libdata/pkgconfig/totem-plparser.pc
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/totem-pl-parser-TotemDisc.html
 %%DOCSDIR%%/totem-pl-parser-TotemPlPlaylistIter.html
-%%DOCSDIR%%/totem-pl-parser.devhelp
 %%DOCSDIR%%/totem-pl-parser.devhelp2
 %%DOCSDIR%%/up.png
 share/gir-1.0/TotemPlParser-1.0.gir
+share/locale/af/LC_MESSAGES/totem-pl-parser.mo
 share/locale/am/LC_MESSAGES/totem-pl-parser.mo
 share/locale/ar/LC_MESSAGES/totem-pl-parser.mo
 share/locale/as/LC_MESSAGES/totem-pl-parser.mo
