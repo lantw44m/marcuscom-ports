@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero3/Makefile,v 1.11 2011/05/29 05:21:52 marcus Exp $
+#    $MCom: ports/sysutils/brasero3/Makefile,v 1.12 2011/06/10 22:59:08 mezz Exp $
 
 PORTNAME=	brasero
-PORTVERSION=	3.0.0
-PORTREVISION=	1
+PORTVERSION=	3.1.92
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,7 +24,7 @@ CONFLICTS=	brasero-2.[0-9]*
 
 LATEST_LINK=	brasero3
 USE_GETTEXT=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_XORG=	sm ice
@@ -37,8 +36,8 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-inotify --enable-search=no --enable-playlist=no \
 		--enable-introspection=yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -DHAVE_CAM_LIB_H=1" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include -DHAVE_CAM_LIB_H=1
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
 
 MAN1=		brasero.1
 GLIB_SCHEMAS=	org.gnome.brasero.gschema.xml
