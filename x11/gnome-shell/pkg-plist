@@ -13,7 +13,10 @@ share/applications/gnome-shell.desktop
 share/dbus-1/services/org.gnome.Shell.CalendarServer.service
 share/dbus-1/services/org.gnome.Shell.HotplugSniffer.service
 %%DATADIR%%/js/gdm/batch.js
+%%DATADIR%%/js/gdm/consoleKit.js
+%%DATADIR%%/js/gdm/fingerprint.js
 %%DATADIR%%/js/gdm/loginDialog.js
+%%DATADIR%%/js/gdm/powerMenu.js
 %%DATADIR%%/js/misc/config.js
 %%DATADIR%%/js/misc/docInfo.js
 %%DATADIR%%/js/misc/fileUtils.js
