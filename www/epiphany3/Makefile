@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany3/Makefile,v 1.19 2011/08/17 13:11:01 kwm Exp $
+#   $MCom: ports/www/epiphany3/Makefile,v 1.20 2011/09/17 15:39:54 kwm Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	3.1.91.1
+PORTVERSION=	3.1.92
 PORTREVISION?=	0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
@@ -47,8 +47,8 @@ INSTALLS_OMF=	yes
 CONFIGURE_ARGS+=--enable-introspection \
 		--enable-network-manager=no \
 		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
+CPPFLAGS=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
 		LIBS="${PTHREAD_LIBS}"
 
 GLIB_SCHEMAS=	org.gnome.Epiphany.enums.xml \
@@ -59,6 +59,7 @@ PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}"
 MAN1=		epiphany.1
 
 OPTIONS=	NSS "Import passwords from 2.26 and older on first run" off \
+		AVAHI "Enable zeroconf bookmark support" on \
 		SPELLCHECK "Enable spell checking by default" on \
 		SEED "Enable seed (JavaScript) support" on
 
@@ -80,6 +81,12 @@ LIB_DEPENDS+=	nss3.1:${PORTSDIR}/security/nss
 CONFIGURE_ARGS+=--enable-nss
 .else
 CONFIGURE_ARGS+=--disable-nss
+.endif
+
+.if defined(WITH_AVAHI)
+LIB_DEPENDS+=	avahi-gobject.0:${PORTSDIR}/net/avahi-app
+.else
+CONFIGURE_ARGS+=--disable-zeroconf
 .endif
 
 .if defined(WITH_SEED)
