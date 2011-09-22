@@ -3,14 +3,14 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/seed3/Makefile,v 1.8 2011/06/10 22:59:03 mezz Exp $
+#   $MCom: ports/devel/seed3/Makefile,v 1.9 2011/06/11 19:51:16 mezz Exp $
 #
 # NOTE: It may be necessary to update ${FILESDIR}/Seed.js on each release.
 # To do that, just replace imports.searchPaths with "." and ".." elements.
 #
 
 PORTNAME=	seed
-PORTVERSION=	3.0.0
+PORTVERSION=	3.2.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -29,7 +29,7 @@ LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi \
 CONFLICTS=	seed-2.[0-9]*
 
 LATEST_LINK=	seed3
-USE_BZIP2=	yes
+USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomehack gtk30 intltool libxml2
