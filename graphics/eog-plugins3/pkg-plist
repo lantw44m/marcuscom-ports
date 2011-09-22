@@ -1,28 +1,33 @@
-%%PYTHON%%lib/eog/plugins/console.py
-%%PYTHON%%lib/eog/plugins/console.pyc
-%%PYTHON%%lib/eog/plugins/console.pyo
-%%EXIF%%lib/eog/plugins/exif-display.plugin
-%%EXIF%%lib/eog/plugins/exif-display/exif-display-config.ui
-%%EXIF%%lib/eog/plugins/exif-display/exif-display.ui
+lib/eog/plugins/exif-display.plugin
 lib/eog/plugins/fit-to-width.plugin
-%%EXIF%%lib/eog/plugins/libexif-display.la
-%%EXIF%%lib/eog/plugins/libexif-display.so
+lib/eog/plugins/libexif-display.la
+lib/eog/plugins/libexif-display.so
 lib/eog/plugins/libfit-to-width.la
 lib/eog/plugins/libfit-to-width.so
 %%CHAMPLAIN%%lib/eog/plugins/libmap.la
 %%CHAMPLAIN%%lib/eog/plugins/libmap.so
+lib/eog/plugins/libpostasa.la
+lib/eog/plugins/libpostasa.so
 lib/eog/plugins/libsend-by-mail.la
 lib/eog/plugins/libsend-by-mail.so
 %%CHAMPLAIN%%lib/eog/plugins/map.plugin
+lib/eog/plugins/postasa.plugin
 %%PYTHON%%lib/eog/plugins/pythonconsole.plugin
-%%PYTHON%%lib/eog/plugins/pythonconsole.py
-%%PYTHON%%lib/eog/plugins/pythonconsole.pyc
-%%PYTHON%%lib/eog/plugins/pythonconsole.pyo
+%%PYTHON%%lib/eog/plugins/pythonconsole/__init__.py
+%%PYTHON%%lib/eog/plugins/pythonconsole/__init__.pyc
+%%PYTHON%%lib/eog/plugins/pythonconsole/__init__.pyo
+%%PYTHON%%lib/eog/plugins/pythonconsole/console.py
+%%PYTHON%%lib/eog/plugins/pythonconsole/console.pyc
+%%PYTHON%%lib/eog/plugins/pythonconsole/console.pyo
 lib/eog/plugins/send-by-mail.plugin
 %%PYTHON%%lib/eog/plugins/slideshowshuffle.plugin
 %%PYTHON%%lib/eog/plugins/slideshowshuffle.py
 %%PYTHON%%lib/eog/plugins/slideshowshuffle.pyc
 %%PYTHON%%lib/eog/plugins/slideshowshuffle.pyo
+share/eog/plugins/exif-display/exif-display-config.ui
+share/eog/plugins/exif-display/exif-display.ui
+share/eog/plugins/postasa/postasa-config.xml
+share/eog/plugins/postasa/postasa-uploads.xml
 share/locale/ar/LC_MESSAGES/eog-plugins.mo
 share/locale/as/LC_MESSAGES/eog-plugins.mo
 share/locale/be@latin/LC_MESSAGES/eog-plugins.mo
@@ -58,6 +63,7 @@ share/locale/pl/LC_MESSAGES/eog-plugins.mo
 share/locale/pt/LC_MESSAGES/eog-plugins.mo
 share/locale/pt_BR/LC_MESSAGES/eog-plugins.mo
 share/locale/ro/LC_MESSAGES/eog-plugins.mo
+share/locale/ru/LC_MESSAGES/eog-plugins.mo
 share/locale/sl/LC_MESSAGES/eog-plugins.mo
 share/locale/sq/LC_MESSAGES/eog-plugins.mo
 share/locale/sv/LC_MESSAGES/eog-plugins.mo
@@ -68,7 +74,10 @@ share/locale/vi/LC_MESSAGES/eog-plugins.mo
 share/locale/zh_CN/LC_MESSAGES/eog-plugins.mo
 share/locale/zh_HK/LC_MESSAGES/eog-plugins.mo
 share/locale/zh_TW/LC_MESSAGES/eog-plugins.mo
-%%EXIF%%@dirrm lib/eog/plugins/exif-display
+@dirrm share/eog/plugins/postasa
+@dirrm share/eog/plugins/exif-display
+@dirrm share/eog/plugins
+@dirrm share/eog
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
