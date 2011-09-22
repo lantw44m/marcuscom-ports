@@ -11,9 +11,33 @@ etc/gdm/Xsession
 @unexec if cmp -s %D/etc/gdm/custom.conf %D/etc/gdm/custom.conf.default; then rm -f %D/etc/gdm/custom.conf; fi
 etc/gdm/custom.conf.default
 @exec [ -f %B/custom.conf ] || cp %B/%f %B/custom.conf
-etc/gdm/home/.local/share/applications/mime-dummy-handler.desktop
-etc/gdm/home/.local/share/applications/mimeapps.list
 etc/pam.d/gdm
+etc/pam.d/gdm-fingerprint
+etc/pam.d/gdm-password
+etc/pam.d/gdm-smartcard
+include/gdm/greeter/gdm-greeter-client.h
+include/gdm/greeter/gdm-greeter-sessions.h
+include/gdm/simple-greeter/gdm-login-extension.h
+lib/gdm/simple-greeter/extensions/libfingerprint.a
+lib/gdm/simple-greeter/extensions/libfingerprint.la
+lib/gdm/simple-greeter/extensions/libfingerprint.so
+lib/gdm/simple-greeter/extensions/libpassword.a
+lib/gdm/simple-greeter/extensions/libpassword.la
+lib/gdm/simple-greeter/extensions/libpassword.so
+lib/gdm/simple-greeter/extensions/libsmartcard.a
+lib/gdm/simple-greeter/extensions/libsmartcard.la
+lib/gdm/simple-greeter/extensions/libsmartcard.so
+lib/girepository-1.0/GdmGreeter-1.0.typelib
+lib/libgdmgreeter.a
+lib/libgdmgreeter.la
+lib/libgdmgreeter.so
+lib/libgdmgreeter.so.1
+lib/libgdmsimplegreeter.a
+lib/libgdmsimplegreeter.la
+lib/libgdmsimplegreeter.so
+lib/libgdmsimplegreeter.so.1
+libdata/pkgconfig/gdmgreeter.pc
+libdata/pkgconfig/gdmsimplegreeter.pc
 libexec/gdm-crash-logger
 libexec/gdm-factory-slave
 libexec/gdm-host-chooser
@@ -22,26 +46,28 @@ libexec/gdm-session-worker
 libexec/gdm-simple-chooser
 libexec/gdm-simple-greeter
 libexec/gdm-simple-slave
+libexec/gdm-smartcard-worker
 libexec/gdm-xdmcp-chooser-slave
 sbin/gdm
 sbin/gdm-binary
-%%DATADIR%%/autostart/LoginWindow/at-spi-registryd-wrapper.desktop
-%%DATADIR%%/autostart/LoginWindow/gdm-simple-greeter.desktop
-%%DATADIR%%/autostart/LoginWindow/gnome-mag.desktop
-%%DATADIR%%/autostart/LoginWindow/gnome-power-manager.desktop
-%%DATADIR%%/autostart/LoginWindow/gnome-settings-daemon.desktop
-%%DATADIR%%/autostart/LoginWindow/gnome-session-check-accelerated.desktop
-%%DATADIR%%/autostart/LoginWindow/gok.desktop
-%%DATADIR%%/autostart/LoginWindow/metacity.desktop
-%%DATADIR%%/autostart/LoginWindow/orca-screen-reader.desktop
-%%DATADIR%%/autostart/LoginWindow/polkit-gnome-authentication-agent-1.desktop
 %%DATADIR%%/gconf.path
 %%DATADIR%%/gdb-cmd
 %%DATADIR%%/gdm-greeter-login-window.ui
 %%DATADIR%%/gdm.schemas
+share/gdm/greeter/applications/gdm-simple-greeter.desktop
+share/gdm/greeter/applications/gnome-mag.desktop
+share/gdm/greeter/applications/gnome-shell.desktop
+share/gdm/greeter/applications/gok.desktop
+share/gdm/greeter/applications/mime-dummy-handler.desktop
+share/gdm/greeter/applications/mimeapps.list
+share/gdm/greeter/applications/orca-screen-reader.desktop
 %%DATADIR%%/locale.alias
 %%DATADIR%%/session-setup.entries
-share/gnome-session/sessions/gdm.session
+share/gdm/simple-greeter/extensions/fingerprint/page.ui
+share/gdm/simple-greeter/extensions/password/page.ui
+share/gdm/simple-greeter/extensions/smartcard/page.ui
+share/gdm/simple-greeter/extensions/unified/page.ui
+share/gir-1.0/GdmGreeter-1.0.gir
 share/gnome/help/gdm/C/gdm.xml
 share/gnome/help/gdm/C/legal.xml
 share/gnome/help/gdm/de/gdm.xml
@@ -58,9 +84,15 @@ share/gnome/help/gdm/sl/gdm.xml
 share/gnome/help/gdm/sv/gdm.xml
 share/gnome/help/gdm/uk/gdm.xml
 share/gnome/help/gdm/zh_CN/gdm.xml
+share/gnome-session/sessions/gdm-fallback.session
+share/gnome-session/sessions/gdm-shell.session
+share/icons/hicolor/16x16/apps/gdm-fingerprint.png
+share/icons/hicolor/16x16/apps/gdm-smartcard.png
 share/icons/hicolor/16x16/apps/gdm-xnest.png
 share/icons/hicolor/32x32/apps/gdm-setup.png
 share/icons/hicolor/32x32/apps/gdm-xnest.png
+share/icons/hicolor/48x48/apps/gdm-fingerprint.png
+share/icons/hicolor/48x48/apps/gdm-smartcard.png
 share/locale/af/LC_MESSAGES/gdm.mo
 share/locale/am/LC_MESSAGES/gdm.mo
 share/locale/an/LC_MESSAGES/gdm.mo
@@ -202,8 +234,14 @@ share/pixmaps/nohost.png
 @dirrm share/gnome/help/gdm/de
 @dirrm share/gnome/help/gdm/C
 @dirrm share/gnome/help/gdm
-@dirrm %%DATADIR%%/autostart/LoginWindow
-@dirrm %%DATADIR%%/autostart
+@dirrm %%DATADIR%%/simple-greeter/extensions/unified
+@dirrm %%DATADIR%%/simple-greeter/extensions/smartcard
+@dirrm %%DATADIR%%/simple-greeter/extensions/password
+@dirrm %%DATADIR%%/simple-greeter/extensions/fingerprint
+@dirrm %%DATADIR%%/simple-greeter/extensions
+@dirrm %%DATADIR%%/simple-greeter
+@dirrm %%DATADIR%%/greeter/applications
+@dirrm %%DATADIR%%/greeter
 @dirrm %%DATADIR%%
 @dirrm etc/gdm/Sessions
 @dirrm etc/gdm/PreSession

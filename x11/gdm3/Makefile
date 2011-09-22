@@ -3,11 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.9 2011/06/10 22:59:10 mezz Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.10 2011/06/10 23:04:42 mezz Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	3.0.4
+PORTVERSION=	3.1.92
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -50,11 +50,12 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomehier gconf2 librsvg2 dconf \
 		gnomeprefix gnomepanel3
 GCONF_SCHEMAS=	gdm-simple-greeter.schemas
+GLIB_SCHEMAS=	org.gnome.login-screen.gschema.xml
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home \
 		--with-at-spi-registryd-directory=${LOCALBASE}/libexec
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -DHAS_SA_LEN" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
+CPPFLAGS=	-I${LOCALBASE}/include -DHAS_SA_LEN
+CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
 		LIBS="-lm -lexecinfo" \
 		GTKDOC="false"
 
@@ -96,8 +97,15 @@ post-patch:
 		-e 's|/usr/bin/X|${LOCALBASE}/bin/X|g' \
 		-e 's|/usr/bin/Xorg|${LOCALBASE}/bin/Xorg|g' \
 		${WRKSRC}/configure ${WRKSRC}/daemon/*.c ${WRKSRC}/po/*.po
-	@${REINPLACE_CMD} -e 's|/usr/lib|${LOCALBASE}/lib|g' \
-		${WRKSRC}/data/greeter-autostart/*.desktop.in*
+	@${REINPLACE_CMD} -e 's|/at-spi-registryd|/at-spi2-registryd|g' \
+		${WRKSRC}/gui/simple-chooser/gdm-host-chooser.c \
+		${WRKSRC}/gui/simple-chooser/chooser-main.c
+	@${RM}	${WRKSRC}/data/applications/gdm-simple-greeter.desktop \
+		${WRKSRC}/data/applications/gdm-simple-greeter.desktop.in \
+		${WRKSRC}/data/applications/gnome-mag.desktop \
+		${WRKSRC}/data/applications/gnome-shell.desktop \
+		${WRKSRC}/data/applications/gok.desktop \
+		${WRKSRC}/data/applications/orca-screen-reader.desktop
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/gconf.path \
