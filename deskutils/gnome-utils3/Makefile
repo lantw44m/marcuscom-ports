@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils3/Makefile,v 1.12 2011/09/19 19:44:30 kwm Exp $
+#   $MCom: ports/deskutils/gnome-utils3/Makefile,v 1.13 2011/09/21 12:51:46 kwm Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -16,7 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 support utilities
 
 BUILD_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
-		rarian:${PORTSDIR}/textproc/rarian
+		rarian-sk-config:${PORTSDIR}/textproc/rarian
 LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
