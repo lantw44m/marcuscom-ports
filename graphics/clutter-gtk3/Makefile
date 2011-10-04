@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	clutter-gtk
-PORTVERSION=	1.0.2
+PORTVERSION=	1.0.4
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -23,14 +23,7 @@ USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack gtk30 ltverhack gnomeprefix
 USE_XORG=	xp x11
 USE_LDCONFIG=	yes
-CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
-
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|gdk-2.0|gdk-3.0|g' \
-		-e 's|gtk+-2.0|gtk+-3.0|g' \
-		${WRKSRC}/configure
 
 .include <bsd.port.mk>
