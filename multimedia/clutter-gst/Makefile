@@ -3,10 +3,10 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/clutter-gst/Makefile,v 1.9 2011/06/06 18:26:03 kwm Exp $
+#   $MCom: ports/multimedia/clutter-gst/Makefile,v 1.10 2011/09/18 15:13:46 kwm Exp $
 
 PORTNAME=	clutter-gst
-PORTVERSION=	1.3.14
+PORTVERSION=	1.4.2
 CATEGORIES=	multimedia
 MASTER_SITES=	GNOME
 
