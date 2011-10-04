@@ -3,11 +3,11 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/deskutils/gnome-tweak-tool/Makefile,v 1.9 2011/09/18 12:50:06 kwm Exp $
 #
 
 PORTNAME=	gnome-tweak-tool
-PORTVERSION=	3.1.90
+PORTVERSION=	3.2.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
