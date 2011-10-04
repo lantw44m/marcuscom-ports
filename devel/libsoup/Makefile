@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.107 2011/09/17 15:04:31 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.108 2011/09/20 13:02:23 kwm Exp $
 #
 
 PORTNAME=	libsoup
-PORTVERSION=	2.35.92
+PORTVERSION=	2.36.0
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -28,10 +28,8 @@ USE_GNOME=	gnomehack glib20 libxml2 ltverhack referencehack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
-		--disable-gtk-doc
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION="2.4"
 

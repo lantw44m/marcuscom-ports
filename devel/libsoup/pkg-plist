@@ -50,6 +50,67 @@ lib/libsoup-%%VERSION%%.so
 lib/libsoup-%%VERSION%%.so.1
 libdata/pkgconfig/libsoup-%%VERSION%%.pc
 share/gir-1.0/Soup-%%VERSION%%.gir
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupAddress.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupAuth.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupAuthDomain.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupAuthDomainBasic.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupAuthDomainDigest.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupCache.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupContentDecoder.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupContentSniffer.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupCookie.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupCookieJar.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupCookieJarSqlite.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupCookieJarText.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupLogger.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupMessage.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupMessageBody.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupMessageHeaders.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupMultipart.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupProxyResolverDefault.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupProxyURIResolver.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupRequest.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupRequestData.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupRequestFile.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupRequestHTTP.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupRequester.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupServer.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupSession.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupSessionAsync.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupSessionFeature.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupSessionSync.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupSocket.html
+share/gtk-doc/html/libsoup-%%VERSION%%/SoupURI.html
+share/gtk-doc/html/libsoup-%%VERSION%%/annotation-glossary.html
+share/gtk-doc/html/libsoup-%%VERSION%%/ch01.html
+share/gtk-doc/html/libsoup-%%VERSION%%/ch02.html
+share/gtk-doc/html/libsoup-%%VERSION%%/ch03.html
+share/gtk-doc/html/libsoup-%%VERSION%%/ch04.html
+share/gtk-doc/html/libsoup-%%VERSION%%/ch05.html
+share/gtk-doc/html/libsoup-%%VERSION%%/ch06.html
+share/gtk-doc/html/libsoup-%%VERSION%%/ch07.html
+share/gtk-doc/html/libsoup-%%VERSION%%/home.png
+share/gtk-doc/html/libsoup-%%VERSION%%/index.html
+share/gtk-doc/html/libsoup-%%VERSION%%/index.sgml
+share/gtk-doc/html/libsoup-%%VERSION%%/ix01.html
+share/gtk-doc/html/libsoup-%%VERSION%%/left.png
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-GValue-Support.html
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-HTML-Form-Support.html
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-Soup-Miscellaneous-Utilities.html
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-XMLRPC-Support.html
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-soup-gnome-features.html
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-soup-method.html
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%-soup-status.html
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-%%VERSION%%.devhelp2
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-build-howto.html
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-client-howto.html
+share/gtk-doc/html/libsoup-%%VERSION%%/libsoup-server-howto.html
+share/gtk-doc/html/libsoup-%%VERSION%%/right.png
+share/gtk-doc/html/libsoup-%%VERSION%%/style.css
+share/gtk-doc/html/libsoup-%%VERSION%%/up.png
+@dirrm share/gtk-doc/html/libsoup-%%VERSION%%
+@dirrmtry share/gtk-doc/html
+@dirrmtry share/gtk-doc/
 @dirrm include/libsoup-%%VERSION%%/libsoup
 @dirrm include/libsoup-%%VERSION%%
 @dirrmtry lib/girepository-1.0
