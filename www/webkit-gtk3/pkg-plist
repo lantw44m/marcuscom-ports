@@ -51,7 +51,6 @@ include/webkit-3.0/webkit/WebKitDOMHTMLAudioElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLBRElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLBaseElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLBaseFontElement.h
-include/webkit-3.0/webkit/WebKitDOMHTMLBlockquoteElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLBodyElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLButtonElement.h
 include/webkit-3.0/webkit/WebKitDOMHTMLCanvasElement.h
@@ -191,13 +190,14 @@ share/locale/ar/LC_MESSAGES/webkit-3.0.mo
 share/locale/bg/LC_MESSAGES/webkit-3.0.mo
 share/locale/cs/LC_MESSAGES/webkit-3.0.mo
 share/locale/de/LC_MESSAGES/webkit-3.0.mo
+share/locale/el/LC_MESSAGES/webkit-3.0.mo
+share/locale/en_CA/LC_MESSAGES/webkit-3.0.mo
 share/locale/en_GB/LC_MESSAGES/webkit-3.0.mo
 share/locale/es/LC_MESSAGES/webkit-3.0.mo
 share/locale/et/LC_MESSAGES/webkit-3.0.mo
 share/locale/eu/LC_MESSAGES/webkit-3.0.mo
 share/locale/fr/LC_MESSAGES/webkit-3.0.mo
 share/locale/gl/LC_MESSAGES/webkit-3.0.mo
-share/locale/gr/LC_MESSAGES/webkit-3.0.mo
 share/locale/gu/LC_MESSAGES/webkit-3.0.mo
 share/locale/he/LC_MESSAGES/webkit-3.0.mo
 share/locale/hu/LC_MESSAGES/webkit-3.0.mo
@@ -237,6 +237,7 @@ share/webkitgtk-3.0/webinspector/AuditRules.js
 share/webkitgtk-3.0/webinspector/AuditsPanel.js
 share/webkitgtk-3.0/webinspector/BinarySearch.js
 share/webkitgtk-3.0/webinspector/BottomUpProfileDataGridTree.js
+share/webkitgtk-3.0/webinspector/BreakpointManager.js
 share/webkitgtk-3.0/webinspector/BreakpointsSidebarPane.js
 share/webkitgtk-3.0/webinspector/CSSCompletions.js
 share/webkitgtk-3.0/webinspector/CSSKeywordCompletions.js
@@ -244,6 +245,9 @@ share/webkitgtk-3.0/webinspector/CSSStyleModel.js
 share/webkitgtk-3.0/webinspector/CallStackSidebarPane.js
 share/webkitgtk-3.0/webinspector/Checkbox.js
 share/webkitgtk-3.0/webinspector/Color.js
+share/webkitgtk-3.0/webinspector/CompilerSourceMapping.js
+share/webkitgtk-3.0/webinspector/ConsoleMessage.js
+share/webkitgtk-3.0/webinspector/ConsoleModel.js
 share/webkitgtk-3.0/webinspector/ConsolePanel.js
 share/webkitgtk-3.0/webinspector/ConsoleView.js
 share/webkitgtk-3.0/webinspector/ContextMenu.js
@@ -270,7 +274,6 @@ share/webkitgtk-3.0/webinspector/EmptyView.js
 share/webkitgtk-3.0/webinspector/EventListenersSidebarPane.js
 share/webkitgtk-3.0/webinspector/ExtensionAPI.js
 share/webkitgtk-3.0/webinspector/ExtensionAuditCategory.js
-share/webkitgtk-3.0/webinspector/ExtensionCommon.js
 share/webkitgtk-3.0/webinspector/ExtensionPanel.js
 share/webkitgtk-3.0/webinspector/ExtensionRegistryStub.js
 share/webkitgtk-3.0/webinspector/ExtensionServer.js
@@ -427,9 +430,11 @@ share/webkitgtk-3.0/webinspector/InspectorBackendStub.js
 share/webkitgtk-3.0/webinspector/InspectorFrontendHostStub.js
 share/webkitgtk-3.0/webinspector/JavaScriptContextManager.js
 share/webkitgtk-3.0/webinspector/JavaScriptFormatter.js
+share/webkitgtk-3.0/webinspector/JavaScriptSourceFrame.js
 share/webkitgtk-3.0/webinspector/KeyboardShortcut.js
 share/webkitgtk-3.0/webinspector/MetricsSidebarPane.js
 share/webkitgtk-3.0/webinspector/NetworkItemView.js
+share/webkitgtk-3.0/webinspector/NetworkLog.js
 share/webkitgtk-3.0/webinspector/NetworkPanel.js
 share/webkitgtk-3.0/webinspector/NetworkManager.js
 share/webkitgtk-3.0/webinspector/Object.js
@@ -470,6 +475,7 @@ share/webkitgtk-3.0/webinspector/ShortcutsScreen.js
 share/webkitgtk-3.0/webinspector/ShowMoreDataGridNode.js
 share/webkitgtk-3.0/webinspector/SidebarPane.js
 share/webkitgtk-3.0/webinspector/SidebarTreeElement.js
+share/webkitgtk-3.0/webinspector/SoftContextMenu.js
 share/webkitgtk-3.0/webinspector/SourceCSSTokenizer.js
 share/webkitgtk-3.0/webinspector/SourceFile.js
 share/webkitgtk-3.0/webinspector/SourceFrame.js
@@ -491,6 +497,7 @@ share/webkitgtk-3.0/webinspector/TimelineOverviewPane.js
 share/webkitgtk-3.0/webinspector/TimelinePanel.js
 share/webkitgtk-3.0/webinspector/Toolbar.js
 share/webkitgtk-3.0/webinspector/TopDownProfileDataGridTree.js
+share/webkitgtk-3.0/webinspector/UISourceCode.js
 share/webkitgtk-3.0/webinspector/UglifyJS/parse-js.js
 share/webkitgtk-3.0/webinspector/UserMetrics.js
 share/webkitgtk-3.0/webinspector/View.js
@@ -500,6 +507,7 @@ share/webkitgtk-3.0/webinspector/WorkerManager.js
 share/webkitgtk-3.0/webinspector/WorkersSidebarPane.js
 share/webkitgtk-3.0/webinspector/audits.css
 share/webkitgtk-3.0/webinspector/dataGrid.css
+share/webkitgtk-3.0/webinspector/externs.js
 share/webkitgtk-3.0/webinspector/goToLineDialog.css
 share/webkitgtk-3.0/webinspector/heapProfiler.css
 share/webkitgtk-3.0/webinspector/helpScreen.css
@@ -526,5 +534,3 @@ share/webkitgtk-3.0/webinspector/utilities.js
 @dirrm include/webkit-3.0
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
-@dirrmtry share/locale/gr/LC_MESSAGES
-@dirrmtry share/locale/gr
