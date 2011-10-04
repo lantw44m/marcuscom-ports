@@ -33,6 +33,7 @@ share/gir-1.0/Gkbd-3.0.gir
 share/locale/ar/LC_MESSAGES/libgnomekbd.mo
 share/locale/as/LC_MESSAGES/libgnomekbd.mo
 share/locale/ast/LC_MESSAGES/libgnomekbd.mo
+share/locale/be/LC_MESSAGES/libgnomekbd.mo
 share/locale/be@latin/LC_MESSAGES/libgnomekbd.mo
 share/locale/bg/LC_MESSAGES/libgnomekbd.mo
 share/locale/bn/LC_MESSAGES/libgnomekbd.mo
@@ -50,6 +51,7 @@ share/locale/eo/LC_MESSAGES/libgnomekbd.mo
 share/locale/es/LC_MESSAGES/libgnomekbd.mo
 share/locale/et/LC_MESSAGES/libgnomekbd.mo
 share/locale/eu/LC_MESSAGES/libgnomekbd.mo
+share/locale/fa/LC_MESSAGES/libgnomekbd.mo
 share/locale/fi/LC_MESSAGES/libgnomekbd.mo
 share/locale/fr/LC_MESSAGES/libgnomekbd.mo
 share/locale/ga/LC_MESSAGES/libgnomekbd.mo

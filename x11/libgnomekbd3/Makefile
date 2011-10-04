@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnomekbd3/Makefile,v 1.7 2011/04/06 06:30:58 kwm Exp $
+#   $MCom: ports/x11/libgnomekbd3/Makefile,v 1.8 2011/04/10 15:14:12 mezz Exp $
 #
 
 PORTNAME=	libgnomekbd
-PORTVERSION=	3.0.0.1
+PORTVERSION=	3.2.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +22,7 @@ LATEST_LINK=	libgnomekbd3
 
 CONFLICTS=	libgnomekbd-2.[0-9]*
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GNOME=	gnomeprefix gnomehack ltverhack intltool gtk30
 USE_AUTOTOOLS=	libtool
 USE_XORG=	ice
@@ -30,8 +30,8 @@ INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.libgnomekbd.desktop.gschema.xml \
 		org.gnome.libgnomekbd.gschema.xml \
