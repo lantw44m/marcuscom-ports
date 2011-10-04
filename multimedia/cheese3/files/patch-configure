@@ -1,6 +1,6 @@
---- configure.orig	2011-04-26 00:51:10.000000000 +0200
-+++ configure	2011-04-27 18:08:02.000000000 +0200
-@@ -715,7 +715,10 @@ CHEESE_CFLAGS
+--- configure.orig	2011-09-20 14:42:00.000000000 +0200
++++ configure	2011-09-20 14:42:06.000000000 +0200
+@@ -724,7 +724,10 @@
  HAVE_XTEST_FALSE
  HAVE_XTEST_TRUE
  XTEST_LIBS
@@ -11,7 +11,7 @@
  UDEV_LIBS
  UDEV_CFLAGS
  PKG_CONFIG_LIBDIR
-@@ -923,6 +926,8 @@ PKG_CONFIG_PATH
+@@ -917,6 +920,8 @@
  PKG_CONFIG_LIBDIR
  UDEV_CFLAGS
  UDEV_LIBS
@@ -20,7 +20,7 @@
  CHEESE_CFLAGS
  CHEESE_LIBS
  CHEESE_GTK_CFLAGS
-@@ -1605,6 +1610,8 @@ Some influential environment variables:
+@@ -1595,6 +1600,8 @@
                path overriding pkg-config's built-in search path
    UDEV_CFLAGS C compiler flags for UDEV, overriding pkg-config
    UDEV_LIBS   linker flags for UDEV, overriding pkg-config
@@ -29,7 +29,72 @@
    CHEESE_CFLAGS
                C compiler flags for CHEESE, overriding pkg-config
    CHEESE_LIBS linker flags for CHEESE, overriding pkg-config
-@@ -15039,6 +15046,82 @@ $as_echo "#define HAVE_UDEV 1" >>confdef
+@@ -10986,14 +10993,7 @@
+     *) objformat=elf ;;
+     esac
+   fi
+-  # Handle Gentoo/FreeBSD as it was Linux
+-  case $host_vendor in
+-    gentoo)
+-      version_type=linux ;;
+-    *)
+-      version_type=freebsd-$objformat ;;
+-  esac
+-
++  version_type=freebsd-$objformat
+   case $version_type in
+     freebsd-elf*)
+       library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext} $libname${shared_ext}'
+@@ -11004,12 +11004,6 @@
+       library_names_spec='${libname}${release}${shared_ext}$versuffix $libname${shared_ext}$versuffix'
+       need_version=yes
+       ;;
+-    linux)
+-      library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
+-      soname_spec='${libname}${release}${shared_ext}$major'
+-      need_lib_prefix=no
+-      need_version=no
+-      ;;
+   esac
+   shlibpath_var=LD_LIBRARY_PATH
+   case $host_os in
+@@ -12951,7 +12945,6 @@
+ 
+ 
+ 
+-
+ if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
+ 	if test -n "$ac_tool_prefix"; then
+   # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
+@@ -13080,7 +13073,6 @@
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_UDEV_CFLAGS=`$PKG_CONFIG --cflags "gudev-1.0" 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+ fi
+@@ -13097,7 +13089,6 @@
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_UDEV_LIBS=`$PKG_CONFIG --libs "gudev-1.0" 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+ fi
+@@ -13117,9 +13108,9 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        UDEV_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "gudev-1.0" 2>&1`
++	        UDEV_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "gudev-1.0" 2>&1`
+         else
+-	        UDEV_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "gudev-1.0" 2>&1`
++	        UDEV_PKG_ERRORS=`$PKG_CONFIG --print-errors "gudev-1.0" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$UDEV_PKG_ERRORS" >&5
+@@ -13140,6 +13131,82 @@
                    UDEV_PKG=gudev-1.0
  fi
  
@@ -112,7 +177,7 @@
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking operating system" >&5
  $as_echo_n "checking operating system... " >&6; }
  case $host in
-@@ -15053,6 +15136,17 @@ $as_echo "Linux" >&6; }
+@@ -13154,6 +13221,17 @@
              as_fn_error $? "libgudev is required under Linux and not installed" "$LINENO" 5
      fi
      ;;
@@ -130,7 +195,7 @@
    *)
      { $as_echo "$as_me:${as_lineno-$LINENO}: result: unsupported operating system" >&5
  $as_echo "unsupported operating system" >&6; }
-@@ -15154,7 +15248,8 @@ if test -n "$CHEESE_CFLAGS"; then
+@@ -13257,7 +13335,8 @@
    clutter-1.0 >= \$CLUTTER_REQUIRED \\
    clutter-gst-1.0 >= \$CLUTTERGST_REQUIRED \\
    mx-1.0 \\
@@ -140,7 +205,7 @@
    \""; } >&5
    ($PKG_CONFIG --exists --print-errors "\
    glib-2.0 >= $GLIB_REQUIRED \
-@@ -15167,7 +15262,8 @@ if test -n "$CHEESE_CFLAGS"; then
+@@ -13272,7 +13351,8 @@
    clutter-1.0 >= $CLUTTER_REQUIRED \
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
@@ -150,7 +215,7 @@
    ") 2>&5
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-@@ -15183,7 +15279,8 @@ if test -n "$CHEESE_CFLAGS"; then
+@@ -13290,9 +13370,9 @@
    clutter-1.0 >= $CLUTTER_REQUIRED \
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
@@ -158,9 +223,11 @@
 +  $UDEV_PKG \
 +  $HAL_PKG
    " 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
  else
    pkg_failed=yes
-@@ -15206,7 +15303,8 @@ if test -n "$CHEESE_LIBS"; then
+ fi
+@@ -13316,7 +13396,8 @@
    clutter-1.0 >= \$CLUTTER_REQUIRED \\
    clutter-gst-1.0 >= \$CLUTTERGST_REQUIRED \\
    mx-1.0 \\
@@ -170,7 +237,7 @@
    \""; } >&5
    ($PKG_CONFIG --exists --print-errors "\
    glib-2.0 >= $GLIB_REQUIRED \
-@@ -15219,7 +15317,8 @@ if test -n "$CHEESE_LIBS"; then
+@@ -13331,7 +13412,8 @@
    clutter-1.0 >= $CLUTTER_REQUIRED \
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
@@ -180,7 +247,7 @@
    ") 2>&5
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-@@ -15235,7 +15334,8 @@ if test -n "$CHEESE_LIBS"; then
+@@ -13349,9 +13431,9 @@
    clutter-1.0 >= $CLUTTER_REQUIRED \
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
@@ -188,9 +255,20 @@
 +  $UDEV_PKG \
 +  $HAL_PKG
    " 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
  else
    pkg_failed=yes
-@@ -15267,7 +15367,8 @@ fi
+ fi
+@@ -13371,7 +13453,7 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        CHEESE_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "\
++	        CHEESE_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "\
+   glib-2.0 >= $GLIB_REQUIRED \
+   gio-2.0 >= $GIO_REQUIRED \
+   x11 \
+@@ -13384,10 +13466,11 @@
    clutter-1.0 >= $CLUTTER_REQUIRED \
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
@@ -199,8 +277,12 @@
 +  $HAL_PKG
    " 2>&1`
          else
- 	        CHEESE_PKG_ERRORS=`$PKG_CONFIG --print-errors "\
-@@ -15281,7 +15382,8 @@ fi
+-	        CHEESE_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "\
++	        CHEESE_PKG_ERRORS=`$PKG_CONFIG --print-errors "\
+   glib-2.0 >= $GLIB_REQUIRED \
+   gio-2.0 >= $GIO_REQUIRED \
+   x11 \
+@@ -13400,7 +13483,8 @@
    clutter-1.0 >= $CLUTTER_REQUIRED \
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
@@ -210,7 +292,7 @@
    " 2>&1`
          fi
  	# Put the nasty error message in config.log where it belongs
-@@ -15298,7 +15400,8 @@ fi
+@@ -13419,7 +13503,8 @@
    clutter-1.0 >= $CLUTTER_REQUIRED \
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
@@ -220,7 +302,7 @@
    ) were not met:
  
  $CHEESE_PKG_ERRORS
-@@ -15354,6 +15457,7 @@ if test -n "$CHEESE_GTK_CFLAGS"; then
+@@ -13475,6 +13560,7 @@
    gee-1.0 >= \$GEE_REQUIRED \\
    libcanberra-gtk3 >= \$LIBCANBERRA_REQUIRED \\
    \$UDEV_PKG \\
@@ -228,7 +310,7 @@
    gnome-video-effects
    \""; } >&5
    ($PKG_CONFIG --exists --print-errors "\
-@@ -15366,6 +15470,7 @@ if test -n "$CHEESE_GTK_CFLAGS"; then
+@@ -13487,6 +13573,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -236,15 +318,18 @@
    gnome-video-effects
    ") 2>&5
    ac_status=$?
-@@ -15381,6 +15486,7 @@ if test -n "$CHEESE_GTK_CFLAGS"; then
+@@ -13502,9 +13589,9 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
 +  $HAL_PKG \
    gnome-video-effects
    " 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
  else
-@@ -15403,6 +15509,7 @@ if test -n "$CHEESE_GTK_LIBS"; then
+   pkg_failed=yes
+ fi
+@@ -13525,6 +13612,7 @@
    gee-1.0 >= \$GEE_REQUIRED \\
    libcanberra-gtk3 >= \$LIBCANBERRA_REQUIRED \\
    \$UDEV_PKG \\
@@ -252,7 +337,7 @@
    gnome-video-effects
    \""; } >&5
    ($PKG_CONFIG --exists --print-errors "\
-@@ -15415,6 +15522,7 @@ if test -n "$CHEESE_GTK_LIBS"; then
+@@ -13537,6 +13625,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -260,15 +345,27 @@
    gnome-video-effects
    ") 2>&5
    ac_status=$?
-@@ -15430,6 +15538,7 @@ if test -n "$CHEESE_GTK_LIBS"; then
+@@ -13552,9 +13641,9 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
 +  $HAL_PKG \
    gnome-video-effects
    " 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
  else
-@@ -15461,6 +15570,7 @@ fi
+   pkg_failed=yes
+ fi
+@@ -13574,7 +13663,7 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        CHEESE_GTK_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "\
++	        CHEESE_GTK_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "\
+   gio-2.0 >= $GIO_REQUIRED \
+   gtk+-3.0 >= $GTK_REQUIRED \
+   gdk-3.0 >= $GDK_REQUIRED \
+@@ -13584,10 +13673,11 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -276,7 +373,12 @@
    gnome-video-effects
    " 2>&1`
          else
-@@ -15474,6 +15584,7 @@ fi
+-	        CHEESE_GTK_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "\
++	        CHEESE_GTK_PKG_ERRORS=`$PKG_CONFIG --print-errors "\
+   gio-2.0 >= $GIO_REQUIRED \
+   gtk+-3.0 >= $GTK_REQUIRED \
+   gdk-3.0 >= $GDK_REQUIRED \
+@@ -13597,6 +13687,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -284,7 +386,7 @@
    gnome-video-effects
    " 2>&1`
          fi
-@@ -15490,6 +15601,7 @@ fi
+@@ -13613,6 +13704,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -292,3 +394,55 @@
    gnome-video-effects
    ) were not met:
  
+@@ -13909,6 +14001,7 @@
+ else
+   as_fn_error $? "You need to have gtk-doc >= 1.14 installed to build $PACKAGE_NAME" "$LINENO" 5
+ fi
++        if test "x$PACKAGE_NAME" != "xglib"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GTKDOC_DEPS" >&5
+@@ -13924,7 +14017,6 @@
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_GTKDOC_DEPS_CFLAGS=`$PKG_CONFIG --cflags "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0" 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+ fi
+@@ -13941,7 +14033,6 @@
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+   pkg_cv_GTKDOC_DEPS_LIBS=`$PKG_CONFIG --libs "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0" 2>/dev/null`
+-		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+ fi
+@@ -13961,9 +14052,9 @@
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        GTKDOC_DEPS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0" 2>&1`
++	        GTKDOC_DEPS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0" 2>&1`
+         else
+-	        GTKDOC_DEPS_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0" 2>&1`
++	        GTKDOC_DEPS_PKG_ERRORS=`$PKG_CONFIG --print-errors "glib-2.0 >= 2.10.0 gobject-2.0  >= 2.10.0" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$GTKDOC_DEPS_PKG_ERRORS" >&5
+@@ -14000,6 +14091,7 @@
+ $as_echo "yes" >&6; }
+ 
+ fi
++    fi
+   fi
+ 
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether to build gtk-doc documentation" >&5
+@@ -14178,7 +14270,6 @@
+ 
+ 
+ 
+-
+ if test "x$ac_cv_env_PKG_CONFIG_set" != "xset"; then
+ 	if test -n "$ac_tool_prefix"; then
+   # Extract the first word of "${ac_tool_prefix}pkg-config", so it can be a program name with args.
