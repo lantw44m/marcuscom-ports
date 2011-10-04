@@ -3,11 +3,12 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.41 2011/09/15 17:30:17 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.42 2011/09/21 12:12:23 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	1.30.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -28,8 +29,8 @@ USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-tests
 
 # Force it to put the .cache in ${WRKSRC} instead of ~/.cache. ports/143260
@@ -37,10 +38,8 @@ MAKE_ENV=	HOME=${WRKDIR}
 
 MAN1=		g-ir-compiler.1 g-ir-generate.1 g-ir-scanner.1
 
-.include <bsd.port.pre.mk>
-
 post-patch:
-	@${REINPLACE_CMD} -e 's|'cc'|'${CC:Q}'|g' \
+	@${REINPLACE_CMD} -e 's|%%CC%%|${CC:Q}|g' \
 		${WRKSRC}/giscanner/sourcescanner.py
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
