@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	drwright
-PORTVERSION=	3.0.2
+PORTVERSION=	3.2.0
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -16,13 +16,12 @@ COMMENT=	GNOME 3 RSI prevention tool
 LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		notify.4:${PORTSDIR}/devel/libnotify
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GNOME=	gnomehack intlhack gtk30 gnomecontrolcenter3
 USE_XORG=	x11 xscrnsaver
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 
 GLIB_SCHEMAS=	org.gnome.settings-daemon.plugins.typing-break.gschema.xml

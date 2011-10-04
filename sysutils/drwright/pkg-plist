@@ -1,9 +1,12 @@
-lib/drwright/gnome-typing-monitor
 share/applications/gnome-typing-break-panel.desktop
 share/drwright/drwright-panel.ui
 share/drwright/pixmaps/ocean-stripes.png
 share/icons/hicolor/48x48/apps/typing-monitor.png
 share/icons/hicolor/scalable/apps/typing-monitor.svg
+lib/control-center-1/panels/libdrwrightccp.a
+lib/control-center-1/panels/libdrwrightccp.la
+lib/control-center-1/panels/libdrwrightccp.so
+lib/drwright/gnome-typing-monitor
 share/locale/af/LC_MESSAGES/drwright.mo
 share/locale/am/LC_MESSAGES/drwright.mo
 share/locale/ar/LC_MESSAGES/drwright.mo
