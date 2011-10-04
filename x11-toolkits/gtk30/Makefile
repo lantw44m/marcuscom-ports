@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.37 2011/09/15 18:44:03 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.38 2011/09/21 12:25:39 kwm Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	3.1.92
+PORTVERSION=	3.2.0
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/,} \
@@ -46,11 +46,10 @@ USE_GETTEXT=	yes
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 CONFIGURE_ARGS=	--enable-static --enable-xinput=yes
-CONFIGURE_ARGS+=--enable-gtk2-dependency
-#CPPFLAGS=	-I${LOCALBASE}/include/freetype2 \
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
-		INTROSPECTION_GIRDIR=`pkg-config --variable=girdir gobject-introspection-1.0`
+CONFIGURE_ARGS+=--enable-gtk2-dependency --disable-packagekit
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ENV=	INTROSPECTION_GIRDIR=`pkg-config --variable=girdir gobject-introspection-1.0`
 
 GLIB_SCHEMAS=	org.gtk.Settings.FileChooser.gschema.xml
 
@@ -60,7 +59,8 @@ MAN1=		gtk-query-immodules-3.0.1
 CONFIGURE_ARGS+=	--enable-debug=yes
 .endif
 
-OPTIONS=	CUPS "Enable cups printing support" on
+OPTIONS=	CUPS "Enable cups printing support" on \
+		COLORD "Enable colord .. support" on
 
 .include <bsd.port.options.mk>
 
@@ -71,6 +71,13 @@ PLIST_SUB+=	CUPS=""
 .else
 CONFIGURE_ARGS+=--disable-cups
 PLIST_SUB+=	CUPS="@comment "
+.endif
+
+.if defined(WITH_COLORD)
+LIB_DEPENDS+=	colord.1:${PORTSDIR}/graphics/colord
+CONFIGURE_ARGS+=--enable-colord
+.else
+CONFIGURE_ARGS+=--disable-colord
 .endif
 
 post-patch:
