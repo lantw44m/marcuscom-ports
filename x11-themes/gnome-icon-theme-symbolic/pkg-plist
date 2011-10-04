@@ -43,6 +43,8 @@ share/icons/gnome/scalable/actions/media-skip-backward-symbolic.svg
 share/icons/gnome/scalable/actions/media-skip-forward-symbolic.svg
 share/icons/gnome/scalable/actions/object-flip-horizontal-symbolic.svg
 share/icons/gnome/scalable/actions/object-flip-vertical-symbolic.svg
+share/icons/gnome/scalable/actions/object-rotate-left-symbolic.svg
+share/icons/gnome/scalable/actions/object-rotate-right-symbolic.svg
 share/icons/gnome/scalable/actions/process-stop-symbolic.svg
 share/icons/gnome/scalable/actions/system-run-symbolic.svg
 share/icons/gnome/scalable/actions/system-shutdown-symbolic.svg
@@ -77,6 +79,7 @@ share/icons/gnome/scalable/devices/computer-symbolic.svg
 share/icons/gnome/scalable/devices/drive-harddisk-symbolic.svg
 share/icons/gnome/scalable/devices/input-dialpad-symbolic.svg
 share/icons/gnome/scalable/devices/input-keyboard-symbolic.svg
+share/icons/gnome/scalable/devices/input-touchpad-symbolic.svg
 share/icons/gnome/scalable/devices/media-optical-symbolic.svg
 share/icons/gnome/scalable/devices/phone-symbolic.svg
 share/icons/gnome/scalable/devices/printer-symbolic.svg
@@ -133,6 +136,7 @@ share/icons/gnome/scalable/status/dialog-password-symbolic.svg
 share/icons/gnome/scalable/status/dialog-question-symbolic.svg
 share/icons/gnome/scalable/status/dialog-warning-symbolic.svg
 share/icons/gnome/scalable/status/display-brightness-symbolic.svg
+share/icons/gnome/scalable/status/keyboard-brightness-symbolic.svg
 share/icons/gnome/scalable/status/mail-attachment-symbolic.svg
 share/icons/gnome/scalable/status/mail-read-symbolic.svg
 share/icons/gnome/scalable/status/mail-replied-symbolic.svg
@@ -185,6 +189,7 @@ share/icons/gnome/scalable/status/security-medium-symbolic.svg
 share/icons/gnome/scalable/status/software-update-available-symbolic.svg
 share/icons/gnome/scalable/status/software-update-urgent-symbolic.svg
 share/icons/gnome/scalable/status/starred-symbolic.svg
+share/icons/gnome/scalable/status/touchpad-disabled-symbolic.svg
 share/icons/gnome/scalable/status/user-available-symbolic.svg
 share/icons/gnome/scalable/status/user-away-symbolic.svg
 share/icons/gnome/scalable/status/user-busy-symbolic.svg
