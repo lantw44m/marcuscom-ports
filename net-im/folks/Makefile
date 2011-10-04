@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/folks/Makefile,v 1.19 2011/09/19 17:56:14 kwm Exp $
+#   $MCom: ports/net-im/folks/Makefile,v 1.20 2011/09/25 11:12:00 kwm Exp $
 #
 
 PORTNAME=	folks
-PORTVERSION=	0.6.3.1
+PORTVERSION=	0.6.3.2
 CATEGORIES=	net-im
 MASTER_SITES=	GNOME
 
