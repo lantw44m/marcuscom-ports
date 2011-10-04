@@ -1,5 +1,5 @@
---- gio/gunixmounts.c.orig	2011-09-05 05:34:35.000000000 +0200
-+++ gio/gunixmounts.c	2011-09-15 17:39:22.000000000 +0200
+--- gio/gunixmounts.c.orig	2011-09-21 21:17:06.000000000 +0200
++++ gio/gunixmounts.c	2011-10-04 15:07:08.000000000 +0200
 @@ -153,6 +153,9 @@ struct _GUnixMountMonitor {
  
    GFileMonitor *fstab_monitor;
@@ -58,15 +58,7 @@
      "/var",
      "/var/crash",
      "/var/local",
-@@ -1033,6 +1047,7 @@ _g_get_unix_mount_points (void)
-   
- #ifdef HAVE_SYS_SYSCTL_H
- #if defined(HAVE_SYSCTLBYNAME)
-+  size_t len = sizeof(usermnt);
-   sysctlbyname ("vfs.usermount", &usermnt, &len, NULL, 0);
- #elif defined(CTL_VFS) && defined(VFS_USERMOUNT)
-   {
-@@ -1108,6 +1123,10 @@ get_mounts_timestamp (void)
+@@ -1111,6 +1125,10 @@ get_mounts_timestamp (void)
        if (stat (monitor_file, &buf) == 0)
  	return (guint64)buf.st_mtime;
      }
@@ -77,7 +69,7 @@
    return 0;
  }
  
-@@ -1250,6 +1269,13 @@ g_unix_mount_monitor_finalize (GObject *
+@@ -1253,6 +1271,13 @@ g_unix_mount_monitor_finalize (GObject *
        g_object_unref (monitor->mtab_monitor);
      }
  
@@ -91,7 +83,7 @@
    the_mount_monitor = NULL;
  
    G_OBJECT_CLASS (g_unix_mount_monitor_parent_class)->finalize (object);
-@@ -1330,6 +1356,51 @@ mtab_file_changed (GFileMonitor      *mo
+@@ -1333,6 +1358,51 @@ mtab_file_changed (GFileMonitor      *mo
    g_signal_emit (mount_monitor, signals[MOUNTS_CHANGED], 0);
  }
  
@@ -143,7 +135,7 @@
  static void
  g_unix_mount_monitor_init (GUnixMountMonitor *monitor)
  {
-@@ -1352,6 +1423,12 @@ g_unix_mount_monitor_init (GUnixMountMon
+@@ -1355,6 +1425,12 @@ g_unix_mount_monitor_init (GUnixMountMon
        
        g_signal_connect (monitor->mtab_monitor, "changed", (GCallback)mtab_file_changed, monitor);
      }
