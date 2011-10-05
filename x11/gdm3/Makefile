@@ -3,11 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.10 2011/06/10 23:04:42 mezz Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.11 2011/09/22 16:15:03 kwm Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	3.1.92
+PORTVERSION=	3.2.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -55,8 +55,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home \
 		--with-at-spi-registryd-directory=${LOCALBASE}/libexec
 CPPFLAGS=	-I${LOCALBASE}/include -DHAS_SA_LEN
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
-		LIBS="-lm -lexecinfo" \
+LDFLAGS=	-L${LOCALBASE}/lib
+CONFIGURE_ENV=	LIBS="-lm -lexecinfo" \
 		GTKDOC="false"
 
 SUB_FILES+=	gdm.pam
@@ -69,7 +69,7 @@ GNOME_LOCALSTATEDIR=	/var
 OPTIONS=	IPV6 "Enable IPv6 support" off \
 		KEYRING "Enable GnomeKeyring/PAM integration" on
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if defined(WITHOUT_KEYRING)
 SUB_LIST+=	PAM_KEYRING=\#
@@ -123,4 +123,4 @@ post-install:
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
