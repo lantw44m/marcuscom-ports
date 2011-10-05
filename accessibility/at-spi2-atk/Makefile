@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.31 2011/09/16 19:33:51 kwm Exp $
+#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.32 2011/09/20 12:57:46 kwm Exp $
 #
 
 PORTNAME=	at-spi2-atk
-PORTVERSION=	2.1.92
+PORTVERSION=	2.2.0
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -32,7 +32,7 @@ USE_GNOME=	gnomehack gnomehier intlhack gconf2 libxml2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.a11y.atspi.gschema.xml
 
 .include <bsd.port.mk>

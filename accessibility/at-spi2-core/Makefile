@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.33 2011/09/16 19:27:50 kwm Exp $
+#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.34 2011/09/20 12:55:52 kwm Exp $
 #
 
 PORTNAME=	at-spi2-core
-PORTVERSION=	2.1.92
+PORTVERSION=	2.2.0
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -31,6 +31,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--disable-xevie
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
