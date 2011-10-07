@@ -22,7 +22,7 @@ libdata/pkgconfig/gweather-3.0.pc
 %%DOCSDIR%%-3.0/index.html
 %%DOCSDIR%%-3.0/index.sgml
 %%DOCSDIR%%-3.0/left.png
-%%DOCSDIR%%-3.0/libgweather-3.0.devhelp
+%%DOCSDIR%%-3.0/libgweather.devhelp
 %%DOCSDIR%%-3.0/libgweather-3.0.devhelp2
 %%DOCSDIR%%-3.0/libgweather-gweather-gconf.html
 %%DOCSDIR%%-3.0/libgweather-gweather-location.html

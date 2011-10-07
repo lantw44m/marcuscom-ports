@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/libgweather3/Makefile,v 1.6 2011/05/25 17:08:18 kwm Exp $
+#   $MCom: ports/net/libgweather3/Makefile,v 1.7 2011/06/10 22:59:07 mezz Exp $
 #
 
 PORTNAME=	libgweather
-PORTVERSION=	3.0.2
+PORTVERSION=	3.2.0
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
@@ -22,13 +22,14 @@ CONFLICTS=	libgweather-2.[0-9]*
 
 LATEST_LINK=	libgweather3
 USE_GETTEXT=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
+MAKE_JOBS_SAFE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 ltverhack gtk30
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	gweather.schemas
 
