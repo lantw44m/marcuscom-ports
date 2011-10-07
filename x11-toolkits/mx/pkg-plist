@@ -328,6 +328,7 @@ share/mx/style/tooltip-background.png
 @dirrm share/mx/style
 @dirrm share/mx
 @dirrm share/gtk-doc/html/mx
+@dirrm share/gtk-doc/html/mx-gtk
 @dirrmtry share/gtk-doc/html
 @dirrmtry share/gtk-doc
 @dirrm include/mx-1.0/mx
