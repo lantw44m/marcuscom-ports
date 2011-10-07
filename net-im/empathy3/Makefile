@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.18 2011/08/24 16:05:57 kwm Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.19 2011/09/19 17:58:08 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	3.1.91
@@ -109,7 +109,7 @@ PLIST_SUB+=	NST="@comment "
 
 # needs ported to gtk3
 .if !defined(WITHOUT_MAP)
-LIB_DEPENDS+=	champlain-0.10.0:${PORTSDIR}/graphics/libchamplain
+LIB_DEPENDS+=	champlain-0.12.0:${PORTSDIR}/graphics/libchamplain
 CONFIGURE_ARGS+=--enable-map
 PLIST_SUB+=	MAP=""
 .else
