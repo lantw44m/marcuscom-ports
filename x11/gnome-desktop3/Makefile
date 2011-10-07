@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop3/Makefile,v 1.19 2011/09/19 16:46:56 kwm Exp $
+#   $MCom: ports/x11/gnome-desktop3/Makefile,v 1.20 2011/09/19 20:48:08 kwm Exp $
 #
 
 PORTNAME=	gnome-desktop
-PORTVERSION=	3.1.92
+PORTVERSION=	3.2.0
 PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
@@ -38,8 +38,8 @@ INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-gnome-distributor="FreeBSD GNOME Project"
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|xsltproc -o| xsltproc --nonet -o|g' \
