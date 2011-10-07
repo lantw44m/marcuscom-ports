@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-gobject/Makefile,v 1.53 2011/09/17 08:46:32 kwm Exp $
+#   $MCom: ports/devel/py-gobject/Makefile,v 1.54 2011/09/17 10:40:11 kwm Exp $
 #
 
 PORTNAME=	gobject
 PORTVERSION=	2.28.6
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/pygobject/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
@@ -19,25 +19,24 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Python bindings for GObject
 
+LICENSE=	LGPL21
+LICENSE_FILE=	${WRKSRC}/COPYING
+
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
 RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
 
-LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20
 USE_PYTHON=	2.5+
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--disable-docs
+CONFIGURE_ARGS=	--disable-docs --disable-introspection
 
-CONFLICTS=	py*-gtk-0* py*-gobject-2.90.[0-9]* py*-gobject-3.[0-9]*
+CONFLICTS=	py*-gtk-0* 
 PLIST_SUB=	PYTHON_VER="${PYTHON_VER}"
-
-.include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libffi.so)
 LIB_DEPENDS+=	ffi.5:${PORTSDIR}/devel/libffi
@@ -50,4 +49,4 @@ post-install:
 	@${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
 		${PREFIX}/share/pygobject/2.0/codegen
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

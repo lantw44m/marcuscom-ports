@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-gobject3/Makefile,v 1.3 2011/09/19 19:56:57 kwm Exp $
+#   $MCom: ports/devel/py-gobject3/Makefile,v 1.4 2011/10/04 13:49:19 kwm Exp $
 #
 
 PORTNAME=	gobject
@@ -19,7 +19,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Python bindings for GObject
 
 LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
@@ -33,10 +32,10 @@ USE_PYTHON=	2.5+
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
-CONFLICTS=	py*-gtk-0* py*-gobject-2.*.[0-6]
+# this port doesn't work with py-gobject < 2.28.6_2, clungle below
+CONFLICTS=	py*-gtk-0* py*-gobject-2.*.[0-6] py*-gobject-2.*.[7-9] \
+		py*-gobject-2.*.6_1
 PLIST_SUB=	PYTHON_VER="${PYTHON_VER}"
-
-.include <bsd.port.pre.mk>
 
 .if exists(${LOCALBASE}/lib/libffi.so)
 LIB_DEPENDS+=	ffi.5:${PORTSDIR}/devel/libffi
@@ -45,4 +44,4 @@ CONFIGURE_ARGS+=--with-ffi
 CONFIGURE_ARGS+=--without-ffi
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
