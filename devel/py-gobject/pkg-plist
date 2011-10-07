@@ -180,6 +180,7 @@ share/pygobject/xsl/pdf-style.xsl
 share/pygobject/xsl/pdf.xsl
 share/pygobject/xsl/ref-html-style.xsl
 @dirrm share/pygobject/xsl
+@dirrm share/pygobject/2.0/gio
 @dirrm share/pygobject/2.0/defs
 @dirrm share/pygobject/2.0/codegen
 @dirrm share/pygobject/2.0
