@@ -3,11 +3,11 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity/Makefile,v 1.114 2011/04/01 11:49:26 kwm Exp $
+#   $MCom: ports/x11/zenity/Makefile,v 1.115 2011/04/05 19:49:20 kwm Exp $
 #
 
 PORTNAME=	zenity
-PORTVERSION=	3.0.0
+PORTVERSION=	3.2.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,15 +17,17 @@ COMMENT=	Display GNOME dialogs from the command line
 
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
+
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack gtk30 gnomedocutils intlhack
 USE_XORG=	x11
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include ${PTHREAD_CFLAGS}" \
-		LDFLAGS="-L${LOCALBASE}/lib" LIBS="${PTHREAD_LIBS}"
+CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
 
 MAN1=		zenity.1
 

@@ -3,11 +3,11 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm30/Makefile,v 1.17 2011/09/17 12:07:49 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtkmm30/Makefile,v 1.18 2011/09/19 18:15:38 kwm Exp $
 #
 
 PORTNAME=	gtkmm
-PORTVERSION=	3.1.90.1
+PORTVERSION=	3.2.0
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -33,8 +33,8 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack gtk30 ltverhack
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-documentation \
 		--enable-static=yes
 

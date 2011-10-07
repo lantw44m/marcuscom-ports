@@ -56,7 +56,6 @@ include/gtkmm-%%API_VERSION%%/gtkmm/appchooser.h
 include/gtkmm-%%API_VERSION%%/gtkmm/appchooserbutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/appchooserdialog.h
 include/gtkmm-%%API_VERSION%%/gtkmm/appchooserwidget.h
-include/gtkmm-%%API_VERSION%%/gtkmm/application.h
 include/gtkmm-%%API_VERSION%%/gtkmm/arrow.h
 include/gtkmm-%%API_VERSION%%/gtkmm/aspectframe.h
 include/gtkmm-%%API_VERSION%%/gtkmm/assistant.h
@@ -175,7 +174,6 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooser_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooserbutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooserdialog_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooserwidget_p.h
-include/gtkmm-%%API_VERSION%%/gtkmm/private/application_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/arrow_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/aspectframe_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/assistant_p.h
