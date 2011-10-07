@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/colord/Makefile,v 1.3 2011/09/17 17:00:46 kwm Exp $
+#    $MCom: ports/graphics/colord/Makefile,v 1.4 2011/10/07 10:46:01 kwm Exp $
 #
 
 PORTNAME=	colord
@@ -23,7 +23,7 @@ LIB_DEPENDS=	polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack glib20 intlhack
+USE_GNOME=	gnomehier gnomehack glib20 intlhack
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes

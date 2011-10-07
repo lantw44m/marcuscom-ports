@@ -80,18 +80,18 @@ share/locale/zh_CN/LC_MESSAGES/colord.mo
 share/locale/zh_TW/LC_MESSAGES/colord.mo
 share/polkit-1/actions/org.freedesktop.color.policy
 share/vala/vapi/colord.vapi
-@dirrm share/locale/te/LC_MESSAGES
-@dirrm share/locale/te
-@dirrm share/locale/sr@latin/LC_MESSAGES
-@dirrm share/locale/sr@latin
-@dirrm share/locale/mr/LC_MESSAGES
-@dirrm share/locale/mr
-@dirrm share/locale/it_IT/LC_MESSAGES
-@dirrm share/locale/it_IT
-@dirrm share/locale/bn_IN/LC_MESSAGES
-@dirrm share/locale/bn_IN
-@dirrm share/locale/as/LC_MESSAGES
-@dirrm share/locale/as
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/it_IT/LC_MESSAGES
+@dirrmtry share/locale/it_IT
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrm share/color/icc/colord
 @dirrm share/color/icc
 @dirrm share/color
