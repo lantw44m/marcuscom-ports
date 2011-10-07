@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/colord/Makefile,v 1.2 2011/09/16 18:57:16 kwm Exp $
+#    $MCom: ports/graphics/colord/Makefile,v 1.3 2011/09/17 17:00:46 kwm Exp $
 #
 
 PORTNAME=	colord
@@ -35,9 +35,8 @@ CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
 		USB_CFLAGS="-I/usr/include" \
 		USB_LIBS="-L/usr/lib -lusb"
 
-MAN1=		cd-create-profile.1 cd-fix-profile.1 colormgr.1
-
-OPTIONS=	SANE "Build sane colord support" off
+OPTIONS=	SANE "Build sane colord support" off \
+		MANPAGES "Build man pages" on
 
 .include <bsd.port.options.mk>
 
@@ -47,6 +46,13 @@ CONFIGURE_ARGS+=--disable-sane
 CONFGIURE_ARGS+=--enable-sane=yes
 LIB_DEPENDS+=	sane.1:${PORTSDIR}/graphics/sane-backends
 .endif
+
+.if defined(WITH_MANPAGES)
+BUILD_DEPENDS+=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
+		${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/textproc/docbook-410
+MAN1=		cd-create-profile.1 cd-fix-profile.1 colormgr.1
+.endif
+
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wclobbered||g' \
@@ -61,5 +67,9 @@ post-patch:
 		${WRKSRC}/src/cd-usb.c \
 		${WRKSRC}/src/cd-usb.h \
 		${WRKSRC}/src/cd-sensor-huey.c
+.if defined(WITHOUT_MANPAGES)
+	@${REINPLACE_CMD} -e "s|2MAN_TRUE=$$|2MAN_TRUE='#'|g ; \
+                s|2MAN_FALSE='#'|2MAN_FALSE=|g" ${WRKSRC}/configure
+.endif
 
 .include <bsd.port.mk>
