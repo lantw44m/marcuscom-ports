@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog-plugins3/Makefile,v 1.7 2011/08/24 16:05:56 kwm Exp $
+#   $MCom: ports/graphics/eog-plugins3/Makefile,v 1.8 2011/09/22 14:40:31 kwm Exp $
 #
 
 PORTNAME=	eog-plugins
-PORTVERSION=	3.1.3
+PORTVERSION=	3.2.0
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,11 +15,11 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plug-ins for the Eye of GNOME image viewer application
 
-BUILD_DEPENDS=	eog>=3.1.0:${PORTSDIR}/graphics/eog3
+BUILD_DEPENDS=	eog>=3.2.0:${PORTSDIR}/graphics/eog3
 LIB_DEPENDS=	gdata.13:${PORTSDIR}/devel/libgdata \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		peas-1.0.0:${PORTSDIR}/devel/libpeas
-RUN_DEPENDS=	eog>=3.1.0:${PORTSDIR}/graphics/eog3
+RUN_DEPENDS=	eog>=3.2.0:${PORTSDIR}/graphics/eog3
 
 CONFLICTS=	eog-plugins-2.[0-9]*
 
@@ -29,8 +29,8 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.eog.plugins.exif-display.gschema.xml
 
@@ -57,6 +57,8 @@ PLIST_SUB+=	PYTHON="@comment "
 .if defined(WITHOUT_CHAMPLAIN)
 post-patch:
 	@${REINPLACE_CMD} -e 's|champlain-gtk|disabled-champlain-gtk|g' \
+		${WRKSRC}/configure
+	@${REINPLACE_CMD} '/^DEFAULT_PLUGINS=/,/^$$/ s/map//' \
 		${WRKSRC}/configure
 .endif
 
