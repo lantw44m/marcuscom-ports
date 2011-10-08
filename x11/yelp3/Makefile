@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp3/Makefile,v 1.18 2011/09/17 14:08:34 kwm Exp $
+#   $MCom: ports/x11/yelp3/Makefile,v 1.19 2011/09/21 12:26:50 kwm Exp $
 #
 
 PORTNAME=	yelp
-PORTVERSION=	3.1.4
+PORTVERSION=	3.2.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -32,8 +32,8 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 libxslt libxml2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
 .include <bsd.port.pre.mk>
