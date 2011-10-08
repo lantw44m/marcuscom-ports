@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.25 2011/09/16 19:20:38 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.26 2011/09/19 19:48:43 kwm Exp $
 #
 
 PORTNAME=	dconf
-PORTVERSION=	0.9.1
+PORTVERSION=	0.10.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A configuration database system for GNOME
 
-BUILD_DEPENDS=	vala>=0.11.4:${PORTSDIR}/lang/vala
+BUILD_DEPENDS=	vala>=0.11.7:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
 		dbus-1.3:${PORTSDIR}/devel/dbus
 
@@ -25,8 +25,8 @@ USE_GNOME=	gnomehack glib20
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS=	EDITOR "Build the dconf editor (requires Gtk+3)" On
 
