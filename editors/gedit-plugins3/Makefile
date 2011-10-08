@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.13 2011/08/30 21:30:20 kwm Exp $
+#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.14 2011/09/18 10:22:20 kwm Exp $
 #
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	3.1.4
+PORTVERSION=	3.2.0
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,9 +15,9 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plugins for GEdit 3
 
-BUILD_DEPENDS=	gedit>=2.91.11:${PORTSDIR}/editors/gedit3
+BUILD_DEPENDS=	gedit>=3.2.0:${PORTSDIR}/editors/gedit3
 LIB_DEPENDS=	peas-1.0.0:${PORTSDIR}/devel/libpeas
-RUN_DEPENDS=	gedit>=2.91.11:${PORTSDIR}/editors/gedit3
+RUN_DEPENDS=	gedit>=3.2.0:${PORTSDIR}/editors/gedit3
 
 CONFLICTS=	gedit-plugins-2.[0-9]*
 
@@ -29,8 +29,8 @@ USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack gnomeprefix intlhack gtk30 gtksourceview3
 WANT_GNOME=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.gedit.plugins.drawspaces.gschema.xml
 
