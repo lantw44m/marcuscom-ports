@@ -3,20 +3,23 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/goocanvas2/Makefile,v 1.4 2011/02/27 14:56:43 kwm Exp $
+#    $MCom: ports/graphics/goocanvas2/Makefile,v 1.5 2011/06/10 22:59:04 mezz Exp $
 
 PORTNAME=	goocanvas
-PORTVERSION=	2.0.0
+PORTVERSION=	2.0.1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Canvas widget for GTK+ 3
 
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+
 LATEST_LINK=	goocanvas2
 USE_GNOME=	gtk30 gnomehack ltverhack
+USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 
 .include <bsd.port.mk>
