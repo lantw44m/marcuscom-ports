@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero3/Makefile,v 1.12 2011/06/10 22:59:08 mezz Exp $
+#    $MCom: ports/sysutils/brasero3/Makefile,v 1.13 2011/09/22 15:06:48 kwm Exp $
 
 PORTNAME=	brasero
-PORTVERSION=	3.1.92
+PORTVERSION=	3.2.0
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -37,26 +37,26 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-inotify --enable-search=no --enable-playlist=no \
 		--enable-introspection=yes
 CPPFLAGS=	-I${LOCALBASE}/include -DHAVE_CAM_LIB_H=1
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
 MAN1=		brasero.1
 GLIB_SCHEMAS=	org.gnome.brasero.gschema.xml
 
-#OPTIONS=	NAUTILUS "Enable Nautilus extension" on \
-OPTIONS=	LIBBURNIA "Enable libburnia plug-ins" off
+OPTIONS=	NAUTILUS "Enable Nautilus extension" on \
+		LIBBURNIA "Enable libburnia plug-ins" off
 
 PLIST_SUB=	FULL_VERSION=${PORTVERSION}
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-#.if !defined(WITHOUT_NAUTILUS)
-#USE_GNOME+=	nautilus2
-#CONFIGURE_ARGS+=--enable-nautilus
-#PLIST_SUB+=	NAUTILUS=""
-#.else
+.if defined(WITH_NAUTILUS)
+USE_GNOME+=	nautilus3
+CONFIGURE_ARGS+=--enable-nautilus
+PLIST_SUB+=	NAUTILUS=""
+.else
 PLIST_SUB+=	NAUTILUS="@comment "
 CONFIGURE_ARGS+=--enable-nautilus=no
-#.endif
+.endif
 
 .if defined(WITH_LIBBURNIA)
 LIB_DEPENDS+=	burn.4:${PORTSDIR}/devel/libburn \
@@ -73,4 +73,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|" == "|" = "|g' \
 		${WRKSRC}/configure
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

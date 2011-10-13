@@ -87,8 +87,8 @@ lib/libbrasero-media3.so.3
 lib/libbrasero-utils3.la
 lib/libbrasero-utils3.so
 lib/libbrasero-utils3.so.3
-%%NAUTILUS%%lib/nautilus/extensions-2.0/libnautilus-brasero-extension.la
-%%NAUTILUS%%lib/nautilus/extensions-2.0/libnautilus-brasero-extension.so
+%%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-brasero-extension.la
+%%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-brasero-extension.so
 libdata/pkgconfig/libbrasero-burn3.pc
 libdata/pkgconfig/libbrasero-media3.pc
 share/GConf/gsettings/brasero.convert
@@ -475,6 +475,19 @@ share/gnome/help/brasero/it/project-save.page
 share/gnome/help/brasero/it/project-video.page
 share/gnome/help/brasero/it/split-track.page
 share/gnome/help/brasero/it/tools-blank.page
+share/gnome/help/brasero/ko/create-cover.page
+share/gnome/help/brasero/ko/figures/brasero-main-window.png
+share/gnome/help/brasero/ko/index.page
+share/gnome/help/brasero/ko/introduction.page
+share/gnome/help/brasero/ko/prob-cd.page
+share/gnome/help/brasero/ko/prob-dvd.page
+share/gnome/help/brasero/ko/project-audio.page
+share/gnome/help/brasero/ko/project-data.page
+share/gnome/help/brasero/ko/project-disc-copy.page
+share/gnome/help/brasero/ko/project-save.page
+share/gnome/help/brasero/ko/project-video.page
+share/gnome/help/brasero/ko/split-track.page
+share/gnome/help/brasero/ko/tools-blank.page
 share/gnome/help/brasero/pl/create-cover.page
 share/gnome/help/brasero/pl/figures/brasero-main-window.png
 share/gnome/help/brasero/pl/index.page
@@ -674,6 +687,8 @@ share/mime/packages/brasero.xml
 @dirrm share/gnome/help/brasero/ro
 @dirrm share/gnome/help/brasero/pl/figures
 @dirrm share/gnome/help/brasero/pl
+@dirrm share/gnome/help/brasero/ko/figures
+@dirrm share/gnome/help/brasero/ko
 @dirrm share/gnome/help/brasero/it/figures
 @dirrm share/gnome/help/brasero/it
 @dirrm share/gnome/help/brasero/gl/figures
