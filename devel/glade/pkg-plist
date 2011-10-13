@@ -36,9 +36,9 @@ lib/girepository-1.0/Gladeui-2.0.typelib
 lib/glade/modules/libgladegtk.a
 lib/glade/modules/libgladegtk.la
 lib/glade/modules/libgladegtk.so
-lib/glade/modules/libgladepython.a
-lib/glade/modules/libgladepython.la
-lib/glade/modules/libgladepython.so
+%%PYTHON:%%lib/glade/modules/libgladepython.a
+%%PYTHON:%%lib/glade/modules/libgladepython.la
+%%PYTHON:%%lib/glade/modules/libgladepython.so
 lib/libgladeui-2.a
 lib/libgladeui-2.la
 lib/libgladeui-2.so
@@ -71,8 +71,7 @@ share/applications/glade.desktop
 %%DOCSDIR%%/gladeui-glade-editor.html
 %%DOCSDIR%%/gladeui-glade-parameter.html
 %%DOCSDIR%%/gladeui-glade-widget-adaptor.html
-%%DOCSDIR%%/gladeui.devhelp
-%%DOCSDIR%%/gladeui.devhelp2
+%%DOCSDIR%%/gladeui-2.devhelp2
 %%DOCSDIR%%/home.png
 %%DOCSDIR%%/index.html
 %%DOCSDIR%%/index.sgml

@@ -3,14 +3,13 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade/Makefile,v 1.2 2011/06/11 19:51:14 mezz Exp $
+#   $MCom: ports/devel/glade/Makefile,v 1.3 2011/08/11 19:48:45 kwm Exp $
 #
 
 PORTNAME=	glade
-PORTVERSION=	3.10.0
+PORTVERSION=	3.10.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
-#MASTER_SITE_SUBDIR=	sources/glade/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -21,7 +20,7 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 CONFLICTS=	glade3-3.*
 
 INSTALLS_ICONS=	yes
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gtk30 gnomeprefix gnomehack ltverhack
 WANT_GNOME=	yes
@@ -30,15 +29,16 @@ INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
-DOCSDIR=	${PREFIX}/share/doc/gladeui
+DOCSDIR=	${PREFIX}/share/doc/gladeui-2
 
-.include <bsd.port.pre.mk>
+OPTIONS=	PYTHON "Enable python widget support" on
 
-.if ${HAVE_GNOME:Mpygobject}!=""
+.include <bsd.port.options.mk>
+
+.if defined(WITH_PYTHON)
 USE_PYTHON=	yes
-.include "${PORTSDIR}/Mk/bsd.python.mk"
 USE_GNOME+=	pygobject
 PLIST_SUB+=	PYTHON:=""
 CONFIGURE_ARGS+=--enable-python
@@ -50,4 +50,4 @@ PLIST_SUB+=	PYTHON:="@comment "
 post-install:
 	@-update-desktop-database
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
