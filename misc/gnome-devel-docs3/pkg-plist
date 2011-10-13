@@ -1966,6 +1966,7 @@ share/gnome/help/integration-guide/el/integration-guide.xml
 share/gnome/help/integration-guide/en_GB/integration-guide.xml
 share/gnome/help/integration-guide/es/integration-guide.xml
 share/gnome/help/integration-guide/fr/integration-guide.xml
+share/gnome/help/integration-guide/gl/integration-guide.xml
 share/gnome/help/integration-guide/it/integration-guide.xml
 share/gnome/help/integration-guide/pt_BR/integration-guide.xml
 share/gnome/help/integration-guide/sl/integration-guide.xml
@@ -2007,6 +2008,12 @@ share/gnome/help/optimization-guide/fr/optimization-guide.xml
 share/gnome/help/optimization-guide/fr/optimization-harmful.xml
 share/gnome/help/optimization-guide/fr/optimization-intro.xml
 share/gnome/help/optimization-guide/fr/optimization-massif.xml
+share/gnome/help/optimization-guide/gl/figures/massif-after.png
+share/gnome/help/optimization-guide/gl/figures/massif-before.png
+share/gnome/help/optimization-guide/gl/optimization-guide.xml
+share/gnome/help/optimization-guide/gl/optimization-harmful.xml
+share/gnome/help/optimization-guide/gl/optimization-intro.xml
+share/gnome/help/optimization-guide/gl/optimization-massif.xml
 share/gnome/help/optimization-guide/sl/figures/massif-after.png
 share/gnome/help/optimization-guide/sl/figures/massif-before.png
 share/gnome/help/optimization-guide/sl/optimization-guide.xml
@@ -2328,6 +2335,7 @@ share/omf/integration-guide/integration-guide-el.omf
 share/omf/integration-guide/integration-guide-en_GB.omf
 share/omf/integration-guide/integration-guide-es.omf
 share/omf/integration-guide/integration-guide-fr.omf
+share/omf/integration-guide/integration-guide-gl.omf
 share/omf/integration-guide/integration-guide-it.omf
 share/omf/integration-guide/integration-guide-pt_BR.omf
 share/omf/integration-guide/integration-guide-sl.omf
@@ -2339,6 +2347,7 @@ share/omf/optimization-guide/optimization-guide-de.omf
 share/omf/optimization-guide/optimization-guide-el.omf
 share/omf/optimization-guide/optimization-guide-es.omf
 share/omf/optimization-guide/optimization-guide-fr.omf
+share/omf/optimization-guide/optimization-guide-gl.omf
 share/omf/optimization-guide/optimization-guide-sl.omf
 share/omf/optimization-guide/optimization-guide-zh_CN.omf
 @dirrm share/omf/optimization-guide
@@ -2365,6 +2374,8 @@ share/omf/optimization-guide/optimization-guide-zh_CN.omf
 @dirrm share/gnome/help/optimization-guide/zh_CN
 @dirrm share/gnome/help/optimization-guide/sl/figures
 @dirrm share/gnome/help/optimization-guide/sl
+@dirrm share/gnome/help/optimization-guide/gl/figures
+@dirrm share/gnome/help/optimization-guide/gl
 @dirrm share/gnome/help/optimization-guide/fr/figures
 @dirrm share/gnome/help/optimization-guide/fr
 @dirrm share/gnome/help/optimization-guide/es/figures
@@ -2383,6 +2394,7 @@ share/omf/optimization-guide/optimization-guide-zh_CN.omf
 @dirrm share/gnome/help/integration-guide/sl
 @dirrm share/gnome/help/integration-guide/pt_BR
 @dirrm share/gnome/help/integration-guide/it
+@dirrm share/gnome/help/integration-guide/gl
 @dirrm share/gnome/help/integration-guide/fr
 @dirrm share/gnome/help/integration-guide/es
 @dirrm share/gnome/help/integration-guide/en_GB
