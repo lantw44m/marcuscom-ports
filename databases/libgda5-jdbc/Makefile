@@ -7,7 +7,7 @@
 
 PORTREVISION?=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	-jdbc
+PKGNAMESUFFIX?=	5-jdbc
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provides Java DB Connector backend for the libgda5 library

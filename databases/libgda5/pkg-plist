@@ -146,6 +146,7 @@ share/libgda-%%VERSION%%/php/gda-config.php
 share/libgda-%%VERSION%%/php/gda-exception.php
 share/libgda-%%VERSION%%/php/gda-front.php
 share/libgda-%%VERSION%%/php/gda-meta.php
+share/libgda-%%VERSION%%/php/gda-secure-config.php
 share/libgda-%%VERSION%%/php/gda-setup.php
 share/libgda-%%VERSION%%/php/gda-tester.php
 share/libgda-%%VERSION%%/php/gda-utils.php

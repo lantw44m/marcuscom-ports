@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5-ui/Makefile,v 1.3 2011/06/17 11:02:13 kwm Exp $
+#   $MCom: ports/databases/libgda5-ui/Makefile,v 1.4 2011/06/21 10:20:54 kwm Exp $
 #
 
-PORTREVISION?=	0
+PORTREVISION=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	-ui
+PKGNAMESUFFIX=	5-ui
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The libgda 5 ui library

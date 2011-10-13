@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5-mdb/Makefile,v 1.1 2011/03/30 19:23:03 kwm Exp $
+#   $MCom: ports/databases/libgda5-mdb/Makefile,v 1.2 2011/04/30 20:43:14 mezz Exp $
 #
 
 PORTREVISION?=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	-mdb
+PKGNAMESUFFIX?=	5-mdb
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provides mdb backend for the libgda5 library

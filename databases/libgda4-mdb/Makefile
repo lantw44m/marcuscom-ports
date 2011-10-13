@@ -2,22 +2,22 @@
 # Date created:				02 June 2002
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD$
-#   $MCom: ports/databases/libgda4-ldap/Makefile,v 1.1 2011/06/02 15:43:38 kwm Exp $
+# $FreeBSD: ports/databases/libgda4-mdb/Makefile,v 1.6 2011/03/03 10:21:36 kwm Exp $
+#   $MCom: ports/databases/libgda4-mdb/Makefile,v 1.1 2008/08/18 23:53:35 kwm Exp $
 #
 
 PORTREVISION?=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	4-ldap
+PKGNAMESUFFIX?=	-4mdb
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Provides ldap access for the libgda4 library
+COMMENT=	Provides mdb backend for the libgda4 library
 
 MASTERDIR=	${.CURDIR}/../libgda4
-BUILD_WRKSRC=	${WRKSRC}/providers/ldap/
+BUILD_WRKSRC=	${WRKSRC}/providers/mdb/
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 PLIST=		${.CURDIR}/pkg-plist
 
-LIBGDA4_SLAVE=	ldap
+LIBGDA4_SLAVE=	mdb
 
 .include "${MASTERDIR}/Makefile"

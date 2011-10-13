@@ -13,6 +13,8 @@ include/libgda-%%VERSION%%/libgda-ui/gdaui-data-selector.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-data-store.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-decl.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-easy.h
+include/libgda-%%VERSION%%/libgda-ui/gdaui-entry-shell.h
+include/libgda-%%VERSION%%/libgda-ui/gdaui-entry-wrapper.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-enum-types.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-enums.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-form.h
@@ -397,7 +399,9 @@ share/libgda-%%VERSION%%/icons/hicolor/16x16/actions/bookmark-view.png
 share/libgda-%%VERSION%%/icons/hicolor/16x16/actions/glade.png
 share/libgda-%%VERSION%%/icons/hicolor/16x16/actions/history-view.png
 share/libgda-%%VERSION%%/icons/hicolor/22x22/actions/bookmark-view.png
+share/libgda-%%VERSION%%/icons/hicolor/22x22/actions/form.png
 share/libgda-%%VERSION%%/icons/hicolor/22x22/actions/glade.png
+share/libgda-%%VERSION%%/icons/hicolor/22x22/actions/grid.png
 share/libgda-%%VERSION%%/icons/hicolor/22x22/actions/history-view.png
 share/libgda-%%VERSION%%/icons/hicolor/24x24/actions/bookmark-view.png
 share/libgda-%%VERSION%%/icons/hicolor/24x24/actions/glade.png
@@ -429,8 +433,6 @@ share/libgda-%%VERSION%%/pixmaps/gda-browser-column.png
 share/libgda-%%VERSION%%/pixmaps/gda-browser-connected-big.png
 share/libgda-%%VERSION%%/pixmaps/gda-browser-connected.png
 share/libgda-%%VERSION%%/pixmaps/gda-browser-diagram.png
-share/libgda-%%VERSION%%/pixmaps/gda-browser-form.png
-share/libgda-%%VERSION%%/pixmaps/gda-browser-grid.png
 share/libgda-%%VERSION%%/pixmaps/gda-browser-ldap-class-a.png
 share/libgda-%%VERSION%%/pixmaps/gda-browser-ldap-class-s.png
 share/libgda-%%VERSION%%/pixmaps/gda-browser-ldap-class-u.png

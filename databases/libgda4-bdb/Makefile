@@ -2,21 +2,21 @@
 # Date created:				28 February 2009
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD$
+# $FreeBSD: ports/databases/libgda4-bdb/Makefile,v 1.7 2011/03/03 10:21:36 kwm Exp $
 #
 
 PORTREVISION?=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	5-bdb
+PKGNAMESUFFIX?=	4-bdb
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	Provides Berkeley DB backend for the libgda5 library
+COMMENT=	Provides Berkeley DB backend for the libgda4 library
 
-MASTERDIR=	${.CURDIR}/../libgda5
+MASTERDIR=	${.CURDIR}/../libgda4
 BUILD_WRKSRC=	${WRKSRC}/providers/bdb/
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 PLIST=		${.CURDIR}/pkg-plist
 
-LIBGDA5_SLAVE=	bdb
+LIBGDA4_SLAVE=	bdb
 
 .include "${MASTERDIR}/Makefile"
