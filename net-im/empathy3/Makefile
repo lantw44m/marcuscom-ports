@@ -3,11 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.19 2011/09/19 17:58:08 kwm Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.20 2011/10/07 10:32:58 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	3.1.91
-PORTREVISION=	1
+PORTVERSION=	3.2.0.1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -47,9 +46,10 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PYTHON=	yes
 MAKE_JOBS_UNSAFE=yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-Werror \
+		--disable-goa \
 		--enable-location=no
 #		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
 
@@ -66,7 +66,7 @@ OPTIONS=	JABBER	"Enable jabber (XMPP) client support" on \
 		MAP	"Enable graphical map support" on
 #		NST	"Enable Nautilus SendTo plugin"	on \
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if defined(WITH_JABBER)
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-gabble:${PORTSDIR}/net-im/telepathy-gabble
@@ -107,7 +107,6 @@ CONFIGURE_ARGS+=--enable-nautilus-sendto=no
 PLIST_SUB+=	NST="@comment "
 #.endif
 
-# needs ported to gtk3
 .if !defined(WITHOUT_MAP)
 LIB_DEPENDS+=	champlain-0.12.0:${PORTSDIR}/graphics/libchamplain
 CONFIGURE_ARGS+=--enable-map
@@ -117,4 +116,4 @@ CONFIGURE_ARGS+=--disable-map
 PLIST_SUB+=	MAP="@comment "
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

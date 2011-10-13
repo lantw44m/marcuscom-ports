@@ -13,6 +13,7 @@ share/applications/empathy.desktop
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.AudioVideo.service
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Auth.service
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Chat.service
+share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.FileTransfer.service
 %%DATADIR%%/Template.html
 %%DATADIR%%/codec-preferences
 %%DATADIR%%/element-properties
@@ -42,7 +43,9 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Chat.service
 %%DATADIR%%/empathy-import-dialog.ui
 %%DATADIR%%/empathy-individual-widget.ui
 %%DATADIR%%/empathy-irc-networks.dtd
+%%DATADIR%%/empathy-log-window.html
 %%DATADIR%%/empathy-log-window.ui
+%%DATADIR%%/empathy-main-window-menubar.ui
 %%DATADIR%%/empathy-main-window.ui
 %%MAP%%%%DATADIR%%/empathy-map-view.ui
 %%DATADIR%%/empathy-new-chatroom-dialog.ui
@@ -51,6 +54,7 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Chat.service
 %%DATADIR%%/empathy-status-icon.ui
 %%DATADIR%%/empathy-status-preset-dialog.ui
 %%DATADIR%%/empathy-status-presets.dtd
+%%DATADIR%%/empathy-streamed-media-window.ui
 %%DATADIR%%/icons/hicolor/16x16/actions/im-message-new.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-aim.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-ekiga.png
@@ -610,6 +614,62 @@ share/gnome/help/empathy/es/set-custom-status.page
 share/gnome/help/empathy/es/share-desktop.page
 share/gnome/help/empathy/es/status-icons.page
 share/gnome/help/empathy/es/video-call.page
+share/gnome/help/empathy/eu/account-irc.page
+share/gnome/help/empathy/eu/account-jabber.page
+share/gnome/help/empathy/eu/accounts-window.page
+share/gnome/help/empathy/eu/add-account.page
+share/gnome/help/empathy/eu/add-contact.page
+share/gnome/help/empathy/eu/audio-call.page
+share/gnome/help/empathy/eu/audio-video.page
+share/gnome/help/empathy/eu/change-status.page
+share/gnome/help/empathy/eu/create-account.page
+share/gnome/help/empathy/eu/disable-account.page
+share/gnome/help/empathy/eu/favorite-rooms.page
+share/gnome/help/empathy/eu/figures/audio-input-microphone.png
+share/gnome/help/empathy/eu/figures/available.png
+share/gnome/help/empathy/eu/figures/away.png
+share/gnome/help/empathy/eu/figures/busy.png
+share/gnome/help/empathy/eu/figures/camera-web.png
+share/gnome/help/empathy/eu/figures/empathy-logo.png
+share/gnome/help/empathy/eu/figures/empathy-main-window.png
+share/gnome/help/empathy/eu/figures/gtk-add.png
+share/gnome/help/empathy/eu/figures/gtk-edit.png
+share/gnome/help/empathy/eu/figures/gtk-remove.png
+share/gnome/help/empathy/eu/figures/offline.png
+share/gnome/help/empathy/eu/geolocation-not-showing.page
+share/gnome/help/empathy/eu/geolocation-privacy.page
+share/gnome/help/empathy/eu/geolocation-supported.page
+share/gnome/help/empathy/eu/geolocation-turn.page
+share/gnome/help/empathy/eu/geolocation-what-is.page
+share/gnome/help/empathy/eu/geolocation.page
+share/gnome/help/empathy/eu/group-conversations.page
+share/gnome/help/empathy/eu/hide-contacts.page
+share/gnome/help/empathy/eu/import-account.page
+share/gnome/help/empathy/eu/index.page
+share/gnome/help/empathy/eu/introduction.page
+share/gnome/help/empathy/eu/irc-commands.page
+share/gnome/help/empathy/eu/irc-join-pwd.page
+share/gnome/help/empathy/eu/irc-join-room.page
+share/gnome/help/empathy/eu/irc-manage.page
+share/gnome/help/empathy/eu/irc-nick-password.page
+share/gnome/help/empathy/eu/irc-send-file.page
+share/gnome/help/empathy/eu/irc-start-conversation.page
+share/gnome/help/empathy/eu/license.page
+share/gnome/help/empathy/eu/link-contacts.page
+share/gnome/help/empathy/eu/prev-conv.page
+share/gnome/help/empathy/eu/prob-conn-acctdisabled.page
+share/gnome/help/empathy/eu/prob-conn-auth.page
+share/gnome/help/empathy/eu/prob-conn-name.page
+share/gnome/help/empathy/eu/prob-conn-neterror.page
+share/gnome/help/empathy/eu/prob-conn.page
+share/gnome/help/empathy/eu/remove-account.page
+share/gnome/help/empathy/eu/salut-protocol.page
+share/gnome/help/empathy/eu/send-file.page
+share/gnome/help/empathy/eu/send-message.page
+share/gnome/help/empathy/eu/set-custom-status.page
+share/gnome/help/empathy/eu/share-desktop.page
+share/gnome/help/empathy/eu/status-icons.page
+share/gnome/help/empathy/eu/video-call.page
 share/gnome/help/empathy/fi/account-irc.page
 share/gnome/help/empathy/fi/account-jabber.page
 share/gnome/help/empathy/fi/accounts-window.page
@@ -1205,6 +1265,7 @@ share/locale/zh_TW/LC_MESSAGES/empathy.mo
 share/telepathy/clients/Empathy.AudioVideo.client
 share/telepathy/clients/Empathy.Auth.client
 share/telepathy/clients/Empathy.Chat.client
+share/telepathy/clients/Empathy.FileTransfer.client
 @dirrmtry share/telepathy/clients
 @dirrmtry share/telepathy
 @dirrm share/gnome/help/empathy/zh_CN/figures
@@ -1225,6 +1286,8 @@ share/telepathy/clients/Empathy.Chat.client
 @dirrm share/gnome/help/empathy/fr
 @dirrm share/gnome/help/empathy/fi/figures
 @dirrm share/gnome/help/empathy/fi
+@dirrm share/gnome/help/empathy/eu/figures
+@dirrm share/gnome/help/empathy/eu
 @dirrm share/gnome/help/empathy/es/figures
 @dirrm share/gnome/help/empathy/es
 @dirrm share/gnome/help/empathy/en_GB/figures
