@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gtranslator/Makefile,v 1.17 2011/06/14 12:49:15 kwm Exp $
+#   $MCom: ports/devel/gtranslator/Makefile,v 1.18 2011/08/11 19:48:45 kwm Exp $
 #
 
 PORTNAME=	gtranslator
-PORTVERSION=	2.90.5
+PORTVERSION=	2.90.6
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -34,7 +34,7 @@ GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-debug \
 		--enable-compile-warnings=no
 GLIB_SCHEMAS=	org.gnome.gtranslator.gschema.xml \
