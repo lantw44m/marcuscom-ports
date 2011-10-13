@@ -84,7 +84,6 @@ share/applications/glade-3.desktop
 %%DOCSDIR%%/catalogintro.html
 %%DOCSDIR%%/core.html
 %%DOCSDIR%%/dockables.html
-%%DOCSDIR%%/gladeui.devhelp
 %%DOCSDIR%%/gladeui.devhelp2
 %%DOCSDIR%%/gladeui-Glade-Parameter.html
 %%DOCSDIR%%/gladeui-Glade-Utils.html

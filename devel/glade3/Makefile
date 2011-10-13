@@ -3,11 +3,11 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.49 2011/07/11 12:25:25 kwm Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.50 2011/08/11 19:48:45 kwm Exp $
 #
 
 PORTNAME=	glade3
-PORTVERSION=	3.8.0
+PORTVERSION=	3.8.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,7 +19,7 @@ CONFLICTS=	glade-3.*
 
 LATEST_LINK=	glade3
 INSTALLS_ICONS=	yes
-USE_BZIP2=	yes
+USE_XZ=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gtk20 libxml2 gnomeprefix gnomehack \
 		gnomedocutils desktopfileutils ltverhack:10
@@ -29,13 +29,16 @@ INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="${LDFLAGS} -L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
 DOCSDIR=	${PREFIX}/share/doc/gladeui
 
-.include <bsd.port.pre.mk>
+OPTIONS=	GNOME "Enable GNOME UI widget support" off \
+		PYTHON "Enable python widget support" on
 
-.if ${HAVE_GNOME:Mlibgnomeui}!=""
+.include <bsd.port.options.mk>
+
+.if defined(WITH_GNOME)
 USE_GNOME+=	libgnomeui
 CONFIGURE_ARGS+=--enable-gnome
 PKGNAMESUFFIX:=	${PKGNAMESUFFIX}-gnome
@@ -45,9 +48,8 @@ CONFIGURE_ARGS+=--disable-gnome
 PLIST_SUB+=	GNOME:="@comment "
 .endif
 
-.if ${HAVE_GNOME:Mpygtk2}!=""
+.if defined(WITH_PYTHON)
 USE_PYTHON=	yes
-.include "${PORTSDIR}/Mk/bsd.python.mk"
 USE_GNOME+=	pygtk2
 PLIST_SUB+=	PYTHON:=""
 CONFIGURE_ARGS+=--enable-python
@@ -60,4 +62,4 @@ post-install:
 	${MKDIR} ${PREFIX}/lib/glade3/bindings
 	@-update-desktop-database
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
