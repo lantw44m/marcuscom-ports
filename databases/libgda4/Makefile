@@ -3,16 +3,15 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.21 2011/06/17 11:02:12 kwm Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.22 2011/07/03 11:57:44 kwm Exp $
 #
 
-PORTNAME=	libgda4
-PORTVERSION?=	4.2.8
-PORTREVISION?=	2
+PORTNAME=	libgda
+PORTVERSION?=	4.2.9
+PORTREVISION?=	0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
-MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/4$//}/${PORTVERSION:R}
-DISTNAME=	libgda-${PORTVERSION}
+PKGNAMESUFFIX=	4
 DIST_SUBDIR=	gnome2
 
 MAINTAINER?=	gnome@FreeBSD.org
@@ -42,7 +41,7 @@ CONFIGURE_ARGS=	--without-oracle \
 		--disable-crypto \
 		--enable-introspection
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib -lintl"
+LDDFLAGS=	-L${LOCALBASE}/lib
 
 .if ${LIBGDA4_SLAVE}=="no"
 OPTIONS=	UI "Build UI tools" on

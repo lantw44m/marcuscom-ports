@@ -7,13 +7,6 @@ bin/gda-list-server-op-%%VERSION%%
 bin/gda-sql
 bin/gda-sql-%%VERSION%%
 bin/gda-test-connection-%%VERSION%%
-bin/gda_trml2html/__init__.py
-bin/gda_trml2html/trml2html.py
-bin/gda_trml2html/utils.py
-bin/gda_trml2pdf/__init__.py
-bin/gda_trml2pdf/color.py
-bin/gda_trml2pdf/trml2pdf.py
-bin/gda_trml2pdf/utils.py
 %%UI%%bin/gdaui-demo-%%VERSION%%
 @unexec if cmp -s %D/etc/libgda-%%VERSION%%/config %D/etc/libgda-%%VERSION%%/config.default; then rm -f %D/etc/libgda-%%VERSION%%/config; fi
 etc/libgda-%%VERSION%%/config.default
@@ -36,6 +29,8 @@ include/libgda-%%VERSION%%/libgda-report/libgda-report.h
 %%UI%%include/libgda-%%VERSION%%/libgda-ui/gdaui-data-store.h
 %%UI%%include/libgda-%%VERSION%%/libgda-ui/gdaui-decl.h
 %%UI%%include/libgda-%%VERSION%%/libgda-ui/gdaui-easy.h
+%%UI%%include/libgda-%%VERSION%%/libgda-ui/gdaui-entry-shell.h
+%%UI%%include/libgda-%%VERSION%%/libgda-ui/gdaui-entry-wrapper.h
 %%UI%%include/libgda-%%VERSION%%/libgda-ui/gdaui-enum-types.h
 %%UI%%include/libgda-%%VERSION%%/libgda-ui/gdaui-enums.h
 %%UI%%include/libgda-%%VERSION%%/libgda-ui/gdaui-form.h
@@ -277,6 +272,52 @@ share/gir-1.0/Gda-%%VERSION%%.gir
 %%UI%%share/gnome/help/gda-browser/de/transactions.page
 %%UI%%share/gnome/help/gda-browser/de/variables.page
 %%UI%%share/gnome/help/gda-browser/de/virtual-connections.page
+%%UI%%share/gnome/help/gda-browser/el/actions.page
+%%UI%%share/gnome/help/gda-browser/el/data-manager-perspective.page
+%%UI%%share/gnome/help/gda-browser/el/data-manager-source-editor.page
+%%UI%%share/gnome/help/gda-browser/el/data-manager-xml-syntax.page
+%%UI%%share/gnome/help/gda-browser/el/declaredfk.page
+%%UI%%share/gnome/help/gda-browser/el/diagram.page
+%%UI%%share/gnome/help/gda-browser/el/features.page
+%%UI%%share/gnome/help/gda-browser/el/figures/action-1.png
+%%UI%%share/gnome/help/gda-browser/el/figures/action-2.png
+%%UI%%share/gnome/help/gda-browser/el/figures/action-3.png
+%%UI%%share/gnome/help/gda-browser/el/figures/action-4.png
+%%UI%%share/gnome/help/gda-browser/el/figures/cnc_open.png
+%%UI%%share/gnome/help/gda-browser/el/figures/data-man-mode.png
+%%UI%%share/gnome/help/gda-browser/el/figures/data-man-persp.png
+%%UI%%share/gnome/help/gda-browser/el/figures/data-man-uicompose.png
+%%UI%%share/gnome/help/gda-browser/el/figures/data-man-xmlcompose.png
+%%UI%%share/gnome/help/gda-browser/el/figures/declaredfk-dialog.png
+%%UI%%share/gnome/help/gda-browser/el/figures/declaredfk.png
+%%UI%%share/gnome/help/gda-browser/el/figures/diagram.png
+%%UI%%share/gnome/help/gda-browser/el/figures/ldap-browser-persp.png
+%%UI%%share/gnome/help/gda-browser/el/figures/ldap-classes.png
+%%UI%%share/gnome/help/gda-browser/el/figures/ldap-search.png
+%%UI%%share/gnome/help/gda-browser/el/figures/ldap-table-mapping.png
+%%UI%%share/gnome/help/gda-browser/el/figures/mainwin.png
+%%UI%%share/gnome/help/gda-browser/el/figures/query-exec-persp.png
+%%UI%%share/gnome/help/gda-browser/el/figures/schema-browser-persp.png
+%%UI%%share/gnome/help/gda-browser/el/figures/table-insert-data.png
+%%UI%%share/gnome/help/gda-browser/el/figures/trans-begin.png
+%%UI%%share/gnome/help/gda-browser/el/figures/trans-commit.png
+%%UI%%share/gnome/help/gda-browser/el/figures/trans-rollback.png
+%%UI%%share/gnome/help/gda-browser/el/figures/virtual-cnc-2.png
+%%UI%%share/gnome/help/gda-browser/el/figures/virtual-cnc-3.png
+%%UI%%share/gnome/help/gda-browser/el/figures/virtual-cnc-4.png
+%%UI%%share/gnome/help/gda-browser/el/figures/virtual-cnc-5.png
+%%UI%%share/gnome/help/gda-browser/el/figures/virtual-cnc.png
+%%UI%%share/gnome/help/gda-browser/el/general-ui.page
+%%UI%%share/gnome/help/gda-browser/el/index.page
+%%UI%%share/gnome/help/gda-browser/el/ldap-browser-perspective.page
+%%UI%%share/gnome/help/gda-browser/el/ldap-connections.page
+%%UI%%share/gnome/help/gda-browser/el/legal.xml
+%%UI%%share/gnome/help/gda-browser/el/query-execution-perspective.page
+%%UI%%share/gnome/help/gda-browser/el/schema-browser-perspective.page
+%%UI%%share/gnome/help/gda-browser/el/table-insert-data.page
+%%UI%%share/gnome/help/gda-browser/el/transactions.page
+%%UI%%share/gnome/help/gda-browser/el/variables.page
+%%UI%%share/gnome/help/gda-browser/el/virtual-connections.page
 %%UI%%share/gnome/help/gda-browser/es/actions.page
 %%UI%%share/gnome/help/gda-browser/es/data-manager-perspective.page
 %%UI%%share/gnome/help/gda-browser/es/data-manager-source-editor.page
@@ -323,6 +364,52 @@ share/gir-1.0/Gda-%%VERSION%%.gir
 %%UI%%share/gnome/help/gda-browser/es/transactions.page
 %%UI%%share/gnome/help/gda-browser/es/variables.page
 %%UI%%share/gnome/help/gda-browser/es/virtual-connections.page
+%%UI%%share/gnome/help/gda-browser/gl/actions.page
+%%UI%%share/gnome/help/gda-browser/gl/data-manager-perspective.page
+%%UI%%share/gnome/help/gda-browser/gl/data-manager-source-editor.page
+%%UI%%share/gnome/help/gda-browser/gl/data-manager-xml-syntax.page
+%%UI%%share/gnome/help/gda-browser/gl/declaredfk.page
+%%UI%%share/gnome/help/gda-browser/gl/diagram.page
+%%UI%%share/gnome/help/gda-browser/gl/features.page
+%%UI%%share/gnome/help/gda-browser/gl/figures/action-1.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/action-2.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/action-3.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/action-4.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/cnc_open.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/data-man-mode.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/data-man-persp.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/data-man-uicompose.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/data-man-xmlcompose.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/declaredfk-dialog.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/declaredfk.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/diagram.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/ldap-browser-persp.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/ldap-classes.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/ldap-search.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/ldap-table-mapping.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/mainwin.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/query-exec-persp.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/schema-browser-persp.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/table-insert-data.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/trans-begin.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/trans-commit.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/trans-rollback.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/virtual-cnc-2.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/virtual-cnc-3.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/virtual-cnc-4.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/virtual-cnc-5.png
+%%UI%%share/gnome/help/gda-browser/gl/figures/virtual-cnc.png
+%%UI%%share/gnome/help/gda-browser/gl/general-ui.page
+%%UI%%share/gnome/help/gda-browser/gl/index.page
+%%UI%%share/gnome/help/gda-browser/gl/ldap-browser-perspective.page
+%%UI%%share/gnome/help/gda-browser/gl/ldap-connections.page
+%%UI%%share/gnome/help/gda-browser/gl/legal.xml
+%%UI%%share/gnome/help/gda-browser/gl/query-execution-perspective.page
+%%UI%%share/gnome/help/gda-browser/gl/schema-browser-perspective.page
+%%UI%%share/gnome/help/gda-browser/gl/table-insert-data.page
+%%UI%%share/gnome/help/gda-browser/gl/transactions.page
+%%UI%%share/gnome/help/gda-browser/gl/variables.page
+%%UI%%share/gnome/help/gda-browser/gl/virtual-connections.page
 %%UI%%share/gnome/help/gda-browser/sl/actions.page
 %%UI%%share/gnome/help/gda-browser/sl/data-manager-perspective.page
 %%UI%%share/gnome/help/gda-browser/sl/data-manager-source-editor.page
@@ -369,6 +456,52 @@ share/gir-1.0/Gda-%%VERSION%%.gir
 %%UI%%share/gnome/help/gda-browser/sl/transactions.page
 %%UI%%share/gnome/help/gda-browser/sl/variables.page
 %%UI%%share/gnome/help/gda-browser/sl/virtual-connections.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/actions.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/data-manager-perspective.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/data-manager-source-editor.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/data-manager-xml-syntax.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/declaredfk.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/diagram.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/features.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/action-1.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/action-2.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/action-3.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/action-4.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/cnc_open.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/data-man-mode.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/data-man-persp.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/data-man-uicompose.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/data-man-xmlcompose.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/declaredfk-dialog.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/declaredfk.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/diagram.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/ldap-browser-persp.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/ldap-classes.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/ldap-search.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/ldap-table-mapping.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/mainwin.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/query-exec-persp.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/schema-browser-persp.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/table-insert-data.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/trans-begin.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/trans-commit.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/trans-rollback.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/virtual-cnc-2.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/virtual-cnc-3.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/virtual-cnc-4.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/virtual-cnc-5.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/figures/virtual-cnc.png
+%%UI%%share/gnome/help/gda-browser/zh_CN/general-ui.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/index.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/ldap-browser-perspective.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/ldap-connections.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/legal.xml
+%%UI%%share/gnome/help/gda-browser/zh_CN/query-execution-perspective.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/schema-browser-perspective.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/table-insert-data.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/transactions.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/variables.page
+%%UI%%share/gnome/help/gda-browser/zh_CN/virtual-connections.page
 %%UI%%share/icons/hicolor/16x16/apps/gda-control-center.png
 %%UI%%share/icons/hicolor/22x22/apps/gda-control-center.png
 %%UI%%share/icons/hicolor/24x24/apps/gda-control-center.png
@@ -399,11 +532,20 @@ share/gir-1.0/Gda-%%VERSION%%.gir
 share/libgda-%%VERSION%%/dtd/libgda-array.dtd
 share/libgda-%%VERSION%%/dtd/libgda-paramlist.dtd
 share/libgda-%%VERSION%%/dtd/libgda-server-operation.dtd
+share/libgda-%%VERSION%%/gda_trml2html/__init__.py
+share/libgda-%%VERSION%%/gda_trml2html/trml2html.py
+share/libgda-%%VERSION%%/gda_trml2html/utils.py
+share/libgda-%%VERSION%%/gda_trml2pdf/__init__.py
+share/libgda-%%VERSION%%/gda_trml2pdf/color.py
+share/libgda-%%VERSION%%/gda_trml2pdf/trml2pdf.py
+share/libgda-%%VERSION%%/gda_trml2pdf/utils.py
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/16x16/actions/bookmark-view.png
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/16x16/actions/glade.png
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/16x16/actions/history-view.png
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/22x22/actions/bookmark-view.png
+%%UI%%share/libgda-%%VERSION%%/icons/hicolor/22x22/actions/form.png
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/22x22/actions/glade.png
+%%UI%%share/libgda-%%VERSION%%/icons/hicolor/22x22/actions/grid.png
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/22x22/actions/history-view.png
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/24x24/actions/bookmark-view.png
 %%UI%%share/libgda-%%VERSION%%/icons/hicolor/24x24/actions/glade.png
@@ -430,6 +572,7 @@ share/libgda-%%VERSION%%/php/gda-config.php
 share/libgda-%%VERSION%%/php/gda-exception.php
 share/libgda-%%VERSION%%/php/gda-front.php
 share/libgda-%%VERSION%%/php/gda-meta.php
+share/libgda-%%VERSION%%/php/gda-secure-config.php
 share/libgda-%%VERSION%%/php/gda-setup.php
 share/libgda-%%VERSION%%/php/gda-tester.php
 share/libgda-%%VERSION%%/php/gda-utils.php
@@ -447,8 +590,6 @@ share/libgda-%%VERSION%%/php/gda-worker.php
 %%UI%%share/libgda-%%VERSION%%/pixmaps/gda-browser-connected-big.png
 %%UI%%share/libgda-%%VERSION%%/pixmaps/gda-browser-connected.png
 %%UI%%share/libgda-%%VERSION%%/pixmaps/gda-browser-diagram.png
-%%UI%%share/libgda-%%VERSION%%/pixmaps/gda-browser-form.png
-%%UI%%share/libgda-%%VERSION%%/pixmaps/gda-browser-grid.png
 %%UI%%share/libgda-%%VERSION%%/pixmaps/gda-browser-ldap-class-a.png
 %%UI%%share/libgda-%%VERSION%%/pixmaps/gda-browser-ldap-class-s.png
 %%UI%%share/libgda-%%VERSION%%/pixmaps/gda-browser-ldap-class-u.png
@@ -504,6 +645,7 @@ share/locale/dz/LC_MESSAGES/libgda-%%VERSION%%.mo
 share/locale/el/LC_MESSAGES/libgda-%%VERSION%%.mo
 share/locale/en_CA/LC_MESSAGES/libgda-%%VERSION%%.mo
 share/locale/en_GB/LC_MESSAGES/libgda-%%VERSION%%.mo
+share/locale/eo/LC_MESSAGES/libgda-%%VERSION%%.mo
 share/locale/es/LC_MESSAGES/libgda-%%VERSION%%.mo
 share/locale/eu/LC_MESSAGES/libgda-%%VERSION%%.mo
 share/locale/fa/LC_MESSAGES/libgda-%%VERSION%%.mo
@@ -561,18 +703,26 @@ share/locale/zh_TW/LC_MESSAGES/libgda-%%VERSION%%.mo
 %%UI%%@dirrm share/libgda-%%VERSION%%/icons/hicolor/16x16
 %%UI%%@dirrm share/libgda-%%VERSION%%/icons/hicolor
 %%UI%%@dirrm share/libgda-%%VERSION%%/icons
+@dirrm share/libgda-%%VERSION%%/gda_trml2pdf
+@dirrm share/libgda-%%VERSION%%/gda_trml2html
+@dirrm share/libgda-%%VERSION%%/dtd
+%%UI%%@dirrm share/libgda-%%VERSION%%/demo
+@dirrm share/libgda-%%VERSION%%/
+%%UI%%@dirrm share/gnome/help/gda-browser/zh_CN/figures
+%%UI%%@dirrm share/gnome/help/gda-browser/zh_CN
 %%UI%%@dirrm share/gnome/help/gda-browser/sl/figures
 %%UI%%@dirrm share/gnome/help/gda-browser/sl
+%%UI%%@dirrm share/gnome/help/gda-browser/gl/figures
+%%UI%%@dirrm share/gnome/help/gda-browser/gl
 %%UI%%@dirrm share/gnome/help/gda-browser/es/figures
 %%UI%%@dirrm share/gnome/help/gda-browser/es
+%%UI%%@dirrm share/gnome/help/gda-browser/el/figures
+%%UI%%@dirrm share/gnome/help/gda-browser/el
 %%UI%%@dirrm share/gnome/help/gda-browser/de/figures
 %%UI%%@dirrm share/gnome/help/gda-browser/de
 %%UI%%@dirrm share/gnome/help/gda-browser/C/figures
 %%UI%%@dirrm share/gnome/help/gda-browser/C
 %%UI%%@dirrm share/gnome/help/gda-browser
-@dirrm share/libgda-%%VERSION%%/dtd
-%%UI%%@dirrm share/libgda-%%VERSION%%/demo
-@dirrm share/libgda-%%VERSION%%/
 %%UI%%@dirrmtry share/applications
 @dirrm lib/libgda-%%VERSION%%/providers
 %%UI%%@dirrm lib/libgda-%%VERSION%%/plugins
@@ -589,8 +739,6 @@ share/locale/zh_TW/LC_MESSAGES/libgda-%%VERSION%%.mo
 @dirrm include/libgda-%%VERSION%%/libgda
 @dirrm include/libgda-%%VERSION%%
 @dirrmtry etc/libgda-%%VERSION%%
-@dirrm bin/gda_trml2pdf
-@dirrm bin/gda_trml2html
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/rw/LC_MESSAGES
