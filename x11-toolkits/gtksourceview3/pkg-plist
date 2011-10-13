@@ -116,6 +116,7 @@ share/gtksourceview-3.0/language-specs/imagej.lang
 share/gtksourceview-3.0/language-specs/ini.lang
 share/gtksourceview-3.0/language-specs/java.lang
 share/gtksourceview-3.0/language-specs/javascript.lang
+share/gtksourceview-3.0/language-specs/json.lang
 share/gtksourceview-3.0/language-specs/language.dtd
 share/gtksourceview-3.0/language-specs/language.rng
 share/gtksourceview-3.0/language-specs/language2.rng
