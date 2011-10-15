@@ -3,11 +3,11 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller3/Makefile,v 1.15 2011/09/18 13:03:41 kwm Exp $
+#   $MCom: ports/archivers/file-roller3/Makefile,v 1.16 2011/09/19 21:03:37 kwm Exp $
 #
 
 PORTNAME=	file-roller
-PORTVERSION=	3.1.92
+PORTVERSION=	3.2.0
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -32,7 +32,7 @@ USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils gnomedocutils \
 USE_XORG=	sm
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-packagekit
 
 PORTDOCS=	AUTHORS NEWS README TODO ChangeLog
@@ -40,7 +40,7 @@ GLIB_SCHEMAS=	org.gnome.FileRoller.gschema.xml
 
 OPTIONS=	NAUTILUS	"Enable Nautilus extension"	on
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if !defined(WITHOUT_NAUTILUS)
 USE_GNOME+=	nautilus3
@@ -64,4 +64,4 @@ post-install:
 .endfor
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
