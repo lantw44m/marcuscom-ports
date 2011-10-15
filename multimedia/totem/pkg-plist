@@ -69,11 +69,6 @@ lib/totem/plugins/opensubtitles/opensubtitles.pyc
 lib/totem/plugins/opensubtitles/opensubtitles.pyo
 lib/totem/plugins/opensubtitles/opensubtitles.totem-plugin
 lib/totem/plugins/opensubtitles/opensubtitles.ui
-%%PUBLISH%%lib/totem/plugins/publish/libpublish.a
-%%PUBLISH%%lib/totem/plugins/publish/libpublish.la
-%%PUBLISH%%lib/totem/plugins/publish/libpublish.so
-%%PUBLISH%%lib/totem/plugins/publish/publish-plugin.ui
-%%PUBLISH%%lib/totem/plugins/publish/publish.totem-plugin
 lib/totem/plugins/properties/libmovie-properties.a
 lib/totem/plugins/properties/libmovie-properties.la
 lib/totem/plugins/properties/libmovie-properties.so

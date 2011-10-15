@@ -3,12 +3,12 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.155 2011/06/03 21:27:50 mezz Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.156 2011/08/24 13:49:31 kwm Exp $
 #
 
 PORTNAME=	totem
 PORTVERSION=	2.32.0
-PORTREVISION?=	1
+PORTREVISION?=	2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -31,7 +31,7 @@ USE_PYTHON=	yes
 USE_BZIP2=	yes
 USE_GETTEXT=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils \
-		nautilus2 ltverhack pygtk2
+		nautilus2 ltverhack pygtk2 gnomehier
 USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly python gio
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
@@ -39,8 +39,9 @@ USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 INSTALLS_OMF=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-	       	LIBS="-L${LOCALBASE}/lib -lXrandr" \
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
+CONFIGURE_ENV=	LIBS="-lXrandr"
 		BROWSER_PLUGIN_DIR="${WEBPLUGINS_DIR}"
 CONFIGURE_ARGS=	--with-plugins="${TOTEM_PLUGINS}"
 
@@ -51,7 +52,6 @@ GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
 OPTIONS=	LIRC "Enable lirc support" off \
 		GALAGO "Enable Galago support" off \
 		BROWSER_PLUGINS "Enable install plugins for gecko browser" on \
-		PUBLISH "Enable Publish (network playlist) plugin" off \
 #		TRACKER "Enable tracker local search plugin" off
 
 # check configure script for allowed_plugins="..." for new plugins
@@ -63,14 +63,6 @@ TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
 # TOTEM_PLUGINS= mythtv bemused jamendo
 
 .include <bsd.port.pre.mk>
-
-.if defined(WITH_PUBLISH)
-LIB_DEPENDS+=	epc-1.0.2:${PORTSDIR}/www/libepc
-PLIST_SUB+=	PUBLISH=""
-TOTEM_PLUGINS:=	${TOTEM_PLUGINS} publish
-.else
-PLIST_SUB+=	PUBLISH="@comment "
-.endif
 
 #.if defined(WITH_TRACKER)
 #LIB_DEPENDS+=	tracker-gtk.0:${PORTSDIR}/sysutils/tracker-libtrackergtk
