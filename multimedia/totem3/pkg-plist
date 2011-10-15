@@ -31,11 +31,21 @@ lib/totem/plugins/brasero-disc-recorder/brasero-disc-recorder.plugin
 lib/totem/plugins/brasero-disc-recorder/libbrasero-disc-recorder.a
 lib/totem/plugins/brasero-disc-recorder/libbrasero-disc-recorder.la
 lib/totem/plugins/brasero-disc-recorder/libbrasero-disc-recorder.so
-%%GALAGO%%lib/totem/plugins/galago/galago.plugin
-%%GALAGO%%lib/totem/plugins/galago/libtgp.a
-%%GALAGO%%lib/totem/plugins/galago/libtgp.la
-%%GALAGO%%lib/totem/plugins/galago/libtgp.so
+lib/totem/plugins/chapters/chapters-edit.ui
+lib/totem/plugins/chapters/chapters-list.ui
+lib/totem/plugins/chapters/chapters.plugin
+lib/totem/plugins/chapters/libchapters.a
+lib/totem/plugins/chapters/libchapters.la
+lib/totem/plugins/chapters/libchapters.so
+lib/totem/plugins/dbus/dbusservice.plugin
+lib/totem/plugins/dbus/dbusservice.py
+lib/totem/plugins/dbus/dbusservice.pyc
+lib/totem/plugins/dbus/dbusservice.pyo
 lib/totem/plugins/gromit/gromit.plugin
+lib/totem/plugins/im-status/libtotem-im-status.a
+lib/totem/plugins/im-status/libtotem-im-status.la
+lib/totem/plugins/im-status/libtotem-im-status.so
+lib/totem/plugins/im-status/totem-im-status.plugin
 lib/totem/plugins/iplayer/iplayer.py
 lib/totem/plugins/iplayer/iplayer.pyc
 lib/totem/plugins/iplayer/iplayer.pyo
@@ -54,6 +64,7 @@ lib/totem/plugins/gromit/libgromit.so
 %%LIRC%%lib/totem/plugins/lirc/liblirc.a
 %%LIRC%%lib/totem/plugins/lirc/liblirc.la
 %%LIRC%%lib/totem/plugins/lirc/liblirc.so
+%%LIRC%%lib/totem/plugins/lirc/totem_lirc_default
 lib/totem/plugins/media-player-keys/libmedia_player_keys.a
 lib/totem/plugins/media-player-keys/libmedia_player_keys.la
 lib/totem/plugins/media-player-keys/libmedia_player_keys.so
@@ -73,7 +84,7 @@ lib/totem/plugins/opensubtitles/opensubtitles.ui
 %%PUBLISH%%lib/totem/plugins/publish/libpublish.a
 %%PUBLISH%%lib/totem/plugins/publish/libpublish.la
 %%PUBLISH%%lib/totem/plugins/publish/libpublish.so
-%%PUBLISH%%lib/totem/plugins/publish/publish.ui
+%%PUBLISH%%lib/totem/plugins/publish/publish-plugin.ui
 %%PUBLISH%%lib/totem/plugins/publish/publish.plugin
 lib/totem/plugins/properties/libmovie-properties.a
 lib/totem/plugins/properties/libmovie-properties.la
@@ -107,6 +118,7 @@ libdata/pkgconfig/totem.pc
 %%BROWSER_PLUGINS%%libexec/totem-plugin-viewer
 libexec/totem/totem-bugreport.py
 share/GConf/gsettings/opensubtitles.convert
+%%PUBLISH%%share/GConf/gsettings/publish.convert
 share/GConf/gsettings/totem.convert
 share/applications/totem.desktop
 %%DOCSDIR%%/BaconVideoWidget.html
@@ -243,6 +255,15 @@ share/gnome/help/totem/fr/figures/totem_start_window.png
 share/gnome/help/totem/fr/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/fr/figures/totem_volume_mute_button.png
 share/gnome/help/totem/fr/totem.xml
+share/gnome/help/totem/gl/figures/totem_next_button.png
+share/gnome/help/totem/gl/figures/totem_pause_button.png
+share/gnome/help/totem/gl/figures/totem_play_button.png
+share/gnome/help/totem/gl/figures/totem_previous_button.png
+share/gnome/help/totem/gl/figures/totem_show_playlist_button.png
+share/gnome/help/totem/gl/figures/totem_start_window.png
+share/gnome/help/totem/gl/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/gl/figures/totem_volume_mute_button.png
+share/gnome/help/totem/gl/totem.xml
 share/gnome/help/totem/it/figures/totem_next_button.png
 share/gnome/help/totem/it/figures/totem_pause_button.png
 share/gnome/help/totem/it/figures/totem_play_button.png
@@ -483,6 +504,7 @@ share/omf/totem/totem-es.omf
 share/omf/totem/totem-eu.omf
 share/omf/totem/totem-fi.omf
 share/omf/totem/totem-fr.omf
+share/omf/totem/totem-gl.omf
 share/omf/totem/totem-it.omf
 share/omf/totem/totem-ja.omf
 share/omf/totem/totem-oc.omf
@@ -540,6 +562,8 @@ share/thumbnailers/totem.thumbnailer
 @dirrm share/gnome/help/totem/ja
 @dirrm share/gnome/help/totem/it/figures
 @dirrm share/gnome/help/totem/it
+@dirrm share/gnome/help/totem/gl/figures
+@dirrm share/gnome/help/totem/gl
 @dirrm share/gnome/help/totem/fr/figures
 @dirrm share/gnome/help/totem/fr
 @dirrm share/gnome/help/totem/fi/figures
@@ -580,8 +604,10 @@ share/thumbnailers/totem.thumbnailer
 @dirrm lib/totem/plugins/media-player-keys
 %%LIRC%%@dirrm lib/totem/plugins/lirc
 @dirrm lib/totem/plugins/iplayer
+@dirrm lib/totem/plugins/im-status
 @dirrm lib/totem/plugins/gromit
-%%GALAGO%%@dirrm lib/totem/plugins/galago
+@dirrm lib/totem/plugins/dbus
+@dirrm lib/totem/plugins/chapters
 @dirrm lib/totem/plugins/brasero-disc-recorder
 @dirrm lib/totem/plugins
 @dirrm lib/totem

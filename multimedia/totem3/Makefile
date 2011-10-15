@@ -3,25 +3,26 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.19 2011/09/18 15:36:58 kwm Exp $
+#   $MCom: ports/multimedia/totem3/Makefile,v 1.20 2011/09/22 15:36:13 kwm Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	3.1.92
-PORTREVISION?=	0
+PORTVERSION=	3.2.0
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
-MAINTAINER?=	gnome@FreeBSD.org
-COMMENT?=	A gstreamer-based video player for the GNOME 3 Desktop
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	A gstreamer-based video player for the GNOME 3 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	gdata.13:${PORTSDIR}/devel/libgdata \
-		dbus-1.3:${PORTSDIR}/devel/dbus \
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		clutter-gst-1.0.0:${PORTSDIR}/multimedia/clutter-gst \
+		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
+		mx-1.0.2:${PORTSDIR}/x11-toolkits/mx \
 		peas-1.0.0:${PORTSDIR}/devel/libpeas \
 		totem-plparser.17:${PORTSDIR}/multimedia/totem-pl-parser
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
@@ -33,20 +34,21 @@ CONFLICTS=	totem-2.[0-9]*
 
 LATEST_LINK=	totem3
 USE_PYTHON=	yes
-USE_XORG=	x11 xrandr xxf86vm
+USE_XORG=	x11 xproto xtst ice sm
 USE_XZ=		yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils \
-		nautilus3 ltverhack pygobject3 gnomedocutils
-USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly gio resindvd
+USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils gtk30 libxml2 \
+		nautilus3 ltverhack pygobject3 gnomedocutils gnomehier
+USE_GSTREAMER=	core good mpeg2dec soup ugly gio resindvd
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 INSTALLS_OMF=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-	       	LIBS="-L${LOCALBASE}/lib -lXrandr" \
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ENV=	LIBS="-lXrandr" \
 		BROWSER_PLUGIN_DIR="${WEBPLUGINS_DIR}"
 CONFIGURE_ARGS=	--with-plugins="${TOTEM_PLUGINS}"
 
@@ -56,29 +58,30 @@ GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
 		org.gnome.totem.plugins.opensubtitles.gschema.xml
 
 OPTIONS=	LIRC "Enable lirc support" off \
-		GALAGO "Enable Galago support" off \
-		BROWSER_PLUGINS "Enable install plugins for gecko browser" on \
+		BROWSER_PLUGINS "Build plugins for a webkit-gtk3 browser" on \
 		PUBLISH "Enable Publish (network playlist) plugin" off \
 #		TRACKER "Enable tracker local search plugin" off
 
 # check configure script for allowed_plugins="..." for new plugins
-TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
-		properties skipto youtube opensubtitles screenshot \
-		brasero-disc-recorder dbus-service iplayer
+TOTEM_PLUGINS=	brasero-disc-recorder chapters dbusservice im-status gromit \
+		iplayer media-player-keys ontop opensubtitles properties \
+		screensaver screenshot sidebar-test skipto youtube
 
-# Not using:
-# TOTEM_PLUGINS= mythtv bemused jamendo
-# coherence_upnp (uses py-gtk2 conflict with py-gobject >=2.27.0)
+# pythonconsole samplepython 
+# vala rotation sample-vala
+# nautilus save-file 
+# iplayer zeitgeist-dp grilo
 
-# current full list, needs sorting (again)
-#allowed_plugins="bemused brasero-disc-recorder chapters coherence_upnp dbus-service galago gromit iplayer jamendo lirc media-player-keys ontop opensubtitles properties publish pythonconsole save-file sample-python screensaver screenshot sidebar-test skipto thumbnail tracker youtube"
-
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if defined(WITH_PUBLISH)
-LIB_DEPENDS+=	epc-1.0.2:${PORTSDIR}/www/libepc
+LIB_DEPENDS+=	epc-1.0.3:${PORTSDIR}/www/libepc
 PLIST_SUB+=	PUBLISH=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} publish
+GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
+		org.gnome.totem.gschema.xml \
+		org.gnome.totem.plugins.publish.gschema.xml \
+		org.gnome.totem.plugins.opensubtitles.gschema.xml
 .else
 PLIST_SUB+=	PUBLISH="@comment "
 .endif
@@ -92,19 +95,11 @@ PLIST_SUB+=	TRACKER="@comment "
 #.endif
 
 .if defined(WITH_LIRC)
-LIB_DEPENDS+=	lirc_client.1:${PORTSDIR}/comms/lirc
+LIB_DEPENDS+=	lirc_client.2:${PORTSDIR}/comms/lirc
 PLIST_SUB+=	LIRC=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
 .else
 PLIST_SUB+=	LIRC="@comment "
-.endif
-
-.if defined(WITH_GALAGO)
-LIB_DEPENDS+=	galago.3:${PORTSDIR}/devel/libgalago
-PLIST_SUB+=	GALAGO=""
-TOTEM_PLUGINS:=	${TOTEM_PLUGINS} galago
-.else
-PLIST_SUB+=	GALAGO="@comment "
 .endif
 
 .if !defined(WITHOUT_BROWSER_PLUGINS)
@@ -113,7 +108,7 @@ CONFIGURE_ARGS+=--enable-browser-plugins \
 		--enable-narrowspace-plugin
 PLIST_SUB+=	BROWSER_PLUGINS=""
 
-USE_WEBPLUGINS=		gecko19 webkit-gtk2
+USE_WEBPLUGINS=		webkit-gtk3
 WEBPLUGINS_FILES=	libtotem-cone-plugin.so libtotem-gmp-plugin.so \
 			libtotem-mully-plugin.so \
 			libtotem-narrowspace-plugin.so
@@ -149,4 +144,4 @@ post-install:
 #	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.deps ${PREFIX}/share/vala/vapi
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
