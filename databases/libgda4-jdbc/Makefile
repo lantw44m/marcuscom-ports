@@ -5,9 +5,9 @@
 # $FreeBSD: ports/databases/libgda4-jdbc/Makefile,v 1.6 2011/03/03 10:21:36 kwm Exp $
 #
 
-PORTREVISION?=	0
+PORTREVISION=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	4-jdbc
+PKGNAMESUFFIX=	4-jdbc
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provides Berkeley DB backend for the libgda4 library

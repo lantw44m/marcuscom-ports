@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4-ldap/Makefile,v 1.1 2011/06/02 15:43:38 kwm Exp $
+#   $MCom: ports/databases/libgda4-ldap/Makefile,v 1.2 2011/10/13 13:29:49 kwm Exp $
 #
 
-PORTREVISION?=	0
+PORTREVISION=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	4-ldap
+PKGNAMESUFFIX=	4-ldap
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provides ldap access for the libgda4 library

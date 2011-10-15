@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4-mysql/Makefile,v 1.5 2011/05/14 08:17:23 kwm Exp $
+#   $MCom: ports/databases/libgda4-mysql/Makefile,v 1.6 2011/10/13 13:29:49 kwm Exp $
 #
 
-PORTREVISION?=	0
+PORTREVISION=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	4-mysql
+PKGNAMESUFFIX=	4-mysql
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provides mysql backend for the libgda4 library

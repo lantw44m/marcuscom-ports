@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/databases/libgda4-postgresql/Makefile,v 1.6 2010/11/20 15:36:27 kwm Exp $
-#   $MCom: ports/databases/libgda4-postgresql/Makefile,v 1.3 2010/10/18 12:47:12 kwm Exp $
+#   $MCom: ports/databases/libgda4-postgresql/Makefile,v 1.5 2011/10/13 13:29:49 kwm Exp $
 #
 
-PORTREVISION?=	0
+PORTREVISION=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	4-postgresql
+PKGNAMESUFFIX=	4-postgresql
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provides postgresql access for the libgda4 library

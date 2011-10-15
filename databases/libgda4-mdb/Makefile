@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD: ports/databases/libgda4-mdb/Makefile,v 1.6 2011/03/03 10:21:36 kwm Exp $
-#   $MCom: ports/databases/libgda4-mdb/Makefile,v 1.1 2008/08/18 23:53:35 kwm Exp $
+#   $MCom: ports/databases/libgda4-mdb/Makefile,v 1.3 2011/10/13 13:29:49 kwm Exp $
 #
 
-PORTREVISION?=	0
+PORTREVISION=	0
 CATEGORIES=	databases gnome
-PKGNAMESUFFIX?=	-4mdb
+PKGNAMESUFFIX=	4-mdb
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Provides mdb backend for the libgda4 library
