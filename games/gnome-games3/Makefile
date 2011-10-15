@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.15 2011/06/30 04:23:56 mezz Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.16 2011/08/17 20:09:35 kwm Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	3.0.2
-PORTREVISION=	1
+PORTVERSION=	3.2.0
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -28,43 +27,39 @@ LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile \
 CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-2.[0-9]*
 
 LATEST_LINK=	gnome-games3
-USE_BZIP2=	yes
+USE_XZ=	yes
 USE_PYTHON=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-GLIB_SCHEMAS=	org.gnome.Games.WindowState.gschema.xml
 USE_GL=		gl glu
 USE_XORG=	ice x11
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gconf2 pygtk2 \
+USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gconf2 pygobject3 \
 		librsvg2 desktopfileutils gnomedocutils
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-gtk=3.0
+CONFIGURE_ARGS=	--with-gtk=3.0 --enable-games=all
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
-GCONF_SCHEMAS=	aisleriot.schemas glines.schemas \
-		gnect.schemas gnibbles.schemas gnobots2.schemas \
-		gnome-sudoku.schemas gnomine.schemas gnotravex.schemas \
-		gnotski.schemas gtali.schemas iagno.schemas \
-		mahjongg.schemas lightsoff.schemas quadrapassel.schemas \
-		swell-foop.schemas
+GCONF_SCHEMAS=	gnect.schemas gnibbles.schemas gnobots2.schemas \
+		gnome-sudoku.schemas \
+		gnotski.schemas gtali.schemas \
+		quadrapassel.schemas
 GLIB_SCHEMAS=	org.gnome.Games.WindowState.gschema.xml \
-		org.gnome.glchess.gschema.xml
+		org.gnome.glchess.gschema.xml \
+		org.gnome.glines.gschema.xml \
+		org.gnome.gnomine.gschema.xml \
+		org.gnome.gnotravex.gschema.xml \
+		org.gnome.iagno.gschema.xml \
+		org.gnome.mahjongg.gschema.xml
 
 MAN6=		glchess.6 glines.6 gnect.6 gnibbles.6 gnobots2.6 \
 		gnome-sudoku.6 gnomine.6 gnotravex.6 gnotski.6 \
-		gtali.6 iagno.6 mahjongg.6 quadrapassel.6 sol.6
-
-.include <bsd.port.pre.mk>
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|/usr/local|${PREFIX}|g' \
-	    	${WRKSRC}/gnome-sudoku/src/lib/defaults.py.in
+		gtali.6 iagno.6 mahjongg.6 quadrapassel.6
 
 post-install:
 	@-update-desktop-database
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
