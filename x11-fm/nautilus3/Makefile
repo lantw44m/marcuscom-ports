@@ -3,17 +3,17 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.18 2011/06/10 22:59:11 mezz Exp $
+#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.19 2011/09/19 20:11:38 kwm Exp $
 #
 
 PORTNAME=	nautilus
-PORTVERSION=	3.1.92
+PORTVERSION=	3.2.0
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT?=	File manager for the GNOME desktop
+COMMENT=	File manager for the GNOME desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas \
@@ -36,8 +36,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop3 libxml2 \
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS} -L${LOCALBASE}/lib -liconv" \
-		LIBPNG="-L${LOCALBASE}/lib -lpng -lz"
+LDFLAGS=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 CONFIGURE_ARGS=	--enable-static --disable-packagekit --disable-tracker
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 
