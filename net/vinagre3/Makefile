@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/net/vinagre3/Makefile,v 1.11 2011/09/17 16:26:44 kwm Exp $
+#  $MCom: ports/net/vinagre3/Makefile,v 1.12 2011/09/18 20:20:22 kwm Exp $
 #
 
 PORTNAME=	vinagre
-PORTVERSION=	3.1.91
+PORTVERSION=	3.2.0
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -35,7 +35,7 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-spice --enable-ssh
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.Vinagre.gschema.xml
 

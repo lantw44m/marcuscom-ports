@@ -86,6 +86,24 @@ share/gnome/help/vinagre/eu/reverse-connections.page
 share/gnome/help/vinagre/eu/scaling.page
 share/gnome/help/vinagre/eu/take-screenshot.page
 share/gnome/help/vinagre/eu/view-only.page
+share/gnome/help/vinagre/gl/connect-file.page
+share/gnome/help/vinagre/gl/connect.page
+share/gnome/help/vinagre/gl/figures/vinagre-auth-needed.png
+share/gnome/help/vinagre/gl/figures/vinagre-connect-dialog.png
+share/gnome/help/vinagre/gl/figures/vinagre-connected.png
+share/gnome/help/vinagre/gl/figures/vinagre-connection-closed.png
+share/gnome/help/vinagre/gl/figures/vinagre-fullscreen.png
+share/gnome/help/vinagre/gl/figures/vinagre-no-scaling.png
+share/gnome/help/vinagre/gl/figures/vinagre-reverse-connections.png
+share/gnome/help/vinagre/gl/figures/vinagre-scaling.png
+share/gnome/help/vinagre/gl/fullscreen.page
+share/gnome/help/vinagre/gl/index.page
+share/gnome/help/vinagre/gl/introduction.page
+share/gnome/help/vinagre/gl/keyboard-shortcuts.page
+share/gnome/help/vinagre/gl/reverse-connections.page
+share/gnome/help/vinagre/gl/scaling.page
+share/gnome/help/vinagre/gl/take-screenshot.page
+share/gnome/help/vinagre/gl/view-only.page
 share/gnome/help/vinagre/hu/connect-file.page
 share/gnome/help/vinagre/hu/connect.page
 share/gnome/help/vinagre/hu/figures/vinagre-auth-needed.png
@@ -250,6 +268,8 @@ share/mime/packages/vinagre-mime.xml
 @dirrm share/gnome/help/vinagre/sl
 @dirrm share/gnome/help/vinagre/hu/figures
 @dirrm share/gnome/help/vinagre/hu
+@dirrm share/gnome/help/vinagre/gl/figures
+@dirrm share/gnome/help/vinagre/gl
 @dirrm share/gnome/help/vinagre/eu/figures
 @dirrm share/gnome/help/vinagre/eu
 @dirrm share/gnome/help/vinagre/es/figures

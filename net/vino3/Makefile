@@ -3,11 +3,11 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino3/Makefile,v 1.14 2011/09/17 21:33:36 kwm Exp $
+#   $MCom: ports/net/vino3/Makefile,v 1.15 2011/09/19 19:52:12 kwm Exp $
 #
 
 PORTNAME=	vino
-PORTVERSION=	3.1.92
+PORTVERSION=	3.2.0
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -35,7 +35,7 @@ INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--without-network-manager \
 		--disable-http-server 
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.Vino.enums.xml org.gnome.Vino.gschema.xml
 
 .if !defined(WITHOUT_NOTIFY)

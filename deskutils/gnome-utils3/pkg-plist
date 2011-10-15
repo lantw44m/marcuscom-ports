@@ -439,6 +439,8 @@ share/gnome/help/gnome-search-tool/fr/figures/gnome-search-tool_window.png
 share/gnome/help/gnome-search-tool/fr/gnome-search-tool.xml
 share/gnome/help/gnome-search-tool/it/figures/gnome-search-tool_window.png
 share/gnome/help/gnome-search-tool/it/gnome-search-tool.xml
+share/gnome/help/gnome-search-tool/ja/figures/gnome-search-tool_window.png
+share/gnome/help/gnome-search-tool/ja/gnome-search-tool.xml
 share/gnome/help/gnome-search-tool/ko/figures/gnome-search-tool_window.png
 share/gnome/help/gnome-search-tool/ko/gnome-search-tool.xml
 share/gnome/help/gnome-search-tool/oc/figures/gnome-search-tool_window.png
@@ -542,6 +544,7 @@ share/omf/gnome-search-tool/gnome-search-tool-es.omf
 share/omf/gnome-search-tool/gnome-search-tool-eu.omf
 share/omf/gnome-search-tool/gnome-search-tool-fi.omf
 share/omf/gnome-search-tool/gnome-search-tool-it.omf
+share/omf/gnome-search-tool/gnome-search-tool-ja.omf
 share/omf/gnome-search-tool/gnome-search-tool-ko.omf
 share/omf/gnome-search-tool/gnome-search-tool-oc.omf
 share/omf/gnome-search-tool/gnome-search-tool-fr.omf
@@ -730,6 +733,8 @@ share/thumbnailers/gnome-font-viewer.thumbnailer
 @dirrm share/gnome/help/gnome-search-tool/oc
 @dirrm share/gnome/help/gnome-search-tool/ko/figures
 @dirrm share/gnome/help/gnome-search-tool/ko
+@dirrm share/gnome/help/gnome-search-tool/ja/figures
+@dirrm share/gnome/help/gnome-search-tool/ja
 @dirrm share/gnome/help/gnome-search-tool/it/figures
 @dirrm share/gnome/help/gnome-search-tool/it
 @dirrm share/gnome/help/gnome-search-tool/fr/figures
