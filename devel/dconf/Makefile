@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.26 2011/09/19 19:48:43 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.27 2011/10/08 09:42:06 kwm Exp $
 #
 
 PORTNAME=	dconf
@@ -21,7 +21,7 @@ LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack glib20
+USE_GNOME=	gnomehack glib20 gnomehier
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	yes

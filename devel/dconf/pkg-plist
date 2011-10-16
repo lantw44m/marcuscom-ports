@@ -37,7 +37,6 @@ share/gtk-doc/html/dconf/style.css
 share/gtk-doc/html/dconf/up.png
 share/vala/vapi/dconf.deps
 share/vala/vapi/dconf.vapi
-@dirrmtry share/vala/vapi
 @dirrm share/gtk-doc/html/dconf
 @dirrmtry share/gtk-doc/html
 @dirrmtry share/gtk-doc
