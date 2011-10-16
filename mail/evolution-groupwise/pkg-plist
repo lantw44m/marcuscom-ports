@@ -1,0 +1,26 @@
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-connection.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-message.h
+include/evolution-data-server-%%VERSION%%/groupwise/soup-soap-message.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-container.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-proxy.h
+include/evolution-data-server-%%VERSION%%/groupwise/soup-soap-response.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-filter.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-recur-utils.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-item.h
+include/evolution-data-server-%%VERSION%%/groupwise/e-gw-sendoptions.h
+lib/evolution/3.2/plugins/liborg-gnome-groupwise-features.a
+lib/evolution/3.2/plugins/liborg-gnome-groupwise-features.la
+lib/evolution/3.2/plugins/liborg-gnome-groupwise-features.so
+lib/evolution/3.2/plugins/org-gnome-groupwise-features.eplug
+lib/libegroupwise-1.2.a
+lib/libegroupwise-1.2.la
+lib/libegroupwise-1.2.so
+lib/libegroupwise-1.2.so.13
+libdata/pkgconfig/libegroupwise-3.2.pc
+share/evolution/3.2/ui/junk-settings.ui
+share/evolution/3.2/ui/notification.ui
+share/evolution/3.2/ui/properties.ui
+share/evolution/3.2/ui/proxy-add-dialog.ui
+share/evolution/3.2/ui/proxy-listing.ui
+share/evolution/3.2/ui/proxy-login-dialog.ui
+@dirrm include/evolution-data-server-%%VERSION%%/groupwise/
