@@ -154,6 +154,9 @@ lib/libgedit-private.a
 lib/libgedit-private.la
 lib/libgedit-private.so
 lib/libgedit-private.so.0
+%%PYTHON_SITELIBDIR%%/gi/overrides/Gedit.py
+%%PYTHON_SITELIBDIR%%/gi/overrides/Gedit.pyc
+%%PYTHON_SITELIBDIR%%/gi/overrides/Gedit.pyo
 libdata/pkgconfig/gedit.pc
 libexec/gedit/gedit-bugreport.sh
 share/GConf/gsettings/gedit.convert
