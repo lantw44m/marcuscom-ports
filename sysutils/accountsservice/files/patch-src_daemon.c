@@ -1,6 +1,16 @@
---- src/daemon.c.orig	2011-08-16 14:53:31.000000000 +0200
-+++ src/daemon.c	2011-10-05 00:17:22.000000000 +0200
-@@ -52,6 +52,9 @@
+--- src/daemon.c.orig	2011-10-16 20:25:13.000000000 +0200
++++ src/daemon.c	2011-10-16 20:28:05.000000000 +0200
+@@ -32,7 +32,9 @@
+ #include <errno.h>
+ #include <unistd.h>
+ #include <sys/types.h>
++#ifdef HAVE_UTMPX_H
+ #include <utmpx.h>
++#endif
+ 
+ #include <glib.h>
+ #include <glib/gi18n.h>
+@@ -52,6 +54,9 @@
  #define PATH_LOGIN_DEFS "/etc/login.defs"
  #define PATH_GDM_CUSTOM "/etc/gdm/custom.conf"
  
@@ -10,21 +20,40 @@
  #ifndef FALLBACK_MINIMAL_UID
  #define FALLBACK_MINIMAL_UID 500
  #endif
-@@ -243,7 +246,9 @@ reload_wtmp_history (Daemon *daemon)
+@@ -238,13 +243,19 @@ daemon_local_user_is_excluded (Daemon *d
+ static void
+ reload_wtmp_history (Daemon *daemon)
+ {
++#ifdef HAVE_UTMPX_H
+         struct utmpx *wtmp_entry;
+         GHashTable *login_frequency_hash;
          GHashTableIter iter;
          gpointer key, value;
  
-+#ifdef __linux__
-         utmpxname(_PATH_WTMPX);
-+#endif
+-        utmpxname(_PATH_WTMPX);
++#ifdef UTXDB_LOG
++        if (setutxdb (UTXDB_LOG, NULL) != 0)
++                return;
++#else
++        utmpxname (_PATH_WTMPX);
          setutxent ();
++#endif
  
          login_frequency_hash = g_hash_table_new_full (g_str_hash, g_str_equal, NULL, NULL);
-@@ -326,22 +331,32 @@ reload_passwd (Daemon *daemon)
+ 
+@@ -298,6 +309,7 @@ reload_wtmp_history (Daemon *daemon)
+ 
+         g_hash_table_foreach (login_frequency_hash, (GHFunc) g_free, NULL);
+         g_hash_table_unref (login_frequency_hash);
++#endif /* HAVE_UTMPX_H */
+ }
+ 
+ static void
+@@ -326,22 +338,32 @@ reload_passwd (Daemon *daemon)
          GSList *old_users;
          GSList *new_users;
          GSList *list;
-+#ifndef __FreeBSD__
++#ifdef HAVE_FGETPWENT
          FILE *fp;
 +#endif
          User *user = NULL;
@@ -32,73 +61,38 @@
          old_users = NULL;
          new_users = NULL;
  
-+#ifdef __FreeBSD__
-+       setpwent();
-+#else
++#ifdef HAVE_FGETPWENT
          errno = 0;
          fp = fopen (PATH_PASSWD, "r");
          if (fp == NULL) {
                  g_warning ("Unable to open %s: %s", PATH_PASSWD, g_strerror (errno));
                  goto out;
          }
++#else
++        setpwent();
 +#endif
          g_hash_table_foreach (daemon->priv->users, listify_hash_values_hfunc, &old_users);
          g_slist_foreach (old_users, (GFunc) g_object_ref, NULL);
  
-+#ifdef __FreeBSD__
-+        for (pwent = getpwent (); pwent != NULL; pwent = getpwent ()) {
+-        for (pwent = fgetpwent (fp); pwent != NULL; pwent = fgetpwent (fp)) {
++#ifdef HAVE_FGETPWENT
++        while ((pwent = fgetpwent (fp)) != NULL) {
 +#else
-         for (pwent = fgetpwent (fp); pwent != NULL; pwent = fgetpwent (fp)) {
++        while ((pwent = getpwent ()) != NULL) {
 +#endif
                  /* Skip users below MINIMAL_UID... */
                  if (daemon_local_user_is_excluded (daemon, pwent->pw_name, pwent->pw_uid)) {
                          g_debug ("skipping user: %s", pwent->pw_name);
-@@ -391,10 +406,13 @@ reload_passwd (Daemon *daemon)
+@@ -391,10 +413,12 @@ reload_passwd (Daemon *daemon)
                  }
          }
  
-- out:
++#ifdef HAVE_FGETPWENT
+  out:
          /* Cleanup */
--
--        fclose (fp);
-+#ifdef __FreeBSD__
-+        endpwent ();
-+#else
-+ out:
-+         fclose (fp);
+ 
+         fclose (fp);
 +#endif
  
          g_slist_foreach (new_users, (GFunc) g_object_thaw_notify, NULL);
          g_slist_foreach (new_users, (GFunc) g_object_unref, NULL);
-@@ -427,8 +445,8 @@ reload_data (Daemon *daemon)
- static void
- reload_users (Daemon *daemon)
- {
--        reload_wtmp_history (daemon);
-         reload_passwd (daemon);
-+        reload_wtmp_history (daemon);
-         reload_data (daemon);
- }
- 
-@@ -554,6 +572,13 @@ on_gdm_monitor_changed (GFileMonitor    
-         queue_reload_autologin (daemon);
- }
- 
-+#ifdef __FreeBSD__
-+static uid_t
-+get_minimal_uid (void)
-+{        
-+       return FALLBACK_MINIMAL_UID;
-+}
-+#else
- static uid_t
- get_minimal_uid (void)
- {
-@@ -606,6 +631,7 @@ out:
-         g_free (contents);
-         return uid;
- }
-+#endif
- 
- static void
- daemon_init (Daemon *daemon)

@@ -1,0 +1,34 @@
+--- configure.orig	2011-10-16 20:43:57.000000000 +0200
++++ configure	2011-10-16 20:44:20.000000000 +0200
+@@ -13448,6 +13448,31 @@
+ WARN_CFLAGS="$accountsservice_cv_warn_cflags"
+ 
+ 
++for ac_header in shadow.h utmpx.h
++do :
++  as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
++ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
++if eval test \"x\$"$as_ac_Header"\" = x"yes"; then :
++  cat >>confdefs.h <<_ACEOF
++#define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
++_ACEOF
++
++fi
++
++done
++
++for ac_func in fgetpwent
++do :
++  ac_fn_c_check_func "$LINENO" "fgetpwent" "ac_cv_func_fgetpwent"
++if test "x$ac_cv_func_fgetpwent" = xyes; then :
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_FGETPWENT 1
++_ACEOF
++
++fi
++done
++
++
+ 
+ # Check whether --enable-docbook-docs was given.
+ if test "${enable_docbook_docs+set}" = set; then :
