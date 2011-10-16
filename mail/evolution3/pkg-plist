@@ -539,6 +539,9 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-file.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-http.a
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-http.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-http.so
+%%WEATHER%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-weather.a
+%%WEATHER%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-weather.la
+%%WEATHER%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-calendar-weather.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-dbx-import.a
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-dbx-import.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-dbx-import.so
@@ -604,6 +607,7 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-audio-inline.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-backup-restore.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-file.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-http.eplug
+%%WEATHER%%lib/evolution/%%VERSION%%/plugins/org-gnome-calendar-weather.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-dbx-import.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-default-source.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-email-custom-header.eplug

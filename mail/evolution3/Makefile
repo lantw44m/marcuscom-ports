@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.18 2011/09/19 19:34:23 kwm Exp $
+#   $MCom: ports/mail/evolution3/Makefile,v 1.19 2011/09/25 12:29:47 kwm Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -39,8 +39,8 @@ CONFIGURE_ARGS=	--enable-nss=yes \
 		--enable-mono=no \
 		--disable-nm \
 		--with-sub-version=" FreeBSD GNOME Team Port"
-# gweather and gtkimageview needs to get a gtk3 release first.
-CONFIGURE_ARGS+=--disable-weather --disable-image-inline
+# gtkimageview needs to get a gtk3 release first.
+CONFIGURE_ARGS+=--disable-image-inline
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
@@ -62,11 +62,12 @@ PLIST_SUB=	VERSION=${EVO_VERSION} \
 		PORTVERSION=2.12
 
 OPTIONS=	LDAP "Enable LDAP support" on \
+		WEATHER "Enable weather calendar backend" on \
 		CANBERRA "Enable canberra plugin" on \
 		SPAMASSASSIN "Enable SpamAssassin spam filtering" off
 #		PST "Enable Outlook .pst importer" off \
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 USE_LDCONFIG=	${PREFIX}/lib/evolution/${EVO_VERSION}
 
@@ -76,6 +77,16 @@ CONFIGURE_ARGS+=--with-openldap=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=--with-openldap=no
 .endif
+
+.if defined(WITH_WEATHER)
+LIB_DEPENDS+=	gweather-3.0:${PORTSDIR}/net/libgweather3
+CONFIGURE_ARGS+=--enable-weather
+PLIST_SUB+=	WEATHER=""
+.else
+CONFIGURE_ARGS+=--disable-weather
+PLIST_SUB+=	WEATHER="@comment "
+.endif
+
 
 .if defined(WITH_SPAMASSASSIN)
 RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
@@ -123,4 +134,4 @@ post-patch:
 		${WRKSRC}/modules/bogofilter/evolution-bogofilter.c
 	@${SH} ${FILESDIR}/fix-plugins.sh ${WRKSRC}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
