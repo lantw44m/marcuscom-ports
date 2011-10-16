@@ -3,11 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse3/Makefile,v 1.9 2011/07/03 11:57:46 kwm Exp $
+#   $MCom: ports/security/seahorse3/Makefile,v 1.10 2011/09/18 12:44:38 kwm Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	3.1.92
+PORTVERSION=	3.2.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -37,8 +37,8 @@ USE_GNOME=	gnomehack intlhack gnomeprefix gconf2 gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-introspection=no
 
 GLIB_SCHEMAS=	org.gnome.seahorse.gschema.xml \

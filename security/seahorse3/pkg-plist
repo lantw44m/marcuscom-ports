@@ -23,6 +23,8 @@ share/gnome/help/seahorse/eu/figures/seahorse-window.png
 share/gnome/help/seahorse/eu/seahorse.xml
 share/gnome/help/seahorse/fr/figures/seahorse-window.png
 share/gnome/help/seahorse/fr/seahorse.xml
+share/gnome/help/seahorse/gl/figures/seahorse-window.png
+share/gnome/help/seahorse/gl/seahorse.xml
 share/gnome/help/seahorse/it/figures/seahorse-window.png
 share/gnome/help/seahorse/it/seahorse.xml
 share/gnome/help/seahorse/ja/figures/seahorse-window.png
@@ -139,6 +141,7 @@ share/omf/seahorse/seahorse-eu.omf
 share/omf/seahorse/seahorse-fr.omf
 share/omf/seahorse/seahorse-it.omf
 share/omf/seahorse/seahorse-ja.omf
+share/omf/seahorse/seahorse-gl.omf
 share/omf/seahorse/seahorse-ko.omf
 share/omf/seahorse/seahorse-oc.omf
 share/omf/seahorse/seahorse-ru.omf
@@ -221,6 +224,8 @@ share/pixmaps/seahorse/scalable/seahorse-sign.svg
 @dirrm share/gnome/help/seahorse/ja
 @dirrm share/gnome/help/seahorse/it/figures
 @dirrm share/gnome/help/seahorse/it
+@dirrm share/gnome/help/seahorse/gl/figures
+@dirrm share/gnome/help/seahorse/gl
 @dirrm share/gnome/help/seahorse/fr/figures
 @dirrm share/gnome/help/seahorse/fr
 @dirrm share/gnome/help/seahorse/eu/figures
