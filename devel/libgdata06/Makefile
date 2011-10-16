@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgdata06/Makefile,v 1.1 2011/08/24 13:49:29 kwm Exp $
+#   $MCom: ports/devel/libgdata06/Makefile,v 1.2 2011/09/15 20:14:16 kwm Exp $
 #
 
 PORTNAME=	libgdata
@@ -20,6 +20,7 @@ LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome
 
 CONFLICTS=	libgdata-0.10.*
 
+LATEST_LINK=	libgdata06
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_GETTEXT=	yes
