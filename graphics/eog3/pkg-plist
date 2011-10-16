@@ -631,6 +631,49 @@ share/gnome/help/eog/fr/slideshow.page
 share/gnome/help/eog/fr/toolbar.page
 share/gnome/help/eog/fr/view.page
 share/gnome/help/eog/fr/zoom.page
+share/gnome/help/eog/gl/bug-filing.page
+share/gnome/help/eog/gl/commandline.page
+share/gnome/help/eog/gl/copy-paste.page
+share/gnome/help/eog/gl/default.page
+share/gnome/help/eog/gl/desktop-background.page
+share/gnome/help/eog/gl/edit.page
+share/gnome/help/eog/gl/figures/eog-logo.png
+share/gnome/help/eog/gl/figures/eog-toolbar-editor.png
+share/gnome/help/eog/gl/figures/eog-trail.png
+share/gnome/help/eog/gl/figures/image-view-prefs.png
+share/gnome/help/eog/gl/figures/multiple-convert.png
+share/gnome/help/eog/gl/figures/multiple-rename-count.png
+share/gnome/help/eog/gl/figures/plugin-send-by-mail.png
+share/gnome/help/eog/gl/figures/plugin-tools-flickr.png
+share/gnome/help/eog/gl/figures/plugins-all.png
+share/gnome/help/eog/gl/figures/prefs-plugins-date.png
+share/gnome/help/eog/gl/figures/prefs-plugins-fullscreen.png
+share/gnome/help/eog/gl/figures/prefs-plugins.png
+share/gnome/help/eog/gl/figures/slideshow-prefs.png
+share/gnome/help/eog/gl/flip-rotate.page
+share/gnome/help/eog/gl/format-change.page
+share/gnome/help/eog/gl/formats-save.page
+share/gnome/help/eog/gl/formats-view.page
+share/gnome/help/eog/gl/index.page
+share/gnome/help/eog/gl/introduction.page
+share/gnome/help/eog/gl/legal.xml
+share/gnome/help/eog/gl/open.page
+share/gnome/help/eog/gl/plugin-exif-digital.page
+share/gnome/help/eog/gl/plugin-fullscreen-double-click.page
+share/gnome/help/eog/gl/plugin-postr.page
+share/gnome/help/eog/gl/plugin-python-console.page
+share/gnome/help/eog/gl/plugin-send-by-mail.page
+share/gnome/help/eog/gl/plugin-slideshow-shuffle.page
+share/gnome/help/eog/gl/plugin-zoom-width.page
+share/gnome/help/eog/gl/plugins.page
+share/gnome/help/eog/gl/preferences.page
+share/gnome/help/eog/gl/print.page
+share/gnome/help/eog/gl/rename-multiple.page
+share/gnome/help/eog/gl/shortcuts.page
+share/gnome/help/eog/gl/slideshow.page
+share/gnome/help/eog/gl/toolbar.page
+share/gnome/help/eog/gl/view.page
+share/gnome/help/eog/gl/zoom.page
 share/gnome/help/eog/hu/bug-filing.page
 share/gnome/help/eog/hu/commandline.page
 share/gnome/help/eog/hu/copy-paste.page
@@ -1411,6 +1454,8 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @dirrm share/gnome/help/eog/it
 @dirrm share/gnome/help/eog/hu/figures
 @dirrm share/gnome/help/eog/hu
+@dirrm share/gnome/help/eog/gl/figures
+@dirrm share/gnome/help/eog/gl
 @dirrm share/gnome/help/eog/fr/figures
 @dirrm share/gnome/help/eog/fr
 @dirrm share/gnome/help/eog/fi/figures
