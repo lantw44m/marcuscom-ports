@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-user-docs3/Makefile,v 1.8 2011/06/10 22:59:06 mezz Exp $
+#   $MCom: ports/misc/gnome-user-docs3/Makefile,v 1.9 2011/10/13 11:13:56 kwm Exp $
 #
 
 PORTNAME=	gnome-user-docs
@@ -14,6 +14,8 @@ DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 users guide
+
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
 LATEST_LINK=	gnome-user-docs3
 USE_XZ=		yes
