@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.20 2011/09/19 18:28:43 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.21 2011/09/25 11:24:33 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -46,7 +46,7 @@ CONFIGURE_ARGS=	--enable-static \
 		--with-openldap=yes \
 		--with-libdb=${LOCALBASE}
 CPPFLAGS=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
+LDFLAGS=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 PLIST_SUB=	VERSION="3.2" EVO_VERSION="1.2"
 
@@ -54,7 +54,7 @@ PLIST_SUB=	VERSION="3.2" EVO_VERSION="1.2"
 OPTIONS+=	WEATHER 	"Enable weather calendar backend"	on \
 		KERBEROS	"Adds Kerberos support"			on
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if !defined(WITHOUT_KERBEROS)
 CONFIGURE_ARGS+=	--with-krb5=/usr
@@ -91,4 +91,4 @@ post-patch:
 		s|-Wmissing-include-dirs||g' \
 			${WRKSRC}/configure
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
