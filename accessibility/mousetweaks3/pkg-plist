@@ -337,5 +337,3 @@ share/omf/mousetweaks/mousetweaks-zh_CN.omf
 @dirrmtry share/locale/as
 @dirrmtry share/gnome-panel/applets
 @dirrmtry share/gnome-panel
-@dirrmtry share/dbus-1/services
-@dirrmtry share/dbus-1
