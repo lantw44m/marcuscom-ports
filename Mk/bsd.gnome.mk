@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.554 2011/09/17 10:40:11 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.555 2011/09/17 11:17:47 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -456,7 +456,7 @@ gnomecontrolcenter2_USE_GNOME_IMPL=metacity gnomemenus desktopfileutils libgnome
 gnomecontrolcenter2_GNOME_DESKTOP_VERSION=2
 
 gnomecontrolcenter3_LIB_DEPENDS=gnome-control-center.1:${PORTSDIR}/sysutils/gnome-control-center3
-gnomecontrolcenter3_DETECT=${LOCALBASE}/libdata/pkgconfig/libgnome-control-center.pc
+gnomecontrolcenter3_DETECT=${LOCALBASE}/lib/control-center-1/panels/libcolor.so
 gnomecontrolcenter3_USE_GNOME_IMPL=gnomemenus3 desktopfileutils libgnomekbd3 gnomedesktop3 gconf2
 gnomecontrolcenter3_GNOME_DESKTOP_VERSION=3
 
