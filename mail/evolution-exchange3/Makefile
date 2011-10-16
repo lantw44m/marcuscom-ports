@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange3/Makefile,v 1.13 2011/09/16 19:13:30 kwm Exp $
+#   $MCom: ports/mail/evolution-exchange3/Makefile,v 1.14 2011/09/19 21:41:48 kwm Exp $
 #
 
 PORTNAME=	evolution-exchange
-PORTVERSION=	3.1.92
+PORTVERSION=	3.2.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,11 +15,12 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Evolution plugin to connect to Microsoft Exchange servers
 
-BUILD_DEPENDS=	evolution>=3.1.0:${PORTSDIR}/mail/evolution3
-RUN_DEPENDS=	evolution>=3.1.0:${PORTSDIR}/mail/evolution3
+BUILD_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
+RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 
 CONFLICTS=	evolution-exchange-2.[0-9]*
 
+EVO_VER=	3.2.1
 LATEST_LINK=	evolution-exchange3
 USE_XZ=	yes
 USE_GETTEXT=	yes
@@ -28,8 +29,8 @@ USE_GMAKE=	yes
 USE_BDB=	41
 USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack ltasneededhack
-CPPFLAGS=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-openldap=${LOCALBASE} \
 		--with-static-ldap=no \
 		--with-libdb=${LOCALBASE}
