@@ -2,6 +2,7 @@ bin/gcr-viewer
 bin/gnome-keyring
 bin/gnome-keyring-3
 bin/gnome-keyring-daemon
+etc/pkcs11/modules/gnome-keyring-module
 etc/xdg/autostart/gnome-keyring-gpg.desktop
 etc/xdg/autostart/gnome-keyring-pkcs11.desktop
 etc/xdg/autostart/gnome-keyring-secrets.desktop
@@ -271,6 +272,8 @@ share/mime/packages/gcr-crypto-types.xml
 @dirrm include/gcr-3
 @dirrm include/gck-1/gck
 @dirrm include/gck-1
+@dirrmtry etc/pkcs11/modules
+@dirrmtry etc/pkcs11
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES

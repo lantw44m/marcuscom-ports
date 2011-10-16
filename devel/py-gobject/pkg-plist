@@ -189,3 +189,4 @@ share/pygobject/xsl/ref-html-style.xsl
 @dirrmtry %%PYTHON_SITELIBDIR%%/gtk-2.0
 @dirrmtry %%PYTHON_SITELIBDIR%%/gobject
 @dirrmtry %%PYTHON_SITELIBDIR%%/glib
+@dirrm include/pygtk-2.0
