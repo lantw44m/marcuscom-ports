@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.79 2011/09/17 09:55:26 kwm Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.80 2011/10/04 18:01:10 kwm Exp $
 #
 
 PORTNAME=	gvfs
-PORTVERSION=	1.10.0
+PORTVERSION=	1.10.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -27,7 +27,7 @@ USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-obexftp
 
 OPTIONS=	FUSE "Enable fuse" off \
