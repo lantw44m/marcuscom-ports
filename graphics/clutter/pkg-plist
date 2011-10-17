@@ -300,6 +300,7 @@ share/doc/cally/up.png
 share/gir-1.0/Cally-1.0.gir
 share/gir-1.0/Clutter-1.0.gir
 share/gir-1.0/ClutterX11-1.0.gir
+share/locale/as/LC_MESSAGES/clutter-1.0.mo
 share/locale/ast/LC_MESSAGES/clutter-1.0.mo
 share/locale/ca/LC_MESSAGES/clutter-1.0.mo
 share/locale/ca@valencia/LC_MESSAGES/clutter-1.0.mo
@@ -322,9 +323,12 @@ share/locale/nl/LC_MESSAGES/clutter-1.0.mo
 share/locale/or/LC_MESSAGES/clutter-1.0.mo
 share/locale/pa/LC_MESSAGES/clutter-1.0.mo
 share/locale/pl/LC_MESSAGES/clutter-1.0.mo
+share/locale/pt/LC_MESSAGES/clutter-1.0.mo
 share/locale/pt_BR/LC_MESSAGES/clutter-1.0.mo
 share/locale/ru/LC_MESSAGES/clutter-1.0.mo
 share/locale/sl/LC_MESSAGES/clutter-1.0.mo
+share/locale/sr/LC_MESSAGES/clutter-1.0.mo
+share/locale/sr@latin/LC_MESSAGES/clutter-1.0.mo
 share/locale/sv/LC_MESSAGES/clutter-1.0.mo
 share/locale/ta/LC_MESSAGES/clutter-1.0.mo
 share/locale/te/LC_MESSAGES/clutter-1.0.mo
@@ -344,7 +348,13 @@ share/locale/zh_TW/LC_MESSAGES/clutter-1.0.mo
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/sr/LC_MESSAGES
+@dirrmtry share/locale/sr
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/ast/LC_MESSAGES
 @dirrmtry share/locale/ast
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
