@@ -3,12 +3,13 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/farsight2/Makefile,v 1.5 2011/06/11 16:13:06 kwm Exp $
+#    $MCom: ports/net-im/farsight2/Makefile,v 1.6 2011/08/11 19:48:47 kwm Exp $
 
 PORTNAME=	farsight2
 PORTVERSION=	0.0.29
 CATEGORIES=	net-im devel
-MASTER_SITES=	http://farsight.freedesktop.org/releases/farsight2/
+MASTER_SITES=	http://farsight.freedesktop.org/releases/farsight2/ \
+		LOCAL/kwm
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Collection of GStreamer modules and libraries for videoconferencing
