@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/caribou/Makefile,v 1.8 2011/09/18 13:53:09 kwm Exp $
+#    $MCom: ports/accessibility/caribou/Makefile,v 1.9 2011/09/19 20:39:58 kwm Exp $
 #
 
 PORTNAME=	caribou
-PORTVERSION=	0.3.92
+PORTVERSION=	0.4.0
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -34,7 +34,7 @@ USE_GNOME=	gnomehack intltool pygobject3 gtk30 intlhack gnomedocutils \
 		libxml2
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-gtk2-module=no
 GLIB_SCHEMAS=	org.gnome.caribou.gschema.xml \
 		org.gnome.antler.gschema.xml
