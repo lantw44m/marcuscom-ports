@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.28 2011/08/23 19:40:35 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.29 2011/09/01 11:49:29 kwm Exp $
 #
 
 PORTNAME=	gnome3
-PORTVERSION=	3.0.2
+PORTVERSION=	3.2.0
 PORTREVISION?=	0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
@@ -37,7 +37,7 @@ RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		gnome-control-center>=2.91.0:${PORTSDIR}/sysutils/gnome-control-center3 \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
 		gnome-tweak-tool:${PORTSDIR}/deskutils/gnome-tweak-tool \
-		${LOCALBASE}/share/gnome/help/gnome-help/C/index.page:${PORTSDIR}/misc/gnome-user-docs3 \
+		${LOCALBASE}/share/help/C/gnome-help/index.page:${PORTSDIR}/misc/gnome-user-docs3 \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme
 
 NO_BUILD=	yes
