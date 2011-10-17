@@ -281,6 +281,8 @@ share/mime/packages/vinagre-mime.xml
 @dirrm share/gnome/help/vinagre
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
 @dirrmtry share/applications
+@dirrm lib/vinagre-3.0/plugins
+@dirrm lib/vinagre-3.0
 @exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
