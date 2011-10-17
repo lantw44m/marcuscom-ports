@@ -1,6 +1,7 @@
 bin/caribou
 bin/caribou-preferences
 etc/xdg/autostart/caribou-autostart.desktop
+include/libcaribou/caribou.h
 lib/girepository-1.0/Caribou-1.0.typelib
 lib/gnome-settings-daemon-3.0/gtk-modules/caribou-gtk-module.desktop
 lib/gtk-3.0/modules/libcaribou-gtk-module.a
@@ -125,6 +126,7 @@ share/locale/zh_TW/LC_MESSAGES/caribou.mo
 @dirrm %%PYTHON_SITELIBDIR%%/caribou
 @dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
 @dirrmtry lib/gnome-settings-daemon-3.0
+@dirrm include/libcaribou
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
