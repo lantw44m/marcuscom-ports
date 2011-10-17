@@ -3,12 +3,13 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
+#    $MCom$
 #
 
 PORTNAME=	zeitgeist
-PORTVERSION=	0.8.1.1
+PORTVERSION=	0.8.2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://launchpad.net/${PORTNAME}/${PORTVERSION:R:R}/${PORTVERSION}/+download/
+MASTER_SITES=	http://launchpad.net/${PORTNAME}/${PORTVERSION:R}/${PORTVERSION}/+download/
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Event logging framework - engine
@@ -27,7 +28,7 @@ FETCH_ARGS=	-Fpr
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
 MAN1=	zeitgeist-daemon.1
 
