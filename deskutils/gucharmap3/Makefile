@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap3/Makefile,v 1.7 2011/09/19 18:47:34 kwm Exp $
+#   $MCom: ports/deskutils/gucharmap3/Makefile,v 1.8 2011/10/04 18:05:02 kwm Exp $
 #
 
 PORTNAME=	gucharmap
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,7 +26,7 @@ GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	gucharmap.schemas
 

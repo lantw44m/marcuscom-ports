@@ -40,6 +40,9 @@ share/gnome/help/gnome-terminal/es/gnome-terminal.xml
 share/gnome/help/gnome-terminal/fr/figures/gnome-terminal-default.png
 share/gnome/help/gnome-terminal/fr/figures/gnome-terminal-tabbed.png
 share/gnome/help/gnome-terminal/fr/gnome-terminal.xml
+share/gnome/help/gnome-terminal/gl/figures/gnome-terminal-default.png
+share/gnome/help/gnome-terminal/gl/figures/gnome-terminal-tabbed.png
+share/gnome/help/gnome-terminal/gl/gnome-terminal.xml
 share/gnome/help/gnome-terminal/it/figures/gnome-terminal-default.png
 share/gnome/help/gnome-terminal/it/figures/gnome-terminal-tabbed.png
 share/gnome/help/gnome-terminal/it/gnome-terminal.xml
@@ -179,6 +182,7 @@ share/omf/gnome-terminal/gnome-terminal-el.omf
 share/omf/gnome-terminal/gnome-terminal-en_GB.omf
 share/omf/gnome-terminal/gnome-terminal-es.omf
 share/omf/gnome-terminal/gnome-terminal-fr.omf
+share/omf/gnome-terminal/gnome-terminal-gl.omf
 share/omf/gnome-terminal/gnome-terminal-it.omf
 share/omf/gnome-terminal/gnome-terminal-ja.omf
 share/omf/gnome-terminal/gnome-terminal-ko.omf
@@ -216,6 +220,8 @@ share/omf/gnome-terminal/gnome-terminal-zh_TW.omf
 @dirrm share/gnome/help/gnome-terminal/ja
 @dirrm share/gnome/help/gnome-terminal/it/figures
 @dirrm share/gnome/help/gnome-terminal/it
+@dirrm share/gnome/help/gnome-terminal/gl/figures
+@dirrm share/gnome/help/gnome-terminal/gl
 @dirrm share/gnome/help/gnome-terminal/fr/figures
 @dirrm share/gnome/help/gnome-terminal/fr
 @dirrm share/gnome/help/gnome-terminal/es/figures
