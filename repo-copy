@@ -8,6 +8,7 @@ databases/libgda4-jdbc -> libgda5-jdbc
 databases/libgda4-mdb -> libgda5-mdb
 databases/libgda4-mysql -> libgda5-mysql
 databases/libgda4-postgresql -> libgda5-postgresql
+databases/libgdamm -> databases/libgdamm5
 deskutils/gnome-utils -> deskutils/gnome-utils3
 deskutils/gucharmap -> desktutils/gucharmap3
 devel/glade3 -> devel/glade
@@ -37,6 +38,7 @@ net/vinagre -> net/vinagre3
 net/vino -> net/vino3
 security/gnome-keyring -> security/gnome-keyring3
 security/seahorse -> security/libcryptui
+security/seahorse -> security/seahorse-sharing
 security/seahorse -> security/seahorse3
 sysutils/brasero -> sysutils/brasero3
 sysutils/gconf-editor -> sysutils/gconf-editor3
@@ -51,11 +53,13 @@ x11-themes/gtk-engines2 -> x11-themes/gtk-engines3
 x11-toolkits/gtk20 -> x11-toolkits/gtk30
 x11-toolkits/gtkmm24 -> x11-toolkits/gtkmm30
 x11-toolkits/gtksourceview2 -> x11-toolkits/gtksourceview3
+x11-toolkits/libgtksourceviewmm -> x11-toolkits/gtksourceviewmm3
 x11-toolkits/libwnck -> x11-toolkits/libwnck3
 x11-toolkits/unique -> x11-toolkits/libunique3
 x11-toolkits/vte -> x11-toolkits/vte3
 x11-wm/metacity -> x11-wm/metacity3
 x11/gdm -> x11/gdm3
+x11/gnome-applets -> gnome-applets3
 x11/gnome-desktop -> gnome-desktop3
 x11/gnome-menus -> gnome-menus3
 x11/gnome-panel -> x11/gnome-panel3
