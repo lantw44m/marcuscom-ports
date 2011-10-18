@@ -45,6 +45,7 @@ include/telepathy-1.0/telepathy-glib/base-connection.h
 include/telepathy-1.0/telepathy-glib/base-contact-list.h
 include/telepathy-1.0/telepathy-glib/base-password-channel.h
 include/telepathy-1.0/telepathy-glib/base-protocol.h
+include/telepathy-1.0/telepathy-glib/base-room-config.h
 include/telepathy-1.0/telepathy-glib/basic-proxy-factory.h
 include/telepathy-1.0/telepathy-glib/capabilities.h
 include/telepathy-1.0/telepathy-glib/channel-dispatch-operation.h
@@ -138,6 +139,7 @@ share/gir-1.0/TelepathyGLib-0.12.gir
 share/gtk-doc/html/telepathy-glib/TpBaseChannel.html
 share/gtk-doc/html/telepathy-glib/TpBaseConnection.html
 share/gtk-doc/html/telepathy-glib/TpBaseConnectionManager.html
+share/gtk-doc/html/telepathy-glib/TpBaseRoomConfig.html
 share/gtk-doc/html/telepathy-glib/TpCMMessage.html
 share/gtk-doc/html/telepathy-glib/TpChannelFactoryIface.html
 share/gtk-doc/html/telepathy-glib/TpChannelIface.html
@@ -185,6 +187,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-base-protocol.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-basic-proxy-factory.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-capabilities.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-auth.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-room.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-contactsearch.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-dispatch-operation.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-dispatcher.html
@@ -193,6 +196,7 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-group.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-media.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-request.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-roomlist.html
+share/gtk-doc/html/telepathy-glib/telepathy-glib-svc-channel-room.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-text.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-tube.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib-channel-tubes.html
