@@ -3,11 +3,11 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese3/Makefile,v 1.11 2011/09/18 10:34:20 kwm Exp $
+#   $MCom: ports/multimedia/cheese3/Makefile,v 1.12 2011/10/04 22:47:54 kwm Exp $
 #
 
 PORTNAME=	cheese
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -40,7 +40,7 @@ INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
 DOCS=		AUTHORS COPYING ChangeLog NEWS README
 GLIB_SCHEMAS=	org.gnome.Cheese.gschema.xml

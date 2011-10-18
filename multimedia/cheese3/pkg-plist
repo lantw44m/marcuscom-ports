@@ -307,6 +307,30 @@ share/gnome/help/cheese/gl/save-photo.page
 share/gnome/help/cheese/gl/take-photo.page
 share/gnome/help/cheese/gl/view-photo.page
 share/gnome/help/cheese/gl/wide-mode.page
+share/gnome/help/cheese/hu/apply-effects.page
+share/gnome/help/cheese/hu/burst-mode.page
+share/gnome/help/cheese/hu/delete-photo.page
+share/gnome/help/cheese/hu/disable-countdown.page
+share/gnome/help/cheese/hu/disable-flash.page
+share/gnome/help/cheese/hu/figures/cheese-delete.png
+share/gnome/help/cheese/hu/figures/cheese-effects.png
+share/gnome/help/cheese/hu/figures/cheese-introduction.png
+share/gnome/help/cheese/hu/figures/cheese-record.png
+share/gnome/help/cheese/hu/figures/cheese-save.png
+share/gnome/help/cheese/hu/figures/cheese-take.png
+share/gnome/help/cheese/hu/figures/cheese.png
+share/gnome/help/cheese/hu/figures/effects.png
+share/gnome/help/cheese/hu/figures/image-properties.png
+share/gnome/help/cheese/hu/figures/settings.png
+share/gnome/help/cheese/hu/image-properties.page
+share/gnome/help/cheese/hu/index.page
+share/gnome/help/cheese/hu/introduction.page
+share/gnome/help/cheese/hu/record-video.page
+share/gnome/help/cheese/hu/resolution-photo.page
+share/gnome/help/cheese/hu/save-photo.page
+share/gnome/help/cheese/hu/take-photo.page
+share/gnome/help/cheese/hu/view-photo.page
+share/gnome/help/cheese/hu/wide-mode.page
 share/gnome/help/cheese/it/apply-effects.page
 share/gnome/help/cheese/it/burst-mode.page
 share/gnome/help/cheese/it/delete-photo.page
@@ -678,6 +702,8 @@ share/locale/zu/LC_MESSAGES/cheese.mo
 @dirrm share/gnome/help/cheese/ko
 @dirrm share/gnome/help/cheese/it/figures
 @dirrm share/gnome/help/cheese/it
+@dirrm share/gnome/help/cheese/hu/figures
+@dirrm share/gnome/help/cheese/hu
 @dirrm share/gnome/help/cheese/gl/figures
 @dirrm share/gnome/help/cheese/gl
 @dirrm share/gnome/help/cheese/fr/figures
