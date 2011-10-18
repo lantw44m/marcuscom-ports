@@ -3,10 +3,10 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/gnome-online-accounts/Makefile,v 1.4 2011/10/04 21:14:40 kwm Exp $
+#    $MCom: ports/net/gnome-online-accounts/Makefile,v 1.5 2011/10/16 19:57:09 kwm Exp $
 
 PORTNAME=	gnome-online-accounts
-PORTVERSION=	3.2.0.1
+PORTVERSION=	3.2.1
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 
@@ -28,8 +28,8 @@ USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 
 MAN8=	goa-daemon.8
 
