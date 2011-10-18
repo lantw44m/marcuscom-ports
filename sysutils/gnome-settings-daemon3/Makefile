@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.27 2011/09/19 19:36:47 kwm Exp $
+#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.28 2011/10/15 15:28:09 kwm Exp $
 #
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -36,8 +36,8 @@ USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--with-pnpids=${LOCALBASE}/share/libgnome-desktop-3.0/pnp.ids
-CPPFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 
 OPTIONS=	PULSEAUDIO "Enable Pulseaudio support" On \
 		CUPS "Enable cups (printing) support" On \

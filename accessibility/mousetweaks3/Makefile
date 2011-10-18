@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.13 2011/09/18 12:54:01 kwm Exp $
+#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.14 2011/10/04 21:09:43 kwm Exp $
 #
 
 PORTNAME=	mousetweaks
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	accessibility
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -28,8 +28,8 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.mousetweaks.enums.xml \
 		org.gnome.mousetweaks.gschema.xml
