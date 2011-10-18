@@ -2029,6 +2029,7 @@ share/gnome/help/optimization-guide/zh_CN/optimization-massif.xml
 share/gnome/help/platform-overview/C/atk.page
 share/gnome/help/platform-overview/C/cairo.page
 share/gnome/help/platform-overview/C/canberra.page
+share/gnome/help/platform-overview/C/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/C/clutter.page
 share/gnome/help/platform-overview/C/d-bus.page
 share/gnome/help/platform-overview/C/eds.page
@@ -2041,13 +2042,36 @@ share/gnome/help/platform-overview/C/gtk.page
 share/gnome/help/platform-overview/C/help.page
 share/gnome/help/platform-overview/C/index.page
 share/gnome/help/platform-overview/C/keyring.page
+share/gnome/help/platform-overview/C/legal-fdl.xml
 share/gnome/help/platform-overview/C/notify.page
 share/gnome/help/platform-overview/C/pango.page
 share/gnome/help/platform-overview/C/telepathy.page
 share/gnome/help/platform-overview/C/webkit.page
+share/gnome/help/platform-overview/ca/atk.page
+share/gnome/help/platform-overview/ca/cairo.page
+share/gnome/help/platform-overview/ca/canberra.page
+share/gnome/help/platform-overview/ca/cc-by-sa-3-0.xml
+share/gnome/help/platform-overview/ca/clutter.page
+share/gnome/help/platform-overview/ca/d-bus.page
+share/gnome/help/platform-overview/ca/eds.page
+share/gnome/help/platform-overview/ca/gda.page
+share/gnome/help/platform-overview/ca/gdk.page
+share/gnome/help/platform-overview/ca/gio-network.page
+share/gnome/help/platform-overview/ca/gio.page
+share/gnome/help/platform-overview/ca/gstreamer.page
+share/gnome/help/platform-overview/ca/gtk.page
+share/gnome/help/platform-overview/ca/help.page
+share/gnome/help/platform-overview/ca/index.page
+share/gnome/help/platform-overview/ca/keyring.page
+share/gnome/help/platform-overview/ca/legal-fdl.xml
+share/gnome/help/platform-overview/ca/notify.page
+share/gnome/help/platform-overview/ca/pango.page
+share/gnome/help/platform-overview/ca/telepathy.page
+share/gnome/help/platform-overview/ca/webkit.page
 share/gnome/help/platform-overview/cs/atk.page
 share/gnome/help/platform-overview/cs/cairo.page
 share/gnome/help/platform-overview/cs/canberra.page
+share/gnome/help/platform-overview/cs/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/cs/clutter.page
 share/gnome/help/platform-overview/cs/d-bus.page
 share/gnome/help/platform-overview/cs/eds.page
@@ -2060,6 +2084,7 @@ share/gnome/help/platform-overview/cs/gtk.page
 share/gnome/help/platform-overview/cs/help.page
 share/gnome/help/platform-overview/cs/index.page
 share/gnome/help/platform-overview/cs/keyring.page
+share/gnome/help/platform-overview/cs/legal-fdl.xml
 share/gnome/help/platform-overview/cs/notify.page
 share/gnome/help/platform-overview/cs/pango.page
 share/gnome/help/platform-overview/cs/telepathy.page
@@ -2067,6 +2092,7 @@ share/gnome/help/platform-overview/cs/webkit.page
 share/gnome/help/platform-overview/de/atk.page
 share/gnome/help/platform-overview/de/cairo.page
 share/gnome/help/platform-overview/de/canberra.page
+share/gnome/help/platform-overview/de/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/de/clutter.page
 share/gnome/help/platform-overview/de/d-bus.page
 share/gnome/help/platform-overview/de/eds.page
@@ -2079,6 +2105,7 @@ share/gnome/help/platform-overview/de/gtk.page
 share/gnome/help/platform-overview/de/help.page
 share/gnome/help/platform-overview/de/index.page
 share/gnome/help/platform-overview/de/keyring.page
+share/gnome/help/platform-overview/de/legal-fdl.xml
 share/gnome/help/platform-overview/de/notify.page
 share/gnome/help/platform-overview/de/pango.page
 share/gnome/help/platform-overview/de/telepathy.page
@@ -2086,6 +2113,7 @@ share/gnome/help/platform-overview/de/webkit.page
 share/gnome/help/platform-overview/el/atk.page
 share/gnome/help/platform-overview/el/cairo.page
 share/gnome/help/platform-overview/el/canberra.page
+share/gnome/help/platform-overview/el/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/el/clutter.page
 share/gnome/help/platform-overview/el/d-bus.page
 share/gnome/help/platform-overview/el/eds.page
@@ -2098,6 +2126,7 @@ share/gnome/help/platform-overview/el/gtk.page
 share/gnome/help/platform-overview/el/help.page
 share/gnome/help/platform-overview/el/index.page
 share/gnome/help/platform-overview/el/keyring.page
+share/gnome/help/platform-overview/el/legal-fdl.xml
 share/gnome/help/platform-overview/el/notify.page
 share/gnome/help/platform-overview/el/pango.page
 share/gnome/help/platform-overview/el/telepathy.page
@@ -2105,6 +2134,7 @@ share/gnome/help/platform-overview/el/webkit.page
 share/gnome/help/platform-overview/es/atk.page
 share/gnome/help/platform-overview/es/cairo.page
 share/gnome/help/platform-overview/es/canberra.page
+share/gnome/help/platform-overview/es/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/es/clutter.page
 share/gnome/help/platform-overview/es/d-bus.page
 share/gnome/help/platform-overview/es/eds.page
@@ -2117,6 +2147,7 @@ share/gnome/help/platform-overview/es/gtk.page
 share/gnome/help/platform-overview/es/help.page
 share/gnome/help/platform-overview/es/index.page
 share/gnome/help/platform-overview/es/keyring.page
+share/gnome/help/platform-overview/es/legal-fdl.xml
 share/gnome/help/platform-overview/es/notify.page
 share/gnome/help/platform-overview/es/pango.page
 share/gnome/help/platform-overview/es/telepathy.page
@@ -2124,6 +2155,7 @@ share/gnome/help/platform-overview/es/webkit.page
 share/gnome/help/platform-overview/fr/atk.page
 share/gnome/help/platform-overview/fr/cairo.page
 share/gnome/help/platform-overview/fr/canberra.page
+share/gnome/help/platform-overview/fr/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/fr/clutter.page
 share/gnome/help/platform-overview/fr/d-bus.page
 share/gnome/help/platform-overview/fr/eds.page
@@ -2136,6 +2168,7 @@ share/gnome/help/platform-overview/fr/gtk.page
 share/gnome/help/platform-overview/fr/help.page
 share/gnome/help/platform-overview/fr/index.page
 share/gnome/help/platform-overview/fr/keyring.page
+share/gnome/help/platform-overview/fr/legal-fdl.xml
 share/gnome/help/platform-overview/fr/notify.page
 share/gnome/help/platform-overview/fr/pango.page
 share/gnome/help/platform-overview/fr/telepathy.page
@@ -2143,6 +2176,7 @@ share/gnome/help/platform-overview/fr/webkit.page
 share/gnome/help/platform-overview/gl/atk.page
 share/gnome/help/platform-overview/gl/cairo.page
 share/gnome/help/platform-overview/gl/canberra.page
+share/gnome/help/platform-overview/gl/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/gl/clutter.page
 share/gnome/help/platform-overview/gl/d-bus.page
 share/gnome/help/platform-overview/gl/eds.page
@@ -2155,6 +2189,7 @@ share/gnome/help/platform-overview/gl/gtk.page
 share/gnome/help/platform-overview/gl/help.page
 share/gnome/help/platform-overview/gl/index.page
 share/gnome/help/platform-overview/gl/keyring.page
+share/gnome/help/platform-overview/gl/legal-fdl.xml
 share/gnome/help/platform-overview/gl/notify.page
 share/gnome/help/platform-overview/gl/pango.page
 share/gnome/help/platform-overview/gl/telepathy.page
@@ -2162,6 +2197,7 @@ share/gnome/help/platform-overview/gl/webkit.page
 share/gnome/help/platform-overview/it/atk.page
 share/gnome/help/platform-overview/it/cairo.page
 share/gnome/help/platform-overview/it/canberra.page
+share/gnome/help/platform-overview/it/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/it/clutter.page
 share/gnome/help/platform-overview/it/d-bus.page
 share/gnome/help/platform-overview/it/eds.page
@@ -2174,6 +2210,7 @@ share/gnome/help/platform-overview/it/gtk.page
 share/gnome/help/platform-overview/it/help.page
 share/gnome/help/platform-overview/it/index.page
 share/gnome/help/platform-overview/it/keyring.page
+share/gnome/help/platform-overview/it/legal-fdl.xml
 share/gnome/help/platform-overview/it/notify.page
 share/gnome/help/platform-overview/it/pango.page
 share/gnome/help/platform-overview/it/telepathy.page
@@ -2181,6 +2218,7 @@ share/gnome/help/platform-overview/it/webkit.page
 share/gnome/help/platform-overview/ja/atk.page
 share/gnome/help/platform-overview/ja/cairo.page
 share/gnome/help/platform-overview/ja/canberra.page
+share/gnome/help/platform-overview/ja/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/ja/clutter.page
 share/gnome/help/platform-overview/ja/d-bus.page
 share/gnome/help/platform-overview/ja/eds.page
@@ -2193,6 +2231,7 @@ share/gnome/help/platform-overview/ja/gtk.page
 share/gnome/help/platform-overview/ja/help.page
 share/gnome/help/platform-overview/ja/index.page
 share/gnome/help/platform-overview/ja/keyring.page
+share/gnome/help/platform-overview/ja/legal-fdl.xml
 share/gnome/help/platform-overview/ja/notify.page
 share/gnome/help/platform-overview/ja/pango.page
 share/gnome/help/platform-overview/ja/telepathy.page
@@ -2200,6 +2239,7 @@ share/gnome/help/platform-overview/ja/webkit.page
 share/gnome/help/platform-overview/oc/atk.page
 share/gnome/help/platform-overview/oc/cairo.page
 share/gnome/help/platform-overview/oc/canberra.page
+share/gnome/help/platform-overview/oc/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/oc/clutter.page
 share/gnome/help/platform-overview/oc/d-bus.page
 share/gnome/help/platform-overview/oc/eds.page
@@ -2212,6 +2252,7 @@ share/gnome/help/platform-overview/oc/gtk.page
 share/gnome/help/platform-overview/oc/help.page
 share/gnome/help/platform-overview/oc/index.page
 share/gnome/help/platform-overview/oc/keyring.page
+share/gnome/help/platform-overview/oc/legal-fdl.xml
 share/gnome/help/platform-overview/oc/notify.page
 share/gnome/help/platform-overview/oc/pango.page
 share/gnome/help/platform-overview/oc/telepathy.page
@@ -2219,6 +2260,7 @@ share/gnome/help/platform-overview/oc/webkit.page
 share/gnome/help/platform-overview/pt_BR/atk.page
 share/gnome/help/platform-overview/pt_BR/cairo.page
 share/gnome/help/platform-overview/pt_BR/canberra.page
+share/gnome/help/platform-overview/pt_BR/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/pt_BR/clutter.page
 share/gnome/help/platform-overview/pt_BR/d-bus.page
 share/gnome/help/platform-overview/pt_BR/eds.page
@@ -2231,6 +2273,7 @@ share/gnome/help/platform-overview/pt_BR/gtk.page
 share/gnome/help/platform-overview/pt_BR/help.page
 share/gnome/help/platform-overview/pt_BR/index.page
 share/gnome/help/platform-overview/pt_BR/keyring.page
+share/gnome/help/platform-overview/pt_BR/legal-fdl.xml
 share/gnome/help/platform-overview/pt_BR/notify.page
 share/gnome/help/platform-overview/pt_BR/pango.page
 share/gnome/help/platform-overview/pt_BR/telepathy.page
@@ -2238,6 +2281,7 @@ share/gnome/help/platform-overview/pt_BR/webkit.page
 share/gnome/help/platform-overview/ru/atk.page
 share/gnome/help/platform-overview/ru/cairo.page
 share/gnome/help/platform-overview/ru/canberra.page
+share/gnome/help/platform-overview/ru/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/ru/clutter.page
 share/gnome/help/platform-overview/ru/d-bus.page
 share/gnome/help/platform-overview/ru/eds.page
@@ -2250,6 +2294,7 @@ share/gnome/help/platform-overview/ru/gtk.page
 share/gnome/help/platform-overview/ru/help.page
 share/gnome/help/platform-overview/ru/index.page
 share/gnome/help/platform-overview/ru/keyring.page
+share/gnome/help/platform-overview/ru/legal-fdl.xml
 share/gnome/help/platform-overview/ru/notify.page
 share/gnome/help/platform-overview/ru/pango.page
 share/gnome/help/platform-overview/ru/telepathy.page
@@ -2257,6 +2302,7 @@ share/gnome/help/platform-overview/ru/webkit.page
 share/gnome/help/platform-overview/sl/atk.page
 share/gnome/help/platform-overview/sl/cairo.page
 share/gnome/help/platform-overview/sl/canberra.page
+share/gnome/help/platform-overview/sl/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/sl/clutter.page
 share/gnome/help/platform-overview/sl/d-bus.page
 share/gnome/help/platform-overview/sl/eds.page
@@ -2269,6 +2315,7 @@ share/gnome/help/platform-overview/sl/gtk.page
 share/gnome/help/platform-overview/sl/help.page
 share/gnome/help/platform-overview/sl/index.page
 share/gnome/help/platform-overview/sl/keyring.page
+share/gnome/help/platform-overview/sl/legal-fdl.xml
 share/gnome/help/platform-overview/sl/notify.page
 share/gnome/help/platform-overview/sl/pango.page
 share/gnome/help/platform-overview/sl/telepathy.page
@@ -2276,6 +2323,7 @@ share/gnome/help/platform-overview/sl/webkit.page
 share/gnome/help/platform-overview/uk/atk.page
 share/gnome/help/platform-overview/uk/cairo.page
 share/gnome/help/platform-overview/uk/canberra.page
+share/gnome/help/platform-overview/uk/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/uk/clutter.page
 share/gnome/help/platform-overview/uk/d-bus.page
 share/gnome/help/platform-overview/uk/eds.page
@@ -2288,6 +2336,7 @@ share/gnome/help/platform-overview/uk/gtk.page
 share/gnome/help/platform-overview/uk/help.page
 share/gnome/help/platform-overview/uk/index.page
 share/gnome/help/platform-overview/uk/keyring.page
+share/gnome/help/platform-overview/uk/legal-fdl.xml
 share/gnome/help/platform-overview/uk/notify.page
 share/gnome/help/platform-overview/uk/pango.page
 share/gnome/help/platform-overview/uk/telepathy.page
@@ -2295,6 +2344,7 @@ share/gnome/help/platform-overview/uk/webkit.page
 share/gnome/help/platform-overview/zh_CN/atk.page
 share/gnome/help/platform-overview/zh_CN/cairo.page
 share/gnome/help/platform-overview/zh_CN/canberra.page
+share/gnome/help/platform-overview/zh_CN/cc-by-sa-3-0.xml
 share/gnome/help/platform-overview/zh_CN/clutter.page
 share/gnome/help/platform-overview/zh_CN/d-bus.page
 share/gnome/help/platform-overview/zh_CN/eds.page
@@ -2307,6 +2357,7 @@ share/gnome/help/platform-overview/zh_CN/gtk.page
 share/gnome/help/platform-overview/zh_CN/help.page
 share/gnome/help/platform-overview/zh_CN/index.page
 share/gnome/help/platform-overview/zh_CN/keyring.page
+share/gnome/help/platform-overview/zh_CN/legal-fdl.xml
 share/gnome/help/platform-overview/zh_CN/notify.page
 share/gnome/help/platform-overview/zh_CN/pango.page
 share/gnome/help/platform-overview/zh_CN/telepathy.page
@@ -2368,6 +2419,7 @@ share/omf/optimization-guide/optimization-guide-zh_CN.omf
 @dirrm share/gnome/help/platform-overview/el
 @dirrm share/gnome/help/platform-overview/de
 @dirrm share/gnome/help/platform-overview/cs
+@dirrm share/gnome/help/platform-overview/ca
 @dirrm share/gnome/help/platform-overview/C
 @dirrm share/gnome/help/platform-overview
 @dirrm share/gnome/help/optimization-guide/zh_CN/figures
