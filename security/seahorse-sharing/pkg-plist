@@ -1,0 +1,6 @@
+bin/seahorse-sharing
+etc/xdg/autostart/seahorse-sharing.desktop
+share/locale/pl/LC_MESSAGES/seahorse.mo
+share/pixmaps/seahorse/22x22/seahorse-share-keys.png
+share/pixmaps/seahorse/48x48/seahorse-share-keys.png
+share/pixmaps/seahorse/scalable/seahorse-share-keys.svg
