@@ -1,4 +1,5 @@
 bin/rhythmbox
+bin/rhythmbox-client
 include/rhythmbox/backends/rb-encoder.h
 include/rhythmbox/backends/rb-player-gst-data-tee.h
 include/rhythmbox/backends/rb-player-gst-filter.h
@@ -140,19 +141,6 @@ lib/rhythmbox/plugins/generic-player/libgeneric-player.so
 lib/rhythmbox/plugins/iradio/iradio.plugin
 lib/rhythmbox/plugins/iradio/libiradio.la
 lib/rhythmbox/plugins/iradio/libiradio.so
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/JamendoConfigureDialog.py
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/JamendoConfigureDialog.pyc
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/JamendoConfigureDialog.pyo
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/JamendoSaxHandler.py
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/JamendoSaxHandler.pyc
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/JamendoSaxHandler.pyo
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/JamendoSource.py
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/JamendoSource.pyc
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/JamendoSource.pyo
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/jamendo.plugin
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/jamendo.py
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/jamendo.pyc
-%%PYTHON%%lib/rhythmbox/plugins/jamendo/jamendo.pyo
 %%PYTHON%%lib/rhythmbox/plugins/lyrics/AstrawebParser.py
 %%PYTHON%%lib/rhythmbox/plugins/lyrics/AstrawebParser.pyc
 %%PYTHON%%lib/rhythmbox/plugins/lyrics/AstrawebParser.pyo
@@ -187,19 +175,6 @@ lib/rhythmbox/plugins/iradio/libiradio.so
 %%PYTHON%%lib/rhythmbox/plugins/lyrics/lyrics.py
 %%PYTHON%%lib/rhythmbox/plugins/lyrics/lyrics.pyc
 %%PYTHON%%lib/rhythmbox/plugins/lyrics/lyrics.pyo
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/BuyAlbumHandler.py
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/BuyAlbumHandler.pyc
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/BuyAlbumHandler.pyo
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/MagnatuneSource.py
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/MagnatuneSource.pyc
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/MagnatuneSource.pyo
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/TrackListHandler.py
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/TrackListHandler.pyc
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/TrackListHandler.pyo
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/magnatune.plugin
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/magnatune.py
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/magnatune.pyc
-%%PYTHON%%lib/rhythmbox/plugins/magnatune/magnatune.pyo
 lib/rhythmbox/plugins/mmkeys/libmmkeys.la
 lib/rhythmbox/plugins/mmkeys/libmmkeys.so
 lib/rhythmbox/plugins/mmkeys/mmkeys.plugin
@@ -257,89 +232,14 @@ lib/rhythmbox/plugins/power-manager/power-manager.plugin
 %%PYTHON%%lib/rhythmbox/plugins/sendto/sendto.py
 %%PYTHON%%lib/rhythmbox/plugins/sendto/sendto.pyc
 %%PYTHON%%lib/rhythmbox/plugins/sendto/sendto.pyo
+lib/rhythmbox/plugins/visualizer/libvisualizer.la
+lib/rhythmbox/plugins/visualizer/libvisualizer.so
+lib/rhythmbox/plugins/visualizer/visualizer.plugin
 libdata/pkgconfig/rhythmbox.pc
 libexec/rhythmbox-metadata
 share/applications/rhythmbox-device.desktop
 share/applications/rhythmbox.desktop
-share/dbus-1/services/org.gnome.Rhythmbox.service
-%%DOCSDIR%%/RBAutoPlaylistSource.html
-%%DOCSDIR%%/RBBrowserSource.html
-%%DOCSDIR%%/RBCellRendererPixbuf.html
-%%DOCSDIR%%/RBCellRendererRating.html
-%%DOCSDIR%%/RBEncoder.html
-%%DOCSDIR%%/RBEntryView.html
-%%DOCSDIR%%/RBHeader.html
-%%DOCSDIR%%/RBHistory.html
-%%DOCSDIR%%/RBImportErrorsSource.html
-%%DOCSDIR%%/RBLibraryBrowser.html
-%%DOCSDIR%%/RBLibrarySource.html
-%%DOCSDIR%%/RBMediaPlayerSource.html
-%%DOCSDIR%%/RBMetaData.html
-%%DOCSDIR%%/RBMissingFilesSource.html
-%%DOCSDIR%%/RBPlayOrder.html
-%%DOCSDIR%%/RBPlayQueueSource.html
-%%DOCSDIR%%/RBPlayer.html
-%%DOCSDIR%%/RBPlayerGstDataTee.html
-%%DOCSDIR%%/RBPlayerGstFilter.html
-%%DOCSDIR%%/RBPlayerGstTee.html
-%%DOCSDIR%%/RBPlaylistManager.html
-%%DOCSDIR%%/RBPlaylistSource.html
-%%DOCSDIR%%/RBPlugin.html
-%%DOCSDIR%%/RBPropertyView.html
-%%DOCSDIR%%/RBQueryCreator.html
-%%DOCSDIR%%/RBRandomPlayOrder.html
-%%DOCSDIR%%/RBRating.html
-%%DOCSDIR%%/RBRemovableMediaManager.html
-%%DOCSDIR%%/RBRemovableMediaSource.html
-%%DOCSDIR%%/RBSearchEntry.html
-%%DOCSDIR%%/RBShell.html
-%%DOCSDIR%%/RBShellClipboard.html
-%%DOCSDIR%%/RBShellPlayer.html
-%%DOCSDIR%%/RBShellPreferences.html
-%%DOCSDIR%%/RBSongInfo.html
-%%DOCSDIR%%/RBSource.html
-%%DOCSDIR%%/RBSourceHeader.html
-%%DOCSDIR%%/RBSourceSearch.html
-%%DOCSDIR%%/RBSourceSearchBasic.html
-%%DOCSDIR%%/RBStaticPlaylistSource.html
-%%DOCSDIR%%/RBStatusbar.html
-%%DOCSDIR%%/RBStreamingSource.html
-%%DOCSDIR%%/RBStringValueMap.html
-%%DOCSDIR%%/RBTrackTransferBatch.html
-%%DOCSDIR%%/RBTrackTransferQueue.html
-%%DOCSDIR%%/RBURIDialog.html
-%%DOCSDIR%%/RhythmDB.html
-%%DOCSDIR%%/RhythmDBEntryType.html
-%%DOCSDIR%%/RhythmDBImportJob.html
-%%DOCSDIR%%/RhythmDBPropertyModel.html
-%%DOCSDIR%%/RhythmDBQueryModel.html
-%%DOCSDIR%%/RhythmDBQueryResults.html
-%%DOCSDIR%%/ch01.html
-%%DOCSDIR%%/ch02.html
-%%DOCSDIR%%/ch03.html
-%%DOCSDIR%%/ch04.html
-%%DOCSDIR%%/ch05.html
-%%DOCSDIR%%/ch06.html
-%%DOCSDIR%%/ch07.html
-%%DOCSDIR%%/home.png
-%%DOCSDIR%%/index.html
-%%DOCSDIR%%/index.sgml
-%%DOCSDIR%%/left.png
-%%DOCSDIR%%/rhythmbox-Media-player-ID.html
-%%DOCSDIR%%/rhythmbox-rb-async-queue-watch.html
-%%DOCSDIR%%/rhythmbox-rb-builder-helpers.html
-%%DOCSDIR%%/rhythmbox-rb-debug.html
-%%DOCSDIR%%/rhythmbox-rb-dialog.html
-%%DOCSDIR%%/rhythmbox-rb-file-helpers.html
-%%DOCSDIR%%/rhythmbox-rb-rating-helper.html
-%%DOCSDIR%%/rhythmbox-rb-text-helpers.html
-%%DOCSDIR%%/rhythmbox-rb-tree-dnd.html
-%%DOCSDIR%%/rhythmbox-rb-util.html
-%%DOCSDIR%%/rhythmbox.devhelp
-%%DOCSDIR%%/rhythmbox.devhelp2
-%%DOCSDIR%%/right.png
-%%DOCSDIR%%/style.css
-%%DOCSDIR%%/up.png
+share/dbus-1/services/org.gnome.Rhythmbox3.service
 share/gir-1.0/MPID-3.0.gir
 share/gir-1.0/RB-3.0.gir
 share/gnome/help/rhythmbox/C/fdl-appendix.xml
@@ -428,6 +328,20 @@ share/gnome/help/rhythmbox/es/figures/rb-volume-changer.png
 share/gnome/help/rhythmbox/es/figures/rb-window-small.png
 share/gnome/help/rhythmbox/es/figures/rb-window.png
 share/gnome/help/rhythmbox/es/rhythmbox.xml
+share/gnome/help/rhythmbox/eu/figures/rb-iradio-main.png
+share/gnome/help/rhythmbox/eu/figures/rb-notification-area-menu.png
+share/gnome/help/rhythmbox/eu/figures/rb-notification-window.png
+share/gnome/help/rhythmbox/eu/figures/rb-notification-zone.png
+share/gnome/help/rhythmbox/eu/figures/rb-podcast-main.png
+share/gnome/help/rhythmbox/eu/figures/rb-statusbar.png
+share/gnome/help/rhythmbox/eu/figures/rb-toolbar-prevplaynext.png
+share/gnome/help/rhythmbox/eu/figures/rb-toolbar-repeat.png
+share/gnome/help/rhythmbox/eu/figures/rb-toolbar-shuffle.png
+share/gnome/help/rhythmbox/eu/figures/rb-toolbar.png
+share/gnome/help/rhythmbox/eu/figures/rb-volume-changer.png
+share/gnome/help/rhythmbox/eu/figures/rb-window-small.png
+share/gnome/help/rhythmbox/eu/figures/rb-window.png
+share/gnome/help/rhythmbox/eu/rhythmbox.xml
 share/gnome/help/rhythmbox/fr/figures/rb-iradio-main.png
 share/gnome/help/rhythmbox/fr/figures/rb-notification-area-menu.png
 share/gnome/help/rhythmbox/fr/figures/rb-notification-window.png
@@ -685,6 +599,7 @@ share/omf/rhythmbox/rhythmbox-da.omf
 share/omf/rhythmbox/rhythmbox-de.omf
 share/omf/rhythmbox/rhythmbox-el.omf
 share/omf/rhythmbox/rhythmbox-es.omf
+share/omf/rhythmbox/rhythmbox-eu.omf
 share/omf/rhythmbox/rhythmbox-fr.omf
 share/omf/rhythmbox/rhythmbox-gl.omf
 share/omf/rhythmbox/rhythmbox-it.omf
@@ -728,8 +643,6 @@ share/omf/rhythmbox/rhythmbox-zh_CN.omf
 %%DATADIR%%/icons/hicolor/22x22/places/library-podcast.png
 %%DATADIR%%/icons/hicolor/22x22/places/playlist-automatic.png
 %%DATADIR%%/icons/hicolor/22x22/places/playlist.png
-%%PYTHON%%%%DATADIR%%/icons/hicolor/24x24/places/jamendo.png
-%%PYTHON%%%%DATADIR%%/icons/hicolor/24x24/places/magnatune.png
 %%DATADIR%%/icons/hicolor/32x32/actions/audio-cd-duplicate.png
 %%DATADIR%%/icons/hicolor/32x32/actions/audio-cd-duplicate.svg
 %%DATADIR%%/icons/hicolor/32x32/actions/audio-cd-new.png
@@ -783,33 +696,34 @@ share/omf/rhythmbox/rhythmbox-zh_CN.omf
 %%IPOD%%%%DATADIR%%/plugins/ipod/ipod-ui.xml
 %%DATADIR%%/plugins/iradio/iradio-initial.xspf
 %%DATADIR%%/plugins/iradio/iradio-ui.xml
+%%PYTHON%%%%DATADIR%%/plugins/lyrics/lyrics-prefs.ui
 %%LIRC%%%%DATADIR%%/plugins/rblirc/rhythmbox_lirc_default
 %%DATADIR%%/plugins/iradio/station-properties.ui
-%%PYTHON%%%%DATADIR%%/plugins/jamendo/jamendo-loading.ui
-%%PYTHON%%%%DATADIR%%/plugins/jamendo/jamendo-prefs.ui
-%%PYTHON%%%%DATADIR%%/plugins/jamendo/jamendo_logo.png
-%%PYTHON%%%%DATADIR%%/plugins/jamendo/jamendo_logo_medium.png
-%%PYTHON%%%%DATADIR%%/plugins/magnatune/magnatune-loading.ui
-%%PYTHON%%%%DATADIR%%/plugins/magnatune/magnatune-prefs.ui
-%%PYTHON%%%%DATADIR%%/plugins/magnatune/magnatune_logo_color_small.png
-%%PYTHON%%%%DATADIR%%/plugins/magnatune/magnatune_logo_color_tiny.png
 %%MTP%%%%DATADIR%%/plugins/mtpdevice/mtp-info.ui
 %%MTP%%%%DATADIR%%/plugins/mtpdevice/mtp-ui.xml
 %%PYTHON%%%%DATADIR%%/plugins/replaygain/replaygain-prefs.ui
+%%DATADIR%%/plugins/visualizer/button-active.png
+%%DATADIR%%/plugins/visualizer/button-disabled.png
+%%DATADIR%%/plugins/visualizer/button-focus.png
+%%DATADIR%%/plugins/visualizer/button-hover.png
+%%DATADIR%%/plugins/visualizer/button.png
+%%DATADIR%%/plugins/visualizer/visualizer-box.png
+%%DATADIR%%/plugins/visualizer/visualizer.css
 %%DATADIR%%/podcast-feed-properties.ui
 %%DATADIR%%/podcast-prefs.ui
 %%DATADIR%%/podcast-properties.ui
 %%DATADIR%%/rhythmbox-ui.xml
+%%DATADIR%%/rhythmbox.gep
 %%DATADIR%%/song-info-multiple.ui
 %%DATADIR%%/song-info.ui
 %%DATADIR%%/sync-dialog.ui
 %%DATADIR%%/sync-state.ui
 %%DATADIR%%/uri-new.ui
 %%LIRC%%%%DATADIR%%/plugins/rblirc
+@dirrm %%DATADIR%%/plugins/visualizer
 %%PYTHON%%@dirrm %%DATADIR%%/plugins/replaygain
 %%MTP%%@dirrm %%DATADIR%%/plugins/mtpdevice
-%%PYTHON%%@dirrm %%DATADIR%%/plugins/magnatune
-%%PYTHON%%@dirrm %%DATADIR%%/plugins/jamendo
+%%PYTHON%%@dirrm %%DATADIR%%/plugins/lyrics
 @dirrm %%DATADIR%%/plugins/iradio
 %%IPOD%%@dirrm %%DATADIR%%/plugins/ipod
 @dirrm %%DATADIR%%/plugins/generic-player
@@ -827,8 +741,6 @@ share/omf/rhythmbox/rhythmbox-zh_CN.omf
 @dirrm %%DATADIR%%/icons/hicolor/32x32/places
 @dirrm %%DATADIR%%/icons/hicolor/32x32/actions
 @dirrm %%DATADIR%%/icons/hicolor/32x32
-%%PYTHON%%@dirrm %%DATADIR%%/icons/hicolor/24x24/places
-%%PYTHON%%@dirrm %%DATADIR%%/icons/hicolor/24x24
 @dirrm %%DATADIR%%/icons/hicolor/22x22/places
 @dirrm %%DATADIR%%/icons/hicolor/22x22/actions
 @dirrm %%DATADIR%%/icons/hicolor/22x22
@@ -864,6 +776,8 @@ share/omf/rhythmbox/rhythmbox-zh_CN.omf
 @dirrm share/gnome/help/rhythmbox/gl
 @dirrm share/gnome/help/rhythmbox/fr/figures
 @dirrm share/gnome/help/rhythmbox/fr
+@dirrm share/gnome/help/rhythmbox/eu/figures
+@dirrm share/gnome/help/rhythmbox/eu
 @dirrm share/gnome/help/rhythmbox/es/figures
 @dirrm share/gnome/help/rhythmbox/es
 @dirrm share/gnome/help/rhythmbox/el/figures
@@ -877,8 +791,8 @@ share/omf/rhythmbox/rhythmbox-zh_CN.omf
 @dirrm share/gnome/help/rhythmbox/C/figures
 @dirrm share/gnome/help/rhythmbox/C
 @dirrm share/gnome/help/rhythmbox
-@dirrm %%DOCSDIR%%
 @dirrmtry share/applications
+@dirrm lib/rhythmbox/plugins/visualizer
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/sendto
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/replaygain
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/rbzeitgeist
@@ -890,9 +804,7 @@ share/omf/rhythmbox/rhythmbox-zh_CN.omf
 %%MTP%%@dirrm lib/rhythmbox/plugins/mtpdevice
 @dirrm lib/rhythmbox/plugins/mpris
 @dirrm lib/rhythmbox/plugins/mmkeys
-%%PYTHON%%@dirrm lib/rhythmbox/plugins/magnatune
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/lyrics
-%%PYTHON%%@dirrm lib/rhythmbox/plugins/jamendo
 @dirrm lib/rhythmbox/plugins/iradio
 %%IPOD%%@dirrm lib/rhythmbox/plugins/ipod
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/im-status
