@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog3/Makefile,v 1.14 2011/09/19 21:01:49 kwm Exp $
+#   $MCom: ports/graphics/eog3/Makefile,v 1.15 2011/10/16 19:40:26 kwm Exp $
 #
 
 PORTNAME=	eog
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -36,8 +36,8 @@ INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.eog.enums.xml \
 		org.gnome.eog.gschema.xml
