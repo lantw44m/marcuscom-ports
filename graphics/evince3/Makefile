@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/evince3/Makefile,v 1.13 2011/06/10 22:59:04 mezz Exp $
+#    $MCom: ports/graphics/evince3/Makefile,v 1.14 2011/10/04 22:59:56 kwm Exp $
 #
 
 PORTNAME=	evince
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -36,8 +36,8 @@ USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix desktopfileutils \
 		gnomedocutils ltasneededhack
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.Evince.gschema.xml
 
