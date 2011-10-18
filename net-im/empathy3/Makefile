@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.20 2011/10/07 10:32:58 kwm Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.21 2011/10/13 10:32:59 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	3.2.0.1
+PORTVERSION=	3.2.1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -45,9 +45,9 @@ USE_AUTOTOOLS=	libtool
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PYTHON=	yes
-MAKE_JOBS_UNSAFE=yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+#MAKE_JOBS_UNSAFE=yes
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-Werror \
 		--disable-goa \
 		--enable-location=no
