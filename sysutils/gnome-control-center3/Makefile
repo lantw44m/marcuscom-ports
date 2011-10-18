@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.31 2011/09/19 21:21:18 kwm Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.32 2011/10/15 16:14:34 kwm Exp $
 #
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,6 +23,7 @@ LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		upower-glib.1:${PORTSDIR}/sysutils/upower \
 		colord.1:${PORTSDIR}/graphics/colord \
 		goa-1.0.0:${PORTSDIR}/net/gnome-online-accounts \
+		socialweb.0:${PORTSDIR}/www/libsocialweb \
 		gtop-2.0.7:${PORTSDIR}/devel/libgtop \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
@@ -48,7 +49,7 @@ GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--with-libsocialweb=no
+CONFIGURE_ARGS=	--with-libsocialweb=yes
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 
