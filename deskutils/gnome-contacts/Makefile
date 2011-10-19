@@ -7,6 +7,7 @@
 
 PORTNAME=	gnome-contacts
 PORTVERSION=	3.2.1
+PORTREVISION=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -15,7 +16,7 @@ COMMENT=	Contacts manager for gnome
 
 BUILD_DEPENDS=	vala>=0.14.0:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	goa-1.0.0:${PORTSDIR}/net/gnome-online-accounts \
-		folks.27:${PORTSDIR}/net-im/folks \
+		folks.28:${PORTSDIR}/net-im/folks \
 		notify.4:${PORTSDIR}/devel/libnotify
 
 USE_XZ=		yes
