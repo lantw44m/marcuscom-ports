@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor3/Makefile,v 1.9 2011/06/10 22:59:09 mezz Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor3/Makefile,v 1.10 2011/10/07 22:35:12 kwm Exp $
 #
 
 PORTNAME=	gnome-system-monitor
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -30,8 +30,8 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack libwnck3 gnomedocutils \
 		librsvg2
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.gnome-system-monitor.enums.xml \
 		org.gnome.gnome-system-monitor.gschema.xml
