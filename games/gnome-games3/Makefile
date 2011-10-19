@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.16 2011/08/17 20:09:35 kwm Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.17 2011/10/15 19:17:42 kwm Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
