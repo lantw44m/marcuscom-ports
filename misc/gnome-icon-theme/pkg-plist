@@ -205,6 +205,7 @@ share/icons/gnome/16x16/actions/mail_replyall.png
 share/icons/gnome/16x16/actions/mail_send.png
 share/icons/gnome/16x16/actions/mail_spam.png
 share/icons/gnome/16x16/actions/media-eject.png
+share/icons/gnome/16x16/actions/media-playback-start-rtl.png
 share/icons/gnome/16x16/actions/media-playback-pause.png
 share/icons/gnome/16x16/actions/media-playback-start.png
 share/icons/gnome/16x16/actions/media-playback-stop.png
@@ -1237,6 +1238,7 @@ share/icons/gnome/22x22/actions/mail_replyall.png
 share/icons/gnome/22x22/actions/mail_send.png
 share/icons/gnome/22x22/actions/mail_spam.png
 share/icons/gnome/22x22/actions/media-eject.png
+share/icons/gnome/22x22/actions/media-playback-start-rtl.png
 share/icons/gnome/22x22/actions/media-playback-pause.png
 share/icons/gnome/22x22/actions/media-playback-start.png
 share/icons/gnome/22x22/actions/media-playback-stop.png
@@ -2269,6 +2271,7 @@ share/icons/gnome/24x24/actions/mail_replyall.png
 share/icons/gnome/24x24/actions/mail_send.png
 share/icons/gnome/24x24/actions/mail_spam.png
 share/icons/gnome/24x24/actions/media-eject.png
+share/icons/gnome/24x24/actions/media-playback-start-rtl.png
 share/icons/gnome/24x24/actions/media-playback-pause.png
 share/icons/gnome/24x24/actions/media-playback-start.png
 share/icons/gnome/24x24/actions/media-playback-stop.png
@@ -3962,6 +3965,7 @@ share/icons/gnome/32x32/actions/mail_replyall.png
 share/icons/gnome/32x32/actions/mail_send.png
 share/icons/gnome/32x32/actions/mail_spam.png
 share/icons/gnome/32x32/actions/media-eject.png
+share/icons/gnome/32x32/actions/media-playback-start-rtl.png
 share/icons/gnome/32x32/actions/media-playback-pause.png
 share/icons/gnome/32x32/actions/media-playback-start.png
 share/icons/gnome/32x32/actions/media-playback-stop.png
@@ -4987,6 +4991,7 @@ share/icons/gnome/48x48/actions/mail_replyall.png
 share/icons/gnome/48x48/actions/mail_send.png
 share/icons/gnome/48x48/actions/mail_spam.png
 share/icons/gnome/48x48/actions/media-eject.png
+share/icons/gnome/48x48/actions/media-playback-start-rtl.png
 share/icons/gnome/48x48/actions/media-playback-pause.png
 share/icons/gnome/48x48/actions/media-playback-start.png
 share/icons/gnome/48x48/actions/media-playback-stop.png
