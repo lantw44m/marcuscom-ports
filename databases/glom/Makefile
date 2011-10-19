@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/databases/glom/Makefile,v 1.32 2011/10/18 14:55:51 kwm Exp $
 #
 
 PORTNAME=	glom
-PORTVERSION=	1.19.13
+PORTVERSION=	1.19.14
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -46,6 +46,7 @@ INSTALLS_ICONS=	yes
 #PLIST_SUB+=	VERSION=${PORTVERSION:R}
 PLIST_SUB+=	VERSION=1.20
 
+# We need postgreSQL tools the server installs, and configure checks for these.
 # Note: USE_PGSQL has already been set above.
 BUILD_DEPENDS+=	postmaster:${PORTSDIR}/databases/postgresql${PGSQL_VER}-server
 RUN_DEPENDS+=	postmaster:${PORTSDIR}/databases/postgresql${PGSQL_VER}-server
@@ -60,7 +61,6 @@ post-patch:
 		${WRKSRC}/glom/mode_design/layout/layout_item_dialogs/comboentry_borderwidth.cc \
 		${WRKSRC}/glom/mode_design/layout/layout_item_dialogs/dialog_group_by.cc \
 		${WRKSRC}/glom/main.cc
-
 
 post-install:
 	@-update-mime-database ${PREFIX}/share/mime

@@ -47,6 +47,7 @@ include/glom-%%VERSION%%/libglom/document/document.h
 include/glom-%%VERSION%%/libglom/document/view.h
 include/glom-%%VERSION%%/libglom/init.h
 include/glom-%%VERSION%%/libglom/libglom_config.h
+include/glom-%%VERSION%%/libglom/report_builder.h
 include/glom-%%VERSION%%/libglom/sharedptr.h
 include/glom-%%VERSION%%/libglom/standard_table_prefs_fields.h
 include/glom-%%VERSION%%/libglom/utils.h
@@ -119,7 +120,6 @@ share/applications/glom.desktop
 %%DATADIR%%/pixmaps/glom-notebook.png
 %%DATADIR%%/pixmaps/glom-related-records.png
 %%DATADIR%%/pixmaps/glom-text.png
-%%DATADIR%%/xslt/print_details_to_html.xsl
 %%DATADIR%%/xslt/print_report_to_html.xsl
 %%DOCSDIR%%/examples/README
 %%DOCSDIR%%/examples/example_film_manager.glom
