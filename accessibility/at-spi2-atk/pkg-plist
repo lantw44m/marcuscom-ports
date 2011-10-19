@@ -1,8 +1,6 @@
 lib/gnome-settings-daemon-3.0/gtk-modules/at-spi2-atk.desktop
-lib/gtk-2.0/modules/libatk-bridge.a
 lib/gtk-2.0/modules/libatk-bridge.la
 lib/gtk-2.0/modules/libatk-bridge.so
-lib/gtk-3.0/modules/libatk-bridge.a
 lib/gtk-3.0/modules/libatk-bridge.la
 lib/gtk-3.0/modules/libatk-bridge.so
 share/locale/an/LC_MESSAGES/at-spi2-atk.mo
@@ -70,6 +68,10 @@ share/locale/vi/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_CN/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_HK/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_TW/LC_MESSAGES/at-spi2-atk.mo
+@dirrmtry lib/gtk-3.0/modules
+@dirrmtry lib/gtk-3.0
+@dirrmtry lib/gtk-2.0/modules
+@dirrmtry lib/gtk-2.0
 @dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
 @dirrmtry lib/gnome-settings-daemon-3.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
