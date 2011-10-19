@@ -3,11 +3,11 @@
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/notification-daemon/Makefile,v 1.11 2011/06/11 19:51:12 mezz Exp $
+#   $MCom: ports/deskutils/notification-daemon/Makefile,v 1.12 2011/08/11 19:48:45 kwm Exp $
 #
 
 PORTNAME=	notification-daemon
-PORTVERSION=	0.7.1
+PORTVERSION=	0.7.3
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -28,7 +28,7 @@ INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-dbus-services=${PREFIX}/share/dbus-1/services
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
 CONFLICTS=	xfce4-notification-daemon-[0-9]* xfce4-notifyd-[0-9]*
 
