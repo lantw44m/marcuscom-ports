@@ -3,16 +3,18 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gtranslator/Makefile,v 1.18 2011/08/11 19:48:45 kwm Exp $
+#   $MCom: ports/devel/gtranslator/Makefile,v 1.19 2011/10/13 08:00:44 kwm Exp $
 #
 
 PORTNAME=	gtranslator
-PORTVERSION=	2.90.6
+PORTVERSION=	2.90.7
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A GNOME application for creating GNU gettext translation files
+
+LICENSE=	GPLv3
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
