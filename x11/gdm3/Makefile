@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.12 2011/10/05 07:28:57 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.13 2011/10/19 22:02:04 kwm Exp $
 #
 
 PORTNAME=	gdm
@@ -16,6 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 version of xdm display manager
 
 BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
+		nss-config:${PORTSDIR}/security/nss \
     		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
@@ -28,6 +29,7 @@ LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
+		nss-config:${PORTSDIR}/security/nss \
 		gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		gnome-icon-theme-symbolic>=0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic \
 		${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core \
