@@ -33,6 +33,7 @@ POST-INSTALL)
 	${CHOWN} -R ${USER}:${GROUP} ${PKG_PREFIX}/etc/gdm/home/.gconf.mandatory
 	${CHMOD} 1750 ${PKG_PREFIX}/etc/gdm/home/.gconf.mandatory
 	${CHMOD} 1640 ${PKG_PREFIX}/etc/gdm/home/.gconf.mandatory/*.xml
+	dconf update
 
 	${MKDIR} -p ${PKG_PREFIX}/etc/gdm/Sessions
 	${MKDIR} -p ${PKG_PREFIX}/etc/dm/Sessions

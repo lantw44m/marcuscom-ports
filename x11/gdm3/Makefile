@@ -3,11 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.11 2011/09/22 16:15:03 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.12 2011/10/05 07:28:57 kwm Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -121,6 +121,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/gdm.pam ${PREFIX}/etc/pam.d/gdm
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
+	@dconf update
 	@${CAT} ${PKGMESSAGE}
 
 .include <bsd.port.mk>
