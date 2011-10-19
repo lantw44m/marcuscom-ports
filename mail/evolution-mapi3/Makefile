@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.11 2011/06/10 22:59:05 mezz Exp $
+#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.12 2011/08/31 14:57:45 kwm Exp $
 #
 
 PORTNAME=	evolution-mapi
@@ -20,6 +20,8 @@ LIB_DEPENDS=	mapi.0:${PORTSDIR}/mail/libmapi
 RUN_DEPENDS=	evolution>=2.91.0:${PORTSDIR}/mail/evolution3
 
 CONFLICTS=	evolution-mapi-2.[0-9]*
+
+BROKEN=		broken with evo 3.2.x, needs newer libmapi which needs samba4 update.
 
 LATEST_LINK=	evolution-mapi3
 USE_XZ=		yes
