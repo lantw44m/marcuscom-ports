@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany3/Makefile,v 1.21 2011/09/22 14:56:12 kwm Exp $
+#   $MCom: ports/www/epiphany3/Makefile,v 1.22 2011/10/04 22:45:42 kwm Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 PORTREVISION?=	0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
@@ -46,8 +46,8 @@ USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 CONFIGURE_ARGS+=--enable-introspection \
 		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib
+CPPFLAGS=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
 
 GLIB_SCHEMAS=	org.gnome.Epiphany.enums.xml \

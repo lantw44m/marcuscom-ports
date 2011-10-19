@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	gnome-contacts
-PORTVERSION=	3.2.0.1
+PORTVERSION=	3.2.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -24,8 +24,6 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
-#USE_LDCONFIG=	yes
-#CONFIGURE_ARGS=	--disable-gtk-doc \
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 

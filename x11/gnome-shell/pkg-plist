@@ -68,6 +68,7 @@ share/dbus-1/services/org.gnome.Shell.HotplugSniffer.service
 %%DATADIR%%/js/ui/search.js
 %%DATADIR%%/js/ui/searchDisplay.js
 %%DATADIR%%/js/ui/shellDBus.js
+%%DATADIR%%/js/ui/shellEntry.js
 %%DATADIR%%/js/ui/status/accessibility.js
 %%DATADIR%%/js/ui/status/bluetooth.js
 %%DATADIR%%/js/ui/status/keyboard.js
