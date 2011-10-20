@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/caribou/Makefile,v 1.9 2011/09/19 20:39:58 kwm Exp $
+#    $MCom: ports/accessibility/caribou/Makefile,v 1.10 2011/10/17 13:29:09 kwm Exp $
 #
 
 PORTNAME=	caribou
-PORTVERSION=	0.4.0
+PORTVERSION=	0.4.1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -47,6 +47,5 @@ post-patch:
 		${WRKSRC}/bin/antler-keyboard.in \
 		${WRKSRC}/bin/caribou-preferences.in \
 		${WRKSRC}/bin/caribou.in
-
 
 .include <bsd.port.mk>
