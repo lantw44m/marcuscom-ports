@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.13 2011/10/19 22:02:04 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.14 2011/10/19 22:27:49 kwm Exp $
 #
 
 PORTNAME=	gdm
@@ -58,7 +58,8 @@ CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home \
 		--with-at-spi-registryd-directory=${LOCALBASE}/libexec
 CPPFLAGS=	-I${LOCALBASE}/include -DHAS_SA_LEN
 LDFLAGS=	-L${LOCALBASE}/lib
-CONFIGURE_ENV=	LIBS="-lm -lexecinfo" \
+CONFIGLIBS=	-lm -lexecinfo
+CONFIGURE_ENV=	LIBS="${CONFIGLIBS}" \
 		GTKDOC="false"
 
 SUB_FILES+=	gdm.pam
@@ -126,4 +127,10 @@ post-install:
 	@dconf update
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+# logwtmp lives here.
+.if ${OSVERSION} < 900000
+CONFIGLIBS+=	-lutil
+.endif
+.include <bsd.port.post.mk>

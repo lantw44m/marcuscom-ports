@@ -1,6 +1,7 @@
 bin/gdm-screenshot
 bin/gdmflexiserver
 etc/dbus-1/system.d/gdm.conf
+etc/dconf/db/gdm
 etc/dconf/db/gdm.d/00-upstream-settings
 etc/dconf/db/gdm.d/locks/00-upstream-settings-locks
 etc/dconf/profile/gdm
@@ -244,6 +245,13 @@ share/pixmaps/nohost.png
 @dirrm %%DATADIR%%/greeter/applications
 @dirrm %%DATADIR%%/greeter
 @dirrm %%DATADIR%%
+@dirrm lib/gdm/simple-greeter/extensions
+@dirrm lib/gdm/simple-greeter
+@dirrm lib/gdm/greeter
+@dirrm lib/gdm
+@dirrm include/gdm/simple-greeter
+@dirrm include/gdm/greeter
+@dirrm include/gdm
 @dirrm etc/gdm/Sessions
 @dirrm etc/gdm/PreSession
 @dirrm etc/gdm/PostSession
