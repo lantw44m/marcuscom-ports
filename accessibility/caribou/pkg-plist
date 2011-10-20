@@ -121,6 +121,8 @@ share/locale/zh_TW/LC_MESSAGES/caribou.mo
 @dirrm share/caribou/layouts/fullscale
 @dirrm share/caribou/layouts/
 @dirrm share/caribou
+@dirrm share/antler
+@dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/caribou/settings
 @dirrm %%PYTHON_SITELIBDIR%%/caribou/daemon
 @dirrm %%PYTHON_SITELIBDIR%%/caribou/antler
