@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.305 2011/04/27 11:47:19 kwm Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.306 2011/04/30 20:43:30 mezz Exp $
 #
 
 PORTNAME=	gnome2
@@ -70,7 +70,7 @@ USE_PYTHON=	yes
 
 .if !defined(GNOME_SLAVE) || ${.CURDIR:T}=="gnome2-lite"
 OPTIONS=	XSCREENSAVER "Use xscreensaver as screen saver app" off \
-		MAPI "Depend on evolution-mapi (pulls in samba4)" on
+		MAPI "Depend on evolution-mapi (pulls in samba4)" off
 .endif
 
 do-install:	# empty

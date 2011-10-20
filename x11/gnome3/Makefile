@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.29 2011/09/01 11:49:29 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.30 2011/10/17 15:24:53 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -45,7 +45,7 @@ NO_BUILD=	yes
 OPTIONS=	GNOME_SHELL "Build Gnome-shell (pulls in libxul)" off
 
 .if ${.CURDIR:T}!="gnome3-lite"
-OPTIONS+=	MAPI "Depend on evolution-mapi (pulls in samba4)" on
+OPTIONS+=	MAPI "Depend on evolution-mapi (pulls in samba4)" off
 .endif
 
 .include <bsd.port.pre.mk>
