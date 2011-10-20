@@ -7,6 +7,7 @@
 
 PORTNAME=	libsocialweb
 PORTVERSION=	0.25.19
+PORTREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 
@@ -17,7 +18,7 @@ BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
 LIB_DEPENDS=	rest-0.7.0:${PORTSDIR}/www/rest \
 		json-glib-1.0.0:${PORTSDIR}/devel/json-glib
 
-USE_GNOME=	gnomehack glib20 intlhack
+USE_GNOME=	gnomehack glib20 intlhack gconf2
 USE_XZ=		yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
