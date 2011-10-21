@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.22 2011/10/18 21:05:25 kwm Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.23 2011/10/19 17:03:17 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	3.2.1
@@ -19,6 +19,7 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
 LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
+		pulse.0:${PORTSDIR}/audio/pulseaudio \
 		telepathy.2:${PORTSDIR}/net-im/libtelepathy \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		telepathy-farsight.0:${PORTSDIR}/net-im/telepathy-farsight \
