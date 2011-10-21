@@ -83,10 +83,10 @@ share/locale/vi/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-tweak-tool.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-tweak-tool.mo
-@dirrm share/locale/zh_HK/LC_MESSAGES
-@dirrm share/locale/zh_HK
-@dirrm share/locale/sr@latin/LC_MESSAGES
-@dirrm share/locale/sr@latin
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/gtweak/tweaks

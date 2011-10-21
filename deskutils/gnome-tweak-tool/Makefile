@@ -3,7 +3,7 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/deskutils/gnome-tweak-tool/Makefile,v 1.10 2011/10/04 21:04:59 kwm Exp $
+#    $MCom: ports/deskutils/gnome-tweak-tool/Makefile,v 1.11 2011/10/16 21:29:38 kwm Exp $
 #
 
 PORTNAME=	gnome-tweak-tool
@@ -25,6 +25,6 @@ USE_PYTHON=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
