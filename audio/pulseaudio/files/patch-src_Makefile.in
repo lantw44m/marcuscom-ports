@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2011-10-21 14:32:40.000000000 +0200
++++ src/Makefile.in	2011-10-21 14:33:17.000000000 +0200
+@@ -8630,7 +8630,7 @@
+ 
+ install-data-am: install-dbuspolicyDATA install-dist_alsapathsDATA \
+ 	install-dist_alsaprofilesetsDATA install-dist_udevrulesDATA \
+-	install-pulseconfDATA install-pulseincludeHEADERS \
++	install-pulseincludeHEADERS \
+ 	install-xdgautostartDATA
+ 
+ install-dvi: install-dvi-am
