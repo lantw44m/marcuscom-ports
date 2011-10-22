@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.26 2011/05/14 11:41:22 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.27 2011/08/24 17:03:09 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -9,14 +9,19 @@ time you update your ports collection, before attempting any port
 upgrades.
 
 2011MONTHDAY:
-  AFFECTS: users of x11-toolkits/gtk20, avahi-gtk and GNOME 2
+  AFFECTS: users of GNOME 2 desktop components, avahi, libgdata, libchamplain
+           and vte
   AUTHOR: gnome@FreeBSD.org
+
+  Please note that these instructions are based on gnome being installed via
+  the x11/gnome2 meta port. So if you only a partial installation then some
+  of these steps might not apply to your situation.
 
   GNOME 3.0 has been added to the ports tree.  GNOME 3.0 and 2.32 desktop
   components are mutual exclusive. There shouldn't be any issue running gtk2
-  applications with GNOME 3 or the other way around. 
+  applications with GNOME 3 or the other way around.
 
-  The following instuctions are for people wanting to keep using GNOME 2.32.
+  The following instuctions are for people wanting to keep using GNOME 2.32:
 
   # portmaster -o devel/libgdata06 devel/libgdata
   # portmaster -o graphics/libchamplain08 graphics/libchamplain
@@ -26,8 +31,9 @@ upgrades.
 
 or
 
-does portupgrade handle the extra avahi-header port in avahi-gtk correctly?
-
+  # pkgdb -F
+  # pkg_delete -f avahi-gtk-\*
+  # portinstall net/avahi-gtk
   # portupgrade -o devel/libgdata06 devel/libgdata
   # portupgrade -o graphics/libchamplain08 graphics/libchamplain
   # pkg_delete -f vte-0.\*
@@ -35,14 +41,19 @@ does portupgrade handle the extra avahi-header port in avahi-gtk correctly?
   # portupgrade -a
 
   If you want to start using the GNOME 3.0 desktop. and you have currently
-  GNOME 2.32 installed please use the instructions below.
+  GNOME 2.32 installed, or parts of it, please use the instructions below.
 
   Make a list of your installed ports.
 
-  # pkg_delete -fr gnome-\*
-mention gnome-icon-* gnome-theme-*
+  # pkg_delete -fr gnome-\* libwnck-2.\* vte-0.\* at-spi-1.\* seed-2.\* \
+	libgnomekbd-2.\* gtk-vnc-0.3.\*
   # portmaster -a
+  # install x11/gnome3 or x11/gnome3-lite
 
-  Go to x11/gnome3 or x11/gnome3-lite and do make install clean.
-  Install any missing applications from the list.
+or
+
+  # pkg_delete -fr gnome-\* libwnck-2.\* vte-0.\*  at-spi-1.\* seed-2.\* \
+	libgnomekbd-2.\* gtk-vnc-0.3.\*
+  # pkgdb -Ff
+  # portupgrade -a
 
