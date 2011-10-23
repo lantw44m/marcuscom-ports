@@ -196,8 +196,6 @@ share/gtk-doc/html/gi/up.png
 @dirrmtry share/gtk-doc
 @dirrm share/gobject-introspection-1.0/tests
 @dirrm share/gobject-introspection-1.0
-@dirrmtry share/gir-1.0
-@dirrmtry lib/girepository-1.0
 @dirrm lib/gobject-introspection/giscanner
 @dirrm lib/gobject-introspection
 @dirrm include/gobject-introspection-1.0

@@ -3,7 +3,7 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.42 2011/09/21 12:12:23 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.43 2011/10/04 11:57:21 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
@@ -22,7 +22,7 @@ LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi \
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack glib20 ltverhack
+USE_GNOME=	gnomehier gnomehack glib20 ltverhack
 USE_PYTHON=	-2.7
 USE_BISON=	build
 USE_GETTEXT=	yes
