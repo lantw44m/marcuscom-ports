@@ -3,7 +3,7 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem/Makefile,v 1.156 2011/08/24 13:49:31 kwm Exp $
+#   $MCom: ports/multimedia/totem/Makefile,v 1.157 2011/10/15 14:30:15 kwm Exp $
 #
 
 PORTNAME=	totem
@@ -41,7 +41,7 @@ INSTALLS_OMF=	yes
 PKGMESSAGE=	${WRKDIR}/pkg-message
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
-CONFIGURE_ENV=	LIBS="-lXrandr"
+CONFIGURE_ENV=	LIBS="-lXrandr" \
 		BROWSER_PLUGIN_DIR="${WEBPLUGINS_DIR}"
 CONFIGURE_ARGS=	--with-plugins="${TOTEM_PLUGINS}"
 
