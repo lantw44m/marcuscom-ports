@@ -176,8 +176,6 @@ lib/pulse-%%PULSE_VERSION%%/modules/module-loopback.a
 lib/pulse-%%PULSE_VERSION%%/modules/module-loopback.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-match.a
 lib/pulse-%%PULSE_VERSION%%/modules/module-match.so
-lib/pulse-%%PULSE_VERSION%%/modules/module-mmkbd-evdev.a
-lib/pulse-%%PULSE_VERSION%%/modules/module-mmkbd-evdev.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-native-protocol-fd.a
 lib/pulse-%%PULSE_VERSION%%/modules/module-native-protocol-fd.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-native-protocol-tcp.a

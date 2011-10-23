@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/audio/pulseaudio/Makefile,v 1.23 2011/10/22 22:05:06 kwm Exp $
 #
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
 # PORTREVISION bumps to audio/gnome-media, sysutils/gnome-settings-daemon,
@@ -38,7 +38,8 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}" \
 		OPENSSL_CFLAGS="-I/usr/include" \
 		OPENSSL_LIBS="-lcrypto -lssl" \
-		LIBS="-lm -lintl"
+		LIBS="-lm -lintl" \
+		ac_cv_header_linux_input_h=""
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 
