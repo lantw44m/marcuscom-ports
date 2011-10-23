@@ -113,5 +113,3 @@ share/gtk-doc/html/libsoup-%%VERSION%%/up.png
 @dirrmtry share/gtk-doc/
 @dirrm include/libsoup-%%VERSION%%/libsoup
 @dirrm include/libsoup-%%VERSION%%
-@dirrmtry lib/girepository-1.0
-@dirrmtry share/gir-1.0

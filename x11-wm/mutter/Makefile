@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.29 2011/10/08 09:22:23 kwm Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.30 2011/10/19 16:20:46 kwm Exp $
 #
 
 PORTNAME=	mutter
@@ -29,7 +29,7 @@ USE_PYTHON=	2.5+
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gconf2 ltverhack
+USE_GNOME=	gnomehier gnomeprefix gnomehack intlhack gtk30 gconf2 ltverhack
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

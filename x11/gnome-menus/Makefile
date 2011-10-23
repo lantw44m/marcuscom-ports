@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-menus/Makefile,v 1.110 2010/11/17 11:29:19 kwm Exp $
+#   $MCom: ports/x11/gnome-menus/Makefile,v 1.117 2011/06/10 21:14:05 mezz Exp $
 #
 
 PORTNAME=	gnome-menus
 PORTVERSION=	2.30.5
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -23,12 +23,12 @@ CONFLICTS=	gnome-menus-3.[0-9]*
 USE_GETTEXT=	yes
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack glib20 ltverhack
+USE_GNOME=	gnomehier gnomeprefix gnomehack intlhack glib20 ltverhack
 USE_AUTOTOOLS=	libtool
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu||' \

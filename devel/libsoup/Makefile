@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.109 2011/10/04 15:53:31 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.110 2011/10/19 09:53:33 kwm Exp $
 #
 
 PORTNAME=	libsoup
@@ -24,7 +24,7 @@ RUN_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
 
 .if !defined(REFERENCE_PORT)
 
-USE_GNOME=	gnomehack glib20 libxml2 ltverhack referencehack
+USE_GNOME=	gnomehier gnomehack glib20 libxml2 ltverhack referencehack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes

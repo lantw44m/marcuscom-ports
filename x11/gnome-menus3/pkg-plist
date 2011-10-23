@@ -153,8 +153,6 @@ share/locale/zu/LC_MESSAGES/gnome-menus-3.0.mo
 @dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/GMenuSimpleEditor
 @dirrm include/gnome-menus-3.0
-@dirrmtry share/gir-1.0
-@dirrmtry lib/girepository-1.0
 @dirrmtry etc/xdg/menus
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
