@@ -543,7 +543,6 @@ share/vala/vapi/totem.vapi
 @dirrm lib/totem/plugins/skipto
 @dirrm lib/totem/plugins/screenshot
 @dirrm lib/totem/plugins/screensaver
-%%PUBLISH%%@dirrm lib/totem/plugins/publish
 @dirrm lib/totem/plugins/properties
 @dirrm lib/totem/plugins/opensubtitles
 @dirrm lib/totem/plugins/ontop
