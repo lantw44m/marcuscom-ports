@@ -232,9 +232,9 @@ lib/rhythmbox/plugins/power-manager/power-manager.plugin
 %%PYTHON%%lib/rhythmbox/plugins/sendto/sendto.py
 %%PYTHON%%lib/rhythmbox/plugins/sendto/sendto.pyc
 %%PYTHON%%lib/rhythmbox/plugins/sendto/sendto.pyo
-lib/rhythmbox/plugins/visualizer/libvisualizer.la
-lib/rhythmbox/plugins/visualizer/libvisualizer.so
-lib/rhythmbox/plugins/visualizer/visualizer.plugin
+%%VISUAL%%lib/rhythmbox/plugins/visualizer/libvisualizer.la
+%%VISUAL%%lib/rhythmbox/plugins/visualizer/libvisualizer.so
+%%VISUAL%%lib/rhythmbox/plugins/visualizer/visualizer.plugin
 libdata/pkgconfig/rhythmbox.pc
 libexec/rhythmbox-metadata
 share/applications/rhythmbox-device.desktop
@@ -702,13 +702,13 @@ share/omf/rhythmbox/rhythmbox-zh_CN.omf
 %%MTP%%%%DATADIR%%/plugins/mtpdevice/mtp-info.ui
 %%MTP%%%%DATADIR%%/plugins/mtpdevice/mtp-ui.xml
 %%PYTHON%%%%DATADIR%%/plugins/replaygain/replaygain-prefs.ui
-%%DATADIR%%/plugins/visualizer/button-active.png
-%%DATADIR%%/plugins/visualizer/button-disabled.png
-%%DATADIR%%/plugins/visualizer/button-focus.png
-%%DATADIR%%/plugins/visualizer/button-hover.png
-%%DATADIR%%/plugins/visualizer/button.png
-%%DATADIR%%/plugins/visualizer/visualizer-box.png
-%%DATADIR%%/plugins/visualizer/visualizer.css
+%%VISUAL%%%%DATADIR%%/plugins/visualizer/button-active.png
+%%VISUAL%%%%DATADIR%%/plugins/visualizer/button-disabled.png
+%%VISUAL%%%%DATADIR%%/plugins/visualizer/button-focus.png
+%%VISUAL%%%%DATADIR%%/plugins/visualizer/button-hover.png
+%%VISUAL%%%%DATADIR%%/plugins/visualizer/button.png
+%%VISUAL%%%%DATADIR%%/plugins/visualizer/visualizer-box.png
+%%VISUAL%%%%DATADIR%%/plugins/visualizer/visualizer.css
 %%DATADIR%%/podcast-feed-properties.ui
 %%DATADIR%%/podcast-prefs.ui
 %%DATADIR%%/podcast-properties.ui
@@ -720,7 +720,7 @@ share/omf/rhythmbox/rhythmbox-zh_CN.omf
 %%DATADIR%%/sync-state.ui
 %%DATADIR%%/uri-new.ui
 %%LIRC%%%%DATADIR%%/plugins/rblirc
-@dirrm %%DATADIR%%/plugins/visualizer
+%%VISUAL%%@dirrm %%DATADIR%%/plugins/visualizer
 %%PYTHON%%@dirrm %%DATADIR%%/plugins/replaygain
 %%MTP%%@dirrm %%DATADIR%%/plugins/mtpdevice
 %%PYTHON%%@dirrm %%DATADIR%%/plugins/lyrics
@@ -792,7 +792,7 @@ share/omf/rhythmbox/rhythmbox-zh_CN.omf
 @dirrm share/gnome/help/rhythmbox/C
 @dirrm share/gnome/help/rhythmbox
 @dirrmtry share/applications
-@dirrm lib/rhythmbox/plugins/visualizer
+%%VISUAL%%@dirrm lib/rhythmbox/plugins/visualizer
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/sendto
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/replaygain
 %%PYTHON%%@dirrm lib/rhythmbox/plugins/rbzeitgeist

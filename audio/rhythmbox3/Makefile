@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox3/Makefile,v 1.2 2011/06/10 22:59:02 mezz Exp $
+#   $MCom: ports/audio/rhythmbox3/Makefile,v 1.3 2011/10/18 13:21:05 kwm Exp $
 #
 
 PORTNAME=	rhythmbox
@@ -58,6 +58,7 @@ OPTIONS=	IPOD "Enable iPod support" off \
 		MTP "Enable MS Media Transfer Protocol support" off \
 		WEBKIT "Enable HTML view" off \
 		ITMS_PLUGIN "Enable iTunes browser plugin" off
+#		VISUAL "Enable clutter visualizer plugin" on \
 
 MAN1=		rhythmbox-client.1 rhythmbox.1
 
@@ -148,5 +149,16 @@ PLIST_SUB+=	WEBKIT=""
 CONFIGURE_ARGS+=--without-webkit
 PLIST_SUB+=	WEBKIT="@comment "
 .endif
+
+#.if defined(WITH_VISUAL)
+#LIB_DEPENDS+=	mx-1.0.2:${PORTSDIR}/x11-toolkits/mx \
+#		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
+#		clutter-gst-1.0.0:${PORTSDIR}/multimedia/clutter-gst
+#CONFIGURE_ARGS+=--enable-visualizer
+#PLIST_SUB+=	VISUAL=""
+#.else
+CONFIGURE_ARGS+=--enable-visualizer=no
+PLIST_SUB+=	VISUAL="@comment "
+#.endif
 
 .include <bsd.port.mk>
