@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.203 2010/11/15 17:19:55 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.212 2011/09/03 17:50:19 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
@@ -82,6 +82,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g ; \
 		s|heimlibs=".*"|heimlibs="${KRB5_LIB}"|g ; \
 		s|-DGTK_DISABLE_DEPRECATED||g ; \
+		s|-DG_DISABLE_DEPRECATED||g ; \
 		s|-Wl,--no-undefined||g ; \
 		s|-Wmissing-include-dirs||g' \
 			${WRKSRC}/configure
