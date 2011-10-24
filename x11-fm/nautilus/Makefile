@@ -3,7 +3,7 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.209 2011/04/30 20:43:31 mezz Exp $
+#   $MCom: ports/x11-fm/nautilus/Makefile,v 1.210 2011/06/03 21:27:51 mezz Exp $
 #
 
 PORTNAME=	nautilus
@@ -42,10 +42,14 @@ GCONF_SCHEMAS=	apps_nautilus_preferences.schemas
 MAN1=		nautilus-connect-server.1 nautilus-file-management-properties.1 \
 		nautilus.1
 
-.include <bsd.port.pre.mk>
+post-patch:
+	@${REINPLACE_CMD} -e 's|G_CONST_RETURN|const|g' \
+		${WRKSRC}/eel/eel-*.[ch] \
+		${WRKSRC}/libnautilus-private/*.[ch] \
+		${WRKSRC}/src/nautilus-zoom-control.c
 
 post-install:
 	@${MKDIR} ${PREFIX}/lib/nautilus/extensions-2.0
 	@-update-desktop-database
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
