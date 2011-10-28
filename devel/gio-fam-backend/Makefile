@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.85 2011/10/04 13:19:31 kwm Exp $
+#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.86 2011/10/15 13:01:16 kwm Exp $
 #
 
 PORTNAME=	gio-fam-backend
@@ -26,15 +26,16 @@ COMMENT=	FAM backend for GLib\'s GIO library
 USE_XZ=		yes
 BUILD_WRKSRC=	${WRKSRC}/gio/fam
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
+WITH_FBSD10_FIX=yes
 GNU_CONFIGURE=	yes
 USE_GNOME=	gnomehack pkgconfig _glib20
 USE_FAM=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib -lintl" \
-		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
+CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
