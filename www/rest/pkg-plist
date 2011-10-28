@@ -7,6 +7,7 @@ include/rest-0.7/rest/oauth-proxy-call.h
 include/rest-0.7/rest/oauth-proxy.h
 include/rest-0.7/rest/oauth2-proxy-call.h
 include/rest-0.7/rest/oauth2-proxy.h
+include/rest-0.7/rest/rest-enum-types.h
 include/rest-0.7/rest/rest-param.h
 include/rest-0.7/rest/rest-params.h
 include/rest-0.7/rest/rest-proxy-call.h

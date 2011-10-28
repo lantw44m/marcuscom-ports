@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	rest
-PORTVERSION=	0.7.10
+PORTVERSION=	0.7.11
 CATEGORIES=	www
 MASTER_SITES=	GNOME
 
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome
 
 USE_GNOME=	gnomehack glib20 intlhack libxml2
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
