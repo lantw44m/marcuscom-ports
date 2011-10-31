@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/evince/Makefile,v 1.153 2011/04/30 20:43:18 mezz Exp $
+#    $MCom: ports/graphics/evince/Makefile,v 1.154 2011/08/24 10:37:55 kwm Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	2.32.0
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 multi-format document viewer
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	poppler-glib.6:${PORTSDIR}/graphics/poppler-gtk \
+LIB_DEPENDS=	poppler-glib.8:${PORTSDIR}/graphics/poppler-glib \
 		spectre.1:${PORTSDIR}/print/libspectre
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
