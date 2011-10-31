@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libnice
-PORTVERSION=	0.1.0
+PORTVERSION=	0.1.1
 CATEGORIES=	net-im devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
@@ -19,15 +19,14 @@ USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack pkgconfig glib20 ltverhack
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -DHAVE_GETIFADDRS" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+WITH_FBSD10_FIX=yes
+CPPFLAGS=	-I${LOCALBASE}/include -DHAVE_GETIFADDRS
+LDFLAGS=	-L${LOCALBASE}/lib
 
 post-patch:
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} ${REINPLACE_CMD} -e \
 	    	's|-Wno-missing-field-initializers|#|g'
 	@${REINPLACE_CMD} -e 's|-Wno-missing-field-initializers|#|g' \
 	    	${WRKSRC}/common.mk
-	@${TOUCH} ${WRKSRC}/aclocal.m4 ${WRKSRC}/Makefile.in \
-		${WRKSRC}/configure ${WRKSRC}/config.h.in
 
 .include <bsd.port.mk>
