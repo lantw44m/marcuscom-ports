@@ -4,6 +4,9 @@ etc/X11
 etc/X11/serverconfig
 etc/X11/starthere
 etc/X11/sysconfig
+etc/dconf
+etc/dconf/db
+etc/dconf/profile
 etc/gconf
 etc/gconf/gconf.xml.defaults
 etc/gconf/gconf.xml.mandatory
