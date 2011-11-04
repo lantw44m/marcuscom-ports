@@ -3,7 +3,7 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.43 2011/10/04 11:57:21 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.44 2011/10/23 09:03:39 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
@@ -37,9 +37,5 @@ CONFIGURE_ARGS=	--disable-tests
 MAKE_ENV=	HOME=${WRKDIR}
 
 MAN1=		g-ir-compiler.1 g-ir-generate.1 g-ir-scanner.1
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|%%CC%%|${CC:Q}|g' \
-		${WRKSRC}/giscanner/sourcescanner.py
 
 .include <bsd.port.mk>
