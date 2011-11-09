@@ -1,5 +1,5 @@
---- gio/gunixmounts.c.orig	2011-09-21 21:17:06.000000000 +0200
-+++ gio/gunixmounts.c	2011-10-04 15:07:08.000000000 +0200
+--- gio/gunixmounts.c.orig	2011-10-13 23:47:57.000000000 -0400
++++ gio/gunixmounts.c	2011-11-09 04:54:09.000000000 -0500
 @@ -153,6 +153,9 @@ struct _GUnixMountMonitor {
  
    GFileMonitor *fstab_monitor;
@@ -58,7 +58,15 @@
      "/var",
      "/var/crash",
      "/var/local",
-@@ -1111,6 +1125,10 @@ get_mounts_timestamp (void)
+@@ -296,6 +310,7 @@ guess_system_internal (const char *mount
+     "devfs",
+     "devpts",
+     "ecryptfs",
++    "fdescfs",
+     "kernfs",
+     "linprocfs",
+     "proc",
+@@ -1111,6 +1126,10 @@ get_mounts_timestamp (void)
        if (stat (monitor_file, &buf) == 0)
  	return (guint64)buf.st_mtime;
      }
@@ -69,7 +77,7 @@
    return 0;
  }
  
-@@ -1253,6 +1271,13 @@ g_unix_mount_monitor_finalize (GObject *
+@@ -1253,6 +1272,13 @@ g_unix_mount_monitor_finalize (GObject *
        g_object_unref (monitor->mtab_monitor);
      }
  
@@ -83,7 +91,7 @@
    the_mount_monitor = NULL;
  
    G_OBJECT_CLASS (g_unix_mount_monitor_parent_class)->finalize (object);
-@@ -1333,6 +1358,51 @@ mtab_file_changed (GFileMonitor      *mo
+@@ -1333,6 +1359,51 @@ mtab_file_changed (GFileMonitor      *mo
    g_signal_emit (mount_monitor, signals[MOUNTS_CHANGED], 0);
  }
  
@@ -135,7 +143,7 @@
  static void
  g_unix_mount_monitor_init (GUnixMountMonitor *monitor)
  {
-@@ -1355,6 +1425,12 @@ g_unix_mount_monitor_init (GUnixMountMon
+@@ -1355,6 +1426,12 @@ g_unix_mount_monitor_init (GUnixMountMon
        
        g_signal_connect (monitor->mtab_monitor, "changed", (GCallback)mtab_file_changed, monitor);
      }
