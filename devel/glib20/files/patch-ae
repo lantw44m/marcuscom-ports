@@ -1,5 +1,5 @@
---- configure.orig	2011-09-15 16:59:35.000000000 +0200
-+++ configure	2011-09-15 17:02:03.000000000 +0200
+--- configure.orig	2011-11-01 08:48:56.000000000 +0100
++++ configure	2011-11-01 08:53:55.000000000 +0100
 @@ -583,6 +583,9 @@
  #ifdef HAVE_SYS_TYPES_H
  # include <sys/types.h>
@@ -10,7 +10,7 @@
  #ifdef HAVE_SYS_STAT_H
  # include <sys/stat.h>
  #endif
-@@ -5463,7 +5466,7 @@
+@@ -5471,7 +5474,7 @@
  fi
  
  GLIB_RUNTIME_LIBDIR="$with_runtime_libdir"
@@ -19,7 +19,61 @@
  
  
   if test "x$with_runtime_libdir" != "x"; then
-@@ -23331,7 +23334,7 @@
+@@ -14118,7 +14121,7 @@
+       hardcode_shlibpath_var=no
+       ;;
+ 
+-    freebsd1*)
++    freebsd1.*)
+       ld_shlibs=no
+       ;;
+ 
+@@ -14134,7 +14137,7 @@
+       ;;
+ 
+     # Unfortunately, older versions of FreeBSD 2 do not have this feature.
+-    freebsd2*)
++    freebsd2.*)
+       archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'
+       hardcode_direct=yes
+       hardcode_minus_L=yes
+@@ -15112,7 +15115,7 @@
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -15141,7 +15144,7 @@
+   esac
+   shlibpath_var=LD_LIBRARY_PATH
+   case $host_os in
+-  freebsd2*)
++  freebsd2.*)
+     shlibpath_overrides_runpath=yes
+     ;;
+   freebsd3.[01]* | freebsdelf3.[01]*)
+@@ -17085,7 +17088,7 @@
+         esac
+         ;;
+ 
+-      freebsd[12]*)
++      freebsd[12].*)
+         # C++ shared libraries reported to be fairly broken before
+ 	# switch to ELF
+         ld_shlibs_CXX=no
+@@ -18949,7 +18952,7 @@
+   shlibpath_var=LD_LIBRARY_PATH
+   ;;
+ 
+-freebsd1*)
++freebsd1.*)
+   dynamic_linker=no
+   ;;
+ 
+@@ -23343,7 +23346,7 @@
  fi
  done
  
@@ -28,7 +82,7 @@
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -26124,6 +26127,8 @@
+@@ -26136,6 +26139,8 @@
           ;;
      esac
    fi
@@ -37,7 +91,21 @@
  
    if test x"$G_THREAD_CFLAGS" = x; then
  
-@@ -28804,7 +28809,7 @@
+@@ -26907,8 +26912,11 @@
+ #  b) FreeBSD doesn't do this either.
+ #
+ case $host in
+-  *-*-freebsd*|*-*-linux*)
+-    G_THREAD_LIBS_FOR_GTHREAD="`echo $G_THREAD_LIBS | sed s/-pthread/-pthread/`"
++  *-*-linux*)
++    G_THREAD_LIBS_FOR_GTHREAD="`echo $G_THREAD_LIBS | sed s/-pthread/-lpthread/`"
++    ;;
++  *-*-freebsd*)
++    G_THREAD_LIBS_FOR_GTHREAD="-pthread"
+     ;;
+   *)
+     G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
+@@ -28877,7 +28885,7 @@
  fi
  
  

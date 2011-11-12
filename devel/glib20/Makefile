@@ -3,13 +3,13 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.214 2011/10/15 13:01:16 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.215 2011/11/09 09:56:32 marcus Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
-PORTVERSION=	2.30.1
-PORTREVISION?=	1
+PORTVERSION=	2.30.2
+PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
 		ftp://ftp.gtk.org/pub/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
@@ -45,7 +45,6 @@ USE_PERL5=	yes
 CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu \
 		--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc \
 		--disable-man --without-xml-catalog \
-		--disable-dtrace \
 		--with-pcre=system \
 		--disable-fam
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -55,7 +54,15 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 
 OPTIONS=	COLLATION_FIX "fix string collation" off
 
+#CONFIGURE_ARGS+=--disable-silent-rules
+
 .include <bsd.port.pre.mk>
+
+#.if ${OSVERSION} >= 900000
+#CONFIGURE_ARGS+=--enable-dtrace
+#.else
+CONFIGURE_ARGS+=--disable-dtrace
+#.endif
 
 .if ${ARCH} == powerpc64
 EXTRA_PATCHES=	${FILESDIR}/extra-arch-powerpc64
