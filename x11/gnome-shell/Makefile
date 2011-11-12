@@ -3,12 +3,12 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.44 2011/10/19 17:03:17 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.45 2011/10/23 09:06:48 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
 PORTVERSION=	3.2.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +22,7 @@ LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
 		mutter.0:${PORTSDIR}/x11-wm/mutter \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
 		telepathy-logger.2:${PORTSDIR}/net-im/telepathy-logger \
-		folks.28:${PORTSDIR}/net-im/folks \
+		folks.25:${PORTSDIR}/net-im/folks \
 		pulse.0:${PORTSDIR}/audio/pulseaudio \
 		croco-0.6.3:${PORTSDIR}/textproc/libcroco \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
