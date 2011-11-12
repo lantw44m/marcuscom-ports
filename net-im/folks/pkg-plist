@@ -11,13 +11,13 @@ lib/folks/%%VERSION%%/backends/telepathy/telepathy.so
 lib/girepository-1.0/Folks-0.6.typelib
 lib/libfolks-eds.la
 lib/libfolks-eds.so
-lib/libfolks-eds.so.%%VERSION%%
+lib/libfolks-eds.so.%%LIBVER%%
 lib/libfolks-telepathy.la
 lib/libfolks-telepathy.so
-lib/libfolks-telepathy.so.%%VERSION%%
+lib/libfolks-telepathy.so.%%LIBVER%%
 lib/libfolks.la
 lib/libfolks.so
-lib/libfolks.so.%%VERSION%%
+lib/libfolks.so.%%LIBVER%%
 libdata/pkgconfig/folks-eds.pc
 libdata/pkgconfig/folks-telepathy.pc
 libdata/pkgconfig/folks.pc
