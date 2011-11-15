@@ -3,19 +3,19 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/libgnome-keyring/Makefile,v 1.20 2011/09/19 17:43:12 kwm Exp $
+#   $MCom: ports/security/libgnome-keyring/Makefile,v 1.21 2011/10/07 21:46:27 kwm Exp $
 #
 
 PORTNAME=	libgnome-keyring
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.2
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A program that keeps passwords and other secrets
 
-LIB_DEPENDS=    dbus-1.3:${PORTSDIR}/devel/dbus \
-                gcrypt.18:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
+		gcrypt.18:${PORTSDIR}/security/libgcrypt
 
 USE_XZ=		yes
 USE_GNOME=	gnomehack gnomeprefix ltverhack intlhack glib20
