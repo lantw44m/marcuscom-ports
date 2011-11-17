@@ -1,0 +1,40 @@
+include/evolution-data-server-%%VERSION%%/ews/e-ews-connection.h
+include/evolution-data-server-%%VERSION%%/ews/e-ews-folder.h
+include/evolution-data-server-%%VERSION%%/ews/e-ews-item-change.h
+include/evolution-data-server-%%VERSION%%/ews/e-ews-item.h
+include/evolution-data-server-%%VERSION%%/ews/e-ews-message.h
+include/evolution-data-server-%%VERSION%%/ews/ews-errors.h
+lib/evolution-data-server-%%VERSION%%/libeews-1.2.a
+lib/evolution-data-server-%%VERSION%%/libeews-1.2.la
+lib/evolution-data-server-%%VERSION%%/libeews-1.2.so
+lib/evolution-data-server-%%VERSION%%/libeews-1.2.so.0
+lib/evolution-data-server-%%VERSION%%/libewsutils.a
+lib/evolution-data-server-%%VERSION%%/libewsutils.la
+lib/evolution-data-server-%%VERSION%%/libewsutils.so
+lib/evolution-data-server-%%VERSION%%/libewsutils.so.0
+lib/evolution-data-server/addressbook-backends/libebookbackendews.a
+lib/evolution-data-server/addressbook-backends/libebookbackendews.la
+lib/evolution-data-server/addressbook-backends/libebookbackendews.so
+lib/evolution-data-server/calendar-backends/libecalbackendews.a
+lib/evolution-data-server/calendar-backends/libecalbackendews.la
+lib/evolution-data-server/calendar-backends/libecalbackendews.so
+lib/evolution-data-server/camel-providers/libcamelews.a
+lib/evolution-data-server/camel-providers/libcamelews.la
+lib/evolution-data-server/camel-providers/libcamelews.so
+lib/evolution-data-server/camel-providers/libcamelews.urls
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-exchange-ews.a
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-exchange-ews.la
+lib/evolution/%%VERSION%%/plugins/liborg-gnome-exchange-ews.so
+lib/evolution/%%VERSION%%/plugins/org-gnome-exchange-ews.eplug
+lib/liblzx.a
+lib/liblzx.la
+lib/liblzx.so
+lib/liblzx.so.0
+libdata/pkgconfig/libeews-1.2.pc
+share/locale/de/LC_MESSAGES/evolution-ews.mo
+share/locale/es/LC_MESSAGES/evolution-ews.mo
+share/locale/pl/LC_MESSAGES/evolution-ews.mo
+share/locale/sl/LC_MESSAGES/evolution-ews.mo
+@dirrm lib/evolution-data-server-%%VERSION%%
+@dirrm include/evolution-data-server-%%VERSION%%/ews
+@dirrm include/evolution-data-server-%%VERSION%%
