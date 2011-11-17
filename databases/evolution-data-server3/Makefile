@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.21 2011/09/25 11:24:33 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.22 2011/10/16 18:09:38 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.2.1
+PORTVERSION=	3.2.2
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -42,7 +42,6 @@ USE_AUTOTOOLS=	libtool
 USE_BDB=	41+
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static \
-		--enable-gtk3 \
 		--with-openldap=yes \
 		--with-libdb=${LOCALBASE}
 CPPFLAGS=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}
