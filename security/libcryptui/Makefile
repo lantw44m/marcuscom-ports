@@ -3,11 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/libcryptui/Makefile,v 1.1 2011/09/18 11:48:45 kwm Exp $
+#   $MCom: ports/security/libcryptui/Makefile,v 1.2 2011/09/25 11:15:34 kwm Exp $
 #
 
 PORTNAME=	libcryptui
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.2
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -30,7 +30,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gnomedocutils
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-introspection=no
 
 GLIB_SCHEMAS=	org.gnome.seahorse.recipients.gschema.xml
