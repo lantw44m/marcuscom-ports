@@ -1384,6 +1384,7 @@ share/locale/ml/LC_MESSAGES/eog.mo
 share/locale/mn/LC_MESSAGES/eog.mo
 share/locale/mr/LC_MESSAGES/eog.mo
 share/locale/ms/LC_MESSAGES/eog.mo
+share/locale/my/LC_MESSAGES/eog.mo
 share/locale/nb/LC_MESSAGES/eog.mo
 share/locale/nds/LC_MESSAGES/eog.mo
 share/locale/ne/LC_MESSAGES/eog.mo
@@ -1535,6 +1536,8 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @dirrmtry share/locale/nso
 @dirrmtry share/locale/nds/LC_MESSAGES
 @dirrmtry share/locale/nds
+@dirrmtry share/locale/my/LC_MESSAGES
+@dirrmtry share/locale/my
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES
