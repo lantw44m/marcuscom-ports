@@ -1,5 +1,5 @@
---- configure.orig	2011-10-19 00:15:28.000000000 +0200
-+++ configure	2011-10-19 00:25:35.000000000 +0200
+--- configure.bak	2011-11-14 18:55:17.000000000 +0100
++++ configure	2011-11-19 11:51:40.000000000 +0100
 @@ -724,7 +724,10 @@
  HAVE_XTEST_FALSE
  HAVE_XTEST_TRUE
@@ -29,7 +29,17 @@
    CHEESE_CFLAGS
                C compiler flags for CHEESE, overriding pkg-config
    CHEESE_LIBS linker flags for CHEESE, overriding pkg-config
-@@ -13116,6 +13123,80 @@
+@@ -12182,8 +12189,7 @@
+ 
+ 
+ 
+-CFLAGS="${CFLAGS} -Wall"
+-CFLAGS+=" -DGSEAL_ENABLE"
++CFLAGS="${CFLAGS} -Wall -DGSEAL_ENABLE"
+ 
+ 
+ 
+@@ -13128,6 +13134,80 @@
                    UDEV_PKG=gudev-1.0
  fi
  
@@ -110,7 +120,7 @@
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking operating system" >&5
  $as_echo_n "checking operating system... " >&6; }
  case $host in
-@@ -13130,6 +13211,17 @@
+@@ -13142,6 +13222,17 @@
              as_fn_error $? "libgudev is required under Linux and not installed" "$LINENO" 5
      fi
      ;;
@@ -128,7 +138,7 @@
    *)
      { $as_echo "$as_me:${as_lineno-$LINENO}: result: unsupported operating system" >&5
  $as_echo "unsupported operating system" >&6; }
-@@ -13234,6 +13326,7 @@
+@@ -13246,6 +13337,7 @@
    clutter-gst-1.0 >= \$CLUTTERGST_REQUIRED \\
    mx-1.0 \\
    \$UDEV_PKG
@@ -136,7 +146,7 @@
    \""; } >&5
    ($PKG_CONFIG --exists --print-errors "\
    glib-2.0 >= $GLIB_REQUIRED \
-@@ -13249,6 +13342,7 @@
+@@ -13261,6 +13353,7 @@
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
    $UDEV_PKG
@@ -144,7 +154,7 @@
    ") 2>&5
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-@@ -13267,6 +13361,7 @@
+@@ -13279,6 +13372,7 @@
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
    $UDEV_PKG
@@ -152,7 +162,7 @@
    " 2>/dev/null`
  else
    pkg_failed=yes
-@@ -13292,6 +13387,7 @@
+@@ -13304,6 +13398,7 @@
    clutter-gst-1.0 >= \$CLUTTERGST_REQUIRED \\
    mx-1.0 \\
    \$UDEV_PKG
@@ -160,7 +170,7 @@
    \""; } >&5
    ($PKG_CONFIG --exists --print-errors "\
    glib-2.0 >= $GLIB_REQUIRED \
-@@ -13307,6 +13403,7 @@
+@@ -13319,6 +13414,7 @@
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
    $UDEV_PKG
@@ -168,7 +178,7 @@
    ") 2>&5
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-@@ -13325,6 +13422,7 @@
+@@ -13337,6 +13433,7 @@
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
    $UDEV_PKG
@@ -176,7 +186,7 @@
    " 2>/dev/null`
  else
    pkg_failed=yes
-@@ -13359,6 +13457,7 @@
+@@ -13371,6 +13468,7 @@
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
    $UDEV_PKG
@@ -184,7 +194,7 @@
    " 2>&1`
          else
  	        CHEESE_PKG_ERRORS=`$PKG_CONFIG --print-errors "\
-@@ -13375,6 +13474,7 @@
+@@ -13387,6 +13485,7 @@
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
    $UDEV_PKG
@@ -192,7 +202,7 @@
    " 2>&1`
          fi
  	# Put the nasty error message in config.log where it belongs
-@@ -13394,6 +13494,7 @@
+@@ -13406,6 +13505,7 @@
    clutter-gst-1.0 >= $CLUTTERGST_REQUIRED \
    mx-1.0 \
    $UDEV_PKG
@@ -200,7 +210,7 @@
    ) were not met:
  
  $CHEESE_PKG_ERRORS
-@@ -13449,6 +13550,7 @@
+@@ -13463,6 +13563,7 @@
    gee-1.0 >= \$GEE_REQUIRED \\
    libcanberra-gtk3 >= \$LIBCANBERRA_REQUIRED \\
    \$UDEV_PKG \\
@@ -208,7 +218,7 @@
    gnome-video-effects
    \""; } >&5
    ($PKG_CONFIG --exists --print-errors "\
-@@ -13461,6 +13563,7 @@
+@@ -13475,6 +13576,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -216,7 +226,7 @@
    gnome-video-effects
    ") 2>&5
    ac_status=$?
-@@ -13476,6 +13579,7 @@
+@@ -13490,6 +13592,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -224,7 +234,7 @@
    gnome-video-effects
    " 2>/dev/null`
  else
-@@ -13498,6 +13602,7 @@
+@@ -13512,6 +13615,7 @@
    gee-1.0 >= \$GEE_REQUIRED \\
    libcanberra-gtk3 >= \$LIBCANBERRA_REQUIRED \\
    \$UDEV_PKG \\
@@ -232,7 +242,7 @@
    gnome-video-effects
    \""; } >&5
    ($PKG_CONFIG --exists --print-errors "\
-@@ -13510,6 +13615,7 @@
+@@ -13524,6 +13628,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -240,7 +250,7 @@
    gnome-video-effects
    ") 2>&5
    ac_status=$?
-@@ -13525,6 +13631,7 @@
+@@ -13539,6 +13644,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -248,7 +258,7 @@
    gnome-video-effects
    " 2>/dev/null`
  else
-@@ -13556,6 +13663,7 @@
+@@ -13570,6 +13676,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -256,7 +266,7 @@
    gnome-video-effects
    " 2>&1`
          else
-@@ -13569,6 +13677,7 @@
+@@ -13583,6 +13690,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
@@ -264,7 +274,7 @@
    gnome-video-effects
    " 2>&1`
          fi
-@@ -13585,6 +13694,7 @@
+@@ -13599,6 +13707,7 @@
    gee-1.0 >= $GEE_REQUIRED \
    libcanberra-gtk3 >= $LIBCANBERRA_REQUIRED \
    $UDEV_PKG \
