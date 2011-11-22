@@ -3,11 +3,11 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-idle/Makefile,v 1.3 2011/02/12 09:34:24 kwm Exp $
+#    $MCom: ports/net-im/telepathy-idle/Makefile,v 1.4 2011/05/28 13:33:32 kwm Exp $
 #
 
 PORTNAME=	telepathy-idle
-PORTVERSION=	0.1.10
+PORTVERSION=	0.1.11
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
