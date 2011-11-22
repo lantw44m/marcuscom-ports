@@ -3,13 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/farsight2/Makefile,v 1.6 2011/08/11 19:48:47 kwm Exp $
+#    $MCom: ports/net-im/farsight2/Makefile,v 1.7 2011/10/17 21:03:58 kwm Exp $
 
 PORTNAME=	farsight2
-PORTVERSION=	0.0.29
+PORTVERSION=	0.0.31
 CATEGORIES=	net-im devel
-MASTER_SITES=	http://farsight.freedesktop.org/releases/farsight2/ \
-		LOCAL/kwm
+MASTER_SITES=	http://farsight.freedesktop.org/releases/farsight2/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Collection of GStreamer modules and libraries for videoconferencing
@@ -23,7 +22,7 @@ USE_PYTHON=	yes
 USE_GNOME=	gnomehack pkgconfig glib20 ltverhack
 USE_GSTREAMER=	core good bad python
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
