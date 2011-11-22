@@ -3,10 +3,10 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-logger/Makefile,v 1.9 2011/04/05 10:12:21 kwm Exp $
+#    $MCom: ports/net-im/telepathy-logger/Makefile,v 1.10 2011/05/28 13:27:47 kwm Exp $
 
 PORTNAME=	telepathy-logger
-PORTVERSION=	0.2.10
+PORTVERSION=	0.2.12
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
