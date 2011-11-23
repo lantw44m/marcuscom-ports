@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libepc
-PORTVERSION=	0.4.2
+PORTVERSION=	0.4.3
 CATEGORIES=	www
 MASTER_SITES=	GNOME
 
@@ -25,6 +25,5 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--enable-static
 
 .include <bsd.port.mk>
