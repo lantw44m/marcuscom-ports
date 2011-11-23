@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/farsight2/Makefile,v 1.7 2011/10/17 21:03:58 kwm Exp $
+#    $MCom: ports/net-im/farsight2/Makefile,v 1.8 2011/11/22 11:40:55 kwm Exp $
 
 PORTNAME=	farsight2
 PORTVERSION=	0.0.31
@@ -15,6 +15,7 @@ COMMENT=	Collection of GStreamer modules and libraries for videoconferencing
 
 LIB_DEPENDS=	nice.10:${PORTSDIR}/net-im/libnice
 
+FETCH_ARGS=	-Fpr
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
