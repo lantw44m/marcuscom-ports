@@ -1,0 +1,10 @@
+--- Source/WebKit/gtk/webkit.pc.in.orig	2011-11-30 14:16:35.000000000 +0100
++++ Source/WebKit/gtk/webkit.pc.in	2011-11-30 14:20:00.000000000 +0100
+@@ -6,6 +6,6 @@
+ Name: WebKit
+ Description: Web content engine for GTK+
+ Version: @VERSION@
+-Requires: glib-2.0 gtk+-@GTK_API_VERSION@ libsoup-2.4
++Requires: glib-2.0 gtk+-@GTK_API_VERSION@ libsoup-2.4 javascriptcoregtk-@WEBKITGTK_API_VERSION@
+ Libs: -L${libdir} -lwebkitgtk-@WEBKITGTK_API_VERSION@
+ Cflags: -I${includedir}/webkit-@WEBKITGTK_API_VERSION@

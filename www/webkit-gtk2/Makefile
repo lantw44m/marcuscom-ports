@@ -2,13 +2,13 @@
 # Date created:		2007-10-21
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/www/webkit-gtk2/Makefile,v 1.43 2011/09/23 22:26:07 amdmi3 Exp $
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.82 2011/10/04 16:24:37 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.83 2011/10/14 18:21:52 kwm Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.6.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -26,7 +26,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
 USE_GETTEXT=	yes
-WANT_GSTREAMER=	yes
+USE_GSTREAMER=	yes
 MAKE_JOBS_SAFE=	yes
 USE_XORG=	xt
 USE_BISON=	build
@@ -53,16 +53,16 @@ GLIB_SCHEMAS=	org.webkitgtk-1.0.gschema.xml
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
-OPTIONS=	VIDEO "Enable video support" on \
+OPTIONS=	WEBGL "Enable webGL support (experimental)" off \
 		DEBUG "Build with debug support" off
 
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_VIDEO)
+.if defined(WITH_WEBGL)
 USE_GSTREAMER+=	yes
-CONFIGURE_ARGS+=--enable-video
+CONFIGURE_ARGS+=--enable-webgl
 .else
-CONFIGURE_ARGS+=--disable-video
+CONFIGURE_ARGS+=--disable-webgl
 .endif
 
 .if defined(WITH_DEBUG)
