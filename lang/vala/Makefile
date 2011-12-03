@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/vala/Makefile,v 1.56 2011/09/15 18:59:33 kwm Exp $
+#   $MCom: ports/lang/vala/Makefile,v 1.57 2011/09/17 20:25:38 kwm Exp $
 #
 
 PORTNAME=	vala
-PORTVERSION=	0.14.0
+PORTVERSION=	0.14.1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -16,11 +16,14 @@ COMMENT=	Programming language and compiler that converts Vala code into C code
 
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
+
 USE_XZ=		yes
 USE_GNOME=	gnomehack glib20 gnomeprefix libxslt
 GNU_CONFIGURE=	yes
+WITH_FBSD10_FIX=yes
 USE_GETTEXT=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}" LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS=	-I${LOCALBASE}/include
+LDFLAGS=	-L${LOCALBASE}/lib
 USE_BISON=	build
 USE_LDCONFIG=	yes
 
