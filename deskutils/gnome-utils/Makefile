@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.154 2011/04/17 19:09:42 mezz Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.155 2011/06/11 19:51:11 mezz Exp $
 #
 
 PORTNAME=	gnome-utils
@@ -42,5 +42,10 @@ GCONF_SCHEMAS=	gnome-dictionary.schemas gnome-screenshot.schemas \
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DGTK_DISABLE_DEPRECATED||g' \
 		${WRKSRC}/gsearchtool/libgnomeui-deprecated/Makefile.in
+	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
+		${WRKSRC}/gnome-dictionary/libgdict/Makefile.in \
+		${WRKSRC}/gsearchtool/Makefile.in \
+		${WRKSRC}/gsearchtool/libgnomeui-deprecated/Makefile.in \
+		${WRKSRC}/libeggsmclient/Makefile.in
 
 .include <bsd.port.mk>
