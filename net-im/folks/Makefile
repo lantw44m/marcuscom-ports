@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/folks/Makefile,v 1.23 2011/10/23 10:23:04 kwm Exp $
+#   $MCom: ports/net-im/folks/Makefile,v 1.24 2011/11/12 14:15:56 kwm Exp $
 #
 
 PORTNAME=	folks
@@ -18,6 +18,8 @@ BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
+
+CONFLICTS=	folks-0.4.[0-9]*
 
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
