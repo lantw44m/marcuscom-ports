@@ -81,9 +81,6 @@ lib/packagekit-backend/libpk_backend_test_succeed.so
 lib/packagekit-backend/libpk_backend_test_thread.a
 lib/packagekit-backend/libpk_backend_test_thread.la
 lib/packagekit-backend/libpk_backend_test_thread.so
-lib/polkit-1/extensions/libpackagekit-action-lookup.a
-lib/polkit-1/extensions/libpackagekit-action-lookup.la
-lib/polkit-1/extensions/libpackagekit-action-lookup.so
 %%PYTHON_SITELIBDIR%%/packagekit/__init__.py
 %%PYTHON_SITELIBDIR%%/packagekit/__init__.pyc
 %%PYTHON_SITELIBDIR%%/packagekit/__init__.pyo
