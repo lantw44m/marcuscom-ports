@@ -1,0 +1,33 @@
+include/PackageKit/packagekit-qt/QPackageKit
+include/PackageKit/packagekit-qt/bitfield.h
+include/PackageKit/packagekit-qt/client.h
+include/PackageKit/packagekit-qt/enum.h
+include/PackageKit/packagekit-qt/package.h
+include/PackageKit/packagekit-qt/transaction.h
+include/PackageKit/packagekit-qt2/Daemon
+include/PackageKit/packagekit-qt2/Eula
+include/PackageKit/packagekit-qt2/Package
+include/PackageKit/packagekit-qt2/Signature
+include/PackageKit/packagekit-qt2/Transaction
+include/PackageKit/packagekit-qt2/bitfield.h
+include/PackageKit/packagekit-qt2/daemon.h
+include/PackageKit/packagekit-qt2/eula.h
+include/PackageKit/packagekit-qt2/package.h
+include/PackageKit/packagekit-qt2/signature.h
+include/PackageKit/packagekit-qt2/transaction.h
+lib/libpackagekit-qt.a
+lib/libpackagekit-qt.la
+lib/libpackagekit-qt.so
+lib/libpackagekit-qt.so.14
+lib/libpackagekit-qt2.a
+lib/libpackagekit-qt2.la
+lib/libpackagekit-qt2.so
+lib/libpackagekit-qt2.so.2
+libdata/pkgconfig/packagekit-qt.pc
+libdata/pkgconfig/packagekit-qt2.pc
+share/cmake/Modules/FindQPackageKit.cmake
+share/cmake/Modules/FindPackageKitQt2.cmake
+@dirrmtry share/cmake/Modules
+@dirrmtry share/cmake
+@dirrm include/PackageKit/packagekit-qt2
+@dirrm include/PackageKit/packagekit-qt
