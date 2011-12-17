@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5/Makefile,v 1.7 2011/07/03 11:57:45 kwm Exp $
+#   $MCom: ports/databases/libgda5/Makefile,v 1.8 2011/10/13 13:29:50 kwm Exp $
 #
 
 PORTNAME=	libgda
-PORTVERSION?=	4.99.4
+PORTVERSION?=	5.0.2
 PORTREVISION?=	0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
@@ -37,6 +37,7 @@ GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ARGS=	--without-oracle \
 		--disable-crypto \
+		--disable-default-binary \
 		--enable-introspection
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib

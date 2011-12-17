@@ -44,6 +44,39 @@ lib/libgda-ui-%%VERSION%%.so.5
 libdata/pkgconfig/libgda-ui-%%VERSION%%.pc
 share/applications/gda-browser-%%VERSION%%.desktop
 share/applications/gda-control-center-%%VERSION%%.desktop
+share/doc/gda-browser/BrowserConnection.html
+share/doc/gda-browser/BrowserCore.html
+share/doc/gda-browser/BrowserFavorites.html
+share/doc/gda-browser/BrowserPerspective.html
+share/doc/gda-browser/BrowserWindow.html
+share/doc/gda-browser/CcGrayBar.html
+share/doc/gda-browser/MgrFavorites.html
+share/doc/gda-browser/UILayout.png
+share/doc/gda-browser/code_orga.html
+share/doc/gda-browser/core.html
+share/doc/gda-browser/extrawidgets.html
+share/doc/gda-browser/gda-browser-BrowserPage.html
+share/doc/gda-browser/gda-browser-Data-Manager-perspective.html
+share/doc/gda-browser/gda-browser-Query-Exec-perspective.html
+share/doc/gda-browser/gda-browser-Schema-Browser-perspective.html
+share/doc/gda-browser/gda-browser-Support-functions.html
+share/doc/gda-browser/gda-browser-UiFormgrid.html
+share/doc/gda-browser/gda-browser-popup-container.html
+share/doc/gda-browser/gda-browser.devhelp2
+share/doc/gda-browser/home.png
+share/doc/gda-browser/index.html
+share/doc/gda-browser/index.sgml
+share/doc/gda-browser/left.png
+share/doc/gda-browser/part_api.html
+share/doc/gda-browser/part_begin.html
+share/doc/gda-browser/part_index.html
+share/doc/gda-browser/perspectives.html
+share/doc/gda-browser/prog_struct.html
+share/doc/gda-browser/right.png
+share/doc/gda-browser/style.css
+share/doc/gda-browser/up.png
+share/doc/gda-browser/why.html
+share/doc/gda-browser/windows.html
 share/gir-1.0/Gdaui-%%VERSION%%.gir
 share/gnome/help/gda-browser/C/actions.page
 share/gnome/help/gda-browser/C/data-manager-perspective.page
@@ -487,6 +520,7 @@ share/pixmaps/gda-browser-%%VERSION%%.png
 @dirrm share/libgda-%%VERSION%%/pixmaps
 @dirrm share/libgda-%%VERSION%%/language-specs
 @dirrm share/libgda-%%VERSION%%/demo
+@dirrm share/doc/gda-browser
 @dirrmtry share/applications
 @dirrm lib/libgda-%%VERSION%%/plugins
 @dirrm include/libgda-%%VERSION%%/libgda-ui
