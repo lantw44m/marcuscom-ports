@@ -25,6 +25,7 @@ include/libgdamm-5.0/libgdamm/holder.h
 include/libgdamm-5.0/libgdamm/init.h
 include/libgdamm-5.0/libgdamm/metastore.h
 include/libgdamm-5.0/libgdamm/metastruct.h
+include/libgdamm-5.0/libgdamm/numeric.h
 include/libgdamm-5.0/libgdamm/private/batch_p.h
 include/libgdamm-5.0/libgdamm/private/blob_p.h
 include/libgdamm-5.0/libgdamm/private/blobop_p.h
@@ -50,6 +51,7 @@ include/libgdamm-5.0/libgdamm/private/handlertype_p.h
 include/libgdamm-5.0/libgdamm/private/holder_p.h
 include/libgdamm-5.0/libgdamm/private/metastore_p.h
 include/libgdamm-5.0/libgdamm/private/metastruct_p.h
+include/libgdamm-5.0/libgdamm/private/numeric_p.h
 include/libgdamm-5.0/libgdamm/private/quarklist_p.h
 include/libgdamm-5.0/libgdamm/private/row_p.h
 include/libgdamm-5.0/libgdamm/private/serveroperation_p.h
