@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gtk-update-icon-cache/Makefile,v 1.7 2011/10/19 09:36:42 kwm Exp $
+#   $MCom: ports/graphics/gtk-update-icon-cache/Makefile,v 1.8 2011/11/12 19:04:12 kwm Exp $
 #
 
 PORTNAME=	gtk-update-icon-cache
@@ -46,7 +46,7 @@ MAN1=		gtk-update-icon-cache.1
 
 pre-configure:
 .if !exists(${LOCALBASE}/libdata/pkgconfig/cairo-xlib.pc)
-	@${ECHO_CMD} "${PKGNAME}: Needs cairo build with X11 support."
+	@${ECHO_CMD} "${PKGNAME}: Needs cairo with X11 support enabled."
 	@${FALSE}
 .endif
 

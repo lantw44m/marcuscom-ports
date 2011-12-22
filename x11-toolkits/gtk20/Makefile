@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.226 2011/10/19 09:36:43 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.227 2011/11/12 19:04:12 kwm Exp $
 #
 # Remember to update graphics/gtk-update-icon-cache too.
 
@@ -75,7 +75,7 @@ post-patch:
 
 pre-configure:
 .if !exists(${LOCALBASE}/libdata/pkgconfig/cairo-xlib.pc)
-	@${ECHO_CMD} "${PKGNAME}: Needs cairo build with X11 support."
+	@${ECHO_CMD} "${PKGNAME}: Needs cairo with X11 support enabled."
 	@${FALSE}
 .endif
 

@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.41 2011/11/12 18:51:26 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.42 2011/12/19 19:28:30 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -85,7 +85,7 @@ post-patch:
 
 pre-configure:
 .if !exists(${LOCALBASE}/libdata/pkgconfig/cairo-xlib.pc)
-	@${ECHO_CMD} "${PKGNAME}: Needs cairo build with X11 support."
+	@${ECHO_CMD} "${PKGNAME}: Needs cairo with X11 support enabled."
 	@${FALSE}
 .endif
 
