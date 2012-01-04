@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.27 2011/08/24 17:03:09 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.28 2011/10/22 20:31:06 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -25,19 +25,18 @@ upgrades.
 
   # portmaster -o devel/libgdata06 devel/libgdata
   # portmaster -o graphics/libchamplain08 graphics/libchamplain
-  # pkg_delete -f vte-0.\*
+  # pkg_delete -f vte-0.\* clutter-\*
   # portmaster x11-toolkits/vte
   # portmaster -a
 
 or
 
   # pkgdb -F
-  # pkg_delete -f avahi-gtk-\*
+  # pkg_delete -f avahi-gtk-\* vte-\* clutter-\*
   # portinstall net/avahi-gtk
+  # portinstall x11-toolkits/vte
   # portupgrade -o devel/libgdata06 devel/libgdata
   # portupgrade -o graphics/libchamplain08 graphics/libchamplain
-  # pkg_delete -f vte-0.\*
-  # portinstall x11-toolkits/vte
   # portupgrade -a
 
   If you want to start using the GNOME 3.0 desktop. and you have currently
@@ -46,14 +45,14 @@ or
   Make a list of your installed ports.
 
   # pkg_delete -fr gnome-\* libwnck-2.\* vte-0.\* at-spi-1.\* seed-2.\* \
-	libgnomekbd-2.\* gtk-vnc-0.3.\*
+	libgnomekbd-2.\* gtk-vnc-0.3.\* clutter-\*
   # portmaster -a
   # install x11/gnome3 or x11/gnome3-lite
 
 or
 
   # pkg_delete -fr gnome-\* libwnck-2.\* vte-0.\*  at-spi-1.\* seed-2.\* \
-	libgnomekbd-2.\* gtk-vnc-0.3.\*
+	libgnomekbd-2.\* gtk-vnc-0.3.\* clutter-\*
   # pkgdb -Ff
   # portupgrade -a
 
