@@ -1,5 +1,6 @@
 bin/glom
 bin/glom_create_from_example
+bin/glom_test_connection
 include/glom-%%VERSION%%/libglom/appstate.h
 include/glom-%%VERSION%%/libglom/data_structure/field.h
 include/glom-%%VERSION%%/libglom/data_structure/fieldtypes.h
