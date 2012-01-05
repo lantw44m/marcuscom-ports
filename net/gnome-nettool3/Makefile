@@ -3,11 +3,11 @@
 # Whom:				Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net/gnome-nettool3/Makefile,v 1.1 2011/05/01 23:42:02 mezz Exp $
 #
 
 PORTNAME=	gnome-nettool
-PORTVERSION=	3.0.0
+PORTVERSION=	3.0.1
 PORTEPOCH=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
@@ -21,15 +21,15 @@ LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop
 CONFLICTS=	gnome-nettool-2.[0-9]*
 LATEST_LINK=	gnome-nettool3
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gtk30 gnomedocutils
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CFLAGS+=	-DHAVE_SOCKADDR_SA_LEN
 
 GLIB_SCHEMAS=	org.gnome.gnome-nettool.gschema.xml
