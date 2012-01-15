@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-app/Makefile,v 1.20 2011/04/05 10:34:44 kwm Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.21 2011/09/13 11:01:32 kwm Exp $
 #
 
 PORTNAME=	avahi
@@ -118,6 +118,8 @@ avahi-post-patch:
 		${WRKSRC}/configure \
 		${WRKSRC}/avahi-client/Makefile.in \
 		${WRKSRC}/avahi-daemon/Makefile.in
+	@${REINPLACE_CMD} -e 's|have_inotify=yes|have_inotify=no|' \
+		${WRKSRC}/configure
 	@${FIND} ${WRKSRC} -name Makefile.in | ${XARGS} \
 	    	${REINPLACE_CMD} -e 's|(LIBINTL)|(INTLLIBS)|g ; \
 		s|(LIBICONV)|(LTLIBICONV)|g'

@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.215 2011/11/09 09:56:32 marcus Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.216 2011/11/12 14:44:16 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
@@ -97,6 +97,8 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/lib/dbus/machine-id|/db/dbus/machine-id|g' \
 		${WRKSRC}/gio/gdbusaddress.c ${WRKSRC}/gio/gdbusprivate.c \
 		${WRKSRC}/po/*.po
+	@${REINPLACE_CMD} -e 's|inotify_support=yes|inotify_support=no| ; \
+		s|#define HAVE_SYS_INOTIFY_H 1||' ${WRKSRC}/configure
 
 post-install:
 	@${MKDIR} ${PREFIX}/share/GConf/gsettings
