@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/caribou/Makefile,v 1.10 2011/10/17 13:29:09 kwm Exp $
+#    $MCom: ports/accessibility/caribou/Makefile,v 1.11 2011/10/20 16:23:25 kwm Exp $
 #
 
 PORTNAME=	caribou
@@ -43,7 +43,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${PYTHON_CMD}|g' \
 		${WRKSRC}/tools/*.py
 	@${REINPLACE_CMD} -e 's|/bin/bash|/bin/sh|g' \
-		-e 's|$${BASH_SOURCE[0]}|.|g' \
+		-e 's|$${BASH_SOURCE\[0\]}|.|g' \
 		${WRKSRC}/bin/antler-keyboard.in \
 		${WRKSRC}/bin/caribou-preferences.in \
 		${WRKSRC}/bin/caribou.in
