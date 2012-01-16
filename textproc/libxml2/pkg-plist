@@ -55,6 +55,5 @@ lib/libxml2.so
 lib/libxml2.so.5
 libdata/pkgconfig/libxml-2.0.pc
 share/aclocal/libxml.m4
-@dirrmtry lib/pkgconfig
 @dirrm include/libxml2/libxml
 @dirrm include/libxml2

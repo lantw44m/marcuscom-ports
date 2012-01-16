@@ -7,6 +7,5 @@ lib/libffi.la
 lib/libffi.so
 lib/libffi.so.5
 libdata/pkgconfig/libffi.pc
-@dirrmtry libdata/pkgconfig
 @dirrm lib/libffi-%%PORTVERSION%%/include
 @dirrm lib/libffi-%%PORTVERSION%%

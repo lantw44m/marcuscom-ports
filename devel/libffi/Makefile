@@ -7,7 +7,7 @@
 
 PORTNAME=	libffi
 PORTVERSION=	3.0.9
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
