@@ -1,0 +1,39 @@
+# New ports collection makefile for:	pkgconfig
+# Date created:				30 April 2001
+# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
+#
+# $FreeBSD$
+#    $MCom$
+#
+
+PORTNAME=	pkg-config
+PORTVERSION=	0.26
+CATEGORIES=	devel
+MASTER_SITES=	http://pkgconfig.freedesktop.org/releases/
+DIST_SUBDIR=	gnome2
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	A utility to retrieve information about installed libraries
+
+USE_CSTD=	gnu89
+USE_GNOME=	_glib20
+USE_GMAKE=	yes
+GNU_CONFIGURE=	yes
+
+MAN1=		pkg-config.1
+
+.include <bsd.port.pre.mk>
+
+PC_PATH=${PREFIX}/libdata/pkgconfig
+PC_PATH:=${PC_PATH}:${PREFIX}/lib/pkgconfig
+.if ${LOCALBASE} != ${PREFIX}
+PC_PATH:=	${PC_PATH}:${LOCALBASE}/libdata/pkgconfig
+PC_PATH:=	${PC_PATH}:${LOCALBASE}/lib/pkgconfig
+.endif
+
+CONFIGURE_ARGS=	--with-pc-path="${PC_PATH}"
+
+CONFIGURE_ENV=	GLIB_CFLAGS="-I${LOCALBASE}/include/glib-2.0" \
+		GLIB_LIBS="-L${LOCALBASE}/lib -lglib-2.0 -lintl"
+
+.include <bsd.port.post.mk>

@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.555 2011/09/17 11:17:47 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.556 2011/10/16 19:34:53 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -259,7 +259,6 @@ pygtk_USE_GNOME_IMPL=	gnomelibs gdkpixbuf libglade
 
 _glib20_LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20
 _glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
-_glib20_USE_GNOME_IMPL=	pkgconfig
 
 glib20_RUN_DEPENDS=	${LOCALBASE}/lib/gio/modules/libgiofam.so:${PORTSDIR}/devel/gio-fam-backend
 glib20_DETECT=		${LOCALBASE}/lib/gio/modules/libgiofam.so
@@ -314,7 +313,6 @@ libglade2_USE_GNOME_IMPL=libxml2 gtk20
 
 libxml2_LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
 libxml2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxml-2.0.pc
-libxml2_USE_GNOME_IMPL=	pkgconfig
 
 libxslt_LIB_DEPENDS=	xslt.2:${PORTSDIR}/textproc/libxslt
 libxslt_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxslt.pc
