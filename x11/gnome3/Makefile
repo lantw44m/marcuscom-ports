@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.30 2011/10/17 15:24:53 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.31 2011/10/20 21:24:53 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -36,7 +36,6 @@ RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		metacity>=2.34.0:${PORTSDIR}/x11-wm/metacity3 \
 		gnome-control-center>=2.91.0:${PORTSDIR}/sysutils/gnome-control-center3 \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
-		gnome-tweak-tool:${PORTSDIR}/deskutils/gnome-tweak-tool \
 		${LOCALBASE}/share/help/C/gnome-help/index.page:${PORTSDIR}/misc/gnome-user-docs3 \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme
 
@@ -51,7 +50,8 @@ OPTIONS+=	MAPI "Depend on evolution-mapi (pulls in samba4)" off
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_GNOME_SHELL)
-RUN_DEPENDS+=	gnome-shell>=2.91.0:${PORTSDIR}/x11/gnome-shell
+RUN_DEPENDS+=	gnome-shell>=2.91.0:${PORTSDIR}/x11/gnome-shell \
+		gnome-tweak-tool:${PORTSDIR}/deskutils/gnome-tweak-tool
 .endif
 
 .if ${.CURDIR:T}!="gnome3-lite"
