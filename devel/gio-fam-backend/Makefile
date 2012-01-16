@@ -3,12 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.87 2011/10/28 19:03:26 kwm Exp $
+#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.88 2011/11/12 14:44:17 kwm Exp $
 #
 
 PORTNAME=	gio-fam-backend
 PORTVERSION=	2.30.2
-PORTREVISION=	0
+PORTREVISION=	1	
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
 		ftp://ftp.gtk.org/pub/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
@@ -28,13 +28,17 @@ BUILD_WRKSRC=	${WRKSRC}/gio/fam
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 WITH_FBSD10_FIX=yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack pkgconfig _glib20
+USE_GNOME=	gnomehack _glib20
 USE_FAM=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}"
+		PTHREAD_LIBS="${PTHREAD_LIBS}" \
+		LIBFFI_CFLAGS="-I${LOCALBASE}/include" \
+		LIBFFI_LIBS="-L${LOCALBASE}/lib -lffi" \
+		PCRE_CFLAGS="-I${LOCALBASE}/include" \
+		PCRE_LIBS="-L${LOCALBASE}/lib -lpcre"
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 

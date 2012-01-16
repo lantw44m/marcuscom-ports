@@ -3,13 +3,13 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.216 2011/11/12 14:44:16 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.217 2012/01/15 15:56:09 ahze Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
 PORTVERSION=	2.30.2
-PORTREVISION?=	0
+PORTREVISION?=	1	
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
 		ftp://ftp.gtk.org/pub/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
@@ -37,7 +37,7 @@ LIB_DEPENDS+=	pcre.0:${PORTSDIR}/devel/pcre \
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig ltverhack
+USE_GNOME=	gnomehack ltverhack
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_PYTHON=	2.5+
@@ -50,7 +50,12 @@ CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}"
+		PTHREAD_LIBS="${PTHREAD_LIBS}" \
+		LIBFFI_CFLAGS="-I${LOCALBASE}/include" \
+		LIBFFI_LIBS="-L${LOCALBASE}/lib -lffi" \
+		PCRE_CFLAGS="-I${LOCALBASE}/include" \
+		PCRE_LIBS="-L${LOCALBASE}/lib -lpcre"
+		
 
 OPTIONS=	COLLATION_FIX "fix string collation" off
 
