@@ -3,11 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.87 2011/03/23 13:50:07 kwm Exp $
+#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.88 2011/04/25 07:33:12 kwm Exp $
 #
 
 PORTNAME=	gnome-doc-utils
 PORTVERSION=	0.20.6
+PORTREVISION=	1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 
@@ -26,7 +27,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehier gnomehack libxslt intlhack
+USE_GNOME=	gnomehier gnomehack libxslt intlhack pkgconfig
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
