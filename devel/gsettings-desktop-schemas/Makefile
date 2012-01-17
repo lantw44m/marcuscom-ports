@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.15 2011/09/19 18:42:49 kwm Exp $
+#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.16 2011/10/07 22:08:49 kwm Exp $
 #
 
 PORTNAME=	gsettings-desktop-schemas
@@ -23,7 +23,7 @@ USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_PERL_BUILD=	yes
-USE_GNOME=	gnomehack intltool glib20
+USE_GNOME=	gnomehack intltool glib20 pkgconfig
 GNU_CONFIGURE=	yes
 
 GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \

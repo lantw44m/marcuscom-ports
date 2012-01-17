@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/vala/Makefile,v 1.57 2011/09/17 20:25:38 kwm Exp $
+#   $MCom: ports/lang/vala/Makefile,v 1.58 2011/12/03 11:43:59 kwm Exp $
 #
 
 PORTNAME=	vala
@@ -18,7 +18,7 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack glib20 gnomeprefix libxslt
+USE_GNOME=	gnomehack glib20 gnomeprefix libxslt pkgconfig
 GNU_CONFIGURE=	yes
 WITH_FBSD10_FIX=yes
 USE_GETTEXT=	yes

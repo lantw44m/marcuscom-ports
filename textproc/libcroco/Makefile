@@ -18,7 +18,7 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack glib20 libxml2 ltverhack
+USE_GNOME=	gnomehack glib20 libxml2 ltverhack pkgconfig
 CONFIGURE_ARGS=	--disable-gtk-doc-html
 
 PLIST_SUB=	VERSION="0.6"
