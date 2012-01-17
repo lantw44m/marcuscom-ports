@@ -1,9 +1,9 @@
-# New ports collection makefile for:	desktop-file-utils
+ New ports collection makefile for:	desktop-file-utils
 # Date created:			11 Jun 2004
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/desktop-file-utils/Makefile,v 1.10 2012/01/17 16:13:53 ahze Exp $
 #
 
 PORTNAME=	desktop-file-utils
@@ -25,8 +25,8 @@ CONFIGURE_ENV=	EMACS="no"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=		desktop-file-install.1 desktop-file-validate.1 \
-		update-desktop-database.1
+MAN1=		desktop-file-edit.1 desktop-file-install.1 \
+		desktop-file-validate.1 update-desktop-database.1
 
 PKGINSTALL=	${WRKDIR}/pkg-install
 PKGDEINSTALL=	${WRKDIR}/pkg-deinstall
