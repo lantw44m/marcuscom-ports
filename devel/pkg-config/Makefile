@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/pkg-config/Makefile,v 1.14 2012/01/16 17:48:14 ahze Exp $
+#    $MCom: ports/devel/pkg-config/Makefile,v 1.15 2012/01/16 18:15:49 ahze Exp $
 #
 
 PORTNAME=	pkg-config
@@ -17,7 +17,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A utility to retrieve information about installed libraries
 
 USE_CSTD=	gnu89
-USE_GNOME=	glib20
+USE_GNOME=	_glib20
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 
