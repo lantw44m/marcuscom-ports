@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.556 2011/10/16 19:34:53 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.557 2012/01/16 17:48:14 ahze Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -497,6 +497,7 @@ gtksourceview3_USE_GNOME_IMPL=gtk30 libxml2
 pkgconfig_DETECT=			${LOCALBASE}/bin/pkg-config
 pkgconfig_BUILD_DEPENDS=	pkg-config:${PORTSDIR}/devel/pkg-config
 pkgconfig_RUN_DEPENDS=		pkg-config:${PORTSDIR}/devel/pkg-config
+pkgconfig_USE_GNOME_IMPL=	glib20
 
 libgsf_LIB_DEPENDS=			gsf-1.114:${PORTSDIR}/devel/libgsf
 libgsf_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgsf-1.pc
