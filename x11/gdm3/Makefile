@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.14 2011/10/19 22:27:49 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.15 2011/10/20 09:11:40 kwm Exp $
 #
 
 PORTNAME=	gdm
@@ -73,6 +73,10 @@ OPTIONS=	IPV6 "Enable IPv6 support" off \
 		KEYRING "Enable GnomeKeyring/PAM integration" on
 
 .include <bsd.port.options.mk>
+
+.if defined(WITH_DEBUG)
+CONFIGURE_ARGS+=	--enable-debug
+.endif
 
 .if defined(WITHOUT_KEYRING)
 SUB_LIST+=	PAM_KEYRING=\#
