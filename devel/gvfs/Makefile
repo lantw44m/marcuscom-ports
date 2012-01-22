@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.80 2011/10/04 18:01:10 kwm Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.81 2011/10/17 13:25:31 kwm Exp $
 #
 
 PORTNAME=	gvfs
 PORTVERSION=	1.10.1
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -60,7 +61,7 @@ PLIST_SUB+=	SMB="@comment "
 .endif
 
 .if defined(WITH_CDDA) && !defined(WITHOUT_HAL)
-LIB_DEPENDS+=	cdio_paranoia.0:${PORTSDIR}/sysutils/libcdio
+LIB_DEPENDS+=	cdio_paranoia.1:${PORTSDIR}/sysutils/libcdio
 PLIST_SUB+=	CDDA=""
 .else
 CONFIGURE_ARGS+=	--disable-cdda
