@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/mail/evolution-groupwise/Makefile,v 1.1 2011/10/16 21:22:10 kwm Exp $
 #
 
 PORTNAME=	evolution-groupwise
-PORTVERSION=	3.2.1
+PORTVERSION=	3.2.3
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
