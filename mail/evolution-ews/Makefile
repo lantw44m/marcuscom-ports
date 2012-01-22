@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/mail/evolution-ews/Makefile,v 1.1 2011/11/17 16:22:56 kwm Exp $
 #
 
 PORTNAME=	evolution-ews
-PORTVERSION=	3.2.2
+PORTVERSION=	3.2.3
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
