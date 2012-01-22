@@ -3,12 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/gjs/Makefile,v 1.21 2011/10/04 17:33:06 kwm Exp $
+#   $MCom: ports/lang/gjs/Makefile,v 1.22 2011/12/15 15:27:48 kwm Exp $
 #
 
 PORTNAME=	gjs
-PORTVERSION=	1.30.0
-PORTREVISION=	1
+PORTVERSION=	1.30.1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -27,17 +26,11 @@ USE_PYTHON=	build
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix gnomehack intlhack glib20 ltverhack
 USE_LDCONFIG=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
-
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 700000
-BROKEN=		does not link on 6.x
-.endif
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 post-patch:
 	${REINPLACE_CMD} -e 's|/usr/bin/python|/usr/bin/env python|g' \
 		${WRKSRC}/scripts/make-tests
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
