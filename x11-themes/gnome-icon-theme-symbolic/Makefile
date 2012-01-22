@@ -3,11 +3,11 @@
 # Whom:					Mezz <mezz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-icon-theme-symbolic/Makefile,v 1.8 2011/10/04 17:52:44 kwm Exp $
+#   $MCom: ports/x11-themes/gnome-icon-theme-symbolic/Makefile,v 1.9 2011/10/19 21:13:26 kwm Exp $
 #
 
 PORTNAME=	gnome-icon-theme-symbolic
-PORTVERSION=	3.2.1
+PORTVERSION=	3.2.2
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
