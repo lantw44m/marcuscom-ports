@@ -19,7 +19,6 @@ libdata/pkgconfig/clutter-gst-1.0.pc
 %%DOCSDIR%%/ch02.html
 %%DOCSDIR%%/clutter-gst-Utilities.html
 %%DOCSDIR%%/clutter-gst-Versioning-Macros.html
-%%DOCSDIR%%/clutter-gst.devhelp
 %%DOCSDIR%%/clutter-gst.devhelp2
 %%DOCSDIR%%/home.png
 %%DOCSDIR%%/index.html
