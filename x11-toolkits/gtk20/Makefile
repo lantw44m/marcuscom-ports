@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.228 2011/12/22 13:43:43 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.229 2012/01/19 00:33:53 ahze Exp $
 #
 # Remember to update graphics/gtk-update-icon-cache too.
 
 PORTNAME=	gtk
-PORTVERSION=	2.24.8
+PORTVERSION=	2.24.9
 PORTREVISION?=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME

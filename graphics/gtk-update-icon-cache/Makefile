@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gtk-update-icon-cache/Makefile,v 1.8 2011/11/12 19:04:12 kwm Exp $
+#   $MCom: ports/graphics/gtk-update-icon-cache/Makefile,v 1.9 2011/12/22 13:43:43 kwm Exp $
 #
 
 PORTNAME=	gtk-update-icon-cache
-PORTVERSION=	2.24.8
+PORTVERSION=	2.24.9
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
