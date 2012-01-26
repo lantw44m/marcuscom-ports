@@ -13,10 +13,10 @@ etc/gdm/Xsession
 @unexec if cmp -s %D/etc/gdm/custom.conf %D/etc/gdm/custom.conf.default; then rm -f %D/etc/gdm/custom.conf; fi
 etc/gdm/custom.conf.default
 @exec [ -f %B/custom.conf ] || cp %B/%f %B/custom.conf
-etc/pam.d/gdm
 etc/pam.d/gdm-fingerprint
 etc/pam.d/gdm-password
 etc/pam.d/gdm-smartcard
+etc/pam.d/gdm-welcome
 include/gdm/greeter/gdm-greeter-client.h
 include/gdm/greeter/gdm-greeter-sessions.h
 include/gdm/simple-greeter/gdm-login-extension.h

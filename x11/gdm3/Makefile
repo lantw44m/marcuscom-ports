@@ -3,11 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.15 2011/10/20 09:11:40 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.16 2012/01/21 23:36:03 ahze Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	3.2.1.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -55,7 +56,8 @@ GCONF_SCHEMAS=	gdm-simple-greeter.schemas
 GLIB_SCHEMAS=	org.gnome.login-screen.gschema.xml
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home \
-		--with-at-spi-registryd-directory=${LOCALBASE}/libexec
+		--with-at-spi-registryd-directory=${LOCALBASE}/libexec \
+		--enable-authentication-scheme=pam
 CPPFLAGS=	-I${LOCALBASE}/include -DHAS_SA_LEN
 LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGLIBS=	-lm -lexecinfo
@@ -125,7 +127,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/gdm.conf-custom \
 		${PREFIX}/etc/gdm/custom.conf.default
 	${MKDIR} ${PREFIX}/share/xsessions
-	${INSTALL_DATA} ${WRKDIR}/gdm.pam ${PREFIX}/etc/pam.d/gdm
+	${INSTALL_DATA} ${WRKDIR}/gdm.pam ${PREFIX}/etc/pam.d/gdm-welcome
 	@${SED} -e 's|%%PREFIX%%|${PREFIX}|g' < ${PKGDIR}/pkg-message \
 		| /usr/bin/fmt 75 79 > ${PKGMESSAGE}
 	@dconf update
