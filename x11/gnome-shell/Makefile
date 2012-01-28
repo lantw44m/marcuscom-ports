@@ -3,12 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.46 2011/11/12 14:54:38 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.47 2011/12/15 15:41:45 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
-PORTVERSION=	3.2.1
-PORTREVISION=	4
+PORTVERSION=	3.2.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -48,6 +47,8 @@ MAN1=		gnome-shell.1
 
 CONFIGURE_ARGS+=--enable-compile-warnings=no \
 		--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
+CONFIGURE_ENV=	CPPFLAGS="-I${LOCALASE}/include" \
+		LDFLAGS="-L${LOCALBASE}/lib"
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|g' \
