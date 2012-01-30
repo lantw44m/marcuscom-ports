@@ -302,6 +302,7 @@ share/gir-1.0/Clutter-1.0.gir
 share/gir-1.0/ClutterX11-1.0.gir
 share/locale/as/LC_MESSAGES/clutter-1.0.mo
 share/locale/ast/LC_MESSAGES/clutter-1.0.mo
+share/locale/bg/LC_MESSAGES/clutter-1.0.mo
 share/locale/ca/LC_MESSAGES/clutter-1.0.mo
 share/locale/ca@valencia/LC_MESSAGES/clutter-1.0.mo
 share/locale/cs/LC_MESSAGES/clutter-1.0.mo

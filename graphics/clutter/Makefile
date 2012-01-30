@@ -3,11 +3,11 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.52 2011/09/19 20:33:51 kwm Exp $
+#  $MCom: ports/graphics/clutter/Makefile,v 1.53 2011/10/17 13:17:38 kwm Exp $
 #
 
 PORTNAME=	clutter
-PORTVERSION=	1.8.2
+PORTVERSION=	1.8.4
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -29,7 +29,6 @@ USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-x --enable-conformance=no
-CONFIGURE_ENV=	LDFLAGS="${LDFLAGS}"
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
