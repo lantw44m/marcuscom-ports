@@ -177,6 +177,8 @@ share/devhelp/books/vala-%%VERSION%%/vala-%%VERSION%%.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/libnl-1.vapi
 %%DATADIR%%-%%VERSION%%/vapi/libnl-2.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/libnl-2.0.vapi
+%%DATADIR%%-%%VERSION%%/vapi/libnl-3.0.deps
+%%DATADIR%%-%%VERSION%%/vapi/libnl-3.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/libnotify.deps
 %%DATADIR%%-%%VERSION%%/vapi/libnotify.vapi
 %%DATADIR%%-%%VERSION%%/vapi/liboobs-1.vapi
@@ -255,6 +257,8 @@ share/devhelp/books/vala-%%VERSION%%/vala-%%VERSION%%.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/vte.vapi
 %%DATADIR%%-%%VERSION%%/vapi/webkit-1.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/webkit-1.0.vapi
+%%DATADIR%%-%%VERSION%%/vapi/xtst.deps
+%%DATADIR%%-%%VERSION%%/vapi/xtst.vapi
 %%DATADIR%%-%%VERSION%%/vapi/x11.vapi
 %%DATADIR%%-%%VERSION%%/vapi/xcb.vapi
 %%DATADIR%%-%%VERSION%%/vapi/zlib.vapi
