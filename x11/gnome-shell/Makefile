@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.48 2012/01/28 00:34:01 ahze Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.49 2012/01/30 14:31:33 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
@@ -47,14 +47,15 @@ MAN1=		gnome-shell.1
 
 CONFIGURE_ARGS+=--enable-compile-warnings=no \
 		--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+# don't use -O2 in CFLAGS it makes gnome-shell unhappy (aka crashing)
+CFLAGS=		-O1 -pipe -fno-strict-aliasing
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|g' \
 		${WRKSRC}/src/shell-app-system.c
-	@${REINPLACE_CMD} -e 's|libnm-glib libnm-util ||g' \
-		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|UBDIRS = data js src browser-plugin|UBDIRS = data js src|g' \
 		${WRKSRC}/Makefile.in
 
