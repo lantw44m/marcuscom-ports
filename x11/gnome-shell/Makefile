@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.49 2012/01/30 14:31:33 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.50 2012/02/04 20:35:54 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
@@ -56,6 +56,8 @@ CFLAGS=		-O1 -pipe -fno-strict-aliasing
 post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|g' \
 		${WRKSRC}/src/shell-app-system.c
+	@${REINPLACE_CMD} -e 's|libnm-glib libnm-util ||g' \
+		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|UBDIRS = data js src browser-plugin|UBDIRS = data js src|g' \
 		${WRKSRC}/Makefile.in
 
