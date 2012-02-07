@@ -3,7 +3,7 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/seed/Makefile,v 1.30 2011/04/30 20:43:16 mezz Exp $
+#   $MCom: ports/devel/seed/Makefile,v 1.31 2011/06/11 19:51:16 mezz Exp $
 #
 # NOTE: It may be necessary to update ${FILESDIR}/Seed.js on each release.
 # To do that, just replace imports.searchPaths with "." and ".." elements.
@@ -11,7 +11,7 @@
 
 PORTNAME=	seed
 PORTVERSION=	2.31.91
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
