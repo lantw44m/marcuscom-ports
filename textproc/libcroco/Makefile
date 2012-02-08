@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libcroco
-PORTVERSION=	0.6.3
+PORTVERSION=	0.6.4
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 
