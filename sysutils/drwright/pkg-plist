@@ -6,6 +6,10 @@ share/icons/hicolor/scalable/apps/typing-monitor.svg
 lib/control-center-1/panels/libdrwrightccp.a
 lib/control-center-1/panels/libdrwrightccp.la
 lib/control-center-1/panels/libdrwrightccp.so
+lib/gnome-settings-daemon-3.0/libtyping-break.a
+lib/gnome-settings-daemon-3.0/libtyping-break.la
+lib/gnome-settings-daemon-3.0/libtyping-break.so
+lib/gnome-settings-daemon-3.0/typing-break.gnome-settings-plugin
 libexec/drwright/gnome-typing-monitor
 share/locale/af/LC_MESSAGES/drwright.mo
 share/locale/am/LC_MESSAGES/drwright.mo

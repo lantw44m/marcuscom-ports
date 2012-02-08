@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	drwright
-PORTVERSION=	3.2.3
+PORTVERSION=	3.2.4
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
