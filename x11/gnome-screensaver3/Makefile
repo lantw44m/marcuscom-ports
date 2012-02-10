@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.19 2011/09/19 18:38:07 kwm Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.20 2011/10/07 14:47:00 kwm Exp $
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	3.2.0
+PORTVERSION=	3.2.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -33,7 +33,8 @@ USE_XORG=	x11 xext xxf86vm xxf86misc xscrnsaver
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomekbd3 gnomedesktop3
 CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS=	--with-pam-prefix=${PREFIX}/etc/pam.d
+CONFIGURE_ARGS=	--with-pam-prefix=${PREFIX}/etc/pam.d \
+		--without-systemd
 
 MAN1=		gnome-screensaver-command.1 gnome-screensaver.1
 
