@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/sysutils/zeitgeist/Makefile,v 1.4 2011/10/17 10:22:12 kwm Exp $
 #
 
 PORTNAME=	zeitgeist
@@ -14,7 +14,7 @@ MASTER_SITES=	http://launchpad.net/${PORTNAME}/${PORTVERSION:R}/${PORTVERSION}/+
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Event logging framework - engine
 
-BUILD_DEPENDS=	rapper:${PORTSDIR}/textproc/raptor \
+BUILD_DEPENDS=	rapper:${PORTSDIR}/textproc/raptor2 \
 		${PYTHON_SITELIBDIR}/rdflib/__init__.py:${PORTSDIR}/textproc/py-rdflib
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_sqlite3.so:${PORTSDIR}/databases/py-sqlite3 \
