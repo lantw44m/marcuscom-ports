@@ -23,4 +23,10 @@ CONFIGURE_ARGS=	--disable-gtk-doc-html
 
 PLIST_SUB=	VERSION="0.6"
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${OSVERSION} < 900035
+CONFIGURE_ARGS+=--disable-Bsymbolic
+.endif
+
+.include <bsd.port.post.mk>
