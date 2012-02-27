@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/folks/Makefile,v 1.25 2011/12/06 13:57:39 kwm Exp $
+#   $MCom: ports/net-im/folks/Makefile,v 1.26 2011/12/17 17:04:45 kwm Exp $
 #
 
 PORTNAME=	folks
-PORTVERSION=	0.6.6
+PORTVERSION=	0.6.7
 CATEGORIES=	net-im
 MASTER_SITES=	GNOME
 
@@ -31,7 +31,7 @@ GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 
-PLIST_SUB=	LIBVER=25 VERSION=30
+PLIST_SUB=	LIBVER=25 VERSION=31
 
 #OPTIONS=	SOCIALWEB "Enable social web backend" on
 
