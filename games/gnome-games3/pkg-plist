@@ -2644,6 +2644,7 @@ share/omf/quadrapassel/quadrapassel-zh_CN.omf
 @dirrm share/glchess/pieces/3d
 @dirrm share/glchess/pieces
 @dirrm share/glchess
+@dirrmtry share/games
 @dirrmtry share/applications
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku/gtk_goodies
 @dirrm %%PYTHON_SITELIBDIR%%/gnome_sudoku
