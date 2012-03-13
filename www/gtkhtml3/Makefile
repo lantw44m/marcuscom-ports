@@ -2,8 +2,8 @@
 # Date created:				12 March 2003
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/www/gtkhtml3/Makefile,v 1.123 2011/09/23 22:26:01 amdmi3 Exp $
-#   $MCom: ports/www/gtkhtml3/Makefile,v 1.180 2011/03/19 17:33:16 mezz Exp $
+# $FreeBSD$
+#   $MCom: ports/www/gtkhtml3/Makefile,v 1.182 2011/10/24 08:17:47 kwm Exp $
 #
 
 PORTNAME=	gtkhtml3

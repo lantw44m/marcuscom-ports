@@ -2,7 +2,7 @@
 # Date created:				2010-03-14
 # Whom:					Frank Steinborn <steinex@nognu.de>
 #
-# $FreeBSD: ports/devel/libgee/Makefile,v 1.6 2011/09/14 20:57:13 kwm Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgee

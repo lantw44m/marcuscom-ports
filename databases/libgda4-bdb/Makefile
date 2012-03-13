@@ -2,7 +2,7 @@
 # Date created:				28 February 2009
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgda4-bdb/Makefile,v 1.7 2011/03/03 10:21:36 kwm Exp $
+# $FreeBSD$
 #
 
 PORTREVISION=	0

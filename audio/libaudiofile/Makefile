@@ -2,8 +2,8 @@
 # Date created:				22 Dec 1998
 # Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
 #
-# $FreeBSD: ports/audio/libaudiofile/Makefile,v 1.46 2011/08/11 19:19:02 kwm Exp $
-#    $MCom$
+# $FreeBSD$
+#    $MCom: ports/audio/libaudiofile/Makefile,v 1.1 2011/12/03 12:09:16 kwm Exp $
 #
 
 PORTNAME=	libaudiofile

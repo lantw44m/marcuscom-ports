@@ -2,7 +2,7 @@
 # Date created:				09 May 2006
 # Whom:					Jean-Yves Lefort <jylefort@FreeBSD.org>
 #
-# $FreeBSD: ports/databases/libgda4-reference/Makefile,v 1.1 2009/01/10 05:22:12 marcus Exp $
+# $FreeBSD$
 #    $MCOM$
 
 PORTREVISION=	0
