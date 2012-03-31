@@ -3,11 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.20 2011/10/07 14:47:00 kwm Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.21 2012/02/10 18:29:05 kwm Exp $
 #
 
 PORTNAME=	gnome-screensaver
 PORTVERSION=	3.2.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -43,7 +44,7 @@ SUB_FILES+=	gnome-screensaver.pam
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/pam.d|${PREFIX}/etc/pam.d|g' \
 		${WRKSRC}/src/gs-auth-pam.c
-	@${REINPLACE_CMD} -e 's|gs-auth-pam.|gs-auth-helper.|g' \
+	@${REINPLACE_CMD} -e 's|@AUTH_SCHEME@|helper|g' \
 		${WRKSRC}/src/Makefile.in
 	@${ECHO} "#define PASSWD_HELPER_PROGRAM \"/usr/local/bin/pam_helper\"" \
 		>> ${WRKSRC}/config.h.in
