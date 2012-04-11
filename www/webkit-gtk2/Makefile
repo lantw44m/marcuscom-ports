@@ -3,12 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.83 2011/10/14 18:21:52 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.84 2011/11/30 14:08:50 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.6.1
-PORTREVISION=	2
+PORTVERSION=	1.6.3
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk2
@@ -25,6 +24,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GSTREAMER=	yes
 MAKE_JOBS_SAFE=	yes
@@ -36,15 +36,13 @@ USE_GNOME=	gtk20 libxslt ltverhack
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	ZLIB_CFLAGS="-I/usr/include" \
+CONFIGURE_ENV=	ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \
+		ZLIB_CFLAGS="-I/usr/include" \
 		ZLIB_LIBS="-L/usr/lib -lz" \
-		ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \
 		ac_cv_path_DOLT_BASH=""
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--enable-icon-database \
-		--with-gtk=2.0 \
-		--enable-svg \
+CONFIGURE_ARGS=	--with-gtk=2.0 \
 		--enable-svg-fonts \
 		--enable-introspection
 MAKEFILE=	GNUmakefile
@@ -59,7 +57,7 @@ OPTIONS=	WEBGL "Enable webGL support (experimental)" off \
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_WEBGL)
-USE_GSTREAMER+=	yes
+USE_GL=		gl
 CONFIGURE_ARGS+=--enable-webgl
 .else
 CONFIGURE_ARGS+=--disable-webgl

@@ -3,12 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.23 2011/10/14 18:21:53 kwm Exp $
+#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.24 2011/11/30 14:08:50 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.6.1
-PORTREVISION=	2
+PORTVERSION=	1.6.3
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/
 PKGNAMESUFFIX=	-gtk3
@@ -25,6 +24,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
 
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GSTREAMER=	yes
 MAKE_JOBS_SAFE=	yes
@@ -36,13 +36,14 @@ USE_GNOME=	gtk30 libxslt ltverhack
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
+CONFIGURE_ENV=	ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \
 		ZLIB_CFLAGS="-I/usr/include" \
 		ZLIB_LIBS="-L/usr/lib -lz" \
-		ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \
 		ac_cv_path_DOLT_BASH=""
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-gtk=3.0 \
+		--enable-svg-fonts \
 		--enable-introspection
 MAKEFILE=	GNUmakefile
 GLIB_SCHEMAS=	org.webkitgtk-3.0.gschema.xml
