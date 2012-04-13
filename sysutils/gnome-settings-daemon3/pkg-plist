@@ -21,15 +21,15 @@ lib/gnome-settings-daemon-3.0/liba11y-settings.so
 lib/gnome-settings-daemon-3.0/libbackground.a
 lib/gnome-settings-daemon-3.0/libbackground.la
 lib/gnome-settings-daemon-3.0/libbackground.so
+lib/gnome-settings-daemon-3.0/libclipboard.a
+lib/gnome-settings-daemon-3.0/libclipboard.la
+lib/gnome-settings-daemon-3.0/libclipboard.so
 lib/gnome-settings-daemon-3.0/libcolor.a
 lib/gnome-settings-daemon-3.0/libcolor.la
 lib/gnome-settings-daemon-3.0/libcolor.so
 lib/gnome-settings-daemon-3.0/libcursor.a
 lib/gnome-settings-daemon-3.0/libcursor.la
 lib/gnome-settings-daemon-3.0/libcursor.so
-lib/gnome-settings-daemon-3.0/libclipboard.a
-lib/gnome-settings-daemon-3.0/libclipboard.la
-lib/gnome-settings-daemon-3.0/libclipboard.so
 lib/gnome-settings-daemon-3.0/libhousekeeping.a
 lib/gnome-settings-daemon-3.0/libhousekeeping.la
 lib/gnome-settings-daemon-3.0/libhousekeeping.so
@@ -85,6 +85,7 @@ libexec/gsd-printer
 share/GConf/gsettings/gnome-settings-daemon.convert
 share/dbus-1/services/org.gnome.SettingsDaemon.service
 share/dbus-1/system-services/org.gnome.SettingsDaemon.DateTimeMechanism.service
+share/gnome-settings-daemon-3.0/input-device-example.sh
 %%DATADIR%%/gsd-a11y-preferences-dialog.ui
 %%DATADIR%%/icons/hicolor/64x64/devices/kbd-capslock-off.png
 %%DATADIR%%/icons/hicolor/64x64/devices/kbd-capslock-on.png
@@ -92,7 +93,6 @@ share/dbus-1/system-services/org.gnome.SettingsDaemon.DateTimeMechanism.service
 %%DATADIR%%/icons/hicolor/64x64/devices/kbd-numlock-on.png
 %%DATADIR%%/icons/hicolor/64x64/devices/kbd-scrolllock-off.png
 %%DATADIR%%/icons/hicolor/64x64/devices/kbd-scrolllock-on.png
-share/gnome-settings-daemon-3.0/input-device-example.sh
 share/icons/hicolor/16x16/apps/gsd-xrandr.png
 share/icons/hicolor/22x22/apps/gsd-xrandr.png
 share/icons/hicolor/24x24/apps/gsd-xrandr.png
@@ -191,18 +191,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
 share/polkit-1/actions/org.gnome.settings-daemon.plugins.power.policy
 share/polkit-1/actions/org.gnome.settingsdaemon.datetimemechanism.policy
-@dirrm share/gnome-settings-daemon-3.0
-@dirrm %%DATADIR%%/icons/hicolor/64x64/devices
-@dirrm %%DATADIR%%/icons/hicolor/64x64
-@dirrm %%DATADIR%%/icons/hicolor
-@dirrm %%DATADIR%%/icons
-@dirrm %%DATADIR%%
-@comment this is done in libcanberra
-@comment @dirrm lib/gnome-settings-daemon-3.0
-@dirrm include/gnome-settings-daemon-3.0/gnome-settings-daemon
-@dirrm include/gnome-settings-daemon-3.0
-@dirrmtry etc/gnome-settings-daemon/xrandr
-@dirrmtry etc/gnome-settings-daemon
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -249,3 +237,15 @@ share/polkit-1/actions/org.gnome.settingsdaemon.datetimemechanism.policy
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrm %%DATADIR%%/icons/hicolor/64x64/devices
+@dirrm %%DATADIR%%/icons/hicolor/64x64
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
+@comment this is done in libcanberra
+@comment @dirrm lib/gnome-settings-daemon-3.0
+@dirrm %%DATADIR%%
+@dirrm lib/gnome-settings-daemon-3.0
+@dirrm include/gnome-settings-daemon-3.0/gnome-settings-daemon
+@dirrm include/gnome-settings-daemon-3.0
+@dirrmtry etc/gnome-settings-daemon/xrandr
+@dirrmtry etc/gnome-settings-daemon
