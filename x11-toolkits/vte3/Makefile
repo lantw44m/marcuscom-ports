@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.15 2011/10/04 17:58:11 kwm Exp $
+#   $MCom: ports/x11-toolkits/vte3/Makefile,v 1.16 2011/10/17 13:12:31 kwm Exp $
 #
 
 PORTNAME?=	vte
 PORTVERSION=	0.30.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/gnome-pty-helper/vte/}/${PORTVERSION:R}
@@ -34,8 +34,8 @@ USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GETTEXT=	yes
 USE_GNOME?=	gnomeprefix gnomehack gtk30 ltverhack referencehack
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS?=--disable-python \
 		--with-gtk=3.0 \
 		--enable-introspection \
