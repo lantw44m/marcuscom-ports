@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/misc/gnomehier/Makefile,v 1.36 2011/10/22 12:07:27 kwm Exp $
+#    $MCom: ports/misc/gnomehier/Makefile,v 1.37 2012/03/17 21:52:06 mezz Exp $
 #
 # !!DON'T BUMP PORTREVISION ON MTREE CHANGES ANYMORE!!
 
@@ -43,9 +43,6 @@ pre-install:
 		< ${FILESDIR}/pkg-install.in > ${PKGINSTALL}
 
 pre-su-install:
-	${MKDIR} ${WRKSRC}/share/games
-	${CHGRP} games ${WRKSRC}/share/games
-	${CHMOD} g=rwXs ${WRKSRC}/share/games
 	cd ${WRKSRC} && \
 		${MTREE_CMD} -U -d -n -i -c -k "uname, gname, mode" | \
 		${SED} -e 's|uname=[A-Za-z0-9_]*|uname=root|' \
