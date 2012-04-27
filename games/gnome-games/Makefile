@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games/Makefile,v 1.237 2011/06/30 04:23:56 mezz Exp $
+#   $MCom: ports/games/gnome-games/Makefile,v 1.238 2011/08/17 20:09:35 kwm Exp $
 #
 
 PORTNAME=	gnome-games
@@ -67,6 +67,9 @@ post-patch:
 
 post-install:
 	${MKDIR} ${PREFIX}/share/ggz/gnome-games
+	${CHGRP} games ${LOCALBASE}/share/games
+	${CHMOD} g=rwXs ${LOCALBASE}/share/games
+
 #.for dsc in ${DSC_FILES}
 #	${INSTALL_DATA} ${WRKSRC}/${dsc} ${PREFIX}/share/ggz/gnome-games/${dsc:T}
 #.endfor

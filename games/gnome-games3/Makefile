@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.17 2011/10/15 19:17:42 kwm Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.18 2011/10/19 16:18:30 kwm Exp $
 #
 
 PORTNAME=	gnome-games
@@ -60,6 +60,8 @@ MAN6=		glchess.6 glines.6 gnect.6 gnibbles.6 gnobots2.6 \
 		gtali.6 iagno.6 mahjongg.6 quadrapassel.6
 
 post-install:
+	${CHGRP} games ${LOCALBASE}/share/games
+	${CHMOD} g=rwXs ${LOCALBASE}/share/games
 	@-update-desktop-database
 
 .include <bsd.port.mk>
