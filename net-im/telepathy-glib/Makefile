@@ -3,7 +3,7 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.34 2011/11/22 11:11:50 kwm Exp $
+#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.35 2012/02/27 21:29:57 kwm Exp $
 
 PORTNAME=	telepathy-glib
 PORTVERSION=	0.16.5
@@ -22,7 +22,7 @@ RUN_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig glib20 ltverhack
+USE_GNOME=	gnomehack pkgconfig glib20 ltverhack gnomehier
 USE_PYTHON_BUILD=	yes
 MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes

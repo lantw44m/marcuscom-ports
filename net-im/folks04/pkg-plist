@@ -18,8 +18,6 @@ share/vala/vapi/folks-telepathy.deps
 share/vala/vapi/folks-telepathy.vapi
 share/vala/vapi/folks.deps
 share/vala/vapi/folks.vapi
-@dirrmtry share/vala/vapi
-@dirrmtry share/vala
 @dirrm lib/folks/%%VERSION%%/backends/telepathy
 @dirrm lib/folks/%%VERSION%%/backends/key-file
 @dirrm lib/folks/%%VERSION%%/backends

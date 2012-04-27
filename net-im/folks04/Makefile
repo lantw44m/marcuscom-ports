@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net-im/folks04/Makefile,v 1.1 2011/12/06 13:57:00 kwm Exp $
 #
 
 PORTNAME=	folks
@@ -24,7 +24,7 @@ CONFLICTS=	folks-0.[6-9].[0-9]*
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack
+USE_GNOME=	gnomehack intlhack gnomehier
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include

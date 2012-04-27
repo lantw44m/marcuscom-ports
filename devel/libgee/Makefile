@@ -19,7 +19,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-introspection=yes
 USE_GMAKE=	yes
 USE_XZ=		yes
-USE_GNOME=	glib20 gnomehier gnomehack
+USE_GNOME=	glib20 gnomehier gnomehack gnomehier
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

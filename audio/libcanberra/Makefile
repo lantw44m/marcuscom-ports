@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/libcanberra/Makefile,v 1.27 2011/04/30 20:43:13 mezz Exp $
+#   $MCom: ports/audio/libcanberra/Makefile,v 1.28 2011/06/11 18:55:56 mezz Exp $
 
 PORTNAME=	libcanberra
 PORTVERSION=	0.28
@@ -19,7 +19,7 @@ LIB_DEPENDS=	vorbisfile.6:${PORTSDIR}/audio/libvorbis
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/LGPL
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gtk20 ltverhack gconf2
+USE_GNOME=	gnomeprefix gnomehack gnomehier gtk20 ltverhack gconf2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool libltdl
 CONFIGURE_ARGS=	--disable-lynx --disable-tdb --disable-alsa

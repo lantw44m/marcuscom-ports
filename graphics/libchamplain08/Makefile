@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libchamplain08/Makefile,v 1.1 2011/08/24 13:49:31 kwm Exp $
+#   $MCom: ports/graphics/libchamplain08/Makefile,v 1.2 2011/10/16 19:41:05 kwm Exp $
 #
 
 PORTNAME=	libchamplain
@@ -20,7 +20,7 @@ LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 
 LATEST_LINK=	libchamplain08
 USE_BZIP2=	yes
-USE_GNOME=	pkgconfig gtk20 gnomehack ltverhack:1
+USE_GNOME=	pkgconfig gtk20 gnomehack ltverhack:1 gnomehier
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
