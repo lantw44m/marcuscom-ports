@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gnome-pty-helper/Makefile,v 1.4 2011/08/30 21:00:13 kwm Exp $
+#   $MCom: ports/x11-toolkits/gnome-pty-helper/Makefile,v 1.5 2012/04/21 22:20:50 mezz Exp $
 #
 
 PORTNAME=	gnome-pty-helper
@@ -22,5 +22,6 @@ CONFIGURE_ARGS=	# empty
 PATCH_STRIP=	-p1
 EXTRA_PATCHES+=	${MASTERDIR}/files/patch-gnome-pty-helper_Makefile.in \
 		${MASTERDIR}/files/patch-gnome-pty-helper_gnome-pty-helper.c
+LATEST_LINK=	${PORTNAME}
 
 .include "${MASTERDIR}/Makefile"

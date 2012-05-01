@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-gobject3/Makefile,v 1.7 2011/12/17 17:06:37 kwm Exp $
+#   $MCom: ports/devel/py-gobject3/Makefile,v 1.8 2012/02/09 17:09:14 kwm Exp $
 #
 
 PORTNAME=	gobject
@@ -25,6 +25,7 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
 
+LATEST_LINK=	${PYTHON_PKGNAMEPREFIX}${PORTNAME}3
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20
