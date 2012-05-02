@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.43 2011/12/22 13:43:44 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.44 2012/03/17 18:12:19 mezz Exp $
 #
 
 PORTNAME=	gtk
-PORTVERSION=	3.2.3
+PORTVERSION=	3.2.4
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
