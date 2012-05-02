@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgdata/Makefile,v 1.21 2011/09/15 20:13:15 kwm Exp $
+#   $MCom: ports/devel/libgdata/Makefile,v 1.22 2012/05/02 07:04:13 kwm Exp $
 #
 
 PORTNAME=	libgdata
@@ -14,9 +14,11 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GLib based implimentation of the GData protocol
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
+		ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
 LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
 		oauth.8:${PORTSDIR}/net/liboauth
+RUN_DEPENDS=	ca_root_nss>=0:${PORTSDIR}/security/ca_root_nss
 
 CONFLICTS=	libgdata-0.6.*
 
@@ -29,6 +31,7 @@ USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack intltool ltverhack glib20
 CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include " \
 		LDFLAGS="-L${LOCALBASE}/lib"
-CONFIGURE_ARGS+=--with-html-dir="${PREFIX}/share/doc"
+CONFIGURE_ARGS+=--with-html-dir="${PREFIX}/share/doc" \
+		--with-ca-certs=${LOCALBASE}/share/certs/ca-root-nss.crt
 
 .include <bsd.port.mk>
