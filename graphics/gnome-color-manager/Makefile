@@ -3,11 +3,12 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/gnome-color-manager/Makefile,v 1.1 2012/04/01 03:48:49 mezz Exp $
 #
 
 PORTNAME=	gnome-color-manager
 PORTVERSION=	3.2.3
+PORTREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,6 +16,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A session framework for the GNOME desktop to manage color profiles
 
+BUILD_DEPENDS=	docbook2man:${PORTSDIR}/textproc/docbook-utils \
+		${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/textproc/docbook-410
 LIB_DEPENDS=	lcms2.2:${PORTSDIR}/graphics/lcms2 \
 		colord.1:${PORTSDIR}/graphics/colord \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
@@ -22,7 +25,8 @@ LIB_DEPENDS=	lcms2.2:${PORTSDIR}/graphics/lcms2 \
 
 USE_XZ=		yes
 USE_XORG=	xrandr
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 vte3 desktopfileutils
+USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 vte3 desktopfileutils \
+		gnomedocutils
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
