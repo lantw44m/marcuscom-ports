@@ -3,12 +3,12 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/colord/Makefile,v 1.4 2011/10/07 10:46:01 kwm Exp $
+#    $MCom: ports/graphics/colord/Makefile,v 1.5 2011/10/07 13:47:22 kwm Exp $
 #
 
 PORTNAME=	colord
-PORTVERSION=	0.1.12
-PORTREVISION=	1
+PORTVERSION=	0.1.19
+PORTREVISION=	0
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 
@@ -62,11 +62,11 @@ post-patch:
 		-e 's|-Wmissing-parameter-type||g' \
 		-e 's|LIBS="-lusb-1.0|LIBS="-lusb|g' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|libusb-1.0/libusb.h|libusb.h|g' \
-		${WRKSRC}/src/cd-sensor-munki.c \
-		${WRKSRC}/src/cd-usb.c \
-		${WRKSRC}/src/cd-usb.h \
-		${WRKSRC}/src/cd-sensor-huey.c
+#	@${REINPLACE_CMD} -e 's|libusb-1.0/libusb.h|libusb.h|g' \
+#		${WRKSRC}/src/cd-sensor-munki.c \
+#		${WRKSRC}/src/cd-usb.c \
+#		${WRKSRC}/src/cd-usb.h \
+#		${WRKSRC}/src/cd-sensor-huey.c
 .if defined(WITHOUT_MANPAGES)
 	@${REINPLACE_CMD} -e "s|2MAN_TRUE=$$|2MAN_TRUE='#'|g ; \
                 s|2MAN_FALSE='#'|2MAN_FALSE=|g" ${WRKSRC}/configure
