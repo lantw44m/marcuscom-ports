@@ -3,11 +3,12 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.19 2011/10/18 22:38:14 kwm Exp $
+#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.20 2011/11/15 03:05:08 avl Exp $
 #
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	3.2.2
+PORTREVISION=	1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -22,7 +23,8 @@ LIB_DEPENDS=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
 		tasn1.4:${PORTSDIR}/security/libtasn1 \
 		p11-kit.0:${PORTSDIR}/security/p11-kit \
 		gcrypt.18:${PORTSDIR}/security/libgcrypt
-RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
+		update-mime-database:${PORTSDIR}/misc/shared-mime-info
 
 CONFLICTS=	gnome-keyring-2.[0-9]*
 

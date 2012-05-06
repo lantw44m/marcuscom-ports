@@ -240,20 +240,13 @@ share/locale/zh_CN/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 share/mime/application/pkcs10+pem.xml
-share/mime/application/pkcs10.xml
 share/mime/application/pkcs12+pem.xml
 share/mime/application/pkcs7-mime+pem.xml
-share/mime/application/pkcs7-mime.xml
-share/mime/application/pkcs7-signature.xml
 share/mime/application/pkcs8+pem.xml
-share/mime/application/pkcs8.xml
 share/mime/application/pkix-cert+pem.xml
-share/mime/application/pkix-cert.xml
 share/mime/application/pkix-crl+pem.xml
-share/mime/application/pkix-crl.xml
 share/mime/application/x-pem-file.xml
 share/mime/application/x-pem-key.xml
-share/mime/application/x-pkcs12.xml
 share/mime/packages/gcr-crypto-types.xml
 @dirrm share/gnome-keyring-3/ui
 @dirrm share/gnome-keyring-3
