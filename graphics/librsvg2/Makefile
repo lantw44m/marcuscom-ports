@@ -3,11 +3,11 @@
 # Whom:                 		Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/graphics/librsvg2/Makefile,v 1.144 2011/11/17 00:34:24 kwm Exp $
 #
 
 PORTNAME=	librsvg
-PORTVERSION=	2.34.2
+PORTVERSION=	2.36.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2
@@ -31,12 +31,13 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-svgz \
 		--with-croco \
+		--disable-Bsymbolic \
 		--enable-gtk-theme
 CROCO_VERSION=	0.6
-MAN1=		rsvg.1
+MAN1=		rsvg-convert.1
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|GTK3_REQUIRED=2.90.0|GTK3_REQUIRED=9.90.0|g' \
+	@${REINPLACE_CMD} -e 's|GTK3_REQUIRED=3.0.0|GTK3_REQUIRED=9.90.0|g' \
 		${WRKSRC}/configure
 
 .include <bsd.port.mk>
