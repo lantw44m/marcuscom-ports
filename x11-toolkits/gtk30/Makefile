@@ -3,11 +3,11 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.44 2012/03/17 18:12:19 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	gtk
-PORTVERSION=	3.2.4
+PORTVERSION=	3.4.3
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -45,7 +45,9 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	INTROSPECTION_GIRDIR=`pkg-config --variable=girdir gobject-introspection-1.0` ac_cv_path_SED="${SED}"
 
-GLIB_SCHEMAS=	org.gtk.Settings.FileChooser.gschema.xml
+GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
+		org.gtk.Settings.ColorChooser.gschema.xml \
+		org.gtk.Settings.FileChooser.gschema.xml
 
 MAN1=		gtk-query-immodules-3.0.1
 
