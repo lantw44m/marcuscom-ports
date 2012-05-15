@@ -41,6 +41,8 @@ share/devhelp/books/vala-%%VERSION%%/vala-%%VERSION%%.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/ccss-1.vapi
 %%DATADIR%%-%%VERSION%%/vapi/clutter-1.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/clutter-1.0.vapi
+%%DATADIR%%-%%VERSION%%/vapi/clutter-gst-1.0.deps
+%%DATADIR%%-%%VERSION%%/vapi/clutter-gst-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/clutter-gtk-0.10.deps
 %%DATADIR%%-%%VERSION%%/vapi/clutter-gtk-0.10.vapi
 %%DATADIR%%-%%VERSION%%/vapi/clutter-gtk-1.0.deps
@@ -48,8 +50,8 @@ share/devhelp/books/vala-%%VERSION%%/vala-%%VERSION%%.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/clutter-json-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/cogl-1.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/cogl-1.0.vapi
-%%DATADIR%%-%%VERSION%%/vapi/clutter-gst-1.0.deps
-%%DATADIR%%-%%VERSION%%/vapi/clutter-gst-1.0.vapi
+%%DATADIR%%-%%VERSION%%/vapi/cogl-pango-1.0.deps
+%%DATADIR%%-%%VERSION%%/vapi/cogl-pango-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/curses.vapi
 %%DATADIR%%-%%VERSION%%/vapi/dbus-glib-1.vapi
 %%DATADIR%%-%%VERSION%%/vapi/enchant.vapi
@@ -60,14 +62,16 @@ share/devhelp/books/vala-%%VERSION%%/vala-%%VERSION%%.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/gdk-2.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gdk-3.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/gdk-3.0.vapi
-%%DATADIR%%-%%VERSION%%/vapi/gdl-1.0.deps
-%%DATADIR%%-%%VERSION%%/vapi/gdl-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gdk-pixbuf-2.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/gdk-pixbuf-2.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gdk-x11-2.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/gdk-x11-2.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gdk-x11-3.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/gdk-x11-3.0.vapi
+%%DATADIR%%-%%VERSION%%/vapi/gdl-1.0.deps
+%%DATADIR%%-%%VERSION%%/vapi/gdl-1.0.vapi
+%%DATADIR%%-%%VERSION%%/vapi/gdl-3.0.deps
+%%DATADIR%%-%%VERSION%%/vapi/gdl-3.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gdu-gtk.deps
 %%DATADIR%%-%%VERSION%%/vapi/gdu-gtk.vapi
 %%DATADIR%%-%%VERSION%%/vapi/gdu.deps
@@ -248,6 +252,8 @@ share/devhelp/books/vala-%%VERSION%%/vala-%%VERSION%%.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/tracker-indexer-module-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/twitter-glib-1.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/twitter-glib-1.0.vapi
+%%DATADIR%%-%%VERSION%%/vapi/udisks2.deps
+%%DATADIR%%-%%VERSION%%/vapi/udisks2.vapi
 %%DATADIR%%-%%VERSION%%/vapi/unique-1.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/unique-1.0.vapi
 %%DATADIR%%-%%VERSION%%/vapi/v4l2.vapi
@@ -257,10 +263,10 @@ share/devhelp/books/vala-%%VERSION%%/vala-%%VERSION%%.devhelp2
 %%DATADIR%%-%%VERSION%%/vapi/vte.vapi
 %%DATADIR%%-%%VERSION%%/vapi/webkit-1.0.deps
 %%DATADIR%%-%%VERSION%%/vapi/webkit-1.0.vapi
-%%DATADIR%%-%%VERSION%%/vapi/xtst.deps
-%%DATADIR%%-%%VERSION%%/vapi/xtst.vapi
 %%DATADIR%%-%%VERSION%%/vapi/x11.vapi
 %%DATADIR%%-%%VERSION%%/vapi/xcb.vapi
+%%DATADIR%%-%%VERSION%%/vapi/xtst.deps
+%%DATADIR%%-%%VERSION%%/vapi/xtst.vapi
 %%DATADIR%%-%%VERSION%%/vapi/zlib.vapi
 @dirrm %%DATADIR%%-%%VERSION%%/vapi
 @dirrm %%DATADIR%%-%%VERSION%%

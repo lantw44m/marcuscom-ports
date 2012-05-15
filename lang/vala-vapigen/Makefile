@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/vala-vapigen/Makefile,v 1.4 2010/12/01 14:59:18 kwm Exp $
+#   $MCom$
 #
 
 PORTREVISION=	0

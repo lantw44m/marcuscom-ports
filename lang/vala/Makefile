@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/vala/Makefile,v 1.59 2012/01/17 16:20:41 ahze Exp $
+#   $MCom$
 #
 
 PORTNAME=	vala
-PORTVERSION=	0.14.2
+PORTVERSION=	0.16.0
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 
@@ -27,14 +27,14 @@ LDFLAGS=	-L${LOCALBASE}/lib
 USE_BISON=	build
 USE_LDCONFIG=	yes
 
-MAN1?=		valac.1 valac-0.14.1
+MAN1?=		valac.1 valac-0.16.1
 
-PLIST_SUB=	VERSION=0.14
+PLIST_SUB=	VERSION=0.16
 
 .include <bsd.port.pre.mk>
 
 .if defined(VALA_SLAVE)
-LIB_DEPENDS+=	vala-0.14.0:${PORTSDIR}/lang/vala
+LIB_DEPENDS+=	vala-0.16.0:${PORTSDIR}/lang/vala
 CONFIGURE_ARGS+=--enable-vapigen
 BUILD_DEPENDS+=	${SITE_PERL}/${PERL_ARCH}/XML/LibXML.pm:${PORTSDIR}/textproc/p5-XML-LibXML
 RUN_DEPENDS+=	${SITE_PERL}/${PERL_ARCH}/XML/LibXML.pm:${PORTSDIR}/textproc/p5-XML-LibXML
@@ -47,11 +47,11 @@ post-patch:
 # We cheat here, because vala records vapigen related stuff in its .pc file
 # This makes the vapigen work again, although it might get weird when
 # vala-vapigen isn't installed.
-	@${REINPLACE_CMD} -e 's|@vapigen_decl@|vapigen=$${bindir}/vapigen-0.14|g' \
-		-e 's|@gen_introspect_decl@|gen_introspect=$${libdir}/vala-0.14/gen-introspect-0.14|g' \
-		-e 's|@vala_gen_introspect_decl@|vala_gen_introspect=$${bindir}/vala-gen-introspect-0.14|g' \
+	@${REINPLACE_CMD} -e 's|@vapigen_decl@|vapigen=$${bindir}/vapigen-0.16|g' \
+		-e 's|@gen_introspect_decl@|gen_introspect=$${libdir}/vala-0.16/gen-introspect-0.16|g' \
+		-e 's|@vala_gen_introspect_decl@|vala_gen_introspect=$${bindir}/vala-gen-introspect-0.16|g' \
 		${WRKSRC}/libvala.pc.in
-	@${REINPLACE_CMD} -e 's|cp $$< $$@|cp libvala.pc libvala-0.14.pc|g' \
+	@${REINPLACE_CMD} -e 's|cp $$< $$@|cp libvala.pc libvala-0.16.pc|g' \
 		${WRKSRC}/Makefile.in
 
 .if defined(VALA_SLAVE)
@@ -67,7 +67,7 @@ post-install:
 .else
 # want to see what will fail.
 post-install:
-	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-0.14.pc \
+	${LN} -fs ${PREFIX}/libdata/pkgconfig/libvala-0.16.pc \
 		${PREFIX}/libdata/pkgconfig/vala-1.0.pc
 .endif
 
