@@ -3,21 +3,15 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.219 2012/02/14 19:34:00 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.220 2012/05/02 06:59:53 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
-PORTVERSION=	2.30.3
+PORTVERSION=	2.32.3
 PORTREVISION?=	0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \
-		ftp://ftp.gtk.org/pub/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}/ \
-		ftp://ftp.gimp.org/pub/%SUBDIR%/ \
-		ftp://ftp.cs.umn.edu/pub/gimp/%SUBDIR%/ \
-		http://www.ameth.org/gimp/%SUBDIR%/ \
-		${MASTER_SITE_RINGSERVER:S,%SUBDIR%,graphics/gimp/%SUBDIR%,}
-MASTER_SITE_SUBDIR=	gtk/v${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
+MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -35,6 +29,7 @@ LIB_DEPENDS+=	pcre.1:${PORTSDIR}/devel/pcre \
 		ffi.5:${PORTSDIR}/devel/libffi
 
 USE_GETTEXT=	yes
+USE_ICONV=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack ltverhack
@@ -56,7 +51,6 @@ CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PCRE_CFLAGS="-I${LOCALBASE}/include" \
 		PCRE_LIBS="-L${LOCALBASE}/lib -lpcre"
 		
-
 OPTIONS=	COLLATION_FIX "fix string collation" off
 
 #CONFIGURE_ARGS+=--disable-silent-rules

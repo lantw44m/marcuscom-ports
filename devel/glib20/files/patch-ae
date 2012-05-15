@@ -1,5 +1,5 @@
---- configure.orig	2011-11-01 08:48:56.000000000 +0100
-+++ configure	2011-11-01 08:53:55.000000000 +0100
+--- configure.orig	2012-03-07 20:38:41.000000000 +0100
++++ configure	2012-03-07 20:38:41.000000000 +0100
 @@ -583,6 +583,9 @@
  #ifdef HAVE_SYS_TYPES_H
  # include <sys/types.h>
@@ -10,7 +10,7 @@
  #ifdef HAVE_SYS_STAT_H
  # include <sys/stat.h>
  #endif
-@@ -5471,7 +5474,7 @@
+@@ -5483,7 +5486,7 @@
  fi
  
  GLIB_RUNTIME_LIBDIR="$with_runtime_libdir"
@@ -19,7 +19,7 @@
  
  
   if test "x$with_runtime_libdir" != "x"; then
-@@ -23343,7 +23346,7 @@
+@@ -23514,7 +23517,7 @@
  fi
  done
  
@@ -28,16 +28,7 @@
  do :
    as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
  ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
-@@ -26136,6 +26139,8 @@
-          ;;
-     esac
-   fi
-+  G_THREAD_CFLAGS="${PTHREAD_CFLAGS}"
-+  G_THREAD_LIBS="${PTHREAD_LIBS}"
- 
-   if test x"$G_THREAD_CFLAGS" = x; then
- 
-@@ -26907,8 +26912,11 @@
+@@ -26732,8 +26735,11 @@
  #  b) FreeBSD doesn't do this either.
  #
  case $host in
@@ -49,14 +40,5 @@
 +  *-*-freebsd*)
 +    G_THREAD_LIBS_FOR_GTHREAD="-pthread"
      ;;
-   *)
-     G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
-@@ -28877,7 +28885,7 @@
- fi
- 
- 
--if test "x${enable_Bsymbolic}" == "xyes"; then
-+if test "x${enable_Bsymbolic}" = "xyes"; then
-   GLIB_LINK_FLAGS=-Wl,-Bsymbolic-functions
- fi
- 
+   *-*-openbsd*)
+     LDFLAGS="$LDFLAGS -pthread"
