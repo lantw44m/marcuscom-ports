@@ -3,13 +3,13 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.14 2011/08/07 13:45:50 kwm Exp $
+#   $MCom: ports/sysutils/polkit/Makefile,v 1.15 2012/01/26 00:39:27 ahze Exp $
 #
 
 PORTNAME=	polkit
-PORTVERSION=	0.103
+PORTVERSION=	0.105
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	http://hal.freedesktop.org/releases/
+MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Framework for controlling access to system-wide components
@@ -30,9 +30,9 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-os-type=freebsd \
 		--enable-introspection \
 		--localstatedir=/var
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
-		GTKDOC="false"
+CONFIGURE_ENV=	GTKDOC="false"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 .if defined(NO_INSTALL_MANPAGES)
 CONFIGURE_ARGS+=--disable-man-pages
@@ -41,7 +41,7 @@ BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/text
     		xsltproc:${PORTSDIR}/textproc/libxslt \
 		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
 
-MAN1=		pkaction.1 pkcheck.1 pkexec.1
+MAN1=		pkaction.1 pkcheck.1 pkexec.1 pkttyagent.1
 MAN8=		pklocalauthority.8 polkit.8 polkitd.8
 .endif
 

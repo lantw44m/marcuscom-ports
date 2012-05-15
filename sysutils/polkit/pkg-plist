@@ -2,6 +2,7 @@ bin/pk-example-frobnicate
 bin/pkaction
 bin/pkcheck
 bin/pkexec
+bin/pkttyagent
 @unexec if cmp -s %D/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf %D/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf.dist; then rm -f %D/etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf ; fi
 etc/dbus-1/system.d/org.freedesktop.PolicyKit1.conf.dist
 @exec [ -f %B/org.freedesktop.PolicyKit1.conf ] || cp %B/%f %B/org.freedesktop.PolicyKit1.conf
@@ -26,6 +27,7 @@ include/polkit-1/polkit/polkitsystembusname.h
 include/polkit-1/polkit/polkittemporaryauthorization.h
 include/polkit-1/polkit/polkittypes.h
 include/polkit-1/polkit/polkitunixgroup.h
+include/polkit-1/polkit/polkitunixnetgroup.h
 include/polkit-1/polkit/polkitunixprocess.h
 include/polkit-1/polkit/polkitunixsession.h
 include/polkit-1/polkit/polkitunixuser.h
