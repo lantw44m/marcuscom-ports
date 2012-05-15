@@ -484,3 +484,4 @@ share/locale/zh_TW/LC_MESSAGES/glib20.mo
 @dirrm include/glib-2.0
 @dirrm include/gio-unix-2.0/gio
 @dirrm include/gio-unix-2.0
+@dirrmtry etc/bash_completion.d
