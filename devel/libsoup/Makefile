@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.110 2011/10/19 09:53:33 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.111 2011/10/23 10:23:05 kwm Exp $
 #
 
 PORTNAME=	libsoup
-PORTVERSION=	2.36.1
+PORTVERSION=	2.38.1
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -16,11 +16,11 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A SOAP (Simple Object Access Protocol) implementation in C
 
-USE_XZ=		yes
-
 BUILD_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
 LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
+
+USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
@@ -28,8 +28,8 @@ USE_GNOME=	gnomehier gnomehack glib20 libxml2 ltverhack referencehack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION="2.4"
 
