@@ -3,12 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/colord/Makefile,v 1.5 2011/10/07 13:47:22 kwm Exp $
+#    $MCom: ports/graphics/colord/Makefile,v 1.6 2012/05/04 00:55:37 mezz Exp $
 #
 
 PORTNAME=	colord
-PORTVERSION=	0.1.19
-PORTREVISION=	0
+PORTVERSION=	0.1.20
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 
@@ -31,8 +30,8 @@ USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ARGS=	--disable-gudev --enable-gtk-doc-html=no
 CPPFLAGS+=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib" \
-		USB_CFLAGS="-I/usr/include" \
+LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ENV=	USB_CFLAGS="-I/usr/include" \
 		USB_LIBS="-L/usr/lib -lusb"
 
 OPTIONS=	SANE "Build sane colord support" off \
@@ -53,7 +52,6 @@ BUILD_DEPENDS+=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
 MAN1=		cd-create-profile.1 cd-fix-profile.1 colormgr.1
 .endif
 
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wclobbered||g' \
 		-e 's|-Wempty-body||g' \
@@ -69,7 +67,7 @@ post-patch:
 #		${WRKSRC}/src/cd-sensor-huey.c
 .if defined(WITHOUT_MANPAGES)
 	@${REINPLACE_CMD} -e "s|2MAN_TRUE=$$|2MAN_TRUE='#'|g ; \
-                s|2MAN_FALSE='#'|2MAN_FALSE=|g" ${WRKSRC}/configure
+		s|2MAN_FALSE='#'|2MAN_FALSE=|g" ${WRKSRC}/configure
 .endif
 
 .include <bsd.port.mk>

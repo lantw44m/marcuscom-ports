@@ -1,31 +1,45 @@
 bin/cd-create-profile
 bin/cd-fix-profile
 bin/colormgr
+etc/bash_completion.d/colormgr-completion.bash
 etc/colord.conf
 etc/dbus-1/system.d/org.freedesktop.ColorManager.conf
 etc/dbus-1/system.d/org.freedesktop.colord-sane.conf
 include/colord-1/colord.h
+include/colord-1/colord-private.h
 include/colord-1/colord/cd-client-sync.h
 include/colord-1/colord/cd-client.h
 include/colord-1/colord/cd-color.h
 include/colord-1/colord/cd-device-sync.h
 include/colord-1/colord/cd-device.h
 include/colord-1/colord/cd-enum.h
+include/colord-1/colord/cd-it8.h
+include/colord-1/colord/cd-it8-utils.h
 include/colord-1/colord/cd-math.h
 include/colord-1/colord/cd-profile-sync.h
 include/colord-1/colord/cd-profile.h
 include/colord-1/colord/cd-sensor-sync.h
 include/colord-1/colord/cd-sensor.h
 include/colord-1/colord/cd-version.h
+include/colord-1/colord-gtk.h
+include/colord-1/colord-gtk/cd-sample-window.h
+include/colord-1/colord-gtk/cd-window.h
+include/colord-1/colord-gtk/cd-window-sync.h
 lib/colord-sensors/libcolord_sensor_dummy.a
 lib/colord-sensors/libcolord_sensor_dummy.la
 lib/colord-sensors/libcolord_sensor_dummy.so
 lib/girepository-1.0/Colord-1.0.typelib
+lib/girepository-1.0/ColordGtk-1.0.typelib
 lib/libcolord.a
 lib/libcolord.la
 lib/libcolord.so
 lib/libcolord.so.1
+lib/libcolord-gtk.a
+lib/libcolord-gtk.la
+lib/libcolord-gtk.so
+lib/libcolord-gtk.so.1
 libdata/pkgconfig/colord.pc
+libdata/pkgconfig/colord-gtk.pc
 libexec/colord
 share/color/icc/colord/crayons.icc
 share/color/icc/colord/x11-colors.icc
@@ -37,6 +51,7 @@ share/dbus-1/interfaces/org.freedesktop.colord.sane.xml
 share/dbus-1/system-services/org.freedesktop.ColorManager.service
 share/dbus-1/system-services/org.freedesktop.colord-sane.service
 share/gir-1.0/Colord-1.0.gir
+share/gir-1.0/ColordGtk-1.0.gir
 share/locale/as/LC_MESSAGES/colord.mo
 share/locale/bg/LC_MESSAGES/colord.mo
 share/locale/bg_BG/LC_MESSAGES/colord.mo
@@ -113,5 +128,6 @@ share/vala/vapi/colord.vapi
 @dirrm share/color/icc
 @dirrm share/color
 @dirrm lib/colord-sensors
+@dirrm include/colord-1/colord-gtk
 @dirrm include/colord-1/colord
 @dirrm include/colord-1
