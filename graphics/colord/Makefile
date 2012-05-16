@@ -3,11 +3,12 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/colord/Makefile,v 1.6 2012/05/04 00:55:37 mezz Exp $
+#    $MCom: ports/graphics/colord/Makefile,v 1.7 2012/05/15 21:57:40 kwm Exp $
 #
 
 PORTNAME=	colord
 PORTVERSION=	0.1.20
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 
@@ -28,7 +29,7 @@ USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
-CONFIGURE_ARGS=	--disable-gudev --enable-gtk-doc-html=no
+CONFIGURE_ARGS=	--disable-gudev --enable-gtk-doc-html=no --disable-gtk
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	USB_CFLAGS="-I/usr/include" \
