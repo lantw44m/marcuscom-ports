@@ -3,11 +3,12 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.15 2012/01/26 00:39:27 ahze Exp $
+#   $MCom: ports/sysutils/polkit/Makefile,v 1.16 2012/05/15 20:47:08 kwm Exp $
 #
 
 PORTNAME=	polkit
 PORTVERSION=	0.105
+PORTREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 
@@ -15,8 +16,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Framework for controlling access to system-wide components
 
 BUILD_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	eggdbus-1.0:${PORTSDIR}/devel/eggdbus \
-		expat.6:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 
 USE_GNOME=	gnomehack glib20 intlhack
@@ -28,6 +28,7 @@ CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-authfw=pam \
 		--with-pam-include=system \
 		--with-os-type=freebsd \
+		--disable-systemd \
 		--enable-introspection \
 		--localstatedir=/var
 CONFIGURE_ENV=	GTKDOC="false"
