@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.16 2011/10/07 22:08:49 kwm Exp $
+#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.17 2012/01/17 16:20:40 ahze Exp $
 #
 
 PORTNAME=	gsettings-desktop-schemas
-PORTVERSION=	3.2.0
+PORTVERSION=	3.4.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,9 +15,11 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Collection of globally shared GSetting schemas
 
-RUN_DEPENDS=	${LOCALBASE}/etc/fonts/conf.avail/31-cantarell.conf:${PORTSDIR}/x11-fonts/cantarell-fonts
-
 LICENSE=	LGPL21
+
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+RUN_DEPENDS=	${LOCALBASE}/etc/fonts/conf.avail/31-cantarell.conf:${PORTSDIR}/x11-fonts/cantarell-fonts \
+		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 USE_XZ=		yes
 USE_GETTEXT=	yes
@@ -41,6 +43,8 @@ GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
 		org.gnome.desktop.sound.gschema.xml \
 		org.gnome.desktop.thumbnailers.gschema.xml \
 		org.gnome.desktop.thumbnail-cache.gschema.xml \
+		org.gnome.desktop.wm.keybindings.gschema.xml \
+		org.gnome.desktop.wm.preferences.gschema.xml \
 		org.gnome.system.locale.gschema.xml \
 		org.gnome.system.proxy.gschema.xml
 
