@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/yelp-xsl/Makefile,v 1.8 2011/10/08 09:47:47 kwm Exp $
+#   $MCom: ports/textproc/yelp-xsl/Makefile,v 1.9 2011/10/18 21:44:49 kwm Exp $
 #
 
 PORTNAME=	yelp-xsl
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.2
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
