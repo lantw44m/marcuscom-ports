@@ -176,14 +176,13 @@ share/locale/zu/LC_MESSAGES/yelp.mo
 %%DATADIR%%/icons/hicolor/scalable/status/yelp-page-tip-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/status/yelp-page-ui-symbolic.svg
 %%DATADIR%%/icons/hicolor/scalable/status/yelp-page-video-symbolic.svg
-%%DATADIR%%/js/jquery-ui-1.8.custom.min.js
 %%DATADIR%%/xslt/db2html.xsl
 %%DATADIR%%/xslt/info2html.xsl
 %%DATADIR%%/xslt/mal2html.xsl
 %%DATADIR%%/xslt/man2html.xsl
 %%DATADIR%%/xslt/yelp-common.xsl
+share/yelp-xsl/xslt/common/domains/yelp.xml
 @dirrm %%DATADIR%%/xslt
-@dirrm %%DATADIR%%/js
 @dirrm %%DATADIR%%/icons/hicolor/scalable/status
 @dirrm %%DATADIR%%/icons/hicolor/scalable/actions
 @dirrm %%DATADIR%%/icons/hicolor/scalable
