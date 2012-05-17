@@ -3,17 +3,17 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/yelp-tools/Makefile,v 1.4 2011/10/08 09:50:01 kwm Exp $
+#   $MCom: ports/textproc/yelp-tools/Makefile,v 1.5 2011/10/18 21:45:48 kwm Exp $
 #
 
 PORTNAME=	yelp-tools
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.1
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	utilities to help manage documentation for Yelp and the web
+COMMENT=	Utilities to help manage documentation for Yelp and the web
 
 BUILD_DEPENDS=	yelp-xsl>=3.1.5:${PORTSDIR}/textproc/yelp-xsl \
 		itstool:${PORTSDIR}/textproc/itstool
@@ -24,8 +24,8 @@ USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack pkgconfig libxml2
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include <bsd.port.pre.mk>
 
