@@ -1,0 +1,127 @@
+--- configure.orig	2012-05-17 19:12:52.000000000 +0200
++++ configure	2012-05-17 19:14:21.000000000 +0200
+@@ -19120,99 +19120,6 @@
+ fi
+ 
+ 
+-
+-pkg_failed=no
+-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for WACOM" >&5
+-$as_echo_n "checking for WACOM... " >&6; }
+-
+-if test -n "$WACOM_CFLAGS"; then
+-    pkg_cv_WACOM_CFLAGS="$WACOM_CFLAGS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libwacom >= \$LIBWACOM_REQUIRED_VERSION x11 xi xtst \$GUDEV_PKG gnome-desktop-3.0 >= \$GNOME_DESKTOP_REQUIRED_VERSION xorg-wacom\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "libwacom >= $LIBWACOM_REQUIRED_VERSION x11 xi xtst $GUDEV_PKG gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION xorg-wacom") 2>&5
+-  ac_status=$?
+-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+-  test $ac_status = 0; }; then
+-  pkg_cv_WACOM_CFLAGS=`$PKG_CONFIG --cflags "libwacom >= $LIBWACOM_REQUIRED_VERSION x11 xi xtst $GUDEV_PKG gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION xorg-wacom" 2>/dev/null`
+-else
+-  pkg_failed=yes
+-fi
+- else
+-    pkg_failed=untried
+-fi
+-if test -n "$WACOM_LIBS"; then
+-    pkg_cv_WACOM_LIBS="$WACOM_LIBS"
+- elif test -n "$PKG_CONFIG"; then
+-    if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"libwacom >= \$LIBWACOM_REQUIRED_VERSION x11 xi xtst \$GUDEV_PKG gnome-desktop-3.0 >= \$GNOME_DESKTOP_REQUIRED_VERSION xorg-wacom\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "libwacom >= $LIBWACOM_REQUIRED_VERSION x11 xi xtst $GUDEV_PKG gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION xorg-wacom") 2>&5
+-  ac_status=$?
+-  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+-  test $ac_status = 0; }; then
+-  pkg_cv_WACOM_LIBS=`$PKG_CONFIG --libs "libwacom >= $LIBWACOM_REQUIRED_VERSION x11 xi xtst $GUDEV_PKG gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION xorg-wacom" 2>/dev/null`
+-else
+-  pkg_failed=yes
+-fi
+- else
+-    pkg_failed=untried
+-fi
+-
+-
+-
+-if test $pkg_failed = yes; then
+-   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-
+-if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
+-        _pkg_short_errors_supported=yes
+-else
+-        _pkg_short_errors_supported=no
+-fi
+-        if test $_pkg_short_errors_supported = yes; then
+-	        WACOM_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "libwacom >= $LIBWACOM_REQUIRED_VERSION x11 xi xtst $GUDEV_PKG gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION xorg-wacom" 2>&1`
+-        else
+-	        WACOM_PKG_ERRORS=`$PKG_CONFIG --print-errors "libwacom >= $LIBWACOM_REQUIRED_VERSION x11 xi xtst $GUDEV_PKG gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION xorg-wacom" 2>&1`
+-        fi
+-	# Put the nasty error message in config.log where it belongs
+-	echo "$WACOM_PKG_ERRORS" >&5
+-
+-	as_fn_error $? "Package requirements (libwacom >= $LIBWACOM_REQUIRED_VERSION x11 xi xtst $GUDEV_PKG gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION xorg-wacom) were not met:
+-
+-$WACOM_PKG_ERRORS
+-
+-Consider adjusting the PKG_CONFIG_PATH environment variable if you
+-installed software in a non-standard prefix.
+-
+-Alternatively, you may set the environment variables WACOM_CFLAGS
+-and WACOM_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details." "$LINENO" 5
+-
+-elif test $pkg_failed = untried; then
+-     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+-as_fn_error $? "The pkg-config script could not be found or is too old.  Make sure it
+-is in your PATH or set the PKG_CONFIG environment variable to the full
+-path to pkg-config.
+-
+-Alternatively, you may set the environment variables WACOM_CFLAGS
+-and WACOM_LIBS to avoid the need to call pkg-config.
+-See the pkg-config man page for more details.
+-
+-To get pkg-config, see <http://pkg-config.freedesktop.org/>.
+-See \`config.log' for more details" "$LINENO" 5; }
+-
+-else
+-	WACOM_CFLAGS=$pkg_cv_WACOM_CFLAGS
+-	WACOM_LIBS=$pkg_cv_WACOM_LIBS
+-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+-$as_echo "yes" >&6; }
+-
+-fi
+-
+-
+ have_packagekit=false
+ # Check whether --enable-packagekit was given.
+ if test "${enable_packagekit+set}" = set; then :
+@@ -20045,7 +19952,7 @@
+ fi
+ 
+ 
+-ac_config_files="$ac_config_files Makefile gnome-settings-daemon/Makefile plugins/Makefile plugins/a11y-keyboard/Makefile plugins/a11y-settings/Makefile plugins/automount/Makefile plugins/background/Makefile plugins/clipboard/Makefile plugins/color/Makefile plugins/common/Makefile plugins/cursor/Makefile plugins/dummy/Makefile plugins/power/Makefile plugins/housekeeping/Makefile plugins/keyboard/Makefile plugins/media-keys/Makefile plugins/media-keys/cut-n-paste/Makefile plugins/mouse/Makefile plugins/orientation/Makefile plugins/print-notifications/Makefile plugins/smartcard/Makefile plugins/sound/Makefile plugins/updates/Makefile plugins/wacom/Makefile plugins/xrandr/Makefile plugins/xsettings/Makefile data/Makefile data/gnome-settings-daemon.pc data/gnome-settings-daemon-uninstalled.pc data/org.gnome.settings-daemon.plugins.gschema.xml.in data/org.gnome.settings-daemon.plugins.xsettings.gschema.xml.in data/org.gnome.settings-daemon.plugins.keyboard.gschema.xml.in data/org.gnome.settings-daemon.plugins.power.gschema.xml.in data/org.gnome.settings-daemon.plugins.color.gschema.xml.in data/org.gnome.settings-daemon.plugins.media-keys.gschema.xml.in data/org.gnome.settings-daemon.peripherals.gschema.xml.in data/org.gnome.settings-daemon.plugins.housekeeping.gschema.xml.in data/org.gnome.settings-daemon.plugins.orientation.gschema.xml.in data/org.gnome.settings-daemon.plugins.updates.gschema.xml.in data/org.gnome.settings-daemon.plugins.xrandr.gschema.xml.in data/org.gnome.settings-daemon.peripherals.wacom.gschema.xml.in data/org.gnome.settings-daemon.plugins.print-notifications.gschema.xml.in po/Makefile.in"
++ac_config_files="$ac_config_files Makefile gnome-settings-daemon/Makefile plugins/Makefile plugins/a11y-keyboard/Makefile plugins/a11y-settings/Makefile plugins/automount/Makefile plugins/background/Makefile plugins/clipboard/Makefile plugins/color/Makefile plugins/common/Makefile plugins/cursor/Makefile plugins/dummy/Makefile plugins/power/Makefile plugins/housekeeping/Makefile plugins/keyboard/Makefile plugins/media-keys/Makefile plugins/media-keys/cut-n-paste/Makefile plugins/mouse/Makefile plugins/orientation/Makefile plugins/print-notifications/Makefile plugins/smartcard/Makefile plugins/sound/Makefile plugins/updates/Makefile plugins/xrandr/Makefile plugins/xsettings/Makefile data/Makefile data/gnome-settings-daemon.pc data/gnome-settings-daemon-uninstalled.pc data/org.gnome.settings-daemon.plugins.gschema.xml.in data/org.gnome.settings-daemon.plugins.xsettings.gschema.xml.in data/org.gnome.settings-daemon.plugins.keyboard.gschema.xml.in data/org.gnome.settings-daemon.plugins.power.gschema.xml.in data/org.gnome.settings-daemon.plugins.color.gschema.xml.in data/org.gnome.settings-daemon.plugins.media-keys.gschema.xml.in data/org.gnome.settings-daemon.peripherals.gschema.xml.in data/org.gnome.settings-daemon.plugins.housekeeping.gschema.xml.in data/org.gnome.settings-daemon.plugins.orientation.gschema.xml.in data/org.gnome.settings-daemon.plugins.updates.gschema.xml.in data/org.gnome.settings-daemon.plugins.xrandr.gschema.xml.in data/org.gnome.settings-daemon.plugins.print-notifications.gschema.xml.in po/Makefile.in"
+ 
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+@@ -21211,7 +21118,6 @@
+     "plugins/smartcard/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/smartcard/Makefile" ;;
+     "plugins/sound/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/sound/Makefile" ;;
+     "plugins/updates/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/updates/Makefile" ;;
+-    "plugins/wacom/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/wacom/Makefile" ;;
+     "plugins/xrandr/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/xrandr/Makefile" ;;
+     "plugins/xsettings/Makefile") CONFIG_FILES="$CONFIG_FILES plugins/xsettings/Makefile" ;;
+     "data/Makefile") CONFIG_FILES="$CONFIG_FILES data/Makefile" ;;
+@@ -21228,7 +21134,6 @@
+     "data/org.gnome.settings-daemon.plugins.orientation.gschema.xml.in") CONFIG_FILES="$CONFIG_FILES data/org.gnome.settings-daemon.plugins.orientation.gschema.xml.in" ;;
+     "data/org.gnome.settings-daemon.plugins.updates.gschema.xml.in") CONFIG_FILES="$CONFIG_FILES data/org.gnome.settings-daemon.plugins.updates.gschema.xml.in" ;;
+     "data/org.gnome.settings-daemon.plugins.xrandr.gschema.xml.in") CONFIG_FILES="$CONFIG_FILES data/org.gnome.settings-daemon.plugins.xrandr.gschema.xml.in" ;;
+-    "data/org.gnome.settings-daemon.peripherals.wacom.gschema.xml.in") CONFIG_FILES="$CONFIG_FILES data/org.gnome.settings-daemon.peripherals.wacom.gschema.xml.in" ;;
+     "data/org.gnome.settings-daemon.plugins.print-notifications.gschema.xml.in") CONFIG_FILES="$CONFIG_FILES data/org.gnome.settings-daemon.plugins.print-notifications.gschema.xml.in" ;;
+     "po/Makefile.in") CONFIG_FILES="$CONFIG_FILES po/Makefile.in" ;;
+     "po/stamp-it") CONFIG_COMMANDS="$CONFIG_COMMANDS po/stamp-it" ;;

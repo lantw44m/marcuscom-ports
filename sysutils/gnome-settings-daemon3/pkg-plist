@@ -1,4 +1,3 @@
-etc/dbus-1/system.d/org.gnome.SettingsDaemon.DateTimeMechanism.conf
 etc/xdg/autostart/gnome-fallback-mount-helper.desktop
 etc/xdg/autostart/gnome-settings-daemon.desktop
 include/gnome-settings-daemon-3.0/gnome-settings-daemon/gnome-settings-plugin.h
@@ -10,7 +9,6 @@ lib/gnome-settings-daemon-3.0/clipboard.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/color.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/cursor.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/housekeeping.gnome-settings-plugin
-lib/gnome-settings-daemon-3.0/keybindings.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/keyboard.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/liba11y-keyboard.a
 lib/gnome-settings-daemon-3.0/liba11y-keyboard.la
@@ -30,18 +28,18 @@ lib/gnome-settings-daemon-3.0/libcolor.so
 lib/gnome-settings-daemon-3.0/libcursor.a
 lib/gnome-settings-daemon-3.0/libcursor.la
 lib/gnome-settings-daemon-3.0/libcursor.so
+lib/gnome-settings-daemon-3.0/libgsd.a
+lib/gnome-settings-daemon-3.0/libgsd.la
+lib/gnome-settings-daemon-3.0/libgsd.so
 lib/gnome-settings-daemon-3.0/libhousekeeping.a
 lib/gnome-settings-daemon-3.0/libhousekeeping.la
 lib/gnome-settings-daemon-3.0/libhousekeeping.so
-lib/gnome-settings-daemon-3.0/libkeybindings.a
-lib/gnome-settings-daemon-3.0/libkeybindings.la
-lib/gnome-settings-daemon-3.0/libkeybindings.so
 lib/gnome-settings-daemon-3.0/libkeyboard.a
 lib/gnome-settings-daemon-3.0/libkeyboard.la
 lib/gnome-settings-daemon-3.0/libkeyboard.so
-%%PULSEAUDIO%%lib/gnome-settings-daemon-3.0/libmedia-keys.a
-%%PULSEAUDIO%%lib/gnome-settings-daemon-3.0/libmedia-keys.la
-%%PULSEAUDIO%%lib/gnome-settings-daemon-3.0/libmedia-keys.so
+lib/gnome-settings-daemon-3.0/libmedia-keys.a
+lib/gnome-settings-daemon-3.0/libmedia-keys.la
+lib/gnome-settings-daemon-3.0/libmedia-keys.so
 lib/gnome-settings-daemon-3.0/libmouse.a
 lib/gnome-settings-daemon-3.0/libmouse.la
 lib/gnome-settings-daemon-3.0/libmouse.so
@@ -57,34 +55,27 @@ lib/gnome-settings-daemon-3.0/libpower.so
 lib/gnome-settings-daemon-3.0/libsound.a
 lib/gnome-settings-daemon-3.0/libsound.la
 lib/gnome-settings-daemon-3.0/libsound.so
-lib/gnome-settings-daemon-3.0/libwacom.a
-lib/gnome-settings-daemon-3.0/libwacom.la
-lib/gnome-settings-daemon-3.0/libwacom.so
 lib/gnome-settings-daemon-3.0/libxrandr.a
 lib/gnome-settings-daemon-3.0/libxrandr.la
 lib/gnome-settings-daemon-3.0/libxrandr.so
 lib/gnome-settings-daemon-3.0/libxsettings.a
 lib/gnome-settings-daemon-3.0/libxsettings.la
 lib/gnome-settings-daemon-3.0/libxsettings.so
-%%PULSEAUDIO%%lib/gnome-settings-daemon-3.0/media-keys.gnome-settings-plugin
+lib/gnome-settings-daemon-3.0/media-keys.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/mouse.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/power.gnome-settings-plugin
 %%CUPS%%lib/gnome-settings-daemon-3.0/print-notifications.gnome-settings-plugin
 %%SMARTCARD%%lib/gnome-settings-daemon-3.0/smartcard.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/sound.gnome-settings-plugin
-lib/gnome-settings-daemon-3.0/wacom.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/xrandr.gnome-settings-plugin
 lib/gnome-settings-daemon-3.0/xsettings.gnome-settings-plugin
 libdata/pkgconfig/gnome-settings-daemon.pc
 libexec/gnome-fallback-mount-helper
 libexec/gnome-settings-daemon
-libexec/gsd-backlight-helper
-libexec/gsd-datetime-mechanism
 libexec/gsd-locate-pointer
 libexec/gsd-printer
 share/GConf/gsettings/gnome-settings-daemon.convert
 share/dbus-1/services/org.gnome.SettingsDaemon.service
-share/dbus-1/system-services/org.gnome.SettingsDaemon.DateTimeMechanism.service
 share/gnome-settings-daemon-3.0/input-device-example.sh
 %%DATADIR%%/gsd-a11y-preferences-dialog.ui
 %%DATADIR%%/icons/hicolor/64x64/devices/kbd-capslock-off.png
@@ -190,7 +181,6 @@ share/locale/zh_HK/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
 share/polkit-1/actions/org.gnome.settings-daemon.plugins.power.policy
-share/polkit-1/actions/org.gnome.settingsdaemon.datetimemechanism.policy
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
