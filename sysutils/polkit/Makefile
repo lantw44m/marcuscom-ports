@@ -3,7 +3,7 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.16 2012/05/15 20:47:08 kwm Exp $
+#   $MCom: ports/sysutils/polkit/Makefile,v 1.17 2012/05/16 19:33:28 kwm Exp $
 #
 
 PORTNAME=	polkit
@@ -17,7 +17,8 @@ COMMENT=	Framework for controlling access to system-wide components
 
 BUILD_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
-RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
+RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection \
+		dbus-launch:${PORTSDIR}/devel/dbus
 
 USE_GNOME=	gnomehack glib20 intlhack
 USE_GMAKE=	yes
