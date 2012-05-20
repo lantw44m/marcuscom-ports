@@ -3,11 +3,11 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.53 2011/10/17 13:17:38 kwm Exp $
+#  $MCom: ports/graphics/clutter/Makefile,v 1.54 2012/01/30 14:16:27 kwm Exp $
 #
 
 PORTNAME=	clutter
-PORTVERSION=	1.8.4
+PORTVERSION=	1.10.4
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -18,7 +18,7 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	json-glib-1.0.0:${PORTSDIR}/devel/json-glib \
-		cogl.5:${PORTSDIR}/graphics/cogl
+		cogl.9:${PORTSDIR}/graphics/cogl
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
