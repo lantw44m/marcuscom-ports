@@ -58,6 +58,9 @@ lib/libpyglib-gi-2.0-python2.7.so.0
 %%PYTHON_SITELIBDIR%%/gi/overrides/keysyms.py
 %%PYTHON_SITELIBDIR%%/gi/overrides/keysyms.pyc
 %%PYTHON_SITELIBDIR%%/gi/overrides/keysyms.pyo
+%%PYTHON_SITELIBDIR%%/gi/pygtkcompat.py
+%%PYTHON_SITELIBDIR%%/gi/pygtkcompat.pyc
+%%PYTHON_SITELIBDIR%%/gi/pygtkcompat.pyo
 %%PYTHON_SITELIBDIR%%/gi/repository/__init__.py
 %%PYTHON_SITELIBDIR%%/gi/repository/__init__.pyc
 %%PYTHON_SITELIBDIR%%/gi/repository/__init__.pyo
