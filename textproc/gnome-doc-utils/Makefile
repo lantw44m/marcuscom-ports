@@ -3,12 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.88 2011/04/25 07:33:12 kwm Exp $
+#   $MCom: ports/textproc/gnome-doc-utils/Makefile,v 1.89 2012/01/17 13:59:48 ahze Exp $
 #
 
 PORTNAME=	gnome-doc-utils
-PORTVERSION=	0.20.6
-PORTREVISION=	1
+PORTVERSION=	0.20.10
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 
@@ -23,7 +22,7 @@ RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
 		${LOCALBASE}/share/xml/docbook/4.3/catalog.xml:${PORTSDIR}/textproc/docbook-xml-430 \
 		${LOCALBASE}/share/xml/docbook/4.4/catalog.xml:${PORTSDIR}/textproc/docbook-xml-440
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=yes
 USE_GETTEXT=	yes
@@ -32,8 +31,8 @@ USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-omf-dir=${PREFIX}/share/omf
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		xml2po.1
 
