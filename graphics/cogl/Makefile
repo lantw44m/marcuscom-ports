@@ -3,11 +3,11 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/cogl/Makefile,v 1.4 2011/09/19 20:27:20 kwm Exp $
+#  $MCom: ports/graphics/cogl/Makefile,v 1.5 2011/10/18 20:13:19 kwm Exp $
 #
 
 PORTNAME=	cogl
-PORTVERSION=	1.8.2
+PORTVERSION=	1.10.2
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -30,7 +30,7 @@ USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-x
-CPPFLAGS=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 .include <bsd.port.mk>
