@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.23 2011/11/17 00:57:21 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.24 2012/01/22 11:18:35 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.2.3
+PORTVERSION=	3.4.2
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -44,10 +44,13 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--with-openldap=yes \
 		--with-libdb=${LOCALBASE}
-CPPFLAGS=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}
-LDFLAGS=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-PLIST_SUB=	VERSION="3.2" EVO_VERSION="1.2"
+GLIB_SCHEMAS=	org.gnome.evolution.eds-shell.gschema.xml \
+		org.gnome.evolution.shell.network-config.gschema.xml
+
+PLIST_SUB=	VERSION="3.4" EVO_VERSION="1.2"
 
 #OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
 OPTIONS+=	WEATHER 	"Enable weather calendar backend"	on \
