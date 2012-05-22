@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	accountsservice
-PORTVERSION=	0.6.15
+PORTVERSION=	0.6.21
 CATEGORIES=	sysutils devel
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 
@@ -14,12 +14,13 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	D-Bus interface for user account query and manipulation
 
 BUILD_DEPEND=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	xslt.2:${PORTSDIR}/textproc/libxslt \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
+LIB_DEPENDS=	xslt:${PORTSDIR}/textproc/libxslt \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 
 USE_XZ=		yes
 USE_GNOME=	gnomehack glib20 intlhack
+USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
