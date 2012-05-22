@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.85 2012/04/11 11:46:06 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.86 2012/05/22 12:53:13 kwm Exp $
 #
 
 PORTNAME=	webkit
@@ -17,6 +17,7 @@ COMMENT=	An opensource browser engine
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf \
+		gtkdoc-rebase:${PORTSDIR}/textproc/gtk-doc \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
 		icutu:${PORTSDIR}/devel/icu \
