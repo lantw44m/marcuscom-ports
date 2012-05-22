@@ -389,6 +389,8 @@ share/locale/zh_HK/LC_MESSAGES/clutter-1.0.mo
 share/locale/zh_TW/LC_MESSAGES/clutter-1.0.mo
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ur/LC_MESSAGES
+@dirrmtry share/locale/ur
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
@@ -397,6 +399,8 @@ share/locale/zh_TW/LC_MESSAGES/clutter-1.0.mo
 @dirrmtry share/locale/sr
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/az_IR/LC_MESSAGES
+@dirrmtry share/locale/az_IR
 @dirrmtry share/locale/ast/LC_MESSAGES
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
