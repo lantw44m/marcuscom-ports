@@ -3,7 +3,7 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.54 2012/01/30 14:16:27 kwm Exp $
+#  $MCom: ports/graphics/clutter/Makefile,v 1.55 2012/05/20 13:32:13 kwm Exp $
 #
 
 PORTNAME=	clutter
@@ -28,7 +28,8 @@ USE_GNOME=	pkgconfig gdkpixbuf2 gnomehack ltverhack gnomeprefix atk pango
 USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--with-x --enable-conformance=no
+CONFIGURE_ARGS=	--with-x --enable-conformance=no \
+		--disable-gdk-backend
 
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
