@@ -3,13 +3,13 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.84 2011/11/30 14:08:50 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.85 2012/04/11 11:46:06 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.6.3
+PORTVERSION=	1.8.1
 CATEGORIES=	www
-MASTER_SITES=	http://webkitgtk.org/
+MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -18,16 +18,16 @@ COMMENT=	An opensource browser engine
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
-		icutu.48:${PORTSDIR}/devel/icu \
-		curl.6:${PORTSDIR}/ftp/curl \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
-		soup-2.4.1:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
+		icutu:${PORTSDIR}/devel/icu \
+		curl:${PORTSDIR}/ftp/curl \
+		sqlite3:${PORTSDIR}/databases/sqlite3 \
+		soup-2.4:${PORTSDIR}/devel/libsoup
 
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GSTREAMER=	yes
-MAKE_JOBS_SAFE=	yes
+MAKE_JOBS_UNSAFE=	yes
 USE_XORG=	xt
 USE_BISON=	build
 USE_GMAKE=	yes
@@ -44,9 +44,9 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-gtk=2.0 \
 		--enable-svg-fonts \
+		--disable-geolocation \
 		--enable-introspection
 MAKEFILE=	GNUmakefile
-GLIB_SCHEMAS=	org.webkitgtk-1.0.gschema.xml
 
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",

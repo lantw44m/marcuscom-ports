@@ -1,6 +1,15 @@
---- configure.orig	2011-03-22 15:43:40.000000000 +0100
-+++ configure	2011-03-22 15:44:04.000000000 +0100
-@@ -18331,8 +18331,8 @@
+--- configure.orig	2012-05-16 12:57:04.000000000 +0200
++++ configure	2012-05-16 14:00:03.000000000 +0200
+@@ -17704,7 +17704,7 @@
+ fi
+ case $host in
+ i?86-*-linux*|x86_64-*-linux*|powerpc-*-linux* \
+-|amd64-*-freebsd*|i?86-*-freebsd*|ia64-*-freebsd*)
++|amd64-*-freebsd*|i?86-*-freebsd*|amd64-*-freebsd*|ia64-*-freebsd*)
+     pic_options='-fPIC'
+     ;;
+ i?86-apple-darwin*)
+@@ -19144,8 +19144,8 @@
  .SECONDARY: $(gsettings_SCHEMAS)
  
  gsettings__base_list = \
@@ -11,21 +20,12 @@
  
  install-gsettings-schemas: $(gsettings_SCHEMAS:.xml=.valid) $(gsettings__enum_file)
  	@$(NORMAL_INSTALL)
-@@ -20131,7 +20131,7 @@
- $as_echo "#define ENABLE_YARR_JIT 1" >>confdefs.h
+@@ -20440,7 +20440,7 @@
  
-         ;;
--        i*86|x86_64)
-+        i*86|x86_64|amd64)
+ done
  
- $as_echo "#define ENABLE_JIT 1" >>confdefs.h
+-    OPENGL_LIBS="-lGL -ldl"
++    OPENGL_LIBS="-lGL"
+ fi
  
-@@ -20156,7 +20156,7 @@
- $as_echo "#define WTF_USE_JIT_STUB_ARGUMENT_VA_LIST 1" >>confdefs.h
- 
-                 ;;
--                x86_64)
-+                x86_64|amd64)
- 
- $as_echo "#define WTF_USE_JIT_STUB_ARGUMENT_REGISTER 1" >>confdefs.h
  
