@@ -3,7 +3,7 @@
 # Whom:			Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.19 2012/05/15 15:17:37 kwm Exp $
+#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.20 2012/05/23 08:00:51 kwm Exp $
 
 PORTNAME?=	gdk-pixbuf
 PORTVERSION=	2.26.1
@@ -29,7 +29,7 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--enable-introspection=yes
+CONFIGURE_ARGS=	--enable-introspection=yes --with-x11
 
 MAN1=		gdk-pixbuf-csource.1 gdk-pixbuf-query-loaders.1
 
