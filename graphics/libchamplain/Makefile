@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/libchamplain/Makefile,v 1.29 2011/09/18 15:11:01 kwm Exp $
+#   $MCom: ports/graphics/libchamplain/Makefile,v 1.30 2011/12/20 11:58:46 kwm Exp $
 #
 
 PORTNAME=	libchamplain
-PORTVERSION=	0.12.1
+PORTVERSION=	0.12.2
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -25,8 +25,8 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-gtk-doc-html=no
 
 PLIST_SUB=	VERSION=0.12
