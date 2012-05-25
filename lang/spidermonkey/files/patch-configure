@@ -1,0 +1,74 @@
+--- configure.orig	2012-02-19 15:18:58.000000000 +0100
++++ configure	2012-02-19 15:38:03.000000000 +0100
+@@ -5797,7 +5797,7 @@
+     CPU_ARCH=sparc
+     ;;
+ 
+-x86_64 | ia64)
++x86_64 | amd64 | ia64)
+     CPU_ARCH="$OS_TEST"
+     ;;
+ 
+@@ -5817,7 +5817,7 @@
+ 
+ INTEL_ARCHITECTURE=
+ case "$OS_TEST" in
+-    x86_64|i?86)
++    x86_64|i?86|amd64)
+       INTEL_ARCHITECTURE=1
+ esac
+ 
+@@ -6350,7 +6350,7 @@
+     esac
+ 
+     case "${host_cpu}" in
+-    x86_64)
++    x86_64|amd64)
+         HOST_CFLAGS="$HOST_CFLAGS -D_AMD64_"
+         ;;
+     esac
+@@ -7303,7 +7303,7 @@
+ EOF
+ 
+ 	;;
+-    x86_64-*)
++    x86_64-*|amd64-*)
+         cat >> confdefs.h <<\EOF
+ #define _AMD64_ 1
+ EOF
+@@ -7325,7 +7325,7 @@
+     fi
+     ;;
+ 
+-*-netbsd*)
++*-netbsd*|*-freebsd*)
+     DSO_CFLAGS=''
+     CFLAGS="$CFLAGS -Dunix"
+     CXXFLAGS="$CXXFLAGS -Dunix"
+@@ -7879,7 +7879,7 @@
+ EOF
+ 
+     ;;
+-x86_64*-*)
++x86_64*-*|amd64*-*)
+     ENABLE_TRACEJIT=1
+     NANOJIT_ARCH=X64
+     ENABLE_METHODJIT=1
+@@ -8040,7 +8040,7 @@
+ EOF
+ 
+     ;;
+-x86_64*-*)
++x86_64*-*|amd64*-*)
+     cat >> confdefs.h <<\EOF
+ #define AVMPLUS_AMD64 1
+ EOF
+@@ -16154,7 +16154,7 @@
+     # autotools can't quite handle an MSVC build environment yet.
+     ac_configure_args="$ac_configure_args LD=link CPP=\"cl -nologo -EP\" SHELL=sh.exe"
+     case "${target_cpu}" in
+-    x86_64)
++    x86_64|amd64)
+       # Need target since MSYS tools into mozilla-build may be 32bit
+       ac_configure_args="$ac_configure_args CC=\"$_topsrcdir/ctypes/libffi/msvcc.sh -m64\" --build=$build --host=$target"
+       ;;

@@ -1,0 +1,32 @@
+--- Makefile.in.orig	2012-02-26 18:16:19.000000000 +0100
++++ Makefile.in	2012-02-26 18:16:41.000000000 +0100
+@@ -71,8 +71,8 @@
+ DIRS += tests
+ endif
+ 
+-SRCREL_VERSION      = 1.0.0
+-SRCREL_ABI_VERSION  := $(word 1,$(subst ., ,$(SRCREL_VERSION))).$(word 2,$(subst ., ,$(SRCREL_VERSION)))
++SRCREL_VERSION      = 1
++SRCREL_ABI_VERSION  := 1
+ 
+ MODULE		    = js
+ ifeq (,$(HOST_BIN_SUFFIX))
+@@ -876,10 +876,6 @@
+ endif
+ 
+ install:: $(LIBRARY) $(SHARED_LIBRARY) $(IMPORT_LIBRARY)
+-ifneq (,$(LIBRARY))
+-	$(SYSINSTALL) $(LIBRARY) $(DESTDIR)$(libdir)
+-	mv -f $(DESTDIR)$(libdir)/$(LIBRARY) $(subst $(STATIC_LIBRARY_NAME),mozjs185-$(SRCREL_ABI_VERSION),$(DESTDIR)$(libdir)/$(LIBRARY))
+-endif
+ ifneq (,$(SHARED_LIBRARY))
+ ifeq (,$(HOST_BIN_SUFFIX))
+ 	@[ ! -h $(SHLIB_ANY_VER) ] || rm -f $(SHLIB_ANY_VER)
+@@ -888,7 +884,6 @@
+ ifeq (,$(HOST_BIN_SUFFIX))
+ 	mv -f $(SHLIB_ANY_VER) $(SHLIB_EXACT_VER)
+ 	@[ ! -h $(SHLIB_ABI_VER) ] || rm -f $(SHLIB_ABI_VER)
+-	ln -s $(SHLIB_EXACT_VER) $(SHLIB_ABI_VER)
+ 	ln -s $(SHLIB_ABI_VER) $(SHLIB_ANY_VER)
+ endif
+ endif
