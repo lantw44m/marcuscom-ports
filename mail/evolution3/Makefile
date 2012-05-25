@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.22 2012/01/22 11:59:23 kwm Exp $
+#   $MCom: ports/mail/evolution3/Makefile,v 1.23 2012/04/27 02:54:37 mezz Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	3.2.3
+PORTVERSION=	3.4.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,10 +15,10 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An integrated mail, calendar and address book distributed suite
 
-LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss \
-		goa-1.0.0:${PORTSDIR}/net/gnome-online-accounts \
-		unique-3.0.0:${PORTSDIR}/x11-toolkits/libunique3 \
-		notify.4:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	nss3:${PORTSDIR}/security/nss \
+		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
+		unique-3.0:${PORTSDIR}/x11-toolkits/libunique3 \
+		notify:${PORTSDIR}/devel/libnotify
 
 CONFLICTS=	evolution-2.[0-9]*
 
@@ -56,8 +56,25 @@ GCONF_SCHEMAS=	apps_evolution_addressbook.schemas \
 		evolution-bogofilter.schemas \
 		evolution-mail.schemas \
 		evolution-spamassassin.schemas
+GLIB_SCHEMAS=	org.gnome.evolution.gschema.xml \
+		org.gnome.evolution.addressbook.gschema.xml \
+		org.gnome.evolution.calendar.gschema.xml \
+		org.gnome.evolution.importer.gschema.xml \
+		org.gnome.evolution.mail.gschema.xml \
+		org.gnome.evolution.shell.gschema.xml \
+		org.gnome.evolution.bogofilter.gschema.xml \
+		org.gnome.evolution.spamassassin.gschema.xml \
+		org.gnome.evolution.plugin.attachment-reminder.gschema.xml \
+		org.gnome.evolution.plugin.autocontacts.gschema.xml \
+		org.gnome.evolution.plugin.email-custom-header.gschema.xml \
+		org.gnome.evolution.plugin.external-editor.gschema.xml \
+		org.gnome.evolution.plugin.face-picture.gschema.xml \
+		org.gnome.evolution.plugin.itip.gschema.xml \
+		org.gnome.evolution.plugin.mail-notification.gschema.xml \
+		org.gnome.evolution.plugin.prefer-plain.gschema.xml \
+		org.gnome.evolution.plugin.templates.gschema.xml
 
-EVO_VERSION=	3.2
+EVO_VERSION=	3.4
 PLIST_SUB=	VERSION=${EVO_VERSION} \
 		PORTVERSION=2.12
 
@@ -86,7 +103,6 @@ PLIST_SUB+=	WEATHER=""
 CONFIGURE_ARGS+=--disable-weather
 PLIST_SUB+=	WEATHER="@comment "
 .endif
-
 
 .if defined(WITH_SPAMASSASSIN)
 RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
