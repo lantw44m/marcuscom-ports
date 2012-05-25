@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session3/Makefile,v 1.23 2011/10/07 21:36:12 kwm Exp $
+#   $MCom: ports/x11/gnome-session3/Makefile,v 1.24 2011/10/16 17:20:07 kwm Exp $
 #
 
 PORTNAME=	gnome-session
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.2.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,10 +17,10 @@ COMMENT=	Session component for the GNOME 3 desktop
 
 CONFLICTS=	gnome-session-2.[0-9]*
 
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		execinfo:${PORTSDIR}/devel/libexecinfo \
-		json-glib-1.0.0:${PORTSDIR}/devel/json-glib \
-		upower-glib.1:${PORTSDIR}/sysutils/upower
+		json-glib-1.0:${PORTSDIR}/devel/json-glib \
+		upower-glib:${PORTSDIR}/sysutils/upower
 RUN_DEPENDS=	${LOCALBASE}/sbin/console-kit-daemon:${PORTSDIR}/sysutils/consolekit \
 		${LOCALBASE}/bin/xdpyinfo:${PORTSDIR}/x11/xdpyinfo
 
