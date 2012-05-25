@@ -11,7 +11,7 @@ include/libgdl-3.0/gdl/libgdltypebuiltins.h
 lib/girepository-1.0/Gdl-3.typelib
 lib/libgdl-3.la
 lib/libgdl-3.so
-lib/libgdl-3.so.1
+lib/libgdl-3.so.3
 libdata/pkgconfig/gdl-3.0.pc
 share/doc/gdl3-3.0/GdlDock.html
 share/doc/gdl3-3.0/GdlDockBar.html
@@ -21,7 +21,6 @@ share/doc/gdl3-3.0/GdlDockMaster.html
 share/doc/gdl3-3.0/GdlDockObject.html
 share/doc/gdl3-3.0/GdlDockPlaceholder.html
 share/doc/gdl3-3.0/gdl-main.html
-share/doc/gdl3-3.0/gdl.devhelp
 share/doc/gdl3-3.0/gdl.devhelp2
 share/doc/gdl3-3.0/home.png
 share/doc/gdl3-3.0/index.html
@@ -30,10 +29,10 @@ share/doc/gdl3-3.0/left.png
 share/doc/gdl3-3.0/right.png
 share/doc/gdl3-3.0/style.css
 share/doc/gdl3-3.0/up.png
-share/gdl-3/ui/layout.ui
 share/gir-1.0/Gdl-3.gir
 share/locale/am/LC_MESSAGES/gdl-3.mo
 share/locale/ar/LC_MESSAGES/gdl-3.mo
+share/locale/as/LC_MESSAGES/gdl-3.mo
 share/locale/ast/LC_MESSAGES/gdl-3.mo
 share/locale/az/LC_MESSAGES/gdl-3.mo
 share/locale/be/LC_MESSAGES/gdl-3.mo
@@ -66,6 +65,7 @@ share/locale/hy/LC_MESSAGES/gdl-3.mo
 share/locale/id/LC_MESSAGES/gdl-3.mo
 share/locale/it/LC_MESSAGES/gdl-3.mo
 share/locale/ja/LC_MESSAGES/gdl-3.mo
+share/locale/km/LC_MESSAGES/gdl-3.mo
 share/locale/ko/LC_MESSAGES/gdl-3.mo
 share/locale/lt/LC_MESSAGES/gdl-3.mo
 share/locale/lv/LC_MESSAGES/gdl-3.mo
@@ -102,11 +102,6 @@ share/locale/vi/LC_MESSAGES/gdl-3.mo
 share/locale/zh_CN/LC_MESSAGES/gdl-3.mo
 share/locale/zh_HK/LC_MESSAGES/gdl-3.mo
 share/locale/zh_TW/LC_MESSAGES/gdl-3.mo
-@dirrm share/gdl-3/ui
-@dirrm share/gdl-3
-@dirrm share/doc/gdl3-3.0
-@dirrm include/libgdl-3.0/gdl
-@dirrm include/libgdl-3.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
@@ -127,6 +122,8 @@ share/locale/zh_TW/LC_MESSAGES/gdl-3.mo
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mai/LC_MESSAGES
 @dirrmtry share/locale/mai
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
@@ -137,3 +134,8 @@ share/locale/zh_TW/LC_MESSAGES/gdl-3.mo
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/ast/LC_MESSAGES
 @dirrmtry share/locale/ast
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
+@dirrm share/doc/gdl3-3.0
+@dirrm include/libgdl-3.0/gdl
+@dirrm include/libgdl-3.0
