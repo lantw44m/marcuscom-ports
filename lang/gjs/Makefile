@@ -3,11 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/gjs/Makefile,v 1.22 2011/12/15 15:27:48 kwm Exp $
+#   $MCom: ports/lang/gjs/Makefile,v 1.23 2012/01/22 10:58:32 kwm Exp $
 #
 
 PORTNAME=	gjs
-PORTVERSION=	1.30.1
+PORTVERSION=	1.32.0
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,10 +15,11 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME Javascript binding
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
+		spidermonkey>=1.8.5:${PORTSDIR}/lang/spidermonkey
+LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+		mozjs185.1:${PORTSDIR}/lang/spidermonkey
 
-USE_GECKO=	libxul
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
