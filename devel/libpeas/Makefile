@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libpeas/Makefile,v 1.17 2011/09/21 12:35:21 kwm Exp $
+#   $MCom: ports/devel/libpeas/Makefile,v 1.18 2011/10/08 07:42:55 kwm Exp $
 #
 
 PORTNAME=	libpeas
-PORTVERSION=	1.2.0
+PORTVERSION=	1.4.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -29,10 +29,11 @@ INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ARGS+=--disable-glade-catalog
 
 OPTIONS=	PYTHON "Enable python plugins" on \
 		SEED "Enable JavaScript plugins (based on webkit-gtk3)" off \
-		GJS "Enable JavaScript plugins (based on libxul)" on
+		GJS "Enable JavaScript plugins (based on spidermonkey)" on
 
 .include <bsd.port.options.mk>
 
@@ -56,12 +57,14 @@ PLIST_SUB+=	PYTHONS="@comment "
 
 .if defined(WITH_GJS)
 CONFIGURE_ARGS+=--enable-gjs
-BUILD_DEPENDS+=	gjs>=1.29.16:${PORTSDIR}/lang/gjs
+BUILD_DEPENDS+=	gjs>=1.32.0:${PORTSDIR}/lang/gjs
 LIB_DEPENDS+=	gjs.0:${PORTSDIR}/lang/gjs
 PLIST_SUB+=	GJS=""
 .else
 CONFIGURE_ARGS+=--enable-gjs=no
 PLIST_SUB+=	GJS="@comment "
 .endif
+
+PLIST_SUB+=	VALA="@comment "
 
 .include <bsd.port.mk>
