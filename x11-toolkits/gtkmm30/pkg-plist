@@ -1,4 +1,5 @@
 include/gdkmm-%%API_VERSION%%/gdkmm.h
+include/gdkmm-%%API_VERSION%%/gdkmm/applaunchcontext.h
 include/gdkmm-%%API_VERSION%%/gdkmm/color.h
 include/gdkmm-%%API_VERSION%%/gdkmm/cursor.h
 include/gdkmm-%%API_VERSION%%/gdkmm/device.h
@@ -13,6 +14,7 @@ include/gdkmm-%%API_VERSION%%/gdkmm/pixbufanimation.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbufanimationiter.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbufformat.h
 include/gdkmm-%%API_VERSION%%/gdkmm/pixbufloader.h
+include/gdkmm-%%API_VERSION%%/gdkmm/private/applaunchcontext_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/color_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/cursor_p.h
 include/gdkmm-%%API_VERSION%%/gdkmm/private/device_p.h
@@ -48,6 +50,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/accelkey.h
 include/gtkmm-%%API_VERSION%%/gtkmm/accellabel.h
 include/gtkmm-%%API_VERSION%%/gtkmm/accelmap.h
 include/gtkmm-%%API_VERSION%%/gtkmm/action.h
+include/gtkmm-%%API_VERSION%%/gtkmm/actionable.h
 include/gtkmm-%%API_VERSION%%/gtkmm/actiongroup.h
 include/gtkmm-%%API_VERSION%%/gtkmm/activatable.h
 include/gtkmm-%%API_VERSION%%/gtkmm/adjustment.h
@@ -56,6 +59,8 @@ include/gtkmm-%%API_VERSION%%/gtkmm/appchooser.h
 include/gtkmm-%%API_VERSION%%/gtkmm/appchooserbutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/appchooserdialog.h
 include/gtkmm-%%API_VERSION%%/gtkmm/appchooserwidget.h
+include/gtkmm-%%API_VERSION%%/gtkmm/application.h
+include/gtkmm-%%API_VERSION%%/gtkmm/applicationwindow.h
 include/gtkmm-%%API_VERSION%%/gtkmm/arrow.h
 include/gtkmm-%%API_VERSION%%/gtkmm/aspectframe.h
 include/gtkmm-%%API_VERSION%%/gtkmm/assistant.h
@@ -88,6 +93,8 @@ include/gtkmm-%%API_VERSION%%/gtkmm/checkbutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/checkmenuitem.h
 include/gtkmm-%%API_VERSION%%/gtkmm/clipboard.h
 include/gtkmm-%%API_VERSION%%/gtkmm/colorbutton.h
+include/gtkmm-%%API_VERSION%%/gtkmm/colorchooser.h
+include/gtkmm-%%API_VERSION%%/gtkmm/colorchooserdialog.h
 include/gtkmm-%%API_VERSION%%/gtkmm/colorselection.h
 include/gtkmm-%%API_VERSION%%/gtkmm/combobox.h
 include/gtkmm-%%API_VERSION%%/gtkmm/comboboxtext.h
@@ -166,6 +173,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/aboutdialog_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/accelgroup_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/accellabel_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/action_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/actionable_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/actiongroup_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/activatable_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/adjustment_p.h
@@ -174,6 +182,8 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooser_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooserbutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooserdialog_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/appchooserwidget_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/application_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/applicationwindow_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/arrow_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/aspectframe_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/assistant_p.h
@@ -204,6 +214,8 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/checkbutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/checkmenuitem_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/clipboard_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/colorbutton_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/colorchooser_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/colorchooserdialog_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/colorselection_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/combobox_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/comboboxtext_p.h
