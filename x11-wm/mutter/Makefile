@@ -3,11 +3,11 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.31 2011/10/23 10:23:06 kwm Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.32 2012/01/19 01:59:27 ahze Exp $
 #
 
 PORTNAME=	mutter
-PORTVERSION=	3.2.2
+PORTVERSION=	3.4.1
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,7 +19,7 @@ BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
 		execinfo.1:${PORTSDIR}/devel/libexecinfo \
-		clutter-glx-1.0:${PORTSDIR}/graphics/clutter \
+		clutter-1.0:${PORTSDIR}/graphics/clutter \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
@@ -29,13 +29,13 @@ USE_PYTHON=	2.5+
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehier gnomeprefix gnomehack intlhack gtk30 gconf2 ltverhack
+USE_GNOME=	gnomehier gnomeprefix gnomehack intlhack gtk30 ltverhack
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	LIBS="-lexecinfo"
-CONFIGURE_ARGS=	--enable-compile-warnings=maximum
-GCONF_SCHEMAS=	mutter.schemas
+#CONFIGURE_ARGS=	--enable-compile-warnings=maximum
+GLIB_SCHEMAS=	org.gnome.mutter.gschema.xml
 
 MAN1=		mutter-message.1 mutter-theme-viewer.1 \
 		mutter-window-demo.1 mutter.1

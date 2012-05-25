@@ -16,6 +16,7 @@ include/mutter/meta/main.h
 include/mutter/meta/meta-background-actor.h
 include/mutter/meta/meta-plugin.h
 include/mutter/meta/meta-shadow-factory.h
+include/mutter/meta/meta-shaped-texture.h
 include/mutter/meta/meta-window-actor.h
 include/mutter/meta/prefs.h
 include/mutter/meta/preview-widget.h
@@ -34,8 +35,10 @@ lib/mutter/Meta-3.0.typelib
 lib/mutter/plugins/default.so
 libdata/pkgconfig/libmutter.pc
 libdata/pkgconfig/mutter-plugins.pc
+share/GConf/gsettings/mutter-schemas.convert
 share/applications/mutter.desktop
 share/gnome/wm-properties/mutter-wm.desktop
+share/gnome-control-center/keybindings/50-mutter-windows.xml
 share/locale/am/LC_MESSAGES/mutter.mo
 share/locale/ar/LC_MESSAGES/mutter.mo
 share/locale/as/LC_MESSAGES/mutter.mo
