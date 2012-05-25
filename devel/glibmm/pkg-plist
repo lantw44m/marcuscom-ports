@@ -1,5 +1,11 @@
 include/giomm-%%API_VERSION%%/giomm.h
+include/giomm-%%API_VERSION%%/giomm/action.h
+include/giomm-%%API_VERSION%%/giomm/actiongroup.h
+include/giomm-%%API_VERSION%%/giomm/actionmap.h
 include/giomm-%%API_VERSION%%/giomm/appinfo.h
+include/giomm-%%API_VERSION%%/giomm/applaunchcontext.h
+include/giomm-%%API_VERSION%%/giomm/application.h
+include/giomm-%%API_VERSION%%/giomm/applicationcommandline.h
 include/giomm-%%API_VERSION%%/giomm/asyncinitable.h
 include/giomm-%%API_VERSION%%/giomm/asyncresult.h
 include/giomm-%%API_VERSION%%/giomm/bufferedinputstream.h
@@ -9,15 +15,19 @@ include/giomm-%%API_VERSION%%/giomm/contenttype.h
 include/giomm-%%API_VERSION%%/giomm/credentials.h
 include/giomm-%%API_VERSION%%/giomm/datainputstream.h
 include/giomm-%%API_VERSION%%/giomm/dataoutputstream.h
+include/giomm-%%API_VERSION%%/giomm/dbusactiongroup.h
 include/giomm-%%API_VERSION%%/giomm/dbusaddress.h
 include/giomm-%%API_VERSION%%/giomm/dbusauthobserver.h
 include/giomm-%%API_VERSION%%/giomm/dbusconnection.h
 include/giomm-%%API_VERSION%%/giomm/dbuserror.h
 include/giomm-%%API_VERSION%%/giomm/dbuserrorutils.h
+include/giomm-%%API_VERSION%%/giomm/dbusinterface.h
 include/giomm-%%API_VERSION%%/giomm/dbusinterfacevtable.h
 include/giomm-%%API_VERSION%%/giomm/dbusintrospection.h
+include/giomm-%%API_VERSION%%/giomm/dbusmenumodel.h
 include/giomm-%%API_VERSION%%/giomm/dbusmessage.h
 include/giomm-%%API_VERSION%%/giomm/dbusmethodinvocation.h
+include/giomm-%%API_VERSION%%/giomm/dbusobject.h
 include/giomm-%%API_VERSION%%/giomm/dbusownname.h
 include/giomm-%%API_VERSION%%/giomm/dbusproxy.h
 include/giomm-%%API_VERSION%%/giomm/dbusserver.h
@@ -53,12 +63,23 @@ include/giomm-%%API_VERSION%%/giomm/iostream.h
 include/giomm-%%API_VERSION%%/giomm/loadableicon.h
 include/giomm-%%API_VERSION%%/giomm/memoryinputstream.h
 include/giomm-%%API_VERSION%%/giomm/memoryoutputstream.h
+include/giomm-%%API_VERSION%%/giomm/menu.h
+include/giomm-%%API_VERSION%%/giomm/menuattributeiter.h
+include/giomm-%%API_VERSION%%/giomm/menuitem.h
+include/giomm-%%API_VERSION%%/giomm/menulinkiter.h
+include/giomm-%%API_VERSION%%/giomm/menumodel.h
 include/giomm-%%API_VERSION%%/giomm/mount.h
 include/giomm-%%API_VERSION%%/giomm/mountoperation.h
 include/giomm-%%API_VERSION%%/giomm/networkaddress.h
 include/giomm-%%API_VERSION%%/giomm/networkservice.h
 include/giomm-%%API_VERSION%%/giomm/outputstream.h
+include/giomm-%%API_VERSION%%/giomm/private/action_p.h
+include/giomm-%%API_VERSION%%/giomm/private/actiongroup_p.h
+include/giomm-%%API_VERSION%%/giomm/private/actionmap_p.h
 include/giomm-%%API_VERSION%%/giomm/private/appinfo_p.h
+include/giomm-%%API_VERSION%%/giomm/private/applaunchcontext_p.h
+include/giomm-%%API_VERSION%%/giomm/private/application_p.h
+include/giomm-%%API_VERSION%%/giomm/private/applicationcommandline_p.h
 include/giomm-%%API_VERSION%%/giomm/private/asyncinitable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/asyncresult_p.h
 include/giomm-%%API_VERSION%%/giomm/private/bufferedinputstream_p.h
@@ -67,15 +88,19 @@ include/giomm-%%API_VERSION%%/giomm/private/cancellable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/credentials_p.h
 include/giomm-%%API_VERSION%%/giomm/private/datainputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dataoutputstream_p.h
+include/giomm-%%API_VERSION%%/giomm/private/dbusactiongroup_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusaddress_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusauthobserver_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusconnection_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbuserror_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbuserrorutils_p.h
+include/giomm-%%API_VERSION%%/giomm/private/dbusinterface_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusinterfacevtable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusintrospection_p.h
+include/giomm-%%API_VERSION%%/giomm/private/dbusmenumodel_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusmessage_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusmethodinvocation_p.h
+include/giomm-%%API_VERSION%%/giomm/private/dbusobject_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusownname_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusproxy_p.h
 include/giomm-%%API_VERSION%%/giomm/private/dbusserver_p.h
@@ -110,6 +135,11 @@ include/giomm-%%API_VERSION%%/giomm/private/iostream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/loadableicon_p.h
 include/giomm-%%API_VERSION%%/giomm/private/memoryinputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/memoryoutputstream_p.h
+include/giomm-%%API_VERSION%%/giomm/private/menu_p.h
+include/giomm-%%API_VERSION%%/giomm/private/menuattributeiter_p.h
+include/giomm-%%API_VERSION%%/giomm/private/menuitem_p.h
+include/giomm-%%API_VERSION%%/giomm/private/menulinkiter_p.h
+include/giomm-%%API_VERSION%%/giomm/private/menumodel_p.h
 include/giomm-%%API_VERSION%%/giomm/private/mount_p.h
 include/giomm-%%API_VERSION%%/giomm/private/mountoperation_p.h
 include/giomm-%%API_VERSION%%/giomm/private/networkaddress_p.h
@@ -118,9 +148,12 @@ include/giomm-%%API_VERSION%%/giomm/private/outputstream_p.h
 include/giomm-%%API_VERSION%%/giomm/private/proxy_p.h
 include/giomm-%%API_VERSION%%/giomm/private/proxyaddress_p.h
 include/giomm-%%API_VERSION%%/giomm/private/proxyresolver_p.h
+include/giomm-%%API_VERSION%%/giomm/private/remoteactiongroup_p.h
 include/giomm-%%API_VERSION%%/giomm/private/resolver_p.h
 include/giomm-%%API_VERSION%%/giomm/private/seekable_p.h
 include/giomm-%%API_VERSION%%/giomm/private/settings_p.h
+include/giomm-%%API_VERSION%%/giomm/private/simpleaction_p.h
+include/giomm-%%API_VERSION%%/giomm/private/simpleactiongroup_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socket_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socketaddress_p.h
 include/giomm-%%API_VERSION%%/giomm/private/socketaddressenumerator_p.h
@@ -146,9 +179,12 @@ include/giomm-%%API_VERSION%%/giomm/private/volumemonitor_p.h
 include/giomm-%%API_VERSION%%/giomm/proxy.h
 include/giomm-%%API_VERSION%%/giomm/proxyaddress.h
 include/giomm-%%API_VERSION%%/giomm/proxyresolver.h
+include/giomm-%%API_VERSION%%/giomm/remoteactiongroup.h
 include/giomm-%%API_VERSION%%/giomm/resolver.h
 include/giomm-%%API_VERSION%%/giomm/seekable.h
 include/giomm-%%API_VERSION%%/giomm/settings.h
+include/giomm-%%API_VERSION%%/giomm/simpleaction.h
+include/giomm-%%API_VERSION%%/giomm/simpleactiongroup.h
 include/giomm-%%API_VERSION%%/giomm/socket.h
 include/giomm-%%API_VERSION%%/giomm/socketaddress.h
 include/giomm-%%API_VERSION%%/giomm/socketaddressenumerator.h
@@ -228,6 +264,7 @@ include/glibmm-%%API_VERSION%%/glibmm/private/regex_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/shell_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/spawn_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/thread_p.h
+include/glibmm-%%API_VERSION%%/glibmm/private/threads_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/timezone_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/unicode_p.h
 include/glibmm-%%API_VERSION%%/glibmm/private/uriutils_p.h
@@ -252,6 +289,7 @@ include/glibmm-%%API_VERSION%%/glibmm/streamiochannel.h
 include/glibmm-%%API_VERSION%%/glibmm/stringutils.h
 include/glibmm-%%API_VERSION%%/glibmm/thread.h
 include/glibmm-%%API_VERSION%%/glibmm/threadpool.h
+include/glibmm-%%API_VERSION%%/glibmm/threads.h
 include/glibmm-%%API_VERSION%%/glibmm/timer.h
 include/glibmm-%%API_VERSION%%/glibmm/timeval.h
 include/glibmm-%%API_VERSION%%/glibmm/timezone.h
@@ -324,16 +362,16 @@ lib/libglibmm_generate_extra_defs-%%VERSION%%.so
 lib/libglibmm_generate_extra_defs-%%VERSION%%.so.1
 libdata/pkgconfig/giomm-%%API_VERSION%%.pc
 libdata/pkgconfig/glibmm-%%API_VERSION%%.pc
-@dirrm lib/glibmm-%%API_VERSION%%/proc/m4
 @dirrm lib/glibmm-%%API_VERSION%%/proc/pm
+@dirrm lib/glibmm-%%API_VERSION%%/proc/m4
 @dirrm lib/glibmm-%%API_VERSION%%/proc
 @dirrm lib/glibmm-%%API_VERSION%%/include
 @dirrm lib/glibmm-%%API_VERSION%%
 @dirrm lib/giomm-%%API_VERSION%%/include
 @dirrm lib/giomm-%%API_VERSION%%
+@dirrm include/glibmm-%%API_VERSION%%/glibmm_generate_extra_defs
 @dirrm include/glibmm-%%API_VERSION%%/glibmm/private
 @dirrm include/glibmm-%%API_VERSION%%/glibmm
-@dirrm include/glibmm-%%API_VERSION%%/glibmm_generate_extra_defs
 @dirrm include/glibmm-%%API_VERSION%%
 @dirrm include/giomm-%%API_VERSION%%/giomm/private
 @dirrm include/giomm-%%API_VERSION%%/giomm
