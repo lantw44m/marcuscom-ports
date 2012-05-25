@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange3/Makefile,v 1.15 2011/10/16 20:27:24 kwm Exp $
+#   $MCom: ports/mail/evolution-exchange3/Makefile,v 1.16 2012/01/22 12:51:33 kwm Exp $
 #
 
 PORTNAME=	evolution-exchange
-PORTVERSION=	3.2.3
+PORTVERSION=	3.4.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,7 +20,7 @@ RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 
 CONFLICTS=	evolution-exchange-2.[0-9]*
 
-EVO_VER=	3.2.1
+EVO_VER=	3.4.0
 LATEST_LINK=	evolution-exchange3
 USE_XZ=	yes
 USE_GETTEXT=	yes
@@ -35,7 +35,7 @@ CONFIGURE_ARGS=	--with-openldap=${LOCALBASE} \
 		--with-static-ldap=no \
 		--with-libdb=${LOCALBASE}
 
-VERSION=	3.2
+VERSION=	3.4
 PLIST_SUB=	VERSION=${VERSION}
 
 GCONF_SCHEMAS=	apps_exchange_addressbook-${VERSION}.schemas
@@ -54,7 +54,7 @@ KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
 
 .if ${ARCH} == "amd64"
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -fPIC"
+CFLAGS+=	-fPIC
 .endif
 
 .if exists(${LOCALBASE}/include/mapi.h)
