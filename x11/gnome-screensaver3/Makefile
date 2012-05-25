@@ -3,12 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.22 2012/03/31 04:38:47 mezz Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.23 2012/05/02 07:19:30 kwm Exp $
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	3.2.2
-PORTREVISION=	0
+PORTVERSION=	3.4.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,8 +16,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME screen saver and locker
 
 BUILD_DEPENDS=	gsettings-desktop-schemas>=3.1.90:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS=	notify:${PORTSDIR}/devel/libnotify \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	pam_helper:${PORTSDIR}/security/pam_helper \
 		gsettings-desktop-schemas>=3.1.90:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		${LOCALBASE}/lib/pam_gnome_keyring.so:${PORTSDIR}/security/gnome-keyring3
@@ -32,8 +31,8 @@ USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 USE_XORG=	x11 xext xxf86vm xxf86misc xscrnsaver
 USE_GNOME=	gnomeprefix gnomehack intlhack libgnomekbd3 gnomedesktop3
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-pam-prefix=${PREFIX}/etc/pam.d \
 		--without-systemd
 
