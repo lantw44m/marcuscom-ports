@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany3/Makefile,v 1.22 2011/10/04 22:45:42 kwm Exp $
+#   $MCom: ports/www/epiphany3/Makefile,v 1.23 2011/10/19 16:39:07 kwm Exp $
 #
 
 PORTNAME=	epiphany
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.2
 PORTREVISION?=	0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
@@ -19,7 +19,7 @@ COMMENT?=	An extremely lightweight and simple web browser for GNOME 3
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3 \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
 		startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
@@ -39,15 +39,17 @@ INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_XZ=		yes
 USE_PYTHON=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils libxml2
+USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils libxml2 \
+		desktopfileutils
 USE_XORG=	ice x11 sm
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 CONFIGURE_ARGS+=--enable-introspection \
-		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
-CPPFLAGS=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS=	-L${LOCALBASE}/lib
+		--with-distributor-name="FreeBSD GNOME Project"
+#		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
+CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
 
 GLIB_SCHEMAS=	org.gnome.Epiphany.enums.xml \
