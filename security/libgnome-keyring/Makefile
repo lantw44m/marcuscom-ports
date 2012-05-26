@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/libgnome-keyring/Makefile,v 1.22 2011/11/15 03:30:55 avl Exp $
+#   $MCom: ports/security/libgnome-keyring/Makefile,v 1.23 2012/05/26 10:18:51 kwm Exp $
 #
 
 PORTNAME=	libgnome-keyring
@@ -19,7 +19,7 @@ LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
 		gcrypt.18:${PORTSDIR}/security/libgcrypt
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack gnomeprefix ltverhack intlhack glib20
+USE_GNOME=	gnomehier gnomehack gnomeprefix ltverhack intlhack glib20
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
