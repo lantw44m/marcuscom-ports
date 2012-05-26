@@ -1,5 +1,5 @@
---- js/ui/extensionSystem.js.orig	2011-12-15 16:07:45.000000000 +0100
-+++ js/ui/extensionSystem.js	2011-12-15 16:30:19.000000000 +0100
+--- js/ui/extensionSystem.js.orig	2012-04-10 20:14:57.000000000 +0200
++++ js/ui/extensionSystem.js	2012-05-25 22:43:38.000000000 +0200
 @@ -8,7 +8,6 @@
  const Gio = imports.gi.Gio;
  const St = imports.gi.St;
@@ -7,8 +7,8 @@
 -const Soup = imports.gi.Soup;
  
  const Config = imports.misc.config;
- const FileUtils = imports.misc.fileUtils;
-@@ -37,15 +36,10 @@
+ const ExtensionUtils = imports.misc.extensionUtils;
+@@ -34,15 +33,10 @@
  const REPOSITORY_URL_DOWNLOAD = REPOSITORY_URL_BASE + '/download-extension/%s.shell-extension.zip';
  const REPOSITORY_URL_INFO =     REPOSITORY_URL_BASE + '/extension-info/';
  
@@ -24,16 +24,7 @@
  function _getCertFile() {
      let localCert = GLib.build_filenamev([global.userdatadir, 'extensions.gnome.org.crt']);
      if (GLib.file_test(localCert, GLib.FileTest.EXISTS))
-@@ -54,8 +48,6 @@
-         return Config.SHELL_SYSTEM_CA_FILE;
- }
- 
--_httpSession.ssl_ca_file = _getCertFile();
--
- // Maps uuid -> metadata object
- const extensionMeta = {};
- // Maps uuid -> importer object (extension directory tree)
-@@ -117,14 +109,6 @@
+@@ -75,14 +69,6 @@
                     shell_version: Config.PACKAGE_VERSION,
                     api_version: API_VERSION.toString() };
  
@@ -48,7 +39,7 @@
  }
  
  function uninstallExtensionFromUUID(uuid) {
-@@ -159,10 +143,6 @@
+@@ -110,10 +96,6 @@
  }
  
  function gotExtensionZipFile(session, message, uuid) {
@@ -59,15 +50,15 @@
  
      // FIXME: use a GFile mkstemp-type method once one exists
      let fd, tmpzip;
-@@ -175,7 +155,6 @@
+@@ -126,7 +108,6 @@
  
      let stream = new Gio.UnixOutputStream({ fd: fd });
-     let dir = userExtensionsDir.get_child(uuid);
+     let dir = ExtensionUtils.userExtensionsDir.get_child(uuid);
 -    Shell.write_soup_message_to_stream(stream, message);
      stream.close(null);
      let [success, pid] = GLib.spawn_async(null,
                                            ['unzip', '-uod', dir.get_path(), '--', tmpzip],
-@@ -519,12 +498,6 @@
+@@ -440,12 +421,6 @@
                         api_version: API_VERSION.toString() };
  
          let url = REPOSITORY_URL_DOWNLOAD.format(this._uuid);

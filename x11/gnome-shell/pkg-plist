@@ -1,123 +1,215 @@
 bin/gnome-shell
+bin/gnome-shell-extension-prefs
 bin/gnome-shell-extension-tool
 lib/gnome-shell/Gvc-1.0.typelib
 lib/gnome-shell/Shell-0.1.typelib
+lib/gnome-shell/ShellJS-0.1.typelib
 lib/gnome-shell/St-1.0.typelib
+lib/gnome-shell/libgnome-shell-js.a
+lib/gnome-shell/libgnome-shell-js.la
+lib/gnome-shell/libgnome-shell-js.so
 lib/gnome-shell/libgnome-shell.a
 lib/gnome-shell/libgnome-shell.la
 lib/gnome-shell/libgnome-shell.so
 libexec/gnome-shell-calendar-server
 libexec/gnome-shell-hotplug-sniffer
 libexec/gnome-shell-perf-helper
+share/GConf/gsettings/gnome-shell-overrides.convert
+share/applications/gnome-shell-extension-prefs.desktop
 share/applications/gnome-shell.desktop
+share/dbus-1/interfaces/org.gnome.ShellSearchProvider.xml
 share/dbus-1/services/org.gnome.Shell.CalendarServer.service
 share/dbus-1/services/org.gnome.Shell.HotplugSniffer.service
-%%DATADIR%%/js/gdm/batch.js
-%%DATADIR%%/js/gdm/consoleKit.js
-%%DATADIR%%/js/gdm/fingerprint.js
-%%DATADIR%%/js/gdm/loginDialog.js
-%%DATADIR%%/js/gdm/powerMenu.js
-%%DATADIR%%/js/misc/config.js
-%%DATADIR%%/js/misc/docInfo.js
-%%DATADIR%%/js/misc/fileUtils.js
-%%DATADIR%%/js/misc/format.js
-%%DATADIR%%/js/misc/gnomeSession.js
-%%DATADIR%%/js/misc/history.js
-%%DATADIR%%/js/misc/modemManager.js
-%%DATADIR%%/js/misc/params.js
-%%DATADIR%%/js/misc/screenSaver.js
-%%DATADIR%%/js/misc/util.js
-%%DATADIR%%/js/perf/core.js
-%%DATADIR%%/js/ui/altTab.js
-%%DATADIR%%/js/ui/appDisplay.js
-%%DATADIR%%/js/ui/appFavorites.js
-%%DATADIR%%/js/ui/automountManager.js
-%%DATADIR%%/js/ui/autorunManager.js
-%%DATADIR%%/js/ui/boxpointer.js
-%%DATADIR%%/js/ui/calendar.js
-%%DATADIR%%/js/ui/contactDisplay.js
-%%DATADIR%%/js/ui/ctrlAltTab.js
-%%DATADIR%%/js/ui/dash.js
-%%DATADIR%%/js/ui/dateMenu.js
-%%DATADIR%%/js/ui/dnd.js
-%%DATADIR%%/js/ui/docDisplay.js
-%%DATADIR%%/js/ui/endSessionDialog.js
-%%DATADIR%%/js/ui/environment.js
-%%DATADIR%%/js/ui/extensionSystem.js
-%%DATADIR%%/js/ui/iconGrid.js
-%%DATADIR%%/js/ui/keyboard.js
-%%DATADIR%%/js/ui/layout.js
-%%DATADIR%%/js/ui/lightbox.js
-%%DATADIR%%/js/ui/link.js
-%%DATADIR%%/js/ui/lookingGlass.js
-%%DATADIR%%/js/ui/magnifier.js
-%%DATADIR%%/js/ui/magnifierDBus.js
-%%DATADIR%%/js/ui/main.js
-%%DATADIR%%/js/ui/messageTray.js
-%%DATADIR%%/js/ui/modalDialog.js
-%%DATADIR%%/js/ui/networkAgent.js
-%%DATADIR%%/js/ui/notificationDaemon.js
-%%DATADIR%%/js/ui/overview.js
-%%DATADIR%%/js/ui/panel.js
-%%DATADIR%%/js/ui/panelMenu.js
-%%DATADIR%%/js/ui/placeDisplay.js
-%%DATADIR%%/js/ui/polkitAuthenticationAgent.js
-%%DATADIR%%/js/ui/popupMenu.js
-%%DATADIR%%/js/ui/runDialog.js
-%%DATADIR%%/js/ui/scripting.js
-%%DATADIR%%/js/ui/search.js
-%%DATADIR%%/js/ui/searchDisplay.js
-%%DATADIR%%/js/ui/shellDBus.js
-%%DATADIR%%/js/ui/shellEntry.js
-%%DATADIR%%/js/ui/status/accessibility.js
-%%DATADIR%%/js/ui/status/bluetooth.js
-%%DATADIR%%/js/ui/status/keyboard.js
-%%DATADIR%%/js/ui/status/network.js
-%%DATADIR%%/js/ui/status/power.js
-%%DATADIR%%/js/ui/status/volume.js
-%%DATADIR%%/js/ui/statusIconDispatcher.js
-%%DATADIR%%/js/ui/shellMountOperation.js
-%%DATADIR%%/js/ui/telepathyClient.js
-%%DATADIR%%/js/ui/tweener.js
-%%DATADIR%%/js/ui/userMenu.js
-%%DATADIR%%/js/ui/viewSelector.js
-%%DATADIR%%/js/ui/windowAttentionHandler.js
-%%DATADIR%%/js/ui/windowManager.js
-%%DATADIR%%/js/ui/workspace.js
-%%DATADIR%%/js/ui/workspaceSwitcherPopup.js
-%%DATADIR%%/js/ui/workspaceThumbnail.js
-%%DATADIR%%/js/ui/workspacesView.js
-%%DATADIR%%/js/ui/xdndHandler.js
-%%DATADIR%%/search_providers/google.xml
-%%DATADIR%%/search_providers/wikipedia.xml
-%%DATADIR%%/shaders/dim-window.glsl
-%%DATADIR%%/theme/calendar-arrow-left.svg
-%%DATADIR%%/theme/calendar-arrow-right.svg
-%%DATADIR%%/theme/calendar-today.svg
-%%DATADIR%%/theme/close-window.svg
-%%DATADIR%%/theme/close.svg
-%%DATADIR%%/theme/corner-ripple-ltr.png
-%%DATADIR%%/theme/corner-ripple-rtl.png
-%%DATADIR%%/theme/dash-placeholder.svg
-%%DATADIR%%/theme/filter-selected-ltr.svg
-%%DATADIR%%/theme/filter-selected-rtl.svg
-%%DATADIR%%/theme/gdm.css
-%%DATADIR%%/theme/gnome-shell.css
-%%DATADIR%%/theme/panel-border.svg
-%%DATADIR%%/theme/panel-button-border.svg
-%%DATADIR%%/theme/panel-button-highlight-narrow.svg
-%%DATADIR%%/theme/panel-button-highlight-wide.svg
-%%DATADIR%%/theme/process-working.svg
-%%DATADIR%%/theme/running-indicator.svg
-%%DATADIR%%/theme/scroll-hhandle.svg
-%%DATADIR%%/theme/scroll-vhandle.svg
-%%DATADIR%%/theme/source-button-border.svg
-%%DATADIR%%/theme/toggle-off-intl.svg
-%%DATADIR%%/theme/toggle-off-us.svg
-%%DATADIR%%/theme/toggle-on-intl.svg
-%%DATADIR%%/theme/toggle-on-us.svg
-%%DATADIR%%/theme/ws-switch-arrow-down.svg
-%%DATADIR%%/theme/ws-switch-arrow-up.svg
+share/doc/shell/ShellAppSystem.html
+share/doc/shell/ShellContactSystem.html
+share/doc/shell/ShellEmbeddedWindow.html
+share/doc/shell/ShellGenericContainer.html
+share/doc/shell/ShellGtkEmbed.html
+share/doc/shell/ShellMountOperation.html
+share/doc/shell/ShellNetworkAgent.html
+share/doc/shell/ShellSlicer.html
+share/doc/shell/ShellStack.html
+share/doc/shell/ShellTrayIcon.html
+share/doc/shell/ShellTrayManager.html
+share/doc/shell/annotation-glossary.html
+share/doc/shell/api-index-full.html
+share/doc/shell/ch01.html
+share/doc/shell/ch02.html
+share/doc/shell/ch03.html
+share/doc/shell/ch04.html
+share/doc/shell/ch05.html
+share/doc/shell/ch06.html
+share/doc/shell/deprecated-api-index.html
+share/doc/shell/home.png
+share/doc/shell/index.html
+share/doc/shell/index.sgml
+share/doc/shell/left.png
+share/doc/shell/object-tree.html
+share/doc/shell/right.png
+share/doc/shell/shell-ShellApp.html
+share/doc/shell/shell-ShellAppUsage.html
+share/doc/shell/shell-ShellGlobal.html
+share/doc/shell/shell-ShellTpClient.html
+share/doc/shell/shell-ShellWM.html
+share/doc/shell/shell-ShellWindowTracker.html
+share/doc/shell/shell-shell-mobile-providers.html
+share/doc/shell/shell-shell-polkit-authentication-agent.html
+share/doc/shell/shell-shell-recorder.html
+share/doc/shell/shell-shell-util.html
+share/doc/shell/shell-shell-xfixes-cursor.html
+share/doc/shell/shell.devhelp2
+share/doc/shell/style.css
+share/doc/shell/up.png
+share/doc/st/StBin.html
+share/doc/st/StBoxLayout.html
+share/doc/st/StButton.html
+share/doc/st/StDrawingArea.html
+share/doc/st/StEntry.html
+share/doc/st/StIcon.html
+share/doc/st/StLabel.html
+share/doc/st/StScrollView.html
+share/doc/st/StTable.html
+share/doc/st/StTextureCache.html
+share/doc/st/StThemeNodeTransition.html
+share/doc/st/StWidget.html
+share/doc/st/StWidgetAccessible.html
+share/doc/st/annotation-glossary.html
+share/doc/st/api-index-full.html
+share/doc/st/base.html
+share/doc/st/containers.html
+share/doc/st/deprecated-api-index.html
+share/doc/st/home.png
+share/doc/st/index.html
+share/doc/st/index.sgml
+share/doc/st/left.png
+share/doc/st/object-tree.html
+share/doc/st/pt01.html
+share/doc/st/right.png
+share/doc/st/st-StScrollable.html
+share/doc/st/st-st-theme-context.html
+share/doc/st/st-st-theme-node.html
+share/doc/st/st-st-theme.html
+share/doc/st/st.devhelp2
+share/doc/st/style.css
+share/doc/st/styling.html
+share/doc/st/up.png
+share/doc/st/widgets.html
+share/gnome-shell/js/extensionPrefs/main.js
+share/gnome-shell/js/gdm/batch.js
+share/gnome-shell/js/gdm/consoleKit.js
+share/gnome-shell/js/gdm/fingerprint.js
+share/gnome-shell/js/gdm/loginDialog.js
+share/gnome-shell/js/gdm/powerMenu.js
+share/gnome-shell/js/gdm/systemd.js
+share/gnome-shell/js/misc/config.js
+share/gnome-shell/js/misc/extensionUtils.js
+share/gnome-shell/js/misc/fileUtils.js
+share/gnome-shell/js/misc/format.js
+share/gnome-shell/js/misc/gnomeSession.js
+share/gnome-shell/js/misc/history.js
+share/gnome-shell/js/misc/jsParse.js
+share/gnome-shell/js/misc/modemManager.js
+share/gnome-shell/js/misc/params.js
+share/gnome-shell/js/misc/screenSaver.js
+share/gnome-shell/js/misc/util.js
+share/gnome-shell/js/perf/core.js
+share/gnome-shell/js/ui/altTab.js
+share/gnome-shell/js/ui/appDisplay.js
+share/gnome-shell/js/ui/appFavorites.js
+share/gnome-shell/js/ui/automountManager.js
+share/gnome-shell/js/ui/autorunManager.js
+share/gnome-shell/js/ui/boxpointer.js
+share/gnome-shell/js/ui/calendar.js
+share/gnome-shell/js/ui/checkBox.js
+share/gnome-shell/js/ui/contactDisplay.js
+share/gnome-shell/js/ui/ctrlAltTab.js
+share/gnome-shell/js/ui/dash.js
+share/gnome-shell/js/ui/dateMenu.js
+share/gnome-shell/js/ui/dnd.js
+share/gnome-shell/js/ui/endSessionDialog.js
+share/gnome-shell/js/ui/environment.js
+share/gnome-shell/js/ui/extensionSystem.js
+share/gnome-shell/js/ui/flashspot.js
+share/gnome-shell/js/ui/iconGrid.js
+share/gnome-shell/js/ui/keyboard.js
+share/gnome-shell/js/ui/keyringPrompt.js
+share/gnome-shell/js/ui/layout.js
+share/gnome-shell/js/ui/lightbox.js
+share/gnome-shell/js/ui/link.js
+share/gnome-shell/js/ui/lookingGlass.js
+share/gnome-shell/js/ui/magnifier.js
+share/gnome-shell/js/ui/magnifierDBus.js
+share/gnome-shell/js/ui/main.js
+share/gnome-shell/js/ui/messageTray.js
+share/gnome-shell/js/ui/modalDialog.js
+share/gnome-shell/js/ui/networkAgent.js
+share/gnome-shell/js/ui/notificationDaemon.js
+share/gnome-shell/js/ui/overview.js
+share/gnome-shell/js/ui/panel.js
+share/gnome-shell/js/ui/panelMenu.js
+share/gnome-shell/js/ui/placeDisplay.js
+share/gnome-shell/js/ui/polkitAuthenticationAgent.js
+share/gnome-shell/js/ui/popupMenu.js
+share/gnome-shell/js/ui/remoteSearch.js
+share/gnome-shell/js/ui/runDialog.js
+share/gnome-shell/js/ui/scripting.js
+share/gnome-shell/js/ui/search.js
+share/gnome-shell/js/ui/searchDisplay.js
+share/gnome-shell/js/ui/shellDBus.js
+share/gnome-shell/js/ui/shellEntry.js
+share/gnome-shell/js/ui/shellMountOperation.js
+share/gnome-shell/js/ui/status/accessibility.js
+share/gnome-shell/js/ui/status/bluetooth.js
+share/gnome-shell/js/ui/status/keyboard.js
+share/gnome-shell/js/ui/status/network.js
+share/gnome-shell/js/ui/status/power.js
+share/gnome-shell/js/ui/status/volume.js
+share/gnome-shell/js/ui/statusIconDispatcher.js
+share/gnome-shell/js/ui/telepathyClient.js
+share/gnome-shell/js/ui/tweener.js
+share/gnome-shell/js/ui/userMenu.js
+share/gnome-shell/js/ui/viewSelector.js
+share/gnome-shell/js/ui/wanda.js
+share/gnome-shell/js/ui/windowAttentionHandler.js
+share/gnome-shell/js/ui/windowManager.js
+share/gnome-shell/js/ui/workspace.js
+share/gnome-shell/js/ui/workspaceSwitcherPopup.js
+share/gnome-shell/js/ui/workspaceThumbnail.js
+share/gnome-shell/js/ui/workspacesView.js
+share/gnome-shell/js/ui/xdndHandler.js
+share/gnome-shell/open-search-providers/google.xml
+share/gnome-shell/open-search-providers/wikipedia.xml
+share/gnome-shell/shaders/dim-window.glsl
+share/gnome-shell/theme/calendar-arrow-left.svg
+share/gnome-shell/theme/calendar-arrow-right.svg
+share/gnome-shell/theme/calendar-today.svg
+share/gnome-shell/theme/checkbox-focused.svg
+share/gnome-shell/theme/checkbox-off-focused.svg
+share/gnome-shell/theme/checkbox-off.svg
+share/gnome-shell/theme/checkbox.svg
+share/gnome-shell/theme/close-window.svg
+share/gnome-shell/theme/close.svg
+share/gnome-shell/theme/corner-ripple-ltr.png
+share/gnome-shell/theme/corner-ripple-rtl.png
+share/gnome-shell/theme/dash-placeholder.svg
+share/gnome-shell/theme/filter-selected-ltr.svg
+share/gnome-shell/theme/filter-selected-rtl.svg
+share/gnome-shell/theme/gdm.css
+share/gnome-shell/theme/gnome-shell.css
+share/gnome-shell/theme/panel-button-border.svg
+share/gnome-shell/theme/panel-button-highlight-narrow.svg
+share/gnome-shell/theme/panel-button-highlight-wide.svg
+share/gnome-shell/theme/process-working.svg
+share/gnome-shell/theme/running-indicator.svg
+share/gnome-shell/theme/scroll-hhandle.svg
+share/gnome-shell/theme/scroll-vhandle.svg
+share/gnome-shell/theme/source-button-border.svg
+share/gnome-shell/theme/toggle-off-intl.svg
+share/gnome-shell/theme/toggle-off-us.svg
+share/gnome-shell/theme/toggle-on-intl.svg
+share/gnome-shell/theme/toggle-on-us.svg
+share/gnome-shell/theme/ws-switch-arrow-down.svg
+share/gnome-shell/theme/ws-switch-arrow-up.svg
 share/locale/af/LC_MESSAGES/gnome-shell.mo
 share/locale/an/LC_MESSAGES/gnome-shell.mo
 share/locale/ar/LC_MESSAGES/gnome-shell.mo
@@ -150,11 +242,14 @@ share/locale/hu/LC_MESSAGES/gnome-shell.mo
 share/locale/id/LC_MESSAGES/gnome-shell.mo
 share/locale/it/LC_MESSAGES/gnome-shell.mo
 share/locale/ja/LC_MESSAGES/gnome-shell.mo
+share/locale/kk/LC_MESSAGES/gnome-shell.mo
 share/locale/kn/LC_MESSAGES/gnome-shell.mo
 share/locale/ko/LC_MESSAGES/gnome-shell.mo
 share/locale/ku/LC_MESSAGES/gnome-shell.mo
 share/locale/lt/LC_MESSAGES/gnome-shell.mo
 share/locale/lv/LC_MESSAGES/gnome-shell.mo
+share/locale/mk/LC_MESSAGES/gnome-shell.mo
+share/locale/ml/LC_MESSAGES/gnome-shell.mo
 share/locale/mr/LC_MESSAGES/gnome-shell.mo
 share/locale/ms/LC_MESSAGES/gnome-shell.mo
 share/locale/nb/LC_MESSAGES/gnome-shell.mo
@@ -167,6 +262,7 @@ share/locale/pt/LC_MESSAGES/gnome-shell.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-shell.mo
 share/locale/ro/LC_MESSAGES/gnome-shell.mo
 share/locale/ru/LC_MESSAGES/gnome-shell.mo
+share/locale/si/LC_MESSAGES/gnome-shell.mo
 share/locale/sk/LC_MESSAGES/gnome-shell.mo
 share/locale/sl/LC_MESSAGES/gnome-shell.mo
 share/locale/sr/LC_MESSAGES/gnome-shell.mo
@@ -182,17 +278,6 @@ share/locale/vi/LC_MESSAGES/gnome-shell.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-shell.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-shell.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-shell.mo
-@dirrm %%DATADIR%%/theme
-@dirrm %%DATADIR%%/shaders
-@dirrm %%DATADIR%%/search_providers
-@dirrm %%DATADIR%%/js/ui/status
-@dirrm %%DATADIR%%/js/ui
-@dirrm %%DATADIR%%/js/perf
-@dirrm %%DATADIR%%/js/misc
-@dirrm %%DATADIR%%/js/gdm
-@dirrm %%DATADIR%%/js
-@dirrm %%DATADIR%%
-@dirrm lib/gnome-shell
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
@@ -203,8 +288,6 @@ share/locale/zh_TW/LC_MESSAGES/gnome-shell.mo
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
-@dirrmtry share/locale/ku_IN/LC_MESSAGES
-@dirrmtry share/locale/ku
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
@@ -215,3 +298,17 @@ share/locale/zh_TW/LC_MESSAGES/gnome-shell.mo
 @dirrmtry share/locale/as
 @dirrmtry share/locale/an/LC_MESSAGES
 @dirrmtry share/locale/an
+@dirrm share/gnome-shell/theme
+@dirrm share/gnome-shell/shaders
+@dirrm share/gnome-shell/open-search-providers
+@dirrm share/gnome-shell/js/ui/status
+@dirrm share/gnome-shell/js/ui
+@dirrm share/gnome-shell/js/perf
+@dirrm share/gnome-shell/js/misc
+@dirrm share/gnome-shell/js/gdm
+@dirrm share/gnome-shell/js/extensionPrefs
+@dirrm share/gnome-shell/js
+@dirrm share/gnome-shell
+@dirrm lib/gnome-shell
+@dirrm share/doc/st
+@dirrm share/doc/shell
