@@ -3,17 +3,18 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/libgnome-keyring/Makefile,v 1.21 2011/10/07 21:46:27 kwm Exp $
+#   $MCom: ports/security/libgnome-keyring/Makefile,v 1.22 2011/11/15 03:30:55 avl Exp $
 #
 
 PORTNAME=	libgnome-keyring
-PORTVERSION=	3.2.2
+PORTVERSION=	3.4.1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A program that keeps passwords and other secrets
 
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
 		gcrypt.18:${PORTSDIR}/security/libgcrypt
 
@@ -23,7 +24,7 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
