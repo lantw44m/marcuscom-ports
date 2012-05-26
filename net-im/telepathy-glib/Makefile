@@ -3,10 +3,10 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.35 2012/02/27 21:29:57 kwm Exp $
+#    $MCom: ports/net-im/telepathy-glib/Makefile,v 1.36 2012/04/27 13:28:44 kwm Exp $
 
 PORTNAME=	telepathy-glib
-PORTVERSION=	0.16.5
+PORTVERSION=	0.18.1
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -14,7 +14,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GLib utility library for the Telepathy framework
 
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
-		vala-vapigen>=0.13.4:${PORTSDIR}/lang/vala-vapigen \
+		vala-vapigen>=0.14.0:${PORTSDIR}/lang/vala-vapigen \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
@@ -31,8 +31,5 @@ CONFIGURE_ARGS=	--enable-vala-bindings
 post-patch:
 	@${REINPLACE_CMD} -e 's|\(^pkgconfigdir =\).*|\1 ${PREFIX}/libdata/pkgconfig|' \
 		${WRKSRC}/telepathy-glib/Makefile.in
-#	@${TOUCH} ${WRKSRC}/aclocal.m4 ${WRKSRC}/Makefile.in \
-#		${WRKSRC}/m4/*.m4 ${WRKSRC}/configure.ac \
-#		${WRKSRC}/configure ${WRKSRC}/config.h.in
 
 .include <bsd.port.mk>
