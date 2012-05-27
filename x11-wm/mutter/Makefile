@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.32 2012/01/19 01:59:27 ahze Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.33 2012/05/25 20:02:15 kwm Exp $
 #
 
 PORTNAME=	mutter
@@ -16,15 +16,19 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Window and compositing manager based on Clutter
 
 BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
+		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
 		execinfo.1:${PORTSDIR}/devel/libexecinfo \
 		clutter-1.0:${PORTSDIR}/graphics/clutter \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
-RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
+RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
+		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
+
 
 USE_XZ=		yes
-USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
+USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm xfixes \
+		xrender xdamage
 USE_PYTHON=	2.5+
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
