@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgdata/Makefile,v 1.22 2012/05/02 07:04:13 kwm Exp $
+#   $MCom: ports/devel/libgdata/Makefile,v 1.23 2012/05/02 07:13:11 kwm Exp $
 #
 
 PORTNAME=	libgdata
-PORTVERSION=	0.10.2
+PORTVERSION=	0.12.0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 
@@ -29,8 +29,8 @@ USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehack intltool ltverhack glib20
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include " \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--with-html-dir="${PREFIX}/share/doc" \
 		--with-ca-certs=${LOCALBASE}/share/certs/ca-root-nss.crt
 
