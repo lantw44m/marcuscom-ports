@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.27 2011/10/08 09:42:06 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.28 2011/10/16 19:35:42 kwm Exp $
 #
 
 PORTNAME=	dconf
-PORTVERSION=	0.10.0
+PORTVERSION=	0.12.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,7 +24,8 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20 gnomehier
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-MAKE_JOBS_SAFE=	yes
+MAKE_JOBS_UNSAFE=	yes
+INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
@@ -49,10 +50,14 @@ post-patch:
 		${WRKSRC}/editor/dconf-model.c
 	@${REINPLACE_CMD} -e 's|/usr/share|${LOCALBASE}/share|g' \
 		${WRKSRC}/editor/dconf-model.vala
+	@${REINPLACE_CMD} -e 's|-Wno-unused-but-set-variable||g' \
+		${WRKSRC}/bin/Makefile.in \
+		${WRKSRC}/client/Makefile.in \
+		${WRKSRC}/editor/Makefile.in
 
 pre-build:
-	${GMAKE} -C ${WRKSRC}/client dconf-client.c libdconf.so.0
-	${GMAKE} -C ${WRKSRC}/dbus-1 dconf-dbus-1.c libdconf-dbus-1.so.0
+#	${GMAKE} -C ${WRKSRC}/client dconf-client.c libdconf.so.0
+#	${GMAKE} -C ${WRKSRC}/dbus-1 dconf-dbus-1.c libdconf-dbus-1.so.0
 
 post-install:
 	-${LOCALBASE}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
