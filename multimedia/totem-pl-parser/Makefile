@@ -3,12 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.49 2011/10/23 15:28:52 kwm Exp $
+#   $MCom: ports/multimedia/totem-pl-parser/Makefile,v 1.50 2011/11/23 12:13:48 kwm Exp $
 #
 
 PORTNAME=	totem-pl-parser
-PORTVERSION=	2.32.6
-PORTREVISION=	1
+PORTVERSION=	3.4.2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -31,10 +30,10 @@ USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-libarchive
 CONFIGURE_ENV=	ARCHIVE_CFLAGS="-I/usr/include" \
 		ARCHIVE_LIBS="-L/usr/lib -larchive"
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS=        QUVI "Enable flash media stream URL support"  off
+OPTIONS=	QUVI "Enable flash media stream URL support"  off
 
 .include <bsd.port.options.mk>
 
