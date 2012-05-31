@@ -3,11 +3,11 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.34 2011/10/19 09:39:28 kwm Exp $
+#   $MCom: ports/accessibility/at-spi2-atk/Makefile,v 1.35 2011/11/19 10:15:09 kwm Exp $
 #
 
 PORTNAME=	at-spi2-atk
-PORTVERSION=	2.2.2
+PORTVERSION=	2.4.0
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,8 +15,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Assisted Technology Provider module for GTK+
 
-LICENSE=        LGPL21
-LICENSE_FILE=   ${WRKSRC}/COPYING
+LICENSE=	LGPL21
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core
@@ -30,8 +30,8 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomehier intlhack libxml2 atk
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.a11y.atspi.gschema.xml
 
 .include <bsd.port.mk>

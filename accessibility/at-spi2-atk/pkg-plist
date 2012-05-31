@@ -37,11 +37,14 @@ share/locale/hu/LC_MESSAGES/at-spi2-atk.mo
 share/locale/id/LC_MESSAGES/at-spi2-atk.mo
 share/locale/it/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ja/LC_MESSAGES/at-spi2-atk.mo
+share/locale/km/LC_MESSAGES/at-spi2-atk.mo
 share/locale/kn/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ko/LC_MESSAGES/at-spi2-atk.mo
 share/locale/lt/LC_MESSAGES/at-spi2-atk.mo
 share/locale/lv/LC_MESSAGES/at-spi2-atk.mo
+share/locale/ml/LC_MESSAGES/at-spi2-atk.mo
 share/locale/mr/LC_MESSAGES/at-spi2-atk.mo
+share/locale/ms/LC_MESSAGES/at-spi2-atk.mo
 share/locale/nb/LC_MESSAGES/at-spi2-atk.mo
 share/locale/nl/LC_MESSAGES/at-spi2-atk.mo
 share/locale/nn/LC_MESSAGES/at-spi2-atk.mo
@@ -64,18 +67,15 @@ share/locale/th/LC_MESSAGES/at-spi2-atk.mo
 share/locale/tr/LC_MESSAGES/at-spi2-atk.mo
 share/locale/ug/LC_MESSAGES/at-spi2-atk.mo
 share/locale/uk/LC_MESSAGES/at-spi2-atk.mo
+share/locale/uz@cyrillic/LC_MESSAGES/at-spi2-atk.mo
 share/locale/vi/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_CN/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_HK/LC_MESSAGES/at-spi2-atk.mo
 share/locale/zh_TW/LC_MESSAGES/at-spi2-atk.mo
-@dirrmtry lib/gtk-3.0/modules
-@dirrmtry lib/gtk-3.0
-@dirrmtry lib/gtk-2.0/modules
-@dirrmtry lib/gtk-2.0
-@dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
-@dirrmtry lib/gnome-settings-daemon-3.0
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/uz@cyrillic/LC_MESSAGES
+@dirrmtry share/locale/uz@cyrillic
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
@@ -84,6 +84,8 @@ share/locale/zh_TW/LC_MESSAGES/at-spi2-atk.mo
 @dirrmtry share/locale/or
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
 @dirrmtry share/locale/fy/LC_MESSAGES
 @dirrmtry share/locale/fy
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
@@ -98,3 +100,9 @@ share/locale/zh_TW/LC_MESSAGES/at-spi2-atk.mo
 @dirrmtry share/locale/as
 @dirrmtry share/locale/an/LC_MESSAGES
 @dirrmtry share/locale/an
+@dirrmtry lib/gtk-3.0/modules
+@dirrmtry lib/gtk-3.0
+@dirrmtry lib/gtk-2.0/modules
+@dirrmtry lib/gtk-2.0
+@dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
+@dirrmtry lib/gnome-settings-daemon-3.0
