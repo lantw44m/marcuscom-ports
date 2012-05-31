@@ -94,6 +94,7 @@ share/locale/en_CA/LC_MESSAGES/at-spi2-core.mo
 share/locale/en_GB/LC_MESSAGES/at-spi2-core.mo
 share/locale/eo/LC_MESSAGES/at-spi2-core.mo
 share/locale/es/LC_MESSAGES/at-spi2-core.mo
+share/locale/et/LC_MESSAGES/at-spi2-core.mo
 share/locale/eu/LC_MESSAGES/at-spi2-core.mo
 share/locale/fa/LC_MESSAGES/at-spi2-core.mo
 share/locale/fi/LC_MESSAGES/at-spi2-core.mo
@@ -105,11 +106,15 @@ share/locale/hi/LC_MESSAGES/at-spi2-core.mo
 share/locale/hu/LC_MESSAGES/at-spi2-core.mo
 share/locale/id/LC_MESSAGES/at-spi2-core.mo
 share/locale/it/LC_MESSAGES/at-spi2-core.mo
+share/locale/ja/LC_MESSAGES/at-spi2-core.mo
+share/locale/km/LC_MESSAGES/at-spi2-core.mo
 share/locale/kn/LC_MESSAGES/at-spi2-core.mo
 share/locale/ko/LC_MESSAGES/at-spi2-core.mo
 share/locale/lt/LC_MESSAGES/at-spi2-core.mo
 share/locale/lv/LC_MESSAGES/at-spi2-core.mo
+share/locale/ml/LC_MESSAGES/at-spi2-core.mo
 share/locale/mr/LC_MESSAGES/at-spi2-core.mo
+share/locale/ms/LC_MESSAGES/at-spi2-core.mo
 share/locale/nb/LC_MESSAGES/at-spi2-core.mo
 share/locale/nl/LC_MESSAGES/at-spi2-core.mo
 share/locale/or/LC_MESSAGES/at-spi2-core.mo
@@ -129,16 +134,13 @@ share/locale/te/LC_MESSAGES/at-spi2-core.mo
 share/locale/tr/LC_MESSAGES/at-spi2-core.mo
 share/locale/ug/LC_MESSAGES/at-spi2-core.mo
 share/locale/uk/LC_MESSAGES/at-spi2-core.mo
+share/locale/uz@cyrillic/LC_MESSAGES/at-spi2-core.mo
 share/locale/vi/LC_MESSAGES/at-spi2-core.mo
 share/locale/zh_CN/LC_MESSAGES/at-spi2-core.mo
 share/locale/zh_HK/LC_MESSAGES/at-spi2-core.mo
 share/locale/zh_TW/LC_MESSAGES/at-spi2-core.mo
-@dirrm share/gtk-doc/html/libatspi
-@dirrmtry share/gtk-doc/html
-@dirrmtry share/gtk-doc
-@dirrm include/at-spi-2.0/atspi
-@dirrm include/at-spi-2.0
-@dirrm etc/at-spi2
+@dirrmtry share/locale/uz@cyrillic/LC_MESSAGES
+@dirrmtry share/locale/uz@cyrillic
 @dirrmtry share/locale/ug/LC_MESSAGES
 @dirrmtry share/locale/ug
 @dirrmtry share/locale/te/LC_MESSAGES
@@ -147,6 +149,8 @@ share/locale/zh_TW/LC_MESSAGES/at-spi2-core.mo
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
@@ -157,3 +161,9 @@ share/locale/zh_TW/LC_MESSAGES/at-spi2-core.mo
 @dirrmtry share/locale/as
 @dirrmtry share/locale/an/LC_MESSAGES
 @dirrmtry share/locale/an
+@dirrm share/gtk-doc/html/libatspi
+@dirrmtry share/gtk-doc/html
+@dirrmtry share/gtk-doc
+@dirrm include/at-spi-2.0/atspi
+@dirrm include/at-spi-2.0
+@dirrm etc/at-spi2
