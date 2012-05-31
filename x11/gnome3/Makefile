@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.31 2011/10/20 21:24:53 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.32 2012/01/16 15:02:05 kwm Exp $
 #
 
 PORTNAME=	gnome3
 PORTVERSION=	3.2.0
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -69,7 +69,12 @@ RUN_DEPENDS+=	empathy>=2.91.0:${PORTSDIR}/net-im/empathy3 \
 		mousetweaks>=2.91.0:${PORTSDIR}/accessibility/mousetweaks3 \
 		brasero>=2.91.0:${PORTSDIR}/sysutils/brasero3 \
 		gcalctool>=2.91.0:${PORTSDIR}/math/gcalctool3 \
-		gnome-utils>=2.91.0:${PORTSDIR}/deskutils/gnome-utils3 \
+		baobab>=3.4.0:${PORTSDIR}/deskutils/baobab \
+		gnome-dictionary>=3.4.0:${PORTSDIR}/deskutils/gnome-dictionary \
+		gnome-font-viewer>=3.4.0:${PORTSDIR}/deskutils/gnome-font-viewer \
+		gnome-screenshot>=3.4.0:${PORTSDIR}/deskutils/gnome-screenshot \
+		gnome-search-tool>=3.4.0:${PORTSDIR}/deskutils/gnome-search-tool \
+		gnome-system-log>=3.4.0:${PORTSDIR}/deskutils/gnome-system-log \
 		gnome-system-monitor>=2.99.0:${PORTSDIR}/sysutils/gnome-system-monitor3 \
 		file-roller>=2.91.0:${PORTSDIR}/archivers/file-roller3 \
 		evince>=2.91.0:${PORTSDIR}/graphics/evince3 \
