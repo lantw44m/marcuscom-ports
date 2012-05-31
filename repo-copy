@@ -9,7 +9,12 @@ databases/libgda4-mdb -> libgda5-mdb
 databases/libgda4-mysql -> libgda5-mysql
 databases/libgda4-postgresql -> libgda5-postgresql
 databases/libgdamm -> databases/libgdamm5
-deskutils/gnome-utils -> deskutils/gnome-utils3
+deskutils/gnome-utils -> deskutils/baobob
+deskutils/gnome-utils -> deskutils/gnome-dictionary
+deskutils/gnome-utils -> deskutils/gnome-font-viewer
+deskutils/gnome-utils -> deskutils/gnome-screenshot
+deskutils/gnome-utils -> deskutils/gnome-search-tool
+deskutils/gnome-utils -> deskutils/gnome-system-log
 deskutils/gucharmap -> desktutils/gucharmap3
 devel/glade3 -> devel/glade
 devel/libgdata -> devel/libgdata06
@@ -36,6 +41,7 @@ net/gnome-nettool -> net/gnome-nettool3
 net/libgweather -> net/libgweather3
 net/vinagre -> net/vinagre3
 net/vino -> net/vino3
+security/gnome-keyring -> security/gcr
 security/gnome-keyring -> security/gnome-keyring3
 security/seahorse -> security/libcryptui
 security/seahorse -> security/seahorse-sharing
