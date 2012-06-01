@@ -54,6 +54,7 @@ share/control-center/Peripherals
 share/control-center/Session
 share/control-center/capplets
 share/control-center/keybindings
+share/control-center/keybindings/gtk-modules
 share/doc/libgda
 share/gir-1.0
 share/gnome
@@ -62,6 +63,7 @@ share/gnome-2.0/ui
 share/gnome-about
 share/gnome-control-center
 share/gnome-control-center/keybindings
+share/gnome-settings-daemon-3.0
 share/gnome/apps
 share/gnome/apps/Applications
 share/gnome/apps/Audio
