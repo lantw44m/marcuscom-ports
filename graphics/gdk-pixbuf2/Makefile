@@ -3,7 +3,7 @@
 # Whom:			Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.20 2012/05/23 08:00:51 kwm Exp $
+#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.21 2012/05/23 13:40:57 kwm Exp $
 
 PORTNAME?=	gdk-pixbuf
 PORTVERSION=	2.26.1
@@ -48,7 +48,7 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 .if !defined(WITHOUT_JP2)
-LIB_DEPENDS+=	jasper.4:${PORTSDIR}/graphics/jasper
+LIB_DEPENDS+=	jasper:${PORTSDIR}/graphics/jasper
 CONFIGURE_ARGS+=--with-libjasper
 PLIST_SUB+=	JP2=""
 .else
@@ -56,7 +56,7 @@ PLIST_SUB+=	JP2="@comment "
 .endif
 
 .if !defined(WITHOUT_JPEG)
-LIB_DEPENDS+=	jpeg.11:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg
 PLIST_SUB+=	JPEG=""
 .else
 CONFIGURE_ARGS+=--without-libjpeg
@@ -64,7 +64,7 @@ PLIST_SUB+=	JPEG="@comment "
 .endif
 
 .if !defined(WITHOUT_PNG)
-LIB_DEPENDS+=	png.6:${PORTSDIR}/graphics/png
+LIB_DEPENDS+=	png:${PORTSDIR}/graphics/png
 PLIST_SUB+=	PNG=""
 .else
 CONFIGURE_ARGS+=--without-libpng
@@ -72,7 +72,7 @@ PLIST_SUB+=	PNG="@comment "
 .endif
 
 .if !defined(WITHOUT_TIFF)
-LIB_DEPENDS+=	tiff.4:${PORTSDIR}/graphics/tiff
+LIB_DEPENDS+=	tiff:${PORTSDIR}/graphics/tiff
 PLIST_SUB+=	TIFF=""
 .else
 CONFIGURE_ARGS+=--without-libtiff

@@ -14,8 +14,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A graph based image processing framework
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	babl-0.1:${PORTSDIR}/x11/babl \
-    		execinfo.1:${PORTSDIR}/devel/libexecinfo
+LIB_DEPENDS=	babl-0:${PORTSDIR}/x11/babl \
+    		execinfo:${PORTSDIR}/devel/libexecinfo
 
 OPTIONS=	CAIRO		"Enable Cairo" on \
 		ENSCRIPT	"Enable Enscript" on \
@@ -57,7 +57,7 @@ EXAMPLES=	2geglbuffer csugar float-lookup \
 .include <bsd.port.options.mk>
 
 .if !defined(WITHOUT_CAIRO)
-LIB_DEPENDS+=	cairo.2:${PORTSDIR}/graphics/cairo
+LIB_DEPENDS+=	cairo:${PORTSDIR}/graphics/cairo
 PLIST_SUB+=	CAIRO=""
 .else
 CONFIGURE_ARGS+=--without-cairo
@@ -85,7 +85,7 @@ BUILD_DEPENDS+=	enscript:${PORTSDIR}/print/enscript-a4
 
 .if !defined(WITHOUT_FFMPEG)
 #BROKEN=	ffmpeg support is currently broken
-LIB_DEPENDS+=	avformat.1:${PORTSDIR}/multimedia/ffmpeg
+LIB_DEPENDS+=	avformat:${PORTSDIR}/multimedia/ffmpeg
 PLIST_SUB+=	FFMPEG=""
 .else
 CONFIGURE_ARGS+=--without-libavformat
@@ -99,7 +99,7 @@ CONFIGURE_ARGS+=--without-graphviz
 .endif
 
 .if !defined(WITHOUT_JPEG)
-LIB_DEPENDS+=	jpeg.11:${PORTSDIR}/graphics/jpeg
+LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg
 PLIST_SUB+=	JPEG=""
 .else
 CONFIGURE_ARGS+=--without-libjpeg
@@ -113,7 +113,7 @@ CONFIGURE_ARGS+=--without-lua
 .endif
 
 .if !defined(WITHOUT_OPENEXR)
-LIB_DEPENDS+=	IlmImf.6:${PORTSDIR}/graphics/OpenEXR
+LIB_DEPENDS+=	IlmImf:${PORTSDIR}/graphics/OpenEXR
 PLIST_SUB+=	OPENEXR=""
 .else
 CONFIGURE_ARGS+=--without-openexr
@@ -121,7 +121,7 @@ PLIST_SUB+=	OPENEXR="@comment "
 .endif
 
 .if !defined(WITHOUT_OPENRAW)
-LIB_DEPENDS+=	openraw.6:${PORTSDIR}/graphics/libopenraw
+LIB_DEPENDS+=	openraw:${PORTSDIR}/graphics/libopenraw
 PLIST_SUB+=	OPENRAW=""
 .else
 CONFIGURE_ARGS+=--without-libopenraw
@@ -134,7 +134,7 @@ CONFIGURE_ARGS+=--disable-mmx \
 .endif
 
 .if !defined(WITHOUT_PNG)
-LIB_DEPENDS+=	png.6:${PORTSDIR}/graphics/png
+LIB_DEPENDS+=	png:${PORTSDIR}/graphics/png
 PLIST_SUB+=	PNG=""
 .else
 CONFIGURE_ARGS+=--without-libpng
@@ -142,7 +142,7 @@ PLIST_SUB+=	PNG="@comment "
 .endif
 
 .if !defined(WITHOUT_RSVG)
-LIB_DEPENDS+=	rsvg-2.2:${PORTSDIR}/graphics/librsvg2
+LIB_DEPENDS+=	rsvg-2:${PORTSDIR}/graphics/librsvg2
 PLIST_SUB+=	RSVG=""
 .else
 CONFIGURE_ARGS+=--without-librsvg
@@ -158,7 +158,7 @@ PLIST_SUB+=	SDL="@comment "
 .endif
 
 .if !defined(WITHOUT_SPIRO)
-LIB_DEPENDS+=	spiro.0:${PORTSDIR}/graphics/libspiro
+LIB_DEPENDS+=	spiro:${PORTSDIR}/graphics/libspiro
 .else
 CONFIGURE_ARGS+=--without-libspiro
 .endif
