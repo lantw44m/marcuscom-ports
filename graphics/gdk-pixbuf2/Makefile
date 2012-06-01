@@ -3,7 +3,7 @@
 # Whom:			Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.21 2012/05/23 13:40:57 kwm Exp $
+#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.22 2012/06/01 14:35:22 kwm Exp $
 
 PORTNAME?=	gdk-pixbuf
 PORTVERSION=	2.26.1
@@ -64,7 +64,7 @@ PLIST_SUB+=	JPEG="@comment "
 .endif
 
 .if !defined(WITHOUT_PNG)
-LIB_DEPENDS+=	png:${PORTSDIR}/graphics/png
+LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png
 PLIST_SUB+=	PNG=""
 .else
 CONFIGURE_ARGS+=--without-libpng

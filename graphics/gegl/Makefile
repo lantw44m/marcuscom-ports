@@ -134,7 +134,7 @@ CONFIGURE_ARGS+=--disable-mmx \
 .endif
 
 .if !defined(WITHOUT_PNG)
-LIB_DEPENDS+=	png:${PORTSDIR}/graphics/png
+LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png
 PLIST_SUB+=	PNG=""
 .else
 CONFIGURE_ARGS+=--without-libpng

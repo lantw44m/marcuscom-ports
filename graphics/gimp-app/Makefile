@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD: ports/graphics/gimp-app/Makefile,v 1.259 2012/02/14 22:08:59 kwm Exp $
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.60 2012/05/13 12:31:16 kwm Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.61 2012/06/01 14:35:22 kwm Exp $
 #
 
 PORTNAME=	gimp-app
@@ -28,7 +28,7 @@ LICENSE=	GPLv3 LGPL3
 LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-LIB_DEPENDS=	png:${PORTSDIR}/graphics/png \
+LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		jpeg:${PORTSDIR}/graphics/jpeg \
 		tiff:${PORTSDIR}/graphics/tiff \
 		lcms:${PORTSDIR}/graphics/lcms \
