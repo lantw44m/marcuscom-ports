@@ -1,0 +1,17 @@
+diff --git src/procproperties.cpp src/procproperties.cpp
+index d97ce92..00fdfb0 100644
+--- src/procproperties.cpp
++++ src/procproperties.cpp
+@@ -120,10 +120,10 @@ fill_proc_properties (GtkWidget *tree, ProcInfo *info)
+     int HZ;
+     int mib[] = { CTL_KERN, KERN_CLOCKRATE };
+ 
+-    if (sysctl (mib, nitems(mib), &cinf, &size, NULL, 0) == -1)
++    if (sysctl (mib, 2, &cinf, &size, NULL, 0) == -1)
+         HZ = 100;
+     else
+-        HZ = cinf.hz;
++        HZ = (cinf.stathz ? cinf.stathz : cinf.hz);
+ #endif
+ 
+     proc_arg proc_props[] = {

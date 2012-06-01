@@ -1,5 +1,6 @@
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
+%%DATADIR%%/preferences.ui
 share/gnome/help/gnome-system-monitor/C/figures/addColumn.png
 share/gnome/help/gnome-system-monitor/C/figures/changePriority.png
 share/gnome/help/gnome-system-monitor/C/figures/colorPanel.png
@@ -239,6 +240,20 @@ share/gnome/help/gnome-system-monitor/sv/figures/sortMenu2.png
 share/gnome/help/gnome-system-monitor/sv/figures/systemMonitor.png
 share/gnome/help/gnome-system-monitor/sv/figures/viewMenu.png
 share/gnome/help/gnome-system-monitor/sv/gnome-system-monitor.xml
+share/gnome/help/gnome-system-monitor/te/figures/addColumn.png
+share/gnome/help/gnome-system-monitor/te/figures/changePriority.png
+share/gnome/help/gnome-system-monitor/te/figures/colorPanel.png
+share/gnome/help/gnome-system-monitor/te/figures/columnContextMenu.png
+share/gnome/help/gnome-system-monitor/te/figures/gnome-system-monitor_window.png
+share/gnome/help/gnome-system-monitor/te/figures/memoryMaps.png
+share/gnome/help/gnome-system-monitor/te/figures/moreInfo.png
+share/gnome/help/gnome-system-monitor/te/figures/processListing.png
+share/gnome/help/gnome-system-monitor/te/figures/sortButton.png
+share/gnome/help/gnome-system-monitor/te/figures/sortMenu.png
+share/gnome/help/gnome-system-monitor/te/figures/sortMenu2.png
+share/gnome/help/gnome-system-monitor/te/figures/systemMonitor.png
+share/gnome/help/gnome-system-monitor/te/figures/viewMenu.png
+share/gnome/help/gnome-system-monitor/te/gnome-system-monitor.xml
 share/gnome/help/gnome-system-monitor/zh_CN/figures/addColumn.png
 share/gnome/help/gnome-system-monitor/zh_CN/figures/changePriority.png
 share/gnome/help/gnome-system-monitor/zh_CN/figures/colorPanel.png
@@ -355,50 +370,13 @@ share/omf/gnome-system-monitor/gnome-system-monitor-pa.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-ru.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-sl.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-sv.omf
+share/omf/gnome-system-monitor/gnome-system-monitor-te.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-zh_CN.omf
 share/pixmaps/gnome-system-monitor/download.svg
 share/pixmaps/gnome-system-monitor/side.png
 share/pixmaps/gnome-system-monitor/upload.svg
 @dirrm share/pixmaps/gnome-system-monitor
 @dirrm share/omf/gnome-system-monitor
-@dirrm share/gnome/help/gnome-system-monitor/zh_CN/figures
-@dirrm share/gnome/help/gnome-system-monitor/zh_CN
-@dirrm share/gnome/help/gnome-system-monitor/sv/figures
-@dirrm share/gnome/help/gnome-system-monitor/sv
-@dirrm share/gnome/help/gnome-system-monitor/sl/figures
-@dirrm share/gnome/help/gnome-system-monitor/sl
-@dirrm share/gnome/help/gnome-system-monitor/ru/figures
-@dirrm share/gnome/help/gnome-system-monitor/ru
-@dirrm share/gnome/help/gnome-system-monitor/pa/figures
-@dirrm share/gnome/help/gnome-system-monitor/pa
-@dirrm share/gnome/help/gnome-system-monitor/oc/figures
-@dirrm share/gnome/help/gnome-system-monitor/oc
-@dirrm share/gnome/help/gnome-system-monitor/gl/figures
-@dirrm share/gnome/help/gnome-system-monitor/gl
-@dirrm share/gnome/help/gnome-system-monitor/fr/figures
-@dirrm share/gnome/help/gnome-system-monitor/fr
-@dirrm share/gnome/help/gnome-system-monitor/eu/figures
-@dirrm share/gnome/help/gnome-system-monitor/eu
-@dirrm share/gnome/help/gnome-system-monitor/es/figures
-@dirrm share/gnome/help/gnome-system-monitor/es
-@dirrm share/gnome/help/gnome-system-monitor/el/figures
-@dirrm share/gnome/help/gnome-system-monitor/el
-@dirrm share/gnome/help/gnome-system-monitor/de/figures
-@dirrm share/gnome/help/gnome-system-monitor/de
-@dirrm share/gnome/help/gnome-system-monitor/da/figures
-@dirrm share/gnome/help/gnome-system-monitor/da
-@dirrm share/gnome/help/gnome-system-monitor/cs/figures
-@dirrm share/gnome/help/gnome-system-monitor/cs
-@dirrm share/gnome/help/gnome-system-monitor/ca/figures
-@dirrm share/gnome/help/gnome-system-monitor/ca
-@dirrm share/gnome/help/gnome-system-monitor/bg/figures
-@dirrm share/gnome/help/gnome-system-monitor/bg
-@dirrm share/gnome/help/gnome-system-monitor/ar/figures
-@dirrm share/gnome/help/gnome-system-monitor/ar
-@dirrm share/gnome/help/gnome-system-monitor/C/figures
-@dirrm share/gnome/help/gnome-system-monitor/C
-@dirrm share/gnome/help/gnome-system-monitor
-@dirrmtry share/applications
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
@@ -439,3 +417,44 @@ share/pixmaps/gnome-system-monitor/upload.svg
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrm share/gnome/help/gnome-system-monitor/zh_CN/figures
+@dirrm share/gnome/help/gnome-system-monitor/zh_CN
+@dirrm share/gnome/help/gnome-system-monitor/te/figures
+@dirrm share/gnome/help/gnome-system-monitor/te
+@dirrm share/gnome/help/gnome-system-monitor/sv/figures
+@dirrm share/gnome/help/gnome-system-monitor/sv
+@dirrm share/gnome/help/gnome-system-monitor/sl/figures
+@dirrm share/gnome/help/gnome-system-monitor/sl
+@dirrm share/gnome/help/gnome-system-monitor/ru/figures
+@dirrm share/gnome/help/gnome-system-monitor/ru
+@dirrm share/gnome/help/gnome-system-monitor/pa/figures
+@dirrm share/gnome/help/gnome-system-monitor/pa
+@dirrm share/gnome/help/gnome-system-monitor/oc/figures
+@dirrm share/gnome/help/gnome-system-monitor/oc
+@dirrm share/gnome/help/gnome-system-monitor/gl/figures
+@dirrm share/gnome/help/gnome-system-monitor/gl
+@dirrm share/gnome/help/gnome-system-monitor/fr/figures
+@dirrm share/gnome/help/gnome-system-monitor/fr
+@dirrm share/gnome/help/gnome-system-monitor/eu/figures
+@dirrm share/gnome/help/gnome-system-monitor/eu
+@dirrm share/gnome/help/gnome-system-monitor/es/figures
+@dirrm share/gnome/help/gnome-system-monitor/es
+@dirrm share/gnome/help/gnome-system-monitor/el/figures
+@dirrm share/gnome/help/gnome-system-monitor/el
+@dirrm share/gnome/help/gnome-system-monitor/de/figures
+@dirrm share/gnome/help/gnome-system-monitor/de
+@dirrm share/gnome/help/gnome-system-monitor/da/figures
+@dirrm share/gnome/help/gnome-system-monitor/da
+@dirrm share/gnome/help/gnome-system-monitor/cs/figures
+@dirrm share/gnome/help/gnome-system-monitor/cs
+@dirrm share/gnome/help/gnome-system-monitor/ca/figures
+@dirrm share/gnome/help/gnome-system-monitor/ca
+@dirrm share/gnome/help/gnome-system-monitor/bg/figures
+@dirrm share/gnome/help/gnome-system-monitor/bg
+@dirrm share/gnome/help/gnome-system-monitor/ar/figures
+@dirrm share/gnome/help/gnome-system-monitor/ar
+@dirrm share/gnome/help/gnome-system-monitor/C/figures
+@dirrm share/gnome/help/gnome-system-monitor/C
+@dirrm share/gnome/help/gnome-system-monitor
+@dirrm %%DATADIR%%
+@dirrmtry share/applications
