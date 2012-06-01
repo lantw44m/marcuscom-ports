@@ -539,7 +539,6 @@ share/locale/zh_TW/LC_MESSAGES/libgda-%%VERSION%%.mo
 @dirrm share/libgda-%%VERSION%%/dtd
 @dirrm share/libgda-%%VERSION%%/
 @dirrm share/doc/libgda-%%VERSION%%
-@dirrm share/doc/libgda
 @dirrm lib/libgda-%%VERSION%%/providers
 @dirrm lib/libgda-%%VERSION%%
 @dirrm include/libgda-%%VERSION%%/libgda/virtual
