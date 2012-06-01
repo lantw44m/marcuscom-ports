@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/net/vinagre3/Makefile,v 1.14 2011/10/18 22:03:03 kwm Exp $
+#  $MCom: ports/net/vinagre3/Makefile,v 1.15 2011/11/19 10:53:37 kwm Exp $
 #
 
 PORTNAME=	vinagre
-PORTVERSION=	3.2.2
+PORTVERSION=	3.4.2
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,11 +15,12 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC client for the GNOME Desktop
 
-LIB_DEPENDS=	gtk-vnc-2.0.0:${PORTSDIR}/net/gtk-vnc3 \
-    		avahi-core.7:${PORTSDIR}/net/avahi-app \
-		avahi-ui-gtk3.0:${PORTSDIR}/net/avahi-gtk3 \
-		gdbm.4:${PORTSDIR}/databases/gdbm \
-		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
+LIB_DEPENDS=	gtk-vnc-2.0:${PORTSDIR}/net/gtk-vnc3 \
+    		avahi-core:${PORTSDIR}/net/avahi-app \
+		avahi-ui-gtk3:${PORTSDIR}/net/avahi-gtk3 \
+		gdbm:${PORTSDIR}/databases/gdbm \
+		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
 CONFLICTS=	vinagre-2.[0-9]*
@@ -27,15 +28,14 @@ CONFLICTS=	vinagre-2.[0-9]*
 LATEST_LINK=	vinagre3
 USE_XZ=		yes
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 libxml2 vte3 \
-		gnomedocutils
+USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 libxml2 vte3
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-spice --enable-ssh
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.Vinagre.gschema.xml
 
