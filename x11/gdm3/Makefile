@@ -3,12 +3,11 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.17 2012/01/26 00:35:47 ahze Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.18 2012/01/26 13:14:13 kwm Exp $
 #
 
 PORTNAME=	gdm
-PORTVERSION=	3.2.1.1
-PORTREVISION=	2
+PORTVERSION=	3.4.1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -46,18 +45,19 @@ USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
+INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_RC_SUBR=	gdm
 USE_GNOME_SUBR=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnomehier gconf2 librsvg2 dconf \
-		gnomeprefix gnomepanel3
-GCONF_SCHEMAS=	gdm-simple-greeter.schemas
+USE_GNOME=	gnomehack intlhack gnomehier librsvg2 gnomeprefix gnomepanel3
 GLIB_SCHEMAS=	org.gnome.login-screen.gschema.xml
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home \
 		--with-at-spi-registryd-directory=${LOCALBASE}/libexec \
-		--enable-authentication-scheme=pam
+		--enable-authentication-scheme=pam \
+		--with-console-kit \
+		--with-systemd=no
 CPPFLAGS=	-I${LOCALBASE}/include -DHAS_SA_LEN
 LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGLIBS=	-lm -lexecinfo
@@ -98,10 +98,7 @@ post-patch:
 		${WRKSRC}/data/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    	-e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-	    	${WRKSRC}/daemon/gdm-session-worker.c \
-		${WRKSRC}/data/gconf.path
-	@${REINPLACE_CMD} -e 's|/bin/true|/usr/bin/true|g' \
-	    	${WRKSRC}/data/session-setup.entries
+	    	${WRKSRC}/daemon/gdm-session-worker.c
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
 		-e 's|/usr/bin/X|${LOCALBASE}/bin/X|g' \
 		-e 's|/usr/bin/Xorg|${LOCALBASE}/bin/Xorg|g' \
@@ -117,10 +114,6 @@ post-patch:
 		${WRKSRC}/data/applications/orca-screen-reader.desktop
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/data/gconf.path \
-	    	${PREFIX}/share/gdm/gconf.path
-	${INSTALL_DATA} ${WRKSRC}/data/session-setup.entries \
-	    	${PREFIX}/share/gdm/session-setup.entries
 .if !defined(PACKAGE_BUILDING)
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
