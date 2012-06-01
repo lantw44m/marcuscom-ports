@@ -146,6 +146,7 @@ share/gtksourceview-3.0/language-specs/po.lang
 share/gtksourceview-3.0/language-specs/prolog.lang
 share/gtksourceview-3.0/language-specs/protobuf.lang
 share/gtksourceview-3.0/language-specs/python.lang
+share/gtksourceview-3.0/language-specs/python3.lang
 share/gtksourceview-3.0/language-specs/rpmspec.lang
 share/gtksourceview-3.0/language-specs/ruby.lang
 share/gtksourceview-3.0/language-specs/scheme.lang
