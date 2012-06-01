@@ -385,6 +385,8 @@ share/omf/gnome-dictionary/gnome-dictionary-zh_CN.omf
 @dirrm share/gnome/help/gnome-dictionary/uk
 @dirrm share/gnome/help/gnome-dictionary/sv/figures
 @dirrm share/gnome/help/gnome-dictionary/sv
+@dirrm share/gnome/help/gnome-dictionary/sl/figures
+@dirrm share/gnome/help/gnome-dictionary/sl
 @dirrm share/gnome/help/gnome-dictionary/ru/figures
 @dirrm share/gnome/help/gnome-dictionary/ru
 @dirrm share/gnome/help/gnome-dictionary/oc/figures
@@ -420,5 +422,6 @@ share/omf/gnome-dictionary/gnome-dictionary-zh_CN.omf
 @dirrm share/gdict-1.0/sources
 @dirrm share/gdict-1.0
 @dirrm share/doc/gdict
+@dirrmtry share/applications
 @dirrm include/gdict-1.0/gdict
 @dirrm include/gdict-1.0
