@@ -4,6 +4,7 @@ etc/pam.d/gnome-screensaver
 etc/xdg/autostart/gnome-screensaver.desktop
 libexec/gnome-screensaver-dialog
 share/locale/af/LC_MESSAGES/gnome-screensaver.mo
+share/locale/an/LC_MESSAGES/gnome-screensaver.mo
 share/locale/ar/LC_MESSAGES/gnome-screensaver.mo
 share/locale/as/LC_MESSAGES/gnome-screensaver.mo
 share/locale/ast/LC_MESSAGES/gnome-screensaver.mo
@@ -133,3 +134,5 @@ share/locale/zh_TW/LC_MESSAGES/gnome-screensaver.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/locale/an/LC_MESSAGES
+@dirrmtry share/locale/an
