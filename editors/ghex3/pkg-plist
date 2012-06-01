@@ -7,7 +7,6 @@ lib/libgtkhex-3.so.0
 libdata/pkgconfig/gtkhex-3.pc
 share/GConf/gsettings/ghex.convert
 share/applications/ghex.desktop
-share/ghex/ghex-ui.xml
 share/gnome/help/ghex/C/figures/ghex_window_empty.png
 share/gnome/help/ghex/C/figures/ghex_window_open.png
 share/gnome/help/ghex/C/ghex.xml
@@ -96,6 +95,7 @@ share/locale/id/LC_MESSAGES/ghex-3.0.mo
 share/locale/it/LC_MESSAGES/ghex-3.0.mo
 share/locale/ja/LC_MESSAGES/ghex-3.0.mo
 share/locale/ko/LC_MESSAGES/ghex-3.0.mo
+share/locale/lt/LC_MESSAGES/ghex-3.0.mo
 share/locale/lv/LC_MESSAGES/ghex-3.0.mo
 share/locale/mk/LC_MESSAGES/ghex-3.0.mo
 share/locale/ml/LC_MESSAGES/ghex-3.0.mo
@@ -177,5 +177,7 @@ share/omf/ghex/ghex-zh_TW.omf
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/locale/lt/LC_MESSAGES
+@dirrmtry share/locale/lt
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
