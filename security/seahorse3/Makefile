@@ -3,11 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse3/Makefile,v 1.12 2011/10/18 22:40:21 kwm Exp $
+#   $MCom: ports/security/seahorse3/Makefile,v 1.13 2011/11/17 00:02:32 kwm Exp $
 #
 
 PORTNAME=	seahorse
-PORTVERSION=	3.2.2
+PORTVERSION=	3.4.1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -33,7 +33,7 @@ USE_LDCONFIG=	yes
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix gconf2 gnomedocutils
+USE_GNOME=	gnomehack intlhack gnomeprefix gtk30 gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
