@@ -1,0 +1,560 @@
+bin/gnote
+lib/gnote/addins/%%VERSION%%/backlinks.a
+lib/gnote/addins/%%VERSION%%/backlinks.la
+lib/gnote/addins/%%VERSION%%/backlinks.so
+lib/gnote/addins/%%VERSION%%/bugzilla.a
+lib/gnote/addins/%%VERSION%%/bugzilla.la
+lib/gnote/addins/%%VERSION%%/bugzilla.so
+lib/gnote/addins/%%VERSION%%/exporttohtml.a
+lib/gnote/addins/%%VERSION%%/exporttohtml.la
+lib/gnote/addins/%%VERSION%%/exporttohtml.so
+lib/gnote/addins/%%VERSION%%/fixedwidth.a
+lib/gnote/addins/%%VERSION%%/fixedwidth.la
+lib/gnote/addins/%%VERSION%%/fixedwidth.so
+lib/gnote/addins/%%VERSION%%/inserttimestamp.a
+lib/gnote/addins/%%VERSION%%/inserttimestamp.la
+lib/gnote/addins/%%VERSION%%/inserttimestamp.so
+lib/gnote/addins/%%VERSION%%/noteoftheday.a
+lib/gnote/addins/%%VERSION%%/noteoftheday.la
+lib/gnote/addins/%%VERSION%%/noteoftheday.so
+lib/gnote/addins/%%VERSION%%/printnotes.a
+lib/gnote/addins/%%VERSION%%/printnotes.la
+lib/gnote/addins/%%VERSION%%/printnotes.so
+lib/gnote/addins/%%VERSION%%/replacetitle.a
+lib/gnote/addins/%%VERSION%%/replacetitle.la
+lib/gnote/addins/%%VERSION%%/replacetitle.so
+lib/gnote/addins/%%VERSION%%/stickynoteimport.a
+lib/gnote/addins/%%VERSION%%/stickynoteimport.la
+lib/gnote/addins/%%VERSION%%/stickynoteimport.so
+lib/gnote/addins/%%VERSION%%/tomboyimport.a
+lib/gnote/addins/%%VERSION%%/tomboyimport.la
+lib/gnote/addins/%%VERSION%%/tomboyimport.so
+lib/gnote/addins/%%VERSION%%/underline.a
+lib/gnote/addins/%%VERSION%%/underline.la
+lib/gnote/addins/%%VERSION%%/underline.so
+%%APPLET%%libexec/gnote-applet
+share/applications/gnote.desktop
+share/dbus-1/services/org.gnome.Gnote.service
+%%APPLET%%share/dbus-1/services/org.gnome.panel.applet.GnoteAppletFactory.service
+%%PORTDOCS%%%%DOCSDIR%%/AUTHORS
+%%PORTDOCS%%%%DOCSDIR%%/ChangeLog
+%%PORTDOCS%%%%DOCSDIR%%/NEWS
+%%PORTDOCS%%%%DOCSDIR%%/README
+%%PORTDOCS%%%%DOCSDIR%%/TODO
+%%APPLET%%share/gnome-panel/4.0/applets/org.gnome.gnote.panel-applet
+share/gnome/help/gnote/C/figures/add-notebook-search.png
+share/gnome/help/gnote/C/figures/add-to-notebook.png
+share/gnome/help/gnote/C/figures/delete-notebook.png
+share/gnome/help/gnote/C/figures/gnote-new-note.png
+share/gnome/help/gnote/C/figures/gnote-pindown.png
+share/gnome/help/gnote/C/figures/gnote-pinup.png
+share/gnome/help/gnote/C/figures/gnote-preferences-add-ins.png
+share/gnome/help/gnote/C/figures/gnote-preferences-editing.png
+share/gnome/help/gnote/C/figures/gnote-preferences-hotkeys.png
+share/gnome/help/gnote/C/figures/gnote-preferences-synchronization.png
+share/gnome/help/gnote/C/figures/gnote-search-all-notes.png
+share/gnome/help/gnote/C/figures/gnote-template-note.png
+share/gnome/help/gnote/C/figures/gnote-tools.png
+share/gnome/help/gnote/C/figures/new-notebook.png
+share/gnome/help/gnote/C/figures/note-template.png
+share/gnome/help/gnote/C/figures/notebook-icon.png
+share/gnome/help/gnote/C/gnote-addin-bugzillalink.page
+share/gnome/help/gnote/C/gnote-addin-fixedwidth.page
+share/gnome/help/gnote/C/gnote-addin-html.page
+share/gnome/help/gnote/C/gnote-addin-noteoftheday.page
+share/gnome/help/gnote/C/gnote-addin-print.page
+share/gnome/help/gnote/C/gnote-addin-replacetitle.page
+share/gnome/help/gnote/C/gnote-addin-timestamp.page
+share/gnome/help/gnote/C/gnote-addin-underline.page
+share/gnome/help/gnote/C/gnote-addins-preferences.page
+share/gnome/help/gnote/C/gnote-bulleted-lists.page
+share/gnome/help/gnote/C/gnote-common-problems.page
+share/gnome/help/gnote/C/gnote-creating-notes.page
+share/gnome/help/gnote/C/gnote-deleting-notes.page
+share/gnome/help/gnote/C/gnote-editing-notes.page
+share/gnome/help/gnote/C/gnote-hotkeys.page
+share/gnome/help/gnote/C/gnote-introduction.page
+share/gnome/help/gnote/C/gnote-links.page
+share/gnome/help/gnote/C/gnote-notes-preferences.page
+share/gnome/help/gnote/C/gnote-searching-notes.page
+share/gnome/help/gnote/C/gnote-template-notes.page
+share/gnome/help/gnote/C/gnote-working-with-notebooks.page
+share/gnome/help/gnote/C/index.page
+share/gnome/help/gnote/cs/figures/add-notebook-search.png
+share/gnome/help/gnote/cs/figures/add-to-notebook.png
+share/gnome/help/gnote/cs/figures/delete-notebook.png
+share/gnome/help/gnote/cs/figures/gnote-new-note.png
+share/gnome/help/gnote/cs/figures/gnote-pindown.png
+share/gnome/help/gnote/cs/figures/gnote-pinup.png
+share/gnome/help/gnote/cs/figures/gnote-preferences-add-ins.png
+share/gnome/help/gnote/cs/figures/gnote-preferences-editing.png
+share/gnome/help/gnote/cs/figures/gnote-preferences-hotkeys.png
+share/gnome/help/gnote/cs/figures/gnote-preferences-synchronization.png
+share/gnome/help/gnote/cs/figures/gnote-search-all-notes.png
+share/gnome/help/gnote/cs/figures/gnote-template-note.png
+share/gnome/help/gnote/cs/figures/gnote-tools.png
+share/gnome/help/gnote/cs/figures/new-notebook.png
+share/gnome/help/gnote/cs/figures/note-template.png
+share/gnome/help/gnote/cs/figures/notebook-icon.png
+share/gnome/help/gnote/cs/gnote-addin-bugzillalink.page
+share/gnome/help/gnote/cs/gnote-addin-fixedwidth.page
+share/gnome/help/gnote/cs/gnote-addin-html.page
+share/gnome/help/gnote/cs/gnote-addin-noteoftheday.page
+share/gnome/help/gnote/cs/gnote-addin-print.page
+share/gnome/help/gnote/cs/gnote-addin-replacetitle.page
+share/gnome/help/gnote/cs/gnote-addin-timestamp.page
+share/gnome/help/gnote/cs/gnote-addin-underline.page
+share/gnome/help/gnote/cs/gnote-addins-preferences.page
+share/gnome/help/gnote/cs/gnote-bulleted-lists.page
+share/gnome/help/gnote/cs/gnote-common-problems.page
+share/gnome/help/gnote/cs/gnote-creating-notes.page
+share/gnome/help/gnote/cs/gnote-deleting-notes.page
+share/gnome/help/gnote/cs/gnote-editing-notes.page
+share/gnome/help/gnote/cs/gnote-hotkeys.page
+share/gnome/help/gnote/cs/gnote-introduction.page
+share/gnome/help/gnote/cs/gnote-links.page
+share/gnome/help/gnote/cs/gnote-notes-preferences.page
+share/gnome/help/gnote/cs/gnote-searching-notes.page
+share/gnome/help/gnote/cs/gnote-template-notes.page
+share/gnome/help/gnote/cs/gnote-working-with-notebooks.page
+share/gnome/help/gnote/cs/index.page
+share/gnome/help/gnote/da/figures/add-notebook-search.png
+share/gnome/help/gnote/da/figures/add-to-notebook.png
+share/gnome/help/gnote/da/figures/delete-notebook.png
+share/gnome/help/gnote/da/figures/gnote-new-note.png
+share/gnome/help/gnote/da/figures/gnote-pindown.png
+share/gnome/help/gnote/da/figures/gnote-pinup.png
+share/gnome/help/gnote/da/figures/gnote-preferences-add-ins.png
+share/gnome/help/gnote/da/figures/gnote-preferences-editing.png
+share/gnome/help/gnote/da/figures/gnote-preferences-hotkeys.png
+share/gnome/help/gnote/da/figures/gnote-preferences-synchronization.png
+share/gnome/help/gnote/da/figures/gnote-search-all-notes.png
+share/gnome/help/gnote/da/figures/gnote-template-note.png
+share/gnome/help/gnote/da/figures/gnote-tools.png
+share/gnome/help/gnote/da/figures/new-notebook.png
+share/gnome/help/gnote/da/figures/note-template.png
+share/gnome/help/gnote/da/figures/notebook-icon.png
+share/gnome/help/gnote/da/gnote-addin-bugzillalink.page
+share/gnome/help/gnote/da/gnote-addin-fixedwidth.page
+share/gnome/help/gnote/da/gnote-addin-html.page
+share/gnome/help/gnote/da/gnote-addin-noteoftheday.page
+share/gnome/help/gnote/da/gnote-addin-print.page
+share/gnome/help/gnote/da/gnote-addin-replacetitle.page
+share/gnome/help/gnote/da/gnote-addin-timestamp.page
+share/gnome/help/gnote/da/gnote-addin-underline.page
+share/gnome/help/gnote/da/gnote-addins-preferences.page
+share/gnome/help/gnote/da/gnote-bulleted-lists.page
+share/gnome/help/gnote/da/gnote-common-problems.page
+share/gnome/help/gnote/da/gnote-creating-notes.page
+share/gnome/help/gnote/da/gnote-deleting-notes.page
+share/gnome/help/gnote/da/gnote-editing-notes.page
+share/gnome/help/gnote/da/gnote-hotkeys.page
+share/gnome/help/gnote/da/gnote-introduction.page
+share/gnome/help/gnote/da/gnote-links.page
+share/gnome/help/gnote/da/gnote-notes-preferences.page
+share/gnome/help/gnote/da/gnote-searching-notes.page
+share/gnome/help/gnote/da/gnote-template-notes.page
+share/gnome/help/gnote/da/gnote-working-with-notebooks.page
+share/gnome/help/gnote/da/index.page
+share/gnome/help/gnote/de/figures/add-notebook-search.png
+share/gnome/help/gnote/de/figures/add-to-notebook.png
+share/gnome/help/gnote/de/figures/delete-notebook.png
+share/gnome/help/gnote/de/figures/gnote-new-note.png
+share/gnome/help/gnote/de/figures/gnote-pindown.png
+share/gnome/help/gnote/de/figures/gnote-pinup.png
+share/gnome/help/gnote/de/figures/gnote-preferences-add-ins.png
+share/gnome/help/gnote/de/figures/gnote-preferences-editing.png
+share/gnome/help/gnote/de/figures/gnote-preferences-hotkeys.png
+share/gnome/help/gnote/de/figures/gnote-preferences-synchronization.png
+share/gnome/help/gnote/de/figures/gnote-search-all-notes.png
+share/gnome/help/gnote/de/figures/gnote-template-note.png
+share/gnome/help/gnote/de/figures/gnote-tools.png
+share/gnome/help/gnote/de/figures/new-notebook.png
+share/gnome/help/gnote/de/figures/note-template.png
+share/gnome/help/gnote/de/figures/notebook-icon.png
+share/gnome/help/gnote/de/gnote-addin-bugzillalink.page
+share/gnome/help/gnote/de/gnote-addin-fixedwidth.page
+share/gnome/help/gnote/de/gnote-addin-html.page
+share/gnome/help/gnote/de/gnote-addin-noteoftheday.page
+share/gnome/help/gnote/de/gnote-addin-print.page
+share/gnome/help/gnote/de/gnote-addin-replacetitle.page
+share/gnome/help/gnote/de/gnote-addin-timestamp.page
+share/gnome/help/gnote/de/gnote-addin-underline.page
+share/gnome/help/gnote/de/gnote-addins-preferences.page
+share/gnome/help/gnote/de/gnote-bulleted-lists.page
+share/gnome/help/gnote/de/gnote-common-problems.page
+share/gnome/help/gnote/de/gnote-creating-notes.page
+share/gnome/help/gnote/de/gnote-deleting-notes.page
+share/gnome/help/gnote/de/gnote-editing-notes.page
+share/gnome/help/gnote/de/gnote-hotkeys.page
+share/gnome/help/gnote/de/gnote-introduction.page
+share/gnome/help/gnote/de/gnote-links.page
+share/gnome/help/gnote/de/gnote-notes-preferences.page
+share/gnome/help/gnote/de/gnote-searching-notes.page
+share/gnome/help/gnote/de/gnote-template-notes.page
+share/gnome/help/gnote/de/gnote-working-with-notebooks.page
+share/gnome/help/gnote/de/index.page
+share/gnome/help/gnote/es/figures/add-notebook-search.png
+share/gnome/help/gnote/es/figures/add-to-notebook.png
+share/gnome/help/gnote/es/figures/delete-notebook.png
+share/gnome/help/gnote/es/figures/gnote-new-note.png
+share/gnome/help/gnote/es/figures/gnote-pindown.png
+share/gnome/help/gnote/es/figures/gnote-pinup.png
+share/gnome/help/gnote/es/figures/gnote-preferences-add-ins.png
+share/gnome/help/gnote/es/figures/gnote-preferences-editing.png
+share/gnome/help/gnote/es/figures/gnote-preferences-hotkeys.png
+share/gnome/help/gnote/es/figures/gnote-preferences-synchronization.png
+share/gnome/help/gnote/es/figures/gnote-search-all-notes.png
+share/gnome/help/gnote/es/figures/gnote-template-note.png
+share/gnome/help/gnote/es/figures/gnote-tools.png
+share/gnome/help/gnote/es/figures/new-notebook.png
+share/gnome/help/gnote/es/figures/note-template.png
+share/gnome/help/gnote/es/figures/notebook-icon.png
+share/gnome/help/gnote/es/gnote-addin-bugzillalink.page
+share/gnome/help/gnote/es/gnote-addin-fixedwidth.page
+share/gnome/help/gnote/es/gnote-addin-html.page
+share/gnome/help/gnote/es/gnote-addin-noteoftheday.page
+share/gnome/help/gnote/es/gnote-addin-print.page
+share/gnome/help/gnote/es/gnote-addin-replacetitle.page
+share/gnome/help/gnote/es/gnote-addin-timestamp.page
+share/gnome/help/gnote/es/gnote-addin-underline.page
+share/gnome/help/gnote/es/gnote-addins-preferences.page
+share/gnome/help/gnote/es/gnote-bulleted-lists.page
+share/gnome/help/gnote/es/gnote-common-problems.page
+share/gnome/help/gnote/es/gnote-creating-notes.page
+share/gnome/help/gnote/es/gnote-deleting-notes.page
+share/gnome/help/gnote/es/gnote-editing-notes.page
+share/gnome/help/gnote/es/gnote-hotkeys.page
+share/gnome/help/gnote/es/gnote-introduction.page
+share/gnome/help/gnote/es/gnote-links.page
+share/gnome/help/gnote/es/gnote-notes-preferences.page
+share/gnome/help/gnote/es/gnote-searching-notes.page
+share/gnome/help/gnote/es/gnote-template-notes.page
+share/gnome/help/gnote/es/gnote-working-with-notebooks.page
+share/gnome/help/gnote/es/index.page
+share/gnome/help/gnote/fr/figures/add-notebook-search.png
+share/gnome/help/gnote/fr/figures/add-to-notebook.png
+share/gnome/help/gnote/fr/figures/delete-notebook.png
+share/gnome/help/gnote/fr/figures/gnote-new-note.png
+share/gnome/help/gnote/fr/figures/gnote-pindown.png
+share/gnome/help/gnote/fr/figures/gnote-pinup.png
+share/gnome/help/gnote/fr/figures/gnote-preferences-add-ins.png
+share/gnome/help/gnote/fr/figures/gnote-preferences-editing.png
+share/gnome/help/gnote/fr/figures/gnote-preferences-hotkeys.png
+share/gnome/help/gnote/fr/figures/gnote-preferences-synchronization.png
+share/gnome/help/gnote/fr/figures/gnote-search-all-notes.png
+share/gnome/help/gnote/fr/figures/gnote-template-note.png
+share/gnome/help/gnote/fr/figures/gnote-tools.png
+share/gnome/help/gnote/fr/figures/new-notebook.png
+share/gnome/help/gnote/fr/figures/note-template.png
+share/gnome/help/gnote/fr/figures/notebook-icon.png
+share/gnome/help/gnote/fr/gnote-addin-bugzillalink.page
+share/gnome/help/gnote/fr/gnote-addin-fixedwidth.page
+share/gnome/help/gnote/fr/gnote-addin-html.page
+share/gnome/help/gnote/fr/gnote-addin-noteoftheday.page
+share/gnome/help/gnote/fr/gnote-addin-print.page
+share/gnome/help/gnote/fr/gnote-addin-replacetitle.page
+share/gnome/help/gnote/fr/gnote-addin-timestamp.page
+share/gnome/help/gnote/fr/gnote-addin-underline.page
+share/gnome/help/gnote/fr/gnote-addins-preferences.page
+share/gnome/help/gnote/fr/gnote-bulleted-lists.page
+share/gnome/help/gnote/fr/gnote-common-problems.page
+share/gnome/help/gnote/fr/gnote-creating-notes.page
+share/gnome/help/gnote/fr/gnote-deleting-notes.page
+share/gnome/help/gnote/fr/gnote-editing-notes.page
+share/gnome/help/gnote/fr/gnote-hotkeys.page
+share/gnome/help/gnote/fr/gnote-introduction.page
+share/gnome/help/gnote/fr/gnote-links.page
+share/gnome/help/gnote/fr/gnote-notes-preferences.page
+share/gnome/help/gnote/fr/gnote-searching-notes.page
+share/gnome/help/gnote/fr/gnote-template-notes.page
+share/gnome/help/gnote/fr/gnote-working-with-notebooks.page
+share/gnome/help/gnote/fr/index.page
+share/gnome/help/gnote/lt/figures/add-notebook-search.png
+share/gnome/help/gnote/lt/figures/add-to-notebook.png
+share/gnome/help/gnote/lt/figures/delete-notebook.png
+share/gnome/help/gnote/lt/figures/gnote-new-note.png
+share/gnome/help/gnote/lt/figures/gnote-pindown.png
+share/gnome/help/gnote/lt/figures/gnote-pinup.png
+share/gnome/help/gnote/lt/figures/gnote-preferences-add-ins.png
+share/gnome/help/gnote/lt/figures/gnote-preferences-editing.png
+share/gnome/help/gnote/lt/figures/gnote-preferences-hotkeys.png
+share/gnome/help/gnote/lt/figures/gnote-preferences-synchronization.png
+share/gnome/help/gnote/lt/figures/gnote-search-all-notes.png
+share/gnome/help/gnote/lt/figures/gnote-template-note.png
+share/gnome/help/gnote/lt/figures/gnote-tools.png
+share/gnome/help/gnote/lt/figures/new-notebook.png
+share/gnome/help/gnote/lt/figures/note-template.png
+share/gnome/help/gnote/lt/figures/notebook-icon.png
+share/gnome/help/gnote/lt/gnote-addin-bugzillalink.page
+share/gnome/help/gnote/lt/gnote-addin-fixedwidth.page
+share/gnome/help/gnote/lt/gnote-addin-html.page
+share/gnome/help/gnote/lt/gnote-addin-noteoftheday.page
+share/gnome/help/gnote/lt/gnote-addin-print.page
+share/gnome/help/gnote/lt/gnote-addin-replacetitle.page
+share/gnome/help/gnote/lt/gnote-addin-timestamp.page
+share/gnome/help/gnote/lt/gnote-addin-underline.page
+share/gnome/help/gnote/lt/gnote-addins-preferences.page
+share/gnome/help/gnote/lt/gnote-bulleted-lists.page
+share/gnome/help/gnote/lt/gnote-common-problems.page
+share/gnome/help/gnote/lt/gnote-creating-notes.page
+share/gnome/help/gnote/lt/gnote-deleting-notes.page
+share/gnome/help/gnote/lt/gnote-editing-notes.page
+share/gnome/help/gnote/lt/gnote-hotkeys.page
+share/gnome/help/gnote/lt/gnote-introduction.page
+share/gnome/help/gnote/lt/gnote-links.page
+share/gnome/help/gnote/lt/gnote-notes-preferences.page
+share/gnome/help/gnote/lt/gnote-searching-notes.page
+share/gnome/help/gnote/lt/gnote-template-notes.page
+share/gnome/help/gnote/lt/gnote-working-with-notebooks.page
+share/gnome/help/gnote/lt/index.page
+share/gnome/help/gnote/ru/figures/add-notebook-search.png
+share/gnome/help/gnote/ru/figures/add-to-notebook.png
+share/gnome/help/gnote/ru/figures/delete-notebook.png
+share/gnome/help/gnote/ru/figures/gnote-new-note.png
+share/gnome/help/gnote/ru/figures/gnote-pindown.png
+share/gnome/help/gnote/ru/figures/gnote-pinup.png
+share/gnome/help/gnote/ru/figures/gnote-preferences-add-ins.png
+share/gnome/help/gnote/ru/figures/gnote-preferences-editing.png
+share/gnome/help/gnote/ru/figures/gnote-preferences-hotkeys.png
+share/gnome/help/gnote/ru/figures/gnote-preferences-synchronization.png
+share/gnome/help/gnote/ru/figures/gnote-search-all-notes.png
+share/gnome/help/gnote/ru/figures/gnote-template-note.png
+share/gnome/help/gnote/ru/figures/gnote-tools.png
+share/gnome/help/gnote/ru/figures/new-notebook.png
+share/gnome/help/gnote/ru/figures/note-template.png
+share/gnome/help/gnote/ru/figures/notebook-icon.png
+share/gnome/help/gnote/ru/gnote-addin-bugzillalink.page
+share/gnome/help/gnote/ru/gnote-addin-fixedwidth.page
+share/gnome/help/gnote/ru/gnote-addin-html.page
+share/gnome/help/gnote/ru/gnote-addin-noteoftheday.page
+share/gnome/help/gnote/ru/gnote-addin-print.page
+share/gnome/help/gnote/ru/gnote-addin-replacetitle.page
+share/gnome/help/gnote/ru/gnote-addin-timestamp.page
+share/gnome/help/gnote/ru/gnote-addin-underline.page
+share/gnome/help/gnote/ru/gnote-addins-preferences.page
+share/gnome/help/gnote/ru/gnote-bulleted-lists.page
+share/gnome/help/gnote/ru/gnote-common-problems.page
+share/gnome/help/gnote/ru/gnote-creating-notes.page
+share/gnome/help/gnote/ru/gnote-deleting-notes.page
+share/gnome/help/gnote/ru/gnote-editing-notes.page
+share/gnome/help/gnote/ru/gnote-hotkeys.page
+share/gnome/help/gnote/ru/gnote-introduction.page
+share/gnome/help/gnote/ru/gnote-links.page
+share/gnome/help/gnote/ru/gnote-notes-preferences.page
+share/gnome/help/gnote/ru/gnote-searching-notes.page
+share/gnome/help/gnote/ru/gnote-template-notes.page
+share/gnome/help/gnote/ru/gnote-working-with-notebooks.page
+share/gnome/help/gnote/ru/index.page
+share/gnome/help/gnote/sl/figures/add-notebook-search.png
+share/gnome/help/gnote/sl/figures/add-to-notebook.png
+share/gnome/help/gnote/sl/figures/delete-notebook.png
+share/gnome/help/gnote/sl/figures/gnote-new-note.png
+share/gnome/help/gnote/sl/figures/gnote-pindown.png
+share/gnome/help/gnote/sl/figures/gnote-pinup.png
+share/gnome/help/gnote/sl/figures/gnote-preferences-add-ins.png
+share/gnome/help/gnote/sl/figures/gnote-preferences-editing.png
+share/gnome/help/gnote/sl/figures/gnote-preferences-hotkeys.png
+share/gnome/help/gnote/sl/figures/gnote-preferences-synchronization.png
+share/gnome/help/gnote/sl/figures/gnote-search-all-notes.png
+share/gnome/help/gnote/sl/figures/gnote-template-note.png
+share/gnome/help/gnote/sl/figures/gnote-tools.png
+share/gnome/help/gnote/sl/figures/new-notebook.png
+share/gnome/help/gnote/sl/figures/note-template.png
+share/gnome/help/gnote/sl/figures/notebook-icon.png
+share/gnome/help/gnote/sl/gnote-addin-bugzillalink.page
+share/gnome/help/gnote/sl/gnote-addin-fixedwidth.page
+share/gnome/help/gnote/sl/gnote-addin-html.page
+share/gnome/help/gnote/sl/gnote-addin-noteoftheday.page
+share/gnome/help/gnote/sl/gnote-addin-print.page
+share/gnome/help/gnote/sl/gnote-addin-replacetitle.page
+share/gnome/help/gnote/sl/gnote-addin-timestamp.page
+share/gnome/help/gnote/sl/gnote-addin-underline.page
+share/gnome/help/gnote/sl/gnote-addins-preferences.page
+share/gnome/help/gnote/sl/gnote-bulleted-lists.page
+share/gnome/help/gnote/sl/gnote-common-problems.page
+share/gnome/help/gnote/sl/gnote-creating-notes.page
+share/gnome/help/gnote/sl/gnote-deleting-notes.page
+share/gnome/help/gnote/sl/gnote-editing-notes.page
+share/gnome/help/gnote/sl/gnote-hotkeys.page
+share/gnome/help/gnote/sl/gnote-introduction.page
+share/gnome/help/gnote/sl/gnote-links.page
+share/gnome/help/gnote/sl/gnote-notes-preferences.page
+share/gnome/help/gnote/sl/gnote-searching-notes.page
+share/gnome/help/gnote/sl/gnote-template-notes.page
+share/gnome/help/gnote/sl/gnote-working-with-notebooks.page
+share/gnome/help/gnote/sl/index.page
+share/gnome/help/gnote/zh_CN/figures/add-notebook-search.png
+share/gnome/help/gnote/zh_CN/figures/add-to-notebook.png
+share/gnome/help/gnote/zh_CN/figures/delete-notebook.png
+share/gnome/help/gnote/zh_CN/figures/gnote-new-note.png
+share/gnome/help/gnote/zh_CN/figures/gnote-pindown.png
+share/gnome/help/gnote/zh_CN/figures/gnote-pinup.png
+share/gnome/help/gnote/zh_CN/figures/gnote-preferences-add-ins.png
+share/gnome/help/gnote/zh_CN/figures/gnote-preferences-editing.png
+share/gnome/help/gnote/zh_CN/figures/gnote-preferences-hotkeys.png
+share/gnome/help/gnote/zh_CN/figures/gnote-preferences-synchronization.png
+share/gnome/help/gnote/zh_CN/figures/gnote-search-all-notes.png
+share/gnome/help/gnote/zh_CN/figures/gnote-template-note.png
+share/gnome/help/gnote/zh_CN/figures/gnote-tools.png
+share/gnome/help/gnote/zh_CN/figures/new-notebook.png
+share/gnome/help/gnote/zh_CN/figures/note-template.png
+share/gnome/help/gnote/zh_CN/figures/notebook-icon.png
+share/gnome/help/gnote/zh_CN/gnote-addin-bugzillalink.page
+share/gnome/help/gnote/zh_CN/gnote-addin-fixedwidth.page
+share/gnome/help/gnote/zh_CN/gnote-addin-html.page
+share/gnome/help/gnote/zh_CN/gnote-addin-noteoftheday.page
+share/gnome/help/gnote/zh_CN/gnote-addin-print.page
+share/gnome/help/gnote/zh_CN/gnote-addin-replacetitle.page
+share/gnome/help/gnote/zh_CN/gnote-addin-timestamp.page
+share/gnome/help/gnote/zh_CN/gnote-addin-underline.page
+share/gnome/help/gnote/zh_CN/gnote-addins-preferences.page
+share/gnome/help/gnote/zh_CN/gnote-bulleted-lists.page
+share/gnome/help/gnote/zh_CN/gnote-common-problems.page
+share/gnome/help/gnote/zh_CN/gnote-creating-notes.page
+share/gnome/help/gnote/zh_CN/gnote-deleting-notes.page
+share/gnome/help/gnote/zh_CN/gnote-editing-notes.page
+share/gnome/help/gnote/zh_CN/gnote-hotkeys.page
+share/gnome/help/gnote/zh_CN/gnote-introduction.page
+share/gnome/help/gnote/zh_CN/gnote-links.page
+share/gnome/help/gnote/zh_CN/gnote-notes-preferences.page
+share/gnome/help/gnote/zh_CN/gnote-searching-notes.page
+share/gnome/help/gnote/zh_CN/gnote-template-notes.page
+share/gnome/help/gnote/zh_CN/gnote-working-with-notebooks.page
+share/gnome/help/gnote/zh_CN/index.page
+%%DATADIR%%/GNOME_GnoteApplet.xml
+%%DATADIR%%/UIManagerLayout.xml
+%%DATADIR%%/exporttohtml.xsl
+%%DATADIR%%/gnote-introspect.xml
+%%DATADIR%%/icons/hicolor/16x16/actions/note-new.png
+%%DATADIR%%/icons/hicolor/16x16/actions/notebook-new.png
+%%DATADIR%%/icons/hicolor/16x16/apps/bug.png
+%%DATADIR%%/icons/hicolor/16x16/places/note.png
+%%DATADIR%%/icons/hicolor/16x16/places/notebook.png
+%%DATADIR%%/icons/hicolor/16x16/status/pin-active.png
+%%DATADIR%%/icons/hicolor/16x16/status/pin-down.png
+%%DATADIR%%/icons/hicolor/16x16/status/pin-up.png
+%%DATADIR%%/icons/hicolor/22x22/actions/filter-note-all.png
+%%DATADIR%%/icons/hicolor/22x22/actions/filter-note-unfiled.png
+%%DATADIR%%/icons/hicolor/22x22/actions/note-new.png
+%%DATADIR%%/icons/hicolor/22x22/actions/notebook-new.png
+%%DATADIR%%/icons/hicolor/22x22/places/note.png
+%%DATADIR%%/icons/hicolor/22x22/places/notebook.png
+%%DATADIR%%/icons/hicolor/24x24/actions/filter-note-all.png
+%%DATADIR%%/icons/hicolor/24x24/actions/filter-note-unfiled.png
+%%DATADIR%%/icons/hicolor/24x24/actions/note-new.png
+%%DATADIR%%/icons/hicolor/24x24/actions/notebook-new.png
+%%DATADIR%%/icons/hicolor/24x24/places/note.png
+%%DATADIR%%/icons/hicolor/24x24/places/notebook.png
+%%DATADIR%%/icons/hicolor/48x48/actions/notebook-new.png
+%%DATADIR%%/icons/hicolor/scalable/actions/notebook-new.svg
+share/icons/hicolor/16x16/apps/gnote.png
+share/icons/hicolor/22x22/apps/gnote.png
+share/icons/hicolor/24x24/apps/gnote.png
+share/icons/hicolor/32x32/apps/gnote.png
+share/icons/hicolor/48x48/apps/gnote.png
+share/icons/hicolor/scalable/apps/gnote.svg
+share/locale/ar/LC_MESSAGES/gnote.mo
+share/locale/as/LC_MESSAGES/gnote.mo
+share/locale/bg/LC_MESSAGES/gnote.mo
+share/locale/bn_IN/LC_MESSAGES/gnote.mo
+share/locale/ca/LC_MESSAGES/gnote.mo
+share/locale/ca@valencia/LC_MESSAGES/gnote.mo
+share/locale/cs/LC_MESSAGES/gnote.mo
+share/locale/da/LC_MESSAGES/gnote.mo
+share/locale/de/LC_MESSAGES/gnote.mo
+share/locale/el/LC_MESSAGES/gnote.mo
+share/locale/en_GB/LC_MESSAGES/gnote.mo
+share/locale/eo/LC_MESSAGES/gnote.mo
+share/locale/es/LC_MESSAGES/gnote.mo
+share/locale/fr/LC_MESSAGES/gnote.mo
+share/locale/gl/LC_MESSAGES/gnote.mo
+share/locale/gu/LC_MESSAGES/gnote.mo
+share/locale/he/LC_MESSAGES/gnote.mo
+share/locale/hi/LC_MESSAGES/gnote.mo
+share/locale/hu/LC_MESSAGES/gnote.mo
+share/locale/id/LC_MESSAGES/gnote.mo
+share/locale/it/LC_MESSAGES/gnote.mo
+share/locale/ja/LC_MESSAGES/gnote.mo
+share/locale/kn/LC_MESSAGES/gnote.mo
+share/locale/ko/LC_MESSAGES/gnote.mo
+share/locale/lt/LC_MESSAGES/gnote.mo
+share/locale/lv/LC_MESSAGES/gnote.mo
+share/locale/ml/LC_MESSAGES/gnote.mo
+share/locale/mr/LC_MESSAGES/gnote.mo
+share/locale/nb/LC_MESSAGES/gnote.mo
+share/locale/or/LC_MESSAGES/gnote.mo
+share/locale/pa/LC_MESSAGES/gnote.mo
+share/locale/pl/LC_MESSAGES/gnote.mo
+share/locale/pt/LC_MESSAGES/gnote.mo
+share/locale/pt_BR/LC_MESSAGES/gnote.mo
+share/locale/ro/LC_MESSAGES/gnote.mo
+share/locale/ru/LC_MESSAGES/gnote.mo
+share/locale/sl/LC_MESSAGES/gnote.mo
+share/locale/sr/LC_MESSAGES/gnote.mo
+share/locale/sr@latin/LC_MESSAGES/gnote.mo
+share/locale/sv/LC_MESSAGES/gnote.mo
+share/locale/ta/LC_MESSAGES/gnote.mo
+share/locale/te/LC_MESSAGES/gnote.mo
+share/locale/th/LC_MESSAGES/gnote.mo
+share/locale/tr/LC_MESSAGES/gnote.mo
+share/locale/uk/LC_MESSAGES/gnote.mo
+share/locale/zh_CN/LC_MESSAGES/gnote.mo
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
+@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
+@dirrm %%DATADIR%%/icons/hicolor/scalable
+@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
+@dirrm %%DATADIR%%/icons/hicolor/48x48
+@dirrm %%DATADIR%%/icons/hicolor/24x24/places
+@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor/22x22/places
+@dirrm %%DATADIR%%/icons/hicolor/22x22/actions
+@dirrm %%DATADIR%%/icons/hicolor/22x22
+@dirrm %%DATADIR%%/icons/hicolor/16x16/status
+@dirrm %%DATADIR%%/icons/hicolor/16x16/places
+@dirrm %%DATADIR%%/icons/hicolor/16x16/apps
+@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
+@dirrm %%DATADIR%%/icons/hicolor/16x16
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
+@dirrm %%DATADIR%%
+@dirrm share/gnome/help/gnote/zh_CN/figures
+@dirrm share/gnome/help/gnote/zh_CN
+@dirrm share/gnome/help/gnote/sl/figures
+@dirrm share/gnome/help/gnote/sl
+@dirrm share/gnome/help/gnote/ru/figures
+@dirrm share/gnome/help/gnote/ru
+@dirrm share/gnome/help/gnote/lt/figures
+@dirrm share/gnome/help/gnote/lt
+@dirrm share/gnome/help/gnote/fr/figures
+@dirrm share/gnome/help/gnote/fr
+@dirrm share/gnome/help/gnote/es/figures
+@dirrm share/gnome/help/gnote/es
+@dirrm share/gnome/help/gnote/de/figures
+@dirrm share/gnome/help/gnote/de
+@dirrm share/gnome/help/gnote/da/figures
+@dirrm share/gnome/help/gnote/da
+@dirrm share/gnome/help/gnote/cs/figures
+@dirrm share/gnome/help/gnote/cs
+@dirrm share/gnome/help/gnote/C/figures
+@dirrm share/gnome/help/gnote/C
+@dirrm share/gnome/help/gnote
+%%PORTDOCS%%@dirrm %%DOCSDIR%%
+@dirrmtry share/applications
+@dirrmtry lib/gnote/addins/%%VERSION%%
+@dirrmtry lib/gnote/addins
+@dirrmtry lib/gnote
+@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
+@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
