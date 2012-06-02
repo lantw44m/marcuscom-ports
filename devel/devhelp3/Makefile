@@ -3,10 +3,10 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp3/Makefile,v 1.9 2011/06/11 19:51:13 mezz Exp $
+#   $MCom: ports/devel/devhelp3/Makefile,v 1.10 2011/10/15 16:19:16 kwm Exp $
 
 PORTNAME=	devhelp
-PORTVERSION=	3.2.0
+PORTVERSION=	3.4.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -29,8 +29,8 @@ GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GCONF_SCHEMAS=	devhelp.schemas
-CPPFLAGS=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
-LDFLAGS=	${PTHREAD_LIBS} -L${LOCALBASE}/lib
+CPPFLAGS+=	${PTHREAD_CFLAGS} -I${LOCALBASE}/include
+LDFLAGS+=	${PTHREAD_LIBS} -L${LOCALBASE}/lib
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|gedit-plugin||g' ${WRKSRC}/misc/Makefile.in
