@@ -1746,7 +1746,6 @@ share/icons/HighContrast/48x48/stock/gtk-select-color.png
 share/icons/HighContrast/48x48/stock/gtk-select-font.png
 share/icons/HighContrast/48x48/stock/gtk-undelete.png
 share/icons/HighContrast/48x48/stock/gtk-yes.png
-share/icons/HighContrast/icon-theme.cache
 share/icons/HighContrast/index.theme
 share/icons/HighContrast/scalable/actions-extra/bookmark-view.svg
 share/icons/HighContrast/scalable/actions-extra/history-view.svg
@@ -2162,7 +2161,6 @@ share/icons/HighContrastInverse/48x48/stock/zoom-fit-best.png
 share/icons/HighContrastInverse/48x48/stock/zoom-in.png
 share/icons/HighContrastInverse/48x48/stock/zoom-original.png
 share/icons/HighContrastInverse/48x48/stock/zoom-out.png
-share/icons/HighContrastInverse/icon-theme.cache
 share/icons/HighContrastInverse/index.theme
 share/icons/LowContrast/48x48/actions/system-lock-screen.png
 share/icons/LowContrast/48x48/apps/bluetooth.png
@@ -2271,7 +2269,6 @@ share/icons/LowContrast/48x48/stock/zoom-fit-best.png
 share/icons/LowContrast/48x48/stock/zoom-in.png
 share/icons/LowContrast/48x48/stock/zoom-original.png
 share/icons/LowContrast/48x48/stock/zoom-out.png
-share/icons/LowContrast/icon-theme.cache
 share/icons/LowContrast/index.theme
 share/locale/af/LC_MESSAGES/gnome-themes-standard.mo
 share/locale/an/LC_MESSAGES/gnome-themes-standard.mo
@@ -2398,23 +2395,86 @@ share/themes/LowContrast/index.theme
 @dirrm share/icons/LowContrast/48x48/apps
 @dirrm share/icons/LowContrast/48x48/actions
 @dirrm share/icons/LowContrast/48x48
-@dirrm share/icons/LowContrast
+@dirrmtry share/icons/LowContrast
 @dirrm share/icons/HighContrastInverse/48x48/stock
 @dirrm share/icons/HighContrastInverse/48x48
 @dirrmtry share/icons/HighContrastInverse
+@dirrm share/icons/HighContrast/scalable/status-extra
 @dirrm share/icons/HighContrast/scalable/status
+@dirrm share/icons/HighContrast/scalable/places-extra
 @dirrm share/icons/HighContrast/scalable/places
 @dirrm share/icons/HighContrast/scalable/mimetypes
 @dirrm share/icons/HighContrast/scalable/emotes
 @dirrm share/icons/HighContrast/scalable/emblems
 @dirrm share/icons/HighContrast/scalable/devices
 @dirrm share/icons/HighContrast/scalable/categories
+@dirrm share/icons/HighContrast/scalable/apps-extra
 @dirrm share/icons/HighContrast/scalable/apps
+@dirrm share/icons/HighContrast/scalable/actions-extra
 @dirrm share/icons/HighContrast/scalable/actions
 @dirrm share/icons/HighContrast/scalable
 @dirrm share/icons/HighContrast/48x48/stock
+@dirrm share/icons/HighContrast/48x48/status
+@dirrm share/icons/HighContrast/48x48/places
+@dirrm share/icons/HighContrast/48x48/mimetypes
+@dirrm share/icons/HighContrast/48x48/emotes
+@dirrm share/icons/HighContrast/48x48/emblems
+@dirrm share/icons/HighContrast/48x48/devices
+@dirrm share/icons/HighContrast/48x48/categories
+@dirrm share/icons/HighContrast/48x48/apps
 @dirrm share/icons/HighContrast/48x48/animations
+@dirrm share/icons/HighContrast/48x48/actions
 @dirrm share/icons/HighContrast/48x48
+@dirrm share/icons/HighContrast/32x32/status
+@dirrm share/icons/HighContrast/32x32/places
+@dirrm share/icons/HighContrast/32x32/mimetypes
+@dirrm share/icons/HighContrast/32x32/emotes
+@dirrm share/icons/HighContrast/32x32/emblems
+@dirrm share/icons/HighContrast/32x32/devices
+@dirrm share/icons/HighContrast/32x32/categories
+@dirrm share/icons/HighContrast/32x32/apps
+@dirrm share/icons/HighContrast/32x32/actions
+@dirrm share/icons/HighContrast/32x32
+@dirrm share/icons/HighContrast/256x256/status
+@dirrm share/icons/HighContrast/256x256/places
+@dirrm share/icons/HighContrast/256x256/mimetypes
+@dirrm share/icons/HighContrast/256x256/emotes
+@dirrm share/icons/HighContrast/256x256/emblems
+@dirrm share/icons/HighContrast/256x256/devices
+@dirrm share/icons/HighContrast/256x256/categories
+@dirrm share/icons/HighContrast/256x256/apps
+@dirrm share/icons/HighContrast/256x256/actions
+@dirrm share/icons/HighContrast/256x256
+@dirrm share/icons/HighContrast/24x24/status
+@dirrm share/icons/HighContrast/24x24/places
+@dirrm share/icons/HighContrast/24x24/mimetypes
+@dirrm share/icons/HighContrast/24x24/emotes
+@dirrm share/icons/HighContrast/24x24/emblems
+@dirrm share/icons/HighContrast/24x24/devices
+@dirrm share/icons/HighContrast/24x24/categories
+@dirrm share/icons/HighContrast/24x24/apps
+@dirrm share/icons/HighContrast/24x24/actions
+@dirrm share/icons/HighContrast/24x24
+@dirrm share/icons/HighContrast/22x22/status
+@dirrm share/icons/HighContrast/22x22/places
+@dirrm share/icons/HighContrast/22x22/mimetypes
+@dirrm share/icons/HighContrast/22x22/emotes
+@dirrm share/icons/HighContrast/22x22/emblems
+@dirrm share/icons/HighContrast/22x22/devices
+@dirrm share/icons/HighContrast/22x22/categories
+@dirrm share/icons/HighContrast/22x22/apps
+@dirrm share/icons/HighContrast/22x22/actions
+@dirrm share/icons/HighContrast/22x22
+@dirrm share/icons/HighContrast/16x16/status
+@dirrm share/icons/HighContrast/16x16/places
+@dirrm share/icons/HighContrast/16x16/mimetypes
+@dirrm share/icons/HighContrast/16x16/emotes
+@dirrm share/icons/HighContrast/16x16/emblems
+@dirrm share/icons/HighContrast/16x16/devices
+@dirrm share/icons/HighContrast/16x16/categories
+@dirrm share/icons/HighContrast/16x16/apps
+@dirrm share/icons/HighContrast/16x16/actions
+@dirrm share/icons/HighContrast/16x16
 @dirrmtry share/icons/HighContrast
 @dirrm share/icons/Adwaita/cursors
 @dirrm share/icons/Adwaita
