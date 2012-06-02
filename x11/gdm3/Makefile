@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.18 2012/01/26 13:14:13 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.19 2012/06/01 20:55:17 mezz Exp $
 #
 
 PORTNAME=	gdm
@@ -19,6 +19,7 @@ BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 		nss-config:${PORTSDIR}/security/nss \
     		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit \
+		dconf.0:${PORTSDIR}/devel/dconf \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		polkit-gtk-1.0:${PORTSDIR}/sysutils/polkit-gnome \
     		execinfo:${PORTSDIR}/devel/libexecinfo \
