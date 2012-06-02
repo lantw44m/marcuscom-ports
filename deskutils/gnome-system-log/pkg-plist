@@ -335,12 +335,16 @@ share/locale/zh_TW/LC_MESSAGES/gnome-system-log.mo
 @dirrm share/gnome/help/gnome-system-log/uk
 @dirrm share/gnome/help/gnome-system-log/sv/figures
 @dirrm share/gnome/help/gnome-system-log/sv
+@dirrm share/gnome/help/gnome-system-log/sl/figures
+@dirrm share/gnome/help/gnome-system-log/sl
 @dirrm share/gnome/help/gnome-system-log/ru/figures
 @dirrm share/gnome/help/gnome-system-log/ru
 @dirrm share/gnome/help/gnome-system-log/oc/figures
 @dirrm share/gnome/help/gnome-system-log/oc
 @dirrm share/gnome/help/gnome-system-log/ko/figures
 @dirrm share/gnome/help/gnome-system-log/ko
+@dirrm share/gnome/help/gnome-system-log/ja/figures
+@dirrm share/gnome/help/gnome-system-log/ja
 @dirrm share/gnome/help/gnome-system-log/it/figures
 @dirrm share/gnome/help/gnome-system-log/it
 @dirrm share/gnome/help/gnome-system-log/hu/figures
