@@ -76,8 +76,6 @@ lib/brasero3/plugins/libbrasero-vob.la
 lib/brasero3/plugins/libbrasero-vob.so
 lib/brasero3/plugins/libbrasero-wodim.la
 lib/brasero3/plugins/libbrasero-wodim.so
-lib/girepository-1.0/BraseroBurn-%%FULL_VERSION%%.typelib
-lib/girepository-1.0/BraseroMedia-%%FULL_VERSION%%.typelib
 lib/libbrasero-burn3.la
 lib/libbrasero-burn3.so
 lib/libbrasero-burn3.so.3
@@ -87,68 +85,11 @@ lib/libbrasero-media3.so.3
 lib/libbrasero-utils3.la
 lib/libbrasero-utils3.so
 lib/libbrasero-utils3.so.3
-%%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-brasero-extension.la
-%%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-brasero-extension.so
 libdata/pkgconfig/libbrasero-burn3.pc
 libdata/pkgconfig/libbrasero-media3.pc
 share/GConf/gsettings/brasero.convert
-share/applications/brasero.desktop
 %%NAUTILUS%%share/applications/brasero-nautilus.desktop
-share/doc/libbrasero-burn/annotation-glossary.html
-share/doc/libbrasero-burn/api-index-full.html
-share/doc/libbrasero-burn/ch01.html
-share/doc/libbrasero-burn/home.png
-share/doc/libbrasero-burn/index.html
-share/doc/libbrasero-burn/index.sgml
-share/doc/libbrasero-burn/left.png
-share/doc/libbrasero-burn/libbrasero-burn-BraseroBlankDialog.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroBurn.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroBurnDialog.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroBurnOptions.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroBurnSession.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroSessionCfg.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroSessionSpan.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroSumDialog.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroToolDialog.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroTrack.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackDisc.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackImage.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackImageCfg.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackStream.html
-share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackStreamCfg.html
-share/doc/libbrasero-burn/libbrasero-burn-brasero-burn-lib.html
-share/doc/libbrasero-burn/libbrasero-burn-brasero-enums.html
-share/doc/libbrasero-burn/libbrasero-burn-brasero-error.html
-share/doc/libbrasero-burn/libbrasero-burn-brasero-status.html
-share/doc/libbrasero-burn/libbrasero-burn-brasero-tags.html
-share/doc/libbrasero-burn/libbrasero-burn-brasero-track-data-cfg.html
-share/doc/libbrasero-burn/libbrasero-burn-brasero-track-data.html
-share/doc/libbrasero-burn/libbrasero-burn-brasero-track-type.html
-share/doc/libbrasero-burn/libbrasero-burn.devhelp2
-share/doc/libbrasero-burn/object-tree.html
-share/doc/libbrasero-burn/right.png
-share/doc/libbrasero-burn/style.css
-share/doc/libbrasero-burn/up.png
-share/doc/libbrasero-media/annotation-glossary.html
-share/doc/libbrasero-media/api-index-full.html
-share/doc/libbrasero-media/ch01.html
-share/doc/libbrasero-media/home.png
-share/doc/libbrasero-media/index.html
-share/doc/libbrasero-media/index.sgml
-share/doc/libbrasero-media/left.png
-share/doc/libbrasero-media/libbrasero-media-BraseroDriveSelection.html
-share/doc/libbrasero-media/libbrasero-media-BraseroMedium.html
-share/doc/libbrasero-media/libbrasero-media-BraseroMediumMonitor.html
-share/doc/libbrasero-media/libbrasero-media-BraseroMediumSelection.html
-share/doc/libbrasero-media/libbrasero-media-BraseroVolume.html
-share/doc/libbrasero-media/libbrasero-media-brasero-drive.html
-share/doc/libbrasero-media/libbrasero-media-brasero-media.html
-share/doc/libbrasero-media/libbrasero-media-brasero-units.html
-share/doc/libbrasero-media/libbrasero-media.devhelp2
-share/doc/libbrasero-media/object-tree.html
-share/doc/libbrasero-media/right.png
-share/doc/libbrasero-media/style.css
-share/doc/libbrasero-media/up.png
+share/applications/brasero.desktop
 %%DATADIR%%/icons/hicolor/16x16/actions/insert-pause.png
 %%DATADIR%%/icons/hicolor/16x16/actions/iso-image-burn.png
 %%DATADIR%%/icons/hicolor/16x16/actions/iso-image-new.png
@@ -304,8 +245,61 @@ share/doc/libbrasero-media/up.png
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-85.svg
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-90.svg
 %%DATADIR%%/icons/hicolor/scalable/status/brasero-disc-95.svg
-share/gir-1.0/BraseroBurn-%%FULL_VERSION%%.gir
-share/gir-1.0/BraseroMedia-%%FULL_VERSION%%.gir
+share/doc/libbrasero-burn/annotation-glossary.html
+share/doc/libbrasero-burn/api-index-full.html
+share/doc/libbrasero-burn/ch01.html
+share/doc/libbrasero-burn/home.png
+share/doc/libbrasero-burn/index.html
+share/doc/libbrasero-burn/index.sgml
+share/doc/libbrasero-burn/left.png
+share/doc/libbrasero-burn/libbrasero-burn-BraseroBlankDialog.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroBurn.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroBurnDialog.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroBurnOptions.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroBurnSession.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroSessionCfg.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroSessionSpan.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroSumDialog.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroToolDialog.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroTrack.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackDisc.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackImage.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackImageCfg.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackStream.html
+share/doc/libbrasero-burn/libbrasero-burn-BraseroTrackStreamCfg.html
+share/doc/libbrasero-burn/libbrasero-burn-brasero-burn-lib.html
+share/doc/libbrasero-burn/libbrasero-burn-brasero-enums.html
+share/doc/libbrasero-burn/libbrasero-burn-brasero-error.html
+share/doc/libbrasero-burn/libbrasero-burn-brasero-status.html
+share/doc/libbrasero-burn/libbrasero-burn-brasero-tags.html
+share/doc/libbrasero-burn/libbrasero-burn-brasero-track-data-cfg.html
+share/doc/libbrasero-burn/libbrasero-burn-brasero-track-data.html
+share/doc/libbrasero-burn/libbrasero-burn-brasero-track-type.html
+share/doc/libbrasero-burn/libbrasero-burn.devhelp2
+share/doc/libbrasero-burn/object-tree.html
+share/doc/libbrasero-burn/right.png
+share/doc/libbrasero-burn/style.css
+share/doc/libbrasero-burn/up.png
+share/doc/libbrasero-media/annotation-glossary.html
+share/doc/libbrasero-media/api-index-full.html
+share/doc/libbrasero-media/ch01.html
+share/doc/libbrasero-media/home.png
+share/doc/libbrasero-media/index.html
+share/doc/libbrasero-media/index.sgml
+share/doc/libbrasero-media/left.png
+share/doc/libbrasero-media/libbrasero-media-BraseroDriveSelection.html
+share/doc/libbrasero-media/libbrasero-media-BraseroMedium.html
+share/doc/libbrasero-media/libbrasero-media-BraseroMediumMonitor.html
+share/doc/libbrasero-media/libbrasero-media-BraseroMediumSelection.html
+share/doc/libbrasero-media/libbrasero-media-BraseroVolume.html
+share/doc/libbrasero-media/libbrasero-media-brasero-drive.html
+share/doc/libbrasero-media/libbrasero-media-brasero-media.html
+share/doc/libbrasero-media/libbrasero-media-brasero-units.html
+share/doc/libbrasero-media/libbrasero-media.devhelp2
+share/doc/libbrasero-media/object-tree.html
+share/doc/libbrasero-media/right.png
+share/doc/libbrasero-media/style.css
+share/doc/libbrasero-media/up.png
 share/gnome/help/brasero/C/create-cover.page
 share/gnome/help/brasero/C/figures/brasero-main-window.png
 share/gnome/help/brasero/C/index.page
@@ -315,10 +309,12 @@ share/gnome/help/brasero/C/prob-dvd.page
 share/gnome/help/brasero/C/project-audio.page
 share/gnome/help/brasero/C/project-data.page
 share/gnome/help/brasero/C/project-disc-copy.page
+share/gnome/help/brasero/C/project-image-burn.page
 share/gnome/help/brasero/C/project-save.page
 share/gnome/help/brasero/C/project-video.page
 share/gnome/help/brasero/C/split-track.page
 share/gnome/help/brasero/C/tools-blank.page
+share/gnome/help/brasero/C/tools-check-integrity.page
 share/gnome/help/brasero/bg/create-cover.page
 share/gnome/help/brasero/bg/figures/brasero-main-window.png
 share/gnome/help/brasero/bg/index.page
@@ -328,10 +324,12 @@ share/gnome/help/brasero/bg/prob-dvd.page
 share/gnome/help/brasero/bg/project-audio.page
 share/gnome/help/brasero/bg/project-data.page
 share/gnome/help/brasero/bg/project-disc-copy.page
+share/gnome/help/brasero/bg/project-image-burn.page
 share/gnome/help/brasero/bg/project-save.page
 share/gnome/help/brasero/bg/project-video.page
 share/gnome/help/brasero/bg/split-track.page
 share/gnome/help/brasero/bg/tools-blank.page
+share/gnome/help/brasero/bg/tools-check-integrity.page
 share/gnome/help/brasero/ca/create-cover.page
 share/gnome/help/brasero/ca/figures/brasero-main-window.png
 share/gnome/help/brasero/ca/index.page
@@ -341,10 +339,12 @@ share/gnome/help/brasero/ca/prob-dvd.page
 share/gnome/help/brasero/ca/project-audio.page
 share/gnome/help/brasero/ca/project-data.page
 share/gnome/help/brasero/ca/project-disc-copy.page
+share/gnome/help/brasero/ca/project-image-burn.page
 share/gnome/help/brasero/ca/project-save.page
 share/gnome/help/brasero/ca/project-video.page
 share/gnome/help/brasero/ca/split-track.page
 share/gnome/help/brasero/ca/tools-blank.page
+share/gnome/help/brasero/ca/tools-check-integrity.page
 share/gnome/help/brasero/cs/create-cover.page
 share/gnome/help/brasero/cs/figures/brasero-main-window.png
 share/gnome/help/brasero/cs/index.page
@@ -354,10 +354,12 @@ share/gnome/help/brasero/cs/prob-dvd.page
 share/gnome/help/brasero/cs/project-audio.page
 share/gnome/help/brasero/cs/project-data.page
 share/gnome/help/brasero/cs/project-disc-copy.page
+share/gnome/help/brasero/cs/project-image-burn.page
 share/gnome/help/brasero/cs/project-save.page
 share/gnome/help/brasero/cs/project-video.page
 share/gnome/help/brasero/cs/split-track.page
 share/gnome/help/brasero/cs/tools-blank.page
+share/gnome/help/brasero/cs/tools-check-integrity.page
 share/gnome/help/brasero/de/create-cover.page
 share/gnome/help/brasero/de/figures/brasero-main-window.png
 share/gnome/help/brasero/de/index.page
@@ -367,10 +369,12 @@ share/gnome/help/brasero/de/prob-dvd.page
 share/gnome/help/brasero/de/project-audio.page
 share/gnome/help/brasero/de/project-data.page
 share/gnome/help/brasero/de/project-disc-copy.page
+share/gnome/help/brasero/de/project-image-burn.page
 share/gnome/help/brasero/de/project-save.page
 share/gnome/help/brasero/de/project-video.page
 share/gnome/help/brasero/de/split-track.page
 share/gnome/help/brasero/de/tools-blank.page
+share/gnome/help/brasero/de/tools-check-integrity.page
 share/gnome/help/brasero/el/create-cover.page
 share/gnome/help/brasero/el/figures/brasero-main-window.png
 share/gnome/help/brasero/el/index.page
@@ -380,10 +384,12 @@ share/gnome/help/brasero/el/prob-dvd.page
 share/gnome/help/brasero/el/project-audio.page
 share/gnome/help/brasero/el/project-data.page
 share/gnome/help/brasero/el/project-disc-copy.page
+share/gnome/help/brasero/el/project-image-burn.page
 share/gnome/help/brasero/el/project-save.page
 share/gnome/help/brasero/el/project-video.page
 share/gnome/help/brasero/el/split-track.page
 share/gnome/help/brasero/el/tools-blank.page
+share/gnome/help/brasero/el/tools-check-integrity.page
 share/gnome/help/brasero/en_GB/create-cover.page
 share/gnome/help/brasero/en_GB/figures/brasero-main-window.png
 share/gnome/help/brasero/en_GB/index.page
@@ -393,10 +399,12 @@ share/gnome/help/brasero/en_GB/prob-dvd.page
 share/gnome/help/brasero/en_GB/project-audio.page
 share/gnome/help/brasero/en_GB/project-data.page
 share/gnome/help/brasero/en_GB/project-disc-copy.page
+share/gnome/help/brasero/en_GB/project-image-burn.page
 share/gnome/help/brasero/en_GB/project-save.page
 share/gnome/help/brasero/en_GB/project-video.page
 share/gnome/help/brasero/en_GB/split-track.page
 share/gnome/help/brasero/en_GB/tools-blank.page
+share/gnome/help/brasero/en_GB/tools-check-integrity.page
 share/gnome/help/brasero/es/create-cover.page
 share/gnome/help/brasero/es/figures/brasero-main-window.png
 share/gnome/help/brasero/es/index.page
@@ -406,10 +414,12 @@ share/gnome/help/brasero/es/prob-dvd.page
 share/gnome/help/brasero/es/project-audio.page
 share/gnome/help/brasero/es/project-data.page
 share/gnome/help/brasero/es/project-disc-copy.page
+share/gnome/help/brasero/es/project-image-burn.page
 share/gnome/help/brasero/es/project-save.page
 share/gnome/help/brasero/es/project-video.page
 share/gnome/help/brasero/es/split-track.page
 share/gnome/help/brasero/es/tools-blank.page
+share/gnome/help/brasero/es/tools-check-integrity.page
 share/gnome/help/brasero/eu/create-cover.page
 share/gnome/help/brasero/eu/figures/brasero-main-window.png
 share/gnome/help/brasero/eu/index.page
@@ -419,10 +429,12 @@ share/gnome/help/brasero/eu/prob-dvd.page
 share/gnome/help/brasero/eu/project-audio.page
 share/gnome/help/brasero/eu/project-data.page
 share/gnome/help/brasero/eu/project-disc-copy.page
+share/gnome/help/brasero/eu/project-image-burn.page
 share/gnome/help/brasero/eu/project-save.page
 share/gnome/help/brasero/eu/project-video.page
 share/gnome/help/brasero/eu/split-track.page
 share/gnome/help/brasero/eu/tools-blank.page
+share/gnome/help/brasero/eu/tools-check-integrity.page
 share/gnome/help/brasero/fi/create-cover.page
 share/gnome/help/brasero/fi/figures/brasero-main-window.png
 share/gnome/help/brasero/fi/index.page
@@ -432,10 +444,12 @@ share/gnome/help/brasero/fi/prob-dvd.page
 share/gnome/help/brasero/fi/project-audio.page
 share/gnome/help/brasero/fi/project-data.page
 share/gnome/help/brasero/fi/project-disc-copy.page
+share/gnome/help/brasero/fi/project-image-burn.page
 share/gnome/help/brasero/fi/project-save.page
 share/gnome/help/brasero/fi/project-video.page
 share/gnome/help/brasero/fi/split-track.page
 share/gnome/help/brasero/fi/tools-blank.page
+share/gnome/help/brasero/fi/tools-check-integrity.page
 share/gnome/help/brasero/fr/create-cover.page
 share/gnome/help/brasero/fr/figures/brasero-main-window.png
 share/gnome/help/brasero/fr/index.page
@@ -445,10 +459,12 @@ share/gnome/help/brasero/fr/prob-dvd.page
 share/gnome/help/brasero/fr/project-audio.page
 share/gnome/help/brasero/fr/project-data.page
 share/gnome/help/brasero/fr/project-disc-copy.page
+share/gnome/help/brasero/fr/project-image-burn.page
 share/gnome/help/brasero/fr/project-save.page
 share/gnome/help/brasero/fr/project-video.page
 share/gnome/help/brasero/fr/split-track.page
 share/gnome/help/brasero/fr/tools-blank.page
+share/gnome/help/brasero/fr/tools-check-integrity.page
 share/gnome/help/brasero/gl/create-cover.page
 share/gnome/help/brasero/gl/figures/brasero-main-window.png
 share/gnome/help/brasero/gl/index.page
@@ -458,10 +474,27 @@ share/gnome/help/brasero/gl/prob-dvd.page
 share/gnome/help/brasero/gl/project-audio.page
 share/gnome/help/brasero/gl/project-data.page
 share/gnome/help/brasero/gl/project-disc-copy.page
+share/gnome/help/brasero/gl/project-image-burn.page
 share/gnome/help/brasero/gl/project-save.page
 share/gnome/help/brasero/gl/project-video.page
 share/gnome/help/brasero/gl/split-track.page
 share/gnome/help/brasero/gl/tools-blank.page
+share/gnome/help/brasero/gl/tools-check-integrity.page
+share/gnome/help/brasero/hu/create-cover.page
+share/gnome/help/brasero/hu/figures/brasero-main-window.png
+share/gnome/help/brasero/hu/index.page
+share/gnome/help/brasero/hu/introduction.page
+share/gnome/help/brasero/hu/prob-cd.page
+share/gnome/help/brasero/hu/prob-dvd.page
+share/gnome/help/brasero/hu/project-audio.page
+share/gnome/help/brasero/hu/project-data.page
+share/gnome/help/brasero/hu/project-disc-copy.page
+share/gnome/help/brasero/hu/project-image-burn.page
+share/gnome/help/brasero/hu/project-save.page
+share/gnome/help/brasero/hu/project-video.page
+share/gnome/help/brasero/hu/split-track.page
+share/gnome/help/brasero/hu/tools-blank.page
+share/gnome/help/brasero/hu/tools-check-integrity.page
 share/gnome/help/brasero/it/create-cover.page
 share/gnome/help/brasero/it/figures/brasero-main-window.png
 share/gnome/help/brasero/it/index.page
@@ -471,10 +504,12 @@ share/gnome/help/brasero/it/prob-dvd.page
 share/gnome/help/brasero/it/project-audio.page
 share/gnome/help/brasero/it/project-data.page
 share/gnome/help/brasero/it/project-disc-copy.page
+share/gnome/help/brasero/it/project-image-burn.page
 share/gnome/help/brasero/it/project-save.page
 share/gnome/help/brasero/it/project-video.page
 share/gnome/help/brasero/it/split-track.page
 share/gnome/help/brasero/it/tools-blank.page
+share/gnome/help/brasero/it/tools-check-integrity.page
 share/gnome/help/brasero/ko/create-cover.page
 share/gnome/help/brasero/ko/figures/brasero-main-window.png
 share/gnome/help/brasero/ko/index.page
@@ -484,10 +519,27 @@ share/gnome/help/brasero/ko/prob-dvd.page
 share/gnome/help/brasero/ko/project-audio.page
 share/gnome/help/brasero/ko/project-data.page
 share/gnome/help/brasero/ko/project-disc-copy.page
+share/gnome/help/brasero/ko/project-image-burn.page
 share/gnome/help/brasero/ko/project-save.page
 share/gnome/help/brasero/ko/project-video.page
 share/gnome/help/brasero/ko/split-track.page
 share/gnome/help/brasero/ko/tools-blank.page
+share/gnome/help/brasero/ko/tools-check-integrity.page
+share/gnome/help/brasero/lv/create-cover.page
+share/gnome/help/brasero/lv/figures/brasero-main-window.png
+share/gnome/help/brasero/lv/index.page
+share/gnome/help/brasero/lv/introduction.page
+share/gnome/help/brasero/lv/prob-cd.page
+share/gnome/help/brasero/lv/prob-dvd.page
+share/gnome/help/brasero/lv/project-audio.page
+share/gnome/help/brasero/lv/project-data.page
+share/gnome/help/brasero/lv/project-disc-copy.page
+share/gnome/help/brasero/lv/project-image-burn.page
+share/gnome/help/brasero/lv/project-save.page
+share/gnome/help/brasero/lv/project-video.page
+share/gnome/help/brasero/lv/split-track.page
+share/gnome/help/brasero/lv/tools-blank.page
+share/gnome/help/brasero/lv/tools-check-integrity.page
 share/gnome/help/brasero/pl/create-cover.page
 share/gnome/help/brasero/pl/figures/brasero-main-window.png
 share/gnome/help/brasero/pl/index.page
@@ -497,10 +549,12 @@ share/gnome/help/brasero/pl/prob-dvd.page
 share/gnome/help/brasero/pl/project-audio.page
 share/gnome/help/brasero/pl/project-data.page
 share/gnome/help/brasero/pl/project-disc-copy.page
+share/gnome/help/brasero/pl/project-image-burn.page
 share/gnome/help/brasero/pl/project-save.page
 share/gnome/help/brasero/pl/project-video.page
 share/gnome/help/brasero/pl/split-track.page
 share/gnome/help/brasero/pl/tools-blank.page
+share/gnome/help/brasero/pl/tools-check-integrity.page
 share/gnome/help/brasero/ro/create-cover.page
 share/gnome/help/brasero/ro/figures/brasero-main-window.png
 share/gnome/help/brasero/ro/index.page
@@ -510,10 +564,12 @@ share/gnome/help/brasero/ro/prob-dvd.page
 share/gnome/help/brasero/ro/project-audio.page
 share/gnome/help/brasero/ro/project-data.page
 share/gnome/help/brasero/ro/project-disc-copy.page
+share/gnome/help/brasero/ro/project-image-burn.page
 share/gnome/help/brasero/ro/project-save.page
 share/gnome/help/brasero/ro/project-video.page
 share/gnome/help/brasero/ro/split-track.page
 share/gnome/help/brasero/ro/tools-blank.page
+share/gnome/help/brasero/ro/tools-check-integrity.page
 share/gnome/help/brasero/ru/create-cover.page
 share/gnome/help/brasero/ru/figures/brasero-main-window.png
 share/gnome/help/brasero/ru/index.page
@@ -523,10 +579,12 @@ share/gnome/help/brasero/ru/prob-dvd.page
 share/gnome/help/brasero/ru/project-audio.page
 share/gnome/help/brasero/ru/project-data.page
 share/gnome/help/brasero/ru/project-disc-copy.page
+share/gnome/help/brasero/ru/project-image-burn.page
 share/gnome/help/brasero/ru/project-save.page
 share/gnome/help/brasero/ru/project-video.page
 share/gnome/help/brasero/ru/split-track.page
 share/gnome/help/brasero/ru/tools-blank.page
+share/gnome/help/brasero/ru/tools-check-integrity.page
 share/gnome/help/brasero/sl/create-cover.page
 share/gnome/help/brasero/sl/figures/brasero-main-window.png
 share/gnome/help/brasero/sl/index.page
@@ -536,10 +594,12 @@ share/gnome/help/brasero/sl/prob-dvd.page
 share/gnome/help/brasero/sl/project-audio.page
 share/gnome/help/brasero/sl/project-data.page
 share/gnome/help/brasero/sl/project-disc-copy.page
+share/gnome/help/brasero/sl/project-image-burn.page
 share/gnome/help/brasero/sl/project-save.page
 share/gnome/help/brasero/sl/project-video.page
 share/gnome/help/brasero/sl/split-track.page
 share/gnome/help/brasero/sl/tools-blank.page
+share/gnome/help/brasero/sl/tools-check-integrity.page
 share/gnome/help/brasero/sv/create-cover.page
 share/gnome/help/brasero/sv/figures/brasero-main-window.png
 share/gnome/help/brasero/sv/index.page
@@ -549,10 +609,27 @@ share/gnome/help/brasero/sv/prob-dvd.page
 share/gnome/help/brasero/sv/project-audio.page
 share/gnome/help/brasero/sv/project-data.page
 share/gnome/help/brasero/sv/project-disc-copy.page
+share/gnome/help/brasero/sv/project-image-burn.page
 share/gnome/help/brasero/sv/project-save.page
 share/gnome/help/brasero/sv/project-video.page
 share/gnome/help/brasero/sv/split-track.page
 share/gnome/help/brasero/sv/tools-blank.page
+share/gnome/help/brasero/sv/tools-check-integrity.page
+share/gnome/help/brasero/te/create-cover.page
+share/gnome/help/brasero/te/figures/brasero-main-window.png
+share/gnome/help/brasero/te/index.page
+share/gnome/help/brasero/te/introduction.page
+share/gnome/help/brasero/te/prob-cd.page
+share/gnome/help/brasero/te/prob-dvd.page
+share/gnome/help/brasero/te/project-audio.page
+share/gnome/help/brasero/te/project-data.page
+share/gnome/help/brasero/te/project-disc-copy.page
+share/gnome/help/brasero/te/project-image-burn.page
+share/gnome/help/brasero/te/project-save.page
+share/gnome/help/brasero/te/project-video.page
+share/gnome/help/brasero/te/split-track.page
+share/gnome/help/brasero/te/tools-blank.page
+share/gnome/help/brasero/te/tools-check-integrity.page
 share/gnome/help/brasero/zh_CN/create-cover.page
 share/gnome/help/brasero/zh_CN/figures/brasero-main-window.png
 share/gnome/help/brasero/zh_CN/index.page
@@ -562,10 +639,12 @@ share/gnome/help/brasero/zh_CN/prob-dvd.page
 share/gnome/help/brasero/zh_CN/project-audio.page
 share/gnome/help/brasero/zh_CN/project-data.page
 share/gnome/help/brasero/zh_CN/project-disc-copy.page
+share/gnome/help/brasero/zh_CN/project-image-burn.page
 share/gnome/help/brasero/zh_CN/project-save.page
 share/gnome/help/brasero/zh_CN/project-video.page
 share/gnome/help/brasero/zh_CN/split-track.page
 share/gnome/help/brasero/zh_CN/tools-blank.page
+share/gnome/help/brasero/zh_CN/tools-check-integrity.page
 share/gnome/help/brasero/zh_HK/create-cover.page
 share/gnome/help/brasero/zh_HK/figures/brasero-main-window.png
 share/gnome/help/brasero/zh_HK/index.page
@@ -575,10 +654,12 @@ share/gnome/help/brasero/zh_HK/prob-dvd.page
 share/gnome/help/brasero/zh_HK/project-audio.page
 share/gnome/help/brasero/zh_HK/project-data.page
 share/gnome/help/brasero/zh_HK/project-disc-copy.page
+share/gnome/help/brasero/zh_HK/project-image-burn.page
 share/gnome/help/brasero/zh_HK/project-save.page
 share/gnome/help/brasero/zh_HK/project-video.page
 share/gnome/help/brasero/zh_HK/split-track.page
 share/gnome/help/brasero/zh_HK/tools-blank.page
+share/gnome/help/brasero/zh_HK/tools-check-integrity.page
 share/gnome/help/brasero/zh_TW/create-cover.page
 share/gnome/help/brasero/zh_TW/figures/brasero-main-window.png
 share/gnome/help/brasero/zh_TW/index.page
@@ -588,10 +669,12 @@ share/gnome/help/brasero/zh_TW/prob-dvd.page
 share/gnome/help/brasero/zh_TW/project-audio.page
 share/gnome/help/brasero/zh_TW/project-data.page
 share/gnome/help/brasero/zh_TW/project-disc-copy.page
+share/gnome/help/brasero/zh_TW/project-image-burn.page
 share/gnome/help/brasero/zh_TW/project-save.page
 share/gnome/help/brasero/zh_TW/project-video.page
 share/gnome/help/brasero/zh_TW/split-track.page
 share/gnome/help/brasero/zh_TW/tools-blank.page
+share/gnome/help/brasero/zh_TW/tools-check-integrity.page
 share/icons/hicolor/16x16/apps/brasero.png
 share/icons/hicolor/22x22/apps/brasero.png
 share/icons/hicolor/24x24/apps/brasero.png
@@ -614,8 +697,9 @@ share/locale/da/LC_MESSAGES/brasero.mo
 share/locale/de/LC_MESSAGES/brasero.mo
 share/locale/dz/LC_MESSAGES/brasero.mo
 share/locale/el/LC_MESSAGES/brasero.mo
-share/locale/en_GB/LC_MESSAGES/brasero.mo
 share/locale/en@shaw/LC_MESSAGES/brasero.mo
+share/locale/en_CA/LC_MESSAGES/brasero.mo
+share/locale/en_GB/LC_MESSAGES/brasero.mo
 share/locale/eo/LC_MESSAGES/brasero.mo
 share/locale/es/LC_MESSAGES/brasero.mo
 share/locale/et/LC_MESSAGES/brasero.mo
@@ -633,6 +717,7 @@ share/locale/id/LC_MESSAGES/brasero.mo
 share/locale/it/LC_MESSAGES/brasero.mo
 share/locale/ja/LC_MESSAGES/brasero.mo
 share/locale/kk/LC_MESSAGES/brasero.mo
+share/locale/km/LC_MESSAGES/brasero.mo
 share/locale/kn/LC_MESSAGES/brasero.mo
 share/locale/ko/LC_MESSAGES/brasero.mo
 share/locale/ku/LC_MESSAGES/brasero.mo
@@ -643,6 +728,7 @@ share/locale/mk/LC_MESSAGES/brasero.mo
 share/locale/ml/LC_MESSAGES/brasero.mo
 share/locale/mr/LC_MESSAGES/brasero.mo
 share/locale/ms/LC_MESSAGES/brasero.mo
+share/locale/my/LC_MESSAGES/brasero.mo
 share/locale/nb/LC_MESSAGES/brasero.mo
 share/locale/nds/LC_MESSAGES/brasero.mo
 share/locale/nl/LC_MESSAGES/brasero.mo
@@ -671,12 +757,50 @@ share/locale/zh_CN/LC_MESSAGES/brasero.mo
 share/locale/zh_HK/LC_MESSAGES/brasero.mo
 share/locale/zh_TW/LC_MESSAGES/brasero.mo
 share/mime/packages/brasero.xml
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/nds/LC_MESSAGES
+@dirrmtry share/locale/nds
+@dirrmtry share/locale/my/LC_MESSAGES
+@dirrmtry share/locale/my
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
+@dirrmtry share/locale/ku/LC_MESSAGES
+@dirrmtry share/locale/ku
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
+@dirrmtry share/locale/kk/LC_MESSAGES
+@dirrmtry share/locale/kk
+@dirrmtry share/locale/en@shaw/LC_MESSAGES
+@dirrmtry share/locale/en@shaw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrm share/gnome/help/brasero/zh_TW/figures
 @dirrm share/gnome/help/brasero/zh_TW
 @dirrm share/gnome/help/brasero/zh_HK/figures
 @dirrm share/gnome/help/brasero/zh_HK
 @dirrm share/gnome/help/brasero/zh_CN/figures
 @dirrm share/gnome/help/brasero/zh_CN
+@dirrm share/gnome/help/brasero/te/figures
+@dirrm share/gnome/help/brasero/te
 @dirrm share/gnome/help/brasero/sv/figures
 @dirrm share/gnome/help/brasero/sv
 @dirrm share/gnome/help/brasero/sl/figures
@@ -687,10 +811,14 @@ share/mime/packages/brasero.xml
 @dirrm share/gnome/help/brasero/ro
 @dirrm share/gnome/help/brasero/pl/figures
 @dirrm share/gnome/help/brasero/pl
+@dirrm share/gnome/help/brasero/lv/figures
+@dirrm share/gnome/help/brasero/lv
 @dirrm share/gnome/help/brasero/ko/figures
 @dirrm share/gnome/help/brasero/ko
 @dirrm share/gnome/help/brasero/it/figures
 @dirrm share/gnome/help/brasero/it
+@dirrm share/gnome/help/brasero/hu/figures
+@dirrm share/gnome/help/brasero/hu
 @dirrm share/gnome/help/brasero/gl/figures
 @dirrm share/gnome/help/brasero/gl
 @dirrm share/gnome/help/brasero/fr/figures
@@ -716,28 +844,28 @@ share/mime/packages/brasero.xml
 @dirrm share/gnome/help/brasero/C/figures
 @dirrm share/gnome/help/brasero/C
 @dirrm share/gnome/help/brasero
-@dirrm %%DATADIR%%/icons/hicolor/16x16/status
-@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
-@dirrm %%DATADIR%%/icons/hicolor/16x16
-@dirrm %%DATADIR%%/icons/hicolor/22x22/status
-@dirrm %%DATADIR%%/icons/hicolor/22x22/actions
-@dirrm %%DATADIR%%/icons/hicolor/22x22
-@dirrm %%DATADIR%%/icons/hicolor/24x24/status
-@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
-@dirrm %%DATADIR%%/icons/hicolor/24x24
-@dirrm %%DATADIR%%/icons/hicolor/32x32/status
-@dirrm %%DATADIR%%/icons/hicolor/32x32/actions
-@dirrm %%DATADIR%%/icons/hicolor/32x32
-@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
-@dirrm %%DATADIR%%/icons/hicolor/48x48
+@dirrm share/doc/libbrasero-media
+@dirrm share/doc/libbrasero-burn
 @dirrm %%DATADIR%%/icons/hicolor/scalable/status
 @dirrm %%DATADIR%%/icons/hicolor/scalable/actions
 @dirrm %%DATADIR%%/icons/hicolor/scalable
+@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
+@dirrm %%DATADIR%%/icons/hicolor/48x48
+@dirrm %%DATADIR%%/icons/hicolor/32x32/status
+@dirrm %%DATADIR%%/icons/hicolor/32x32/actions
+@dirrm %%DATADIR%%/icons/hicolor/32x32
+@dirrm %%DATADIR%%/icons/hicolor/24x24/status
+@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor/22x22/status
+@dirrm %%DATADIR%%/icons/hicolor/22x22/actions
+@dirrm %%DATADIR%%/icons/hicolor/22x22
+@dirrm %%DATADIR%%/icons/hicolor/16x16/status
+@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
+@dirrm %%DATADIR%%/icons/hicolor/16x16
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%
-@dirrm share/doc/libbrasero-media
-@dirrm share/doc/libbrasero-burn
 @dirrmtry share/applications
 @dirrm lib/brasero3/plugins
 @dirrm lib/brasero3
@@ -746,33 +874,3 @@ share/mime/packages/brasero.xml
 @unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
 @exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/te/LC_MESSAGES
-@dirrmtry share/locale/te
-@dirrmtry share/locale/sr@latin/LC_MESSAGES
-@dirrmtry share/locale/sr@latin
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/nds/LC_MESSAGES
-@dirrmtry share/locale/nds
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
-@dirrmtry share/locale/mai/LC_MESSAGES
-@dirrmtry share/locale/mai
-@dirrmtry share/locale/ku/LC_MESSAGES
-@dirrmtry share/locale/ku
-@dirrmtry share/locale/kk/LC_MESSAGES
-@dirrmtry share/locale/kk
-@dirrmtry share/locale/en@shaw/LC_MESSAGES
-@dirrmtry share/locale/en@shaw
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
-@dirrmtry share/locale/ca@valencia/LC_MESSAGES
-@dirrmtry share/locale/ca@valencia
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
-@dirrmtry share/locale/ast/LC_MESSAGES
-@dirrmtry share/locale/ast
-@dirrmtry share/locale/as/LC_MESSAGES
-@dirrmtry share/locale/as
