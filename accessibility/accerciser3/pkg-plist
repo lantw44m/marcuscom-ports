@@ -469,6 +469,33 @@ share/gnome/help/accerciser/oc/ipython_plugin.page
 share/gnome/help/accerciser/oc/preferences.page
 share/gnome/help/accerciser/oc/quick_select_plugin.page
 share/gnome/help/accerciser/oc/validator_plugin.page
+share/gnome/help/accerciser/pl/api_browser_plugin.page
+share/gnome/help/accerciser/pl/desktop_tree_view.page
+share/gnome/help/accerciser/pl/event_monitor_plugin.page
+share/gnome/help/accerciser/pl/figures/IPython_plugin.png
+share/gnome/help/accerciser/pl/figures/accerciser-logo.png
+share/gnome/help/accerciser/pl/figures/accerciser-view.png
+share/gnome/help/accerciser/pl/figures/accerciser_preferences.png
+share/gnome/help/accerciser/pl/figures/accessible_tree.png
+share/gnome/help/accerciser/pl/figures/api_browser.png
+share/gnome/help/accerciser/pl/figures/event_monitor.png
+share/gnome/help/accerciser/pl/figures/event_monitor_plugin.png
+share/gnome/help/accerciser/pl/figures/global-hotkeys.png
+share/gnome/help/accerciser/pl/figures/highlighting.png
+share/gnome/help/accerciser/pl/figures/interface_viewer_plugin.png
+share/gnome/help/accerciser/pl/figures/plugins.png
+share/gnome/help/accerciser/pl/figures/tree_view_accerciser.png
+share/gnome/help/accerciser/pl/figures/validator_app_tree.png
+share/gnome/help/accerciser/pl/figures/validator_report.png
+share/gnome/help/accerciser/pl/howto_setting_up_accerciser.page
+share/gnome/help/accerciser/pl/howto_write_a_plugin.page
+share/gnome/help/accerciser/pl/index.page
+share/gnome/help/accerciser/pl/interface_viewer_plugin.page
+share/gnome/help/accerciser/pl/introduction.page
+share/gnome/help/accerciser/pl/ipython_plugin.page
+share/gnome/help/accerciser/pl/preferences.page
+share/gnome/help/accerciser/pl/quick_select_plugin.page
+share/gnome/help/accerciser/pl/validator_plugin.page
 share/gnome/help/accerciser/pt_BR/api_browser_plugin.page
 share/gnome/help/accerciser/pt_BR/desktop_tree_view.page
 share/gnome/help/accerciser/pt_BR/event_monitor_plugin.page
@@ -610,6 +637,7 @@ share/icons/hicolor/32x32/apps/accerciser.png
 share/icons/hicolor/48x48/apps/accerciser.png
 share/icons/hicolor/scalable/apps/accerciser.svg
 share/locale/ar/LC_MESSAGES/accerciser.mo
+share/locale/as/LC_MESSAGES/accerciser.mo
 share/locale/ast/LC_MESSAGES/accerciser.mo
 share/locale/be/LC_MESSAGES/accerciser.mo
 share/locale/bg/LC_MESSAGES/accerciser.mo
@@ -641,7 +669,9 @@ share/locale/hy/LC_MESSAGES/accerciser.mo
 share/locale/id/LC_MESSAGES/accerciser.mo
 share/locale/it/LC_MESSAGES/accerciser.mo
 share/locale/ja/LC_MESSAGES/accerciser.mo
+share/locale/km/LC_MESSAGES/accerciser.mo
 share/locale/kn/LC_MESSAGES/accerciser.mo
+share/locale/ko/LC_MESSAGES/accerciser.mo
 share/locale/lt/LC_MESSAGES/accerciser.mo
 share/locale/lv/LC_MESSAGES/accerciser.mo
 share/locale/mai/LC_MESSAGES/accerciser.mo
@@ -674,6 +704,38 @@ share/locale/vi/LC_MESSAGES/accerciser.mo
 share/locale/zh_CN/LC_MESSAGES/accerciser.mo
 share/locale/zh_HK/LC_MESSAGES/accerciser.mo
 share/locale/zh_TW/LC_MESSAGES/accerciser.mo
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
+@dirrmtry share/locale/hy/LC_MESSAGES
+@dirrmtry share/locale/hy
+@dirrmtry share/locale/en@shaw/LC_MESSAGES
+@dirrmtry share/locale/en@shaw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrm share/gnome/help/accerciser/zh_CN/figures
 @dirrm share/gnome/help/accerciser/zh_CN
 @dirrm share/gnome/help/accerciser/uk/figures
@@ -684,6 +746,8 @@ share/locale/zh_TW/LC_MESSAGES/accerciser.mo
 @dirrm share/gnome/help/accerciser/sl
 @dirrm share/gnome/help/accerciser/pt_BR/figures
 @dirrm share/gnome/help/accerciser/pt_BR
+@dirrm share/gnome/help/accerciser/pl/figures
+@dirrm share/gnome/help/accerciser/pl
 @dirrm share/gnome/help/accerciser/oc/figures
 @dirrm share/gnome/help/accerciser/oc
 @dirrm share/gnome/help/accerciser/ja/figures
@@ -696,10 +760,10 @@ share/locale/zh_TW/LC_MESSAGES/accerciser.mo
 @dirrm share/gnome/help/accerciser/fr
 @dirrm share/gnome/help/accerciser/es/figures
 @dirrm share/gnome/help/accerciser/es
-@dirrm share/gnome/help/accerciser/el/figures
-@dirrm share/gnome/help/accerciser/el
 @dirrm share/gnome/help/accerciser/en_GB/figures
 @dirrm share/gnome/help/accerciser/en_GB
+@dirrm share/gnome/help/accerciser/el/figures
+@dirrm share/gnome/help/accerciser/el
 @dirrm share/gnome/help/accerciser/de/figures
 @dirrm share/gnome/help/accerciser/de
 @dirrm share/gnome/help/accerciser/cs/figures
@@ -719,27 +783,3 @@ share/locale/zh_TW/LC_MESSAGES/accerciser.mo
 @dirrm %%DATADIR%%
 @dirrm %%PYTHON_SITELIBDIR%%/accerciser/plugin
 @dirrm %%PYTHON_SITELIBDIR%%/accerciser
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/ug/LC_MESSAGES
-@dirrmtry share/locale/ug
-@dirrmtry share/locale/te/LC_MESSAGES
-@dirrmtry share/locale/te
-@dirrmtry share/locale/si/LC_MESSAGES
-@dirrmtry share/locale/si
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/mai/LC_MESSAGES
-@dirrmtry share/locale/mai
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
-@dirrmtry share/locale/hy/LC_MESSAGES
-@dirrmtry share/locale/hy
-@dirrmtry share/locale/en@shaw/LC_MESSAGES
-@dirrmtry share/locale/en@shaw
-@dirrmtry share/locale/dz/LC_MESSAGES
-@dirrmtry share/locale/dz
-@dirrmtry share/locale/ca@valencia/LC_MESSAGES
-@dirrmtry share/locale/ca@valencia
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
