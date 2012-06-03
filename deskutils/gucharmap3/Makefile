@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap3/Makefile,v 1.9 2011/10/17 13:08:52 kwm Exp $
+#   $MCom: ports/deskutils/gucharmap3/Makefile,v 1.10 2011/11/17 00:07:00 kwm Exp $
 #
 
 PORTNAME=	gucharmap
-PORTVERSION=	3.2.2
+PORTVERSION=	3.4.1.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,13 +21,13 @@ LATEST_LINK=	gucharmap3
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 gnomedocutils gconf2
+USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
-GCONF_SCHEMAS=	gucharmap.schemas
+GLIB_SCHEMAS=	org.gnome.Charmap.enums.xml org.gnome.Charmap.gschema.xml
 
 .include <bsd.port.mk>
