@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog-plugins3/Makefile,v 1.10 2011/10/20 17:26:42 kwm Exp $
+#   $MCom: ports/graphics/eog-plugins3/Makefile,v 1.11 2011/11/23 09:56:03 kwm Exp $
 #
 
 PORTNAME=	eog-plugins
-PORTVERSION=	3.2.2
+PORTVERSION=	3.4.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,11 +15,11 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plug-ins for the Eye of GNOME image viewer application
 
-BUILD_DEPENDS=	eog>=3.2.0:${PORTSDIR}/graphics/eog3
+BUILD_DEPENDS=	eog>=3.4.0:${PORTSDIR}/graphics/eog3
 LIB_DEPENDS=	gdata.13:${PORTSDIR}/devel/libgdata \
 		exif.12:${PORTSDIR}/graphics/libexif \
 		peas-1.0.0:${PORTSDIR}/devel/libpeas
-RUN_DEPENDS=	eog>=3.2.0:${PORTSDIR}/graphics/eog3
+RUN_DEPENDS=	eog>=3.4.0:${PORTSDIR}/graphics/eog3
 
 CONFLICTS=	eog-plugins-2.[0-9]*
 
@@ -49,6 +49,8 @@ PLIST_SUB+=	CHAMPLAIN="@comment "
 .if defined(WITH_PYTHON)
 CONFIGURE_ARGS+=--enable-python
 PLIST_SUB+=	PYTHON=""
+GLIB_SCHEMAS+=	org.gnome.eog.plugins.fullscreenbg.gschema.xml \
+		org.gnome.eog.plugins.pythonconsole.gschema.xml
 .else
 CONFIGURE_ARGS+=--disable-python
 PLIST_SUB+=	PYTHON="@comment "

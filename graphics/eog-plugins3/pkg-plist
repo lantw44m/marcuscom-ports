@@ -1,5 +1,9 @@
 lib/eog/plugins/exif-display.plugin
 lib/eog/plugins/fit-to-width.plugin
+lib/eog/plugins/fullscreenbg.plugin
+lib/eog/plugins/fullscreenbg.py
+lib/eog/plugins/fullscreenbg.pyc
+lib/eog/plugins/fullscreenbg.pyo
 lib/eog/plugins/libexif-display.la
 lib/eog/plugins/libexif-display.so
 lib/eog/plugins/libfit-to-width.la
@@ -19,6 +23,9 @@ lib/eog/plugins/pythonconsole.plugin
 lib/eog/plugins/pythonconsole/__init__.py
 lib/eog/plugins/pythonconsole/__init__.pyc
 lib/eog/plugins/pythonconsole/__init__.pyo
+lib/eog/plugins/pythonconsole/config.py
+lib/eog/plugins/pythonconsole/config.pyc
+lib/eog/plugins/pythonconsole/config.pyo
 lib/eog/plugins/pythonconsole/console.py
 lib/eog/plugins/pythonconsole/console.pyc
 lib/eog/plugins/pythonconsole/console.pyo
@@ -29,8 +36,10 @@ lib/eog/plugins/slideshowshuffle.pyc
 lib/eog/plugins/slideshowshuffle.pyo
 share/eog/plugins/exif-display/exif-display-config.ui
 share/eog/plugins/exif-display/exif-display.ui
+share/eog/plugins/fullscreenbg/preferences_dialog.ui
 share/eog/plugins/postasa/postasa-config.xml
 share/eog/plugins/postasa/postasa-uploads.xml
+share/eog/plugins/pythonconsole/config.ui
 share/locale/ar/LC_MESSAGES/eog-plugins.mo
 share/locale/as/LC_MESSAGES/eog-plugins.mo
 share/locale/be@latin/LC_MESSAGES/eog-plugins.mo
@@ -71,6 +80,8 @@ share/locale/ro/LC_MESSAGES/eog-plugins.mo
 share/locale/ru/LC_MESSAGES/eog-plugins.mo
 share/locale/sl/LC_MESSAGES/eog-plugins.mo
 share/locale/sq/LC_MESSAGES/eog-plugins.mo
+share/locale/sr/LC_MESSAGES/eog-plugins.mo
+share/locale/sr@latin/LC_MESSAGES/eog-plugins.mo
 share/locale/sv/LC_MESSAGES/eog-plugins.mo
 share/locale/ta/LC_MESSAGES/eog-plugins.mo
 share/locale/te/LC_MESSAGES/eog-plugins.mo
@@ -79,14 +90,12 @@ share/locale/vi/LC_MESSAGES/eog-plugins.mo
 share/locale/zh_CN/LC_MESSAGES/eog-plugins.mo
 share/locale/zh_HK/LC_MESSAGES/eog-plugins.mo
 share/locale/zh_TW/LC_MESSAGES/eog-plugins.mo
-@dirrm share/eog/plugins/postasa
-@dirrm share/eog/plugins/exif-display
-@dirrm share/eog/plugins
-@dirrm lib/eog/plugins/pythonconsole
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
@@ -97,3 +106,9 @@ share/locale/zh_TW/LC_MESSAGES/eog-plugins.mo
 @dirrmtry share/locale/be@latin
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrm share/eog/plugins/pythonconsole
+@dirrm share/eog/plugins/postasa
+@dirrm share/eog/plugins/fullscreenbg
+@dirrm share/eog/plugins/exif-display
+@dirrm share/eog/plugins
+@dirrm lib/eog/plugins/pythonconsole
