@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gtranslator/Makefile,v 1.19 2011/10/13 08:00:44 kwm Exp $
+#   $MCom: ports/devel/gtranslator/Makefile,v 1.20 2011/10/19 21:42:29 kwm Exp $
 #
 
 PORTNAME=	gtranslator
-PORTVERSION=	2.90.7
+PORTVERSION=	2.91.5
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 
@@ -19,15 +19,15 @@ LICENSE=	GPLv3
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	peas-1.0.0:${PORTSDIR}/devel/libpeas \
-		gdl-3.1:${PORTSDIR}/x11-toolkits/gdl3 \
-		json-glib-1.0.0:${PORTSDIR}/devel/json-glib
+LIB_DEPENDS=	peas-1.0:${PORTSDIR}/devel/libpeas \
+		gdl-3:${PORTSDIR}/x11-toolkits/gdl3 \
+		json-glib-1.0:${PORTSDIR}/devel/json-glib
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USE_XZ=		yes
 USE_GNOME=	gnomehack intlhack gnomeprefix gtk30 libgda4 \
-		gtksourceview3 libxml2 gnomedocutils
+		gtksourceview3 libxml2
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_PYTHON=	yes
@@ -35,23 +35,27 @@ INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-debug \
+		--with-gda=4.0 \
 		--enable-compile-warnings=no
 GLIB_SCHEMAS=	org.gnome.gtranslator.gschema.xml \
 		org.gnome.gtranslator.plugins.codeview.gschema.xml \
-		org.gnome.gtranslator.plugins.open-tran.gschema.xml
+		org.gnome.gtranslator.plugins.open-tran.gschema.xml \
+		org.gnome.gtranslator.plugins.translation-memory.gschema.xml
 MAN1=		gtranslator.1
 MANCOMPRESSED=	yes
 
-OPTIONS=	DICT	"Build dictionary plugin" on
+OPTIONS_DEFINE=	DICT
+OPTIONS_DEFAULT=DICT
+DICT_DESC=	Build dictionary plugin
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_DICT)
-BUILD_DEPENDS+=	gnome-utils>=3.0.0:${PORTSDIR}/deskutils/gnome-utils3
-LIB_DEPENDS+=	gdict-1.0.6:${PORTSDIR}/deskutils/gnome-utils3
+.if ${PORT_OPTIONS:MDICT}
+BUILD_DEPENDS+=	gnome-dictionary>=3.4.0:${PORTSDIR}/deskutils/gnome-dictionary
+LIB_DEPENDS+=	gdict-1.0:${PORTSDIR}/deskutils/gnome-dictionary
 GLIB_SCHEMAS+=	org.gnome.gtranslator.plugins.dictionary.gschema.xml
 CONFIGURE_ARGS+=--with-dictionary
 PLIST_SUB+=	DICT=""
