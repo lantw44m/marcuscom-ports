@@ -3,7 +3,7 @@ bin/gdmflexiserver
 etc/dbus-1/system.d/gdm.conf
 etc/dconf/db/gdm.d/00-upstream-settings
 etc/dconf/db/gdm.d/locks/00-upstream-settings-locks
-etc/dconf/gdm
+etc/dconf/db/gdm
 etc/dconf/profile/gdm
 etc/gdm/Init/Default
 etc/gdm/PostLogin/Default.sample
