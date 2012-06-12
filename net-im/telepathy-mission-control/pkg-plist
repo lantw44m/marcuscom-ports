@@ -44,4 +44,3 @@ share/doc/mission-control-plugins/up.png
 @dirrm share/doc/mission-control-plugins
 @dirrm include/mission-control-5.5/mission-control-plugins
 @dirrm include/mission-control-5.5
-@dirrmtry lib/mission-control-plugins.0
