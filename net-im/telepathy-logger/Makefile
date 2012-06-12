@@ -3,10 +3,10 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-logger/Makefile,v 1.10 2011/05/28 13:27:47 kwm Exp $
+#    $MCom: ports/net-im/telepathy-logger/Makefile,v 1.11 2011/11/22 11:14:44 kwm Exp $
 
 PORTNAME=	telepathy-logger
-PORTVERSION=	0.2.12
+PORTVERSION=	0.4.0
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -29,7 +29,6 @@ USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack pkgconfig glib20 intltool gnomedocutils ltverhack
 USE_PYTHON_BUILD=	yes
-#MAKE_JOBS_UNSAFE=	yes
 GLIB_SCHEMAS=	org.freedesktop.Telepathy.Logger.gschema.xml
 
 post-patch:
