@@ -3,10 +3,10 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.18 2011/11/22 11:06:05 kwm Exp $
+#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.19 2012/02/27 23:21:02 kwm Exp $
 
 PORTNAME=	telepathy-gabble
-PORTVERSION=	0.14.1
+PORTVERSION=	0.16.0
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -14,7 +14,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Jabber Connection Manager for Telepathy Framework
 
 BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt \
-		telepathy-glib>=0.14.5:${PORTSDIR}/net-im/telepathy-glib \
+		telepathy-glib>=0.18.0:${PORTSDIR}/net-im/telepathy-glib \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		nice.10:${PORTSDIR}/net-im/libnice \
