@@ -1,3 +1,10 @@
+lib/telepathy/salut-0/lib/libsalut-plugins-0.8.0.so
+lib/telepathy/salut-0/lib/libsalut-plugins.la
+lib/telepathy/salut-0/lib/libsalut-plugins.so
+lib/telepathy/salut-0/lib/libwocky-telepathy-salut-0.8.0.so
+lib/telepathy/salut-0/lib/libwocky.a
+lib/telepathy/salut-0/lib/libwocky.la
+lib/telepathy/salut-0/lib/libwocky.so
 libexec/telepathy-salut
 share/dbus-1/services/org.freedesktop.Telepathy.ConnectionManager.salut.service
 %%DOCSDIR%%/clique.html
@@ -5,5 +12,7 @@ share/telepathy/managers/salut.manager
 @dirrmtry share/telepathy/managers
 @dirrmtry share/telepathy
 @dirrm %%DOCSDIR%%
-@dirrm lib/telepathy/salut-0
+@dirrmtry lib/telepathy/salut-0/plugins
+@dirrmtry lib/telepathy/salut-0/lib
+@dirrmtry lib/telepathy/salut-0
 @dirrmtry lib/telepathy

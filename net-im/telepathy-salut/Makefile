@@ -3,12 +3,11 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/telepathy-salut/Makefile,v 1.6 2011/11/22 11:21:40 kwm Exp $
+#   $MCom: ports/net-im/telepathy-salut/Makefile,v 1.7 2012/04/20 21:04:15 kwm Exp $
 #
 
 PORTNAME=	telepathy-salut
-PORTVERSION=	0.6.0
-PORTREVISION=	1
+PORTVERSION=	0.8.0
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -27,7 +26,7 @@ USE_OPENSSL=	yes
 USE_PYTHON_BUILD=	yes
 USE_SQLITE=	3
 CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
-CONFIGURE_ARGS=	--disable-Werror
+CONFIGURE_ARGS=	--disable-Werror --enable-avahi-tests=no
 CPPFLAGS+=	${PTHREAD_CFLAGS}
 
 MAN8=		telepathy-salut.8
