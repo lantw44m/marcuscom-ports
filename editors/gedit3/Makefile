@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit3/Makefile,v 1.30 2012/01/05 20:12:52 kwm Exp $
+#   $MCom: ports/editors/gedit3/Makefile,v 1.31 2012/06/06 22:53:17 kwm Exp $
 #
 
 PORTNAME=	gedit
@@ -16,7 +16,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A small but powerful text editor for GNOME 3 Desktop Environment
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
+		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas \
+		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		peas-gtk-1.0.0:${PORTSDIR}/devel/libpeas \
 		soup-2.4.1:${PORTSDIR}/devel/libsoup
