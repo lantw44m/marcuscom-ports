@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero3/Makefile,v 1.14 2011/10/13 11:26:33 kwm Exp $
+#    $MCom: ports/sysutils/brasero3/Makefile,v 1.15 2012/06/03 02:41:18 mezz Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	3.4.1
@@ -42,14 +42,16 @@ LDFLAGS=	-L${LOCALBASE}/lib
 MAN1=		brasero.1
 GLIB_SCHEMAS=	org.gnome.brasero.gschema.xml
 
-OPTIONS=	NAUTILUS "Enable Nautilus extension" on \
-		LIBBURNIA "Enable libburnia plug-ins" off
+OPTIONS_DEFINE=	NAUTILUS LIBBURNIA
+OPTIONS_DEFAULT=NAUTILUS
+NAUTILUS_DESC=	Build nautilus extension
+LIBBURNIA_DESC=	Build libburnia plug-ins
 
 PLIST_SUB=	FULL_VERSION=${PORTVERSION}
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_NAUTILUS)
+.if ${PORT_OPTIONS:MNAUTILUS}
 USE_GNOME+=	nautilus3
 CONFIGURE_ARGS+=--enable-nautilus
 PLIST_SUB+=	NAUTILUS=""
@@ -58,7 +60,7 @@ PLIST_SUB+=	NAUTILUS="@comment "
 CONFIGURE_ARGS+=--enable-nautilus=no
 .endif
 
-.if defined(WITH_LIBBURNIA)
+.if ${PORT_OPTIONS:MLIBBURNIA}
 LIB_DEPENDS+=	burn.4:${PORTSDIR}/devel/libburn \
     		isofs.6:${PORTSDIR}/devel/libisofs
 CONFIGURE_ARGS+=--enable-libburnia
@@ -70,7 +72,5 @@ PLIST_SUB+=	LIBBURNIA="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 	    	${WRKSRC}/libbrasero-burn/burn-process.c
-	@${REINPLACE_CMD} -e 's|" == "|" = "|g' \
-		${WRKSRC}/configure
 
 .include <bsd.port.mk>

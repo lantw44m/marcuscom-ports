@@ -76,6 +76,8 @@ lib/brasero3/plugins/libbrasero-vob.la
 lib/brasero3/plugins/libbrasero-vob.so
 lib/brasero3/plugins/libbrasero-wodim.la
 lib/brasero3/plugins/libbrasero-wodim.so
+lib/girepository-1.0/BraseroBurn-3.4.1.typelib
+lib/girepository-1.0/BraseroMedia-3.4.1.typelib
 lib/libbrasero-burn3.la
 lib/libbrasero-burn3.so
 lib/libbrasero-burn3.so.3
@@ -85,6 +87,8 @@ lib/libbrasero-media3.so.3
 lib/libbrasero-utils3.la
 lib/libbrasero-utils3.so
 lib/libbrasero-utils3.so.3
+%%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-brasero-extension.la
+%%NAUTILUS%%lib/nautilus/extensions-3.0/libnautilus-brasero-extension.so
 libdata/pkgconfig/libbrasero-burn3.pc
 libdata/pkgconfig/libbrasero-media3.pc
 share/GConf/gsettings/brasero.convert
@@ -300,6 +304,8 @@ share/doc/libbrasero-media/object-tree.html
 share/doc/libbrasero-media/right.png
 share/doc/libbrasero-media/style.css
 share/doc/libbrasero-media/up.png
+share/gir-1.0/BraseroBurn-3.4.1.gir
+share/gir-1.0/BraseroMedia-3.4.1.gir
 share/gnome/help/brasero/C/create-cover.page
 share/gnome/help/brasero/C/figures/brasero-main-window.png
 share/gnome/help/brasero/C/index.page
