@@ -20,7 +20,7 @@ LIB_DEPENDS=	cups.2:${PORTSDIR}/print/cups-client
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack ltverhack glib20
+USE_GNOME=	gnomehack intlhack ltverhack glib20 pkgconfig
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=  libtool
