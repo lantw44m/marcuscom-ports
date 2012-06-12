@@ -31,10 +31,21 @@ lib/liblzx.la
 lib/liblzx.so
 lib/liblzx.so.0
 libdata/pkgconfig/libeews-1.2.pc
+share/locale/cs/LC_MESSAGES/evolution-ews.mo
+share/locale/da/LC_MESSAGES/evolution-ews.mo
 share/locale/de/LC_MESSAGES/evolution-ews.mo
 share/locale/es/LC_MESSAGES/evolution-ews.mo
+share/locale/hu/LC_MESSAGES/evolution-ews.mo
+share/locale/nb/LC_MESSAGES/evolution-ews.mo
 share/locale/pl/LC_MESSAGES/evolution-ews.mo
+share/locale/pt_BR/LC_MESSAGES/evolution-ews.mo
 share/locale/sl/LC_MESSAGES/evolution-ews.mo
+share/locale/sr/LC_MESSAGES/evolution-ews.mo
+share/locale/sr@latin/LC_MESSAGES/evolution-ews.mo
+share/locale/sv/LC_MESSAGES/evolution-ews.mo
+share/locale/zh_CN/LC_MESSAGES/evolution-ews.mo
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrm lib/evolution-data-server-%%VERSION%%
 @dirrm include/evolution-data-server-%%VERSION%%/ews
 @dirrm include/evolution-data-server-%%VERSION%%
