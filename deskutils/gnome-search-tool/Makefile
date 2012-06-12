@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-search-tool/Makefile,v 1.1 2012/05/31 15:11:23 kwm Exp $
+#   $MCom: ports/deskutils/gnome-search-tool/Makefile,v 1.2 2012/06/01 06:47:47 kwm Exp $
 #
 
 PORTNAME=	gnome-search-tool
@@ -29,6 +29,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		gnome-search-tool.1
-GCONF_SCHEMA=	gnome-search-tool.schemas
+GCONF_SCHEMAS=	gnome-search-tool.schemas
 
 .include <bsd.port.mk>
