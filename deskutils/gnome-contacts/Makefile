@@ -6,8 +6,7 @@
 #
 
 PORTNAME=	gnome-contacts
-PORTVERSION=	3.2.2
-PORTREVISION=	1
+PORTVERSION=	3.4.1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 
@@ -27,5 +26,7 @@ USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
+
+GLIB_SCHEMAS=	org.gnome.Contacts.gschema.xml
 
 .include <bsd.port.mk>
