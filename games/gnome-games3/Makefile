@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.19 2012/04/27 13:26:22 kwm Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.20 2012/06/13 21:47:59 mezz Exp $
 #
 
 PORTNAME=	gnome-games
@@ -30,7 +30,6 @@ LATEST_LINK=	gnome-games3
 USE_XZ=		yes
 USE_PYTHON=	yes
 USE_GETTEXT=	yes
-INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GL=		gl glu
 USE_XORG=	ice x11
