@@ -3,10 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-haze/Makefile,v 1.3 2008/03/02 19:50:45 marcus Exp $
+#   $MCom: ports/net-im/telepathy-haze/Makefile,v 1.5 2011/11/22 11:36:12 kwm Exp $
+#
 
 PORTNAME=	haze
-PORTVERSION=	0.5.0
+PORTVERSION=	0.6.0
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-haze/
 PKGNAMEPREFIX=	telepathy-
@@ -22,7 +23,7 @@ LIB_DEPENDS=	purple.10:${PORTSDIR}/net-im/libpurple \
 
 USE_GNOME=	pkgconfig
 CPPFLAGS+=	-I${LOCALBASE}/include
-WRKSRC=	${WRKDIR}/telepathy-${PORTNAME}-${DISTVERSION}
+WRKSRC=		${WRKDIR}/telepathy-${PORTNAME}-${DISTVERSION}
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 
