@@ -3,10 +3,10 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.27 2011/11/12 14:54:37 kwm Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.28 2011/11/17 00:53:43 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	3.2.2
+PORTVERSION=	3.4.2.1
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -21,12 +21,14 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		pulse.0:${PORTSDIR}/audio/pulseaudio \
 		telepathy.2:${PORTSDIR}/net-im/libtelepathy \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
-		telepathy-farsight.0:${PORTSDIR}/net-im/telepathy-farsight \
+		telepathy-farstream.2:${PORTSDIR}/net-im/telepathy-farstream \
 		telepathy-logger.2:${PORTSDIR}/net-im/telepathy-logger \
 		folks-telepathy.25:${PORTSDIR}/net-im/folks \
 		notify.4:${PORTSDIR}/devel/libnotify \
 		gcr-3.1:${PORTSDIR}/security/gnome-keyring3 \
-		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
+		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
+		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3 \
+		soup-2.4:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
@@ -40,19 +42,17 @@ USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	evolutiondataserver3 gnomehack gnomeprefix ltverhack
-# pygtk2
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PYTHON=	yes
-#MAKE_JOBS_UNSAFE=yes
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-Werror \
 		--disable-goa \
-		--enable-location=no
-#		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
+		--enable-location=no \
+		--with-cheese=no
 
 GLIB_SCHEMAS=	org.gnome.Empathy.gschema.xml
 
@@ -63,7 +63,6 @@ OPTIONS=	JABBER	"Enable jabber (XMPP) client support" on \
 		IRC	"Enable IRC client support" on \
 		SALUT	"Enable link-local (serverless) XMPP support" off \
 		HAZE	"Enable libpurple protocol integration" off \
-		WEBKIT	"Enable Adium Message Style themes" on \
 		MAP	"Enable graphical map support" on
 #		NST	"Enable Nautilus SendTo plugin"	on \
 
@@ -87,15 +86,6 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-salut:${PORTSDIR}/net-im/telepathy-
 
 .if !defined(WITHOUT_HAZE)
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-haze
-.endif
-
-.if defined(WITH_WEBKIT)
-LIB_DEPENDS+=	webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3
-CONFIGURE_ARGS+=--enable-webkit
-PLIST_SUB+=	ADIUM=""
-.else
-CONFIGURE_ARGS+=--disable-webkit
-PLIST_SUB+=	ADIUM="@comment "
 .endif
 
 #.if defined(WITH_NST)
