@@ -1,6 +1,5 @@
 bin/gnome-power-statistics
 share/applications/gnome-power-statistics.desktop
-%%DATADIR%%/gpm-statistics.ui
 %%DATADIR%%/icons/hicolor/16x16/status/battery-caution-charging.png
 %%DATADIR%%/icons/hicolor/16x16/status/battery-caution.png
 %%DATADIR%%/icons/hicolor/16x16/status/battery-empty.png
@@ -296,6 +295,7 @@ share/locale/mg/LC_MESSAGES/gnome-power-manager.mo
 share/locale/mk/LC_MESSAGES/gnome-power-manager.mo
 share/locale/ml/LC_MESSAGES/gnome-power-manager.mo
 share/locale/mr/LC_MESSAGES/gnome-power-manager.mo
+share/locale/my/LC_MESSAGES/gnome-power-manager.mo
 share/locale/nb/LC_MESSAGES/gnome-power-manager.mo
 share/locale/nl/LC_MESSAGES/gnome-power-manager.mo
 share/locale/nn/LC_MESSAGES/gnome-power-manager.mo
@@ -323,9 +323,6 @@ share/locale/vi/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-power-manager.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
-@dirrmtry share/icons/gnome/scalable/status
-@dirrmtry share/icons/gnome/scalable
-@dirrmtry share/icons/gnome
 @dirrm %%DATADIR%%/icons/hicolor/scalable/status
 @dirrm %%DATADIR%%/icons/hicolor/scalable
 @dirrm %%DATADIR%%/icons/hicolor/48x48/status
@@ -352,6 +349,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-power-manager.mo
 @dirrmtry share/locale/si
 @dirrmtry share/locale/oc/LC_MESSAGES
 @dirrmtry share/locale/oc
+@dirrmtry share/locale/my/LC_MESSAGES
+@dirrmtry share/locale/my
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mg/LC_MESSAGES

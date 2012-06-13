@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.18 2011/10/16 19:29:03 kwm Exp $
+#   $MCom: ports/sysutils/gnome-power-manager3/Makefile,v 1.19 2011/10/17 13:01:05 kwm Exp $
 #
 
 PORTNAME=	gnome-power-manager
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -25,11 +25,12 @@ USE_XZ=		yes
 USE_GMAKE=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gnomedocutils
+MAKE_JOBS_UNSAFE=yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-doc-dir=${PREFIX}/share/doc \
 		--disable-docbook-docs
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.power-manager.gschema.xml
 
