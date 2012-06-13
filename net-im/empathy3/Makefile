@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.28 2011/11/17 00:53:43 kwm Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.29 2012/06/13 04:26:36 mezz Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	3.4.2.1
@@ -51,44 +51,48 @@ CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-Werror \
 		--disable-goa \
-		--enable-location=no \
-		--with-cheese=no
+		--enable-location=no
 
 GLIB_SCHEMAS=	org.gnome.Empathy.gschema.xml
 
 MAN1=		empathy.1 empathy-accounts.1
 
-OPTIONS=	JABBER	"Enable jabber (XMPP) client support" on \
-		MSN	"Enable MSN client support" on \
-		IRC	"Enable IRC client support" on \
-		SALUT	"Enable link-local (serverless) XMPP support" off \
-		HAZE	"Enable libpurple protocol integration" off \
-		MAP	"Enable graphical map support" on
-#		NST	"Enable Nautilus SendTo plugin"	on \
+OPTIONS_DEFINE=	JABBER MSN IRC SALUT HAZE MAP CHEESE
+OPTIONS_DEFAULT=JABBER     IRC            MAP
+JABBER_DESC=	Enable jabber (XMPP) client support
+MSN_DESC=	Enable MSN client support (broken)
+IRC_DESC=	Enable IRC client support
+SALUT_DESC=	Enable link-local (serverless) XMPP support
+HAZE_DESC=	Enable libpurple protocol integration (broken)
+MAP_DESC=	Enable graphical map support
+CHEESE_DESC=	Enable cheese camera support
+NST_DESC=	Enable Nautilus SendTo plugin
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_JABBER)
+.if ${PORT_OPTIONS:MJABBER}
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-gabble:${PORTSDIR}/net-im/telepathy-gabble
 .endif
 
-.if defined(WITH_MSN)
+.if ${PORT_OPTIONS:MMSN}
+BROKEN=		conflict in dependancies
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-butterfly:${PORTSDIR}/net-im/telepathy-butterfly
 .endif
 
-.if defined(WITH_IRC)
+.if ${PORT_OPTIONS:MIRC}
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-idle:${PORTSDIR}/net-im/telepathy-idle
 .endif
 
-.if !defined(WITHOUT_SALUT)
+.if ${PORT_OPTIONS:MSALUT}
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-salut:${PORTSDIR}/net-im/telepathy-salut
 .endif
 
 .if !defined(WITHOUT_HAZE)
+BROKEN=		conflict in dependancies
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-haze
 .endif
 
-#.if defined(WITH_NST)
+#.${PORT_OPTIONS:MNST}
 #BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/nautilus-sendto.pc:${PORTSDIR}/deskutils/nautilus-sendto
 #RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/nautilus-sendto.pc:${PORTSDIR}/deskutils/nautilus-sendto
 #CONFIGURE_ARGS+=--enable-nautilus-sendto=yes
@@ -98,13 +102,20 @@ CONFIGURE_ARGS+=--enable-nautilus-sendto=no
 PLIST_SUB+=	NST="@comment "
 #.endif
 
-.if !defined(WITHOUT_MAP)
+.if ${PORT_OPTIONS:MMAP}
 LIB_DEPENDS+=	champlain-0.12.0:${PORTSDIR}/graphics/libchamplain
 CONFIGURE_ARGS+=--enable-map
 PLIST_SUB+=	MAP=""
 .else
 CONFIGURE_ARGS+=--disable-map
 PLIST_SUB+=	MAP="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MCHEESE}
+LIB_DEPENDS+=	cheese-gtk:${PORTSDIR}/multimedia/cheese3
+CONFIGURE_ARGS+=--with-cheese
+.else
+CONFIGURE_ARGS+=--without-cheese
 .endif
 
 .include <bsd.port.mk>
