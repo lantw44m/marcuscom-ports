@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gnome-common/Makefile,v 1.15 2009/09/26 13:41:58 marcus Exp $
+#    $MCom: ports/devel/gnome-common/Makefile,v 1.17 2011/04/04 08:56:31 kwm Exp $
 #
 
 PORTNAME=	gnome-common
-PORTVERSION=	2.34.0
+PORTVERSION=	3.4.0.1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Common automake macros for GNOME 2 and GNOME 3
 
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	pkgconfig
 GNU_CONFIGURE=	yes
