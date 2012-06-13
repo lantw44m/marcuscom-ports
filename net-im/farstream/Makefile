@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/net-im/farstream/Makefile,v 1.1 2012/06/13 02:46:09 mezz Exp $
 #
 
 PORTNAME=	farstream
@@ -16,6 +16,8 @@ COMMENT=	Collection of GStreamer modules and libraries for videoconferencing
 
 LIB_DEPENDS=	nice.10:${PORTSDIR}/net-im/libnice
 
+CONFLICTS=	farsight2-[0-9]*
+
 FETCH_ARGS=	-Fpr
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
@@ -24,7 +26,7 @@ USE_PYTHON=	yes
 USE_GNOME=	gnomehack pkgconfig glib20 ltverhack
 USE_GSTREAMER=	core good bad python
 USE_AUTOTOOLS=	libtool
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>
