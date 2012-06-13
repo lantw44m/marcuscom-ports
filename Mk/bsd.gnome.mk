@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.559 2012/01/17 12:52:54 ahze Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.560 2012/05/15 15:16:56 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -100,6 +100,7 @@ SCROLLKEEPER_DIR=	/var/db/rarian
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "${GNOME_MAKEFILEIN}*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
 				's|[(]libdir[)]/locale|(prefix)/share/locale|g ; \
 				 s|[(]libdir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g ; \
+				 s|{libdir}/pkgconfig|(prefix)/libdata/pkgconfig|g ; \
 				 s|[(]datadir[)]/pkgconfig|(prefix)/libdata/pkgconfig|g ; \
 				 s|[(]prefix[)]/lib/pkgconfig|(prefix)/libdata/pkgconfig|g ; \
 				 s|[$$][(]localstatedir[)]/scrollkeeper|${SCROLLKEEPER_DIR}|g ; \
