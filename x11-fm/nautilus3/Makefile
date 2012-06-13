@@ -3,11 +3,11 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.20 2011/10/15 15:54:44 kwm Exp $
+#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.21 2011/10/18 22:43:09 kwm Exp $
 #
 
 PORTNAME=	nautilus
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.2
 CATEGORIES=	x11-fm gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -35,8 +35,8 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop3 libxml2 \
 		desktopfileutils ltverhack gvfs ltasneededhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 CONFIGURE_ARGS=	--enable-static --disable-packagekit --disable-tracker
 MAKE_ENV=	G_CHARSET_ALIAS="${LOCALBASE}/libdata/charset.alias"
 

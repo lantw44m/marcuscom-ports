@@ -26,6 +26,7 @@ libdata/pkgconfig/libnautilus-extension.pc
 share/GConf/gsettings/nautilus.convert
 share/applications/nautilus-autorun-software.desktop
 share/applications/nautilus.desktop
+share/dbus-1/services/org.freedesktop.FileManager1.service
 share/dbus-1/services/org.gnome.Nautilus.service
 share/doc/libnautilus-extension/ch01.html
 share/doc/libnautilus-extension/home.png
@@ -65,6 +66,7 @@ share/locale/be@latin/LC_MESSAGES/nautilus.mo
 share/locale/bg/LC_MESSAGES/nautilus.mo
 share/locale/bn/LC_MESSAGES/nautilus.mo
 share/locale/bn_IN/LC_MESSAGES/nautilus.mo
+share/locale/bo/LC_MESSAGES/nautilus.mo
 share/locale/br/LC_MESSAGES/nautilus.mo
 share/locale/bs/LC_MESSAGES/nautilus.mo
 share/locale/ca/LC_MESSAGES/nautilus.mo
@@ -121,6 +123,7 @@ share/locale/ml/LC_MESSAGES/nautilus.mo
 share/locale/mn/LC_MESSAGES/nautilus.mo
 share/locale/mr/LC_MESSAGES/nautilus.mo
 share/locale/ms/LC_MESSAGES/nautilus.mo
+share/locale/my/LC_MESSAGES/nautilus.mo
 share/locale/nb/LC_MESSAGES/nautilus.mo
 share/locale/nds/LC_MESSAGES/nautilus.mo
 share/locale/ne/LC_MESSAGES/nautilus.mo
@@ -169,18 +172,6 @@ share/mime/packages/nautilus.xml
 %%DATADIR%%/icons/hicolor/48x48/emblems/emblem-note.png
 %%DATADIR%%/nautilus-extras.placeholder
 %%DATADIR%%/nautilus-suggested.placeholder
-%%DATADIR%%/ui/nautilus-bookmarks-window.ui
-%%DATADIR%%/ui/nautilus-file-management-properties.ui
-%%DATADIR%%/ui/nautilus-desktop-icon-view-ui.xml
-%%DATADIR%%/ui/nautilus-directory-view-ui.xml
-%%DATADIR%%/ui/nautilus-icon-view-ui.xml
-%%DATADIR%%/ui/nautilus-list-view-ui.xml
-%%DATADIR%%/ui/nautilus-shell-ui.xml
-%%DATADIR%%/ui/nautilus-toolbar-ui.xml
-share/pixmaps/nautilus/knob.png
-share/pixmaps/nautilus/thumbnail_frame.png
-@dirrm share/pixmaps/nautilus
-@dirrm %%DATADIR%%/ui
 @dirrmtry %%DATADIR%%/icons/hicolor/48x48/emblems
 @dirrmtry %%DATADIR%%/icons/hicolor/48x48
 @dirrmtry %%DATADIR%%/icons/hicolor/24x24/emblems
@@ -232,6 +223,8 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrmtry share/locale/nso
 @dirrmtry share/locale/nds/LC_MESSAGES
 @dirrmtry share/locale/nds
+@dirrmtry share/locale/my/LC_MESSAGES
+@dirrmtry share/locale/my
 @dirrmtry share/locale/mr/LC_MESSAGES
 @dirrmtry share/locale/mr
 @dirrmtry share/locale/mi/LC_MESSAGES
@@ -268,6 +261,8 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrmtry share/locale/crh
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/bo/LC_MESSAGES
+@dirrmtry share/locale/bo
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
 @dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/be@latin/LC_MESSAGES
