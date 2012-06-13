@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.32 2012/01/16 15:02:05 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.33 2012/05/31 15:11:23 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -27,6 +27,7 @@ RUN_DEPENDS?=	gnome-panel>=2.91.0:${PORTSDIR}/x11/gnome-panel3 \
 		gnome-icon-theme-symbolic>=3.0.0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic \
 		gnome-keyring>=2.91.0:${PORTSDIR}/security/gnome-keyring3 \
 		gnome-power-manager>=2.91.0:${PORTSDIR}/sysutils/gnome-power-manager3 \
+		orca:${PORTSDIR}/accessibility/orca3 \
 		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
 		nautilus>=2.91.0:${PORTSDIR}/x11-fm/nautilus3 \
 		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
