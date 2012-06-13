@@ -3,11 +3,11 @@
 # Whom:                 Hendrik Scholz <hendrik@scholz.net>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.21 2011/10/15 15:12:50 kwm Exp $
+#   $MCom: ports/multimedia/totem3/Makefile,v 1.22 2011/10/17 13:22:56 kwm Exp $
 #
 
 PORTNAME=	totem
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -59,7 +59,7 @@ GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
 
 OPTIONS=	LIRC "Enable lirc support" off \
 		BROWSER_PLUGINS "Build plugins for a webkit-gtk3 browser" on \
-		PUBLISH "Enable Publish (network playlist) plugin" off \
+		PUBLISH "Enable Publish (network playlist) plugin" off
 #		TRACKER "Enable tracker local search plugin" off
 
 # check configure script for allowed_plugins="..." for new plugins
