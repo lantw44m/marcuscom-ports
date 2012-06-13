@@ -41,6 +41,9 @@ net/gnome-nettool -> net/gnome-nettool3
 net/libgweather -> net/libgweather3
 net/vinagre -> net/vinagre3
 net/vino -> net/vino3
+net-im/farsight2 -> net-im/farstream
+net-im/telepathy-farsight -> net-im/telepathy-farstream
+net-im/empathy -> net/empathy3
 security/gnome-keyring -> security/gcr
 security/gnome-keyring -> security/gnome-keyring3
 security/seahorse -> security/libcryptui
