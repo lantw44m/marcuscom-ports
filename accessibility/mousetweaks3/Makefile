@@ -3,11 +3,11 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.14 2011/10/04 21:09:43 kwm Exp $
+#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.15 2011/10/18 20:14:58 kwm Exp $
 #
 
 PORTNAME=	mousetweaks
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.2
 CATEGORIES=	accessibility
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -34,19 +34,5 @@ LDFLAGS=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.mousetweaks.enums.xml \
 		org.gnome.mousetweaks.gschema.xml
 MAN1=		mousetweaks.1
-
-#OPTIONS=	APPLETS "Build dwell-click and pointer-capture applets" on
-
-.include <bsd.port.options.mk>
-
-#.if defined(WITH_APPLETS)
-#USE_GNOME+=	gnomepanel3
-#CONFIGURE_ARGS+=--enable-pointer-capture \
-#		--enable-dwell-click
-#MAN1=		dwell-click-applet.1 pointer-capture-applet.1
-#PLIST_SUB+=	APPLETS=""
-#.else
-PLIST_SUB+=	APPLETS="@comment "
-#.endif
 
 .include <bsd.port.mk>

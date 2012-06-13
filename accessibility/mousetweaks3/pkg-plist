@@ -1,8 +1,4 @@
-%%APPLETS%%bin/dwell-click-applet
 bin/mousetweaks
-%%APPLETS%%bin/pointer-capture-applet
-%%APPLETS%%libdata/bonobo/servers/DwellClick_Factory.server
-%%APPLETS%%libdata/bonobo/servers/PointerCapture_Factory.server
 share/GConf/gsettings/mousetweaks.convert
 share/gnome/help/mousetweaks/C/figures/mouse-a11y-dwell-checkbox.png
 share/gnome/help/mousetweaks/C/figures/mouse-a11y-dwell-click-type-applet.png
@@ -200,9 +196,11 @@ share/gnome/help/mousetweaks/zh_CN/figures/mouse-a11y-ssc-checkbox.png
 share/gnome/help/mousetweaks/zh_CN/figures/mouse-a11y-ssc-delay-slider.png
 share/gnome/help/mousetweaks/zh_CN/figures/mouse-a11y-tab.png
 share/gnome/help/mousetweaks/zh_CN/mousetweaks.xml
+share/locale/an/LC_MESSAGES/mousetweaks.mo
 share/locale/ar/LC_MESSAGES/mousetweaks.mo
 share/locale/as/LC_MESSAGES/mousetweaks.mo
 share/locale/ast/LC_MESSAGES/mousetweaks.mo
+share/locale/be/LC_MESSAGES/mousetweaks.mo
 share/locale/bg/LC_MESSAGES/mousetweaks.mo
 share/locale/bn/LC_MESSAGES/mousetweaks.mo
 share/locale/bn_IN/LC_MESSAGES/mousetweaks.mo
@@ -212,8 +210,8 @@ share/locale/cs/LC_MESSAGES/mousetweaks.mo
 share/locale/da/LC_MESSAGES/mousetweaks.mo
 share/locale/de/LC_MESSAGES/mousetweaks.mo
 share/locale/el/LC_MESSAGES/mousetweaks.mo
-share/locale/en_GB/LC_MESSAGES/mousetweaks.mo
 share/locale/en@shaw/LC_MESSAGES/mousetweaks.mo
+share/locale/en_GB/LC_MESSAGES/mousetweaks.mo
 share/locale/eo/LC_MESSAGES/mousetweaks.mo
 share/locale/es/LC_MESSAGES/mousetweaks.mo
 share/locale/et/LC_MESSAGES/mousetweaks.mo
@@ -264,13 +262,9 @@ share/locale/vi/LC_MESSAGES/mousetweaks.mo
 share/locale/zh_CN/LC_MESSAGES/mousetweaks.mo
 share/locale/zh_HK/LC_MESSAGES/mousetweaks.mo
 share/locale/zh_TW/LC_MESSAGES/mousetweaks.mo
-%%APPLETS%%%%DATADIR%%/DwellClick.xml
-%%APPLETS%%%%DATADIR%%/PointerCapture.xml
 %%DATADIR%%/double-click.png
 %%DATADIR%%/drag-click.png
-%%APPLETS%%%%DATADIR%%/dwell-click-applet.ui
 %%DATADIR%%/mousetweaks.ui
-%%APPLETS%%%%DATADIR%%/pointer-capture-applet.ui
 %%DATADIR%%/right-click.png
 %%DATADIR%%/single-click.png
 share/omf/mousetweaks/mousetweaks-C.omf
@@ -288,6 +282,32 @@ share/omf/mousetweaks/mousetweaks-sv.omf
 share/omf/mousetweaks/mousetweaks-zh_CN.omf
 @dirrm share/omf/mousetweaks
 @dirrm %%DATADIR%%
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
+@dirrmtry share/locale/en@shaw/LC_MESSAGES
+@dirrmtry share/locale/en@shaw
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
+@dirrmtry share/locale/an/LC_MESSAGES
+@dirrmtry share/locale/an
 @dirrm share/gnome/help/mousetweaks/zh_CN/figures
 @dirrm share/gnome/help/mousetweaks/zh_CN
 @dirrm share/gnome/help/mousetweaks/sv/figures
@@ -306,34 +326,12 @@ share/omf/mousetweaks/mousetweaks-zh_CN.omf
 @dirrm share/gnome/help/mousetweaks/en_GB
 @dirrm share/gnome/help/mousetweaks/el/figures
 @dirrm share/gnome/help/mousetweaks/el
+@dirrm share/gnome/help/mousetweaks/de/figures
+@dirrm share/gnome/help/mousetweaks/de
 @dirrm share/gnome/help/mousetweaks/cs/figures
 @dirrm share/gnome/help/mousetweaks/cs
 @dirrm share/gnome/help/mousetweaks/ca/figures
 @dirrm share/gnome/help/mousetweaks/ca
-@dirrm share/gnome/help/mousetweaks/de/figures
-@dirrm share/gnome/help/mousetweaks/de
 @dirrm share/gnome/help/mousetweaks/C/figures
 @dirrm share/gnome/help/mousetweaks/C
 @dirrm share/gnome/help/mousetweaks
-@dirrmtry share/locale/zh_HK/LC_MESSAGES
-@dirrmtry share/locale/zh_HK
-@dirrmtry share/locale/te/LC_MESSAGES
-@dirrmtry share/locale/te
-@dirrmtry share/locale/sr@latin/LC_MESSAGES
-@dirrmtry share/locale/sr@latin
-@dirrmtry share/locale/oc/LC_MESSAGES
-@dirrmtry share/locale/oc
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
-@dirrmtry share/locale/mai/LC_MESSAGES
-@dirrmtry share/locale/mai
-@dirrmtry share/locale/en@shaw/LC_MESSAGES
-@dirrmtry share/locale/en@shaw
-@dirrmtry share/locale/ca@valencia/LC_MESSAGES
-@dirrmtry share/locale/ca@valencia
-@dirrmtry share/locale/bn_IN/LC_MESSAGES
-@dirrmtry share/locale/bn_IN
-@dirrmtry share/locale/as/LC_MESSAGES
-@dirrmtry share/locale/as
-@dirrmtry share/gnome-panel/applets
-@dirrmtry share/gnome-panel
