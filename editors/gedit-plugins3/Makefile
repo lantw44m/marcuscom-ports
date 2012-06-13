@@ -3,11 +3,11 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.15 2011/10/08 08:27:14 kwm Exp $
+#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.16 2011/10/16 20:44:56 kwm Exp $
 #
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.0
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -21,7 +21,7 @@ RUN_DEPENDS=	gedit>=${GEDITVER}:${PORTSDIR}/editors/gedit3
 
 CONFLICTS=	gedit-plugins-2.[0-9]*
 
-GEDITVER=	3.2.1
+GEDITVER=	3.4.0
 LATEST_LINK=	gedit-plugins3
 USE_LDCONFIG=	yes
 USE_XZ=		yes
@@ -34,11 +34,12 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.gedit.plugins.drawspaces.gschema.xml
 
-OPTIONS=	PYTHON "Build plugins that depend on python" off
+OPTIONS_DEFINE=	PYTHON
+PYTHON_DESC=	Build plugins that depend on python
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_PYTHON)
+.if ${PORT_OPTIONS:MPYTHON}
 USE_PYTHON=	yes
 BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/bus.py:${PORTSDIR}/devel/py-dbus
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/bus.py:${PORTSDIR}/devel/py-dbus

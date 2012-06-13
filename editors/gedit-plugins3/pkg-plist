@@ -67,6 +67,16 @@ lib/gedit/plugins/bookmarks.plugin
 %%PYTHON%%lib/gedit/plugins/commander/windowactivatable.py
 %%PYTHON%%lib/gedit/plugins/commander/windowactivatable.pyc
 %%PYTHON%%lib/gedit/plugins/commander/windowactivatable.pyo
+%%PYTHON%%lib/gedit/plugins/dashboard.plugin
+%%PYTHON%%lib/gedit/plugins/dashboard/__init__.py
+%%PYTHON%%lib/gedit/plugins/dashboard/__init__.pyc
+%%PYTHON%%lib/gedit/plugins/dashboard/__init__.pyo
+%%PYTHON%%lib/gedit/plugins/dashboard/dashboard.py
+%%PYTHON%%lib/gedit/plugins/dashboard/dashboard.pyc
+%%PYTHON%%lib/gedit/plugins/dashboard/dashboard.pyo
+%%PYTHON%%lib/gedit/plugins/dashboard/utils.py
+%%PYTHON%%lib/gedit/plugins/dashboard/utils.pyc
+%%PYTHON%%lib/gedit/plugins/dashboard/utils.pyo
 lib/gedit/plugins/drawspaces.plugin
 lib/gedit/plugins/gpdefs.py
 lib/gedit/plugins/gpdefs.pyc
@@ -192,7 +202,6 @@ share/gedit/plugins/bookmarks/bookmark.png
 %%PYTHON%%share/gedit/plugins/commander/modules/shell.py
 %%PYTHON%%share/gedit/plugins/commander/modules/shell.pyc
 %%PYTHON%%share/gedit/plugins/commander/modules/shell.pyo
-share/gedit/plugins/drawspaces/gedit-drawspaces-plugin.ui
 %%PYTHON%%share/gedit/plugins/sessionsaver/sessionsaver.ui
 share/gedit/plugins/taglist/HTML.tags.gz
 share/gedit/plugins/taglist/Latex.tags.gz
@@ -298,17 +307,16 @@ share/locale/zh_TW/LC_MESSAGES/gedit-plugins.mo
 %%PYTHON%%@dirrm lib/gedit/plugins/multiedit
 %%PYTHON%%@dirrm lib/gedit/plugins/synctex
 %%PYTHON%%@dirrm lib/gedit/plugins/sessionsaver
+%%PYTHON%%@dirrm lib/gedit/plugins/dashboard
 %%PYTHON%%@dirrm lib/gedit/plugins/commander/commands
 %%PYTHON%%@dirrm lib/gedit/plugins/commander
 %%PYTHON%%@dirrm lib/gedit/plugins/charmap
 %%PYTHON%%@dirrm share/gedit/plugins/sessionsaver
-@dirrm share/gedit/plugins/drawspaces
 %%PYTHON%%@dirrm share/gedit/plugins/commander/modules/find
 %%PYTHON%%@dirrm share/gedit/plugins/commander/modules
 %%PYTHON%%@dirrm share/gedit/plugins/commander
 @dirrm share/gedit/plugins/bookmarks
 @dirrmtry share/gedit/plugins
-@dirrmtry share/gedit-2
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
