@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/evince/Makefile,v 1.154 2011/08/24 10:37:55 kwm Exp $
+#    $MCom: ports/graphics/evince/Makefile,v 1.155 2011/10/31 10:00:46 kwm Exp $
 #
 
 PORTNAME=	evince
 PORTVERSION=	2.32.0
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -32,8 +32,8 @@ USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USE_GNOME=	gnomehack intlhack gnomeprefix desktopfileutils \
 		gnomedocutils ltasneededhack gconf2
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.Evince.gschema.xml
 GCONF_SCHEMAS=	\
@@ -100,7 +100,7 @@ PLIST_SUB+=		IMPRESS="@comment "
 .endif
 
 .if defined(WITH_DJVU)
-LIB_DEPENDS+=		djvulibre.24:${PORTSDIR}/graphics/djvulibre-nox11
+LIB_DEPENDS+=		djvulibre:${PORTSDIR}/graphics/djvulibre
 CONFIGURE_ARGS+=	--enable-djvu
 GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
 PLIST_SUB+=		DJVU=""
