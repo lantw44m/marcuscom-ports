@@ -3,11 +3,11 @@
 # Whom:					Anders Nordby <anders@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller3/Makefile,v 1.18 2011/10/18 21:59:29 kwm Exp $
+#   $MCom: ports/archivers/file-roller3/Makefile,v 1.19 2011/11/19 10:18:05 kwm Exp $
 #
 
 PORTNAME=	file-roller
-PORTVERSION=	3.2.2
+PORTVERSION=	3.4.2
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,7 +24,6 @@ LATEST_LINK=	file-roller3
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 USE_GETTEXT=	yes
-INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils gnomedocutils \
