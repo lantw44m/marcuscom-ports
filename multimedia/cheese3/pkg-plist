@@ -4,16 +4,16 @@ include/cheese/cheese-camera-device-monitor.h
 include/cheese/cheese-camera-device.h
 include/cheese/cheese-camera.h
 include/cheese/cheese-effect.h
+include/cheese/cheese-gtk.h
 include/cheese/cheese-widget.h
+include/cheese/cheese.h
 lib/girepository-1.0/Cheese-3.0.typelib
-lib/libcheese-gtk.a
 lib/libcheese-gtk.la
 lib/libcheese-gtk.so
-lib/libcheese-gtk.so.20
-lib/libcheese.a
+lib/libcheese-gtk.so.22
 lib/libcheese.la
 lib/libcheese.so
-lib/libcheese.so.2
+lib/libcheese.so.5
 libdata/pkgconfig/cheese-gtk.pc
 libdata/pkgconfig/cheese.pc
 share/applications/cheese.desktop
@@ -22,25 +22,8 @@ share/applications/cheese.desktop
 %%DATADIR%%/cheese-main-window.ui
 %%DATADIR%%/cheese-prefs.ui
 %%DATADIR%%/cheese-viewport.json
+%%DATADIR%%/cheese.catalog
 %%DATADIR%%/cheese.css
-%%DATADIR%%/icons/hicolor/16x16/actions/browse-webcam-effects.png
-%%DATADIR%%/icons/hicolor/16x16/actions/cheese-take-burst.png
-%%DATADIR%%/icons/hicolor/16x16/actions/cheese-take-photo.png
-%%DATADIR%%/icons/hicolor/22x22/actions/browse-webcam-effects.png
-%%DATADIR%%/icons/hicolor/22x22/actions/cheese-take-burst.png
-%%DATADIR%%/icons/hicolor/22x22/actions/cheese-take-photo.png
-%%DATADIR%%/icons/hicolor/24x24/actions/browse-webcam-effects.png
-%%DATADIR%%/icons/hicolor/24x24/actions/cheese-take-burst.png
-%%DATADIR%%/icons/hicolor/24x24/actions/cheese-take-photo.png
-%%DATADIR%%/icons/hicolor/32x32/actions/browse-webcam-effects.png
-%%DATADIR%%/icons/hicolor/32x32/actions/cheese-take-burst.png
-%%DATADIR%%/icons/hicolor/32x32/actions/cheese-take-photo.png
-%%DATADIR%%/icons/hicolor/48x48/actions/browse-webcam-effects.png
-%%DATADIR%%/icons/hicolor/48x48/actions/cheese-take-burst.png
-%%DATADIR%%/icons/hicolor/48x48/actions/cheese-take-photo.png
-%%DATADIR%%/icons/hicolor/scalable/actions/browse-webcam-effects.svg
-%%DATADIR%%/icons/hicolor/scalable/actions/cheese-take-burst.svg
-%%DATADIR%%/icons/hicolor/scalable/actions/cheese-take-photo.svg
 %%DATADIR%%/pixmaps/camera-icon.svg
 %%DATADIR%%/pixmaps/cheese-1.svg
 %%DATADIR%%/pixmaps/cheese-2.svg
@@ -50,557 +33,636 @@ share/applications/cheese.desktop
 %%DOCSDIR%%/COPYING
 %%DOCSDIR%%/ChangeLog
 %%DOCSDIR%%/CheeseAvatarChooser.html
+%%DOCSDIR%%/CheeseCamera.html
+%%DOCSDIR%%/CheeseCameraDevice.html
 %%DOCSDIR%%/CheeseCameraDeviceMonitor.html
 %%DOCSDIR%%/CheeseEffect.html
+%%DOCSDIR%%/CheeseFileUtil.html
+%%DOCSDIR%%/CheeseFlash.html
 %%DOCSDIR%%/CheeseWidget.html
 %%DOCSDIR%%/NEWS
 %%DOCSDIR%%/README
+%%DOCSDIR%%/annotation-glossary.html
+%%DOCSDIR%%/api-index-deprecated.html
 %%DOCSDIR%%/api-index-full.html
-%%DOCSDIR%%/ch01.html
+%%DOCSDIR%%/cheese-Initializing-libcheese-gtk.html
+%%DOCSDIR%%/cheese-Initializing-libcheese.html
+%%DOCSDIR%%/cheese-overview.html
 %%DOCSDIR%%/cheese.devhelp2
+%%DOCSDIR%%/cheese.html
+%%DOCSDIR%%/cheese_architecture.png
 %%DOCSDIR%%/home.png
 %%DOCSDIR%%/index.html
 %%DOCSDIR%%/index.sgml
 %%DOCSDIR%%/left.png
+%%DOCSDIR%%/libcheese-gtk.html
+%%DOCSDIR%%/libcheese.html
 %%DOCSDIR%%/object-tree.html
 %%DOCSDIR%%/right.png
+%%DOCSDIR%%/running-cheese.html
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
 share/gir-1.0/Cheese-3.0.gir
-share/gnome/help/cheese/C/apply-effects.page
-share/gnome/help/cheese/C/burst-mode.page
-share/gnome/help/cheese/C/delete-photo.page
-share/gnome/help/cheese/C/disable-countdown.page
-share/gnome/help/cheese/C/disable-flash.page
-share/gnome/help/cheese/C/figures/cheese-delete.png
-share/gnome/help/cheese/C/figures/cheese-effects.png
-share/gnome/help/cheese/C/figures/cheese-introduction.png
-share/gnome/help/cheese/C/figures/cheese-record.png
-share/gnome/help/cheese/C/figures/cheese-save.png
-share/gnome/help/cheese/C/figures/cheese-take.png
-share/gnome/help/cheese/C/figures/cheese.png
-share/gnome/help/cheese/C/figures/effects.png
-share/gnome/help/cheese/C/figures/image-properties.png
-share/gnome/help/cheese/C/figures/settings.png
-share/gnome/help/cheese/C/image-properties.page
-share/gnome/help/cheese/C/index.page
-share/gnome/help/cheese/C/introduction.page
-share/gnome/help/cheese/C/record-video.page
-share/gnome/help/cheese/C/resolution-photo.page
-share/gnome/help/cheese/C/save-photo.page
-share/gnome/help/cheese/C/take-photo.page
-share/gnome/help/cheese/C/view-photo.page
-share/gnome/help/cheese/C/wide-mode.page
-share/gnome/help/cheese/ca/apply-effects.page
-share/gnome/help/cheese/ca/burst-mode.page
-share/gnome/help/cheese/ca/delete-photo.page
-share/gnome/help/cheese/ca/disable-countdown.page
-share/gnome/help/cheese/ca/disable-flash.page
-share/gnome/help/cheese/ca/figures/cheese-delete.png
-share/gnome/help/cheese/ca/figures/cheese-effects.png
-share/gnome/help/cheese/ca/figures/cheese-introduction.png
-share/gnome/help/cheese/ca/figures/cheese-record.png
-share/gnome/help/cheese/ca/figures/cheese-save.png
-share/gnome/help/cheese/ca/figures/cheese-take.png
-share/gnome/help/cheese/ca/figures/cheese.png
-share/gnome/help/cheese/ca/figures/effects.png
-share/gnome/help/cheese/ca/figures/image-properties.png
-share/gnome/help/cheese/ca/figures/settings.png
-share/gnome/help/cheese/ca/image-properties.page
-share/gnome/help/cheese/ca/index.page
-share/gnome/help/cheese/ca/introduction.page
-share/gnome/help/cheese/ca/record-video.page
-share/gnome/help/cheese/ca/resolution-photo.page
-share/gnome/help/cheese/ca/save-photo.page
-share/gnome/help/cheese/ca/take-photo.page
-share/gnome/help/cheese/ca/view-photo.page
-share/gnome/help/cheese/ca/wide-mode.page
-share/gnome/help/cheese/cs/apply-effects.page
-share/gnome/help/cheese/cs/burst-mode.page
-share/gnome/help/cheese/cs/delete-photo.page
-share/gnome/help/cheese/cs/disable-countdown.page
-share/gnome/help/cheese/cs/disable-flash.page
-share/gnome/help/cheese/cs/figures/cheese-delete.png
-share/gnome/help/cheese/cs/figures/cheese-effects.png
-share/gnome/help/cheese/cs/figures/cheese-introduction.png
-share/gnome/help/cheese/cs/figures/cheese-record.png
-share/gnome/help/cheese/cs/figures/cheese-save.png
-share/gnome/help/cheese/cs/figures/cheese-take.png
-share/gnome/help/cheese/cs/figures/cheese.png
-share/gnome/help/cheese/cs/figures/effects.png
-share/gnome/help/cheese/cs/figures/image-properties.png
-share/gnome/help/cheese/cs/figures/settings.png
-share/gnome/help/cheese/cs/image-properties.page
-share/gnome/help/cheese/cs/index.page
-share/gnome/help/cheese/cs/introduction.page
-share/gnome/help/cheese/cs/record-video.page
-share/gnome/help/cheese/cs/resolution-photo.page
-share/gnome/help/cheese/cs/save-photo.page
-share/gnome/help/cheese/cs/take-photo.page
-share/gnome/help/cheese/cs/view-photo.page
-share/gnome/help/cheese/cs/wide-mode.page
-share/gnome/help/cheese/de/apply-effects.page
-share/gnome/help/cheese/de/burst-mode.page
-share/gnome/help/cheese/de/delete-photo.page
-share/gnome/help/cheese/de/disable-countdown.page
-share/gnome/help/cheese/de/disable-flash.page
-share/gnome/help/cheese/de/figures/cheese-delete.png
-share/gnome/help/cheese/de/figures/cheese-effects.png
-share/gnome/help/cheese/de/figures/cheese-introduction.png
-share/gnome/help/cheese/de/figures/cheese-record.png
-share/gnome/help/cheese/de/figures/cheese-save.png
-share/gnome/help/cheese/de/figures/cheese-take.png
-share/gnome/help/cheese/de/figures/cheese.png
-share/gnome/help/cheese/de/figures/effects.png
-share/gnome/help/cheese/de/figures/image-properties.png
-share/gnome/help/cheese/de/figures/settings.png
-share/gnome/help/cheese/de/image-properties.page
-share/gnome/help/cheese/de/index.page
-share/gnome/help/cheese/de/introduction.page
-share/gnome/help/cheese/de/record-video.page
-share/gnome/help/cheese/de/resolution-photo.page
-share/gnome/help/cheese/de/save-photo.page
-share/gnome/help/cheese/de/take-photo.page
-share/gnome/help/cheese/de/view-photo.page
-share/gnome/help/cheese/de/wide-mode.page
-share/gnome/help/cheese/el/apply-effects.page
-share/gnome/help/cheese/el/burst-mode.page
-share/gnome/help/cheese/el/delete-photo.page
-share/gnome/help/cheese/el/disable-countdown.page
-share/gnome/help/cheese/el/disable-flash.page
-share/gnome/help/cheese/el/figures/cheese-delete.png
-share/gnome/help/cheese/el/figures/cheese-effects.png
-share/gnome/help/cheese/el/figures/cheese-introduction.png
-share/gnome/help/cheese/el/figures/cheese-record.png
-share/gnome/help/cheese/el/figures/cheese-save.png
-share/gnome/help/cheese/el/figures/cheese-take.png
-share/gnome/help/cheese/el/figures/cheese.png
-share/gnome/help/cheese/el/figures/effects.png
-share/gnome/help/cheese/el/figures/image-properties.png
-share/gnome/help/cheese/el/figures/settings.png
-share/gnome/help/cheese/el/image-properties.page
-share/gnome/help/cheese/el/index.page
-share/gnome/help/cheese/el/introduction.page
-share/gnome/help/cheese/el/record-video.page
-share/gnome/help/cheese/el/resolution-photo.page
-share/gnome/help/cheese/el/save-photo.page
-share/gnome/help/cheese/el/take-photo.page
-share/gnome/help/cheese/el/view-photo.page
-share/gnome/help/cheese/el/wide-mode.page
-share/gnome/help/cheese/en_GB/apply-effects.page
-share/gnome/help/cheese/en_GB/burst-mode.page
-share/gnome/help/cheese/en_GB/delete-photo.page
-share/gnome/help/cheese/en_GB/disable-countdown.page
-share/gnome/help/cheese/en_GB/disable-flash.page
-share/gnome/help/cheese/en_GB/figures/cheese-delete.png
-share/gnome/help/cheese/en_GB/figures/cheese-effects.png
-share/gnome/help/cheese/en_GB/figures/cheese-introduction.png
-share/gnome/help/cheese/en_GB/figures/cheese-record.png
-share/gnome/help/cheese/en_GB/figures/cheese-save.png
-share/gnome/help/cheese/en_GB/figures/cheese-take.png
-share/gnome/help/cheese/en_GB/figures/cheese.png
-share/gnome/help/cheese/en_GB/figures/effects.png
-share/gnome/help/cheese/en_GB/figures/image-properties.png
-share/gnome/help/cheese/en_GB/figures/settings.png
-share/gnome/help/cheese/en_GB/image-properties.page
-share/gnome/help/cheese/en_GB/index.page
-share/gnome/help/cheese/en_GB/introduction.page
-share/gnome/help/cheese/en_GB/record-video.page
-share/gnome/help/cheese/en_GB/resolution-photo.page
-share/gnome/help/cheese/en_GB/save-photo.page
-share/gnome/help/cheese/en_GB/take-photo.page
-share/gnome/help/cheese/en_GB/view-photo.page
-share/gnome/help/cheese/en_GB/wide-mode.page
-share/gnome/help/cheese/es/apply-effects.page
-share/gnome/help/cheese/es/burst-mode.page
-share/gnome/help/cheese/es/delete-photo.page
-share/gnome/help/cheese/es/disable-countdown.page
-share/gnome/help/cheese/es/disable-flash.page
-share/gnome/help/cheese/es/figures/cheese-delete.png
-share/gnome/help/cheese/es/figures/cheese-effects.png
-share/gnome/help/cheese/es/figures/cheese-introduction.png
-share/gnome/help/cheese/es/figures/cheese-record.png
-share/gnome/help/cheese/es/figures/cheese-save.png
-share/gnome/help/cheese/es/figures/cheese-take.png
-share/gnome/help/cheese/es/figures/cheese.png
-share/gnome/help/cheese/es/figures/effects.png
-share/gnome/help/cheese/es/figures/image-properties.png
-share/gnome/help/cheese/es/figures/settings.png
-share/gnome/help/cheese/es/image-properties.page
-share/gnome/help/cheese/es/index.page
-share/gnome/help/cheese/es/introduction.page
-share/gnome/help/cheese/es/record-video.page
-share/gnome/help/cheese/es/resolution-photo.page
-share/gnome/help/cheese/es/save-photo.page
-share/gnome/help/cheese/es/take-photo.page
-share/gnome/help/cheese/es/view-photo.page
-share/gnome/help/cheese/es/wide-mode.page
-share/gnome/help/cheese/fi/apply-effects.page
-share/gnome/help/cheese/fi/burst-mode.page
-share/gnome/help/cheese/fi/delete-photo.page
-share/gnome/help/cheese/fi/disable-countdown.page
-share/gnome/help/cheese/fi/disable-flash.page
-share/gnome/help/cheese/fi/figures/cheese-delete.png
-share/gnome/help/cheese/fi/figures/cheese-effects.png
-share/gnome/help/cheese/fi/figures/cheese-introduction.png
-share/gnome/help/cheese/fi/figures/cheese-record.png
-share/gnome/help/cheese/fi/figures/cheese-save.png
-share/gnome/help/cheese/fi/figures/cheese-take.png
-share/gnome/help/cheese/fi/figures/cheese.png
-share/gnome/help/cheese/fi/figures/effects.png
-share/gnome/help/cheese/fi/figures/image-properties.png
-share/gnome/help/cheese/fi/figures/settings.png
-share/gnome/help/cheese/fi/image-properties.page
-share/gnome/help/cheese/fi/index.page
-share/gnome/help/cheese/fi/introduction.page
-share/gnome/help/cheese/fi/record-video.page
-share/gnome/help/cheese/fi/resolution-photo.page
-share/gnome/help/cheese/fi/save-photo.page
-share/gnome/help/cheese/fi/take-photo.page
-share/gnome/help/cheese/fi/view-photo.page
-share/gnome/help/cheese/fi/wide-mode.page
-share/gnome/help/cheese/fr/apply-effects.page
-share/gnome/help/cheese/fr/burst-mode.page
-share/gnome/help/cheese/fr/delete-photo.page
-share/gnome/help/cheese/fr/disable-countdown.page
-share/gnome/help/cheese/fr/disable-flash.page
-share/gnome/help/cheese/fr/figures/cheese-delete.png
-share/gnome/help/cheese/fr/figures/cheese-effects.png
-share/gnome/help/cheese/fr/figures/cheese-introduction.png
-share/gnome/help/cheese/fr/figures/cheese-record.png
-share/gnome/help/cheese/fr/figures/cheese-save.png
-share/gnome/help/cheese/fr/figures/cheese-take.png
-share/gnome/help/cheese/fr/figures/cheese.png
-share/gnome/help/cheese/fr/figures/effects.png
-share/gnome/help/cheese/fr/figures/image-properties.png
-share/gnome/help/cheese/fr/figures/settings.png
-share/gnome/help/cheese/fr/image-properties.page
-share/gnome/help/cheese/fr/index.page
-share/gnome/help/cheese/fr/introduction.page
-share/gnome/help/cheese/fr/record-video.page
-share/gnome/help/cheese/fr/resolution-photo.page
-share/gnome/help/cheese/fr/save-photo.page
-share/gnome/help/cheese/fr/take-photo.page
-share/gnome/help/cheese/fr/view-photo.page
-share/gnome/help/cheese/fr/wide-mode.page
-share/gnome/help/cheese/gl/apply-effects.page
-share/gnome/help/cheese/gl/burst-mode.page
-share/gnome/help/cheese/gl/delete-photo.page
-share/gnome/help/cheese/gl/disable-countdown.page
-share/gnome/help/cheese/gl/disable-flash.page
-share/gnome/help/cheese/gl/figures/cheese-delete.png
-share/gnome/help/cheese/gl/figures/cheese-effects.png
-share/gnome/help/cheese/gl/figures/cheese-introduction.png
-share/gnome/help/cheese/gl/figures/cheese-record.png
-share/gnome/help/cheese/gl/figures/cheese-save.png
-share/gnome/help/cheese/gl/figures/cheese-take.png
-share/gnome/help/cheese/gl/figures/cheese.png
-share/gnome/help/cheese/gl/figures/effects.png
-share/gnome/help/cheese/gl/figures/image-properties.png
-share/gnome/help/cheese/gl/figures/settings.png
-share/gnome/help/cheese/gl/image-properties.page
-share/gnome/help/cheese/gl/index.page
-share/gnome/help/cheese/gl/introduction.page
-share/gnome/help/cheese/gl/record-video.page
-share/gnome/help/cheese/gl/resolution-photo.page
-share/gnome/help/cheese/gl/save-photo.page
-share/gnome/help/cheese/gl/take-photo.page
-share/gnome/help/cheese/gl/view-photo.page
-share/gnome/help/cheese/gl/wide-mode.page
-share/gnome/help/cheese/hu/apply-effects.page
-share/gnome/help/cheese/hu/burst-mode.page
-share/gnome/help/cheese/hu/delete-photo.page
-share/gnome/help/cheese/hu/disable-countdown.page
-share/gnome/help/cheese/hu/disable-flash.page
-share/gnome/help/cheese/hu/figures/cheese-delete.png
-share/gnome/help/cheese/hu/figures/cheese-effects.png
-share/gnome/help/cheese/hu/figures/cheese-introduction.png
-share/gnome/help/cheese/hu/figures/cheese-record.png
-share/gnome/help/cheese/hu/figures/cheese-save.png
-share/gnome/help/cheese/hu/figures/cheese-take.png
-share/gnome/help/cheese/hu/figures/cheese.png
-share/gnome/help/cheese/hu/figures/effects.png
-share/gnome/help/cheese/hu/figures/image-properties.png
-share/gnome/help/cheese/hu/figures/settings.png
-share/gnome/help/cheese/hu/image-properties.page
-share/gnome/help/cheese/hu/index.page
-share/gnome/help/cheese/hu/introduction.page
-share/gnome/help/cheese/hu/record-video.page
-share/gnome/help/cheese/hu/resolution-photo.page
-share/gnome/help/cheese/hu/save-photo.page
-share/gnome/help/cheese/hu/take-photo.page
-share/gnome/help/cheese/hu/view-photo.page
-share/gnome/help/cheese/hu/wide-mode.page
-share/gnome/help/cheese/it/apply-effects.page
-share/gnome/help/cheese/it/burst-mode.page
-share/gnome/help/cheese/it/delete-photo.page
-share/gnome/help/cheese/it/disable-countdown.page
-share/gnome/help/cheese/it/disable-flash.page
-share/gnome/help/cheese/it/figures/cheese-delete.png
-share/gnome/help/cheese/it/figures/cheese-effects.png
-share/gnome/help/cheese/it/figures/cheese-introduction.png
-share/gnome/help/cheese/it/figures/cheese-record.png
-share/gnome/help/cheese/it/figures/cheese-save.png
-share/gnome/help/cheese/it/figures/cheese-take.png
-share/gnome/help/cheese/it/figures/cheese.png
-share/gnome/help/cheese/it/figures/effects.png
-share/gnome/help/cheese/it/figures/image-properties.png
-share/gnome/help/cheese/it/figures/settings.png
-share/gnome/help/cheese/it/image-properties.page
-share/gnome/help/cheese/it/index.page
-share/gnome/help/cheese/it/introduction.page
-share/gnome/help/cheese/it/record-video.page
-share/gnome/help/cheese/it/resolution-photo.page
-share/gnome/help/cheese/it/save-photo.page
-share/gnome/help/cheese/it/take-photo.page
-share/gnome/help/cheese/it/view-photo.page
-share/gnome/help/cheese/it/wide-mode.page
-share/gnome/help/cheese/ko/apply-effects.page
-share/gnome/help/cheese/ko/burst-mode.page
-share/gnome/help/cheese/ko/delete-photo.page
-share/gnome/help/cheese/ko/disable-countdown.page
-share/gnome/help/cheese/ko/disable-flash.page
-share/gnome/help/cheese/ko/figures/cheese-delete.png
-share/gnome/help/cheese/ko/figures/cheese-effects.png
-share/gnome/help/cheese/ko/figures/cheese-introduction.png
-share/gnome/help/cheese/ko/figures/cheese-record.png
-share/gnome/help/cheese/ko/figures/cheese-save.png
-share/gnome/help/cheese/ko/figures/cheese-take.png
-share/gnome/help/cheese/ko/figures/cheese.png
-share/gnome/help/cheese/ko/figures/effects.png
-share/gnome/help/cheese/ko/figures/image-properties.png
-share/gnome/help/cheese/ko/figures/settings.png
-share/gnome/help/cheese/ko/image-properties.page
-share/gnome/help/cheese/ko/index.page
-share/gnome/help/cheese/ko/introduction.page
-share/gnome/help/cheese/ko/record-video.page
-share/gnome/help/cheese/ko/resolution-photo.page
-share/gnome/help/cheese/ko/save-photo.page
-share/gnome/help/cheese/ko/take-photo.page
-share/gnome/help/cheese/ko/view-photo.page
-share/gnome/help/cheese/ko/wide-mode.page
-share/gnome/help/cheese/nl/apply-effects.page
-share/gnome/help/cheese/nl/burst-mode.page
-share/gnome/help/cheese/nl/delete-photo.page
-share/gnome/help/cheese/nl/disable-countdown.page
-share/gnome/help/cheese/nl/disable-flash.page
-share/gnome/help/cheese/nl/figures/cheese-delete.png
-share/gnome/help/cheese/nl/figures/cheese-effects.png
-share/gnome/help/cheese/nl/figures/cheese-introduction.png
-share/gnome/help/cheese/nl/figures/cheese-record.png
-share/gnome/help/cheese/nl/figures/cheese-save.png
-share/gnome/help/cheese/nl/figures/cheese-take.png
-share/gnome/help/cheese/nl/figures/cheese.png
-share/gnome/help/cheese/nl/figures/effects.png
-share/gnome/help/cheese/nl/figures/image-properties.png
-share/gnome/help/cheese/nl/figures/settings.png
-share/gnome/help/cheese/nl/image-properties.page
-share/gnome/help/cheese/nl/index.page
-share/gnome/help/cheese/nl/introduction.page
-share/gnome/help/cheese/nl/record-video.page
-share/gnome/help/cheese/nl/resolution-photo.page
-share/gnome/help/cheese/nl/save-photo.page
-share/gnome/help/cheese/nl/take-photo.page
-share/gnome/help/cheese/nl/view-photo.page
-share/gnome/help/cheese/nl/wide-mode.page
-share/gnome/help/cheese/oc/apply-effects.page
-share/gnome/help/cheese/oc/burst-mode.page
-share/gnome/help/cheese/oc/delete-photo.page
-share/gnome/help/cheese/oc/disable-countdown.page
-share/gnome/help/cheese/oc/disable-flash.page
-share/gnome/help/cheese/oc/figures/cheese-delete.png
-share/gnome/help/cheese/oc/figures/cheese-effects.png
-share/gnome/help/cheese/oc/figures/cheese-introduction.png
-share/gnome/help/cheese/oc/figures/cheese-record.png
-share/gnome/help/cheese/oc/figures/cheese-save.png
-share/gnome/help/cheese/oc/figures/cheese-take.png
-share/gnome/help/cheese/oc/figures/cheese.png
-share/gnome/help/cheese/oc/figures/effects.png
-share/gnome/help/cheese/oc/figures/image-properties.png
-share/gnome/help/cheese/oc/figures/settings.png
-share/gnome/help/cheese/oc/image-properties.page
-share/gnome/help/cheese/oc/index.page
-share/gnome/help/cheese/oc/introduction.page
-share/gnome/help/cheese/oc/record-video.page
-share/gnome/help/cheese/oc/resolution-photo.page
-share/gnome/help/cheese/oc/save-photo.page
-share/gnome/help/cheese/oc/take-photo.page
-share/gnome/help/cheese/oc/view-photo.page
-share/gnome/help/cheese/oc/wide-mode.page
-share/gnome/help/cheese/pa/apply-effects.page
-share/gnome/help/cheese/pa/burst-mode.page
-share/gnome/help/cheese/pa/delete-photo.page
-share/gnome/help/cheese/pa/disable-countdown.page
-share/gnome/help/cheese/pa/disable-flash.page
-share/gnome/help/cheese/pa/figures/cheese-delete.png
-share/gnome/help/cheese/pa/figures/cheese-effects.png
-share/gnome/help/cheese/pa/figures/cheese-introduction.png
-share/gnome/help/cheese/pa/figures/cheese-record.png
-share/gnome/help/cheese/pa/figures/cheese-save.png
-share/gnome/help/cheese/pa/figures/cheese-take.png
-share/gnome/help/cheese/pa/figures/cheese.png
-share/gnome/help/cheese/pa/figures/effects.png
-share/gnome/help/cheese/pa/figures/image-properties.png
-share/gnome/help/cheese/pa/figures/settings.png
-share/gnome/help/cheese/pa/image-properties.page
-share/gnome/help/cheese/pa/index.page
-share/gnome/help/cheese/pa/introduction.page
-share/gnome/help/cheese/pa/record-video.page
-share/gnome/help/cheese/pa/resolution-photo.page
-share/gnome/help/cheese/pa/save-photo.page
-share/gnome/help/cheese/pa/take-photo.page
-share/gnome/help/cheese/pa/view-photo.page
-share/gnome/help/cheese/pa/wide-mode.page
-share/gnome/help/cheese/pt_BR/apply-effects.page
-share/gnome/help/cheese/pt_BR/burst-mode.page
-share/gnome/help/cheese/pt_BR/delete-photo.page
-share/gnome/help/cheese/pt_BR/disable-countdown.page
-share/gnome/help/cheese/pt_BR/disable-flash.page
-share/gnome/help/cheese/pt_BR/figures/cheese-delete.png
-share/gnome/help/cheese/pt_BR/figures/cheese-effects.png
-share/gnome/help/cheese/pt_BR/figures/cheese-introduction.png
-share/gnome/help/cheese/pt_BR/figures/cheese-record.png
-share/gnome/help/cheese/pt_BR/figures/cheese-save.png
-share/gnome/help/cheese/pt_BR/figures/cheese-take.png
-share/gnome/help/cheese/pt_BR/figures/cheese.png
-share/gnome/help/cheese/pt_BR/figures/effects.png
-share/gnome/help/cheese/pt_BR/figures/image-properties.png
-share/gnome/help/cheese/pt_BR/figures/settings.png
-share/gnome/help/cheese/pt_BR/image-properties.page
-share/gnome/help/cheese/pt_BR/index.page
-share/gnome/help/cheese/pt_BR/introduction.page
-share/gnome/help/cheese/pt_BR/record-video.page
-share/gnome/help/cheese/pt_BR/resolution-photo.page
-share/gnome/help/cheese/pt_BR/save-photo.page
-share/gnome/help/cheese/pt_BR/take-photo.page
-share/gnome/help/cheese/pt_BR/view-photo.page
-share/gnome/help/cheese/pt_BR/wide-mode.page
-share/gnome/help/cheese/ru/apply-effects.page
-share/gnome/help/cheese/ru/burst-mode.page
-share/gnome/help/cheese/ru/delete-photo.page
-share/gnome/help/cheese/ru/disable-countdown.page
-share/gnome/help/cheese/ru/disable-flash.page
-share/gnome/help/cheese/ru/figures/cheese-delete.png
-share/gnome/help/cheese/ru/figures/cheese-effects.png
-share/gnome/help/cheese/ru/figures/cheese-introduction.png
-share/gnome/help/cheese/ru/figures/cheese-record.png
-share/gnome/help/cheese/ru/figures/cheese-save.png
-share/gnome/help/cheese/ru/figures/cheese-take.png
-share/gnome/help/cheese/ru/figures/cheese.png
-share/gnome/help/cheese/ru/figures/effects.png
-share/gnome/help/cheese/ru/figures/image-properties.png
-share/gnome/help/cheese/ru/figures/settings.png
-share/gnome/help/cheese/ru/image-properties.page
-share/gnome/help/cheese/ru/index.page
-share/gnome/help/cheese/ru/introduction.page
-share/gnome/help/cheese/ru/record-video.page
-share/gnome/help/cheese/ru/resolution-photo.page
-share/gnome/help/cheese/ru/save-photo.page
-share/gnome/help/cheese/ru/take-photo.page
-share/gnome/help/cheese/ru/view-photo.page
-share/gnome/help/cheese/ru/wide-mode.page
-share/gnome/help/cheese/sl/apply-effects.page
-share/gnome/help/cheese/sl/burst-mode.page
-share/gnome/help/cheese/sl/delete-photo.page
-share/gnome/help/cheese/sl/disable-countdown.page
-share/gnome/help/cheese/sl/disable-flash.page
-share/gnome/help/cheese/sl/figures/cheese-delete.png
-share/gnome/help/cheese/sl/figures/cheese-effects.png
-share/gnome/help/cheese/sl/figures/cheese-introduction.png
-share/gnome/help/cheese/sl/figures/cheese-record.png
-share/gnome/help/cheese/sl/figures/cheese-save.png
-share/gnome/help/cheese/sl/figures/cheese-take.png
-share/gnome/help/cheese/sl/figures/cheese.png
-share/gnome/help/cheese/sl/figures/effects.png
-share/gnome/help/cheese/sl/figures/image-properties.png
-share/gnome/help/cheese/sl/figures/settings.png
-share/gnome/help/cheese/sl/image-properties.page
-share/gnome/help/cheese/sl/index.page
-share/gnome/help/cheese/sl/introduction.page
-share/gnome/help/cheese/sl/record-video.page
-share/gnome/help/cheese/sl/resolution-photo.page
-share/gnome/help/cheese/sl/save-photo.page
-share/gnome/help/cheese/sl/take-photo.page
-share/gnome/help/cheese/sl/view-photo.page
-share/gnome/help/cheese/sl/wide-mode.page
-share/gnome/help/cheese/sv/apply-effects.page
-share/gnome/help/cheese/sv/burst-mode.page
-share/gnome/help/cheese/sv/delete-photo.page
-share/gnome/help/cheese/sv/disable-countdown.page
-share/gnome/help/cheese/sv/disable-flash.page
-share/gnome/help/cheese/sv/figures/cheese-delete.png
-share/gnome/help/cheese/sv/figures/cheese-effects.png
-share/gnome/help/cheese/sv/figures/cheese-introduction.png
-share/gnome/help/cheese/sv/figures/cheese-record.png
-share/gnome/help/cheese/sv/figures/cheese-save.png
-share/gnome/help/cheese/sv/figures/cheese-take.png
-share/gnome/help/cheese/sv/figures/cheese.png
-share/gnome/help/cheese/sv/figures/effects.png
-share/gnome/help/cheese/sv/figures/image-properties.png
-share/gnome/help/cheese/sv/figures/settings.png
-share/gnome/help/cheese/sv/image-properties.page
-share/gnome/help/cheese/sv/index.page
-share/gnome/help/cheese/sv/introduction.page
-share/gnome/help/cheese/sv/record-video.page
-share/gnome/help/cheese/sv/resolution-photo.page
-share/gnome/help/cheese/sv/save-photo.page
-share/gnome/help/cheese/sv/take-photo.page
-share/gnome/help/cheese/sv/view-photo.page
-share/gnome/help/cheese/sv/wide-mode.page
-share/gnome/help/cheese/th/apply-effects.page
-share/gnome/help/cheese/th/burst-mode.page
-share/gnome/help/cheese/th/delete-photo.page
-share/gnome/help/cheese/th/disable-countdown.page
-share/gnome/help/cheese/th/disable-flash.page
-share/gnome/help/cheese/th/figures/cheese-delete.png
-share/gnome/help/cheese/th/figures/cheese-effects.png
-share/gnome/help/cheese/th/figures/cheese-introduction.png
-share/gnome/help/cheese/th/figures/cheese-record.png
-share/gnome/help/cheese/th/figures/cheese-save.png
-share/gnome/help/cheese/th/figures/cheese-take.png
-share/gnome/help/cheese/th/figures/cheese.png
-share/gnome/help/cheese/th/figures/effects.png
-share/gnome/help/cheese/th/figures/image-properties.png
-share/gnome/help/cheese/th/figures/settings.png
-share/gnome/help/cheese/th/image-properties.page
-share/gnome/help/cheese/th/index.page
-share/gnome/help/cheese/th/introduction.page
-share/gnome/help/cheese/th/record-video.page
-share/gnome/help/cheese/th/resolution-photo.page
-share/gnome/help/cheese/th/save-photo.page
-share/gnome/help/cheese/th/take-photo.page
-share/gnome/help/cheese/th/view-photo.page
-share/gnome/help/cheese/th/wide-mode.page
-share/gnome/help/cheese/zh_CN/apply-effects.page
-share/gnome/help/cheese/zh_CN/burst-mode.page
-share/gnome/help/cheese/zh_CN/delete-photo.page
-share/gnome/help/cheese/zh_CN/disable-countdown.page
-share/gnome/help/cheese/zh_CN/disable-flash.page
-share/gnome/help/cheese/zh_CN/figures/cheese-delete.png
-share/gnome/help/cheese/zh_CN/figures/cheese-effects.png
-share/gnome/help/cheese/zh_CN/figures/cheese-introduction.png
-share/gnome/help/cheese/zh_CN/figures/cheese-record.png
-share/gnome/help/cheese/zh_CN/figures/cheese-save.png
-share/gnome/help/cheese/zh_CN/figures/cheese-take.png
-share/gnome/help/cheese/zh_CN/figures/cheese.png
-share/gnome/help/cheese/zh_CN/figures/effects.png
-share/gnome/help/cheese/zh_CN/figures/image-properties.png
-share/gnome/help/cheese/zh_CN/figures/settings.png
-share/gnome/help/cheese/zh_CN/image-properties.page
-share/gnome/help/cheese/zh_CN/index.page
-share/gnome/help/cheese/zh_CN/introduction.page
-share/gnome/help/cheese/zh_CN/record-video.page
-share/gnome/help/cheese/zh_CN/resolution-photo.page
-share/gnome/help/cheese/zh_CN/save-photo.page
-share/gnome/help/cheese/zh_CN/take-photo.page
-share/gnome/help/cheese/zh_CN/view-photo.page
-share/gnome/help/cheese/zh_CN/wide-mode.page
+share/help/C/cheese/effects-apply.page
+share/help/C/cheese/figures/cheese-delete.png
+share/help/C/cheese/figures/cheese-effects.png
+share/help/C/cheese/figures/cheese-introduction.png
+share/help/C/cheese/figures/cheese-record.png
+share/help/C/cheese/figures/cheese-save.png
+share/help/C/cheese/figures/cheese-take.png
+share/help/C/cheese/figures/cheese.png
+share/help/C/cheese/figures/effects.png
+share/help/C/cheese/figures/image-properties.png
+share/help/C/cheese/figures/settings.png
+share/help/C/cheese/index.page
+share/help/C/cheese/introduction.page
+share/help/C/cheese/mode-wide.page
+share/help/C/cheese/photo-delete.page
+share/help/C/cheese/photo-save.page
+share/help/C/cheese/photo-take.page
+share/help/C/cheese/photo-view.page
+share/help/C/cheese/pref-burst-mode.page
+share/help/C/cheese/pref-countdown.page
+share/help/C/cheese/pref-flash.page
+share/help/C/cheese/pref-image-properties.page
+share/help/C/cheese/pref-photo-resolution.page
+share/help/C/cheese/video-record.page
+share/help/ca/cheese/effects-apply.page
+share/help/ca/cheese/figures/cheese-delete.png
+share/help/ca/cheese/figures/cheese-effects.png
+share/help/ca/cheese/figures/cheese-introduction.png
+share/help/ca/cheese/figures/cheese-record.png
+share/help/ca/cheese/figures/cheese-save.png
+share/help/ca/cheese/figures/cheese-take.png
+share/help/ca/cheese/figures/cheese.png
+share/help/ca/cheese/figures/effects.png
+share/help/ca/cheese/figures/image-properties.png
+share/help/ca/cheese/figures/settings.png
+share/help/ca/cheese/index.page
+share/help/ca/cheese/introduction.page
+share/help/ca/cheese/mode-wide.page
+share/help/ca/cheese/photo-delete.page
+share/help/ca/cheese/photo-save.page
+share/help/ca/cheese/photo-take.page
+share/help/ca/cheese/photo-view.page
+share/help/ca/cheese/pref-burst-mode.page
+share/help/ca/cheese/pref-countdown.page
+share/help/ca/cheese/pref-flash.page
+share/help/ca/cheese/pref-image-properties.page
+share/help/ca/cheese/pref-photo-resolution.page
+share/help/ca/cheese/video-record.page
+share/help/cs/cheese/effects-apply.page
+share/help/cs/cheese/figures/cheese-delete.png
+share/help/cs/cheese/figures/cheese-effects.png
+share/help/cs/cheese/figures/cheese-introduction.png
+share/help/cs/cheese/figures/cheese-record.png
+share/help/cs/cheese/figures/cheese-save.png
+share/help/cs/cheese/figures/cheese-take.png
+share/help/cs/cheese/figures/cheese.png
+share/help/cs/cheese/figures/effects.png
+share/help/cs/cheese/figures/image-properties.png
+share/help/cs/cheese/figures/settings.png
+share/help/cs/cheese/index.page
+share/help/cs/cheese/introduction.page
+share/help/cs/cheese/mode-wide.page
+share/help/cs/cheese/photo-delete.page
+share/help/cs/cheese/photo-save.page
+share/help/cs/cheese/photo-take.page
+share/help/cs/cheese/photo-view.page
+share/help/cs/cheese/pref-burst-mode.page
+share/help/cs/cheese/pref-countdown.page
+share/help/cs/cheese/pref-flash.page
+share/help/cs/cheese/pref-image-properties.page
+share/help/cs/cheese/pref-photo-resolution.page
+share/help/cs/cheese/video-record.page
+share/help/de/cheese/effects-apply.page
+share/help/de/cheese/figures/cheese-delete.png
+share/help/de/cheese/figures/cheese-effects.png
+share/help/de/cheese/figures/cheese-introduction.png
+share/help/de/cheese/figures/cheese-record.png
+share/help/de/cheese/figures/cheese-save.png
+share/help/de/cheese/figures/cheese-take.png
+share/help/de/cheese/figures/cheese.png
+share/help/de/cheese/figures/effects.png
+share/help/de/cheese/figures/image-properties.png
+share/help/de/cheese/figures/settings.png
+share/help/de/cheese/index.page
+share/help/de/cheese/introduction.page
+share/help/de/cheese/mode-wide.page
+share/help/de/cheese/photo-delete.page
+share/help/de/cheese/photo-save.page
+share/help/de/cheese/photo-take.page
+share/help/de/cheese/photo-view.page
+share/help/de/cheese/pref-burst-mode.page
+share/help/de/cheese/pref-countdown.page
+share/help/de/cheese/pref-flash.page
+share/help/de/cheese/pref-image-properties.page
+share/help/de/cheese/pref-photo-resolution.page
+share/help/de/cheese/video-record.page
+share/help/el/cheese/effects-apply.page
+share/help/el/cheese/figures/cheese-delete.png
+share/help/el/cheese/figures/cheese-effects.png
+share/help/el/cheese/figures/cheese-introduction.png
+share/help/el/cheese/figures/cheese-record.png
+share/help/el/cheese/figures/cheese-save.png
+share/help/el/cheese/figures/cheese-take.png
+share/help/el/cheese/figures/cheese.png
+share/help/el/cheese/figures/effects.png
+share/help/el/cheese/figures/image-properties.png
+share/help/el/cheese/figures/settings.png
+share/help/el/cheese/index.page
+share/help/el/cheese/introduction.page
+share/help/el/cheese/mode-wide.page
+share/help/el/cheese/photo-delete.page
+share/help/el/cheese/photo-save.page
+share/help/el/cheese/photo-take.page
+share/help/el/cheese/photo-view.page
+share/help/el/cheese/pref-burst-mode.page
+share/help/el/cheese/pref-countdown.page
+share/help/el/cheese/pref-flash.page
+share/help/el/cheese/pref-image-properties.page
+share/help/el/cheese/pref-photo-resolution.page
+share/help/el/cheese/video-record.page
+share/help/en_GB/cheese/effects-apply.page
+share/help/en_GB/cheese/figures/cheese-delete.png
+share/help/en_GB/cheese/figures/cheese-effects.png
+share/help/en_GB/cheese/figures/cheese-introduction.png
+share/help/en_GB/cheese/figures/cheese-record.png
+share/help/en_GB/cheese/figures/cheese-save.png
+share/help/en_GB/cheese/figures/cheese-take.png
+share/help/en_GB/cheese/figures/cheese.png
+share/help/en_GB/cheese/figures/effects.png
+share/help/en_GB/cheese/figures/image-properties.png
+share/help/en_GB/cheese/figures/settings.png
+share/help/en_GB/cheese/index.page
+share/help/en_GB/cheese/introduction.page
+share/help/en_GB/cheese/mode-wide.page
+share/help/en_GB/cheese/photo-delete.page
+share/help/en_GB/cheese/photo-save.page
+share/help/en_GB/cheese/photo-take.page
+share/help/en_GB/cheese/photo-view.page
+share/help/en_GB/cheese/pref-burst-mode.page
+share/help/en_GB/cheese/pref-countdown.page
+share/help/en_GB/cheese/pref-flash.page
+share/help/en_GB/cheese/pref-image-properties.page
+share/help/en_GB/cheese/pref-photo-resolution.page
+share/help/en_GB/cheese/video-record.page
+share/help/es/cheese/effects-apply.page
+share/help/es/cheese/figures/cheese-delete.png
+share/help/es/cheese/figures/cheese-effects.png
+share/help/es/cheese/figures/cheese-introduction.png
+share/help/es/cheese/figures/cheese-record.png
+share/help/es/cheese/figures/cheese-save.png
+share/help/es/cheese/figures/cheese-take.png
+share/help/es/cheese/figures/cheese.png
+share/help/es/cheese/figures/effects.png
+share/help/es/cheese/figures/image-properties.png
+share/help/es/cheese/figures/settings.png
+share/help/es/cheese/index.page
+share/help/es/cheese/introduction.page
+share/help/es/cheese/mode-wide.page
+share/help/es/cheese/photo-delete.page
+share/help/es/cheese/photo-save.page
+share/help/es/cheese/photo-take.page
+share/help/es/cheese/photo-view.page
+share/help/es/cheese/pref-burst-mode.page
+share/help/es/cheese/pref-countdown.page
+share/help/es/cheese/pref-flash.page
+share/help/es/cheese/pref-image-properties.page
+share/help/es/cheese/pref-photo-resolution.page
+share/help/es/cheese/video-record.page
+share/help/fi/cheese/effects-apply.page
+share/help/fi/cheese/figures/cheese-delete.png
+share/help/fi/cheese/figures/cheese-effects.png
+share/help/fi/cheese/figures/cheese-introduction.png
+share/help/fi/cheese/figures/cheese-record.png
+share/help/fi/cheese/figures/cheese-save.png
+share/help/fi/cheese/figures/cheese-take.png
+share/help/fi/cheese/figures/cheese.png
+share/help/fi/cheese/figures/effects.png
+share/help/fi/cheese/figures/image-properties.png
+share/help/fi/cheese/figures/settings.png
+share/help/fi/cheese/index.page
+share/help/fi/cheese/introduction.page
+share/help/fi/cheese/mode-wide.page
+share/help/fi/cheese/photo-delete.page
+share/help/fi/cheese/photo-save.page
+share/help/fi/cheese/photo-take.page
+share/help/fi/cheese/photo-view.page
+share/help/fi/cheese/pref-burst-mode.page
+share/help/fi/cheese/pref-countdown.page
+share/help/fi/cheese/pref-flash.page
+share/help/fi/cheese/pref-image-properties.page
+share/help/fi/cheese/pref-photo-resolution.page
+share/help/fi/cheese/video-record.page
+share/help/fr/cheese/effects-apply.page
+share/help/fr/cheese/figures/cheese-delete.png
+share/help/fr/cheese/figures/cheese-effects.png
+share/help/fr/cheese/figures/cheese-introduction.png
+share/help/fr/cheese/figures/cheese-record.png
+share/help/fr/cheese/figures/cheese-save.png
+share/help/fr/cheese/figures/cheese-take.png
+share/help/fr/cheese/figures/cheese.png
+share/help/fr/cheese/figures/effects.png
+share/help/fr/cheese/figures/image-properties.png
+share/help/fr/cheese/figures/settings.png
+share/help/fr/cheese/index.page
+share/help/fr/cheese/introduction.page
+share/help/fr/cheese/mode-wide.page
+share/help/fr/cheese/photo-delete.page
+share/help/fr/cheese/photo-save.page
+share/help/fr/cheese/photo-take.page
+share/help/fr/cheese/photo-view.page
+share/help/fr/cheese/pref-burst-mode.page
+share/help/fr/cheese/pref-countdown.page
+share/help/fr/cheese/pref-flash.page
+share/help/fr/cheese/pref-image-properties.page
+share/help/fr/cheese/pref-photo-resolution.page
+share/help/fr/cheese/video-record.page
+share/help/gl/cheese/effects-apply.page
+share/help/gl/cheese/figures/cheese-delete.png
+share/help/gl/cheese/figures/cheese-effects.png
+share/help/gl/cheese/figures/cheese-introduction.png
+share/help/gl/cheese/figures/cheese-record.png
+share/help/gl/cheese/figures/cheese-save.png
+share/help/gl/cheese/figures/cheese-take.png
+share/help/gl/cheese/figures/cheese.png
+share/help/gl/cheese/figures/effects.png
+share/help/gl/cheese/figures/image-properties.png
+share/help/gl/cheese/figures/settings.png
+share/help/gl/cheese/index.page
+share/help/gl/cheese/introduction.page
+share/help/gl/cheese/mode-wide.page
+share/help/gl/cheese/photo-delete.page
+share/help/gl/cheese/photo-save.page
+share/help/gl/cheese/photo-take.page
+share/help/gl/cheese/photo-view.page
+share/help/gl/cheese/pref-burst-mode.page
+share/help/gl/cheese/pref-countdown.page
+share/help/gl/cheese/pref-flash.page
+share/help/gl/cheese/pref-image-properties.page
+share/help/gl/cheese/pref-photo-resolution.page
+share/help/gl/cheese/video-record.page
+share/help/hu/cheese/effects-apply.page
+share/help/hu/cheese/figures/cheese-delete.png
+share/help/hu/cheese/figures/cheese-effects.png
+share/help/hu/cheese/figures/cheese-introduction.png
+share/help/hu/cheese/figures/cheese-record.png
+share/help/hu/cheese/figures/cheese-save.png
+share/help/hu/cheese/figures/cheese-take.png
+share/help/hu/cheese/figures/cheese.png
+share/help/hu/cheese/figures/effects.png
+share/help/hu/cheese/figures/image-properties.png
+share/help/hu/cheese/figures/settings.png
+share/help/hu/cheese/index.page
+share/help/hu/cheese/introduction.page
+share/help/hu/cheese/mode-wide.page
+share/help/hu/cheese/photo-delete.page
+share/help/hu/cheese/photo-save.page
+share/help/hu/cheese/photo-take.page
+share/help/hu/cheese/photo-view.page
+share/help/hu/cheese/pref-burst-mode.page
+share/help/hu/cheese/pref-countdown.page
+share/help/hu/cheese/pref-flash.page
+share/help/hu/cheese/pref-image-properties.page
+share/help/hu/cheese/pref-photo-resolution.page
+share/help/hu/cheese/video-record.page
+share/help/it/cheese/effects-apply.page
+share/help/it/cheese/figures/cheese-delete.png
+share/help/it/cheese/figures/cheese-effects.png
+share/help/it/cheese/figures/cheese-introduction.png
+share/help/it/cheese/figures/cheese-record.png
+share/help/it/cheese/figures/cheese-save.png
+share/help/it/cheese/figures/cheese-take.png
+share/help/it/cheese/figures/cheese.png
+share/help/it/cheese/figures/effects.png
+share/help/it/cheese/figures/image-properties.png
+share/help/it/cheese/figures/settings.png
+share/help/it/cheese/index.page
+share/help/it/cheese/introduction.page
+share/help/it/cheese/mode-wide.page
+share/help/it/cheese/photo-delete.page
+share/help/it/cheese/photo-save.page
+share/help/it/cheese/photo-take.page
+share/help/it/cheese/photo-view.page
+share/help/it/cheese/pref-burst-mode.page
+share/help/it/cheese/pref-countdown.page
+share/help/it/cheese/pref-flash.page
+share/help/it/cheese/pref-image-properties.page
+share/help/it/cheese/pref-photo-resolution.page
+share/help/it/cheese/video-record.page
+share/help/ko/cheese/effects-apply.page
+share/help/ko/cheese/figures/cheese-delete.png
+share/help/ko/cheese/figures/cheese-effects.png
+share/help/ko/cheese/figures/cheese-introduction.png
+share/help/ko/cheese/figures/cheese-record.png
+share/help/ko/cheese/figures/cheese-save.png
+share/help/ko/cheese/figures/cheese-take.png
+share/help/ko/cheese/figures/cheese.png
+share/help/ko/cheese/figures/effects.png
+share/help/ko/cheese/figures/image-properties.png
+share/help/ko/cheese/figures/settings.png
+share/help/ko/cheese/index.page
+share/help/ko/cheese/introduction.page
+share/help/ko/cheese/mode-wide.page
+share/help/ko/cheese/photo-delete.page
+share/help/ko/cheese/photo-save.page
+share/help/ko/cheese/photo-take.page
+share/help/ko/cheese/photo-view.page
+share/help/ko/cheese/pref-burst-mode.page
+share/help/ko/cheese/pref-countdown.page
+share/help/ko/cheese/pref-flash.page
+share/help/ko/cheese/pref-image-properties.page
+share/help/ko/cheese/pref-photo-resolution.page
+share/help/ko/cheese/video-record.page
+share/help/lv/cheese/effects-apply.page
+share/help/lv/cheese/figures/cheese-delete.png
+share/help/lv/cheese/figures/cheese-effects.png
+share/help/lv/cheese/figures/cheese-introduction.png
+share/help/lv/cheese/figures/cheese-record.png
+share/help/lv/cheese/figures/cheese-save.png
+share/help/lv/cheese/figures/cheese-take.png
+share/help/lv/cheese/figures/cheese.png
+share/help/lv/cheese/figures/effects.png
+share/help/lv/cheese/figures/image-properties.png
+share/help/lv/cheese/figures/settings.png
+share/help/lv/cheese/index.page
+share/help/lv/cheese/introduction.page
+share/help/lv/cheese/mode-wide.page
+share/help/lv/cheese/photo-delete.page
+share/help/lv/cheese/photo-save.page
+share/help/lv/cheese/photo-take.page
+share/help/lv/cheese/photo-view.page
+share/help/lv/cheese/pref-burst-mode.page
+share/help/lv/cheese/pref-countdown.page
+share/help/lv/cheese/pref-flash.page
+share/help/lv/cheese/pref-image-properties.page
+share/help/lv/cheese/pref-photo-resolution.page
+share/help/lv/cheese/video-record.page
+share/help/nl/cheese/effects-apply.page
+share/help/nl/cheese/figures/cheese-delete.png
+share/help/nl/cheese/figures/cheese-effects.png
+share/help/nl/cheese/figures/cheese-introduction.png
+share/help/nl/cheese/figures/cheese-record.png
+share/help/nl/cheese/figures/cheese-save.png
+share/help/nl/cheese/figures/cheese-take.png
+share/help/nl/cheese/figures/cheese.png
+share/help/nl/cheese/figures/effects.png
+share/help/nl/cheese/figures/image-properties.png
+share/help/nl/cheese/figures/settings.png
+share/help/nl/cheese/index.page
+share/help/nl/cheese/introduction.page
+share/help/nl/cheese/mode-wide.page
+share/help/nl/cheese/photo-delete.page
+share/help/nl/cheese/photo-save.page
+share/help/nl/cheese/photo-take.page
+share/help/nl/cheese/photo-view.page
+share/help/nl/cheese/pref-burst-mode.page
+share/help/nl/cheese/pref-countdown.page
+share/help/nl/cheese/pref-flash.page
+share/help/nl/cheese/pref-image-properties.page
+share/help/nl/cheese/pref-photo-resolution.page
+share/help/nl/cheese/video-record.page
+share/help/oc/cheese/effects-apply.page
+share/help/oc/cheese/figures/cheese-delete.png
+share/help/oc/cheese/figures/cheese-effects.png
+share/help/oc/cheese/figures/cheese-introduction.png
+share/help/oc/cheese/figures/cheese-record.png
+share/help/oc/cheese/figures/cheese-save.png
+share/help/oc/cheese/figures/cheese-take.png
+share/help/oc/cheese/figures/cheese.png
+share/help/oc/cheese/figures/effects.png
+share/help/oc/cheese/figures/image-properties.png
+share/help/oc/cheese/figures/settings.png
+share/help/oc/cheese/index.page
+share/help/oc/cheese/introduction.page
+share/help/oc/cheese/mode-wide.page
+share/help/oc/cheese/photo-delete.page
+share/help/oc/cheese/photo-save.page
+share/help/oc/cheese/photo-take.page
+share/help/oc/cheese/photo-view.page
+share/help/oc/cheese/pref-burst-mode.page
+share/help/oc/cheese/pref-countdown.page
+share/help/oc/cheese/pref-flash.page
+share/help/oc/cheese/pref-image-properties.page
+share/help/oc/cheese/pref-photo-resolution.page
+share/help/oc/cheese/video-record.page
+share/help/pa/cheese/effects-apply.page
+share/help/pa/cheese/figures/cheese-delete.png
+share/help/pa/cheese/figures/cheese-effects.png
+share/help/pa/cheese/figures/cheese-introduction.png
+share/help/pa/cheese/figures/cheese-record.png
+share/help/pa/cheese/figures/cheese-save.png
+share/help/pa/cheese/figures/cheese-take.png
+share/help/pa/cheese/figures/cheese.png
+share/help/pa/cheese/figures/effects.png
+share/help/pa/cheese/figures/image-properties.png
+share/help/pa/cheese/figures/settings.png
+share/help/pa/cheese/index.page
+share/help/pa/cheese/introduction.page
+share/help/pa/cheese/mode-wide.page
+share/help/pa/cheese/photo-delete.page
+share/help/pa/cheese/photo-save.page
+share/help/pa/cheese/photo-take.page
+share/help/pa/cheese/photo-view.page
+share/help/pa/cheese/pref-burst-mode.page
+share/help/pa/cheese/pref-countdown.page
+share/help/pa/cheese/pref-flash.page
+share/help/pa/cheese/pref-image-properties.page
+share/help/pa/cheese/pref-photo-resolution.page
+share/help/pa/cheese/video-record.page
+share/help/pt_BR/cheese/effects-apply.page
+share/help/pt_BR/cheese/figures/cheese-delete.png
+share/help/pt_BR/cheese/figures/cheese-effects.png
+share/help/pt_BR/cheese/figures/cheese-introduction.png
+share/help/pt_BR/cheese/figures/cheese-record.png
+share/help/pt_BR/cheese/figures/cheese-save.png
+share/help/pt_BR/cheese/figures/cheese-take.png
+share/help/pt_BR/cheese/figures/cheese.png
+share/help/pt_BR/cheese/figures/effects.png
+share/help/pt_BR/cheese/figures/image-properties.png
+share/help/pt_BR/cheese/figures/settings.png
+share/help/pt_BR/cheese/index.page
+share/help/pt_BR/cheese/introduction.page
+share/help/pt_BR/cheese/mode-wide.page
+share/help/pt_BR/cheese/photo-delete.page
+share/help/pt_BR/cheese/photo-save.page
+share/help/pt_BR/cheese/photo-take.page
+share/help/pt_BR/cheese/photo-view.page
+share/help/pt_BR/cheese/pref-burst-mode.page
+share/help/pt_BR/cheese/pref-countdown.page
+share/help/pt_BR/cheese/pref-flash.page
+share/help/pt_BR/cheese/pref-image-properties.page
+share/help/pt_BR/cheese/pref-photo-resolution.page
+share/help/pt_BR/cheese/video-record.page
+share/help/ru/cheese/effects-apply.page
+share/help/ru/cheese/figures/cheese-delete.png
+share/help/ru/cheese/figures/cheese-effects.png
+share/help/ru/cheese/figures/cheese-introduction.png
+share/help/ru/cheese/figures/cheese-record.png
+share/help/ru/cheese/figures/cheese-save.png
+share/help/ru/cheese/figures/cheese-take.png
+share/help/ru/cheese/figures/cheese.png
+share/help/ru/cheese/figures/effects.png
+share/help/ru/cheese/figures/image-properties.png
+share/help/ru/cheese/figures/settings.png
+share/help/ru/cheese/index.page
+share/help/ru/cheese/introduction.page
+share/help/ru/cheese/mode-wide.page
+share/help/ru/cheese/photo-delete.page
+share/help/ru/cheese/photo-save.page
+share/help/ru/cheese/photo-take.page
+share/help/ru/cheese/photo-view.page
+share/help/ru/cheese/pref-burst-mode.page
+share/help/ru/cheese/pref-countdown.page
+share/help/ru/cheese/pref-flash.page
+share/help/ru/cheese/pref-image-properties.page
+share/help/ru/cheese/pref-photo-resolution.page
+share/help/ru/cheese/video-record.page
+share/help/sl/cheese/effects-apply.page
+share/help/sl/cheese/figures/cheese-delete.png
+share/help/sl/cheese/figures/cheese-effects.png
+share/help/sl/cheese/figures/cheese-introduction.png
+share/help/sl/cheese/figures/cheese-record.png
+share/help/sl/cheese/figures/cheese-save.png
+share/help/sl/cheese/figures/cheese-take.png
+share/help/sl/cheese/figures/cheese.png
+share/help/sl/cheese/figures/effects.png
+share/help/sl/cheese/figures/image-properties.png
+share/help/sl/cheese/figures/settings.png
+share/help/sl/cheese/index.page
+share/help/sl/cheese/introduction.page
+share/help/sl/cheese/mode-wide.page
+share/help/sl/cheese/photo-delete.page
+share/help/sl/cheese/photo-save.page
+share/help/sl/cheese/photo-take.page
+share/help/sl/cheese/photo-view.page
+share/help/sl/cheese/pref-burst-mode.page
+share/help/sl/cheese/pref-countdown.page
+share/help/sl/cheese/pref-flash.page
+share/help/sl/cheese/pref-image-properties.page
+share/help/sl/cheese/pref-photo-resolution.page
+share/help/sl/cheese/video-record.page
+share/help/sv/cheese/effects-apply.page
+share/help/sv/cheese/figures/cheese-delete.png
+share/help/sv/cheese/figures/cheese-effects.png
+share/help/sv/cheese/figures/cheese-introduction.png
+share/help/sv/cheese/figures/cheese-record.png
+share/help/sv/cheese/figures/cheese-save.png
+share/help/sv/cheese/figures/cheese-take.png
+share/help/sv/cheese/figures/cheese.png
+share/help/sv/cheese/figures/effects.png
+share/help/sv/cheese/figures/image-properties.png
+share/help/sv/cheese/figures/settings.png
+share/help/sv/cheese/index.page
+share/help/sv/cheese/introduction.page
+share/help/sv/cheese/mode-wide.page
+share/help/sv/cheese/photo-delete.page
+share/help/sv/cheese/photo-save.page
+share/help/sv/cheese/photo-take.page
+share/help/sv/cheese/photo-view.page
+share/help/sv/cheese/pref-burst-mode.page
+share/help/sv/cheese/pref-countdown.page
+share/help/sv/cheese/pref-flash.page
+share/help/sv/cheese/pref-image-properties.page
+share/help/sv/cheese/pref-photo-resolution.page
+share/help/sv/cheese/video-record.page
+share/help/te/cheese/effects-apply.page
+share/help/te/cheese/figures/cheese-delete.png
+share/help/te/cheese/figures/cheese-effects.png
+share/help/te/cheese/figures/cheese-introduction.png
+share/help/te/cheese/figures/cheese-record.png
+share/help/te/cheese/figures/cheese-save.png
+share/help/te/cheese/figures/cheese-take.png
+share/help/te/cheese/figures/cheese.png
+share/help/te/cheese/figures/effects.png
+share/help/te/cheese/figures/image-properties.png
+share/help/te/cheese/figures/settings.png
+share/help/te/cheese/index.page
+share/help/te/cheese/introduction.page
+share/help/te/cheese/mode-wide.page
+share/help/te/cheese/photo-delete.page
+share/help/te/cheese/photo-save.page
+share/help/te/cheese/photo-take.page
+share/help/te/cheese/photo-view.page
+share/help/te/cheese/pref-burst-mode.page
+share/help/te/cheese/pref-countdown.page
+share/help/te/cheese/pref-flash.page
+share/help/te/cheese/pref-image-properties.page
+share/help/te/cheese/pref-photo-resolution.page
+share/help/te/cheese/video-record.page
+share/help/th/cheese/effects-apply.page
+share/help/th/cheese/figures/cheese-delete.png
+share/help/th/cheese/figures/cheese-effects.png
+share/help/th/cheese/figures/cheese-introduction.png
+share/help/th/cheese/figures/cheese-record.png
+share/help/th/cheese/figures/cheese-save.png
+share/help/th/cheese/figures/cheese-take.png
+share/help/th/cheese/figures/cheese.png
+share/help/th/cheese/figures/effects.png
+share/help/th/cheese/figures/image-properties.png
+share/help/th/cheese/figures/settings.png
+share/help/th/cheese/index.page
+share/help/th/cheese/introduction.page
+share/help/th/cheese/mode-wide.page
+share/help/th/cheese/photo-delete.page
+share/help/th/cheese/photo-save.page
+share/help/th/cheese/photo-take.page
+share/help/th/cheese/photo-view.page
+share/help/th/cheese/pref-burst-mode.page
+share/help/th/cheese/pref-countdown.page
+share/help/th/cheese/pref-flash.page
+share/help/th/cheese/pref-image-properties.page
+share/help/th/cheese/pref-photo-resolution.page
+share/help/th/cheese/video-record.page
+share/help/zh_CN/cheese/effects-apply.page
+share/help/zh_CN/cheese/figures/cheese-delete.png
+share/help/zh_CN/cheese/figures/cheese-effects.png
+share/help/zh_CN/cheese/figures/cheese-introduction.png
+share/help/zh_CN/cheese/figures/cheese-record.png
+share/help/zh_CN/cheese/figures/cheese-save.png
+share/help/zh_CN/cheese/figures/cheese-take.png
+share/help/zh_CN/cheese/figures/cheese.png
+share/help/zh_CN/cheese/figures/effects.png
+share/help/zh_CN/cheese/figures/image-properties.png
+share/help/zh_CN/cheese/figures/settings.png
+share/help/zh_CN/cheese/index.page
+share/help/zh_CN/cheese/introduction.page
+share/help/zh_CN/cheese/mode-wide.page
+share/help/zh_CN/cheese/photo-delete.page
+share/help/zh_CN/cheese/photo-save.page
+share/help/zh_CN/cheese/photo-take.page
+share/help/zh_CN/cheese/photo-view.page
+share/help/zh_CN/cheese/pref-burst-mode.page
+share/help/zh_CN/cheese/pref-countdown.page
+share/help/zh_CN/cheese/pref-flash.page
+share/help/zh_CN/cheese/pref-image-properties.page
+share/help/zh_CN/cheese/pref-photo-resolution.page
+share/help/zh_CN/cheese/video-record.page
+share/icons/hicolor/16x16/actions/browse-webcam-effects.png
+share/icons/hicolor/16x16/actions/cheese-take-burst.png
+share/icons/hicolor/16x16/actions/cheese-take-photo.png
 share/icons/hicolor/16x16/apps/cheese.png
+share/icons/hicolor/22x22/actions/browse-webcam-effects.png
+share/icons/hicolor/22x22/actions/cheese-take-burst.png
+share/icons/hicolor/22x22/actions/cheese-take-photo.png
 share/icons/hicolor/22x22/apps/cheese.png
+share/icons/hicolor/24x24/actions/browse-webcam-effects.png
+share/icons/hicolor/24x24/actions/cheese-take-burst.png
+share/icons/hicolor/24x24/actions/cheese-take-photo.png
 share/icons/hicolor/24x24/apps/cheese.png
 share/icons/hicolor/256x256/apps/cheese.png
+share/icons/hicolor/32x32/actions/browse-webcam-effects.png
+share/icons/hicolor/32x32/actions/cheese-take-burst.png
+share/icons/hicolor/32x32/actions/cheese-take-photo.png
 share/icons/hicolor/32x32/apps/cheese.png
+share/icons/hicolor/48x48/actions/browse-webcam-effects.png
+share/icons/hicolor/48x48/actions/cheese-take-burst.png
+share/icons/hicolor/48x48/actions/cheese-take-photo.png
 share/icons/hicolor/48x48/apps/cheese.png
+share/icons/hicolor/scalable/actions/browse-webcam-effects.svg
+share/icons/hicolor/scalable/actions/cheese-take-burst.svg
+share/icons/hicolor/scalable/actions/cheese-take-photo.svg
 share/locale/af/LC_MESSAGES/cheese.mo
 share/locale/ar/LC_MESSAGES/cheese.mo
 share/locale/as/LC_MESSAGES/cheese.mo
@@ -638,6 +700,7 @@ share/locale/it/LC_MESSAGES/cheese.mo
 share/locale/ja/LC_MESSAGES/cheese.mo
 share/locale/ka/LC_MESSAGES/cheese.mo
 share/locale/kk/LC_MESSAGES/cheese.mo
+share/locale/km/LC_MESSAGES/cheese.mo
 share/locale/kn/LC_MESSAGES/cheese.mo
 share/locale/ko/LC_MESSAGES/cheese.mo
 share/locale/ku/LC_MESSAGES/cheese.mo
@@ -674,76 +737,11 @@ share/locale/tr/LC_MESSAGES/cheese.mo
 share/locale/ug/LC_MESSAGES/cheese.mo
 share/locale/uk/LC_MESSAGES/cheese.mo
 share/locale/vi/LC_MESSAGES/cheese.mo
+share/locale/xh/LC_MESSAGES/cheese.mo
 share/locale/zh_CN/LC_MESSAGES/cheese.mo
 share/locale/zh_HK/LC_MESSAGES/cheese.mo
 share/locale/zh_TW/LC_MESSAGES/cheese.mo
 share/locale/zu/LC_MESSAGES/cheese.mo
-@dirrmtry share/icons/hicolor/256x256/apps
-@dirrmtry share/icons/hicolor/256x256
-@dirrm share/gnome/help/cheese/zh_CN/figures
-@dirrm share/gnome/help/cheese/zh_CN
-@dirrm share/gnome/help/cheese/th/figures
-@dirrm share/gnome/help/cheese/th
-@dirrm share/gnome/help/cheese/sv/figures
-@dirrm share/gnome/help/cheese/sv
-@dirrm share/gnome/help/cheese/sl/figures
-@dirrm share/gnome/help/cheese/sl
-@dirrm share/gnome/help/cheese/ru/figures
-@dirrm share/gnome/help/cheese/ru
-@dirrm share/gnome/help/cheese/pt_BR/figures
-@dirrm share/gnome/help/cheese/pt_BR
-@dirrm share/gnome/help/cheese/pa/figures
-@dirrm share/gnome/help/cheese/pa
-@dirrm share/gnome/help/cheese/oc/figures
-@dirrm share/gnome/help/cheese/oc
-@dirrm share/gnome/help/cheese/nl/figures
-@dirrm share/gnome/help/cheese/nl
-@dirrm share/gnome/help/cheese/ko/figures
-@dirrm share/gnome/help/cheese/ko
-@dirrm share/gnome/help/cheese/it/figures
-@dirrm share/gnome/help/cheese/it
-@dirrm share/gnome/help/cheese/hu/figures
-@dirrm share/gnome/help/cheese/hu
-@dirrm share/gnome/help/cheese/gl/figures
-@dirrm share/gnome/help/cheese/gl
-@dirrm share/gnome/help/cheese/fr/figures
-@dirrm share/gnome/help/cheese/fr
-@dirrm share/gnome/help/cheese/fi/figures
-@dirrm share/gnome/help/cheese/fi
-@dirrm share/gnome/help/cheese/es/figures
-@dirrm share/gnome/help/cheese/es
-@dirrm share/gnome/help/cheese/en_GB/figures
-@dirrm share/gnome/help/cheese/en_GB
-@dirrm share/gnome/help/cheese/el/figures
-@dirrm share/gnome/help/cheese/el
-@dirrm share/gnome/help/cheese/de/figures
-@dirrm share/gnome/help/cheese/de
-@dirrm share/gnome/help/cheese/cs/figures
-@dirrm share/gnome/help/cheese/cs
-@dirrm share/gnome/help/cheese/ca/figures
-@dirrm share/gnome/help/cheese/ca
-@dirrm share/gnome/help/cheese/C/figures
-@dirrm share/gnome/help/cheese/C
-@dirrm share/gnome/help/cheese
-@dirrm %%DOCSDIR%%
-@dirrm %%DATADIR%%/pixmaps
-@dirrm %%DATADIR%%/icons/hicolor/scalable/actions
-@dirrm %%DATADIR%%/icons/hicolor/scalable
-@dirrm %%DATADIR%%/icons/hicolor/48x48/actions
-@dirrm %%DATADIR%%/icons/hicolor/48x48
-@dirrm %%DATADIR%%/icons/hicolor/32x32/actions
-@dirrm %%DATADIR%%/icons/hicolor/32x32
-@dirrm %%DATADIR%%/icons/hicolor/24x24/actions
-@dirrm %%DATADIR%%/icons/hicolor/24x24
-@dirrm %%DATADIR%%/icons/hicolor/22x22/actions
-@dirrm %%DATADIR%%/icons/hicolor/22x22
-@dirrm %%DATADIR%%/icons/hicolor/16x16/actions
-@dirrm %%DATADIR%%/icons/hicolor/16x16
-@dirrm %%DATADIR%%/icons/hicolor
-@dirrm %%DATADIR%%/icons
-@dirrm %%DATADIR%%
-@dirrmtry share/applications
-@dirrm include/cheese
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -782,3 +780,83 @@ share/locale/zu/LC_MESSAGES/cheese.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/icons/hicolor/256x256/apps
+@dirrmtry share/icons/hicolor/256x256
+@dirrmtry share/help/zh_CN/cheese/figures
+@dirrmtry share/help/zh_CN/cheese
+@dirrmtry share/help/zh_CN
+@dirrmtry share/help/th/cheese/figures
+@dirrmtry share/help/th/cheese
+@dirrmtry share/help/th
+@dirrmtry share/help/te/cheese/figures
+@dirrmtry share/help/te/cheese
+@dirrmtry share/help/te
+@dirrmtry share/help/sv/cheese/figures
+@dirrmtry share/help/sv/cheese
+@dirrmtry share/help/sv
+@dirrmtry share/help/sl/cheese/figures
+@dirrmtry share/help/sl/cheese
+@dirrmtry share/help/sl
+@dirrmtry share/help/ru/cheese/figures
+@dirrmtry share/help/ru/cheese
+@dirrmtry share/help/ru
+@dirrmtry share/help/pt_BR/cheese/figures
+@dirrmtry share/help/pt_BR/cheese
+@dirrmtry share/help/pt_BR
+@dirrmtry share/help/pa/cheese/figures
+@dirrmtry share/help/pa/cheese
+@dirrmtry share/help/pa
+@dirrmtry share/help/oc/cheese/figures
+@dirrmtry share/help/oc/cheese
+@dirrmtry share/help/oc
+@dirrmtry share/help/nl/cheese/figures
+@dirrmtry share/help/nl/cheese
+@dirrmtry share/help/nl
+@dirrmtry share/help/lv/cheese/figures
+@dirrmtry share/help/lv/cheese
+@dirrmtry share/help/lv
+@dirrmtry share/help/ko/cheese/figures
+@dirrmtry share/help/ko/cheese
+@dirrmtry share/help/ko
+@dirrmtry share/help/it/cheese/figures
+@dirrmtry share/help/it/cheese
+@dirrmtry share/help/it
+@dirrmtry share/help/hu/cheese/figures
+@dirrmtry share/help/hu/cheese
+@dirrmtry share/help/hu
+@dirrmtry share/help/gl/cheese/figures
+@dirrmtry share/help/gl/cheese
+@dirrmtry share/help/gl
+@dirrmtry share/help/fr/cheese/figures
+@dirrmtry share/help/fr/cheese
+@dirrmtry share/help/fr
+@dirrmtry share/help/fi/cheese/figures
+@dirrmtry share/help/fi/cheese
+@dirrmtry share/help/fi
+@dirrmtry share/help/es/cheese/figures
+@dirrmtry share/help/es/cheese
+@dirrmtry share/help/es
+@dirrmtry share/help/en_GB/cheese/figures
+@dirrmtry share/help/en_GB/cheese
+@dirrmtry share/help/en_GB
+@dirrmtry share/help/el/cheese/figures
+@dirrmtry share/help/el/cheese
+@dirrmtry share/help/el
+@dirrmtry share/help/de/cheese/figures
+@dirrmtry share/help/de/cheese
+@dirrmtry share/help/de
+@dirrmtry share/help/cs/cheese/figures
+@dirrmtry share/help/cs/cheese
+@dirrmtry share/help/cs
+@dirrmtry share/help/ca/cheese/figures
+@dirrmtry share/help/ca/cheese
+@dirrmtry share/help/ca
+@dirrmtry share/help/C/cheese/figures
+@dirrmtry share/help/C/cheese
+@dirrmtry share/help/C
+@dirrmtry share/help
+@dirrm %%DOCSDIR%%
+@dirrm %%DATADIR%%/pixmaps
+@dirrm %%DATADIR%%
+@dirrmtry share/applications
+@dirrm include/cheese
