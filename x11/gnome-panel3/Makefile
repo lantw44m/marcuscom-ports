@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.23 2011/10/07 21:32:19 kwm Exp $
+#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.24 2011/10/16 17:55:24 kwm Exp $
 #
 
 PORTNAME=	gnome-panel
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.2.1
 PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
@@ -55,8 +55,7 @@ GLIB_SCHEMAS=	org.gnome.gnome-panel.applet.fish.gschema.xml \
 		org.gnome.gnome-panel.object.gschema.xml \
 		org.gnome.gnome-panel.toplevel.gschema.xml
 
-#OPTIONS=	EVOLUTION "use the Evolution calendar if installed" on \
-#		BONOBO "Support for bonobo applets aka Gnome 2 applets" on
+#OPTIONS=	EVOLUTION "use the Evolution calendar if installed" on
 
 .if defined(PACKAGE_BUILDING)
 .undef WITHOUT_GNOME
@@ -72,15 +71,6 @@ WITH_GNOME=	yes
 CONFIGURE_ARGS+=--disable-eds
 #.endif
 
-#.if defined(WITH_BONOBO)
-#USE_GNOME+=	libbonoboui
-#CONFIGURE_ARGS+=--enable-bonobo
-#PLIST_SUB+=	BONOBO=""
-#.else
-#CONFIGURE_ARGS+=--disable-bonobo
-PLIST_SUB+=	BONOBO="@comment "
-#.endif
-
 post-patch:
 	@${FIND} ${WRKSRC} -type f | \
 		${XARGS} -n 10 ${REINPLACE_CMD} -e \
@@ -88,10 +78,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|xsltproc -o| xsltproc --nonet -o|g' \
 		${WRKSRC}/help/clock/Makefile.in \
 		${WRKSRC}/help/fish/Makefile.in
-
-post-install:
-	@${MKDIR} ${PREFIX}/lib/gnome-panel/modules
-	-${LOCALBASE}/bin/gio-querymodules ${PREFIX}/lib/gnome-panel/modules
 
 .include <bsd.port.post.mk>
 
