@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.18 2011/10/19 16:18:30 kwm Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.19 2012/04/27 13:26:22 kwm Exp $
 #
 
 PORTNAME=	gnome-games
-PORTVERSION=	3.2.1
+PORTVERSION=	3.4.2
 CATEGORIES=	games gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -27,7 +27,7 @@ LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile \
 CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-2.[0-9]*
 
 LATEST_LINK=	gnome-games3
-USE_XZ=	yes
+USE_XZ=		yes
 USE_PYTHON=	yes
 USE_GETTEXT=	yes
 INSTALLS_OMF=	yes
@@ -35,7 +35,7 @@ INSTALLS_ICONS=	yes
 USE_GL=		gl glu
 USE_XORG=	ice x11
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gconf2 pygobject3 \
+USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 pygobject3 \
 		librsvg2 desktopfileutils gnomedocutils
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
@@ -43,17 +43,22 @@ CONFIGURE_ARGS=	--with-gtk=3.0 --enable-games=all
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 
-GCONF_SCHEMAS=	gnect.schemas gnibbles.schemas gnobots2.schemas \
-		gnome-sudoku.schemas \
-		gnotski.schemas gtali.schemas \
-		quadrapassel.schemas
 GLIB_SCHEMAS=	org.gnome.Games.WindowState.gschema.xml \
 		org.gnome.glchess.gschema.xml \
 		org.gnome.glines.gschema.xml \
+		org.gnome.gnect.gschema.xml \
+		org.gnome.gnibbles.gschema.xml \
+		org.gnome.gnobots2.gschema.xml \
+		org.gnome.gnome-sudoku.gschema.xml \
 		org.gnome.gnomine.gschema.xml \
 		org.gnome.gnotravex.gschema.xml \
+		org.gnome.gnotski.gschema.xml \
+		org.gnome.gtali.gschema.xml \
 		org.gnome.iagno.gschema.xml \
-		org.gnome.mahjongg.gschema.xml
+		org.gnome.lightsoff.gschema.xml \
+		org.gnome.mahjongg.gschema.xml \
+		org.gnome.quadrapassel.gschema.xml \
+		org.gnome.swell-foop.gschema.xml
 
 MAN6=		glchess.6 glines.6 gnect.6 gnibbles.6 gnobots2.6 \
 		gnome-sudoku.6 gnomine.6 gnotravex.6 gnotski.6 \
