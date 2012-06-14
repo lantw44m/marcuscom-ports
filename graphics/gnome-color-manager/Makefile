@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gnome-color-manager/Makefile,v 1.2 2012/05/04 21:29:54 mezz Exp $
+#   $MCom: ports/graphics/gnome-color-manager/Makefile,v 1.3 2012/06/12 22:34:27 mezz Exp $
 #
 
 PORTNAME=	gnome-color-manager
@@ -25,7 +25,7 @@ LIB_DEPENDS=	lcms2.2:${PORTSDIR}/graphics/lcms2 \
 USE_XZ=		yes
 USE_XORG=	xrandr
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 vte3 desktopfileutils \
-		gnomedocutils
+		gnomedesktop3 gnomedocutils
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
