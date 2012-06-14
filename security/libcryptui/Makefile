@@ -3,11 +3,11 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/libcryptui/Makefile,v 1.2 2011/09/25 11:15:34 kwm Exp $
+#   $MCom: ports/security/libcryptui/Makefile,v 1.3 2011/11/17 00:00:34 kwm Exp $
 #
 
 PORTNAME=	libcryptui
-PORTVERSION=	3.2.2
+PORTVERSION=	3.4.1
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3

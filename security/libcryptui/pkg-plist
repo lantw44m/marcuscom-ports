@@ -15,23 +15,23 @@ share/cryptui/ui/seahorse-notify.xml
 share/cryptui/ui/seahorse-pgp-generate.xml
 share/cryptui/ui/seahorse-progress.xml
 share/dbus-1/services/org.gnome.seahorse.service
-share/doc/libcryptui/ch01.html
-share/doc/libcryptui/home.png
-share/doc/libcryptui/index.html
-share/doc/libcryptui/index.sgml
-share/doc/libcryptui/left.png
-share/doc/libcryptui/libcryptui-cryptui-defines.html
-share/doc/libcryptui/libcryptui-cryptui-key-chooser.html
-share/doc/libcryptui/libcryptui-cryptui-key-combo.html
-share/doc/libcryptui/libcryptui-cryptui-key-list.html
-share/doc/libcryptui/libcryptui-cryptui-key-store.html
-share/doc/libcryptui/libcryptui-cryptui-keyset.html
-share/doc/libcryptui/libcryptui-cryptui-marshal.html
-share/doc/libcryptui/libcryptui-cryptui.html
-share/doc/libcryptui/libcryptui.devhelp2
-share/doc/libcryptui/right.png
-share/doc/libcryptui/style.css
-share/doc/libcryptui/up.png
+%%DOCSDIR%%/ch01.html
+%%DOCSDIR%%/home.png
+%%DOCSDIR%%/index.html
+%%DOCSDIR%%/index.sgml
+%%DOCSDIR%%/left.png
+%%DOCSDIR%%/libcryptui-cryptui-defines.html
+%%DOCSDIR%%/libcryptui-cryptui-key-chooser.html
+%%DOCSDIR%%/libcryptui-cryptui-key-combo.html
+%%DOCSDIR%%/libcryptui-cryptui-key-list.html
+%%DOCSDIR%%/libcryptui-cryptui-key-store.html
+%%DOCSDIR%%/libcryptui-cryptui-keyset.html
+%%DOCSDIR%%/libcryptui-cryptui-marshal.html
+%%DOCSDIR%%/libcryptui-cryptui.html
+%%DOCSDIR%%/libcryptui.devhelp2
+%%DOCSDIR%%/right.png
+%%DOCSDIR%%/style.css
+%%DOCSDIR%%/up.png
 share/locale/ar/LC_MESSAGES/cryptui.mo
 share/locale/as/LC_MESSAGES/cryptui.mo
 share/locale/ast/LC_MESSAGES/cryptui.mo
@@ -135,40 +135,40 @@ share/pixmaps/cryptui/scalable/seahorse-sign.svg
 @dirrm share/pixmaps/cryptui/48x48
 @dirrm share/pixmaps/cryptui/22x22
 @dirrm share/pixmaps/cryptui
-@dirrm share/locale/zh_HK/LC_MESSAGES
-@dirrm share/locale/zh_HK
-@dirrm share/locale/ug/LC_MESSAGES
-@dirrm share/locale/ug
-@dirrm share/locale/te/LC_MESSAGES
-@dirrm share/locale/te
-@dirrm share/locale/sr@latin/LC_MESSAGES
-@dirrm share/locale/sr@latin
-@dirrm share/locale/si/LC_MESSAGES
-@dirrm share/locale/si
-@dirrm share/locale/rw/LC_MESSAGES
-@dirrm share/locale/rw
-@dirrm share/locale/oc/LC_MESSAGES
-@dirrm share/locale/oc
-@dirrm share/locale/mr/LC_MESSAGES
-@dirrm share/locale/mr
-@dirrm share/locale/mai/LC_MESSAGES
-@dirrm share/locale/mai
-@dirrm share/locale/ku/LC_MESSAGES
-@dirrm share/locale/ku
-@dirrm share/locale/en@shaw/LC_MESSAGES
-@dirrm share/locale/en@shaw
-@dirrm share/locale/dz/LC_MESSAGES
-@dirrm share/locale/dz
-@dirrm share/locale/ca@valencia/LC_MESSAGES
-@dirrm share/locale/ca@valencia
-@dirrm share/locale/bn_IN/LC_MESSAGES
-@dirrm share/locale/bn_IN
-@dirrm share/locale/be@latin/LC_MESSAGES
-@dirrm share/locale/be@latin
-@dirrm share/locale/ast/LC_MESSAGES
-@dirrm share/locale/ast
-@dirrm share/locale/as/LC_MESSAGES
-@dirrm share/locale/as
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
+@dirrmtry share/locale/te/LC_MESSAGES
+@dirrmtry share/locale/te
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
+@dirrmtry share/locale/si/LC_MESSAGES
+@dirrmtry share/locale/si
+@dirrmtry share/locale/rw/LC_MESSAGES
+@dirrmtry share/locale/rw
+@dirrmtry share/locale/oc/LC_MESSAGES
+@dirrmtry share/locale/oc
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
+@dirrmtry share/locale/mai/LC_MESSAGES
+@dirrmtry share/locale/mai
+@dirrmtry share/locale/ku/LC_MESSAGES
+@dirrmtry share/locale/ku
+@dirrmtry share/locale/en@shaw/LC_MESSAGES
+@dirrmtry share/locale/en@shaw
+@dirrmtry share/locale/dz/LC_MESSAGES
+@dirrmtry share/locale/dz
+@dirrmtry share/locale/ca@valencia/LC_MESSAGES
+@dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
+@dirrmtry share/locale/be@latin/LC_MESSAGES
+@dirrmtry share/locale/be@latin
+@dirrmtry share/locale/ast/LC_MESSAGES
+@dirrmtry share/locale/ast
+@dirrmtry share/locale/as/LC_MESSAGES
+@dirrmtry share/locale/as
 @dirrm %%DOCSDIR%%
 @dirrm share/cryptui/ui
 @dirrm share/cryptui
