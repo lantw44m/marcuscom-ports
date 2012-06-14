@@ -4,6 +4,7 @@ bin/panel-test-applets
 include/gnome-panel-4.0/libpanel-applet/panel-applet-enums.h
 include/gnome-panel-4.0/libpanel-applet/panel-applet-gconf.h
 include/gnome-panel-4.0/libpanel-applet/panel-applet.h
+lib/girepository-1.0/PanelApplet-4.0.typelib
 lib/libpanel-applet-4.a
 lib/libpanel-applet-4.la
 lib/libpanel-applet-4.so
@@ -67,6 +68,7 @@ share/doc/panel-applet-4.0/style.css
 share/doc/panel-applet-4.0/style.css.bak
 share/doc/panel-applet-4.0/up.png
 share/doc/panel-applet-4.0/up.png.bak
+share/gir-1.0/PanelApplet-4.0.gir
 %%DATADIR%%/4.0/applets/org.gnome.panel.ClockApplet.panel-applet
 %%DATADIR%%/4.0/applets/org.gnome.panel.FishApplet.panel-applet
 %%DATADIR%%/4.0/applets/org.gnome.panel.NotificationAreaApplet.panel-applet
