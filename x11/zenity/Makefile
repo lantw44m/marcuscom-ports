@@ -3,11 +3,11 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity/Makefile,v 1.115 2011/04/05 19:49:20 kwm Exp $
+#   $MCom: ports/x11/zenity/Makefile,v 1.116 2011/10/07 14:41:14 kwm Exp $
 #
 
 PORTNAME=	zenity
-PORTVERSION=	3.2.0
+PORTVERSION=	3.4.0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,7 +24,6 @@ USE_XORG=	x11
 USE_XZ=		yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-INSTALLS_OMF=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
