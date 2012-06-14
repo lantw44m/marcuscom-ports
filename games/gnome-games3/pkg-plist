@@ -161,8 +161,8 @@ share/applications/swell-foop.desktop
 @unexec [ -s %D/share/games/gnotski.28.scores ] || rm -f %D/share/games/gnotski.28.scores
 @unexec [ -s %D/share/games/gnotski.29.scores ] || rm -f %D/share/games/gnotski.29.scores
 @unexec [ -s %D/share/games/gnotski.3.scores ] || rm -f %D/share/games/gnotski.3.scores
-@unexec [ -s %D/share/games/gnotski.30.scores ] || rm -f %D/share/games/gnotski.31.scores
-@unexec [ -s %D/share/games/gnotski.31.scores ] || rm -f %D/share/games/gnotski.32.scores
+@unexec [ -s %D/share/games/gnotski.30.scores ] || rm -f %D/share/games/gnotski.30.scores
+@unexec [ -s %D/share/games/gnotski.31.scores ] || rm -f %D/share/games/gnotski.31.scores
 @unexec [ -s %D/share/games/gnotski.32.scores ] || rm -f %D/share/games/gnotski.32.scores
 @unexec [ -s %D/share/games/gnotski.33.scores ] || rm -f %D/share/games/gnotski.33.scores
 @unexec [ -s %D/share/games/gnotski.34.scores ] || rm -f %D/share/games/gnotski.34.scores

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.22 2012/06/14 11:41:55 kwm Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.23 2012/06/14 13:08:43 kwm Exp $
 #
 
 PORTNAME=	gnome-games
@@ -40,8 +40,7 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 pygobject3 \
 		librsvg2 desktopfileutils
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-gtk=3.0 --enable-games=all \
-		--disable-introspection
+CONFIGURE_ARGS=	--with-gtk=3.0 --enable-games=all
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
