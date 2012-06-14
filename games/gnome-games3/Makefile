@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.21 2012/06/13 21:48:48 mezz Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.22 2012/06/14 11:41:55 kwm Exp $
 #
 
 PORTNAME=	gnome-games
@@ -17,6 +17,7 @@ COMMENT=	The game applications package for the GNOME 3 Desktop Environment
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		yelp-tools>=0:${PORTSDIR}/textproc/yelp-tools \
+		itstool:${PORTSDIR}/textproc/itstool \
 		valac:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
