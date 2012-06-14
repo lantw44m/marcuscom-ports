@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.20 2012/06/13 21:47:59 mezz Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.21 2012/06/13 21:48:48 mezz Exp $
 #
 
 PORTNAME=	gnome-games
@@ -16,13 +16,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The game applications package for the GNOME 3 Desktop Environment
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
+		yelp-tools>=0:${PORTSDIR}/textproc/yelp-tools \
 		valac:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile \
 		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
-		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter
+		clutter-1.0.0:${PORTSDIR}/graphics/clutter
+RUN_DEPENDS=	dbus-launch:${PORTSDIR}/devel/dbus
 
 CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-2.[0-9]*
 
@@ -35,12 +36,13 @@ USE_GL=		gl glu
 USE_XORG=	ice x11
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 pygobject3 \
-		librsvg2 desktopfileutils gnomedocutils
+		librsvg2 desktopfileutils
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-gtk=3.0 --enable-games=all
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CONFIGURE_ARGS=	--with-gtk=3.0 --enable-games=all \
+		--disable-introspection
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.Games.WindowState.gschema.xml \
 		org.gnome.glchess.gschema.xml \
