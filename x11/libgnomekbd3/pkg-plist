@@ -1,9 +1,7 @@
-bin/gkbd-indicator-plugins-capplet
 bin/gkbd-keyboard-display
 include/libgnomekbd/gkbd-configuration.h
 include/libgnomekbd/gkbd-desktop-config.h
 include/libgnomekbd/gkbd-indicator-config.h
-include/libgnomekbd/gkbd-indicator-plugin.h
 include/libgnomekbd/gkbd-indicator.h
 include/libgnomekbd/gkbd-keyboard-config.h
 include/libgnomekbd/gkbd-keyboard-drawing.h
@@ -21,14 +19,11 @@ lib/libgnomekbdui.so.7
 libdata/pkgconfig/libgnomekbd.pc
 libdata/pkgconfig/libgnomekbdui.pc
 share/GConf/gsettings/libgnomekbd.convert
-share/applications/gkbd-indicator-plugins-capplet.desktop
 share/applications/gkbd-keyboard-display.desktop
 share/gir-1.0/Gkbd-3.0.gir
 %%DATADIR%%/icons/kbdled-caps-lock.svg
 %%DATADIR%%/icons/kbdled-num-lock.svg
 %%DATADIR%%/icons/kbdled-scroll-lock.svg
-%%DATADIR%%/ui/gkbd-indicator-plugins.ui
-%%DATADIR%%/ui/gkbd-indicator-plugins_add.ui
 %%DATADIR%%/ui/show-layout.ui
 share/locale/ar/LC_MESSAGES/libgnomekbd.mo
 share/locale/as/LC_MESSAGES/libgnomekbd.mo
@@ -45,8 +40,8 @@ share/locale/da/LC_MESSAGES/libgnomekbd.mo
 share/locale/de/LC_MESSAGES/libgnomekbd.mo
 share/locale/dz/LC_MESSAGES/libgnomekbd.mo
 share/locale/el/LC_MESSAGES/libgnomekbd.mo
-share/locale/en_GB/LC_MESSAGES/libgnomekbd.mo
 share/locale/en@shaw/LC_MESSAGES/libgnomekbd.mo
+share/locale/en_GB/LC_MESSAGES/libgnomekbd.mo
 share/locale/eo/LC_MESSAGES/libgnomekbd.mo
 share/locale/es/LC_MESSAGES/libgnomekbd.mo
 share/locale/et/LC_MESSAGES/libgnomekbd.mo
@@ -101,11 +96,6 @@ share/locale/vi/LC_MESSAGES/libgnomekbd.mo
 share/locale/zh_CN/LC_MESSAGES/libgnomekbd.mo
 share/locale/zh_HK/LC_MESSAGES/libgnomekbd.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomekbd.mo
-@dirrm %%DATADIR%%/ui
-@dirrm %%DATADIR%%/icons
-@dirrm %%DATADIR%%
-@dirrmtry share/applications
-@dirrm include/libgnomekbd
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
@@ -136,3 +126,8 @@ share/locale/zh_TW/LC_MESSAGES/libgnomekbd.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrm %%DATADIR%%/ui
+@dirrm %%DATADIR%%/icons
+@dirrm %%DATADIR%%
+@dirrmtry share/applications
+@dirrm include/libgnomekbd
