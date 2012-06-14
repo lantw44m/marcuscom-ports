@@ -217,6 +217,7 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.FileTransfer.serv
 %%DATADIR%%/icons/hicolor/scalable/status/user-busy.svg
 %%DATADIR%%/icons/hicolor/scalable/status/user-idle.svg
 %%DATADIR%%/icons/hicolor/scalable/status/user-offline.svg
+%%DATADIR%%/icons/hicolor/icon-theme.cache
 %%DATADIR%%/irc-networks.xml
 share/help/C/empathy/account-irc.page
 share/help/C/empathy/account-jabber.page

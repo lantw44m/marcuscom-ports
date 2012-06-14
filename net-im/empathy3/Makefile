@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.29 2012/06/13 04:26:36 mezz Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.30 2012/06/13 10:39:12 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	3.4.2.1
@@ -16,6 +16,7 @@ COMMENT=	GNOME IM client based around telepathy
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
+		itstool:${PORTSDIR}/textproc/itstool \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
 LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		pulse.0:${PORTSDIR}/audio/pulseaudio \
@@ -27,6 +28,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		notify.4:${PORTSDIR}/devel/libnotify \
 		gcr-3.1:${PORTSDIR}/security/gnome-keyring3 \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
+		clutter-gst-1.0:${PORTSDIR}/multimedia/clutter-gst \
 		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3 \
 		soup-2.4:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
