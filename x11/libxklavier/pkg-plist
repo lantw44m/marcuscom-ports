@@ -1,10 +1,11 @@
+include/libxklavier/xkl-enum-types.h
 include/libxklavier/xkl_config_item.h
 include/libxklavier/xkl_config_rec.h
 include/libxklavier/xkl_config_registry.h
 include/libxklavier/xkl_engine.h
 include/libxklavier/xkl_engine_marshal.h
-include/libxklavier/xkl-enum-types.h
 include/libxklavier/xklavier.h
+lib/girepository-1.0/Xkl-1.0.typelib
 lib/libxklavier.a
 lib/libxklavier.la
 lib/libxklavier.so
@@ -21,10 +22,10 @@ libdata/pkgconfig/libxklavier.pc
 %%DOCSDIR%%/left.png
 %%DOCSDIR%%/libxklavier-xkl-engine.html
 %%DOCSDIR%%/libxklavier-xklavier.html
-%%DOCSDIR%%/libxklavier.devhelp
 %%DOCSDIR%%/libxklavier.devhelp2
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/style.css
 %%DOCSDIR%%/up.png
+share/gir-1.0/Xkl-1.0.gir
 @dirrm %%DOCSDIR%%
 @dirrm include/libxklavier

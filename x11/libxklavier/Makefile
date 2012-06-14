@@ -3,11 +3,11 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libxklavier/Makefile,v 1.53 2010/01/12 02:18:34 avl Exp $
+#   $MCom: ports/x11/libxklavier/Makefile,v 1.55 2011/02/22 16:28:25 kwm Exp $
 #
 
 PORTNAME=	libxklavier
-PORTVERSION=	5.1
+PORTVERSION=	5.2.1
 PORTEPOCH=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
@@ -20,7 +20,7 @@ RUN_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp \
     		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 USE_XORG=	x11 xkbfile
-USE_BZIP2=	yes
+USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack libxml2 glib20 ltverhack:12
 USE_LDCONFIG=	yes
