@@ -20,9 +20,6 @@ lib/control-center-1/panels/libinfo.so
 lib/control-center-1/panels/libkeyboard.a
 lib/control-center-1/panels/libkeyboard.la
 lib/control-center-1/panels/libkeyboard.so
-lib/control-center-1/panels/libmedia.a
-lib/control-center-1/panels/libmedia.la
-lib/control-center-1/panels/libmedia.so
 lib/control-center-1/panels/libmouse-properties.a
 lib/control-center-1/panels/libmouse-properties.la
 lib/control-center-1/panels/libmouse-properties.so
@@ -50,12 +47,6 @@ lib/control-center-1/panels/libuniversal-access.so
 lib/control-center-1/panels/libuser-accounts.a
 lib/control-center-1/panels/libuser-accounts.la
 lib/control-center-1/panels/libuser-accounts.so
-lib/control-center-1/panels/libwacom-properties.a
-lib/control-center-1/panels/libwacom-properties.la
-lib/control-center-1/panels/libwacom-properties.so
-lib/libgnome-control-center.la
-lib/libgnome-control-center.so
-lib/libgnome-control-center.so.1
 libdata/pkgconfig/gnome-keybindings.pc
 share/applications/gnome-background-panel.desktop
 share/applications/gnome-color-panel.desktop
@@ -64,7 +55,6 @@ share/applications/gnome-datetime-panel.desktop
 share/applications/gnome-display-panel.desktop
 share/applications/gnome-info-panel.desktop
 share/applications/gnome-keyboard-panel.desktop
-share/applications/gnome-media-panel.desktop
 share/applications/gnome-mouse-panel.desktop
 share/applications/gnome-online-accounts-panel.desktop
 share/applications/gnome-power-panel.desktop
@@ -74,7 +64,6 @@ share/applications/gnome-screen-panel.desktop
 share/applications/gnome-sound-panel.desktop
 share/applications/gnome-universal-access-panel.desktop
 share/applications/gnome-user-accounts-panel.desktop
-share/applications/gnome-wacom-panel.desktop
 share/desktop-directories/gnomecc.directory
 %%DATADIR%%/datetime/backward
 %%DATADIR%%/icons/hicolor/16x16/devices/audio-headset.svg
@@ -116,6 +105,7 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/icons/hicolor/48x48/devices/audio-subwoofer.svg
 %%DATADIR%%/keybindings/00-multimedia.xml
 %%DATADIR%%/keybindings/01-launchers.xml
+%%DATADIR%%/keybindings/01-screenshot.xml
 %%DATADIR%%/keybindings/01-system.xml
 %%DATADIR%%/keybindings/50-accessibility.xml
 %%DATADIR%%/pixmaps/double-click-maybe.png
@@ -147,8 +137,6 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/pixmaps/right-ring-finger.svg
 %%DATADIR%%/pixmaps/right-thumb.png
 %%DATADIR%%/pixmaps/right-thumb.svg
-%%DATADIR%%/pixmaps/wacom-stylus.svg
-%%DATADIR%%/pixmaps/wacom-tablet.svg
 %%DATADIR%%/sounds/gnome-sounds-default.xml
 %%DATADIR%%/ui/GnomeLogoVerticalMedium.svg
 %%DATADIR%%/ui/background/background.ui
@@ -201,12 +189,10 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/ui/datetime/timezone_9.png
 %%DATADIR%%/ui/display-capplet.ui
 %%DATADIR%%/ui/gnome-keyboard-panel.ui
-%%DATADIR%%/ui/gnome-media-properties.ui
 %%DATADIR%%/ui/gnome-mouse-properties.ui
 %%DATADIR%%/ui/gnome-region-panel-layout-chooser.ui
 %%DATADIR%%/ui/gnome-region-panel-options-dialog.ui
 %%DATADIR%%/ui/gnome-region-panel.ui
-%%DATADIR%%/ui/gnome-wacom-properties.ui
 %%DATADIR%%/ui/info.ui
 %%DATADIR%%/ui/language-chooser.ui
 %%DATADIR%%/ui/online-accounts.ui
@@ -221,47 +207,7 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/ui/user-accounts/password-dialog.ui
 %%DATADIR%%/ui/user-accounts/photo-dialog.ui
 %%DATADIR%%/ui/user-accounts/user-accounts-dialog.ui
-share/gnome/help/control-center/C/config-accessibility-keyboard.xml
-share/gnome/help/control-center/C/config-background.xml
-share/gnome/help/control-center/C/config-behavior.xml
-share/gnome/help/control-center/C/config-cds.xml
-share/gnome/help/control-center/C/config-default-apps.xml
-share/gnome/help/control-center/C/config-file-type.xml
-share/gnome/help/control-center/C/config-hints.xml
-share/gnome/help/control-center/C/config-html.xml
-share/gnome/help/control-center/C/config-kbd.xml
-share/gnome/help/control-center/C/config-keybindings.xml
-share/gnome/help/control-center/C/config-mouse.xml
-share/gnome/help/control-center/C/config-screensaver.xml
-share/gnome/help/control-center/C/config-themes.xml
-share/gnome/help/control-center/C/control-center.xml
-share/gnome/help/control-center/ca/control-center.xml
-share/gnome/help/control-center/ca@valencia/control-center.xml
-share/gnome/help/control-center/cs/control-center.xml
-share/gnome/help/control-center/de/control-center.xml
-share/gnome/help/control-center/el/control-center.xml
-share/gnome/help/control-center/en_GB/control-center.xml
-share/gnome/help/control-center/es/control-center.xml
-share/gnome/help/control-center/fr/control-center.xml
-share/gnome/help/control-center/gl/control-center.xml
-share/gnome/help/control-center/it/control-center.xml
-share/gnome/help/control-center/ja/control-center.xml
-share/gnome/help/control-center/ko/control-center.xml
-share/gnome/help/control-center/oc/control-center.xml
-share/gnome/help/control-center/pa/control-center.xml
-share/gnome/help/control-center/pl/control-center.xml
-share/gnome/help/control-center/pt/control-center.xml
-share/gnome/help/control-center/pt_BR/control-center.xml
-share/gnome/help/control-center/ru/control-center.xml
-share/gnome/help/control-center/sl/control-center.xml
-share/gnome/help/control-center/sv/control-center.xml
-share/gnome/help/control-center/te/control-center.xml
-share/gnome/help/control-center/th/control-center.xml
-share/gnome/help/control-center/uk/control-center.xml
-share/gnome/help/control-center/vi/control-center.xml
-share/gnome/help/control-center/zh_CN/control-center.xml
-share/gnome/help/control-center/zh_HK/control-center.xml
-share/gnome/help/control-center/zh_TW/control-center.xml
+%%DATADIR%%/ui/zoom-options.ui
 share/icons/hicolor/16x16/apps/gnome-power-manager.png
 share/icons/hicolor/16x16/apps/goa-panel.png
 share/icons/hicolor/16x16/apps/multimedia-volume-control.png
@@ -475,34 +421,6 @@ share/locale/zh_HK/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/zu/LC_MESSAGES/gnome-control-center-2.0.mo
-share/omf/control-center/control-center-C.omf
-share/omf/control-center/control-center-ca.omf
-share/omf/control-center/control-center-ca@valencia.omf
-share/omf/control-center/control-center-cs.omf
-share/omf/control-center/control-center-de.omf
-share/omf/control-center/control-center-el.omf
-share/omf/control-center/control-center-en_GB.omf
-share/omf/control-center/control-center-es.omf
-share/omf/control-center/control-center-fr.omf
-share/omf/control-center/control-center-gl.omf
-share/omf/control-center/control-center-it.omf
-share/omf/control-center/control-center-ja.omf
-share/omf/control-center/control-center-ko.omf
-share/omf/control-center/control-center-oc.omf
-share/omf/control-center/control-center-pa.omf
-share/omf/control-center/control-center-pl.omf
-share/omf/control-center/control-center-pt.omf
-share/omf/control-center/control-center-pt_BR.omf
-share/omf/control-center/control-center-ru.omf
-share/omf/control-center/control-center-sl.omf
-share/omf/control-center/control-center-sv.omf
-share/omf/control-center/control-center-te.omf
-share/omf/control-center/control-center-th.omf
-share/omf/control-center/control-center-uk.omf
-share/omf/control-center/control-center-vi.omf
-share/omf/control-center/control-center-zh_CN.omf
-share/omf/control-center/control-center-zh_HK.omf
-share/omf/control-center/control-center-zh_TW.omf
 share/pixmaps/faces/astronaut.jpg
 share/pixmaps/faces/baseball.png
 share/pixmaps/faces/butterfly.png
@@ -527,6 +445,7 @@ share/pixmaps/faces/sunflower.jpg
 share/pixmaps/faces/sunset.jpg
 share/pixmaps/faces/tennis-ball.png
 share/pixmaps/faces/yellow-rose.jpg
+share/polkit-1/actions/org.gnome.controlcenter.datetime.policy
 share/sounds/gnome/default/alerts/bark.ogg
 share/sounds/gnome/default/alerts/drip.ogg
 share/sounds/gnome/default/alerts/glass.ogg
@@ -535,7 +454,6 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrm share/sounds/gnome/default
 @dirrm share/sounds/gnome
 @dirrmtry share/pixmaps/faces
-@dirrm share/omf/control-center
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -596,35 +514,6 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm share/gnome/help/control-center/zh_TW
-@dirrm share/gnome/help/control-center/zh_HK
-@dirrm share/gnome/help/control-center/zh_CN
-@dirrm share/gnome/help/control-center/vi
-@dirrm share/gnome/help/control-center/uk
-@dirrm share/gnome/help/control-center/th
-@dirrm share/gnome/help/control-center/te
-@dirrm share/gnome/help/control-center/sv
-@dirrm share/gnome/help/control-center/sl
-@dirrm share/gnome/help/control-center/ru
-@dirrm share/gnome/help/control-center/pt_BR
-@dirrm share/gnome/help/control-center/pt
-@dirrm share/gnome/help/control-center/pl
-@dirrm share/gnome/help/control-center/pa
-@dirrm share/gnome/help/control-center/oc
-@dirrm share/gnome/help/control-center/ko
-@dirrm share/gnome/help/control-center/ja
-@dirrm share/gnome/help/control-center/it
-@dirrm share/gnome/help/control-center/gl
-@dirrm share/gnome/help/control-center/fr
-@dirrm share/gnome/help/control-center/es
-@dirrm share/gnome/help/control-center/en_GB
-@dirrm share/gnome/help/control-center/el
-@dirrm share/gnome/help/control-center/de
-@dirrm share/gnome/help/control-center/cs
-@dirrm share/gnome/help/control-center/ca@valencia
-@dirrm share/gnome/help/control-center/ca
-@dirrm share/gnome/help/control-center/C
-@dirrm share/gnome/help/control-center
 @dirrm %%DATADIR%%/ui/user-accounts
 %%CUPS%%@dirrm %%DATADIR%%/ui/printers
 @dirrm %%DATADIR%%/ui/datetime

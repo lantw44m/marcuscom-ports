@@ -3,11 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.35 2012/04/01 03:52:16 mezz Exp $
+#   $MCom: ports/sysutils/gnome-control-center3/Makefile,v 1.36 2012/06/13 22:34:57 mezz Exp $
 #
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.2.3
+PORTVERSION=	3.4.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -39,7 +39,7 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 CONFLICTS=	gnome-control-center-2.[0-9]* gnome-media-2.[0-9]*
 
 LATEST_LINK=	gnome-control-center3
-USE_XZ=	yes
+USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 WANT_GNOME=	yes
@@ -47,7 +47,6 @@ USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack libxml2 gnomemenus3 \
 		libgnomekbd3 desktopfileutils gnomedesktop3 gconf2
 USE_XORG=	xscrnsaver x11 xxf86misc kbproto
 GNU_CONFIGURE=	yes
-INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-libsocialweb=yes
@@ -79,6 +78,10 @@ LIB_DEPENDS+=	cheese.2:${PORTSDIR}/multimedia/cheese3
 .else
 CONFIGURE_ARGS+=--without-cheese
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|datetime wacom|datetime|g' \
+		${WRKSRC}/panels/Makefile.in
 
 post-install:
 	@-update-desktop-database
