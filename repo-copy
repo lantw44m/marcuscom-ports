@@ -17,6 +17,8 @@ deskutils/gnome-utils -> deskutils/gnome-screenshot
 deskutils/gnome-utils -> deskutils/gnome-search-tool
 deskutils/gnome-utils -> deskutils/gnome-system-log
 deskutils/gucharmap -> desktutils/gucharmap3
+devel/anjuta -> devel/anjuta3
+devel/anjuta-extras -> devel/anjuta-extras3
 devel/glade3 -> devel/glade
 devel/libgdata -> devel/libgdata06
 devel/py-gobject -> devel/py-gobject3
