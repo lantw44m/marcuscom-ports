@@ -92,7 +92,6 @@ share/glade/pixmaps/atk.png
 share/glade/pixmaps/deprecated-16x16.png
 share/glade/pixmaps/deprecated-22x22.png
 share/glade/pixmaps/devhelp.png
-share/glade/pixmaps/drag-resize.png
 share/glade/pixmaps/fixed-bg.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-aboutdialog.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-accelgroup.png
@@ -156,6 +155,7 @@ share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-iconfactory.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-iconview.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-image.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-imagemenuitem.png
+share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-infobar.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-inputdialog.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-label.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-layout.png
@@ -194,6 +194,7 @@ share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-spinbutton.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-spinner.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-statusbar.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-statusicon.png
+share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-switch.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-table.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-tearoffmenuitem.png
 share/glade/pixmaps/hicolor/16x16/actions/widget-gtk-textbuffer.png
@@ -286,6 +287,7 @@ share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-iconfactory.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-iconview.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-image.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-imagemenuitem.png
+share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-infobar.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-inputdialog.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-label.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-layout.png
@@ -324,6 +326,7 @@ share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-spinbutton.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-spinner.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-statusbar.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-statusicon.png
+share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-switch.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-table.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-tearoffmenuitem.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-textbuffer.png
@@ -356,13 +359,15 @@ share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-window.png
 share/glade/pixmaps/hicolor/22x22/actions/widget-gtk-windowgroup.png
 share/glade/pixmaps/placeholder.png
 share/glade/pixmaps/plus.png
-share/glade/pixmaps/selector.png
 share/gnome/help/glade/C/figures/main-window.png
 share/gnome/help/glade/C/glade.xml
 share/gnome/help/glade/C/legal.xml
 share/gnome/help/glade/bg/figures/main-window.png
 share/gnome/help/glade/bg/glade.xml
 share/gnome/help/glade/bg/legal.xml
+share/gnome/help/glade/ca/figures/main-window.png
+share/gnome/help/glade/ca/glade.xml
+share/gnome/help/glade/ca/legal.xml
 share/gnome/help/glade/cs/figures/main-window.png
 share/gnome/help/glade/cs/glade.xml
 share/gnome/help/glade/cs/legal.xml
@@ -384,6 +389,9 @@ share/gnome/help/glade/eu/legal.xml
 share/gnome/help/glade/fr/figures/main-window.png
 share/gnome/help/glade/fr/glade.xml
 share/gnome/help/glade/fr/legal.xml
+share/gnome/help/glade/gl/figures/main-window.png
+share/gnome/help/glade/gl/glade.xml
+share/gnome/help/glade/gl/legal.xml
 share/gnome/help/glade/hi/figures/main-window.png
 share/gnome/help/glade/hi/glade.xml
 share/gnome/help/glade/hi/legal.xml
@@ -450,6 +458,7 @@ share/locale/hy/LC_MESSAGES/glade.mo
 share/locale/id/LC_MESSAGES/glade.mo
 share/locale/it/LC_MESSAGES/glade.mo
 share/locale/ja/LC_MESSAGES/glade.mo
+share/locale/km/LC_MESSAGES/glade.mo
 share/locale/ko/LC_MESSAGES/glade.mo
 share/locale/lt/LC_MESSAGES/glade.mo
 share/locale/lv/LC_MESSAGES/glade.mo
@@ -488,12 +497,14 @@ share/locale/zh_HK/LC_MESSAGES/glade.mo
 share/locale/zh_TW/LC_MESSAGES/glade.mo
 share/omf/glade/glade-C.omf
 share/omf/glade/glade-bg.omf
+share/omf/glade/glade-ca.omf
 share/omf/glade/glade-cs.omf
 share/omf/glade/glade-de.omf
 share/omf/glade/glade-el.omf
 share/omf/glade/glade-en_GB.omf
 share/omf/glade/glade-es.omf
 share/omf/glade/glade-eu.omf
+share/omf/glade/glade-gl.omf
 share/omf/glade/glade-fr.omf
 share/omf/glade/glade-hi.omf
 share/omf/glade/glade-it.omf
@@ -505,3 +516,63 @@ share/omf/glade/glade-sl.omf
 share/omf/glade/glade-sv.omf
 share/omf/glade/glade-uk.omf
 share/omf/glade/glade-zh_CN.omf
+@dirrm share/omf/glade
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
+@dirrm share/glade/pixmaps/hicolor/22x22/actions
+@dirrm share/glade/pixmaps/hicolor/22x22
+@dirrm share/glade/pixmaps/hicolor/16x16/actions
+@dirrm share/glade/pixmaps/hicolor/16x16
+@dirrm share/glade/pixmaps/hicolor
+@dirrm share/glade/pixmaps
+@dirrm share/gnome/help/glade/zh_CN/figures
+@dirrm share/gnome/help/glade/zh_CN
+@dirrm share/gnome/help/glade/uk/figures
+@dirrm share/gnome/help/glade/uk
+@dirrm share/gnome/help/glade/sv/figures
+@dirrm share/gnome/help/glade/sv
+@dirrm share/gnome/help/glade/sl/figures
+@dirrm share/gnome/help/glade/sl
+@dirrm share/gnome/help/glade/ru/figures
+@dirrm share/gnome/help/glade/ru
+@dirrm share/gnome/help/glade/pt_BR/figures
+@dirrm share/gnome/help/glade/pt_BR
+@dirrm share/gnome/help/glade/oc/figures
+@dirrm share/gnome/help/glade/oc
+@dirrm share/gnome/help/glade/ja/figures
+@dirrm share/gnome/help/glade/ja
+@dirrm share/gnome/help/glade/it/figures
+@dirrm share/gnome/help/glade/it
+@dirrm share/gnome/help/glade/hi/figures
+@dirrm share/gnome/help/glade/hi
+@dirrm share/gnome/help/glade/gl/figures
+@dirrm share/gnome/help/glade/gl
+@dirrm share/gnome/help/glade/fr/figures
+@dirrm share/gnome/help/glade/fr
+@dirrm share/gnome/help/glade/eu/figures
+@dirrm share/gnome/help/glade/eu
+@dirrm share/gnome/help/glade/es/figures
+@dirrm share/gnome/help/glade/es
+@dirrm share/gnome/help/glade/en_GB/figures
+@dirrm share/gnome/help/glade/en_GB
+@dirrm share/gnome/help/glade/el/figures
+@dirrm share/gnome/help/glade/el
+@dirrm share/gnome/help/glade/de/figures
+@dirrm share/gnome/help/glade/de
+@dirrm share/gnome/help/glade/cs/figures
+@dirrm share/gnome/help/glade/cs
+@dirrm share/gnome/help/glade/ca/figures
+@dirrm share/gnome/help/glade/ca
+@dirrm share/gnome/help/glade/bg/figures
+@dirrm share/gnome/help/glade/bg
+@dirrm share/gnome/help/glade/C/figures
+@dirrm share/gnome/help/glade/C
+@dirrm share/gnome/help/glade
+@dirrm share/glade/catalogs
+@dirrm share/glade
+@dirrm share/doc/gladeui-2
+@dirrmtry share/applications
+@dirrm lib/glade/modules
+@dirrm lib/glade
+@dirrm include/libgladeui-2.0/gladeui
+@dirrm include/libgladeui-2.0
