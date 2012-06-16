@@ -3,11 +3,11 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.50 2011/08/11 19:48:45 kwm Exp $
+#   $MCom: ports/devel/glade3/Makefile,v 1.51 2011/10/13 09:51:42 kwm Exp $
 #
 
 PORTNAME=	glade3
-PORTVERSION=	3.8.1
+PORTVERSION=	3.8.2
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
