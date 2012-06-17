@@ -1,5 +1,5 @@
---- js/ui/extensionSystem.js.orig	2012-04-10 20:14:57.000000000 +0200
-+++ js/ui/extensionSystem.js	2012-05-25 22:43:38.000000000 +0200
+--- js/ui/extensionSystem.js.orig	2012-06-16 10:04:12.000000000 -0500
++++ js/ui/extensionSystem.js	2012-06-16 10:06:45.000000000 -0500
 @@ -8,7 +8,6 @@
  const Gio = imports.gi.Gio;
  const St = imports.gi.St;
@@ -24,7 +24,16 @@
  function _getCertFile() {
      let localCert = GLib.build_filenamev([global.userdatadir, 'extensions.gnome.org.crt']);
      if (GLib.file_test(localCert, GLib.FileTest.EXISTS))
-@@ -75,14 +69,6 @@
+@@ -51,8 +45,6 @@
+         return Config.SHELL_SYSTEM_CA_FILE;
+ }
+ 
+-_httpSession.ssl_ca_file = _getCertFile();
+-
+ // Arrays of uuids
+ var enabledExtensions;
+ // Contains the order that extensions were enabled in.
+@@ -75,14 +67,6 @@
                     shell_version: Config.PACKAGE_VERSION,
                     api_version: API_VERSION.toString() };
  
@@ -39,7 +48,7 @@
  }
  
  function uninstallExtensionFromUUID(uuid) {
-@@ -110,10 +96,6 @@
+@@ -110,10 +94,6 @@
  }
  
  function gotExtensionZipFile(session, message, uuid) {
@@ -50,7 +59,7 @@
  
      // FIXME: use a GFile mkstemp-type method once one exists
      let fd, tmpzip;
-@@ -126,7 +108,6 @@
+@@ -126,7 +106,6 @@
  
      let stream = new Gio.UnixOutputStream({ fd: fd });
      let dir = ExtensionUtils.userExtensionsDir.get_child(uuid);
@@ -58,7 +67,7 @@
      stream.close(null);
      let [success, pid] = GLib.spawn_async(null,
                                            ['unzip', '-uod', dir.get_path(), '--', tmpzip],
-@@ -440,12 +421,6 @@
+@@ -440,12 +419,6 @@
                         api_version: API_VERSION.toString() };
  
          let url = REPOSITORY_URL_DOWNLOAD.format(this._uuid);
