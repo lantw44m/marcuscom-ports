@@ -7,7 +7,7 @@
 
 PORTNAME=	drwright
 PORTVERSION=	3.2.5
-CATEGORIES=	deskutils gnome
+CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
