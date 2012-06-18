@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-ews/Makefile,v 1.2 2012/01/22 12:32:56 kwm Exp $
+#   $MCom: ports/mail/evolution-ews/Makefile,v 1.3 2012/06/12 22:09:39 mezz Exp $
 #
 
 PORTNAME=	evolution-ews
-PORTVERSION=	3.4.2
+PORTVERSION=	3.4.3
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -29,8 +29,8 @@ USE_GMAKE=	yes
 USE_BDB=	41
 USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack ltasneededhack
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 VERSION=	3.4
 PLIST_SUB=	VERSION=${VERSION}
