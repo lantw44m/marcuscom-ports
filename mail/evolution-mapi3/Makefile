@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.13 2011/10/19 23:35:05 kwm Exp $
+#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.14 2012/06/12 22:22:34 mezz Exp $
 #
 
 PORTNAME=	evolution-mapi
-PORTVERSION=	3.4.2
+PORTVERSION=	3.4.3
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,14 +15,15 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Evolution plugin to connect to Microsoft Exchange servers
 
-BUILD_DEPENDS=	evolution>=2.91.0:${PORTSDIR}/mail/evolution3
+BUILD_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 LIB_DEPENDS=	mapi.0:${PORTSDIR}/mail/libmapi
-RUN_DEPENDS=	evolution>=2.91.0:${PORTSDIR}/mail/evolution3
+RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 
 CONFLICTS=	evolution-mapi-2.[0-9]*
 
-BROKEN=		broken with evo 3.2.x, needs newer libmapi which needs samba4 update.
+BROKEN=		needs newer libmapi which needs samba4 update.
 
+EVO_VER=	3.4.3
 LATEST_LINK=	evolution-mapi3
 USE_XZ=		yes
 USE_GETTEXT=	yes
