@@ -3,11 +3,11 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.23 2012/04/27 02:54:37 mezz Exp $
+#   $MCom: ports/mail/evolution3/Makefile,v 1.24 2012/05/25 08:20:01 kwm Exp $
 #
 
 PORTNAME=	evolution
-PORTVERSION=	3.4.2
+PORTVERSION=	3.4.3
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +17,7 @@ COMMENT=	An integrated mail, calendar and address book distributed suite
 
 LIB_DEPENDS=	nss3:${PORTSDIR}/security/nss \
 		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
-		unique-3.0:${PORTSDIR}/x11-toolkits/libunique3 \
+		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		notify:${PORTSDIR}/devel/libnotify
 
 CONFLICTS=	evolution-2.[0-9]*
