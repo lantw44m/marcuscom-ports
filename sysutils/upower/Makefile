@@ -3,24 +3,25 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/upower/Makefile,v 1.28 2011/12/18 23:11:16 kwm Exp $
+#   $MCom: ports/sysutils/upower/Makefile,v 1.29 2012/06/17 03:27:14 mezz Exp $
 #
 
 PORTNAME=	upower
-PORTVERSION=	0.9.16
+PORTVERSION=	0.9.17
 CATEGORIES=	sysutils
 MASTER_SITES=	http://upower.freedesktop.org/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	D-Bus daemon for simplifying power management tasks
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
-    		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
-RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
-
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+LIB_DEPENDS=	polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
+    		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
+RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
+
 USE_GETTEXT=	yes
 USE_XZ=		yes
 USE_GMAKE=	yes
@@ -30,8 +31,8 @@ USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
 		--localstatedir=/var
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	GTKDOC="false"
 
 .if defined(NO_INSTALL_MANPAGES)
