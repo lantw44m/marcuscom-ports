@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/orca/Makefile,v 1.93 2011/04/30 20:43:12 mezz Exp $
+#   $MCom: ports/accessibility/orca/Makefile,v 1.94 2011/06/11 18:55:55 mezz Exp $
 #
 
 PORTNAME=	orca
@@ -24,7 +24,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_SITELIBDIR}/pyatspi/__init__.py:${PORTSDIR}/accessibility/at-spi \
 		${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg
 
-CONFLICTS=	orca-3.[0-9]*
+CONFLICTS=	orca-3.[0-9]* py*-json-py-[0-9]*
 
 LATEST_LINK=	gnome-orca
 
@@ -36,8 +36,8 @@ USE_GNOME=	gnomeprefix gnomehack libgnomeui gnomespeech pygnome2 \
 		pygnomedesktop
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		orca.1
 

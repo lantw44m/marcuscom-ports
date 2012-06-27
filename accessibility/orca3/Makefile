@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/accessibility/orca3/Makefile,v 1.4 2012/06/13 21:09:53 mezz Exp $
 #
 
 PORTNAME=	orca
 PORTVERSION=	3.4.2
+PORTREVISION=	1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,15 +18,15 @@ COMMENT=	Scriptable screen reader
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg \
-		${PYTHON_SITELIBDIR}/cairo/__init__.py:${PORTSDIR}/graphics/py-cairo \
-		${PYTHON_SITELIBDIR}/json.py:${PORTSDIR}/devel/py-json-py
+		${PYTHON_SITELIBDIR}/cairo/__init__.py:${PORTSDIR}/graphics/py-cairo
 LIB_DEPENDS=	atspi.0:${PORTSDIR}/accessibility/at-spi2-core
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg \
-		${PYTHON_SITELIBDIR}/cairo/__init__.py:${PORTSDIR}/graphics/py-cairo \
-		${PYTHON_SITELIBDIR}/json.py:${PORTSDIR}/devel/py-json-py
+		${PYTHON_SITELIBDIR}/cairo/__init__.py:${PORTSDIR}/graphics/py-cairo
 
-CONFLICTS=	orca-2.[0-9]*
+# conflict with py*-json-py because orca uses the json from python itself
+# and py*-json-py shadows this.
+CONFLICTS=	orca-2.[0-9]* py*-json-py-[0-9]*
 
 LATEST_LINK=	gnome-orca3
 
