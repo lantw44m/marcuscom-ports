@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/devel/gamin/Makefile,v 1.8 2011/09/17 09:24:14 kwm Exp $
+#    $MCom: ports/devel/gamin/Makefile,v 1.9 2012/01/17 04:02:05 ahze Exp $
 #
 
 PORTNAME=	gamin
@@ -22,23 +22,32 @@ USE_GNOME?=	gnomehack _glib20 pkgconfig
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS?=--with-html-dir=${PREFIX}/share/doc \
 		--without-python
-CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS} -DHAVE_LINUX" \
-		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
-CPPFLAGS=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CPPFLAGS+=	-DHAVE_LINUX -I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 
 CONFLICTS=	fam-[0-9]*
 
 GNU_CONFIGURE=	yes
 
 .if !defined(GAMIN_SLAVE)
-OPTIONS=	GAM_POLLER "Use gamin's poller instead of kqueue's" off
+OPTIONS_DEFINE=	GAM_POLLER LIBINOTIFY
+GAM_POLLER_DESC=Use gamin's poller instead of kqueue's
+LIBINOTIFY_DESC=Use libinotify as the FAM backend
 .endif
 
 .include <bsd.port.pre.mk>
 
-.if !defined(GAMIN_SLAVE)
-.if defined(WITH_GAM_POLLER)
+.if !defined(GAM_SLAVE)
+.if ${PORT_OPTIONS:MGAM_POLLER}
 CPPFLAGS+=	-DUSE_GAMIN_POLLER=1
+.endif
+
+.if ${PORT_OPTIONS:MLIBINOTIFY}
+CONFIGURE_ARGS+=--enable-inotify
+LDFLAGS+=	-L${LOCALBASE}/lib -linotify
+LIB_DEPENDS+=	inotify:${PORTSDIR}/devel/libinotify
+.else
+CONFIGURE_ARGS+=--disable-inotify
 .endif
 .endif
 
