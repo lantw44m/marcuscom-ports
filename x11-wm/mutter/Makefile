@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.33 2012/05/25 20:02:15 kwm Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.34 2012/05/27 07:38:18 kwm Exp $
 #
 
 PORTNAME=	mutter
@@ -38,7 +38,7 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	LIBS="-lexecinfo"
-#CONFIGURE_ARGS=	--enable-compile-warnings=maximum
+CONFIGURE_ARGS=	--enable-compile-warnings=maximum
 GLIB_SCHEMAS=	org.gnome.mutter.gschema.xml
 
 MAN1=		mutter-message.1 mutter-theme-viewer.1 \
