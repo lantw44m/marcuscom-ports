@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.30 2012/06/13 10:39:12 kwm Exp $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.31 2012/06/14 10:46:30 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	3.4.2.1
@@ -26,7 +26,7 @@ LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
 		telepathy-logger.2:${PORTSDIR}/net-im/telepathy-logger \
 		folks-telepathy.25:${PORTSDIR}/net-im/folks \
 		notify.4:${PORTSDIR}/devel/libnotify \
-		gcr-3.1:${PORTSDIR}/security/gnome-keyring3 \
+		gcr-3:${PORTSDIR}/security/gcr \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		clutter-gst-1.0:${PORTSDIR}/multimedia/clutter-gst \
 		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3 \
