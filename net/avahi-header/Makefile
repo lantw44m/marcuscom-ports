@@ -3,10 +3,10 @@
 # Whom:					Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-header/Makefile,v 1.2 2011/03/31 02:06:52 mezz Exp $
+#   $MCom: ports/net/avahi-header/Makefile,v 1.3 2011/04/15 06:44:57 kwm Exp $
 #
 
-PORTREVISION=	1
+PORTREVISION=	0
 CATEGORIES=	net
 PKGNAMESUFFIX=	-header
 

@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-app/Makefile,v 1.21 2011/09/13 11:01:32 kwm Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.22 2012/01/15 15:56:09 ahze Exp $
 #
 
 PORTNAME=	avahi
-PORTVERSION=	0.6.30
-PORTREVISION?=	1
+PORTVERSION=	0.6.31
+PORTREVISION?=	0
 CATEGORIES?=	net dns
 MASTER_SITES=	http://www.avahi.org/download/
 PKGNAMESUFFIX?=	-app
