@@ -3,12 +3,12 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese/Makefile,v 1.65 2011/04/25 19:18:46 mezz Exp $
+#   $MCom: ports/multimedia/cheese/Makefile,v 1.66 2011/04/30 20:43:21 mezz Exp $
 #
 
 PORTNAME=	cheese
 PORTVERSION=	2.32.0
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -28,13 +28,13 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack evolutiondataserver librsvg2 \
 		gnomedocutils gnomedesktop
 USE_GETTEXT=	yes
-USE_GSTREAMER=	good v4l2
+USE_GSTREAMER=	gconf good ogg theora v4l2 vorbis
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 DOCS=		AUTHORS COPYING ChangeLog NEWS README
 GCONF_SCHEMAS=	cheese.schemas

@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese3/Makefile,v 1.14 2011/11/19 11:00:37 kwm Exp $
+#   $MCom: ports/multimedia/cheese3/Makefile,v 1.15 2012/06/13 10:34:15 kwm Exp $
 #
 
 PORTNAME=	cheese
@@ -37,7 +37,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack gnomeprefix intlhack evolutiondataserver3 librsvg2 \
 		gnomedesktop3
 USE_GETTEXT=	yes
-USE_GSTREAMER=	good v4l2 bad jpeg
+USE_GSTREAMER=	bad gconf good jpeg ogg theora v4l2 vorbis 
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
