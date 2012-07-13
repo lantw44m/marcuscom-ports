@@ -3,11 +3,11 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.24 2012/05/25 10:54:57 kwm Exp $
+#   $MCom: ports/x11/gnome-screensaver3/Makefile,v 1.25 2012/06/26 08:04:18 kwm Exp $
 #
 
 PORTNAME=	gnome-screensaver
-PORTVERSION=	3.4.2
+PORTVERSION=	3.4.3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -48,22 +48,9 @@ post-patch:
 	@${ECHO} "#define PASSWD_HELPER_PROGRAM \"/usr/local/bin/pam_helper\"" \
 		>> ${WRKSRC}/config.h.in
 
-#pre-install:
-#	@${CAT} ${.CURDIR}/pkg-plist > ${PLIST}
-#	@cd ${XSCREENSAVER_DIR} && ${FIND} -s * -maxdepth 1 -type f -name "*.xml" | \
-#		${GREP} -Ev ${XSCREENSAVER_EXCLUDE} | \
-#		${SED} -e 's:^:${SCREENSAVER_DIR}/:' | \
-#		${SED} -e 's:[.]xml$$:.desktop:' >> ${PLIST}
-#	@${ECHO_CMD} @dirrm ${SCREENSAVER_DIR} >> ${PLIST}
-
 post-install:
 	${CHOWN} root ${PREFIX}/libexec/gnome-screensaver-dialog
 	${CHMOD} +s ${PREFIX}/libexec/gnome-screensaver-dialog
-#	${MKDIR} ${PREFIX}/${SCREENSAVER_DIR}
-#	cd ${PREFIX}/${SCREENSAVER_DIR} && \
-#		${FIND} -s ${XSCREENSAVER_DIR} -maxdepth 1 -type f -name "*.xml" | \
-#			${GREP} -Ev ${XSCREENSAVER_EXCLUDE} | \
-#			${XARGS} ${WRKSRC}/data/migrate-xscreensaver-config.sh
 	${INSTALL_DATA} ${WRKDIR}/gnome-screensaver.pam \
 		${PREFIX}/etc/pam.d/gnome-screensaver
 
