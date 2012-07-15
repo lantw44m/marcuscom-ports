@@ -11,9 +11,9 @@ bin/gresource
 bin/gsettings
 bin/gtester
 bin/gtester-report
-etc/bash_completion.d/gdbus-bash-completion.sh
-etc/bash_completion.d/gresource-bash-completion.sh
-etc/bash_completion.d/gsettings-bash-completion.sh
+share/bash-completion/completions/gdbus
+share/bash-completion/completions/gsettings
+share/bash-completion/completions/gresource
 include/gio-unix-2.0/gio/gdesktopappinfo.h
 include/gio-unix-2.0/gio/gfiledescriptorbased.h
 include/gio-unix-2.0/gio/gunixconnection.h
@@ -468,6 +468,8 @@ share/locale/zh_TW/LC_MESSAGES/glib20.mo
 @dirrm share/glib-2.0/gettext/po
 @dirrm share/glib-2.0/gettext
 @dirrm share/glib-2.0
+@dirrmtry share/bash-completion/completions
+@dirrmtry share/bash-completion
 @exec mkdir -p %D/share/GConf/gsettings
 @dirrm share/GConf/gsettings
 @dirrm share/GConf
@@ -484,4 +486,3 @@ share/locale/zh_TW/LC_MESSAGES/glib20.mo
 @dirrm include/glib-2.0
 @dirrm include/gio-unix-2.0/gio
 @dirrm include/gio-unix-2.0
-@dirrmtry etc/bash_completion.d

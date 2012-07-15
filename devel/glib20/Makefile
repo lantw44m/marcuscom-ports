@@ -3,13 +3,13 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.223 2012/05/27 15:16:28 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.224 2012/06/28 13:51:28 marcus Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
-PORTVERSION=	2.32.3
-PORTREVISION?=	3
+PORTVERSION=	2.32.4
+PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -57,10 +57,13 @@ OPTIONS=	COLLATION_FIX "fix string collation" off
 
 .include <bsd.port.pre.mk>
 
-#.if ${OSVERSION} >= 900000
-#CONFIGURE_ARGS+=--enable-dtrace
-#.else
+# doesn't build yet
+#.if (${OSVERSION} < 800000) \
+#	|| (${OSVERSION} >= 800000 && ${OSVERSION} < 802000)
+#	|| (${OSVERSION} >= 900000 && ${OSVERSION} < 900021)
 CONFIGURE_ARGS+=--disable-dtrace
+#.else
+#CONFIGURE_ARGS+=--enable-dtrace
 #.endif
 
 .if ${ARCH} == powerpc64
