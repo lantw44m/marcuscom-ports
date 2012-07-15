@@ -3,11 +3,12 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.86 2012/05/22 12:53:13 kwm Exp $
+#   $MCom: ports/www/webkit-gtk2/Makefile,v 1.87 2012/05/22 17:09:57 kwm Exp $
 #
 
 PORTNAME=	webkit
 PORTVERSION=	1.8.1
+PORTREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk2
@@ -52,19 +53,20 @@ MAKEFILE=	GNUmakefile
 BROWSER_PLUGINS_DIR?=	${LOCALBASE}/lib/browser_plugins/symlinks/webkit-gtk2
 #_BROWSER_PLUGINS_DIR=	${BROWSER_PLUGINS_DIR:S|^/|"|:S|/|", "|g}",
 
-OPTIONS=	WEBGL "Enable webGL support (experimental)" off \
-		DEBUG "Build with debug support" off
+OPTIONS_DEFINE=	WEBGL DEBUG
+OPTIONS_DEFAULT=WEBGL
+WEBGL_DESC=	Enable Web GL support
 
 .include <bsd.port.pre.mk>
 
-.if defined(WITH_WEBGL)
+.if ${PORT_OPTIONS:MWEBGL}
 USE_GL=		gl
 CONFIGURE_ARGS+=--enable-webgl
 .else
 CONFIGURE_ARGS+=--disable-webgl
 .endif
 
-.if defined(WITH_DEBUG)
+.if ${PORT_OPTIONS:MDEBUG}
 CONFIGURE_ARGS+=--enable-debug
 .else
 CONFIGURE_ARGS+=--disable-debug
