@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.561 2012/06/13 03:23:38 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.562 2012/06/14 01:17:49 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -825,34 +825,63 @@ USE_CSTD=	gnu89
 GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
 CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
 . endif
-. for component in ${_USE_GNOME_ALL}
-.  if ${_USE_GNOME:M${component}}!=""
+
+. for component in ${_USE_GNOME}
+.  if defined(${component}_PATCH_DEPENDS)
 PATCH_DEPENDS+=	${${component}_PATCH_DEPENDS}
-FETCH_DEPENDS+=	${${component}_FETCH_DEPENDS}
-EXTRACT_DEPENDS+=${${component}_EXTRACT_DEPENDS}
-BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
-.  if defined(MARCUSCOM_CVS)
-.   if !defined(NODEPENDS)
-LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
-RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
-.   endif
-.  else
-LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
-RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
 .  endif
 
+.  if defined(${component}_DETECT)
+.   if ${USE_GNOME:M${component}\:build}!=""
+BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
+.   elif ${USE_GNOME:M${component}\:run}!=""
+.    if defined(MARCUSCOM_CVS)
+.     if !defined(NODEPENDS)
+RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
+.     endif
+.    else
+RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
+.    endif
+.   else
+.    if defined(${component}_LIB_DEPENDS)
+.     if defined(MARCUSCOM_CVS)
+.      if !defined(NODEPENDS)
+LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
+.      endif
+.     else
+LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
+.     endif
+.    else
+BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
+.     if defined(MARCUSCOM_CVS)
+.      if !defined(NODEPENDS)
+RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
+.      endif
+.     else
+RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
+.     endif
+.    endif
+.   endif
+.  endif
+
+.  if defined(${component}_CONFIGURE_TARGET)
 CONFIGURE_ARGS+=${${component}_CONFIGURE_ARGS}
+.  endif
+
+.  if defined(${component}_CONFIGURE_ENV)
 CONFIGURE_ENV+=	${${component}_CONFIGURE_ENV}
+.  endif
+
+.  if defined(${component}_MAKE_ENV)
 MAKE_ENV+=	${${component}_MAKE_ENV}
+.  endif
 
-.    if !defined(CONFIGURE_TARGET) && defined(${component}_CONFIGURE_TARGET)
+.  if !defined(CONFIGURE_TARGET) && defined(${component}_CONFIGURE_TARGET)
 CONFIGURE_TARGET=	${${component}_CONFIGURE_TARGET}
-.    endif
+.  endif
 
-.    if defined(${component}_PRE_PATCH)
+.  if defined(${component}_PRE_PATCH)
 GNOME_PRE_PATCH+=	; ${${component}_PRE_PATCH}
-.    endif
-
 .  endif
 . endfor
 .endif
