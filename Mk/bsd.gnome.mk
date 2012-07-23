@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.562 2012/06/14 01:17:49 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.563 2012/07/22 20:37:58 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -835,31 +835,13 @@ PATCH_DEPENDS+=	${${component}_PATCH_DEPENDS}
 .   if ${USE_GNOME:M${component}\:build}!=""
 BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
 .   elif ${USE_GNOME:M${component}\:run}!=""
-.    if defined(MARCUSCOM_CVS)
-.     if !defined(NODEPENDS)
 RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
-.     endif
-.    else
-RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
-.    endif
 .   else
 .    if defined(${component}_LIB_DEPENDS)
-.     if defined(MARCUSCOM_CVS)
-.      if !defined(NODEPENDS)
 LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
-.      endif
-.     else
-LIB_DEPENDS+=	${${component}_LIB_DEPENDS}
-.     endif
 .    else
 BUILD_DEPENDS+=	${${component}_BUILD_DEPENDS}
-.     if defined(MARCUSCOM_CVS)
-.      if !defined(NODEPENDS)
 RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
-.      endif
-.     else
-RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
-.     endif
 .    endif
 .   endif
 .  endif
