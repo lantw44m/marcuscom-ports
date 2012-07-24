@@ -3,11 +3,11 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/cogl/Makefile,v 1.5 2011/10/18 20:13:19 kwm Exp $
+#  $MCom: ports/graphics/cogl/Makefile,v 1.6 2012/05/20 12:31:46 kwm Exp $
 #
 
 PORTNAME=	cogl
-PORTVERSION=	1.10.2
+PORTVERSION=	1.10.4
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
