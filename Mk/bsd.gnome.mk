@@ -95,6 +95,10 @@ _USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
 		gnomemenus3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgda5 \
 		libgda5-ui libgnomekbd3 libwnck3 metacity3 nautilus3 pygobject3 vte3
 
+# C++ bindings
+_USE_GNOME_ALL+=atkmm cairomm gconfmm glibmm gtkmm24 gtkmm30 \
+		gtksourceviewmm gtksourceviewmm libgdamm5 pangomm
+
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
 gnomehack_PRE_PATCH=	${FIND} ${WRKSRC} -name "${GNOME_MAKEFILEIN}*" -type f | ${XARGS} ${REINPLACE_CMD} -e \
@@ -498,6 +502,7 @@ gtksourceview3_USE_GNOME_IMPL=gtk30 libxml2
 
 pkgconfig_DETECT=		${LOCALBASE}/bin/pkgconf
 pkgconfig_BUILD_DEPENDS=	pkgconf:${PORTSDIR}/devel/pkgconf
+pkgconfig_RUN_DEPENDS=		pkgconf:${PORTSDIR}/devel/pkgconf
 
 libgsf_LIB_DEPENDS=			gsf-1.114:${PORTSDIR}/devel/libgsf
 libgsf_DETECT=			${LOCALBASE}/libdata/pkgconfig/libgsf-1.pc

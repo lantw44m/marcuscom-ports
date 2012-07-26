@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.92 2012/06/18 15:23:59 kwm Exp $
+#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.93 2012/07/15 11:44:25 kwm Exp $
 #
 
 PORTNAME=	gio-fam-backend
@@ -27,17 +27,14 @@ USE_XZ=		yes
 BUILD_WRKSRC=	${WRKSRC}/gio/fam
 INSTALL_WRKSRC=	${BUILD_WRKSRC}
 GNU_CONFIGURE=	yes
+USE_PKGCONFIG=	build
 USE_GNOME=	gnomehack _glib20
 USE_FAM=	yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}" \
-		LIBFFI_CFLAGS="-I${LOCALBASE}/include" \
-		LIBFFI_LIBS="-L${LOCALBASE}/lib -lffi" \
-		PCRE_CFLAGS="-I${LOCALBASE}/include" \
-		PCRE_LIBS="-L${LOCALBASE}/lib -lpcre"
+		PTHREAD_LIBS="${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 

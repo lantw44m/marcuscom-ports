@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.224 2012/06/28 13:51:28 marcus Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.225 2012/07/15 11:44:25 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
@@ -32,6 +32,7 @@ USE_GETTEXT=	yes
 USE_ICONV=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
+USE_PKGCONFIG=	build
 USE_GNOME=	gnomehack ltverhack
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
@@ -45,11 +46,7 @@ CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}" \
-		LIBFFI_CFLAGS="-I${LOCALBASE}/include" \
-		LIBFFI_LIBS="-L${LOCALBASE}/lib -lffi" \
-		PCRE_CFLAGS="-I${LOCALBASE}/include" \
-		PCRE_LIBS="-L${LOCALBASE}/lib -lpcre"
+		PTHREAD_LIBS="${PTHREAD_LIBS}"
 		
 OPTIONS=	COLLATION_FIX "fix string collation" off
 
