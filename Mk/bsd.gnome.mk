@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.564 2012/07/23 04:48:51 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.566 2012/07/26 09:09:58 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -829,7 +829,7 @@ GNOME_PRE_PATCH+=	${lthacks_PRE_PATCH}
 CONFIGURE_ENV+=		${lthacks_CONFIGURE_ENV}
 . endif
 
-. for component in ${_USE_GNOME}
+. for component in ${_USE_GNOME:O:u}
 .  if defined(${component}_PATCH_DEPENDS)
 PATCH_DEPENDS+=	${${component}_PATCH_DEPENDS}
 .  endif
