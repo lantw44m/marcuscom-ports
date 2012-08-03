@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gnome-color-manager/Makefile,v 1.3 2012/06/12 22:34:27 mezz Exp $
+#   $MCom: ports/graphics/gnome-color-manager/Makefile,v 1.4 2012/06/14 10:19:45 kwm Exp $
 #
 
 PORTNAME=	gnome-color-manager
@@ -39,7 +39,7 @@ MAN1=		gcm-calibrate.1 gcm-import.1 gcm-inspect.1 gcm-picker.1 \
 		gcm-viewer.1
 
 .if defined(WITH_RAW)
-LIB_DEPENDS+=	exiv2.10:${PORTSDIR}/graphics/exiv2
+LIB_DEPENDS+=	exiv2:${PORTSDIR}/graphics/exiv2
 CONFIGURE_ARGS+=--enable-exiv=yes
 PLIST_SUB+=	RAW=""
 .else
