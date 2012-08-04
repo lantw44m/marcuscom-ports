@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/accessibility/atk/Makefile,v 1.119 2012/05/15 15:18:05 kwm Exp $
 #
 
 PORTNAME=	atk
@@ -27,6 +27,7 @@ USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehier gnomehack glib20 ltverhack referencehack
+USE_PKGCONFIG=	build
 CONFIGURE_ARGS=	--enable-static \
 		--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS=	-I${LOCALBASE}/include
