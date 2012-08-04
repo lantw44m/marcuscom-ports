@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/textproc/enchant/Makefile,v 1.3 2012/01/16 18:28:06 ahze Exp $
 #
 
 PORTNAME=	enchant
@@ -18,7 +18,8 @@ COMMENT=	Dictionary/spellchecking framework
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig ltverhack
+USE_GNOME=	gnomehack ltverhack
+USE_PKGCONFIG=	build
 CONFIGURE_ARGS=	--disable-uspell \
 		--disable-voikko
 MAKE_JOBS_SAFE=	yes

@@ -3,7 +3,7 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/desktop-file-utils/Makefile,v 1.10 2012/01/17 16:13:53 ahze Exp $
+#   $MCom: ports/devel/desktop-file-utils/Makefile,v 1.11 2012/01/17 16:30:19 ahze Exp $
 #
 
 PORTNAME=	desktop-file-utils
@@ -14,7 +14,8 @@ MASTER_SITES=	http://freedesktop.org/software/${PORTNAME}/releases/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A couple of command line utilities for working with desktop entries
 
-USE_GNOME=	glib20 pkgconfig
+USE_GNOME=	glib20
+USE_PKGCONFIG=	build
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes

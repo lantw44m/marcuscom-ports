@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#    $MCom: ports/textproc/libxml2/Makefile,v 1.12 2012/01/24 01:15:19 ahze Exp $
+#    $MCom: ports/textproc/libxml2/Makefile,v 1.13 2012/08/04 10:10:19 kwm Exp $
 #
 # WITHOUT_SCHEMA disable XML schema support
 # WITHOUT_THREADS disable threads support
@@ -31,6 +31,7 @@ MAKE_JOBS_SAFE=	yes
 USE_ICONV=	yes
 GNU_CONFIGURE=	yes
 USE_GNOME?=	gnomehack
+USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS?=--with-iconv=${LOCALBASE} \
 		--with-html-dir=${PREFIX}/share/doc \
