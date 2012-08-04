@@ -3,11 +3,12 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports-experimental/devel/gobject-introspection/Makefile,v 1.1 2012/05/04 01:45:37 mezz Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.46 2012/05/15 15:19:32 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	1.32.1
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,8 +16,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Generate interface introspection data for GObject libraries
 
-LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi \
-		cairo.2:${PORTSDIR}/graphics/cairo
+LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
