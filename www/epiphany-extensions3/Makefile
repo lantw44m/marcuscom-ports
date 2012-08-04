@@ -3,12 +3,11 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions3/Makefile,v 1.6 2012/02/14 19:34:00 kwm Exp $
+#   $MCom: ports/www/epiphany-extensions3/Makefile,v 1.7 2012/05/31 11:55:35 mezz Exp $
 #
 
 PORTNAME=	epiphany-extensions
 PORTVERSION=	3.4.0
-PORTREVISION=	0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,8 +16,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A set of add-ons for the Epiphany web browser
 
 BUILD_DEPENDS=	epiphany>=3.4.0:${PORTSDIR}/www/epiphany3
-LIB_DEPENDS=	pcre.1:${PORTSDIR}/devel/pcre \
-		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3
+LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre \
+		webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3
 RUN_DEPENDS=	epiphany>=3.4.0:${PORTSDIR}/www/epiphany3
 
 CONFLICTS=	epiphany-extensions-2.[0-9]*
@@ -30,10 +29,10 @@ USE_GNOME=	gnomeprefix gnomehack intlhack
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	LIBS="${PTHREAD_LIBS}"
-CONFIGURE_ARGS=	--disable-maintainer-mode
+CONFIGURE_ARGS+=--disable-silent-rules
 GLIB_SCHEMAS=	org.gnome.epiphanyextensions.gschema.xml
 
 EPHY_EXTENSIONS=really-all
@@ -47,7 +46,7 @@ OPTIONS=	OPENSP "Enable OpenSP SGML support" off
 
 .if defined(WITH_OPENSP)
 CONFIGURE_ARGS+=	--enable-opensp=yes
-LIB_DEPENDS+=		osp.5:${PORTSDIR}/textproc/opensp
+LIB_DEPENDS+=		osp:${PORTSDIR}/textproc/opensp
 .else
 CONFIGURE_ARGS+=	--disable-opensp
 .endif
