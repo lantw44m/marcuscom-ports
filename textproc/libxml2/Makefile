@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#    $MCom: ports/textproc/libxml2/Makefile,v 1.11 2012/01/16 17:10:53 ahze Exp $
+#    $MCom: ports/textproc/libxml2/Makefile,v 1.12 2012/01/24 01:15:19 ahze Exp $
 #
 # WITHOUT_SCHEMA disable XML schema support
 # WITHOUT_THREADS disable threads support
@@ -13,11 +13,10 @@
 #
 
 PORTNAME=	libxml2
-PORTVERSION=	2.7.8
-PORTREVISION?=	3
+PORTVERSION=	2.8.0
+PORTREVISION?=	0
 CATEGORIES?=	textproc gnome
-MASTER_SITES=	ftp://fr.rpmfind.net/pub/libxml/ \
-		ftp://gd.tuwien.ac.at/pub/libxml/ \
+MASTER_SITES=	ftp://gd.tuwien.ac.at/pub/libxml/ \
 		ftp://xmlsoft.org/libxml2/
 DIST_SUBDIR=	gnome2
 
