@@ -116,3 +116,4 @@ share/vala/vapi/colord.vapi
 @dirrm lib/colord-sensors
 @dirrm include/colord-1/colord
 @dirrm include/colord-1
+@dirrmtry etc/bash_completion.d
