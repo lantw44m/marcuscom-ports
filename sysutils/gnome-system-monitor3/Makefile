@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor3/Makefile,v 1.11 2011/10/19 09:48:04 kwm Exp $
+#   $MCom: ports/sysutils/gnome-system-monitor3/Makefile,v 1.12 2012/06/01 02:59:20 mezz Exp $
 #
 
 PORTNAME=	gnome-system-monitor
@@ -16,8 +16,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 system monitor program
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
-		gtkmm-3.0.1:${PORTSDIR}/x11-toolkits/gtkmm30
+LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop \
+		gtkmm-3.0:${PORTSDIR}/x11-toolkits/gtkmm30
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
 CONFLICTS=	gnome-system-monitor-2.[0-9]*
@@ -30,8 +30,8 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack libwnck3 gnomedocutils \
 		librsvg2
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.gnome-system-monitor.enums.xml \
 		org.gnome.gnome-system-monitor.gschema.xml
