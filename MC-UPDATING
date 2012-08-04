@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.28 2011/10/22 20:31:06 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.29 2012/01/04 22:50:21 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -8,7 +8,17 @@ You should get into the habit of checking this file for changes each
 time you update your ports collection, before attempting any port
 upgrades.
 
-2011MONTHDAY:
+2012MONTHDAY:
+  AFFECTS: Pulseaudio users
+  AUTHOR: gnome@FreeBSD.org
+
+  The pulseaudio port was updated to 2.0, this includes a shared library change.
+
+  # portmaster -r pulseaudio 
+  or
+  # portupgrade -rf pulseaudio
+
+2012MONTHDAY:
   AFFECTS: users of GNOME 2 desktop components, avahi, libgdata, libchamplain
            and vte
   AUTHOR: gnome@FreeBSD.org
@@ -29,7 +39,7 @@ upgrades.
   # portmaster x11-toolkits/vte
   # portmaster -a
 
-or
+  or
 
   # pkgdb -F
   # pkg_delete -f avahi-gtk-\* vte-\* clutter-\*
@@ -49,7 +59,7 @@ or
   # portmaster -a
   # install x11/gnome3 or x11/gnome3-lite
 
-or
+  or
 
   # pkg_delete -fr gnome-\* libwnck-2.\* vte-0.\*  at-spi-1.\* seed-2.\* \
 	libgnomekbd-2.\* gtk-vnc-0.3.\* clutter-\*
