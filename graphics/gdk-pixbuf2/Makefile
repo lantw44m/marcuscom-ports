@@ -3,15 +3,13 @@
 # Whom:			Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.22 2012/06/01 14:35:22 kwm Exp $
+#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.23 2012/06/01 14:55:46 kwm Exp $
 
 PORTNAME?=	gdk-pixbuf
-PORTVERSION=	2.26.1
-PORTREVISION=	1
+PORTVERSION=	2.26.2
 CATEGORIES?=	graphics
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gdk-pixbuf/${PORTVERSION:R}
-DISTNAME=	gdk-pixbuf-${PORTVERSION}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -33,21 +31,20 @@ CONFIGURE_ARGS=	--enable-introspection=yes --with-x11
 
 MAN1=		gdk-pixbuf-csource.1 gdk-pixbuf-query-loaders.1
 
-OPTIONS=	JP2 "JPEG2000 support"	ON \
-		JPEG "JPEG support"	ON \
-		PNG "PNG support"	ON \
-		TIFF "TIFF support"	ON
+OPTIONS_DEFINE=	JASPER JPEG PNG TIFF NLS
+OPTIONS_DEFAULT=JASPER JPEG PNG TIFF NLS
 
 .include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_NLS)
+.if ${PORT_OPTIONS:M_NLS}
+USE_GETTEXT=	yes
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls
 PLIST_SUB+=	NLS="@comment "
 .endif
 
-.if !defined(WITHOUT_JP2)
+.if ${PORT_OPTIONS:MJASPER}
 LIB_DEPENDS+=	jasper:${PORTSDIR}/graphics/jasper
 CONFIGURE_ARGS+=--with-libjasper
 PLIST_SUB+=	JP2=""
@@ -55,7 +52,7 @@ PLIST_SUB+=	JP2=""
 PLIST_SUB+=	JP2="@comment "
 .endif
 
-.if !defined(WITHOUT_JPEG)
+.if ${PORT_OPTIONS:MJPEG}
 LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg
 PLIST_SUB+=	JPEG=""
 .else
@@ -63,7 +60,7 @@ CONFIGURE_ARGS+=--without-libjpeg
 PLIST_SUB+=	JPEG="@comment "
 .endif
 
-.if !defined(WITHOUT_PNG)
+.if ${PORT_OPTIONS:MPNG}
 LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png
 PLIST_SUB+=	PNG=""
 .else
@@ -71,7 +68,7 @@ CONFIGURE_ARGS+=--without-libpng
 PLIST_SUB+=	PNG="@comment "
 .endif
 
-.if !defined(WITHOUT_TIFF)
+.if ${PORT_OPTIONS:MTIFF}
 LIB_DEPENDS+=	tiff:${PORTSDIR}/graphics/tiff
 PLIST_SUB+=	TIFF=""
 .else
@@ -83,6 +80,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|" == "|" = "|g' ${WRKSRC}/configure
 
 post-install:
-	@cd ${WRKSRC}/docs/reference/gdk-pixbuf && gmake install-man1
+	@cd ${WRKSRC}/docs/reference/gdk-pixbuf && ${GMAKE} install-man1
 
 .include <bsd.port.mk>
