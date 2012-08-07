@@ -285,9 +285,6 @@ share/omf/epiphany/epiphany-te.omf
 share/omf/epiphany/epiphany-uk.omf
 share/omf/epiphany/epiphany-zh_CN.omf
 @dirrm share/omf/epiphany
-@dirrmtry share/icons/LowContrastLargePrint/48x48/apps
-@dirrmtry share/icons/LowContrastLargePrint/48x48
-@dirrmtry share/icons/LowContrastLargePrint
 @dirrm share/gnome/help/epiphany/zh_CN/figures
 @dirrm share/gnome/help/epiphany/zh_CN
 @dirrm share/gnome/help/epiphany/uk/figures
@@ -336,11 +333,8 @@ share/omf/epiphany/epiphany-zh_CN.omf
 @dirrm %%DATADIR%%/pages
 @dirrm %%DATADIR%%/glade
 @dirrmtry %%DATADIR%%
-@dirrmtry %%DOCSDIR%%
+@dirrmtry share/gtk-doc/html/epiphany
 @dirrmtry share/applications
-@dirrmtry lib/epiphany/%%EPHY_VERSION%%/plugins
-@dirrmtry lib/epiphany/%%EPHY_VERSION%%
-@dirrmtry lib/epiphany
 @dirrm include/epiphany/%%EPHY_VERSION%%/epiphany
 @dirrm include/epiphany/%%EPHY_VERSION%%
 @dirrm include/epiphany
