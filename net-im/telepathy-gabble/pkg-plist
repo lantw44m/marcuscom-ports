@@ -1,9 +1,9 @@
 bin/telepathy-gabble-xmpp-console
-lib/telepathy/gabble-0/lib/libgabble-plugins-0.16.0.so
+lib/telepathy/gabble-0/lib/libgabble-plugins-%%PVERSION%%.so
 lib/telepathy/gabble-0/lib/libgabble-plugins.a
 lib/telepathy/gabble-0/lib/libgabble-plugins.la
 lib/telepathy/gabble-0/lib/libgabble-plugins.so
-lib/telepathy/gabble-0/lib/libwocky-telepathy-gabble-0.16.0.so
+lib/telepathy/gabble-0/lib/libwocky-telepathy-gabble-%%PVERSION%%.so
 lib/telepathy/gabble-0/lib/libwocky.a
 lib/telepathy/gabble-0/lib/libwocky.la
 lib/telepathy/gabble-0/lib/libwocky.so
