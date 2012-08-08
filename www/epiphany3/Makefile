@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany3/Makefile,v 1.24 2012/05/25 14:14:11 kwm Exp $
+#   $MCom: ports/www/epiphany3/Makefile,v 1.25 2012/08/07 17:35:17 kwm Exp $
 #
 
 PORTNAME=	epiphany
@@ -19,8 +19,7 @@ COMMENT?=	An extremely lightweight and simple web browser for GNOME 3
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
-LIB_DEPENDS=	sqlite3.8:${PORTSDIR}/databases/sqlite3 \
-		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3 \
+LIB_DEPENDS=	webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3 \
 		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
 		startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
 		notify.4:${PORTSDIR}/devel/libnotify \
@@ -39,6 +38,7 @@ INSTALLS_ICONS=	yes
 USE_GETTEXT=	yes
 USE_XZ=		yes
 USE_PYTHON=	yes
+USE_SQLITE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils libxml2 \
 		desktopfileutils
 USE_XORG=	ice x11 sm

@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/colord/Makefile,v 1.7 2012/05/15 21:57:40 kwm Exp $
+#    $MCom: ports/graphics/colord/Makefile,v 1.8 2012/05/16 18:42:14 kwm Exp $
 #
 
 PORTNAME=	colord
@@ -19,13 +19,13 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		vala-vapigen>=0.13.0:${PORTSDIR}/lang/vala-vapigen
 LIB_DEPENDS=	polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
 		dbus-1.3:${PORTSDIR}/devel/dbus \
-		lcms2.2:${PORTSDIR}/graphics/lcms2 \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3
+		lcms2.2:${PORTSDIR}/graphics/lcms2
 
 USE_XZ=		yes
 USE_GNOME=	gnomehier gnomehack glib20 intlhack
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
+USE_SQLITE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes

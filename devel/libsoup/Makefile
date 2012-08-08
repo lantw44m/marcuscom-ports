@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.111 2011/10/23 10:23:05 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.112 2012/05/15 21:35:52 kwm Exp $
 #
 
 PORTNAME=	libsoup
@@ -36,9 +36,9 @@ PLIST_SUB=	VERSION="2.4"
 .include <bsd.port.pre.mk>
 
 .if defined(SOUP_SLAVE)
+USE_SQLITE=	yes
 LIB_DEPENDS+=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
-		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3
+		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
 CONFIGURE_ARGS+=--with-gnome
 .else
 BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection

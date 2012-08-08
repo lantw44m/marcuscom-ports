@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.28 2012/07/13 18:32:14 kwm Exp $
+#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.29 2012/08/04 18:11:57 kwm Exp $
 #
 
 PORTNAME=	webkit
@@ -22,7 +22,6 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
 		icutu:${PORTSDIR}/devel/icu \
 		curl:${PORTSDIR}/ftp/curl \
-		sqlite3:${PORTSDIR}/databases/sqlite3 \
 		soup-2.4:${PORTSDIR}/devel/libsoup
 
 USE_XZ=		yes
@@ -34,6 +33,7 @@ USE_BISON=	build
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk30 libxslt ltverhack
+USE_SQLITE=	yes
 USE_PERL5=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

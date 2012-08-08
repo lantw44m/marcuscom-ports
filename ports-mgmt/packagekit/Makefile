@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.26 2010/10/10 15:49:51 marcus Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.31 2011/12/13 18:56:16 kwm Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.21
@@ -17,7 +17,6 @@ COMMENT?=	A DBUS packaging abstraction layer
 BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils \
 		${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
 		ck-connector.0:${PORTSDIR}/sysutils/consolekit
@@ -31,6 +30,7 @@ USE_GETTEXT=	yes
 USE_GNOME=	glib20 intltool
 USE_ICONV=	yes
 USE_LDCONFIG=	yes
+USE_SQLITE=	yes
 USE_PYTHON_BUILD=	2.5+
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

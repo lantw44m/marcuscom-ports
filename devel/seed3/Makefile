@@ -3,7 +3,7 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/seed3/Makefile,v 1.9 2011/06/11 19:51:16 mezz Exp $
+#   $MCom: ports/devel/seed3/Makefile,v 1.10 2011/09/22 13:07:55 kwm Exp $
 #
 # NOTE: It may be necessary to update ${FILESDIR}/Seed.js on each release.
 # To do that, just replace imports.searchPaths with "." and ".." elements.
@@ -23,7 +23,6 @@ LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi \
 		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3 \
 		girepository-1.0.1:${PORTSDIR}/devel/gobject-introspection \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		mpfr.4:${PORTSDIR}/math/mpfr
 
 CONFLICTS=	seed-2.[0-9]*
@@ -35,6 +34,7 @@ USE_GETTEXT=	yes
 USE_GNOME=	gnomehack gtk30 intltool libxml2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
+USE_SQLITE=	yes
 USE_GMAKE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
 CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"

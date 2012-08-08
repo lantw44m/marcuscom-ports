@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.23 2012/06/14 13:08:43 kwm Exp $
+#   $MCom: ports/games/gnome-games3/Makefile,v 1.24 2012/06/14 14:15:11 kwm Exp $
 #
 
 PORTNAME=	gnome-games
@@ -20,7 +20,6 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		itstool:${PORTSDIR}/textproc/itstool \
 		valac:${PORTSDIR}/lang/vala
 LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile \
-		sqlite3.8:${PORTSDIR}/databases/sqlite3 \
 		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
 		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
 		clutter-1.0.0:${PORTSDIR}/graphics/clutter
@@ -36,6 +35,7 @@ INSTALLS_ICONS=	yes
 USE_GL=		gl glu
 USE_XORG=	ice x11
 USE_GMAKE=	yes
+USE_SQLITE=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 pygobject3 \
 		librsvg2 desktopfileutils
 USE_GSTREAMER=	vorbis ogg

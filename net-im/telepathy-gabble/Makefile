@@ -3,7 +3,7 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.20 2012/06/12 22:50:54 mezz Exp $
+#    $MCom: ports/net-im/telepathy-gabble/Makefile,v 1.21 2012/08/07 20:40:45 kwm Exp $
 
 PORTNAME=	telepathy-gabble
 PORTVERSION=	0.16.1
@@ -21,14 +21,14 @@ LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
 		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid \
-		loudmouth-1:${PORTSDIR}/net-im/loudmouth \
-		sqlite3:${PORTSDIR}/databases/sqlite3
+		loudmouth-1:${PORTSDIR}/net-im/loudmouth
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
 GNU_CONFIGURE=	yes
 LDFLAGS+=	${PTHREAD_LIBS}
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack pkgconfig glib20
+USE_SQLITE=	yes
 USE_OPENSSL=	yes
 USE_PYTHON_BUILD=	yes
 CONFIGURE_ARGS=	--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
