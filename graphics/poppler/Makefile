@@ -3,11 +3,11 @@
 # Whom:                 marcus@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.74 2011/08/05 14:05:23 kwm Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.77 2012/06/13 12:29:03 kwm Exp $
 #
 
 PORTNAME=	poppler
-PORTVERSION=	0.20.1
+PORTVERSION=	0.20.2
 PORTREVISION?=	0
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
@@ -17,9 +17,9 @@ COMMENT?=	A PDF rendering library
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	jpeg.11:${PORTSDIR}/graphics/jpeg \
-		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig \
-		lcms.1:${PORTSDIR}/graphics/lcms
+LIB_DEPENDS=	jpeg:${PORTSDIR}/graphics/jpeg \
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
+		lcms:${PORTSDIR}/graphics/lcms
 RUN_DEPENDS=	poppler-data>0:${PORTSDIR}/graphics/poppler-data
 
 USE_GMAKE=	yes
@@ -42,11 +42,11 @@ OPTIONS=	CAIRO "Enable cairo output backend" on \
 .include <bsd.port.options.mk>
 
 .if defined(SLAVEPORT)
-LIB_DEPENDS+=	poppler.26:${PORTSDIR}/graphics/poppler
+LIB_DEPENDS+=	poppler:${PORTSDIR}/graphics/poppler
 
 .if ${SLAVEPORT}=="glib"
 BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS+=	cairo.2:${PORTSDIR}/graphics/cairo
+LIB_DEPENDS+=	cairo:${PORTSDIR}/graphics/cairo
 CONFIGURE_ARGS+=--enable-poppler-glib
 USE_GNOME+=	gnomehier glib20
 BUILD_WRKSRC=	${WRKSRC}/glib
@@ -66,7 +66,7 @@ CONFIGURE_ARGS+=--disable-poppler-qt4
 .endif
 
 .if ${SLAVEPORT}=="utils"
-LIB_DEPENDS+=	poppler-glib.8:${PORTSDIR}/graphics/poppler-glib
+LIB_DEPENDS+=	poppler-glib:${PORTSDIR}/graphics/poppler-glib
 CONFIGURE_ARGS+=--enable-utils
 BUILD_WRKSRC=	${WRKSRC}/utils
 INSTALL_WRKSRC=	${WRKSRC}/utils
@@ -86,7 +86,7 @@ CONFIGURE_ARGS+=--disable-poppler-glib \
 CONFIGURE_ARGS+=--disable-cairo-output
 PLIST_SUB+=	CAIRO="@comment "
 .else
-LIB_DEPENDS+=	cairo.2:${PORTSDIR}/graphics/cairo
+LIB_DEPENDS+=	cairo:${PORTSDIR}/graphics/cairo
 PLIST_SUB+=	CAIRO=""
 .endif
 
