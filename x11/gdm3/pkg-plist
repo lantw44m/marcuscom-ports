@@ -276,14 +276,6 @@ share/pixmaps/nohost.png
 @dirrmtry etc/dm
 @dirrm etc/dconf/db/gdm.d/locks
 @dirrm etc/dconf/db/gdm.d
-@dirrm etc/dconf/db/gdm
-@dirrmtry share/log/gdm
-@dirrmtry share/log
-@unexec /bin/rm -rf /var/gdm 2>/dev/null || /usr/bin/true
-@unexec /bin/rm -rf /var/log/gdm 2>/dev/null || /usr/bin/true
-@unexec /bin/rm -rf /var/run/gdm 2>/dev/null || /usr/bin/true
-@unexec rmdir /var/cache/gdm 2>/dev/null || /usr/bin/true
-@unexec rmdir /var/cache 2>/dev/null || /usr/bin/true
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
