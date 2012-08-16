@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.14 2012/06/12 22:22:34 mezz Exp $
+#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.15 2012/06/18 11:10:11 kwm Exp $
 #
 
 PORTNAME=	evolution-mapi
-PORTVERSION=	3.4.3
+PORTVERSION=	3.4.4
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -31,8 +31,8 @@ USE_GMAKE=	yes
 USE_GNOME=	gconf2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS"=	-L${LOCALBASE}/lib
 
 VERSION=	3.0
 PLIST_SUB=	VERSION=${VERSION}
