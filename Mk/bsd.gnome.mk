@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.566 2012/07/26 09:09:58 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.567 2012/07/26 17:00:59 mezz Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -849,7 +849,7 @@ RUN_DEPENDS+=	${${component}_RUN_DEPENDS}
 .   endif
 .  endif
 
-.  if defined(${component}_CONFIGURE_TARGET)
+.  if defined(${component}_CONFIGURE_ARGS)
 CONFIGURE_ARGS+=${${component}_CONFIGURE_ARGS}
 .  endif
 
