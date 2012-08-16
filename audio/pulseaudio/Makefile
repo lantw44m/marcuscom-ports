@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/pulseaudio/Makefile,v 1.24 2011/10/23 11:33:24 kwm Exp $
+#   $MCom: ports/audio/pulseaudio/Makefile,v 1.25 2012/08/04 09:39:16 kwm Exp $
 #
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
 # PORTREVISION bumps of depending ports.
@@ -18,6 +18,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Sound server for UNIX
 
 LIB_DEPENDS=	samplerate:${PORTSDIR}/audio/libsamplerate \
+		sndfile:${PORTSDIR}/audio/libsndfile \
 		speexdsp:${PORTSDIR}/audio/speex \
 		json:${PORTSDIR}/devel/json-c \
 		dbus-1:${PORTSDIR}/devel/dbus \
