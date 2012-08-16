@@ -3,11 +3,11 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/mail/evolution-kolab/Makefile,v 1.1 2012/06/18 20:07:45 kwm Exp $
 #
 
 PORTNAME=	evolution-kolab
-PORTVERSION=	3.4.3
+PORTVERSION=	3.4.4
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,7 +17,7 @@ COMMENT=	Kolab groupware connector for evolution 3
 
 BUILD_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3 \
 		gperf>=3.0.3:${PORTSDIR}/devel/gperf
-LIB_DEPENDS=	gmime-2.4:${PORTSDIR}/mail/gmime24		
+LIB_DEPENDS=	gmime-2.4:${PORTSDIR}/mail/gmime24
 RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 
 EVO_VER=	3.4.1
