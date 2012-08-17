@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/zeitgeist/Makefile,v 1.4 2011/10/17 10:22:12 kwm Exp $
+#    $MCom: ports/sysutils/zeitgeist/Makefile,v 1.5 2012/02/10 10:53:16 kwm Exp $
 #
 
 PORTNAME=	zeitgeist
@@ -27,8 +27,8 @@ USE_PYTHON=	yes
 FETCH_ARGS=	-Fpr
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=	zeitgeist-daemon.1
 

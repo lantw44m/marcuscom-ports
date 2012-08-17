@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.31 2011/12/13 18:56:16 kwm Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.32 2012/08/08 16:56:40 kwm Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.21
@@ -28,6 +28,7 @@ USE_GMAKE=	yes
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GNOME=	glib20 intltool
+USE_QT4=	#empty
 USE_ICONV=	yes
 USE_LDCONFIG=	yes
 USE_SQLITE=	yes
@@ -90,9 +91,8 @@ LIB_DEPENDS+=	packagekit-glib2.14:${PORTSDIR}/ports-mgmt/packagekit
 .if ${SLAVEPORT}=="qt4"
 CONFIGURE_ARGS+=--enable-qt
 LIB_DEPENDS+=	cppunit-1.12.1:${PORTSDIR}/devel/cppunit
-USE_QT_VER+=	4
-QT_COMPONENTS+=	dbus gui xml sql moc_build
-.include "${PORTSDIR}/Mk/bsd.qt.mk"
+USE_QT4+=	dbus gui xml sql moc_build
+#.include "${PORTSDIR}/Mk/bsd.qt.mk"
 .endif
 .else
 CONFIGURE_ARGS+=--disable-qt

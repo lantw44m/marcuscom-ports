@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/liboobs/Makefile,v 1.52 2011/04/04 09:31:41 kwm Exp $
+#   $MCom: ports/devel/liboobs/Makefile,v 1.53 2011/06/11 19:51:15 mezz Exp $
 #
 
 PORTNAME=	liboobs
@@ -23,10 +23,10 @@ RUN_DEPENDS=	${LOCALBASE}/etc/dbus-1/system.d/org.freedesktop.SystemToolsBackend
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack glib20
+USE_GNOME=	gnomeprefix gnomehack glib20
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc --with-hal
-CPPFLAGS=	-I${LOCALBASE}/include
+CONFIGURE_ARGS=	--with-hal
+CPPFLAGS+=	-I${LOCALBASE}/include
 
 .include <bsd.port.pre.mk>
 

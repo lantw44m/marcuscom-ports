@@ -7,12 +7,12 @@
 
 PORTNAME=	ekiga3
 PORTVERSION=	3.2.6
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	http://www.ekiga.org/admin/downloads/latest/sources/ekiga_${PORTVERSION}/
 DISTNAME=	ekiga-${PORTVERSION}
 
-MAINTAINER=	melifaro@ipfw.ru
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VoIP and video conferencing application
 
 LIB_DEPENDS=	sigc-2:${PORTSDIR}/devel/libsigc++20 \
@@ -56,7 +56,7 @@ OPTIONS=	LDAP		"Enable LDAP support" off \
 BROKEN=		Please set WITH_DBUS or remove WITH_KDE4!
 .	endif
 USE_KDE4=		kdehier kdelibs
-USE_QT_VER=		4
+USE_QT4=		# empty
 CONFIGURE_ARGS+=	--enable-kde
 .else
 CONFIGURE_ARGS+=	--disable-kde

@@ -3,12 +3,12 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino/Makefile,v 1.86 2011/05/02 21:09:12 kwm Exp $
+#   $MCom: ports/net/vino/Makefile,v 1.87 2011/06/06 17:54:24 kwm Exp $
 #
 
 PORTNAME=	vino
 PORTVERSION=	2.32.2
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -29,8 +29,8 @@ USE_XORG=	xtst
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	vino-server.schemas
 

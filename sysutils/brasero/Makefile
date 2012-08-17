@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero/Makefile,v 1.88 2011/05/29 05:20:56 marcus Exp $
+#    $MCom: ports/sysutils/brasero/Makefile,v 1.89 2011/08/24 10:40:41 kwm Exp $
 
 PORTNAME=	brasero
 PORTVERSION=	2.32.1
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -36,8 +36,8 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-inotify --with-html-dir=${PREFIX}/share/doc \
 		--enable-gtk3=no --enable-introspection=yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -DHAVE_CAM_LIB_H=1" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_CAM_LIB_H=1
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		brasero.1
 GLIB_SCHEMAS=	org.gnome.brasero.gschema.xml

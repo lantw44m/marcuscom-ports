@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/ghex/Makefile,v 1.13 2008/08/23 18:22:59 mezz Exp $
+#   $MCom: ports/editors/ghex/Makefile,v 1.15 2011/10/15 16:35:30 kwm Exp $
 #
 
 PORTNAME=	ghex
 PORTVERSION=	2.24.0
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2

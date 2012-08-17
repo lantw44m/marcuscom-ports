@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/folks/Makefile,v 1.27 2012/02/27 23:21:47 kwm Exp $
+#   $MCom: ports/net-im/folks/Makefile,v 1.28 2012/06/03 03:07:03 mezz Exp $
 #
 
 PORTNAME=	folks
@@ -28,8 +28,8 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehier gnomehack intlhack ltverhack evolutiondataserver3
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	LIBVER=25 VERSION=33
 

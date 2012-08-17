@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.156 2011/12/06 13:43:48 kwm Exp $
+#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.157 2012/05/31 15:11:23 kwm Exp $
 #
 
 PORTNAME=	gnome-utils
 PORTVERSION=	2.32.0
+PORTREVISION=	1
 PORTEPOCH=	1
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
@@ -32,8 +33,8 @@ INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel ltverhack
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-maintainer-flags=no
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		gnome-dictionary.1 gnome-screenshot.1 gnome-search-tool.1 \
 		gnome-system-log.1 baobab.1

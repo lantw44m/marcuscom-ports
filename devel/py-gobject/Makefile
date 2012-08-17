@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-gobject/Makefile,v 1.55 2011/10/07 10:06:54 kwm Exp $
+#   $MCom: ports/devel/py-gobject/Makefile,v 1.56 2011/10/07 13:30:13 kwm Exp $
 #
 
 PORTNAME=	gobject
@@ -20,7 +20,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Python bindings for GObject
 
 LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo

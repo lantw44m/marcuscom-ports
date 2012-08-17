@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/gjs/Makefile,v 1.23 2012/01/22 10:58:32 kwm Exp $
+#   $MCom: ports/lang/gjs/Makefile,v 1.24 2012/05/25 15:36:00 kwm Exp $
 #
 
 PORTNAME=	gjs
@@ -23,9 +23,10 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_PYTHON=	build
+USE_PYTHON_BUILD=yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix gnomehack intlhack glib20 ltverhack
+USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

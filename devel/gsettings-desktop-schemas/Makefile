@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.18 2012/05/16 15:28:36 kwm Exp $
+#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.19 2012/08/04 16:55:24 kwm Exp $
 #
 
 PORTNAME=	gsettings-desktop-schemas
@@ -24,7 +24,7 @@ RUN_DEPENDS=	${LOCALBASE}/etc/fonts/conf.avail/31-cantarell.conf:${PORTSDIR}/x11
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_PERL_BUILD=	yes
+USE_PERL5_BUILD=	yes
 USE_GNOME=	gnomehack intltool glib20
 USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes

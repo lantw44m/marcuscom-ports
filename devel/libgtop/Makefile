@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgtop/Makefile,v 1.56 2010/05/02 00:04:47 marcus Exp $
+#   $MCom: ports/devel/libgtop/Makefile,v 1.58 2011/08/30 20:55:55 kwm Exp $
 #
 
 PORTNAME=	libgtop
@@ -22,13 +22,11 @@ USE_PERL5_BUILD=yes
 USE_XORG=	xau
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack glib20 ltverhack intlhack
+USE_GNOME=	gnomeprefix gnomehack glib20 ltverhack intlhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ARGS=	--disable-gtk-doc \
-		--with-html-dir=${PREFIX}/share/doc
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -DHAVE_NET_IF_VAR_H" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_NET_IF_VAR_H
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 INFO=		libgtop2
 

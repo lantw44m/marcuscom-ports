@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-app/Makefile,v 1.22 2012/01/15 15:56:09 ahze Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.23 2012/07/09 18:22:18 kwm Exp $
 #
 
 PORTNAME=	avahi
@@ -39,10 +39,9 @@ CONFIGURE_ARGS?=--with-distro=freebsd \
 		--disable-doxygen-dot \
 		--localstatedir=/var \
 		--enable-compat-howl
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -DHAVE_KQUEUE" \
-		LDFLAGS="-L${LOCALBASE}/lib" \
-		PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
-		PTHREAD_LIBS="${PTHREAD_LIBS}"
+CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}"
+CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_KQUEUE
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 .if ${AVAHI_SLAVE}=="no"
 CONFLICTS=	howl-[0-9]*

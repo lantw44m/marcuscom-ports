@@ -7,7 +7,7 @@
 
 PORTNAME=	ekiga
 PORTVERSION=	2.0.11
-PORTREVISION=	10
+PORTREVISION=	13
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
@@ -29,9 +29,9 @@ INSTALLS_OMF=	yes
 USE_GNOME=	libgnomeui gnomeprefix gnomehack gnomedocutils \
 		evolutiondataserver intlhack
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}" \
-		SDL_CONFIG="${SDL_CONFIG}"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+CONFIGURE_ENV=	SDL_CONFIG="${SDL_CONFIG}"
 CONFIGURE_ARGS=	--with-pwlib-dir=${LOCALBASE} \
 		--with-opal-dir=${LOCALBASE}
 MAKE_JOBS_SAFE=	yes

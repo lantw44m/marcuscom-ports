@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy/Makefile,v 1.88 2011/11/12 14:54:37 kwm Exp $
+#    $MCom: ports/net-im/empathy/Makefile,v 1.89 2011/12/06 14:17:10 kwm Exp $
 
 PORTNAME=	empathy
 PORTVERSION=	2.34.0
@@ -44,8 +44,8 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PYTHON=	yes
 MAKE_JOBS_UNSAFE=yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-Werror \
 		--with-ca-file=${LOCALBASE}/share/certs/ca-root-nss.crt
 

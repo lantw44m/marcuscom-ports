@@ -3,7 +3,7 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/telepathy-salut/Makefile,v 1.7 2012/04/20 21:04:15 kwm Exp $
+#   $MCom: ports/net-im/telepathy-salut/Makefile,v 1.8 2012/06/12 23:14:58 mezz Exp $
 #
 
 PORTNAME=	telepathy-salut
@@ -21,13 +21,14 @@ LIB_DEPENDS=	avahi-glib.1:${PORTSDIR}/net/avahi-app \
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack pkgconfig glib20
+USE_GNOME=	gnomehack glib20
+USE_PKGCONFIG=	build
 USE_OPENSSL=	yes
 USE_PYTHON_BUILD=	yes
 USE_SQLITE=	3
-CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
 CONFIGURE_ARGS=	--disable-Werror --enable-avahi-tests=no
 CPPFLAGS+=	${PTHREAD_CFLAGS}
+LDFLAGS+=	${PTHREAD_LIBS}
 
 MAN8=		telepathy-salut.8
 

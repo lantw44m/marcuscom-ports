@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-mission-control/Makefile,v 1.21 2011/11/22 11:32:37 kwm Exp $
+#    $MCom: ports/net-im/telepathy-mission-control/Makefile,v 1.22 2012/06/12 22:55:59 mezz Exp $
 
 PORTNAME=	telepathy-mission-control
 PORTVERSION=	5.12.0
@@ -18,8 +18,8 @@ LIB_DEPENDS=	telepathy.2:${PORTSDIR}/net-im/libtelepathy \
 
 USE_GNOME=	gnomeprefix pkgconfig gconf2 libxslt gnomehack ltverhack
 USE_AUTOTOOLS=	libtool
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 GLIB_SCHEMAS=	im.telepathy.MissionControl.FromEmpathy.gschema.xml

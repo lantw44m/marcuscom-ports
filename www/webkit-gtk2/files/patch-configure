@@ -1,14 +1,5 @@
 --- configure.orig	2012-08-04 12:19:43.000000000 +0200
 +++ configure	2012-08-04 13:15:32.000000000 +0200
-@@ -17704,7 +17704,7 @@
- fi
- case $host in
- i?86-*-linux*|x86_64-*-linux*|powerpc-*-linux* \
--|amd64-*-freebsd*|i?86-*-freebsd*|ia64-*-freebsd*)
-+|amd64-*-freebsd*|i?86-*-freebsd*|amd64-*-freebsd*|ia64-*-freebsd*)
-     pic_options='-fPIC'
-     ;;
- i?86-apple-darwin*)
 @@ -19144,8 +19144,8 @@
  .SECONDARY: $(gsettings_SCHEMAS)
  

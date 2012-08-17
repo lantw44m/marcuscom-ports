@@ -3,7 +3,7 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-idle/Makefile,v 1.4 2011/05/28 13:33:32 kwm Exp $
+#    $MCom: ports/net-im/telepathy-idle/Makefile,v 1.5 2011/11/22 11:12:58 kwm Exp $
 #
 
 PORTNAME=	telepathy-idle
@@ -31,7 +31,8 @@ USE_GNOME=	gnomehack pkgconfig glib20
 
 MAN8=		telepathy-idle.8
 
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include <bsd.port.pre.mk>
 

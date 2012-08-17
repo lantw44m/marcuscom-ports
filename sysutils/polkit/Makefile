@@ -3,7 +3,7 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.18 2012/05/17 08:15:40 kwm Exp $
+#   $MCom: ports/sysutils/polkit/Makefile,v 1.19 2012/08/04 21:04:25 kwm Exp $
 #
 
 PORTNAME=	polkit
@@ -25,6 +25,7 @@ USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
+USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \
 		--with-authfw=pam \
