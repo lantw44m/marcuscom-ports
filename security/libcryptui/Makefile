@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/libcryptui/Makefile,v 1.3 2011/11/17 00:00:34 kwm Exp $
+#   $MCom: ports/security/libcryptui/Makefile,v 1.4 2012/06/14 04:41:21 mezz Exp $
 #
 
 PORTNAME=	libcryptui
@@ -27,7 +27,7 @@ USE_LDCONFIG=	yes
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix gnomedocutils
+USE_GNOME=	gnomehack intlhack gnomeprefix gnomedocutils gtk30
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
