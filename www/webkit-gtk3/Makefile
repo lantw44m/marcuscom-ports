@@ -3,11 +3,11 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.29 2012/08/04 18:11:57 kwm Exp $
+#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.30 2012/08/08 16:56:41 kwm Exp $
 #
 
 PORTNAME=	webkit
-PORTVERSION=	1.8.2
+PORTVERSION=	1.8.3
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk3
@@ -27,7 +27,7 @@ LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GSTREAMER=	yes
-MAKE_JOBS_UNSAFE=	yes
+MAKE_JOBS_SAFE=	yes
 USE_XORG=	xt
 USE_BISON=	build
 USE_GMAKE=	yes
