@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.82 2012/01/22 21:43:41 ahze Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.83 2012/05/31 12:05:11 kwm Exp $
 #
 
 PORTNAME=	gvfs
@@ -30,27 +30,27 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-obexftp
 
-OPTIONS=	FUSE "Enable fuse" off \
-		AVAHI "Enable AVAHI" on \
-		SAMBA "Enable Samba" on \
-		GPHOTO2 "Enable Gphoto 2 camera support (requires HAL)" on \
-		CDDA "Enable CDDA (requires HAL)" on \
-		HAL "Enable HAL" on
+#ADD FUSE , Fuse disabled because it needs fusefs-libs >= 2.8
+OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA HAL
+OPTIONS_DEFAULT=AVAHI SAMBA GPHOTO2 CDDA HAL
+CDDA_DESC=	CDDA (enables HAL)
+GPHOTO2_DESC=	Gphoto 2 camera support (enables HAL)
+SAMBA_DESC=	Samba support
 
 GLIB_SCHEMAS=	org.gnome.system.gvfs.enums.xml
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_FUSE)
-LIB_DEPENDS+=	fuse.2:${PORTSDIR}/sysutils/fusefs-libs
-RUN_DEPENDS+=	mount_fusefs:${PORTSDIR}/sysutils/fusefs-kmod
-PLIST_SUB+=	FUSE=""
-.else
+#.if ${PORT_OPTIONS:MFUSE}
+#LIB_DEPENDS+=	fuse.2:${PORTSDIR}/sysutils/fusefs-libs
+#RUN_DEPENDS+=	mount_fusefs:${PORTSDIR}/sysutils/fusefs-kmod
+#PLIST_SUB+=	FUSE=""
+#.else
 CONFIGURE_ARGS+=	--disable-fuse
 PLIST_SUB+=	FUSE="@comment "
-.endif
+#.endif
 
-.if defined(WITH_SAMBA)
+.if ${PORT_OPTIONS:MSAMBA}
 LIB_DEPENDS+=	smbclient.0:${PORTSDIR}/net/samba-libsmbclient
 GLIB_SCHEMAS+=	org.gnome.system.smb.gschema.xml
 PLIST_SUB+=	SMB=""
@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=	--disable-samba
 PLIST_SUB+=	SMB="@comment "
 .endif
 
-.if defined(WITH_CDDA) && !defined(WITHOUT_HAL)
+.if ${PORT_OPTIONS:MCDDA}
 LIB_DEPENDS+=	cdio_paranoia.1:${PORTSDIR}/sysutils/libcdio
 PLIST_SUB+=	CDDA=""
 .else
@@ -67,7 +67,7 @@ CONFIGURE_ARGS+=	--disable-cdda
 PLIST_SUB+=	CDDA="@comment "
 .endif
 
-.if defined(WITH_GPHOTO2) && !defined(WITHOUT_HAL)
+.if ${PORT_OPTIONS:MGPHOTO2}
 LIB_DEPENDS+=	gphoto2.2:${PORTSDIR}/graphics/libgphoto2
 PLIST_SUB+=	GPHOTO2=""
 .else
@@ -75,7 +75,7 @@ CONFIGURE_ARGS+=	--disable-gphoto2
 PLIST_SUB+=	GPHOTO2="@comment "
 .endif
 
-.if defined(WITH_AVAHI)
+.if ${PORT_OPTIONS:MAVAHI}
 LIB_DEPENDS+=	avahi-client.3:${PORTSDIR}/net/avahi-app
 GLIB_SCHEMAS+=	org.gnome.system.dns_sd.gschema.xml
 PLIST_SUB+=	AVAHI=""
@@ -84,7 +84,7 @@ CONFIGURE_ARGS+=--disable-avahi
 PLIST_SUB+=	AVAHI="@comment "
 .endif
 
-.if defined(WITH_HAL)
+.if ${PORT_OPTIONS:MHAL} || ${PORT_OPTIONS:MGPHOTO2} || ${PORT_OPTIONS:MCDDA}
 LIB_DEPENDS+=	hal.1:${PORTSDIR}/sysutils/hal
 RUN_DEPENDS+=	gnome-mount:${PORTSDIR}/sysutils/gnome-mount
 PLIST_SUB+=	HAL=""
