@@ -3,13 +3,12 @@
 # Whom:			Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.23 2012/06/01 14:55:46 kwm Exp $
+#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.24 2012/08/06 21:13:22 kwm Exp $
 
-PORTNAME?=	gdk-pixbuf
-PORTVERSION=	2.26.2
-CATEGORIES?=	graphics
+PORTNAME=	gdk-pixbuf
+PORTVERSION=	2.26.3
+CATEGORIES=	graphics
 MASTER_SITES=	GNOME
-MASTER_SITE_SUBDIR=	sources/gdk-pixbuf/${PORTVERSION:R}
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -75,9 +74,6 @@ PLIST_SUB+=	TIFF=""
 CONFIGURE_ARGS+=--without-libtiff
 PLIST_SUB+=	TIFF="@comment "
 .endif
-
-post-patch:
-	@${REINPLACE_CMD} -e 's|" == "|" = "|g' ${WRKSRC}/configure
 
 post-install:
 	@cd ${WRKSRC}/docs/reference/gdk-pixbuf && ${GMAKE} install-man1
