@@ -3,11 +3,12 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.57 2012/05/29 18:00:51 kwm Exp $
+#  $MCom: ports/graphics/clutter/Makefile,v 1.58 2012/06/21 18:28:20 kwm Exp $
 #
 
 PORTNAME=	clutter
 PORTVERSION=	1.10.8
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -31,7 +32,7 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-x --enable-conformance=no \
 		--disable-gdk-backend
 
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS} -fno-omit-frame-pointer
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 .include <bsd.port.mk>

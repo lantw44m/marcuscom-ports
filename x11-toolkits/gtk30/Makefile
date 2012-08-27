@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.46 2012/05/15 15:20:42 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.47 2012/07/15 21:54:22 kwm Exp $
 #
 
 PORTNAME=	gtk
@@ -39,9 +39,9 @@ USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack gtk-update-icon-cache
 USE_GETTEXT=	yes
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
-CONFIGURE_ARGS=	--enable-static --enable-xinput=yes
+CONFIGURE_ARGS=	--enable-static
 CONFIGURE_ARGS+=--enable-gtk2-dependency --disable-packagekit
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	INTROSPECTION_GIRDIR=`pkg-config --variable=girdir gobject-introspection-1.0` ac_cv_path_SED="${SED}"
 

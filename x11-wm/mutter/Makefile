@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.34 2012/05/27 07:38:18 kwm Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.35 2012/06/30 22:13:09 kwm Exp $
 #
 
 PORTNAME=	mutter
@@ -35,7 +35,7 @@ USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomehier gnomeprefix gnomehack intlhack gtk30 ltverhack
 USE_LDCONFIG=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	LIBS="-lexecinfo"
 CONFIGURE_ARGS=	--enable-compile-warnings=maximum

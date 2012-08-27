@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.53 2012/05/26 19:05:29 kwm Exp $
+#   $MCom: ports/x11/gnome-shell/Makefile,v 1.54 2012/07/24 10:02:05 kwm Exp $
 #
 
 PORTNAME=	gnome-shell
@@ -51,10 +51,6 @@ CONFIGURE_ARGS+=--enable-compile-warnings=no \
 		--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
 CPPFLAGS+=	-I${LOCALASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-
-# don't use -O2 in CFLAGS it makes gnome-shell unhappy (aka crashing)
-# but only for me on amd64, report that it works on i386 ..
-CFLAGS+=	-O0 -pipe -fno-strict-aliasing
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|applications.menu|gnome-applications.menu|g' \
