@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gconf-editor/Makefile,v 1.88 2011/04/30 20:43:25 mezz Exp $
+#   $MCom: ports/sysutils/gconf-editor/Makefile,v 1.89 2012/08/17 19:06:46 kwm Exp $
 #
 
 PORTNAME=	gconf-editor
 PORTVERSION=	2.32.0
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME

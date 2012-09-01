@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda4/Makefile,v 1.25 2011/10/15 15:18:35 kwm Exp $
+#   $MCom: ports/databases/libgda4/Makefile,v 1.26 2011/12/17 17:59:32 kwm Exp $
 #
 
 PORTNAME=	libgda
@@ -40,8 +40,8 @@ MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ARGS=	--without-oracle \
 		--disable-crypto \
 		--enable-introspection
-CPPFLAGS=	-I${LOCALBASE}/include
-LDDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDDFLAGS+=	-L${LOCALBASE}/lib
 
 .if ${LIBGDA4_SLAVE}=="no"
 OPTIONS=	UI "Build UI tools" on

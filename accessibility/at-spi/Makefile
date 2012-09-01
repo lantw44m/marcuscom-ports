@@ -3,12 +3,12 @@
 # Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/at-spi/Makefile,v 1.107 2011/04/30 20:43:11 mezz Exp $
+#   $MCom: ports/accessibility/at-spi/Makefile,v 1.108 2011/06/11 18:55:54 mezz Exp $
 #
 
 PORTNAME=	at-spi
 PORTVERSION=	1.32.0
-PORTREVISION?=	0
+PORTREVISION?=	2
 CATEGORIES=	accessibility x11-toolkits
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -30,8 +30,8 @@ USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-static
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	at-spi.schemas
 

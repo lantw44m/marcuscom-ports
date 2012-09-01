@@ -3,12 +3,12 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-mapi/Makefile,v 1.25 2011/04/22 16:17:21 mezz Exp $
+#   $MCom: ports/mail/evolution-mapi/Makefile,v 1.26 2011/04/30 20:43:20 mezz Exp $
 #
 
 PORTNAME=	evolution-mapi
-PORTVERSION=	0.32.1
-PORTREVISION=	1
+PORTVERSION=	0.32.2
+PORTREVISION=	2
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -30,8 +30,8 @@ USE_GMAKE=	yes
 USE_GNOME=	evolutiondataserver
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 EVO_VERSION=	2.32
 EDS_VERSION=	1.2

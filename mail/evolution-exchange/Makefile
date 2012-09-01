@@ -3,12 +3,12 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.169 2011/04/10 19:53:00 mezz Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.170 2011/04/30 20:43:20 mezz Exp $
 #
 
 PORTNAME=	evolution-exchange
 PORTVERSION=	2.32.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -29,8 +29,8 @@ USE_GMAKE=	yes
 USE_BDB=	41
 USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehack ltasneededhack
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR}
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-openldap=${LOCALBASE} \
 		--with-static-ldap=no \
 		--with-libdb=${LOCALBASE}
@@ -56,7 +56,7 @@ KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
 
 .if ${ARCH} == "amd64"
-CONFIGURE_ENV+=	CFLAGS="${CFLAGS} -fPIC"
+CFLAGS+=	-fPIC
 .endif
 
 .if exists(${LOCALBASE}/include/mapi.h)

@@ -7,6 +7,7 @@
 
 PORTNAME=	gegl
 PORTVERSION=	0.2.0
+PORTREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.gimp.org/pub/gegl/0.2/
 
@@ -20,7 +21,9 @@ LIB_DEPENDS=	babl-0:${PORTSDIR}/x11/babl \
 OPTIONS=	CAIRO		"Enable Cairo" on \
 		ENSCRIPT	"Enable Enscript" on \
 		FFMPEG		"Enable videos through ffmpeg (BROKEN)" off \
+		GDK		"Enable gdk-pixbuf2 formats support" on \
 		GRAPHVIZ	"Enable Graphviz" on \
+		JP2		"Enable JPEG2000 format support" on \
 		JPEG		"Enable JPEG format support" on \
 		LUA		"Enable LUA" on \
 		OPENEXR		"Enable High Dynamic Range (HDR) format support" on \
@@ -36,7 +39,7 @@ OPTIONS=	CAIRO		"Enable Cairo" on \
 # Disable docs until I fix the problem with graphviz's dot
 NOPORTDOCS=	yes
 
-USE_GNOME=	gtk20 glib20 pkgconfig gnomehack
+USE_GNOME=	glib20 pkgconfig gnomehack
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
@@ -55,6 +58,14 @@ EXAMPLES=	2geglbuffer csugar float-lookup \
 		geglbuffer-clock hello-world-video hello-world
 
 .include <bsd.port.options.mk>
+
+.if !defined(WITHOUT_GDK)
+USE_GNOME+=	gdkpixbuf2
+PLIST_SUB+=	GDK=""
+.else
+CONFIGURE_ARGS+=--without-gdk-pixbuf
+PLIST_SUB+=	GDK="@comment "
+.endif
 
 .if !defined(WITHOUT_CAIRO)
 LIB_DEPENDS+=	cairo:${PORTSDIR}/graphics/cairo
@@ -84,7 +95,6 @@ BUILD_DEPENDS+=	enscript:${PORTSDIR}/print/enscript-a4
 .endif
 
 .if !defined(WITHOUT_FFMPEG)
-#BROKEN=	ffmpeg support is currently broken
 LIB_DEPENDS+=	avformat:${PORTSDIR}/multimedia/ffmpeg
 PLIST_SUB+=	FFMPEG=""
 .else
@@ -96,6 +106,14 @@ PLIST_SUB+=	FFMPEG="@comment "
 LIB_DEPENDS+=	graph:${PORTSDIR}/graphics/graphviz
 .else
 CONFIGURE_ARGS+=--without-graphviz
+.endif
+
+.if !defined(WITHOUT_JP2)
+LIB_DEPENDS+=	jasper:${PORTSDIR}/graphics/jasper
+PLIST_SUB+=	JP2=""
+.else
+CONFIGURE_ARGS+=--without-jasper
+PLIST_SUB+=	JP2="@comment "
 .endif
 
 .if !defined(WITHOUT_JPEG)
@@ -174,16 +192,20 @@ PLIST_SUB+=	V4L="@comment "
 .if !defined(NOPORTDOCS)
 BUILD_DEPENDS+=	a2x:${PORTSDIR}/textproc/asciidoc
 .else
-CONFIGURE_ARGS+=	--disable-docs
+CONFIGURE_ARGS+=--disable-docs
 .endif
 
 post-patch:
 .if defined(NOPORTDOCS)
-	${REINPLACE_CMD} -e '10s|\\||; 11,13d' ${WRKSRC}/Makefile.am
+	${REINPLACE_CMD} -e '10s|\\||; 11,13d' \
+		${WRKSRC}/Makefile.am
 .endif
-	${REINPLACE_CMD} -e 's|-T||' ${WRKSRC}/docs/Makefile.am ${WRKSRC}/docs/Makefile.in
-	${REINPLACE_CMD} -e 's|\(lua\)\(5\.1\)|\1-\2|g' ${WRKSRC}/configure
-	${REINPLACE_CMD} -e 's|/usr/bin/ruby|/usr/bin/env ruby|' ${WRKSRC}/tools/gobj2dot.rb
+	${REINPLACE_CMD} -e 's|-T||' ${WRKSRC}/docs/Makefile.am \
+		${WRKSRC}/docs/Makefile.in
+	${REINPLACE_CMD} -e 's|\(lua\)\(5\.1\)|\1-\2|g ; s|x86_64|amd64|g' \
+		${WRKSRC}/configure
+	${REINPLACE_CMD} -e 's|/usr/bin/ruby|/usr/bin/env ruby|' \
+		${WRKSRC}/tools/gobj2dot.rb
 
 post-build:
 .if !defined(NOPORTDOCS)

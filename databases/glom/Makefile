@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/glom/Makefile,v 1.35 2012/01/05 20:05:08 kwm Exp $
+#   $MCom: ports/databases/glom/Makefile,v 1.36 2012/01/16 22:40:46 kwm Exp $
 #
 
 PORTNAME=	glom
@@ -35,8 +35,8 @@ USE_GNOME=	gnomedocutils gnomehack gnomeprefix intltool pygobject3 libxml2
 USE_LDCONFIG=	yes
 USE_PGSQL=	yes
 INSTALLS_OMF=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-postgres-utils=${LOCALBASE}/bin \
 		--disable-documentation
 INSTALLS_ICONS=	yes

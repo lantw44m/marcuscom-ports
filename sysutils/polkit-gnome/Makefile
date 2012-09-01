@@ -3,7 +3,7 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.17 2011/03/04 12:35:48 kwm Exp $
+#   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.18 2011/10/07 14:50:51 kwm Exp $
 #
 
 PORTNAME=	polkit-gnome
@@ -12,7 +12,7 @@ CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	GNOME frontend to the PolicKit framework
+COMMENT=	GNOME frontend to the PolicyKit framework
 
 LIB_DEPENDS=	polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 

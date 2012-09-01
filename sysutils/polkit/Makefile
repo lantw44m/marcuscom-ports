@@ -3,7 +3,7 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.19 2012/08/04 21:04:25 kwm Exp $
+#   $MCom: ports/sysutils/polkit/Makefile,v 1.20 2012/08/17 19:06:47 kwm Exp $
 #
 
 PORTNAME=	polkit
@@ -21,7 +21,6 @@ RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-i
 		dbus-launch:${PORTSDIR}/devel/dbus
 
 USE_GNOME=	gnomehack glib20 intlhack
-USE_PKGCONFIG=	build
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes

@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.213 2011/10/24 08:12:27 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.214 2012/08/08 16:56:39 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.32.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -39,8 +39,8 @@ CONFIGURE_ARGS=	--enable-static \
 		--enable-gnome-keyring=yes \
 		--with-openldap=yes \
 		--with-libdb=${LOCALBASE}
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}" \
-		LDFLAGS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
+CPPFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}
+LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 PLIST_SUB=	VERSION="2.32" EVO_VERSION="1.2"
 

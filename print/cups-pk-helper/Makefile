@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/print/cups-pk-helper/Makefile,v 1.6 2011/09/13 18:10:27 kwm Exp $
+#   $MCom: ports/print/cups-pk-helper/Makefile,v 1.7 2011/09/17 20:51:04 kwm Exp $
 
 PORTNAME=	cups-pk-helper
 PORTVERSION=	0.2.0
@@ -22,7 +22,7 @@ USE_GMAKE=	yes
 USE_GNOME=	gnomehack intlhack glib20
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/libs"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/libs
 
 .include <bsd.port.mk>

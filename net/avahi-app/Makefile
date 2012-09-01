@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-app/Makefile,v 1.23 2012/07/09 18:22:18 kwm Exp $
+#   $MCom: ports/net/avahi-app/Makefile,v 1.24 2012/08/17 19:06:44 kwm Exp $
 #
 
 PORTNAME=	avahi
@@ -25,6 +25,9 @@ LIB_DEPENDS?=	expat.6:${PORTSDIR}/textproc/expat2 \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		gdbm.4:${PORTSDIR}/databases/gdbm
 RUN_DEPENDS?=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+
+USERS?=		${PORTNAME}
+GROUPS?=	${USERS}
 
 USE_GNOME?=	gnomehack ltverhack glib20 intltool
 USE_GETTEXT=	yes
@@ -173,9 +176,6 @@ avahi-post-install:
 .if ${AVAHI_SLAVE}=="no"
 	${INSTALL_DATA} ${FILESDIR}/org.freedesktop.Avahi.service \
 		${LOCALBASE}/share/dbus-1/system-services
-.endif
-.if !defined(PACKAGE_BUILDING) && (${AVAHI_SLAVE}=="no" || ${AVAHI_SLAVE}=="autoipd")
-	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 .endif
 .endif # avahi-header
 .include <bsd.port.post.mk>
