@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libxklavier/Makefile,v 1.56 2012/06/14 04:17:30 mezz Exp $
+#   $MCom: ports/x11/libxklavier/Makefile,v 1.57 2012/06/14 12:27:01 kwm Exp $
 #
 
 PORTNAME=	libxklavier
@@ -33,8 +33,8 @@ CONFIGURE_ARGS=	--disable-doxygen \
 		--with-xmodmap-base=${LOCALBASE}/share/xmodmap \
 		--disable-gtk-doc \
 		--with-html-dir=${GNOME_HTML_DIR}
-CONFIGURE_ENV=	CPPFLAGS="${CPPFLAGS}" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION=${PORTVERSION}
 

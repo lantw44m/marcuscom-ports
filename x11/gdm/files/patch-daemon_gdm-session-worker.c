@@ -15,7 +15,7 @@
                           */
  
 -                        path = "/bin:/usr/bin:.";
-+                        path = "/bin:/usr/bin:/usr/local/bin:.";
++                        path = "/bin:/usr/bin:%%LOCALBASE%%/bin:.";
                  }
  
                  len = strlen (file) + 1;

@@ -3,12 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.190 2011/04/10 19:41:38 mezz Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.191 2011/04/25 22:02:03 mezz Exp $
 #
 
 PORTNAME=	gnome-session
 PORTVERSION=	2.32.1
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -36,8 +36,8 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gconf2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		gnome-session.1 gnome-wm.1 gnome-session-properties.1 \
 		gnome-session-save.1
