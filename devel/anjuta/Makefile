@@ -2,8 +2,8 @@
 # Date created:				31 March 2001
 # Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/anjuta/Makefile,v 1.102 2012/06/01 05:17:19 dinoex Exp $
-#   $MCom: ports/devel/anjuta/Makefile,v 1.69 2012/06/16 21:09:40 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/devel/anjuta/Makefile,v 1.70 2012/09/01 23:02:09 mezz Exp $
 #
 
 PORTNAME=	anjuta

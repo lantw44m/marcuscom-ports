@@ -2,8 +2,8 @@
 # Date created:         Mon Nov 18 21:28:43 CST 1996
 # Whom:                 erich@FreeBSD.org
 #
-# $FreeBSD: ports/graphics/gimp-app/Makefile,v 1.259 2012/02/14 22:08:59 kwm Exp $
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.61 2012/06/01 14:35:22 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.62 2012/06/01 14:55:46 kwm Exp $
 #
 
 PORTNAME=	gimp-app

@@ -2,8 +2,8 @@
 # Date created:			17 Aug 2002
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/irc/xchat/Makefile,v 1.154 2012/06/01 05:21:03 dinoex Exp $
-#   $MCom: ports/irc/xchat/Makefile,v 1.7 2008/08/06 07:59:00 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/irc/xchat/Makefile,v 1.9 2012/06/20 02:14:27 mezz Exp $
 #
 
 PORTNAME=	xchat

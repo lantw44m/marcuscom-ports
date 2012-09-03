@@ -2,8 +2,8 @@
 # Date created:		2006-12-31
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/py-gimp/Makefile,v 1.14 2010/06/24 17:12:10 mezz Exp $
-#    $MCom: ports/graphics/py-gimp/Makefile,v 1.6 2009/08/25 00:06:39 marcus Exp $
+# $FreeBSD$
+#    $MCom: ports/graphics/py-gimp/Makefile,v 1.8 2012/05/13 12:31:16 kwm Exp $
 
 PORTREVISION=	0
 PORTEPOCH=	0

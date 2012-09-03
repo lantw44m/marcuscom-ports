@@ -2,7 +2,7 @@
 # Date created:		2008-04-14
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/x11/babl/Makefile,v 1.12 2012/03/16 03:12:33 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	babl

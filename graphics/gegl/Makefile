@@ -2,7 +2,7 @@
 # Date created:				3 October 2008
 # Whom:					gahr
 #
-# $FreeBSD: ports/graphics/gegl/Makefile,v 1.32 2012/03/14 15:24:09 mezz Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	gegl

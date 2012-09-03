@@ -2,8 +2,8 @@
 # Date created:				07 June 2005
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
-# $FreeBSD: ports/devel/goffice/Makefile,v 1.69 2012/06/01 05:17:29 dinoex Exp $
-#   $MCom: ports-stable/devel/goffice/Makefile,v 1.3 2010/06/29 10:56:38 kwm Exp $
+# $FreeBSD$
+#   $MCom: ports/devel/goffice/Makefile,v 1.37 2012/06/04 19:04:16 kwm Exp $
 #
 # !!! When updating goffice, don't forget to update pkg-plist in:
 #     math/gnumeric science/gchemutils

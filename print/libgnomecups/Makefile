@@ -2,7 +2,7 @@
 # Date created:				14 Jul 2003
 # Whom:					Glenn Johnson <glennpj@charter.net>
 #
-# $FreeBSD: ports/print/libgnomecups/Makefile,v 1.31 2011/09/23 22:25:01 amdmi3 Exp $
+# $FreeBSD$
 #
 
 PORTNAME=	libgnomecups

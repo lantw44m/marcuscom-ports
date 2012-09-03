@@ -2,8 +2,8 @@
 # Date created:		2006-01-12
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: ports/graphics/poppler-glib/Makefile,v 1.3 2012/06/01 05:20:37 dinoex Exp $
-#   $MCom$
+# $FreeBSD$
+#   $MCom: ports/graphics/poppler-glib/Makefile,v 1.1 2012/06/13 12:29:03 kwm Exp $
 #
 
 PORTREVISION=	0

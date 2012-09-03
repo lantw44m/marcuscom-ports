@@ -2,7 +2,7 @@
 # Date created:		Fri Apr 18, 2003
 # Whom:			Dan Rench <citric@cubicone.tmetic.com>
 #
-# $FreeBSD: ports/lang/spidermonkey/Makefile,v 1.28 2011/12/22 10:51:36 linimon Exp $
+# $FreeBSD$
 
 PORTNAME=	spidermonkey
 PORTVERSION=	1.8.5
