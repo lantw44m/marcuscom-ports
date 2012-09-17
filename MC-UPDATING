@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.29 2012/01/04 22:50:21 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.30 2012/08/04 09:39:16 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -36,7 +36,7 @@ upgrades.
   # portmaster -o devel/libgdata06 devel/libgdata
   # portmaster -o graphics/libchamplain08 graphics/libchamplain
   # pkg_delete -f vte-0.\* clutter-\*
-  # portmaster x11-toolkits/vte
+  # portmaster x11-toolkits/vte graphics/clutter
   # portmaster -a
 
   or
@@ -44,7 +44,7 @@ upgrades.
   # pkgdb -F
   # pkg_delete -f avahi-gtk-\* vte-\* clutter-\*
   # portinstall net/avahi-gtk
-  # portinstall x11-toolkits/vte
+  # portinstall x11-toolkits/vte graphics/clutter
   # portupgrade -o devel/libgdata06 devel/libgdata
   # portupgrade -o graphics/libchamplain08 graphics/libchamplain
   # portupgrade -a
@@ -63,6 +63,7 @@ upgrades.
 
   # pkg_delete -fr gnome-\* libwnck-2.\* vte-0.\*  at-spi-1.\* seed-2.\* \
 	libgnomekbd-2.\* gtk-vnc-0.3.\* clutter-\*
+  # portinstall x11-toolkits/vte graphics/clutter
   # pkgdb -Ff
   # portupgrade -a
 
