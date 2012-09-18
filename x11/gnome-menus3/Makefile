@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-menus3/Makefile,v 1.5 2011/10/23 10:23:06 kwm Exp $
+#   $MCom: ports/x11/gnome-menus3/Makefile,v 1.6 2012/05/25 10:29:43 kwm Exp $
 #
 
 PORTNAME=	gnome-menus
@@ -24,6 +24,7 @@ USE_GETTEXT=	yes
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehier gnomeprefix gnomehack intlhack glib20 ltverhack
+USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
