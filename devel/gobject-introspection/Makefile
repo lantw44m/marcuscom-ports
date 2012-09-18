@@ -3,7 +3,7 @@
 # Whom:					Alexander Logvinov <avl@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.46 2012/05/15 15:19:32 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.47 2012/08/04 09:41:25 kwm Exp $
 #
 
 PORTNAME=	gobject-introspection
@@ -16,12 +16,14 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Generate interface introspection data for GObject libraries
 
+BUILD_DEPENDS=	cairo-trace:${PORTSDIR}/graphics/cairo
 LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehier gnomehack glib20 ltverhack
+USE_PKGCONFIG=	build
 USE_PYTHON=	-2.7
 USE_BISON=	build
 USE_GETTEXT=	yes
