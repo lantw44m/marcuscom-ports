@@ -1,12 +1,9 @@
-# New ports collection makefile for:   accountsservice
-# Date Created:			8 Mar 2011
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#
+#    $MCom$
 
 PORTNAME=	accountsservice
-PORTVERSION=	0.6.22
+PORTVERSION=	0.6.24
 CATEGORIES=	sysutils devel
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 

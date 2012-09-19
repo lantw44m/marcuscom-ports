@@ -1,5 +1,5 @@
---- src/daemon.c.orig	2012-06-28 17:24:55.000000000 +0200
-+++ src/daemon.c	2012-06-29 10:44:09.000000000 +0200
+--- src/daemon.c.orig	2012-08-16 19:03:51.000000000 +0000
++++ src/daemon.c	2012-09-19 21:48:15.000000000 +0000
 @@ -49,7 +49,7 @@
  #define PATH_SHADOW "/etc/shadow"
  #define PATH_NOLOGIN "/sbin/nologin"
@@ -25,17 +25,15 @@
          NULL
  };
  
-@@ -315,7 +317,13 @@
-         g_hash_table_foreach (daemon->priv->users, listify_hash_values_hfunc, &old_users);
-         g_slist_foreach (old_users, (GFunc) g_object_ref, NULL);
+@@ -304,7 +306,11 @@
  
+         /* Every iteration */
+         fp = *state;
 +#ifdef HAVE_FGETPWENT
-         while ((pwent = fgetpwent (fp)) != NULL) {
+         pwent = fgetpwent (fp);
 +#else
-+        setpwent();
-+
-+        while ((pwent = getpwent ()) != NULL) {
++	pwent = getpwent ();
 +#endif
-                 /* Skip system users... */
-                 if (daemon_local_user_is_excluded (daemon, pwent->pw_name, pwent->pw_shell)) {
-                         g_debug ("skipping user: %s", pwent->pw_name);
+         if (pwent != NULL) {
+                 return pwent;
+         }
