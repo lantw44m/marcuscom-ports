@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/lang/gjs/Makefile,v 1.24 2012/05/25 15:36:00 kwm Exp $
+#   $MCom: ports/lang/gjs/Makefile,v 1.25 2012/08/17 19:06:44 kwm Exp $
 #
 
 PORTNAME=	gjs
@@ -18,6 +18,7 @@ COMMENT=	GNOME Javascript binding
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		spidermonkey>=1.8.5:${PORTSDIR}/lang/spidermonkey
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+		cairo:${PORTSDIR}/graphics/cairo \
 		mozjs185.1:${PORTSDIR}/lang/spidermonkey
 
 USE_XZ=		yes
