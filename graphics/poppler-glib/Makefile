@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler-glib/Makefile,v 1.1 2012/06/13 12:29:03 kwm Exp $
+#   $MCom: ports/graphics/poppler-glib/Makefile,v 1.2 2012/09/03 16:30:19 mezz Exp $
 #
 
 PORTREVISION=	0
@@ -17,7 +17,7 @@ SLAVEPORT=	glib
 PLIST=	${.CURDIR}/pkg-plist
 
 pre-build:
-	cd ${WRKSRC}/poppler && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
+	@cd ${WRKSRC}/poppler && ${SETENV} ${MAKE_ENV} ${GMAKE} ${MAKE_FLAGS} \
 		Makefile ${MAKE_ARGS} libpoppler-cairo.la
 
 .include "${MASTERDIR}/Makefile"
