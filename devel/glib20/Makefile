@@ -3,7 +3,7 @@
 # Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.225 2012/07/15 11:44:25 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.226 2012/07/26 09:09:58 kwm Exp $
 #
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
@@ -33,7 +33,7 @@ USE_ICONV=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_PKGCONFIG=	build
-USE_GNOME=	gnomehack ltverhack
+USE_GNOME=	gnomehack ltverhack pkgconfig
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_PYTHON=	2.5+
