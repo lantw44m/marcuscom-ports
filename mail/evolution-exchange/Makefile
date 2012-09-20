@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.170 2011/04/30 20:43:20 mezz Exp $
+#   $MCom: ports/mail/evolution-exchange/Makefile,v 1.171 2012/09/01 23:02:10 mezz Exp $
 #
 
 PORTNAME=	evolution-exchange
@@ -67,6 +67,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-ldb|-l${BDB_LIB_NAME}|g' \
 		-e 's|-lkrb5 -lcrypto -lasn1 -lcom_err -lroken -lgssapi|${KRB5_LIB}|g' \
 		-e 's|-DGTK_DISABLE_DEPRECATED||g' \
+		-e 's|-DG_DISABLE_DEPRECATED||g' \
 		-e 's|-Wmissing-include-dirs||g' \
 		${WRKSRC}/configure
 
