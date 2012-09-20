@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/security/gcr/Makefile,v 1.1 2012/05/26 12:58:06 kwm Exp $
 #
 
 PORTNAME=	gcr
@@ -30,10 +30,8 @@ USE_GNOME=	gnomehack gtk30 pkgconfig intlhack
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-#USE_LDCONFIG=	yes
-#CONFIGURE_ARGS=	--disable-gtk-doc \
-#CPPFLAGS=	-I${LOCALBASE}/include
-#LDFLAGS=	-L${LOCALBASE}/lib
+USE_LDCONFIG=	yes
+INSTALLS_ICONS=	yes
 
 GLIB_SCHEMAS=	org.gnome.crypto.pgp.gschema.xml
 
