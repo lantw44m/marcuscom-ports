@@ -3,12 +3,12 @@
 # Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.232 2012/08/04 09:01:12 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.233 2012/09/03 20:31:40 kwm Exp $
 #
 # Remember to update graphics/gtk-update-icon-cache too.
 
 PORTNAME=	gtk
-PORTVERSION=	2.24.12
+PORTVERSION=	2.24.13
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -20,7 +20,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Gimp Toolkit for X11 GUI (previous stable version)
 
 LICENSE=	LGPL20
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_XZ=		yes
 LATEST_LINK=	gtk20
@@ -47,21 +46,23 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		gtk-query-immodules-2.0.1
 
-.if defined(WITH_DEBUG)
-CONFIGURE_ARGS+=	--enable-debug=yes
-.endif
 
-OPTIONS=	CUPS "Enable cups printing support" on
+OPTIONS_DEFINE=	CUPS DEBUG
+OPTIONS_DEFAULT=CUPS
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_CUPS)
-LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
+.if ${PORT_OPTIONS:MCUPS}
+LIB_DEPENDS+=	cups:${PORTSDIR}/print/cups-client
 CONFIGURE_ARGS+=--enable-cups=auto
 PLIST_SUB+=	CUPS:=""
 .else
 CONFIGURE_ARGS+=--disable-cups
 PLIST_SUB+=	CUPS:="@comment "
+.endif
+
+.if ${PORT_OPTIONS:MDEBUG}
+CONFIGURE_ARGS+=--enable-debug=yes
 .endif
 
 post-patch:
