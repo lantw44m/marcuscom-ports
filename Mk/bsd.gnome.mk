@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.567 2012/07/26 17:00:59 mezz Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.568 2012/08/16 18:56:11 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -78,7 +78,7 @@ _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 \
 		libgda libghttp libglade libxml imlib oaf orbit pygtk
 
 # GNOME 2 components
-_USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
+_USE_GNOME_ALL+= atk atspi cairo desktopfileutils eel2 evolutiondataserver gal2 \
 		gdkpixbuf2 gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop \
 		gnomedesktopsharp20 gnomedocutils gnomemenus gnomepanel gnomesharp20 \
 		gnomespeech gnomevfs2 gtk-update-icon-cache gtk20 gtkhtml3 gtksharp10 \
@@ -91,13 +91,14 @@ _USE_GNOME_ALL+= atk atspi desktopfileutils eel2 evolutiondataserver gal2 \
 		pygtksourceview vte
 
 # GNOME 3 components
-_USE_GNOME_ALL+= dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
+_USE_GNOME_ALL+=dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
 		gnomemenus3 gnomepanel3 gtk30 gtkhtml4 gtksourceview3 libgda5 \
 		libgda5-ui libgnomekbd3 libwnck3 metacity3 nautilus3 pygobject3 vte3
 
 # C++ bindings
-_USE_GNOME_ALL+=atkmm cairomm gconfmm glibmm gtkmm24 gtkmm30 \
-		gtksourceviewmm gtksourceviewmm libgdamm5 pangomm
+_USE_GNOME_ALL+=atkmm cairomm gconfmm gconfmm26 glibmm gtkmm24 gtkmm30 \
+		gtksourceviewmm3 libgdamm libgdamm5 libgtksourceviewmm \
+		libxml++26 pangomm
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -135,6 +136,71 @@ gnomeprefix_CONFIGURE_ARGS=--localstatedir=${GNOME_LOCALSTATEDIR} \
 			   --disable-gtk-doc \
 			   --with-gconf-source=${GCONF_CONFIG_SOURCE}
 gnomeprefix_USE_GNOME_IMPL=gnomehier
+
+atkmm_DETECT=		${LOCALBASE}/libdata/pkgconfig/atkmm-1.6.pc
+atkmm_LIB_DEPENDS=	atkmm-1.6:${PORTSDIR}/accessibility/atkmm
+atkmm_USE_GNOME_IMPL=	glibmm atk
+
+libxml++26_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxml++-2.6.pc
+libxml++26_LIB_DEPENDS=		libxml++-2.6:${PORTSDIR}/textproc/libxml++26
+libxml++26_USE_GNOME_IMPL=	glibmm libxml2
+
+cairo_DETECT=		${LOCALBASE}/libdata/pkgconfig/cairo.pc
+cairo_LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
+
+cairomm_DETECT=		${LOCALBASE}/libdata/pkgconfig/cairomm-1.0.pc
+cairomm_LIB_DEPENDS=	cairomm-1.0:${PORTSDIR}/graphics/cairomm
+cairomm_USE_GNOME_IMPL=	cairo libxml++26
+
+gconfmm_DETECT=		${LOCALBASE}/libdata/pkgconfig/gconfmm-2.0.pc
+gconfmm_LIB_DEPENDS=	gconfmm-2.0:${PORTSDIR}/devel/gconfmm
+gconfmm_USE_GNOME_IMPL=	gtkmm20 gconf2
+
+gconfmm26_DETECT=		${LOCALBASE}/libdata/pkgconfig/gconfmm-2.6.pc
+gconfmm26_LIB_DEPENDS=		gconfmm-2.6:${PORTSDIR}/devel/gconfmm26
+gconfmm26_USE_GNOME_IMPL=	glibmm gconf2
+
+glibmm_DETECT=		${LOCALBASE}/libdata/pkgconfig/glibmm-2.4.pc
+glibmm_LIB_DEPENDS=	glibmm-2.6:${PORTSDIR}/devel/glibmm
+glibmm_USE_GNOME_IMPL=	libsigc++20 glib20
+
+gtkmm20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtkmm-2.0.pc
+gtkmm20_LIB_DEPENDS=	gtkmm-2.0:${PORTSDIR}/x11-toolkits/gtkmm20
+gtkmm20_USE_GNOME_IMPL=	libsigc++12 gtk20
+
+gtkmm24_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtkmm-2.4.pc
+gtkmm24_LIB_DEPENDS=	gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24
+gtkmm24_USE_GNOME_IMPL=	glibmm cairomm atkmm pangomm gtk20
+
+gtkmm30_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtkmm-3.0.pc
+gtkmm30_LIB_DEPENDS=	gtkmm-3.0:${PORTSDIR}/x11-toolkits/gtkmm30
+gtkmm30_USE_GNOME_IMPL=	glibmm cairomm atkmm pangomm gtk30
+
+gtksourceviewmm3_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtksourceviewmm-3.0.pc
+gtksourceviewmm3_LIB_DEPENDS=		gtksourceviewmm-3.0:${PORTSDIR}/x11-toolkits/gtksourceviewmm3
+gtksourceviewmm3_USE_GNOME_IMPL=gtkmm30 gtksourceview3
+
+libgdamm_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgdamm-4.0.pc
+libgdamm_LIB_DEPENDS=	gdamm-4.0:${PORTSDIR}/databases/libgdamm
+libgdamm_USE_GNOME_IMPL=libgda4 glibmm
+
+libgdamm5_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgdamm-5.0.pc
+libgdamm5_LIB_DEPENDS=		gdamm-5.0:${PORTSDIR}/databases/libgdamm5
+libgdamm5_USE_GNOME_IMPL=	libgda5 glibmm
+
+libgtksourceviewmm_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtksourceviewmm-2.0.pc
+libgtksourceviewmm_LIB_DEPENDS=		gtksourceviewmm-2.0:${PORTSDIR}/x11-toolkits/libgtksourceviewmm
+libgtksourceviewmm_USE_GNOME_IMPL=	gtksourceview2 gtkmm24
+
+libsigc++12_DETECT=		${LOCALBASE}/libdata/pkgconfig/sigc++-1.2.pc
+libsigc++12_LIB_DEPENDS=	sigc-1.2:${PORTSDIR}/devel/libsigc++12
+
+libsigc++20_DETECT=		${LOCALBASE}/libdata/pkgconfig/sigc++-2.0.pc
+libsigc++20_LIB_DEPENDS=	sigc-2.0:${PORTSDIR}/devel/libsigc++20
+
+pangomm_DETECT=		${LOCALBASE}/libdata/pkgconfig/pangomm-1.4.pc
+pangomm_LIB_DEPENDS=	pango-1.4:${PORTSDIR}/x11-toolkits/pangomm
+pangomm_USE_GNOME_IMPL=	pango glibmm cairomm
 
 ESD_CONFIG?=		${LOCALBASE}/bin/esd-config
 esound_LIB_DEPENDS=	esd.2:${PORTSDIR}/audio/esound
