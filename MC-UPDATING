@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.30 2012/08/04 09:39:16 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.31 2012/09/17 07:12:39 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -25,18 +25,18 @@ upgrades.
 
   Please note that these instructions are based on gnome being installed via
   the x11/gnome2 meta port. So if you only a partial installation then some
-  of these steps might not apply to your situation.
+  of these steps might not fully apply to your situation.
 
-  GNOME 3.0 has been added to the ports tree.  GNOME 3.0 and 2.32 desktop
+  GNOME 3.4 has been added to the ports tree.  GNOME 3 and GNOME 2 desktop
   components are mutual exclusive. There shouldn't be any issue running gtk2
   applications with GNOME 3 or the other way around.
 
   The following instuctions are for people wanting to keep using GNOME 2.32:
 
   # portmaster -o devel/libgdata06 devel/libgdata
-  # portmaster -o graphics/libchamplain08 graphics/libchamplain
-  # pkg_delete -f vte-0.\* clutter-\*
-  # portmaster x11-toolkits/vte graphics/clutter
+  # pkg_delete -f vte-0.\* clutter-\*  libchamplain-\*
+    or  pkg delete -f vte clutter clutter-gtk libchamplain
+  # portmaster graphics/libchamplain08 x11-toolkits/vte graphics/clutter
   # portmaster -a
 
   or
@@ -48,6 +48,10 @@ upgrades.
   # portupgrade -o devel/libgdata06 devel/libgdata
   # portupgrade -o graphics/libchamplain08 graphics/libchamplain
   # portupgrade -a
+
+  or
+
+  # pkg users here :>
 
   If you want to start using the GNOME 3.0 desktop. and you have currently
   GNOME 2.32 installed, or parts of it, please use the instructions below.
@@ -66,4 +70,8 @@ upgrades.
   # portinstall x11-toolkits/vte graphics/clutter
   # pkgdb -Ff
   # portupgrade -a
+
+  or
+
+  # pkg users here :>
 
