@@ -3,13 +3,13 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/x11-toolkits/mx/Makefile,v 1.2 2011/04/13 18:13:15 kwm Exp $
+#  $MCom: ports/x11-toolkits/mx/Makefile,v 1.3 2011/09/18 17:29:41 kwm Exp $
 #
 
 PORTNAME=	mx
 PORTVERSION=	1.2.1
 CATEGORIES=	x11-toolkits
-MASTER_SITES=	http://source.clutter-project.org/sources/${PORTNAME}/${PORTVERSION:R}/
+MASTER_SITES=	LOCAL/kwm
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Clutter based widget toolkit
