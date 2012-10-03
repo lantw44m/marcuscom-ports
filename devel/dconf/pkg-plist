@@ -1,5 +1,4 @@
 bin/dconf
-%%EDITOR%%bin/dconf-editor
 etc/bash_completion.d/dconf-bash-completion.sh
 include/dconf/dconf-client.h
 include/dconf-dbus-1/dconf-dbus-1.h
@@ -14,9 +13,7 @@ lib/libdconf-dbus-1.so.0
 libdata/pkgconfig/dconf.pc
 libdata/pkgconfig/dconf-dbus-1.pc
 libexec/dconf-service
-%%EDITOR%%share/applications/dconf-editor.desktop
 share/dbus-1/services/ca.desrt.dconf.service
-%%EDITOR%%share/dconf-editor/dconf-editor.ui
 share/gtk-doc/html/dconf/DConfClient.html
 share/gtk-doc/html/dconf/dconf-DConf-Paths.html
 share/gtk-doc/html/dconf/annotation-glossary.html
@@ -31,16 +28,11 @@ share/gtk-doc/html/dconf/object-tree.html
 share/gtk-doc/html/dconf/right.png
 share/gtk-doc/html/dconf/style.css
 share/gtk-doc/html/dconf/up.png
-share/icons/hicolor/128x128/apps/dconf-editor.png
-share/icons/hicolor/32x32/apps/dconf-editor.png
-share/icons/hicolor/48x48/apps/dconf-editor.png
-share/icons/hicolor/64x64/apps/dconf-editor.png
 share/vala/vapi/dconf.deps
 share/vala/vapi/dconf.vapi
 @dirrm share/gtk-doc/html/dconf
 @dirrmtry share/gtk-doc/html
 @dirrmtry share/gtk-doc
-@dirrmtry share/dconf-editor
 @dirrmtry share/applications
 @dirrm include/dconf-dbus-1
 @dirrm include/dconf

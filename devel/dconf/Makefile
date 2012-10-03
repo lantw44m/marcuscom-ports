@@ -1,23 +1,21 @@
-# New ports collection makefile for:	dconf
-# Date created:				28 May 2010
-# Whom:					Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.28 2011/10/16 19:35:42 kwm Exp $
-#
+#   $MCom: ports/devel/dconf/Makefile,v 1.29 2012/05/28 11:45:14 kwm Exp $
 
-PORTNAME=	dconf
+PORTNAME?=	dconf
 PORTVERSION=	0.12.1
+PORTREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
+DISTNAME=	dconf-${PORTVERSION}
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A configuration database system for GNOME
 
 BUILD_DEPENDS=	vala>=0.11.7:${PORTSDIR}/lang/vala
-LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
-		dbus-1.3:${PORTSDIR}/devel/dbus
+LIB_DEPENDS=	gee:${PORTSDIR}/devel/libgee \
+		dbus-1:${PORTSDIR}/devel/dbus
 
 USE_XZ=		yes
 USE_GMAKE=	yes
@@ -25,21 +23,18 @@ USE_GNOME=	gnomehack glib20 gnomehier
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	yes
-INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS=	EDITOR "Build the dconf editor (requires Gtk+3)" On
+DCONF_SLAVE?=	no
 
-.include <bsd.port.options.mk>
-
-.if defined(WITHOUT_EDITOR)
-CONFIGURE_ARGS+=--disable-editor
-PLIST_SUB+=	EDITOR="@comment "
-.else
+.if ${DCONF_SLAVE} == "editor"
 USE_GNOME+=	gtk30
+INSTALLS_ICONS=	yes
 GLIB_SCHEMAS=	ca.desrt.dconf-editor.gschema.xml
-PLIST_SUB+=	EDITOR=""
+LIB_DEPENDS+=	dconf:${PORTSDIR}/devel/dconf
+.else
+CONFIGURE_ARGS+=--disable-editor
 .endif
 
 post-patch:
