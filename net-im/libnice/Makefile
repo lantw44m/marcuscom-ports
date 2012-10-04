@@ -6,7 +6,7 @@
 #
 
 PORTNAME=	libnice
-PORTVERSION=	0.1.2
+PORTVERSION=	0.1.3
 CATEGORIES=	net-im devel
 MASTER_SITES=	http://nice.freedesktop.org/releases/
 
@@ -19,6 +19,7 @@ USE_LDCONFIG=	yes
 USE_GNOME=	gnomehack pkgconfig glib20 ltverhack
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool
+CONFIGURE_ARGS=	--without-gstreamer --with-gstreamer-0.10
 CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_GETIFADDRS
 LDFLAGS+=	-L${LOCALBASE}/lib
 
