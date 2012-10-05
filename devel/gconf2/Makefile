@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.131 2011/10/26 20:37:12 kwm Exp $
+#   $MCom: ports/devel/gconf2/Makefile,v 1.132 2012/05/25 12:44:11 kwm Exp $
 #
 
 PORTNAME=	gconf2
@@ -35,6 +35,7 @@ USE_GNOME=	gnomehier gnomehack orbit2 gtk20 libxml2 ltverhack \
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
+		--with-gtk=2.0 \
 		--disable-gtk-doc
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
