@@ -6,7 +6,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.48 2012/10/04 08:12:44 kwm Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -94,7 +94,6 @@ core_DEPENDS=	multimedia/gstreamer-plugins-core
 
 yes_DEPENDS=	multimedia/gstreamer-plugins
 yes_NAME=	gstreamer-plugins
-yes_GST1_NAME=	gstreamer1-plugins
 yes_GST_PREFIX=	# empty
 yes_GST1_PREFIX= #empty
 
@@ -318,8 +317,8 @@ ${ext}_GST_PREFIX?=	gstreamer-plugins-
 ${ext}_GST_VERSION?=	${GST_VERSION}${GST_MINOR_VERSION}
 ${ext}_NAME?=		${ext}
 . if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS})
-BUILD_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_GST_VERSION}:${PORTSDIR}/${${ext}_DEPENDS:S/gstreamer/gstreamer1/}
-RUN_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_GST_VERSION}:${PORTSDIR}/${${ext}_DEPENDS:S/gstreamer/gstreamer1/}
+BUILD_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_GST_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
+RUN_DEPENDS+=	${${ext}_GST_PREFIX}${${ext}_NAME}>=${${ext}_GST_VERSION}:${PORTSDIR}/${${ext}_DEPENDS}
 . else
 IGNORE=	cannot install: unknown gstreamer 0.10 plugin -- ${ext}
 . endif
@@ -328,13 +327,12 @@ IGNORE=	cannot install: unknown gstreamer 0.10 plugin -- ${ext}
 .for ext in ${USE_GSTREAMER1}
 ${ext}_GST1_PREFIX?=	gstreamer1-plugins-
 ${ext}_GST1_VERSION?=	${GST1_VERSION}${GST1_MINOR_VERSION}
-${ext}_GST1_NAME?=	${ext}
-. if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_DEPENDS})
+${ext}_GST1_NAME?=	${ext:S/gstreamer/gstreamer1/}
+${ext}_GST1_DEPENDS?=	${${ext}_DEPENDS:S/gstreamer/gstreamer1/}
+. if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_GST1_DEPENDS})
 # XXX version check hmmm hier moet nog uit gedacht worden.
-BUILD_DEPENDS+=	${${ext}_GST1_PREFIX}${${ext}_NAME}>=${${ext}_GST1_VERSION}}:
-	${PORTSDIR}/${${ext}_DEPENDS}
-RUN_DEPENDS+=	${${ext}_GST1_PREFIX}${${ext}_NAME}>=${${ext}_GST1_VERSION}}:
-	${PORTSDIR}/${${ext}_DEPENDS}
+BUILD_DEPENDS+=	${${ext}_GST1_PREFIX}${${ext}_GST1_NAME}>=${${ext}_GST1_VERSION}:${PORTSDIR}/${${ext}_GST1_DEPENDS}
+RUN_DEPENDS+=	${${ext}_GST1_PREFIX}${${ext}_GST1_NAME}>=${${ext}_GST1_VERSION}:${PORTSDIR}/${${ext}_GST1_DEPENDS}
 . else
 IGNORE=	cannot install: unknown gstreamer 1.0 plugin -- ${ext}
 . endif
