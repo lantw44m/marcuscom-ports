@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.1 2012/10/04 08:12:44 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.2 2012/10/06 09:04:19 kwm Exp $
 
 PORTNAME=	gstreamer1-plugins
 PORTVERSION?=	${BASE_PORTVERSION}
@@ -136,6 +136,7 @@ post-patch:
 		${WRKSRC}/ext/resindvd/resindvdbin.c \
 		${WRKSRC}/ext/resindvd/resindvdsrc.c
 .endif
+.if ${DIST}!="ugly"
 	@${FIND} ${WRKSRC}/ext ${WRKSRC}/sys -name Makefile.in | \
 	${XARGS} -n 10 ${REINPLACE_CMD} -e \
 	's|$$(top_builddir)/gst-libs/gst/tag/libgsttag-@GST_API_VERSION@.la|${LOCALBASE}/lib/libgsttag-$$(GST_API_VERSION).la|; \
@@ -153,6 +154,7 @@ post-patch:
 	  s|$$(top_builddir)/gst-libs/gst/signalprocessor/libgstsignalprocessor-$$(GST_API_VERSION).la|${LOCALBASE}/lib/libgstsignalprocessor-$$(GST_API_VERSION).la|; \
 	  s|$$(top_builddir)/gst-libs/gst/video/libgstbasevideo-$$(GST_API_VERSION).la|${LOCALBASE}/lib/libgstbasevideo-$$(GST_API_VERSION).la|; \
 	  s|$$(top_builddir)/gst-libs/gst/video/libgstvideo-$$(GST_API_VERSION).la|${LOCALBASE}/lib/libgstvideo-$$(GST_API_VERSION).la|'
+.endif
 
 #	@${REINPLACE_CMD} -e 's|DEFAULT_AUDIOSINK="alsasink"|DEFAULT_AUDIOSINK="${DEFAULT_AUDIOSINK}"|; \
 #		s|DEFAULT_AUDIOSRC="alsasrc"|DEFAULT_AUDIOSRC="${DEFAULT_AUDIOSRC}"|' \

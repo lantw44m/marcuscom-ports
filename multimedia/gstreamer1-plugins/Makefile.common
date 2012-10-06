@@ -1,13 +1,7 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile.common,v 1.1 2012/10/04 08:12:44 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile.common,v 1.2 2012/10/06 09:04:19 kwm Exp $
 
-# XXX configure checks for all ports.
-
-# remove GCONF crap
-
-# xxx DIST is voor het aangeven waar de plugin weg komt.?
-# dus DIST ook in plugins vermelden naast GST_PLUGIN
-# voor meeste DIST gebruik GST_PLUGIN gebruiken?
+# XXX configure checks for bad and ugly.
 
 # base
 BASE_GST_ALL_PLUGINS= \
@@ -199,7 +193,7 @@ GOOD_GST_NON_PLUGINS=	\
 UGLY_GST_ALL_PLUGINS+= \
 		a52dec \
 		amrnb \
-		amrwbdec \
+		amrwb \
 		cdio \
 		dvdread \
 		lame \
@@ -212,7 +206,6 @@ UGLY_GST_ALL_PLUGINS+= \
 UGLY_GST_NON_PLUGINS=
 
 .for i in ${BASE_GST_ALL_PLUGINS} ${BAD_GST_ALL_PLUGINS} ${UGLY_GST_ALL_PLUGINS}
-gst_${i}_GCONF_SCHEMAS?=	# Empty
 gst_${i}_USE_SDL?=		# Empty
 .endfor
 
@@ -298,9 +291,6 @@ PLIST=		${NONEXISTENT}
 
 # a52dec
 gst_a52dec_LIB_DEPENDS+=	a52:${PORTSDIR}/audio/liba52
-gst_a52dec_PLIST_FILES=	${GST_LIB_DIR}/libgsta52dec.la \
-		${GST_LIB_DIR}/libgsta52dec.so
-#gst_a52dec_DIST=	ugly
 
 # aalib
 gst_aalib_LIB_DEPENDS+=	aa:${PORTSDIR}/graphics/aalib
@@ -314,30 +304,18 @@ gst_amrnb_PLIST_FILES=	${GST_LIB_DIR}/libgstamrnb.la \
 			share/gstreamer-${VERSION}/presets/GstAmrnbEnc.prs
 gst_amrnb_PLIST_DIRS=	share/gstreamer-${VERSION}/presets \
 			share/gstreamer-${VERSION}
-#gst_amrnb_DIST=		ugly
 
-# amrwbdec
-gst_amrwbdec_LIB_DEPENDS+=	opencore-amrwb:${PORTSDIR}/audio/opencore-amr
-gst_amrwbdec_CONFIGURE_ARGS+=	--enable-amrwb
-gst_amrwbdec_PLIST_FILES=	${GST_LIB_DIR}/libgstamrwbdec.la \
-				${GST_LIB_DIR}/libgstamrwbdec.so
-#gst_amrwbdec_DIST=	ugly
-
-# annodex
-gst_annodex_USE_GNOME+=		libxml2
-#gst_annodex_LIB_DEPENDS+=	xml2:${PORTSDIR}/textproc/libxml2
-gst_annodex_PLIST_FILES=	${GST_LIB_DIR}/libgstannodex.la \
-				${GST_LIB_DIR}/libgstannodex.so
-
-# bz2
-gst_bz2_PLIST_FILES=	${GST_LIB_DIR}/libgstbz2.la \
-		${GST_LIB_DIR}/libgstbz2.so
-#gst_bz2_DIST=		bad
+# amrwb
+gst_amrwb_LIB_DEPENDS+=	opencore-amrwb:${PORTSDIR}/audio/opencore-amr
+gst_amrwb_GST_PLUGIN_DIR=	ext/amrwbdec
+gst_amrwb_PLIST_FILES=	${GST_LIB_DIR}/libgstamrwbdec.la \
+			${GST_LIB_DIR}/libgstamrwbdec.so
 
 # cairo
 gst_cairo_LIB_DEPENDS+=	cairo:${PORTSDIR}/graphics/cairo
 gst_cairo_PLIST_FILES=		${GST_LIB_DIR}/libgstcairo.la \
 				${GST_LIB_DIR}/libgstcairo.so
+#
 
 # cdaudio
 gst_cdaudio_LIB_DEPENDS+=cdaudio:${PORTSDIR}/audio/libcdaudio
@@ -353,8 +331,7 @@ gst_cdparanoia_PLIST_FILES=	${GST_LIB_DIR}/libgstcdparanoia.la \
 # cdio
 gst_cdio_LIB_DEPENDS+=	cdio:${PORTSDIR}/sysutils/libcdio
 gst_cdio_PLIST_FILES=	${GST_LIB_DIR}/libgstcdio.la \
-		${GST_LIB_DIR}/libgstcdio.so
-#gst_cdio_DIST=		ugly
+			${GST_LIB_DIR}/libgstcdio.so
 
 # dts
 gst_dts_LIB_DEPENDS+=	dca:${PORTSDIR}/multimedia/libdca
@@ -370,20 +347,13 @@ gst_libdv_PLIST_FILES=	${GST_LIB_DIR}/libgstdv.la \
 			${GST_LIB_DIR}/libgstdv.so
 
 # dvd
+# xxxx ugly
 gst_dvd_LIB_DEPENDS+=	dvdread:${PORTSDIR}/multimedia/libdvdread
 gst_dvd_GST_PLUGIN_DIR=	ext/dvdread
 gst_dvd_PLIST_FILES=	${GST_LIB_DIR}/libgstdvdread.la \
 		${GST_LIB_DIR}/libgstdvdread.so
 #gst_dvd_DIST=	ugly
 
-
-# esound
-gst_esound_USE_GNOME+=	esound
-gst_esound_GST_PLUGIN_DIR=	ext/esd
-gst_esound_CONFIGURE_ENV+=	ESD_CFLAGS="`pkg-config --cflags esound`" \
-		ESD_LIBS="`pkg-config --libs esound`"
-gst_esound_PLIST_FILES=	${GST_LIB_DIR}/libgstesd.so \
-		${GST_LIB_DIR}/libgstesd.la
 
 # exif
 # hmm not a real plugin, seems to be part of metadata?
@@ -453,9 +423,6 @@ gst_ladspa_PLIST_FILES=		${GST_LIB_DIR}/libgstladspa.la \
 
 # lame
 gst_lame_LIB_DEPENDS+=	mp3lame:${PORTSDIR}/audio/lame
-gst_lame_PLIST_FILES=	${GST_LIB_DIR}/libgstlame.la \
-		${GST_LIB_DIR}/libgstlame.so
-#gst_lame_DIST=	ugly
 
 # libcaca
 gst_libcaca_LIB_DEPENDS+=	caca:${PORTSDIR}/graphics/libcaca
@@ -479,11 +446,7 @@ gst_libvisual_PLIST_FILES=	${GST_LIB_DIR}/libgstlibvisual.la \
 				${GST_LIB_DIR}/libgstlibvisual.so
 
 # mad
-gst_mad_LIB_DEPENDS+=	mad:${PORTSDIR}/audio/libmad \
-		id3tag.0:${PORTSDIR}/audio/libid3tag
-gst_mad_PLIST_FILES=	${GST_LIB_DIR}/libgstmad.la \
-		${GST_LIB_DIR}/libgstmad.so
-#gst_mad_DIST=	ugly
+gst_mad_LIB_DEPENDS+=	mad:${PORTSDIR}/audio/libmad
 
 # mpeg2enc
 gst_mpeg2enc_LIB_DEPENDS+=	mjpegutils-2.0:${PORTSDIR}/multimedia/mjpegtools
@@ -493,9 +456,6 @@ gst_mpeg2enc_PLIST_FILES=	${GST_LIB_DIR}/libgstmpeg2enc.la \
 
 # mpeg2dec
 gst_mpeg2dec_LIB_DEPENDS+=	mpeg2:${PORTSDIR}/multimedia/libmpeg2
-gst_mpeg2dec_PLIST_FILES=	${GST_LIB_DIR}/libgstmpeg2dec.la \
-		${GST_LIB_DIR}/libgstmpeg2dec.so
-#gst_mpeg2dec_DIST=	ugly
 
 # musepack
 gst_musepack_LIB_DEPENDS+=	mpcdec:${PORTSDIR}/audio/musepack
@@ -563,8 +523,7 @@ gst_shout2_LIB_DEPENDS+=	shout:${PORTSDIR}/audio/libshout2
 # sidplay
 gst_sidplay_LIB_DEPENDS+=	sidplay:${PORTSDIR}/audio/libsidplay
 gst_sidplay_PLIST_FILES=	${GST_LIB_DIR}/libgstsid.so \
-		${GST_LIB_DIR}/libgstsid.la
-#gst_sidplay_DIST=	ugly
+				${GST_LIB_DIR}/libgstsid.la
 
 # sndfile
 gst_sndfile_LIB_DEPENDS+=	sndfile:${PORTSDIR}/audio/libsndfile
@@ -616,8 +575,8 @@ gst_theora_PLIST_FILES=		${GST_LIB_DIR}/libgsttheora.la \
 
 # twolame
 gst_twolame_LIB_DEPENDS+=	twolame:${PORTSDIR}/audio/twolame
-gst_twolame_PLIST_FILES=	${GST_LIB_DIR}/libgsttwolame.la \
-				${GST_LIB_DIR}/libgsttwolame.so
+#gst_twolame_PLIST_FILES=	${GST_LIB_DIR}/libgsttwolame.la \
+#				${GST_LIB_DIR}/libgsttwolame.so
 #gst_twolame_DIST=		ugly
 
 # gst_v4l2
@@ -687,7 +646,6 @@ gst_x264_PLIST_FILES=	${GST_LIB_DIR}/libgstx264.la \
 			share/gstreamer-${VERSION}/presets/GstX264Enc.prs
 gst_x264_PLIST_DIRS=	share/gstreamer-${VERSION}/presets \
 			share/gstreamer-${VERSION}
-#gst_x264_DIST=	ugly
 
 # xvid
 gst_xvid_LIB_DEPENDS+=	xvidcore:${PORTSDIR}/multimedia/xvid
@@ -726,7 +684,6 @@ gst_${GST_PLUGIN}_GST_PLUGIN_DIR?=	ext/${GST_PLUGIN}
 gst_${GST_PLUGIN}_POSTBUILD_DIR?=
 gst_${GST_PLUGIN}_USE_GNOME?=
 gst_${GST_PLUGIN}_CONFIGURE_ENV?=
-gst_${GST_PLUGIN}_GCONF_SCHEMAS?=
 gst_${GST_PLUGIN}_GLIB_SCHEMAS?=
 gst_${GST_PLUGIN}_CONFIGURE_ARGS?=
 gst_${GST_PLUGIN}_USE_SDL?=
@@ -741,10 +698,6 @@ EXTRA_LIBS+=	${gst_${GST_PLUGIN}_EXTRA_LIBS}
 USE_XORG+=	${GST_${GST_PLUGIN}_USE_XORG}
 USE_GNOME+=	${gst_${GST_PLUGIN}_USE_GNOME}
 CONFIGURE_ENV+=	${gst_${GST_PLUGIN}_CONFIGURE_ENV}
-
-.if ${gst_${GST_PLUGIN}_GCONF_SCHEMAS}!=""
-GCONF_SCHEMAS=	${gst_${GST_PLUGIN}_GCONF_SCHEMAS}
-.endif
 
 .if ${gst_${GST_PLUGIN}_GLIB_SCHEMAS}!=""
 GLIB_SCHEMAS=	${gst_${GST_PLUGIN}_GLIB_SCHEMAS}

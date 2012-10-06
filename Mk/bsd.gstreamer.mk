@@ -6,7 +6,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.49 2012/10/05 10:21:19 kwm Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.50 2012/10/06 09:04:17 kwm Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -60,31 +60,33 @@ GST1_SHLIB_VERSION=	0
 #
 # These are the current supported gstreamer-plugins modules
 
-# supported plugins by both 0.10 and 1.0.
-_GSTREAMER_PLUGINS=	aalib cdparanoia dv \
-		flac gdkpixbuf jack \
-		jpeg libcaca libpng \
-		ogg pulse shout2 soup \
-		taglib theora v4l2 vorbis vpx wavpack
+# iets bedenken voor mp3 / mad/fluendo maybe for 1.0
 
-_GSTREAMER_PLUGINS+= a52dec amrnb amrwbdec bz2 cairo \
-			cdaudio dts dvd faac faad \
+# supported plugins by both 0.10 and 1.0.
+_GSTREAMER_PLUGINS=	a52dec aalib amrnb cdio cdparanoia dv dvd \
+		flac gdkpixbuf jack \
+		jpeg lame libcaca libpng \
+		mpeg2dec ogg pulse sidplay shout2 soup \
+		taglib theora twolame v4l2 vorbis vpx wavpack
+
+_GSTREAMER_PLUGINS+= amrwbdec bz2 cairo \
+			cdaudio dts faac faad \
 			ffmpeg flite gio gl gme gnomevfs gnonlin \
-			gsm jpeg ladspa lame libmms \
-			libvisual mp3 mpeg2enc mpeg2dec musepack \
+			gsm jpeg ladspa libmms \
+			libvisual mp3 mpeg2enc musepack \
 			nas neon opencv pango resindvd schroedinger \
-			sdl sidplay sndfile spc soundtouch \
-			speex twolame vdpau \
+			sdl sndfile spc soundtouch \
+			speex vdpau \
 			x264 xvid
 
 # plugins only in 0.10
 .if defined(USE_GSTREAMER)
-_GSTREAMER_PLUGINS_ALL+=annodex esound fluendo-mp3 gconf hal mm python qt4 vp8
+_GSTREAMER_PLUGINS+=annodex cairo esound fluendo-mp3 gconf hal mm python qt4 vp8
 .endif
 
 # plugins only in 1.0
 .if defined(USE_GSTREAMER1)
-_GSTREAMER_PLUGINS+=vpx x
+_GSTREAMER_PLUGINS+=mad vpx x
 .endif
 
 # other plugins
