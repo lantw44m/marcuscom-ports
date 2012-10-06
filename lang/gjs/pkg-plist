@@ -84,9 +84,7 @@ share/gjs-1.0/tweener/tweener.js
 @dirrm share/gjs-1.0/overrides
 @dirrm share/gjs-1.0
 @dirrm lib/gjs-1.0
-@dirrm lib/gjs
 @dirrm include/gjs-1.0/gjs
 @dirrm include/gjs-1.0/gjs-dbus
 @dirrm include/gjs-1.0/gi
 @dirrm include/gjs-1.0
-
