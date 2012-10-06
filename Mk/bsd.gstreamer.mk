@@ -6,7 +6,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.48 2012/10/04 08:12:44 kwm Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.49 2012/10/05 10:21:19 kwm Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -20,7 +20,7 @@ Gstreamer_Pre_Include=		bsd.gstreamer.mk
 # For Gstreamer 0.10:
 #   USE_GSTREAMER=	lame faac ffmpeg
 #
-# For Gstreamer 1.0 the same rules apply but instead of 
+# For Gstreamer 1.x the same rules apply but instead of 
 #   USE_GSTREAMER=, USE_GSTREAMER1= is used.
 #
 # If you want to use USE_GSTREAMER after <bsd.port.pre.mk>
@@ -59,41 +59,44 @@ GST1_SHLIB_VERSION=	0
 
 #
 # These are the current supported gstreamer-plugins modules
-# Currently support in both 0.10 and 1.0 gstreamer versions.
 
+# supported plugins by both 0.10 and 1.0.
+_GSTREAMER_PLUGINS=	aalib cdparanoia dv \
+		flac gdkpixbuf jack \
+		jpeg libcaca libpng \
+		ogg pulse shout2 soup \
+		taglib theora v4l2 vorbis vpx wavpack
 
-_GSTREAMER_PLUGINS=	cdparanoia ogg theora vorbis
-
-_GSTREAMER_PLUGINS+= a52dec aalib amrnb amrwbdec annodex bz2 cairo \
-			cdaudio dts dv dvd esound faac faad \
-			ffmpeg flac flite gconf gio gl gme gnomevfs gnonlin \
-			gsm hal jack jpeg ladspa lame libcaca libmms \
-			libpng libvisual mm mp3 mpeg2enc mpeg2dec musepack \
-			nas neon opencv pango pulse python resindvd schroedinger \
-			sdl shout2 sidplay sndfile spc soundtouch soup \
-			speex taglib twolame v4l2 vdpau \
-			vp8 wavpack x264 xvid
+_GSTREAMER_PLUGINS+= a52dec amrnb amrwbdec bz2 cairo \
+			cdaudio dts dvd faac faad \
+			ffmpeg flite gio gl gme gnomevfs gnonlin \
+			gsm jpeg ladspa lame libmms \
+			libvisual mp3 mpeg2enc mpeg2dec musepack \
+			nas neon opencv pango resindvd schroedinger \
+			sdl sidplay sndfile spc soundtouch \
+			speex twolame vdpau \
+			x264 xvid
 
 # plugins only in 0.10
 .if defined(USE_GSTREAMER)
-_GSTREAMER_PLUGINS_ALL+=fluendo-mp3 qt4
+_GSTREAMER_PLUGINS_ALL+=annodex esound fluendo-mp3 gconf hal mm python qt4 vp8
 .endif
 
 # plugins only in 1.0
 .if defined(USE_GSTREAMER1)
-_GSTREAMER_PLUGINS+=x
+_GSTREAMER_PLUGINS+=vpx x
 .endif
 
 # other plugins
-_GSTREAMER_PLUGINS_ALL+=	bad good ugly core yes mad ${_GSTREAMER_PLUGINS}
+_USE_GSTREAMER_ALL=	bad good ugly core yes mad ${_GSTREAMER_PLUGINS}
 
-_USE_GSTREAMER_ALL=	${_GSTREAMER_PLUGINS_ALL}
 #-----------------------------------------------------------------------------#
 
 core_DEPENDS=	multimedia/gstreamer-plugins-core
 
 yes_DEPENDS=	multimedia/gstreamer-plugins
 yes_NAME=	gstreamer-plugins
+yes_GST1_NAME=	gstreamer1-plugins
 yes_GST_PREFIX=	# empty
 yes_GST1_PREFIX= #empty
 
@@ -266,6 +269,8 @@ v4l2_DEPENDS=	multimedia/gstreamer-plugins-v4l2
 
 vp8_DEPENDS=	multimedia/gstreamer-plugins-vp8
 
+vpx_DEPENDS=	multimedia/gstreamer1-plugins-vpx
+
 # XXX: This is a quick solution for ports with USE_GSTREAMER=python
 #      but without USE_PYTHON.
 PYTHON_PKGNAMEPREFIX?=	py*-
@@ -301,7 +306,7 @@ cdio_DEPENDS=	sysutils/gstreamer-plugins-cdio
 
 #-- x11 plugins section ------------------------------------------------------#
 
-x_DEPENDS=	x11/gstreamer-plugins-x
+x_DEPENDS=	x11/gstreamer1-plugins-x
 
 #-- x11-toolkits plugins section ---------------------------------------------#
 
@@ -327,7 +332,7 @@ IGNORE=	cannot install: unknown gstreamer 0.10 plugin -- ${ext}
 .for ext in ${USE_GSTREAMER1}
 ${ext}_GST1_PREFIX?=	gstreamer1-plugins-
 ${ext}_GST1_VERSION?=	${GST1_VERSION}${GST1_MINOR_VERSION}
-${ext}_GST1_NAME?=	${ext:S/gstreamer/gstreamer1/}
+${ext}_GST1_NAME?=	${ext}
 ${ext}_GST1_DEPENDS?=	${${ext}_DEPENDS:S/gstreamer/gstreamer1/}
 . if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_GST1_DEPENDS})
 # XXX version check hmmm hier moet nog uit gedacht worden.

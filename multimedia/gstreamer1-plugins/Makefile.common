@@ -1,7 +1,9 @@
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile.common,v 1.1 2012/10/04 08:12:44 kwm Exp $
 
 # XXX configure checks for all ports.
+
+# remove GCONF crap
 
 # xxx DIST is voor het aangeven waar de plugin weg komt.?
 # dus DIST ook in plugins vermelden naast GST_PLUGIN
@@ -70,7 +72,7 @@ BAD_GST_ALL_PLUGINS+= \
 # bad plugins that are disabled because we don't support them, e.a. windows plugins
 #		--disable-applemedia \		--disable-avcsrc \
 #		--disable-osxvideosrc \
-BAD_GST_DISABLED= \
+BAD_GST_NON_PLUGINS= \
 		--disable-acm \
 		--disable-dc1394 \
 		--disable-dccp \
@@ -160,27 +162,38 @@ BAD_GST_DISABLED= \
 # good
 GOOD_GST_ALL_PLUGINS+= \
 		aalib \
-		annodex \
-		cairo \
-		dv \
-		esd \
 		flac \
-		gconf \
 		gdk_pixbuf \
-		hal \
+		jack \
 		jpeg \
 		libcaca \
+		libdv \
 		libpng \
+		gst_v4l2 \
 		pulse \
-		raw1394 \
 		shout2 \
 		soup \
 		speex \
 		taglib \
-		gst_v4l2 \
-		wavpack
+		vpx \
+		wavpack \
+		x
+#		ximagesrc
+#		cairo \
 
-GOOD_GST_DISABLED=
+GOOD_GST_NON_PLUGINS=	\
+		--disable-directsound \
+		--enable-bz2 \
+		--disable-dv1394 \
+		--enable-oss \
+		--enable-oss4 \
+		--disable-osx_audio \
+		--disable-osx_video \
+		--disable-sunaudio \
+		--disable-waveform \
+		--disable-x \
+		--enable-zlib
+
 
 # ugly
 UGLY_GST_ALL_PLUGINS+= \
@@ -196,7 +209,7 @@ UGLY_GST_ALL_PLUGINS+= \
 		twolame \
 		x264
 
-UGLY_GST_DISABLED=
+UGLY_GST_NON_PLUGINS=
 
 .for i in ${BASE_GST_ALL_PLUGINS} ${BAD_GST_ALL_PLUGINS} ${UGLY_GST_ALL_PLUGINS}
 gst_${i}_GCONF_SCHEMAS?=	# Empty
@@ -219,7 +232,7 @@ CONFIGURE_ARGS+=	--disable-${d}
 .for d in ${BAD_GST_ALL_PLUGINS}
 CONFIGURE_ARGS+=	--disable-${d}
 .endfor
-CONFIGURE_ARGS+= ${BAD_GST_DISABLED}
+CONFIGURE_ARGS+= ${BAD_GST_NON_PLUGINS}
 # Isn't ported yet, in 1.0.0
 CONFIGURE_ARGS+=--disable-gsettings
 .endif
@@ -228,14 +241,14 @@ CONFIGURE_ARGS+=--disable-gsettings
 .for d in ${GOOD_GST_ALL_PLUGINS}
 CONFIGURE_ARGS+=	--disable-${d}
 .endfor
-CONFIGURE_ARGS+= ${GOOD_GST_DISABLED}
+CONFIGURE_ARGS+= ${GOOD_GST_NON_PLUGINS}
 .endif
 
 .if ${DIST}=="ugly"
 .for d in ${UGLY_GST_ALL_PLUGINS}
 CONFIGURE_ARGS+=	--disable-${d}
 .endfor
-CONFIGURE_ARGS+= ${UGLY_GST_DISABLED}
+CONFIGURE_ARGS+= ${UGLY_GST_NON_PLUGINS}
 .endif
 
 .if !${GST_PLUGIN}=="base" && !${GST_PLUGIN}=="bad" && !${GST_PLUGIN}=="good" && !${GST_PLUGIN}=="ugly"
@@ -255,11 +268,7 @@ CONFIGURE_ARGS+=	--enable-${GST_PLUGIN}
 #		--disable-directfb \
 #		--disable-http \
 #		--enable-cdrom \
-#		--disable-gconf \
-#		--disable-gconftool \
 #		--disable-schemas-install \
-#		--enable-oss \
-#		--enable-oss4 \
 #		--disable-osx_audio \
 #		--disable-osx_video \
 #		--disable-directdrawsink \
@@ -295,8 +304,8 @@ gst_a52dec_PLIST_FILES=	${GST_LIB_DIR}/libgsta52dec.la \
 
 # aalib
 gst_aalib_LIB_DEPENDS+=	aa:${PORTSDIR}/graphics/aalib
-gst_aalib_PLIST_FILES=	${GST_LIB_DIR}/libgstaasink.so \
-		${GST_LIB_DIR}/libgstaasink.la
+gst_aalib_PLIST_FILES=	${GST_LIB_DIR}/libgstaasink.la \
+			${GST_LIB_DIR}/libgstaasink.so
 
 # amrnb
 gst_amrnb_LIB_DEPENDS+=	opencore-amrnb:${PORTSDIR}/audio/opencore-amr
@@ -354,9 +363,10 @@ gst_dts_PLIST_FILES=	${GST_LIB_DIR}/libgstdtsdec.la \
 gst_dts_EXTRA_LIBS+=	-ldca
 #gst_dts_DIST=	bad
 
-# dv
-gst_dv_LIB_DEPENDS+=	dv:${PORTSDIR}/multimedia/libdv
-gst_dv_PLIST_FILES=	${GST_LIB_DIR}/libgstdv.la \
+# libdv
+gst_libdv_LIB_DEPENDS+=	dv:${PORTSDIR}/multimedia/libdv
+gst_libdv_GST_PLUGIN_DIR=	ext/dv
+gst_libdv_PLIST_FILES=	${GST_LIB_DIR}/libgstdv.la \
 			${GST_LIB_DIR}/libgstdv.so
 
 # dvd
@@ -397,8 +407,6 @@ gst_faad_PLIST_FILES=	${GST_LIB_DIR}/libgstfaad.la \
 
 # flac
 gst_flac_LIB_DEPENDS+=	FLAC:${PORTSDIR}/audio/flac
-gst_flac_PLIST_FILES=	${GST_LIB_DIR}/libgstflac.la \
-			${GST_LIB_DIR}/libgstflac.so
 
 # flite
 gst_flite_BUILD_DEPENDS+=	${LOCALBASE}/lib/libflite.a:${PORTSDIR}/audio/flite
@@ -406,17 +414,8 @@ gst_flite_PLIST_FILES=		${GST_LIB_DIR}/libgstflite.la \
 				${GST_LIB_DIR}/libgstflite.so
 #gst_flite_DIST=			bad
 
-# gconf
-gst_gconf_USE_GNOME+=	gnomeprefix gconf2
-gst_gconf_GST_PLUGIN_DIR=	ext/gconf \
-		gconf
-gst_gconf_CONFIGURE_ARGS+=	--enable-schemas-install
-gst_gconf_GCONF_SCHEMAS=	gstreamer-${GST_VERSION}.schemas
-gst_gconf_PLIST_FILES=	${GST_LIB_DIR}/libgstgconfelements.so \
-		${GST_LIB_DIR}/libgstgconfelements.la
-
 # gdk_pixbuf
-gst_gdk_pixbuf_USE_GNOME+=	gtk20
+gst_gdk_pixbuf_USE_GNOME+=	gdkpixbuf2
 gst_gdk_pixbuf_GST_PLUGIN_DIR=	ext/gdk_pixbuf
 gst_gdk_pixbuf_PLIST_FILES=	${GST_LIB_DIR}/libgstgdkpixbuf.la \
 				${GST_LIB_DIR}/libgstgdkpixbuf.so
@@ -440,21 +439,11 @@ gst_gsm_PLIST_FILES=	${GST_LIB_DIR}/libgstgsm.la \
 		${GST_LIB_DIR}/libgstgsm.so
 #gst_gsm_DIST=	bad
 
-# hal
-gst_hal_LIB_DEPENDS+=	hal:${PORTSDIR}/sysutils/hal
-gst_hal_PLIST_FILES=	${GST_LIB_DIR}/libgsthalelements.la \
-		${GST_LIB_DIR}/libgsthalelements.so
-
 # jack
 gst_jack_LIB_DEPENDS+=	jack:${PORTSDIR}/audio/jack
-gst_jack_PLIST_FILES=	${GST_LIB_DIR}/libgstjack.la \
-		${GST_LIB_DIR}/libgstjack.so
-#gst_jack_DIST=	good
 
 # jpeg
 gst_jpeg_LIB_DEPENDS+=	jpeg:${PORTSDIR}/graphics/jpeg
-gst_jpeg_PLIST_FILES=	${GST_LIB_DIR}/libgstjpeg.la \
-			${GST_LIB_DIR}/libgstjpeg.so
 
 # ladspa
 gst_ladspa_BUILD_DEPENDS+=	${LOCALBASE}/include/ladspa.h:${PORTSDIR}/audio/ladspa
@@ -470,8 +459,8 @@ gst_lame_PLIST_FILES=	${GST_LIB_DIR}/libgstlame.la \
 
 # libcaca
 gst_libcaca_LIB_DEPENDS+=	caca:${PORTSDIR}/graphics/libcaca
-gst_libcaca_PLIST_FILES=	${GST_LIB_DIR}/libgstcacasink.so \
-		${GST_LIB_DIR}/libgstcacasink.la
+gst_libcaca_PLIST_FILES=	${GST_LIB_DIR}/libgstcacasink.la \
+				${GST_LIB_DIR}/libgstcacasink.so
 
 # libmms
 gst_libmms_LIB_DEPENDS+=	mms:${PORTSDIR}/net/libmms
@@ -479,11 +468,10 @@ gst_libmms_PLIST_FILES=	${GST_LIB_DIR}/libgstmms.so \
 		${GST_LIB_DIR}/libgstmms.la
 #gst_libmms_DIST=	bad
 
-# libpng and the snapshot plugin
-gst_libpng_LIB_DEPENDS+=	png:${PORTSDIR}/graphics/png
-gst_libpng_GST_PLUGIN_DIR=	ext/libpng
-gst_libpng_PLIST_FILES=	${GST_LIB_DIR}/libgstpng.so \
-		${GST_LIB_DIR}/libgstpng.la
+# libpng
+gst_libpng_LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png
+gst_libpng_PLIST_FILES=		${GST_LIB_DIR}/libgstpng.la \
+				${GST_LIB_DIR}/libgstpng.so
 
 # libvisual
 gst_libvisual_LIB_DEPENDS+=	visual-0.4:${PORTSDIR}/graphics/libvisual04
@@ -553,9 +541,6 @@ gst_pango_PLIST_FILES=	${GST_LIB_DIR}/libgstpango.la \
 
 # pulse
 gst_pulse_LIB_DEPENDS=	pulse:${PORTSDIR}/audio/pulseaudio
-gst_pulse_PLIST_FILES=	${GST_LIB_DIR}/libgstpulse.la \
-		${GST_LIB_DIR}/libgstpulse.so
-#gst_pulse_DIST=	good
 
 # resindvd
 gst_resindvd_BUILD_DEPENDS+=	libdvdnav>=4.1.2:${PORTSDIR}/multimedia/libdvdnav
@@ -572,8 +557,8 @@ gst_sdl_PLIST_FILES=	${GST_LIB_DIR}/libgstsdl.la \
 
 # shout2
 gst_shout2_LIB_DEPENDS+=	shout:${PORTSDIR}/audio/libshout2
-gst_shout2_PLIST_FILES=		${GST_LIB_DIR}/libgstshout2.la \
-				${GST_LIB_DIR}/libgstshout2.so
+#gst_shout2_PLIST_FILES=		${GST_LIB_DIR}/libgstshout2.la \
+#				${GST_LIB_DIR}/libgstshout2.so
 
 # sidplay
 gst_sidplay_LIB_DEPENDS+=	sidplay:${PORTSDIR}/audio/libsidplay
@@ -594,8 +579,7 @@ gst_soundtouch_PLIST_FILES=	${GST_LIB_DIR}/libgstsoundtouch.la \
 #gst_soundtouch_DIST=	bad
 
 # souphttpsrc
-gst_soup_USE_GNOME+=	libsoup
-#gst_soup_LIB_DEPENDS+=	soup-2.4:${PORTSDIR}/devel/libsoup
+gst_soup_LIB_DEPENDS+=	soup-2.4:${PORTSDIR}/devel/libsoup
 gst_soup_GST_PLUGIN_DIR=ext/soup
 gst_soup_PLIST_FILES=	${GST_LIB_DIR}/libgstsouphttpsrc.la \
 			${GST_LIB_DIR}/libgstsouphttpsrc.so
@@ -608,8 +592,6 @@ gst_spc_PLIST_FILES=	${GST_LIB_DIR}/libgstspc.la \
 
 # speex
 gst_speex_LIB_DEPENDS+=	speex:${PORTSDIR}/audio/speex
-gst_speex_PLIST_FILES=	${GST_LIB_DIR}/libgstspeex.la \
-			${GST_LIB_DIR}/libgstspeex.so
 
 # schro(edinger)
 gst_schroedinger_LIB_DEPENDS+=	schroedinger-1.0:${PORTSDIR}/multimedia/schroedinger
@@ -624,8 +606,8 @@ gst_swfdec_LIB_DEPENDS+=swfdec-0.4:${PORTSDIR}/graphics/swfdec
 
 # taglib
 gst_taglib_LIB_DEPENDS+=	tag:${PORTSDIR}/audio/taglib
-gst_taglib_PLIST_FILES=		${GST_LIB_DIR}/libgsttaglib.la \
-				${GST_LIB_DIR}/libgsttaglib.so
+#gst_taglib_PLIST_FILES=		${GST_LIB_DIR}/libgsttaglib.la \
+#				${GST_LIB_DIR}/libgsttaglib.so
 
 # theora
 gst_theora_LIB_DEPENDS+=	theora:${PORTSDIR}/multimedia/libtheora
@@ -644,10 +626,9 @@ gst_gst_v4l2_LIB_DEPENDS+=	v4l2:${PORTSDIR}/multimedia/libv4l
 gst_gst_v4l2_RUN_DEPENDS+=	webcamd:${PORTSDIR}/multimedia/webcamd
 .endif
 gst_gst_v4l2_PLIST_FILES=	${GST_LIB_DIR}/libgstvideo4linux2.la \
-		${GST_LIB_DIR}/libgstvideo4linux2.so
-gst_gst_v4l2_CONFIGURE_ARGS+=	--enable-gst_v4l2
-gst_gst_v4l2_GST_PLUGIN_DIR=sys/v4l2
-#gst_gst_v4l2_DIST=	good
+				${GST_LIB_DIR}/libgstvideo4linux2.so
+#gst_gst_v4l2_CONFIGURE_ARGS+=	--enable-gst_v4l2
+gst_gst_v4l2_GST_PLUGIN_DIR=	sys/v4l2
 
 # vdpau
 gst_vdpau_LIB_DEPENDS+=	vdpau:${PORTSDIR}/multimedia/libvdpau
@@ -680,23 +661,24 @@ gst_vorbis_PLIST_FILES=		${GST_LIB_DIR}/libgstvorbis.la \
 				${GST_LIB_DIR}/libgstvorbis.so
 #gst_vorbis_DIST=	base
 
-# vp8
-gst_vp8_LIB_DEPENDS+=	vpx:${PORTSDIR}/multimedia/libvpx
-gst_vp8_PLIST_FILES=	${GST_LIB_DIR}/libgstvp8.la \
-			${GST_LIB_DIR}/libgstvp8.a \
-			${GST_LIB_DIR}/libgstvp8.so
-#gst_vp8_DIST=		bad
+# vpx
+gst_vpx_LIB_DEPENDS+=	vpx:${PORTSDIR}/multimedia/libvpx
 
 # X
 gst_x_USE_XORG+=	x11 xv xext
 # xxx videoproto xextproto, xshm?
-gst_x_CONFIGURE_ARGS+=	--enable-xvideo
+gst_x_CONFIGURE_ARGS+=	--enable-xvideo --enable-xshm
 gst_x_GST_PLUGIN_DIR=	sys/ximage sys/xvimage
 gst_x_PLIST_FILES=	${GST_LIB_DIR}/libgstximagesink.la \
 			${GST_LIB_DIR}/libgstximagesink.so \
 			${GST_LIB_DIR}/libgstxvimagesink.la \
 			${GST_LIB_DIR}/libgstxvimagesink.so
-DIST=	base
+# base
+
+# Ximagesrc
+#gst_x_GST_PLUGIN_SUFFIX
+# --disable-x --disable-xshm --disable-xvideo ..
+# good
 
 # x264
 gst_x264_LIB_DEPENDS+=	x264:${PORTSDIR}/multimedia/x264
@@ -715,8 +697,6 @@ gst_xvid_PLIST_FILES=	${GST_LIB_DIR}/libgstxvid.la \
 
 # wavpack
 gst_wavpack_LIB_DEPENDS+=	wavpack:${PORTSDIR}/audio/wavpack
-gst_wavpack_PLIST_FILES=	${GST_LIB_DIR}/libgstwavpack.la \
-				${GST_LIB_DIR}/libgstwavpack.so
 
 .endif # NO_GSTREAMER_COMMON
 

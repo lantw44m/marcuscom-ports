@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.1 2012/10/04 08:12:44 kwm Exp $
 
 PORTNAME=	gstreamer1-plugins
 PORTVERSION?=	${BASE_PORTVERSION}
@@ -79,12 +79,12 @@ DIST=	base
 NO_GSTREAMER_COMMON=	yes
 CONFIGURE_ARGS+=--with-default-audiosink="${DEFAULT_AUDIOSINK}" \
 		--with-default-audiosrc="${DEFAULT_AUDIOSRC}"
-
 MAN1=		gst-discoverer-1.0.1
 .else
 BUILD_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
 RUN_DEPEDNS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
 .endif
+
 PLIST_SUB+=	VERSION="${VERSION}" \
 		SHLIB_VERSION="${SHLIB_VERSION}"
 
