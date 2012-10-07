@@ -2365,7 +2365,6 @@ share/themes/LowContrast/index.theme
 @dirrm share/themes/HighContrast/gtk-2.0
 @dirrm share/themes/HighContrast
 @dirrm share/themes/Adwaita/metacity-1
-@dirrm share/themes/Adwaita/gtk-3.0/assets
 @dirrm share/themes/Adwaita/gtk-3.0
 @dirrm share/themes/Adwaita/gtk-2.0
 @dirrm share/themes/Adwaita/backgrounds
