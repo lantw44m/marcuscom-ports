@@ -333,7 +333,6 @@ share/omf/epiphany/epiphany-zh_CN.omf
 @dirrm %%DATADIR%%/pages
 @dirrm %%DATADIR%%/glade
 @dirrmtry %%DATADIR%%
-@dirrmtry share/gtk-doc/html/epiphany
 @dirrmtry share/applications
 @dirrm include/epiphany/%%EPHY_VERSION%%/epiphany
 @dirrm include/epiphany/%%EPHY_VERSION%%
