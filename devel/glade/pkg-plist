@@ -42,7 +42,7 @@ lib/glade/modules/libgladegtk.so
 lib/libgladeui-2.a
 lib/libgladeui-2.la
 lib/libgladeui-2.so
-lib/libgladeui-2.so.0
+lib/libgladeui-2.so.2
 libdata/pkgconfig/gladeui-2.0.pc
 share/applications/glade.desktop
 %%DOCSDIR%%/GladeApp.html
