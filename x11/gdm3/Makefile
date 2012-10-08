@@ -3,11 +3,12 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.19 2012/06/01 20:55:17 mezz Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.20 2012/06/02 13:10:28 kwm Exp $
 #
 
 PORTNAME=	gdm
 PORTVERSION=	3.4.1
+PORTREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -99,7 +100,8 @@ post-patch:
 		${WRKSRC}/data/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    	-e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
-	    	${WRKSRC}/daemon/gdm-session-worker.c
+	    	${WRKSRC}/daemon/gdm-session-worker.c \
+		${WRKSRC}/gui/simple-greeter/extensions/password/gdm-password.pam
 	@${REINPLACE_CMD} -e 's|/usr/X11R6|${LOCALBASE}|g' \
 		-e 's|/usr/bin/X|${LOCALBASE}/bin/X|g' \
 		-e 's|/usr/bin/Xorg|${LOCALBASE}/bin/Xorg|g' \
