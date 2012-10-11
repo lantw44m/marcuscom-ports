@@ -88,8 +88,6 @@ lib/gstreamer-%%VERSION%%/libgstwavenc.la
 lib/gstreamer-%%VERSION%%/libgstwavenc.so
 lib/gstreamer-%%VERSION%%/libgstwavparse.la
 lib/gstreamer-%%VERSION%%/libgstwavparse.so
-lib/gstreamer-%%VERSION%%/libgstximagesrc.la
-lib/gstreamer-%%VERSION%%/libgstximagesrc.so
 lib/gstreamer-%%VERSION%%/libgsty4menc.la
 lib/gstreamer-%%VERSION%%/libgsty4menc.so
 share/gstreamer-%%VERSION%%/presets/GstIirEqualizer10Bands.prs

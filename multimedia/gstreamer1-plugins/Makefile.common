@@ -1,7 +1,7 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile.common,v 1.2 2012/10/06 09:04:19 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile.common,v 1.3 2012/10/06 16:28:55 kwm Exp $
 
-# XXX configure checks for bad and ugly.
+# XXX configure checks for bad
 
 # base
 BASE_GST_ALL_PLUGINS= \
@@ -18,22 +18,26 @@ BASE_GST_ALL_PLUGINS= \
 
 # bad
 BAD_GST_ALL_PLUGINS+= \
+		celt \
+		dts \
+		faac \
+		faad \
+		flite \
+		gsm \
+		opencv \
+		resindvd \
+		schro \
+		spandsp \
+		zbar
 #		apexsink \
 #		assrender \
 #		bz2 \
 #		cdaudio \
-#		celt \
 #		cog \
 #		dc1394 \
 #		dirac \
 #		directfb \
-#		dts \
-#		dvb \
-#		faac \
-#		faad \
-#		flite \
 #		gme \
-#		gsm \
 #		kate \
 #		ladspa \
 #		libmms \
@@ -48,10 +52,7 @@ BAD_GST_ALL_PLUGINS+= \
 #		nas \
 #		neon \
 #		ofa \
-#		opencv \
-#		resindvd \
 #		rsvg \
-#		schro \
 #		sdl \
 #		shm \
 #		sndfile \
@@ -61,12 +62,14 @@ BAD_GST_ALL_PLUGINS+= \
 #		timidity \
 #		vdpau \
 #		xvid \
-#		zbar
 
 # bad plugins that are disabled because we don't support them, e.a. windows plugins
 #		--disable-applemedia \		--disable-avcsrc \
 #		--disable-osxvideosrc \
 BAD_GST_NON_PLUGINS= \
+		--enable-bz2 \
+		--enable-dvb \
+		--enable-shm \
 		--disable-acm \
 		--disable-dc1394 \
 		--disable-dccp \
@@ -97,18 +100,12 @@ BAD_GST_NON_PLUGINS= \
 # apexsink (AirPort Express Wireless sink) (openssl >= 0.9.5 + libcrypto)
 # bz2
 # cdaudio libcdaudio
-# celt 
 # chromaprint (libchromaprint)
 # cog (libpng)
 # curl (libcurl >= 7.21.0)
 # decklink (needs thread some FreeBSD probably and configure.ac patch)
 # dirac (dirac >= 0.10)
-# dts (dts library)
 # renindvd (dvdnav 4.1.2 , dvdread 4.1.2
-# free AAC encoder, FAAC (faac)
-# free AAC decoder, FAAD (faad)
-# flite
-# gsm (libgsm)
 # jasper jasperdec jasperenc (jasper/jasper.h)
 # kate (multimedia/libkate >= 0.1.7) (needs libtiger, google code)
 # ladspa
@@ -128,7 +125,6 @@ BAD_GST_NON_PLUGINS= \
 # neon >= 0.27.0 <= 0.29.99
 # ofa (libofa)
 # openal (openal)
-# opencv (opencv >= 2.0.0 opencv <= 2.3.1 )
 # opus (libopus >= 0.9.4)
 # pvr (libtimemmgr)??
 # rsvg (not needed?)
@@ -142,12 +138,8 @@ BAD_GST_NON_PLUGINS= \
 # gme (gme/gme.h -lgme)
 # swfdec
 # xvid
-# dvb
 # vdpau
-# schroedinger
-# zbar (libzbar >= 0.9)
 # rtmp (librtmp)
-# spandsp (spandsp >= 0.0.6)
 # gsettings (broken)
 # sndio (sndio.h, libsndio)
 # 
@@ -256,7 +248,6 @@ CONFIGURE_ARGS+=	--enable-${GST_PLUGIN}
 #		--disable-acm \
 #		--disable-apexsink \
 #		--enable-cog \
-#		--enable-dvb \
 #		--disable-fbdev \
 #		--disable-directfb \
 #		--disable-http \
@@ -289,6 +280,8 @@ GST_LIB_DIR=		lib/gstreamer-${VERSION}
 # Auto create PLIST
 PLIST=		${NONEXISTENT}
 
+# ------- plugins ---------
+
 # a52dec
 gst_a52dec_LIB_DEPENDS+=	a52:${PORTSDIR}/audio/liba52
 
@@ -315,7 +308,6 @@ gst_amrwb_PLIST_FILES=	${GST_LIB_DIR}/libgstamrwbdec.la \
 gst_cairo_LIB_DEPENDS+=	cairo:${PORTSDIR}/graphics/cairo
 gst_cairo_PLIST_FILES=		${GST_LIB_DIR}/libgstcairo.la \
 				${GST_LIB_DIR}/libgstcairo.so
-#
 
 # cdaudio
 gst_cdaudio_LIB_DEPENDS+=cdaudio:${PORTSDIR}/audio/libcdaudio
@@ -333,12 +325,14 @@ gst_cdio_LIB_DEPENDS+=	cdio:${PORTSDIR}/sysutils/libcdio
 gst_cdio_PLIST_FILES=	${GST_LIB_DIR}/libgstcdio.la \
 			${GST_LIB_DIR}/libgstcdio.so
 
+
+# celt
+gst_celt_LIB_DEPENDS+=	celt0:${PORTSDIR}/audio/celt
+
 # dts
 gst_dts_LIB_DEPENDS+=	dca:${PORTSDIR}/multimedia/libdca
 gst_dts_PLIST_FILES=	${GST_LIB_DIR}/libgstdtsdec.la \
-		${GST_LIB_DIR}/libgstdtsdec.so
-gst_dts_EXTRA_LIBS+=	-ldca
-#gst_dts_DIST=	bad
+			${GST_LIB_DIR}/libgstdtsdec.so
 
 # libdv
 gst_libdv_LIB_DEPENDS+=	dv:${PORTSDIR}/multimedia/libdv
@@ -364,25 +358,15 @@ gst_dvd_PLIST_FILES=	${GST_LIB_DIR}/libgstdvdread.la \
 
 # faac
 gst_faac_LIB_DEPENDS+=	faac:${PORTSDIR}/audio/faac
-gst_faac_PLIST_FILES=	${GST_LIB_DIR}/libgstfaac.la \
-	${GST_LIB_DIR}/libgstfaac.so
-#gst_faac_DIST=	bad
 
 # faad
-gst_faad_USE_GSTREAMER1+=	bad
 gst_faad_LIB_DEPENDS+=	faad:${PORTSDIR}/audio/faad
-gst_faad_PLIST_FILES=	${GST_LIB_DIR}/libgstfaad.la \
-		${GST_LIB_DIR}/libgstfaad.so
-#gst_faad_DIST=	bad
 
 # flac
 gst_flac_LIB_DEPENDS+=	FLAC:${PORTSDIR}/audio/flac
 
 # flite
-gst_flite_BUILD_DEPENDS+=	${LOCALBASE}/lib/libflite.a:${PORTSDIR}/audio/flite
-gst_flite_PLIST_FILES=		${GST_LIB_DIR}/libgstflite.la \
-				${GST_LIB_DIR}/libgstflite.so
-#gst_flite_DIST=			bad
+gst_flite_LIB_DEPENDS+=	flite:${PORTSDIR}/audio/flite
 
 # gdk_pixbuf
 gst_gdk_pixbuf_USE_GNOME+=	gdkpixbuf2
@@ -405,9 +389,6 @@ gst_gnomevfs_PLIST_FILES=	${GST_LIB_DIR}/libgstgnomevfs.la \
 
 # gsm
 gst_gsm_LIB_DEPENDS+=	gsm:${PORTSDIR}/audio/gsm
-gst_gsm_PLIST_FILES=	${GST_LIB_DIR}/libgstgsm.la \
-		${GST_LIB_DIR}/libgstgsm.so
-#gst_gsm_DIST=	bad
 
 # jack
 gst_jack_LIB_DEPENDS+=	jack:${PORTSDIR}/audio/jack
@@ -489,10 +470,6 @@ gst_ogg_PLIST_FILES=	${GST_LIB_DIR}/libgstogg.la \
 
 # opencv
 gst_opencv_LIB_DEPENDS+=opencv_highgui:${PORTSDIR}/graphics/opencv
-gst_opencv_PLIST_FILES= ${GST_LIB_DIR}/libgstopencv.la \
-			${GST_LIB_DIR}/libgstopencv.a \
-			${GST_LIB_DIR}/libgstopencv.so
-#gst_opencv_DIST=	bad
 
 # pango
 gst_pango_USE_GNOME+=	pango
@@ -505,9 +482,6 @@ gst_pulse_LIB_DEPENDS=	pulse:${PORTSDIR}/audio/pulseaudio
 # resindvd
 gst_resindvd_BUILD_DEPENDS+=	libdvdnav>=4.1.2:${PORTSDIR}/multimedia/libdvdnav
 gst_resindvd_RUN_DEPENDS+=	libdvdnav>=4.1.2:${PORTSDIR}/multimedia/libdvdnav
-gst_resindvd_PLIST_FILES=	${GST_LIB_DIR}/libresindvd.la \
-				${GST_LIB_DIR}/libresindvd.so
-#gst_resindvd_DIST=		bad
 
 # sdl
 gst_sdl_USE_SDL+=	sdl
@@ -543,7 +517,12 @@ gst_soup_GST_PLUGIN_DIR=ext/soup
 gst_soup_PLIST_FILES=	${GST_LIB_DIR}/libgstsouphttpsrc.la \
 			${GST_LIB_DIR}/libgstsouphttpsrc.so
 
+# spandsp
+# keep shlib version here, so we don't pick up the 0.0.5 version.
+gst_spandsp_LIB_DEPENDS+=spandsp.2:${PORTSDIR}/comms/spandsp-devel
+
 # spc
+# xxxx
 gst_spc_LIB_DEPENDS+=	openspc:${PORTSDIR}/audio/libopenspc
 gst_spc_PLIST_FILES=	${GST_LIB_DIR}/libgstspc.la \
 		${GST_LIB_DIR}/libgstspc.so
@@ -552,12 +531,9 @@ gst_spc_PLIST_FILES=	${GST_LIB_DIR}/libgstspc.la \
 # speex
 gst_speex_LIB_DEPENDS+=	speex:${PORTSDIR}/audio/speex
 
-# schro(edinger)
-gst_schroedinger_LIB_DEPENDS+=	schroedinger-1.0:${PORTSDIR}/multimedia/schroedinger
-gst_schroedinger_CONFIGURE_ARGS+=--enable-schro
-gst_schroedinger_PLIST_FILES=	${GST_LIB_DIR}/libgstschro.la \
-				${GST_LIB_DIR}/libgstschro.so
-#gst_schroedinger_DIST=		bad
+# schroedinger or schro for short
+gst_schro_LIB_DEPENDS+=	schroedinger-1.0:${PORTSDIR}/multimedia/schroedinger
+gst_schro_GST_PLUGIN_DIR=	ext/schroedinger
 
 # swfdec
 gst_swfdec_LIB_DEPENDS+=swfdec-0.4:${PORTSDIR}/graphics/swfdec
@@ -655,6 +631,9 @@ gst_xvid_PLIST_FILES=	${GST_LIB_DIR}/libgstxvid.la \
 
 # wavpack
 gst_wavpack_LIB_DEPENDS+=	wavpack:${PORTSDIR}/audio/wavpack
+
+# zbar
+gst_zbar_LIB_DEPENDS+=	zbar:${PORTSDIR}/graphics/zbar
 
 .endif # NO_GSTREAMER_COMMON
 

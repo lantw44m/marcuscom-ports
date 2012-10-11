@@ -1,9 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/multimedia/gstreamer1/Makefile,v 1.1 2012/10/04 08:12:44 kwm Exp $
 
 PORTNAME=	gstreamer1
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer/
 DISTNAME=	${PORTNAME:S/1//}-${PORTVERSION}
@@ -45,7 +45,9 @@ MAN1=	gst-inspect-${GST10_VERSION}.1 gst-launch-${GST10_VERSION}.1 \
 OPTIONS_DEFINE=	CHECK
 CHECK_DESC=	Support unit tests
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
+
+CONFIGURE_ARGS+=--disable-silent-rules
 
 .if ${PORT_OPTIONS:MCHECK}
 LIB_DEPENDS+=	check:${PORTSDIR}/devel/libcheck
@@ -60,4 +62,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
 		${WRKSRC}/configure
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.2 2012/10/06 09:04:19 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.3 2012/10/06 16:28:55 kwm Exp $
 
 PORTNAME=	gstreamer1-plugins
 PORTVERSION?=	${BASE_PORTVERSION}
@@ -27,16 +27,16 @@ LIB_DEPENDS+=	gstreamer-1.0:${PORTSDIR}/multimedia/gstreamer1 \
 		orc-0.4:${PORTSDIR}/devel/orc
 RUN_DEPENDS+=	iso-codes>=0:${PORTSDIR}/misc/iso-codes
 
-BASE_PORTVERSION=	1.0.0
+BASE_PORTVERSION=	1.0.1
 BASE_DISTNAME=		gst-plugins-base-${BASE_PORTVERSION}
 BASE_DISTFILE=		${BASE_DISTNAME}${EXTRACT_SUFX}
-BAD_PORTVERSION=	1.0.0
+BAD_PORTVERSION=	1.0.1
 BAD_DISTNAME=		gst-plugins-bad-${BAD_PORTVERSION}
 BAD_DISTFILE=		${BAD_DISTNAME}${EXTRACT_SUFX}
-GOOD_PORTVERSION=	1.0.0
+GOOD_PORTVERSION=	1.0.1
 GOOD_DISTNAME=		gst-plugins-good-${GOOD_PORTVERSION}
 GOOD_DISTFILE=		${GOOD_DISTNAME}${EXTRACT_SUFX}
-UGLY_PORTVERSION=	1.0.0
+UGLY_PORTVERSION=	1.0.1
 UGLY_DISTNAME=		gst-plugins-ugly-${UGLY_PORTVERSION}
 UGLY_DISTFILE=		${UGLY_DISTNAME}${EXTRACT_SUFX}
 DIST?=		base
@@ -155,7 +155,11 @@ post-patch:
 	  s|$$(top_builddir)/gst-libs/gst/video/libgstbasevideo-$$(GST_API_VERSION).la|${LOCALBASE}/lib/libgstbasevideo-$$(GST_API_VERSION).la|; \
 	  s|$$(top_builddir)/gst-libs/gst/video/libgstvideo-$$(GST_API_VERSION).la|${LOCALBASE}/lib/libgstvideo-$$(GST_API_VERSION).la|'
 .endif
-
+.if ${GST_PLUGIN} == "flite"
+# Hack to get all the libraries linked to the flite plugin so it is useable.
+	-@${REINPLACE_CMD} -e 's|-Wl,--as-needed||g' \
+		${WRKSRC}/../gnome-libtool
+.endif
 #	@${REINPLACE_CMD} -e 's|DEFAULT_AUDIOSINK="alsasink"|DEFAULT_AUDIOSINK="${DEFAULT_AUDIOSINK}"|; \
 #		s|DEFAULT_AUDIOSRC="alsasrc"|DEFAULT_AUDIOSRC="${DEFAULT_AUDIOSRC}"|' \
 #		-e 's|libpng12.pc|libpng15.pc|g' \

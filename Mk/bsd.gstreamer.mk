@@ -6,7 +6,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.50 2012/10/06 09:04:17 kwm Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.51 2012/10/06 16:28:54 kwm Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -63,30 +63,34 @@ GST1_SHLIB_VERSION=	0
 # iets bedenken voor mp3 / mad/fluendo maybe for 1.0
 
 # supported plugins by both 0.10 and 1.0.
-_GSTREAMER_PLUGINS=	a52dec aalib amrnb cdio cdparanoia dv dvd \
-		flac gdkpixbuf jack \
+_GSTREAMER_PLUGINS=	a52dec aalib amrnb \
+		cdio cdparanoia dts dv dvd \
+		faac faad flac flite \
+		gdkpixbuf gsm jack \
 		jpeg lame libcaca libpng \
-		mpeg2dec ogg pulse sidplay shout2 soup \
-		taglib theora twolame v4l2 vorbis vpx wavpack
+		mpeg2dec ogg opencv pulse \
+		schroedinger sidplay shout2 soup speex \
+		resindvd taglib theora twolame \
+		v4l2 vorbis vpx wavpack
 
+# old define should go away
 _GSTREAMER_PLUGINS+= amrwbdec bz2 cairo \
-			cdaudio dts faac faad \
-			ffmpeg flite gio gl gme gnomevfs gnonlin \
-			gsm jpeg ladspa libmms \
+			cdaudio gio gl gme gnomevfs gnonlin \
+			jpeg ladspa libmms \
 			libvisual mp3 mpeg2enc musepack \
-			nas neon opencv pango resindvd schroedinger \
+			nas neon pango \
 			sdl sndfile spc soundtouch \
-			speex vdpau \
+			vdpau \
 			x264 xvid
 
 # plugins only in 0.10
 .if defined(USE_GSTREAMER)
-_GSTREAMER_PLUGINS+=annodex cairo esound fluendo-mp3 gconf hal mm python qt4 vp8
+_GSTREAMER_PLUGINS+=annodex cairo esound ffmpeg fluendo-mp3 gconf hal mm python qt4 vp8
 .endif
 
 # plugins only in 1.0
 .if defined(USE_GSTREAMER1)
-_GSTREAMER_PLUGINS+=mad vpx x
+_GSTREAMER_PLUGINS+=celt mad spandsp vpx x zbar
 .endif
 
 # other plugins
@@ -114,6 +118,8 @@ amrwbdec_DEPENDS=	audio/gstreamer-plugins-amrwbdec
 artsd_DEPENDS=	audio/gstreamer-plugins-artsd
 
 audiofile_DEPENDS=	audio/gstreamer-plugins-audiofile
+
+celt_DEPENDS=		audio/gstreamer-plugins-celt
 
 cdaudio_DEPENDS=	audio/gstreamer-plugins-cdaudio
 
@@ -185,6 +191,10 @@ vorbis_DEPENDS=	audio/gstreamer-plugins-vorbis
 
 wavpack_DEPENDS=	audio/gstreamer-plugins-wavpack
 
+#-- comms plugin section -----------------------------------------------------#
+
+spandsp_DEPENDS=	comms/gstreamer-plugins-spandsp
+
 #-- devel plugin section -----------------------------------------------------#
 
 gconf_DEPENDS=	devel/gstreamer-plugins-gconf
@@ -223,9 +233,10 @@ libvisual_DEPENDS=	graphics/gstreamer-plugins-libvisual
 
 opencv_DEPENDS=	graphics/gstreamer-plugins-opencv
 
+zbar_DEPENDS=	graphics/gstreamer-plugins-zbar
+
 #-- multimedia plugins section -----------------------------------------------#
 
-# Multimedia Plugins Section
 bad_DEPENDS=	multimedia/gstreamer-plugins-bad
 
 bz2_DEPENDS=	multimedia/gstreamer-plugins-bz2
