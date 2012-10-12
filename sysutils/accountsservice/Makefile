@@ -1,10 +1,10 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/sysutils/accountsservice/Makefile,v 1.10 2012/09/19 21:50:44 kwm Exp $
+#    $MCom: ports/sysutils/accountsservice/Makefile,v 1.11 2012/10/08 09:31:19 kwm Exp $
 
 PORTNAME=	accountsservice
 PORTVERSION=	0.6.24
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	sysutils devel
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 
@@ -22,6 +22,7 @@ USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
+CONFIGURE_ARGS=	--disable-systemd
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
