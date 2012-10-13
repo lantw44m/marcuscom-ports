@@ -1,15 +1,14 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11/gstreamer1-plugins-ximagesrc/Makefile,v 1.1 2012/10/06 09:04:19 kwm Exp $
 
 PORTREVISION=	0
 CATEGORIES=	audio
+PKGNAMESUFFIX=	-ximagesrc
 
-COMMENT=	Gstreamer ximagesrc plugin
+COMMENT=	Gstreamer X source plugin
 
-BROKEN=		needs more work
-
-GST_PLUGIN=	ximagesrc
+GST_PLUGIN=	x
 DIST=		good
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins

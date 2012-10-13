@@ -1,13 +1,11 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/x11/gstreamer1-plugins-x/Makefile,v 1.1 2012/10/06 09:04:19 kwm Exp $
 
 PORTREVISION=	0
 CATEGORIES=	x11
 
 COMMENT=	Gstreamer X and Xvideo output plugins
-
-BROKEN=		needs more work
 
 GST_PLUGIN=	x
 DIST=		base

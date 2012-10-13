@@ -6,7 +6,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.51 2012/10/06 16:28:54 kwm Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.52 2012/10/11 22:26:28 kwm Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -90,7 +90,7 @@ _GSTREAMER_PLUGINS+=annodex cairo esound ffmpeg fluendo-mp3 gconf hal mm python 
 
 # plugins only in 1.0
 .if defined(USE_GSTREAMER1)
-_GSTREAMER_PLUGINS+=celt mad spandsp vpx x zbar
+_GSTREAMER_PLUGINS+=celt mad spandsp vpx x ximagesrc zbar
 .endif
 
 # other plugins
@@ -320,6 +320,8 @@ cdio_DEPENDS=	sysutils/gstreamer-plugins-cdio
 #-- x11 plugins section ------------------------------------------------------#
 
 x_DEPENDS=	x11/gstreamer1-plugins-x
+
+ximagesrc_DEPENDS=	x11/gstreamer1-plugins-ximagesrc
 
 #-- x11-toolkits plugins section ---------------------------------------------#
 
