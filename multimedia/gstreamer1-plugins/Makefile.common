@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile.common,v 1.4 2012/10/11 22:26:28 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile.common,v 1.5 2012/10/13 22:38:03 kwm Exp $
 
 # XXX configure checks for bad
 
@@ -18,19 +18,21 @@ BASE_GST_ALL_PLUGINS= \
 
 # bad
 BAD_GST_ALL_PLUGINS+= \
+		assrender \
 		celt \
+		curl \
 		dts \
 		faac \
 		faad \
 		flite \
 		gsm \
+		libmms \
 		opencv \
 		resindvd \
 		schro \
 		spandsp \
 		zbar
 #		apexsink \
-#		assrender \
 #		bz2 \
 #		cdaudio \
 #		cog \
@@ -40,7 +42,6 @@ BAD_GST_ALL_PLUGINS+= \
 #		gme \
 #		kate \
 #		ladspa \
-#		libmms \
 #		lv2 \
 #		mimic \
 #		modplug \
@@ -94,7 +95,6 @@ BAD_GST_NON_PLUGINS= \
 # enabled always
 # --enable-shm AC_CHECK_LIB([rt], [shm_open] <<== -lrt really? :)
 
-# assrender (libass >= 0.9.4) ASS/SSA renderer
 # vo-amrwbenc (vo-amrwbenc > =0.1.0
 # vo-aacenc vo-accenc > 0.1.0
 # apexsink (AirPort Express Wireless sink) (openssl >= 0.9.5 + libcrypto)
@@ -102,7 +102,6 @@ BAD_GST_NON_PLUGINS= \
 # cdaudio libcdaudio
 # chromaprint (libchromaprint)
 # cog (libpng)
-# curl (libcurl >= 7.21.0)
 # decklink (needs thread some FreeBSD probably and configure.ac patch)
 # dirac (dirac >= 0.10)
 # renindvd (dvdnav 4.1.2 , dvdread 4.1.2
@@ -110,7 +109,6 @@ BAD_GST_NON_PLUGINS= \
 # kate (multimedia/libkate >= 0.1.7) (needs libtiger, google code)
 # ladspa
 # lv2 (slv2 >= 0.6.6)
-# libmms (libmms -> 0.4)
 # linsys (linear Systems SDI plugin, needs configure voodo + code probably)
 # modplug (libmodplug)
 # mimic (libmimic)
@@ -298,6 +296,9 @@ gst_amrwb_GST_PLUGIN_DIR=	ext/amrwbdec
 gst_amrwb_PLIST_FILES=	${GST_LIB_DIR}/libgstamrwbdec.la \
 			${GST_LIB_DIR}/libgstamrwbdec.so
 
+# assrender
+gst_assrender_LIB_DEPENDS+=	ass:${PORTSDIR}/multimedia/libass
+
 # cairo
 gst_cairo_LIB_DEPENDS+=	cairo:${PORTSDIR}/graphics/cairo
 gst_cairo_PLIST_FILES=		${GST_LIB_DIR}/libgstcairo.la \
@@ -322,6 +323,9 @@ gst_cdio_PLIST_FILES=	${GST_LIB_DIR}/libgstcdio.la \
 
 # celt
 gst_celt_LIB_DEPENDS+=	celt0:${PORTSDIR}/audio/celt
+
+# curl
+gst_curl_LIB_DEPENDS+=	curl:${PORTSDIR}/ftp/curl
 
 # dts
 gst_dts_LIB_DEPENDS+=	dca:${PORTSDIR}/multimedia/libdca
@@ -406,9 +410,8 @@ gst_libcaca_PLIST_FILES=	${GST_LIB_DIR}/libgstcacasink.la \
 
 # libmms
 gst_libmms_LIB_DEPENDS+=	mms:${PORTSDIR}/net/libmms
-gst_libmms_PLIST_FILES=	${GST_LIB_DIR}/libgstmms.so \
-		${GST_LIB_DIR}/libgstmms.la
-#gst_libmms_DIST=	bad
+gst_libmms_PLIST_FILES=		${GST_LIB_DIR}/libgstmms.so \
+				${GST_LIB_DIR}/libgstmms.la
 
 # libpng
 gst_libpng_LIB_DEPENDS+=	png15:${PORTSDIR}/graphics/png

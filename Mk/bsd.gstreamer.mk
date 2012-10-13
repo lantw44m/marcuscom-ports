@@ -6,7 +6,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.52 2012/10/11 22:26:28 kwm Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.53 2012/10/13 22:38:02 kwm Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -64,33 +64,34 @@ GST1_SHLIB_VERSION=	0
 
 # supported plugins by both 0.10 and 1.0.
 _GSTREAMER_PLUGINS=	a52dec aalib amrnb \
-		cdio cdparanoia dts dv dvd \
+		cdio cdparanoia curl dts dv dvd \
 		faac faad flac flite \
 		gdkpixbuf gsm jack \
-		jpeg lame libcaca libpng \
+		jpeg lame libcaca libmms libpng \
 		mpeg2dec ogg opencv pulse \
 		schroedinger sidplay shout2 soup speex \
 		resindvd taglib theora twolame \
 		v4l2 vorbis vpx wavpack
 
 # old define should go away
-_GSTREAMER_PLUGINS+= amrwbdec bz2 cairo \
-			cdaudio gio gl gme gnomevfs gnonlin \
-			jpeg ladspa libmms \
+_GSTREAMER_PLUGINS+= amrwbdec cairo \
+			cdaudio gio gl gme gnonlin \
+			jpeg ladspa \
 			libvisual mp3 mpeg2enc musepack \
 			nas neon pango \
 			sdl sndfile spc soundtouch \
 			vdpau \
 			x264 xvid
 
+# xxx the bz2 plugin, bundle it with a "base" port.
 # plugins only in 0.10
 .if defined(USE_GSTREAMER)
-_GSTREAMER_PLUGINS+=annodex cairo esound ffmpeg fluendo-mp3 gconf hal mm python qt4 vp8
+_GSTREAMER_PLUGINS+=annodex bz2 cairo esound ffmpeg fluendo-mp3 gconf gnomevfs hal mm python qt4 vp8
 .endif
 
 # plugins only in 1.0
 .if defined(USE_GSTREAMER1)
-_GSTREAMER_PLUGINS+=celt mad spandsp vpx x ximagesrc zbar
+_GSTREAMER_PLUGINS+=assrender celt mad spandsp vpx x ximagesrc zbar
 .endif
 
 # other plugins
@@ -207,11 +208,17 @@ sdl_DEPENDS=	devel/gstreamer-plugins-sdl
 
 soup_DEPENDS=	devel/gstreamer-plugins-soup
 
+#-- ftp plugin section -------------------------------------------------------#
+
+curl_DEPENDS=	ftp/gstreamer1-plugins-curl
+
 #-- graphics plugin section --------------------------------------------------#
 
 aalib_DEPENDS=	graphics/gstreamer-plugins-aalib
 
 annodex_DEPENDS=	multimedia/gstreamer-plugins-annodex
+
+assrender_DEPENDS=	multimedia/gstreamer-plugins-assrender
 
 cairo_DEPENDS=	graphics/gstreamer-plugins-cairo
 

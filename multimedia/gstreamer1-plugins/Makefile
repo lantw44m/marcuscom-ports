@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.3 2012/10/06 16:28:55 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.4 2012/10/11 22:26:28 kwm Exp $
 
 PORTNAME=	gstreamer1-plugins
 PORTVERSION?=	${BASE_PORTVERSION}
@@ -77,12 +77,21 @@ PLIST_SUB+=	I386="@comment "
 .if ${GST_PLUGIN} == "base"
 DIST=	base
 NO_GSTREAMER_COMMON=	yes
-CONFIGURE_ARGS+=--with-default-audiosink="${DEFAULT_AUDIOSINK}" \
-		--with-default-audiosrc="${DEFAULT_AUDIOSRC}"
 MAN1=		gst-discoverer-1.0.1
 .else
 BUILD_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
 RUN_DEPEDNS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
+.endif
+
+.if ${DIST} == base || ${DIST} == ugly
+# xxx hmmm
+#  --with-default-audiosink specify default audio sink
+#  --with-default-audiosrc specify default audio source
+#  --with-default-videosink specify default video sink
+#  --with-default-videosrc specify default video source
+#  --with-default-visualizer specify default visualizer
+CONFIGURE_ARGS+=--with-default-audiosink="${DEFAULT_AUDIOSINK}" \
+		--with-default-audiosrc="${DEFAULT_AUDIOSRC}"
 .endif
 
 PLIST_SUB+=	VERSION="${VERSION}" \
