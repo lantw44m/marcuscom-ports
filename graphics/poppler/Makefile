@@ -1,13 +1,9 @@
-# New ports collection makefile for:	poppler
-# Date created:         03 March 2005
-# Whom:                 marcus@FreeBSD.org
-#
+# Created by: marcus@FreeBSD.org
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.79 2012/08/08 10:03:45 kwm Exp $
-#
+#   $MCom: ports/graphics/poppler/Makefile,v 1.80 2012/09/19 21:05:36 kwm Exp $
 
 PORTNAME=	poppler
-PORTVERSION=	0.20.4
+PORTVERSION=	0.20.5
 PORTREVISION?=	0
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/

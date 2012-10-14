@@ -1,10 +1,6 @@
-# New ports collection makefile for:	poppler-utils
-# Date created:		2006-05-01
-# Whom:			Michael Nottebrock <lofi@FreeBSD.org>
-#
+# Created by: Michael Nottebrock <lofi@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler-utils/Makefile,v 1.5 2010/07/07 13:03:19 kwm Exp $
-#
+#   $MCom: ports/graphics/poppler-utils/Makefile,v 1.7 2012/06/13 12:29:04 kwm Exp $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-utils

@@ -1,10 +1,6 @@
-# New ports collection makefile for:	poppler-gtk
-# Date created:		2006-01-12
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler-glib/Makefile,v 1.2 2012/09/03 16:30:19 mezz Exp $
-#
+#   $MCom: ports/graphics/poppler-glib/Makefile,v 1.3 2012/09/19 21:05:36 kwm Exp $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-glib
