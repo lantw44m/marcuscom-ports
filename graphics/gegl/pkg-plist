@@ -314,7 +314,6 @@ libdata/pkgconfig/gegl-%%GEGL_VER%%.pc
 %%PORTDOCS%%%%DOCSDIR%%/api.html
 %%PORTDOCS%%%%DOCSDIR%%/brightness-contrast.c.html
 %%PORTDOCS%%%%DOCSDIR%%/class-hierarchy.html
-%%PORTDOCS%%%%DOCSDIR%%/development.html
 %%PORTDOCS%%%%DOCSDIR%%/devhelp.css
 %%PNG%%%%PORTDOCS%%%%DOCSDIR%%/gallery/OpenRaster-00.png
 %%PORTDOCS%%%%DOCSDIR%%/gallery/OpenRaster-00.txt
@@ -344,7 +343,6 @@ libdata/pkgconfig/gegl-%%GEGL_VER%%.pc
 %%PORTDOCS%%%%DOCSDIR%%/gegl.css
 %%PORTDOCS%%%%DOCSDIR%%/gegl.devhelp
 %%PORTDOCS%%%%DOCSDIR%%/gegl.h.html
-%%PORTDOCS%%%%DOCSDIR%%/index.html
 %%PORTDOCS%%%%DOCSDIR%%/operations.html
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/data/surfer.png
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/2geglbuffer.c
