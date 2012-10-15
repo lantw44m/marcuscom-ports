@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1/Makefile,v 1.1 2012/10/04 08:12:44 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1/Makefile,v 1.2 2012/10/11 22:26:28 kwm Exp $
 
 PORTNAME=	gstreamer1
 PORTVERSION=	1.0.1
@@ -46,8 +46,6 @@ OPTIONS_DEFINE=	CHECK
 CHECK_DESC=	Support unit tests
 
 .include <bsd.port.options.mk>
-
-CONFIGURE_ARGS+=--disable-silent-rules
 
 .if ${PORT_OPTIONS:MCHECK}
 LIB_DEPENDS+=	check:${PORTSDIR}/devel/libcheck
