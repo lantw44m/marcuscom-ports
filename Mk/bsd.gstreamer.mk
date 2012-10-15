@@ -6,7 +6,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.53 2012/10/13 22:38:02 kwm Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.54 2012/10/13 23:38:02 kwm Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -67,31 +67,31 @@ _GSTREAMER_PLUGINS=	a52dec aalib amrnb \
 		cdio cdparanoia curl dts dv dvd \
 		faac faad flac flite \
 		gdkpixbuf gsm jack \
-		jpeg lame libcaca libmms libpng \
+		jpeg lame libcaca libmms libpng libvisual \
 		mpeg2dec ogg opencv pulse \
-		schroedinger sidplay shout2 soup speex \
+		schroedinger sidplay shout2 soundtouch soup speex \
 		resindvd taglib theora twolame \
 		v4l2 vorbis vpx wavpack
 
 # old define should go away
-_GSTREAMER_PLUGINS+= amrwbdec cairo \
-			cdaudio gio gl gme gnonlin \
+_GSTREAMER_PLUGINS+= \
+			cdaudio gio gl gnonlin \
 			jpeg ladspa \
-			libvisual mp3 mpeg2enc musepack \
+			mp3 mpeg2enc musepack \
 			nas neon pango \
-			sdl sndfile spc soundtouch \
-			vdpau \
+			sdl sndfile spc \
 			x264 xvid
 
 # xxx the bz2 plugin, bundle it with a "base" port.
 # plugins only in 0.10
 .if defined(USE_GSTREAMER)
-_GSTREAMER_PLUGINS+=annodex bz2 cairo esound ffmpeg fluendo-mp3 gconf gnomevfs hal mm python qt4 vp8
+_GSTREAMER_PLUGINS+=amrwbdec annodex bz2 cairo esound ffmpeg fluendo-mp3 gconf gnomevfs hal mm python qt4 vp8 \
+		vdpau
 .endif
 
 # plugins only in 1.0
 .if defined(USE_GSTREAMER1)
-_GSTREAMER_PLUGINS+=assrender celt mad spandsp vpx x ximagesrc zbar
+_GSTREAMER_PLUGINS+=assrender celt gme mad modplug spandsp vpx x ximagesrc zbar
 .endif
 
 # other plugins
@@ -263,7 +263,7 @@ good_DEPENDS=	multimedia/gstreamer-plugins-good
 
 gnonlin_DEPENDS=	multimedia/gstreamer-plugins-gnonlin
 
-libav_DEPENDS=	multimedia/gstreamer-libav
+libav_DEPENDS=	multimedia/gstreamer1-libav
 libav_GST_PREFIX=	gstreamer-
 libav_GST1_SUFX=	# empty
 libav_GST1_VERSION=	1.0.0
