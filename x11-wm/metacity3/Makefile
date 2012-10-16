@@ -1,13 +1,9 @@
-# New ports collection makefile for:   metacity
-# Date created:        21 May 2002
-# Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
-#
+# Created by: Garrett Rooney <rooneg@electricjellyfish.net>
 # $FreeBSD$
-#   $MCom: ports/x11-wm/metacity3/Makefile,v 1.3 2012/08/06 20:14:11 kwm Exp $
-#
+#   $MCom: ports/x11-wm/metacity3/Makefile,v 1.4 2012/09/03 20:23:17 kwm Exp $
 
 PORTNAME=	metacity
-PORTVERSION=	2.34.8
+PORTVERSION=	2.34.13
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
