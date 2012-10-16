@@ -1,13 +1,9 @@
-# New ports collection makefile for:    librsvg2
-# Date created:         		8th May 2001
-# Whom:                 		Ade Lovett <ade@FreeBSD.org>
-#
+# Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/graphics/librsvg2/Makefile,v 1.145 2012/05/13 12:22:15 kwm Exp $
-#
+#   $MCom: ports/graphics/librsvg2/Makefile,v 1.146 2012/09/03 20:17:06 kwm Exp $
 
 PORTNAME=	librsvg
-PORTVERSION=	2.36.3
+PORTVERSION=	2.36.4
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2
