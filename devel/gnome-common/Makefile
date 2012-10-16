@@ -1,14 +1,9 @@
-# New ports collection makefile for:	gnomecommon
-# Date created:				04 April 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/devel/gnome-common/Makefile,v 1.18 2012/06/13 12:51:43 kwm Exp $
-#
+#    $MCom: ports/devel/gnome-common/Makefile,v 1.19 2012/06/14 17:28:24 kwm Exp $
 
 PORTNAME=	gnome-common
-PORTVERSION=	3.4.0.1
-PORTREVISION=	1
+PORTVERSION=	3.6.0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
