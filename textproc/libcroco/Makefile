@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libcroco
-# Date created:				08 July 2003
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#
 
 PORTNAME=	libcroco
-PORTVERSION=	0.6.6
+PORTVERSION=	0.6.7
 CATEGORIES=	textproc gnome
 MASTER_SITES=	GNOME
 
