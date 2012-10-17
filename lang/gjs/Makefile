@@ -1,13 +1,10 @@
-# New ports collection makefile for:   gjs
-# Date created:        14 Aug 2009
-# Whom:                Pawel Worach <pawel.worach@gmail.com>
-#
+# Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/lang/gjs/Makefile,v 1.25 2012/08/17 19:06:44 kwm Exp $
-#
+#   $MCom: ports/lang/gjs/Makefile,v 1.26 2012/09/19 11:49:44 kwm Exp $
 
 PORTNAME=	gjs
 PORTVERSION=	1.32.0
+PORTREVISION=	1
 CATEGORIES=	lang gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,7 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME Javascript binding
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		spidermonkey>=1.8.5:${PORTSDIR}/lang/spidermonkey
+		spidermonkey==1.8.5:${PORTSDIR}/lang/spidermonkey185
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		cairo:${PORTSDIR}/graphics/cairo \
 		mozjs185.1:${PORTSDIR}/lang/spidermonkey
