@@ -1,14 +1,9 @@
-# New ports collection makefile for:	gnome-themes
-# Date Created:				05 October 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes-standard/Makefile,v 1.20 2012/06/01 10:20:41 kwm Exp $
-#
+#   $MCom: ports/x11-themes/gnome-themes-standard/Makefile,v 1.21 2012/06/02 11:14:38 kwm Exp $
 
 PORTNAME=	gnome-themes-standard
-PORTVERSION=	3.4.2
-PORTREVISION=	1
+PORTVERSION=	3.6.0.2
 CATEGORIES=	x11-themes gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
