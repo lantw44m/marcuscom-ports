@@ -1,13 +1,9 @@
-# New ports collection makefile for:   gtk13
-# Date Created:			28 Sep 1997
-# Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
-#
+# Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.47 2012/07/15 21:54:22 kwm Exp $
-#
+#   $MCom: ports/x11-toolkits/gtk30/Makefile,v 1.48 2012/08/27 17:49:26 kwm Exp $
 
 PORTNAME=	gtk
-PORTVERSION=	3.4.4
+PORTVERSION=	3.6.1
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -26,9 +22,11 @@ LATEST_LINK=	gtk30
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
+		${LOCALBASE}/libdata/pkgconfig/atk-bridge-2.0.pc:${PORTSDIR}/accessibility/at-spi2-atk
 RUN_DEPENDS+=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
-		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
+		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme \
+		${LOCALBASE}/libdata/pkgconfig/atk-bridge-2.0.pc:${PORTSDIR}/accessibility/at-spi2-atk
 
 USE_GMAKE=	yes
 USE_PERL5_BUILD=yes
@@ -51,17 +49,14 @@ GLIB_SCHEMAS=	org.gtk.Demo.gschema.xml \
 
 MAN1=		gtk-query-immodules-3.0.1
 
-.if defined(WITH_DEBUG)
-CONFIGURE_ARGS+=	--enable-debug=yes
-.endif
-
-OPTIONS=	CUPS "Enable cups printing support" on \
-		COLORD "Enable colord .. support" on
+OPTIONS_DEFINE=	CUPS COLORD DEBUG
+OPTIONS_DEFAULT=CUPS COLORD
+COLORD_DESC=	Color profile support
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_CUPS)
-LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
+.if ${PORT_OPTIONS:MCUPS}
+LIB_DEPENDS+=	cups:${PORTSDIR}/print/cups-client
 CONFIGURE_ARGS+=--enable-cups=auto
 PLIST_SUB+=	CUPS=""
 .else
@@ -69,8 +64,12 @@ CONFIGURE_ARGS+=--disable-cups
 PLIST_SUB+=	CUPS="@comment "
 .endif
 
-.if defined(WITH_COLORD)
-LIB_DEPENDS+=	colord.1:${PORTSDIR}/graphics/colord
+.if ${PORT_OPTIONS:MDEBUG}
+CONFIGURE_ARGS+=	--enable-debug=yes
+.endif
+
+.if ${PORT_OPTIONS:MCOLORD}
+LIB_DEPENDS+=	colord:${PORTSDIR}/graphics/colord
 CONFIGURE_ARGS+=--enable-colord
 .else
 CONFIGURE_ARGS+=--disable-colord
