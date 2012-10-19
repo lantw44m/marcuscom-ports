@@ -1,13 +1,9 @@
-# New ports collection makefile for:   gio-fam-backend
-# Date Created:			22 December 2007
-# Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.93 2012/07/15 11:44:25 kwm Exp $
-#
+#   $MCom: ports/devel/gio-fam-backend/Makefile,v 1.94 2012/07/26 09:09:58 kwm Exp $
 
 PORTNAME=	gio-fam-backend
-PORTVERSION=	2.32.4
+PORTVERSION=	2.34.1
 PORTREVISION=	0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:S,%SUBDIR%,sources/glib/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/},} \

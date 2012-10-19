@@ -1,14 +1,10 @@
-# New ports collection makefile for:   glib13
-# Date Created:			28 July 1998
-# Whom:				Vanilla I. Shu <vanilla@FreeBSD.org>
-#
+# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.226 2012/07/26 09:09:58 kwm Exp $
-#
+#   $MCom: ports/devel/glib20/Makefile,v 1.227 2012/09/19 13:17:02 kwm Exp $
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
-PORTVERSION=	2.32.4
+PORTVERSION=	2.34.1
 PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
@@ -17,16 +13,15 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Some useful routines of C programming (current stable version)
 
-LATEST_LINK=	glib20
-
-USE_XZ=		yes
 LICENSE=	LGPL20
-LICENSE_FILE=	${WRKSRC}/COPYING
+
+LATEST_LINK=	glib20
+USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS+=	pcre.1:${PORTSDIR}/devel/pcre \
-		ffi.5:${PORTSDIR}/devel/libffi
+LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
+		ffi:${PORTSDIR}/devel/libffi
 
 USE_GETTEXT=	yes
 USE_ICONV=	yes
@@ -47,10 +42,9 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}"
-		
-OPTIONS=	COLLATION_FIX "fix string collation" off
 
-#CONFIGURE_ARGS+=--disable-silent-rules
+OPTIONS_DEFINE=	COLLATION_FIX DEBUG
+COLLATION_FIX_DESC=	fix string collation
 
 .include <bsd.port.pre.mk>
 
@@ -77,7 +71,7 @@ GLIB_ARCH=	${ARCH}
 .endif
 CONFIGURE_TARGET=${GLIB_ARCH}-portbld-freebsd${OSREL}
 
-.if defined(WITH_COLLATION_FIX)
+.if ${PORT_OPTIONS:MCOLLATION_FIX}
 LIB_DEPENDS+=	icui18n:${PORTSDIR}/devel/icu
 EXTRA_PATCHES+=	${FILESDIR}/extra-patch-glib_Makefile.in \
 		${FILESDIR}/extra-patch-glib_gunicollate.c
@@ -85,8 +79,11 @@ EXTRA_PATCHES+=	${FILESDIR}/extra-patch-glib_Makefile.in \
 #CONFIGURE_ENV+=	CFLAGS="-D__STDC_ISO_10646__"
 .endif
 
-.if defined(WITH_DEBUG)
-CONFIGURE_ARGS+=	--enable-debug=yes
+.if ${PORT_OPTIONS:MDEBUG}
+CONFIGURE_ARGS+=	--enable-debug=yes \
+			--disable-silent-rules
+.else
+CONFIGURE_ARGS+=	--disable-modular-tests
 .endif
 
 post-patch:
