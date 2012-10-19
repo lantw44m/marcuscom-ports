@@ -1,14 +1,9 @@
-# New ports collection makefile for:	gobject-introspection
-# Date created:				19 July 2009
-# Whom:					Alexander Logvinov <avl@FreeBSD.org>
-#
+# Created by: Alexander Logvinov <avl@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.47 2012/08/04 09:41:25 kwm Exp $
-#
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.48 2012/09/18 22:23:15 kwm Exp $
 
 PORTNAME=	gobject-introspection
-PORTVERSION=	1.32.1
-PORTREVISION=	1
+PORTVERSION=	1.34.1.1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,6 +11,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Generate interface introspection data for GObject libraries
 
+# we need cairo otherwise the generated Cairo gir is broken
 BUILD_DEPENDS=	cairo-trace:${PORTSDIR}/graphics/cairo
 LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi
 
