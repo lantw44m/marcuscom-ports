@@ -1,13 +1,9 @@
-# New ports collection makefile for:	libsoup
-# Date created:				12 March 2003
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.112 2012/05/15 21:35:52 kwm Exp $
-#
+#   $MCom: ports/devel/libsoup/Makefile,v 1.113 2012/08/08 16:56:39 kwm Exp $
 
 PORTNAME=	libsoup
-PORTVERSION=	2.38.1
+PORTVERSION=	2.40.1
 PORTREVISION?=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -17,14 +13,16 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A SOAP (Simple Object Access Protocol) implementation in C
 
 BUILD_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
-LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt
+LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 RUN_DEPENDS=	glib-networking>=2.29.18:${PORTSDIR}/net/glib-networking
 
 USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
-USE_GNOME=	gnomehier gnomehack glib20 libxml2 ltverhack referencehack
+USE_GETTEXT=	yes
+USE_GNOME=	gnomehier gnomehack glib20 libxml2 ltverhack referencehack \
+		intltool
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
@@ -37,8 +35,8 @@ PLIST_SUB=	VERSION="2.4"
 
 .if defined(SOUP_SLAVE)
 USE_SQLITE=	yes
-LIB_DEPENDS+=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
-		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
+LIB_DEPENDS+=	soup-2.4:${PORTSDIR}/devel/libsoup \
+		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 CONFIGURE_ARGS+=--with-gnome
 .else
 BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
