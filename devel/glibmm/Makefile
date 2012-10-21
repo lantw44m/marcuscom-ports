@@ -1,13 +1,9 @@
-# New ports collection makefile for:    glibmm
-# Date created:         		04 December 2003
-# Whom:                 		Adam Weinberger <adamw@FreeBSD.org>
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/glibmm/Makefile,v 1.118 2012/05/25 09:58:54 kwm Exp $
-#
+#   $MCom: ports/devel/glibmm/Makefile,v 1.119 2012/07/13 09:35:07 kwm Exp $
 
 PORTNAME=	glibmm
-PORTVERSION=	2.32.1
+PORTVERSION=	2.34.0
 PORTREVISION?=	0
 PORTEPOCH=	1
 CATEGORIES=	devel
@@ -23,8 +19,8 @@ PLIST_SUB=	VERSION="2.4" API_VERSION="2.4"
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS=	sigc-2.0.0:${PORTSDIR}/devel/libsigc++20
 BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
+LIB_DEPENDS=	sigc-2.0:${PORTSDIR}/devel/libsigc++20
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
