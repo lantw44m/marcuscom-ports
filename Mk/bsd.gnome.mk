@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.568 2012/08/16 18:56:11 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.569 2012/09/27 20:25:50 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -142,7 +142,7 @@ atkmm_LIB_DEPENDS=	atkmm-1.6:${PORTSDIR}/accessibility/atkmm
 atkmm_USE_GNOME_IMPL=	glibmm atk
 
 libxml++26_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxml++-2.6.pc
-libxml++26_LIB_DEPENDS=		libxml++-2.6:${PORTSDIR}/textproc/libxml++26
+libxml++26_LIB_DEPENDS=		xml++-2.6:${PORTSDIR}/textproc/libxml++26
 libxml++26_USE_GNOME_IMPL=	glibmm libxml2
 
 cairo_DETECT=		${LOCALBASE}/libdata/pkgconfig/cairo.pc
@@ -161,7 +161,7 @@ gconfmm26_LIB_DEPENDS=		gconfmm-2.6:${PORTSDIR}/devel/gconfmm26
 gconfmm26_USE_GNOME_IMPL=	glibmm gconf2
 
 glibmm_DETECT=		${LOCALBASE}/libdata/pkgconfig/glibmm-2.4.pc
-glibmm_LIB_DEPENDS=	glibmm-2.6:${PORTSDIR}/devel/glibmm
+glibmm_LIB_DEPENDS=	glibmm-2.4:${PORTSDIR}/devel/glibmm
 glibmm_USE_GNOME_IMPL=	libsigc++20 glib20
 
 gtkmm20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtkmm-2.0.pc
@@ -199,7 +199,7 @@ libsigc++20_DETECT=		${LOCALBASE}/libdata/pkgconfig/sigc++-2.0.pc
 libsigc++20_LIB_DEPENDS=	sigc-2.0:${PORTSDIR}/devel/libsigc++20
 
 pangomm_DETECT=		${LOCALBASE}/libdata/pkgconfig/pangomm-1.4.pc
-pangomm_LIB_DEPENDS=	pango-1.4:${PORTSDIR}/x11-toolkits/pangomm
+pangomm_LIB_DEPENDS=	pangomm-1.4:${PORTSDIR}/x11-toolkits/pangomm
 pangomm_USE_GNOME_IMPL=	pango glibmm cairomm
 
 ESD_CONFIG?=		${LOCALBASE}/bin/esd-config
