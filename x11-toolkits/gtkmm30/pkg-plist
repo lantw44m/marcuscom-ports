@@ -141,12 +141,14 @@ include/gtkmm-%%API_VERSION%%/gtkmm/infobar.h
 include/gtkmm-%%API_VERSION%%/gtkmm/invisible.h
 include/gtkmm-%%API_VERSION%%/gtkmm/label.h
 include/gtkmm-%%API_VERSION%%/gtkmm/layout.h
+include/gtkmm-%%API_VERSION%%/gtkmm/levelbar.h
 include/gtkmm-%%API_VERSION%%/gtkmm/linkbutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/liststore.h
 include/gtkmm-%%API_VERSION%%/gtkmm/listviewtext.h
 include/gtkmm-%%API_VERSION%%/gtkmm/main.h
 include/gtkmm-%%API_VERSION%%/gtkmm/menu.h
 include/gtkmm-%%API_VERSION%%/gtkmm/menubar.h
+include/gtkmm-%%API_VERSION%%/gtkmm/menubutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/menuitem.h
 include/gtkmm-%%API_VERSION%%/gtkmm/menushell.h
 include/gtkmm-%%API_VERSION%%/gtkmm/menutoolbutton.h
@@ -262,11 +264,13 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/infobar_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/invisible_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/label_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/layout_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/levelbar_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/linkbutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/liststore_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/main_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/menu_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/menubar_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/menubutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/menuitem_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/menushell_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/menutoolbutton_p.h
@@ -309,6 +313,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/private/scalebutton_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/scrollable_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/scrollbar_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/scrolledwindow_p.h
+include/gtkmm-%%API_VERSION%%/gtkmm/private/searchentry_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/selectiondata_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/separator_p.h
 include/gtkmm-%%API_VERSION%%/gtkmm/private/separatormenuitem_p.h
@@ -385,6 +390,7 @@ include/gtkmm-%%API_VERSION%%/gtkmm/scalebutton.h
 include/gtkmm-%%API_VERSION%%/gtkmm/scrollable.h
 include/gtkmm-%%API_VERSION%%/gtkmm/scrollbar.h
 include/gtkmm-%%API_VERSION%%/gtkmm/scrolledwindow.h
+include/gtkmm-%%API_VERSION%%/gtkmm/searchentry.h
 include/gtkmm-%%API_VERSION%%/gtkmm/selectiondata.h
 include/gtkmm-%%API_VERSION%%/gtkmm/selectiondata_private.h
 include/gtkmm-%%API_VERSION%%/gtkmm/separator.h
