@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.569 2012/09/27 20:25:50 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.570 2012/10/21 14:37:56 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -96,9 +96,9 @@ _USE_GNOME_ALL+=dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
 		libgda5-ui libgnomekbd3 libwnck3 metacity3 nautilus3 pygobject3 vte3
 
 # C++ bindings
-_USE_GNOME_ALL+=atkmm cairomm gconfmm gconfmm26 glibmm gtkmm24 gtkmm30 \
-		gtksourceviewmm3 libgdamm libgdamm5 libgtksourceviewmm \
-		libxml++26 pangomm
+_USE_GNOME_ALL+=atkmm cairomm gconfmm gconfmm26 glibmm gtkmm20 gtkmm24 \
+		gtkmm30 gtksourceviewmm3 libgdamm libgdamm5 \
+		libgtksourceviewmm libxml++ libxml++26 pangomm
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -141,6 +141,10 @@ atkmm_DETECT=		${LOCALBASE}/libdata/pkgconfig/atkmm-1.6.pc
 atkmm_LIB_DEPENDS=	atkmm-1.6:${PORTSDIR}/accessibility/atkmm
 atkmm_USE_GNOME_IMPL=	glibmm atk
 
+libxml++_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxml++-1.0.pc
+libxml++_LIB_DEPENDS=		xml++-1.0:${PORTSDIR}/textproc/libxml++
+libxml++_USE_GNOME_IMPL=	libxml2
+
 libxml++26_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxml++-2.6.pc
 libxml++26_LIB_DEPENDS=		xml++-2.6:${PORTSDIR}/textproc/libxml++26
 libxml++26_USE_GNOME_IMPL=	glibmm libxml2
@@ -178,7 +182,7 @@ gtkmm30_USE_GNOME_IMPL=	glibmm cairomm atkmm pangomm gtk30
 
 gtksourceviewmm3_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtksourceviewmm-3.0.pc
 gtksourceviewmm3_LIB_DEPENDS=		gtksourceviewmm-3.0:${PORTSDIR}/x11-toolkits/gtksourceviewmm3
-gtksourceviewmm3_USE_GNOME_IMPL=gtkmm30 gtksourceview3
+gtksourceviewmm3_USE_GNOME_IMPL=	gtkmm30 gtksourceview3
 
 libgdamm_DETECT=	${LOCALBASE}/libdata/pkgconfig/libgdamm-4.0.pc
 libgdamm_LIB_DEPENDS=	gdamm-4.0:${PORTSDIR}/databases/libgdamm
