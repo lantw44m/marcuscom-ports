@@ -28,7 +28,6 @@ include/libgda-%%VERSION%%/libgda-ui/gdaui-rt-editor.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-server-operation.h
 include/libgda-%%VERSION%%/libgda-ui/gdaui-tree-store.h
 include/libgda-%%VERSION%%/libgda-ui/libgda-ui.h
-lib/girepository-1.0/Gdaui-%%VERSION%%.typelib
 lib/libgda-%%VERSION%%/plugins/gdaui-entry-filesel-spec.xml
 lib/libgda-%%VERSION%%/plugins/gdaui-entry-password.xml
 lib/libgda-%%VERSION%%/plugins/gdaui-entry-pict-spec.xml
@@ -77,7 +76,6 @@ share/doc/gda-browser/style.css
 share/doc/gda-browser/up.png
 share/doc/gda-browser/why.html
 share/doc/gda-browser/windows.html
-share/gir-1.0/Gdaui-%%VERSION%%.gir
 share/gnome/help/gda-browser/C/actions.page
 share/gnome/help/gda-browser/C/data-manager-perspective.page
 share/gnome/help/gda-browser/C/data-manager-source-editor.page

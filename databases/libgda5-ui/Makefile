@@ -1,12 +1,8 @@
-# New ports collection makefile for:	libgda2
-# Date created:				02 June 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5-ui/Makefile,v 1.4 2011/06/21 10:20:54 kwm Exp $
-#
+#   $MCom: ports/databases/libgda5-ui/Makefile,v 1.5 2011/10/13 13:29:51 kwm Exp $
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 PKGNAMESUFFIX=	5-ui
 

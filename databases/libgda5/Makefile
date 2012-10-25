@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5/Makefile,v 1.8 2011/10/13 13:29:50 kwm Exp $
+#   $MCom: ports/databases/libgda5/Makefile,v 1.9 2011/12/17 18:41:42 kwm Exp $
 #
 
 PORTNAME=	libgda
@@ -22,11 +22,11 @@ LIBGDA5_SLAVE?=	no
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+#BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	gcrypt.18:${PORTSDIR}/security/libgcrypt \
     		soup-2.4.1:${PORTSDIR}/devel/libsoup \
 		json-glib-1.0.0:${PORTSDIR}/devel/json-glib
-RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
+#RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
 
 USE_AUTOTOOLS=	libtool
 USE_GETTEXT=	yes
@@ -38,7 +38,7 @@ MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ARGS=	--without-oracle \
 		--disable-crypto \
 		--disable-default-binary \
-		--enable-introspection
+		--disable-introspection
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
 
