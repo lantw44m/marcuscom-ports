@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel/Makefile,v 1.235 2011/06/04 22:51:28 mezz Exp $
+#   $MCom: ports/x11/gnome-panel/Makefile,v 1.236 2012/09/03 16:28:29 mezz Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -24,7 +24,7 @@ LIB_DEPENDS=	gweather.1:${PORTSDIR}/net/libgweather \
 		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
 
-CONFLICTS=	gnome-panel-3.[0-9]*
+CONFLICTS=	gnome-panel-3.[0-9]* mate-panel-*
 
 USE_GETTEXT=	yes
 USE_XORG=	ice sm x11 xau xrandr

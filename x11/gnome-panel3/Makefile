@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.24 2011/10/16 17:55:24 kwm Exp $
+#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.25 2012/06/13 20:17:08 mezz Exp $
 #
 
 PORTNAME=	gnome-panel
@@ -26,7 +26,7 @@ LIB_DEPENDS=	gweather-3.0:${PORTSDIR}/net/libgweather3 \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/notification-daemon
 
-CONFLICTS=	gnome-panel-2.[0-9]*
+CONFLICTS=	gnome-panel-2.[0-9]* mate-panel-*
 
 LATEST_LINK=	gnome-panel3
 USE_GETTEXT=	yes
