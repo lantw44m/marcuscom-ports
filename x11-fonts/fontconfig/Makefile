@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD: head/x11-fonts/fontconfig/Makefile 300897 2012-07-14 14:29:18Z beat $
-#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.29 2011/04/30 20:43:31 mezz Exp $
+#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.31 2012/11/01 11:03:16 kwm Exp $
 
 PORTNAME=	fontconfig
 PORTVERSION=	2.10.1
@@ -60,9 +60,8 @@ post-install:
 		s|%%LOCALBASE%%|${LOCALBASE}|' < ${FILESDIR}/pkg-install.in \
 		> ${PKGINSTALL}
 .if !defined(PACKAGE_BUILDING)
-	@${LDCONFIG} -m ${PREFIX}/lib
+	-@${LDCONFIG} -m ${PREFIX}/lib
 	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
-
 .endif
 
 .include <bsd.port.post.mk>
