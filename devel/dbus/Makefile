@@ -1,20 +1,16 @@
-# New ports collection makefile for:   D-BUS
-# Date Created:			22 June 2004
-# Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/dbus/Makefile,v 1.55 2012/06/17 12:08:06 kwm Exp $
-#
+#   $MCom: ports/devel/dbus/Makefile,v 1.56 2012/08/16 14:28:17 kwm Exp $
 
 PORTNAME=	dbus
-PORTVERSION=	1.6.4
+PORTVERSION=	1.6.8
 CATEGORIES=	devel gnome
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A message bus system for inter-application communication
 
-LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
 
 USE_GNOME=	gnomehack libxml2 ltverhack
 USE_GMAKE=	yes
