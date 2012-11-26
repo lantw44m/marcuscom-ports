@@ -2216,8 +2216,6 @@ share/locale/zh_TW/LC_MESSAGES/gimp20.mo
 @dirrmtry share/locale/nds
 @dirrmtry share/locale/my/LC_MESSAGES
 @dirrmtry share/locale/my
-@dirrmtry share/locale/mr/LC_MESSAGES
-@dirrmtry share/locale/mr
 @dirrmtry share/locale/km/LC_MESSAGES
 @dirrmtry share/locale/km
 @dirrmtry share/locale/kk/LC_MESSAGES
