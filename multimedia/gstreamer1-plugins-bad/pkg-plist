@@ -37,6 +37,8 @@ lib/gstreamer-%%VERSION%%/libgstdvdspu.la
 lib/gstreamer-%%VERSION%%/libgstdvdspu.so
 lib/gstreamer-%%VERSION%%/libgstfestival.la
 lib/gstreamer-%%VERSION%%/libgstfestival.so
+lib/gstreamer-%%VERSION%%/libgstfieldanalysis.la
+lib/gstreamer-%%VERSION%%/libgstfieldanalysis.so
 lib/gstreamer-%%VERSION%%/libgstfragmented.la
 lib/gstreamer-%%VERSION%%/libgstfragmented.so
 lib/gstreamer-%%VERSION%%/libgstfrei0r.la
@@ -85,6 +87,8 @@ lib/gstreamer-%%VERSION%%/libgstsiren.la
 lib/gstreamer-%%VERSION%%/libgstsiren.so
 lib/gstreamer-%%VERSION%%/libgstspeed.la
 lib/gstreamer-%%VERSION%%/libgstspeed.so
+lib/gstreamer-%%VERSION%%/libgstsubenc.la
+lib/gstreamer-%%VERSION%%/libgstsubenc.so
 lib/gstreamer-%%VERSION%%/libgstvideoparsersbad.la
 lib/gstreamer-%%VERSION%%/libgstvideoparsersbad.so
 lib/gstreamer-%%VERSION%%/libgsty4mdec.la

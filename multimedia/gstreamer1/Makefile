@@ -1,9 +1,9 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1/Makefile,v 1.2 2012/10/11 22:26:28 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1/Makefile,v 1.3 2012/10/15 16:15:02 kwm Exp $
 
 PORTNAME=	gstreamer1
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gstreamer/
 DISTNAME=	${PORTNAME:S/1//}-${PORTVERSION}

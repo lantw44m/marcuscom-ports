@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.4 2012/10/11 22:26:28 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.5 2012/10/13 23:38:02 kwm Exp $
 
 PORTNAME=	gstreamer1-plugins
 PORTVERSION?=	${BASE_PORTVERSION}
@@ -27,16 +27,16 @@ LIB_DEPENDS+=	gstreamer-1.0:${PORTSDIR}/multimedia/gstreamer1 \
 		orc-0.4:${PORTSDIR}/devel/orc
 RUN_DEPENDS+=	iso-codes>=0:${PORTSDIR}/misc/iso-codes
 
-BASE_PORTVERSION=	1.0.1
+BASE_PORTVERSION=	1.0.3
 BASE_DISTNAME=		gst-plugins-base-${BASE_PORTVERSION}
 BASE_DISTFILE=		${BASE_DISTNAME}${EXTRACT_SUFX}
-BAD_PORTVERSION=	1.0.1
+BAD_PORTVERSION=	1.0.3
 BAD_DISTNAME=		gst-plugins-bad-${BAD_PORTVERSION}
 BAD_DISTFILE=		${BAD_DISTNAME}${EXTRACT_SUFX}
-GOOD_PORTVERSION=	1.0.1
+GOOD_PORTVERSION=	1.0.3
 GOOD_DISTNAME=		gst-plugins-good-${GOOD_PORTVERSION}
 GOOD_DISTFILE=		${GOOD_DISTNAME}${EXTRACT_SUFX}
-UGLY_PORTVERSION=	1.0.1
+UGLY_PORTVERSION=	1.0.3
 UGLY_DISTNAME=		gst-plugins-ugly-${UGLY_PORTVERSION}
 UGLY_DISTFILE=		${UGLY_DISTNAME}${EXTRACT_SUFX}
 DIST?=		base

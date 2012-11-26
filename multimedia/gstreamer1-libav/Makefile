@@ -1,9 +1,9 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-libav/Makefile,v 1.1 2012/10/04 08:12:44 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-libav/Makefile,v 1.2 2012/10/14 21:02:21 kwm Exp $
 
 PORTNAME=	gstreamer1-libav
-PORTVERSION=	1.0.1
+PORTVERSION=	1.0.3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-libav/
 DISTNAME=	gst-libav-${PORTVERSION}
