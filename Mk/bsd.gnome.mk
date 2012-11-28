@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.570 2012/10/21 14:37:56 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.571 2012/10/21 16:53:24 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -75,7 +75,7 @@ _USE_GNOME_ALL= esound intlhack intltool ltasneededhack lthack ltverhack \
 # GNOME 1 components
 _USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 \
 		gnomecanvas gnomedb gnomelibs gnomeprint gnomevfs gtk12 \
-		libgda libghttp libglade libxml imlib oaf orbit pygtk
+		libgda libghttp libglade libxml imlib oaf orbit
 
 # GNOME 2 components
 _USE_GNOME_ALL+= atk atspi cairo desktopfileutils eel2 evolutiondataserver gal2 \
@@ -326,11 +326,6 @@ libglade_USE_GNOME_IMPL=gnomedb
 gal_LIB_DEPENDS=	gal.23:${PORTSDIR}/x11-toolkits/gal
 gal_DETECT=		${LOCALBASE}/etc/galConf.sh
 gal_USE_GNOME_IMPL=	libglade
-
-pygtk_DETECT=			${LOCALBASE}/bin/pygtk-codegen-1.2
-pygtk_BUILD_DEPENDS=	${pygtk_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk
-pygtk_RUN_DEPENDS=		${pygtk_DETECT}:${PORTSDIR}/x11-toolkits/py-gtk
-pygtk_USE_GNOME_IMPL=	gnomelibs gdkpixbuf libglade
 
 _glib20_LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20
 _glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
