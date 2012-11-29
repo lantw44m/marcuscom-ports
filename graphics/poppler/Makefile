@@ -1,6 +1,6 @@
 # Created by: marcus@FreeBSD.org
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.80 2012/09/19 21:05:36 kwm Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.81 2012/10/14 23:04:21 kwm Exp $
 
 PORTNAME=	poppler
 PORTVERSION=	0.20.5
@@ -31,6 +31,8 @@ CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 .if !defined(SLAVEPORT)
+PORTSCOUT=	limitw:1,even
+
 OPTIONS_DEFINE=	CAIRO OPENJPEG
 OPTIONS_DEFAULT=CAIRO OPENJPEG
 .endif
@@ -38,6 +40,7 @@ OPTIONS_DEFAULT=CAIRO OPENJPEG
 .include <bsd.port.options.mk>
 
 .if defined(SLAVEPORT)
+PORTSCOUT=	ignore:1
 LIB_DEPENDS+=	poppler:${PORTSDIR}/graphics/poppler
 
 .if ${SLAVEPORT}=="glib"
