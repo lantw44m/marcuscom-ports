@@ -3,7 +3,7 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.20 2012/08/17 19:06:47 kwm Exp $
+#   $MCom: ports/sysutils/polkit/Makefile,v 1.21 2012/09/01 23:02:13 mezz Exp $
 #
 
 PORTNAME=	polkit
@@ -20,7 +20,7 @@ LIB_DEPENDS=	expat.6:${PORTSDIR}/textproc/expat2
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection \
 		dbus-launch:${PORTSDIR}/devel/dbus
 
-USE_GNOME=	gnomehack glib20 intlhack
+USE_GNOME=	gnomehack glib20 intlhack gnomehier
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
