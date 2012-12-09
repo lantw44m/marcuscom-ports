@@ -1,10 +1,10 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/glib20/Makefile,v 1.227 2012/09/19 13:17:02 kwm Exp $
+#   $MCom: ports/devel/glib20/Makefile,v 1.228 2012/10/19 16:57:55 kwm Exp $
 # !! DON'T FORGET ABOUT devel/gio-fam-backend !!
 
 PORTNAME=	glib
-PORTVERSION=	2.34.1
+PORTVERSION=	2.34.3
 PORTREVISION?=	0
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
