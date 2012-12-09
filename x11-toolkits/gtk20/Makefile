@@ -1,14 +1,10 @@
-# New ports collection makefile for:   gtk13
-# Date Created:			28 Sep 1997
-# Whom:				Vanilla I. Shu <vanilla@MinJe.com.TW>
-#
+# Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.233 2012/09/03 20:31:40 kwm Exp $
-#
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.234 2012/09/24 11:11:44 kwm Exp $
 # Remember to update graphics/gtk-update-icon-cache too.
 
 PORTNAME=	gtk
-PORTVERSION=	2.24.13
+PORTVERSION=	2.24.14
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME

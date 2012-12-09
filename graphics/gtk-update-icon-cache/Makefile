@@ -1,13 +1,9 @@
-# New ports collection makefile for:   gtk-update-icon-cache
-# Date Created:			4 Mar 2011
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/graphics/gtk-update-icon-cache/Makefile,v 1.14 2012/09/03 20:31:40 kwm Exp $
-#
+#   $MCom: ports/graphics/gtk-update-icon-cache/Makefile,v 1.15 2012/09/24 11:11:43 kwm Exp $
 
 PORTNAME=	gtk-update-icon-cache
-PORTVERSION=	2.24.13
+PORTVERSION=	2.24.14
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 MASTER_SITE_SUBDIR=	sources/gtk+/${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}
