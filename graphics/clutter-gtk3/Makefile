@@ -1,14 +1,12 @@
-# New ports collection makefile for:	clutter-gtk
-# Date created:		2008-12-25
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
-#
+#    $MCom$
 
 PORTNAME=	clutter-gtk
-PORTVERSION=	1.2.0
+PORTVERSION=	1.2.2
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GTK+ Integration library for Clutter
