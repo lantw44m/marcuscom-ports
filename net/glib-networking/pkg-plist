@@ -9,6 +9,7 @@ lib/gio/modules/libgiolibproxy.la
 lib/gio/modules/libgiolibproxy.so
 libexec/glib-pacrunner
 share/dbus-1/services/org.gtk.GLib.PACRunner.service
+share/locale/ar/LC_MESSAGES/glib-networking.mo
 share/locale/as/LC_MESSAGES/glib-networking.mo
 share/locale/be/LC_MESSAGES/glib-networking.mo
 share/locale/bg/LC_MESSAGES/glib-networking.mo

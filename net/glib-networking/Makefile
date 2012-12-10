@@ -1,13 +1,9 @@
-# New ports collection makefile for:   glib-networking
-# Date Created:			06 Jan 2011
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/net/glib-networking/Makefile,v 1.18 2012/05/15 21:00:44 kwm Exp $
-#
+#   $MCom: ports/net/glib-networking/Makefile,v 1.19 2012/08/17 19:06:45 kwm Exp $
 
 PORTNAME=	glib-networking
-PORTVERSION=	2.32.3
+PORTVERSION=	2.34.2
 CATEGORIES=	net
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -17,10 +13,10 @@ COMMENT=	Network-related giomodules for glib
 
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	gnutls.47:${PORTSDIR}/security/gnutls \
-		gcrypt.18:${PORTSDIR}/security/libgcrypt \
-		dbus-1.3:${PORTSDIR}/devel/dbus \
-		proxy.1:${PORTSDIR}/net/libproxy
+LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
+		gcrypt:${PORTSDIR}/security/libgcrypt \
+		dbus-1:${PORTSDIR}/devel/dbus \
+		proxy:${PORTSDIR}/net/libproxy
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
