@@ -3,12 +3,13 @@
 # Whom:			Ade Lovett <ade@lovett.com>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.25 2012/08/23 10:44:32 kwm Exp $
+#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.26 2012/09/18 22:20:08 kwm Exp $
 
 PORTNAME=	gdk-pixbuf
-PORTVERSION=	2.26.4
+PORTVERSION=	2.26.5
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	2
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -18,6 +19,7 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 LATEST_LINK=	gdk-pixbuf2
 USE_XZ=		yes
+USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_XORG=	xt xi x11
 USE_AUTOTOOLS=	libtool

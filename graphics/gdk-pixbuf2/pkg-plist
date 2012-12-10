@@ -180,7 +180,7 @@ share/gir-1.0/GdkPixbuf-2.0.gir
 %%NLS%%share/locale/zh_HK/LC_MESSAGES/gdk-pixbuf.mo
 %%NLS%%share/locale/zh_TW/LC_MESSAGES/gdk-pixbuf.mo
 @exec %D/bin/gdk-pixbuf-query-loaders > /dev/null 2>&1 && %D/bin/gdk-pixbuf-query-loaders > %D/lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders.cache 2>/dev/null || /usr/bin/true
-@unexec rm %D/lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders.cache
+@unexec rm %D/lib/gdk-pixbuf-2.0/%%GTK2_VERSION%%/loaders.cache 2>&1 >/dev/null || true
 %%NLS%%@dirrmtry share/locale/zh_HK/LC_MESSAGES
 %%NLS%%@dirrmtry share/locale/zh_HK
 %%NLS%%@dirrmtry share/locale/yi/LC_MESSAGES
