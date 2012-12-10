@@ -1,9 +1,6 @@
-# New ports collection makefile for:	gdk-pixbuf
-# Date created:		5th October 1999
-# Whom:			Ade Lovett <ade@lovett.com>
-#
+# Created by: Ade Lovett <ade@lovett.com>
 # $FreeBSD$
-#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.26 2012/09/18 22:20:08 kwm Exp $
+#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.27 2012/12/10 12:08:35 kwm Exp $
 
 PORTNAME=	gdk-pixbuf
 PORTVERSION=	2.26.5
