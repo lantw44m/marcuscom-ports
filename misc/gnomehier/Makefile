@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomehier
-# Date created:				2 July 2002
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/misc/gnomehier/Makefile,v 1.37 2012/03/17 21:52:06 mezz Exp $
-#
+#    $MCom: ports/misc/gnomehier/Makefile,v 1.38 2012/04/27 13:24:51 kwm Exp $
 # !!DON'T BUMP PORTREVISION ON MTREE CHANGES ANYMORE!!
 
 PORTNAME=	gnomehier
@@ -17,7 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A utility port that creates the GNOME directory tree
 
 NO_BUILD=	yes
-PLIST?=		${WRKDIR}/pkg-plist
+PLIST=		${WRKDIR}/pkg-plist
 PKGINSTALL=	${WRKDIR}/pkg-install
 
 GNOME_MTREE=	BSD.gnome.dist
@@ -39,8 +35,6 @@ pre-install:
 	do \
 		${MKDIR} ${WRKSRC}/$${dir}; \
 	done
-	@${SED} -e 's|%%MTREE_ARGS%%|${GNOME_MTREE_ARGS}|' \
-		< ${FILESDIR}/pkg-install.in > ${PKGINSTALL}
 
 pre-su-install:
 	cd ${WRKSRC} && \
@@ -54,6 +48,6 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/${GNOME_MTREE} ${PREFIX}/etc/mtree
 
 post-install:
-	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+	/usr/sbin/mtree ${GNOME_MTREE_ARGS} ${PREFIX}
 
 .include <bsd.port.mk>
