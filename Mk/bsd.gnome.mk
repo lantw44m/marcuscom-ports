@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.571 2012/10/21 16:53:24 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.572 2012/11/28 17:42:14 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -327,7 +327,8 @@ gal_LIB_DEPENDS=	gal.23:${PORTSDIR}/x11-toolkits/gal
 gal_DETECT=		${LOCALBASE}/etc/galConf.sh
 gal_USE_GNOME_IMPL=	libglade
 
-_glib20_LIB_DEPENDS=	glib-2.0.0:${PORTSDIR}/devel/glib20
+_glib20_LIB_DEPENDS=	glib-2.0:${PORTSDIR}/devel/glib20 \
+			pcre:${PORTSDIR}/devel/pcre
 _glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
 
 glib20_RUN_DEPENDS=	${LOCALBASE}/lib/gio/modules/libgiofam.so:${PORTSDIR}/devel/gio-fam-backend
