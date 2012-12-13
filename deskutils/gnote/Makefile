@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnote
-# Date created:				20 July 2009
-# Whom:					Mezz <mezz@FreeBSD.org>
-#
+# Created by: Mezz <mezz@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/deskutils/gnote/Makefile,v 1.16 2012/06/02 04:10:01 mezz Exp $
 
 PORTNAME=	gnote
 PORTVERSION=	0.8.3
@@ -17,15 +13,14 @@ COMMENT=	A port of Tomboy to C++, note taking application
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	gtkmm-3.0:${PORTSDIR}/x11-toolkits/gtkmm30 \
-		pcre.1:${PORTSDIR}/devel/pcre \
-		boost_filesystem.4:${PORTSDIR}/devel/boost-libs \
-		uuid.1:${PORTSDIR}/misc/e2fsprogs-libuuid
+LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre \
+		boost_filesystem:${PORTSDIR}/devel/boost-libs \
+		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid
 
 USE_GMAKE=	yes
 USE_XZ=		yes
 USE_GNOME=	gnomehack gnomeprefix gtk30 intltool libxml2 libxslt \
-		ltverhack desktopfileutils gnomedocutils
+		ltverhack desktopfileutils gnomedocutils gtkmm30
 USE_GETTEXT=	yes
 GLIB_SCHEMAS=	org.gnome.gnote.gschema.xml
 USE_AUTOTOOLS=	libtool
@@ -38,7 +33,12 @@ CONFIGURE_ARGS=	--with-dbus-service-dir=${PREFIX}/share/dbus-1/services
 DOCS=		AUTHORS ChangeLog NEWS README TODO
 MAN1=		gnote.1
 
-.if !defined(WITHOUT_APPLET)
+OPTIONS_DEFINE=	APPLET
+APPLET_DESC=	Build the gnome3 applet
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MAPPLET}
 USE_GNOME+=	gnomepanel3
 CONFIGURE_ARGS+=--enable-applet
 PLIST_SUB+=	APPLET=""
@@ -55,7 +55,7 @@ post-patch:
 
 post-install:
 	@-update-desktop-database
-.ifndef (NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in ${DOCS}
 	@${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}

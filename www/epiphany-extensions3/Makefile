@@ -1,15 +1,12 @@
-# Ports collection Makefile for:	epiphany-extensions
-# Date created:				30 December 2003
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions3/Makefile,v 1.7 2012/05/31 11:55:35 mezz Exp $
-#
+#   $MCom: ports/www/epiphany-extensions3/Makefile,v 1.8 2012/08/04 10:39:35 kwm Exp $
 
 PORTNAME=	epiphany-extensions
 PORTVERSION=	3.4.0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
+PKGNAMESUFFIX=	3
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
@@ -40,11 +37,12 @@ EPHY_VERSION=	${PORTVERSION:R}
 
 PLIST_SUB=	VERSION=${EPHY_VERSION} EPHY_VERSION=3.4
 
-OPTIONS=	OPENSP "Enable OpenSP SGML support" off
+OPTIONS_DEFINE=	OPENSP
+OPENSP_DESC=	OpenSP SGML support
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_OPENSP)
+.if ${PORT_OPTIONS:MOPENSP}
 CONFIGURE_ARGS+=	--enable-opensp=yes
 LIB_DEPENDS+=		osp:${PORTSDIR}/textproc/opensp
 .else

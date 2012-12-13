@@ -1,10 +1,6 @@
-# New ports collection makefile for:	anjuta
-# Date created:				31 March 2001
-# Whom:					Dmitry Sivachenko <demon@FreeBSD.org>
-#
+# Created by: Dmitry Sivachenko <demon@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta/Makefile,v 1.67 2010/11/13 08:07:29 kwm Exp $
-#
+#   $MCom: ports/devel/anjuta3/Makefile,v 1.1 2012/06/16 21:10:00 kwm Exp $
 
 PORTNAME=	anjuta
 PORTVERSION=	3.4.3
@@ -69,12 +65,12 @@ MAN1=		anjuta.1 anjuta-launcher.1
 
 OPTIONS_DEFINE=	SVN DEVHELP GRAPHVIZ VALA
 OPTIONS_DEFAULT=DEVHELP GRAPHVIZ
-SVN_DESC=	Build subversion plugin
-DEVHELP_DESC=	Build devhelp plugin
-GRAPHVIZ_DESC=	Build inheritance plugin
-VALA_DESC=	Build vala support
+SVN_DESC=	Subversion plugin
+DEVHELP_DESC=	Devhelp plugin
+GRAPHVIZ_DESC=	Inheritance plugin
+VALA_DESC=	Vala support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSVN}
 BUILD_DEPENDS+=	svn:${PORTSDIR}/devel/subversion
@@ -126,12 +122,5 @@ post-patch:
 
 post-install:
 	@update-mime-database ${PREFIX}/share/mime
-#.if !defined(NOPORTDOCS)
-#	${MKDIR} ${DOCSDIR}
-#.for f in AUTHORS COPYING ChangeLog FUTURE INSTALL NEWS README \
-#	doc/ScintillaDoc.html TODO
-#	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}
-#.endfor
-#.endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
