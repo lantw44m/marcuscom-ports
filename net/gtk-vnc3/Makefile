@@ -1,12 +1,9 @@
-# New ports collection makefile for:	gtk-vnc
-# Date created:				16 December 2007
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#
 
 PORTNAME=	gtk-vnc
 PORTVERSION=	0.4.4
+PORTREVISION=	1
 CATEGORIES=	net gnome
 MASTER_SITES=	GNOME
 
@@ -14,8 +11,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC viewer widget for GTK+
 
 LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
-		gcrypt.18:${PORTSDIR}/security/libgcrypt \
-		sasl2.2:${PORTSDIR}/security/cyrus-sasl2
+		gcrypt:${PORTSDIR}/security/libgcrypt \
+		sasl2:${PORTSDIR}/security/cyrus-sasl2
 
 CONFLICTS=	gtk-vnc-0.3.[0-9]*
 

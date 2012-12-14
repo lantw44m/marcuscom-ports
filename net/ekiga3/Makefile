@@ -1,13 +1,9 @@
-# New ports collection makefile for:	ekiga3
-# Date created:		2009-09-27
-# Whom:			Charlie & <root@ws.ipfw.ru>
-#
+# Created by: Charlie & <root@ws.ipfw.ru>
 # $FreeBSD$
-#
 
 PORTNAME=	ekiga3
 PORTVERSION=	3.2.6
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	net
 MASTER_SITES=	http://www.ekiga.org/admin/downloads/latest/sources/ekiga_${PORTVERSION}/
 DISTNAME=	ekiga-${PORTVERSION}
@@ -16,7 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VoIP and video conferencing application
 
 LIB_DEPENDS=	sigc-2:${PORTSDIR}/devel/libsigc++20 \
-		opal-3.6.[6-9]:${PORTSDIR}/net/opal3
+		opal-3.6:${PORTSDIR}/net/opal3
 BUILD_DEPENDS=	intltoolize:${PORTSDIR}/textproc/intltool \
 		p5-XML-Parser>=0:${PORTSDIR}/textproc/p5-XML-Parser \
 		${LOCALBASE}/bin/scrollkeeper-config:${PORTSDIR}/textproc/rarian
@@ -37,65 +33,58 @@ MAKE_JOBS_SAFE=	yes
 
 MAN1=		ekiga.1
 
-OPTIONS=	LDAP		"Enable LDAP support" off \
-		KDE4		"Enable KDE4 support (experimental)" off \
-		H323		"Enable H.323 protocol support" off \
-		VIDEO		"Enable video support" on \
-		NOTIFY		"Enable libnotify support" on \
-		EVOLUTION	"Enable evolution data server support" off \
-		GCONF		"Enable GCONF usage" on \
-		DBUS		"Enable DBUS usage" off \
-		AVAHI		"Enable avahi mDNS" on \
-		GNOMEHELP	"Build Ekiga help files" off \
-		GCONFEDITOR	"Install gconf-editor" off
+OPTIONS_DEFINE=	LDAP KDE4 H323 VIDEO NOTIFY EVOLUTION GCONF DBUS AVAHI \
+		HELPDOCS
+OPTIONS_DEFAULT=VIDEO NOTIFY GCONF AVAHI
+
+KDE4_DESC=	KDE 4 desktop environment (experimental)
+NOTIFY_DESC=	Libnotify support
+EVOLUTION_DESC=	Evolution data server support
+HELPDOCS_DESC=	Ekiga help files
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_KDE4)
-.	if !defined(WITH_DBUS)
-BROKEN=		Please set WITH_DBUS or remove WITH_KDE4!
+.if ${PORT_OPTIONS:MKDE4}
+.	if empty(PORT_OPTIONS:MDBUS)
+BROKEN=		Please enable DBUS or remove the KDE4 option!
 .	endif
 USE_KDE4=		kdehier kdelibs
 USE_QT4=		# empty
 CONFIGURE_ARGS+=	--enable-kde
+
+CONFIGURE_ENV+=		KDE_CFLAGS="-I${KDE4_PREFIX}/include -I${QT_INCDIR} -I${LOCALBASE}/include"
+K4_INC=			${KDE4_PREFIX:C/\//\\\//g}
 .else
 CONFIGURE_ARGS+=	--disable-kde
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if defined(WITH_KDE4)
-CONFIGURE_ENV+=		KDE_CFLAGS="-I${KDE4_PREFIX}/include -I${QT_INCDIR} -I${LOCALBASE}/include"
-K4_INC=			${KDE4_PREFIX:C/\//\\\//g}
-.endif
-
-.if defined(WITH_VIDEO)
+.if ${PORT_OPTIONS:MVIDEO}
 BUILD_DEPENDS+=		${LOCALBASE}/include/linux/videodev.h:${PORTSDIR}/multimedia/v4l_compat
 .endif
 
-.if defined(WITH_LDAP)
+.if ${PORT_OPTIONS:MLDAP}
 USE_OPENLDAP=	yes
-LIB_DEPENDS+=	sasl2.2:${PORTSDIR}/security/cyrus-sasl2
+LIB_DEPENDS+=	sasl2:${PORTSDIR}/security/cyrus-sasl2
 CONFIGURE_ARGS+=	--enable-ldap --with-ldap-dir="${LOCALBASE}" --with-libsasl2-dir="${LOCALBASE}"
 .else
 CONFIGURE_ARGS+=	--disable-ldap
 .endif
 
-.if defined(WITH_H323)
+.if ${PORT_OPTIONS:MH323}
 CONFIGURE_ARGS+=	--enable-h323
 .else
 CONFIGURE_ARGS+=	--disable-h323
 .endif
 
-.if defined(WITH_NOTIFY)
-LIB_DEPENDS+=		notify.4:${PORTSDIR}/devel/libnotify
+.if ${PORT_OPTIONS:MNOTIFY}
+LIB_DEPENDS+=		notify:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=	--enable-notify
 .else
 CONFIGURE_ARGS+=	--disable-notify
 .endif
 
-.if defined(WITH_DBUS)
-LIB_DEPENDS+=		dbus-1.3:${PORTSDIR}/devel/dbus
+.if ${PORT_OPTIONS:MDBUS}
+LIB_DEPENDS+=		dbus-1:${PORTSDIR}/devel/dbus
 CONFIGURE_ARGS+=	--enable-dbus --enable-dbus-service
 PLIST_SUB+=		DBUS=""
 .else
@@ -103,7 +92,7 @@ CONFIGURE_ARGS+=	--disable-dbus --disable-dbus-service
 PLIST_SUB+=		DBUS="@comment "
 .endif
 
-.if defined(WITH_GCONF)
+.if ${PORT_OPTIONS:MGCONF}
 USE_GNOME+=		gconf2
 CONFIGURE_ARGS+=	--enable-gconf
 GCONF_SCHEMAS=		ekiga.schemas
@@ -113,34 +102,26 @@ CONFIGURE_ARGS+=	--disable-gconf
 PLIST_SUB+=		NO_GCONF=""
 .endif
 
-.if defined(WITH_EVOLUTION)
+.if ${PORT_OPTIONS:MEVOLUTION}
 USE_GNOME+=		evolutiondataserver
 CONFIGURE_ARGS+=	--enable-eds
 .else
 CONFIGURE_ARGS+=	--disable-eds
 .endif
 
-.if defined(WITH_AVAHI)
+.if ${PORT_OPTIONS:MAVAHI}
 CONFIGURE_ARGS+=	--enable-avahi
 BUILD_DEPENDS+=		${LOCALBASE}/libdata/pkgconfig/avahi-client.pc:${PORTSDIR}/net/avahi-app
 .else
 CONFIGURE_ARGS+=	--disable-avahi
 .endif
 
-.if defined(WITH_GCONFEDITOR)
-RUN_DEPENDS+=		${LOCALBASE}/bin/gconf-editor:${PORTSDIR}/sysutils/gconf-editor
-.endif
-
-.if defined(WITH_GNOMEHELP)
+.if ${PORT_OPTIONS:MHELPDOCS}
 PLIST_SUB+=		GNOMEHELP=""
 USE_GNOME+=		gnomedocutils
 .else
 CONFIGURE_ARGS+=	--disable-gdu
 PLIST_SUB+=		GNOMEHELP="@comment "
-.endif
-
-.if ${OSVERSION} < 700042
-BROKEN=			does not build on 6.x
 .endif
 
 post-patch:
@@ -150,4 +131,4 @@ post-patch:
 post-configure:
 	@${REINPLACE_CMD} -e 's?^\(CPPFLAGS\) =\(.*\)$$?\1 = '"-I${LOCALBASE}/include"' \2?' ${WRKSRC}/lib/engine/addressbook/Makefile
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
