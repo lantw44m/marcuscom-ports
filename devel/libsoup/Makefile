@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/libsoup/Makefile,v 1.113 2012/08/08 16:56:39 kwm Exp $
+#   $MCom: ports/devel/libsoup/Makefile,v 1.114 2012/10/19 17:02:53 kwm Exp $
 
 PORTNAME=	libsoup
 PORTVERSION=	2.40.1
@@ -30,8 +30,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION="2.4"
-
-.include <bsd.port.pre.mk>
 
 .if defined(SOUP_SLAVE)
 USE_SQLITE=	yes
@@ -69,6 +67,6 @@ post-install:
 	    	${PREFIX}/include/libsoup-2.4/libsoup/soup-connection.h
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
 
 .endif
