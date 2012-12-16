@@ -57,6 +57,7 @@ share/gtk-doc/html/libatspi/index.html
 share/gtk-doc/html/libatspi/index.sgml
 share/gtk-doc/html/libatspi/left.png
 share/gtk-doc/html/libatspi/libatspi-AtspiApplication.html
+share/gtk-doc/html/libatspi/libatspi-atspi-action.html
 share/gtk-doc/html/libatspi/libatspi-atspi-collection.html
 share/gtk-doc/html/libatspi/libatspi-atspi-component.html
 share/gtk-doc/html/libatspi/libatspi-atspi-constants.html
@@ -124,6 +125,7 @@ share/locale/pt/LC_MESSAGES/at-spi2-core.mo
 share/locale/pt_BR/LC_MESSAGES/at-spi2-core.mo
 share/locale/ro/LC_MESSAGES/at-spi2-core.mo
 share/locale/ru/LC_MESSAGES/at-spi2-core.mo
+share/locale/sk/LC_MESSAGES/at-spi2-core.mo
 share/locale/sl/LC_MESSAGES/at-spi2-core.mo
 share/locale/sq/LC_MESSAGES/at-spi2-core.mo
 share/locale/sr/LC_MESSAGES/at-spi2-core.mo
