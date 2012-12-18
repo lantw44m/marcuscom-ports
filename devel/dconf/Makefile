@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/dconf/Makefile,v 1.29 2012/05/28 11:45:14 kwm Exp $
+#   $MCom: ports/devel/dconf/Makefile,v 1.30 2012/10/03 17:57:17 kwm Exp $
 
 PORTNAME?=	dconf
 PORTVERSION=	0.12.1
@@ -13,9 +13,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A configuration database system for GNOME
 
-BUILD_DEPENDS=	vala>=0.11.7:${PORTSDIR}/lang/vala
-LIB_DEPENDS=	gee:${PORTSDIR}/devel/libgee \
-		dbus-1:${PORTSDIR}/devel/dbus
+BUILD_DEPENDS=	vala>=0.15.1:${PORTSDIR}/lang/vala
+LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
 
 USE_XZ=		yes
 USE_GMAKE=	yes
