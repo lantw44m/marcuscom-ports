@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.572 2012/11/28 17:42:14 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.573 2012/12/13 15:22:34 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -73,7 +73,7 @@ _USE_GNOME_ALL= esound intlhack intltool ltasneededhack lthack ltverhack \
 		pkgconfig
 
 # GNOME 1 components
-_USE_GNOME_ALL+= bonobo gal gconf gdkpixbuf glib12 \
+_USE_GNOME_ALL+= bonobo gconf gdkpixbuf glib12 \
 		gnomecanvas gnomedb gnomelibs gnomeprint gnomevfs gtk12 \
 		libgda libghttp libglade libxml imlib oaf orbit
 
@@ -322,10 +322,6 @@ libglade_CONFIGURE_ENV=	LIBGLADE_CONFIG="${LIBGLADE_CONFIG}"
 libglade_MAKE_ENV=	LIBGLADE_CONFIG="${LIBGLADE_CONFIG}"
 libglade_DETECT=	${LIBGLADE_CONFIG}
 libglade_USE_GNOME_IMPL=gnomedb
-
-gal_LIB_DEPENDS=	gal.23:${PORTSDIR}/x11-toolkits/gal
-gal_DETECT=		${LOCALBASE}/etc/galConf.sh
-gal_USE_GNOME_IMPL=	libglade
 
 _glib20_LIB_DEPENDS=	glib-2.0:${PORTSDIR}/devel/glib20 \
 			pcre:${PORTSDIR}/devel/pcre
