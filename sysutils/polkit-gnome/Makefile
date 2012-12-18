@@ -1,10 +1,6 @@
-# New ports collection makefile for:   polkit-gnome
-# Date Created:			30 Juli 2009
-# Whom:				Koop Mast<kwm@FreeBSD.org>
-#
+# Created by: Koop Mast<kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.18 2011/10/07 14:50:51 kwm Exp $
-#
+#   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.19 2012/09/01 23:02:13 mezz Exp $
 
 PORTNAME=	polkit-gnome
 PORTVERSION=	0.102
@@ -14,7 +10,7 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME frontend to the PolicyKit framework
 
-LIB_DEPENDS=	polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
+LIB_DEPENDS=	polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 
 USE_XZ=		yes
 USE_GMAKE=	yes
