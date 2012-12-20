@@ -1,10 +1,6 @@
-# New ports collection makefile for:   pango
-# Date Created:			18 July 2000
-# Whom:				Maxim Sobolev <sobomax@FreeBSD.org>
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.166 2012/05/15 15:20:03 kwm Exp $
-#
+#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.167 2012/06/06 21:18:48 kwm Exp $
 
 PORTNAME=	pango
 PORTVERSION=	1.30.1
