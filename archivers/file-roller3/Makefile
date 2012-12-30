@@ -1,10 +1,6 @@
-# New ports collection makefile for:	fileroller
-# Date created:				18 May 2002
-# Whom:					Anders Nordby <anders@FreeBSD.org>
-#
+# Created by: Anders Nordby <anders@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/archivers/file-roller3/Makefile,v 1.19 2011/11/19 10:18:05 kwm Exp $
-#
+#   $MCom$
 
 PORTNAME=	file-roller
 PORTVERSION=	3.4.2
@@ -30,23 +26,26 @@ USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils gnomedocutils \
 		gtk30 gconf2
 USE_XORG=	sm
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-packagekit
 
 PORTDOCS=	AUTHORS NEWS README TODO ChangeLog
 GLIB_SCHEMAS=	org.gnome.FileRoller.gschema.xml
 
-OPTIONS=	NAUTILUS	"Enable Nautilus extension"	on
+OPTIONS_DEFINE=	DOCS NAUTILUS
+NAUTILUS_DESC=	Enable Nautilus extension
+
+OPTIONS_DEFAULT=NAUTILUS
 
 .include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_NAUTILUS)
+.if ${PORT_OPTIONS:MNAUTILUS}
 USE_GNOME+=	nautilus3
 PLIST_SUB+=	NAUTILUS=""
 .else
 PLIST_SUB+=	NAUTILUS="@comment "
-CONFIGURE_ARGS+=	--disable-nautilus-actions
+CONFIGURE_ARGS+=--disable-nautilus-actions
 .endif
 
 post-patch:
@@ -56,7 +55,7 @@ post-patch:
 
 post-install:
 	@-update-desktop-database
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}

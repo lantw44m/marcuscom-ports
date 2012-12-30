@@ -3,11 +3,12 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.27 2012/08/08 16:56:39 kwm Exp $
+#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.28 2012/08/16 19:28:53 kwm Exp $
 #
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	3.4.4
+PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,7 +24,7 @@ LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
 		oauth.8:${PORTSDIR}/net/liboauth \
 		goa-1.0.0:${PORTSDIR}/net/gnome-online-accounts \
 		gdata.13:${PORTSDIR}/devel/libgdata \
-		ical.44:${PORTSDIR}/devel/libical \
+		ical:${PORTSDIR}/devel/libical \
 		nss3.1:${PORTSDIR}/security/nss \
 		tasn1.4:${PORTSDIR}/security/libtasn1 \
 		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring

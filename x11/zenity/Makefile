@@ -3,7 +3,7 @@
 # Whom:					Franz Klammer <klammer@webonaut.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/zenity/Makefile,v 1.116 2011/10/07 14:41:14 kwm Exp $
+#   $MCom: ports/x11/zenity/Makefile,v 1.117 2012/06/14 04:31:00 mezz Exp $
 #
 
 PORTNAME=	zenity
@@ -25,7 +25,7 @@ USE_XZ=		yes
 USE_GETTEXT=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib
+LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
 
 MAN1=		zenity.1

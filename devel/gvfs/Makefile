@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.84 2012/08/22 14:44:37 kwm Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.85 2012/12/14 16:09:28 kwm Exp $
 
 PORTNAME=	gvfs
 PORTVERSION=	1.12.3
@@ -24,7 +24,8 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--disable-obexftp
+CONFIGURE_ARGS=	--disable-obexftp \
+		--disable-afc
 
 OPTIONS_DEFINE=	AVAHI SAMBA GPHOTO2 CDDA HAL FUSE
 OPTIONS_DEFAULT=AVAHI SAMBA GPHOTO2 CDDA HAL

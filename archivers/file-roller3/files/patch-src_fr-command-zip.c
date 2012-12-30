@@ -5,7 +5,7 @@
  	fr_process_set_out_line_func (comm->process, list__process_line, comm);
  
 +#ifdef __FreeBSD__
-+	fr_process_begin_command (comm->process, "/usr/local/bin/unzip");
++	fr_process_begin_command (comm->process, "%%LOCALBASE%%/bin/unzip");
 +#else
  	fr_process_begin_command (comm->process, "unzip");
 +#endif
@@ -17,7 +17,7 @@
  				      comm);
  
 +#ifdef __FreeBSD__
-+	fr_process_begin_command (comm->process, "/usr/local/bin/unzip");
++	fr_process_begin_command (comm->process, "%%LOCALBASE%%/bin/unzip");
 +#else
  	fr_process_begin_command (comm->process, "unzip");
 +#endif
@@ -29,7 +29,7 @@
  fr_command_zip_test (FrCommand   *comm)
  {
 +#ifdef __FreeBSD__
-+	fr_process_begin_command (comm->process, "/usr/local/bin/unzip");
++	fr_process_begin_command (comm->process, "%%LOCALBASE%%/bin/unzip");
 +#else
  	fr_process_begin_command (comm->process, "unzip");
 +#endif

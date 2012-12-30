@@ -11,8 +11,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A graph based image processing framework
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	babl-0:${PORTSDIR}/x11/babl \
-    		execinfo:${PORTSDIR}/devel/libexecinfo
+LIB_DEPENDS=	babl-0.1:${PORTSDIR}/x11/babl
 
 OPTIONS_DEFINE=	CAIRO DOCS ENSCRIPT EXIV2 FFMPEG PIXBUF GRAPHVIZ JASPER JPEG \
 		LUA OPENEXR OPENRAW SIMD PANGO PNG LIBRSVG2 SDL SPIRO V4L
@@ -29,9 +28,10 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	${PREFIX}/lib/gegl-0.2
 GNU_CONFIGURE=	yes
+CONFIGURE_ENV+=	ac_cv_header_execinfo_h=no
 CONFIGURE_ARGS+=--without-vala
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib -lexecinfo -lintl
+LDFLAGS+=	-L${LOCALBASE}/lib -lintl
 
 GEGL_MINOR=	199
 GEGL_VER=	0.2

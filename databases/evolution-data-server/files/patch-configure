@@ -1,7 +1,7 @@
---- configure.orig	2009-12-25 20:21:00.000000000 +0100
-+++ configure	2009-12-25 20:21:01.000000000 +0100
-@@ -15968,6 +15968,14 @@
- _ACEOF
+--- configure.orig	2010-11-14 22:59:14.000000000 -0800
++++ configure	2012-06-12 08:40:11.000000000 -0700
+@@ -14174,6 +14174,14 @@
+ $as_echo "#define _WIN32_WINNT 0x501" >>confdefs.h
  
  	;;
 +*freebsd*)
@@ -13,5 +13,29 @@
 +	LIBEXECDIR_IN_SERVER_FILE="$libexecdir"
 +	;;
  *)
- 	os_win32=no
+ 	os_win32='no'
  	NO_UNDEFINED=''
+@@ -16195,9 +16203,8 @@
+ fi
+ 
+ 
+-	ac_fn_c_check_header_compile "$LINENO" "et/com_err.h" "ac_cv_header_et_com_err_h" "	#if HAVE_ET_COM_ERR_H
+-			#include <com_err.h>
+-			#endif
++	ac_fn_c_check_header_compile "$LINENO" "et/com_err.h" "ac_cv_header_et_com_err_h" "	#include <stdio.h>
++			#include <stdarg.h>
+ 
+ "
+ if test "x$ac_cv_header_et_com_err_h" = x""yes; then :
+@@ -16207,9 +16214,8 @@
+ fi
+ 
+ 
+-	ac_fn_c_check_header_compile "$LINENO" "com_err.h" "ac_cv_header_com_err_h" "	#if HAVE_COM_ERR_H
+-			#include <com_err.h>
+-			#endif
++	ac_fn_c_check_header_compile "$LINENO" "com_err.h" "ac_cv_header_com_err_h" "	#include <stdio.h>
++			#include <stdarg.h>
+ 
+ "
+ if test "x$ac_cv_header_com_err_h" = x""yes; then :

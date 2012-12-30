@@ -1,10 +1,6 @@
-# New ports collection makefile for:	py-gobject
-# Date created:				10 January 2006
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/py-gobject3/Makefile,v 1.9 2012/05/01 11:41:22 kwm Exp $
-#
+#   $MCom$
 
 PORTNAME=	gobject
 PORTVERSION=	3.2.2
@@ -19,6 +15,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Python bindings for GObject
 
 LICENSE=	LGPL21
+LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
@@ -30,6 +27,7 @@ USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomehack glib20
 USE_PYTHON=	2.5+
+USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
@@ -38,8 +36,13 @@ CONFLICTS=	py*-gtk-0* py*-gobject-2.*.[0-6] py*-gobject-2.*.[7-9] \
 		py*-gobject-2.*.6_1
 PLIST_SUB=	PYTHON_VER="${PYTHON_VER}"
 
-.if exists(${LOCALBASE}/lib/libffi.so)
-LIB_DEPENDS+=	ffi.5:${PORTSDIR}/devel/libffi
+OPTIONS_DEFINE=	LIBFFI
+LIBFFI_DESC=	Enable libffi support
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MLIBFFI}
+LIB_DEPENDS+=	ffi:${PORTSDIR}/devel/libffi
 CONFIGURE_ARGS+=--with-ffi
 .else
 CONFIGURE_ARGS+=--without-ffi

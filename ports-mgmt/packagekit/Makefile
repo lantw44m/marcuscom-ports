@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.32 2012/08/08 16:56:40 kwm Exp $
+#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.33 2012/08/17 19:06:46 kwm Exp $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.21
@@ -67,7 +67,7 @@ MAN1=	pkcon.1 pkmon.1 pkgenpack.1 pk-debuginfo-install.1
 .include <bsd.port.pre.mk>
 
 .if defined(WITH_PORTS)
-RUN_DEPENDS+=	portupgrade:${PORTSDIR}/ports-mgmt/portupgrade
+RUN_DEPENDS+=	${LOCALBASE}/sbin/portupgrade:${PORTSDIR}/ports-mgmt/portupgrade
 USE_RUBY=	yes
 CONFIGURE_ARGS+=--enable-ports --with-default-backend=ports
 PLIST_SUB+=	PORTS=""

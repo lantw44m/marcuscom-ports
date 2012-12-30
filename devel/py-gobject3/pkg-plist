@@ -1,7 +1,7 @@
 include/pygobject-3.0/pygobject.h
-lib/libpyglib-gi-2.0-python2.7.la
-lib/libpyglib-gi-2.0-python2.7.so
-lib/libpyglib-gi-2.0-python2.7.so.0
+lib/libpyglib-gi-2.0-python%%PYTHON_VER%%.la
+lib/libpyglib-gi-2.0-python%%PYTHON_VER%%.so
+lib/libpyglib-gi-2.0-python%%PYTHON_VER%%.so.0
 %%PYTHON_SITELIBDIR%%/gi/__init__.py
 %%PYTHON_SITELIBDIR%%/gi/__init__.pyc
 %%PYTHON_SITELIBDIR%%/gi/__init__.pyo
