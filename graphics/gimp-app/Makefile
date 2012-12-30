@@ -3,7 +3,7 @@
 # Whom:                 erich@FreeBSD.org
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gimp-app/Makefile,v 1.63 2012/09/03 16:30:19 mezz Exp $
+#   $MCom: ports/graphics/gimp-app/Makefile,v 1.64 2012/11/26 13:31:16 kwm Exp $
 #
 
 PORTNAME=	gimp-app
@@ -33,7 +33,7 @@ LIB_DEPENDS=	png15:${PORTSDIR}/graphics/png \
 		tiff:${PORTSDIR}/graphics/tiff \
 		lcms:${PORTSDIR}/graphics/lcms \
 		gegl-0.2:${PORTSDIR}/graphics/gegl \
-		babl-0:${PORTSDIR}/x11/babl
+		babl-0.1:${PORTSDIR}/x11/babl
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 USE_BZIP2=	yes
@@ -199,7 +199,9 @@ post-patch:
 		s|%%GIMP_THUMB_LIBS%%|${GIMP_THUMB_LIBS}|; \
 		s|%%GIMP_UI_LIBS%%|${GIMP_UI_LIBS}|' \
 			${WRKSRC}/plug-ins/pygimp/Makefile.in
-	@${REINPLACE_CMD} -e 's|"libpng"|"libpng14"|' \
+	@${REINPLACE_CMD} -e 's/-u /-Wl,-u,/' \
+		${WRKSRC}/app/Makefile.in
+	@${REINPLACE_CMD} -e 's|"libpng"|"libpng15"|' \
 	    	-e 's|x86_64|amd64|g' \
 		${WRKSRC}/configure
 
