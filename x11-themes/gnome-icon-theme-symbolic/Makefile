@@ -1,10 +1,5 @@
-# New ports collection makefile for:	gnome-icon-theme-symbolic
-# Date Created:				16 March 2011
-# Whom:					Mezz <mezz@FreeBSD.org>
-#
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-icon-theme-symbolic/Makefile,v 1.10 2012/01/22 11:06:25 kwm Exp $
-#
+#   $MCom: ports/x11-themes/gnome-icon-theme-symbolic/Makefile,v 1.11 2012/05/16 15:19:14 kwm Exp $
 
 PORTNAME=	gnome-icon-theme-symbolic
 PORTVERSION=	3.4.0
