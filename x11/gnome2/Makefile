@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.307 2011/10/20 21:24:53 kwm Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.308 2012/09/03 16:28:29 mezz Exp $
 #
 
 PORTNAME=	gnome2
@@ -49,7 +49,6 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		totem:${PORTSDIR}/multimedia/totem \
 		gnome-control-center:${PORTSDIR}/sysutils/gnome-control-center \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
-		evince:${PORTSDIR}/graphics/evince \
 		alacarte:${PORTSDIR}/deskutils/alacarte \
 		gnome-power-manager:${PORTSDIR}/sysutils/gnome-power-manager \
 		orca:${PORTSDIR}/accessibility/orca \
@@ -69,8 +68,11 @@ USE_PYTHON=	yes
 .endif
 
 .if !defined(GNOME_SLAVE) || ${.CURDIR:T}=="gnome2-lite"
-OPTIONS=	XSCREENSAVER "Use xscreensaver as screen saver app" off \
-		MAPI "Depend on evolution-mapi (pulls in samba4)" off
+OPTIONS_DEFINE=	XSCREENSAVER MAPI EXTRAS
+OPTIONS_DEFAULT=EXTRAS
+XSCREENSAVER_DESC=	Use xscreensaver as screen saver app
+MAPI_DESC=	include evolution-mapi (pulls in samba4)
+EXTRAS_DESC=	bundle evince, brasero, yelp and epiphany
 .endif
 
 do-install:	# empty
@@ -78,11 +80,16 @@ do-install:	# empty
 .include <bsd.port.pre.mk>
 
 .if !defined(GNOME_SLAVE)
-.if ${ARCH}!="sparc64" && ${ARCH}!="ia64"
+# hmmm XXX
+. if ${.CURDIR:T}=="gnome2-lite" && empty(${PORT_OPTIONS:EXTRAS})
+.  if ${ARCH}!="sparc64" && ${ARCH}!="ia64"
 RUN_DEPENDS+=	yelp:${PORTSDIR}/x11/yelp \
 		epiphany:${PORTSDIR}/www/epiphany
-.endif
-.if ${.CURDIR:T}!="gnome2-lite"
+.  endif
+RUN_DEPENDS+=	evince:${PORTSDIR}/graphics/evince \
+. endif
+
+. if ${.CURDIR:T}!="gnome2-lite"
 RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 		gucharmap:${PORTSDIR}/deskutils/gucharmap \
 		sound-juicer:${PORTSDIR}/audio/sound-juicer \
@@ -97,24 +104,24 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi \
 		gpk-application:${PORTSDIR}/ports-mgmt/gnome-packagekit \
 		ekiga:${PORTSDIR}/net/ekiga3
-.if ${OSVERSION}>=800000
+.  if ${OSVERSION}>=800000
 RUN_DEPENDS+=	cheese:${PORTSDIR}/multimedia/cheese
-.endif
-.if ${ARCH} == "i386"
+.  endif
+.  if ${ARCH} == "i386"
 #RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
-.endif
-.if defined(WITH_MAPI)
+.  endif
+.  if defined(WITH_MAPI)
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/libexchangemapi-1.0.pc:${PORTSDIR}/mail/evolution-mapi
-.endif
-.endif
+.  endif
+. endif
 .endif
 
 .if ${.CURDIR}==${MASTERDIR} || ${.CURDIR:T}=="gnome2-lite"
-.if defined(WITH_XSCREENSAVER)
+. if defined(WITH_XSCREENSAVER)
 RUN_DEPENDS+=	${LOCALBASE}/share/applications/xscreensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome
-.else
+. else
 RUN_DEPENDS+=	gnome-screensaver:${PORTSDIR}/x11/gnome-screensaver
-.endif
+. endif
 .endif
 
 .include <bsd.port.post.mk>

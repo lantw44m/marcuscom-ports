@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.38 2012/07/17 08:50:17 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.39 2012/10/04 10:07:50 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -33,7 +33,7 @@ RUN_DEPENDS?=	gnome-panel>=3.0.0:${PORTSDIR}/x11/gnome-panel3 \
 		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info \
 		yelp>=3.0.0:${PORTSDIR}/x11/yelp3 \
-		zenity>=3.0.0:${PORTSDIR}/x11/zenity \
+		zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		seahorse>=3.0.0:${PORTSDIR}/security/seahorse3 \
 		metacity>=2.34.0:${PORTSDIR}/x11-wm/metacity3 \
 		gnome-control-center>=3.0.0:${PORTSDIR}/sysutils/gnome-control-center3 \

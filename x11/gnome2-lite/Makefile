@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2-lite/Makefile,v 1.64 2011/04/25 22:13:32 mezz Exp $
+#   $MCom: ports/x11/gnome2-lite/Makefile,v 1.65 2011/04/30 20:43:30 mezz Exp $
 #
 
 PORTREVISION=	0
@@ -24,7 +24,6 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-applet
 		${LOCALBASE}/share/gnome/help/user-guide/C/user-guide.xml:${PORTSDIR}/misc/gnome-user-docs \
 		${LOCALBASE}/share/sounds/question.wav:${PORTSDIR}/audio/gnome-audio \
 		${LOCALBASE}/share/themes/HighContrast/gtk-2.0/gtkrc:${PORTSDIR}/x11-themes/gnome-themes \
-		evince:${PORTSDIR}/graphics/evince \
 		gcalctool:${PORTSDIR}/math/gcalctool \
 		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		gconf-editor:${PORTSDIR}/sysutils/gconf-editor \

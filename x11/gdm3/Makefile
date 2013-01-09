@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.20 2012/06/02 13:10:28 kwm Exp $
+#   $MCom: ports/x11/gdm3/Makefile,v 1.21 2012/10/08 21:48:11 kwm Exp $
 #
 
 PORTNAME=	gdm
@@ -16,7 +16,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 version of xdm display manager
 
-BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
+BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		nss-config:${PORTSDIR}/security/nss \
     		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit \

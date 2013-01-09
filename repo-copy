@@ -81,3 +81,4 @@ x11/gnome2 -> x11/gnome3
 x11/gnome2-lite -> x11/gnome3-lite
 x11/libgnomekbd -> x11/libgnomekbd3
 x11/yelp -> x11/yelp3
+x11/zenity -> x11/zenity3

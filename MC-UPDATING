@@ -1,4 +1,4 @@
-# $MCom: ports/MC-UPDATING,v 1.32 2012/10/02 10:41:19 kwm Exp $
+# $MCom: ports/MC-UPDATING,v 1.33 2012/10/06 08:53:30 kwm Exp $
 
 This file documents some of the problems you may encounter when
 upgrading your ports. We try our best to minimize these disruptions,
@@ -8,7 +8,9 @@ You should get into the habit of checking this file for changes each
 time you update your ports collection, before attempting any port
 upgrades.
 
-2012MONTHDAY:
+# put zenity in the instructions
+
+2013MONTHDAY:
   AFFECTS: Pulseaudio users
   AUTHOR: gnome@FreeBSD.org
 
@@ -18,7 +20,7 @@ upgrades.
   or
   # portupgrade -rf pulseaudio
 
-2012MONTHDAY:
+2013MONTHDAY:
   AFFECTS: users of GNOME 2 desktop components, avahi, libgdata, libchamplain
            and vte
   AUTHOR: gnome@FreeBSD.org

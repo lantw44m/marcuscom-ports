@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.35 2012/06/30 22:13:09 kwm Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.36 2012/08/27 17:49:26 kwm Exp $
 #
 
 PORTNAME=	mutter
@@ -15,7 +15,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Window and compositing manager based on Clutter
 
-BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
+BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
