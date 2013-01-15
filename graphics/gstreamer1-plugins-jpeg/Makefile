@@ -1,6 +1,4 @@
-# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
 
 PORTREVISION=	0
 CATEGORIES=	graphics

@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins-good/Makefile,v 1.1 2012/10/04 08:12:45 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins-good/Makefile,v 1.2 2012/10/06 09:04:19 kwm Exp $
 
 PORTREVISION=	0
 CATEGORIES=	multimedia
@@ -20,9 +20,9 @@ RUN_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINOR_VERSION}:${PORTSDI
 DIST=	good
 GOOD_GST_DIRS=	gst sys po
 
-PLIST=	${.CURDIR}/pkg-plist
-FILESDIR=${.CURDIR}/files
-PATCHDIR=${.CURDIR}/files
+PLIST=		${.CURDIR}/pkg-plist
+FILESDIR=	${.CURDIR}/files
+PATCHDIR=	${.CURDIR}/files
 NO_GSTREAMER_COMMON=	yes
 
 do-build:

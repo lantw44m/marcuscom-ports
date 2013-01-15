@@ -1,5 +1,4 @@
 # $FreeBSD$
-#    $MCom$
 
 PORTREVISION=	0
 CATEGORIES=	multimedia
