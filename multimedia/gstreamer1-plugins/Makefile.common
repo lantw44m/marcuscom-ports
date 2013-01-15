@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile.common,v 1.6 2012/10/13 23:38:02 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile.common,v 1.7 2012/10/15 16:15:02 kwm Exp $
 
 # base
 BASE_GST_ALL_PLUGINS= \
@@ -275,8 +275,8 @@ gst_amrwb_PLIST_FILES=		${GST_LIB_DIR}/libgstamrwbdec.la \
 # assrender
 gst_assrender_LIB_DEPENDS=	ass:${PORTSDIR}/multimedia/libass
 
-## cairo , what about cairooverlay?
-gst_cairo_LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo
+## cairo aka cairooverlay?
+gst_cairo_LIB_DEPENDS=		cairo:${PORTSDIR}/graphics/cairo
 #gst_cairo_PLIST_FILES=		${GST_LIB_DIR}/libgstcairo.la \
 #				${GST_LIB_DIR}/libgstcairo.so
 

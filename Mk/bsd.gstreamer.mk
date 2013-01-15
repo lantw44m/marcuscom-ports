@@ -6,7 +6,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.54 2012/10/13 23:38:02 kwm Exp $
+#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.55 2012/10/15 16:19:52 kwm Exp $
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 
@@ -56,15 +56,16 @@ _GST1_LIB_BASE=		${LOCALBASE}/lib/gstreamer-${GST1_VERSION}
 GST1_VERSION=		1.0
 GST1_MINOR_VERSION=	.0
 GST1_SHLIB_VERSION=	0
+GST1_MINIMAL_VERSION=	.5
 
 #
 # These are the current supported gstreamer-plugins modules
 
-# iets bedenken voor mp3 / mad/fluendo maybe for 1.0
+# XXX iets bedenken voor mp3 / mad/fluendo maybe for 1.0
 
 # supported plugins by both 0.10 and 1.0.
 _GSTREAMER_PLUGINS=	a52dec aalib amrnb \
-		cdio cdparanoia curl dts dv dvd \
+		cairo cdio cdparanoia curl dts dv dvd \
 		faac faad flac flite \
 		gdkpixbuf gsm jack \
 		jpeg lame libcaca libmms libpng libvisual \
@@ -73,7 +74,7 @@ _GSTREAMER_PLUGINS=	a52dec aalib amrnb \
 		resindvd taglib theora twolame \
 		v4l2 vorbis vpx wavpack
 
-# old define should go away
+# non ported plugins
 _GSTREAMER_PLUGINS+= \
 			cdaudio gio gl gnonlin \
 			jpeg ladspa \
@@ -85,13 +86,16 @@ _GSTREAMER_PLUGINS+= \
 # xxx the bz2 plugin, bundle it with a "base" port.
 # plugins only in 0.10
 .if defined(USE_GSTREAMER)
-_GSTREAMER_PLUGINS+=amrwbdec annodex bz2 cairo esound ffmpeg fluendo-mp3 gconf gnomevfs hal mm python qt4 vp8 \
+_GSTREAMER_PLUGINS+=amrwbdec annodex bz2 esound \
+		ffmpeg fluendo-mp3 gconf gnomevfs \
+		hal mm python qt4 vp8 \
 		vdpau
 .endif
 
 # plugins only in 1.0
 .if defined(USE_GSTREAMER1)
-_GSTREAMER_PLUGINS+=assrender celt gme mad modplug spandsp vpx x ximagesrc zbar
+_GSTREAMER_PLUGINS+=assrender celt gme mad modplug \
+		spandsp vpx x ximagesrc zbar
 .endif
 
 # other plugins
@@ -353,7 +357,7 @@ IGNORE=	cannot install: unknown gstreamer 0.10 plugin -- ${ext}
 
 .for ext in ${USE_GSTREAMER1}
 ${ext}_GST1_PREFIX?=	gstreamer1-plugins-
-${ext}_GST1_VERSION?=	${GST1_VERSION}${GST1_MINOR_VERSION}
+${ext}_GST1_VERSION?=	${GST1_VERSION}${GST1_MINIMAL_VERSION}
 ${ext}_GST1_NAME?=	${ext}
 ${ext}_GST1_DEPENDS?=	${${ext}_DEPENDS:S/gstreamer/gstreamer1/}
 . if ${_USE_GSTREAMER_ALL:M${ext}}!= "" && exists(${PORTSDIR}/${${ext}_GST1_DEPENDS})
@@ -361,7 +365,7 @@ ${ext}_GST1_DEPENDS?=	${${ext}_DEPENDS:S/gstreamer/gstreamer1/}
 BUILD_DEPENDS+=	${${ext}_GST1_PREFIX}${${ext}_GST1_NAME}>=${${ext}_GST1_VERSION}:${PORTSDIR}/${${ext}_GST1_DEPENDS}
 RUN_DEPENDS+=	${${ext}_GST1_PREFIX}${${ext}_GST1_NAME}>=${${ext}_GST1_VERSION}:${PORTSDIR}/${${ext}_GST1_DEPENDS}
 . else
-IGNORE=	cannot install: unknown gstreamer 1.0 plugin -- ${ext}
+IGNORE=	cannot install: unknown gstreamer ${GST1_VERSION} plugin -- ${ext}
 . endif
 .endfor
 

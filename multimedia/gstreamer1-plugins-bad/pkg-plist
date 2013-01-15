@@ -61,6 +61,8 @@ lib/gstreamer-%%VERSION%%/libgstliveadder.la
 lib/gstreamer-%%VERSION%%/libgstliveadder.so
 lib/gstreamer-%%VERSION%%/libgstmpegpsdemux.la
 lib/gstreamer-%%VERSION%%/libgstmpegpsdemux.so
+lib/gstreamer-%%VERSION%%/libgstmpegpsmux.la
+lib/gstreamer-%%VERSION%%/libgstmpegpsmux.so
 lib/gstreamer-%%VERSION%%/libgstmpegtsdemux.la
 lib/gstreamer-%%VERSION%%/libgstmpegtsdemux.so
 lib/gstreamer-%%VERSION%%/libgstmpegtsmux.la
@@ -136,6 +138,7 @@ share/locale/eu/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/fi/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/fr/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/gl/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
+share/locale/hr/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/hu/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/id/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/it/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo

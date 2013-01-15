@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins-ugly/Makefile,v 1.1 2012/10/04 08:12:45 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins-ugly/Makefile,v 1.2 2012/10/06 09:04:19 kwm Exp $
 
 PORTREVISION=	0
 CATEGORIES=	multimedia
@@ -12,8 +12,8 @@ GST_PLUGIN_SUFFIX=	-ugly
 
 MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
-BUILD_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
-RUN_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
+BUILD_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINIMAL_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
+RUN_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINIMAL_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
 
 DIST=	ugly
 UGLY_GST_DIRS=	gst po gst-libs

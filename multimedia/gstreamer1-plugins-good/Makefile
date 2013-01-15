@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins-good/Makefile,v 1.2 2012/10/06 09:04:19 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins-good/Makefile,v 1.3 2013/01/15 21:08:53 kwm Exp $
 
 PORTREVISION=	0
 CATEGORIES=	multimedia
@@ -14,8 +14,8 @@ MASTERDIR=	${.CURDIR}/../../multimedia/gstreamer1-plugins
 
 CONFIGURE_ARGS+=--enable-monoscope
 
-BUILD_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
-RUN_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
+BUILD_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINIMAL_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
+RUN_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINIMAL_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
 
 DIST=	good
 GOOD_GST_DIRS=	gst sys po

@@ -144,6 +144,7 @@ share/locale/es/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/fi/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/fr/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/gl/LC_MESSAGES/gstreamer-%%VERSION%%.mo
+share/locale/hr/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/hu/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/id/LC_MESSAGES/gstreamer-%%VERSION%%.mo
 share/locale/it/LC_MESSAGES/gstreamer-%%VERSION%%.mo

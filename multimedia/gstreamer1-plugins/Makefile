@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.5 2012/10/13 23:38:02 kwm Exp $
+#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.6 2012/11/26 09:44:38 kwm Exp $
 
 PORTNAME=	gstreamer1-plugins
 PORTVERSION?=	${BASE_PORTVERSION}
@@ -17,9 +17,8 @@ PKGNAMESUFFIX?=	${GST_PLUGIN_SUFFIX}
 MAINTAINER=	multimedia@FreeBSD.org
 COMMENT?=	GStreamer written collection of plugins handling several media types
 
-# XXX check which plugin needs the iso-codes stuff and put the depend there.
 BUILD_DEPENDS+=	gobject-introspection>=1.31.1:${PORTSDIR}/devel/gobject-introspection \
-		gstreamer1>=${GST1_VERSION}${GST1_MINOR_VERSION}:${PORTSDIR}/multimedia/gstreamer1 \
+		gstreamer1>=${GST1_VERSION}${GST1_MINIMAL_VERSION}:${PORTSDIR}/multimedia/gstreamer1 \
 		iso-codes>=0:${PORTSDIR}/misc/iso-codes \
 		orc>=0.4.16:${PORTSDIR}/devel/orc
 LIB_DEPENDS+=	gstreamer-1.0:${PORTSDIR}/multimedia/gstreamer1 \
@@ -27,16 +26,16 @@ LIB_DEPENDS+=	gstreamer-1.0:${PORTSDIR}/multimedia/gstreamer1 \
 		orc-0.4:${PORTSDIR}/devel/orc
 RUN_DEPENDS+=	iso-codes>=0:${PORTSDIR}/misc/iso-codes
 
-BASE_PORTVERSION=	1.0.3
+BASE_PORTVERSION=	1.0.5
 BASE_DISTNAME=		gst-plugins-base-${BASE_PORTVERSION}
 BASE_DISTFILE=		${BASE_DISTNAME}${EXTRACT_SUFX}
-BAD_PORTVERSION=	1.0.3
+BAD_PORTVERSION=	1.0.5
 BAD_DISTNAME=		gst-plugins-bad-${BAD_PORTVERSION}
 BAD_DISTFILE=		${BAD_DISTNAME}${EXTRACT_SUFX}
-GOOD_PORTVERSION=	1.0.3
+GOOD_PORTVERSION=	1.0.5
 GOOD_DISTNAME=		gst-plugins-good-${GOOD_PORTVERSION}
 GOOD_DISTFILE=		${GOOD_DISTNAME}${EXTRACT_SUFX}
-UGLY_PORTVERSION=	1.0.3
+UGLY_PORTVERSION=	1.0.5
 UGLY_DISTNAME=		gst-plugins-ugly-${UGLY_PORTVERSION}
 UGLY_DISTFILE=		${UGLY_DISTNAME}${EXTRACT_SUFX}
 DIST?=		base

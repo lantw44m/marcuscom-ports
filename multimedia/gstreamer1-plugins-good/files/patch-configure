@@ -9,21 +9,3 @@
  
  fi
  
-@@ -27516,6 +27516,8 @@ $as_echo_n "checking Checking for up to 
- #ifdef __sun /* Solaris */
- #include <sys/types.h>
- #include <sys/videodev2.h>
-+#elif __FreeBSD__
-+#include <linux/videodev2.h>
- #else /* Linux */
- #include <linux/types.h>
- #define _LINUX_TIME_H
-@@ -27589,6 +27591,8 @@ $as_echo_n "checking struct v4l2_buffer 
- #ifdef __sun /* Solaris */
- #include <sys/types.h>
- #include <sys/videodev2.h>
-+#elif __FreeBSD__
-+#include <linux/videodev2.h>
- #else /* Linux */
- #include <linux/types.h>
- #define _LINUX_TIME_H
