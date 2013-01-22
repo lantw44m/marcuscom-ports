@@ -1,13 +1,9 @@
-# New ports collection makefile for:	gconf2
-# Date created:				28th June 2000
-# Whom:					Ade Lovett <ade@FreeBSD.org>
-#
+# Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.132 2012/05/25 12:44:11 kwm Exp $
-#
+#   $MCom: ports/devel/gconf2/Makefile,v 1.133 2012/10/05 07:16:40 kwm Exp $
 
 PORTNAME=	gconf2
-PORTVERSION=	3.2.5
+PORTVERSION=	3.2.6
 PORTREVISION=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -18,15 +14,15 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A configuration database system for GNOME
 
-USE_XZ=		yes
-
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+USE_XZ=		yes
+
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
+LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
@@ -42,11 +38,13 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		gconftool-2.1 gsettings-data-convert.1 \
 		gsettings-schema-convert.1
 
-OPTIONS=	LDAP "Enable LDAP support" off
+OPTIONS_DEFINE=	LDAP
 
-.include <bsd.port.pre.mk>
+#OPTIONS=	LDAP "Enable LDAP support" off
 
-.if defined(WITH_LDAP)
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MLDAP}
 USE_OPENLDAP=	yes
 CONFIGURE_ARGS+=--with-openldap
 PLIST_SUB+=	LDAP=""
@@ -58,6 +56,6 @@ PLIST_SUB+=	LDAP="@comment "
 post-install:
 	-${LOCALBASE}/bin/gio-querymodules ${PREFIX}/lib/gio/modules
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
 
 .endif

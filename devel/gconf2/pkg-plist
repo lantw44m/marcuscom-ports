@@ -15,7 +15,6 @@ include/gconf/2/gconf/gconf-listeners.h
 include/gconf/2/gconf/gconf-schema.h
 include/gconf/2/gconf/gconf-value.h
 include/gconf/2/gconf/gconf.h
-libexec/gconf-defaults-mechanism
 %%LDAP%%lib/GConf/2/libgconfbackend-evoldap.a
 %%LDAP%%lib/GConf/2/libgconfbackend-evoldap.la
 %%LDAP%%lib/GConf/2/libgconfbackend-evoldap.so
@@ -34,7 +33,7 @@ lib/libgconf-2.la
 lib/libgconf-2.so
 lib/libgconf-2.so.4
 libdata/pkgconfig/gconf-2.0.pc
-libexec/gconf-sanity-check-2
+libexec/gconf-defaults-mechanism
 libexec/gconfd-2
 %%LDAP%%share/GConf/schema/evoldap.schema
 share/aclocal/gconf-2.m4
@@ -103,6 +102,7 @@ share/locale/is/LC_MESSAGES/GConf2.mo
 share/locale/it/LC_MESSAGES/GConf2.mo
 share/locale/ja/LC_MESSAGES/GConf2.mo
 share/locale/ka/LC_MESSAGES/GConf2.mo
+share/locale/km/LC_MESSAGES/GConf2.mo
 share/locale/kn/LC_MESSAGES/GConf2.mo
 share/locale/ko/LC_MESSAGES/GConf2.mo
 share/locale/ku/LC_MESSAGES/GConf2.mo
@@ -176,6 +176,8 @@ share/sgml/gconf/gconf-1.0.dtd
 @dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
 @dirrmtry share/locale/hy/LC_MESSAGES
 @dirrmtry share/locale/hy
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
