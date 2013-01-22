@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/misc/gnomehier/Makefile,v 1.38 2012/04/27 13:24:51 kwm Exp $
+#    $MCom: ports/misc/gnomehier/Makefile,v 1.39 2012/12/10 10:58:06 kwm Exp $
 # !!DON'T BUMP PORTREVISION ON MTREE CHANGES ANYMORE!!
 
 PORTNAME=	gnomehier
@@ -35,6 +35,8 @@ pre-install:
 	do \
 		${MKDIR} ${WRKSRC}/$${dir}; \
 	done
+	@${SED} -e 's|%%MTREE_ARGS%%|${GNOME_MTREE_ARGS}|' \
+		< ${FILESDIR}/pkg-install.in > ${PKGINSTALL}
 
 pre-su-install:
 	cd ${WRKSRC} && \
@@ -48,6 +50,6 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/${GNOME_MTREE} ${PREFIX}/etc/mtree
 
 post-install:
-	/usr/sbin/mtree ${GNOME_MTREE_ARGS} ${PREFIX}
+	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
 .include <bsd.port.mk>
