@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome2/Makefile,v 1.308 2012/09/03 16:28:29 mezz Exp $
+#   $MCom: ports/x11/gnome2/Makefile,v 1.309 2013/01/09 18:52:21 kwm Exp $
 #
 
 PORTNAME=	gnome2
@@ -49,6 +49,7 @@ RUN_DEPENDS?=	${LOCALBASE}/libexec/gweather-applet-2:${PORTSDIR}/x11/gnome-apple
 		totem:${PORTSDIR}/multimedia/totem \
 		gnome-control-center:${PORTSDIR}/sysutils/gnome-control-center \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
+		evince:${PORTSDIR}/graphics/evince \
 		alacarte:${PORTSDIR}/deskutils/alacarte \
 		gnome-power-manager:${PORTSDIR}/sysutils/gnome-power-manager \
 		orca:${PORTSDIR}/accessibility/orca \
@@ -68,11 +69,9 @@ USE_PYTHON=	yes
 .endif
 
 .if !defined(GNOME_SLAVE) || ${.CURDIR:T}=="gnome2-lite"
-OPTIONS_DEFINE=	XSCREENSAVER MAPI EXTRAS
-OPTIONS_DEFAULT=EXTRAS
+OPTIONS_DEFINE=	XSCREENSAVER MAPI
 XSCREENSAVER_DESC=	Use xscreensaver as screen saver app
 MAPI_DESC=	include evolution-mapi (pulls in samba4)
-EXTRAS_DESC=	bundle evince, brasero, yelp and epiphany
 .endif
 
 do-install:	# empty
@@ -80,13 +79,9 @@ do-install:	# empty
 .include <bsd.port.pre.mk>
 
 .if !defined(GNOME_SLAVE)
-# hmmm XXX
-. if ${.CURDIR:T}=="gnome2-lite" && empty(${PORT_OPTIONS:EXTRAS})
-.  if ${ARCH}!="sparc64" && ${ARCH}!="ia64"
+. if ${ARCH}!="sparc64" && ${ARCH}!="ia64"
 RUN_DEPENDS+=	yelp:${PORTSDIR}/x11/yelp \
 		epiphany:${PORTSDIR}/www/epiphany
-.  endif
-RUN_DEPENDS+=	evince:${PORTSDIR}/graphics/evince \
 . endif
 
 . if ${.CURDIR:T}!="gnome2-lite"
@@ -110,14 +105,14 @@ RUN_DEPENDS+=	cheese:${PORTSDIR}/multimedia/cheese
 .  if ${ARCH} == "i386"
 #RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
 .  endif
-.  if defined(WITH_MAPI)
+.  if ${PORT_OPTIONS:MMAPI}
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/libexchangemapi-1.0.pc:${PORTSDIR}/mail/evolution-mapi
 .  endif
 . endif
 .endif
 
 .if ${.CURDIR}==${MASTERDIR} || ${.CURDIR:T}=="gnome2-lite"
-. if defined(WITH_XSCREENSAVER)
+. if ${PORT_OPTIONS:MXSCREENSAVER}
 RUN_DEPENDS+=	${LOCALBASE}/share/applications/xscreensaver-properties.desktop:${PORTSDIR}/x11/xscreensaver-gnome
 . else
 RUN_DEPENDS+=	gnome-screensaver:${PORTSDIR}/x11/gnome-screensaver
