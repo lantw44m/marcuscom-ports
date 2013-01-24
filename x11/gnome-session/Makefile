@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-session/Makefile,v 1.191 2011/04/25 22:02:03 mezz Exp $
+#   $MCom: ports/x11/gnome-session/Makefile,v 1.192 2012/09/03 16:28:29 mezz Exp $
 #
 
 PORTNAME=	gnome-session
@@ -36,6 +36,8 @@ USE_GNOME=	gnomeprefix gnomehack intlhack gconf2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs
+# us gconftool-2 instead of sanity-check because that got removed from gconf2.
+CONFIGURE_ENV=	ac_cv_path_GCONF_SANITY_CHECK=${LOCALBASE}/bin/gconftool-2
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
