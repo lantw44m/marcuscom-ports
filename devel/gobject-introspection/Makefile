@@ -1,6 +1,6 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.48 2012/09/18 22:23:15 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.49 2012/10/19 16:59:25 kwm Exp $
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	1.34.1.1
@@ -13,7 +13,7 @@ COMMENT=	Generate interface introspection data for GObject libraries
 
 # we need cairo otherwise the generated Cairo gir is broken
 BUILD_DEPENDS=	cairo-trace:${PORTSDIR}/graphics/cairo
-LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi
+LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi
 
 USE_XZ=		yes
 GNU_CONFIGURE=	yes

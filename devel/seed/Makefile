@@ -1,13 +1,8 @@
-# New ports collection makefile for:	seed
-# Date created:				19 July 2009
-# Whom:					Alexander Logvinov <avl@FreeBSD.org>
-#
+# Created by: Alexander Logvinov <avl@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/seed/Makefile,v 1.33 2012/08/08 16:56:39 kwm Exp $
-#
+#   $MCom: ports/devel/seed/Makefile,v 1.34 2012/08/17 19:06:43 kwm Exp $
 # NOTE: It may be necessary to update ${FILESDIR}/Seed.js on each release.
 # To do that, just replace imports.searchPaths with "." and ".." elements.
-#
 
 PORTNAME=	seed
 PORTVERSION=	2.31.91
@@ -20,11 +15,11 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GObject JavaScriptCore bridge
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-js-common.pc:${PORTSDIR}/devel/gnome-js-common
-LIB_DEPENDS=	ffi.5:${PORTSDIR}/devel/libffi \
-		webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2 \
-		girepository-1.0.1:${PORTSDIR}/devel/gobject-introspection \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		mpfr.4:${PORTSDIR}/math/mpfr
+LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi \
+		webkitgtk-1.0:${PORTSDIR}/www/webkit-gtk2 \
+		girepository-1.0:${PORTSDIR}/devel/gobject-introspection \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		mpfr:${PORTSDIR}/math/mpfr
 
 CONFLICTS=	seed-3.[0-9]*
 
