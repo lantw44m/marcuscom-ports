@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/dbus/Makefile,v 1.56 2012/08/16 14:28:17 kwm Exp $
+#   $MCom: ports/devel/dbus/Makefile,v 1.57 2012/11/07 10:01:28 kwm Exp $
 
 PORTNAME=	dbus
 PORTVERSION=	1.6.8
@@ -11,6 +11,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A message bus system for inter-application communication
 
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
+
+PORTSCOUT=	limitw:1,even
 
 USE_GNOME=	gnomehack libxml2 ltverhack
 USE_GMAKE=	yes
@@ -23,9 +25,8 @@ CONFIGURE_ARGS=--localstatedir=/var \
 		--with-session-socket-dir=/tmp \
 		--disable-doxygen-docs \
 		--disable-xml-docs
-CONFIGURE_ENV=	PTHREAD_LIBS="${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
+LDFLAGS+=	-L${LOCALBASE}/lib -pthread
 
 USE_RC_SUBR=	dbus
 USE_GNOME_SUBR=	yes
@@ -38,7 +39,12 @@ PLIST_SUB=	VERSION="1.0"
 MAN1=		dbus-cleanup-sockets.1 dbus-daemon.1 dbus-launch.1 \
 		dbus-monitor.1 dbus-send.1 dbus-uuidgen.1
 
-.if !defined(WITHOUT_X11)
+OPTIONS_DEFINE=	X11
+OPTIONS_DEFAULT=X11
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MX11}
 USE_XORG=	ice sm x11
 .else
 CONFIGURE_ARGS+=--without-x
