@@ -1,10 +1,6 @@
-# New ports collection makefile for:	evolution-data-server
-# Date created:				09 December 2003
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.28 2012/08/16 19:28:53 kwm Exp $
-#
+#   $MCom: ports/databases/evolution-data-server3/Makefile,v 1.29 2012/12/30 18:15:16 mezz Exp $
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	3.4.4
@@ -20,14 +16,14 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome \
-		oauth.8:${PORTSDIR}/net/liboauth \
-		goa-1.0.0:${PORTSDIR}/net/gnome-online-accounts \
+LIB_DEPENDS=	soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome \
+		oauth:${PORTSDIR}/net/liboauth \
+		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
 		gdata.13:${PORTSDIR}/devel/libgdata \
 		ical:${PORTSDIR}/devel/libical \
-		nss3.1:${PORTSDIR}/security/nss \
-		tasn1.4:${PORTSDIR}/security/libtasn1 \
-		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
+		nss3:${PORTSDIR}/security/nss \
+		tasn1:${PORTSDIR}/security/libtasn1 \
+		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 
 CONFLICTS=	evolution-data-server-2.[0-9]*
 
@@ -54,26 +50,19 @@ GLIB_SCHEMAS=	org.gnome.evolution.eds-shell.gschema.xml \
 
 PLIST_SUB=	VERSION="3.4" EVO_VERSION="1.2"
 
-#OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
-OPTIONS+=	WEATHER 	"Enable weather calendar backend"	on \
-		KERBEROS	"Adds Kerberos support"			on
+OPTIONS_DEFINE=	WEATHER KERBEROS
+OPTIONS_DEFAULT=WEATHER KERBEROS
+WEATHER_DESC=	Weather calendar backend
 
 .include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_KERBEROS)
+.if ${PORT_OPTIONS:MKERBEROS}
 CONFIGURE_ARGS+=	--with-krb5=/usr
 KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
 
-#.if defined(WITH_IMAP4) || defined(PACKAGE_BUILDING)
-#CONFIGURE_ARGS+=	--enable-imap4=yes
-#PLIST_SUB+=		IMAP4=""
-#.else
-PLIST_SUB+=		IMAP4="@comment "
-#.endif
-
-.if defined(WITH_WEATHER)
-LIB_DEPENDS+=		gweather-3.0:${PORTSDIR}/net/libgweather3
+.if ${PORT_OPTIONS:MWEATHER}
+LIB_DEPENDS+=		gweather-3:${PORTSDIR}/net/libgweather3
 CONFIGURE_ARGS+=	--enable-weather
 PLIST_SUB+=		WEATHER=""
 .else

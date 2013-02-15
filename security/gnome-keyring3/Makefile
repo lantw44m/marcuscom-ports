@@ -1,10 +1,6 @@
-# New ports collection makefile for:   gnomekeyring
-# Date Created:			08 December 2003
-# Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.22 2012/05/26 16:43:29 kwm Exp $
-#
+#   $MCom: ports/security/gnome-keyring3/Makefile,v 1.23 2012/10/07 12:09:56 kwm Exp $
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	3.4.1

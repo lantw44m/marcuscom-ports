@@ -1,10 +1,6 @@
-# New ports collection makefile for:	evolution-data-server
-# Date created:				09 December 2003
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.215 2012/09/01 23:02:08 mezz Exp $
-#
+#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.216 2012/12/30 18:15:15 mezz Exp $
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.32.1
@@ -16,13 +12,13 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 
-LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
+LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
 		gdata.7:${PORTSDIR}/devel/libgdata06 \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		ical:${PORTSDIR}/devel/libical \
-		nss3.1:${PORTSDIR}/security/nss \
-		tasn1.4:${PORTSDIR}/security/libtasn1 \
-		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
+		nss3:${PORTSDIR}/security/nss \
+		tasn1:${PORTSDIR}/security/libtasn1 \
+		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
@@ -44,26 +40,19 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
 PLIST_SUB=	VERSION="2.32" EVO_VERSION="1.2"
 
-#OPTIONS=	IMAP4	"Enable experimental IMAP4 backend" off
-OPTIONS=	WEATHER		"Enable weather calendar backend"	on \
-		KERBEROS	"Adds Kerberos support"			on
+OPTIONS_DEFINE=	WEATHER KERBEROS
+OPTIONS_DEFAULT=WEATHER KERBEROS
+WEATHER_DESC=	Weather calendar backend
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_KERBEROS)
+.if ${PORT_OPTIONS:MKERBEROS}
 CONFIGURE_ARGS+=	--with-krb5=/usr
 KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
 
-#.if defined(WITH_IMAP4) || defined(PACKAGE_BUILDING)
-#CONFIGURE_ARGS+=	--enable-imap4=yes
-#PLIST_SUB+=		IMAP4=""
-#.else
-PLIST_SUB+=		IMAP4="@comment "
-#.endif
-
-.if defined(WITH_WEATHER)
-LIB_DEPENDS+=		gweather.1:${PORTSDIR}/net/libgweather
+.if ${PORT_OPTIONS:MWEATHER}
+LIB_DEPENDS+=		gweather:${PORTSDIR}/net/libgweather
 CONFIGURE_ARGS+=	--with-weather
 PLIST_SUB+=		WEATHER=""
 .else
@@ -87,4 +76,4 @@ post-patch:
 		s|-Wmissing-include-dirs||g' \
 			${WRKSRC}/configure
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
