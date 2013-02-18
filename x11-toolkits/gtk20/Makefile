@@ -1,10 +1,10 @@
 # Created by: Vanilla I. Shu <vanilla@MinJe.com.TW>
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.234 2012/09/24 11:11:44 kwm Exp $
+#   $MCom: ports/x11-toolkits/gtk20/Makefile,v 1.235 2012/12/09 21:32:27 kwm Exp $
 # Remember to update graphics/gtk-update-icon-cache too.
 
 PORTNAME=	gtk
-PORTVERSION=	2.24.14
+PORTVERSION=	2.24.16
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -19,6 +19,8 @@ LICENSE=	LGPL20
 
 USE_XZ=		yes
 LATEST_LINK=	gtk20
+
+PORTSCOUT=	limitw:0,even
 
 .if !defined(REFERENCE_PORT)
 
@@ -41,7 +43,6 @@ CPPFLAGS+=	-I${LOCALBASE}/include/freetype2 \
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		gtk-query-immodules-2.0.1
-
 
 OPTIONS_DEFINE=	CUPS DEBUG
 OPTIONS_DEFAULT=CUPS
