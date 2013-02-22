@@ -1,0 +1,11 @@
+--- configure.old       2013-02-22 21:17:46.227070115 +0100
++++ configure   2013-02-22 21:18:09.327066595 +0100
+@@ -14520,7 +14520,7 @@
+   ac_fn_c_check_func "$LINENO" "backtrace" "ac_cv_func_backtrace"
+ if test "x$ac_cv_func_backtrace" = xyes; then :
+   cat >>confdefs.h <<_ACEOF
+-#define HAVE_BACKTRACE 1
++#define HAVE_UNSUABLE_BACKTRACE 1
+ _ACEOF
+
+ fi
