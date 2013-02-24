@@ -1,10 +1,6 @@
-# New ports collection makefile for:	clutter
-# Date created:		2008-12-25
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.58 2012/06/21 18:28:20 kwm Exp $
-#
+#  $MCom: ports/graphics/clutter/Makefile,v 1.59 2012/08/27 17:49:26 kwm Exp $
 
 PORTNAME=	clutter
 PORTVERSION=	1.10.8
