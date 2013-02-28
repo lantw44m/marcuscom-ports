@@ -1,9 +1,9 @@
 # Created by: marcus@FreeBSD.org
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.81 2012/10/14 23:04:21 kwm Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.82 2012/11/29 12:14:52 kwm Exp $
 
 PORTNAME=	poppler
-PORTVERSION=	0.20.5
+PORTVERSION=	0.22.1
 PORTREVISION?=	0
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
