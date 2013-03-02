@@ -87,7 +87,7 @@ PLIST_SUB+=	FFMPEG="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGRAPHVIZ}
-LIB_DEPENDS+=	graph:${PORTSDIR}/graphics/graphviz
+LIB_DEPENDS+=	gvpr:${PORTSDIR}/graphics/graphviz
 .else
 CONFIGURE_ARGS+=--without-graphviz
 .endif
