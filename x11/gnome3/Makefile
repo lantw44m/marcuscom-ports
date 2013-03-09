@@ -3,12 +3,12 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.39 2012/10/04 10:07:50 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.40 2013/01/09 18:52:22 kwm Exp $
 #
 
 PORTNAME=	gnome3
-PORTVERSION=	3.2.0
-PORTREVISION?=	1
+PORTVERSION=	3.4.0
+PORTREVISION?=	0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -86,8 +86,7 @@ RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy3 \
 		gconf-editor>=3.0.0:${PORTSDIR}/sysutils/gconf-editor3 \
 		gdm>=3.0.0:${PORTSDIR}/x11/gdm3 \
 		evolution>=3.0.0:${PORTSDIR}/mail/evolution3 \
-		evolution-exchange>=3.0.0:${PORTSDIR}/mail/evolution-exchange3 \
-		${LOCALBASE}/lib/gtk-3.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi2-atk
+		evolution-exchange>=3.0.0:${PORTSDIR}/mail/evolution-exchange3
 
 .if ${OSVERSION}>=800000
 RUN_DEPENDS+=	cheese>=3.0.0:${PORTSDIR}/multimedia/cheese3
