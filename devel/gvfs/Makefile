@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/gvfs/Makefile,v 1.85 2012/12/14 16:09:28 kwm Exp $
+#   $MCom: ports/devel/gvfs/Makefile,v 1.86 2012/12/30 18:15:16 mezz Exp $
 
 PORTNAME=	gvfs
 PORTVERSION=	1.12.3
@@ -38,7 +38,7 @@ GLIB_SCHEMAS=	org.gnome.system.gvfs.enums.xml
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MFUSE}
-USE_FUSE=	yes
+USES+=		fuse
 PLIST_SUB+=	FUSE=""
 .else
 CONFIGURE_ARGS+=	--disable-fuse
