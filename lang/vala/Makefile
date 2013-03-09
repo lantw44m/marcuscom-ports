@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/lang/vala/Makefile,v 1.64 2012/08/04 16:55:25 kwm Exp $
+#   $MCom: ports/lang/vala/Makefile,v 1.65 2012/12/17 19:46:24 kwm Exp $
 
 PORTNAME=	vala
 PORTVERSION=	0.16.1
@@ -14,13 +14,13 @@ LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack glib20 gnomeprefix libxslt
+USES=		bison pathfix
+USE_GNOME=	glib20 gnomeprefix libxslt
 USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 USE_GETTEXT=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_BISON=	build
 USE_LDCONFIG=	yes
 
 MAN1?=		valac.1 valac-0.16.1

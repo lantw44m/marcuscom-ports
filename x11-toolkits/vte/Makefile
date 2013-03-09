@@ -1,10 +1,6 @@
-# New ports collection makefile for:	vte
-# Date created:				05 October 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.123 2012/04/21 22:13:35 mezz Exp $
-#
+#   $MCom: ports/x11-toolkits/vte/Makefile,v 1.124 2012/07/29 20:23:32 kwm Exp $
 
 PORTNAME=	vte
 PORTVERSION=	0.26.2
@@ -23,11 +19,11 @@ USE_BZIP2=	yes
 RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gnome-pty-helper
 
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GETTEXT=	yes
-USE_GNOME?=	gnomeprefix gnomehack gtk20 ltverhack referencehack
+USE_GNOME?=	gnomeprefix gtk20 ltverhack referencehack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS?=--disable-python \

@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gcalctool
-# Date created:				12 Jun 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool3/Makefile,v 1.17 2012/05/31 11:46:36 kwm Exp $
-#
+#   $MCom: ports/math/gcalctool3/Makefile,v 1.18 2012/06/01 06:47:47 kwm Exp $
 
 PORTNAME=	gcalctool
 PORTVERSION=	6.4.2.1
@@ -22,11 +18,11 @@ BUILD_DEPENDS=	yelp-build:${PORTSDIR}/textproc/yelp-tools \
 
 LATEST_LINK=	gcalctool3
 USE_XZ=	yes
-USE_BISON=	build
+USES=		bison pathfix
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gtk30 libxml2
+USE_GNOME=	gnomeprefix intlhack gconf2 gtk30 libxml2
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 

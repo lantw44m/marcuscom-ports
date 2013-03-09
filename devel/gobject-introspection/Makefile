@@ -1,6 +1,6 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.50 2013/01/29 16:33:10 kwm Exp $
+#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.51 2013/02/18 22:07:40 kwm Exp $
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	1.34.2
@@ -18,10 +18,10 @@ LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehier gnomehack glib20 ltverhack
+USE_GNOME=	gnomehier glib20 ltverhack
 USE_PKGCONFIG=	build
 USE_PYTHON=	-2.7
-USE_BISON=	build
+USES=		bison pathfix
 USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes

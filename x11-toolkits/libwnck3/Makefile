@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libwnck
-# Date created:				12 April 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/libwnck3/Makefile,v 1.11 2011/10/16 17:50:42 kwm Exp $
-#
+#   $MCom: ports/x11-toolkits/libwnck3/Makefile,v 1.12 2012/05/25 10:55:08 kwm Exp $
 
 PORTNAME=	libwnck
 PORTVERSION=	3.4.2
@@ -30,8 +26,8 @@ LATEST_LINK=	libwnck3
 USE_GETTEXT=	yes
 USE_XORG=	xres x11
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gtk30 ltverhack referencehack intlhack
-USE_BISON=	build
+USE_GNOME=	gtk30 ltverhack referencehack intlhack
+USES=		bison pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include

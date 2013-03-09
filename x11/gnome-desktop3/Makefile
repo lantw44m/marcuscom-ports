@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomedesktop
-# Date created:				13 April 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop3/Makefile,v 1.22 2011/10/16 17:18:33 kwm Exp $
-#
+#   $MCom: ports/x11/gnome-desktop3/Makefile,v 1.23 2012/05/16 20:56:04 kwm Exp $
 
 PORTNAME=	gnome-desktop
 PORTVERSION=	3.4.2
@@ -28,11 +24,11 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTS
 LATEST_LINK=	gnome-desktop3
 
 USE_XORG=	x11 xrandr xext
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedocutils gtk30 \
+USE_GNOME=	gnomeprefix intlhack gnomedocutils gtk30 \
 		ltverhack referencehack
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison pathfix
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes

@@ -1,10 +1,6 @@
-# New ports collection makefile for:	evolution
-# Date created:				28th June 2000
-# Whom:					Ade Lovett <ade@FreeBSD.org>
-#
+# Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.25 2012/06/18 10:55:33 kwm Exp $
-#
+#   $MCom: ports/mail/evolution3/Makefile,v 1.26 2012/08/16 19:53:44 kwm Exp $
 
 PORTNAME=	evolution
 PORTVERSION=	3.4.4
@@ -25,9 +21,9 @@ CONFLICTS=	evolution-2.[0-9]*
 LATEST_LINK=	evolution3
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_BISON=	build
+USES=		bison pathfix
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack evolutiondataserver3 gtkhtml4 \
+USE_GNOME=	gnomeprefix pathfix intlhack evolutiondataserver3 gtkhtml4 \
 		desktopfileutils gnomedocutils ltasneededhack gnomedesktop3
 USE_AUTOTOOLS=	libtool
 USE_GSTREAMER=	yes

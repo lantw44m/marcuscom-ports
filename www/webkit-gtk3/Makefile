@@ -1,10 +1,6 @@
-# New ports collection makefile for:	webkit
-# Date created:		2007-10-21
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.30 2012/08/08 16:56:41 kwm Exp $
-#
+#   $MCom: ports/www/webkit-gtk3/Makefile,v 1.31 2012/08/21 18:01:16 kwm Exp $
 
 PORTNAME=	webkit
 PORTVERSION=	1.8.3
@@ -29,7 +25,7 @@ USE_GETTEXT=	yes
 USE_GSTREAMER=	yes
 MAKE_JOBS_SAFE=	yes
 USE_XORG=	xt
-USE_BISON=	build
+USES=		bison
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk30 libxslt ltverhack
