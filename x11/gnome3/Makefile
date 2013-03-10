@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3/Makefile,v 1.40 2013/01/09 18:52:22 kwm Exp $
+#   $MCom: ports/x11/gnome3/Makefile,v 1.41 2013/03/09 17:05:23 kwm Exp $
 #
 
 PORTNAME=	gnome3
@@ -59,7 +59,7 @@ RUN_DEPENDS+=	gnome-shell>=3.0.0:${PORTSDIR}/x11/gnome-shell \
 .if ${.CURDIR:T}!="gnome3-lite"
 RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy3 \
 		epiphany>=3.0.0:${PORTSDIR}/www/epiphany3 \
-		epiphany-extensions>=3.0.0:${PORTSDIR}/www/epiphany-extensions3 \
+		epiphany-extensions3>=3.0.0:${PORTSDIR}/www/epiphany-extensions3 \
 		gnome-screensaver>=3.0.0:${PORTSDIR}/x11/gnome-screensaver3 \
 		gucharmap>=3.0.0:${PORTSDIR}/deskutils/gucharmap3 \
 		eog>=3.0.0:${PORTSDIR}/graphics/eog3 \
