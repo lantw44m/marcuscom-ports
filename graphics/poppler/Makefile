@@ -1,9 +1,9 @@
 # Created by: marcus@FreeBSD.org
 # $FreeBSD$
-#   $MCom: ports/graphics/poppler/Makefile,v 1.82 2012/11/29 12:14:52 kwm Exp $
+#   $MCom: ports/graphics/poppler/Makefile,v 1.83 2013/02/28 20:46:54 kwm Exp $
 
 PORTNAME=	poppler
-PORTVERSION=	0.22.1
+PORTVERSION=	0.22.2
 PORTREVISION?=	0
 CATEGORIES=	graphics print
 MASTER_SITES=	http://poppler.freedesktop.org/
@@ -101,7 +101,7 @@ post-patch:
 .if ${CXX:M*clang*} && ${CXXFLAGS:M-stdlib=libc++}
 	@${REINPLACE_CMD} '/CXXFLAGS.*-ansi/d' ${WRKSRC}/configure
 .endif
-	@${REINPLACE_CMD} -e 's|-version-info 28:0:0|-version-info 26:0:0|g' \
+	@${REINPLACE_CMD} -e 's|-version-info 35:0:0|-version-info 34:0:0|g' \
 		${WRKSRC}/poppler/Makefile.in
 .if defined(SLAVEPORT) && ${SLAVEPORT}=="qt4"
 	@${REINPLACE_CMD} -e 's|MOCQT4=`.*|MOCQT4="${LOCALBASE}/bin/moc-qt4"|' \
