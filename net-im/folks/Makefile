@@ -1,10 +1,6 @@
-# New ports collection makefile for:	folks
-# Date created:				23 July 2010
-# Whom:					Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/net-im/folks/Makefile,v 1.28 2012/06/03 03:07:03 mezz Exp $
-#
+#   $MCom: ports/net-im/folks/Makefile,v 1.29 2012/08/17 19:06:45 kwm Exp $
 
 PORTNAME=	folks
 PORTVERSION=	0.7.0
@@ -16,7 +12,7 @@ COMMENT=	library to aggregates people from multiple sources
 
 BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
+LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee06 \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
 
 CONFLICTS=	folks-0.4.[0-9]*
