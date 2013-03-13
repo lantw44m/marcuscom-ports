@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/caribou/Makefile,v 1.13 2012/05/31 20:43:06 kwm Exp $
+#    $MCom: ports/accessibility/caribou/Makefile,v 1.14 2012/08/04 09:25:39 kwm Exp $
 #
 
 PORTNAME=	caribou
@@ -20,7 +20,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter \
-		gee.2:${PORTSDIR}/devel/libgee \
+		gee.2:${PORTSDIR}/devel/libgee06 \
 		xklavier.12:${PORTSDIR}/x11/libxklavier
 RUN_DEPENDS=	py*-atspi>=2.1.91:${PORTSDIR}/accessibility/py-atspi
 

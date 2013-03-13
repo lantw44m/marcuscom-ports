@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/folks04/Makefile,v 1.1 2011/12/06 13:57:00 kwm Exp $
+#   $MCom: ports/net-im/folks04/Makefile,v 1.2 2012/04/27 13:28:44 kwm Exp $
 #
 
 PORTNAME=	folks
@@ -16,7 +16,7 @@ COMMENT=	library to aggregates people from multiple sources
 
 BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee \
+LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee06 \
 		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
 
 CONFLICTS=	folks-0.[6-9].[0-9]*
