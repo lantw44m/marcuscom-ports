@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese3/Makefile,v 1.15 2012/06/13 10:34:15 kwm Exp $
+#   $MCom: ports/multimedia/cheese3/Makefile,v 1.16 2012/07/13 10:32:50 kwm Exp $
 #
 
 PORTNAME=	cheese
@@ -23,6 +23,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev.h:${PORTSDIR}/multimedia/v4l_
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
 		hal:${PORTSDIR}/sysutils/hal \
+		gee.2:${PORTSDIR}/devel/libgee06 \
 		mx-1.0:${PORTSDIR}/x11-toolkits/mx \
 		clutter-gtk-1.0:${PORTSDIR}/graphics/clutter-gtk3 \
 		clutter-gst-1.0:${PORTSDIR}/multimedia/clutter-gst
