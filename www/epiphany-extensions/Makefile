@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.139 2012/09/01 23:02:13 mezz Exp $
+#   $MCom: ports/www/epiphany-extensions/Makefile,v 1.140 2012/12/13 20:33:05 kwm Exp $
 
 PORTNAME=	epiphany-extensions
 PORTVERSION=	2.30.2
@@ -36,7 +36,7 @@ PLIST_SUB=	VERSION=${EPHY_VERSION} EPHY_VERSION=${EPHY_VERSION}
 OPTIONS_DEFINE=	OPENSP
 OPENSP_DESC=	OpenSP SGML support
 
-.include <bsd.port.optioins.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MOPENSP}
 CONFIGURE_ARGS+=	--enable-opensp=yes
