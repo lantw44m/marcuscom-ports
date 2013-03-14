@@ -1,6 +1,6 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.26 2012/08/16 19:53:44 kwm Exp $
+#   $MCom: ports/mail/evolution3/Makefile,v 1.27 2013/03/09 09:12:38 kwm Exp $
 
 PORTNAME=	evolution
 PORTVERSION=	3.4.4
@@ -23,7 +23,7 @@ USE_XZ=		yes
 USE_GMAKE=	yes
 USES=		bison pathfix
 USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix pathfix intlhack evolutiondataserver3 gtkhtml4 \
+USE_GNOME=	gnomeprefix intlhack evolutiondataserver3 gtkhtml4 \
 		desktopfileutils gnomedocutils ltasneededhack gnomedesktop3
 USE_AUTOTOOLS=	libtool
 USE_GSTREAMER=	yes
