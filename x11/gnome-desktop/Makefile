@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.193 2012/09/03 16:28:28 mezz Exp $
+#   $MCom: ports/x11/gnome-desktop/Makefile,v 1.194 2013/03/09 09:12:39 kwm Exp $
 
 PORTNAME=	gnome-desktop
 PORTVERSION=	2.32.1
-PORTREVISION?=	3
+PORTREVISION?=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -19,11 +19,11 @@ USE_BZIP2=	yes
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
 
 USE_XORG=	xpm
+USES=		bison pathfix
 USE_GNOME=	gnomeprefix intlhack gnomedocutils gconf2 pygtk2 \
 		ltverhack referencehack
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USES=		bison pathfix
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
