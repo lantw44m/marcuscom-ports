@@ -1,10 +1,6 @@
-# New ports collection makefile for:   mutter
-# Date created:        14 Aug 2009
-# Whom:                Pawel Worach <pawel.worach@gmail.com>
-#
+# Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.37 2013/01/09 18:52:22 kwm Exp $
-#
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.38 2013/02/22 20:36:00 kwm Exp $
 
 PORTNAME=	mutter
 PORTVERSION=	3.4.1
@@ -32,11 +28,12 @@ USE_PYTHON=	2.5+
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehier gnomeprefix gnomehack intlhack gtk30 ltverhack
+USE_PKGCONFIG=	build
+USES=		pathfix
+USE_GNOME=	gnomehier gnomeprefix intlhack gtk30 ltverhack
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ENV=	LIBS="-lexecinfo"
 CONFIGURE_ARGS=	--enable-compile-warnings=maximum
 GLIB_SCHEMAS=	org.gnome.mutter.gschema.xml
 
@@ -47,6 +44,7 @@ PLIST_SUB=	VERSION=${PORTVERSION:R}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wcast-align||g' \
+		-e 's|execinfo.h|disabled-execinfo.h|g' \
 		${WRKSRC}/configure
 
 .include <bsd.port.mk>
