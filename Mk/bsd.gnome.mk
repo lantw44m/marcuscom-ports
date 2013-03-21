@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.574 2012/12/18 12:15:14 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.575 2012/12/18 13:59:14 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -98,7 +98,8 @@ _USE_GNOME_ALL+=dconf evolutiondataserver3 gnomecontrolcenter3 gnomedesktop3 \
 # C++ bindings
 _USE_GNOME_ALL+=atkmm cairomm gconfmm gconfmm26 glibmm gtkmm20 gtkmm24 \
 		gtkmm30 gtksourceviewmm3 libgdamm libgdamm5 \
-		libgtksourceviewmm libxml++ libxml++26 pangomm
+		libgtksourceviewmm libxml++ libxml++26 libsigc++12 libsigc++20 \
+		pangomm
 
 GNOME_MAKEFILEIN?=	Makefile.in
 SCROLLKEEPER_DIR=	/var/db/rarian
@@ -220,7 +221,6 @@ glib12_LIB_DEPENDS=	glib-12.3:${PORTSDIR}/devel/glib12
 glib12_CONFIGURE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_MAKE_ENV=	GLIB_CONFIG="${GLIB_CONFIG}"
 glib12_DETECT=		${GLIB_CONFIG}
-glib12_USE_GNOME_IMPL=	pkgconfig
 
 GTK_CONFIG?=		${LOCALBASE}/bin/gtk12-config
 gtk12_LIB_DEPENDS=	gtk-12.2:${PORTSDIR}/x11-toolkits/gtk12
@@ -407,7 +407,6 @@ libgnomecanvas_USE_GNOME_IMPL=	libglade2 libartlgpl2
 
 libartlgpl2_LIB_DEPENDS=	art_lgpl_2.5:${PORTSDIR}/graphics/libart_lgpl
 libartlgpl2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libart-2.0.pc
-libartlgpl2_USE_GNOME_IMPL=	pkgconfig
 
 libgnomeprint_LIB_DEPENDS=	gnomeprint-2-2.0:${PORTSDIR}/print/libgnomeprint
 libgnomeprint_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomeprint-2.2.pc
