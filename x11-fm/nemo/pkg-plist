@@ -1,0 +1,185 @@
+bin/nemo
+bin/nemo-autorun-software
+bin/nemo-connect-server
+etc/xdg/autostart/nemo-autostart.desktop
+include/nemo/libnemo-extension/nemo-column-provider.h
+include/nemo/libnemo-extension/nemo-column.h
+include/nemo/libnemo-extension/nemo-extension-types.h
+include/nemo/libnemo-extension/nemo-file-info.h
+include/nemo/libnemo-extension/nemo-info-provider.h
+include/nemo/libnemo-extension/nemo-location-widget-provider.h
+include/nemo/libnemo-extension/nemo-menu-item.h
+include/nemo/libnemo-extension/nemo-menu-provider.h
+include/nemo/libnemo-extension/nemo-menu.h
+include/nemo/libnemo-extension/nemo-property-page-provider.h
+include/nemo/libnemo-extension/nemo-property-page.h
+lib/girepository-1.0/Nemo-3.0.typelib
+lib/libnemo-extension.a
+lib/libnemo-extension.la
+lib/libnemo-extension.so
+lib/libnemo-extension.so.5
+libdata/pkgconfig/libnemo-extension.pc
+libexec/nemo-convert-metadata
+share/GConf/gsettings/nemo.convert
+share/applications/nemo-autorun-software.desktop
+share/applications/nemo.desktop
+share/dbus-1/services/org.Nemo.service
+share/dbus-1/services/org.freedesktop.NemoFileManager1.service
+share/gir-1.0/Nemo-3.0.gir
+share/gtksourceview-2.0/language-specs/nemo_action.lang
+share/gtksourceview-3.0/language-specs/nemo_action.lang
+share/icons/hicolor/16x16/actions/nemo-eject.png
+share/icons/hicolor/16x16/apps/nemo.png
+share/icons/hicolor/22x22/apps/nemo.png
+share/icons/hicolor/24x24/apps/nemo.png
+share/icons/hicolor/32x32/apps/nemo.png
+share/icons/hicolor/icon-theme.cache
+share/icons/hicolor/scalable/actions/location-symbolic.svg
+share/icons/hicolor/scalable/actions/sidebar-hide-symbolic.svg
+share/icons/hicolor/scalable/actions/sidebar-places-symbolic.svg
+share/icons/hicolor/scalable/actions/sidebar-show-symbolic.svg
+share/icons/hicolor/scalable/actions/sidebar-tree-symbolic.svg
+share/icons/hicolor/scalable/actions/view-compact-symbolic.svg
+share/icons/hicolor/scalable/apps/nemo.svg
+share/locale/af/LC_MESSAGES/nemo.mo
+share/locale/am/LC_MESSAGES/nemo.mo
+share/locale/ar/LC_MESSAGES/nemo.mo
+share/locale/as/LC_MESSAGES/nemo.mo
+share/locale/ast/LC_MESSAGES/nemo.mo
+share/locale/az/LC_MESSAGES/nemo.mo
+share/locale/be/LC_MESSAGES/nemo.mo
+share/locale/be@latin/LC_MESSAGES/nemo.mo
+share/locale/bg/LC_MESSAGES/nemo.mo
+share/locale/bn/LC_MESSAGES/nemo.mo
+share/locale/bn_IN/LC_MESSAGES/nemo.mo
+share/locale/bo/LC_MESSAGES/nemo.mo
+share/locale/br/LC_MESSAGES/nemo.mo
+share/locale/bs/LC_MESSAGES/nemo.mo
+share/locale/ca/LC_MESSAGES/nemo.mo
+share/locale/ca@valencia/LC_MESSAGES/nemo.mo
+share/locale/crh/LC_MESSAGES/nemo.mo
+share/locale/cs/LC_MESSAGES/nemo.mo
+share/locale/cy/LC_MESSAGES/nemo.mo
+share/locale/da/LC_MESSAGES/nemo.mo
+share/locale/de/LC_MESSAGES/nemo.mo
+share/locale/dz/LC_MESSAGES/nemo.mo
+share/locale/el/LC_MESSAGES/nemo.mo
+share/locale/en@shaw/LC_MESSAGES/nemo.mo
+share/locale/en_CA/LC_MESSAGES/nemo.mo
+share/locale/en_GB/LC_MESSAGES/nemo.mo
+share/locale/eo/LC_MESSAGES/nemo.mo
+share/locale/es/LC_MESSAGES/nemo.mo
+share/locale/et/LC_MESSAGES/nemo.mo
+share/locale/eu/LC_MESSAGES/nemo.mo
+share/locale/fa/LC_MESSAGES/nemo.mo
+share/locale/fi/LC_MESSAGES/nemo.mo
+share/locale/fr/LC_MESSAGES/nemo.mo
+share/locale/fur/LC_MESSAGES/nemo.mo
+share/locale/fy/LC_MESSAGES/nemo.mo
+share/locale/ga/LC_MESSAGES/nemo.mo
+share/locale/gl/LC_MESSAGES/nemo.mo
+share/locale/gu/LC_MESSAGES/nemo.mo
+share/locale/gv/LC_MESSAGES/nemo.mo
+share/locale/ha/LC_MESSAGES/nemo.mo
+share/locale/he/LC_MESSAGES/nemo.mo
+share/locale/hi/LC_MESSAGES/nemo.mo
+share/locale/hr/LC_MESSAGES/nemo.mo
+share/locale/hu/LC_MESSAGES/nemo.mo
+share/locale/hy/LC_MESSAGES/nemo.mo
+share/locale/id/LC_MESSAGES/nemo.mo
+share/locale/ig/LC_MESSAGES/nemo.mo
+share/locale/io/LC_MESSAGES/nemo.mo
+share/locale/is/LC_MESSAGES/nemo.mo
+share/locale/it/LC_MESSAGES/nemo.mo
+share/locale/ja/LC_MESSAGES/nemo.mo
+share/locale/ka/LC_MESSAGES/nemo.mo
+share/locale/kk/LC_MESSAGES/nemo.mo
+share/locale/km/LC_MESSAGES/nemo.mo
+share/locale/kn/LC_MESSAGES/nemo.mo
+share/locale/ko/LC_MESSAGES/nemo.mo
+share/locale/ku/LC_MESSAGES/nemo.mo
+share/locale/li/LC_MESSAGES/nemo.mo
+share/locale/lt/LC_MESSAGES/nemo.mo
+share/locale/lv/LC_MESSAGES/nemo.mo
+share/locale/mai/LC_MESSAGES/nemo.mo
+share/locale/mg/LC_MESSAGES/nemo.mo
+share/locale/mi/LC_MESSAGES/nemo.mo
+share/locale/mk/LC_MESSAGES/nemo.mo
+share/locale/ml/LC_MESSAGES/nemo.mo
+share/locale/mn/LC_MESSAGES/nemo.mo
+share/locale/mr/LC_MESSAGES/nemo.mo
+share/locale/ms/LC_MESSAGES/nemo.mo
+share/locale/my/LC_MESSAGES/nemo.mo
+share/locale/nb/LC_MESSAGES/nemo.mo
+share/locale/nds/LC_MESSAGES/nemo.mo
+share/locale/ne/LC_MESSAGES/nemo.mo
+share/locale/nl/LC_MESSAGES/nemo.mo
+share/locale/nn/LC_MESSAGES/nemo.mo
+share/locale/nso/LC_MESSAGES/nemo.mo
+share/locale/oc/LC_MESSAGES/nemo.mo
+share/locale/or/LC_MESSAGES/nemo.mo
+share/locale/pa/LC_MESSAGES/nemo.mo
+share/locale/pl/LC_MESSAGES/nemo.mo
+share/locale/ps/LC_MESSAGES/nemo.mo
+share/locale/pt/LC_MESSAGES/nemo.mo
+share/locale/pt_BR/LC_MESSAGES/nemo.mo
+share/locale/ro/LC_MESSAGES/nemo.mo
+share/locale/ru/LC_MESSAGES/nemo.mo
+share/locale/rw/LC_MESSAGES/nemo.mo
+share/locale/si/LC_MESSAGES/nemo.mo
+share/locale/sk/LC_MESSAGES/nemo.mo
+share/locale/sl/LC_MESSAGES/nemo.mo
+share/locale/sq/LC_MESSAGES/nemo.mo
+share/locale/sr/LC_MESSAGES/nemo.mo
+share/locale/sr@ije/LC_MESSAGES/nemo.mo
+share/locale/sr@latin/LC_MESSAGES/nemo.mo
+share/locale/sv/LC_MESSAGES/nemo.mo
+share/locale/ta/LC_MESSAGES/nemo.mo
+share/locale/te/LC_MESSAGES/nemo.mo
+share/locale/th/LC_MESSAGES/nemo.mo
+share/locale/tk/LC_MESSAGES/nemo.mo
+share/locale/tr/LC_MESSAGES/nemo.mo
+share/locale/ug/LC_MESSAGES/nemo.mo
+share/locale/uk/LC_MESSAGES/nemo.mo
+share/locale/uz/LC_MESSAGES/nemo.mo
+share/locale/uz@cyrillic/LC_MESSAGES/nemo.mo
+share/locale/vi/LC_MESSAGES/nemo.mo
+share/locale/wa/LC_MESSAGES/nemo.mo
+share/locale/xh/LC_MESSAGES/nemo.mo
+share/locale/yi/LC_MESSAGES/nemo.mo
+share/locale/yo/LC_MESSAGES/nemo.mo
+share/locale/zh_CN/LC_MESSAGES/nemo.mo
+share/locale/zh_HK/LC_MESSAGES/nemo.mo
+share/locale/zh_TW/LC_MESSAGES/nemo.mo
+share/locale/zu/LC_MESSAGES/nemo.mo
+share/mime/application/nemo-action.xml
+share/mime/application/x-gnome-saved-search.xml
+share/mime/packages/nemo.xml
+%%DATADIR%%/actions/myaction.py
+%%DATADIR%%/actions/myaction.py.bak
+%%DATADIR%%/actions/sample.nemo_action
+%%DATADIR%%/icons/hicolor/16x16/emblems/emblem-note.png
+%%DATADIR%%/icons/hicolor/24x24/emblems/emblem-note.png
+%%DATADIR%%/icons/hicolor/4%%XAWVER%%x4%%XAWVER%%/emblems/emblem-note.png
+%%DATADIR%%/nemo-extras.placeholder
+%%DATADIR%%/nemo-suggested.placeholder
+@dirrm %%DATADIR%%/icons/hicolor/4%%XAWVER%%x4%%XAWVER%%/emblems
+@dirrm %%DATADIR%%/icons/hicolor/4%%XAWVER%%x4%%XAWVER%%
+@dirrm %%DATADIR%%/icons/hicolor/24x24/emblems
+@dirrm %%DATADIR%%/icons/hicolor/24x24
+@dirrm %%DATADIR%%/icons/hicolor/16x16/emblems
+@dirrm %%DATADIR%%/icons/hicolor/16x16
+@dirrm %%DATADIR%%/icons/hicolor
+@dirrm %%DATADIR%%/icons
+@dirrm %%DATADIR%%/actions
+@dirrm %%DATADIR%%
+@dirrmtry share/locale/gv/LC_MESSAGES
+@dirrmtry share/locale/gv
+@dirrmtry share/locale/bo/LC_MESSAGES
+@dirrmtry share/locale/bo
+@dirrmtry share/gtksourceview-3.0/language-specs
+@dirrmtry share/gtksourceview-3.0
+@dirrmtry share/gtksourceview-2.0/language-specs
+@dirrmtry share/gtksourceview-2.0
+@dirrm include/nemo/libnemo-extension
+@dirrm include/nemo
