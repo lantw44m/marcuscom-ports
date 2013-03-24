@@ -1,6 +1,6 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.38 2013/02/22 20:36:00 kwm Exp $
+#   $MCom: ports/x11-wm/mutter/Makefile,v 1.39 2013/03/21 21:34:32 kwm Exp $
 
 PORTNAME=	mutter
 PORTVERSION=	3.4.1
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
 		clutter-1.0:${PORTSDIR}/graphics/clutter \
 		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
-RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
+RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 
