@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.575 2012/12/18 13:59:14 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.576 2013/03/21 07:24:56 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -79,7 +79,7 @@ _USE_GNOME_ALL+= bonobo gconf gdkpixbuf glib12 \
 
 # GNOME 2 components
 _USE_GNOME_ALL+= atk atspi cairo desktopfileutils eel2 evolutiondataserver gal2 \
-		gdkpixbuf2 gconf2 _glib20 glib20 gnomecontrolcenter2 gnomedesktop \
+		gdkpixbuf2 gconf2 glib20 gnomecontrolcenter2 gnomedesktop \
 		gnomedesktopsharp20 gnomedocutils gnomemenus gnomepanel gnomesharp20 \
 		gnomespeech gnomevfs2 gtk-update-icon-cache gtk20 gtkhtml3 gtksharp10 \
 		gtksharp20 gtksourceview gtksourceview2 gvfs libartlgpl2 libbonobo \
@@ -323,13 +323,9 @@ libglade_MAKE_ENV=	LIBGLADE_CONFIG="${LIBGLADE_CONFIG}"
 libglade_DETECT=	${LIBGLADE_CONFIG}
 libglade_USE_GNOME_IMPL=gnomedb
 
-_glib20_LIB_DEPENDS=	glib-2.0:${PORTSDIR}/devel/glib20 \
+glib20_LIB_DEPENDS=	glib-2.0:${PORTSDIR}/devel/glib20 \
 			pcre:${PORTSDIR}/devel/pcre
-_glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
-
-glib20_RUN_DEPENDS=	${LOCALBASE}/lib/gio/modules/libgiofam.so:${PORTSDIR}/devel/gio-fam-backend
-glib20_DETECT=		${LOCALBASE}/lib/gio/modules/libgiofam.so
-glib20_USE_GNOME_IMPL=	_glib20
+glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
 
 atk_LIB_DEPENDS=	atk-1.0.0:${PORTSDIR}/accessibility/atk
 atk_DETECT=		${LOCALBASE}/libdata/pkgconfig/atk.pc
