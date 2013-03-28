@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/devel/py-gobject3/Makefile,v 1.11 2012/12/30 18:15:16 mezz Exp $
 
 PORTNAME=	gobject
 PORTVERSION=	3.2.2
@@ -19,6 +19,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
+LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi
 RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
 
@@ -35,17 +36,5 @@ USE_LDCONFIG=	yes
 CONFLICTS=	py*-gtk-0* py*-gobject-2.*.[0-6] py*-gobject-2.*.[7-9] \
 		py*-gobject-2.*.6_1
 PLIST_SUB=	PYTHON_VER="${PYTHON_VER}"
-
-OPTIONS_DEFINE=	LIBFFI
-LIBFFI_DESC=	Enable libffi support
-
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MLIBFFI}
-LIB_DEPENDS+=	ffi:${PORTSDIR}/devel/libffi
-CONFIGURE_ARGS+=--with-ffi
-.else
-CONFIGURE_ARGS+=--without-ffi
-.endif
 
 .include <bsd.port.mk>
