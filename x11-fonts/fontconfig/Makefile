@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD: head/x11-fonts/fontconfig/Makefile 300897 2012-07-14 14:29:18Z beat $
-#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.32 2012/11/05 10:50:39 kwm Exp $
+#   $MCom: ports/x11-fonts/fontconfig/Makefile,v 1.33 2013/01/22 15:49:41 kwm Exp $
 
 PORTNAME=	fontconfig
-PORTVERSION=	2.10.2
+PORTVERSION=	2.10.92
 PORTREVISION?=	0
 PORTEPOCH?=	1
 CATEGORIES=	x11-fonts
@@ -21,7 +21,9 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack pkgconfig ltverhack
+USES=		pathfix
+USE_GNOME=	ltverhack
+USE_PKGCONFIG=	build
 CONFIGURE_ARGS=	--with-configdir=${PREFIX}/etc/fonts/conf.d \
 		--with-templatedir=${PREFIX}/etc/fonts/conf.avail \
 		--with-xmldir=${PREFIX}/etc/fonts \
@@ -30,6 +32,7 @@ CONFIGURE_ARGS=	--with-configdir=${PREFIX}/etc/fonts/conf.d \
 		--with-default-fonts=${PREFIX}/share/fonts \
 		--with-add-fonts=${LOCALBASE}/lib/X11/fonts \
 		--with-cache-dir=/var/db/fontconfig \
+		--with-pkgconfigdir=${PREFIX}/libdata/pkgconfig \
 		--disable-docs
 MAKE_ENV=	LC_ALL=C
 MAKE_JOBS_SAFE=	yes
