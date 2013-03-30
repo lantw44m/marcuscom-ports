@@ -1,6 +1,6 @@
 # Created by: Chia-liang Kao <clkao@CirX.ORG>
 # $FreeBSD: head/devel/ORBit2/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#   $MCom: ports/devel/ORBit2/Makefile,v 1.57 2010/09/29 14:08:02 kwm Exp $
+#   $MCom: ports/devel/ORBit2/Makefile,v 1.59 2013/03/30 07:25:13 kwm Exp $
 
 PORTNAME=	ORBit2
 PORTVERSION=	2.14.19
@@ -32,7 +32,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/src/orb/orb-core/orbit-typelib.c
 	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
-		${WRKSRC}/configure
+		${WRKSRC}/configure ${WRKSRC}/linc2/src/Makefile.in
 
 post-install:
 	@${ECHO_CMD} "ORBIIOPIPv4=0" > ${PREFIX}/etc/orbit2rc.default
