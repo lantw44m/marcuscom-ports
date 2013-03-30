@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/x11-toolkits/pangox-compat/Makefile,v 1.1 2013/03/30 10:23:38 kwm Exp $
 
 PORTNAME=	pangox-compat
 PORTVERSION=	0.0.2
@@ -11,8 +11,9 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Depricated pangoX support.
 
-USE_XZ=		yes
+BUILD_DEPENDS=	pango>=1.34.0:${PORTSDIR}/x11-toolkits/pango
 
+USE_XZ=		yes
 USE_XORG=	x11 ice
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
