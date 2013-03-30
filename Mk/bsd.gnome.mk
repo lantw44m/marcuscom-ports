@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/Mk/bsd.gnome.mk,v 1.576 2013/03/21 07:24:56 kwm Exp $
+#     $MCom: ports/Mk/bsd.gnome.mk,v 1.577 2013/03/28 18:25:48 kwm Exp $
 #
 # Please view me with 4 column tabs!
 
@@ -87,7 +87,7 @@ _USE_GNOME_ALL+= atk atspi cairo desktopfileutils eel2 evolutiondataserver gal2 
 		libgnomecanvas libgnomedb libgnomekbd libgnomeprint libgnomeprintui \
 		libgnomeui libgsf libgsf_gnome libgtkhtml libidl librsvg2 libwnck \
 		libxml2 libxslt libzvt linc metacity nautilus2 nautiluscdburner \
-		orbit2 pango pygnome2 pygnomedesktop pygnomeextras pygobject pygtk2 \
+		orbit2 pango pangox-compat pygnome2 pygnomedesktop pygnomeextras pygobject pygtk2 \
 		pygtksourceview vte
 
 # GNOME 3 components
@@ -338,6 +338,10 @@ dconf_USE_GNOME_IMPL=	glib20
 pango_LIB_DEPENDS=	pango-1.0.0:${PORTSDIR}/x11-toolkits/pango
 pango_DETECT=		${LOCALBASE}/libdata/pkgconfig/pango.pc
 pango_USE_GNOME_IMPL=	glib20
+
+pangox-compat_LIB_DEPENDS=	pangox-1.0:${PORTSDIR}/x11-toolkits/pangox-compat
+pangox-compat_DETECT=		${LOCALBASE}/libdata/pkgconfig/pangox.pc
+pangox-compat_USE_GNOME_IMPL=	glib20 pango
 
 gdkpixbuf2_LIB_DEPENDS=	gdk_pixbuf-2.0.0:${PORTSDIR}/graphics/gdk-pixbuf2
 gdkpixbuf2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gdk-pixbuf-2.0.pc
