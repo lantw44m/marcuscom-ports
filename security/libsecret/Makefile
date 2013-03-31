@@ -1,0 +1,28 @@
+# Created by: Koop Mast <kwm@FreeBSD.org>
+# $FreeBSD$
+#   $MCom$
+
+PORTNAME=	libsecret
+PORTVERSION=	0.15
+CATEGORIES=	security gnome
+MASTER_SITES=	GNOME
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	library that keeps passwords and other secrets
+
+LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
+
+USE_XZ=		yes
+USES=		pathfix
+USE_GNOME=	gnomehier glib20 libxslt:build intltool
+USE_GMAKE=	yes
+USE_GETTEXT=	yes
+USE_LDCONFIG=	yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=--disable-introspection --disable-vala
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+
+MAN1=		secret-tool.1
+
+.include <bsd.port.mk>
