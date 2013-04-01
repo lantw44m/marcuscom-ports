@@ -10,7 +10,7 @@ MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	IRC Connection Manager for Telepathy Framework
 
-LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
+LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib
 
