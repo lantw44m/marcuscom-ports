@@ -14,7 +14,7 @@ MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A window manager for the adult in you (test)
+COMMENT=	A window manager for the adult in you
 
 BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
