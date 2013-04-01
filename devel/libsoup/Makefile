@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD: head/devel/libsoup/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#   $MCom: ports/devel/libsoup/Makefile,v 1.116 2013/01/15 02:25:57 kwm Exp $
+#   $MCom$
 
 PORTNAME=	libsoup
 PORTVERSION=	2.42.0

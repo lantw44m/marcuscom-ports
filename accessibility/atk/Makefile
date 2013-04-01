@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD: head/accessibility/atk/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#   $MCom: ports/accessibility/atk/Makefile,v 1.123 2012/10/07 09:00:37 kwm Exp $
+#   $MCom$
 
 PORTNAME=	atk
 PORTVERSION=	2.8.0

@@ -3,7 +3,7 @@
 # Whom:				Jean-Yves Lefort <jylefort@brutele.be>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/desktop-file-utils/Makefile,v 1.11 2012/01/17 16:30:19 ahze Exp $
+#   $MCom$
 #
 
 PORTNAME=	desktop-file-utils

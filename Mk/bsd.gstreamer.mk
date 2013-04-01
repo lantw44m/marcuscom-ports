@@ -6,7 +6,7 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/Mk/bsd.gstreamer.mk,v 1.55 2012/10/15 16:19:52 kwm Exp $
+#    $MCom$
 
 .if !defined(_POSTMKINCLUDED) && !defined(Gstreamer_Pre_Include)
 

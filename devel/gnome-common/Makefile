@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/devel/gnome-common/Makefile,v 1.19 2012/06/14 17:28:24 kwm Exp $
+#    $MCom$
 
 PORTNAME=	gnome-common
 PORTVERSION=	3.6.0

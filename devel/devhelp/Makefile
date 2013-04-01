@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/devhelp/Makefile,v 1.44 2012/08/17 19:06:43 kwm Exp $
+#   $MCom$
 
 PORTNAME=	devhelp
 PORTVERSION=	2.32.0

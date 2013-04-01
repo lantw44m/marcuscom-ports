@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/databases/evolution-data-server/Makefile,v 1.217 2013/02/15 16:35:39 kwm Exp $
+#   $MCom$
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.32.1

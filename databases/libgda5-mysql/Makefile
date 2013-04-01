@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5-mysql/Makefile,v 1.1 2011/03/30 19:23:03 kwm Exp $
+#   $MCom$
 #
 
 PORTREVISION?=	0

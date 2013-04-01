@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gnome-pty-helper/Makefile,v 1.6 2012/05/01 11:41:22 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gnome-pty-helper

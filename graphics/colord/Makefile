@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/graphics/colord/Makefile,v 1.9 2012/08/08 16:56:40 kwm Exp $
+#    $MCom$
 
 PORTNAME=	colord
 PORTVERSION=	0.1.20

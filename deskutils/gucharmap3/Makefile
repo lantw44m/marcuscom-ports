@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gucharmap3/Makefile,v 1.11 2012/06/03 02:12:19 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	gucharmap

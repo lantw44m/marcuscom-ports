@@ -3,7 +3,7 @@
 # Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit/Makefile,v 1.33 2012/08/17 19:06:46 kwm Exp $
+#   $MCom$
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.21

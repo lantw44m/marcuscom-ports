@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/math/gcalctool3/Makefile,v 1.18 2012/06/01 06:47:47 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gcalctool
 PORTVERSION=	6.4.2.1

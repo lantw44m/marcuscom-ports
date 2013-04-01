@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pangox-compat/Makefile,v 1.1 2013/03/30 10:23:38 kwm Exp $
+#   $MCom$
 
 PORTNAME=	pangox-compat
 PORTVERSION=	0.0.2

@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/glom/Makefile,v 1.36 2012/01/16 22:40:46 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	glom

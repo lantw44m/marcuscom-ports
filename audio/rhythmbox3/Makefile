@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/rhythmbox3/Makefile,v 1.4 2011/10/24 08:27:50 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	rhythmbox

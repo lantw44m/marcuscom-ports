@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/empathy3/Makefile,v 1.31 2012/06/14 10:46:30 kwm Exp $
+#    $MCom$
 
 PORTNAME=	empathy
 PORTVERSION=	3.4.2.1

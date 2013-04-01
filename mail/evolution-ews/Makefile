@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-ews/Makefile,v 1.5 2012/08/08 16:56:40 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	evolution-ews

@@ -1,6 +1,6 @@
 # Created by: Ade Lovett <ade@lovett.com>
 # $FreeBSD: head/graphics/gdk-pixbuf2/Makefile 314952 2013-03-22 19:00:36Z mezz $
-#    $MCom: ports/graphics/gdk-pixbuf2/Makefile,v 1.28 2012/12/10 12:09:15 kwm Exp $
+#    $MCom$
 
 PORTNAME=	gdk-pixbuf
 PORTVERSION=	2.28.0

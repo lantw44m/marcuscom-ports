@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins-bad/Makefile,v 1.3 2012/10/11 22:26:29 kwm Exp $
+#    $MCom$
 
 PORTREVISION=	0
 CATEGORIES=	multimedia

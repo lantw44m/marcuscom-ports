@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger <adamw@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/evince/Makefile,v 1.158 2012/08/17 19:06:44 kwm Exp $
+#    $MCom$
 #
 
 PORTNAME=	evince

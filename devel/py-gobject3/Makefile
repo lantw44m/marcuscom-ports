@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/py-gobject3/Makefile,v 1.11 2012/12/30 18:15:16 mezz Exp $
+#   $MCom$
 
 PORTNAME=	gobject
 PORTVERSION=	3.2.2

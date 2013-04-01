@@ -1,6 +1,6 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/x11-wm/mutter/Makefile,v 1.39 2013/03/21 21:34:32 kwm Exp $
+#   $MCom$
 
 PORTNAME=	mutter
 PORTVERSION=	3.4.1

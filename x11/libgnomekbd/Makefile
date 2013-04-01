@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libgnomekbd/Makefile,v 1.54 2011/04/30 20:43:31 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	libgnomekbd

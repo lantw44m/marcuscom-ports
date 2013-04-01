@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/gnome-online-accounts/Makefile,v 1.6 2011/10/18 21:52:30 kwm Exp $
+#    $MCom$
 
 PORTNAME=	gnome-online-accounts
 PORTVERSION=	3.4.2

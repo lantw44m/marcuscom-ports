@@ -3,7 +3,7 @@
 # Whom:					Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vino3/Makefile,v 1.18 2011/11/19 10:51:31 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	vino

@@ -3,7 +3,7 @@
 # Whom:                Martin Klaffenboeck <martin.klaffenboeck@gmx.at>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gtkmm30/Makefile,v 1.21 2012/09/01 13:51:52 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gtkmm

@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/brasero3/Makefile,v 1.15 2012/06/03 02:41:18 mezz Exp $
+#    $MCom$
 
 PORTNAME=	brasero
 PORTVERSION=	3.4.1

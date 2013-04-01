@@ -1,6 +1,6 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
-#  $MCom: ports/graphics/clutter/Makefile,v 1.59 2012/08/27 17:49:26 kwm Exp $
+#  $MCom$
 
 PORTNAME=	clutter
 PORTVERSION=	1.10.8

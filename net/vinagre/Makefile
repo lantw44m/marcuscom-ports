@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/vinagre/Makefile,v 1.47 2012/08/17 19:06:45 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	vinagre

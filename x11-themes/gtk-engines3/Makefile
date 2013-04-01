@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gtk-engines3/Makefile,v 1.3 2010/07/07 10:15:06 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gtk-engines3

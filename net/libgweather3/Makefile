@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/libgweather3/Makefile,v 1.8 2011/10/07 22:04:53 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	libgweather

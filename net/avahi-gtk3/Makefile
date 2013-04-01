@@ -3,7 +3,7 @@
 # Whom:					Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-gtk3/Makefile,v 1.6 2011/09/13 11:01:33 kwm Exp $
+#   $MCom$
 #
 
 PORTREVISION=	0

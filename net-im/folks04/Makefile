@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/folks04/Makefile,v 1.2 2012/04/27 13:28:44 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	folks

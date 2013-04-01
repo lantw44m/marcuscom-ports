@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5-postgresql/Makefile,v 1.1 2011/03/30 19:23:04 kwm Exp $
+#   $MCom$
 #
 
 PORTREVISION?=	0

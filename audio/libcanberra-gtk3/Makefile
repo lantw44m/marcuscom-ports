@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/libcanberra-gtk3/Makefile,v 1.8 2011/03/16 10:24:48 kwm Exp $
+#   $MCom$
 #
 
 PORTREVISION=	2

@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/sysutils/accountsservice/Makefile,v 1.12 2012/10/12 11:20:57 kwm Exp $
+#    $MCom$
 
 PORTNAME=	accountsservice
 PORTVERSION=	0.6.24

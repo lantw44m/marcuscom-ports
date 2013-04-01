@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/seahorse/Makefile,v 1.108 2012/08/17 19:06:46 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	seahorse

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/ghex3/Makefile,v 1.1 2011/10/15 16:35:05 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	ghex

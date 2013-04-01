@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/www/epiphany-extensions3/Makefile,v 1.8 2012/08/04 10:39:35 kwm Exp $
+#   $MCom$
 
 PORTNAME=	epiphany-extensions
 PORTVERSION=	3.4.0

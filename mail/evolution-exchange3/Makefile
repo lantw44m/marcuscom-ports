@@ -3,7 +3,7 @@
 # Whom:					Adam Weinberger, based off kiesel's ximian-exchange port
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-exchange3/Makefile,v 1.18 2012/06/18 11:03:37 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	evolution-exchange

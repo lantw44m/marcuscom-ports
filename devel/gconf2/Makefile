@@ -1,6 +1,6 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/gconf2/Makefile,v 1.133 2012/10/05 07:16:40 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gconf2
 PORTVERSION=	3.2.6

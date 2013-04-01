@@ -3,7 +3,7 @@
 # Whom:			Dave McKay <dave@mu.org>
 #
 # $FreeBSD$
-#   $MCom: ports/security/libcryptui/Makefile,v 1.4 2012/06/14 04:41:21 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	libcryptui

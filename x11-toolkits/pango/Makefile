@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/pango/Makefile,v 1.168 2012/12/20 00:36:32 kwm Exp $
+#   $MCom$
 
 PORTNAME=	pango
 PORTVERSION=	1.34.0

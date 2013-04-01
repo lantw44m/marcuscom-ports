@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/ports-mgmt/packagekit-qt4/Makefile,v 1.1 2010/01/08 02:16:38 kwm Exp $
+#   $MCom$
 #
 
 PORTREVISION=	0

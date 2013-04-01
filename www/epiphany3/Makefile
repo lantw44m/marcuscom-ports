@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/www/epiphany3/Makefile,v 1.25 2012/08/07 17:35:17 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	epiphany

@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/irc/xchat/Makefile,v 1.9 2012/06/20 02:14:27 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	xchat

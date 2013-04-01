@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/yelp3/Makefile,v 1.23 2012/05/17 11:01:11 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	yelp

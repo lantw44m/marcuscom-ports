@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/liboobs/Makefile,v 1.53 2011/06/11 19:51:15 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	liboobs

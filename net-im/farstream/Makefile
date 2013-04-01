@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/farstream/Makefile,v 1.1 2012/06/13 02:46:09 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	farstream

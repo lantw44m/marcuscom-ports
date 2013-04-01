@@ -3,7 +3,7 @@
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/notification-daemon/Makefile,v 1.14 2012/06/06 21:11:58 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	notification-daemon

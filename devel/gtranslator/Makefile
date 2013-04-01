@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gtranslator/Makefile,v 1.20 2011/10/19 21:42:29 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gtranslator

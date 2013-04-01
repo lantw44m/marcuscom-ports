@@ -1,6 +1,6 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/graphics/librsvg2/Makefile,v 1.146 2012/09/03 20:17:06 kwm Exp $
+#   $MCom$
 
 PORTNAME=	librsvg
 PORTVERSION=	2.36.4

@@ -3,7 +3,7 @@
 # Whom:					Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net/avahi-header/Makefile,v 1.3 2011/04/15 06:44:57 kwm Exp $
+#   $MCom$
 #
 
 PORTREVISION=	0

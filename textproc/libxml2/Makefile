@@ -3,7 +3,7 @@
 # Whom:					Yukihiro Nakai <Nakai@technologist.com>
 #
 # $FreeBSD$
-#    $MCom: ports/textproc/libxml2/Makefile,v 1.14 2012/08/04 16:55:25 kwm Exp $
+#    $MCom$
 #
 # WITHOUT_SCHEMA disable XML schema support
 # WITHOUT_THREADS disable threads support

@@ -1,5 +1,5 @@
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnote/Makefile,v 1.17 2012/12/13 20:33:05 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gnote
 PORTVERSION=	0.8.3

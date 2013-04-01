@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/graphics/goocanvas2/Makefile,v 1.5 2011/06/10 22:59:04 mezz Exp $
+#    $MCom$
 
 PORTNAME=	goocanvas
 PORTVERSION=	2.0.1

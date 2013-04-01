@@ -1,6 +1,6 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/mail/evolution3/Makefile,v 1.27 2013/03/09 09:12:38 kwm Exp $
+#   $MCom$
 
 PORTNAME=	evolution
 PORTVERSION=	3.4.4

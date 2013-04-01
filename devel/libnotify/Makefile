@@ -3,7 +3,7 @@
 # Whom:					Andreas Kohn <andreas@syndrom23.de>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libnotify/Makefile,v 1.24 2011/08/30 21:09:51 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	libnotify

@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libpeas/Makefile,v 1.18 2011/10/08 07:42:55 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	libpeas

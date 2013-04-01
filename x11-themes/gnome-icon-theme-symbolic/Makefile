@@ -1,5 +1,5 @@
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-icon-theme-symbolic/Makefile,v 1.11 2012/05/16 15:19:14 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gnome-icon-theme-symbolic
 PORTVERSION=	3.4.0

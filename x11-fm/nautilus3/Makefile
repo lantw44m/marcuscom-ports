@@ -3,7 +3,7 @@
 # Whom:                 		ade, archie
 #
 # $FreeBSD$
-#   $MCom: ports/x11-fm/nautilus3/Makefile,v 1.21 2011/10/18 22:43:09 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	nautilus

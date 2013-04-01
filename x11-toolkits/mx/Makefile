@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/x11-toolkits/mx/Makefile,v 1.3 2011/09/18 17:29:41 kwm Exp $
+#  $MCom$
 #
 
 PORTNAME=	mx

@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese3/Makefile,v 1.16 2012/07/13 10:32:50 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	cheese

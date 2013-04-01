@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/accerciser3/Makefile,v 1.1 2011/10/19 23:32:37 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	accerciser

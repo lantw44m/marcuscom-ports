@@ -3,7 +3,7 @@
 # Whom:			Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/glade3/Makefile,v 1.52 2012/06/16 14:47:45 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	glade3

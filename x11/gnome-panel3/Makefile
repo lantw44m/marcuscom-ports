@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-panel3/Makefile,v 1.25 2012/06/13 20:17:08 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	gnome-panel

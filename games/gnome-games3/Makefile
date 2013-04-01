@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/games/gnome-games3/Makefile,v 1.24 2012/06/14 14:15:11 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gnome-games

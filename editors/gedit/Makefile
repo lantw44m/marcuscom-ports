@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/editors/gedit/Makefile,v 1.131 2012/08/17 19:06:43 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gedit

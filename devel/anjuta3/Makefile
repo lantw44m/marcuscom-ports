@@ -1,6 +1,6 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/anjuta3/Makefile,v 1.2 2012/12/13 20:33:05 kwm Exp $
+#   $MCom$
 
 PORTNAME=	anjuta
 PORTVERSION=	3.4.3

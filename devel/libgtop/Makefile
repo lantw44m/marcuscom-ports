@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/libgtop/Makefile,v 1.58 2011/08/30 20:55:55 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	libgtop

@@ -3,7 +3,7 @@
 # Whom:				Koop Mast<kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/mm-common/Makefile,v 1.14 2011/03/21 12:08:24 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	mm-common

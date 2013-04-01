@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome3-lite/Makefile,v 1.1 2011/04/01 10:59:09 kwm Exp $
+#   $MCom$
 #
 
 PORTREVISION=	0

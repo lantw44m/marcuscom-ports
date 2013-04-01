@@ -1,6 +1,6 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit/Makefile,v 1.22 2012/12/03 22:30:23 kwm Exp $
+#   $MCom$
 
 PORTNAME=	polkit
 PORTVERSION=	0.105

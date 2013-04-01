@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/deskutils/gnome-tweak-tool/Makefile,v 1.15 2012/05/25 19:29:08 kwm Exp $
+#    $MCom$
 
 PORTNAME=	gnome-tweak-tool
 PORTVERSION=	3.4.0.1

@@ -3,7 +3,7 @@
 # Whom:			Martin Wilke <miwi@FreeBSD.org>
 #
 # $FreeBSD$
-#  $MCom: ports/graphics/cogl/Makefile,v 1.6 2012/05/20 12:31:46 kwm Exp $
+#  $MCom$
 #
 
 PORTNAME=	cogl

@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/upower/Makefile,v 1.30 2012/06/26 07:59:21 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	upower

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-terminal/Makefile,v 1.140 2011/04/30 20:43:30 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	gnome-terminal

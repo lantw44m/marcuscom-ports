@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-menus/Makefile,v 1.119 2012/09/03 16:28:28 mezz Exp $
+#   $MCom$
 
 PORTNAME=	gnome-menus
 PORTVERSION=	2.30.5

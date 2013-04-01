@@ -1,6 +1,6 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/lang/gjs/Makefile,v 1.27 2012/10/17 07:11:05 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gjs
 PORTVERSION=	1.32.0

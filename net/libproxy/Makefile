@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net/libproxy/Makefile,v 1.1 2011/01/12 13:10:52 kwm Exp $
+#    $MCom$
 
 PORTNAME=	libproxy
 PORTVERSION=	0.4.6

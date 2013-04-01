@@ -3,7 +3,7 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/sysutils/consolekit/Makefile,v 1.29 2011/08/07 13:20:13 kwm Exp $
+#    $MCom$
 
 PORTNAME=	consolekit
 PORTVERSION=	0.4.5

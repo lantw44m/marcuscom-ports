@@ -3,7 +3,7 @@
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/net-im/telepathy-haze/Makefile,v 1.6 2012/06/13 00:56:29 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	telepathy-haze

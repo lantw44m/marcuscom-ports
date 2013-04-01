@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/devel/goffice/Makefile,v 1.38 2012/09/03 16:30:19 mezz Exp $
+#   $MCom$
 #
 # !!! When updating goffice, don't forget to update pkg-plist in:
 #     math/gnumeric science/gchemutils

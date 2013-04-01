@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/multimedia/gstreamer1-plugins/Makefile,v 1.6 2012/11/26 09:44:38 kwm Exp $
+#    $MCom$
 
 PORTNAME=	gstreamer1-plugins
 PORTVERSION?=	${BASE_PORTVERSION}

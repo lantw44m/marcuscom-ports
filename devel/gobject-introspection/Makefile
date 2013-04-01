@@ -1,6 +1,6 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
 # $FreeBSD: head/devel/gobject-introspection/Makefile 314706 2013-03-20 02:39:49Z mezz $
-#   $MCom: ports/devel/gobject-introspection/Makefile,v 1.51 2013/02/18 22:07:40 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	1.36.0

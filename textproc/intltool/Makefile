@@ -3,7 +3,7 @@
 # Whom:					Ade Lovett <ade@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/intltool/Makefile,v 1.15 2012/05/17 21:35:09 kwm Exp $
+#   $MCom$
 
 PORTNAME=	intltool
 PORTVERSION=	0.50.2

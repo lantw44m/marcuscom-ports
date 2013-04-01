@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes-standard/Makefile,v 1.21 2012/06/02 11:14:38 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gnome-themes-standard
 PORTVERSION=	3.6.0.2

@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-mapi3/Makefile,v 1.15 2012/06/18 11:10:11 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	evolution-mapi

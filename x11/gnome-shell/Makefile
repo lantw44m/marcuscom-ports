@@ -3,7 +3,7 @@
 # Whom:                Pawel Worach <pawel.worach@gmail.com>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-shell/Makefile,v 1.54 2012/07/24 10:02:05 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gnome-shell

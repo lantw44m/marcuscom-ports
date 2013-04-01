@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgda5-ldap/Makefile,v 1.1 2011/06/02 13:29:13 kwm Exp $
+#   $MCom$
 #
 
 PORTREVISION?=	0

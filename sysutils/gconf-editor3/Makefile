@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gconf-editor3/Makefile,v 1.4 2011/06/10 22:59:08 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	gconf-editor

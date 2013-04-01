@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/gnome-system-monitor3/Makefile,v 1.12 2012/06/01 02:59:20 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	gnome-system-monitor

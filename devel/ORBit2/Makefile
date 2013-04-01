@@ -1,6 +1,6 @@
 # Created by: Chia-liang Kao <clkao@CirX.ORG>
 # $FreeBSD: head/devel/ORBit2/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#   $MCom: ports/devel/ORBit2/Makefile,v 1.59 2013/03/30 07:25:13 kwm Exp $
+#   $MCom$
 
 PORTNAME=	ORBit2
 PORTVERSION=	2.14.19

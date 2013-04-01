@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD: head/devel/gamin/Makefile 314945 2013-03-22 16:30:36Z kwm $
-#    $MCom: ports/devel/gamin/Makefile,v 1.11 2012/08/04 16:55:24 kwm Exp $
+#    $MCom$
 
 PORTNAME=	gamin
 PORTVERSION=	0.1.10

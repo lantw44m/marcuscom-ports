@@ -1,6 +1,6 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
 # $FreeBSD: head/devel/glib20/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#   $MCom: ports/devel/glib20/Makefile,v 1.229 2012/12/09 20:42:55 kwm Exp $
+#   $MCom$
 
 PORTNAME=	glib
 PORTVERSION=	2.36.0

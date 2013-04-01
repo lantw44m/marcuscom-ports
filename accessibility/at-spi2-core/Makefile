@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD: head/accessibility/at-spi2-core/Makefile 313633 2013-03-08 10:51:34Z kwm $
-#   $MCom: ports/accessibility/at-spi2-core/Makefile,v 1.41 2012/12/16 22:36:25 kwm Exp $
+#   $MCom$
 
 PORTNAME=	at-spi2-core
 PORTVERSION=	2.8.0

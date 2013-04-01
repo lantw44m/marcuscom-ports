@@ -1,6 +1,6 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
 # $FreeBSD: head/archivers/file-roller/Makefile 309632 2012-12-29 20:57:20Z mezz $
-#   $MCom: ports/archivers/file-roller/Makefile,v 1.184 2010/11/15 22:58:48 kwm Exp $
+#   $MCom$
 
 PORTNAME=	file-roller
 PORTVERSION=	2.32.1

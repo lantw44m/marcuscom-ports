@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/accessibility/caribou/Makefile,v 1.14 2012/08/04 09:25:39 kwm Exp $
+#    $MCom$
 #
 
 PORTNAME=	caribou

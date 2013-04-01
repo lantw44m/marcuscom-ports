@@ -3,7 +3,7 @@
 # Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/py-dbus/Makefile,v 1.17 2012/05/22 08:13:32 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	dbus

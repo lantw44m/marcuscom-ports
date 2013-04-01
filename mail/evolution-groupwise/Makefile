@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-groupwise/Makefile,v 1.3 2012/06/12 22:04:14 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	evolution-groupwise

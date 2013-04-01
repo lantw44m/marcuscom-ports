@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-themes/gnome-themes/Makefile,v 1.186 2011/04/30 20:43:32 mezz Exp $
+#   $MCom$
 #
 
 PORTNAME=	gnome-themes

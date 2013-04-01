@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/textproc/yelp-xsl/Makefile,v 1.10 2012/05/17 09:29:17 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	yelp-xsl

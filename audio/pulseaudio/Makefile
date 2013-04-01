@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/audio/pulseaudio/Makefile,v 1.26 2012/08/16 17:28:39 kwm Exp $
+#   $MCom$
 #
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
 # PORTREVISION bumps of depending ports.

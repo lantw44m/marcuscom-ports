@@ -1,6 +1,6 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/sysutils/polkit-gnome/Makefile,v 1.19 2012/09/01 23:02:13 mezz Exp $
+#   $MCom$
 
 PORTNAME=	polkit-gnome
 PORTVERSION=	0.102

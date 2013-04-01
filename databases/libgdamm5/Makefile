@@ -3,7 +3,7 @@
 # Whom:                 Alexander Nedotsukov <bland@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/databases/libgdamm5/Makefile,v 1.1 2011/10/18 14:14:20 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	libgdamm

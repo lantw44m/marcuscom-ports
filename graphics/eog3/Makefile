@@ -3,7 +3,7 @@
 # Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/eog3/Makefile,v 1.19 2012/06/11 09:55:29 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	eog

@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/misc/gnome-user-docs3/Makefile,v 1.12 2011/11/17 00:41:42 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gnome-user-docs

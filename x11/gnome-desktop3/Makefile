@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/x11/gnome-desktop3/Makefile,v 1.23 2012/05/16 20:56:04 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gnome-desktop
 PORTVERSION=	3.4.2

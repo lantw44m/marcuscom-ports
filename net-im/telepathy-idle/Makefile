@@ -3,7 +3,7 @@
 # Whom:					Florent Thoumie <flz@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/net-im/telepathy-idle/Makefile,v 1.5 2011/11/22 11:12:58 kwm Exp $
+#    $MCom$
 #
 
 PORTNAME=	telepathy-idle

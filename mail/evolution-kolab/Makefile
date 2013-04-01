@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/mail/evolution-kolab/Makefile,v 1.1 2012/06/18 20:07:45 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	evolution-kolab

@@ -3,7 +3,7 @@
 # Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/gdm3/Makefile,v 1.21 2012/10/08 21:48:11 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gdm

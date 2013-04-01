@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/sysutils/system-tools-backends/Makefile,v 1.63 2012/08/17 19:06:47 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	system-tools-backends

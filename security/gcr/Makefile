@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#    $MCom: ports/security/gcr/Makefile,v 1.1 2012/05/26 12:58:06 kwm Exp $
+#    $MCom$
 #
 
 PORTNAME=	gcr

@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/graphics/gtk-update-icon-cache/Makefile,v 1.17 2013/02/18 20:07:28 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gtk-update-icon-cache
 PORTVERSION=	2.24.17

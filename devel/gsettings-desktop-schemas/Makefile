@@ -3,7 +3,7 @@
 # Whom:					Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/devel/gsettings-desktop-schemas/Makefile,v 1.19 2012/08/04 16:55:24 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gsettings-desktop-schemas

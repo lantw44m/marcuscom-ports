@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/orca/Makefile,v 1.95 2012/06/27 12:53:05 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	orca

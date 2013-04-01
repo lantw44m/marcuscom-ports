@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11-toolkits/gdl3/Makefile,v 1.11 2011/10/04 13:43:55 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gdl

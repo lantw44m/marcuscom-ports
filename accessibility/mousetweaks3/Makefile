@@ -3,7 +3,7 @@
 # Whom:				Koop Mast <kwm@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/accessibility/mousetweaks3/Makefile,v 1.15 2011/10/18 20:14:58 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	mousetweaks

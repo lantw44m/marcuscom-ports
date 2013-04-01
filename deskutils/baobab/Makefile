@@ -3,7 +3,7 @@
 # Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/deskutils/gnome-utils/Makefile,v 1.156 2011/12/06 13:43:48 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	baobab

@@ -3,7 +3,7 @@
 # Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/graphics/gnome-color-manager/Makefile,v 1.4 2012/06/14 10:19:45 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	gnome-color-manager

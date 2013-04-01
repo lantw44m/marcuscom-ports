@@ -3,7 +3,7 @@
 # Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
 #
 # $FreeBSD$
-#   $MCom: ports/x11/libxklavier/Makefile,v 1.57 2012/06/14 12:27:01 kwm Exp $
+#   $MCom$
 #
 
 PORTNAME=	libxklavier
