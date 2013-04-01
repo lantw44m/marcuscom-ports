@@ -8,7 +8,7 @@ CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	library that keeps passwords and other secrets
+COMMENT=	Library to access the secret service API
 
 LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
@@ -20,8 +20,6 @@ USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-introspection --disable-vala
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		secret-tool.1
 
