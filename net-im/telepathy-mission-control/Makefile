@@ -1,7 +1,4 @@
-# New ports collection makefile for:	telepathy-mission-control
-# Date created:		2007-10-29
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
 #    $MCom$
 
@@ -13,10 +10,12 @@ MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-mission-contro
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Telepathy component to apps to abstract details of connection managers
 
-LIB_DEPENDS=	telepathy.2:${PORTSDIR}/net-im/libtelepathy \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+LIB_DEPENDS=	telepathy:${PORTSDIR}/net-im/libtelepathy \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
-USE_GNOME=	gnomeprefix pkgconfig gconf2 libxslt gnomehack ltverhack
+USES=		pathfix
+USE_PKGCONFIG=	build
+USE_GNOME=	gnomeprefix gconf2 libxslt ltverhack
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

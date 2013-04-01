@@ -1,10 +1,6 @@
-# New ports collection makefile for:	clutter
-# Date created:		2008-12-25
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
 #  $MCom$
-#
 
 PORTNAME=	cogl
 PORTVERSION=	1.10.4
@@ -25,7 +21,9 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	pkgconfig gdkpixbuf2 gnomehack ltverhack gnomeprefix atk pango
+USES=		pathfix
+USE_PKGCONFIG=	build
+USE_GNOME=	gdkpixbuf2 ltverhack gnomeprefix atk pango
 USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes

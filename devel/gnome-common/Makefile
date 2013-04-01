@@ -13,7 +13,7 @@ COMMENT=	Common automake macros for GNOME 2 and GNOME 3
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	pkgconfig
+USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>

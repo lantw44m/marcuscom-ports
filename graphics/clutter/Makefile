@@ -14,14 +14,16 @@ COMMENT=	OpenGL based interactive canvas library
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	json-glib-1.0.0:${PORTSDIR}/devel/json-glib \
-		cogl.9:${PORTSDIR}/graphics/cogl
+LIB_DEPENDS=	json-glib-1.0:${PORTSDIR}/devel/json-glib \
+		cogl:${PORTSDIR}/graphics/cogl
 
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	pkgconfig gdkpixbuf2 gnomehack ltverhack gnomeprefix atk pango
+USES=		pathfix
+USE_PKGCONFIG=	build
+USE_GNOME=	gdkpixbuf2 ltverhack gnomeprefix atk pango
 USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes

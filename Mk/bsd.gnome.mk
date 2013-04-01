@@ -278,7 +278,7 @@ oaf_USE_GNOME_IMPL=	glib12 orbit libxml
 gnomemimedata_DETECT=	${LOCALBASE}/libdata/pkgconfig/gnome-mime-data-2.0.pc
 gnomemimedata_BUILD_DEPENDS=${gnomemimedata_DETECT}:${PORTSDIR}/misc/gnome-mime-data
 gnomemimedata_RUN_DEPENDS=${gnomemimedata_DETECT}:${PORTSDIR}/misc/gnome-mime-data
-gnomemimedata_USE_GNOME_IMPL=gnomehier pkgconfig
+gnomemimedata_USE_GNOME_IMPL=gnomehier
 
 GCONF_CONFIG?=		${LOCALBASE}/bin/gconf-config
 gconf_LIB_DEPENDS=	gconf-1.1:${PORTSDIR}/devel/gconf

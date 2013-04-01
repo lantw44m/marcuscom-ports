@@ -15,7 +15,9 @@ BUILD_DEPENDS=	icon-naming-utils>=0.8.7:${PORTSDIR}/x11-themes/icon-naming-utils
 USE_XZ=		yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix pkgconfig
+USES=		pathfix
+USE_PKGCONFIG=	build
+USE_GNOME=	gnomeprefix
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

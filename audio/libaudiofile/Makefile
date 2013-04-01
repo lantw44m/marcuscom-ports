@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libaudiofile
-# Date created:				22 Dec 1998
-# Whom:					Vanilla I. Shu <vanilla@FreeBSD.org>
-#
+# Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
 # $FreeBSD$
 #    $MCom$
-#
 
 PORTNAME=	libaudiofile
 PORTVERSION=	0.3.2
@@ -14,13 +10,14 @@ MASTER_SITE_SUBDIR=	sources/${PORTNAME:S/lib//}/${PORTVERSION:C/^([0-9]+\.[0-9]+
 DISTNAME=	audiofile-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A sound library for SGI audio file
+COMMENT=	Sound library for SGI audio file
 
 CONFLICTS=	osalp-0.7.*
 
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack pkgconfig
+USES=		pathfix
+USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 

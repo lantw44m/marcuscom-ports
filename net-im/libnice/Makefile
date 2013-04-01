@@ -1,9 +1,6 @@
-# New ports collection makefile for:	libnice
-# Date created:				27 February 2009
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#
+#   $MCom$
 
 PORTNAME=	libnice
 PORTVERSION=	0.1.3
@@ -16,7 +13,9 @@ COMMENT=	Library and transmitter that implements ICE-19
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomehack pkgconfig glib20 ltverhack
+USES=		pathfix
+USE_PKGCONFIG=	build
+USE_GNOME=	glib20 ltverhack
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--without-gstreamer --with-gstreamer-0.10

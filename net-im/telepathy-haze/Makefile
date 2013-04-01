@@ -1,10 +1,6 @@
-# New ports collection makefile for:	telepathy-haze
-# Date created:		2007-10-29
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
 #   $MCom$
-#
 
 PORTNAME=	telepathy-haze
 PORTVERSION=	0.6.0
@@ -14,12 +10,12 @@ MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-haze/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Libpurple connection manager for telepathy
 
-BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
-LIB_DEPENDS=	purple.10:${PORTSDIR}/net-im/libpurple \
-		idn.17:${PORTSDIR}/dns/libidn \
-		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
+LIB_DEPENDS=	purple:${PORTSDIR}/net-im/libpurple \
+		idn:${PORTSDIR}/dns/libidn \
+		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib
 
-USE_GNOME=	pkgconfig
+USES=		pathfix
+USE_GNOME=	libxslt:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 WRKSRC=		${WRKDIR}/telepathy-${PORTNAME}-${DISTVERSION}
 GNU_CONFIGURE=	yes

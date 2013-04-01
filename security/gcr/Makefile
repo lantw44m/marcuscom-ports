@@ -1,10 +1,6 @@
-# New ports collection makefile for:   gcr
-# Date Created:			26 May 2012
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
 #    $MCom$
-#
 
 PORTNAME=	gcr
 PORTVERSION=	3.4.1
@@ -26,7 +22,9 @@ RUN_DEPENDS=	update-mime-database:${PORTSDIR}/misc/shared-mime-info
 CONFLICTS=	gnome-keyring-3.[0-2].[0-9]* gnome-keyring-2.[0-9]*
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack gtk30 pkgconfig intlhack
+USES=		pathfix
+USE_PKGCONFIG=	build
+USE_GNOME=	gtk30 intlhack
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes

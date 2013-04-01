@@ -1,10 +1,6 @@
-# New ports collection makefile for:   libchamplain
-# Date Created:			04 Aug 2009
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
 #   $MCom$
-#
 
 PORTNAME=	libchamplain
 PORTVERSION=	0.8.3
@@ -12,21 +8,23 @@ CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	A C library aimed to provide a Gtk+ widget to display rasterized maps and markers
+COMMENT=	C library aimed to provide a Gtk+ widget to display rasterized maps and markers
 
-LIB_DEPENDS=	clutter-gtk-0.10.0:${PORTSDIR}/graphics/clutter-gtk \
-		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome
+LIB_DEPENDS=	clutter-gtk-0.10:${PORTSDIR}/graphics/clutter-gtk \
+		soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
 
 LATEST_LINK=	libchamplain08
 USE_BZIP2=	yes
-USE_GNOME=	pkgconfig gtk20 gnomehack ltverhack:1 gnomehier
+USES=		pathfix
+USE_PKGCONFIG=	build
+USE_GNOME=	gtk20 ltverhack:1 gnomehier
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_SQLITE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION=0.8
 

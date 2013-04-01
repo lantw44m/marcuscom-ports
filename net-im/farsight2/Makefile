@@ -1,7 +1,4 @@
-# New ports collection makefile for:	farsight2
-# Date created:				27 February 2009
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
 #    $MCom$
 
@@ -13,7 +10,7 @@ MASTER_SITES=	http://farsight.freedesktop.org/releases/farsight2/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Collection of GStreamer modules and libraries for videoconferencing
 
-LIB_DEPENDS=	nice.10:${PORTSDIR}/net-im/libnice
+LIB_DEPENDS=	nice:${PORTSDIR}/net-im/libnice
 
 CONFLICTS=	farstream-[0-9]*
 
@@ -22,7 +19,9 @@ USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
-USE_GNOME=	gnomehack pkgconfig glib20 ltverhack
+USES=		pathfix
+USE_PKGCONFIG=	build
+USE_GNOME=	glib20 ltverhack
 USE_GSTREAMER=	core good bad python
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include

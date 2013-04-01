@@ -1,10 +1,6 @@
-# New ports collection makefile for:	telepathy-idle
-# Date created:				Apr 19 2007
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
+# Created by: Florent Thoumie <flz@FreeBSD.org>
 # $FreeBSD$
 #    $MCom$
-#
 
 PORTNAME=	telepathy-idle
 PORTVERSION=	0.1.11
@@ -14,20 +10,16 @@ MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	IRC Connection Manager for Telepathy Framework
 
-LIB_PC_DEPENDS=	gobject-2.0.pc:${PORTSDIR}/devel/glib20 \
-		dbus-glib-1.pc:${PORTSDIR}/devel/dbus-glib \
-		telepathy-glib.pc:${PORTSDIR}/net-im/telepathy-glib
-
-BUILD_DEPENDS=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g} \
-    		xsltproc:${PORTSDIR}/textproc/libxslt
-RUN_DEPENDS=	${LIB_PC_DEPENDS:C|^|${LOCALBASE}/libdata/pkgconfig/|g}
-
-LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo
+LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib
 
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack pkgconfig glib20
+USES=		pathfix
+USE_PKGCONFIG=	build
+USE_GNOME=	glib20 libxslt:build
 
 MAN8=		telepathy-idle.8
 
