@@ -2,6 +2,7 @@
 # $FreeBSD: head/devel/libbonobo/Makefile 313635 2013-03-08 11:32:11Z bapt $
 #   $MCom: ports/devel/libbonobo/Makefile,v 1.84 2010/09/26 20:57:33 kwm Exp $
 
+
 PORTNAME=	libbonobo
 PORTVERSION=	2.32.0
 PORTREVISION?=	0
