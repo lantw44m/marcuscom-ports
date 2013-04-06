@@ -3,6 +3,7 @@
 #   $MCom: ports/devel/libbonobo/Makefile,v 1.84 2010/09/26 20:57:33 kwm Exp $
 
 PORTNAME=	libbonobo
+
 PORTVERSION=	2.32.0
 PORTREVISION?=	0
 CATEGORIES=	devel
