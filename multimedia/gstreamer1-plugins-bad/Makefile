@@ -1,8 +1,8 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/multimedia/gstreamer1-plugins-bad/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 COMMENT=	Bad gstreamer-plugins
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MINIMAL_VERSION}:${POR
 RUN_DEPENDS+=	gstreamer1-plugins>=${GST1_VERSION}${GST1_MININAL_VERSION}:${PORTSDIR}/multimedia/gstreamer1-plugins
 
 DIST=		bad
-BAD_GST_DIRS=	gst-libs sys gst po
+BAD_GST_DIRS=	gst-libs sys gst po pkgconfig
 NO_GSTREAMER_COMMON=	yes
 PLIST=		${.CURDIR}/pkg-plist
 

@@ -123,6 +123,9 @@ lib/libgstsignalprocessor-%%VERSION%%.a
 lib/libgstsignalprocessor-%%VERSION%%.la
 lib/libgstsignalprocessor-%%VERSION%%.so
 lib/libgstsignalprocessor-%%VERSION%%.so.0
+libdata/pkgconfig/gstreamer-codecparsers-%%VERSION%%.pc
+libdata/pkgconfig/gstreamer-basevideo-%%VERSION%%.pc
+libdata/pkgconfig/gstreamer-plugins-bad-%%VERSION%%.pc
 share/locale/af/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/az/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-bad-%%VERSION%%.mo
