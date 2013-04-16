@@ -1,13 +1,9 @@
- New ports collection makefile for:	desktop-file-utils
-# Date created:			11 Jun 2004
-# Whom:				Jean-Yves Lefort <jylefort@brutele.be>
-#
+# Created by: Jean-Yves Lefort <jylefort@brutele.be>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/devel/desktop-file-utils/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	desktop-file-utils
-PORTVERSION=	0.19
+PORTVERSION=	0.21
 CATEGORIES=	devel
 MASTER_SITES=	http://freedesktop.org/software/${PORTNAME}/releases/
 
@@ -15,11 +11,10 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A couple of command line utilities for working with desktop entries
 
 USE_GNOME=	glib20
-USE_PKGCONFIG=	build
 USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
-WANT_GNOME=	yes
+USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-lispdir
 CONFIGURE_ENV=	EMACS="no"
