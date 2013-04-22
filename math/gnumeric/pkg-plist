@@ -286,7 +286,6 @@ lib/libspreadsheet-%%VERSION%%.so
 lib/libspreadsheet.la
 lib/libspreadsheet.so
 libdata/pkgconfig/libspreadsheet-%%SHORT_VER%%.pc
-@exec update-desktop-database > /dev/null || /usr/bin/true
 share/applications/gnumeric.desktop
 share/gnumeric/%%VERSION%%/GNOME_Gnumeric-gtk.xml
 share/gnumeric/%%VERSION%%/Gnumeric-embed.xml

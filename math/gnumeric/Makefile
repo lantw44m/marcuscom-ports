@@ -1,7 +1,6 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
 # $FreeBSD: head/math/gnumeric/Makefile 314629 2013-03-19 09:39:43Z kwm $
 #   $MCom$
-# When updating, remember to update pkg-plist of gchemutils.
 
 PORTNAME=	gnumeric
 PORTVERSION=	1.12.1
@@ -24,7 +23,7 @@ USE_XZ=		yes
 USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USES=		pathfix desktop-file-utils shared-mime-info
-USE_GNOME=	gnomeprefix intlhack gnomehier libgsf
+USE_GNOME=	gnomeprefix intlhack gnomehier libgsf pygobject
 USE_PYTHON=	2.7-
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
@@ -66,13 +65,6 @@ PLIST_SUB+=		PERL="@comment "
 CONFIGURE_ARGS+=	--without-gda
 PLIST_SUB+=		GNOMEDB="@comment "
 #.endif
-
-post-patch:
-#	@${RM} -f ${WRKSRC}/GNOME_Gnumeric.server.in
-#	@${REINPLACE_CMD} -e 's|gda-3.0 >= 3.1.1|gda-3.0 >= 3.0.1|g' \
-#		-e 's|gnomedb-3.0 >= 3.0.1|gnomedb-3.0 >= 3.0.0|g' \
-#		-e 's|gnumeric_with_gconf=true|gnumeric_with_gconf=false|g' \
-#			${WRKSRC}/configure
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/gnumeric.desktop ${PREFIX}/share/applications
