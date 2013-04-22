@@ -29,6 +29,5 @@ USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-p2p
-GLIB_SCHEMAS=	org.a11y.atspi.gschema.xml
 
 .include <bsd.port.mk>
