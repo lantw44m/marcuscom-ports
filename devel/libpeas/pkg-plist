@@ -88,6 +88,7 @@ share/locale/as/LC_MESSAGES/libpeas.mo
 share/locale/ast/LC_MESSAGES/libpeas.mo
 share/locale/be/LC_MESSAGES/libpeas.mo
 share/locale/bg/LC_MESSAGES/libpeas.mo
+share/locale/bn_IN/LC_MESSAGES/libpeas.mo
 share/locale/ca/LC_MESSAGES/libpeas.mo
 share/locale/ca@valencia/LC_MESSAGES/libpeas.mo
 share/locale/cs/LC_MESSAGES/libpeas.mo
@@ -110,8 +111,10 @@ share/locale/hu/LC_MESSAGES/libpeas.mo
 share/locale/id/LC_MESSAGES/libpeas.mo
 share/locale/it/LC_MESSAGES/libpeas.mo
 share/locale/ja/LC_MESSAGES/libpeas.mo
+share/locale/kn/LC_MESSAGES/libpeas.mo
 share/locale/ko/LC_MESSAGES/libpeas.mo
 share/locale/lt/LC_MESSAGES/libpeas.mo
+share/locale/mr/LC_MESSAGES/libpeas.mo
 share/locale/te/LC_MESSAGES/libpeas.mo
 share/locale/th/LC_MESSAGES/libpeas.mo
 share/locale/tr/LC_MESSAGES/libpeas.mo
