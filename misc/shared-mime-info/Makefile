@@ -1,0 +1,42 @@
+# Created by: olgeni@FreeBSD.org
+# $FreeBSD: head/misc/shared-mime-info/Makefile 314767 2013-03-20 21:45:00Z kwm $
+#   $MCom$
+
+PORTNAME=	shared-mime-info
+PORTVERSION=	1.1
+CATEGORIES=	misc gnome
+MASTER_SITES=	http://people.freedesktop.org/~hadess/
+
+MAINTAINER=	gnome@FreeBSD.org
+COMMENT=	MIME types database from the freedesktop.org project
+
+USE_XZ=		yes
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-update-mimedb
+USE_GETTEXT=	yes
+USE_GMAKE=	yes
+USE_PKGCONFIG=	build
+USES=		pathfix
+USE_GNOME=	glib20 libxml2 intltool intlhack
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
+#MAKE_JOBS_UNSAFE=	yes
+
+MAN1=		update-mime-database.1
+
+SUB_FILES=	pkg-install
+SUB_LIST=	MIMEDIRS="${MIMEDIRS:O:u}"
+
+MIMEDIRS=	${LOCALBASE}/share/mime \
+		${PREFIX}/share/mime
+MIMESUBDIRS=	application audio image inode message model multipart \
+		packages text video x-epoc x-content
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
+		${WRKSRC}/update-mime-database.c
+
+post-install:
+	@${SETENV} "PKG_PREFIX=${PREFIX}" ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+
+.include <bsd.port.mk>
