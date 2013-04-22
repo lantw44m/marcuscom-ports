@@ -17,6 +17,7 @@ USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
+USE_PKGCONFIG=	build
 USES=		pathfix
 USE_GNOME=	gnomeprefix glib20 libxml2 ltverhack intlhack
 USE_AUTOTOOLS=	libtool
