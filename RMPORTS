@@ -1,3 +1,4 @@
 x11/yelp-xsl|textproc/yelp-xsl|%DATE%|moved to beter location
 devel/libgdata08|devel/libgdata|%DATE%|libgdata shuffle
-devel/gio-fam-backend|devel/glib20|%DATE%|gio fam module by kqueue support in glib20 
+devel/gio-fam-backend|devel/glib20|%DATE%|gio fam module by kqueue support in glib20
+devel/libgsf-gnome||%DATE%|gone
