@@ -18,11 +18,9 @@ CONFLICTS=	gmime-1.0.*
 SLAVEDIRS=	mail/gmime2-sharp
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}24
-USE_ICONV=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		iconv pathfix pkgconfig
 USE_GNOME?=	glib20
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
@@ -39,12 +37,14 @@ LATEST_LINK?=	${PORTNAME}24
 
 PORTDOCS=	*
 
+.include <bsd.port.options.mk>
+
 post-patch:
 	@${REINPLACE_CMD} -e 's|-DG_DISABLE_DEPRECATED||g' \
 		${WRKSRC}/*/Makefile.in
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in docs/reference/html/*
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DOCSDIR}

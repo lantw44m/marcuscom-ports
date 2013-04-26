@@ -496,12 +496,12 @@ gnomepanel3_GNOME_DESKTOP_VERSION=3
 
 nautilus2_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus
 nautilus2_DETECT=	${LOCALBASE}/share/gir-1.0/Nautilus-2.0.gir
-nautilus2_USE_GNOME_IMPL=librsvg2 gnomedesktop desktopfileutils gvfs
+nautilus2_USE_GNOME_IMPL=librsvg2 gnomedesktop gvfs
 nautilus2_GNOME_DESKTOP_VERSION=2
 
 nautilus3_LIB_DEPENDS=	nautilus-extension.1:${PORTSDIR}/x11-fm/nautilus3
 nautilus3_DETECT=	${LOCALBASE}/share/gir-1.0/Nautilus-3.0.gir
-nautilus3_USE_GNOME_IMPL=gnomedesktop3 desktopfileutils gvfs libxml2
+nautilus3_USE_GNOME_IMPL=gnomedesktop3 gvfs libxml2
 nautilus3_GNOME_DESKTOP_VERSION=3
 
 metacity_LIB_DEPENDS=	metacity-private.0:${PORTSDIR}/x11-wm/metacity
@@ -520,13 +520,13 @@ gal2_USE_GNOME_IMPL=gnomeui libgnomeprintui
 
 gnomecontrolcenter2_LIB_DEPENDS=gnome-window-settings.1:${PORTSDIR}/sysutils/gnome-control-center
 gnomecontrolcenter2_DETECT=${LOCALBASE}/libdata/pkgconfig/gnome-window-settings-2.0.pc
-gnomecontrolcenter2_USE_GNOME_IMPL=metacity gnomemenus desktopfileutils libgnomekbd gnomedesktop librsvg2
+gnomecontrolcenter2_USE_GNOME_IMPL=metacity gnomemenus libgnomekbd gnomedesktop librsvg2
 gnomecontrolcenter2_GNOME_DESKTOP_VERSION=2
 
 gnomecontrolcenter3_DETECT=${LOCALBASE}/lib/control-center-1/panels/libcolor.so
 gnomecontrolcenter3_BUILD_DEPENDS=	${gnomecontrolcenter3_DETECT}:${PORTSDIR}/sysutils/gnome-control-center3
 gnomecontrolcenter3_RUN_DEPENDS=	${gnomecontrolcenter3_DETECT}:${PORTSDIR}/sysutils/gnome-control-center3
-gnomecontrolcenter3_USE_GNOME_IMPL=gnomemenus3 desktopfileutils libgnomekbd3 gnomedesktop3 gconf2
+gnomecontrolcenter3_USE_GNOME_IMPL=gnomemenus3 libgnomekbd3 gnomedesktop3 gconf2
 gnomecontrolcenter3_GNOME_DESKTOP_VERSION=3
 
 libgda2_LIB_DEPENDS=	gda-2.3:${PORTSDIR}/databases/libgda2
@@ -632,7 +632,7 @@ desktopfileutils_USE_GNOME_IMPL=glib20
 
 nautiluscdburner_LIB_DEPENDS=nautilus-burn.4:${PORTSDIR}/sysutils/nautilus-cd-burner
 nautiluscdburner_DETECT=	${LOCALBASE}/libdata/pkgconfig/libnautilus-burn.pc
-nautiluscdburner_USE_GNOME_IMPL=nautilus2 desktopfileutils
+nautiluscdburner_USE_GNOME_IMPL=nautilus2
 nautiluscdburner_GNOME_DESKTOP_VERSION=2
 
 gnomemenus_BUILD_DEPENDS=	gnome-menus<=2.39.0:${PORTSDIR}/x11/gnome-menus
