@@ -21,9 +21,8 @@ PORTSCOUT=	limitw:1,even
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	gnomehier intlhack glib20 atk
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

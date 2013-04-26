@@ -16,9 +16,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-introspection=yes
 USE_GMAKE=	yes
 USE_XZ=		yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20 gnomehier
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 
 .include <bsd.port.mk>

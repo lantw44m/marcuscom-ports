@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-toolkits/pangox-compat/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	pangox-compat
 PORTVERSION=	0.0.2
@@ -19,9 +19,8 @@ USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20 pango
-USE_PKGCONFIG=	build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 

@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@rainbow-runner.nl>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/multimedia/gstreamer1-libav/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gstreamer1-libav
 PORTVERSION=	1.0.5
@@ -22,9 +22,9 @@ LIB_DEPENDS=	orc-0.4:${PORTSDIR}/devel/orc
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
+USES=		pkgconfig
 USE_GSTREAMER1=	yes
 GNU_CONFIGURE=	yes
-USE_PKGCONFIG=	build
 LIBAV_CONFIG=	--cc=${CC} \
 		--enable-runtime-cpudetect \
 		--enable-pic

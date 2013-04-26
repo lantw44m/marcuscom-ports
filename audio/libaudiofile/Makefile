@@ -1,6 +1,6 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/audio/libaudiofile/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	libaudiofile
 PORTVERSION=	0.3.2
@@ -16,8 +16,7 @@ CONFLICTS=	osalp-0.7.*
 
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix
-USE_PKGCONFIG=	build
+USES=		pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 

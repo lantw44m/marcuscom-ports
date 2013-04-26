@@ -1,6 +1,6 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net-im/telepathy-salut/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	telepathy-salut
 PORTVERSION=	0.8.0
@@ -16,9 +16,8 @@ LIB_DEPENDS=	avahi-glib:${PORTSDIR}/net/avahi-app \
 
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build
-USE_PKGCONFIG=	build
 USE_OPENSSL=	yes
 USE_PYTHON_BUILD=	yes
 USE_SQLITE=	3

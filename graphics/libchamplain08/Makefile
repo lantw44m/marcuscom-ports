@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/graphics/libchamplain08/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	libchamplain
 PORTVERSION=	0.8.3
@@ -15,8 +15,7 @@ LIB_DEPENDS=	clutter-gtk-0.10:${PORTSDIR}/graphics/clutter-gtk \
 
 LATEST_LINK=	libchamplain08
 USE_BZIP2=	yes
-USES=		pathfix
-USE_PKGCONFIG=	build
+USES=		pathfix pkgconfig
 USE_GNOME=	gtk20 ltverhack:1 gnomehier
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
@@ -42,10 +41,5 @@ PLIST_SUB+=		PYTHON=""
 CONFIGURE_ARGS+=	--enable-python=no
 PLIST_SUB+=		PYTHON="@comment "
 .endif
-
-.pre-everything:
-	@${ECHO_CMD} ""
-	@${ECHO_CMD} "Specify WITHOUT_PYTHON=yes to disable python bindings"
-	@${ECHO_CMD} ""
 
 .include <bsd.port.mk>

@@ -21,9 +21,8 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME=	ltverhack
-USE_PKGCONFIG=	build
 CONFIGURE_ARGS=	--with-configdir=${PREFIX}/etc/fonts/conf.d \
 		--with-templatedir=${PREFIX}/etc/fonts/conf.avail \
 		--with-xmldir=${PREFIX}/etc/fonts \
