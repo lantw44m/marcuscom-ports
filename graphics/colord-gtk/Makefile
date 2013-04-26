@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/graphics/colord-gtk/Makefile 18380 2013-04-17 13:17:26Z kwm $
 
 PORTNAME=	colord-gtk
 PORTVERSION=	0.1.25
@@ -17,11 +17,9 @@ LIB_DEPENDS=	colord:${PORTSDIR}/graphics/colord \
 		lcms2:${PORTSDIR}/graphics/lcms2
 
 USE_XZ=		yes
-USES=		pathfix
 USE_GNOME=	gnomehier gtk30 intlhack 
-USE_PKGCONFIG=	build
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_SQLITE=	3
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

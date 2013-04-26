@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomegames2
-# Date created:				08 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/games/gnome-games3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-games
 PORTVERSION=	3.4.2
@@ -19,10 +15,10 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		yelp-tools>=0:${PORTSDIR}/textproc/yelp-tools \
 		itstool:${PORTSDIR}/textproc/itstool \
 		valac:${PORTSDIR}/lang/vala
-LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile \
-		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
-		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
-		clutter-1.0.0:${PORTSDIR}/graphics/clutter
+LIB_DEPENDS=	guile:${PORTSDIR}/lang/guile \
+		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
+		clutter-gtk-1.0:${PORTSDIR}/graphics/clutter-gtk3 \
+		clutter-1.0:${PORTSDIR}/graphics/clutter
 RUN_DEPENDS=	dbus-launch:${PORTSDIR}/devel/dbus
 
 CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-2.[0-9]*
@@ -30,14 +26,13 @@ CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-2.[0-9]*
 LATEST_LINK=	gnome-games3
 USE_XZ=		yes
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix desktop-file-utils pkgconfig
 INSTALLS_ICONS=	yes
 USE_GL=		gl glu
 USE_XORG=	ice x11
 USE_GMAKE=	yes
 USE_SQLITE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 pygobject3 \
-		librsvg2 desktopfileutils
+USE_GNOME=	gnomeprefix intlhack gtk30 pygobject3 librsvg2
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-gtk=3.0 --enable-games=all
@@ -68,6 +63,5 @@ MAN6=		glchess.6 glines.6 gnect.6 gnibbles.6 gnobots2.6 \
 post-install:
 	${CHGRP} games ${LOCALBASE}/share/games
 	${CHMOD} g=rwXs ${LOCALBASE}/share/games
-	@-update-desktop-database
 
 .include <bsd.port.mk>

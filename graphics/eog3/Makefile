@@ -1,10 +1,6 @@
-# New ports collection makefile for:	eog2
-# Date created:		21 May 2002
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/graphics/eog3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	eog
 PORTVERSION=	3.4.3
@@ -17,23 +13,20 @@ COMMENT=	The Eye Of Gnome image viewer
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas \
-		update-mime-database:${PORTSDIR}/misc/shared-mime-info
-LIB_DEPENDS=	peas-gtk-1.0.0:${PORTSDIR}/devel/libpeas \
+		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
+LIB_DEPENDS=	peas-gtk-1.0:${PORTSDIR}/devel/libpeas \
 		lcms.1:${PORTSDIR}/graphics/lcms
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
-		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas \
-		update-mime-database:${PORTSDIR}/misc/shared-mime-info
+		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 CONFLICTS=	eog-2.[0-9]*
 
 LATEST_LINK=	eog3
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack librsvg2 desktopfileutils gtk30 \
-		gnomedesktop3 gnomedocutils
+USE_GNOME=	gnomeprefix intlhack librsvg2 gtk30 gnomedesktop3 gnomedocutils
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix desktop-file-utils pkgconfig shared-mime-info
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -75,8 +68,5 @@ PLIST_SUB+=	EXIFEXEMPI=""
 .else
 PLIST_SUB+=	EXIFEXEMPI="@comment "
 .endif
-
-post-install:
-	@-update-desktop-database > /dev/null
 
 .include <bsd.port.mk>

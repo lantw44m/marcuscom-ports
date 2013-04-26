@@ -1,9 +1,6 @@
-# New ports collection makefile for:	libxml2
-# Date created:				28 September 1998
-# Whom:					Yukihiro Nakai <Nakai@technologist.com>
-#
+# Created by: Yukihiro Nakai <Nakai@technologist.com>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/textproc/libxml2/Makefile 17268 2013-04-01 05:13:11Z marcus $
 #
 # WITHOUT_SCHEMA disable XML schema support
 # WITHOUT_THREADS disable threads support
@@ -28,10 +25,8 @@ COMMENT?=	XML parser library for GNOME
 USE_CSTD=	gnu89
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
-USE_ICONV=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME?=	gnomehack
-USE_PKGCONFIG=	build
+USES=		iconv pathfix pkgconfig
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS?=--with-iconv=${LOCALBASE} \
 		--with-html-dir=${PREFIX}/share/doc \

@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/www/epiphany-extensions/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	epiphany-extensions
 PORTVERSION=	2.30.2
@@ -19,9 +19,9 @@ RUN_DEPENDS=	epiphany:${PORTSDIR}/www/epiphany
 
 CONFLICTS=	epiphany-extensions-3.[0-9]*
 
-USE_GETTEXT=	yes
+USES=		gettext pathfix
 USE_BZIP2=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack
+USE_GNOME=	gnomeprefix intlhack
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes

@@ -1,6 +1,6 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/anjuta3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	anjuta
 PORTVERSION=	3.4.3
@@ -28,9 +28,8 @@ CONFLICTS=	anjuta-2.[0-9]*
 
 LATEST_LINK=	anjuta3
 USE_XZ=		yes
-USES=		bison pathfix
+USES=		bison pathfix gettext pkgconfig shared-mime-info
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
 INSTALLS_ICONS=	yes
 USE_PERL5=	yes
 USE_PYTHON=	yes
@@ -119,8 +118,5 @@ post-patch:
 		${WRKSRC}/plugins/build-basic-autotools/plugin.c
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${PREFIX}|g' \
 		${WRKSRC}/libanjuta/anjuta-utils.c
-
-post-install:
-	@update-mime-database ${PREFIX}/share/mime
 
 .include <bsd.port.mk>

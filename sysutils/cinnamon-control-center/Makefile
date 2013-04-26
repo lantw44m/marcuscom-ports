@@ -39,9 +39,8 @@ GH_TAGNAME=	1.7.1
 GH_COMMIT=	a3883df
 
 USE_XORG=	x11 xfixes sm
-USE_GETTEXT=	yes
+USES=		gettext pathfix
 USE_GMAKE=	yes
-USES=		pathfix
 USE_GNOME=	gnomeprefix intlhack gtk30 gconf2 gnomemenus3 \
 		gnomedesktop3 evolutiondataserver3
 USE_LDCONFIG=	yes

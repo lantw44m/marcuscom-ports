@@ -556,5 +556,3 @@ share/locale/zh_CN/LC_MESSAGES/gnote.mo
 @dirrmtry lib/gnote/addins/%%VERSION%%
 @dirrmtry lib/gnote/addins
 @dirrmtry lib/gnote
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

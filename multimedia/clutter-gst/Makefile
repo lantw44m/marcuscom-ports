@@ -1,9 +1,6 @@
-# New ports collection makefile for:	clutter-gst
-# Date created:		2008-12-25
-# Whom:			Martin Wilke <miwi@FreeBSD.org>
-#
+# Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/multimedia/clutter-gst/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	clutter-gst
 PORTVERSION=	1.6.0
@@ -18,7 +15,8 @@ LIB_DEPENDS=	clutter-1.0:${PORTSDIR}/graphics/clutter
 USE_GMAKE=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack ltverhack gnomeprefix
+USES=		pathfix
+USE_GNOME=	ltverhack gnomeprefix
 USE_GSTREAMER=	yes
 USE_XORG=	xp x11
 USE_LDCONFIG=	yes

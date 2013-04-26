@@ -1,10 +1,6 @@
-# New ports collection makefile for:	Seahorse
-# Date created:		08 March 2000
-# Whom:			Dave McKay <dave@mu.org>
-#
+# Created by: Dave McKay <dave@mu.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/security/seahorse/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	seahorse
 PORTVERSION=	2.32.0
@@ -18,20 +14,20 @@ COMMENT=	GNOME application for managing encryption keys (PGP, SSH)
 
 BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
-LIB_DEPENDS=	gpgme.19:${PORTSDIR}/security/gpgme \
-    		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		gcr.0:${PORTSDIR}/security/gnome-keyring \
-		gcrypt.18:${PORTSDIR}/security/libgcrypt \
-		soup-2.4.1:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme \
+    		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		gcr:${PORTSDIR}/security/gnome-keyring \
+		gcrypt:${PORTSDIR}/security/libgcrypt \
+		soup-2.4:${PORTSDIR}/devel/libsoup
 
 CONFLICTS=	libcryptui-3.[0-9]* seahorse-3.[0-9]*
 
 USE_XORG=	sm
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix gconf2 gnomedocutils
+USE_GNOME=	intlhack gnomeprefix gconf2 gnomedocutils
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes

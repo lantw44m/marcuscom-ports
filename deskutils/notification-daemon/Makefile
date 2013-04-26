@@ -1,10 +1,6 @@
-# New ports collection makefile for:	notification-daemon
-# Date created:				2005-08-06
-# Whom:					Andreas Kohn <andreas@syndrom23.de>
-#
+# Created by: Andreas Kohn <andreas@syndrom23.de>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/deskutils/notification-daemon/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	notification-daemon
 PORTVERSION=	0.7.6
@@ -17,13 +13,13 @@ COMMENT=	Send small notifications to your desktop
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	dbus-1.3:${PORTSDIR}/devel/dbus \
-		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
+LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus \
+		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack gnomeprefix intlhack gtk30
+USE_GNOME=	gnomeprefix intlhack gtk30
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_XORG=	x11
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

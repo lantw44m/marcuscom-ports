@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/sysutils/accountsservice/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	accountsservice
 PORTVERSION=	0.6.24
@@ -17,8 +17,8 @@ LIB_DEPENDS=	xslt:${PORTSDIR}/textproc/libxslt \
 		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack glib20 intlhack gnomehier
-USE_GETTEXT=	yes
+USE_GNOME=	glib20 intlhack gnomehier
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

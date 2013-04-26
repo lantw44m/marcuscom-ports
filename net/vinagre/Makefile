@@ -1,10 +1,6 @@
-# New ports collection makefile for:	vinagre
-# Date created:				16 December 2007
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/net/vinagre/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	vinagre
 PORTVERSION=	2.30.3
@@ -16,18 +12,17 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	VNC client for the GNOME Desktop
 
-LIB_DEPENDS=	gtk-vnc-1.0.0:${PORTSDIR}/net/gtk-vnc \
-    		avahi-core.7:${PORTSDIR}/net/avahi-app \
-		avahi-ui.0:${PORTSDIR}/net/avahi-gtk \
-		gdbm.4:${PORTSDIR}/databases/gdbm \
+LIB_DEPENDS=	gtk-vnc-1.0:${PORTSDIR}/net/gtk-vnc \
+    		avahi-core:${PORTSDIR}/net/avahi-app \
+		avahi-ui:${PORTSDIR}/net/avahi-gtk \
+		gdbm:${PORTSDIR}/databases/gdbm \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 
 CONFLICTS=	vinagre-3.[0-9]*
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack vte gconf2 gnomedocutils \
-		gnomepanel
+USES=		gettext pathfix desktop-file-utils shared-mime-info
+USE_GNOME=	gnomeprefix intlhack vte gconf2 gnomedocutils gnomepanel
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
@@ -54,8 +49,6 @@ PLIST_SUB+=	TELEPATHY="@comment "
 .endif
 
 post-install:
-	@-update-desktop-database > /dev/null
-	@-update-mime-database ${PREFIX}/share/mime > /dev/null
 .if !defined(NOPORTDOCS)
 	${MKDIR} ${DOCSDIR}
 .for f in AUTHORS COPYING ChangeLog MAINTAINERS NEWS README

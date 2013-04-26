@@ -2252,5 +2252,3 @@ share/pixmaps/anjuta/anjuta-preferences-general-48.png
 @dirrm include/libanjuta-3.0/libanjuta/interfaces
 @dirrm include/libanjuta-3.0/libanjuta
 @dirrm include/libanjuta-3.0
-@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
-@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime

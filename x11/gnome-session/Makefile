@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomesession
-# Date created:				08 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/gnome-session/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-session
 PORTVERSION=	2.32.1
@@ -19,20 +15,20 @@ COMMENT=	Session component for the GNOME 2 desktop
 CONFLICTS=	gnome-session-3.[0-9]*
 
 BUILD_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring \
-		notify.4:${PORTSDIR}/devel/libnotify \
+LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
+		notify:${PORTSDIR}/devel/libnotify \
 		execinfo:${PORTSDIR}/devel/libexecinfo \
-		upower-glib.1:${PORTSDIR}/sysutils/upower
+		upower-glib:${PORTSDIR}/sysutils/upower
 RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon \
     		${LOCALBASE}/sbin/console-kit-daemon:${PORTSDIR}/sysutils/consolekit \
 		${LOCALBASE}/bin/xdpyinfo:${PORTSDIR}/x11/xdpyinfo
 
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_BZIP2=	yes
 USE_XORG=	ice sm xau xrandr
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2
+USE_GNOME=	gnomeprefix intlhack gconf2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs

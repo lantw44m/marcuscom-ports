@@ -635,8 +635,6 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrmtry lib/gedit-2
 @dirrm include/gedit-%%VERSION%%/gedit
 @dirrm include/gedit-%%VERSION%%
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES

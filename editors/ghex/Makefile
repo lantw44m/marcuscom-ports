@@ -1,10 +1,6 @@
-# New ports collection makefile for:	ghex2
-# Date created:				15 September 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/editors/ghex/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	ghex
 PORTVERSION=	2.24.0
@@ -20,9 +16,8 @@ CONFLICT=	ghex-3.\*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomeprintui libgnomeui \
-		gnomedocutils
-USE_GETTEXT=	yes
+USE_GNOME=	gnomeprefix intlhack libgnomeprintui libgnomeui gnomedocutils
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes

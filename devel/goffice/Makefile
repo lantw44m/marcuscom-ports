@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/goffice/Makefile 18385 2013-04-22 12:56:25Z kwm $
 
 PORTNAME=	goffice
 PORTVERSION=	0.10.1
@@ -15,14 +15,14 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USES=		pathfix
 USE_GNOME=	gnomeprefix intlhack gtk30 libgsf ltverhack
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-lasem=no --with-config-backend=gsettings
+
 PLIST_SUB=	VERSION=${PORTVERSION} SHORT_VER=${SHORT_VER}
 SHORT_VER=0.10
 

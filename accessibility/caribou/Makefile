@@ -1,10 +1,6 @@
-# New ports collection makefile for:   caribou
-# Date created:			10 Juni 2010
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
-#
+#    $MCom: ports/trunk/accessibility/caribou/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	caribou
 PORTVERSION=	0.4.3
@@ -19,19 +15,18 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter \
-		gee.2:${PORTSDIR}/devel/libgee06 \
-		xklavier.12:${PORTSDIR}/x11/libxklavier
+LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter \
+		gee:${PORTSDIR}/devel/libgee06 \
+		xklavier:${PORTSDIR}/x11/libxklavier
 RUN_DEPENDS=	py*-atspi>=2.1.91:${PORTSDIR}/accessibility/py-atspi
 
 USE_XZ=		yes
 USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_PYTHON=	yes
 USE_XORG=	x11 xtst
-USE_GNOME=	gnomehack intltool pygobject3 gtk30 intlhack gnomedocutils \
-		libxml2
+USE_GNOME=	intltool pygobject3 gtk30 intlhack gnomedocutils libxml2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

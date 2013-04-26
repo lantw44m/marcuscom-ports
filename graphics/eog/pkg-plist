@@ -411,8 +411,6 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm lib/eog
 @dirrm include/eog-2.20/eog
 @dirrm include/eog-2.20
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES

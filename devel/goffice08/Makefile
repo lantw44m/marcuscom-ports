@@ -19,12 +19,13 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk20 libgsf ltverhack
-USE_GETTEXT=	yes
+USE_GNOME=	gnomeprefix intlhack gtk20 libgsf ltverhack
+USES=		gettext pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
 PLIST_SUB=	VERSION=${PORTVERSION} \
 		SHORT_VER=0.8
 

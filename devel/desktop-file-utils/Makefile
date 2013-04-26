@@ -12,9 +12,8 @@ COMMENT=	A couple of command line utilities for working with desktop entries
 
 USE_GNOME=	glib20
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pkgconfig
 USE_GMAKE=	yes
-USE_PKGCONFIG=	build
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--without-lispdir
 CONFIGURE_ENV=	EMACS="no"

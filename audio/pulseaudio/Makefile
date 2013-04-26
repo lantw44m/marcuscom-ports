@@ -1,13 +1,9 @@
-# New ports collection makefile for:	polypaudio
-# Date created:		29 October 2004
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/audio/pulseaudio/Makefile 17268 2013-04-01 05:13:11Z marcus $
 #
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
 # PORTREVISION bumps of depending ports.
-#
 
 PORTNAME=	pulseaudio
 PORTVERSION=	2.0
@@ -29,10 +25,10 @@ LIB_DEPENDS=	samplerate:${PORTSDIR}/audio/libsamplerate \
 		ck-connector:${PORTSDIR}/sysutils/consolekit
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack glib20 intltool ltverhack gnomehier
+USE_GNOME=	glib20 intltool ltverhack gnomehier
 USE_XORG=	x11 sm xtst ice
 USE_LDCONFIG=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libltdl libtool
 USE_GMAKE=	yes
@@ -70,7 +66,7 @@ MAN1=		esdcompat.1 pacat.1 pacmd.1 pactl.1 padsp.1 \
 MAN5=		default.pa.5 pulse-cli-syntax.5 pulse-client.conf.5 \
 		pulse-daemon.conf.5
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MJACK}
 LIB_DEPENDS+=	jack:${PORTSDIR}/audio/jack
@@ -119,6 +115,8 @@ CONFIGURE_ARGS+=--enable-orc
 .else
 CONFIGURE_ARGS+=--disable-orc
 .endif
+
+.include <bsd.port.pre.mk>
 
 # OSVERSION wasn't bumped after the MFC. So we need to use the next bump.
 # Sadly for 7-stable the OSVERSION wasn't bumped after 7.4-R

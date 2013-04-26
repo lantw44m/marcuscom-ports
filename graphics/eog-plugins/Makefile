@@ -1,10 +1,6 @@
-# New ports collection makefile for:	eog-plugins
-# Date created:		28 August 2009
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/graphics/eog-plugins/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	eog-plugins
 PORTVERSION=	2.30.1
@@ -24,9 +20,9 @@ CONFLICTS=	eog-plugins-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk20
+USE_GNOME=	gnomeprefix intlhack gtk20
 WANT_GNOME=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

@@ -3169,8 +3169,6 @@ share/omf/swell-foop/swell-foop-sv.omf
 @dirrm %%PYTHON_SITELIBDIR%%/glchess/chess
 @dirrm %%PYTHON_SITELIBDIR%%/glchess
 @dirrm lib/gnome-games
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES

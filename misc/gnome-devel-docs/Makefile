@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnome-devel-docs
-# Date created:		2007-09-18
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/misc/gnome-devel-docs/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-devel-docs
 PORTVERSION=	2.32.0

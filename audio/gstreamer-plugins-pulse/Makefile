@@ -1,9 +1,5 @@
-# New ports collection makefile for:	gstreamer-plugins-pulse
-# Date created:		July 22, 2006
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#
 
 PORTREVISION=	1
 CATEGORIES=	audio

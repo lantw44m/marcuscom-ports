@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/graphics/gtk-update-icon-cache/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gtk-update-icon-cache
 PORTVERSION=	2.24.17
@@ -26,8 +26,8 @@ USE_PERL5_BUILD=yes
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack atk pango gdkpixbuf2 ltverhack
-USE_GETTEXT=	yes
+USE_GNOME=	atk pango gdkpixbuf2 ltverhack
+USES=		gettext pathfix pkgconfig
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 PATCHDIR=	${.CURDIR}/../../x11-toolkits/gtk20/files

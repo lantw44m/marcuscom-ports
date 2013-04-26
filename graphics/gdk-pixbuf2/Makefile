@@ -16,11 +16,10 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 LATEST_LINK=	gdk-pixbuf2
 USE_XZ=		yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
 USE_XORG=	xt xi x11
 USE_AUTOTOOLS=	libtool
-USES=		pathfix
+USES=		pathfix pkgconfig
 USE_GNOME+=	gnomehier glib20 ltverhack
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
@@ -36,7 +35,7 @@ OPTIONS_DEFAULT=JASPER JPEG PNG TIFF NLS
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=--disable-nls

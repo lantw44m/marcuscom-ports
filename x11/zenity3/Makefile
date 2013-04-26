@@ -16,10 +16,10 @@ LICENSE=	LGPL20
 LATEST_LINK=	zenity3
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gtk30 gnomedocutils intlhack
+USE_GNOME=	gnomeprefix gtk30 gnomedocutils intlhack
 USE_XORG=	x11
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -36,7 +36,7 @@ OPTIONS_DEFAULT=NOTIFY
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MNOTIFY}
-LIB_DEPENDS+=		notify.4:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS+=		notify:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=	--enable-libnotify
 .else
 CONFIGURE_ARGS+=	--disable-libnotify

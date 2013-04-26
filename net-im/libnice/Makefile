@@ -11,10 +11,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library and transmitter that implements ICE-19
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
-USES=		pathfix
-USE_PKGCONFIG=	build
 USE_GNOME=	glib20 ltverhack
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool

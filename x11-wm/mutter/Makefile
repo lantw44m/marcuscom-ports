@@ -1,6 +1,6 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-wm/mutter/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	mutter
 PORTVERSION=	3.4.1
@@ -25,11 +25,9 @@ USE_XZ=		yes
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm xfixes \
 		xrender xdamage
 USE_PYTHON=	2.5+
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_PKGCONFIG=	build
-USES=		pathfix
 USE_GNOME=	gnomehier gnomeprefix intlhack gtk30 ltverhack
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer

@@ -1,10 +1,6 @@
-# New ports collection makefile for:	Seahorse
-# Date created:		08 March 2000
-# Whom:			Dave McKay <dave@mu.org>
-#
+# Created by: Dave McKay <dave@mu.org>
 # $FreeBSD$
 #   $MCom$
-#
 
 PORTNAME=	seahorse-sharing
 PORTVERSION=	3.2.1
@@ -16,16 +12,16 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Seahorse PGP public key sharing using DNS-SD and HKP.
 
 BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
-LIB_DEPENDS=	gpgme.19:${PORTSDIR}/security/gpgme \
-		avahi-glib.1:${PORTSDIR}/net/avahi-app \
-		soup-2.4.1:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme \
+		avahi-glib:${PORTSDIR}/net/avahi-app \
+		soup-2.4:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg \
 		seahorse>=3.2.1:${PORTSDIR}/security/seahorse3
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix
+USE_GNOME=	intlhack gnomeprefix
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS=	-I${LOCALBASE}/include

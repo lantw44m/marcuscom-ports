@@ -1,6 +1,6 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/mail/evolution/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evolution
 PORTVERSION=	2.32.1
@@ -12,19 +12,18 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An integrated mail, calendar and address book distributed suite
 
-LIB_DEPENDS=	nss3.1:${PORTSDIR}/security/nss \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
-		gtkimageview.0:${PORTSDIR}/x11-toolkits/gtkimageview
+LIB_DEPENDS=	nss3:${PORTSDIR}/security/nss \
+		unique-1.0:${PORTSDIR}/x11-toolkits/unique \
+		gtkimageview:${PORTSDIR}/x11-toolkits/gtkimageview
 RUN_DEPENDS=	${LOCALBASE}/lib/gnome-spell/libgnome-spell-component-0.3.so:${PORTSDIR}/textproc/gnome-spell
 
 CONFLICTS=	evolution-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		bison pathfix
-USE_GETTEXT=	yes
+USES=		bison gettext pathfix desktop-file-utils
 USE_GNOME=	gnomeprefix intlhack evolutiondataserver gtkhtml3 \
-		desktopfileutils gnomedocutils ltasneededhack gnomedesktop
+		gnomedocutils ltasneededhack gnomedesktop
 USE_AUTOTOOLS=	libtool
 USE_GSTREAMER=	yes
 INSTALLS_OMF=	yes

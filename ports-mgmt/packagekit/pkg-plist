@@ -437,5 +437,3 @@ share/polkit-1/actions/org.freedesktop.packagekit.policy
 @dirrmtry etc/PackageKit/events/pre-transaction.d
 @dirrmtry etc/PackageKit/events
 @dirrmtry etc/PackageKit
-@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
-@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime

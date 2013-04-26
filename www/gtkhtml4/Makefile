@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gtkhtml3
-# Date created:				12 March 2003
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/www/gtkhtml4/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gtkhtml
 PORTVERSION=	4.4.4
@@ -18,16 +14,16 @@ COMMENT=	Lightweight HTML rendering/printing/editing engine
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
-		enchant.1:${PORTSDIR}/textproc/enchant
+LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
+		enchant:${PORTSDIR}/textproc/enchant
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_XORG=	xinerama xi xrandr xcursor xcomposite xdamage xproto
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gconf2 ltverhack
+USE_GNOME=	gnomeprefix intlhack gtk30 gconf2 ltverhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include

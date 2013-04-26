@@ -1,10 +1,6 @@
-# New ports collection makefile for:    totem
-# Date created:         17 Oct 2002
-# Whom:                 Hendrik Scholz <hendrik@scholz.net>
-#
+# Created by: Hendrik Scholz <hendrik@scholz.net>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/multimedia/totem/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	totem
 PORTVERSION=	2.32.0
@@ -18,8 +14,8 @@ COMMENT?=	A gstreamer-based video player for the GNOME 2 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	gdata.7:${PORTSDIR}/devel/libgdata06 \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
-		totem-plparser.17:${PORTSDIR}/multimedia/totem-pl-parser
+		unique-1.0:${PORTSDIR}/x11-toolkits/unique \
+		totem-plparser:${PORTSDIR}/multimedia/totem-pl-parser
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon \
 		${PYTHON_SITELIBDIR}/atom/__init__.py:${PORTSDIR}/devel/py-gdata
@@ -28,9 +24,8 @@ CONFLICTS=	totem-3.[0-9]*
 
 USE_PYTHON=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils \
-		nautilus2 ltverhack pygtk2 gnomehier
+USES=		gettext pathfix pkgconfig desktop-file-utils
+USE_GNOME=	gnomeprefix intlhack nautilus2 ltverhack pygtk2 gnomehier
 USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly python gio
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
@@ -123,7 +118,6 @@ post-patch:
 		${WRKSRC}/src/backend/bacon-video-widget-gst-0.10.c
 
 post-install:
-	@-update-desktop-database
 	${MKDIR} ${PREFIX}/share/vala/vapi
 	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.vapi ${PREFIX}/share/vala/vapi
 	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.deps ${PREFIX}/share/vala/vapi

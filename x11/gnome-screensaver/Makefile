@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnome-screensaver
-# Date created:		09 June 2005
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/gnome-screensaver/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-screensaver
 PORTVERSION=	2.30.2
@@ -16,18 +12,17 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME screen saver and locker
 
-LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	notify:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	xscreensaver-gl-helper:${PORTSDIR}/x11/xscreensaver-gnome-hacks
 
 CONFLICTS=	gnome-screensaver-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_XORG=	xtst xxf86vm
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomemenus libgnomekbd \
-		gnomedesktop
+USE_GNOME=	gnomeprefix intlhack gnomemenus libgnomekbd gnomedesktop
 CONFIGURE_ARGS=	--with-gdm-config=${LOCALBASE}/etc/gdm/custom.conf \
 		--with-xscreensaverdir=${XSCREENSAVER_DIR} \
 		--with-xscreensaverhackdir=${LOCALBASE}/bin/xscreensaver-hacks

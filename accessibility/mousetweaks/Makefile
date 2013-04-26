@@ -1,10 +1,6 @@
-# Ports collection makefile for:	mousetweaks
-# Date created:			2008 01 10
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/accessibility/mousetweaks/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	mousetweaks
 PORTVERSION=	2.32.1
@@ -19,9 +15,9 @@ CONFLICTS=	mousetweaks-3.[0-9]*
 
 USE_XORG=	x11 xfixes xcursor xtst
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gnomeprefix gnomepanel intlhack
+USE_GNOME=	gnomeprefix gnomepanel intlhack
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

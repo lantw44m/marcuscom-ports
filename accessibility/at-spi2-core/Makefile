@@ -18,12 +18,10 @@ LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
 
 PORTSCOUT=	limitw:1,even
 
+USES=		pathfix pkgconfig gettext
 USE_XZ=		yes
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USES=		pathfix
 USE_GNOME=	gnomehier glib20 intlhack
-USE_PKGCONFIG=	build
 USE_XORG=	x11 xi xtst xext
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

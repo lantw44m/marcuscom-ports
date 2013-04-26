@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/libgtop/Makefile 17279 2013-04-06 09:33:19Z kwm $
 
 PORTNAME=	libgtop
 PORTVERSION=	2.28.4
@@ -14,9 +14,8 @@ COMMENT=	GNOME 2 top library
 USE_XZ=		yes
 USE_PERL5_BUILD=yes
 USE_XORG=	xau
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
-USES=		pathfix
 USE_GNOME=	gnomeprefix glib20 ltverhack intlhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool

@@ -16,10 +16,8 @@ LIB_DEPENDS=	cups:${PORTSDIR}/print/cups-client
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		pathfix
-USE_PKGCONFIG=	build
 USE_GNOME=	intlhack ltverhack glib20
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=  libtool
 CPPFLAGS+=	-I${LOCALBASE}/include

@@ -1,10 +1,6 @@
-# New ports collection makefile for:   metacity
-# Date created:        21 May 2002
-# Whom:                Garrett Rooney <rooneg@electricjellyfish.net>
-#
+# Created by: Garrett Rooney <rooneg@electricjellyfish.net>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11-wm/metacity/Makefile 17269 2013-04-01 05:13:48Z marcus $
 
 PORTNAME=	metacity
 PORTVERSION=	2.30.3
@@ -17,18 +13,18 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A window manager for the adult in you
 
 BUILD_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
-LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
+LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
+		canberra-gtk:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity
 
 CONFLICTS=	metacity-2.3[4-9]*
 
 USE_BZIP2=	yes
 USE_XORG=	x11 xcomposite xdamage
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix intlhack gnomehack gconf2 ltverhack gtk20
+USE_GNOME=	gnomeprefix intlhack gconf2 ltverhack gtk20
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

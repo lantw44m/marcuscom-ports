@@ -1,9 +1,6 @@
-# New ports collection makefile for:   drwright
-# Date Created:			26 Apr 2011
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#
+#  $MCom$
 
 PORTNAME=	drwright
 PORTVERSION=	3.2.5
@@ -13,14 +10,14 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 RSI prevention tool
 
-LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
-		notify.4:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
+		notify:${PORTSDIR}/devel/libnotify
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack intlhack gtk30 gnomecontrolcenter3
+USE_GNOME=	intlhack gtk30 gnomecontrolcenter3
 USE_XORG=	x11 xscrnsaver
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 

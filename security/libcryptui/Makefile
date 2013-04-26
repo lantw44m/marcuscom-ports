@@ -1,10 +1,6 @@
-# New ports collection makefile for:	Seahorse
-# Date created:		08 March 2000
-# Whom:			Dave McKay <dave@mu.org>
-#
+# Created by: Dave McKay <dave@mu.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/security/libcryptui/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	libcryptui
 PORTVERSION=	3.4.1
@@ -16,8 +12,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME application for managing encryption keys (PGP, SSH)
 
 BUILD_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
-LIB_DEPENDS=	gpgme.19:${PORTSDIR}/security/gpgme \
-    		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+LIB_DEPENDS=	gpgme:${PORTSDIR}/security/gpgme \
+    		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg
 
@@ -25,9 +21,9 @@ CONFLICTS=	seahorse-2.[0-9]* seahorse-3.0.[0-9]*
 
 USE_LDCONFIG=	yes
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix gnomedocutils gtk30
+USE_GNOME=	intlhack gnomeprefix gnomedocutils gtk30
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include
 LDFLAGS=	-L${LOCALBASE}/lib
@@ -36,12 +32,12 @@ CONFIGURE_ARGS=	--enable-introspection=no
 GLIB_SCHEMAS=	org.gnome.seahorse.recipients.gschema.xml
 MAN1=		seahorse-daemon.1
 
-OPTIONS=	NOTIFY "Enable libnotify support" on
+OPTIONS_DEFINE=	NOTIFY
 
 .include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_NOTIFY)
-LIB_DEPENDS+=	notify.4:${PORTSDIR}/devel/libnotify
+.if ${PORT_OPTIONS:MNOTIFY}
+LIB_DEPENDS+=	notify:${PORTSDIR}/devel/libnotify
 .else
 CONFIGURE_ARGS+=--disable-libnotify
 .endif

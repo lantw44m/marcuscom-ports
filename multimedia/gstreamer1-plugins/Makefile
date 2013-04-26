@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/multimedia/gstreamer1-plugins/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gstreamer1-plugins
 PORTVERSION?=	${BASE_PORTVERSION}
@@ -41,15 +41,14 @@ UGLY_DISTFILE=		${UGLY_DISTNAME}${EXTRACT_SUFX}
 DIST?=		base
 
 SHLIB_VERSION=	0
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 # xxx remove when 1.0 is offical released
 VERSION=	${GST1_VERSION}
 #VERSION=	1.0
 WANT_GSTREAMER=	yes
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME+=	gnomehack ltverhack:0 ltasneededhack
-USE_PKGCONFIG=	build
+USE_GNOME+=	ltverhack:0 ltasneededhack
 USE_AUTOTOOLS=	libtool
 GST_PLUGIN?=	base
 USE_LDCONFIG=	yes

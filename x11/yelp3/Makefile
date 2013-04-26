@@ -1,10 +1,6 @@
-# New ports collection makefile for:	yelp
-# Date created:				18 May 2002
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/yelp3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	yelp
 PORTVERSION=	3.4.2
@@ -26,11 +22,11 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/textproc/yel
 CONFLICTS=	yelp-2.[0-9]*
 
 LATEST_LINK=	yelp3
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_XORG=	x11 ice
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 libxslt libxml2
+USE_GNOME=	gnomeprefix intlhack gtk30 libxslt libxml2
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes

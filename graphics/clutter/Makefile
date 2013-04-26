@@ -1,6 +1,6 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
-#  $MCom$
+#  $MCom: ports/trunk/graphics/clutter/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	clutter
 PORTVERSION=	1.10.8
@@ -18,11 +18,9 @@ LIB_DEPENDS=	json-glib-1.0:${PORTSDIR}/devel/json-glib \
 		cogl:${PORTSDIR}/graphics/cogl
 
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix
-USE_PKGCONFIG=	build
 USE_GNOME=	gdkpixbuf2 ltverhack gnomeprefix atk pango
 USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi

@@ -13,10 +13,8 @@ COMMENT?=	A file and directory monitoring system
 
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USES=		pathfix
+USES=		gettext pathfix pkgconfig
 USE_GNOME?=	glib20
-USE_PKGCONFIG=	build
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS?=--with-html-dir=${PREFIX}/share/doc \
 		--without-python

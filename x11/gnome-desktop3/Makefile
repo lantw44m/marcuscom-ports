@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-desktop3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-desktop
 PORTVERSION=	3.4.2
@@ -26,9 +26,8 @@ LATEST_LINK=	gnome-desktop3
 USE_XORG=	x11 xrandr xext
 USE_GNOME=	gnomeprefix intlhack gnomedocutils gtk30 \
 		ltverhack referencehack
-USE_GETTEXT=	yes
 USE_GMAKE=	yes
-USES=		bison pathfix
+USES=		bison gettext pathfix
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes

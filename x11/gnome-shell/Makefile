@@ -1,10 +1,6 @@
-# New ports collection makefile for:   gnome-shell
-# Date created:        14 Aug 2009
-# Whom:                Pawel Worach <pawel.worach@gmail.com>
-#
+# Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/gnome-shell/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-shell
 PORTVERSION=	3.4.2
@@ -17,28 +13,28 @@ COMMENT=	Next generation GNOME desktop shell
 
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
 		gcr>=3.4.1:${PORTSDIR}/security/gcr
-LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification \
-		caribou.0:${PORTSDIR}/accessibility/caribou \
-		mutter.0:${PORTSDIR}/x11-wm/mutter \
+LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
+		caribou:${PORTSDIR}/accessibility/caribou \
+		mutter:${PORTSDIR}/x11-wm/mutter \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
 		gcr:${PORTSDIR}/security/gcr \
-		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
-		telepathy-logger.2:${PORTSDIR}/net-im/telepathy-logger \
-		folks.25:${PORTSDIR}/net-im/folks \
-		pulse.0:${PORTSDIR}/audio/pulseaudio \
-		croco-0.6.3:${PORTSDIR}/textproc/libcroco \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
+		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
+		telepathy-logger:${PORTSDIR}/net-im/telepathy-logger \
+		folks:${PORTSDIR}/net-im/folks \
+		pulse:${PORTSDIR}/audio/pulseaudio \
+		croco-0.6:${PORTSDIR}/textproc/libcroco \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		clutter-1.0:${PORTSDIR}/graphics/clutter \
-		gjs.0:${PORTSDIR}/lang/gjs
+		gjs:${PORTSDIR}/lang/gjs
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
 USE_XZ=		yes
 USE_XORG=	x11 xfixes sm
-USE_GETTEXT=	yes
+USES=		gettext pathfix
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix gnomehack intlhack gtk30 gnomemenus3 \
+USE_GNOME=	gnomeprefix intlhack gtk30 gnomemenus3 \
 		gnomedesktop3 evolutiondataserver3 ltverhack
 USE_GSTREAMER=	theora vp8 ogg
 USE_LDCONFIG=	yes

@@ -2819,5 +2819,3 @@ share/thumbnailers/evince.thumbnailer
 @dirrm include/evince/%%VERSION%%/libdocument
 @dirrm include/evince/%%VERSION%%
 @dirrm include/evince
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

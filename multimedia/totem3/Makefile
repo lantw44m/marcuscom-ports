@@ -1,10 +1,6 @@
-# New ports collection makefile for:    totem
-# Date created:         17 Oct 2002
-# Whom:                 Hendrik Scholz <hendrik@scholz.net>
-#
+# Created by: Hendrik Scholz <hendrik@scholz.net>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/multimedia/totem3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	totem
 PORTVERSION=	3.4.2
@@ -19,11 +15,11 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	gdata.13:${PORTSDIR}/devel/libgdata \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		clutter-gst-1.0.0:${PORTSDIR}/multimedia/clutter-gst \
-		clutter-gtk-1.0.0:${PORTSDIR}/graphics/clutter-gtk3 \
-		mx-1.0.2:${PORTSDIR}/x11-toolkits/mx \
-		peas-1.0.0:${PORTSDIR}/devel/libpeas \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		clutter-gst-1.0:${PORTSDIR}/multimedia/clutter-gst \
+		clutter-gtk-1.0:${PORTSDIR}/graphics/clutter-gtk3 \
+		mx-1.0:${PORTSDIR}/x11-toolkits/mx \
+		peas-1.0:${PORTSDIR}/devel/libpeas \
 		totem-plparser.17:${PORTSDIR}/multimedia/totem-pl-parser
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
@@ -36,9 +32,9 @@ LATEST_LINK=	totem3
 USE_PYTHON=	yes
 USE_XORG=	x11 xproto xtst ice sm
 USE_XZ=		yes
-USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils gtk30 libxml2 \
-		nautilus3 ltverhack pygobject3 gnomedocutils gnomehier
+USES=		gettext pathfix pkgconfig desktop-file-utils
+USE_GNOME=	gnomeprefix intlhack gtk30 libxml2 nautilus3 ltverhack \
+		pygobject3 gnomedocutils gnomehier
 USE_GSTREAMER=	core good mpeg2dec soup ugly gio resindvd
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
@@ -138,7 +134,6 @@ post-patch:
 		${WRKSRC}/src/backend/bacon-video-widget-gst-0.10.c
 
 post-install:
-	@-update-desktop-database
 #	${MKDIR} ${PREFIX}/share/vala/vapi
 #	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.vapi ${PREFIX}/share/vala/vapi
 #	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.deps ${PREFIX}/share/vala/vapi

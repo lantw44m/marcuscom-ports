@@ -1,10 +1,5 @@
-# New ports collection makefile for:	cheese
-# Date created:				13 January 2008
-# Whom:					FreeBSD GNOME Team <gnome@FreeBSD.org>
-#
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/multimedia/cheese3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	cheese
 PORTVERSION=	3.4.2
@@ -35,9 +30,9 @@ LATEST_LINK=	cheese3
 USE_XORG=	xxf86vm x11
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix intlhack evolutiondataserver3 librsvg2 \
+USE_GNOME=	gnomeprefix intlhack evolutiondataserver3 librsvg2 \
 		gnomedesktop3
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GSTREAMER=	bad gconf good jpeg ogg theora v4l2 vorbis 
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes

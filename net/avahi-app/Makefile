@@ -1,10 +1,6 @@
-# New ports collection makefile for:	avahi
-# Date created:		18 November 2005
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/net/avahi-app/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.31
@@ -20,17 +16,17 @@ AVAHI_SLAVE?=	no
 
 .if ${AVAHI_SLAVE}!="header"
 BUILD_DEPENDS?=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS?=	expat.6:${PORTSDIR}/textproc/expat2 \
-		daemon.0:${PORTSDIR}/devel/libdaemon \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		gdbm.4:${PORTSDIR}/databases/gdbm
+LIB_DEPENDS?=	expat:${PORTSDIR}/textproc/expat2 \
+		daemon:${PORTSDIR}/devel/libdaemon \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		gdbm:${PORTSDIR}/databases/gdbm
 RUN_DEPENDS?=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 USERS?=		${PORTNAME}
 GROUPS?=	${USERS}
 
-USE_GNOME?=	gnomehack ltverhack glib20 intltool
-USE_GETTEXT=	yes
+USE_GNOME?=	ltverhack glib20 intltool
+USES=		gettext pathfix pkgconfig
 USE_GNOME_SUBR=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool

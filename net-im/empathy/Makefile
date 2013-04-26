@@ -1,9 +1,6 @@
-# New ports collection makefile for:	empathy
-# Date created:		2007-10-29
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net-im/empathy/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	empathy
 PORTVERSION=	2.34.0
@@ -17,16 +14,16 @@ COMMENT=	GNOME IM client based around telepathy
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
-LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
-		telepathy.2:${PORTSDIR}/net-im/libtelepathy \
-		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
-		telepathy-farsight.0:${PORTSDIR}/net-im/telepathy-farsight \
-		telepathy-logger.2:${PORTSDIR}/net-im/telepathy-logger \
-		folks-telepathy.22:${PORTSDIR}/net-im/folks04 \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
-		notify.4:${PORTSDIR}/devel/libnotify \
-		gcr.0:${PORTSDIR}/security/gnome-keyring \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
+LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
+		telepathy:${PORTSDIR}/net-im/libtelepathy \
+		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
+		telepathy-farsight:${PORTSDIR}/net-im/telepathy-farsight \
+		telepathy-logger:${PORTSDIR}/net-im/telepathy-logger \
+		folks-telepathy:${PORTSDIR}/net-im/folks04 \
+		unique-1.0:${PORTSDIR}/x11-toolkits/unique \
+		notify:${PORTSDIR}/devel/libnotify \
+		gcr:${PORTSDIR}/security/gnome-keyring \
+		canberra-gtk:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
@@ -35,9 +32,9 @@ CONFLICTS=	empathy-3.[0-9]*
 
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
-USE_GNOME=	evolutiondataserver gnomehack gnomeprefix pygtk2 ltverhack
+USE_GNOME=	evolutiondataserver gnomeprefix pygtk2 ltverhack
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool
 INSTALLS_OMF=	yes

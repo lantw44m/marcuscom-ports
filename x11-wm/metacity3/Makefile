@@ -1,6 +1,6 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-wm/metacity3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	metacity
 PORTVERSION=	2.34.13
@@ -26,10 +26,10 @@ CONFLICTS=	metacity-2.30.[0-9]*
 LATEST_LINK=	metacity3
 USE_XZ=		yes
 USE_XORG=	x11 xcomposite xdamage xrender xcursor xinerama xext xrandr
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix intlhack gnomehack ltverhack gtk20
+USE_GNOME=	gnomeprefix intlhack ltverhack gtk20
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

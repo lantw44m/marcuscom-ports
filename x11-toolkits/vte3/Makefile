@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-toolkits/vte3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME?=	vte
 PORTVERSION=	0.32.2
@@ -25,10 +25,9 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/gnome-pty-helper:${PORTSDIR}/x11-toolkits/gno
 
 LATEST_LINK?=	vte3
 USE_GMAKE=	yes
-USES=		bison pathfix
+USES=		bison gettext pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GETTEXT=	yes
 USE_GNOME?=	gnomeprefix gtk30 ltverhack referencehack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -40,22 +39,23 @@ CONFIGURE_ARGS?=--disable-python \
 		--disable-freetypetest
 
 .if !defined(MASTERDIR)
-OPTIONS=	GLX	"Enable support for DRI/GLX rendering" off
+OPTIONS_DEFINE=	GLX
+GLX_DESC=	Support for DRI/GLX rendering
 .endif
 
 PLIST_SUB=	VERSION=2.90
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${OSVERSION} < 900007
 EXTRA_PATCHES+=		${FILESDIR}/extra-patch-gnome-pty-helper_gnome-utmp.c
 .endif
 
-.if defined(WITH_GLX) && !defined(MASTERDIR)
+.if ${PORT_OPTIONS:MGLX} && !defined(MASTERDIR)
 CONFIGURE_ARGS+=	--with-glX
 USE_GL=			yes
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
 
 .endif

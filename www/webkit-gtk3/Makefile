@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/www/webkit-gtk3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	webkit
 PORTVERSION=	1.8.3
@@ -21,11 +21,10 @@ LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
 		soup-2.4:${PORTSDIR}/devel/libsoup
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
 USE_GSTREAMER=	yes
 MAKE_JOBS_SAFE=	yes
 USE_XORG=	xt
-USES=		bison
+USES=		bison gettext pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk30 libxslt ltverhack

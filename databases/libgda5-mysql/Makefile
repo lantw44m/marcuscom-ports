@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libgda2
-# Date created:				02 June 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/databases/libgda5-mysql/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTREVISION?=	0
 CATEGORIES=	databases gnome

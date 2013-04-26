@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gedit-plugins
-# Date created:				19 September 2003
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/editors/gedit-plugins3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gedit-plugins
 PORTVERSION=	3.4.0
@@ -16,7 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plugins for GEdit 3
 
 BUILD_DEPENDS=	gedit>=${GEDITVER}:${PORTSDIR}/editors/gedit3
-LIB_DEPENDS=	peas-1.0.0:${PORTSDIR}/devel/libpeas
+LIB_DEPENDS=	peas-1.0:${PORTSDIR}/devel/libpeas
 RUN_DEPENDS=	gedit>=${GEDITVER}:${PORTSDIR}/editors/gedit3
 
 CONFLICTS=	gedit-plugins-2.[0-9]*
@@ -26,9 +22,9 @@ LATEST_LINK=	gedit-plugins3
 USE_LDCONFIG=	yes
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehack gnomeprefix intlhack gtk30 gtksourceview3
+USE_GNOME=	gnomeprefix intlhack gtk30 gtksourceview3
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 

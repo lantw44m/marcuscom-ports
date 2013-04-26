@@ -1,10 +1,6 @@
-# New ports collection makefile for:	evolution-ews
-# Date created:				20 Okt 2011
-# Whom:					Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/mail/evolution-ews/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evolution-ews
 PORTVERSION=	3.4.4
@@ -16,19 +12,19 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Evolution 3 plugin to connect to Microsoft Exchange Web Services
 
 BUILD_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
-LIB_DEPENDS=	soup-2.4.1:${PORTSDIR}/devel/libsoup \
-		ical.44:${PORTSDIR}/devel/libical
+LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
+		ical:${PORTSDIR}/devel/libical
 RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 
 EVO_VER=	3.4.1
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_SQLITE=	yes
 USE_GMAKE=	yes
 USE_BDB=	41
 USE_OPENLDAP=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack ltasneededhack
+USE_GNOME=	gnomeprefix intlhack ltasneededhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 

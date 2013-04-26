@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnome2
-# Date created:		21 May 2002
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/gnome2/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome2
 PORTVERSION=	2.32.1

@@ -1,9 +1,5 @@
-# New ports collection makefile for:	ConsoleKit
-# Date Created:				26 Aug 2006
-# Whom:					Florent Thoumie <flz@FreeBSD.org>
-#
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/sysutils/consolekit/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	consolekit
 PORTVERSION=	0.4.5
@@ -14,14 +10,13 @@ DISTFILES=	ConsoleKit-${PORTVERSION}${EXTRACT_SUFX}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Framework for defining and tracking users
 
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-    		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
+LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+    		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 
 WRKSRC=		${WRKDIR}/ConsoleKit-${PORTVERSION}
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_XORG=	x11
-USE_GNOME=	gnomehack
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

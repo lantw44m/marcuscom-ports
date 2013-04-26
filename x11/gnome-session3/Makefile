@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomesession
-# Date created:				08 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/gnome-session3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-session
 PORTVERSION=	3.4.2.1
@@ -26,11 +22,11 @@ RUN_DEPENDS=	${LOCALBASE}/sbin/console-kit-daemon:${PORTSDIR}/sysutils/consoleki
 
 LATEST_LINK=	gnome-session3
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_XORG=	ice sm xau xext xtst xrender xtrans xcomposite
 USE_GL=		gl
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 intltool gtk30 librsvg2
+USE_GNOME=	gnomeprefix intlhack gconf2 intltool gtk30 librsvg2
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs

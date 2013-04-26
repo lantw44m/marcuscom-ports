@@ -1,9 +1,6 @@
-# New ports collection makefile for:	libgda4-bdb
-# Date created:				28 February 2009
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#
+#   $MCom$
 
 PORTREVISION?=	0
 CATEGORIES=	databases gnome

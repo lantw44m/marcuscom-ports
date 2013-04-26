@@ -19,11 +19,10 @@ USERS=		colord
 GROUPS=		colord
 
 USE_XZ=		yes
-USES=		pathfix
 USE_GNOME=	gnomehier glib20 intlhack
 USE_PKGCONFIG=	build
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_SQLITE=	3
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

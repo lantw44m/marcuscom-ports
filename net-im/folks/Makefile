@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net-im/folks/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	folks
 PORTVERSION=	0.7.0
@@ -12,8 +12,8 @@ COMMENT=	library to aggregates people from multiple sources
 
 BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee06 \
-		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
+LIB_DEPENDS=	gee:${PORTSDIR}/devel/libgee06 \
+		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib
 
 CONFLICTS=	folks-0.4.[0-9]*
 
@@ -21,8 +21,8 @@ USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehier gnomehack intlhack ltverhack evolutiondataserver3
-USE_GETTEXT=	yes
+USE_GNOME=	gnomehier intlhack ltverhack evolutiondataserver3
+USES=		gettext pathfix
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

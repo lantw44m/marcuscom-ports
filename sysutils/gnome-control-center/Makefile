@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomecontrolcenter2
-# Date created:				04 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/sysutils/gnome-control-center/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	2.32.1
@@ -16,10 +12,10 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Control center for GNOME 2 project
 
-LIB_DEPENDS=	canberra-gtk.0:${PORTSDIR}/audio/libcanberra \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique
+LIB_DEPENDS=	canberra-gtk:${PORTSDIR}/audio/libcanberra \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
+		unique-1.0:${PORTSDIR}/x11-toolkits/unique
 BUILD_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
 RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 		${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gnome-settings-daemon
@@ -27,12 +23,12 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 CONFLICTS=	gnome-control-center-3.[0-9]*
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig desktop-file-utils shared-mime-info
 USE_GMAKE=	yes
 USE_GSTREAMER=	good
 WANT_GNOME=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack metacity gnomemenus \
-		desktopfileutils libgnomekbd gnomedesktop librsvg2 gconf2
+USE_GNOME=	gnomeprefix intlhack metacity gnomemenus \
+		libgnomekbd gnomedesktop librsvg2 gconf2
 USE_XORG=	xscrnsaver
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
@@ -65,8 +61,5 @@ post-patch:
 	    	${WRKSRC}/capplets/common/gnome-theme-info.c
 	@${REINPLACE_CMD} -e 's|/usr/sbin|${PREFIX}/sbin|g' \
 		${WRKSRC}/capplets/display/org.gnome.randr.policy.in
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.post.mk>

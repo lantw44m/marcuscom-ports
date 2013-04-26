@@ -1,9 +1,6 @@
-# New ports collection makefile for:	packagekit
-# Date created:				15 Aug 2009
-# Whom:					Anders F Bjorklund <afb@users.sourceforge.net>
-#
+# Created by: Anders F Bjorklund <afb@users.sourceforge.net>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/ports-mgmt/packagekit/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	PackageKit
 PORTVERSION=	0.6.21
@@ -16,20 +13,19 @@ COMMENT?=	A DBUS packaging abstraction layer
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils \
 		${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	execinfo.1:${PORTSDIR}/devel/libexecinfo \
+LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
-		ck-connector.0:${PORTSDIR}/sysutils/consolekit
+		ck-connector:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof \
 		${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
 
 USE_GMAKE=	yes
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext shared-mime-info iconv
 USE_GNOME=	glib20 intltool
 USE_QT4=	#empty
-USE_ICONV=	yes
 USE_LDCONFIG=	yes
 USE_SQLITE=	yes
 USE_PYTHON_BUILD=	2.5+
@@ -112,7 +108,6 @@ post-install:
 .if !defined(SLAVEPORT)
 	@${INSTALL_DATA} ${WRKSRC}/data/transactions.db \
 	    	${PREFIX}/share/PackageKit/transactions.db
-	@-update-mime-database ${PREFIX}/share/mime > /dev/null
 .endif
 
 .include <bsd.port.post.mk>

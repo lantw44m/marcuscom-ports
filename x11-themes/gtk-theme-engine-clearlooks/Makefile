@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gtk-theme-engine-clearlooks
-# Date Created:				28 Dec 2010
-# Whom:					Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
 #   $MCom$
-#
 
 PORTNAME=	gtk-theme-engine-clearlooks
 PORTVERSION=	2.91.5
@@ -18,13 +14,13 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Clearlooks theme engine
 
 LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING
+
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gtk30 intlhack 
-USE_GETTEXT=	yes
+USE_GNOME=	gtk30 intlhack 
+USES=		gettext pathfix
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" \
-		LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 .include <bsd.port.mk>

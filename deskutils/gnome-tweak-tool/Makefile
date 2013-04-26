@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/deskutils/gnome-tweak-tool/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-tweak-tool
 PORTVERSION=	3.4.0.1
@@ -15,9 +15,9 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-deskto
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix gconf2 pygobject3
+USE_GNOME=	gnomeprefix gconf2 pygobject3
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

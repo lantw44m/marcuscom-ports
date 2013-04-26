@@ -1,10 +1,6 @@
-# New ports collection makefile for:	vinagre
-# Date created:				16 December 2007
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#  $MCom$
-#
+#  $MCom: ports/trunk/net/vinagre3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	vinagre
 PORTVERSION=	3.4.2
@@ -27,8 +23,8 @@ CONFLICTS=	vinagre-2.[0-9]*
 
 LATEST_LINK=	vinagre3
 USE_XZ=		yes
-USE_GETTEXT=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack gtk30 libxml2 vte3
+USES=		gettext pathfix pkgconfig desktop-file-utils shared-mime-info
+USE_GNOME=	gnomeprefix intlhack gtk30 libxml2 vte3
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
@@ -41,21 +37,23 @@ GLIB_SCHEMAS=	org.gnome.Vinagre.gschema.xml
 
 MAN1=		vinagre.1
 
-OPTIONS=	TELEPATHY "Enable telepathy integration" on \
-		RDP "Enable MS Windows remote desktop support" off
+OPTIONS_DEFINE=	TELEPATHY RDP
+OPTIONS_DEFAULT=TELEPATHY
+TELEPATHY=	Telepathy integration
+RDP_DESC=	MS Windows remote desktop support
 
 .include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_TELEPATHY)
-LIB_DEPENDS+=	telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
+.if ${PORT_OPTIONS:MTELEPATHY}
+LIB_DEPENDS+=	telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 PLIST_SUB+=	TELEPATHY=""
 .else
 CONFIGURE_ARGS+=--without-telepathy
 PLIST_SUB+=	TELEPATHY="@comment "
 .endif
 
-.if !defined(WITHOUT_RDP)
+.if ${PORT_OPTIONS:MRDP}
 BUILD_DEPENDS+=	rdesktop:${PORTSDIR}/net/rdesktop
 RUN_DEPENDS+=	rdesktop:${PORTSDIR}/net/rdesktop
 CONFIGURE_ARGS+=--enable-rdp
@@ -66,9 +64,7 @@ PLIST_SUB+=	RDP="@comment "
 .endif
 
 post-install:
-	@-update-desktop-database > /dev/null
-	@-update-mime-database ${PREFIX}/share/mime > /dev/null
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in AUTHORS COPYING ChangeLog NEWS README
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}

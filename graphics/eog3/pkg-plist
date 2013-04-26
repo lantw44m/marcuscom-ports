@@ -1774,5 +1774,3 @@ share/locale/zu/LC_MESSAGES/eog.mo
 @dirrm lib/eog
 @dirrm include/eog-%%VERSION%%/eog
 @dirrm include/eog-%%VERSION%%
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

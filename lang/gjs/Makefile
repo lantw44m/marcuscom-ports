@@ -1,6 +1,6 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/lang/gjs/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gjs
 PORTVERSION=	1.32.0
@@ -14,17 +14,15 @@ COMMENT=	GNOME Javascript binding
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		spidermonkey185>=1.8.5:${PORTSDIR}/lang/spidermonkey185
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		cairo:${PORTSDIR}/graphics/cairo \
+LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		mozjs185:${PORTSDIR}/lang/spidermonkey185
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_PYTHON_BUILD=yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix gnomehack intlhack glib20 ltverhack
-USE_PKGCONFIG=	build
+USE_GNOME=	gnomeprefix intlhack glib20 ltverhack cairo
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

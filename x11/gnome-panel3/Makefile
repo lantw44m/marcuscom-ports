@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomepanel
-# Date created:				27 April 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/gnome-panel3/Makefile 18392 2013-04-26 11:23:16Z mezz $
 
 PORTNAME=	gnome-panel
 PORTVERSION=	3.4.2.1
@@ -21,20 +17,20 @@ USE_XZ=		yes
 .if !defined(REFERENCE_PORT)
 
 LIB_DEPENDS=	gweather-3.0:${PORTSDIR}/net/libgweather3 \
-		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
-		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
-		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
+		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
+		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
+		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/notification-daemon
 
 CONFLICTS=	gnome-panel-2.[0-9]*
 
 LATEST_LINK=	gnome-panel3
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_XORG=	ice sm x11 xau xrandr
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop3 librsvg2 libwnck3 \
+USE_GNOME=	gnomeprefix intlhack gnomedesktop3 librsvg2 libwnck3 \
 		gnomemenus3 gnomedocutils ltverhack referencehack
 WANT_GNOME=	yes
 USE_GMAKE=	yes

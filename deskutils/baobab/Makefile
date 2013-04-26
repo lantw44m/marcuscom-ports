@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomeutils2
-# Date created:				06 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/deskutils/baobab/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	baobab
 PORTVERSION=	3.4.1
@@ -21,9 +17,9 @@ LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop
 CONFLICTS=	gnome-utils-2.[0-9]*
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack libxml2 gtk30
+USE_GNOME=	gnomeprefix intlhack libxml2 gtk30
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

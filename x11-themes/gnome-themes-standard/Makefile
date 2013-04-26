@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-themes/gnome-themes-standard/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-themes-standard
 PORTVERSION=	3.6.0.2
@@ -14,10 +14,10 @@ COMMENT=	Standard themes for GNOME
 CONFLICTS=	gnome-themes-2.[0-9]*
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix intlhack gtk30 librsvg2
+USE_GNOME=	gnomeprefix intlhack gtk30 librsvg2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

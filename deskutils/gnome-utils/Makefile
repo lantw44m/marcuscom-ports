@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomeutils2
-# Date created:				06 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/deskutils/gnome-utils/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-utils
 PORTVERSION=	2.32.0
@@ -17,20 +13,20 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 support utilities
 
-LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
+LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop \
+		canberra-gtk:${PORTSDIR}/audio/libcanberra
 
 CONFLICTS=	baobob-3.[0-9]* gnome-dictionary-3.[0-9]* \
 		gnome-font-viewer-3.[0-9]* gnome-screenshot-3.[0-9]* \
 		gnome-search-tool-3.[0-9]* gnome-system-log-3.[0-9]*
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomepanel ltverhack
+USE_GNOME=	gnomeprefix intlhack gnomepanel ltverhack
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-maintainer-flags=no
 CPPFLAGS+=	-I${LOCALBASE}/include

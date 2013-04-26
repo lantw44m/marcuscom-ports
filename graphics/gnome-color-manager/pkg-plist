@@ -127,5 +127,3 @@ share/locale/zh_TW/LC_MESSAGES/gnome-color-manager.mo
 @dirrm %%DATADIR%%/figures
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

@@ -1,10 +1,6 @@
-# New ports collection makefile for:   py-dbus
-# Date Created:			25 July 2004
-# Whom:				Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/devel/py-dbus/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	dbus
 PORTVERSION=	1.1.1
@@ -18,8 +14,7 @@ COMMENT=	Python bindings for the D-BUS messaging system
 
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
 
-USE_GETTEXT=	yes
-USE_GNOME=	gnomehack
+USES=		gettext pathfix pkgconfig
 USE_PYTHON=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
@@ -30,9 +25,9 @@ CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
 DOCSDIR=	${PREFIX}/share/doc/py-${PORTNAME}
 EXAMPLESDIR=	${PREFIX}/share/examples/py-${PORTNAME}
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if exists(${LOCALBASE}/bin/rst2html) && !defined(NOPORTDOCS)
+.if exists(${LOCALBASE}/bin/rst2html) && ${PORT_OPTIONS:MDOCS}
 PLIST_SUB+=	HTML=""
 .else
 CONFIGURE_ARGS+=--disable-html-docs
@@ -40,16 +35,16 @@ PLIST_SUB+=	HTML="@comment "
 .endif
 
 post-patch:
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's|HEADERS install-dist_docDATA|HEADERS|g ; \
 		s|PYTHON install-nodist_docDATA|PYTHON|g' \
 			${WRKSRC}/Makefile.in
 .endif
 
 post-install:
-.if !defined(NOPORTEXAMPLES)
+.if ${PORT_OPTIONS:MEXAMPLES}
 	${MKDIR} ${EXAMPLESDIR} && \
 		${INSTALL_DATA} ${WRKSRC}/examples/*.py ${EXAMPLESDIR}
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

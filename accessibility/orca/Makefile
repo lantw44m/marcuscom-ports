@@ -1,10 +1,6 @@
-# New ports collection makefile for:	orca
-# Date created:				25 Jul 2006
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/accessibility/orca/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	orca
 PORTVERSION=	2.32.1
@@ -19,7 +15,7 @@ COMMENT=	Scriptable screen reader
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_SITELIBDIR}/pyatspi/__init__.py:${PORTSDIR}/accessibility/at-spi \
 		${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg
-LIB_DEPENDS=	gnome-mag.2:${PORTSDIR}/accessibility/gnome-mag
+LIB_DEPENDS=	gnome-mag:${PORTSDIR}/accessibility/gnome-mag
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_SITELIBDIR}/pyatspi/__init__.py:${PORTSDIR}/accessibility/at-spi \
 		${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg
@@ -29,11 +25,10 @@ CONFLICTS=	orca-3.[0-9]* py*-json-py-[0-9]*
 LATEST_LINK=	gnome-orca
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_PYTHON=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack libgnomeui gnomespeech pygnome2 \
-		pygnomedesktop
+USE_GNOME=	gnomeprefix libgnomeui gnomespeech pygnome2 pygnomedesktop
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

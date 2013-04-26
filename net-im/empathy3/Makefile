@@ -1,9 +1,6 @@
-# New ports collection makefile for:	empathy
-# Date created:		2007-10-29
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net-im/empathy3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	empathy
 PORTVERSION=	3.4.2.1
@@ -18,18 +15,18 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 		gsettings-desktop-schemas>=0:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		itstool:${PORTSDIR}/textproc/itstool \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
-LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
-		pulse.0:${PORTSDIR}/audio/pulseaudio \
-		telepathy.2:${PORTSDIR}/net-im/libtelepathy \
-		telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib \
-		telepathy-farstream.2:${PORTSDIR}/net-im/telepathy-farstream \
-		telepathy-logger.2:${PORTSDIR}/net-im/telepathy-logger \
-		folks-telepathy.25:${PORTSDIR}/net-im/folks \
-		notify.4:${PORTSDIR}/devel/libnotify \
+LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
+		pulse:${PORTSDIR}/audio/pulseaudio \
+		telepathy:${PORTSDIR}/net-im/libtelepathy \
+		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
+		telepathy-farstream:${PORTSDIR}/net-im/telepathy-farstream \
+		telepathy-logger:${PORTSDIR}/net-im/telepathy-logger \
+		folks-telepathy:${PORTSDIR}/net-im/folks \
+		notify:${PORTSDIR}/devel/libnotify \
 		gcr-3:${PORTSDIR}/security/gcr \
-		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
+		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
 		clutter-gst-1.0:${PORTSDIR}/multimedia/clutter-gst \
-		webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3 \
+		webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3 \
 		soup-2.4:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
@@ -41,16 +38,16 @@ CONFLICTS=	empathy-2.[0-9]*
 LATEST_LINK=	empathy3
 USE_GMAKE=	yes
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
-USE_GNOME=	evolutiondataserver3 gnomehack gnomeprefix ltverhack
+USE_GNOME=	evolutiondataserver3 gnomeprefix ltverhack
 USE_GSTREAMER=	yes
 USE_AUTOTOOLS=	libtool
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_PYTHON=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-Werror \
 		--disable-goa \
 		--enable-location=no

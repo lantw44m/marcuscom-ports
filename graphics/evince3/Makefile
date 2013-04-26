@@ -1,10 +1,6 @@
-# New ports collection makefile for:	evince
-# Date created:				09 January 2005
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
-#
+#    $MCom: ports/trunk/graphics/evince3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evince
 PORTVERSION=	3.4.0
@@ -19,8 +15,8 @@ COMMENT=	GNOME 3 multi-format document viewer
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	poppler-glib.8:${PORTSDIR}/graphics/poppler-glib \
-		spectre.1:${PORTSDIR}/print/libspectre
+LIB_DEPENDS=	poppler-glib:${PORTSDIR}/graphics/poppler-glib \
+		spectre:${PORTSDIR}/print/libspectre
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
@@ -32,11 +28,10 @@ USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USE_XORG=	ice
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig desktop-file-utils
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix desktopfileutils \
-		gnomedocutils ltasneededhack
+USE_GNOME=	intlhack gnomeprefix gnomedocutils ltasneededhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
@@ -121,8 +116,5 @@ post-patch:
 	@${REINPLACE_CMD} -e '/^DOC_MODULE_VERSION/d' \
 		${WRKSRC}/help/reference/libdocument/Makefile.in \
 		${WRKSRC}/help/reference/libview/Makefile.in
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.mk>

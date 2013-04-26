@@ -1,6 +1,6 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/mail/evolution3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evolution
 PORTVERSION=	3.4.4
@@ -13,7 +13,7 @@ COMMENT=	An integrated mail, calendar and address book distributed suite
 
 LIB_DEPENDS=	nss3:${PORTSDIR}/security/nss \
 		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
-		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
+		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
 		notify:${PORTSDIR}/devel/libnotify
 
 CONFLICTS=	evolution-2.[0-9]*
@@ -21,10 +21,9 @@ CONFLICTS=	evolution-2.[0-9]*
 LATEST_LINK=	evolution3
 USE_XZ=		yes
 USE_GMAKE=	yes
-USES=		bison pathfix
-USE_GETTEXT=	yes
+USES=		bison gettext pathfix desktop-file-utils
 USE_GNOME=	gnomeprefix intlhack evolutiondataserver3 gtkhtml4 \
-		desktopfileutils gnomedocutils ltasneededhack gnomedesktop3
+		gnomedocutils ltasneededhack gnomedesktop3
 USE_AUTOTOOLS=	libtool
 USE_GSTREAMER=	yes
 INSTALLS_OMF=	yes

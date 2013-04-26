@@ -1,6 +1,6 @@
 # Created by: Alexander Logvinov <avl@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/seed3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 # NOTE: It may be necessary to update ${FILESDIR}/Seed.js on each release.
 # To do that, just replace imports.searchPaths with "." and ".." elements.
 
@@ -25,8 +25,8 @@ CONFLICTS=	seed-2.[0-9]*
 LATEST_LINK=	seed3
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-USE_GETTEXT=	yes
-USE_GNOME=	gnomehack gtk30 intltool libxml2
+USES=		gettext pathfix pkgconfig
+USE_GNOME=	gtk30 intltool libxml2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_SQLITE=	yes
@@ -38,7 +38,7 @@ DATADIR=	share/seed-gtk3
 
 MAN1=		seed.1
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|== x|= x|g' \
@@ -52,7 +52,7 @@ post-patch:
 #	@${REINPLACE_CMD} -e 's|examples||g' \
 #		${WRKSRC}/Makefile.in
 #.endif
-.if defined(NOPORTDOCS)
+.if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's| install-seeddocDATA||g ; s|doc$$||g' \
 		${WRKSRC}/Makefile.in
 .endif
@@ -66,4 +66,4 @@ pre-build:
 post-build:
 	${CP} ${WRKSRC}/extensions/Seed.js.sav ${WRKSRC}/extensions/Seed.js
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

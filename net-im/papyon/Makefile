@@ -1,9 +1,6 @@
-# New ports collection makefile for:	papyon
-# Date created:				August 1 2009
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#
+#   $MCom$
 
 PORTNAME=	papyon
 PORTVERSION=	0.5.6

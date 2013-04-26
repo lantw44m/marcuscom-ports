@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libcanberra
-# Date created:				05 August 2008
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/audio/libcanberra-gtk3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTREVISION=	2
 CATEGORIES=	audio devel

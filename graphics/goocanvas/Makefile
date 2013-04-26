@@ -1,9 +1,6 @@
-# New ports collection makefile for:	goocanvas
-# Date created:		2006-09-20
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/graphics/goocanvas/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	goocanvas
 PORTVERSION=	1.0.0
@@ -13,7 +10,8 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Canvas widget for GTK+
 
-USE_GNOME=	gtk20 gnomehack ltverhack
+USS=		pathfix
+USE_GNOME=	gtk20 ltverhack
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes

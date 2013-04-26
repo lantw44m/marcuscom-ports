@@ -1,10 +1,6 @@
-# New ports collection makefile for:	liboobs
-# Date created:		2006-06-06
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/devel/liboobs/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	liboobs
 PORTVERSION=	3.0.0
@@ -16,14 +12,15 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Wrapping library to the System Tools Backends
 
 BUILD_DEPENDS=	${LOCALBASE}/etc/dbus-1/system.d/org.freedesktop.SystemToolsBackends.conf:${PORTSDIR}/sysutils/system-tools-backends
-LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-    		hal.1:${PORTSDIR}/sysutils/hal
+LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+    		hal:${PORTSDIR}/sysutils/hal
 RUN_DEPENDS=	${LOCALBASE}/etc/dbus-1/system.d/org.freedesktop.SystemToolsBackends.conf:${PORTSDIR}/sysutils/system-tools-backends
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomeprefix gnomehack glib20
+USES=		pathfix
+USE_GNOME=	gnomeprefix glib20
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-hal
 CPPFLAGS+=	-I${LOCALBASE}/include

@@ -23,10 +23,9 @@ PORTSCOUT=	limitw:1,even
 
 USE_XZ=		yes
 USE_XORG=	x11
-USES=		pathfix shared-mime-info
 USE_GNOME=	intlhack gnomedocutils gtk30 libgsf libxml2
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix shared-mime-info
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -49,7 +48,7 @@ PLIST_SUB=	VER=0.14 GOFFICE=0.10 GNUMERIC_VER=1.12.1
 OPTIONS_DEFINE=	XUL
 XUL_DESC=	Build browser plugin (requires Xulrunner)
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MXUL}
 USE_GECKO=	libxul
@@ -70,4 +69,4 @@ PLIST_SUB+=	GNUMERIC="@comment "
 post-patch:
 	@${REINPLACE_CMD} -e 's|-ldl||g' ${WRKSRC}/libs/gcp/Makefile.in
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

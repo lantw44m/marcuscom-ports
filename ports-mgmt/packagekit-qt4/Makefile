@@ -1,10 +1,6 @@
-# New ports collection makefile for:	PackageKit-qt
-# Date created:		5 jan 2009
-# Whom:			Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/ports-mgmt/packagekit-qt4/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTREVISION=	0
 PKGNAMESUFFIX=	-qt4

@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net-im/farstream/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	farstream
 PORTVERSION=	0.1.2
@@ -16,11 +16,9 @@ CONFLICTS=	farsight2-[0-9]*
 
 FETCH_ARGS=	-Fpr
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
-USES=		pathfix
-USE_PKGCONFIG=	build
 USE_GNOME=	glib20 ltverhack
 USE_GSTREAMER=	core good bad python
 USE_AUTOTOOLS=	libtool

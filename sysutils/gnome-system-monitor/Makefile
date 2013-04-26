@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomesystemmonitor
-# Date created:				09 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/sysutils/gnome-system-monitor/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-system-monitor
 PORTVERSION=	2.28.2
@@ -17,18 +13,17 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 system monitor program
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	gtop-2.0.7:${PORTSDIR}/devel/libgtop \
-		gtkmm-2.4.1:${PORTSDIR}/x11-toolkits/gtkmm24
+LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop \
+		gtkmm-2.4:${PORTSDIR}/x11-toolkits/gtkmm24
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme
 
 CONFLICTS=	gnome-system-monitor-3.[0-9]*
 
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack libwnck gnomevfs2 gnomedocutils \
-		librsvg2
+USE_GNOME=	gnomeprefix intlhack libwnck gnomevfs2 gnomedocutils librsvg2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION
 LDFLAGS+=	-L${LOCALBASE}/lib -lutil

@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomegames2
-# Date created:				08 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/games/gnome-games/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-games
 PORTVERSION=	2.32.1
@@ -17,21 +13,20 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The game applications package for the GNOME 2 Desktop Environment
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	guile.21:${PORTSDIR}/lang/guile \
-		clutter-gtk-0.10.0:${PORTSDIR}/graphics/clutter-gtk \
-		clutter-glx-1.0.0:${PORTSDIR}/graphics/clutter
+LIB_DEPENDS=	guile:${PORTSDIR}/lang/guile \
+		clutter-gtk-0.10:${PORTSDIR}/graphics/clutter-gtk \
+		clutter-glx-1.0:${PORTSDIR}/graphics/clutter
 RUN_DEPENDS=	seed:${PORTSDIR}/devel/seed
 
 CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix desktop-file-utils
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack \
-		librsvg2 desktopfileutils pygnomedesktop gnomedocutils
+USE_GNOME=	gnomeprefix intlhack librsvg2 pygnomedesktop gnomedocutils
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-sound=gstreamer \
@@ -73,6 +68,5 @@ post-install:
 #.for dsc in ${DSC_FILES}
 #	${INSTALL_DATA} ${WRKSRC}/${dsc} ${PREFIX}/share/ggz/gnome-games/${dsc:T}
 #.endfor
-	@-update-desktop-database
 
 .include <bsd.port.post.mk>

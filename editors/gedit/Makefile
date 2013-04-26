@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gedit2
-# Date created:				14 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/editors/gedit/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gedit
 PORTVERSION=	2.30.4
@@ -17,21 +13,21 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A small but powerful text editor for GNOME 2 Desktop Environment
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-LIB_DEPENDS=	enchant.1:${PORTSDIR}/textproc/enchant \
-		soup-2.4.1:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
+		soup-2.4:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
 CONFLICTS=	gedit-3.[0-9]*
 
 USE_XORG=	sm
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix desktop-file-utils
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 gtksourceview2 \
-		desktopfileutils gnomedocutils ltasneededhack
+USE_GNOME=	gnomeprefix intlhack gconf2 gtksourceview2 \
+		gnomedocutils ltasneededhack
 WANT_GNOME=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -45,7 +41,7 @@ GCONF_SCHEMAS=	gedit.schemas gedit-file-browser.schemas
 WITH_GNOME=	yes
 .endif
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${HAVE_GNOME:Mpygtksourceview}!=""
 USE_PYTHON=	yes
@@ -64,7 +60,4 @@ PLIST_SUB+=	PYTHON="@comment "
 #	${TOUCH} ${WRKSRC}/bindings/python/.deps/${ff}
 #.endfor
 
-post-install:
-	@-update-desktop-database
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

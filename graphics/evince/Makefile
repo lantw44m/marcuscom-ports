@@ -1,10 +1,6 @@
-# New ports collection makefile for:	evince
-# Date created:				09 January 2005
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
-#
+#    $MCom: ports/trunk/graphics/evince/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evince
 PORTVERSION=	2.32.0
@@ -17,8 +13,8 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 2 multi-format document viewer
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
-LIB_DEPENDS=	poppler-glib.8:${PORTSDIR}/graphics/poppler-glib \
-		spectre.1:${PORTSDIR}/print/libspectre
+LIB_DEPENDS=	poppler-glib:${PORTSDIR}/graphics/poppler-glib \
+		spectre:${PORTSDIR}/print/libspectre
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		yelp:${PORTSDIR}/x11/yelp
 
@@ -28,11 +24,10 @@ USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix desktop-file-utils
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix desktopfileutils \
-		gnomedocutils ltasneededhack gconf2
+USE_GNOME=	intlhack gnomeprefix gnomedocutils ltasneededhack gconf2
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
@@ -131,8 +126,5 @@ post-patch:
 	@${REINPLACE_CMD} -e '/^DOC_MODULE_VERSION/d' \
 		${WRKSRC}/help/reference/libdocument/Makefile.in \
 		${WRKSRC}/help/reference/libview/Makefile.in
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.post.mk>

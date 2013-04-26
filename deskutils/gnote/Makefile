@@ -1,5 +1,5 @@
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/deskutils/gnote/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnote
 PORTVERSION=	0.8.3
@@ -18,9 +18,9 @@ LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre \
 
 USE_GMAKE=	yes
 USE_XZ=		yes
-USE_GNOME=	gnomehack gnomeprefix gtk30 intltool libxml2 libxslt \
-		ltverhack desktopfileutils gnomedocutils gtkmm30
-USE_GETTEXT=	yes
+USE_GNOME=	gnomeprefix gtk30 intltool libxml2 libxslt \
+		ltverhack gnomedocutils gtkmm30
+USES=		gettext pathfix pkgconfig desktop-file-utils
 GLIB_SCHEMAS=	org.gnome.gnote.gschema.xml
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
@@ -53,7 +53,6 @@ post-patch:
 		${WRKSRC}/configure
 
 post-install:
-	@-update-desktop-database
 .if ${PORT_OPTIONS:MDOCS}
 	@${MKDIR} ${DOCSDIR}
 .for i in ${DOCS}

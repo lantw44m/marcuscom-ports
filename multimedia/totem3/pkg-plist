@@ -672,5 +672,3 @@ share/thumbnailers/totem.thumbnailer
 %%BROWSER_PLUGINS%%@dirrmtry %%WEBPLUGINS_DIR%%
 @dirrm include/totem/1.0
 @dirrm include/totem
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

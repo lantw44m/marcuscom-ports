@@ -1,6 +1,6 @@
 # Created by: Mario Sergio Fujikawa Ferreira <lioux@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/multimedia/gstreamer1/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gstreamer1
 PORTVERSION=	1.0.5
@@ -18,13 +18,11 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 
 CFLAGS:=	${CFLAGS} -O2 -Wno-format
-USES=		bison pathfix
+USES=		bison gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_GMAKE=	yes
 MAKE_JOBS_SAVE=	yes
 USE_GNOME=	glib20 ltverhack:0 ltasneededhack
-USE_PKGCONFIG=	build
-USE_GETTEXT=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-tests \
 		--disable-examples \

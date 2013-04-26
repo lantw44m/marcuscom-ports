@@ -1,9 +1,6 @@
-# New ports collection makefile for:	goocanvasmm
-# Date created:		2008-08-10
-# Whom:			Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/graphics/goocanvasmm2/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	goocanvasmm
 PORTVERSION=	1.90.8
@@ -13,10 +10,10 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	C++ bindings for the goocanvas widget for GTK
 
-LIB_DEPENDS=	gtkmm-3.0.1:${PORTSDIR}/x11-toolkits/gtkmm30 \
-		goocanvas-2.0.9:${PORTSDIR}/graphics/goocanvas2
+LIB_DEPENDS=	goocanvas-2.0.9:${PORTSDIR}/graphics/goocanvas2
 
-USE_GNOME=	gnomehack ltverhack
+USES=		pathfix
+USE_GNOME=	ltverhack gtkmm30
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-documentation

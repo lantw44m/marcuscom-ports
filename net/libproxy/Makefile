@@ -1,9 +1,6 @@
-# New ports collection makefile for:	libproxy
-# Date created:		26 February 2009
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net/libproxy/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	libproxy
 PORTVERSION=	0.4.6

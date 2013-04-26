@@ -1,10 +1,6 @@
-# New ports collection makefile for:	glade3
-# Date created:		Sun May 22 17:22:53 CEST 2005
-# Whom:			Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/devel/glade/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	glade
 PORTVERSION=	3.12.2
@@ -22,9 +18,9 @@ CONFLICTS=	glade3-3.*
 INSTALLS_ICONS=	yes
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gtk30 gnomeprefix gnomehack ltverhack gnomedocutils
+USE_GNOME=	gtk30 gnomeprefix ltverhack gnomedocutils
 WANT_GNOME=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig desktop-file-utils
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
@@ -33,11 +29,12 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 DOCSDIR=	${PREFIX}/share/doc/gladeui-2
 
-OPTIONS=	PYTHON "Enable python widget support" on
+OPTIONS_DEFINE=	PYTHON
+OPTIONS_DEFAULT=PYTHON
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_PYTHON)
+.if ${PORT_OPTIONS:MPYTHON}
 USE_PYTHON=	yes
 USE_GNOME+=	pygobject3
 PLIST_SUB+=	PYTHON:=""
@@ -46,8 +43,5 @@ CONFIGURE_ARGS+=--enable-python
 CONFIGURE_ARGS+=--disable-python
 PLIST_SUB+=	PYTHON:="@comment "
 .endif
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.mk>

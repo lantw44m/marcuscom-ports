@@ -1,9 +1,6 @@
-# New ports collection makefile for:	devhelp
-# Date created:				29 May 2003
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/devhelp3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	devhelp
 PORTVERSION=	3.4.1
@@ -14,16 +11,16 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Developer help browser for GNOME 3
 
-LIB_DEPENDS=	webkitgtk-3.0.0:${PORTSDIR}/www/webkit-gtk3
+LIB_DEPENDS=	webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3
 
 CONFLICTS=	devhelp-2.[0-9]*
 
 LATEST_LINK=	devhelp3
 USE_XZ=		yes
 USE_XORG=	x11
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnomeprefix gtk30 gconf2
+USE_GNOME=	intlhack gnomeprefix gtk30 gconf2
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

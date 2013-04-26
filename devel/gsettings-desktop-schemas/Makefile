@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gsettings-desktop-schemas
-# Date created:				14 Aug 2010
-# Whom:					Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/devel/gsettings-desktop-schemas/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gsettings-desktop-schemas
 PORTVERSION=	3.4.2
@@ -22,11 +18,10 @@ RUN_DEPENDS=	${LOCALBASE}/etc/fonts/conf.avail/31-cantarell.conf:${PORTSDIR}/x11
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_PERL5_BUILD=	yes
-USE_GNOME=	gnomehack intltool glib20
-USE_PKGCONFIG=	build
+USE_GNOME=	intltool glib20
 GNU_CONFIGURE=	yes
 
 GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \

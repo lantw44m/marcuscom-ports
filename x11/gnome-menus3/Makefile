@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-menus3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-menus
 PORTVERSION=	3.4.2
@@ -16,12 +16,10 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 CONFLICTS=	gnome-menus-2.[0-9]*
 
 LATEST_LINK=	gnome-menus3
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_GMAKE=	yes
-USES=		pathfix
 USE_GNOME=	gnomehier gnomeprefix intlhack glib20 ltverhack
-USE_PKGCONFIG=	build
 USE_AUTOTOOLS=	libtool
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes

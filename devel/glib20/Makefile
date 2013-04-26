@@ -23,12 +23,9 @@ PORTSCOUT=	limitw:1,even
 LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
 		ffi:${PORTSDIR}/devel/libffi
 
-USE_GETTEXT=	yes
-USE_ICONV=	yes
+USES=		gettext iconv pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_PKGCONFIG=	build
-USES=		pathfix
 USE_GNOME=	ltverhack
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes

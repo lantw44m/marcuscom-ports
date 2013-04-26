@@ -1,10 +1,6 @@
-# New ports collection makefile for:	avahi
-# Date created:		18 November 2005
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/net/avahi/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	avahi
 PORTVERSION=	0.6.31

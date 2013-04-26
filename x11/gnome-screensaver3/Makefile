@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnome-screensaver
-# Date created:		09 June 2005
-# Whom:			Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/gnome-screensaver3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-screensaver
 PORTVERSION=	3.4.4
@@ -27,10 +23,10 @@ CONFLICTS=	gnome-screensaver-2.[0-9]*
 LATEST_LINK=	gnome-screensaver3
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_XORG=	x11 xext xxf86vm xxf86misc xscrnsaver
-USE_GNOME=	gnomeprefix gnomehack intlhack libgnomekbd3 gnomedesktop3
+USE_GNOME=	gnomeprefix intlhack libgnomekbd3 gnomedesktop3
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-pam-prefix=${PREFIX}/etc/pam.d \

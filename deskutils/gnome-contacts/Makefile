@@ -1,9 +1,6 @@
-# New ports collection makefile for:   gnome-contacts
-# Date Created:			17 Okt 2011
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#
+#  $MCom$
 
 PORTNAME=	gnome-contacts
 PORTVERSION=	3.4.1
@@ -14,14 +11,14 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Contacts manager for gnome
 
 BUILD_DEPENDS=	vala>=0.14.0:${PORTSDIR}/lang/vala
-LIB_DEPENDS=	goa-1.0.0:${PORTSDIR}/net/gnome-online-accounts \
+LIB_DEPENDS=	goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
 		folks.25:${PORTSDIR}/net-im/folks \
-		notify.4:${PORTSDIR}/devel/libnotify
+		notify:${PORTSDIR}/devel/libnotify
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack intlhack gtk30 gnomedesktop3 evolutiondataserver3
+USE_GNOME=	intlhack gtk30 gnomedesktop3 evolutiondataserver3
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS=	-I${LOCALBASE}/include

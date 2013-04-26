@@ -27,9 +27,8 @@ GH_COMMIT=	63f7b44
 
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
-USES=		pathfix
-USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libxml2 desktopfileutils
+USES=		gettext pathfix desktop-file-utils
+USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libxml2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool autoconf automake
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -58,8 +57,5 @@ post-patch:
 
 pre-configure:
 	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.mk>

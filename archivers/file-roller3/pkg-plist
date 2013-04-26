@@ -693,5 +693,3 @@ share/locale/zu/LC_MESSAGES/file-roller.mo
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
 @dirrm libexec/file-roller
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gdl
-# Date created:				24 July 2001
-# Whom:					Maxim Sobolev <sobomax@FreeBSD.org>
-#
+# Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11-toolkits/gdl3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gdl
 PORTVERSION=	3.4.2
@@ -16,13 +12,12 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Components intended to be shared between GNOME development tools
 
 LICENSE=	LGPL20
-LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	gdl3
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gtk30 intltool
-USE_GETTEXT=	yes
+USE_GNOME=	gnomeprefix gtk30 intltool
+USES=		gettext pathfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

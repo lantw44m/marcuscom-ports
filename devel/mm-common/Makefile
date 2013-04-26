@@ -1,10 +1,6 @@
-# New ports collection makefile for:   mm-common
-# Date Created:			27 Aug 2009
-# Whom:				Koop Mast<kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/devel/mm-common/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	mm-common
 PORTVERSION=	0.9.5
@@ -14,9 +10,9 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Common build infrastructure for the GNOME C++ binding libraries
 
-LIB_DEPENDS=	curl.6:${PORTSDIR}/ftp/curl
+LIB_DEPENDS=	curl:${PORTSDIR}/ftp/curl
 
-USE_GNOME=	gnomehack
+USES=		pathfix
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes

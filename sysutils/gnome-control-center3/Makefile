@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomecontrolcenter2
-# Date created:				04 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/sysutils/gnome-control-center3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	3.4.2
@@ -18,15 +14,15 @@ COMMENT=	Control center for GNOME 3 project
 BUILD_DEPENDS=	gnome-settings-daemon>=3.4.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
 		gsettings-desktop-schemas>=3.2.2:${PORTSDIR}/devel/gsettings-desktop-schemas \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
-		xklavier.12:${PORTSDIR}/x11/libxklavier \
-		upower-glib.1:${PORTSDIR}/sysutils/upower \
-		colord.1:${PORTSDIR}/graphics/colord \
-		goa-1.0.0:${PORTSDIR}/net/gnome-online-accounts \
-		socialweb.0:${PORTSDIR}/www/libsocialweb \
-		gtop-2.0.7:${PORTSDIR}/devel/libgtop \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
+LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
+		xklavier:${PORTSDIR}/x11/libxklavier \
+		upower-glib:${PORTSDIR}/sysutils/upower \
+		colord:${PORTSDIR}/graphics/colord \
+		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
+		socialweb:${PORTSDIR}/www/libsocialweb \
+		gtop-2.0:${PORTSDIR}/devel/libgtop \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 		gnome-settings-daemon>=3.4.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
 		gsettings-desktop-schemas>=3.2.2:${PORTSDIR}/devel/gsettings-desktop-schemas \
@@ -39,11 +35,11 @@ CONFLICTS=	gnome-control-center-2.[0-9]* gnome-media-2.[0-9]*
 
 LATEST_LINK=	gnome-control-center3
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig desktop-file-utils shared-mime-info
 USE_GMAKE=	yes
 WANT_GNOME=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier intlhack libxml2 gnomemenus3 \
-		libgnomekbd3 desktopfileutils gnomedesktop3 gconf2
+USE_GNOME=	gnomeprefix gnomehier intlhack libxml2 gnomemenus3 \
+		libgnomekbd3 gnomedesktop3 gconf2
 USE_XORG=	xscrnsaver x11 xxf86misc kbproto xi
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
@@ -81,8 +77,5 @@ CONFIGURE_ARGS+=--without-cheese
 post-patch:
 	@${REINPLACE_CMD} -e 's|datetime wacom|datetime|g' \
 		${WRKSRC}/panels/Makefile.in
-
-post-install:
-	@-update-desktop-database
 
 .include <bsd.port.post.mk>

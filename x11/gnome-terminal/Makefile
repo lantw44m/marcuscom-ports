@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnometerminal
-# Date created:				1 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/gnome-terminal/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-terminal
 PORTVERSION=	2.32.1
@@ -16,17 +12,16 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Terminal component for the GNOME 2 Desktop
 
-LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
+LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification
 
 CONFLICTS=	gnome-terminal-3.[0-9]*
 
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
 USE_GMAKE=	yes
 USE_XORG=	sm
-USE_GNOME=	gnomeprefix gnomehack intlhack gconf2 vte gnomedocutils \
-		libgnome
+USE_GNOME=	gnomeprefix intlhack gconf2 vte gnomedocutils libgnome
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

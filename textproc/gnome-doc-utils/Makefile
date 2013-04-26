@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnome-doc-utils
-# Date created:				11 November 2004
-# Whom:					Adam Weinberger <adamw@FreeBSD.org>
-#
+# Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/textproc/gnome-doc-utils/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-doc-utils
 PORTVERSION=	0.20.10
@@ -25,9 +21,8 @@ RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian \
 USE_XZ=		yes
 USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=yes
-USE_GETTEXT=	yes
-USE_GNOME=	gnomehier gnomehack libxslt intlhack
-USE_PKGCONFIG=	build
+USES=		gettext pathfix pkgconfig
+USE_GNOME=	gnomehier libxslt intlhack
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes

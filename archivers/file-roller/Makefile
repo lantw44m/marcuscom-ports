@@ -20,12 +20,11 @@ CONFLICTS=	file-roller-3.[0-9]*
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix desktop-file-utils pkgconfig
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack desktopfileutils gnomedocutils \
-		gtk20 gconf2
+USE_GNOME=	gnomeprefix intlhack gnomedocutils gtk20 gconf2
 USE_XORG=	sm
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -56,7 +55,6 @@ post-patch:
 		${WRKSRC}/src/fr-command-zip.c
 
 post-install:
-	@-update-desktop-database
 .if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in ${PORTDOCS}

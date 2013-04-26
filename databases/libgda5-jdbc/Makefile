@@ -1,9 +1,6 @@
-# New ports collection makefile for:	libgda4-java
-# Date created:				10 Mar 2009
-# Whom:					Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#
+#   $MCom$
 
 PORTREVISION?=	0
 CATEGORIES=	databases gnome

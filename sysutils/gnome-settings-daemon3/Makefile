@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnome-settings-daemon
-# Date created:				14 Jan 2008
-# Whom:					Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/sysutils/gnome-settings-daemon3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-settings-daemon
 PORTVERSION=	3.4.2
@@ -17,12 +13,12 @@ COMMENT=	GNOME 3 settings daemon
 
 BUILD_DEPENDS=	gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
-LIB_DEPENDS=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3 \
-		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
-		colord.1:${PORTSDIR}/graphics/colord \
-		pulse.0:${PORTSDIR}/audio/pulseaudio \
-		gdbm.4:${PORTSDIR}/databases/gdbm \
-		notify.4:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
+		polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
+		colord:${PORTSDIR}/graphics/colord \
+		pulse:${PORTSDIR}/audio/pulseaudio \
+		gdbm:${PORTSDIR}/databases/gdbm \
+		notify:${PORTSDIR}/devel/libnotify
 RUN_DEPENDS=	gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
@@ -32,9 +28,8 @@ LATEST_LINK=	gnome-settings-daemon3
 USE_XORG=	xxf86misc
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomehack gnomedesktop3 libgnomekbd3 \
-		gnomehier
-USE_GETTEXT=	yes
+USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libgnomekbd3	gnomehier
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-gudev \

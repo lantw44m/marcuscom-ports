@@ -1,9 +1,6 @@
-# New ports collection makefile for:	shared-color-profiles
-# Date created:		2012-01-25
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#
+#   $MCom$
 
 PORTNAME=	shared-color-profiles
 PORTVERSION=	0.1.5

@@ -1,10 +1,6 @@
-# New ports collection makefile for:	libnotify
-# Date created:				2005-08-06
-# Whom:					Andreas Kohn <andreas@syndrom23.de>
-#
+# Created by: Andreas Kohn <andreas@syndrom23.de>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/devel/libnotify/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	libnotify
 PORTVERSION=	0.7.5
@@ -21,8 +17,8 @@ BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 USE_XZ=		yes
-USE_GNOME=	gnomehack intlhack glib20 gtk20 ltverhack
-USE_GETTEXT=	yes
+USE_GNOME=	intlhack glib20 gtk20 ltverhack
+USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool

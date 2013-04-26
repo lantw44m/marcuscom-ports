@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gtk-engines2
-# Date Created:				21 May 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11-themes/gtk-engines3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gtk-engines3
 PORTVERSION=	2.91.1
@@ -18,14 +14,15 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Theme engine for the GTK+-3.0 toolkit
 
 LICENSE=	LGPL21
-LICENSE_FILE=	${WRKSRC}/COPYING
+
 USE_GMAKE=	yes
 USE_BZIP2=	yes
-USE_GNOME=	gnomehack gtk30 intlhack ltasneededhack
-USE_GETTEXT=	yes
+USE_GNOME=	gtk30 intlhack ltasneededhack
+USES=		gettext pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-CONFIGURE_ENV=	CPPFLAGS="-I${LOCALBASE}/include" LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 OPTIONS=	ANIMATION "Enable animated progressbars" off
 

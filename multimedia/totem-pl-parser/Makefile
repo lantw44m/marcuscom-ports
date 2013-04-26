@@ -1,10 +1,6 @@
-# New ports collection makefile for:	totem-pl-parser
-# Date created:		2007-12-04
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/multimedia/totem-pl-parser/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	totem-pl-parser
 PORTVERSION=	3.4.2
@@ -16,15 +12,14 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GObject-based library to parse a host of playlist formats
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	gmime-2.4.6:${PORTSDIR}/mail/gmime24 \
-		soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome
+LIB_DEPENDS=	gmime-2.4:${PORTSDIR}/mail/gmime24 \
+		soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
 RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack gnomeprefix glib20 libxml2 intlhack ltverhack \
-		gnomehier
-USE_GETTEXT=	yes
+USE_GNOME=	gnomeprefix glib20 libxml2 intlhack ltverhack gnomehier
+USES=		gettext pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-libarchive

@@ -13,10 +13,9 @@ COMMENT=	Library to access the secret service API
 LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
 USE_XZ=		yes
-USES=		pathfix
 USE_GNOME=	gnomehier glib20 libxslt:build intltool
 USE_GMAKE=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-introspection --disable-vala

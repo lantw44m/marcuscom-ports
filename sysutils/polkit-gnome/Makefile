@@ -1,6 +1,6 @@
 # Created by: Koop Mast<kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/sysutils/polkit-gnome/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	polkit-gnome
 PORTVERSION=	0.102
@@ -14,8 +14,9 @@ LIB_DEPENDS=	polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 
 USE_XZ=		yes
 USE_GMAKE=	yes
+USES=		gettext pathfix
 USE_GETTEXT=	yes
-USE_GNOME=	gnomehack gnomeprefix gtk20 intlhack
+USE_GNOME=	gnomeprefix gtk20 intlhack
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--disable-gtk-doc \

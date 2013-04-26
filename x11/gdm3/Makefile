@@ -1,10 +1,6 @@
-# New ports collection makefile for:   gdm2
-# Date created:        20 May 2002
-# Whom:                Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/gdm3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gdm
 PORTVERSION=	3.4.1
@@ -19,16 +15,15 @@ COMMENT=	GNOME 3 version of xdm display manager
 BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		nss-config:${PORTSDIR}/security/nss \
     		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
-LIB_DEPENDS=	ck-connector.0:${PORTSDIR}/sysutils/consolekit \
-		dconf.0:${PORTSDIR}/devel/dconf \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		polkit-gtk-1.0:${PORTSDIR}/sysutils/polkit-gnome \
+LIB_DEPENDS=	ck-connector:${PORTSDIR}/sysutils/consolekit \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		polkit-gtk-1:${PORTSDIR}/sysutils/polkit-gnome \
     		execinfo:${PORTSDIR}/devel/libexecinfo \
-		upower-glib.1:${PORTSDIR}/sysutils/upower \
-		fontconfig.1:${PORTSDIR}/x11-fonts/fontconfig \
-		accountsservice.0:${PORTSDIR}/sysutils/accountsservice \
-		xklavier.12:${PORTSDIR}/x11/libxklavier \
-		canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
+		upower-glib:${PORTSDIR}/sysutils/upower \
+		fontconfig:${PORTSDIR}/x11-fonts/fontconfig \
+		accountsservice:${PORTSDIR}/sysutils/accountsservice \
+		xklavier:${PORTSDIR}/x11/libxklavier \
+		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
 RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
 		nss-config:${PORTSDIR}/security/nss \
@@ -44,7 +39,7 @@ GROUPS=		gdm
 
 LATEST_LINK=	gdm3
 USE_XZ=		yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
 INSTALLS_OMF=	yes
@@ -52,7 +47,7 @@ INSTALLS_ICONS=	yes
 USE_RC_SUBR=	gdm
 USE_GNOME_SUBR=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehack intlhack gnomehier librsvg2 gnomeprefix gnomepanel3
+USE_GNOME=	intlhack gnomehier librsvg2 gnomeprefix gnomepanel3 dconf
 GLIB_SCHEMAS=	org.gnome.login-screen.gschema.xml
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home \
@@ -60,8 +55,8 @@ CONFIGURE_ARGS=	--with-working-directory=${PREFIX}/etc/gdm/home \
 		--enable-authentication-scheme=pam \
 		--with-console-kit \
 		--with-systemd=no
-CPPFLAGS=	-I${LOCALBASE}/include -DHAS_SA_LEN
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include -DHAS_SA_LEN
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGLIBS=	-lm -lexecinfo
 CONFIGURE_ENV=	LIBS="${CONFIGLIBS}" \
 		GTKDOC="false"
@@ -129,11 +124,9 @@ post-install:
 	@dconf update
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.pre.mk>
-
 # logwtmp lives here.
 .if ${OSVERSION} < 900000
 CONFIGLIBS+=	-lutil
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

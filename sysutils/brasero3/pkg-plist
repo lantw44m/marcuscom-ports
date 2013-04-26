@@ -876,7 +876,3 @@ share/mime/packages/brasero.xml
 @dirrm lib/brasero3/plugins
 @dirrm lib/brasero3
 @dirrm include/brasero3
-@exec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
-@unexec %%LOCALBASE%%/bin/update-mime-database %D/share/mime
-@exec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true
-@unexec %%LOCALBASE%%/bin/update-desktop-database > /dev/null || /usr/bin/true

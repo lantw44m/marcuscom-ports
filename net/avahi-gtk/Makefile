@@ -1,10 +1,6 @@
-# New ports collection makefile for:	avahi-gtk
-# Date created:				31 July 2007
-# Whom:					Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/net/avahi-gtk/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTREVISION=	0
 CATEGORIES=	net

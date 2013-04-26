@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnome-icon-theme
-# Date Created:				05 October 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/misc/gnome-icon-theme/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-icon-theme
 PORTVERSION=	3.4.0
@@ -22,7 +18,8 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicol
 USE_XZ=		yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USE_GNOME=	gnomehack intlhack gtk-update-icon-cache
+USES=		pathfix
+USE_GNOME=	intlhack gtk-update-icon-cache
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-icon-mapping
 CPPFLAGS+=	-I${LOCALBASE}/include

@@ -1,10 +1,6 @@
-# New ports collection makefile for:	accerciser
-# Date created:		2007-09-17
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/accessibility/accerciser/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	accerciser
 PORTVERSION=	1.12.1
@@ -22,7 +18,7 @@ USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	pygnomedesktop atspi intlhack
 USE_PYTHON=	yes
-USE_GETTEXT=	yes
+USES=		gettext pkgconfig
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

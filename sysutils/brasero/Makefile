@@ -1,9 +1,6 @@
-# New ports collection makefile for:	bonfire
-# Date created:		2006-05-12
-# Whom:			Michael Johnson <ahze@FreeBSD.org>
-#
+# Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/sysutils/brasero/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	brasero
 PORTVERSION=	2.32.1
@@ -15,22 +12,22 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CD/DVD mastering tool for the GNOME desktop
 
-LIB_DEPENDS=	notify.4:${PORTSDIR}/devel/libnotify \
-		unique-1.0.2:${PORTSDIR}/x11-toolkits/unique \
-		totem-plparser.17:${PORTSDIR}/multimedia/totem-pl-parser \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
+LIB_DEPENDS=	notify:${PORTSDIR}/devel/libnotify \
+		unique-1.0:${PORTSDIR}/x11-toolkits/unique \
+		totem-plparser:${PORTSDIR}/multimedia/totem-pl-parser \
+		canberra-gtk:${PORTSDIR}/audio/libcanberra
 RUN_DEPENDS=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 		cdrdao:${PORTSDIR}/sysutils/cdrdao \
 		yelp:${PORTSDIR}/x11/yelp
 
 CONFLICTS=	brasero-3.[0-9]*
 
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig shared-mime-info desktop-file-utils
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_XORG=	sm
-USE_GNOME=	intlhack gnomeprefix gnomehack gnomedocutils
+USE_GNOME=	intlhack gnomeprefix gnomedocutils
 USE_LDCONFIG=	yes
 USE_GSTREAMER=	gconf core
 INSTALLS_OMF=	yes
@@ -48,7 +45,7 @@ OPTIONS=	NAUTILUS "Enable Nautilus extension" on \
 
 PLIST_SUB=	FULL_VERSION=${PORTVERSION}
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if !defined(WITHOUT_NAUTILUS)
 USE_GNOME+=	nautilus2
@@ -60,8 +57,8 @@ CONFIGURE_ARGS+=--enable-nautilus=no
 .endif
 
 .if defined(WITH_LIBBURNIA)
-LIB_DEPENDS+=	burn.4:${PORTSDIR}/devel/libburn \
-    		isofs.6:${PORTSDIR}/devel/libisofs
+LIB_DEPENDS+=	burn:${PORTSDIR}/devel/libburn \
+    		isofs:${PORTSDIR}/devel/libisofs
 CONFIGURE_ARGS+=--enable-libburnia
 PLIST_SUB+=	LIBBURNIA=""
 .else
@@ -75,4 +72,4 @@ post-patch:
 		${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|/proc/self/fd/0|/dev/fd/0|g' ${WRKSRC}/po/*.po
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

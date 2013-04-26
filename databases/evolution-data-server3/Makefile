@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/databases/evolution-data-server3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	3.4.4
@@ -18,7 +18,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome \
 		oauth:${PORTSDIR}/net/liboauth \
-		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
+		goa-1:${PORTSDIR}/net/gnome-online-accounts \
 		gdata.13:${PORTSDIR}/devel/libgdata \
 		ical:${PORTSDIR}/devel/libical \
 		nss3:${PORTSDIR}/security/nss \
@@ -30,8 +30,7 @@ CONFLICTS=	evolution-data-server-2.[0-9]*
 LATEST_LINK=	evolution-data-server3
 USE_XZ=		yes
 USE_GMAKE=	yes
-USES=		bison pathfix
-USE_GETTEXT=	yes
+USES=		bison gettext pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack ltverhack ltasneededhack gconf2 \
 		libxml2 gtk30
 USE_OPENLDAP=	yes

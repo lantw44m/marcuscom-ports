@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/databases/evolution-data-server/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.32.1
@@ -22,8 +22,7 @@ LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
 
 USE_BZIP2=	yes
 USE_GMAKE=	yes
-USES=		bison pathfix
-USE_GETTEXT=	yes
+USES=		bison gettext pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack ltverhack ltasneededhack gconf2 \
 		libxml2
 USE_OPENLDAP=	yes

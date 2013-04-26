@@ -1,10 +1,6 @@
-# New ports collection makefile for:	gnomepanel
-# Date created:				27 April 2002
-# Whom:					Joe Marcus Clarke <marcus@FreeBSD.org>
-#
+# Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
-#
+#   $MCom: ports/trunk/x11/gnome-panel/Makefile 18392 2013-04-26 11:23:16Z mezz $
 
 PORTNAME=	gnome-panel
 PORTVERSION=	2.32.1
@@ -21,18 +17,18 @@ USE_BZIP2=	yes
 .if !defined(REFERENCE_PORT)
 
 LIB_DEPENDS=	gweather.1:${PORTSDIR}/net/libgweather \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
-		canberra-gtk.0:${PORTSDIR}/audio/libcanberra
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
+		canberra-gtk:${PORTSDIR}/audio/libcanberra
 
 CONFLICTS=	gnome-panel-3.[0-9]*
 
-USE_GETTEXT=	yes
+USES=		gettext pathfix
 USE_XORG=	ice sm x11 xau xrandr
 USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USE_GNOME=	gnomeprefix gnomehack intlhack gnomedesktop libwnck gnomemenus \
+USE_GNOME=	gnomeprefix intlhack gnomedesktop libwnck gnomemenus \
 		gnomedocutils ltverhack referencehack librsvg2
 WANT_GNOME=	yes
 USE_GMAKE=	yes

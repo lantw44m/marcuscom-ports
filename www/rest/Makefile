@@ -1,9 +1,6 @@
-# New ports collection makefile for:   
-# Date Created:			
-# Whom:				Koop Mast <kwm@FreeBSD.org>
-#
+# Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#
+#   $MCom$
 
 PORTNAME=	rest
 PORTVERSION=	0.7.12
@@ -15,10 +12,11 @@ COMMENT=	"RESTful" state website access web services
 
 BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
-LIB_DEPENDS=	soup-gnome-2.4.1:${PORTSDIR}/devel/libsoup-gnome
+LIB_DEPENDS=	soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
-USE_GNOME=	gnomehack glib20 intlhack libxml2
+USES=		pathfix
+USE_GNOME=	glib20 intlhack libxml2
 USE_XZ=		yes
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes

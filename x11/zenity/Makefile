@@ -16,15 +16,14 @@ BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gtk20 gnomedocutils intlhack
+USE_GNOME=	gnomeprefix gtk20 gnomedocutils intlhack
 USE_BZIP2=	yes
-USE_GETTEXT=	yes
+USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
-CONFIGURE_ENV=	LIBS="-L${LOCALBASE}/lib ${PTHREAD_LIBS}"
 CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
-LDFLAGS+=	-L${LOCALBASE}/lib -lintl
-CONFIGURE_ENV=	LIBS="${PTHREAD_LIBS}"
+LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ENV=	LIBS="-lintl ${PTHREAD_LIBS}"
 
 MAN1=		zenity.1
 
@@ -35,8 +34,8 @@ OPTIONS_DEFAULT=NOTIFY
 
 .include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_NOTIFY)
-LIB_DEPENDS+=		notify.4:${PORTSDIR}/devel/libnotify
+.if ${PORT_OPTIONS:MNOTIFY}
+LIB_DEPENDS+=		notify:${PORTSDIR}/devel/libnotify
 CONFIGURE_ARGS+=	--enable-libnotify
 .else
 CONFIGURE_ARGS+=	--disable-libnotify
