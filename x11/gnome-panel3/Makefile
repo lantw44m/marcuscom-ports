@@ -8,7 +8,7 @@
 
 PORTNAME=	gnome-panel
 PORTVERSION=	3.4.2.1
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -26,7 +26,7 @@ LIB_DEPENDS=	gweather-3.0:${PORTSDIR}/net/libgweather3 \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/notification-daemon
 
-CONFLICTS=	gnome-panel-2.[0-9]* mate-panel-*
+CONFLICTS=	gnome-panel-2.[0-9]*
 
 LATEST_LINK=	gnome-panel3
 USE_GETTEXT=	yes
