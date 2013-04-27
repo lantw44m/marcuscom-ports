@@ -15,11 +15,10 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 DESCR=		${.CURDIR}/pkg-descr
 PLIST=		${.CURDIR}/pkg-plist
 
-USES=		pathfix
-USE_GNOME=	libxml2
+USE_GNOME+=	libxml2
 USE_PYTHON=	yes
 CPPFLAGS+=	`${PYTHON_VERSION}-config --cflags`
-LDFLAGS+=	`${PYTHON_VERSION}-config --libs`
+LDFLAGS+=	-L${LOCALBASE}/lib `${PYTHON_VERSION}-config --libs`
 CONFIGURE_ARGS=	--with-iconv=${LOCALBASE} \
 		--with-html-dir=${PREFIX}/share/doc \
 		--with-html-subdir=${PORTNAME} \
