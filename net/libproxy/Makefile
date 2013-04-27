@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GOOGLE_CODE}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	Library that provides automatic proxy configuration management
 
-USE_CMAKE=	yes
+USES=		cmake
 USE_GNOME=	gnomehier
 
 PLIST_SUB+=	VERSION=${PORTVERSION}
