@@ -124,4 +124,4 @@ post-patch:
 		${WRKSRC}/help/reference/libdocument/Makefile.in \
 		${WRKSRC}/help/reference/libview/Makefile.in
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
