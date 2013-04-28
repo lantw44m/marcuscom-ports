@@ -31,8 +31,8 @@ USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_SQLITE=	yes
 USE_GMAKE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--enable-gtk-doc=no --with-webkit=3.0
 DATADIR=	share/seed-gtk3
 
@@ -46,12 +46,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|-ldl||g' \
 		${WRKSRC}/libseed/Makefile.in
 	@${REINPLACE_CMD} -e 's|reference||g' ${WRKSRC}/doc/Makefile.in
-#	@${FIND} ${WRKSRC}/examples -name Makefile.in -type f | ${XARGS} ${REINPLACE_CMD} -e \
-#		's|$$(datadir)/doc/seed/examples|${EXAMPLESDIR}|g'
-#.if defined(NOPORTEXAMPLES)
-#	@${REINPLACE_CMD} -e 's|examples||g' \
-#		${WRKSRC}/Makefile.in
-#.endif
 .if ! ${PORT_OPTIONS:MDOCS}
 	@${REINPLACE_CMD} -e 's| install-seeddocDATA||g ; s|doc$$||g' \
 		${WRKSRC}/Makefile.in

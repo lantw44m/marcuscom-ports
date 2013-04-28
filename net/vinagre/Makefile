@@ -35,11 +35,13 @@ GCONF_SCHEMAS=	vinagre.schemas
 
 MAN1=		vinagre.1
 
-OPTIONS=	TELEPATHY "Enable telepathy integration" on
+OPTIONS_DEFINE=	TELEPATHY
+OPTIONS_DEFAULT=TELEPATHY
+TELEPATHY_DESC=	Telepathy integration
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_TELEPATHY)
+.if ${PORT_OPTIONS:MTELEPATHY}
 CONFIGURE_ARGS+=--enable-telepathy
 LIB_DEPENDS+=	telepathy-glib.0:${PORTSDIR}/net-im/telepathy-glib
 PLIST_SUB+=	TELEPATHY=""
@@ -49,7 +51,7 @@ PLIST_SUB+=	TELEPATHY="@comment "
 .endif
 
 post-install:
-.if !defined(NOPORTDOCS)
+.if ${PORT_OPTIONS:MDOCS}
 	${MKDIR} ${DOCSDIR}
 .for f in AUTHORS COPYING ChangeLog MAINTAINERS NEWS README
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCSDIR}

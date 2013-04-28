@@ -4,7 +4,7 @@
 
 PORTNAME=	evince
 PORTVERSION=	2.32.0
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -14,6 +14,7 @@ COMMENT=	GNOME 2 multi-format document viewer
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 LIB_DEPENDS=	poppler-glib:${PORTSDIR}/graphics/poppler-glib \
+		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		spectre:${PORTSDIR}/print/libspectre
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		yelp:${PORTSDIR}/x11/yelp
@@ -24,9 +25,9 @@ USE_LDCONFIG=	yes
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
-USES=		gettext pathfix desktop-file-utils
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
+USES=		pathfix gettext desktop-file-utils
 USE_GNOME=	intlhack gnomeprefix gnomedocutils ltasneededhack gconf2
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -40,46 +41,46 @@ PLIST_SUB+=	VERSION=2.32
 
 MAN1=		evince.1
 
-OPTIONS=	DVI		"Enable DVI viewer support"		off \
-		T1LIB		"Enable T1LIB for TYPE1 fonts to DVI (Enables DVI)"	off \
-		NAUTILUS	"Enable Nautilus plugin"		on  \
-		KEYRING		"Enable Gnome-Keyring without Nautilus" on \
-		DBUS		"Enable D-BUS support"			on \
-		COMICS		"Enable comic book archives support"	on \
-		IMPRESS		"Enable Impress presentations support"	off \
-		DJVU		"Enable DJVU support"			off
+OPTIONS_DEFINE=	DVI T1LIB NAUTILUS KEYRING COMICS IMPRESS DJVU
+OPTIONS_DEFAULT=NAUTILUS KEYRING COMICS
+DVI_DESC=	DVI viewer support
+T1LIB_DESC=	T1LIB for TYPE1 fonts to DVI (Enables DVI)
+NAUTILUS_DESC=	Nautilus plugin
+KEYRING_DESC=	Gnome-Keyring without Nautilus
+COMICS_DESC=	Comic book archives support
+IMPRESS_DESC=	Impress presentations support
+DJVU_DESC=	DJVU support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(PACKAGE_BUILDING) || exists(${LOCALBASE}/lib/libdbus-glib-1.so)
-WITH_DBUS=	yes
-.endif
-
-.if defined(WITH_DVI) || defined(WITH_T1LIB) || exists(${LOCALBASE}/lib/libkpathsea.a)
+.if ${PORT_OPTIONS:MDVI} || ${PORT_OPTIONS:MT1LIB}
 BUILD_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
 RUN_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
 
 CONFIGURE_ARGS+=	--enable-dvi
 GCONF_SCHEMAS+=	evince-thumbnailer-dvi.schemas
 PLIST_SUB+=		DVI=""
-. if defined(WITH_T1LIB)
-LIB_DEPENDS+=	t1.5:${PORTSDIR}/devel/t1lib
+. if ${PORT_OPTIONS:MT1LIB}
+LIB_DEPENDS+=	t1:${PORTSDIR}/devel/t1lib
 
 CONFIGURE_ARGS+=	--enable-t1lib
+. else
+CONFIGURE_ARGS+=	--disable-t1lib
 . endif
 .else
+CONFIGURE_ARGS+=	--disable-dvi
 PLIST_SUB+=		DVI="@comment "
 .endif
 
-.if !defined(WITHOUT_NAUTILUS)
+.if ${PORT_OPTIONS:MNAUTILUS}
 USE_GNOME+=		nautilus2
 CONFIGURE_ARGS+=	--enable-nautilus
 PLIST_SUB+=		NAUTILUS=""
 .else
 BUILD_DEPENDS+=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 RUN_DEPENDS+=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
-.if !defined(WITHOUT_KEYRING)
-LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
+.if ${PORT_OPTIONS:MKEYRING}
+LIB_DEPENDS+=	gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 .else
 CONFIGURE_ARGS+=	--without-keyring
 .endif
@@ -87,7 +88,7 @@ CONFIGURE_ARGS+=	--disable-nautilus
 PLIST_SUB+=		NAUTILUS="@comment "
 .endif
 
-.if defined(WITH_IMPRESS)
+.if ${PORT_OPTIONS:MIMPRESS}
 CONFIGURE_ARGS+=	--enable-impress
 PLIST_SUB+=		IMPRESS=""
 .else
@@ -95,7 +96,7 @@ CONFIGURE_ARGS+=	--disable-impress
 PLIST_SUB+=		IMPRESS="@comment "
 .endif
 
-.if defined(WITH_DJVU)
+.if ${PORT_OPTIONS:MDJVU}
 LIB_DEPENDS+=		djvulibre:${PORTSDIR}/graphics/djvulibre
 CONFIGURE_ARGS+=	--enable-djvu
 GCONF_SCHEMAS+=		evince-thumbnailer-djvu.schemas
@@ -105,11 +106,7 @@ CONFIGURE_ARGS+=	--disable-djvu
 PLIST_SUB+=		DJVU="@comment "
 .endif
 
-.if !defined(WITHOUT_DBUS)
-LIB_DEPENDS+=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib
-.endif
-
-.if !defined(WITHOUT_COMICS)
+.if ${PORT_OPTIONS:MCOMICS}
 RUN_DEPENDS+=		unzip:${PORTSDIR}/archivers/unzip
 CONFIGURE_ARGS+=	--enable-comics
 GCONF_SCHEMAS+=		evince-thumbnailer-comics.schemas

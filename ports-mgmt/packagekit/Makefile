@@ -18,8 +18,7 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
 		ck-connector:${PORTSDIR}/sysutils/consolekit
 RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof \
-		${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection \
-		${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info
+		${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 
 USE_GMAKE=	yes
 USE_XZ=		yes

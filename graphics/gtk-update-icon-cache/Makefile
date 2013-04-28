@@ -17,8 +17,7 @@ LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-RUN_DEPENDS+=	${LOCALBASE}/share/mime/magic:${PORTSDIR}/misc/shared-mime-info \
-		${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
+RUN_DEPENDS+=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
 USE_XZ=		yes
 USE_GMAKE=	yes
@@ -27,7 +26,7 @@ MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	atk pango gdkpixbuf2 ltverhack
-USES=		gettext pathfix pkgconfig
+USES=		gettext pathfix pkgconfig shared-mime-info
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 PATCHDIR=	${.CURDIR}/../../x11-toolkits/gtk20/files

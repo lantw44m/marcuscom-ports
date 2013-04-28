@@ -40,8 +40,8 @@ CONFIGURE_ARGS=	--disable-vala
 INSTALLS_ICONS=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-CONFIGURE_ENV=	LDFLAGS="-L${LOCALBASE}/lib"
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.rhythmbox.gschema.xml
 
@@ -50,8 +50,8 @@ OPTIONS_DEFAULT=NOTIFY PYTHON
 IPOD_DESC=	iPod support
 ITMS_PLUGIN_DESC=iTunes browser plugin
 WEBKIT_DESC=	HTML view support
-#OPTIONS=	DAAP "Enable iTunes music sharing" off \
-#		VISUAL "Enable clutter visualizer plugin" on \
+#DAAP "Enable iTunes music sharing" off \
+#VISUAL "Enable clutter visualizer plugin" on \
 
 MAN1=		rhythmbox-client.1 rhythmbox.1
 

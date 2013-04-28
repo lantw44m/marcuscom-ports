@@ -16,7 +16,6 @@ BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 USE_XZ=		yes
 USE_GMAKE=	yes
 USES=		gettext pathfix pkgconfig
-USE_GETTEXT=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomeprefix glib20 libxml2 ltverhack intlhack
 USE_AUTOTOOLS=	libtool

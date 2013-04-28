@@ -37,17 +37,19 @@ GLIB_SCHEMAS=	org.gnome.eog.enums.xml \
 
 PLIST_SUB+=	VERSION=3.0
 
-OPTIONS=	EXIF "Enable digital camera file meta-data support" on \
-		EXEMPI "Enable XMP support" on
+OPTIONS_DEFINE=	EXIF EXEMPI
+OPTIONS_DEFAULT=EXIF EXEMPI
+EXIF_DESC= 	Digital camera file meta-data support
+EXEMPI_DESC=	XMP support
 
 .include <bsd.port.options.mk>
 
 _WITH_EXIF=	no
 _WITH_EXEMPI=	no
 
-.if defined(WITH_EXIF)
+.if ${PORT_OPTIONS:MEXIF}
 CONFIGURE_ARGS+=--with-libexif
-LIB_DEPENDS+=	exif.12:${PORTSDIR}/graphics/libexif
+LIB_DEPENDS+=	exif:${PORTSDIR}/graphics/libexif
 PLIST_SUB+=	EXIF=""
 _WITH_EXIF=	yes
 .else
@@ -55,9 +57,9 @@ CONFIGURE_ARGS+=--without-libexif
 PLIST_SUB+=	EXIF="@comment "
 .endif
 
-.if defined(WITH_EXEMPI)
+.if ${PORT_OPTIONS:MEXEMPI}
 CONFIGURE_ARGS+=--with-xmp
-LIB_DEPENDS+=	exempi.3:${PORTSDIR}/textproc/exempi
+LIB_DEPENDS+=	exempi:${PORTSDIR}/textproc/exempi
 _WITH_EXEMPI=	yes
 .else
 CONFIGURE_ARGS+=--without-xmp

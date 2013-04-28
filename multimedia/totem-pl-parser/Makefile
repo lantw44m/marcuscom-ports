@@ -18,8 +18,8 @@ RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-i
 
 USE_XZ=		yes
 USE_GMAKE=	yes
+USES=		pathfix gettext
 USE_GNOME=	gnomeprefix glib20 libxml2 intlhack ltverhack gnomehier
-USES=		gettext pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-libarchive
@@ -28,12 +28,14 @@ CONFIGURE_ENV=	ARCHIVE_CFLAGS="-I/usr/include" \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS=	QUVI "Enable flash media stream URL support"  off
+OPTIONS_DEFINE=	QUVI
+OPTIONS_DEFAULT=QUVI
+QUVI_DESC=	Flash media stream URL support
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_QUVI)
-LIB_DEPENDS+=	quvi.7:${PORTSDIR}/multimedia/libquvi
+.if ${PORT_OPTIONS:MQUVI}
+LIB_DEPENDS+=	quvi:${PORTSDIR}/multimedia/libquvi
 CONFIGURE_ARGS+=--enable-quvi
 .else
 CONFIGURE_ARGS+=--enable-quvi=no

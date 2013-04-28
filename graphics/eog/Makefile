@@ -4,7 +4,7 @@
 
 PORTNAME=	eog
 PORTVERSION=	2.32.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -13,6 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The Eye Of Gnome image viewer
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
+LIB_DEPENDS=	lcms:${PORTSDIR}/graphics/lcms
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 
 CONFLICTS=	eog-3.[0-9]*
@@ -20,7 +21,6 @@ CONFLICTS=	eog-3.[0-9]*
 USE_BZIP2=	yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack librsvg2 gconf2 gnomedesktop
-WANT_GNOME=	yes
 INSTALLS_ICONS=	yes
 USES=		gettext pathfix desktop-file-utils shared-mime-info pkgconfig
 INSTALLS_OMF=	yes
@@ -30,22 +30,30 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	eog.schemas
 
+OPTIONS_DEFINE= EXIF EXEMPI PYTHON
+OPTIONS_DEFAULT=EXIF EXEMPI PYTHON
+EXIF_DESC=	Digital camera file meta-data support
+EXEMPI_DESC=	XMP support
+
+.include <bsd.port.options.mk>
+
 _WITH_EXIF=	no
 _WITH_EXEMPI=	no
 
-.if !defined(WITHOUT_EXIF) || (exists(${LOCALBASE}/lib/libexif.so.12) || \
-	defined(WITH_EXIF))
+.if ${PORT_OPTIONS:MEXIF}
 LIB_DEPENDS+=	exif:${PORTSDIR}/graphics/libexif
 PLIST_SUB+=	EXIF=""
 _WITH_EXIF=	yes
 .else
+CONFIGURE_ARGS+=--without-libexif
 PLIST_SUB+=	EXIF="@comment "
 .endif
 
-.if !defined(WITHOUT_EXEMPI) || (exists(${LOCALBASE}/lib/libexempi.so)) || \
-    	defined(WITH_EXEMPI)
+.if ${PORT_OPTIONS:MEXEMPI}
 LIB_DEPENDS+=	exempi:${PORTSDIR}/textproc/exempi
 _WITH_EXEMPI=	yes
+.else
+CONFIGURE_ARGS+=--without-xmp
 .endif
 
 .if ${_WITH_EXIF}=="yes" || ${_WITH_EXEMPI}=="yes"
@@ -54,7 +62,7 @@ PLIST_SUB+=	EXIFEXEMPI=""
 PLIST_SUB+=	EXIFEXEMPI="@comment "
 .endif
 
-.if ${HAVE_GNOME:Mpygtk2}!=""
+.if ${PORT_OPTIONS:MPYTHON}
 USE_GNOME+=	pygtk2
 CONFIGURE_ARGS+=--enable-python
 .else

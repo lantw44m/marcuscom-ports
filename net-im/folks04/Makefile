@@ -4,6 +4,7 @@
 
 PORTNAME=	folks
 PORTVERSION=	0.4.3
+PORTREVISION=	1
 CATEGORIES=	net-im
 MASTER_SITES=	GNOME
 
@@ -20,11 +21,11 @@ CONFLICTS=	folks-0.[6-9].[0-9]*
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_GMAKE=	yes
+USES=		pathfix gettext
 USE_GNOME=	intlhack gnomehier
-USES=		gettext pathfix
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 PLIST_SUB=	VERSION=22
 

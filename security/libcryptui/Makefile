@@ -25,8 +25,8 @@ USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_GNOME=	intlhack gnomeprefix gnomedocutils gtk30
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--enable-introspection=no
 
 GLIB_SCHEMAS=	org.gnome.seahorse.recipients.gschema.xml

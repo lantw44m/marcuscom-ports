@@ -24,8 +24,8 @@ USE_GMAKE=	yes
 USES=		gettext pathfix pkgconfig
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.mousetweaks.enums.xml \
 		org.gnome.mousetweaks.gschema.xml

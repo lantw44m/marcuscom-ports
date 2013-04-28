@@ -1,6 +1,6 @@
 # Created by: Dave McKay <dave@mu.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/security/seahorse-sharing/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	seahorse-sharing
 PORTVERSION=	3.2.1
@@ -24,8 +24,8 @@ USE_GMAKE=	yes
 USE_GNOME=	intlhack gnomeprefix
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 MAN1=		seahorse-sharing.1
 

@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#  $MCom$
+#  $MCom: ports/trunk/deskutils/gnome-contacts/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	gnome-contacts
 PORTVERSION=	3.4.1
@@ -21,8 +21,8 @@ USE_GMAKE=	yes
 USES=		gettext pathfix pkgconfig
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.Contacts.gschema.xml
 

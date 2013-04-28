@@ -4,7 +4,7 @@
 
 PORTNAME=	evince
 PORTVERSION=	3.4.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	poppler-glib:${PORTSDIR}/graphics/poppler-glib \
+		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		spectre:${PORTSDIR}/print/libspectre
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
@@ -28,12 +29,13 @@ USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USE_XORG=	ice
 INSTALLS_ICONS=	yes
-USES=		gettext pathfix pkgconfig desktop-file-utils
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
+USES=		pathfix gettext pkgconfig desktop-file-utils
 USE_GNOME=	intlhack gnomeprefix gnomedocutils ltasneededhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+CONFIGURE_ARGS=	--disable-xps
 
 GLIB_SCHEMAS=	org.gnome.Evince.gschema.xml
 
@@ -41,40 +43,44 @@ PLIST_SUB=	VERSION=3.0
 
 MAN1=		evince.1
 
-OPTIONS=	DVI		"Enable DVI viewer support"		off \
-		T1LIB		"Enable T1LIB for TYPE1 fonts to DVI (Enables DVI)"	off \
-		NAUTILUS	"Enable Nautilus plugin"		on  \
-		KEYRING		"Enable Gnome-Keyring without Nautilus" on \
-		COMICS		"Enable comic book archives support"	on \
-		DJVU		"Enable DJVU support"			off
-#		XPS		"Enable XPS backend support"		off \
+OPTIONS_DEFINE=	DVI T1LIB NAUTILUS KEYRING COMICS IMPRESS DJVU
+OPTIONS_DEFAULT=NAUTILUS KEYRING COMICS
+DVI_DESC=	DVI viewer support
+T1LIB_DESC=	T1LIB for TYPE1 fonts to DVI (Enables DVI)
+NAUTILUS_DESC=	Nautilus plugin
+KEYRING_DESC=	Gnome-Keyring without Nautilus
+COMICS_DESC=	Comic book archives support
+IMPRESS_DESC=	Impress presentations support
+DJVU_DESC=	DJVU support
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_DVI) || defined(WITH_T1LIB) || exists(${LOCALBASE}/lib/libkpathsea.a)
+.if ${PORT_OPTIONS:MDVI} || ${PORT_OPTIONS:MT1LIB}
 BUILD_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
 RUN_DEPENDS+=	tex:${PORTSDIR}/print/teTeX-base
 
 CONFIGURE_ARGS+=	--enable-dvi
 PLIST_SUB+=		DVI=""
-. if defined(WITH_T1LIB)
-LIB_DEPENDS+=	t1.5:${PORTSDIR}/devel/t1lib
-
+. if ${PORT_OPTIONS:MT1LIB}
+LIB_DEPENDS+=	t1:${PORTSDIR}/devel/t1lib
 CONFIGURE_ARGS+=	--enable-t1lib
+. else
+CONFIGURE_ARGS+=	--disable-t1lib
 . endif
 .else
+CONFIGURE_ARGS+=	--disable-dvi
 PLIST_SUB+=		DVI="@comment "
 .endif
 
-.if !defined(WITHOUT_NAUTILUS)
+.if ${PORT_OPTIONS:MNAUTILUS}
 USE_GNOME+=		nautilus3
 CONFIGURE_ARGS+=	--enable-nautilus
 PLIST_SUB+=		NAUTILUS=""
 .else
 BUILD_DEPENDS+=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
 RUN_DEPENDS+=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme
-.if !defined(WITHOUT_KEYRING)
-LIB_DEPENDS+=	gnome-keyring.0:${PORTSDIR}/security/libgnome-keyring
+.if ${PORT_OPTIONS:MKEYRING}
+LIB_DEPENDS+=	gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 .else
 CONFIGURE_ARGS+=	--without-keyring
 .endif
@@ -82,16 +88,8 @@ CONFIGURE_ARGS+=	--disable-nautilus
 PLIST_SUB+=		NAUTILUS="@comment "
 .endif
 
-#.if defined(WITH_XPS)
-#CONFIGURE_ARGS+=	--enable-xps
-#LIB_DEPENDS+=		
-#PLIST_SUB+=		XPS=""
-#.else
-CONFIGURE_ARGS+=	--disable-xps
-#PLIST_SUB+=		XPS="@comment "
-#.endif
 
-.if defined(WITH_DJVU)
+.if ${PORT_OPTIONS:MDJVU}
 LIB_DEPENDS+=		djvulibre:${PORTSDIR}/graphics/djvulibre
 CONFIGURE_ARGS+=	--enable-djvu
 PLIST_SUB+=		DJVU=""
@@ -100,7 +98,7 @@ CONFIGURE_ARGS+=	--disable-djvu
 PLIST_SUB+=		DJVU="@comment "
 .endif
 
-.if !defined(WITHOUT_COMICS)
+.if ${PORT_OPTIONS:MCOMICS}
 RUN_DEPENDS+=		unzip:${PORTSDIR}/archivers/unzip
 CONFIGURE_ARGS+=	--enable-comics
 PLIST_SUB+=		COMICS=""

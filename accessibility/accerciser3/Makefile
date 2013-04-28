@@ -26,8 +26,8 @@ USES=		gettext pkgconfig
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 USE_DISPLAY=	yes
-CPPFLAGS=	-I${LOCALBASE}/include
-LDFLAGS=	-L${LOCALBASE}/lib
+CPPFLAGS+=	-I${LOCALBASE}/include
+LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.a11y.Accerciser.gschema.xml
 MAN1=		accerciser.1
