@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/databases/libgda5/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	libgda
-PORTVERSION?=	5.0.2
+PORTVERSION?=	5.0.3
 PORTREVISION?=	0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
@@ -15,6 +15,9 @@ COMMENT?=	Provides uniform access to different kinds of data sources
 
 USE_XZ=		yes
 LIBGDA5_SLAVE?=	no
+
+# until PKGNAMESUFFIX is added to UNIQUENAME or solved in another way. optionsfile save.
+UNIQUENAME=	${LATEST_LINK}
 
 .if !defined(REFERENCE_PORT)
 
