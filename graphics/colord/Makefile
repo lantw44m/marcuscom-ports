@@ -69,4 +69,7 @@ post-patch:
 		s|2MAN_FALSE='#'|2MAN_FALSE=|g" ${WRKSRC}/configure
 .endif
 
+post-install:
+	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
+
 .include <bsd.port.mk>
