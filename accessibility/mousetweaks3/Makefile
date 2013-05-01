@@ -19,7 +19,6 @@ CONFLICTS=	mousetweaks-2.[0-9]*
 LATEST_LINK=	mousetweaks3
 USE_XZ=		yes
 USE_XORG=	x11 xfixes xcursor xtst
-USE_XZ=		yes
 USE_GNOME=	gnomeprefix intlhack gnomedocutils gtk30
 USE_GMAKE=	yes
 USES=		gettext pathfix pkgconfig
