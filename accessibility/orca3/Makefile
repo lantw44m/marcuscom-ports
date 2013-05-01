@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/accessibility/orca3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	orca
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.2
 PORTREVISION=	1
 CATEGORIES=	accessibility gnome
 MASTER_SITES=	GNOME
@@ -40,8 +40,9 @@ MAN1=		orca.1
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
-		${WRKSRC}/src/orca/orca.in
-	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    	${WRKSRC}/src/orca/orca_i18n.py
+	@${REINPLACE_CMD} -e 's|/usr/|/usr/local/|g' \
+		${WRKSRC}/src/orca/orca_platform.py \
+		${WRKSRC}/src/orca/keybindings.py
 
 .include <bsd.port.mk>

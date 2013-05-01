@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/accessibility/mousetweaks3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	mousetweaks
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.0
 CATEGORIES=	accessibility
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,6 +17,7 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=0.1.0:${PORTSDIR}/devel/gsettings-deskto
 CONFLICTS=	mousetweaks-2.[0-9]*
 
 LATEST_LINK=	mousetweaks3
+USE_XZ=		yes
 USE_XORG=	x11 xfixes xcursor xtst
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix intlhack gnomedocutils gtk30
