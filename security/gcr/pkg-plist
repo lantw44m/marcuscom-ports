@@ -139,6 +139,7 @@ share/gtk-doc/html/gcr-3/gcr-3.devhelp2
 share/gtk-doc/html/gcr-3/gcr-GcrCertificateRequest.html
 share/gtk-doc/html/gcr-3/gcr-GcrColumn.html
 share/gtk-doc/html/gcr-3/gcr-GcrComparable.html
+share/gtk-doc/html/gcr-3/gcr-GcrImportInteraction.html
 share/gtk-doc/html/gcr-3/gcr-Key-Fingerprints.html
 share/gtk-doc/html/gcr-3/gcr-Library-Settings.html
 share/gtk-doc/html/gcr-3/gcr-Non-pageable-Memory.html

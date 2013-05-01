@@ -3,7 +3,7 @@
 #    $MCom: ports/trunk/security/gcr/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	gcr
-PORTVERSION=	3.4.1
+PORTVERSION=	3.6.2
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 
@@ -17,7 +17,7 @@ LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus \
 		p11-kit:${PORTSDIR}/security/p11-kit \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
-CONFLICTS=	gnome-keyring-3.[0-2].[0-9]* gnome-keyring-2.[0-9]*
+CONFLICTS=	gnome-keyring-2.[0-9]*
 
 USE_XZ=		yes
 USE_GNOME=	gtk30 intlhack
