@@ -1,7 +1,12 @@
 bin/glom
 bin/glom_create_from_example
+bin/glom_export_po
+bin/glom_export_po_all
+bin/glom_import_po_all
 bin/glom_test_connection
 include/glom-%%VERSION%%/libglom/appstate.h
+include/glom-%%VERSION%%/libglom/data_structure/choicevalue.h
+include/glom-%%VERSION%%/libglom/data_structure/database_title.h
 include/glom-%%VERSION%%/libglom/data_structure/field.h
 include/glom-%%VERSION%%/libglom/data_structure/fieldtypes.h
 include/glom-%%VERSION%%/libglom/data_structure/foundset.h
@@ -9,7 +14,7 @@ include/glom-%%VERSION%%/libglom/data_structure/glomconversions.h
 include/glom-%%VERSION%%/libglom/data_structure/groupinfo.h
 include/glom-%%VERSION%%/libglom/data_structure/has_title_singular.h
 include/glom-%%VERSION%%/libglom/data_structure/layout/custom_title.h
-include/glom-%%VERSION%%/libglom/data_structure/layout/fieldformatting.h
+include/glom-%%VERSION%%/libglom/data_structure/layout/formatting.h
 include/glom-%%VERSION%%/libglom/data_structure/layout/layoutgroup.h
 include/glom-%%VERSION%%/libglom/data_structure/layout/layoutitem.h
 include/glom-%%VERSION%%/libglom/data_structure/layout/layoutitem_button.h
@@ -28,9 +33,9 @@ include/glom-%%VERSION%%/libglom/data_structure/layout/report_parts/layoutitem_g
 include/glom-%%VERSION%%/libglom/data_structure/layout/report_parts/layoutitem_header.h
 include/glom-%%VERSION%%/libglom/data_structure/layout/report_parts/layoutitem_summary.h
 include/glom-%%VERSION%%/libglom/data_structure/layout/report_parts/layoutitem_verticalgroup.h
+include/glom-%%VERSION%%/libglom/data_structure/layout/static_text.h
 include/glom-%%VERSION%%/libglom/data_structure/layout/usesrelationship.h
 include/glom-%%VERSION%%/libglom/data_structure/numeric_format.h
-include/glom-%%VERSION%%/libglom/data_structure/parameternamegenerator.h
 include/glom-%%VERSION%%/libglom/data_structure/print_layout.h
 include/glom-%%VERSION%%/libglom/data_structure/privileges.h
 include/glom-%%VERSION%%/libglom/data_structure/relationship.h
@@ -38,6 +43,7 @@ include/glom-%%VERSION%%/libglom/data_structure/report.h
 include/glom-%%VERSION%%/libglom/data_structure/system_prefs.h
 include/glom-%%VERSION%%/libglom/data_structure/tableinfo.h
 include/glom-%%VERSION%%/libglom/data_structure/translatable_item.h
+include/glom-%%VERSION%%/libglom/translations_po.h
 include/glom-%%VERSION%%/libglom/db_utils.h
 include/glom-%%VERSION%%/libglom/document/bakery/document.h
 include/glom-%%VERSION%%/libglom/document/bakery/document_xml.h
@@ -55,8 +61,8 @@ include/glom-%%VERSION%%/libglom/utils.h
 lib/libglom-%%VERSION%%.la
 lib/libglom-%%VERSION%%.so
 lib/libglom-%%VERSION%%.so.0
-%%PYTHON_SITELIBDIR%%/glom_1_20.la
-%%PYTHON_SITELIBDIR%%/glom_1_20.so
+%%PYTHON_SITELIBDIR%%/glom_1_24.la
+%%PYTHON_SITELIBDIR%%/glom_1_24.so
 libdata/pkgconfig/glom-%%VERSION%%.pc
 share/applications/glom.desktop
 %%DATADIR%%/glade/developer/box_formatting.glade
@@ -73,7 +79,6 @@ share/applications/glom.desktop
 %%DATADIR%%/glade/developer/dialog_fieldslist.glade
 %%DATADIR%%/glade/developer/dialog_flowtable.glade
 %%DATADIR%%/glade/developer/dialog_group_by.glade
-%%DATADIR%%/glade/developer/dialog_groupby_sort_fields.glade
 %%DATADIR%%/glade/developer/dialog_initial_password.glade
 %%DATADIR%%/glade/developer/dialog_layout_field_properties.glade
 %%DATADIR%%/glade/developer/dialog_line.glade
@@ -82,6 +87,7 @@ share/applications/glom.desktop
 %%DATADIR%%/glade/developer/dialog_notebook.glade
 %%DATADIR%%/glade/developer/dialog_relationships_overview.glade
 %%DATADIR%%/glade/developer/dialog_script_library.glade
+%%DATADIR%%/glade/developer/dialog_sort_fields.glade
 %%DATADIR%%/glade/developer/dialog_translation_copy.glade
 %%DATADIR%%/glade/developer/dialog_translation_identify_original.glade
 %%DATADIR%%/glade/developer/dialog_user.glade
@@ -109,6 +115,7 @@ share/applications/glom.desktop
 %%DATADIR%%/glade/operator/dialog_image_save_progress.glade
 %%DATADIR%%/glade/operator/dialog_import_csv.glade
 %%DATADIR%%/glade/operator/dialog_import_csv_progress.glade
+%%DATADIR%%/glade/operator/dialog_new_record.glade
 %%DATADIR%%/glade/operator/window_main.glade
 %%DATADIR%%/glom_document.dtd
 %%DATADIR%%/pixmaps/glom-button.png
@@ -273,15 +280,19 @@ share/locale/cs/LC_MESSAGES/glom.mo
 share/locale/da/LC_MESSAGES/glom.mo
 share/locale/de/LC_MESSAGES/glom.mo
 share/locale/dz/LC_MESSAGES/glom.mo
+share/locale/el/LC_MESSAGES/glom.mo
 share/locale/en_CA/LC_MESSAGES/glom.mo
 share/locale/en_GB/LC_MESSAGES/glom.mo
+share/locale/eo/LC_MESSAGES/glom.mo
 share/locale/es/LC_MESSAGES/glom.mo
 share/locale/fi/LC_MESSAGES/glom.mo
 share/locale/fr/LC_MESSAGES/glom.mo
 share/locale/gl/LC_MESSAGES/glom.mo
 share/locale/gu/LC_MESSAGES/glom.mo
 share/locale/hu/LC_MESSAGES/glom.mo
+share/locale/id/LC_MESSAGES/glom.mo
 share/locale/it/LC_MESSAGES/glom.mo
+share/locale/lv/LC_MESSAGES/glom.mo
 share/locale/nb/LC_MESSAGES/glom.mo
 share/locale/ne/LC_MESSAGES/glom.mo
 share/locale/nl/LC_MESSAGES/glom.mo
@@ -293,6 +304,8 @@ share/locale/rw/LC_MESSAGES/glom.mo
 share/locale/ru/LC_MESSAGES/glom.mo
 share/locale/sl/LC_MESSAGES/glom.mo
 share/locale/sq/LC_MESSAGES/glom.mo
+share/locale/sr/LC_MESSAGES/glom.mo
+share/locale/sr@latin/LC_MESSAGES/glom.mo
 share/locale/sv/LC_MESSAGES/glom.mo
 share/locale/tr/LC_MESSAGES/glom.mo
 share/locale/vi/LC_MESSAGES/glom.mo
@@ -331,6 +344,8 @@ share/omf/glom/glom-sv.omf
 @dirrm %%DATADIR%%/glade
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
+@dirrmtry share/locale/sr@latin/LC_MESSAGES
+@dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/rw/LC_MESSAGES
 @dirrmtry share/locale/rw
 @dirrmtry share/locale/dz/LC_MESSAGES

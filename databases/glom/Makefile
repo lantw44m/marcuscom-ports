@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/databases/glom/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	glom
-PORTVERSION=	1.20.6
+PORTVERSION=	1.24.0
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,22 +12,24 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GNOME database designer and user interface
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
+		libepc>=0.4.0:${PORTSDIR}/www/libepc \
+		${LOCALBASE}/libdata/pkgconfig/libgda-mysql-5.0.pc:${PORTSDIR}/databases/libgda5-mysql \
 		${LOCALBASE}/libdata/pkgconfig/libgda-postgres-5.0.pc:${PORTSDIR}/databases/libgda5-postgresql
-LIB_DEPENDS=	gdamm-5.0:${PORTSDIR}/databases/libgdamm5 \
-		boost_python:${PORTSDIR}/devel/boost-python-libs \
-		gtksourceviewmm-3.0:${PORTSDIR}/x11-toolkits/gtksourceviewmm3 \
-                epc-1.0:${PORTSDIR}/www/libepc \
+LIB_DEPENDS=	boost_python:${PORTSDIR}/devel/boost-python-libs \
+		epc-1.0:${PORTSDIR}/www/libepc \
 		goocanvasmm-2.0:${PORTSDIR}/graphics/goocanvasmm2 \
 		evview3:${PORTSDIR}/graphics/evince3
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
+		${LOCALBASE}/libdata/pkgconfig/libgda-mysql-5.0.pc:${PORTSDIR}/databases/libgda5-mysql \
 		${LOCALBASE}/libdata/pkgconfig/libgda-postgres-5.0.pc:${PORTSDIR}/databases/libgda5-postgresql
 
 USE_XZ=		yes
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
-USES=		gettext pathfix pkgconfig shared-mime-info
+USES=		gettext pathfix pkgconfig shared-mime-info desktop-file-utils
 USE_GMAKE=	yes
-USE_GNOME=	gnomedocutils gnomeprefix intltool pygobject3 libxml2
+USE_GNOME=	gnomedocutils gnomeprefix intltool pygobject3 libxml2 \
+		gtksourceviewmm3 libgdamm5
 USE_LDCONFIG=	yes
 USE_PGSQL=	yes
 INSTALLS_OMF=	yes
@@ -39,8 +41,8 @@ INSTALLS_ICONS=	yes
 
 .include <bsd.port.options.mk>
 
-#PLIST_SUB+=	VERSION=${PORTVERSION:R}
-PLIST_SUB+=	VERSION=1.20
+PLIST_SUB+=	VERSION=${PORTVERSION:R}
+#PLIST_SUB+=	VERSION=1.24
 
 # We need postgreSQL tools the server installs, and configure checks for these.
 # Note: USE_PGSQL has already been set above.
