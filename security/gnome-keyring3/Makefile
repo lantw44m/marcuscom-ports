@@ -1,10 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/security/gnome-keyring3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom$
 
 PORTNAME=	gnome-keyring
-PORTVERSION=	3.4.1
-PORTREVISION=	1
+PORTVERSION=	3.6.2
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -13,7 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A program that keeps passwords and other secrets
 
 BUILD_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss \
-		gcr>=3.4.1:${PORTSDIR}/security/gcr
+		gcr>=3.5.3:${PORTSDIR}/security/gcr
 LIB_DEPENDS=	gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
 		dbus-1:${PORTSDIR}/devel/dbus \
 		gcr:${PORTSDIR}/security/gcr \
@@ -41,8 +40,6 @@ GLIB_SCHEMAS=	org.gnome.crypto.cache.gschema.xml
 post-patch:
 	@${REINPLACE_CMD} -e 's|make --version|${GMAKE} --version|g' \
 		${WRKSRC}/configure
-	@${MV} ${WRKSRC}/pkcs11/rpc-layer/gnome-keyring-module.in \
-		${WRKSRC}/pkcs11/rpc-layer/gnome-keyring.module.in
 	@${REINPLACE_CMD} -e 's|gnome-keyring-module|gnome-keyring.module|g' \
 		${WRKSRC}/pkcs11/rpc-layer/Makefile.in \
 		${WRKSRC}/configure

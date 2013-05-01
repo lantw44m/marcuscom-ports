@@ -1,7 +1,6 @@
 bin/gnome-keyring
 bin/gnome-keyring-3
 bin/gnome-keyring-daemon
-etc/pkcs11/modules/gnome-keyring.module
 etc/xdg/autostart/gnome-keyring-gpg.desktop
 etc/xdg/autostart/gnome-keyring-pkcs11.desktop
 etc/xdg/autostart/gnome-keyring-secrets.desktop
@@ -114,6 +113,7 @@ share/locale/xh/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
+share/p11-kit/modules/gnome-keyring.module
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -155,5 +155,3 @@ share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrmtry lib/pkcs11
 @dirrm lib/gnome-keyring/devel
 @dirrm lib/gnome-keyring
-@dirrmtry etc/pkcs11/modules
-@dirrmtry etc/pkcs11
