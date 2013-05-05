@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gtk30 libgsf ltverhack
+USE_GNOME=	gnomeprefix intlhack gtk30 libgsf ltverhack librsvg2
 USES=		gettext pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
