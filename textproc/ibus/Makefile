@@ -47,7 +47,7 @@ CONFIGURE_ARGS+=	--disable-iso-codes-check
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USE_GETTEXT=	yes
+USES=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls
@@ -55,7 +55,7 @@ PLIST_SUB+=	NLS="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGTK3}
-USE_GNOME+=	gtk30
+USE_GNOME+=	gtk30 dconf
 PLIST_SUB+=	GTK3=""
 .else
 CONFIGURE_ARGS+=	--disable-gtk3
