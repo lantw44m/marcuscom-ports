@@ -15,6 +15,7 @@ USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	gweather-3:${PORTSDIR}/net/libgweather3 \
 		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
 		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
