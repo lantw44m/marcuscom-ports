@@ -23,4 +23,8 @@ CONFIGURE_ENV=	ac_cv_path_GIT="" \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+post-patch:
+	@${REINPLACE_CMD} -e 's|(GTK_UPDATE_ICON_CACHE) -q |(GTK_UPDATE_ICON_CACHE) -q -t -f |'g \
+		${WRKSRC}/Makefile.in
+
 .include <bsd.port.mk>
