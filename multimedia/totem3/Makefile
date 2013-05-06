@@ -1,9 +1,9 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
 # $FreeBSD$
-#   $MCom: ports/trunk/multimedia/totem3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom: ports/multimedia/totem3/Makefile,v 1.23 2012/06/13 22:23:32 mezz Exp $
 
 PORTNAME=	totem
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.3
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -16,11 +16,10 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	gdata.13:${PORTSDIR}/devel/libgdata \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		clutter-gst-1.0:${PORTSDIR}/multimedia/clutter-gst \
+		clutter-gst-2.0:${PORTSDIR}/multimedia/clutter-gst \
 		clutter-gtk-1.0:${PORTSDIR}/graphics/clutter-gtk3 \
-		mx-1.0:${PORTSDIR}/x11-toolkits/mx \
 		peas-1.0:${PORTSDIR}/devel/libpeas \
-		totem-plparser.17:${PORTSDIR}/multimedia/totem-pl-parser
+		totem-plparser:${PORTSDIR}/multimedia/totem-pl-parser
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
@@ -35,7 +34,7 @@ USE_XZ=		yes
 USES=		gettext pathfix pkgconfig desktop-file-utils
 USE_GNOME=	gnomeprefix intlhack gtk30 libxml2 nautilus3 ltverhack \
 		pygobject3 gnomedocutils gnomehier
-USE_GSTREAMER=	core good mpeg2dec soup ugly gio resindvd
+USE_GSTREAMER1=	core good bad soup ugly
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
@@ -63,15 +62,15 @@ TOTEM_PLUGINS=	brasero-disc-recorder chapters dbusservice im-status gromit \
 		iplayer media-player-keys ontop opensubtitles properties \
 		screensaver screenshot sidebar-test skipto youtube
 
-# pythonconsole samplepython 
+# pythonconsole samplepython
 # vala rotation sample-vala
-# nautilus save-file 
+# nautilus save-file
 # iplayer zeitgeist-dp grilo
 
 .include <bsd.port.options.mk>
 
 .if defined(WITH_PUBLISH)
-LIB_DEPENDS+=	epc-1.0.3:${PORTSDIR}/www/libepc
+LIB_DEPENDS+=	epc-1.0:${PORTSDIR}/www/libepc
 PLIST_SUB+=	PUBLISH=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} publish
 GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
@@ -83,7 +82,7 @@ PLIST_SUB+=	PUBLISH="@comment "
 .endif
 
 #.if defined(WITH_TRACKER)
-#LIB_DEPENDS+=	tracker-gtk.0:${PORTSDIR}/sysutils/tracker-libtrackergtk
+#LIB_DEPENDS+=	tracker-gtk:${PORTSDIR}/sysutils/tracker-libtrackergtk
 #TOTEM_PLUGINS:=	${TOTEM_PLUGINS} tracker
 #PLIST_SUB+=	TRACKER=""
 #.else
@@ -91,7 +90,7 @@ PLIST_SUB+=	TRACKER="@comment "
 #.endif
 
 .if defined(WITH_LIRC)
-LIB_DEPENDS+=	lirc_client.2:${PORTSDIR}/comms/lirc
+LIB_DEPENDS+=	lirc_client:${PORTSDIR}/comms/lirc
 PLIST_SUB+=	LIRC=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
 .else
@@ -120,7 +119,7 @@ PLIST_SUB+=	BROWSER_PLUGINS="@comment "
 .if defined(WITH_DVD_DEVICE)
 DEFAULT_DVD_DEVICE=${WITH_DVD_DEVICE}
 .else
-DEFAULT_DVD_DEVICE=/dev/acd0
+DEFAULT_DVD_DEVICE=/dev/cd0
 .endif
 
 pre-everything::
@@ -130,8 +129,8 @@ pre-everything::
 
 post-patch:
 	@${CP} -f ${FILESDIR}/pkg-message.in ${PKGMESSAGE}
-	@${REINPLACE_CMD} -e 's|/dev/dvd|${DEFAULT_DVD_DEVICE}|' \
-		${WRKSRC}/src/backend/bacon-video-widget-gst-0.10.c
+#	@${REINPLACE_CMD} -e 's|/dev/dvd|${DEFAULT_DVD_DEVICE}|' \
+#		${WRKSRC}/src/backend/bacon-video-widget-gst-0.10.c
 
 post-install:
 #	${MKDIR} ${PREFIX}/share/vala/vapi

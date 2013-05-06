@@ -52,17 +52,6 @@ lib/totem/plugins/im-status/libtotem-im-status.a
 lib/totem/plugins/im-status/libtotem-im-status.la
 lib/totem/plugins/im-status/libtotem-im-status.so
 lib/totem/plugins/im-status/totem-im-status.plugin
-lib/totem/plugins/iplayer/iplayer.plugin
-lib/totem/plugins/iplayer/iplayer.py
-lib/totem/plugins/iplayer/iplayer.pyc
-lib/totem/plugins/iplayer/iplayer.pyo
-lib/totem/plugins/iplayer/iplayer.ui
-lib/totem/plugins/iplayer/iplayer2.py
-lib/totem/plugins/iplayer/iplayer2.pyc
-lib/totem/plugins/iplayer/iplayer2.pyo
-lib/totem/plugins/iplayer/listparser.py
-lib/totem/plugins/iplayer/listparser.pyc
-lib/totem/plugins/iplayer/listparser.pyo
 %%LIRC%%lib/totem/plugins/lirc/lirc.plugin
 %%LIRC%%lib/totem/plugins/lirc/liblirc.a
 %%LIRC%%lib/totem/plugins/lirc/liblirc.la
@@ -98,7 +87,6 @@ lib/totem/plugins/screensaver/libscreensaver.la
 lib/totem/plugins/screensaver/libscreensaver.so
 lib/totem/plugins/screensaver/screensaver.plugin
 lib/totem/plugins/screenshot/gallery.ui
-lib/totem/plugins/screenshot/gnome-screenshot.ui
 lib/totem/plugins/screenshot/libscreenshot.a
 lib/totem/plugins/screenshot/libscreenshot.la
 lib/totem/plugins/screenshot/libscreenshot.so
@@ -452,6 +440,7 @@ share/locale/hu/LC_MESSAGES/totem.mo
 share/locale/id/LC_MESSAGES/totem.mo
 share/locale/is/LC_MESSAGES/totem.mo
 share/locale/it/LC_MESSAGES/totem.mo
+share/locale/km/LC_MESSAGES/totem.mo
 share/locale/ja/LC_MESSAGES/totem.mo
 share/locale/ka/LC_MESSAGES/totem.mo
 share/locale/kk/LC_MESSAGES/totem.mo
@@ -536,6 +525,7 @@ share/thumbnailers/totem.thumbnailer
 %%DATADIR%%/mozilla-viewer.css
 %%DATADIR%%/mozilla-viewer.ui
 %%DATADIR%%/playlist.ui
+%%DATADIR%%/preferences.ui
 %%DATADIR%%/properties.ui
 %%DATADIR%%/totem.ui
 %%DATADIR%%/uri.ui
@@ -661,7 +651,6 @@ share/thumbnailers/totem.thumbnailer
 @dirrm lib/totem/plugins/ontop
 @dirrm lib/totem/plugins/media-player-keys
 %%LIRC%%@dirrm lib/totem/plugins/lirc
-@dirrm lib/totem/plugins/iplayer
 @dirrm lib/totem/plugins/im-status
 @dirrm lib/totem/plugins/gromit
 @dirrm lib/totem/plugins/dbus
