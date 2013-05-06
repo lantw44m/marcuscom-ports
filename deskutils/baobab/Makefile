@@ -29,4 +29,8 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		baobab.1
 GLIB_SCHEMAS=	org.gnome.baobab.gschema.xml
 
+post-patch:
+	@${REINPLACE_CMD} -e 's|-Wno-unused-but-set-variable||g' \
+		${WRKSRC}/src/Makefile.in
+
 .include <bsd.port.mk>
