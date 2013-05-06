@@ -3,7 +3,7 @@
 #  $MCom: ports/trunk/deskutils/gnome-contacts/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	gnome-contacts
-PORTVERSION=	3.4.1
+PORTVERSION=	3.6.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 

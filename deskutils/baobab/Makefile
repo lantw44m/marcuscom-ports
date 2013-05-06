@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/deskutils/baobab/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	baobab
-PORTVERSION=	3.4.1
+PORTVERSION=	3.6.2
 CATEGORIES=	deskutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,7 +11,8 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 graphical directory tree analyzer
 
-BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool \
+		vapigen:${PORTSDIR}/lang/vala-vapigen
 LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop
 
 CONFLICTS=	gnome-utils-2.[0-9]*

@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/databases/evolution-data-server3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evolution-data-server
-PORTVERSION=	3.4.4
+PORTVERSION=	3.6.4
 PORTREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	GNOME
@@ -15,7 +15,8 @@ COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
+		gcr>=3.4.1:${PORTSDIR}/security/gcr
 LIB_DEPENDS=	soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome \
 		oauth:${PORTSDIR}/net/liboauth \
 		goa-1:${PORTSDIR}/net/gnome-online-accounts \
@@ -30,7 +31,7 @@ CONFLICTS=	evolution-data-server-2.[0-9]*
 LATEST_LINK=	evolution-data-server3
 USE_XZ=		yes
 USE_GMAKE=	yes
-USES=		bison gettext pathfix pkgconfig
+USES=		bison pathfix gettext pkgconfig
 USE_GNOME=	gnomeprefix intlhack ltverhack ltasneededhack gconf2 \
 		libxml2 gtk30
 USE_OPENLDAP=	yes
@@ -44,10 +45,13 @@ CONFIGURE_ARGS=	--enable-static \
 CPPFLAGS+=	-I${LOCALBASE}/include -I${BDB_INCLUDE_DIR} ${PTHREAD_CFLAGS}
 LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 
-GLIB_SCHEMAS=	org.gnome.evolution.eds-shell.gschema.xml \
+GLIB_SCHEMAS=	org.gnome.Evolution.DefaultSources.gschema.xml \
+		org.gnome.evolution.eds-shell.gschema.xml \
+		org.gnome.evolution-data-server.addressbook.gschema.xml \
+		org.gnome.evolution-data-server.calendar.gschema.xml \
 		org.gnome.evolution.shell.network-config.gschema.xml
 
-PLIST_SUB=	VERSION="3.4" EVO_VERSION="1.2"
+PLIST_SUB=	VERSION="3.6" EVO_VERSION="1.2"
 
 OPTIONS_DEFINE=	WEATHER KERBEROS
 OPTIONS_DEFAULT=WEATHER KERBEROS

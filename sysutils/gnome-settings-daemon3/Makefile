@@ -1,9 +1,9 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/sysutils/gnome-settings-daemon3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom: ports/sysutils/gnome-settings-daemon3/Makefile,v 1.33 2012/05/17 17:50:16 kwm Exp $
 
 PORTNAME=	gnome-settings-daemon
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -15,7 +15,10 @@ BUILD_DEPENDS=	gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
 		polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
+		ibus-1.0:${PORTSDIR}/textproc/ibus \
+		dbus-1:${PORTSDIR}/devel/dbus \
 		colord:${PORTSDIR}/graphics/colord \
+		lcms2:${PORTSDIR}/graphics/lcms \
 		pulse:${PORTSDIR}/audio/pulseaudio \
 		gdbm:${PORTSDIR}/databases/gdbm \
 		notify:${PORTSDIR}/devel/libnotify
@@ -28,19 +31,21 @@ LATEST_LINK=	gnome-settings-daemon3
 USE_XORG=	xxf86misc
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libgnomekbd3	gnomehier
+USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libgnomekbd3 gnomehier
 USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-gudev \
 		--disable-systemd \
 		--disable-packagekit
+#		--disable-ibus \
 #--with-pnpids=${LOCALBASE}/share/libgnome-desktop-3.0/pnp.ids
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-OPTIONS=	CUPS "Enable cups (printing) support" On \
-		SMARTCARD "Enable smartcard support" On
+OPTIONS_DEFINE=	CUPS SMARTCARD
+OPTIONS_DEFAULT=CUPS SMARTCARD
+SMARTCARD_DESC=	Smartcard support
 
 GLIB_SCHEMAS=	org.gnome.settings-daemon.enums.xml \
 		org.gnome.settings-daemon.peripherals.gschema.xml \
@@ -58,21 +63,21 @@ MAN1=		gnome-settings-daemon.1
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_CUPS)
-LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
+.if ${PORT_OPTIONS:MCUPS}
+LIB_DEPENDS+=	cups:${PORTSDIR}/print/cups-client
 PLIST_SUB+=	CUPS=""
 .else
 PLIST_SUB+=	CUPS="@comment "
 CONFIGURE_ARGS+=--disable-cups
 .endif
 
-.if defined(WITHOUT_SMARTCARD)
-CONFIGURE_ARGS+=--disable-smartcard-support
-PLIST_SUB+=	SMARTCARD="@comment "
-.else
-LIB_DEPENDS+=	nss3.1:${PORTSDIR}/security/nss
+.if ${PORT_OPTIONS:MSMARTCARD}
+LIB_DEPENDS+=	nss3:${PORTSDIR}/security/nss
 CONFIGURE_ARGS+=--enable-smartcard-support
 PLIST_SUB+=	SMARTCARD=""
+.else
+CONFIGURE_ARGS+=--disable-smartcard-support
+PLIST_SUB+=	SMARTCARD="@comment "
 .endif
 
 post-patch:

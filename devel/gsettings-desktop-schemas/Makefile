@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/devel/gsettings-desktop-schemas/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gsettings-desktop-schemas
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -31,6 +31,7 @@ GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
 		org.gnome.desktop.background.gschema.xml \
 		org.gnome.desktop.default-applications.gschema.xml \
 		org.gnome.desktop.enums.xml \
+		org.gnome.desktop.input-sources.gschema.xml \
 		org.gnome.desktop.interface.gschema.xml \
 		org.gnome.desktop.lockdown.gschema.xml \
 		org.gnome.desktop.media-handling.gschema.xml \

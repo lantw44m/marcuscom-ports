@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/x11/gnome-desktop3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-desktop
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.2
 PORTREVISION?=	0
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
@@ -17,19 +17,21 @@ USE_XZ=		yes
 .if !defined(REFERENCE_PORT)
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas \
+		${LOCALBASE}/libdata/pkgconfig/xkeyboard-config.pc:${PORTSDIR}/x11/xkeyboard-config \
+		${LOCALBASE}/libdata/pkgconfig/xkbfile.pc:${PORTSDIR}/x11/libxkbfile \
+		itstool:${PORTSDIR}/textproc/itstool \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-LIB_DEPENDS=	startup-notification-1.0:${PORTSDIR}/x11/startup-notification
-RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
+LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification
+RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas \
+		${LOCALBASE}/libdata/pkgconfig/xkeyboard-config.pc:${PORTSDIR}/x11/xkeyboard-config \
+		${LOCALBASE}/libdata/pkgconfig/xkbfile.pc:${PORTSDIR}/x11/libxkbfile
 
 LATEST_LINK=	gnome-desktop3
-
 USE_XORG=	x11 xrandr xext
-USE_GNOME=	gnomeprefix intlhack gnomedocutils gtk30 \
-		ltverhack referencehack
+USES=		bison pathfix gettext
+USE_GNOME=	gnomeprefix intlhack gtk30 ltverhack referencehack
 USE_GMAKE=	yes
-USES=		bison gettext pathfix
 USE_PYTHON=	yes
-INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-gnome-distributor="FreeBSD GNOME Project"

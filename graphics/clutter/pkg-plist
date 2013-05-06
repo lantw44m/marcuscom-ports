@@ -14,10 +14,7 @@ include/clutter-1.0/clutter/clutter-action.h
 include/clutter-1.0/clutter/clutter-actor-meta.h
 include/clutter-1.0/clutter/clutter-actor.h
 include/clutter-1.0/clutter/clutter-align-constraint.h
-include/clutter-1.0/clutter/clutter-alpha.h
 include/clutter-1.0/clutter/clutter-animatable.h
-include/clutter-1.0/clutter/clutter-animation.h
-include/clutter-1.0/clutter/clutter-animator.h
 include/clutter-1.0/clutter/clutter-backend.h
 include/clutter-1.0/clutter/clutter-bin-layout.h
 include/clutter-1.0/clutter/clutter-bind-constraint.h
@@ -25,7 +22,7 @@ include/clutter-1.0/clutter/clutter-binding-pool.h
 include/clutter-1.0/clutter/clutter-blur-effect.h
 include/clutter-1.0/clutter/clutter-box-layout.h
 include/clutter-1.0/clutter/clutter-brightness-contrast-effect.h
-include/clutter-1.0/clutter/clutter-cairo-texture.h
+include/clutter-1.0/clutter/clutter-cairo.h
 include/clutter-1.0/clutter/clutter-canvas.h
 include/clutter-1.0/clutter/clutter-child-meta.h
 include/clutter-1.0/clutter/clutter-click-action.h
@@ -52,10 +49,12 @@ include/clutter-1.0/clutter/clutter-feature.h
 include/clutter-1.0/clutter/clutter-fixed-layout.h
 include/clutter-1.0/clutter/clutter-flow-layout.h
 include/clutter-1.0/clutter/clutter-gesture-action.h
+include/clutter-1.0/clutter/clutter-grid-layout.h
 include/clutter-1.0/clutter/clutter-group.h
 include/clutter-1.0/clutter/clutter-image.h
 include/clutter-1.0/clutter/clutter-input-device.h
 include/clutter-1.0/clutter/clutter-interval.h
+include/clutter-1.0/clutter/clutter-keyframe-transition.h
 include/clutter-1.0/clutter/clutter-keysyms.h
 include/clutter-1.0/clutter/clutter-layout-manager.h
 include/clutter-1.0/clutter/clutter-layout-meta.h
@@ -63,38 +62,43 @@ include/clutter-1.0/clutter/clutter-list-model.h
 include/clutter-1.0/clutter/clutter-macros.h
 include/clutter-1.0/clutter/clutter-main.h
 include/clutter-1.0/clutter/clutter-marshal.h
-include/clutter-1.0/clutter/clutter-media.h
 include/clutter-1.0/clutter/clutter-model.h
 include/clutter-1.0/clutter/clutter-offscreen-effect.h
 include/clutter-1.0/clutter/clutter-page-turn-effect.h
 include/clutter-1.0/clutter/clutter-paint-node.h
 include/clutter-1.0/clutter/clutter-paint-nodes.h
+include/clutter-1.0/clutter/clutter-pan-action.h
 include/clutter-1.0/clutter/clutter-path-constraint.h
 include/clutter-1.0/clutter/clutter-path.h
 include/clutter-1.0/clutter/clutter-property-transition.h
+include/clutter-1.0/clutter/clutter-rotate-action.h
 include/clutter-1.0/clutter/clutter-script.h
 include/clutter-1.0/clutter/clutter-scriptable.h
+include/clutter-1.0/clutter/clutter-scroll-actor.h
 include/clutter-1.0/clutter/clutter-settings.h
 include/clutter-1.0/clutter/clutter-shader-effect.h
 include/clutter-1.0/clutter/clutter-shader-types.h
 include/clutter-1.0/clutter/clutter-snap-constraint.h
 include/clutter-1.0/clutter/clutter-stage-manager.h
 include/clutter-1.0/clutter/clutter-stage.h
-include/clutter-1.0/clutter/clutter-state.h
 include/clutter-1.0/clutter/clutter-swipe-action.h
 include/clutter-1.0/clutter/clutter-table-layout.h
 include/clutter-1.0/clutter/clutter-text-buffer.h
 include/clutter-1.0/clutter/clutter-text.h
 include/clutter-1.0/clutter/clutter-texture.h
 include/clutter-1.0/clutter/clutter-timeline.h
+include/clutter-1.0/clutter/clutter-transition-group.h
 include/clutter-1.0/clutter/clutter-transition.h
 include/clutter-1.0/clutter/clutter-types.h
 include/clutter-1.0/clutter/clutter-units.h
 include/clutter-1.0/clutter/clutter-version.h
+include/clutter-1.0/clutter/clutter-zoom-action.h
 include/clutter-1.0/clutter/clutter.h
 include/clutter-1.0/clutter/deprecated/clutter-actor.h
+include/clutter-1.0/clutter/deprecated/clutter-alpha.h
 include/clutter-1.0/clutter/deprecated/clutter-animatable.h
 include/clutter-1.0/clutter/deprecated/clutter-animation.h
+include/clutter-1.0/clutter/deprecated/clutter-animator.h
 include/clutter-1.0/clutter/deprecated/clutter-backend.h
 include/clutter-1.0/clutter/deprecated/clutter-behaviour-depth.h
 include/clutter-1.0/clutter/deprecated/clutter-behaviour-ellipse.h
@@ -103,19 +107,23 @@ include/clutter-1.0/clutter/deprecated/clutter-behaviour-path.h
 include/clutter-1.0/clutter/deprecated/clutter-behaviour-rotate.h
 include/clutter-1.0/clutter/deprecated/clutter-behaviour-scale.h
 include/clutter-1.0/clutter/deprecated/clutter-behaviour.h
+include/clutter-1.0/clutter/deprecated/clutter-bin-layout.h
 include/clutter-1.0/clutter/deprecated/clutter-box.h
 include/clutter-1.0/clutter/deprecated/clutter-cairo-texture.h
 include/clutter-1.0/clutter/deprecated/clutter-container.h
 include/clutter-1.0/clutter/deprecated/clutter-fixed.h
 include/clutter-1.0/clutter/deprecated/clutter-frame-source.h
 include/clutter-1.0/clutter/deprecated/clutter-group.h
+include/clutter-1.0/clutter/deprecated/clutter-input-device.h
 include/clutter-1.0/clutter/deprecated/clutter-keysyms.h
 include/clutter-1.0/clutter/deprecated/clutter-main.h
+include/clutter-1.0/clutter/deprecated/clutter-media.h
 include/clutter-1.0/clutter/deprecated/clutter-rectangle.h
 include/clutter-1.0/clutter/deprecated/clutter-score.h
 include/clutter-1.0/clutter/deprecated/clutter-shader.h
 include/clutter-1.0/clutter/deprecated/clutter-stage-manager.h
 include/clutter-1.0/clutter/deprecated/clutter-stage.h
+include/clutter-1.0/clutter/deprecated/clutter-state.h
 include/clutter-1.0/clutter/deprecated/clutter-texture.h
 include/clutter-1.0/clutter/deprecated/clutter-timeline.h
 include/clutter-1.0/clutter/deprecated/clutter-timeout-pool.h
@@ -208,8 +216,11 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ClutterFixedLayout.html
 %%DOCSDIR%%/ClutterFlowLayout.html
 %%DOCSDIR%%/ClutterGestureAction.html
+%%DOCSDIR%%/ClutterGridLayout.html
 %%DOCSDIR%%/ClutterGroup.html
+%%DOCSDIR%%/ClutterImage.html
 %%DOCSDIR%%/ClutterInputDevice.html
+%%DOCSDIR%%/ClutterKeyframeTransition.html
 %%DOCSDIR%%/ClutterLayoutManager.html
 %%DOCSDIR%%/ClutterLayoutMeta.html
 %%DOCSDIR%%/ClutterListModel.html
@@ -218,13 +229,17 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ClutterModelIter.html
 %%DOCSDIR%%/ClutterOffscreenEffect.html
 %%DOCSDIR%%/ClutterPageTurnEffect.html
+%%DOCSDIR%%/ClutterPaintNode.html
+%%DOCSDIR%%/ClutterPanAction.html
 %%DOCSDIR%%/ClutterPath.html
 %%DOCSDIR%%/ClutterPathConstraint.html
 %%DOCSDIR%%/ClutterPropertyTransition.html
 %%DOCSDIR%%/ClutterRectangle.html
+%%DOCSDIR%%/ClutterRotateAction.html
 %%DOCSDIR%%/ClutterScore.html
 %%DOCSDIR%%/ClutterScript.html
 %%DOCSDIR%%/ClutterScriptable.html
+%%DOCSDIR%%/ClutterScrollActor.html
 %%DOCSDIR%%/ClutterSettings.html
 %%DOCSDIR%%/ClutterShaderEffect.html
 %%DOCSDIR%%/ClutterSnapConstraint.html
@@ -237,9 +252,10 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ClutterTexture.html
 %%DOCSDIR%%/ClutterTimeline.html
 %%DOCSDIR%%/ClutterTransition.html
+%%DOCSDIR%%/ClutterTransitionGroup.html
+%%DOCSDIR%%/ClutterZoomAction.html
 %%DOCSDIR%%/actor-box.png
 %%DOCSDIR%%/actor-example.png
-%%DOCSDIR%%/additionaldocs.html
 %%DOCSDIR%%/animator-key-frames.png
 %%DOCSDIR%%/annotation-glossary.html
 %%DOCSDIR%%/bin-layout.png
@@ -257,10 +273,8 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ch10.html
 %%DOCSDIR%%/ch11.html
 %%DOCSDIR%%/ch12.html
-%%DOCSDIR%%/ch13.html
+%%DOCSDIR%%/clutter-Base-geometric-types.html
 %%DOCSDIR%%/clutter-ClutterGLXTexturePixmap.html
-%%DOCSDIR%%/clutter-ClutterImage.html
-%%DOCSDIR%%/clutter-ClutterPaintNode.html
 %%DOCSDIR%%/clutter-ClutterWaylandSurface.html
 %%DOCSDIR%%/clutter-ClutterX11TexturePixmap.html
 %%DOCSDIR%%/clutter-Colors.html
@@ -282,10 +296,6 @@ share/doc/cally/up.png
 %%DOCSDIR%%/clutter-Wayland-compositor-specific-support.html
 %%DOCSDIR%%/clutter-Win32-Specific-Support.html
 %%DOCSDIR%%/clutter-X11-Specific-Support.html
-%%DOCSDIR%%/clutter-animation-conclusion.html
-%%DOCSDIR%%/clutter-animation-implicit.html
-%%DOCSDIR%%/clutter-animation-timelines.html
-%%DOCSDIR%%/clutter-animations.html
 %%DOCSDIR%%/clutter-overview.html
 %%DOCSDIR%%/clutter.devhelp2
 %%DOCSDIR%%/clutteranimation.html
@@ -318,15 +328,17 @@ share/doc/cally/up.png
 %%DOCSDIR%%/ix10.html
 %%DOCSDIR%%/ix11.html
 %%DOCSDIR%%/ix12.html
+%%DOCSDIR%%/ix13.html
 %%DOCSDIR%%/left.png
 %%DOCSDIR%%/license.html
+%%DOCSDIR%%/migrating-ClutterAnimation.html
 %%DOCSDIR%%/migrating-ClutterBehaviour.html
 %%DOCSDIR%%/migrating-ClutterEffect.html
 %%DOCSDIR%%/migrating-ClutterPath.html
 %%DOCSDIR%%/migration.html
 %%DOCSDIR%%/offscreen-redirect.png
 %%DOCSDIR%%/path-alpha-func.png
-%%DOCSDIR%%/pt10.html
+%%DOCSDIR%%/pt09.html
 %%DOCSDIR%%/right.png
 %%DOCSDIR%%/running-clutter.html
 %%DOCSDIR%%/style.css
@@ -347,6 +359,7 @@ share/locale/ca@valencia/LC_MESSAGES/clutter-1.0.mo
 share/locale/cs/LC_MESSAGES/clutter-1.0.mo
 share/locale/da/LC_MESSAGES/clutter-1.0.mo
 share/locale/de/LC_MESSAGES/clutter-1.0.mo
+share/locale/el/LC_MESSAGES/clutter-1.0.mo
 share/locale/en_GB/LC_MESSAGES/clutter-1.0.mo
 share/locale/eo/LC_MESSAGES/clutter-1.0.mo
 share/locale/es/LC_MESSAGES/clutter-1.0.mo
@@ -358,11 +371,13 @@ share/locale/he/LC_MESSAGES/clutter-1.0.mo
 share/locale/hi/LC_MESSAGES/clutter-1.0.mo
 share/locale/id/LC_MESSAGES/clutter-1.0.mo
 share/locale/it/LC_MESSAGES/clutter-1.0.mo
+share/locale/ja/LC_MESSAGES/clutter-1.0.mo
 share/locale/km/LC_MESSAGES/clutter-1.0.mo
 share/locale/kn/LC_MESSAGES/clutter-1.0.mo
 share/locale/lt/LC_MESSAGES/clutter-1.0.mo
 share/locale/lv/LC_MESSAGES/clutter-1.0.mo
 share/locale/mk/LC_MESSAGES/clutter-1.0.mo
+share/locale/ml/LC_MESSAGES/clutter-1.0.mo
 share/locale/nb/LC_MESSAGES/clutter-1.0.mo
 share/locale/nl/LC_MESSAGES/clutter-1.0.mo
 share/locale/or/LC_MESSAGES/clutter-1.0.mo
@@ -389,14 +404,22 @@ share/locale/zh_HK/LC_MESSAGES/clutter-1.0.mo
 share/locale/zh_TW/LC_MESSAGES/clutter-1.0.mo
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
+@dirrmtry share/locale/yi/LC_MESSAGES
+@dirrmtry share/locale/yi
 @dirrmtry share/locale/ur/LC_MESSAGES
 @dirrmtry share/locale/ur
+@dirrmtry share/locale/ug/LC_MESSAGES
+@dirrmtry share/locale/ug
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/sr/LC_MESSAGES
 @dirrmtry share/locale/sr
+@dirrmtry share/locale/ps/LC_MESSAGES
+@dirrmtry share/locale/ps
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/az_IR/LC_MESSAGES

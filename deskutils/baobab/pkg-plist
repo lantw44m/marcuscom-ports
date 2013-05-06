@@ -1,8 +1,5 @@
 bin/baobab
 share/applications/baobab.desktop
-%%DATADIR%%/baobab-main-window.ui
-%%DATADIR%%/baobab-preferences-dialog.ui
-%%DATADIR%%/pixmaps/shot.png
 share/help/C/baobab/index.page
 share/help/C/baobab/introduction.page
 share/help/C/baobab/pref-view-chart.page
@@ -120,6 +117,15 @@ share/help/hu/baobab/scan-file-system.page
 share/help/hu/baobab/scan-folder.page
 share/help/hu/baobab/scan-home.page
 share/help/hu/baobab/scan-remote.page
+share/help/id/baobab/index.page
+share/help/id/baobab/introduction.page
+share/help/id/baobab/pref-view-chart.page
+share/help/id/baobab/pref-view-menu.page
+share/help/id/baobab/pref.page
+share/help/id/baobab/scan-file-system.page
+share/help/id/baobab/scan-folder.page
+share/help/id/baobab/scan-home.page
+share/help/id/baobab/scan-remote.page
 share/help/it/baobab/index.page
 share/help/it/baobab/introduction.page
 share/help/it/baobab/pref-view-chart.page
@@ -225,6 +231,8 @@ share/icons/hicolor/24x24/apps/baobab.png
 share/icons/hicolor/256x256/apps/baobab.png
 share/icons/hicolor/32x32/apps/baobab.png
 share/icons/hicolor/48x48/apps/baobab.png
+share/icons/hicolor/scalable/actions/view-ringschart-symbolic.svg
+share/icons/hicolor/scalable/actions/view-treemap-symbolic.svg
 share/locale/af/LC_MESSAGES/baobab.mo
 share/locale/am/LC_MESSAGES/baobab.mo
 share/locale/ar/LC_MESSAGES/baobab.mo
@@ -379,6 +387,8 @@ share/locale/zh_TW/LC_MESSAGES/baobab.mo
 @dirrmtry share/help/oc
 @dirrm share/help/it/baobab
 @dirrmtry share/help/it
+@dirrm share/help/id/baobab
+@dirrmtry share/help/id
 @dirrm share/help/hu/baobab
 @dirrmtry share/help/hu
 @dirrm share/help/gl/baobab
@@ -406,6 +416,4 @@ share/locale/zh_TW/LC_MESSAGES/baobab.mo
 @dirrm share/help/C/baobab
 @dirrmtry share/help/C
 @dirrmtry share/help
-@dirrm %%DATADIR%%/pixmaps
-@dirrm %%DATADIR%%
 @dirrmtry share/applications

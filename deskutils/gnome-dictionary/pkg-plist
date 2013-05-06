@@ -52,181 +52,209 @@ share/doc/gdict/up.png
 share/gdict-1.0/sources/default.desktop
 share/gdict-1.0/sources/spanish.desktop
 share/gdict-1.0/sources/thai.desktop
+share/gnome-dictionary/gnome-dictionary-menus.ui
 share/gnome-dictionary/gnome-dictionary-preferences.ui
 share/gnome-dictionary/gnome-dictionary-source.ui
-share/gnome-dictionary/gnome-dictionary-ui.xml
-share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/C/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/C/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/C/legal.xml
-share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/ca/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/ca/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/cs/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/cs/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/da/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/da/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/da/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/da/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/da/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/da/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/da/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/da/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/da/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/de/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/de/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/el/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/el/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/el/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/el/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/el/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/el/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/el/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/el/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/el/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/en_GB/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/en_GB/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/en_GB/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/en_GB/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/en_GB/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/en_GB/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/en_GB/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/en_GB/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/en_GB/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/es/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/es/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/eu/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/eu/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/eu/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/eu/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/eu/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/eu/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/eu/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/eu/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/eu/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/fi/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/fi/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/fi/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/fi/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/fi/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/fi/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/fi/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/fi/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/fi/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/fr/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/fr/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/gl/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/gl/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/gl/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/gl/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/gl/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/gl/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/gl/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/gl/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/gl/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/it/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/it/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/oc/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/oc/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/oc/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/oc/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/oc/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/oc/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/oc/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/oc/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/oc/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/ru/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/ru/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/sl/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/sl/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/sl/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/sl/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/sl/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/sl/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/sl/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/sl/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/sl/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/sv/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/sv/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/sv/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/sv/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/sv/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/sv/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/sv/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/sv/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/sv/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/uk/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/uk/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/uk/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/uk/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/uk/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/uk/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/uk/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/uk/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/uk/gnome-dictionary.xml
-share/gnome/help/gnome-dictionary/zh_CN/figures/gnome-dictionary-add-source.png
-share/gnome/help/gnome-dictionary/zh_CN/figures/gnome-dictionary-applet-window.png
-share/gnome/help/gnome-dictionary/zh_CN/figures/gnome-dictionary-applet.png
-share/gnome/help/gnome-dictionary/zh_CN/figures/gnome-dictionary-application.png
-share/gnome/help/gnome-dictionary/zh_CN/figures/gnome-dictionary-find.png
-share/gnome/help/gnome-dictionary/zh_CN/figures/gnome-dictionary-lookup.png
-share/gnome/help/gnome-dictionary/zh_CN/figures/gnome-dictionary-preferences-print.png
-share/gnome/help/gnome-dictionary/zh_CN/figures/gnome-dictionary-preferences-source.png
-share/gnome/help/gnome-dictionary/zh_CN/gnome-dictionary.xml
+share/help/C/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/C/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/C/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/C/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/C/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/C/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/C/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/C/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/C/gnome-dictionary/index.docbook
+share/help/C/gnome-dictionary/legal.xml
+share/help/ca/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/ca/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/ca/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/ca/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/ca/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/ca/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/ca/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/ca/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/ca/gnome-dictionary/index.docbook
+share/help/ca/gnome-dictionary/legal.xml
+share/help/cs/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/cs/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/cs/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/cs/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/cs/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/cs/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/cs/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/cs/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/cs/gnome-dictionary/index.docbook
+share/help/cs/gnome-dictionary/legal.xml
+share/help/da/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/da/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/da/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/da/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/da/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/da/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/da/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/da/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/da/gnome-dictionary/index.docbook
+share/help/da/gnome-dictionary/legal.xml
+share/help/de/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/de/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/de/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/de/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/de/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/de/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/de/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/de/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/de/gnome-dictionary/index.docbook
+share/help/de/gnome-dictionary/legal.xml
+share/help/el/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/el/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/el/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/el/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/el/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/el/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/el/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/el/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/el/gnome-dictionary/index.docbook
+share/help/el/gnome-dictionary/legal.xml
+share/help/en_GB/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/en_GB/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/en_GB/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/en_GB/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/en_GB/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/en_GB/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/en_GB/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/en_GB/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/en_GB/gnome-dictionary/index.docbook
+share/help/en_GB/gnome-dictionary/legal.xml
+share/help/es/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/es/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/es/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/es/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/es/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/es/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/es/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/es/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/es/gnome-dictionary/index.docbook
+share/help/es/gnome-dictionary/legal.xml
+share/help/eu/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/eu/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/eu/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/eu/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/eu/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/eu/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/eu/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/eu/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/eu/gnome-dictionary/index.docbook
+share/help/eu/gnome-dictionary/legal.xml
+share/help/fi/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/fi/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/fi/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/fi/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/fi/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/fi/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/fi/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/fi/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/fi/gnome-dictionary/index.docbook
+share/help/fi/gnome-dictionary/legal.xml
+share/help/fr/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/fr/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/fr/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/fr/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/fr/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/fr/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/fr/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/fr/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/fr/gnome-dictionary/index.docbook
+share/help/fr/gnome-dictionary/legal.xml
+share/help/gl/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/gl/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/gl/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/gl/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/gl/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/gl/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/gl/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/gl/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/gl/gnome-dictionary/index.docbook
+share/help/gl/gnome-dictionary/legal.xml
+share/help/id/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/id/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/id/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/id/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/id/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/id/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/id/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/id/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/id/gnome-dictionary/index.docbook
+share/help/id/gnome-dictionary/legal.xml
+share/help/it/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/it/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/it/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/it/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/it/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/it/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/it/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/it/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/it/gnome-dictionary/index.docbook
+share/help/it/gnome-dictionary/legal.xml
+share/help/oc/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/oc/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/oc/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/oc/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/oc/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/oc/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/oc/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/oc/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/oc/gnome-dictionary/index.docbook
+share/help/oc/gnome-dictionary/legal.xml
+share/help/ru/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/ru/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/ru/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/ru/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/ru/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/ru/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/ru/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/ru/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/ru/gnome-dictionary/index.docbook
+share/help/ru/gnome-dictionary/legal.xml
+share/help/sl/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/sl/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/sl/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/sl/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/sl/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/sl/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/sl/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/sl/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/sl/gnome-dictionary/index.docbook
+share/help/sl/gnome-dictionary/legal.xml
+share/help/sv/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/sv/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/sv/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/sv/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/sv/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/sv/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/sv/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/sv/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/sv/gnome-dictionary/index.docbook
+share/help/sv/gnome-dictionary/legal.xml
+share/help/uk/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/uk/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/uk/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/uk/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/uk/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/uk/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/uk/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/uk/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/uk/gnome-dictionary/index.docbook
+share/help/uk/gnome-dictionary/legal.xml
+share/help/zh_CN/gnome-dictionary/figures/gnome-dictionary-add-source.png
+share/help/zh_CN/gnome-dictionary/figures/gnome-dictionary-applet-window.png
+share/help/zh_CN/gnome-dictionary/figures/gnome-dictionary-applet.png
+share/help/zh_CN/gnome-dictionary/figures/gnome-dictionary-application.png
+share/help/zh_CN/gnome-dictionary/figures/gnome-dictionary-find.png
+share/help/zh_CN/gnome-dictionary/figures/gnome-dictionary-lookup.png
+share/help/zh_CN/gnome-dictionary/figures/gnome-dictionary-preferences-print.png
+share/help/zh_CN/gnome-dictionary/figures/gnome-dictionary-preferences-source.png
+share/help/zh_CN/gnome-dictionary/index.docbook
+share/help/zh_CN/gnome-dictionary/legal.xml
 share/locale/af/LC_MESSAGES/gnome-dictionary.mo
 share/locale/am/LC_MESSAGES/gnome-dictionary.mo
 share/locale/ar/LC_MESSAGES/gnome-dictionary.mo
@@ -317,26 +345,6 @@ share/locale/xh/LC_MESSAGES/gnome-dictionary.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-dictionary.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-dictionary.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-dictionary.mo
-share/omf/gnome-dictionary/gnome-dictionary-C.omf
-share/omf/gnome-dictionary/gnome-dictionary-ca.omf
-share/omf/gnome-dictionary/gnome-dictionary-cs.omf
-share/omf/gnome-dictionary/gnome-dictionary-da.omf
-share/omf/gnome-dictionary/gnome-dictionary-de.omf
-share/omf/gnome-dictionary/gnome-dictionary-el.omf
-share/omf/gnome-dictionary/gnome-dictionary-en_GB.omf
-share/omf/gnome-dictionary/gnome-dictionary-es.omf
-share/omf/gnome-dictionary/gnome-dictionary-eu.omf
-share/omf/gnome-dictionary/gnome-dictionary-fi.omf
-share/omf/gnome-dictionary/gnome-dictionary-fr.omf
-share/omf/gnome-dictionary/gnome-dictionary-gl.omf
-share/omf/gnome-dictionary/gnome-dictionary-it.omf
-share/omf/gnome-dictionary/gnome-dictionary-oc.omf
-share/omf/gnome-dictionary/gnome-dictionary-ru.omf
-share/omf/gnome-dictionary/gnome-dictionary-sl.omf
-share/omf/gnome-dictionary/gnome-dictionary-sv.omf
-share/omf/gnome-dictionary/gnome-dictionary-uk.omf
-share/omf/gnome-dictionary/gnome-dictionary-zh_CN.omf
-@dirrm share/omf/gnome-dictionary
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/xh/LC_MESSAGES
@@ -379,45 +387,67 @@ share/omf/gnome-dictionary/gnome-dictionary-zh_CN.omf
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm share/gnome/help/gnome-dictionary/zh_CN/figures
-@dirrm share/gnome/help/gnome-dictionary/zh_CN
-@dirrm share/gnome/help/gnome-dictionary/uk/figures
-@dirrm share/gnome/help/gnome-dictionary/uk
-@dirrm share/gnome/help/gnome-dictionary/sv/figures
-@dirrm share/gnome/help/gnome-dictionary/sv
-@dirrm share/gnome/help/gnome-dictionary/sl/figures
-@dirrm share/gnome/help/gnome-dictionary/sl
-@dirrm share/gnome/help/gnome-dictionary/ru/figures
-@dirrm share/gnome/help/gnome-dictionary/ru
-@dirrm share/gnome/help/gnome-dictionary/oc/figures
-@dirrm share/gnome/help/gnome-dictionary/oc
-@dirrm share/gnome/help/gnome-dictionary/it/figures
-@dirrm share/gnome/help/gnome-dictionary/it
-@dirrm share/gnome/help/gnome-dictionary/gl/figures
-@dirrm share/gnome/help/gnome-dictionary/gl
-@dirrm share/gnome/help/gnome-dictionary/fr/figures
-@dirrm share/gnome/help/gnome-dictionary/fr
-@dirrm share/gnome/help/gnome-dictionary/fi/figures
-@dirrm share/gnome/help/gnome-dictionary/fi
-@dirrm share/gnome/help/gnome-dictionary/eu/figures
-@dirrm share/gnome/help/gnome-dictionary/eu
-@dirrm share/gnome/help/gnome-dictionary/es/figures
-@dirrm share/gnome/help/gnome-dictionary/es
-@dirrm share/gnome/help/gnome-dictionary/en_GB/figures
-@dirrm share/gnome/help/gnome-dictionary/en_GB
-@dirrm share/gnome/help/gnome-dictionary/el/figures
-@dirrm share/gnome/help/gnome-dictionary/el
-@dirrm share/gnome/help/gnome-dictionary/de/figures
-@dirrm share/gnome/help/gnome-dictionary/de
-@dirrm share/gnome/help/gnome-dictionary/da/figures
-@dirrm share/gnome/help/gnome-dictionary/da
-@dirrm share/gnome/help/gnome-dictionary/cs/figures
-@dirrm share/gnome/help/gnome-dictionary/cs
-@dirrm share/gnome/help/gnome-dictionary/ca/figures
-@dirrm share/gnome/help/gnome-dictionary/ca
-@dirrm share/gnome/help/gnome-dictionary/C/figures
-@dirrm share/gnome/help/gnome-dictionary/C
-@dirrm share/gnome/help/gnome-dictionary
+@dirrm share/help/zh_CN/gnome-dictionary/figures
+@dirrm share/help/zh_CN/gnome-dictionary
+@dirrmtry share/help/zh_CN
+@dirrm share/help/uk/gnome-dictionary/figures
+@dirrm share/help/uk/gnome-dictionary
+@dirrmtry share/help/uk
+@dirrm share/help/sv/gnome-dictionary/figures
+@dirrm share/help/sv/gnome-dictionary
+@dirrmtry share/help/sv
+@dirrm share/help/sl/gnome-dictionary/figures
+@dirrm share/help/sl/gnome-dictionary
+@dirrmtry share/help/sl
+@dirrm share/help/ru/gnome-dictionary/figures
+@dirrm share/help/ru/gnome-dictionary
+@dirrmtry share/help/ru
+@dirrm share/help/oc/gnome-dictionary/figures
+@dirrm share/help/oc/gnome-dictionary
+@dirrmtry share/help/oc
+@dirrm share/help/it/gnome-dictionary/figures
+@dirrm share/help/it/gnome-dictionary
+@dirrmtry share/help/it
+@dirrm share/help/id/gnome-dictionary/figures
+@dirrm share/help/id/gnome-dictionary
+@dirrmtry share/help/id
+@dirrm share/help/gl/gnome-dictionary/figures
+@dirrm share/help/gl/gnome-dictionary
+@dirrmtry share/help/gl
+@dirrm share/help/fr/gnome-dictionary/figures
+@dirrm share/help/fr/gnome-dictionary
+@dirrmtry share/help/fr
+@dirrm share/help/fi/gnome-dictionary/figures
+@dirrm share/help/fi/gnome-dictionary
+@dirrmtry share/help/fi
+@dirrm share/help/eu/gnome-dictionary/figures
+@dirrm share/help/eu/gnome-dictionary
+@dirrmtry share/help/eu
+@dirrm share/help/es/gnome-dictionary/figures
+@dirrm share/help/es/gnome-dictionary
+@dirrmtry share/help/es
+@dirrm share/help/en_GB/gnome-dictionary/figures
+@dirrm share/help/en_GB/gnome-dictionary
+@dirrmtry share/help/en_GB
+@dirrm share/help/el/gnome-dictionary/figures
+@dirrm share/help/el/gnome-dictionary
+@dirrmtry share/help/el
+@dirrm share/help/de/gnome-dictionary/figures
+@dirrm share/help/de/gnome-dictionary
+@dirrmtry share/help/de
+@dirrm share/help/da/gnome-dictionary/figures
+@dirrm share/help/da/gnome-dictionary
+@dirrmtry share/help/da
+@dirrm share/help/cs/gnome-dictionary/figures
+@dirrm share/help/cs/gnome-dictionary
+@dirrmtry share/help/cs
+@dirrm share/help/ca/gnome-dictionary/figures
+@dirrm share/help/ca/gnome-dictionary
+@dirrmtry share/help/ca
+@dirrm share/help/C/gnome-dictionary/figures
+@dirrm share/help/C/gnome-dictionary
+@dirrmtry share/help/C
+@dirrmtry share/help
 @dirrm share/gnome-dictionary
 @dirrm share/gdict-1.0/sources
 @dirrm share/gdict-1.0

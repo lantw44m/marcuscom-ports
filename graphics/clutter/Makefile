@@ -3,8 +3,7 @@
 #  $MCom: ports/trunk/graphics/clutter/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	clutter
-PORTVERSION=	1.10.8
-PORTREVISION=	1
+PORTVERSION=	1.12.2
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -17,8 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	json-glib-1.0:${PORTSDIR}/devel/json-glib \
 		cogl:${PORTSDIR}/graphics/cogl
 
+USES=		pkgconfig gettext pathfix
 USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gdkpixbuf2 ltverhack gnomeprefix atk pango

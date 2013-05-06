@@ -1,7 +1,6 @@
 bin/gnome-screenshot
 share/GConf/gsettings/gnome-screenshot.convert
 share/applications/gnome-screenshot.desktop
-share/gnome-screenshot/gnome-screenshot.ui
 share/locale/af/LC_MESSAGES/gnome-screenshot.mo
 share/locale/am/LC_MESSAGES/gnome-screenshot.mo
 share/locale/ar/LC_MESSAGES/gnome-screenshot.mo
@@ -134,5 +133,4 @@ share/locale/zh_TW/LC_MESSAGES/gnome-screenshot.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm share/gnome-screenshot
 @dirrmtry share/applications

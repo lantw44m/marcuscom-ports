@@ -1,17 +1,15 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11/gnome-session3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom: ports/x11/gnome-session3/Makefile,v 1.25 2012/05/25 09:52:12 kwm Exp $
 
 PORTNAME=	gnome-session
-PORTVERSION=	3.4.2.1
+PORTVERSION=	3.6.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Session component for the GNOME 3 desktop
-
-CONFLICTS=	gnome-session-2.[0-9]*
 
 LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		execinfo:${PORTSDIR}/devel/libexecinfo \
@@ -20,13 +18,15 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 RUN_DEPENDS=	${LOCALBASE}/sbin/console-kit-daemon:${PORTSDIR}/sysutils/consolekit \
 		${LOCALBASE}/bin/xdpyinfo:${PORTSDIR}/x11/xdpyinfo
 
+CONFLICTS=	gnome-session-2.[0-9]*
+
 LATEST_LINK=	gnome-session3
 INSTALLS_ICONS=	yes
 USES=		gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_XORG=	ice sm xau xext xtst xrender xtrans xcomposite
 USE_GL=		gl
-USE_GNOME=	gnomeprefix intlhack gconf2 intltool gtk30 librsvg2
+USE_GNOME=	gnomeprefix intlhack gconf2 intltool gtk30
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs

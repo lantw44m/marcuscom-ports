@@ -327,15 +327,15 @@ glib20_LIB_DEPENDS=	glib-2.0:${PORTSDIR}/devel/glib20 \
 			pcre:${PORTSDIR}/devel/pcre
 glib20_DETECT=		${LOCALBASE}/libdata/pkgconfig/glib-2.0.pc
 
-atk_LIB_DEPENDS=	atk-1.0.0:${PORTSDIR}/accessibility/atk
+atk_LIB_DEPENDS=	atk-1.0:${PORTSDIR}/accessibility/atk
 atk_DETECT=		${LOCALBASE}/libdata/pkgconfig/atk.pc
 atk_USE_GNOME_IMPL=	glib20
 
-dconf_LIB_DEPENDS=	dconf.0:${PORTSDIR}/devel/dconf
+dconf_LIB_DEPENDS=	dconf:${PORTSDIR}/devel/dconf
 dconf_DETECT=		${LOCALBASE}/libdata/pkgconfig/dconf.pc
 dconf_USE_GNOME_IMPL=	glib20
 
-pango_LIB_DEPENDS=	pango-1.0.0:${PORTSDIR}/x11-toolkits/pango
+pango_LIB_DEPENDS=	pango-1.0:${PORTSDIR}/x11-toolkits/pango
 pango_DETECT=		${LOCALBASE}/libdata/pkgconfig/pango.pc
 pango_USE_GNOME_IMPL=	glib20
 
@@ -343,7 +343,7 @@ pangox-compat_LIB_DEPENDS=	pangox-1.0:${PORTSDIR}/x11-toolkits/pangox-compat
 pangox-compat_DETECT=		${LOCALBASE}/libdata/pkgconfig/pangox.pc
 pangox-compat_USE_GNOME_IMPL=	glib20 pango
 
-gdkpixbuf2_LIB_DEPENDS=	gdk_pixbuf-2.0.0:${PORTSDIR}/graphics/gdk-pixbuf2
+gdkpixbuf2_LIB_DEPENDS=	gdk_pixbuf-2.0:${PORTSDIR}/graphics/gdk-pixbuf2
 gdkpixbuf2_DETECT=	${LOCALBASE}/libdata/pkgconfig/gdk-pixbuf-2.0.pc
 gdkpixbuf2_USE_GNOME_IMPL=glib20
 
@@ -352,7 +352,7 @@ gtk-update-icon-cache_RUN_DEPENDS=	gtk-update-icon-cache:${PORTSDIR}/graphics/gt
 gtk-update-icon-cache_DETECT=		${LOCALBASE}/bin/gtk-update-icon-cache
 gtk-update-icon-cache_USE_GNOME_IMPL=	atk pango gdkpixbuf2
 
-gtk20_LIB_DEPENDS=	gtk-x11-2.0.0:${PORTSDIR}/x11-toolkits/gtk20
+gtk20_LIB_DEPENDS=	gtk-x11-2.0:${PORTSDIR}/x11-toolkits/gtk20
 gtk20_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-x11-2.0.pc
 gtk20_USE_GNOME_IMPL=	intltool atk pango
 GTK2_VERSION=		2.10.0
@@ -362,7 +362,7 @@ gtk30_DETECT=		${LOCALBASE}/libdata/pkgconfig/gtk+-3.0.pc
 gtk30_USE_GNOME_IMPL=	intltool atk pango
 GTK3_VERSION=		3.0.0
 
-linc_LIB_DEPENDS=	linc.1:${PORTSDIR}/net/linc
+linc_LIB_DEPENDS=	linc:${PORTSDIR}/net/linc
 linc_DETECT=		${LOCALBASE}/libdata/pkgconfig/linc.pc
 linc_USE_GNOME_IMPL=	glib20
 
@@ -374,17 +374,17 @@ orbit2_LIB_DEPENDS=	ORBit-2.0:${PORTSDIR}/devel/ORBit2
 orbit2_DETECT=		${LOCALBASE}/libdata/pkgconfig/ORBit-2.0.pc
 orbit2_USE_GNOME_IMPL=	libidl
 
-libglade2_LIB_DEPENDS=	glade-2.0.0:${PORTSDIR}/devel/libglade2
+libglade2_LIB_DEPENDS=	glade-2.0:${PORTSDIR}/devel/libglade2
 libglade2_DETECT=	${LOCALBASE}/libdata/pkgconfig/libglade-2.0.pc
 libglade2_USE_GNOME_IMPL=libxml2 gtk20
 
 libxml2_BUILD_DEPENDS=	xml2-config:${PORTSDIR}/textproc/libxml2
-libxml2_LIB_DEPENDS=	xml2.5:${PORTSDIR}/textproc/libxml2
+libxml2_LIB_DEPENDS=	xml2:${PORTSDIR}/textproc/libxml2
 libxml2_RUN_DEPENDS=	xml2-config:${PORTSDIR}/textproc/libxml2
 libxml2_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxml-2.0.pc
 
 libxslt_BUILD_DEPENDS=	xsltproc:${PORTSDIR}/textproc/libxslt
-libxslt_LIB_DEPENDS=	xslt.2:${PORTSDIR}/textproc/libxslt
+libxslt_LIB_DEPENDS=	xslt:${PORTSDIR}/textproc/libxslt
 libxslt_RUN_DEPENDS=	${libxslt_BUILD_DEPENDS}
 libxslt_DETECT=		${LOCALBASE}/libdata/pkgconfig/libxslt.pc
 libxslt_USE_GNOME_IMPL=	libxml2
@@ -444,7 +444,7 @@ gnomedesktop_LIB_DEPENDS=	gnome-desktop-2.17:${PORTSDIR}/x11/gnome-desktop
 gnomedesktop_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-2.0.pc
 gnomedesktop_USE_GNOME_IMPL=	gconf2 gnomedocutils pygtk2
 
-gnomedesktop3_LIB_DEPENDS=	gnome-desktop-3.2:${PORTSDIR}/x11/gnome-desktop3
+gnomedesktop3_LIB_DEPENDS=	gnome-desktop-3:${PORTSDIR}/x11/gnome-desktop3
 gnomedesktop3_DETECT=		${LOCALBASE}/libdata/pkgconfig/gnome-desktop-3.0.pc
 gnomedesktop3_USE_GNOME_IMPL=	gnomedocutils gtk30
 
@@ -620,7 +620,7 @@ evolutiondataserver_DETECT=		${LOCALBASE}/libdata/pkgconfig/evolution-data-serve
 evolutiondataserver_USE_GNOME_IMPL=gconf2 libxml2
 evolutiondataserver_GNOME_DESKTOP_VERSION=2
 
-evolutiondataserver3_LIB_DEPENDS=	edataserverui-3.0.1:${PORTSDIR}/databases/evolution-data-server3
+evolutiondataserver3_LIB_DEPENDS=	edataserverui-3.0:${PORTSDIR}/databases/evolution-data-server3
 evolutiondataserver3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libedataserverui-3.0.pc
 evolutiondataserver3_USE_GNOME_IMPL=	gconf2 libxml2 gtk30
 evolutiondataserver3_GNOME_DESKTOP_VERSION=3
@@ -684,7 +684,7 @@ libgnomekbd_USE_GNOME_IMPL=	gconf2
 libgnomekbd_GNOME_DESKTOP_VERSION=2
 
 libgnomekbd3_DETECT=		${LOCALBASE}/libdata/pkgconfig/libgnomekbd.pc
-libgnomekbd3_LIB_DEPENDS=	gnomekbd.7:${PORTSDIR}/x11/libgnomekbd3
+libgnomekbd3_LIB_DEPENDS=	gnomekbd:${PORTSDIR}/x11/libgnomekbd3
 libgnomekbd3_USE_GNOME_IMPL=	gtk30
 libgnomekbd3_GNOME_DESKTOP_VERSION=3
 

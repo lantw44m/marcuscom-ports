@@ -1,9 +1,8 @@
 # Created by: Anders Nordby <anders@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
 
 PORTNAME=	file-roller
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.2
 CATEGORIES=	archivers gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,6 +10,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An archive manager for zip files, tar, etc
 
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 RUN_DEPENDS=	${LOCALBASE}/bin/gtar:${PORTSDIR}/archivers/gtar \
     		${LOCALBASE}/bin/unzip:${PORTSDIR}/archivers/unzip
 
@@ -22,7 +22,7 @@ USE_XZ=		yes
 USES=		gettext pathfix desktop-file-utils pkgconfig
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gnomedocutils gtk30 gconf2
+USE_GNOME=	gnomeprefix intlhack gtk30 gconf2
 USE_XORG=	sm
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
@@ -32,10 +32,9 @@ CONFIGURE_ARGS=	--disable-packagekit
 PORTDOCS=	AUTHORS NEWS README TODO ChangeLog
 GLIB_SCHEMAS=	org.gnome.FileRoller.gschema.xml
 
-OPTIONS_DEFINE=	DOCS NAUTILUS
-NAUTILUS_DESC=	Enable Nautilus extension
-
+OPTIONS_DEFINE=	NAUTILUS
 OPTIONS_DEFAULT=NAUTILUS
+NAUTILUS_DESC=	Enable Nautilus extension
 
 .include <bsd.port.options.mk>
 
