@@ -1,9 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/multimedia/clutter-gst/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom: ports/multimedia/clutter-gst/Makefile,v 1.16 2012/06/26 08:02:35 kwm Exp $
 
 PORTNAME=	clutter-gst
-PORTVERSION=	1.6.0
+PORTVERSION=	2.0.2
 CATEGORIES=	multimedia
 MASTER_SITES=	GNOME
 
@@ -15,9 +15,8 @@ LIB_DEPENDS=	clutter-1.0:${PORTSDIR}/graphics/clutter
 USE_GMAKE=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix
-USE_GNOME=	ltverhack gnomeprefix
-USE_GSTREAMER=	yes
+USE_GNOME=	gnomehack ltverhack gnomeprefix gnomehier
+USE_GSTREAMER1=	yes
 USE_XORG=	xp x11
 USE_LDCONFIG=	yes
 
