@@ -1,9 +1,9 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/editors/gedit-plugins3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.17 2012/06/13 11:10:16 kwm Exp $
 
 PORTNAME=	gedit-plugins
-PORTVERSION=	3.4.0
+PORTVERSION=	3.6.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -12,12 +12,12 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Plugins for GEdit 3
 
 BUILD_DEPENDS=	gedit>=${GEDITVER}:${PORTSDIR}/editors/gedit3
-LIB_DEPENDS=	peas-1.0:${PORTSDIR}/devel/libpeas
+LIB_DEPENDS=	peas-1.0.0:${PORTSDIR}/devel/libpeas
 RUN_DEPENDS=	gedit>=${GEDITVER}:${PORTSDIR}/editors/gedit3
 
 CONFLICTS=	gedit-plugins-2.[0-9]*
 
-GEDITVER=	3.4.0
+GEDITVER=	3.6.0
 LATEST_LINK=	gedit-plugins3
 USE_LDCONFIG=	yes
 USE_XZ=		yes
@@ -31,6 +31,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.gedit.plugins.drawspaces.gschema.xml
 
 OPTIONS_DEFINE=	PYTHON
+OPTIONS_DEFAULT=PYTHON
 PYTHON_DESC=	Build plugins that depend on python
 
 .include <bsd.port.options.mk>
@@ -41,7 +42,6 @@ BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/bus.py:${PORTSDIR}/devel/py-dbus
 RUN_DEPENDS+=	${PYTHON_SITELIBDIR}/dbus/bus.py:${PORTSDIR}/devel/py-dbus
 # the charmap plugin doesn't work, missing py-gucharmap stuff
 CONFIGURE_ARGS+=--enable-python
-GLIB_SCHEMAS+=	org.gnome.gedit.plugins.terminal.gschema.xml
 PLIST_SUB+=	PYTHON=""
 .else
 CONFIGURE_ARGS+=--disable-python

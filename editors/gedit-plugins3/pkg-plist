@@ -34,6 +34,9 @@ lib/gedit/plugins/bookmarks.plugin
 %%PYTHON%%lib/gedit/plugins/commander/commands/exceptions.py
 %%PYTHON%%lib/gedit/plugins/commander/commands/exceptions.pyc
 %%PYTHON%%lib/gedit/plugins/commander/commands/exceptions.pyo
+%%PYTHON%%lib/gedit/plugins/commander/commands/metamodule.py
+%%PYTHON%%lib/gedit/plugins/commander/commands/metamodule.pyc
+%%PYTHON%%lib/gedit/plugins/commander/commands/metamodule.pyo
 %%PYTHON%%lib/gedit/plugins/commander/commands/method.py
 %%PYTHON%%lib/gedit/plugins/commander/commands/method.pyc
 %%PYTHON%%lib/gedit/plugins/commander/commands/method.pyo
@@ -98,9 +101,6 @@ lib/gedit/plugins/libwordcompletion.a
 lib/gedit/plugins/libwordcompletion.la
 lib/gedit/plugins/libwordcompletion.so
 %%PYTHON%%lib/gedit/plugins/multiedit.plugin
-%%PYTHON%%lib/gedit/plugins/multiedit/constants.py
-%%PYTHON%%lib/gedit/plugins/multiedit/constants.pyc
-%%PYTHON%%lib/gedit/plugins/multiedit/constants.pyo
 %%PYTHON%%lib/gedit/plugins/multiedit/documenthelper.py
 %%PYTHON%%lib/gedit/plugins/multiedit/documenthelper.pyc
 %%PYTHON%%lib/gedit/plugins/multiedit/documenthelper.pyo
@@ -134,17 +134,10 @@ lib/gedit/plugins/libwordcompletion.so
 %%PYTHON%%lib/gedit/plugins/synctex/synctex.py
 %%PYTHON%%lib/gedit/plugins/synctex/synctex.pyc
 %%PYTHON%%lib/gedit/plugins/synctex/synctex.pyo
-%%PYTHON%%lib/gedit/plugins/terminal.plugin
-%%PYTHON%%lib/gedit/plugins/terminal.py
-%%PYTHON%%lib/gedit/plugins/terminal.pyc
-%%PYTHON%%lib/gedit/plugins/terminal.pyo
 %%PYTHON%%lib/gedit/plugins/textsize.plugin
 %%PYTHON%%lib/gedit/plugins/textsize/__init__.py
 %%PYTHON%%lib/gedit/plugins/textsize/__init__.pyc
 %%PYTHON%%lib/gedit/plugins/textsize/__init__.pyo
-%%PYTHON%%lib/gedit/plugins/textsize/constants.py
-%%PYTHON%%lib/gedit/plugins/textsize/constants.pyc
-%%PYTHON%%lib/gedit/plugins/textsize/constants.pyo
 %%PYTHON%%lib/gedit/plugins/textsize/documenthelper.py
 %%PYTHON%%lib/gedit/plugins/textsize/documenthelper.pyc
 %%PYTHON%%lib/gedit/plugins/textsize/documenthelper.pyo
