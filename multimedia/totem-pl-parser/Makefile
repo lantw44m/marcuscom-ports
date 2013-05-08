@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/multimedia/totem-pl-parser/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	totem-pl-parser
-PORTVERSION=	3.4.2
+PORTVERSION=	3.4.3
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
