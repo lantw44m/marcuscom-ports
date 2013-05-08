@@ -10,14 +10,13 @@ include/cheese/cheese.h
 lib/girepository-1.0/Cheese-3.0.typelib
 lib/libcheese-gtk.la
 lib/libcheese-gtk.so
-lib/libcheese-gtk.so.22
+lib/libcheese-gtk.so.23
 lib/libcheese.la
 lib/libcheese.so
-lib/libcheese.so.5
+lib/libcheese.so.7
 libdata/pkgconfig/cheese-gtk.pc
 libdata/pkgconfig/cheese.pc
 share/applications/cheese.desktop
-%%DATADIR%%/cheese-about.ui
 %%DATADIR%%/cheese-actions.ui
 %%DATADIR%%/cheese-main-window.ui
 %%DATADIR%%/cheese-prefs.ui
@@ -84,6 +83,7 @@ share/help/C/cheese/photo-view.page
 share/help/C/cheese/pref-burst-mode.page
 share/help/C/cheese/pref-countdown.page
 share/help/C/cheese/pref-flash.page
+share/help/C/cheese/pref-fullscreen.page
 share/help/C/cheese/pref-image-properties.page
 share/help/C/cheese/pref-photo-resolution.page
 share/help/C/cheese/video-record.page
@@ -108,6 +108,7 @@ share/help/ca/cheese/photo-view.page
 share/help/ca/cheese/pref-burst-mode.page
 share/help/ca/cheese/pref-countdown.page
 share/help/ca/cheese/pref-flash.page
+share/help/ca/cheese/pref-fullscreen.page
 share/help/ca/cheese/pref-image-properties.page
 share/help/ca/cheese/pref-photo-resolution.page
 share/help/ca/cheese/video-record.page
@@ -132,6 +133,7 @@ share/help/cs/cheese/photo-view.page
 share/help/cs/cheese/pref-burst-mode.page
 share/help/cs/cheese/pref-countdown.page
 share/help/cs/cheese/pref-flash.page
+share/help/cs/cheese/pref-fullscreen.page
 share/help/cs/cheese/pref-image-properties.page
 share/help/cs/cheese/pref-photo-resolution.page
 share/help/cs/cheese/video-record.page
@@ -156,6 +158,7 @@ share/help/de/cheese/photo-view.page
 share/help/de/cheese/pref-burst-mode.page
 share/help/de/cheese/pref-countdown.page
 share/help/de/cheese/pref-flash.page
+share/help/de/cheese/pref-fullscreen.page
 share/help/de/cheese/pref-image-properties.page
 share/help/de/cheese/pref-photo-resolution.page
 share/help/de/cheese/video-record.page
@@ -180,6 +183,7 @@ share/help/el/cheese/photo-view.page
 share/help/el/cheese/pref-burst-mode.page
 share/help/el/cheese/pref-countdown.page
 share/help/el/cheese/pref-flash.page
+share/help/el/cheese/pref-fullscreen.page
 share/help/el/cheese/pref-image-properties.page
 share/help/el/cheese/pref-photo-resolution.page
 share/help/el/cheese/video-record.page
@@ -204,6 +208,7 @@ share/help/en_GB/cheese/photo-view.page
 share/help/en_GB/cheese/pref-burst-mode.page
 share/help/en_GB/cheese/pref-countdown.page
 share/help/en_GB/cheese/pref-flash.page
+share/help/en_GB/cheese/pref-fullscreen.page
 share/help/en_GB/cheese/pref-image-properties.page
 share/help/en_GB/cheese/pref-photo-resolution.page
 share/help/en_GB/cheese/video-record.page
@@ -228,6 +233,7 @@ share/help/es/cheese/photo-view.page
 share/help/es/cheese/pref-burst-mode.page
 share/help/es/cheese/pref-countdown.page
 share/help/es/cheese/pref-flash.page
+share/help/es/cheese/pref-fullscreen.page
 share/help/es/cheese/pref-image-properties.page
 share/help/es/cheese/pref-photo-resolution.page
 share/help/es/cheese/video-record.page
@@ -252,6 +258,7 @@ share/help/fi/cheese/photo-view.page
 share/help/fi/cheese/pref-burst-mode.page
 share/help/fi/cheese/pref-countdown.page
 share/help/fi/cheese/pref-flash.page
+share/help/fi/cheese/pref-fullscreen.page
 share/help/fi/cheese/pref-image-properties.page
 share/help/fi/cheese/pref-photo-resolution.page
 share/help/fi/cheese/video-record.page
@@ -276,6 +283,7 @@ share/help/fr/cheese/photo-view.page
 share/help/fr/cheese/pref-burst-mode.page
 share/help/fr/cheese/pref-countdown.page
 share/help/fr/cheese/pref-flash.page
+share/help/fr/cheese/pref-fullscreen.page
 share/help/fr/cheese/pref-image-properties.page
 share/help/fr/cheese/pref-photo-resolution.page
 share/help/fr/cheese/video-record.page
@@ -300,6 +308,7 @@ share/help/gl/cheese/photo-view.page
 share/help/gl/cheese/pref-burst-mode.page
 share/help/gl/cheese/pref-countdown.page
 share/help/gl/cheese/pref-flash.page
+share/help/gl/cheese/pref-fullscreen.page
 share/help/gl/cheese/pref-image-properties.page
 share/help/gl/cheese/pref-photo-resolution.page
 share/help/gl/cheese/video-record.page
@@ -324,9 +333,35 @@ share/help/hu/cheese/photo-view.page
 share/help/hu/cheese/pref-burst-mode.page
 share/help/hu/cheese/pref-countdown.page
 share/help/hu/cheese/pref-flash.page
+share/help/hu/cheese/pref-fullscreen.page
 share/help/hu/cheese/pref-image-properties.page
 share/help/hu/cheese/pref-photo-resolution.page
 share/help/hu/cheese/video-record.page
+share/help/id/cheese/effects-apply.page
+share/help/id/cheese/figures/cheese-delete.png
+share/help/id/cheese/figures/cheese-effects.png
+share/help/id/cheese/figures/cheese-introduction.png
+share/help/id/cheese/figures/cheese-record.png
+share/help/id/cheese/figures/cheese-save.png
+share/help/id/cheese/figures/cheese-take.png
+share/help/id/cheese/figures/cheese.png
+share/help/id/cheese/figures/effects.png
+share/help/id/cheese/figures/image-properties.png
+share/help/id/cheese/figures/settings.png
+share/help/id/cheese/index.page
+share/help/id/cheese/introduction.page
+share/help/id/cheese/mode-wide.page
+share/help/id/cheese/photo-delete.page
+share/help/id/cheese/photo-save.page
+share/help/id/cheese/photo-take.page
+share/help/id/cheese/photo-view.page
+share/help/id/cheese/pref-burst-mode.page
+share/help/id/cheese/pref-countdown.page
+share/help/id/cheese/pref-flash.page
+share/help/id/cheese/pref-fullscreen.page
+share/help/id/cheese/pref-image-properties.page
+share/help/id/cheese/pref-photo-resolution.page
+share/help/id/cheese/video-record.page
 share/help/it/cheese/effects-apply.page
 share/help/it/cheese/figures/cheese-delete.png
 share/help/it/cheese/figures/cheese-effects.png
@@ -348,6 +383,7 @@ share/help/it/cheese/photo-view.page
 share/help/it/cheese/pref-burst-mode.page
 share/help/it/cheese/pref-countdown.page
 share/help/it/cheese/pref-flash.page
+share/help/it/cheese/pref-fullscreen.page
 share/help/it/cheese/pref-image-properties.page
 share/help/it/cheese/pref-photo-resolution.page
 share/help/it/cheese/video-record.page
@@ -372,6 +408,7 @@ share/help/ko/cheese/photo-view.page
 share/help/ko/cheese/pref-burst-mode.page
 share/help/ko/cheese/pref-countdown.page
 share/help/ko/cheese/pref-flash.page
+share/help/ko/cheese/pref-fullscreen.page
 share/help/ko/cheese/pref-image-properties.page
 share/help/ko/cheese/pref-photo-resolution.page
 share/help/ko/cheese/video-record.page
@@ -396,6 +433,7 @@ share/help/lv/cheese/photo-view.page
 share/help/lv/cheese/pref-burst-mode.page
 share/help/lv/cheese/pref-countdown.page
 share/help/lv/cheese/pref-flash.page
+share/help/lv/cheese/pref-fullscreen.page
 share/help/lv/cheese/pref-image-properties.page
 share/help/lv/cheese/pref-photo-resolution.page
 share/help/lv/cheese/video-record.page
@@ -420,6 +458,7 @@ share/help/nl/cheese/photo-view.page
 share/help/nl/cheese/pref-burst-mode.page
 share/help/nl/cheese/pref-countdown.page
 share/help/nl/cheese/pref-flash.page
+share/help/nl/cheese/pref-fullscreen.page
 share/help/nl/cheese/pref-image-properties.page
 share/help/nl/cheese/pref-photo-resolution.page
 share/help/nl/cheese/video-record.page
@@ -444,6 +483,7 @@ share/help/oc/cheese/photo-view.page
 share/help/oc/cheese/pref-burst-mode.page
 share/help/oc/cheese/pref-countdown.page
 share/help/oc/cheese/pref-flash.page
+share/help/oc/cheese/pref-fullscreen.page
 share/help/oc/cheese/pref-image-properties.page
 share/help/oc/cheese/pref-photo-resolution.page
 share/help/oc/cheese/video-record.page
@@ -468,6 +508,7 @@ share/help/pa/cheese/photo-view.page
 share/help/pa/cheese/pref-burst-mode.page
 share/help/pa/cheese/pref-countdown.page
 share/help/pa/cheese/pref-flash.page
+share/help/pa/cheese/pref-fullscreen.page
 share/help/pa/cheese/pref-image-properties.page
 share/help/pa/cheese/pref-photo-resolution.page
 share/help/pa/cheese/video-record.page
@@ -492,6 +533,7 @@ share/help/pt_BR/cheese/photo-view.page
 share/help/pt_BR/cheese/pref-burst-mode.page
 share/help/pt_BR/cheese/pref-countdown.page
 share/help/pt_BR/cheese/pref-flash.page
+share/help/pt_BR/cheese/pref-fullscreen.page
 share/help/pt_BR/cheese/pref-image-properties.page
 share/help/pt_BR/cheese/pref-photo-resolution.page
 share/help/pt_BR/cheese/video-record.page
@@ -516,6 +558,7 @@ share/help/ru/cheese/photo-view.page
 share/help/ru/cheese/pref-burst-mode.page
 share/help/ru/cheese/pref-countdown.page
 share/help/ru/cheese/pref-flash.page
+share/help/ru/cheese/pref-fullscreen.page
 share/help/ru/cheese/pref-image-properties.page
 share/help/ru/cheese/pref-photo-resolution.page
 share/help/ru/cheese/video-record.page
@@ -540,6 +583,7 @@ share/help/sl/cheese/photo-view.page
 share/help/sl/cheese/pref-burst-mode.page
 share/help/sl/cheese/pref-countdown.page
 share/help/sl/cheese/pref-flash.page
+share/help/sl/cheese/pref-fullscreen.page
 share/help/sl/cheese/pref-image-properties.page
 share/help/sl/cheese/pref-photo-resolution.page
 share/help/sl/cheese/video-record.page
@@ -564,6 +608,7 @@ share/help/sv/cheese/photo-view.page
 share/help/sv/cheese/pref-burst-mode.page
 share/help/sv/cheese/pref-countdown.page
 share/help/sv/cheese/pref-flash.page
+share/help/sv/cheese/pref-fullscreen.page
 share/help/sv/cheese/pref-image-properties.page
 share/help/sv/cheese/pref-photo-resolution.page
 share/help/sv/cheese/video-record.page
@@ -588,6 +633,7 @@ share/help/te/cheese/photo-view.page
 share/help/te/cheese/pref-burst-mode.page
 share/help/te/cheese/pref-countdown.page
 share/help/te/cheese/pref-flash.page
+share/help/te/cheese/pref-fullscreen.page
 share/help/te/cheese/pref-image-properties.page
 share/help/te/cheese/pref-photo-resolution.page
 share/help/te/cheese/video-record.page
@@ -612,6 +658,7 @@ share/help/th/cheese/photo-view.page
 share/help/th/cheese/pref-burst-mode.page
 share/help/th/cheese/pref-countdown.page
 share/help/th/cheese/pref-flash.page
+share/help/th/cheese/pref-fullscreen.page
 share/help/th/cheese/pref-image-properties.page
 share/help/th/cheese/pref-photo-resolution.page
 share/help/th/cheese/video-record.page
@@ -636,6 +683,7 @@ share/help/zh_CN/cheese/photo-view.page
 share/help/zh_CN/cheese/pref-burst-mode.page
 share/help/zh_CN/cheese/pref-countdown.page
 share/help/zh_CN/cheese/pref-flash.page
+share/help/zh_CN/cheese/pref-fullscreen.page
 share/help/zh_CN/cheese/pref-image-properties.page
 share/help/zh_CN/cheese/pref-photo-resolution.page
 share/help/zh_CN/cheese/video-record.page
@@ -704,6 +752,7 @@ share/locale/km/LC_MESSAGES/cheese.mo
 share/locale/kn/LC_MESSAGES/cheese.mo
 share/locale/ko/LC_MESSAGES/cheese.mo
 share/locale/ku/LC_MESSAGES/cheese.mo
+share/locale/ky/LC_MESSAGES/cheese.mo
 share/locale/lt/LC_MESSAGES/cheese.mo
 share/locale/lv/LC_MESSAGES/cheese.mo
 share/locale/mai/LC_MESSAGES/cheese.mo
@@ -821,6 +870,9 @@ share/locale/zu/LC_MESSAGES/cheese.mo
 @dirrmtry share/help/it/cheese/figures
 @dirrmtry share/help/it/cheese
 @dirrmtry share/help/it
+@dirrmtry share/help/id/cheese/figures
+@dirrmtry share/help/id/cheese
+@dirrmtry share/help/id
 @dirrmtry share/help/hu/cheese/figures
 @dirrmtry share/help/hu/cheese
 @dirrmtry share/help/hu

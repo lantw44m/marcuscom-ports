@@ -1,6 +1,14 @@
---- configure	2012-06-13 10:35:21.000000000 +0200
-+++ configure	2012-06-13 10:31:28.000000000 +0200
-@@ -12661,6 +12661,10 @@
+--- configure.orig	2013-04-07 22:02:48.205219751 +0000
++++ configure	2013-04-07 22:24:32.131129660 +0000
+@@ -12556,6 +12556,7 @@
+ GLIB_REQUIRED="glib-2.0 >= 2.28.0"
+ GOBJECT_REQUIRED="gobject-2.0 >= 2.28.0"
+ GIO_REQUIRED="gio-2.0 >= 2.28.0"
++DBUS_GLIB_REQUIRED="dbus-glib-1"
+ GTK_REQUIRED="gtk+-3.0 >= 3.4.4"
+ GDK_REQUIRED="gdk-3.0 >= 3.3.6"
+ GDK_PIXBUF_REQUIRED="gdk-pixbuf-2.0"
+@@ -12585,6 +12586,10 @@
      { $as_echo "$as_me:${as_lineno-$LINENO}: result: Linux" >&5
  $as_echo "Linux" >&6; }
      UDEV_REQUIRED="gudev-1.0" ;; #(
@@ -11,7 +19,7 @@
    *) :
      { $as_echo "$as_me:${as_lineno-$LINENO}: result: unsupported operating system" >&5
  $as_echo "unsupported operating system" >&6; } ;;
-@@ -12688,6 +12692,28 @@
+@@ -12612,6 +12617,28 @@
  $as_echo "not needed" >&6; }
  fi
  
@@ -40,146 +48,148 @@
  for ac_header in sys/videoio.h
  do :
    ac_fn_c_check_header_mongrel "$LINENO" "sys/videoio.h" "ac_cv_header_sys_videoio_h" "$ac_includes_default"
-@@ -12776,6 +12802,7 @@
+@@ -12699,7 +12726,9 @@
+   \$CAIRO_REQUIRED
+   \$PANGOCAIRO_REQUIRED
    \$CLUTTER_REQUIRED
++  \$DBUS_GLIB_REQUIRED
    \$CLUTTERGST_REQUIRED
-   \$MX_REQUIRED
 +  \$HAL_REQUIRED
    \$UDEV_REQUIRED\""; } >&5
    ($PKG_CONFIG --exists --print-errors "$GLIB_REQUIRED
    $GIO_REQUIRED
-@@ -12788,6 +12815,7 @@
+@@ -12712,6 +12741,8 @@
+   $PANGOCAIRO_REQUIRED
    $CLUTTER_REQUIRED
    $CLUTTERGST_REQUIRED
-   $MX_REQUIRED
++  $DBUS_GLIB_REQUIRED
 +  $HAL_REQUIRED
    $UDEV_REQUIRED") 2>&5
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-@@ -12803,6 +12831,7 @@
+@@ -12727,6 +12758,8 @@
+   $PANGOCAIRO_REQUIRED
    $CLUTTER_REQUIRED
    $CLUTTERGST_REQUIRED
-   $MX_REQUIRED
++  $DBUS_GLIB_REQUIRED
 +  $HAL_REQUIRED
    $UDEV_REQUIRED" 2>/dev/null`
  		      test "x$?" != "x0" && pkg_failed=yes
  else
-@@ -12826,6 +12855,7 @@
+@@ -12750,6 +12783,8 @@
+   \$PANGOCAIRO_REQUIRED
    \$CLUTTER_REQUIRED
    \$CLUTTERGST_REQUIRED
-   \$MX_REQUIRED
++  \$DBUS_GLIB_REQUIRED
 +  \$HAL_REQUIRED
    \$UDEV_REQUIRED\""; } >&5
    ($PKG_CONFIG --exists --print-errors "$GLIB_REQUIRED
    $GIO_REQUIRED
-@@ -12838,6 +12868,7 @@
+@@ -12762,6 +12797,8 @@
+   $PANGOCAIRO_REQUIRED
    $CLUTTER_REQUIRED
    $CLUTTERGST_REQUIRED
-   $MX_REQUIRED
++  $DBUS_GLIB_REQUIRED
 +  $HAL_REQUIRED
    $UDEV_REQUIRED") 2>&5
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-@@ -12853,6 +12884,7 @@
+@@ -12777,6 +12814,8 @@
+   $PANGOCAIRO_REQUIRED
    $CLUTTER_REQUIRED
    $CLUTTERGST_REQUIRED
-   $MX_REQUIRED
++  $DBUS_GLIB_REQUIRED
 +  $HAL_REQUIRED
    $UDEV_REQUIRED" 2>/dev/null`
  		      test "x$?" != "x0" && pkg_failed=yes
  else
-@@ -12885,6 +12917,7 @@
+@@ -12809,6 +12848,8 @@
+   $PANGOCAIRO_REQUIRED
    $CLUTTER_REQUIRED
    $CLUTTERGST_REQUIRED
-   $MX_REQUIRED
++  $DBUS_GLIB_REQUIRED
 +  $HAL_REQUIRED
    $UDEV_REQUIRED" 2>&1`
          else
  	        CHEESE_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "$GLIB_REQUIRED
-@@ -12898,6 +12931,7 @@
+@@ -12822,6 +12863,8 @@
+   $PANGOCAIRO_REQUIRED
    $CLUTTER_REQUIRED
    $CLUTTERGST_REQUIRED
-   $MX_REQUIRED
++  $DBUS_GLIB_REQUIRED
 +  $HAL_REQUIRED
    $UDEV_REQUIRED" 2>&1`
          fi
  	# Put the nasty error message in config.log where it belongs
-@@ -12914,6 +12948,7 @@
+@@ -12838,6 +12881,8 @@
+   $PANGOCAIRO_REQUIRED
    $CLUTTER_REQUIRED
    $CLUTTERGST_REQUIRED
-   $MX_REQUIRED
++  $DBUS_GLIB_REQUIRED
 +  $HAL_REQUIRED
    $UDEV_REQUIRED) were not met:
  
  $CHEESE_PKG_ERRORS
-@@ -12966,6 +13001,7 @@
+@@ -12889,6 +12934,8 @@
     \$GEE_REQUIRED
     \$LIBCANBERRA_REQUIRED
     \$UDEV_REQUIRED
++   \$DBUS_GLIB_REQUIRED
 +   \$HAL_REQUIRED
     \$GNOME_VIDEO_EFFECTS_REQUIRED\""; } >&5
    ($PKG_CONFIG --exists --print-errors "$GIO_REQUIRED
     $GTK_REQUIRED
-@@ -12976,6 +13012,7 @@
+@@ -12898,6 +12945,8 @@
+    $CLUTTERGTK_REQUIRED
+    $GEE_REQUIRED
+    $LIBCANBERRA_REQUIRED
++   $DBUS_GLIB_REQUIRED
++   $HAL_REQUIRED
+    $UDEV_REQUIRED
+    $GNOME_VIDEO_EFFECTS_REQUIRED") 2>&5
+   ac_status=$?
+@@ -12943,6 +12992,8 @@
     $GEE_REQUIRED
     $LIBCANBERRA_REQUIRED
     $UDEV_REQUIRED
++   $DBUS_GLIB_REQUIRED
 +   $HAL_REQUIRED
     $GNOME_VIDEO_EFFECTS_REQUIRED") 2>&5
    ac_status=$?
    $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-@@ -12989,6 +13026,7 @@
+@@ -12956,6 +13007,9 @@
     $GEE_REQUIRED
     $LIBCANBERRA_REQUIRED
     $UDEV_REQUIRED
++   $DBUS_GLIB_REQUIRED
++   $HAL_REQUIRED
 +   $HAL_REQUIRED
     $GNOME_VIDEO_EFFECTS_REQUIRED" 2>/dev/null`
  		      test "x$?" != "x0" && pkg_failed=yes
  else
-@@ -13010,6 +13048,7 @@
-    \$GEE_REQUIRED
-    \$LIBCANBERRA_REQUIRED
-    \$UDEV_REQUIRED
-+   \$HAL_REQUIRED
-    \$GNOME_VIDEO_EFFECTS_REQUIRED\""; } >&5
-   ($PKG_CONFIG --exists --print-errors "$GIO_REQUIRED
-    $GTK_REQUIRED
-@@ -13020,6 +13059,7 @@
+@@ -12986,6 +13040,8 @@
     $GEE_REQUIRED
     $LIBCANBERRA_REQUIRED
     $UDEV_REQUIRED
-+   $HAL_REQUIRED
-    $GNOME_VIDEO_EFFECTS_REQUIRED") 2>&5
-   ac_status=$?
-   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
-@@ -13033,6 +13073,7 @@
-    $GEE_REQUIRED
-    $LIBCANBERRA_REQUIRED
-    $UDEV_REQUIRED
-+   $HAL_REQUIRED
-    $GNOME_VIDEO_EFFECTS_REQUIRED" 2>/dev/null`
- 		      test "x$?" != "x0" && pkg_failed=yes
- else
-@@ -13063,6 +13104,7 @@
-    $GEE_REQUIRED
-    $LIBCANBERRA_REQUIRED
-    $UDEV_REQUIRED
++   $DBUS_GLIB_REQUIRED
 +   $HAL_REQUIRED
     $GNOME_VIDEO_EFFECTS_REQUIRED" 2>&1`
          else
  	        CHEESE_GTK_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "$GIO_REQUIRED
-@@ -13074,6 +13116,7 @@
+@@ -12997,6 +13053,8 @@
     $GEE_REQUIRED
     $LIBCANBERRA_REQUIRED
     $UDEV_REQUIRED
++   $DBUS_GLIB_REQUIRED
 +   $HAL_REQUIRED
     $GNOME_VIDEO_EFFECTS_REQUIRED" 2>&1`
          fi
  	# Put the nasty error message in config.log where it belongs
-@@ -13088,6 +13131,7 @@
+@@ -13011,6 +13069,8 @@
     $GEE_REQUIRED
     $LIBCANBERRA_REQUIRED
     $UDEV_REQUIRED
++   $DBUS_GLIB_REQUIRED
 +   $HAL_REQUIRED
     $GNOME_VIDEO_EFFECTS_REQUIRED) were not met:
  
