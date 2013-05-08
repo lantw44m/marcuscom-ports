@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/accessibility/orca3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom$
 
 PORTNAME=	orca
 PORTVERSION=	3.6.2
@@ -14,7 +14,8 @@ COMMENT=	Scriptable screen reader
 
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg \
-		${PYTHON_SITELIBDIR}/cairo/__init__.py:${PORTSDIR}/graphics/py-cairo
+		${PYTHON_SITELIBDIR}/cairo/__init__.py:${PORTSDIR}/graphics/py-cairo \
+		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	atspi:${PORTSDIR}/accessibility/at-spi2-core
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/_dbus_bindings.so:${PORTSDIR}/devel/py-dbus \
 		${PYTHON_SITELIBDIR}/xdg/__init__.py:${PORTSDIR}/devel/py-xdg \
@@ -41,8 +42,7 @@ MAN1=		orca.1
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    	${WRKSRC}/src/orca/orca_i18n.py
-	@${REINPLACE_CMD} -e 's|/usr/|/usr/local/|g' \
-		${WRKSRC}/src/orca/orca_platform.py \
-		${WRKSRC}/src/orca/keybindings.py
+	@${REINPLACE_CMD} -e 's|from gi.repository import GObject|import gobject|g' \
+	    	${WRKSRC}/configure
 
 .include <bsd.port.mk>
