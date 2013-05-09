@@ -4,7 +4,7 @@
 
 PORTNAME=	accountsservice
 PORTVERSION=	0.6.24
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	sysutils devel
 MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 
@@ -22,12 +22,17 @@ USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--disable-systemd
+CONFIGURE_ARGS=	--disable-systemd --localstatedir=/var/
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/etc/gdm/custom.conf|${LOCALBASE}/etc/gdm/custom.conf|g' \
 		${WRKSRC}/src/daemon.c
+	@${REINPLACE_CMD} -e 's|/lib/AccountsService|/db/AccountsService|g' \
+		${WRKSRC}/src/user.c ${WRKSRC}/src/Makefile.in
+
+post-install:
+	@${SETENV} PKG_PREFIX=${PREFIX} ${SH} ${PKGINSTALL} ${PKGNAME} POST-INSTALL
 
 .include <bsd.port.mk>
