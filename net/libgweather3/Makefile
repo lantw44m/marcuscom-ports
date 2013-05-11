@@ -27,5 +27,7 @@ USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+GLIB_SCHEMAS=	org.gnome.GWeather.enums.xml \
+		org.gnome.GWeather.gschema.xml
 
 .include <bsd.port.mk>
