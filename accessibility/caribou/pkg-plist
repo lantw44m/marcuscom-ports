@@ -29,12 +29,6 @@ lib/libcaribou.so.0
 %%PYTHON_SITELIBDIR%%/caribou/antler/window.py
 %%PYTHON_SITELIBDIR%%/caribou/antler/window.pyc
 %%PYTHON_SITELIBDIR%%/caribou/antler/window.pyo
-%%PYTHON_SITELIBDIR%%/caribou/daemon/__init__.py
-%%PYTHON_SITELIBDIR%%/caribou/daemon/__init__.pyc
-%%PYTHON_SITELIBDIR%%/caribou/daemon/__init__.pyo
-%%PYTHON_SITELIBDIR%%/caribou/daemon/main.py
-%%PYTHON_SITELIBDIR%%/caribou/daemon/main.pyc
-%%PYTHON_SITELIBDIR%%/caribou/daemon/main.pyo
 %%PYTHON_SITELIBDIR%%/caribou/i18n.py
 %%PYTHON_SITELIBDIR%%/caribou/i18n.pyc
 %%PYTHON_SITELIBDIR%%/caribou/i18n.pyo
@@ -53,10 +47,10 @@ lib/libcaribou.so.0
 %%PYTHON_SITELIBDIR%%/caribou/settings/settings_manager.py
 %%PYTHON_SITELIBDIR%%/caribou/settings/settings_manager.pyc
 %%PYTHON_SITELIBDIR%%/caribou/settings/settings_manager.pyo
+libdata/pkgconfig/caribou-1.0.pc
 libexec/antler-keyboard
 share/antler/dark-key-border.svg
 share/antler/style.css
-share/applications/caribou.desktop
 share/caribou/layouts/fullscale/us.xml
 share/caribou/layouts/scan/us.xml
 share/caribou/layouts/touch/ara.xml
@@ -64,11 +58,13 @@ share/caribou/layouts/touch/il.xml
 share/caribou/layouts/touch/us.xml
 share/dbus-1/services/org.gnome.Caribou.Antler.service
 share/gir-1.0/Caribou-1.0.gir
+share/locale/an/LC_MESSAGES/caribou.mo
 share/locale/ar/LC_MESSAGES/caribou.mo
 share/locale/as/LC_MESSAGES/caribou.mo
 share/locale/ast/LC_MESSAGES/caribou.mo
 share/locale/be/LC_MESSAGES/caribou.mo
 share/locale/bg/LC_MESSAGES/caribou.mo
+share/locale/bn_IN/LC_MESSAGES/caribou.mo
 share/locale/ca/LC_MESSAGES/caribou.mo
 share/locale/ca@valencia/LC_MESSAGES/caribou.mo
 share/locale/cs/LC_MESSAGES/caribou.mo
@@ -83,6 +79,7 @@ share/locale/eu/LC_MESSAGES/caribou.mo
 share/locale/fa/LC_MESSAGES/caribou.mo
 share/locale/fi/LC_MESSAGES/caribou.mo
 share/locale/fr/LC_MESSAGES/caribou.mo
+share/locale/fur/LC_MESSAGES/caribou.mo
 share/locale/gl/LC_MESSAGES/caribou.mo
 share/locale/gu/LC_MESSAGES/caribou.mo
 share/locale/he/LC_MESSAGES/caribou.mo
@@ -98,6 +95,7 @@ share/locale/lt/LC_MESSAGES/caribou.mo
 share/locale/lv/LC_MESSAGES/caribou.mo
 share/locale/mk/LC_MESSAGES/caribou.mo
 share/locale/ml/LC_MESSAGES/caribou.mo
+share/locale/mr/LC_MESSAGES/caribou.mo
 share/locale/ms/LC_MESSAGES/caribou.mo
 share/locale/nb/LC_MESSAGES/caribou.mo
 share/locale/nl/LC_MESSAGES/caribou.mo
@@ -124,20 +122,8 @@ share/locale/vi/LC_MESSAGES/caribou.mo
 share/locale/zh_CN/LC_MESSAGES/caribou.mo
 share/locale/zh_HK/LC_MESSAGES/caribou.mo
 share/locale/zh_TW/LC_MESSAGES/caribou.mo
-@dirrm share/caribou/layouts/touch
-@dirrm share/caribou/layouts/scan
-@dirrm share/caribou/layouts/fullscale
-@dirrm share/caribou/layouts/
-@dirrm share/caribou
-@dirrm share/antler
-@dirrmtry share/applications
-@dirrm %%PYTHON_SITELIBDIR%%/caribou/settings
-@dirrm %%PYTHON_SITELIBDIR%%/caribou/daemon
-@dirrm %%PYTHON_SITELIBDIR%%/caribou/antler
-@dirrm %%PYTHON_SITELIBDIR%%/caribou
-@dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
-@dirrmtry lib/gnome-settings-daemon-3.0
-@dirrm include/libcaribou
+share/vala/vapi/caribou-1.0.vapi
+share/vala/vapi/caribou-1.0.deps
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
 @dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/ug/LC_MESSAGES
@@ -148,11 +134,31 @@ share/locale/zh_TW/LC_MESSAGES/caribou.mo
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES
 @dirrmtry share/locale/si
+@dirrmtry share/locale/mr/LC_MESSAGES
+@dirrmtry share/locale/mr
 @dirrmtry share/locale/km/LC_MESSAGES
 @dirrmtry share/locale/km
+@dirrmtry share/locale/fur/LC_MESSAGES
+@dirrmtry share/locale/fur
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
+@dirrmtry share/locale/bn_IN/LC_MESSAGES
+@dirrmtry share/locale/bn_IN
 @dirrmtry share/locale/ast/LC_MESSAGES
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrmtry share/locale/an/LC_MESSAGES
+@dirrmtry share/locale/an
+@dirrm share/caribou/layouts/touch
+@dirrm share/caribou/layouts/scan
+@dirrm share/caribou/layouts/fullscale
+@dirrm share/caribou/layouts/
+@dirrm share/caribou
+@dirrm share/antler
+@dirrm %%PYTHON_SITELIBDIR%%/caribou/settings
+@dirrm %%PYTHON_SITELIBDIR%%/caribou/antler
+@dirrm %%PYTHON_SITELIBDIR%%/caribou
+@dirrmtry lib/gnome-settings-daemon-3.0/gtk-modules
+@dirrmtry lib/gnome-settings-daemon-3.0
+@dirrm include/libcaribou
