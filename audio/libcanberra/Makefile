@@ -17,7 +17,8 @@ LICENSE_FILE=	${WRKSRC}/LGPL
 LIB_DEPENDS=	vorbisfile:${PORTSDIR}/audio/libvorbis
 
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix gnomehack gnomehier gtk20 ltverhack gconf2
+USES=		pathfix pkgconfig
+USE_GNOME=	gnomeprefix gnomehier gtk20 ltverhack gconf2
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool libltdl
 CONFIGURE_ARGS=	--disable-lynx --disable-tdb --disable-alsa
