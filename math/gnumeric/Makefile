@@ -15,7 +15,7 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
-LIB_DEPENDS=	goffice-0.10:${PORTSDIR}/devel/goffice \
+LIB_DEPENDS=	goffice-0.10:${PORTSDIR}/devel/goffice010 \
 		psiconv:${PORTSDIR}/converters/psiconv
 RUN_DEPENDS=	rarian-sk-config:${PORTSDIR}/textproc/rarian
 
