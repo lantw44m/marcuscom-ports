@@ -42,7 +42,5 @@ MAN1=		orca.1
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    	${WRKSRC}/src/orca/orca_i18n.py
-	@${REINPLACE_CMD} -e 's|from gi.repository import GObject|import gobject|g' \
-	    	${WRKSRC}/configure
 
 .include <bsd.port.mk>
