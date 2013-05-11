@@ -43,4 +43,8 @@ PLIST_SUB=	PYTHON_VER="${PYTHON_VER}" ARCH=${ARCH} UNAME_R=${UNAME_R} \
 
 UNAME_R!=	${UNAME} -r
 
+post-patch:
+	@${REINPLACE_CMD} -e 's|SUBDIRS = examples gi tests|SUBDIRS = examples gi|g' \
+		${WRKSRC}/Makefile.in
+
 .include <bsd.port.post.mk>
