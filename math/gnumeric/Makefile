@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	gnumeric
-PORTVERSION=	1.12.1
+PORTVERSION=	1.12.2
 CATEGORIES=	math gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -23,14 +23,14 @@ USE_XZ=		yes
 USES=		gettext pathfix desktop-file-utils shared-mime-info
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomehier libgsf pygobject3
-USE_PYTHON=	2.7-
+USE_PYTHON=	-2.7
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ENV=	LIBS="-liconv ${PTHREAD_LIBS}" \
+CONFIGURE_ENV=	LIBS="-liconv -pthread" \
 		python_prog=${PYTHON_VERSION}
 MAKE_JOBS_SAFE=	yes
 
@@ -64,6 +64,10 @@ PLIST_SUB+=		PERL="@comment "
 CONFIGURE_ARGS+=	--without-gda
 PLIST_SUB+=		GNOMEDB="@comment "
 #.endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|^GETTEXT_PACKAGE=gnumeric-$${VERSION}|GETTEXT_PACKAGE=gnumeric|g' \
+		${WRKSRC}/configure
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/gnumeric.desktop ${PREFIX}/share/applications

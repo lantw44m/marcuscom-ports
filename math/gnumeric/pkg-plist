@@ -45,6 +45,7 @@ include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gnm-so-polygon.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gnm-style-impl.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gnumeric-conf.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gnumeric-features.h
+include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gnumeric-fwd.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gnumeric-simple-canvas.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gnumeric.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/go-data-cache-field.h
@@ -56,7 +57,6 @@ include/libspreadsheet-%%SHORT_VER%%/spreadsheet/go-val.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/graph.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gui-clipboard.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gui-file.h
-include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gui-gnumeric.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gui-util.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/gutils.h
 include/libspreadsheet-%%SHORT_VER%%/spreadsheet/history.h
@@ -823,17 +823,11 @@ share/pixmaps/gnome-application-x-applix-spreadsheet.png
 share/pixmaps/gnome-application-x-generic-spreadsheet.png
 share/pixmaps/gnome-application-x-gnumeric.png
 share/pixmaps/gnome-application-x-xls.png
-share/pixmaps/gnumeric/down-right.png
 share/pixmaps/gnumeric/gnome-application-vnd.lotus-1-2-3.png
 share/pixmaps/gnumeric/gnome-application-x-applix-spreadsheet.png
 share/pixmaps/gnumeric/gnome-application-x-generic-spreadsheet.png
 share/pixmaps/gnumeric/gnome-application-x-gnumeric.png
 share/pixmaps/gnumeric/gnome-application-x-xls.png
-share/pixmaps/gnumeric/gnumeric-about.png
-share/pixmaps/gnumeric/orient-horizontal.png
-share/pixmaps/gnumeric/orient-vertical.png
-share/pixmaps/gnumeric/right-down.png
-share/pixmaps/gnumeric/stf-druid.png
 share/pixmaps/gnumeric/win32-gnumeric.ico
 share/pixmaps/win32-gnumeric.ico
 share/locale/am/LC_MESSAGES/gnumeric-functions.mo
@@ -952,6 +946,8 @@ share/locale/vi/LC_MESSAGES/gnumeric-functions.mo
 share/locale/vi/LC_MESSAGES/gnumeric.mo
 share/locale/zh_CN/LC_MESSAGES/gnumeric-functions.mo
 share/locale/zh_CN/LC_MESSAGES/gnumeric.mo
+share/locale/zh_HK/LC_MESSAGES/gnumeric-functions.mo
+share/locale/zh_HK/LC_MESSAGES/gnumeric.mo
 share/locale/zh_TW/LC_MESSAGES/gnumeric-functions.mo
 share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
 @dirrm share/pixmaps/gnumeric
@@ -1024,6 +1020,8 @@ share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
 @dirrm include/libspreadsheet-%%SHORT_VER%%/spreadsheet
 @dirrm include/libspreadsheet-%%SHORT_VER%%
 @dirrmtry share/applications
+@dirrmtry share/locale/zh_HK/LC_MESSAGES
+@dirrmtry share/locale/zh_HK
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
 @dirrmtry share/locale/rw/LC_MESSAGES
