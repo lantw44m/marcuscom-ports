@@ -5222,7 +5222,7 @@ share/GConf/gsettings/evolution.convert
 @dirrmtry share/locale/as
 @dirrm share/help/zh_CN/evolution/figures
 @dirrm share/help/zh_CN/evolution
-@dirrmtry share/hepl/zh_CN
+@dirrmtry share/help/zh_CN
 @dirrm share/help/te/evolution/figures
 @dirrm share/help/te/evolution
 @dirrmtry share/help/te
@@ -5264,14 +5264,14 @@ share/GConf/gsettings/evolution.convert
 @dirrmtry share/help/el
 @dirrm share/help/de/evolution/figures
 @dirrm share/help/de/evolution
-@dirrmtry share/help/cs
+@dirrmtry share/help/de
 @dirrm share/help/cs/evolution/figures
 @dirrm share/help/cs/evolution
 @dirrmtry share/help/cs
 @dirrm share/help/C/evolution/figures
 @dirrm share/help/C/evolution
 @dirrmtry share/help/C
-@dirrmtry share/help/C
+@dirrmtry share/help
 @dirrm %%DATADIR%%/%%VERSION%%/views/tasks
 @dirrm %%DATADIR%%/%%VERSION%%/views/memos
 @dirrm %%DATADIR%%/%%VERSION%%/views/mail
