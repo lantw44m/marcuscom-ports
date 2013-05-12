@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/www/gtkhtml4/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom: ports/www/gtkhtml4/Makefile,v 1.20 2012/08/16 14:59:38 kwm Exp $
 
 PORTNAME=	gtkhtml
-PORTVERSION=	4.4.4
+PORTVERSION=	4.6.5
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	4
@@ -23,7 +23,7 @@ USES=		gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_XORG=	xinerama xi xrandr xcursor xcomposite xdamage xproto
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack gtk30 gconf2 ltverhack
+USE_GNOME=	gnomeprefix intlhack gtk30 ltverhack
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
