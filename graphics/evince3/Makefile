@@ -3,8 +3,7 @@
 #    $MCom: ports/trunk/graphics/evince3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	evince
-PORTVERSION=	3.4.0
-PORTREVISION=	2
+PORTVERSION=	3.6.1
 CATEGORIES=	graphics print gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -14,9 +13,9 @@ COMMENT=	GNOME 3 multi-format document viewer
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
+		itstool:${PORTSDIR}/textproc/itstool \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	poppler-glib:${PORTSDIR}/graphics/poppler-glib \
-		dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		spectre:${PORTSDIR}/print/libspectre
 RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
@@ -32,10 +31,10 @@ INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USES=		pathfix gettext pkgconfig desktop-file-utils
-USE_GNOME=	intlhack gnomeprefix gnomedocutils ltasneededhack
+USE_GNOME=	intlhack gnomeprefix ltasneededhack
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--disable-xps
+CONFIGURE_ARGS=	--disable-xps --enable-introspection
 
 GLIB_SCHEMAS=	org.gnome.Evince.gschema.xml
 
@@ -87,6 +86,13 @@ CONFIGURE_ARGS+=	--disable-nautilus
 PLIST_SUB+=		NAUTILUS="@comment "
 .endif
 
+.if ${PORT_OPTIONS:MIMPRESS}
+CONFIGURE_ARGS+=	--enable-impress
+PLIST_SUB+=		IMPRESS=""
+.else
+CONFIGURE_ARGS+=	--disable-impress
+PLIST_SUB+=		IMPRESS="@comment "
+.endif
 
 .if ${PORT_OPTIONS:MDJVU}
 LIB_DEPENDS+=		djvulibre:${PORTSDIR}/graphics/djvulibre
