@@ -1,9 +1,9 @@
 # Created by: Ade Lovett <ade@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/mail/evolution3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom: ports/mail/evolution3/Makefile,v 1.28 2013/03/14 09:16:36 kwm Exp $
 
 PORTNAME=	evolution
-PORTVERSION=	3.4.4
+PORTVERSION=	3.6.4
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,7 +11,9 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An integrated mail, calendar and address book distributed suite
 
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	nss3:${PORTSDIR}/security/nss \
+		gcr-3:${PORTSDIR}/security/gcr \
 		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
 		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
 		notify:${PORTSDIR}/devel/libnotify
@@ -25,32 +27,17 @@ USES=		bison gettext pathfix desktop-file-utils
 USE_GNOME=	gnomeprefix intlhack evolutiondataserver3 gtkhtml4 \
 		gnomedocutils ltasneededhack gnomedesktop3
 USE_AUTOTOOLS=	libtool
-USE_GSTREAMER=	yes
-INSTALLS_OMF=	yes
+USE_GSTREAMER1=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 LDCONFIG_DIRS=	%%PREFIX%%/lib/evolution/%%VERSION%%
 CONFIGURE_ARGS=	--enable-nss=yes \
-		--enable-mono=no \
-		--disable-nm \
 		--with-sub-version=" FreeBSD GNOME Team Port"
 # gtkimageview needs to get a gtk3 release first.
 CONFIGURE_ARGS+=--disable-image-inline
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-GCONF_SCHEMAS=	apps_evolution_addressbook.schemas \
-		apps-evolution-attachment-reminder.schemas \
-		apps_evolution_calendar.schemas \
-		apps_evolution_email_custom_header.schemas \
-		apps_evolution_eplugin_face.schemas \
-		apps-evolution-mail-notification.schemas \
-		apps-evolution-mail-prompts-checkdefault.schemas \
-		apps_evolution_shell.schemas \
-		apps-evolution-template-placeholders.schemas \
-		evolution-bogofilter.schemas \
-		evolution-mail.schemas \
-		evolution-spamassassin.schemas
 GLIB_SCHEMAS=	org.gnome.evolution.gschema.xml \
 		org.gnome.evolution.addressbook.gschema.xml \
 		org.gnome.evolution.calendar.gschema.xml \
@@ -67,31 +54,36 @@ GLIB_SCHEMAS=	org.gnome.evolution.gschema.xml \
 		org.gnome.evolution.plugin.itip.gschema.xml \
 		org.gnome.evolution.plugin.mail-notification.gschema.xml \
 		org.gnome.evolution.plugin.prefer-plain.gschema.xml \
+		org.gnome.evolution.plugin.publish-calendar.gschema.xml \
 		org.gnome.evolution.plugin.templates.gschema.xml
 
-EVO_VERSION=	3.4
+EVO_VERSION=	3.6
 PLIST_SUB=	VERSION=${EVO_VERSION} \
 		PORTVERSION=2.12
 
-OPTIONS=	LDAP "Enable LDAP support" on \
-		WEATHER "Enable weather calendar backend" on \
-		CANBERRA "Enable canberra plugin" on \
-		SPAMASSASSIN "Enable SpamAssassin spam filtering" off
+
+OPTIONS_DEFINE= LDAP WEATHER CANBERRA SPAMASSASSIN
+OPTIONS_DEFAULT=LDAP WEATHER CANBERRA
+CANBERRA_DESC=	Canberra theme audio plugin
+WEATHER_DESC=	Weather calendar backend
+SPAMASSASSIN_DESC= 	SpamAssassin spam filtering
+
 #		PST "Enable Outlook .pst importer" off \
+#--enable-contact-maps
 
 .include <bsd.port.options.mk>
 
 USE_LDCONFIG=	${PREFIX}/lib/evolution/${EVO_VERSION}
 
-.if !defined(WITHOUT_LDAP)
+.if ${PORT_OPTIONS:MLDAP}
 USE_OPENLDAP=	yes
 CONFIGURE_ARGS+=--with-openldap=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=--with-openldap=no
 .endif
 
-.if defined(WITH_WEATHER)
-LIB_DEPENDS+=	gweather-3.0:${PORTSDIR}/net/libgweather3
+.if ${PORT_OPTIONS:MWEATHER}
+LIB_DEPENDS+=	gweather-3:${PORTSDIR}/net/libgweather3
 CONFIGURE_ARGS+=--enable-weather
 PLIST_SUB+=	WEATHER=""
 .else
@@ -99,7 +91,7 @@ CONFIGURE_ARGS+=--disable-weather
 PLIST_SUB+=	WEATHER="@comment "
 .endif
 
-.if defined(WITH_SPAMASSASSIN)
+.if ${PORT_OPTIONS:MSPAMASSASSIN}
 RUN_DEPENDS+=	spamassassin:${PORTSDIR}/mail/p5-Mail-SpamAssassin
 .endif
 
@@ -114,8 +106,8 @@ CONFIGURE_ARGS+=	--with-krb5=/usr
 KRB5_LIB=		`/usr/bin/krb5-config gssapi --libs`
 .endif
 
-.if defined(WITH_CANBERRA)
-LIB_DEPENDS+=	canberra-gtk3.0:${PORTSDIR}/audio/libcanberra-gtk3
+.if ${PORT_OPTIONS:MCANBERRA}
+LIB_DEPENDS+=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
 CONFIGURE_ARGS+=--enable-canberra=yes
 PLIST_SUB+=	CANBERRA=""
 .else
