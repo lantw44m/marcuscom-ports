@@ -604,7 +604,6 @@ lib/evolution/%%VERSION%%/modules/module-vcard-inline.so
 lib/evolution/%%VERSION%%/modules/module-web-inspector.a
 lib/evolution/%%VERSION%%/modules/module-web-inspector.la
 lib/evolution/%%VERSION%%/modules/module-web-inspector.so
-
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-dbx-import.a
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-dbx-import.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-dbx-import.so
@@ -641,6 +640,9 @@ lib/evolution/%%VERSION%%/plugins/liborg-gnome-mark-all-read.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-prefer-plain.a
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-prefer-plain.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-prefer-plain.so
+%%PST%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-pst-import.a
+%%PST%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-pst-import.la
+%%PST%%lib/evolution/%%VERSION%%/plugins/liborg-gnome-pst-import.so
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-publish-calendar.a
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-publish-calendar.la
 lib/evolution/%%VERSION%%/plugins/liborg-gnome-publish-calendar.so
@@ -662,6 +664,7 @@ lib/evolution/%%VERSION%%/plugins/org-gnome-mail-to-task.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mailing-list-actions.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-mark-all-read.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-prefer-plain.eplug
+%%PST%%lib/evolution/%%VERSION%%/plugins/org-gnome-pst-import.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-publish-calendar.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-save-calendar.eplug
 lib/evolution/%%VERSION%%/plugins/org-gnome-templates.eplug

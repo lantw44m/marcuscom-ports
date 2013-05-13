@@ -61,15 +61,13 @@ EVO_VERSION=	3.6
 PLIST_SUB=	VERSION=${EVO_VERSION} \
 		PORTVERSION=2.12
 
-
-OPTIONS_DEFINE= LDAP WEATHER CANBERRA SPAMASSASSIN
+OPTIONS_DEFINE=	LDAP WEATHER CANBERRA SPAMASSASSIN PST
 OPTIONS_DEFAULT=LDAP WEATHER CANBERRA
 CANBERRA_DESC=	Canberra theme audio plugin
 WEATHER_DESC=	Weather calendar backend
-SPAMASSASSIN_DESC= 	SpamAssassin spam filtering
-
-#		PST "Enable Outlook .pst importer" off \
-#--enable-contact-maps
+SPAMASSASSIN_DESC=	SpamAssassin spam filtering
+PST_DESC=	Outlook .pst importer
+MAPS_DESC=	Contact maps
 
 .include <bsd.port.options.mk>
 
@@ -115,15 +113,24 @@ CONFIGURE_ARGS+=--enable-canberra=no
 PLIST_SUB+=	CANBERRA="@comment "
 .endif
 
-# libpst doesn't install a .pc file, evo configure needs that
-#.if defined(WITH_PST)
-#CONFIGURE_ARGS+=	--enable-pst-import
-#BUILD_DEPENDS+=		lspst:${PORTSDIR}/mail/libpst
-#RUN_DEPENDS+=		lspst:${PORTSDIR}/mail/libpst
-#PLIST_SUB+=		PST=""
-#.else
+.if ${PORT_OPTIONS:MPST}
+CONFIGURE_ARGS+=	--enable-pst-import
+BUILD_DEPENDS+=		libpst>=0.6.58_1:${PORTSDIR}/mail/libpst
+RUN_DEPENDS+=		libpst>=0.6.58_1:${PORTSDIR}/mail/libpst
+PLIST_SUB+=		PST=""
+.else
 CONFIGURE_ARGS+=	--disable-pst-import
 PLIST_SUB+=		PST="@comment "
+.endif
+
+#.if ${PORT_OPTIONS:MMAPS}
+# needs geoclue
+#LIB_DEPENDS+=		champlain-0.12:${PORTSDIR}/graphics/libchamplain
+#CONFIGURE_ARGS+=	--enable-contact-maps
+#PLIST_SUB+=		MAPS=""
+#.else
+CONFIGURE_ARGS+=	--disable-contact-maps
+PLIST_SUB+=		MAPS="@comment "
 #.endif
 
 post-patch:
