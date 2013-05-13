@@ -13,11 +13,8 @@ COMMENT=	A library for desktop notifications
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-
 USE_XZ=		yes
-USE_GNOME=	intlhack glib20 gtk20 ltverhack
+USE_GNOME=	intlhack glib20 gtk20 ltverhack introspection
 USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes

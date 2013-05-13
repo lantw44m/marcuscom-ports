@@ -11,19 +11,17 @@ MASTER_SITES=	http://www.packagekit.org/releases/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT?=	A DBUS packaging abstraction layer
 
-BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils \
-		${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	${LOCALBASE}/bin/docbook2man:${PORTSDIR}/textproc/docbook-utils
 LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit \
 		ck-connector:${PORTSDIR}/sysutils/consolekit
-RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof \
-		${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
+RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof
 
 USE_GMAKE=	yes
 USE_XZ=		yes
 USES=		gettext shared-mime-info iconv
-USE_GNOME=	glib20 intltool
+USE_GNOME=	glib20 intltool introspection
 USE_QT4=	#empty
 USE_LDCONFIG=	yes
 USE_SQLITE=	yes

@@ -13,8 +13,7 @@ COMMENT=	An opensource browser engine
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf \
-		gtkdoc-rebase:${PORTSDIR}/textproc/gtk-doc \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+		gtkdoc-rebase:${PORTSDIR}/textproc/gtk-doc
 LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
 		icutu:${PORTSDIR}/devel/icu \
 		curl:${PORTSDIR}/ftp/curl \
@@ -27,7 +26,7 @@ USE_XORG=	xt
 USES=		bison gettext pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gtk30 libxslt ltverhack
+USE_GNOME=	gtk30 libxslt ltverhack introspection:build
 USE_SQLITE=	yes
 USE_PERL5=	yes
 USE_LDCONFIG=	yes

@@ -12,7 +12,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The Eye Of Gnome image viewer
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		itstool:${PORTSDIR}/textproc/itstool \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	peas-gtk-1.0:${PORTSDIR}/devel/libpeas \
@@ -25,7 +24,8 @@ CONFLICTS=	eog-2.[0-9]*
 LATEST_LINK=	eog3
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack librsvg2 gtk30 gnomedesktop3
+USE_GNOME=	gnomeprefix intlhack librsvg2 gtk30 gnomedesktop3 \
+		introspection:build
 INSTALLS_ICONS=	yes
 USES=		gettext pathfix desktop-file-utils pkgconfig shared-mime-info
 GNU_CONFIGURE=	yes

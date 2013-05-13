@@ -11,11 +11,9 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Canvas widget for GTK+ 3
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-
 LATEST_LINK=	goocanvas2
 USES=		pathfix
-USE_GNOME=	gtk30 ltverhack
+USE_GNOME=	gtk30 ltverhack introspection:build
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes

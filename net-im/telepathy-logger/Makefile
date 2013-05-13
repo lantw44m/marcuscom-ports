@@ -10,7 +10,6 @@ MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Logger utility library for the Telepathy framework
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib
 
@@ -21,7 +20,8 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USES=		pathfix pkgconfig
-USE_GNOME=	glib20 intltool gnomedocutils ltverhack libxml2 libxslt:build
+USE_GNOME=	glib20 intltool gnomedocutils ltverhack libxml2 libxslt:build \
+		introspection:build
 USE_SQLITE=	yes
 USE_PYTHON_BUILD=	yes
 GLIB_SCHEMAS=	org.freedesktop.Telepathy.Logger.gschema.xml

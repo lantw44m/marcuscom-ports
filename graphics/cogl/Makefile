@@ -13,15 +13,13 @@ COMMENT=	Clutter OpenGL abstraction library
 LICENSE=	LGPL21
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-
 CONFLICTS=	clutter-1.6.[0-9]*
 
 USES=		pkgconfig gettext pathfix
 USE_GMAKE=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gdkpixbuf2 ltverhack gnomeprefix atk pango
+USE_GNOME=	gdkpixbuf2 ltverhack gnomeprefix atk pango introspection:build
 USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes

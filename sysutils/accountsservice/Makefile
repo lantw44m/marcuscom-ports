@@ -11,13 +11,12 @@ MASTER_SITES=	http://www.freedesktop.org/software/${PORTNAME}/
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	D-Bus interface for user account query and manipulation
 
-BUILD_DEPEND=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	xslt:${PORTSDIR}/textproc/libxslt \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 
 USE_XZ=		yes
-USE_GNOME=	glib20 intlhack gnomehier
+USE_GNOME=	glib20 intlhack gnomehier introspection:build
 USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes

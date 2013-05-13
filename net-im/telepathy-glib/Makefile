@@ -9,8 +9,7 @@ MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GLib utility library for the Telepathy framework
 
-BUILD_DEPENDS=	vala-vapigen>=0.20.0:${PORTSDIR}/lang/vala-vapigen \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	vala-vapigen>=0.20.0:${PORTSDIR}/lang/vala-vapigen
 LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 RUN_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
 
@@ -18,7 +17,7 @@ USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USES=		pathfix pkgconfig
-USE_GNOME=	glib20 ltverhack gnomehier libxslt:build
+USE_GNOME=	glib20 ltverhack gnomehier libxslt:build introspection:build
 USE_PYTHON_BUILD=	yes
 MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes

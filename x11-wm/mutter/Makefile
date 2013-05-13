@@ -12,8 +12,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Window and compositing manager based on Clutter
 
 BUILD_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
-		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
 		clutter-1.0:${PORTSDIR}/graphics/clutter \
 		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
@@ -28,7 +27,8 @@ USE_PYTHON=	2.5+
 USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehier gnomeprefix intlhack gtk30 ltverhack
+USE_GNOME=	gnomehier gnomeprefix intlhack gtk30 ltverhack \
+		introspection:build
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
 LDFLAGS+=	-L${LOCALBASE}/lib

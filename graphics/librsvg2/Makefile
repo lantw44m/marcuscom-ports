@@ -12,7 +12,6 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library for parsing and rendering SVG vector-graphic files
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection		
 LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
 		croco-0.6:${PORTSDIR}/textproc/libcroco
 RUN_DEPENDS=	gtk-engines2>=2.7.5_1:${PORTSDIR}/x11-themes/gtk-engines2
@@ -22,7 +21,8 @@ USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehier gnomeprefix libgsf ltverhack gtk20
+USE_GNOME=	gnomehier gnomeprefix libgsf ltverhack gtk20 \
+		introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--with-svgz \

@@ -14,7 +14,6 @@ COMMENT=	Gnome On-Screen keyboard
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter \
 		gee-0.8:${PORTSDIR}/devel/libgee \
 		xklavier:${PORTSDIR}/x11/libxklavier
@@ -27,7 +26,7 @@ USES=		gettext pathfix pkgconfig shebangfix
 SHEBANG_FILES=	tools/fix_gir.py tools/make_schema.py
 USE_PYTHON=	yes
 USE_XORG=	x11 xtst
-USE_GNOME=	gnomehier intltool pygobject3 gtk30 intlhack libxml2
+USE_GNOME=	gnomehier pygobject3 gtk30 intlhack libxml2 introspection:build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

@@ -11,13 +11,12 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Extensible I/O abstraction for dealing with structured file formats
 
-BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-
 USE_XZ=		yes
 USE_GMAKE=	yes
 USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
-USE_GNOME=	gnomeprefix glib20 libxml2 ltverhack intlhack
+USE_GNOME=	gnomeprefix glib20 libxml2 ltverhack intlhack \
+		introspection:build
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

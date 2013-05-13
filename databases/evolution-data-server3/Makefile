@@ -15,8 +15,7 @@ COMMENT=	The data backends for the Evolution integrated mail/PIM suite
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		gcr>=3.4.1:${PORTSDIR}/security/gcr
+BUILD_DEPENDS=	gcr>=3.4.1:${PORTSDIR}/security/gcr
 LIB_DEPENDS=	soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome \
 		oauth:${PORTSDIR}/net/liboauth \
 		goa-1:${PORTSDIR}/net/gnome-online-accounts \
@@ -33,7 +32,7 @@ USE_XZ=		yes
 USE_GMAKE=	yes
 USES=		bison pathfix gettext pkgconfig
 USE_GNOME=	gnomeprefix intlhack ltverhack ltasneededhack gconf2 \
-		libxml2 gtk30
+		libxml2 gtk30 introspection:build
 USE_OPENLDAP=	yes
 USE_SQLITE=	yes
 USE_AUTOTOOLS=	libtool

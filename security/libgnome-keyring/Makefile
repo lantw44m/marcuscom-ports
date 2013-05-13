@@ -10,12 +10,12 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A program that keeps passwords and other secrets
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus \
 		gcrypt:${PORTSDIR}/security/libgcrypt
 
 USE_XZ=		yes
-USE_GNOME=	gnomehier gnomeprefix ltverhack intlhack glib20
+USE_GNOME=	gnomehier gnomeprefix ltverhack intlhack glib20 \
+		introspection:build
 USE_GMAKE=	yes
 USES=		gettext pathfix
 USE_AUTOTOOLS=	libtool

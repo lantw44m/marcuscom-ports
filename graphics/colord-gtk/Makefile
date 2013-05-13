@@ -10,14 +10,13 @@ MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Manage color profiles to accurately color input/output devices
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	colord:${PORTSDIR}/graphics/colord \
 		polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
 		dbus-1:${PORTSDIR}/devel/dbus \
 		lcms2:${PORTSDIR}/graphics/lcms2
 
 USE_XZ=		yes
-USE_GNOME=	gnomehier gtk30 intlhack 
+USE_GNOME=	gnomehier gtk30 intlhack introspection:build
 USE_GMAKE=	yes
 USES=		gettext pathfix pkgconfig
 USE_SQLITE=	3

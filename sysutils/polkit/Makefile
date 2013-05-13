@@ -11,12 +11,10 @@ MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Framework for controlling access to system-wide components
 
-BUILD_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	expat:${PORTSDIR}/textproc/expat2
-RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection \
-		dbus-launch:${PORTSDIR}/devel/dbus
+RUN_DEPENDS=	dbus-launch:${PORTSDIR}/devel/dbus
 
-USE_GNOME=	glib20 intlhack gnomehier
+USE_GNOME=	glib20 intlhack gnomehier introspection
 USE_GMAKE=	yes
 USES=		gettext pathfix pkgconfig
 GNU_CONFIGURE=	yes

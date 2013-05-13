@@ -16,22 +16,20 @@ USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		fontconfig>=2.10.91:${PORTSDIR}/x11-fonts/fontconfig
+BUILD_DEPENDS=	fontconfig>=2.10.91:${PORTSDIR}/x11-fonts/fontconfig
 LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo \
 		freetype:${PORTSDIR}/print/freetype2 \
 		harfbuzz:${PORTSDIR}/print/harfbuzz \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
 RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
-		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT} \
-		${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
+		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT}
 
 USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	glib20 ltverhack referencehack
+USE_GNOME=	glib20 ltverhack referencehack introspection
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 

@@ -11,8 +11,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Next evolution of the Gedit plugins engine
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		valac:${PORTSDIR}/lang/vala
+BUILD_DEPENDS=	valac:${PORTSDIR}/lang/vala
 
 USE_XZ=		yes
 USE_PYTHON=	2.5+
@@ -20,7 +19,7 @@ USE_LDCONFIG=	yes
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USES=		pathfix gettext pkgconfig
-USE_GNOME=	gtk30 ltverhack
+USE_GNOME=	gtk30 ltverhack introspection:build
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

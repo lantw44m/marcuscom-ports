@@ -13,15 +13,13 @@ COMMENT=	Collection of globally shared GSetting schemas
 
 LICENSE=	LGPL21
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-RUN_DEPENDS=	${LOCALBASE}/etc/fonts/conf.avail/31-cantarell.conf:${PORTSDIR}/x11-fonts/cantarell-fonts \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+RUN_DEPENDS=	${LOCALBASE}/etc/fonts/conf.avail/31-cantarell.conf:${PORTSDIR}/x11-fonts/cantarell-fonts
 
 USE_XZ=		yes
 USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_PERL5_BUILD=	yes
-USE_GNOME=	intltool glib20
+USE_GNOME=	intltool glib20 introspection
 GNU_CONFIGURE=	yes
 
 GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \

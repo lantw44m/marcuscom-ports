@@ -16,13 +16,11 @@ USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-
 USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USES=		pathfix gettext pkgconfig
-USE_GNOME=	gnomehier glib20 ltverhack referencehack
+USE_GNOME=	gnomehier glib20 ltverhack referencehack introspection:build
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

@@ -12,7 +12,6 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	The game applications package for the GNOME 2 Desktop Environment
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	guile:${PORTSDIR}/lang/guile \
 		clutter-gtk-0.10:${PORTSDIR}/graphics/clutter-gtk \
 		clutter-glx-1.0:${PORTSDIR}/graphics/clutter
@@ -26,7 +25,8 @@ USES=		gettext pathfix desktop-file-utils
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomeprefix intlhack librsvg2 pygnomedesktop gnomedocutils
+USE_GNOME=	gnomeprefix intlhack librsvg2 pygnomedesktop gnomedocutils \
+		introspection:build
 USE_GSTREAMER=	vorbis ogg
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-sound=gstreamer \

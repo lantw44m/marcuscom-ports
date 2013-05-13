@@ -13,7 +13,6 @@ COMMENT=	Assistive Technology Service Provider Interface
 
 LICENSE=	LGPL21
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus
 
 PORTSCOUT=	limitw:1,even
@@ -21,7 +20,7 @@ PORTSCOUT=	limitw:1,even
 USES=		pathfix pkgconfig gettext
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehier glib20 intlhack
+USE_GNOME=	gnomehier glib20 intlhack introspection:build
 USE_XORG=	x11 xi xtst xext
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

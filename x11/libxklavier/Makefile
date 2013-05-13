@@ -11,8 +11,7 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	An utility library to make XKB stuff easier
 
-BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 RUN_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp \
     		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 
@@ -20,7 +19,7 @@ USE_XORG=	x11 xkbfile
 USE_XZ=		yes
 USE_GMAKE=	yes
 USES=		pathfix
-USE_GNOME=	libxml2 glib20 ltverhack:12
+USE_GNOME=	libxml2 glib20 ltverhack:12 introspection:build
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include

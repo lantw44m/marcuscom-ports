@@ -16,15 +16,13 @@ USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification
-RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 
 CONFLICTS=	libwnck-3.[0-9]*
 
 USE_XORG=	xres x11
 USE_GMAKE=	yes
-USE_GNOME=	gtk20 ltverhack referencehack intlhack
+USE_GNOME=	gtk20 ltverhack referencehack intlhack introspection
 USES=		bison gettext pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool

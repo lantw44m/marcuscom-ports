@@ -13,7 +13,6 @@ COMMENT=	A gstreamer-based video player for the GNOME 3 Desktop
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
 		${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	gdata.13:${PORTSDIR}/devel/libgdata \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		clutter-gst-2.0:${PORTSDIR}/multimedia/clutter-gst \
@@ -33,7 +32,7 @@ USE_XORG=	x11 xproto xtst ice sm
 USE_XZ=		yes
 USES=		gettext pathfix pkgconfig desktop-file-utils
 USE_GNOME=	gnomeprefix intlhack gtk30 libxml2 nautilus3 ltverhack \
-		pygobject3 gnomedocutils gnomehier
+		pygobject3 gnomedocutils gnomehier introspection:build
 USE_GSTREAMER1=	core good bad soup ugly
 INSTALLS_ICONS=	yes
 USE_GMAKE=	yes

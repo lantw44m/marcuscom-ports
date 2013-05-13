@@ -13,8 +13,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	marcus@FreeBSD.org
 COMMENT=	Audio player for GNOME
 
-BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l_compat \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:${PORTSDIR}/multimedia/v4l_compat
 LIB_DEPENDS=	musicbrainz3:${PORTSDIR}/audio/libmusicbrainz3 \
 		totem-plparser:${PORTSDIR}/multimedia/totem-pl-parser \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
@@ -32,7 +31,7 @@ USES=		gettext pathfix
 INSTALLS_OMF=	yes
 USE_XORG=	ice xproto
 USE_GMAKE=	yes
-USE_GNOME=	intlhack gnomeprefix gtk30
+USE_GNOME=	intlhack gnomeprefix gtk30 introspection:build
 WANT_GNOME=	yes
 USE_GSTREAMER=	flac mp3 jpeg cdparanoia vorbis
 USE_AUTOTOOLS=	libtool

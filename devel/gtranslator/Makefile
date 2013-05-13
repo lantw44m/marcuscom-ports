@@ -13,7 +13,6 @@ COMMENT=	A GNOME application for creating GNU gettext translation files
 LICENSE=	GPLv3
 
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	peas-1.0:${PORTSDIR}/devel/libpeas \
 		gdl-3:${PORTSDIR}/x11-toolkits/gdl3 \
@@ -22,7 +21,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 
 USE_XZ=		yes
-USE_GNOME=	intlhack gnomeprefix gtk30 libgda4 gtksourceview3 libxml2
+USE_GNOME=	intlhack gnomeprefix gtk30 libgda4 gtksourceview3 libxml2 \
+		introspection:build
 USE_GMAKE=	yes
 USES=		gettext pathfix pkgconfig
 USE_PYTHON=	yes

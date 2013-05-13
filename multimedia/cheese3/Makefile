@@ -13,8 +13,7 @@ COMMENT=	A Photobooth-inspired app for taking pictures and videos from webcam
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev.h:${PORTSDIR}/multimedia/v4l_compat \
 		${LOCALBASE}/libdata/pkgconfig/gnome-video-effects.pc:${PORTSDIR}/graphics/gnome-video-effects \
 		vala>=0.14.0:${PORTSDIR}/lang/vala \
-		itstool:${PORTSDIR}/textproc/itstool \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+		itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
 		hal:${PORTSDIR}/sysutils/hal \
 		gee.2:${PORTSDIR}/devel/libgee06 \
@@ -29,7 +28,7 @@ USE_XORG=	xxf86vm x11
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack evolutiondataserver3 librsvg2 \
-		gnomedesktop3 libxml2:build
+		gnomedesktop3 libxml2:build introspection:build
 USES=		gettext pathfix pkgconfig
 # USE_GSTREAMER= bad gconf good jpeg ogg theora v4l2 vorbis
 USE_GSTREAMER1=	bad good jpeg ogg theora v4l2

@@ -40,7 +40,7 @@ LIB_DEPENDS+=	soup-2.4:${PORTSDIR}/devel/libsoup \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 CONFIGURE_ARGS+=--with-gnome
 .else
-BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
+USE_GNOME+=	introspection:build
 CONFIGURE_ARGS+=--without-gnome
 .endif
 

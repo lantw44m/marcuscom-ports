@@ -12,7 +12,6 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME 3 multi-format document viewer
 
 BUILD_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-icon-theme \
-		g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
 		itstool:${PORTSDIR}/textproc/itstool \
 		${LOCALBASE}/libdata/pkgconfig/gsettings-desktop-schemas.pc:${PORTSDIR}/devel/gsettings-desktop-schemas
 LIB_DEPENDS=	poppler-glib:${PORTSDIR}/graphics/poppler-glib \
@@ -31,7 +30,7 @@ INSTALLS_ICONS=	yes
 USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 USES=		pathfix gettext pkgconfig desktop-file-utils
-USE_GNOME=	intlhack gnomeprefix ltasneededhack
+USE_GNOME=	intlhack gnomeprefix ltasneededhack introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-xps --enable-introspection

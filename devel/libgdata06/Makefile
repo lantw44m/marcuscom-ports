@@ -11,7 +11,6 @@ MASTER_SITES=	GNOME
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	GLib based implimentation of the GData protocol
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
 
 CONFLICTS=	libgdata-0.10.*
@@ -23,7 +22,7 @@ USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 MAKE_JOBS_SAFE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	intltool ltverhack glib20
+USE_GNOME=	intltool ltverhack glib20 introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=--with-html-dir="${PREFIX}/share/doc"

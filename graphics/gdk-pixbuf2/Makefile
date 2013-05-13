@@ -12,15 +12,13 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A graphic library for GTK+
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
-
 LATEST_LINK=	gdk-pixbuf2
 USE_XZ=		yes
 USE_GMAKE=	yes
 USE_XORG=	xt xi x11
 USE_AUTOTOOLS=	libtool
 USES=		pathfix pkgconfig
-USE_GNOME+=	gnomehier glib20 ltverhack
+USE_GNOME+=	gnomehier glib20 ltverhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

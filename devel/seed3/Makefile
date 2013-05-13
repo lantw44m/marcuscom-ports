@@ -16,7 +16,6 @@ COMMENT=	GObject JavaScriptCore bridge
 BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-js-common.pc:${PORTSDIR}/devel/gnome-js-common
 LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi \
 		webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3 \
-		girepository-1.0:${PORTSDIR}/devel/gobject-introspection \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		mpfr:${PORTSDIR}/math/mpfr
 
@@ -26,7 +25,7 @@ LATEST_LINK=	seed3
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USES=		gettext pathfix pkgconfig
-USE_GNOME=	gtk30 intltool libxml2
+USE_GNOME=	gtk30 intltool libxml2 introspection
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_SQLITE=	yes

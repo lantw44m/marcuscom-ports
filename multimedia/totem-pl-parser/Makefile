@@ -11,15 +11,14 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GObject-based library to parse a host of playlist formats
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	gmime-2.4:${PORTSDIR}/mail/gmime24 \
 		soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
-RUN_DEPENDS=	${LOCALBASE}/share/gir-1.0/GLib-2.0.gir:${PORTSDIR}/devel/gobject-introspection
 
 USE_XZ=		yes
 USE_GMAKE=	yes
 USES=		pathfix gettext
-USE_GNOME=	gnomeprefix glib20 libxml2 intlhack ltverhack gnomehier
+USE_GNOME=	gnomeprefix glib20 libxml2 intlhack ltverhack gnomehier \
+		introspection
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-libarchive

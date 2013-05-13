@@ -13,15 +13,13 @@ COMMENT=	D-Bus daemon for simplifying power management tasks
 LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 LIB_DEPENDS=	polkit-gobject-1:${PORTSDIR}/sysutils/polkit \
     		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
-RUN_DEPENDS=	${LOCALBASE}/lib/girepository-1.0/GObject-2.0.typelib:${PORTSDIR}/devel/gobject-introspection
 
 USES=		gettext pathfix
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	intlhack ltverhack glib20
+USE_GNOME=	intlhack ltverhack glib20 introspection
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes

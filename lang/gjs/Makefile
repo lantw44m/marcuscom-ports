@@ -12,8 +12,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME Javascript binding
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		spidermonkey185>=1.8.5:${PORTSDIR}/lang/spidermonkey185
+BUILD_DEPENDS=	spidermonkey185>=1.8.5:${PORTSDIR}/lang/spidermonkey185
 LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		mozjs185:${PORTSDIR}/lang/spidermonkey185
 
@@ -22,7 +21,7 @@ USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_PYTHON_BUILD=yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomeprefix intlhack glib20 ltverhack cairo
+USE_GNOME=	gnomeprefix intlhack glib20 ltverhack cairo introspection:build
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

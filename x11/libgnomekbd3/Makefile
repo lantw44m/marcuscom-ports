@@ -11,16 +11,15 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GNOME keyboard shared library
 
-BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection \
-		libxklavier>=5.2:${PORTSDIR}/x11/libxklavier
-LIB_DEPENDS=	xklavier.12:${PORTSDIR}/x11/libxklavier
+BUILD_DEPENDS=	libxklavier>=5.2:${PORTSDIR}/x11/libxklavier
+LIB_DEPENDS=	xklavier:${PORTSDIR}/x11/libxklavier
 
 LATEST_LINK=	libgnomekbd3
 
 CONFLICTS=	libgnomekbd-2.[0-9]*
 
 USE_XZ=		yes
-USE_GNOME=	gnomeprefix ltverhack intltool gtk30
+USE_GNOME=	gnomeprefix ltverhack intltool gtk30 introspection:build
 USE_AUTOTOOLS=	libtool
 USE_XORG=	ice
 INSTALLS_ICONS=	yes

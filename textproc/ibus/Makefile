@@ -71,8 +71,7 @@ PLIST_SUB+=	VALA="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGINTRO}
-BUILD_DEPENDS+=		gobject-introspection>=0.6.8:${PORTSDIR}/devel/gobject-introspection
-RUN_DEPENDS+=		gobject-introspection>=0.6.8:${PORTSDIR}/devel/gobject-introspection
+USE_GNOME+=		introspection
 CONFIGURE_ARGS+=	--enable-introspection=yes
 PLIST_SUB+=		GINTRO=""
 .else
