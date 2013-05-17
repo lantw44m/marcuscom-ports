@@ -44,6 +44,24 @@ share/help/de/vinagre/figures/vinagre-fullscreen.png
 share/help/de/vinagre/figures/vinagre-no-scaling.png
 share/help/de/vinagre/figures/vinagre-reverse-connections.png
 share/help/de/vinagre/figures/vinagre-scaling.png
+share/help/el/vinagre/connect-file.page
+share/help/el/vinagre/connect.page
+share/help/el/vinagre/figures/vinagre-auth-needed.png
+share/help/el/vinagre/figures/vinagre-connect-dialog.png
+share/help/el/vinagre/figures/vinagre-connected.png
+share/help/el/vinagre/figures/vinagre-connection-closed.png
+share/help/el/vinagre/figures/vinagre-fullscreen.png
+share/help/el/vinagre/figures/vinagre-no-scaling.png
+share/help/el/vinagre/figures/vinagre-reverse-connections.png
+share/help/el/vinagre/figures/vinagre-scaling.png
+share/help/el/vinagre/fullscreen.page
+share/help/el/vinagre/index.page
+share/help/el/vinagre/introduction.page
+share/help/el/vinagre/keyboard-shortcuts.page
+share/help/el/vinagre/reverse-connections.page
+share/help/el/vinagre/scaling.page
+share/help/el/vinagre/take-screenshot.page
+share/help/el/vinagre/view-only.page
 share/help/es/vinagre/connect.page
 share/help/es/vinagre/connect-file.page
 share/help/es/vinagre/fullscreen.page
@@ -80,6 +98,24 @@ share/help/eu/vinagre/figures/vinagre-fullscreen.png
 share/help/eu/vinagre/figures/vinagre-no-scaling.png
 share/help/eu/vinagre/figures/vinagre-reverse-connections.png
 share/help/eu/vinagre/figures/vinagre-scaling.png
+share/help/fa/vinagre/connect-file.page
+share/help/fa/vinagre/connect.page
+share/help/fa/vinagre/figures/vinagre-auth-needed.png
+share/help/fa/vinagre/figures/vinagre-connect-dialog.png
+share/help/fa/vinagre/figures/vinagre-connected.png
+share/help/fa/vinagre/figures/vinagre-connection-closed.png
+share/help/fa/vinagre/figures/vinagre-fullscreen.png
+share/help/fa/vinagre/figures/vinagre-no-scaling.png
+share/help/fa/vinagre/figures/vinagre-reverse-connections.png
+share/help/fa/vinagre/figures/vinagre-scaling.png
+share/help/fa/vinagre/fullscreen.page
+share/help/fa/vinagre/index.page
+share/help/fa/vinagre/introduction.page
+share/help/fa/vinagre/keyboard-shortcuts.page
+share/help/fa/vinagre/reverse-connections.page
+share/help/fa/vinagre/scaling.page
+share/help/fa/vinagre/take-screenshot.page
+share/help/fa/vinagre/view-only.page
 share/help/fr/vinagre/connect.page
 share/help/fr/vinagre/connect-file.page
 share/help/fr/vinagre/fullscreen.page
@@ -314,35 +350,41 @@ share/mime/packages/vinagre-mime.xml
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrmtry share/help/sl/vinagre/figures
-@dirrmtry share/help/sl/vinagre
+@dirrm share/help/sl/vinagre/figures
+@dirrm share/help/sl/vinagre
 @dirrmtry share/help/sl
-@dirrmtry share/help/ru/vinagre/figures
-@dirrmtry share/help/ru/vinagre
+@dirrm share/help/ru/vinagre/figures
+@dirrm share/help/ru/vinagre
 @dirrmtry share/help/ru
-@dirrmtry share/help/lv/vinagre/figures
-@dirrmtry share/help/lv/vinagre
+@dirrm share/help/lv/vinagre/figures
+@dirrm share/help/lv/vinagre
 @dirrmtry share/help/lv
-@dirrmtry share/help/hu/vinagre/figures
-@dirrmtry share/help/hu/vinagre
+@dirrm share/help/hu/vinagre/figures
+@dirrm share/help/hu/vinagre
 @dirrmtry share/help/hu
-@dirrmtry share/help/gl/vinagre/figures
-@dirrmtry share/help/gl/vinagre
+@dirrm share/help/gl/vinagre/figures
+@dirrm share/help/gl/vinagre
 @dirrmtry share/help/gl
-@dirrmtry share/help/fr/vinagre/figures
-@dirrmtry share/help/fr/vinagre
+@dirrm share/help/fr/vinagre/figures
+@dirrm share/help/fr/vinagre
 @dirrmtry share/help/fr
-@dirrmtry share/help/eu/vinagre/figures
-@dirrmtry share/help/eu/vinagre
+@dirrm share/help/fa/vinagre/figures
+@dirrm share/help/fa/vinagre
+@dirrmtry share/help/fa
+@dirrm share/help/eu/vinagre/figures
+@dirrm share/help/eu/vinagre
 @dirrmtry share/help/eu
-@dirrmtry share/help/es/vinagre/figures
-@dirrmtry share/help/es/vinagre
+@dirrm share/help/es/vinagre/figures
+@dirrm share/help/es/vinagre
 @dirrmtry share/help/es
-@dirrmtry share/help/de/vinagre/figures
-@dirrmtry share/help/de/vinagre
+@dirrm share/help/el/vinagre/figures
+@dirrm share/help/el/vinagre
+@dirrmtry share/help/el
+@dirrm share/help/de/vinagre/figures
+@dirrm share/help/de/vinagre
 @dirrmtry share/help/de
-@dirrmtry share/help/C/vinagre/figures
-@dirrmtry share/help/C/vinagre
+@dirrm share/help/C/vinagre/figures
+@dirrm share/help/C/vinagre
 @dirrmtry share/help/C
 @dirrmtry share/help
 %%PORTDOCS%%@dirrm %%DOCSDIR%%
