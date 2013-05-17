@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/x11-toolkits/pango/Makefile 17278 2013-04-01 21:57:50Z kwm $
 
 PORTNAME=	pango
-PORTVERSION=	1.34.0
+PORTVERSION=	1.34.1
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
