@@ -40,7 +40,7 @@ CONFIGURE_ARGS+=--disable-editor
 .endif
 
 .if ${DCONF_SLAVE} == "no"
-MAN1=		dconf.1
+MAN1=		dconf-editor.1 dconf-service.1 dconf.1
 MAN7=		dconf.7
 .endif
 

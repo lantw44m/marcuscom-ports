@@ -13,8 +13,6 @@ lib/libdconf-dbus-1.so.0
 libdata/pkgconfig/dconf.pc
 libdata/pkgconfig/dconf-dbus-1.pc
 libexec/dconf-service
-man/man1/dconf-editor.1
-man/man1/dconf-service.1
 share/bash-completion/completions/dconf
 share/dbus-1/services/ca.desrt.dconf.service
 share/gtk-doc/html/dconf/dconf-DConfChangeset.html
@@ -92,6 +90,8 @@ share/vala/vapi/dconf.vapi
 @dirrmtry share/gtk-doc/html
 @dirrmtry share/gtk-doc
 @dirrm include/dconf-dbus-1
+@dirrm include/dconf/common
+@dirrm include/dconf/client
 @dirrm include/dconf
 @exec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
 @unexec %D/bin/gio-querymodules %D/lib/gio/modules 2>/dev/null || /usr/bin/true
