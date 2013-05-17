@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/security/libcryptui/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	libcryptui
-PORTVERSION=	3.4.1
+PORTVERSION=	3.6.0
 CATEGORIES=	security gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
