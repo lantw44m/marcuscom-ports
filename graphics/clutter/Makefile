@@ -20,7 +20,8 @@ USES=		pkgconfig gettext pathfix
 USE_GMAKE=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gdkpixbuf2 ltverhack gnomeprefix atk pango
+USE_GNOME=	gdkpixbuf2 ltverhack gnomeprefix atk pango \
+		introspection:build
 USE_GL=		gl
 USE_XORG=	glproto x11 xfixes xdamage xcomposite xi
 USE_LDCONFIG=	yes
