@@ -22,11 +22,14 @@ lib/nautilus/extensions-3.0/libnautilus-sendto.a
 lib/nautilus/extensions-3.0/libnautilus-sendto.la
 lib/nautilus/extensions-3.0/libnautilus-sendto.so
 libexec/nautilus-convert-metadata
+libexec/nautilus-shell-search-provider
 libdata/pkgconfig/libnautilus-extension.pc
 share/GConf/gsettings/nautilus.convert
 share/applications/nautilus-autorun-software.desktop
+share/applications/nautilus-connect-server.desktop
 share/applications/nautilus.desktop
 share/dbus-1/services/org.freedesktop.FileManager1.service
+share/dbus-1/services/org.gnome.Nautilus.SearchProvider.service
 share/dbus-1/services/org.gnome.Nautilus.service
 share/doc/libnautilus-extension/ch01.html
 share/doc/libnautilus-extension/home.png
@@ -50,12 +53,8 @@ share/doc/libnautilus-extension/right.png
 share/doc/libnautilus-extension/style.css
 share/doc/libnautilus-extension/up.png
 share/gir-1.0/Nautilus-3.0.gir
-share/icons/hicolor/16x16/apps/nautilus.png
-share/icons/hicolor/22x22/apps/nautilus.png
-share/icons/hicolor/24x24/apps/nautilus.png
-share/icons/hicolor/32x32/apps/nautilus.png
-share/icons/hicolor/scalable/apps/nautilus.svg
 share/locale/af/LC_MESSAGES/nautilus.mo
+share/locale/an/LC_MESSAGES/nautilus.mo
 share/locale/am/LC_MESSAGES/nautilus.mo
 share/locale/ar/LC_MESSAGES/nautilus.mo
 share/locale/as/LC_MESSAGES/nautilus.mo
@@ -112,6 +111,7 @@ share/locale/km/LC_MESSAGES/nautilus.mo
 share/locale/kn/LC_MESSAGES/nautilus.mo
 share/locale/ko/LC_MESSAGES/nautilus.mo
 share/locale/ku/LC_MESSAGES/nautilus.mo
+share/locale/ky/LC_MESSAGES/nautilus.mo
 share/locale/li/LC_MESSAGES/nautilus.mo
 share/locale/lt/LC_MESSAGES/nautilus.mo
 share/locale/lv/LC_MESSAGES/nautilus.mo
@@ -166,27 +166,13 @@ share/locale/zh_CN/LC_MESSAGES/nautilus.mo
 share/locale/zh_HK/LC_MESSAGES/nautilus.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus.mo
 share/locale/zu/LC_MESSAGES/nautilus.mo
+share/gnome-shell/search-providers/nautilus-search-provider.ini
 share/mime/packages/nautilus.xml
-%%DATADIR%%/icons/hicolor/16x16/emblems/emblem-note.png
-%%DATADIR%%/icons/hicolor/24x24/emblems/emblem-note.png
-%%DATADIR%%/icons/hicolor/48x48/emblems/emblem-note.png
 %%DATADIR%%/nautilus-extras.placeholder
 %%DATADIR%%/nautilus-suggested.placeholder
-@dirrmtry %%DATADIR%%/icons/hicolor/48x48/emblems
-@dirrmtry %%DATADIR%%/icons/hicolor/48x48
-@dirrmtry %%DATADIR%%/icons/hicolor/24x24/emblems
-@dirrmtry %%DATADIR%%/icons/hicolor/24x24
-@dirrmtry %%DATADIR%%/icons/hicolor/16x16/emblems
-@dirrmtry %%DATADIR%%/icons/hicolor/16x16
-@dirrmtry %%DATADIR%%/icons/hicolor
-@dirrmtry %%DATADIR%%/icons
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
-@dirrmtry lib/nautilus/extensions-3.0
-@dirrmtry lib/nautilus
-@dirrm include/nautilus/libnautilus-extension
-@dirrm include/nautilus
-@dirrm share/doc/libnautilus-extension
+@dirrmtry share/gnome-shell/search-providers
+@dirrmtry share/gnome-shell
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -267,3 +253,9 @@ share/mime/packages/nautilus.xml
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrm share/doc/libnautilus-extension
+@dirrmtry share/applications
+@dirrmtry lib/nautilus/extensions-3.0
+@dirrmtry lib/nautilus
+@dirrm include/nautilus/libnautilus-extension
+@dirrm include/nautilus
