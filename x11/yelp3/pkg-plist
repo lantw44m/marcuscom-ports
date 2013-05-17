@@ -76,6 +76,7 @@ share/locale/fur/LC_MESSAGES/yelp.mo
 share/locale/ga/LC_MESSAGES/yelp.mo
 share/locale/gl/LC_MESSAGES/yelp.mo
 share/locale/gu/LC_MESSAGES/yelp.mo
+share/locale/km/LC_MESSAGES/yelp.mo
 share/locale/he/LC_MESSAGES/yelp.mo
 share/locale/hi/LC_MESSAGES/yelp.mo
 share/locale/hr/LC_MESSAGES/yelp.mo
@@ -192,9 +193,6 @@ share/yelp-xsl/xslt/common/domains/yelp.xml
 @dirrm %%DATADIR%%/icons
 @dirrm %%DATADIR%%/dtd
 @dirrm %%DATADIR%%
-@dirrmtry share/applications
-@dirrm share/doc/libyelp
-@dirrm include/libyelp
 @dirrmtry share/locale/zu/LC_MESSAGES
 @dirrmtry share/locale/zu
 @dirrmtry share/locale/zh_HK/LC_MESSAGES
@@ -235,6 +233,8 @@ share/yelp-xsl/xslt/common/domains/yelp.xml
 @dirrmtry share/locale/ku
 @dirrmtry share/locale/ks/LC_MESSAGES
 @dirrmtry share/locale/ks
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
 @dirrmtry share/locale/kk/LC_MESSAGES
 @dirrmtry share/locale/kk
 @dirrmtry share/locale/fur/LC_MESSAGES
@@ -253,3 +253,6 @@ share/yelp-xsl/xslt/common/domains/yelp.xml
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
+@dirrm share/doc/libyelp
+@dirrmtry share/applications
+@dirrm include/libyelp
