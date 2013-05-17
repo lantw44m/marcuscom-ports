@@ -3,7 +3,7 @@
 #    $MCom$
 
 PORTNAME=	gdk-pixbuf
-PORTVERSION=	2.28.0
+PORTVERSION=	2.28.1
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	2
@@ -27,8 +27,8 @@ CONFIGURE_ARGS=	--enable-introspection=yes --with-x11
 
 MAN1=		gdk-pixbuf-csource.1 gdk-pixbuf-query-loaders.1
 
-OPTIONS_DEFINE=	JASPER JPEG PNG TIFF NLS
-OPTIONS_DEFAULT=JASPER JPEG PNG TIFF NLS
+OPTIONS_DEFINE=	JASPER JPEG PNG TIFF
+OPTIONS_DEFAULT=JASPER JPEG PNG TIFF
 
 .include <bsd.port.options.mk>
 
