@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/security/libsecret/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	libsecret
 PORTVERSION=	0.15
@@ -10,15 +10,16 @@ MASTER_SITES=	GNOME
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library to access the secret service API
 
+BUILD_DEPENDS=	docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
 USE_XZ=		yes
-USE_GNOME=	gnomehier glib20 libxslt:build intltool
+USE_GNOME=	gnomehier glib20 libxslt:build intltool introspection:build
 USE_GMAKE=	yes
 USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--disable-introspection --disable-vala
+CONFIGURE_ARGS+=--enable-introspection
 
 MAN1=		secret-tool.1
 
