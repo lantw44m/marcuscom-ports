@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/graphics/libchamplain/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	libchamplain
-PORTVERSION=	0.12.3
+PORTVERSION=	0.12.4
 CATEGORIES=	graphics
 MASTER_SITES=	GNOME
 
@@ -18,7 +18,7 @@ USES=		pathfix pkgconfig
 USE_GNOME=	gtk30 ltverhack gnomehier introspection:build
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
-USE_SQLITE=	yes
+USE_SQLITE=	3
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
