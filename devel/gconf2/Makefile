@@ -27,7 +27,7 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 USE_GMAKE=	yes
 USES=		gettext pathfix pkgconfig
 USE_GNOME=	gnomehier orbit2 gtk20 libxml2 ltverhack \
-		referencehack intlhack dconf
+		referencehack intlhack dconf introspection:build
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--with-html-dir=${PREFIX}/share/doc \
