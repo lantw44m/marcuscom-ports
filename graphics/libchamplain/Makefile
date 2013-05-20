@@ -17,6 +17,7 @@ USE_XZ=		yes
 USES=		pathfix pkgconfig
 USE_GNOME=	gtk30 ltverhack gnomehier introspection:build
 USE_AUTOTOOLS=	libtool
+USE_GL=		gl
 USE_GMAKE=	yes
 USE_SQLITE=	3
 GNU_CONFIGURE=	yes

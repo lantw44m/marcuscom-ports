@@ -17,6 +17,7 @@ LATEST_LINK=	libchamplain08
 USE_BZIP2=	yes
 USES=		pathfix pkgconfig
 USE_GNOME=	gtk20 ltverhack:1 gnomehier
+USE_GL=		gl
 USE_AUTOTOOLS=	libtool
 USE_GMAKE=	yes
 USE_SQLITE=	yes
