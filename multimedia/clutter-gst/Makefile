@@ -15,6 +15,7 @@ LIB_DEPENDS=	clutter-1.0:${PORTSDIR}/graphics/clutter
 USE_GMAKE=	yes
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
+USE_GL=		gl
 USES=		pathfix
 USE_GNOME=	ltverhack gnomeprefix gnomehier introspection:build
 USE_GSTREAMER1=	yes

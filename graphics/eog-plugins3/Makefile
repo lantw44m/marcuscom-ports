@@ -37,6 +37,7 @@ CHAMPLAIN_DESC=	Champlain map plugin
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCHAMPLAIN}
+USE_GL=		gl
 LIB_DEPENDS+=	champlain-0.12:${PORTSDIR}/graphics/libchamplain
 PLIST_SUB+=	CHAMPLAIN=""
 .else
