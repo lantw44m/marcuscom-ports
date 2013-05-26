@@ -15,7 +15,7 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
 USE_XZ=		yes
 USE_GMAKE=	yes
-USES=		pathfix pkgconfig
+USES=		gettext pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack libxml2 libxslt
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
