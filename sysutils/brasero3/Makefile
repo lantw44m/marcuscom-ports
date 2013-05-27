@@ -1,9 +1,9 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/sysutils/brasero3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#    $MCom$
 
 PORTNAME=	brasero
-PORTVERSION=	3.4.1
+PORTVERSION=	3.6.1
 CATEGORIES=	sysutils audio multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,6 +11,7 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	CD/DVD mastering tool for the GNOME desktop
 
+BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	notify:${PORTSDIR}/devel/libnotify \
 		totem-plparser:${PORTSDIR}/multimedia/totem-pl-parser \
 		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
@@ -25,9 +26,9 @@ USE_XZ=		yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_XORG=	sm ice
-USE_GNOME=	intlhack gnomeprefix gnomedocutils gtk30 gconf2 libxml2
+USE_GNOME=	gconf2 gnomeprefix gtk30 intlhack libxml2
 USE_LDCONFIG=	yes
-USE_GSTREAMER=	gconf core
+USE_GSTREAMER1=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-inotify --enable-search=no --enable-playlist=no \
@@ -58,10 +59,11 @@ CONFIGURE_ARGS+=--enable-nautilus=no
 
 .if ${PORT_OPTIONS:MLIBBURNIA}
 LIB_DEPENDS+=	burn:${PORTSDIR}/devel/libburn \
-    		isofs:${PORTSDIR}/devel/libisofs
+		isofs:${PORTSDIR}/devel/libisofs
 CONFIGURE_ARGS+=--enable-libburnia
 PLIST_SUB+=	LIBBURNIA=""
 .else
+CONFIGURE_ARGS+=--disable-libburnia
 PLIST_SUB+=	LIBBURNIA="@comment "
 .endif
 
