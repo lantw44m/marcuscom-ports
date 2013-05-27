@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#  $MCom$
+#  $MCom: ports/trunk/net/vinagre3/Makefile 18484 2013-05-17 21:02:20Z kwm $
 
 PORTNAME=	vinagre
 PORTVERSION=	3.6.2
@@ -25,12 +25,12 @@ CONFLICTS=	vinagre-2.[0-9]*
 LATEST_LINK=	vinagre3
 USE_XZ=		yes
 USES=		gettext pathfix pkgconfig desktop-file-utils shared-mime-info
-USE_GNOME=	gnomeprefix intlhack gtk30 libxml2 vte3
+USE_GNOME=	gnomeprefix gtk30 intlhack libxml2 vte3
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-spice --enable-ssh
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -Wno-format-nonliteral
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.Vinagre.gschema.xml

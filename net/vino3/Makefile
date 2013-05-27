@@ -23,14 +23,14 @@ CONFLICTS=	vino-2.[0-9]*
 LATEST_LINK=	vino3
 USE_XZ=		yes
 USES=		gettext pathfix
-USE_GNOME=	gnomeprefix intlhack gtk30
+USE_GNOME=	gnomeprefix gtk30 intlhack
 USE_XORG=	xdamage xfixes xtst
 USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--without-network-manager \
 		--disable-http-server
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -Wno-format-nonliteral
 LDFLAGS+=	-L${LOCALBASE}/lib
 GLIB_SCHEMAS=	org.gnome.Vino.enums.xml org.gnome.Vino.gschema.xml
 
