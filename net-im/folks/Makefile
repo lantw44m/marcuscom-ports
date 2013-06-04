@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net-im/folks/Makefile 18507 2013-05-27 14:05:09Z kwm $
 
 PORTNAME=	folks
 PORTVERSION=	0.8.0
@@ -11,7 +11,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	library to aggregates people from multiple sources
 
 BUILD_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
-LIB_DEPENDS=	gee-0.8:${PORTSDIR}/devel/libgee \
+LIB_DEPENDS=	gee.2:${PORTSDIR}/devel/libgee06 \
 		gcr:${PORTSDIR}/security/gcr \
 		zeitgeist-1.0:${PORTSDIR}/sysutils/libzeitgeist \
 		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib
