@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/x11/gnome3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome3
-PORTVERSION=	3.4.0
+PORTVERSION=	3.6.2
 PORTREVISION?=	0
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
@@ -39,15 +39,17 @@ RUN_DEPENDS?=	gnome-panel>=3.0.0:${PORTSDIR}/x11/gnome-panel3 \
 
 NO_BUILD=	yes
 
-OPTIONS=	GNOME_SHELL "Build Gnome-shell" off
+OPTIONS_DEFINE=	SHELL
+SHELL_DESC=	Include Gnome-shell
 
 .if ${.CURDIR:T}!="gnome3-lite"
-#OPTIONS+=	MAPI "Depend on evolution-mapi (pulls in samba4)" off
+#OPTIONS_DEFINE+=MAPI
+MAPI_DESC=	Depend on evolution-mapi (pulls in samba4)" off
 .endif
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_GNOME_SHELL)
+.if ${PORT_OPTIONS:MSHELL}
 RUN_DEPENDS+=	gnome-shell>=3.0.0:${PORTSDIR}/x11/gnome-shell \
 		gnome-tweak-tool:${PORTSDIR}/deskutils/gnome-tweak-tool
 .endif
@@ -82,17 +84,14 @@ RUN_DEPENDS+=	empathy>=3.0.0:${PORTSDIR}/net-im/empathy3 \
 		gconf-editor>=3.0.0:${PORTSDIR}/sysutils/gconf-editor3 \
 		gdm>=3.0.0:${PORTSDIR}/x11/gdm3 \
 		evolution>=3.0.0:${PORTSDIR}/mail/evolution3 \
-		evolution-exchange>=3.0.0:${PORTSDIR}/mail/evolution-exchange3
+		cheese>=3.0.0:${PORTSDIR}/multimedia/cheese3
 
-.if ${OSVERSION}>=800000
-RUN_DEPENDS+=	cheese>=3.0.0:${PORTSDIR}/multimedia/cheese3
-.endif
 
-.if defined(WITH_MAPI)
+.if ${PORT_OPTIONS:MMAPI}
 RUN_DEPENDS+=	evolution-mapi>=3.0.0:${PORTSDIR}/mail/evolution-mapi3
 .endif
 .endif # !gnome3-lite section
 
 do-install:	# empty
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
