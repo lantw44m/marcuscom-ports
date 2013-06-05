@@ -1,4 +1,3 @@
-# Created by: Florent Thoumie <flz@FreeBSD.org>
 # $FreeBSD$
 #    $MCom: ports/trunk/net-im/telepathy-gabble/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
@@ -23,7 +22,6 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_ro
 PORTSCOUT=	limitw:1,even
 
 GNU_CONFIGURE=	yes
-LDFLAGS+=	-pthread
 USE_GMAKE=	yes
 USES=		pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build
@@ -31,6 +29,7 @@ USE_SQLITE=	yes
 USE_OPENSSL=	yes
 USE_PYTHON_BUILD=	yes
 CONFIGURE_ARGS=	--with-ca-certificates=${LOCALBASE}/share/certs/ca-root-nss.crt
+CONFIGURE_ENV=	LIBS="-pthread"
 
 MAN8=		telepathy-gabble.8
 
