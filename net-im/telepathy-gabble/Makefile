@@ -3,7 +3,7 @@
 #    $MCom: ports/trunk/net-im/telepathy-gabble/Makefile 17271 2013-04-01 15:16:27Z kwm $
 
 PORTNAME=	telepathy-gabble
-PORTVERSION=	0.16.1
+PORTVERSION=	0.16.6
 CATEGORIES=	net-im
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/${PORTNAME}/
 
@@ -19,6 +19,8 @@ LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
 		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid \
 		loudmouth-1:${PORTSDIR}/net-im/loudmouth
 RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
+
+PORTSCOUT=	limitw:1,even
 
 GNU_CONFIGURE=	yes
 LDFLAGS+=	-pthread
