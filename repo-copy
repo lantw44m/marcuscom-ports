@@ -21,7 +21,6 @@ devel/anjuta -> devel/anjuta3
 devel/anjuta-extras -> devel/anjuta-extras3
 devel/glade3 -> devel/glade
 devel/libgdata -> devel/libgdata06
-devel/py-gobject -> devel/py-gobject3
 editors/gedit -> editors/gedit3
 editors/gedit-plugins -> editors/gedit-plugins3
 games/gnome-games -> games/gnome-games3
@@ -29,8 +28,6 @@ graphics/clutter -> graphics/cogl
 graphics/eog -> graphics/eog3
 graphics/eog-plugins -> graphics/eog-plugins3
 graphics/evince -> graphics/evince3
-graphics/goocanvas -> graphics/goocanvas2
-graphics/goocanvasmm -> graphics/goocanvasmm2
 graphics/libchamplain -> graphics/libchamplain08
 mail/evolution -> mail/evolution3
 mail/evolution-exchange -> mail/evolution-exchange3
@@ -61,8 +58,6 @@ www/gtkhtml3 -> www/gtkhtml4
 www/webkit-gtk2 -> www/webkit-gtk3
 x11-fm/nautilus -> x11-fm/nautilus3
 x11-themes/gnome-themes -> x11-themes/gnome-themes3
-x11-toolkits/gtk20 -> x11-toolkits/gtk30
-x11-toolkits/gtkmm24 -> x11-toolkits/gtkmm30
 x11-toolkits/gtksourceview2 -> x11-toolkits/gtksourceview3
 x11-toolkits/libgtksourceviewmm -> x11-toolkits/gtksourceviewmm3
 x11-toolkits/libwnck -> x11-toolkits/libwnck3
