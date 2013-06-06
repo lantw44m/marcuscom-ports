@@ -61,7 +61,6 @@ www/gtkhtml3 -> www/gtkhtml4
 www/webkit-gtk2 -> www/webkit-gtk3
 x11-fm/nautilus -> x11-fm/nautilus3
 x11-themes/gnome-themes -> x11-themes/gnome-themes3
-x11-themes/gtk-engines2 -> x11-themes/gtk-engines3
 x11-toolkits/gtk20 -> x11-toolkits/gtk30
 x11-toolkits/gtkmm24 -> x11-toolkits/gtkmm30
 x11-toolkits/gtksourceview2 -> x11-toolkits/gtksourceview3
