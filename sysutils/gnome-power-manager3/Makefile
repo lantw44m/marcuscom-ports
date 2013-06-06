@@ -30,22 +30,18 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 GLIB_SCHEMAS=	org.gnome.power-manager.gschema.xml
 
-OPTIONS=	MANPAGES "build man pages (pulls in docbook-utils)" off
+OPTIONS_DEFINE=	MANPAGES
 
 .include <bsd.port.options.mk>
 
-.if defined(PACKAGE_BUILDING)
-WITH_MANPAGES=yes
-.endif
-
-.if defined(WITH_MANPAGES)
+.if ${PORT_OPTIONS:MMANPAGES} || defined(PACKAGE_BUILDING)
 BUILD_DEPENDS+=	docbook2html:${PORTSDIR}/textproc/docbook-utils \
 		${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/textproc/docbook-410
 MAN1=		gnome-power-statistics.1
 .endif
 
 post-patch:
-.if !defined(WITH_MANPAGES)
+.if ! ${PORT_OPTIONS:MMANPAGES}
 	@${REINPLACE_CMD} -e "s|2MAN_TRUE=$$|2MAN_TRUE='#'|g ; \
 		s|2MAN_FALSE='#'|2MAN_FALSE=|g" ${WRKSRC}/configure
 .endif

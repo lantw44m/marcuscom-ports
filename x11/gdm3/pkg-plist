@@ -342,3 +342,5 @@ share/pixmaps/nohost.png
 @dirrmtry share/locale/as
 @dirrmtry share/locale/an/LC_MESSAGES
 @dirrmtry share/locale/an
+@exec dconf update
+@unexec dconf update

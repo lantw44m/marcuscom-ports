@@ -31,13 +31,13 @@ USERS=		gdm
 GROUPS=		gdm
 
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_XORG=	dmx dmxproto
 INSTALLS_ICONS=	yes
 USE_RC_SUBR=	gdm
 USE_GNOME_SUBR=	yes
 USE_GMAKE=	yes
+USES=		gettext pathfix pkgconfig
 USE_GNOME=	intlhack gnomehier gconf2 librsvg2 \
 		gnomedocutils gnomeprefix gnomepanel
 GCONF_SCHEMAS=	gdm-simple-greeter.schemas
@@ -56,19 +56,20 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 GNOME_LOCALSTATEDIR=	/var
 
-OPTIONS=	IPV6 "Enable IPv6 support" off \
-		KEYRING "Enable GnomeKeyring/PAM integration" on
+OPTIONS_DEFINE=	IPV6 KEYRING
+OPTIONS_DEFAULt=KEYRING
+KEYRING_DESC=	GnomeKeyring/PAM integration
 
 .include <bsd.port.options.mk>
 
-.if defined(WITHOUT_KEYRING)
-SUB_LIST+=	PAM_KEYRING=\#
-.else
+.if ${PORT_OPTIONS:MKEYRING}
 LIB_DEPENDS+=	gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 SUB_LIST+=	PAM_KEYRING=
+.else
+SUB_LIST+=	PAM_KEYRING=\#
 .endif
 
-.if defined(WITH_IPV6)
+.if ${PORT_OPTIONS:MIPV6}
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6

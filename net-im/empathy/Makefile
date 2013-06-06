@@ -50,39 +50,40 @@ GLIB_SCHEMAS=	org.gnome.Empathy.gschema.xml
 
 MAN1=		empathy.1 empathy-accounts.1
 
-OPTIONS=	JABBER	"Enable jabber (XMPP) client support" on \
-		MSN	"Enable MSN client support" on \
-		IRC	"Enable IRC client support" on \
-		SALUT	"Enable link-local (serverless) XMPP support" off \
-		HAZE	"Enable libpurple protocol integration" off \
-		WEBKIT	"Enable Adium Message Style themes" on \
-		NST	"Enable Nautilus SendTo plugin"	on \
-		MAP	"Enable graphical map support" on
+OPTIONS_DEFINE=	JABBER MSN IRC SALUT HAZE WEBKIT NST MAP
+OPTIONS_DEFAULT=JABBER MSN IRC WEBKIT NST MAP
+MSN_DESC=	MSN client support
+IRC_DESC=	IRC client support
+SALUT_DESC=	Link-local (serverless) XMPP support
+HAZE_DESC=	Libpurple protocol integration
+WEBKIT_DESC=	Adium Message Style themes
+NST_DESC=	Nautilus SendTo plugin
+MAP_DESC=	Graphical map support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
-.if defined(WITH_JABBER)
+.if ${PORT_OPTIONS:MJABBER}
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-gabble:${PORTSDIR}/net-im/telepathy-gabble
 .endif
 
-.if defined(WITH_MSN)
+.if ${PORT_OPTIONS:MMSN}
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-butterfly:${PORTSDIR}/net-im/telepathy-butterfly
 .endif
 
-.if defined(WITH_IRC)
+.if  ${PORT_OPTIONS:MIRC}
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-idle:${PORTSDIR}/net-im/telepathy-idle
 .endif
 
-.if !defined(WITHOUT_SALUT)
+.if ${PORT_OPTIONS:MSALUT
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-salut:${PORTSDIR}/net-im/telepathy-salut
 .endif
 
-.if !defined(WITHOUT_HAZE)
+.if ${PORT_OPTIONS:MHAZE}
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-haze:${PORTSDIR}/net-im/telepathy-haze
 .endif
 
-.if defined(WITH_WEBKIT)
-LIB_DEPENDS+=	webkitgtk-1.0.0:${PORTSDIR}/www/webkit-gtk2
+.if ${PORT_OPTIONS:MWEBKIT}
+LIB_DEPENDS+=	webkitgtk-1.0:${PORTSDIR}/www/webkit-gtk2
 CONFIGURE_ARGS+=--enable-webkit
 PLIST_SUB+=	ADIUM=""
 .else
@@ -90,7 +91,7 @@ CONFIGURE_ARGS+=--disable-webkit
 PLIST_SUB+=	ADIUM="@comment "
 .endif
 
-.if defined(WITH_NST)
+.if ${PORT_OPTIONS:MNST}
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/nautilus-sendto.pc:${PORTSDIR}/deskutils/nautilus-sendto
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/nautilus-sendto.pc:${PORTSDIR}/deskutils/nautilus-sendto
 CONFIGURE_ARGS+=--enable-nautilus-sendto=yes
@@ -100,9 +101,9 @@ CONFIGURE_ARGS+=--enable-nautilus-sendto=no
 PLIST_SUB+=	NST="@comment "
 .endif
 
-.if !defined(WITHOUT_MAP)
+.if ${PORT_OPTIONS:MMAP}
 USE_GL=		gl
-LIB_DEPENDS+=	champlain-0.8.1:${PORTSDIR}/graphics/libchamplain08
+LIB_DEPENDS+=	champlain-0.8:${PORTSDIR}/graphics/libchamplain08
 CONFIGURE_ARGS+=--enable-map
 PLIST_SUB+=	MAP=""
 .else
@@ -110,4 +111,4 @@ CONFIGURE_ARGS+=--disable-map
 PLIST_SUB+=	MAP="@comment "
 .endif
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

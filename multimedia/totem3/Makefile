@@ -51,10 +51,13 @@ GLIB_SCHEMAS=	org.gnome.totem.enums.xml \
 		org.gnome.totem.gschema.xml \
 		org.gnome.totem.plugins.opensubtitles.gschema.xml
 
-OPTIONS=	LIRC "Enable lirc support" off \
-		BROWSER_PLUGINS "Build plugins for a webkit-gtk3 browser" on \
-		PUBLISH "Enable Publish (network playlist) plugin" off
-#		TRACKER "Enable tracker local search plugin" off
+
+OPTIONS_DEFINE=	LIRC BROWSER_PLUGINS PUBLISH
+BROWSER_PLUGINS_DESC=	Plugins for gecko browser
+PUBLISH_DESC=	Publish (network playlist) plugin
+TRACKER_DESC=	Tracker local search plugin
+
+OPTIONS_DEFAULT=BROWSER_PLUGINS
 
 # check configure script for allowed_plugins="..." for new plugins
 TOTEM_PLUGINS=	brasero-disc-recorder chapters dbusservice im-status gromit \
@@ -68,7 +71,7 @@ TOTEM_PLUGINS=	brasero-disc-recorder chapters dbusservice im-status gromit \
 
 .include <bsd.port.options.mk>
 
-.if defined(WITH_PUBLISH)
+.if ${PORT_OPTIONS:MPUBLISH}
 LIB_DEPENDS+=	epc-1.0:${PORTSDIR}/www/libepc
 PLIST_SUB+=	PUBLISH=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} publish
@@ -88,7 +91,7 @@ PLIST_SUB+=	PUBLISH="@comment "
 PLIST_SUB+=	TRACKER="@comment "
 #.endif
 
-.if defined(WITH_LIRC)
+.if ${PORT_OPTIONS:MLIRC}
 LIB_DEPENDS+=	lirc_client:${PORTSDIR}/comms/lirc
 PLIST_SUB+=	LIRC=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
@@ -96,7 +99,7 @@ TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
 PLIST_SUB+=	LIRC="@comment "
 .endif
 
-.if !defined(WITHOUT_BROWSER_PLUGINS)
+.if ${PORT_OPTIONS:MBROWSER_PLUGINS}
 CONFIGURE_ARGS+=--enable-browser-plugins \
 		--enable-gmp-plugin \
 		--enable-narrowspace-plugin

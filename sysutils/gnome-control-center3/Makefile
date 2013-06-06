@@ -35,7 +35,7 @@ CONFLICTS=	gnome-control-center-2.[0-9]* gnome-media-2.[0-9]*
 
 LATEST_LINK=	gnome-control-center3
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig desktop-file-utils shared-mime-info
+USES=		desktop-file-utils gettext pathfix pkgconfig shared-mime-info
 USE_GMAKE=	yes
 WANT_GNOME=	yes
 USE_GNOME=	gnomeprefix gnomehier intlhack libxml2 gnomemenus3 \
@@ -53,20 +53,27 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 WITH_GNOME=	yes
 .endif
 
-OPTIONS=	CUPS "Enable cups (printing) support" On \
-		CHEESE "Enable cheese webcam support" Off
+OPTIONS_DEFINE=	CUPS
+OPTIONS_DEFAULT=CUPS
+CUPS_DESC=	Cups (printing) support
+CHEESE_DESC=	Cheese webcam support" Off
 
-.include <bsd.port.pre.mk>
+OPTIONS_DEFINE_i386=	CHEESE
+OPTIONS_DEFAULT_i386=	CHEESE
+OPTIONS_DEFINE_amd64=	CHEESE
+OPTIONS_DEFAULT_amd64=	CHEESE
 
-.if defined(WITH_CUPS)
-LIB_DEPENDS+=	cups.2:${PORTSDIR}/print/cups-client
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MCUPS}
+LIB_DEPENDS+=	cups:${PORTSDIR}/print/cups-client
 PLIST_SUB+=	CUPS=""
 .else
 PLIST_SUB+=	CUPS="@comment "
 CONFIGURE_ARGS+=--disable-cups
 .endif
 
-.if ${OSVERSION}>=800000 && (defined(WITH_CHEESE) && (${ARCH}=="i386" || ${ARCH}=="amd64"))
+.if ${PORT_OPTIONS:MCHEESE}
 CONFIGURE_ARGS+=--with-cheese
 BUILD_DEPENDS+=	cheese>=3.0.1:${PORTSDIR}/multimedia/cheese3
 LIB_DEPENDS+=	cheese.5:${PORTSDIR}/multimedia/cheese3

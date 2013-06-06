@@ -43,10 +43,12 @@ MAN1=		totem.1 totem-video-thumbnailer.1
 GCONF_SCHEMAS=	totem-handlers.schemas totem-video-thumbnail.schemas \
 		totem.schemas
 
-OPTIONS=	LIRC "Enable lirc support" off \
-		GALAGO "Enable Galago support" off \
-		BROWSER_PLUGINS "Enable install plugins for gecko browser" on \
-#		TRACKER "Enable tracker local search plugin" off
+OPTIONS_DEFINE=	LIRC GALAGO BROWSER_PLUGINS
+GALAGO_DESC=	Galago support
+BROWSER_PLUGINS_DESC=	Plugins for gecko browser
+#TRACKER_DESC=	Tracker local search plugin
+
+OPTIONS_DEFAULT=       BROWSER_PLUGINS
 
 # check configure script for allowed_plugins="..." for new plugins
 TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
@@ -56,7 +58,7 @@ TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
 # Not using:
 # TOTEM_PLUGINS= mythtv bemused jamendo
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 #.if defined(WITH_TRACKER)
 #LIB_DEPENDS+=	tracker-gtk.0:${PORTSDIR}/sysutils/tracker-libtrackergtk
@@ -66,7 +68,7 @@ TOTEM_PLUGINS=	thumbnail screensaver ontop gromit media-player-keys \
 PLIST_SUB+=	TRACKER="@comment "
 #.endif
 
-.if defined(WITH_LIRC)
+.if ${PORT_OPTIONS:MLIRC}
 LIB_DEPENDS+=	lirc_client.2:${PORTSDIR}/comms/lirc
 PLIST_SUB+=	LIRC=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
@@ -74,7 +76,7 @@ TOTEM_PLUGINS:=	${TOTEM_PLUGINS} lirc
 PLIST_SUB+=	LIRC="@comment "
 .endif
 
-.if defined(WITH_GALAGO)
+.if ${PORT_OPTIONS:MGALAGO}
 LIB_DEPENDS+=	galago.3:${PORTSDIR}/devel/libgalago
 PLIST_SUB+=	GALAGO=""
 TOTEM_PLUGINS:=	${TOTEM_PLUGINS} galago
@@ -82,7 +84,7 @@ TOTEM_PLUGINS:=	${TOTEM_PLUGINS} galago
 PLIST_SUB+=	GALAGO="@comment "
 .endif
 
-.if !defined(WITHOUT_BROWSER_PLUGINS)
+.if  ${PORT_OPTIONS:MBROWSER_PLUGINS}
 CONFIGURE_ARGS+=--enable-browser-plugins \
 		--enable-gmp-plugin \
 		--enable-narrowspace-plugin
@@ -104,7 +106,7 @@ PLIST_SUB+=	BROWSER_PLUGINS="@comment "
 .if defined(WITH_DVD_DEVICE)
 DEFAULT_DVD_DEVICE=${WITH_DVD_DEVICE}
 .else
-DEFAULT_DVD_DEVICE=/dev/acd0
+DEFAULT_DVD_DEVICE=/dev/cd0
 .endif
 
 pre-everything::
@@ -123,4 +125,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/bindings/vala/totem.deps ${PREFIX}/share/vala/vapi
 	@${CAT} ${PKGMESSAGE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

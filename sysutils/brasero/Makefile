@@ -22,11 +22,11 @@ RUN_DEPENDS=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 
 CONFLICTS=	brasero-3.[0-9]*
 
-USES=		gettext pathfix pkgconfig shared-mime-info desktop-file-utils
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
 USE_GMAKE=	yes
 USE_XORG=	sm
+USES=		desktop-file-utils gettext pathfix pkgconfig shared-mime-info
 USE_GNOME=	intlhack gnomeprefix gnomedocutils
 USE_LDCONFIG=	yes
 USE_GSTREAMER=	gconf core
@@ -40,14 +40,17 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		brasero.1
 GLIB_SCHEMAS=	org.gnome.brasero.gschema.xml
 
-OPTIONS=	NAUTILUS "Enable Nautilus extension" on \
-		LIBBURNIA "Enable libburnia plug-ins" off
+
+OPTIONS_DEFINE=	NAUTILUS LIBBURNIA
+OPTIONS_DEFAULT=NAUTILUS
+NAUTILUS_DESC=	Nautilus extension
+LIBBURNIA_DESC=	libburnia plug-ins
 
 PLIST_SUB=	FULL_VERSION=${PORTVERSION}
 
 .include <bsd.port.options.mk>
 
-.if !defined(WITHOUT_NAUTILUS)
+.if ${PORT_OPTIONS:MNAUTILUS}
 USE_GNOME+=	nautilus2
 CONFIGURE_ARGS+=--enable-nautilus
 PLIST_SUB+=	NAUTILUS=""
@@ -56,7 +59,7 @@ PLIST_SUB+=	NAUTILUS="@comment "
 CONFIGURE_ARGS+=--enable-nautilus=no
 .endif
 
-.if defined(WITH_LIBBURNIA)
+.if ${PORT_OPTIONS:MLIBBURNIA}
 LIB_DEPENDS+=	burn:${PORTSDIR}/devel/libburn \
     		isofs:${PORTSDIR}/devel/libisofs
 CONFIGURE_ARGS+=--enable-libburnia
