@@ -11,8 +11,8 @@ DISTNAME=	PackageKit-Qt-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Qt4 bindings to packagekit
 
-BUILD_DEPENDS=	PackageKit>=0.8.8:${PORTSDIR}/ports-mgmt/packagekit
-RUN_DEPENDS=	PackageKit>=0.8.8:${PORTSDIR}/ports-mgmt/packagekit
+BUILD_DEPENDS=	packagekit>=0.8.8:${PORTSDIR}/ports-mgmt/packagekit
+RUN_DEPENDS=	packagekit>=0.8.8:${PORTSDIR}/ports-mgmt/packagekit
 
 USE_XZ=		yes
 USE_LDCONFIG=	yes

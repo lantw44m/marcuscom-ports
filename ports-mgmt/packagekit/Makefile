@@ -2,10 +2,11 @@
 # $FreeBSD$
 #   $MCom: ports/trunk/ports-mgmt/packagekit/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
-PORTNAME=	PackageKit
+PORTNAME=	packagekit
 PORTVERSION=	0.8.9
 CATEGORIES=	ports-mgmt sysutils
 MASTER_SITES=	http://www.packagekit.org/releases/
+DISTNAME=	PackageKit-${PORTVERSION}
 
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A DBUS packaging abstraction layer
@@ -21,7 +22,7 @@ USES=		gettext iconv pathfix shared-mime-info
 USE_GNOME=	glib20 intltool introspection
 USE_LDCONFIG=	yes
 USE_SQLITE=	3
-USE_PYTHON_BUILD=	yes
+USE_PYTHON=	-2.7
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib -lexecinfo
@@ -39,7 +40,7 @@ OPTIONS_DEFINE=	MANPAGES
 
 .include <bsd.port.options.mk>
 
-.if ${PORT_OPTIONS:MMANPAGES}
+.if ${PORT_OPTIONS:MMANPAGES} || defined(PACKAGE_BUILDING)
 BUILD_DEPENDS+=	${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/textproc/docbook-410 \
 		${LOCALBASE}/share/xsl/docbook/manpages/docbook.xsl:${PORTSDIR}/textproc/docbook-xsl
 USE_GNOME+=	libxslt:build
@@ -65,9 +66,10 @@ CONFIGURE_ARGS+=--disable-gtk-module
 PLIST_SUB+=	GTK="@comment "
 
 post-patch:
-#	@${REINPLACE_CMD} -E -e 's/.*WARNINGFLAGS_CPP.*-Werror/#$$&/' \
-#		-e 's|-Wmissing-include-dirs||g' ${WRKSRC}/configure
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 		${WRKSRC}/src/plugins/pk-lsof.c
+
+post-install:
+	@${MKDIR} /var/cache/PackageKit/downloads
 
 .include <bsd.port.mk>
