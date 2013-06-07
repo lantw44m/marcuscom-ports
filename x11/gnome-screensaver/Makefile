@@ -41,7 +41,6 @@ SCREENSAVER_DIR=	share/applications/screensavers
 
 XSCREENSAVER_EXCLUDE=	"(popsquares.xml)"
 
-
 OPTIONS_DEFINE=	PAM KEYRING
 OPTIONS_DEFAULT=PAM KEYRING
 PAM_DESC=	Pluggable Authentication Module support
