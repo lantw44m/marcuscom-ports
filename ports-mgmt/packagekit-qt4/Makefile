@@ -2,23 +2,23 @@
 # $FreeBSD$
 #   $MCom: ports/trunk/ports-mgmt/packagekit-qt4/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
-PORTREVISION=	0
-PKGNAMESUFFIX=	-qt4
+PORTNAME=	packagekit-qt4
+PORTVERSION=	0.8.8
+CATEGORIES=	ports-mgmt sysutils
+MASTER_SITES=	http://www.packagekit.org/releases/
+DISTNAME=	PackageKit-Qt-${PORTVERSION}
 
+MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Qt4 bindings to packagekit
 
-MASTERDIR=	${.CURDIR}/../../ports-mgmt/packagekit
-#BUILD_WRKSRC=	${WRKSRC}/lib/packagekit-qt
-#INSTALL_WRKSRC=	${WRKSRC}/lib/packagekit-qt
-SLAVEPORT=	qt4
-PLIST=		${.CURDIR}/pkg-plist
+BROKEN=		doesn't install anything
 
-do-build:
-		cd ${WRKSRC}/lib/packagekit-qt && ${MAKE_ENV} ${_MAKE_JOBS} ${MAKE_ARGS} ${GMAKE}
-		cd ${WRKSRC}/lib/packagekit-qt2 && ${MAKE_ENV} ${_MAKE_JOBS} ${MAKE_ARGS} ${GMAKE}
+BUILD_DEPENDS=	PackageKit>=0.8.8:${PORTSDIR}/ports-mgmt/packagekit
+# this may need lib_DEPENDS can't check currently
 
-do-install:
-		cd ${WRKSRC}/lib/packagekit-qt && ${MAKE_ENV} ${GMAKE} ${MAKE_ARGS} install
-		cd ${WRKSRC}/lib/packagekit-qt2 && ${MAKE_ENV} ${GMAKE} ${MAKE_ARGS} install
+USE_XZ=		yes
+USE_LDCONFIG=	yes
+USES=		cmake:outsource
+USE_QT4=	dbus sql qmake_build moc_build uic_build rcc_build
 
-.include "${MASTERDIR}/Makefile"
+.include <bsd.port.mk>
