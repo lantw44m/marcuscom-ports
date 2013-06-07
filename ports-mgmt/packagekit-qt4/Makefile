@@ -11,14 +11,13 @@ DISTNAME=	PackageKit-Qt-${PORTVERSION}
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Qt4 bindings to packagekit
 
-BROKEN=		doesn't install anything
-
 BUILD_DEPENDS=	PackageKit>=0.8.8:${PORTSDIR}/ports-mgmt/packagekit
-# this may need lib_DEPENDS can't check currently
+RUN_DEPENDS=	PackageKit>=0.8.8:${PORTSDIR}/ports-mgmt/packagekit
 
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-USES=		cmake:outsource
-USE_QT4=	dbus sql qmake_build moc_build uic_build rcc_build
+USES=		cmake:outsource pkgconfig
+USE_GNOME=	glib20
+USE_QT4=	dbus xml sql qmake_build moc_build uic_build rcc_build
 
 .include <bsd.port.mk>
