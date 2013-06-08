@@ -85,4 +85,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|datetime wacom|datetime|g' \
 		${WRKSRC}/panels/Makefile.in
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
