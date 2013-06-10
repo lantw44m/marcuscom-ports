@@ -106,7 +106,6 @@ PLIST_SUB+=		DJVU="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MCOMICS}
-RUN_DEPENDS+=		unzip:${PORTSDIR}/archivers/unzip
 CONFIGURE_ARGS+=	--enable-comics
 GCONF_SCHEMAS+=		evince-thumbnailer-comics.schemas
 PLIST_SUB+=		COMICS=""
