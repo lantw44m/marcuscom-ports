@@ -23,7 +23,7 @@ PORTSCOUT=	limitw:1,even
 LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
 		ffi:${PORTSDIR}/devel/libffi
 
-USES=		gettext iconv pathfix pkgconfig
+USES=		gettext iconv pathfix pkgconfig shebangfix
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_GNOME=	ltverhack
@@ -39,6 +39,8 @@ CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu \
 CONFIGURE_ENV=	ac_cv_header_sys_inotify_h=
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+
+SHEBANG_FILES=	*/*.pl glib/gen-iswide-table.py
 
 OPTIONS_DEFINE=	COLLATION_FIX DEBUG
 COLLATION_FIX_DESC=	fix string collation
