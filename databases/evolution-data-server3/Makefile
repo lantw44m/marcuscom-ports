@@ -72,10 +72,10 @@ CONFIGURE_ARGS+=	--disable-weather
 PLIST_SUB+=		WEATHER="@comment "
 .endif
 
-EDS_BDB_MSG=	"!!!WARNING!!!: Berkeley Database version is ${BDB_VER}.  If this is an upgrade, you may experience problems if you or any other Evolution-data-server users were previously using BDB_VER 41."
+EDS_BDB_MSG=	"!!!WARNING!!!: Berkeley Database version is ${BDB_VER}.  If this is an upgrade, you may experience problems if you or any other Evolution-data-server users were previously using BDB_VER 5."
 
 pre-everything::
-	@if [ x"${BDB_VER}" != x"41" ]; then \
+	@if [ x"${BDB_VER}" != x"5" ]; then \
 		${ECHO_MSG} ${EDS_BDB_MSG} | ${FMT} 75 79 ; \
 	fi
 
