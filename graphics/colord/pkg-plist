@@ -2,7 +2,6 @@ bin/cd-create-profile
 bin/cd-fix-profile
 bin/cd-iccdump
 bin/colormgr
-etc/bash_completion.d/colormgr-completion.bash
 etc/colord.conf
 etc/dbus-1/system.d/org.freedesktop.ColorManager.conf
 include/colord-1/colord-private.h
@@ -26,8 +25,10 @@ include/colord-1/colord/cd-it8.h
 include/colord-1/colord/cd-math.h
 include/colord-1/colord/cd-profile-sync.h
 include/colord-1/colord/cd-profile.h
+include/colord-1/colord/cd-quirk.h
 include/colord-1/colord/cd-sensor-sync.h
 include/colord-1/colord/cd-sensor.h
+include/colord-1/colord/cd-transform.h
 include/colord-1/colord/cd-version.h
 lib/colord-sensors/libcolord_sensor_argyll.a
 lib/colord-sensors/libcolord_sensor_argyll.la
@@ -57,6 +58,7 @@ share/color/icc/colord/CIE-RGB.icc
 share/color/icc/colord/ColorMatchRGB.icc
 share/color/icc/colord/Crayons.icc
 share/color/icc/colord/DonRGB4.icc
+share/color/icc/colord/ECI-RGBv1.icc
 share/color/icc/colord/ECI-RGBv2.icc
 share/color/icc/colord/EktaSpacePS5.icc
 share/color/icc/colord/Gamma5000K.icc
@@ -191,7 +193,6 @@ share/polkit-1/actions/org.freedesktop.color.policy
 @dirrm include/colord-1/colord-session
 @dirrm include/colord-1/colord
 @dirrm include/colord-1
-@dirrmtry etc/bash_completion.d
 @cwd /
 @dirrmtry var/db/colord/icc
 @dirrmtry var/db/colord

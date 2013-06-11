@@ -3,7 +3,7 @@
 #    $MCom: ports/graphics/colord/Makefile,v 1.10 2012/12/17 23:50:40 kwm Exp $
 
 PORTNAME=	colord
-PORTVERSION=	0.1.32
+PORTVERSION=	1.0.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.freedesktop.org/software/colord/releases/
 
@@ -27,6 +27,7 @@ USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ARGS=	--disable-gudev \
 		--enable-gtk-doc-html=no \
+		--disable-bash-completion \
 		--disable-gusb \
 		--disable-sane \
 		--with-daemon-user=colord \
