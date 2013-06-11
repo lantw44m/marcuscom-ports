@@ -59,7 +59,7 @@ CONFIGURE_ARGS+=--without-ui
 .endif
 
 .if ${LIBGDA5_SLAVE}=="bdb"
-USE_BDB=		yes
+USE_BDB=		5+
 CONFIGURE_ARGS+=	--with-bdb=${LOCALBASE}
 .else
 CONFIGURE_ARGS+=	--without-bdb
