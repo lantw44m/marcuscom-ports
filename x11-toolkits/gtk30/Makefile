@@ -22,6 +22,7 @@ LATEST_LINK=	gtk30
 .if !defined(REFERENCE_PORT)
 
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/atk-bridge-2.0.pc:${PORTSDIR}/accessibility/at-spi2-atk
+BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspetion
 RUN_DEPENDS+=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/atk-bridge-2.0.pc:${PORTSDIR}/accessibility/at-spi2-atk
 
@@ -30,8 +31,8 @@ USE_PERL5_BUILD=yes
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	atk pango gdkpixbuf2 ltverhack gtk-update-icon-cache \
-		introspection:build
+USE_GNOME=	atk pango gdkpixbuf2 ltverhack gtk-update-icon-cache
+#		introspection:build
 USES=		gettext pathfix pkgconfig
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite

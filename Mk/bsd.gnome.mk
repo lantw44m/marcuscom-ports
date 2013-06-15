@@ -397,7 +397,7 @@ introspection_BUILD_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspectio
 introspection_RUN_DEPENDS=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 introspection_DETECT=		${LOCALBASE}/libdata/pkgconfig/gobject-introspection-1.0.pc
 introspection_USE_GNOME_IMPL=	glib20
-introspection_MAKE_ENV=		HOME=${WRKDIR}/
+introspection_MAKE_ENV=		GI_SCANNER_DISABLE_CACHE=1
 
 gconf2_LIB_DEPENDS=	gconf-2.4:${PORTSDIR}/devel/gconf2
 gconf2_DETECT=		${LOCALBASE}/libdata/pkgconfig/gconf-2.0.pc
