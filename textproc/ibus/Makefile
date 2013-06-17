@@ -87,6 +87,9 @@ post-patch:
 #	@${REINPLACE_CMD} -e 's|import locale|import gettext|g' ${WRKSRC}/ui/gtk/main.py
 	@${REINPLACE_CMD} -e 's|setpgrp ()|setpgrp (0,0)|g' ${WRKSRC}/bus/main.c
 	@${REINPLACE_CMD} -e 's|/var/lib/dbus|/var/db/dbus|g' ${WRKSRC}/src/ibusshare.c #devel/dbus/files/dbus.in
+	@${REINPLACE_CMD} -e 's|-Wno-unused-but-set-variable||g' \
+		${WRKSRC}/engine/Makefile.in ${WRKSRC}/tools/Makefile.in \
+		${WRKSRC}/ui/gtk3/Makefile.in
 
 post-install:
 	@${MKDIR} ${PREFIX}/etc/xdg/autostart
