@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/x11-toolkits/vte3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME?=	vte
-PORTVERSION=	0.32.2
+PORTVERSION=	0.34.6
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
