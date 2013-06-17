@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/multimedia/totem-pl-parser/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	totem-pl-parser
-PORTVERSION=	3.4.3
+PORTVERSION=	3.4.5
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome2
@@ -11,14 +11,14 @@ DIST_SUBDIR=	gnome2
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	GObject-based library to parse a host of playlist formats
 
-LIB_DEPENDS=	gmime-2.4:${PORTSDIR}/mail/gmime24 \
+LIB_DEPENDS=	gmime-2.6:${PORTSDIR}/mail/gmime26 \
 		soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
 
 USE_XZ=		yes
 USE_GMAKE=	yes
 USES=		pathfix gettext
 USE_GNOME=	gnomeprefix glib20 libxml2 intlhack ltverhack gnomehier \
-		introspection
+		introspection:build
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--enable-libarchive
