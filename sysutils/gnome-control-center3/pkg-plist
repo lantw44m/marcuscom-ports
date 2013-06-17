@@ -104,13 +104,11 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/icons/hicolor/48x48/devices/audio-subwoofer-testing.svg
 %%DATADIR%%/icons/hicolor/48x48/devices/audio-subwoofer.svg
 %%DATADIR%%/keybindings/00-multimedia.xml
+%%DATADIR%%/keybindings/01-input-sources.xml
 %%DATADIR%%/keybindings/01-launchers.xml
 %%DATADIR%%/keybindings/01-screenshot.xml
 %%DATADIR%%/keybindings/01-system.xml
 %%DATADIR%%/keybindings/50-accessibility.xml
-%%DATADIR%%/pixmaps/double-click-maybe.png
-%%DATADIR%%/pixmaps/double-click-off.png
-%%DATADIR%%/pixmaps/double-click-on.png
 %%DATADIR%%/pixmaps/gnome-about-me-lock-open.png
 %%DATADIR%%/pixmaps/gnome-about-me-lock.png
 %%DATADIR%%/pixmaps/left-index-finger.png
@@ -123,6 +121,7 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/pixmaps/left-ring-finger.svg
 %%DATADIR%%/pixmaps/left-thumb.png
 %%DATADIR%%/pixmaps/left-thumb.svg
+%%DATADIR%%/pixmaps/noise-texture-light.png
 %%DATADIR%%/pixmaps/print_error.png
 %%DATADIR%%/pixmaps/print_error.svg
 %%DATADIR%%/pixmaps/print_ok.png
@@ -140,66 +139,110 @@ share/desktop-directories/gnomecc.directory
 %%DATADIR%%/sounds/gnome-sounds-default.xml
 %%DATADIR%%/ui/GnomeLogoVerticalMedium.svg
 %%DATADIR%%/ui/background/background.ui
-%%DATADIR%%/ui/background/display-base.png
-%%DATADIR%%/ui/background/display-overlay.png
 %%DATADIR%%/ui/color.ui
+%%DATADIR%%/ui/datetime/bg_dim.png
 %%DATADIR%%/ui/datetime/bg.png
 %%DATADIR%%/ui/datetime/cc.png
 %%DATADIR%%/ui/datetime/datetime.ui
 %%DATADIR%%/ui/datetime/pin.png
 %%DATADIR%%/ui/datetime/timezone_-1.png
 %%DATADIR%%/ui/datetime/timezone_-10.png
+%%DATADIR%%/ui/datetime/timezone_-10_dim.png
 %%DATADIR%%/ui/datetime/timezone_-11.png
+%%DATADIR%%/ui/datetime/timezone_-11_dim.png
+%%DATADIR%%/ui/datetime/timezone_-1_dim.png
 %%DATADIR%%/ui/datetime/timezone_-2.png
+%%DATADIR%%/ui/datetime/timezone_-2_dim.png
 %%DATADIR%%/ui/datetime/timezone_-3.5.png
+%%DATADIR%%/ui/datetime/timezone_-3.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_-3.png
+%%DATADIR%%/ui/datetime/timezone_-3_dim.png
 %%DATADIR%%/ui/datetime/timezone_-4.5.png
+%%DATADIR%%/ui/datetime/timezone_-4.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_-4.png
+%%DATADIR%%/ui/datetime/timezone_-4_dim.png
 %%DATADIR%%/ui/datetime/timezone_-5.5.png
+%%DATADIR%%/ui/datetime/timezone_-5.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_-5.png
+%%DATADIR%%/ui/datetime/timezone_-5_dim.png
 %%DATADIR%%/ui/datetime/timezone_-6.png
+%%DATADIR%%/ui/datetime/timezone_-6_dim.png
 %%DATADIR%%/ui/datetime/timezone_-7.png
+%%DATADIR%%/ui/datetime/timezone_-7_dim.png
 %%DATADIR%%/ui/datetime/timezone_-8.png
+%%DATADIR%%/ui/datetime/timezone_-8_dim.png
 %%DATADIR%%/ui/datetime/timezone_-9.5.png
+%%DATADIR%%/ui/datetime/timezone_-9.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_-9.png
+%%DATADIR%%/ui/datetime/timezone_-9_dim.png
 %%DATADIR%%/ui/datetime/timezone_0.png
+%%DATADIR%%/ui/datetime/timezone_0_dim.png
 %%DATADIR%%/ui/datetime/timezone_1.png
 %%DATADIR%%/ui/datetime/timezone_10.5.png
+%%DATADIR%%/ui/datetime/timezone_10.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_10.png
+%%DATADIR%%/ui/datetime/timezone_10_dim.png
 %%DATADIR%%/ui/datetime/timezone_11.5.png
+%%DATADIR%%/ui/datetime/timezone_11.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_11.png
+%%DATADIR%%/ui/datetime/timezone_11_dim.png
 %%DATADIR%%/ui/datetime/timezone_12.75.png
+%%DATADIR%%/ui/datetime/timezone_12.75_dim.png
 %%DATADIR%%/ui/datetime/timezone_12.png
+%%DATADIR%%/ui/datetime/timezone_12_dim.png
 %%DATADIR%%/ui/datetime/timezone_13.png
+%%DATADIR%%/ui/datetime/timezone_13_dim.png
 %%DATADIR%%/ui/datetime/timezone_14.png
+%%DATADIR%%/ui/datetime/timezone_14_dim.png
+%%DATADIR%%/ui/datetime/timezone_1_dim.png
 %%DATADIR%%/ui/datetime/timezone_2.png
+%%DATADIR%%/ui/datetime/timezone_2_dim.png
 %%DATADIR%%/ui/datetime/timezone_3.5.png
+%%DATADIR%%/ui/datetime/timezone_3.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_3.png
+%%DATADIR%%/ui/datetime/timezone_3_dim.png
 %%DATADIR%%/ui/datetime/timezone_4.5.png
+%%DATADIR%%/ui/datetime/timezone_4.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_4.png
+%%DATADIR%%/ui/datetime/timezone_4_dim.png
 %%DATADIR%%/ui/datetime/timezone_5.5.png
+%%DATADIR%%/ui/datetime/timezone_5.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_5.75.png
+%%DATADIR%%/ui/datetime/timezone_5.75_dim.png
 %%DATADIR%%/ui/datetime/timezone_5.png
+%%DATADIR%%/ui/datetime/timezone_5_dim.png
 %%DATADIR%%/ui/datetime/timezone_6.5.png
+%%DATADIR%%/ui/datetime/timezone_6.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_6.png
+%%DATADIR%%/ui/datetime/timezone_6_dim.png
 %%DATADIR%%/ui/datetime/timezone_7.png
+%%DATADIR%%/ui/datetime/timezone_7_dim.png
 %%DATADIR%%/ui/datetime/timezone_8.75.png
+%%DATADIR%%/ui/datetime/timezone_8.75_dim.png
 %%DATADIR%%/ui/datetime/timezone_8.png
+%%DATADIR%%/ui/datetime/timezone_8_dim.png
 %%DATADIR%%/ui/datetime/timezone_9.5.png
+%%DATADIR%%/ui/datetime/timezone_9.5_dim.png
 %%DATADIR%%/ui/datetime/timezone_9.png
+%%DATADIR%%/ui/datetime/timezone_9_dim.png
 %%DATADIR%%/ui/display-capplet.ui
 %%DATADIR%%/ui/gnome-keyboard-panel.ui
 %%DATADIR%%/ui/gnome-mouse-properties.ui
-%%DATADIR%%/ui/gnome-region-panel-layout-chooser.ui
-%%DATADIR%%/ui/gnome-region-panel-options-dialog.ui
+%%DATADIR%%/ui/gnome-mouse-test.ui
 %%DATADIR%%/ui/gnome-region-panel.ui
+%%DATADIR%%/ui/gnome-region-panel-input-chooser.ui
 %%DATADIR%%/ui/info.ui
 %%DATADIR%%/ui/language-chooser.ui
 %%DATADIR%%/ui/online-accounts.ui
 %%DATADIR%%/ui/power.ui
+%%CUPS%%%%DATADIR%%/ui/printers/jobs-dialog.ui
 %%CUPS%%%%DATADIR%%/ui/printers/new-printer-dialog.ui
+%%CUPS%%%%DATADIR%%/ui/printers/options-dialog.ui
+%%CUPS%%%%DATADIR%%/ui/printers/ppd-selection-dialog.ui
 %%CUPS%%%%DATADIR%%/ui/printers/printers.ui
 %%DATADIR%%/ui/screen.ui
+%%DATADIR%%/ui/scroll-test-gegl.svg
+%%DATADIR%%/ui/scroll-test.svg
 %%DATADIR%%/ui/shell.ui
 %%DATADIR%%/ui/uap.ui
 %%DATADIR%%/ui/user-accounts/account-dialog.ui
@@ -334,12 +377,14 @@ share/locale/ja/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ka/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/ka/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/kk/LC_MESSAGES/gnome-control-center-2.0.mo
+share/locale/km/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/kn/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/kn/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ko/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/ko/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/ku/LC_MESSAGES/gnome-control-center-2.0.mo
+share/locale/ky/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/lo/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/lt/LC_MESSAGES/gnome-control-center-2.0-timezones.mo
 share/locale/lt/LC_MESSAGES/gnome-control-center-2.0.mo
@@ -446,6 +491,8 @@ share/pixmaps/faces/sunset.jpg
 share/pixmaps/faces/tennis-ball.png
 share/pixmaps/faces/yellow-rose.jpg
 share/polkit-1/actions/org.gnome.controlcenter.datetime.policy
+share/polkit-1/actions/org.gnome.controlcenter.user-accounts.policy
+share/polkit-1/rules.d/gnome-control-center.rules
 share/sounds/gnome/default/alerts/bark.ogg
 share/sounds/gnome/default/alerts/drip.ogg
 share/sounds/gnome/default/alerts/glass.ogg
@@ -490,8 +537,12 @@ share/sounds/gnome/default/alerts/sonar.ogg
 @dirrmtry share/locale/mai
 @dirrmtry share/locale/lo/LC_MESSAGES
 @dirrmtry share/locale/lo
+@dirrmtry share/locale/ky/LC_MESSAGES
+@dirrmtry share/locale/ky
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
 @dirrmtry share/locale/kk/LC_MESSAGES
 @dirrmtry share/locale/kk
 @dirrmtry share/locale/ilo/LC_MESSAGES

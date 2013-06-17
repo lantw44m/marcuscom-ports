@@ -13,11 +13,13 @@ COMMENT=	Control center for GNOME 3 project
 
 BUILD_DEPENDS=	gnome-settings-daemon>=3.4.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
 		gsettings-desktop-schemas>=3.2.2:${PORTSDIR}/devel/gsettings-desktop-schemas \
+		libpwquality>=0:${PORTSDIR}/security/libpwquality \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
 LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
 		xklavier:${PORTSDIR}/x11/libxklavier \
 		upower-glib:${PORTSDIR}/sysutils/upower \
 		colord:${PORTSDIR}/graphics/colord \
+		ibus:${PORTSDIR}/textproc/ibus \
 		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
 		socialweb:${PORTSDIR}/www/libsocialweb \
 		gtop-2.0:${PORTSDIR}/devel/libgtop \
@@ -43,11 +45,11 @@ USE_XORG=	xscrnsaver x11 xxf86misc kbproto xi
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--with-libsocialweb=yes --disable-ibus
+CONFIGURE_ARGS=	--with-libsocialweb=yes --disable-systemd
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-MAN1=	gnome-control-center.1
+MAN1=		gnome-control-center.1
 
 OPTIONS_DEFINE=	CUPS
 OPTIONS_DEFAULT=CUPS
