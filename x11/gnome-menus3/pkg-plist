@@ -42,6 +42,7 @@ share/desktop-directories/Utility-Accessibility.directory
 share/desktop-directories/Utility.directory
 share/desktop-directories/X-GNOME-Menu-Applications.directory
 share/desktop-directories/X-GNOME-Other.directory
+share/desktop-directories/X-GNOME-WebApplications.directory
 share/gir-1.0/GMenu-3.0.gir
 share/gnome-menus/ui/gmenu-simple-editor.ui
 share/locale/af/LC_MESSAGES/gnome-menus-3.0.mo
@@ -135,6 +136,7 @@ share/locale/sq/LC_MESSAGES/gnome-menus-3.0.mo
 share/locale/sr/LC_MESSAGES/gnome-menus-3.0.mo
 share/locale/sr@latin/LC_MESSAGES/gnome-menus-3.0.mo
 share/locale/sv/LC_MESSAGES/gnome-menus-3.0.mo
+share/locale/szl/LC_MESSAGES/gnome-menus-3.0.mo
 share/locale/ta/LC_MESSAGES/gnome-menus-3.0.mo
 share/locale/te/LC_MESSAGES/gnome-menus-3.0.mo
 share/locale/th/LC_MESSAGES/gnome-menus-3.0.mo
@@ -170,6 +172,8 @@ share/locale/zu/LC_MESSAGES/gnome-menus-3.0.mo
 @dirrmtry share/locale/ug
 @dirrmtry share/locale/te/LC_MESSAGES
 @dirrmtry share/locale/te
+@dirrm share/locale/szl/LC_MESSAGES
+@dirrm share/locale/szl
 @dirrmtry share/locale/sr@latin/LC_MESSAGES
 @dirrmtry share/locale/sr@latin
 @dirrmtry share/locale/si/LC_MESSAGES

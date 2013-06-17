@@ -1,5 +1,5 @@
---- layout/applications.menu.orig	2011-03-31 08:48:41.000000000 +0200
-+++ layout/applications.menu	2011-04-05 20:11:35.000000000 +0200
+--- layout/applications.menu.orig	2012-07-10 01:54:30.000000000 +0000
++++ layout/applications.menu	2013-03-30 10:41:37.311882486 +0000
 @@ -6,10 +6,9 @@
    <Name>Applications</Name>
    <Directory>X-GNOME-Menu-Applications.directory</Directory>
@@ -72,12 +72,12 @@
      <Include>
        <And>
          <Category>Network</Category>
-+	<Not><Category>Qt</Category></Not>
-+	<Not><Category>KDE</Category></Not>
-       </And>
-     </Include>
-   </Menu>   <!-- End Internet -->
-@@ -110,6 +123,8 @@
++        <Not><Category>Qt</Category></Not>
++        <Not><Category>KDE</Category></Not>
+ 	<Not>
+ 	  <Category>X-GNOME-WebApplication</Category>
+ 	</Not>
+@@ -125,6 +138,8 @@
      <Include>
        <And>
          <Category>AudioVideo</Category>
@@ -86,7 +86,7 @@
        </And>
      </Include>
    </Menu>   <!-- End Multimedia -->
-@@ -121,6 +136,8 @@
+@@ -136,6 +151,8 @@
      <Include>
        <And>
          <Category>Office</Category>
@@ -95,7 +95,7 @@
        </And>
      </Include>
    </Menu> <!-- End Office -->
-@@ -133,6 +150,8 @@
+@@ -148,6 +165,8 @@
        <And>
          <Category>System</Category>
          <Not><Category>Settings</Category></Not>
@@ -104,7 +104,7 @@
        </And>
      </Include>
    </Menu>   <!-- End System Tools -->
-@@ -147,8 +166,197 @@
+@@ -162,10 +181,199 @@
          <Not><Category>Core</Category></Not>
          <Not><Category>Screensaver</Category></Not>
          <Not><Category>X-GNOME-Settings-Panel</Category></Not>
@@ -301,4 +301,6 @@
 +    </Menu> <!-- End KOther -->
 +  </Menu> <!-- KDE -->
 +
- </Menu> <!-- End Applications -->
+    <Layout>
+      <Merge type="menus" />
+      <Menuname>Other</Menuname>

@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11/gnome-menus3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom: ports/x11/gnome-menus3/Makefile,v 1.7 2012/09/18 22:26:57 kwm Exp $
 
 PORTNAME=	gnome-menus
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -17,8 +17,8 @@ LATEST_LINK=	gnome-menus3
 USES=		gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_GMAKE=	yes
-USE_GNOME=	gnomehier gnomeprefix intlhack glib20 ltverhack \
-		introspection:build
+USE_GNOME=	glib20 gnomehier gnomeprefix intlhack introspection:build \
+		ltverhack
 USE_AUTOTOOLS=	libtool
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
@@ -40,6 +40,7 @@ post-patch:
 	    	${WRKSRC}/util/Makefile.in
 
 post-install:
+	@${MKDIR} -p ${PREFIX}/etc/xdg/menus/ 
 	@${INSTALL_DATA} ${WRKSRC}/layout/applications.menu \
 		${PREFIX}/etc/xdg/menus/gnome-applications.menu
 	@${INSTALL_DATA} ${WRKSRC}/KDE.directory \
