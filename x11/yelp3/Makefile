@@ -22,7 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/yelp-xsl.pc:${PORTSDIR}/textproc/yel
 CONFLICTS=	yelp-2.[0-9]*
 
 LATEST_LINK=	yelp3
-USES=		gettext pathfix pkgconfig
+USES=		desktop-file-utils gettext pathfix pkgconfig
 USE_XZ=		yes
 USE_XORG=	x11 ice
 USE_GMAKE=	yes
