@@ -70,11 +70,11 @@ RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-gabble:${PORTSDIR}/net-im/telepathy
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-butterfly:${PORTSDIR}/net-im/telepathy-butterfly
 .endif
 
-.if  ${PORT_OPTIONS:MIRC}
+.if ${PORT_OPTIONS:MIRC}
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-idle:${PORTSDIR}/net-im/telepathy-idle
 .endif
 
-.if ${PORT_OPTIONS:MSALUT
+.if ${PORT_OPTIONS:MSALUT}
 RUN_DEPENDS+=	${LOCALBASE}/libexec/telepathy-salut:${PORTSDIR}/net-im/telepathy-salut
 .endif
 
