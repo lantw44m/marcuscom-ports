@@ -65,9 +65,11 @@ USE_PYTHON=	yes
 .endif
 
 .if !defined(GNOME_SLAVE) || ${.CURDIR:T}=="gnome2-lite"
-OPTIONS_DEFINE=	XSCREENSAVER MAPI
+OPTIONS_DEFINE=	XSCREENSAVER
+# MAPI
+
 XSCREENSAVER_DESC=	Use xscreensaver as screen saver app
-MAPI_DESC=	include evolution-mapi (pulls in samba4)
+#MAPI_DESC=	include evolution-mapi (pulls in samba4)
 .endif
 
 do-install:	# empty
@@ -93,11 +95,9 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 		${LOCALBASE}/libexec/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
 		${LOCALBASE}/lib/hamster-applet/hamster-applet:${PORTSDIR}/deskutils/hamster-applet \
 		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi \
-		gpk-application:${PORTSDIR}/ports-mgmt/gnome-packagekit \
-		ekiga:${PORTSDIR}/net/ekiga3
-.  if ${OSVERSION}>=800000
-RUN_DEPENDS+=	cheese:${PORTSDIR}/multimedia/cheese
-.  endif
+		ekiga:${PORTSDIR}/net/ekiga3 \
+		cheese:${PORTSDIR}/multimedia/cheese
+
 .  if ${ARCH} == "i386"
 #RUN_DEPENDS+=	tomboy:${PORTSDIR}/deskutils/tomboy
 .  endif
