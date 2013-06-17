@@ -24,10 +24,10 @@ LIB_DEPENDS=	ck-connector:${PORTSDIR}/sysutils/consolekit \
 		accountsservice:${PORTSDIR}/sysutils/accountsservice \
 		xklavier:${PORTSDIR}/x11/libxklavier \
 		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
-RUN_DEPENDS=	zenity:${PORTSDIR}/x11/zenity \
-		gnome-settings-daemon>=2.91.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
+RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
+		gnome-settings-daemon>=3.0.0:${PORTSDIR}/sysutils/gnome-settings-daemon3 \
 		nss-config:${PORTSDIR}/security/nss \
-		gnome-session>=2.91.0:${PORTSDIR}/x11/gnome-session3 \
+		gnome-session>=3.0.0:${PORTSDIR}/x11/gnome-session3 \
 		gnome-icon-theme-symbolic>=0:${PORTSDIR}/x11-themes/gnome-icon-theme-symbolic \
 		${LOCALBASE}/libexec/at-spi2-registryd:${PORTSDIR}/accessibility/at-spi2-core \
 		${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes
