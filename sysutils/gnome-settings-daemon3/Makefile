@@ -18,7 +18,7 @@ LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
 		ibus-1.0:${PORTSDIR}/textproc/ibus \
 		dbus-1:${PORTSDIR}/devel/dbus \
 		colord:${PORTSDIR}/graphics/colord \
-		lcms2:${PORTSDIR}/graphics/lcms \
+		lcms2:${PORTSDIR}/graphics/lcms2 \
 		pulse:${PORTSDIR}/audio/pulseaudio \
 		gdbm:${PORTSDIR}/databases/gdbm \
 		notify:${PORTSDIR}/devel/libnotify
