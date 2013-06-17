@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/sysutils/gnome-control-center3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-control-center
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.3
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -37,21 +37,17 @@ LATEST_LINK=	gnome-control-center3
 USE_XZ=		yes
 USES=		desktop-file-utils gettext pathfix pkgconfig shared-mime-info
 USE_GMAKE=	yes
-WANT_GNOME=	yes
 USE_GNOME=	gnomeprefix gnomehier intlhack libxml2 gnomemenus3 \
 		libgnomekbd3 gnomedesktop3 gconf2
 USE_XORG=	xscrnsaver x11 xxf86misc kbproto xi
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
-CONFIGURE_ARGS=	--with-libsocialweb=yes
+CONFIGURE_ARGS=	--with-libsocialweb=yes --disable-ibus
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
-.if defined(PACKAGE_BUILDING)
-.undef WITHOUT_GNOME
-WITH_GNOME=	yes
-.endif
+MAN1=	gnome-control-center.1
 
 OPTIONS_DEFINE=	CUPS
 OPTIONS_DEFAULT=CUPS
@@ -76,7 +72,7 @@ CONFIGURE_ARGS+=--disable-cups
 .if ${PORT_OPTIONS:MCHEESE}
 CONFIGURE_ARGS+=--with-cheese
 BUILD_DEPENDS+=	cheese>=3.0.1:${PORTSDIR}/multimedia/cheese3
-LIB_DEPENDS+=	cheese.5:${PORTSDIR}/multimedia/cheese3
+LIB_DEPENDS+=	cheese:${PORTSDIR}/multimedia/cheese3
 .else
 CONFIGURE_ARGS+=--without-cheese
 .endif
