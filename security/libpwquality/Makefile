@@ -21,6 +21,8 @@ USE_LDCONFIG=	yes
 CONFIGURE_ARGS+=--disable-pam
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
+# configure needs to be fixed
+CONFIGURE_ENV+=	LIBS="-lintl"
 
 MAN1=	pwmake.1 pwscore.1
 MAN5=	pwquality.conf.5
