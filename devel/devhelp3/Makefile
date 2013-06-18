@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/devel/devhelp3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	devhelp
-PORTVERSION=	3.4.1
+PORTVERSION=	3.6.1
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -20,7 +20,7 @@ USE_XZ=		yes
 USE_XORG=	x11
 USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
-USE_GNOME=	intlhack gnomeprefix gtk30 gconf2
+USE_GNOME=	gconf2 gnomeprefix gtk30 intlhack
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
