@@ -1,197 +1,204 @@
 bin/gnome-system-log
 share/GConf/gsettings/logview.convert
 share/applications/gnome-system-log.desktop
-share/gnome-system-log/logview-filter.ui
-share/gnome-system-log/logview-toolbar.xml
-share/gnome/help/gnome-system-log/C/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/C/index.page
-share/gnome/help/gnome-system-log/C/introduction.page
-share/gnome/help/gnome-system-log/C/log-close.page
-share/gnome/help/gnome-system-log/C/log-copy.page
-share/gnome/help/gnome-system-log/C/log-filter.page
-share/gnome/help/gnome-system-log/C/log-search.page
-share/gnome/help/gnome-system-log/C/log-view.page
-share/gnome/help/gnome-system-log/C/pref-font-size.page
-share/gnome/help/gnome-system-log/ca/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/ca/index.page
-share/gnome/help/gnome-system-log/ca/introduction.page
-share/gnome/help/gnome-system-log/ca/log-close.page
-share/gnome/help/gnome-system-log/ca/log-copy.page
-share/gnome/help/gnome-system-log/ca/log-filter.page
-share/gnome/help/gnome-system-log/ca/log-search.page
-share/gnome/help/gnome-system-log/ca/log-view.page
-share/gnome/help/gnome-system-log/ca/pref-font-size.page
-share/gnome/help/gnome-system-log/cs/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/cs/index.page
-share/gnome/help/gnome-system-log/cs/introduction.page
-share/gnome/help/gnome-system-log/cs/log-close.page
-share/gnome/help/gnome-system-log/cs/log-copy.page
-share/gnome/help/gnome-system-log/cs/log-filter.page
-share/gnome/help/gnome-system-log/cs/log-search.page
-share/gnome/help/gnome-system-log/cs/log-view.page
-share/gnome/help/gnome-system-log/cs/pref-font-size.page
-share/gnome/help/gnome-system-log/de/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/de/index.page
-share/gnome/help/gnome-system-log/de/introduction.page
-share/gnome/help/gnome-system-log/de/log-close.page
-share/gnome/help/gnome-system-log/de/log-copy.page
-share/gnome/help/gnome-system-log/de/log-filter.page
-share/gnome/help/gnome-system-log/de/log-search.page
-share/gnome/help/gnome-system-log/de/log-view.page
-share/gnome/help/gnome-system-log/de/pref-font-size.page
-share/gnome/help/gnome-system-log/el/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/el/index.page
-share/gnome/help/gnome-system-log/el/introduction.page
-share/gnome/help/gnome-system-log/el/log-close.page
-share/gnome/help/gnome-system-log/el/log-copy.page
-share/gnome/help/gnome-system-log/el/log-filter.page
-share/gnome/help/gnome-system-log/el/log-search.page
-share/gnome/help/gnome-system-log/el/log-view.page
-share/gnome/help/gnome-system-log/el/pref-font-size.page
-share/gnome/help/gnome-system-log/en_GB/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/en_GB/index.page
-share/gnome/help/gnome-system-log/en_GB/introduction.page
-share/gnome/help/gnome-system-log/en_GB/log-close.page
-share/gnome/help/gnome-system-log/en_GB/log-copy.page
-share/gnome/help/gnome-system-log/en_GB/log-filter.page
-share/gnome/help/gnome-system-log/en_GB/log-search.page
-share/gnome/help/gnome-system-log/en_GB/log-view.page
-share/gnome/help/gnome-system-log/en_GB/pref-font-size.page
-share/gnome/help/gnome-system-log/es/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/es/index.page
-share/gnome/help/gnome-system-log/es/introduction.page
-share/gnome/help/gnome-system-log/es/log-close.page
-share/gnome/help/gnome-system-log/es/log-copy.page
-share/gnome/help/gnome-system-log/es/log-filter.page
-share/gnome/help/gnome-system-log/es/log-search.page
-share/gnome/help/gnome-system-log/es/log-view.page
-share/gnome/help/gnome-system-log/es/pref-font-size.page
-share/gnome/help/gnome-system-log/eu/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/eu/index.page
-share/gnome/help/gnome-system-log/eu/introduction.page
-share/gnome/help/gnome-system-log/eu/log-close.page
-share/gnome/help/gnome-system-log/eu/log-copy.page
-share/gnome/help/gnome-system-log/eu/log-filter.page
-share/gnome/help/gnome-system-log/eu/log-search.page
-share/gnome/help/gnome-system-log/eu/log-view.page
-share/gnome/help/gnome-system-log/eu/pref-font-size.page
-share/gnome/help/gnome-system-log/fi/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/fi/index.page
-share/gnome/help/gnome-system-log/fi/introduction.page
-share/gnome/help/gnome-system-log/fi/log-close.page
-share/gnome/help/gnome-system-log/fi/log-copy.page
-share/gnome/help/gnome-system-log/fi/log-filter.page
-share/gnome/help/gnome-system-log/fi/log-search.page
-share/gnome/help/gnome-system-log/fi/log-view.page
-share/gnome/help/gnome-system-log/fi/pref-font-size.page
-share/gnome/help/gnome-system-log/fr/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/fr/index.page
-share/gnome/help/gnome-system-log/fr/introduction.page
-share/gnome/help/gnome-system-log/fr/log-close.page
-share/gnome/help/gnome-system-log/fr/log-copy.page
-share/gnome/help/gnome-system-log/fr/log-filter.page
-share/gnome/help/gnome-system-log/fr/log-search.page
-share/gnome/help/gnome-system-log/fr/log-view.page
-share/gnome/help/gnome-system-log/fr/pref-font-size.page
-share/gnome/help/gnome-system-log/gl/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/gl/index.page
-share/gnome/help/gnome-system-log/gl/introduction.page
-share/gnome/help/gnome-system-log/gl/log-close.page
-share/gnome/help/gnome-system-log/gl/log-copy.page
-share/gnome/help/gnome-system-log/gl/log-filter.page
-share/gnome/help/gnome-system-log/gl/log-search.page
-share/gnome/help/gnome-system-log/gl/log-view.page
-share/gnome/help/gnome-system-log/gl/pref-font-size.page
-share/gnome/help/gnome-system-log/hu/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/hu/index.page
-share/gnome/help/gnome-system-log/hu/introduction.page
-share/gnome/help/gnome-system-log/hu/log-close.page
-share/gnome/help/gnome-system-log/hu/log-copy.page
-share/gnome/help/gnome-system-log/hu/log-filter.page
-share/gnome/help/gnome-system-log/hu/log-search.page
-share/gnome/help/gnome-system-log/hu/log-view.page
-share/gnome/help/gnome-system-log/hu/pref-font-size.page
-share/gnome/help/gnome-system-log/it/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/it/index.page
-share/gnome/help/gnome-system-log/it/introduction.page
-share/gnome/help/gnome-system-log/it/log-close.page
-share/gnome/help/gnome-system-log/it/log-copy.page
-share/gnome/help/gnome-system-log/it/log-filter.page
-share/gnome/help/gnome-system-log/it/log-search.page
-share/gnome/help/gnome-system-log/it/log-view.page
-share/gnome/help/gnome-system-log/it/pref-font-size.page
-share/gnome/help/gnome-system-log/ja/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/ja/index.page
-share/gnome/help/gnome-system-log/ja/introduction.page
-share/gnome/help/gnome-system-log/ja/log-close.page
-share/gnome/help/gnome-system-log/ja/log-copy.page
-share/gnome/help/gnome-system-log/ja/log-filter.page
-share/gnome/help/gnome-system-log/ja/log-search.page
-share/gnome/help/gnome-system-log/ja/log-view.page
-share/gnome/help/gnome-system-log/ja/pref-font-size.page
-share/gnome/help/gnome-system-log/ko/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/ko/index.page
-share/gnome/help/gnome-system-log/ko/introduction.page
-share/gnome/help/gnome-system-log/ko/log-close.page
-share/gnome/help/gnome-system-log/ko/log-copy.page
-share/gnome/help/gnome-system-log/ko/log-filter.page
-share/gnome/help/gnome-system-log/ko/log-search.page
-share/gnome/help/gnome-system-log/ko/log-view.page
-share/gnome/help/gnome-system-log/ko/pref-font-size.page
-share/gnome/help/gnome-system-log/oc/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/oc/index.page
-share/gnome/help/gnome-system-log/oc/introduction.page
-share/gnome/help/gnome-system-log/oc/log-close.page
-share/gnome/help/gnome-system-log/oc/log-copy.page
-share/gnome/help/gnome-system-log/oc/log-filter.page
-share/gnome/help/gnome-system-log/oc/log-search.page
-share/gnome/help/gnome-system-log/oc/log-view.page
-share/gnome/help/gnome-system-log/oc/pref-font-size.page
-share/gnome/help/gnome-system-log/ru/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/ru/index.page
-share/gnome/help/gnome-system-log/ru/introduction.page
-share/gnome/help/gnome-system-log/ru/log-close.page
-share/gnome/help/gnome-system-log/ru/log-copy.page
-share/gnome/help/gnome-system-log/ru/log-filter.page
-share/gnome/help/gnome-system-log/ru/log-search.page
-share/gnome/help/gnome-system-log/ru/log-view.page
-share/gnome/help/gnome-system-log/ru/pref-font-size.page
-share/gnome/help/gnome-system-log/sl/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/sl/index.page
-share/gnome/help/gnome-system-log/sl/introduction.page
-share/gnome/help/gnome-system-log/sl/log-close.page
-share/gnome/help/gnome-system-log/sl/log-copy.page
-share/gnome/help/gnome-system-log/sl/log-filter.page
-share/gnome/help/gnome-system-log/sl/log-search.page
-share/gnome/help/gnome-system-log/sl/log-view.page
-share/gnome/help/gnome-system-log/sl/pref-font-size.page
-share/gnome/help/gnome-system-log/sv/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/sv/index.page
-share/gnome/help/gnome-system-log/sv/introduction.page
-share/gnome/help/gnome-system-log/sv/log-close.page
-share/gnome/help/gnome-system-log/sv/log-copy.page
-share/gnome/help/gnome-system-log/sv/log-filter.page
-share/gnome/help/gnome-system-log/sv/log-search.page
-share/gnome/help/gnome-system-log/sv/log-view.page
-share/gnome/help/gnome-system-log/sv/pref-font-size.page
-share/gnome/help/gnome-system-log/uk/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/uk/index.page
-share/gnome/help/gnome-system-log/uk/introduction.page
-share/gnome/help/gnome-system-log/uk/log-close.page
-share/gnome/help/gnome-system-log/uk/log-copy.page
-share/gnome/help/gnome-system-log/uk/log-filter.page
-share/gnome/help/gnome-system-log/uk/log-search.page
-share/gnome/help/gnome-system-log/uk/log-view.page
-share/gnome/help/gnome-system-log/uk/pref-font-size.page
-share/gnome/help/gnome-system-log/zh_CN/figures/log-viewer-main.png
-share/gnome/help/gnome-system-log/zh_CN/index.page
-share/gnome/help/gnome-system-log/zh_CN/introduction.page
-share/gnome/help/gnome-system-log/zh_CN/log-close.page
-share/gnome/help/gnome-system-log/zh_CN/log-copy.page
-share/gnome/help/gnome-system-log/zh_CN/log-filter.page
-share/gnome/help/gnome-system-log/zh_CN/log-search.page
-share/gnome/help/gnome-system-log/zh_CN/log-view.page
-share/gnome/help/gnome-system-log/zh_CN/pref-font-size.page
+share/help/C/gnome-system-log/figures/log-viewer-main.png
+share/help/C/gnome-system-log/index.page
+share/help/C/gnome-system-log/introduction.page
+share/help/C/gnome-system-log/log-close.page
+share/help/C/gnome-system-log/log-copy.page
+share/help/C/gnome-system-log/log-filter.page
+share/help/C/gnome-system-log/log-search.page
+share/help/C/gnome-system-log/log-view.page
+share/help/C/gnome-system-log/pref-font-size.page
+share/help/ca/gnome-system-log/figures/log-viewer-main.png
+share/help/ca/gnome-system-log/index.page
+share/help/ca/gnome-system-log/introduction.page
+share/help/ca/gnome-system-log/log-close.page
+share/help/ca/gnome-system-log/log-copy.page
+share/help/ca/gnome-system-log/log-filter.page
+share/help/ca/gnome-system-log/log-search.page
+share/help/ca/gnome-system-log/log-view.page
+share/help/ca/gnome-system-log/pref-font-size.page
+share/help/cs/gnome-system-log/figures/log-viewer-main.png
+share/help/cs/gnome-system-log/index.page
+share/help/cs/gnome-system-log/introduction.page
+share/help/cs/gnome-system-log/log-close.page
+share/help/cs/gnome-system-log/log-copy.page
+share/help/cs/gnome-system-log/log-filter.page
+share/help/cs/gnome-system-log/log-search.page
+share/help/cs/gnome-system-log/log-view.page
+share/help/cs/gnome-system-log/pref-font-size.page
+share/help/de/gnome-system-log/figures/log-viewer-main.png
+share/help/de/gnome-system-log/index.page
+share/help/de/gnome-system-log/introduction.page
+share/help/de/gnome-system-log/log-close.page
+share/help/de/gnome-system-log/log-copy.page
+share/help/de/gnome-system-log/log-filter.page
+share/help/de/gnome-system-log/log-search.page
+share/help/de/gnome-system-log/log-view.page
+share/help/de/gnome-system-log/pref-font-size.page
+share/help/el/gnome-system-log/figures/log-viewer-main.png
+share/help/el/gnome-system-log/index.page
+share/help/el/gnome-system-log/introduction.page
+share/help/el/gnome-system-log/log-close.page
+share/help/el/gnome-system-log/log-copy.page
+share/help/el/gnome-system-log/log-filter.page
+share/help/el/gnome-system-log/log-search.page
+share/help/el/gnome-system-log/log-view.page
+share/help/el/gnome-system-log/pref-font-size.page
+share/help/en_GB/gnome-system-log/figures/log-viewer-main.png
+share/help/en_GB/gnome-system-log/index.page
+share/help/en_GB/gnome-system-log/introduction.page
+share/help/en_GB/gnome-system-log/log-close.page
+share/help/en_GB/gnome-system-log/log-copy.page
+share/help/en_GB/gnome-system-log/log-filter.page
+share/help/en_GB/gnome-system-log/log-search.page
+share/help/en_GB/gnome-system-log/log-view.page
+share/help/en_GB/gnome-system-log/pref-font-size.page
+share/help/es/gnome-system-log/figures/log-viewer-main.png
+share/help/es/gnome-system-log/index.page
+share/help/es/gnome-system-log/introduction.page
+share/help/es/gnome-system-log/log-close.page
+share/help/es/gnome-system-log/log-copy.page
+share/help/es/gnome-system-log/log-filter.page
+share/help/es/gnome-system-log/log-search.page
+share/help/es/gnome-system-log/log-view.page
+share/help/es/gnome-system-log/pref-font-size.page
+share/help/eu/gnome-system-log/figures/log-viewer-main.png
+share/help/eu/gnome-system-log/index.page
+share/help/eu/gnome-system-log/introduction.page
+share/help/eu/gnome-system-log/log-close.page
+share/help/eu/gnome-system-log/log-copy.page
+share/help/eu/gnome-system-log/log-filter.page
+share/help/eu/gnome-system-log/log-search.page
+share/help/eu/gnome-system-log/log-view.page
+share/help/eu/gnome-system-log/pref-font-size.page
+share/help/fi/gnome-system-log/figures/log-viewer-main.png
+share/help/fi/gnome-system-log/index.page
+share/help/fi/gnome-system-log/introduction.page
+share/help/fi/gnome-system-log/log-close.page
+share/help/fi/gnome-system-log/log-copy.page
+share/help/fi/gnome-system-log/log-filter.page
+share/help/fi/gnome-system-log/log-search.page
+share/help/fi/gnome-system-log/log-view.page
+share/help/fi/gnome-system-log/pref-font-size.page
+share/help/fr/gnome-system-log/figures/log-viewer-main.png
+share/help/fr/gnome-system-log/index.page
+share/help/fr/gnome-system-log/introduction.page
+share/help/fr/gnome-system-log/log-close.page
+share/help/fr/gnome-system-log/log-copy.page
+share/help/fr/gnome-system-log/log-filter.page
+share/help/fr/gnome-system-log/log-search.page
+share/help/fr/gnome-system-log/log-view.page
+share/help/fr/gnome-system-log/pref-font-size.page
+share/help/gl/gnome-system-log/figures/log-viewer-main.png
+share/help/gl/gnome-system-log/index.page
+share/help/gl/gnome-system-log/introduction.page
+share/help/gl/gnome-system-log/log-close.page
+share/help/gl/gnome-system-log/log-copy.page
+share/help/gl/gnome-system-log/log-filter.page
+share/help/gl/gnome-system-log/log-search.page
+share/help/gl/gnome-system-log/log-view.page
+share/help/gl/gnome-system-log/pref-font-size.page
+share/help/hu/gnome-system-log/figures/log-viewer-main.png
+share/help/hu/gnome-system-log/index.page
+share/help/hu/gnome-system-log/introduction.page
+share/help/hu/gnome-system-log/log-close.page
+share/help/hu/gnome-system-log/log-copy.page
+share/help/hu/gnome-system-log/log-filter.page
+share/help/hu/gnome-system-log/log-search.page
+share/help/hu/gnome-system-log/log-view.page
+share/help/hu/gnome-system-log/pref-font-size.page
+share/help/id/gnome-system-log/figures/log-viewer-main.png
+share/help/id/gnome-system-log/index.page
+share/help/id/gnome-system-log/introduction.page
+share/help/id/gnome-system-log/log-close.page
+share/help/id/gnome-system-log/log-copy.page
+share/help/id/gnome-system-log/log-filter.page
+share/help/id/gnome-system-log/log-search.page
+share/help/id/gnome-system-log/log-view.page
+share/help/id/gnome-system-log/pref-font-size.page
+share/help/it/gnome-system-log/figures/log-viewer-main.png
+share/help/it/gnome-system-log/index.page
+share/help/it/gnome-system-log/introduction.page
+share/help/it/gnome-system-log/log-close.page
+share/help/it/gnome-system-log/log-copy.page
+share/help/it/gnome-system-log/log-filter.page
+share/help/it/gnome-system-log/log-search.page
+share/help/it/gnome-system-log/log-view.page
+share/help/it/gnome-system-log/pref-font-size.page
+share/help/ja/gnome-system-log/figures/log-viewer-main.png
+share/help/ja/gnome-system-log/index.page
+share/help/ja/gnome-system-log/introduction.page
+share/help/ja/gnome-system-log/log-close.page
+share/help/ja/gnome-system-log/log-copy.page
+share/help/ja/gnome-system-log/log-filter.page
+share/help/ja/gnome-system-log/log-search.page
+share/help/ja/gnome-system-log/log-view.page
+share/help/ja/gnome-system-log/pref-font-size.page
+share/help/ko/gnome-system-log/figures/log-viewer-main.png
+share/help/ko/gnome-system-log/index.page
+share/help/ko/gnome-system-log/introduction.page
+share/help/ko/gnome-system-log/log-close.page
+share/help/ko/gnome-system-log/log-copy.page
+share/help/ko/gnome-system-log/log-filter.page
+share/help/ko/gnome-system-log/log-search.page
+share/help/ko/gnome-system-log/log-view.page
+share/help/ko/gnome-system-log/pref-font-size.page
+share/help/oc/gnome-system-log/figures/log-viewer-main.png
+share/help/oc/gnome-system-log/index.page
+share/help/oc/gnome-system-log/introduction.page
+share/help/oc/gnome-system-log/log-close.page
+share/help/oc/gnome-system-log/log-copy.page
+share/help/oc/gnome-system-log/log-filter.page
+share/help/oc/gnome-system-log/log-search.page
+share/help/oc/gnome-system-log/log-view.page
+share/help/oc/gnome-system-log/pref-font-size.page
+share/help/ru/gnome-system-log/figures/log-viewer-main.png
+share/help/ru/gnome-system-log/index.page
+share/help/ru/gnome-system-log/introduction.page
+share/help/ru/gnome-system-log/log-close.page
+share/help/ru/gnome-system-log/log-copy.page
+share/help/ru/gnome-system-log/log-filter.page
+share/help/ru/gnome-system-log/log-search.page
+share/help/ru/gnome-system-log/log-view.page
+share/help/ru/gnome-system-log/pref-font-size.page
+share/help/sl/gnome-system-log/figures/log-viewer-main.png
+share/help/sl/gnome-system-log/index.page
+share/help/sl/gnome-system-log/introduction.page
+share/help/sl/gnome-system-log/log-close.page
+share/help/sl/gnome-system-log/log-copy.page
+share/help/sl/gnome-system-log/log-filter.page
+share/help/sl/gnome-system-log/log-search.page
+share/help/sl/gnome-system-log/log-view.page
+share/help/sl/gnome-system-log/pref-font-size.page
+share/help/sv/gnome-system-log/figures/log-viewer-main.png
+share/help/sv/gnome-system-log/index.page
+share/help/sv/gnome-system-log/introduction.page
+share/help/sv/gnome-system-log/log-close.page
+share/help/sv/gnome-system-log/log-copy.page
+share/help/sv/gnome-system-log/log-filter.page
+share/help/sv/gnome-system-log/log-search.page
+share/help/sv/gnome-system-log/log-view.page
+share/help/sv/gnome-system-log/pref-font-size.page
+share/help/uk/gnome-system-log/figures/log-viewer-main.png
+share/help/uk/gnome-system-log/index.page
+share/help/uk/gnome-system-log/introduction.page
+share/help/uk/gnome-system-log/log-close.page
+share/help/uk/gnome-system-log/log-copy.page
+share/help/uk/gnome-system-log/log-filter.page
+share/help/uk/gnome-system-log/log-search.page
+share/help/uk/gnome-system-log/log-view.page
+share/help/uk/gnome-system-log/pref-font-size.page
+share/help/zh_CN/gnome-system-log/figures/log-viewer-main.png
+share/help/zh_CN/gnome-system-log/index.page
+share/help/zh_CN/gnome-system-log/introduction.page
+share/help/zh_CN/gnome-system-log/log-close.page
+share/help/zh_CN/gnome-system-log/log-copy.page
+share/help/zh_CN/gnome-system-log/log-filter.page
+share/help/zh_CN/gnome-system-log/log-search.page
+share/help/zh_CN/gnome-system-log/log-view.page
+share/help/zh_CN/gnome-system-log/pref-font-size.page
 share/icons/hicolor/16x16/apps/logview.png
 share/icons/hicolor/22x22/apps/logview.png
 share/icons/hicolor/256x256/apps/logview.png
@@ -315,10 +322,14 @@ share/locale/zh_TW/LC_MESSAGES/gnome-system-log.mo
 @dirrmtry share/locale/mai
 @dirrmtry share/locale/ku/LC_MESSAGES
 @dirrmtry share/locale/ku
+@dirrmtry share/locale/km/LC_MESSAGES
+@dirrmtry share/locale/km
 @dirrmtry share/locale/en@shaw/LC_MESSAGES
 @dirrmtry share/locale/en@shaw
 @dirrmtry share/locale/dz/LC_MESSAGES
 @dirrmtry share/locale/dz
+@dirrmtry share/locale/crh/LC_MESSAGES
+@dirrmtry share/locale/crh
 @dirrmtry share/locale/ca@valencia/LC_MESSAGES
 @dirrmtry share/locale/ca@valencia
 @dirrmtry share/locale/bn_IN/LC_MESSAGES
@@ -329,48 +340,71 @@ share/locale/zh_TW/LC_MESSAGES/gnome-system-log.mo
 @dirrmtry share/locale/ast
 @dirrmtry share/locale/as/LC_MESSAGES
 @dirrmtry share/locale/as
-@dirrm share/gnome/help/gnome-system-log/zh_CN/figures
-@dirrm share/gnome/help/gnome-system-log/zh_CN
-@dirrm share/gnome/help/gnome-system-log/uk/figures
-@dirrm share/gnome/help/gnome-system-log/uk
-@dirrm share/gnome/help/gnome-system-log/sv/figures
-@dirrm share/gnome/help/gnome-system-log/sv
-@dirrm share/gnome/help/gnome-system-log/sl/figures
-@dirrm share/gnome/help/gnome-system-log/sl
-@dirrm share/gnome/help/gnome-system-log/ru/figures
-@dirrm share/gnome/help/gnome-system-log/ru
-@dirrm share/gnome/help/gnome-system-log/oc/figures
-@dirrm share/gnome/help/gnome-system-log/oc
-@dirrm share/gnome/help/gnome-system-log/ko/figures
-@dirrm share/gnome/help/gnome-system-log/ko
-@dirrm share/gnome/help/gnome-system-log/ja/figures
-@dirrm share/gnome/help/gnome-system-log/ja
-@dirrm share/gnome/help/gnome-system-log/it/figures
-@dirrm share/gnome/help/gnome-system-log/it
-@dirrm share/gnome/help/gnome-system-log/hu/figures
-@dirrm share/gnome/help/gnome-system-log/hu
-@dirrm share/gnome/help/gnome-system-log/gl/figures
-@dirrm share/gnome/help/gnome-system-log/gl
-@dirrm share/gnome/help/gnome-system-log/fr/figures
-@dirrm share/gnome/help/gnome-system-log/fr
-@dirrm share/gnome/help/gnome-system-log/fi/figures
-@dirrm share/gnome/help/gnome-system-log/fi
-@dirrm share/gnome/help/gnome-system-log/eu/figures
-@dirrm share/gnome/help/gnome-system-log/eu
-@dirrm share/gnome/help/gnome-system-log/es/figures
-@dirrm share/gnome/help/gnome-system-log/es
-@dirrm share/gnome/help/gnome-system-log/en_GB/figures
-@dirrm share/gnome/help/gnome-system-log/en_GB
-@dirrm share/gnome/help/gnome-system-log/el/figures
-@dirrm share/gnome/help/gnome-system-log/el
-@dirrm share/gnome/help/gnome-system-log/de/figures
-@dirrm share/gnome/help/gnome-system-log/de
-@dirrm share/gnome/help/gnome-system-log/cs/figures
-@dirrm share/gnome/help/gnome-system-log/cs
-@dirrm share/gnome/help/gnome-system-log/ca/figures
-@dirrm share/gnome/help/gnome-system-log/ca
-@dirrm share/gnome/help/gnome-system-log/C/figures
-@dirrm share/gnome/help/gnome-system-log/C
-@dirrm share/gnome/help/gnome-system-log
-@dirrm share/gnome-system-log
+@dirrmtry share/help/zh_CN/gnome-system-log/figures
+@dirrmtry share/help/zh_CN/gnome-system-log
+@dirrmtry share/help/zh_CN
+@dirrmtry share/help/uk/gnome-system-log/figures
+@dirrmtry share/help/uk/gnome-system-log
+@dirrmtry share/help/uk
+@dirrmtry share/help/sv/gnome-system-log/figures
+@dirrmtry share/help/sv/gnome-system-log
+@dirrmtry share/help/sv
+@dirrmtry share/help/sl/gnome-system-log/figures
+@dirrmtry share/help/sl/gnome-system-log
+@dirrmtry share/help/sl
+@dirrmtry share/help/ru/gnome-system-log/figures
+@dirrmtry share/help/ru/gnome-system-log
+@dirrmtry share/help/ru
+@dirrmtry share/help/oc/gnome-system-log/figures
+@dirrmtry share/help/oc/gnome-system-log
+@dirrmtry share/help/oc
+@dirrmtry share/help/ko/gnome-system-log/figures
+@dirrmtry share/help/ko/gnome-system-log
+@dirrmtry share/help/ko
+@dirrmtry share/help/ja/gnome-system-log/figures
+@dirrmtry share/help/ja/gnome-system-log
+@dirrmtry share/help/ja
+@dirrmtry share/help/it/gnome-system-log/figures
+@dirrmtry share/help/it/gnome-system-log
+@dirrmtry share/help/it
+@dirrmtry share/help/id/gnome-system-log/figures
+@dirrmtry share/help/id/gnome-system-log
+@dirrmtry share/help/id
+@dirrmtry share/help/hu/gnome-system-log/figures
+@dirrmtry share/help/hu/gnome-system-log
+@dirrmtry share/help/hu
+@dirrmtry share/help/gl/gnome-system-log/figures
+@dirrmtry share/help/gl/gnome-system-log
+@dirrmtry share/help/gl
+@dirrmtry share/help/fr/gnome-system-log/figures
+@dirrmtry share/help/fr/gnome-system-log
+@dirrmtry share/help/fr
+@dirrmtry share/help/fi/gnome-system-log/figures
+@dirrmtry share/help/fi/gnome-system-log
+@dirrmtry share/help/fi
+@dirrmtry share/help/eu/gnome-system-log/figures
+@dirrmtry share/help/eu/gnome-system-log
+@dirrmtry share/help/eu
+@dirrmtry share/help/es/gnome-system-log/figures
+@dirrmtry share/help/es/gnome-system-log
+@dirrmtry share/help/es
+@dirrmtry share/help/en_GB/gnome-system-log/figures
+@dirrmtry share/help/en_GB/gnome-system-log
+@dirrmtry share/help/en_GB
+@dirrmtry share/help/el/gnome-system-log/figures
+@dirrmtry share/help/el/gnome-system-log
+@dirrmtry share/help/el
+@dirrmtry share/help/de/gnome-system-log/figures
+@dirrmtry share/help/de/gnome-system-log
+@dirrmtry share/help/de
+@dirrmtry share/help/cs/gnome-system-log/figures
+@dirrmtry share/help/cs/gnome-system-log
+@dirrmtry share/help/cs
+@dirrmtry share/help/ca/gnome-system-log/figures
+@dirrmtry share/help/ca/gnome-system-log
+@dirrmtry share/help/ca
+@dirrmtry share/help/C/gnome-system-log/figures
+@dirrmtry share/help/C/gnome-system-log
+@dirrmtry share/help/C
+@dirrmtry share/help
 @dirrmtry share/applications
