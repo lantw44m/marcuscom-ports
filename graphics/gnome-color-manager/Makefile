@@ -1,8 +1,9 @@
+# Created by: FreeBSD GNOME Team <gnome@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/graphics/gnome-color-manager/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom$
 
 PORTNAME=	gnome-color-manager
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -11,17 +12,19 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A session framework for the GNOME desktop to manage color profiles
 
 BUILD_DEPENDS=	docbook2man:${PORTSDIR}/textproc/docbook-utils \
+		itstool:${PORTSDIR}/textproc/itstool \
 		${LOCALBASE}/share/sgml/docbook/4.1/dtd/catalog:${PORTSDIR}/textproc/docbook-410
 LIB_DEPENDS=	lcms2:${PORTSDIR}/graphics/lcms2 \
 		colord:${PORTSDIR}/graphics/colord \
+		colord-gtk:${PORTSDIR}/graphics/colord-gtk \
 		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
 		exif:${PORTSDIR}/graphics/libexif
 
 USE_XZ=		yes
 USE_XORG=	xrandr
-USE_GNOME=	gnomeprefix intlhack gtk30 vte3 gnomedesktop3 gnomedocutils
+USE_GNOME=	gnomedesktop3 gnomeprefix gtk30 intlhack vte3
 USE_GMAKE=	yes
-USES=		gettext pathfix desktop-file-utils pkgconfig
+USES=		desktop-file-utils gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
@@ -32,7 +35,14 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 MAN1=		gcm-calibrate.1 gcm-import.1 gcm-inspect.1 gcm-picker.1 \
 		gcm-viewer.1
 
-.if defined(WITH_RAW)
+OPTIONS_DEFINE=	RAW
+OPTIONS_DEFAULT=RAW
+
+RAW_DESC=	Enable RAW EXIF support
+
+.include <bsd.port.options.mk>
+
+.if ${PORT_OPTIONS:MRAW}
 LIB_DEPENDS+=	exiv2:${PORTSDIR}/graphics/exiv2
 CONFIGURE_ARGS+=--enable-exiv=yes
 PLIST_SUB+=	RAW=""
@@ -48,4 +58,3 @@ post-patch:
 			${WRKSRC}/configure
 
 .include <bsd.port.mk>
-
