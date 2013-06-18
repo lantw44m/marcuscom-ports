@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/x11-themes/gnome-backgrounds/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-backgrounds
-PORTVERSION=	3.4.2
+PORTVERSION=	3.6.1
 CATEGORIES=	x11-themes graphics gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
