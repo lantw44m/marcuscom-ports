@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/misc/gnome-devel-docs3/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-devel-docs
-PORTVERSION=	3.4.1
+PORTVERSION=	3.6.2
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
