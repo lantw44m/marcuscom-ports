@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/misc/gnome-icon-theme/Makefile 17268 2013-04-01 05:13:11Z marcus $
 
 PORTNAME=	gnome-icon-theme
-PORTVERSION=	3.4.0
+PORTVERSION=	3.6.2
 CATEGORIES=	misc gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
