@@ -1,9 +1,9 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11-wm/mutter/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom$
 
 PORTNAME=	mutter
-PORTVERSION=	3.4.1
+PORTVERSION=	3.6.2
 CATEGORIES=	x11-wm
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -19,7 +19,6 @@ LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification \
 RUN_DEPENDS=	zenity>=3.0.0:${PORTSDIR}/x11/zenity3 \
 		gsettings-desktop-schemas>=3.4.0:${PORTSDIR}/devel/gsettings-desktop-schemas
 
-
 USE_XZ=		yes
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm xfixes \
 		xrender xdamage
@@ -27,8 +26,8 @@ USE_PYTHON=	2.5+
 USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME=	gnomehier gnomeprefix intlhack gtk30 ltverhack \
-		introspection:build
+USE_GNOME=	gnomehier gnomeprefix gtk30 intlhack introspection:build \
+		ltverhack
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -fno-omit-frame-pointer
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -42,7 +41,6 @@ PLIST_SUB=	VERSION=${PORTVERSION:R}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wcast-align||g' \
-		-e 's|execinfo.h|disabled-execinfo.h|g' \
 		${WRKSRC}/configure
 
 .include <bsd.port.mk>
