@@ -1,10 +1,9 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/net-im/empathy3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#    $MCom: ports/net-im/empathy3/Makefile,v 1.32 2012/07/02 14:47:52 kwm Exp $
 
 PORTNAME=	empathy
-PORTVERSION=	3.4.2.1
-PORTREVISION=	1
+PORTVERSION=	3.6.2
 CATEGORIES=	net-im gnome
 MASTER_SITES=	GNOME
 
@@ -17,6 +16,8 @@ BUILD_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-
 		itstool:${PORTSDIR}/textproc/itstool \
     		${LOCALBASE}/libexec/mission-control-5:${PORTSDIR}/net-im/telepathy-mission-control
 LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
+		geocode-glib:${PORTSDIR}/net/geocode-glib \
+		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
 		pulse:${PORTSDIR}/audio/pulseaudio \
 		telepathy:${PORTSDIR}/net-im/libtelepathy \
 		telepathy-glib:${PORTSDIR}/net-im/telepathy-glib \
@@ -26,7 +27,7 @@ LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
 		notify:${PORTSDIR}/devel/libnotify \
 		gcr-3:${PORTSDIR}/security/gcr \
 		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
-		clutter-gst-1.0:${PORTSDIR}/multimedia/clutter-gst \
+		clutter-gst-2.0:${PORTSDIR}/multimedia/clutter-gst \
 		webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3 \
 		soup-2.4:${PORTSDIR}/devel/libsoup
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
@@ -42,7 +43,7 @@ USE_XZ=		yes
 USES=		gettext pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_GNOME=	evolutiondataserver3 gnomeprefix ltverhack
-USE_GSTREAMER=	yes
+USE_GSTREAMER1=	yes
 USE_AUTOTOOLS=	libtool
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
@@ -50,7 +51,8 @@ USE_PYTHON=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS=	--disable-Werror \
-		--disable-goa \
+		--enable-goa \
+		--enable-gst-1.0=yes \
 		--enable-location=no
 
 GLIB_SCHEMAS=	org.gnome.Empathy.gschema.xml
@@ -104,7 +106,7 @@ PLIST_SUB+=	NST="@comment "
 
 .if ${PORT_OPTIONS:MMAP}
 USE_GL=		gl
-LIB_DEPENDS+=	champlain-0.12.0:${PORTSDIR}/graphics/libchamplain
+LIB_DEPENDS+=	champlain-0.12:${PORTSDIR}/graphics/libchamplain
 CONFIGURE_ARGS+=--enable-map
 PLIST_SUB+=	MAP=""
 .else
@@ -113,10 +115,15 @@ PLIST_SUB+=	MAP="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MCHEESE}
-LIB_DEPENDS+=	cheese-gtk:${PORTSDIR}/multimedia/cheese3
+BUILD_DEPENDS+=	cheese>=3.0.0:${PORTSDIR}/multimedia/cheese3
+RUN_DEPENDS+=	cheese>=3.0.0:${PORTSDIR}/multimedia/cheese3
 CONFIGURE_ARGS+=--with-cheese
 .else
 CONFIGURE_ARGS+=--without-cheese
 .endif
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|clutter-gst-1.0|clutter-gst-2.0|g' \
+		${WRKSRC}/configure
 
 .include <bsd.port.mk>

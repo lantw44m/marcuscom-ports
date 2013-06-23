@@ -4,17 +4,49 @@ bin/empathy-debugger
 %%NST%%lib/nautilus-sendto/plugins/libnstempathy.a
 %%NST%%lib/nautilus-sendto/plugins/libnstempathy.la
 %%NST%%lib/nautilus-sendto/plugins/libnstempathy.so
+lib/empathy/libempathy-3.6.2.so
+lib/empathy/libempathy-gtk-3.6.2.so
+lib/empathy/libempathy-gtk.a
+lib/empathy/libempathy-gtk.la
+lib/empathy/libempathy-gtk.so
+lib/empathy/libempathy.a
+lib/empathy/libempathy.la
+lib/empathy/libempathy.so
+lib/mission-control-plugins.0/mcp-account-manager-goa.a
+lib/mission-control-plugins.0/mcp-account-manager-goa.la
+lib/mission-control-plugins.0/mcp-account-manager-goa.so
 libexec/empathy-auth-client
 libexec/empathy-call
 libexec/empathy-chat
 share/GConf/gsettings/empathy.convert
-share/applications/empathy-accounts.desktop
+share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Info.plist
+share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Resources/Incoming/Content.html
+share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Resources/Incoming/NextContent.html
+share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Resources/Status.html
+share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Resources/Variants/Blue.css
+share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Resources/Variants/Clean.css
+share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Resources/Variants/Simple.css
+share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Resources/main.css
+share/adium/message-styles/Classic.AdiumMessageStyle/Contents/Info.plist
+share/adium/message-styles/Classic.AdiumMessageStyle/Contents/Resources/Content.html
+share/adium/message-styles/Classic.AdiumMessageStyle/Contents/Resources/Status.html
+share/adium/message-styles/Classic.AdiumMessageStyle/Contents/Resources/main.css
+share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Info.plist
+share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources/Images/corners.png
+share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources/Images/horizontal.png
+share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources/Images/nipple.png
+share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources/Images/vertical.png
+share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources/Incoming/Content.html
+share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources/Incoming/NextContent.html
+share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources/Status.html
+share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources/main.css
 share/applications/empathy.desktop
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Auth.service
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Call.service
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.Chat.service
 share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.FileTransfer.service
 %%DATADIR%%/Template.html
+%%DATADIR%%/empathy.css
 %%DATADIR%%/empathy-account-widget-aim.ui
 %%DATADIR%%/empathy-account-widget-generic.ui
 %%DATADIR%%/empathy-account-widget-groupwise.ui
@@ -33,7 +65,6 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.FileTransfer.serv
 %%DATADIR%%/empathy-chatroom-manager.dtd
 %%DATADIR%%/empathy-chatrooms-window.ui
 %%DATADIR%%/empathy-contact-blocking-dialog.ui
-%%DATADIR%%/empathy-contact-dialogs.ui
 %%DATADIR%%/empathy-contact-groups.dtd
 %%DATADIR%%/empathy-contact-widget.ui
 %%DATADIR%%/empathy-ft-manager.ui
@@ -42,7 +73,6 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.FileTransfer.serv
 %%DATADIR%%/empathy-irc-networks.dtd
 %%DATADIR%%/empathy-log-window.html
 %%DATADIR%%/empathy-log-window.ui
-%%DATADIR%%/empathy-map-view.ui
 %%DATADIR%%/empathy-new-chatroom-dialog.ui
 %%DATADIR%%/empathy-preferences.ui
 %%DATADIR%%/empathy-roster-window-menubar.ui
@@ -51,7 +81,6 @@ share/dbus-1/services/org.freedesktop.Telepathy.Client.Empathy.FileTransfer.serv
 %%DATADIR%%/empathy-status-icon.ui
 %%DATADIR%%/empathy-status-preset-dialog.ui
 %%DATADIR%%/empathy-status-presets.dtd
-%%DATADIR%%/empathy-streamed-media-window.ui
 %%DATADIR%%/icons/hicolor/16x16/actions/im-message-new.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-aim.png
 %%DATADIR%%/icons/hicolor/16x16/apps/im-ekiga.png
@@ -1442,6 +1471,7 @@ share/locale/id/LC_MESSAGES/empathy.mo
 share/locale/it/LC_MESSAGES/empathy.mo
 share/locale/ja/LC_MESSAGES/empathy.mo
 share/locale/kk/LC_MESSAGES/empathy.mo
+share/locale/km/LC_MESSAGES/empathy.mo
 share/locale/kn/LC_MESSAGES/empathy.mo
 share/locale/ko/LC_MESSAGES/empathy.mo
 share/locale/ku/LC_MESSAGES/empathy.mo
@@ -1624,5 +1654,22 @@ share/telepathy/clients/Empathy.FileTransfer.client
 @dirrm %%DATADIR%%/icons/hicolor/16x16
 @dirrm %%DATADIR%%/icons/hicolor
 @dirrm %%DATADIR%%/icons
+@dirrm share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources/Incoming
+@dirrm share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources/Images
+@dirrm share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents/Resources
+@dirrm share/adium/message-styles/PlanetGNOME.AdiumMessageStyle/Contents
+@dirrm share/adium/message-styles/PlanetGNOME.AdiumMessageStyle
+@dirrm share/adium/message-styles/Classic.AdiumMessageStyle/Contents/Resources
+@dirrm share/adium/message-styles/Classic.AdiumMessageStyle/Contents
+@dirrm share/adium/message-styles/Classic.AdiumMessageStyle
+@dirrm share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Resources/Variants
+@dirrm share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Resources/Incoming
+@dirrm share/adium/message-styles/Boxes.AdiumMessageStyle/Contents/Resources
+@dirrm share/adium/message-styles/Boxes.AdiumMessageStyle/Contents
+@dirrm share/adium/message-styles/Boxes.AdiumMessageStyle
+@dirrm share/adium/message-styles
+@dirrm share/adium
 @dirrm %%DATADIR%%
 @dirrmtry share/applications
+@dirrm lib/mission-control-plugins.0
+@dirrm lib/empathy
