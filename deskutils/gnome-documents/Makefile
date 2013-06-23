@@ -19,7 +19,7 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		goa-1:${PORTSDIR}/net/gnome-online-accounts \
 		gjs:${PORTSDIR}/lang/gjs \
 		tracker-sparql-0.14:${PORTSDIR}/sysutils/tracker-client \
-		zapojit-0.0:${PORTSDIR}/devel/libzapojit
+		zapojit-0.0:${PORTSDIR}/net/libzapojit
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-dbus \
 		${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_root_nss
 
