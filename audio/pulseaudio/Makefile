@@ -6,7 +6,7 @@
 # PORTREVISION bumps of depending ports.
 
 PORTNAME=	pulseaudio
-PORTVERSION=	2.0
+PORTVERSION=	4.0
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 
@@ -19,6 +19,7 @@ LIB_DEPENDS=	samplerate:${PORTSDIR}/audio/libsamplerate \
 		speexdsp:${PORTSDIR}/audio/speex \
 		fftw3:${PORTSDIR}/math/fftw3 \
 		fftw3f:${PORTSDIR}/math/fftw3-float \
+		orc-0.4:${PORTSDIR}/devel/orc \
 		json.0:${PORTSDIR}/devel/json-c \
 		dbus-1:${PORTSDIR}/devel/dbus \
 		execinfo:${PORTSDIR}/devel/libexecinfo \
@@ -46,7 +47,8 @@ CONFIGURE_ARGS=	--localstatedir=/var \
 		--with-database=simple \
 		--without-caps \
 		--disable-udev \
-		--disable-gtk2 \
+		--disable-gtk3 \
+		--disable-neon-opt \
 		--disable-lirc # untested
 
 #FIXME --with-database=auto|tdb|gdbm|simple
@@ -54,8 +56,8 @@ CONFIGURE_ARGS=	--localstatedir=/var \
 USERS=		pulse
 GROUPS=		pulse pulse-access pulse-rt
 
-OPTIONS_DEFINE=	JACK AVAHI HAL GCONF ALSA SIMD
-OPTIONS_DEFAULT=AVAHI HAL GCONF SIMD
+OPTIONS_DEFINE=	JACK AVAHI GCONF ALSA SIMD
+OPTIONS_DEFAULT=AVAHI GCONF SIMD
 
 PULSE_VERSION=	${PORTVERSION}
 PLIST_SUB=	PULSE_VERSION=${PULSE_VERSION}
@@ -82,15 +84,6 @@ PLIST_SUB+=	AVAHI=""
 .else
 CONFIGURE_ARGS+=--disable-avahi
 PLIST_SUB+=	AVAHI="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MHAL}
-LIB_DEPENDS+=	hal:${PORTSDIR}/sysutils/hal
-CONFIGURE_ARGS+=--enable-hal
-PLIST_SUB+=	HAL=""
-.else
-CONFIGURE_ARGS+=--disable-hal
-PLIST_SUB+=	HAL="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MGCONF}

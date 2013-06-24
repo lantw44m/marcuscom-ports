@@ -152,8 +152,6 @@ lib/pulse-%%PULSE_VERSION%%/modules/module-filter-heuristics.a
 lib/pulse-%%PULSE_VERSION%%/modules/module-filter-heuristics.so
 %%GCONF%%lib/pulse-%%PULSE_VERSION%%/modules/module-gconf.a
 %%GCONF%%lib/pulse-%%PULSE_VERSION%%/modules/module-gconf.so
-%%HAL%%lib/pulse-%%PULSE_VERSION%%/modules/module-hal-detect.a
-%%HAL%%lib/pulse-%%PULSE_VERSION%%/modules/module-hal-detect.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-http-protocol-tcp.a
 lib/pulse-%%PULSE_VERSION%%/modules/module-http-protocol-tcp.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-http-protocol-unix.a
@@ -196,10 +194,14 @@ lib/pulse-%%PULSE_VERSION%%/modules/module-raop-sink.a
 lib/pulse-%%PULSE_VERSION%%/modules/module-raop-sink.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-remap-sink.a
 lib/pulse-%%PULSE_VERSION%%/modules/module-remap-sink.so
+lib/pulse-%%PULSE_VERSION%%/modules/module-remap-source.a
+lib/pulse-%%PULSE_VERSION%%/modules/module-remap-source.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-rescue-streams.a
 lib/pulse-%%PULSE_VERSION%%/modules/module-rescue-streams.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-role-cork.a
 lib/pulse-%%PULSE_VERSION%%/modules/module-role-cork.so
+lib/pulse-%%PULSE_VERSION%%/modules/module-role-ducking.a
+lib/pulse-%%PULSE_VERSION%%/modules/module-role-ducking.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-rtp-recv.a
 lib/pulse-%%PULSE_VERSION%%/modules/module-rtp-recv.so
 lib/pulse-%%PULSE_VERSION%%/modules/module-rtp-send.a
@@ -260,6 +262,9 @@ libdata/pkgconfig/libpulse.pc
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-input-dock-mic.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-input-fm.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-input-front-mic.conf
+%%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-input-headphone-mic.conf
+%%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-input-headset-mic.conf
+%%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-input-internal-mic-always.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-input-internal-mic.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-input-linein.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-input-mic-line.conf
@@ -273,8 +278,8 @@ libdata/pkgconfig/libpulse.pc
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-output-desktop-speaker.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-output-headphones-2.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-output-headphones.conf
-%%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-output-lfe-on-mono.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-output-mono.conf
+%%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-output-speaker-always.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-output-speaker.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-output.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/analog-output.conf.common
@@ -285,6 +290,8 @@ libdata/pkgconfig/libpulse.pc
 %%ALSA%%share/pulseaudio/alsa-mixer/paths/iec958-stereo-output.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/profile-sets/default.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/profile-sets/extra-hdmi.conf
+%%ALSA%%share/pulseaudio/alsa-mixer/profile-sets/force-speaker-and-int-mic.conf
+%%ALSA%%share/pulseaudio/alsa-mixer/profile-sets/force-speaker.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/profile-sets/kinect-audio.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/profile-sets/maudio-fasttrack-pro.conf
 %%ALSA%%share/pulseaudio/alsa-mixer/profile-sets/native-instruments-audio4dj.conf
@@ -307,6 +314,7 @@ share/locale/gu/LC_MESSAGES/pulseaudio.mo
 share/locale/he/LC_MESSAGES/pulseaudio.mo
 share/locale/hi/LC_MESSAGES/pulseaudio.mo
 share/locale/hu/LC_MESSAGES/pulseaudio.mo
+share/locale/id/LC_MESSAGES/pulseaudio.mo
 share/locale/it/LC_MESSAGES/pulseaudio.mo
 share/locale/ja/LC_MESSAGES/pulseaudio.mo
 share/locale/kn/LC_MESSAGES/pulseaudio.mo
