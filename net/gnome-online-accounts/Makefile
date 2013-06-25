@@ -16,7 +16,7 @@ LIB_DEPENDS=	webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3 \
 		notify:${PORTSDIR}/devel/libnotify \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
 		secret-1:${PORTSDIR}/security/libsecret \
-		rest-0.7:${PORTSDIR}/www/rest
+		rest-0.7:${PORTSDIR}/devel/librest
 
 USE_XZ=		yes
 USE_GNOME=	gtk30 intlhack introspection:build
