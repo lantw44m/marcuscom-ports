@@ -19,7 +19,7 @@ USE_XZ=		yes
 USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
 USE_PERL5_BUILD=	yes
-USE_GNOME=	intltool glib20 introspection
+USE_GNOME=	intltool glib20 introspection:build
 GNU_CONFIGURE=	yes
 
 GLIB_SCHEMAS=	org.gnome.desktop.a11y.applications.gschema.xml \
