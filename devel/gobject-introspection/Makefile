@@ -4,6 +4,7 @@
 
 PORTNAME=	gobject-introspection
 PORTVERSION=	1.36.0
+PORTREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -24,13 +25,16 @@ USE_PYTHON=	-2.7
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 MAKE_JOBS_UNSAFE=yes
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-I${LOCALBASE}/include -Wnocast-align
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	--disable-tests
 
 # Force it to put the .cache in ${WRKSRC} instead of ~/.cache. ports/143260
 MAKE_ENV=	HOME=${WRKDIR}
 
 MAN1=		g-ir-compiler.1 g-ir-generate.1 g-ir-scanner.1
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|'gcc'|'cc'|g' \
+		${WRKSRC}/giscanner/dumper.py
 
 .include <bsd.port.mk>
