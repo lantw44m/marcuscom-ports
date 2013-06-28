@@ -1,9 +1,9 @@
---- giscanner/dumper.py.orig	2013-06-28 21:03:54.000000000 +0200
-+++ giscanner/dumper.py	2013-06-28 21:04:31.000000000 +0200
-@@ -90,8 +90,9 @@
+--- giscanner/dumper.py.orig	2013-02-23 11:40:08.000000000 +0100
++++ giscanner/dumper.py	2013-06-28 21:51:35.000000000 +0200
+@@ -89,8 +89,9 @@
+         # Enable the --msvc-syntax pkg-config flag when
          # the Microsoft compiler is used
          # (This is the other way to check whether Visual C++ is used subsequently)
-         printf ("CC", self._compiler_cmd)
 -        if 'cl' in self._compiler_cmd:
 -            self._pkgconfig_msvc_flags = '--msvc-syntax'
 +        if 'clang' not in self._compiler_cmd:
