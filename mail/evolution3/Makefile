@@ -14,6 +14,7 @@ COMMENT=	An integrated mail, calendar and address book distributed suite
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 LIB_DEPENDS=	nss3:${PORTSDIR}/security/nss \
 		gcr-3:${PORTSDIR}/security/gcr \
+		webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3 \
 		goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
 		canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3 \
 		notify:${PORTSDIR}/devel/libnotify
