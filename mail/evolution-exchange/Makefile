@@ -1,6 +1,6 @@
 # Created by: Adam Weinberger, based off kiesel's ximian-exchange port
 # $FreeBSD$
-#   $MCom: ports/trunk/mail/evolution-exchange/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom$
 
 PORTNAME=	evolution-exchange
 PORTVERSION=	2.32.1

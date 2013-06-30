@@ -1,5 +1,5 @@
 # $FreeBSD$
-#   $MCom: ports/multimedia/cheese3/Makefile,v 1.17 2013/03/13 22:35:53 kwm Exp $
+#   $MCom$
 
 PORTNAME=	cheese
 PORTVERSION=	3.6.0

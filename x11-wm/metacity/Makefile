@@ -1,6 +1,6 @@
 # Created by: Garrett Rooney <rooneg@electricjellyfish.net>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11-wm/metacity/Makefile 17269 2013-04-01 05:13:48Z marcus $
+#   $MCom$
 
 PORTNAME=	metacity
 PORTVERSION=	2.30.3

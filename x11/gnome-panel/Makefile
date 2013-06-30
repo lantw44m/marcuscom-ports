@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/x11/gnome-panel/Makefile 18392 2013-04-26 11:23:16Z mezz $
+#   $MCom$
 
 PORTNAME=	gnome-panel
 PORTVERSION=	2.32.1

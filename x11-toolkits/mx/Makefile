@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#  $MCom: ports/trunk/x11-toolkits/mx/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#  $MCom$
 
 PORTNAME=	mx
 PORTVERSION=	1.2.1

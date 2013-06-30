@@ -1,6 +1,6 @@
 # Created by: Jeremy Messenger <mezz@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/deskutils/gnome-tweak-tool/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#    $MCom$
 
 PORTNAME=	gnome-tweak-tool
 PORTVERSION=	3.6.1

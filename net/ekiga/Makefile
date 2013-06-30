@@ -1,6 +1,6 @@
 # Created by: roger@FreeBSD.org
 # $FreeBSD$
-#  $MCom: ports/trunk/net/ekiga/Makefile 18393 2013-04-26 21:23:07Z kwm $
+#  $MCom$
 
 PORTNAME=	ekiga
 PORTVERSION=	2.0.11

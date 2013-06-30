@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/www/libsocialweb/Makefile 18393 2013-04-26 21:23:07Z kwm $
+#   $MCom$
 
 PORTNAME=	libsocialweb
 PORTVERSION=	0.25.20

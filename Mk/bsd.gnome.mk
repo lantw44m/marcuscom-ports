@@ -3,7 +3,7 @@
 #
 # $FreeBSD$
 #	$NetBSD: $
-#     $MCom: ports/trunk/Mk/bsd.gnome.mk 17271 2013-04-01 15:16:27Z kwm $
+#     $MCom$
 #
 # Please view me with 4 column tabs!
 

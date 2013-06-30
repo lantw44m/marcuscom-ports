@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/net/avahi-qt3/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom$
 
 PORTREVISION=	0
 CATEGORIES=	net

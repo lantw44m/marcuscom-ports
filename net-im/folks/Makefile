@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/net-im/folks/Makefile 18507 2013-05-27 14:05:09Z kwm $
+#   $MCom$
 
 PORTNAME=	folks
 PORTVERSION=	0.8.0

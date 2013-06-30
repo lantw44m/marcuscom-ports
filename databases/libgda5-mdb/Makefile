@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/databases/libgda5-mdb/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom$
 
 PORTREVISION?=	0
 CATEGORIES=	databases gnome

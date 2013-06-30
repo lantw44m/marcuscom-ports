@@ -1,6 +1,6 @@
 # Created by: fenner
 # $FreeBSD$
-#    $MCom: ports/trunk/textproc/gtk-doc/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#    $MCom$
 
 PORTNAME=	gtk-doc
 PORTVERSION=	1.18

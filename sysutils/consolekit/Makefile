@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/trunk/sysutils/consolekit/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#    $MCom$
 
 PORTNAME=	consolekit
 PORTVERSION=	0.4.5

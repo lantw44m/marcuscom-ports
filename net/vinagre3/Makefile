@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#  $MCom: ports/trunk/net/vinagre3/Makefile 18484 2013-05-17 21:02:20Z kwm $
+#  $MCom$
 
 PORTNAME=	vinagre
 PORTVERSION=	3.6.2

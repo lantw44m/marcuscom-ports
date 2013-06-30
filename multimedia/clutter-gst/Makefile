@@ -1,6 +1,6 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/multimedia/clutter-gst/Makefile,v 1.16 2012/06/26 08:02:35 kwm Exp $
+#   $MCom$
 
 PORTNAME=	clutter-gst
 PORTVERSION=	2.0.2

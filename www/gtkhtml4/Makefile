@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/www/gtkhtml4/Makefile,v 1.20 2012/08/16 14:59:38 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gtkhtml
 PORTVERSION=	4.6.5

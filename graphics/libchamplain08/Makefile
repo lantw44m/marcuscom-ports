@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/graphics/libchamplain08/Makefile 17271 2013-04-01 15:16:27Z kwm $
+#   $MCom$
 
 PORTNAME=	libchamplain
 PORTVERSION=	0.8.3

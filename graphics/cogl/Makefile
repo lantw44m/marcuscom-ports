@@ -1,6 +1,6 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
 # $FreeBSD$
-#  $MCom: ports/trunk/graphics/cogl/Makefile 17271 2013-04-01 15:16:27Z kwm $
+#  $MCom$
 
 PORTNAME=	cogl
 PORTVERSION=	1.12.2

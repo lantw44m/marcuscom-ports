@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/trunk/net-im/telepathy-glib/Makefile 18373 2013-04-15 09:24:28Z kwm $
+#    $MCom$
 
 PORTNAME=	telepathy-glib
 PORTVERSION=	0.20.2

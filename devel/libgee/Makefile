@@ -1,6 +1,6 @@
 # Created by: Frank Steinborn <steinex@nognu.de>
 # $FreeBSD$
-#    $MCom: ports/trunk/devel/libgee/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#    $MCom$
 
 PORTNAME=	libgee
 PORTVERSION=	0.8.6

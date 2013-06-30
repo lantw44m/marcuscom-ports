@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom: ports/trunk/graphics/colord-gtk/Makefile 18380 2013-04-17 13:17:26Z kwm $
+#    $MCom$
 
 PORTNAME=	colord-gtk
 PORTVERSION=	0.1.25

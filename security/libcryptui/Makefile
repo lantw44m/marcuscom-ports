@@ -1,6 +1,6 @@
 # Created by: Dave McKay <dave@mu.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/security/libcryptui/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom$
 
 PORTNAME=	libcryptui
 PORTVERSION=	3.6.0

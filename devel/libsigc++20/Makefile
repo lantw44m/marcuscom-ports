@@ -1,6 +1,6 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
 # $FreeBSD: devel/libsigc++20/Makefile 314640 2013-03-19 13:04:30Z eadler $
-#   $MCom: ports/devel/libsigc++20/Makefile,v 1.17 2011/07/25 09:19:14 kwm Exp $
+#   $MCom$
 
 PORTNAME=	libsigc++
 PORTVERSION=	2.3.1

@@ -1,6 +1,6 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/editors/gedit-plugins3/Makefile,v 1.17 2012/06/13 11:10:16 kwm Exp $
+#   $MCom$
 
 PORTNAME=	gedit-plugins
 PORTVERSION=	3.6.1

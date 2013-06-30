@@ -1,6 +1,6 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
 # $FreeBSD$
-#   $MCom: ports/multimedia/totem3/Makefile,v 1.23 2012/06/13 22:23:32 mezz Exp $
+#   $MCom$
 
 PORTNAME=	totem
 PORTVERSION=	3.6.3

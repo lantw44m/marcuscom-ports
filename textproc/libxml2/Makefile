@@ -1,6 +1,6 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
 # $FreeBSD$
-#    $MCom: ports/trunk/textproc/libxml2/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#    $MCom$
 
 PORTNAME=	libxml2
 PORTVERSION=	2.8.0

@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/security/libsecret/Makefile 18393 2013-04-26 21:23:07Z kwm $
+#   $MCom$
 
 PORTNAME=	libsecret
 PORTVERSION=	0.15

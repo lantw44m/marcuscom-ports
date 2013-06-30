@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom: ports/trunk/net-im/telepathy-gabble/Makefile 17271 2013-04-01 15:16:27Z kwm $
+#    $MCom$
 
 PORTNAME=	telepathy-gabble
 PORTVERSION=	0.16.6

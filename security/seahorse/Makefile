@@ -1,6 +1,6 @@
 # Created by: Dave McKay <dave@mu.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/security/seahorse/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom$
 
 PORTNAME=	seahorse
 PORTVERSION=	2.32.0

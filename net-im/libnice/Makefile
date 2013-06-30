@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/net-im/libnice/Makefile 18393 2013-04-26 21:23:07Z kwm $
+#   $MCom$
 
 PORTNAME=	libnice
 PORTVERSION=	0.1.4
