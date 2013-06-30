@@ -11,7 +11,6 @@ CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
-
 COMMENT=	Sound server for UNIX
 
 # keep the json version otherwise it will match json-glib
