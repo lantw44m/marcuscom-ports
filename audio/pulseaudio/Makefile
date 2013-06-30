@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/audio/pulseaudio/Makefile 17268 2013-04-01 05:13:11Z marcus $
+#   $MCom$
 #
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
 # PORTREVISION bumps of depending ports.
@@ -11,6 +11,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 
 MAINTAINER=	gnome@FreeBSD.org
+
 COMMENT=	Sound server for UNIX
 
 # keep the json version otherwise it will match json-glib
