@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-toolkits/vte3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME?=	vte
-PORTVERSION=	0.34.6
+PORTVERSION=	0.34.7
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
@@ -28,7 +28,7 @@ USE_GMAKE=	yes
 USES=		bison gettext pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
-USE_GNOME?=	gnomeprefix gtk30 ltverhack referencehack
+USE_GNOME?=	gnomeprefix gtk30 ltverhack referencehack introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS?=--disable-python \
