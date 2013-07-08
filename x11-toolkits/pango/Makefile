@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-toolkits/pango/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	pango
 PORTVERSION=	1.34.1
@@ -21,8 +21,8 @@ LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo \
 		freetype:${PORTSDIR}/print/freetype2 \
 		harfbuzz:${PORTSDIR}/print/harfbuzz \
 		fontconfig:${PORTSDIR}/x11-fonts/fontconfig
-RUN_DEPENDS=	${FONTSCALE}:${X_FONTS_TTF_PORT} \
-		${FONTENCOD}:${X_FONTS_ENCODINGS_PORT}
+RUN_DEPENDS=	${FONTSCALE}:${PORTSDIR}/x11-fonts/xorg-fonts-truetype \
+		${FONTENCOD}:${PORTSDIR}/x11-fonts/encodings
 
 USES=		gettext pathfix pkgconfig
 USE_GMAKE=	yes
