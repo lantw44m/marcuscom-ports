@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/accessibility/accerciser3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	accerciser
 PORTVERSION=	3.6.2
@@ -20,10 +20,9 @@ RUN_DEPENDS=	gsettings-desktop-schemas>=3.2.0:${PORTSDIR}/devel/gsettings-deskto
 CONFLICTS=	accerciser-1.*
 
 USE_XZ=		yes
-USE_GMAKE=	yes
 USE_GNOME=	gtk30 pygobject3 intlhack
 USE_PYTHON=	yes
-USES=		gettext pkgconfig
+USES=		gettext gmake pkgconfig
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

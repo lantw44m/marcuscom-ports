@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/accessibility/accerciser/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	accerciser
 PORTVERSION=	1.12.1
@@ -15,34 +15,16 @@ COMMENT=	Interactive Python accessibility explorer for GNOME
 CONFLICTS=	accerciser-3.[0-9].*
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	pygnomedesktop atspi intlhack
 USE_PYTHON=	yes
-USES=		gettext pkgconfig
+USES=		display:configure gettext gmake pkgconfig
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
-USE_DISPLAY=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
 GCONF_SCHEMAS=	accerciser.schemas
 MAN1=		accerciser.1
-
-.if !defined(DISPLAY)
-pre-configure:
-	@if [ -f ${WRKDIR}/.Xvfb.pid ]; then \
-	    ${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill || ${TRUE} ; \
-	    ${RM} -f ${WRKDIR}/.Xvfb.pid ; \
-	fi
-	@${LOCALBASE}/bin/Xvfb :1001 -screen 0 800x600x24 > /dev/null 2>&1 & ${ECHO} $$! > ${WRKDIR}/.Xvfb.pid
-	@sleep 5
-
-post-configure:
-	@if [ -f ${WRKDIR}/.Xvfb.pid ]; then \
-	    ${CAT} ${WRKDIR}/.Xvfb.pid | ${XARGS} kill || ${TRUE} ; \
-	    ${RM} -f ${WRKDIR}/.Xvfb.pid ; \
-	fi
-.endif
 
 .include <bsd.port.mk>
