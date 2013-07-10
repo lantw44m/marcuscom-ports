@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome3
 PORTVERSION=	3.6.2
@@ -25,6 +25,7 @@ RUN_DEPENDS?=	gnome-panel>=3.0.0:${PORTSDIR}/x11/gnome-panel3 \
 		gnome-power-manager>=3.0.0:${PORTSDIR}/sysutils/gnome-power-manager3 \
 		orca>=3.0.0:${PORTSDIR}/accessibility/orca3 \
 		gnome-mount:${PORTSDIR}/sysutils/gnome-mount \
+		gnome-tweak-tool:${PORTSDIR}/deskutils/gnome-tweak-tool \
 		nautilus>=3.0.0:${PORTSDIR}/x11-fm/nautilus3 \
 		${LOCALBASE}/lib/X11/fonts/bitstream-vera/Vera.ttf:${PORTSDIR}/x11-fonts/bitstream-vera \
 		${LOCALBASE}/share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi:${PORTSDIR}/sysutils/hal-info \
@@ -50,8 +51,7 @@ MAPI_DESC=	Depend on evolution-mapi (pulls in samba4)" off
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MSHELL}
-RUN_DEPENDS+=	gnome-shell>=3.0.0:${PORTSDIR}/x11/gnome-shell \
-		gnome-tweak-tool:${PORTSDIR}/deskutils/gnome-tweak-tool
+RUN_DEPENDS+=	gnome-shell>=3.0.0:${PORTSDIR}/x11/gnome-shell
 .endif
 
 .if ${.CURDIR:T}!="gnome3-lite"
