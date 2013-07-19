@@ -112,7 +112,6 @@ CPPFLAGS+=	-DGTEST_USE_OWN_TR1_TUPLE
 CXXFLAGS+=	-Wno-c++11-extensions -Qunused-arguments -stdlib=libc++
 LDFLAGS+=	-stdlib=libc++
 .if ${OSVERSION}<1000019
-LDFLAGS+=	-Wl,-Bstatic -licu
 BUILD_DEPENDS+=	clang33:${PORTSDIR}/lang/clang33 \
 		libc++>=0:${PORTSDIR}/devel/libc++
 RUN_DEPENDS+=	libc++>=0:${PORTSDIR}/devel/libc++
