@@ -1,6 +1,6 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/lang/gjs/Makefile 18581 2013-06-23 10:50:00Z kwm $
 
 PORTNAME=	gjs
 PORTVERSION=	1.34.0
@@ -13,6 +13,8 @@ COMMENT=	GNOME Javascript binding
 
 LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 		mozjs185:${PORTSDIR}/lang/spidermonkey185
+
+CONFLICTS_BUILD=spidermonkey17-1.7.*
 
 USE_XZ=		yes
 USES=		gettext pathfix pkgconfig shebangfix
