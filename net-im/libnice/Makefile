@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net-im/libnice/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libnice
 PORTVERSION=	0.1.4
@@ -10,16 +10,17 @@ MASTER_SITES=	http://nice.freedesktop.org/releases/
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Library and transmitter that implements ICE-19
 
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_GNOME=	glib20 ltverhack
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include -DHAVE_GETIFADDRS
 LDFLAGS+=	-L${LOCALBASE}/lib
 
+.if !defined(LIBNICE_SLAVE)
 OPTIONS_DEFINE=	GUPNP
 GUPNP_DESC=	UPnP IGD port mapping support
+.endif
 
 .include <bsd.port.options.mk>
 
