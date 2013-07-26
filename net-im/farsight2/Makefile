@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net-im/farsight2/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	farsight2
 PORTVERSION=	0.0.31
@@ -16,8 +16,7 @@ RUN_DEPENDS=	libnice-gst010>=0:${PORTSDIR}/net-im/libnice-gst010
 CONFLICTS=	farstream-[0-9]*
 
 FETCH_ARGS=	-Fpr
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 USE_GNOME=	glib20 ltverhack

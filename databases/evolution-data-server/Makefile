@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/databases/evolution-data-server/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	2.32.1
@@ -21,8 +21,7 @@ LIB_DEPENDS=	soup-2.4:${PORTSDIR}/devel/libsoup \
 		gnome-keyring:${PORTSDIR}/security/libgnome-keyring
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		bison pathfix gettext pkgconfig
+USES=		bison gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack ltverhack ltasneededhack gconf2 libxml2
 USE_OPENLDAP=	yes
 USE_SQLITE=	3

@@ -1,6 +1,6 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/databases/libgdamm5/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgdamm
 PORTVERSION=	4.99.6
@@ -15,8 +15,7 @@ BUILD_DEPENDS=	gm4:${PORTSDIR}/devel/m4
 
 USE_AUTOTOOLS=	libtool
 USE_XZ=		yes
-USE_GMAKE=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	libgda5 glibmm
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

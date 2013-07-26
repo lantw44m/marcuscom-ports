@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/deskutils/gucharmap/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gucharmap
 PORTVERSION=	2.32.1
@@ -17,8 +17,7 @@ LIB_DEPENDS=	rarian:${PORTSDIR}/textproc/rarian
 CONFLICTS=	gucharmap-3.[0-9]*
 
 USE_BZIP2=	yes
-USES=		gettext pathfix pkgconfig
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gtk20 gnomedocutils gconf2
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes

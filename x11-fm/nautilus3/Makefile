@@ -1,6 +1,6 @@
 # Created by: ade, archie
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-fm/nautilus3/Makefile 18474 2013-05-17 19:07:22Z kwm $
 
 PORTNAME=	nautilus
 PORTVERSION=	3.6.3
@@ -23,8 +23,7 @@ CONFLICTS=	nautilus-2.[0-9]*
 
 LATEST_LINK=	nautilus3
 USE_XZ=		yes
-USE_GMAKE=	yes
-USES=		gettext pathfix desktop-file-utils shared-mime-info
+USES=		desktop-file-utils gettext gmake pathfix shared-mime-info
 USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libxml2 \
 		ltverhack gvfs ltasneededhack introspection:build
 USE_LDCONFIG=	yes

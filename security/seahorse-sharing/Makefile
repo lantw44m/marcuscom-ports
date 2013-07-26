@@ -1,6 +1,6 @@
 # Created by: Dave McKay <dave@mu.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/security/seahorse-sharing/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	seahorse-sharing
 PORTVERSION=	3.2.1
@@ -19,8 +19,7 @@ RUN_DEPENDS=	gpg:${PORTSDIR}/security/gnupg \
 		seahorse>=3.2.1:${PORTSDIR}/security/seahorse3
 
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	intlhack gnomeprefix
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

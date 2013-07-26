@@ -13,8 +13,7 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Common automake macros for GNOME 2 and GNOME 3
 
 USE_XZ=		yes
-USE_GMAKE=	yes
-USES=		pkgconfig
+USES=		gmake pkgconfig
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>

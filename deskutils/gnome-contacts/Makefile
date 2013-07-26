@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#  $MCom$
+#  $MCom: ports/trunk/deskutils/gnome-contacts/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-contacts
 PORTVERSION=	3.6.2
@@ -17,8 +17,7 @@ LIB_DEPENDS=	goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
 
 USE_XZ=		yes
 USE_GNOME=	intlhack gtk30 gnomedesktop3 evolutiondataserver3
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_PERL5=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

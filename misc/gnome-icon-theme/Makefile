@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/misc/gnome-icon-theme/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-icon-theme
 PORTVERSION=	3.6.2
@@ -16,9 +16,8 @@ BUILD_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hic
 RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme
 
 USE_XZ=		yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix
+USES=		gmake pathfix
 USE_GNOME=	intlhack
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--enable-icon-mapping

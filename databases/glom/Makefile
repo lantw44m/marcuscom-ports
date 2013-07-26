@@ -1,6 +1,6 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/databases/glom/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	glom
 PORTVERSION=	1.24.0
@@ -26,8 +26,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 USE_XZ=		yes
 USE_PYTHON=	yes
 GNU_CONFIGURE=	yes
-USES=		gettext pathfix pkgconfig shared-mime-info desktop-file-utils
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix pkgconfig shared-mime-info \
+		desktop-file-utils
 USE_GNOME=	gnomedocutils gnomeprefix intltool pygobject3 libxml2 \
 		gtksourceviewmm3 libgdamm5
 USE_LDCONFIG=	yes

@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/libgnomekbd/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgnomekbd
 PORTVERSION=	2.32.0
@@ -20,9 +20,8 @@ USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix ltverhack gconf2
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 

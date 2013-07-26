@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/sysutils/gnome-system-monitor/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-system-monitor
 PORTVERSION=	2.28.2
@@ -20,9 +20,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 CONFLICTS=	gnome-system-monitor-3.[0-9]*
 
 USE_BZIP2=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack libwnck gnomevfs2 gnomedocutils librsvg2
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include -DGLIB_COMPILATION

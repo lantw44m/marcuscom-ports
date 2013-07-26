@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net-im/telepathy-gabble/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	telepathy-gabble
 PORTVERSION=	0.16.6
@@ -22,8 +22,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:${PORTSDIR}/security/ca_ro
 PORTSCOUT=	limitw:1,even
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build
 USE_SQLITE=	yes
 USE_OPENSSL=	yes

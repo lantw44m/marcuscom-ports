@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net-im/folks/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	folks
 PORTVERSION=	0.8.0
@@ -21,8 +21,7 @@ CONFLICTS=	folks-0.4.[0-9]*
 USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	evolutiondataserver3 gnomehier intlhack \
 		introspection:build ltverhack
 GNU_CONFIGURE=	yes

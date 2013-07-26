@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/databases/evolution-data-server3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	evolution-data-server
 PORTVERSION=	3.6.4
@@ -29,8 +29,7 @@ CONFLICTS=	evolution-data-server-2.[0-9]*
 
 LATEST_LINK=	evolution-data-server3
 USE_XZ=		yes
-USE_GMAKE=	yes
-USES=		bison pathfix gettext pkgconfig
+USES=		bison gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack ltverhack ltasneededhack gconf2 \
 		libxml2 gtk30 introspection:build
 USE_OPENLDAP=	yes

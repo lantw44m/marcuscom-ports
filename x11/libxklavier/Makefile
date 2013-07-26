@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/libxklavier/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libxklavier
 PORTVERSION=	5.2.1
@@ -17,8 +17,7 @@ RUN_DEPENDS=	xkbcomp:${PORTSDIR}/x11/xkbcomp \
 
 USE_XORG=	x11 xkbfile
 USE_XZ=		yes
-USE_GMAKE=	yes
-USES=		pathfix
+USES=		gmake pathfix
 USE_GNOME=	libxml2 glib20 ltverhack:12 introspection:build
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool

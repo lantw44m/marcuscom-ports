@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gdm3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gdm
 PORTVERSION=	3.4.1
@@ -45,8 +45,7 @@ INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 USE_RC_SUBR=	gdm
 USE_GNOME_SUBR=	yes
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	intlhack gnomehier librsvg2 gnomeprefix gnomepanel3 dconf
 GNU_CONFIGURE=	yes
 GLIB_SCHEMAS=	org.gnome.login-screen.gschema.xml

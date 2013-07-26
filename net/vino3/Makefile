@@ -1,6 +1,6 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net/vino3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	vino
 PORTVERSION=	3.6.2
@@ -22,10 +22,9 @@ CONFLICTS=	vino-2.[0-9]*
 
 LATEST_LINK=	vino3
 USE_XZ=		yes
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 USE_GNOME=	gnomeprefix gtk30 intlhack
 USE_XORG=	xdamage xfixes xtst
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--without-network-manager \

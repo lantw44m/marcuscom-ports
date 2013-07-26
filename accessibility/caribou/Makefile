@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/accessibility/caribou/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	caribou
 PORTVERSION=	0.4.10
@@ -20,9 +20,8 @@ LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter \
 RUN_DEPENDS=	py*-atspi>=2.1.91:${PORTSDIR}/accessibility/py-atspi
 
 USE_XZ=		yes
-USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=yes
-USES=		gettext pathfix pkgconfig shebangfix
+USES=		gettext gmake pathfix pkgconfig shebangfix
 SHEBANG_FILES=	tools/fix_gir.py tools/make_schema.py
 USE_PYTHON=	yes
 USE_XORG=	x11 xtst

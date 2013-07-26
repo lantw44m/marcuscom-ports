@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/sysutils/gnome-settings-daemon3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-settings-daemon
 PORTVERSION=	3.6.3
@@ -30,9 +30,8 @@ CONFLICTS=	gnome-settings-daemon-2.[0-9]*
 LATEST_LINK=	gnome-settings-daemon3
 USE_XORG=	xxf86misc
 USE_XZ=		yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomedesktop3 libgnomekbd3 gnomehier
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CONFIGURE_ARGS=	--disable-gudev \

@@ -37,8 +37,7 @@ GH_COMMIT=	941456a
 WRKSRC=		${WRKDIR}/${GH_ACCOUNT}-Cinnamon-${GH_COMMIT}
 
 USE_XORG=	x11 xfixes sm
-USES=		gettext pathfix
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix
 USE_AUTOTOOLS=	libtool autoconf automake
 USE_GNOME=	gnomeprefix intlhack gtk30 gconf2 gnomemenus3 \
 		gnomedesktop3 evolutiondataserver3 pygnome2

@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/graphics/colord/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	colord
 PORTVERSION=	1.0.1
@@ -19,8 +19,7 @@ GROUPS=		colord
 
 USE_XZ=		yes
 USE_GNOME=	gnomehier glib20 intlhack introspection:build
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_SQLITE=	3
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

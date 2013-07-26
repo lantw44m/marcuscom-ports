@@ -1,6 +1,6 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net/vino/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	vino
 PORTVERSION=	2.32.2
@@ -19,10 +19,9 @@ LIB_DEPENDS=	gnutls:${PORTSDIR}/security/gnutls \
 CONFLICTS=	vino-3.[0-9]*
 
 USE_BZIP2=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gnomepanel
 USE_XORG=	xtst
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

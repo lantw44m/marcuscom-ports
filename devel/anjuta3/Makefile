@@ -1,6 +1,6 @@
 # Created by: Dmitry Sivachenko <demon@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/anjuta3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	anjuta
 PORTVERSION=	3.4.3
@@ -28,8 +28,7 @@ CONFLICTS=	anjuta-2.[0-9]*
 
 LATEST_LINK=	anjuta3
 USE_XZ=		yes
-USES=		bison pathfix gettext pkgconfig shared-mime-info
-USE_GMAKE=	yes
+USES=		bison gettext gmake pathfix pkgconfig shared-mime-info
 INSTALLS_ICONS=	yes
 USE_PERL5=	yes
 USE_PYTHON=	yes

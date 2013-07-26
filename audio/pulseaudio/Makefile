@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/audio/pulseaudio/Makefile 18611 2013-06-30 16:33:55Z marcus $
 #
 # !!!NOTE!!! Any PORTVERSION update to this port must be accompanied by
 # PORTREVISION bumps of depending ports.
@@ -29,10 +29,9 @@ USE_XZ=		yes
 USE_GNOME=	glib20 intltool ltverhack gnomehier
 USE_XORG=	x11 sm xtst ice
 USE_LDCONFIG=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_AUTOTOOLS=	libltdl libtool
-USE_GMAKE=	yes
 MAKE_JOBS_UNSAFE=yes
 CONFIGURE_ENV=	PTHREAD_CFLAGS="${PTHREAD_CFLAGS}" \
 		PTHREAD_LIBS="${PTHREAD_LIBS}" \

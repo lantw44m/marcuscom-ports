@@ -1,6 +1,6 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net/libzapojit/Makefile 18583 2013-06-23 11:12:45Z kwm $
 
 PORTNAME=	libzapojit
 PORTVERSION=	0.0.2
@@ -17,9 +17,8 @@ LIB_DEPENDS=	goa-1:${PORTSDIR}/net/gnome-online-accounts \
 		rest-0.7:${PORTSDIR}/devel/librest
 
 USE_XZ=		yes
-USES=		pathfix
+USES=		gmake pathfix
 USE_GNOME=	gnomeprefix intlhack
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

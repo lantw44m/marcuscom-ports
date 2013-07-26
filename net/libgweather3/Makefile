@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net/libgweather3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgweather
 PORTVERSION=	3.6.2
@@ -17,10 +17,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc
 CONFLICTS=	libgweather-2.[0-9]*
 
 LATEST_LINK=	libgweather3
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomehier gnomeprefix intlhack gconf2 ltverhack gtk30
 USE_LDCONFIG=	yes

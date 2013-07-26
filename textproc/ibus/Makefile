@@ -24,7 +24,7 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 USE_PYTHON=	yes
 
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
+USES=		gmake
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 GLIB_SCHEMAS=	org.freedesktop.ibus.gschema.xml
@@ -47,7 +47,7 @@ CONFIGURE_ARGS+=	--disable-iso-codes-check
 .endif
 
 .if ${PORT_OPTIONS:MNLS}
-USES=		gettext
+USES+=		gettext
 PLIST_SUB+=	NLS=""
 .else
 CONFIGURE_ARGS+=	--disable-nls

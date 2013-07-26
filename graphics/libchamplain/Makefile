@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/graphics/libchamplain/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libchamplain
 PORTVERSION=	0.12.4
@@ -14,11 +14,10 @@ LIB_DEPENDS=	clutter-gtk-1.0:${PORTSDIR}/graphics/clutter-gtk3 \
 		soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
 
 USE_XZ=		yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	gtk30 ltverhack gnomehier introspection:build
 USE_AUTOTOOLS=	libtool
 USE_GL=		gl
-USE_GMAKE=	yes
 USE_SQLITE=	3
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

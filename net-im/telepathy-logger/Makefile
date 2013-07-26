@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net-im/telepathy-logger/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	telepathy-logger
 PORTVERSION=	0.4.0
@@ -17,9 +17,8 @@ LICENSE=	LGPL21
 
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 intltool gnomedocutils ltverhack libxml2 libxslt:build \
 		introspection:build
 USE_SQLITE=	yes

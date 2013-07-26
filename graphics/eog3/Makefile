@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/graphics/eog3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	eog
 PORTVERSION=	3.6.2
@@ -23,11 +23,11 @@ CONFLICTS=	eog-2.[0-9]*
 
 LATEST_LINK=	eog3
 USE_XZ=		yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack librsvg2 gtk30 gnomedesktop3 \
 		introspection:build
 INSTALLS_ICONS=	yes
-USES=		gettext pathfix desktop-file-utils pkgconfig shared-mime-info
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
+		shared-mime-info
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

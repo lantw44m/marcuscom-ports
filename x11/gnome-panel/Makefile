@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-panel/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-panel
 PORTVERSION=	2.32.1
@@ -27,10 +27,9 @@ USE_PYTHON=	yes
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 USE_GNOME=	gnomeprefix intlhack gnomedesktop libwnck gnomemenus \
 		gnomedocutils ltverhack referencehack librsvg2
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-network-manager
 LDFLAGS+=	-L${LOCALBASE}/lib

@@ -22,10 +22,8 @@ LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
 
 USE_XZ=		yes
 USE_GSTREAMER=	yes
-MAKE_JOBS_SAFE=	yes
 USE_XORG=	xt
-USES=		bison gettext pkgconfig
-USE_GMAKE=	yes
+USES=		bison gettext gmake pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gtk20 libxslt ltverhack introspection:build
 USE_SQLITE=	yes

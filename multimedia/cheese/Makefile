@@ -1,6 +1,6 @@
 # Created by: FreeBSD GNOME Team <gnome@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/multimedia/cheese/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	cheese
 PORTVERSION=	2.32.0
@@ -20,10 +20,9 @@ CONFLICTS=	cheese-3.[0-9]*
 
 USE_XORG=	xxf86vm
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack evolutiondataserver librsvg2 \
 		gnomedocutils gnomedesktop
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_GSTREAMER=	gconf good ogg theora v4l2 vorbis
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes

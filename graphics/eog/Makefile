@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/graphics/eog/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	eog
 PORTVERSION=	2.32.1
@@ -19,10 +19,10 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/gnome/index.theme:${PORTSDIR}/misc/gnome-i
 CONFLICTS=	eog-3.[0-9]*
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack librsvg2 gconf2 gnomedesktop
 INSTALLS_ICONS=	yes
-USES=		gettext pathfix desktop-file-utils shared-mime-info pkgconfig
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
+		shared-mime-info
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

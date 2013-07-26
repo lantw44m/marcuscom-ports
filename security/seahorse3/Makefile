@@ -1,6 +1,6 @@
 # Created by: Dave McKay <dave@mu.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/security/seahorse3/Makefile 18480 2013-05-17 20:20:19Z kwm $
 
 PORTNAME=	seahorse
 PORTVERSION=	3.6.3
@@ -29,8 +29,7 @@ LATEST_LINK=	seahorse3
 USE_XORG=	sm
 USE_LDCONFIG=	yes
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	intlhack gnomeprefix gtk30
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes

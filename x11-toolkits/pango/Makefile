@@ -24,9 +24,7 @@ LIB_DEPENDS=	cairo:${PORTSDIR}/graphics/cairo \
 RUN_DEPENDS=	${FONTSCALE}:${PORTSDIR}/x11-fonts/xorg-fonts-truetype \
 		${FONTENCOD}:${PORTSDIR}/x11-fonts/encodings
 
-USES=		gettext pathfix pkgconfig
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
+USES=		gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	glib20 ltverhack referencehack introspection:build

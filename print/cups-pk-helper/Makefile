@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/print/cups-pk-helper/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	cups-pk-helper
 PORTVERSION=	0.2.0
@@ -15,9 +15,8 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	intlhack glib20
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/libs

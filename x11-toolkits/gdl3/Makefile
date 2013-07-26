@@ -1,6 +1,6 @@
 # Created by: Maxim Sobolev <sobomax@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-toolkits/gdl3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gdl
 PORTVERSION=	3.6.2
@@ -16,9 +16,8 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LATEST_LINK=	gdl3
 USE_XZ=		yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gtk30 intltool
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

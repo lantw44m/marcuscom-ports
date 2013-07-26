@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net-im/telepathy-mission-control/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	telepathy-mission-control
 PORTVERSION=	5.12.0
@@ -13,12 +13,11 @@ COMMENT=	Telepathy component to apps to abstract details of connection managers
 LIB_DEPENDS=	telepathy:${PORTSDIR}/net-im/libtelepathy \
 		dbus-glib-1:${PORTSDIR}/devel/dbus-glib
 
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix gconf2 libxslt ltverhack
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 GLIB_SCHEMAS=	im.telepathy.MissionControl.FromEmpathy.gschema.xml
 

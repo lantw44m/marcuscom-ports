@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net/gnome-online-accounts/Makefile 18594 2013-06-25 09:01:00Z kwm $
 
 PORTNAME=	gnome-online-accounts
 PORTVERSION=	3.6.2
@@ -20,8 +20,7 @@ LIB_DEPENDS=	webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3 \
 
 USE_XZ=		yes
 USE_GNOME=	gtk30 intlhack introspection:build
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes

@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/editors/ghex/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	ghex
 PORTVERSION=	2.24.0
@@ -15,9 +15,8 @@ COMMENT=	GNOME 2 hex editor
 CONFLICT=	ghex-3.\*
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack libgnomeprintui libgnomeui gnomedocutils
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes

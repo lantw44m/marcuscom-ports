@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/security/libgnome-keyring/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgnome-keyring
 PORTVERSION=	3.6.0
@@ -16,8 +16,7 @@ LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus \
 USE_XZ=		yes
 USE_GNOME=	glib20 gnomehier gnomeprefix intlhack \
 		introspection:build ltverhack
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

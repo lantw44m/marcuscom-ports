@@ -1,5 +1,5 @@
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/deskutils/gnote/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnote
 PORTVERSION=	0.8.3
@@ -16,11 +16,10 @@ LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre \
 		boost_filesystem:${PORTSDIR}/devel/boost-libs \
 		uuid:${PORTSDIR}/misc/e2fsprogs-libuuid
 
-USE_GMAKE=	yes
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix gtk30 intltool libxml2 libxslt \
 		ltverhack gnomedocutils gtkmm30
-USES=		gettext pathfix pkgconfig desktop-file-utils
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 GLIB_SCHEMAS=	org.gnome.gnote.gschema.xml
 USE_AUTOTOOLS=	libtool
 INSTALLS_ICONS=	yes

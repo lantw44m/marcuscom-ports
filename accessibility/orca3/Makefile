@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/accessibility/orca3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	orca
 PORTVERSION=	3.6.2
@@ -28,9 +28,8 @@ CONFLICTS=	orca-2.[0-9]* py*-json-py-[0-9]*
 LATEST_LINK=	gnome-orca3
 
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_PYTHON=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix gtk30 pygobject3
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

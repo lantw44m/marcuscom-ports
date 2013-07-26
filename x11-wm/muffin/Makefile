@@ -25,8 +25,7 @@ GH_COMMIT=	4b36a9a
 
 USE_XORG=	x11 xext xrandr xcomposite xcursor xinerama ice sm
 USE_PYTHON=	2.5+
-USES=		gettext pathfix
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix
 USE_AUTOTOOLS=	libtool autoconf automake
 USE_GNOME=	gnomehier gnomeprefix intlhack gtk30 gconf2 introspection:build
 USE_LDCONFIG=	yes

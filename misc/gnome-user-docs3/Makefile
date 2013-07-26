@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/misc/gnome-user-docs3/Makefile 18566 2013-06-18 07:35:39Z kwm $
 
 PORTNAME=	gnome-user-docs
 PORTVERSION=	3.6.2
@@ -15,10 +15,9 @@ BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
 LATEST_LINK=	gnome-user-docs3
 USE_XZ=		yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=yes
-USES=		pathfix
+USES=		gmake pathfix
 USE_GNOME=	gnomeprefix gnomehier libxml2:build
 
 .include <bsd.port.mk>

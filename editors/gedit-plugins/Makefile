@@ -1,6 +1,6 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/editors/gedit-plugins/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gedit-plugins
 PORTVERSION=	2.32.0
@@ -21,8 +21,7 @@ CONFLICTS=	gedit-plugins-3.[0-9]*
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix intlhack gnomevfs2
 WANT_GNOME=	yes

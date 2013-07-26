@@ -1,6 +1,6 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/multimedia/totem3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	totem
 PORTVERSION=	3.6.3
@@ -30,12 +30,11 @@ LATEST_LINK=	totem3
 USE_PYTHON=	yes
 USE_XORG=	x11 xproto xtst ice sm
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig desktop-file-utils
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gtk30 libxml2 nautilus3 ltverhack \
 		pygobject3 gnomedocutils gnomehier introspection:build
 USE_GSTREAMER1=	core good bad soup ugly
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 INSTALLS_OMF=	yes

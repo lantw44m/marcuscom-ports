@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/security/gcr/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gcr
 PORTVERSION=	3.6.2
@@ -20,8 +20,7 @@ CONFLICTS=	gnome-keyring-2.[0-9]*
 
 USE_XZ=		yes
 USE_GNOME=	gtk30 intlhack introspection:build
-USES=		gettext pathfix pkgconfig shared-mime-info
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix pkgconfig shared-mime-info
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes

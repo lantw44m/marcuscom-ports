@@ -16,11 +16,10 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 		farstream-0.2:${PORTSDIR}/net-im/farstream
 
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 USE_PYTHON=	yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build ltverhack
 CONFIGURE_ENV=	LIBS="-pthread"
 CPPFLAGS+=	-I${LOCALBASE}/include

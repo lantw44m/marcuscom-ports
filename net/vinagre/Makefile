@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net/vinagre/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	vinagre
 PORTVERSION=	2.30.3
@@ -21,9 +21,8 @@ LIB_DEPENDS=	gtk-vnc-1.0:${PORTSDIR}/net/gtk-vnc \
 CONFLICTS=	vinagre-3.[0-9]*
 
 USE_BZIP2=	yes
-USES=		gettext pathfix desktop-file-utils shared-mime-info
+USES=		desktop-file-utils gettext gmake pathfix shared-mime-info
 USE_GNOME=	gnomeprefix intlhack vte gconf2 gnomedocutils gnomepanel
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes

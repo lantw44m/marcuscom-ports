@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net-im/empathy/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	empathy
 PORTVERSION=	2.34.0
@@ -30,9 +30,8 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-co
 
 CONFLICTS=	empathy-3.[0-9]*
 
-USE_GMAKE=	yes
 USE_BZIP2=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_GNOME=	evolutiondataserver gnomeprefix pygtk2 ltverhack
 USE_GSTREAMER=	yes

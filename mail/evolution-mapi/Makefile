@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/mail/evolution-mapi/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	evolution-mapi
 PORTVERSION=	0.32.2
@@ -21,8 +21,7 @@ CONFLICTS=	evolution-mapi-3.[0-9]*
 PKGFILES=	${LOCALBASE}/libdata/pkgconfig/evolution-plugin.pc
 
 USE_BZIP2=	yes
-USES=		gettext
-USE_GMAKE=	yes
+USES=		gettext gmake
 USE_GNOME=	evolutiondataserver
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

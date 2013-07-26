@@ -15,9 +15,8 @@ COMMENT=	Support library for gnome cups administration
 LIB_DEPENDS=	cups:${PORTSDIR}/print/cups-client
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 USE_GNOME=	intlhack ltverhack glib20
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=  libtool
 CPPFLAGS+=	-I${LOCALBASE}/include

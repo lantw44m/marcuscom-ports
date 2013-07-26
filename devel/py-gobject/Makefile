@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/py-gobject/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gobject
 PORTVERSION=	2.28.6
@@ -23,8 +23,7 @@ LIB_DEPENDS=	ffi:${PORTSDIR}/devel/libffi
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/pycairo.pc:${PORTSDIR}/graphics/py-cairo
 
 USE_XZ=		yes
-USE_GMAKE=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 introspection:build
 USE_PYTHON=	2.5+
 GNU_CONFIGURE=	yes

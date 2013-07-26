@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/graphics/gnome-video-effects/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	gnome-video-effects
 PORTVERSION=	0.3.0
@@ -12,8 +12,7 @@ COMMENT=	A collection of Gstreamer effects
 
 USE_BZIP2=	yes
 USE_GNOME=	intlhack
-USE_GMAKE=	yes
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 GNU_CONFIGURE=	yes
 
 .include <bsd.port.mk>

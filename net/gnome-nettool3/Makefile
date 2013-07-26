@@ -1,6 +1,6 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net/gnome-nettool3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-nettool
 PORTVERSION=	3.2.0
@@ -19,8 +19,7 @@ LATEST_LINK=	gnome-nettool3
 
 USE_XZ=		yes
 USE_GNOME=	intlhack gnomeprefix gtk30 gnomedocutils
-USE_GMAKE=	yes
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

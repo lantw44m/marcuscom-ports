@@ -1,6 +1,6 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/devhelp3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	devhelp
 PORTVERSION=	3.6.1
@@ -18,8 +18,7 @@ CONFLICTS=	devhelp-2.[0-9]*
 LATEST_LINK=	devhelp3
 USE_XZ=		yes
 USE_XORG=	x11
-USES=		gettext pathfix pkgconfig
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gconf2 gnomeprefix gtk30 intlhack
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes

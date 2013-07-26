@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-toolkits/libwnck3/Makefile 18569 2013-06-18 07:58:41Z kwm $
 
 PORTNAME=	libwnck
 PORTVERSION=	3.4.5
@@ -22,9 +22,8 @@ CONFLICTS=	libwnck-2.[0-9]*
 
 LATEST_LINK=	libwnck3
 USE_XORG=	xres x11
-USE_GMAKE=	yes
 USE_GNOME=	gtk30 intlhack introspection ltverhack referencehack
-USES=		bison gettext pathfix
+USES=		bison gettext gmake pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 CPPFLAGS+=	-I${LOCALBASE}/include

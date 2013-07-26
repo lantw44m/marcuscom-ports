@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-terminal/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-terminal
 PORTVERSION=	2.32.1
@@ -16,10 +16,9 @@ LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification
 
 CONFLICTS=	gnome-terminal-3.[0-9]*
 
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_BZIP2=	yes
 INSTALLS_OMF=	yes
-USE_GMAKE=	yes
 USE_XORG=	sm
 USE_GNOME=	gnomeprefix intlhack gconf2 vte gnomedocutils libgnome
 GNU_CONFIGURE=	yes

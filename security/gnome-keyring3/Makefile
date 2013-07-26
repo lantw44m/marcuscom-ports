@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/security/gnome-keyring3/Makefile 18410 2013-05-01 15:20:45Z kwm $
 
 PORTNAME=	gnome-keyring
 PORTVERSION=	3.6.2
@@ -26,8 +26,7 @@ CONFLICTS=	gnome-keyring-2.[0-9]*
 LATEST_LINK=	gnome-keyring3
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix gtk30 ltverhack intlhack
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 INSTALLS_ICONS=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes

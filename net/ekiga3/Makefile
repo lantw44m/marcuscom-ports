@@ -22,14 +22,12 @@ CONFLICTS=	ekiga-2.*
 USE_PERL5=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USES=		gettext pathfix pkgconfig
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix pkgconfig
 USE_XORG=	xv
 USE_GNOME=	gtk20
 DIST_SUBDIR=	gnome2
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-MAKE_JOBS_SAFE=	yes
 
 MAN1=		ekiga.1
 

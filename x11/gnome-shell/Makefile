@@ -1,6 +1,6 @@
 # Created by: Pawel Worach <pawel.worach@gmail.com>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-shell/Makefile 18582 2013-06-23 10:52:15Z kwm $
 
 PORTNAME=	gnome-shell
 PORTVERSION=	3.6.2
@@ -31,8 +31,7 @@ RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/dbus-python.pc:${PORTSDIR}/devel/py-
 
 USE_XZ=		yes
 USE_XORG=	x11 xfixes sm
-USES=		gettext pathfix
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	evolutiondataserver3 gnomedesktop3 gnomemenus3 gnomeprefix \
 		gtk30 intlhack ltverhack

@@ -1,6 +1,6 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/editors/gedit-plugins3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gedit-plugins
 PORTVERSION=	3.6.1
@@ -21,8 +21,7 @@ GEDITVER=	3.6.0
 LATEST_LINK=	gedit-plugins3
 USE_LDCONFIG=	yes
 USE_XZ=		yes
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix intlhack gtk30 gtksourceview3
 CPPFLAGS+=	-I${LOCALBASE}/include

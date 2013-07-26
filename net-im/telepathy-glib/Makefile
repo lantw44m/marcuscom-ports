@@ -1,5 +1,5 @@
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net-im/telepathy-glib/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	telepathy-glib
 PORTVERSION=	0.20.2
@@ -16,9 +16,8 @@ RUN_DEPENDS=	vapigen:${PORTSDIR}/lang/vala-vapigen
 PORTSCOUT=	limitw:1,even
 
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 gnomehier introspection:build libxslt:build ltverhack
 USE_PYTHON_BUILD=	yes
 MAKE_JOBS_UNSAFE=	yes

@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/accessibility/mousetweaks/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	mousetweaks
 PORTVERSION=	2.32.1
@@ -16,8 +16,7 @@ CONFLICTS=	mousetweaks-3.[0-9]*
 USE_XORG=	x11 xfixes xcursor xtst
 USE_BZIP2=	yes
 USE_GNOME=	gnomeprefix gnomepanel intlhack
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

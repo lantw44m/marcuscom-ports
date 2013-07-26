@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-shell-extensions/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	gnome-shell-extensions
 PORTVERSION=	3.2.0
@@ -15,9 +15,8 @@ LIB_DEPENDS=	gtop-2.0:${PORTSDIR}/devel/libgtop
 RUN_DEPENDS=	gnome-shell>=3.2.0:${PORTSDIR}/x11/gnome-shell
 
 USE_XZ=		yes
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 USE_GNOME=	intltool glib20 gnomedesktop3
-USE_GMAKE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-extensions=all

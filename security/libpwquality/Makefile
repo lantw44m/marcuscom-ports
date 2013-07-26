@@ -11,10 +11,9 @@ COMMENT=	Library for generating random passwords and quality checking
 
 LIB_DEPENDS=	crack:${PORTSDIR}/security/cracklib
 
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 USE_BZIP2=	yes
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_GNOME=	intltool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

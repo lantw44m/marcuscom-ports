@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-panel3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-panel
 PORTVERSION=	3.6.2
@@ -25,13 +25,12 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/notification-daemon:${PORTSDIR}/deskutils/noti
 CONFLICTS=	gnome-panel-2.[0-9]*
 
 LATEST_LINK=	gnome-panel3
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_XORG=	ice sm x11 xau xrandr
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
 USE_GNOME=	gnomeprefix intlhack gnomedesktop3 librsvg2 libwnck3 \
 		gnomemenus3 ltverhack referencehack
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 CONFIGURE_ARGS=	--disable-network-manager
 CPPFLAGS+=	-I${LOCALBASE}/include

@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/glade/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	glade
 PORTVERSION=	3.12.2
@@ -15,9 +15,8 @@ CONFLICTS=	glade3-3.*
 
 INSTALLS_ICONS=	yes
 USE_XZ=		yes
-USE_GMAKE=	yes
 USE_GNOME=	gtk30 gnomeprefix ltverhack gnomedocutils introspection:build
-USES=		gettext pathfix pkgconfig desktop-file-utils
+USES=		desktop-file-utilsgettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool

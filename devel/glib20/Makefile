@@ -23,12 +23,10 @@ PORTSCOUT=	limitw:1,even
 LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
 		ffi:${PORTSDIR}/devel/libffi
 
-USES=		gettext iconv pathfix pkgconfig shebangfix
+USES=		gettext gmake iconv pathfix pkgconfig shebangfix
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 USE_GNOME=	ltverhack
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 USE_PYTHON=	2.5+
 USE_PERL5=	yes
 CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu \

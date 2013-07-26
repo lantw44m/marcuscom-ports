@@ -1,6 +1,6 @@
 # Created by: Hendrik Scholz <hendrik@scholz.net>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/multimedia/totem/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	totem
 PORTVERSION=	2.32.0
@@ -24,11 +24,10 @@ CONFLICTS=	totem-3.[0-9]*
 
 USE_PYTHON=	yes
 USE_BZIP2=	yes
-USES=		pathfix gettext pkgconfig desktop-file-utils
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack nautilus2 ltverhack pygtk2 gnomehier
 USE_GSTREAMER=	core gconf hal good mpeg2dec soup ugly python gio
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
 INSTALLS_OMF=	yes

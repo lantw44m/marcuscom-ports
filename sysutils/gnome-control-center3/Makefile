@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/sysutils/gnome-control-center3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	3.6.3
@@ -37,8 +37,8 @@ CONFLICTS=	gnome-control-center-2.[0-9]* gnome-media-2.[0-9]*
 
 LATEST_LINK=	gnome-control-center3
 USE_XZ=		yes
-USES=		desktop-file-utils gettext pathfix pkgconfig shared-mime-info
-USE_GMAKE=	yes
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
+		shared-mime-info
 USE_GNOME=	gnomeprefix gnomehier intlhack libxml2 gnomemenus3 \
 		libgnomekbd3 gnomedesktop3 gconf2
 USE_XORG=	xscrnsaver x11 xxf86misc kbproto xi

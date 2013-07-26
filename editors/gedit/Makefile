@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/editors/gedit/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gedit
 PORTVERSION=	2.30.4
@@ -21,10 +21,9 @@ CONFLICTS=	gedit-3.[0-9]*
 
 USE_XORG=	sm
 USE_BZIP2=	yes
-USES=		gettext pathfix desktop-file-utils
+USES=		desktop-file-utils gettext gmake pathfix
 INSTALLS_OMF=	yes
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix intlhack gconf2 gtksourceview2 \
 		gnomedocutils ltasneededhack

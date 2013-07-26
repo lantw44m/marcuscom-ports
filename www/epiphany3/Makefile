@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/www/epiphany3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	epiphany
 PORTVERSION=	3.4.3
@@ -34,11 +34,10 @@ INSTALLS_ICONS=	yes
 USE_XZ=		yes
 USE_PYTHON=	yes
 USE_SQLITE=	3
-USES=		desktop-file-utils gettext pathfix pkgconfig
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gnomedocutils libxml2
 USE_XORG=	ice x11 sm
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 INSTALLS_OMF=	yes
 CONFIGURE_ARGS+=--enable-introspection \
 		--with-distributor-name="FreeBSD GNOME Project"

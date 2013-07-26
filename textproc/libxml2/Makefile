@@ -1,6 +1,6 @@
 # Created by: Yukihiro Nakai <Nakai@technologist.com>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/textproc/libxml2/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libxml2
 PORTVERSION=	2.8.0
@@ -16,10 +16,8 @@ COMMENT?=	XML parser library for GNOME
 
 .if !defined(REFERENCE_PORT)
 
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
 GNU_CONFIGURE=	yes
-USES=		iconv pathfix pkgconfig
+USES=		gmake iconv pathfix pkgconfig
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS?=--with-iconv=${LOCALBASE} \
 		--with-html-dir=${PREFIX}/share/doc \

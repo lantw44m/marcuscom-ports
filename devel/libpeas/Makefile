@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/libpeas/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libpeas
 PORTVERSION=	1.6.1
@@ -16,9 +16,8 @@ BUILD_DEPENDS=	valac:${PORTSDIR}/lang/vala
 USE_XZ=		yes
 USE_PYTHON=	2.5+
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
 USE_AUTOTOOLS=	libtool
-USES=		pathfix gettext pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gtk30 ltverhack introspection:build
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

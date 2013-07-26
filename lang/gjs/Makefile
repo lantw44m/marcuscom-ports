@@ -17,8 +17,7 @@ LIB_DEPENDS=	dbus-glib-1.2:${PORTSDIR}/devel/dbus-glib \
 CONFLICTS_BUILD=spidermonkey17-1.7.*
 
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig shebangfix
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix pkgconfig shebangfix
 USE_PYTHON_BUILD=yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	cairo glib20 gnomeprefix introspection:build \

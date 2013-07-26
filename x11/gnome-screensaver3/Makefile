@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-screensaver3/Makefile 18580 2013-06-23 08:40:31Z kwm $
 
 PORTNAME=	gnome-screensaver
 PORTVERSION=	3.6.1
@@ -22,8 +22,7 @@ CONFLICTS=	gnome-screensaver-2.[0-9]*
 
 LATEST_LINK=	gnome-screensaver3
 USE_XZ=		yes
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_XORG=	x11 xext xxf86vm xxf86misc xscrnsaver
 USE_GNOME=	gnomedesktop3 gnomeprefix intlhack libgnomekbd3

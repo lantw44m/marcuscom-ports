@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11-themes/gtk-theme-engine-clearlooks/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	gtk-theme-engine-clearlooks
 PORTVERSION=	2.91.5
@@ -15,10 +15,9 @@ COMMENT=	Clearlooks theme engine
 
 LICENSE=	LGPL21
 
-USE_GMAKE=	yes
 USE_BZIP2=	yes
 USE_GNOME=	gtk30 intlhack 
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

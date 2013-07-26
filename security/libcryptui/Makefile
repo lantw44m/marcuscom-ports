@@ -1,6 +1,6 @@
 # Created by: Dave McKay <dave@mu.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/security/libcryptui/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libcryptui
 PORTVERSION=	3.6.0
@@ -21,8 +21,7 @@ CONFLICTS=	seahorse-2.[0-9]* seahorse-3.0.[0-9]*
 
 USE_LDCONFIG=	yes
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	intlhack gnomeprefix gnomedocutils gtk30
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

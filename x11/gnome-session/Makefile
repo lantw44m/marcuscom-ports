@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-session/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-session
 PORTVERSION=	2.32.1
@@ -25,11 +25,10 @@ RUN_DEPENDS=	${LOCALBASE}/libexec/gnome-settings-daemon:${PORTSDIR}/sysutils/gno
 		${LOCALBASE}/bin/xdpyinfo:${PORTSDIR}/x11/xdpyinfo
 
 INSTALLS_ICONS=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_BZIP2=	yes
 USE_XORG=	ice sm xau xrandr
 USE_GNOME=	gnomeprefix intlhack gconf2
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs
 # us gconftool-2 instead of sanity-check because that got removed from gconf2.

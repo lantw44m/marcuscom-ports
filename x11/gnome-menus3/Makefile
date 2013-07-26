@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-menus3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-menus
 PORTVERSION=	3.6.2
@@ -14,9 +14,8 @@ COMMENT=	Implementation of the FreeDesktop Desktop Menu Spec
 CONFLICTS=	gnome-menus-2.[0-9]*
 
 LATEST_LINK=	gnome-menus3
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes
-USE_GMAKE=	yes
 USE_GNOME=	glib20 gnomehier gnomeprefix intlhack introspection:build \
 		ltverhack
 USE_AUTOTOOLS=	libtool

@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/multimedia/totem-pl-parser/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	totem-pl-parser
 PORTVERSION=	3.4.5
@@ -15,8 +15,7 @@ LIB_DEPENDS=	gmime-2.6:${PORTSDIR}/mail/gmime26 \
 		soup-gnome-2.4:${PORTSDIR}/devel/libsoup-gnome
 
 USE_XZ=		yes
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		gettext gmake pathfix
 USE_GNOME=	gnomeprefix glib20 libxml2 intlhack ltverhack gnomehier \
 		introspection:build
 USE_LDCONFIG=	yes

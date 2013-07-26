@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/mail/evolution-mapi3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	evolution-mapi
 PORTVERSION=	3.4.4
@@ -22,8 +22,7 @@ BROKEN=		needs newer libmapi which needs samba4 update.
 EVO_VER=	3.4.3
 LATEST_LINK=	evolution-mapi3
 USE_XZ=		yes
-USES=		gettext pkgconfig
-USE_GMAKE=	yes
+USES=		gettext gmake pkgconfig
 USE_GNOME=	gconf2
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

@@ -1,6 +1,6 @@
 # Created by: fenner
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/textproc/gtk-doc/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtk-doc
 PORTVERSION=	1.18
@@ -27,9 +27,8 @@ CATALOG_PORTS_SGML=	${PREFIX}/share/sgml/catalog.ports
 
 USE_XZ=		yes
 USE_PERL5=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix libxslt gnomedocutils
 INSTALLS_OMF=	yes
 CONFIGURE_ARGS=	--with-xml-catalog=${LOCALBASE}/share/xml/catalog.ports

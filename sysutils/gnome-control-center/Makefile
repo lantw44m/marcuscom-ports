@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/sysutils/gnome-control-center/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-control-center
 PORTVERSION=	2.32.1
@@ -23,8 +23,8 @@ RUN_DEPENDS=	gnome-eject:${PORTSDIR}/sysutils/gnome-mount \
 CONFLICTS=	gnome-control-center-3.[0-9]*
 
 USE_BZIP2=	yes
-USES=		gettext pathfix pkgconfig desktop-file-utils shared-mime-info
-USE_GMAKE=	yes
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
+		shared-mime-info
 USE_GSTREAMER=	good
 WANT_GNOME=	yes
 USE_GNOME=	gnomeprefix intlhack metacity gnomemenus \

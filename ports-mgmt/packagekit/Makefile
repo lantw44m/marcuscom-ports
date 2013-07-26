@@ -1,6 +1,6 @@
 # Created by: Anders F Bjorklund <afb@users.sourceforge.net>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/ports-mgmt/packagekit/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	packagekit
 PORTVERSION=	0.8.9
@@ -16,9 +16,8 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 		polkit-gobject-1.0:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	lsof:${PORTSDIR}/sysutils/lsof
 
-USE_GMAKE=	yes
 USE_XZ=		yes
-USES=		gettext iconv pathfix shared-mime-info
+USES=		gettext gmake iconv pathfix shared-mime-info
 USE_GNOME=	glib20 intltool introspection
 USE_LDCONFIG=	yes
 USE_SQLITE=	3

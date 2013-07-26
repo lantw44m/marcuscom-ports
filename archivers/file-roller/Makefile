@@ -20,10 +20,9 @@ CONFLICTS=	file-roller-3.[0-9]*
 
 USE_LDCONFIG=	yes
 USE_BZIP2=	yes
-USES=		gettext pathfix desktop-file-utils pkgconfig
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
 USE_GNOME=	gnomeprefix intlhack gnomedocutils gtk20 gconf2
 USE_XORG=	sm
 GNU_CONFIGURE=	yes

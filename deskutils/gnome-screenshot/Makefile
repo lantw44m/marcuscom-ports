@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/deskutils/gnome-screenshot/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-screenshot
 PORTVERSION=	3.6.1
@@ -16,8 +16,7 @@ LIB_DEPENDS=	canberra-gtk3:${PORTSDIR}/audio/libcanberra-gtk3
 CONFLICTS=	gnome-utils-2.[0-9]*
 
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomeprefix intlhack gtk30
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/liboobs/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	liboobs
 PORTVERSION=	3.0.0
@@ -17,9 +17,8 @@ LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
 RUN_DEPENDS=	${LOCALBASE}/etc/dbus-1/system.d/org.freedesktop.SystemToolsBackends.conf:${PORTSDIR}/sysutils/system-tools-backends
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
-USES=		pathfix
+USES=		gmake pathfix
 USE_GNOME=	gnomeprefix glib20
 USE_LDCONFIG=	yes
 CONFIGURE_ARGS=	--with-hal

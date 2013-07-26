@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/audio/rhythmbox3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	rhythmbox
 PORTVERSION=	2.90.1.1
@@ -27,10 +27,9 @@ CONFLICTS=	rhythmbox-0.[0-9]*
 
 LATEST_LINK=	rhythmbox3
 USE_BZIP2=	yes
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 INSTALLS_OMF=	yes
 USE_XORG=	ice xproto
-USE_GMAKE=	yes
 USE_GNOME=	intlhack gnomeprefix gtk30 introspection:build
 WANT_GNOME=	yes
 USE_GSTREAMER=	flac mp3 jpeg cdparanoia vorbis

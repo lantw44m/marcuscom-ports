@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome-session3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-session
 PORTVERSION=	3.6.2
@@ -22,12 +22,11 @@ CONFLICTS=	gnome-session-2.[0-9]*
 
 LATEST_LINK=	gnome-session3
 INSTALLS_ICONS=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_XZ=		yes
 USE_XORG=	ice sm xau xext xtst xrender xtrans xcomposite
 USE_GL=		gl
 USE_GNOME=	gnomeprefix intlhack gconf2 intltool gtk30
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-docbook-docs
 CPPFLAGS+=	-I${LOCALBASE}/include

@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/security/libsecret/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libsecret
 PORTVERSION=	0.15
@@ -15,8 +15,7 @@ LIB_DEPENDS=	gcrypt:${PORTSDIR}/security/libgcrypt
 
 USE_XZ=		yes
 USE_GNOME=	gnomehier glib20 libxslt:build intltool introspection:build
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-introspection

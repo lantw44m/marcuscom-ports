@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/net-im/folks04/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	folks
 PORTVERSION=	0.4.3
@@ -19,8 +19,7 @@ CONFLICTS=	folks-0.[6-9].[0-9]*
 
 USE_BZIP2=	yes
 USE_LDCONFIG=	yes
-USE_GMAKE=	yes
-USES=		pathfix gettext
+USES=		pathfix gettext gmake
 USE_GNOME=	intlhack gnomehier introspection:build
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include

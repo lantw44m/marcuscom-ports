@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/sysutils/brasero3/Makefile 18503 2013-05-27 13:37:42Z kwm $
 
 PORTNAME=	brasero
 PORTVERSION=	3.6.1
@@ -21,10 +21,10 @@ RUN_DEPENDS=	growisofs:${PORTSDIR}/sysutils/dvd+rw-tools \
 CONFLICTS=	brasero-2.[0-9]*
 
 LATEST_LINK=	brasero3
-USES=		gettext pathfix pkgconfig desktop-file-utils shared-mime-info
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig \
+		shared-mime-info
 USE_XZ=		yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_XORG=	sm ice
 USE_GNOME=	gconf2 gnomeprefix gtk30 intlhack libxml2
 USE_LDCONFIG=	yes

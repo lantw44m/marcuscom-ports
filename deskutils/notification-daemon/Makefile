@@ -1,6 +1,6 @@
 # Created by: Andreas Kohn <andreas@syndrom23.de>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/deskutils/notification-daemon/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	notification-daemon
 PORTVERSION=	0.7.6
@@ -18,8 +18,7 @@ LIB_DEPENDS=	dbus-1:${PORTSDIR}/devel/dbus \
 
 USE_XZ=		yes
 USE_GNOME=	gnomeprefix intlhack gtk30
-USE_GMAKE=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_XORG=	x11
 INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes

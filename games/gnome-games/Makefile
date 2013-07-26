@@ -1,6 +1,6 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/games/gnome-games/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-games
 PORTVERSION=	2.32.1
@@ -21,10 +21,9 @@ CONFLICTS=	sol-1.0.* glchess-[0-9]* gnomesudoku-[0-9]* gnome-games-3.[0-9]*
 
 USE_BZIP2=	yes
 USE_PYTHON=	yes
-USES=		gettext pathfix desktop-file-utils
+USES=		desktop-file-utils gettext gmake pathfix
 INSTALLS_OMF=	yes
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
 USE_GL=		gl
 USE_GNOME=	gnomeprefix intlhack librsvg2 pygnomedesktop gnomedocutils \
 		introspection:build

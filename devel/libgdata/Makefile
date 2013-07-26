@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/libgdata/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libgdata
 PORTVERSION=	0.12.0
@@ -19,9 +19,7 @@ CONFLICTS=	libgdata-0.6.*
 
 USE_XZ=		yes
 USE_LDCONFIG=	yes
-USES=		gettext pathfix pkgconfig
-USE_GMAKE=	yes
-MAKE_JOBS_SAFE=	yes
+USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	gnomeprefix intltool ltverhack glib20 introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include

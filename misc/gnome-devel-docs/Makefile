@@ -1,6 +1,6 @@
 # Created by: Michael Johnson <ahze@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/misc/gnome-devel-docs/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome-devel-docs
 PORTVERSION=	2.32.0
@@ -19,7 +19,7 @@ CONFLICTS=	gnome-devel-docs-3.[0-9]*
 
 USE_BZIP2=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
+USES=		gmake
 USE_GNOME=	gnomehier
 INSTALLS_OMF=	yes
 

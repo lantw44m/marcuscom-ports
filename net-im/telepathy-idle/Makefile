@@ -1,6 +1,6 @@
 # Created by: Florent Thoumie <flz@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/net-im/telepathy-idle/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	telepathy-idle
 PORTVERSION=	0.1.11
@@ -16,8 +16,7 @@ LIB_DEPENDS=	execinfo:${PORTSDIR}/devel/libexecinfo \
 
 GNU_CONFIGURE=	yes
 USE_OPENSSL=	yes
-USE_GMAKE=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	glib20 libxslt:build
 
 MAN8=		telepathy-idle.8

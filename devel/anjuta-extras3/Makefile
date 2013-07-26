@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/devel/anjuta-extras3/Makefile 18393 2013-04-26 21:23:07Z kwm $
 
 PORTNAME=	anjuta-extras
 PORTVERSION=	3.4.0
@@ -13,10 +13,9 @@ COMMENT=	Extra anjuta 3 plugins
 LIB_DEPENDS=	anjuta-3:${PORTSDIR}/devel/anjuta3
 		
 USE_XZ=		yes
-USES=		gettext pkgconfig
+USES=		gettext gmake pkgconfig
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USE_GMAKE=	yes
 USE_GNOME=	intltool libxml2 gtk30
 CPPFLAGS+=	-I${LOCALBASE}/include 
 LDFLAGS+=	-L${LOCALBASE}/lib

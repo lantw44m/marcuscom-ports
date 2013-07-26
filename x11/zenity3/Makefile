@@ -1,6 +1,6 @@
 # Created by: Franz Klammer <klammer@webonaut.com>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/zenity3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	zenity
 PORTVERSION=	3.6.0
@@ -16,8 +16,7 @@ LICENSE=	LGPL20
 BUILD_DEPENDS=	itstool:${PORTSDIR}/textproc/itstool
 
 LATEST_LINK=	zenity3
-USES=		gettext pathfix
-USE_GMAKE=	yes
+USES=		gettext gmake pathfix
 USE_GNOME=	gnomeprefix gtk30 intlhack
 USE_XORG=	x11
 USE_XZ=		yes

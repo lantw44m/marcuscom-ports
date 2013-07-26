@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/mail/evolution-kolab/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	evolution-kolab
 PORTVERSION=	3.4.4
@@ -18,9 +18,8 @@ RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 
 EVO_VER=	3.4.1
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_SQLITE=	yes
 MAKE_JOBS_UNSAFE=yes
 USE_GNOME=	gnomeprefix intlhack ltasneededhack libxml2 gconf2 

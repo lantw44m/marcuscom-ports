@@ -1,6 +1,6 @@
 # Created by: Adam Weinberger, based off kiesel's ximian-exchange port
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/mail/evolution-exchange/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	evolution-exchange
 PORTVERSION=	2.32.1
@@ -19,9 +19,8 @@ RUN_DEPENDS=	${EVO_PC_FILE}:${PORTSDIR}/mail/evolution
 CONFLICTS=	evolution-exchange-3.[0-9]*
 
 USE_BZIP2=	yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_BDB=	41+
 USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack ltasneededhack

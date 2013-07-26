@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/www/libsocialweb/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libsocialweb
 PORTVERSION=	0.25.20
@@ -18,10 +18,9 @@ LIB_DEPENDS=	rest-0.7:${PORTSDIR}/devel/librest \
 
 USE_GNOME=	glib20 intlhack gconf2 introspection:build gnomehier
 USE_XZ=		yes
-USE_GMAKE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 CONFIGURE_ARGS=	--enable-vala-bindings
 # review if we want all the services enabled, because of not completely
 # safe public API security wise?

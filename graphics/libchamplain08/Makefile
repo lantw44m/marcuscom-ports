@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/graphics/libchamplain08/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	libchamplain
 PORTVERSION=	0.8.3
@@ -15,11 +15,10 @@ LIB_DEPENDS=	clutter-gtk-0.10:${PORTSDIR}/graphics/clutter-gtk \
 
 LATEST_LINK=	libchamplain08
 USE_BZIP2=	yes
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME=	gtk20 ltverhack:1 gnomehier
 USE_GL=		gl
 USE_AUTOTOOLS=	libtool
-USE_GMAKE=	yes
 USE_SQLITE=	yes
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes

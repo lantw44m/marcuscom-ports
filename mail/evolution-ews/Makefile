@@ -1,6 +1,6 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/mail/evolution-ews/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	evolution-ews
 PORTVERSION=	3.6.4
@@ -18,10 +18,9 @@ RUN_DEPENDS=	evolution>=${EVO_VER}:${PORTSDIR}/mail/evolution3
 
 EVO_VER=	3.6.0
 USE_XZ=		yes
-USES=		gettext pathfix pkgconfig
+USES=		gettext gmake pathfix pkgconfig
 USE_AUTOTOOLS=	libtool
 USE_SQLITE=	yes
-USE_GMAKE=	yes
 USE_BDB=	5
 USE_OPENLDAP=	yes
 USE_GNOME=	gnomeprefix intlhack ltasneededhack

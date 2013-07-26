@@ -1,6 +1,6 @@
 # Created by: Adam Weinberger <adamw@FreeBSD.org>
 # $FreeBSD$
-#    $MCom$
+#    $MCom: ports/trunk/graphics/evince3/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	evince
 PORTVERSION=	3.6.1
@@ -27,9 +27,8 @@ USE_XZ=		yes
 USE_AUTOTOOLS=	libtool
 USE_XORG=	ice
 INSTALLS_ICONS=	yes
-USE_GMAKE=	yes
 INSTALLS_OMF=	yes
-USES=		pathfix gettext pkgconfig desktop-file-utils
+USES=		desktop-file-utils gettext gmake pathfix pkgconfig
 USE_GNOME=	intlhack gnomeprefix ltasneededhack introspection:build
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

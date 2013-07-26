@@ -14,10 +14,9 @@ COMMENT=	A graphic library for GTK+
 
 LATEST_LINK=	gdk-pixbuf2
 USE_XZ=		yes
-USE_GMAKE=	yes
 USE_XORG=	xt xi x11
 USE_AUTOTOOLS=	libtool
-USES=		pathfix pkgconfig
+USES=		gmake pathfix pkgconfig
 USE_GNOME+=	gnomehier glib20 ltverhack introspection:build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes

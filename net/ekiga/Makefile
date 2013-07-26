@@ -1,6 +1,6 @@
 # Created by: roger@FreeBSD.org
 # $FreeBSD$
-#  $MCom$
+#  $MCom: ports/trunk/net/ekiga/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	ekiga
 PORTVERSION=	2.0.11
@@ -16,8 +16,7 @@ LIB_DEPENDS=	opal_r:${PORTSDIR}/net/opal
 CONFLICTS=	ekiga3-3.*
 
 USE_BZIP2=	yes
-USE_GMAKE=	yes
-USES=		gettext pathfix
+USES=		gettext gmake pathfix
 USE_SDL=	sdl
 INSTALLS_OMF=	yes
 USE_GNOME=	libgnomeui gnomeprefix gnomedocutils \
@@ -28,7 +27,6 @@ LDFLAGS+=	-L${LOCALBASE}/lib ${PTHREAD_LIBS}
 CONFIGURE_ENV=	SDL_CONFIG="${SDL_CONFIG}"
 CONFIGURE_ARGS=	--with-pwlib-dir=${LOCALBASE} \
 		--with-opal-dir=${LOCALBASE}
-MAKE_JOBS_SAFE=	yes
 
 GCONF_SCHEMAS=	ekiga.schemas
 MAN1=		ekiga.1
