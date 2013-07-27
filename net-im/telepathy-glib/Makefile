@@ -24,9 +24,4 @@ MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-vala-bindings
 
-# manual patch until pathfix is updated to include {libdir}
-post-patch:
-	@${REINPLACE_CMD} -e 's|\(^pkgconfigdir =\).*|\1 ${PREFIX}/libdata/pkgconfig|' \
-		${WRKSRC}/telepathy-glib/Makefile.in
-
 .include <bsd.port.mk>
