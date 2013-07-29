@@ -4,8 +4,8 @@ case $2 in
 POST-INSTALL)
 	/bin/mkdir -p /var/db/colord/icc
 	/bin/chmod 0755 /var/db/colord
-	/bin/chown colord:colord /var/db/colord
-	/bin/chown colord:colord /var/db/colord/icc
+	/bin/sbin/chown colord:colord /var/db/colord
+	/bin/sbin/chown colord:colord /var/db/colord/icc
 	exit 0
 	;;
 esac
