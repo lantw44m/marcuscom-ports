@@ -18,8 +18,6 @@ USE_XZ=		yes
 
 LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification
 
-CONFLICTS=	libwnck-3.[0-9]*
-
 USE_XORG=	xres x11
 USE_GNOME=	gtk20 ltverhack referencehack intlhack introspection
 USES=		bison gettext gmake pathfix

@@ -4,7 +4,7 @@
 
 PORTNAME=	libwnck
 PORTVERSION=	3.4.5
-PORTREVISION?=	0
+PORTREVISION?=	1
 CATEGORIES=	x11-toolkits gnome
 MASTER_SITES=	GNOME
 DIST_SUBDIR=	gnome3
@@ -18,14 +18,13 @@ USE_XZ=		yes
 
 LIB_DEPENDS=	startup-notification-1:${PORTSDIR}/x11/startup-notification
 
-CONFLICTS=	libwnck-2.[0-9]*
-
 LATEST_LINK=	libwnck3
 USE_XORG=	xres x11
 USE_GNOME=	gtk30 intlhack introspection ltverhack referencehack
 USES=		bison gettext gmake pathfix
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
+CONFIGURE_ARGS=	--disable-tools
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 
