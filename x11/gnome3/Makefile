@@ -35,6 +35,7 @@ RUN_DEPENDS?=	gnome-panel>=3.0.0:${PORTSDIR}/x11/gnome-panel3 \
 		metacity>=2.34.0:${PORTSDIR}/x11-wm/metacity3 \
 		gnome-control-center>=3.0.0:${PORTSDIR}/sysutils/gnome-control-center3 \
 		${LOCALBASE}/share/gnome-background-properties/gnome-backgrounds.xml:${PORTSDIR}/x11-themes/gnome-backgrounds \
+		caribou:${PORTSDIR}/accessibility/caribou \
 		${LOCALBASE}/share/help/C/gnome-help/index.page:${PORTSDIR}/misc/gnome-user-docs3 \
 		${LOCALBASE}/share/sounds/freedesktop/index.theme:${PORTSDIR}/audio/freedesktop-sound-theme
 
