@@ -14,18 +14,18 @@ COMMENT=	Gnome On-Screen keyboard
 LICENSE=	LGPL20
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	clutter-glx-1.0:${PORTSDIR}/graphics/clutter \
-		gee-0.8:${PORTSDIR}/devel/libgee \
-		xklavier:${PORTSDIR}/x11/libxklavier
+LIB_DEPENDS=	libclutter-glx-1.0.so:${PORTSDIR}/graphics/clutter \
+		libgee-0.8.so:${PORTSDIR}/devel/libgee \
+		libxklavier.so:${PORTSDIR}/x11/libxklavier
 RUN_DEPENDS=	py*-atspi>=2.1.91:${PORTSDIR}/accessibility/py-atspi
 
 USE_XZ=		yes
-MAKE_JOBS_UNSAFE=yes
 USES=		gettext gmake pathfix pkgconfig shebangfix
 SHEBANG_FILES=	tools/fix_gir.py tools/make_schema.py
 USE_PYTHON=	yes
 USE_XORG=	x11 xtst
-USE_GNOME=	gnomehier pygobject3 gtk30 intlhack libxml2 introspection:build
+USE_GNOME=	gnomehier gtk30 intlhack introspection:build libxml2 \
+		libxslt:build pygobject3
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
