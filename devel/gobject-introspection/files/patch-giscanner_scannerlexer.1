@@ -1,0 +1,12 @@
+--- giscanner/scannerlexer.l.orig	2013-08-18 07:37:16.000000000 +0900
++++ giscanner/scannerlexer.l	2013-08-18 07:40:32.000000000 +0900
+@@ -134,7 +134,7 @@
+ ","					{ return ','; }
+ "->"					{ return ARROW; }
+ 
+-"__asm" 	        	        { if (!parse_ignored_macro()) REJECT; }
++"__asm"[\t\f\v\r ]+"volatile" 	        { if (!parse_ignored_macro()) REJECT; }
+ "__asm__" 	        	        { if (!parse_ignored_macro()) REJECT; }
+ "__attribute__" 		        { if (!parse_ignored_macro()) REJECT; }
+ "__attribute" 		                { if (!parse_ignored_macro()) REJECT; }
+
