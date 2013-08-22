@@ -1,9 +1,9 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom: ports/trunk/www/epiphany-extensions3/Makefile 18610 2013-06-30 16:33:05Z marcus $
+#
 
 PORTNAME=	epiphany-extensions
-PORTVERSION=	3.4.0
+PORTVERSION=	3.6.0
 CATEGORIES=	www gnome
 MASTER_SITES=	GNOME
 PKGNAMESUFFIX=	3
@@ -12,10 +12,9 @@ DIST_SUBDIR=	gnome3
 MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	A set of add-ons for the Epiphany web browser
 
-BUILD_DEPENDS=	epiphany>=3.4.0:${PORTSDIR}/www/epiphany3
-LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre \
-		webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3
-RUN_DEPENDS=	epiphany>=3.4.0:${PORTSDIR}/www/epiphany3
+BUILD_DEPENDS=	epiphany>=3.6.0:${PORTSDIR}/www/epiphany3
+LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3
+RUN_DEPENDS=	epiphany>=3.6.0:${PORTSDIR}/www/epiphany3
 
 CONFLICTS=	epiphany-extensions-2.[0-9]*
 
@@ -25,16 +24,14 @@ USE_XZ=		yes
 USE_GNOME=	gnomeprefix intlhack
 INSTALLS_OMF=	yes
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include ${PTHREAD_CFLAGS}
+CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
-CONFIGURE_ARGS=	LIBS="${PTHREAD_LIBS}"
-CONFIGURE_ARGS+=--disable-silent-rules
 GLIB_SCHEMAS=	org.gnome.epiphanyextensions.gschema.xml
 
 EPHY_EXTENSIONS=really-all
 EPHY_VERSION=	${PORTVERSION:R}
 
-PLIST_SUB=	VERSION=${EPHY_VERSION} EPHY_VERSION=3.4
+PLIST_SUB=	VERSION=${EPHY_VERSION} EPHY_VERSION=3.6
 
 OPTIONS_DEFINE=	OPENSP
 OPENSP_DESC=	OpenSP SGML support
