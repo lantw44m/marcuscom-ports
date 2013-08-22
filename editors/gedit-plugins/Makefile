@@ -35,15 +35,13 @@ OPTIONS_DEFINE=	PYTHON
 PYTHON_DESC=	Build python plugins
 
 .if defined(PACKAGE_BUILDING)
-.undef WITHOUT_GNOME
-WITH_GNOME=	yes
+OPTIONS_DEFAULT=PYTHON
 .endif
 
 .include <bsd.port.options.mk>
 
-.if ${HAVE_GNOME:Mpygtksourceview}!="" && ${ARCH}!="sparc64" || ${PORT_OPTIONS:MPYTHON}
+.if ${PORT_OPTIONS:MPYTHON}
 USE_PYTHON=	yes
-.include "${PORTSDIR}/Mk/bsd.python.mk"
 USE_GNOME+=	pygtksourceview
 BUILD_DEPENDS+=	${PYTHON_SITELIBDIR}/gtk-2.0/vtemodule.so:${PORTSDIR}/x11-toolkits/py-vte \
 		${PYTHON_SITELIBDIR}/dbus/bus.py:${PORTSDIR}/devel/py-dbus \
@@ -62,4 +60,4 @@ post-patch:
 	@${REINPLACE_CMD} -e 's| \\t\\r\\n\\f|[:space:]|g' \
 	    	${WRKSRC}/configure
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
