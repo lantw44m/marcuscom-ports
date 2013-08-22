@@ -17,6 +17,7 @@ LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
 		libsoup-gnome-2.4.so:${PORTSDIR}/devel/libsoup-gnome \
 		libgcr-3.so:${PORTSDIR}/security/gcr \
 		libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
+		libnss3.so:${PORTSDIR}/security/nss \
 		libnotify.so:${PORTSDIR}/devel/libnotify \
 		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/iso-codes.pc:${PORTSDIR}/misc/iso-codes \
@@ -49,21 +50,13 @@ PLIST_SUB+=	EPHY_VERSION="${PORTVERSION:C/^([0-9]+\.[0-9]+).*/\1/}"
 
 MAN1=		epiphany.1
 
-OPTIONS_DEFINE=	AVAHI NSS SPELLCHECK
-OPTIONS_DEFAULT=AVAHI NSS SPELLCHECK
-NSS_DESC=	Import passwords from 2.26 and older
+OPTIONS_DEFINE=	AVAHI SPELLCHECK
+OPTIONS_DEFAULT=AVAHI SPELLCHECK
 SPELLCHECK_DESC=Enable spell checking by default
 
 .include <bsd.port.options.mk>
 
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
-
-.if ${PORT_OPTIONS:MNSS}
-LIB_DEPENDS+=	libnss3.so:${PORTSDIR}/security/nss
-CONFIGURE_ARGS+=--enable-nss
-.else
-CONFIGURE_ARGS+=--disable-nss
-.endif
 
 .if ${PORT_OPTIONS:MAVAHI}
 LIB_DEPENDS+=	libavahi-gobject.so:${PORTSDIR}/net/avahi-app
