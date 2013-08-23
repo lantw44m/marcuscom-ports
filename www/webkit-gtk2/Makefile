@@ -4,7 +4,7 @@
 
 PORTNAME=	webkit
 PORTVERSION=	1.8.3
-PORTREVISION=	1
+PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://webkitgtk.org/releases/
 PKGNAMESUFFIX=	-gtk2
@@ -49,7 +49,7 @@ OPTIONS_DEFINE=	WEBGL DEBUG
 OPTIONS_DEFAULT=WEBGL
 WEBGL_DESC=	Enable Web GL support
 
-.include <bsd.port.pre.mk>
+.include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MWEBGL}
 USE_GL=		gl
@@ -94,4 +94,4 @@ post-install:
 	${LN} -sf ${PREFIX}/libdata/pkgconfig/webkit-1.0.pc \
 		${PREFIX}/libdata/pkgconfig/webkitgtk-1.0.pc
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
