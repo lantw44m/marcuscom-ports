@@ -68,6 +68,8 @@ CONFIGURE_ARGS+=--disable-debug
 CFLAGS+=	-mminimal-toc
 .endif
 
+.include <bsd.port.pre.mk>
+
 .if ${PERL_LEVEL} >= 501400
 BUILD_DEPENDS+=	p5-Switch>0:${PORTSDIR}/lang/p5-Switch
 .endif
@@ -94,4 +96,4 @@ post-install:
 	${LN} -sf ${PREFIX}/libdata/pkgconfig/webkit-1.0.pc \
 		${PREFIX}/libdata/pkgconfig/webkitgtk-1.0.pc
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
