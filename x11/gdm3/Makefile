@@ -101,6 +101,8 @@ CONFIGURE_ARGS+=	--disable-ipv6
 post-patch:
 	@${REINPLACE_CMD} -e 's|root:root|root:wheel|g' \
 		${WRKSRC}/data/Makefile.in
+	@${REINPLACE_CMD} -e 's|-lexecinfo||g' \
+		${WRKSRC}/common/Makefile.in
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
 	    	-e 's|%%LOCALBASE%%|${LOCALBASE}|g' \
 	    	${WRKSRC}/daemon/gdm-session-worker.c
