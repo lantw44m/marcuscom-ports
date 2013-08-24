@@ -1,5 +1,5 @@
---- scripts/xdg-email.orig	2012-09-25 19:18:27.000000000 +0000
-+++ scripts/xdg-email	2012-09-25 19:18:41.000000000 +0000
+--- scripts/xdg-email.orig	2013-08-24 17:56:29.000000000 +0200
++++ scripts/xdg-email	2013-08-24 18:03:28.000000000 +0200
 @@ -395,13 +395,13 @@
          MAILTO=$(echo "$MAILTO" | sed 's/^/to=/' | sed 's/?/\&/')
      fi
@@ -12,7 +12,7 @@
      SUBJECT=$(echo "$MAILTO" | grep '^subject=' | tail -n 1)
      BODY=$(echo "$MAILTO" | grep '^body=' | tail -n 1)
 -    ATTACH=$(echo "$MAILTO" | sed 's/^attach=/\n\nfile:\/\//g' | awk '/^file:/ { printf "%s,",$0 }' | sed 's/,$//')
-+    ATTACH=$(for attachment in $(echo "$MAILTO" | sed -ne 's,^attach=,file://,gp') ; do printf "%s," "$attachment" ; done; ATTACH=${ATTACH%,}
++    ATTACH=$(for attachment in $(echo "$MAILTO" | sed -ne 's,^attach=,file://,gp') ; do printf "%s," "$attachment" ; done); ATTACH=${ATTACH%,}
  
      if [ -z "$TO" ] ; then
          NEWMAILTO=
