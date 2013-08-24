@@ -11,15 +11,15 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Interface privider to access the user's online accounts.
 
 BUILD_DEPENDS=	docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
-LIB_DEPENDS=	webkitgtk-3.0:${PORTSDIR}/www/webkit-gtk3 \
-		json-glib:${PORTSDIR}/devel/json-glib \
-		notify:${PORTSDIR}/devel/libnotify \
-		gnome-keyring:${PORTSDIR}/security/libgnome-keyring \
-		secret-1:${PORTSDIR}/security/libsecret \
-		rest-0.7:${PORTSDIR}/devel/librest
+LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
+		json-glib-1.0.so:${PORTSDIR}/devel/json-glib \
+		libnotify.so:${PORTSDIR}/devel/libnotify \
+		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
+		libsecret-1.so:${PORTSDIR}/security/libsecret \
+		librest-0.7.so:${PORTSDIR}/devel/librest
 
 USE_XZ=		yes
-USE_GNOME=	gtk30 intlhack introspection:build
+USE_GNOME=	gtk30 intlhack introspection:build libxslt:build
 USES=		gettext gmake pathfix pkgconfig
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
