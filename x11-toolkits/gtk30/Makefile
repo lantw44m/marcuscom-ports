@@ -3,7 +3,7 @@
 #   $MCom: ports/trunk/x11-toolkits/gtk30/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gtk
-PORTVERSION=	3.8.2
+PORTVERSION=	3.8.4
 PORTREVISION?=	0
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	GNOME
@@ -22,17 +22,18 @@ LATEST_LINK=	gtk30
 .if !defined(REFERENCE_PORT)
 
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/atk-bridge-2.0.pc:${PORTSDIR}/accessibility/at-spi2-atk
+# something goes wrong with USE_GNOME=introspection so do it manualy for now
 BUILD_DEPENDS+=	g-ir-scanner:${PORTSDIR}/devel/gobject-introspection
 RUN_DEPENDS+=	${LOCALBASE}/share/icons/hicolor/index.theme:${PORTSDIR}/misc/hicolor-icon-theme \
 		${LOCALBASE}/libdata/pkgconfig/atk-bridge-2.0.pc:${PORTSDIR}/accessibility/at-spi2-atk
 
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USE_GNOME=	atk pango gdkpixbuf2 ltverhack gtk-update-icon-cache
 #		introspection:build
-USES=		gettext gmake pathfix pkgconfig
+USES=		gettext gmake pathfix perl5 pkgconfig
 USE_XORG=	xext xrender x11 xinerama xi xrandr xcursor xfixes xdamage \
 		xcomposite
 CONFIGURE_ARGS=	--enable-gtk2-dependency --disable-packagekit
@@ -53,7 +54,7 @@ COLORD_DESC=	Color profile support
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MCUPS}
-LIB_DEPENDS+=	cups:${PORTSDIR}/print/cups-client
+LIB_DEPENDS+=	libcups.so:${PORTSDIR}/print/cups-client
 CONFIGURE_ARGS+=--enable-cups=auto
 PLIST_SUB+=	CUPS=""
 .else
@@ -66,7 +67,7 @@ CONFIGURE_ARGS+=	--enable-debug=yes
 .endif
 
 .if ${PORT_OPTIONS:MCOLORD}
-LIB_DEPENDS+=	colord:${PORTSDIR}/graphics/colord
+LIB_DEPENDS+=	libcolord.so:${PORTSDIR}/graphics/colord
 CONFIGURE_ARGS+=--enable-colord
 .else
 CONFIGURE_ARGS+=--disable-colord
