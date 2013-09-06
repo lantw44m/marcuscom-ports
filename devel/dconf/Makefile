@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME?=	dconf
-PORTVERSION=	0.14.1
+PORTVERSION=	0.16.1
 PORTREVISION=	0
 CATEGORIES=	devel gnome
 MASTER_SITES=	GNOME
@@ -28,7 +28,7 @@ LDFLAGS+=	-L${LOCALBASE}/lib
 
 DCONF_SLAVE?=	no
 
-.if ${DCONF_SLAVE} == "editor"
+.if ${DCONF_SLAVE} == editor
 USE_GNOME+=	gtk30
 INSTALLS_ICONS=	yes
 GLIB_SCHEMAS=	ca.desrt.dconf-editor.gschema.xml
@@ -37,7 +37,7 @@ LIB_DEPENDS+=	libdconf.so:${PORTSDIR}/devel/dconf
 CONFIGURE_ARGS+=--disable-editor
 .endif
 
-.if ${DCONF_SLAVE} == "no"
+.if ${DCONF_SLAVE} == no
 MAN1=		dconf-editor.1 dconf-service.1 dconf.1
 MAN7=		dconf.7
 .endif
@@ -54,10 +54,6 @@ post-patch:
 		${WRKSRC}/bin/Makefile.in \
 		${WRKSRC}/client/Makefile.in \
 		${WRKSRC}/editor/Makefile.in
-
-#pre-build:
-#	${GMAKE} -C ${WRKSRC}/client dconf-client.c libdconf.so.0
-#	${GMAKE} -C ${WRKSRC}/dbus-1 dconf-dbus-1.c libdconf-dbus-1.so.0
 
 post-install:
 	-${LOCALBASE}/bin/gio-querymodules ${PREFIX}/lib/gio/modules

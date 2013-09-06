@@ -3,7 +3,7 @@
 #   $MCom$
 
 PORTNAME=	dconf
-PORTREVISION=	1
+PORTREVISION=	0
 PKGNAMESUFFIX=	-editor
 
 COMMENT=	configuration editor for dconf
