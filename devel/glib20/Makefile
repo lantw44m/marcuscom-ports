@@ -1,5 +1,5 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: head/devel/glib20/Makefile 313633 2013-03-08 10:51:34Z kwm $
+# $FreeBSD: head/devel/glib20/Makefile 326307 2013-09-04 18:06:07Z madpilot $
 #   $MCom$
 
 PORTNAME=	glib
@@ -23,13 +23,13 @@ PORTSCOUT=	limitw:1,even
 LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
 		ffi:${PORTSDIR}/devel/libffi
 
-USES=		gettext gmake iconv pathfix pkgconfig shebangfix
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
+USES=		gettext gmake iconv pathfix pkgconfig shebangfix
 USE_GNOME=	ltverhack
 USE_PYTHON=	2.5+
 USE_PERL5=	yes
-CONFIGURE_ARGS=	--enable-static --with-libiconv=gnu \
+CONFIGURE_ARGS=	--enable-static \
 		--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc \
 		--disable-man --without-xml-catalog \
 		--with-pcre=system \
@@ -53,6 +53,12 @@ CONFIGURE_ARGS+=--disable-dtrace
 #.else
 #CONFIGURE_ARGS+=--enable-dtrace
 #.endif
+
+.if exists(/usr/include/iconv.h) && ${OSVERSION} >= 1000043 
+CONFIGURE_ARGS+=	--with-libiconv=native
+.else
+CONFIGURE_ARGS+=	--with-libiconv=gnu
+.endif
 
 .if ${ARCH} == powerpc64
 EXTRA_PATCHES=	${FILESDIR}/extra-arch-powerpc64
