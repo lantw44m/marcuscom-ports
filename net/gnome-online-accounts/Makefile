@@ -12,7 +12,7 @@ COMMENT=	Interface privider to access the user's online accounts.
 
 BUILD_DEPENDS=	docbook-xsl>=0:${PORTSDIR}/textproc/docbook-xsl
 LIB_DEPENDS=	libwebkitgtk-3.0.so:${PORTSDIR}/www/webkit-gtk3 \
-		json-glib-1.0.so:${PORTSDIR}/devel/json-glib \
+		libjson-glib-1.0.so:${PORTSDIR}/devel/json-glib \
 		libnotify.so:${PORTSDIR}/devel/libnotify \
 		libgnome-keyring.so:${PORTSDIR}/security/libgnome-keyring \
 		libsecret-1.so:${PORTSDIR}/security/libsecret \
