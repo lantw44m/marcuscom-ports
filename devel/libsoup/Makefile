@@ -20,7 +20,7 @@ USE_XZ=		yes
 
 .if !defined(REFERENCE_PORT)
 
-USES=		gettext gmake pathfix
+USES=		gettext gmake pathfix pkgconfig
 USE_GNOME=	gnomehier glib20 libxml2 ltverhack referencehack intltool
 USE_SQLITE=	3
 USE_LDCONFIG=	yes
