@@ -68,6 +68,12 @@ CONFIGURE_ARGS+=--disable-debug
 CFLAGS+=	-mminimal-toc
 .endif
 
+CCISCLANG!=     ${CC} --version
+
+.if !empty(CCISCLANG:M*clang*)
+CPPFLAGS+=	-Wno-c++11-extensions
+.endif
+
 .include <bsd.port.pre.mk>
 
 .if ${PERL_LEVEL} >= 501400
