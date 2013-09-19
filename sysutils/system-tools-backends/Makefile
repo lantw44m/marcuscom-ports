@@ -12,13 +12,12 @@ MAINTAINER=	gnome@FreeBSD.org
 COMMENT=	Backend system admin scripts for gnome-system-tools
 
 BUILD_DEPENDS=	p5-Net-DBus>=0:${PORTSDIR}/devel/p5-Net-DBus
-LIB_DEPENDS=	dbus-glib-1:${PORTSDIR}/devel/dbus-glib \
-		polkit-gobject-1:${PORTSDIR}/sysutils/polkit
+LIB_DEPENDS=	libdbus-glib-1.so:${PORTSDIR}/devel/dbus-glib \
+		libpolkit-gobject-1.so:${PORTSDIR}/sysutils/polkit
 RUN_DEPENDS=	p5-Net-DBus>=0:${PORTSDIR}/devel/p5-Net-DBus
 
 USE_BZIP2=	yes
-USE_PERL5=	yes
-USES=		gmake pathfix
+USES=		gmake pathfix perl5
 USE_GNOME=	intlhack glib20
 GNU_CONFIGURE=	yes
 USE_GNOME_SUBR=	yes

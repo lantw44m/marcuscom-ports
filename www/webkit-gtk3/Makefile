@@ -15,26 +15,26 @@ COMMENT=	Opensource browser engine using the GTK+ 3 toolkit
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:${PORTSDIR}/textproc/flex \
 		${LOCALBASE}/bin/gperf:${PORTSDIR}/devel/gperf \
 		gtkdoc-rebase:${PORTSDIR}/textproc/gtk-doc
-LIB_DEPENDS=	enchant:${PORTSDIR}/textproc/enchant \
-		secret-1:${PORTSDIR}/security/libsecret \
-		icutu:${PORTSDIR}/devel/icu \
-		harfbuzz:${PORTSDIR}/print/harfbuzz \
-		webp:${PORTSDIR}/graphics/webp \
-		curl:${PORTSDIR}/ftp/curl \
-		soup-2.4:${PORTSDIR}/devel/libsoup
+LIB_DEPENDS=	libenchant.so:${PORTSDIR}/textproc/enchant \
+		libsecret-1.so:${PORTSDIR}/security/libsecret \
+		libicutu.so:${PORTSDIR}/devel/icu \
+		libharfbuzz.so:${PORTSDIR}/print/harfbuzz \
+		libwebp.so:${PORTSDIR}/graphics/webp \
+		libcurl.so:${PORTSDIR}/ftp/curl \
+		libsoup-2.4.so:${PORTSDIR}/devel/libsoup
 
 LATEST_LINK=	${PORTNAME}${PKGNAMESUFFIX}
 
 USE_XZ=		yes
 USE_GSTREAMER1=	yes
 USE_XORG=	xt xdamage xcomposite
-USES=		bison gettext gmake pkgconfig shebangfix
+USES=		bison gettext gmake perl5 pkgconfig shebangfix
 USE_RUBY=	yes
 RUBY_NO_RUN_DEPENDS=yes
 USE_GNOME=	cairo gnomehier gtk20 gtk30 introspection:build \
 		libxslt:build
 USE_SQLITE=	3
-USE_PERL5_BUILD=yes
+USE_PERL5=	build
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV=	ac_cv_path_FLEX="${LOCALBASE}/bin/flex" \

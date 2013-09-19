@@ -19,10 +19,9 @@ BUILD_DEPENDS=	intltoolize:${PORTSDIR}/textproc/intltool \
 
 CONFLICTS=	ekiga-2.*
 
-USE_PERL5=	yes
 USE_AUTOTOOLS=	libtool
 GNU_CONFIGURE=	yes
-USES=		gettext gmake pathfix pkgconfig
+USES=		gettext gmake pathfix perl5 pkgconfig
 USE_XORG=	xv
 USE_GNOME=	gtk20
 DIST_SUBDIR=	gnome2

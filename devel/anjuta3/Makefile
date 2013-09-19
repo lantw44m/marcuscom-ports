@@ -13,9 +13,9 @@ COMMENT=	Integrated Development Environment for C and C++
 
 BUILD_DEPENDS=	glade>=3.12.0:${PORTSDIR}/devel/glade \
 		valac:${PORTSDIR}/lang/vala
-LIB_DEPENDS=	pcre:${PORTSDIR}/devel/pcre \
-		gladeui-2:${PORTSDIR}/devel/glade \
-		gdl-3:${PORTSDIR}/x11-toolkits/gdl3
+LIB_DEPENDS=	libpcre.so:${PORTSDIR}/devel/pcre \
+		libgladeui-2.so:${PORTSDIR}/devel/glade \
+		libgdl-3.so:${PORTSDIR}/x11-toolkits/gdl3
 RUN_DEPENDS=	${LOCALBASE}/libdata/pkgconfig/gnome-icon-theme.pc:${PORTSDIR}/misc/gnome-icon-theme \
 		autogen:${PORTSDIR}/devel/autogen \
 		automake-1.12:${PORTSDIR}/devel/automake \
@@ -28,9 +28,8 @@ CONFLICTS=	anjuta-2.[0-9]*
 
 LATEST_LINK=	anjuta3
 USE_XZ=		yes
-USES=		bison gettext gmake pathfix pkgconfig shared-mime-info
+USES=		bison gettext gmake pathfix perl5 pkgconfig shared-mime-info
 INSTALLS_ICONS=	yes
-USE_PERL5=	yes
 USE_PYTHON=	yes
 USE_LDCONFIG=	yes
 USE_GNOME=	gnomeprefix vte3 gtksourceview3 libgda5 libwnck3
@@ -72,8 +71,8 @@ VALA_DESC=	Vala support
 
 .if ${PORT_OPTIONS:MSVN}
 BUILD_DEPENDS+=	svn:${PORTSDIR}/devel/subversion
-LIB_DEPENDS+=	apr-1:${PORTSDIR}/devel/apr1
-LIB_DEPENDS+=	neon:${PORTSDIR}/www/neon29
+LIB_DEPENDS+=	libapr-1.so:${PORTSDIR}/devel/apr1
+LIB_DEPENDS+=	libneon.so:${PORTSDIR}/www/neon29
 RUN_DEPENDS+=	svn:${PORTSDIR}/devel/subversion
 PLIST_SUB+=	SVN=""
 .else
@@ -82,7 +81,7 @@ PLIST_SUB+=	SVN="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MDEVHELP}
-LIB_DEPENDS+=	devhelp-3:${PORTSDIR}/devel/devhelp3
+LIB_DEPENDS+=	libdevhelp-3.so:${PORTSDIR}/devel/devhelp3
 PLIST_SUB+=	DEVHELP=""
 .else
 CONFIGURE_ARGS+=--disable-plugin-devhelp

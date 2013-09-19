@@ -11,14 +11,13 @@ MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Contacts manager for gnome
 
 BUILD_DEPENDS=	vala>=0.14.0:${PORTSDIR}/lang/vala
-LIB_DEPENDS=	goa-1.0:${PORTSDIR}/net/gnome-online-accounts \
-		folks.25:${PORTSDIR}/net-im/folks \
-		notify:${PORTSDIR}/devel/libnotify
+LIB_DEPENDS=	libgoa-1.0.so:${PORTSDIR}/net/gnome-online-accounts \
+		libfolks.so.25:${PORTSDIR}/net-im/folks \
+		libnotify.so:${PORTSDIR}/devel/libnotify
 
 USE_XZ=		yes
 USE_GNOME=	intlhack gtk30 gnomedesktop3 evolutiondataserver3
-USES=		gettext gmake pathfix pkgconfig
-USE_PERL5=	yes
+USES=		gettext gmake pathfix perl5 pkgconfig
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib

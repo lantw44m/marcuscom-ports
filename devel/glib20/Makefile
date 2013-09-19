@@ -20,15 +20,14 @@ PORTSCOUT=	limitw:1,even
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS+=	pcre:${PORTSDIR}/devel/pcre \
-		ffi:${PORTSDIR}/devel/libffi
+LIB_DEPENDS+=	libpcre.so:${PORTSDIR}/devel/pcre \
+		libffi.so:${PORTSDIR}/devel/libffi
 
 USE_AUTOTOOLS=	libtool
 USE_LDCONFIG=	yes
-USES=		gettext gmake iconv pathfix pkgconfig shebangfix
+USES=		gettext gmake iconv pathfix perl5 pkgconfig shebangfix
 USE_GNOME=	ltverhack
 USE_PYTHON=	2.5+
-USE_PERL5=	yes
 CONFIGURE_ARGS=	--enable-static \
 		--disable-gtk-doc --with-html-dir=${PREFIX}/share/doc \
 		--disable-man --without-xml-catalog \
