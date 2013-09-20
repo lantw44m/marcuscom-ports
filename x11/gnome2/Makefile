@@ -1,10 +1,10 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
 # $FreeBSD$
-#   $MCom$
+#   $MCom: ports/trunk/x11/gnome2/Makefile 18610 2013-06-30 16:33:05Z marcus $
 
 PORTNAME=	gnome2
 PORTVERSION=	2.32.1
-PORTREVISION?=	5
+PORTREVISION?=	6
 CATEGORIES?=	x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -95,7 +95,7 @@ RUN_DEPENDS+=	empathy:${PORTSDIR}/net-im/empathy \
 		${LOCALBASE}/libexec/deskbar-applet/deskbar-applet:${PORTSDIR}/deskutils/deskbar-applet \
 		${LOCALBASE}/lib/hamster-applet/hamster-applet:${PORTSDIR}/deskutils/hamster-applet \
 		${LOCALBASE}/lib/gtk-2.0/modules/libatk-bridge.so:${PORTSDIR}/accessibility/at-spi \
-		ekiga:${PORTSDIR}/net/ekiga3 \
+		ekiga:${PORTSDIR}/net-im/ekiga \
 		cheese:${PORTSDIR}/multimedia/cheese
 
 .  if ${ARCH} == "i386"
