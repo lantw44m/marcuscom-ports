@@ -332,71 +332,71 @@ include/webkitgtk-3.0/webkitdom/webkitdom.h
 include/webkitgtk-3.0/webkitdom/webkitdomdefines.h
 lib/girepository-1.0/JSCore-3.0.typelib
 lib/girepository-1.0/WebKit-3.0.typelib
-lib/girepository-1.0/WebKit2-3.0.typelib
+%%WEBKIT2%%lib/girepository-1.0/WebKit2-3.0.typelib
 lib/libjavascriptcoregtk-3.0.la
 lib/libjavascriptcoregtk-3.0.so
 lib/libjavascriptcoregtk-3.0.so.13
-lib/libwebkit2gtk-3.0.la
-lib/libwebkit2gtk-3.0.so
-lib/libwebkit2gtk-3.0.so.25
+%%WEBKIT2%%lib/libwebkit2gtk-3.0.la
+%%WEBKIT2%%lib/libwebkit2gtk-3.0.so
+%%WEBKIT2%%lib/libwebkit2gtk-3.0.so.25
 lib/libwebkitgtk-3.0.la
 lib/libwebkitgtk-3.0.so
 lib/libwebkitgtk-3.0.so.18
-lib/webkit2gtk-3.0/injected-bundle/libwebkit2gtkinjectedbundle.la
-lib/webkit2gtk-3.0/injected-bundle/libwebkit2gtkinjectedbundle.so
+%%WEBKIT2%%lib/webkit2gtk-3.0/injected-bundle/libwebkit2gtkinjectedbundle.la
+%%WEBKIT2%%lib/webkit2gtk-3.0/injected-bundle/libwebkit2gtkinjectedbundle.so
 libdata/pkgconfig/javascriptcoregtk-3.0.pc
-libdata/pkgconfig/webkit2gtk-3.0.pc
+%%WEBKIT2%%libdata/pkgconfig/webkit2gtk-3.0.pc
 libdata/pkgconfig/webkitgtk-3.0.pc
-libexec/WebKitPluginProcess
-libexec/WebKitWebProcess
+%%WEBKIT2%%libexec/WebKitPluginProcess
+%%WEBKIT2%%libexec/WebKitWebProcess
 share/gir-1.0/JSCore-3.0.gir
 share/gir-1.0/WebKit-3.0.gir
-share/gir-1.0/WebKit2-3.0.gir
-share/gtk-doc/html/webkit2gtk/WebKitBackForwardList.html
-share/gtk-doc/html/webkit2gtk/WebKitBackForwardListItem.html
-share/gtk-doc/html/webkit2gtk/WebKitContextMenu.html
-share/gtk-doc/html/webkit2gtk/WebKitContextMenuItem.html
-share/gtk-doc/html/webkit2gtk/WebKitCookieManager.html
-share/gtk-doc/html/webkit2gtk/WebKitDownload.html
-share/gtk-doc/html/webkit2gtk/WebKitFaviconDatabase.html
-share/gtk-doc/html/webkit2gtk/WebKitFileChooserRequest.html
-share/gtk-doc/html/webkit2gtk/WebKitFindController.html
-share/gtk-doc/html/webkit2gtk/WebKitFormSubmissionRequest.html
-share/gtk-doc/html/webkit2gtk/WebKitGeolocationPermissionRequest.html
-share/gtk-doc/html/webkit2gtk/WebKitHitTestResult.html
-share/gtk-doc/html/webkit2gtk/WebKitNavigationPolicyDecision.html
-share/gtk-doc/html/webkit2gtk/WebKitPermissionRequest.html
-share/gtk-doc/html/webkit2gtk/WebKitPlugin.html
-share/gtk-doc/html/webkit2gtk/WebKitPolicyDecision.html
-share/gtk-doc/html/webkit2gtk/WebKitPrintOperation.html
-share/gtk-doc/html/webkit2gtk/WebKitResponsePolicyDecision.html
-share/gtk-doc/html/webkit2gtk/WebKitSecurityManager.html
-share/gtk-doc/html/webkit2gtk/WebKitSettings.html
-share/gtk-doc/html/webkit2gtk/WebKitURIRequest.html
-share/gtk-doc/html/webkit2gtk/WebKitURIResponse.html
-share/gtk-doc/html/webkit2gtk/WebKitURISchemeRequest.html
-share/gtk-doc/html/webkit2gtk/WebKitWebContext.html
-share/gtk-doc/html/webkit2gtk/WebKitWebExtension.html
-share/gtk-doc/html/webkit2gtk/WebKitWebInspector.html
-share/gtk-doc/html/webkit2gtk/WebKitWebPage.html
-share/gtk-doc/html/webkit2gtk/WebKitWebResource.html
-share/gtk-doc/html/webkit2gtk/WebKitWebView.html
-share/gtk-doc/html/webkit2gtk/WebKitWebViewGroup.html
-share/gtk-doc/html/webkit2gtk/WebKitWindowProperties.html
-share/gtk-doc/html/webkit2gtk/annotation-glossary.html
-share/gtk-doc/html/webkit2gtk/ch01.html
-share/gtk-doc/html/webkit2gtk/ch02.html
-share/gtk-doc/html/webkit2gtk/home.png
-share/gtk-doc/html/webkit2gtk/index-all.html
-share/gtk-doc/html/webkit2gtk/index.html
-share/gtk-doc/html/webkit2gtk/index.sgml
-share/gtk-doc/html/webkit2gtk/left.png
-share/gtk-doc/html/webkit2gtk/right.png
-share/gtk-doc/html/webkit2gtk/style.css
-share/gtk-doc/html/webkit2gtk/up.png
-share/gtk-doc/html/webkit2gtk/webkit2gtk-WebKitError.html
-share/gtk-doc/html/webkit2gtk/webkit2gtk-WebKitVersion.html
-share/gtk-doc/html/webkit2gtk/webkit2gtk.devhelp2
+%%WEBKIT2%%share/gir-1.0/WebKit2-3.0.gir
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitBackForwardList.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitBackForwardListItem.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitContextMenu.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitContextMenuItem.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitCookieManager.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitDownload.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitFaviconDatabase.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitFileChooserRequest.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitFindController.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitFormSubmissionRequest.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitGeolocationPermissionRequest.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitHitTestResult.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitNavigationPolicyDecision.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitPermissionRequest.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitPlugin.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitPolicyDecision.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitPrintOperation.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitResponsePolicyDecision.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitSecurityManager.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitSettings.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitURIRequest.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitURIResponse.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitURISchemeRequest.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitWebContext.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitWebExtension.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitWebInspector.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitWebPage.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitWebResource.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitWebView.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitWebViewGroup.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/WebKitWindowProperties.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/annotation-glossary.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/ch01.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/ch02.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/home.png
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/index-all.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/index.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/index.sgml
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/left.png
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/right.png
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/style.css
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/up.png
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/webkit2gtk-WebKitError.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/webkit2gtk-WebKitVersion.html
+%%WEBKIT2%%share/gtk-doc/html/webkit2gtk/webkit2gtk.devhelp2
 share/gtk-doc/html/webkitgtk/WebKitFaviconDatabase.html
 share/gtk-doc/html/webkitgtk/WebKitFileChooserRequest.html
 share/gtk-doc/html/webkitgtk/WebKitGeolocationPolicyDecision.html
@@ -934,14 +934,14 @@ share/webkitgtk-3.0/webinspector/utilities.js
 @dirrm share/webkitgtk-3.0/images
 @dirrm share/webkitgtk-3.0
 @dirrm share/gtk-doc/html/webkitgtk
-@dirrm share/gtk-doc/html/webkit2gtk
+%%WEBKIT2%%@dirrm share/gtk-doc/html/webkit2gtk
 @dirrmtry share/gtk-doc/html
 @dirrmtry share/gtk-doc
-@dirrm lib/webkit2gtk-3.0/injected-bundle
-@dirrm lib/webkit2gtk-3.0
+%%WEBKIT2%%@dirrm lib/webkit2gtk-3.0/injected-bundle
+%%WEBKIT2%%@dirrm lib/webkit2gtk-3.0
 @dirrm include/webkitgtk-3.0/webkitdom
-@dirrm include/webkitgtk-3.0/webkit2/WebKit2
-@dirrm include/webkitgtk-3.0/webkit2
+%%WEBKIT2%%@dirrm include/webkitgtk-3.0/webkit2/WebKit2
+%%WEBKIT2%%@dirrm include/webkitgtk-3.0/webkit2
 @dirrm include/webkitgtk-3.0/webkit
 @dirrm include/webkitgtk-3.0/JavaScriptCore
 @dirrm include/webkitgtk-3.0
