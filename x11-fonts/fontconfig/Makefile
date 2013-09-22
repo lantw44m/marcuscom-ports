@@ -1,23 +1,24 @@
 # Created by: Joe Marcus Clarke <marcus@FreeBSD.org>
-# $FreeBSD: head/x11-fonts/fontconfig/Makefile 300897 2012-07-14 14:29:18Z beat $
+# $FreeBSD: head/x11-fonts/fontconfig/Makefile 327781 2013-09-20 23:51:14Z bapt $
 #   $MCom$
 
 PORTNAME=	fontconfig
-PORTVERSION=	2.10.93
+PORTVERSION=	2.10.95
 PORTREVISION?=	0
 PORTEPOCH?=	1
 CATEGORIES=	x11-fonts
 MASTER_SITES=	http://www.freedesktop.org/software/fontconfig/release/
 
 MAINTAINER=	gnome@FreeBSD.org
-COMMENT=	An XML-based font configuration API for X Windows
+COMMENT=	XML-based font configuration API for X Windows
+
+USE_BZIP2=	yes
 
 .if !defined(REFERENCE_PORT)
 
-LIB_DEPENDS=	freetype:${PORTSDIR}/print/freetype2 \
-		expat:${PORTSDIR}/textproc/expat2
+LIB_DEPENDS=	libfreetype.so:${PORTSDIR}/print/freetype2 \
+		libexpat.so:${PORTSDIR}/textproc/expat2
 
-USE_BZIP2=	yes
 USE_LDCONFIG=	yes
 USE_AUTOTOOLS=	libtool
 USES=		gmake pathfix pkgconfig
@@ -39,7 +40,13 @@ MAN1=		fc-cache.1 fc-cat.1 fc-list.1 fc-match.1 fc-query.1 fc-scan.1
 MAN5=		fonts-conf.5
 PORTDOCS=	fontconfig-user.html fontconfig-user.pdf fontconfig-user.txt
 
+NO_STAGE=	yes
 .include <bsd.port.options.mk>
+
+# work around fc-cache crash on arm platform
+.if ${ARCH} == arm || ${ARCH} == armv6
+USE_GCC=	any
+.endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
